@@ -126,7 +126,7 @@ For 89 of the 295 frozen predictions the tests' own records name where the predi
 |---|---|
 | Dynamics placed | 184; 23 of them hold of anything that goes on and name no role |
 | Ties between roles | 19 drawn; 39 thinner ones listed |
-| Principal theorems written up | 778 write-ups of 731 Lean theorems; 723 of the 731 are among the 2,099 Lean theorems the atlas lists with premises. Counting a theorem once in a place: 420 on a tie, 222 on one role, 102 on anything that goes on |
+| Principal theorems written up | 778 write-ups of 731 Lean theorems; 723 of the 731 are among the 2,105 Lean theorems the atlas lists with premises. Counting a theorem once in a place: 420 on a tie, 222 on one role, 102 on anything that goes on |
 | Drawn ties where no general theorem shows | a beginning: 14 (on 1, one built case does); a lasting: 8; a change: 19 (on 2, one built case does); an end: 13 |
 | Tests | 66; in 47 at least one frozen prediction got a verdict |
 | Frozen predictions | 295: 117 agreed, 8 not rejected, 64 disagreed, 17 could not tell, 89 with no verdict; 18 more entries were not frozen |
@@ -140,7 +140,7 @@ For 89 of the 295 frozen predictions the tests' own records name where the predi
 
 - **The kinds do not hold everything.** Every card says what of its dynamic the roles, ties, marks, forms and frames leave out: most often amounts, theorems that name no role, and conclusions that fit no form. The note is on the ledger to operate, under each dynamic.
 - **A tie gathers separate models.** Roles of two models are drawn as one place where each model names that kind of role. Where no proof joins the two models, that sameness is a reading. Each tie's section says how many dynamics its theorems come from; the picture draws one line.
-- **Only principal theorems are written up.** A card takes its dynamic's main results and most of the theorems its exits and transitions cite: 731 Lean theorems, where the atlas lists 2,099 with premises.
+- **Only principal theorems are written up.** A card takes its dynamic's main results and most of the theorems its exits and transitions cite: 731 Lean theorems, where the atlas lists 2,105 with premises.
 - **The question a theorem is filed under is a reading of its statement.** A theorem written up on several cards can be read under a different question on each; in a place it counts once, by the write-up of the course itself.
 - **A filled square says a general theorem concludes that mark, not how much is known.** One theorem fills it.
 - **A prediction's place rests on a reading of its test's record:** whether it was frozen, which conditions were met, and what was seen. The reading is the case's; the test's folder is the record.

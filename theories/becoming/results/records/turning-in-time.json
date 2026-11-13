@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-13T05:51:05+00:00",
+  "reviewed_at_utc": "2026-11-13T13:31:07+00:00",
   "statement": {
     "en": "On a way and a level cut by a need, under the regime's premises the line never ends exactly where the course as it was, the need met, is first marked and its level one step later is at or above the kept kind's point of no return. Unmarked and losing more than it is given, it ends where the net ends.",
     "zh": "一种延续的方式连同一个水位，水位不足所需即无后继。在体制的前提下，线不穷，当且仅当照旧的进程在所需一直满足之下第一次落在标记水位，而一步之后的水位不低于所保持之类的不可返回点。无标记而所失多于所得，则线终于网尽之处。"
@@ -149,6 +149,51 @@
         "Becoming.TurningInTime.Three.ends_as_it_was"
       ],
       "zh": "见证：给还为 min z (12 − z)，照旧取用五，所保持之类取用三，所需为一，自水位九起；照旧的进程依次为九、八、六、二、零。第一次标记在九或八，线不穷；第一次标记在六，转时余二，再两步而终，其在方式之类下的线终于六而网仍续；无标记，则照旧而终。"
+    },
+    {
+      "en": "For a level course X that never rises with X 0 ≤ hi, FromNothing, Short, Meets and Keeps at H with y up to hi and 0 < need ≤ H + y, the feasible courses X turned to the use H at some step (turned, Turned) and the need met at every step asked (MeetsNeed): the turn at T meets the need exactly where H + y ≤ X T (turned_meets_iff), and X is recoverable at N exactly where H + y ≤ X N (recoverable_iff_above).",
+      "zh": "X 从不上升且 X 0 ≤ hi，无中不生有，H 处以 y 至 hi 有 Short、Meets、Keeps，0 < need ≤ H + y；可行者为 X 在某步转向用量 H（Turned），所求为每步满足所需：在 T 转向者满足所需，当且仅当 H + y ≤ X T；X 在 N 可恢复，当且仅当 H + y ≤ X N（recoverable_iff_above）。",
+      "declarations": [
+        "Becoming.TurningInTime.turned",
+        "Becoming.TurningInTime.Turned",
+        "Becoming.TurningInTime.MeetsNeed",
+        "Becoming.TurningInTime.turned_meets_of_above",
+        "Becoming.TurningInTime.above_of_turned_meets",
+        "Becoming.TurningInTime.turned_meets_iff",
+        "Becoming.TurningInTime.recoverable_of_above",
+        "Becoming.TurningInTime.above_of_recoverable",
+        "Becoming.TurningInTime.recoverable_iff_above"
+      ]
+    },
+    {
+      "en": "noReturnAt_iff_first_below: under the same premises, N is the point of no return of X (ReadOffInTime's NoReturnAt) exactly where X N < H + y and H + y ≤ X n for every n < N: the first step at which the level is below RegimeMargin's point of no return, a level. Where X comes below H + y it has one (noReturnAt_of_below).",
+      "zh": "noReturnAt_iff_first_below：同样前提下，N 是 X 的不可返回点（ReadOffInTime 的 NoReturnAt），当且仅当 X N < H + y 而此前每步 H + y ≤ X n：即水位第一次低于 RegimeMargin 的不可返回点（一个水位）的那一步。X 一旦低于 H + y 便有此点（noReturnAt_of_below）。",
+      "declarations": [
+        "Becoming.TurningInTime.noReturnAt_iff_first_below",
+        "Becoming.TurningInTime.noReturnAt_of_below"
+      ]
+    },
+    {
+      "en": "course_turned: with AloneOutside, turns, kept, uses and the level's step RegimeMargin.step giving (use w), for T the first step at which the level of the course as it was is marked, the pair's level at every step t is turned X giving H₂ (T + 1) t, X the level course as it was. No premise on the need.",
+      "zh": "course_turned：有 AloneOutside、turns、kept、uses，水位的步为 RegimeMargin.step giving (use w)，T 为照旧进程的水位第一次落在标记上的一步：这个对在每一步 t 的水位即 turned X giving H₂ (T + 1) t，X 为照旧的水位进程。对所需无前提。",
+      "declarations": [
+        "Becoming.TurningInTime.course_turned"
+      ]
+    },
+    {
+      "en": "noReturn_exists: under turns_in_time_iff's premises on the regime and on the course as it was, the course as it was has a point of no return N ≤ x. turns_in_time_iff_before: under all of turns_in_time_iff's premises, the line never ends exactly where there is a first marked step T, the need met there and before, and that point N with T + 1 < N.",
+      "zh": "noReturn_exists：在 turns_in_time_iff 关于体制与照旧进程的前提下，照旧的进程有不可返回点 N ≤ x。turns_in_time_iff_before：在其全部前提下，线不穷，当且仅当有第一个标记步 T，其时及此前所需皆满足，且 T + 1 < N。",
+      "declarations": [
+        "Becoming.TurningInTime.noReturn_exists",
+        "Becoming.TurningInTime.turns_in_time_iff_before"
+      ]
+    },
+    {
+      "en": "Three.noReturn: for Three from (true, 9) as it was (9, 8, 6, 2, 0), with the kept kind's use three and a need of one, the point of no return is step 3: first marked at step 0 or 1, T + 1 < 3 (Three.goes_on); at step 2, T + 1 = 3 (Three.turned_and_ends).",
+      "zh": "Three.noReturn：Three 自 (true, 9) 照旧而行（9、8、6、2、0），所保持之类用量为三、所需为一，其不可返回点是第 3 步：第一次标记在第 0 或第 1 步时 T + 1 < 3（Three.goes_on），在第 2 步时 T + 1 = 3（Three.turned_and_ends）。",
+      "declarations": [
+        "Becoming.TurningInTime.Three.noReturn"
+      ]
     }
   ],
   "hypotheses": [
@@ -195,8 +240,16 @@
       "kind": "non-implication"
     },
     {
-      "en": "Any join with ReadOffInTime's theorems on reading in time: they are on another model, and only its first_of_decided is used here.",
+      "en": "Reading in time on the pair beyond the point of no return: ReadOffInTime's selection side (FirstApart, TellsApartAt, ReadableInTime) is not instantiated; the pair has no web.",
       "kind": "scope"
+    },
+    {
+      "en": "Continuations other than a turn of the course to one standing use: they are not among the feasible courses.",
+      "kind": "scope"
+    },
+    {
+      "en": "That FourReaders.recoverable_iff_regime follows from recoverable_iff_above: its courses are over three places and its course as it was is not of RegimeMargin.step's form.",
+      "kind": "non-implication"
     },
     {
       "en": "That ClosedCapture's and PoolFromCourse's theorems on their own loop (course_past, window_past_course, window_never_read) follow from agrees_until_marked: they keep their own proofs.",
@@ -646,19 +699,34 @@
         "Becoming.TurningInTime.window_agrees_until_marked",
         "Becoming.TurningInTime.window_alone_outside",
         "Becoming.TurningInTime.window_is_pair",
-        "Becoming.TurningInTime.window_paced"
+        "Becoming.TurningInTime.window_paced",
+        "Becoming.TurningInTime.turned",
+        "Becoming.TurningInTime.Turned",
+        "Becoming.TurningInTime.MeetsNeed",
+        "Becoming.TurningInTime.turned_meets_of_above",
+        "Becoming.TurningInTime.above_of_turned_meets",
+        "Becoming.TurningInTime.turned_meets_iff",
+        "Becoming.TurningInTime.recoverable_of_above",
+        "Becoming.TurningInTime.above_of_recoverable",
+        "Becoming.TurningInTime.recoverable_iff_above",
+        "Becoming.TurningInTime.noReturnAt_iff_first_below",
+        "Becoming.TurningInTime.noReturnAt_of_below",
+        "Becoming.TurningInTime.course_turned",
+        "Becoming.TurningInTime.noReturn_exists",
+        "Becoming.TurningInTime.turns_in_time_iff_before",
+        "Becoming.TurningInTime.Three.noReturn"
       ],
-      "sha256": "10c8cc9a242da223987c191d70e68a869d0e6413019afa0d44346f9f629de230"
+      "sha256": "a03bcaebcd89205328b7c71f322600dc69de80438222063a7349a7e7bd6f7083"
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261113T054936.915391Z/verification.json",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261113T133009.897615Z/verification.json",
       "role": "receipt",
-      "sha256": "36305b6c817422715083a1ff5dfb3d511a4bd33003660e9c525d69f4b04c0269"
+      "sha256": "bc54fc45f16a2b92d1fcfcac8090993f1401ae5f64dfee71f3b36b16351b93d7"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tt-turning-in-time/NOTE.md",
       "role": "integration",
-      "sha256": "d1928bf2c8052f0ef64374125d0aacfe60b8f23107ecd191fe462ec63e7d0b61"
+      "sha256": "bda3e6a389782515b09e54890f0c1bc54d002d1a87d7231f073af67f2bb617a6"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tt-turning-in-time/DESIGN.md",
@@ -678,12 +746,12 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tt-turning-in-time/READER.md",
       "role": "review",
-      "sha256": "133872b61c7fcb92c266614193eea7a42e93059d1b7f573722148f4855bf037b"
+      "sha256": "e18bf13046322f3b13a09fb0c06b3673e2370eab37206f74a1568279b924353a"
     },
     {
       "path": "theories/becoming/chapters/02-MAP.md",
       "role": "statement",
-      "sha256": "8be0095fa2260a58716fe37ef42f3cd24fb04d717c0b6a3882ccf5ab8fa742bb"
+      "sha256": "ce9b73963daa7e80e3206b5da05fdeb1158b965204bbcc8cc5d23a5768346723"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-11-12-where-we-are-and-the-loop.md",
@@ -694,7 +762,7 @@
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261113T054936.915391Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261113T133009.897615Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.TurningInTime",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -703,6 +771,9 @@
   "history": [
     {
       "en": "13 November 2026, board item TT, on Ren's words of 12 November kept in sources (sources/15-codex-theory-conversations/2026-11-12-where-we-are-and-the-loop.md): added. A first scratch module of 12 November was held after a second reading found it restated root laws; it is kept in the study folder tt-turning-in-time (held/TurningInTime-first-attempt.lean.txt)."
+    },
+    {
+      "en": "13 November 2026, board item TT2: a section joining RegimeMargin's point of no return, a level, to ReadOffInTime's, a step, for level courses that never rise (recoverable_iff_above, noReturnAt_iff_first_below), with the pair's course as a turned course and turns_in_time_iff said through it (course_turned, turns_in_time_iff_before). A composition of landed theorems; no existing statement changed. A first design claimed a tie to ReadableInTime that two AI readers refuted; it is kept in the study folder."
     }
   ]
 }

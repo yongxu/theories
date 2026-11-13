@@ -106,13 +106,34 @@ configurations and step, not terms of the root.
   positive need, no marked level that meets it, the level of the course as it was given at most `r`
   and losing more than `r` at every step) a `Locked` start reaches a configuration that conditions
   nothing, its share and rule still `Locked` (`locked_ends_with_net`).
+* **The point of no return, a level and a step** (section 7). `RegimeMargin` calls the level `H + y`
+  the point of no return under a standing use `H`; `Becoming.ReadOffInTime` calls the first step at
+  which a course is not recoverable its point of no return (`NoReturnAt`). For any level course `X`
+  that never rises and starts at most `hi`, with the feasible courses `X` turned to `H` at some step,
+  the start included (`turned`, `Turned`), and what is asked of a course the need met at every step
+  (`MeetsNeed`): under nothing given from nothing, giving short of `H` below `y`, meeting it from `y`
+  up to `hi`, the step under `H` keeping the level within `hi`, and a positive need at most `H + y`,
+  the course turned at `T` meets the need exactly where `H + y ≤ X T` (`turned_meets_iff`), `X` is
+  recoverable at `N` exactly where `H + y ≤ X N` (`recoverable_iff_above`), and its point of no return
+  is the first step at which its level is below `H + y` (`noReturnAt_iff_first_below`); where it comes
+  below `H + y` it has one (`noReturnAt_of_below`). On the pair, with `AloneOutside`, `turns`, `kept`
+  and `uses` and no premise on the need, the level course is the course as it was turned at `T + 1`,
+  for `T` its first marked step (`course_turned`). Under `turns_in_time_iff`'s premises on the regime
+  and on the course as it was (none on the marks or the kept kind) the course as it was has a point of
+  no return `N ≤ x` (`noReturn_exists`); the premises on `H₂` decide recoverability at each step
+  through `recoverable_iff_above`, and that the course is not recoverable at step `x` needs only that
+  its level there is below the need. Under all of `turns_in_time_iff`'s premises the line never ends
+  exactly where the first marked step `T`, the need met there and before, has `T + 1 < N`
+  (`turns_in_time_iff_before`, through `course_turned`, `turned_meets_iff` and
+  `recoverable_iff_above`).
 * **Three courses from one start** (`Three`). Giving `min z (12 - z)`, a use of five as it was and of
   three for the kept kind, a need of one, from the level nine: first marked at step 0 or 1 the line
   never ends (`Three.goes_on`); first marked at step 2 it turns and ends (`Three.turned_and_ends`), and
   there the line under the way's class, continued from the step before, ends while the net goes on, so
   by the root's `«亡而网续则不至终有常»` the way's class is not constant up to the net's end
   (`Three.line_ends_while_net_goes`); with no marked level it ends as it was
-  (`Three.ends_as_it_was`).
+  (`Three.ends_as_it_was`). With the kept kind's use three and `y = 3`, the course as it was from
+  nine (nine, eight, six, two, nothing) has its point of no return at step 3 (`Three.noReturn`).
 
 ## What is given and what is not shown
 
@@ -133,10 +154,21 @@ step `T` (argued here, not a Lean statement). `turns_in_time_iff` needs the deci
 course as it was below `H₁ + y₁` with uses of at least `H₁` along `alone`'s orbit.
 `constant_iff_needs_nothing` needs a given way `w₀`. The closed form of the step `T` by
 `Optimum.reread_deadline_iff` is not stated. Nothing here is about a trained system.
-`Becoming.ReadOffInTime`'s laws on its own model are not joined; only its `first_of_decided` is used.
+From `Becoming.ReadOffInTime` this module uses `first_of_decided`, and its point of no return of a
+course (`Recoverable`, `NoReturnAt`, with `NoReturnAt.recoverable_iff` and `noReturnAt_of_past`),
+which section 7 joins to `RegimeMargin`'s point of no return, a level. Its selection side
+(`FirstApart`, `TellsApartAt`, `ReadableInTime`, `ReadsInTime`) is not instantiated: the pair has no
+web. `FourReaders.recoverable_iff_regime` is not derived from `recoverable_iff_above`: its courses are
+over three places, and its course as it was is not of `RegimeMargin.step`'s form; that the two say
+the same of their models is a reading. In section 7 the feasible courses are the turns of `X` to one
+standing use `H` at any step, the start included; other continuations are not considered, and the
+marks stay given. The pair's own courses are only the turns at `T + 1` for a first marked step `T`
+(`course_turned`); `turned_meets_iff`, `recoverable_iff_above` and `noReturnAt_iff_first_below` hold
+for any level course that never rises and starts at most `hi`, however it arises, and need nothing of
+the pair.
 This module lies in the package's second layer only through what it imports, `Becoming.OwnClass` (for
-`«类闭则本类常闭»`) and `Becoming.ReadOffInTime` (for `first_of_decided`); it states no continuation
-condition and no valuation, and uses none.
+`«类闭则本类常闭»`) and `Becoming.ReadOffInTime` (for `first_of_decided` and the point of no return of a
+course); it states no continuation condition and no valuation, and uses none.
 Nothing here derives that a lock needs nothing of what it uses: that a lock's own models need nothing
 is how they are built. They have a total step, so in them no line ends where the net ends, and
 `ends_with_net` and the split at the first marked level, which ask for a positive need or a course as
@@ -504,6 +536,25 @@ theorem unending_iff_first_marked {marked : Nat → Prop} [DecidablePred marked]
                     (agree T (Nat.le_refl T))))).symm
               (later k)⟩
 
+/-- **From a way of the kept kind the pair's level is the level's course under `H₂`.** From a way `w`
+of a kind every step keeps (`kept`) whose ways use `H₂` (`uses`), at every step the pair's way is of
+that kind and its level is `Law.orbit (RegimeMargin.step giving H₂) x` at that step. Needed by
+`unending_iff_above` and `course_turned`. -/
+private theorem kept_run {Kept : W → Prop} {after : W → Nat → W} {giving : Nat → Nat}
+    {use : W → Nat} {H₂ : Nat}
+    (kept : ∀ w x, Kept w → Kept (after w x)) (uses : ∀ w, Kept w → use w = H₂)
+    {w : W} {x : Nat} (kind : Kept w) : ∀ n,
+      Kept (Law.orbit (pair after (fun w x => RegimeMargin.step giving (use w) x)) (w, x) n).1 ∧
+      (Law.orbit (pair after (fun w x => RegimeMargin.step giving (use w) x)) (w, x) n).2 =
+        Law.orbit (RegimeMargin.step giving H₂) x n
+  | 0 => ⟨kind, rfl⟩
+  | n + 1 =>
+    have ih := kept_run kept uses kind n
+    ⟨kept _ _ ih.1,
+      (congrArg (fun H => RegimeMargin.step giving H
+        (Law.orbit (pair after (fun w x => RegimeMargin.step giving (use w) x)) (w, x) n).2)
+        (uses _ ih.1)).trans (congrArg (RegimeMargin.step giving H₂) ih.2)⟩
+
 /-- **From a way of a kind every step keeps, that uses `H₂`, the line never ends exactly where the
 level is at or above `H₂ + y₂`**: with nothing given from nothing, giving short of `H₂` below `y₂`,
 meeting it from `y₂` up to `hi` and the step keeping the level within `hi`, a positive need at most
@@ -516,17 +567,7 @@ theorem unending_iff_above {Kept : W → Prop} {after : W → Nat → W} {giving
     (needs : 0 < need) (within : need ≤ H₂ + y₂) {w : W} {x : Nat} (kind : Kept w) (high : x ≤ hi) :
     «不穷» (net need after (fun w x => RegimeMargin.step giving (use w) x)) «一» (w, x) ↔
       H₂ + y₂ ≤ x :=
-  have run : ∀ n,
-      Kept (Law.orbit (pair after (fun w x => RegimeMargin.step giving (use w) x)) (w, x) n).1 ∧
-      (Law.orbit (pair after (fun w x => RegimeMargin.step giving (use w) x)) (w, x) n).2 =
-        Law.orbit (RegimeMargin.step giving H₂) x n := fun n => by
-    induction n with
-    | zero => exact ⟨kind, rfl⟩
-    | succ n ih =>
-      exact ⟨kept _ _ ih.1,
-        (congrArg (fun H => RegimeMargin.step giving H
-          (Law.orbit (pair after (fun w x => RegimeMargin.step giving (use w) x)) (w, x) n).2)
-          (uses _ ih.1)).trans (congrArg (RegimeMargin.step giving H₂) ih.2)⟩
+  have run := kept_run (giving := giving) kept uses kind
   Law.stepWhile_unending_iff.trans
     ⟨fun all => (Nat.lt_or_ge x (H₂ + y₂)).elim
       (fun lt => match (RegimeMargin.ends_iff_below (Nat.lt_of_lt_of_le needs within) short nothing
@@ -895,7 +936,438 @@ theorem window_paced (fA : A → R → A) (fB : A × Nat → R → Nat) (hA : A 
 
 end Lock
 
-/-! ## 7. Three courses from one start -/
+/-! ## 7. The point of no return, a level and a step
+
+`RegimeMargin` calls the level `H + y` the point of no return under a standing use `H`
+(`RegimeMargin.ends_iff_below`); `ReadOffInTime` calls the first step at which a course is not
+recoverable its point of no return (`NoReturnAt`), with the feasible courses and what is asked of a
+course given. Here the two are joined for any level course `X` that never rises and starts at most
+`hi`. The feasible courses are `X` turned to the standing use `H` at some step, the start included
+(`turned`, `Turned`); what is asked of a course is that the need be met at every step (`MeetsNeed`);
+courses are over one condition (`Unit`). Under nothing given from nothing and `RegimeMargin`'s
+`Short`, `Meets` and `Keeps` at `H` with `y` and `hi`, and a positive need at most `H + y`: the course
+turned at `T` meets the need at every step exactly where `H + y ≤ X T` (`turned_meets_iff`); `X` is
+recoverable at `N` exactly where `H + y ≤ X N` (`recoverable_iff_above`); and its point of no return,
+a step, is the first step at which its level is below `H + y` (`noReturnAt_iff_first_below`). On the
+pair, the level course from `(w, x)` is the course as it was turned at `T + 1`, for `T` its first
+marked step (`course_turned`, with no premise on the need); under `turns_in_time_iff`'s premises on
+the regime and on the course as it was (none on the marks or the kept kind), the course as it was has
+a point of no return within `x` steps (`noReturn_exists`); and under all of `turns_in_time_iff`'s
+premises the line never ends exactly where, at the first marked step `T`, the need met there and
+before, `T + 1` is before the point of no return of the course as it was (`turns_in_time_iff_before`,
+through `course_turned`, `turned_meets_iff` and `recoverable_iff_above`). The feasible courses are
+turns to one standing use; other continuations are not considered, and the marks stay given. -/
+
+section PointOfNoReturn
+
+/-- **The course `X` turned at step `T` to the standing use `H`**: `X t` at every step `t` up to `T`,
+and from there the level's course under `RegimeMargin.step giving H` from `X T`. -/
+def turned (X : Nat → Nat) (giving : Nat → Nat) (H T t : Nat) : Nat :=
+  if t ≤ T then X t else Law.orbit (RegimeMargin.step giving H) (X T) (t - T)
+
+/-- **The feasible courses**: the courses over one condition that are `X` turned to `H` at some step
+`T`, the start included. -/
+def Turned (X : Nat → Nat) (giving : Nat → Nat) (H : Nat) (l : Nat → Unit → Nat) : Prop :=
+  ∃ T, ∀ t c, l t c = turned X giving H T t
+
+/-- **What is asked of a course**: the need met at every step. -/
+def MeetsNeed (need : Nat) (l : Nat → Unit → Nat) : Prop := ∀ t c, need ≤ l t c
+
+/-- Up to step `T` the course turned at `T` is `X`. No premise. -/
+private theorem turned_before {X : Nat → Nat} {giving : Nat → Nat} {H T t : Nat} (le : t ≤ T) :
+    turned X giving H T t = X t :=
+  if_pos le
+
+/-- `k` steps after `T` the course turned at `T` is the level's course under `H` from `X T`, `k` steps
+on. No premise. -/
+private theorem turned_after (X : Nat → Nat) (giving : Nat → Nat) (H T : Nat) :
+    ∀ k, turned X giving H T (T + k) = Law.orbit (RegimeMargin.step giving H) (X T) k
+  | 0 => if_pos (Nat.le_refl T)
+  | k + 1 =>
+    (if_neg (Nat.not_le_of_gt (Nat.lt_succ_of_le (Nat.le_add_right T k)))).trans
+      (congrArg (Law.orbit (RegimeMargin.step giving H) (X T))
+        (Naturals.add_sub_cancel_left T (k + 1)))
+
+/-- A course that never rises at any step (`fall`) is, `k` steps after `j`, at most where it was at
+`j`. -/
+private theorem fall_by {X : Nat → Nat} (fall : ∀ t, X (t + 1) ≤ X t) (j : Nat) :
+    ∀ k, X (j + k) ≤ X j
+  | 0 => Nat.le_refl _
+  | k + 1 => Nat.le_trans (fall (j + k)) (fall_by fall j k)
+
+/-- A course that never rises at any step (`fall`) is not higher at a later step: `X T ≤ X j` for
+`j ≤ T`. -/
+private theorem later_le {X : Nat → Nat} (fall : ∀ t, X (t + 1) ≤ X t) {j T : Nat} (le : j ≤ T) :
+    X T ≤ X j :=
+  match le_dest le with
+  | ⟨k, e⟩ => Eq.subst (motive := fun i => X i ≤ X j) e.symm (fall_by fall j k)
+
+/-- **A level whose course under `H` meets a positive need at every step is at or above `H + y`.**
+With nothing given from nothing and giving short of `H` below `y`; by `RegimeMargin.ends_below`. -/
+private theorem above_of_run_meets {giving : Nat → Nat} {H y need z : Nat}
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H y)
+    (needs : 0 < need) (meet : ∀ k, need ≤ Law.orbit (RegimeMargin.step giving H) z k) :
+    H + y ≤ z :=
+  (Nat.lt_or_ge z (H + y)).elim
+    (fun lt => absurd (Nat.le_trans (meet z) (Nat.le_of_eq (RegimeMargin.ends_below short nothing lt)))
+      (Nat.not_le_of_gt needs))
+    id
+
+/-- **Where the course turned at `T` meets a positive need at every step, it is at or above `H + y` at
+every step from `T`.** With nothing given from nothing and giving short of `H` below `y`. -/
+private theorem above_after {X : Nat → Nat} {giving : Nat → Nat} {H y need T : Nat}
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H y)
+    (needs : 0 < need) (meet : ∀ t, need ≤ turned X giving H T t) {M : Nat} (le : T ≤ M) :
+    H + y ≤ turned X giving H T M :=
+  match le_dest le with
+  | ⟨k, e⟩ =>
+    Eq.subst (motive := fun i => H + y ≤ turned X giving H T i) e.symm
+      (Eq.subst (motive := fun z => H + y ≤ z) (turned_after X giving H T k).symm
+        (above_of_run_meets nothing short needs fun j =>
+          Eq.subst (motive := fun z => need ≤ z)
+            ((turned_after X giving H T (k + j)).trans
+              (Law.orbit_add (RegimeMargin.step giving H) (X T) k j))
+            (meet (T + (k + j)))))
+
+/-- **The course turned at `T` meets the need at every step where `H + y ≤ X T`** (R1, if). With `X`
+never rising (`fall`) and starting at most `hi` (`top`), giving meeting `H` from `y` up to `hi`
+(`meets`), the step under `H` keeping the level within `hi` (`keeps`), and the need at most `H + y`
+(`within`); by `RegimeMargin.holds`. -/
+theorem turned_meets_of_above {X : Nat → Nat} {giving : Nat → Nat} {H y hi need T : Nat}
+    (fall : ∀ t, X (t + 1) ≤ X t) (top : X 0 ≤ hi)
+    (meets : RegimeMargin.Meets giving H y hi) (keeps : RegimeMargin.Keeps giving H hi)
+    (within : need ≤ H + y) (low : H + y ≤ X T) : ∀ t, need ≤ turned X giving H T t :=
+  fun t => (Nat.lt_or_ge T t).elim
+    (fun lt => match le_dest (Nat.le_of_lt lt) with
+      | ⟨k, e⟩ => Eq.subst (motive := fun i => need ≤ turned X giving H T i) e.symm
+          (Eq.subst (motive := fun z => need ≤ z) (turned_after X giving H T k).symm
+            (Nat.le_trans within (Nat.le_trans low
+              (RegimeMargin.holds meets keeps low
+                (Nat.le_trans (later_le fall (Nat.zero_le T)) top) k).1))))
+    (fun ge => Eq.subst (motive := fun z => need ≤ z) (turned_before ge).symm
+      (Nat.le_trans within (Nat.le_trans low (later_le fall ge))))
+
+/-- **Where the course turned at `T` meets the need at every step, `H + y ≤ X T`** (R1, only if).
+With nothing given from nothing, giving short of `H` below `y`, and a positive need; by
+`RegimeMargin.ends_below`. Nothing about `X` is used. -/
+theorem above_of_turned_meets {X : Nat → Nat} {giving : Nat → Nat} {H y need T : Nat}
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H y)
+    (needs : 0 < need) (meet : ∀ t, need ≤ turned X giving H T t) : H + y ≤ X T :=
+  Eq.subst (motive := fun z => H + y ≤ z) (turned_before (Nat.le_refl T))
+    (above_after nothing short needs meet (Nat.le_refl T))
+
+/-- **R1. The course turned at `T` meets the need at every step exactly where `H + y ≤ X T`.** With
+`X` never rising (`fall`) and starting at most `hi` (`top`), nothing given from nothing, giving short
+of `H` below `y`, meeting it from `y` up to `hi`, the step under `H` keeping the level within `hi`,
+and a positive need at most `H + y`. The if direction uses `fall`, `top`, `meets`, `keeps` and
+`within` (`turned_meets_of_above`); the only-if direction `nothing`, `short` and `needs`
+(`above_of_turned_meets`). -/
+theorem turned_meets_iff {X : Nat → Nat} {giving : Nat → Nat} {H y hi need T : Nat}
+    (fall : ∀ t, X (t + 1) ≤ X t) (top : X 0 ≤ hi)
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H y)
+    (meets : RegimeMargin.Meets giving H y hi) (keeps : RegimeMargin.Keeps giving H hi)
+    (needs : 0 < need) (within : need ≤ H + y) :
+    (∀ t, need ≤ turned X giving H T t) ↔ H + y ≤ X T :=
+  ⟨above_of_turned_meets nothing short needs, turned_meets_of_above fall top meets keeps within⟩
+
+/-- **Where `H + y ≤ X N`, `X` is recoverable at `N`** (R2, if): the course turned at `N` agrees with
+`X` up to `N` and meets the need at every step. With `X` never rising (`fall`) and starting at most
+`hi` (`top`), giving meeting `H` from `y` up to `hi` (`meets`), the step under `H` keeping the level
+within `hi` (`keeps`), and the need at most `H + y` (`within`). -/
+theorem recoverable_of_above {X : Nat → Nat} {giving : Nat → Nat} {H y hi need N : Nat}
+    (fall : ∀ t, X (t + 1) ≤ X t) (top : X 0 ≤ hi)
+    (meets : RegimeMargin.Meets giving H y hi) (keeps : RegimeMargin.Keeps giving H hi)
+    (within : need ≤ H + y) (low : H + y ≤ X N) :
+    Recoverable (Turned X giving H) (MeetsNeed need) (fun t _ => X t) N :=
+  ⟨fun t _ => turned X giving H N t, ⟨N, fun _ _ => rfl⟩, fun _ le _ => turned_before le,
+   fun t _ => turned_meets_of_above fall top meets keeps within low t⟩
+
+/-- **Where `X` is recoverable at `N`, `H + y ≤ X N`** (R2, only if). With `X` never rising (`fall`),
+nothing given from nothing, giving short of `H` below `y`, and a positive need; by
+`RegimeMargin.ends_below`. A turn at `T` before `N` that meets the need is at or above `H + y` from
+`T` on, `X N` among them; a turn at `T` after `N` has `H + y ≤ X T ≤ X N`. -/
+theorem above_of_recoverable {X : Nat → Nat} {giving : Nat → Nat} {H y need N : Nat}
+    (fall : ∀ t, X (t + 1) ≤ X t)
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H y)
+    (needs : 0 < need) (rec : Recoverable (Turned X giving H) (MeetsNeed need) (fun t _ => X t) N) :
+    H + y ≤ X N :=
+  match rec with
+  | ⟨_, ⟨T, eq⟩, agree, meet⟩ =>
+    have meetT : ∀ t, need ≤ turned X giving H T t := fun t =>
+      Eq.subst (motive := fun z => need ≤ z) (eq t ()) (meet t ())
+    (Nat.lt_or_ge N T).elim
+      (fun lt => Nat.le_trans (above_of_turned_meets nothing short needs meetT)
+        (later_le fall (Nat.le_of_lt lt)))
+      (fun ge => Eq.subst (motive := fun z => H + y ≤ z)
+        ((eq N ()).symm.trans (agree N (Nat.le_refl N) ()))
+        (above_after nothing short needs meetT ge))
+
+/-- **R2. `X` is recoverable at `N` exactly where `H + y ≤ X N`**: `RegimeMargin`'s point of no
+return, a level, read on `ReadOffInTime`'s `Recoverable` with the turns of `X` to `H` as the feasible
+courses and the need met at every step as what is asked. With `X` never rising (`fall`) and starting at
+most `hi` (`top`), nothing given from nothing, giving short of `H` below `y`, meeting it from `y` up to
+`hi`, the step under `H` keeping the level within `hi`, and a positive need at most `H + y`. The if
+direction uses `fall`, `top`, `meets`, `keeps` and `within` (`recoverable_of_above`); the only-if
+direction `fall`, `nothing`, `short` and `needs` (`above_of_recoverable`). -/
+theorem recoverable_iff_above {X : Nat → Nat} {giving : Nat → Nat} {H y hi need N : Nat}
+    (fall : ∀ t, X (t + 1) ≤ X t) (top : X 0 ≤ hi)
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H y)
+    (meets : RegimeMargin.Meets giving H y hi) (keeps : RegimeMargin.Keeps giving H hi)
+    (needs : 0 < need) (within : need ≤ H + y) :
+    Recoverable (Turned X giving H) (MeetsNeed need) (fun t _ => X t) N ↔ H + y ≤ X N :=
+  ⟨above_of_recoverable fall nothing short needs, recoverable_of_above fall top meets keeps within⟩
+
+/-- **R3. The point of no return of `X`, a step, is the first step at which its level is below
+`H + y`, the point of no return of the regime it can turn to.** Under `recoverable_iff_above`'s
+premises: `X` never rising and starting at most `hi`, nothing given from nothing, giving short of `H`
+below `y`, meeting it from `y` up to `hi`, the step under `H` keeping the level within `hi`, and a
+positive need at most `H + y`. -/
+theorem noReturnAt_iff_first_below {X : Nat → Nat} {giving : Nat → Nat} {H y hi need N : Nat}
+    (fall : ∀ t, X (t + 1) ≤ X t) (top : X 0 ≤ hi)
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H y)
+    (meets : RegimeMargin.Meets giving H y hi) (keeps : RegimeMargin.Keeps giving H hi)
+    (needs : 0 < need) (within : need ≤ H + y) :
+    NoReturnAt (Turned X giving H) (MeetsNeed need) (fun t _ => X t) N ↔
+      X N < H + y ∧ ∀ n, n < N → H + y ≤ X n :=
+  have iff := fun n => recoverable_iff_above (X := X) (N := n) fall top nothing short meets keeps
+    needs within
+  ⟨fun ⟨fails, before⟩ =>
+    ⟨(Nat.lt_or_ge (X N) (H + y)).elim id (fun ge => absurd ((iff N).mpr ge) fails),
+     fun n lt => (iff n).mp (before n lt)⟩,
+   fun ⟨below, before⟩ =>
+    ⟨fun rec => Nat.not_le_of_gt below ((iff N).mp rec), fun n lt => (iff n).mpr (before n lt)⟩⟩
+
+/-- Recoverability of `X` is decided at every step, through `recoverable_iff_above`'s two directions.
+Under its premises: `X` never rising (`fall`) and starting at most `hi` (`top`), nothing given from
+nothing, giving short of `H` below `y`, meeting it from `y` up to `hi`, the step under `H` keeping the
+level within `hi`, and a positive need at most `H + y`. -/
+private theorem recoverable_decided {X : Nat → Nat} {giving : Nat → Nat} {H y hi need : Nat}
+    (fall : ∀ t, X (t + 1) ≤ X t) (top : X 0 ≤ hi)
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H y)
+    (meets : RegimeMargin.Meets giving H y hi) (keeps : RegimeMargin.Keeps giving H hi)
+    (needs : 0 < need) (within : need ≤ H + y) :
+    ∀ m, Recoverable (Turned X giving H) (MeetsNeed need) (fun t _ => X t) m ∨
+      ¬ Recoverable (Turned X giving H) (MeetsNeed need) (fun t _ => X t) m :=
+  fun m => (Nat.lt_or_ge (X m) (H + y)).elim
+    (fun lt => .inr fun rec =>
+      Nat.not_le_of_gt lt (above_of_recoverable fall nothing short needs rec))
+    (fun ge => .inl (recoverable_of_above fall top meets keeps within ge))
+
+/-- Where `X` is recoverable at `N`, with the need met at every step as what is asked, `X` meets the
+need at every step up to `N`, whatever the feasible courses: the course that recovers agrees with `X`
+there and meets the need. No premise. -/
+private theorem met_of_recoverable {feasible : (Nat → Unit → Nat) → Prop} {X : Nat → Nat}
+    {need N : Nat} (rec : Recoverable feasible (MeetsNeed need) (fun t _ => X t) N) :
+    ∀ j, j ≤ N → need ≤ X j :=
+  match rec with
+  | ⟨_, _, agree, meet⟩ => fun j le =>
+    Eq.subst (motive := fun z => need ≤ z) (agree j le ()) (meet j ())
+
+/-- **Where `X` comes below `H + y`, it has a point of no return no later.** Under
+`recoverable_iff_above`'s premises (`X` never rising and starting at most `hi`, nothing given from
+nothing, giving short of `H` below `y`, meeting it from `y` up to `hi`, the step under `H` keeping the
+level within `hi`, a positive need at most `H + y`), where `X n < H + y` there is a point of no return
+`N ≤ n`; by `noReturnAt_of_past`, recoverability decided through `recoverable_iff_above`. `top`,
+`meets`, `keeps` and `within` serve only to decide recoverability at each step; that `X` is not
+recoverable at `n` uses `fall`, `nothing`, `short` and `needs`. -/
+theorem noReturnAt_of_below {X : Nat → Nat} {giving : Nat → Nat} {H y hi need : Nat}
+    (fall : ∀ t, X (t + 1) ≤ X t) (top : X 0 ≤ hi)
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H y)
+    (meets : RegimeMargin.Meets giving H y hi) (keeps : RegimeMargin.Keeps giving H hi)
+    (needs : 0 < need) (within : need ≤ H + y) {n : Nat} (below : X n < H + y) :
+    ∃ N, N ≤ n ∧ NoReturnAt (Turned X giving H) (MeetsNeed need) (fun t _ => X t) N :=
+  noReturnAt_of_past (recoverable_decided fall top nothing short meets keeps needs within)
+    (fun rec => Nat.not_le_of_gt below (above_of_recoverable fall nothing short needs rec))
+
+/-- Under the regime the level of the course as it was never rises, and at step `x` it is below every
+positive need, so it is nothing there. With nothing given from nothing, giving short of `H₁` below `y₁`, every way on
+`alone`'s orbit from `w` using at least `H₁`, and the start `x` below `H₁ + y₁`; by `regime_levels`,
+`Optimum.never_rises` and `Optimum.ends_within`. Needed by `noReturn_exists`,
+`turns_in_time_iff_before` and `Three.noReturn`. -/
+private theorem asItWas_falls {alone : W → W} {giving : Nat → Nat} {use : W → Nat} {H₁ y₁ : Nat}
+    (nothing : RegimeMargin.FromNothing giving) (short₁ : RegimeMargin.Short giving H₁ y₁)
+    {w : W} {x : Nat} (uses₁ : ∀ j, H₁ ≤ use (Law.orbit alone w j)) (below : x < H₁ + y₁) :
+    (∀ t, (Law.orbit (asItWas alone (fun w x => RegimeMargin.step giving (use w) x)) (w, x)
+        (t + 1)).2 ≤
+      (Law.orbit (asItWas alone (fun w x => RegimeMargin.step giving (use w) x)) (w, x) t).2) ∧
+    ∀ m, 0 < m →
+      (Law.orbit (asItWas alone (fun w x => RegimeMargin.step giving (use w) x)) (w, x) x).2 < m :=
+  have levels := regime_levels
+    (X := fun t => (Law.orbit (asItWas alone
+      (fun w x => RegimeMargin.step giving (use w) x)) (w, x) t).2)
+    (D := fun t => use (Law.orbit alone w t)) nothing short₁ uses₁ below
+    (fun t => congrArg (fun v => RegimeMargin.step giving (use v) (Law.orbit (asItWas alone
+      (fun w x => RegimeMargin.step giving (use w) x)) (w, x) t).2) (asItWas_way alone _ (w, x) t))
+  ⟨fun t => Optimum.never_rises (x := fun t => (Law.orbit (asItWas alone
+      (fun w x => RegimeMargin.step giving (use w) x)) (w, x) t).2) levels.1 (levels.2.1 t)
+      (levels.2.2 t),
+   fun _ pos => Optimum.ends_within (x := fun t => (Law.orbit (asItWas alone
+      (fun w x => RegimeMargin.step giving (use w) x)) (w, x) t).2) levels.1 levels.2.1 levels.2.2
+      pos x (Nat.lt_add_of_pos_left pos)⟩
+
+/-- **R4. On the pair, the level course is the course as it was turned one step after its first
+marked step.** With `AloneOutside`, a way after a marked step of the kept kind (`turns`), a kind every
+step keeps (`kept`) that uses `H₂` (`uses`), and the level's step `RegimeMargin.step giving (use w)`:
+where `T` is the first step at which the level of the course as it was from `(w, x)` is marked, the
+pair's level course from `(w, x)` is, at every step, that course turned at `T + 1` to `H₂`. No premise
+on the need, and none on `giving`. At the marked step `T` the way is still the way as it was, so the
+level at `T + 1` is that of the course as it was; the way from `T + 1` on is of the kept kind. -/
+theorem course_turned {marked : Nat → Prop} {alone : W → W} {after : W → Nat → W}
+    {Kept : W → Prop} {giving : Nat → Nat} {use : W → Nat} {H₂ : Nat}
+    (outside : AloneOutside marked alone after) (turns : ∀ w x, marked x → Kept (after w x))
+    (kept : ∀ w x, Kept w → Kept (after w x)) (uses : ∀ w, Kept w → use w = H₂)
+    {w : W} {x T : Nat}
+    (before : ∀ j, j < T → ¬ marked (Law.orbit (asItWas alone
+      (fun w x => RegimeMargin.step giving (use w) x)) (w, x) j).2)
+    (markedT : marked (Law.orbit (asItWas alone
+      (fun w x => RegimeMargin.step giving (use w) x)) (w, x) T).2) :
+    ∀ t, (Law.orbit (pair after (fun w x => RegimeMargin.step giving (use w) x)) (w, x) t).2 =
+      turned (fun j => (Law.orbit (asItWas alone
+        (fun w x => RegimeMargin.step giving (use w) x)) (w, x) j).2) giving H₂ (T + 1) t :=
+  have agree : ∀ j, j ≤ T →
+      Law.orbit (pair after (fun w x => RegimeMargin.step giving (use w) x)) (w, x) j =
+        Law.orbit (asItWas alone (fun w x => RegimeMargin.step giving (use w) x)) (w, x) j :=
+    fun j le => agrees_until_marked outside _ (w, x) j
+      (fun i lt => before i (Nat.lt_of_lt_of_le lt le))
+  have next : Law.orbit (pair after (fun w x => RegimeMargin.step giving (use w) x)) (w, x)
+      (T + 1) =
+      (after (Law.orbit (asItWas alone (fun w x => RegimeMargin.step giving (use w) x)) (w, x) T).1
+        (Law.orbit (asItWas alone (fun w x => RegimeMargin.step giving (use w) x)) (w, x) T).2,
+       (Law.orbit (asItWas alone (fun w x => RegimeMargin.step giving (use w) x)) (w, x)
+        (T + 1)).2) :=
+    congrArg (pair after (fun w x => RegimeMargin.step giving (use w) x)) (agree T (Nat.le_refl T))
+  have run := kept_run (giving := giving) kept uses
+    (w := after (Law.orbit (asItWas alone (fun w x => RegimeMargin.step giving (use w) x)) (w, x)
+      T).1 (Law.orbit (asItWas alone (fun w x => RegimeMargin.step giving (use w) x)) (w, x) T).2)
+    (x := (Law.orbit (asItWas alone (fun w x => RegimeMargin.step giving (use w) x)) (w, x)
+      (T + 1)).2)
+    (turns _ _ markedT)
+  fun t => (Nat.lt_or_ge t (T + 1)).elim
+    (fun lt => (congrArg Prod.snd (agree t (Nat.le_of_lt_succ lt))).trans
+      (turned_before (X := fun j => (Law.orbit (asItWas alone
+        (fun w x => RegimeMargin.step giving (use w) x)) (w, x) j).2) (Nat.le_of_lt lt)).symm)
+    (fun ge => match le_dest ge with
+      | ⟨k, e⟩ =>
+        Eq.subst (motive := fun i =>
+            (Law.orbit (pair after (fun w x => RegimeMargin.step giving (use w) x)) (w, x) i).2 =
+              turned (fun j => (Law.orbit (asItWas alone
+                (fun w x => RegimeMargin.step giving (use w) x)) (w, x) j).2) giving H₂ (T + 1) i)
+          e.symm
+          ((congrArg Prod.snd
+              ((Law.orbit_add (pair after (fun w x => RegimeMargin.step giving (use w) x)) (w, x)
+                  (T + 1) k).trans
+                (congrArg (fun s => Law.orbit
+                  (pair after (fun w x => RegimeMargin.step giving (use w) x)) s k) next))).trans
+            ((run k).2.trans (turned_after (fun j => (Law.orbit (asItWas alone
+              (fun w x => RegimeMargin.step giving (use w) x)) (w, x) j).2) giving H₂ (T + 1)
+              k).symm)))
+
+/-- **R5. The course as it was has a point of no return, within `x` steps.** Under
+`turns_in_time_iff`'s premises on the regime and on the course as it was (none on the marks or the
+kept kind): nothing given from nothing; giving short of `H₂` below `y₂`, meeting it from `y₂` up to
+`hi`, the step under `H₂` keeping the level within `hi`; a positive need at most `H₂ + y₂`; giving
+short of `H₁` below `y₁`, every way on `alone`'s orbit from `w` using at least `H₁`, and the start `x`
+below `H₁ + y₁` and at most `hi`. Then the level course as it was from `(w, x)`, with the turns to
+`H₂` as the feasible courses and the need met at every step as what is asked, has a point of no
+return `N ≤ x`. By `noReturnAt_of_past`. The premises on `H₂` (with `high`) decide recoverability at
+each step through `recoverable_iff_above`; that the course is not recoverable at step `x` needs only
+that its level there is below the need (a course that agrees with it at `x` does not meet the need
+there), which the premises on the course as it was give with a positive need
+(`Optimum.ends_within`). -/
+theorem noReturn_exists {alone : W → W} {giving : Nat → Nat} {use : W → Nat}
+    {H₁ y₁ H₂ y₂ hi need : Nat}
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H₂ y₂)
+    (meets : RegimeMargin.Meets giving H₂ y₂ hi) (keeps : RegimeMargin.Keeps giving H₂ hi)
+    (needs : 0 < need) (within : need ≤ H₂ + y₂)
+    (short₁ : RegimeMargin.Short giving H₁ y₁) {w : W} {x : Nat}
+    (uses₁ : ∀ j, H₁ ≤ use (Law.orbit alone w j)) (below : x < H₁ + y₁) (high : x ≤ hi) :
+    ∃ N, N ≤ x ∧ NoReturnAt
+      (Turned (fun j => (Law.orbit (asItWas alone
+        (fun w x => RegimeMargin.step giving (use w) x)) (w, x) j).2) giving H₂)
+      (MeetsNeed need)
+      (fun t _ => (Law.orbit (asItWas alone
+        (fun w x => RegimeMargin.step giving (use w) x)) (w, x) t).2) N :=
+  have regime := asItWas_falls nothing short₁ uses₁ below
+  noReturnAt_of_past
+    (recoverable_decided (X := fun j => (Law.orbit (asItWas alone
+      (fun w x => RegimeMargin.step giving (use w) x)) (w, x) j).2)
+      regime.1 high nothing short meets keeps needs within)
+    (fun rec => Nat.not_le_of_gt (regime.2 need needs) (met_of_recoverable rec x (Nat.le_refl x)))
+
+/-- **R6. Turning in time is turning before the point of no return.** Under `turns_in_time_iff`'s
+premises (`AloneOutside` and decided marks; a way after a marked step of the kept kind, a kind every
+step keeps that uses `H₂`; nothing given from nothing; giving short of `H₂` below `y₂`, meeting it from
+`y₂` up to `hi`, the step under `H₂` keeping the level within `hi`; a positive need at most
+`H₂ + y₂`; giving short of `H₁` below `y₁`, every way on `alone`'s orbit from `w` using at least `H₁`,
+and the start `x` below `H₁ + y₁` and at most `hi`): the line from `(w, x)` never ends exactly where
+there is a step `T` of the course as it was, the need met and no level marked before it, the need met
+and the level marked at it, and a point of no return `N` of the course as it was (the turns to `H₂`
+feasible, the need met at every step asked) with `T + 1 < N`. The need met at and before `T` follows
+from that point `N` with `T + 1 < N`, with no premise (the course that recovers at `T + 1` agrees with the course as it was
+up to there and meets the need); it is kept to match `turns_in_time_iff`. Proved through
+`course_turned`, `turned_meets_iff` and `recoverable_iff_above`: the pair's own level course is the
+course as it was turned at `T + 1`, and that turn meets the need exactly where the course as it was is
+recoverable at `T + 1`. `recoverable_iff_above` at `T + 1` is used in both directions: its only-if
+direction, where `short` enters, in this theorem's if direction, and its if direction, with
+`noReturn_exists` and `NoReturnAt.recoverable_iff`, in this theorem's only-if direction.
+`unending_iff_first_marked` is used only to find `T`. -/
+theorem turns_in_time_iff_before {marked : Nat → Prop} [DecidablePred marked] {alone : W → W}
+    {after : W → Nat → W} {Kept : W → Prop} {giving : Nat → Nat} {use : W → Nat}
+    {H₁ y₁ H₂ y₂ hi need : Nat}
+    (outside : AloneOutside marked alone after) (turns : ∀ w x, marked x → Kept (after w x))
+    (kept : ∀ w x, Kept w → Kept (after w x)) (uses : ∀ w, Kept w → use w = H₂)
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H₂ y₂)
+    (meets : RegimeMargin.Meets giving H₂ y₂ hi) (keeps : RegimeMargin.Keeps giving H₂ hi)
+    (needs : 0 < need) (within : need ≤ H₂ + y₂)
+    (short₁ : RegimeMargin.Short giving H₁ y₁) {w : W} {x : Nat}
+    (uses₁ : ∀ j, H₁ ≤ use (Law.orbit alone w j)) (below : x < H₁ + y₁) (high : x ≤ hi) :
+    «不穷» (net need after (fun w x => RegimeMargin.step giving (use w) x)) «一» (w, x) ↔
+      ∃ T, (∀ j, j < T →
+          need ≤ (Law.orbit (asItWas alone
+            (fun w x => RegimeMargin.step giving (use w) x)) (w, x) j).2 ∧
+          ¬ marked (Law.orbit (asItWas alone
+            (fun w x => RegimeMargin.step giving (use w) x)) (w, x) j).2) ∧
+        need ≤ (Law.orbit (asItWas alone
+          (fun w x => RegimeMargin.step giving (use w) x)) (w, x) T).2 ∧
+        marked (Law.orbit (asItWas alone
+          (fun w x => RegimeMargin.step giving (use w) x)) (w, x) T).2 ∧
+        ∃ N, NoReturnAt
+            (Turned (fun j => (Law.orbit (asItWas alone
+              (fun w x => RegimeMargin.step giving (use w) x)) (w, x) j).2) giving H₂)
+            (MeetsNeed need)
+            (fun t _ => (Law.orbit (asItWas alone
+              (fun w x => RegimeMargin.step giving (use w) x)) (w, x) t).2) N ∧
+          T + 1 < N :=
+  have regime := asItWas_falls nothing short₁ uses₁ below
+  have recAt := fun n => recoverable_iff_above (N := n)
+    (X := fun j => (Law.orbit (asItWas alone
+      (fun w x => RegimeMargin.step giving (use w) x)) (w, x) j).2)
+    regime.1 high nothing short meets keeps needs within
+  ⟨fun never =>
+    match (unending_iff_first_marked outside ⟨x, regime.2 need needs⟩).mp never with
+    | ⟨T, before, atT, markedT, _⟩ =>
+      have line := course_turned (giving := giving) outside turns kept uses
+        (fun j lt => (before j lt).2) markedT
+      have low := above_of_turned_meets (X := fun j => (Law.orbit (asItWas alone
+            (fun w x => RegimeMargin.step giving (use w) x)) (w, x) j).2)
+          nothing short needs fun t =>
+        Eq.subst (motive := fun z => need ≤ z) (line t) (Law.stepWhile_unending_iff.mp never t)
+      match noReturn_exists nothing short meets keeps needs within short₁ uses₁ below high with
+      | ⟨N, _, point⟩ =>
+        ⟨T, before, atT, markedT, N, point, point.recoverable_iff.mp ((recAt (T + 1)).mpr low)⟩,
+   fun ⟨T, before, _, markedT, _, point, lt⟩ =>
+    have line := course_turned (giving := giving) outside turns kept uses
+      (fun j lt => (before j lt).2) markedT
+    have low := (recAt (T + 1)).mp (point.2 (T + 1) lt)
+    Law.stepWhile_unending_iff.mpr fun t =>
+      Eq.subst (motive := fun z => need ≤ z) (line t).symm
+        (turned_meets_of_above (X := fun j => (Law.orbit (asItWas alone
+          (fun w x => RegimeMargin.step giving (use w) x)) (w, x) j).2)
+          regime.1 high meets keeps within low t)⟩
+
+end PointOfNoReturn
+
+/-! ## 8. Three courses from one start -/
 
 namespace Three
 
@@ -999,6 +1471,23 @@ theorem ends_as_it_was :
   ⟨unmarked_interval_iff.mpr (.inl (by decide)), (Law.stepWhile_steps_iff 4).mpr ⟨by decide, rfl⟩,
    Law.stepWhile_none_iff.mpr (by decide),
    fun never => absurd (Law.stepWhile_unending_iff.mp never 4) (by decide)⟩
+
+/-- **From nine as it was, the point of no return is step 3.** The course as it was runs nine, eight,
+six, two, nothing; with the turns to the kept kind's use three as the feasible courses (`y = 3`, so
+`H₂ + y₂ = 6`) and a need of one met at every step as what is asked, step 3 is the first at which it
+is not recoverable (`noReturnAt_iff_first_below`). First marked at step 0 or 1, the pair's course is
+the course as it was turned at step 1 or 2 (`course_turned`), before the point, and the line never
+ends (`goes_on`); first marked at step 2 it is turned at step 3, the point itself, and the line ends
+(`turned_and_ends`). -/
+theorem noReturn :
+    NoReturnAt (Turned (fun t => (Law.orbit (asItWas id left) (true, 9) t).2) giving 3)
+      (MeetsNeed 1) (fun t _ => (Law.orbit (asItWas id left) (true, 9) t).2) 3 :=
+  (noReturnAt_iff_first_below (X := fun t => (Law.orbit (asItWas id left) (true, 9) t).2)
+    (giving := giving) (H := 3) (y := 3) (hi := 12) (need := 1) (N := 3)
+    (asItWas_falls (giving := giving) (use := use) (H₁ := 5) (y₁ := 5) (w := true) (x := 9)
+      rfl (RegimeMargin.short_of_below rfl) uses_true (by decide)).1
+    (by decide) rfl (RegimeMargin.short_of_below rfl) (RegimeMargin.meets_of_below rfl)
+    (RegimeMargin.keeps_of_below rfl) (by decide) (by decide)).mpr ⟨by decide, by decide⟩
 
 end Three
 

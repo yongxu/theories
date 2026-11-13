@@ -19,7 +19,7 @@ So three levels of one quantity decide: where its fall first makes a difference,
 | six | it turns with two left, too few; one step later nothing is left and nothing follows |
 | no level | it never turns: nine, eight, six, two, nothing, the same way to the end |
 
-One step separates a turn that holds from a turn that comes too late.
+One step separates a turn that holds from a turn that comes too late: as it was, the course can still be turned to hold at step 2 and no longer at step 3, its point of no return, and a turn takes hold one step after the step at which the level first makes a difference (proved: `Three.noReturn`, `turns_in_time_iff_before`).
 
 ![The level, step by step, from nine](turning-in-time.svg)
 

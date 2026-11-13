@@ -101,3 +101,18 @@ After the first gate run was started, one law was added and one name changed, by
 | `kit/` | `fill_records.py`, which binds the two records to the core run, and the lander's commands |
 
 Files copied from the session's scratch folder are kept as written; those that name local paths say so in their first line. Links between them were changed only where the move broke them.
+
+## TT2: the point of no return, a level and a step (13 November 2026)
+
+*AI-written, 13 November 2026. Appended; the sections above are as they stood at TT's landing.*
+
+Board item TT2. The package used one name for two things: `RegimeMargin` calls the level `H + y` the point of no return under a standing use `H`, and `Becoming.ReadOffInTime` calls the first step at which a course is not recoverable its point of no return (`NoReturnAt`), with the feasible courses and what is asked of them given. One witness tied them (`FourReaders.recoverable_iff_regime`). A new last section of `TurningInTime.lean` before `Three` ties them for every level course that never rises.
+
+- **`recoverable_iff_above`, `noReturnAt_iff_first_below`.** For a level course `X` that never rises and starts at most `hi`, with the feasible courses `X` turned to one standing use `H` at some step, the start included (`turned`, `Turned`), and the need met at every step asked (`MeetsNeed`), under nothing given from nothing, `Short`, `Meets`, `Keeps` at `H` and a positive need at most `H + y`: `X` is recoverable at `N` exactly where `H + y ≤ X N`, so its point of no return is the first step at which its level is below `H + y`.
+- **`course_turned`.** On the pair, the level course is the course as it was turned at `T + 1`, for `T` its first marked step. No premise on the need.
+- **`noReturn_exists`, `turns_in_time_iff_before`.** Under `turns_in_time_iff`'s premises the course as it was has a point of no return `N ≤ x`, and the line never ends exactly where the first marked step `T`, the need met there and before, has `T + 1 < N`.
+- **`Three.noReturn`.** From nine as it was the point is step 3; marked at step 2, `T + 1` is that step and the line ends.
+
+It is a composition of landed theorems (`RegimeMargin.ends_below`, `holds`, `Optimum`'s level theorems, `agrees_until_marked`), about two hundred lines, and no existing statement or name changed; one existing proof was refactored (the kept kind's run, now a private lemma). The module now has 61 declarations, 46 of them theorems. The header's sentence that `ReadOffInTime`'s theorems "are not joined" is replaced by what is joined and what is not: its selection side is not instantiated, other continuations than a turn to one use are not among the feasible courses, and `FourReaders`' witness is not derived from the join.
+
+How it was made: a first design ([`TT2-DESIGN-attacked.md`](TT2-DESIGN-attacked.md)) claimed a tie to `ReadableInTime`; two AI readers refuted it (the pair's course and the course as it was first part at `T + 2`), found the join near-definitional, and fixed the family of feasible courses and the step `T + 1` ([`readers/tt2-n1-existing.md`](readers/tt2-n1-existing.md), [`readers/tt2-n2-logic.md`](readers/tt2-n2-logic.md)). The revised design is [`TT2-DESIGN.md`](TT2-DESIGN.md). One AI agent wrote the section in scratch; one AI reader checked each statement by simulation and each sentence against its statement ([`readers/tt2-v1-section.md`](readers/tt2-v1-section.md)); nine findings, all repaired.

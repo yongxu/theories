@@ -5004,7 +5004,8 @@ tagged instance or application.
 * `Becoming.TurningInTime` (L2, through `Becoming.OwnClass` and `Becoming.ReadOffInTime`): a line
   that ends where the net ends, or ends while the net goes on (board item TT). It is in the second
   layer only through those two imports, `Becoming.OwnClass` for `«类闭则本类常闭»` and
-  `Becoming.ReadOffInTime` for `first_of_decided`; it states no continuation condition and no
+  `Becoming.ReadOffInTime` for `first_of_decided` and its point of no return of a course
+  (`Recoverable`, `NoReturnAt`); it states no continuation condition and no
   valuation, and uses none. A configuration is a way `w` and a level `x`; one step takes it to
   `(after w x, left w x)` (`TurningInTime.pair`, `Mechanism.adaptive`'s step with the level in the
   second place, `TurningInTime.pair_adaptive`), and the net (`TurningInTime.net need after left`) is
@@ -5059,7 +5060,8 @@ tagged instance or application.
   way stays `Locked` (`TurningInTime.locked_alone`), and with a positive need, no marked level meeting
   it, and the level of the course as it was given at most `r` and losing more than `r` at every step,
   a `Locked` start reaches a configuration that conditions nothing, still `Locked`
-  (`TurningInTime.locked_ends_with_net`, by `TurningInTime.ends_with_net`). Witness
+  (`TurningInTime.locked_ends_with_net`, by `TurningInTime.ends_with_net`).
+  For a level course `X` that never rises and starts at most `hi`, with the feasible courses `X` turned to a standing use `H` at some step, the start included, and what is asked of a course the need met at every step, under nothing given from nothing, `RegimeMargin`'s premises for `H` up to `hi` and a positive need at most `H + y`: `X` is recoverable at `N` exactly where `H + y ≤ X N` (`TurningInTime.recoverable_iff_above`), so its point of no return, a step, is the first step at which its level is below `H + y`, `RegimeMargin`'s point of no return, a level (`TurningInTime.noReturnAt_iff_first_below`). On the pair the level course is the course as it was turned at `T + 1`, for `T` its first marked step (`TurningInTime.course_turned`), and under `turns_in_time_iff`'s premises the line never ends exactly where `T + 1` comes before the point of no return of the course as it was (`TurningInTime.noReturn_exists`, `TurningInTime.turns_in_time_iff_before`); in `Three` that point is step 3 (`TurningInTime.Three.noReturn`). Witness
   `TurningInTime.Three` (giving `min z (12 - z)`, uses five and three, a need of one, from nine): first
   marked at step 0 or 1 the line never ends, at step 2 it turns and ends and the line under the way's
   class ends while the net goes on, with no marked level it ends as it was. The marks, `AloneOutside`,
