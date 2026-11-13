@@ -170,6 +170,8 @@ Ren, asked which version of the centre sentence should go into AGENTS.md and the
 
 **Not done by it, and known.** MAP.md's first half, the uses pages' "four questions for any selection" and the one page's table rows still say "reads", "beyond" and "locks on"; they are one set with the map's sheet and are the next piece, with the map's session. "Reads" stands in the chapters. The records and the atlas are untouched. The one page's short route grew from eleven to fifteen minutes to thirteen to seventeen.
 
+**Corrected after landing (13 November, 21:55 WIB).** The coordinator's readers, carrying the blocks onto the map, found that the optimum's block said "does better … on what makes a difference" for the Lean's `Exceeds` (no lower at any condition of the family and higher at one); "does better" also admits a higher total, under which the conclusion fails (their counterexample is in `development/rw-one-map/centre-words/readers/check2-lean-3b.md`). The premise "ranks more of what makes a difference to it higher" was loose in the same way for `Rising`. Both now say the definition, on the one page and in the overview, in English and Chinese; the kit in `centre/kit/` is kept as it ran.
+
 ## How far this has been checked
 
 The scan is AI readers' reading, sixteen of them, with one critic over the rest. The counts are grep counts over the twenty English pages and include link text and anchors. A sample count of "read" and "beyond" was made and showed that the classes it used do not hold. No person has read the findings.
