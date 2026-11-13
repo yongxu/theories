@@ -8,8 +8,8 @@
 
 **What was added.** Three small things. No existing name was changed and no existing module was rewritten.
 
-1. **A tie in the root.** It had two names for one gap and no theorem relating them. Seven short laws now do.
-2. **A law's step that has a next only while it can go on.** Before this, a law's step (`Law.step`) always had a next, and a step cut short appeared only inside one witness, so no general law let a line on a law end where the net ends.
+1. **A tie in the root.** It had two names for one gap and no theorem relating them. Seven short theorems now do.
+2. **A law's step that has a next only while it can go on.** Before this, a law's step (`Law.step`) always had a next, and a step cut short appeared only inside one witness, so no general theorem let a line on a law end where the net ends.
 3. **One model: a way of going on and a level it needs.** On it:
    - the way stays as it was at every level except the marked ones;
    - with no marked level that still meets the need, the line runs the level down and ends where the net ends, the same from every level;
@@ -25,7 +25,7 @@ All of it passed the core run with no axioms, and is on main as content tip `655
 
 ## What I got wrong on the way
 
-- My first module restated laws the root already had: I had not read the root far enough. It is kept in `held/`.
+- My first module restated theorems the root already had: I had not read the root far enough. It is kept in `held/`.
 - One theorem I designed was true of every relation and said nothing. Removed.
 - I wrote that no guarded law existed in the package. One did; it is now tied to the new one.
 - I wrote log times from memory and they ran ahead of the clock.
@@ -57,7 +57,7 @@ If you want new names for the old ones, these are the words I would try on you: 
 
 ## Where things are
 
-- Lean: `Becoming/GrammarPath.lean` (seven laws added), `Becoming/GuardedStep.lean`, `Becoming/TurningInTime.lean`.
+- Lean: `Becoming/GrammarPath.lean` (seven theorems added), `Becoming/GuardedStep.lean`, `Becoming/TurningInTime.lean`.
 - This folder: the plan and its log (`drafts/PLAN.md`), the design (`DESIGN.md`, `DESIGN-R2.md`), the maps of what exists (`map/`), every reader's report (`readers/`, in short in `READER.md`), the near work, the first attempt (`held/`).
 
 ## After this page: the morning of 13 November
@@ -65,7 +65,17 @@ If you want new names for the old ones, these are the words I would try on you: 
 *Added 13 November 2026, 10:07 WIB.*
 
 - **Pushed**, on your "push first so I can read it on GitHub, then continue". The full gate ran after that push, not before, and found one real failure from the landing: the atlas entry listed eleven theorems that had no rows in the atlas's binder mapping. It was fixed and landed the same morning, and the lesson is kept.
-- **"Theorem".** On your "Yes, theorem" to another session, the account's own proved statements are now called theorems on the reading path, and "law" stays for a model's determined step. 02 §11 follows that rule. This page, above, still says "laws" where it means theorems.
+- **"Theorem".** On your "Yes, theorem" to another session, the account's own proved statements are now called theorems on the reading path, and "law" stays for a model's determined step. 02 §11 follows that rule. This page now says "theorems" where it means them (changed that evening).
 - **One thing this page lists as given is now derived in one case.** Board item WU: where the way is made of units that each need and take, a turn needs no mark. The ending of a unit that takes is the turn. Its page, five minutes: [a way of units](../wu-a-way-of-units/A-WAY-OF-UNITS.md) ([中文](../wu-a-way-of-units/A-WAY-OF-UNITS.zh.md)). The marks of a way that conditions on a reading stay given, and this is not learning with no learner.
 - **What I got wrong that morning**, kept in that folder: my first design for WU claimed the marks "all follow". Three readers cut it back.
 - **What waits for you** is as above (items 1 to 4 and 6), and the push of what has landed since.
+
+## The afternoon and evening of 13 November
+
+*Added 13 November 2026, 20:54 WIB.*
+
+- **The centre is now said in AGENTS.md and on every front** without a doer or a beyond, by another session with the coordinator, on your "work with the coordinator - no need to ask my approval". I checked each clause against the Lean before it landed. Its two relations are kept apart by two phrases: what *makes a difference to* a selection, and what *sustains* it. Its third sentence is this page's theorem: the selection goes on the same way until what sustains it gives out, unless that running down makes a difference to it early enough.
+- **"Early enough" now has a theorem with a number in it** (board item TT2). The package called two things the point of no return: a level in one module and a step of a course in another, tied on one witness only. They are joined for every level course that never rises: the point of no return as a step is the first step at which the level is below the point of no return as a level. On this page's model, a turn takes hold one step after the level first makes a difference, and the line never ends exactly where that step comes before the point of no return of the course as it was. In the worked example that point is step 3, which is why a mark at step 2 is too late. It is a composition of what was already proved, about two hundred lines, and is said as that. My first design for it claimed a tie to a third notion that two readers refuted; it is kept.
+- **A way of units asks less** (board item WU2). Its two comparison theorems hold from any start up to the bound, with only the premises they need. That nothing given from nothing cannot be dropped is a Lean witness; for each other premise a reader found a computed case, which is not Lean.
+- **Not shown still:** the marks of a way that conditions on a reading; anything that builds a unit; any comparison for more than two units; anything about a trained system.
+- **What waits for you** is as above. The statement of the centre is no longer waiting: it is the paragraph in AGENTS.md, and it is yours to change.
