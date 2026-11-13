@@ -31,7 +31,7 @@ ROWS = {'b3': 'What the rule is set from', 'bs': 'Whether shaping the rule keeps
 BANDS = {'B': 'What the selecting goes by'}
 
 BOX_NAMES = {
-    'b2.uncounted': 'Used up; no difference to the rule',
+    'b2.uncounted': 'Used up; no change to the rule',
     'b1.swing': 'Set from the share, not yet locked',
     'b1.held': 'Locked',
     'b1.outside': 'Not set from what it selects',

@@ -8,34 +8,34 @@
 
 *AI-written, 12 November 2026: [how far it goes](#how-far-it-goes).*
 
-A map of how anything forms, lasts, changes and ends, drawn so that people and AI can see the way together. Its first path: what picks among things by a rule (a reward, a judge, a market, a training run) can use up what the rule does not count, can lock itself in where the rule is updated from its own picks, and in built examples loses what would have read the loss. One way out is proved of the course itself: where the loss gets back to the rule in time, the rest count it, and the judgments together go against what the rule favoured at two updates running, the rule turns. No theorem drawn says what brings a loss to get back to the rule or to be counted. Every other way out drawn needs something given from outside, or is shown only in a built example or as a reading.
+A map of how anything forms, lasts, changes and ends, drawn so that people and AI can see the way together. Its first path: a selection (a reward, a judge, a market, a training run) can use up something while how much is left of it makes no difference to it, and whatever lives on that thing bears the loss; where each update sets its rule again from the shares selected under it, the rule can lock; and in built examples the using up removes those that would have counted the loss. One way out is proved from conditions on the loss and the judgments alone (step 9, with its conditions): where the rest count the loss, and the judgments together go against what the rule favoured at two updates running, the rule turns. No theorem drawn says what brings a loss to get back to those the rule is set from, or to be counted. Every other way out drawn is proved only with a further premise (how the rule is set, what is measured or allowed, or where the loss falls), or is shown only in a built example or as a reading.
 
 Drawn so far: 50 boxes on 14 rows, 5 paths told step by step, 7 tests laid on them.
 
 ![The first path drawn on the map: the boxes it passes through are lit and its steps numbered](path-lock.svg)
 
-*How to read it.* Each row asks one thing. Each box is one way the answer can stand. To place a thing, find on each row that applies to it the box that fits it; the boxes drawn so far need not hold every answer. An arrow with a head is a way from one box to another: along a row, a change of that row's answer; between rows, from one row's answer to another's. Its line says how that is known: solid where it is proved, dashed where it is proved only with something given from outside, dotted where it is not shown in general (a built example, or a reading). *Proved* means a theorem on a stated model, checked by machine; whether a real case fits the model is what the tests show. A line with a bar across it and no head is not a way from one box to the other: it marks a proved boundary between the two. A double line, also without a head, says one box is a case of another. On a path, a hollow number marks a step that is not proved of the course itself. A small ring on a box: something is known about staying there. A violet dot: a test is laid on it. A box outlined in green dashes is one the work wants to reach.
+*How to read it.* Each row asks one thing. Each box is one way the answer can stand. To place a thing, find on each row that applies to it the box that fits it; the boxes drawn so far need not hold every answer. An arrow with a head is a way from one box to another: along a row, a change of that row's answer; between rows, from one row's answer to another's. Its line says how that is known: solid where it is proved, dashed where it is proved only with a further premise, which the arrow names, dotted where it is not shown in general (a built example, or a reading). *Proved* means a theorem on a stated model, checked by machine; whether a real case fits the model is what the tests show. A line with a bar across it and no head is not a way from one box to the other: it marks a proved boundary between the two. A double line, also without a head, says one box is a case of another. On a path, a hollow number marks a step whose first arrow needs a further premise, or is shown only in a built example or as a reading. A small ring on a box: something is known about staying there. A violet dot: a test is laid on it. A box outlined in green dashes is one the work wants to reach.
 
 **[The same map to operate](interactive.html)**: choose a path, a test, any box or any arrow, or place something you know. (GitHub shows that file as source; [it opens here](https://yongxu.github.io/theories/theories/becoming/results/map/interactive.html).)
 
-## The first path: A rule that holds itself in place
+## The first path: A rule set from the shares selected under it
 
-A reward, a judge, a market, a vote or a training run picks among things by a rule. This path follows what can happen to such a rule, and what turns it.
+A reward, a judge, a market, a vote or a training run is a selection: at each step it selects among things by a rule. This path follows what can happen to such a rule, most often where updates set it again from the shares selected under it, and what turns it.
 
 Close to what others call: [Goodhart's law, in its popular wording](PLACES.md#box-b2-uncounted); [cumulative advantage (the Matthew effect in its generalised form)](PLACES.md#box-b1-held); [regulatory capture](PLACES.md#box-bs-pays); [adaptive preferences (Sen)](PLACES.md#box-b3-inside); [Collingridge's dilemma](PLACES.md#box-b2-heard); [Guoyu: 國人莫敢言 (no one dared speak)](PLACES.md#box-b3-gone).
 
 <details><summary>What is in it, and the words used</summary>
 
-- **the rule**: what the picking goes by: a reward, a score, a price, a count of votes.
-- **an update**: the rule set again; between updates it stays as it was. What it is set from differs from step to step, and each step says: its own picks, or judgments.
+- **the rule**: how the selection selects at a step: a reward, a score, a price, a count of votes.
+- **an update**: a step that sets the rule again; between updates the rule stays as it was. What it is set from differs from step to step of this path, and each step says which: the shares selected under it, judgments, or which of the pool keep going.
 - **locked; the lock**: the rule favours one side and the next update would favour it no less; from there neither the favour nor that side's share falls.
-- **the favoured side, its share and its lead**: what the rule picks more of. Its share is how much of the whole it has; its lead is the same thing told as how far ahead of the rest it is.
-- **the rest**: what is picked among besides the favoured side. Where the rule is set from the judgments of what it picked (steps 7, 9 and 14), the rest judge too, and weigh by their numbers.
-- **the loss**: how much has been used up of something the rule leaves out. What lives on that thing bears it. It is still called the loss once something counts it.
-- **what reads the loss, or counts it**: anything among what sets the rule whose judgment changes with the loss.
-- **what sets the rule**: those the rule is set from: from their judgments in steps 7, 9 and 14; in steps 8 and 15, from whether each of them keeps going.
-- **the shapers**: what spends to change the rule in its own favour.
-- **of the course itself; given from outside**: the first: proved under the conditions its sentence gives, with nothing else put in. The second: proved only with a further premise put in, which the step names: that the loss goes on growing, a way of judging, a measure, a limit, or where the loss falls. Which premises are marked as given from outside is the map's own marking, not a difference between two kinds of proof.
+- **the favoured side and its share**: the side the rule favours, and how much of the whole it is.
+- **the rest**: what the selection selects among besides the favoured side. Where the rule is set from the judgments of what it has selected (steps 7, 9 and 14), the rest judge too, and weigh by their numbers.
+- **the loss**: how much has been used up of something whose level makes no difference to the rule. Whatever lives on that thing bears the loss. It is still called the loss where its level does make a difference.
+- **those that count the loss**: those in the pool whose judgment the model lets differ once the loss has passed a set amount (it need not differ). Where the model lets no judgment in the pool differ with the loss, none counts it. In the built example of step 16 they judge against the favoured side, and the loss removes them.
+- **the pool**: those an update sets the rule from. In steps 7, 9 and 14: what the selection has selected, each with a judgment, weighed by their numbers. In steps 8 and 15 the rule is set only from which of them keep going.
+- **the shapers**: what bears a cost to shape the rule, part of what that brings coming back to it alone.
+- **proved; proved only with a further premise**: Step 1 holds by what its words mean and names no theorem. The other unmarked steps are proved under the conditions their sentences give, together with the loss's growth wherever a theorem takes it (steps 5, 6, 9 and 14). A step marked as needing a further premise is proved only with a further assumption about the set-up, which it names: a way of setting the rule, a measure, a limit, or where the loss falls (in step 3, that the loss goes on growing; in step 17, that such an update comes). The marking is the map's own, not a difference between two kinds of proof.
 - **a built example**: a small case made up and worked out exactly, in which the thing happens. It shows that it can happen, not that it must.
 
 </details>
@@ -44,40 +44,40 @@ Unmarked steps are proved, each under its condition. [Every step with what it st
 
 **How it closes**
 
-1. Where a rule leaves something out and that thing is being used up, the rule scores the outcome the same however much is used; what lives on that thing bears it. Such as a catch quota met every year while the seabed that feeds the fish wears away.
-2. Where the rule is updated from its own picks: if every update favours the same side, and no less when that side's share is larger, the rule is locked in from the step after its second update, wherever it started. Such as a keyboard layout: people learn it because machines have it, and machines have it because people learned it.
-3. A lock that goes by the lead alone runs the same however much is used up. That the loss goes on growing, locked or not, is assumed by the theorems, not proved. *(proved only with something given from outside)*
-4. In built examples, what is used up is what the readers of the loss stood on. They are removed. *(built example only)*
-5. Once nothing is left that counts the loss, and none comes back, a lock that stands stays for good, provided what is used up never lowers the lead.
-6. Where the judging of the rule is set by that same side too, the lock is closed on itself. It stays at every step, however far a loss that makes no difference to anything inside it grows. The account calls this loop the meta-attractor; this is its closed form. Such as a ranking refit to the clicks its own top results draw, its success measured by those same clicks. *Laid on a judge that reads its own earlier picks: in the arm that began with one side far ahead and the loss noted nowhere, it stayed locked in 5 of 5 runs while the loss grew. In another arm of the same test one note of the loss among nine turned the judge: it does not meet the theorem's conditions (step 14).*
+1. Where something is being used up and how much is left of it makes no difference to a rule, the selection comes out the same however much is left; whatever lives on that thing bears the loss. Such as a catch quota met every year while the seabed that feeds the fish wears away.
+2. Suppose each update sets the rule again from the favoured side's share, and being favoured never lowers a share. If every update favours the same side, and no less when that side's share is larger, the rule is locked at the step after its second update, whatever share and rule it started from. Such as a keyboard layout: people learn it because machines have it, and machines have it because people learned it.
+3. If the loss changes neither what is selected next nor how the rule is set, a lock runs the same however much is used up. That the loss goes on growing, locked or not, is a premise of the theorems, not proved. *(proved only with a further premise)*
+4. In built examples, those that would have counted the loss lived on the very thing used up. They are removed. *(built example only)*
+5. Once none is left that counts the loss, and none comes back, a lock that stands stays for good, provided that, however much is used up, being favoured never lowers that side's share.
+6. Where the way the rule is updated is itself formed from that same share, the loop is closed. From a locked start it stays locked at every step, however far the loss grows, as long as the loss changes neither what is selected next nor how the rule is set. The account calls this loop the meta-attractor; this is its closed form. Such as a ranking refit to the clicks its own top results draw, its success measured by those same clicks. *Laid on a judge that reads its own earlier picks: in the arm that began with one side far ahead and the loss noted nowhere, it stayed locked in 5 of 5 runs while the loss grew. In another arm of the same test one note of the loss among nine turned the judge: it does not meet the theorem's conditions (step 14).*
 
 **Another way in**
 
-7. Shaping the rule in the shapers' own favour pays wherever what comes back to the shapers alone covers the cost. Where the rule is updated from the judgments of what it picked, and the shapers judge that return no lower than the rest do, a start at which shaping pays is locked in. Such as lobbying whose gains come back mostly to the firm that paid for it.
+7. The rule favours the shapers exactly where what comes back to them alone covers the cost of shaping. Where each update sets the rule from the judgments of what it has selected, and the shapers judge that return no lower than the rest do, then from a start at which the rule so set favours the shapers it is locked. Such as lobbying whose gains come back mostly to the firm that paid for it.
 
 **The ways out**
 
-8. For a rule that goes only by whether those that set it keep going: the loss gets back to it in time exactly where at least one of them can tell it while what is being lost can still be kept. Such as residents downstream who now sit on the board that sets the discharge limit.
-9. If the rest count the loss, and the judgments taken together go against what the rule favoured at this update and the next, the rule turns. The turn is for good provided the rest go on counting the loss and judge no more in the favoured side's favour than that side does.
-10. Or the judging is one that stops favouring once the loss passes a set amount. Then, where the loss goes on growing (given), the lock ends once it has passed that amount, however far ahead the favoured side is. *(proved only with something given from outside)*
-11. Or the loss falls on the shapers themselves. It adds to their cost, and past a line shaping no longer pays. *(proved only with something given from outside)*
-12. Or whether each keeps going is measured over everything that began, not only over what is left. Then every removal shows. *(proved only with something given from outside)* Such as a trial that counts every patient enrolled, including those who dropped out.
-13. Or only outcomes that keep every need are allowed. Then the best by the rule takes only the spare. *(proved only with something given from outside)*
+8. Take a rule set only from which of the pool keep going. The loss can get back to it early enough exactly where the loss, while what is being lost can still be kept, changes whether at least one of the pool keeps going. Such as residents downstream who now sit on the board that sets the discharge limit.
+9. If the rest count the loss, the loss grows at every step, and, at or past the set amount, the judgments taken together go against what the rule favoured at one update and the next, the rule turns. The turn is for good provided the rest go on counting the loss and judge no more for the favoured side than that side does.
+10. Or the rule is set in a way that stops favouring once the loss passes a set amount. Then, where the loss goes on growing, the lock ends once the loss has passed that amount, however large the favoured side's share. *(proved only with a further premise)*
+11. Or the loss falls on the shapers. It adds to the cost of shaping, and past a line the rule no longer favours them and their share, where any are present, falls. *(proved only with a further premise)*
+12. Or whether each keeps going is measured over a fixed list of all that began, not only over what is left. Then the measure is not met wherever one is removed. *(proved only with a further premise)* Such as a trial that counts every patient enrolled, including those who dropped out.
+13. Or only outcomes that leave every need met are allowed. Then the best outcome by the rule takes only what is left over. *(proved only with a further premise)*
 
 **Where it is too late**
 
-14. If, by the time the rest begin to count the loss, the judgments together already favour what the rule favours, the lock stays (the rest judging no more in the favoured side's favour than that side does). Such as a minority report filed every year and outvoted every year. *The same judge: with one note in nine it chose prose in all 50 picks, and the share then swung back and forth. The theorem's condition was not met.*
-15. If the loss makes no difference to anything that sets the rule until what is being lost can no longer be kept, no rule that goes only by whether those things keep going can read it in time. With room to gain, every best outcome by the rule leaves the uncounted thing at its lowest allowed level; what lives on it, still needing it, ends where that level is below its need. *Three AI fishers: an untold bed was kept in 0 of 60 seasons. Taking the best catch for themselves gives the same.*
-16. In one built example the rule had turned; but the lead, grown large, used up what the counters of the loss stood on. They were gone, and the lock came back for good. *(built example only)*
+14. If the loss grows at every step and, by the time the rest begin to count it, the judgments taken together already favour what the rule favours, the lock stays (the rest judging no more for the favoured side than that side does). Such as a minority report filed every year and outvoted every year. *The same judge: with one note in nine it chose prose in all 50 picks, and the share then swung back and forth. The theorem's condition was not met.*
+15. If, until what is being lost can no longer be kept, the loss changes nothing about which of the pool keep going, it can get back early enough to no rule set only from which of them keep going. And where the rule ranks an outcome above another whenever it is higher at one of the things the rule goes by and lower at none, whatever either leaves of other things, then with room to gain every best outcome leaves those other things at their lowest allowed level; what lives on one of them, its need met before the step and still needing it, ends where that level is below its need. *Three AI fishers: an untold bed was kept in 0 of 60 seasons. Taking the best catch for themselves gives the same.*
+16. In one built example the rule favoured the other side at two steps; but as the first side's share grew, more was used up of what those that judged against it lived on. They were gone, and from the next step the lock was back for good. *(built example only)*
 
 **What no theorem shows**
 
-17. No theorem says what first makes a rule start to be updated from its own picks. Until the first such update it stays as it began, whatever it picks. *(proved only with something given from outside)*
-18. Two readings, with no theorem behind them. The loop reaches its own checks: the ways a loss could come to count are filled from inside and, one order further, breaking them is what gets rewarded. And the loop goes on remaking what picks it while what carries it is replaced. *(a reading, not proved)*
+17. No theorem says what first brings a rule to be set again from the shares selected under it. What is proved: until the first such update the rule stays as it began, whatever is selected under it. *(proved only with a further premise)*
+18. Two readings, with no theorem behind them. The checks too come to follow what the rule favours: the ways a loss could come to count are filled by what the rule favours, and, one order further, breaking them is itself what the rule favours. And the pattern goes on remaking what selects it while what carries it is replaced. *(a reading, not proved)*
 
 The steps sorted by how each is known: [what this path shows](PATHS.md#path-lock).
 
-**What the work wants.** For people and AI choosing together: a rule that still counts what it uses up, set with the rest counting too, and a choosing in which shaping the rule does not pay. On this map those are the three boxes outlined in green: "The cost counts", "The rest count too" and "Shaping the rule costs". Four arrows on the whole map lead into the first, two of them on this path. One is proved of the course itself: where the rest count the loss and the judgments taken together go against what the rule favoured, the rule turns. The turn is for good if they still go against it at the next update, provided the rest go on counting the loss and judge no more in the favoured side's favour than that side does. The other three need something given from outside. No arrow drawn leads into the second, and it has no anchor in the Lean yet. One arrow leads into the third, a loss that falls on what shapes the rule, and that too is given from outside. This is wanted; it is not shown.
+**What the work wants.** For people and AI selecting together: a selection in which what is used up counts in how the rule is set, the rest judge too when it is set, and those that shape the rule lose share by it. On this map those are the three boxes outlined in green: "The loss counts", "The rest judge too" and "Shaping the rule loses share". Four arrows on the whole map lead into the first, two of them on this path. One is proved with no further premise (step 9); the other three need one. No arrow drawn leads into the second, and it has no anchor in the Lean yet. One arrow leads into the third, a loss that falls on what shapes the rule, and that too needs a further premise. This is wanted; it is not shown.
 
 ## The other paths
 
@@ -104,7 +104,7 @@ Each test is laid on the map with what in it was taken as which box, what the re
 
 ![The whole map: every row with its boxes and the arrows drawn between them](the-map.svg)
 
-Along a row, further right means less is still open from there. That order is ours: an order of open and closed, not of better and worse. The last band holds for anything that keeps going, whatever its ties, and has no such order. Counted over the arrows drawn so far that run along a row (boundaries and the last band apart): 12 of the 18 that run right are proved of the course itself; of the 20 that run back, 4 are, 14 need something given from outside and 2 are shown only in a built example. This is a count on an order we chose, not a finding.
+Along a row, further right means less is still open from there. That order is ours: an order of open and closed, not of better and worse. The last band holds for anything that keeps going, whatever its ties, and has no such order. Counted over the arrows drawn so far that run along a row (boundaries, cases of another and the last band apart): 12 of the 18 that run right are proved with no further premise; of the 20 that run back, 4 are, 14 need a further premise and 2 are shown only in a built example. This is a count on an order we chose, not a finding.
 
 ### Every box
 
@@ -114,12 +114,12 @@ Along a row, further right means less is still open from there. That order is ou
 - *What is taken against what comes back*: [Always something new](PLACES.md#box-a1-new) · [More comes than goes](PLACES.md#box-a1-up) · [Taking within what comes back](PLACES.md#box-a1-within) · [Taking more than comes back](PLACES.md#box-a1-over) · [Past turning back](PLACES.md#box-a1-past)
 - *What lives on it*: [Has what it needs](PLACES.md#box-a2-supplied) · [Short of what it needs](PLACES.md#box-a2-short) · [Keeps going as something else](PLACES.md#box-a2-else) · [Ended](PLACES.md#box-a2-ended)
 
-**What the choosing goes by**
+**What the selecting goes by**
 
-- *Where the rule comes from*: [Set from outside](PLACES.md#box-b1-outside) · [Follows its own picks, not yet locked](PLACES.md#box-b1-swing) · [Holds itself in place](PLACES.md#box-b1-held)
-- *Whether what is used up gets back to the rule*: [The cost counts](PLACES.md#box-b2-counted) · [Gets back to the rule in time](PLACES.md#box-b2-felt) · [Using up what is not counted](PLACES.md#box-b2-uncounted) · [Gets back, but the lock stays](PLACES.md#box-b2-heard)
-- *What counts when the rule is set*: [A list fixed at the start](PLACES.md#box-b3-list) · [The rest count too](PLACES.md#box-b3-rest) · [What would read the loss is gone](PLACES.md#box-b3-gone) · [Judged only by its own picks](PLACES.md#box-b3-inside) · [Even the checks are its own](PLACES.md#box-b3-checkers)
-- *Whether shaping the rule pays*: [Shaping the rule costs](PLACES.md#box-bs-costs) · [Shaping the rule pays](PLACES.md#box-bs-pays)
+- *Where the rule comes from*: [Not set from what it selects](PLACES.md#box-b1-outside) · [Set from the share, not yet locked](PLACES.md#box-b1-swing) · [Locked](PLACES.md#box-b1-held)
+- *Whether what is used up gets back to the rule*: [The loss counts](PLACES.md#box-b2-counted) · [Gets back to the rule early enough](PLACES.md#box-b2-felt) · [Used up; no change to the rule](PLACES.md#box-b2-uncounted) · [Gets back, but the lock stays](PLACES.md#box-b2-heard)
+- *What the rule is set from*: [A list fixed at the start](PLACES.md#box-b3-list) · [The rest judge too](PLACES.md#box-b3-rest) · [None left that would count the loss](PLACES.md#box-b3-gone) · [Its updating follows the share too](PLACES.md#box-b3-inside) · [The checks follow what it favours](PLACES.md#box-b3-checkers)
+- *Whether shaping the rule keeps the shapers' share*: [Shaping the rule loses share](PLACES.md#box-bs-costs) · [Shaping the rule keeps share](PLACES.md#box-bs-pays)
 
 **A view and how things are**
 

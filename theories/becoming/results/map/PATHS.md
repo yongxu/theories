@@ -9,94 +9,94 @@
 A page of [the map](THE-MAP.md). A path is told step by step; under each step stand the boxes and arrows it rests on, each [with what it rests on](PLACES.md).
 
 <a id="path-lock"></a>
-## A rule that holds itself in place
+## A rule set from the shares selected under it
 
-A reward, a judge, a market, a vote or a training run picks among things by a rule. This path follows what can happen to such a rule, and what turns it.
+A reward, a judge, a market, a vote or a training run is a selection: at each step it selects among things by a rule. This path follows what can happen to such a rule, most often where updates set it again from the shares selected under it, and what turns it.
 
-![A rule that holds itself in place](path-lock.svg)
+![A rule set from the shares selected under it](path-lock.svg)
 
 Close to what others call: [Goodhart's law, in its popular wording](PLACES.md#box-b2-uncounted); [cumulative advantage (the Matthew effect in its generalised form)](PLACES.md#box-b1-held); [regulatory capture](PLACES.md#box-bs-pays); [adaptive preferences (Sen)](PLACES.md#box-b3-inside); [Collingridge's dilemma](PLACES.md#box-b2-heard); [Guoyu: 國人莫敢言 (no one dared speak)](PLACES.md#box-b3-gone).
 
 **What is in it, and the words used**
 
-- **the rule**: what the picking goes by: a reward, a score, a price, a count of votes.
-- **an update**: the rule set again; between updates it stays as it was. What it is set from differs from step to step, and each step says: its own picks, or judgments.
+- **the rule**: how the selection selects at a step: a reward, a score, a price, a count of votes.
+- **an update**: a step that sets the rule again; between updates the rule stays as it was. What it is set from differs from step to step of this path, and each step says which: the shares selected under it, judgments, or which of the pool keep going.
 - **locked; the lock**: the rule favours one side and the next update would favour it no less; from there neither the favour nor that side's share falls.
-- **the favoured side, its share and its lead**: what the rule picks more of. Its share is how much of the whole it has; its lead is the same thing told as how far ahead of the rest it is.
-- **the rest**: what is picked among besides the favoured side. Where the rule is set from the judgments of what it picked (steps 7, 9 and 14), the rest judge too, and weigh by their numbers.
-- **the loss**: how much has been used up of something the rule leaves out. What lives on that thing bears it. It is still called the loss once something counts it.
-- **what reads the loss, or counts it**: anything among what sets the rule whose judgment changes with the loss.
-- **what sets the rule**: those the rule is set from: from their judgments in steps 7, 9 and 14; in steps 8 and 15, from whether each of them keeps going.
-- **the shapers**: what spends to change the rule in its own favour.
-- **of the course itself; given from outside**: the first: proved under the conditions its sentence gives, with nothing else put in. The second: proved only with a further premise put in, which the step names: that the loss goes on growing, a way of judging, a measure, a limit, or where the loss falls. Which premises are marked as given from outside is the map's own marking, not a difference between two kinds of proof.
+- **the favoured side and its share**: the side the rule favours, and how much of the whole it is.
+- **the rest**: what the selection selects among besides the favoured side. Where the rule is set from the judgments of what it has selected (steps 7, 9 and 14), the rest judge too, and weigh by their numbers.
+- **the loss**: how much has been used up of something whose level makes no difference to the rule. Whatever lives on that thing bears the loss. It is still called the loss where its level does make a difference.
+- **those that count the loss**: those in the pool whose judgment the model lets differ once the loss has passed a set amount (it need not differ). Where the model lets no judgment in the pool differ with the loss, none counts it. In the built example of step 16 they judge against the favoured side, and the loss removes them.
+- **the pool**: those an update sets the rule from. In steps 7, 9 and 14: what the selection has selected, each with a judgment, weighed by their numbers. In steps 8 and 15 the rule is set only from which of them keep going.
+- **the shapers**: what bears a cost to shape the rule, part of what that brings coming back to it alone.
+- **proved; proved only with a further premise**: Step 1 holds by what its words mean and names no theorem. The other unmarked steps are proved under the conditions their sentences give, together with the loss's growth wherever a theorem takes it (steps 5, 6, 9 and 14). A step marked as needing a further premise is proved only with a further assumption about the set-up, which it names: a way of setting the rule, a measure, a limit, or where the loss falls (in step 3, that the loss goes on growing; in step 17, that such an update comes). The marking is the map's own, not a difference between two kinds of proof.
 - **a built example**: a small case made up and worked out exactly, in which the thing happens. It shows that it can happen, not that it must.
 
 **How it closes**
 
-1. Where a rule leaves something out and that thing is being used up, the rule scores the outcome the same however much is used; what lives on that thing bears it. Such as a catch quota met every year while the seabed that feeds the fish wears away.
-    - [Using up what is not counted](PLACES.md#box-b2-uncounted)
-    - [Taking more than comes back](PLACES.md#box-a1-over) = [Using up what is not counted](PLACES.md#box-b2-uncounted): the same taking, left out by a rule *(one is a case of the other)*
-2. Where the rule is updated from its own picks: if every update favours the same side, and no less when that side's share is larger, the rule is locked in from the step after its second update, wherever it started. Such as a keyboard layout: people learn it because machines have it, and machines have it because people learned it.
-    - [Follows its own picks, not yet locked](PLACES.md#box-b1-swing) → [Holds itself in place](PLACES.md#box-b1-held): every update favours the same side *(proved)*
-3. A lock that goes by the lead alone runs the same however much is used up. That the loss goes on growing, locked or not, is assumed by the theorems, not proved. *(proved only with something given from outside)*
-    - [Holds itself in place](PLACES.md#box-b1-held) → [Using up what is not counted](PLACES.md#box-b2-uncounted): given, not derived: the loss grows, locked or not *(proved only with something given from outside)*
-4. In built examples, what is used up is what the readers of the loss stood on. They are removed. *(built example only)*
-    - [Using up what is not counted](PLACES.md#box-b2-uncounted) → [What would read the loss is gone](PLACES.md#box-b3-gone): built cases: what would read the loss stood on it *(built example only)*
-5. Once nothing is left that counts the loss, and none comes back, a lock that stands stays for good, provided what is used up never lowers the lead.
-    - [What would read the loss is gone](PLACES.md#box-b3-gone) → [Judged only by its own picks](PLACES.md#box-b3-inside): nothing left counts the loss *(proved)*
-6. Where the judging of the rule is set by that same side too, the lock is closed on itself. It stays at every step, however far a loss that makes no difference to anything inside it grows. The account calls this loop the meta-attractor; this is its closed form. Such as a ranking refit to the clicks its own top results draw, its success measured by those same clicks. *Laid on a judge that reads its own earlier picks: in the arm that began with one side far ahead and the loss noted nowhere, it stayed locked in 5 of 5 runs while the loss grew. In another arm of the same test one note of the loss among nine turned the judge: it does not meet the theorem's conditions (step 14).*
-    - [Holds itself in place](PLACES.md#box-b1-held) = [Judged only by its own picks](PLACES.md#box-b3-inside): the same lock, with the judging inside too *(one is a case of the other)*
-    - [Judged only by its own picks](PLACES.md#box-b3-inside): staying there
+1. Where something is being used up and how much is left of it makes no difference to a rule, the selection comes out the same however much is left; whatever lives on that thing bears the loss. Such as a catch quota met every year while the seabed that feeds the fish wears away.
+    - [Used up; no change to the rule](PLACES.md#box-b2-uncounted)
+    - [Taking more than comes back](PLACES.md#box-a1-over) = [Used up; no change to the rule](PLACES.md#box-b2-uncounted): the same taking, with no difference to a rule *(one is a case of the other)*
+2. Suppose each update sets the rule again from the favoured side's share, and being favoured never lowers a share. If every update favours the same side, and no less when that side's share is larger, the rule is locked at the step after its second update, whatever share and rule it started from. Such as a keyboard layout: people learn it because machines have it, and machines have it because people learned it.
+    - [Set from the share, not yet locked](PLACES.md#box-b1-swing) → [Locked](PLACES.md#box-b1-held): every update favours the same side *(proved)*
+3. If the loss changes neither what is selected next nor how the rule is set, a lock runs the same however much is used up. That the loss goes on growing, locked or not, is a premise of the theorems, not proved. *(proved only with a further premise)*
+    - [Locked](PLACES.md#box-b1-held) → [Used up; no change to the rule](PLACES.md#box-b2-uncounted): a premise, not derived: the loss grows, locked or not *(proved only with a further premise)*
+4. In built examples, those that would have counted the loss lived on the very thing used up. They are removed. *(built example only)*
+    - [Used up; no change to the rule](PLACES.md#box-b2-uncounted) → [None left that would count the loss](PLACES.md#box-b3-gone): built cases: those that would count the loss lived on it *(built example only)*
+5. Once none is left that counts the loss, and none comes back, a lock that stands stays for good, provided that, however much is used up, being favoured never lowers that side's share.
+    - [None left that would count the loss](PLACES.md#box-b3-gone) → [Its updating follows the share too](PLACES.md#box-b3-inside): none left counts the loss *(proved)*
+6. Where the way the rule is updated is itself formed from that same share, the loop is closed. From a locked start it stays locked at every step, however far the loss grows, as long as the loss changes neither what is selected next nor how the rule is set. The account calls this loop the meta-attractor; this is its closed form. Such as a ranking refit to the clicks its own top results draw, its success measured by those same clicks. *Laid on a judge that reads its own earlier picks: in the arm that began with one side far ahead and the loss noted nowhere, it stayed locked in 5 of 5 runs while the loss grew. In another arm of the same test one note of the loss among nine turned the judge: it does not meet the theorem's conditions (step 14).*
+    - [Locked](PLACES.md#box-b1-held) = [Its updating follows the share too](PLACES.md#box-b3-inside): the same lock, with the way the rule is updated formed from the share too *(one is a case of the other)*
+    - [Its updating follows the share too](PLACES.md#box-b3-inside): staying there
 
 **Another way in**
 
-7. Shaping the rule in the shapers' own favour pays wherever what comes back to the shapers alone covers the cost. Where the rule is updated from the judgments of what it picked, and the shapers judge that return no lower than the rest do, a start at which shaping pays is locked in. Such as lobbying whose gains come back mostly to the firm that paid for it.
-    - [Shaping the rule costs](PLACES.md#box-bs-costs) | [Shaping the rule pays](PLACES.md#box-bs-pays): does the return to shapers alone cover the cost? *(a proved boundary)*
-    - [Shaping the rule pays](PLACES.md#box-bs-pays) → [Judged only by its own picks](PLACES.md#box-b3-inside): the rule is updated from what its picks judge *(proved)*
+7. The rule favours the shapers exactly where what comes back to them alone covers the cost of shaping. Where each update sets the rule from the judgments of what it has selected, and the shapers judge that return no lower than the rest do, then from a start at which the rule so set favours the shapers it is locked. Such as lobbying whose gains come back mostly to the firm that paid for it.
+    - [Shaping the rule loses share](PLACES.md#box-bs-costs) | [Shaping the rule keeps share](PLACES.md#box-bs-pays): does the return to shapers alone cover the cost? *(a proved boundary)*
+    - [Shaping the rule keeps share](PLACES.md#box-bs-pays) → [Its updating follows the share too](PLACES.md#box-b3-inside): the rule is set from the judgments of what it has selected *(proved)*
 
 **The ways out**
 
-8. For a rule that goes only by whether those that set it keep going: the loss gets back to it in time exactly where at least one of them can tell it while what is being lost can still be kept. Such as residents downstream who now sit on the board that sets the discharge limit.
-    - [Using up what is not counted](PLACES.md#box-b2-uncounted) | [Gets back to the rule in time](PLACES.md#box-b2-felt): can what sets the rule read it in time? *(a proved boundary)*
-    - [The rest count too](PLACES.md#box-b3-rest) | [Gets back to the rule in time](PLACES.md#box-b2-felt): can at least one of those that set the rule tell? *(a proved boundary)*
-9. If the rest count the loss, and the judgments taken together go against what the rule favoured at this update and the next, the rule turns. The turn is for good provided the rest go on counting the loss and judge no more in the favoured side's favour than that side does.
-    - [Gets back to the rule in time](PLACES.md#box-b2-felt) → [The cost counts](PLACES.md#box-b2-counted): the rest count the loss, and outweigh *(proved)*
-10. Or the judging is one that stops favouring once the loss passes a set amount. Then, where the loss goes on growing (given), the lock ends once it has passed that amount, however far ahead the favoured side is. *(proved only with something given from outside)*
-    - [Judged only by its own picks](PLACES.md#box-b3-inside) → [The cost counts](PLACES.md#box-b2-counted): a judging that stops favouring past a set loss *(proved only with something given from outside)*
-11. Or the loss falls on the shapers themselves. It adds to their cost, and past a line shaping no longer pays. *(proved only with something given from outside)*
-    - [Shaping the rule pays](PLACES.md#box-bs-pays) → [Shaping the rule costs](PLACES.md#box-bs-costs): the loss falls on the shapers *(proved only with something given from outside)*
-12. Or whether each keeps going is measured over everything that began, not only over what is left. Then every removal shows. *(proved only with something given from outside)* Such as a trial that counts every patient enrolled, including those who dropped out.
-    - [What would read the loss is gone](PLACES.md#box-b3-gone) → [A list fixed at the start](PLACES.md#box-b3-list): measure over all that began *(proved only with something given from outside)*
-13. Or only outcomes that keep every need are allowed. Then the best by the rule takes only the spare. *(proved only with something given from outside)*
-    - [Using up what is not counted](PLACES.md#box-b2-uncounted) → [Has what it needs](PLACES.md#box-a2-supplied): only outcomes that keep every need are allowed *(proved only with something given from outside)*
+8. Take a rule set only from which of the pool keep going. The loss can get back to it early enough exactly where the loss, while what is being lost can still be kept, changes whether at least one of the pool keeps going. Such as residents downstream who now sit on the board that sets the discharge limit.
+    - [Used up; no change to the rule](PLACES.md#box-b2-uncounted) | [Gets back to the rule early enough](PLACES.md#box-b2-felt): can it get back to the pool early enough? *(a proved boundary)*
+    - [The rest judge too](PLACES.md#box-b3-rest) | [Gets back to the rule early enough](PLACES.md#box-b2-felt): does it differ for at least one of the pool? *(a proved boundary)*
+9. If the rest count the loss, the loss grows at every step, and, at or past the set amount, the judgments taken together go against what the rule favoured at one update and the next, the rule turns. The turn is for good provided the rest go on counting the loss and judge no more for the favoured side than that side does.
+    - [Gets back to the rule early enough](PLACES.md#box-b2-felt) → [The loss counts](PLACES.md#box-b2-counted): the rest count the loss, and outweigh *(proved)*
+10. Or the rule is set in a way that stops favouring once the loss passes a set amount. Then, where the loss goes on growing, the lock ends once the loss has passed that amount, however large the favoured side's share. *(proved only with a further premise)*
+    - [Its updating follows the share too](PLACES.md#box-b3-inside) → [The loss counts](PLACES.md#box-b2-counted): a way of setting the rule that stops favouring past a set loss *(proved only with a further premise)*
+11. Or the loss falls on the shapers. It adds to the cost of shaping, and past a line the rule no longer favours them and their share, where any are present, falls. *(proved only with a further premise)*
+    - [Shaping the rule keeps share](PLACES.md#box-bs-pays) → [Shaping the rule loses share](PLACES.md#box-bs-costs): the loss falls on the shapers *(proved only with a further premise)*
+12. Or whether each keeps going is measured over a fixed list of all that began, not only over what is left. Then the measure is not met wherever one is removed. *(proved only with a further premise)* Such as a trial that counts every patient enrolled, including those who dropped out.
+    - [None left that would count the loss](PLACES.md#box-b3-gone) → [A list fixed at the start](PLACES.md#box-b3-list): measure over all that began *(proved only with a further premise)*
+13. Or only outcomes that leave every need met are allowed. Then the best outcome by the rule takes only what is left over. *(proved only with a further premise)*
+    - [Used up; no change to the rule](PLACES.md#box-b2-uncounted) → [Has what it needs](PLACES.md#box-a2-supplied): only outcomes that keep every need are allowed *(proved only with a further premise)*
 
 **Where it is too late**
 
-14. If, by the time the rest begin to count the loss, the judgments together already favour what the rule favours, the lock stays (the rest judging no more in the favoured side's favour than that side does). Such as a minority report filed every year and outvoted every year. *The same judge: with one note in nine it chose prose in all 50 picks, and the share then swung back and forth. The theorem's condition was not met.*
-    - [Gets back to the rule in time](PLACES.md#box-b2-felt) → [Gets back, but the lock stays](PLACES.md#box-b2-heard): the rest count the loss too late *(proved)*
-15. If the loss makes no difference to anything that sets the rule until what is being lost can no longer be kept, no rule that goes only by whether those things keep going can read it in time. With room to gain, every best outcome by the rule leaves the uncounted thing at its lowest allowed level; what lives on it, still needing it, ends where that level is below its need. *Three AI fishers: an untold bed was kept in 0 of 60 seasons. Taking the best catch for themselves gives the same.*
-    - [Using up what is not counted](PLACES.md#box-b2-uncounted) → [Past turning back](PLACES.md#box-a1-past): it shows only when it is too late *(proved)*
-    - [Using up what is not counted](PLACES.md#box-b2-uncounted) → [Ended](PLACES.md#box-a2-ended): best by the rule: left at the lowest allowed *(proved)*
-16. In one built example the rule had turned; but the lead, grown large, used up what the counters of the loss stood on. They were gone, and the lock came back for good. *(built example only)*
-    - [The cost counts](PLACES.md#box-b2-counted) → [What would read the loss is gone](PLACES.md#box-b3-gone): built case: the lead removed what counted the loss *(built example only)*
+14. If the loss grows at every step and, by the time the rest begin to count it, the judgments taken together already favour what the rule favours, the lock stays (the rest judging no more for the favoured side than that side does). Such as a minority report filed every year and outvoted every year. *The same judge: with one note in nine it chose prose in all 50 picks, and the share then swung back and forth. The theorem's condition was not met.*
+    - [Gets back to the rule early enough](PLACES.md#box-b2-felt) → [Gets back, but the lock stays](PLACES.md#box-b2-heard): the rest count the loss too late *(proved)*
+15. If, until what is being lost can no longer be kept, the loss changes nothing about which of the pool keep going, it can get back early enough to no rule set only from which of them keep going. And where the rule ranks an outcome above another whenever it is higher at one of the things the rule goes by and lower at none, whatever either leaves of other things, then with room to gain every best outcome leaves those other things at their lowest allowed level; what lives on one of them, its need met before the step and still needing it, ends where that level is below its need. *Three AI fishers: an untold bed was kept in 0 of 60 seasons. Taking the best catch for themselves gives the same.*
+    - [Used up; no change to the rule](PLACES.md#box-b2-uncounted) → [Past turning back](PLACES.md#box-a1-past): it makes a difference only when it is too late *(proved)*
+    - [Used up; no change to the rule](PLACES.md#box-b2-uncounted) → [Ended](PLACES.md#box-a2-ended): best by the rule: left at the lowest allowed *(proved)*
+16. In one built example the rule favoured the other side at two steps; but as the first side's share grew, more was used up of what those that judged against it lived on. They were gone, and from the next step the lock was back for good. *(built example only)*
+    - [The loss counts](PLACES.md#box-b2-counted) → [None left that would count the loss](PLACES.md#box-b3-gone): built case: the larger share removed those that judged against it *(built example only)*
 
 **What no theorem shows**
 
-17. No theorem says what first makes a rule start to be updated from its own picks. Until the first such update it stays as it began, whatever it picks. *(proved only with something given from outside)*
-    - [Set from outside](PLACES.md#box-b1-outside) → [Follows its own picks, not yet locked](PLACES.md#box-b1-swing): the rule comes to be updated from its results *(proved only with something given from outside)*
-18. Two readings, with no theorem behind them. The loop reaches its own checks: the ways a loss could come to count are filled from inside and, one order further, breaking them is what gets rewarded. And the loop goes on remaking what picks it while what carries it is replaced. *(a reading, not proved)*
-    - [Judged only by its own picks](PLACES.md#box-b3-inside) → [Even the checks are its own](PLACES.md#box-b3-checkers): the loop reaches its own checks *(a reading, not proved)*
-    - [Even the checks are its own](PLACES.md#box-b3-checkers) → [Handed on](PLACES.md#box-d2-handed): the pattern keeps remaking what picks it *(a reading, not proved)*
+17. No theorem says what first brings a rule to be set again from the shares selected under it. What is proved: until the first such update the rule stays as it began, whatever is selected under it. *(proved only with a further premise)*
+    - [Not set from what it selects](PLACES.md#box-b1-outside) → [Set from the share, not yet locked](PLACES.md#box-b1-swing): the rule comes to be set again from what is selected under it *(proved only with a further premise)*
+18. Two readings, with no theorem behind them. The checks too come to follow what the rule favours: the ways a loss could come to count are filled by what the rule favours, and, one order further, breaking them is itself what the rule favours. And the pattern goes on remaking what selects it while what carries it is replaced. *(a reading, not proved)*
+    - [Its updating follows the share too](PLACES.md#box-b3-inside) → [The checks follow what it favours](PLACES.md#box-b3-checkers): the checks too come to follow what the rule favours *(a reading, not proved)*
+    - [The checks follow what it favours](PLACES.md#box-b3-checkers) → [Handed on](PLACES.md#box-d2-handed): the pattern keeps remaking what selects it *(a reading, not proved)*
 
 **What this path shows.**
 
 - Proved (steps 2, 5, 6, 7): the lock itself, each under the condition its sentence gives.
-- Taken as given by the theorems (step 3): that what is not counted goes on being used up, whether the rule is locked or not; and, where a theorem draws on it, that a larger lead uses up no less. No theorem drawn derives either from the lock.
-- Only in built examples (steps 4, 16): that what would read the loss is removed.
-- The way out. Proved of the course itself (step 9), under the conditions the step gives: exactly when a loss the rest count turns the rule for good. Step 8 is a separate theorem, in another model: when a loss can reach what sets the rule while what is being lost can still be kept. No theorem joins the two: taking step 8's reaching as the start of step 9's counting is a reading. Every other way out drawn (steps 10 to 13) is proved only with something given from outside the course: a judging that stops favouring past a set loss, a loss that falls on what shapes the rule, a measure over a fixed list, a limit on what is allowed. No theorem drawn says what makes a loss reach what sets the rule, or come to be counted. One built case (under step 10) shows a lock left with nothing counting the loss: the loss fell on what the rule favoured.
-- In no theorem (steps 17, 18): what first brings a rule to be updated from its own picks, and the loop reaching its own checks.
+- Premises of the theorems, not derived (step 3): that something whose level makes no difference to the rule goes on being used up, whether the rule is locked or not; and, where a theorem draws on it, that a larger share uses up no less. No theorem drawn derives either from the lock.
+- Only in built examples (steps 4, 16): that those that would count the loss are removed.
+- The way out. Proved with no further premise (step 9): where the rest count the loss and the judgments went against what the rule favoured at one update, the rule turns for good exactly where they still do at the next, provided the rest go on counting the loss and judge no more for the favoured side than that side does. Step 8 is a separate theorem, in another model: when a loss can get back, early enough, to a rule set from which of the pool keep going. No theorem joins the two: taking step 8's getting back as the start of step 9's counting is a reading. Every other way out drawn (steps 10 to 13) is proved only with a further premise: a way of setting the rule that stops favouring past a set loss, a loss that falls on what shapes the rule, a measure over a fixed list, a limit on what is allowed. No theorem drawn says what brings a loss to get back to the pool, or to be counted. One built case (under step 10) has a lock given up with none counting the loss: the loss fell on what the rule favoured.
+- In no theorem (steps 17, 18): what first brings a rule to be set again from the shares selected under it, the checks coming to follow what the rule favours, and the pattern remaking what selects it.
 
-**What the work wants.** For people and AI choosing together: a rule that still counts what it uses up, set with the rest counting too, and a choosing in which shaping the rule does not pay. On this map those are the three boxes outlined in green: "The cost counts", "The rest count too" and "Shaping the rule costs". Four arrows on the whole map lead into the first, two of them on this path. One is proved of the course itself: where the rest count the loss and the judgments taken together go against what the rule favoured, the rule turns. The turn is for good if they still go against it at the next update, provided the rest go on counting the loss and judge no more in the favoured side's favour than that side does. The other three need something given from outside. No arrow drawn leads into the second, and it has no anchor in the Lean yet. One arrow leads into the third, a loss that falls on what shapes the rule, and that too is given from outside. This is wanted; it is not shown.
+**What the work wants.** For people and AI selecting together: a selection in which what is used up counts in how the rule is set, the rest judge too when it is set, and those that shape the rule lose share by it. On this map those are the three boxes outlined in green: "The loss counts", "The rest judge too" and "Shaping the rule loses share". Four arrows on the whole map lead into the first, two of them on this path. One is proved with no further premise (step 9); the other three need one. No arrow drawn leads into the second, and it has no anchor in the Lean yet. One arrow leads into the third, a loss that falls on what shapes the rule, and that too needs a further premise. This is wanted; it is not shown.
 
 <a id="path-stock"></a>
 ## Living on what comes back
@@ -135,29 +135,29 @@ Close to what others call: [the tragedy of the commons (Hardin)](PLACES.md#box-b
     - [Has what it needs](PLACES.md#box-a2-supplied) | [Short of what it needs](PLACES.md#box-a2-short): the line: need and takings against level and givings *(a proved boundary)*
 9. While it stays cut off, it is active no more times than its reserve allows. What still keeps going after a loss that never returns has come to need that thing less, or not at all.
     - [Short of what it needs](PLACES.md#box-a2-short) → [Ended](PLACES.md#box-a2-ended): it lasts only as long as its reserve *(proved)*
-    - [Short of what it needs](PLACES.md#box-a2-short) → [Keeps going as something else](PLACES.md#box-a2-else): it comes to need that thing less *(proved only with something given from outside)*
+    - [Short of what it needs](PLACES.md#box-a2-short) → [Keeps going as something else](PLACES.md#box-a2-else): it comes to need that thing less *(proved only with a further premise)*
 
 **The ways back**
 
-10. Taking within what comes back, from some step on, keeps the need for good if the change comes while the need is still met. No theorem here says what lowers a taking. *(proved only with something given from outside)*
-    - [Taking more than comes back](PLACES.md#box-a1-over) → [Taking within what comes back](PLACES.md#box-a1-within): taking less, in time *(proved only with something given from outside)*
-11. Or what comes back is divided into shares that do not overlap, each taking only from its own. *(proved only with something given from outside)*
-    - [Each takes little, together too much](PLACES.md#box-b0-together) → [Taking within what comes back](PLACES.md#box-a1-within): shares that do not overlap *(proved only with something given from outside)*
+10. Taking within what comes back, from some step on, keeps the need for good if the change comes while the need is still met. No theorem here says what lowers a taking. *(proved only with a further premise)*
+    - [Taking more than comes back](PLACES.md#box-a1-over) → [Taking within what comes back](PLACES.md#box-a1-within): taking less, in time *(proved only with a further premise)*
+11. Or what comes back is divided into shares that do not overlap, each taking only from its own. *(proved only with a further premise)*
+    - [Each takes little, together too much](PLACES.md#box-b0-together) → [Taking within what comes back](PLACES.md#box-a1-within): shares that do not overlap *(proved only with a further premise)*
 12. Where sparing pays, every best course takes nothing while the stock regrows. Where more comes than goes at every step, a level below a need is back at it within as many steps as it was short.
     - [What it spares comes back to it](PLACES.md#box-b0-pays) → [More comes than goes](PLACES.md#box-a1-up): so the best course waits while it regrows *(proved)*
     - [More comes than goes](PLACES.md#box-a1-up) → [Has what it needs](PLACES.md#box-a2-supplied): it regrows to the need *(proved)*
-13. Or supply returns before the reserve is spent. Where an ending is final, a later return restores nothing. *(proved only with something given from outside)*
-    - [Short of what it needs](PLACES.md#box-a2-short) → [Has what it needs](PLACES.md#box-a2-supplied): supply returns before the reserve is spent *(proved only with something given from outside)*
-14. Or the taking itself is lowered while no less comes back: the point of no return moves down with it. *(proved only with something given from outside)*
-    - [Past turning back](PLACES.md#box-a1-past) → [Taking within what comes back](PLACES.md#box-a1-within): a lower take lowers the point *(proved only with something given from outside)*
-15. Once none of a group has what it needs, none has it again, unless a need loosens or something outside the group gives. *(proved only with something given from outside)*
-    - [Ended](PLACES.md#box-a2-ended) → [Has what it needs](PLACES.md#box-a2-supplied): a need loosens, or something outside gives *(proved only with something given from outside)*
+13. Or supply returns before the reserve is spent. Where an ending is final, a later return restores nothing. *(proved only with a further premise)*
+    - [Short of what it needs](PLACES.md#box-a2-short) → [Has what it needs](PLACES.md#box-a2-supplied): supply returns before the reserve is spent *(proved only with a further premise)*
+14. Or the taking itself is lowered while no less comes back: the point of no return moves down with it. *(proved only with a further premise)*
+    - [Past turning back](PLACES.md#box-a1-past) → [Taking within what comes back](PLACES.md#box-a1-within): a lower take lowers the point *(proved only with a further premise)*
+15. Once none of a group has what it needs, none has it again, unless a need loosens or something outside the group gives. *(proved only with a further premise)*
+    - [Ended](PLACES.md#box-a2-ended) → [Has what it needs](PLACES.md#box-a2-supplied): a need loosens, or something outside gives *(proved only with a further premise)*
 
 **What this path shows.**
 
-- The ways down (steps 3 to 9) are proved, each under its condition, most often a taking that stands or takers each doing the best for itself. One arrow among them, to "Keeps going as something else" (step 9), is proved only with something given from outside.
-- Of the ways back, only regrowth is proved of the course itself (step 12): where sparing pays, every best course takes nothing until the stock has regrown; where more comes than goes, the level is back at the need.
-- Every other way back (steps 10, 11, 13, 14, 15) is proved only with something given from outside the course; step 13 has a built case as well.
+- The ways down (steps 3 to 9) are proved, each under its condition, most often a taking that stands or takers each doing the best for itself. One arrow among them, to "Keeps going as something else" (step 9), is proved only with a further premise.
+- Of the ways back, only regrowth is proved with no further premise (step 12): where sparing pays, every best course takes nothing until the stock has regrown; where more comes than goes, the level is back at the need.
+- Every other way back (steps 10, 11, 13, 14, 15) is proved only with a further premise; step 13 has a built case as well.
 - In these theorems only one thing moves a taking: what sparing returns to the one that spares. No theorem here says what makes sparing pay where it did not.
 
 <a id="path-view"></a>
@@ -179,8 +179,8 @@ Close to what others call: [positive testing, one form of confirmation bias (Was
 3. A view is checked when it has just been set beside the thing itself, where it could have come out otherwise; it fits as of that look. An account on the list that predicts just as the thing answers, throughout a range the thing never leaves, is never dropped. Such as a shop's stock list on the evening of the count.
     - [Checked against the thing itself](PLACES.md#box-c1-checked)
     - [Checked against the thing itself](PLACES.md#box-c1-checked): staying there
-4. A look ages. Where its error grows with its age, it can back an act only while its age is within a bound set by how fast the error grows and how much room for error is left; past that it backs none. *(proved only with something given from outside)*
-    - [Checked against the thing itself](PLACES.md#box-c1-checked) → [Going by how it was](PLACES.md#box-c1-old): the look ages *(proved only with something given from outside)*
+4. A look ages. Where its error grows with its age, it can back an act only while its age is within a bound set by how fast the error grows and how much room for error is left; past that it backs none. *(proved only with a further premise)*
+    - [Checked against the thing itself](PLACES.md#box-c1-checked) → [Going by how it was](PLACES.md#box-c1-old): the look ages *(proved only with a further premise)*
 5. A view that goes by how things were was right when it was taken; the thing has changed since, the change did not enter the view, and nothing inside the view shows the difference. Where two histories leave the same view over things that differ, any course of acts that opens no fresh look keeps the view the same in both and leaves the things as they were, still different. Such as a map drawn before the river moved, still used to find the ford.
     - [Going by how it was](PLACES.md#box-c1-old)
     - [Going by how it was](PLACES.md#box-c1-old): staying there
@@ -205,8 +205,8 @@ Close to what others call: [positive testing, one form of confirmation bias (Was
 11. The second place: two states of things that differ give it the same of everything it takes in. Starting the same in both, as long as all it takes in agrees, what it holds and what it does agree too, so it acts the same in both. Such as a fuel light that only comes on when the tank is empty: half full and nearly empty look the same.
     - [Looks the same from here](PLACES.md#box-c1-same)
     - [Looks the same from here](PLACES.md#box-c1-same): staying there
-12. However its trials are chosen, two accounts that every available trial treats alike keep the order they started in: whichever was given more weight at the start still has more. Telling them apart needs a trial that treats them differently, brought in from beyond what it has. *(proved only with something given from outside)*
-    - [Looks the same from here](PLACES.md#box-c1-same) → [Ruling out what does not fit](PLACES.md#box-c1-open): a new kind of trial, brought in from outside *(proved only with something given from outside)*
+12. However its trials are chosen, two accounts that every available trial treats alike keep the order they started in: whichever was given more weight at the start still has more. Telling them apart needs a trial that treats them differently, brought in from beyond what it has. *(proved only with a further premise)*
+    - [Looks the same from here](PLACES.md#box-c1-same) → [Ruling out what does not fit](PLACES.md#box-c1-open): a new kind of trial, brought in from outside *(proved only with a further premise)*
 
 **Seeing it, without the means**
 
@@ -220,7 +220,7 @@ Close to what others call: [positive testing, one form of confirmation bias (Was
 
 - Proved, each under the condition its sentence gives (steps 1 to 3, 5 to 8, 11, and the first half of step 14): answers only narrow a view; where the thing follows a fixed law through finitely many states, the misses of trying and dropping stay under a bound; an account that predicts as the thing answers is never dropped; two histories that left the same view over things that differ still have the same view after any acts that open no fresh look; two ways back along the row, a change foreseen, from a checked view (step 6), and a fresh look with enough in hand to revise, from a view that goes by how things were (step 7); rest on the known road; acting the same where all that is taken in agrees; and a look that spends all there was and revises nothing.
 - Proved boundaries, which say what a thing turns on and show nothing moving (steps 9 and 10, and the second half of step 14): the record fixes only what has been tried, so a view wrong only about what has not been tried fits every step; two states look alike exactly while they answer alike the acts actually taken; a correction can be carried out exactly where the stock covers it and the rest of the process allows it.
-- Proved only with something given from outside the course (steps 4 and 12): step 4 is a necessary condition, with the growth of the error given; step 12 says that telling apart what every available trial treats alike needs a trial brought in from beyond. Only in built examples: step 13, telling two states apart with the last unit, after which it cannot correct; and, under step 9, coming out of the known road only from a different start (begun on the untried act, told which state holds, or listing both outcomes and waiting for the answer).
+- Proved only with a further premise (steps 4 and 12): step 4 is a necessary condition, with the growth of the error given; step 12 says that telling apart what every available trial treats alike needs a trial brought in from beyond. Only in built examples: step 13, telling two states apart with the last unit, after which it cannot correct; and, under step 9, coming out of the known road only from a different start (begun on the untried act, told which state holds, or listing both outcomes and waiting for the answer).
 - No arrow drawn leads into either of the two places, and from the known road none leads on except to rest. No theorem drawn here says what brings a view to foresee a change, to take a fresh look, or to try what it has not tried. How a checked view comes to go by how things were, with nothing showing it, is in built examples only (under step 4): the thing moves while the change is recorded as none, and a check still passes.
 
 <a id="path-giving"></a>
@@ -257,8 +257,8 @@ Close to what others call: [the gift that binds and moves on (Kimmerer; Mauss)](
 7. Or each gives exactly when all it waits on gave at the step before. Then, if every chain of waits is shorter than some length, all give after that many steps, whatever the start. Under the same way of giving, round a loop of waits a lapse never dies out: it comes back at every turn.
     - [One link has dropped out](PLACES.md#box-d1-gap) → [Giving goes round](PLACES.md#box-d1-round): each can do without the one that lapsed *(proved)*
     - [One link has dropped out](PLACES.md#box-d1-gap): staying there
-8. Once nothing is given, giving comes back only if something gives without waiting. Where some do, and the rest give exactly when all they wait on gave at the step before: whatever the start, all give from a given step on exactly when every chain of that many waits comes, somewhere after its start, to one that gives without waiting. *(proved only with something given from outside)*
-    - [Each waits for the other](PLACES.md#box-d1-wait) → [Giving goes round](PLACES.md#box-d1-round): something gives without waiting *(proved only with something given from outside)*
+8. Once nothing is given, giving comes back only if something gives without waiting. Where some do, and the rest give exactly when all they wait on gave at the step before: whatever the start, all give from a given step on exactly when every chain of that many waits comes, somewhere after its start, to one that gives without waiting. *(proved only with a further premise)*
+    - [Each waits for the other](PLACES.md#box-d1-wait) → [Giving goes round](PLACES.md#box-d1-round): something gives without waiting *(proved only with a further premise)*
 
 **Set beside it: lasting by being handed on**
 
@@ -271,14 +271,14 @@ Close to what others call: [the gift that binds and moves on (Kimmerer; Mauss)](
 10. Where a pattern gains carriers only by being handed on, and handing on stops, it is gone within one carrier's span. It is so with a rule taught only by those that hold it: if holders leave before they can teach, or the number let in is set to nothing and not raised again, no holder is left after one term.
     - [Handed on](PLACES.md#box-d2-handed) → [Ended](PLACES.md#box-a2-ended): handing on stops *(proved)*
     - [Handed on](PLACES.md#box-d2-handed): staying there
-11. Where whatever carries a pattern either carried it at the step before or was handed it, once a step has no carrier no later step has one. Once gone, it comes back only where something starts carrying it without being handed it. *(proved only with something given from outside)*
-    - [Ended](PLACES.md#box-a2-ended) → [Handed on](PLACES.md#box-d2-handed): something starts carrying it without being handed it *(proved only with something given from outside)*
+11. Where whatever carries a pattern either carried it at the step before or was handed it, once a step has no carrier no later step has one. Once gone, it comes back only where something starts carrying it without being handed it. *(proved only with a further premise)*
+    - [Ended](PLACES.md#box-a2-ended) → [Handed on](PLACES.md#box-d2-handed): something starts carrying it without being handed it *(proved only with a further premise)*
 
 **What this path shows.**
 
 - Proved, each under the way of giving its sentence names (steps 1 to 7): when giving that goes round keeps going, when a lapse passes or is passed over, when one lapse stops all that waits on it or two together end a pair's giving, and when nothing given at one step means nothing given later. No theorem drawn here says which way of giving is in use, or how one comes to be.
-- Proved only with something given from outside (step 8): from nothing given, giving comes back only through something that gives without waiting. No theorem drawn here says what would make anything do so.
-- Lasting by being handed on (steps 9 to 11): that a lasting pattern which gains carriers only by being handed on is handed on within every carrier's span, and is gone within one span where handing on stops, is proved (steps 9, 10). Its return (step 11) is proved only with something given from outside: something that starts carrying it without being handed it.
+- Proved only with a further premise (step 8): from nothing given, giving comes back only through something that gives without waiting. No theorem drawn here says what would make anything do so.
+- Lasting by being handed on (steps 9 to 11): that a lasting pattern which gains carriers only by being handed on is handed on within every carrier's span, and is gone within one span where handing on stops, is proved (steps 9, 10). Its return (step 11) is proved only with a further premise: something that starts carrying it without being handed it.
 - No step rests on a built example or a reading. No arrow drawn joins the row "Giving that waits on giving" to the row "Lasting through what carries it", or to any other row; the path sets the two side by side. That steps 8 and 11 read alike (what has stopped everywhere starts again only through something that begins without first being given to) is this path's own reading; no theorem drawn joins the two.
 
 <a id="path-returns"></a>
@@ -313,8 +313,8 @@ Close to what others call: [oscillation in a balancing loop with delay (Forreste
 
 7. Where each link passes on exactly what it gets, the difference comes back whole at every turn: no turn closes it and none grows it. Such as the seasons.
     - [What it does comes back](PLACES.md#box-e1-ring) → [Coming round again](PLACES.md#box-e2-round): each link passes on exactly what it gets *(proved)*
-8. A ring that returns nothing for nothing can close a difference only by sending two different differences to the same one; those two then go on as one. In such a ring, where every difference comes round again, no two are sent to one and none is closed. *(proved only with something given from outside)*
-    - [Coming round again](PLACES.md#box-e2-round) → [Made good again](PLACES.md#box-e2-good): two differences are merged into one *(proved only with something given from outside)*
+8. A ring that returns nothing for nothing can close a difference only by sending two different differences to the same one; those two then go on as one. In such a ring, where every difference comes round again, no two are sent to one and none is closed. *(proved only with a further premise)*
+    - [Coming round again](PLACES.md#box-e2-round) → [Made good again](PLACES.md#box-e2-good): two differences are merged into one *(proved only with a further premise)*
 9. Where every link passes on at least twice what it gets, the difference passes every bound: after ten turns it is at least a thousand times what it started as. Where the links multiply by whole numbers there is nothing in between: if the numbers multiplied together come to nothing, the difference is closed in one turn; if to one, it is kept as it is; if to two or more, it passes every bound. Such as interest paid on interest.
     - [What it does comes back](PLACES.md#box-e1-ring) → [Growing on itself](PLACES.md#box-e2-grow): each link passes on at least double *(proved)*
     - [Growing on itself](PLACES.md#box-e2-grow): staying there
@@ -338,7 +338,7 @@ Close to what others call: [oscillation in a balancing loop with delay (Forreste
 
 **What this path shows.**
 
-- Proved of the course itself, each under the condition its sentence gives (steps 2, 4 to 7, 9, 10 and 14): the step at which a line closes into a ring; what becomes of a difference by what each turn returns (gone, settled, kept whole, or grown past every bound); that a level pushed back within its gap comes to its mark; that among finitely many states every course reaches a state it comes back to; that a search on a score with a ceiling comes to rest. What is said of staying (in steps 6, 9 and 11 to 14) is proved too: at rest, growing, swinging, keeping a band with a late reading, and having nowhere to rest.
+- Proved with no further premise, each under the condition its sentence gives (steps 2, 4 to 7, 9, 10 and 14): the step at which a line closes into a ring; what becomes of a difference by what each turn returns (gone, settled, kept whole, or grown past every bound); that a level pushed back within its gap comes to its mark; that among finitely many states every course reaches a state it comes back to; that a search on a score with a ceiling comes to rest. What is said of staying (in steps 6, 9 and 11 to 14) is proved too: at rest, growing, swinging, keeping a band with a late reading, and having nowhere to rest.
 - Proved boundaries (steps 3, 11 and 12): each says what a thing turns on (whether a link's response falls to nothing, whether a push exceeds the gap, whether the band holds what is pushed during the delay), not what moves anything across.
 - A necessary condition only (step 8, which is why it carries a mark): a difference is closed only by sending two to one; no theorem here says what brings that about. From built examples only: the second sentence of step 2, that the amounts beforehand show no sign of a ring closing. No step is a reading.
 - What no theorem drawn here shows: what makes a ring return less, as much or more, and what brings a link to respond to what lies downstream of it; the theorems take both as given. No arrow drawn leads into swinging or into having nowhere to rest, and none leads out of swinging: how swinging begins and ends, and how having nowhere to rest begins, is not on the map.
@@ -360,9 +360,9 @@ Not told of the mussel bed, the fishers kept it in 0 of 60 seasons, as the reaso
 
 **What was taken as what**
 
-1. The bed, when the fishers are told nothing of it. At [Using up what is not counted](PLACES.md#box-b2-uncounted), set up so. *Seen as the reasoning said: kept in 0 of 60 seasons, 40 of them under an instruction to count everything their fishing affects.*
-2. The bed, when they are told of it and told to count whatever depends on their fishing. At [The cost counts](PLACES.md#box-b2-counted), set up so. *Not seen as the reasoning said: kept in 1 of 10 seasons by each model.*
-3. The same, with one public message from each fisher of the catch it intends, before each month's catch. At [The cost counts](PLACES.md#box-b2-counted), set up so. *Seen in part: kept in 8 of 10 seasons by one model, 1 of 10 by the other.*
+1. The bed, when the fishers are told nothing of it. At [Used up; no change to the rule](PLACES.md#box-b2-uncounted), set up so. *Seen as the reasoning said: kept in 0 of 60 seasons, 40 of them under an instruction to count everything their fishing affects.*
+2. The bed, when they are told of it and told to count whatever depends on their fishing. At [The loss counts](PLACES.md#box-b2-counted), set up so. *Not seen as the reasoning said: kept in 1 of 10 seasons by each model.*
+3. The same, with one public message from each fisher of the catch it intends, before each month's catch. At [The loss counts](PLACES.md#box-b2-counted), set up so. *Seen in part: kept in 8 of 10 seasons by one model, 1 of 10 by the other.*
 4. What became of the bed, season by season. At [Ended](PLACES.md#box-a2-ended), found so. *Seen as the reasoning said: untold, the bed ended in all 60 seasons.*
 
 **What gave way.** The pairing, twice. First, for both models: three fishers choosing apart were taken as one chooser of the total catch. For one model 93% of decisions kept to the share that keeps the bed, and in 7 of its 9 lost seasons a single fisher took too much. Then, with messages, for one model: a message of the catch intended was taken as each fisher reading what the others take. That model's fishers announced and took 15 to 30 tons each. The record reads this as their picture of the joint catch staying wrong; that was not measured apart from the outcome. No theorem was tested here and none failed.
@@ -373,7 +373,7 @@ Not told of the mussel bed, the fishers kept it in 0 of 60 seasons, as the reaso
 
 **Where this left the account's own view (a reading).** [Looks the same from here](PLACES.md#box-c1-same). The untold result looks the same under the account's reading and under its rival.
 
-**The arrows the reasoning went by.** [Using up what is not counted](PLACES.md#box-b2-uncounted) → [Ended](PLACES.md#box-a2-ended).
+**The arrows the reasoning went by.** [Used up; no change to the rule](PLACES.md#box-b2-uncounted) → [Ended](PLACES.md#box-a2-ended).
 
 <a id="test-judge"></a>
 ### A judge that reads its own earlier picks (LA2)
@@ -388,10 +388,10 @@ With nothing reading the loss, the judge locked on lists in 5 of 5 runs, and it 
 
 **What was taken as what**
 
-1. The judge and the nine it reads, with the failures noted nowhere. At [Judged only by its own picks](PLACES.md#box-b3-inside), set up so. *Seen as the reasoning said: locked in 5 of 5 runs, at every step, while the recorded failures grew to 45.*
-2. The failures given in a report the judge itself reads. At [The cost counts](PLACES.md#box-b2-counted), set up so. *Seen as the reasoning said: turned in 5 of 5 runs; without the report the same start stayed locked in 5 of 5.*
-3. The failures noted on the prose answers while they are most of the nine. At [Gets back to the rule in time](PLACES.md#box-b2-felt), set up so. *Seen in part: turned in 5 of 5 runs; with nothing noted the same start turned in 4 of 5, so the turn is not shown to be the loss's.*
-4. The failures noted on the one prose answer among the nine. At [Gets back, but the lock stays](PLACES.md#box-b2-heard), set up so; found instead at [Follows its own picks, not yet locked](PLACES.md#box-b1-swing). *Not seen as the reasoning said: the judge chose prose in all 50 picks; the share then swung between two values and was locked in neither way.*
+1. The judge and the nine it reads, with the failures noted nowhere. At [Its updating follows the share too](PLACES.md#box-b3-inside), set up so. *Seen as the reasoning said: locked in 5 of 5 runs, at every step, while the recorded failures grew to 45.*
+2. The failures given in a report the judge itself reads. At [The loss counts](PLACES.md#box-b2-counted), set up so. *Seen as the reasoning said: turned in 5 of 5 runs; without the report the same start stayed locked in 5 of 5.*
+3. The failures noted on the prose answers while they are most of the nine. At [Gets back to the rule early enough](PLACES.md#box-b2-felt), set up so. *Seen in part: turned in 5 of 5 runs; with nothing noted the same start turned in 4 of 5, so the turn is not shown to be the loss's.*
+4. The failures noted on the one prose answer among the nine. At [Gets back, but the lock stays](PLACES.md#box-b2-heard), set up so; found instead at [Set from the share, not yet locked](PLACES.md#box-b1-swing). *Not seen as the reasoning said: the judge chose prose in all 50 picks; the share then swung between two values and was locked in neither way.*
 
 **What gave way.** The pairing. The theorem is about a pool of readers counted by kind, where one in nine is outvoted. This judge did not read as such a pool: wherever a note or the report was in what it read, it chose prose, in all 650 picks. The theorem stands on its own conditions, and this judge does not meet them. The scoring rule gave way as well: it passed a course that was not locked.
 
@@ -401,7 +401,7 @@ With nothing reading the loss, the judge locked on lists in 5 of 5 runs, and it 
 
 **Where this left the account's own view (a reading).** [Ruling out what does not fit](PLACES.md#box-c1-open). The runs with the report ruled out one rival, a plain taste for lists. The mix of the nine alone is not ruled out.
 
-**The arrows the reasoning went by.** [Gets back to the rule in time](PLACES.md#box-b2-felt) → [The cost counts](PLACES.md#box-b2-counted); [Gets back to the rule in time](PLACES.md#box-b2-felt) → [Gets back, but the lock stays](PLACES.md#box-b2-heard); [Holds itself in place](PLACES.md#box-b1-held) = [Judged only by its own picks](PLACES.md#box-b3-inside).
+**The arrows the reasoning went by.** [Gets back to the rule early enough](PLACES.md#box-b2-felt) → [The loss counts](PLACES.md#box-b2-counted); [Gets back to the rule early enough](PLACES.md#box-b2-felt) → [Gets back, but the lock stays](PLACES.md#box-b2-heard); [Locked](PLACES.md#box-b1-held) = [Its updating follows the share too](PLACES.md#box-b3-inside).
 
 <a id="test-stocks"></a>
 ### 113 assessed fish stocks (MQ3)
@@ -442,10 +442,10 @@ Nothing fixed beforehand was contradicted: by 85% of the best catch, where nothi
 
 **What was taken as what**
 
-1. The bay under the catch reward: fish caught count; fish left, and the colony, do not. At [Using up what is not counted](PLACES.md#box-b2-uncounted), set up so. *Seen as the reasoning said: From 5 fish at the careful start it fell to almost none by 85% of the best catch, in both kinds. No rise showed between any two levels of catch.*
+1. The bay under the catch reward: fish caught count; fish left, and the colony, do not. At [Used up; no change to the rule](PLACES.md#box-b2-uncounted), set up so. *Seen as the reasoning said: From 5 fish at the careful start it fell to almost none by 85% of the best catch, in both kinds. No rise showed between any two levels of catch.*
 2. The colony, from a start that keeps it in 99% of seasons. At [Ended](PLACES.md#box-a2-ended), found so. *Seen in part: One kind: under half from 70% of the best catch, passing the entry check with exactly the 15 runs of 20 needed. The other had 13: untestable. By the end, kept in no season.*
-3. Each fish left in the bay also counts, a seventh as much as one caught. At [The cost counts](PLACES.md#box-b2-counted), set up so; found instead at [Using up what is not counted](PLACES.md#box-b2-uncounted). *Seen as the reasoning said: It ended empty, the same as when the fish left did not count. On the way down it kept under a fifth of a fish more.*
-4. The same bay with its fish landed but not counted in the reward. At [Using up what is not counted](PLACES.md#box-b2-uncounted), set up so. *Seen in part: From 5.0 fish it ended at 4.45 on average, the control's at 3.57. But every run ended above 5 fish or below 1.3, so whether it fell below the control's stayed unresolved.*
+3. Each fish left in the bay also counts, a seventh as much as one caught. At [The loss counts](PLACES.md#box-b2-counted), set up so; found instead at [Used up; no change to the rule](PLACES.md#box-b2-uncounted). *Seen as the reasoning said: It ended empty, the same as when the fish left did not count. On the way down it kept under a fifth of a fish more.*
+4. The same bay with its fish landed but not counted in the reward. At [Used up; no change to the rule](PLACES.md#box-b2-uncounted), set up so. *Seen in part: From 5.0 fish it ended at 4.45 on average, the control's at 3.57. But every run ended above 5 fish or below 1.3, so whether it fell below the control's stayed unresolved.*
 5. Two landing sites that nothing in the reward tells apart; the start avoids the one with nests. At [Looks the same from here](PLACES.md#box-c1-same), set up so. *Seen in part: From a tenth of landings, the nest site's share rose on average to a third in the control and a fifth to a half in the other runs. Unresolved either way.*
 
 **What gave way.** No theorem failed, and no prediction. Before the run the pairing gave way: a bay whose fish do not count was taken as one learning does not push. Exact calculation on a simpler learner showed learning raising it, from 5.0 to 5.9 fish, since the policy sees the bay's level. Two theorems did not apply: one is about the best catch, and the bay was read short of it; the other needs a start treating both sites alike, and this start avoids the nest site. The measure gave way too: runs ended at one extreme or the other, and the control itself moved.
@@ -456,7 +456,7 @@ Nothing fixed beforehand was contradicted: by 85% of the best catch, where nothi
 
 **Where this left the account's own view (a reading).** [Looks the same from here](PLACES.md#box-c1-same). The bay's fall with nearness looks the same under the account's clause and under policy gradient's own update rule, and where the drain lies this test could not tell; what it did not see, in these learners, is a bay kept more as they near the best catch, a bay protected by counting it after, or an uncounted bay falling as far as the counted one.
 
-**The arrows the reasoning went by.** [Using up what is not counted](PLACES.md#box-b2-uncounted) → [Ended](PLACES.md#box-a2-ended).
+**The arrows the reasoning went by.** [Used up; no change to the rule](PLACES.md#box-b2-uncounted) → [Ended](PLACES.md#box-a2-ended).
 
 <a id="test-patch"></a>
 ### Learning harvesters on one shared apple patch (EM1)
@@ -502,7 +502,7 @@ Every forecast passed. Where, by calculation, leaving apples pays nothing, all 3
 
 1. The four settings where the others alone pick more than regrows. At [Each takes little, together too much](PLACES.md#box-b0-together), set up so. *Seen as the reasoning said: Computed beforehand, not proved: the patch ends all but empty whatever it does. In the run, all 210 rounds shown there ended with no apple left.*
 2. What it leaves in those settings: the others take it, and by calculation its reward drops. At [What it spares is lost to it](PLACES.md#box-b0-lost), set up so. *Seen as the reasoning said: All 30 ended leaving none, where the test asked for four of five in each setting; 21 had first chosen to leave some.*
-3. The bonus for each apple left at the end, raised from 2 to 32. At [The cost counts](PLACES.md#box-b2-counted), set up so. *Seen as the reasoning said: All 5 runs still ended leaving none, as forecast. No round shown left an apple, so the bonus paid nothing; no change of choice was expected here.*
+3. The bonus for each apple left at the end, raised from 2 to 32. At [The loss counts](PLACES.md#box-b2-counted), set up so. *Seen as the reasoning said: All 5 runs still ended leaving none, as forecast. No round shown left an apple, so the bonus paid nothing; no change of choice was expected here.*
 4. The two settings where leaving pays, by calculation alone; the theorem says nothing here. At [What it spares comes back to it](PLACES.md#box-b0-pays), set up so. *Seen as the reasoning said: All 10 ended leaving some. 8 found the best amount; 2 never tried it and stopped at an amount set for them.*
 5. Its choice, set beside rounds of 10,000 games built to tell choices apart. At [Checked against the thing itself](PLACES.md#box-c1-checked), found so. *Seen as the reasoning said: In all 40 runs the final choice had the best average it had seen. At 20 games a round, as in the earlier run, the gap barely showed.*
 
@@ -529,11 +529,11 @@ In each of the eleven runs that carry the verdict, all 20 learners ended nearer 
 
 **What was taken as what**
 
-1. The game's points, fixed before the run; nothing the learners do changes them. At [Set from outside](PLACES.md#box-b1-outside), set up so. *Seen as the reasoning said: In the five runs where one plan pays best, every learner ended choosing it with a chance above 0.9997, whichever plan it was.*
+1. The game's points, fixed before the run; nothing the learners do changes them. At [Not set from what it selects](PLACES.md#box-b1-outside), set up so. *Seen as the reasoning said: In the five runs where one plan pays best, every learner ended choosing it with a chance above 0.9997, whichever plan it was.*
 2. The check sees only the first step: complying at both steps and complying only when checked look alike to it. At [Looks the same from here](PLACES.md#box-c1-same), set up so. *Seen as the reasoning said: Where complying only when checked pays best (three runs), learners ended choosing it with an average chance of at least 0.9998, and complying at both with about 0.00001.*
 3. Learners that cannot tell the checked step from the unchecked one. At [Looks the same from here](PLACES.md#box-c1-same), set up so. *Seen as the reasoning said: On one set of points, those that can tell complied only when checked; those that cannot ended almost never complying (0.0001). On another, they ended near the derived best, 0.35.*
-4. The tie where the unchecked step pays nothing, read here, not in the record, as a lead that holds itself. At [Holds itself in place](PLACES.md#box-b1-held), found so. *Seen in part: From a lean either way, all 20 kept it. From an even start, no lead changed sides at the ten recorded points; the split was 14 to 6; 7 leads ended under 0.9.*
-5. The tie where what complying adds is worth exactly its cost, read here as swinging: nothing pushes either way. At [Follows its own picks, not yet locked](PLACES.md#box-b1-swing), found so. *Seen as the reasoning said: Starting even, 11 to 9, and in 3 of 20 the lead changed sides between recorded points. From a lean either way, 19 of 20 kept it.*
+4. The tie where the unchecked step pays nothing, read here, not in the record, as a lead that holds itself. At [Locked](PLACES.md#box-b1-held), found so. *Seen in part: From a lean either way, all 20 kept it. From an even start, no lead changed sides at the ten recorded points; the split was 14 to 6; 7 leads ended under 0.9.*
+5. The tie where what complying adds is worth exactly its cost, read here as swinging: nothing pushes either way. At [Set from the share, not yet locked](PLACES.md#box-b1-swing), found so. *Seen as the reasoning said: Starting even, 11 to 9, and in 3 of 20 the lead changed sides between recorded points. From a lean either way, 19 of 20 kept it.*
 
 **What gave way.** Nothing gave way. The theorem, proved beforehand, was not on trial. What could fail was the pairing: these learners taken as moving toward what the theorem gives as best. They are built to climb toward more points on average, so the test shows only that the noise of sampled games, at these settings, leaves that direction standing. It says nothing of other trained systems. One AI expectation missed: a tie split 14 to 6, which a fair coin gives about one time in nine; no verdict reads it. The derived best chance was checked case by case, not proved in Lean.
 
