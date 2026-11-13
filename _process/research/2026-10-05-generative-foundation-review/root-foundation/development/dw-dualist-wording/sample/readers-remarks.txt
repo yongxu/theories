@@ -1,0 +1,171 @@
+08-METHOD--02
+
+Read family (41): L 7 (all L f), T 0, S 15, I 14, P 4, U 1 (r17, I or P).
+Place family (6): B 1, N 2, D 0, O 3, U 0.
+
+Verdicts written to /Users/ren/theories/tmp/r7/words/run3/08-METHOD--02.s1.txt.
+
+Where the classes did not fit:
+- All seven L uses are the "ReadsNoOrder" / "ReadsOnlyDynamics" kind: a statement's truth does not change with the order or the dynamics. That is invariance, and it is negated. L f fits it, but it is about a statement's truth, not a step's next value.
+- r38 says "not read off", which the brief lists as I. What it states (`World.standing_not_read`) is that the amounts are not a function of the selected relations, so I sorted it L f. The words in the brief's examples can point the wrong way.
+- I holds three different things in this piece. One is the account's own interpreting (readings of computed labels, "a reading of living"). One is a formal instantiation (r4, r5, r11: "the own-closure reading" is a chosen setting of a free slot). One is a formal correspondence between terms (r3: "how the anchor reads it" means how an anchor stands to its grammar statement, by definition or representation). r2, "a part read alone", is really a projection or restriction in the lumping law and fits I only loosely.
+- S is mostly one thing here: the observation map of 03 (a response common over a reading, choice over the readings). But r34 treats a reading as an event in time and could be T, r43 and r44 treat it as a re-measured proxy, and r45 ("closed readings") stands for sets of data streams in Kelly's topology. That last one is a renamed term, and none of the classes fits it.
+- P and I overlap when an AI review "read each Lean statement against the literature" (r39) or terms were "chosen by reading" (r17). These are literal readings of texts by agents. I put r39 under P and left r17 as U.
+- Of the place words: "within a finite budget" and "weights within a ratio" are amount bounds (O). "A net beyond these witnesses" and "within a requirement" name their set (N). Only the link title "Fed from beyond" is bare (B).
+
+=====
+
+ONE-PAGE--00
+
+Read tags (49): L 7 (L c 5, L f 2), T 14, S 9, I 12, P 5, U 2 (r28 L or T; r62 I or S).
+Place tags (26): B 10, N 4, D 11, O 1, U 0.
+
+Where the classes did not fit:
+1. In r52, "the rule they shape still reads what lies beyond their share, so that a loss there can turn it", the words are T's (a region named by the reading). The sentence still states that a level makes a difference (L c), so the T phrasing can carry L content. In r28, "(what it reads or needs)" glosses couplings, and I could not tell L from T.
+2. I put r45 and r67, "no satisfiable statement reading only the dynamics", under L f only loosely. They mean a statement whose terms or truth depend only on the dynamics, which is logical vocabulary rather than a step or selection. I put r34, a trained judge "reading a reference set in context", under L c, but it is a model literally reading text, a use none of the classes names.
+3. S holds two different things: holders that feed a level (readers in a pool, r35/r37/r40/r43, and a selector, r61) and events or acts that inform a selection (r54, "a reading of what lies beyond the share", and r72, noisy readings). r70, "the reading loop", is the name of a model, not either of these. In r62, "the reading of the rule itself read from the share", I could not tell whether it is the account's modelling (I) or the rule's own reading (S).
+4. For place words, N and O overlap on amounts. b26 "each within what a renewal gives" and b25 "content beyond what acting for oneself presupposes" name a set but state a bound or an excess. b42 "a draw beyond the renewal" is plain amount (O), though it names its set. b69 "beyond the reading loop" means not covered by a named model, which sits between N and an O of scope.
+5. D took 11 of 26. b59 "within relations" and b68 "within the dynamics" are the container said of everything, even though the container is named, so D and N can collide when the named set is the whole.
+
+Verdict file: /Users/ren/theories/tmp/r7/words/run3/ONE-PAGE--00.s1.txt
+
+=====
+
+Piece: 05-COLLECTIVES--02. Verdicts are in /Users/ren/theories/tmp/r7/words/run3/05-COLLECTIVES--02.s1.txt.
+
+**Read family (17 tags)**
+
+| Class | Count |
+|---|---|
+| L | 0 |
+| T | 0 |
+| S | 7 |
+| I | 9 |
+| P | 0 |
+| U | 1 (r25, L or S) |
+
+**Place family (46 tags)**
+
+| Class | Count |
+|---|---|
+| B | 37 |
+| N | 3 |
+| D | 0 |
+| O | 6 |
+| U | 0 |
+
+**Where the classes did not fit**
+
+- **B and N split one relation.** Almost every "beyond" here is one defined term: the complement of the family of conditions (Lean `Optimum.beyond`). The family is defined as "what couples in". So "a family and its beyond" (B) and "a condition beyond every one's family" (N, b52) state the same relation and differ only in whether the sentence names the family. The B/N split measures how the sentence is worded, not what it states.
+- **S holds two things.** The "re-reading" uses (r30, r56–r58) are a re-optimization restarted from the level at a later step, which is L f in content though worded as a thing. r28–r29 "reader" is a selector defined by what couples into it.
+- **r25 fits no class.** "Their remedy re-reads the proxy" has a principal who sees the whole state and resets the proxy. That is the subject-observing-an-object sense itself, which no class names.
+- **I holds two things.** The labels for how far something has been seen ("Reading [AI reading]", "is a reading, not proved here") sit together with mappings onto a model ("the colony read as the bay left", "Room read off the exchange", meaning derived from).
+- **Every "within" is an amount, a time or a defined condition.** Five are amount or time (O), and "within reach" (b62) names the defined condition reach (N). None is D.
+
+=====
+
+03-KNOWING--02
+
+Read family (66): L 12 (all f), S 9, T 10, I 28, P 1, U 6.
+Place family (15): N 12, O 2, B 0, D 0, U 1.
+
+Verdict file: /Users/ren/theories/tmp/r7/words/run3/03-KNOWING--02.s1.txt
+
+Where the classes did not fit:
+
+1. S holds two different things here. In r7–r9 and r56–r59, "a reading" is a mathematical object: a function on futures, or a claim on an indexed domain (Lean's `learnable_iff_reading`, `Diagonal`). In r64–r65 it is a valuation, a global assignment of values. Neither is a reader that feeds a level or informs a selection.
+
+2. The I class mixes two kinds of use. One is real interpreting ("read as probabilities", "active inference reads X as", which is 28 uses). The other is a technical "read off" that builds something from a run (r50, r72): the account's own construction, closer to T. I could not cleanly separate T from I in these. Two further uses (r16, r28: "FreeEnergyReals read unchanged") mean a Lean module imported unchanged and fit no class.
+
+3. In this piece every L is L f: a rule, likelihood, decoder or experiment that is a function of what it "reads". There are no c or g cases. The T uses are mostly "a law read through a map" and "values read off a run", which name the map-and-course set-up, not a selection with its reader dropped.
+
+4. b61, "a family within what it reads", is a self-reference: the reader lies among what it reads. That is a denial of an outside reader, as D is, but the region is set only by the reading, as B is. b48, "couples in from beyond the model", reads as B in form, but I counted it N because the model, and what lies beyond it, are named.
+
+5. r35 ("the reading through the lumping is near-definitional") and r67 ("unity of readings", a link to 01's result) are uses where the word names a result, not a relation. Neither L/S nor S/I fits them.
+
+=====
+
+Piece: THE-THEORY-OF-BECOMING--00 (verdicts in /Users/ren/theories/tmp/r7/words/run3/THE-THEORY-OF-BECOMING--00.s1.txt; 113 lines, one per tag)
+
+Read family (76): L 4 (2 L c, 2 L f); T 19; S 9; I 30; P 9; U 5.
+Place family (37): B 15; N 13; D 7; O 2; U 0.
+
+Where the classes did not fit:
+
+1. S holds two different things in this piece:
+   - "the reading of the rule" (r6, r30, r81) and "at every reading" (r51, r77) are the rule's application, or the step at which it is formed again from the share. That is a hidden L f turned into a noun, not a reader.
+   - "the reading loop" (r41, r94) is the name of a model.
+
+2. "complying when read" (r90, r93) means being watched by an overseer. I put it in T because the reader is dropped. None of the classes fits it: it is neither a level making a difference nor interpreting.
+
+3. "read across all steps" and "read in time" (r59, r60) say how the account evaluates a condition over a scope. I put them in I even though the brief gives "read in time" as a T example. The same phrase is T only where the selectors take in the loss (r84). So the phrase alone does not decide the class.
+
+4. "what people and AI come to read" (r12, r34) and "significance supplied or read" (r43) fall between I (persons or the account valuing) and T (a region). A passive with its reader named, "a loss read only by those the rule disfavours" (r53), falls between L and T. That is because L requires the active voice.
+
+5. In the place family, the line between B and N is thin. "Beyond its couplings" or "beyond" left elliptic after "the family that couples in" was named earlier in the sentence (b102–b105) reads as N in meaning but as B in form. "Nothing lies outside each center's reach along it" (b57) is both D and N. "Beyond misreading" (b63) is an idiom (O).
+
+=====
+
+02-MAP--04
+
+Verdicts are in /Users/ren/theories/tmp/r7/words/run3/02-MAP--04.s1.txt, one line for each of the 164 tags.
+
+Read tags (153):
+- L: 18 (17 L f, 1 L c)
+- T: 46
+- S: 84
+- I: 5
+- P: 0
+- U: 0
+
+Place tags (11):
+- B: 5
+- N: 4
+- D: 0
+- O: 1
+- U: 1 (b53, between N and O)
+
+Where the classes did not fit:
+1. S holds at least four different things here, and none of them is a reader as a mind. The first is the "reading step," which is just a time when the model recomputes the rule (a schedule, about 30 uses). The second is "readers," meaning members counted into a pool. The third is "a reading," a contribution value u/v/hi/lo, which is also said as a verb ("each carrier reading it as u", "where a shaper reads", "five read as coming back"). The fourth is "the late reading," the others' contribution after the loss passes a bound. Each needs its own replacement.
+2. T and S often name the same object from opposite sides. "the rule read" (T) and "the reading" (S, the map from share to rule) both stand for the computed rule. "read from step N" / "read in time" (T) and "the late reading" (S) both stand for when the loss enters the pool. So T here is mostly the rule as an output of a function, not a dropped reader.
+3. L is almost entirely L f, and some of it is negated or comes with a time: "neither… reads the beyond", "read the loss late / from step 3". I put those under L, but they sit between L and T.
+4. "Read against the share" (r101) is listed under I, but here it states that the model's rule falls as the share rises, not an act of interpreting. I classed it T.
+5. In b38, "each step adds at least one beyond," "beyond" is a unit of the loss coordinate, not a region. B does not fit it. b53, "within the pool," means "in the pool's case," not a named set, so it sits between N and O.
+
+=====
+
+Piece: 07-SIGNIFICANCE--08 (verdicts in /Users/ren/theories/tmp/r7/words/run3/07-SIGNIFICANCE--08.s1.txt, 185 lines, one per tag)
+
+Read family (162): L 9 (all L f), T 17, S 103, I 33, P 0, U 0.
+Place family (23): B 5, N 17, D 1, O 0, U 0.
+
+Where the classes did not fit:
+
+1. "X read off Y" splits between T and I, and the split is my own rule. When a selection is read off a pool, a course or a line (r39–r56, r74, r76, r88, r126, r162), I put it in T. When the account builds a line, pool, standpoint or significance out of the flow (r10, r26, r38, r97, r107, r136, r143, r180), I put it in I. Both state the same relation: X is determined by Y. So T and I share a "defined as a function of" use, and the rule decides which class it lands in.
+
+2. One group in S is a verb, not a thing. "the line reading its source / itself / everything" (r30–32, r35–36, r48, r53, r151, r153, r155–158) means the line carries a scope whose act counts that region, and the scope is assigned by design. I put these in S with a note. They could also go in L, since the active voice fits, but in these sentences nothing's value is said to differ with a level.
+
+3. S holds at least three different things. The largest is a carried index or type: inherited, revised, counted in a share. Second are "readers" as labelled lines, supplied and tied to nothing (r37, r41–43). Third are readers as lines whose continuation depends on what is selected (r51, r75, r79, r185). Within the first, "reading" mostly means a scope of concern in §4.12 and the commons world, and a heritable type in §4.14. One more use is "the reading loop" as the name of a mechanism (r112, r160, r169).
+
+4. "read in time" is listed under T, but in r94 a section reads the condition in time, so I put it in I. In r65 something fails to read in time, and that went to T.
+
+5. "nothing lies beyond" in b87 names no set. Its set, "every returning formation pooled", is in the clause before it, so I gave it N, but it is close to D. Every N in this piece is a closure, a population, a cohort or a line, never a region named on its own.
+
+=====
+
+OPENING--00 (verdicts in /Users/ren/theories/tmp/r7/words/run3/OPENING--00.s1.txt, 208 lines, one per tag)
+
+Read family (121 tags): I 66, T 24, U 12, L 9 (8 L f, 1 L c), S 8, P 2.
+Place family (87 tags): N 55, D 13, B 12, O 6, U 1.
+
+Where the classes did not fit:
+
+1. T holds two different things. One is the turned arrow: "a rule read from the share" and "a loss it does not read". The other is a passive with no reader, where the account picks the span of a relation: "read across all steps", "read in time", "read on a step", "read from some step on". I marked these 10 T because the list puts "read in time" there, but what such a sentence states is the account's own choice of definition, so they could as well be I. Also, in the meta-attractor note, "read in time" (r150, r152) means "registered early enough", not the in-time relation. I left those U L or T.
+
+2. The model of readers drawn from the selected (r141–r152, r171) blurs L and S. A carrier "reads the loss" or "reads it at least as favourably" with a verb, but what it does there is supply a term to a weighted count that sets the rule. So the verb form looks like L and the noun form like S for one and the same relation.
+
+3. Some uses fit none of the classes. A test that "has read its data" or "before reading a row" is a procedure applied to data. In T8, "reading what a course draws on" and "the readers" are agents given information. "The margin can be read back from the lag-1 autocorrelation" is recovering a quantity by estimation. "A marking reading its center's closure" is an encoding.
+
+4. In the place family, N hides the subject-facing-object picture. "Fed from beyond itself" and "beyond it" are named, but the thing named is the self. "Beyond all that", meaning beyond what couples into a selector, is a named closure that says the same as the B example "beyond what it reads". I split B from N by whether the bounding relation is named in coupling terms, and that split does not track whether a place faces a subject. "Nothing lies outside each center's reach" (续无外) is both a denial of an outside and a named closure (U D or N).
+
+5. I is the largest class (66) and holds two things: the account's interpreting ("read as", "on the reading that", "a reading" as a kind of claim) and a premise or added order called a "reading" (the body's "second reading"). These change differently: the first goes with interpretation, the second with premises.

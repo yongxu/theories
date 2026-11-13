@@ -1,0 +1,81 @@
+b1 N
+b2 N
+b3 N
+b4 N
+b5 N
+r6 L f
+r7 S a function of futures (Lean's "reading": a map from futures to values)
+r8 S a function of a future, what an extrapolation adds to the prefix
+r9 S a function of futures, one extrapolation's target
+r10 L f
+r11 I
+r12 I
+r13 I
+r14 I
+r15 I
+r16 U I or other (a Lean module imported unchanged, no relation stated)
+r17 I
+r18 I
+r19 I
+r20 I
+r21 I
+b22 N
+b23 O
+r24 I
+r25 I
+r26 I
+r27 I
+r28 U I or other (a Lean module imported unchanged, no relation stated)
+r29 L f
+r30 L f
+b31 N
+r32 L f
+r33 L f
+r34 L f
+r35 U L or S (a nominalized L naming the result "reads through the lumping")
+r36 T
+r37 L f
+r38 L f
+r39 L f
+r40 T
+r41 I
+r42 I
+r43 I
+r44 I
+r45 I
+b46 N
+b47 N
+b48 N
+r49 I
+r50 T
+r51 I
+r52 P
+r53 T
+r54 T
+r55 I
+r56 S a claim, a function on the indexed domain (a family of such indexed by its arguments)
+r57 T
+r58 S a function on the domain, a pattern of claims
+r59 S an earlier claim of the revised family
+b60 O
+b61 U B or D (the family lies among what it is about: no outside position, but the region is defined only by its own reading)
+r62 T
+b63 N
+r64 S a global assignment of values to claims (context-free valuation)
+r65 S a global assignment of values to claims (context-free valuation)
+r66 U S or I (assigning values to each context by its own assignment; a valuation as a verb)
+r67 U S or I (link text naming 01's result "unity of readings")
+r68 I
+r69 I
+r70 T
+r71 T
+r72 U T or I (states and law reconstructed from the values by the account)
+r73 I
+r74 I
+r75 I
+b76 N
+r77 I
+r78 S the least set of parts a law depends on (its sensitivity, least coupling)
+r79 L f
+r80 L f
+r81 T

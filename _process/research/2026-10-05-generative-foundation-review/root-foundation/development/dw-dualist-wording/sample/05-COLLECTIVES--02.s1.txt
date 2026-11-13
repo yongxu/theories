@@ -1,0 +1,63 @@
+b1 B
+b2 B
+b3 B
+b4 B
+b5 B
+b6 B
+b7 B
+b8 B
+b9 B
+b10 B
+b11 B
+b12 B
+b13 B
+b14 B
+b15 B
+b16 B
+b17 B
+b18 B
+b19 B
+r20 I
+r21 I
+b22 B
+r23 I
+b24 B
+r25 U L or S (the principal re-specifies the proxy from the whole state it sees)
+r26 I
+b27 B
+r28 S a selector, by what couples into it
+r29 S a selector, by what couples into it
+r30 S a re-optimization from the level at a later step
+r31 S who re-optimizes the selection
+b32 B
+b33 B
+b34 B
+b35 B
+b36 B
+b37 B
+b38 B
+b39 B
+b40 B
+b41 B
+b42 O
+b43 O
+r44 I
+r45 I
+b46 B
+r47 I
+b48 O
+r49 I
+b50 B
+b51 B
+b52 N
+b53 N
+b54 B
+b55 B
+r56 S a re-optimization from the level at step T
+r57 S a re-optimization from the level at a later step
+r58 S a re-optimization taking the level law alone
+b59 O
+b60 O
+b61 O
+b62 N
+r63 I

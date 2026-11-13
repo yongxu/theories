@@ -1,0 +1,208 @@
+r1 I
+r2 I
+r3 P
+b4 N
+r5 I
+b6 N
+b7 N
+r8 I
+r9 I
+b10 N
+b11 B
+r12 I
+b13 O
+b14 O
+b15 N
+b16 N
+r17 L f
+b18 N
+b19 D
+r20 I
+b21 D
+b22 N
+b23 N
+b24 N
+b25 N
+b26 B
+b27 B
+b28 B
+b29 B
+b30 N
+r31 I
+r32 T
+r33 T
+r34 T
+r35 S what couples the loss into the rule
+r36 P
+b37 N
+b38 O
+r39 I
+b40 N
+r41 I
+r42 I
+b43 B
+b44 N
+b45 N
+r46 U I or P
+r47 U I or P
+b48 N
+r49 I
+r50 I
+b51 N
+b52 N
+r53 I
+r54 I
+b55 B
+b56 N
+b57 N
+b58 N
+r59 T
+r60 I
+r61 T
+r62 I
+b63 N
+r64 I
+b65 U D or N
+r66 T
+r67 T
+b68 N
+b69 N
+r70 I
+r71 I
+b72 N
+b73 D
+r74 I
+r75 I
+r76 I
+r77 T
+b78 N
+r79 I
+b80 N
+r81 I
+b82 N
+r83 U I or L f
+b84 N
+r85 T
+b86 D
+r87 I
+r88 I
+b89 D
+b90 D
+r91 L f
+b92 D
+b93 D
+r94 T
+r95 L c
+b96 D
+r97 U L or P
+r98 U S or P
+r99 I
+r100 I
+b101 D
+r102 I
+b103 D
+b104 D
+r105 I
+b106 N
+b107 O
+r108 L f
+b109 N
+r110 I
+b111 B
+b112 B
+r113 T
+r114 I
+r115 I
+b116 N
+r117 I
+r118 I
+r119 I
+r120 I
+r121 I
+r122 I
+r123 I
+b124 N
+r125 I
+b126 D
+b127 N
+b128 N
+r129 U I or L f
+r130 T
+r131 S the rule's next update from the share
+r132 T
+r133 S the map from share to rule
+r134 L f
+r135 T
+b136 B
+r137 T
+r138 I
+r139 T
+r140 L f
+r141 S what feeds the rule's level: the carriers whose counts set it
+r142 T
+r143 U L or S
+r144 S who feeds the rule's level
+r145 T
+r146 S those whose counts set the rule
+r147 I
+r148 U L or S
+r149 U L or S
+r150 U L or T
+r151 S those whose counts feed the rule
+r152 U L or T
+r153 I
+b154 O
+r155 I
+r156 I
+r157 I
+r158 L f
+r159 I
+b160 B
+r161 I
+r162 I
+b163 N
+r164 L f
+r165 T
+b166 N
+b167 B
+r168 T
+r169 S what couples the loss into the rule
+r170 T
+r171 U L or S
+b172 N
+r173 I
+r174 T
+r175 T
+r176 T
+r177 I
+r178 I
+b179 N
+r180 I
+b181 N
+r182 L f
+b183 N
+r184 I
+r185 I
+b186 N
+b187 N
+b188 N
+r189 I
+b190 N
+b191 N
+r192 I
+b193 N
+b194 N
+r195 I
+b196 O
+r197 I
+r198 I
+r199 I
+r200 I
+b201 N
+b202 N
+r203 I
+b204 N
+b205 N
+b206 N
+b207 N
+r208 I

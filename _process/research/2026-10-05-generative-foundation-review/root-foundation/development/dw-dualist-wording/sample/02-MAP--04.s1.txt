@@ -1,0 +1,164 @@
+r1 T
+r2 L f
+r3 T
+r4 S members whose contributions pool into the rule
+r5 S which members contribute to the pool
+r6 S the loss entering the others' contributions to the pool
+b7 N
+r8 T
+r9 S members whose contributions pool into the rule
+r10 S members whose contributions pool into the rule
+r11 L f
+r12 S the onset of the others' loss-shifted contribution
+r13 S the others' post-bound contribution to the pool
+r14 I
+r15 T
+r16 S a step at which the rule is recomputed (schedule)
+r17 T
+r18 S schedule step
+r19 S schedule step
+r20 S the map from share to rule
+r21 S schedule step
+r22 L f
+r23 L f
+r24 S schedule step
+r25 L f
+r26 T
+r27 T
+r28 S schedule step
+r29 T
+r30 S a recomputation event in the schedule
+r31 S the map by which the rule is formed
+r32 T
+b33 B
+b34 B
+r35 T
+r36 L f
+b37 B
+b38 B
+r39 T
+r40 S the map from share and loss to rule
+r41 S schedule step
+r42 S the map by which the rule is formed
+r43 S that map
+r44 S schedule step
+r45 S members whose contributions pool into the rule
+r46 I
+r47 S members pooled into the rule
+r48 S each member's contribution value (u or v)
+r49 S members pooled into the rule
+r50 S a member's contribution value, said as a verb
+r51 S members pooled, as a weighted count
+r52 T
+b53 U N or O
+r54 S the two contribution values u and v
+r55 L f
+r56 S which members contribute
+r57 L f
+r58 S a contribution vector, mirrored
+r59 L f
+r60 S schedule step
+r61 T
+r62 S the others' post-bound contribution
+r63 T
+r64 S members pooled into the rule
+r65 L f
+r66 L f
+r67 L f
+r68 S the others' post-bound contribution
+r69 T
+b70 B
+r71 S which members contribute
+r72 S members pooled into the rule
+r73 S a kind's contribution value, said as a verb
+b74 N
+r75 S the map from share to what comes back to rule
+r76 S schedule step
+r77 T
+r78 L f
+r79 T
+r80 T
+b81 N
+r82 I
+r83 I
+r84 T
+r85 S members pooled into the rule
+r86 I
+r87 S members pooled into the rule
+r88 S each member's contribution value
+r89 S members pooled into the rule
+r90 S a member's contribution value, said as a verb
+r91 S members pooled, as a weighted count
+r92 T
+r93 L f
+r94 S which members contribute
+r95 S members pooled into the rule
+r96 S the schedule of recomputation
+r97 T
+r98 S members pooled into the rule
+r99 S contribution values, said as a verb
+r100 S a shaper's contribution value, said as a verb
+r101 T
+r102 T
+r103 S the schedule of recomputation
+r104 T
+r105 T
+r106 T
+b107 O
+r108 T
+r109 T
+r110 S members pooled into the rule
+r111 T
+r112 S members pooled into the rule
+r113 L f
+r114 S members pooled into the rule
+r115 S a contribution value, said as a verb
+r116 S schedule step
+r117 S the others' post-bound contribution
+r118 S schedule step, said as a verb
+r119 S the recomputation event
+r120 S the others' post-bound contribution
+r121 S the recomputation event
+r122 T
+r123 S the others' post-bound contribution
+r124 T
+r125 S schedule step
+r126 S the others' post-bound contribution
+r127 S schedule step, said as a verb
+r128 T
+r129 S the onset step of the post-bound contribution
+r130 T
+r131 S the onset of the post-bound contribution
+r132 S the others' post-bound contribution
+r133 S the value counted as coming back in a contribution
+r134 S the others' post-bound contribution
+r135 S a post-bound contribution of this form
+r136 T
+r137 S a post-bound contribution
+r138 S schedule step
+r139 S the schedule of recomputation
+r140 L f
+r141 S the others' post-bound contribution
+r142 S the value counted as coming back
+r143 S a post-bound contribution
+r144 S the value counted as coming back
+r145 S a shaper's contribution value, said as a verb
+r146 L f
+r147 T
+r148 T
+r149 T
+r150 S the others' post-bound contribution
+r151 T
+r152 S a post-bound contribution
+r153 T
+r154 L c
+r155 T
+b156 N
+r157 T
+r158 T
+r159 S the map from counts to rule
+r160 T
+r161 S the schedule of recomputation
+r162 T
+r163 T
+r164 T

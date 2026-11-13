@@ -1,0 +1,185 @@
+r1 S an index a line carries, which gives its act
+r2 T
+b3 N
+r4 S an index a slot inherits and carries
+r5 S the carried index that gives the act
+r6 S carried indices, filtered by persistence
+r7 S carried indices
+r8 S an index a relatum carries
+r9 S the carried index that gives the exchange
+r10 I
+r11 S carried indices inherited along descent
+r12 S the founders' carried index
+r13 I
+r14 S a carried index, ending defined by its course
+r15 S the carried index an occasion picks
+r16 S the carried index whose course the world is
+r17 S carried indices ranked by an order
+r18 I
+b19 N
+r20 L f
+r21 S carried indices, filtered by persistence
+r22 L f
+r23 L f
+r24 S what the carried index says of a region (scope)
+b25 B
+r26 I
+b27 N
+b28 N
+r29 S a scope of what the act counts, assigned by design
+r30 S verb: line carrying the scope that counts itself only
+r31 S verb: line carrying the scope that counts its source
+r32 S verb: line carrying the scope that counts everything
+r33 S a scope (clearing or sparing), assigned by design
+r34 S two scopes, assigned by design
+r35 S verb: line carrying the scope that counts its source
+r36 S verb: line carrying the scope that counts everything
+r37 S lines labelled readers, supplied, not tied to the selection
+r38 I
+r39 T
+r40 T
+r41 S lines labelled readers, supplied
+r42 S lines labelled readers, supplied
+r43 S lines labelled readers, supplied
+r44 T
+r45 T
+r46 S a line whose standing is compared across two courses
+b47 N
+r48 S verb: line carrying the scope that counts its source
+r49 T
+r50 I
+r51 S a line whose continuation requires the habitat
+r52 T
+r53 S verb: line carrying the scope that counts everything
+r54 T
+r55 T
+r56 T
+b57 N
+r58 S a scope counting a region (wide)
+r59 S a scope (wide)
+r60 S a carried scope whose act keeps the returning loss
+r61 S a scope (narrow)
+r62 S carried indices, not varied or learned
+r63 S a carried index
+r64 S the carried index that gives an act
+r65 T
+r66 I
+r67 I
+r68 I
+r69 S a carried scope, ceasing with its line
+r70 S a scope wider than what returns
+r71 S carried scopes that persist
+r72 S a narrow scope and what its act drains
+b73 B
+r74 T
+r75 S lines whose continuation the selection removes
+r76 T
+r77 S a line whose closure the alternatives agree on
+r78 I
+r79 S lines whose continuation depends on what is selected, kept in a pool
+r80 S link text: lines that judge, drawn from those selected
+r81 I
+r82 L f
+b83 D
+r84 I
+r85 I
+b86 N
+b87 N
+r88 T
+b89 N
+r90 I
+b91 N
+r92 I
+r93 I
+r94 I
+r95 T
+r96 S lines whose continuation the selection removes
+r97 I
+r98 I
+r99 L f
+r100 I
+r101 I
+b102 B
+r103 S carried indices, filtered by persistence
+r104 S carried indices, filtered by persistence
+r105 S an index a line inherits
+r106 S a carried index varying at descent
+r107 I
+r108 S carried types counted in a share
+r109 S carried types (no order among them)
+r110 S carried types revised at descent
+r111 S a parent's carried type, updated by what it senses
+r112 S link text: the loop that updates a carried index
+r113 I
+r114 S a type carried by a slot
+r115 S the updated type a slot carries
+r116 S the carried type, kept by inheritance
+r117 I
+r118 S carried types, a region of them counted per carrier
+r119 I
+r120 S a carried type absent from the cohort
+b121 N
+r122 L f
+r123 L f
+b124 N
+r125 S a region of carried types, counted
+r126 T
+r127 S a carried type the share would select
+b128 N
+r129 S a carried type that comes to hold every member
+r130 I
+r131 S a region of carried types
+r132 S a member's carried type, updated
+r133 S another member's carried type, what is sensed and copied
+r134 S the member's own carried type
+r135 S the carried types outside the region
+r136 I
+r137 S a standing relatum's carried type, what is sensed
+r138 S a parent's carried type, updated
+r139 S the sensed relatum's carried type
+r140 S a carried type (wide)
+r141 S a carried type (narrow)
+r142 L f
+r143 I
+r144 S a carried type, its presence a positive count
+r145 S a member whose type counts the region beyond the selection
+b146 B
+r147 S a region of carried types
+r148 S a carried type entering by revision
+b149 N
+r150 S a carried scope (narrow), the act assigned
+r151 S verb: line carrying the scope that counts its own line, its source or everything
+r152 S carried scopes (narrow), defined by what they count
+r153 S verb: scopes counting the dweller or not
+r154 S carried scopes, inherited
+r155 S gerund: carrying the scope that counts everything
+r156 S gerund: carrying the scope that counts its line and source
+r157 S the same scope, other world
+r158 S gerund: carrying the scope that counts its own line only
+r159 S a carried type, its share
+r160 S link: the loop that updates a carried index
+r161 I
+r162 T
+b163 N
+r164 S carried scopes, inherited
+r165 S carried types outside the region
+r166 S carried type giving an act, supplied
+r167 I
+r168 I
+r169 S the loop that updates a carried index
+r170 S a carried type and what feeds its carriers
+r171 S a carried type fixed in the population
+r172 S carried types outside the region
+r173 S lines whose continuation the course removes, also the sources of revision
+r174 S carried types, at the level of the population
+r175 S a carried type entering from outside
+b176 N
+r177 I
+r178 S a narrow carried scope and what its act drains
+r179 L f
+r180 I
+r181 S a carried type the share favours
+b182 B
+r183 S a carried type and what feeds its carriers
+b184 N
+r185 S lines whose continuation depends on what is selected, kept in a pool

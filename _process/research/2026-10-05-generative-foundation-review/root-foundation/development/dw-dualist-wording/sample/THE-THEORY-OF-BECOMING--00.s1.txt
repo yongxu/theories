@@ -1,0 +1,113 @@
+b1 D
+r2 T
+b3 B
+r4 T
+r5 T
+r6 S the rule's current application, a level that follows the share
+r7 T
+r8 T
+b9 B
+b10 B
+b11 D
+r12 U I or T
+r13 P
+r14 P
+r15 P
+r16 P
+r17 P
+b18 B
+r19 T
+r20 P
+r21 P
+b22 N
+b23 N
+r24 L c
+r25 I
+r26 I
+b27 B
+r28 T
+r29 T
+r30 S the rule's application, formed from the results
+r31 I
+r32 I
+b33 D
+r34 U I or T
+r35 P
+b36 N
+r37 I
+r38 I
+r39 P
+b40 D
+r41 S the sense-predict-act-revise loop, a named model
+r42 I
+r43 U I or T
+r44 I
+b45 N
+b46 B
+b47 B
+r48 I
+r49 T
+r50 T
+r51 S a step at which the rule is re-formed
+r52 T
+r53 U L or T
+b54 N
+r55 I
+b56 N
+b57 D
+r58 I
+r59 I
+r60 I
+r61 I
+b62 N
+b63 O
+b64 D
+r65 U S or P
+r66 I
+b67 N
+r68 I
+r69 I
+r70 I
+r71 I
+b72 B
+b73 B
+b74 N
+r75 T
+r76 T
+r77 S a step at which the rule is re-formed from the share
+r78 T
+b79 B
+r80 T
+r81 S the rule's application, formed from the share
+r82 S what feeds the loss into the rule's level
+r83 S selectors whose choices form the rule
+r84 T
+b85 D
+r86 L c
+b87 N
+b88 N
+r89 I
+r90 T
+r91 I
+r92 I
+r93 T
+r94 S the sense-predict-act-revise loop, a named model
+r95 I
+r96 I
+r97 I
+r98 L f
+b99 O
+b100 N
+b101 B
+b102 B
+b103 B
+b104 B
+b105 B
+r106 L f
+b107 N
+r108 I
+r109 T
+r110 I
+r111 I
+r112 I
+r113 I

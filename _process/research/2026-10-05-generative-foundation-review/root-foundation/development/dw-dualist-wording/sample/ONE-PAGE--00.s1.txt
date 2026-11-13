@@ -1,0 +1,75 @@
+r1 P
+r2 P
+r3 I
+b4 D
+r5 T
+b6 B
+r7 T
+r8 T
+r9 T
+r10 T
+b11 B
+r12 S the rule's weighting, a level formed from the share that follows it upward
+r13 T
+r14 T
+b15 B
+r16 I
+b17 B
+r18 T
+b19 D
+b20 D
+r21 I
+b22 N
+r23 I
+b24 D
+b25 N
+b26 N
+b27 B
+r28 U L or T
+b29 B
+b30 B
+r31 I
+r32 T
+r33 T
+r34 L c
+r35 S members of a pool counted by kind, whose counts feed the rule's level
+r36 T
+r37 S members of the pool that feed the rule's level
+b38 D
+r39 L c
+r40 S the selectors whose selection is informed by the draw
+r41 L c
+b42 O
+r43 S the selectors whose selection is informed by the draw
+b44 D
+r45 L f
+b46 D
+b47 D
+r48 L c
+r49 T
+b50 B
+r51 I
+r52 L c
+b53 B
+r54 S a registering of the loss by the selection, which turns the rule (an event, not a holder)
+b55 B
+r56 I
+r57 I
+r58 I
+b59 D
+r60 P
+r61 S a selector, as what its selection reaches
+r62 U I or S
+r63 T
+b64 D
+r65 I
+r66 I
+r67 L f
+b68 D
+b69 N
+r70 S the name of a model: a formation that senses, predicts, chooses, acts and revises as one law
+r71 T
+r72 S noisy observations that inform a learner's beliefs
+r73 I
+r74 P
+r75 P

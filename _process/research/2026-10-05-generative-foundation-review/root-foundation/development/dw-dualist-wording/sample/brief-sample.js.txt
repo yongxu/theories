@@ -1,0 +1,42 @@
+export const meta = {
+  name: 'dw-sense-sample',
+  description: 'Sample count: sort each "read" form and each "beyond / outside / within" in eight pieces by what relation the sentence states (read-only; verdicts to scratch files)',
+  phases: [{ title: 'Sort', detail: 'one Opus reader per piece' }],
+}
+const DIR = '/Users/ren/theories/tmp/r7/words/run3'
+const BRIEF = `You are sorting uses of two word families in one piece of the texts of the theory of becoming (repository /Users/ren/theories). Reading work only: edit no repository file, run no tests, builds or git commands (the machine is shared and busy). Use Read, and Write for your one verdict file.
+
+WHY. The account's root is one relation, conditioning: something goes on through what it depends on. Its author wants the wording to stop needing a subject that faces an object. A scan found that "read" (reads, reading, reader, unread) is the largest carrier of that picture, about 4,300 times, and that it stands for several different relations; and that "beyond", "outside" and "within" say a relation as a place. Before anything is changed, the uses have to be counted by what each sentence in fact states. This is a sample: your verdicts test the classes as well as count them, so say so when a class does not fit.
+
+WHAT TO READ. ${DIR}/<piece>.marked.md, whole, in order. Every use to sort is followed by a tag: ⟦r17⟧ for the read family, ⟦b18⟧ for beyond / outside / within. Uses in code, links and headings carry no tag.
+
+CLASSES FOR ⟦r…⟧ (the read family):
+ L  A level makes a difference. Something (a step, a law, a rule, a selection, a formation, a judge, an optimizer) "reads" a quantity, a share, a level or a difference, in the active voice, and the sentence states that its next value, or what it selects, differs where that differs. After L give one letter if you can tell: f = it is a function of that, depends only on that (a rule or law of a model); c = that couples into it by level (a formation and a condition); g = conditioning in the grammar (one thing is among what another comes from).
+ T  The arrow turned or the reader dropped: "a rule read from the share", "unread", "what it reads" standing for a region, "a loss it does not read", "reads beyond its share", "read in time".
+ S  Readers and readings as things in a model: the "readers" of a rule or a pool, "a reading" that a line carries, "readings that persist", "removes its readers". After S say in a few words what the thing is in that sentence: what feeds a level, what informs a selection, a weighted count, what carries a reading, or something else.
+ I  The account's own interpreting, or a person's: "read as", "read off", "read on the grammar", "Reading [AI reading …]", "on this reading", "a reading of the theorem", "read against".
+ P  A person reading the page: "a reader of this page", "the reader's site", "a cold reader", "for Ren's read".
+ U  Unsure. Say between which two.
+CLASSES FOR ⟦b…⟧ (beyond, outside, within):
+ B  Bare: a region standing free, or defined only by the selecting: "what lies beyond", "the beyond", "beyond what it reads", "outside its share", "from outside", "given from outside".
+ N  Named: the set and the relation are named in the sentence: "beyond the family's closure", "outside this listing", "within its closure under the relation", "within what is renewed", "within the margin".
+ D  A denial of an outside, or the container said of everything: "no should beyond becoming", "forms within becoming", "AI within it", "within one unfolding", "no authority outside".
+ O  Other: time, amount, order of text or idiom: "within three steps", "beyond one's death", "within a factor of two", "the section beyond".
+ U  Unsure. Say between which two.
+
+Decide from what the sentence states, not from the word beside it. One paragraph often holds several classes.
+
+OUTPUT. Write ${DIR}/<piece>.s1.txt: one line per tag, in order, the tag's letters and number, the class, and the short note where the class asks for one. Examples:
+r1 I
+r2 L f
+r3 T
+r4 S a weighted count of kinds
+b5 B
+b6 N
+r7 U L or T
+Every tag must have exactly one line. Then reply with: the piece name; the count of each class; and, in at most five sentences, where the classes did not fit what you read (a use that is none of them, two classes that you could not tell apart, a class that holds two different things). That last part matters as much as the counts.`
+phase('Sort')
+const res = await parallel(args.map(u => () =>
+  agent(`${BRIEF}\n\nYOUR PIECE: ${u.piece} (${u.words} words; ${u.read} read-tags and ${u.place} place-tags). Read ${DIR}/${u.piece}.marked.md and write ${DIR}/${u.piece}.s1.txt.`,
+    { label: `sort:${u.piece}`, phase: 'Sort', model: 'opus', effort: 'high' })))
+return res.map((r, i) => ({ piece: args[i].piece, reply: r }))

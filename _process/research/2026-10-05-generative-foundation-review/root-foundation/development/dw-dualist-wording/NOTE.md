@@ -72,10 +72,54 @@ A draft from the theorems' own statements:
 
 It is longer. It names no doer and no beyond, and each clause is a theorem's statement. It still has "selected", "criterion" and "favoured", and "we … design". It has been read by no one but its writer.
 
+## The sample count, and what it changed (added 13 November, 11:08 WIB)
+
+Before any full count, eight AI readers (Opus) sorted every form of "read" and every "beyond", "outside" and "within" in eight pieces: 685 and 251 uses ([`sample/`](sample/)). The classes were mine, from the scan.
+
+| "read" in the sample | Share |
+|---|---|
+| Readers and readings as things in a model | 35% |
+| The account's own interpreting | 28% |
+| The arrow turned or the reader dropped ("read from", "unread") | 18% |
+| A level makes a difference, active voice | 9% |
+| A person reading the page | 3% |
+| Unsure | 3% |
+
+| "beyond", "outside", "within" in the sample | Share |
+|---|---|
+| The set and the relation named | 43% |
+| Bare | 33% |
+| A denial of an outside, or the container said of everything | 12% |
+| Time, amount, idiom | 8% |
+
+**The classes did not hold, and that is the result.** Every reader said so ([`sample/readers-remarks.txt`](sample/readers-remarks.txt)):
+
+- The largest class, readers and readings as things, holds many different things, and none is a reader as a mind: the step at which a rule is formed again from the share (a schedule, about 30 uses in one piece); members counted into a pool; a contribution value; the others' contribution after a bound; a function on futures; a valuation; a scope a line carries; the name of a model ("the reading loop").
+- "The rule read" and "the reading" often name one object from two sides, so the turned arrow and the thing are not two classes.
+- The interpreting class holds three: the account's interpreting, a premise called "a second reading", and a chosen setting of a free slot ("the own-closure reading").
+- For "beyond", bare against named measures how the sentence is worded, not what it states: in chapter 05 nearly every "beyond" is one defined term, the complement of the family that couples in, whether or not the sentence names the family.
+
+So a full count by these classes would have counted wording. The cut has to come from the Lean, module by module. The turning-in-time session, asked, gives six for "reader" beside the account's interpreting: a step's dependence on a level; a kept relation between a formation's state and the worlds it admits (`ReadingLoop`); what a rule's revision counts (the pool and the window); what raises a level toward a set level and is itself rebuilt; a variant a line carries that sets how the carrier acts; a gauge, a line with a greater need on whose ending a selection can be constant. One of these is already joined to the centre by proof, a second is that session's next piece, and it does not promise the rest.
+
+**What follows for the order of work.** Step 3 ("count before changing") is not one count. For "read" it is a table, made with the Lean in hand, of which module's sentences use the word for which relation, and what each relation is called in that module's own definitions. That table is also the glossary's row. The count comes after it.
+
+## The draft sentence, checked against the Lean (added 13 November, 11:08 WIB)
+
+The turning-in-time session read the draft above clause by clause against the statements. Four places say more than the theorems:
+
+- "Which of them go on depends only on …" is a definition's hypothesis (`SelectsThrough`), not a result, and "go on" narrows a selection (any claim about level histories) to continuing.
+- "Can fall while nothing in the selecting differs" holds only until the fall first changes which go on.
+- The optimum clause lacks its premise, room: without it an optimum can stand anywhere. And the condition "is at the least", it does not "fall".
+- The lock clause says more than the lock's theorems, which start from a configuration already locked and conclude that it stays so. It also leaves out last night's result: a locked start ends where the net ends, and turns only where the fall makes a difference while what is left still holds.
+
+And the aim leaves out time, "which is the centre's whole condition".
+
+The three versions are on one page for Ren's read: [CENTRE-SENTENCE.md](CENTRE-SENTENCE.md).
+
 ## How far this has been checked
 
-The scan is AI readers' reading, sixteen of them, with one critic over the rest. The counts are grep counts over the twenty English pages and include link text and anchors. The senses of "read" and the bare and named uses of "beyond" are not yet counted. No person has read the findings.
+The scan is AI readers' reading, sixteen of them, with one critic over the rest. The counts are grep counts over the twenty English pages and include link text and anchors. A sample count of "read" and "beyond" was made and showed that the classes it used do not hold. No person has read the findings.
 
 ## Cost
 
-About 2.8 million subagent tokens, sixteen agents.
+The scan: about 2.8 million subagent tokens, sixteen agents. The sample: about 0.7 million, eight agents.

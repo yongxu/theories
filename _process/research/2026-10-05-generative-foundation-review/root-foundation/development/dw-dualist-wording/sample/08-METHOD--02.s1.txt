@@ -1,0 +1,47 @@
+b1 O
+r2 I
+r3 I
+r4 I
+r5 I
+r6 I
+r7 I
+r8 I
+r9 L f
+r10 L f
+r11 I
+r12 I
+r13 I
+r14 I
+r15 L f
+r16 L f
+r17 U I or P
+r18 L f
+r19 I
+b20 N
+r21 P
+r22 S what informs a selection (an observation map over situations)
+b23 N
+r24 S what informs a selection (the observation a rule is built on)
+r25 S an observation's values, the classes a rule chooses over
+r26 S an observation's value, given by a situation
+r27 I
+r28 S an observation's values, the classes a rule chooses over
+r29 S what informs a selection (the observation a correction leaves unchanged)
+r30 S an observation's values, the classes a rule chooses over
+r31 S an observation's value, given by a situation
+r32 S listed observation values
+r33 S an observation's values, given by situations
+r34 S the event of observing, placed in time
+r35 L f
+r36 I
+r37 S the selector's model, which can be revised
+r38 L f
+r39 P
+r40 P
+r41 P
+b42 O
+r43 S an update of what a proxy registers
+r44 S a proxy whose registering is updated
+r45 S a set of data streams (a hypothesis) in learning theory
+b46 B
+b47 O
