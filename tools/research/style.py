@@ -191,8 +191,11 @@ def lint(r):
             ss = sentences(lead_text, 'en')
             neg = sum(bool(NEGATIVE_EN.search(s)) for s in ss)
             lead = re.split(r'[;:]| — ', ss[0])[0] if ss else ''
-            if lead and NEGATIVE_EN.search(lead) and not re.search(r'\b(?:exactly|only|iff)\b', lead):
-                add(field, 'negation-lead', f'{neg}/{len(ss)} sentences are negations; lead with what the result does')
+            # "makes no difference to" is the relation a theorem states (which differences make a difference), not a
+            # negation to lead away from (13 November 2026, after the dig into what brings a doer back into a statement)
+            if (lead and NEGATIVE_EN.search(lead) and not re.search(r'\b(?:exactly|only|iff)\b', lead)
+                    and not re.search(r'\bma(?:kes?|de|king) no difference\b', lead, re.I)):
+                add(field, 'negation-lead', f'{neg}/{len(ss)} sentences are negations; lead with what holds')
     for field, hits in markers_by_field.items():
         rounds = {h for h in hits if ROUND.fullmatch(str(h))}
         if len(rounds) >= 3:

@@ -1,0 +1,8 @@
+# Kept history and saved check copies are left out of plain searches (ripgrep and the tools built on it), so that a
+# search from the root meets what is current first. Nothing is removed, and every file here stays tracked.
+# To search them too: rg --no-ignore-dot, or python3 tools/research/research.py find --archives. A path given to
+# rg by name is always searched. _process/research-config.json (path_roles) classes more paths as history or
+# evidence than the three listed here. AI-written, 13 November 2026.
+/_process/history/
+/_process/architecture/history/
+becoming-checks/

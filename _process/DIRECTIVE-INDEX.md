@@ -4,18 +4,18 @@
 
 Every record in the directive groups `15-*`, `16-*` of [sources](../sources/README.md): 399 files, newest first. The [directive register](RESEARCH-DIRECTIVES.md) curates the authorizations among them and is incomplete; read the record itself when an authorization matters. The records keep Ren's words verbatim; an AI-authored section is labelled, its earlier text in git history.
 
-**Kind** is a heuristic read from the register entry's wording where the register lists the record, else from the file name and title: record 148, direction 125, decision 55, correction 23, question 20, clarification 10, assessment 7, attachment 6, conversation 5. It is a finding aid, not a reading of the record; who said what is settled only by the record.
+**Kind** is a heuristic read from the register entry's wording where the register lists the record, else from the file name and title: record 149, direction 125, decision 55, correction 23, question 20, clarification 10, assessment 6, attachment 6, conversation 5. It is a finding aid, not a reading of the record; who said what is settled only by the record.
 
 | Date | Record | Kind | Title | In register |
 |---|---|---|---|---|
-| 2026-11-13 | [2026-11-13-what-a-law-is-and-the-words.md](../sources/15-codex-theory-conversations/2026-11-13-what-a-law-is-and-the-words.md) | record | Ren: what a law is, learning with no learner, and words that keep up with the theory |  |
-| 2026-11-12 | [2026-11-12-where-we-are-and-the-loop.md](../sources/15-codex-theory-conversations/2026-11-12-where-we-are-and-the-loop.md) | record | Ren: where we are, the dualism, and the full picture; the loop as the centre |  |
+| 2026-11-13 | [2026-11-13-what-a-law-is-and-the-words.md](../sources/15-codex-theory-conversations/2026-11-13-what-a-law-is-and-the-words.md) | record | Ren: what a law is, learning with no learner, and words that keep up with the theory | yes |
+| 2026-11-12 | [2026-11-12-where-we-are-and-the-loop.md](../sources/15-codex-theory-conversations/2026-11-12-where-we-are-and-the-loop.md) | record | Ren: where we are, the dualism, and the full picture; the loop as the centre | yes |
 | 2026-11-11 | [2026-11-11-aa-six-family-pass-agents.md](../sources/15-codex-theory-conversations/2026-11-11-aa-six-family-pass-agents.md) | record | Ren: the six-family pass, with about fourteen agents |  |
 | 2026-11-10 | [2026-11-10-where-we-are-and-the-roadmap.md](../sources/15-codex-theory-conversations/2026-11-10-where-we-are-and-the-roadmap.md) | question | Ren: where the frontier of representation is, and whether the roadmap needs improvement |  |
 | 2026-11-10 | [2026-11-10-traditions-onto-the-map.md](../sources/15-codex-theory-conversations/2026-11-10-traditions-onto-the-map.md) | correction | Ren: philosophy onto the map, many signifiers with 文言 first, and correcting the map; design with Fable and astra |  |
 | 2026-11-10 | [2026-11-10-prepare-edition-6-and-the-push.md](../sources/15-codex-theory-conversations/2026-11-10-prepare-edition-6-and-the-push.md) | record | Ren: prepare edition 6 and the push |  |
 | 2026-11-10 | [2026-11-10-elegant-and-wise.md](../sources/15-codex-theory-conversations/2026-11-10-elegant-and-wise.md) | record | Ren: more elegant and wise |  |
-| 2026-11-10 | [2026-11-10-dynamics-connected-mapped-unified.md](../sources/15-codex-theory-conversations/2026-11-10-dynamics-connected-mapped-unified.md) | record | Ren: the dynamics connected, mapped and unified, not "widening is better" |  |
+| 2026-11-10 | [2026-11-10-dynamics-connected-mapped-unified.md](../sources/15-codex-theory-conversations/2026-11-10-dynamics-connected-mapped-unified.md) | record | Ren: the dynamics connected, mapped and unified, not "widening is better" | yes |
 | 2026-11-10 | [2026-11-10-aa-world-contact-slice-agents.md](../sources/15-codex-theory-conversations/2026-11-10-aa-world-contact-slice-agents.md) | record | Ren: a first slice of world contact on families C and D, with about four agents |  |
 | 2026-11-10 | [2026-11-10-aa-step-2-agents.md](../sources/15-codex-theory-conversations/2026-11-10-aa-step-2-agents.md) | record | Ren: run the atlas's step 2 with about six agents |  |
 | 2026-11-10 | [2026-11-10-aa-premise-lists-agents.md](../sources/15-codex-theory-conversations/2026-11-10-aa-premise-lists-agents.md) | record | Ren: complete the laws' premise lists with about five agents |  |
@@ -23,7 +23,7 @@ Every record in the directive groups `15-*`, `16-*` of [sources](../sources/READ
 | 2026-11-09 | [2026-11-09-map-structures.md](../sources/15-codex-theory-conversations/2026-11-09-map-structures.md) | record | Ren: study the map, its structures, and its relation to the world, alignment and wisdom, with Fable and astra |  |
 | 2026-11-09 | [2026-11-09-agents-the-map.md](../sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md) | record | Ren: AGENTS.md missed the point of the effort; a map, not a defence; then memory and the whole repository | yes |
 | 2026-11-08 | [2026-11-08-within-becoming-no-should.md](../sources/15-codex-theory-conversations/2026-11-08-within-becoming-no-should.md) | record | Ren: no should beyond becoming; 生生 as the continuation of life; what do we want | yes |
-| 2026-11-08 | [2026-11-08-representation-to-eight.md](../sources/15-codex-theory-conversations/2026-11-08-representation-to-eight.md) | assessment | Ren: finish the review's steps, until every score is at least 8 of 10 |  |
+| 2026-11-08 | [2026-11-08-representation-to-eight.md](../sources/15-codex-theory-conversations/2026-11-08-representation-to-eight.md) | record | Ren: finish the review's steps, until every score is at least 8 of 10 | yes |
 | 2026-11-08 | [2026-11-08-ai-briefly-and-read.md](../sources/15-codex-theory-conversations/2026-11-08-ai-briefly-and-read.md) | direction | Ren: mention AI only briefly; do not claim nobody read it |  |
 | 2026-11-07 | [2026-11-07-representability-review.md](../sources/15-codex-theory-conversations/2026-11-07-representability-review.md) | direction | Ren: how representable is the project, and start (a) |  |
 | 2026-11-07 | [2026-11-07-make-edition-5.md](../sources/15-codex-theory-conversations/2026-11-07-make-edition-5.md) | record | Ren: make edition 5 |  |
