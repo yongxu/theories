@@ -364,7 +364,7 @@ class RepositoryTests(unittest.TestCase):
         self.assertIn('most of the %d ways out of a condition and the %d passages between conditions' % (tot['exits'], tot['transitions']), page)
 
     def test_what_the_whole_map_says_of_its_arrows_along_a_row_is_what_the_counts_give(self):
-        # the page: most that run right are proved of the course itself; most that run back need something given, or are built
+        # the page: most that run right are proved with no further premise; most that run back need a further premise, or are built
         along = self.m['counts']['along']
         right = {k[6:]: v for k, v in along.items() if k.startswith('right/')}
         left = {k[5:]: v for k, v in along.items() if k.startswith('left/')}

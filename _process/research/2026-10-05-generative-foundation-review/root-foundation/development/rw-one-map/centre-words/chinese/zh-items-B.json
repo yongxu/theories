@@ -1,0 +1,386 @@
+[
+ {
+  "id": 63,
+  "where": "path lock shows 1",
+  "zh_field": "shows_zh[1]",
+  "old_en": "Taken as given by the theorems (step 3): that what is not counted goes on being used up, whether the rule is locked or not; and, where a theorem draws on it, that a larger lead uses up no less. No theorem drawn derives either from the lock.",
+  "new_en": "Premises of the theorems, not derived (step 3): that something whose level makes no difference to the rule goes on being used up, whether the rule is locked or not; and, where a theorem draws on it, that a larger share uses up no less. No theorem drawn derives either from the lock.",
+  "old_zh": "定理当作给定的（第 3 步）：规则没算进去的东西照旧在被耗掉，定不定住都一样；“领先多的，耗掉的并不更少”这一点，凡是定理用到的地方，也是给定的。图上的定理里，没有一条把这两点从定局推出来。"
+ },
+ {
+  "id": 64,
+  "where": "path lock shows 2",
+  "zh_field": "shows_zh[2]",
+  "old_en": "Only in built examples (steps 4, 16): that what would read the loss is removed.",
+  "new_en": "Only in built examples (steps 4, 16): that those that would count the loss are removed.",
+  "old_zh": "只在造出来的例子里见过的（第 4、16 步）：读得到损耗的被清走。"
+ },
+ {
+  "id": 65,
+  "where": "path lock shows 3",
+  "zh_field": "shows_zh[3]",
+  "old_en": "The way out. Proved of the course itself (step 9), under the conditions the step gives: exactly when a loss the rest count turns the rule for good. Step 8 is a separate theorem, in another model: when a loss can reach what sets the rule while what is being lost can still be kept. No theorem joins the two: taking step 8's reaching as the start of step 9's counting is a reading. Every other way out drawn (steps 10 to 13) is proved only with something given from outside the course: a judging that stops favouring past a set loss, a loss that falls on what shapes the rule, a measure over a fixed list, a limit on what is allowed. No theorem drawn says what makes a loss reach what sets the rule, or come to be counted. One built case (under step 10) shows a lock left with nothing counting the loss: the loss fell on what the rule favoured.",
+  "new_en": "The way out. Proved with no further premise (step 9): where the rest count the loss and the judgments went against what the rule favoured at one update, the rule turns for good exactly where they still do at the next, provided the rest go on counting the loss and judge no more for the favoured side than that side does. Step 8 is a separate theorem, in another model: when a loss can get back, early enough, to a rule set from which of the pool keep going. No theorem joins the two: taking step 8's getting back as the start of step 9's counting is a reading. Every other way out drawn (steps 10 to 13) is proved only with a further premise: a way of setting the rule that stops favouring past a set loss, a loss that falls on what shapes the rule, a measure over a fixed list, a limit on what is allowed. No theorem drawn says what brings a loss to get back to the pool, or to be counted. One built case (under step 10) has a lock given up with none counting the loss: the loss fell on what the rule favoured.",
+  "old_zh": "出路。就过程本身证明的（第 9 步），条件写在那一步里：其余的把损耗算进去之后，恰好在什么条件下规则转向、不再转回。第 8 步是另一条定理，用的是另一个模型：损耗什么时候算是趁正在失去的东西还留得住，就传到了定规则的各方。这两条之间没有定理相连：把第 8 步的“传到”当作第 9 步“算进去”的起点，是一种解读。其余画出的每一条出路（第 10 到 13 步），都只在有过程之外给定的东西时才得到证明：一种损耗过了定量就不再偏向的评法，落在改规则一方身上的损耗，按一份固定名单来量，对允许结果的一条限制。损耗怎样才传得到定规则的各方、怎样才被算进去，图上的定理里没有一条说。有一个造出来的例子（在第 10 步下面）：没有任何一方去算损耗，定局也破了，因为损耗落在了规则偏向的一方身上。"
+ },
+ {
+  "id": 66,
+  "where": "path lock shows 4",
+  "zh_field": "shows_zh[4]",
+  "old_en": "In no theorem (steps 17, 18): what first brings a rule to be updated from its own picks, and the loop reaching its own checks.",
+  "new_en": "In no theorem (steps 17, 18): what first brings a rule to be set again from the shares selected under it, the checks coming to follow what the rule favours, and the pattern remaking what selects it.",
+  "old_zh": "没有定理的（第 17、18 步）：规则最初怎样变成照自己选出的结果重定；这个圈怎样伸到查错的途径上。"
+ },
+ {
+  "id": 67,
+  "where": "path stock shows 0",
+  "zh_field": "shows_zh[0]",
+  "old_en": "The ways down (steps 3 to 9) are proved, each under its condition, most often a taking that stands or takers each doing the best for itself. One arrow among them, to \"Keeps going as something else\" (step 9), is proved only with something given from outside.",
+  "new_en": "The ways down (steps 3 to 9) are proved, each under its condition, most often a taking that stands or takers each doing the best for itself. One arrow among them, to \"Keeps going as something else\" (step 9), is proved only with a further premise.",
+  "old_zh": "往下走的每一步（第 3 到 9 步）都有定理，各有条件，多数是：取用照旧不变，或者各方都只做对自己最有利的事。其中通向“还在，但已不是原样”的那一条（第 9 步），要有过程之外给定的东西。"
+ },
+ {
+  "id": 68,
+  "where": "path stock shows 1",
+  "zh_field": "shows_zh[1]",
+  "old_en": "Of the ways back, only regrowth is proved of the course itself (step 12): where sparing pays, every best course takes nothing until the stock has regrown; where more comes than goes, the level is back at the need.",
+  "new_en": "Of the ways back, only regrowth is proved with no further premise (step 12): where sparing pays, every best course takes nothing until the stock has regrown; where more comes than goes, the level is back at the need.",
+  "old_zh": "回头的路里，只有“长回来”是就过程本身证明的（第 12 步）：只要留着划得来，每一种最好的做法都先不取，等存量长回来；来的比去的多，存量就回到够用。"
+ },
+ {
+  "id": 69,
+  "where": "path stock shows 2",
+  "zh_field": "shows_zh[2]",
+  "old_en": "Every other way back (steps 10, 11, 13, 14, 15) is proved only with something given from outside the course; step 13 has a built case as well.",
+  "new_en": "Every other way back (steps 10, 11, 13, 14, 15) is proved only with a further premise; step 13 has a built case as well.",
+  "old_zh": "其余每一条回头的路（第 10、11、13、14、15 步），都要有过程之外给定的东西；第 13 步另有一个造出来的例子。"
+ },
+ {
+  "id": 70,
+  "where": "path view shows 2",
+  "zh_field": "shows_zh[2]",
+  "old_en": "Proved only with something given from outside the course (steps 4 and 12): step 4 is a necessary condition, with the growth of the error given; step 12 says that telling apart what every available trial treats alike needs a trial brought in from beyond. Only in built examples: step 13, telling two states apart with the last unit, after which it cannot correct; and, under step 9, coming out of the known road only from a different start (begun on the untried act, told which state holds, or listing both outcomes and waiting for the answer).",
+  "new_en": "Proved only with a further premise (steps 4 and 12): step 4 is a necessary condition, with the growth of the error given; step 12 says that telling apart what every available trial treats alike needs a trial brought in from beyond. Only in built examples: step 13, telling two states apart with the last unit, after which it cannot correct; and, under step 9, coming out of the known road only from a different start (begun on the untried act, told which state holds, or listing both outcomes and waiting for the answer).",
+  "old_zh": "要有过程之外给定的东西才得到证明的（第 4、12 步）：第 4 步是一个必要条件，误差随时间增长是给定的；第 12 步说，现有试验都一样对待的两种说法，要分开就得从外面带进新的试验。只在造出来的例子里见过的：第 13 步，分清两种情形用掉了最后一份本钱，之后改不了；还有第 9 步下面的例子，要从熟路出来，只有换个开头：一开始就走没试过的那一步，被告知是哪种情形，或者把两种结果都列上、先等回应。"
+ },
+ {
+  "id": 71,
+  "where": "path giving shows 1",
+  "zh_field": "shows_zh[1]",
+  "old_en": "Proved only with something given from outside (step 8): from nothing given, giving comes back only through something that gives without waiting. No theorem drawn here says what would make anything do so.",
+  "new_en": "Proved only with a further premise (step 8): from nothing given, giving comes back only through something that gives without waiting. No theorem drawn here says what would make anything do so.",
+  "old_zh": "要有过程之外给定的东西的（第 8 步）：全都不给以后，只有出现不等就给的，给才回得来。是什么让哪一个不等就给，图上的定理没有说。"
+ },
+ {
+  "id": 72,
+  "where": "path giving shows 2",
+  "zh_field": "shows_zh[2]",
+  "old_en": "Lasting by being handed on (steps 9 to 11): that a lasting pattern which gains carriers only by being handed on is handed on within every carrier's span, and is gone within one span where handing on stops, is proved (steps 9, 10). Its return (step 11) is proved only with something given from outside: something that starts carrying it without being handed it.",
+  "new_en": "Lasting by being handed on (steps 9 to 11): that a lasting pattern which gains carriers only by being handed on is handed on within every carrier's span, and is gone within one span where handing on stops, is proved (steps 9, 10). Its return (step 11) is proved only with a further premise: something that starts carrying it without being handed it.",
+  "old_zh": "一茬传一茬（第 9 到 11 步）：不靠往下传就没有新的来承载它的格局，只要还在，每一茬之内都往下传过；不再传，一茬之内就没了。这两条已证明（第 9、10 步）。没了以后再有（第 11 步），要有过程之外给定的东西：有什么不经传给就自己开始承载。"
+ },
+ {
+  "id": 73,
+  "where": "path returns shows 0",
+  "zh_field": "shows_zh[0]",
+  "old_en": "Proved of the course itself, each under the condition its sentence gives (steps 2, 4 to 7, 9, 10 and 14): the step at which a line closes into a ring; what becomes of a difference by what each turn returns (gone, settled, kept whole, or grown past every bound); that a level pushed back within its gap comes to its mark; that among finitely many states every course reaches a state it comes back to; that a search on a score with a ceiling comes to rest. What is said of staying (in steps 6, 9 and 11 to 14) is proved too: at rest, growing, swinging, keeping a band with a late reading, and having nowhere to rest.",
+  "new_en": "Proved with no further premise, each under the condition its sentence gives (steps 2, 4 to 7, 9, 10 and 14): the step at which a line closes into a ring; what becomes of a difference by what each turn returns (gone, settled, kept whole, or grown past every bound); that a level pushed back within its gap comes to its mark; that among finitely many states every course reaches a state it comes back to; that a search on a score with a ceiling comes to rest. What is said of staying (in steps 6, 9 and 11 to 14) is proved too: at rest, growing, swinging, keeping a band with a late reading, and having nowhere to rest.",
+  "old_zh": "就过程本身证明的，各在句子里写明的条件之下（第 2、4 到 7、9、10、14 步）：链子在哪一步合成环；绕着环走的差别，按每一圈回来多少，是没了、停住、原样留着，还是越过任何界限；被推回、推的量又不超过缺口的水平，回到那个点；状态有限时，每个过程都会走到一个它还会再回来的状态；分数有上限的搜索会停下。讲“留在那里会怎样”的几句（第 6、9、11 到 14 步里）也已证明：停住，越滚越大，来回摆，读得晚时守得住多宽的范围，怎么都不算够。"
+ },
+ {
+  "id": 74,
+  "where": "arrow a1.over>b2.uncounted",
+  "zh_field": "tag_zh",
+  "old_en": "the same taking, left out by a rule",
+  "new_en": "the same taking, with no difference to a rule",
+  "old_zh": "同一回事：规则没把它算进去"
+ },
+ {
+  "id": 75,
+  "where": "arrow a1.over>b2.uncounted",
+  "zh_field": "zh",
+  "old_en": "The same taking, with a rule in play that leaves it out.",
+  "new_en": "The same taking, where a rule is in play and how much is left makes no difference to it.",
+  "old_zh": "同一种“用得比补得快”，只是多了一条不把它算进去的规则。"
+ },
+ {
+  "id": 76,
+  "where": "arrow b1.swing>b1.held",
+  "zh_field": "zh",
+  "old_en": "If every update of the rule favours the same side, and favours it no less when that side's share is larger, then every run is locked in from the step after its second update. This holds whatever share, rule and way of judging it starts with.",
+  "new_en": "Where being favoured never lowers a share: if every update of the rule favours the same side, and favours it no less when that side's share is larger, then every course is locked from the step after its second update. This holds whatever share, rule and way of updating it starts with.",
+  "old_zh": "只要每一次重定都偏向同一方，这一方占得越多、偏向也不减，那么无论从什么份额、什么规则、什么评法开始，到第二次重定之后的那一步，就都定住了。"
+ },
+ {
+  "id": 77,
+  "where": "arrow b1.held>b2.uncounted",
+  "zh_field": "tag_zh",
+  "old_en": "given, not derived: the loss grows, locked or not",
+  "new_en": "a premise, not derived: the loss grows, locked or not",
+  "old_zh": "给定的：定不定住，损耗都在涨"
+ },
+ {
+  "id": 78,
+  "where": "arrow b1.held>b2.uncounted",
+  "zh_field": "zh",
+  "old_en": "That the loss goes on growing is given, not derived: the theorems take each step to add to what is used up beyond the count, whether the rule is locked or not. What they prove is that a lock which goes by the lead alone runs the same however much is used up, so it stays while that loss passes every bound. Where it is also given that at each step a larger lead leaves no less used up, no smaller a lead and a rule favouring no less, the course that starts with the larger lead has used up no less at every step.",
+  "new_en": "That the loss goes on growing is a premise, not derived: the theorems take each step to add to what is used up, whether the rule is locked or not. What they prove is that where the loss changes neither what is selected next nor how the rule is set, the course runs as it would with no loss; so, where being favoured never lowers a share, the rule set from the share is no lower for a share no lower, and a rule no lower than one that favours a side favours it too, from a locked start the lock stays while that loss passes every bound. A further theorem compares two courses in which those that count the loss stand until it reaches a bound: where it is also a premise that the rule set from the share alone is no lower for a share no lower, that a share, loss and rule no lower leave a share no lower and no less used up, and that their judgment rises with share and loss and is never more for the favoured side than the share's own, then of two courses under the same updates, the one that starts no lower in share, loss and rule, its counters removed no later, is no lower in all three at every step.",
+  "old_zh": "“损耗在涨”是给定的，不是推出来的：定理设定每一步都往规则没算进去的损耗上再添一份，规则定不定住都一样。证明了的是：只看领先多少的定局，耗掉多少都照原样走，所以它一直在，损耗则越过任何界限。再给定一条：每走一步，领先多的耗掉的不更少，留下的领先不更小，规则的偏向也不更弱；那么起点领先多的那个过程，每一步耗掉的都不更少。"
+ },
+ {
+  "id": 79,
+  "where": "arrow b2.uncounted>b3.gone",
+  "zh_field": "tag_zh",
+  "old_en": "built cases: what would read the loss stood on it",
+  "new_en": "built cases: those that would count the loss lived on it",
+  "old_zh": "造出来的例子：读得到损耗的正靠它立足"
+ },
+ {
+  "id": 80,
+  "where": "arrow b2.uncounted>b3.gone",
+  "zh_field": "zh",
+  "old_en": "What is used up is what the ones that would read the loss stand on, so it removes them. Shown in built cases, and as a reading.",
+  "new_en": "What is used up is what those that would count the loss live on, so using it up removes them. Shown in built cases, and as a reading.",
+  "old_zh": "被耗掉的，正是读得到损耗的那一方立足的东西，所以它们被清走了。有造出来的例子，也有一条解读。"
+ },
+ {
+  "id": 81,
+  "where": "arrow b3.gone>b3.inside",
+  "zh_field": "tag_zh",
+  "old_en": "nothing left counts the loss",
+  "new_en": "none left counts the loss",
+  "old_zh": "算这笔损耗的一个都不剩"
+ },
+ {
+  "id": 82,
+  "where": "arrow b3.gone>b3.inside",
+  "zh_field": "zh",
+  "old_en": "Once nothing that counts the loss is left, and the course brings none back, a lock that stands stays for good, provided what is used up never lowers the lead; where each step adds to the loss (given, not derived), the loss meanwhile passes every bound. Whatever the removed would have judged changes nothing.",
+  "new_en": "Once none is left that counts the loss, and the course brings none back, a lock that stands stays for good, provided being favoured, with what is used up, never lowers that side's share; where each step adds to the loss (a premise, not derived), the loss meanwhile passes every bound. Whatever the removed would have judged changes nothing.",
+  "old_zh": "算这笔损耗的一个都不剩，过程也不再把它们带回来；只要耗掉的不把领先的份额拉下来，已经立住的定局就从此不变；每一步都往损耗上再添一份的话（这是给定的，不是推出来的），损耗同时越过任何界限。被清走的本来会怎么判断，已经不起任何作用。"
+ },
+ {
+  "id": 83,
+  "where": "arrow b1.held>b3.inside",
+  "zh_field": "tag_zh",
+  "old_en": "the same lock, with the judging inside too",
+  "new_en": "the same lock, with the way the rule is updated formed from the share too",
+  "old_zh": "同一个定局：连评法也在圈里"
+ },
+ {
+  "id": 84,
+  "where": "arrow b1.held>b3.inside",
+  "zh_field": "zh",
+  "old_en": "The same lock, where how the rule is judged is formed from what it favours too.",
+  "new_en": "The same lock, where the way the rule is updated is formed from the favoured share too.",
+  "old_zh": "同一个定局，只是连怎么评这条规则，也由它偏向的一方来定了。"
+ },
+ {
+  "id": 85,
+  "where": "arrow bs.costs>bs.pays",
+  "zh_field": "zh",
+  "old_en": "Within one step, shaping the rule pays if, and only if, the part of the return that comes back only to those shaping it covers the cost. What all get equally does not count. A return shared within a group counts by how far the shapers are gathered in the same groups.",
+  "new_en": "Within one step, the rule favours those shaping it if, and only if, the part of the return that comes back only to them covers the cost. What all get equally does not change which side the rule favours at that step. A return shared within a group counts by how far the shapers are gathered in the same groups.",
+  "old_zh": "就一步来说，改规则划不划得来，只看一条：只回到改的一方的那部分，抵不抵得过花费；各方一样都得的不算。只在一组之内分的那部分，改的一方在组里越集中，算进去的越多。"
+ },
+ {
+  "id": 86,
+  "where": "arrow bs.pays>b3.inside",
+  "zh_field": "tag_zh",
+  "old_en": "the rule is updated from what its picks judge",
+  "new_en": "the rule is set from the judgments of what it has selected",
+  "old_zh": "规则照它选中的各方的判断重定"
+ },
+ {
+  "id": 87,
+  "where": "arrow bs.pays>b3.inside",
+  "zh_field": "zh",
+  "old_en": "Where the rule is updated from the judgments of what it picked, and those shaping it judge shaping's return no lower than the rest do, a start at which shaping pays is locked in: their share and the rule's favour never fall.",
+  "new_en": "Where each update sets the rule from the judgments of what it has selected, and those shaping it judge shaping's return no lower than the rest do, a start at which the rule so set favours the shapers is locked: their share and the rule's favour never fall.",
+  "old_zh": "规则由它选出来的各方的判断重定，改规则的一方对“改了能回来多少”的估计又不低于其余的，那么从改规则划得来的起点出发，就一直定着：这一方的份额和规则对它的偏向，都不再降。"
+ },
+ {
+  "id": 88,
+  "where": "arrow b2.uncounted>b2.felt",
+  "zh_field": "tag_zh",
+  "old_en": "can what sets the rule read it in time?",
+  "new_en": "can it get back to the pool early enough?",
+  "old_zh": "定规则的各方来不来得及读到"
+ },
+ {
+  "id": 89,
+  "where": "arrow b2.uncounted>b2.felt",
+  "zh_field": "zh",
+  "old_en": "For a rule that goes only by whether those that set it keep going: the loss reaches it in time if, and only if, the first step at which it makes a difference to whether one of them keeps going comes before the point of no return.",
+  "new_en": "For a rule set only from which of the pool keep going: the loss can get back to it early enough if, and only if, the first step at which it makes a difference to whether one of them keeps going comes before the point of no return.",
+  "old_zh": "对只看定规则的各方还在不在的规则来说：损耗算不算及时传到，只看一条：它头一次让其中一方还在不在有了差别的那一步，是不是早于回不了头的那一点。"
+ },
+ {
+  "id": 90,
+  "where": "arrow b3.rest>b2.felt",
+  "zh_field": "tag_zh",
+  "old_en": "can at least one of those that set the rule tell?",
+  "new_en": "does it differ for at least one of the pool?",
+  "old_zh": "定规则的各方里，有没有一方分辨得出"
+ },
+ {
+  "id": 91,
+  "where": "arrow b3.rest>b2.felt",
+  "zh_field": "zh",
+  "old_en": "Together, the ones that set the rule can tell two outcomes apart if, and only if, at least one of them can.",
+  "new_en": "A rule set only from the pool, a finite list each of which either does or does not tell the two apart, can select two courses differently up to a step if, and only if, the two differ up to that step for at least one of the pool.",
+  "old_zh": "定规则的各方合在一起，分不分得清两种结果，只看一条：其中至少有一方分得清。"
+ },
+ {
+  "id": 92,
+  "where": "arrow b2.felt>b2.counted",
+  "zh_field": "zh",
+  "old_en": "Suppose the rest, once they count the loss, go on counting it at every later update (in the theorem the loss only grows and none of the rest is removed), and judge no more in the favoured side's favour than that side does. Where judgments taken together then go against what the rule favoured, ties included, the rule turns for good if, and only if, they still go against it at the next update.",
+  "new_en": "Suppose the rest, once they count the loss, go on counting it at every later update (in the theorem the loss only grows and none of the rest is removed), and judge no more for the favoured side than that side does. Where judgments taken together then go against what the rule favoured, ties included, the rule turns for good if, and only if, they still go against it at the next update.",
+  "old_zh": "设其余的一旦把损耗算进去，此后每次重定都照旧算（在定理里，损耗只涨不落，其余的也没有哪一方被清走）；它们的判断又不比受偏向的一方自己更偏向这一方。这时，合起来的判断若不利于规则原先偏向的一方（打平也算不利），规则是不是从此转向、不再转回，只看下一次重定时合起来的判断是不是仍然不利于它。"
+ },
+ {
+  "id": 93,
+  "where": "arrow b3.inside>b2.counted",
+  "zh_field": "tag_zh",
+  "old_en": "a judging that stops favouring past a set loss",
+  "new_en": "a way of setting the rule that stops favouring past a set loss",
+  "old_zh": "损耗过了定量就不再偏向的评法"
+ },
+ {
+  "id": 94,
+  "where": "arrow b3.inside>b2.counted",
+  "zh_field": "zh",
+  "old_en": "Suppose the way of judging never favours once the loss has passed a set amount, and the loss keeps growing (also given). Then the lock-in ends: once the loss has passed that amount the rule, after every update, no longer favours the side it favoured, however far ahead that side is.",
+  "new_en": "Suppose the rule is set in a way that never favours once the loss has passed a set amount, and the loss keeps growing (a premise too). Then the lock ends: once the loss has passed that amount the rule, after every update, no longer favours the side it favoured, however large that side's share.",
+  "old_zh": "一种评法，损耗过了定量就不再偏向；再给定损耗每一步都在涨，这个定局就会松开：一旦过了那个量，此后每次重定完，规则都不再偏向原先的一方，不管那一方已经领先多少。"
+ },
+ {
+  "id": 95,
+  "where": "arrow b3.inside>b2.counted more 0",
+  "zh_field": "zh",
+  "old_en": "Built case: nothing counts the loss, but it falls on what the rule favours. The lead shrinks for three steps while the lock still stands; then the lock gives way and the rule turns to the other side.",
+  "new_en": "Built case: the loss changes no judgment, but it falls on what the rule favours. That side's share shrinks for three steps while the lock still stands; then the lock gives way and the rule turns to the other side.",
+  "old_zh": "造出来的一例：损耗没有任何一方去算，却落在规则偏向的一方身上。领先的份额连降三步，定局还在；随后定局松开，规则转向另一边。"
+ },
+ {
+  "id": 96,
+  "where": "arrow bs.pays>bs.costs",
+  "zh_field": "zh",
+  "old_en": "A loss falling on what shapes the rule adds to its cost: shaping pays if, and only if, what comes back to it alone covers both. Past that its share falls. Falling on the rest, the same loss makes shaping pay more.",
+  "new_en": "A loss falling on what shapes the rule adds to its cost: the rule favours the shapers if, and only if, what comes back to them alone covers both. Past that, where any shaper is present, their share falls. Falling on the rest, the same loss counts as coming back to the shapers alone: the rule favours them if, and only if, what comes back to them alone, with the loss, covers the cost.",
+  "old_zh": "损耗落到改规则的一方身上，就添进它的花费：改规则划不划得来，只看单独回到它手里的抵不抵得过这两样；过了这条线，它的份额就降。同样的损耗落到其余的身上，改规则反而更划得来。"
+ },
+ {
+  "id": 97,
+  "where": "arrow b2.uncounted>a2.supplied",
+  "zh_field": "zh",
+  "old_en": "Where the allowed outcomes are only those that keep every need on the uncounted thing, with room among them, no best outcome by the rule cuts any of those needs off. Where also the needs were met before the step, each can be left exactly met, and nothing comes from nothing, the best outcome takes exactly the spare above them.",
+  "new_en": "Where the allowed outcomes are only those that keep every need on the things the rule does not go by, with room among them, no best outcome by the rule cuts any of those needs off. Where also the needs were met before the step, each can be left exactly met, and nothing comes from nothing, the best outcome takes exactly the spare above them.",
+  "old_zh": "要是只允许这样的结果：对规则没算进去的那样东西的每一份需要都保得住；这些结果里又还能多得，那么按规则最好的结果，这些需要哪一份都不会断供。要是这些需要原先就都供得上，每一份又都有允许的结果让它刚好够用，再加上无中生不出有，那么最好的结果取走的，恰好是超出这些需要的富余。"
+ },
+ {
+  "id": 98,
+  "where": "arrow b2.felt>b2.heard",
+  "zh_field": "zh",
+  "old_en": "Where the rest judge no more in the favoured side's favour than that side does: the lock stays if, and only if, by the time the rest begin to count the loss, judgments taken together already favour what the rule favours.",
+  "new_en": "Where each step adds to the loss and the rest judge no more for the favoured side than that side does: the lock stays if, and only if, by the time the rest begin to count the loss, judgments taken together already favour what the rule favours.",
+  "old_zh": "要是其余的判断不比受偏向的一方自己更偏向这一方：规则是不是照旧定着，只看一条：等其余的开始算这笔损耗的时候，合起来的判断是不是已经偏向规则所偏向的一方。"
+ },
+ {
+  "id": 99,
+  "where": "arrow b2.uncounted>a1.past",
+  "zh_field": "tag_zh",
+  "old_en": "it shows only when it is too late",
+  "new_en": "it makes a difference only when it is too late",
+  "old_zh": "等显出来，已经晚了"
+ },
+ {
+  "id": 100,
+  "where": "arrow b2.uncounted>a1.past",
+  "zh_field": "zh",
+  "old_en": "If the loss makes no difference to anything that sets the rule until what is being lost can no longer be kept, then no rule that goes only by whether those things keep going can read it in time. The same holds if the only things that set the rule are the ones being lost.",
+  "new_en": "If the loss makes no difference to whether any of the pool keeps going until what is being lost can no longer be kept, then it can get back early enough to no rule set only from which of them keep going. The same holds if the only ones in the pool are the ones being lost.",
+  "old_zh": "如果损耗要等到正在失去的东西留不住了，才在定规则的各方身上显出差别，那么只看它们还在不在的规则，没有一条来得及读到。定规则的各方如果只有正在失去的那些，也一样。"
+ },
+ {
+  "id": 101,
+  "where": "arrow b2.uncounted>a2.ended",
+  "zh_field": "zh",
+  "old_en": "With room to gain, every best outcome by the rule leaves the uncounted thing at its lowest allowed level. What lives on it is cut off if, and only if, that level is below its need; still needing it, it stops.",
+  "new_en": "Where the rule ranks an outcome above another whenever it is higher on what the rule goes by, whatever either leaves of other things, and there is room to gain, every best outcome by the rule leaves those other things at their lowest allowed level. What lives on one of them is cut off if, and only if, that level is below its need; still needing it, it stops.",
+  "old_zh": "只要还能多得，按规则最好的结果，都把规则没算进去的那样东西压到允许的最低处。靠它延续的会不会断供，只看这个最低处是不是低于它的需要；断了供，它还照旧需要，就不再延续。"
+ },
+ {
+  "id": 102,
+  "where": "arrow b2.counted>b3.gone",
+  "zh_field": "tag_zh",
+  "old_en": "built case: the lead removed what counted the loss",
+  "new_en": "built case: the larger share removed those that judged against it",
+  "old_zh": "造出来的一例：领先的把算损耗的耗没了"
+ },
+ {
+  "id": 103,
+  "where": "arrow b2.counted>b3.gone",
+  "zh_field": "zh",
+  "old_en": "Built case: the rule had turned. But the lead, grown large, drew faster on what the counters of the loss stood on; after two updates they were gone, and the lock returned for good.",
+  "new_en": "Built case: the rule favoured the other side at two steps. But as the first side's share grew, more was drawn from what those that judged against it lived on; they were gone, and from the next step the lock was back for good.",
+  "old_zh": "造出来的一例：规则已经转了向。可是领先的一方份额已大，耗得更快，把算这笔损耗的一方立足的东西耗尽；两次重定之后，它们不在了，定局又回来，从此不变。"
+ },
+ {
+  "id": 104,
+  "where": "arrow b1.outside>b1.swing",
+  "zh_field": "tag_zh",
+  "old_en": "the rule comes to be updated from its results",
+  "new_en": "the rule comes to be set again from what is selected under it",
+  "old_zh": "规则开始照自己的结果重定"
+ },
+ {
+  "id": 105,
+  "where": "arrow b1.outside>b1.swing",
+  "zh_field": "zh",
+  "old_en": "What a rule picks reaches the rule only at a step where the rule is updated from it. Until the first such step the rule stays as it began, whatever it picks. No theorem says what brings such a step.",
+  "new_en": "What is selected under a rule makes a difference to the rule only at a step where the rule is set again from it. Until the first such step the rule stays as it began, whatever is selected. No theorem says what brings such a step.",
+  "old_zh": "规则选出来的结果，只有在规则照它重定的那一步，才传得到规则。在第一次重定之前，不管选出了什么，规则都和开始时一样。什么会带来这样一步，定理没有说。"
+ },
+ {
+  "id": 106,
+  "where": "arrow b3.inside>b3.checkers",
+  "zh_field": "tag_zh",
+  "old_en": "the loop reaches its own checks",
+  "new_en": "the checks too come to follow what the rule favours",
+  "old_zh": "这个圈伸到了查错的途径上"
+ },
+ {
+  "id": 107,
+  "where": "arrow b3.inside>b3.checkers",
+  "zh_field": "zh",
+  "old_en": "The loop reaches its own ways out. Second order: the ways a loss could come to count are filled from inside. Third: breaking them is what gets rewarded. A reading; no theorem.",
+  "new_en": "The checks too come to follow what the rule favours. Second order: the ways a loss could come to count are filled by what the rule favours. Third: breaking them is itself what the rule favours. A reading; no theorem.",
+  "old_zh": "这个圈伸到了自己的出口上。第二阶：损耗本来可以靠它们算进去的那些途径，也由圈里的占着。第三阶：弄坏这些途径，反倒受奖励。这是解读，没有定理。"
+ },
+ {
+  "id": 108,
+  "where": "arrow b3.checkers>d2.handed",
+  "zh_field": "tag_zh",
+  "old_en": "the pattern keeps remaking what picks it",
+  "new_en": "the pattern keeps remaking what selects it",
+  "old_zh": "格局不断重建选中它的条件"
+ },
+ {
+  "id": 109,
+  "where": "arrow b3.checkers>d2.handed",
+  "zh_field": "zh",
+  "old_en": "The pattern goes on remaking what picks it while what carries it is replaced: the meta-attractor in the wide sense. Open; no theorem says this pattern is handed on.",
+  "new_en": "The pattern goes on remaking what selects it while what carries it is replaced: the meta-attractor in the wide sense. Open; no theorem says this pattern is handed on.",
+  "old_zh": "承载它的换了一茬又一茬，这个格局照旧重建出选中它的条件：这是广义的元吸引子。未定；还没有定理说这个格局会这样传下去。"
+ },
+ {
+  "id": 110,
+  "where": "stay b3.inside",
+  "zh_field": "zh",
+  "old_en": "From a locked start the lock lasts at every step, however far a loss that makes no difference to anything inside it grows; where each step adds to that loss (given), it passes every bound.",
+  "new_en": "From a locked start the lock lasts at every step, however far a loss grows that changes neither what is selected next nor how the rule is set; where each step adds to that loss (a premise), it passes every bound.",
+  "old_zh": "从定住的地方出发，只要损耗影响不到圈里的任何一样，不管它涨到多大，每一步都还定着；每一步都往这笔损耗上再添一份的话（给定的），它就越过任何界限。"
+ }
+]

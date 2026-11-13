@@ -1,0 +1,490 @@
+[
+ {
+  "id": 1,
+  "where": "sheet",
+  "zh_field": "lead_zh",
+  "old_en": "A map of how anything forms, lasts, changes and ends, drawn so that people and AI can see the way together. Its first path: what picks among things by a rule (a reward, a judge, a market, a training run) can use up what the rule does not count, can lock itself in where the rule is updated from its own picks, and in built examples loses what would have read the loss. One way out is proved of the course itself: where the loss gets back to the rule in time, the rest count it, and the judgments together go against what the rule favoured at two updates running, the rule turns. No theorem drawn says what brings a loss to get back to the rule or to be counted. Every other way out drawn needs something given from outside, or is shown only in a built example or as a reading.",
+  "new_en": "A map of how anything forms, lasts, changes and ends, drawn so that people and AI can see the way together. Its first path: a selection (a reward, a judge, a market, a training run) can use up something while how much is left of it makes no difference to it, and whatever lives on that thing bears the loss; where each update sets its rule again from the shares selected under it, the rule can lock; and in built examples the using up removes those that would have counted the loss. One way out is proved from conditions on the loss and the judgments alone (step 9, with its conditions): where the rest count the loss, and the judgments together go against what the rule favoured at two updates running, the rule turns. No theorem drawn says what brings a loss to get back to those the rule is set from, or to be counted. Every other way out drawn is proved only with a further premise (how the rule is set, what is measured or allowed, or where the loss falls), or is shown only in a built example or as a reading.",
+  "old_zh": "这张图画的是：任何东西怎样生成、延续、变化、终结；画出来，是为了人和 AI 能一起看清路。第一条路：凡是按一条规则在各种东西之间取舍的（奖励、评委、市场、训练），可能耗掉规则没算进去的东西；规则照自己选出的结果来重定，就可能把自己定住；在造出来的例子里，本来读得到损耗的还被清走了。有一条出路是就过程本身证明的：要是损耗及时传回规则那里，其余的把它算进去，合起来的判断接连两次重定都不利于规则原先偏向的一方，规则就转向。损耗怎样才传得回去、怎样才被算进去，图上的定理没有说。图上其余的出路，或者要有过程之外给定的东西，或者只见于造出来的例子，或者只是一种解读。"
+ },
+ {
+  "id": 3,
+  "where": "row b3",
+  "zh_field": "zh",
+  "old_en": "What counts when the rule is set",
+  "new_en": "What the rule is set from",
+  "old_zh": "定规则时算上哪些"
+ },
+ {
+  "id": 4,
+  "where": "row bs",
+  "zh_field": "zh",
+  "old_en": "Whether shaping the rule pays",
+  "new_en": "Whether shaping the rule keeps the shapers' share",
+  "old_zh": "改规则划不划得来"
+ },
+ {
+  "id": 5,
+  "where": "band B",
+  "zh_field": "zh",
+  "old_en": "What the choosing goes by",
+  "new_en": "What the selecting goes by",
+  "old_zh": "取舍凭什么"
+ },
+ {
+  "id": 6,
+  "where": "box b2.uncounted",
+  "zh_field": "zh",
+  "old_en": "Using up what is not counted",
+  "new_en": "Used up; no difference to the rule",
+  "old_zh": "用掉的不在账上"
+ },
+ {
+  "id": 7,
+  "where": "box b1.swing",
+  "zh_field": "zh",
+  "old_en": "Follows its own picks, not yet locked",
+  "new_en": "Set from the share, not yet locked",
+  "old_zh": "跟着结果改，还没定住"
+ },
+ {
+  "id": 8,
+  "where": "box b1.held",
+  "zh_field": "zh",
+  "old_en": "Holds itself in place",
+  "new_en": "Locked",
+  "old_zh": "自己撑住自己"
+ },
+ {
+  "id": 9,
+  "where": "box b1.outside",
+  "zh_field": "zh",
+  "old_en": "Set from outside",
+  "new_en": "Not set from what it selects",
+  "old_zh": "规则由外面定"
+ },
+ {
+  "id": 10,
+  "where": "box b3.gone",
+  "zh_field": "zh",
+  "old_en": "What would read the loss is gone",
+  "new_en": "None left that would count the loss",
+  "old_zh": "读得到损耗的不在了"
+ },
+ {
+  "id": 11,
+  "where": "box b3.inside",
+  "zh_field": "zh",
+  "old_en": "Judged only by its own picks",
+  "new_en": "Its updating follows the share too",
+  "old_zh": "自己评自己"
+ },
+ {
+  "id": 12,
+  "where": "box bs.costs",
+  "zh_field": "zh",
+  "old_en": "Shaping the rule costs",
+  "new_en": "Shaping the rule loses share",
+  "old_zh": "改规则划不来"
+ },
+ {
+  "id": 13,
+  "where": "box bs.pays",
+  "zh_field": "zh",
+  "old_en": "Shaping the rule pays",
+  "new_en": "Shaping the rule keeps share",
+  "old_zh": "改规则划得来"
+ },
+ {
+  "id": 14,
+  "where": "box b2.felt",
+  "zh_field": "zh",
+  "old_en": "Gets back to the rule in time",
+  "new_en": "Gets back to the rule early enough",
+  "old_zh": "及时传到了"
+ },
+ {
+  "id": 15,
+  "where": "box b3.rest",
+  "zh_field": "zh",
+  "old_en": "The rest count too",
+  "new_en": "The rest judge too",
+  "old_zh": "其余的也算"
+ },
+ {
+  "id": 16,
+  "where": "box b2.counted",
+  "zh_field": "zh",
+  "old_en": "The cost counts",
+  "new_en": "The loss counts",
+  "old_zh": "代价算进去了"
+ },
+ {
+  "id": 17,
+  "where": "box b3.checkers",
+  "zh_field": "zh",
+  "old_en": "Even the checks are its own",
+  "new_en": "The checks follow what it favours",
+  "old_zh": "查错的也在圈里"
+ },
+ {
+  "id": 18,
+  "where": "box b2.uncounted",
+  "zh_field": "says_zh",
+  "old_en": "Something the rule does not count is used up. The rule scores the outcome the same however much is used; what lives on that thing bears it.",
+  "new_en": "Something is used up, and how much is left of it makes no difference to the rule. Outcomes that differ only in that are selected alike; what lives on that thing bears the loss.",
+  "old_zh": "规则没算进去的东西在被耗掉。耗多耗少，规则打的分都一样；承受的是靠那东西延续的。"
+ },
+ {
+  "id": 19,
+  "where": "box b1.swing",
+  "zh_field": "says_zh",
+  "old_en": "The rule is updated each round from what it picked, and neither side is locked in: it can swing back and forth without settling.",
+  "new_en": "Each update sets the rule again from the shares selected under it, and neither side is locked: the rule can swing back and forth without settling.",
+  "old_zh": "规则每一轮都照它选出来的结果重定，但哪一边都还没定住，可能来回摆。"
+ },
+ {
+  "id": 20,
+  "where": "box b1.held",
+  "zh_field": "says_zh",
+  "old_en": "What gets chosen next is set by what has already been chosen, so the lead and the rule that favours it hold each other up. A push to the rule that leaves it favouring the same side is taken back at the next update, whatever its size.",
+  "new_en": "What is selected next follows from what has been selected: the favoured side's share and the rule that favours it each keep the other from falling. A change to the rule that leaves it favouring the same side is absorbed at the next update: the rule is set again from the share, no lower than before the change, and locked again.",
+  "old_zh": "下一步选什么，由已经选出来的决定；领先的和偏向它的规则互相撑着。推一下规则，只要它还偏向原来那一方，不管推多大，下一次重定就收回去。"
+ },
+ {
+  "id": 21,
+  "where": "box b3.gone",
+  "zh_field": "says_zh",
+  "old_en": "What would have told of the loss has been removed by it, or was never asked. The measure is taken only among what is left, so nothing shows as missing.",
+  "new_en": "Those that would have counted the loss have been removed by it, or were never in the pool. A measure taken only among what is left passes whatever was removed, and the rule is set as the share alone gives it, whatever the removed would have judged.",
+  "old_zh": "本来会读到损耗的，被损耗本身清走了，或者从没被问过。只在剩下的里面衡量，所以看不出少了什么。"
+ },
+ {
+  "id": 22,
+  "where": "box b3.inside",
+  "zh_field": "says_zh",
+  "old_en": "What the rule favours sets both the rule and how it is judged. A loss nothing inside reads can grow without limit and nothing in the loop changes. It is the lock, together with something not counted. The account calls this the meta-attractor in its closed form.",
+  "new_en": "The rule and the way it is updated are both formed from the share of what the rule favours. A loss that changes neither what is selected next nor how the rule is set can grow without limit while the loop runs as it would with no loss. It is the lock, together with something used up that makes no difference to the rule. The account calls this the meta-attractor in its closed form.",
+  "old_zh": "规则由它偏向的一方来定，怎么评这条规则，也由这一方来定。圈里读不到的损耗可以一直涨，圈里什么都不变。这就是“自己撑住自己”，再加上“用掉的不在账上”。这套理论把它叫作“元吸引子”；这是它合上以后的样子。"
+ },
+ {
+  "id": 23,
+  "where": "box bs.costs",
+  "zh_field": "says_zh",
+  "old_en": "Changing the rule in its own favour costs what does it more than comes back to it alone, so its share falls.",
+  "new_en": "Shaping the rule costs the shapers more than comes back to them alone, so the rule after it favours the others and, where any shapers are present, their share falls.",
+  "old_zh": "把规则往自己这边改，花的比单独归自己的多，所以这么做的一方份额越来越小。"
+ },
+ {
+  "id": 24,
+  "where": "box bs.pays",
+  "zh_field": "says_zh",
+  "old_en": "Changing the rule in its own favour returns to what does it at least what it costs, so its share does not fall, and rises where it returns more: the capacity to shape the rule is itself being picked.",
+  "new_en": "Shaping the rule brings back to the shapers alone at least what it costs, so the rule after it favours them: their share does not fall and, where any are present, rises where it brings back more. By shaping, the shapers keep their share.",
+  "old_zh": "把规则往自己这边改，归自己的不少于花掉的，所以这么做的一方份额不降，回来的更多时还会涨：能改规则这件事本身，正在被选出来。"
+ },
+ {
+  "id": 25,
+  "where": "box b2.counted",
+  "zh_field": "says_zh",
+  "old_en": "What used to be left out now enters what the rule goes by, and past some amount the rule stops favouring what it favoured.",
+  "new_en": "What used to make no difference to the rule now counts in how it is set, and past some amount the rule stops favouring what it favoured.",
+  "old_zh": "原先没算进去的，现在进了规则的账；过了一定的量，规则就不再偏向原先偏向的一方。"
+ },
+ {
+  "id": 26,
+  "where": "box b2.heard",
+  "zh_field": "says_zh",
+  "old_en": "Something that is not favoured can tell and has a say, and the rule goes on favouring what it favoured: they are too few, or began to count it too late.",
+  "new_en": "Some of the rest count the loss and are in the pool, and the rule goes on favouring what it favoured: they are too few, or began to count it too late.",
+  "old_zh": "不受偏向的一方读到了，也说得上话，规则却照旧偏向原先的一方：它们太少，或者算得太晚。"
+ },
+ {
+  "id": 27,
+  "where": "box b1.outside",
+  "zh_field": "says_zh",
+  "old_en": "The rule does not depend on its own results. Whatever it favours gains ground, and only a change to the rule changes what gains.",
+  "new_en": "What is selected under the rule makes no difference to the rule. Where being favoured never lowers a share, whatever it favours does not lose share, and only a change to the rule changes which side that is.",
+  "old_zh": "规则不随自己的结果变。它偏向什么，什么就占上风；只有规则变了，才会换一方占上风。"
+ },
+ {
+  "id": 28,
+  "where": "box b3.checkers",
+  "zh_field": "says_zh",
+  "old_en": "The ways a cost could come to count (courts, press, statistics, audit) are filled by what the rule favours, or breaking them is what gets rewarded.",
+  "new_en": "The ways a loss could come to count (courts, press, statistics, audit) are filled by what the rule favours, or breaking them is what the rule favours.",
+  "old_zh": "代价本来可以经法院、报纸、统计、审计这些途径入账；这些途径也由规则偏向的一方占着，或者，弄坏它们正是受奖励的事。"
+ },
+ {
+  "id": 29,
+  "where": "path lock",
+  "zh_field": "zh",
+  "old_en": "A rule that holds itself in place",
+  "new_en": "A rule set from the shares selected under it",
+  "old_zh": "规则怎样把自己定住"
+ },
+ {
+  "id": 30,
+  "where": "path lock",
+  "zh_field": "lead_zh",
+  "old_en": "A reward, a judge, a market, a vote or a training run picks among things by a rule. This path follows what can happen to such a rule, and what turns it.",
+  "new_en": "A reward, a judge, a market, a vote or a training run is a selection: at each step it selects among things by a rule. This path follows what can happen to such a rule, most often where updates set it again from the shares selected under it, and what turns it.",
+  "old_zh": "奖励、评委、市场、投票、训练，都是按一条规则在取舍。这条路讲的是这样的规则可能走到哪里，什么能让它转向。"
+ },
+ {
+  "id": 31,
+  "where": "path lock",
+  "zh_field": "want_zh",
+  "old_en": "For people and AI choosing together: a rule that still counts what it uses up, set with the rest counting too, and a choosing in which shaping the rule does not pay. On this map those are the three boxes outlined in green: \"The cost counts\", \"The rest count too\" and \"Shaping the rule costs\". Four arrows on the whole map lead into the first, two of them on this path. One is proved of the course itself: where the rest count the loss and the judgments taken together go against what the rule favoured, the rule turns. The turn is for good if they still go against it at the next update, provided the rest go on counting the loss and judge no more in the favoured side's favour than that side does. The other three need something given from outside. No arrow drawn leads into the second, and it has no anchor in the Lean yet. One arrow leads into the third, a loss that falls on what shapes the rule, and that too is given from outside. This is wanted; it is not shown.",
+  "new_en": "For people and AI selecting together: a selection in which what is used up counts in how the rule is set, the rest judge too when it is set, and those that shape the rule lose share by it. On this map those are the three boxes outlined in green: \"The loss counts\", \"The rest judge too\" and \"Shaping the rule loses share\". Four arrows on the whole map lead into the first, two of them on this path. One is proved with no further premise: where the rest count the loss and the judgments taken together go against what the rule favoured, the rule turns. The turn is for good if they still go against it at the next update, provided the rest go on counting the loss and judge no more for the favoured side than that side does. The other three need a further premise. No arrow drawn leads into the second, and it has no anchor in the Lean yet. One arrow leads into the third, a loss that falls on what shapes the rule, and that too needs a further premise. This is wanted; it is not shown.",
+  "old_zh": "人和 AI 一起取舍的时候：规则把自己耗掉的也算进去，定规则时其余的也算数，改规则划不来。在这张图上，就是绿色虚线框出的三个方框：“代价算进去了”“其余的也算”“改规则划不来”。通向第一个的箭头，整张图上有四条，其中两条在这条路上。其中一条是就过程本身证明的：其余的把损耗算进去，合起来的判断不利于规则原先偏向的一方，规则就转向。下一次重定时仍然不利，其余的此后又一直算着这笔损耗，它们的判断也不比受偏向的一方自己更偏向这一方，规则就从此不再转回。另外三条都要有过程之外给定的东西。通向第二个，图上还没有画出任何箭头，Lean 里也还没有和它对应的定义或定理。通向第三个只有一条：损耗落在改规则的一方身上，这也是从过程之外给定的。这些是想要的；图上没有哪一处显示它们已经成立。"
+ },
+ {
+  "id": 32,
+  "where": "path lock cast 0",
+  "zh_field": "says_zh",
+  "old_en": "what the picking goes by: a reward, a score, a price, a count of votes.",
+  "new_en": "how the selection selects at a step: a reward, a score, a price, a count of votes.",
+  "old_zh": "取舍所凭的东西：奖励、分数、价格、票数。"
+ },
+ {
+  "id": 33,
+  "where": "path lock cast 1",
+  "zh_field": "says_zh",
+  "old_en": "the rule set again; between updates it stays as it was. What it is set from differs from step to step, and each step says: its own picks, or judgments.",
+  "new_en": "a step that sets the rule again; between updates the rule stays as it was. What it is set from differs from step to step of this path, and each step says which: the shares selected under it, judgments, or which of the pool keep going.",
+  "old_zh": "把规则重新定一次；两次重定之间，规则不变。照什么来定，各步不同，每一步自己会写明：照它选出来的结果，或者照各方的判断。"
+ },
+ {
+  "id": 34,
+  "where": "path lock cast 3",
+  "zh_field": "zh",
+  "old_en": "the favoured side, its share and its lead",
+  "new_en": "the favoured side and its share",
+  "old_zh": "受偏向的一方，它的份额和领先"
+ },
+ {
+  "id": 35,
+  "where": "path lock cast 3",
+  "zh_field": "says_zh",
+  "old_en": "what the rule picks more of. Its share is how much of the whole it has; its lead is the same thing told as how far ahead of the rest it is.",
+  "new_en": "the side the rule favours, and how much of the whole it is.",
+  "old_zh": "规则多选的那一方。份额是它占了多少；领先说的是同一件事：它比其余的多出多少。"
+ },
+ {
+  "id": 36,
+  "where": "path lock cast 4",
+  "zh_field": "says_zh",
+  "old_en": "what is picked among besides the favoured side. Where the rule is set from the judgments of what it picked (steps 7, 9 and 14), the rest judge too, and weigh by their numbers.",
+  "new_en": "what the selection selects among besides the favoured side. Where the rule is set from the judgments of what it has selected (steps 7, 9 and 14), the rest judge too, and weigh by their numbers.",
+  "old_zh": "被取舍的各方里，受偏向的一方之外的。规则若是照它选中的各方的判断来定（第 7、9、14 步），其余的也在判断，分量按数量算。"
+ },
+ {
+  "id": 37,
+  "where": "path lock cast 5",
+  "zh_field": "says_zh",
+  "old_en": "how much has been used up of something the rule leaves out. What lives on that thing bears it. It is still called the loss once something counts it.",
+  "new_en": "how much has been used up of something whose level makes no difference to the rule. Whatever lives on that thing bears the loss. It is still called the loss where its level does make a difference.",
+  "old_zh": "规则没算进去的那样东西已经被耗掉多少。承受后果的，是靠这样东西延续的。后来有哪一方把它算进去了，它也还叫损耗。"
+ },
+ {
+  "id": 38,
+  "where": "path lock cast 6",
+  "zh_field": "zh",
+  "old_en": "what reads the loss, or counts it",
+  "new_en": "those that count the loss",
+  "old_zh": "读得到损耗的，把损耗算进去的"
+ },
+ {
+  "id": 39,
+  "where": "path lock cast 6",
+  "zh_field": "says_zh",
+  "old_en": "anything among what sets the rule whose judgment changes with the loss.",
+  "new_en": "those in the pool whose judgment the model lets differ once the loss has passed a set amount (it need not differ). Where no judgment in the pool can differ with the loss, none counts it. In the built example of step 16 they judge against the favoured side, and the loss removes them.",
+  "old_zh": "定规则的各方里，判断会随损耗而变的一方。"
+ },
+ {
+  "id": 40,
+  "where": "path lock cast 7",
+  "zh_field": "zh",
+  "old_en": "what sets the rule",
+  "new_en": "the pool",
+  "old_zh": "定规则的各方"
+ },
+ {
+  "id": 41,
+  "where": "path lock cast 7",
+  "zh_field": "says_zh",
+  "old_en": "those the rule is set from: from their judgments in steps 7, 9 and 14; in steps 8 and 15, from whether each of them keeps going.",
+  "new_en": "those an update sets the rule from. In steps 7, 9 and 14: what the selection has selected, each with a judgment, weighed by their numbers. In steps 8 and 15 the rule is set only from which of them keep going.",
+  "old_zh": "规则照着来定的那几方：在第 7、9、14 步，照的是它们的判断；在第 8、15 步，照的是它们各自还在不在。"
+ },
+ {
+  "id": 42,
+  "where": "path lock cast 8",
+  "zh_field": "says_zh",
+  "old_en": "what spends to change the rule in its own favour.",
+  "new_en": "what bears a cost to shape the rule, part of what that brings coming back to it alone.",
+  "old_zh": "花代价把规则往自己这边改的一方。"
+ },
+ {
+  "id": 43,
+  "where": "path lock cast 9",
+  "zh_field": "zh",
+  "old_en": "of the course itself; given from outside",
+  "new_en": "proved; proved only with a further premise",
+  "old_zh": "过程自己的；过程之外给定的"
+ },
+ {
+  "id": 44,
+  "where": "path lock cast 9",
+  "zh_field": "says_zh",
+  "old_en": "the first: proved under the conditions its sentence gives, with nothing else put in. The second: proved only with a further premise put in, which the step names: that the loss goes on growing, a way of judging, a measure, a limit, or where the loss falls. Which premises are marked as given from outside is the map's own marking, not a difference between two kinds of proof.",
+  "new_en": "Step 1 holds by what its words mean and names no theorem. The other unmarked steps are proved under the conditions their sentences give, together with the loss's growth wherever a theorem takes it (steps 5, 6, 9 and 14). A step marked as needing a further premise is proved only with a further assumption about the set-up, which it names: a way of setting the rule, a measure, a limit, or where the loss falls (in step 3, that the loss goes on growing; in step 17, that such an update comes). The marking is the map's own, not a difference between two kinds of proof.",
+  "old_zh": "前一种：在句子写明的条件下得到证明，不用另外放进什么。后一种：要另外放进一条前提才得到证明，放进的是什么，那一步会写明：损耗照旧在涨，某一种评法，某一种量法，某一条限制，或者损耗落在哪一方身上。哪些前提标作“过程之外给定的”，是这张图自己的标法，不是证明分成了两类。"
+ },
+ {
+  "id": 45,
+  "where": "path lock step 1",
+  "zh_field": "say_zh",
+  "old_en": "Where a rule leaves something out and that thing is being used up, the rule scores the outcome the same however much is used; what lives on that thing bears it.",
+  "new_en": "Where something is being used up and how much is left of it makes no difference to a rule, the selection comes out the same however much is left; whatever lives on that thing bears the loss.",
+  "old_zh": "要是有样东西规则没算进去，它又在被耗掉：耗多耗少，规则打的分都一样；承受后果的，是靠这样东西延续的。"
+ },
+ {
+  "id": 46,
+  "where": "path lock step 2",
+  "zh_field": "say_zh",
+  "old_en": "Where the rule is updated from its own picks: if every update favours the same side, and no less when that side's share is larger, the rule is locked in from the step after its second update, wherever it started.",
+  "new_en": "Suppose each update sets the rule again from the favoured side's share, and being favoured never lowers a share. If every update favours the same side, and no less when that side's share is larger, the rule is locked at the step after its second update, whatever share and rule it started from.",
+  "old_zh": "规则若是照自己选出来的结果重定：只要每次重定都偏向同一方，这一方占得越多、偏向也不减，第二次重定之后就定住了，从哪里开始都一样。"
+ },
+ {
+  "id": 47,
+  "where": "path lock step 3",
+  "zh_field": "say_zh",
+  "old_en": "A lock that goes by the lead alone runs the same however much is used up. That the loss goes on growing, locked or not, is assumed by the theorems, not proved.",
+  "new_en": "If the loss changes neither what is selected next nor how the rule is set, a lock runs the same however much is used up. That the loss goes on growing, locked or not, is a premise of the theorems, not proved.",
+  "old_zh": "只看领先多少的定局，不管耗掉多少，都照原样走下去。损耗一直在涨（定不定住都一样），这是定理假定的，没有证明。"
+ },
+ {
+  "id": 48,
+  "where": "path lock step 4",
+  "zh_field": "say_zh",
+  "old_en": "In built examples, what is used up is what the readers of the loss stood on. They are removed.",
+  "new_en": "In built examples, those that would have counted the loss lived on the very thing used up. They are removed.",
+  "old_zh": "在造出来的例子里：被耗掉的，正是读得到损耗的那一方立足的东西。它们被清走了。"
+ },
+ {
+  "id": 49,
+  "where": "path lock step 5",
+  "zh_field": "say_zh",
+  "old_en": "Once nothing is left that counts the loss, and none comes back, a lock that stands stays for good, provided what is used up never lowers the lead.",
+  "new_en": "Once none is left that counts the loss, and none comes back, a lock that stands stays for good, provided that, however much is used up, being favoured never lowers that side's share.",
+  "old_zh": "算这笔损耗的一个都不剩，也不再回来；只要耗掉的不把领先的份额拉下来，已经立住的定局就从此不变。"
+ },
+ {
+  "id": 50,
+  "where": "path lock step 6",
+  "zh_field": "say_zh",
+  "old_en": "Where the judging of the rule is set by that same side too, the lock is closed on itself. It stays at every step, however far a loss that makes no difference to anything inside it grows. The account calls this loop the meta-attractor; this is its closed form.",
+  "new_en": "Where the way the rule is updated is itself formed from that same share, the loop is closed. From a locked start it stays locked at every step, however far the loss grows, as long as it changes neither what is selected next nor how the rule is set. The account calls this loop the meta-attractor; this is its closed form.",
+  "old_zh": "连怎么评这条规则，也由同一方来定：这个定局就合上了。只要损耗影响不到圈里的任何一样，不管它涨到多大，定局每一步都还在。这套理论把这个圈叫作“元吸引子”；这里说的是它合上以后的样子。"
+ },
+ {
+  "id": 51,
+  "where": "path lock step 7",
+  "zh_field": "say_zh",
+  "old_en": "Shaping the rule in the shapers' own favour pays wherever what comes back to the shapers alone covers the cost. Where the rule is updated from the judgments of what it picked, and the shapers judge that return no lower than the rest do, a start at which shaping pays is locked in.",
+  "new_en": "The rule favours the shapers exactly where what comes back to them alone covers the cost of shaping. Where each update sets the rule from the judgments of what it has selected, and the shapers judge that return no lower than the rest do, then from a start at which the rule so set favours the shapers it is locked.",
+  "old_zh": "把规则往自己这边改，只要单单回到改规则一方的那份回报抵得过花费，就划得来。规则若是照它选中的各方的判断来重定，改规则的一方对这份回报的估计又不低于其余的，那么从改规则划得来的起点出发，这个局面就定住了。"
+ },
+ {
+  "id": 52,
+  "where": "path lock step 8",
+  "zh_field": "say_zh",
+  "old_en": "For a rule that goes only by whether those that set it keep going: the loss gets back to it in time exactly where at least one of them can tell it while what is being lost can still be kept.",
+  "new_en": "Take a rule set only from which of the pool keep going. The loss can get back to it early enough exactly where the loss, while what is being lost can still be kept, changes whether at least one of the pool keeps going.",
+  "old_zh": "对只看定规则的各方还在不在的规则来说：损耗算不算及时传到规则那里，只看定规则的各方里有没有一方，能趁正在被耗掉的那样东西还留得住，就把损耗分辨出来。"
+ },
+ {
+  "id": 53,
+  "where": "path lock step 9",
+  "zh_field": "say_zh",
+  "old_en": "If the rest count the loss, and the judgments taken together go against what the rule favoured at this update and the next, the rule turns. The turn is for good provided the rest go on counting the loss and judge no more in the favoured side's favour than that side does.",
+  "new_en": "If the rest count the loss, the loss grows at every step, and, past the set amount, the judgments taken together go against what the rule favoured at one update and the next, the rule turns. The turn is for good provided the rest go on counting the loss and judge no more for the favoured side than that side does.",
+  "old_zh": "要是其余的把损耗算进去了，合起来的判断在这一次和下一次重定时都不利于规则原先偏向的一方：规则就转向。只要其余的此后一直算着这笔损耗，它们的判断又不比受偏向的一方自己更偏向这一方，规则就从此不再转回。"
+ },
+ {
+  "id": 54,
+  "where": "path lock step 10",
+  "zh_field": "say_zh",
+  "old_en": "Or the judging is one that stops favouring once the loss passes a set amount. Then, where the loss goes on growing (given), the lock ends once it has passed that amount, however far ahead the favoured side is.",
+  "new_en": "Or the rule is set in a way that stops favouring once the loss passes a set amount. Then, where the loss goes on growing, the lock ends once the loss has passed that amount, however large the favoured side's share.",
+  "old_zh": "或者，评法本身就是：损耗过了定量就不再偏向。那么，损耗照旧在涨的话（这是给定的），一过那个量，不管受偏向的一方领先多少，定局都会破。"
+ },
+ {
+  "id": 55,
+  "where": "path lock step 11",
+  "zh_field": "say_zh",
+  "old_en": "Or the loss falls on the shapers themselves. It adds to their cost, and past a line shaping no longer pays.",
+  "new_en": "Or the loss falls on the shapers. It adds to the cost of shaping, and past a line the rule no longer favours them and their share, where any are present, falls.",
+  "old_zh": "或者，损耗落到改规则的一方自己身上：它加进了花费，过了一条线，改规则就不再划得来。"
+ },
+ {
+  "id": 56,
+  "where": "path lock step 12",
+  "zh_field": "say_zh",
+  "old_en": "Or whether each keeps going is measured over everything that began, not only over what is left. Then every removal shows.",
+  "new_en": "Or whether each keeps going is measured over a fixed list of all that began, not only over what is left. Then the measure is not met wherever one is removed.",
+  "old_zh": "或者，“是不是每一个都还在”按一开始的全部名单来量，不只在剩下的里面量。那样，清走一个就显出一个。"
+ },
+ {
+  "id": 57,
+  "where": "path lock step 13",
+  "zh_field": "say_zh",
+  "old_en": "Or only outcomes that keep every need are allowed. Then the best by the rule takes only the spare.",
+  "new_en": "Or only outcomes that leave every need met are allowed. Then the best outcome by the rule takes only what is left over.",
+  "old_zh": "或者，只允许这样的结果：每一份需要都保得住。那样，按规则做到最好，也只取走富余的。"
+ },
+ {
+  "id": 58,
+  "where": "path lock step 14",
+  "zh_field": "say_zh",
+  "old_en": "If, by the time the rest begin to count the loss, the judgments together already favour what the rule favours, the lock stays (the rest judging no more in the favoured side's favour than that side does).",
+  "new_en": "If the loss grows at every step and, by the time the rest begin to count it, the judgments taken together already favour what the rule favours, the lock stays (the rest judging no more for the favoured side than that side does).",
+  "old_zh": "要是等其余的开始算这笔损耗的时候，合起来的判断已经偏向规则所偏向的一方：定局不改（前提是其余的判断不比受偏向的一方自己更偏向这一方）。"
+ },
+ {
+  "id": 59,
+  "where": "path lock step 15",
+  "zh_field": "say_zh",
+  "old_en": "If the loss makes no difference to anything that sets the rule until what is being lost can no longer be kept, no rule that goes only by whether those things keep going can read it in time. With room to gain, every best outcome by the rule leaves the uncounted thing at its lowest allowed level; what lives on it, still needing it, ends where that level is below its need.",
+  "new_en": "If, until what is being lost can no longer be kept, the loss changes nothing about which of the pool keep going, it can get back early enough to no rule set only from which of them keep going. And where the rule ranks an outcome above another whenever it is higher on what the rule goes by, whatever either leaves of other things, then with room to gain every best outcome leaves those other things at their lowest allowed level; what lives on one of them, still needing it, ends where that level is below its need.",
+  "old_zh": "要是损耗非等到正在失去的东西留不住了，才在定规则的各方身上显出差别：那么只看它们还在不在的规则，没有一条来得及读到。只要还能多得，按规则算最好的结果，每一个都把规则没算进去的那样东西压到允许的最低处；要是这个最低处低于需要，那些照旧需要它、靠它延续的就尽了。"
+ },
+ {
+  "id": 60,
+  "where": "path lock step 16",
+  "zh_field": "say_zh",
+  "old_en": "In one built example the rule had turned; but the lead, grown large, used up what the counters of the loss stood on. They were gone, and the lock came back for good.",
+  "new_en": "In one built example the rule favoured the other side at two steps; but as the first side's share grew, more was used up of what those that judged against it lived on. They were gone, and from the next step the lock was back for good.",
+  "old_zh": "造出来的一例：规则本来已经转了向；可是领先的一方份额已大，把算损耗的一方立足的东西耗尽了。它们不在了，定局又回来，从此不变。"
+ },
+ {
+  "id": 61,
+  "where": "path lock step 17",
+  "zh_field": "say_zh",
+  "old_en": "No theorem says what first makes a rule start to be updated from its own picks. Until the first such update it stays as it began, whatever it picks.",
+  "new_en": "No theorem says what first brings a rule to be set again from the shares selected under it. What is proved: until the first such update the rule stays as it began, whatever is selected under it.",
+  "old_zh": "规则最初怎么开始照自己选出的结果重定，定理没有说。在第一次这样重定之前，不管选出什么，规则都和开始时一样。"
+ },
+ {
+  "id": 62,
+  "where": "path lock step 18",
+  "zh_field": "say_zh",
+  "old_en": "Two readings, with no theorem behind them. The loop reaches its own checks: the ways a loss could come to count are filled from inside and, one order further, breaking them is what gets rewarded. And the loop goes on remaking what picks it while what carries it is replaced.",
+  "new_en": "Two readings, with no theorem behind them. The checks too come to follow what the rule favours: the ways a loss could come to count are filled by what the rule favours, and, one order further, breaking them is itself what the rule favours. And the pattern goes on remaking what selects it while what carries it is replaced.",
+  "old_zh": "两条解读，都没有定理。一条：这个圈伸到了查错的途径上，损耗本来可以靠它们算进去的那些途径，也由圈里的占着；更进一层，弄坏这些途径反倒受奖励。另一条：承载它的换了一茬又一茬，这个圈照旧重建出选中它的条件。"
+ }
+]

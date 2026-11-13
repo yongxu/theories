@@ -1,0 +1,280 @@
+SHEET lead_en: A map of how anything forms, lasts, changes and ends, drawn so that people and AI can see the way together. Its first path: what picks among things by a rule (a reward, a judge, a market, a training run) can use up what the rule does not count, can lock itself in where the rule is updated from its own picks, and in built examples loses what would have read the loss. One way out is proved of the course itself: where the loss gets back to the rule in time, the rest count it, and the judgments together go against what the rule favoured at two updates running, the rule turns. No theorem drawn says what brings a loss to get back to the rule or to be counted. Every other way out drawn needs something given from outside, or is shown only in a built example or as a reading.
+SHEET lead_zh: 这张图画的是：任何东西怎样生成、延续、变化、终结；画出来，是为了人和 AI 能一起看清路。第一条路：凡是按一条规则在各种东西之间取舍的（奖励、评委、市场、训练），可能耗掉规则没算进去的东西；规则照自己选出的结果来重定，就可能把自己定住；在造出来的例子里，本来读得到损耗的还被清走了。有一条出路是就过程本身证明的：要是损耗及时传回规则那里，其余的把它算进去，合起来的判断接连两次重定都不利于规则原先偏向的一方，规则就转向。损耗怎样才传得回去、怎样才被算进去，图上的定理没有说。图上其余的出路，或者要有过程之外给定的东西，或者只见于造出来的例子，或者只是一种解读。
+PATH title: A rule that holds itself in place | 规则怎样把自己定住
+PATH lead_en: A reward, a judge, a market, a vote or a training run picks among things by a rule. This path follows what can happen to such a rule, and what turns it.
+PATH lead_zh: 奖励、评委、市场、投票、训练，都是按一条规则在取舍。这条路讲的是这样的规则可能走到哪里，什么能让它转向。
+CAST 0: the rule :: what the picking goes by: a reward, a score, a price, a count of votes.
+        规则 :: 取舍所凭的东西：奖励、分数、价格、票数。
+CAST 1: an update :: the rule set again; between updates it stays as it was. What it is set from differs from step to step, and each step says: its own picks, or judgments.
+        重定 :: 把规则重新定一次；两次重定之间，规则不变。照什么来定，各步不同，每一步自己会写明：照它选出来的结果，或者照各方的判断。
+CAST 2: locked; the lock :: the rule favours one side and the next update would favour it no less; from there neither the favour nor that side's share falls.
+        定住；定局 :: 规则偏向一方，而且下一次重定也不会偏得更少；从这里起，偏向和这一方的份额都不再降。
+CAST 3: the favoured side, its share and its lead :: what the rule picks more of. Its share is how much of the whole it has; its lead is the same thing told as how far ahead of the rest it is.
+        受偏向的一方，它的份额和领先 :: 规则多选的那一方。份额是它占了多少；领先说的是同一件事：它比其余的多出多少。
+CAST 4: the rest :: what is picked among besides the favoured side. Where the rule is set from the judgments of what it picked (steps 7, 9 and 14), the rest judge too, and weigh by their numbers.
+        其余的 :: 被取舍的各方里，受偏向的一方之外的。规则若是照它选中的各方的判断来定（第 7、9、14 步），其余的也在判断，分量按数量算。
+CAST 5: the loss :: how much has been used up of something the rule leaves out. What lives on that thing bears it. It is still called the loss once something counts it.
+        损耗 :: 规则没算进去的那样东西已经被耗掉多少。承受后果的，是靠这样东西延续的。后来有哪一方把它算进去了，它也还叫损耗。
+CAST 6: what reads the loss, or counts it :: anything among what sets the rule whose judgment changes with the loss.
+        读得到损耗的，把损耗算进去的 :: 定规则的各方里，判断会随损耗而变的一方。
+CAST 7: what sets the rule :: those the rule is set from: from their judgments in steps 7, 9 and 14; in steps 8 and 15, from whether each of them keeps going.
+        定规则的各方 :: 规则照着来定的那几方：在第 7、9、14 步，照的是它们的判断；在第 8、15 步，照的是它们各自还在不在。
+CAST 8: the shapers :: what spends to change the rule in its own favour.
+        改规则的一方 :: 花代价把规则往自己这边改的一方。
+CAST 9: of the course itself; given from outside :: the first: proved under the conditions its sentence gives, with nothing else put in. The second: proved only with a further premise put in, which the step names: that the loss goes on growing, a way of judging, a measure, a limit, or where the loss falls. Which premises are marked as given from outside is the map's own marking, not a difference between two kinds of proof.
+        过程自己的；过程之外给定的 :: 前一种：在句子写明的条件下得到证明，不用另外放进什么。后一种：要另外放进一条前提才得到证明，放进的是什么，那一步会写明：损耗照旧在涨，某一种评法，某一种量法，某一条限制，或者损耗落在哪一方身上。哪些前提标作“过程之外给定的”，是这张图自己的标法，不是证明分成了两类。
+CAST 10: a built example :: a small case made up and worked out exactly, in which the thing happens. It shows that it can happen, not that it must.
+        造出来的例子 :: 专门搭出来、算得清的小例子，里面确实发生了这件事。它说明这件事可能发生，不说明一定发生。
+KNOWN at b2.uncounted: Goodhart's law, in its popular wording | 古德哈特定律（通行的说法）
+KNOWN at b1.held: cumulative advantage (the Matthew effect in its generalised form) | 优势累积（马太效应推广后的说法）
+KNOWN at bs.pays: regulatory capture | 规制俘获
+KNOWN at b3.inside: adaptive preferences (Sen) | 适应性偏好（森）
+KNOWN at b2.heard: Collingridge's dilemma | 科林格里奇困境
+KNOWN at b3.gone: Guoyu: 國人莫敢言 (no one dared speak) | 《国语》：国人莫敢言
+SECTION (close): How it closes | 它是怎么合上的
+ STEP 1 en: Where a rule leaves something out and that thing is being used up, the rule scores the outcome the same however much is used; what lives on that thing bears it.
+ STEP 1 zh: 要是有样东西规则没算进去，它又在被耗掉：耗多耗少，规则打的分都一样；承受后果的，是靠这样东西延续的。
+   on: box:b2.uncounted, a1.over>b2.uncounted | eg b2.uncounted
+ STEP 2 en: Where the rule is updated from its own picks: if every update favours the same side, and no less when that side's share is larger, the rule is locked in from the step after its second update, wherever it started.
+ STEP 2 zh: 规则若是照自己选出来的结果重定：只要每次重定都偏向同一方，这一方占得越多、偏向也不减，第二次重定之后就定住了，从哪里开始都一样。
+   on: b1.swing>b1.held | eg b1.held
+ STEP 3 en: A lock that goes by the lead alone runs the same however much is used up. That the loss goes on growing, locked or not, is assumed by the theorems, not proved.
+ STEP 3 zh: 只看领先多少的定局，不管耗掉多少，都照原样走下去。损耗一直在涨（定不定住都一样），这是定理假定的，没有证明。
+   on: b1.held>b2.uncounted
+ STEP 4 en: In built examples, what is used up is what the readers of the loss stood on. They are removed.
+ STEP 4 zh: 在造出来的例子里：被耗掉的，正是读得到损耗的那一方立足的东西。它们被清走了。
+   on: b2.uncounted>b3.gone
+ STEP 5 en: Once nothing is left that counts the loss, and none comes back, a lock that stands stays for good, provided what is used up never lowers the lead.
+ STEP 5 zh: 算这笔损耗的一个都不剩，也不再回来；只要耗掉的不把领先的份额拉下来，已经立住的定局就从此不变。
+   on: b3.gone>b3.inside
+ STEP 6 en: Where the judging of the rule is set by that same side too, the lock is closed on itself. It stays at every step, however far a loss that makes no difference to anything inside it grows. The account calls this loop the meta-attractor; this is its closed form.
+ STEP 6 zh: 连怎么评这条规则，也由同一方来定：这个定局就合上了。只要损耗影响不到圈里的任何一样，不管它涨到多大，定局每一步都还在。这套理论把这个圈叫作“元吸引子”；这里说的是它合上以后的样子。
+   test: {"case": "judge", "en": "Laid on a judge that reads its own earlier picks: in the arm that began with one side far ahead and the loss noted nowhere, it stayed locked in 5 of 5 runs while the loss grew. In another arm of the same test one note of the loss among nine turned the judge: it does not meet the theorem's conditions (step 14).", "zh": "放到一个参照自己旧选择的评委上：有一组开始时一方已经遥遥领先，损耗哪儿都没提，这一组 5 轮里 5 轮都定着，损耗照涨。同一个检验的另一组里，九份中只有一份提到损耗，评委就转了向：它不满足定理的条件（见第 14 步）。"}
+   on: b1.held>b3.inside, stay:b3.inside | eg b3.inside
+SECTION (close): Another way in | 另一条进来的路
+ STEP 7 en: Shaping the rule in the shapers' own favour pays wherever what comes back to the shapers alone covers the cost. Where the rule is updated from the judgments of what it picked, and the shapers judge that return no lower than the rest do, a start at which shaping pays is locked in.
+ STEP 7 zh: 把规则往自己这边改，只要单单回到改规则一方的那份回报抵得过花费，就划得来。规则若是照它选中的各方的判断来重定，改规则的一方对这份回报的估计又不低于其余的，那么从改规则划得来的起点出发，这个局面就定住了。
+   on: bs.costs>bs.pays, bs.pays>b3.inside | eg bs.pays
+SECTION (turn): The ways out | 出路
+ STEP 8 en: For a rule that goes only by whether those that set it keep going: the loss gets back to it in time exactly where at least one of them can tell it while what is being lost can still be kept.
+ STEP 8 zh: 对只看定规则的各方还在不在的规则来说：损耗算不算及时传到规则那里，只看定规则的各方里有没有一方，能趁正在被耗掉的那样东西还留得住，就把损耗分辨出来。
+   on: b2.uncounted>b2.felt, b3.rest>b2.felt | eg b2.felt
+ STEP 9 en: If the rest count the loss, and the judgments taken together go against what the rule favoured at this update and the next, the rule turns. The turn is for good provided the rest go on counting the loss and judge no more in the favoured side's favour than that side does.
+ STEP 9 zh: 要是其余的把损耗算进去了，合起来的判断在这一次和下一次重定时都不利于规则原先偏向的一方：规则就转向。只要其余的此后一直算着这笔损耗，它们的判断又不比受偏向的一方自己更偏向这一方，规则就从此不再转回。
+   on: b2.felt>b2.counted
+ STEP 10 en: Or the judging is one that stops favouring once the loss passes a set amount. Then, where the loss goes on growing (given), the lock ends once it has passed that amount, however far ahead the favoured side is.
+ STEP 10 zh: 或者，评法本身就是：损耗过了定量就不再偏向。那么，损耗照旧在涨的话（这是给定的），一过那个量，不管受偏向的一方领先多少，定局都会破。
+   on: b3.inside>b2.counted
+ STEP 11 en: Or the loss falls on the shapers themselves. It adds to their cost, and past a line shaping no longer pays.
+ STEP 11 zh: 或者，损耗落到改规则的一方自己身上：它加进了花费，过了一条线，改规则就不再划得来。
+   on: bs.pays>bs.costs
+ STEP 12 en: Or whether each keeps going is measured over everything that began, not only over what is left. Then every removal shows.
+ STEP 12 zh: 或者，“是不是每一个都还在”按一开始的全部名单来量，不只在剩下的里面量。那样，清走一个就显出一个。
+   on: b3.gone>b3.list | eg b3.list
+ STEP 13 en: Or only outcomes that keep every need are allowed. Then the best by the rule takes only the spare.
+ STEP 13 zh: 或者，只允许这样的结果：每一份需要都保得住。那样，按规则做到最好，也只取走富余的。
+   on: b2.uncounted>a2.supplied
+SECTION (late): Where it is too late | 什么时候就晚了
+ STEP 14 en: If, by the time the rest begin to count the loss, the judgments together already favour what the rule favours, the lock stays (the rest judging no more in the favoured side's favour than that side does).
+ STEP 14 zh: 要是等其余的开始算这笔损耗的时候，合起来的判断已经偏向规则所偏向的一方：定局不改（前提是其余的判断不比受偏向的一方自己更偏向这一方）。
+   test: {"case": "judge", "en": "The same judge: with one note in nine it chose prose in all 50 picks, and the share then swung back and forth. The theorem's condition was not met.", "zh": "同一个评委：九份里只有一条备注，它 50 次全选了段落，此后份额来回摆。定理的条件不满足。"}
+   on: b2.felt>b2.heard | eg b2.heard
+ STEP 15 en: If the loss makes no difference to anything that sets the rule until what is being lost can no longer be kept, no rule that goes only by whether those things keep going can read it in time. With room to gain, every best outcome by the rule leaves the uncounted thing at its lowest allowed level; what lives on it, still needing it, ends where that level is below its need.
+ STEP 15 zh: 要是损耗非等到正在失去的东西留不住了，才在定规则的各方身上显出差别：那么只看它们还在不在的规则，没有一条来得及读到。只要还能多得，按规则算最好的结果，每一个都把规则没算进去的那样东西压到允许的最低处；要是这个最低处低于需要，那些照旧需要它、靠它延续的就尽了。
+   test: {"case": "lake", "en": "Three AI fishers: an untold bed was kept in 0 of 60 seasons. Taking the best catch for themselves gives the same.", "zh": "三个 AI 渔民：没告诉它们有贝床时，60 季里一季也没留住。单是照对三家最有利的量去捕，也是这个结果。"}
+   on: b2.uncounted>a1.past, b2.uncounted>a2.ended
+ STEP 16 en: In one built example the rule had turned; but the lead, grown large, used up what the counters of the loss stood on. They were gone, and the lock came back for good.
+ STEP 16 zh: 造出来的一例：规则本来已经转了向；可是领先的一方份额已大，把算损耗的一方立足的东西耗尽了。它们不在了，定局又回来，从此不变。
+   on: b2.counted>b3.gone
+SECTION (open): What no theorem shows | 定理没有说的
+ STEP 17 en: No theorem says what first makes a rule start to be updated from its own picks. Until the first such update it stays as it began, whatever it picks.
+ STEP 17 zh: 规则最初怎么开始照自己选出的结果重定，定理没有说。在第一次这样重定之前，不管选出什么，规则都和开始时一样。
+   on: b1.outside>b1.swing
+ STEP 18 en: Two readings, with no theorem behind them. The loop reaches its own checks: the ways a loss could come to count are filled from inside and, one order further, breaking them is what gets rewarded. And the loop goes on remaking what picks it while what carries it is replaced.
+ STEP 18 zh: 两条解读，都没有定理。一条：这个圈伸到了查错的途径上，损耗本来可以靠它们算进去的那些途径，也由圈里的占着；更进一层，弄坏这些途径反倒受奖励。另一条：承载它的换了一茬又一茬，这个圈照旧重建出选中它的条件。
+   on: b3.inside>b3.checkers, b3.checkers>d2.handed
+SHOWS 0 en: Proved (steps 2, 5, 6, 7): the lock itself, each under the condition its sentence gives.
+SHOWS 0 zh: 已证明的（第 2、5、6、7 步）：定局本身，各在句子里写明的条件之下。
+SHOWS 1 en: Taken as given by the theorems (step 3): that what is not counted goes on being used up, whether the rule is locked or not; and, where a theorem draws on it, that a larger lead uses up no less. No theorem drawn derives either from the lock.
+SHOWS 1 zh: 定理当作给定的（第 3 步）：规则没算进去的东西照旧在被耗掉，定不定住都一样；“领先多的，耗掉的并不更少”这一点，凡是定理用到的地方，也是给定的。图上的定理里，没有一条把这两点从定局推出来。
+SHOWS 2 en: Only in built examples (steps 4, 16): that what would read the loss is removed.
+SHOWS 2 zh: 只在造出来的例子里见过的（第 4、16 步）：读得到损耗的被清走。
+SHOWS 3 en: The way out. Proved of the course itself (step 9), under the conditions the step gives: exactly when a loss the rest count turns the rule for good. Step 8 is a separate theorem, in another model: when a loss can reach what sets the rule while what is being lost can still be kept. No theorem joins the two: taking step 8's reaching as the start of step 9's counting is a reading. Every other way out drawn (steps 10 to 13) is proved only with something given from outside the course: a judging that stops favouring past a set loss, a loss that falls on what shapes the rule, a measure over a fixed list, a limit on what is allowed. No theorem drawn says what makes a loss reach what sets the rule, or come to be counted. One built case (under step 10) shows a lock left with nothing counting the loss: the loss fell on what the rule favoured.
+SHOWS 3 zh: 出路。就过程本身证明的（第 9 步），条件写在那一步里：其余的把损耗算进去之后，恰好在什么条件下规则转向、不再转回。第 8 步是另一条定理，用的是另一个模型：损耗什么时候算是趁正在失去的东西还留得住，就传到了定规则的各方。这两条之间没有定理相连：把第 8 步的“传到”当作第 9 步“算进去”的起点，是一种解读。其余画出的每一条出路（第 10 到 13 步），都只在有过程之外给定的东西时才得到证明：一种损耗过了定量就不再偏向的评法，落在改规则一方身上的损耗，按一份固定名单来量，对允许结果的一条限制。损耗怎样才传得到定规则的各方、怎样才被算进去，图上的定理里没有一条说。有一个造出来的例子（在第 10 步下面）：没有任何一方去算损耗，定局也破了，因为损耗落在了规则偏向的一方身上。
+SHOWS 4 en: In no theorem (steps 17, 18): what first brings a rule to be updated from its own picks, and the loop reaching its own checks.
+SHOWS 4 zh: 没有定理的（第 17、18 步）：规则最初怎样变成照自己选出的结果重定；这个圈怎样伸到查错的途径上。
+WANT en: For people and AI choosing together: a rule that still counts what it uses up, set with the rest counting too, and a choosing in which shaping the rule does not pay. On this map those are the three boxes outlined in green: "The cost counts", "The rest count too" and "Shaping the rule costs". Four arrows on the whole map lead into the first, two of them on this path. One is proved of the course itself: where the rest count the loss and the judgments taken together go against what the rule favoured, the rule turns. The turn is for good if they still go against it at the next update, provided the rest go on counting the loss and judge no more in the favoured side's favour than that side does. The other three need something given from outside. No arrow drawn leads into the second, and it has no anchor in the Lean yet. One arrow leads into the third, a loss that falls on what shapes the rule, and that too is given from outside. This is wanted; it is not shown.
+WANT zh: 人和 AI 一起取舍的时候：规则把自己耗掉的也算进去，定规则时其余的也算数，改规则划不来。在这张图上，就是绿色虚线框出的三个方框：“代价算进去了”“其余的也算”“改规则划不来”。通向第一个的箭头，整张图上有四条，其中两条在这条路上。其中一条是就过程本身证明的：其余的把损耗算进去，合起来的判断不利于规则原先偏向的一方，规则就转向。下一次重定时仍然不利，其余的此后又一直算着这笔损耗，它们的判断也不比受偏向的一方自己更偏向这一方，规则就从此不再转回。另外三条都要有过程之外给定的东西。通向第二个，图上还没有画出任何箭头，Lean 里也还没有和它对应的定义或定理。通向第三个只有一条：损耗落在改规则的一方身上，这也是从过程之外给定的。这些是想要的；图上没有哪一处显示它们已经成立。
+
+=== ARROWS ON THE PATH (22)
+ARROW a1.over>b2.uncounted [same] laws=
+  tag: the same taking, left out by a rule | 同一回事：规则没把它算进去
+  en: The same taking, with a rule in play that leaves it out.
+  zh: 同一种“用得比补得快”，只是多了一条不把它算进去的规则。
+ARROW b1.swing>b1.held [law] laws=ClosedCapture.readers_uniform_locks,RuleCapture.uniform_locks,RuleCapture.Second.second_exact
+  tag: every update favours the same side | 每次重定都偏向同一方
+  en: If every update of the rule favours the same side, and favours it no less when that side's share is larger, then every run is locked in from the step after its second update. This holds whatever share, rule and way of judging it starts with.
+  zh: 只要每一次重定都偏向同一方，这一方占得越多、偏向也不减，那么无论从什么份额、什么规则、什么评法开始，到第二次重定之后的那一步，就都定住了。
+ARROW b1.held>b2.uncounted [needs] laws=ClosedCapture.lock_outlives_loss,ClosedCapture.join_course,PoolFromCourse.window_order_kept
+  tag: given, not derived: the loss grows, locked or not | 给定的：定不定住，损耗都在涨
+  en: That the loss goes on growing is given, not derived: the theorems take each step to add to what is used up beyond the count, whether the rule is locked or not. What they prove is that a lock which goes by the lead alone runs the same however much is used up, so it stays while that loss passes every bound. Where it is also given that at each step a larger lead leaves no less used up, no smaller a lead and a rule favouring no less, the course that starts with the larger lead has used up no less at every step.
+  zh: “损耗在涨”是给定的，不是推出来的：定理设定每一步都往规则没算进去的损耗上再添一份，规则定不定住都一样。证明了的是：只看领先多少的定局，耗掉多少都照原样走，所以它一直在，损耗则越过任何界限。再给定一条：每走一步，领先多的耗掉的不更少，留下的领先不更小，规则的偏向也不更弱；那么起点领先多的那个过程，每一步耗掉的都不更少。
+ARROW b2.uncounted>b3.gone [built] laws=ReadingsSpread.Commons.cleared_spreads,ReadingsPersist.Habitat.cleared_removes_its_readers,PoolFromCourse.Drained.strong_undone
+  tag: built cases: what would read the loss stood on it | 造出来的例子：读得到损耗的正靠它立足
+  en: What is used up is what the ones that would read the loss stand on, so it removes them. Shown in built cases, and as a reading.
+  zh: 被耗掉的，正是读得到损耗的那一方立足的东西，所以它们被清走了。有造出来的例子，也有一条解读。
+ARROW b3.gone>b3.inside [law] laws=PoolFromCourse.closed_stays_closed,PoolFromCourse.window_locked_after_removal,PoolFromCourse.window_removed_unregistered
+  tag: nothing left counts the loss | 算这笔损耗的一个都不剩
+  en: Once nothing that counts the loss is left, and the course brings none back, a lock that stands stays for good, provided what is used up never lowers the lead; where each step adds to the loss (given, not derived), the loss meanwhile passes every bound. Whatever the removed would have judged changes nothing.
+  zh: 算这笔损耗的一个都不剩，过程也不再把它们带回来；只要耗掉的不把领先的份额拉下来，已经立住的定局就从此不变；每一步都往损耗上再添一份的话（这是给定的，不是推出来的），损耗同时越过任何界限。被清走的本来会怎么判断，已经不起任何作用。
+ARROW b1.held>b3.inside [same] laws=ClosedCapture.both_reads,ClosedCapture.join_course,ClosedCapture.reading_absorbed
+  tag: the same lock, with the judging inside too | 同一个定局：连评法也在圈里
+  en: The same lock, where how the rule is judged is formed from what it favours too.
+  zh: 同一个定局，只是连怎么评这条规则，也由它偏向的一方来定了。
+ARROW bs.costs>bs.pays [line] laws=RuleShaping.favours_iff,RuleShaping.disfavours_iff,RuleShaping.favours_alike,RuleShaping.grouped_rises_iff
+  tag: does the return to shapers alone cover the cost? | 只回到改规则一方的，抵不抵得过花费
+  en: Within one step, shaping the rule pays if, and only if, the part of the return that comes back only to those shaping it covers the cost. What all get equally does not count. A return shared within a group counts by how far the shapers are gathered in the same groups.
+  zh: 就一步来说，改规则划不划得来，只看一条：只回到改的一方的那部分，抵不抵得过花费；各方一样都得的不算。只在一组之内分的那部分，改的一方在组里越集中，算进去的越多。
+ARROW bs.pays>b3.inside [law] laws=DrawnShaping.drawn_locks,DrawnShaping.drawn_rises,DrawnShaping.drawn_reads_iff
+  tag: the rule is updated from what its picks judge | 规则照它选中的各方的判断重定
+  en: Where the rule is updated from the judgments of what it picked, and those shaping it judge shaping's return no lower than the rest do, a start at which shaping pays is locked in: their share and the rule's favour never fall.
+  zh: 规则由它选出来的各方的判断重定，改规则的一方对“改了能回来多少”的估计又不低于其余的，那么从改规则划得来的起点出发，就一直定着：这一方的份额和规则对它的偏向，都不再降。
+ARROW b2.uncounted>b2.felt [line] laws=Web.readableInTime_iff
+  tag: can what sets the rule read it in time? | 定规则的各方来不来得及读到
+  en: For a rule that goes only by whether those that set it keep going: the loss reaches it in time if, and only if, the first step at which it makes a difference to whether one of them keeps going comes before the point of no return.
+  zh: 对只看定规则的各方还在不在的规则来说：损耗算不算及时传到，只看一条：它头一次让其中一方还在不在有了差别的那一步，是不是早于回不了头的那一点。
+ARROW b3.rest>b2.felt [line] laws=Web.separates_all_iff_member
+  tag: can at least one of those that set the rule tell? | 定规则的各方里，有没有一方分辨得出
+  en: Together, the ones that set the rule can tell two outcomes apart if, and only if, at least one of them can.
+  zh: 定规则的各方合在一起，分不分得清两种结果，只看一条：其中至少有一方分得清。
+ARROW b2.felt>b2.counted [law] laws=ReadInTime.turned_iff,ClosedCapture.Thinned.turned_iff,ClosedCapture.Thinned.kept_iff
+  tag: the rest count the loss, and outweigh | 其余的把损耗算进去，而且压得过
+  en: Suppose the rest, once they count the loss, go on counting it at every later update (in the theorem the loss only grows and none of the rest is removed), and judge no more in the favoured side's favour than that side does. Where judgments taken together then go against what the rule favoured, ties included, the rule turns for good if, and only if, they still go against it at the next update.
+  zh: 设其余的一旦把损耗算进去，此后每次重定都照旧算（在定理里，损耗只涨不落，其余的也没有哪一方被清走）；它们的判断又不比受偏向的一方自己更偏向这一方。这时，合起来的判断若不利于规则原先偏向的一方（打平也算不利），规则是不是从此转向、不再转回，只看下一次重定时合起来的判断是不是仍然不利于它。
+ARROW b3.inside>b2.counted [needs] laws=ClosedCapture.turned_by_loss,ClosedCapture.loss_ends_line
+  tag: a judging that stops favouring past a set loss | 损耗过了定量就不再偏向的评法
+  en: Suppose the way of judging never favours once the loss has passed a set amount, and the loss keeps growing (also given). Then the lock-in ends: once the loss has passed that amount the rule, after every update, no longer favours the side it favoured, however far ahead that side is.
+  zh: 一种评法，损耗过了定量就不再偏向；再给定损耗每一步都在涨，这个定局就会松开：一旦过了那个量，此后每次重定完，规则都不再偏向原先的一方，不管那一方已经领先多少。
+  more[built] en: Built case: nothing counts the loss, but it falls on what the rule favours. The lead shrinks for three steps while the lock still stands; then the lock gives way and the rule turns to the other side.
+  more zh: 造出来的一例：损耗没有任何一方去算，却落在规则偏向的一方身上。领先的份额连降三步，定局还在；随后定局松开，规则转向另一边。
+ARROW bs.pays>bs.costs [needs] laws=PoolFromCourse.borne_by_shapers_favours_iff,PoolFromCourse.borne_by_others_favours_iff,PoolFromCourse.borne_falls
+  tag: the loss falls on the shapers | 损耗落到改规则的一方身上
+  en: A loss falling on what shapes the rule adds to its cost: shaping pays if, and only if, what comes back to it alone covers both. Past that its share falls. Falling on the rest, the same loss makes shaping pay more.
+  zh: 损耗落到改规则的一方身上，就添进它的花费：改规则划不划得来，只看单独回到它手里的抵不抵得过这两样；过了这条线，它的份额就降。同样的损耗落到其余的身上，改规则反而更划得来。
+ARROW b3.gone>b3.list [needs] laws=not_allPersist_of_removes,survivorsPersist_of_settled,AllPersist.survivors
+  tag: measure over all that began | 按最初的全部名单来量
+  en: Taken over a fixed list of all that began, a measure asking each to go on fails wherever one is removed; taken only among what is left, it passes once the course settles, whatever was removed.
+  zh: 按一开始就定下的全部名单来量，“各自都要延续”这个标准，凡是清走了其中一个的过程都通不过；只在剩下的里面量，过程一旦落定，清走多少都照样通过。
+ARROW b2.uncounted>a2.supplied [needs] laws=Flow.keeping_optimum_takes_slack
+  tag: only outcomes that keep every need are allowed | 只允许每份需要都保得住的结果
+  en: Where the allowed outcomes are only those that keep every need on the uncounted thing, with room among them, no best outcome by the rule cuts any of those needs off. Where also the needs were met before the step, each can be left exactly met, and nothing comes from nothing, the best outcome takes exactly the spare above them.
+  zh: 要是只允许这样的结果：对规则没算进去的那样东西的每一份需要都保得住；这些结果里又还能多得，那么按规则最好的结果，这些需要哪一份都不会断供。要是这些需要原先就都供得上，每一份又都有允许的结果让它刚好够用，再加上无中生不出有，那么最好的结果取走的，恰好是超出这些需要的富余。
+ARROW b2.felt>b2.heard [law] laws=ReadInTime.kept_early_iff,ReadInTime.kept_iff,ReadInTime.kept_once_favoured,ReadInTime.deadline,ClosedCapture.Thinned.kept_iff
+  tag: the rest count the loss too late | 其余的算得太晚
+  en: Where the rest judge no more in the favoured side's favour than that side does: the lock stays if, and only if, by the time the rest begin to count the loss, judgments taken together already favour what the rule favours.
+  zh: 要是其余的判断不比受偏向的一方自己更偏向这一方：规则是不是照旧定着，只看一条：等其余的开始算这笔损耗的时候，合起来的判断是不是已经偏向规则所偏向的一方。
+ARROW b2.uncounted>a1.past [law] laws=Web.too_late_of_alike,Web.too_late_of_own,Web.readableInTime_iff
+  tag: it shows only when it is too late | 等显出来，已经晚了
+  en: If the loss makes no difference to anything that sets the rule until what is being lost can no longer be kept, then no rule that goes only by whether those things keep going can read it in time. The same holds if the only things that set the rule are the ones being lost.
+  zh: 如果损耗要等到正在失去的东西留不住了，才在定规则的各方身上显出差别，那么只看它们还在不在的规则，没有一条来得及读到。定规则的各方如果只有正在失去的那些，也一样。
+ARROW b2.uncounted>a2.ended [law] laws=Optimum.least_of_room,Web.optimum_broken_iff,Web.optimum_ends_beyond
+  tag: best by the rule: left at the lowest allowed | 按规则做到最好，就把它压到最低
+  en: With room to gain, every best outcome by the rule leaves the uncounted thing at its lowest allowed level. What lives on it is cut off if, and only if, that level is below its need; still needing it, it stops.
+  zh: 只要还能多得，按规则最好的结果，都把规则没算进去的那样东西压到允许的最低处。靠它延续的会不会断供，只看这个最低处是不是低于它的需要；断了供，它还照旧需要，就不再延续。
+ARROW b2.counted>b3.gone [built] laws=PoolFromCourse.Drained.strong_undone,PoolFromCourse.window_order_kept,PoolFromCourse.window_locked_after_removal
+  tag: built case: the lead removed what counted the loss | 造出来的一例：领先的把算损耗的耗没了
+  en: Built case: the rule had turned. But the lead, grown large, drew faster on what the counters of the loss stood on; after two updates they were gone, and the lock returned for good.
+  zh: 造出来的一例：规则已经转了向。可是领先的一方份额已大，耗得更快，把算这笔损耗的一方立足的东西耗尽；两次重定之后，它们不在了，定局又回来，从此不变。
+ARROW b1.outside>b1.swing [needs] laws=Pace.rule_alike_until_reading,Pace.rule_at_reading,Pace.rule_unreached
+  tag: the rule comes to be updated from its results | 规则开始照自己的结果重定
+  en: What a rule picks reaches the rule only at a step where the rule is updated from it. Until the first such step the rule stays as it began, whatever it picks. No theorem says what brings such a step.
+  zh: 规则选出来的结果，只有在规则照它重定的那一步，才传得到规则。在第一次重定之前，不管选出了什么，规则都和开始时一样。什么会带来这样一步，定理没有说。
+ARROW b3.inside>b3.checkers [reading] laws=
+  tag: the loop reaches its own checks | 这个圈伸到了查错的途径上
+  en: The loop reaches its own ways out. Second order: the ways a loss could come to count are filled from inside. Third: breaking them is what gets rewarded. A reading; no theorem.
+  zh: 这个圈伸到了自己的出口上。第二阶：损耗本来可以靠它们算进去的那些途径，也由圈里的占着。第三阶：弄坏这些途径，反倒受奖励。这是解读，没有定理。
+ARROW b3.checkers>d2.handed [reading] laws=
+  tag: the pattern keeps remaking what picks it | 格局不断重建选中它的条件
+  en: The pattern goes on remaking what picks it while what carries it is replaced: the meta-attractor in the wide sense. Open; no theorem says this pattern is handed on.
+  zh: 承载它的换了一茬又一茬，这个格局照旧重建出选中它的条件：这是广义的元吸引子。未定；还没有定理说这个格局会这样传下去。
+STAY b3.inside laws=ClosedCapture.lock_outlives_loss
+  en: From a locked start the lock lasts at every step, however far a loss that makes no difference to anything inside it grows; where each step adds to that loss (given), it passes every bound.
+  zh: 从定住的地方出发，只要损耗影响不到圈里的任何一样，不管它涨到多大，每一步都还定着；每一步都往这笔损耗上再添一份的话（给定的），它就越过任何界限。
+
+=== BOXES ON THE PATH (19)
+BOX b2.uncounted (row b2: Whether what is used up gets back to the rule)
+  name: Using up what is not counted | 用掉的不在账上
+  says: Something the rule does not count is used up. The rule scores the outcome the same however much is used; what lives on that thing bears it. | 规则没算进去的东西在被耗掉。耗多耗少，规则打的分都一样；承受的是靠那东西延续的。
+  eg: Such as a catch quota met every year while the seabed that feeds the fish wears away. | 比如配额年年达标，养鱼的海床却在一点点磨掉。
+BOX a1.over (row a1: What is taken against what comes back)
+  name: Taking more than comes back | 用得比补得快
+  says: More is taken than comes back, so its level falls. What is on hand sets how long this can last. No rule need be involved. | 取的比补的多，存量在降。还剩多少，决定了能撑多久。有没有规则，都可能这样。
+  eg: Such as a well pumped faster than the rain refills it. | 比如一口井，抽得比雨水补得快。
+BOX b1.swing (row b1: Where the rule comes from)
+  name: Follows its own picks, not yet locked | 跟着结果改，还没定住
+  says: The rule is updated each round from what it picked, and neither side is locked in: it can swing back and forth without settling. | 规则每一轮都照它选出来的结果重定，但哪一边都还没定住，可能来回摆。
+  eg: Such as a ranking refit each week that keeps flipping between two leaders. | 比如每周重排的榜单，两个领先的换来换去。
+BOX b1.held (row b1: Where the rule comes from)
+  name: Holds itself in place | 自己撑住自己
+  says: What gets chosen next is set by what has already been chosen, so the lead and the rule that favours it hold each other up. A push to the rule that leaves it favouring the same side is taken back at the next update, whatever its size. | 下一步选什么，由已经选出来的决定；领先的和偏向它的规则互相撑着。推一下规则，只要它还偏向原来那一方，不管推多大，下一次重定就收回去。
+  eg: Such as a keyboard layout: people learn it because machines have it, and machines have it because people learned it. | 比如键盘布局：机器这么排，所以大家这么学；大家这么学，所以机器这么排。
+BOX b3.gone (row b3: What counts when the rule is set)
+  name: What would read the loss is gone | 读得到损耗的不在了
+  says: What would have told of the loss has been removed by it, or was never asked. The measure is taken only among what is left, so nothing shows as missing. | 本来会读到损耗的，被损耗本身清走了，或者从没被问过。只在剩下的里面衡量，所以看不出少了什么。
+  eg: Such as a workplace survey answered only by those who stayed. | 比如只有留下来的员工填的满意度调查。
+BOX b3.inside (row b3: What counts when the rule is set)
+  name: Judged only by its own picks | 自己评自己
+  says: What the rule favours sets both the rule and how it is judged. A loss nothing inside reads can grow without limit and nothing in the loop changes. It is the lock, together with something not counted. The account calls this the meta-attractor in its closed form. | 规则由它偏向的一方来定，怎么评这条规则，也由这一方来定。圈里读不到的损耗可以一直涨，圈里什么都不变。这就是“自己撑住自己”，再加上“用掉的不在账上”。这套理论把它叫作“元吸引子”；这是它合上以后的样子。
+  eg: Such as a ranking refit to the clicks its own top results draw, its success measured by those same clicks. | 比如榜单照着自己榜首带来的点击重排，成效也用这些点击来衡量。
+BOX bs.costs (row bs: Whether shaping the rule pays)
+  name: Shaping the rule costs | 改规则划不来
+  says: Changing the rule in its own favour costs what does it more than comes back to it alone, so its share falls. | 把规则往自己这边改，花的比单独归自己的多，所以这么做的一方份额越来越小。
+  eg: Such as lobbying whose gains go to the whole industry while one firm pays for it. | 比如一家出钱游说，好处全行业分。
+BOX bs.pays (row bs: Whether shaping the rule pays)
+  name: Shaping the rule pays | 改规则划得来
+  says: Changing the rule in its own favour returns to what does it at least what it costs, so its share does not fall, and rises where it returns more: the capacity to shape the rule is itself being picked. | 把规则往自己这边改，归自己的不少于花掉的，所以这么做的一方份额不降，回来的更多时还会涨：能改规则这件事本身，正在被选出来。
+  eg: Such as lobbying whose gains come back mostly to the firm that paid for it. | 比如谁出钱游说，好处大半回到谁手里。
+BOX b2.felt (row b2: Whether what is used up gets back to the rule)
+  name: Gets back to the rule in time | 及时传到了
+  says: What is being used up now makes a difference to something whose judgment enters the rule, while it can still be kept. Whether the rule then turns depends on how many they are and how early. | 被耗掉的东西，在还留得住的时候，已经影响到了定规则的各方里至少一方。规则转不转，还要看它们有多少、来得多早。
+  eg: Such as residents downstream who now sit on the board that sets the discharge limit. | 比如下游的居民进了定排放标准的委员会。
+BOX b3.rest (row b3: What counts when the rule is set)
+  name: The rest count too | 其余的也算
+  says: The rule is set from the judgments of both kinds, what it favours and the rest, each judging for its own. | 规则由两边的判断一起定：受偏向的和其余的，各为自己判断。
+  eg: Such as a board on which those downstream also sit. | 比如下游的也在委员会里有席位。
+BOX b2.counted (row b2: Whether what is used up gets back to the rule)
+  name: The cost counts | 代价算进去了
+  says: What used to be left out now enters what the rule goes by, and past some amount the rule stops favouring what it favoured. | 原先没算进去的，现在进了规则的账；过了一定的量，规则就不再偏向原先偏向的一方。
+  eg: Such as a quota now set from the state of the seabed as well as the catch. | 比如配额不只看捕捞量，也看海床的状况了。
+BOX b3.list (row b3: What counts when the rule is set)
+  name: A list fixed at the start | 一开始就定下的名单
+  says: The measure is taken over a fixed list of all that began, whatever is left. | 衡量的对象是一开始就定下的全部名单，不管后来剩下哪些。
+  eg: Such as a trial that counts every patient enrolled, including those who dropped out. | 比如临床试验把入组的每个病人都算上，中途退出的也算。
+BOX a2.supplied (row a2: What lives on it)
+  name: Has what it needs | 够用
+  says: What it needs is there at each step, so it can go on. | 每一步要用的都有，所以能延续下去。
+  eg: Such as a herd on a pasture that regrows. | 比如草长得回来的牧场上的一群牛。
+BOX b2.heard (row b2: Whether what is used up gets back to the rule)
+  name: Gets back, but the lock stays | 传到了，定局不改
+  says: Something that is not favoured can tell and has a say, and the rule goes on favouring what it favoured: they are too few, or began to count it too late. | 不受偏向的一方读到了，也说得上话，规则却照旧偏向原先的一方：它们太少，或者算得太晚。
+  eg: Such as a minority report filed every year and outvoted every year. | 比如年年提交、年年被否决的少数意见。
+BOX a1.past (row a1: What is taken against what comes back)
+  name: Past turning back | 回不了头了
+  says: From here no course still open keeps what is being lost. Under the take as it stands the level runs down to nothing; where what gives to it lives on it too, even taking nothing does not bring it back. | 到了这一步，还走得通的路里没有一条留得住正在失去的。取用照旧，存量就一路降到零；要是补给它的也靠它延续，那就一点不取也回不来。
+  eg: Such as a fish stock below what it can recover from. | 比如鱼群少到了恢复不了的地步。
+BOX a2.ended (row a2: What lives on it)
+  name: Ended | 尽了
+  says: Nothing of it goes on: no successors, or what it needed is no longer there. | 它不再延续：没有后继，或者它需要的已经没有了。
+  eg: Such as a fishery closed because nothing is left to catch. | 比如没鱼可捕，渔场关了。
+BOX b1.outside (row b1: Where the rule comes from)
+  name: Set from outside | 规则由外面定
+  says: The rule does not depend on its own results. Whatever it favours gains ground, and only a change to the rule changes what gains. | 规则不随自己的结果变。它偏向什么，什么就占上风；只有规则变了，才会换一方占上风。
+  eg: Such as an entrance exam set by a ministry: schools fill with those good at that exam. | 比如部里统一出的入学考试：学校里都是会考这个试的。
+BOX b3.checkers (row b3: What counts when the rule is set)
+  name: Even the checks are its own | 查错的也在圈里
+  says: The ways a cost could come to count (courts, press, statistics, audit) are filled by what the rule favours, or breaking them is what gets rewarded. | 代价本来可以经法院、报纸、统计、审计这些途径入账；这些途径也由规则偏向的一方占着，或者，弄坏它们正是受奖励的事。
+  eg: Such as an auditor chosen and paid by the firm it audits. | 比如审计师由被审计的公司挑、由它付钱。
+BOX d2.handed (row d2: Lasting through what carries it)
+  name: Handed on | 换了一茬，格局还在
+  says: The same pattern goes on while what carries it is replaced: it is handed on at least once in every stretch as long as one carrier lasts. | 承载它的换了一茬又一茬，同一个格局还在：每过一茬那么长的时间，至少往下传了一次。
+  eg: Such as a craft passed from master to apprentice, or an office whose way of doing things survives every change of staff. | 比如师傅传徒弟的手艺；或者一个办公室，人都换过了，做事的路数没变。

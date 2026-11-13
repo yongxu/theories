@@ -1,0 +1,662 @@
+[
+ {
+  "where": "sheet",
+  "field": "lead_en",
+  "old": "A map of how anything forms, lasts, changes and ends, drawn so that people and AI can see the way together. Its first path: what picks among things by a rule (a reward, a judge, a market, a training run) can use up what the rule does not count, can lock itself in where the rule is updated from its own picks, and in built examples loses what would have read the loss. One way out is proved of the course itself: where the loss gets back to the rule in time, the rest count it, and the judgments together go against what the rule favoured at two updates running, the rule turns. No theorem drawn says what brings a loss to get back to the rule or to be counted. Every other way out drawn needs something given from outside, or is shown only in a built example or as a reading.",
+  "new": "A map of how anything forms, lasts, changes and ends, drawn so that people and AI can see the way together. Its first path: a selection (a reward, a judge, a market, a training run) can use up something while how much is left of it makes no difference to it, and whatever lives on that thing bears the loss; where each update sets its rule again from the shares selected under it, the rule can lock; and in built examples the using up removes those that would have counted the loss. One way out is proved from conditions on the loss and the judgments alone (step 9, with its conditions): where the rest count the loss, and the judgments together go against what the rule favoured at two updates running, the rule turns. No theorem drawn says what brings a loss to get back to those the rule is set from, or to be counted. Every other way out drawn is proved only with a further premise (how the rule is set, what is measured or allowed, or where the loss falls), or is shown only in a built example or as a reading."
+ },
+ {
+  "where": "passages",
+  "field": "about",
+  "old": "AI-written. The arrows of the map. kind: law (proved of the course itself, under its condition), line (a proved boundary: which side a thing is on), needs (proved only with something given from outside the course, or a necessary condition), built (shown only in a built example), reading (not proved), same (one box is a case of the other). readers: how many readers set the sentence against the Lean (0: no Lean statement, or not yet read).",
+  "new": "AI-written. The arrows of the map. kind: law (proved under the conditions its sentence gives), line (a proved boundary: which side a thing is on), needs (proved only with a further premise, which the arrow names, or a necessary condition), built (shown only in a built example), reading (not proved), same (one box is a case of the other). readers: how many readers set the sentence against the Lean (0: no Lean statement, or not yet read)."
+ },
+ {
+  "where": "row b3",
+  "field": "en",
+  "old": "What counts when the rule is set",
+  "new": "What the rule is set from"
+ },
+ {
+  "where": "row bs",
+  "field": "en",
+  "old": "Whether shaping the rule pays",
+  "new": "Whether shaping the rule keeps the shapers' share"
+ },
+ {
+  "where": "band B",
+  "field": "en",
+  "old": "What the choosing goes by",
+  "new": "What the selecting goes by"
+ },
+ {
+  "where": "box b2.uncounted",
+  "field": "en",
+  "old": "Using up what is not counted",
+  "new": "Used up; no difference to the rule"
+ },
+ {
+  "where": "box b1.swing",
+  "field": "en",
+  "old": "Follows its own picks, not yet locked",
+  "new": "Set from the share, not yet locked"
+ },
+ {
+  "where": "box b1.held",
+  "field": "en",
+  "old": "Holds itself in place",
+  "new": "Locked"
+ },
+ {
+  "where": "box b1.outside",
+  "field": "en",
+  "old": "Set from outside",
+  "new": "Not set from what it selects"
+ },
+ {
+  "where": "box b3.gone",
+  "field": "en",
+  "old": "What would read the loss is gone",
+  "new": "None left that would count the loss"
+ },
+ {
+  "where": "box b3.inside",
+  "field": "en",
+  "old": "Judged only by its own picks",
+  "new": "Its updating follows the share too"
+ },
+ {
+  "where": "box bs.costs",
+  "field": "en",
+  "old": "Shaping the rule costs",
+  "new": "Shaping the rule loses share"
+ },
+ {
+  "where": "box bs.pays",
+  "field": "en",
+  "old": "Shaping the rule pays",
+  "new": "Shaping the rule keeps share"
+ },
+ {
+  "where": "box b2.felt",
+  "field": "en",
+  "old": "Gets back to the rule in time",
+  "new": "Gets back to the rule early enough"
+ },
+ {
+  "where": "box b3.rest",
+  "field": "en",
+  "old": "The rest count too",
+  "new": "The rest judge too"
+ },
+ {
+  "where": "box b2.counted",
+  "field": "en",
+  "old": "The cost counts",
+  "new": "The loss counts"
+ },
+ {
+  "where": "box b3.checkers",
+  "field": "en",
+  "old": "Even the checks are its own",
+  "new": "The checks follow what it favours"
+ },
+ {
+  "where": "box b2.uncounted",
+  "field": "says_en",
+  "old": "Something the rule does not count is used up. The rule scores the outcome the same however much is used; what lives on that thing bears it.",
+  "new": "Something is used up, and how much is left of it makes no difference to the rule. Outcomes that differ only in that are selected alike; what lives on that thing bears the loss."
+ },
+ {
+  "where": "box b1.swing",
+  "field": "says_en",
+  "old": "The rule is updated each round from what it picked, and neither side is locked in: it can swing back and forth without settling.",
+  "new": "Each update sets the rule again from the shares selected under it, and neither side is locked: the rule can swing back and forth without settling."
+ },
+ {
+  "where": "box b1.held",
+  "field": "says_en",
+  "old": "What gets chosen next is set by what has already been chosen, so the lead and the rule that favours it hold each other up. A push to the rule that leaves it favouring the same side is taken back at the next update, whatever its size.",
+  "new": "What is selected next follows from what has been selected: the favoured side's share and the rule that favours it each keep the other from falling. A change to the rule that leaves it favouring the same side is absorbed at the next update: the rule is set again from the share, no lower than before the change, and locked again."
+ },
+ {
+  "where": "box b3.gone",
+  "field": "says_en",
+  "old": "What would have told of the loss has been removed by it, or was never asked. The measure is taken only among what is left, so nothing shows as missing.",
+  "new": "Those that would have counted the loss have been removed by it, or were never in the pool. A measure taken only among what is left passes once the course settles, whatever was removed, and the rule is set as the share alone gives it, whatever the removed would have judged."
+ },
+ {
+  "where": "box b3.inside",
+  "field": "says_en",
+  "old": "What the rule favours sets both the rule and how it is judged. A loss nothing inside reads can grow without limit and nothing in the loop changes. It is the lock, together with something not counted. The account calls this the meta-attractor in its closed form.",
+  "new": "The rule and the way it is updated are both formed from the share of what the rule favours. A loss that changes neither what is selected next nor how the rule is set can grow without limit while the loop runs as it would with no loss. It is the lock, together with something used up that makes no difference to the rule. The account calls this the meta-attractor in its closed form."
+ },
+ {
+  "where": "box bs.costs",
+  "field": "says_en",
+  "old": "Changing the rule in its own favour costs what does it more than comes back to it alone, so its share falls.",
+  "new": "Shaping the rule costs the shapers more than comes back to them alone, so the rule after it favours the others and, where any shapers are present, their share falls."
+ },
+ {
+  "where": "box bs.pays",
+  "field": "says_en",
+  "old": "Changing the rule in its own favour returns to what does it at least what it costs, so its share does not fall, and rises where it returns more: the capacity to shape the rule is itself being picked.",
+  "new": "Shaping the rule brings back to the shapers alone at least what it costs, so the rule after it favours them: their share does not fall and, where any are present, rises where it brings back more. By shaping, the shapers keep their share."
+ },
+ {
+  "where": "box b2.counted",
+  "field": "says_en",
+  "old": "What used to be left out now enters what the rule goes by, and past some amount the rule stops favouring what it favoured.",
+  "new": "What used to make no difference to the rule now counts in how it is set, and past some amount the rule stops favouring what it favoured."
+ },
+ {
+  "where": "box b2.heard",
+  "field": "says_en",
+  "old": "Something that is not favoured can tell and has a say, and the rule goes on favouring what it favoured: they are too few, or began to count it too late.",
+  "new": "Some of the rest count the loss and are in the pool, and the rule goes on favouring what it favoured: they are too few, or began to count it too late."
+ },
+ {
+  "where": "box b1.outside",
+  "field": "says_en",
+  "old": "The rule does not depend on its own results. Whatever it favours gains ground, and only a change to the rule changes what gains.",
+  "new": "What is selected under the rule makes no difference to the rule. Where being favoured never lowers a share, whatever it favours does not lose share, and only a change to the rule changes which side that is."
+ },
+ {
+  "where": "box b3.checkers",
+  "field": "says_en",
+  "old": "The ways a cost could come to count (courts, press, statistics, audit) are filled by what the rule favours, or breaking them is what gets rewarded.",
+  "new": "The ways a loss could come to count (courts, press, statistics, audit) are filled by what the rule favours, or breaking them is what the rule favours."
+ },
+ {
+  "where": "path lock",
+  "field": "en",
+  "old": "A rule that holds itself in place",
+  "new": "A rule set from the shares selected under it"
+ },
+ {
+  "where": "path lock",
+  "field": "lead_en",
+  "old": "A reward, a judge, a market, a vote or a training run picks among things by a rule. This path follows what can happen to such a rule, and what turns it.",
+  "new": "A reward, a judge, a market, a vote or a training run is a selection: at each step it selects among things by a rule. This path follows what can happen to such a rule, most often where updates set it again from the shares selected under it, and what turns it."
+ },
+ {
+  "where": "path lock",
+  "field": "want_en",
+  "old": "For people and AI choosing together: a rule that still counts what it uses up, set with the rest counting too, and a choosing in which shaping the rule does not pay. On this map those are the three boxes outlined in green: \"The cost counts\", \"The rest count too\" and \"Shaping the rule costs\". Four arrows on the whole map lead into the first, two of them on this path. One is proved of the course itself: where the rest count the loss and the judgments taken together go against what the rule favoured, the rule turns. The turn is for good if they still go against it at the next update, provided the rest go on counting the loss and judge no more in the favoured side's favour than that side does. The other three need something given from outside. No arrow drawn leads into the second, and it has no anchor in the Lean yet. One arrow leads into the third, a loss that falls on what shapes the rule, and that too is given from outside. This is wanted; it is not shown.",
+  "new": "For people and AI selecting together: a selection in which what is used up counts in how the rule is set, the rest judge too when it is set, and those that shape the rule lose share by it. On this map those are the three boxes outlined in green: \"The loss counts\", \"The rest judge too\" and \"Shaping the rule loses share\". Four arrows on the whole map lead into the first, two of them on this path. One is proved with no further premise (step 9); the other three need one. No arrow drawn leads into the second, and it has no anchor in the Lean yet. One arrow leads into the third, a loss that falls on what shapes the rule, and that too needs a further premise. This is wanted; it is not shown."
+ },
+ {
+  "where": "path lock cast 0",
+  "field": "says_en",
+  "old": "what the picking goes by: a reward, a score, a price, a count of votes.",
+  "new": "how the selection selects at a step: a reward, a score, a price, a count of votes."
+ },
+ {
+  "where": "path lock cast 1",
+  "field": "says_en",
+  "old": "the rule set again; between updates it stays as it was. What it is set from differs from step to step, and each step says: its own picks, or judgments.",
+  "new": "a step that sets the rule again; between updates the rule stays as it was. What it is set from differs from step to step of this path, and each step says which: the shares selected under it, judgments, or which of the pool keep going."
+ },
+ {
+  "where": "path lock cast 3",
+  "field": "en",
+  "old": "the favoured side, its share and its lead",
+  "new": "the favoured side and its share"
+ },
+ {
+  "where": "path lock cast 3",
+  "field": "says_en",
+  "old": "what the rule picks more of. Its share is how much of the whole it has; its lead is the same thing told as how far ahead of the rest it is.",
+  "new": "the side the rule favours, and how much of the whole it is."
+ },
+ {
+  "where": "path lock cast 4",
+  "field": "says_en",
+  "old": "what is picked among besides the favoured side. Where the rule is set from the judgments of what it picked (steps 7, 9 and 14), the rest judge too, and weigh by their numbers.",
+  "new": "what the selection selects among besides the favoured side. Where the rule is set from the judgments of what it has selected (steps 7, 9 and 14), the rest judge too, and weigh by their numbers."
+ },
+ {
+  "where": "path lock cast 5",
+  "field": "says_en",
+  "old": "how much has been used up of something the rule leaves out. What lives on that thing bears it. It is still called the loss once something counts it.",
+  "new": "how much has been used up of something whose level makes no difference to the rule. Whatever lives on that thing bears the loss. It is still called the loss where its level does make a difference."
+ },
+ {
+  "where": "path lock cast 6",
+  "field": "en",
+  "old": "what reads the loss, or counts it",
+  "new": "those that count the loss"
+ },
+ {
+  "where": "path lock cast 6",
+  "field": "says_en",
+  "old": "anything among what sets the rule whose judgment changes with the loss.",
+  "new": "those in the pool whose judgment the model lets differ once the loss has passed a set amount (it need not differ). Where the model lets no judgment in the pool differ with the loss, none counts it. In the built example of step 16 they judge against the favoured side, and the loss removes them."
+ },
+ {
+  "where": "path lock cast 7",
+  "field": "en",
+  "old": "what sets the rule",
+  "new": "the pool"
+ },
+ {
+  "where": "path lock cast 7",
+  "field": "says_en",
+  "old": "those the rule is set from: from their judgments in steps 7, 9 and 14; in steps 8 and 15, from whether each of them keeps going.",
+  "new": "those an update sets the rule from. In steps 7, 9 and 14: what the selection has selected, each with a judgment, weighed by their numbers. In steps 8 and 15 the rule is set only from which of them keep going."
+ },
+ {
+  "where": "path lock cast 8",
+  "field": "says_en",
+  "old": "what spends to change the rule in its own favour.",
+  "new": "what bears a cost to shape the rule, part of what that brings coming back to it alone."
+ },
+ {
+  "where": "path lock cast 9",
+  "field": "en",
+  "old": "of the course itself; given from outside",
+  "new": "proved; proved only with a further premise"
+ },
+ {
+  "where": "path lock cast 9",
+  "field": "says_en",
+  "old": "the first: proved under the conditions its sentence gives, with nothing else put in. The second: proved only with a further premise put in, which the step names: that the loss goes on growing, a way of judging, a measure, a limit, or where the loss falls. Which premises are marked as given from outside is the map's own marking, not a difference between two kinds of proof.",
+  "new": "Step 1 holds by what its words mean and names no theorem. The other unmarked steps are proved under the conditions their sentences give, together with the loss's growth wherever a theorem takes it (steps 5, 6, 9 and 14). A step marked as needing a further premise is proved only with a further assumption about the set-up, which it names: a way of setting the rule, a measure, a limit, or where the loss falls (in step 3, that the loss goes on growing; in step 17, that such an update comes). The marking is the map's own, not a difference between two kinds of proof."
+ },
+ {
+  "where": "path lock step 1",
+  "field": "say_en",
+  "old": "Where a rule leaves something out and that thing is being used up, the rule scores the outcome the same however much is used; what lives on that thing bears it.",
+  "new": "Where something is being used up and how much is left of it makes no difference to a rule, the selection comes out the same however much is left; whatever lives on that thing bears the loss."
+ },
+ {
+  "where": "path lock step 2",
+  "field": "say_en",
+  "old": "Where the rule is updated from its own picks: if every update favours the same side, and no less when that side's share is larger, the rule is locked in from the step after its second update, wherever it started.",
+  "new": "Suppose each update sets the rule again from the favoured side's share, and being favoured never lowers a share. If every update favours the same side, and no less when that side's share is larger, the rule is locked at the step after its second update, whatever share and rule it started from."
+ },
+ {
+  "where": "path lock step 3",
+  "field": "say_en",
+  "old": "A lock that goes by the lead alone runs the same however much is used up. That the loss goes on growing, locked or not, is assumed by the theorems, not proved.",
+  "new": "If the loss changes neither what is selected next nor how the rule is set, a lock runs the same however much is used up. That the loss goes on growing, locked or not, is a premise of the theorems, not proved."
+ },
+ {
+  "where": "path lock step 4",
+  "field": "say_en",
+  "old": "In built examples, what is used up is what the readers of the loss stood on. They are removed.",
+  "new": "In built examples, those that would have counted the loss lived on the very thing used up. They are removed."
+ },
+ {
+  "where": "path lock step 5",
+  "field": "say_en",
+  "old": "Once nothing is left that counts the loss, and none comes back, a lock that stands stays for good, provided what is used up never lowers the lead.",
+  "new": "Once none is left that counts the loss, and none comes back, a lock that stands stays for good, provided that, however much is used up, being favoured never lowers that side's share."
+ },
+ {
+  "where": "path lock step 6",
+  "field": "say_en",
+  "old": "Where the judging of the rule is set by that same side too, the lock is closed on itself. It stays at every step, however far a loss that makes no difference to anything inside it grows. The account calls this loop the meta-attractor; this is its closed form.",
+  "new": "Where the way the rule is updated is itself formed from that same share, the loop is closed. From a locked start it stays locked at every step, however far the loss grows, as long as the loss changes neither what is selected next nor how the rule is set. The account calls this loop the meta-attractor; this is its closed form."
+ },
+ {
+  "where": "path lock step 7",
+  "field": "say_en",
+  "old": "Shaping the rule in the shapers' own favour pays wherever what comes back to the shapers alone covers the cost. Where the rule is updated from the judgments of what it picked, and the shapers judge that return no lower than the rest do, a start at which shaping pays is locked in.",
+  "new": "The rule favours the shapers exactly where what comes back to them alone covers the cost of shaping. Where each update sets the rule from the judgments of what it has selected, and the shapers judge that return no lower than the rest do, then from a start at which the rule so set favours the shapers it is locked."
+ },
+ {
+  "where": "path lock step 8",
+  "field": "say_en",
+  "old": "For a rule that goes only by whether those that set it keep going: the loss gets back to it in time exactly where at least one of them can tell it while what is being lost can still be kept.",
+  "new": "Take a rule set only from which of the pool keep going. The loss can get back to it early enough exactly where the loss, while what is being lost can still be kept, changes whether at least one of the pool keeps going."
+ },
+ {
+  "where": "path lock step 9",
+  "field": "say_en",
+  "old": "If the rest count the loss, and the judgments taken together go against what the rule favoured at this update and the next, the rule turns. The turn is for good provided the rest go on counting the loss and judge no more in the favoured side's favour than that side does.",
+  "new": "If the rest count the loss, the loss grows at every step, and, at or past the set amount, the judgments taken together go against what the rule favoured at one update and the next, the rule turns. The turn is for good provided the rest go on counting the loss and judge no more for the favoured side than that side does."
+ },
+ {
+  "where": "path lock step 10",
+  "field": "say_en",
+  "old": "Or the judging is one that stops favouring once the loss passes a set amount. Then, where the loss goes on growing (given), the lock ends once it has passed that amount, however far ahead the favoured side is.",
+  "new": "Or the rule is set in a way that stops favouring once the loss passes a set amount. Then, where the loss goes on growing, the lock ends once the loss has passed that amount, however large the favoured side's share."
+ },
+ {
+  "where": "path lock step 11",
+  "field": "say_en",
+  "old": "Or the loss falls on the shapers themselves. It adds to their cost, and past a line shaping no longer pays.",
+  "new": "Or the loss falls on the shapers. It adds to the cost of shaping, and past a line the rule no longer favours them and their share, where any are present, falls."
+ },
+ {
+  "where": "path lock step 12",
+  "field": "say_en",
+  "old": "Or whether each keeps going is measured over everything that began, not only over what is left. Then every removal shows.",
+  "new": "Or whether each keeps going is measured over a fixed list of all that began, not only over what is left. Then the measure is not met wherever one is removed."
+ },
+ {
+  "where": "path lock step 13",
+  "field": "say_en",
+  "old": "Or only outcomes that keep every need are allowed. Then the best by the rule takes only the spare.",
+  "new": "Or only outcomes that leave every need met are allowed. Then the best outcome by the rule takes only what is left over."
+ },
+ {
+  "where": "path lock step 14",
+  "field": "say_en",
+  "old": "If, by the time the rest begin to count the loss, the judgments together already favour what the rule favours, the lock stays (the rest judging no more in the favoured side's favour than that side does).",
+  "new": "If the loss grows at every step and, by the time the rest begin to count it, the judgments taken together already favour what the rule favours, the lock stays (the rest judging no more for the favoured side than that side does)."
+ },
+ {
+  "where": "path lock step 15",
+  "field": "say_en",
+  "old": "If the loss makes no difference to anything that sets the rule until what is being lost can no longer be kept, no rule that goes only by whether those things keep going can read it in time. With room to gain, every best outcome by the rule leaves the uncounted thing at its lowest allowed level; what lives on it, still needing it, ends where that level is below its need.",
+  "new": "If, until what is being lost can no longer be kept, the loss changes nothing about which of the pool keep going, it can get back early enough to no rule set only from which of them keep going. And where the rule ranks an outcome above another whenever it is higher at one of the things the rule goes by and lower at none, whatever either leaves of other things, then with room to gain every best outcome leaves those other things at their lowest allowed level; what lives on one of them, its need met before the step and still needing it, ends where that level is below its need."
+ },
+ {
+  "where": "path lock step 16",
+  "field": "say_en",
+  "old": "In one built example the rule had turned; but the lead, grown large, used up what the counters of the loss stood on. They were gone, and the lock came back for good.",
+  "new": "In one built example the rule favoured the other side at two steps; but as the first side's share grew, more was used up of what those that judged against it lived on. They were gone, and from the next step the lock was back for good."
+ },
+ {
+  "where": "path lock step 17",
+  "field": "say_en",
+  "old": "No theorem says what first makes a rule start to be updated from its own picks. Until the first such update it stays as it began, whatever it picks.",
+  "new": "No theorem says what first brings a rule to be set again from the shares selected under it. What is proved: until the first such update the rule stays as it began, whatever is selected under it."
+ },
+ {
+  "where": "path lock step 18",
+  "field": "say_en",
+  "old": "Two readings, with no theorem behind them. The loop reaches its own checks: the ways a loss could come to count are filled from inside and, one order further, breaking them is what gets rewarded. And the loop goes on remaking what picks it while what carries it is replaced.",
+  "new": "Two readings, with no theorem behind them. The checks too come to follow what the rule favours: the ways a loss could come to count are filled by what the rule favours, and, one order further, breaking them is itself what the rule favours. And the pattern goes on remaking what selects it while what carries it is replaced."
+ },
+ {
+  "where": "path lock shows 1",
+  "field": 1,
+  "old": "Taken as given by the theorems (step 3): that what is not counted goes on being used up, whether the rule is locked or not; and, where a theorem draws on it, that a larger lead uses up no less. No theorem drawn derives either from the lock.",
+  "new": "Premises of the theorems, not derived (step 3): that something whose level makes no difference to the rule goes on being used up, whether the rule is locked or not; and, where a theorem draws on it, that a larger share uses up no less. No theorem drawn derives either from the lock."
+ },
+ {
+  "where": "path lock shows 2",
+  "field": 2,
+  "old": "Only in built examples (steps 4, 16): that what would read the loss is removed.",
+  "new": "Only in built examples (steps 4, 16): that those that would count the loss are removed."
+ },
+ {
+  "where": "path lock shows 3",
+  "field": 3,
+  "old": "The way out. Proved of the course itself (step 9), under the conditions the step gives: exactly when a loss the rest count turns the rule for good. Step 8 is a separate theorem, in another model: when a loss can reach what sets the rule while what is being lost can still be kept. No theorem joins the two: taking step 8's reaching as the start of step 9's counting is a reading. Every other way out drawn (steps 10 to 13) is proved only with something given from outside the course: a judging that stops favouring past a set loss, a loss that falls on what shapes the rule, a measure over a fixed list, a limit on what is allowed. No theorem drawn says what makes a loss reach what sets the rule, or come to be counted. One built case (under step 10) shows a lock left with nothing counting the loss: the loss fell on what the rule favoured.",
+  "new": "The way out. Proved with no further premise (step 9): where the rest count the loss and the judgments went against what the rule favoured at one update, the rule turns for good exactly where they still do at the next, provided the rest go on counting the loss and judge no more for the favoured side than that side does. Step 8 is a separate theorem, in another model: when a loss can get back, early enough, to a rule set from which of the pool keep going. No theorem joins the two: taking step 8's getting back as the start of step 9's counting is a reading. Every other way out drawn (steps 10 to 13) is proved only with a further premise: a way of setting the rule that stops favouring past a set loss, a loss that falls on what shapes the rule, a measure over a fixed list, a limit on what is allowed. No theorem drawn says what brings a loss to get back to the pool, or to be counted. One built case (under step 10) has a lock given up with none counting the loss: the loss fell on what the rule favoured."
+ },
+ {
+  "where": "path lock shows 4",
+  "field": 4,
+  "old": "In no theorem (steps 17, 18): what first brings a rule to be updated from its own picks, and the loop reaching its own checks.",
+  "new": "In no theorem (steps 17, 18): what first brings a rule to be set again from the shares selected under it, the checks coming to follow what the rule favours, and the pattern remaking what selects it."
+ },
+ {
+  "where": "path stock shows 0",
+  "field": 0,
+  "old": "The ways down (steps 3 to 9) are proved, each under its condition, most often a taking that stands or takers each doing the best for itself. One arrow among them, to \"Keeps going as something else\" (step 9), is proved only with something given from outside.",
+  "new": "The ways down (steps 3 to 9) are proved, each under its condition, most often a taking that stands or takers each doing the best for itself. One arrow among them, to \"Keeps going as something else\" (step 9), is proved only with a further premise."
+ },
+ {
+  "where": "path stock shows 1",
+  "field": 1,
+  "old": "Of the ways back, only regrowth is proved of the course itself (step 12): where sparing pays, every best course takes nothing until the stock has regrown; where more comes than goes, the level is back at the need.",
+  "new": "Of the ways back, only regrowth is proved with no further premise (step 12): where sparing pays, every best course takes nothing until the stock has regrown; where more comes than goes, the level is back at the need."
+ },
+ {
+  "where": "path stock shows 2",
+  "field": 2,
+  "old": "Every other way back (steps 10, 11, 13, 14, 15) is proved only with something given from outside the course; step 13 has a built case as well.",
+  "new": "Every other way back (steps 10, 11, 13, 14, 15) is proved only with a further premise; step 13 has a built case as well."
+ },
+ {
+  "where": "path view shows 2",
+  "field": 2,
+  "old": "Proved only with something given from outside the course (steps 4 and 12): step 4 is a necessary condition, with the growth of the error given; step 12 says that telling apart what every available trial treats alike needs a trial brought in from beyond. Only in built examples: step 13, telling two states apart with the last unit, after which it cannot correct; and, under step 9, coming out of the known road only from a different start (begun on the untried act, told which state holds, or listing both outcomes and waiting for the answer).",
+  "new": "Proved only with a further premise (steps 4 and 12): step 4 is a necessary condition, with the growth of the error given; step 12 says that telling apart what every available trial treats alike needs a trial brought in from beyond. Only in built examples: step 13, telling two states apart with the last unit, after which it cannot correct; and, under step 9, coming out of the known road only from a different start (begun on the untried act, told which state holds, or listing both outcomes and waiting for the answer)."
+ },
+ {
+  "where": "path giving shows 1",
+  "field": 1,
+  "old": "Proved only with something given from outside (step 8): from nothing given, giving comes back only through something that gives without waiting. No theorem drawn here says what would make anything do so.",
+  "new": "Proved only with a further premise (step 8): from nothing given, giving comes back only through something that gives without waiting. No theorem drawn here says what would make anything do so."
+ },
+ {
+  "where": "path giving shows 2",
+  "field": 2,
+  "old": "Lasting by being handed on (steps 9 to 11): that a lasting pattern which gains carriers only by being handed on is handed on within every carrier's span, and is gone within one span where handing on stops, is proved (steps 9, 10). Its return (step 11) is proved only with something given from outside: something that starts carrying it without being handed it.",
+  "new": "Lasting by being handed on (steps 9 to 11): that a lasting pattern which gains carriers only by being handed on is handed on within every carrier's span, and is gone within one span where handing on stops, is proved (steps 9, 10). Its return (step 11) is proved only with a further premise: something that starts carrying it without being handed it."
+ },
+ {
+  "where": "path returns shows 0",
+  "field": 0,
+  "old": "Proved of the course itself, each under the condition its sentence gives (steps 2, 4 to 7, 9, 10 and 14): the step at which a line closes into a ring; what becomes of a difference by what each turn returns (gone, settled, kept whole, or grown past every bound); that a level pushed back within its gap comes to its mark; that among finitely many states every course reaches a state it comes back to; that a search on a score with a ceiling comes to rest. What is said of staying (in steps 6, 9 and 11 to 14) is proved too: at rest, growing, swinging, keeping a band with a late reading, and having nowhere to rest.",
+  "new": "Proved with no further premise, each under the condition its sentence gives (steps 2, 4 to 7, 9, 10 and 14): the step at which a line closes into a ring; what becomes of a difference by what each turn returns (gone, settled, kept whole, or grown past every bound); that a level pushed back within its gap comes to its mark; that among finitely many states every course reaches a state it comes back to; that a search on a score with a ceiling comes to rest. What is said of staying (in steps 6, 9 and 11 to 14) is proved too: at rest, growing, swinging, keeping a band with a late reading, and having nowhere to rest."
+ },
+ {
+  "where": "arrow a1.over>b2.uncounted",
+  "field": "tag_en",
+  "old": "the same taking, left out by a rule",
+  "new": "the same taking, with no difference to a rule"
+ },
+ {
+  "where": "arrow a1.over>b2.uncounted",
+  "field": "en",
+  "old": "The same taking, with a rule in play that leaves it out.",
+  "new": "The same taking, where a rule is in play and how much is left makes no difference to it."
+ },
+ {
+  "where": "arrow b1.swing>b1.held",
+  "field": "en",
+  "old": "If every update of the rule favours the same side, and favours it no less when that side's share is larger, then every run is locked in from the step after its second update. This holds whatever share, rule and way of judging it starts with.",
+  "new": "Where being favoured never lowers a share: if every update of the rule favours the same side, and favours it no less when that side's share is larger, then every course is locked from the step after its second update. This holds whatever share, rule and way of updating it starts with."
+ },
+ {
+  "where": "arrow b1.held>b2.uncounted",
+  "field": "tag_en",
+  "old": "given, not derived: the loss grows, locked or not",
+  "new": "a premise, not derived: the loss grows, locked or not"
+ },
+ {
+  "where": "arrow b1.held>b2.uncounted",
+  "field": "en",
+  "old": "That the loss goes on growing is given, not derived: the theorems take each step to add to what is used up beyond the count, whether the rule is locked or not. What they prove is that a lock which goes by the lead alone runs the same however much is used up, so it stays while that loss passes every bound. Where it is also given that at each step a larger lead leaves no less used up, no smaller a lead and a rule favouring no less, the course that starts with the larger lead has used up no less at every step.",
+  "new": "That the loss goes on growing is a premise, not derived: the theorems take each step to add to what is used up, whether the rule is locked or not. What they prove is that where the loss changes neither what is selected next nor how the rule is set, the course runs as it would with no loss; so, where being favoured never lowers a share, the rule set from the share is no lower for a share no lower, and a rule no lower than one that favours a side favours it too, from a locked start the lock stays while that loss passes every bound. A further theorem compares two courses in which those that count the loss stand, counting it from the start, until it reaches a bound: where it is also a premise that the rule set from the share alone is no lower for a share no lower, that a share, loss and rule no lower leave a share no lower and no less used up, and that their judgment rises with share and loss and is never more for the favoured side than the share's own, then of two courses under the same updates, the one that starts no lower in share, loss and rule, its counters removed no later, is no lower in all three at every step."
+ },
+ {
+  "where": "arrow b2.uncounted>b3.gone",
+  "field": "tag_en",
+  "old": "built cases: what would read the loss stood on it",
+  "new": "built cases: those that would count the loss lived on it"
+ },
+ {
+  "where": "arrow b2.uncounted>b3.gone",
+  "field": "en",
+  "old": "What is used up is what the ones that would read the loss stand on, so it removes them. Shown in built cases, and as a reading.",
+  "new": "What is used up is what those that would count the loss live on, so using it up removes them. Shown in built cases, and as a reading."
+ },
+ {
+  "where": "arrow b3.gone>b3.inside",
+  "field": "tag_en",
+  "old": "nothing left counts the loss",
+  "new": "none left counts the loss"
+ },
+ {
+  "where": "arrow b3.gone>b3.inside",
+  "field": "en",
+  "old": "Once nothing that counts the loss is left, and the course brings none back, a lock that stands stays for good, provided what is used up never lowers the lead; where each step adds to the loss (given, not derived), the loss meanwhile passes every bound. Whatever the removed would have judged changes nothing.",
+  "new": "Once none is left that counts the loss, and the course brings none back, a lock that stands stays for good, provided being favoured, with what is used up, never lowers that side's share; where each step adds to the loss (a premise, not derived), the loss meanwhile passes every bound. Whatever the removed would have judged changes nothing."
+ },
+ {
+  "where": "arrow b1.held>b3.inside",
+  "field": "tag_en",
+  "old": "the same lock, with the judging inside too",
+  "new": "the same lock, with the way the rule is updated formed from the share too"
+ },
+ {
+  "where": "arrow b1.held>b3.inside",
+  "field": "en",
+  "old": "The same lock, where how the rule is judged is formed from what it favours too.",
+  "new": "The same lock, where the way the rule is updated is formed from the favoured share too."
+ },
+ {
+  "where": "arrow bs.costs>bs.pays",
+  "field": "en",
+  "old": "Within one step, shaping the rule pays if, and only if, the part of the return that comes back only to those shaping it covers the cost. What all get equally does not count. A return shared within a group counts by how far the shapers are gathered in the same groups.",
+  "new": "Within one step, the rule favours those shaping it if, and only if, the part of the return that comes back only to them covers the cost. What all get equally does not change which side the rule favours at that step. A return shared within a group counts by how far the shapers are gathered in the same groups."
+ },
+ {
+  "where": "arrow bs.pays>b3.inside",
+  "field": "tag_en",
+  "old": "the rule is updated from what its picks judge",
+  "new": "the rule is set from the judgments of what it has selected"
+ },
+ {
+  "where": "arrow bs.pays>b3.inside",
+  "field": "en",
+  "old": "Where the rule is updated from the judgments of what it picked, and those shaping it judge shaping's return no lower than the rest do, a start at which shaping pays is locked in: their share and the rule's favour never fall.",
+  "new": "Where each update sets the rule from the judgments of what it has selected, and those shaping it judge shaping's return no lower than the rest do, a start at which the rule so set favours the shapers is locked: their share and the rule's favour never fall."
+ },
+ {
+  "where": "arrow b2.uncounted>b2.felt",
+  "field": "tag_en",
+  "old": "can what sets the rule read it in time?",
+  "new": "can it get back to the pool early enough?"
+ },
+ {
+  "where": "arrow b2.uncounted>b2.felt",
+  "field": "en",
+  "old": "For a rule that goes only by whether those that set it keep going: the loss reaches it in time if, and only if, the first step at which it makes a difference to whether one of them keeps going comes before the point of no return.",
+  "new": "For a rule set only from which of the pool keep going: the loss can get back to it early enough if, and only if, the first step at which it makes a difference to whether one of them keeps going comes before the point of no return."
+ },
+ {
+  "where": "arrow b3.rest>b2.felt",
+  "field": "tag_en",
+  "old": "can at least one of those that set the rule tell?",
+  "new": "does it differ for at least one of the pool?"
+ },
+ {
+  "where": "arrow b3.rest>b2.felt",
+  "field": "en",
+  "old": "Together, the ones that set the rule can tell two outcomes apart if, and only if, at least one of them can.",
+  "new": "A rule set only from the pool, a finite list for each of which it is decided whether it tells the two apart, can select two courses differently up to a step if, and only if, the two differ up to that step for at least one of the pool."
+ },
+ {
+  "where": "arrow b2.felt>b2.counted",
+  "field": "en",
+  "old": "Suppose the rest, once they count the loss, go on counting it at every later update (in the theorem the loss only grows and none of the rest is removed), and judge no more in the favoured side's favour than that side does. Where judgments taken together then go against what the rule favoured, ties included, the rule turns for good if, and only if, they still go against it at the next update.",
+  "new": "Suppose the rest, once they count the loss, go on counting it at every later update (in the theorem the loss only grows and none of the rest is removed), and judge no more for the favoured side than that side does. Where judgments taken together then go against what the rule favoured, ties included, the rule turns for good if, and only if, they still go against it at the next update."
+ },
+ {
+  "where": "arrow b3.inside>b2.counted",
+  "field": "tag_en",
+  "old": "a judging that stops favouring past a set loss",
+  "new": "a way of setting the rule that stops favouring past a set loss"
+ },
+ {
+  "where": "arrow b3.inside>b2.counted",
+  "field": "en",
+  "old": "Suppose the way of judging never favours once the loss has passed a set amount, and the loss keeps growing (also given). Then the lock-in ends: once the loss has passed that amount the rule, after every update, no longer favours the side it favoured, however far ahead that side is.",
+  "new": "Suppose the rule is set in a way that never favours once the loss has passed a set amount, and the loss keeps growing (a premise too). Then the lock ends: once the loss has passed that amount the rule, after every update, no longer favours the side it favoured, however large that side's share."
+ },
+ {
+  "where": "arrow b3.inside>b2.counted more 0",
+  "field": "en",
+  "old": "Built case: nothing counts the loss, but it falls on what the rule favours. The lead shrinks for three steps while the lock still stands; then the lock gives way and the rule turns to the other side.",
+  "new": "Built case: the loss changes no judgment, but it falls on what the rule favours. That side's share shrinks for three steps while the lock still stands; then the lock gives way and the rule turns to the other side."
+ },
+ {
+  "where": "arrow bs.pays>bs.costs",
+  "field": "en",
+  "old": "A loss falling on what shapes the rule adds to its cost: shaping pays if, and only if, what comes back to it alone covers both. Past that its share falls. Falling on the rest, the same loss makes shaping pay more.",
+  "new": "A loss falling on what shapes the rule adds to its cost: the rule favours the shapers if, and only if, what comes back to them alone covers both. Past that, where any shaper is present, their share falls. Falling on the rest, the same loss counts as coming back to the shapers alone: the rule favours them if, and only if, what comes back to them alone, with the loss, covers the cost."
+ },
+ {
+  "where": "arrow b2.uncounted>a2.supplied",
+  "field": "en",
+  "old": "Where the allowed outcomes are only those that keep every need on the uncounted thing, with room among them, no best outcome by the rule cuts any of those needs off. Where also the needs were met before the step, each can be left exactly met, and nothing comes from nothing, the best outcome takes exactly the spare above them.",
+  "new": "Where the allowed outcomes are only those that keep every need on the things the rule does not go by, with room among them, no best outcome by the rule cuts any of those needs off. Where also the rule ranks an outcome above another whenever it is higher at one of the things it goes by and lower at none, the needs were met before the step, each can be left exactly met, and nothing comes from nothing, the best outcome takes exactly the spare above them."
+ },
+ {
+  "where": "arrow b2.felt>b2.heard",
+  "field": "en",
+  "old": "Where the rest judge no more in the favoured side's favour than that side does: the lock stays if, and only if, by the time the rest begin to count the loss, judgments taken together already favour what the rule favours.",
+  "new": "Where each step adds to the loss and the rest judge no more for the favoured side than that side does: the lock stays if, and only if, by the time the rest begin to count the loss, judgments taken together already favour what the rule favours."
+ },
+ {
+  "where": "arrow b2.uncounted>a1.past",
+  "field": "tag_en",
+  "old": "it shows only when it is too late",
+  "new": "it makes a difference only when it is too late"
+ },
+ {
+  "where": "arrow b2.uncounted>a1.past",
+  "field": "en",
+  "old": "If the loss makes no difference to anything that sets the rule until what is being lost can no longer be kept, then no rule that goes only by whether those things keep going can read it in time. The same holds if the only things that set the rule are the ones being lost.",
+  "new": "If the loss makes no difference to whether any of the pool keeps going until what is being lost can no longer be kept, then it can get back early enough to no rule set only from which of them keep going. The same holds if the only ones in the pool are the ones being lost."
+ },
+ {
+  "where": "arrow b2.uncounted>a2.ended",
+  "field": "en",
+  "old": "With room to gain, every best outcome by the rule leaves the uncounted thing at its lowest allowed level. What lives on it is cut off if, and only if, that level is below its need; still needing it, it stops.",
+  "new": "Where the rule ranks an outcome above another whenever it is higher at one of the things the rule goes by and lower at none, whatever either leaves of other things, and there is room to gain, every best outcome by the rule leaves those other things at their lowest allowed level. What lives on one of them, its need met before the step, is cut off if, and only if, that level is below its need; still needing it, it stops."
+ },
+ {
+  "where": "arrow b2.counted>b3.gone",
+  "field": "tag_en",
+  "old": "built case: the lead removed what counted the loss",
+  "new": "built case: the larger share removed those that judged against it"
+ },
+ {
+  "where": "arrow b2.counted>b3.gone",
+  "field": "en",
+  "old": "Built case: the rule had turned. But the lead, grown large, drew faster on what the counters of the loss stood on; after two updates they were gone, and the lock returned for good.",
+  "new": "Built case: the rule favoured the other side at two steps. But as the first side's share grew, more was drawn from what those that judged against it lived on; they were gone, and from the next step the lock was back for good."
+ },
+ {
+  "where": "arrow b1.outside>b1.swing",
+  "field": "tag_en",
+  "old": "the rule comes to be updated from its results",
+  "new": "the rule comes to be set again from what is selected under it"
+ },
+ {
+  "where": "arrow b1.outside>b1.swing",
+  "field": "en",
+  "old": "What a rule picks reaches the rule only at a step where the rule is updated from it. Until the first such step the rule stays as it began, whatever it picks. No theorem says what brings such a step.",
+  "new": "What is selected under a rule makes a difference to the rule only at a step where the rule is set again from it. Until the first such step the rule stays as it began, whatever is selected. No theorem says what brings such a step."
+ },
+ {
+  "where": "arrow b3.inside>b3.checkers",
+  "field": "tag_en",
+  "old": "the loop reaches its own checks",
+  "new": "the checks too come to follow what the rule favours"
+ },
+ {
+  "where": "arrow b3.inside>b3.checkers",
+  "field": "en",
+  "old": "The loop reaches its own ways out. Second order: the ways a loss could come to count are filled from inside. Third: breaking them is what gets rewarded. A reading; no theorem.",
+  "new": "The checks too come to follow what the rule favours. Second order: the ways a loss could come to count are filled by what the rule favours. Third: breaking them is itself what the rule favours. A reading; no theorem."
+ },
+ {
+  "where": "arrow b3.checkers>d2.handed",
+  "field": "tag_en",
+  "old": "the pattern keeps remaking what picks it",
+  "new": "the pattern keeps remaking what selects it"
+ },
+ {
+  "where": "arrow b3.checkers>d2.handed",
+  "field": "en",
+  "old": "The pattern goes on remaking what picks it while what carries it is replaced: the meta-attractor in the wide sense. Open; no theorem says this pattern is handed on.",
+  "new": "The pattern goes on remaking what selects it while what carries it is replaced: the meta-attractor in the wide sense. Open; no theorem says this pattern is handed on."
+ },
+ {
+  "where": "stay b3.inside",
+  "field": "en",
+  "old": "From a locked start the lock lasts at every step, however far a loss that makes no difference to anything inside it grows; where each step adds to that loss (given), it passes every bound.",
+  "new": "From a locked start the lock lasts at every step, however far a loss grows that changes neither what is selected next nor how the rule is set; where each step adds to that loss (a premise), it passes every bound."
+ }
+]

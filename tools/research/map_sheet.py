@@ -474,7 +474,7 @@ def build(d: dict) -> dict:
                         tip = p['tips'][0 if inside(p['from']) else 1]; at = (tip[0] - 12, tip[1])
                 else:
                     b = geo['boxes'][r.get('c') or r['stay']]; at = (b['x'] - G['BW'] / 2 + 3, b['y'] - G['BH'] / 2 + 3)
-                st['soft'] = 'p' in r and p['kind'] in ('needs', 'built', 'reading')   # not proved of the course itself: a hollow number
+                st['soft'] = 'p' in r and p['kind'] in ('needs', 'built', 'reading')   # needs a further premise, or is a built example or a reading: a hollow number
                 badges.append((n, S['tone'], at, st['soft']))
         path.update(cset=sorted(set(cset)), pset=sorted(set(pset)), tones=tones, badges=badges, n=n)
         paths.append(path)
@@ -551,10 +551,10 @@ def path_picture(m: dict, path: dict, lang: str = 'en') -> str:
 
 S = {
  'en': {
-  'kind': {'law': 'proved', 'line': 'a proved boundary', 'needs': 'proved only with something given from outside', 'built': 'built example only', 'reading': 'a reading, not proved', 'same': 'one is a case of the other'},
+  'kind': {'law': 'proved', 'line': 'a proved boundary', 'needs': 'proved only with a further premise', 'built': 'built example only', 'reading': 'a reading, not proved', 'same': 'one is a case of the other'},
   'note': '*AI-written, 12 November 2026: [how far it goes](#how-far-it-goes).*',
   'picture_alt': 'The first path drawn on the map: the boxes it passes through are lit and its steps numbered',
-  'how': '*How to read it.* Each row asks one thing. Each box is one way the answer can stand. To place a thing, find on each row that applies to it the box that fits it; the boxes drawn so far need not hold every answer. An arrow with a head is a way from one box to another: along a row, a change of that row\'s answer; between rows, from one row\'s answer to another\'s. Its line says how that is known: solid where it is proved, dashed where it is proved only with something given from outside, dotted where it is not shown in general (a built example, or a reading). *Proved* means a theorem on a stated model, checked by machine; whether a real case fits the model is what the tests show. A line with a bar across it and no head is not a way from one box to the other: it marks a proved boundary between the two. A double line, also without a head, says one box is a case of another. On a path, a hollow number marks a step that is not proved of the course itself. A small ring on a box: something is known about staying there. A violet dot: a test is laid on it. A box outlined in green dashes is one the work wants to reach.',
+  'how': '*How to read it.* Each row asks one thing. Each box is one way the answer can stand. To place a thing, find on each row that applies to it the box that fits it; the boxes drawn so far need not hold every answer. An arrow with a head is a way from one box to another: along a row, a change of that row\'s answer; between rows, from one row\'s answer to another\'s. Its line says how that is known: solid where it is proved, dashed where it is proved only with a further premise, which the arrow names, dotted where it is not shown in general (a built example, or a reading). *Proved* means a theorem on a stated model, checked by machine; whether a real case fits the model is what the tests show. A line with a bar across it and no head is not a way from one box to the other: it marks a proved boundary between the two. A double line, also without a head, says one box is a case of another. On a path, a hollow number marks a step whose first arrow needs a further premise, or is shown only in a built example or as a reading. A small ring on a box: something is known about staying there. A violet dot: a test is laid on it. A box outlined in green dashes is one the work wants to reach.',
   'operate': '**[The same map to operate](interactive.html)**: choose a path, a test, any box or any arrow, or place something you know. (GitHub shows that file as source; [it opens here]({site}).)',
   'and_others': ', and others', 'by_name': 'Start from a name you know', 'by_name_lead': 'Each name is close to what one box says, not the same as it, and is not its source\'s agreement. The box gives the name in full; how close it is, and within what limits, is in the reading it comes from, which this page does not show. The path the box lies on is in brackets.',
   'settings': '%(built)d of the %(n)d were run in built set-ups, with language models or small learning programs; %(field)d on data from the field.',
@@ -566,7 +566,7 @@ S = {
   'met_lead2': 'Each test is laid on the map with what in it was taken as which box, what the reasoning said, what was seen and what gave way.',
   'seen': 'Seen', 'gave': 'What gave way', 'whole': 'The whole map', 'whole_alt': 'The whole map: every row with its boxes and the arrows drawn between them',
   'whole_lead': 'Along a row, further right means less is still open from there. That order is ours: an order of open and closed, not of better and worse. The last band holds for anything that keeps going, whatever its ties, and has no such order.',
-  'along': 'Counted over the arrows drawn so far that run along a row (boundaries and the last band apart): %(rl)d of the %(r)d that run right are proved of the course itself; of the %(l)d that run back, %(ll)d are, %(ln)d need something given from outside and %(lb)d are shown only in a built example. This is a count on an order we chose, not a finding.',
+  'along': 'Counted over the arrows drawn so far that run along a row (boundaries, cases of another and the last band apart): %(rl)d of the %(r)d that run right are proved with no further premise; of the %(l)d that run back, %(ll)d are, %(ln)d need a further premise and %(lb)d are shown only in a built example. This is a count on an order we chose, not a finding.',
   'index': 'Every box', 'far': 'How far it goes',
   'proved': '*Proved* means a theorem on a stated model, checked by machine (Lean). A real case may not meet a theorem\'s conditions, or may be paired with the boxes wrongly: the tests laid here show both.',
   'below': 'The theorems and tests behind the map, by role and tie: [the ledger]({ledger}), [what the theorems say]({laws}), [every dynamic]({dynamics}), [every test as a case]({cases}).',
@@ -580,10 +580,10 @@ S = {
   'stay_t': 'staying there', 'wanted': 'One of the boxes the work wants to reach.',
  },
  'zh': {
-  'kind': {'law': '已证明', 'line': '已证明的界线', 'needs': '已证明，但要有过程之外给定的东西', 'built': '只在造出来的例子里见过', 'reading': '解读，没有证明', 'same': '一个是另一个的特例'},
+  'kind': {'law': '已证明', 'line': '已证明的界线', 'needs': '已证明，但另需一个前提', 'built': '只在造出来的例子里见过', 'reading': '解读，没有证明', 'same': '一个是另一个的特例'},
   'note': '*由 AI 写成，2026 年 11 月 12 日：[做到了哪一步](#做到了哪一步)。*',
   'picture_alt': '画在图上的第一条路：它经过的方框亮着，每一步标了号',
-  'how': '*怎么读。* 每一行问一件事。每个方框是一种可能的回答。要给一样东西找位置，就在每一个用得上的行里找合它的那个方框；目前画出的方框未必是全部的回答。带箭头的线是从一个方框到另一个的路：沿着一行的，是这一行的回答变了；跨行的，是从一行的回答通到另一行的回答。线型标明凭什么这么说：实线是已证明的；虚线是已证明、但要有过程之外给定的东西；点线是没有一般证明的（造出来的例子，或者一种解读）。“已证明”是指在写明的模型上成立、由机器检查过的定理；真实的情形合不合这个模型，要看放在图上的检验。线上有一道短杠、不带箭头的，不是从一个方框到另一个的路：它标的是两个方框之间已证明的界线。双线也不带箭头，表示一个方框是另一个的特例。路上空心的编号，标的是没有就过程本身证明的那几步。方框角上的小圆圈：关于“留在那里”已经知道一些。紫色的小点：有检验放在这里。绿色虚线框出的方框，是这项工作想要到达的。',
+  'how': '*怎么读。* 每一行问一件事。每个方框是一种可能的回答。要给一样东西找位置，就在每一个用得上的行里找合它的那个方框；目前画出的方框未必是全部的回答。带箭头的线是从一个方框到另一个的路：沿着一行的，是这一行的回答变了；跨行的，是从一行的回答通到另一行的回答。线型标明凭什么这么说：实线是已证明的；虚线是已证明、但另需一个前提（箭头写明是哪一个）；点线是没有一般证明的（造出来的例子，或者一种解读）。“已证明”是指在写明的模型上成立、由机器检查过的定理；真实的情形合不合这个模型，要看放在图上的检验。线上有一道短杠、不带箭头的，不是从一个方框到另一个的路：它标的是两个方框之间已证明的界线。双线也不带箭头，表示一个方框是另一个的特例。路上空心的编号，标的是另需一个前提、或只见于造出来的例子、或只是一种解读的那几步。方框角上的小圆圈：关于“留在那里”已经知道一些。紫色的小点：有检验放在这里。绿色虚线框出的方框，是这项工作想要到达的。',
   'operate': '**[这张图的互动版](interactive.html)**：选一条路、一个检验、任何一个方框或箭头，或者放上你熟悉的一件事。（GitHub 上这个文件显示为源码；[在这里打开]({site})。）',
   'and_others': '等等', 'by_name': '从你熟悉的说法进来', 'by_name_lead': '每个说法只是和一个方框讲的相近，并不等同，也不是说出处赞同它。方框那里写着这个说法的全称；相近到什么程度、限度在哪里，写在它出自的那条解读里，这一页没有列出。括号里是方框所在的那条路。',
   'settings': '%(n)d 个里有 %(built)d 个是在搭出来的情境里跑的，用的是语言模型或小型学习程序；%(field)d 个用的是实地数据。',
@@ -595,7 +595,7 @@ S = {
   'met_lead2': '每个检验放到图上的时候都写明：把其中的什么当作哪个方框，推理怎么说，实际看到什么，是哪里没对上。',
   'seen': '看到的', 'gave': '是哪里没对上', 'whole': '整张图', 'whole_alt': '整张图：每一行、行里的方框，以及画出的箭头',
   'whole_lead': '一行里越往右，从那里还走得通的越少。这个次序是我们排的：排的是路还开着多少，不是好坏。最下面一栏说的是凡是延续的都会有的情形，不排这个次序。',
-  'along': '数一数目前画出的、沿着一行走的箭头（界线和最下面一栏不算）：往右的 %(r)d 条里，%(rl)d 条是就过程本身证明的；往回的 %(l)d 条里，这样的有 %(ll)d 条，%(ln)d 条要有过程之外给定的东西，%(lb)d 条只在造出来的例子里见过。这是在我们自己排的次序上数出来的，不是一个发现。',
+  'along': '数一数目前画出的、沿着一行走的箭头（界线、特例和最下面一栏不算）：往右的 %(r)d 条里，%(rl)d 条不另需前提就已证明；往回的 %(l)d 条里，这样的有 %(ll)d 条，%(ln)d 条另需一个前提，%(lb)d 条只在造出来的例子里见过。这是在我们自己排的次序上数出来的，不是一个发现。',
   'index': '每一个方框', 'far': '做到了哪一步',
   'proved': '“已证明”是指：在写明的模型上成立的定理，由机器（Lean）检查过。真实的情形未必满足定理的条件，也可能和图上的方框对应错了：放在图上的检验里，两样都出现过。',
   'below': '这张图背后的定理和检验，按角色和联系排列（英文）：[总账]({ledger})，[定理说了什么]({laws})，[每一个动态]({dynamics})，[每个检验作为一个案例]({cases})。',

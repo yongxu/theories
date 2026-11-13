@@ -1,0 +1,33 @@
+# Check lean-3: lead, first path's frame, steps 17–18, fronts, legend
+
+*AI-written, 13 November 2026; read only. Lean paths relative to `.../Becoming/`.*
+
+## Serious
+
+**S1. === sheet (lead_en).** "where each update sets its rule again only from the share it already favours, it goes on the same way". OLD: "can lock itself in"; the modal and conditions are gone (box b1.swing is set from the share and swings). A lock needs `Raises`, `ReadsShare` and `upper`, with a locked start or `uniform` (RuleCapture.lean:145, 294; ClosedCapture.lean:307). Read as "unaffected by the loss", it also needs `join` (ClosedCapture.lean:220): the next share must not depend on the loss. Step 3 keeps that condition. **SAYS MORE.** *Fix:* "…it can lock, and a lock in which the loss makes a difference neither to what is selected next nor to how the rule is set goes on the same way".
+
+**S2. === fronts §5 third cell; §1 "The work proves…".** "…from a locked start stays locked however large a loss grows that makes no difference to it". `lock_outlives_loss` (ClosedCapture.lean:307–316) needs `Raises`, `ReadsShare`, `upper` and `Accrues`, and a loss that neither `fA` nor `hA` reads (:220–223). The cell drops all of these, and L-short's "to either", which makes it untrue: in `PoolFromCourse.Borne.shapers_left` (PoolFromCourse.lean:753) a threshold on the share alone, with nothing reading the loss, leaves the lock at step 4 because the loss falls on the favoured side (shows 3: "the loss changed no judgment"). **SAYS MORE.** *Fix (L-short):* "…can lock: on stated models, where selection does not lower the favoured share, a share not lower sets again a rule not lower, and a rule not lower than a favouring one still favours, a locked start stays locked however large a loss grows that makes no difference either to what is selected next or to the rule (02)". In §1, the same "either … or …" replaces "to it".
+
+**S3. === fronts §1, §2, §4; §3 line 32.** "whether each step sets its rule again only from the share it already favours". OLD asked whether the rule can lock, which the theorems answer on their premises. NEW asks for the premise itself, so line 32's "theorems answer … the fourth" becomes untrue. **SAYS SOMETHING ELSE.** *Fix:* "and whether, where each update sets its rule again only from the share it already favours, its rule can lock".
+
+**S4. === sheet (lead_en) (OLD WAS ALREADY LOOSE).** "proved under its stated conditions alone: where the loss gets back early enough to change the rest's judgments…". `turned_iff` (ReadInTime.lean:185) has no "early enough". That condition is step 8's model, and shows 3 calls joining the two "a reading". *Fix:* "where the loss changes the rest's judgments, and the judgments together go against…".
+
+## Smaller
+
+1. **=== path lock (lead_en).** "This path follows a rule that each update sets again from what it already favours". Steps 7, 9 and 14 set the rule from judgments, and 8 and 15 from whether each keeps going (cast 1). **SAYS SOMETHING ELSE.** *Fix:* "This path follows what can happen to such a rule where updates set it again from what it already favours, and what turns it."
+2. **=== step 18; arrow b3.inside>b3.checkers (en).** NEW says "and then" / "First … then". OLD said "one order further" / "Second order … Third". An order of levels becomes an order in time. *Fix:* "…filled by what the rule favours and, one order further, breaking them is what is selected for"; and in the arrow, "Second order: … Third: …".
+3. **=== want_en.** The third item, "does not become what they select for", lets in the case where the return equals the cost. That case belongs to bs.pays (`RuleShaping.favours_iff` is weak). **SAYS LESS.** *Fix:* "does not cover its cost". The first item adds "early enough", which is b2.felt's condition, not b2.counted's, and is not in OLD. **SAYS MORE.** *Fix:* drop it.
+4. **=== row b3 (en).** "Whose judgments the rule is set from" leaves out b3.list (step 12, whether each keeps going). *Fix:* "Whom the rule is set from".
+5. **=== fronts §1 centre.** "what sustains it is used up and makes no difference to it". By C2 only how much is left can make no difference. *Fix:* "while how much is left of what sustains it is used up, making no difference to it".
+6. **=== fronts §5 second cell.** "couplings (what makes a difference to it)". 03 says "A particular selection may ignore what its couplings carry". *Fix:* "(what can make a difference to it)".
+7. **=== fronts §5 room; third thing (OLD WAS ALREADY LOOSE).** `Room` (Optimum.lean:555) is about an outcome higher at *one* condition beyond than an eligible other, and is *exceeded* by another (no lower at each condition of the family, higher at one). The cell's quantifiers are right. For exactness: "higher at any one of what makes none". The question form "does better … where less is left" reads as a trade-off, but `Room` does not say the beater has less left. *Fix:* "whether every outcome leaving more of what makes none is beaten on what makes a difference".
+8. **=== fronts §1/§2/§4.** "each step": the rule stays between updates. *Fix:* "each update".
+9. **=== step 17 (OLD WAS ALREADY LOOSE).** It is marked "proved only with a further premise" but names none. *Fix:* add "That such an update comes is the further premise."
+10. **=== box b1.outside (says_en) (OLD WAS ALREADY LOOSE).** "gains share". `Raises` is weak (RuleCapture.lean:145). *Fix:* "does not lose share".
+11. **=== shows 3 (OLD WAS ALREADY LOOSE).** "exactly when … turns the rule for good". The iff is only over the second update, given the first (check-L2 #2). *Fix:* "where the judgments went against it at one update, exactly where they still do at the next".
+12. **Marking (cast 9).** "that the loss goes on growing" is listed as a further premise. Yet `turned_iff` (step 9, law) and `window_removed_unregistered` (PoolFromCourse.lean:332, step 5, law) also take `Accrues`. *Fix:* add "steps 5 and 9 take the loss's growth too; they are marked by their other premises."
+13. **(c) legend.** "proved under their stated conditions alone" and "need a further premise" count `law` and `needs` exactly (map_sheet.py:511–515, 711). Gaps: `same` arrows are excluded too (:514), unsaid; step 1 (no Lean) is not hollow (:477), so reads as proved alone. *Fix:* "(boundaries, cases of another, and the last band apart)"; hollow for no Lean.
+
+## Checked and found exact
+
+passages (about); band B; row bs; box b3.checkers; path lock (en); shows 1, 2, 4; arrows b1.outside>b1.swing, b3.checkers>d2.handed; the want's arrow counts; the other paths' markings; fronts §5 row head; the fifth question (02 §9); labels 1, 2, 5.

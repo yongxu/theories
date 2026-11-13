@@ -258,3 +258,25 @@ Eight AI readers each took one layer of what a new session loads, is told to do 
 #### What was done (AI-authored)
 
 The three edits were made in the landing that carries this entry, and the file as it stood before them is kept as `_process/history/2026-11-13-instructions/AGENTS-before-the-four-questions.md`. The second paragraph of AGENTS.md, which states the centre, was not changed: it waits for his read of the versions another session holds for him.
+
+### The first path, said from the centre (13 November 2026)
+
+#### Context (AI-authored)
+
+After the three edits to AGENTS.md the session restarted with an account switch, and he wrote:
+
+#### Ren's words
+
+> continue please - token account switched, restart your stopped workflow as well
+
+#### What was done (AI-authored)
+
+No reader workflow had been cut off; a lint check had, and was rerun. The coordinator landed four small changes from the dig (a record says what holds; the register to 13 November; the briefs of 11 and 12 November marked as a record; kept history left out of plain searches). Another session landed the centre paragraph in AGENTS.md and on the fronts (DW, step 1), which he had left to the two sessions with "work with the coordinator - no need to ask my approval" ([that session's record](2026-11-13-what-a-law-is-and-the-words.md)). The coordinator then put to him the piece that landing had left to the map's session, with its scale: the questions asked of a selection on the front pages, and the map's lead and first path, re-said in the centre paragraph's words, words only. He chose the answer the coordinator had written:
+
+#### Ren's words
+
+> Yes, do it
+
+#### What was done (AI-authored)
+
+The map's part was written three times: the first version put the centre paragraph's phrases in and, by six AI readers' reports, read heavier than the old text and said more than the proofs in places; the second started from the old sentences and changed only what had the old shape; the third took the readers' exact fixes. The Chinese was written from the Chinese of the centre paragraph and read against the English. It landed as the first part of board item WM2; how it was made and what is still weak is in [the map's record, Round 6](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/rw-one-map/README.md). The front pages' part follows.
