@@ -110,7 +110,7 @@
       "witness": "Becoming.«后不定则至终有常可不同行»"
     },
     {
-      "en": "That GrammarLaws' law joining constancy with going alike and a next is proved from these: it follows from them by an argument stated in the module's header, and its proof there is its own.",
+      "en": "That GrammarLaws' theorem joining constancy with going alike and a next is proved from these: it follows from them by an argument stated in the module's header, and its proof there is its own.",
       "kind": "scope"
     },
     {
@@ -145,7 +145,7 @@
     "names-provisional"
   ],
   "validation_scope": {
-    "en": "Pure core, axiom reports empty. Seven short laws and header sentences added to GrammarPath after «有常则至终有常», nothing else changed, and a module of one definition and thirteen laws, near-definitional; the two witnesses computed on two and three occurrences. Written by AI agents: implemented in two rounds, with last fixes by the coordinating session, and read cold for statements, duplicates and conformance by five AI agents in two rounds and by the coordinating session; no human audit yet."
+    "en": "Pure core, axiom reports empty. Seven short theorems and header sentences added to GrammarPath after «有常则至终有常», nothing else changed, and a module of one definition and thirteen theorems, near-definitional; the two witnesses computed on two and three occurrences. Written by AI agents: implemented in two rounds, with last fixes by the coordinating session, and read cold for statements, duplicates and conformance by five AI agents in two rounds and by the coordinating session; no human audit yet."
   },
   "next_delta": {
     "en": "Move the tie into GrammarLaws beside the shared laws, so that «局定后则有常当且仅当同行可续» is derived from it below and not proved beside it, and relate its decided premise to the one «类闭则本类常闭» takes in OwnClass."
@@ -204,7 +204,7 @@
       "id": "what-a-line-holds-and-a-regularity-takes-in",
       "relation": "formal-reuse",
       "detail": {
-        "en": "Reuses constancy up to the net's end and its law from constancy («至终有常», «有常则至终有常»)."
+        "en": "Reuses constancy up to the net's end and its theorem from constancy («至终有常», «有常则至终有常»)."
       },
       "interface": {
         "output": {
@@ -227,7 +227,7 @@
       },
       "interface": {
         "output": {
-          "en": "The whole step's laws."
+          "en": "The whole step's theorems."
         },
         "input": {
           "en": "The whole step at the class met with being able to go on."
@@ -242,7 +242,7 @@
       "id": "a-regularity-kept-and-changed",
       "relation": "formal-reuse",
       "detail": {
-        "en": "Reuses the whole step's law of a line that never ends (Law.unending_iff_steps)."
+        "en": "Reuses the whole step's theorem on a line that never ends (Law.unending_iff_steps)."
       },
       "interface": {
         "output": {
@@ -306,7 +306,7 @@
     {
       "id": "what-the-net-fixes-of-ones-own-class",
       "detail": {
-        "en": "Its law «类闭则本类常闭» takes a decided premise of another scope, over the member's block."
+        "en": "Its theorem «类闭则本类常闭» takes a decided premise of another scope, over the member's block."
       }
     }
   ],

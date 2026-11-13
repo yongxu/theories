@@ -11,7 +11,7 @@
   "reviewed_at_utc": "2026-11-13T02:39:22+00:00",
   "statement": {
     "en": "On a way and a level cut by a need, under the regime's premises the line never ends exactly where the course as it was, the need met, is first marked and its level one step later is at or above the kept kind's point of no return. Unmarked and losing more than it is given, it ends where the net ends.",
-    "zh": "一种延续的方式连同一个水位，水位不足所需即无后继。在调节律的前提下，线不穷，当且仅当照旧的进程在所需一直满足之下第一次落在标记水位，而一步之后的水位不低于所保持之类的不可返回点。无标记而所失多于所得，则线终于网尽之处。"
+    "zh": "一种延续的方式连同一个水位，水位不足所需即无后继。在体制的前提下，线不穷，当且仅当照旧的进程在所需一直满足之下第一次落在标记水位，而一步之后的水位不低于所保持之类的不可返回点。无标记而所失多于所得，则线终于网尽之处。"
   },
   "laws": [
     {
@@ -74,7 +74,7 @@
         "Becoming.TurningInTime.regime_step_eq",
         "Becoming.TurningInTime.ends_with_net_regime"
       ],
-      "zh": "无中不生有时，RegimeMargin 的步即此形式；给还在 y 以下不足 H、alone 轨道上每一方式取用不少于 H、起始低于 H + y 时，调节律满足上述前提。"
+      "zh": "无中不生有时，RegimeMargin 的步即此形式；给还在 y 以下不足 H、alone 轨道上每一方式取用不少于 H、起始低于 H + y 时，体制满足上述前提。"
     },
     {
       "en": "With AloneOutside, decided marks and the course as it was coming below the need, the line never ends exactly where there is a step T of the course as it was, the need met and no level marked before it, the need met and the level marked at it, from whose next configuration the line never ends.",
@@ -91,11 +91,11 @@
       "zh": "自一个属于“每一步都保持、取用为 H₂”之类的方式起，无中不生有，给还在 y₂ 以下不足 H₂、自 y₂ 至 hi 足以抵 H₂，H₂ 之下的步使水位不出 hi，所需为正且不超过 H₂ + y₂，水位不超过 hi：线不穷，当且仅当水位不低于 H₂ + y₂。"
     },
     {
-      "en": "With the premises of the two laws above, a way after a marked step of the kept kind, giving short of H₁ below y₁, every way on alone's orbit using at least H₁ and the start below H₁ + y₁ and at most hi: the line never ends exactly where there is such a step T and the level of the course as it was at T + 1 is at or above H₂ + y₂.",
+      "en": "With the premises of the two theorems above, a way after a marked step of the kept kind, giving short of H₁ below y₁, every way on alone's orbit using at least H₁ and the start below H₁ + y₁ and at most hi: the line never ends exactly where there is such a step T and the level of the course as it was at T + 1 is at or above H₂ + y₂.",
       "declarations": [
         "Becoming.TurningInTime.turns_in_time_iff"
       ],
-      "zh": "在以上两律的前提之下，标记水位上一步之后的方式属于所保持之类，给还在 y₁ 以下不足 H₁，alone 轨道上每一方式取用不少于 H₁，起始低于 H₁ + y₁ 且不超过 hi：线不穷，当且仅当有这样的一步 T，且照旧进程在 T + 1 的水位不低于 H₂ + y₂。"
+      "zh": "在以上两定理的前提之下，标记水位上一步之后的方式属于所保持之类，给还在 y₁ 以下不足 H₁，alone 轨道上每一方式取用不少于 H₁，起始低于 H₁ + y₁ 且不超过 hi：线不穷，当且仅当有这样的一步 T，且照旧进程在 T + 1 的水位不低于 H₂ + y₂。"
     },
     {
       "en": "At a level that meets the need, where the way after the step is of another kind, the configuration ends under the kind's class and still conditions something; with AloneOutside, a kind alone keeps and some unmarked level that meets the need, the kind's class is then not constant up to the net's end at that configuration's class. Both hold at every need.",
@@ -156,7 +156,7 @@
       "en": "No axiom. Discrete steps; any type of ways and whole-number levels; one function giving the way after a step and one giving the level after it, each of the way and the level."
     },
     {
-      "en": "Which levels make a difference to the way is given: the marked levels and alone (AloneOutside) are a premise of every law that uses them."
+      "en": "Which levels make a difference to the way is given: the marked levels and alone (AloneOutside) are a premise of every theorem that uses them."
     },
     {
       "en": "A kept kind is kept at every step (kept), a way after a marked step is of it (turns), and every way of it has one standing use H₂ (uses); with these the course after the turn has one point of no return."
@@ -195,11 +195,11 @@
       "kind": "non-implication"
     },
     {
-      "en": "Any join with ReadOffInTime's laws of reading in time: they are on another model, and only its first_of_decided is used here.",
+      "en": "Any join with ReadOffInTime's theorems on reading in time: they are on another model, and only its first_of_decided is used here.",
       "kind": "scope"
     },
     {
-      "en": "That ClosedCapture's and PoolFromCourse's laws of their own loop (course_past, window_past_course, window_never_read) follow from agrees_until_marked: they keep their own proofs.",
+      "en": "That ClosedCapture's and PoolFromCourse's theorems on their own loop (course_past, window_past_course, window_never_read) follow from agrees_until_marked: they keep their own proofs.",
       "kind": "scope"
     },
     {
@@ -236,10 +236,10 @@
     "conditional-not-universal"
   ],
   "validation_scope": {
-    "en": "Pure core, axiom reports empty; imported by Becoming.WayOfUnits, in the Lean's second layer only through two theorems it imports. Compositions of landed theorems (Optimum's level theorems, RegimeMargin's point of no return, the root's conditions, the joined two-level step) with one split at the first marked level; the witness computed on its model. Written by AI agents: a first attempt held after a cold reading found it restated root laws; implemented in two rounds and read cold by five AI agents and the coordinating session; no person's review of it is recorded yet."
+    "en": "Pure core, axiom reports empty; imported by Becoming.WayOfUnits, in the Lean's second layer only through two theorems it imports. Compositions of landed theorems (Optimum's level theorems, RegimeMargin's point of no return, the root's conditions, the joined two-level step) with one split at the first marked level; the witness computed on its model. Written by AI agents: a first attempt held after a cold reading found it restated theorems of the root; implemented in two rounds and read cold by five AI agents and the coordinating session; no person's review of it is recorded yet."
   },
   "next_delta": {
-    "en": "Prove ClosedCapture's and PoolFromCourse's courses instances of the pair, so that their own-loop laws are derived below from agrees_until_marked; move «类闭则本类常闭» and first_of_decided down, putting the module in the first layer; give the step T in closed form by Optimum.reread_deadline_iff; a test on a trained system, held."
+    "en": "Prove ClosedCapture's and PoolFromCourse's courses instances of the pair, so that their own-loop theorems are derived below from agrees_until_marked; move «类闭则本类常闭» and first_of_decided down, putting the module in the first layer; give the step T in closed form by Optimum.reread_deadline_iff; a test on a trained system, held."
   },
   "correspondence": {
     "en": "Reading (AI-written, from the home section's reading and the study folder's NEAR-WORK): in the root's words the centre is one sentence with two endings: a line that stays alike in a respect ends where the net ends, or ends while the net goes on. The first is the Locked course of RuleCapture and ClosedCapture outliving what it draws down, once what is drawn down is a level the going on needs; the second is turning before the end. Which happens is a matter of three levels of one quantity: where its fall first makes a difference to the way, the level that step leaves, and the level from which it holds under the lesser use. Read whole: Pezzey and Anderies 2001 and 2002 (a response switched on at a chosen threshold, the need to come in time said in words), Brander and Taylor 1998, HANDY 2014; the Lock-in Hypothesis and Gradual Disempowerment through summaries. In part: Turchin 2009 (a corrective that draws on a surplus growth erodes), Muneepeerakul and Anderies 2020. From an abstract only: Self-Sealing Reward Models (an exact boundary past which an evaluator loop cannot be refuted), Dalton and Coats 2000. None compares the three levels or is machine-checked; nothing here is called new."
@@ -256,7 +256,7 @@
       "id": "going-alike-up-to-the-nets-end",
       "relation": "formal-reuse",
       "detail": {
-        "en": "Reuses the cut step and its laws, and going alike from constancy up to the net's end (Law.stepWhile and its steps, end, unending, going-alike, constancy and constancy-up-to-the-end laws; «至终有常局定后则同行»)."
+        "en": "Reuses the cut step and its theorems, and going alike from constancy up to the net's end (Law.stepWhile and its steps, end, unending, going-alike, constancy and constancy-up-to-the-end theorems; «至终有常局定后则同行»)."
       },
       "interface": {
         "output": {
@@ -275,7 +275,7 @@
       "id": "re-optimizing-above-a-renewal-ends-it",
       "relation": "formal-reuse",
       "detail": {
-        "en": "Reuses the level's laws (Optimum.ends_within, never_rises, level_le_start)."
+        "en": "Reuses the level's theorems (Optimum.ends_within, never_rises, level_le_start)."
       },
       "interface": {
         "output": {
@@ -580,7 +580,7 @@
     {
       "id": "a-pool-read-off-the-course",
       "detail": {
-        "en": "Its laws window_through, window_past and window_unread state pointwise where the reading through [N, K) reads off the first part; here the two courses agree until the level first lies in [N, K)."
+        "en": "Its theorems window_through, window_past and window_unread state pointwise where the reading through [N, K) reads off the first part; here the two courses agree until the level first lies in [N, K)."
       }
     },
     {
