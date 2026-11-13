@@ -2080,3 +2080,18 @@ home 02 §11, records `going-alike-up-to-the-nets-end` and `turning-in-time`;
 the marks, the need and the kept kind are given, nothing is about a trained system, and the older lock modules keep their names;
 mapped by eighteen AI agents, implemented and read in two rounds and a follow-up, with the readers' reports and a held first attempt kept in the study folder `tt-turning-in-time`, where the centre on one page and a page for Ren await his read;
 core runs `20261112T175519.814370Z` and `20261112T183400.534891Z`, the render, the focused checks and the gate passed;
+WU landed (content tip `b793cb87b`; new Lean in the core, one record, rows on an atlas entry, nothing paid; on Ren's "push first so I can read it on GitHub, then continue" of 13 November): `Becoming.WayOfUnits`, a way as the units present, each going on while the level meets its own need and each taking its own use, on TurningInTime's pair with a next while some unit goes on;
+the exact condition for any number of units (the line never ends exactly where it comes to a way that is not empty, whose units' needs are all met at a level from which what they take together holds, the regime's premises asked along the course);
+for two units `turns_in_time_iff` with its premises on marks proved;
+a greater need of the first unit, or more of the use on it, never ends a line that did not end;
+with a first unit that takes nothing the line never ends exactly where the second unit's alone never ends;
+one witness pair;
+home 02 §11, which is also re-said by WL's rule, record `a-way-of-units`, twelve rows on the entry `turning-in-time` and in the binder mapping;
+one source of a turn is derived, the ending of a unit that takes, while the marks of a way that conditions on a reading stay given, units only end, and the comparisons are for two units;
+a first design that claimed the marks derived was cut back by three AI readers, the Lean was written by an AI agent and read by three, the landing prepared by one and read by two checkers, all kept in the study folder `wu-a-way-of-units`;
+core run `20261113T023828.938796Z`, the render, the focused checks, the atlas tests whole and the gate passed;
+WM landed (content tip `b5b9fda11`; data, tool strings and generated views; no Lean, no new result, no atlas entry changed, nothing paid; on Ren's "Yes, theorem" of 13 November): the map's data, pages and tools call the account's own proved statements theorems (定理), by WL's rule: 729 of 1,061 uses of "law", 定律 and 律 in the seven data files changed (614 English, 115 Chinese), each sorted by a first AI reader, the doubtful classes read by the coordinator, every change and every kept use checked by a second AI reader (698 of 735 confirmed, the rest decided one by one), and the rendered pages and the tools' diff read by four last AI readers;
+"law" stays for a model's step, another field's law, what holds in every model of a class, names from the tests' records and verbatim quotations, and in the data keys `laws` and kind `law`, the page name `LAWS.md` and ids;
+a built case is said to be "not a general theorem", since it is proved too;
+record in [the map's record, Round 5](../../research/2026-10-05-generative-foundation-review/root-foundation/development/rw-one-map/README.md);
+checked by the tool's validation, the two map test files with the site's three, links and the landing gate, the full suite not run.
