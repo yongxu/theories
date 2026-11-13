@@ -102,7 +102,7 @@
 <circle cx="626.8" cy="672.9" r="60.6" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
 <text x="626.8" y="680.8" font-size="22" font-weight="bold" text-anchor="middle" fill="#57534e">02</text>
 <text x="596.5" y="565.3" font-size="16" font-weight="bold" text-anchor="start" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">Map</text>
-<text x="596.5" y="582.3" font-size="13" text-anchor="start" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">102 results · 164 within</text>
+<text x="596.5" y="582.3" font-size="13" text-anchor="start" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">102 results · 163 within</text>
 <text x="596.5" y="599.3" font-size="13" text-anchor="start" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">17 of 83 modules on the grammar</text>
 <circle cx="700" cy="849.6" r="62.9" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
 <text x="700" y="857.6" font-size="22" font-weight="bold" text-anchor="middle" fill="#57534e">03</text>
@@ -212,8 +212,8 @@
 <text x="506" y="1407.3" font-size="14" text-anchor="start" fill="#1c1917">written where it is 15 or more. The AI-written</text>
 <text x="506" y="1425.3" font-size="14" text-anchor="start" fill="#1c1917">records assign the kind; the registry checks that</text>
 <text x="506" y="1443.3" font-size="14" text-anchor="start" fill="#1c1917">an interface has its fields and cites a file among</text>
-<text x="506" y="1461.3" font-size="14" text-anchor="start" fill="#1c1917">the record’s hashed references (on 874 of all</text>
-<text x="506" y="1479.3" font-size="14" text-anchor="start" fill="#1c1917">1,279 such edges; each cites a Lean file); nothing</text>
+<text x="506" y="1461.3" font-size="14" text-anchor="start" fill="#1c1917">the record’s hashed references (on 873 of all</text>
+<text x="506" y="1479.3" font-size="14" text-anchor="start" fill="#1c1917">1,278 such edges; each cites a Lean file); nothing</text>
 <text x="506" y="1497.3" font-size="14" text-anchor="start" fill="#1c1917">checks that the Lean there uses the cited result.</text>
 <line x1="470" y1="1514.3" x2="496" y2="1514.3" stroke="#1c1917" stroke-width="3.2" marker-end="url(#back)"/>
 <text x="506" y="1519.3" font-size="14" text-anchor="start" fill="#1c1917">The same, darker where an earlier chapter’s</text>

@@ -21,7 +21,7 @@ This group's 389 modules are listed on 7 parts of about equal size, the largest 
 | [Part 4 of 7](../lean-declarations/becoming-core-part-4.md) | 41, from Learning.lean to OrderNormal.lean | 2,904 |
 | [Part 5 of 7](../lean-declarations/becoming-core-part-5.md) | 50, from OverExchange.lean to ReflexivePrediction.lean | 2,586 |
 | [Part 6 of 7](../lean-declarations/becoming-core-part-6.md) | 53, from RegimeMargin.lean to SensitivityWebs.lean | 2,746 |
-| [Part 7 of 7](../lean-declarations/becoming-core-part-7.md) | 59, from SetPointOptimum.lean to InquirySufficiency.lean | 2,700 |
+| [Part 7 of 7](../lean-declarations/becoming-core-part-7.md) | 59, from SetPointOptimum.lean to InquirySufficiency.lean | 2,717 |
 
 | Module | Page | theorem/lemma |
 |---|---|---:|
@@ -397,7 +397,7 @@ This group's 389 modules are listed on 7 parts of about equal size, the largest 
 | <a id="module-aea2986798ed"></a>[ValuationFrames.lean](../lean-declarations/becoming-core-part-7.md#module-aea2986798ed) | part 7 | 26 |
 | <a id="module-7625cee7c051"></a>[Verification.lean](../lean-declarations/becoming-core-part-7.md#module-7625cee7c051) | part 7 | 87 |
 | <a id="module-9e2d826ba824"></a>[Viability.lean](../lean-declarations/becoming-core-part-7.md#module-9e2d826ba824) | part 7 | 25 |
-| <a id="module-bada26c2ddd0"></a>[WayOfUnits.lean](../lean-declarations/becoming-core-part-7.md#module-bada26c2ddd0) | part 7 | 47 |
+| <a id="module-bada26c2ddd0"></a>[WayOfUnits.lean](../lean-declarations/becoming-core-part-7.md#module-bada26c2ddd0) | part 7 | 64 |
 | <a id="module-d37846dd645c"></a>[Weighted.lean](../lean-declarations/becoming-core-part-7.md#module-d37846dd645c) | part 7 | 38 |
 | <a id="module-f0e802abd0ee"></a>[WeightedCommuting.lean](../lean-declarations/becoming-core-part-7.md#module-f0e802abd0ee) | part 7 | 18 |
 | <a id="module-1855e5878d07"></a>[WeightedTraces.lean](../lean-declarations/becoming-core-part-7.md#module-1855e5878d07) | part 7 | 6 |
