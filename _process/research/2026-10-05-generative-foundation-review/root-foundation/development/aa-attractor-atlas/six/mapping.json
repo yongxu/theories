@@ -45678,5 +45678,463 @@
   "source": "lister",
   "binders": [],
   "takes_unbound": {}
+ },
+ "Becoming.TurningInTime.ends_with_net": {
+  "family": "A",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 6,
+    "name": "outside",
+    "type": "Becoming.TurningInTime.AloneOutside marked alone after",
+    "premises": [
+     "turningintime-aloneoutside"
+    ]
+   },
+   {
+    "position": 8,
+    "name": "needs",
+    "type": "0 < need",
+    "premises": [
+     "optimum-coupled-need-positive"
+    ]
+   },
+   {
+    "position": 9,
+    "name": "un",
+    "type": "∀ (x : Nat), need ≤ x → ¬marked x",
+    "premises": [
+     "turningintime-unmarked"
+    ]
+   },
+   {
+    "position": 14,
+    "name": "step",
+    "type": "∀ (t : Nat),\n  (Becoming.Law.orbit (Becoming.TurningInTime.asItWas alone left) s (t + 1)).snd =\n    (Becoming.Law.orbit (Becoming.TurningInTime.asItWas alone left) s t).snd + g t - d t",
+    "premises": [
+     "optimum-level-law"
+    ]
+   },
+   {
+    "position": 15,
+    "name": "renews",
+    "type": "∀ (t : Nat), g t ≤ r",
+    "premises": [
+     "optimum-renews-at-most"
+    ]
+   },
+   {
+    "position": 16,
+    "name": "over",
+    "type": "∀ (t : Nat), r < d t",
+    "premises": [
+     "optimum-draws-above-renewal"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.TurningInTime.ends_with_net_regime": {
+  "family": "A",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 5,
+    "name": "outside",
+    "type": "Becoming.TurningInTime.AloneOutside marked alone after",
+    "premises": [
+     "turningintime-aloneoutside"
+    ]
+   },
+   {
+    "position": 7,
+    "name": "needs",
+    "type": "0 < need",
+    "premises": [
+     "optimum-coupled-need-positive"
+    ]
+   },
+   {
+    "position": 8,
+    "name": "un",
+    "type": "∀ (x : Nat), need ≤ x → ¬marked x",
+    "premises": [
+     "turningintime-unmarked"
+    ]
+   },
+   {
+    "position": 13,
+    "name": "nothing",
+    "type": "Becoming.RegimeMargin.FromNothing giving",
+    "premises": [
+     "regimemargin-fromnothing"
+    ]
+   },
+   {
+    "position": 14,
+    "name": "short",
+    "type": "Becoming.RegimeMargin.Short giving H y",
+    "premises": [
+     "regimemargin-short"
+    ]
+   },
+   {
+    "position": 17,
+    "name": "uses",
+    "type": "∀ (j : Nat), H ≤ use (Becoming.Law.orbit alone w j)",
+    "premises": [
+     "turningintime-uses-along-orbit"
+    ]
+   },
+   {
+    "position": 18,
+    "name": "below",
+    "type": "x < H + y",
+    "premises": [
+     "regimemargin-start-below-point"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "regimemargin-step": "definition"
+  }
+ },
+ "Becoming.TurningInTime.unending_iff_first_marked": {
+  "family": "A",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 7,
+    "name": "outside",
+    "type": "Becoming.TurningInTime.AloneOutside marked alone after",
+    "premises": [
+     "turningintime-aloneoutside"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "asItWasEnds",
+    "type": "∃ n, (Becoming.Law.orbit (Becoming.TurningInTime.asItWas alone left) s n).snd < need",
+    "premises": [
+     "turningintime-as-it-was-ends"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "k3-decided": "data"
+  }
+ },
+ "Becoming.TurningInTime.unending_iff_above": {
+  "family": "A",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 10,
+    "name": "kept",
+    "type": "∀ (w : W) (x : Nat), Kept w → Kept (after w x)",
+    "premises": [
+     "turningintime-kept"
+    ]
+   },
+   {
+    "position": 11,
+    "name": "uses",
+    "type": "∀ (w : W), Kept w → use w = H₂",
+    "premises": [
+     "turningintime-uses"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "nothing",
+    "type": "Becoming.RegimeMargin.FromNothing giving",
+    "premises": [
+     "regimemargin-fromnothing"
+    ]
+   },
+   {
+    "position": 13,
+    "name": "short",
+    "type": "Becoming.RegimeMargin.Short giving H₂ y₂",
+    "premises": [
+     "regimemargin-short"
+    ]
+   },
+   {
+    "position": 14,
+    "name": "meets",
+    "type": "Becoming.RegimeMargin.Meets giving H₂ y₂ hi",
+    "premises": [
+     "regimemargin-meets"
+    ]
+   },
+   {
+    "position": 15,
+    "name": "keeps",
+    "type": "Becoming.RegimeMargin.Keeps giving H₂ hi",
+    "premises": [
+     "regimemargin-keeps"
+    ]
+   },
+   {
+    "position": 16,
+    "name": "needs",
+    "type": "0 < need",
+    "premises": [
+     "optimum-coupled-need-positive"
+    ]
+   },
+   {
+    "position": 17,
+    "name": "within",
+    "type": "need ≤ H₂ + y₂",
+    "premises": [
+     "turningintime-within"
+    ]
+   },
+   {
+    "position": 20,
+    "name": "kind",
+    "type": "Kept w",
+    "premises": [
+     "turningintime-start-kept"
+    ]
+   },
+   {
+    "position": 21,
+    "name": "high",
+    "type": "x ≤ hi",
+    "premises": [
+     "regimemargin-start-level-le-hi"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "regimemargin-step": "definition"
+  }
+ },
+ "Becoming.TurningInTime.turns_in_time_iff": {
+  "family": "A",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 15,
+    "name": "outside",
+    "type": "Becoming.TurningInTime.AloneOutside marked alone after",
+    "premises": [
+     "turningintime-aloneoutside"
+    ]
+   },
+   {
+    "position": 16,
+    "name": "turns",
+    "type": "∀ (w : W) (x : Nat), marked x → Kept (after w x)",
+    "premises": [
+     "turningintime-turns"
+    ]
+   },
+   {
+    "position": 17,
+    "name": "kept",
+    "type": "∀ (w : W) (x : Nat), Kept w → Kept (after w x)",
+    "premises": [
+     "turningintime-kept"
+    ]
+   },
+   {
+    "position": 18,
+    "name": "uses",
+    "type": "∀ (w : W), Kept w → use w = H₂",
+    "premises": [
+     "turningintime-uses"
+    ]
+   },
+   {
+    "position": 19,
+    "name": "nothing",
+    "type": "Becoming.RegimeMargin.FromNothing giving",
+    "premises": [
+     "regimemargin-fromnothing"
+    ]
+   },
+   {
+    "position": 20,
+    "name": "short",
+    "type": "Becoming.RegimeMargin.Short giving H₂ y₂",
+    "premises": [
+     "regimemargin-short"
+    ]
+   },
+   {
+    "position": 21,
+    "name": "meets",
+    "type": "Becoming.RegimeMargin.Meets giving H₂ y₂ hi",
+    "premises": [
+     "regimemargin-meets"
+    ]
+   },
+   {
+    "position": 22,
+    "name": "keeps",
+    "type": "Becoming.RegimeMargin.Keeps giving H₂ hi",
+    "premises": [
+     "regimemargin-keeps"
+    ]
+   },
+   {
+    "position": 23,
+    "name": "needs",
+    "type": "0 < need",
+    "premises": [
+     "optimum-coupled-need-positive"
+    ]
+   },
+   {
+    "position": 24,
+    "name": "within",
+    "type": "need ≤ H₂ + y₂",
+    "premises": [
+     "turningintime-within"
+    ]
+   },
+   {
+    "position": 25,
+    "name": "short₁",
+    "type": "Becoming.RegimeMargin.Short giving H₁ y₁",
+    "premises": [
+     "regimemargin-short"
+    ]
+   },
+   {
+    "position": 28,
+    "name": "uses₁",
+    "type": "∀ (j : Nat), H₁ ≤ use (Becoming.Law.orbit alone w j)",
+    "premises": [
+     "turningintime-uses-along-orbit"
+    ]
+   },
+   {
+    "position": 29,
+    "name": "below",
+    "type": "x < H₁ + y₁",
+    "premises": [
+     "regimemargin-start-below-point"
+    ]
+   },
+   {
+    "position": 30,
+    "name": "high",
+    "type": "x ≤ hi",
+    "premises": [
+     "regimemargin-start-level-le-hi"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "k3-decided": "data",
+   "regimemargin-step": "definition"
+  }
+ },
+ "Becoming.TurningInTime.kind_ends_while_net_goes": {
+  "family": "A",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 9,
+    "name": "ge",
+    "type": "need ≤ x",
+    "premises": [
+     "turningintime-level-meets-need"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "other",
+    "type": "¬κ (after w x) = κ w",
+    "premises": [
+     "turningintime-other-kind"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.TurningInTime.kind_not_toEnd_of_turn": {
+  "family": "A",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 6,
+    "name": "outside",
+    "type": "Becoming.TurningInTime.AloneOutside marked alone after",
+    "premises": [
+     "turningintime-aloneoutside"
+    ]
+   },
+   {
+    "position": 9,
+    "name": "keeps",
+    "type": "∀ (w : W), κ (alone w) = κ w",
+    "premises": [
+     "turningintime-alone-keeps-kind"
+    ]
+   },
+   {
+    "position": 14,
+    "name": "ge",
+    "type": "need ≤ x",
+    "premises": [
+     "turningintime-level-meets-need"
+    ]
+   },
+   {
+    "position": 15,
+    "name": "other",
+    "type": "¬κ (after w x) = κ w",
+    "premises": [
+     "turningintime-other-kind"
+    ]
+   },
+   {
+    "position": 16,
+    "name": "ge₀",
+    "type": "need ≤ x₀",
+    "premises": [
+     "turningintime-level-meets-need"
+    ]
+   },
+   {
+    "position": 17,
+    "name": "un₀",
+    "type": "¬marked x₀",
+    "premises": [
+     "turningintime-level-unmarked"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.TurningInTime.Three.goes_on": {
+  "family": "A",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.TurningInTime.Three.turned_and_ends": {
+  "family": "A",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.TurningInTime.Three.line_ends_while_net_goes": {
+  "family": "A",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.TurningInTime.Three.ends_as_it_was": {
+  "family": "A",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
  }
 }

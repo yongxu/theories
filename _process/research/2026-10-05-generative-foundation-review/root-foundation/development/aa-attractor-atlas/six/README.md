@@ -126,3 +126,9 @@ It found 1 high, 1 medium and 10 low, all fixed:
   - the integration now reads the kept evidence.
 
 The second round's fixes were checked by the atlas's validation, the tests, the render and a recount. No third reader read them: fourteen agents were what Ren's yes covered.
+
+## Rows added after the pass
+
+*AI-written, 13 November 2026.* The pass read the theorems the atlas listed on 11 November. A theorem an entry lists under `premises` later needs its row here too, or `test_atlas`'s `test_every_listing_holds_its_binders` fails. [integrate.py](integrate.py) does not regenerate rows added this way; rerun [added/add_rows.py](added/add_rows.py) after it.
+
+- **13 November 2026, eleven rows for `Becoming.TurningInTime`** (the entry `turning-in-time`, landed that night as board item TT). The entry listed the eleven theorems with their premises and this mapping held none of them. The landing's gates did not reach `test_atlas`; the full gate, run after the push that morning, did, and that was its one failure. The rows: binders as [lister.py](lister.py)'s own Lean function printed them for those names against the compiled module ([added/2026-11-13-turning-in-time.lister.txt](added/2026-11-13-turning-in-time.lister.txt)); each binder given the premises the entry already listed for its theorem ([added/2026-11-13-turning-in-time.json](added/2026-11-13-turning-in-time.json)); the script checks, before it writes, that what the binders are given and what is taken unbound are together exactly the entry's list. No checker set to refute read these eleven rows; the six shares' rows each had one.
