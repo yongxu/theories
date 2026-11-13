@@ -108,6 +108,8 @@ Four further scripts from the session's scratch folder are named by no report an
 |---|---|
 | `NOTE.md` | this note |
 | `READER.md` | the six readings in short, what was done about each finding, and what stays open |
+| `A-WAY-OF-UNITS.md`, `A-WAY-OF-UNITS.zh.md` | the item on one page, in English and in Chinese written apart (Fable, after the landing) |
+| `a-way-of-units.svg`, `a-way-of-units.zh.svg` | that page's picture: the two witness ways from one start |
 | `DESIGN-attacked.md` | the first design, as attacked (Fable; `DESIGN.md`'s first line calls it `DESIGN-R3-attacked.md`) |
 | `DESIGN.md` | the design after the attack (Fable) |
 | `readers/` | `r3-knowing.md`, `r3-readers.md`, `r3-logic.md` on the first design; `v1-statements.md`, `v2-premises.md` on the first module; `v3-cold.md` on the module as landed, before its last wording fixes; `k1-said-against-proved.md`, `k2-data-and-registration.md`, the two checkers of the prepared landing |

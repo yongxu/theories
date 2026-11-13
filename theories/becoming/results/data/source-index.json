@@ -2343,6 +2343,32 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean"
       ]
     },
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/wu-a-way-of-units/A-WAY-OF-UNITS.md": {
+      "title": "A way of units: a turn with no mark given",
+      "local_links": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tt-turning-in-time/TURNING-IN-TIME.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/wu-a-way-of-units/A-WAY-OF-UNITS.zh.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/wu-a-way-of-units/DESIGN-attacked.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/wu-a-way-of-units/NOTE.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/wu-a-way-of-units/READER.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/wu-a-way-of-units/a-way-of-units.svg",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean",
+        "theories/becoming/chapters/02-MAP.md"
+      ]
+    },
+    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/wu-a-way-of-units/A-WAY-OF-UNITS.zh.md": {
+      "title": "由单元组成的方式：无需标记的转向",
+      "local_links": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tt-turning-in-time/TURNING-IN-TIME.zh.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/wu-a-way-of-units/A-WAY-OF-UNITS.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/wu-a-way-of-units/DESIGN-attacked.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/wu-a-way-of-units/NOTE.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/wu-a-way-of-units/READER.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/wu-a-way-of-units/a-way-of-units.zh.svg",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean",
+        "theories/becoming/chapters/02-MAP.md"
+      ]
+    },
     "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/za-concern-formed/NOTE.md": {
       "title": "ZA: concern formed within the dynamics",
       "local_links": [

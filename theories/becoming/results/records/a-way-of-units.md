@@ -158,4 +158,4 @@ Aliases: `a way of units`, `a turn with no mark given`, `Becoming.WayOfUnits.une
 
 </details>
 
-Documentary review UTC: `2026-11-13T02:39:22+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-13T04:06:30+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
