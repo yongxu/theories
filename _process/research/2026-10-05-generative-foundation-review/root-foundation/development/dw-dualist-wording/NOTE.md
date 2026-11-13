@@ -1,0 +1,81 @@
+# DW: where the wording carries a subject facing an object
+
+*AI-written, 13 November 2026 (board item DW). A scan, a sorting and a proposed order of work. Nothing in the account's texts was changed by it. Ten minutes.*
+
+## What was asked
+
+Ren, 13 November 2026, 10:02 WIB ([his words](../../../../../../sources/15-codex-theory-conversations/2026-11-13-what-a-law-is-and-the-words.md)): "it's not only about the word law … what I actually want is to take out the Western dualism and the words that requires like subject object differentiation. Right, so that should be the real goal … it's apparently more efficient if we scan for other words as well."
+
+## What was done
+
+Fifteen AI readers (Fable) each read one part whole, with eight lenses and the repository's four tests for a sentence: the first texts, the overview and glossary, the uses pages, chapters 01 to 05, 07 and 08, the page on the free-energy principle, the map, the names of the Lean package's 27,607 declarations by word frequency, the reading path's vocabulary by frequency (262,000 words), and the Chinese fronts with chapter 06. Each finding was sorted as a name, a construction, a slot, a pointer or a pair, with the sentences quoted and what they in fact state. A sixteenth reader then asked what the scan missed, where the readers disagree, and what they over-read. The findings are in [`scan/scan-results.json`](scan/scan-results.json); the brief is [`scan/brief-scan.js.txt`](scan/brief-scan.js.txt).
+
+## What the scan shows
+
+**1. It is one sentence shape, not a list of words.** Every reader put the same thing first: the sentence in which the account states its centre and its aim.
+
+> what a selection … reaches, what it drains beyond what it reads, how it locks on what it already chose … a joint selection that reads beyond its own share and does not come to select for control over its own selection
+
+A noun made a doer (a selection, an optimum, the rule), a knower's verb (reads, sees, blind), a place (beyond, outside), a self (its own, itself) and a contest (wins, buys power, captures). It stands on the first screen of every front, in AGENTS.md, which every AI session loads first, in section titles of chapters 02, 03, 05 and 07, and in Lean names (`favours_reaching_beyond`, `RemovesItsReaders`). Three replacements have already kept it: "registers" became "reads", "beyond" became "outside", and on the map "selection" became "the rule", which took over the same verbs.
+
+**2. The theorems under it are already said as relations.** "Two histories are selected alike by every selection through a formation's couplings exactly when they are alike through them" (03). "A region closed under the step" (02). In the Lean, `SelectsThrough` says a predicate is constant on classes of histories alike through what couples in; nothing in it acts. So the split sits in the summaries: bold leads, section openers, headings, the first screens and the AI readings. The re-saying can start from sentences the pages already hold.
+
+**3. "Read" is the largest single carrier, and it is four different relations.** On the twenty English pages: 4,340 forms of read, against 972 of couple, 668 of depend and 28 of "goes on through". Chapter 08 retired "registers" because it "presupposes a knower facing a world"; "reads" presupposes the same and is used four times as often. Its uses:
+
+| Use | What is stated | Kind |
+|---|---|---|
+| a step, a law or a rule "reads" a level | its next value differs where that level differs | a name; the pages' own words say it ("depends only on", "makes a difference to", "couples into") |
+| "read from", "unread", "a loss it does not read" | the same, with the arrow turned and the reader dropped | a construction; it carries "beyond" |
+| "readers", "a reading" that a line carries | in the Lean, four different things: what feeds a level, what informs a selection, a weighted count, what carries a reading | a slot; one word hides four |
+| "read as", "read off", "[AI reading]" | the account's own interpreting | fine; kept |
+
+Under the first use lie three relations that "depends on" would merge: conditioning in the grammar, coupling by level in the World, and being a function of. So a swap is the wrong tool here too. The senses have to be counted first.
+
+**4. The slots are real holes, honestly marked, and are not to be renamed.** Own and self as extent (which relation and which class is a centre's own), significance and "counts", the order and the chooser, readers and shapers, the class as chosen, the act as what no law fixes. The pages say each is given and not derived. What no single reader saw: they share one grammar, a passive with the supplier left out ("supplied", "given from outside", "taken", "marked": 416 forms against 23 with a named subject). That puts whoever draws the class outside an account whose method chapter says it has no outside.
+
+**5. Three families of metaphor remain after the loaded nouns went.** A ruler (rule 893, forbids 150, verdict 143). A container (beyond 660, outside 247, and "within" about 150 times in the container sense: if "beyond" is said again and "within" stays, the picture stays with the sign turned). A contest and a market (pays, buys, costs, price 258; power, control, capture 294), though chapter 08 already "keeps money, payment and ownership for actual economic relations".
+
+**Also found.** The ethics sentence ("what a course draws on, what it opens and closes, and who bears it") has the centre sentence's grammar and stands on ten pages. The account's own frame ("a map … so that people and AI can see the way together", "how far it has been seen") sets a seer before a way. The counterfactual theorems themselves have "a part that acts and the rest that follows a law". "Humans and AI" is mostly said as one net, and twice as a designer outside what is designed.
+
+**In the Lean names.** The strong ruler and owner words are not there at all (obey, govern, master, authority, purpose, subject: 0). `reads` is in 484 names and the binder `obs` occurs 1,391 times, where each definition states only that one level makes a difference to another. Beside nearly every such name a relational one already stands (`DependsOnlyOn`, `Sensitive`, `AlikeThroughUpTo`, `Couples`, `ClosedUnder`), and 784 names are in the root's own terms.
+
+**In the Chinese.** The fronts were translated from the English, and the grammar came with them: 读取 124, 之外 and 外部 125, 规则 as an actor 127, 胜出 and 代价 71, and "…的东西" 187 times where 所 with a verb names the end of a relation and adds no thing. The Chinese already has what the English lacks: 相 with a verb for one relation with both ends (相待, 相因; chapter 06 proves `«能所相待»`), 所 and 能, 及 and 所不及, 无外 and 不出 for reach and no outside, 感 and 应, and 回到 (comes back), which the fronts already use 29 times and is their best phrase.
+
+## What already says it well, and stays
+
+The root's sections ("sameness is in some respect, a class"; "taker and drawn-on are two roles of one relatum"; "knower and known belong to one loop"). "A life goes on through what sustains it." "Whose loss never comes back." Chapter 02 §11 and the two modules under it, where the centre is said with way, level, need and marked, and nothing reads and nothing is beyond. Chapter 06, written in Chinese. Attributed terms of other fields. Comparisons with their order named. "Beyond" where its region is named. "Law" in the step sense where defined. The critic lists words that look like a lens and are not (decided, listed, witness, judge, keeps): a pass that goes by frequency would hit them first.
+
+## What not to do
+
+A word list. On 1 November 45 words were swept and the centre sentence was missed; each ban since has been met by a word with the same grammar. The test is the sentence: is the respect said; is a pair said as one relation with two ends; is separateness shown; is "better" said with its comparison.
+
+## The order of work proposed
+
+1. **The centre sentence, said once from the theorems, for Ren's read.** It governs every front and every session. A draft is below. AGENTS.md changes only after he has read it.
+2. **Glossary rows that state their basis** for read (four senses), rule, own, loss, beyond, within and supplied, as the row for law now does. Small, checkable against the Lean, and they stop the next page from being written in the old shape.
+3. **Count before changing.** "Read" by its senses and "beyond", "outside" and "within" by bare against named, use by use, as "law" was counted.
+4. **Re-say by kind**, page by page, each change read by a second reader against the theorem it summarises: the dependence sense of "reads"; the bare "beyond"; the rule as actor and the reflexives ("its own winners", "locks itself in") as one loop at two paces; the contest and market words; the ethics sentence.
+5. **The slots in one place**, with the supplier named: the account's writers are formations within what they describe.
+6. **The Lean names**: no renaming now. A table from each split-carrying name to the relational name that already stands beside it, and new modules named in the root's terms from their first line, as the last two were.
+7. **The Chinese pages written in their own right**, from 相, 所, 及, 感应 and 回到, and not from the English.
+8. **The map's form** (rows that ask, boxes, a thing "placed"), with the map's session, after Ren has seen a sketch.
+
+## A draft of the centre sentence (not applied)
+
+Now, in AGENTS.md and on four fronts:
+
+> It is first a map for alignment: what a selection (a reward, a judge, a market, a vote, a training run) reaches, what it drains beyond what it reads, how it locks on what it already chose. From it we want to design an alignment that keeps humans and AI, selecting together, out of instrumental convergence and the meta-attractor: a joint selection that reads beyond its own share and does not come to select for control over its own selection.
+
+A draft from the theorems' own statements:
+
+> It is first a map for alignment. Where courses are selected, by a reward, a judge, a market, a vote or a training run, which of them go on depends only on the differences that couple into the selecting: courses alike in those go on alike. So a condition they all go on through can fall while nothing in the selecting differs. Where the selecting is carried to its best, that condition falls as far as any course lets it. And where the criterion is set from the share that went on under it, the same share comes back, and the fall makes no difference. From this we want to design an alignment in which what humans and AI together let go on stays coupled to more than the share already favoured, and in which shaping the criterion does not rise by what comes back to those who shape it.
+
+It is longer. It names no doer and no beyond, and each clause is a theorem's statement. It still has "selected", "criterion" and "favoured", and "we … design". It has been read by no one but its writer.
+
+## How far this has been checked
+
+The scan is AI readers' reading, sixteen of them, with one critic over the rest. The counts are grep counts over the twenty English pages and include link text and anchors. The senses of "read" and the bare and named uses of "beyond" are not yet counted. No person has read the findings.
+
+## Cost
+
+About 2.8 million subagent tokens, sixteen agents.

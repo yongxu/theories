@@ -1,0 +1,137 @@
+# The 20 English pages of the reading path and the map: 262132 words. Content words by how often they occur (top 900).
+
+step 1850   reading 1492   read 1431   theorem 1254   two 1107   condition 998   exactly 985   nothing 925
+course 919   own 852   through 743   within 707   order 706   rule 703   law 655   record 647
+holds 619   class 590   some 588   loss 582   world 582   formation 572   beyond 568   above 567
+level 565   steps 562   model 544   continuation 539   selection 525   need 501   relation 500   first 490
+over 489   theorems 488   gives 483   line 482   part 479   keeps 476   without 458   share 453
+alike 427   widening 425   form 424   along 417   proved 405   given 390   below 390   end 390
+reads 387   lean 376   member 366   whether 360   conditions 357   counts 356   family 355   lies 351
+run 347   back 344   takes 340   closure 340   whole 339   least 337   rest 330   listed 329
+before 327   none 327   finite 324   after 324   giving 318   ends 317   while 317   open 313
+courses 313   premise 310   reach 310   held 306   alone 305   renewal 305   kept 303   three 302
+across 302   decided 297   never 296   needs 291   way 288   count 287   among 285   against 285
+time 284   comes 283   significance 283   start 282   keeping 277   reaches 271   leaves 270   map 268
+active 267   witness 267   set 266   apart 265   stated 263   most 261   case 260   another 259
+holding 255   process 255   bound 254   coupling 254   fixed 252   others 250   goes 249   draw 247
+shown 247   one's 243   outside 242   type 240   ranks 238   states 232   something 232   formations 232
+drawn 230   change 227   stands 226   once 226   support 224   together 220   off 219   balance 219
+next 217   state 216   couplings 216   premises 215   here 213   core 211   test 209   out 207
+counted 206   left 203   net 203   give 203   actual 200   stays 199   configuration 199   says 198
+acts 196   dependence 196   second 195   relations 195   going 195   runs 195   hold 194   claim 194
+point 194   joint 191   root 190   stock 189   lock 187   readers 187   far 186   couples 186
+new 185   region 185   act 184   occurrence 184   later 184   still 183   neither 183   counting 182
+draws 182   adds 182   becoming 180   whatever 180   activity 180   positive 180   choice 178   shared 177
+living 175   exchange 173   everything 172   names 172   taken 172   flow 172   readings 171   frozen 171
+taking 168   standpoint 168   supplied 167   loop 166   value 166   parts 165   scope 165   tests 163
+closed 163   cannot 163   list 163   life 162   take 162   hypotheses 161   weight 161   models 158
+formation's 158   dynamics 157   changes 156   result 156   amounts 156   locked 154   four 154   named 153
+moves 153   shapers 153   keep 152   falls 150   standing 150   members 149   met 149   results 148
+about 148   response 148   levels 147   grammar 146   history 146   unit 146   item 146   ending 145
+move 145   theory 144   pool 144   return 144   free 144   ranking 142   show 142   possible 142
+witnesses 142   best 141   depends 141   kind 141   pair 140   mixed 139   many 139   configurations 139
+too 138   exact 138   route 137   meets 137   forms 136   selected 136   amount 136   less 134
+listing 133   nor 133   self-concern 132   widens 132   failed 131   come 130   descent 129   carries 129
+fails 128   laws 128   weights 128   hypothesis 127   zero 127   threshold 126   answer 126   seen 124
+wherever 124   admission 124   offspring 123   near-definitional 122   returns 122   present 122   either 121   total 121
+section 120   times 119   revision 118   yet 117   reached 117   empty 117   reward 116   formed 116
+outcome 116   carrier 116   groups 116   losses 115   center's 115   unfolding 114   difference 114   account 113
+optimum 113   number 112   late 112   alignment 111   known 111   further 111   periphery 111   verdict 111
+mutual 111   judge 110   selects 110   shows 110   since 110   thesis 110   constant 110   values 110
+follows 109   work 108   comparison 107   arising 106   makes 106   asks 106   good 105   member's 105
+trained 104   correspondence 104   direction 104   path 103   meet 102   passed 102   last 102   turn 102
+statement 102   reader 101   past 101   thing 101   leave 101   noise 100   source 100   admits 100
+relatum 100   chosen 99   histories 99   balanced 99   anything 98   drawing 98   uses 97   argued 97
+question 97   bounded 97   center 97   higher 96   numbers 96   enough 95   checked 95   ways 94
+passes 94   strict 94   joined 94   home 93   rules 93   forbids 93   orders 92   side 92
+historical 92   stage 92   weighting 91   identity 91   units 90   room 90   told 89   effects 88
+meeting 87   place 87   needed 87   admitted 87   acting 87   ethics 86   name 86   stand 86
+determined 86   systems 85   target 85   boundary 85   say 85   tells 85   affected 84   rises 84
+generation 84   stretch 84   excess 84   margin 84   content 84   control 83   coming 83   inside 83
+definition 83   learning 83   outcomes 83   depend 82   choices 82   rising 82   five 81   earlier 81
+rise 81   coupled 81   supported 81   requirement 81   leaving 81   cost 81   learners 81   bounds 80
+group 80   capacity 80   use 79   said 79   pattern 79   november 79   equality 79   carriers 79
+energy 79   field 78   terms 78   catch 77   rank 77   pure 77   decides 77   fixes 77
+fail 76   derived 76   system 76   dependent 76   measured 76   carried 76   used 75   transmission 75
+check 74   closes 74   added 74   horizon 74   policy 74   shaping 74   ended 74   training 73
+right 73   turns 73   loses 73   relata 73   third 73   beside 73   gap 73   lower 72
+bears 72   cases 72   principle 72   row 72   paths 72   carrying 72   better 71   words 71
+axiom 71   refuted 71   picks 71   study 71   continues 70   exchanges 70   conditional 70   strictly 70
+carry 70   lines 70   natural 70   independent 69   drain 69   capture 69   occurrences 69   wrong 68
+gains 68   word 68   represented 68   again 68   drift 68   gain 68   round 67   self 67
+lists 67   internal 67   favouring 66   break 66   breaks 66   evidence 66   seeing 65   future 65
+differ 65   cell 65   waits 65   stops 65   web 65   common 65   chain 65   lumping 65
+candidate 65   already 64   reason 64   rests 64   general 64   several 64   sense 64   invariance 64
+eligible 64   passing 64   central 63   eight 63   agree 63   means 63   pairs 63   needing 63
+though 62   requires 62   dissipation 62   report 62   plan 62   classes 62   experiments 62   cells 62
+lost 61   conjectured 61   self-concerned 61   found 61   middle 61   lag 61   limit 61   questions 60
+made 60   spread 60   finitely 60   fish 60   ranked 60   frame 60   built 60   grammar's 60
+returning 60   short 60   page 59   review 59   close 59   tell 59   renews 59   changing 59
+excluded 59   increasing 59   covering 59   claims 58   favours 58   cohort 58   exists 57   restraint 57
+relative 57   representation 57   had 57   data 57   discrete 57   let 57   basic 57   principle's 57
+world's 57   blanket 57   reasoning 57   people 56   ceasing 56   even 56   real 56   much 56
+growth 56   position 56   starts 56   update 56   chapter 56   calibration 56   half 56   records 56
+local 56   additive 55   exceeds 55   term 55   answers 55   window 55   family's 55   expected 55
+relational 54   prior 54   make 54   shape 54   force 54   weighted 54   presupposition 54   feeding 54
+depending 54   gave 54   downstream 54   proofs 53   bed 53   lie 53   admit 53   now 53
+experiment 53   census 53   standpoints 53   natural-number 53   repetition 53   construction 53   link 53   grows 52
+criterion 52   choosing 52   things 52   worlds 52   withholding 52   single 52   view 52   shares 52
+converse 52   successor 52   code 52   reaching 52   language 51   proof 51   fall 51   clause 51
+did 51   mass 51   instance 51   core's 51   bay 51   complying 51   sign 51   see 50
+remove 50   opens 50   sets 50   judgment 50   cycle 50   argument 50   lineage 50   flows 50
+valuation 50   equal 50   included 49   down 49   turned 49   finer 49   entry 49   prediction 49
+optima 49   model's 49   decision 49   fit 48   nine 48   tie 48   greatest 48   gated 48
+asked 48   integrated-correction 48   general-framework 48   generative-basis 48   human 47   condition's 47   agreement 47   critical 47
+six 46   dropped 46   note 46   stay 46   near 46   stood 46   separate 46   dweller 46
+links 46   seeking 46   inclusion 46   pairing 46   costs 45   goal 45   measure 45   covers 45
+narrower 45   marked 45   part's 45   containing 45   gate 45   persistence 45   commons 45   chapters 44
+meta-attractor 44   affect 44   families 44   else 44   toward 44   classical 44   wider 44   grain 44
+failure 44   event 44   different 44   design 43   life's 43   longer 43   constructed 43   oneself 43
+senses 43   until 43   stocks 43   adding 43   small 43   inflow 43   symmetric 43   transitive 43
+sufficient 43   changed 43   forbidden 43   separates 43   unchanged 43   split 43   recorded 42   concern 42
+affecting 42   starting 42   well 42   claimed 42   learner 42   lives 41   worth 41   couple 41
+arbitrarily 41   limits 41   agent 41   partial 41   feedback 41   assessment 41   branch 41   moments 41
+deciding 41   correction 41   fix 41   favour 41   onto 40   brings 40   extension 40   group's 40
+ones 40   free-energy 40   error 40   rounds 40   preference 40   risk 40   renaming 40   power 39
+steady 39   restated 39   beginning 39   net's 39   mark 39   current 39   formal 39   persisting 39
+compared 39   theory's 39   another's 39   beliefs 39   however 38   select 38   theorem's 38   distance 38
+influence 38   empirical 38   fed 38   weigh 38   enters 38   line's 38   arises 38   plus 38
+mean 38   agreeing 38   includes 38   conditioning 38   external 38   full 37   written 37   property 37
+example 37   centers 37   kinds 37   module 37   join 37   belief 37   residual 37   effect 37
+wisdom 36   proxy 36   base 36   collective 36   task 36   october 36   floor 36   settings 36
+falling 36   candidates 36   gets 36   extends 36   routes 36   situation 36   chance 36   pays 36
+selecting 35   otherwise 35   naming 35   closures 35   realized 35   plans 35   practical 35   decide 35
+often 35   raises 35   complete 35   course's 35   structure 35   rows 35   modules 35   ties 35
+giver 35   posterior 35   rate 35   sensory 35   chooser 35   drains 34   locks 34   seasons 34
+declarations 34   long 34   pass 34   population 34   necessary 34   offered 34   persists 34   cohorts 34
+drawers 34   function 34   input 34   supply 34   moving 34   band 34   generative 34   blanketed 34
+precedence 34   revised 33   follow 33   offer 33   connected 33   sentence 33   moment 33   themselves 33
+embodied 33   table 33   causal 33   weaker 33   priority 33   standard 33   begins 33   presence 33
+removed 33   reference 33   processes 33   coarser 33   regularity 33   symmetry 33   friston 33   branching 33
+lasts 32   favoured 32   top 32   exits 32   closing 32   sum 32   commitments 32   ceases 32
+lowers 32   evaluation 32   rule's 32   axioms 32   constancy 32   meaning 32   regime 32   description 32
+feasible 32   other's 32   market 31   unread 31   why 31   fishers 31   tested 31   failing 31
+method 31   size 31   drawer 31   yeast 31   sequence 31   related 31   union 31   checks 31
+excludes 31   knowing 31   index 31   root's 31
+
+# Files
+the worktree/README.md
+the worktree/AGENTS.md
+the worktree/GLOSSARY.md
+the worktree/theories/becoming/ONE-PAGE.md
+the worktree/theories/becoming/THE-THEORY-OF-BECOMING.md
+the worktree/theories/becoming/USES.md
+the worktree/theories/becoming/USES-EXAMPLES.md
+the worktree/theories/becoming/COLLECTIVE-DIRECTION.md
+the worktree/theories/becoming/FREE-ENERGY-PRINCIPLE.md
+the worktree/theories/becoming/ONE-ARGUMENT.md
+the worktree/theories/becoming/chapters/01-ROOT.md
+the worktree/theories/becoming/chapters/02-MAP.md
+the worktree/theories/becoming/chapters/03-KNOWING.md
+the worktree/theories/becoming/chapters/04-LIFE.md
+the worktree/theories/becoming/chapters/05-COLLECTIVES.md
+the worktree/theories/becoming/chapters/07-SIGNIFICANCE.md
+the worktree/theories/becoming/chapters/08-METHOD.md
+the worktree/MAP.md
+the worktree/theories/becoming/results/map/THE-MAP.md
+the worktree/theories/becoming/results/map/PATHS.md

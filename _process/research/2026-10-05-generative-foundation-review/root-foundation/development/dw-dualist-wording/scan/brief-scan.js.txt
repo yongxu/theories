@@ -1,0 +1,64 @@
+export const meta = {
+  name: 'dualist-wording-scan',
+  description: 'Scan the reading path, the map, the Lean names and the Chinese pages for words and sentence shapes that need a subject facing an object (read-only), then a critic on what the scan missed',
+  phases: [
+    { title: 'Scan', detail: 'one reader per group of pages, all lenses; plus names, vocabulary and Chinese' },
+    { title: 'Critic', detail: 'what did the scan miss' },
+  ],
+}
+const T = '/Users/ren/tmp/wl/th2'
+const S = '/Users/ren/theories/tmp/r7/words/scan'
+const BRIEF = `You are one of fifteen readers surveying the wording of the theory of becoming (a research repository; read it at ${T}, a worktree). This is reading work: edit no file, run no tests, builds or git commands (the machine is shared and busy). Use Read, Grep, and Bash only for grep or wc.
+
+WHAT THE AUTHOR ASKED (Ren, 13 November 2026, his words): "I think it's not only about the word law. I think there are a bunch of others as well. Like what I actually want is to take out the Western dualism and the words that requires like subject object differentiation. Right, so that should be the real goal." Earlier the same night: "the words we use needs to keep up with our standard like our theory … some part from some culture or some tradition are dualistic but that does not mean we have to use those words", and "it's quite important for us to not misguide our models to carry on using the dualist words", and that thinking and learning "share the same foundation, the same substrate, same world, and the same nature. That's why the world is fundamentally non-dual."
+
+WHAT THE THEORY SAYS OF ITSELF. Its root is one relation, conditioning (缘): something goes on through what it depends on. In the root there are only a relation, classes under it (类), what is alike going alike (同行, 有常 constancy), lines and nets of continuation, and renewal. No thing stands before its conditions, nothing stands over what goes on, and every distinction (subject and object, actor and patient, observer and world, inside and outside, fact and value) has to state its basis: the relation along which it is drawn. Nonduality here erases no real difference; it asks that a difference be said as a difference along a relation, not as two kinds of thing.
+
+WHAT WENT WRONG BEFORE. An earlier pass (1 November) swept 45 loaded words (master, obey, govern, owner, subject, object, observer, …) and fixed a handful. It missed the main thing, found on 12 November: the texts state their centre with a doer, a thing done to, and a beyond ("what a selection reaches, what it drains beyond what it reads, how it locks on what it already chose"), and when a word was banned it was replaced by another with the same grammar ("beyond" 14 times became "outside" 16 times). On 13 November "law" was changed to "theorem" for the account's proved statements. That is one word. Your job is the picture: which words and which sentence shapes carry a dualism, how much, and what the sentence is in fact stating.
+
+LENSES. Read with all of them:
+ 1. Knower and known: a subject facing an object. read, reader, observe, see, perceive, know, detect, notice, represent, model of, information about, signal, registers.
+ 2. Doer and done-to: an agent acting on a patient. selects, chooses, acts on, drains, captures, controls, shapes, optimizes, uses, exploits, takes, wins; a noun made into an actor ("a selection that …", "the rule decides").
+ 3. Ruler and ruled: rule, governs, obeys, forbids, permits, requires, must, constraint, enforce, guarantee, authority, verdict, judge.
+ 4. Inside and outside, self and world: beyond, outside, external, internal, boundary, environment, own, self, other, the rest, within.
+ 5. Thing before its conditions: entity, thing, has, possesses, belongs, property, nature, intrinsic, independent, separate; definitions that name a thing first and add its relations afterwards.
+ 6. Value and purpose set apart from what goes on: good, bad, better, worse, harm, loss, cost, benefit, pays, buys, power, purpose, goal, wants, in order to; market and contest metaphors.
+ 7. Levels and mind against matter: higher and lower order, meta, level above, mental and physical, form and content, mechanism, top-down.
+ 8. Opposites said as two things, where the account means two ends of one relation: proxy and true objective, principal and agent, aligned and misaligned, cooperation and defection, generation and degeneration, signal and noise.
+These lists are starting points. Find what is there, including words not listed.
+
+FOUR TESTS for a sentence (the repository's own): (1) is the respect said, in which things are alike or differ; (2) is a pair said as one relation with two ends; (3) is separateness shown, or presumed; (4) where something is better or worse, is it said by which comparison and from where.
+
+DO NOT make a list of banned words. A word is a finding only where, in its sentences, it brings in a split the theory denies or does not show. The same word can be fine in another sentence (a field's own term used as a pointer and attributed; a distinction whose basis is stated; a technical sense such as conditional independence). Say which.
+
+FOR EACH FINDING give: the word or the sentence shape; the lens; its kind:
+ NAME          a name that misleads and could be replaced one for one by a word that says what is there;
+ CONSTRUCTION  the grammar of the sentence carries the split (a doer and a done-to, a beyond), so replacing a word would keep it and the sentence has to be said again;
+ SLOT          the word marks something the theory takes as given and does not derive (a new name would hide a hole);
+ POINTER       another field's term, used to point at that field, and fine if attributed;
+ PAIR          two ends of one relation said as two things;
+how often it occurs in your pages (count with grep where you can; say if estimated); two or three sentences quoted exactly with file and line; what the sentence is in fact stating, as a relation, in plain words and where you can in the root's words (condition, depends on, goes on through, alike, class, line, net, renewal, level, comes back, makes a difference to); and how much it matters (3 = it frames the page's centre or recurs through it, 2 = recurrent, 1 = local).
+Also say, in a few sentences, what in your pages already says a relation well (so it is kept), and name the three findings you hold most important.`
+const FINDINGS = { type: 'object', properties: {
+  findings: { type: 'array', items: { type: 'object', properties: {
+    term: { type: 'string', description: 'the word, or the sentence shape in a few words' },
+    lens: { type: 'integer' }, kind: { type: 'string', enum: ['NAME', 'CONSTRUCTION', 'SLOT', 'POINTER', 'PAIR'] },
+    count: { type: 'integer' }, counted: { type: 'boolean', description: 'true if counted with grep, false if estimated' },
+    examples: { type: 'array', items: { type: 'object', properties: { where: { type: 'string' }, quote: { type: 'string' } }, required: ['where', 'quote'] } },
+    states: { type: 'string', description: 'what the sentence is in fact stating, as a relation' },
+    weight: { type: 'integer' }, note: { type: 'string' } },
+    required: ['term', 'lens', 'kind', 'count', 'counted', 'examples', 'states', 'weight'] } },
+  kept: { type: 'string' }, top_three: { type: 'array', items: { type: 'string' } } }, required: ['findings', 'kept', 'top_three'] }
+phase('Scan')
+const scans = (await parallel(args.map(u => () =>
+  agent(`${BRIEF}\n\nYOUR PART: ${u.what}\n${u.files.map(f => '- ' + f).join('\n')}\n${u.extra || ''}`,
+    { label: `scan:${u.key}`, phase: 'Scan', effort: 'high', schema: FINDINGS }).then(r => r && ({ key: u.key, ...r }))))).filter(Boolean)
+const digest = scans.map(s => `## ${s.key}\nTop three: ${s.top_three.join(' | ')}\n` + s.findings.map(f => `- [${f.kind}, lens ${f.lens}, weight ${f.weight}, ${f.count}${f.counted ? '' : ' est.'}] ${f.term}: ${f.states}`).join('\n')).join('\n\n')
+phase('Critic')
+const critic = await agent(`${BRIEF}\n\nYOUR PART is different from the others'. Fourteen readers have each scanned a group of pages. Below is the digest of what they found (term, kind, lens, weight, count, and what the sentence in fact states). You are the critic of the scan as a whole. Answer three questions, with evidence from the texts (read and grep the pages under ${T}: README.md, AGENTS.md, GLOSSARY.md, theories/becoming/*.md, theories/becoming/chapters/*.md, theories/becoming/results/map/THE-MAP.md; the vocabulary by frequency is in ${S}/vocabulary.txt):
+ (a) What did they miss? A frequent word or a sentence shape that carries a split and appears in no reader's findings, or only as weight 1 where it frames a page. Check the frequency list against the digest.
+ (b) Where do the readers disagree about one word (one says NAME, another CONSTRUCTION or SLOT or fine)? For each, say which is right and why, from the sentences.
+ (c) Which findings are over-read: a word flagged that in its sentences states a relation with its basis, so that changing it would lose something true?
+Return them as findings (kind as you judge it; put MISSED, DISAGREE or OVER-READ at the start of the note), and in "kept" write the five things the whole scan shows most clearly, in order.\n\nTHE DIGEST\n${digest}`,
+  { label: 'critic', phase: 'Critic', effort: 'high', schema: FINDINGS })
+return { scans, critic }
