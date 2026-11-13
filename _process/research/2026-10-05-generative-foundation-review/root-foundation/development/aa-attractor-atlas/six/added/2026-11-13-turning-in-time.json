@@ -1,0 +1,31 @@
+{
+ "family": "A",
+ "note": "AI-written, 13 November 2026. The eleven theorems the entry turning-in-time lists under `premises`. Binder names as lister.py's aaRow printed them (2026-11-13-turning-in-time.lister.txt); each binder's premises are those the entry already listed for the theorem. The Decidable instance on the marks is k3-decided, taken as data; RegimeMargin.step in a statement is regimemargin-step, taken as a definition, as in RegimeMargin's own rows.",
+ "laws": {
+  "Becoming.TurningInTime.ends_with_net": {
+   "binders": {"outside": ["turningintime-aloneoutside"], "needs": ["optimum-coupled-need-positive"], "un": ["turningintime-unmarked"], "step": ["optimum-level-law"], "renews": ["optimum-renews-at-most"], "over": ["optimum-draws-above-renewal"]},
+   "takes_unbound": {}},
+  "Becoming.TurningInTime.ends_with_net_regime": {
+   "binders": {"outside": ["turningintime-aloneoutside"], "needs": ["optimum-coupled-need-positive"], "un": ["turningintime-unmarked"], "nothing": ["regimemargin-fromnothing"], "short": ["regimemargin-short"], "uses": ["turningintime-uses-along-orbit"], "below": ["regimemargin-start-below-point"]},
+   "takes_unbound": {"regimemargin-step": "definition"}},
+  "Becoming.TurningInTime.unending_iff_first_marked": {
+   "binders": {"outside": ["turningintime-aloneoutside"], "asItWasEnds": ["turningintime-as-it-was-ends"]},
+   "takes_unbound": {"k3-decided": "data"}},
+  "Becoming.TurningInTime.unending_iff_above": {
+   "binders": {"kept": ["turningintime-kept"], "uses": ["turningintime-uses"], "nothing": ["regimemargin-fromnothing"], "short": ["regimemargin-short"], "meets": ["regimemargin-meets"], "keeps": ["regimemargin-keeps"], "needs": ["optimum-coupled-need-positive"], "within": ["turningintime-within"], "kind": ["turningintime-start-kept"], "high": ["regimemargin-start-level-le-hi"]},
+   "takes_unbound": {"regimemargin-step": "definition"}},
+  "Becoming.TurningInTime.turns_in_time_iff": {
+   "binders": {"outside": ["turningintime-aloneoutside"], "turns": ["turningintime-turns"], "kept": ["turningintime-kept"], "uses": ["turningintime-uses"], "nothing": ["regimemargin-fromnothing"], "short": ["regimemargin-short"], "meets": ["regimemargin-meets"], "keeps": ["regimemargin-keeps"], "needs": ["optimum-coupled-need-positive"], "within": ["turningintime-within"], "short₁": ["regimemargin-short"], "uses₁": ["turningintime-uses-along-orbit"], "below": ["regimemargin-start-below-point"], "high": ["regimemargin-start-level-le-hi"]},
+   "takes_unbound": {"k3-decided": "data", "regimemargin-step": "definition"}},
+  "Becoming.TurningInTime.kind_ends_while_net_goes": {
+   "binders": {"ge": ["turningintime-level-meets-need"], "other": ["turningintime-other-kind"]},
+   "takes_unbound": {}},
+  "Becoming.TurningInTime.kind_not_toEnd_of_turn": {
+   "binders": {"outside": ["turningintime-aloneoutside"], "keeps": ["turningintime-alone-keeps-kind"], "ge": ["turningintime-level-meets-need"], "other": ["turningintime-other-kind"], "ge₀": ["turningintime-level-meets-need"], "un₀": ["turningintime-level-unmarked"]},
+   "takes_unbound": {}},
+  "Becoming.TurningInTime.Three.goes_on": {"binders": {}, "takes_unbound": {}},
+  "Becoming.TurningInTime.Three.turned_and_ends": {"binders": {}, "takes_unbound": {}},
+  "Becoming.TurningInTime.Three.line_ends_while_net_goes": {"binders": {}, "takes_unbound": {}},
+  "Becoming.TurningInTime.Three.ends_as_it_was": {"binders": {}, "takes_unbound": {}}
+ }
+}
