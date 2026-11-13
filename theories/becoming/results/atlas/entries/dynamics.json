@@ -1849,11 +1849,12 @@
   },
   "family": "A",
   "mechanism": {
-   "en": "A configuration is a way of going on and a level; one step gives the way after a step and the level after it, and there is a next only where the level meets a need. The class of ways is constant up to the net's end exactly where no two levels that meet the need give one way two different ways after a step; given some way it is constant exactly where nothing is needed and no level makes a difference. Outside a set of marked levels the way after a step is a given function of the way alone (AloneOutside); up to the first marked level of the course as it was, the course is that course. With no marked level meeting a positive need and the level of the course as it was given at most r and taken more than r at every step, the line reaches a configuration that conditions nothing: it ends where the net ends. With decided marks, the way after a marked step of a kind every step keeps, every way of which uses exactly H2, nothing given from nothing and the regime's premises for H2 up to hi, and the course as it was starting below H1 + y1 with giving short of H1 below y1 and uses of at least H1 along its orbit, the line never ends exactly where, at the first marked step with the need met there and before, the level of the course as it was one step later is at or above H2 + y2. Where at a level that meets the need the way after the step is of another kind, the line under the kind's class ends there while the net goes on. Beneath it, in the root: with the successor fixed, constancy up to the net's end is going alike with it decided whether the next conditions anything, and a law's step cut where it cannot go on has a fixed successor. At a need of nothing the net is the whole step, and the courses under PoolFromCourse.windowRead and ClosedCapture.joinRead are courses of the pair; there no line ends where the net ends. The marks, the function outside them, the kept kind and its one use are premises."
+   "en": "A configuration is a way of going on and a level; one step gives the way after a step and the level after it, and there is a next only where the level meets a need. The class of ways is constant up to the net's end exactly where no two levels that meet the need give one way two different ways after a step; given some way it is constant exactly where nothing is needed and no level makes a difference. Outside a set of marked levels the way after a step is a given function of the way alone (AloneOutside); up to the first marked level of the course as it was, the course is that course. With no marked level meeting a positive need and the level of the course as it was given at most r and taken more than r at every step, the line reaches a configuration that conditions nothing: it ends where the net ends. With decided marks, the way after a marked step of a kind every step keeps, every way of which uses exactly H2, nothing given from nothing and the regime's premises for H2 up to hi, and the course as it was starting below H1 + y1 with giving short of H1 below y1 and uses of at least H1 along its orbit, the line never ends exactly where, at the first marked step with the need met there and before, the level of the course as it was one step later is at or above H2 + y2. Where at a level that meets the need the way after the step is of another kind, the line under the kind's class ends there while the net goes on. Beneath it, in the root: with the successor fixed, constancy up to the net's end is going alike with it decided whether the next conditions anything, and a law's step cut where it cannot go on has a fixed successor. At a need of nothing the net is the whole step, and the courses under PoolFromCourse.windowRead and ClosedCapture.joinRead are courses of the pair; there no line ends where the net ends. Where the way is the units present, each going on while the level meets its own need and taking its own use, no level is marked: with every unit needing something, nothing given from nothing, the start at most hi and the regime's premises along the course, the line never ends exactly where it comes to a way that is not empty, its units' needs met, at a level from which what they take together holds; for two units, the second needing no more than the first, from below the point of no return of what both take, this is the exact condition above, its premises on marks proved. The marks, the function outside them, the kept kind and its one use are premises of TurningInTime's pair."
   },
   "records": [
    "turning-in-time",
-   "going-alike-up-to-the-nets-end"
+   "going-alike-up-to-the-nets-end",
+   "a-way-of-units"
   ],
   "declarations": [
    "Becoming.«至终有常局定后则同行»",
@@ -1922,7 +1923,41 @@
    "Becoming.TurningInTime.Three.goes_on",
    "Becoming.TurningInTime.Three.turned_and_ends",
    "Becoming.TurningInTime.Three.line_ends_while_net_goes",
-   "Becoming.TurningInTime.Three.ends_as_it_was"
+   "Becoming.TurningInTime.Three.ends_as_it_was",
+   "Becoming.WayOfUnits.need",
+   "Becoming.WayOfUnits.use",
+   "Becoming.WayOfUnits.goes",
+   "Becoming.WayOfUnits.after",
+   "Becoming.WayOfUnits.taken",
+   "Becoming.WayOfUnits.left",
+   "Becoming.WayOfUnits.Goes",
+   "Becoming.WayOfUnits.net",
+   "Becoming.WayOfUnits.course",
+   "Becoming.WayOfUnits.ends_while_net_goes",
+   "Becoming.WayOfUnits.Holds",
+   "Becoming.WayOfUnits.Regime",
+   "Becoming.WayOfUnits.unending_iff_holds",
+   "Becoming.WayOfUnits.firstAfter",
+   "Becoming.WayOfUnits.firstUse",
+   "Becoming.WayOfUnits.twoWay",
+   "Becoming.WayOfUnits.carrierCourse",
+   "Becoming.WayOfUnits.unending_iff_carrier",
+   "Becoming.WayOfUnits.two_units_iff",
+   "Becoming.WayOfUnits.first_outside",
+   "Becoming.WayOfUnits.first_turns",
+   "Becoming.WayOfUnits.first_kept",
+   "Becoming.WayOfUnits.first_uses",
+   "Becoming.WayOfUnits.first_uses₁",
+   "Becoming.WayOfUnits.greater_need",
+   "Becoming.WayOfUnits.more_use_on_first",
+   "Becoming.WayOfUnits.takes_nothing_iff_alone",
+   "Becoming.WayOfUnits.takes_nothing_ends",
+   "Becoming.WayOfUnits.With.way",
+   "Becoming.WayOfUnits.With.goes_on",
+   "Becoming.WayOfUnits.With.goes_on_holds",
+   "Becoming.WayOfUnits.With.levels",
+   "Becoming.WayOfUnits.Against.way",
+   "Becoming.WayOfUnits.Against.turns_and_ends"
   ],
   "base": "any type",
   "hypotheses": [
@@ -1973,6 +2008,34 @@
    {
     "record": "going-alike-up-to-the-nets-end",
     "index": 4
+   },
+   {
+    "record": "a-way-of-units",
+    "index": 1
+   },
+   {
+    "record": "a-way-of-units",
+    "index": 2
+   },
+   {
+    "record": "a-way-of-units",
+    "index": 3
+   },
+   {
+    "record": "a-way-of-units",
+    "index": 4
+   },
+   {
+    "record": "a-way-of-units",
+    "index": 5
+   },
+   {
+    "record": "a-way-of-units",
+    "index": 6
+   },
+   {
+    "record": "a-way-of-units",
+    "index": 7
    }
   ],
   "forbids": {
@@ -2080,6 +2143,10 @@
    {
     "en": "The laws of reading in time on their own model (ReadOffInTime) are not joined; only first_of_decided is used.",
     "source": "theories/becoming/chapters/02-MAP.md#r-turning-in-time"
+   },
+   {
+    "en": "For a way of units: the comparison theorems for any number of units, and their premises trimmed to what the simulations found enough; a way that builds units; the marks of a way that conditions on a reading. None is stated.",
+    "source": "theories/becoming/chapters/02-MAP.md#r-a-way-of-units"
    }
   ],
   "valence": "none asserted",
@@ -2089,7 +2156,8 @@
   "sources": [
    "theories/becoming/chapters/02-MAP.md#turning-in-time",
    "theories/becoming/chapters/02-MAP.md#r-going-alike-up-to-the-nets-end",
-   "theories/becoming/chapters/02-MAP.md#r-turning-in-time"
+   "theories/becoming/chapters/02-MAP.md#r-turning-in-time",
+   "theories/becoming/chapters/02-MAP.md#r-a-way-of-units"
   ],
   "standing_without_record": null,
   "premises": [
@@ -2200,6 +2268,114 @@
    },
    {
     "law": "Becoming.TurningInTime.Three.ends_as_it_was",
+    "takes": []
+   },
+   {
+    "law": "Becoming.WayOfUnits.ends_while_net_goes",
+    "takes": [
+     "wayofunits-unit-above-level",
+     "wayofunits-unit-met"
+    ]
+   },
+   {
+    "law": "Becoming.WayOfUnits.unending_iff_holds",
+    "takes": [
+     "wayofunits-needs-positive",
+     "regimemargin-fromnothing",
+     "regimemargin-start-level-le-hi",
+     "wayofunits-regime-along",
+     "regimemargin-step"
+    ]
+   },
+   {
+    "law": "Becoming.WayOfUnits.unending_iff_carrier",
+    "takes": [
+     "wayofunits-order",
+     "regimemargin-step"
+    ]
+   },
+   {
+    "law": "Becoming.WayOfUnits.two_units_iff",
+    "takes": [
+     "wayofunits-order",
+     "regimemargin-fromnothing",
+     "regimemargin-short",
+     "regimemargin-meets",
+     "regimemargin-keeps",
+     "optimum-coupled-need-positive",
+     "turningintime-within",
+     "regimemargin-start-below-point",
+     "regimemargin-start-level-le-hi",
+     "regimemargin-step"
+    ]
+   },
+   {
+    "law": "Becoming.WayOfUnits.greater_need",
+    "takes": [
+     "wayofunits-order",
+     "wayofunits-greater-need",
+     "wayofunits-first-line-unending",
+     "regimemargin-fromnothing",
+     "regimemargin-short",
+     "regimemargin-meets",
+     "regimemargin-keeps",
+     "optimum-coupled-need-positive",
+     "turningintime-within",
+     "regimemargin-start-below-point",
+     "regimemargin-start-level-le-hi",
+     "regimemargin-step"
+    ]
+   },
+   {
+    "law": "Becoming.WayOfUnits.more_use_on_first",
+    "takes": [
+     "wayofunits-order",
+     "wayofunits-same-sum",
+     "wayofunits-more-on-first",
+     "wayofunits-first-line-unending",
+     "regimemargin-fromnothing",
+     "regimemargin-short",
+     "regimemargin-meets",
+     "regimemargin-keeps",
+     "optimum-coupled-need-positive",
+     "turningintime-within",
+     "regimemargin-start-below-point",
+     "regimemargin-start-level-le-hi",
+     "regimemargin-step"
+    ]
+   },
+   {
+    "law": "Becoming.WayOfUnits.takes_nothing_iff_alone",
+    "takes": [
+     "wayofunits-order",
+     "regimemargin-step"
+    ]
+   },
+   {
+    "law": "Becoming.WayOfUnits.takes_nothing_ends",
+    "takes": [
+     "wayofunits-order",
+     "regimemargin-fromnothing",
+     "optimum-coupled-need-positive",
+     "regimemargin-short",
+     "regimemargin-start-below-point",
+     "regimemargin-step"
+    ]
+   },
+   {
+    "law": "Becoming.WayOfUnits.With.goes_on",
+    "takes": []
+   },
+   {
+    "law": "Becoming.WayOfUnits.With.goes_on_holds",
+    "takes": []
+   },
+   {
+    "law": "Becoming.WayOfUnits.With.levels",
+    "takes": []
+   },
+   {
+    "law": "Becoming.WayOfUnits.Against.turns_and_ends",
     "takes": []
    }
   ]

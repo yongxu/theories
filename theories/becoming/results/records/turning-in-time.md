@@ -72,7 +72,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Pure core, axiom reports empty; a leaf, in the Lean's second layer only through two laws it imports. Compositions of landed laws (Optimum's level laws, RegimeMargin's point of no return, the root's conditions, the joined two-level step) with one split at the first marked level; the witness computed on its model. Written by AI agents: a first attempt held after a cold reading found it restated root laws; implemented in two rounds and read cold by five AI agents and the coordinating session; no human audit yet.
+Pure core, axiom reports empty; imported by Becoming.WayOfUnits, in the Lean's second layer only through two theorems it imports. Compositions of landed theorems (Optimum's level theorems, RegimeMargin's point of no return, the root's conditions, the joined two-level step) with one split at the first marked level; the witness computed on its model. Written by AI agents: a first attempt held after a cold reading found it restated root laws; implemented in two rounds and read cold by five AI agents and the coordinating session; no person's review of it is recorded yet.
 
 Canonical source: [TurningInTime.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean)
 
@@ -163,13 +163,15 @@ Reading (AI-written, from the home section's reading and the study folder's NEAR
 - related, not a proved adapter: [a-loss-read-before-its-point-of-no-return](a-loss-read-before-its-point-of-no-return.md). A point of no return read on courses on another model; the two are not joined.
 - related, not a proved adapter: [the-route-is-the-relation-in-time](the-route-is-the-relation-in-time.md). Reading in time on ReadOffInTime's model, not joined to the pair.
 
+**Used by:** [a-way-of-units](a-way-of-units.md)
+
 <a id="sources--来源"></a>
 ### Sources
 
 | Role | Source | Declarations |
 |---|---|---|
 | proof | [TurningInTime.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean) | `Becoming.TurningInTime.AloneOutside`, `Becoming.TurningInTime.Three.ends_as_it_was`, `Becoming.TurningInTime.Three.giving`, `Becoming.TurningInTime.Three.goes_on`, `Becoming.TurningInTime.Three.left`, `Becoming.TurningInTime.Three.line_ends_while_net_goes`, `Becoming.TurningInTime.Three.after`, `Becoming.TurningInTime.Three.turned_and_ends`, `Becoming.TurningInTime.Three.use`, `Becoming.TurningInTime.agrees_until_marked`, `Becoming.TurningInTime.alike_along`, `Becoming.TurningInTime.asItWas`, `Becoming.TurningInTime.asItWas_way`, `Becoming.TurningInTime.constant_adaptive`, `Becoming.TurningInTime.constant_iff`, `Becoming.TurningInTime.constant_iff_needs_nothing`, `Becoming.TurningInTime.core_apart_below_need`, `Becoming.TurningInTime.ends_with_net`, `Becoming.TurningInTime.ends_with_net_regime`, `Becoming.TurningInTime.join_is_asItWas`, `Becoming.TurningInTime.kind_ends_while_net_goes`, `Becoming.TurningInTime.kind_not_toEnd_of_turn`, `Becoming.TurningInTime.kind_toEnd_of_unmarked`, `Becoming.TurningInTime.locked_alone`, `Becoming.TurningInTime.locked_at_class`, `Becoming.TurningInTime.locked_closed`, `Becoming.TurningInTime.locked_ends_with_net`, `Becoming.TurningInTime.net`, `Becoming.TurningInTime.net_zero`, `Becoming.TurningInTime.pair`, `Becoming.TurningInTime.pair_adaptive`, `Becoming.TurningInTime.regime_step_eq`, `Becoming.TurningInTime.toEnd_iff`, `Becoming.TurningInTime.toEnd_of_unmarked`, `Becoming.TurningInTime.turns_in_time_iff`, `Becoming.TurningInTime.unending_iff_above`, `Becoming.TurningInTime.unending_iff_first_marked`, `Becoming.TurningInTime.unmarked_interval_iff`, `Becoming.TurningInTime.windowAlone`, `Becoming.TurningInTime.windowLeft`, `Becoming.TurningInTime.windowRegroup`, `Becoming.TurningInTime.windowAfter`, `Becoming.TurningInTime.window_agrees_until_marked`, `Becoming.TurningInTime.window_alone_outside`, `Becoming.TurningInTime.window_is_pair`, `Becoming.TurningInTime.window_paced` |
-| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261112T193245.658896Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261113T023828.938796Z/verification.json) | — |
 | integration | [NOTE.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tt-turning-in-time/NOTE.md) | — |
 | integration | [DESIGN.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tt-turning-in-time/DESIGN.md) | — |
 | integration | [DESIGN-R2.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tt-turning-in-time/DESIGN-R2.md) | — |
@@ -187,4 +189,4 @@ Aliases: `turning in time`, `a line that ends where the net ends, or while the n
 
 </details>
 
-Documentary review UTC: `2026-11-12T19:33:33+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-13T02:39:22+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

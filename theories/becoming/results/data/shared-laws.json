@@ -1,7 +1,7 @@
 {
  "about": "MV: the shared laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/shared_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261112T193245.658896Z",
- "core_sources_sha256": "ae0a0a7a4714353ef5233548ef019792d4270f4fb04df5d80ab25d4129d1d825",
+ "core_receipt": "20261113T023828.938796Z",
+ "core_sources_sha256": "e7e8a29f57254464bea1ff6a39f57fddaead6361e8ee6e32d79bb2529a978617",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "438b65fe8bc281ab9796cfbff00af7db8441123a5aba8f3779f7c08586b443c7",
@@ -58,16 +58,16 @@
   ]
  },
  "counts": {
-  "laws": 4316,
+  "laws": 4331,
   "no_declarations": 9,
   "outside": 391,
-  "grammar": 1005,
+  "grammar": 1017,
   "balance, represented": 633,
   "anchor, not reached": 137,
-  "no shared law": 2141,
-  "vocabulary_only": 94,
+  "no shared law": 2144,
+  "vocabulary_only": 96,
   "closure": 583,
-  "balance": 877,
+  "balance": 884,
   "return": 256,
   "lumping": 92,
   "order": 105
@@ -4277,6 +4277,178 @@
      "PracticalPriorityIdentification.symmetric_assignment_not_unique",
      "PracticalPriorityIdentification.two_assignments_fit_one_task"
     ]
+   }
+  ],
+  "a-way-of-units": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.WayOfUnits.need",
+     "Becoming.WayOfUnits.use",
+     "Becoming.WayOfUnits.goes",
+     "Becoming.WayOfUnits.after",
+     "Becoming.WayOfUnits.taken",
+     "Becoming.WayOfUnits.left"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.WayOfUnits.Goes",
+     "Becoming.WayOfUnits.net",
+     "Becoming.WayOfUnits.course"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.WayOfUnits.ends_while_net_goes"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.WayOfUnits.Holds",
+     "Becoming.WayOfUnits.Regime",
+     "Becoming.WayOfUnits.unending_iff_holds"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.WayOfUnits.firstAfter",
+     "Becoming.WayOfUnits.firstUse",
+     "Becoming.WayOfUnits.twoWay",
+     "Becoming.WayOfUnits.carrierCourse",
+     "Becoming.WayOfUnits.unending_iff_carrier"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.WayOfUnits.two_units_iff"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 7,
+    "declarations": [
+     "Becoming.WayOfUnits.first_outside",
+     "Becoming.WayOfUnits.first_turns",
+     "Becoming.WayOfUnits.first_kept",
+     "Becoming.WayOfUnits.first_uses",
+     "Becoming.WayOfUnits.first_uses₁"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 8,
+    "declarations": [
+     "Becoming.WayOfUnits.greater_need"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 9,
+    "declarations": [
+     "Becoming.WayOfUnits.more_use_on_first"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 10,
+    "declarations": [
+     "Becoming.WayOfUnits.takes_nothing_iff_alone"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 11,
+    "declarations": [
+     "Becoming.WayOfUnits.takes_nothing_ends"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 12,
+    "declarations": [
+     "Becoming.WayOfUnits.With.way",
+     "Becoming.WayOfUnits.With.goes_on"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 13,
+    "declarations": [
+     "Becoming.WayOfUnits.With.goes_on_holds"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 14,
+    "declarations": [
+     "Becoming.WayOfUnits.With.levels"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 15,
+    "declarations": [
+     "Becoming.WayOfUnits.Against.way",
+     "Becoming.WayOfUnits.Against.turns_and_ends"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
    }
   ],
   "a-weighting-faster-than-renewal-ends-the-base": [
@@ -66513,7 +66685,7 @@
   ],
   "lean_check": {
    "toolchain": "leanprover/lean4:v4.29.1",
-   "modules_sha256": "8a676db45456b0e70876214f06509c3c2de4fe55812e475027a1e47c389e5fad",
+   "modules_sha256": "14f3a98258c1f1001d7700e3f80b02261eacb227718f5f31cdc84423068be196",
    "check_sha256": "e5ef1c274e3e3f81aa13dbe78732d1f6883a207a5685f736102ee4a2d5b1fc34",
    "ran": true
   },

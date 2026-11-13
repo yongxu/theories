@@ -1,0 +1,237 @@
+@Becoming.WayOfUnits.goes_of_le : ∀ {x : Nat} {u : Nat × Nat},
+  Becoming.WayOfUnits.need u ≤ x → Becoming.WayOfUnits.goes x u = true
+@Becoming.WayOfUnits.goes_false_of_lt : ∀ {x : Nat} {u : Nat × Nat},
+  x < Becoming.WayOfUnits.need u → Becoming.WayOfUnits.goes x u = false
+@Becoming.WayOfUnits.le_of_goes : ∀ {x : Nat} {u : Nat × Nat},
+  Becoming.WayOfUnits.goes x u = true → Becoming.WayOfUnits.need u ≤ x
+@Becoming.WayOfUnits.mem_of_ne_nil : ∀ {l : List (Nat × Nat)}, l ≠ [] → ∃ v, v ∈ l
+@Becoming.WayOfUnits.goes_of_holds : ∀ {y : Nat → Nat} {s : List (Nat × Nat) × Nat},
+  Becoming.WayOfUnits.Holds y s → Becoming.WayOfUnits.Goes s
+@Becoming.WayOfUnits.all_iff_while : ∀ {P Q : Nat → Prop},
+  (∀ (k : Nat), (∀ (j : Nat), j < k → Q j) → (P k ↔ Q k)) → ((∀ (k : Nat), P k) ↔ ∀ (k : Nat), Q k)
+@Becoming.WayOfUnits.length_keep_le : ∀ {α : Type} (p : α → Bool) (l : List α),
+  (Becoming.GrammarLaws.keep p l).length ≤ l.length
+@Becoming.WayOfUnits.length_keep_lt : ∀ {α : Type} {p : α → Bool} {l : List α} {a : α},
+  a ∈ l → p a = false → (Becoming.GrammarLaws.keep p l).length < l.length
+Becoming.WayOfUnits.met_or_unmet : ∀ (z : Nat) (S : List (Nat × Nat)),
+  (∀ (u : Nat × Nat), u ∈ S → Becoming.WayOfUnits.need u ≤ z) ∨ ∃ u, u ∈ S ∧ z < Becoming.WayOfUnits.need u
+@Becoming.WayOfUnits.mem_after_iff : ∀ {w : List (Nat × Nat)} {x : Nat} {u : Nat × Nat},
+  u ∈ Becoming.WayOfUnits.after w x ↔ u ∈ w ∧ Becoming.WayOfUnits.need u ≤ x
+@Becoming.WayOfUnits.after_eq_iff : ∀ {w : List (Nat × Nat)} {x : Nat},
+  Becoming.WayOfUnits.after w x = w ↔ ∀ (u : Nat × Nat), u ∈ w → Becoming.WayOfUnits.need u ≤ x
+Becoming.WayOfUnits.mem_course_iff : ∀ (giving : Nat → Nat) (s : List (Nat × Nat) × Nat) (u : Nat × Nat) (n : Nat),
+  u ∈ (Becoming.WayOfUnits.course giving s n).fst ↔
+    u ∈ s.fst ∧ ∀ (j : Nat), j < n → Becoming.WayOfUnits.need u ≤ (Becoming.WayOfUnits.course giving s j).snd
+Becoming.WayOfUnits.anyGoes_iff : ∀ (x : Nat) (w : List (Nat × Nat)),
+  Becoming.WayOfUnits.anyGoes x w = true ↔ ∃ u, u ∈ w ∧ Becoming.WayOfUnits.need u ≤ x
+@Becoming.WayOfUnits.ends_while_net_goes : ∀ {giving : Nat → Nat} {w : List (Nat × Nat)} {x : Nat} {p q : Nat × Nat},
+  p ∈ w →
+    x < Becoming.WayOfUnits.need p →
+      q ∈ w →
+        Becoming.WayOfUnits.need q ≤ x →
+          Becoming.«亡» (Becoming.WayOfUnits.net giving) (Becoming.sameValue Prod.fst) (w, x) ∧
+            ∃ v, Becoming.WayOfUnits.net giving (w, x) v
+@Becoming.WayOfUnits.fixed_while : ∀ {giving : Nat → Nat} {S : List (Nat × Nat)} {z : Nat} (i : Nat),
+  (∀ (j : Nat),
+      j < i →
+        ∀ (u : Nat × Nat),
+          u ∈ S →
+            Becoming.WayOfUnits.need u ≤
+              Becoming.Law.orbit (Becoming.RegimeMargin.step giving (Becoming.WayOfUnits.taken S)) z j) →
+    Becoming.WayOfUnits.course giving (S, z) i =
+      (S, Becoming.Law.orbit (Becoming.RegimeMargin.step giving (Becoming.WayOfUnits.taken S)) z i)
+@Becoming.WayOfUnits.stays : ∀ {giving : Nat → Nat} {S : List (Nat × Nat)} {yS hi z : Nat},
+  Becoming.RegimeMargin.Meets giving (Becoming.WayOfUnits.taken S) yS hi →
+    Becoming.RegimeMargin.Keeps giving (Becoming.WayOfUnits.taken S) hi →
+      (∀ (u : Nat × Nat), u ∈ S → Becoming.WayOfUnits.need u ≤ z) →
+        Becoming.WayOfUnits.taken S + yS ≤ z →
+          z ≤ hi →
+            ∀ (i : Nat),
+              Becoming.WayOfUnits.course giving (S, z) i =
+                  (S, Becoming.Law.orbit (Becoming.RegimeMargin.step giving (Becoming.WayOfUnits.taken S)) z i) ∧
+                z ≤ Becoming.Law.orbit (Becoming.RegimeMargin.step giving (Becoming.WayOfUnits.taken S)) z i
+@Becoming.WayOfUnits.falls : ∀ {giving : Nat → Nat} {S : List (Nat × Nat)} {yS z : Nat},
+  Becoming.RegimeMargin.Short giving (Becoming.WayOfUnits.taken S) yS →
+    Becoming.RegimeMargin.FromNothing giving →
+      (∀ (u : Nat × Nat), u ∈ S → 0 < Becoming.WayOfUnits.need u) →
+        ∀ {v : Nat × Nat},
+          v ∈ S →
+            z < Becoming.WayOfUnits.taken S + yS →
+              ∃ t,
+                (Becoming.WayOfUnits.course giving (S, z) t).fst = S ∧
+                  ∃ u, u ∈ S ∧ (Becoming.WayOfUnits.course giving (S, z) t).snd < Becoming.WayOfUnits.need u
+@Becoming.WayOfUnits.course_within : ∀ {giving y : Nat → Nat} {hi : Nat} {s : List (Nat × Nat) × Nat},
+  (∀ (k : Nat),
+      (∀ (j : Nat), j ≤ k → Becoming.WayOfUnits.Goes (Becoming.WayOfUnits.course giving s j)) →
+        Becoming.WayOfUnits.Regime giving y hi (Becoming.WayOfUnits.course giving s k).fst) →
+    s.snd ≤ hi →
+      ∀ (k : Nat),
+        (∀ (j : Nat), j < k → Becoming.WayOfUnits.Goes (Becoming.WayOfUnits.course giving s j)) →
+          (Becoming.WayOfUnits.course giving s k).snd ≤ hi
+@Becoming.WayOfUnits.reaches_holds : ∀ {giving y : Nat → Nat} {hi : Nat} {w : List (Nat × Nat)} {x : Nat},
+  (∀ (u : Nat × Nat), u ∈ w → 0 < Becoming.WayOfUnits.need u) →
+    Becoming.RegimeMargin.FromNothing giving →
+      (∀ (k : Nat),
+          (∀ (j : Nat), j ≤ k → Becoming.WayOfUnits.Goes (Becoming.WayOfUnits.course giving (w, x) j)) →
+            Becoming.WayOfUnits.Regime giving y hi (Becoming.WayOfUnits.course giving (w, x) k).fst) →
+        (∀ (k : Nat), Becoming.WayOfUnits.Goes (Becoming.WayOfUnits.course giving (w, x) k)) →
+          ∀ (ℓ k : Nat),
+            (Becoming.WayOfUnits.course giving (w, x) k).fst.length ≤ ℓ →
+              ∃ k', Becoming.WayOfUnits.Holds y (Becoming.WayOfUnits.course giving (w, x) k')
+@Becoming.WayOfUnits.unending_iff_holds : ∀ {giving y : Nat → Nat} {hi : Nat} {w : List (Nat × Nat)} {x : Nat},
+  (∀ (u : Nat × Nat), u ∈ w → 0 < Becoming.WayOfUnits.need u) →
+    Becoming.RegimeMargin.FromNothing giving →
+      x ≤ hi →
+        (∀ (k : Nat),
+            (∀ (j : Nat), j ≤ k → Becoming.WayOfUnits.Goes (Becoming.WayOfUnits.course giving (w, x) j)) →
+              Becoming.WayOfUnits.Regime giving y hi (Becoming.WayOfUnits.course giving (w, x) k).fst) →
+          (Becoming.«不穷» (Becoming.WayOfUnits.net giving) Becoming.«一» (w, x) ↔
+            ∃ k,
+              (∀ (j : Nat), j < k → Becoming.WayOfUnits.Goes (Becoming.WayOfUnits.course giving (w, x) j)) ∧
+                Becoming.WayOfUnits.Holds y (Becoming.WayOfUnits.course giving (w, x) k))
+@Becoming.WayOfUnits.level_le_start : ∀ {giving : Nat → Nat} {H y x : Nat},
+  Becoming.RegimeMargin.Short giving H y →
+    Becoming.RegimeMargin.FromNothing giving →
+      x < H + y → ∀ (t : Nat), Becoming.Law.orbit (Becoming.RegimeMargin.step giving H) x t ≤ x
+@Becoming.WayOfUnits.level_le_of_le : ∀ {giving : Nat → Nat} {H y x : Nat},
+  Becoming.RegimeMargin.Short giving H y →
+    Becoming.RegimeMargin.FromNothing giving →
+      x < H + y →
+        ∀ {a b : Nat},
+          a ≤ b →
+            Becoming.Law.orbit (Becoming.RegimeMargin.step giving H) x b ≤
+              Becoming.Law.orbit (Becoming.RegimeMargin.step giving H) x a
+Becoming.WayOfUnits.taken_twoWay : ∀ (m h n H₂ : Nat) (b : Bool),
+  Becoming.WayOfUnits.taken (Becoming.WayOfUnits.twoWay m h n H₂ b) = Becoming.WayOfUnits.firstUse h H₂ b
+@Becoming.WayOfUnits.after_twoWay : ∀ {m h n H₂ z : Nat},
+  n ≤ z →
+    ∀ (b : Bool),
+      Becoming.WayOfUnits.after (Becoming.WayOfUnits.twoWay m h n H₂ b) z =
+        Becoming.WayOfUnits.twoWay m h n H₂ (Becoming.WayOfUnits.firstAfter m b z)
+@Becoming.WayOfUnits.goes_twoWay : ∀ {m h n H₂ z : Nat},
+  n ≤ m → ∀ (b : Bool), Becoming.WayOfUnits.Goes (Becoming.WayOfUnits.twoWay m h n H₂ b, z) ↔ n ≤ z
+@Becoming.WayOfUnits.course_twoWay : ∀ {giving : Nat → Nat} {m h n H₂ x : Nat} (k : Nat),
+  (∀ (j : Nat), j < k → n ≤ (Becoming.WayOfUnits.carrierCourse giving m h H₂ x j).snd) →
+    Becoming.WayOfUnits.course giving ([(m, h), (n, H₂)], x) k =
+      (Becoming.WayOfUnits.twoWay m h n H₂ (Becoming.WayOfUnits.carrierCourse giving m h H₂ x k).fst,
+        (Becoming.WayOfUnits.carrierCourse giving m h H₂ x k).snd)
+@Becoming.WayOfUnits.goes_iff_carrier : ∀ {giving : Nat → Nat} {m h n H₂ x : Nat},
+  n ≤ m →
+    ((∀ (k : Nat), Becoming.WayOfUnits.Goes (Becoming.WayOfUnits.course giving ([(m, h), (n, H₂)], x) k)) ↔
+      ∀ (k : Nat), n ≤ (Becoming.WayOfUnits.carrierCourse giving m h H₂ x k).snd)
+@Becoming.WayOfUnits.unending_iff_carrier : ∀ {giving : Nat → Nat} {m h n H₂ x : Nat},
+  n ≤ m →
+    (Becoming.«不穷» (Becoming.WayOfUnits.net giving) Becoming.«一» ([(m, h), (n, H₂)], x) ↔
+      Becoming.«不穷»
+        (Becoming.TurningInTime.net n (Becoming.WayOfUnits.firstAfter m) fun b z =>
+          Becoming.RegimeMargin.step giving (Becoming.WayOfUnits.firstUse h H₂ b) z)
+        Becoming.«一» (true, x))
+Becoming.WayOfUnits.first_outside : ∀ (m : Nat),
+  Becoming.TurningInTime.AloneOutside (fun z => z < m) id (Becoming.WayOfUnits.firstAfter m)
+Becoming.WayOfUnits.first_turns : ∀ (m : Nat) (b : Bool) (z : Nat), z < m → Becoming.WayOfUnits.firstAfter m b z = false
+Becoming.WayOfUnits.first_kept : ∀ (m : Nat) (b : Bool) (z : Nat),
+  b = false → Becoming.WayOfUnits.firstAfter m b z = false
+Becoming.WayOfUnits.first_uses : ∀ (h H₂ : Nat) (b : Bool), b = false → Becoming.WayOfUnits.firstUse h H₂ b = H₂
+Becoming.WayOfUnits.orbit_id_true : ∀ (j : Nat), Becoming.Law.orbit id true j = true
+Becoming.WayOfUnits.first_uses₁ : ∀ (h H₂ j : Nat),
+  h + H₂ ≤ Becoming.WayOfUnits.firstUse h H₂ (Becoming.Law.orbit id true j)
+@Becoming.WayOfUnits.asItWas_first : ∀ {giving : Nat → Nat} {h H₂ x : Nat} (j : Nat),
+  Becoming.Law.orbit
+      (Becoming.TurningInTime.asItWas id fun b z =>
+        Becoming.RegimeMargin.step giving (Becoming.WayOfUnits.firstUse h H₂ b) z)
+      (true, x) j =
+    (true, Becoming.Law.orbit (Becoming.RegimeMargin.step giving (h + H₂)) x j)
+@Becoming.WayOfUnits.two_units_iff : ∀ {giving : Nat → Nat} {m h n H₂ y₁ y₂ hi x : Nat},
+  n ≤ m →
+    Becoming.RegimeMargin.FromNothing giving →
+      Becoming.RegimeMargin.Short giving H₂ y₂ →
+        Becoming.RegimeMargin.Meets giving H₂ y₂ hi →
+          Becoming.RegimeMargin.Keeps giving H₂ hi →
+            0 < n →
+              n ≤ H₂ + y₂ →
+                Becoming.RegimeMargin.Short giving (h + H₂) y₁ →
+                  x < h + H₂ + y₁ →
+                    x ≤ hi →
+                      (Becoming.«不穷» (Becoming.WayOfUnits.net giving) Becoming.«一» ([(m, h), (n, H₂)], x) ↔
+                        ∃ T,
+                          (∀ (j : Nat),
+                              j < T → m ≤ Becoming.Law.orbit (Becoming.RegimeMargin.step giving (h + H₂)) x j) ∧
+                            n ≤ Becoming.Law.orbit (Becoming.RegimeMargin.step giving (h + H₂)) x T ∧
+                              Becoming.Law.orbit (Becoming.RegimeMargin.step giving (h + H₂)) x T < m ∧
+                                H₂ + y₂ ≤ Becoming.Law.orbit (Becoming.RegimeMargin.step giving (h + H₂)) x (T + 1))
+@Becoming.WayOfUnits.greater_need : ∀ {giving : Nat → Nat} {m m' h n H₂ y₁ y₂ hi x : Nat},
+  n ≤ m →
+    m ≤ m' →
+      Becoming.RegimeMargin.FromNothing giving →
+        Becoming.RegimeMargin.Short giving H₂ y₂ →
+          Becoming.RegimeMargin.Meets giving H₂ y₂ hi →
+            Becoming.RegimeMargin.Keeps giving H₂ hi →
+              0 < n →
+                n ≤ H₂ + y₂ →
+                  Becoming.RegimeMargin.Short giving (h + H₂) y₁ →
+                    x < h + H₂ + y₁ →
+                      x ≤ hi →
+                        Becoming.«不穷» (Becoming.WayOfUnits.net giving) Becoming.«一» ([(m, h), (n, H₂)], x) →
+                          Becoming.«不穷» (Becoming.WayOfUnits.net giving) Becoming.«一» ([(m', h), (n, H₂)], x)
+@Becoming.WayOfUnits.more_use_on_first : ∀ {giving : Nat → Nat} {m n h H₂ y₂ h' H₂' y₂' y₁ hi x : Nat},
+  n ≤ m →
+    Becoming.RegimeMargin.FromNothing giving →
+      Becoming.RegimeMargin.Short giving H₂ y₂ →
+        Becoming.RegimeMargin.Meets giving H₂ y₂ hi →
+          Becoming.RegimeMargin.Keeps giving H₂ hi →
+            n ≤ H₂ + y₂ →
+              Becoming.RegimeMargin.Short giving H₂' y₂' →
+                Becoming.RegimeMargin.Meets giving H₂' y₂' hi →
+                  Becoming.RegimeMargin.Keeps giving H₂' hi →
+                    n ≤ H₂' + y₂' →
+                      0 < n →
+                        h + H₂ = h' + H₂' →
+                          h ≤ h' →
+                            Becoming.RegimeMargin.Short giving (h + H₂) y₁ →
+                              x < h + H₂ + y₁ →
+                                x ≤ hi →
+                                  Becoming.«不穷» (Becoming.WayOfUnits.net giving) Becoming.«一» ([(m, h), (n, H₂)], x) →
+                                    Becoming.«不穷» (Becoming.WayOfUnits.net giving) Becoming.«一» ([(m, h'), (n, H₂')], x)
+Becoming.WayOfUnits.firstUse_zero : ∀ (H₂ : Nat) (b : Bool), Becoming.WayOfUnits.firstUse 0 H₂ b = H₂
+@Becoming.WayOfUnits.carrier_level_zero : ∀ {giving : Nat → Nat} {m H₂ x : Nat} (k : Nat),
+  (Becoming.WayOfUnits.carrierCourse giving m 0 H₂ x k).snd =
+    Becoming.Law.orbit (Becoming.RegimeMargin.step giving H₂) x k
+@Becoming.WayOfUnits.goes_iff_alone : ∀ {giving : Nat → Nat} {n H₂ x : Nat},
+  (∀ (k : Nat), Becoming.WayOfUnits.Goes (Becoming.WayOfUnits.course giving ([(n, H₂)], x) k)) ↔
+    ∀ (k : Nat), n ≤ Becoming.Law.orbit (Becoming.RegimeMargin.step giving H₂) x k
+@Becoming.WayOfUnits.takes_nothing_iff_alone : ∀ {giving : Nat → Nat} {m n H₂ x : Nat},
+  n ≤ m →
+    (Becoming.«不穷» (Becoming.WayOfUnits.net giving) Becoming.«一» ([(m, 0), (n, H₂)], x) ↔
+      Becoming.«不穷» (Becoming.WayOfUnits.net giving) Becoming.«一» ([(n, H₂)], x))
+@Becoming.WayOfUnits.takes_nothing_ends : ∀ {giving : Nat → Nat} {m n H₂ y₁ x : Nat},
+  n ≤ m →
+    Becoming.RegimeMargin.FromNothing giving →
+      0 < n →
+        Becoming.RegimeMargin.Short giving H₂ y₁ →
+          x < H₂ + y₁ → ¬Becoming.«不穷» (Becoming.WayOfUnits.net giving) Becoming.«一» ([(m, 0), (n, H₂)], x)
+Becoming.WayOfUnits.With.goes_on : Becoming.«不穷» (Becoming.WayOfUnits.net Becoming.TurningInTime.Three.giving)
+  Becoming.«一» (Becoming.WayOfUnits.With.way, 9)
+Becoming.WayOfUnits.With.levels : Becoming.WayOfUnits.course Becoming.TurningInTime.Three.giving
+      (Becoming.WayOfUnits.With.way, 9) 1 =
+    (Becoming.WayOfUnits.With.way, 8) ∧
+  Becoming.WayOfUnits.course Becoming.TurningInTime.Three.giving (Becoming.WayOfUnits.With.way, 9) 2 = ([(1, 1)], 6) ∧
+    Becoming.WayOfUnits.course Becoming.TurningInTime.Three.giving (Becoming.WayOfUnits.With.way, 9) 3 =
+        ([(1, 1)], 10) ∧
+      Becoming.WayOfUnits.course Becoming.TurningInTime.Three.giving (Becoming.WayOfUnits.With.way, 9) 4 =
+          ([(1, 1)], 12) ∧
+        Becoming.WayOfUnits.course Becoming.TurningInTime.Three.giving (Becoming.WayOfUnits.With.way, 9) 5 =
+          ([(1, 1)], 12)
+Becoming.WayOfUnits.With.goes_on_holds : Becoming.«不穷» (Becoming.WayOfUnits.net Becoming.TurningInTime.Three.giving)
+  Becoming.«一» (Becoming.WayOfUnits.With.way, 9)
+Becoming.WayOfUnits.Against.turns_and_ends : Becoming.WayOfUnits.course Becoming.TurningInTime.Three.giving
+      (Becoming.WayOfUnits.Against.way, 9) 1 =
+    (Becoming.WayOfUnits.Against.way, 8) ∧
+  Becoming.WayOfUnits.course Becoming.TurningInTime.Three.giving (Becoming.WayOfUnits.Against.way, 9) 2 =
+      ([(1, 4)], 6) ∧
+    Becoming.WayOfUnits.course Becoming.TurningInTime.Three.giving (Becoming.WayOfUnits.Against.way, 9) 3 =
+        ([(1, 4)], 4) ∧
+      Becoming.«迭» (Becoming.WayOfUnits.net Becoming.TurningInTime.Three.giving) 4 (Becoming.WayOfUnits.Against.way, 9)
+          ([(1, 4)], 0) ∧
+        (∀ (v : List (Nat × Nat) × Nat), ¬Becoming.WayOfUnits.net Becoming.TurningInTime.Three.giving ([(1, 4)], 0) v) ∧
+          ¬Becoming.«不穷» (Becoming.WayOfUnits.net Becoming.TurningInTime.Three.giving) Becoming.«一»
+              (Becoming.WayOfUnits.Against.way, 9)

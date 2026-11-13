@@ -1,0 +1,534 @@
+{
+  "schema_version": 2,
+  "id": "a-way-of-units",
+  "title": {
+    "en": "A way of units: a turn with no mark given",
+    "zh": "由单元组成的方式：无需标记的转向"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "2026-11-13T02:39:22+00:00",
+  "statement": {
+    "en": "A way is the units present, each going on while the level meets its need and taking its use. Under the regime's premises along the course, its line never ends exactly where it comes to a way that is not empty, whose units' needs are all met at a level from which what they take together holds.",
+    "zh": "一个方式就是在场的各单元，各在水位满足其所需时继续，并各取其用量。在沿途的体制前提之下，这条线永不终止，当且仅当它走到一个非空的方式，其各单元所需皆被满足，且水位守得住它们合取之量。"
+  },
+  "claim": {
+    "en": "A way is the units present; each unit goes on while the level meets its own need and takes its own use from the level. Under the regime's premises along the course, the line never ends exactly where it comes to a way that is not empty, whose units' needs are all met, at a level from which what they take together holds. For two units, the first needing at least as much, this is the exact condition for turning in time with its premises on marks proved; a greater need of the first unit, or more of the use on it, never ends a line that did not end; and with a first unit that takes nothing the line never ends exactly where the second unit's line alone never ends.",
+    "zh": "一个方式就是在场的各个单元；每个单元在水位满足它自己所需时继续，并从水位取它自己的用量。在沿途的体制前提之下，这条线永不终止，当且仅当它走到一个非空的方式：其中各单元所需都被满足，而水位不低于它们合起来所取之量守得住的那一位。只有两个单元、第一个所需不少于第二个时，这就是“及时转向”的精确条件，其关于标记的前提已被证明而非假设；第一个单元所需更大，或更多的用量落在它身上，都不会使一条本不终止的线终止；若第一个单元什么也不取，这条线永不终止，当且仅当第二个单元独自的线永不终止。"
+  },
+  "laws": [
+    {
+      "en": "A unit u is a pair of whole numbers, need u and use u; a way is a list of units. A unit goes on at x where need u ≤ x (goes); after w x keeps, in order, the units that go on (GrammarLaws.keep); taken w is the sum of the uses; left giving w x is RegimeMargin.step giving (taken w) x.",
+      "zh": "单元 u 是一对自然数：所需 need u 与用量 use u；方式是单元的列表。need u ≤ x 时单元在 x 处继续（goes）；after w x 依次留下继续的单元（GrammarLaws.keep）；taken w 是各用量之和；left giving w x 即 RegimeMargin.step giving (taken w) x。",
+      "declarations": [
+        "Becoming.WayOfUnits.need",
+        "Becoming.WayOfUnits.use",
+        "Becoming.WayOfUnits.goes",
+        "Becoming.WayOfUnits.after",
+        "Becoming.WayOfUnits.taken",
+        "Becoming.WayOfUnits.left"
+      ]
+    },
+    {
+      "en": "Goes s: some unit of s.1 has its need met at s.2. net giving is Law.stepWhile Goes on TurningInTime.pair after (left giving): the pair's step while some unit goes on, and nothing where none does; course is the pair's orbit.",
+      "zh": "Goes s：s.1 中有单元的所需在 s.2 处被满足。net giving 是 TurningInTime.pair after (left giving) 上的 Law.stepWhile Goes：尚有单元继续时走这一对的步，无一继续时没有后继；course 是这一对的轨道。",
+      "declarations": [
+        "Becoming.WayOfUnits.Goes",
+        "Becoming.WayOfUnits.net",
+        "Becoming.WayOfUnits.course"
+      ]
+    },
+    {
+      "en": "ends_while_net_goes: for units p and q of w with x < need p and need q ≤ x, under any giving, (w, x) ends under the way's class (sameValue Prod.fst), since p is not in the way after the step, and has a next in net giving: the line under the way's class ends there while the net goes on.",
+      "zh": "ends_while_net_goes：w 中有单元 p、q，x < need p 而 need q ≤ x，则无论如何给还，(w, x) 在方式之类（sameValue Prod.fst）下终止，因为一步之后的方式中已没有 p；而它在 net giving 中仍有后继：方式之类下的线在此终止，网仍继续。",
+      "declarations": [
+        "Becoming.WayOfUnits.ends_while_net_goes"
+      ]
+    },
+    {
+      "en": "unending_iff_holds: with every unit of w needing something, FromNothing, x ≤ hi, and Regime giving y hi at the way of course k for every k with Goes at every step j ≤ k: the line from (w, x) in net giving never ends exactly where at some k, Goes at every step before k, Holds y: the way not empty, every need met, taken + y (taken) at most the level.",
+      "zh": "unending_iff_holds：w 各单元所需为正，无中不生有，x ≤ hi，且凡 j ≤ k 时都有 Goes 的 k，course k 处的方式满足 Regime giving y hi。则从 (w, x) 起的线永不终止，当且仅当有某个 k，此前各步都有 Goes，而在 k 处 Holds y：方式非空，各所需都被满足，水位不低于所取之量加其 y。",
+      "declarations": [
+        "Becoming.WayOfUnits.Holds",
+        "Becoming.WayOfUnits.Regime",
+        "Becoming.WayOfUnits.unending_iff_holds"
+      ]
+    },
+    {
+      "en": "unending_iff_carrier: with n ≤ m, under any giving, the line from ([(m, h), (n, H₂)], x) in net giving never ends exactly where the line from (true, x) never ends in TurningInTime.net n (firstAfter m) under RegimeMargin.step giving (firstUse h H₂ b): the carrier Bool, the first unit there or ended, firstAfter m b x = b && decide (m ≤ x), firstUse h + H₂ there and H₂ ended.",
+      "zh": "unending_iff_carrier：n ≤ m，任一给还下，从 ([(m, h), (n, H₂)], x) 起的线永不终止，当且仅当载体 Bool（首单元在或已终）从 (true, x) 起、在所需为 n 的 TurningInTime.net 中、以 firstAfter m 与 firstUse h H₂ 下的 RegimeMargin.step 为步的线不终止。",
+      "declarations": [
+        "Becoming.WayOfUnits.firstAfter",
+        "Becoming.WayOfUnits.firstUse",
+        "Becoming.WayOfUnits.twoWay",
+        "Becoming.WayOfUnits.carrierCourse",
+        "Becoming.WayOfUnits.unending_iff_carrier"
+      ]
+    },
+    {
+      "en": "two_units_iff: with n ≤ m, FromNothing, Short, Meets, Keeps at H₂ with y₂ up to hi, 0 < n ≤ H₂ + y₂, Short at h + H₂ with y₁, x < h + H₂ + y₁ and x ≤ hi, and X the orbit of RegimeMargin.step giving (h + H₂) from x: the line from ([(m, h), (n, H₂)], x) never ends exactly where for some T, m ≤ X j for every j < T, n ≤ X T < m, and H₂ + y₂ ≤ X (T + 1).",
+      "zh": "two_units_iff：n ≤ m，无中不生有，H₂ 处以 y₂ 至 hi 有 Short、Meets、Keeps，0 < n ≤ H₂ + y₂，h + H₂ 处以 y₁ 有 Short，x < h + H₂ + y₁，x ≤ hi。线不穷，当且仅当 h + H₂ 下照旧的水位 X 有 T：此前皆不低于 m，n ≤ X T < m，H₂ + y₂ ≤ X (T + 1)。",
+      "declarations": [
+        "Becoming.WayOfUnits.two_units_iff"
+      ]
+    },
+    {
+      "en": "two_units_iff is turns_in_time_iff on the carrier with marked := (· < m), alone := id, Kept b := b = false, H₁ := h + H₂, with unending_iff_carrier; its premises on marks are proved: outside the levels below m the way after is the way (first_outside), below m it is false (first_turns), false stays false (first_kept), false takes H₂ (first_uses), along alone's orbit it takes at least h + H₂ (first_uses₁).",
+      "zh": "two_units_iff 由 turns_in_time_iff 用于该载体（marked := (· < m)，alone := id，Kept b := b = false，H₁ := h + H₂）及 unending_iff_carrier 得出；其关于标记的五个前提皆已证明（first_outside 至 first_uses₁）。",
+      "declarations": [
+        "Becoming.WayOfUnits.first_outside",
+        "Becoming.WayOfUnits.first_turns",
+        "Becoming.WayOfUnits.first_kept",
+        "Becoming.WayOfUnits.first_uses",
+        "Becoming.WayOfUnits.first_uses₁"
+      ]
+    },
+    {
+      "en": "greater_need: under two_units_iff's premises (n ≤ m, FromNothing, Short, Meets, Keeps at H₂ with y₂ up to hi, 0 < n ≤ H₂ + y₂, Short at h + H₂ with y₁, x < h + H₂ + y₁, x ≤ hi) and m ≤ m': if the line from ([(m, h), (n, H₂)], x) never ends, the line from ([(m', h), (n, H₂)], x) never ends.",
+      "zh": "greater_need：在 two_units_iff 的全部前提下，且 m ≤ m'：若第一个单元所需为 m 时从 x 起的线永不终止，所需为 m' 时这条线也永不终止。",
+      "declarations": [
+        "Becoming.WayOfUnits.greater_need"
+      ]
+    },
+    {
+      "en": "more_use_on_first: with n ≤ m, FromNothing, 0 < n, h + H₂ = h' + H₂', h ≤ h', Short at h + H₂ with y₁, x < h + H₂ + y₁, x ≤ hi, and for H₂ with y₂ and for H₂' with y₂' each Short, Meets up to hi, Keeps up to hi and n at most the sum: if the line from ([(m, h), (n, H₂)], x) never ends, the line from ([(m, h'), (n, H₂')], x) never ends.",
+      "zh": "more_use_on_first：所需相同（n ≤ m），总取用相同（h + H₂ = h' + H₂'），h ≤ h'；two_units_iff 的前提对 (h, H₂, y₂) 与 (h', H₂', y₂') 各自成立，共用 y₁、hi 与起点 x。若第一个单元取 h 时线永不终止，取 h' 时也永不终止。",
+      "declarations": [
+        "Becoming.WayOfUnits.more_use_on_first"
+      ]
+    },
+    {
+      "en": "takes_nothing_iff_alone: with n ≤ m, under any giving and from any x, the line from ([(m, 0), (n, H₂)], x) in net giving never ends exactly where the line from ([(n, H₂)], x) never ends: the level's course is the course under H₂ whether the first unit is there or has ended.",
+      "zh": "takes_nothing_iff_alone：n ≤ m 时，无论如何给还、从任何 x 起，从 ([(m, 0), (n, H₂)], x) 起的线永不终止，当且仅当从 ([(n, H₂)], x) 起的线永不终止：无论第一个单元在或已终止，水位的进程都是 H₂ 之下的进程。",
+      "declarations": [
+        "Becoming.WayOfUnits.takes_nothing_iff_alone"
+      ]
+    },
+    {
+      "en": "takes_nothing_ends: with n ≤ m, FromNothing, 0 < n, Short giving H₂ y₁ and x < H₂ + y₁, the line from ([(m, 0), (n, H₂)], x) ends: it is not the case that it never ends.",
+      "zh": "takes_nothing_ends：n ≤ m，无中不生有，0 < n，Short giving H₂ y₁，且 x < H₂ + y₁，则从 ([(m, 0), (n, H₂)], x) 起的线终止：并非永不终止。",
+      "declarations": [
+        "Becoming.WayOfUnits.takes_nothing_ends"
+      ]
+    },
+    {
+      "en": "With.goes_on: under TurningInTime.Three.giving, min z (12 − z), the line from (With.way, 9), With.way = [(9, 4), (1, 1)], never ends; by two_units_iff at m = 9, h = 4, n = 1, H₂ = 1, y₁ = 5, y₂ = 1, hi = 12, the first level below nine at step 1 and six at step 2.",
+      "zh": "With.goes_on：给还 min z (12 − z)（TurningInTime.Three.giving）下，With.way = [(9, 4), (1, 1)] 从九起的线永不终止；由 two_units_iff（m = 9，h = 4，n = 1，H₂ = 1，y₁ = 5，y₂ = 1，hi = 12），第 1 步首次低于九，第 2 步为六。",
+      "declarations": [
+        "Becoming.WayOfUnits.With.way",
+        "Becoming.WayOfUnits.With.goes_on"
+      ]
+    },
+    {
+      "en": "With.goes_on_holds: the same line never ends through unending_iff_holds, with y := id and hi := 12: Regime at the way of both units at steps 0 and 1 and at [(1, 1)] from step 2 on, and Holds at ([(1, 1)], 6), step 2.",
+      "zh": "With.goes_on_holds：同一条线经由 unending_iff_holds 永不终止，取 y := id、hi := 12：第 0、1 步两单元的方式满足 Regime，第 2 步起 [(1, 1)] 满足 Regime，第 2 步的 ([(1, 1)], 6) 满足 Holds。",
+      "declarations": [
+        "Becoming.WayOfUnits.With.goes_on_holds"
+      ]
+    },
+    {
+      "en": "With.levels: from (With.way, 9) the course is (With.way, 8) at step 1, then ([(1, 1)], 6), ([(1, 1)], 10), ([(1, 1)], 12) and ([(1, 1)], 12) at steps 2 to 5: the first unit ends at eight and the second goes on alone.",
+      "zh": "With.levels：从 (With.way, 9) 起，第 1 步为 (With.way, 8)，第 2 至 5 步依次为 ([(1, 1)], 6)、([(1, 1)], 10)、([(1, 1)], 12)、([(1, 1)], 12)：第一个单元在八处终止，第二个单元独自继续。",
+      "declarations": [
+        "Becoming.WayOfUnits.With.levels"
+      ]
+    },
+    {
+      "en": "Against.turns_and_ends: under the same giving from (Against.way, 9), Against.way = [(9, 1), (1, 4)], the course is (Against.way, 8), ([(1, 4)], 6), ([(1, 4)], 4) at steps 1 to 3; four steps of the net lead to ([(1, 4)], 0), which has no next; and the line from (Against.way, 9) ends.",
+      "zh": "Against.turns_and_ends：同样的给还，从 (Against.way, 9) 起，Against.way = [(9, 1), (1, 4)]，第 1 至 3 步为 (Against.way, 8)、([(1, 4)], 6)、([(1, 4)], 4)；网中四步到达 ([(1, 4)], 0)，它没有后继；从 (Against.way, 9) 起的线终止。",
+      "declarations": [
+        "Becoming.WayOfUnits.Against.way",
+        "Becoming.WayOfUnits.Against.turns_and_ends"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. Discrete steps; a unit is a pair of whole numbers, its need and its use; a way is a list of units, repeats kept and counted; whole-number levels; one giving, a function of what is left after the take, the same for every way."
+    },
+    {
+      "en": "The level's step is RegimeMargin.step giving (taken w): what every unit present at the step takes, summed, is taken first and as much as there is, and giving is added from what is left. A unit goes on where the level meets its need; a unit that ends takes nothing after."
+    },
+    {
+      "en": "For unending_iff_holds: every unit of the start needing something; nothing given from nothing; the start at most hi; and Regime (Short, Meets and Keeps at what the way takes, with y of it, up to hi) at every way the course reaches with some unit going on there and at every step before it, the start's included. Not at every sub-way of the start, and not at the way where the net stops."
+    },
+    {
+      "en": "For two_units_iff and greater_need: n ≤ m; nothing given from nothing; Short, Meets and Keeps at H₂ with y₂ up to hi; 0 < n ≤ H₂ + y₂; Short at h + H₂ with y₁; the start below h + H₂ + y₁ and at most hi. greater_need adds m ≤ m'. A start at or above h + H₂ + y₁ is outside both."
+    },
+    {
+      "en": "For more_use_on_first: these premises for both pairs of uses, (h, H₂) with y₂ and (h', H₂') with y₂', with one y₁, one hi and one start, the same needs n ≤ m, h + H₂ = h' + H₂' and h ≤ h'."
+    },
+    {
+      "en": "takes_nothing_iff_alone asks only n ≤ m, under any giving and from any start; takes_nothing_ends adds nothing given from nothing, 0 < n, giving short of H₂ below y₁ and the start below H₂ + y₁. ends_while_net_goes asks one unit of the way whose need is above the level and one whose need it meets, under any giving."
+    },
+    {
+      "en": "The needs, the uses, y, y₁, y₂ and hi are parameters; Short, Meets, Keeps and FromNothing are premises on the giving, as in TurningInTime. The two-unit theorems go through a carrier of two values and a transfer that needs n ≤ m."
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "Units only end. Nothing builds a unit, and nothing derives that a unit which needs more is there.",
+      "kind": "scope"
+    },
+    {
+      "en": "The marks of a way that conditions on a reading (TurningInTime's marks, the lock's window, the gauges of reading in time) are not derived.",
+      "kind": "scope"
+    },
+    {
+      "en": "The comparison theorems are for two units from below the point of no return of what both take; simulations found them true with some premises dropped, which is not proved.",
+      "kind": "scope"
+    },
+    {
+      "en": "Nothing about a trained system.",
+      "kind": "correspondence"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean",
+      "detail": {
+        "en": "Against reading the needs and the sum taken as enough: With and Against have the same needs, nine and one, the same sum taken, five, and the same levels up to the first unit's ending and one step after, nine, eight and six; with the first unit taking four the line never ends (With.goes_on), with it taking one it ends (Against.turns_and_ends)."
+      }
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/wu-a-way-of-units/readers/r3-logic.md",
+      "detail": {
+        "en": "Found by simulation, not in Lean, on the design's form of unending_iff_holds: without the way being not empty, the empty way from three ends at once while, with nothing taken, the rest of the condition holds at once; without the start at most hi, under min z (12 − z) with hi 12, the unit (1, 10) from thirteen runs 13, 6, 0 and the line ends while the start is at or above 10 + 3."
+      }
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/wu-a-way-of-units/readers/v2-premises.md",
+      "detail": {
+        "en": "Found by simulation, not in Lean, on the module's first form: each premise of unending_iff_holds dropped alone, the others kept, has a case where the exact condition fails; without every unit needing something, a unit needing nothing goes on at level 0 for ever while no configuration holds; without the step keeping the level within hi, the levels 7, 9, 10, 4, 0 end the line though the course comes to a configuration that holds."
+      }
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/wu-a-way-of-units/readers/v2-premises.md",
+      "detail": {
+        "en": "Found by simulation, not in Lean: each premise of two_units_iff dropped alone has a case where the exact condition fails; without the step under H₂ keeping the level within hi, the levels 10, 9, 10, 11, 5 end the line while the condition on the course as it was holds; without n ≤ m, a first unit needing nothing keeps the line going while the condition, which asks a level below m, cannot hold."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "decidability",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation",
+    "conditional-not-universal"
+  ],
+  "validation_scope": {
+    "en": "Pure core, axiom reports empty in the scratch build (66 declarations, 47 theorems); a leaf, in the Lean's second layer only through its one import, TurningInTime. Compositions of landed theorems (RegimeMargin's point of no return and holding, turns_in_time_iff, the cut step's line) with an induction on the way's length; the witnesses computed. AI-written; a first design that claimed the marks derived was cut back, and the design, the Lean and the landing were each read by other AI agents set to refute them. Their simulations are not in Lean. No person's review of it is recorded yet."
+  },
+  "next_delta": {
+    "en": "Trim the comparison theorems' premises by proofs outside two_units_iff; state the comparison for any number of units; a way that builds units; join ReadingsSpread's overdrawn focal line and ReadOffInTime's gauges to the units by theorem; a test on a trained system, held."
+  },
+  "correspondence": {
+    "en": "Reading (AI-written, from the home section's reading and the module's header): where a way is units that each take, the first of turning in time's three levels, where the level's fall first makes a difference to the way, is the need of a unit, and no mark is given; units end, one or several at a step, until what remains holds on what is left or until none goes on. An ending that takes nothing with it changes nothing in the level's course and can only be read: that the gauges near and mid of ReadOffInTime's witness of one loss, which need more and take nothing, are this case is a reading, their model being another. That ReadingsSpread's overdrawn focal line, which takes from its source while the source lasts and is removed once the source stands below its need while the wide line persists, is such a unit is a reading too. Nothing here is about keeping a unit from ending by lowering its need. No near work was read for this item beyond turning-in-time's."
+  },
+  "canonical_source": "theories/becoming/chapters/02-MAP.md",
+  "aliases": [
+    "a way of units",
+    "a turn with no mark given",
+    "Becoming.WayOfUnits.unending_iff_holds",
+    "Becoming.WayOfUnits.two_units_iff"
+  ],
+  "dependencies": [
+    {
+      "id": "turning-in-time",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses the pair's step and turns_in_time_iff (TurningInTime.pair, net, AloneOutside, asItWas, turns_in_time_iff) and the witness's giving (Three.giving)."
+      },
+      "interface": {
+        "output": {
+          "en": "Under its regime premises and its premises on marks, the line never ends exactly where, at the first marked level of the course as it was, the need met there and at every step before, the level one step later is at or above H₂ + y₂."
+        },
+        "input": {
+          "en": "The carrier Bool, the first unit there or ended, with marked := (· < m), alone := id and Kept b := b = false."
+        },
+        "conditions": {
+          "en": "Its premises on marks, proved on the carrier (first_outside, first_turns, first_kept, first_uses, first_uses₁); its regime premises, taken as premises."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean"
+      }
+    },
+    {
+      "id": "going-alike-up-to-the-nets-end",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses the cut step (Law.stepWhile and stepWhile_unending_iff, stepWhile_steps_iff, stepWhile_none_iff)."
+      },
+      "interface": {
+        "output": {
+          "en": "Under the one, the line on the cut step never ends exactly where it can go on at every configuration of the orbit."
+        },
+        "input": {
+          "en": "The units' net, the pair's step cut where no unit goes on; the carrier's net."
+        },
+        "conditions": {
+          "en": "Whether some unit goes on, decided by anyGoes."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean"
+      }
+    },
+    {
+      "id": "margin-of-a-regime",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses the regime's step, its premises and its point of no return (RegimeMargin.step, FromNothing, Short, Meets, Keeps, ends_below, holds, and the three below-forms in the witnesses)."
+      },
+      "interface": {
+        "output": {
+          "en": "From below H + y the level's course under H comes to nothing; from H + y up to hi it never falls below its start."
+        },
+        "input": {
+          "en": "The level under what a way takes, the sum of its units' uses."
+        },
+        "conditions": {
+          "en": "Its own premises at what the way takes, with y of it, up to hi."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean"
+      }
+    },
+    {
+      "id": "regime-point-under-adjusting-giving",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses the bound on the adjusted run in the regime's form (RegimeMargin.Adjusted.orbit_regime, orbit_bound, regime_staysShort, regime_fromNothing, draw_pos) for the course as it was never rising."
+      },
+      "interface": {
+        "output": {
+          "en": "From below H + y, under giving short of H below y and nothing from nothing, the level's course stays within its start."
+        },
+        "input": {
+          "en": "The level of the course as it was, under h + H₂."
+        },
+        "conditions": {
+          "en": "Giving short of h + H₂ below y₁; the start below h + H₂ + y₁."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean"
+      }
+    },
+    {
+      "id": "shared-laws-on-the-grammar",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses the root's keep (GrammarLaws.keep, keep_all, mem_keep) as the way after a step."
+      },
+      "interface": {
+        "output": {
+          "en": "What keep keeps is the members that pass, in order; a list all of whose members pass is kept whole."
+        },
+        "input": {
+          "en": "The units of a way, tested by whether the level meets their need."
+        },
+        "conditions": {
+          "en": "None."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean"
+      }
+    },
+    {
+      "id": "when-a-selection-read-off-continuation-reads",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses the first step at which a decided predicate fails (first_of_decided)."
+      },
+      "interface": {
+        "output": {
+          "en": "Of a decided predicate on the first steps, either it holds at every one or there is a first step where it fails."
+        },
+        "input": {
+          "en": "Whether every unit's need is met along a way's own course; whether the course as it was is at or above m'."
+        },
+        "conditions": {
+          "en": "The predicate decided, on whole numbers and finite lists."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean"
+      }
+    },
+    {
+      "id": "continuation-relative-to-a-class",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses the root's predicates «亡» and «不穷»."
+      },
+      "interface": {
+        "output": {
+          "en": "A configuration ends under a class; a line never ends."
+        },
+        "input": {
+          "en": "The units' net under the way's class and under the one."
+        },
+        "conditions": {
+          "en": "None."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean"
+      }
+    },
+    {
+      "id": "wen-in-the-grammar",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses the value class (sameValue) as the way's class."
+      },
+      "interface": {
+        "output": {
+          "en": "The class of configurations with one value."
+        },
+        "input": {
+          "en": "The way, the first part of a configuration."
+        },
+        "conditions": {
+          "en": "None."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean"
+      }
+    },
+    {
+      "id": "recurrence-without-premise",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses the orbit's sum (Law.orbit_add)."
+      },
+      "interface": {
+        "output": {
+          "en": "The orbit after k + i steps is the orbit after i steps from the configuration after k."
+        },
+        "input": {
+          "en": "The units' course and the level's course."
+        },
+        "conditions": {
+          "en": "None."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "a-narrow-reading-in-a-commons",
+      "detail": {
+        "en": "Its overdrawn focal line, which takes from its source while the source lasts and is removed once the source stands below its need, is read as a unit of a way; the two are not joined by theorem."
+      }
+    },
+    {
+      "id": "a-loss-read-before-its-point-of-no-return",
+      "detail": {
+        "en": "Its gauges near and mid need more and take nothing; read as the case of takes_nothing_iff_alone, on another model; not joined."
+      }
+    },
+    {
+      "id": "groups-whose-conditions-are-coupled",
+      "detail": {
+        "en": "A formation that depends, at a need of at least m, on a member of a family whose stock is below m, where it is active only while supported, is not active (Flow.family_ends_below_at): an ending below a need on another model."
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.WayOfUnits.Against.turns_and_ends",
+        "Becoming.WayOfUnits.Against.way",
+        "Becoming.WayOfUnits.Goes",
+        "Becoming.WayOfUnits.Holds",
+        "Becoming.WayOfUnits.Regime",
+        "Becoming.WayOfUnits.With.goes_on",
+        "Becoming.WayOfUnits.With.goes_on_holds",
+        "Becoming.WayOfUnits.With.levels",
+        "Becoming.WayOfUnits.With.way",
+        "Becoming.WayOfUnits.after",
+        "Becoming.WayOfUnits.carrierCourse",
+        "Becoming.WayOfUnits.course",
+        "Becoming.WayOfUnits.ends_while_net_goes",
+        "Becoming.WayOfUnits.firstAfter",
+        "Becoming.WayOfUnits.firstUse",
+        "Becoming.WayOfUnits.first_kept",
+        "Becoming.WayOfUnits.first_outside",
+        "Becoming.WayOfUnits.first_turns",
+        "Becoming.WayOfUnits.first_uses",
+        "Becoming.WayOfUnits.first_uses₁",
+        "Becoming.WayOfUnits.goes",
+        "Becoming.WayOfUnits.greater_need",
+        "Becoming.WayOfUnits.left",
+        "Becoming.WayOfUnits.more_use_on_first",
+        "Becoming.WayOfUnits.need",
+        "Becoming.WayOfUnits.net",
+        "Becoming.WayOfUnits.taken",
+        "Becoming.WayOfUnits.takes_nothing_ends",
+        "Becoming.WayOfUnits.takes_nothing_iff_alone",
+        "Becoming.WayOfUnits.twoWay",
+        "Becoming.WayOfUnits.two_units_iff",
+        "Becoming.WayOfUnits.unending_iff_carrier",
+        "Becoming.WayOfUnits.unending_iff_holds",
+        "Becoming.WayOfUnits.use"
+      ],
+      "sha256": "3bb2bb0a94f8c57a873af966d1d4ef4cebf9457e8fa689ffa7d44f5c6f5fc7ee"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261113T023828.938796Z/verification.json",
+      "role": "receipt",
+      "sha256": "16b80fb7a3944fdfaa954802fca87186b5355c53f747b5929a007b567d711fa2"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/wu-a-way-of-units/NOTE.md",
+      "role": "integration",
+      "sha256": "761a9ccbba45b40e81d0bd424ab6e0940f86ec49efa3969acee2fad4813e77c3"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/wu-a-way-of-units/DESIGN.md",
+      "role": "integration",
+      "sha256": "b1f4748674b1390a601324976106b5852cdcb2133aef6be2f37aabd060bd4519"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/wu-a-way-of-units/DESIGN-attacked.md",
+      "role": "integration",
+      "sha256": "1be4e33ec65c86f566407b636faffae2628a5437d9e1790d1ddcaf053af7bb38"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/wu-a-way-of-units/READER.md",
+      "role": "review",
+      "sha256": "bc72e63374204efd38cf23448c5e2ca128e343c1913cc4886624bae37adcdb65"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/wu-a-way-of-units/readers/r3-logic.md",
+      "role": "review",
+      "sha256": "499011b4ce39948321069017148568cc61b90ba09ad7b83ce250997e523cfc50"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/wu-a-way-of-units/readers/v2-premises.md",
+      "role": "review",
+      "sha256": "66506af18cd2799963fde2e75ca1912494f5459fa2ff839725d18c49c87fc212"
+    },
+    {
+      "path": "theories/becoming/chapters/02-MAP.md",
+      "role": "statement",
+      "sha256": "fb4e4b84b58c909222caa26e2f7261ebde43459e8d2bc5753c72ffb9e6875023"
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-11-12-where-we-are-and-the-loop.md",
+      "role": "provenance",
+      "sha256": "77d076ff96e3d3d72e46dd8ad4bb9c962dd73b94c721175df38f9574dd8ce3d9"
+    }
+  ],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261113T023828.938796Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.WayOfUnits",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
+  "history": [
+    {
+      "en": "13 November 2026, board item WU, on Ren's words of 13 November kept in sources (sources/15-codex-theory-conversations/2026-11-12-where-we-are-and-the-loop.md): added. A first design that claimed the marks of turns_in_time_iff derived was cut back after three AI readers; it is kept in the study folder wu-a-way-of-units (DESIGN-attacked.md) with their reports."
+    }
+  ]
+}

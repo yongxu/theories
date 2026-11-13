@@ -1,0 +1,34 @@
+{
+ "family": "A",
+ "note": "AI-written, 13 November 2026. The twelve theorems of Becoming.WayOfUnits the entry turning-in-time lists under `premises` (board item WU). Binder names as lister.py's aaRow printed them (2026-11-13-a-way-of-units.lister.txt), run once against the scratch build of the module, whose statements are the landed file's (the two differ only in comments). Each binder's premises are those the entry lists for the theorem. The hygienic binder of greater_need and more_use_on_first is the antecedent of the implication, the first line never ending. RegimeMargin.step under the units' net (WayOfUnits.left) is regimemargin-step, taken as a definition, as in TurningInTime's rows; ends_while_net_goes does not take it, since its proof does not use the level's step (as TurningInTime's kind_ends_while_net_goes takes none); unending_iff_carrier, whose statement names the step, and takes_nothing_iff_alone, whose proof compares the levels under it, take it, though both hold under any giving.",
+ "laws": {
+  "Becoming.WayOfUnits.ends_while_net_goes": {
+   "binders": {"mp": ["wayofunits-unit-above-level"], "lt": ["wayofunits-unit-above-level"], "mq": ["wayofunits-unit-met"], "ge": ["wayofunits-unit-met"]},
+   "takes_unbound": {}},
+  "Becoming.WayOfUnits.unending_iff_holds": {
+   "binders": {"needs": ["wayofunits-needs-positive"], "nothing": ["regimemargin-fromnothing"], "high": ["regimemargin-start-level-le-hi"], "along": ["wayofunits-regime-along"]},
+   "takes_unbound": {"regimemargin-step": "definition"}},
+  "Becoming.WayOfUnits.unending_iff_carrier": {
+   "binders": {"order": ["wayofunits-order"]},
+   "takes_unbound": {"regimemargin-step": "definition"}},
+  "Becoming.WayOfUnits.two_units_iff": {
+   "binders": {"order": ["wayofunits-order"], "nothing": ["regimemargin-fromnothing"], "short": ["regimemargin-short"], "meets": ["regimemargin-meets"], "keeps": ["regimemargin-keeps"], "needs": ["optimum-coupled-need-positive"], "within": ["turningintime-within"], "short₁": ["regimemargin-short"], "below": ["regimemargin-start-below-point"], "high": ["regimemargin-start-level-le-hi"]},
+   "takes_unbound": {"regimemargin-step": "definition"}},
+  "Becoming.WayOfUnits.greater_need": {
+   "binders": {"order": ["wayofunits-order"], "more": ["wayofunits-greater-need"], "nothing": ["regimemargin-fromnothing"], "short": ["regimemargin-short"], "meets": ["regimemargin-meets"], "keeps": ["regimemargin-keeps"], "needs": ["optimum-coupled-need-positive"], "within": ["turningintime-within"], "short₁": ["regimemargin-short"], "below": ["regimemargin-start-below-point"], "high": ["regimemargin-start-level-le-hi"], "a._@._internal._hyg.0": ["wayofunits-first-line-unending"]},
+   "takes_unbound": {"regimemargin-step": "definition"}},
+  "Becoming.WayOfUnits.more_use_on_first": {
+   "binders": {"order": ["wayofunits-order"], "nothing": ["regimemargin-fromnothing"], "short": ["regimemargin-short"], "meets": ["regimemargin-meets"], "keeps": ["regimemargin-keeps"], "within": ["turningintime-within"], "short'": ["regimemargin-short"], "meets'": ["regimemargin-meets"], "keeps'": ["regimemargin-keeps"], "within'": ["turningintime-within"], "needs": ["optimum-coupled-need-positive"], "sum": ["wayofunits-same-sum"], "more": ["wayofunits-more-on-first"], "short₁": ["regimemargin-short"], "below": ["regimemargin-start-below-point"], "high": ["regimemargin-start-level-le-hi"], "a._@._internal._hyg.0": ["wayofunits-first-line-unending"]},
+   "takes_unbound": {"regimemargin-step": "definition"}},
+  "Becoming.WayOfUnits.takes_nothing_iff_alone": {
+   "binders": {"order": ["wayofunits-order"]},
+   "takes_unbound": {"regimemargin-step": "definition"}},
+  "Becoming.WayOfUnits.takes_nothing_ends": {
+   "binders": {"order": ["wayofunits-order"], "nothing": ["regimemargin-fromnothing"], "needs": ["optimum-coupled-need-positive"], "short₁": ["regimemargin-short"], "below": ["regimemargin-start-below-point"]},
+   "takes_unbound": {"regimemargin-step": "definition"}},
+  "Becoming.WayOfUnits.With.goes_on": {"binders": {}, "takes_unbound": {}},
+  "Becoming.WayOfUnits.With.goes_on_holds": {"binders": {}, "takes_unbound": {}},
+  "Becoming.WayOfUnits.With.levels": {"binders": {}, "takes_unbound": {}},
+  "Becoming.WayOfUnits.Against.turns_and_ends": {"binders": {}, "takes_unbound": {}}
+ }
+}
