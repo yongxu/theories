@@ -2047,3 +2047,6 @@ AA's six-family pass landed (content tip `de9c5631e`; atlas entries and evidence
 checked by two fresh readers, the atlas's validation, focused tests, the render, strict-fresh, links and `make gate`;
 RW's fourteenth piece landed (content tip `118a31f4a`; nothing paid): the atlas in the shared navigation line in both languages, the reader's site's address on README's first screen and MAP, LINEAGE cut at the third push with point 51 (10 November: from ranking by widening to the dynamics connected and mapped), an anchor for every point and a title for 50;
 Ren's "Once, after AG-F" kept in sources;
+AA's name check landed (content tip `3d179cee3`; tooling and atlas entries, no Lean, nothing paid): atlas.Repository.declared resolves a name exactly, through the core receipt or a namespace-aware reading of the live Lean and never by its last component, and refuses prose;
+the entries' 21 names no declaration is written as are corrected (RelationalRenewal and FiniteSupportObstruction at the root, Web's fields as Dependence's, 08's card rows given declarations, one prose entry split);
+checked by the atlas's validation, focused tests, the render, strict-fresh, links and `make gate`;
