@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" role="img" aria-label="The level step by step from nine: as it was it runs nine, eight, six, two, nothing; turning at nine or at eight it holds; turning at six comes too late.">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="360" viewBox="0 0 720 360" role="img" aria-label="The level step by step from nine: as it was it runs nine, eight, six, two, nothing; turning at nine or at eight it holds; turning at six comes too late.">
 <rect width="720" height="360" fill="#ffffff"/>
 <line x1="76" y1="300" x2="660" y2="300" stroke="#e6e6e6" stroke-width="1"/>
 <text x="66" y="304" text-anchor="end" font-size="12" fill="#555555" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">0</text>
