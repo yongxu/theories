@@ -105,7 +105,8 @@
 | 基（base） | 一条定理在何处被证明：根、任一过程、任一类型、世界模型、一个具名的模型、外围 | [第八章 §2](theories/becoming/chapters/08-METHOD.md#standings-and-bases) |
 | 纯核；外围（the pure core; the periphery） | `Becoming` 的核心模块，它们只引入基础层与彼此（根模块 `Becoming` 还引入实例与应用之环），在去掉基础层的 `import Std` 之后，单凭 Lean 的前奏即可编译，每一个源声明的公理报告都为空；Mathlib 诸叶、较早的模块与 Python 实验，它们可以使用任何工具，依赖关系指向纯核，其结果保有各自的回执并列出其公理。三个基础模块（`GenerativeCore`、`InquirySufficiency`、`RelationalRenewal`，不是纯核的 L0 层）以及实例与应用之环，与纯核一同检查，满足纯核的条件，却不计入纯核；二者也都不是外围 | [第八章 §3](theories/becoming/chapters/08-METHOD.md#pure-core-and-periphery) |
 | 脊柱（spine） | 由其检查器所运行的 Lean 包 `Becoming`（纯核以及实例与应用之环，立于三个基础模块之上，后者与它一同检查而不计入其中），新的结果扩展它；*脊柱之名*是在那里使用的一个名称，*前脊柱*标记运行之外的一个较早的模块，连同其范围保存。脊柱上的一条律立于其标签所指的基上，并不因此就在根上。文件 `spine.svg` 沿用较早的名字；它画的是各章，不是脊柱 | [第八章 §3](theories/becoming/chapters/08-METHOD.md#pure-core-and-periphery) |
-| 校准（calibration） | 一条律在何处需要一个全知原理，以及这一需要关于展开说出了什么 | [第八章 §5](theories/becoming/chapters/08-METHOD.md#calibrations) |
-| 假设（hypotheses） | 一条律自身的局部前提（有限、已列出、已判定……），写进其陈述之中 | [第八章 §2](theories/becoming/chapters/08-METHOD.md#standings-and-bases) |
-| 律（law） | 一个陈述，对其假设所容许的每一个关系、载体或模型都成立，从它所成立的对象上读出，而不是加于其上；只经由其假设而有内容。`Law` 是一个确定之步的脊柱之名，即一个关系（`next x = y`），不是其构形所遵从的一条规则；一门科学的律，冠以该科学之名 | [第八章 §10](theories/becoming/chapters/08-METHOD.md#law) |
-| 共律（shared law） | 许多核心结果共有、并经由它而证明的一条律，在持有它的最低一层只陈述一次：闭包、平衡、有限运行、归并、扩大。它不给任何律排序，也不统辖任何东西；旧称“master law”（主律），这一名称只保留在它被匹配而不被阅读之处（一个旧 id、旧锚点）以及历史之中 | [第八章 §7](theories/becoming/chapters/08-METHOD.md#shared-laws-and-connectivity) |
+| 校准（calibration） | 一条定理在何处需要一个全知原理，以及这一需要关于展开说出了什么 | [第八章 §5](theories/becoming/chapters/08-METHOD.md#calibrations) |
+| 假设（hypotheses） | 一条定理自身的局部前提（有限、已列出、已判定……），写进其陈述之中 | [第八章 §2](theories/becoming/chapters/08-METHOD.md#standings-and-bases) |
+| 定理（theorem） | 本理论自己已证明的一个陈述：对其假设所容许的每一个关系、载体或模型都成立，从它所成立的对象上读出，而不是加于其上；只经由其假设而有内容。2026 年 11 月 13 日以前称为本理论的“律” | [第八章 §10](theories/becoming/chapters/08-METHOD.md#law) |
+| 律（law） | `Law` 是一个确定之步的脊柱之名，即一个关系（`next x = y`），不是其构形所遵从的一条规则；一类模型的律，是在该类每一个模型中都成立者；一门科学的律，冠以该科学之名。三者都不是*定理*，为人所执持的规则也不在其中 | [第八章 §10](theories/becoming/chapters/08-METHOD.md#law) |
+| 共律（shared law） | 许多核心结果共有、并经由它而证明的一条定理，在持有它的最低一层只陈述一次：闭包、平衡、有限运行、归并、扩大。它不给任何定理排序，也不统辖任何东西。此名在诸名修订之前，仍用旧字称定理；旧称“master law”（主律），这一名称只保留在它被匹配而不被阅读之处（一个旧 id、旧锚点）以及历史之中 | [第八章 §7](theories/becoming/chapters/08-METHOD.md#shared-laws-and-connectivity) |
