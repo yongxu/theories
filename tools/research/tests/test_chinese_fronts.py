@@ -267,10 +267,12 @@ class LandingPageTests(unittest.TestCase):
         condition 1, one of the goal's conditions; which wording is right is Ren's); the meta-attractor's closed form at
         02 §9; and each governing clause once on the page (AG review, fourth pass, 9 November 2026)."""
         text = re.sub(r'<!--.*?-->', '', (ROOT / zh_fronts.TEMPLATE).read_text(encoding='utf-8'), flags=re.S)
-        self.assertIn('这样的联合选择读取自身份额之外的东西，也不会转而去选择对自身之选择的控制', text)  # the fronts' one term (K10)
+        self.assertIn('人与 AI 赖以延续的，始终及时地对他们怎样一同选择造成差别；塑造他们怎样选择，也不成为他们为之而选的', text)  # the fronts' one term (K10)
         # AG-F's fix round (10 November 2026, its screens verifier): who selects together in AGENTS.md's words, as the
         # canonical aligned state's Chinese says it, not 人、制度与训练出的系统
-        self.assertIn('一种对齐，让人与 AI 一同作出的选择，既不落入工具性趋同，也不落入元吸引子', text)
+        # DW (13 November 2026): the aim said again; the two names follow it as what happens when it does not hold
+        self.assertIn('这样一种对齐：', text)
+        self.assertIn('工具性趋同与元吸引子，是这一点不成立时所发生之事的名字', text)
         self.assertNotIn('人、制度与训练出的系统', text)
         self.assertNotIn('规则仍读取塑造者份额之外的东西', text)
         self.assertIn('02-MAP.md#r-closed-capture', text)

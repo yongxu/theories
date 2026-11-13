@@ -3,8 +3,6 @@
 
 [English](GLOSSARY.md) · [首页](README.zh.md) · [一页](theories/becoming/ONE-PAGE.zh.md) · [用途](theories/becoming/USES.zh.md) · [实例](theories/becoming/USES-EXAMPLES.zh.md) · [总览](theories/becoming/THE-THEORY-OF-BECOMING.zh.md) · [八章（英文）](theories/becoming/chapters/README.md) · [古文（第六章）](theories/becoming/chapters/06-CLASSICAL-TEXTS.md) · [检验](TESTS.zh.md) · [图集（英文）](theories/becoming/results/atlas/ATLAS.md) · [对照表](theories/becoming/results/atlas/CROSSWALK.zh.md) · [怎样长成](theories/LINEAGE.zh.md) · **术语表** · [审查包](theories/becoming/review/README.zh.md)
 
-*本版落后于英文版：它依 2026 年 11 月 13 日的[英文版](GLOSSARY.md)译出，英文版此后有改动，本版尚未随之修订；有出入处，以英文版为准。*
-
 *AI 译自英文版，尚无经人审查的记录；义以英文版为准。*
 
 生灭变化之论的词语，每一个只有一义、一个所属之处：定义它的那一章的那一节。别处用到一个词，都取这一义，并链接到那里。汉语术语在引入之处释义一次。除第六章外，各章与理论图皆为英文（理论图的各章一览有中文版）。文法的每一个概念及其 Lean 名称，都列在[理论图](theories/becoming/results/THEORY-GRAPH.md#the-grammars-concepts)中；较早文本所用的标签与现行术语的对照，见[方法一章](theories/becoming/chapters/08-METHOD.md#names)。本页所取代的术语表（规范章的 §10，连同其形式术语索引及其与语料词汇的对照）与该章一同保存在历史之中；九月的语料术语表（192 个词条）保存在[它自己的历史](_process/history/2026-09-consolidation/GLOSSARY.md)中。
@@ -33,6 +31,8 @@
 | 移动上的门（gate (on moves)） | 一个过程诸移动上的一个已判定的标记；它定位变化可以从何处进入一条相续。不是更新之门 | [第一章](theories/becoming/chapters/01-ROOT.md#r-every-origin-passes-the-gate) |
 | 及（reach） | 一个关系的传递闭包 | [第一章 §1](theories/becoming/chapters/01-ROOT.md#one-kind-of-symbol) |
 | 边界（boundary） | 一个区域与其余部分、内与外的划分，由该区域给出：位于其中者就是该区域，它所在之处就是内与外相接之处，而一个关系在把内部之物关联到外部之物之处跨越它。沿一个关系，一个形成的边界由一个包含该形成、并在该关系之下封闭的区域给出，于是该关系从不跨越它：闭包是最小的这样的区域，整体是最大的，而较小的关系有更多这样的区域。一条定理的裁断在其中成立的构形或参数之区域的边界（第三章 §8、第五章 §10）是同一义；第二章 §1 中继续与终止之间的边界，位于二者都未判定之处；第四章 §1 的割（`Cut`）是没有任何已形成的关系跨越的区域，即文法的不出（`«不出»`） | [第七章 §4.1](theories/becoming/chapters/07-SIGNIFICANCE.md#decomposition)，读于[第一章 §9.9](theories/becoming/chapters/01-ROOT.md#boundaries)，[不出](theories/becoming/chapters/01-ROOT.md#r-not-going-out-of-a-region) |
+| <a id="beyond"></a>之外、以外、之内（beyond, outside, within） | 一个指明的集合沿一个指明的关系的补（不在这一同族之中；不在这一闭包之内），或属于它。它随集合而移动；整体无外。单独说出（“之外”“位于外部者”）时，它就像在说一个地方；新的文字指明集合，或说出关系：对一个选择不造成差别者，不耦合进它者 | [第一章 §9.9](theories/becoming/chapters/01-ROOT.md#boundaries)，[研究](_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dw-dualist-wording/NOTE.md) |
+| <a id="own"></a>自己的、其自身的（own, its own） | 三种用法，彼此分开：一个索引（一个水平或一个进程列在哪一个形成名下）；一个回返（一条由在它之下上升的份额重新定出的规则，这是一个回路，不是一个自我作用于自身）；一个范围（一个中心在一个类之下沿一个关系的闭包，其中哪一个关系、哪一个类是给定的，不是推导而得） | [第七章 §1](theories/becoming/chapters/07-SIGNIFICANCE.md#evaluation)，[研究](_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dw-dualist-wording/NOTE.md) |
 | 模型；世界模型（model; the World model） | 一个载体、一个读作缘的关系以及所用的诸类；世界模型是带有流、依存网（`Web`）、自然数之量与离散步的那个模型 | [第一章 §8](theories/becoming/chapters/01-ROOT.md#models) |
 | 发生模型（occurrence model） | 一个世界模型所确定的文法模型：它的诸发生（处于某一步的一个关系项），带有“处于同一步”这一类，带有作为部分同一的守恒之步、活动、存量与在场，以及一步之内的五个关系，与名之步并列 | [第一章 §8.6](theories/becoming/chapters/01-ROOT.md#r-the-world-represented-both-ways) |
 | 诸移动之关系（the moves' relations）`moveRel` | 在文法中读出的一个过程：每一个移动一个关系，在该移动把 `s` 带到 `t` 之处关联 `s` 与 `t`；它们的并就是诸步，而把移动纳入其内的模型，在带有移动的构形上读它们 | [第一章 §8.1](theories/becoming/chapters/01-ROOT.md#r-processes-represented-both-ways) |
@@ -40,7 +40,7 @@
 
 ## 地图
 
-*地图*在本论自己的话里有两义。**整幅地图**是这项工作的全体（[总览](theories/becoming/THE-THEORY-OF-BECOMING.zh.md)）：首先是一张为对齐而画的地图，看一个选择能触及什么，能使它读不到的什么东西耗竭，它的规则又怎样能锁定；也是一张智慧的地图，把各种传统与科学对这些动态的认识，与本论对照（[对照表](theories/becoming/results/atlas/CROSSWALK.zh.md)）。**第二章的地图**（总览中即称“第二章的地图”）是其中诸形成的地图：一个样式在诸分支上何处生成、守或退化，什么使一个形成终结或继续下去（[第二章](theories/becoming/chapters/02-MAP.md#the-map)）。各章说到*地图*时，指的是第二章的地图；下列诸词都是它自己的，“形成”取自第四章。在数学中，文（见下）中的映射，或一个选择*透过*它来读取的映射（[第三章 §1](theories/becoming/chapters/03-KNOWING.md#r-selection-through-a-model-of-the-options)），是一个函数。
+*地图*在本论自己的话里有两义。**整幅地图**是这项工作的全体（[总览](theories/becoming/THE-THEORY-OF-BECOMING.zh.md)）：首先是一张为对齐而画的地图，画的是哪些不同对一个选择造成差别，它赖以延续的怎样能耗减下去而这耗减对它不造成差别，它又怎样能照旧延续直到所赖的耗尽，或者及时转向；也是一张智慧的地图，把各种传统与科学对这些动态的认识，与本论对照（[对照表](theories/becoming/results/atlas/CROSSWALK.zh.md)）。**第二章的地图**（总览中即称“第二章的地图”）是其中诸形成的地图：一个样式在诸分支上何处生成、守或退化，什么使一个形成终结或继续下去（[第二章](theories/becoming/chapters/02-MAP.md#the-map)）。各章说到*地图*时，指的是第二章的地图；下列诸词都是它自己的，“形成”取自第四章。在数学中，文（见下）中的映射，或一个选择*透过*它来读取的映射（[第三章 §1](theories/becoming/chapters/03-KNOWING.md#r-selection-through-a-model-of-the-options)），是一个函数。
 
 | 术语 | 义 | 出处 |
 |---|---|---|
@@ -54,14 +54,18 @@
 | 机（juncture） | 一个损失经过之处 | [第二章](theories/becoming/chapters/02-MAP.md#return) |
 | 环、耦合、所携之量（loop, coupling, carried amount） | 影响的一条闭合路径；一个水平对另一个水平反应的强度；一个差异沿一条路径所携带的东西 | [第二章](theories/becoming/chapters/02-MAP.md#loops) |
 | 第一律（first law） | `Flow.Gainless` 的脊柱之名：一个没有重复的封闭同族，所得回的至多是从它所取走的；在㶲平衡之下，以可用功读出的热力学第二定律给出它（`EntropyProduction.gainless_of_secondLaw`）。热力学第一定律，即能量守恒，总是以全名称之 | [第二章](theories/becoming/chapters/02-MAP.md#how-to-read) |
-| 元吸引子（meta-attractor） | 胜出换来左右选择规则之力量的那个回路（[元吸引子文件夹](theories/meta-attractor/README.md)）。它的闭合形式是第二章 §9 的定义：一个选择的回路，其规则与对规则的解读都由它所选出者所占的份额形成，回路中没有任何东西读取这一份额之外的东西；在所述的模型上已证明它会锁定，它读不到的损失不论增长到多大，锁定仍保持（[闭合的捕获](theories/becoming/chapters/02-MAP.md#r-closed-capture)）。它的第二阶是塑造规则之能力，为回到塑造者身上的东西所选择（[第二章 §9](theories/becoming/chapters/02-MAP.md#r-shaping-selected-among-groups)）；规则的读者取自其所选者时，在第二章所述的条件之下，二者是同一个回路。第二章把闭合的回路读作文件夹所说之元吸引子的一部分（文件夹的元吸引子还说及承载者、领域与纠正），又把文件夹的第二阶读作塑造规则之能力的律［AI 读法，D26、D45］。下一行的锁定，单凭自身不是元吸引子 | [第二章 §9](theories/becoming/chapters/02-MAP.md#capture)，[元吸引子文件夹](theories/meta-attractor/README.md) |
-| <a id="锁定"></a>锁定（lock） | 一条读自它所提高之份额的规则所处的一种构形：在这一构形中，规则一直偏好它所选中的东西，份额与规则都不低于起点，而它读不到的损失可以越过任何界限；无噪声时，唯有它所读之物的改变（一个在损失超过某界限时便不再偏好的读取，这是一条充分的出路，未表明是唯一的），或律、读法、选择的改变，才能使进程脱离它；有噪声时，单凭漂移也能脱离其中一些锁定，并非全部（有的已证明，如逐一抽取的临界量；对经由规则的捕获，是[一种读法](theories/becoming/chapters/02-MAP.md#which-locks-noise-leaves)）。（中文版所加：无明一行所说的“锁定于一个目标”是寻求的锁定，不是这里的构形。） | [第二章 §9](theories/becoming/chapters/02-MAP.md#r-closed-capture) |
+| <a id="meta-attractor"></a>元吸引子（meta-attractor） | 一个回路，其中一个选择所提高的，转而定出这个选择；用这项工作较早的话说，是“胜出换来左右选择规则之力量的那个回路”（[元吸引子文件夹](theories/meta-attractor/README.md)）。它的闭合形式是第二章 §9 的定义：一个选择的回路，其规则以及规则怎样重新定出，都由它所选出者所占的份额形成，此外没有什么对二者造成差别；下一步所选出的，以及每一步重新定出的规则，都只由份额与规则得出之处，已在所述的模型上证明它会锁定，对二者都不造成差别的损失不论增长到多大，锁定仍保持（[闭合的捕获](theories/becoming/chapters/02-MAP.md#r-closed-capture)）。它的第二阶是塑造规则之能力，为回到塑造者身上的东西所选择（[第二章 §9](theories/becoming/chapters/02-MAP.md#r-shaping-selected-among-groups)）；规则的读者取自其所选者时，在第二章所述的条件之下，二者是同一个回路。第二章把闭合的回路读作文件夹所说之元吸引子的一部分（文件夹的元吸引子还说及承载者、领域与纠正），又把文件夹的第二阶读作塑造规则之能力的律［AI 读法，D26、D45］。下一行的锁定，单凭自身不是元吸引子 | [第二章 §9](theories/becoming/chapters/02-MAP.md#capture)，[元吸引子文件夹](theories/meta-attractor/README.md) |
+| <a id="锁定"></a>锁定（lock） | 一条由它所提高之份额重新定出的规则所处的一种构形：在这一构形中，规则一直偏向它所选中者，份额与规则都不低于起点，而对二者都不造成差别的损失可以越过任何界限；无噪声时，唯有它所读者的改变（一个在损失超过某界限时便不再偏向的读法，这是一条充分的出路，未表明是唯一的），或律、读法、选择的改变，才能使进程脱离它；有噪声时，单凭漂移也能脱离其中一些锁定，并非全部（有的已证明，如逐一抽取的临界量；对经由规则的捕获，是[一种读法](theories/becoming/chapters/02-MAP.md#which-locks-noise-leaves)）。（中文版所加：无明一行所说的“锁定于一个目标”是寻求的锁定，不是这里的构形。） | [第二章 §9](theories/becoming/chapters/02-MAP.md#r-closed-capture) |
+| <a id="rule"></a>规则（rule） | 选择在一步上怎样选：在锁定的模型中，是构形的一个坐标，在某些步上由份额重新定出。份额与规则是同一个回路的两端，二者快慢不同；规则并不立于它所选者之上 | [第二章 §9](theories/becoming/chapters/02-MAP.md#capture)，[第二章 §11](theories/becoming/chapters/02-MAP.md#turning-in-time) |
+| <a id="loss"></a>损失（loss） | 在锁定的定理中，一个每一步都上升、对份额与规则都不造成差别的坐标；它是谁的损失、按哪一种比较来算，由意义留为自由。指明一个区域时，损失就是区域以外的一个形成不再能赖以延续者 | [第二章 §9](theories/becoming/chapters/02-MAP.md#capture)，[第七章 §2](theories/becoming/chapters/07-SIGNIFICANCE.md#r-loss-beyond-a-region) |
 
 ## 认知
 
 | 术语 | 义 | 出处 |
 |---|---|---|
 | <a id="耦合进"></a>耦合进（couples into） | 经由一个选择者的诸耦合而到达它的东西（从不说“记录到”，即 registers） | [第三章 §1](theories/becoming/chapters/03-KNOWING.md#selection) |
+| <a id="makes-a-difference"></a>造成差别；赖以延续（makes a difference to; sustains） | 本论的中心所说的两个关系，彼此分开。一个不同对一个选择造成差别，是说在这一点上不同的诸进程可以被选得不同：它耦合进这个选择。一个选择赖以延续的，是它的延续所需要的。这一需要是否得到满足，总是造成差别；高出需要的还剩多少，可以不造成任何差别，本论的中心说的正是这种情形 | [第三章 §1](theories/becoming/chapters/03-KNOWING.md#selection)，[第二章 §11](theories/becoming/chapters/02-MAP.md#turning-in-time) |
+| <a id="read"></a>读、读取、读法（read, reads, reading） | 一个词说几种关系，每一种在 Lean 中各有其词：一步所给出的*只依赖于*一个指明的部分（`DependsOnlyOn`、`GoAlike`）；对一个进程全体的裁断，在*透过*耦合进来者而*相同*的诸进程上相同（`AlikeThroughUpTo`、`SelectsThrough`）；一个水平*耦合进*另一水平的交换（`CouplesAt`、`Sensitive`）；一步*之后*的规则，作为份额的函数（“所读出的规则”“读法”：`after`）；规则在哪些步上重新定出的一个日程；一条相续所带的一个标签，它选定这条相续的律，并沿相续传下去；以及本论自己的解释（“读作”“［AI 读法］”），只有在这一义上，才是有谁在读。说一个形成读什么时，这个形成并不面对所读者。自 2026 年 11 月 13 日起所写的文字说出关系；这个词仍留在名称之中，以及尚未重新说过的段落之中 | [研究](_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dw-dualist-wording/NOTE.md)，[第八章 §1](theories/becoming/chapters/08-METHOD.md#four-questions) |
 | 选择（selection） | 经由选择者的诸耦合而进行；世界模型诸前提的一个子集，称为“前提的一种选取”（a choice of premises） | [第三章 §1](theories/becoming/chapters/03-KNOWING.md#selection) |
 | 无明、明（*wúmíng*、*míng*） | 锁定于一个在静止中无法达到之目标的寻求，植根于每一个形成由之选择的那个位置，却与之不同；耦合与一个选择相结合，使之到达支持所不标记的东西 | [第三章](theories/becoming/chapters/03-KNOWING.md#learning) |
 | 验、层（testing, stages） | 在网之内作区分；核的有限逼近 | [第三章](theories/becoming/chapters/03-KNOWING.md#testing) |
@@ -109,6 +113,7 @@
 | 脊柱（spine） | 由其检查器所运行的 Lean 包 `Becoming`（纯核以及实例与应用之环，立于三个基础模块之上，后者与它一同检查而不计入其中），新的结果扩展它；*脊柱之名*是在那里使用的一个名称，*前脊柱*标记运行之外的一个较早的模块，连同其范围保存。脊柱上的一条定理立于其标签所指的基上，并不因此就在根上。文件 `spine.svg` 沿用较早的名字；它画的是各章，不是脊柱 | [第八章 §3](theories/becoming/chapters/08-METHOD.md#pure-core-and-periphery) |
 | 校准（calibration） | 一条定理在何处需要一个全知原理，以及这一需要关于展开说出了什么 | [第八章 §5](theories/becoming/chapters/08-METHOD.md#calibrations) |
 | 假设（hypotheses） | 一条定理自身的局部前提（有限、已列出、已判定……），写进其陈述之中 | [第八章 §2](theories/becoming/chapters/08-METHOD.md#standings-and-bases) |
+| <a id="supplied"></a>所给、给定（supplied, given） | 就一个前提而言：为一条定理所取，而在其模型中不是推导而得（一个类、一个中心、一个次序、一种意义、一个列表）。写模型者把它放进去，而这一写作本身也在展开之中；“从外部给定”说的是在模型以外，决不是在生灭变化以外 | [第八章 §1](theories/becoming/chapters/08-METHOD.md#beginning-within-the-one-unfolding) |
 | 定理（theorem） | 本理论自己已证明的一个陈述：对其假设所容许的每一个关系、载体或模型都成立，从它所成立的对象上读出，而不是加于其上；只经由其假设而有内容。2026 年 11 月 13 日以前称为本理论的“律” | [第八章 §10](theories/becoming/chapters/08-METHOD.md#law) |
 | 律（law） | `Law` 是一个确定之步的脊柱之名，即一个关系（`next x = y`），不是其构形所遵从的一条规则；一类模型的律，是在该类每一个模型中都成立者；一门科学的律，冠以该科学之名。三者都不是*定理*，为人所执持的规则也不在其中 | [第八章 §10](theories/becoming/chapters/08-METHOD.md#law) |
 | 共律（shared law） | 许多核心结果共有、并经由它而证明的一条定理，在持有它的最低一层只陈述一次：闭包、平衡、有限运行、归并、扩大。它不给任何定理排序，也不统辖任何东西；旧称“master law”（主律），这一名称只保留在它被匹配而不被阅读之处（一个旧 id、旧锚点）以及历史之中。“共律”一名在诸名修订之前，仍用旧字称定理 | [第八章 §7](theories/becoming/chapters/08-METHOD.md#shared-laws-and-connectivity) |

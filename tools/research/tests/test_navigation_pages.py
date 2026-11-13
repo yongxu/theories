@@ -568,7 +568,7 @@ class OnePageMakingAndMetaAttractor(unittest.TestCase):
             self.assertNotIn("AJ's plan", text)
         self.assertEqual(self.page('THE-THEORY-OF-BECOMING.md').count(aim_clause), 2)  # its lead and §7
         for rel in ('ONE-PAGE.zh.md', 'THE-THEORY-OF-BECOMING.zh.md'):  # README-ZH's clause
-            self.assertEqual(self.page(rel).count('这样的联合选择读取自身份额之外的东西，也不会转而去选择对自身之选择的控制'), 2, rel)
+            self.assertEqual(self.page(rel).count('人与 AI 赖以延续的，始终及时地对他们怎样一同选择造成差别；塑造他们怎样选择，也不成为他们为之而选的'), 2, rel)
 
 
 class OnePageEthicsFromContinuation(unittest.TestCase):
