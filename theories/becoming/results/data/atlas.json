@@ -2653,6 +2653,7 @@
     "Becoming.WayOfUnits.first_kept",
     "Becoming.WayOfUnits.first_uses",
     "Becoming.WayOfUnits.first_uses₁",
+    "Becoming.WayOfUnits.unending_above",
     "Becoming.WayOfUnits.greater_need",
     "Becoming.WayOfUnits.more_use_on_first",
     "Becoming.WayOfUnits.takes_nothing_iff_alone",
@@ -2662,7 +2663,9 @@
     "Becoming.WayOfUnits.With.goes_on_holds",
     "Becoming.WayOfUnits.With.levels",
     "Becoming.WayOfUnits.Against.way",
-    "Becoming.WayOfUnits.Against.turns_and_ends"
+    "Becoming.WayOfUnits.Against.turns_and_ends",
+    "Becoming.WayOfUnits.GivenFromNothing.greater_need_fails",
+    "Becoming.WayOfUnits.GivenFromNothing.more_use_fails"
    ],
    "base": "any type",
    "hypotheses": [
@@ -2775,14 +2778,14 @@
      "record": "a-way-of-units",
      "index": 4,
      "text": {
-      "en": "For two_units_iff and greater_need: n ≤ m; nothing given from nothing; Short, Meets and Keeps at H₂ with y₂ up to hi; 0 < n ≤ H₂ + y₂; Short at h + H₂ with y₁; the start below h + H₂ + y₁ and at most hi. greater_need adds m ≤ m'. A start at or above h + H₂ + y₁ is outside both."
+      "en": "For two_units_iff: n ≤ m; nothing given from nothing; Short, Meets and Keeps at H₂ with y₂ up to hi; 0 < n ≤ H₂ + y₂; Short at h + H₂ with y₁; the start below h + H₂ + y₁ and at most hi. A start at or above h + H₂ + y₁ is outside it."
      }
     },
     {
      "record": "a-way-of-units",
      "index": 5,
      "text": {
-      "en": "For more_use_on_first: these premises for both pairs of uses, (h, H₂) with y₂ and (h', H₂') with y₂', with one y₁, one hi and one start, the same needs n ≤ m, h + H₂ = h' + H₂' and h ≤ h'."
+      "en": "For greater_need: n ≤ m, m ≤ m', nothing given from nothing, Short, Meets and Keeps at H₂ with y₂ up to hi, the start at most hi. For more_use_on_first: n ≤ m, nothing given from nothing, the same sum h + H₂ = h' + H₂' with h ≤ h', Short, Meets and Keeps at H₂' with y₂' up to hi, the start at most hi. For unending_above: n ≤ m, nothing given from nothing, Short at H with y, 0 < n."
      }
     },
     {
@@ -2942,7 +2945,7 @@
      "source": "theories/becoming/chapters/02-MAP.md#r-turning-in-time"
     },
     {
-     "en": "For a way of units: the comparison theorems for any number of units, and their premises trimmed to what the simulations found enough; a way that builds units; the marks of a way that conditions on a reading. None is stated.",
+     "en": "For a way of units: the comparison theorems for any number of units; a way that builds units; the marks of a way that conditions on a reading. None is stated.",
      "source": "theories/becoming/chapters/02-MAP.md#r-a-way-of-units"
     }
    ],
@@ -3107,6 +3110,17 @@
      ]
     },
     {
+     "law": "Becoming.WayOfUnits.unending_above",
+     "takes": [
+      "wayofunits-order",
+      "regimemargin-fromnothing",
+      "regimemargin-short",
+      "optimum-coupled-need-positive",
+      "wayofunits-first-line-unending",
+      "regimemargin-step"
+     ]
+    },
+    {
      "law": "Becoming.WayOfUnits.greater_need",
      "takes": [
       "wayofunits-order",
@@ -3116,9 +3130,6 @@
       "regimemargin-short",
       "regimemargin-meets",
       "regimemargin-keeps",
-      "optimum-coupled-need-positive",
-      "turningintime-within",
-      "regimemargin-start-below-point",
       "regimemargin-start-level-le-hi",
       "regimemargin-step"
      ]
@@ -3134,9 +3145,6 @@
       "regimemargin-short",
       "regimemargin-meets",
       "regimemargin-keeps",
-      "optimum-coupled-need-positive",
-      "turningintime-within",
-      "regimemargin-start-below-point",
       "regimemargin-start-level-le-hi",
       "regimemargin-step"
      ]
@@ -3173,6 +3181,14 @@
     },
     {
      "law": "Becoming.WayOfUnits.Against.turns_and_ends",
+     "takes": []
+    },
+    {
+     "law": "Becoming.WayOfUnits.GivenFromNothing.greater_need_fails",
+     "takes": []
+    },
+    {
+     "law": "Becoming.WayOfUnits.GivenFromNothing.more_use_fails",
      "takes": []
     }
    ]
@@ -73699,7 +73715,9 @@
     "Becoming.RegimeMargin.Peaked.fromNothing",
     "Becoming.RegimeMargin.Crossing.fromNothing"
    ],
-   "fails_in": [],
+   "fails_in": [
+    "Becoming.WayOfUnits.GivenFromNothing.regime"
+   ],
    "home": "theories/becoming/results/records/margin-of-a-regime.md#laws--规律",
    "seeded_from": [
     "Lean"
@@ -82811,6 +82829,7 @@
    "lean": [
     "Becoming.WayOfUnits.unending_iff_carrier",
     "Becoming.WayOfUnits.two_units_iff",
+    "Becoming.WayOfUnits.unending_above",
     "Becoming.WayOfUnits.greater_need",
     "Becoming.WayOfUnits.more_use_on_first",
     "Becoming.WayOfUnits.takes_nothing_iff_alone",
@@ -82892,10 +82911,11 @@
     "en": "the first line never ends"
    },
    "statement": {
-    "en": "of two lines compared, the line from the first way of two units never ends in the units' net: «不穷» (net giving) «一» ([(m, h), (n, H₂)], x); an instance of grammar-buqiong, kept apart because here it is the comparison's antecedent, the line whose not ending is carried to the second"
+    "en": "the line from a way of two units never ends in the units' net: «不穷» (net giving) «一» ([(m, h), (n, H₂)], x); in the comparisons it is the first of the two lines compared; an instance of grammar-buqiong, kept apart because here it is the antecedent, the line whose not ending is carried on"
    },
    "kind": "hypothesis of a law",
    "lean": [
+    "Becoming.WayOfUnits.unending_above",
     "Becoming.WayOfUnits.greater_need",
     "Becoming.WayOfUnits.more_use_on_first"
    ],

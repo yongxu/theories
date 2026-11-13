@@ -46328,7 +46328,7 @@
   "source": "lister",
   "binders": [
    {
-    "position": 11,
+    "position": 10,
     "name": "order",
     "type": "n ≤ m",
     "premises": [
@@ -46336,7 +46336,7 @@
     ]
    },
    {
-    "position": 12,
+    "position": 11,
     "name": "more",
     "type": "m ≤ m'",
     "premises": [
@@ -46344,7 +46344,7 @@
     ]
    },
    {
-    "position": 13,
+    "position": 12,
     "name": "nothing",
     "type": "Becoming.RegimeMargin.FromNothing giving",
     "premises": [
@@ -46352,7 +46352,7 @@
     ]
    },
    {
-    "position": 14,
+    "position": 13,
     "name": "short",
     "type": "Becoming.RegimeMargin.Short giving H₂ y₂",
     "premises": [
@@ -46360,7 +46360,7 @@
     ]
    },
    {
-    "position": 15,
+    "position": 14,
     "name": "meets",
     "type": "Becoming.RegimeMargin.Meets giving H₂ y₂ hi",
     "premises": [
@@ -46368,7 +46368,7 @@
     ]
    },
    {
-    "position": 16,
+    "position": 15,
     "name": "keeps",
     "type": "Becoming.RegimeMargin.Keeps giving H₂ hi",
     "premises": [
@@ -46376,39 +46376,7 @@
     ]
    },
    {
-    "position": 17,
-    "name": "needs",
-    "type": "0 < n",
-    "premises": [
-     "optimum-coupled-need-positive"
-    ]
-   },
-   {
-    "position": 18,
-    "name": "within",
-    "type": "n ≤ H₂ + y₂",
-    "premises": [
-     "turningintime-within"
-    ]
-   },
-   {
-    "position": 19,
-    "name": "short₁",
-    "type": "Becoming.RegimeMargin.Short giving (h + H₂) y₁",
-    "premises": [
-     "regimemargin-short"
-    ]
-   },
-   {
-    "position": 20,
-    "name": "below",
-    "type": "x < h + H₂ + y₁",
-    "premises": [
-     "regimemargin-start-below-point"
-    ]
-   },
-   {
-    "position": 21,
+    "position": 16,
     "name": "high",
     "type": "x ≤ hi",
     "premises": [
@@ -46416,7 +46384,7 @@
     ]
    },
    {
-    "position": 22,
+    "position": 17,
     "name": "a._@._internal._hyg.0",
     "type": "Becoming.«不穷» (Becoming.WayOfUnits.net giving) Becoming.«一» ([(m, h), (n, H₂)], x)",
     "premises": [
@@ -46433,7 +46401,7 @@
   "source": "lister",
   "binders": [
    {
-    "position": 13,
+    "position": 11,
     "name": "order",
     "type": "n ≤ m",
     "premises": [
@@ -46441,7 +46409,7 @@
     ]
    },
    {
-    "position": 14,
+    "position": 12,
     "name": "nothing",
     "type": "Becoming.RegimeMargin.FromNothing giving",
     "premises": [
@@ -46449,39 +46417,7 @@
     ]
    },
    {
-    "position": 15,
-    "name": "short",
-    "type": "Becoming.RegimeMargin.Short giving H₂ y₂",
-    "premises": [
-     "regimemargin-short"
-    ]
-   },
-   {
-    "position": 16,
-    "name": "meets",
-    "type": "Becoming.RegimeMargin.Meets giving H₂ y₂ hi",
-    "premises": [
-     "regimemargin-meets"
-    ]
-   },
-   {
-    "position": 17,
-    "name": "keeps",
-    "type": "Becoming.RegimeMargin.Keeps giving H₂ hi",
-    "premises": [
-     "regimemargin-keeps"
-    ]
-   },
-   {
-    "position": 18,
-    "name": "within",
-    "type": "n ≤ H₂ + y₂",
-    "premises": [
-     "turningintime-within"
-    ]
-   },
-   {
-    "position": 19,
+    "position": 13,
     "name": "short'",
     "type": "Becoming.RegimeMargin.Short giving H₂' y₂'",
     "premises": [
@@ -46489,7 +46425,7 @@
     ]
    },
    {
-    "position": 20,
+    "position": 14,
     "name": "meets'",
     "type": "Becoming.RegimeMargin.Meets giving H₂' y₂' hi",
     "premises": [
@@ -46497,7 +46433,7 @@
     ]
    },
    {
-    "position": 21,
+    "position": 15,
     "name": "keeps'",
     "type": "Becoming.RegimeMargin.Keeps giving H₂' hi",
     "premises": [
@@ -46505,23 +46441,7 @@
     ]
    },
    {
-    "position": 22,
-    "name": "within'",
-    "type": "n ≤ H₂' + y₂'",
-    "premises": [
-     "turningintime-within"
-    ]
-   },
-   {
-    "position": 23,
-    "name": "needs",
-    "type": "0 < n",
-    "premises": [
-     "optimum-coupled-need-positive"
-    ]
-   },
-   {
-    "position": 24,
+    "position": 16,
     "name": "sum",
     "type": "h + H₂ = h' + H₂'",
     "premises": [
@@ -46529,7 +46449,7 @@
     ]
    },
    {
-    "position": 25,
+    "position": 17,
     "name": "more",
     "type": "h ≤ h'",
     "premises": [
@@ -46537,23 +46457,7 @@
     ]
    },
    {
-    "position": 26,
-    "name": "short₁",
-    "type": "Becoming.RegimeMargin.Short giving (h + H₂) y₁",
-    "premises": [
-     "regimemargin-short"
-    ]
-   },
-   {
-    "position": 27,
-    "name": "below",
-    "type": "x < h + H₂ + y₁",
-    "premises": [
-     "regimemargin-start-below-point"
-    ]
-   },
-   {
-    "position": 28,
+    "position": 18,
     "name": "high",
     "type": "x ≤ hi",
     "premises": [
@@ -46561,7 +46465,7 @@
     ]
    },
    {
-    "position": 29,
+    "position": 19,
     "name": "a._@._internal._hyg.0",
     "type": "Becoming.«不穷» (Becoming.WayOfUnits.net giving) Becoming.«一» ([(m, h), (n, H₂)], x)",
     "premises": [
@@ -46658,6 +46562,67 @@
   "takes_unbound": {}
  },
  "Becoming.WayOfUnits.Against.turns_and_ends": {
+  "family": "A",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.WayOfUnits.unending_above": {
+  "family": "A",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 8,
+    "name": "order",
+    "type": "n ≤ m",
+    "premises": [
+     "wayofunits-order"
+    ]
+   },
+   {
+    "position": 9,
+    "name": "nothing",
+    "type": "Becoming.RegimeMargin.FromNothing giving",
+    "premises": [
+     "regimemargin-fromnothing"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "short",
+    "type": "Becoming.RegimeMargin.Short giving H y",
+    "premises": [
+     "regimemargin-short"
+    ]
+   },
+   {
+    "position": 11,
+    "name": "needs",
+    "type": "0 < n",
+    "premises": [
+     "optimum-coupled-need-positive"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "never",
+    "type": "Becoming.«不穷» (Becoming.WayOfUnits.net giving) Becoming.«一» ([(m, h), (n, H)], x)",
+    "premises": [
+     "wayofunits-first-line-unending"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "regimemargin-step": "definition"
+  }
+ },
+ "Becoming.WayOfUnits.GivenFromNothing.greater_need_fails": {
+  "family": "A",
+  "source": "lister",
+  "binders": [],
+  "takes_unbound": {}
+ },
+ "Becoming.WayOfUnits.GivenFromNothing.more_use_fails": {
   "family": "A",
   "source": "lister",
   "binders": [],

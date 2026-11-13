@@ -25892,7 +25892,9 @@
    "Becoming.RegimeMargin.Peaked.fromNothing",
    "Becoming.RegimeMargin.Crossing.fromNothing"
   ],
-  "fails_in": [],
+  "fails_in": [
+   "Becoming.WayOfUnits.GivenFromNothing.regime"
+  ],
   "home": "theories/becoming/results/records/margin-of-a-regime.md#laws--规律",
   "seeded_from": [
    "Lean"
@@ -34574,6 +34576,7 @@
   "lean": [
    "Becoming.WayOfUnits.unending_iff_carrier",
    "Becoming.WayOfUnits.two_units_iff",
+   "Becoming.WayOfUnits.unending_above",
    "Becoming.WayOfUnits.greater_need",
    "Becoming.WayOfUnits.more_use_on_first",
    "Becoming.WayOfUnits.takes_nothing_iff_alone",
@@ -34651,10 +34654,11 @@
    "en": "the first line never ends"
   },
   "statement": {
-   "en": "of two lines compared, the line from the first way of two units never ends in the units' net: «不穷» (net giving) «一» ([(m, h), (n, H₂)], x); an instance of grammar-buqiong, kept apart because here it is the comparison's antecedent, the line whose not ending is carried to the second"
+   "en": "the line from a way of two units never ends in the units' net: «不穷» (net giving) «一» ([(m, h), (n, H₂)], x); in the comparisons it is the first of the two lines compared; an instance of grammar-buqiong, kept apart because here it is the antecedent, the line whose not ending is carried on"
   },
   "kind": "hypothesis of a law",
   "lean": [
+   "Becoming.WayOfUnits.unending_above",
    "Becoming.WayOfUnits.greater_need",
    "Becoming.WayOfUnits.more_use_on_first"
   ],

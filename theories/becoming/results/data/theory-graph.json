@@ -11541,7 +11541,7 @@
    "type": "module",
    "name": "Becoming.WayOfUnits",
    "level": "L2",
-   "theorems": 47,
+   "theorems": 64,
    "region": "map",
    "base": "general",
    "on_grammar": true,
@@ -38213,12 +38213,6 @@
   {
    "from": "record:a-way-of-units",
    "to": "record:recurrence-without-premise",
-   "type": "formal-reuse",
-   "interface": true
-  },
-  {
-   "from": "record:a-way-of-units",
-   "to": "record:regime-point-under-adjusting-giving",
    "type": "formal-reuse",
    "interface": true
   },

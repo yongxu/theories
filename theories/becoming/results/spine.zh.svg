@@ -98,7 +98,7 @@
 <circle cx="626.8" cy="598.9" r="60.6" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
 <text x="626.8" y="606.8" font-size="22" font-weight="bold" text-anchor="middle" fill="#57534e">02</text>
 <text x="596.5" y="491.3" font-size="16" font-weight="bold" text-anchor="start" fill="#1c1917" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">生成、守与退化</text>
-<text x="596.5" y="508.3" font-size="13" text-anchor="start" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">102 项结果 · 章内使用 164</text>
+<text x="596.5" y="508.3" font-size="13" text-anchor="start" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">102 项结果 · 章内使用 163</text>
 <text x="596.5" y="525.3" font-size="13" text-anchor="start" fill="#57534e" stroke="#fcfcfb" stroke-width="3" paint-order="stroke">83 个模块中 17 个在文法上</text>
 <circle cx="700" cy="775.6" r="62.9" fill="#ffffff" stroke="#1c1917" stroke-width="1.5"/>
 <text x="700" y="783.6" font-size="22" font-weight="bold" text-anchor="middle" fill="#57534e">03</text>
@@ -203,8 +203,8 @@
 <text x="506" y="1279.3" font-size="14" text-anchor="start" fill="#1c1917">的那一章；曲线旁的数字为其使用次数，15 次</text>
 <text x="506" y="1297.3" font-size="14" text-anchor="start" fill="#1c1917">及以上才标出。这一类由 AI 写成的记录指定；</text>
 <text x="506" y="1315.3" font-size="14" text-anchor="start" fill="#1c1917">登记检查核对接口具备其字段、且其所引是记录</text>
-<text x="506" y="1333.3" font-size="14" text-anchor="start" fill="#1c1917">中带散列的参考文献之一（全部 1279 条这样的</text>
-<text x="506" y="1351.3" font-size="14" text-anchor="start" fill="#1c1917">边中有 874 条，所引的都是 Lean 文件）；没</text>
+<text x="506" y="1333.3" font-size="14" text-anchor="start" fill="#1c1917">中带散列的参考文献之一（全部 1278 条这样的</text>
+<text x="506" y="1351.3" font-size="14" text-anchor="start" fill="#1c1917">边中有 873 条，所引的都是 Lean 文件）；没</text>
 <text x="506" y="1369.3" font-size="14" text-anchor="start" fill="#1c1917">有任何检查核对那里的 Lean 是否确实使用所引</text>
 <text x="506" y="1387.3" font-size="14" text-anchor="start" fill="#1c1917">的结果。</text>
 <line x1="470" y1="1404.3" x2="496" y2="1404.3" stroke="#1c1917" stroke-width="3.2" marker-end="url(#back)"/>
