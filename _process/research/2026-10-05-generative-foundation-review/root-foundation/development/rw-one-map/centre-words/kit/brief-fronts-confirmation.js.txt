@@ -1,0 +1,40 @@
+export const meta = {
+  name: 'wm2-fronts-confirm',
+  description: 'WM2 second part, confirmation: one reader checks that the last fixes were taken exactly and that nothing new went wrong, in English and Chinese',
+  phases: [{ title: 'Confirm', detail: 'one reader, read only', model: 'opus' }],
+}
+const WT = '/Users/ren/tmp/rw/wm2/wt'
+const OUT = '/Users/ren/theories/tmp/r7/sheet/wm2'
+const LEAN = WT + '/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming'
+const SCHEMA = {
+  type: 'object',
+  properties: {
+    report_path: { type: 'string' },
+    still_to_change: { type: 'array', items: { type: 'object', properties: { where: { type: 'string' }, kind: { type: 'string' }, problem: { type: 'string' }, fix: { type: 'string' } }, required: ['where', 'kind', 'problem', 'fix'] } },
+    confirmed: { type: 'array', items: { type: 'string' } },
+  },
+  required: ['report_path', 'still_to_change', 'confirmed'],
+}
+phase('Confirm')
+const r = await agent(`You are the last reader of a small change set, in English and Chinese (you read both). Confirm that the fixes of the second round were taken exactly and that the sentences written after it say no more and no less than their homes.
+
+Setting. The repository is a theory ("the theory of becoming") whose core is proved in Lean. Its centre paragraph (${WT}/AGENTS.md, section "What we are doing", second paragraph; with the theorems' conditions in ${WT}/theories/becoming/ONE-PAGE.md line 7, Chinese in ${WT}/theories/becoming/ONE-PAGE.zh.md line 11) says which differences make a difference to a selection. This change set carries those words to the sentences on the front pages that state the things to ask of any selection. Two rounds of AI readers read earlier versions: ${OUT}/check4-english-homes.md, check4-cold-english.md, check4-chinese-check.md, check4-cold-chinese.md (first version) and ${OUT}/check5-english.md, check5-chinese.md (second version). The third and final text is applied in the git worktree ${WT} (read files there). Every changed string, as on main and as now, is listed in ${OUT}/fronts-final-old-new.md; the second version is in ${OUT}/fronts-v2-old-new.md.
+
+Rules. Read only: edit nothing, run no tests, builds, renders or state-changing git commands. Write one report, ${OUT}/check6-confirm.md, in plain English, starting with "*AI-written, 13 November 2026. Read only; nothing run.*". Name no person. Report only what should still change, each with where, what is wrong, the class (SAYS MORE, SAYS LESS, SAYS SOMETHING ELSE, UNCLEAR) and the exact replacement; everything else gets one line under "confirmed". Do not re-open findings that the second round's reports list as left for a stated reason. Do not praise or score.
+
+What changed after the second round, to check now:
+English.
+1. ${WT}/_process/navigation/README-FIRST-SCREEN.md line 10: "Its centre: a selection can go on meeting its own criterion while something is being used up, even what sustains it, for as long as how much is left makes no difference to it." (The second reader proposed this with a further clause, "; of what sustains it, that can last until it gives out", which was not taken because the paragraph above on the same page already says "until that gives out". Check against ${LEAN}/TurningInTime.lean that the sentence as it stands is true of the selection's own need, and that "Whether that loss counts" still has its antecedent.)
+2. The room parenthesis, same file and ${WT}/theories/becoming/USES.md line 15: "(wherever one allowed outcome leaves any of what makes none higher than another does, is some allowed outcome no lower than the first on anything that makes a difference and higher on something?)"; ${WT}/MAP.md line 9: the same as a statement, and "from the map we [want to design]". Against ${LEAN}/Optimum.lean (Exceeds, Room, near lines 543 to 560).
+3. ${WT}/theories/becoming/ONE-PAGE.md line 21 and its copy in ${WT}/tools/research/navigation.py (START_PLAIN): "With *room* (wherever an eligible outcome leaves any of what makes no difference to the selector higher than another does, some eligible outcome is no lower than the first on anything that does make a difference and higher on something), every optimum of an order rising with what makes a difference leaves each thing that makes none as low as any eligible outcome leaves it". Against Optimum.lean (Rising, Room, Least, least_of_room). Are the two copies word for word the same?
+4. README-FIRST-SCREEN.md line 10: "[that a selection at its best on what makes a difference to it, where there is room, leaves each thing that makes none as low as any allowed outcome leaves it](…ONE-PAGE.md), and that a rule set again only from the share it already favours, once locked, stays locked on three conditions named there, without noise, however large a loss grows that makes no difference either to what is selected next or to the rule." ("named there" points to the one page just linked: does the one page name three conditions?)
+5. The fifth thing: README "whose judgment, among those its verdict is made from, can change as the loss grows, and when"; USES "…can change as a loss grows, and when". Against ${LEAN}/ReadInTime.lean (kept_iff, turned_iff: the others judge one way until the loss passes a set amount and another way after; nothing asks that the two ways differ).
+6. Stated reading times (do not recompute): ONE-PAGE.md line 5, USES.md line 7, review/README.md line 11: just see that the sentences read.
+Chinese.
+7. ${WT}/_process/navigation/README-ZH.md line 19: the centre sentence ("…而某样东西却在耗减，哪怕是它赖以延续的，只要那东西还剩多少对它还不造成差别。这一损失算不算数…只关于动态的定理并不决定它"), the room parenthesis ("是否凡有一个容许的结果把某一样对它不造成差别者留得比另一个更高，就有某个容许的结果在对它造成差别者上处处不低于前者、且至少一处更高？"), the fifth ("它的裁决由一些判断合成，其中谁的判断能随损失增长而变，何时变"), the lock clause ("一条规则若只由它已偏向的份额重新定出，一旦锁定，便在《一页》列出的三个条件下一直保持锁定，…"), "有为这五件事所设的[一张表单]", and the last sentences of the comment on line 1 (dated 2026 年 11 月 13 日: is what they say of the rounds accurate, given that you are a third reader whose findings, if any, will be applied after you write?). Each against its English in README-FIRST-SCREEN.md line 10.
+8. ${WT}/theories/becoming/USES.zh.md line 22 (the four things, the fifth, "这几件事所依的定理，在模型上已证明。") and its line 9 (the stated time reads).
+9. ${WT}/theories/becoming/USES-EXAMPLES.zh.md line 40 ("第三与第四件，诸定理说的是：在其前提成立之处，随之而来的是什么").
+10. ${WT}/theories/becoming/ONE-PAGE.zh.md: the row head ("什么维持它？它所赖的一旦失去，对什么造成差别？"), the glossary's 锁定 ("每一步又只由已选出者所占的份额重新定出"), row 30's example ("假如它的规则又只由被它选中的内容所占的份额重新定出，才可能是这里说的情形"), and line 5's stated times.
+For each of check5-english.md's seven findings and check5-chinese.md's seven findings and five stiffness notes, say in one line: taken exactly, taken in other words (exact or not), or left (finding 7 of check5-english.md is outside this change set and was passed to the session that holds that line).
+Then return the structured summary.`, { label: 'confirm:final', phase: 'Confirm', schema: SCHEMA, model: 'opus' })
+return r
