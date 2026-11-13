@@ -1901,6 +1901,17 @@
    "Becoming.TurningInTime.unending_iff_first_marked",
    "Becoming.TurningInTime.unending_iff_above",
    "Becoming.TurningInTime.turns_in_time_iff",
+   "Becoming.TurningInTime.turned",
+   "Becoming.TurningInTime.Turned",
+   "Becoming.TurningInTime.MeetsNeed",
+   "Becoming.TurningInTime.turned_meets_iff",
+   "Becoming.TurningInTime.recoverable_iff_above",
+   "Becoming.TurningInTime.noReturnAt_iff_first_below",
+   "Becoming.TurningInTime.noReturnAt_of_below",
+   "Becoming.TurningInTime.course_turned",
+   "Becoming.TurningInTime.noReturn_exists",
+   "Becoming.TurningInTime.turns_in_time_iff_before",
+   "Becoming.TurningInTime.Three.noReturn",
    "Becoming.TurningInTime.kind_ends_while_net_goes",
    "Becoming.TurningInTime.kind_not_toEnd_of_turn",
    "Becoming.TurningInTime.locked_closed",
@@ -2231,6 +2242,84 @@
      "regimemargin-start-level-le-hi",
      "regimemargin-step"
     ]
+   },
+   {
+    "law": "Becoming.TurningInTime.recoverable_iff_above",
+    "takes": [
+     "turningintime-course-never-rises",
+     "regimemargin-start-level-le-hi",
+     "regimemargin-fromnothing",
+     "regimemargin-short",
+     "regimemargin-meets",
+     "regimemargin-keeps",
+     "optimum-coupled-need-positive",
+     "turningintime-within",
+     "regimemargin-step"
+    ]
+   },
+   {
+    "law": "Becoming.TurningInTime.noReturnAt_iff_first_below",
+    "takes": [
+     "turningintime-course-never-rises",
+     "regimemargin-start-level-le-hi",
+     "regimemargin-fromnothing",
+     "regimemargin-short",
+     "regimemargin-meets",
+     "regimemargin-keeps",
+     "optimum-coupled-need-positive",
+     "turningintime-within",
+     "regimemargin-step"
+    ]
+   },
+   {
+    "law": "Becoming.TurningInTime.course_turned",
+    "takes": [
+     "turningintime-aloneoutside",
+     "turningintime-turns",
+     "turningintime-kept",
+     "turningintime-uses",
+     "turningintime-first-marked-step",
+     "regimemargin-step"
+    ]
+   },
+   {
+    "law": "Becoming.TurningInTime.noReturn_exists",
+    "takes": [
+     "regimemargin-fromnothing",
+     "regimemargin-short",
+     "regimemargin-meets",
+     "regimemargin-keeps",
+     "optimum-coupled-need-positive",
+     "turningintime-within",
+     "turningintime-uses-along-orbit",
+     "regimemargin-start-below-point",
+     "regimemargin-start-level-le-hi",
+     "regimemargin-step"
+    ]
+   },
+   {
+    "law": "Becoming.TurningInTime.turns_in_time_iff_before",
+    "takes": [
+     "k3-decided",
+     "turningintime-aloneoutside",
+     "turningintime-turns",
+     "turningintime-kept",
+     "turningintime-uses",
+     "regimemargin-fromnothing",
+     "regimemargin-short",
+     "regimemargin-meets",
+     "regimemargin-keeps",
+     "optimum-coupled-need-positive",
+     "turningintime-within",
+     "turningintime-uses-along-orbit",
+     "regimemargin-start-below-point",
+     "regimemargin-start-level-le-hi",
+     "regimemargin-step"
+    ]
+   },
+   {
+    "law": "Becoming.TurningInTime.Three.noReturn",
+    "takes": []
    },
    {
     "law": "Becoming.TurningInTime.kind_ends_while_net_goes",

@@ -1,0 +1,184 @@
+{
+ "family": "A",
+ "note": "AI-written, 13 November 2026. Board item TT2: the theorems of TurningInTime's section on the point of no return that the entry turning-in-time lists under `premises`. Binder names as lister.py's aaRow printed them (2026-11-13-tt2-point-of-no-return.lister.txt); each binder's premises are those the entry lists. The Decidable instance on the marks is k3-decided, taken as data; RegimeMargin.step in a statement is regimemargin-step, taken as a definition, as in the earlier rows.",
+ "laws": {
+  "Becoming.TurningInTime.recoverable_iff_above": {
+   "binders": {
+    "fall": [
+     "turningintime-course-never-rises"
+    ],
+    "top": [
+     "regimemargin-start-level-le-hi"
+    ],
+    "nothing": [
+     "regimemargin-fromnothing"
+    ],
+    "short": [
+     "regimemargin-short"
+    ],
+    "meets": [
+     "regimemargin-meets"
+    ],
+    "keeps": [
+     "regimemargin-keeps"
+    ],
+    "needs": [
+     "optimum-coupled-need-positive"
+    ],
+    "within": [
+     "turningintime-within"
+    ]
+   },
+   "takes_unbound": {
+    "regimemargin-step": "definition"
+   }
+  },
+  "Becoming.TurningInTime.noReturnAt_iff_first_below": {
+   "binders": {
+    "fall": [
+     "turningintime-course-never-rises"
+    ],
+    "top": [
+     "regimemargin-start-level-le-hi"
+    ],
+    "nothing": [
+     "regimemargin-fromnothing"
+    ],
+    "short": [
+     "regimemargin-short"
+    ],
+    "meets": [
+     "regimemargin-meets"
+    ],
+    "keeps": [
+     "regimemargin-keeps"
+    ],
+    "needs": [
+     "optimum-coupled-need-positive"
+    ],
+    "within": [
+     "turningintime-within"
+    ]
+   },
+   "takes_unbound": {
+    "regimemargin-step": "definition"
+   }
+  },
+  "Becoming.TurningInTime.course_turned": {
+   "binders": {
+    "outside": [
+     "turningintime-aloneoutside"
+    ],
+    "turns": [
+     "turningintime-turns"
+    ],
+    "kept": [
+     "turningintime-kept"
+    ],
+    "uses": [
+     "turningintime-uses"
+    ],
+    "before": [
+     "turningintime-first-marked-step"
+    ],
+    "markedT": [
+     "turningintime-first-marked-step"
+    ]
+   },
+   "takes_unbound": {
+    "regimemargin-step": "definition"
+   }
+  },
+  "Becoming.TurningInTime.noReturn_exists": {
+   "binders": {
+    "nothing": [
+     "regimemargin-fromnothing"
+    ],
+    "short": [
+     "regimemargin-short"
+    ],
+    "meets": [
+     "regimemargin-meets"
+    ],
+    "keeps": [
+     "regimemargin-keeps"
+    ],
+    "needs": [
+     "optimum-coupled-need-positive"
+    ],
+    "within": [
+     "turningintime-within"
+    ],
+    "short₁": [
+     "regimemargin-short"
+    ],
+    "uses₁": [
+     "turningintime-uses-along-orbit"
+    ],
+    "below": [
+     "regimemargin-start-below-point"
+    ],
+    "high": [
+     "regimemargin-start-level-le-hi"
+    ]
+   },
+   "takes_unbound": {
+    "regimemargin-step": "definition"
+   }
+  },
+  "Becoming.TurningInTime.turns_in_time_iff_before": {
+   "binders": {
+    "outside": [
+     "turningintime-aloneoutside"
+    ],
+    "turns": [
+     "turningintime-turns"
+    ],
+    "kept": [
+     "turningintime-kept"
+    ],
+    "uses": [
+     "turningintime-uses"
+    ],
+    "nothing": [
+     "regimemargin-fromnothing"
+    ],
+    "short": [
+     "regimemargin-short"
+    ],
+    "meets": [
+     "regimemargin-meets"
+    ],
+    "keeps": [
+     "regimemargin-keeps"
+    ],
+    "needs": [
+     "optimum-coupled-need-positive"
+    ],
+    "within": [
+     "turningintime-within"
+    ],
+    "short₁": [
+     "regimemargin-short"
+    ],
+    "uses₁": [
+     "turningintime-uses-along-orbit"
+    ],
+    "below": [
+     "regimemargin-start-below-point"
+    ],
+    "high": [
+     "regimemargin-start-level-le-hi"
+    ]
+   },
+   "takes_unbound": {
+    "k3-decided": "data",
+    "regimemargin-step": "definition"
+   }
+  },
+  "Becoming.TurningInTime.Three.noReturn": {
+   "binders": {},
+   "takes_unbound": {}
+  }
+ }
+}
