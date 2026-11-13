@@ -57,7 +57,8 @@ The loops that lock a collective are stated in [02 §9](chapters/02-MAP.md#r-cap
 
 Every capture theorem here is on a two-kind count model, its locks stated without noise. Drawn one member at a time, the critical mass's locks are left by drift, at a weight whose bound shrinks across the distance from the critical mass, and which state one member arising fixes more often depends on the base and the part shared by all as well as on `hi`, `lo` and `c` ([02 §9](chapters/02-MAP.md#r-drawn-shaping-drawn-one-at-a-time)). So over long horizons the window is not the only exit, and the long-run state, under rare mutation the one with the larger fixation weight (cited, not proved), is not the risk-dominant one in general: risk dominance is what Kandori, Mailath and Rob (1993) and Young (1993) select in their limit, and the Moran criterion approaches it under weak selection (Nowak and others 2004); in a small population under strong selection the two can part ([07 §6](chapters/07-SIGNIFICANCE.md#alignment-without-premise)).
 
-## 3. What the theory's own laws rule out
+<a id="3-what-the-theorys-own-laws-rule-out"></a>
+## 3. What the theory's own theorems rule out
 
 Each statement below is a theorem on its stated model. Together they rule out a guarantee from the theory, however much is observed; whether an actual collective meets their hypotheses is empirical (§5).
 

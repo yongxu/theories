@@ -428,7 +428,8 @@ What the witnesses do not show: that any actual nucleus, lineage or belief is so
 **Reading** [AI reading, D69]. An institution kept by its members' consent and one held by penalties, the source's pair of observationally equivalent mechanisms, are [the thermostat witness](03-KNOWING.md#r-testing-within-the-net) read socially: in one core class of "in being or not" while the penalties stand, told apart once their removal is in the net. That is the witness's net with its occurrences renamed, not a new theorem; the warning that interventions can fail to identify mechanisms is not touched.
 
 <a id="laws-on-every-model"></a>
-## 9. Laws on every model, each with its hypotheses
+<a id="9-laws-on-every-model-each-with-its-hypotheses"></a>
+## 9. Theorems on every model, each with its hypotheses
 
 These general theorems on change hold of every model of their kind, process, type or world, before any premise about a particular world. A World premise a theorem names (balance, dissipation, a census) is a hypothesis of that theorem at the steps and relata used, not of the space. The theorems fall in layers: what holds with no premise excludes no unfolding beyond what the model's own form excludes; what a premise adds holds of the part it carves (§8.2); and the dynamics stop deciding at whether actual unfoldings meet the premises, the step after which nothing arises (§9.5), the order of mixed parts, and significance, which these dynamics, with significance left free, do not entail ([07](07-SIGNIFICANCE.md), where a result that ranks courses takes the continuation condition, self-concern or C as hypotheses, as its theorem states them).
 
