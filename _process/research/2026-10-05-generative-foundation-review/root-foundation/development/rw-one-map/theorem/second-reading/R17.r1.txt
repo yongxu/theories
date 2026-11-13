@@ -1,0 +1,2 @@
+754 REWORD Theorems of every carrier, relation and class => Theorems on every carrier, relation and class
+checked 43 changed, 11 kept

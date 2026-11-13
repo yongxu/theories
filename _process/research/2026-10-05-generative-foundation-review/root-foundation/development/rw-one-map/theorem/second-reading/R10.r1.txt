@@ -1,0 +1,3 @@
+358 REWORD is not a theorem of this dynamic => is stated by no theorem of this dynamic
+391 REWORD active inference's habit read as this theorem => active inference's habit read through this theorem
+checked 49 changed, 3 kept

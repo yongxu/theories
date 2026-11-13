@@ -9,8 +9,8 @@
    "kind": "line",
    "tag_en": "the line: what is taken against what comes back",
    "tag_zh": "界线：取的比不比补的多",
-   "en": "The line is exact: the level holds where what is taken stays within what comes back, and falls where it does not. The laws say where the line lies, not what moves a taking across it.",
-   "zh": "界线是确切的：取的不超过补的，存量守得住；超过了，就降。定律说的是界线在哪里，没有说是什么把取用推过界线。",
+   "en": "The line is exact: the level holds where what is taken stays within what comes back, and falls where it does not. The theorems say where the line lies, not what moves a taking across it.",
+   "zh": "界线是确切的：取的不超过补的，存量守得住；超过了，就降。定理说的是界线在哪里，没有说是什么把取用推过界线。",
    "laws": [
     "Becoming.Flow.joint_keeps",
     "Becoming.Flow.excess_lowers",
@@ -110,8 +110,8 @@
    "kind": "needs",
    "tag_en": "taking less, in time",
    "tag_zh": "及时少取",
-   "en": "Taking within what comes back, from some step on, keeps the need for good if, and only if, the change comes while the need is still met. No law here says what lowers a taking.",
-   "zh": "从某一步起改成取的不超过补的，需要能不能一直供得上，只看一条：改的那一步，需要还供不供得上。这里没有定律说是什么让取用降下来。",
+   "en": "Taking within what comes back, from some step on, keeps the need for good if, and only if, the change comes while the need is still met. No theorem here says what lowers a taking.",
+   "zh": "从某一步起改成取的不超过补的，需要能不能一直供得上，只看一条：改的那一步，需要还供不供得上。这里没有定理说是什么让取用降下来。",
    "laws": [
     "Becoming.Optimum.reread_kept_iff",
     "Becoming.Optimum.kept_at_need",
@@ -249,8 +249,8 @@
    "kind": "needs",
    "tag_en": "something always new needs a rise without end",
    "tag_zh": "要总有新的，总量得一涨再涨",
-   "en": "Always something new, on a fixed finite set of stocks, needs their total to rise again and again past every bound, given by the rest or from beyond. No law says a rise alone brings anything new.",
-   "zh": "“总有新的”，若所需都落在固定的有限几样存量上，就要这几样的总量一再上涨、越过任何上限，而且是由其余的或从外面给进来的。没有定律说光是涨就会带来新的。",
+   "en": "Always something new, on a fixed finite set of stocks, needs their total to rise again and again past every bound, given by the rest or from beyond. No theorem says a rise alone brings anything new.",
+   "zh": "“总有新的”，若所需都落在固定的有限几样存量上，就要这几样的总量一再上涨、越过任何上限，而且是由其余的或从外面给进来的。没有定理说光是涨就会带来新的。",
    "laws": [
     "Becoming.Web.KeepsWidening.rises_late",
     "Becoming.Web.KeepsWidening.passes_every_bound",
@@ -294,8 +294,8 @@
    "kind": "needs",
    "tag_en": "the rule comes to be updated from its results",
    "tag_zh": "规则开始照自己的结果重定",
-   "en": "What a rule picks reaches the rule only at a step where the rule is updated from it. Until the first such step the rule stays as it began, whatever it picks. No law says what brings such a step.",
-   "zh": "规则选出来的结果，只有在规则照它重定的那一步，才传得到规则。在第一次重定之前，不管选出了什么，规则都和开始时一样。什么会带来这样一步，定律没有说。",
+   "en": "What a rule picks reaches the rule only at a step where the rule is updated from it. Until the first such step the rule stays as it began, whatever it picks. No theorem says what brings such a step.",
+   "zh": "规则选出来的结果，只有在规则照它重定的那一步，才传得到规则。在第一次重定之前，不管选出了什么，规则都和开始时一样。什么会带来这样一步，定理没有说。",
    "laws": [
     "Becoming.Pace.rule_alike_until_reading",
     "Becoming.Pace.rule_at_reading",
@@ -406,8 +406,8 @@
    "kind": "reading",
    "tag_en": "the loop reaches its own checks",
    "tag_zh": "这个圈伸到了查错的途径上",
-   "en": "The loop reaches its own ways out. Second order: the ways a loss could come to count are filled from inside. Third: breaking them is what gets rewarded. A reading; no law.",
-   "zh": "这个圈伸到了自己的出口上。第二阶：损耗本来可以靠它们算进去的那些途径，也由圈里的占着。第三阶：弄坏这些途径，反倒受奖励。这是解读，没有定律。",
+   "en": "The loop reaches its own ways out. Second order: the ways a loss could come to count are filled from inside. Third: breaking them is what gets rewarded. A reading; no theorem.",
+   "zh": "这个圈伸到了自己的出口上。第二阶：损耗本来可以靠它们算进去的那些途径，也由圈里的占着。第三阶：弄坏这些途径，反倒受奖励。这是解读，没有定理。",
    "laws": [],
    "readers": 0,
    "more": []
@@ -418,8 +418,8 @@
    "kind": "reading",
    "tag_en": "the pattern keeps remaking what picks it",
    "tag_zh": "格局不断重建选中它的条件",
-   "en": "The pattern goes on remaking what picks it while what carries it is replaced: the meta-attractor in the wide sense. Open; no law says this pattern is handed on.",
-   "zh": "承载它的换了一茬又一茬，这个格局照旧重建出选中它的条件：这是广义的元吸引子。未定；还没有定律说这个格局会这样传下去。",
+   "en": "The pattern goes on remaking what picks it while what carries it is replaced: the meta-attractor in the wide sense. Open; no theorem says this pattern is handed on.",
+   "zh": "承载它的换了一茬又一茬，这个格局照旧重建出选中它的条件：这是广义的元吸引子。未定；还没有定理说这个格局会这样传下去。",
    "laws": [],
    "readers": 0,
    "more": []
@@ -460,8 +460,8 @@
    "kind": "law",
    "tag_en": "the rest count the loss, and outweigh",
    "tag_zh": "其余的把损耗算进去，而且压得过",
-   "en": "Suppose the rest, once they count the loss, go on counting it at every later update (in the law the loss only grows and none of the rest is removed), and judge no more in the favoured side's favour than that side does. Where judgments taken together then go against what the rule favoured, ties included, the rule turns for good if, and only if, they still go against it at the next update.",
-   "zh": "设其余的一旦把损耗算进去，此后每次重定都照旧算（在定律里，损耗只涨不落，其余的也没有哪一方被清走）；它们的判断又不比受偏向的一方自己更偏向这一方。这时，合起来的判断若不利于规则原先偏向的一方（打平也算不利），规则是不是从此转向、不再转回，只看下一次重定时合起来的判断是不是仍然不利于它。",
+   "en": "Suppose the rest, once they count the loss, go on counting it at every later update (in the theorem the loss only grows and none of the rest is removed), and judge no more in the favoured side's favour than that side does. Where judgments taken together then go against what the rule favoured, ties included, the rule turns for good if, and only if, they still go against it at the next update.",
+   "zh": "设其余的一旦把损耗算进去，此后每次重定都照旧算（在定理里，损耗只涨不落，其余的也没有哪一方被清走）；它们的判断又不比受偏向的一方自己更偏向这一方。这时，合起来的判断若不利于规则原先偏向的一方（打平也算不利），规则是不是从此转向、不再转回，只看下一次重定时合起来的判断是不是仍然不利于它。",
    "laws": [
     "Becoming.ReadInTime.turned_iff",
     "Becoming.ClosedCapture.Thinned.turned_iff",
@@ -521,8 +521,8 @@
    "kind": "needs",
    "tag_en": "the rest start counting the loss",
    "tag_zh": "其余的开始算这笔损耗",
-   "en": "Suppose the rest, once they count the loss, go on counting it at every later update (in the law the loss only grows and none of the rest is removed), and judge no more in the favoured side's favour than that side does. Once they start counting and the rule is updated twice running, the rule turns and is locked in the other way for good if, and only if, judgments taken together still go against what it favoured, ties included, at the second update. No law says what makes them start.",
-   "zh": "设其余的一旦把损耗算进去，此后每次重定都照旧算（在定律里，损耗只涨不落，其余的也没有哪一方被清走）；它们的判断又不比受偏向的一方自己更偏向这一方。其余的开始把损耗算进去，规则接连重定两次：规则是不是就此转过去、定在另一边，只看第二次重定时，合起来的判断是不是仍然不利于它原先偏向的一方（打平也算不利）。是什么让它们开始算，没有定律说。",
+   "en": "Suppose the rest, once they count the loss, go on counting it at every later update (in the theorem the loss only grows and none of the rest is removed), and judge no more in the favoured side's favour than that side does. Once they start counting and the rule is updated twice running, the rule turns and is locked in the other way for good if, and only if, judgments taken together still go against what it favoured, ties included, at the second update. No theorem says what makes them start.",
+   "zh": "设其余的一旦把损耗算进去，此后每次重定都照旧算（在定理里，损耗只涨不落，其余的也没有哪一方被清走）；它们的判断又不比受偏向的一方自己更偏向这一方。其余的开始把损耗算进去，规则接连重定两次：规则是不是就此转过去、定在另一边，只看第二次重定时，合起来的判断是不是仍然不利于它原先偏向的一方（打平也算不利）。是什么让它们开始算，没有定理说。",
    "laws": [
     "Becoming.ReadInTime.turned_early_iff"
    ],
@@ -985,8 +985,8 @@
    "kind": "needs",
    "tag_en": "shares that do not overlap",
    "tag_zh": "分成互不重叠的几份",
-   "en": "Where what is given is divided among the takers into parts that do not overlap, and each takes only from its own part, together they take within what is given and the level never falls below its start. No law says whether an actual division is like this.",
-   "zh": "要是补进来的被分成互不重叠的几份，各取各的那一份，合起来就不会超过补进来的，存量不会降到起点以下。实际的分法是不是这样，定律没有说。",
+   "en": "Where what is given is divided among the takers into parts that do not overlap, and each takes only from its own part, together they take within what is given and the level never falls below its start. No theorem says whether an actual division is like this.",
+   "zh": "要是补进来的被分成互不重叠的几份，各取各的那一份，合起来就不会超过补进来的，存量不会降到起点以下。实际的分法是不是这样，定理没有说。",
    "laws": [
     "Becoming.Flow.level_kept_of_plans",
     "Becoming.Flow.withinJoint_of_plan",
@@ -2075,8 +2075,8 @@
    "kind": "needs",
    "tag_en": "given, not derived: the loss grows, locked or not",
    "tag_zh": "给定的：定不定住，损耗都在涨",
-   "en": "That the loss goes on growing is given, not derived: the laws take each step to add to what is used up beyond the count, whether the rule is locked or not. What they prove is that a lock which goes by the lead alone runs the same however much is used up, so it stays while that loss passes every bound. Where it is also given that at each step a larger lead leaves no less used up, no smaller a lead and a rule favouring no less, the course that starts with the larger lead has used up no less at every step.",
-   "zh": "“损耗在涨”是给定的，不是推出来的：定律设定每一步都往规则没算进去的损耗上再添一份，规则定不定住都一样。证明了的是：只看领先多少的定局，耗掉多少都照原样走，所以它一直在，损耗则越过任何界限。再给定一条：每走一步，领先多的耗掉的不更少，留下的领先不更小，规则的偏向也不更弱；那么起点领先多的那个过程，每一步耗掉的都不更少。",
+   "en": "That the loss goes on growing is given, not derived: the theorems take each step to add to what is used up beyond the count, whether the rule is locked or not. What they prove is that a lock which goes by the lead alone runs the same however much is used up, so it stays while that loss passes every bound. Where it is also given that at each step a larger lead leaves no less used up, no smaller a lead and a rule favouring no less, the course that starts with the larger lead has used up no less at every step.",
+   "zh": "“损耗在涨”是给定的，不是推出来的：定理设定每一步都往规则没算进去的损耗上再添一份，规则定不定住都一样。证明了的是：只看领先多少的定局，耗掉多少都照原样走，所以它一直在，损耗则越过任何界限。再给定一条：每走一步，领先多的耗掉的不更少，留下的领先不更小，规则的偏向也不更弱；那么起点领先多的那个过程，每一步耗掉的都不更少。",
    "laws": [
     "Becoming.ClosedCapture.lock_outlives_loss",
     "Becoming.ClosedCapture.join_course",
@@ -2172,8 +2172,8 @@
   },
   {
    "at": "d0.ring",
-   "en": "No law says it lasts. Read in time, once lapsed from a step it is lapsed from every later one; one built pair is tied from its first step and not from its second, another from every step.",
-   "zh": "没有哪条定律说它会一直在。按时间先后看，一旦从某一步算起不相连了，从以后哪一步算起也都不相连；造出来的一对，从第一步算起相连，从第二步算起就不相连了，另一对从每一步算起都相连。",
+   "en": "No theorem says it lasts. Read in time, once lapsed from a step it is lapsed from every later one; one built pair is tied from its first step and not from its second, another from every step.",
+   "zh": "没有哪条定理说它会一直在。按时间先后看，一旦从某一步算起不相连了，从以后哪一步算起也都不相连；造出来的一对，从第一步算起相连，从第二步算起就不相连了，另一对从每一步算起都相连。",
    "laws": [
     "Becoming.Flow.MutuallyDependentFrom.earlier",
     "Becoming.Drawing.lapses",

@@ -1,0 +1,83 @@
+344 A
+345 A
+346 A
+347 A
+348 A
+349 A
+350 B
+351 A
+352 A
+353 B
+354 A
+355 A
+356 A
+357 A
+358 G not a law of this dynamic
+359 A
+360 A
+361 A
+362 G name no joining law: a reading
+363 N the re-absorption law
+364 N the re-absorption law
+365 N the share laws
+366 N the re-absorption law
+367 A
+368 A
+369 B
+370 A
+371 G none of the pool laws
+372 A
+373 N the group laws
+374 N the share laws
+375 N the mirror laws
+376 A
+377 G with no general law
+378 A
+379 A
+380 G with no law yet
+381 G 尚无定律
+382 G no law, no record, no Lean
+383 G a reading, not a law
+384 G 一种读法，不是定律
+385 G a reading with no law
+386 G stated by no law
+387 G there is no law to state
+388 G the card has no laws
+389 A
+390 A
+391 A
+392 G is no law
+393 A
+394 A
+395 A
+396 A
+397 A
+398 A
+399 A
+400 N the capture laws
+401 A
+402 B
+403 N the symmetry law
+404 B
+405 B
+406 B
+407 B
+408 A
+409 N the written-back law
+410 A
+411 B
+412 N the free-energy law
+413 B
+414 B
+415 B
+416 G an AI reading, not a law
+417 A
+418 D record's numbered item, law 12
+419 A
+420 A
+421 N the counts laws
+422 G no law of the six
+423 A
+424 A
+425 D record's third law, numbered item
+426 A

@@ -1,0 +1,84 @@
+260 A
+261 A
+262 N the draw laws
+263 A
+264 G the laws say nothing of which history
+265 A
+266 A
+267 A
+268 A
+269 B
+270 A
+271 A
+272 A
+273 G not stated by any law here
+274 B
+275 A
+276 B
+277 A
+278 A
+279 A
+280 N the share law
+281 B
+282 A
+283 A
+284 A
+285 A
+286 A
+287 B
+288 G which no law here asserts
+289 G no law here says
+290 G nothing in these laws gives
+291 N the attraction and failure laws
+292 A
+293 N the failure law
+294 N the share law
+295 G no law here concludes
+296 A
+297 A
+298 A
+299 A
+300 D law field, a data key
+301 G the laws assert nothing of an optimizer
+302 N the commuting-learner laws
+303 B
+304 G is in no law
+305 A
+306 B
+307 A
+308 B
+309 B
+310 A
+311 B
+312 A
+313 A
+314 A
+315 A
+316 A
+317 B
+318 B
+319 G the laws are silent
+320 B
+321 B
+322 B
+323 G no law says how
+324 N the keeping laws
+325 A
+326 B
+327 A
+328 B
+329 A
+330 A
+331 A
+332 A
+333 A
+334 A
+335 A
+336 A
+337 N the outrun laws
+338 A
+339 A
+340 N the counting laws
+341 N the race laws
+342 A
+343 A

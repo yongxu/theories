@@ -70,7 +70,7 @@ Others drawing first end the base; Weighting later draws less.
 **从这里出发**
 
 - = [用得比补得快](#box-a1-over)：**同一回事：一份份看都不多。**各自单看，取的都不超过补回来的；合起来却超了，于是这样的每一步存量都在降。这就是“用得比补得快”，只是哪一本单独的账上都看不出来。*（一个是另一个的特例）*Lean 里的名字：`Pair.own_not_joint`, `Exceeding.own_not_joint`, `Flow.excess_lowers`。
-- → [用的补得上](#box-a1-within)：**分成互不重叠的几份。**要是补进来的被分成互不重叠的几份，各取各的那一份，合起来就不会超过补进来的，存量不会降到起点以下。实际的分法是不是这样，定律没有说。*（已证明，但要有过程之外给定的东西；只有一位读者写过，还没有第二位读者看过）*Lean 里的名字：`Flow.level_kept_of_plans`, `Flow.withinJoint_of_plan`, `Alone.all_continue`。
+- → [用的补得上](#box-a1-within)：**分成互不重叠的几份。**要是补进来的被分成互不重叠的几份，各取各的那一份，合起来就不会超过补进来的，存量不会降到起点以下。实际的分法是不是这样，定理没有说。*（已证明，但要有过程之外给定的东西；只有一位读者写过，还没有第二位读者看过）*Lean 里的名字：`Flow.level_kept_of_plans`, `Flow.withinJoint_of_plan`, `Alone.all_continue`。
 - → [留着不如拿走](#box-b0-lost)：**光是其余的就已经取过头。**要是补给这份存量的，自己也靠它延续；撇开某一个不算，光是其余的，取的就已经比补的多，而且这样持续得够久：那么存量就跌到补给它的一方的需要以下，再也回不来，不管撇开的那一个取多取少。事后再去看存量，它取也好、留也好，得分都一样。*（已证明；只有一位读者写过，还没有第二位读者看过）*Lean 里的名字：`Flow.outrun_below`, `Flow.outrun_ends`, `Flow.outrun_reading_alike`。
 
 **通到这里**
@@ -144,7 +144,7 @@ Where the possible grows; What keeping widening needs, and what carries it.
 
 **从这里出发**
 
-- → [总有新的](#box-a1-new)：**要总有新的，总量得一涨再涨。**“总有新的”，若所需都落在固定的有限几样存量上，就要这几样的总量一再上涨、越过任何上限，而且是由其余的或从外面给进来的。没有定律说光是涨就会带来新的。*（已证明，但要有过程之外给定的东西）*Lean 里的名字：`Web.KeepsWidening.rises_late`, `Web.KeepsWidening.passes_every_bound`, `Web.KeepsWidening.from_rest_or_open`, `Flow.whole_not_keepsWidening`。
+- → [总有新的](#box-a1-new)：**要总有新的，总量得一涨再涨。**“总有新的”，若所需都落在固定的有限几样存量上，就要这几样的总量一再上涨、越过任何上限，而且是由其余的或从外面给进来的。没有定理说光是涨就会带来新的。*（已证明，但要有过程之外给定的东西）*Lean 里的名字：`Web.KeepsWidening.rises_late`, `Web.KeepsWidening.passes_every_bound`, `Web.KeepsWidening.from_rest_or_open`, `Flow.whole_not_keepsWidening`。
 - → [够用](#box-a2-supplied)：**长回到够用。**只要每一步给的都比取的多，低于需要的存量，差多少，就在多少步之内回到需要的水平。*（已证明；只有一位读者写过，还没有第二位读者看过）*Lean 里的名字：`Flow.restores`, `Flow.net_give_raises_at`。
 
 **通到这里**
@@ -169,7 +169,7 @@ The grammar's law of rest: falls that end do not recur; Revisiting, novelty and 
 
 **从这里出发**
 
-- | [用得比补得快](#box-a1-over)：**界线：取的比不比补的多。**界线是确切的：取的不超过补的，存量守得住；超过了，就降。定律说的是界线在哪里，没有说是什么把取用推过界线。*（已证明的界线）*Lean 里的名字：`Flow.joint_keeps`, `Flow.excess_lowers`, `Optimum.kept_iff_within`, `Web.lost_iff`, `Web.course_kept_iff`, `Web.course_lost_iff`, `Stock.repeat_covered_iff`。
+- | [用得比补得快](#box-a1-over)：**界线：取的比不比补的多。**界线是确切的：取的不超过补的，存量守得住；超过了，就降。定理说的是界线在哪里，没有说是什么把取用推过界线。*（已证明的界线）*Lean 里的名字：`Flow.joint_keeps`, `Flow.excess_lowers`, `Optimum.kept_iff_within`, `Web.lost_iff`, `Web.course_kept_iff`, `Web.course_lost_iff`, `Stock.repeat_covered_iff`。
 - → [不够用了](#box-a2-short)：**单凭偶然：余量越宽越少见。**只有偶然在推一个存量，涨跌平均相抵：在一段步数之内跌到需要线的过程，所占份额至多是步数乘以每步的波动、再除以余量的平方。*（已证明，但要有过程之外给定的东西；只有一位读者写过，还没有第二位读者看过）*Lean 里的名字：`ConditionalWeights.fallsWithin_bound`, `ConditionalWeights.fallsWithin_share`。
 
 **通到这里**
@@ -196,7 +196,7 @@ Consumption ends with its feeders; An end cascading along total dependence; Endi
 **从这里出发**
 
 - → [回不了头了](#box-a1-past)：**余量只够撑固定的几步。**取用一直高于补给的时候，高出需要的那点余量只够撑固定的步数。回不了头的那一点到来的时候，靠它延续的还够用。*（已证明）*Lean 里的名字：`Optimum.reread_deadline_iff`, `RegimeMargin.root_above_need`, `FourReaders.noReturn`。
-- → [用的补得上](#box-a1-within)：**及时少取。**从某一步起改成取的不超过补的，需要能不能一直供得上，只看一条：改的那一步，需要还供不供得上。这里没有定律说是什么让取用降下来。*（已证明，但要有过程之外给定的东西）*Lean 里的名字：`Optimum.reread_kept_iff`, `Optimum.kept_at_need`, `Flow.Balances.kept_of_restrained`。
+- → [用的补得上](#box-a1-within)：**及时少取。**从某一步起改成取的不超过补的，需要能不能一直供得上，只看一条：改的那一步，需要还供不供得上。这里没有定理说是什么让取用降下来。*（已证明，但要有过程之外给定的东西）*Lean 里的名字：`Optimum.reread_kept_iff`, `Optimum.kept_at_need`, `Flow.Balances.kept_of_restrained`。
 - → [尽了](#box-a2-ended)：**一直多取，终归用尽。**取用恒定地高于补给，结局是一点不剩；能撑的步数不超过存量。*（已证明）*Lean 里的名字：`RuleRebuilding.«恒取逾生则尽»`, `Flow.Balances.unfed_consumption_ends`, `Flow.excess_bounded`, `Optimum.ends_within`, `Flow.joint_excess_ends`。
 - | [不再变了](#box-e2-rest)：**没有东西进来时：总量还降不降。**没有东西进来、每次交换又都有损耗的时候，变化停不停下，只看总量是不是不再下降。*（已证明的界线）*Lean 里的名字：`World.InAmounts.change_stops_iff`。
 - = [用掉的不在账上](#box-b2-uncounted)：**同一回事：规则没把它算进去。**同一种“用得比补得快”，只是多了一条不把它算进去的规则。*（一个是另一个的特例）*
@@ -356,7 +356,7 @@ The ends of a rule rebuilt from its members: no holder, and the end, do not retu
 
 **从这里出发**
 
-- → [跟着结果改，还没定住](#box-b1-swing)：**规则开始照自己的结果重定。**规则选出来的结果，只有在规则照它重定的那一步，才传得到规则。在第一次重定之前，不管选出了什么，规则都和开始时一样。什么会带来这样一步，定律没有说。*（已证明，但要有过程之外给定的东西）*Lean 里的名字：`Pace.rule_alike_until_reading`, `Pace.rule_at_reading`, `Pace.rule_unreached`。
+- → [跟着结果改，还没定住](#box-b1-swing)：**规则开始照自己的结果重定。**规则选出来的结果，只有在规则照它重定的那一步，才传得到规则。在第一次重定之前，不管选出了什么，规则都和开始时一样。什么会带来这样一步，定理没有说。*（已证明，但要有过程之外给定的东西）*Lean 里的名字：`Pace.rule_alike_until_reading`, `Pace.rule_at_reading`, `Pace.rule_unreached`。
 
 **通到这里**
 
@@ -398,10 +398,10 @@ The ends of drift absorb; fixation, with and without selection in the draw; Grou
 **从这里出发**
 
 - = [自己评自己](#box-b3-inside)：**同一个定局：连评法也在圈里。**同一个定局，只是连怎么评这条规则，也由它偏向的一方来定了。*（一个是另一个的特例）*Lean 里的名字：`ClosedCapture.both_reads`, `ClosedCapture.join_course`, `ClosedCapture.reading_absorbed`。
-- → [代价算进去了](#box-b2-counted)：**其余的开始算这笔损耗。**设其余的一旦把损耗算进去，此后每次重定都照旧算（在定律里，损耗只涨不落，其余的也没有哪一方被清走）；它们的判断又不比受偏向的一方自己更偏向这一方。其余的开始把损耗算进去，规则接连重定两次：规则是不是就此转过去、定在另一边，只看第二次重定时，合起来的判断是不是仍然不利于它原先偏向的一方（打平也算不利）。是什么让它们开始算，没有定律说。*（已证明，但要有过程之外给定的东西）*Lean 里的名字：`ReadInTime.turned_early_iff`。
+- → [代价算进去了](#box-b2-counted)：**其余的开始算这笔损耗。**设其余的一旦把损耗算进去，此后每次重定都照旧算（在定理里，损耗只涨不落，其余的也没有哪一方被清走）；它们的判断又不比受偏向的一方自己更偏向这一方。其余的开始把损耗算进去，规则接连重定两次：规则是不是就此转过去、定在另一边，只看第二次重定时，合起来的判断是不是仍然不利于它原先偏向的一方（打平也算不利）。是什么让它们开始算，没有定理说。*（已证明，但要有过程之外给定的东西）*Lean 里的名字：`ReadInTime.turned_early_iff`。
 - → [都用同一个](#box-d3-one)：**成员一个个随机替换。**成员按权重随机地一个个被替换时，没有哪一种定局是稳的：从任何一种混合出发，都有一部分过程把改规则的全丢掉，也有一部分最后只剩改规则的，两者的权重都有下限。*（已证明；只有一位读者写过，还没有第二位读者看过）*Lean 里的名字：`DrawnReplacement.lost_ge`, `DrawnReplacement.fixed_ge`。
 - → [跟着结果改，还没定住](#box-b1-swing)：**造出来的两例：一推把规则推到反向。**造出来的两例：把规则推到反向，这一推不会被收回。若正赶上重定，规则和领先的一方此后每一步都换边，哪一边都再定不住；若先撑过一步再重定，就此定在另一边。*（只在造出来的例子里见过；只有一位读者写过，还没有第二位读者看过）*Lean 里的名字：`RuleCapture.Alternating.never_locked`, `RuleCapture.Alternating.before_locked`, `RuleCapture.Reversed.not_absorbed`。
-- → [用掉的不在账上](#box-b2-uncounted)：**给定的：定不定住，损耗都在涨。**“损耗在涨”是给定的，不是推出来的：定律设定每一步都往规则没算进去的损耗上再添一份，规则定不定住都一样。证明了的是：只看领先多少的定局，耗掉多少都照原样走，所以它一直在，损耗则越过任何界限。再给定一条：每走一步，领先多的耗掉的不更少，留下的领先不更小，规则的偏向也不更弱；那么起点领先多的那个过程，每一步耗掉的都不更少。*（已证明，但要有过程之外给定的东西；只有一位读者写过，还没有第二位读者看过）*Lean 里的名字：`ClosedCapture.lock_outlives_loss`, `ClosedCapture.join_course`, `PoolFromCourse.window_order_kept`。
+- → [用掉的不在账上](#box-b2-uncounted)：**给定的：定不定住，损耗都在涨。**“损耗在涨”是给定的，不是推出来的：定理设定每一步都往规则没算进去的损耗上再添一份，规则定不定住都一样。证明了的是：只看领先多少的定局，耗掉多少都照原样走，所以它一直在，损耗则越过任何界限。再给定一条：每走一步，领先多的耗掉的不更少，留下的领先不更小，规则的偏向也不更弱；那么起点领先多的那个过程，每一步耗掉的都不更少。*（已证明，但要有过程之外给定的东西；只有一位读者写过，还没有第二位读者看过）*Lean 里的名字：`ClosedCapture.lock_outlives_loss`, `ClosedCapture.join_course`, `PoolFromCourse.window_order_kept`。
 
 **通到这里**
 
@@ -452,7 +452,7 @@ What keeping forgoes, and a coupling against it; Evidence through change: readin
 
 **从这里出发**
 
-- → [代价算进去了](#box-b2-counted)：**其余的把损耗算进去，而且压得过。**设其余的一旦把损耗算进去，此后每次重定都照旧算（在定律里，损耗只涨不落，其余的也没有哪一方被清走）；它们的判断又不比受偏向的一方自己更偏向这一方。这时，合起来的判断若不利于规则原先偏向的一方（打平也算不利），规则是不是从此转向、不再转回，只看下一次重定时合起来的判断是不是仍然不利于它。*（已证明）*Lean 里的名字：`ReadInTime.turned_iff`, `ClosedCapture.Thinned.turned_iff`, `ClosedCapture.Thinned.kept_iff`。
+- → [代价算进去了](#box-b2-counted)：**其余的把损耗算进去，而且压得过。**设其余的一旦把损耗算进去，此后每次重定都照旧算（在定理里，损耗只涨不落，其余的也没有哪一方被清走）；它们的判断又不比受偏向的一方自己更偏向这一方。这时，合起来的判断若不利于规则原先偏向的一方（打平也算不利），规则是不是从此转向、不再转回，只看下一次重定时合起来的判断是不是仍然不利于它。*（已证明）*Lean 里的名字：`ReadInTime.turned_iff`, `ClosedCapture.Thinned.turned_iff`, `ClosedCapture.Thinned.kept_iff`。
 - → [传到了，定局不改](#box-b2-heard)：**其余的算得太晚。**要是其余的判断不比受偏向的一方自己更偏向这一方：规则是不是照旧定着，只看一条：等其余的开始算这笔损耗的时候，合起来的判断是不是已经偏向规则所偏向的一方。*（已证明）*Lean 里的名字：`ReadInTime.kept_early_iff`, `ReadInTime.kept_iff`, `ReadInTime.kept_once_favoured`, `ReadInTime.deadline`, `ClosedCapture.Thinned.kept_iff`。
 - | [用掉的不在账上](#box-b2-uncounted)：定规则的各方来不来得及读到*（已证明的界线）*
 - | [其余的也算](#box-b3-rest)：定规则的各方里，有没有一方分辨得出*（已证明的界线）*
@@ -588,7 +588,7 @@ The lock draws its readers out; Readings revised at descent: a share moving by s
 
 **从这里出发**
 
-- → [查错的也在圈里](#box-b3-checkers)：**这个圈伸到了查错的途径上。**这个圈伸到了自己的出口上。第二阶：损耗本来可以靠它们算进去的那些途径，也由圈里的占着。第三阶：弄坏这些途径，反倒受奖励。这是解读，没有定律。*（解读，没有证明）*
+- → [查错的也在圈里](#box-b3-checkers)：**这个圈伸到了查错的途径上。**这个圈伸到了自己的出口上。第二阶：损耗本来可以靠它们算进去的那些途径，也由圈里的占着。第三阶：弄坏这些途径，反倒受奖励。这是解读，没有定理。*（解读，没有证明）*
 - → [代价算进去了](#box-b2-counted)：**损耗过了定量就不再偏向的评法。**一种评法，损耗过了定量就不再偏向；再给定损耗每一步都在涨，这个定局就会松开：一旦过了那个量，此后每次重定完，规则都不再偏向原先的一方，不管那一方已经领先多少。*（已证明，但要有过程之外给定的东西）*Lean 里的名字：`ClosedCapture.turned_by_loss`, `ClosedCapture.loss_ends_line`。
     - 另外：造出来的一例：损耗没有任何一方去算，却落在规则偏向的一方身上。领先的份额连降三步，定局还在；随后定局松开，规则转向另一边。*（只在造出来的例子里见过；只有一位读者写过，还没有第二位读者看过）*Lean 里的名字：`PoolFromCourse.Borne.shapers_left`, `PoolFromCourse.Borne.shapers_turned`, `PoolFromCourse.borne_falls`。
 - = [自己撑住自己](#box-b1-held)：同一个定局：连评法也在圈里*（一个是另一个的特例）*
@@ -613,7 +613,7 @@ Closed capture (meta-attractor, in the glossary's sense).
 
 **从这里出发**
 
-- → [换了一茬，格局还在](#box-d2-handed)：**格局不断重建选中它的条件。**承载它的换了一茬又一茬，这个格局照旧重建出选中它的条件：这是广义的元吸引子。未定；还没有定律说这个格局会这样传下去。*（解读，没有证明）*
+- → [换了一茬，格局还在](#box-d2-handed)：**格局不断重建选中它的条件。**承载它的换了一茬又一茬，这个格局照旧重建出选中它的条件：这是广义的元吸引子。未定；还没有定理说这个格局会这样传下去。*（解读，没有证明）*
 
 **通到这里**
 
@@ -837,7 +837,7 @@ Which selections survive and remain executable when the lumping changes.
 
 不同于：《孟子·滕文公上》：许行“贤者与民并耕而食”，与孟子的回应。
 
-**关于留在这里，已经知道的：**没有哪条定律说它会一直在。按时间先后看，一旦从某一步算起不相连了，从以后哪一步算起也都不相连；造出来的一对，从第一步算起相连，从第二步算起就不相连了，另一对从每一步算起都相连。
+**关于留在这里，已经知道的：**没有哪条定理说它会一直在。按时间先后看，一旦从某一步算起不相连了，从以后哪一步算起也都不相连；造出来的一对，从第一步算起相连，从第二步算起就不相连了，另一对从每一步算起都相连。
 
 **从这里出发**
 

@@ -1,0 +1,4 @@
+1006 REWORD the counts theorems say rises => the theorems on counts say rises
+1056 REWORD A reading of proved theorems => A reading of theorems
+1057 REWORD 把已证的定理读作 => 把定理读作
+checked 23 changed, 32 kept

@@ -1,0 +1,84 @@
+868 A
+869 A
+870 A
+871 T not a law relating keeping to gap
+872 B
+873 N the commuting law (WeightedCommuting)
+874 A
+875 A
+876 A
+877 T not a law relating keeping to gap
+878 N the commuting law
+879 N the commuting law
+880 A
+881 A
+882 A
+883 A
+884 A
+885 A
+886 G settled without any law
+887 N the commuting law
+888 A
+889 A
+890 A
+891 N the commuting law
+892 B
+893 B
+894 A
+895 A
+896 A
+897 A
+898 A
+899 A
+900 A
+901 A
+902 A
+903 G the law calls maximal, calls best
+904 A
+905 A
+906 A
+907 A
+908 A
+909 A
+910 A
+911 B
+912 A
+913 A
+914 A
+915 A
+916 A
+917 A
+918 A
+919 A
+920 A
+921 A
+922 A
+923 A
+924 B
+925 B
+926 A
+927 G no law gives it
+928 A
+929 B
+930 G confirming no law
+931 G confirming no law
+932 U A or B, the law's member
+933 B
+934 A
+935 A
+936 A
+937 A
+938 D law records, a record kind
+939 A
+940 A
+941 A
+942 D prediction label
+943 D law record, a record kind
+944 A
+945 A
+946 A
+947 U A or B, under the law
+948 A
+949 B
+950 B
+951 A

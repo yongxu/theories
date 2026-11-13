@@ -1,0 +1,34 @@
+export const meta = {
+  name: 'wm-final-read',
+  description: 'A last cold read of the map\'s pages and tools after "law" became "theorem" for the account\'s proved statements (read-only; findings written to scratch files)',
+  phases: [{ title: 'Read', detail: 'one Opus reader per set of pages, one on the tools\' diff' }],
+}
+const WT = '/Users/ren/tmp/rw/wm/wt'
+const DIR = '/Users/ren/theories/tmp/r7/sheet/wm/run'
+const MAP = WT + '/theories/becoming/results/map'
+const RULE = `You are a last reader of a renaming in the map of the theory of becoming. The changed files are in a working copy at ${WT} (read them there, not in /Users/ren/theories). You did not make the changes; look for what is wrong with them. This is reading work: edit no file of the working copy or the repository, run no tests, builds or git commands (the machine is shared and busy). Use Read (and Grep if you need it), and Write for your one findings file.
+
+WHAT WAS DONE. The account used to call its own proved statements "laws". From today they are "theorems" (定理 in Chinese). Every use of "law" (and of 定律, 律) in the map's data and in the page text its tools write was sorted, and the uses that mean one of the account's own proved statements (stated with hypotheses, proved in Lean) now say "theorem". "Law" was kept on purpose for:
+ - a model's step or dynamics (Lean's \`Law\`: what gives each configuration its one next; "a determined law", "under one fixed law", "a state its law leaves as it is", "a law that favours neither", "the renewal law" where it is a model's step; 律 in Chinese for a step);
+ - another field's law or law in the legal or scriptural sense (Goodhart's law, 古德哈特定律, 排中律, the law found in the temple);
+ - what holds in every model of a class ("the counting laws", "order laws");
+ - something not proved that is put as a regularity;
+ - names kept for now: the file name LAWS.md and links to it, ids of dynamics and records (some dynamics of the atlas have "law" in their names, such as "Ending laws as regimes on a lineage": those names are the atlas's and stay), data keys (\`laws\`, kind \`law\`), Lean names (\`Law.orbit\`), a record's numbered item ("law 13"), bridge names and labels taken from a test's own record, and verbatim quotations of a test's files.
+
+WHAT TO LOOK FOR, in what you are given:
+ 1. THEOREM-WRONG: "theorem" (定理) where the thing is not one of the account's proved statements (it is a step, another field's law, a regularity not proved, a kept name).
+ 2. LAW-LEFT: "law" (定律, 律) left where one of the account's own proved statements is plainly meant, and it is not one of the kept names above.
+ 3. READS-WRONG: a sentence that the swap made false, changed in meaning, or awkward: "a theorem is a theorem", "proved theorem", "theorem of X" where X is what the statement is about (it should be "on X" or "about X"), a theorem said to call, decide, forbid, permit, rank, speak or be followed or obeyed, "not a theorem" said of a built case (a built case is proved too: "not a general theorem"), a wrong article or number, a heading or table header that no longer matches what is under it.
+ 4. MISMATCH between the English and the Chinese of the same sentence (one says theorem, the other law), where both are given.
+Quote the exact phrase for every finding, say where it is (file and line number, or the nearest heading), which kind it is, and give the smallest replacement. Do not report things that are right. Do not report the kept names listed above. If you find nothing in a file, say so.`
+const JOBS = [
+  { key: 'F1', what: `the English map page and its paths, whole: ${MAP}/THE-MAP.md (160 lines) and ${MAP}/PATHS.md (545 lines). Read every line.` },
+  { key: 'F2', what: `the Chinese map page and its paths, whole: ${MAP}/THE-MAP.zh.md (158 lines) and ${MAP}/PATHS.zh.md (543 lines). Read every line. Where a Chinese sentence looks wrong, open the same place in ${MAP}/THE-MAP.md or ${MAP}/PATHS.md (same order of sections) to compare with the English.` },
+  { key: 'F3', what: `the layer under the map: ${MAP}/LEDGER.md whole (154 lines); then the first 130 lines and lines 300 to 360 of ${MAP}/LAWS.md; the first 90 lines of ${MAP}/CASES.md; the first 70 lines of ${MAP}/DYNAMICS.md; the first 80 lines of ${MAP}/PLACES.md. In these pages the framing sentences, headings and table headers are written by a tool whose strings were changed by script and read by one reader only, so read those most closely.` },
+  { key: 'F4', what: `the tools' diff: ${DIR}/tools.diff (907 lines; a git diff of tools/research/map_sheet.py, map_sheet.html, the_map.py, the_map.html, their two test files and MAP.md). A script changed "law" to "theorem" only inside Python string literals and comments and inside the HTML templates' text; a few lines were then edited by hand. Besides the four kinds above, look for: a change that is not prose (an identifier, a dictionary key, a kind or state value such as 'law', a format placeholder such as {laws} or %(all_laws)d, a CSS class, a file name, an anchor); a string that other code compares or looks up exactly and whose partner was not changed (the same phrase must read the same in the_map.py and the_map.html, and in a tool and its test); a test whose assertion no longer tests what its name says; Chinese strings in map_sheet.py and map_sheet.html (定律 became 定理 throughout those two files: say if any of them meant a step or another field's law). You may open the full files under ${WT}/tools/research/ to check a partner string.` },
+]
+phase('Read')
+const res = await parallel(JOBS.map(j => () =>
+  agent(`${RULE}\n\nYOUR PART (${j.key}): ${j.what}\n\nOUTPUT. Write ${DIR}/${j.key}.final.txt: one finding per line, "<file>:<line or heading> | <KIND> | <exact phrase> => <replacement> | <why, at most 15 words>", then a last line "read <what you read, with line counts>". Then reply with one line: ${j.key} and the number of findings of each kind. Nothing else.`,
+    { label: `final:${j.key}`, phase: 'Read', model: 'opus', effort: 'high' })))
+return res.map((r, i) => ({ part: JOBS[i].key, reply: r }))

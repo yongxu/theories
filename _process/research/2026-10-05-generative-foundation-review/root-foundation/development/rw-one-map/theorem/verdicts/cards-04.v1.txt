@@ -1,0 +1,84 @@
+427 B
+428 B
+429 B
+430 B
+431 B
+432 B
+433 B
+434 A
+435 B
+436 A
+437 G a reading, not a law
+438 B
+439 B
+440 B
+441 B
+442 B
+443 B
+444 B
+445 B
+446 B
+447 A
+448 B
+449 G no law in this dynamic is about
+450 G a reading, with no law
+451 G there is no law to type
+452 D data key laws is empty
+453 G no law says when
+454 B
+455 B
+456 A
+457 B
+458 B
+459 A
+460 A
+461 G a reading with no law here
+462 A
+463 A
+464 B
+465 G no law here is by_outside
+466 G neither is a law
+467 B
+468 B
+469 B
+470 B
+471 B
+472 A
+473 A
+474 A
+475 B
+476 B
+477 B
+478 B
+479 N the outrun law
+480 B
+481 B
+482 B
+483 B
+484 B
+485 B
+486 B
+487 B
+488 B
+489 B
+490 B
+491 A
+492 A
+493 N the outrun law
+494 B
+495 B
+496 B
+497 B
+498 B
+499 A
+500 B
+501 B
+502 B
+503 B
+504 U A or B: statements about weighted laws
+505 B
+506 G among built cases, not a law
+507 G has no law here
+508 B
+509 B
+510 A

@@ -1,0 +1,6 @@
+703 REWORD the theorem is equivalent to excluded middle => the statement is equivalent to excluded middle
+719 REWORD Every theorem is of one built course => Every theorem is about one built course
+HAND they are not theorems on every course : "theorems on every course" is unclear; meaning is they do not hold of every course => so they do not hold of every course
+HAND Left out by the three-law limit (least-loss-rest misfit, untagged) : untagged "law" is the card's proved-statement cap; elsewhere changed => Left out by the three-theorem limit
+HAND Left out by the six-law cap (two-sided-regulation-and-late-reading misfit, untagged) : untagged "law" is the card's proved-statement cap; elsewhere changed => Left out by the six-theorem cap
+checked 41 changed, 12 kept

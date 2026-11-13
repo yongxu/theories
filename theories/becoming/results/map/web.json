@@ -1,5 +1,5 @@
 {
- "about": "The ground of the map (AI-written, 11 November 2026): a few kinds of role and a few kinds of tie. A role is a place in a tie, not a thing: one thing can fill two roles. A tie kind has two ends and can hold between whatever roles a law speaks of. A law's sentence in cards.json uses these words and its model's own terms only; a case in cases.json uses its own words; a bridge pairs the two. The Chinese names are AI-written and wait for the director's ear. The marks are the root's four (01 section 3), each said with its sameness and its extent; the forms are what a law can conclude besides a mark; the frames say what a case must supply to meet a law. The ways in pair a question in plain words with the ties to start at; they are a reader's index, not a result.",
+ "about": "The ground of the map (AI-written, 11 November 2026): a few kinds of role and a few kinds of tie. A role is a place in a tie, not a thing: one thing can fill two roles. A tie kind has two ends and can hold between whatever roles a theorem speaks of. A theorem's sentence in cards.json uses these words and its model's own terms only; a case in cases.json uses its own words; a bridge pairs the two. The Chinese names are AI-written and wait for the director's ear. The marks are the root's four (01 section 3), each said with its sameness and its extent; the forms are what a theorem can conclude besides a mark; the frames say what a case must supply to meet a theorem. The ways in pair a question in plain words with the ties to start at; they are a reader's index, not a result.",
  "roles": [
   {
    "id": "pattern",
@@ -83,7 +83,7 @@
    "en": "anything that goes on",
    "zh": "凡相续者",
    "account": "line 相续; any process",
-   "is": "No role named: a law of every course, every process or every relation. These are the map's legend, not a place on it."
+   "is": "No role named: a theorem about every course, every process or every relation. These are the map's legend, not a place on it."
   }
  ],
  "ties": [

@@ -1,0 +1,5 @@
+159 REWORD moving the theorem's way => moving toward what the theorem gives as best
+160 REWORD 朝定理的方向走 => 朝定理给出的最好走
+161 REWORD toward the theorem's ends => toward the best the theorem gives
+163 REWORD 朝定理的终点走 => 朝定理给出的最好走
+checked 22 changed, 0 kept

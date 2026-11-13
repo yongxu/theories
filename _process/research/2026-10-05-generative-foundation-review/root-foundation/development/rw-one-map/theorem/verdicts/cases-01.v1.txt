@@ -1,0 +1,70 @@
+798 A
+799 A
+800 A
+801 A
+802 A
+803 A
+804 A
+805 A
+806 A
+807 G a thesis, not a law, met the data
+808 A
+809 G 是论题不是律
+810 A
+811 A
+812 A
+813 A
+814 A
+815 A
+816 A
+817 A
+818 A
+819 A
+820 A
+821 N the pool law
+822 A
+823 A
+824 A
+825 D classed "law" + H1 + H2 label
+826 A
+827 N the Training laws
+828 A
+829 A
+830 A
+831 A
+832 A
+833 A
+834 A
+835 A
+836 A
+837 A
+838 A
+839 A
+840 A
+841 T a law for the boundary, not derived
+842 C law of sample complexity, learning theory
+843 A
+844 G no law of the account gives it
+845 A
+846 A
+847 A
+848 A
+849 G the law itself says nothing
+850 N the outrun law
+851 A
+852 A
+853 A
+854 A
+855 G the law is silent
+856 D §7.2 law 1 numbered item
+857 G the laws say what an order separates
+858 A
+859 A
+860 A
+861 A
+862 G a forecast, not a law
+863 G which no law says
+864 A
+865 A
+866 A
+867 A

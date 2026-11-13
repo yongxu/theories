@@ -1,0 +1,2 @@
+463 REWORD so each sits between a theorem and a built case => so each sits between a general theorem and a built case
+checked 18 changed, 36 kept

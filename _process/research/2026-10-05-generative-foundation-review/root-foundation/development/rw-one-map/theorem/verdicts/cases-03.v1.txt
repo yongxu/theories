@@ -1,0 +1,76 @@
+952 B
+953 B
+954 A
+955 A
+956 B
+957 B
+958 B
+959 A
+960 N the order laws
+961 A
+962 N the margin law
+963 A
+964 A
+965 A
+966 D the freeze's class label 'law'
+967 A
+968 A
+969 B
+970 D law 4, numbered item of RM1
+971 B
+972 B
+973 B
+974 A
+975 B
+976 B
+977 B
+978 G beyond any law, negative about all
+979 B
+980 B
+981 B
+982 B
+983 B
+984 B
+985 A
+986 A
+987 A
+988 A
+989 A
+990 A
+991 A
+992 A
+993 A
+994 A
+995 A
+996 A
+997 A
+998 N the pool law
+999 N the timing law
+1000 A
+1001 A
+1002 A
+1003 A
+1004 B
+1005 B
+1006 N the counts laws
+1007 B
+1008 B
+1009 B
+1010 B
+1011 A
+1012 A
+1013 A
+1014 B
+1015 B
+1016 B
+1017 B
+1018 B
+1019 A
+1020 A
+1021 A
+1022 A
+1023 B
+1024 B
+1025 B
+1026 B
+1027 U B or T, T2's posited dynamics

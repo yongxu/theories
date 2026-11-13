@@ -1,0 +1,60 @@
+42 A
+43 A
+44 A
+45 A
+46 A
+47 A
+48 G what no law shows
+49 G 定律没有说的
+50 G no law says
+51 G 定律没有说
+52 G a reading, no law behind
+53 G 解读，都没有定律
+54 A
+55 A
+56 G no law drawn derives
+57 A
+58 G no law joins the two
+59 G no law drawn says
+60 G in no law
+61 A
+62 A
+63 G 没有一条推出来
+64 A
+65 A
+66 G 没有定律相连
+67 G 定律里没有一条说
+68 G 没有定律的
+69 A
+70 A
+71 A
+72 C
+73 C
+74 G laws say where, not what moves
+75 G 没说是什么推过去
+76 G no law here says
+77 G 这里没有定律说
+78 A
+79 A
+80 G no law here says
+81 A
+82 A
+83 A
+84 G 这里没有定律说
+85 B
+86 B
+87 G no law drawn here says
+88 G 定律都没有说
+89 G no law drawn here says
+90 G no law drawn here says
+91 G no law drawn joins
+92 G 定律没有说
+93 G 定律没有说
+94 G 没有定律连起来
+95 G no law here says
+96 G what no law drawn shows
+97 A
+98 A
+99 G 这里没有定律说
+100 G 定律没有说的
+101 A

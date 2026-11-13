@@ -1,0 +1,3 @@
+theories/becoming/results/map/THE-MAP.md:43 | READS-WRONG | [Every step with the theorem it stands on](PATHS.md#path-lock) => [Every step with what it stands on](PATHS.md#path-lock) | step 18 is two readings "with no theorem behind them"; not every step has one
+theories/becoming/results/map/PATHS.md:9 | READS-WRONG | each [with its theorem](PLACES.md) => each [with what it rests on](PLACES.md) | three arrows are readings with no Lean statement (THE-MAP.md:148); not each has a theorem
+read THE-MAP.md (160 lines) and PATHS.md (545 lines), every line; English only, no Chinese given, so no MISMATCH check; THE-MAP.md otherwise clean; PATHS.md otherwise clean (law at 18, 177, 221 rightly kept: Goodhart's law, a fixed law as a model's step)

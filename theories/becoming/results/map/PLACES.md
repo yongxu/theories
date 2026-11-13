@@ -72,7 +72,7 @@ Close to what others call: Parfit, "Five Mistakes in Moral Mathematics" (Reasons
 **From here**
 
 - = [Taking more than comes back](#box-a1-over): **the same taking; no single count shows it.** Each alone takes no more than what comes back, yet together they take more, so the level falls at every such step. It is the same taking more than comes back, which no single count shows. *(one is a case of the other)* In the Lean: `Pair.own_not_joint`, `Exceeding.own_not_joint`, `Flow.excess_lowers`.
-- → [Taking within what comes back](#box-a1-within): **shares that do not overlap.** Where what is given is divided among the takers into parts that do not overlap, and each takes only from its own part, together they take within what is given and the level never falls below its start. No law says whether an actual division is like this. *(proved only with something given from outside; written by one reader, no second reader yet)* In the Lean: `Flow.level_kept_of_plans`, `Flow.withinJoint_of_plan`, `Alone.all_continue`.
+- → [Taking within what comes back](#box-a1-within): **shares that do not overlap.** Where what is given is divided among the takers into parts that do not overlap, and each takes only from its own part, together they take within what is given and the level never falls below its start. No theorem says whether an actual division is like this. *(proved only with something given from outside; written by one reader, no second reader yet)* In the Lean: `Flow.level_kept_of_plans`, `Flow.withinJoint_of_plan`, `Alone.all_continue`.
 - → [What it spares is lost to it](#box-b0-lost): **the rest alone already take more than is renewed.** Suppose what renews a stock also lives on it, and the others, without one more, take more than is renewed for long enough. Then the stock falls below what its renewer needs and stays below, whatever the one more takes or leaves. A count made afterwards scores its taking and its leaving the same. *(proved; written by one reader, no second reader yet)* In the Lean: `Flow.outrun_below`, `Flow.outrun_ends`, `Flow.outrun_reading_alike`.
 
 **Into here**
@@ -146,7 +146,7 @@ Close to what others call: Open systems kept in order by what flows through (Sch
 
 **From here**
 
-- → [Always something new](#box-a1-new): **something always new needs a rise without end.** Always something new, on a fixed finite set of stocks, needs their total to rise again and again past every bound, given by the rest or from beyond. No law says a rise alone brings anything new. *(proved only with something given from outside)* In the Lean: `Web.KeepsWidening.rises_late`, `Web.KeepsWidening.passes_every_bound`, `Web.KeepsWidening.from_rest_or_open`, `Flow.whole_not_keepsWidening`.
+- → [Always something new](#box-a1-new): **something always new needs a rise without end.** Always something new, on a fixed finite set of stocks, needs their total to rise again and again past every bound, given by the rest or from beyond. No theorem says a rise alone brings anything new. *(proved only with something given from outside)* In the Lean: `Web.KeepsWidening.rises_late`, `Web.KeepsWidening.passes_every_bound`, `Web.KeepsWidening.from_rest_or_open`, `Flow.whole_not_keepsWidening`.
 - → [Has what it needs](#box-a2-supplied): **it regrows to the need.** Where more is given than taken at every step, a level standing below a need is back at it within as many steps as the amount it was short. *(proved; written by one reader, no second reader yet)* In the Lean: `Flow.restores`, `Flow.net_give_raises_at`.
 
 **Into here**
@@ -171,7 +171,7 @@ Close to what others call: Ostrom, Governing the Commons: communities keep a com
 
 **From here**
 
-- | [Taking more than comes back](#box-a1-over): **the line: what is taken against what comes back.** The line is exact: the level holds where what is taken stays within what comes back, and falls where it does not. The laws say where the line lies, not what moves a taking across it. *(a proved boundary)* In the Lean: `Flow.joint_keeps`, `Flow.excess_lowers`, `Optimum.kept_iff_within`, `Web.lost_iff`, `Web.course_kept_iff`, `Web.course_lost_iff`, `Stock.repeat_covered_iff`.
+- | [Taking more than comes back](#box-a1-over): **the line: what is taken against what comes back.** The line is exact: the level holds where what is taken stays within what comes back, and falls where it does not. The theorems say where the line lies, not what moves a taking across it. *(a proved boundary)* In the Lean: `Flow.joint_keeps`, `Flow.excess_lowers`, `Optimum.kept_iff_within`, `Web.lost_iff`, `Web.course_kept_iff`, `Web.course_lost_iff`, `Stock.repeat_covered_iff`.
 - → [Short of what it needs](#box-a2-short): **by chance: the wider the margin, the rarer.** Where chance alone moves a level, rises and falls balancing on average, it reaches its need within a span in at most a share of courses: the span times the spread of a step, over the margin squared. *(proved only with something given from outside; written by one reader, no second reader yet)* In the Lean: `ConditionalWeights.fallsWithin_bound`, `ConditionalWeights.fallsWithin_share`.
 
 **Into here**
@@ -198,7 +198,7 @@ Close to what others call: The Limits to Growth (Meadows and others, 1972): over
 **From here**
 
 - → [Past turning back](#box-a1-past): **the spare runs out at a fixed step.** At a standing take above what comes back, the spare above the need lasts a fixed number of steps. The point of no return comes while what lives on it still has what it needs. *(proved)* In the Lean: `Optimum.reread_deadline_iff`, `RegimeMargin.root_above_need`, `FourReaders.noReturn`.
-- → [Taking within what comes back](#box-a1-within): **taking less, in time.** Taking within what comes back, from some step on, keeps the need for good if, and only if, the change comes while the need is still met. No law here says what lowers a taking. *(proved only with something given from outside)* In the Lean: `Optimum.reread_kept_iff`, `Optimum.kept_at_need`, `Flow.Balances.kept_of_restrained`.
+- → [Taking within what comes back](#box-a1-within): **taking less, in time.** Taking within what comes back, from some step on, keeps the need for good if, and only if, the change comes while the need is still met. No theorem here says what lowers a taking. *(proved only with something given from outside)* In the Lean: `Optimum.reread_kept_iff`, `Optimum.kept_at_need`, `Flow.Balances.kept_of_restrained`.
 - → [Ended](#box-a2-ended): **a steady excess ends it.** A constant take above what comes back ends with nothing left, in at most as many steps as the level allows. *(proved)* In the Lean: `RuleRebuilding.«恒取逾生则尽»`, `Flow.Balances.unfed_consumption_ends`, `Flow.excess_bounded`, `Optimum.ends_within`, `Flow.joint_excess_ends`.
 - | [At rest](#box-e2-rest): **nothing coming in: is the total still falling?** Where nothing comes in and every exchange loses something, change stops if, and only if, the total stops falling. *(a proved boundary)* In the Lean: `World.InAmounts.change_stops_iff`.
 - = [Using up what is not counted](#box-b2-uncounted): **the same taking, left out by a rule.** The same taking, with a rule in play that leaves it out. *(one is a case of the other)*
@@ -358,7 +358,7 @@ The ends of a rule rebuilt from its members: no holder, and the end, do not retu
 
 **From here**
 
-- → [Follows its own picks, not yet locked](#box-b1-swing): **the rule comes to be updated from its results.** What a rule picks reaches the rule only at a step where the rule is updated from it. Until the first such step the rule stays as it began, whatever it picks. No law says what brings such a step. *(proved only with something given from outside)* In the Lean: `Pace.rule_alike_until_reading`, `Pace.rule_at_reading`, `Pace.rule_unreached`.
+- → [Follows its own picks, not yet locked](#box-b1-swing): **the rule comes to be updated from its results.** What a rule picks reaches the rule only at a step where the rule is updated from it. Until the first such step the rule stays as it began, whatever it picks. No theorem says what brings such a step. *(proved only with something given from outside)* In the Lean: `Pace.rule_alike_until_reading`, `Pace.rule_at_reading`, `Pace.rule_unreached`.
 
 **Into here**
 
@@ -400,10 +400,10 @@ Close to what others call: The Matthew effect (Merton), in its generalised form:
 **From here**
 
 - = [Judged only by its own picks](#box-b3-inside): **the same lock, with the judging inside too.** The same lock, where how the rule is judged is formed from what it favours too. *(one is a case of the other)* In the Lean: `ClosedCapture.both_reads`, `ClosedCapture.join_course`, `ClosedCapture.reading_absorbed`.
-- → [The cost counts](#box-b2-counted): **the rest start counting the loss.** Suppose the rest, once they count the loss, go on counting it at every later update (in the law the loss only grows and none of the rest is removed), and judge no more in the favoured side's favour than that side does. Once they start counting and the rule is updated twice running, the rule turns and is locked in the other way for good if, and only if, judgments taken together still go against what it favoured, ties included, at the second update. No law says what makes them start. *(proved only with something given from outside)* In the Lean: `ReadInTime.turned_early_iff`.
+- → [The cost counts](#box-b2-counted): **the rest start counting the loss.** Suppose the rest, once they count the loss, go on counting it at every later update (in the theorem the loss only grows and none of the rest is removed), and judge no more in the favoured side's favour than that side does. Once they start counting and the rule is updated twice running, the rule turns and is locked in the other way for good if, and only if, judgments taken together still go against what it favoured, ties included, at the second update. No theorem says what makes them start. *(proved only with something given from outside)* In the Lean: `ReadInTime.turned_early_iff`.
 - → [All on the same one](#box-d3-one): **members replaced by chance, one at a time.** Where members are replaced one at a time by weighted chance, no lock is sure: from any mix, some courses lose everything that shapes the rule and some end with nothing else, each with weight bounded below. *(proved; written by one reader, no second reader yet)* In the Lean: `DrawnReplacement.lost_ge`, `DrawnReplacement.fixed_ge`.
 - → [Follows its own picks, not yet locked](#box-b1-swing): **built cases: a push reverses the rule.** Built cases: a push that reverses the rule is not taken back. Made at an update, rule and lead change sides each step and neither side is locked in again; held one step first, the other side is locked in for good. *(built example only; written by one reader, no second reader yet)* In the Lean: `RuleCapture.Alternating.never_locked`, `RuleCapture.Alternating.before_locked`, `RuleCapture.Reversed.not_absorbed`.
-- → [Using up what is not counted](#box-b2-uncounted): **given, not derived: the loss grows, locked or not.** That the loss goes on growing is given, not derived: the laws take each step to add to what is used up beyond the count, whether the rule is locked or not. What they prove is that a lock which goes by the lead alone runs the same however much is used up, so it stays while that loss passes every bound. Where it is also given that at each step a larger lead leaves no less used up, no smaller a lead and a rule favouring no less, the course that starts with the larger lead has used up no less at every step. *(proved only with something given from outside; written by one reader, no second reader yet)* In the Lean: `ClosedCapture.lock_outlives_loss`, `ClosedCapture.join_course`, `PoolFromCourse.window_order_kept`.
+- → [Using up what is not counted](#box-b2-uncounted): **given, not derived: the loss grows, locked or not.** That the loss goes on growing is given, not derived: the theorems take each step to add to what is used up beyond the count, whether the rule is locked or not. What they prove is that a lock which goes by the lead alone runs the same however much is used up, so it stays while that loss passes every bound. Where it is also given that at each step a larger lead leaves no less used up, no smaller a lead and a rule favouring no less, the course that starts with the larger lead has used up no less at every step. *(proved only with something given from outside; written by one reader, no second reader yet)* In the Lean: `ClosedCapture.lock_outlives_loss`, `ClosedCapture.join_course`, `PoolFromCourse.window_order_kept`.
 
 **Into here**
 
@@ -454,7 +454,7 @@ Close to what others call: Zuozhuan 《左傳·襄公三十一年》: 子產不�
 
 **From here**
 
-- → [The cost counts](#box-b2-counted): **the rest count the loss, and outweigh.** Suppose the rest, once they count the loss, go on counting it at every later update (in the law the loss only grows and none of the rest is removed), and judge no more in the favoured side's favour than that side does. Where judgments taken together then go against what the rule favoured, ties included, the rule turns for good if, and only if, they still go against it at the next update. *(proved)* In the Lean: `ReadInTime.turned_iff`, `ClosedCapture.Thinned.turned_iff`, `ClosedCapture.Thinned.kept_iff`.
+- → [The cost counts](#box-b2-counted): **the rest count the loss, and outweigh.** Suppose the rest, once they count the loss, go on counting it at every later update (in the theorem the loss only grows and none of the rest is removed), and judge no more in the favoured side's favour than that side does. Where judgments taken together then go against what the rule favoured, ties included, the rule turns for good if, and only if, they still go against it at the next update. *(proved)* In the Lean: `ReadInTime.turned_iff`, `ClosedCapture.Thinned.turned_iff`, `ClosedCapture.Thinned.kept_iff`.
 - → [Gets back, but the lock stays](#box-b2-heard): **the rest count the loss too late.** Where the rest judge no more in the favoured side's favour than that side does: the lock stays if, and only if, by the time the rest begin to count the loss, judgments taken together already favour what the rule favours. *(proved)* In the Lean: `ReadInTime.kept_early_iff`, `ReadInTime.kept_iff`, `ReadInTime.kept_once_favoured`, `ReadInTime.deadline`, `ClosedCapture.Thinned.kept_iff`.
 - | [Using up what is not counted](#box-b2-uncounted): can what sets the rule read it in time? *(a proved boundary)*
 - | [The rest count too](#box-b3-rest): can at least one of those that set the rule tell? *(a proved boundary)*
@@ -590,7 +590,7 @@ Not the same as: Fisherian runaway (Lande; Kirkpatrick), read as not the closed 
 
 **From here**
 
-- → [Even the checks are its own](#box-b3-checkers): **the loop reaches its own checks.** The loop reaches its own ways out. Second order: the ways a loss could come to count are filled from inside. Third: breaking them is what gets rewarded. A reading; no law. *(a reading, not proved)*
+- → [Even the checks are its own](#box-b3-checkers): **the loop reaches its own checks.** The loop reaches its own ways out. Second order: the ways a loss could come to count are filled from inside. Third: breaking them is what gets rewarded. A reading; no theorem. *(a reading, not proved)*
 - → [The cost counts](#box-b2-counted): **a judging that stops favouring past a set loss.** Suppose the way of judging never favours once the loss has passed a set amount, and the loss keeps growing (also given). Then the lock-in ends: once the loss has passed that amount the rule, after every update, no longer favours the side it favoured, however far ahead that side is. *(proved only with something given from outside)* In the Lean: `ClosedCapture.turned_by_loss`, `ClosedCapture.loss_ends_line`.
     - Also: Built case: nothing counts the loss, but it falls on what the rule favours. The lead shrinks for three steps while the lock still stands; then the lock gives way and the rule turns to the other side. *(built example only; written by one reader, no second reader yet)* In the Lean: `PoolFromCourse.Borne.shapers_left`, `PoolFromCourse.Borne.shapers_turned`, `PoolFromCourse.borne_falls`.
 - = [Holds itself in place](#box-b1-held): the same lock, with the judging inside too *(one is a case of the other)*
@@ -615,7 +615,7 @@ Closed capture (meta-attractor, in the glossary's sense).
 
 **From here**
 
-- → [Handed on](#box-d2-handed): **the pattern keeps remaking what picks it.** The pattern goes on remaking what picks it while what carries it is replaced: the meta-attractor in the wide sense. Open; no law says this pattern is handed on. *(a reading, not proved)*
+- → [Handed on](#box-d2-handed): **the pattern keeps remaking what picks it.** The pattern goes on remaking what picks it while what carries it is replaced: the meta-attractor in the wide sense. Open; no theorem says this pattern is handed on. *(a reading, not proved)*
 
 **Into here**
 
@@ -839,7 +839,7 @@ Which selections survive and remain executable when the lumping changes.
 
 Not the same as: Mencius 3A.4 《孟子·滕文公上》: Xu Xing's 「賢者與民並耕而食」 (the worthy plough beside the people for their food), and Mencius' reply.
 
-**What is known about staying here.** No law says it lasts. Read in time, once lapsed from a step it is lapsed from every later one; one built pair is tied from its first step and not from its second, another from every step.
+**What is known about staying here.** No theorem says it lasts. Read in time, once lapsed from a step it is lapsed from every later one; one built pair is tied from its first step and not from its second, another from every step.
 
 **From here**
 

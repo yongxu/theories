@@ -1,0 +1,2 @@
+187 REWORD no form is a relation's theorem => no form fits a theorem on a relation
+checked 15 changed, 8 kept

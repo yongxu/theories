@@ -1,0 +1,5 @@
+845 WRONG verbatim quotation of the predictions file's own words; keep law
+880 REWORD the theorem for optima => the theorem on optima
+882 REWORD The theorem is of optima => The theorem is on optima
+885 REWORD the theorems are of optima over outcomes, not of a trained model => the theorems are on optima over outcomes, not on a trained model
+checked 46 changed, 8 kept

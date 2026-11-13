@@ -9,12 +9,12 @@ Data: sheet.json (bands, rows, boxes), passages.json (arrows, and what is known 
 
 Views, written at each render: THE-MAP.md and THE-MAP.zh.md (the page), PLACES.md and PLACES.zh.md (every box with its
 arrows), PATHS.md and PATHS.zh.md (every path and every test laid), the-map.svg and a picture for each path (each also
-in Chinese), and interactive.html (the same map to operate). The laws and tests behind the map, filed by role and tie,
+in Chinese), and interactive.html (the same map to operate). The theorems and tests behind the map, filed by role and tie,
 are the_map.py's views (LEDGER.md, LAWS.md, DYNAMICS.md, CASES.md).
 
 The render stops where a box, an arrow, a path or a laid test does not hold together: an arrow between boxes the sheet
-does not have, an arrow that names a law no reader has set against the Lean, a step that stands on nothing, a name or
-a law's sentence in a word that fits only a person. AI-written tool (RW, 12 November 2026)."""
+does not have, an arrow that names a theorem no reader has set against the Lean, a step that stands on nothing, a name or
+a theorem's sentence in a word that fits only a person. AI-written tool (RW, 12 November 2026)."""
 from __future__ import annotations
 
 import argparse
@@ -57,7 +57,7 @@ AGREE = ('yes', 'no', 'mixed')
 HOW = ('built', 'found')
 NCOL = 6
 G = dict(GX=176, CW=160, BW=142, BH=58, RH=96, BANDH=26, GAP=14, TOP=4)
-# words that fit only a person; a law's sentence, a tag and a box's name hold of anything that keeps going
+# words that fit only a person; a theorem's sentence, a tag and a box's name hold of anything that keeps going
 PERSON_EN = re.compile(r"\b(people|person|persons|someone|anyone|everyone|no one|nobody|who|whom)\b", re.I)
 PERSON_ZH = re.compile(r'人|谁|大家')
 PERSON_ZH_OK = re.compile(r'人为|人和 AI')
@@ -82,7 +82,7 @@ def key(p: dict) -> str:
 
 
 def lean_names(lean_dir=None) -> set:
-    """Last components of every declaration in the Lean sources, for checking that a named law exists."""
+    """Last components of every declaration in the Lean sources, for checking that a named theorem exists."""
     names = set()
     pat = re.compile(r'^\s*(?:private\s+|protected\s+|noncomputable\s+)*(?:theorem|lemma|def|abbrev|structure|inductive|class|instance)\s+([^\s:({\[]+)', re.M)
     for base, dirs, files in os.walk(str(lean_dir or ROOT / LEAN)):
@@ -135,10 +135,10 @@ def validate(d: dict, dyn_ids=None, test_ids=None, lean=None) -> list:
         for w in [p] + p.get('more', []):
             if w['kind'] not in KINDS: E.append('passage %s: unknown kind %s' % (k, w['kind']))
             if not w.get('en', '').strip() or not w.get('zh', '').strip(): E.append('passage %s: a sentence is missing' % k)
-            if w.get('laws') and not w.get('readers'): E.append('passage %s: names a law and no reader has set its sentence against the Lean' % k)
+            if w.get('laws') and not w.get('readers'): E.append('passage %s: names a theorem and no reader has set its sentence against the Lean' % k)
             elif w.get('laws') and w['readers'] not in (1, 2): E.append('passage %s: readers is 1 or 2' % k)
             if w is not p and (PERSON_EN.search(w.get('en', '')) or PERSON_ZH.search(PERSON_ZH_OK.sub('', w.get('zh', '')))): E.append('passage %s: a further way uses a word that fits only a person' % k)
-            if not w.get('laws') and w['kind'] in ('law', 'line', 'needs', 'built'): E.append('passage %s: drawn as %s and names no law' % (k, w['kind']))
+            if not w.get('laws') and w['kind'] in ('law', 'line', 'needs', 'built'): E.append('passage %s: drawn as %s and names no theorem' % (k, w['kind']))
             for law in w.get('laws', []):
                 if lean is not None and law.split('.')[-1] not in lean: E.append('passage %s: %s is not a declaration in the Lean' % (k, law))
         if not p.get('tag_en', '').strip() or not p.get('tag_zh', '').strip(): E.append('passage %s: no tag' % k)
@@ -560,7 +560,7 @@ S = {
   'settings': '%(built)d of the %(n)d were run in built set-ups, with language models or small learning programs; %(field)d on data from the field.',
   'scope': 'Drawn so far: %(boxes)d boxes on %(rows)d rows, %(paths)d paths told step by step, %(tests)d tests laid on them.',
   'shows_at': 'The steps sorted by how each is known: [what this path shows]({paths}#path-{id}).',
-  'cast': 'What is in it, and the words used', 'first': 'The first path', 'known': 'Close to what others call', 'unlike': 'Not the same as', 'unmarked': 'Unmarked steps are proved, each under its condition. [Every step with the law it stands on]({paths}#path-{id}).',
+  'cast': 'What is in it, and the words used', 'first': 'The first path', 'known': 'Close to what others call', 'unlike': 'Not the same as', 'unmarked': 'Unmarked steps are proved, each under its condition. [Every step with what it stands on]({paths}#path-{id}).',
   'shows': 'What this path shows', 'wants': 'What the work wants', 'other_paths': 'The other paths', 'steps': 'steps',
   'met': 'Where the reasoning met the world', 'met_lead': 'Each test is laid on the map with what in it was taken as which box, what the reasoning said, what was seen and what gave way. Here each is given in a sentence or two; its page has the rest.',
   'met_lead2': 'Each test is laid on the map with what in it was taken as which box, what the reasoning said, what was seen and what gave way.',
@@ -568,12 +568,12 @@ S = {
   'whole_lead': 'Along a row, further right means less is still open from there. That order is ours: an order of open and closed, not of better and worse. The last band holds for anything that keeps going, whatever its ties, and has no such order.',
   'along': 'Counted over the arrows drawn so far that run along a row (boundaries and the last band apart): %(rl)d of the %(r)d that run right are proved of the course itself; of the %(l)d that run back, %(ll)d are, %(ln)d need something given from outside and %(lb)d are shown only in a built example. This is a count on an order we chose, not a finding.',
   'index': 'Every box', 'far': 'How far it goes',
-  'proved': '*Proved* means a theorem on a stated model, checked by machine (Lean). A real case may not meet a law\'s conditions, or may be paired with the boxes wrongly: the tests laid here show both.',
-  'below': 'The laws and tests behind the map, by role and tie: [the ledger]({ledger}), [what the laws say]({laws}), [every dynamic]({dynamics}), [every test as a case]({cases}).',
+  'proved': '*Proved* means a theorem on a stated model, checked by machine (Lean). A real case may not meet a theorem\'s conditions, or may be paired with the boxes wrongly: the tests laid here show both.',
+  'below': 'The theorems and tests behind the map, by role and tie: [the ledger]({ledger}), [what the theorems say]({laws}), [every dynamic]({dynamics}), [every test as a case]({cases}).',
   'places_title': 'The map: every box and its arrows', 'places_lead': 'A page of [the map]({hub}). Each box says what it is, what is known about staying there, what leads out of it and what leads in. An arrow\'s full sentence stands once, under the box it leaves.',
   'stays': 'What is known about staying here', 'from': 'From here', 'into': 'Into here', 'tests_here': 'Tests laid here', 'none_out': 'No arrow drawn leads out of here.', 'none_in': 'No arrow drawn leads into here.',
   'lean': 'In the Lean', 'one': 'written by one reader, no second reader yet', 'also': 'Also', 'dyn': 'Dynamics of the atlas placed here',
-  'paths_title': 'The map: its paths, and the tests laid on it', 'paths_lead': 'A page of [the map]({hub}). A path is told step by step; under each step stand the boxes and arrows it rests on, each [with its law]({places}).',
+  'paths_title': 'The map: its paths, and the tests laid on it', 'paths_lead': 'A page of [the map]({hub}). A path is told step by step; under each step stand the boxes and arrows it rests on, each [with what it rests on]({places}).',
   'tests_title': 'Tests laid on the map', 'situation': 'The situation', 'said': 'What the reasoning said', 'was_seen': 'What was seen', 'taken': 'What was taken as what',
   'after': 'What followed', 'rival': 'What else would give the same', 'view': 'Where this left the account\'s own view (a reading)', 'used': 'The arrows the reasoning went by',
   'how_t': {'built': 'set up so', 'found': 'found so'}, 'agree': {'yes': 'seen as the reasoning said', 'no': 'not seen as the reasoning said', 'mixed': 'seen in part'}, 'found_at': 'found instead at',
@@ -589,7 +589,7 @@ S = {
   'settings': '%(n)d 个里有 %(built)d 个是在搭出来的情境里跑的，用的是语言模型或小型学习程序；%(field)d 个用的是实地数据。',
   'scope': '目前画出的：%(rows)d 行上的 %(boxes)d 个方框，%(paths)d 条一步一步讲的路，%(tests)d 个放在上面的检验。',
   'shows_at': '把每一步按“凭什么这么说”归类：[这条路显出来的]({paths}#path-{id})。',
-  'cast': '这条路上有什么，用的是哪些词', 'first': '第一条路', 'known': '相近的说法', 'unlike': '不同于', 'unmarked': '没有标记的步骤都已证明，各有条件。[每一步和它依据的定律]({paths}#path-{id})。',
+  'cast': '这条路上有什么，用的是哪些词', 'first': '第一条路', 'known': '相近的说法', 'unlike': '不同于', 'unmarked': '没有标记的步骤都已证明，各有条件。[每一步和它的依据]({paths}#path-{id})。',
   'shows': '这条路显出来的', 'wants': '这项工作想要的', 'other_paths': '其余的路', 'steps': '步',
   'met': '推理碰上实际的地方', 'met_lead': '每个检验放到图上的时候都写明：把其中的什么当作哪个方框，推理怎么说，实际看到什么，是哪里没对上。这里每个只说一两句；其余的在它自己的那一页。',
   'met_lead2': '每个检验放到图上的时候都写明：把其中的什么当作哪个方框，推理怎么说，实际看到什么，是哪里没对上。',
@@ -597,12 +597,12 @@ S = {
   'whole_lead': '一行里越往右，从那里还走得通的越少。这个次序是我们排的：排的是路还开着多少，不是好坏。最下面一栏说的是凡是延续的都会有的情形，不排这个次序。',
   'along': '数一数目前画出的、沿着一行走的箭头（界线和最下面一栏不算）：往右的 %(r)d 条里，%(rl)d 条是就过程本身证明的；往回的 %(l)d 条里，这样的有 %(ll)d 条，%(ln)d 条要有过程之外给定的东西，%(lb)d 条只在造出来的例子里见过。这是在我们自己排的次序上数出来的，不是一个发现。',
   'index': '每一个方框', 'far': '做到了哪一步',
-  'proved': '“已证明”是指：在写明的模型上成立的定理，由机器（Lean）检查过。真实的情形未必满足定律的条件，也可能和图上的方框对应错了：放在图上的检验里，两样都出现过。',
-  'below': '这张图背后的定律和检验，按角色和联系排列（英文）：[总账]({ledger})，[定律说了什么]({laws})，[每一个动态]({dynamics})，[每个检验作为一个案例]({cases})。',
+  'proved': '“已证明”是指：在写明的模型上成立的定理，由机器（Lean）检查过。真实的情形未必满足定理的条件，也可能和图上的方框对应错了：放在图上的检验里，两样都出现过。',
+  'below': '这张图背后的定理和检验，按角色和联系排列（英文）：[总账]({ledger})，[定理说了什么]({laws})，[每一个动态]({dynamics})，[每个检验作为一个案例]({cases})。',
   'places_title': '地图：每一个方框和它的箭头', 'places_lead': '[地图]({hub})的一页。每个方框写明：它是什么，关于留在那里已经知道什么，从它出去的路，通到它的路。一条箭头完整的句子只写一次，写在它出发的方框下面。',
   'stays': '关于留在这里，已经知道的', 'from': '从这里出发', 'into': '通到这里', 'tests_here': '放在这里的检验', 'none_out': '图上没有从这里出去的箭头。', 'none_in': '图上没有通到这里的箭头。',
   'lean': 'Lean 里的名字', 'one': '只有一位读者写过，还没有第二位读者看过', 'also': '另外', 'dyn': '图谱里放在这里的动态，名字是英文',
-  'paths_title': '地图：路，和放在图上的检验', 'paths_lead': '[地图]({hub})的一页。一条路一步一步讲；每一步下面列着它依据的方框和箭头，[各有定律]({places})。',
+  'paths_title': '地图：路，和放在图上的检验', 'paths_lead': '[地图]({hub})的一页。一条路一步一步讲；每一步下面列着它依据的方框和箭头，[各有依据]({places})。',
   'tests_title': '放在图上的检验', 'situation': '情形', 'said': '推理怎么说', 'was_seen': '实际看到的', 'taken': '把什么当作什么',
   'after': '后来', 'rival': '还有什么也会给出同样的结果', 'view': '这套理论自己的看法因此停在哪里（一种解读）', 'used': '推理依据的箭头',
   'how_t': {'built': '人为设定', 'found': '实际如此'}, 'agree': {'yes': '看到的和推理说的一致', 'no': '看到的和推理说的不一致', 'mixed': '一部分一致'}, 'found_at': '实际落在',
@@ -722,12 +722,12 @@ ABOUT = {
   'head': ['What', 'Written by', 'Set against'],
   'rows': [
    ['The %(arrows)d arrows: the full sentence of each', 'an AI reader',
-    'the law\'s Lean statement: %(two)d by a second AI reader, who corrected most; %(one)d by their one reader, each marked; %(nolean)d have no Lean statement (they are readings, or say one box is a case of another). Under %(with_further)d of the arrows stand %(further)d further sentences, %(further2)d read twice and %(further1)d once, each marked. The %(stays)d sentences on staying at a box carry no mark: by the earlier logs, 25 have been set against the Lean by a second AI reader and one, at the lock, by its one reader'],
+    'the theorem\'s Lean statement: %(two)d by a second AI reader, who corrected most; %(one)d by their one reader, each marked; %(nolean)d have no Lean statement (they are readings, or say one box is a case of another). Under %(with_further)d of the arrows stand %(further)d further sentences, %(further2)d read twice and %(further1)d once, each marked. The %(stays)d sentences on staying at a box carry no mark: by the earlier logs, 25 have been set against the Lean by a second AI reader and one, at the lock, by its one reader'],
    ['The arrows\' short tags, the steps of the first two paths, some names of boxes and rows', 'the coordinating AI',
     'the sentences they stand on, by further AI readers; not the Lean again, except the first six steps of the first path and the arrow from the lock to what is not counted, which one AI reader has since set against the Lean, correcting three of those steps and that arrow'],
-   ['The other %(later)d paths', 'an AI reader each', 'the arrows\' sentences and, where a step turns on the law, the Lean, by a second AI reader'],
+   ['The other %(later)d paths', 'an AI reader each', 'the arrows\' sentences and, where a step turns on the theorem, the Lean, by a second AI reader'],
    ['The %(boxes)d boxes, with their sentences and examples', 'the coordinating AI, from places AI readers proposed out of the account\'s %(dynamics)d dynamics',
-    '%(anchored)d are tied to a definition or a law in the Lean; the examples are illustrations, not tested cases'],
+    '%(anchored)d are tied to a definition or a theorem in the Lean; the examples are illustrations, not tested cases'],
    ['The %(tests)d tests laid on the map (%(records)d rows of the account\'s table of tests: the two rounds with the fishers are two)', 'AI readers, from each test\'s own record or an earlier summary of it',
     'the record, by a second AI reader; the later ones were then shortened and set against the record again'],
    ['The sentence or two that opens each test; the names listed under each path; the opening paragraph; the cast of the first path', 'the coordinating AI',
@@ -743,11 +743,11 @@ ABOUT = {
   'head': ['什么', '谁写的', '对着什么核过'],
   'rows': [
    ['%(arrows)d 条箭头各自的完整句子', '一位 AI 读者',
-    '定律的 Lean 命题：%(two)d 条由第二位 AI 读者核过，大多改正了；%(one)d 条只有写它的那一位核过，各自标明；%(nolean)d 条没有 Lean 命题（它们是解读，或者说一个方框是另一个的特例）。其中 %(with_further)d 条箭头下面另有 %(further)d 句，%(further2)d 句两位读者核过，%(further1)d 句一位，各自标明。“留在某个方框”的 %(stays)d 句没有标记：按早先的记录，25 句由第二位 AI 读者对着 Lean 核过，1 句（在定局那里）只有写它的那一位核过'],
+    '定理的 Lean 命题：%(two)d 条由第二位 AI 读者核过，大多改正了；%(one)d 条只有写它的那一位核过，各自标明；%(nolean)d 条没有 Lean 命题（它们是解读，或者说一个方框是另一个的特例）。其中 %(with_further)d 条箭头下面另有 %(further)d 句，%(further2)d 句两位读者核过，%(further1)d 句一位，各自标明。“留在某个方框”的 %(stays)d 句没有标记：按早先的记录，25 句由第二位 AI 读者对着 Lean 核过，1 句（在定局那里）只有写它的那一位核过'],
    ['箭头上的短标签、头两条路的每一步、一些方框和行的名字', '负责协调的 AI', '它们依据的句子，由另外的 AI 读者核过；没有再对着 Lean 核，只有第一条路的头六步，和从定局到“用掉的不在账上”的那条箭头，后来由一位 AI 读者对着 Lean 核过，其中三步和这条箭头改正了'],
-   ['另外 %(later)d 条路', '各由一位 AI 读者', '箭头的句子；哪一步取决于定律，就对着 Lean；由第二位 AI 读者核过'],
+   ['另外 %(later)d 条路', '各由一位 AI 读者', '箭头的句子；哪一步取决于定理，就对着 Lean；由第二位 AI 读者核过'],
    ['%(boxes)d 个方框，连同它们的句子和例子', '负责协调的 AI，依据 AI 读者从这套理论的 %(dynamics)d 条动态里提出的位置',
-    '%(anchored)d 个对上了 Lean 里的定义或定律；例子只是举例，不是检验过的情形'],
+    '%(anchored)d 个对上了 Lean 里的定义或定理；例子只是举例，不是检验过的情形'],
    ['放在图上的 %(tests)d 个检验（在这套理论的检验表里占 %(records)d 行：渔民的两轮算两行）', 'AI 读者，照检验自己的记录或早先的一份摘要', '记录，由第二位 AI 读者核过；后来放上的几个改短之后，又对着记录核了一遍'],
    ['每个检验开头的一两句；每条路下面列的说法；这一页开头的那一段；第一条路开头的“这条路上有什么”', '负责协调的 AI', '检验的记录、方框上的说法和它们出自的解读、第一条路和它的箭头，还有 Lean，由第二位 AI 读者核过：七个检验开头的那几句全部改正了，开头那一段改正了，21 个说法里改正了 6 个；“这条路上有什么”另由一位 AI 读者对着 Lean 和第一条路上的方框核过，大多改正了'],
    ['%(named)d 个方框上别处的 %(names)d 个说法', '取自这套理论对别的传统和学科的解读，其中多数是 AI 凭对出处的记忆写的，没有重读原书', '各自出自的那条解读，由第二位 AI 读者核过，大多改正了。它们的中文写法出自 AI 读者，还没有对着中文版本核过'],
@@ -1005,7 +1005,7 @@ def render():
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser(description='The map: check its data, or write the map to operate as a page fragment.')
     ap.add_argument('--fragment', metavar='OUT', help='write the map to operate without a document around it (for a host that supplies one)')
-    ap.add_argument('--lean', action='store_true', help='also check that every law an arrow names is a declaration in the Lean sources')
+    ap.add_argument('--lean', action='store_true', help='also check that every theorem an arrow names is a declaration in the Lean sources')
     args = ap.parse_args(argv)
     loaded, errors = load()
     if not errors:
