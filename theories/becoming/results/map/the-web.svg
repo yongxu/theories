@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 798" width="1180" height="798" role="img" aria-labelledby="tm-title tm-desc" font-family="Helvetica, Arial, &#x27;PingFang SC&#x27;, &#x27;Hiragino Sans GB&#x27;, &#x27;Noto Sans CJK SC&#x27;, sans-serif">
 <title id="tm-title">The web: eleven kinds of role and the ties between them</title>
-<desc id="tm-desc">Drawn from the map&#x27;s data alone. Each box is a kind of role and each arrow a kind of tie between two roles, heavier where more of the atlas&#x27;s 184 dynamics speak of it; 19 ties are drawn and 39 thinner ones are listed on the page. Under each tie stand four squares, for begins, lasts, changes and ends. A filled square: a general law shows what makes it so. A square with a small mark inside: one built case alone shows it. An empty square: no law written up here shows it. A green dot marks a tie where a frozen prediction that got a verdict names a law on that tie; a green ring, one where a test with such a verdict bears on a dynamic that speaks of it. The marks count the drawn tie itself, not the thinner ones listed under it. A tie gathers laws of separate models that each name this kind of tie; an arrow is not a route, and nothing here ranks one place above another.</desc>
+<desc id="tm-desc">Drawn from the map&#x27;s data alone. Each box is a kind of role and each arrow a kind of tie between two roles, heavier where more of the atlas&#x27;s 184 dynamics speak of it; 19 ties are drawn and 39 thinner ones are listed on the page. Under each tie stand four squares, for begins, lasts, changes and ends. A filled square: a general theorem shows what makes it so. A square with a small mark inside: one built case alone shows it. An empty square: no theorem written up here shows it. A green dot marks a tie where a frozen prediction that got a verdict names a theorem on that tie; a green ring, one where a test with such a verdict bears on a dynamic that speaks of it. The marks count the drawn tie itself, not the thinner ones listed under it. A tie gathers theorems on separate models that each name this kind of tie; an arrow is not a route, and nothing here ranks one place above another.</desc>
 <defs><marker id="tm-ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L10,5 L0,10 z" fill="#15212b"/></marker></defs>
 <rect x="0.5" y="0.5" width="1179" height="797" rx="10" fill="#ffffff" stroke="#cfd7de"/>
 <path d="M159.0,527.0 Q261.0,445.0 363.0,363.0" fill="none" stroke="#15212b" stroke-width="4.6" marker-end="url(#tm-ah)"/>
@@ -165,13 +165,13 @@
 <text x="1062" y="647" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#15212b">what it is of</text>
 <text x="1062" y="665" text-anchor="middle" font-size="12" fill="#62707d">所读者</text>
 <rect x="24.0" y="753.0" width="9" height="9" rx="1.5" fill="#15212b" stroke="#15212b"/>
-<text x="40" y="762" font-size="12" fill="#62707d">a general law shows it</text>
+<text x="40" y="762" font-size="12" fill="#62707d">a general theorem shows it</text>
 <rect x="196.0" y="753.0" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#15212b"/>
 <rect x="199.0" y="756.0" width="3" height="3" fill="#15212b"/>
 <text x="212" y="762" font-size="12" fill="#62707d">one built case alone</text>
 <rect x="356.0" y="753.0" width="9" height="9" rx="1.5" fill="#ffffff" stroke="#62707d"/>
-<text x="372" y="762" font-size="12" fill="#62707d">no law here shows it</text>
-<circle cx="530" cy="758" r="4" fill="#0f7a66"/><text x="542" y="762" font-size="12" fill="#62707d">a prediction with a verdict names a law here</text>
+<text x="372" y="762" font-size="12" fill="#62707d">no theorem here shows it</text>
+<circle cx="530" cy="758" r="4" fill="#0f7a66"/><text x="542" y="762" font-size="12" fill="#62707d">a prediction with a verdict names a theorem here</text>
 <circle cx="830" cy="758" r="3.6" fill="#ffffff" stroke="#0f7a66" stroke-width="1.6"/><text x="842" y="762" font-size="12" fill="#62707d">a test with a verdict bears on a dynamic here</text>
-<text x="24" y="782" font-size="12" fill="#62707d">The four squares under a tie: begins · lasts · changes · ends. A heavier tie carries more dynamics. A tie gathers laws of separate models; an arrow is not a route.</text>
+<text x="24" y="782" font-size="12" fill="#62707d">The four squares under a tie: begins · lasts · changes · ends. A heavier tie carries more dynamics. A tie gathers theorems on separate models; an arrow is not a route.</text>
 </svg>

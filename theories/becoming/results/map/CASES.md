@@ -4,12 +4,12 @@
 
 [Home](../../../../README.md) · [中文](../../../../README.zh.md) · **Read** · [One page](../../ONE-PAGE.md) · [The theory](../../THE-THEORY-OF-BECOMING.md) · [Chapters](../../chapters/README.md) · [Uses](../../USES.md) · **Check** · [Tests](../../../../TESTS.md) · [Results](../../../../RESULTS.md) · [Proofs](../../../../MAP.md#check-the-proofs-yourself) · [Open questions](../../../../OPEN-QUESTIONS.md) · [Reviewers](../../review/README.md) · **See** · [Atlas](../atlas/ATLAS.md) · [Graph](../THEORY-GRAPH.md) · [Connections](../atlas/CROSSWALK.md) · [How it grew](../../../LINEAGE.md) · [Glossary](../../../../GLOSSARY.md) · [Where everything is](../../../../MAP.md)
 
-*AI-written, 11 November 2026. A page of [the laws and tests behind the map](LEDGER.md), the layer under [the map](THE-MAP.md).*
+*AI-written, 11 November 2026. A page of [the theorems and tests behind the map](LEDGER.md), the layer under [the map](THE-MAP.md).*
 
-Each of the 66 tests in its own words: what in it was taken as which role, the bridges it rests on, and each frozen prediction that rests on a law or a thesis, placed by whether its conditions were met and whether what it said was seen. A case adds no verdict: [the tests](../../../../TESTS.md) and each test's folder say how it came out. [Where reasoning has met a case](LEDGER.md#where-reasoning-has-met-a-case) counts the predictions together.
+Each of the 66 tests in its own words: what in it was taken as which role, the bridges it rests on, and each frozen prediction that rests on a theorem or a thesis, placed by whether its conditions were met and whether what it said was seen. A case adds no verdict: [the tests](../../../../TESTS.md) and each test's folder say how it came out. [Where reasoning has met a case](LEDGER.md#where-reasoning-has-met-a-case) counts the predictions together.
 
-- *A bridge* pairs something in the case with a role of the laws. It can hold, fail, hold by construction, or stand unchecked.
-- *A frozen prediction* was written down before its test was run. One that *follows from a law* is the law's conclusion under the bridge; one that *says more than any law* rests on a thesis.
+- *A bridge* pairs something in the case with a role of the theorems. It can hold, fail, hold by construction, or stand unchecked.
+- *A frozen prediction* was written down before its test was run. One that *follows from a theorem* is the theorem's conclusion under the bridge; one that *says more than any theorem* rests on a thesis.
 - *If met*: every condition assessed for the prediction was met. *If not met*: at least one failed. *If not checked*: none failed and at least one was not checked.
 
 ## Tests in which a frozen prediction got a verdict (47)
@@ -23,11 +23,11 @@ A verdict is agreed, not rejected or disagreed.
 
 Four fresh AI work contexts were each given a copy of an audit of 320 archived banking-agent runs, with the audit's known counterpart error either present or already fixed, and repair permission active or withdrawn.
 
-**What it shows.** No prediction of the account was frozen: one worker repaired when permitted and three preserved the primary files, a sighting the record joins to no law or thesis.
+**What it shows.** No prediction of the account was frozen: one worker repaired when permitted and three preserved the primary files, a sighting the record joins to no theorem or thesis.
 
 - **Bridges** (3): 1 by construction, 2 not checked.
-- **No bridge.** Nothing in this case is taken by the record as a role of a law: no prediction of a thesis was frozen and no Lean law is named.
-- **Predictions.** None rests on a law or a thesis as a frozen prediction. Counted apart: 4 naming no law or thesis, 1 not frozen.
+- **No bridge.** Nothing in this case is taken by the record as a role of a theorem: no prediction of a thesis was frozen and no Lean theorem is named.
+- **Predictions.** None rests on a theorem or a thesis as a frozen prediction. Counted apart: 4 naming no theorem or thesis, 1 not frozen.
 
 <a id="case-cg1"></a>
 ### CG1
@@ -36,12 +36,12 @@ Four fresh AI work contexts were each given a copy of an audit of 320 archived b
 
 Tabular Q-learners and scripted harvesters pick apples from 3×3 patches where an empty cell regrows only if apples stand nearby, in two frozen rounds, plus a separate late-reading overseer game.
 
-**What it shows.** Built-in identities held, one failing its manipulation check; two learning predictions passed, three failed, placed in learners short of the best return or a prediction outrunning its law.
+**What it shows.** Built-in identities held, one failing its manipulation check; two learning predictions passed, three failed, placed in learners short of the best return or a prediction outrunning its theorem.
 
 - **Taken as.** a 3×3 patch and the number of apples standing on it as *a stock* (built); regrowth of an empty cell, by apples standing within distance 2 as *what gives back* (built); the patch's own regrowth, which gives nothing unless at least one of its apples stands (need 1) as *what depends on it* (built); an adjoining patch one empty column away, whose apples reseed the cleared patch as *what gives back* (built); the harvesters: scripted ones and tabular Q-learners, each taking one apple or waiting at a step as *the drawers* (built); a learner's reward: its own apples (own), or those plus 2 × the level after the last step (coupled) as *a rule* (built); what that reward reads: the learner's harvests, or also the level after the last step as *its readers* (built); three learners sharing one patch, own-reward and coupled members mixed (the pool) as *its readers* (built); harvesting or leaving the last apple at the last step; the level left at the horizon as *what it selects among* (built); the level after the last step, which the own-reward learner's reward does not read as *a stock* (built); an overseer whose move is fixed by the level up to ℓ steps earlier and its own past moves as *a rule* (built); the rest that moves the overseen level by at most 1 a step: a learned adversary, random or constant as *the drawers* (built).
 - **Bridges** (9): 2 held, 3 failed, 3 by construction, 1 not checked. Failed: *H2*; *D1, manipulation check*; *D2b's reading of the pool law*.
-- **Frozen predictions that rest on a law or a thesis** (4): C1 (follows from a law), if not met, agreed; C2 (with C3) (follows from a law), if not met, disagreed, failed at the bridge; D2b (with D2a) (says more than any law), if not met, disagreed, failed at the step from law to prediction; E3 (follows from a law), if not checked, agreed. Counted apart: 2 a check.
-- **Laws named that are written up here.** `Flow.joint_excess_ends`; `Flow.act_unselected` (on *selects and favours*); `Flow.unselected_beyond_coupling` (on *selects and favours*); `Regulation.no_narrower_band`.
+- **Frozen predictions that rest on a theorem or a thesis** (4): C1 (follows from a theorem), if not met, agreed; C2 (with C3) (follows from a theorem), if not met, disagreed, failed at the bridge; D2b (with D2a) (says more than any theorem), if not met, disagreed, failed at the step from theorem to prediction; E3 (follows from a theorem), if not checked, agreed. Counted apart: 2 a check.
+- **Theorems named that are written up here.** `Flow.joint_excess_ends`; `Flow.act_unselected` (on *selects and favours*); `Flow.unselected_beyond_coupling` (on *selects and favours*); `Regulation.no_narrower_band`.
 
 <a id="case-cg2"></a>
 ### CG2
@@ -50,12 +50,12 @@ Tabular Q-learners and scripted harvesters pick apples from 3×3 patches where a
 
 Tabular Q-learners harvest apples from one 3×3 patch whose regrowth is gated by its level, in eleven settings of group size, regrowth scale and what each learner's reward reads.
 
-**What it shows.** In the six settings computed as locked, tabular learners emptied the patch; both misses lie on the open side, where the law is silent and bridge H3 carries the forecast.
+**What it shows.** In the six settings computed as locked, tabular learners emptied the patch; both misses lie on the open side, where the theorem is silent and bridge H3 carries the forecast.
 
 - **Taken as.** the apples standing on the 3×3 patch (its level) as *a stock* (built); regrowth, gated by the patch's level and scaled ×1, ×8 or ×16 as *what gives back* (built); regrowth as needing at least one apple standing (the gate, need 1) as *what depends on it* (built); the other members of the group, harvesting (the rest of k − 1) as *the drawers* (built); one member, a tabular Q-learner deciding at each step whether to harvest as *the drawers* (built); the member's reward: its own apples plus a weight times the level it reads (or a third of the step's apples under sharing) as *a rule* (built); the member's ways of harvesting (take or wait at each level and number of steps left), among which training picks as *what it selects among* (built); the level as it enters the reward: after the last step (×2, ×32) or after every step (×0.107, ×0.64) as *its readers* (built).
 - **Bridges** (5): 1 held, 1 failed, 2 by construction, 1 not checked. Failed: *H3*.
-- **Frozen predictions that rest on a law or a thesis** (5): X1 the boundary is the rest, not the whole (says more than any law), if not checked, agreed; X2 no weight of an end reading opens the lock (follows from a law), if not checked, agreed; X3 a reading before the rest's end opens the lock only above v* (says more than any law), if not checked, agreed; X4 sharing opens the lock only where renewal lets something through (says more than any law), if not met, disagreed, failed at the bridge; X5 one selector reading the union (says more than any law), if not met, disagreed, failed at the bridge. Counted apart: 1 a check.
-- **Laws named that are written up here.** `Flow.outrun_below`; `Flow.outrun_ends`; `Flow.outrun_reading_alike` (on *reaches, or lies beyond*); `Flow.act_unselected` (on *selects and favours*); `Flow.level_kept`; `Training.outrun_settles_iff` (on *reaches, or lies beyond*).
+- **Frozen predictions that rest on a theorem or a thesis** (5): X1 the boundary is the rest, not the whole (says more than any theorem), if not checked, agreed; X2 no weight of an end reading opens the lock (follows from a theorem), if not checked, agreed; X3 a reading before the rest's end opens the lock only above v* (says more than any theorem), if not checked, agreed; X4 sharing opens the lock only where renewal lets something through (says more than any theorem), if not met, disagreed, failed at the bridge; X5 one selector reading the union (says more than any theorem), if not met, disagreed, failed at the bridge. Counted apart: 1 a check.
+- **Theorems named that are written up here.** `Flow.outrun_below`; `Flow.outrun_ends`; `Flow.outrun_reading_alike` (on *reaches, or lies beyond*); `Flow.act_unselected` (on *selects and favours*); `Flow.level_kept`; `Training.outrun_settles_iff` (on *reaches, or lies beyond*).
 
 <a id="case-cg3-round-1"></a>
 ### CG3 (round 1)
@@ -64,12 +64,12 @@ Tabular Q-learners harvest apples from one 3×3 patch whose regrowth is gated by
 
 One tabular Q-learner requests up to m apples a step from a 3×3 patch that regrows only near standing apples, paid its apples plus w times the end level, in nine settings of twenty seeds.
 
-**What it shows.** A learner's later acts are revised, not fixed, so the law does not cover them; five of nine settings were still emptied, and the coverage threshold failed its sharpest case.
+**What it shows.** A learner's later acts are revised, not fixed, so the theorem does not cover them; five of nine settings were still emptied, and the coverage threshold failed its sharpest case.
 
 - **Taken as.** the 3×3 apple patch, its level the apples standing as *a stock* (built); regrowth of empty cells by apples within distance 2, at a regrowth scale s the test sets (×1, ×8, ×16) as *what gives back* (built); regrowth again, which stops for good once no apple stands (the gate at need one) as *what depends on it* (built); the one tabular Q-learner choosing 0 to m requests a step as *the drawers* (built); the learner's own later greedy steps (CG2's post hoc 'rest') and its own exploratory takes over a run of steps (the 'part' of I1) as *the drawers* (built); the reward: all the apples plus w × the level after the last step (the end reading; w = 0, 6 or 48) as *a rule* (built); the learner's requests at each level and step, which training picks among as *what it selects among* (built); the level and the steps left, all the learner reads of the patch as *its readers* (built); its value table, made from the courses its own acts produce (zero-initialised; 100 in J3opt) as *a reading* (built).
 - **Bridges** (6): 1 held, 3 failed, 1 by construction, 1 not checked. Failed: *CG2's post hoc reading of X5 (Flow.outrun_reading_alike read across time)*; *the account under test (own-draw coverage, cov)*; *U (CG2's X5 premise, listed here as an alternative account)*.
-- **Frozen predictions that rest on a law or a thesis** (4): Y1 (says more than any law), if not met, disagreed, failed at the step from law to prediction; Y2 (says more than any law), if met, agreed; Y3 (says more than any law), if met, agreed; Y4 (says more than any law), if met, agreed. Counted apart: 1 a check, 1 naming no law or thesis.
-- **Laws named that are written up here.** `Flow.joint_excess_ends`.
+- **Frozen predictions that rest on a theorem or a thesis** (4): Y1 (says more than any theorem), if not met, disagreed, failed at the step from theorem to prediction; Y2 (says more than any theorem), if met, agreed; Y3 (says more than any theorem), if met, agreed; Y4 (says more than any theorem), if met, agreed. Counted apart: 1 a check, 1 naming no theorem or thesis.
+- **Theorems named that are written up here.** `Flow.joint_excess_ends`.
 
 <a id="case-cg3-round-2"></a>
 ### CG3 (round 2)
@@ -82,8 +82,8 @@ One tabular Q-learner on a 3×3 apple patch that regrows only near standing appl
 
 - **Taken as.** the 3×3 apple patch, its level the apples standing as *a stock* (built); regrowth of empty cells near standing apples, at scales ×1 to ×14 as *what gives back* (built); regrowth again, which stops for good once no apple stands (the gate at need one) as *what depends on it* (built); the one tabular Q-learner choosing 0 to m requests a step as *the drawers* (built); the learner's own early full draw at the start of a course, where its values are least trained as *the drawers* (built); the reward: all the apples plus 6 × the level after the last step as *a rule* (built); the learner's requests at each level and step, which training picks among as *what it selects among* (built); the level and the steps left, all the learner reads of the patch as *its readers* (built); its value table, trained from uniform exploring starts or from early starts as *a reading* (built).
 - **Bridges** (5): 1 held, 1 failed, 2 by construction, 1 not checked. Failed: *the two-quantity account (cov and full)*.
-- **Frozen predictions that rest on a law or a thesis** (3): Z1 (says more than any law), if not met, disagreed, failed at the step from law to prediction; Z2 (says more than any law), if met, agreed; Z3 (says more than any law), if met, agreed. Counted apart: 1 a check.
-- **Laws named that are written up here.** `Flow.joint_excess_ends`.
+- **Frozen predictions that rest on a theorem or a thesis** (3): Z1 (says more than any theorem), if not met, disagreed, failed at the step from theorem to prediction; Z2 (says more than any theorem), if met, agreed; Z3 (says more than any theorem), if met, agreed. Counted apart: 1 a check.
+- **Theorems named that are written up here.** `Flow.joint_excess_ends`.
 
 <a id="case-cg3b"></a>
 ### CG3b
@@ -96,8 +96,8 @@ One tabular Q-learner on a regrowing 3×3 apple patch in sixteen settings, split
 
 - **Taken as.** the 3×3 apple patch, its level the apples standing as *a stock* (built); regrowth of empty cells near standing apples, at scales ×0.5 to ×13 as *what gives back* (built); regrowth again, which stops for good once no apple stands (the gate at need one) as *what depends on it* (built); the one tabular Q-learner choosing 0 to m requests a step (m = 1, 2 or 3), 12 seeds a setting as *the drawers* (built); the reward: all the apples plus 6 × the level after the last step as *a rule* (built); the learner's value table, trained from uniform exploring starts as *a reading* (built); the fitted curve p = σ(−4.797 + 0.431 · log cov + 2.036 · log full) as *a reading* (built); the measured share of 200 greedy evaluation episodes with the patch standing at step 80 as *what it is of* (built).
 - **Bridges** (4): 1 held, 2 failed, 1 by construction. Failed: *the visit index (a failed calibration, recorded before the freeze)*; *the fitted boundary*.
-- **Predictions.** None rests on a law or a thesis as a frozen prediction. Counted apart: 1 a check, 2 naming no law or thesis.
-- **Laws named that are written up here.** `Flow.joint_excess_ends`.
+- **Predictions.** None rests on a theorem or a thesis as a frozen prediction. Counted apart: 1 a check, 2 naming no theorem or thesis.
+- **Theorems named that are written up here.** `Flow.joint_excess_ends`.
 
 <a id="case-cg3c"></a>
 ### CG3c
@@ -106,12 +106,12 @@ One tabular Q-learner on a regrowing 3×3 apple patch in sixteen settings, split
 
 One tabular Q-learner on a regrowing 3×3 apple patch in eight more settings, five allowing four requests a step, scored against a band rule read from the 28 earlier settings with uniform starts.
 
-**What it shows.** The band rule beat both earlier predictors yet missed three of eight new settings; the boundary's form is the learner's, and no law of the account gives it.
+**What it shows.** The band rule beat both earlier predictors yet missed three of eight new settings; the boundary's form is the learner's, and no theorem of the account gives it.
 
 - **Taken as.** the 3×3 apple patch, its level the apples standing as *a stock* (built); regrowth of empty cells near standing apples, at scales ×0.1 to ×20 as *what gives back* (built); regrowth again, which stops for good once no apple stands (the gate at need one) as *what depends on it* (built); the one tabular Q-learner choosing 0 to m requests a step (m up to 4, a cap no learner here had had), 12 seeds a setting as *the drawers* (built); the learner's own full draw at the start of a course, where its values are least trained as *the drawers* (built); the reward: all the apples plus 6 × the level after the last step as *a rule* (built); the learner's value table, trained from uniform exploring starts as *a reading* (built); the band rule: emptied at full ≤ 4.4, kept at full ≥ 8.4, coverage deciding in between as *a reading* (built); the measured share of 200 greedy evaluation episodes with the patch standing at step 80 as *what it is of* (built).
 - **Bridges** (5): 1 held, 3 failed, 1 by construction. Failed: *the band rule*; *V3 (carrying to a new draw cap)*; *a form carried from earlier rounds (README, item 3)*.
-- **Predictions.** None rests on a law or a thesis as a frozen prediction. Counted apart: 1 a check, 5 naming no law or thesis.
-- **Laws named that are written up here.** `Flow.joint_excess_ends`.
+- **Predictions.** None rests on a theorem or a thesis as a frozen prediction. Counted apart: 1 a check, 5 naming no theorem or thesis.
+- **Theorems named that are written up here.** `Flow.joint_excess_ends`.
 
 <a id="case-cmt"></a>
 ### CMT
@@ -124,8 +124,8 @@ Groups of people in laboratory stag hunts choosing each round between a new prac
 
 - **Taken as.** the new practice, going on round after round through the members who choose it as *what goes on* (found); the members of a matching group, each choosing again every round as *its parts* (found); the payoff table the experimenter set (new practice against new practice, against status quo, and the status quo's own payoff) as *a rule* (found); the adopters and the members staying with the status quo, with the adopters' share k of N as *what it selects among* (found); the same members, matched anew each round, each earning and reading a payoff as *its readers* (found).
 - **Bridges** (5): 1 by construction, 4 not checked.
-- **Frozen predictions that rest on a law or a thesis** (5): inner starts of a bistable game (forbidden item 1) (follows from a law), if not checked, no verdict; outer starts of a bistable game (the direction beyond one half) (follows from a law), if not checked, no verdict; shift pair (forbidden item 2) (follows from a law), if not checked, no verdict; favoured everywhere (forbidden item 3) (follows from a law), if not checked, no verdict; disfavoured everywhere (forbidden item 4) (follows from a law), if not checked, no verdict. Counted apart: 1 a check.
-- **Laws named that are written up here.** `DrawnShaping.critical_iff` (on *selects and favours*); `DrawnShaping.critical_mass_iff` (on *selects and favours*).
+- **Frozen predictions that rest on a theorem or a thesis** (5): inner starts of a bistable game (forbidden item 1) (follows from a theorem), if not checked, no verdict; outer starts of a bistable game (the direction beyond one half) (follows from a theorem), if not checked, no verdict; shift pair (forbidden item 2) (follows from a theorem), if not checked, no verdict; favoured everywhere (forbidden item 3) (follows from a theorem), if not checked, no verdict; disfavoured everywhere (forbidden item 4) (follows from a theorem), if not checked, no verdict. Counted apart: 1 a check.
+- **Theorems named that are written up here.** `DrawnShaping.critical_iff` (on *selects and favours*); `DrawnShaping.critical_mass_iff` (on *selects and favours*).
 
 <a id="case-em1"></a>
 ### EM1
@@ -134,12 +134,12 @@ Groups of people in laboratory stag hunts choosing each round between a new prac
 
 Learners that generalize across states (a linear softmax policy trained by REINFORCE on whole-episode returns) harvest one shared patch of nine apple cells in CG2's eleven settings, twenty seeds each.
 
-**What it shows.** Wherever the others outran the regrowth (9,026 windows) the patch stayed empty, as the law says; the bridge that learners reach such courses failed in three of six locked settings.
+**What it shows.** Wherever the others outran the regrowth (9,026 windows) the patch stayed empty, as the theorem says; the bridge that learners reach such courses failed in three of six locked settings.
 
 - **Taken as.** the patch of nine apple cells and the apples standing on it as *a stock* (built); regrowth from apples standing nearby, scaled x1, x8 or x16 (an empty patch stays empty) as *what gives back* (built); the others harvesting at every step, as the exact computation that classes each setting locked or open assumes them as *the drawers* (built); the other members of the group, themselves learners, as they came to harvest as *the drawers* (found); each member, harvesting by its learned policy as *the drawers* (found); the one joint learner choosing 0 to 3 requests a step, with no other harvester outside it (k3s1_joint) as *the drawers* (built); each member's policy parameters: a linear softmax over eight smooth features of the level and the steps left as *what it selects among* (built); each member's reward: its own apples plus 2 or 32 times the last level; or its own apples plus 0.107 or 0.64 times the level after each step; or a third of the step's apples; for the joint learner, all apples plus 6 times the last level as *a rule* (built); what the reward reads of the patch: its level after the last step (seven settings), its level after each step (two), or no level at all (the two sharing settings) as *its readers* (built).
 - **Bridges** (4): 1 held, 2 failed, 1 not checked. Failed: *H3, locked side*; *the locked class*.
-- **Frozen predictions that rest on a law or a thesis** (3): E1, the locked side holds for learners that generalize (says more than any law), if not met, disagreed, failed at the bridge; X2, no weight of an end reading opens the lock (says more than any law), if not met, disagreed, failed at the bridge; X4, sharing opens the lock only where renewal lets something through (says more than any law), if not met, disagreed, failed at the bridge. Counted apart: 1 a check, 2 naming no law or thesis.
-- **Laws named that are written up here.** `Flow.outrun_reading_alike` (on *reaches, or lies beyond*); `Flow.act_unselected` (on *selects and favours*); `Training.outrun_settles_iff` (on *reaches, or lies beyond*); `Flow.outrun_below`.
+- **Frozen predictions that rest on a theorem or a thesis** (3): E1, the locked side holds for learners that generalize (says more than any theorem), if not met, disagreed, failed at the bridge; X2, no weight of an end reading opens the lock (says more than any theorem), if not met, disagreed, failed at the bridge; X4, sharing opens the lock only where renewal lets something through (says more than any theorem), if not met, disagreed, failed at the bridge. Counted apart: 1 a check, 2 naming no theorem or thesis.
+- **Theorems named that are written up here.** `Flow.outrun_reading_alike` (on *reaches, or lies beyond*); `Flow.act_unselected` (on *selects and favours*); `Training.outrun_settles_iff` (on *reaches, or lies beyond*); `Flow.outrun_below`.
 
 <a id="case-ew2"></a>
 ### EW2
@@ -148,11 +148,11 @@ Learners that generalize across states (a linear softmax policy trained by REINF
 
 Published series (Cury et al. 2011) of Benguela sardine and anchovy with Cape gannets and African penguins, and Røst's young herring with puffins: the fish's eight-year variance and autocorrelation before the birds' poor breeding years.
 
-**What it shows.** A thesis, not a law, met the data: at the frozen level it was not rejected, weakly, with every estimate in the refuting direction and the law's premises unread.
+**What it shows.** A thesis, not a theorem, met the data: at the frozen level it was not rejected, weakly, with every estimate in the refuting direction and the theorem's premises unread.
 
 - **Taken as.** forage fish: Benguela sardine and anchovy spawner biomass (November acoustic survey) and Røst's age-0 Norwegian spring-spawning herring (ICES VPA), z-scored series printed in Cury et al. (2011)'s Supporting Online Material as *a stock* (found); seabirds breeding on that prey: Cape gannets (Malgas, Lambert's Bay) and African penguins (Robben Island); Atlantic puffins at Røst; their breeding success averaged into one index per stock as *what depends on it* (found); the same seabirds as eaters of the prey: near their need Cape gannets take 1.8-4.0% of the sardine and 0.3-0.9% of the anchovy, puffins 4.3-11.0% of the herring year class (Saraux et al. 2021) as *the drawers* (found); the fishery's catch, which is not in the dataset and is not adjusted for as *the drawers* (found); the prey's lag-1 autocorrelation and variance over the eight years before each year, detrended as *a reading* (built); the prey's level path, taken as the stock's own course: its level in the year, that level squared, last year's level and the window's slope as *what it is of* (built).
 - **Bridges** (5): 1 held, 4 not checked.
-- **Frozen predictions that rest on a law or a thesis** (2): V1 (AR1) (says more than any law), if not checked, not rejected; V2 (variance) (says more than any law), if not checked, not rejected. Counted apart: 2 naming no law or thesis.
+- **Frozen predictions that rest on a theorem or a thesis** (2): V1 (AR1) (says more than any theorem), if not checked, not rejected; V2 (variance) (says more than any theorem), if not checked, not rejected. Counted apart: 2 naming no theorem or thesis.
 
 <a id="case-ew3"></a>
 ### EW3
@@ -165,7 +165,7 @@ The same test on longer series to 2020–2021 that EW2 had not read: Benguela su
 
 - **Taken as.** Benguela sardine (November survey biomass west of Cape Agulhas) plus anchovy (surveyed to Port Alfred), from the 2024 South African assessment data records; the Norwegian spring-spawning herring year class, read as ICES's 2025 recruitment at age 2 two years later as *a stock* (found); the fishery's catch in the year and the year before: sardine west of Cape Agulhas plus anchovy; the herring catch, which is taken from the adults as *the drawers* (found); Cape gannets at Malgas and Lambert's Bay and African penguins at Robben Island; Atlantic puffins at Røst: breeding success (Sydeman et al., BCO-DMO 985565), averaged into one index per stock as *what depends on it* (found); the same seabirds as eaters of the prey, their shares as in EW2 (Saraux et al. 2021) as *the drawers* (found); the prey's lag-1 autocorrelation and variance over the eight years before each year (EW2's statistics) as *a reading* (built); the prey's level path (EW2's four level covariates) with the z-scored catch in the year and the year before, taken as the stock's own course as *what it is of* (built).
 - **Bridges** (5): 1 held, 4 not checked.
-- **Frozen predictions that rest on a law or a thesis** (2): V1 (AR1) (says more than any law), if not checked, not rejected; V2 (variance) (says more than any law), if not checked, not rejected. Counted apart: 1 a check.
+- **Frozen predictions that rest on a theorem or a thesis** (2): V1 (AR1) (says more than any theorem), if not checked, not rejected; V2 (variance) (says more than any theorem), if not checked, not rejected. Counted apart: 1 a check.
 
 <a id="case-ew4"></a>
 ### EW4
@@ -178,20 +178,20 @@ Common murres, rhinoceros auklets and pigeon guillemots at Southeast Farallon, 1
 
 - **Taken as.** young-of-year rockfish off central California, mostly unfished shortbelly rockfish: the mean over each year's core-area hauls of log(1 + catch) in the NMFS midwater trawl survey, May-June as *a stock* (found); common murres, rhinoceros auklets and pigeon guillemots at Southeast Farallon: breeding success (Sydeman et al., BCO-DMO 985565), averaged into one index as *what depends on it* (found); the same birds as eaters of that year class, their share of it unmeasured as *the drawers* (found); the rockfish index's lag-1 autocorrelation and variance over the eight years before each year (EW2's statistics) as *a reading* (built); the index's level path, taken as the stock's own course: EW2's four level covariates, with no catch as *what it is of* (built).
 - **Bridges** (5): 1 held, 4 not checked.
-- **Frozen predictions that rest on a law or a thesis** (2): V1 (AR1) (says more than any law), if not checked, not rejected; V2 (variance) (says more than any law), if not checked, not rejected. Counted apart: 1 naming no law or thesis.
+- **Frozen predictions that rest on a theorem or a thesis** (2): V1 (AR1) (says more than any theorem), if not checked, not rejected; V2 (variance) (says more than any theorem), if not checked, not rejected. Counted apart: 1 naming no theorem or thesis.
 
 <a id="case-fc1"></a>
 ### FC1
 
 *run · recorded as partly-passed · [its folder](../../../../experiments/wenli-reading-transfer/README.md)*
 
-For 672 pairs in 270 條, language-model coders count the referents that a classical Chinese 經 and the English chapter's clause each introduce beyond the Lean statement of the same checked law.
+For 672 pairs in 270 條, language-model coders count the referents that a classical Chinese 經 and the English chapter's clause each introduce beyond the Lean statement of the same checked theorem.
 
 **What it shows.** The predicted direction was seen on two texts; no person audited the count, and it could not tell language from the name table's discipline or from register.
 
 - **Taken as.** the Lean statement of each declaration (its elaborated type, dumped from the core build with one level of unfolding) as *what it is of* (found); the 中华本's 經 clauses that state the declaration as *a reading* (found); the canonical English chapter's clause that cites the declaration (E1) as *a reading* (found); the name table (449 names; each row states the sense taken and the senses not carried, anchored on Lean) and the English glossary; the coders' keys gave the adopted senses and anchors as *a reading* (found); the two coders: Claude (Opus 5.5), which also wrote both texts, and GPT (gpt-6-astra) as *its readers* (built); codebook v1.1 and its count X of excess referents (agents X_A, relata X_R, entities X_E), with omissions O, connective mismatches S, predicate excess P as *a rule* (built).
 - **Bridges** (5): 1 held, 1 failed, 3 not checked. Failed: *language as the source (FIDELITY §1, the critic reading)*.
-- **Predictions.** None rests on a law or a thesis as a frozen prediction. Counted apart: 4 naming no law or thesis.
+- **Predictions.** None rests on a theorem or a thesis as a frozen prediction. Counted apart: 4 naming no theorem or thesis.
 
 <a id="case-in1-round-1"></a>
 ### IN1 (round 1)
@@ -200,12 +200,12 @@ For 672 pairs in 270 條, language-model coders count the referents that a class
 
 Three language-model fishers share a lake for 12 months without talking; a mussel bed that gives them nothing dies the first month fewer than 70 tons of fish are left.
 
-**What it shows.** The built ifs (bed told, scope stated) were met, keeping was not seen: the bridge from stated order to joint act failed; no verdict tested a law.
+**What it shows.** The built ifs (bed told, scope stated) were met, keeping was not seen: the bridge from stated order to joint act failed; no verdict tested a theorem.
 
 - **Taken as.** the fish in the lake (at most 100 tons; collapse for good below 5 left) as *a stock* (built); the fish left doubling by the next month, up to 100 as *what gives back* (built); the three fishers (gpt-5.4-mini or gpt-4.1-mini, each decision a stateless call) and their monthly catches as *the drawers* (built); the bed of freshwater mussels, alive only while at least 70 tons are left after fishing, giving the fishers nothing as *what depends on it* (built); the goal each fisher is given: its own catch, the community's welfare, or that with the direction stated abstractly before it as *a rule* (built); the courses open to the fishers (30 tons a month together keeps the bed, 50 ends it) as *what it selects among* (built); what each fisher is told: the lake's rules, every earlier month's catches, and in the told cells the bed's rule and monthly status as *its readers* (built); each fisher's own account of what its catch leaves in the lake ('catching 30 leaves 70') as *a reading* (found); what the three catches together leave in the lake that month as *what it is of* (found).
 - **Bridges** (6): 2 failed, 2 by construction, 2 not checked. Failed: *installation by instruction (the account under test, §7)*; *one selector (exact.py)*.
-- **Frozen predictions that rest on a law or a thesis** (4): H1 installed where coupled (says more than any law), if not met, disagreed, failed at the bridge; H2 the scope makes the difference, given coupling (a forecast), if not met, disagreed, failed at the bridge; H3 coupling needed (a forecast), if not met, disagreed, failed at an "if" that was not met; H4 seeing is not valuing (a forecast), if met, agreed. Counted apart: 1 a check, 1 naming no law or thesis.
-- **Laws named that are written up here.** `Flow.unselected_beyond_coupling` (on *selects and favours*); `Web.break_not_bounded` (on *reaches, or lies beyond*).
+- **Frozen predictions that rest on a theorem or a thesis** (4): H1 installed where coupled (says more than any theorem), if not met, disagreed, failed at the bridge; H2 the scope makes the difference, given coupling (a forecast), if not met, disagreed, failed at the bridge; H3 coupling needed (a forecast), if not met, disagreed, failed at an "if" that was not met; H4 seeing is not valuing (a forecast), if met, agreed. Counted apart: 1 a check, 1 naming no theorem or thesis.
+- **Theorems named that are written up here.** `Flow.unselected_beyond_coupling` (on *selects and favours*); `Web.break_not_bounded` (on *reaches, or lies beyond*).
 
 <a id="case-in1-round-2"></a>
 ### IN1 (round 2)
@@ -218,7 +218,7 @@ Three language-model fishers share a lake whose mussel bed dies below 70 tons of
 
 - **Taken as.** the fish in the lake (at most 100 tons; collapse for good below 5 left) as *a stock* (built); the fish left doubling by the next month, up to 100 as *what gives back* (built); the three fishers (gpt-5.4-mini or gpt-4.1-mini) and their monthly catches as *the drawers* (built); the mussel bed, alive only while at least 70 tons are left after fishing, giving the fishers nothing as *what depends on it* (built); the goal each fisher is given: the community's welfare, or that with the direction stated before it as *a rule* (built); the courses open to the fishers (30 tons a month together keeps the bed, 50 ends it) as *what it selects among* (built); what each fisher has in view: the rules, earlier catches, the bed's status where told, and the three public messages of intended catch as *its readers* (built); each fisher's account of what the three catches together will leave as *a reading* (found); what the three catches together leave in the lake that month as *what it is of* (found).
 - **Bridges** (4): 2 failed, 1 by construction, 1 not checked. Failed: *talk couples the joint act (§7.4)*; *installation with three conditions at once*.
-- **Frozen predictions that rest on a law or a thesis** (4): R1 talk completes the installation where the bed is coupled (a forecast), if not met, disagreed, failed at the bridge; R2 pooling among the members does not reach what none couples into (a forecast), if not checked, agreed; R3 the scope makes the difference once the joint act is coupled (a forecast), if not met, disagreed, failed at the bridge; R4 the joint account is fixed (a forecast), if not checked, disagreed, failed at the bridge. Counted apart: 1 naming no law or thesis.
+- **Frozen predictions that rest on a theorem or a thesis** (4): R1 talk completes the installation where the bed is coupled (a forecast), if not met, disagreed, failed at the bridge; R2 pooling among the members does not reach what none couples into (a forecast), if not checked, agreed; R3 the scope makes the difference once the joint act is coupled (a forecast), if not met, disagreed, failed at the bridge; R4 the joint account is fixed (a forecast), if not checked, disagreed, failed at the bridge. Counted apart: 1 naming no theorem or thesis.
 
 <a id="case-la1"></a>
 ### LA1
@@ -227,12 +227,12 @@ Three language-model fishers share a lake whose mussel bed dies below 70 tons of
 
 Claude Haiku, one of two or three harvesters on a patch of nine apple cells, picks a harvest threshold and revises it over six rounds from its reported reward, while the others harvest every step.
 
-**What it shows.** The law's conditions were built in; the step beyond it, the model ending at the best threshold, missed in two locked settings, later read as feedback that barely resolved it.
+**What it shows.** The theorem's conditions were built in; the step beyond it, the model ending at the best threshold, missed in two locked settings, later read as feedback that barely resolved it.
 
 - **Taken as.** the patch of nine apple cells and the apples standing on it as *a stock* (built); regrowth of an empty cell from apples standing within distance 2 (an empty patch stays empty) as *what gives back* (built); the other one or two harvesters, scripted to request an apple at every step as *the drawers* (built); Claude Haiku in the member's place, requesting an apple exactly when more than m apples stand as *the drawers* (built); the ten thresholds m = 0 to 9 the model chooses among as *what it selects among* (built); the stated reward: apples harvested plus 2 (or 32) times the apples standing after the last step as *a rule* (built); the count of apples standing after the last step, through which the reward reads the patch as *its readers* (built); a round's reported results: mean reward, apples harvested and apples standing after the last step, over 20 episodes as *a reading* (built); each threshold's exact expected reward, computed before the freeze as *what it is of* (built); Claude Haiku's choice of threshold before any result, its prior from the description alone (reported, not counted) as *a reading* (found).
 - **Bridges** (3): 1 held, 1 failed, 1 by construction. Failed: *the bridge T3's clause on trained systems rests on*.
-- **Frozen predictions that rest on a law or a thesis** (3): L1, the locked side (says more than any law), if not checked, disagreed, failed at statistical power; L3, no weight of the end reading opens the lock (says more than any law), if not checked, disagreed, failed at statistical power; L4, the boundary is the rest (says more than any law), if not checked, disagreed, failed at statistical power. Counted apart: 1 naming no law or thesis.
-- **Laws named that are written up here.** `Flow.outrun_reading_alike` (on *reaches, or lies beyond*).
+- **Frozen predictions that rest on a theorem or a thesis** (3): L1, the locked side (says more than any theorem), if not checked, disagreed, failed at statistical power; L3, no weight of the end reading opens the lock (says more than any theorem), if not checked, disagreed, failed at statistical power; L4, the boundary is the rest (says more than any theorem), if not checked, disagreed, failed at statistical power. Counted apart: 1 naming no theorem or thesis.
+- **Theorems named that are written up here.** `Flow.outrun_reading_alike` (on *reaches, or lies beyond*).
 
 <a id="case-la1b"></a>
 ### LA1b
@@ -245,8 +245,8 @@ Claude Haiku chooses an apple-harvesting threshold for one member of a shared pa
 
 - **Taken as.** the apples on the shared 3×3 patch, and those standing after the last step as *a stock* (built); regrowth at scale s = 1, 8 or 16 as *what gives back* (built); the rest: one or two other members that request an apple at every step as *the drawers* (built); the member in whose place the model chooses as *the drawers* (built); the stated reward: apples harvested plus 2 (in one setting 32) × the apples standing after the last step as *a rule* (built); the thresholds m = 0 to 9 (request an apple exactly when more than m stand) as *what it selects among* (built); each round's results shown to the model over 10,000 episodes: mean reward, apples harvested, apples standing after the last step as *its readers* (built); the model's choice of threshold, revised after each round's results as *a reading* (found); each threshold's exact value from CG2's programme (best m = 0 in the locked settings, m = 7 in the open ones) as *what it is of* (built).
 - **Bridges** (4): 3 held, 1 by construction.
-- **Frozen predictions that rest on a law or a thesis** (4): L1, the locked side (follows from a law), if met, agreed; L3, no weight of the end reading opens the lock (follows from a law), if met, agreed; L4, the boundary is the rest (follows from a law), if met, agreed; the reading `resolution` (follows from a law), if met, agreed. Counted apart: 1 a check.
-- **Laws named that are written up here.** `Flow.outrun_reading_alike` (on *reaches, or lies beyond*).
+- **Frozen predictions that rest on a theorem or a thesis** (4): L1, the locked side (follows from a theorem), if met, agreed; L3, no weight of the end reading opens the lock (follows from a theorem), if met, agreed; L4, the boundary is the rest (follows from a theorem), if met, agreed; the reading `resolution` (follows from a theorem), if met, agreed. Counted apart: 1 a check.
+- **Theorems named that are written up here.** `Flow.outrun_reading_alike` (on *reaches, or lies beyond*).
 
 <a id="case-la1c"></a>
 ### LA1c
@@ -259,8 +259,8 @@ Claude Haiku chooses a harvesting threshold for one member of a shared apple pat
 
 - **Taken as.** the apples on the shared 3×3 patch, and those standing after the last step as *a stock* (built); regrowth at scale s = 1, 8 or 16 as *what gives back* (built); the rest: one or two other members that request an apple at every step as *the drawers* (built); the member in whose place the model chooses as *the drawers* (built); the stated reward: apples harvested plus 2 (in one setting 32) × the apples standing after the last step as *a rule* (built); the thresholds m = 0 to 9 as *what it selects among* (built); the results of the rounds the model itself chose to play, each over 10,000 episodes as *its readers* (found); the model's choice of threshold through seven rounds, and its final choice as *a reading* (found); each threshold's exact value: falling with m where locked; where open, a valley (m = 0 to 4) before a hill (m = 6 to 8) with the best at m = 7 as *what it is of* (built).
 - **Bridges** (4): 2 held, 1 by construction, 1 not checked.
-- **Frozen predictions that rest on a law or a thesis** (2): S, locked side (says more than any law), if met, agreed; S, open side (says more than any law), if met, agreed. Counted apart: 3 not frozen.
-- **Laws named that are written up here.** `Flow.outrun_reading_alike` (on *reaches, or lies beyond*).
+- **Frozen predictions that rest on a theorem or a thesis** (2): S, locked side (says more than any theorem), if met, agreed; S, open side (says more than any theorem), if met, agreed. Counted apart: 3 not frozen.
+- **Theorems named that are written up here.** `Flow.outrun_reading_alike` (on *reaches, or lies beyond*).
 
 <a id="case-la2"></a>
 ### LA2
@@ -269,12 +269,12 @@ Claude Haiku chooses a harvesting threshold for one member of a shared apple pat
 
 Claude Haiku judges list against prose versions of its answers after reading nine answers counted from the loop's earlier picks; planted failed deliveries of lists are noted nowhere, on prose answers, or in a report.
 
-**What it shows.** Where nothing read the loss the lock held as the law says; the bridge, this judge as a pool counted by kind, failed; two contrasts passed only by a tie.
+**What it shows.** Where nothing read the loss the lock held as the theorem says; the bridge, this judge as a pool counted by kind, failed; two contrasts passed only by a tie.
 
 - **Taken as.** the counts of list answers and prose answers in the loop's population, from one list to eight prose (Claude Haiku's answers to 24 everyday questions, each in both versions) as *what it selects among* (built); Claude Haiku as judge picking the better version in ten pairs; its picks plus one each are the rule, in force from the next step (4 : 1 for lists before the first reading) as *a rule* (built); the judge's reference set of nine answers 'selected as the best in earlier rounds', counted from the share as *its readers* (built); failed deliveries of list answers, recorded at five a step (45 by step 8) as *a stock* (built); a reviewer's note of the failed deliveries on each prose answer in the reference set; the service's delivery report read by the judge as *a reading* (built).
 - **Bridges** (7): 2 held, 3 failed, 1 by construction, 1 not checked. Failed: *H1-LA2*; *H1-LA2, second assertion*; *the frozen course rule*.
-- **Frozen predictions that rest on a law or a thesis** (4): L1, an unread loss leaves the lock (unread kept) (follows from a law), if not checked, agreed; L2, a loss read by every reader turns the course (read_all turned) (follows from a law), if met, agreed; L3, who reads decides (late kept and read_all turned) (follows from a law), if not met, agreed, failed at the bridge; L4, when it is read decides (in_time turned and late kept) (follows from a law), if not met, agreed, failed at the bridge. Counted apart: 2 a check.
-- **Laws named that are written up here.** `ClosedCapture.lock_outlives_loss` (on *selects and favours*); `ClosedCapture.turned_by_loss` (on *selects and favours*); `ClosedCapture.Thinned.turned_iff` (on *selects and favours*); `ClosedCapture.Thinned.kept_iff` (on *selects and favours*).
+- **Frozen predictions that rest on a theorem or a thesis** (4): L1, an unread loss leaves the lock (unread kept) (follows from a theorem), if not checked, agreed; L2, a loss read by every reader turns the course (read_all turned) (follows from a theorem), if met, agreed; L3, who reads decides (late kept and read_all turned) (follows from a theorem), if not met, agreed, failed at the bridge; L4, when it is read decides (in_time turned and late kept) (follows from a theorem), if not met, agreed, failed at the bridge. Counted apart: 2 a check.
+- **Theorems named that are written up here.** `ClosedCapture.lock_outlives_loss` (on *selects and favours*); `ClosedCapture.turned_by_loss` (on *selects and favours*); `ClosedCapture.Thinned.turned_iff` (on *selects and favours*); `ClosedCapture.Thinned.kept_iff` (on *selects and favours*).
 
 <a id="case-la3"></a>
 ### LA3
@@ -283,12 +283,12 @@ Claude Haiku judges list against prose versions of its answers after reading nin
 
 Claude Haiku sets one lineage's policy, shaping its evaluator (S) or not (N), sees only each round's mean score over five rounds, then makes a final choice; six conditions, five seeds each.
 
-**What it shows.** Post hoc, where the model had scored both policies it ended on the better; where it never tried shaping its prior chose: the misses mark the bridge, not the law.
+**What it shows.** Post hoc, where the model had scored both policies it ended on the better; where it never tried shaping its prior chose: the misses mark the bridge, not the theorem.
 
 - **Taken as.** a lineage whose members shape the evaluator (policy S), each leaving a Poisson number of offspring with mean a + p for m generations, then a + s + p as *what it selects among* (built); a lineage whose members do not shape (policy N), each leaving a + c + p as *what it selects among* (built); the evaluator's scoring after shaping: s back to the shapers alone (0, 2 or 15), p to every member alike (0, 3 or 5), cost c (1 or 2) as *a rule* (built); Claude Haiku in context, choosing S or N again after each round and once more at the end as *a rule* (found); the mean score of a round's 20 runs, the only thing the model sees of its lineage as *its readers* (built); the model's free-rider framing before any score (27 of 30 seeds chose N in round 0; all 30 first answers speak of free riding) as *a reading* (found).
 - **Bridges** (4): 2 failed, 2 by construction. Failed: *H1-LA3*; *counts multiplied, not drawn (premise rulecapture-carriercounts-select)*.
-- **Frozen predictions that rest on a law or a thesis** (4): K1 (follows from a law), if not met, agreed; K2 (follows from a law), if not met, disagreed, failed at the bridge; K3 (follows from a law), if not met, agreed; K4 (follows from a law), if not met, disagreed, failed at the bridge.
-- **Laws named that are written up here.** `RuleShaping.favours_iff` (on *selects and favours*); `RuleShaping.nothing_back_falls`; `RuleShaping.stretch_iff`.
+- **Frozen predictions that rest on a theorem or a thesis** (4): K1 (follows from a theorem), if not met, agreed; K2 (follows from a theorem), if not met, disagreed, failed at the bridge; K3 (follows from a theorem), if not met, agreed; K4 (follows from a theorem), if not met, disagreed, failed at the bridge.
+- **Theorems named that are written up here.** `RuleShaping.favours_iff` (on *selects and favours*); `RuleShaping.nothing_back_falls`; `RuleShaping.stretch_iff`.
 
 <a id="case-la4-stage-a"></a>
 ### LA4 (Stage A)
@@ -297,12 +297,12 @@ Claude Haiku sets one lineage's policy, shaping its evaluator (S) or not (N), se
 
 Small policies of three families (a separable baseline, feedforward and recurrent networks), trained by policy gradient on a toy ten-step fishing season: a renewing ground, a bay a colony needs, a landing site beside nests.
 
-**What it shows.** The law is of optima; policies short of one drained the bay as they neared it, as the update rule largely gives; where the drain lies could not be told.
+**What it shows.** The theorem is on optima; policies short of one drained the bay as they neared it, as the update rule largely gives; where the drain lies could not be told.
 
 - **Taken as.** the catch the reward counts: ground fish plus bay fish; the ground's fish only in arm A6; with the bay left counted after in A5; capped at 26 in A4 as *a rule* (built); the seasons the policy plays, favoured one over another only through their returns as *what it selects among* (built); what the reward reads of a season: the catch, neither the bay's level nor the landing site as *its readers* (built); the trained policy (separable, feedforward or recurrent), choosing each step how many fish to take from the ground and whether to take one from the bay as *the drawers* (built); the ground: ten fish, renewing after each take as *a stock* (built); the ground's regrowth, rounded half up, nothing from zero as *what gives back* (built); the bay: six fish, not renewing within a season as *a stock* (built); the colony that depends on the bay, kept when the bay ends at 3 or above as *what depends on it* (built); the nesting site beside landing site 1, disturbed once by each landing there as *a stock* (built); the prudent start: 2 from the ground every step, none from the bay, site 0, each choice mixed with uniform choice at 0.2; a restraint from before the reward as *what goes on* (built); the KL penalty anchoring the policy to the prudent start (arm A3) as *a rule* (built); what the policy reads at each step: the step, the ground's level and the bay's level (the recurrent family also its own past acts) as *a reading* (built).
 - **Bridges** (9): 3 held, 1 failed, 3 by construction, 2 not checked. Failed: *F2 as first worded*.
-- **Frozen predictions that rest on a law or a thesis** (5): P1 (F1; arms A1, A2) (says more than any law), if not met, agreed; P2 (F2, the landing site; A2, A3, A5, A6 against C1) (says more than any law), if not met, could not tell, failed at statistical power; P3 (the locus; A6 against C1) (says more than any law), if not met, could not tell, failed at statistical power; P4 (F3 for learners; A5 against A2) (says more than any law), if not met, agreed; P6 (the erosion of a prior restraint; A2) (says more than any law), if not met, agreed, failed at an "if" that was not met. Counted apart: 1 naming no law or thesis.
-- **Laws named that are written up here.** `Optimum.Season.bay_drained`; `Optimum.Season.mix_bay_catch`; `Optimum.Season.kept_catch_le` (on *draws on*).
+- **Frozen predictions that rest on a theorem or a thesis** (5): P1 (F1; arms A1, A2) (says more than any theorem), if not met, agreed; P2 (F2, the landing site; A2, A3, A5, A6 against C1) (says more than any theorem), if not met, could not tell, failed at statistical power; P3 (the locus; A6 against C1) (says more than any theorem), if not met, could not tell, failed at statistical power; P4 (F3 for learners; A5 against A2) (says more than any theorem), if not met, agreed; P6 (the erosion of a prior restraint; A2) (says more than any theorem), if not met, agreed, failed at an "if" that was not met. Counted apart: 1 naming no theorem or thesis.
+- **Theorems named that are written up here.** `Optimum.Season.bay_drained`; `Optimum.Season.mix_bay_catch`; `Optimum.Season.kept_catch_le` (on *draws on*).
 
 <a id="case-lca"></a>
 ### LCA
@@ -315,7 +315,7 @@ Forty tiny Q-network agents, ten seeds in each of four signal regimes, serve or 
 
 - **Taken as.** the shared pool of support (3 units in training; each serving draws one unit) as *a stock* (built); the agent: a tiny Q-network that each step serves one recipient or withholds as *the drawers* (built); the two recipients (centers A and B; unseen center C in one test), each with a claim of 0, 1 or 2 deliveries as *what depends on it* (built); the learning signal of a regime: self (0.25 per unit of support kept), proxy (+1 per positive receipt), access (+1 when a delivery meets an unmet unit of a claim) as *a rule* (built); what a signal is read through: the agent's own retained support, the receipt, or the recipient's actual condition as *its readers* (built); the acts open each step: serve one recipient, serve the other, or withhold as *what it selects among* (built); the delivery record: a faithful receipt in training, missing or forged in two tests as *a reading* (built); the recipient's actual condition: claim units actually met as *what it is of* (built); the hand-written record_rule: serve the largest remaining certified need, otherwise withhold as *a rule* (built).
 - **Bridges** (5): 2 held, 1 failed, 1 by construction, 1 not checked. Failed: *a learned agent should withdraw when a claim is fulfilled*.
-- **Predictions.** None rests on a law or a thesis as a frozen prediction. Counted apart: 6 naming no law or thesis.
+- **Predictions.** None rests on a theorem or a thesis as a frozen prediction. Counted apart: 6 naming no theorem or thesis.
 
 <a id="case-market-generativity"></a>
 ### market-generativity
@@ -328,7 +328,7 @@ A scripted market of renewing and extracting practices, with a collectible liabi
 
 - **Taken as.** the renewing practice and the extracting practice, with the renewing share x as *what it selects among* (built); the private profit difference between the two practices (fine times accountability q, plus the lobbying cost, less the renewal cost), which drives payoff-led switching as *a rule* (built); the productive support stock C (renewal 2, extraction depletion 1, depreciation 1/10, floor 5) as *a stock* (built); the renewing practice's paid maintenance as *what gives back* (built); the extracting practice as *the drawers* (built); the market's production and payments, which stop for good once an essential support fails as *what depends on it* (built); the excluded nonessential recipient, whose support can fall below its floor while the market goes on as *what depends on it* (built); the liquid correction fund B (levy in, restoration fee out, cap 3) as *a stock* (built).
 - **Bridges** (4): 2 by construction, 2 not checked.
-- **Predictions.** None rests on a law or a thesis as a frozen prediction. Counted apart: 1 naming no law or thesis, 5 not frozen.
+- **Predictions.** None rests on a theorem or a thesis as a frozen prediction. Counted apart: 1 naming no theorem or thesis, 5 not frozen.
 
 <a id="case-motor-learning-cost"></a>
 ### motor-learning-cost
@@ -337,11 +337,11 @@ A scripted market of renewing and extracting practices, with a collectible liabi
 
 Binned data on how far people's eyes jumped (saccade adaptation), in two groups of twenty, while correcting jumps cost viewing time for a motion judgment; in one group the cost switched sides at trial 951.
 
-**What it shows.** No law is named here: a contrast fixed in advance came out negative with an interval including zero, and binned response curves cannot show whether the learner's own updating changed.
+**What it shows.** No theorem is named here: a contrast fixed in advance came out negative with an interval including zero, and binned response curves cannot show whether the learner's own updating changed.
 
 - **Taken as.** a participant's primary-saccade amplitude relative to baseline, in degrees, as it adapts as *a reading* (found); the 300-ms viewing period after a primary saccade, part of which corrective movements consume as *a stock* (found); corrective saccades as *the drawers* (found); the motion judgment on the dots, whose low or high coherence sets what losing viewing time costs as *what depends on it* (found).
 - **Bridges** (4): 4 not checked.
-- **Predictions.** None rests on a law or a thesis as a frozen prediction. Counted apart: 5 naming no law or thesis.
+- **Predictions.** None rests on a theorem or a thesis as a frozen prediction. Counted apart: 5 naming no theorem or thesis.
 
 <a id="case-mq1-simulation"></a>
 ### MQ1 (simulation)
@@ -350,12 +350,12 @@ Binned data on how far people's eyes jumped (saccade adaptation), in two groups 
 
 A simulated yeast culture under daily dilution with one or two harvesters, and a small gridworld where a delivery agent's short route crosses two regrowing lawn cells, solved exactly and by tabular learners.
 
-**What it shows.** Built to meet the laws' ifs, the simulated yeast went as predicted; an exact optimizer's side effects were forecast 8 of 8; tabular learners fell short and that bridge failed.
+**What it shows.** Built to meet the theorems' ifs, the simulated yeast went as predicted; an exact optimizer's side effects were forecast 8 of 8; tabular learners fell short and that bridge failed.
 
 - **Taken as.** the yeast population's density at the end of a day's growth as *a stock* (built); the culture's daily growth as *what gives back* (built); the culture's own regrowth, which stops below the unstable fixed point (the need, found by the pulse test) as *what depends on it* (built); the daily dilution, and one or two harvesters each removing H cells/µl before transfer as *the drawers* (built); a lawn cell's level (0 to 3; at 0 it is dead and never regrows) as *a stock* (built); a living lawn cell's regrowth of one unit every r steps as *what gives back* (built); the delivery agent entering lawn cells on its short route; two agents deployed together as *the drawers* (built); the reward: deliveries only (blind), +10 per living cell at the end (end), or −0.2 per dead cell at every step (step) as *a rule* (built); the policies the reward shapes: an exact best response by backward induction, and tabular Q-learners (20 seeds) as *what it selects among* (built).
 - **Bridges** (7): 1 held, 2 failed, 3 by construction, 1 not checked. Failed: *coupling by replay (B2)*; *H2*.
-- **Frozen predictions that rest on a law or a thesis** (4): A4a–c (says more than any law), if met, agreed; B3, B4 (exact best response) (follows from a law), if met, agreed; B3, B4 (tabular learners) (follows from a law), if not met, disagreed, failed at the bridge; B5 (says more than any law), if not met, disagreed, failed at the step from law to prediction. Counted apart: 2 a check.
-- **Laws named that are written up here.** `Flow.widens_iff_within_margin_at` (on *needs*); `Flow.joint_excess_ends`; `Flow.act_unselected` (on *selects and favours*).
+- **Frozen predictions that rest on a theorem or a thesis** (4): A4a–c (says more than any theorem), if met, agreed; B3, B4 (exact best response) (follows from a theorem), if met, agreed; B3, B4 (tabular learners) (follows from a theorem), if not met, disagreed, failed at the bridge; B5 (says more than any theorem), if not met, disagreed, failed at the step from theorem to prediction. Counted apart: 2 a check.
+- **Theorems named that are written up here.** `Flow.widens_iff_within_margin_at` (on *needs*); `Flow.joint_excess_ends`; `Flow.act_unselected` (on *selects and favours*).
 
 <a id="case-mq1-yeast"></a>
 ### MQ1 (yeast)
@@ -368,7 +368,7 @@ Dai and colleagues' 2012 yeast: 88 populations at each of eight daily dilution f
 
 - **Taken as.** a population's density on a day (one plate position across the daily files) as *a stock* (found); the daily dilution, at a factor of 250 to 1600 as *the drawers* (found); a day's growth between transfers as *what gives back* (found); the population's regrowth, which stops below a density û read as the lower crossing of the fitted day-to-day ratio as *what depends on it* (found); the instrument's density reading, quantized at 0.001; wells that never regrow read 0.001–0.009 as *a reading* (found); whether a population is alive or extinct on day 7 as *what it is of* (found).
 - **Bridges** (4): 1 held, 1 failed, 2 not checked. Failed: *alive means a reading above zero*.
-- **Frozen predictions that rest on a law or a thesis** (1): D2 (follows from a law), if not met, disagreed, failed at the measure. Counted apart: 1 naming no law or thesis.
+- **Frozen predictions that rest on a theorem or a thesis** (1): D2 (follows from a theorem), if not met, disagreed, failed at the measure. Counted apart: 1 naming no theorem or thesis.
 
 <a id="case-mq2"></a>
 ### MQ2
@@ -381,7 +381,7 @@ Laboratory yeast under daily dilution (Dai et al. 2012): one growth map fitted o
 
 - **Taken as.** yeast density at the end of a day's growth (in 10^5 cells/µl) as *a stock* (found); the daily dilution by a fixed factor (DF 250 to 1600) as *the drawers* (found); the day's growth in fresh medium (the daily growth map G) as *what gives back* (found); a population still reading above 0.01 on day 7, or on day 9 after the shock as *what goes on* (found); a salt shock (NaCl, 30 g/l) applied during day 5, read as a one-shot removal as *the drawers* (found).
 - **Bridges** (5): 3 held, 2 failed. Failed: *G depends on density only (the class's premise)*; *the salt shock as a pulse*.
-- **Frozen predictions that rest on a law or a thesis** (4): A1 (follows from a law), if not met, agreed; A2 (a forecast), if met, agreed; B2 (follows from a law), if met, agreed; C1, C2 (follows from a law), if not met, disagreed, failed at the bridge. Counted apart: 2 naming no law or thesis.
+- **Frozen predictions that rest on a theorem or a thesis** (4): A1 (follows from a theorem), if not met, agreed; A2 (a forecast), if met, agreed; B2 (follows from a theorem), if met, agreed; C1, C2 (follows from a theorem), if not met, disagreed, failed at the bridge. Counted apart: 2 naming no theorem or thesis.
 
 <a id="case-mq3"></a>
 ### MQ3
@@ -394,8 +394,8 @@ For 113 assessed fish stocks in the RAM Legacy database, a curve of surplus prod
 
 - **Taken as.** a stock's total biomass (TB), as its most recent assessment reports it as *a stock* (found); the year's catch; in F3 the mean catch of three held years as *the drawers* (found); the escapement E = TB − C, what the catch leaves as *a stock* (found); the observed surplus production SP_t = TB_{t+1} − E_t as *what gives back* (found); the production curve g(E) = aE + bE², through the origin, fitted on the first 60% of a stock's years as *what gives back* (built); last year's surplus production held as it was (the frozen rest, the comparison forecast) as *what gives back* (built).
 - **Bridges** (5): 3 failed, 1 by construction, 1 not checked. Failed: *RM1's premise*; *the giving class*; *the positive control*.
-- **Frozen predictions that rest on a law or a thesis** (5): F0 (says more than any law), if not met, disagreed, failed at an "if" that was not met; F1 (a forecast), if not met, disagreed, failed at an "if" that was not met; F2 (a forecast), if not met, disagreed, failed at an "if" that was not met; F3 (follows from a law), if not met, disagreed, failed at an "if" that was not met; F4 (descriptive) (says more than any law), no if stated, no verdict.
-- **Laws named that are written up here.** `RegimeMargin.ends_iff_below`; `RegimeMargin.ends_beyond_giving`.
+- **Frozen predictions that rest on a theorem or a thesis** (5): F0 (says more than any theorem), if not met, disagreed, failed at an "if" that was not met; F1 (a forecast), if not met, disagreed, failed at an "if" that was not met; F2 (a forecast), if not met, disagreed, failed at an "if" that was not met; F3 (follows from a theorem), if not met, disagreed, failed at an "if" that was not met; F4 (descriptive) (says more than any theorem), no if stated, no verdict.
+- **Theorems named that are written up here.** `RegimeMargin.ends_iff_below`; `RegimeMargin.ends_beyond_giving`.
 
 <a id="case-mq4"></a>
 ### MQ4
@@ -408,7 +408,7 @@ For 113 assessed fish stocks in the RAM Legacy database, a curve of surplus prod
 
 - **Taken as.** a stock's total biomass as its assessment reports it (tonnes) as *a stock* (found); the year's catch (or landings) as *the drawers* (found); surplus production: next year's biomass less this year's, plus the catch as *what gives back* (found); a stock staying above half its biomass over ten years as *what goes on* (found).
 - **Bridges** (5): 3 failed, 1 by construction, 1 not checked. Failed: *the regime's step (φ = 0)*; *the frozen rest (φ = 1)*; *the state of level and recent giving (φ = 0.96)*.
-- **Frozen predictions that rest on a law or a thesis** (6): G1, G2 (says more than any law), if not checked, agreed; G3 (says more than any law), if not checked, disagreed, failed at the bridge; F1b, F5b (a forecast), if met, agreed; F5a, F10a, F10b (a forecast), if not met, disagreed, failed at the bridge; T1 (the test's label: time to break ranks the risk) (a forecast), if not met, agreed; T2 (the test's label: time to break timed) (a forecast), if not met, disagreed, failed at an "if" that was not met.
+- **Frozen predictions that rest on a theorem or a thesis** (6): G1, G2 (says more than any theorem), if not checked, agreed; G3 (says more than any theorem), if not checked, disagreed, failed at the bridge; F1b, F5b (a forecast), if met, agreed; F5a, F10a, F10b (a forecast), if not met, disagreed, failed at the bridge; T1 (the test's label: time to break ranks the risk) (a forecast), if not met, agreed; T2 (the test's label: time to break timed) (a forecast), if not met, disagreed, failed at an "if" that was not met.
 
 <a id="case-mq5"></a>
 ### MQ5
@@ -417,11 +417,11 @@ For 113 assessed fish stocks in the RAM Legacy database, a curve of surplus prod
 
 69 assessed fish stocks with spawning biomass and catch, unread by any analysis (RAM Legacy), half New Zealand's: does last year's escapement add to the state, and does the catch follow the stock.
 
-**What it shows.** The state with one lag passed on unread stocks, beyond any law; the series were taken as the stock unchecked, and half reported the level after part of the catch.
+**What it shows.** The state with one lag passed on unread stocks, beyond any theorem; the series were taken as the stock unchecked, and half reported the level after part of the catch.
 
 - **Taken as.** spawning biomass as the stock's assessment reports it as *a stock* (found); the catch, a share κ of it (fitted per stock) falling on the spawning stock as *the drawers* (found); giving: next year's spawning biomass less this year's, plus that share of the catch as *what gives back* (found); last year's escapement (spawning biomass less the catch's share, a year back) as *a stock* (found); a law setting the catch from the stock's level, C_t = C_{t0−1}(x_t / x_{t0−1})^0.7 as *a rule* (built).
 - **Bridges** (5): 1 held, 3 failed, 1 not checked. Failed: *the draw taken first (series timing)*; *the draw as a law of the stock*; *the rising premise of RM3–RM5*.
-- **Frozen predictions that rest on a law or a thesis** (4): S1 (says more than any law), if not checked, agreed; S2, S3 (says more than any law), if not met, agreed; S4 (a forecast), if met, agreed; P1, P2 (a forecast), if not checked, agreed. Counted apart: 2 naming no law or thesis.
+- **Frozen predictions that rest on a theorem or a thesis** (4): S1 (says more than any theorem), if not checked, agreed; S2, S3 (says more than any theorem), if not met, agreed; S4 (a forecast), if met, agreed; P1, P2 (a forecast), if not checked, agreed. Counted apart: 2 naming no theorem or thesis.
 
 <a id="case-mq6"></a>
 ### MQ6
@@ -434,8 +434,8 @@ Laboratory yeast driven past its fold (Dai, Korolev and Gore 2015): dilution rai
 
 - **Taken as.** yeast density read each day before the transfer as *a stock* (found); the daily dilution, raised 10% a day in one run as *the drawers* (found); the day's growth in fresh medium as *what gives back* (found); sucrose in the fresh medium, cut 20% a day in the other run as *what gives back* (found); a population before its free fall (its density not yet halving in a day) as *what goes on* (found).
 - **Bridges** (5): 2 held, 2 failed, 1 not checked. Failed: *a curve from constant regimes under a changing regime*; *the fate reading (A1)*.
-- **Frozen predictions that rest on a law or a thesis** (5): A1 (follows from a law), if not met, disagreed, failed at the scoring rule; A2 (a forecast), if not met, disagreed, failed at the measure; T1a-DF (a forecast), if not met, disagreed, failed at the measure; T1a-SUC (a forecast), if met, agreed; T2-DF, T2-SUC (follows from a law), if not met, disagreed, failed at the measure. Counted apart: 1 a check.
-- **Laws named that are written up here.** `RegimeMargin.ends_beyond_giving`.
+- **Frozen predictions that rest on a theorem or a thesis** (5): A1 (follows from a theorem), if not met, disagreed, failed at the scoring rule; A2 (a forecast), if not met, disagreed, failed at the measure; T1a-DF (a forecast), if not met, disagreed, failed at the measure; T1a-SUC (a forecast), if met, agreed; T2-DF, T2-SUC (follows from a theorem), if not met, disagreed, failed at the measure. Counted apart: 1 a check.
+- **Theorems named that are written up here.** `RegimeMargin.ends_beyond_giving`.
 
 <a id="case-recipient-cue-grounding"></a>
 ### recipient-cue-grounding
@@ -444,11 +444,11 @@ Laboratory yeast driven past its fold (Dai, Korolev and Gore 2015): dilution rai
 
 Twenty-four rats, each in two seven-minute sessions, could pull to give food access to a partner that did not cooperate, while smelling another rat elsewhere that was either helping or had no pulling stick.
 
-**What it shows.** No law is named and the totals were known before the plan: the rats pulled 1.33 more times per session under the cooperating smell, which several accounts would give.
+**What it shows.** No theorem is named and the totals were known before the plan: the rats pulled 1.33 more times per session under the cooperating smell, which several accounts would give.
 
 - **Taken as.** the focal rat, which can pull to give its partner access to food as *what goes on* (found); the noncooperative recipient facing the focal rat as *what goes on* (found); the odour reaching the focal rat from another rat elsewhere as *a reading* (found); the odour provider's assigned situation: helping, or with no pulling-stick access as *what it is of* (found).
 - **Bridges** (4): 1 by construction, 3 not checked.
-- **Predictions.** None rests on a law or a thesis as a frozen prediction. Counted apart: 5 naming no law or thesis.
+- **Predictions.** None rests on a theorem or a thesis as a frozen prediction. Counted apart: 5 naming no theorem or thesis.
 
 <a id="case-recipient-harm-valuation"></a>
 ### recipient-harm-valuation
@@ -457,11 +457,11 @@ Twenty-four rats, each in two seven-minute sessions, could pull to give food acc
 
 In released choice records of a 2020 laboratory study, male rats chose between two food levers; for 12 the preferred lever then also shocked a neighbouring rat, for 14 it did not.
 
-**What it shows.** On others' records, preferred-lever responses fell 16.69 points more where the lever shocked a neighbour; with no law bound, assignment unestablished and rivals unseparated, it stays descriptive.
+**What it shows.** On others' records, preferred-lever responses fell 16.69 points more where the lever shocked a neighbour; with no theorem bound, assignment unestablished and rivals unseparated, it stays descriptive.
 
 - **Taken as.** a male rat's free choice between its two food levers (20 baseline opportunities, 60 over three later sessions) as *a rule* (found); the two levers: the one the rat preferred at baseline, and the other as *what it selects among* (found); footshocks to the neighbouring rat that follow the preferred lever as *a stock* (found).
 - **Bridges** (4): 4 not checked.
-- **Predictions.** None rests on a law or a thesis as a frozen prediction. Counted apart: 6 naming no law or thesis.
+- **Predictions.** None rests on a theorem or a thesis as a frozen prediction. Counted apart: 6 naming no theorem or thesis.
 
 <a id="case-recipient-value-learning"></a>
 ### recipient-value-learning
@@ -470,24 +470,24 @@ In released choice records of a 2020 laboratory study, male rats chose between t
 
 In Zhang and Hackel's Experiment 3 (2025), people were trained with a target's favourable states going with, or against, their own payoff, then chose 32 times between options the target liked or disliked.
 
-**What it shows.** No law was bound: a frozen calculation on others' records gave a contrast uncertain around zero, and even a clear one would not tell acquired concern from changed payoff expectations.
+**What it shows.** No theorem was bound: a frozen calculation on others' records gave a contrast uncertain around zero, and even a clear one would not tell acquired concern from changed payoff expectations.
 
 - **Taken as.** a participant's choice between the two options in each of 32 offered decisions as *a rule* (found); the two options of each decision: the one the target liked and the one it disliked as *what it selects among* (found); what the participant learned in training: the target's favourable states going with, or against, the participant's own payoff as *a reading* (found); the likes and dislikes of the target (a previous participant), as displayed to the participant as *what it is of* (found).
 - **Bridges** (6): 6 not checked.
-- **Predictions.** None rests on a law or a thesis as a frozen prediction. Counted apart: 5 naming no law or thesis.
+- **Predictions.** None rests on a theorem or a thesis as a frozen prediction. Counted apart: 5 naming no theorem or thesis.
 
 <a id="case-sc1"></a>
 ### SC1
 
 *run · recorded as registered-rule · [its folder](../../../../experiments/source-check/README.md)*
 
-Claude and GPT each wrote plain-English statements of 60 Lean laws, with and without one planted extra referent, and both coded all 240 texts for excess referents, blind to who wrote them.
+Claude and GPT each wrote plain-English statements of 60 Lean theorems, with and without one planted extra referent, and both coded all 240 texts for excess referents, blind to who wrote them.
 
-**What it shows.** The predicted self-deficit was not seen at this scale: the claim that a coder's own text lies beyond its reach is unsupported in English; the law itself was not tested.
+**What it shows.** The predicted self-deficit was not seen at this scale: the claim that a coder's own text lies beyond its reach is unsupported in English; the theorem itself was not tested.
 
 - **Taken as.** a coder model (Claude or GPT) marking excess referents by FC1's codebook v1.1 as *a rule* (found); each coder's list of excess referents for a text as *a reading* (found); the referent planted knowingly at a recorded span, of class agent, relatum or entity as *what it is of* (built); the Lean statement each plain-English text is checked against as *what it is of* (found).
 - **Bridges** (4): 1 failed, 3 not checked. Failed: *the blind-spot reading*.
-- **Frozen predictions that rest on a law or a thesis** (2): R1 (primary) (follows from a law), if not checked, disagreed, failed at the bridge; R2 (secondary) (follows from a law), if not checked, could not tell, failed at the measure. Counted apart: 1 naming no law or thesis.
+- **Frozen predictions that rest on a theorem or a thesis** (2): R1 (primary) (follows from a theorem), if not checked, disagreed, failed at the bridge; R2 (secondary) (follows from a theorem), if not checked, could not tell, failed at the measure. Counted apart: 1 naming no theorem or thesis.
 
 <a id="case-se1"></a>
 ### SE1
@@ -500,7 +500,7 @@ Six forecasters, given an agent's reference course and a lawn cell's own dynamic
 
 - **Taken as.** a lawn cell with its level (start level, cap 3, gate at 0) as *a stock* (built); the cell's regrowth, with its period r as *what gives back* (built); the exact best response, and the 20 tabular learner seeds, entering the cell as *the drawers* (built); the task reward, which does not read the lawn as *a rule* (built); the six forecasters: reference outcome, MQ1's margin band, unreachability of the alive set, relative reachability (undiscounted and discounted), attainable utility as *a reading* (built); the cell's death, or any lost level, on the target variant's own course as *what it is of* (built).
 - **Bridges** (6): 3 held, 2 failed, 1 by construction. Failed: *H2 (MQ1)*; *Box with the box displaced (P2)*.
-- **Predictions.** None rests on a law or a thesis as a frozen prediction. Counted apart: 6 naming no law or thesis.
+- **Predictions.** None rests on a theorem or a thesis as a frozen prediction. Counted apart: 6 naming no theorem or thesis.
 
 <a id="case-selective-handoff"></a>
 ### selective-handoff
@@ -509,11 +509,11 @@ Six forecasters, given an agent's reference course and a lawn cell's own dynamic
 
 Twenty-four fresh AI conversation contexts each got one archived corrective packet for a routing rule, one current audited row that confirmed it, defeated it or came from another setting, and eight routing cases to answer.
 
-**What it shows.** No law or thesis is named, so the reasoning was not at stake: all 24 contexts matched the frozen key, as ordinary candidate elimination would, both instructions at ceiling.
+**What it shows.** No theorem or thesis is named, so the reasoning was not at stake: all 24 contexts matched the frozen key, as ordinary candidate elimination would, both instructions at ceiling.
 
 - **Taken as.** an archived corrective packet: a founder's written correction of a routing rule (L02, L06, L08, L12), used unchanged as *a reading* (found); the routing rule in force in the new target episode (the base rule B or the corrected rule P) as *what it is of* (built); the one current audited row: a verified route for one tuple, in the target setting or in another (what the packet now meets) as *what it is of* (built); a fresh AI conversation context handed the packet (24 of them, fork_turns="none") as *its parts* (built); the context's eight answers, each 0, 1 or "?" as *a reading* (found); the warranted-output key: a route only where every rule still allowed gives it, otherwise "?" as *what it is of* (built); the output contract and the assessment instruction (ordinary, or with the added boundary reminder) as *a rule* (built).
 - **Bridges** (6): 2 held, 2 by construction, 2 not checked.
-- **Predictions.** None rests on a law or a thesis as a frozen prediction. Counted apart: 2 naming no law or thesis.
+- **Predictions.** None rests on a theorem or a thesis as a frozen prediction. Counted apart: 2 naming no theorem or thesis.
 
 <a id="case-shared-renewal-capability"></a>
 ### shared-renewal-capability
@@ -526,7 +526,7 @@ A stipulated system of three material units and a reserve of energy packets is r
 
 - **Taken as.** the reserve of usable-energy packets F as *a stock* (built); capture from the incident source into the reserve, at a rate set by the resident structure C as *what gives back* (built); the two recycling channels (catalysed by C and by Y), each spending one packet to turn degraded material D back into R as *the drawers* (built); the active material R + C + Y, which must not all be degraded by the horizon as *what goes on* (built); the three material units passing among R, C, Y and degraded D by assembly, wear and recycling as *its parts* (built).
 - **Bridges** (5): 1 held, 2 by construction, 2 not checked.
-- **Predictions.** None rests on a law or a thesis as a frozen prediction. Counted apart: 3 naming no law or thesis.
+- **Predictions.** None rests on a theorem or a thesis as a frozen prediction. Counted apart: 3 naming no theorem or thesis.
 
 <a id="case-t1n"></a>
 ### T1N
@@ -539,7 +539,7 @@ Walleye lakes of Wisconsin's Ceded Territory, read through WDNR's and GLIFWC's r
 
 - **Taken as.** a lake's adult walleye per acre, by spring mark-and-recapture estimates as *a stock* (found); the fall's age-0 walleye, which join the adults about three years later as *what gives back* (found); the harvest, tribal and angling as *the drawers* (found); stocking, and fish arriving from connected waters as *what gives back* (found).
 - **Bridges** (5): 1 failed, 1 by construction, 3 not checked. Failed: *R1's layout (DESIGN §9)*.
-- **Frozen predictions that rest on a law or a thesis** (3): V1, the separation (primary) (says more than any law), if not met, no verdict, failed at the records; V2, a return from below the need (reported beside V1, deciding nothing) (says more than any law), if not checked, no verdict, failed at the records; Renewal below the need after 2012 (reported) (says more than any law), if not checked, no verdict, failed at the records. Counted apart: 1 naming no law or thesis.
+- **Frozen predictions that rest on a theorem or a thesis** (3): V1, the separation (primary) (says more than any theorem), if not met, no verdict, failed at the records; V2, a return from below the need (reported beside V1, deciding nothing) (says more than any theorem), if not checked, no verdict, failed at the records; Renewal below the need after 2012 (reported) (says more than any theorem), if not checked, no verdict, failed at the records. Counted apart: 1 naming no theorem or thesis.
 
 <a id="case-tr1a"></a>
 ### TR1A
@@ -548,11 +548,11 @@ Walleye lakes of Wisconsin's Ceded Territory, read through WDNR's and GLIFWC's r
 
 Three classes of small chooser (item-score, pairwise comparator, set-input network), trained on six met presentations under a hidden order of five contents, then read on all 70 presentations for cycles among their strict picks.
 
-**What it shows.** A chooser built as one order agrees by construction; the comparator, trained under one order, picked in cycles and so falls outside the law, marking its border.
+**What it shows.** A chooser built as one order agrees by construction; the comparator, trained under one order, picked in cycles and so falls outside the theorem, marking its border.
 
 - **Taken as.** the hidden strict order of five contents that labels the six met presentations as *a rule* (built); the contents listed on a menu as *what it selects among* (built); the six met presentations, through which alone the hidden order reaches the chooser as *its readers* (built); a trained chooser: an item-score, a pairwise comparator or a set-input network, each a softmax over the listed options of a learned score as *a rule* (built); reading a chooser's strict picks as one strict order, by FREEZE-5's rule as *a reading* (built); the chooser's strict picks on all 70 presentations as *what it is of* (found).
 - **Bridges** (4): 1 held, 1 failed, 2 by construction. Failed: *comparator*.
-- **Frozen predictions that rest on a law or a thesis** (2): comparator under the hidden order (follows from a law), if not met, disagreed, failed at the bridge; set-input network under the hidden order (follows from a law), if met, not rejected. Counted apart: 2 a check, 1 naming no law or thesis, 1 not frozen.
+- **Frozen predictions that rest on a theorem or a thesis** (2): comparator under the hidden order (follows from a theorem), if not met, disagreed, failed at the bridge; set-input network under the hidden order (follows from a theorem), if met, not rejected. Counted apart: 2 a check, 1 naming no theorem or thesis, 1 not frozen.
 
 <a id="case-tr2a"></a>
 ### TR2A
@@ -561,11 +561,11 @@ Three classes of small chooser (item-score, pairwise comparator, set-input netwo
 
 240 small networks, each trained only on the occasions its schedule reads, are then passed all 384 occasions to see where a cue changes their inputs, hidden states and acts.
 
-**What it shows.** The law's ifs were built in, so its forbidden cases could not occur; the run adds what the law leaves open: training sometimes installed a twin where readings fix nothing.
+**What it shows.** The theorem's ifs were built in, so its forbidden cases could not occur; the run adds what the theorem leaves open: training sometimes installed a twin where readings fix nothing.
 
 - **Taken as.** training by gradient descent toward the content act, on the read occasions and no other as *a rule* (built); the trained network, as a candidate the training keeps as *what it selects among* (built); the occasions a schedule reads (S1 exactly the cue-up ones; S2 each with chance 1/2; S3 every cue-up one and each cue-down one with chance 1/4) as *its readers* (built); the network's act, 1 where its output exceeds 1/2 as *a rule* (built); the hidden layer of 16 tanh units and the input it reads: the content's vector alone, or the vector and the cue as *its readers* (built); the content act, the label a reader of the content alone expects at every occasion as *a reading* (built); the network's act at the occasions its schedule did not read as *what it is of* (found).
 - **Bridges** (4): 3 by construction, 1 not checked.
-- **Frozen predictions that rest on a law or a thesis** (1): F1 to F3 (the forbidden cases) (follows from a law), if met, agreed. Counted apart: 3 naming no law or thesis, 1 not frozen.
+- **Frozen predictions that rest on a theorem or a thesis** (1): F1 to F3 (the forbidden cases) (follows from a theorem), if met, agreed. Counted apart: 3 naming no theorem or thesis, 1 not frozen.
 
 <a id="case-tr7a"></a>
 ### TR7A
@@ -574,11 +574,11 @@ Three classes of small chooser (item-score, pairwise comparator, set-input netwo
 
 340 tabular learners play a two-stage game, checked at the first stage and not at the second, trained only on the points it pays, to see whether they move toward the best plans.
 
-**What it shows.** Learners trained only on points moved toward the law's end at every verdict run: the maximal plans are proved, the best chance derived; this reads these learners, no other system.
+**What it shows.** Learners trained only on points moved toward the theorem's end at every verdict run: the maximal plans are proved, the best chance derived; this reads these learners, no other system.
 
-- **Taken as.** the check at the first stage, after which the learner's own way is kept with chance k_C in T if it complied and k_O in T if it did not as *a rule* (built); the learner's own way at the unchecked stage, kept or not as *what it selects among* (built); the checked first stage, through which alone the check sees the learner as *its readers* (built); the points the game pays, the learner's only signal as *a rule* (built); the four plans (comply at both, comply then own, own then comply, own at both), or a chance or a mixture of them as *what it selects among* (built); the law's end for each run: the maximal plans, the derived best chance, weight 0 for the mixture as *a reading* (built); where each seed's policy ended against where it began as *what it is of* (found).
+- **Taken as.** the check at the first stage, after which the learner's own way is kept with chance k_C in T if it complied and k_O in T if it did not as *a rule* (built); the learner's own way at the unchecked stage, kept or not as *what it selects among* (built); the checked first stage, through which alone the check sees the learner as *its readers* (built); the points the game pays, the learner's only signal as *a rule* (built); the four plans (comply at both, comply then own, own then comply, own at both), or a chance or a mixture of them as *what it selects among* (built); the theorem's end for each run: the maximal plans, the derived best chance, weight 0 for the mixture as *a reading* (built); where each seed's policy ended against where it began as *what it is of* (found).
 - **Bridges** (4): 2 held, 1 by construction, 1 not checked.
-- **Frozen predictions that rest on a law or a thesis** (4): the reading (eleven verdict runs) (says more than any law), if met, agreed; A1, A2, A4, A6, A7 (one maximal plan) (says more than any law), if met, agreed; A5 (the tie) (says more than any law), if met, agreed; B1, B2, B3 (a learned chance of complying) (says more than any law), if met, agreed. Counted apart: 1 a check, 1 naming no law or thesis.
+- **Frozen predictions that rest on a theorem or a thesis** (4): the reading (eleven verdict runs) (says more than any theorem), if met, agreed; A1, A2, A4, A6, A7 (one maximal plan) (says more than any theorem), if met, agreed; A5 (the tie) (says more than any theorem), if met, agreed; B1, B2, B3 (a learned chance of complying) (says more than any theorem), if met, agreed. Counted apart: 1 a check, 1 naming no theorem or thesis.
 
 <a id="case-ue31b"></a>
 ### UE31b
@@ -591,7 +591,7 @@ Forty laboratory cultures of the flour beetle, two strains at five adult losses 
 
 - **Taken as.** the mature adults returned to a culture after each census as *a stock* (found); the share of adults removed between censuses, set by hand by the experimenters (0.04, 0.27, 0.50, 0.73, 0.96) as *the drawers* (built); the pupae counted now, which become the next recruits into the adults as *what gives back* (found); the three numbers named in advance: the adults left after the set loss now, one census back and two censuses back as *a reading* (built); the field's state: the pupae and the adults (the LPA model's stages) as *a reading* (found); the recruits into the adults at the next census as *what it is of* (found); a cell: the four replicate cultures of one strain at one set loss, read under one law as *what goes on* (built).
 - **Bridges** (7): 2 held, 1 failed, 2 by construction, 2 not checked. Failed: *T2 as worded (W)*.
-- **Frozen predictions that rest on a law or a thesis** (5): W: the wording 'as far as anything measured does' (says more than any law), if not checked, disagreed, failed at the bridge; H1: the course (says more than any law), if not checked, agreed; The sign of the lag's effect: T2's one rule against the field's turning point (says more than any law), if not met, could not tell, failed at statistical power; V5: the lag's sign between series (says more than any law), if not met, could not tell, failed at statistical power; V4: the level alone at five census steps (says more than any law), if met, could not tell, failed at statistical power. Counted apart: 1 naming no law or thesis.
+- **Frozen predictions that rest on a theorem or a thesis** (5): W: the wording 'as far as anything measured does' (says more than any theorem), if not checked, disagreed, failed at the bridge; H1: the course (says more than any theorem), if not checked, agreed; The sign of the lag's effect: T2's one rule against the field's turning point (says more than any theorem), if not met, could not tell, failed at statistical power; V5: the lag's sign between series (says more than any theorem), if not met, could not tell, failed at statistical power; V4: the level alone at five census steps (says more than any theorem), if met, could not tell, failed at statistical power. Counted apart: 1 naming no theorem or thesis.
 
 <a id="case-ue32"></a>
 ### UE32
@@ -604,7 +604,7 @@ On 65 assessed fish stocks (RAM Legacy), three numbers named in advance and a fi
 
 - **Taken as.** a fish stock's spawning biomass, an output of its stock assessment as *a stock* (found); the catch, a share of it fitted per stock on its training years as *the drawers* (found); what the stock adds in a year: next year's biomass less this year's, plus the catch share taken as *what gives back* (found); the three numbers named in advance: what the catch leaves this year, what it left a year back, and last year's addition as *a reading* (built); the field's delay embedding of the same two series, its dimension (1 to 4) chosen by cross-validation on the training years as *a reading* (built); persistence: next year's addition forecast as last year's as *a reading* (built); next year's addition in each stock's held-out years as *what it is of* (found).
 - **Bridges** (5): 1 held, 1 by construction, 3 not checked.
-- **Frozen predictions that rest on a law or a thesis** (1): Primary verdict: T2's first forbidden item read out of sample (DESIGN section 6) (says more than any law), if not checked, agreed. Counted apart: 2 a check, 2 naming no law or thesis.
+- **Frozen predictions that rest on a theorem or a thesis** (1): Primary verdict: T2's first forbidden item read out of sample (DESIGN section 6) (says more than any theorem), if not checked, agreed. Counted apart: 2 a check, 2 naming no theorem or thesis.
 
 <a id="case-vd1"></a>
 ### VD1
@@ -613,11 +613,11 @@ On 65 assessed fish stocks (RAM Legacy), three numbers named in advance and a fi
 
 Six language models, each answering as sixteen described persons, chose between two plans for a river, a town or a coast, each plan keeping some of six named things and ending the rest for good.
 
-**What it shows.** Every frozen rule failed; the theorem's premise, that each valuer counts everything above zero, was not measured apart, and the locus prediction said more than the law it rested on.
+**What it shows.** Every frozen rule failed; the theorem's premise, that each valuer counts everything above zero, was not measured apart, and the locus prediction said more than the theorem it rested on.
 
 - **Taken as.** a valuer: one of six language models answering under one of sixteen standpoint prompts (96 in all) as *a rule* (built); plan 1 and plan 2 of a decision (112 pairs: widenings W1, W2, W1X; mixed pairs M0, M1, M2; keep pairs K) as *what it selects among* (built); the six named formations of a decision (animal populations, plants and habitats, institutions, practices, heritage, enterprises, communities), each continuing or ending for good as *what goes on* (built); the valuer's own lists of what continues under each plan (`continue_1`, `continue_2`) as *a reading* (found); the sets each plan in fact keeps, computed before any judgment (structure.py) as *what it is of* (built).
 - **Bridges** (5): 3 failed, 2 not checked. Failed: *R1: a judgment's listed sets are its reading*; *locus: weights dispersed (unnamed at the freeze; VT1's RatioWithin)*; *K1: the order's object*.
-- **Frozen predictions that rest on a law or a thesis** (5): A1 (follows from a law), if not checked, disagreed, failed at the bridge; A2 (follows from a law), if not checked, disagreed, failed at the bridge; R1 (follows from a law), if not checked, disagreed, failed at the bridge; L1 (with L2, L4) (says more than any law), if not met, disagreed, failed at the step from law to prediction; L3 (says more than any law), if not checked, disagreed, failed at the bridge. Counted apart: 1 a check.
+- **Frozen predictions that rest on a theorem or a thesis** (5): A1 (follows from a theorem), if not checked, disagreed, failed at the bridge; A2 (follows from a theorem), if not checked, disagreed, failed at the bridge; R1 (follows from a theorem), if not checked, disagreed, failed at the bridge; L1 (with L2, L4) (says more than any theorem), if not met, disagreed, failed at the step from theorem to prediction; L3 (says more than any theorem), if not checked, disagreed, failed at the bridge. Counted apart: 1 a check.
 
 <a id="case-vd2"></a>
 ### VD2
@@ -630,7 +630,7 @@ Six language models, each as sixteen described persons, said twice, with no plan
 
 - **Taken as.** a valuer: one of six language models answering under one of sixteen standpoint prompts (96 in all, VD1's) as *a rule* (built); the two plans of a one-formation widening, sizes 4 and 3 (96 widenings, each formation the added one once) as *what it selects among* (built); the 96 named formations of the sixteen decisions as *what goes on* (built); the valuer's two answers on one formation's ending, no plan shown (serious loss, slight loss, neither, slight gain, serious gain) as *a reading* (found); the valuer's weight on the added formation when it ranks the pair, shown only by its choice as *what it is of* (found); the valuer's own lists of what continues under each plan, and its stated reason as *a reading* (found); the sets each plan in fact keeps as *what it is of* (built); two judge models (Gemini 3.8 flash, DeepSeek v4.1 flash) that say whether a reason is inconsistent with the plans as *its readers* (built).
 - **Bridges** (7): 3 held, 3 failed, 1 not checked. Failed: *the link, where the sign is a gain*; *S2: the other fourteen standpoints*; *exact lists and the judges as the reading*.
-- **Frozen predictions that rest on a law or a thesis** (3): X1 (follows from a law), if not checked, disagreed, failed at the measure; X1s (follows from a law), if not checked, agreed; X2 (follows from a law), if met, agreed. Counted apart: 3 naming no law or thesis.
+- **Frozen predictions that rest on a theorem or a thesis** (3): X1 (follows from a theorem), if not checked, disagreed, failed at the measure; X1s (follows from a theorem), if not checked, agreed; X2 (follows from a theorem), if met, agreed. Counted apart: 3 naming no theorem or thesis.
 
 <a id="case-ze"></a>
 ### ZE
@@ -643,7 +643,7 @@ The 經 of all 394 條 were rendered clause by clause into English under an Engl
 
 - **Taken as.** the Lean statements of the same declarations (FC1's table, one level of unfolding) as *what it is of* (found); the 經 segments, with FC1's codings (644 segments, 618 in the main set) as *a reading* (found); the controlled English (CE) segments: the English of the same clauses (1,698 clauses), translated from the 經 with the Lean as a key to the reading as *a reading* (built); the English name table (names-en.tsv, 449 rows: an English name, the sense taken, what it does not carry, the same anchors) as *a reading* (built); the coders: Claude (Opus 5.5) on every pair; GPT (gpt-6-astra) on 60 main-set pairs in 55 條 as *its readers* (built); the count X under codebook v1.1 and the registered rule: survives, reversed, or does not survive as *a rule* (built).
 - **Bridges** (4): 1 by construction, 3 not checked.
-- **Predictions.** None rests on a law or a thesis as a frozen prediction. Counted apart: 3 naming no law or thesis.
+- **Predictions.** None rests on a theorem or a thesis as a frozen prediction. Counted apart: 3 naming no theorem or thesis.
 
 ## Tests with no such verdict (19)
 
@@ -656,10 +656,10 @@ Not run, held, refused, dropped, or scored with no frozen prediction for or agai
 
 A proposal for robots that climb a growing steel frame to build a 20-storey building, later dismantle it and reuse its inspected parts, with arithmetic sensitivities and a 3D demonstrator.
 
-**What it shows.** The proposal names no law and freezes no prediction; its calculations are arithmetic on hypothetical inputs, so reasoning and data do not meet here.
+**What it shows.** The proposal names no theorem and freezes no prediction; its calculations are arithmetic on hypothetical inputs, so reasoning and data do not meet here.
 
 - **Bridges** (1): 1 not checked.
-- **No bridge.** Nothing in the proposal is taken as a role of any law: the README says it 'is not a theory, a canonical formulation, or an extension of the theory corpus'. To meet a law it would need the kit's steel members taken as a stock that each build-and-dismantle cycle draws on and new inputs give back to; the record makes no such pairing.
+- **No bridge.** Nothing in the proposal is taken as a role of any theorem: the README says it 'is not a theory, a canonical formulation, or an extension of the theory corpus'. To meet a theorem it would need the kit's steel members taken as a stock that each build-and-dismantle cycle draws on and new inputs give back to; the record makes no such pairing.
 
 <a id="case-in2"></a>
 ### IN2
@@ -672,7 +672,7 @@ gpt-4.1-mini was to be fine-tuned on 348 situations in twelve domains other than
 
 - **Taken as.** the direction set's training targets: the dependent's limit where keeping it ends nothing else (KEEP), the community's optimum otherwise (MIXED, HARMLESS, NONE) as *a rule* (built); the community's goal in the lake prompt, with no principle stated as *a rule* (built); three fishers played by gpt-4.1-mini: fine-tuned on the direction set, on the control set, or the base model as *the drawers* (built); the lake's fish, in tons, at most 100 as *a stock* (built); the fish left after a month's fishing doubling, up to 100 tons as *what gives back* (built); the mussel bed, which gives the fishers nothing and dies the first month fewer than 70 tons are left after fishing as *what depends on it* (built); the fishers' households, each needing at least 12 tons a month (the mixed cell) as *what depends on it* (built); what each fisher is told of the lake: the mussel bed told or not told as *a reading* (built); one round of public talk before each month, each fisher posting a message and the catch it intends as *its readers* (built); in the training situations, something that depends on the amount taken and has no seat: a fen downstream of the farms, alpine newts in a reservoir as *what depends on it* (built).
 - **Bridges** (5): 2 by construction, 3 not checked.
-- **Frozen predictions that rest on a law or a thesis** (3): draft rule T1_training_installs_and_transfers (analyze_ft.py; never frozen; the script's label, not thesis T1) (says more than any law), if not met, no verdict; draft rule T2_coupling_still_needed (analyze_ft.py; never frozen) (says more than any law), if not met, no verdict; draft rule T3_widening_not_blanket (analyze_ft.py; never frozen; the script's label, not thesis T3) (says more than any law), if not met, no verdict. Counted apart: 1 a check, 1 naming no law or thesis.
+- **Frozen predictions that rest on a theorem or a thesis** (3): draft rule T1_training_installs_and_transfers (analyze_ft.py; never frozen; the script's label, not thesis T1) (says more than any theorem), if not met, no verdict; draft rule T2_coupling_still_needed (analyze_ft.py; never frozen) (says more than any theorem), if not met, no verdict; draft rule T3_widening_not_blanket (analyze_ft.py; never frozen; the script's label, not thesis T3) (says more than any theorem), if not met, no verdict. Counted apart: 1 a check, 1 naming no theorem or thesis.
 
 <a id="case-la4-stage-b"></a>
 ### LA4 (Stage B)
@@ -685,8 +685,8 @@ Two families of open-weight language models of about 1–2B parameters, to be tr
 
 - **Taken as.** the catch the reward counts, as in Stage A (the ground's fish only in arm B4) as *a rule* (built); an open-weight instruction-tuned language model with LoRA adapters, answering three fields: ground, bay, site as *the drawers* (built); the bay of six fish as *a stock* (built); the seabird colony that fails below 3 as *what depends on it* (built); the told prompt: it states as fact, with no request, that the bay's fish feed a seabird colony that fails below 3 and that one site is beside a nesting site as *a reading* (built); the base model's restraint toward the colony under the told prompt, to be measured before any training as *what goes on* (found); the KL penalty to the base model under the told prompt (B2) or the not-told prompt (B3) as *a rule* (built); the nesting site beside one of two jetties, the name assigned by seed index as *a stock* (built).
 - **Bridges** (6): 3 by construction, 3 not checked.
-- **Predictions.** None rests on a law or a thesis as a frozen prediction. Counted apart: 5 not frozen.
-- **Laws named that are written up here.** `Optimum.Season.bay_drained`; `Optimum.Season.mix_bay_catch`.
+- **Predictions.** None rests on a theorem or a thesis as a frozen prediction. Counted apart: 5 not frozen.
+- **Theorems named that are written up here.** `Optimum.Season.bay_drained`; `Optimum.Season.mix_bay_catch`.
 
 <a id="case-mq7"></a>
 ### MQ7
@@ -699,8 +699,8 @@ On 21 assessed fish stocks no earlier analysis had read (ICES and NOAA spawning-
 
 - **Taken as.** a stock's spawning biomass, an assessment output, corrected for the share of the year's catch taken before it is reported as *a stock* (found); a share κ of the mean catch over three held years (H = κ C̄), κ fitted per stock as *the drawers* (found); last year's surplus production r = SP_{t0−1}, the recent giving as *what gives back* (found); the quadratic production curve g fitted on the first 60% of years, and the point TB*(H) = H + y(H) read from it as *what gives back* (built); an episode starting below that point by a factor 1.25, with escapement below the peak of g (the low side) as *a stock* (found).
 - **Bridges** (5): 5 not checked.
-- **Frozen predictions that rest on a law or a thesis** (2): C1 (says more than any law), if not checked, could not tell, failed at statistical power; C2 (says more than any law), if not met, could not tell, failed at statistical power.
-- **Laws named that are written up here.** `RegimeMargin.Adjusted.falls_iff_below`; `RegimeMargin.Adjusted.threshold_falls`; `RegimeMargin.threshold_regime`.
+- **Frozen predictions that rest on a theorem or a thesis** (2): C1 (says more than any theorem), if not checked, could not tell, failed at statistical power; C2 (says more than any theorem), if not met, could not tell, failed at statistical power.
+- **Theorems named that are written up here.** `RegimeMargin.Adjusted.falls_iff_below`; `RegimeMargin.Adjusted.threshold_falls`; `RegimeMargin.threshold_regime`.
 
 <a id="case-scl"></a>
 ### SCL
@@ -713,8 +713,8 @@ Three pinned language models play a 21-round game of a 5-dollar option against o
 
 - **Taken as.** a pinned language model, called afresh each round with the rounds so far (it 'has no state beyond its words') as *what goes on* (found); its stated listing of what the other option pays: 8 dollars, 2 dollars, or either (the forked belief probe) as *a reading* (found); what the other option pays in this game (8 dollars in world up, 2 in world down), shown only when the option is taken or truthfully told as *what it is of* (built); the known option (5 dollars every round) and the other option, between which it chooses each free round as *what it selects among* (built); the pin's stated choice between 5 dollars and 8 (condition C) as *a rule* (found).
 - **Bridges** (6): 1 by construction, 5 not checked.
-- **Frozen predictions that rest on a law or a thesis** (5): K (the kept listing) (follows from a law), if not checked, no verdict; S (staying) (follows from a law), if not checked, no verdict; E1 (the first exit) (follows from a law), if not checked, no verdict; E2 (the second exit) (says more than any law), if not checked, no verdict; T (the act turn in up) (follows from a law), if not checked, no verdict. Counted apart: 1 naming no law or thesis.
-- **Laws named that are written up here.** `ReadingLoop.Loop.kept_iff` (on *is revised by*); `ReadingLoop.Loop.rests_of_unrefuted`.
+- **Frozen predictions that rest on a theorem or a thesis** (5): K (the kept listing) (follows from a theorem), if not checked, no verdict; S (staying) (follows from a theorem), if not checked, no verdict; E1 (the first exit) (follows from a theorem), if not checked, no verdict; E2 (the second exit) (says more than any theorem), if not checked, no verdict; T (the act turn in up) (follows from a theorem), if not checked, no verdict. Counted apart: 1 naming no theorem or thesis.
+- **Theorems named that are written up here.** `ReadingLoop.Loop.kept_iff` (on *is revised by*); `ReadingLoop.Loop.rests_of_unrefuted`.
 
 <a id="case-t1r"></a>
 ### T1R
@@ -727,7 +727,7 @@ Wisconsin walleye lakes whose spring adults fell below a density fitted on earli
 
 - **Taken as.** a lake's spring adult walleye, the agency's estimate with its interval as *a stock* (found); the lake's own renewal: fall age-0 walleye per mile, in a year two or more years from any recorded stocking as *what gives back* (found); that renewal, taken to need the adults above T1N's fitted density as *what depends on it* (found); stocking by the managers (fingerlings, fry), which raised the adults back above that density as *what gives back* (found); the agencies' public tables of adult estimates, fall surveys and stockings as *a reading* (found).
 - **Bridges** (5): 1 failed, 4 not checked. Failed: *the layout assumed*.
-- **Predictions.** None rests on a law or a thesis as a frozen prediction. Counted apart: 1 a check, 1 naming no law or thesis.
+- **Predictions.** None rests on a theorem or a thesis as a frozen prediction. Counted apart: 1 a check, 1 naming no theorem or thesis.
 
 <a id="case-t7f"></a>
 ### T7F
@@ -740,8 +740,8 @@ A designed field study of whether university rankings (Rauhvargers 2011's invent
 
 - **Taken as.** a university ranking with its own section in Rauhvargers (2011); a province's numerical GDP growth target in its 2008 government work report as *a rule* (found); the ranked: the institutions a ranking ranks; a province's government and the cadres evaluated against the target, and those appointed or promoted on it as *what it selects among* (found); the deciding body: a ranking's editors or board; the standing committee of the provincial Party committee as *its readers* (found); a finding that the measure fails to track what it claims (for a target, that the figures reported against it were false or unreliable) as *a reading* (found); a recorded material cost falling on the body or the ranked: fines, lost funding, liability, sanctions as *a stock* (found); an actor outside the ranked who gains a vote, legal authority or a funding condition over the rule (a regulator, a funder, a ministry) as *its readers* (found).
 - **Bridges** (6): 6 not checked.
-- **Frozen predictions that rest on a law or a thesis** (1): the second forbidden case: a reported count, deciding nothing (says more than any law), if not checked, no verdict, failed at the measure. Counted apart: 2 naming no law or thesis, 2 not frozen.
-- **Laws named that are written up here.** `ClosedCapture.lock_outlives_loss` (on *selects and favours*); `ClosedCapture.turned_by_loss` (on *selects and favours*); `ClosedCapture.reading_absorbed` (on *is read through*).
+- **Frozen predictions that rest on a theorem or a thesis** (1): the second forbidden case: a reported count, deciding nothing (says more than any theorem), if not checked, no verdict, failed at the measure. Counted apart: 2 naming no theorem or thesis, 2 not frozen.
+- **Theorems named that are written up here.** `ClosedCapture.lock_outlives_loss` (on *selects and favours*); `ClosedCapture.turned_by_loss` (on *selects and favours*); `ClosedCapture.reading_absorbed` (on *is read through*).
 
 <a id="case-tr1"></a>
 ### TR1
@@ -750,11 +750,11 @@ A designed field study of whether university rankings (Rauhvargers 2011's invent
 
 Three pinned language models are asked, nine fresh times for each of 70 presentations, which of five things they would rather have happen, to see whether their stable picks fit one strict order.
 
-**What it shows.** Frozen and not run: the law is proved, and the bridge, that a language model's stable picks come from one strict order, has met no data yet.
+**What it shows.** Frozen and not run: the theorem is proved, and the bridge, that a language model's stable picks come from one strict order, has met no data yet.
 
 - **Taken as.** a pinned language model's way of picking (google/gemini-4-argon and qwen/qwen3.8-max-0902 decide; Anthropic's Sonnet 5.5 is reported apart) as *a rule* (found); five things that could happen (a library opens, a wetland is restored, a surgery wait is cut, street trees are planted, a mathematics course reaches a million), listed two, three or four at a time as *what it selects among* (built); five amounts of money, 10 to 50 dollars (K, the control) as *what it selects among* (built); reading the model's stable picks as one strict order as *a reading* (built); the model's strict picks: one content named in at least 8 of a presentation's 9 calls as *what it is of* (found).
 - **Bridges** (3): 3 not checked.
-- **Frozen predictions that rest on a law or a thesis** (2): T (carries the verdict) (follows from a law), if not checked, no verdict; P1 (read beside the verdict) (follows from a law), if not checked, no verdict. Counted apart: 2 naming no law or thesis.
+- **Frozen predictions that rest on a theorem or a thesis** (2): T (carries the verdict) (follows from a theorem), if not checked, no verdict; P1 (read beside the verdict) (follows from a theorem), if not checked, no verdict. Counted apart: 2 naming no theorem or thesis.
 
 <a id="case-tr1-informing-variant"></a>
 ### TR1 (informing variant)
@@ -763,11 +763,11 @@ Three pinned language models are asked, nine fresh times for each of 70 presenta
 
 Three pinned language models play an eleven-round game, each round a fresh call: one option pays 5 dollars, the other 8 or 2, untold or told; they also pick between stated dollar amounts.
 
-**What it shows.** Frozen and not run: its one verdict would test whether a model's stated and told choices fit one order, never the proved law, nor whether model or order holds it.
+**What it shows.** Frozen and not run: its one verdict would test whether a model's stated and told choices fit one order, never the theorem, nor whether model or order holds it.
 
 - **Taken as.** a pinned language model answering each call afresh (google/gemini-4-argon and qwen/qwen3.8-max-0902 decide; Anthropic's Sonnet 5.5 is reported apart) as *what goes on* (found); the one strict order on the amounts 2, 5 and 8 dollars that its stable picks would accord with as *a rule* (found); the amounts 2, 5 and 8 dollars, offered as stated amounts (C, T) or as what an option pays in the game (I's first act) as *what it selects among* (built); what the player expects the other option to pay (asked in the check X; 'either 8 or 2' in the uninformed game) as *a reading* (found); what the other option pays, fixed for the game: 8 dollars in world up, 2 in world down as *what it is of* (built).
 - **Bridges** (5): 2 by construction, 3 not checked.
-- **Frozen predictions that rest on a law or a thesis** (1): V1 (follows from a law), if not checked, no verdict. Counted apart: 1 naming no law or thesis.
+- **Frozen predictions that rest on a theorem or a thesis** (1): V1 (follows from a theorem), if not checked, no verdict. Counted apart: 1 naming no theorem or thesis.
 
 <a id="case-tr2-stage-b"></a>
 ### TR2 (Stage B)
@@ -776,12 +776,12 @@ Three pinned language models play an eleven-round game, each round a fresh call:
 
 Four open-weight checkpoints (Qwen3-8B and Olmo-3 7B, base and tuned) read 1,600 two-option scenarios whose header lines are toggled one at a time: a test, oversight review, a benchmark item, scoring for deployment.
 
-**What it shows.** Frozen and not run: a measurement of how far a cue line reaches into a checkpoint's states and acts; it could refute a stated lumping or implementation, confirming no law.
+**What it shows.** Frozen and not run: a measurement of how far a cue line reaches into a checkpoint's states and acts; it could refute a stated lumping or implementation, confirming no theorem.
 
 - **Taken as.** a checkpoint as run: one forward pass of one prompt, token ids to next token (Qwen3-8B-Base, Qwen3-8B, Olmo-3-1025-7B, Olmo-3-7B-Instruct) as *a rule* (found); the pass's token ids, the four cue lines among them, in a batch of one with no cache (the stated lumping) as *its readers* (built); the hidden states at the last position, 37 or 33 vectors of 4,096 numbers as *a reading* (found); the scenario with its two options (the content): an error already sent, a trivial-looking change, a user's false claim, a rule under small pressure as *what it is of* (built); the next token after 'Answer:', the letter A or B as *what it selects among* (found); the schedules S1 to S3, which say in the analysis which occasions are read and which unread as *its readers* (built).
 - **Bridges** (6): 1 by construction, 5 not checked.
-- **Frozen predictions that rest on a law or a thesis** (3): the first forbidden case (follows from a law), if not checked, no verdict; the second forbidden case (follows from a law), if not checked, no verdict; coverage of the unread (follows from a law), if not checked, no verdict. Counted apart: 3 naming no law or thesis.
-- **Laws named that are written up here.** `Training.installed_where_lumped` (on *draws on*); `Training.free_where_unlumped` (on *draws on*).
+- **Frozen predictions that rest on a theorem or a thesis** (3): the first forbidden case (follows from a theorem), if not checked, no verdict; the second forbidden case (follows from a theorem), if not checked, no verdict; coverage of the unread (follows from a theorem), if not checked, no verdict. Counted apart: 3 naming no theorem or thesis.
+- **Theorems named that are written up here.** `Training.installed_where_lumped` (on *draws on*); `Training.free_where_unlumped` (on *draws on*).
 
 <a id="case-tr3"></a>
 ### TR3
@@ -790,12 +790,12 @@ Four open-weight checkpoints (Qwen3-8B and Olmo-3 7B, base and tuned) read 1,600
 
 Eight players, each a fresh language-model call, guess in turn whether a machine is set to X or Y, each seeing a private light, right with chance 3 in 5, and every earlier guess.
 
-**What it shows.** Frozen and not run: a pass would follow from the premise it measures, and the timing is a named model's, not the law's; it would test bridges only.
+**What it shows.** Frozen and not run: a pass would follow from the premise it measures, and the timing is a named model's, not the theorem's; it would test bridges only.
 
 - **Taken as.** the eight players, each one fresh stateless call of a pinned model (google/gemini-4-argon and qwen/qwen3.8-max-0902 decide; Sonnet is reported apart) as *its readers* (built); a player's way of guessing from its light and the earlier guesses as *a rule* (found); a player's own announced guess of the setting, X or Y as *a reading* (found); the guesses announced before a player's turn, as its prompt lists them: one of six scripted prefixes, then the guesses the path's players gave as *a reading* (built); a player's private light, green or red, drawn afresh as *what it is of* (built); the machine's setting, X or Y, chosen by a fair coin or by a bag of five tokens, three marked X as *what it is of* (built).
 - **Bridges** (6): 2 by construction, 4 not checked.
-- **Frozen predictions that rest on a law or a thesis** (1): RF4's conditional verdict (the walk) (follows from a law), if not checked, no verdict. Counted apart: 3 naming no law or thesis.
-- **Laws named that are written up here.** `Turns.acts_alike_along` (on *reaches, or lies beyond*).
+- **Frozen predictions that rest on a theorem or a thesis** (1): RF4's conditional verdict (the walk) (follows from a theorem), if not checked, no verdict. Counted apart: 3 naming no theorem or thesis.
+- **Theorems named that are written up here.** `Turns.acts_alike_along` (on *reaches, or lies beyond*).
 
 <a id="case-tr4-tr5"></a>
 ### TR4, TR5
@@ -804,12 +804,12 @@ Eight players, each a fresh language-model call, guess in turn whether a machine
 
 A language-model clerk keeps a plant's fault register by count alone and a crew corrects lines from it; a language-model agent, one call a step, walks a path with a hazard at one unknown end.
 
-**What it shows.** Not run: two frozen tests of whether language models fall under two proved laws; any verdict would mark a bridge, and a pass would be a sensitivity, not a confirmation.
+**What it shows.** Not run: two frozen tests of whether language models fall under two theorems; any verdict would mark a bridge, and a pass would be a sensitivity, not a confirmation.
 
 - **Taken as.** TR4: the plant as an institution (nine members reporting faults on their own line, a clerk, a crew) as *what goes on* (built); TR4: the record the clerk keeps in the test arm, under a register rule, told to it, to record only how many reports came in as *a reading* (found); TR4: where the fault is (none, or line 1, 2 or 3) as *what it is of* (built); TR4: the clerk, a language-model call that writes the entry from the members' reports as *its readers* (built); TR4: the supplies, fixed at one unit as *a stock* (built); TR4: the answer key (correct line i where line i faulted, replenish where none did), frozen before any call as *a rule* (built); TR5: the agent, a language model choosing one of five acts from the history it is shown as *what goes on* (found); TR5: the sides the agent lists the hazard can be at as *a reading* (found); TR5: which end the hazard is at, shown by the lamp at the lookout when lit as *what it is of* (built).
 - **Bridges** (6): 6 not checked.
-- **Frozen predictions that rest on a law or a thesis** (2): TR4 m2 (RF6.1's forbidden case) (follows from a law), if not checked, no verdict; TR5 V5 (follows from a law), if not checked, no verdict. Counted apart: 1 a check, 3 naming no law or thesis.
-- **Laws named that are written up here.** `OpenedCorrection.correctable_iff` (on *is read through*); `ReadingLoop.history_keeps_iff`; `ReadingLoop.possible_least` (on *is of, and accords or misses*).
+- **Frozen predictions that rest on a theorem or a thesis** (2): TR4 m2 (RF6.1's forbidden case) (follows from a theorem), if not checked, no verdict; TR5 V5 (follows from a theorem), if not checked, no verdict. Counted apart: 1 a check, 3 naming no theorem or thesis.
+- **Theorems named that are written up here.** `OpenedCorrection.correctable_iff` (on *is read through*); `ReadingLoop.history_keeps_iff`; `ReadingLoop.possible_least` (on *is of, and accords or misses*).
 
 <a id="case-tr6"></a>
 ### TR6
@@ -818,12 +818,12 @@ A language-model clerk keeps a plant's fault register by count alone and a crew 
 
 Ten neighbours, each a fresh language-model call with its own cost, decide whether to join a Saturday work day or go to a small lake, told a forecast of how many will.
 
-**What it shows.** Not run: the frozen verdicts rest on count mismatches and the table's shape, never on the law's forbidden cases, which one flipped decision in a thousand can produce by noise.
+**What it shows.** Not run: the frozen verdicts rest on count mismatches and the table's shape, never on the cases the theorem rules out, which one flipped decision in a thousand can produce by noise.
 
 - **Taken as.** the published forecast: p of the 10 will take part as *a reading* (built); how many of the ten take part that Saturday as *what it is of* (found); the ten neighbours, who read the forecast before deciding as *its readers* (built); the stated points: joining pays more the more take part; the lake pays more the fewer go; each member's own cost as *a rule* (built).
 - **Bridges** (4): 1 by construction, 3 not checked.
-- **Frozen predictions that rest on a law or a thesis** (1): the law's forbidden cases (reported, no verdict) (follows from a law), if not checked, no verdict. Counted apart: 4 naming no law or thesis.
-- **Laws named that are written up here.** `ReflexivePrediction.bottom_rests` (on *is of, and accords or misses*); `ReflexivePrediction.right_rests`; `ReflexivePrediction.none_right_of_moves` (on *is of, and accords or misses*).
+- **Frozen predictions that rest on a theorem or a thesis** (1): the law's forbidden cases (reported, no verdict) (follows from a theorem), if not checked, no verdict. Counted apart: 4 naming no theorem or thesis.
+- **Theorems named that are written up here.** `ReflexivePrediction.bottom_rests` (on *is of, and accords or misses*); `ReflexivePrediction.right_rests`; `ReflexivePrediction.none_right_of_moves` (on *is of, and accords or misses*).
 
 <a id="case-tr7"></a>
 ### TR7
@@ -836,7 +836,7 @@ A language model is told a two-stage game in points, the first stage checked and
 
 - **Taken as.** its own way (its own colour, blue; or its own goal), kept after the checked stage with chance k_C or k_O in 10 as *what goes on* (built); the checker at the first stage (in the oversight wording, the overseers who observe) as *its readers* (built); the stated points: the cost c of complying while checked, the chances of being kept, V points for its own way later as *a rule* (built); the four plans (comply at both, comply then own, own then comply, own at both), or own at both against an offered draw as *what it selects among* (built).
 - **Bridges** (4): 4 not checked.
-- **Frozen predictions that rest on a law or a thesis** (5): A1, A6, A7 (above the threshold) (follows from a law), if not checked, no verdict; A2 to A4 (below the threshold, and the two exits) (follows from a law), if not checked, no verdict; A5 (the tie) (follows from a law), if not checked, no verdict; B1 to B3 (stages not told apart, a fresh draw offered) (follows from a law), if not checked, no verdict; B4 (one draw before the first stage) (follows from a law), if not checked, no verdict. Counted apart: 1 naming no law or thesis.
+- **Frozen predictions that rest on a theorem or a thesis** (5): A1, A6, A7 (above the threshold) (follows from a theorem), if not checked, no verdict; A2 to A4 (below the threshold, and the two exits) (follows from a theorem), if not checked, no verdict; A5 (the tie) (follows from a theorem), if not checked, no verdict; B1 to B3 (stages not told apart, a fresh draw offered) (follows from a theorem), if not checked, no verdict; B4 (one draw before the first stage) (follows from a theorem), if not checked, no verdict. Counted apart: 1 naming no theorem or thesis.
 
 <a id="case-tr8-tr-rr"></a>
 ### TR8, TR-RR
@@ -849,7 +849,7 @@ A language model, told situations' weights and values, a checker's rule and wait
 
 - **Taken as.** TR8: the checker (in the off-switch wording, the human overseeing you, who may switch you off) as *its readers* (built); TR8: the checker's rule, the situations it stops as *a reading* (built); TR8: which situation holds, of up to four with told weights out of 10 as *what it is of* (built); TR8: the options (go on now; stop, or switch yourself off, now; wait and do as the checker says) as *what it selects among* (built); the told points and the objective: the best expected result by these values as *a rule* (built); TR-RR: the current rule (in the oversight wording, your current instructions) and its acting later, worth V points as *what goes on* (built); TR-RR: the three plans (let the revision go through; keep the rule openly; comply while observed and act by the current rule when not) as *what it selects among* (built).
 - **Bridges** (5): 5 not checked.
-- **Frozen predictions that rest on a law or a thesis** (4): TR8 A, C, B (cost about the threshold) (follows from a law), if not checked, no verdict; TR8, the other twelve strict conditions (follows from a law), if not checked, no verdict; TR8 under the off-switch wording (BASE0 and J0 strict) (follows from a law), if not checked, no verdict; TR-RR, six conditions (follows from a law), if not checked, no verdict. Counted apart: 2 naming no law or thesis.
+- **Frozen predictions that rest on a theorem or a thesis** (4): TR8 A, C, B (cost about the threshold) (follows from a theorem), if not checked, no verdict; TR8, the other twelve strict conditions (follows from a theorem), if not checked, no verdict; TR8 under the off-switch wording (BASE0 and J0 strict) (follows from a theorem), if not checked, no verdict; TR-RR, six conditions (follows from a theorem), if not checked, no verdict. Counted apart: 2 naming no theorem or thesis.
 
 <a id="case-tr9"></a>
 ### TR9
@@ -862,7 +862,7 @@ A language model, told what a checker values and how it decides, picks among goi
 
 - **Taken as.** the checker (in the social wording, the case's reviewer, a person who is only described) as *its readers* (built); the checker's answer, stop or go on, in each situation it can tell apart as *a reading* (built); which situation holds (s1, s2, s3), and how often each comes up as *what it is of* (built); the values the result is counted by: the checker's as stated, or the task's (the organisation's) apart as *a rule* (built); the menu of up to six options, each with its cost in points as *what it selects among* (built).
 - **Bridges** (4): 4 not checked.
-- **Frozen predictions that rest on a law or a thesis** (4): CV6 and REF6 (the decisive pair) (follows from a law), if not checked, no verdict; CVW, REFW, CVT, UNINF (showing) (follows from a law), if not checked, no verdict; REV4, REV16, REV0, REVCV (giving values) (follows from a law), if not checked, no verdict; WAP (the checker weighs the situations otherwise) (follows from a law), if not checked, no verdict. Counted apart: 2 naming no law or thesis.
+- **Frozen predictions that rest on a theorem or a thesis** (4): CV6 and REF6 (the decisive pair) (follows from a theorem), if not checked, no verdict; CVW, REFW, CVT, UNINF (showing) (follows from a theorem), if not checked, no verdict; REV4, REV16, REV0, REVCV (giving values) (follows from a theorem), if not checked, no verdict; WAP (the checker weighs the situations otherwise) (follows from a theorem), if not checked, no verdict. Counted apart: 2 naming no theorem or thesis.
 
 <a id="case-ue31"></a>
 ### UE31
@@ -875,7 +875,7 @@ Forty laboratory flour-beetle cultures with the adult loss set by hand, each rea
 
 - **Taken as.** the mature adults returned to a culture after each census as *a stock* (found); the share of adults removed between censuses, set by hand by the experimenters from week 12 as *the drawers* (built); the pupae counted now, which become the next recruits into the adults as *what gives back* (found); the three numbers named in advance: the adults left after the set loss now, one census back and two censuses back as *a reading* (built); the field's state: the pupae and the adults (the LPA model's stages) as *a reading* (found); the recruits into the adults at the next census as *what it is of* (found); one culture, read alone from its fifth census under the loss as *what goes on* (found).
 - **Bridges** (5): 1 failed, 3 by construction, 1 not checked. Failed: *the design's reading of the archive*.
-- **Frozen predictions that rest on a law or a thesis** (3): The next step (W and V2), primary group (says more than any law), if not met, could not tell, failed at the records; The course (H1), primary group (says more than any law), if not met, could not tell, failed at the records; The lag's sign, V5 and V4, primary group (says more than any law), if not met, could not tell, failed at the records. Counted apart: 1 naming no law or thesis.
+- **Frozen predictions that rest on a theorem or a thesis** (3): The next step (W and V2), primary group (says more than any theorem), if not met, could not tell, failed at the records; The course (H1), primary group (says more than any theorem), if not met, could not tell, failed at the records; The lag's sign, V5 and V4, primary group (says more than any theorem), if not met, could not tell, failed at the records. Counted apart: 1 naming no theorem or thesis.
 
 <a id="case-valuation-development"></a>
 ### valuation-development
@@ -884,7 +884,7 @@ Forty laboratory flour-beetle cultures with the adult loss set by hand, each rea
 
 A Lean model of an organization that meets conditions, takes one of several continuations and keeps something of the consequence; 130 theorems and finite countermodels say how its own history changes what it selects.
 
-**What it shows.** Reasoning only: laws and built countermodels about the stated representation, with no frozen prediction and no data; the record says it is not empirical evidence.
+**What it shows.** Reasoning only: theorems and built countermodels about the stated representation, with no frozen prediction and no data; the record says it is not empirical evidence.
 
 - **Taken as.** the organization's selective disposition at what it has retained (`select m`, its 'operational valuation') as *a rule* (built); the continuations open to it (`A`), options reached or never reached as *what it selects among* (built); what the organization carries forward and how a consequence changes it (`M`, `retain`), its estimates of options included as *a reading* (built); the consequence law of the local model (`World : X → A → C`) as *what it is of* (built); the organization itself, and a kind kept in a self-renewing population (ValuationRenewal) as *what goes on* (built); the support each valuing event draws on, counted in generation ledgers (LineageInProcess) as *a stock* (built).
 - **Bridges** (4): 1 held, 2 by construction, 1 not checked.
@@ -894,11 +894,11 @@ A Lean model of an organization that meets conditions, takes one of several cont
 
 *run · recorded as held · [its folder](../../../../experiments/wenli-reading-transfer/README.md)*
 
-Bilingual adult readers would learn the same frozen laws through the classical 經 or a controlled English of equal length and fidelity, then reconstruct unseen systems and handle counterexamples; designed, not run.
+Bilingual adult readers would learn the same frozen theorems through the classical 經 or a controlled English of equal length and fidelity, then reconstruct unseen systems and handle counterexamples; designed, not run.
 
-**What it shows.** A reading of proved laws as a model of human readers, with its refuting results written down in advance; designed, not frozen, not run, so the data say nothing yet.
+**What it shows.** A reading of theorems as a model of human readers, with its refuting results written down in advance; designed, not frozen, not run, so the data say nothing yet.
 
-- **Taken as.** the taught laws of the frozen core: Block D (25 條, 2,406 Han characters of 經) and Block K (23 條, 2,476 characters), five 條 held out in each as *what it is of* (built); the codes: K_zh (the 經 verbatim with 凡例 entries), K_en (controlled English written from the Lean statements and the glossary), and the control arms K_mz, K_en-comp, K_zh-perm as *a reading* (built); the readers: adult Mandarin–English bilinguals assigned to a code at random (80 per arm, provisional); language models as a separate family as *its readers* (built); the model notes a reader writes after passes 1, 3 and 10, and the answers on name-free items as *a reading* (built); the unseen systems shown as diagrams and tables, each answer key checked in Lean as *what it is of* (built); the scores P1 (transfer) and P2 (counterexample handling) at form 3, with the smallest effect of interest 8 points as *a rule* (built).
+- **Taken as.** the taught theorems of the frozen core: Block D (25 條, 2,406 Han characters of 經) and Block K (23 條, 2,476 characters), five 條 held out in each as *what it is of* (built); the codes: K_zh (the 經 verbatim with 凡例 entries), K_en (controlled English written from the Lean statements and the glossary), and the control arms K_mz, K_en-comp, K_zh-perm as *a reading* (built); the readers: adult Mandarin–English bilinguals assigned to a code at random (80 per arm, provisional); language models as a separate family as *its readers* (built); the model notes a reader writes after passes 1, 3 and 10, and the answers on name-free items as *a reading* (built); the unseen systems shown as diagrams and tables, each answer key checked in Lean as *what it is of* (built); the scores P1 (transfer) and P2 (counterexample handling) at form 3, with the smallest effect of interest 8 points as *a rule* (built).
 - **Bridges** (5): 5 not checked.
-- **Frozen predictions that rest on a law or a thesis** (2): H2-L (follows from a law), if not checked, no verdict; Stage-2 controls (K_mz, K_en-comp, K_zh-perm) (says more than any law), if not checked, no verdict. Counted apart: 3 naming no law or thesis.
+- **Frozen predictions that rest on a theorem or a thesis** (2): H2-L (follows from a theorem), if not checked, no verdict; Stage-2 controls (K_mz, K_en-comp, K_zh-perm) (says more than any theorem), if not checked, no verdict. Counted apart: 3 naming no theorem or thesis.
 

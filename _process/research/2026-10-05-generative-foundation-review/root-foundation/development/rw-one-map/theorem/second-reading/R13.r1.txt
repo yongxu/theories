@@ -1,0 +1,3 @@
+521 REWORD Both theorems are of Confound's process only => Both theorems hold of Confound's process only
+557 REWORD burst_absorbs is the theorem of another dynamic => burst_absorbs is a theorem on another dynamic
+checked 23 changed, 29 kept

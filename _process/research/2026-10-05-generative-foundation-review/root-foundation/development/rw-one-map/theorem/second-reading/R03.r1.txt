@@ -1,0 +1,2 @@
+98 REWORD 过程自己的定理 => 就过程本身证明的
+checked 26 changed, 2 kept

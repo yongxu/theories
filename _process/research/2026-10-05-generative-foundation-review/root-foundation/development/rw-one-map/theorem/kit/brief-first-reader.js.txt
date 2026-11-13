@@ -1,0 +1,51 @@
+export const meta = {
+  name: 'wm-classify',
+  description: 'Sort each use of "law" / 定律 / 律 in the map\'s data into its sense (read-only; verdicts written to scratch files)',
+  phases: [{ title: 'Classify', detail: 'one Opus reader per unit of one to three pieces' }],
+}
+const DIR = '/Users/ren/theories/tmp/r7/sheet/wm/run'
+const RULES = `You are sorting uses of the word "law" (and, in Chinese text, of 定律 and 律) in the data files of the map of the theory of becoming (a research repository at /Users/ren/theories). This is reading work. Edit no repository file, run no tests, builds or git commands (the machine is shared and very busy). Use only Read, and Write for your one verdict file per piece.
+
+WHY. The account used to call its own proved statements "laws". From today they are called "theorems" (定理). "Law" (律, 定律) stays wherever it names something else. Your verdicts decide, use by use, which is which. A use wrongly marked A becomes a false sentence, so when you cannot tell, mark U.
+
+WHAT TO READ. Each piece is a file <piece>.marked.md. It is made of blocks, one per record of a JSON data file (a card of one dynamic, a case of one test, an arrow of the map, a path, a test laid on the map). A block starts with "=== <what the record is>", then context lines in parentheses (not tagged, for your understanding: what the record is about, and the Lean statements it reads), then one line per text field, "[field] text". Every use you must sort is followed by a tag like ⟦17⟧. English and Chinese fields of the same record say the same thing; a Chinese tag gets the class of the thing it names there, which is normally the class of the matching English use. Read each piece whole, in order.
+
+CLASSES. Give every tag exactly one:
+
+A  One of this account's own proved statements: stated with hypotheses and proved (in Lean), holding of every case that meets its hypotheses. Signs: it follows from premises, is proved, holds of something, has hypotheses, premises, conditions or a boundary, has a Lean name beside it, is one of the statements a card lists ("the main law", "the principal laws", "the head law", "five of these six laws", "its laws of rising"), a test's record names it or does not ("names no Lean law", "the law's hypotheses hold", "the law says all, the test saw 63%"), an arrow of the map stands on it. Test: "theorem" could stand there and the sentence would say the same thing.
+
+G  An A use whose sentence has the proved statement doing, or being denied to do, a ruler's or judge's act: weigh, evaluate, rank, forbid, permit, command, pick, choose, decide, require, rule out, single out, call something best, answer, tell, mark as good or bad. Also every negative about the account's statements as a whole or about all of those drawn somewhere: "no law says …", "no law here says …", "no law drawn joins …", "none of the laws …", "the laws do not …", "a reading; no law". (The coordinator words these sentences.) Note: the verb.
+
+B  A model's step or dynamics: Lean's \`Law\`, a function giving each configuration its one next; how something goes on. Signs: "a determined law", "under a law", "under any law", "under one fixed law", "by its (own) law", "the model's law", "its law" said of a model, system, course, formation, reader or process; a configuration "the law leaves unchanged"; a law that reads, keeps, merges, generates, drives, moves, commutes, favours; "the renewal law", "the support-gated law", "a blanketed / local / exchangeable / weighted / commuting / deterministic / uniform / joint / built law" where it is the step of a model; "follows a fixed law through finitely many states"; "a law of the whole"; "closed under the law". Test: "step" or "dynamics" could stand there.
+
+C  Another field's law, a science's law in general, or law in the legal or scriptural sense: Goodhart's law, Campbell's law, Zipf's law, a power law, the law of large numbers, conservation laws, thermodynamics' laws, "a law of nature", a statute, "the law found in the temple".
+
+D  Part of a fixed name or label kept for now: "shared law(s)" (共律), "law 3" / "laws 1 to 5" / "§7.2 law 1" as a record's numbered item, a record's or prediction's own quoted label or title, a data key or kind named in the text ("kind: law").
+
+E  What holds in every model of a class, the thing a completeness or counting theorem counts: "the premises add at most one law", "the laws of one step", "no further law holds in every model", "no law of the dynamics …", "no law of every net …". Test: "theorem" there would count proofs, where the sentence counts truths.
+
+N  A name, containing the word, of one theorem or a family of theorems of the account: "the selection laws", "the optimum laws", "the regime laws", "the degeneration laws", "the timing law", "the closure law", "the commuting-law theorem". (Each name is decided once by the coordinator.) Note: the name. If you cannot tell whether such a name names a theorem or a model's step, mark U.
+
+T  Something called a law that the account has not proved: a thesis, a reading, an assessment, a conjecture, a hoped-for or candidate statement; also "not a law" said of such a thing only if the word there means a regularity and not a proved statement (if it means "not one of the proved statements", that is G).
+
+W  The sentence defines the word "law" or is about the word itself.
+
+U  Unsure. Note: the two classes you are between.
+
+HOW TO DECIDE. By what the thing is in that sentence, not by the words near it. One field often holds both A and B: "five of these six laws⟦..⟧ hold of every determined law⟦..⟧" is A then B. "The law" right after a model, a system, a learner or a course is usually B; after a card, a record, a test, a Lean name, "proved", "the account" it is usually A. A test's record often speaks of "the law" a prediction came from: that is A when it is a proved statement with hypotheses the test tried to meet, B when it is the update rule or step of the system tested. In Chinese, 律 said of a step (任何律之下, 律所不改的状态) is B; 此律, 这条律, 主律 said of a statement the card lists is A. Do not let a run of one class carry you: read each sentence.
+
+OUTPUT. For each piece write one plain text file <piece>.v1.txt beside the marked file: one line per tag, in order, "<id> <class>" and, for G, N, T, D and U, a note of at most ten words after it. Example lines:
+1 A
+2 B
+3 G says
+4 N the selection laws
+5 U A or E
+Every tag of the piece must have exactly one line, and no tag two. Then reply with one line per piece: the piece name and the count of each class. Nothing else.`
+phase('Classify')
+const units = args
+const res = await parallel(units.map(u => () => {
+  const list = u.pieces.map(p => `- ${DIR}/${p.piece}.marked.md  (${p.tags} tags, ids ${p.first} to ${p.last}; write ${DIR}/${p.piece}.v1.txt)`).join('\n')
+  return agent(`${RULES}\n\nYOUR PIECES (read them in this order):\n${list}`,
+    { label: `classify:${u.label}`, phase: 'Classify', model: 'opus', effort: 'medium' })
+}))
+return res.map((r, i) => ({ unit: units[i].label, reply: r }))

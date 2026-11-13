@@ -1,0 +1,14668 @@
+{
+"1": {
+"file": "sheet",
+"path": [
+"about"
+],
+"start": 291,
+"end": 295,
+"word": "laws",
+"lang": "en",
+"piece": "sheet-01"
+},
+"2": {
+"file": "sheet",
+"path": [
+"lead_en"
+],
+"start": 386,
+"end": 389,
+"word": "law",
+"lang": "en",
+"piece": "sheet-01"
+},
+"3": {
+"file": "sheet",
+"path": [
+"lead_en"
+],
+"start": 581,
+"end": 584,
+"word": "law",
+"lang": "en",
+"piece": "sheet-01"
+},
+"4": {
+"file": "sheet",
+"path": [
+"lead_zh"
+],
+"start": 152,
+"end": 154,
+"word": "定律",
+"lang": "zh",
+"piece": "sheet-01"
+},
+"5": {
+"file": "sheet",
+"path": [
+"lead_zh"
+],
+"start": 230,
+"end": 232,
+"word": "定律",
+"lang": "zh",
+"piece": "sheet-01"
+},
+"6": {
+"file": "sheet",
+"path": [
+"boxes",
+11,
+"known_en",
+0
+],
+"start": 15,
+"end": 18,
+"word": "law",
+"lang": "en",
+"piece": "sheet-01"
+},
+"7": {
+"file": "sheet",
+"path": [
+"boxes",
+17,
+"known_en",
+0
+],
+"start": 11,
+"end": 14,
+"word": "law",
+"lang": "en",
+"piece": "sheet-01"
+},
+"8": {
+"file": "sheet",
+"path": [
+"boxes",
+17,
+"known_zh",
+0
+],
+"start": 4,
+"end": 6,
+"word": "定律",
+"lang": "zh",
+"piece": "sheet-01"
+},
+"9": {
+"file": "passages",
+"path": [
+"about"
+],
+"start": 41,
+"end": 44,
+"word": "law",
+"lang": "en",
+"piece": "passages-01"
+},
+"10": {
+"file": "passages",
+"path": [
+"passages",
+0,
+"en"
+],
+"start": 118,
+"end": 122,
+"word": "laws",
+"lang": "en",
+"piece": "passages-01"
+},
+"11": {
+"file": "passages",
+"path": [
+"passages",
+0,
+"zh"
+],
+"start": 28,
+"end": 30,
+"word": "定律",
+"lang": "zh",
+"piece": "passages-01"
+},
+"12": {
+"file": "passages",
+"path": [
+"passages",
+6,
+"en"
+],
+"start": 140,
+"end": 143,
+"word": "law",
+"lang": "en",
+"piece": "passages-01"
+},
+"13": {
+"file": "passages",
+"path": [
+"passages",
+6,
+"zh"
+],
+"start": 50,
+"end": 52,
+"word": "定律",
+"lang": "zh",
+"piece": "passages-01"
+},
+"14": {
+"file": "passages",
+"path": [
+"passages",
+14,
+"en"
+],
+"start": 152,
+"end": 155,
+"word": "law",
+"lang": "en",
+"piece": "passages-01"
+},
+"15": {
+"file": "passages",
+"path": [
+"passages",
+14,
+"zh"
+],
+"start": 62,
+"end": 64,
+"word": "定律",
+"lang": "zh",
+"piece": "passages-01"
+},
+"16": {
+"file": "passages",
+"path": [
+"passages",
+17,
+"en"
+],
+"start": 161,
+"end": 164,
+"word": "law",
+"lang": "en",
+"piece": "passages-01"
+},
+"17": {
+"file": "passages",
+"path": [
+"passages",
+17,
+"zh"
+],
+"start": 67,
+"end": 69,
+"word": "定律",
+"lang": "zh",
+"piece": "passages-01"
+},
+"18": {
+"file": "passages",
+"path": [
+"passages",
+24,
+"en"
+],
+"start": 167,
+"end": 170,
+"word": "law",
+"lang": "en",
+"piece": "passages-01"
+},
+"19": {
+"file": "passages",
+"path": [
+"passages",
+24,
+"zh"
+],
+"start": 67,
+"end": 69,
+"word": "定律",
+"lang": "zh",
+"piece": "passages-01"
+},
+"20": {
+"file": "passages",
+"path": [
+"passages",
+25,
+"en"
+],
+"start": 125,
+"end": 128,
+"word": "law",
+"lang": "en",
+"piece": "passages-01"
+},
+"21": {
+"file": "passages",
+"path": [
+"passages",
+25,
+"zh"
+],
+"start": 44,
+"end": 46,
+"word": "定律",
+"lang": "zh",
+"piece": "passages-01"
+},
+"22": {
+"file": "passages",
+"path": [
+"passages",
+28,
+"en"
+],
+"start": 92,
+"end": 95,
+"word": "law",
+"lang": "en",
+"piece": "passages-01"
+},
+"23": {
+"file": "passages",
+"path": [
+"passages",
+28,
+"zh"
+],
+"start": 25,
+"end": 27,
+"word": "定律",
+"lang": "zh",
+"piece": "passages-01"
+},
+"24": {
+"file": "passages",
+"path": [
+"passages",
+31,
+"en"
+],
+"start": 92,
+"end": 95,
+"word": "law",
+"lang": "en",
+"piece": "passages-01"
+},
+"25": {
+"file": "passages",
+"path": [
+"passages",
+31,
+"en"
+],
+"start": 455,
+"end": 458,
+"word": "law",
+"lang": "en",
+"piece": "passages-01"
+},
+"26": {
+"file": "passages",
+"path": [
+"passages",
+31,
+"zh"
+],
+"start": 25,
+"end": 27,
+"word": "定律",
+"lang": "zh",
+"piece": "passages-01"
+},
+"27": {
+"file": "passages",
+"path": [
+"passages",
+31,
+"zh"
+],
+"start": 163,
+"end": 165,
+"word": "定律",
+"lang": "zh",
+"piece": "passages-01"
+},
+"28": {
+"file": "passages",
+"path": [
+"passages",
+45,
+"more",
+1,
+"en"
+],
+"start": 77,
+"end": 80,
+"word": "law",
+"lang": "en",
+"piece": "passages-01"
+},
+"29": {
+"file": "passages",
+"path": [
+"passages",
+48,
+"more",
+0,
+"en"
+],
+"start": 73,
+"end": 76,
+"word": "law",
+"lang": "en",
+"piece": "passages-01"
+},
+"30": {
+"file": "passages",
+"path": [
+"passages",
+54,
+"en"
+],
+"start": 205,
+"end": 208,
+"word": "law",
+"lang": "en",
+"piece": "passages-01"
+},
+"31": {
+"file": "passages",
+"path": [
+"passages",
+54,
+"zh"
+],
+"start": 60,
+"end": 62,
+"word": "定律",
+"lang": "zh",
+"piece": "passages-01"
+},
+"32": {
+"file": "passages",
+"path": [
+"passages",
+73,
+"en"
+],
+"start": 32,
+"end": 35,
+"word": "law",
+"lang": "en",
+"piece": "passages-01"
+},
+"33": {
+"file": "passages",
+"path": [
+"passages",
+97,
+"en"
+],
+"start": 43,
+"end": 46,
+"word": "law",
+"lang": "en",
+"piece": "passages-01"
+},
+"34": {
+"file": "passages",
+"path": [
+"passages",
+104,
+"en"
+],
+"start": 57,
+"end": 61,
+"word": "laws",
+"lang": "en",
+"piece": "passages-01"
+},
+"35": {
+"file": "passages",
+"path": [
+"passages",
+104,
+"zh"
+],
+"start": 18,
+"end": 20,
+"word": "定律",
+"lang": "zh",
+"piece": "passages-01"
+},
+"36": {
+"file": "passages",
+"path": [
+"stays",
+9,
+"en"
+],
+"start": 3,
+"end": 6,
+"word": "law",
+"lang": "en",
+"piece": "passages-01"
+},
+"37": {
+"file": "passages",
+"path": [
+"stays",
+9,
+"zh"
+],
+"start": 4,
+"end": 6,
+"word": "定律",
+"lang": "zh",
+"piece": "passages-01"
+},
+"38": {
+"file": "passages",
+"path": [
+"stays",
+17,
+"en"
+],
+"start": 8,
+"end": 11,
+"word": "law",
+"lang": "en",
+"piece": "passages-01"
+},
+"39": {
+"file": "passages",
+"path": [
+"stays",
+18,
+"en"
+],
+"start": 112,
+"end": 115,
+"word": "law",
+"lang": "en",
+"piece": "passages-01"
+},
+"40": {
+"file": "passages",
+"path": [
+"stays",
+23,
+"en"
+],
+"start": 32,
+"end": 35,
+"word": "law",
+"lang": "en",
+"piece": "passages-01"
+},
+"41": {
+"file": "passages",
+"path": [
+"stays",
+23,
+"en"
+],
+"start": 105,
+"end": 108,
+"word": "law",
+"lang": "en",
+"piece": "passages-01"
+},
+"42": {
+"file": "paths",
+"path": [
+"paths",
+0,
+"sections",
+0,
+"steps",
+2,
+"say_en"
+],
+"start": 138,
+"end": 142,
+"word": "laws",
+"lang": "en",
+"piece": "paths-01"
+},
+"43": {
+"file": "paths",
+"path": [
+"paths",
+0,
+"sections",
+0,
+"steps",
+2,
+"say_zh"
+],
+"start": 43,
+"end": 45,
+"word": "定律",
+"lang": "zh",
+"piece": "paths-01"
+},
+"44": {
+"file": "paths",
+"path": [
+"paths",
+0,
+"sections",
+0,
+"steps",
+5,
+"test",
+"en"
+],
+"start": 280,
+"end": 283,
+"word": "law",
+"lang": "en",
+"piece": "paths-01"
+},
+"45": {
+"file": "paths",
+"path": [
+"paths",
+0,
+"sections",
+0,
+"steps",
+5,
+"test",
+"zh"
+],
+"start": 94,
+"end": 96,
+"word": "定律",
+"lang": "zh",
+"piece": "paths-01"
+},
+"46": {
+"file": "paths",
+"path": [
+"paths",
+0,
+"sections",
+3,
+"steps",
+0,
+"test",
+"en"
+],
+"start": 115,
+"end": 118,
+"word": "law",
+"lang": "en",
+"piece": "paths-01"
+},
+"47": {
+"file": "paths",
+"path": [
+"paths",
+0,
+"sections",
+3,
+"steps",
+0,
+"test",
+"zh"
+],
+"start": 36,
+"end": 38,
+"word": "定律",
+"lang": "zh",
+"piece": "paths-01"
+},
+"48": {
+"file": "paths",
+"path": [
+"paths",
+0,
+"sections",
+4,
+"en"
+],
+"start": 8,
+"end": 11,
+"word": "law",
+"lang": "en",
+"piece": "paths-01"
+},
+"49": {
+"file": "paths",
+"path": [
+"paths",
+0,
+"sections",
+4,
+"zh"
+],
+"start": 0,
+"end": 2,
+"word": "定律",
+"lang": "zh",
+"piece": "paths-01"
+},
+"50": {
+"file": "paths",
+"path": [
+"paths",
+0,
+"sections",
+4,
+"steps",
+0,
+"say_en"
+],
+"start": 3,
+"end": 6,
+"word": "law",
+"lang": "en",
+"piece": "paths-01"
+},
+"51": {
+"file": "paths",
+"path": [
+"paths",
+0,
+"sections",
+4,
+"steps",
+0,
+"say_zh"
+],
+"start": 19,
+"end": 21,
+"word": "定律",
+"lang": "zh",
+"piece": "paths-01"
+},
+"52": {
+"file": "paths",
+"path": [
+"paths",
+0,
+"sections",
+4,
+"steps",
+1,
+"say_en"
+],
+"start": 22,
+"end": 25,
+"word": "law",
+"lang": "en",
+"piece": "paths-01"
+},
+"53": {
+"file": "paths",
+"path": [
+"paths",
+0,
+"sections",
+4,
+"steps",
+1,
+"say_zh"
+],
+"start": 8,
+"end": 10,
+"word": "定律",
+"lang": "zh",
+"piece": "paths-01"
+},
+"54": {
+"file": "paths",
+"path": [
+"paths",
+0,
+"shows_en",
+1
+],
+"start": 22,
+"end": 26,
+"word": "laws",
+"lang": "en",
+"piece": "paths-01"
+},
+"55": {
+"file": "paths",
+"path": [
+"paths",
+0,
+"shows_en",
+1
+],
+"start": 133,
+"end": 136,
+"word": "law",
+"lang": "en",
+"piece": "paths-01"
+},
+"56": {
+"file": "paths",
+"path": [
+"paths",
+0,
+"shows_en",
+1
+],
+"start": 189,
+"end": 192,
+"word": "law",
+"lang": "en",
+"piece": "paths-01"
+},
+"57": {
+"file": "paths",
+"path": [
+"paths",
+0,
+"shows_en",
+3
+],
+"start": 169,
+"end": 172,
+"word": "law",
+"lang": "en",
+"piece": "paths-01"
+},
+"58": {
+"file": "paths",
+"path": [
+"paths",
+0,
+"shows_en",
+3
+],
+"start": 280,
+"end": 283,
+"word": "law",
+"lang": "en",
+"piece": "paths-01"
+},
+"59": {
+"file": "paths",
+"path": [
+"paths",
+0,
+"shows_en",
+3
+],
+"start": 627,
+"end": 630,
+"word": "law",
+"lang": "en",
+"piece": "paths-01"
+},
+"60": {
+"file": "paths",
+"path": [
+"paths",
+0,
+"shows_en",
+4
+],
+"start": 6,
+"end": 9,
+"word": "law",
+"lang": "en",
+"piece": "paths-01"
+},
+"61": {
+"file": "paths",
+"path": [
+"paths",
+0,
+"shows_zh",
+1
+],
+"start": 0,
+"end": 2,
+"word": "定律",
+"lang": "zh",
+"piece": "paths-01"
+},
+"62": {
+"file": "paths",
+"path": [
+"paths",
+0,
+"shows_zh",
+1
+],
+"start": 59,
+"end": 61,
+"word": "定律",
+"lang": "zh",
+"piece": "paths-01"
+},
+"63": {
+"file": "paths",
+"path": [
+"paths",
+0,
+"shows_zh",
+1
+],
+"start": 76,
+"end": 78,
+"word": "定律",
+"lang": "zh",
+"piece": "paths-01"
+},
+"64": {
+"file": "paths",
+"path": [
+"paths",
+0,
+"shows_zh",
+3
+],
+"start": 8,
+"end": 10,
+"word": "定律",
+"lang": "zh",
+"piece": "paths-01"
+},
+"65": {
+"file": "paths",
+"path": [
+"paths",
+0,
+"shows_zh",
+3
+],
+"start": 66,
+"end": 68,
+"word": "定律",
+"lang": "zh",
+"piece": "paths-01"
+},
+"66": {
+"file": "paths",
+"path": [
+"paths",
+0,
+"shows_zh",
+3
+],
+"start": 117,
+"end": 119,
+"word": "定律",
+"lang": "zh",
+"piece": "paths-01"
+},
+"67": {
+"file": "paths",
+"path": [
+"paths",
+0,
+"shows_zh",
+3
+],
+"start": 276,
+"end": 278,
+"word": "定律",
+"lang": "zh",
+"piece": "paths-01"
+},
+"68": {
+"file": "paths",
+"path": [
+"paths",
+0,
+"shows_zh",
+4
+],
+"start": 2,
+"end": 4,
+"word": "定律",
+"lang": "zh",
+"piece": "paths-01"
+},
+"69": {
+"file": "paths",
+"path": [
+"paths",
+0,
+"want_en"
+],
+"start": 378,
+"end": 381,
+"word": "law",
+"lang": "en",
+"piece": "paths-01"
+},
+"70": {
+"file": "paths",
+"path": [
+"paths",
+0,
+"want_zh"
+],
+"start": 126,
+"end": 128,
+"word": "定律",
+"lang": "zh",
+"piece": "paths-01"
+},
+"71": {
+"file": "paths",
+"path": [
+"paths",
+0,
+"want_zh"
+],
+"start": 276,
+"end": 278,
+"word": "定律",
+"lang": "zh",
+"piece": "paths-01"
+},
+"72": {
+"file": "paths",
+"path": [
+"paths",
+0,
+"known",
+0,
+"en"
+],
+"start": 11,
+"end": 14,
+"word": "law",
+"lang": "en",
+"piece": "paths-01"
+},
+"73": {
+"file": "paths",
+"path": [
+"paths",
+0,
+"known",
+0,
+"zh"
+],
+"start": 4,
+"end": 6,
+"word": "定律",
+"lang": "zh",
+"piece": "paths-01"
+},
+"74": {
+"file": "paths",
+"path": [
+"paths",
+1,
+"sections",
+0,
+"steps",
+1,
+"say_en"
+],
+"start": 118,
+"end": 122,
+"word": "laws",
+"lang": "en",
+"piece": "paths-01"
+},
+"75": {
+"file": "paths",
+"path": [
+"paths",
+1,
+"sections",
+0,
+"steps",
+1,
+"say_zh"
+],
+"start": 26,
+"end": 28,
+"word": "定律",
+"lang": "zh",
+"piece": "paths-01"
+},
+"76": {
+"file": "paths",
+"path": [
+"paths",
+1,
+"sections",
+3,
+"steps",
+0,
+"say_en"
+],
+"start": 126,
+"end": 129,
+"word": "law",
+"lang": "en",
+"piece": "paths-01"
+},
+"77": {
+"file": "paths",
+"path": [
+"paths",
+1,
+"sections",
+3,
+"steps",
+0,
+"say_zh"
+],
+"start": 50,
+"end": 52,
+"word": "定律",
+"lang": "zh",
+"piece": "paths-01"
+},
+"78": {
+"file": "paths",
+"path": [
+"paths",
+1,
+"shows_en",
+1
+],
+"start": 37,
+"end": 40,
+"word": "law",
+"lang": "en",
+"piece": "paths-01"
+},
+"79": {
+"file": "paths",
+"path": [
+"paths",
+1,
+"shows_en",
+3
+],
+"start": 9,
+"end": 13,
+"word": "laws",
+"lang": "en",
+"piece": "paths-01"
+},
+"80": {
+"file": "paths",
+"path": [
+"paths",
+1,
+"shows_en",
+3
+],
+"start": 93,
+"end": 96,
+"word": "law",
+"lang": "en",
+"piece": "paths-01"
+},
+"81": {
+"file": "paths",
+"path": [
+"paths",
+1,
+"shows_zh",
+0
+],
+"start": 20,
+"end": 22,
+"word": "定律",
+"lang": "zh",
+"piece": "paths-01"
+},
+"82": {
+"file": "paths",
+"path": [
+"paths",
+1,
+"shows_zh",
+1
+],
+"start": 19,
+"end": 21,
+"word": "定律",
+"lang": "zh",
+"piece": "paths-01"
+},
+"83": {
+"file": "paths",
+"path": [
+"paths",
+1,
+"shows_zh",
+3
+],
+"start": 3,
+"end": 5,
+"word": "定律",
+"lang": "zh",
+"piece": "paths-01"
+},
+"84": {
+"file": "paths",
+"path": [
+"paths",
+1,
+"shows_zh",
+3
+],
+"start": 52,
+"end": 54,
+"word": "定律",
+"lang": "zh",
+"piece": "paths-01"
+},
+"85": {
+"file": "paths",
+"path": [
+"paths",
+2,
+"sections",
+0,
+"steps",
+1,
+"say_en"
+],
+"start": 32,
+"end": 35,
+"word": "law",
+"lang": "en",
+"piece": "paths-01"
+},
+"86": {
+"file": "paths",
+"path": [
+"paths",
+2,
+"shows_en",
+0
+],
+"start": 171,
+"end": 174,
+"word": "law",
+"lang": "en",
+"piece": "paths-01"
+},
+"87": {
+"file": "paths",
+"path": [
+"paths",
+2,
+"shows_en",
+3
+],
+"start": 109,
+"end": 112,
+"word": "law",
+"lang": "en",
+"piece": "paths-01"
+},
+"88": {
+"file": "paths",
+"path": [
+"paths",
+2,
+"shows_zh",
+3
+],
+"start": 43,
+"end": 45,
+"word": "定律",
+"lang": "zh",
+"piece": "paths-01"
+},
+"89": {
+"file": "paths",
+"path": [
+"paths",
+3,
+"shows_en",
+0
+],
+"start": 296,
+"end": 299,
+"word": "law",
+"lang": "en",
+"piece": "paths-01"
+},
+"90": {
+"file": "paths",
+"path": [
+"paths",
+3,
+"shows_en",
+1
+],
+"start": 148,
+"end": 151,
+"word": "law",
+"lang": "en",
+"piece": "paths-01"
+},
+"91": {
+"file": "paths",
+"path": [
+"paths",
+3,
+"shows_en",
+3
+],
+"start": 378,
+"end": 381,
+"word": "law",
+"lang": "en",
+"piece": "paths-01"
+},
+"92": {
+"file": "paths",
+"path": [
+"paths",
+3,
+"shows_zh",
+0
+],
+"start": 133,
+"end": 135,
+"word": "定律",
+"lang": "zh",
+"piece": "paths-01"
+},
+"93": {
+"file": "paths",
+"path": [
+"paths",
+3,
+"shows_zh",
+1
+],
+"start": 58,
+"end": 60,
+"word": "定律",
+"lang": "zh",
+"piece": "paths-01"
+},
+"94": {
+"file": "paths",
+"path": [
+"paths",
+3,
+"shows_zh",
+3
+],
+"start": 140,
+"end": 142,
+"word": "定律",
+"lang": "zh",
+"piece": "paths-01"
+},
+"95": {
+"file": "paths",
+"path": [
+"paths",
+4,
+"shows_en",
+2
+],
+"start": 123,
+"end": 126,
+"word": "law",
+"lang": "en",
+"piece": "paths-01"
+},
+"96": {
+"file": "paths",
+"path": [
+"paths",
+4,
+"shows_en",
+3
+],
+"start": 8,
+"end": 11,
+"word": "law",
+"lang": "en",
+"piece": "paths-01"
+},
+"97": {
+"file": "paths",
+"path": [
+"paths",
+4,
+"shows_en",
+3
+],
+"start": 147,
+"end": 151,
+"word": "laws",
+"lang": "en",
+"piece": "paths-01"
+},
+"98": {
+"file": "paths",
+"path": [
+"paths",
+4,
+"shows_zh",
+0
+],
+"start": 5,
+"end": 7,
+"word": "定律",
+"lang": "zh",
+"piece": "paths-01"
+},
+"99": {
+"file": "paths",
+"path": [
+"paths",
+4,
+"shows_zh",
+2
+],
+"start": 53,
+"end": 55,
+"word": "定律",
+"lang": "zh",
+"piece": "paths-01"
+},
+"100": {
+"file": "paths",
+"path": [
+"paths",
+4,
+"shows_zh",
+3
+],
+"start": 3,
+"end": 5,
+"word": "定律",
+"lang": "zh",
+"piece": "paths-01"
+},
+"101": {
+"file": "paths",
+"path": [
+"paths",
+4,
+"shows_zh",
+3
+],
+"start": 54,
+"end": 56,
+"word": "定律",
+"lang": "zh",
+"piece": "paths-01"
+},
+"102": {
+"file": "laid",
+"path": [
+"tests",
+0,
+"broke_en"
+],
+"start": 555,
+"end": 558,
+"word": "law",
+"lang": "en",
+"piece": "laid-01"
+},
+"103": {
+"file": "laid",
+"path": [
+"tests",
+0,
+"broke_zh"
+],
+"start": 235,
+"end": 237,
+"word": "定律",
+"lang": "zh",
+"piece": "laid-01"
+},
+"104": {
+"file": "laid",
+"path": [
+"tests",
+0,
+"broke_zh"
+],
+"start": 243,
+"end": 245,
+"word": "定律",
+"lang": "zh",
+"piece": "laid-01"
+},
+"105": {
+"file": "laid",
+"path": [
+"tests",
+0,
+"line_en"
+],
+"start": 441,
+"end": 444,
+"word": "law",
+"lang": "en",
+"piece": "laid-01"
+},
+"106": {
+"file": "laid",
+"path": [
+"tests",
+0,
+"line_zh"
+],
+"start": 164,
+"end": 166,
+"word": "定律",
+"lang": "zh",
+"piece": "laid-01"
+},
+"107": {
+"file": "laid",
+"path": [
+"tests",
+1,
+"broke_en"
+],
+"start": 17,
+"end": 20,
+"word": "law",
+"lang": "en",
+"piece": "laid-01"
+},
+"108": {
+"file": "laid",
+"path": [
+"tests",
+1,
+"broke_en"
+],
+"start": 225,
+"end": 228,
+"word": "law",
+"lang": "en",
+"piece": "laid-01"
+},
+"109": {
+"file": "laid",
+"path": [
+"tests",
+1,
+"broke_zh"
+],
+"start": 10,
+"end": 12,
+"word": "定律",
+"lang": "zh",
+"piece": "laid-01"
+},
+"110": {
+"file": "laid",
+"path": [
+"tests",
+1,
+"broke_zh"
+],
+"start": 89,
+"end": 91,
+"word": "定律",
+"lang": "zh",
+"piece": "laid-01"
+},
+"111": {
+"file": "laid",
+"path": [
+"tests",
+2,
+"after_en"
+],
+"start": 100,
+"end": 104,
+"word": "laws",
+"lang": "en",
+"piece": "laid-01"
+},
+"112": {
+"file": "laid",
+"path": [
+"tests",
+2,
+"after_zh"
+],
+"start": 53,
+"end": 55,
+"word": "定律",
+"lang": "zh",
+"piece": "laid-01"
+},
+"113": {
+"file": "laid",
+"path": [
+"tests",
+2,
+"pins",
+0,
+"seen_en"
+],
+"start": 134,
+"end": 137,
+"word": "law",
+"lang": "en",
+"piece": "laid-01"
+},
+"114": {
+"file": "laid",
+"path": [
+"tests",
+2,
+"pins",
+0,
+"seen_zh"
+],
+"start": 50,
+"end": 52,
+"word": "定律",
+"lang": "zh",
+"piece": "laid-01"
+},
+"115": {
+"file": "laid",
+"path": [
+"tests",
+2,
+"pins",
+1,
+"seen_en"
+],
+"start": 61,
+"end": 64,
+"word": "law",
+"lang": "en",
+"piece": "laid-01"
+},
+"116": {
+"file": "laid",
+"path": [
+"tests",
+2,
+"pins",
+1,
+"seen_zh"
+],
+"start": 30,
+"end": 32,
+"word": "定律",
+"lang": "zh",
+"piece": "laid-01"
+},
+"117": {
+"file": "laid",
+"path": [
+"tests",
+3,
+"broke_en"
+],
+"start": 10,
+"end": 13,
+"word": "law",
+"lang": "en",
+"piece": "laid-01"
+},
+"118": {
+"file": "laid",
+"path": [
+"tests",
+3,
+"broke_en"
+],
+"start": 288,
+"end": 292,
+"word": "laws",
+"lang": "en",
+"piece": "laid-01"
+},
+"119": {
+"file": "laid",
+"path": [
+"tests",
+3,
+"broke_zh"
+],
+"start": 4,
+"end": 6,
+"word": "定律",
+"lang": "zh",
+"piece": "laid-01"
+},
+"120": {
+"file": "laid",
+"path": [
+"tests",
+3,
+"broke_zh"
+],
+"start": 126,
+"end": 128,
+"word": "定律",
+"lang": "zh",
+"piece": "laid-01"
+},
+"121": {
+"file": "laid",
+"path": [
+"tests",
+4,
+"said_en"
+],
+"start": 4,
+"end": 7,
+"word": "law",
+"lang": "en",
+"piece": "laid-01"
+},
+"122": {
+"file": "laid",
+"path": [
+"tests",
+4,
+"said_en"
+],
+"start": 342,
+"end": 345,
+"word": "law",
+"lang": "en",
+"piece": "laid-01"
+},
+"123": {
+"file": "laid",
+"path": [
+"tests",
+4,
+"said_zh"
+],
+"start": 0,
+"end": 2,
+"word": "定律",
+"lang": "zh",
+"piece": "laid-01"
+},
+"124": {
+"file": "laid",
+"path": [
+"tests",
+4,
+"said_zh"
+],
+"start": 127,
+"end": 129,
+"word": "定律",
+"lang": "zh",
+"piece": "laid-01"
+},
+"125": {
+"file": "laid",
+"path": [
+"tests",
+4,
+"seen_en"
+],
+"start": 195,
+"end": 198,
+"word": "law",
+"lang": "en",
+"piece": "laid-01"
+},
+"126": {
+"file": "laid",
+"path": [
+"tests",
+4,
+"seen_en"
+],
+"start": 370,
+"end": 373,
+"word": "law",
+"lang": "en",
+"piece": "laid-01"
+},
+"127": {
+"file": "laid",
+"path": [
+"tests",
+4,
+"seen_zh"
+],
+"start": 82,
+"end": 84,
+"word": "定律",
+"lang": "zh",
+"piece": "laid-01"
+},
+"128": {
+"file": "laid",
+"path": [
+"tests",
+4,
+"seen_zh"
+],
+"start": 149,
+"end": 151,
+"word": "定律",
+"lang": "zh",
+"piece": "laid-01"
+},
+"129": {
+"file": "laid",
+"path": [
+"tests",
+4,
+"broke_en"
+],
+"start": 21,
+"end": 24,
+"word": "law",
+"lang": "en",
+"piece": "laid-01"
+},
+"130": {
+"file": "laid",
+"path": [
+"tests",
+4,
+"broke_en"
+],
+"start": 412,
+"end": 415,
+"word": "law",
+"lang": "en",
+"piece": "laid-01"
+},
+"131": {
+"file": "laid",
+"path": [
+"tests",
+4,
+"broke_zh"
+],
+"start": 12,
+"end": 14,
+"word": "定律",
+"lang": "zh",
+"piece": "laid-01"
+},
+"132": {
+"file": "laid",
+"path": [
+"tests",
+4,
+"broke_zh"
+],
+"start": 131,
+"end": 133,
+"word": "定律",
+"lang": "zh",
+"piece": "laid-01"
+},
+"133": {
+"file": "laid",
+"path": [
+"tests",
+4,
+"after_en"
+],
+"start": 269,
+"end": 272,
+"word": "law",
+"lang": "en",
+"piece": "laid-01"
+},
+"134": {
+"file": "laid",
+"path": [
+"tests",
+4,
+"after_zh"
+],
+"start": 105,
+"end": 107,
+"word": "定律",
+"lang": "zh",
+"piece": "laid-01"
+},
+"135": {
+"file": "laid",
+"path": [
+"tests",
+4,
+"pins",
+0,
+"seen_en"
+],
+"start": 100,
+"end": 103,
+"word": "law",
+"lang": "en",
+"piece": "laid-01"
+},
+"136": {
+"file": "laid",
+"path": [
+"tests",
+4,
+"pins",
+0,
+"seen_zh"
+],
+"start": 32,
+"end": 34,
+"word": "定律",
+"lang": "zh",
+"piece": "laid-01"
+},
+"137": {
+"file": "laid",
+"path": [
+"tests",
+4,
+"line_en"
+],
+"start": 376,
+"end": 379,
+"word": "law",
+"lang": "en",
+"piece": "laid-01"
+},
+"138": {
+"file": "laid",
+"path": [
+"tests",
+4,
+"line_en"
+],
+"start": 385,
+"end": 388,
+"word": "law",
+"lang": "en",
+"piece": "laid-01"
+},
+"139": {
+"file": "laid",
+"path": [
+"tests",
+4,
+"line_zh"
+],
+"start": 128,
+"end": 130,
+"word": "定律",
+"lang": "zh",
+"piece": "laid-01"
+},
+"140": {
+"file": "laid",
+"path": [
+"tests",
+4,
+"line_zh"
+],
+"start": 131,
+"end": 133,
+"word": "定律",
+"lang": "zh",
+"piece": "laid-01"
+},
+"141": {
+"file": "laid",
+"path": [
+"tests",
+5,
+"broke_en"
+],
+"start": 12,
+"end": 15,
+"word": "law",
+"lang": "en",
+"piece": "laid-01"
+},
+"142": {
+"file": "laid",
+"path": [
+"tests",
+5,
+"broke_en"
+],
+"start": 166,
+"end": 169,
+"word": "law",
+"lang": "en",
+"piece": "laid-01"
+},
+"143": {
+"file": "laid",
+"path": [
+"tests",
+5,
+"broke_zh"
+],
+"start": 0,
+"end": 2,
+"word": "定律",
+"lang": "zh",
+"piece": "laid-01"
+},
+"144": {
+"file": "laid",
+"path": [
+"tests",
+5,
+"broke_zh"
+],
+"start": 55,
+"end": 57,
+"word": "定律",
+"lang": "zh",
+"piece": "laid-01"
+},
+"145": {
+"file": "laid",
+"path": [
+"tests",
+5,
+"pins",
+3,
+"en"
+],
+"start": 63,
+"end": 66,
+"word": "law",
+"lang": "en",
+"piece": "laid-01"
+},
+"146": {
+"file": "laid",
+"path": [
+"tests",
+5,
+"pins",
+3,
+"zh"
+],
+"start": 16,
+"end": 18,
+"word": "定律",
+"lang": "zh",
+"piece": "laid-01"
+},
+"147": {
+"file": "laid",
+"path": [
+"tests",
+6,
+"said_en"
+],
+"start": 287,
+"end": 290,
+"word": "law",
+"lang": "en",
+"piece": "laid-01"
+},
+"148": {
+"file": "laid",
+"path": [
+"tests",
+6,
+"said_zh"
+],
+"start": 126,
+"end": 128,
+"word": "定律",
+"lang": "zh",
+"piece": "laid-01"
+},
+"149": {
+"file": "laid",
+"path": [
+"tests",
+6,
+"seen_en"
+],
+"start": 96,
+"end": 99,
+"word": "law",
+"lang": "en",
+"piece": "laid-01"
+},
+"150": {
+"file": "laid",
+"path": [
+"tests",
+6,
+"seen_zh"
+],
+"start": 37,
+"end": 39,
+"word": "定律",
+"lang": "zh",
+"piece": "laid-01"
+},
+"151": {
+"file": "laid",
+"path": [
+"tests",
+6,
+"broke_en"
+],
+"start": 22,
+"end": 25,
+"word": "law",
+"lang": "en",
+"piece": "laid-01"
+},
+"152": {
+"file": "laid",
+"path": [
+"tests",
+6,
+"broke_en"
+],
+"start": 144,
+"end": 147,
+"word": "law",
+"lang": "en",
+"piece": "laid-01"
+},
+"153": {
+"file": "laid",
+"path": [
+"tests",
+6,
+"broke_zh"
+],
+"start": 8,
+"end": 10,
+"word": "定律",
+"lang": "zh",
+"piece": "laid-01"
+},
+"154": {
+"file": "laid",
+"path": [
+"tests",
+6,
+"broke_zh"
+],
+"start": 47,
+"end": 49,
+"word": "定律",
+"lang": "zh",
+"piece": "laid-01"
+},
+"155": {
+"file": "laid",
+"path": [
+"tests",
+6,
+"after_en"
+],
+"start": 4,
+"end": 7,
+"word": "law",
+"lang": "en",
+"piece": "laid-01"
+},
+"156": {
+"file": "laid",
+"path": [
+"tests",
+6,
+"after_en"
+],
+"start": 119,
+"end": 122,
+"word": "law",
+"lang": "en",
+"piece": "laid-01"
+},
+"157": {
+"file": "laid",
+"path": [
+"tests",
+6,
+"after_zh"
+],
+"start": 0,
+"end": 2,
+"word": "定律",
+"lang": "zh",
+"piece": "laid-01"
+},
+"158": {
+"file": "laid",
+"path": [
+"tests",
+6,
+"after_zh"
+],
+"start": 45,
+"end": 47,
+"word": "定律",
+"lang": "zh",
+"piece": "laid-01"
+},
+"159": {
+"file": "laid",
+"path": [
+"tests",
+6,
+"rival_en"
+],
+"start": 69,
+"end": 72,
+"word": "law",
+"lang": "en",
+"piece": "laid-01"
+},
+"160": {
+"file": "laid",
+"path": [
+"tests",
+6,
+"rival_zh"
+],
+"start": 27,
+"end": 29,
+"word": "定律",
+"lang": "zh",
+"piece": "laid-01"
+},
+"161": {
+"file": "laid",
+"path": [
+"tests",
+6,
+"view",
+"en"
+],
+"start": 73,
+"end": 76,
+"word": "law",
+"lang": "en",
+"piece": "laid-01"
+},
+"162": {
+"file": "laid",
+"path": [
+"tests",
+6,
+"view",
+"en"
+],
+"start": 355,
+"end": 358,
+"word": "law",
+"lang": "en",
+"piece": "laid-01"
+},
+"163": {
+"file": "laid",
+"path": [
+"tests",
+6,
+"view",
+"zh"
+],
+"start": 17,
+"end": 19,
+"word": "定律",
+"lang": "zh",
+"piece": "laid-01"
+},
+"164": {
+"file": "laid",
+"path": [
+"tests",
+6,
+"view",
+"zh"
+],
+"start": 115,
+"end": 117,
+"word": "定律",
+"lang": "zh",
+"piece": "laid-01"
+},
+"165": {
+"file": "laid",
+"path": [
+"tests",
+6,
+"line_en"
+],
+"start": 89,
+"end": 92,
+"word": "law",
+"lang": "en",
+"piece": "laid-01"
+},
+"166": {
+"file": "laid",
+"path": [
+"tests",
+6,
+"line_en"
+],
+"start": 245,
+"end": 248,
+"word": "law",
+"lang": "en",
+"piece": "laid-01"
+},
+"167": {
+"file": "laid",
+"path": [
+"tests",
+6,
+"line_zh"
+],
+"start": 32,
+"end": 34,
+"word": "定律",
+"lang": "zh",
+"piece": "laid-01"
+},
+"168": {
+"file": "laid",
+"path": [
+"tests",
+6,
+"line_zh"
+],
+"start": 91,
+"end": 93,
+"word": "定律",
+"lang": "zh",
+"piece": "laid-01"
+},
+"169": {
+"file": "web",
+"path": [
+"about"
+],
+"start": 231,
+"end": 234,
+"word": "law",
+"lang": "en",
+"piece": "web-01"
+},
+"170": {
+"file": "web",
+"path": [
+"about"
+],
+"start": 248,
+"end": 251,
+"word": "law",
+"lang": "en",
+"piece": "web-01"
+},
+"171": {
+"file": "web",
+"path": [
+"about"
+],
+"start": 568,
+"end": 571,
+"word": "law",
+"lang": "en",
+"piece": "web-01"
+},
+"172": {
+"file": "web",
+"path": [
+"about"
+],
+"start": 650,
+"end": 653,
+"word": "law",
+"lang": "en",
+"piece": "web-01"
+},
+"173": {
+"file": "web",
+"path": [
+"roles",
+6,
+"account"
+],
+"start": 25,
+"end": 28,
+"word": "law",
+"lang": "en",
+"piece": "web-01"
+},
+"174": {
+"file": "web",
+"path": [
+"roles",
+11,
+"is"
+],
+"start": 17,
+"end": 20,
+"word": "law",
+"lang": "en",
+"piece": "web-01"
+},
+"175": {
+"file": "cards",
+"path": [
+"about"
+],
+"start": 172,
+"end": 176,
+"word": "laws",
+"lang": "en",
+"piece": "cards-01"
+},
+"176": {
+"file": "cards",
+"path": [
+"about"
+],
+"start": 227,
+"end": 231,
+"word": "laws",
+"lang": "en",
+"piece": "cards-01"
+},
+"177": {
+"file": "cards",
+"path": [
+"about"
+],
+"start": 707,
+"end": 711,
+"word": "laws",
+"lang": "en",
+"piece": "cards-01"
+},
+"178": {
+"file": "cards",
+"path": [
+"cards",
+0,
+"cast",
+0,
+"as"
+],
+"start": 50,
+"end": 53,
+"word": "law",
+"lang": "en",
+"piece": "cards-01"
+},
+"179": {
+"file": "cards",
+"path": [
+"cards",
+0,
+"cast",
+0,
+"as"
+],
+"start": 68,
+"end": 71,
+"word": "law",
+"lang": "en",
+"piece": "cards-01"
+},
+"180": {
+"file": "cards",
+"path": [
+"cards",
+0,
+"laws",
+0,
+"then_en"
+],
+"start": 46,
+"end": 49,
+"word": "law",
+"lang": "en",
+"piece": "cards-01"
+},
+"181": {
+"file": "cards",
+"path": [
+"cards",
+0,
+"laws",
+0,
+"then_zh"
+],
+"start": 9,
+"end": 10,
+"word": "律",
+"lang": "zh",
+"piece": "cards-01"
+},
+"182": {
+"file": "cards",
+"path": [
+"cards",
+0,
+"built_cases",
+1,
+"shows_en"
+],
+"start": 41,
+"end": 44,
+"word": "law",
+"lang": "en",
+"piece": "cards-01"
+},
+"183": {
+"file": "cards",
+"path": [
+"cards",
+0,
+"misfit"
+],
+"start": 35,
+"end": 38,
+"word": "law",
+"lang": "en",
+"piece": "cards-01"
+},
+"184": {
+"file": "cards",
+"path": [
+"cards",
+0,
+"misfit"
+],
+"start": 329,
+"end": 332,
+"word": "law",
+"lang": "en",
+"piece": "cards-01"
+},
+"185": {
+"file": "cards",
+"path": [
+"cards",
+1,
+"cast",
+0,
+"as"
+],
+"start": 54,
+"end": 57,
+"word": "law",
+"lang": "en",
+"piece": "cards-01"
+},
+"186": {
+"file": "cards",
+"path": [
+"cards",
+1,
+"misfit"
+],
+"start": 42,
+"end": 45,
+"word": "law",
+"lang": "en",
+"piece": "cards-01"
+},
+"187": {
+"file": "cards",
+"path": [
+"cards",
+1,
+"misfit"
+],
+"start": 170,
+"end": 173,
+"word": "law",
+"lang": "en",
+"piece": "cards-01"
+},
+"188": {
+"file": "cards",
+"path": [
+"cards",
+1,
+"misfit"
+],
+"start": 812,
+"end": 815,
+"word": "law",
+"lang": "en",
+"piece": "cards-01"
+},
+"189": {
+"file": "cards",
+"path": [
+"cards",
+2,
+"misfit"
+],
+"start": 24,
+"end": 28,
+"word": "laws",
+"lang": "en",
+"piece": "cards-01"
+},
+"190": {
+"file": "cards",
+"path": [
+"cards",
+2,
+"misfit"
+],
+"start": 458,
+"end": 461,
+"word": "law",
+"lang": "en",
+"piece": "cards-01"
+},
+"191": {
+"file": "cards",
+"path": [
+"cards",
+2,
+"misfit"
+],
+"start": 643,
+"end": 646,
+"word": "law",
+"lang": "en",
+"piece": "cards-01"
+},
+"192": {
+"file": "cards",
+"path": [
+"cards",
+3,
+"misfit"
+],
+"start": 32,
+"end": 36,
+"word": "laws",
+"lang": "en",
+"piece": "cards-01"
+},
+"193": {
+"file": "cards",
+"path": [
+"cards",
+3,
+"misfit"
+],
+"start": 145,
+"end": 149,
+"word": "laws",
+"lang": "en",
+"piece": "cards-01"
+},
+"194": {
+"file": "cards",
+"path": [
+"cards",
+3,
+"misfit"
+],
+"start": 267,
+"end": 270,
+"word": "law",
+"lang": "en",
+"piece": "cards-01"
+},
+"195": {
+"file": "cards",
+"path": [
+"cards",
+3,
+"misfit"
+],
+"start": 355,
+"end": 358,
+"word": "law",
+"lang": "en",
+"piece": "cards-01"
+},
+"196": {
+"file": "cards",
+"path": [
+"cards",
+3,
+"misfit"
+],
+"start": 1021,
+"end": 1024,
+"word": "law",
+"lang": "en",
+"piece": "cards-01"
+},
+"197": {
+"file": "cards",
+"path": [
+"cards",
+4,
+"misfit"
+],
+"start": 72,
+"end": 76,
+"word": "laws",
+"lang": "en",
+"piece": "cards-01"
+},
+"198": {
+"file": "cards",
+"path": [
+"cards",
+4,
+"misfit"
+],
+"start": 102,
+"end": 106,
+"word": "laws",
+"lang": "en",
+"piece": "cards-01"
+},
+"199": {
+"file": "cards",
+"path": [
+"cards",
+4,
+"misfit"
+],
+"start": 216,
+"end": 219,
+"word": "law",
+"lang": "en",
+"piece": "cards-01"
+},
+"200": {
+"file": "cards",
+"path": [
+"cards",
+4,
+"misfit"
+],
+"start": 512,
+"end": 515,
+"word": "law",
+"lang": "en",
+"piece": "cards-01"
+},
+"201": {
+"file": "cards",
+"path": [
+"cards",
+4,
+"misfit"
+],
+"start": 794,
+"end": 798,
+"word": "laws",
+"lang": "en",
+"piece": "cards-01"
+},
+"202": {
+"file": "cards",
+"path": [
+"cards",
+5,
+"cast",
+6,
+"as"
+],
+"start": 44,
+"end": 47,
+"word": "law",
+"lang": "en",
+"piece": "cards-01"
+},
+"203": {
+"file": "cards",
+"path": [
+"cards",
+5,
+"laws",
+5,
+"then_en"
+],
+"start": 33,
+"end": 36,
+"word": "law",
+"lang": "en",
+"piece": "cards-01"
+},
+"204": {
+"file": "cards",
+"path": [
+"cards",
+5,
+"laws",
+5,
+"then_zh"
+],
+"start": 9,
+"end": 10,
+"word": "律",
+"lang": "zh",
+"piece": "cards-01"
+},
+"205": {
+"file": "cards",
+"path": [
+"cards",
+5,
+"laws",
+5,
+"then_zh"
+],
+"start": 23,
+"end": 24,
+"word": "律",
+"lang": "zh",
+"piece": "cards-01"
+},
+"206": {
+"file": "cards",
+"path": [
+"cards",
+5,
+"built_cases",
+0,
+"shows_en"
+],
+"start": 59,
+"end": 62,
+"word": "law",
+"lang": "en",
+"piece": "cards-01"
+},
+"207": {
+"file": "cards",
+"path": [
+"cards",
+5,
+"built_cases",
+1,
+"shows_en"
+],
+"start": 37,
+"end": 40,
+"word": "law",
+"lang": "en",
+"piece": "cards-01"
+},
+"208": {
+"file": "cards",
+"path": [
+"cards",
+5,
+"built_cases",
+2,
+"shows_en"
+],
+"start": 52,
+"end": 55,
+"word": "law",
+"lang": "en",
+"piece": "cards-01"
+},
+"209": {
+"file": "cards",
+"path": [
+"cards",
+5,
+"misfit"
+],
+"start": 16,
+"end": 19,
+"word": "law",
+"lang": "en",
+"piece": "cards-01"
+},
+"210": {
+"file": "cards",
+"path": [
+"cards",
+5,
+"misfit"
+],
+"start": 107,
+"end": 110,
+"word": "law",
+"lang": "en",
+"piece": "cards-01"
+},
+"211": {
+"file": "cards",
+"path": [
+"cards",
+5,
+"misfit"
+],
+"start": 246,
+"end": 250,
+"word": "laws",
+"lang": "en",
+"piece": "cards-01"
+},
+"212": {
+"file": "cards",
+"path": [
+"cards",
+5,
+"misfit"
+],
+"start": 321,
+"end": 325,
+"word": "laws",
+"lang": "en",
+"piece": "cards-01"
+},
+"213": {
+"file": "cards",
+"path": [
+"cards",
+5,
+"misfit"
+],
+"start": 915,
+"end": 919,
+"word": "laws",
+"lang": "en",
+"piece": "cards-01"
+},
+"214": {
+"file": "cards",
+"path": [
+"cards",
+5,
+"misfit"
+],
+"start": 930,
+"end": 933,
+"word": "law",
+"lang": "en",
+"piece": "cards-01"
+},
+"215": {
+"file": "cards",
+"path": [
+"cards",
+6,
+"built_cases",
+1,
+"shows_en"
+],
+"start": 10,
+"end": 14,
+"word": "laws",
+"lang": "en",
+"piece": "cards-01"
+},
+"216": {
+"file": "cards",
+"path": [
+"cards",
+6,
+"misfit"
+],
+"start": 386,
+"end": 389,
+"word": "law",
+"lang": "en",
+"piece": "cards-01"
+},
+"217": {
+"file": "cards",
+"path": [
+"cards",
+6,
+"misfit"
+],
+"start": 527,
+"end": 531,
+"word": "laws",
+"lang": "en",
+"piece": "cards-01"
+},
+"218": {
+"file": "cards",
+"path": [
+"cards",
+6,
+"misfit"
+],
+"start": 754,
+"end": 757,
+"word": "law",
+"lang": "en",
+"piece": "cards-01"
+},
+"219": {
+"file": "cards",
+"path": [
+"cards",
+6,
+"misfit"
+],
+"start": 910,
+"end": 913,
+"word": "law",
+"lang": "en",
+"piece": "cards-01"
+},
+"220": {
+"file": "cards",
+"path": [
+"cards",
+6,
+"misfit"
+],
+"start": 1004,
+"end": 1007,
+"word": "law",
+"lang": "en",
+"piece": "cards-01"
+},
+"221": {
+"file": "cards",
+"path": [
+"cards",
+7,
+"misfit"
+],
+"start": 85,
+"end": 89,
+"word": "laws",
+"lang": "en",
+"piece": "cards-01"
+},
+"222": {
+"file": "cards",
+"path": [
+"cards",
+7,
+"misfit"
+],
+"start": 199,
+"end": 203,
+"word": "laws",
+"lang": "en",
+"piece": "cards-01"
+},
+"223": {
+"file": "cards",
+"path": [
+"cards",
+7,
+"misfit"
+],
+"start": 277,
+"end": 280,
+"word": "law",
+"lang": "en",
+"piece": "cards-01"
+},
+"224": {
+"file": "cards",
+"path": [
+"cards",
+7,
+"misfit"
+],
+"start": 512,
+"end": 515,
+"word": "law",
+"lang": "en",
+"piece": "cards-01"
+},
+"225": {
+"file": "cards",
+"path": [
+"cards",
+7,
+"misfit"
+],
+"start": 975,
+"end": 979,
+"word": "laws",
+"lang": "en",
+"piece": "cards-01"
+},
+"226": {
+"file": "cards",
+"path": [
+"cards",
+8,
+"cast",
+2,
+"as"
+],
+"start": 20,
+"end": 23,
+"word": "law",
+"lang": "en",
+"piece": "cards-01"
+},
+"227": {
+"file": "cards",
+"path": [
+"cards",
+8,
+"misfit"
+],
+"start": 17,
+"end": 21,
+"word": "laws",
+"lang": "en",
+"piece": "cards-01"
+},
+"228": {
+"file": "cards",
+"path": [
+"cards",
+8,
+"misfit"
+],
+"start": 91,
+"end": 95,
+"word": "laws",
+"lang": "en",
+"piece": "cards-01"
+},
+"229": {
+"file": "cards",
+"path": [
+"cards",
+8,
+"misfit"
+],
+"start": 615,
+"end": 618,
+"word": "law",
+"lang": "en",
+"piece": "cards-01"
+},
+"230": {
+"file": "cards",
+"path": [
+"cards",
+8,
+"misfit"
+],
+"start": 1042,
+"end": 1045,
+"word": "law",
+"lang": "en",
+"piece": "cards-01"
+},
+"231": {
+"file": "cards",
+"path": [
+"cards",
+8,
+"misfit"
+],
+"start": 1065,
+"end": 1069,
+"word": "laws",
+"lang": "en",
+"piece": "cards-01"
+},
+"232": {
+"file": "cards",
+"path": [
+"cards",
+9,
+"misfit"
+],
+"start": 1951,
+"end": 1955,
+"word": "laws",
+"lang": "en",
+"piece": "cards-01"
+},
+"233": {
+"file": "cards",
+"path": [
+"cards",
+9,
+"misfit"
+],
+"start": 2187,
+"end": 2191,
+"word": "laws",
+"lang": "en",
+"piece": "cards-01"
+},
+"234": {
+"file": "cards",
+"path": [
+"cards",
+10,
+"cast",
+3,
+"as"
+],
+"start": 73,
+"end": 76,
+"word": "law",
+"lang": "en",
+"piece": "cards-01"
+},
+"235": {
+"file": "cards",
+"path": [
+"cards",
+10,
+"misfit"
+],
+"start": 249,
+"end": 252,
+"word": "law",
+"lang": "en",
+"piece": "cards-01"
+},
+"236": {
+"file": "cards",
+"path": [
+"cards",
+10,
+"misfit"
+],
+"start": 859,
+"end": 863,
+"word": "laws",
+"lang": "en",
+"piece": "cards-01"
+},
+"237": {
+"file": "cards",
+"path": [
+"cards",
+10,
+"misfit"
+],
+"start": 1079,
+"end": 1083,
+"word": "laws",
+"lang": "en",
+"piece": "cards-01"
+},
+"238": {
+"file": "cards",
+"path": [
+"cards",
+11,
+"misfit"
+],
+"start": 4,
+"end": 8,
+"word": "laws",
+"lang": "en",
+"piece": "cards-01"
+},
+"239": {
+"file": "cards",
+"path": [
+"cards",
+11,
+"misfit"
+],
+"start": 578,
+"end": 582,
+"word": "laws",
+"lang": "en",
+"piece": "cards-01"
+},
+"240": {
+"file": "cards",
+"path": [
+"cards",
+11,
+"misfit"
+],
+"start": 768,
+"end": 772,
+"word": "laws",
+"lang": "en",
+"piece": "cards-01"
+},
+"241": {
+"file": "cards",
+"path": [
+"cards",
+11,
+"misfit"
+],
+"start": 1050,
+"end": 1053,
+"word": "law",
+"lang": "en",
+"piece": "cards-01"
+},
+"242": {
+"file": "cards",
+"path": [
+"cards",
+12,
+"misfit"
+],
+"start": 9,
+"end": 13,
+"word": "laws",
+"lang": "en",
+"piece": "cards-01"
+},
+"243": {
+"file": "cards",
+"path": [
+"cards",
+13,
+"cast",
+0,
+"as"
+],
+"start": 76,
+"end": 79,
+"word": "law",
+"lang": "en",
+"piece": "cards-01"
+},
+"244": {
+"file": "cards",
+"path": [
+"cards",
+13,
+"cast",
+1,
+"as"
+],
+"start": 49,
+"end": 52,
+"word": "law",
+"lang": "en",
+"piece": "cards-01"
+},
+"245": {
+"file": "cards",
+"path": [
+"cards",
+13,
+"cast",
+2,
+"as"
+],
+"start": 112,
+"end": 115,
+"word": "law",
+"lang": "en",
+"piece": "cards-01"
+},
+"246": {
+"file": "cards",
+"path": [
+"cards",
+13,
+"cast",
+4,
+"as"
+],
+"start": 150,
+"end": 153,
+"word": "law",
+"lang": "en",
+"piece": "cards-01"
+},
+"247": {
+"file": "cards",
+"path": [
+"cards",
+13,
+"built_cases",
+1,
+"shows_en"
+],
+"start": 32,
+"end": 35,
+"word": "law",
+"lang": "en",
+"piece": "cards-01"
+},
+"248": {
+"file": "cards",
+"path": [
+"cards",
+13,
+"built_cases",
+2,
+"shows_en"
+],
+"start": 7,
+"end": 10,
+"word": "law",
+"lang": "en",
+"piece": "cards-01"
+},
+"249": {
+"file": "cards",
+"path": [
+"cards",
+13,
+"misfit"
+],
+"start": 290,
+"end": 293,
+"word": "law",
+"lang": "en",
+"piece": "cards-01"
+},
+"250": {
+"file": "cards",
+"path": [
+"cards",
+14,
+"cast",
+2,
+"as"
+],
+"start": 31,
+"end": 34,
+"word": "law",
+"lang": "en",
+"piece": "cards-01"
+},
+"251": {
+"file": "cards",
+"path": [
+"cards",
+14,
+"misfit"
+],
+"start": 225,
+"end": 228,
+"word": "law",
+"lang": "en",
+"piece": "cards-01"
+},
+"252": {
+"file": "cards",
+"path": [
+"cards",
+14,
+"misfit"
+],
+"start": 299,
+"end": 302,
+"word": "law",
+"lang": "en",
+"piece": "cards-01"
+},
+"253": {
+"file": "cards",
+"path": [
+"cards",
+14,
+"misfit"
+],
+"start": 834,
+"end": 838,
+"word": "laws",
+"lang": "en",
+"piece": "cards-01"
+},
+"254": {
+"file": "cards",
+"path": [
+"cards",
+14,
+"misfit"
+],
+"start": 866,
+"end": 870,
+"word": "laws",
+"lang": "en",
+"piece": "cards-01"
+},
+"255": {
+"file": "cards",
+"path": [
+"cards",
+15,
+"misfit"
+],
+"start": 260,
+"end": 264,
+"word": "laws",
+"lang": "en",
+"piece": "cards-01"
+},
+"256": {
+"file": "cards",
+"path": [
+"cards",
+15,
+"misfit"
+],
+"start": 821,
+"end": 824,
+"word": "law",
+"lang": "en",
+"piece": "cards-01"
+},
+"257": {
+"file": "cards",
+"path": [
+"cards",
+17,
+"cast",
+0,
+"as"
+],
+"start": 75,
+"end": 79,
+"word": "laws",
+"lang": "en",
+"piece": "cards-01"
+},
+"258": {
+"file": "cards",
+"path": [
+"cards",
+17,
+"misfit"
+],
+"start": 597,
+"end": 600,
+"word": "law",
+"lang": "en",
+"piece": "cards-01"
+},
+"259": {
+"file": "cards",
+"path": [
+"cards",
+17,
+"misfit"
+],
+"start": 766,
+"end": 769,
+"word": "law",
+"lang": "en",
+"piece": "cards-01"
+},
+"260": {
+"file": "cards",
+"path": [
+"cards",
+18,
+"laws",
+5,
+"then_en"
+],
+"start": 94,
+"end": 97,
+"word": "law",
+"lang": "en",
+"piece": "cards-02"
+},
+"261": {
+"file": "cards",
+"path": [
+"cards",
+18,
+"laws",
+5,
+"then_zh"
+],
+"start": 26,
+"end": 27,
+"word": "律",
+"lang": "zh",
+"piece": "cards-02"
+},
+"262": {
+"file": "cards",
+"path": [
+"cards",
+18,
+"misfit"
+],
+"start": 537,
+"end": 541,
+"word": "laws",
+"lang": "en",
+"piece": "cards-02"
+},
+"263": {
+"file": "cards",
+"path": [
+"cards",
+18,
+"misfit"
+],
+"start": 792,
+"end": 795,
+"word": "law",
+"lang": "en",
+"piece": "cards-02"
+},
+"264": {
+"file": "cards",
+"path": [
+"cards",
+19,
+"misfit"
+],
+"start": 4,
+"end": 8,
+"word": "laws",
+"lang": "en",
+"piece": "cards-02"
+},
+"265": {
+"file": "cards",
+"path": [
+"cards",
+20,
+"misfit"
+],
+"start": 548,
+"end": 551,
+"word": "law",
+"lang": "en",
+"piece": "cards-02"
+},
+"266": {
+"file": "cards",
+"path": [
+"cards",
+20,
+"misfit"
+],
+"start": 566,
+"end": 570,
+"word": "laws",
+"lang": "en",
+"piece": "cards-02"
+},
+"267": {
+"file": "cards",
+"path": [
+"cards",
+20,
+"misfit"
+],
+"start": 904,
+"end": 907,
+"word": "law",
+"lang": "en",
+"piece": "cards-02"
+},
+"268": {
+"file": "cards",
+"path": [
+"cards",
+21,
+"misfit"
+],
+"start": 375,
+"end": 379,
+"word": "laws",
+"lang": "en",
+"piece": "cards-02"
+},
+"269": {
+"file": "cards",
+"path": [
+"cards",
+21,
+"misfit"
+],
+"start": 487,
+"end": 490,
+"word": "law",
+"lang": "en",
+"piece": "cards-02"
+},
+"270": {
+"file": "cards",
+"path": [
+"cards",
+21,
+"misfit"
+],
+"start": 694,
+"end": 697,
+"word": "law",
+"lang": "en",
+"piece": "cards-02"
+},
+"271": {
+"file": "cards",
+"path": [
+"cards",
+22,
+"misfit"
+],
+"start": 22,
+"end": 26,
+"word": "laws",
+"lang": "en",
+"piece": "cards-02"
+},
+"272": {
+"file": "cards",
+"path": [
+"cards",
+22,
+"misfit"
+],
+"start": 488,
+"end": 492,
+"word": "laws",
+"lang": "en",
+"piece": "cards-02"
+},
+"273": {
+"file": "cards",
+"path": [
+"cards",
+22,
+"misfit"
+],
+"start": 671,
+"end": 674,
+"word": "law",
+"lang": "en",
+"piece": "cards-02"
+},
+"274": {
+"file": "cards",
+"path": [
+"cards",
+24,
+"cast",
+0,
+"as"
+],
+"start": 4,
+"end": 7,
+"word": "law",
+"lang": "en",
+"piece": "cards-02"
+},
+"275": {
+"file": "cards",
+"path": [
+"cards",
+24,
+"misfit"
+],
+"start": 13,
+"end": 17,
+"word": "laws",
+"lang": "en",
+"piece": "cards-02"
+},
+"276": {
+"file": "cards",
+"path": [
+"cards",
+24,
+"misfit"
+],
+"start": 65,
+"end": 68,
+"word": "law",
+"lang": "en",
+"piece": "cards-02"
+},
+"277": {
+"file": "cards",
+"path": [
+"cards",
+24,
+"misfit"
+],
+"start": 370,
+"end": 373,
+"word": "law",
+"lang": "en",
+"piece": "cards-02"
+},
+"278": {
+"file": "cards",
+"path": [
+"cards",
+25,
+"misfit"
+],
+"start": 127,
+"end": 130,
+"word": "law",
+"lang": "en",
+"piece": "cards-02"
+},
+"279": {
+"file": "cards",
+"path": [
+"cards",
+25,
+"misfit"
+],
+"start": 280,
+"end": 283,
+"word": "law",
+"lang": "en",
+"piece": "cards-02"
+},
+"280": {
+"file": "cards",
+"path": [
+"cards",
+25,
+"misfit"
+],
+"start": 677,
+"end": 680,
+"word": "law",
+"lang": "en",
+"piece": "cards-02"
+},
+"281": {
+"file": "cards",
+"path": [
+"cards",
+26,
+"cast",
+3,
+"as"
+],
+"start": 66,
+"end": 69,
+"word": "law",
+"lang": "en",
+"piece": "cards-02"
+},
+"282": {
+"file": "cards",
+"path": [
+"cards",
+26,
+"misfit"
+],
+"start": 9,
+"end": 13,
+"word": "laws",
+"lang": "en",
+"piece": "cards-02"
+},
+"283": {
+"file": "cards",
+"path": [
+"cards",
+26,
+"misfit"
+],
+"start": 204,
+"end": 208,
+"word": "laws",
+"lang": "en",
+"piece": "cards-02"
+},
+"284": {
+"file": "cards",
+"path": [
+"cards",
+26,
+"misfit"
+],
+"start": 327,
+"end": 331,
+"word": "laws",
+"lang": "en",
+"piece": "cards-02"
+},
+"285": {
+"file": "cards",
+"path": [
+"cards",
+26,
+"misfit"
+],
+"start": 507,
+"end": 511,
+"word": "laws",
+"lang": "en",
+"piece": "cards-02"
+},
+"286": {
+"file": "cards",
+"path": [
+"cards",
+26,
+"misfit"
+],
+"start": 584,
+"end": 588,
+"word": "laws",
+"lang": "en",
+"piece": "cards-02"
+},
+"287": {
+"file": "cards",
+"path": [
+"cards",
+26,
+"misfit"
+],
+"start": 750,
+"end": 753,
+"word": "law",
+"lang": "en",
+"piece": "cards-02"
+},
+"288": {
+"file": "cards",
+"path": [
+"cards",
+28,
+"ties",
+0,
+"as"
+],
+"start": 157,
+"end": 160,
+"word": "law",
+"lang": "en",
+"piece": "cards-02"
+},
+"289": {
+"file": "cards",
+"path": [
+"cards",
+28,
+"misfit"
+],
+"start": 312,
+"end": 315,
+"word": "law",
+"lang": "en",
+"piece": "cards-02"
+},
+"290": {
+"file": "cards",
+"path": [
+"cards",
+28,
+"misfit"
+],
+"start": 360,
+"end": 364,
+"word": "laws",
+"lang": "en",
+"piece": "cards-02"
+},
+"291": {
+"file": "cards",
+"path": [
+"cards",
+29,
+"misfit"
+],
+"start": 27,
+"end": 31,
+"word": "laws",
+"lang": "en",
+"piece": "cards-02"
+},
+"292": {
+"file": "cards",
+"path": [
+"cards",
+29,
+"misfit"
+],
+"start": 181,
+"end": 184,
+"word": "law",
+"lang": "en",
+"piece": "cards-02"
+},
+"293": {
+"file": "cards",
+"path": [
+"cards",
+29,
+"misfit"
+],
+"start": 300,
+"end": 303,
+"word": "law",
+"lang": "en",
+"piece": "cards-02"
+},
+"294": {
+"file": "cards",
+"path": [
+"cards",
+29,
+"misfit"
+],
+"start": 636,
+"end": 639,
+"word": "law",
+"lang": "en",
+"piece": "cards-02"
+},
+"295": {
+"file": "cards",
+"path": [
+"cards",
+30,
+"misfit"
+],
+"start": 354,
+"end": 357,
+"word": "law",
+"lang": "en",
+"piece": "cards-02"
+},
+"296": {
+"file": "cards",
+"path": [
+"cards",
+31,
+"misfit"
+],
+"start": 418,
+"end": 421,
+"word": "law",
+"lang": "en",
+"piece": "cards-02"
+},
+"297": {
+"file": "cards",
+"path": [
+"cards",
+31,
+"misfit"
+],
+"start": 674,
+"end": 677,
+"word": "law",
+"lang": "en",
+"piece": "cards-02"
+},
+"298": {
+"file": "cards",
+"path": [
+"cards",
+31,
+"misfit"
+],
+"start": 830,
+"end": 834,
+"word": "laws",
+"lang": "en",
+"piece": "cards-02"
+},
+"299": {
+"file": "cards",
+"path": [
+"cards",
+33,
+"ties",
+0,
+"as"
+],
+"start": 101,
+"end": 104,
+"word": "law",
+"lang": "en",
+"piece": "cards-02"
+},
+"300": {
+"file": "cards",
+"path": [
+"cards",
+33,
+"misfit"
+],
+"start": 347,
+"end": 350,
+"word": "law",
+"lang": "en",
+"piece": "cards-02"
+},
+"301": {
+"file": "cards",
+"path": [
+"cards",
+34,
+"misfit"
+],
+"start": 78,
+"end": 82,
+"word": "laws",
+"lang": "en",
+"piece": "cards-02"
+},
+"302": {
+"file": "cards",
+"path": [
+"cards",
+34,
+"misfit"
+],
+"start": 609,
+"end": 613,
+"word": "laws",
+"lang": "en",
+"piece": "cards-02"
+},
+"303": {
+"file": "cards",
+"path": [
+"cards",
+34,
+"misfit"
+],
+"start": 719,
+"end": 722,
+"word": "law",
+"lang": "en",
+"piece": "cards-02"
+},
+"304": {
+"file": "cards",
+"path": [
+"cards",
+35,
+"misfit"
+],
+"start": 869,
+"end": 872,
+"word": "law",
+"lang": "en",
+"piece": "cards-02"
+},
+"305": {
+"file": "cards",
+"path": [
+"cards",
+36,
+"misfit"
+],
+"start": 4,
+"end": 8,
+"word": "laws",
+"lang": "en",
+"piece": "cards-02"
+},
+"306": {
+"file": "cards",
+"path": [
+"cards",
+36,
+"misfit"
+],
+"start": 244,
+"end": 247,
+"word": "law",
+"lang": "en",
+"piece": "cards-02"
+},
+"307": {
+"file": "cards",
+"path": [
+"cards",
+36,
+"misfit"
+],
+"start": 573,
+"end": 576,
+"word": "law",
+"lang": "en",
+"piece": "cards-02"
+},
+"308": {
+"file": "cards",
+"path": [
+"cards",
+37,
+"cast",
+2,
+"as"
+],
+"start": 4,
+"end": 7,
+"word": "law",
+"lang": "en",
+"piece": "cards-02"
+},
+"309": {
+"file": "cards",
+"path": [
+"cards",
+38,
+"cast",
+2,
+"as"
+],
+"start": 4,
+"end": 7,
+"word": "law",
+"lang": "en",
+"piece": "cards-02"
+},
+"310": {
+"file": "cards",
+"path": [
+"cards",
+38,
+"misfit"
+],
+"start": 471,
+"end": 474,
+"word": "law",
+"lang": "en",
+"piece": "cards-02"
+},
+"311": {
+"file": "cards",
+"path": [
+"cards",
+39,
+"cast",
+3,
+"as"
+],
+"start": 4,
+"end": 7,
+"word": "law",
+"lang": "en",
+"piece": "cards-02"
+},
+"312": {
+"file": "cards",
+"path": [
+"cards",
+39,
+"misfit"
+],
+"start": 551,
+"end": 554,
+"word": "law",
+"lang": "en",
+"piece": "cards-02"
+},
+"313": {
+"file": "cards",
+"path": [
+"cards",
+40,
+"misfit"
+],
+"start": 512,
+"end": 516,
+"word": "laws",
+"lang": "en",
+"piece": "cards-02"
+},
+"314": {
+"file": "cards",
+"path": [
+"cards",
+41,
+"misfit"
+],
+"start": 513,
+"end": 517,
+"word": "laws",
+"lang": "en",
+"piece": "cards-02"
+},
+"315": {
+"file": "cards",
+"path": [
+"cards",
+41,
+"misfit"
+],
+"start": 571,
+"end": 574,
+"word": "law",
+"lang": "en",
+"piece": "cards-02"
+},
+"316": {
+"file": "cards",
+"path": [
+"cards",
+41,
+"misfit"
+],
+"start": 879,
+"end": 882,
+"word": "law",
+"lang": "en",
+"piece": "cards-02"
+},
+"317": {
+"file": "cards",
+"path": [
+"cards",
+42,
+"cast",
+3,
+"as"
+],
+"start": 12,
+"end": 15,
+"word": "law",
+"lang": "en",
+"piece": "cards-02"
+},
+"318": {
+"file": "cards",
+"path": [
+"cards",
+42,
+"ties",
+1,
+"as"
+],
+"start": 12,
+"end": 15,
+"word": "law",
+"lang": "en",
+"piece": "cards-02"
+},
+"319": {
+"file": "cards",
+"path": [
+"cards",
+42,
+"misfit"
+],
+"start": 691,
+"end": 695,
+"word": "laws",
+"lang": "en",
+"piece": "cards-02"
+},
+"320": {
+"file": "cards",
+"path": [
+"cards",
+43,
+"cast",
+3,
+"as"
+],
+"start": 12,
+"end": 15,
+"word": "law",
+"lang": "en",
+"piece": "cards-02"
+},
+"321": {
+"file": "cards",
+"path": [
+"cards",
+43,
+"ties",
+1,
+"as"
+],
+"start": 17,
+"end": 20,
+"word": "law",
+"lang": "en",
+"piece": "cards-02"
+},
+"322": {
+"file": "cards",
+"path": [
+"cards",
+43,
+"laws",
+3,
+"compare_en"
+],
+"start": 107,
+"end": 110,
+"word": "law",
+"lang": "en",
+"piece": "cards-02"
+},
+"323": {
+"file": "cards",
+"path": [
+"cards",
+43,
+"misfit"
+],
+"start": 284,
+"end": 287,
+"word": "law",
+"lang": "en",
+"piece": "cards-02"
+},
+"324": {
+"file": "cards",
+"path": [
+"cards",
+43,
+"misfit"
+],
+"start": 617,
+"end": 621,
+"word": "laws",
+"lang": "en",
+"piece": "cards-02"
+},
+"325": {
+"file": "cards",
+"path": [
+"cards",
+43,
+"misfit"
+],
+"start": 825,
+"end": 828,
+"word": "law",
+"lang": "en",
+"piece": "cards-02"
+},
+"326": {
+"file": "cards",
+"path": [
+"cards",
+44,
+"cast",
+3,
+"as"
+],
+"start": 12,
+"end": 15,
+"word": "law",
+"lang": "en",
+"piece": "cards-02"
+},
+"327": {
+"file": "cards",
+"path": [
+"cards",
+44,
+"cast",
+3,
+"as"
+],
+"start": 125,
+"end": 129,
+"word": "laws",
+"lang": "en",
+"piece": "cards-02"
+},
+"328": {
+"file": "cards",
+"path": [
+"cards",
+44,
+"ties",
+1,
+"as"
+],
+"start": 17,
+"end": 20,
+"word": "law",
+"lang": "en",
+"piece": "cards-02"
+},
+"329": {
+"file": "cards",
+"path": [
+"cards",
+44,
+"misfit"
+],
+"start": 103,
+"end": 106,
+"word": "law",
+"lang": "en",
+"piece": "cards-02"
+},
+"330": {
+"file": "cards",
+"path": [
+"cards",
+44,
+"misfit"
+],
+"start": 140,
+"end": 143,
+"word": "law",
+"lang": "en",
+"piece": "cards-02"
+},
+"331": {
+"file": "cards",
+"path": [
+"cards",
+44,
+"misfit"
+],
+"start": 855,
+"end": 859,
+"word": "laws",
+"lang": "en",
+"piece": "cards-02"
+},
+"332": {
+"file": "cards",
+"path": [
+"cards",
+45,
+"misfit"
+],
+"start": 24,
+"end": 27,
+"word": "law",
+"lang": "en",
+"piece": "cards-02"
+},
+"333": {
+"file": "cards",
+"path": [
+"cards",
+45,
+"misfit"
+],
+"start": 940,
+"end": 944,
+"word": "laws",
+"lang": "en",
+"piece": "cards-02"
+},
+"334": {
+"file": "cards",
+"path": [
+"cards",
+46,
+"misfit"
+],
+"start": 163,
+"end": 166,
+"word": "law",
+"lang": "en",
+"piece": "cards-02"
+},
+"335": {
+"file": "cards",
+"path": [
+"cards",
+46,
+"misfit"
+],
+"start": 285,
+"end": 288,
+"word": "law",
+"lang": "en",
+"piece": "cards-02"
+},
+"336": {
+"file": "cards",
+"path": [
+"cards",
+46,
+"misfit"
+],
+"start": 302,
+"end": 306,
+"word": "laws",
+"lang": "en",
+"piece": "cards-02"
+},
+"337": {
+"file": "cards",
+"path": [
+"cards",
+46,
+"misfit"
+],
+"start": 328,
+"end": 332,
+"word": "laws",
+"lang": "en",
+"piece": "cards-02"
+},
+"338": {
+"file": "cards",
+"path": [
+"cards",
+47,
+"built_cases",
+1,
+"shows_en"
+],
+"start": 47,
+"end": 50,
+"word": "law",
+"lang": "en",
+"piece": "cards-02"
+},
+"339": {
+"file": "cards",
+"path": [
+"cards",
+48,
+"cast",
+5,
+"as"
+],
+"start": 40,
+"end": 43,
+"word": "law",
+"lang": "en",
+"piece": "cards-02"
+},
+"340": {
+"file": "cards",
+"path": [
+"cards",
+48,
+"misfit"
+],
+"start": 205,
+"end": 209,
+"word": "laws",
+"lang": "en",
+"piece": "cards-02"
+},
+"341": {
+"file": "cards",
+"path": [
+"cards",
+48,
+"misfit"
+],
+"start": 292,
+"end": 296,
+"word": "laws",
+"lang": "en",
+"piece": "cards-02"
+},
+"342": {
+"file": "cards",
+"path": [
+"cards",
+48,
+"misfit"
+],
+"start": 789,
+"end": 792,
+"word": "law",
+"lang": "en",
+"piece": "cards-02"
+},
+"343": {
+"file": "cards",
+"path": [
+"cards",
+48,
+"misfit"
+],
+"start": 1017,
+"end": 1021,
+"word": "laws",
+"lang": "en",
+"piece": "cards-02"
+},
+"344": {
+"file": "cards",
+"path": [
+"cards",
+49,
+"built_cases",
+2,
+"shows_en"
+],
+"start": 4,
+"end": 7,
+"word": "law",
+"lang": "en",
+"piece": "cards-03"
+},
+"345": {
+"file": "cards",
+"path": [
+"cards",
+49,
+"misfit"
+],
+"start": 616,
+"end": 620,
+"word": "laws",
+"lang": "en",
+"piece": "cards-03"
+},
+"346": {
+"file": "cards",
+"path": [
+"cards",
+50,
+"misfit"
+],
+"start": 190,
+"end": 193,
+"word": "law",
+"lang": "en",
+"piece": "cards-03"
+},
+"347": {
+"file": "cards",
+"path": [
+"cards",
+51,
+"misfit"
+],
+"start": 241,
+"end": 245,
+"word": "laws",
+"lang": "en",
+"piece": "cards-03"
+},
+"348": {
+"file": "cards",
+"path": [
+"cards",
+52,
+"misfit"
+],
+"start": 4,
+"end": 8,
+"word": "laws",
+"lang": "en",
+"piece": "cards-03"
+},
+"349": {
+"file": "cards",
+"path": [
+"cards",
+52,
+"misfit"
+],
+"start": 158,
+"end": 162,
+"word": "laws",
+"lang": "en",
+"piece": "cards-03"
+},
+"350": {
+"file": "cards",
+"path": [
+"cards",
+53,
+"cast",
+4,
+"as"
+],
+"start": 120,
+"end": 123,
+"word": "law",
+"lang": "en",
+"piece": "cards-03"
+},
+"351": {
+"file": "cards",
+"path": [
+"cards",
+53,
+"misfit"
+],
+"start": 151,
+"end": 155,
+"word": "laws",
+"lang": "en",
+"piece": "cards-03"
+},
+"352": {
+"file": "cards",
+"path": [
+"cards",
+53,
+"misfit"
+],
+"start": 623,
+"end": 627,
+"word": "laws",
+"lang": "en",
+"piece": "cards-03"
+},
+"353": {
+"file": "cards",
+"path": [
+"cards",
+54,
+"cast",
+5,
+"as"
+],
+"start": 66,
+"end": 69,
+"word": "law",
+"lang": "en",
+"piece": "cards-03"
+},
+"354": {
+"file": "cards",
+"path": [
+"cards",
+54,
+"cast",
+6,
+"as"
+],
+"start": 64,
+"end": 67,
+"word": "law",
+"lang": "en",
+"piece": "cards-03"
+},
+"355": {
+"file": "cards",
+"path": [
+"cards",
+54,
+"cast",
+7,
+"as"
+],
+"start": 79,
+"end": 82,
+"word": "law",
+"lang": "en",
+"piece": "cards-03"
+},
+"356": {
+"file": "cards",
+"path": [
+"cards",
+54,
+"misfit"
+],
+"start": 763,
+"end": 767,
+"word": "laws",
+"lang": "en",
+"piece": "cards-03"
+},
+"357": {
+"file": "cards",
+"path": [
+"cards",
+54,
+"misfit"
+],
+"start": 1034,
+"end": 1037,
+"word": "law",
+"lang": "en",
+"piece": "cards-03"
+},
+"358": {
+"file": "cards",
+"path": [
+"cards",
+54,
+"misfit"
+],
+"start": 1386,
+"end": 1389,
+"word": "law",
+"lang": "en",
+"piece": "cards-03"
+},
+"359": {
+"file": "cards",
+"path": [
+"cards",
+55,
+"misfit"
+],
+"start": 535,
+"end": 539,
+"word": "laws",
+"lang": "en",
+"piece": "cards-03"
+},
+"360": {
+"file": "cards",
+"path": [
+"cards",
+55,
+"misfit"
+],
+"start": 1083,
+"end": 1087,
+"word": "laws",
+"lang": "en",
+"piece": "cards-03"
+},
+"361": {
+"file": "cards",
+"path": [
+"cards",
+55,
+"misfit"
+],
+"start": 1850,
+"end": 1853,
+"word": "law",
+"lang": "en",
+"piece": "cards-03"
+},
+"362": {
+"file": "cards",
+"path": [
+"cards",
+55,
+"misfit"
+],
+"start": 2348,
+"end": 2351,
+"word": "law",
+"lang": "en",
+"piece": "cards-03"
+},
+"363": {
+"file": "cards",
+"path": [
+"cards",
+56,
+"cast",
+0,
+"as"
+],
+"start": 121,
+"end": 124,
+"word": "law",
+"lang": "en",
+"piece": "cards-03"
+},
+"364": {
+"file": "cards",
+"path": [
+"cards",
+56,
+"cast",
+1,
+"as"
+],
+"start": 129,
+"end": 132,
+"word": "law",
+"lang": "en",
+"piece": "cards-03"
+},
+"365": {
+"file": "cards",
+"path": [
+"cards",
+56,
+"misfit"
+],
+"start": 10,
+"end": 14,
+"word": "laws",
+"lang": "en",
+"piece": "cards-03"
+},
+"366": {
+"file": "cards",
+"path": [
+"cards",
+56,
+"misfit"
+],
+"start": 294,
+"end": 297,
+"word": "law",
+"lang": "en",
+"piece": "cards-03"
+},
+"367": {
+"file": "cards",
+"path": [
+"cards",
+56,
+"misfit"
+],
+"start": 608,
+"end": 611,
+"word": "law",
+"lang": "en",
+"piece": "cards-03"
+},
+"368": {
+"file": "cards",
+"path": [
+"cards",
+57,
+"misfit"
+],
+"start": 367,
+"end": 371,
+"word": "laws",
+"lang": "en",
+"piece": "cards-03"
+},
+"369": {
+"file": "cards",
+"path": [
+"cards",
+57,
+"misfit"
+],
+"start": 426,
+"end": 429,
+"word": "law",
+"lang": "en",
+"piece": "cards-03"
+},
+"370": {
+"file": "cards",
+"path": [
+"cards",
+58,
+"misfit"
+],
+"start": 92,
+"end": 96,
+"word": "laws",
+"lang": "en",
+"piece": "cards-03"
+},
+"371": {
+"file": "cards",
+"path": [
+"cards",
+59,
+"misfit"
+],
+"start": 170,
+"end": 174,
+"word": "laws",
+"lang": "en",
+"piece": "cards-03"
+},
+"372": {
+"file": "cards",
+"path": [
+"cards",
+59,
+"misfit"
+],
+"start": 896,
+"end": 900,
+"word": "laws",
+"lang": "en",
+"piece": "cards-03"
+},
+"373": {
+"file": "cards",
+"path": [
+"cards",
+60,
+"cast",
+1,
+"as"
+],
+"start": 111,
+"end": 115,
+"word": "laws",
+"lang": "en",
+"piece": "cards-03"
+},
+"374": {
+"file": "cards",
+"path": [
+"cards",
+60,
+"misfit"
+],
+"start": 301,
+"end": 305,
+"word": "laws",
+"lang": "en",
+"piece": "cards-03"
+},
+"375": {
+"file": "cards",
+"path": [
+"cards",
+61,
+"misfit"
+],
+"start": 712,
+"end": 716,
+"word": "laws",
+"lang": "en",
+"piece": "cards-03"
+},
+"376": {
+"file": "cards",
+"path": [
+"cards",
+62,
+"misfit"
+],
+"start": 257,
+"end": 261,
+"word": "laws",
+"lang": "en",
+"piece": "cards-03"
+},
+"377": {
+"file": "cards",
+"path": [
+"cards",
+63,
+"misfit"
+],
+"start": 402,
+"end": 405,
+"word": "law",
+"lang": "en",
+"piece": "cards-03"
+},
+"378": {
+"file": "cards",
+"path": [
+"cards",
+63,
+"misfit"
+],
+"start": 646,
+"end": 649,
+"word": "law",
+"lang": "en",
+"piece": "cards-03"
+},
+"379": {
+"file": "cards",
+"path": [
+"cards",
+63,
+"misfit"
+],
+"start": 730,
+"end": 734,
+"word": "laws",
+"lang": "en",
+"piece": "cards-03"
+},
+"380": {
+"file": "cards",
+"path": [
+"cards",
+64,
+"plain_en"
+],
+"start": 30,
+"end": 33,
+"word": "law",
+"lang": "en",
+"piece": "cards-03"
+},
+"381": {
+"file": "cards",
+"path": [
+"cards",
+64,
+"plain_zh"
+],
+"start": 4,
+"end": 6,
+"word": "定律",
+"lang": "zh",
+"piece": "cards-03"
+},
+"382": {
+"file": "cards",
+"path": [
+"cards",
+64,
+"misfit"
+],
+"start": 3,
+"end": 6,
+"word": "law",
+"lang": "en",
+"piece": "cards-03"
+},
+"383": {
+"file": "cards",
+"path": [
+"cards",
+65,
+"plain_en"
+],
+"start": 17,
+"end": 20,
+"word": "law",
+"lang": "en",
+"piece": "cards-03"
+},
+"384": {
+"file": "cards",
+"path": [
+"cards",
+65,
+"plain_zh"
+],
+"start": 7,
+"end": 9,
+"word": "定律",
+"lang": "zh",
+"piece": "cards-03"
+},
+"385": {
+"file": "cards",
+"path": [
+"cards",
+65,
+"misfit"
+],
+"start": 18,
+"end": 21,
+"word": "law",
+"lang": "en",
+"piece": "cards-03"
+},
+"386": {
+"file": "cards",
+"path": [
+"cards",
+65,
+"misfit"
+],
+"start": 422,
+"end": 425,
+"word": "law",
+"lang": "en",
+"piece": "cards-03"
+},
+"387": {
+"file": "cards",
+"path": [
+"cards",
+66,
+"misfit"
+],
+"start": 106,
+"end": 109,
+"word": "law",
+"lang": "en",
+"piece": "cards-03"
+},
+"388": {
+"file": "cards",
+"path": [
+"cards",
+66,
+"misfit"
+],
+"start": 139,
+"end": 143,
+"word": "laws",
+"lang": "en",
+"piece": "cards-03"
+},
+"389": {
+"file": "cards",
+"path": [
+"cards",
+67,
+"laws",
+0,
+"compare_en"
+],
+"start": 179,
+"end": 182,
+"word": "law",
+"lang": "en",
+"piece": "cards-03"
+},
+"390": {
+"file": "cards",
+"path": [
+"cards",
+67,
+"laws",
+1,
+"compare_en"
+],
+"start": 185,
+"end": 188,
+"word": "law",
+"lang": "en",
+"piece": "cards-03"
+},
+"391": {
+"file": "cards",
+"path": [
+"cards",
+67,
+"misfit"
+],
+"start": 64,
+"end": 67,
+"word": "law",
+"lang": "en",
+"piece": "cards-03"
+},
+"392": {
+"file": "cards",
+"path": [
+"cards",
+67,
+"misfit"
+],
+"start": 112,
+"end": 115,
+"word": "law",
+"lang": "en",
+"piece": "cards-03"
+},
+"393": {
+"file": "cards",
+"path": [
+"cards",
+67,
+"misfit"
+],
+"start": 208,
+"end": 211,
+"word": "law",
+"lang": "en",
+"piece": "cards-03"
+},
+"394": {
+"file": "cards",
+"path": [
+"cards",
+67,
+"misfit"
+],
+"start": 225,
+"end": 229,
+"word": "laws",
+"lang": "en",
+"piece": "cards-03"
+},
+"395": {
+"file": "cards",
+"path": [
+"cards",
+67,
+"misfit"
+],
+"start": 303,
+"end": 307,
+"word": "laws",
+"lang": "en",
+"piece": "cards-03"
+},
+"396": {
+"file": "cards",
+"path": [
+"cards",
+67,
+"misfit"
+],
+"start": 506,
+"end": 510,
+"word": "laws",
+"lang": "en",
+"piece": "cards-03"
+},
+"397": {
+"file": "cards",
+"path": [
+"cards",
+67,
+"misfit"
+],
+"start": 540,
+"end": 543,
+"word": "law",
+"lang": "en",
+"piece": "cards-03"
+},
+"398": {
+"file": "cards",
+"path": [
+"cards",
+68,
+"laws",
+2,
+"compare_en"
+],
+"start": 158,
+"end": 161,
+"word": "law",
+"lang": "en",
+"piece": "cards-03"
+},
+"399": {
+"file": "cards",
+"path": [
+"cards",
+68,
+"misfit"
+],
+"start": 153,
+"end": 157,
+"word": "laws",
+"lang": "en",
+"piece": "cards-03"
+},
+"400": {
+"file": "cards",
+"path": [
+"cards",
+68,
+"misfit"
+],
+"start": 174,
+"end": 178,
+"word": "laws",
+"lang": "en",
+"piece": "cards-03"
+},
+"401": {
+"file": "cards",
+"path": [
+"cards",
+68,
+"misfit"
+],
+"start": 841,
+"end": 844,
+"word": "law",
+"lang": "en",
+"piece": "cards-03"
+},
+"402": {
+"file": "cards",
+"path": [
+"cards",
+69,
+"plain_en"
+],
+"start": 125,
+"end": 128,
+"word": "law",
+"lang": "en",
+"piece": "cards-03"
+},
+"403": {
+"file": "cards",
+"path": [
+"cards",
+69,
+"ties",
+1,
+"as"
+],
+"start": 156,
+"end": 159,
+"word": "law",
+"lang": "en",
+"piece": "cards-03"
+},
+"404": {
+"file": "cards",
+"path": [
+"cards",
+69,
+"ties",
+1,
+"as"
+],
+"start": 165,
+"end": 168,
+"word": "law",
+"lang": "en",
+"piece": "cards-03"
+},
+"405": {
+"file": "cards",
+"path": [
+"cards",
+69,
+"misfit"
+],
+"start": 153,
+"end": 156,
+"word": "law",
+"lang": "en",
+"piece": "cards-03"
+},
+"406": {
+"file": "cards",
+"path": [
+"cards",
+69,
+"misfit"
+],
+"start": 266,
+"end": 269,
+"word": "law",
+"lang": "en",
+"piece": "cards-03"
+},
+"407": {
+"file": "cards",
+"path": [
+"cards",
+69,
+"misfit"
+],
+"start": 328,
+"end": 331,
+"word": "law",
+"lang": "en",
+"piece": "cards-03"
+},
+"408": {
+"file": "cards",
+"path": [
+"cards",
+69,
+"misfit"
+],
+"start": 1092,
+"end": 1095,
+"word": "law",
+"lang": "en",
+"piece": "cards-03"
+},
+"409": {
+"file": "cards",
+"path": [
+"cards",
+69,
+"misfit"
+],
+"start": 1410,
+"end": 1413,
+"word": "law",
+"lang": "en",
+"piece": "cards-03"
+},
+"410": {
+"file": "cards",
+"path": [
+"cards",
+69,
+"misfit"
+],
+"start": 1609,
+"end": 1613,
+"word": "laws",
+"lang": "en",
+"piece": "cards-03"
+},
+"411": {
+"file": "cards",
+"path": [
+"cards",
+70,
+"plain_en"
+],
+"start": 73,
+"end": 76,
+"word": "law",
+"lang": "en",
+"piece": "cards-03"
+},
+"412": {
+"file": "cards",
+"path": [
+"cards",
+70,
+"cast",
+2,
+"as"
+],
+"start": 51,
+"end": 54,
+"word": "law",
+"lang": "en",
+"piece": "cards-03"
+},
+"413": {
+"file": "cards",
+"path": [
+"cards",
+70,
+"misfit"
+],
+"start": 25,
+"end": 28,
+"word": "law",
+"lang": "en",
+"piece": "cards-03"
+},
+"414": {
+"file": "cards",
+"path": [
+"cards",
+70,
+"misfit"
+],
+"start": 133,
+"end": 136,
+"word": "law",
+"lang": "en",
+"piece": "cards-03"
+},
+"415": {
+"file": "cards",
+"path": [
+"cards",
+70,
+"misfit"
+],
+"start": 203,
+"end": 206,
+"word": "law",
+"lang": "en",
+"piece": "cards-03"
+},
+"416": {
+"file": "cards",
+"path": [
+"cards",
+70,
+"misfit"
+],
+"start": 908,
+"end": 911,
+"word": "law",
+"lang": "en",
+"piece": "cards-03"
+},
+"417": {
+"file": "cards",
+"path": [
+"cards",
+70,
+"misfit"
+],
+"start": 1001,
+"end": 1005,
+"word": "laws",
+"lang": "en",
+"piece": "cards-03"
+},
+"418": {
+"file": "cards",
+"path": [
+"cards",
+70,
+"misfit"
+],
+"start": 1063,
+"end": 1066,
+"word": "law",
+"lang": "en",
+"piece": "cards-03"
+},
+"419": {
+"file": "cards",
+"path": [
+"cards",
+71,
+"misfit"
+],
+"start": 5,
+"end": 8,
+"word": "law",
+"lang": "en",
+"piece": "cards-03"
+},
+"420": {
+"file": "cards",
+"path": [
+"cards",
+71,
+"misfit"
+],
+"start": 512,
+"end": 515,
+"word": "law",
+"lang": "en",
+"piece": "cards-03"
+},
+"421": {
+"file": "cards",
+"path": [
+"cards",
+72,
+"cast",
+1,
+"as"
+],
+"start": 41,
+"end": 45,
+"word": "laws",
+"lang": "en",
+"piece": "cards-03"
+},
+"422": {
+"file": "cards",
+"path": [
+"cards",
+72,
+"misfit"
+],
+"start": 663,
+"end": 666,
+"word": "law",
+"lang": "en",
+"piece": "cards-03"
+},
+"423": {
+"file": "cards",
+"path": [
+"cards",
+72,
+"misfit"
+],
+"start": 747,
+"end": 750,
+"word": "law",
+"lang": "en",
+"piece": "cards-03"
+},
+"424": {
+"file": "cards",
+"path": [
+"cards",
+72,
+"misfit"
+],
+"start": 1164,
+"end": 1167,
+"word": "law",
+"lang": "en",
+"piece": "cards-03"
+},
+"425": {
+"file": "cards",
+"path": [
+"cards",
+72,
+"misfit"
+],
+"start": 1323,
+"end": 1326,
+"word": "law",
+"lang": "en",
+"piece": "cards-03"
+},
+"426": {
+"file": "cards",
+"path": [
+"cards",
+72,
+"misfit"
+],
+"start": 1661,
+"end": 1664,
+"word": "law",
+"lang": "en",
+"piece": "cards-03"
+},
+"427": {
+"file": "cards",
+"path": [
+"cards",
+73,
+"cast",
+0,
+"as"
+],
+"start": 50,
+"end": 53,
+"word": "law",
+"lang": "en",
+"piece": "cards-04"
+},
+"428": {
+"file": "cards",
+"path": [
+"cards",
+73,
+"laws",
+0,
+"then_en"
+],
+"start": 100,
+"end": 103,
+"word": "law",
+"lang": "en",
+"piece": "cards-04"
+},
+"429": {
+"file": "cards",
+"path": [
+"cards",
+73,
+"laws",
+0,
+"then_zh"
+],
+"start": 21,
+"end": 22,
+"word": "律",
+"lang": "zh",
+"piece": "cards-04"
+},
+"430": {
+"file": "cards",
+"path": [
+"cards",
+73,
+"laws",
+2,
+"then_en"
+],
+"start": 10,
+"end": 13,
+"word": "law",
+"lang": "en",
+"piece": "cards-04"
+},
+"431": {
+"file": "cards",
+"path": [
+"cards",
+73,
+"laws",
+2,
+"then_en"
+],
+"start": 36,
+"end": 39,
+"word": "law",
+"lang": "en",
+"piece": "cards-04"
+},
+"432": {
+"file": "cards",
+"path": [
+"cards",
+73,
+"laws",
+2,
+"then_zh"
+],
+"start": 2,
+"end": 3,
+"word": "律",
+"lang": "zh",
+"piece": "cards-04"
+},
+"433": {
+"file": "cards",
+"path": [
+"cards",
+73,
+"laws",
+2,
+"then_zh"
+],
+"start": 13,
+"end": 14,
+"word": "律",
+"lang": "zh",
+"piece": "cards-04"
+},
+"434": {
+"file": "cards",
+"path": [
+"cards",
+73,
+"misfit"
+],
+"start": 97,
+"end": 101,
+"word": "laws",
+"lang": "en",
+"piece": "cards-04"
+},
+"435": {
+"file": "cards",
+"path": [
+"cards",
+73,
+"misfit"
+],
+"start": 127,
+"end": 130,
+"word": "law",
+"lang": "en",
+"piece": "cards-04"
+},
+"436": {
+"file": "cards",
+"path": [
+"cards",
+73,
+"misfit"
+],
+"start": 243,
+"end": 247,
+"word": "laws",
+"lang": "en",
+"piece": "cards-04"
+},
+"437": {
+"file": "cards",
+"path": [
+"cards",
+74,
+"plain_en"
+],
+"start": 130,
+"end": 133,
+"word": "law",
+"lang": "en",
+"piece": "cards-04"
+},
+"438": {
+"file": "cards",
+"path": [
+"cards",
+74,
+"cast",
+0,
+"as"
+],
+"start": 25,
+"end": 28,
+"word": "law",
+"lang": "en",
+"piece": "cards-04"
+},
+"439": {
+"file": "cards",
+"path": [
+"cards",
+74,
+"laws",
+0,
+"then_en"
+],
+"start": 100,
+"end": 103,
+"word": "law",
+"lang": "en",
+"piece": "cards-04"
+},
+"440": {
+"file": "cards",
+"path": [
+"cards",
+74,
+"laws",
+0,
+"then_zh"
+],
+"start": 21,
+"end": 22,
+"word": "律",
+"lang": "zh",
+"piece": "cards-04"
+},
+"441": {
+"file": "cards",
+"path": [
+"cards",
+74,
+"laws",
+1,
+"then_en"
+],
+"start": 10,
+"end": 13,
+"word": "law",
+"lang": "en",
+"piece": "cards-04"
+},
+"442": {
+"file": "cards",
+"path": [
+"cards",
+74,
+"laws",
+1,
+"then_zh"
+],
+"start": 2,
+"end": 3,
+"word": "律",
+"lang": "zh",
+"piece": "cards-04"
+},
+"443": {
+"file": "cards",
+"path": [
+"cards",
+74,
+"laws",
+2,
+"then_en"
+],
+"start": 10,
+"end": 13,
+"word": "law",
+"lang": "en",
+"piece": "cards-04"
+},
+"444": {
+"file": "cards",
+"path": [
+"cards",
+74,
+"laws",
+2,
+"then_en"
+],
+"start": 36,
+"end": 39,
+"word": "law",
+"lang": "en",
+"piece": "cards-04"
+},
+"445": {
+"file": "cards",
+"path": [
+"cards",
+74,
+"laws",
+2,
+"then_zh"
+],
+"start": 2,
+"end": 3,
+"word": "律",
+"lang": "zh",
+"piece": "cards-04"
+},
+"446": {
+"file": "cards",
+"path": [
+"cards",
+74,
+"laws",
+2,
+"then_zh"
+],
+"start": 13,
+"end": 14,
+"word": "律",
+"lang": "zh",
+"piece": "cards-04"
+},
+"447": {
+"file": "cards",
+"path": [
+"cards",
+74,
+"misfit"
+],
+"start": 63,
+"end": 67,
+"word": "laws",
+"lang": "en",
+"piece": "cards-04"
+},
+"448": {
+"file": "cards",
+"path": [
+"cards",
+74,
+"misfit"
+],
+"start": 93,
+"end": 96,
+"word": "law",
+"lang": "en",
+"piece": "cards-04"
+},
+"449": {
+"file": "cards",
+"path": [
+"cards",
+74,
+"misfit"
+],
+"start": 245,
+"end": 248,
+"word": "law",
+"lang": "en",
+"piece": "cards-04"
+},
+"450": {
+"file": "cards",
+"path": [
+"cards",
+75,
+"plain_en"
+],
+"start": 19,
+"end": 22,
+"word": "law",
+"lang": "en",
+"piece": "cards-04"
+},
+"451": {
+"file": "cards",
+"path": [
+"cards",
+75,
+"misfit"
+],
+"start": 80,
+"end": 83,
+"word": "law",
+"lang": "en",
+"piece": "cards-04"
+},
+"452": {
+"file": "cards",
+"path": [
+"cards",
+75,
+"misfit"
+],
+"start": 96,
+"end": 100,
+"word": "laws",
+"lang": "en",
+"piece": "cards-04"
+},
+"453": {
+"file": "cards",
+"path": [
+"cards",
+75,
+"misfit"
+],
+"start": 260,
+"end": 263,
+"word": "law",
+"lang": "en",
+"piece": "cards-04"
+},
+"454": {
+"file": "cards",
+"path": [
+"cards",
+76,
+"cast",
+0,
+"as"
+],
+"start": 60,
+"end": 63,
+"word": "law",
+"lang": "en",
+"piece": "cards-04"
+},
+"455": {
+"file": "cards",
+"path": [
+"cards",
+76,
+"cast",
+3,
+"as"
+],
+"start": 31,
+"end": 35,
+"word": "laws",
+"lang": "en",
+"piece": "cards-04"
+},
+"456": {
+"file": "cards",
+"path": [
+"cards",
+76,
+"misfit"
+],
+"start": 413,
+"end": 416,
+"word": "law",
+"lang": "en",
+"piece": "cards-04"
+},
+"457": {
+"file": "cards",
+"path": [
+"cards",
+76,
+"misfit"
+],
+"start": 484,
+"end": 488,
+"word": "laws",
+"lang": "en",
+"piece": "cards-04"
+},
+"458": {
+"file": "cards",
+"path": [
+"cards",
+76,
+"misfit"
+],
+"start": 853,
+"end": 856,
+"word": "law",
+"lang": "en",
+"piece": "cards-04"
+},
+"459": {
+"file": "cards",
+"path": [
+"cards",
+77,
+"misfit"
+],
+"start": 4,
+"end": 8,
+"word": "laws",
+"lang": "en",
+"piece": "cards-04"
+},
+"460": {
+"file": "cards",
+"path": [
+"cards",
+77,
+"misfit"
+],
+"start": 353,
+"end": 356,
+"word": "law",
+"lang": "en",
+"piece": "cards-04"
+},
+"461": {
+"file": "cards",
+"path": [
+"cards",
+77,
+"misfit"
+],
+"start": 637,
+"end": 640,
+"word": "law",
+"lang": "en",
+"piece": "cards-04"
+},
+"462": {
+"file": "cards",
+"path": [
+"cards",
+78,
+"misfit"
+],
+"start": 84,
+"end": 88,
+"word": "laws",
+"lang": "en",
+"piece": "cards-04"
+},
+"463": {
+"file": "cards",
+"path": [
+"cards",
+78,
+"misfit"
+],
+"start": 165,
+"end": 168,
+"word": "law",
+"lang": "en",
+"piece": "cards-04"
+},
+"464": {
+"file": "cards",
+"path": [
+"cards",
+78,
+"misfit"
+],
+"start": 746,
+"end": 749,
+"word": "law",
+"lang": "en",
+"piece": "cards-04"
+},
+"465": {
+"file": "cards",
+"path": [
+"cards",
+78,
+"misfit"
+],
+"start": 869,
+"end": 872,
+"word": "law",
+"lang": "en",
+"piece": "cards-04"
+},
+"466": {
+"file": "cards",
+"path": [
+"cards",
+79,
+"misfit"
+],
+"start": 78,
+"end": 81,
+"word": "law",
+"lang": "en",
+"piece": "cards-04"
+},
+"467": {
+"file": "cards",
+"path": [
+"cards",
+80,
+"cast",
+1,
+"as"
+],
+"start": 87,
+"end": 90,
+"word": "law",
+"lang": "en",
+"piece": "cards-04"
+},
+"468": {
+"file": "cards",
+"path": [
+"cards",
+80,
+"cast",
+2,
+"as"
+],
+"start": 105,
+"end": 108,
+"word": "law",
+"lang": "en",
+"piece": "cards-04"
+},
+"469": {
+"file": "cards",
+"path": [
+"cards",
+80,
+"cast",
+3,
+"as"
+],
+"start": 94,
+"end": 97,
+"word": "law",
+"lang": "en",
+"piece": "cards-04"
+},
+"470": {
+"file": "cards",
+"path": [
+"cards",
+80,
+"ties",
+2,
+"as"
+],
+"start": 72,
+"end": 75,
+"word": "law",
+"lang": "en",
+"piece": "cards-04"
+},
+"471": {
+"file": "cards",
+"path": [
+"cards",
+80,
+"misfit"
+],
+"start": 447,
+"end": 450,
+"word": "law",
+"lang": "en",
+"piece": "cards-04"
+},
+"472": {
+"file": "cards",
+"path": [
+"cards",
+80,
+"misfit"
+],
+"start": 733,
+"end": 737,
+"word": "laws",
+"lang": "en",
+"piece": "cards-04"
+},
+"473": {
+"file": "cards",
+"path": [
+"cards",
+81,
+"misfit"
+],
+"start": 164,
+"end": 168,
+"word": "laws",
+"lang": "en",
+"piece": "cards-04"
+},
+"474": {
+"file": "cards",
+"path": [
+"cards",
+81,
+"misfit"
+],
+"start": 1051,
+"end": 1055,
+"word": "laws",
+"lang": "en",
+"piece": "cards-04"
+},
+"475": {
+"file": "cards",
+"path": [
+"cards",
+82,
+"cast",
+0,
+"as"
+],
+"start": 57,
+"end": 61,
+"word": "laws",
+"lang": "en",
+"piece": "cards-04"
+},
+"476": {
+"file": "cards",
+"path": [
+"cards",
+82,
+"cast",
+1,
+"as"
+],
+"start": 20,
+"end": 24,
+"word": "laws",
+"lang": "en",
+"piece": "cards-04"
+},
+"477": {
+"file": "cards",
+"path": [
+"cards",
+82,
+"cast",
+3,
+"as"
+],
+"start": 64,
+"end": 67,
+"word": "law",
+"lang": "en",
+"piece": "cards-04"
+},
+"478": {
+"file": "cards",
+"path": [
+"cards",
+82,
+"cast",
+4,
+"as"
+],
+"start": 43,
+"end": 46,
+"word": "law",
+"lang": "en",
+"piece": "cards-04"
+},
+"479": {
+"file": "cards",
+"path": [
+"cards",
+82,
+"cast",
+5,
+"as"
+],
+"start": 59,
+"end": 62,
+"word": "law",
+"lang": "en",
+"piece": "cards-04"
+},
+"480": {
+"file": "cards",
+"path": [
+"cards",
+82,
+"cast",
+6,
+"as"
+],
+"start": 67,
+"end": 70,
+"word": "law",
+"lang": "en",
+"piece": "cards-04"
+},
+"481": {
+"file": "cards",
+"path": [
+"cards",
+82,
+"ties",
+4,
+"as"
+],
+"start": 19,
+"end": 22,
+"word": "law",
+"lang": "en",
+"piece": "cards-04"
+},
+"482": {
+"file": "cards",
+"path": [
+"cards",
+82,
+"laws",
+1,
+"then_en"
+],
+"start": 73,
+"end": 77,
+"word": "laws",
+"lang": "en",
+"piece": "cards-04"
+},
+"483": {
+"file": "cards",
+"path": [
+"cards",
+82,
+"laws",
+1,
+"then_zh"
+],
+"start": 25,
+"end": 26,
+"word": "律",
+"lang": "zh",
+"piece": "cards-04"
+},
+"484": {
+"file": "cards",
+"path": [
+"cards",
+82,
+"laws",
+2,
+"then_en"
+],
+"start": 62,
+"end": 65,
+"word": "law",
+"lang": "en",
+"piece": "cards-04"
+},
+"485": {
+"file": "cards",
+"path": [
+"cards",
+82,
+"laws",
+2,
+"then_zh"
+],
+"start": 36,
+"end": 37,
+"word": "律",
+"lang": "zh",
+"piece": "cards-04"
+},
+"486": {
+"file": "cards",
+"path": [
+"cards",
+82,
+"built_cases",
+2,
+"shows_en"
+],
+"start": 19,
+"end": 23,
+"word": "laws",
+"lang": "en",
+"piece": "cards-04"
+},
+"487": {
+"file": "cards",
+"path": [
+"cards",
+82,
+"misfit"
+],
+"start": 58,
+"end": 62,
+"word": "laws",
+"lang": "en",
+"piece": "cards-04"
+},
+"488": {
+"file": "cards",
+"path": [
+"cards",
+82,
+"misfit"
+],
+"start": 77,
+"end": 80,
+"word": "law",
+"lang": "en",
+"piece": "cards-04"
+},
+"489": {
+"file": "cards",
+"path": [
+"cards",
+82,
+"misfit"
+],
+"start": 208,
+"end": 212,
+"word": "laws",
+"lang": "en",
+"piece": "cards-04"
+},
+"490": {
+"file": "cards",
+"path": [
+"cards",
+82,
+"misfit"
+],
+"start": 600,
+"end": 603,
+"word": "law",
+"lang": "en",
+"piece": "cards-04"
+},
+"491": {
+"file": "cards",
+"path": [
+"cards",
+82,
+"misfit"
+],
+"start": 650,
+"end": 654,
+"word": "laws",
+"lang": "en",
+"piece": "cards-04"
+},
+"492": {
+"file": "cards",
+"path": [
+"cards",
+82,
+"misfit"
+],
+"start": 780,
+"end": 784,
+"word": "laws",
+"lang": "en",
+"piece": "cards-04"
+},
+"493": {
+"file": "cards",
+"path": [
+"cards",
+82,
+"misfit"
+],
+"start": 830,
+"end": 833,
+"word": "law",
+"lang": "en",
+"piece": "cards-04"
+},
+"494": {
+"file": "cards",
+"path": [
+"cards",
+83,
+"plain_en"
+],
+"start": 2,
+"end": 5,
+"word": "law",
+"lang": "en",
+"piece": "cards-04"
+},
+"495": {
+"file": "cards",
+"path": [
+"cards",
+83,
+"cast",
+0,
+"as"
+],
+"start": 4,
+"end": 7,
+"word": "law",
+"lang": "en",
+"piece": "cards-04"
+},
+"496": {
+"file": "cards",
+"path": [
+"cards",
+83,
+"cast",
+0,
+"as"
+],
+"start": 55,
+"end": 58,
+"word": "law",
+"lang": "en",
+"piece": "cards-04"
+},
+"497": {
+"file": "cards",
+"path": [
+"cards",
+83,
+"cast",
+0,
+"as"
+],
+"start": 345,
+"end": 348,
+"word": "law",
+"lang": "en",
+"piece": "cards-04"
+},
+"498": {
+"file": "cards",
+"path": [
+"cards",
+83,
+"laws",
+3,
+"then_en"
+],
+"start": 65,
+"end": 68,
+"word": "law",
+"lang": "en",
+"piece": "cards-04"
+},
+"499": {
+"file": "cards",
+"path": [
+"cards",
+83,
+"misfit"
+],
+"start": 4,
+"end": 8,
+"word": "laws",
+"lang": "en",
+"piece": "cards-04"
+},
+"500": {
+"file": "cards",
+"path": [
+"cards",
+83,
+"misfit"
+],
+"start": 27,
+"end": 30,
+"word": "law",
+"lang": "en",
+"piece": "cards-04"
+},
+"501": {
+"file": "cards",
+"path": [
+"cards",
+83,
+"misfit"
+],
+"start": 58,
+"end": 61,
+"word": "law",
+"lang": "en",
+"piece": "cards-04"
+},
+"502": {
+"file": "cards",
+"path": [
+"cards",
+83,
+"misfit"
+],
+"start": 229,
+"end": 232,
+"word": "law",
+"lang": "en",
+"piece": "cards-04"
+},
+"503": {
+"file": "cards",
+"path": [
+"cards",
+83,
+"misfit"
+],
+"start": 538,
+"end": 541,
+"word": "law",
+"lang": "en",
+"piece": "cards-04"
+},
+"504": {
+"file": "cards",
+"path": [
+"cards",
+83,
+"misfit"
+],
+"start": 676,
+"end": 680,
+"word": "laws",
+"lang": "en",
+"piece": "cards-04"
+},
+"505": {
+"file": "cards",
+"path": [
+"cards",
+83,
+"misfit"
+],
+"start": 1084,
+"end": 1087,
+"word": "law",
+"lang": "en",
+"piece": "cards-04"
+},
+"506": {
+"file": "cards",
+"path": [
+"cards",
+85,
+"misfit"
+],
+"start": 647,
+"end": 650,
+"word": "law",
+"lang": "en",
+"piece": "cards-04"
+},
+"507": {
+"file": "cards",
+"path": [
+"cards",
+86,
+"misfit"
+],
+"start": 506,
+"end": 509,
+"word": "law",
+"lang": "en",
+"piece": "cards-04"
+},
+"508": {
+"file": "cards",
+"path": [
+"cards",
+87,
+"cast",
+1,
+"as"
+],
+"start": 41,
+"end": 44,
+"word": "law",
+"lang": "en",
+"piece": "cards-04"
+},
+"509": {
+"file": "cards",
+"path": [
+"cards",
+87,
+"built_cases",
+1,
+"shows_en"
+],
+"start": 40,
+"end": 43,
+"word": "law",
+"lang": "en",
+"piece": "cards-04"
+},
+"510": {
+"file": "cards",
+"path": [
+"cards",
+87,
+"misfit"
+],
+"start": 135,
+"end": 139,
+"word": "laws",
+"lang": "en",
+"piece": "cards-04"
+},
+"511": {
+"file": "cards",
+"path": [
+"cards",
+88,
+"cast",
+0,
+"as"
+],
+"start": 40,
+"end": 43,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"512": {
+"file": "cards",
+"path": [
+"cards",
+88,
+"ties",
+1,
+"as"
+],
+"start": 61,
+"end": 64,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"513": {
+"file": "cards",
+"path": [
+"cards",
+88,
+"laws",
+2,
+"then_en"
+],
+"start": 66,
+"end": 69,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"514": {
+"file": "cards",
+"path": [
+"cards",
+88,
+"laws",
+2,
+"then_zh"
+],
+"start": 21,
+"end": 22,
+"word": "律",
+"lang": "zh",
+"piece": "cards-05"
+},
+"515": {
+"file": "cards",
+"path": [
+"cards",
+88,
+"misfit"
+],
+"start": 19,
+"end": 23,
+"word": "laws",
+"lang": "en",
+"piece": "cards-05"
+},
+"516": {
+"file": "cards",
+"path": [
+"cards",
+89,
+"misfit"
+],
+"start": 209,
+"end": 213,
+"word": "laws",
+"lang": "en",
+"piece": "cards-05"
+},
+"517": {
+"file": "cards",
+"path": [
+"cards",
+90,
+"misfit"
+],
+"start": 67,
+"end": 71,
+"word": "laws",
+"lang": "en",
+"piece": "cards-05"
+},
+"518": {
+"file": "cards",
+"path": [
+"cards",
+90,
+"misfit"
+],
+"start": 131,
+"end": 135,
+"word": "laws",
+"lang": "en",
+"piece": "cards-05"
+},
+"519": {
+"file": "cards",
+"path": [
+"cards",
+90,
+"misfit"
+],
+"start": 163,
+"end": 167,
+"word": "laws",
+"lang": "en",
+"piece": "cards-05"
+},
+"520": {
+"file": "cards",
+"path": [
+"cards",
+91,
+"misfit"
+],
+"start": 35,
+"end": 38,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"521": {
+"file": "cards",
+"path": [
+"cards",
+91,
+"misfit"
+],
+"start": 167,
+"end": 171,
+"word": "laws",
+"lang": "en",
+"piece": "cards-05"
+},
+"522": {
+"file": "cards",
+"path": [
+"cards",
+91,
+"misfit"
+],
+"start": 495,
+"end": 498,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"523": {
+"file": "cards",
+"path": [
+"cards",
+91,
+"misfit"
+],
+"start": 595,
+"end": 598,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"524": {
+"file": "cards",
+"path": [
+"cards",
+93,
+"misfit"
+],
+"start": 304,
+"end": 307,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"525": {
+"file": "cards",
+"path": [
+"cards",
+93,
+"misfit"
+],
+"start": 727,
+"end": 731,
+"word": "laws",
+"lang": "en",
+"piece": "cards-05"
+},
+"526": {
+"file": "cards",
+"path": [
+"cards",
+94,
+"cast",
+2,
+"as"
+],
+"start": 24,
+"end": 27,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"527": {
+"file": "cards",
+"path": [
+"cards",
+94,
+"ties",
+3,
+"as"
+],
+"start": 24,
+"end": 27,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"528": {
+"file": "cards",
+"path": [
+"cards",
+94,
+"misfit"
+],
+"start": 89,
+"end": 92,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"529": {
+"file": "cards",
+"path": [
+"cards",
+94,
+"misfit"
+],
+"start": 117,
+"end": 120,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"530": {
+"file": "cards",
+"path": [
+"cards",
+94,
+"misfit"
+],
+"start": 530,
+"end": 533,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"531": {
+"file": "cards",
+"path": [
+"cards",
+94,
+"misfit"
+],
+"start": 922,
+"end": 925,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"532": {
+"file": "cards",
+"path": [
+"cards",
+95,
+"cast",
+1,
+"as"
+],
+"start": 4,
+"end": 7,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"533": {
+"file": "cards",
+"path": [
+"cards",
+95,
+"misfit"
+],
+"start": 4,
+"end": 7,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"534": {
+"file": "cards",
+"path": [
+"cards",
+95,
+"misfit"
+],
+"start": 433,
+"end": 436,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"535": {
+"file": "cards",
+"path": [
+"cards",
+95,
+"misfit"
+],
+"start": 533,
+"end": 536,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"536": {
+"file": "cards",
+"path": [
+"cards",
+96,
+"cast",
+1,
+"as"
+],
+"start": 2,
+"end": 5,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"537": {
+"file": "cards",
+"path": [
+"cards",
+96,
+"laws",
+3,
+"then_zh"
+],
+"start": 2,
+"end": 3,
+"word": "律",
+"lang": "zh",
+"piece": "cards-05"
+},
+"538": {
+"file": "cards",
+"path": [
+"cards",
+96,
+"laws",
+5,
+"then_zh"
+],
+"start": 2,
+"end": 3,
+"word": "律",
+"lang": "zh",
+"piece": "cards-05"
+},
+"539": {
+"file": "cards",
+"path": [
+"cards",
+96,
+"misfit"
+],
+"start": 112,
+"end": 115,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"540": {
+"file": "cards",
+"path": [
+"cards",
+97,
+"cast",
+0,
+"as"
+],
+"start": 69,
+"end": 72,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"541": {
+"file": "cards",
+"path": [
+"cards",
+97,
+"cast",
+1,
+"as"
+],
+"start": 15,
+"end": 18,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"542": {
+"file": "cards",
+"path": [
+"cards",
+97,
+"cast",
+1,
+"as"
+],
+"start": 108,
+"end": 111,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"543": {
+"file": "cards",
+"path": [
+"cards",
+97,
+"laws",
+1,
+"then_en"
+],
+"start": 68,
+"end": 71,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"544": {
+"file": "cards",
+"path": [
+"cards",
+97,
+"laws",
+1,
+"then_zh"
+],
+"start": 19,
+"end": 20,
+"word": "律",
+"lang": "zh",
+"piece": "cards-05"
+},
+"545": {
+"file": "cards",
+"path": [
+"cards",
+97,
+"misfit"
+],
+"start": 262,
+"end": 265,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"546": {
+"file": "cards",
+"path": [
+"cards",
+97,
+"misfit"
+],
+"start": 855,
+"end": 858,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"547": {
+"file": "cards",
+"path": [
+"cards",
+97,
+"misfit"
+],
+"start": 926,
+"end": 929,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"548": {
+"file": "cards",
+"path": [
+"cards",
+97,
+"misfit"
+],
+"start": 1000,
+"end": 1003,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"549": {
+"file": "cards",
+"path": [
+"cards",
+98,
+"cast",
+0,
+"as"
+],
+"start": 101,
+"end": 104,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"550": {
+"file": "cards",
+"path": [
+"cards",
+98,
+"cast",
+1,
+"as"
+],
+"start": 11,
+"end": 14,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"551": {
+"file": "cards",
+"path": [
+"cards",
+98,
+"ties",
+0,
+"as"
+],
+"start": 87,
+"end": 90,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"552": {
+"file": "cards",
+"path": [
+"cards",
+98,
+"laws",
+2,
+"sameness"
+],
+"start": 15,
+"end": 18,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"553": {
+"file": "cards",
+"path": [
+"cards",
+98,
+"laws",
+2,
+"then_en"
+],
+"start": 11,
+"end": 14,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"554": {
+"file": "cards",
+"path": [
+"cards",
+98,
+"misfit"
+],
+"start": 34,
+"end": 37,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"555": {
+"file": "cards",
+"path": [
+"cards",
+98,
+"misfit"
+],
+"start": 267,
+"end": 270,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"556": {
+"file": "cards",
+"path": [
+"cards",
+98,
+"misfit"
+],
+"start": 309,
+"end": 313,
+"word": "laws",
+"lang": "en",
+"piece": "cards-05"
+},
+"557": {
+"file": "cards",
+"path": [
+"cards",
+98,
+"misfit"
+],
+"start": 517,
+"end": 520,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"558": {
+"file": "cards",
+"path": [
+"cards",
+98,
+"misfit"
+],
+"start": 578,
+"end": 582,
+"word": "laws",
+"lang": "en",
+"piece": "cards-05"
+},
+"559": {
+"file": "cards",
+"path": [
+"cards",
+98,
+"misfit"
+],
+"start": 713,
+"end": 717,
+"word": "laws",
+"lang": "en",
+"piece": "cards-05"
+},
+"560": {
+"file": "cards",
+"path": [
+"cards",
+99,
+"cast",
+1,
+"as"
+],
+"start": 2,
+"end": 5,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"561": {
+"file": "cards",
+"path": [
+"cards",
+99,
+"ties",
+0,
+"as"
+],
+"start": 50,
+"end": 53,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"562": {
+"file": "cards",
+"path": [
+"cards",
+99,
+"ties",
+1,
+"as"
+],
+"start": 55,
+"end": 58,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"563": {
+"file": "cards",
+"path": [
+"cards",
+99,
+"misfit"
+],
+"start": 98,
+"end": 101,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"564": {
+"file": "cards",
+"path": [
+"cards",
+100,
+"cast",
+2,
+"as"
+],
+"start": 45,
+"end": 48,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"565": {
+"file": "cards",
+"path": [
+"cards",
+100,
+"ties",
+2,
+"as"
+],
+"start": 67,
+"end": 70,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"566": {
+"file": "cards",
+"path": [
+"cards",
+100,
+"laws",
+0,
+"then_en"
+],
+"start": 84,
+"end": 88,
+"word": "laws",
+"lang": "en",
+"piece": "cards-05"
+},
+"567": {
+"file": "cards",
+"path": [
+"cards",
+100,
+"misfit"
+],
+"start": 429,
+"end": 432,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"568": {
+"file": "cards",
+"path": [
+"cards",
+101,
+"laws",
+0,
+"then_en"
+],
+"start": 98,
+"end": 102,
+"word": "laws",
+"lang": "en",
+"piece": "cards-05"
+},
+"569": {
+"file": "cards",
+"path": [
+"cards",
+101,
+"misfit"
+],
+"start": 517,
+"end": 520,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"570": {
+"file": "cards",
+"path": [
+"cards",
+102,
+"misfit"
+],
+"start": 147,
+"end": 150,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"571": {
+"file": "cards",
+"path": [
+"cards",
+102,
+"misfit"
+],
+"start": 666,
+"end": 670,
+"word": "laws",
+"lang": "en",
+"piece": "cards-05"
+},
+"572": {
+"file": "cards",
+"path": [
+"cards",
+103,
+"misfit"
+],
+"start": 145,
+"end": 148,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"573": {
+"file": "cards",
+"path": [
+"cards",
+103,
+"misfit"
+],
+"start": 184,
+"end": 188,
+"word": "laws",
+"lang": "en",
+"piece": "cards-05"
+},
+"574": {
+"file": "cards",
+"path": [
+"cards",
+103,
+"misfit"
+],
+"start": 598,
+"end": 601,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"575": {
+"file": "cards",
+"path": [
+"cards",
+104,
+"plain_en"
+],
+"start": 67,
+"end": 71,
+"word": "laws",
+"lang": "en",
+"piece": "cards-05"
+},
+"576": {
+"file": "cards",
+"path": [
+"cards",
+104,
+"cast",
+1,
+"as"
+],
+"start": 4,
+"end": 7,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"577": {
+"file": "cards",
+"path": [
+"cards",
+104,
+"ties",
+0,
+"as"
+],
+"start": 93,
+"end": 96,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"578": {
+"file": "cards",
+"path": [
+"cards",
+104,
+"ties",
+0,
+"as"
+],
+"start": 147,
+"end": 150,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"579": {
+"file": "cards",
+"path": [
+"cards",
+104,
+"misfit"
+],
+"start": 273,
+"end": 276,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"580": {
+"file": "cards",
+"path": [
+"cards",
+104,
+"misfit"
+],
+"start": 288,
+"end": 292,
+"word": "laws",
+"lang": "en",
+"piece": "cards-05"
+},
+"581": {
+"file": "cards",
+"path": [
+"cards",
+104,
+"misfit"
+],
+"start": 382,
+"end": 386,
+"word": "laws",
+"lang": "en",
+"piece": "cards-05"
+},
+"582": {
+"file": "cards",
+"path": [
+"cards",
+105,
+"ties",
+1,
+"as"
+],
+"start": 16,
+"end": 19,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"583": {
+"file": "cards",
+"path": [
+"cards",
+105,
+"ties",
+1,
+"as"
+],
+"start": 99,
+"end": 102,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"584": {
+"file": "cards",
+"path": [
+"cards",
+105,
+"misfit"
+],
+"start": 203,
+"end": 206,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"585": {
+"file": "cards",
+"path": [
+"cards",
+105,
+"misfit"
+],
+"start": 628,
+"end": 631,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"586": {
+"file": "cards",
+"path": [
+"cards",
+106,
+"cast",
+2,
+"as"
+],
+"start": 27,
+"end": 30,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"587": {
+"file": "cards",
+"path": [
+"cards",
+106,
+"misfit"
+],
+"start": 426,
+"end": 430,
+"word": "laws",
+"lang": "en",
+"piece": "cards-05"
+},
+"588": {
+"file": "cards",
+"path": [
+"cards",
+107,
+"misfit"
+],
+"start": 328,
+"end": 332,
+"word": "laws",
+"lang": "en",
+"piece": "cards-05"
+},
+"589": {
+"file": "cards",
+"path": [
+"cards",
+107,
+"misfit"
+],
+"start": 639,
+"end": 643,
+"word": "laws",
+"lang": "en",
+"piece": "cards-05"
+},
+"590": {
+"file": "cards",
+"path": [
+"cards",
+108,
+"misfit"
+],
+"start": 399,
+"end": 402,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"591": {
+"file": "cards",
+"path": [
+"cards",
+108,
+"misfit"
+],
+"start": 543,
+"end": 547,
+"word": "laws",
+"lang": "en",
+"piece": "cards-05"
+},
+"592": {
+"file": "cards",
+"path": [
+"cards",
+108,
+"misfit"
+],
+"start": 691,
+"end": 694,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"593": {
+"file": "cards",
+"path": [
+"cards",
+109,
+"misfit"
+],
+"start": 4,
+"end": 8,
+"word": "laws",
+"lang": "en",
+"piece": "cards-05"
+},
+"594": {
+"file": "cards",
+"path": [
+"cards",
+109,
+"misfit"
+],
+"start": 205,
+"end": 208,
+"word": "law",
+"lang": "en",
+"piece": "cards-05"
+},
+"595": {
+"file": "cards",
+"path": [
+"cards",
+109,
+"misfit"
+],
+"start": 661,
+"end": 665,
+"word": "laws",
+"lang": "en",
+"piece": "cards-05"
+},
+"596": {
+"file": "cards",
+"path": [
+"cards",
+110,
+"misfit"
+],
+"start": 3,
+"end": 6,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"597": {
+"file": "cards",
+"path": [
+"cards",
+110,
+"misfit"
+],
+"start": 139,
+"end": 143,
+"word": "laws",
+"lang": "en",
+"piece": "cards-06"
+},
+"598": {
+"file": "cards",
+"path": [
+"cards",
+111,
+"misfit"
+],
+"start": 195,
+"end": 198,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"599": {
+"file": "cards",
+"path": [
+"cards",
+111,
+"misfit"
+],
+"start": 235,
+"end": 239,
+"word": "laws",
+"lang": "en",
+"piece": "cards-06"
+},
+"600": {
+"file": "cards",
+"path": [
+"cards",
+112,
+"misfit"
+],
+"start": 4,
+"end": 8,
+"word": "laws",
+"lang": "en",
+"piece": "cards-06"
+},
+"601": {
+"file": "cards",
+"path": [
+"cards",
+112,
+"misfit"
+],
+"start": 348,
+"end": 351,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"602": {
+"file": "cards",
+"path": [
+"cards",
+113,
+"misfit"
+],
+"start": 484,
+"end": 488,
+"word": "laws",
+"lang": "en",
+"piece": "cards-06"
+},
+"603": {
+"file": "cards",
+"path": [
+"cards",
+114,
+"cast",
+1,
+"as"
+],
+"start": 4,
+"end": 7,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"604": {
+"file": "cards",
+"path": [
+"cards",
+114,
+"cast",
+1,
+"as"
+],
+"start": 160,
+"end": 163,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"605": {
+"file": "cards",
+"path": [
+"cards",
+114,
+"built_cases",
+2,
+"shows_en"
+],
+"start": 19,
+"end": 22,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"606": {
+"file": "cards",
+"path": [
+"cards",
+114,
+"misfit"
+],
+"start": 4,
+"end": 7,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"607": {
+"file": "cards",
+"path": [
+"cards",
+114,
+"misfit"
+],
+"start": 225,
+"end": 228,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"608": {
+"file": "cards",
+"path": [
+"cards",
+114,
+"misfit"
+],
+"start": 685,
+"end": 688,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"609": {
+"file": "cards",
+"path": [
+"cards",
+114,
+"misfit"
+],
+"start": 1090,
+"end": 1093,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"610": {
+"file": "cards",
+"path": [
+"cards",
+114,
+"misfit"
+],
+"start": 1127,
+"end": 1130,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"611": {
+"file": "cards",
+"path": [
+"cards",
+115,
+"misfit"
+],
+"start": 411,
+"end": 414,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"612": {
+"file": "cards",
+"path": [
+"cards",
+116,
+"plain_en"
+],
+"start": 94,
+"end": 97,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"613": {
+"file": "cards",
+"path": [
+"cards",
+116,
+"cast",
+0,
+"as"
+],
+"start": 50,
+"end": 53,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"614": {
+"file": "cards",
+"path": [
+"cards",
+116,
+"laws",
+1,
+"then_en"
+],
+"start": 101,
+"end": 104,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"615": {
+"file": "cards",
+"path": [
+"cards",
+116,
+"laws",
+2,
+"then_en"
+],
+"start": 77,
+"end": 80,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"616": {
+"file": "cards",
+"path": [
+"cards",
+116,
+"built_cases",
+1,
+"shows_en"
+],
+"start": 4,
+"end": 7,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"617": {
+"file": "cards",
+"path": [
+"cards",
+116,
+"misfit"
+],
+"start": 184,
+"end": 187,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"618": {
+"file": "cards",
+"path": [
+"cards",
+116,
+"misfit"
+],
+"start": 414,
+"end": 418,
+"word": "laws",
+"lang": "en",
+"piece": "cards-06"
+},
+"619": {
+"file": "cards",
+"path": [
+"cards",
+117,
+"misfit"
+],
+"start": 338,
+"end": 342,
+"word": "laws",
+"lang": "en",
+"piece": "cards-06"
+},
+"620": {
+"file": "cards",
+"path": [
+"cards",
+119,
+"misfit"
+],
+"start": 600,
+"end": 604,
+"word": "laws",
+"lang": "en",
+"piece": "cards-06"
+},
+"621": {
+"file": "cards",
+"path": [
+"cards",
+119,
+"misfit"
+],
+"start": 701,
+"end": 704,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"622": {
+"file": "cards",
+"path": [
+"cards",
+120,
+"misfit"
+],
+"start": 6,
+"end": 9,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"623": {
+"file": "cards",
+"path": [
+"cards",
+120,
+"misfit"
+],
+"start": 388,
+"end": 391,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"624": {
+"file": "cards",
+"path": [
+"cards",
+121,
+"misfit"
+],
+"start": 161,
+"end": 164,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"625": {
+"file": "cards",
+"path": [
+"cards",
+121,
+"misfit"
+],
+"start": 396,
+"end": 399,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"626": {
+"file": "cards",
+"path": [
+"cards",
+122,
+"misfit"
+],
+"start": 187,
+"end": 190,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"627": {
+"file": "cards",
+"path": [
+"cards",
+123,
+"laws",
+2,
+"then_en"
+],
+"start": 101,
+"end": 104,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"628": {
+"file": "cards",
+"path": [
+"cards",
+123,
+"laws",
+2,
+"then_zh"
+],
+"start": 16,
+"end": 17,
+"word": "律",
+"lang": "zh",
+"piece": "cards-06"
+},
+"629": {
+"file": "cards",
+"path": [
+"cards",
+123,
+"misfit"
+],
+"start": 141,
+"end": 144,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"630": {
+"file": "cards",
+"path": [
+"cards",
+123,
+"misfit"
+],
+"start": 539,
+"end": 542,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"631": {
+"file": "cards",
+"path": [
+"cards",
+123,
+"misfit"
+],
+"start": 608,
+"end": 611,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"632": {
+"file": "cards",
+"path": [
+"cards",
+124,
+"built_cases",
+0,
+"shows_en"
+],
+"start": 94,
+"end": 97,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"633": {
+"file": "cards",
+"path": [
+"cards",
+124,
+"misfit"
+],
+"start": 447,
+"end": 450,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"634": {
+"file": "cards",
+"path": [
+"cards",
+125,
+"misfit"
+],
+"start": 604,
+"end": 607,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"635": {
+"file": "cards",
+"path": [
+"cards",
+126,
+"plain_zh"
+],
+"start": 20,
+"end": 21,
+"word": "律",
+"lang": "zh",
+"piece": "cards-06"
+},
+"636": {
+"file": "cards",
+"path": [
+"cards",
+126,
+"cast",
+0,
+"as"
+],
+"start": 64,
+"end": 67,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"637": {
+"file": "cards",
+"path": [
+"cards",
+126,
+"cast",
+0,
+"as"
+],
+"start": 73,
+"end": 76,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"638": {
+"file": "cards",
+"path": [
+"cards",
+126,
+"cast",
+0,
+"as"
+],
+"start": 103,
+"end": 106,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"639": {
+"file": "cards",
+"path": [
+"cards",
+126,
+"laws",
+0,
+"then_en"
+],
+"start": 16,
+"end": 19,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"640": {
+"file": "cards",
+"path": [
+"cards",
+126,
+"laws",
+0,
+"then_zh"
+],
+"start": 4,
+"end": 5,
+"word": "律",
+"lang": "zh",
+"piece": "cards-06"
+},
+"641": {
+"file": "cards",
+"path": [
+"cards",
+126,
+"laws",
+1,
+"then_en"
+],
+"start": 21,
+"end": 24,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"642": {
+"file": "cards",
+"path": [
+"cards",
+126,
+"laws",
+1,
+"then_en"
+],
+"start": 105,
+"end": 108,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"643": {
+"file": "cards",
+"path": [
+"cards",
+126,
+"laws",
+1,
+"then_zh"
+],
+"start": 11,
+"end": 13,
+"word": "定律",
+"lang": "zh",
+"piece": "cards-06"
+},
+"644": {
+"file": "cards",
+"path": [
+"cards",
+126,
+"laws",
+1,
+"then_zh"
+],
+"start": 26,
+"end": 27,
+"word": "律",
+"lang": "zh",
+"piece": "cards-06"
+},
+"645": {
+"file": "cards",
+"path": [
+"cards",
+126,
+"laws",
+2,
+"then_en"
+],
+"start": 23,
+"end": 26,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"646": {
+"file": "cards",
+"path": [
+"cards",
+126,
+"laws",
+2,
+"then_zh"
+],
+"start": 3,
+"end": 4,
+"word": "律",
+"lang": "zh",
+"piece": "cards-06"
+},
+"647": {
+"file": "cards",
+"path": [
+"cards",
+126,
+"built_cases",
+0,
+"shows_en"
+],
+"start": 45,
+"end": 48,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"648": {
+"file": "cards",
+"path": [
+"cards",
+126,
+"built_cases",
+2,
+"shows_en"
+],
+"start": 4,
+"end": 7,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"649": {
+"file": "cards",
+"path": [
+"cards",
+126,
+"misfit"
+],
+"start": 4,
+"end": 8,
+"word": "laws",
+"lang": "en",
+"piece": "cards-06"
+},
+"650": {
+"file": "cards",
+"path": [
+"cards",
+126,
+"misfit"
+],
+"start": 64,
+"end": 67,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"651": {
+"file": "cards",
+"path": [
+"cards",
+126,
+"misfit"
+],
+"start": 160,
+"end": 163,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"652": {
+"file": "cards",
+"path": [
+"cards",
+126,
+"misfit"
+],
+"start": 183,
+"end": 186,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"653": {
+"file": "cards",
+"path": [
+"cards",
+126,
+"misfit"
+],
+"start": 388,
+"end": 392,
+"word": "laws",
+"lang": "en",
+"piece": "cards-06"
+},
+"654": {
+"file": "cards",
+"path": [
+"cards",
+126,
+"misfit"
+],
+"start": 473,
+"end": 476,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"655": {
+"file": "cards",
+"path": [
+"cards",
+127,
+"cast",
+1,
+"as"
+],
+"start": 12,
+"end": 15,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"656": {
+"file": "cards",
+"path": [
+"cards",
+127,
+"cast",
+1,
+"as"
+],
+"start": 118,
+"end": 121,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"657": {
+"file": "cards",
+"path": [
+"cards",
+127,
+"cast",
+3,
+"as"
+],
+"start": 72,
+"end": 75,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"658": {
+"file": "cards",
+"path": [
+"cards",
+127,
+"laws",
+3,
+"then_en"
+],
+"start": 26,
+"end": 29,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"659": {
+"file": "cards",
+"path": [
+"cards",
+127,
+"laws",
+3,
+"then_zh"
+],
+"start": 6,
+"end": 7,
+"word": "律",
+"lang": "zh",
+"piece": "cards-06"
+},
+"660": {
+"file": "cards",
+"path": [
+"cards",
+127,
+"built_cases",
+1,
+"shows_en"
+],
+"start": 54,
+"end": 57,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"661": {
+"file": "cards",
+"path": [
+"cards",
+127,
+"misfit"
+],
+"start": 281,
+"end": 284,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"662": {
+"file": "cards",
+"path": [
+"cards",
+127,
+"misfit"
+],
+"start": 549,
+"end": 552,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"663": {
+"file": "cards",
+"path": [
+"cards",
+127,
+"misfit"
+],
+"start": 693,
+"end": 696,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"664": {
+"file": "cards",
+"path": [
+"cards",
+128,
+"misfit"
+],
+"start": 8,
+"end": 12,
+"word": "laws",
+"lang": "en",
+"piece": "cards-06"
+},
+"665": {
+"file": "cards",
+"path": [
+"cards",
+129,
+"misfit"
+],
+"start": 631,
+"end": 635,
+"word": "laws",
+"lang": "en",
+"piece": "cards-06"
+},
+"666": {
+"file": "cards",
+"path": [
+"cards",
+129,
+"misfit"
+],
+"start": 858,
+"end": 861,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"667": {
+"file": "cards",
+"path": [
+"cards",
+130,
+"misfit"
+],
+"start": 37,
+"end": 40,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"668": {
+"file": "cards",
+"path": [
+"cards",
+131,
+"misfit"
+],
+"start": 22,
+"end": 26,
+"word": "laws",
+"lang": "en",
+"piece": "cards-06"
+},
+"669": {
+"file": "cards",
+"path": [
+"cards",
+131,
+"misfit"
+],
+"start": 386,
+"end": 389,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"670": {
+"file": "cards",
+"path": [
+"cards",
+131,
+"misfit"
+],
+"start": 638,
+"end": 642,
+"word": "laws",
+"lang": "en",
+"piece": "cards-06"
+},
+"671": {
+"file": "cards",
+"path": [
+"cards",
+132,
+"misfit"
+],
+"start": 141,
+"end": 145,
+"word": "laws",
+"lang": "en",
+"piece": "cards-06"
+},
+"672": {
+"file": "cards",
+"path": [
+"cards",
+132,
+"misfit"
+],
+"start": 338,
+"end": 342,
+"word": "laws",
+"lang": "en",
+"piece": "cards-06"
+},
+"673": {
+"file": "cards",
+"path": [
+"cards",
+132,
+"misfit"
+],
+"start": 762,
+"end": 765,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"674": {
+"file": "cards",
+"path": [
+"cards",
+133,
+"misfit"
+],
+"start": 441,
+"end": 444,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"675": {
+"file": "cards",
+"path": [
+"cards",
+133,
+"misfit"
+],
+"start": 749,
+"end": 752,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"676": {
+"file": "cards",
+"path": [
+"cards",
+133,
+"misfit"
+],
+"start": 837,
+"end": 840,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"677": {
+"file": "cards",
+"path": [
+"cards",
+133,
+"misfit"
+],
+"start": 885,
+"end": 888,
+"word": "law",
+"lang": "en",
+"piece": "cards-06"
+},
+"678": {
+"file": "cards",
+"path": [
+"cards",
+133,
+"misfit"
+],
+"start": 955,
+"end": 959,
+"word": "laws",
+"lang": "en",
+"piece": "cards-06"
+},
+"679": {
+"file": "cards",
+"path": [
+"cards",
+134,
+"misfit"
+],
+"start": 176,
+"end": 180,
+"word": "laws",
+"lang": "en",
+"piece": "cards-07"
+},
+"680": {
+"file": "cards",
+"path": [
+"cards",
+134,
+"misfit"
+],
+"start": 476,
+"end": 480,
+"word": "laws",
+"lang": "en",
+"piece": "cards-07"
+},
+"681": {
+"file": "cards",
+"path": [
+"cards",
+134,
+"misfit"
+],
+"start": 562,
+"end": 566,
+"word": "laws",
+"lang": "en",
+"piece": "cards-07"
+},
+"682": {
+"file": "cards",
+"path": [
+"cards",
+135,
+"misfit"
+],
+"start": 19,
+"end": 23,
+"word": "laws",
+"lang": "en",
+"piece": "cards-07"
+},
+"683": {
+"file": "cards",
+"path": [
+"cards",
+136,
+"misfit"
+],
+"start": 576,
+"end": 579,
+"word": "law",
+"lang": "en",
+"piece": "cards-07"
+},
+"684": {
+"file": "cards",
+"path": [
+"cards",
+136,
+"misfit"
+],
+"start": 748,
+"end": 752,
+"word": "laws",
+"lang": "en",
+"piece": "cards-07"
+},
+"685": {
+"file": "cards",
+"path": [
+"cards",
+137,
+"misfit"
+],
+"start": 393,
+"end": 397,
+"word": "laws",
+"lang": "en",
+"piece": "cards-07"
+},
+"686": {
+"file": "cards",
+"path": [
+"cards",
+137,
+"misfit"
+],
+"start": 570,
+"end": 573,
+"word": "law",
+"lang": "en",
+"piece": "cards-07"
+},
+"687": {
+"file": "cards",
+"path": [
+"cards",
+138,
+"misfit"
+],
+"start": 392,
+"end": 396,
+"word": "laws",
+"lang": "en",
+"piece": "cards-07"
+},
+"688": {
+"file": "cards",
+"path": [
+"cards",
+140,
+"laws",
+1,
+"then_en"
+],
+"start": 94,
+"end": 97,
+"word": "law",
+"lang": "en",
+"piece": "cards-07"
+},
+"689": {
+"file": "cards",
+"path": [
+"cards",
+140,
+"laws",
+1,
+"then_zh"
+],
+"start": 34,
+"end": 35,
+"word": "律",
+"lang": "zh",
+"piece": "cards-07"
+},
+"690": {
+"file": "cards",
+"path": [
+"cards",
+140,
+"misfit"
+],
+"start": 4,
+"end": 8,
+"word": "laws",
+"lang": "en",
+"piece": "cards-07"
+},
+"691": {
+"file": "cards",
+"path": [
+"cards",
+141,
+"plain_en"
+],
+"start": 44,
+"end": 48,
+"word": "laws",
+"lang": "en",
+"piece": "cards-07"
+},
+"692": {
+"file": "cards",
+"path": [
+"cards",
+141,
+"cast",
+0,
+"as"
+],
+"start": 22,
+"end": 25,
+"word": "law",
+"lang": "en",
+"piece": "cards-07"
+},
+"693": {
+"file": "cards",
+"path": [
+"cards",
+141,
+"laws",
+0,
+"then_en"
+],
+"start": 102,
+"end": 105,
+"word": "law",
+"lang": "en",
+"piece": "cards-07"
+},
+"694": {
+"file": "cards",
+"path": [
+"cards",
+141,
+"laws",
+0,
+"then_zh"
+],
+"start": 18,
+"end": 19,
+"word": "律",
+"lang": "zh",
+"piece": "cards-07"
+},
+"695": {
+"file": "cards",
+"path": [
+"cards",
+141,
+"misfit"
+],
+"start": 4,
+"end": 8,
+"word": "laws",
+"lang": "en",
+"piece": "cards-07"
+},
+"696": {
+"file": "cards",
+"path": [
+"cards",
+141,
+"misfit"
+],
+"start": 97,
+"end": 101,
+"word": "laws",
+"lang": "en",
+"piece": "cards-07"
+},
+"697": {
+"file": "cards",
+"path": [
+"cards",
+143,
+"cast",
+1,
+"as"
+],
+"start": 99,
+"end": 102,
+"word": "law",
+"lang": "en",
+"piece": "cards-07"
+},
+"698": {
+"file": "cards",
+"path": [
+"cards",
+144,
+"cast",
+1,
+"as"
+],
+"start": 134,
+"end": 137,
+"word": "law",
+"lang": "en",
+"piece": "cards-07"
+},
+"699": {
+"file": "cards",
+"path": [
+"cards",
+145,
+"misfit"
+],
+"start": 114,
+"end": 118,
+"word": "laws",
+"lang": "en",
+"piece": "cards-07"
+},
+"700": {
+"file": "cards",
+"path": [
+"cards",
+145,
+"misfit"
+],
+"start": 271,
+"end": 275,
+"word": "laws",
+"lang": "en",
+"piece": "cards-07"
+},
+"701": {
+"file": "cards",
+"path": [
+"cards",
+145,
+"misfit"
+],
+"start": 349,
+"end": 353,
+"word": "laws",
+"lang": "en",
+"piece": "cards-07"
+},
+"702": {
+"file": "cards",
+"path": [
+"cards",
+145,
+"misfit"
+],
+"start": 952,
+"end": 956,
+"word": "laws",
+"lang": "en",
+"piece": "cards-07"
+},
+"703": {
+"file": "cards",
+"path": [
+"cards",
+145,
+"misfit"
+],
+"start": 1066,
+"end": 1069,
+"word": "law",
+"lang": "en",
+"piece": "cards-07"
+},
+"704": {
+"file": "cards",
+"path": [
+"cards",
+145,
+"misfit"
+],
+"start": 1117,
+"end": 1120,
+"word": "law",
+"lang": "en",
+"piece": "cards-07"
+},
+"705": {
+"file": "cards",
+"path": [
+"cards",
+145,
+"misfit"
+],
+"start": 1430,
+"end": 1434,
+"word": "laws",
+"lang": "en",
+"piece": "cards-07"
+},
+"706": {
+"file": "cards",
+"path": [
+"cards",
+147,
+"laws",
+3,
+"then_zh"
+],
+"start": 3,
+"end": 4,
+"word": "律",
+"lang": "zh",
+"piece": "cards-07"
+},
+"707": {
+"file": "cards",
+"path": [
+"cards",
+147,
+"misfit"
+],
+"start": 193,
+"end": 197,
+"word": "laws",
+"lang": "en",
+"piece": "cards-07"
+},
+"708": {
+"file": "cards",
+"path": [
+"cards",
+148,
+"cast",
+0,
+"as"
+],
+"start": 42,
+"end": 45,
+"word": "law",
+"lang": "en",
+"piece": "cards-07"
+},
+"709": {
+"file": "cards",
+"path": [
+"cards",
+148,
+"cast",
+1,
+"as"
+],
+"start": 65,
+"end": 68,
+"word": "law",
+"lang": "en",
+"piece": "cards-07"
+},
+"710": {
+"file": "cards",
+"path": [
+"cards",
+148,
+"cast",
+2,
+"as"
+],
+"start": 65,
+"end": 68,
+"word": "law",
+"lang": "en",
+"piece": "cards-07"
+},
+"711": {
+"file": "cards",
+"path": [
+"cards",
+148,
+"misfit"
+],
+"start": 21,
+"end": 24,
+"word": "law",
+"lang": "en",
+"piece": "cards-07"
+},
+"712": {
+"file": "cards",
+"path": [
+"cards",
+150,
+"misfit"
+],
+"start": 255,
+"end": 258,
+"word": "law",
+"lang": "en",
+"piece": "cards-07"
+},
+"713": {
+"file": "cards",
+"path": [
+"cards",
+150,
+"misfit"
+],
+"start": 581,
+"end": 585,
+"word": "laws",
+"lang": "en",
+"piece": "cards-07"
+},
+"714": {
+"file": "cards",
+"path": [
+"cards",
+151,
+"misfit"
+],
+"start": 566,
+"end": 570,
+"word": "laws",
+"lang": "en",
+"piece": "cards-07"
+},
+"715": {
+"file": "cards",
+"path": [
+"cards",
+152,
+"misfit"
+],
+"start": 518,
+"end": 522,
+"word": "laws",
+"lang": "en",
+"piece": "cards-07"
+},
+"716": {
+"file": "cards",
+"path": [
+"cards",
+152,
+"misfit"
+],
+"start": 1102,
+"end": 1106,
+"word": "laws",
+"lang": "en",
+"piece": "cards-07"
+},
+"717": {
+"file": "cards",
+"path": [
+"cards",
+153,
+"misfit"
+],
+"start": 161,
+"end": 165,
+"word": "laws",
+"lang": "en",
+"piece": "cards-07"
+},
+"718": {
+"file": "cards",
+"path": [
+"cards",
+154,
+"misfit"
+],
+"start": 225,
+"end": 228,
+"word": "law",
+"lang": "en",
+"piece": "cards-07"
+},
+"719": {
+"file": "cards",
+"path": [
+"cards",
+154,
+"misfit"
+],
+"start": 743,
+"end": 746,
+"word": "law",
+"lang": "en",
+"piece": "cards-07"
+},
+"720": {
+"file": "cards",
+"path": [
+"cards",
+155,
+"misfit"
+],
+"start": 589,
+"end": 592,
+"word": "law",
+"lang": "en",
+"piece": "cards-07"
+},
+"721": {
+"file": "cards",
+"path": [
+"cards",
+155,
+"misfit"
+],
+"start": 672,
+"end": 675,
+"word": "law",
+"lang": "en",
+"piece": "cards-07"
+},
+"722": {
+"file": "cards",
+"path": [
+"cards",
+155,
+"misfit"
+],
+"start": 818,
+"end": 822,
+"word": "laws",
+"lang": "en",
+"piece": "cards-07"
+},
+"723": {
+"file": "cards",
+"path": [
+"cards",
+156,
+"misfit"
+],
+"start": 769,
+"end": 772,
+"word": "law",
+"lang": "en",
+"piece": "cards-07"
+},
+"724": {
+"file": "cards",
+"path": [
+"cards",
+157,
+"cast",
+2,
+"as"
+],
+"start": 12,
+"end": 15,
+"word": "law",
+"lang": "en",
+"piece": "cards-07"
+},
+"725": {
+"file": "cards",
+"path": [
+"cards",
+157,
+"misfit"
+],
+"start": 197,
+"end": 201,
+"word": "laws",
+"lang": "en",
+"piece": "cards-07"
+},
+"726": {
+"file": "cards",
+"path": [
+"cards",
+159,
+"misfit"
+],
+"start": 127,
+"end": 130,
+"word": "law",
+"lang": "en",
+"piece": "cards-07"
+},
+"727": {
+"file": "cards",
+"path": [
+"cards",
+161,
+"misfit"
+],
+"start": 27,
+"end": 31,
+"word": "laws",
+"lang": "en",
+"piece": "cards-07"
+},
+"728": {
+"file": "cards",
+"path": [
+"cards",
+161,
+"misfit"
+],
+"start": 74,
+"end": 78,
+"word": "laws",
+"lang": "en",
+"piece": "cards-07"
+},
+"729": {
+"file": "cards",
+"path": [
+"cards",
+161,
+"misfit"
+],
+"start": 351,
+"end": 355,
+"word": "laws",
+"lang": "en",
+"piece": "cards-07"
+},
+"730": {
+"file": "cards",
+"path": [
+"cards",
+162,
+"misfit"
+],
+"start": 4,
+"end": 8,
+"word": "laws",
+"lang": "en",
+"piece": "cards-07"
+},
+"731": {
+"file": "cards",
+"path": [
+"cards",
+162,
+"misfit"
+],
+"start": 309,
+"end": 312,
+"word": "law",
+"lang": "en",
+"piece": "cards-07"
+},
+"732": {
+"file": "cards",
+"path": [
+"cards",
+162,
+"misfit"
+],
+"start": 450,
+"end": 454,
+"word": "laws",
+"lang": "en",
+"piece": "cards-07"
+},
+"733": {
+"file": "cards",
+"path": [
+"cards",
+162,
+"misfit"
+],
+"start": 603,
+"end": 607,
+"word": "laws",
+"lang": "en",
+"piece": "cards-07"
+},
+"734": {
+"file": "cards",
+"path": [
+"cards",
+163,
+"misfit"
+],
+"start": 85,
+"end": 89,
+"word": "laws",
+"lang": "en",
+"piece": "cards-07"
+},
+"735": {
+"file": "cards",
+"path": [
+"cards",
+163,
+"misfit"
+],
+"start": 320,
+"end": 324,
+"word": "laws",
+"lang": "en",
+"piece": "cards-07"
+},
+"736": {
+"file": "cards",
+"path": [
+"cards",
+163,
+"misfit"
+],
+"start": 661,
+"end": 665,
+"word": "laws",
+"lang": "en",
+"piece": "cards-07"
+},
+"737": {
+"file": "cards",
+"path": [
+"cards",
+163,
+"misfit"
+],
+"start": 794,
+"end": 798,
+"word": "laws",
+"lang": "en",
+"piece": "cards-07"
+},
+"738": {
+"file": "cards",
+"path": [
+"cards",
+163,
+"misfit"
+],
+"start": 885,
+"end": 889,
+"word": "laws",
+"lang": "en",
+"piece": "cards-07"
+},
+"739": {
+"file": "cards",
+"path": [
+"cards",
+164,
+"laws",
+0,
+"then_en"
+],
+"start": 85,
+"end": 88,
+"word": "law",
+"lang": "en",
+"piece": "cards-07"
+},
+"740": {
+"file": "cards",
+"path": [
+"cards",
+164,
+"laws",
+0,
+"then_zh"
+],
+"start": 17,
+"end": 18,
+"word": "律",
+"lang": "zh",
+"piece": "cards-07"
+},
+"741": {
+"file": "cards",
+"path": [
+"cards",
+164,
+"misfit"
+],
+"start": 275,
+"end": 278,
+"word": "law",
+"lang": "en",
+"piece": "cards-07"
+},
+"742": {
+"file": "cards",
+"path": [
+"cards",
+164,
+"misfit"
+],
+"start": 748,
+"end": 751,
+"word": "law",
+"lang": "en",
+"piece": "cards-07"
+},
+"743": {
+"file": "cards",
+"path": [
+"cards",
+164,
+"misfit"
+],
+"start": 789,
+"end": 793,
+"word": "laws",
+"lang": "en",
+"piece": "cards-07"
+},
+"744": {
+"file": "cards",
+"path": [
+"cards",
+165,
+"laws",
+0,
+"then_en"
+],
+"start": 62,
+"end": 65,
+"word": "law",
+"lang": "en",
+"piece": "cards-07"
+},
+"745": {
+"file": "cards",
+"path": [
+"cards",
+165,
+"laws",
+0,
+"then_zh"
+],
+"start": 19,
+"end": 20,
+"word": "律",
+"lang": "zh",
+"piece": "cards-07"
+},
+"746": {
+"file": "cards",
+"path": [
+"cards",
+165,
+"misfit"
+],
+"start": 597,
+"end": 601,
+"word": "laws",
+"lang": "en",
+"piece": "cards-07"
+},
+"747": {
+"file": "cards",
+"path": [
+"cards",
+165,
+"misfit"
+],
+"start": 711,
+"end": 715,
+"word": "laws",
+"lang": "en",
+"piece": "cards-07"
+},
+"748": {
+"file": "cards",
+"path": [
+"cards",
+166,
+"cast",
+2,
+"as"
+],
+"start": 80,
+"end": 83,
+"word": "law",
+"lang": "en",
+"piece": "cards-07"
+},
+"749": {
+"file": "cards",
+"path": [
+"cards",
+166,
+"ties",
+1,
+"as"
+],
+"start": 62,
+"end": 65,
+"word": "law",
+"lang": "en",
+"piece": "cards-07"
+},
+"750": {
+"file": "cards",
+"path": [
+"cards",
+166,
+"laws",
+5,
+"compare_en"
+],
+"start": 138,
+"end": 141,
+"word": "law",
+"lang": "en",
+"piece": "cards-07"
+},
+"751": {
+"file": "cards",
+"path": [
+"cards",
+166,
+"misfit"
+],
+"start": 516,
+"end": 519,
+"word": "law",
+"lang": "en",
+"piece": "cards-07"
+},
+"752": {
+"file": "cards",
+"path": [
+"cards",
+167,
+"laws",
+5,
+"then_en"
+],
+"start": 19,
+"end": 22,
+"word": "law",
+"lang": "en",
+"piece": "cards-07"
+},
+"753": {
+"file": "cards",
+"path": [
+"cards",
+167,
+"laws",
+5,
+"then_zh"
+],
+"start": 6,
+"end": 7,
+"word": "律",
+"lang": "zh",
+"piece": "cards-07"
+},
+"754": {
+"file": "cards",
+"path": [
+"cards",
+167,
+"misfit"
+],
+"start": 0,
+"end": 4,
+"word": "Laws",
+"lang": "en",
+"piece": "cards-07"
+},
+"755": {
+"file": "cards",
+"path": [
+"cards",
+167,
+"misfit"
+],
+"start": 369,
+"end": 373,
+"word": "laws",
+"lang": "en",
+"piece": "cards-07"
+},
+"756": {
+"file": "cards",
+"path": [
+"cards",
+167,
+"misfit"
+],
+"start": 444,
+"end": 448,
+"word": "laws",
+"lang": "en",
+"piece": "cards-07"
+},
+"757": {
+"file": "cards",
+"path": [
+"cards",
+168,
+"cast",
+0,
+"as"
+],
+"start": 160,
+"end": 163,
+"word": "law",
+"lang": "en",
+"piece": "cards-08"
+},
+"758": {
+"file": "cards",
+"path": [
+"cards",
+168,
+"laws",
+3,
+"then_en"
+],
+"start": 118,
+"end": 121,
+"word": "law",
+"lang": "en",
+"piece": "cards-08"
+},
+"759": {
+"file": "cards",
+"path": [
+"cards",
+168,
+"laws",
+3,
+"then_zh"
+],
+"start": 25,
+"end": 26,
+"word": "律",
+"lang": "zh",
+"piece": "cards-08"
+},
+"760": {
+"file": "cards",
+"path": [
+"cards",
+168,
+"misfit"
+],
+"start": 74,
+"end": 78,
+"word": "laws",
+"lang": "en",
+"piece": "cards-08"
+},
+"761": {
+"file": "cards",
+"path": [
+"cards",
+168,
+"misfit"
+],
+"start": 372,
+"end": 376,
+"word": "laws",
+"lang": "en",
+"piece": "cards-08"
+},
+"762": {
+"file": "cards",
+"path": [
+"cards",
+168,
+"misfit"
+],
+"start": 645,
+"end": 648,
+"word": "law",
+"lang": "en",
+"piece": "cards-08"
+},
+"763": {
+"file": "cards",
+"path": [
+"cards",
+168,
+"misfit"
+],
+"start": 874,
+"end": 877,
+"word": "law",
+"lang": "en",
+"piece": "cards-08"
+},
+"764": {
+"file": "cards",
+"path": [
+"cards",
+168,
+"misfit"
+],
+"start": 1065,
+"end": 1068,
+"word": "law",
+"lang": "en",
+"piece": "cards-08"
+},
+"765": {
+"file": "cards",
+"path": [
+"cards",
+169,
+"misfit"
+],
+"start": 329,
+"end": 333,
+"word": "laws",
+"lang": "en",
+"piece": "cards-08"
+},
+"766": {
+"file": "cards",
+"path": [
+"cards",
+169,
+"misfit"
+],
+"start": 550,
+"end": 554,
+"word": "laws",
+"lang": "en",
+"piece": "cards-08"
+},
+"767": {
+"file": "cards",
+"path": [
+"cards",
+169,
+"misfit"
+],
+"start": 870,
+"end": 874,
+"word": "laws",
+"lang": "en",
+"piece": "cards-08"
+},
+"768": {
+"file": "cards",
+"path": [
+"cards",
+170,
+"ties",
+2,
+"as"
+],
+"start": 144,
+"end": 147,
+"word": "law",
+"lang": "en",
+"piece": "cards-08"
+},
+"769": {
+"file": "cards",
+"path": [
+"cards",
+170,
+"misfit"
+],
+"start": 155,
+"end": 158,
+"word": "law",
+"lang": "en",
+"piece": "cards-08"
+},
+"770": {
+"file": "cards",
+"path": [
+"cards",
+170,
+"misfit"
+],
+"start": 734,
+"end": 738,
+"word": "laws",
+"lang": "en",
+"piece": "cards-08"
+},
+"771": {
+"file": "cards",
+"path": [
+"cards",
+170,
+"misfit"
+],
+"start": 827,
+"end": 830,
+"word": "law",
+"lang": "en",
+"piece": "cards-08"
+},
+"772": {
+"file": "cards",
+"path": [
+"cards",
+170,
+"misfit"
+],
+"start": 849,
+"end": 853,
+"word": "laws",
+"lang": "en",
+"piece": "cards-08"
+},
+"773": {
+"file": "cards",
+"path": [
+"cards",
+172,
+"misfit"
+],
+"start": 479,
+"end": 483,
+"word": "laws",
+"lang": "en",
+"piece": "cards-08"
+},
+"774": {
+"file": "cards",
+"path": [
+"cards",
+173,
+"cast",
+0,
+"as"
+],
+"start": 63,
+"end": 66,
+"word": "law",
+"lang": "en",
+"piece": "cards-08"
+},
+"775": {
+"file": "cards",
+"path": [
+"cards",
+173,
+"misfit"
+],
+"start": 46,
+"end": 49,
+"word": "law",
+"lang": "en",
+"piece": "cards-08"
+},
+"776": {
+"file": "cards",
+"path": [
+"cards",
+173,
+"misfit"
+],
+"start": 164,
+"end": 168,
+"word": "laws",
+"lang": "en",
+"piece": "cards-08"
+},
+"777": {
+"file": "cards",
+"path": [
+"cards",
+173,
+"misfit"
+],
+"start": 184,
+"end": 187,
+"word": "law",
+"lang": "en",
+"piece": "cards-08"
+},
+"778": {
+"file": "cards",
+"path": [
+"cards",
+173,
+"misfit"
+],
+"start": 551,
+"end": 555,
+"word": "laws",
+"lang": "en",
+"piece": "cards-08"
+},
+"779": {
+"file": "cards",
+"path": [
+"cards",
+174,
+"cast",
+1,
+"as"
+],
+"start": 12,
+"end": 15,
+"word": "law",
+"lang": "en",
+"piece": "cards-08"
+},
+"780": {
+"file": "cards",
+"path": [
+"cards",
+175,
+"misfit"
+],
+"start": 658,
+"end": 661,
+"word": "law",
+"lang": "en",
+"piece": "cards-08"
+},
+"781": {
+"file": "cards",
+"path": [
+"cards",
+176,
+"misfit"
+],
+"start": 544,
+"end": 547,
+"word": "law",
+"lang": "en",
+"piece": "cards-08"
+},
+"782": {
+"file": "cards",
+"path": [
+"cards",
+177,
+"misfit"
+],
+"start": 4,
+"end": 8,
+"word": "laws",
+"lang": "en",
+"piece": "cards-08"
+},
+"783": {
+"file": "cards",
+"path": [
+"cards",
+178,
+"laws",
+1,
+"then_en"
+],
+"start": 50,
+"end": 53,
+"word": "law",
+"lang": "en",
+"piece": "cards-08"
+},
+"784": {
+"file": "cards",
+"path": [
+"cards",
+178,
+"laws",
+1,
+"then_zh"
+],
+"start": 14,
+"end": 15,
+"word": "律",
+"lang": "zh",
+"piece": "cards-08"
+},
+"785": {
+"file": "cards",
+"path": [
+"cards",
+178,
+"misfit"
+],
+"start": 389,
+"end": 392,
+"word": "law",
+"lang": "en",
+"piece": "cards-08"
+},
+"786": {
+"file": "cards",
+"path": [
+"cards",
+178,
+"misfit"
+],
+"start": 734,
+"end": 737,
+"word": "law",
+"lang": "en",
+"piece": "cards-08"
+},
+"787": {
+"file": "cards",
+"path": [
+"cards",
+179,
+"misfit"
+],
+"start": 269,
+"end": 272,
+"word": "law",
+"lang": "en",
+"piece": "cards-08"
+},
+"788": {
+"file": "cards",
+"path": [
+"cards",
+179,
+"misfit"
+],
+"start": 1355,
+"end": 1358,
+"word": "law",
+"lang": "en",
+"piece": "cards-08"
+},
+"789": {
+"file": "cards",
+"path": [
+"cards",
+180,
+"misfit"
+],
+"start": 6,
+"end": 9,
+"word": "law",
+"lang": "en",
+"piece": "cards-08"
+},
+"790": {
+"file": "cards",
+"path": [
+"cards",
+180,
+"misfit"
+],
+"start": 1102,
+"end": 1105,
+"word": "law",
+"lang": "en",
+"piece": "cards-08"
+},
+"791": {
+"file": "cards",
+"path": [
+"cards",
+181,
+"misfit"
+],
+"start": 4,
+"end": 8,
+"word": "laws",
+"lang": "en",
+"piece": "cards-08"
+},
+"792": {
+"file": "cards",
+"path": [
+"cards",
+182,
+"misfit"
+],
+"start": 9,
+"end": 13,
+"word": "laws",
+"lang": "en",
+"piece": "cards-08"
+},
+"793": {
+"file": "cards",
+"path": [
+"cards",
+182,
+"misfit"
+],
+"start": 184,
+"end": 187,
+"word": "law",
+"lang": "en",
+"piece": "cards-08"
+},
+"794": {
+"file": "cards",
+"path": [
+"cards",
+183,
+"cast",
+3,
+"as"
+],
+"start": 71,
+"end": 74,
+"word": "law",
+"lang": "en",
+"piece": "cards-08"
+},
+"795": {
+"file": "cards",
+"path": [
+"cards",
+183,
+"misfit"
+],
+"start": 326,
+"end": 329,
+"word": "law",
+"lang": "en",
+"piece": "cards-08"
+},
+"796": {
+"file": "cards",
+"path": [
+"cards",
+183,
+"misfit"
+],
+"start": 443,
+"end": 446,
+"word": "law",
+"lang": "en",
+"piece": "cards-08"
+},
+"797": {
+"file": "cards",
+"path": [
+"cards",
+183,
+"misfit"
+],
+"start": 670,
+"end": 673,
+"word": "law",
+"lang": "en",
+"piece": "cards-08"
+},
+"798": {
+"file": "cases",
+"path": [
+"about"
+],
+"start": 291,
+"end": 295,
+"word": "laws",
+"lang": "en",
+"piece": "cases-01"
+},
+"799": {
+"file": "cases",
+"path": [
+"about"
+],
+"start": 1078,
+"end": 1081,
+"word": "law",
+"lang": "en",
+"piece": "cases-01"
+},
+"800": {
+"file": "cases",
+"path": [
+"cases",
+0,
+"shows_en"
+],
+"start": 149,
+"end": 152,
+"word": "law",
+"lang": "en",
+"piece": "cases-01"
+},
+"801": {
+"file": "cases",
+"path": [
+"cases",
+0,
+"shows_zh"
+],
+"start": 49,
+"end": 50,
+"word": "律",
+"lang": "zh",
+"piece": "cases-01"
+},
+"802": {
+"file": "cases",
+"path": [
+"cases",
+0,
+"no_bridge_en"
+],
+"start": 59,
+"end": 62,
+"word": "law",
+"lang": "en",
+"piece": "cases-01"
+},
+"803": {
+"file": "cases",
+"path": [
+"cases",
+0,
+"no_bridge_en"
+],
+"start": 113,
+"end": 116,
+"word": "law",
+"lang": "en",
+"piece": "cases-01"
+},
+"804": {
+"file": "cases",
+"path": [
+"cases",
+1,
+"bridges",
+4,
+"name"
+],
+"start": 57,
+"end": 60,
+"word": "law",
+"lang": "en",
+"piece": "cases-01"
+},
+"805": {
+"file": "cases",
+"path": [
+"cases",
+1,
+"bridges",
+4,
+"why_en"
+],
+"start": 76,
+"end": 79,
+"word": "law",
+"lang": "en",
+"piece": "cases-01"
+},
+"806": {
+"file": "cases",
+"path": [
+"cases",
+1,
+"predictions",
+0,
+"ifs",
+3,
+"what_en"
+],
+"start": 148,
+"end": 151,
+"word": "law",
+"lang": "en",
+"piece": "cases-01"
+},
+"807": {
+"file": "cases",
+"path": [
+"cases",
+1,
+"shows_en"
+],
+"start": 16,
+"end": 19,
+"word": "law",
+"lang": "en",
+"piece": "cases-01"
+},
+"808": {
+"file": "cases",
+"path": [
+"cases",
+1,
+"shows_en"
+],
+"start": 138,
+"end": 141,
+"word": "law",
+"lang": "en",
+"piece": "cases-01"
+},
+"809": {
+"file": "cases",
+"path": [
+"cases",
+1,
+"shows_zh"
+],
+"start": 11,
+"end": 12,
+"word": "律",
+"lang": "zh",
+"piece": "cases-01"
+},
+"810": {
+"file": "cases",
+"path": [
+"cases",
+1,
+"shows_zh"
+],
+"start": 43,
+"end": 44,
+"word": "律",
+"lang": "zh",
+"piece": "cases-01"
+},
+"811": {
+"file": "cases",
+"path": [
+"cases",
+2,
+"bridges",
+4,
+"name"
+],
+"start": 57,
+"end": 60,
+"word": "law",
+"lang": "en",
+"piece": "cases-01"
+},
+"812": {
+"file": "cases",
+"path": [
+"cases",
+2,
+"bridges",
+4,
+"why_en"
+],
+"start": 48,
+"end": 51,
+"word": "law",
+"lang": "en",
+"piece": "cases-01"
+},
+"813": {
+"file": "cases",
+"path": [
+"cases",
+3,
+"bridges",
+4,
+"name"
+],
+"start": 57,
+"end": 60,
+"word": "law",
+"lang": "en",
+"piece": "cases-01"
+},
+"814": {
+"file": "cases",
+"path": [
+"cases",
+3,
+"bridges",
+4,
+"why_en"
+],
+"start": 75,
+"end": 78,
+"word": "law",
+"lang": "en",
+"piece": "cases-01"
+},
+"815": {
+"file": "cases",
+"path": [
+"cases",
+4,
+"afterwards_en"
+],
+"start": 288,
+"end": 291,
+"word": "law",
+"lang": "en",
+"piece": "cases-01"
+},
+"816": {
+"file": "cases",
+"path": [
+"cases",
+4,
+"shows_en"
+],
+"start": 22,
+"end": 25,
+"word": "law",
+"lang": "en",
+"piece": "cases-01"
+},
+"817": {
+"file": "cases",
+"path": [
+"cases",
+4,
+"shows_zh"
+],
+"start": 10,
+"end": 12,
+"word": "定律",
+"lang": "zh",
+"piece": "cases-01"
+},
+"818": {
+"file": "cases",
+"path": [
+"cases",
+4,
+"no_bridge_en"
+],
+"start": 50,
+"end": 53,
+"word": "law",
+"lang": "en",
+"piece": "cases-01"
+},
+"819": {
+"file": "cases",
+"path": [
+"cases",
+4,
+"no_bridge_en"
+],
+"start": 166,
+"end": 169,
+"word": "law",
+"lang": "en",
+"piece": "cases-01"
+},
+"820": {
+"file": "cases",
+"path": [
+"cases",
+5,
+"bridges",
+0,
+"name"
+],
+"start": 4,
+"end": 8,
+"word": "laws",
+"lang": "en",
+"piece": "cases-01"
+},
+"821": {
+"file": "cases",
+"path": [
+"cases",
+5,
+"bridges",
+7,
+"name"
+],
+"start": 26,
+"end": 29,
+"word": "law",
+"lang": "en",
+"piece": "cases-01"
+},
+"822": {
+"file": "cases",
+"path": [
+"cases",
+5,
+"bridges",
+7,
+"why_en"
+],
+"start": 35,
+"end": 38,
+"word": "law",
+"lang": "en",
+"piece": "cases-01"
+},
+"823": {
+"file": "cases",
+"path": [
+"cases",
+5,
+"bridges",
+8,
+"why_en"
+],
+"start": 22,
+"end": 25,
+"word": "law",
+"lang": "en",
+"piece": "cases-01"
+},
+"824": {
+"file": "cases",
+"path": [
+"cases",
+5,
+"predictions",
+3,
+"seen_en"
+],
+"start": 245,
+"end": 248,
+"word": "law",
+"lang": "en",
+"piece": "cases-01"
+},
+"825": {
+"file": "cases",
+"path": [
+"cases",
+5,
+"predictions",
+4,
+"ifs",
+2,
+"what_en"
+],
+"start": 135,
+"end": 138,
+"word": "law",
+"lang": "en",
+"piece": "cases-01"
+},
+"826": {
+"file": "cases",
+"path": [
+"cases",
+5,
+"afterwards_en"
+],
+"start": 334,
+"end": 338,
+"word": "laws",
+"lang": "en",
+"piece": "cases-01"
+},
+"827": {
+"file": "cases",
+"path": [
+"cases",
+5,
+"afterwards_en"
+],
+"start": 637,
+"end": 641,
+"word": "laws",
+"lang": "en",
+"piece": "cases-01"
+},
+"828": {
+"file": "cases",
+"path": [
+"cases",
+5,
+"shows_en"
+],
+"start": 184,
+"end": 187,
+"word": "law",
+"lang": "en",
+"piece": "cases-01"
+},
+"829": {
+"file": "cases",
+"path": [
+"cases",
+5,
+"shows_zh"
+],
+"start": 62,
+"end": 64,
+"word": "定律",
+"lang": "zh",
+"piece": "cases-01"
+},
+"830": {
+"file": "cases",
+"path": [
+"cases",
+6,
+"bridges",
+1,
+"why_en"
+],
+"start": 242,
+"end": 245,
+"word": "law",
+"lang": "en",
+"piece": "cases-01"
+},
+"831": {
+"file": "cases",
+"path": [
+"cases",
+6,
+"predictions",
+3,
+"ifs",
+0,
+"what_en"
+],
+"start": 135,
+"end": 138,
+"word": "law",
+"lang": "en",
+"piece": "cases-01"
+},
+"832": {
+"file": "cases",
+"path": [
+"cases",
+7,
+"bridges",
+1,
+"why_en"
+],
+"start": 199,
+"end": 202,
+"word": "law",
+"lang": "en",
+"piece": "cases-01"
+},
+"833": {
+"file": "cases",
+"path": [
+"cases",
+7,
+"bridges",
+3,
+"claim_en"
+],
+"start": 87,
+"end": 90,
+"word": "law",
+"lang": "en",
+"piece": "cases-01"
+},
+"834": {
+"file": "cases",
+"path": [
+"cases",
+8,
+"afterwards_en"
+],
+"start": 13,
+"end": 16,
+"word": "law",
+"lang": "en",
+"piece": "cases-01"
+},
+"835": {
+"file": "cases",
+"path": [
+"cases",
+8,
+"shows_en"
+],
+"start": 4,
+"end": 7,
+"word": "law",
+"lang": "en",
+"piece": "cases-01"
+},
+"836": {
+"file": "cases",
+"path": [
+"cases",
+9,
+"bridges",
+1,
+"why_en"
+],
+"start": 168,
+"end": 171,
+"word": "law",
+"lang": "en",
+"piece": "cases-01"
+},
+"837": {
+"file": "cases",
+"path": [
+"cases",
+9,
+"afterwards_en"
+],
+"start": 498,
+"end": 501,
+"word": "law",
+"lang": "en",
+"piece": "cases-01"
+},
+"838": {
+"file": "cases",
+"path": [
+"cases",
+9,
+"shows_en"
+],
+"start": 87,
+"end": 90,
+"word": "law",
+"lang": "en",
+"piece": "cases-01"
+},
+"839": {
+"file": "cases",
+"path": [
+"cases",
+10,
+"bridges",
+0,
+"why_en"
+],
+"start": 220,
+"end": 223,
+"word": "law",
+"lang": "en",
+"piece": "cases-01"
+},
+"840": {
+"file": "cases",
+"path": [
+"cases",
+10,
+"shows_en"
+],
+"start": 54,
+"end": 57,
+"word": "law",
+"lang": "en",
+"piece": "cases-01"
+},
+"841": {
+"file": "cases",
+"path": [
+"cases",
+13,
+"bridges",
+2,
+"why_en"
+],
+"start": 211,
+"end": 214,
+"word": "law",
+"lang": "en",
+"piece": "cases-01"
+},
+"842": {
+"file": "cases",
+"path": [
+"cases",
+13,
+"bridges",
+2,
+"why_en"
+],
+"start": 234,
+"end": 237,
+"word": "law",
+"lang": "en",
+"piece": "cases-01"
+},
+"843": {
+"file": "cases",
+"path": [
+"cases",
+13,
+"afterwards_en"
+],
+"start": 223,
+"end": 226,
+"word": "law",
+"lang": "en",
+"piece": "cases-01"
+},
+"844": {
+"file": "cases",
+"path": [
+"cases",
+13,
+"shows_en"
+],
+"start": 128,
+"end": 131,
+"word": "law",
+"lang": "en",
+"piece": "cases-01"
+},
+"845": {
+"file": "cases",
+"path": [
+"cases",
+14,
+"bridges",
+1,
+"why_en"
+],
+"start": 203,
+"end": 206,
+"word": "law",
+"lang": "en",
+"piece": "cases-01"
+},
+"846": {
+"file": "cases",
+"path": [
+"cases",
+14,
+"bridges",
+1,
+"why_en"
+],
+"start": 321,
+"end": 324,
+"word": "law",
+"lang": "en",
+"piece": "cases-01"
+},
+"847": {
+"file": "cases",
+"path": [
+"cases",
+14,
+"bridges",
+2,
+"why_en"
+],
+"start": 121,
+"end": 125,
+"word": "laws",
+"lang": "en",
+"piece": "cases-01"
+},
+"848": {
+"file": "cases",
+"path": [
+"cases",
+14,
+"bridges",
+3,
+"why_en"
+],
+"start": 48,
+"end": 52,
+"word": "laws",
+"lang": "en",
+"piece": "cases-01"
+},
+"849": {
+"file": "cases",
+"path": [
+"cases",
+14,
+"predictions",
+0,
+"ifs",
+3,
+"what_en"
+],
+"start": 64,
+"end": 67,
+"word": "law",
+"lang": "en",
+"piece": "cases-01"
+},
+"850": {
+"file": "cases",
+"path": [
+"cases",
+14,
+"predictions",
+2,
+"ifs",
+0,
+"what_en"
+],
+"start": 55,
+"end": 58,
+"word": "law",
+"lang": "en",
+"piece": "cases-01"
+},
+"851": {
+"file": "cases",
+"path": [
+"cases",
+14,
+"predictions",
+2,
+"ifs",
+0,
+"what_en"
+],
+"start": 154,
+"end": 157,
+"word": "law",
+"lang": "en",
+"piece": "cases-01"
+},
+"852": {
+"file": "cases",
+"path": [
+"cases",
+14,
+"predictions",
+5,
+"ifs",
+0,
+"what_en"
+],
+"start": 37,
+"end": 41,
+"word": "laws",
+"lang": "en",
+"piece": "cases-01"
+},
+"853": {
+"file": "cases",
+"path": [
+"cases",
+14,
+"predictions",
+5,
+"rival_en"
+],
+"start": 98,
+"end": 102,
+"word": "laws",
+"lang": "en",
+"piece": "cases-01"
+},
+"854": {
+"file": "cases",
+"path": [
+"cases",
+14,
+"afterwards_en"
+],
+"start": 851,
+"end": 855,
+"word": "laws",
+"lang": "en",
+"piece": "cases-01"
+},
+"855": {
+"file": "cases",
+"path": [
+"cases",
+14,
+"shows_en"
+],
+"start": 120,
+"end": 123,
+"word": "law",
+"lang": "en",
+"piece": "cases-01"
+},
+"856": {
+"file": "cases",
+"path": [
+"cases",
+15,
+"bridges",
+2,
+"name"
+],
+"start": 5,
+"end": 8,
+"word": "law",
+"lang": "en",
+"piece": "cases-01"
+},
+"857": {
+"file": "cases",
+"path": [
+"cases",
+15,
+"bridges",
+3,
+"why_en"
+],
+"start": 96,
+"end": 100,
+"word": "laws",
+"lang": "en",
+"piece": "cases-01"
+},
+"858": {
+"file": "cases",
+"path": [
+"cases",
+15,
+"bridges",
+5,
+"why_en"
+],
+"start": 66,
+"end": 69,
+"word": "law",
+"lang": "en",
+"piece": "cases-01"
+},
+"859": {
+"file": "cases",
+"path": [
+"cases",
+15,
+"predictions",
+2,
+"rival_en"
+],
+"start": 88,
+"end": 92,
+"word": "laws",
+"lang": "en",
+"piece": "cases-01"
+},
+"860": {
+"file": "cases",
+"path": [
+"cases",
+15,
+"predictions",
+2,
+"rival_en"
+],
+"start": 275,
+"end": 278,
+"word": "law",
+"lang": "en",
+"piece": "cases-01"
+},
+"861": {
+"file": "cases",
+"path": [
+"cases",
+15,
+"shows_en"
+],
+"start": 141,
+"end": 144,
+"word": "law",
+"lang": "en",
+"piece": "cases-01"
+},
+"862": {
+"file": "cases",
+"path": [
+"cases",
+16,
+"predictions",
+0,
+"rival_en"
+],
+"start": 49,
+"end": 52,
+"word": "law",
+"lang": "en",
+"piece": "cases-01"
+},
+"863": {
+"file": "cases",
+"path": [
+"cases",
+16,
+"predictions",
+1,
+"ifs",
+2,
+"what_en"
+],
+"start": 86,
+"end": 89,
+"word": "law",
+"lang": "en",
+"piece": "cases-01"
+},
+"864": {
+"file": "cases",
+"path": [
+"cases",
+16,
+"predictions",
+1,
+"rival_en"
+],
+"start": 174,
+"end": 178,
+"word": "laws",
+"lang": "en",
+"piece": "cases-01"
+},
+"865": {
+"file": "cases",
+"path": [
+"cases",
+16,
+"predictions",
+1,
+"rival_en"
+],
+"start": 238,
+"end": 241,
+"word": "law",
+"lang": "en",
+"piece": "cases-01"
+},
+"866": {
+"file": "cases",
+"path": [
+"cases",
+17,
+"predictions",
+0,
+"ifs",
+3,
+"what_en"
+],
+"start": 63,
+"end": 67,
+"word": "laws",
+"lang": "en",
+"piece": "cases-01"
+},
+"867": {
+"file": "cases",
+"path": [
+"cases",
+17,
+"predictions",
+1,
+"rival_en"
+],
+"start": 82,
+"end": 85,
+"word": "law",
+"lang": "en",
+"piece": "cases-01"
+},
+"868": {
+"file": "cases",
+"path": [
+"cases",
+18,
+"bridges",
+1,
+"name"
+],
+"start": 45,
+"end": 48,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"869": {
+"file": "cases",
+"path": [
+"cases",
+18,
+"bridges",
+1,
+"why_en"
+],
+"start": 32,
+"end": 35,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"870": {
+"file": "cases",
+"path": [
+"cases",
+18,
+"bridges",
+1,
+"why_en"
+],
+"start": 213,
+"end": 217,
+"word": "laws",
+"lang": "en",
+"piece": "cases-02"
+},
+"871": {
+"file": "cases",
+"path": [
+"cases",
+18,
+"bridges",
+2,
+"why_en"
+],
+"start": 258,
+"end": 261,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"872": {
+"file": "cases",
+"path": [
+"cases",
+18,
+"bridges",
+5,
+"claim_en"
+],
+"start": 86,
+"end": 89,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"873": {
+"file": "cases",
+"path": [
+"cases",
+18,
+"bridges",
+6,
+"claim_en"
+],
+"start": 145,
+"end": 148,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"874": {
+"file": "cases",
+"path": [
+"cases",
+18,
+"bridges",
+6,
+"why_en"
+],
+"start": 108,
+"end": 111,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"875": {
+"file": "cases",
+"path": [
+"cases",
+18,
+"bridges",
+6,
+"why_en"
+],
+"start": 341,
+"end": 344,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"876": {
+"file": "cases",
+"path": [
+"cases",
+18,
+"predictions",
+0,
+"ifs",
+1,
+"what_en"
+],
+"start": 65,
+"end": 68,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"877": {
+"file": "cases",
+"path": [
+"cases",
+18,
+"predictions",
+0,
+"rival_en"
+],
+"start": 253,
+"end": 256,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"878": {
+"file": "cases",
+"path": [
+"cases",
+18,
+"predictions",
+1,
+"ifs",
+1,
+"what_en"
+],
+"start": 139,
+"end": 142,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"879": {
+"file": "cases",
+"path": [
+"cases",
+18,
+"predictions",
+1,
+"seen_en"
+],
+"start": 830,
+"end": 833,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"880": {
+"file": "cases",
+"path": [
+"cases",
+18,
+"predictions",
+2,
+"ifs",
+0,
+"what_en"
+],
+"start": 178,
+"end": 181,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"881": {
+"file": "cases",
+"path": [
+"cases",
+18,
+"afterwards_en"
+],
+"start": 118,
+"end": 121,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"882": {
+"file": "cases",
+"path": [
+"cases",
+18,
+"shows_en"
+],
+"start": 4,
+"end": 7,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"883": {
+"file": "cases",
+"path": [
+"cases",
+18,
+"shows_zh"
+],
+"start": 0,
+"end": 2,
+"word": "定律",
+"lang": "zh",
+"piece": "cases-02"
+},
+"884": {
+"file": "cases",
+"path": [
+"cases",
+19,
+"bridges",
+1,
+"name"
+],
+"start": 45,
+"end": 48,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"885": {
+"file": "cases",
+"path": [
+"cases",
+19,
+"bridges",
+1,
+"why_en"
+],
+"start": 72,
+"end": 76,
+"word": "laws",
+"lang": "en",
+"piece": "cases-02"
+},
+"886": {
+"file": "cases",
+"path": [
+"cases",
+19,
+"bridges",
+4,
+"claim_en"
+],
+"start": 61,
+"end": 64,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"887": {
+"file": "cases",
+"path": [
+"cases",
+19,
+"bridges",
+4,
+"why_en"
+],
+"start": 97,
+"end": 100,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"888": {
+"file": "cases",
+"path": [
+"cases",
+19,
+"predictions",
+0,
+"ifs",
+0,
+"what_en"
+],
+"start": 79,
+"end": 83,
+"word": "laws",
+"lang": "en",
+"piece": "cases-02"
+},
+"889": {
+"file": "cases",
+"path": [
+"cases",
+19,
+"predictions",
+0,
+"ifs",
+1,
+"what_en"
+],
+"start": 64,
+"end": 67,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"890": {
+"file": "cases",
+"path": [
+"cases",
+19,
+"predictions",
+0,
+"ifs",
+1,
+"what_en"
+],
+"start": 195,
+"end": 198,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"891": {
+"file": "cases",
+"path": [
+"cases",
+19,
+"predictions",
+1,
+"ifs",
+0,
+"what_en"
+],
+"start": 122,
+"end": 125,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"892": {
+"file": "cases",
+"path": [
+"cases",
+21,
+"bridges",
+0,
+"claim_en"
+],
+"start": 32,
+"end": 35,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"893": {
+"file": "cases",
+"path": [
+"cases",
+21,
+"bridges",
+3,
+"claim_en"
+],
+"start": 54,
+"end": 57,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"894": {
+"file": "cases",
+"path": [
+"cases",
+21,
+"afterwards_en"
+],
+"start": 47,
+"end": 50,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"895": {
+"file": "cases",
+"path": [
+"cases",
+21,
+"shows_en"
+],
+"start": 4,
+"end": 7,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"896": {
+"file": "cases",
+"path": [
+"cases",
+21,
+"shows_en"
+],
+"start": 91,
+"end": 94,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"897": {
+"file": "cases",
+"path": [
+"cases",
+21,
+"shows_zh"
+],
+"start": 0,
+"end": 2,
+"word": "定律",
+"lang": "zh",
+"piece": "cases-02"
+},
+"898": {
+"file": "cases",
+"path": [
+"cases",
+21,
+"shows_zh"
+],
+"start": 25,
+"end": 27,
+"word": "定律",
+"lang": "zh",
+"piece": "cases-02"
+},
+"899": {
+"file": "cases",
+"path": [
+"cases",
+22,
+"afterwards_en"
+],
+"start": 161,
+"end": 164,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"900": {
+"file": "cases",
+"path": [
+"cases",
+22,
+"shows_en"
+],
+"start": 136,
+"end": 139,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"901": {
+"file": "cases",
+"path": [
+"cases",
+22,
+"shows_zh"
+],
+"start": 38,
+"end": 40,
+"word": "定律",
+"lang": "zh",
+"piece": "cases-02"
+},
+"902": {
+"file": "cases",
+"path": [
+"cases",
+23,
+"things",
+5,
+"thing_en"
+],
+"start": 4,
+"end": 7,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"903": {
+"file": "cases",
+"path": [
+"cases",
+23,
+"bridges",
+0,
+"claim_en"
+],
+"start": 95,
+"end": 98,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"904": {
+"file": "cases",
+"path": [
+"cases",
+23,
+"bridges",
+0,
+"why_en"
+],
+"start": 70,
+"end": 73,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"905": {
+"file": "cases",
+"path": [
+"cases",
+23,
+"bridges",
+1,
+"name"
+],
+"start": 16,
+"end": 19,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"906": {
+"file": "cases",
+"path": [
+"cases",
+23,
+"bridges",
+1,
+"claim_en"
+],
+"start": 76,
+"end": 79,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"907": {
+"file": "cases",
+"path": [
+"cases",
+23,
+"bridges",
+2,
+"name"
+],
+"start": 16,
+"end": 19,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"908": {
+"file": "cases",
+"path": [
+"cases",
+23,
+"bridges",
+2,
+"claim_en"
+],
+"start": 112,
+"end": 115,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"909": {
+"file": "cases",
+"path": [
+"cases",
+23,
+"predictions",
+0,
+"says_en"
+],
+"start": 80,
+"end": 83,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"910": {
+"file": "cases",
+"path": [
+"cases",
+23,
+"predictions",
+0,
+"seen_en"
+],
+"start": 94,
+"end": 97,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"911": {
+"file": "cases",
+"path": [
+"cases",
+23,
+"predictions",
+3,
+"says_en"
+],
+"start": 51,
+"end": 54,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"912": {
+"file": "cases",
+"path": [
+"cases",
+23,
+"predictions",
+3,
+"ifs",
+0,
+"what_en"
+],
+"start": 69,
+"end": 72,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"913": {
+"file": "cases",
+"path": [
+"cases",
+23,
+"predictions",
+3,
+"rival_en"
+],
+"start": 38,
+"end": 41,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"914": {
+"file": "cases",
+"path": [
+"cases",
+23,
+"predictions",
+5,
+"ifs",
+0,
+"what_en"
+],
+"start": 32,
+"end": 35,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"915": {
+"file": "cases",
+"path": [
+"cases",
+23,
+"afterwards_en"
+],
+"start": 130,
+"end": 133,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"916": {
+"file": "cases",
+"path": [
+"cases",
+23,
+"shows_en"
+],
+"start": 49,
+"end": 52,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"917": {
+"file": "cases",
+"path": [
+"cases",
+23,
+"shows_zh"
+],
+"start": 20,
+"end": 22,
+"word": "定律",
+"lang": "zh",
+"piece": "cases-02"
+},
+"918": {
+"file": "cases",
+"path": [
+"cases",
+24,
+"shows_en"
+],
+"start": 24,
+"end": 27,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"919": {
+"file": "cases",
+"path": [
+"cases",
+24,
+"shows_zh"
+],
+"start": 8,
+"end": 10,
+"word": "定律",
+"lang": "zh",
+"piece": "cases-02"
+},
+"920": {
+"file": "cases",
+"path": [
+"cases",
+25,
+"shows_en"
+],
+"start": 121,
+"end": 124,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"921": {
+"file": "cases",
+"path": [
+"cases",
+26,
+"bridges",
+0,
+"why_en"
+],
+"start": 13,
+"end": 16,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"922": {
+"file": "cases",
+"path": [
+"cases",
+26,
+"predictions",
+3,
+"rival_en"
+],
+"start": 162,
+"end": 165,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"923": {
+"file": "cases",
+"path": [
+"cases",
+27,
+"bridges",
+0,
+"why_en"
+],
+"start": 133,
+"end": 136,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"924": {
+"file": "cases",
+"path": [
+"cases",
+27,
+"bridges",
+4,
+"claim_en"
+],
+"start": 35,
+"end": 38,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"925": {
+"file": "cases",
+"path": [
+"cases",
+27,
+"bridges",
+4,
+"claim_en"
+],
+"start": 95,
+"end": 99,
+"word": "laws",
+"lang": "en",
+"piece": "cases-02"
+},
+"926": {
+"file": "cases",
+"path": [
+"cases",
+27,
+"predictions",
+0,
+"rival_en"
+],
+"start": 132,
+"end": 135,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"927": {
+"file": "cases",
+"path": [
+"cases",
+27,
+"predictions",
+2,
+"rival_en"
+],
+"start": 3,
+"end": 6,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"928": {
+"file": "cases",
+"path": [
+"cases",
+27,
+"predictions",
+2,
+"rival_en"
+],
+"start": 21,
+"end": 24,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"929": {
+"file": "cases",
+"path": [
+"cases",
+27,
+"predictions",
+3,
+"ifs",
+2,
+"what_en"
+],
+"start": 20,
+"end": 23,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"930": {
+"file": "cases",
+"path": [
+"cases",
+27,
+"shows_en"
+],
+"start": 167,
+"end": 170,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"931": {
+"file": "cases",
+"path": [
+"cases",
+27,
+"shows_zh"
+],
+"start": 53,
+"end": 55,
+"word": "定律",
+"lang": "zh",
+"piece": "cases-02"
+},
+"932": {
+"file": "cases",
+"path": [
+"cases",
+28,
+"bridges",
+1,
+"name"
+],
+"start": 14,
+"end": 17,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"933": {
+"file": "cases",
+"path": [
+"cases",
+28,
+"bridges",
+2,
+"claim_en"
+],
+"start": 87,
+"end": 91,
+"word": "laws",
+"lang": "en",
+"piece": "cases-02"
+},
+"934": {
+"file": "cases",
+"path": [
+"cases",
+28,
+"shows_en"
+],
+"start": 113,
+"end": 116,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"935": {
+"file": "cases",
+"path": [
+"cases",
+28,
+"shows_zh"
+],
+"start": 43,
+"end": 45,
+"word": "定律",
+"lang": "zh",
+"piece": "cases-02"
+},
+"936": {
+"file": "cases",
+"path": [
+"cases",
+29,
+"bridges",
+4,
+"why_en"
+],
+"start": 51,
+"end": 54,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"937": {
+"file": "cases",
+"path": [
+"cases",
+29,
+"predictions",
+0,
+"ifs",
+5,
+"what_en"
+],
+"start": 4,
+"end": 7,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"938": {
+"file": "cases",
+"path": [
+"cases",
+29,
+"afterwards_en"
+],
+"start": 55,
+"end": 58,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"939": {
+"file": "cases",
+"path": [
+"cases",
+29,
+"afterwards_en"
+],
+"start": 150,
+"end": 153,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"940": {
+"file": "cases",
+"path": [
+"cases",
+29,
+"shows_en"
+],
+"start": 75,
+"end": 79,
+"word": "laws",
+"lang": "en",
+"piece": "cases-02"
+},
+"941": {
+"file": "cases",
+"path": [
+"cases",
+29,
+"shows_zh"
+],
+"start": 26,
+"end": 27,
+"word": "律",
+"lang": "zh",
+"piece": "cases-02"
+},
+"942": {
+"file": "cases",
+"path": [
+"cases",
+30,
+"predictions",
+3,
+"label"
+],
+"start": 4,
+"end": 7,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"943": {
+"file": "cases",
+"path": [
+"cases",
+30,
+"afterwards_en"
+],
+"start": 312,
+"end": 315,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"944": {
+"file": "cases",
+"path": [
+"cases",
+30,
+"shows_en"
+],
+"start": 90,
+"end": 93,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"945": {
+"file": "cases",
+"path": [
+"cases",
+30,
+"shows_zh"
+],
+"start": 28,
+"end": 29,
+"word": "律",
+"lang": "zh",
+"piece": "cases-02"
+},
+"946": {
+"file": "cases",
+"path": [
+"cases",
+31,
+"predictions",
+0,
+"rival_en"
+],
+"start": 53,
+"end": 56,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"947": {
+"file": "cases",
+"path": [
+"cases",
+31,
+"predictions",
+5,
+"rival_en"
+],
+"start": 115,
+"end": 118,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"948": {
+"file": "cases",
+"path": [
+"cases",
+31,
+"afterwards_en"
+],
+"start": 221,
+"end": 224,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"949": {
+"file": "cases",
+"path": [
+"cases",
+32,
+"bridges",
+4,
+"claim_en"
+],
+"start": 21,
+"end": 24,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"950": {
+"file": "cases",
+"path": [
+"cases",
+32,
+"bridges",
+4,
+"claim_en"
+],
+"start": 77,
+"end": 80,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"951": {
+"file": "cases",
+"path": [
+"cases",
+32,
+"predictions",
+0,
+"rival_en"
+],
+"start": 28,
+"end": 31,
+"word": "law",
+"lang": "en",
+"piece": "cases-02"
+},
+"952": {
+"file": "cases",
+"path": [
+"cases",
+34,
+"bridges",
+0,
+"claim_en"
+],
+"start": 54,
+"end": 57,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"953": {
+"file": "cases",
+"path": [
+"cases",
+34,
+"bridges",
+0,
+"why_en"
+],
+"start": 151,
+"end": 154,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"954": {
+"file": "cases",
+"path": [
+"cases",
+34,
+"shows_en"
+],
+"start": 3,
+"end": 6,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"955": {
+"file": "cases",
+"path": [
+"cases",
+34,
+"shows_zh"
+],
+"start": 4,
+"end": 6,
+"word": "定律",
+"lang": "zh",
+"piece": "cases-03"
+},
+"956": {
+"file": "cases",
+"path": [
+"cases",
+36,
+"bridges",
+2,
+"claim_en"
+],
+"start": 102,
+"end": 105,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"957": {
+"file": "cases",
+"path": [
+"cases",
+36,
+"bridges",
+2,
+"why_en"
+],
+"start": 58,
+"end": 61,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"958": {
+"file": "cases",
+"path": [
+"cases",
+36,
+"predictions",
+3,
+"ifs",
+1,
+"what_en"
+],
+"start": 43,
+"end": 46,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"959": {
+"file": "cases",
+"path": [
+"cases",
+36,
+"afterwards_en"
+],
+"start": 315,
+"end": 319,
+"word": "laws",
+"lang": "en",
+"piece": "cases-03"
+},
+"960": {
+"file": "cases",
+"path": [
+"cases",
+37,
+"bridges",
+1,
+"claim_en"
+],
+"start": 141,
+"end": 145,
+"word": "laws",
+"lang": "en",
+"piece": "cases-03"
+},
+"961": {
+"file": "cases",
+"path": [
+"cases",
+37,
+"afterwards_en"
+],
+"start": 232,
+"end": 236,
+"word": "laws",
+"lang": "en",
+"piece": "cases-03"
+},
+"962": {
+"file": "cases",
+"path": [
+"cases",
+38,
+"bridges",
+1,
+"claim_en"
+],
+"start": 149,
+"end": 152,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"963": {
+"file": "cases",
+"path": [
+"cases",
+38,
+"predictions",
+2,
+"says_en"
+],
+"start": 130,
+"end": 133,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"964": {
+"file": "cases",
+"path": [
+"cases",
+38,
+"predictions",
+2,
+"says_en"
+],
+"start": 219,
+"end": 222,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"965": {
+"file": "cases",
+"path": [
+"cases",
+38,
+"predictions",
+2,
+"says_en"
+],
+"start": 316,
+"end": 319,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"966": {
+"file": "cases",
+"path": [
+"cases",
+38,
+"predictions",
+5,
+"says_en"
+],
+"start": 304,
+"end": 307,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"967": {
+"file": "cases",
+"path": [
+"cases",
+38,
+"shows_en"
+],
+"start": 18,
+"end": 22,
+"word": "laws",
+"lang": "en",
+"piece": "cases-03"
+},
+"968": {
+"file": "cases",
+"path": [
+"cases",
+38,
+"shows_zh"
+],
+"start": 1,
+"end": 3,
+"word": "定律",
+"lang": "zh",
+"piece": "cases-03"
+},
+"969": {
+"file": "cases",
+"path": [
+"cases",
+40,
+"afterwards_en"
+],
+"start": 93,
+"end": 96,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"970": {
+"file": "cases",
+"path": [
+"cases",
+40,
+"afterwards_en"
+],
+"start": 127,
+"end": 130,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"971": {
+"file": "cases",
+"path": [
+"cases",
+42,
+"things",
+4,
+"thing_en"
+],
+"start": 2,
+"end": 5,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"972": {
+"file": "cases",
+"path": [
+"cases",
+42,
+"bridges",
+3,
+"name"
+],
+"start": 14,
+"end": 17,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"973": {
+"file": "cases",
+"path": [
+"cases",
+42,
+"bridges",
+4,
+"why_en"
+],
+"start": 209,
+"end": 212,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"974": {
+"file": "cases",
+"path": [
+"cases",
+42,
+"bridges",
+4,
+"why_en"
+],
+"start": 276,
+"end": 280,
+"word": "laws",
+"lang": "en",
+"piece": "cases-03"
+},
+"975": {
+"file": "cases",
+"path": [
+"cases",
+42,
+"bridges",
+4,
+"why_en"
+],
+"start": 321,
+"end": 324,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"976": {
+"file": "cases",
+"path": [
+"cases",
+42,
+"predictions",
+5,
+"rival_en"
+],
+"start": 131,
+"end": 134,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"977": {
+"file": "cases",
+"path": [
+"cases",
+42,
+"afterwards_en"
+],
+"start": 482,
+"end": 485,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"978": {
+"file": "cases",
+"path": [
+"cases",
+42,
+"shows_en"
+],
+"start": 59,
+"end": 62,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"979": {
+"file": "cases",
+"path": [
+"cases",
+44,
+"bridges",
+0,
+"claim_en"
+],
+"start": 57,
+"end": 61,
+"word": "laws",
+"lang": "en",
+"piece": "cases-03"
+},
+"980": {
+"file": "cases",
+"path": [
+"cases",
+44,
+"bridges",
+0,
+"claim_en"
+],
+"start": 232,
+"end": 235,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"981": {
+"file": "cases",
+"path": [
+"cases",
+44,
+"bridges",
+0,
+"why_en"
+],
+"start": 60,
+"end": 64,
+"word": "laws",
+"lang": "en",
+"piece": "cases-03"
+},
+"982": {
+"file": "cases",
+"path": [
+"cases",
+44,
+"bridges",
+0,
+"why_en"
+],
+"start": 252,
+"end": 256,
+"word": "laws",
+"lang": "en",
+"piece": "cases-03"
+},
+"983": {
+"file": "cases",
+"path": [
+"cases",
+44,
+"predictions",
+2,
+"seen_en"
+],
+"start": 131,
+"end": 134,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"984": {
+"file": "cases",
+"path": [
+"cases",
+44,
+"predictions",
+4,
+"seen_en"
+],
+"start": 249,
+"end": 252,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"985": {
+"file": "cases",
+"path": [
+"cases",
+44,
+"afterwards_en"
+],
+"start": 306,
+"end": 310,
+"word": "laws",
+"lang": "en",
+"piece": "cases-03"
+},
+"986": {
+"file": "cases",
+"path": [
+"cases",
+45,
+"shows_en"
+],
+"start": 3,
+"end": 6,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"987": {
+"file": "cases",
+"path": [
+"cases",
+45,
+"shows_zh"
+],
+"start": 8,
+"end": 10,
+"word": "定律",
+"lang": "zh",
+"piece": "cases-03"
+},
+"988": {
+"file": "cases",
+"path": [
+"cases",
+47,
+"shows_en"
+],
+"start": 3,
+"end": 6,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"989": {
+"file": "cases",
+"path": [
+"cases",
+47,
+"shows_zh"
+],
+"start": 6,
+"end": 8,
+"word": "定律",
+"lang": "zh",
+"piece": "cases-03"
+},
+"990": {
+"file": "cases",
+"path": [
+"cases",
+48,
+"bridges",
+3,
+"claim_en"
+],
+"start": 106,
+"end": 109,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"991": {
+"file": "cases",
+"path": [
+"cases",
+48,
+"afterwards_en"
+],
+"start": 368,
+"end": 371,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"992": {
+"file": "cases",
+"path": [
+"cases",
+48,
+"shows_en"
+],
+"start": 114,
+"end": 117,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"993": {
+"file": "cases",
+"path": [
+"cases",
+48,
+"shows_zh"
+],
+"start": 40,
+"end": 42,
+"word": "定律",
+"lang": "zh",
+"piece": "cases-03"
+},
+"994": {
+"file": "cases",
+"path": [
+"cases",
+49,
+"bridges",
+5,
+"claim_en"
+],
+"start": 106,
+"end": 109,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"995": {
+"file": "cases",
+"path": [
+"cases",
+49,
+"shows_en"
+],
+"start": 3,
+"end": 6,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"996": {
+"file": "cases",
+"path": [
+"cases",
+49,
+"shows_zh"
+],
+"start": 6,
+"end": 8,
+"word": "定律",
+"lang": "zh",
+"piece": "cases-03"
+},
+"997": {
+"file": "cases",
+"path": [
+"cases",
+50,
+"bridges",
+3,
+"name"
+],
+"start": 0,
+"end": 3,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"998": {
+"file": "cases",
+"path": [
+"cases",
+51,
+"afterwards_en"
+],
+"start": 455,
+"end": 458,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"999": {
+"file": "cases",
+"path": [
+"cases",
+51,
+"afterwards_en"
+],
+"start": 813,
+"end": 816,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"1000": {
+"file": "cases",
+"path": [
+"cases",
+51,
+"afterwards_en"
+],
+"start": 912,
+"end": 915,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"1001": {
+"file": "cases",
+"path": [
+"cases",
+51,
+"shows_en"
+],
+"start": 49,
+"end": 52,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"1002": {
+"file": "cases",
+"path": [
+"cases",
+51,
+"shows_zh"
+],
+"start": 13,
+"end": 15,
+"word": "定律",
+"lang": "zh",
+"piece": "cases-03"
+},
+"1003": {
+"file": "cases",
+"path": [
+"cases",
+52,
+"bridges",
+0,
+"why_en"
+],
+"start": 388,
+"end": 391,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"1004": {
+"file": "cases",
+"path": [
+"cases",
+52,
+"bridges",
+1,
+"claim_en"
+],
+"start": 44,
+"end": 47,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"1005": {
+"file": "cases",
+"path": [
+"cases",
+52,
+"bridges",
+2,
+"claim_en"
+],
+"start": 47,
+"end": 50,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"1006": {
+"file": "cases",
+"path": [
+"cases",
+52,
+"bridges",
+3,
+"claim_en"
+],
+"start": 86,
+"end": 90,
+"word": "laws",
+"lang": "en",
+"piece": "cases-03"
+},
+"1007": {
+"file": "cases",
+"path": [
+"cases",
+52,
+"predictions",
+0,
+"ifs",
+0,
+"what_en"
+],
+"start": 35,
+"end": 38,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"1008": {
+"file": "cases",
+"path": [
+"cases",
+52,
+"predictions",
+1,
+"ifs",
+0,
+"what_en"
+],
+"start": 35,
+"end": 38,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"1009": {
+"file": "cases",
+"path": [
+"cases",
+52,
+"predictions",
+2,
+"ifs",
+0,
+"what_en"
+],
+"start": 35,
+"end": 38,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"1010": {
+"file": "cases",
+"path": [
+"cases",
+52,
+"predictions",
+3,
+"ifs",
+0,
+"what_en"
+],
+"start": 35,
+"end": 38,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"1011": {
+"file": "cases",
+"path": [
+"cases",
+52,
+"afterwards_en"
+],
+"start": 137,
+"end": 140,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"1012": {
+"file": "cases",
+"path": [
+"cases",
+52,
+"shows_en"
+],
+"start": 157,
+"end": 160,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"1013": {
+"file": "cases",
+"path": [
+"cases",
+52,
+"shows_zh"
+],
+"start": 48,
+"end": 50,
+"word": "定律",
+"lang": "zh",
+"piece": "cases-03"
+},
+"1014": {
+"file": "cases",
+"path": [
+"cases",
+53,
+"bridges",
+0,
+"claim_en"
+],
+"start": 19,
+"end": 22,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"1015": {
+"file": "cases",
+"path": [
+"cases",
+53,
+"predictions",
+0,
+"ifs",
+0,
+"what_en"
+],
+"start": 19,
+"end": 22,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"1016": {
+"file": "cases",
+"path": [
+"cases",
+53,
+"predictions",
+1,
+"ifs",
+0,
+"what_en"
+],
+"start": 19,
+"end": 22,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"1017": {
+"file": "cases",
+"path": [
+"cases",
+53,
+"predictions",
+2,
+"ifs",
+0,
+"what_en"
+],
+"start": 19,
+"end": 22,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"1018": {
+"file": "cases",
+"path": [
+"cases",
+53,
+"afterwards_en"
+],
+"start": 74,
+"end": 77,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"1019": {
+"file": "cases",
+"path": [
+"cases",
+55,
+"case_en"
+],
+"start": 62,
+"end": 66,
+"word": "laws",
+"lang": "en",
+"piece": "cases-03"
+},
+"1020": {
+"file": "cases",
+"path": [
+"cases",
+55,
+"case_zh"
+],
+"start": 26,
+"end": 28,
+"word": "定律",
+"lang": "zh",
+"piece": "cases-03"
+},
+"1021": {
+"file": "cases",
+"path": [
+"cases",
+55,
+"shows_en"
+],
+"start": 142,
+"end": 145,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"1022": {
+"file": "cases",
+"path": [
+"cases",
+55,
+"shows_zh"
+],
+"start": 42,
+"end": 44,
+"word": "定律",
+"lang": "zh",
+"piece": "cases-03"
+},
+"1023": {
+"file": "cases",
+"path": [
+"cases",
+56,
+"bridges",
+1,
+"why_en"
+],
+"start": 201,
+"end": 204,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"1024": {
+"file": "cases",
+"path": [
+"cases",
+56,
+"predictions",
+0,
+"rival_en"
+],
+"start": 141,
+"end": 144,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"1025": {
+"file": "cases",
+"path": [
+"cases",
+56,
+"predictions",
+0,
+"rival_en"
+],
+"start": 218,
+"end": 221,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"1026": {
+"file": "cases",
+"path": [
+"cases",
+56,
+"predictions",
+1,
+"says_en"
+],
+"start": 210,
+"end": 213,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"1027": {
+"file": "cases",
+"path": [
+"cases",
+56,
+"afterwards_en"
+],
+"start": 582,
+"end": 585,
+"word": "law",
+"lang": "en",
+"piece": "cases-03"
+},
+"1028": {
+"file": "cases",
+"path": [
+"cases",
+57,
+"things",
+6,
+"thing_en"
+],
+"start": 82,
+"end": 85,
+"word": "law",
+"lang": "en",
+"piece": "cases-04"
+},
+"1029": {
+"file": "cases",
+"path": [
+"cases",
+57,
+"bridges",
+4,
+"name"
+],
+"start": 4,
+"end": 7,
+"word": "law",
+"lang": "en",
+"piece": "cases-04"
+},
+"1030": {
+"file": "cases",
+"path": [
+"cases",
+57,
+"bridges",
+4,
+"claim_en"
+],
+"start": 87,
+"end": 90,
+"word": "law",
+"lang": "en",
+"piece": "cases-04"
+},
+"1031": {
+"file": "cases",
+"path": [
+"cases",
+57,
+"bridges",
+4,
+"why_en"
+],
+"start": 124,
+"end": 127,
+"word": "law",
+"lang": "en",
+"piece": "cases-04"
+},
+"1032": {
+"file": "cases",
+"path": [
+"cases",
+57,
+"predictions",
+0,
+"ifs",
+2,
+"what_en"
+],
+"start": 40,
+"end": 43,
+"word": "law",
+"lang": "en",
+"piece": "cases-04"
+},
+"1033": {
+"file": "cases",
+"path": [
+"cases",
+57,
+"predictions",
+0,
+"seen_en"
+],
+"start": 323,
+"end": 326,
+"word": "law",
+"lang": "en",
+"piece": "cases-04"
+},
+"1034": {
+"file": "cases",
+"path": [
+"cases",
+57,
+"predictions",
+0,
+"rival_en"
+],
+"start": 215,
+"end": 218,
+"word": "law",
+"lang": "en",
+"piece": "cases-04"
+},
+"1035": {
+"file": "cases",
+"path": [
+"cases",
+57,
+"predictions",
+0,
+"rival_en"
+],
+"start": 274,
+"end": 277,
+"word": "law",
+"lang": "en",
+"piece": "cases-04"
+},
+"1036": {
+"file": "cases",
+"path": [
+"cases",
+57,
+"predictions",
+5,
+"says_en"
+],
+"start": 181,
+"end": 184,
+"word": "law",
+"lang": "en",
+"piece": "cases-04"
+},
+"1037": {
+"file": "cases",
+"path": [
+"cases",
+57,
+"predictions",
+5,
+"ifs",
+0,
+"what_en"
+],
+"start": 54,
+"end": 57,
+"word": "law",
+"lang": "en",
+"piece": "cases-04"
+},
+"1038": {
+"file": "cases",
+"path": [
+"cases",
+58,
+"predictions",
+3,
+"seen_en"
+],
+"start": 525,
+"end": 528,
+"word": "law",
+"lang": "en",
+"piece": "cases-04"
+},
+"1039": {
+"file": "cases",
+"path": [
+"cases",
+58,
+"afterwards_en"
+],
+"start": 286,
+"end": 289,
+"word": "law",
+"lang": "en",
+"piece": "cases-04"
+},
+"1040": {
+"file": "cases",
+"path": [
+"cases",
+60,
+"things",
+3,
+"thing_en"
+],
+"start": 16,
+"end": 19,
+"word": "law",
+"lang": "en",
+"piece": "cases-04"
+},
+"1041": {
+"file": "cases",
+"path": [
+"cases",
+60,
+"bridges",
+1,
+"claim_en"
+],
+"start": 68,
+"end": 71,
+"word": "law",
+"lang": "en",
+"piece": "cases-04"
+},
+"1042": {
+"file": "cases",
+"path": [
+"cases",
+60,
+"bridges",
+2,
+"claim_en"
+],
+"start": 70,
+"end": 73,
+"word": "law",
+"lang": "en",
+"piece": "cases-04"
+},
+"1043": {
+"file": "cases",
+"path": [
+"cases",
+60,
+"bridges",
+3,
+"claim_en"
+],
+"start": 102,
+"end": 105,
+"word": "law",
+"lang": "en",
+"piece": "cases-04"
+},
+"1044": {
+"file": "cases",
+"path": [
+"cases",
+60,
+"shows_en"
+],
+"start": 16,
+"end": 20,
+"word": "laws",
+"lang": "en",
+"piece": "cases-04"
+},
+"1045": {
+"file": "cases",
+"path": [
+"cases",
+60,
+"shows_zh"
+],
+"start": 12,
+"end": 14,
+"word": "定律",
+"lang": "zh",
+"piece": "cases-04"
+},
+"1046": {
+"file": "cases",
+"path": [
+"cases",
+61,
+"shows_en"
+],
+"start": 164,
+"end": 167,
+"word": "law",
+"lang": "en",
+"piece": "cases-04"
+},
+"1047": {
+"file": "cases",
+"path": [
+"cases",
+61,
+"shows_zh"
+],
+"start": 58,
+"end": 60,
+"word": "定律",
+"lang": "zh",
+"piece": "cases-04"
+},
+"1048": {
+"file": "cases",
+"path": [
+"cases",
+63,
+"case_en"
+],
+"start": 187,
+"end": 190,
+"word": "law",
+"lang": "en",
+"piece": "cases-04"
+},
+"1049": {
+"file": "cases",
+"path": [
+"cases",
+63,
+"case_zh"
+],
+"start": 27,
+"end": 28,
+"word": "律",
+"lang": "zh",
+"piece": "cases-04"
+},
+"1050": {
+"file": "cases",
+"path": [
+"cases",
+63,
+"bridges",
+0,
+"claim_en"
+],
+"start": 151,
+"end": 154,
+"word": "law",
+"lang": "en",
+"piece": "cases-04"
+},
+"1051": {
+"file": "cases",
+"path": [
+"cases",
+63,
+"predictions",
+1,
+"ifs",
+1,
+"what_en"
+],
+"start": 35,
+"end": 38,
+"word": "law",
+"lang": "en",
+"piece": "cases-04"
+},
+"1052": {
+"file": "cases",
+"path": [
+"cases",
+64,
+"case_en"
+],
+"start": 52,
+"end": 56,
+"word": "laws",
+"lang": "en",
+"piece": "cases-04"
+},
+"1053": {
+"file": "cases",
+"path": [
+"cases",
+64,
+"case_zh"
+],
+"start": 33,
+"end": 34,
+"word": "律",
+"lang": "zh",
+"piece": "cases-04"
+},
+"1054": {
+"file": "cases",
+"path": [
+"cases",
+64,
+"things",
+0,
+"thing_en"
+],
+"start": 11,
+"end": 15,
+"word": "laws",
+"lang": "en",
+"piece": "cases-04"
+},
+"1055": {
+"file": "cases",
+"path": [
+"cases",
+64,
+"predictions",
+4,
+"ifs",
+0,
+"what_en"
+],
+"start": 98,
+"end": 102,
+"word": "laws",
+"lang": "en",
+"piece": "cases-04"
+},
+"1056": {
+"file": "cases",
+"path": [
+"cases",
+64,
+"shows_en"
+],
+"start": 20,
+"end": 24,
+"word": "laws",
+"lang": "en",
+"piece": "cases-04"
+},
+"1057": {
+"file": "cases",
+"path": [
+"cases",
+64,
+"shows_zh"
+],
+"start": 4,
+"end": 5,
+"word": "律",
+"lang": "zh",
+"piece": "cases-04"
+},
+"1058": {
+"file": "cases",
+"path": [
+"cases",
+65,
+"bridges",
+3,
+"claim_en"
+],
+"start": 110,
+"end": 113,
+"word": "law",
+"lang": "en",
+"piece": "cases-04"
+},
+"1059": {
+"file": "cases",
+"path": [
+"cases",
+65,
+"bridges",
+3,
+"why_en"
+],
+"start": 20,
+"end": 23,
+"word": "law",
+"lang": "en",
+"piece": "cases-04"
+},
+"1060": {
+"file": "cases",
+"path": [
+"cases",
+65,
+"bridges",
+3,
+"why_en"
+],
+"start": 190,
+"end": 193,
+"word": "law",
+"lang": "en",
+"piece": "cases-04"
+},
+"1061": {
+"file": "cases",
+"path": [
+"cases",
+65,
+"bridges",
+3,
+"why_en"
+],
+"start": 248,
+"end": 251,
+"word": "law",
+"lang": "en",
+"piece": "cases-04"
+}
+}

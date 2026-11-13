@@ -1,0 +1,85 @@
+511 B
+512 B
+513 B
+514 B
+515 A
+516 A
+517 N the lumping laws
+518 N the stock laws
+519 N the lumping laws
+520 A
+521 A
+522 A
+523 G a reading, not a law: denies proved status
+524 A
+525 A
+526 B
+527 B
+528 A
+529 B
+530 B
+531 A
+532 B
+533 B
+534 A
+535 A
+536 B
+537 B
+538 B
+539 A
+540 B
+541 B
+542 B
+543 B
+544 B
+545 B
+546 A
+547 A
+548 A
+549 B
+550 B
+551 B
+552 B
+553 B
+554 B
+555 N the no-window law
+556 B
+557 A
+558 B
+559 A
+560 B
+561 B
+562 B
+563 B
+564 B
+565 B
+566 B
+567 G no law here is of
+568 B
+569 A
+570 G no law here joins
+571 A
+572 A
+573 A
+574 A
+575 A
+576 B
+577 B
+578 B
+579 A
+580 D card's laws data key
+581 A
+582 B
+583 U B or N (rest law model vs theorem)
+584 N the rest law
+585 A
+586 B
+587 G the laws do not say
+588 A
+589 A
+590 B
+591 A
+592 A
+593 A
+594 A
+595 N the regulation laws

@@ -1,0 +1,2 @@
+64 REWORD 过程自己的定理（第 9 步） => 就过程本身证明的（第 9 步）
+checked 42 changed, 10 kept

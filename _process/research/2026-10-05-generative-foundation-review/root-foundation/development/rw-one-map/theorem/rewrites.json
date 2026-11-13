@@ -1,0 +1,886 @@
+[
+ {
+  "file": "sheet",
+  "path": [
+   "lead_en"
+  ],
+  "old": "One way out is a theorem of the course itself:",
+  "new": "One way out is proved of the course itself:"
+ },
+ {
+  "file": "sheet",
+  "path": [
+   "lead_zh"
+  ],
+  "old": "有一条出路是过程自己的定理：",
+  "new": "有一条出路是就过程本身证明的："
+ },
+ {
+  "file": "paths",
+  "path": [
+   "paths",
+   0,
+   "want_en"
+  ],
+  "old": "One is a theorem of the course itself:",
+  "new": "One is proved of the course itself:"
+ },
+ {
+  "file": "paths",
+  "path": [
+   "paths",
+   0,
+   "want_zh"
+  ],
+  "old": "其中一条是过程自己的定理：",
+  "new": "其中一条是就过程本身证明的："
+ },
+ {
+  "file": "paths",
+  "path": [
+   "paths",
+   1,
+   "shows_en",
+   1
+  ],
+  "old": "only regrowth is a theorem of the course (step 12)",
+  "new": "only regrowth is proved of the course itself (step 12)"
+ },
+ {
+  "file": "paths",
+  "path": [
+   "paths",
+   1,
+   "shows_zh",
+   1
+  ],
+  "old": "只有“长回来”是过程自己的定理（第 12 步）",
+  "new": "只有“长回来”是就过程本身证明的（第 12 步）"
+ },
+ {
+  "file": "web",
+  "path": [
+   "roles",
+   11,
+   "is"
+  ],
+  "old": "a theorem of every course, every process or every relation",
+  "new": "a theorem about every course, every process or every relation"
+ },
+ {
+  "file": "laid",
+  "path": [
+   "tests",
+   3,
+   "broke_en"
+  ],
+  "old": "No proved theorem failed, and no prediction.",
+  "new": "No theorem failed, and no prediction."
+ },
+ {
+  "file": "laid",
+  "path": [
+   "tests",
+   3,
+   "broke_en"
+  ],
+  "old": "Two proved theorems did not apply",
+  "new": "Two theorems did not apply"
+ },
+ {
+  "file": "laid",
+  "path": [
+   "tests",
+   3,
+   "broke_zh"
+  ],
+  "old": "证明了的定理没有失败，预测也没有失败。",
+  "new": "没有定理失败，预测也没有失败。"
+ },
+ {
+  "file": "laid",
+  "path": [
+   "tests",
+   3,
+   "broke_zh"
+  ],
+  "old": "有两条证明了的定理在这里用不上",
+  "new": "有两条定理在这里用不上"
+ },
+ {
+  "file": "laid",
+  "path": [
+   "tests",
+   4,
+   "broke_en"
+  ],
+  "old": "but does not decide where such learners end up",
+  "new": "but does not determine where such learners end up"
+ },
+ {
+  "file": "laid",
+  "path": [
+   "tests",
+   4,
+   "line_en"
+  ],
+  "old": "and does not decide where such learners end up",
+  "new": "and does not determine where such learners end up"
+ },
+ {
+  "file": "laid",
+  "path": [
+   "tests",
+   5,
+   "pins",
+   3,
+   "en"
+  ],
+  "old": "the theorem does not speak here",
+  "new": "the theorem says nothing here"
+ },
+ {
+  "file": "laid",
+  "path": [
+   "tests",
+   5,
+   "pins",
+   3,
+   "zh"
+  ],
+  "old": "定理管不到这里",
+  "new": "定理没有说到这里"
+ },
+ {
+  "file": "laid",
+  "path": [
+   "tests",
+   6,
+   "said_en"
+  ],
+  "old": "what the theorem calls best",
+  "new": "what the theorem gives as best"
+ },
+ {
+  "file": "laid",
+  "path": [
+   "tests",
+   6,
+   "seen_en"
+  ],
+  "old": "what the theorem calls best",
+  "new": "what the theorem gives as best"
+ },
+ {
+  "file": "laid",
+  "path": [
+   "tests",
+   6,
+   "broke_en"
+  ],
+  "old": "what the theorem calls best",
+  "new": "what the theorem gives as best"
+ },
+ {
+  "file": "laid",
+  "path": [
+   "tests",
+   6,
+   "line_en"
+  ],
+  "old": "what the theorem calls best",
+  "new": "what the theorem gives as best"
+ },
+ {
+  "file": "laid",
+  "path": [
+   "tests",
+   6,
+   "said_zh"
+  ],
+  "old": "定理说的最好",
+  "new": "定理给出的最好"
+ },
+ {
+  "file": "laid",
+  "path": [
+   "tests",
+   6,
+   "seen_zh"
+  ],
+  "old": "定理说的最好",
+  "new": "定理给出的最好"
+ },
+ {
+  "file": "laid",
+  "path": [
+   "tests",
+   6,
+   "broke_zh"
+  ],
+  "old": "定理说的最好",
+  "new": "定理给出的最好"
+ },
+ {
+  "file": "laid",
+  "path": [
+   "tests",
+   6,
+   "line_zh"
+  ],
+  "old": "定理说的最好",
+  "new": "定理给出的最好"
+ },
+ {
+  "file": "cases",
+  "path": [
+   "cases",
+   23,
+   "bridges",
+   0,
+   "claim_en"
+  ],
+  "old": "the plans the theorem calls maximal and the chances it calls best",
+  "new": "the plans the theorem gives as maximal and the chances it gives as best"
+ },
+ {
+  "file": "cases",
+  "path": [
+   "cases",
+   31,
+   "predictions",
+   0,
+   "rival_en"
+  ],
+  "old": "a system following the theorem on 70% of calls and a rival on the rest passes",
+  "new": "a system picking the theorem's plan on 70% of calls and a rival's on the rest passes"
+ },
+ {
+  "file": "cases",
+  "path": [
+   "cases",
+   18,
+   "predictions",
+   0,
+   "ifs",
+   1,
+   "what_en"
+  ],
+  "old": "which is what the proved theorem speaks of",
+  "new": "which is what the theorem speaks of"
+ },
+ {
+  "file": "cases",
+  "path": [
+   "cases",
+   19,
+   "predictions",
+   0,
+   "ifs",
+   1,
+   "what_en"
+  ],
+  "old": "which is what the proved theorem speaks of",
+  "new": "which is what the theorem speaks of"
+ },
+ {
+  "file": "cases",
+  "path": [
+   "cases",
+   25,
+   "shows_en"
+  ],
+  "old": "never the proved theorem",
+  "new": "never the theorem"
+ },
+ {
+  "file": "cases",
+  "path": [
+   "cases",
+   29,
+   "shows_en"
+  ],
+  "old": "fall under two proved theorems",
+  "new": "fall under two theorems"
+ },
+ {
+  "file": "cases",
+  "path": [
+   "cases",
+   18,
+   "bridges",
+   1,
+   "why_en"
+  ],
+  "old": "These are theorems of optima over outcomes, not of a trained system.",
+  "new": "These are theorems on optima over outcomes, not on a trained system."
+ },
+ {
+  "file": "cases",
+  "path": [
+   "cases",
+   44,
+   "afterwards_en"
+  ],
+  "old": "the pure core's theorems of lasting and viability",
+  "new": "the pure core's theorems on lasting and viability"
+ },
+ {
+  "file": "cards",
+  "path": [
+   "cards",
+   1,
+   "misfit"
+  ],
+  "old": "Meet.trans is a theorem of a relation between courses",
+  "new": "Meet.trans is a theorem on a relation between courses"
+ },
+ {
+  "file": "cards",
+  "path": [
+   "cards",
+   9,
+   "misfit"
+  ],
+  "old": "The theorems of reading in time on their own model",
+  "new": "The theorems on reading in time on their own model"
+ },
+ {
+  "file": "cards",
+  "path": [
+   "cards",
+   10,
+   "cast",
+   3,
+   "as"
+  ],
+  "old": "(the theorem of exact thresholds)",
+  "new": "(the theorem on exact thresholds)"
+ },
+ {
+  "file": "cards",
+  "path": [
+   "cards",
+   10,
+   "misfit"
+  ],
+  "old": "listed after the theorem of the stock",
+  "new": "listed after the theorem on the stock"
+ },
+ {
+  "file": "cards",
+  "path": [
+   "cards",
+   73,
+   "misfit"
+  ],
+  "old": "its theorems of rising and running down",
+  "new": "its theorems on rising and running down"
+ },
+ {
+  "file": "cards",
+  "path": [
+   "cards",
+   94,
+   "misfit"
+  ],
+  "old": "not a theorem of courses of the joint law",
+  "new": "not a theorem on courses of the joint law"
+ },
+ {
+  "file": "cards",
+  "path": [
+   "cards",
+   103,
+   "misfit"
+  ],
+  "old": "not a theorem of every circular dependence",
+  "new": "not a theorem about every circular dependence"
+ },
+ {
+  "file": "cards",
+  "path": [
+   "cards",
+   120,
+   "misfit"
+  ],
+  "old": "it is not a theorem of every course",
+  "new": "it is not a theorem about every course"
+ },
+ {
+  "file": "cards",
+  "path": [
+   "cards",
+   133,
+   "misfit"
+  ],
+  "old": "The theorem of beginnings",
+  "new": "The theorem on beginnings"
+ },
+ {
+  "file": "cards",
+  "path": [
+   "cards",
+   141,
+   "plain_en"
+  ],
+  "old": "the theorems of exchange hold along each single run",
+  "new": "the theorems on exchange hold along each single run"
+ },
+ {
+  "file": "cards",
+  "path": [
+   "cards",
+   145,
+   "misfit"
+  ],
+  "old": "they are not theorems of every course",
+  "new": "they are not theorems about every course"
+ },
+ {
+  "file": "cards",
+  "path": [
+   "cards",
+   161,
+   "misfit"
+  ],
+  "old": "theorems of any process with a balanced stock, and theorems of one built process",
+  "new": "theorems on any process with a balanced stock, and theorems on one built process"
+ },
+ {
+  "file": "cards",
+  "path": [
+   "cards",
+   173,
+   "misfit"
+  ],
+  "old": "are likewise theorems of any partial law",
+  "new": "are likewise theorems on any partial law"
+ },
+ {
+  "file": "cards",
+  "path": [
+   "cards",
+   177,
+   "misfit"
+  ],
+  "old": "The theorems of choice conclude",
+  "new": "The theorems on choice conclude"
+ },
+ {
+  "file": "cards",
+  "path": [
+   "cards",
+   83,
+   "misfit"
+  ],
+  "old": "The weighted laws speak of expectations",
+  "new": "The theorems on weighted laws speak of expectations"
+ },
+ {
+  "file": "laid",
+  "path": [
+   "tests",
+   6,
+   "rival_en"
+  ],
+  "old": "would also count as moving the theorem's way in some runs",
+  "new": "would also count as moving toward what the theorem gives as best in some runs"
+ },
+ {
+  "file": "laid",
+  "path": [
+   "tests",
+   6,
+   "rival_zh"
+  ],
+  "old": "同样会被算作朝定理的方向走",
+  "new": "同样会被算作朝定理给出的最好走"
+ },
+ {
+  "file": "laid",
+  "path": [
+   "tests",
+   6,
+   "view",
+   "en"
+  ],
+  "old": "moves these learners toward the theorem's ends, the direction",
+  "new": "moves these learners toward what the theorem gives as best, the direction"
+ },
+ {
+  "file": "laid",
+  "path": [
+   "tests",
+   6,
+   "view",
+   "zh"
+  ],
+  "old": "会朝定理的终点走",
+  "new": "会朝定理给出的最好走"
+ },
+ {
+  "file": "paths",
+  "path": [
+   "paths",
+   0,
+   "shows_zh",
+   3
+  ],
+  "old": "过程自己的定理（第 9 步），条件写在那一步里",
+  "new": "就过程本身证明的（第 9 步），条件写在那一步里"
+ },
+ {
+  "file": "paths",
+  "path": [
+   "paths",
+   4,
+   "shows_zh",
+   0
+  ],
+  "old": "过程自己的定理，各在句子里写明的条件之下",
+  "new": "就过程本身证明的，各在句子里写明的条件之下"
+ },
+ {
+  "file": "cards",
+  "path": [
+   "cards",
+   1,
+   "misfit"
+  ],
+  "old": "no form is a relation's theorem",
+  "new": "no form fits a theorem on a relation"
+ },
+ {
+  "file": "cards",
+  "path": [
+   "cards",
+   11,
+   "misfit"
+  ],
+  "old": "is a definitional unfolding and is not written as a theorem",
+  "new": "is a definitional unfolding and is not listed among the card's theorems"
+ },
+ {
+  "file": "cards",
+  "path": [
+   "cards",
+   20,
+   "misfit"
+  ],
+  "old": "is the model's own clause, not a derived theorem",
+  "new": "is the model's own clause, not a theorem"
+ },
+ {
+  "file": "cards",
+  "path": [
+   "cards",
+   54,
+   "misfit"
+  ],
+  "old": "is not a theorem of this dynamic",
+  "new": "is stated by no theorem of this dynamic"
+ },
+ {
+  "file": "cards",
+  "path": [
+   "cards",
+   67,
+   "misfit"
+  ],
+  "old": "active inference's habit read as this theorem",
+  "new": "active inference's habit read as a case of this theorem"
+ },
+ {
+  "file": "cards",
+  "path": [
+   "cards",
+   69,
+   "misfit"
+  ],
+  "old": "is a second model no proof here joins to hearing",
+  "new": "is on a second model no proof here joins to hearing"
+ },
+ {
+  "file": "cards",
+  "path": [
+   "cards",
+   78,
+   "misfit"
+  ],
+  "old": "so each sits between a theorem and a built case",
+  "new": "so each sits between a general theorem and a built case"
+ },
+ {
+  "file": "cards",
+  "path": [
+   "cards",
+   91,
+   "misfit"
+  ],
+  "old": "Both theorems are of Confound's process only",
+  "new": "Both theorems hold of Confound's process only"
+ },
+ {
+  "file": "cards",
+  "path": [
+   "cards",
+   104,
+   "plain_en"
+  ],
+  "old": "theorems, proved elsewhere, of giving that waits",
+  "new": "theorems, proved elsewhere, on giving that waits"
+ },
+ {
+  "file": "cards",
+  "path": [
+   "cards",
+   109,
+   "misfit"
+  ],
+  "old": "this place meets the regulation theorems by reading only",
+  "new": "this place comes under the regulation theorems by reading only"
+ },
+ {
+  "file": "cards",
+  "path": [
+   "cards",
+   154,
+   "misfit"
+  ],
+  "old": "Every theorem is of one built course",
+  "new": "Every theorem is about one built course"
+ },
+ {
+  "file": "cards",
+  "path": [
+   "cards",
+   167,
+   "misfit"
+  ],
+  "old": "Theorems of every carrier, relation and class",
+  "new": "Theorems about every carrier, relation and class"
+ },
+ {
+  "file": "cards",
+  "path": [
+   "cards",
+   17,
+   "misfit"
+  ],
+  "old": "so it is a built case, not a theorem.",
+  "new": "so it is a built case, not a general theorem."
+ },
+ {
+  "file": "cards",
+  "path": [
+   "cards",
+   85,
+   "misfit"
+  ],
+  "old": "so it is among the built cases and not a theorem.",
+  "new": "so it is among the built cases and not a general theorem."
+ },
+ {
+  "file": "cards",
+  "path": [
+   "cards",
+   114,
+   "misfit"
+  ],
+  "old": "so it is a built case and not a theorem.",
+  "new": "so it is a built case and not a general theorem."
+ },
+ {
+  "file": "cards",
+  "path": [
+   "cards",
+   14,
+   "misfit"
+  ],
+  "old": "six-law",
+  "new": "six-theorem"
+ },
+ {
+  "file": "cards",
+  "path": [
+   "cards",
+   152,
+   "misfit"
+  ],
+  "old": "six-law",
+  "new": "six-theorem"
+ },
+ {
+  "file": "cards",
+  "path": [
+   "cards",
+   166,
+   "misfit"
+  ],
+  "old": "six-law",
+  "new": "six-theorem"
+ },
+ {
+  "file": "cards",
+  "path": [
+   "cards",
+   168,
+   "misfit"
+  ],
+  "old": "six-law",
+  "new": "six-theorem"
+ },
+ {
+  "file": "cards",
+  "path": [
+   "cards",
+   37,
+   "misfit"
+  ],
+  "old": "three-law",
+  "new": "three-theorem"
+ },
+ {
+  "file": "cards",
+  "path": [
+   "cards",
+   140,
+   "misfit"
+  ],
+  "old": "three-law",
+  "new": "three-theorem"
+ },
+ {
+  "file": "cases",
+  "path": [
+   "cases",
+   18,
+   "predictions",
+   2,
+   "ifs",
+   0,
+   "what_en"
+  ],
+  "old": "the theorem for optima",
+  "new": "the theorem on optima"
+ },
+ {
+  "file": "cases",
+  "path": [
+   "cases",
+   18,
+   "shows_en"
+  ],
+  "old": "The theorem is of optima",
+  "new": "The theorem is on optima"
+ },
+ {
+  "file": "cases",
+  "path": [
+   "cases",
+   19,
+   "bridges",
+   1,
+   "why_en"
+  ],
+  "old": "the theorems are of optima over outcomes, not of a trained model",
+  "new": "the theorems are on optima over outcomes, not on a trained model"
+ },
+ {
+  "file": "cases",
+  "path": [
+   "cases",
+   29,
+   "bridges",
+   4,
+   "why_en"
+  ],
+  "old": "the theorem verifies a given policy, not how one chooses",
+  "new": "the theorem holds of a given policy, not of how one chooses"
+ },
+ {
+  "file": "cases",
+  "path": [
+   "cases",
+   29,
+   "shows_zh"
+  ],
+  "old": "两条已证的定理",
+  "new": "两条定理"
+ },
+ {
+  "file": "cases",
+  "path": [
+   "cases",
+   30,
+   "shows_en"
+  ],
+  "old": "never on the theorem's forbidden cases",
+  "new": "never on the cases the theorem rules out"
+ },
+ {
+  "file": "cases",
+  "path": [
+   "cases",
+   30,
+   "shows_zh"
+  ],
+  "old": "不看定理所禁的情形",
+  "new": "不看定理排除的情形"
+ },
+ {
+  "file": "cases",
+  "path": [
+   "cases",
+   32,
+   "predictions",
+   0,
+   "rival_en"
+  ],
+  "old": "Mixtures pass only near the theorem (nine calls in ten: 0.89)",
+  "new": "Mixtures pass only near the theorem's plan (nine calls in ten: 0.89)"
+ },
+ {
+  "file": "cases",
+  "path": [
+   "cases",
+   36,
+   "afterwards_en"
+  ],
+  "old": "proved the regime's theorems for giving that adjusts",
+  "new": "proved theorems on the regime for giving that adjusts"
+ },
+ {
+  "file": "cases",
+  "path": [
+   "cases",
+   52,
+   "bridges",
+   3,
+   "claim_en"
+  ],
+  "old": "the counts theorems say rises",
+  "new": "the theorems on counts say rises"
+ },
+ {
+  "file": "cases",
+  "path": [
+   "cases",
+   64,
+   "shows_en"
+  ],
+  "old": "A reading of proved theorems",
+  "new": "A reading of theorems"
+ },
+ {
+  "file": "cases",
+  "path": [
+   "cases",
+   64,
+   "shows_zh"
+  ],
+  "old": "把已证的定理读作",
+  "new": "把定理读作"
+ }
+]

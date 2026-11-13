@@ -180,7 +180,7 @@ const T = {
         ag_yes: 'Seen as the reasoning said', ag_no: 'Not seen as the reasoning said', ag_mixed: 'Seen in part', one: 'Written by one reader; no second reader yet.',
         shows: 'What this path shows', wants: 'What the work wants', found_at: 'found here instead', anch: 'How the Lean states it', more1: ' more way', moren: ' more ways',
         path_g: 'Read a path', case_g: 'Where the reasoning met the world', own: 'Place something you know', all: 'The whole map',
-        mk_needs: 'needs something given from outside', mk_built: 'built example only', mk_reading: 'a reading, not proved', unmarked: 'Unmarked steps are proved, each under its condition. Open a step to read the law.', crop: 'Showing the bands this path runs through. Choose here for the whole map.', crop2: 'Showing the bands this test touches. Choose here for the whole map.' },
+        mk_needs: 'needs something given from outside', mk_built: 'built example only', mk_reading: 'a reading, not proved', unmarked: 'Unmarked steps are proved, each under its condition. Open a step to read the theorem.', crop: 'Showing the bands this path runs through. Choose here for the whole map.', crop2: 'Showing the bands this test touches. Choose here for the whole map.' },
   zh: { law: '已证明：在它的条件下，就这样走', line: '已证明：两者之间有一条界线，说明一样东西落在哪一边', needs: '已证明，但要有过程之外给定的东西',
         built: '只在造出来的例子里见过', reading: '一种解读，没有证明', same: '一个是另一个的特例', dotted: '没有一般的证明：造出来的例子，或者一种解读',
         from: '从这里出发', into: '通到这里', stays: '关于留在这里，已经知道的', none_out: '图上没有从这里出去的箭头。', none_in: '图上没有通到这里的箭头。',
@@ -191,7 +191,7 @@ const T = {
         ag_yes: '看到的和推理说的一致', ag_no: '看到的和推理说的不一致', ag_mixed: '一部分一致', one: '只有一位读者写过；还没有第二位读者看过。',
         shows: '这条路显出来的', wants: '这项工作想要的', found_at: '实际落在', anch: '在 Lean 里怎么说', more1: ' 条别的路', moren: ' 条别的路',
         path_g: '顺着一条路读', case_g: '推理碰上实际的地方', own: '放上你熟悉的一件事', all: '整张图',
-        mk_needs: '要有过程之外给定的东西', mk_built: '只在造出来的例子里见过', mk_reading: '解读，没有证明', unmarked: '没有标记的步骤都已证明，各有条件。点开一步，可以读到定律。', crop: '这里只显示这条路经过的几栏。点这里看整张图。', crop2: '这里只显示这个检验碰到的几栏。点这里看整张图。' } };
+        mk_needs: '要有过程之外给定的东西', mk_built: '只在造出来的例子里见过', mk_reading: '解读，没有证明', unmarked: '没有标记的步骤都已证明，各有条件。点开一步，可以读到定理。', crop: '这里只显示这条路经过的几栏。点这里看整张图。', crop2: '这里只显示这个检验碰到的几栏。点这里看整张图。' } };
 const t = k => T[state.lang][k];
 const zh = () => state.lang === 'zh';
 const L = (o, k) => (o[k + '_' + state.lang] || o[k + '_en'] || '');
@@ -410,7 +410,7 @@ function labels() {
     D.about[state.lang].head.map(x => '<th>' + esc(x) + '</th>').join('') + '</tr></thead><tbody>' + D.about[state.lang].rows.map(r => '<tr>' + r.map(x => '<td>' + esc(x) + '</td>').join('') + '</tr>').join('') +
     '</tbody></table></div><p>' + esc(D.about[state.lang].rest) + '</p><p>' +
     esc(en ? 'The same as pages: ' : '同样的内容，按页读：') + a(lk.hub, en ? 'the map' : '地图') + ' · ' + a(lk.places, en ? 'every box and its arrows' : '每一个方框和它的箭头') + ' · ' +
-    a(lk.paths, en ? 'the paths and the tests' : '路和检验') + ' · ' + a(lk.ledger, en ? 'the laws and tests behind the map' : '这张图背后的定律和检验（英文）') + '</p>';
+    a(lk.paths, en ? 'the paths and the tests' : '路和检验') + ' · ' + a(lk.ledger, en ? 'the theorems and tests behind the map' : '这张图背后的定理和检验（英文）') + '</p>';
 }
 $('#g-path').addEventListener('click', e => { const b = e.target.closest('button'); if (b) go({ mode: 'path', path: b.dataset.path }); });
 $('#g-case').addEventListener('click', e => { const b = e.target.closest('button'); if (b) go({ mode: 'case', kase: b.dataset.case }); });

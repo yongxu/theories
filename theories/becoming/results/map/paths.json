@@ -37,8 +37,8 @@
        "eg": "b1.held"
       },
       {
-       "say_en": "A lock that goes by the lead alone runs the same however much is used up. That the loss goes on growing, locked or not, is assumed by the laws, not proved.",
-       "say_zh": "只看领先多少的定局，不管耗掉多少，都照原样走下去。损耗一直在涨（定不定住都一样），这是定律假定的，没有证明。",
+       "say_en": "A lock that goes by the lead alone runs the same however much is used up. That the loss goes on growing, locked or not, is assumed by the theorems, not proved.",
+       "say_zh": "只看领先多少的定局，不管耗掉多少，都照原样走下去。损耗一直在涨（定不定住都一样），这是定理假定的，没有证明。",
        "on": [
         "b1.held>b2.uncounted"
        ]
@@ -66,8 +66,8 @@
        ],
        "test": {
         "case": "judge",
-        "en": "Laid on a judge that reads its own earlier picks: in the arm that began with one side far ahead and the loss noted nowhere, it stayed locked in 5 of 5 runs while the loss grew. In another arm of the same test one note of the loss among nine turned the judge: it does not meet the law's conditions (step 14).",
-        "zh": "放到一个参照自己旧选择的评委上：有一组开始时一方已经遥遥领先，损耗哪儿都没提，这一组 5 轮里 5 轮都定着，损耗照涨。同一个检验的另一组里，九份中只有一份提到损耗，评委就转了向：它不满足定律的条件（见第 14 步）。"
+        "en": "Laid on a judge that reads its own earlier picks: in the arm that began with one side far ahead and the loss noted nowhere, it stayed locked in 5 of 5 runs while the loss grew. In another arm of the same test one note of the loss among nine turned the judge: it does not meet the theorem's conditions (step 14).",
+        "zh": "放到一个参照自己旧选择的评委上：有一组开始时一方已经遥遥领先，损耗哪儿都没提，这一组 5 轮里 5 轮都定着，损耗照涨。同一个检验的另一组里，九份中只有一份提到损耗，评委就转了向：它不满足定理的条件（见第 14 步）。"
        },
        "eg": "b3.inside"
       }
@@ -154,8 +154,8 @@
        ],
        "test": {
         "case": "judge",
-        "en": "The same judge: with one note in nine it chose prose in all 50 picks, and the share then swung back and forth. The law's condition was not met.",
-        "zh": "同一个评委：九份里只有一条备注，它 50 次全选了段落，此后份额来回摆。定律的条件不满足。"
+        "en": "The same judge: with one note in nine it chose prose in all 50 picks, and the share then swung back and forth. The theorem's condition was not met.",
+        "zh": "同一个评委：九份里只有一条备注，它 50 次全选了段落，此后份额来回摆。定理的条件不满足。"
        },
        "eg": "b2.heard"
       },
@@ -182,20 +182,20 @@
      ]
     },
     {
-     "en": "What no law shows",
-     "zh": "定律没有说的",
+     "en": "What no theorem shows",
+     "zh": "定理没有说的",
      "tone": "open",
      "steps": [
       {
-       "say_en": "No law says what first makes a rule start to be updated from its own picks. Until the first such update it stays as it began, whatever it picks.",
-       "say_zh": "规则最初怎么开始照自己选出的结果重定，定律没有说。在第一次这样重定之前，不管选出什么，规则都和开始时一样。",
+       "say_en": "No theorem says what first makes a rule start to be updated from its own picks. Until the first such update it stays as it began, whatever it picks.",
+       "say_zh": "规则最初怎么开始照自己选出的结果重定，定理没有说。在第一次这样重定之前，不管选出什么，规则都和开始时一样。",
        "on": [
         "b1.outside>b1.swing"
        ]
       },
       {
-       "say_en": "Two readings, with no law behind them. The loop reaches its own checks: the ways a loss could come to count are filled from inside and, one order further, breaking them is what gets rewarded. And the loop goes on remaking what picks it while what carries it is replaced.",
-       "say_zh": "两条解读，都没有定律。一条：这个圈伸到了查错的途径上，损耗本来可以靠它们算进去的那些途径，也由圈里的占着；更进一层，弄坏这些途径反倒受奖励。另一条：承载它的换了一茬又一茬，这个圈照旧重建出选中它的条件。",
+       "say_en": "Two readings, with no theorem behind them. The loop reaches its own checks: the ways a loss could come to count are filled from inside and, one order further, breaking them is what gets rewarded. And the loop goes on remaking what picks it while what carries it is replaced.",
+       "say_zh": "两条解读，都没有定理。一条：这个圈伸到了查错的途径上，损耗本来可以靠它们算进去的那些途径，也由圈里的占着；更进一层，弄坏这些途径反倒受奖励。另一条：承载它的换了一茬又一茬，这个圈照旧重建出选中它的条件。",
        "on": [
         "b3.inside>b3.checkers",
         "b3.checkers>d2.handed"
@@ -206,20 +206,20 @@
    ],
    "shows_en": [
     "Proved (steps 2, 5, 6, 7): the lock itself, each under the condition its sentence gives.",
-    "Taken as given by the laws (step 3): that what is not counted goes on being used up, whether the rule is locked or not; and, where a law draws on it, that a larger lead uses up no less. No law drawn derives either from the lock.",
+    "Taken as given by the theorems (step 3): that what is not counted goes on being used up, whether the rule is locked or not; and, where a theorem draws on it, that a larger lead uses up no less. No theorem drawn derives either from the lock.",
     "Only in built examples (steps 4, 16): that what would read the loss is removed.",
-    "The way out. Proved of the course itself (step 9), under the conditions the step gives: exactly when a loss the rest count turns the rule for good. Step 8 is a separate law, in another model: when a loss can reach what sets the rule while what is being lost can still be kept. No law joins the two: taking step 8's reaching as the start of step 9's counting is a reading. Every other way out drawn (steps 10 to 13) is proved only with something given from outside the course: a judging that stops favouring past a set loss, a loss that falls on what shapes the rule, a measure over a fixed list, a limit on what is allowed. No law drawn says what makes a loss reach what sets the rule, or come to be counted. One built case (under step 10) shows a lock left with nothing counting the loss: the loss fell on what the rule favoured.",
-    "In no law (steps 17, 18): what first brings a rule to be updated from its own picks, and the loop reaching its own checks."
+    "The way out. Proved of the course itself (step 9), under the conditions the step gives: exactly when a loss the rest count turns the rule for good. Step 8 is a separate theorem, in another model: when a loss can reach what sets the rule while what is being lost can still be kept. No theorem joins the two: taking step 8's reaching as the start of step 9's counting is a reading. Every other way out drawn (steps 10 to 13) is proved only with something given from outside the course: a judging that stops favouring past a set loss, a loss that falls on what shapes the rule, a measure over a fixed list, a limit on what is allowed. No theorem drawn says what makes a loss reach what sets the rule, or come to be counted. One built case (under step 10) shows a lock left with nothing counting the loss: the loss fell on what the rule favoured.",
+    "In no theorem (steps 17, 18): what first brings a rule to be updated from its own picks, and the loop reaching its own checks."
    ],
    "shows_zh": [
     "已证明的（第 2、5、6、7 步）：定局本身，各在句子里写明的条件之下。",
-    "定律当作给定的（第 3 步）：规则没算进去的东西照旧在被耗掉，定不定住都一样；“领先多的，耗掉的并不更少”这一点，凡是定律用到的地方，也是给定的。图上的定律里，没有一条把这两点从定局推出来。",
+    "定理当作给定的（第 3 步）：规则没算进去的东西照旧在被耗掉，定不定住都一样；“领先多的，耗掉的并不更少”这一点，凡是定理用到的地方，也是给定的。图上的定理里，没有一条把这两点从定局推出来。",
     "只在造出来的例子里见过的（第 4、16 步）：读得到损耗的被清走。",
-    "出路。过程自己的定律（第 9 步），条件写在那一步里：其余的把损耗算进去之后，恰好在什么条件下规则转向、不再转回。第 8 步是另一条定律，用的是另一个模型：损耗什么时候算是趁正在失去的东西还留得住，就传到了定规则的各方。这两条之间没有定律相连：把第 8 步的“传到”当作第 9 步“算进去”的起点，是一种解读。其余画出的每一条出路（第 10 到 13 步），都只在有过程之外给定的东西时才得到证明：一种损耗过了定量就不再偏向的评法，落在改规则一方身上的损耗，按一份固定名单来量，对允许结果的一条限制。损耗怎样才传得到定规则的各方、怎样才被算进去，图上的定律里没有一条说。有一个造出来的例子（在第 10 步下面）：没有任何一方去算损耗，定局也破了，因为损耗落在了规则偏向的一方身上。",
-    "没有定律的（第 17、18 步）：规则最初怎样变成照自己选出的结果重定；这个圈怎样伸到查错的途径上。"
+    "出路。就过程本身证明的（第 9 步），条件写在那一步里：其余的把损耗算进去之后，恰好在什么条件下规则转向、不再转回。第 8 步是另一条定理，用的是另一个模型：损耗什么时候算是趁正在失去的东西还留得住，就传到了定规则的各方。这两条之间没有定理相连：把第 8 步的“传到”当作第 9 步“算进去”的起点，是一种解读。其余画出的每一条出路（第 10 到 13 步），都只在有过程之外给定的东西时才得到证明：一种损耗过了定量就不再偏向的评法，落在改规则一方身上的损耗，按一份固定名单来量，对允许结果的一条限制。损耗怎样才传得到定规则的各方、怎样才被算进去，图上的定理里没有一条说。有一个造出来的例子（在第 10 步下面）：没有任何一方去算损耗，定局也破了，因为损耗落在了规则偏向的一方身上。",
+    "没有定理的（第 17、18 步）：规则最初怎样变成照自己选出的结果重定；这个圈怎样伸到查错的途径上。"
    ],
-   "want_en": "For people and AI choosing together: a rule that still counts what it uses up, set with the rest counting too, and a choosing in which shaping the rule does not pay. On this map those are the three boxes outlined in green: \"The cost counts\", \"The rest count too\" and \"Shaping the rule costs\". Four arrows on the whole map lead into the first, two of them on this path. One is a law of the course itself: where the rest count the loss and the judgments taken together go against what the rule favoured, the rule turns. The turn is for good if they still go against it at the next update, provided the rest go on counting the loss and judge no more in the favoured side's favour than that side does. The other three need something given from outside. No arrow drawn leads into the second, and it has no anchor in the Lean yet. One arrow leads into the third, a loss that falls on what shapes the rule, and that too is given from outside. This is wanted; it is not shown.",
-   "want_zh": "人和 AI 一起取舍的时候：规则把自己耗掉的也算进去，定规则时其余的也算数，改规则划不来。在这张图上，就是绿色虚线框出的三个方框：“代价算进去了”“其余的也算”“改规则划不来”。通向第一个的箭头，整张图上有四条，其中两条在这条路上。其中一条是过程自己的定律：其余的把损耗算进去，合起来的判断不利于规则原先偏向的一方，规则就转向。下一次重定时仍然不利，其余的此后又一直算着这笔损耗，它们的判断也不比受偏向的一方自己更偏向这一方，规则就从此不再转回。另外三条都要有过程之外给定的东西。通向第二个，图上还没有画出任何箭头，Lean 里也还没有和它对应的定义或定律。通向第三个只有一条：损耗落在改规则的一方身上，这也是从过程之外给定的。这些是想要的；图上没有哪一处显示它们已经成立。",
+   "want_en": "For people and AI choosing together: a rule that still counts what it uses up, set with the rest counting too, and a choosing in which shaping the rule does not pay. On this map those are the three boxes outlined in green: \"The cost counts\", \"The rest count too\" and \"Shaping the rule costs\". Four arrows on the whole map lead into the first, two of them on this path. One is proved of the course itself: where the rest count the loss and the judgments taken together go against what the rule favoured, the rule turns. The turn is for good if they still go against it at the next update, provided the rest go on counting the loss and judge no more in the favoured side's favour than that side does. The other three need something given from outside. No arrow drawn leads into the second, and it has no anchor in the Lean yet. One arrow leads into the third, a loss that falls on what shapes the rule, and that too is given from outside. This is wanted; it is not shown.",
+   "want_zh": "人和 AI 一起取舍的时候：规则把自己耗掉的也算进去，定规则时其余的也算数，改规则划不来。在这张图上，就是绿色虚线框出的三个方框：“代价算进去了”“其余的也算”“改规则划不来”。通向第一个的箭头，整张图上有四条，其中两条在这条路上。其中一条是就过程本身证明的：其余的把损耗算进去，合起来的判断不利于规则原先偏向的一方，规则就转向。下一次重定时仍然不利，其余的此后又一直算着这笔损耗，它们的判断也不比受偏向的一方自己更偏向这一方，规则就从此不再转回。另外三条都要有过程之外给定的东西。通向第二个，图上还没有画出任何箭头，Lean 里也还没有和它对应的定义或定理。通向第三个只有一条：损耗落在改规则的一方身上，这也是从过程之外给定的。这些是想要的；图上没有哪一处显示它们已经成立。",
    "known": [
     {
      "at": "b2.uncounted",
@@ -344,8 +344,8 @@
        ]
       },
       {
-       "say_en": "The line is exact: the level holds where what is taken stays within what comes back, and falls where it does not. The laws say where the line is, not what moves a taking across it.",
-       "say_zh": "界线是确切的：取的不超过补的，守得住；超过了，就降。定律说的是界线在哪里，没说是什么把取用推过去。",
+       "say_en": "The line is exact: the level holds where what is taken stays within what comes back, and falls where it does not. The theorems say where the line is, not what moves a taking across it.",
+       "say_zh": "界线是确切的：取的不超过补的，守得住；超过了，就降。定理说的是界线在哪里，没说是什么把取用推过去。",
        "on": [
         "a1.within>a1.over"
        ]
@@ -431,8 +431,8 @@
      "tone": "turn",
      "steps": [
       {
-       "say_en": "Taking within what comes back, from some step on, keeps the need for good if the change comes while the need is still met. No law here says what lowers a taking.",
-       "say_zh": "从某一步起改成取的不超过补的，只要改的那一步需要还供得上，就一直供得上。是什么让取用降下来，这里没有定律说。",
+       "say_en": "Taking within what comes back, from some step on, keeps the need for good if the change comes while the need is still met. No theorem here says what lowers a taking.",
+       "say_zh": "从某一步起改成取的不超过补的，只要改的那一步需要还供得上，就一直供得上。是什么让取用降下来，这里没有定理说。",
        "on": [
         "a1.over>a1.within"
        ]
@@ -478,15 +478,15 @@
    ],
    "shows_en": [
     "The ways down (steps 3 to 9) are proved, each under its condition, most often a taking that stands or takers each doing the best for itself. One arrow among them, to \"Keeps going as something else\" (step 9), is proved only with something given from outside.",
-    "Of the ways back, only regrowth is a law of the course (step 12): where sparing pays, every best course takes nothing until the stock has regrown; where more comes than goes, the level is back at the need.",
+    "Of the ways back, only regrowth is proved of the course itself (step 12): where sparing pays, every best course takes nothing until the stock has regrown; where more comes than goes, the level is back at the need.",
     "Every other way back (steps 10, 11, 13, 14, 15) is proved only with something given from outside the course; step 13 has a built case as well.",
-    "In these laws only one thing moves a taking: what sparing returns to the one that spares. No law here says what makes sparing pay where it did not."
+    "In these theorems only one thing moves a taking: what sparing returns to the one that spares. No theorem here says what makes sparing pay where it did not."
    ],
    "shows_zh": [
-    "往下走的每一步（第 3 到 9 步）都有定律，各有条件，多数是：取用照旧不变，或者各方都只做对自己最有利的事。其中通向“还在，但已不是原样”的那一条（第 9 步），要有过程之外给定的东西。",
-    "回头的路里，只有“长回来”是过程自己的定律（第 12 步）：只要留着划得来，每一种最好的做法都先不取，等存量长回来；来的比去的多，存量就回到够用。",
+    "往下走的每一步（第 3 到 9 步）都有定理，各有条件，多数是：取用照旧不变，或者各方都只做对自己最有利的事。其中通向“还在，但已不是原样”的那一条（第 9 步），要有过程之外给定的东西。",
+    "回头的路里，只有“长回来”是就过程本身证明的（第 12 步）：只要留着划得来，每一种最好的做法都先不取，等存量长回来；来的比去的多，存量就回到够用。",
     "其余每一条回头的路（第 10、11、13、14、15 步），都要有过程之外给定的东西；第 13 步另有一个造出来的例子。",
-    "在这些定律里，让取用变动的只有一样：留下的回不回得到自己这里。原先留着划不来的，怎样变得划得来，这里没有定律说。"
+    "在这些定理里，让取用变动的只有一样：留下的回不回得到自己这里。原先留着划不来的，怎样变得划得来，这里没有定理说。"
    ],
    "want_en": "",
    "want_zh": "",
@@ -672,13 +672,13 @@
     "Proved, each under the condition its sentence gives (steps 1 to 3, 5 to 8, 11, and the first half of step 14): answers only narrow a view; where the thing follows a fixed law through finitely many states, the misses of trying and dropping stay under a bound; an account that predicts as the thing answers is never dropped; two histories that left the same view over things that differ still have the same view after any acts that open no fresh look; two ways back along the row, a change foreseen, from a checked view (step 6), and a fresh look with enough in hand to revise, from a view that goes by how things were (step 7); rest on the known road; acting the same where all that is taken in agrees; and a look that spends all there was and revises nothing.",
     "Proved boundaries, which say what a thing turns on and show nothing moving (steps 9 and 10, and the second half of step 14): the record fixes only what has been tried, so a view wrong only about what has not been tried fits every step; two states look alike exactly while they answer alike the acts actually taken; a correction can be carried out exactly where the stock covers it and the rest of the process allows it.",
     "Proved only with something given from outside the course (steps 4 and 12): step 4 is a necessary condition, with the growth of the error given; step 12 says that telling apart what every available trial treats alike needs a trial brought in from beyond. Only in built examples: step 13, telling two states apart with the last unit, after which it cannot correct; and, under step 9, coming out of the known road only from a different start (begun on the untried act, told which state holds, or listing both outcomes and waiting for the answer).",
-    "No arrow drawn leads into either of the two places, and from the known road none leads on except to rest. No law drawn here says what brings a view to foresee a change, to take a fresh look, or to try what it has not tried. How a checked view comes to go by how things were, with nothing showing it, is in built examples only (under step 4): the thing moves while the change is recorded as none, and a check still passes."
+    "No arrow drawn leads into either of the two places, and from the known road none leads on except to rest. No theorem drawn here says what brings a view to foresee a change, to take a fresh look, or to try what it has not tried. How a checked view comes to go by how things were, with nothing showing it, is in built examples only (under step 4): the thing moves while the change is recorded as none, and a check still passes."
    ],
    "shows_zh": [
     "已证明的，各在句子里写明的条件之下（第 1 到 3 步、第 5 到 8 步、第 11 步，以及第 14 步的前一半）：回来的结果只会把看法收窄；实情按固定的规律在有限几种状态之间走时，边试边排除，猜错的次数有上限；预料得和实情一样的说法不会被排除；两段经历留下同一个看法、实情却不同，只要不重新对照，接着不管做什么，两边的看法都还一样；顺着这一行往回的两条路，对过的看法预料到变化（第 6 步），还按老样子看的看法在有本钱改的时候重新对照一次（第 7 步）；在熟路上停住；收到的都一样，做的也就一样；还有对照了一次、本钱花光、什么都没改。",
     "已证明的界线，说的是事情取决于什么，没有说什么在动（第 9、10 步，以及第 14 步的后一半）：记录只定得下试过的，所以只错在没试过的地方的看法每一步都对得上；两种情形对实际做出的动作回应一直一样，看起来就一直一样，头一次回应不同，就不一样了；一次纠正要做得成，本钱得够，其余环节也得允许，两样齐了就做得成。",
     "要有过程之外给定的东西才得到证明的（第 4、12 步）：第 4 步是一个必要条件，误差随时间增长是给定的；第 12 步说，现有试验都一样对待的两种说法，要分开就得从外面带进新的试验。只在造出来的例子里见过的：第 13 步，分清两种情形用掉了最后一份本钱，之后改不了；还有第 9 步下面的例子，要从熟路出来，只有换个开头：一开始就走没试过的那一步，被告知是哪种情形，或者把两种结果都列上、先等回应。",
-    "图上没有画出通向这两处的箭头；从熟路往外，除了通向“不再变了”，也没有别的箭头。图上的定律都没有说：是什么让一个看法预料到变化、重新对照，或者去试没试过的。对过的看法怎样变成还按老样子看、自己又显不出来，只在造出来的例子里见过（在第 4 步下面）：实情动了，记下的却是“没变”，核验照样通过。"
+    "图上没有画出通向这两处的箭头；从熟路往外，除了通向“不再变了”，也没有别的箭头。图上的定理都没有说：是什么让一个看法预料到变化、重新对照，或者去试没试过的。对过的看法怎样变成还按老样子看、自己又显不出来，只在造出来的例子里见过（在第 4 步下面）：实情动了，记下的却是“没变”，核验照样通过。"
    ],
    "want_en": "",
    "want_zh": "",
@@ -828,16 +828,16 @@
     }
    ],
    "shows_en": [
-    "Proved, each under the way of giving its sentence names (steps 1 to 7): when giving that goes round keeps going, when a lapse passes or is passed over, when one lapse stops all that waits on it or two together end a pair's giving, and when nothing given at one step means nothing given later. No law drawn here says which way of giving is in use, or how one comes to be.",
-    "Proved only with something given from outside (step 8): from nothing given, giving comes back only through something that gives without waiting. No law drawn here says what would make anything do so.",
+    "Proved, each under the way of giving its sentence names (steps 1 to 7): when giving that goes round keeps going, when a lapse passes or is passed over, when one lapse stops all that waits on it or two together end a pair's giving, and when nothing given at one step means nothing given later. No theorem drawn here says which way of giving is in use, or how one comes to be.",
+    "Proved only with something given from outside (step 8): from nothing given, giving comes back only through something that gives without waiting. No theorem drawn here says what would make anything do so.",
     "Lasting by being handed on (steps 9 to 11): that a lasting pattern which gains carriers only by being handed on is handed on within every carrier's span, and is gone within one span where handing on stops, is proved (steps 9, 10). Its return (step 11) is proved only with something given from outside: something that starts carrying it without being handed it.",
-    "No step rests on a built example or a reading. No arrow drawn joins the row \"Giving that waits on giving\" to the row \"Lasting through what carries it\", or to any other row; the path sets the two side by side. That steps 8 and 11 read alike (what has stopped everywhere starts again only through something that begins without first being given to) is this path's own reading; no law drawn joins the two."
+    "No step rests on a built example or a reading. No arrow drawn joins the row \"Giving that waits on giving\" to the row \"Lasting through what carries it\", or to any other row; the path sets the two side by side. That steps 8 and 11 read alike (what has stopped everywhere starts again only through something that begins without first being given to) is this path's own reading; no theorem drawn joins the two."
    ],
    "shows_zh": [
-    "已证明的（第 1 到 7 步），各在句子里写明的那种给法之下：有来有往什么时候转得下去，中断什么时候过得去，一处不给什么时候让等着它的全都停下，两方同时中断什么时候让两边都不再给，以及什么时候某一步全都不给、以后就一直不给。用的是哪一种给法、这种给法怎么来的，图上的定律没有说。",
-    "要有过程之外给定的东西的（第 8 步）：全都不给以后，只有出现不等就给的，给才回得来。是什么让哪一个不等就给，图上的定律没有说。",
+    "已证明的（第 1 到 7 步），各在句子里写明的那种给法之下：有来有往什么时候转得下去，中断什么时候过得去，一处不给什么时候让等着它的全都停下，两方同时中断什么时候让两边都不再给，以及什么时候某一步全都不给、以后就一直不给。用的是哪一种给法、这种给法怎么来的，图上的定理没有说。",
+    "要有过程之外给定的东西的（第 8 步）：全都不给以后，只有出现不等就给的，给才回得来。是什么让哪一个不等就给，图上的定理没有说。",
     "一茬传一茬（第 9 到 11 步）：不靠往下传就没有新的来承载它的格局，只要还在，每一茬之内都往下传过；不再传，一茬之内就没了。这两条已证明（第 9、10 步）。没了以后再有（第 11 步），要有过程之外给定的东西：有什么不经传给就自己开始承载。",
-    "这条路上没有哪一步靠的是造出来的例子或者解读。“先给还是先等”这一行和“一茬接一茬”这一行之间，图上没有画箭头，它和别的行之间也没有；这条路只是把两者并排放着。第 8 步和第 11 步读起来相像（处处都停了的，只有靠一个不等别的先给的，才重新开始），这是这条路自己的解读，图上没有定律把两者连起来。"
+    "这条路上没有哪一步靠的是造出来的例子或者解读。“先给还是先等”这一行和“一茬接一茬”这一行之间，图上没有画箭头，它和别的行之间也没有；这条路只是把两者并排放着。第 8 步和第 11 步读起来相像（处处都停了的，只有靠一个不等别的先给的，才重新开始），这是这条路自己的解读，图上没有定理把两者连起来。"
    ],
    "want_en": "",
    "want_zh": "",
@@ -1018,14 +1018,14 @@
    "shows_en": [
     "Proved of the course itself, each under the condition its sentence gives (steps 2, 4 to 7, 9, 10 and 14): the step at which a line closes into a ring; what becomes of a difference by what each turn returns (gone, settled, kept whole, or grown past every bound); that a level pushed back within its gap comes to its mark; that among finitely many states every course reaches a state it comes back to; that a search on a score with a ceiling comes to rest. What is said of staying (in steps 6, 9 and 11 to 14) is proved too: at rest, growing, swinging, keeping a band with a late reading, and having nowhere to rest.",
     "Proved boundaries (steps 3, 11 and 12): each says what a thing turns on (whether a link's response falls to nothing, whether a push exceeds the gap, whether the band holds what is pushed during the delay), not what moves anything across.",
-    "A necessary condition only (step 8, which is why it carries a mark): a difference is closed only by sending two to one; no law here says what brings that about. From built examples only: the second sentence of step 2, that the amounts beforehand show no sign of a ring closing. No step is a reading.",
-    "What no law drawn here shows: what makes a ring return less, as much or more, and what brings a link to respond to what lies downstream of it; the laws take both as given. No arrow drawn leads into swinging or into having nowhere to rest, and none leads out of swinging: how swinging begins and ends, and how having nowhere to rest begins, is not on the map."
+    "A necessary condition only (step 8, which is why it carries a mark): a difference is closed only by sending two to one; no theorem here says what brings that about. From built examples only: the second sentence of step 2, that the amounts beforehand show no sign of a ring closing. No step is a reading.",
+    "What no theorem drawn here shows: what makes a ring return less, as much or more, and what brings a link to respond to what lies downstream of it; the theorems take both as given. No arrow drawn leads into swinging or into having nowhere to rest, and none leads out of swinging: how swinging begins and ends, and how having nowhere to rest begins, is not on the map."
    ],
    "shows_zh": [
-    "过程自己的定律，各在句子里写明的条件之下（第 2、4 到 7、9、10、14 步）：链子在哪一步合成环；绕着环走的差别，按每一圈回来多少，是没了、停住、原样留着，还是越过任何界限；被推回、推的量又不超过缺口的水平，回到那个点；状态有限时，每个过程都会走到一个它还会再回来的状态；分数有上限的搜索会停下。讲“留在那里会怎样”的几句（第 6、9、11 到 14 步里）也已证明：停住，越滚越大，来回摆，读得晚时守得住多宽的范围，怎么都不算够。",
+    "就过程本身证明的，各在句子里写明的条件之下（第 2、4 到 7、9、10、14 步）：链子在哪一步合成环；绕着环走的差别，按每一圈回来多少，是没了、停住、原样留着，还是越过任何界限；被推回、推的量又不超过缺口的水平，回到那个点；状态有限时，每个过程都会走到一个它还会再回来的状态；分数有上限的搜索会停下。讲“留在那里会怎样”的几句（第 6、9、11 到 14 步里）也已证明：停住，越滚越大，来回摆，读得晚时守得住多宽的范围，怎么都不算够。",
     "已证明的界线（第 3、11、12 步）：说的是事情看什么而定（环节的回应降不降到零，推回超不超过缺口，范围容不容得下延迟期间推出去的量），没有说是什么把它推过界线。",
-    "只是必要条件的（第 8 步，所以带着标记）：要消掉一个差别，只能把两个并成一个；是什么促成这一点，这里没有定律说。只在造出来的例子里见过的：第 2 步的后一句，合成环之前数量上看不出迹象。没有哪一步是解读。",
-    "图上的定律没有说的：一个环转一圈，回来的为什么是少、是原样、还是多；一个环节怎么会开始看它下游的存量。这两点定律都当作给定的。通向“来回摆，停不住”和“怎么都不算够”的箭头一条也没有画出，从“来回摆，停不住”出去的也没有：来回摆怎么开始、怎么结束，“怎么都不算够”怎么开始，图上还没有。"
+    "只是必要条件的（第 8 步，所以带着标记）：要消掉一个差别，只能把两个并成一个；是什么促成这一点，这里没有定理说。只在造出来的例子里见过的：第 2 步的后一句，合成环之前数量上看不出迹象。没有哪一步是解读。",
+    "图上的定理没有说的：一个环转一圈，回来的为什么是少、是原样、还是多；一个环节怎么会开始看它下游的存量。这两点定理都当作给定的。通向“来回摆，停不住”和“怎么都不算够”的箭头一条也没有画出，从“来回摆，停不住”出去的也没有：来回摆怎么开始、怎么结束，“怎么都不算够”怎么开始，图上还没有。"
    ],
    "want_en": "",
    "want_zh": "",

@@ -1,0 +1,33 @@
+9 D kind: law, a data kind
+10 G the laws say where, not what moves
+11 G 没有说
+12 G no law here says
+13 G 没有定律说
+14 G no law says
+15 G 没有定律说
+16 G no law says
+17 G 定律没有说
+18 G a reading; no law
+19 G 没有定律
+20 G no law says
+21 G 没有定律说
+22 A
+23 A
+24 A
+25 G no law says
+26 A
+27 G 没有定律说
+28 B
+29 B
+30 G no law says
+31 G 定律没有说
+32 B
+33 B
+34 A
+35 A
+36 G no law says
+37 G 没有哪条定律说
+38 B
+39 B
+40 B
+41 B

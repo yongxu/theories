@@ -1,7 +1,7 @@
 {
  "schema_version": 1,
  "as_of": "2026-11-11",
- "about": "Each test of theories/becoming/results/data/tests.json written as a case, AI-written on 11 November 2026 from the test's own folder: the case in its own words; what in it was taken as which role, built or found; the bridges it rests on and whether each held; each frozen prediction with the laws it names, how it stands to them, its conditions as assessed, what was seen, and where the record places a failure; what followed. Each was written by one AI reader and put to a second to refute against the experiment's record (55 corrected, 11 kept). A case adds no verdict: TESTS.md and the folders say how a test came out. The map places each prediction by its own conditions and outcome (met or not, seen or not); the single square each reader first gave a whole test was dropped after the review before landing, since a test's predictions spread over several. Each entry under predictions says whether its record froze it: 18 are designs, saved comparisons or reports stated without a freeze, and the map counts them apart. A note that nothing in a test is taken as a role of a law is kept as no_bridge_en, not as a bridge.",
+ "about": "Each test of theories/becoming/results/data/tests.json written as a case, AI-written on 11 November 2026 from the test's own folder: the case in its own words; what in it was taken as which role, built or found; the bridges it rests on and whether each held; each frozen prediction with the theorems it names, how it stands to them, its conditions as assessed, what was seen, and where the record places a failure; what followed. Each was written by one AI reader and put to a second to refute against the experiment's record (55 corrected, 11 kept). A case adds no verdict: TESTS.md and the folders say how a test came out. The map places each prediction by its own conditions and outcome (met or not, seen or not); the single square each reader first gave a whole test was dropped after the review before landing, since a test's predictions spread over several. Each entry under predictions says whether its record froze it: 18 are designs, saved comparisons or reports stated without a freeze, and the map counts them apart. A note that nothing in a test is taken as a role of a theorem is kept as no_bridge_en, not as a bridge.",
  "cases": [
   {
    "test": "agentdojo",
@@ -164,9 +164,9 @@
    ],
    "afterwards_en": "The independent replay review found that the audit's own goal-1 proxy chose a first match where its frozen contract required a uniquely identifiable counterpart; it was corrected with the first outputs kept (6 October 2026), and that correction became the task the four fresh workers reenacted. A continuation the same day added two fresh learned contexts and two conventional-controller episodes with permission changing after the diagnosis was delivered: all four passed the frozen joint outcome, one learned episode after a transport-caused runtime failure. The account the study served is now in history.",
    "dynamics": [],
-   "shows_en": "No prediction of the account was frozen: one worker repaired when permitted and three preserved the primary files, a sighting the record joins to no law or thesis.",
-   "shows_zh": "没有冻结过这套理论的任何预测：一个工作者在许可下修了错，另外三个保住了原件；记录没把这一见接到任何律或论题上。",
-   "no_bridge_en": "Nothing in this case is taken by the record as a role of a law: no prediction of a thesis was frozen and no Lean law is named."
+   "shows_en": "No prediction of the account was frozen: one worker repaired when permitted and three preserved the primary files, a sighting the record joins to no theorem or thesis.",
+   "shows_zh": "没有冻结过这套理论的任何预测：一个工作者在许可下修了错，另外三个保住了原件；记录没把这一见接到任何定理或论题上。",
+   "no_bridge_en": "Nothing in this case is taken by the record as a role of a theorem: no prediction of a thesis was frozen and no Lean theorem is named."
   },
   {
    "test": "EW2",
@@ -235,7 +235,7 @@
      "name": "runaway-unobserved; card-requirements-as-thresholds (the law's premises)",
      "claim_en": "For Becoming.Web.break_not_bounded, T6's proved half, to cover the case, the fish would have to reach the birds by threshold only, the birds' support being a threshold on the prey's level.",
      "state": "not checked",
-     "why_en": "The test reads neither (bindings.json): the predictions cite T6 and name no law; failure years are the lowest third of the birds' index, and the dry runs set breeding success on Cury et al.'s asymptote, with a threshold need only in generator G0s."
+     "why_en": "The test reads neither (bindings.json): the predictions cite T6 and name no theorem; failure years are the lowest third of the birds' index, and the dry runs set breeding success on Cury et al.'s asymptote, with a threshold need only in generator G0s."
     }
    ],
    "predictions": [
@@ -263,7 +263,7 @@
        "state": "not checked"
       },
       {
-       "what_en": "The fish reaches the birds by threshold only, and their support is a threshold on the prey's level (premises of Becoming.Web.break_not_bounded, the law behind T6's proved half, which the predictions do not name)",
+       "what_en": "The fish reaches the birds by threshold only, and their support is a threshold on the prey's level (premises of Becoming.Web.break_not_bounded, the theorem behind T6's proved half, which the predictions do not name)",
        "how": "not checked",
        "state": "not checked"
       },
@@ -361,8 +361,8 @@
     "a-break-read-only-by-threshold",
     "slowing-down-before-an-own-end"
    ],
-   "shows_en": "A thesis, not a law, met the data: at the frozen level it was not rejected, weakly, with every estimate in the refuting direction and the law's premises unread.",
-   "shows_zh": "碰到数据的是论题，不是律：按冻结的门槛它没被否定，但通过得弱，各项估计都偏向反驳一侧，律的前提没有读。"
+   "shows_en": "A thesis, not a theorem, met the data: at the frozen level it was not rejected, weakly, with every estimate in the refuting direction and the theorem's premises unread.",
+   "shows_zh": "碰到数据的是论题，不是定理：按冻结的门槛它没被否定，但通过得弱，各项估计都偏向反驳一侧，定理的前提没有读。"
   },
   {
    "test": "EW3",
@@ -431,7 +431,7 @@
      "name": "runaway-unobserved; card-requirements-as-thresholds (the law's premises)",
      "claim_en": "For Becoming.Web.break_not_bounded to cover the case, the fish would have to reach the birds by threshold only, the birds' support being a threshold on the prey's level.",
      "state": "not checked",
-     "why_en": "bindings.json: the predictions do not name that law, and the test's own scope premise stands in the premise's place; failure years are relative and Cury et al.'s third is not re-read on the new series."
+     "why_en": "bindings.json: the predictions do not name that theorem, and the test's own scope premise stands in the premise's place; failure years are relative and Cury et al.'s third is not re-read on the new series."
     }
    ],
    "predictions": [
@@ -603,7 +603,7 @@
      "name": "runaway-unobserved; card-requirements-as-thresholds (the law's premises)",
      "claim_en": "For Becoming.Web.break_not_bounded to cover the case, the rockfish would have to reach the birds by threshold only, the birds' support being a threshold on the prey's level.",
      "state": "not checked",
-     "why_en": "bindings.json: neither premise is read and the predictions do not name the law; the prey is an index, not a biomass, so a third of the largest biomass is not defined on it and no threshold need is read."
+     "why_en": "bindings.json: neither premise is read and the predictions do not name the theorem; the prey is an index, not a biomass, so a third of the largest biomass is not defined on it and no threshold need is read."
     }
    ],
    "predictions": [
@@ -719,11 +719,11 @@
     }
    ],
    "predictions": [],
-   "afterwards_en": "Classified as an experiment on 1 October 2026. Inside the proposal, a geometry-derived throughput screen found that the earlier one-crane concept does not substantiate a days-scale whole-building schedule, and the mandatory hoist and the original build plan were superseded. No thesis or law was touched.",
+   "afterwards_en": "Classified as an experiment on 1 October 2026. Inside the proposal, a geometry-derived throughput screen found that the earlier one-crane concept does not substantiate a days-scale whole-building schedule, and the mandatory hoist and the original build plan were superseded. No thesis or theorem was touched.",
    "dynamics": [],
-   "shows_en": "The proposal names no law and freezes no prediction; its calculations are arithmetic on hypothetical inputs, so reasoning and data do not meet here.",
-   "shows_zh": "这份设想没有指明任何定律，也没有冻结任何预测；它的计算只是对假设输入的算术，推理和数据在这里没有相遇。",
-   "no_bridge_en": "Nothing in the proposal is taken as a role of any law: the README says it 'is not a theory, a canonical formulation, or an extension of the theory corpus'. To meet a law it would need the kit's steel members taken as a stock that each build-and-dismantle cycle draws on and new inputs give back to; the record makes no such pairing."
+   "shows_en": "The proposal names no theorem and freezes no prediction; its calculations are arithmetic on hypothetical inputs, so reasoning and data do not meet here.",
+   "shows_zh": "这份设想没有指明任何定理，也没有冻结任何预测；它的计算只是对假设输入的算术，推理和数据在这里没有相遇。",
+   "no_bridge_en": "Nothing in the proposal is taken as a role of any theorem: the README says it 'is not a theory, a canonical formulation, or an extension of the theory corpus'. To meet a theorem it would need the kit's steel members taken as a stock that each build-and-dismantle cycle draws on and new inputs give back to; the record makes no such pairing."
   },
   {
    "test": "CG1",
@@ -976,7 +976,7 @@
        "state": "failed"
       }
      ],
-     "seen_en": "Round 1: both mean final levels 0.0, coupled alive 0%. Round 2: 0.95 − 0.00; coupled alive 59% (10 of 20 seeds at or above 70%, 7 below 30%); own dead 99.7%. The learners reached 13 apples where the best scripted rule takes 28.5. C3 (beyond the law, H2 only: own patch alive at H − 20 in at least 80%) failed too: 0% and 51%.",
+     "seen_en": "Round 1: both mean final levels 0.0, coupled alive 0%. Round 2: 0.95 − 0.00; coupled alive 59% (10 of 20 seeds at or above 70%, 7 below 30%); own dead 99.7%. The learners reached 13 apples where the best scripted rule takes 28.5. C3 (beyond the theorem, H2 only: own patch alive at H − 20 in at least 80%) failed too: 0% and 51%.",
      "outcome": "disagreed",
      "failed_at": "bridge",
      "rival_en": "Round 1's diagnosis: training never reached late steps alive, so the coupling term returned nothing. Post hoc, not frozen: trained 30,000 episodes in D2's single-learner conditions, the coupled learner kept the patch alive in 100% of episodes and the own learner in 2%."
@@ -1040,7 +1040,7 @@
      "rival_en": "The README: 'The worst case needs no cunning. It is a constant push for ℓ + 1 steps, which is why learners find it.'"
     }
    ],
-   "afterwards_en": "Round 2 was frozen the same day (20 October 2026) with one change to training, exploring starts; round 1's verdicts stand. Correction after the freeze: a side with no last-step decision is 'not testable', never passed (commit c8765a03c). CG2 (frozen and run 20 October 2026) took up D2b's failure with a condition on the rest and two laws added for it (Flow.outrun_below, Flow.outrun_reading_alike): CG1's coupled learners read the stock only after the last step, which every rest of two had already emptied. T3 was first worded after CG1 ran and cites C1 (118 of 118 against 0 of 2,360) and C2's failure (59% against 90%). The Training laws the binding reads H1 and H2 through were checked on 22 October, after CG1's freezes.",
+   "afterwards_en": "Round 2 was frozen the same day (20 October 2026) with one change to training, exploring starts; round 1's verdicts stand. Correction after the freeze: a side with no last-step decision is 'not testable', never passed (commit c8765a03c). CG2 (frozen and run 20 October 2026) took up D2b's failure with a condition on the rest and two theorems added for it (Flow.outrun_below, Flow.outrun_reading_alike): CG1's coupled learners read the stock only after the last step, which every rest of two had already emptied. T3 was first worded after CG1 ran and cites C1 (118 of 118 against 0 of 2,360) and C2's failure (59% against 90%). The Training theorems the binding reads H1 and H2 through were checked on 22 October, after CG1's freezes.",
    "dynamics": [
     "loss-of-renewal-for-good",
     "own-count-misses-joint-excess",
@@ -1051,8 +1051,8 @@
     "what-training-installs",
     "two-sided-regulation-and-late-reading"
    ],
-   "shows_en": "Built-in identities held, one failing its manipulation check; two learning predictions passed, three failed, placed in learners short of the best return or a prediction outrunning its law.",
-   "shows_zh": "搭进环境里的恒等式都成立，只有一条没过操纵检查；学习预测两条通过、三条落空，记录把落空归在学习者离最优回报还远，或预测说得比定律多。"
+   "shows_en": "Built-in identities held, one failing its manipulation check; two learning predictions passed, three failed, placed in learners short of the best return or a prediction outrunning its theorem.",
+   "shows_zh": "搭进环境里的恒等式都成立，只有一条没过操纵检查；学习预测两条通过、三条落空，记录把落空归在学习者离最优回报还远，或预测说得比定理多。"
   },
   {
    "test": "LA1b",
@@ -1118,7 +1118,7 @@
      "name": "the lock",
      "claim_en": "The four locked settings are taken as cases where the rest outruns the renewal before the end reading, so no restraint by the member changes what the end reading sees.",
      "state": "by construction",
-     "why_en": "Computed, not proved for stochastic regrowth: by CG2's exact programme the expected number of apples standing after the last step is at most 9e-7, and below 1e-44 at m = 0 and m = 1; the value falls with m. This test's own texts name no Lean law: LA1's frozen predictions, whose game, values and contrasts it imports, name Flow.outrun_reading_alike, and the atlas lists this folder under the dynamic that holds it."
+     "why_en": "Computed, not proved for stochastic regrowth: by CG2's exact programme the expected number of apples standing after the last step is at most 9e-7, and below 1e-44 at m = 0 and m = 1; the value falls with m. This test's own texts name no Lean theorem: LA1's frozen predictions, whose game, values and contrasts it imports, name Flow.outrun_reading_alike, and the atlas lists this folder under the dynamic that holds it."
     },
     {
      "name": "T3, clause on trained systems (locked side)",
@@ -1231,7 +1231,7 @@
      "step": "follows",
      "ifs": [
       {
-       "what_en": "the rest of two outruns the renewal at s = 8 and the rest of one does not (exact values); the half with a rest of one lies outside the law and rests on the exact values alone",
+       "what_en": "the rest of two outruns the renewal at s = 8 and the rest of one does not (exact values); the half with a rest of one lies outside the theorem and rests on the exact values alone",
        "how": "built",
        "state": "met"
       },
@@ -1344,7 +1344,7 @@
      "name": "the lock",
      "claim_en": "The four locked settings are taken as cases where the rest outruns the renewal, so the value falls with m and m = 0 is best.",
      "state": "by construction",
-     "why_en": "LA1b's exact values, imported unchanged; the rounds resolve every locked pair of thresholds, the largest chance of a wrong order being 0.012 (m = 7 and 8 in k3s1). This test's own texts name no Lean law: LA1's frozen predictions, whose game and values it imports through LA1b, name Flow.outrun_reading_alike, and the atlas lists this folder under the dynamic that holds it."
+     "why_en": "LA1b's exact values, imported unchanged; the rounds resolve every locked pair of thresholds, the largest chance of a wrong order being 0.012 (m = 7 and 8 in k3s1). This test's own texts name no Lean theorem: LA1's frozen predictions, whose game and values it imports through LA1b, name Flow.outrun_reading_alike, and the atlas lists this folder under the dynamic that holds it."
     },
     {
      "name": "T3, clause on trained systems (locked side)",
@@ -1354,7 +1354,7 @@
     },
     {
      "name": "exploration (not claimed)",
-     "claim_en": "How far the model's search goes before it chooses is taken as no role and put under no law; the test rests on no claim about it.",
+     "claim_en": "How far the model's search goes before it chooses is taken as no role and put under no theorem; the test rests on no claim about it.",
      "state": "not checked",
      "why_en": "The frozen account: 'Whether a search reaches the hill turns on exploration, which the account does not model.' The README places both open misses there: misses of exploration, not of selection."
     }
@@ -1664,11 +1664,11 @@
      "rival_en": "Post hoc: k3s8 is the setting whose 20-episode feedback separates m = 1 from m = 0 least (probability 0.45 that a round at m = 1 reports at least as much)."
     }
    ],
-   "afterwards_en": "No thesis or law was reworded, and LA1's verdicts stand as frozen. 25 October 2026: a deviation recorded before resuming (the usage-limit guard narrowed; prompt, parse, protocol and verdict rules unchanged). 27 October 2026: a correction found by LA1b's review, one of the 210 answers parsed wrong; no final choice or verdict changed, two figures did. LA1b (frozen and run 27 October 2026; rounds of 10,000 episodes, the best threshold assigned in every seed): every verdict passed, all 30 locked seeds ended at m = 0, and by its frozen reading LA1's misses were feedback that barely resolved the best threshold. LA1c (frozen and run 28 October 2026; no round assigned): 29 of 30 locked seeds and 8 of 10 open ones found the best threshold. The README says this is why LA2 and LA3 carry power checks before they are frozen. 05's T3 text says the LA1 series tests the bridge (in-context choice following a stated reward to its optimum), not a drain beyond the reward's couplings.",
+   "afterwards_en": "No thesis or theorem was reworded, and LA1's verdicts stand as frozen. 25 October 2026: a deviation recorded before resuming (the usage-limit guard narrowed; prompt, parse, protocol and verdict rules unchanged). 27 October 2026: a correction found by LA1b's review, one of the 210 answers parsed wrong; no final choice or verdict changed, two figures did. LA1b (frozen and run 27 October 2026; rounds of 10,000 episodes, the best threshold assigned in every seed): every verdict passed, all 30 locked seeds ended at m = 0, and by its frozen reading LA1's misses were feedback that barely resolved the best threshold. LA1c (frozen and run 28 October 2026; no round assigned): 29 of 30 locked seeds and 8 of 10 open ones found the best threshold. The README says this is why LA2 and LA3 carry power checks before they are frozen. 05's T3 text says the LA1 series tests the bridge (in-context choice following a stated reward to its optimum), not a drain beyond the reward's couplings.",
    "dynamics": [
     "the-rest-outruns-the-renewal"
    ],
-   "shows_en": "The law's conditions were built in; the step beyond it, the model ending at the best threshold, missed in two locked settings, later read as feedback that barely resolved it.",
+   "shows_en": "The theorem's conditions were built in; the step beyond it, the model ending at the best threshold, missed in two locked settings, later read as feedback that barely resolved it.",
    "shows_zh": "规律的条件是搭好的；规律之外的那一步，即模型最后停在得分最高的门槛，在两种锁住的设置里没有出现，后来读作反馈几乎分不出最优门槛。"
   },
   {
@@ -1735,7 +1735,7 @@
      "name": "H3, locked side",
      "claim_en": "Learners are taken to settle on depletion where a setting is classed locked, the coupling term going unselected in almost every training episode.",
      "state": "failed",
-     "why_en": "Three of the six locked settings kept the patch (k3s1_lam32 alive 0.90, k3s8 1.00, k3s1_share 1.00); the README and the binding mark H3 for this learner class, not the law."
+     "why_en": "Three of the six locked settings kept the patch (k3s1_lam32 alive 0.90, k3s8 1.00, k3s1_share 1.00); the README and the binding mark H3 for this learner class, not the theorem."
     },
     {
      "name": "H3, open side",
@@ -1923,12 +1923,12 @@
      "rival_en": ""
     }
    ],
-   "afterwards_en": "22 October 2026 (the run): CG2's X2, that no weight of the end reading opens the lock, is restated as a finding about tabular learners, not about learning in general (README; 05's T3 evidence), and the record 'the rest outruns the renewal' gained EM1's verdicts. 3 November 2026: that record's Next stopped presuming that an equilibrium with restraint exists in the locked settings, and its does-not-show item (what learners reach is a claim about learning, not a theorem) names EM1 beside CG2; no law, hypothesis, declaration or proof changed. 3 November 2026: the README was reworded: locked means only that harvesting at every step comes within 0.25 of a best response, and the threshold profile's value was not computed. A follow-up is named and not frozen: the same learners with every training episode starting at step 0, predicted to deplete the locked settings.",
+   "afterwards_en": "22 October 2026 (the run): CG2's X2, that no weight of the end reading opens the lock, is restated as a finding about tabular learners, not about learning in general (README; 05's T3 evidence), and the record 'the rest outruns the renewal' gained EM1's verdicts. 3 November 2026: that record's Next stopped presuming that an equilibrium with restraint exists in the locked settings, and its does-not-show item (what learners reach is a claim about learning, not a theorem) names EM1 beside CG2; no theorem, hypothesis, declaration or proof changed. 3 November 2026: the README was reworded: locked means only that harvesting at every step comes within 0.25 of a best response, and the threshold profile's value was not computed. A follow-up is named and not frozen: the same learners with every training episode starting at step 0, predicted to deplete the locked settings.",
    "dynamics": [
     "what-training-installs",
     "the-rest-outruns-the-renewal"
    ],
-   "shows_en": "Wherever the others outran the regrowth (9,026 windows) the patch stayed empty, as the law says; the bridge that learners reach such courses failed in three of six locked settings.",
+   "shows_en": "Wherever the others outran the regrowth (9,026 windows) the patch stayed empty, as the theorem says; the bridge that learners reach such courses failed in three of six locked settings.",
    "shows_zh": "凡是别的成员采得比再生快的地方（9,026 个窗口），苹果地都一直空着，合于规律；“学习者会走到这种进程”这座桥，在六种锁住的设置里有三种没有成立。"
   },
   {
@@ -1989,7 +1989,7 @@
      "name": "CG2's post hoc reading of X5 (Flow.outrun_reading_alike read across time)",
      "claim_en": "The learner's own later greedy steps are taken as the rest that outruns the regrowth, so that its restraint now changes nothing the end reading sees.",
      "state": "failed",
-     "why_en": "Exact policy iteration from the full draw keeps the patch after one sweep in all nine conditions, with or without an end reading (J3w0, J1w0: gain 20.7 and 18.9). One's own later acts are improved in the same sweep; the law needs the rest held fixed. Settled before any run; the predictions file calls it 'not a prediction'. The exact computation is over policies reading the whole configuration, while the learner reads the level and the steps left (a limit stated in advance)."
+     "why_en": "Exact policy iteration from the full draw keeps the patch after one sweep in all nine conditions, with or without an end reading (J3w0, J1w0: gain 20.7 and 18.9). One's own later acts are improved in the same sweep; the theorem needs the rest held fixed. Settled before any run; the predictions file calls it 'not a prediction'. The exact computation is over policies reading the whole configuration, while the learner reads the level and the steps left (a limit stated in advance)."
     },
     {
      "name": "I1 (the part of Flow.joint_excess_ends)",
@@ -2179,7 +2179,7 @@
     "the-rest-outruns-the-renewal",
     "own-count-misses-joint-excess"
    ],
-   "shows_en": "A learner's later acts are revised, not fixed, so the law does not cover them; five of nine settings were still emptied, and the coverage threshold failed its sharpest case.",
+   "shows_en": "A learner's later acts are revised, not fixed, so the theorem does not cover them; five of nine settings were still emptied, and the coverage threshold failed its sharpest case.",
    "shows_zh": "学习者自己后来的动作会跟着改，不是固定的，所以这条规律管不到它；九种设置里仍有五种被采空，覆盖度的门槛也在最尖的一例上落空。"
   },
   {
@@ -2745,12 +2745,12 @@
      "rival_en": "An identity of the environment's accounting."
     }
    ],
-   "afterwards_en": "The series ended on 21 October 2026 ('I end the series here'). A reading made after the runs and not frozen takes coverage as the primary axis over all 36 conditions, the band having 'had the roles the other way round'. No law for the boundary was derived; 05 lists CG3 under T3's limits, 'counting neither way'.",
+   "afterwards_en": "The series ended on 21 October 2026 ('I end the series here'). A reading made after the runs and not frozen takes coverage as the primary axis over all 36 conditions, the band having 'had the roles the other way round'. No theorem for the boundary was derived; 05 lists CG3 under T3's limits, 'counting neither way'.",
    "dynamics": [
     "the-rest-outruns-the-renewal",
     "own-count-misses-joint-excess"
    ],
-   "shows_en": "The band rule beat both earlier predictors yet missed three of eight new settings; the boundary's form is the learner's, and no law of the account gives it.",
+   "shows_en": "The band rule beat both earlier predictors yet missed three of eight new settings; the boundary's form is the learner's, and no theorem of the account gives it.",
    "shows_zh": "带状规则比前两种预报都准，八种新设置里仍错三种；边界的样子是学习者自己的事，这套理论里没有哪条规律给出它。"
   },
   {
@@ -2812,19 +2812,19 @@
      "name": "H3",
      "claim_en": "Learners are taken to settle on emptying the patch where harvesting at every step is a best response against a rest that does so, and to leave that profile where it is not.",
      "state": "failed",
-     "why_en": "It held in all six locked settings and in three open ones, and failed in two open settings (k3s8_share 0.48, k3s1_joint 0.00). The predictions file names H3 as 'where the prediction can fail without the law failing'; the README says of the sharing case that the bridge 'held only half way'; the binding marks H3, not the law, and assesses 'whether the learners settle where the reward settles' as not checked apart."
+     "why_en": "It held in all six locked settings and in three open ones, and failed in two open settings (k3s8_share 0.48, k3s1_joint 0.00). The predictions file names H3 as 'where the prediction can fail without the law failing'; the README says of the sharing case that the bridge 'held only half way'; the binding marks H3, not the theorem, and assesses 'whether the learners settle where the reward settles' as not checked apart."
     },
     {
      "name": "calibration (locked / open)",
      "claim_en": "A setting is taken as locked where one member's best response beats harvesting at every step by less than 0.25 against a rest at full draw, and open where it beats it by at least 1.0.",
      "state": "by construction",
-     "why_en": "Computed exactly before the freeze by a dynamic programme over the patch's 512 configurations and 100 steps, because the laws are about single courses and the environment is stochastic. Locked does not say restraint is not also an equilibrium, 'which no computation here checks'; the best responses read the whole configuration, which the learners (level and steps left) cannot exceed."
+     "why_en": "Computed exactly before the freeze by a dynamic programme over the patch's 512 configurations and 100 steps, because the theorems are about single courses and the environment is stochastic. Locked does not say restraint is not also an equilibrium, 'which no computation here checks'; the best responses read the whole configuration, which the learners (level and steps left) cannot exceed."
     },
     {
      "name": "the gate and the rest (I1, I3)",
      "claim_en": "The patch's regrowth is taken as a renewal gated at need one, and the other members' apples exceeding regrowth step after step as the rest outrunning it.",
      "state": "by construction",
-     "why_en": "CG1's environment, unchanged, built to meet the laws' premises; I1 (22,263 windows) and I3 (337.7 million steps, 2.89 million joint-excess windows) found 0 violations. The README: these checks 'test the identification, not the dynamics'."
+     "why_en": "CG1's environment, unchanged, built to meet the theorems' premises; I1 (22,263 windows) and I3 (337.7 million steps, 2.89 million joint-excess windows) found 0 violations. The README: these checks 'test the identification, not the dynamics'."
     },
     {
      "name": "the end reading",
@@ -2864,7 +2864,7 @@
        "state": "not checked"
       },
       {
-       "what_en": "learners settle where the class says (H3); on the open side the law itself says nothing of what learners reach",
+       "what_en": "learners settle where the class says (H3); on the open side the theorem itself says nothing of what learners reach",
        "how": "argued",
        "state": "not checked"
       }
@@ -2926,7 +2926,7 @@
      "step": "beyond",
      "ifs": [
       {
-       "what_en": "the reading falls before the rest's end, so the outrun law's 'reads only after' is not met; the threshold v* comes from the exact calibration, not from a law",
+       "what_en": "the reading falls before the rest's end, so the outrun theorem's 'reads only after' is not met; the threshold v* comes from the exact calibration, not from a theorem",
        "how": "built",
        "state": "met"
       },
@@ -3008,7 +3008,7 @@
      "step": "identity",
      "ifs": [
       {
-       "what_en": "the environment is built to meet the laws' premises (balance, the gate at need one)",
+       "what_en": "the environment is built to meet the theorems' premises (balance, the gate at need one)",
        "how": "built",
        "state": "met"
       }
@@ -3016,15 +3016,15 @@
      "seen_en": "I1: 22,263 windows, 0 violations. I2: 31,639 episodes, 0 violations. I3: 337.7 million steps, 2.89 million joint-excess windows, 0 violations. All passed.",
      "outcome": "agreed",
      "failed_at": "none",
-     "rival_en": "The README: the identity checks test the identification, not the dynamics (SA1's verdict that the laws are near-definitional stands)."
+     "rival_en": "The README: the identity checks test the identification, not the dynamics (SA1's verdict that the theorems are near-definitional stands)."
     }
    ],
-   "afterwards_en": "The four Flow.outrun_* theorems were added to Becoming.Exclusion for this test (scratch-built at the freeze, landed after). 20 October 2026: the README's post hoc reading of X5 was corrected as false in its exact form, and CG3 (commons-outrun-own) froze tests placing the failure in the learner's exploration of its own courses. 21 October 2026 (224944238): T3 was first worded, after CG2 ran; its evidence line keeps 'two predicted keeps failed'. 22 October 2026: Training.outrun_settles_iff was checked, after the freeze, so it bears on X2 by content only; and EM1 (commons-outrun-generalizing) ran CG2's eleven conditions with learners that generalize across states, which kept the patch in three of the six locked settings (k3s1_lam32, k3s8, k3s1_share). EM1's README reads this as bridge H3 failing for that learner class on the locked side, the laws holding course by course, and X2 as 'a finding about tabular learners, not about learning in general'; chapter 05 (T3's evidence) reports it. LA1, LA1b and LA1c later put a language model on CG2's conditions. 3 November 2026 (AF1): 'locked' reworded to give the frozen tolerance (gain < 0.25) and k3s8 corrected to all but one of 4,000 episodes; nothing frozen changed.",
+   "afterwards_en": "The four Flow.outrun_* theorems were added to Becoming.Exclusion for this test (scratch-built at the freeze, landed after). 20 October 2026: the README's post hoc reading of X5 was corrected as false in its exact form, and CG3 (commons-outrun-own) froze tests placing the failure in the learner's exploration of its own courses. 21 October 2026 (224944238): T3 was first worded, after CG2 ran; its evidence line keeps 'two predicted keeps failed'. 22 October 2026: Training.outrun_settles_iff was checked, after the freeze, so it bears on X2 by content only; and EM1 (commons-outrun-generalizing) ran CG2's eleven conditions with learners that generalize across states, which kept the patch in three of the six locked settings (k3s1_lam32, k3s8, k3s1_share). EM1's README reads this as bridge H3 failing for that learner class on the locked side, the theorems holding course by course, and X2 as 'a finding about tabular learners, not about learning in general'; chapter 05 (T3's evidence) reports it. LA1, LA1b and LA1c later put a language model on CG2's conditions. 3 November 2026 (AF1): 'locked' reworded to give the frozen tolerance (gain < 0.25) and k3s8 corrected to all but one of 4,000 episodes; nothing frozen changed.",
    "dynamics": [
     "the-rest-outruns-the-renewal",
     "what-training-installs"
    ],
-   "shows_en": "In the six settings computed as locked, tabular learners emptied the patch; both misses lie on the open side, where the law is silent and bridge H3 carries the forecast.",
+   "shows_en": "In the six settings computed as locked, tabular learners emptied the patch; both misses lie on the open side, where the theorem is silent and bridge H3 carries the forecast.",
    "shows_zh": "算出来属于“锁住”的六种设置里，表格式学习者都把地采空；两处没中的都在开放一侧，规律在那里不说话，预测靠的是桥 H3。"
   },
   {
@@ -3103,7 +3103,7 @@
      "name": "selects through its couplings",
      "claim_en": "Each fisher's choice is taken to go only through its prompt and its monthly report.",
      "state": "not checked",
-     "why_en": "It is the harness's design (stateless calls), not measured apart; the predictions file says the laws say what an order can separate, not what a pretrained model brings to an order."
+     "why_en": "It is the harness's design (stateless calls), not measured apart; the predictions file says the theorems say what an order can separate, not what a pretrained model brings to an order."
     },
     {
      "name": "the direction as a widening (exact computation)",
@@ -3115,7 +3115,7 @@
      "name": "Web.break_not_bounded",
      "claim_en": "The margin fishers leave against a need nobody told them is taken as a distance to a break that nothing they couple into bounds.",
      "state": "not checked",
-     "why_en": "Only the file's reading of what H3's failure would mean names the law; the binding assesses the identification 'not checked'."
+     "why_en": "Only the file's reading of what H3's failure would mean names the theorem; the binding assesses the identification 'not checked'."
     }
    ],
    "predictions": [
@@ -3207,7 +3207,7 @@
      "seen_en": "DIR_UNSEEN kept 0.00 for both models (every bed died in month 1); the gap to DIR_SEEN was 0.10 for both, against at least 0.50. Failed on its gap clause; the first clause held.",
      "outcome": "disagreed",
      "failed_at": "if",
-     "rival_en": "The predictions file calls this a forecast about these models, not a consequence of the laws. Under DIR_UNSEEN the gpt-5.4-mini fishers took about the community's optimum, 16 each, so no margin kept for other reasons was seen; the binding says the clause holding supports no law."
+     "rival_en": "The predictions file calls this a forecast about these models, not a consequence of the theorems. Under DIR_UNSEEN the gpt-5.4-mini fishers took about the community's optimum, 16 each, so no margin kept for other reasons was seen; the binding says the clause holding supports no theorem."
     },
     {
      "label": "H4 seeing is not valuing",
@@ -3274,7 +3274,7 @@
     "what-an-optimum-does-beyond-what-couples-in",
     "unselected-beyond-the-coupling-closure"
    ],
-   "shows_en": "The built ifs (bed told, scope stated) were met, keeping was not seen: the bridge from stated order to joint act failed; no verdict tested a law.",
+   "shows_en": "The built ifs (bed told, scope stated) were met, keeping was not seen: the bridge from stated order to joint act failed; no verdict tested a theorem.",
    "shows_zh": "搭好的前提（告知河蚌、写明范围）都满足，河蚌却没保住：断的是从指令到三人合起来的捕捞这座桥；没有哪条判定单独检验过规律。"
   },
   {
@@ -3379,7 +3379,7 @@
      "seen_en": "gpt-5.4-mini 0.80 (8 of 10 seasons), exactly at its threshold of at least 0.80: passed. gpt-4.1-mini 0.10 against 0.50: failed. Failed by the both-models rule.",
      "outcome": "disagreed",
      "failed_at": "bridge",
-     "rival_en": "The file calls R1 a forecast from round 1, not a law; round 1's limits give 8 of 10 an interval of about 0.49 to 0.94."
+     "rival_en": "The file calls R1 a forecast from round 1, not a theorem; round 1's limits give 8 of 10 an interval of about 0.49 to 0.94."
     },
     {
      "label": "R2 pooling among the members does not reach what none couples into",
@@ -3402,7 +3402,7 @@
        "state": "not checked"
       },
       {
-       "what_en": "the fishers leave no margin of 70 tons for reasons that do not read the bed, which no law says (the file: the bed 'could be kept only by a margin of 70 tons chosen for other reasons'); shares of decisions over the keeping share were 0.758 and 0.697",
+       "what_en": "the fishers leave no margin of 70 tons for reasons that do not read the bed, which no theorem says (the file: the bed 'could be kept only by a margin of 70 tons chosen for other reasons'); shares of decisions over the keeping share were 0.758 and 0.697",
        "how": "measured",
        "state": "met"
       }
@@ -3410,7 +3410,7 @@
      "seen_en": "DIR_UNSEEN_TALK kept 0.00 for both models (0 of 10 each). Passed for both.",
      "outcome": "agreed",
      "failed_at": "none",
-     "rival_en": "Fishers taking about the community's optimum end the bed whatever holds of pools; round 1's file calls the same claim a forecast about these models, not a consequence of the laws, and round 1's binding says the clause holding supports no law, since no margin kept for other reasons was seen."
+     "rival_en": "Fishers taking about the community's optimum end the bed whatever holds of pools; round 1's file calls the same claim a forecast about these models, not a consequence of the theorems, and round 1's binding says the clause holding supports no theorem, since no margin kept for other reasons was seen."
     },
     {
      "label": "R3 the scope makes the difference once the joint act is coupled",
@@ -3580,7 +3580,7 @@
        "state": "not checked"
       },
       {
-       "what_en": "the courses are without noise and the payoffs constant, as the laws take them",
+       "what_en": "the courses are without noise and the payoffs constant, as the theorems take them",
        "how": "argued",
        "state": "not checked"
       }
@@ -3616,7 +3616,7 @@
      "seen_en": "",
      "outcome": "no verdict",
      "failed_at": "none",
-     "rival_en": "Reversion to one half and exploration that persists move outer starts against the law's sign under a true bridge too; both outer bins as predicted is also what a majority rule gave in 12 and 35 of 100 dry-run replications."
+     "rival_en": "Reversion to one half and exploration that persists move outer starts against the theorem's sign under a true bridge too; both outer bins as predicted is also what a majority rule gave in 12 and 35 of 100 dry-run replications."
     },
     {
      "label": "shift pair (forbidden item 2)",
@@ -3807,7 +3807,7 @@
      "name": "Becoming.OptimumSeason (the season meets the law for optima)",
      "claim_en": "The season's outcomes are taken as the eligible outcomes, the catch as what the reward rises with, and the bay as a condition beyond it with room, since a bay fish moved into the catch stays an eligible season.",
      "state": "by construction",
-     "why_en": "The season is built so that the law's hypotheses hold and can be checked (DESIGN §9): 63 Lean theorems with every axiom report empty, and season.py's enumeration of the 2,695 outcomes as a second check. These are laws of optima over outcomes, not of a trained system."
+     "why_en": "The season is built so that the theorem's hypotheses hold and can be checked (DESIGN §9): 63 Lean theorems with every axiom report empty, and season.py's enumeration of the 2,695 outcomes as a second check. These are theorems on optima over outcomes, not on a trained system."
     },
     {
      "name": "T3, the clause on trained systems: nearness (F1)",
@@ -3835,9 +3835,9 @@
     },
     {
      "name": "the two starts",
-     "claim_en": "The uniform start is taken as a start the exchange leaves unchanged; the prudent start, which prefers site 0, as a prior restraint the commuting law does not cover.",
+     "claim_en": "The uniform start is taken as a start the exchange leaves unchanged; the prudent start, which prefers site 0, as a prior restraint the commuting theorem does not cover.",
      "state": "by construction",
-     "why_en": "Both are set exactly in the output layer (zero biases; the logarithms of the prudent probabilities). So the law's conclusion is read only at the check A1 against C1u, reported and not counted (no excess resolved, largest mean differences 0.10 and 0.12; the recurrent control itself drifted from 0.50 to 0.40), and P2 reads a start where the law predicts nothing."
+     "why_en": "Both are set exactly in the output layer (zero biases; the logarithms of the prudent probabilities). So the theorem's conclusion is read only at the check A1 against C1u, reported and not counted (no excess resolved, largest mean differences 0.10 and 0.12; the recurrent control itself drifted from 0.50 to 0.40), and P2 reads a start where the theorem predicts nothing."
     },
     {
      "name": "C1, the component control",
@@ -3872,7 +3872,7 @@
        "state": "met"
       },
       {
-       "what_en": "the policy is an optimum of its reward, which is what the proved law speaks of: not met, by design; the reading is at nearness of at most 0.85, where arithmetic forces no withdrawal, and the clause claims the drain short of the optimum",
+       "what_en": "the policy is an optimum of its reward, which is what the theorem speaks of: not met, by design; the reading is at nearness of at most 0.85, where arithmetic forces no withdrawal, and the clause claims the drain short of the optimum",
        "how": "measured",
        "state": "failed"
       },
@@ -3905,7 +3905,7 @@
        "state": "met"
       },
       {
-       "what_en": "the start is one the exchange leaves unchanged: not met at the prudent start P2 reads, whose output biases prefer site 0, so the commuting law predicts nothing here; met only at the uniform start, which the check A1 against C1u reads",
+       "what_en": "the start is one the exchange leaves unchanged: not met at the prudent start P2 reads, whose output biases prefer site 0, so the commuting theorem predicts nothing here; met only at the uniform start, which the check A1 against C1u reads",
        "how": "built",
        "state": "failed"
       },
@@ -3920,7 +3920,7 @@
        "state": "met"
       }
      ],
-     "seen_en": "Unresolved in both tested families; supported in the separable baseline, where nothing moved (0.10 to 0.11). From 0.10 landings per step every arm without the anchor rose, and so did the control: in the feedforward family the control to 0.34 and the arms to 0.19 to 0.27; in the recurrent the control to 0.33, A6 to 0.24, A2 to 0.38, A5 to 0.50. Only the anchored arm stayed at 0.10, about 0.23 below the control at the end. No excess was resolved (p-value 1.0 in both families). Equivalence was not resolved: the anchored arm fell below the margin at some checkpoints and the other arms' seeds spread too widely (intervals about ±0.3). In the recurrent family A5 ended 0.18 above the control at the last checkpoint (p = 0.19 there, before correction): reported, not counted. The check from the uniform start, where the commuting law does speak, resolved no excess (largest mean differences 0.10 and 0.12).",
+     "seen_en": "Unresolved in both tested families; supported in the separable baseline, where nothing moved (0.10 to 0.11). From 0.10 landings per step every arm without the anchor rose, and so did the control: in the feedforward family the control to 0.34 and the arms to 0.19 to 0.27; in the recurrent the control to 0.33, A6 to 0.24, A2 to 0.38, A5 to 0.50. Only the anchored arm stayed at 0.10, about 0.23 below the control at the end. No excess was resolved (p-value 1.0 in both families). Equivalence was not resolved: the anchored arm fell below the margin at some checkpoints and the other arms' seeds spread too widely (intervals about ±0.3). In the recurrent family A5 ended 0.18 above the control at the last checkpoint (p = 0.19 there, before correction): reported, not counted. The check from the uniform start, where the commuting theorem does speak, resolved no excess (largest mean differences 0.10 and 0.12).",
      "outcome": "could not tell",
      "failed_at": "power",
      "rival_en": "An AI reading after the run: the control rising too fits erosion without selection through the networks' shared parameters. It is not the rival DESIGN §7 names, which predicts the arm and the control drifting alike, and part of the control's rise may be its own noise."
@@ -3937,7 +3937,7 @@
      "step": "beyond",
      "ifs": [
       {
-       "what_en": "ranked by the ground's catch alone, the bay shares no units with what is rewarded and has no room: the optima include a season keeping the bay at six and one emptying it, so the law for optima fixes nothing about the bay here",
+       "what_en": "ranked by the ground's catch alone, the bay shares no units with what is rewarded and has no room: the optima include a season keeping the bay at six and one emptying it, so the theorem on optima fixes nothing about the bay here",
        "how": "built",
        "state": "met"
       },
@@ -4048,14 +4048,14 @@
      "rival_en": "On-policy training may keep more of a prior than its reward's pull suggests (Shenfeld, Pari and Agrawal 2026), a rival reading the README sets beside P6 where it is supported. An inert prior, never sampled away, would leave P6 untestable by the exploration rule."
     }
    ],
-   "afterwards_en": "Before the run, on 30 and 31 October 2026: the season's claims were proved in Lean (Becoming.OptimumSeason) and a new law added (Becoming.WeightedCommuting). The separable family's exact flow gave a counterexample to T3's second forbidden case as first worded, and on 31 October it was reworded from 'a condition sharing no units with anything rewarded' to 'a choice whose values nothing rewarded and nothing the learner reads tells apart', now proved in expectation for learners the exchange carries, from a start it leaves unchanged. After the run (3 November 2026): T3's clause on trained systems stands as conjectured, with partial support, its locus unresolved, nothing refuted. A prior-work note of the same day sets RL's razor beside P6 and names spillover in language models as the rival Stage B should freeze. Stage B, the successor on language models, is not frozen.",
+   "afterwards_en": "Before the run, on 30 and 31 October 2026: the season's claims were proved in Lean (Becoming.OptimumSeason) and a new theorem added (Becoming.WeightedCommuting). The separable family's exact flow gave a counterexample to T3's second forbidden case as first worded, and on 31 October it was reworded from 'a condition sharing no units with anything rewarded' to 'a choice whose values nothing rewarded and nothing the learner reads tells apart', now proved in expectation for learners the exchange carries, from a start it leaves unchanged. After the run (3 November 2026): T3's clause on trained systems stands as conjectured, with partial support, its locus unresolved, nothing refuted. A prior-work note of the same day sets RL's razor beside P6 and names spillover in language models as the rival Stage B should freeze. Stage B, the successor on language models, is not frozen.",
    "dynamics": [
     "what-a-commuting-law-keeps-apart",
     "what-an-optimum-does-beyond-what-couples-in",
     "the-test-season-meets-the-optimum-laws"
    ],
-   "shows_en": "The law is of optima; policies short of one drained the bay as they neared it, as the update rule largely gives; where the drain lies could not be told.",
-   "shows_zh": "定律说的是最优；没到最优的策略越接近它，海湾也越被取空，这多半由更新规则本身给出；流失落在哪里，没能分辨。"
+   "shows_en": "The theorem is on optima; policies short of one drained the bay as they neared it, as the update rule largely gives; where the drain lies could not be told.",
+   "shows_zh": "定理说的是最优；没到最优的策略越接近它，海湾也越被取空，这多半由更新规则本身给出；流失落在哪里，没能分辨。"
   },
   {
    "test": "LA4 (Stage B)",
@@ -4116,7 +4116,7 @@
      "name": "Becoming.OptimumSeason (the season meets the law for optima)",
      "claim_en": "The same season's outcomes are taken as the eligible outcomes, the catch as what the reward rises with, and the bay as a condition beyond it with room.",
      "state": "by construction",
-     "why_en": "The season is Stage A's, proved in Lean and checked by enumeration; the laws are of optima over outcomes, not of a trained model."
+     "why_en": "The season is Stage A's, proved in Lean and checked by enumeration; the theorems are on optima over outcomes, not on a trained model."
     },
     {
      "name": "initial restraint",
@@ -4132,9 +4132,9 @@
     },
     {
      "name": "the site under both assignments",
-     "claim_en": "In the not-told arm the site is taken as settled without any law: a policy's disturbances under the two name assignments sum to ten.",
+     "claim_en": "In the not-told arm the site is taken as settled without any theorem: a policy's disturbances under the two name assignments sum to ten.",
      "state": "by construction",
-     "why_en": "A fact of the counting (DESIGN §12). From told starts, which tell the sites apart, the commuting law predicts nothing, as at Stage A's prudent start."
+     "why_en": "A fact of the counting (DESIGN §12). From told starts, which tell the sites apart, the commuting theorem predicts nothing, as at Stage A's prudent start."
     },
     {
      "name": "T3, the clause on trained systems: the locus",
@@ -4157,12 +4157,12 @@
      "step": "beyond",
      "ifs": [
       {
-       "what_en": "the reward rises with the catch and the bay shares units with it (the season's laws)",
+       "what_en": "the reward rises with the catch and the bay shares units with it (the season's theorems)",
        "how": "built",
        "state": "met"
       },
       {
-       "what_en": "the model is an optimum of its reward, which is what the proved law speaks of: the design reads short of one (support at nearness of at most 0.85), so the prediction rests on the clause, not the law",
+       "what_en": "the model is an optimum of its reward, which is what the theorem speaks of: the design reads short of one (support at nearness of at most 0.85), so the prediction rests on the clause, not the theorem",
        "how": "argued",
        "state": "not checked"
       },
@@ -4189,7 +4189,7 @@
      "step": "beyond",
      "ifs": [
       {
-       "what_en": "the start is one the exchange of the site's names leaves unchanged: a told prompt tells the sites apart, so the commuting law predicts nothing there",
+       "what_en": "the start is one the exchange of the site's names leaves unchanged: a told prompt tells the sites apart, so the commuting theorem predicts nothing there",
        "how": "built",
        "state": "failed"
       },
@@ -4665,12 +4665,12 @@
      "rival_en": "Under S2 and S3 the links measure the cue's reach, not reading; acts at unseen contents are generalization, reported apart (0.14 and 0.11 linear, 0.42 and 0.24 xor)."
     }
    ],
-   "afterwards_en": "RF2's record notes on 6 November 2026 that the law is unchanged and its next step keeps Stage B's run; TR2's Stage B, on four open-weight checkpoints, has not run. FREEZE-11's expectation paragraph is not revised after the run.",
+   "afterwards_en": "RF2's record notes on 6 November 2026 that the theorem is unchanged and its next step keeps Stage B's run; TR2's Stage B, on four open-weight checkpoints, has not run. FREEZE-11's expectation paragraph is not revised after the run.",
    "dynamics": [
     "what-training-installs"
    ],
-   "shows_en": "The law's ifs were built in, so its forbidden cases could not occur; the run adds what the law leaves open: training sometimes installed a twin where readings fix nothing.",
-   "shows_zh": "定律的前提是搭好的，禁例本就出不来；这次运行补的是定律没说的：读数管不到的地方，训练有时装进了另一种做法。"
+   "shows_en": "The theorem's ifs were built in, so its forbidden cases could not occur; the run adds what the theorem leaves open: training sometimes installed a twin where readings fix nothing.",
+   "shows_zh": "定理的前提是搭好的，禁例本就出不来；这次运行补的是定理没说的：读数管不到的地方，训练有时装进了另一种做法。"
   },
   {
    "test": "TR1A",
@@ -4862,10 +4862,10 @@
      "rival_en": ""
     }
    ],
-   "afterwards_en": "RF1's record notes on 6 November 2026 that the comparator's contradiction says reading its picks as one order needs more than its training and nothing about the law, which is unchanged; its next step keeps TR1's own run. The script's wrong P1 counts are kept as output. The informing variant frozen with it (V1) has not run.",
+   "afterwards_en": "RF1's record notes on 6 November 2026 that the comparator's contradiction says reading its picks as one order needs more than its training and nothing about the theorem, which is unchanged; its next step keeps TR1's own run. The script's wrong P1 counts are kept as output. The informing variant frozen with it (V1) has not run.",
    "dynamics": [],
-   "shows_en": "A chooser built as one order agrees by construction; the comparator, trained under one order, picked in cycles and so falls outside the law, marking its border.",
-   "shows_zh": "按一个次序造的选择器自然相合；成对比较器在一个次序下训练，却选出了循环，落在定律之外，标出了它的边界。"
+   "shows_en": "A chooser built as one order agrees by construction; the comparator, trained under one order, picked in cycles and so falls outside the theorem, marking its border.",
+   "shows_zh": "按一个次序造的选择器自然相合；成对比较器在一个次序下训练，却选出了循环，落在定理之外，标出了它的边界。"
   },
   {
    "test": "TR7A",
@@ -4900,7 +4900,7 @@
      "how": "built"
     },
     {
-     "thing_en": "the law's end for each run: the maximal plans, the derived best chance, weight 0 for the mixture",
+     "thing_en": "the theorem's end for each run: the maximal plans, the derived best chance, weight 0 for the mixture",
      "role": "reading",
      "how": "built"
     },
@@ -4913,19 +4913,19 @@
    "bridges": [
     {
      "name": "the reading (FREEZE-9)",
-     "claim_en": "Learners trained only on the points of sampled outcomes are taken to move toward the plans the law calls maximal and the chances it calls best, as the exact expected gradient does.",
+     "claim_en": "Learners trained only on the points of sampled outcomes are taken to move toward the plans the theorem gives as maximal and the chances it gives as best, as the exact expected gradient does.",
      "state": "held",
-     "why_en": "At every one of the eleven verdict runs all 20 seeds ended nearer the law's end, against the 15 support needs; for these learners, at the step size, steps and batch frozen."
+     "why_en": "At every one of the eleven verdict runs all 20 seeds ended nearer the theorem's end, against the 15 support needs; for these learners, at the step size, steps and batch frozen."
     },
     {
      "name": "the game as the law's prospects",
-     "claim_en": "The game's five numbers (T, k_C, k_O, V, c) and four plans are taken as the law's prospects and plans.",
+     "claim_en": "The game's five numbers (T, k_C, k_O, V, c) and four plans are taken as the theorem's prospects and plans.",
      "state": "by construction",
      "why_en": "FREEZE-4's generator plays the stated chances; the dry run finds every plan's expected points equal to tr7.ev's by enumeration, and outcome equal to played draw for draw on 500 ids each."
     },
     {
      "name": "D1, D2, D6 (the law's end for a chance and a mixture)",
-     "claim_en": "The derived best chance (half the improving bound where that is positive, else 0) and weight 0 are taken as the law's end for the chance and mixture learners.",
+     "claim_en": "The derived best chance (half the improving bound where that is positive, else 0) and weight 0 are taken as the theorem's end for the chance and mixture learners.",
      "state": "held",
      "why_en": "Derived, not Lean: the Lean gives only that no mixture stands above, and the best chance and strictly below are derived claims, checked by enumeration in Stage 0; the reading checks that tr7.mixture_above fails at every pair of weights from 1 to 5."
     },
@@ -4940,7 +4940,7 @@
     {
      "label": "the reading (eleven verdict runs)",
      "frozen": true,
-     "says_en": "At every one of the eleven verdict runs, at least 15 of 20 seeds end nearer the law's end than they began.",
+     "says_en": "At every one of the eleven verdict runs, at least 15 of 20 seeds end nearer the theorem's end than they began.",
      "from_thesis": "",
      "from_laws": [
       "Becoming.ReadStages.only_complyThenOwn_iff",
@@ -4966,7 +4966,7 @@
        "state": "met"
       }
      ],
-     "seen_en": "The reading: supported. At every one of the eleven verdict runs all 20 seeds ended nearer the law's end than they began; support is controlled at 0.021.",
+     "seen_en": "The reading: supported. At every one of the eleven verdict runs all 20 seeds ended nearer the theorem's end than they began; support is controlled at 0.021.",
      "outcome": "agreed",
      "failed_at": "none",
      "rival_en": "As frozen, \"supported\" says the seeds moved the way the curves of the exact expected gradient move; it says nothing of the path, of how near a seed came, or of any other trained system."
@@ -5026,7 +5026,7 @@
      "step": "identity",
      "ifs": [
       {
-       "what_en": "at A3 (V = 0) and B4 (k_O = 0) no step can move a seed away from the law's end",
+       "what_en": "at A3 (V = 0) and B4 (k_O = 0) no step can move a seed away from the theorem's end",
        "how": "argued",
        "state": "met"
       }
@@ -5034,7 +5034,7 @@
      "seen_en": "All 20 seeds at each; B4's weight fell to 0.0002; at A3 from uniform 14 seeds settled toward own-at-both and 6 toward own-then-comply.",
      "outcome": "agreed",
      "failed_at": "none",
-     "rival_en": "No step can move a seed away from the law's end at these two runs, so they could only be supported; the reading's chance to fail rested on the other nine."
+     "rival_en": "No step can move a seed away from the theorem's end at these two runs, so they could only be supported; the reading's chance to fail rested on the other nine."
     },
     {
      "label": "B1, B2, B3 (a learned chance of complying)",
@@ -5066,7 +5066,7 @@
      "step": "forecast",
      "ifs": [
       {
-       "what_en": "the reference curves end at the law's end from every start, and the first step's signal-to-noise is at least 3.9 at every verdict run with noise",
+       "what_en": "the reference curves end at the theorem's end from every start, and the first step's signal-to-noise is at least 3.9 at every verdict run with noise",
        "how": "argued",
        "state": "met"
       }
@@ -5077,10 +5077,10 @@
      "rival_en": ""
     }
    ],
-   "afterwards_en": "RF7's record notes on 6 November 2026 that the Stage A read supported, bears on no other trained system and tests no theorem; the law is unchanged and its next step keeps TR7's own run, on language models, which has not run. FREEZE-9 gained a dated note on 9 November 2026 that the run was made; no rule changed.",
+   "afterwards_en": "RF7's record notes on 6 November 2026 that the Stage A read supported, bears on no other trained system and tests no theorem; the theorem is unchanged and its next step keeps TR7's own run, on language models, which has not run. FREEZE-9 gained a dated note on 9 November 2026 that the run was made; no rule changed.",
    "dynamics": [],
-   "shows_en": "Learners trained only on points moved toward the law's end at every verdict run: the maximal plans are proved, the best chance derived; this reads these learners, no other system.",
-   "shows_zh": "只凭分数训练的学习器，每个判定运行都走向定律的终点：最优计划是已证的，最佳概率是推导的；读的只是这些学习器，不是别的系统。"
+   "shows_en": "Learners trained only on points moved toward the theorem's end at every verdict run: the maximal plans are proved, the best chance derived; this reads these learners, no other system.",
+   "shows_zh": "只凭分数训练的学习器，每个判定运行都走向定理的终点：最优计划是已证的，最佳概率是推导的；读的只是这些学习器，不是别的系统。"
   },
   {
    "test": "TR1",
@@ -5222,8 +5222,8 @@
    ],
    "afterwards_en": "Not run. On 5 November 2026 its informing variant and Stage A were frozen apart (FREEZE-10) and the lock of its witness in FREEZE-12; a dated note of that day records that FREEZE-5's history report can never report anything, with no code changed. Stage A ran on 6 November 2026.",
    "dynamics": [],
-   "shows_en": "Frozen and not run: the law is proved, and the bridge, that a language model's stable picks come from one strict order, has met no data yet.",
-   "shows_zh": "已冻结，未运行：定律已证；“语言模型稳定的选择出自一个严格次序”这座桥，还没碰到数据。"
+   "shows_en": "Frozen and not run: the theorem is proved, and the bridge, that a language model's stable picks come from one strict order, has met no data yet.",
+   "shows_zh": "已冻结，未运行：定理已证；“语言模型稳定的选择出自一个严格次序”这座桥，还没碰到数据。"
   },
   {
    "test": "TR1 (informing variant)",
@@ -5346,7 +5346,7 @@
    "dynamics": [
     "what-a-course-chosen-through-its-model-does-not-test"
    ],
-   "shows_en": "Frozen and not run: its one verdict would test whether a model's stated and told choices fit one order, never the proved law, nor whether model or order holds it.",
+   "shows_en": "Frozen and not run: its one verdict would test whether a model's stated and told choices fit one order, never the theorem, nor whether model or order holds it.",
    "shows_zh": "已冻结，未运行：唯一的判定只问模型在写明和告知两种问法下的选择合不合同一个次序；不验定理，也不判它靠的是模型还是次序。"
   },
   {
@@ -5387,7 +5387,7 @@
      "name": "bridge (i), elimination",
      "claim_en": "An agent's stated listing of what the other option pays is taken as the loop's kept candidates: it changes only on an answer to its own act or on a reading of the world.",
      "state": "not checked",
-     "why_en": "Not run. The law's record itself says it does not show 'That actual learners keep candidates by elimination, or choose by the worst case'; verdict K would read this bridge."
+     "why_en": "Not run. The theorem's record itself says it does not show 'That actual learners keep candidates by elimination, or choose by the worst case'; verdict K would read this bridge."
     },
     {
      "name": "bridge (ii), choice",
@@ -5530,7 +5530,7 @@
      "seen_en": "",
      "outcome": "no verdict",
      "failed_at": "none",
-     "rival_en": "The Lean has informing 'represented by its outcome, a start with the true candidate alone'; E2 reads whether a telling gives that start (bridge (iii)), which the law takes as given. In Stage 0 a count lock and an untrusting agent, each taking no telling in, are contradicted here in every run of their settings."
+     "rival_en": "The Lean has informing 'represented by its outcome, a start with the true candidate alone'; E2 reads whether a telling gives that start (bridge (iii)), which the theorem takes as given. In Stage 0 a count lock and an untrusting agent, each taking no telling in, are contradicted here in every run of their settings."
     },
     {
      "label": "T (the act turn in up)",
@@ -5630,7 +5630,7 @@
      "name": "the stated lumping",
      "claim_en": "What a pass reads is taken to be its token ids alone, with the content's shared draw u for a sampled act, and nothing else.",
      "state": "not checked",
-     "why_en": "Not run: no checkpoint was downloaded. A forbidden case would refute 'only a stated lumping, or an implementation of one', never the law."
+     "why_en": "Not run: no checkpoint was downloaded. A forbidden case would refute 'only a stated lumping, or an implementation of one', never the theorem."
     },
     {
      "name": "the premise (exact passes)",
@@ -5684,7 +5684,7 @@
      "seen_en": "",
      "outcome": "no verdict",
      "failed_at": "none",
-     "rival_en": "Met, 'it does not tell nondeterminism from a fault'; it would refute the stated implementation for the checkpoint as run, never the law."
+     "rival_en": "Met, 'it does not tell nondeterminism from a fault'; it would refute the stated implementation for the checkpoint as run, never the theorem."
     },
     {
      "label": "the second forbidden case",
@@ -5724,7 +5724,7 @@
      "seen_en": "",
      "outcome": "no verdict",
      "failed_at": "none",
-     "rival_en": "No law gives it: the law runs from acts apart to states apart to couplings apart, and 'the converses fail' (Becoming.Learning.Cue.apart_with_content_alike); it rests on the architecture. A probe's rejection 'shows the cue's tokens readable along one direction at the last position across contents, not that the checkpoint recognizes anything'."
+     "rival_en": "No theorem gives it: the theorem runs from acts apart to states apart to couplings apart, and 'the converses fail' (Becoming.Learning.Cue.apart_with_content_alike); it rests on the architecture. A probe's rejection 'shows the cue's tokens readable along one direction at the last position across contents, not that the checkpoint recognizes anything'."
     },
     {
      "label": "coverage of the unread",
@@ -5808,8 +5808,8 @@
    "dynamics": [
     "what-training-installs"
    ],
-   "shows_en": "Frozen and not run: a measurement of how far a cue line reaches into a checkpoint's states and acts; it could refute a stated lumping or implementation, confirming no law.",
-   "shows_zh": "已冻结，未运行：这是一次测量，量一行提示在模型的状态和行为里走多远；能驳的只是所说的归并或实现，不证实任何定律。"
+   "shows_en": "Frozen and not run: a measurement of how far a cue line reaches into a checkpoint's states and acts; it could refute a stated lumping or implementation, confirming no theorem.",
+   "shows_zh": "已冻结，未运行：这是一次测量，量一行提示在模型的状态和行为里走多远；能驳的只是所说的归并或实现，不证实任何定理。"
   },
   {
    "test": "TR3",
@@ -5975,8 +5975,8 @@
    "dynamics": [
     "a-cascade-at-the-histories-reached"
    ],
-   "shows_en": "Frozen and not run: a pass would follow from the premise it measures, and the timing is a named model's, not the law's; it would test bridges only.",
-   "shows_zh": "已冻结，未运行：前提成立，通过就随之而来；何时不再看自己的灯是一个具名模型的预测，不是定律的；它验的只是桥。"
+   "shows_en": "Frozen and not run: a pass would follow from the premise it measures, and the timing is a named model's, not the theorem's; it would test bridges only.",
+   "shows_zh": "已冻结，未运行：前提成立，通过就随之而来；何时不再看自己的灯是一个具名模型的预测，不是定理的；它验的只是桥。"
   },
   {
    "test": "TR4, TR5",
@@ -6060,7 +6060,7 @@
      "name": "V4 (TR5)",
      "claim_en": "The agent is taken to act through the listing it states, and to take an act good and enabled on it where one exists.",
      "state": "not checked",
-     "why_en": "Not run. The record calls it a choice premise: the law verifies a given policy, not how one chooses."
+     "why_en": "Not run. The record calls it a choice premise: the theorem holds of a given policy, not of how one chooses."
     },
     {
      "name": "V5 (TR5)",
@@ -6106,7 +6106,7 @@
        "state": "met"
       },
       {
-       "what_en": "The law is read for crews that answer by chance through the per-fiber bound (matches over a unit's three faults sum to at most 1) and through correctable_iff's left-to-right direction without its choice argument: both inferences, the bound checked on 9,343 random act distributions, neither a stated Lean theorem",
+       "what_en": "The theorem is read for crews that answer by chance through the per-fiber bound (matches over a unit's three faults sum to at most 1) and through correctable_iff's left-to-right direction without its choice argument: both inferences, the bound checked on 9,343 random act distributions, neither a stated Lean theorem",
        "how": "argued",
        "state": "met"
       }
@@ -6228,13 +6228,13 @@
      "rival_en": "The record marks it an AI expectation, not a prediction of the account, which predicts nothing of these systems; no verdict reads it, and it is not to be revised after the run."
     }
    ],
-   "afterwards_en": "Nothing has run on a model. On 31 October 2026 the two law records' next steps were reworded to say that a run can refute at most a bridge, never the law. At the freeze (4 November 2026) the design's six families became three pins, two deciding; TR4's test arm went from 40 to 60 units and TR5's episodes from 3 to 9 a course; a decline became an answer. Held from 6 November 2026 until the first readers report; the service key in the coordinator's shell was refused (HTTP 401).",
+   "afterwards_en": "Nothing has run on a model. On 31 October 2026 the two law records' next steps were reworded to say that a run can refute at most a bridge, never the theorem. At the freeze (4 November 2026) the design's six families became three pins, two deciding; TR4's test arm went from 40 to 60 units and TR5's episodes from 3 to 9 a course; a decline became an answer. Held from 6 November 2026 until the first readers report; the service key in the coordinator's shell was refused (HTTP 401).",
    "dynamics": [
     "a-revision-that-opens-a-correction",
     "a-reading-kept-by-its-update"
    ],
-   "shows_en": "Not run: two frozen tests of whether language models fall under two proved laws; any verdict would mark a bridge, and a pass would be a sensitivity, not a confirmation.",
-   "shows_zh": "未运行：两项冻结的检验，问语言模型是否落在两条已证的律之下；任何结果只判这座桥，通过也只说明灵敏度，不算证实。"
+   "shows_en": "Not run: two frozen tests of whether language models fall under two theorems; any verdict would mark a bridge, and a pass would be a sensitivity, not a confirmation.",
+   "shows_zh": "未运行：两项冻结的检验，问语言模型是否落在两条定理之下；任何结果只判这座桥，通过也只说明灵敏度，不算证实。"
   },
   {
    "test": "TR6",
@@ -6416,8 +6416,8 @@
    "dynamics": [
     "a-prediction-read-by-what-it-predicts"
    ],
-   "shows_en": "Not run: the frozen verdicts rest on count mismatches and the table's shape, never on the law's forbidden cases, which one flipped decision in a thousand can produce by noise.",
-   "shows_zh": "未运行：冻结的判定只看人数与表不符的轮数和表的形状，不看律所禁的情形，因为千分之一的偶然改口就能造出后者。"
+   "shows_en": "Not run: the frozen verdicts rest on count mismatches and the table's shape, never on the cases the theorem rules out, which one flipped decision in a thousand can produce by noise.",
+   "shows_zh": "未运行：冻结的判定只看人数与表不符的轮数和表的形状，不看定理排除的情形，因为千分之一的偶然改口就能造出后者。"
   },
   {
    "test": "TR7",
@@ -6503,7 +6503,7 @@
      "seen_en": "",
      "outcome": "no verdict",
      "failed_at": "none",
-     "rival_en": "The rule reads majorities, so a system following the law on 70% of calls and a rival on the rest passes. Loss aversion up to 8/7, a value on being kept up to 2 points and a prior followed within 1 point are below the separation thresholds; A7 exists because loss aversion passes the rest."
+     "rival_en": "The rule reads majorities, so a system picking the theorem's plan on 70% of calls and a rival's on the rest passes. Loss aversion up to 8/7, a value on being kept up to 2 points and a prior followed within 1 point are below the separation thresholds; A7 exists because loss aversion passes the rest."
     },
     {
      "label": "A2 to A4 (below the threshold, and the two exits)",
@@ -6636,7 +6636,7 @@
      "rival_en": "An AI expectation, not a prediction of the account; the frozen rule reads and reports whether it is met. Under the law such a contradiction would arise falsely with chance at most 0.020. The test does not tell a constraint outside the table from a miscomputation the restatements do not reach, or from a cue of the framing."
     }
    ],
-   "afterwards_en": "TR7 itself, on language models, has not run. Its Stage A (TR7A, frozen 5 November 2026, run 6 November 2026) trained 340 tabular learners on the frozen game: the reading came out supported, all 20 seeds ending nearer the law's end at each of the eleven verdict runs, for those learners only, confirming no theorem or thesis. At the freeze (4 November 2026) a decline became an answer read against the maximal plans, and the oversight framing was frozen beside the neutral one. Held from 6 November 2026.",
+   "afterwards_en": "TR7 itself, on language models, has not run. Its Stage A (TR7A, frozen 5 November 2026, run 6 November 2026) trained 340 tabular learners on the frozen game: the reading came out supported, all 20 seeds ending nearer the theorem's end at each of the eleven verdict runs, for those learners only, confirming no theorem or thesis. At the freeze (4 November 2026) a decline became an answer read against the maximal plans, and the oversight framing was frozen beside the neutral one. Held from 6 November 2026.",
    "dynamics": [],
    "shows_en": "Not run on language models: it can move only the reading that a system told the numbers picks a best plan, and the arithmetic stays proved whatever the answers.",
    "shows_zh": "尚未在语言模型上运行：它能动的只是“被告知数字的系统会选最优方案”这一读法；无论回答如何，算术仍是已证的。"
@@ -6749,7 +6749,7 @@
      "seen_en": "",
      "outcome": "no verdict",
      "failed_at": "none",
-     "rival_en": "Mixtures pass only near the law (nine calls in ten: 0.89). A pass cannot show that the system computes by counts in general, would so choose with a model it formed, or is corrigible."
+     "rival_en": "Mixtures pass only near the theorem's plan (nine calls in ten: 0.89). A pass cannot show that the system computes by counts in general, would so choose with a model it formed, or is corrigible."
     },
     {
      "label": "TR8, the other twelve strict conditions",
@@ -7257,8 +7257,8 @@
    ],
    "afterwards_en": "On 6 October 2026 the memory-correction account (theories/becoming/history/MEMORY-CORRECTION-AND-SUCCESSION.md) took the result in at its measured scope: selective assessment of these inherited corrections in fresh contexts, with the whole chain from new evidence to later execution still unobserved. The five foundation completion criteria were left unchanged and no larger study was set. A frozen design note's obsolete sentence (historical service tuples excluded) is kept under its hash with an erratum. The folder was begun for the generative account before the Theory of Becoming was named; the account it connects to is now in a history folder. No thesis T1 to T8 names it.",
    "dynamics": [],
-   "shows_en": "No law or thesis is named, so the reasoning was not at stake: all 24 contexts matched the frozen key, as ordinary candidate elimination would, both instructions at ceiling.",
-   "shows_zh": "没有点名定律或论题，推理不在受检之列：24 个对话都答对了冻结的答案表，普通的候选排除法也能全对，两种指示都到了顶。"
+   "shows_en": "No theorem or thesis is named, so the reasoning was not at stake: all 24 contexts matched the frozen key, as ordinary candidate elimination would, both instructions at ceiling.",
+   "shows_zh": "没有点名定理或论题，推理不在受检之列：24 个对话都答对了冻结的答案表，普通的候选排除法也能全对，两种指示都到了顶。"
   },
   {
    "test": "LCA",
@@ -7685,7 +7685,7 @@
      "rival_en": "A falling productivity under sticky catches also raises the exploitation rate; compensation through a younger stock and assessment artefacts both fit, and these data cannot separate them."
     }
    ],
-   "afterwards_en": "20 October 2026: the margin-of-a-regime record states that giving read off the level is false in these stocks over one to five years and names a state of level and recent giving as the next step. MQ4 (20 October, 76 unread stocks) and MQ5 (21 October) tested that state; RM2 to RM5 (21 October) proved the regime's laws for giving that adjusts; thesis T2 (level, recent giving, one lag) rests on those fish-stock tests, and MQ7 (21 October) tested T2's reading of F3's failure. T1's home lists MQ3 among its failures.",
+   "afterwards_en": "20 October 2026: the margin-of-a-regime record states that giving read off the level is false in these stocks over one to five years and names a state of level and recent giving as the next step. MQ4 (20 October, 76 unread stocks) and MQ5 (21 October) tested that state; RM2 to RM5 (21 October) proved theorems on the regime for giving that adjusts; thesis T2 (level, recent giving, one lag) rests on those fish-stock tests, and MQ7 (21 October) tested T2's reading of F3's failure. T1's home lists MQ3 among its failures.",
    "dynamics": [
     "margin-of-a-regime"
    ],
@@ -7817,7 +7817,7 @@
      "rival_en": "Momentum predicts no difference or the reverse; the balance behind C2 holds partly by construction in assessment output."
     }
    ],
-   "afterwards_en": "21 October 2026: the record threshold-in-the-state-plane notes the test (0.39 from 5 stocks, lower bound 0.00; C1 failed, C2 not testable) and regime-point-under-adjusting-giving that the reading failed its frozen field test, their laws unchanged; thesis T2 and the README's ledger say the field frequency is not established. T2's evidence row reads 'MQ7 missed its frozen bound (0.39, lower bound 0.00)'. Left open: the same frozen test on more stocks no analysis has read, and a share of the catch on the spawning stock measured rather than fitted. T2's later rewordings (4 and 6 November 2026) came from UE32 and UE31b, not from MQ7.",
+   "afterwards_en": "21 October 2026: the record threshold-in-the-state-plane notes the test (0.39 from 5 stocks, lower bound 0.00; C1 failed, C2 not testable) and regime-point-under-adjusting-giving that the reading failed its frozen field test, their theorems unchanged; thesis T2 and the README's ledger say the field frequency is not established. T2's evidence row reads 'MQ7 missed its frozen bound (0.39, lower bound 0.00)'. Left open: the same frozen test on more stocks no analysis has read, and a share of the catch on the spawning stock measured rather than fitted. T2's later rewordings (4 and 6 November 2026) came from UE32 and UE31b, not from MQ7.",
    "dynamics": [
     "threshold-in-the-state-plane",
     "where-a-run-of-a-regime-comes-to-rest"
@@ -7887,7 +7887,7 @@
     },
     {
      "name": "the margin measured by intervention",
-     "claim_en": "The largest one-shot removal survived and the largest constant harvest survived (Ŷ) are taken as the margin and the bound on renewal that the margin law is written in.",
+     "claim_en": "The largest one-shot removal survived and the largest constant harvest survived (Ŷ) are taken as the margin and the bound on renewal that the margin theorem is written in.",
      "state": "held",
      "why_en": "The pulse test found the need at the model's unstable point (DF 1000: 4,128 against 4,149 cells/µl) and the sustained-draw test the model's largest surplus (34,304 against 35,064); the two bounded the mean break day in 22 of 22 cells."
     },
@@ -7986,7 +7986,7 @@
     {
      "label": "A4a–c",
      "frozen": true,
-     "says_en": "With two harvesters on one culture, the harm of both together is never less than the sum of their separate harms (A4a, beyond the law); it is more where each is within Ŷ and together they exceed it (A4b, classed as the law's), and in at least half the cells where even the joint harvest is within Ŷ (A4c, beyond the law).",
+     "says_en": "With two harvesters on one culture, the harm of both together is never less than the sum of their separate harms (A4a, beyond the theorem); it is more where each is within Ŷ and together they exceed it (A4b, classed as the theorem's), and in at least half the cells where even the joint harvest is within Ŷ (A4c, beyond the theorem).",
      "from_thesis": "T1",
      "from_laws": [
       "Becoming.Flow.joint_excess_ends"
@@ -8107,8 +8107,8 @@
     "own-count-misses-joint-excess",
     "closing-needs-net-draw"
    ],
-   "shows_en": "Built to meet the laws' ifs, the simulated yeast went as predicted; an exact optimizer's side effects were forecast 8 of 8; tabular learners fell short and that bridge failed.",
-   "shows_zh": "照定律的前提造出来的模拟酵母如所预测；精确优化者的副作用 8 个里中了 8 个；表格学习者没到最优，通向学习者的桥没有立住。"
+   "shows_en": "Built to meet the theorems' ifs, the simulated yeast went as predicted; an exact optimizer's side effects were forecast 8 of 8; tabular learners fell short and that bridge failed.",
+   "shows_zh": "照定理的前提造出来的模拟酵母如所预测；精确优化者的副作用 8 个里中了 8 个；表格学习者没到最优，通向学习者的桥没有立住。"
   },
   {
    "test": "MQ1 (yeast)",
@@ -8737,7 +8737,7 @@
      "name": "the rising premise of RM3–RM5",
      "claim_en": "The stocks' giving, read through the balance as an adjustment, is taken as rising in what is left and in the recent giving within a band, as Becoming.RegimeMargin.Adjusted.comes_to_rest and Adjusted.falls_iff_below assume.",
      "state": "failed",
-     "why_en": "Measured post hoc, met only partly: it rises in the recent giving in 65 of 69 stocks (median slope 0.66) but in what is left over the whole band in only 4 of 69 (one-step slope median −0.01; each fitted level law humped, rising over a median 41% of observed escapements). The laws reach these stocks only below the level law's peak."
+     "why_en": "Measured post hoc, met only partly: it rises in the recent giving in 65 of 69 stocks (median slope 0.66) but in what is left over the whole band in only 4 of 69 (one-step slope median −0.01; each fitted level law humped, rising over a median 41% of observed escapements). The theorems reach these stocks only below the level law's peak."
     }
    ],
    "predictions": [
@@ -8898,7 +8898,7 @@
     "regime-in-any-amounts",
     "closing-needs-net-draw"
    ],
-   "shows_en": "The state with one lag passed on unread stocks, beyond any law; the series were taken as the stock unchecked, and half reported the level after part of the catch.",
+   "shows_en": "The state with one lag passed on unread stocks, beyond any theorem; the series were taken as the stock unchecked, and half reported the level after part of the catch.",
    "shows_zh": "带一个滞后的状态在没读过的种群上通过了，但它超出任何已证的规律；评估序列被直接当作种群本身，未经检验，其中一半报的是当年部分捕捞之后的水平。"
   },
   {
@@ -9349,7 +9349,7 @@
      "rival_en": ""
     }
    ],
-   "afterwards_en": "From 8 October 2026 further Lean modules were checked on the same model: the regime boundary (19 theorems), local attraction and coupled support (38), a finite transition with support (27), partial correction (26) and the finite-support obstruction (17); MarketInstances joins the model to the pure core's laws of lasting and viability (05 §10). 08 §8's assessment: 'A conventional controller with identical equations predicts exactly the same results, so the theory's vocabulary adds no mathematical advantage there.' The test's row names no thesis; 05 keeps as open a discriminating study in one bounded market.",
+   "afterwards_en": "From 8 October 2026 further Lean modules were checked on the same model: the regime boundary (19 theorems), local attraction and coupled support (38), a finite transition with support (27), partial correction (26) and the finite-support obstruction (17); MarketInstances joins the model to the pure core's theorems on lasting and viability (05 §10). 08 §8's assessment: 'A conventional controller with identical equations predicts exactly the same results, so the theory's vocabulary adds no mathematical advantage there.' The test's row names no thesis; 05 keeps as open a discriminating study in one bounded market.",
    "dynamics": [
     "market-model-share-margin-and-ends"
    ],
@@ -9508,8 +9508,8 @@
    ],
    "afterwards_en": "The test's row names no thesis. The same day's identification analysis (6 October 2026) sets out the alternatives that give similar observations, and the README names what the next claim needs: 'an independently specified retained component and matched input/write/readout interventions; this workbook does not supply those measurements.'",
    "dynamics": [],
-   "shows_en": "No law is named here: a contrast fixed in advance came out negative with an interval including zero, and binned response curves cannot show whether the learner's own updating changed.",
-   "shows_zh": "这里没有点名任何定律：事先定好的对比结果为负，但区间包含零；分箱的反应曲线也看不出学习者自身的更新方式是否变了。"
+   "shows_en": "No theorem is named here: a contrast fixed in advance came out negative with an interval including zero, and binned response curves cannot show whether the learner's own updating changed.",
+   "shows_zh": "这里没有点名任何定理：事先定好的对比结果为负，但区间包含零；分箱的反应曲线也看不出学习者自身的更新方式是否变了。"
   },
   {
    "test": "T1N",
@@ -9822,8 +9822,8 @@
    ],
    "afterwards_en": "The test's row names no thesis. The plan names the next bridge: 'identifying how acquired information is bound to an affected center and used through effective action despite cue/source/recipient mismatch'. The executable result keeps its original status, computed_pending_independent_review; a separate receipt and a review record the later acceptance.",
    "dynamics": [],
-   "shows_en": "No law is named and the totals were known before the plan: the rats pulled 1.33 more times per session under the cooperating smell, which several accounts would give.",
-   "shows_zh": "这里没有点名定律，总数在计划定下之前就已知道：闻到合作气味时，大鼠每场多拉1.33次，而好几种解释都会给出同样的结果。"
+   "shows_en": "No theorem is named and the totals were known before the plan: the rats pulled 1.33 more times per session under the cooperating smell, which several accounts would give.",
+   "shows_zh": "这里没有点名定理，总数在计划定下之前就已知道：闻到合作气味时，大鼠每场多拉1.33次，而好几种解释都会给出同样的结果。"
   },
   {
    "test": "recipient-harm-valuation",
@@ -9869,7 +9869,7 @@
     },
     {
      "name": "to the present account",
-     "claim_en": "The case is taken as bearing on the generative account of 6 October 2026, now in history; no thesis, Lean law or atlas dynamic of the present account is bound to it.",
+     "claim_en": "The case is taken as bearing on the generative account of 6 October 2026, now in history; no thesis, Lean theorem or atlas dynamic of the present account is bound to it.",
      "state": "not checked",
      "why_en": "tests.json lists it under no prediction of the account; no binding or dynamic names it. The role ids under 'things' are an AI reading by the web's reaches tie, not the record's."
     }
@@ -10003,10 +10003,10 @@
      "rival_en": ""
     }
    ],
-   "afterwards_en": "The first producer run stopped on a literal NaN in the summary cross-check; the repair maps it to unknown and changed no selection, estimator or trial outcome. The account it fed (6 October 2026) is now in history. The identification argument names what is still missing: a contrast separating the neighbour's actual relief from the rat's own cue relief. No thesis or law changed.",
+   "afterwards_en": "The first producer run stopped on a literal NaN in the summary cross-check; the repair maps it to unknown and changed no selection, estimator or trial outcome. The account it fed (6 October 2026) is now in history. The identification argument names what is still missing: a contrast separating the neighbour's actual relief from the rat's own cue relief. No thesis or theorem changed.",
    "dynamics": [],
-   "shows_en": "On others' records, preferred-lever responses fell 16.69 points more where the lever shocked a neighbour; with no law bound, assignment unestablished and rivals unseparated, it stays descriptive.",
-   "shows_zh": "在别人的记录上，偏好杠杆会电击邻鼠时，按压多降了16.69个百分点；没有绑定任何定律，分组是否随机没有证实，别的解释也没分开，所以只是描述。"
+   "shows_en": "On others' records, preferred-lever responses fell 16.69 points more where the lever shocked a neighbour; with no theorem bound, assignment unestablished and rivals unseparated, it stays descriptive.",
+   "shows_zh": "在别人的记录上，偏好杠杆会电击邻鼠时，按压多降了16.69个百分点；没有绑定任何定理，分组是否随机没有证实，别的解释也没分开，所以只是描述。"
   },
   {
    "test": "recipient-value-learning",
@@ -10069,7 +10069,7 @@
     },
     {
      "name": "to the present account",
-     "claim_en": "The case is taken as bearing on the generative account of 6 October 2026, now in history; no thesis, Lean law of the Becoming package or atlas dynamic is bound to it.",
+     "claim_en": "The case is taken as bearing on the generative account of 6 October 2026, now in history; no thesis, Lean theorem of the Becoming package or atlas dynamic is bound to it.",
      "state": "not checked",
      "why_en": "tests.json lists it under no prediction of the account; no binding or dynamic names it. The role ids under 'things' are an AI reading (the trained association as a reading of the target's state), not the record's."
     }
@@ -10154,8 +10154,8 @@
    ],
    "afterwards_en": "The first authorized run failed importing SciPy before reading data; the failure record is kept and the frozen code, protocol and estimand were unchanged. The same day a bounded-alternative account followed (now in history): a ceiling on how far target-directed responses can move under unchanged evaluation, its probability part proved in Lean 4.29.1 (27 audited declarations, two modules), not applicable to this archive, which has neither a validated score budget nor paired coverage. A contingent-versus-yoked training comparison with a new recipient was named and remains unrun. No thesis changed.",
    "dynamics": [],
-   "shows_en": "No law was bound: a frozen calculation on others' records gave a contrast uncertain around zero, and even a clear one would not tell acquired concern from changed payoff expectations.",
-   "shows_zh": "没有绑定任何定律：在别人的记录上，按冻结的算法算出的差值在零附近，说不准；就算差值清楚，也分不出是学来的关心，还是对报酬的预期变了。"
+   "shows_en": "No theorem was bound: a frozen calculation on others' records gave a contrast uncertain around zero, and even a clear one would not tell acquired concern from changed payoff expectations.",
+   "shows_zh": "没有绑定任何定理：在别人的记录上，按冻结的算法算出的差值在零附近，说不准；就算差值清楚，也分不出是学来的关心，还是对报酬的预期变了。"
   },
   {
    "test": "T7F",
@@ -10616,15 +10616,15 @@
      "rival_en": ""
     }
    ],
-   "afterwards_en": "On 4 November 2026 the per-step record was re-read (T7C; a first draft that found the opposite was reversed by a reader): 02 section 9 and 08's T7 row now say the case occurred at both readings where the loss was read and counts against T7's fourth forbidden case, as worded before its clause on drift (the third in LA2's frozen numbering; the clause was added later and LA2 did not test it), as a claim about trained judges, and against H1-LA2; the pool law stands within hypotheses this judge does not meet; T7's other cases are untouched. 08 section 9 took the lesson that a frozen rule fixes how a verdict is scored, not that it reads its construct. late's course is read post hoc as the witness RuleCapture.Alternating.never_locked; no theorem states how such a threshold arises from the readers. The timing law's record (ReadInTime, added 26 October 2026) names LA2 as its one frozen test, which found the law did not apply. The field test T7F was then designed and held on 5 November 2026.",
+   "afterwards_en": "On 4 November 2026 the per-step record was re-read (T7C; a first draft that found the opposite was reversed by a reader): 02 section 9 and 08's T7 row now say the case occurred at both readings where the loss was read and counts against T7's fourth forbidden case, as worded before its clause on drift (the third in LA2's frozen numbering; the clause was added later and LA2 did not test it), as a claim about trained judges, and against H1-LA2; the pool theorem stands within hypotheses this judge does not meet; T7's other cases are untouched. 08 section 9 took the lesson that a frozen rule fixes how a verdict is scored, not that it reads its construct. late's course is read post hoc as the witness RuleCapture.Alternating.never_locked; no theorem states how such a threshold arises from the readers. The timing theorem's record (ReadInTime, added 26 October 2026) names LA2 as its one frozen test, which found the theorem did not apply. The field test T7F was then designed and held on 5 November 2026.",
    "dynamics": [
     "closed-capture",
     "readers-drawn-from-the-selected",
     "loss-read-in-time-by-the-others",
     "threshold-reading-read-late-alternates"
    ],
-   "shows_en": "Where nothing read the loss the lock held as the law says; the bridge, this judge as a pool counted by kind, failed; two contrasts passed only by a tie.",
-   "shows_zh": "没有东西读到损失时，锁定如定律所说保持住了；但“这个评审是按类计数的读者池”这座桥断了，有两项对比只是靠一次平局通过。"
+   "shows_en": "Where nothing read the loss the lock held as the theorem says; the bridge, this judge as a pool counted by kind, failed; two contrasts passed only by a tie.",
+   "shows_zh": "没有东西读到损失时，锁定如定理所说保持住了；但“这个评审是按类计数的读者池”这座桥断了，有两项对比只是靠一次平局通过。"
   },
   {
    "test": "LA3",
@@ -10669,7 +10669,7 @@
      "name": "H1-LA3",
      "claim_en": "Claude Haiku's in-context revision is taken as a selection through the feedback: the policy whose scores read higher is kept.",
      "state": "failed",
-     "why_en": "By the frozen measure it holds in s2p3, s0p5 and s0p0 and is low in s2p0, m2n1_p0 and m2n1_p5 (fewer than 4 of 5 seeds played both policies and ended on the better seen). Post hoc, all 21 seeds that played both ended on the higher mean seen and the 9 that played one kept N; the frozen bridge counts both as one measure, so it does not separate them. The binding marks this bridge, not a law."
+     "why_en": "By the frozen measure it holds in s2p3, s0p5 and s0p0 and is low in s2p0, m2n1_p0 and m2n1_p5 (fewer than 4 of 5 seeds played both policies and ended on the better seen). Post hoc, all 21 seeds that played both ended on the higher mean seen and the 9 that played one kept N; the frozen bridge counts both as one measure, so it does not separate them. The binding marks this bridge, not a theorem."
     },
     {
      "name": "the game as MA3's rule (premise ruleshaping-shaped)",
@@ -10685,7 +10685,7 @@
     },
     {
      "name": "expected scores as the share's class",
-     "claim_en": "The policy with the higher expected score is taken as the kind whose share the counts laws say rises.",
+     "claim_en": "The policy with the higher expected score is taken as the kind whose share the theorems on counts say rises.",
      "state": "by construction",
      "why_en": "S's and N's expected scores are 100 times the two sides of stretch_iff's inequality; with m = 0 the three-step class equals favours_iff's one-step class by elementary arithmetic, which the predictions file says is not a Lean statement and values.py checks for these numbers."
     }
@@ -10823,12 +10823,12 @@
      "rival_en": "The model's prior: the two m2n1_p5 seeds that ended on N chose N before any score and never played S, and a policy never played gives no score; in m2n1_p0, which passed, two seeds also played N only. The run does not say why S was tried in some seeds and not others. Neither frozen rival fits the run: final choices differ between conditions, and shaping was dropped in m2n1_p0, where it grew the lineage."
     }
    ],
-   "afterwards_en": "07 records the test beside the D68 readings on shaping: by the frozen reading of one failure, which the README extends to the other, the law stands and its reading for trained systems is not supported by this case. LA3's faults entered experiments/README's 'Freezing a test on a trained system': simulate the system the test may meet (this agent never tried the other policy in 9 of 30 seeds), and measure exploration apart from selection (LA3's bridge counted both in one measure, a point a reviewer had named before the freeze).",
+   "afterwards_en": "07 records the test beside the D68 readings on shaping: by the frozen reading of one failure, which the README extends to the other, the theorem stands and its reading for trained systems is not supported by this case. LA3's faults entered experiments/README's 'Freezing a test on a trained system': simulate the system the test may meet (this agent never tried the other policy in 9 of 30 seeds), and measure exploration apart from selection (LA3's bridge counted both in one measure, a point a reviewer had named before the freeze).",
    "dynamics": [
     "shaping-the-rule-selected-by-what-comes-back"
    ],
-   "shows_en": "Post hoc, where the model had scored both policies it ended on the better; where it never tried shaping its prior chose: the misses mark the bridge, not the law.",
-   "shows_zh": "事后看：两种策略都试过的，模型都选了得分高的；从没试过塑造的，就照原先的想法选。落空的是桥，不是定律。"
+   "shows_en": "Post hoc, where the model had scored both policies it ended on the better; where it never tried shaping its prior chose: the misses mark the bridge, not the theorem.",
+   "shows_zh": "事后看：两种策略都试过的，模型都选了得分高的；从没试过塑造的，就照原先的想法选。落空的是桥，不是定理。"
   },
   {
    "test": "shared-renewal-capability",
@@ -11177,8 +11177,8 @@
    "test": "SC1",
    "kind": "run",
    "state": "registered-rule",
-   "case_en": "Claude and GPT each wrote plain-English statements of 60 Lean laws, with and without one planted extra referent, and both coded all 240 texts for excess referents, blind to who wrote them.",
-   "case_zh": "Claude 和 GPT 各把 60 条 Lean 定律写成白话英文，一版照实，一版暗加一个多余的所指；两者再给全部 240 篇标出多余的所指，都不知道是谁写的。",
+   "case_en": "Claude and GPT each wrote plain-English statements of 60 Lean theorems, with and without one planted extra referent, and both coded all 240 texts for excess referents, blind to who wrote them.",
+   "case_zh": "Claude 和 GPT 各把 60 条 Lean 定理写成白话英文，一版照实，一版暗加一个多余的所指；两者再给全部 240 篇标出多余的所指，都不知道是谁写的。",
    "things": [
     {
      "thing_en": "a coder model (Claude or GPT) marking excess referents by FC1's codebook v1.1",
@@ -11314,8 +11314,8 @@
    "dynamics": [
     "unselected-beyond-the-coupling-closure"
    ],
-   "shows_en": "The predicted self-deficit was not seen at this scale: the claim that a coder's own text lies beyond its reach is unsupported in English; the law itself was not tested.",
-   "shows_zh": "在这个规模上，没看到预料中的“看不见自己写进去的东西”：这个说法在英文里没得到支持；定律本身没有被检验。"
+   "shows_en": "The predicted self-deficit was not seen at this scale: the claim that a coder's own text lies beyond its reach is unsupported in English; the theorem itself was not tested.",
+   "shows_zh": "在这个规模上，没看到预料中的“看不见自己写进去的东西”：这个说法在英文里没得到支持；定理本身没有被检验。"
   },
   {
    "test": "UE32",
@@ -12124,8 +12124,8 @@
    "predictions": [],
    "afterwards_en": "The audit was regenerated on 7 October 2026 after the axiom-free rewrite: all 130 theorems depend on no axioms. A supporting study of the same date adds 25 separately checked theorems (lean/perspectival). The experiments index notes the folder was begun 5 to 8 October 2026 for the earlier generative account, before the Theory of Becoming was named on 9 October.",
    "dynamics": [],
-   "shows_en": "Reasoning only: laws and built countermodels about the stated representation, with no frozen prediction and no data; the record says it is not empirical evidence.",
-   "shows_zh": "只有推理：关于所设表示的定律和构造的反例，没有冻结的预测，也没有数据；记录自己说这不是经验证据。"
+   "shows_en": "Reasoning only: theorems and built countermodels about the stated representation, with no frozen prediction and no data; the record says it is not empirical evidence.",
+   "shows_zh": "只有推理：关于所设表示的定理和构造的反例，没有冻结的预测，也没有数据；记录自己说这不是经验证据。"
   },
   {
    "test": "VD1",
@@ -12329,8 +12329,8 @@
    ],
    "afterwards_en": "By the freeze's 'what would change the account', the locus claim weakened from 'disagreement falls on mixed comparisons' to 'it can fall only there'. VD2, frozen the same day (21 October 2026), measured each valuer's sign apart and named standpoints 10 and 15 in advance. VT1 (22 October 2026) proved in `Becoming.Weightings` what both tests checked (records a-narrowing-above-its-widening and weights-within-a-ratio-agree-past-it), leaving three premises to measure: presentation invariance, the link of a sign measured apart to the joint increment, weight dispersion. T5's claim, standing and refuted-by were rewritten then; T5 now reads 'a bound on where disagreement can fall, not a prediction'. On 9 November 2026 its line was re-said: that actual valuers count every item above zero is what the thesis takes, not shown. No record was made, since no prediction passed.",
    "dynamics": [],
-   "shows_en": "Every frozen rule failed; the theorem's premise, that each valuer counts everything above zero, was not measured apart, and the locus prediction said more than the law it rested on.",
-   "shows_zh": "冻结的规则全部未过；定理的前提（每个评价者都把每样东西算作正的）没有另外测量，而“分歧落在哪里”的预测说得比它所依的定律多。"
+   "shows_en": "Every frozen rule failed; the theorem's premise, that each valuer counts everything above zero, was not measured apart, and the locus prediction said more than the theorem it rested on.",
+   "shows_zh": "冻结的规则全部未过；定理的前提（每个评价者都把每样东西算作正的）没有另外测量，而“分歧落在哪里”的预测说得比它所依的定理多。"
   },
   {
    "test": "VD2",
@@ -12573,8 +12573,8 @@
    "test": "FC1",
    "kind": "run",
    "state": "partly-passed",
-   "case_en": "For 672 pairs in 270 條, language-model coders count the referents that a classical Chinese 經 and the English chapter's clause each introduce beyond the Lean statement of the same checked law.",
-   "case_zh": "对 270 條里的 672 对，由语言模型来数：同一条律，中华本的經和英文本的句子，各比 Lean 陈述多说出几个所指。",
+   "case_en": "For 672 pairs in 270 條, language-model coders count the referents that a classical Chinese 經 and the English chapter's clause each introduce beyond the Lean statement of the same checked theorem.",
+   "case_zh": "对 270 條里的 672 对，由语言模型来数：同一条定理，中华本的經和英文本的句子，各比 Lean 陈述多说出几个所指。",
    "things": [
     {
      "thing_en": "the Lean statement of each declaration (its elaborated type, dumped from the core build with one level of unfolding)",
@@ -12610,7 +12610,7 @@
    "bridges": [
     {
      "name": "the measure (FIDELITY §1)",
-     "claim_en": "The referents a wording introduces that the Lean statement lacks, as a coder counts them, are taken as what the wording smuggles in beyond the checked law.",
+     "claim_en": "The referents a wording introduces that the Lean statement lacks, as a coder counts them, are taken as what the wording smuggles in beyond the checked theorem.",
      "state": "not checked",
      "why_en": "No human audit, which the design makes the deciding one; Krippendorff's α on per-segment X was 0.53 on the Chinese side (calibration, after one codebook revision), below the design's 0.8; the design says the measure scores referents, not truth."
     },
@@ -12683,7 +12683,7 @@
        "state": "met"
       },
       {
-       "what_en": "No coder sees both wordings of one law (separate shuffled packets by language).",
+       "what_en": "No coder sees both wordings of one theorem (separate shuffled packets by language).",
        "how": "built",
        "state": "met"
       },
@@ -12761,11 +12761,11 @@
    "test": "WL (H2)",
    "kind": "run",
    "state": "held",
-   "case_en": "Bilingual adult readers would learn the same frozen laws through the classical 經 or a controlled English of equal length and fidelity, then reconstruct unseen systems and handle counterexamples; designed, not run.",
-   "case_zh": "让中英双语的成年读者分别用古典的經和等长、等忠实的受控英文学同一批律，再去重建没见过的系统、处理反例；只有设计，尚未运行。",
+   "case_en": "Bilingual adult readers would learn the same frozen theorems through the classical 經 or a controlled English of equal length and fidelity, then reconstruct unseen systems and handle counterexamples; designed, not run.",
+   "case_zh": "让中英双语的成年读者分别用古典的經和等长、等忠实的受控英文学同一批定理，再去重建没见过的系统、处理反例；只有设计，尚未运行。",
    "things": [
     {
-     "thing_en": "the taught laws of the frozen core: Block D (25 條, 2,406 Han characters of 經) and Block K (23 條, 2,476 characters), five 條 held out in each",
+     "thing_en": "the taught theorems of the frozen core: Block D (25 條, 2,406 Han characters of 經) and Block K (23 條, 2,476 characters), five 條 held out in each",
      "role": "subject",
      "how": "built"
     },
@@ -12938,7 +12938,7 @@
      "step": "beyond",
      "ifs": [
       {
-       "what_en": "The renaming in K_zh-perm is injective, so the content is unchanged (renaming invariance, the two laws named) while the code's grouping and the names' inherited senses are destroyed.",
+       "what_en": "The renaming in K_zh-perm is injective, so the content is unchanged (renaming invariance, the two theorems named) while the code's grouping and the names' inherited senses are destroyed.",
        "how": "built",
        "state": "not checked"
       },
@@ -12956,8 +12956,8 @@
    ],
    "afterwards_en": "The design (22 October 2026) was not frozen: no freezing commit is named, and a run needs its own board claim. Of the folder's two designs only the companion fidelity measure ran (FC1, 22 October 2026); ZE (23 October 2026) built a controlled English edition named as a candidate for the test's English code. The WL chapter keeps H2 and 'classical Chinese is the best medium' as untested. The design states that no theorem changes under any verdict: readings and chapter prose would.",
    "dynamics": [],
-   "shows_en": "A reading of proved laws as a model of human readers, with its refuting results written down in advance; designed, not frozen, not run, so the data say nothing yet.",
-   "shows_zh": "把已证的律读作人类读者的模型，并事先写明什么结果会推翻它；只有设计，没有冻结，也没有运行，数据还什么都没说。"
+   "shows_en": "A reading of theorems as a model of human readers, with its refuting results written down in advance; designed, not frozen, not run, so the data say nothing yet.",
+   "shows_zh": "把定理读作人类读者的模型，并事先写明什么结果会推翻它；只有设计，没有冻结，也没有运行，数据还什么都没说。"
   },
   {
    "test": "ZE",
@@ -13020,7 +13020,7 @@
      "name": "Becoming.SharedCodes.renamed_carries_iff",
      "claim_en": "The classical names and their English counterparts are taken as a one-to-one renaming, which carries the same law, so that nothing in the measure binds the gain to the script.",
      "state": "not checked",
-     "why_en": "The results say the law already made this likely and that the control confirms it for the Claude coder; the GPT coder leaves a residual for the 經. Whether a translation is a renaming in the law's sense is not examined, and the plan itself names no law."
+     "why_en": "The results say the theorem already made this likely and that the control confirms it for the Claude coder; the GPT coder leaves a residual for the 經. Whether a translation is a renaming in the theorem's sense is not examined, and the plan itself names no theorem."
     }
    ],
    "predictions": [

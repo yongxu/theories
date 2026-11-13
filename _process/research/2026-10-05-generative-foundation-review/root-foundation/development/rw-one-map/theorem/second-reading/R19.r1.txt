@@ -1,0 +1,3 @@
+822 WRONG inside a verbatim README quote; README line 54 says "law"
+823 WRONG inside a verbatim README quote; README line 69 says "law's"
+checked 39 changed, 8 kept

@@ -4,16 +4,16 @@
 
 [Home](../../../../README.md) · [中文](../../../../README.zh.md) · **Read** · [One page](../../ONE-PAGE.md) · [The theory](../../THE-THEORY-OF-BECOMING.md) · [Chapters](../../chapters/README.md) · [Uses](../../USES.md) · **Check** · [Tests](../../../../TESTS.md) · [Results](../../../../RESULTS.md) · [Proofs](../../../../MAP.md#check-the-proofs-yourself) · [Open questions](../../../../OPEN-QUESTIONS.md) · [Reviewers](../../review/README.md) · **See** · [Atlas](../atlas/ATLAS.md) · [Graph](../THEORY-GRAPH.md) · [Connections](../atlas/CROSSWALK.md) · [How it grew](../../../LINEAGE.md) · [Glossary](../../../../GLOSSARY.md) · [Where everything is](../../../../MAP.md)
 
-*AI-written, 11 November 2026. A page of [the laws and tests behind the map](LEDGER.md), the layer under [the map](THE-MAP.md).*
+*AI-written, 11 November 2026. A page of [the theorems and tests behind the map](LEDGER.md), the layer under [the map](THE-MAP.md).*
 
-Each of the atlas's 184 dynamics in one plain sentence, under the tie more of its written-up laws are about than any other, named first among its ties. A dynamic none of whose written-up laws is about a tie is listed under the role they are about, or under anything that goes on. The sentence is its card's; the entry linked is the atlas's, with every law and premise.
+Each of the atlas's 184 dynamics in one plain sentence, under the tie more of its written-up theorems are about than any other, named first among its ties. A dynamic none of whose written-up theorems is about a tie is listed under the role they are about, or under anything that goes on. The sentence is its card's; the entry linked is the atlas's, with every theorem and premise.
 
 <a id="tie-draws-on-drawers-stock"></a>
 ## the drawers · draws on · a stock
 
-81 dynamics speak of this tie: 15 of the 15 listed here, and 66 listed elsewhere. [What the laws say of it](LAWS.md#tie-draws-on-drawers-stock).
+81 dynamics speak of this tie: 15 of the 15 listed here, and 66 listed elsewhere. [What the theorems say of it](LAWS.md#tie-draws-on-drawers-stock).
 
-| Dynamic | In one sentence | Its ties | Laws written up, of those in Lean | Tests |
+| Dynamic | In one sentence | Its ties | Theorems written up, of those in Lean | Tests |
 |---|---|---|---:|---:|
 | [A consumer that switches stays consuming, on the whole-run reading](../atlas/families/a.md#substitution-preserves-consumption) | Switching what it depends on does not undo a drawer's consuming, exactly where the stock it draws on stays for good below a need the switch leaves in place. | **draws on** · needs · gives back to | 4 of 7 | 0 |
 | [A formed goal revised, and the operations it goes on through](../atlas/families/h.md#formed-goal-revision-continuation) | In one built example, a goal formed by feedback is revised exactly when access is lost and upkeep kept, and then runs only while work and reserve last. | **draws on** · is set from · selects, favours · is of | 4 of 14 | 0 |
@@ -32,7 +32,7 @@ Each of the atlas's 184 dynamics in one plain sentence, under the tie more of it
 | [Where a rising take ends](../atlas/families/b.md#where-a-rising-take-ends) | Whatever takes more at every step from a supply refilled by at most a fixed amount stops within a bounded time, and can end what refills the supply too. | **draws on** · gives back to · needs | 4 of 10 | 0 |
 
 <details>
-<summary>66 more speak of it, each listed where more of its laws are</summary>
+<summary>66 more speak of it, each listed where more of its theorems are</summary>
 
 [A closed cycle sustains unceasing arising, without dissipation](../atlas/families/f.md#closed-cycle-without-dissipation) · [A confined rise within a whole](../atlas/families/a.md#confined-rise-within-a-whole) · [A continuing family cannot go unfed from beyond](../atlas/families/h.md#continuing-self-fed-from-beyond) · [A coupling for each step kept](../atlas/families/h.md#a-step-coupling-keeps-at-every-horizon) · [A line that ends where the net ends, or while the net goes on](../atlas/families/a.md#turning-in-time) · [A loss made only together](../atlas/families/b.md#joint-difference-making) · [A reader rebuilt from the level it reads: its end does not come back](../atlas/families/a.md#a-reader-rebuilt-from-its-stock-ends-with-it) · [A relay reading late settles or leaves both ends without end](../atlas/families/f.md#late-relay-oscillates) · [A reserve defers the end](../atlas/families/a.md#reserve-defers-ending) · [A rule rebuilt from the members it limits](../atlas/families/h.md#a-rule-rebuilt-from-the-members-it-limits) · [A whole drawing beyond renewal ends](../atlas/families/b.md#whole-drawing-beyond-renewal-ends) · [An arrow leaves change not recurring](../atlas/families/g.md#an-arrow-leaves-change-not-recurring) · [An end cascading along total dependence](../atlas/families/a.md#a-cascade-along-total-dependence) · [An order with a set point](../atlas/families/b.md#what-a-set-point-optimum-does-beyond) · [Beyond a band, support can sustain a cycle](../atlas/families/f.md#support-beyond-a-band-can-cycle) · [Beyond the gap an opposing exchange crosses and can oscillate for ever](../atlas/families/f.md#overshoot-beyond-the-gap) · [Consumption ends with its feeders](../atlas/families/a.md#consumption-ends-with-feeders) · [Copying from a stock: recurrent formation and inherited arrangement](../atlas/families/h.md#copying-from-a-stock) · [Coupled for each step](../atlas/families/b.md#coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it) · [Courses over a horizon](../atlas/families/b.md#horizon-optima-hold-the-greatest-renewal) · [Degeneration from a horizon](../atlas/families/a.md#degeneration-from-a-horizon) · [Draining: below a drained level no history lasts](../atlas/families/a.md#market-finite-support-obstruction) · [Ending laws as regimes on a lineage](../atlas/families/a.md#ending-laws-as-regimes-on-a-lineage) · [Groups with less leave nothing; groups on one family end together](../atlas/families/a.md#selection-among-groups-by-ending) · [Loss beyond a region](../atlas/families/b.md#loss-beyond-a-region) · [Loss of renewal for good](../atlas/families/a.md#loss-of-renewal-for-good) · [Lossless exchange can continue and return](../atlas/families/f.md#lossless-exchange-continues-and-returns) · [More needs more renewers; unceasing arising needs renewal](../atlas/families/h.md#more-needs-renewers) · [Never leaving a guard, conditions kept together, and lasting](../atlas/families/h.md#never-leaving-a-guard) · [One law of exact thresholds, and the threshold in the plane of level and recent giving](../atlas/families/a.md#threshold-in-the-state-plane) · [One token moved back and forth: the conservative cycle of a net](../atlas/families/f.md#a-token-moved-back-and-forth-on-a-net) · [Others drawing first end the base](../atlas/families/b.md#others-drawing-first-end-the-base) · [Overcompensating giving can cycle for ever](../atlas/families/f.md#overcompensating-giving-cycles) · [Own count misses joint excess](../atlas/families/b.md#own-count-misses-joint-excess) · [Persisting is a filter on what was chosen: keeping above ending, on the occasions met](../atlas/families/h.md#persisting-filters-what-was-chosen) · [Position does not protect](../atlas/families/b.md#position-does-not-protect) · [Re-optimizing at every step](../atlas/families/b.md#re-optimizing-above-a-renewal-ends-it) · [Recovery after interrupted change](../atlas/families/h.md#recoverable-mediated-change) · [Renewal and consumption classify runs](../atlas/families/h.md#becoming-renewal-reading) · [Renewing and consuming formation](../atlas/families/h.md#renewing-consuming-formation) · [Rest exactly where the total stops falling](../atlas/families/g.md#rest-exactly-where-falls-stop) · [Restraint within the joint slack keeps the need](../atlas/families/h.md#restraint-within-the-joint-slack) · [Risk minimization on a shared renewal](../atlas/families/b.md#risk-minimization-on-a-shared-renewal) · [Runaway, and the distance to the break that does not couple in](../atlas/families/d.md#a-break-read-only-by-threshold) · [Selection blind beyond the coupling closure](../atlas/families/b.md#unselected-beyond-the-coupling-closure) · [Slowing down before a condition's own end](../atlas/families/a.md#slowing-down-before-an-own-end) · [Succession on a carrier provided for migration](../atlas/families/h.md#succession-on-a-funded-carrier) · [Supported repair and reformation of a sustaining relation](../atlas/families/h.md#supported-renewal-recovery) · [The ends of a rule rebuilt from its members: no holder, and the end, do not return](../atlas/families/a.md#a-rule-with-no-holder-does-not-return) · [The market model's share, margin and ends](../atlas/families/a.md#market-model-share-margin-and-ends) · [The overshooting thermostat with the window open](../atlas/families/f.md#overshooting-thermostat-alternates) · [The point of no return of a regime](../atlas/families/a.md#margin-of-a-regime) · [The regime in any amounts, and its runs over the reals](../atlas/families/h.md#regime-in-any-amounts) · [The rest outruns the renewal](../atlas/families/b.md#the-rest-outruns-the-renewal) · [Two-sided regulation, and regulation that reads late](../atlas/families/h.md#two-sided-regulation-and-late-reading) · [Unceasing arising needs renewal](../atlas/families/g.md#unceasing-generation-needs-renewal) · [What a rise draws from beyond](../atlas/families/b.md#what-a-rise-draws-from-beyond) · [What an optimum does beyond what couples in](../atlas/families/b.md#what-an-optimum-does-beyond-what-couples-in) · [What closes what can form: a net draw on a required condition](../atlas/families/g.md#closing-needs-net-draw) · [What decides giving against keeping on a flow](../atlas/families/e.md#what-decides-giving-against-keeping-on-a-flow) · [What giving that waits draws on](../atlas/families/e.md#what-giving-that-waits-draws-on) · [What keeping forgoes, and a coupling against it](../atlas/families/b.md#keeping-forgoes-the-renewal-at-the-need) · [What keeping widening needs, and what carries it](../atlas/families/g.md#what-keeping-widening-needs) · [What training installs](../atlas/families/d.md#what-training-installs) · [Where a run of a regime comes to rest](../atlas/families/g.md#where-a-run-of-a-regime-comes-to-rest) · [Which selections survive and remain executable when the lumping changes](../atlas/families/d.md#selection-when-the-lumping-changes)
 
@@ -41,9 +41,9 @@ Each of the atlas's 184 dynamics in one plain sentence, under the tie more of it
 <a id="tie-gives-back-renewer-stock"></a>
 ## what gives back · gives back to · a stock
 
-79 dynamics speak of this tie: 9 of the 9 listed here, and 70 listed elsewhere. [What the laws say of it](LAWS.md#tie-gives-back-renewer-stock).
+79 dynamics speak of this tie: 9 of the 9 listed here, and 70 listed elsewhere. [What the theorems say of it](LAWS.md#tie-gives-back-renewer-stock).
 
-| Dynamic | In one sentence | Its ties | Laws written up, of those in Lean | Tests |
+| Dynamic | In one sentence | Its ties | Theorems written up, of those in Lean | Tests |
 |---|---|---|---:|---:|
 | [A continuing family cannot go unfed from beyond](../atlas/families/h.md#continuing-self-fed-from-beyond) | A finite family of stocks that keeps being drawn on, each taker giving back less than it takes, cannot from any step on be fed only from within. | **gives back to** · passes in or out · draws on | 3 of 18 | 0 |
 | [Consumption ends with its feeders](../atlas/families/a.md#consumption-ends-with-feeders) | What keeps drawing on a stock is active at most as many steps in a row as the stock's level, where nothing giving back to it has its needs met. | **gives back to** · draws on · needs | 5 of 10 | 0 |
@@ -56,7 +56,7 @@ Each of the atlas's 184 dynamics in one plain sentence, under the tie more of it
 | [What keeping widening needs, and what carries it](../atlas/families/g.md#what-keeping-widening-needs) | If ever more things can form and none is lost, with fixed needs on finitely many stocks, these pass every limit, fed from outside unless something comes from nothing. | **gives back to** · needs · draws on · passes in or out · goes on through | 5 of 23 | 0 |
 
 <details>
-<summary>70 more speak of it, each listed where more of its laws are</summary>
+<summary>70 more speak of it, each listed where more of its theorems are</summary>
 
 [A closed cycle sustains unceasing arising, without dissipation](../atlas/families/f.md#closed-cycle-without-dissipation) · [A confined rise within a whole](../atlas/families/a.md#confined-rise-within-a-whole) · [A consumer that switches stays consuming, on the whole-run reading](../atlas/families/a.md#substitution-preserves-consumption) · [A coupling for each step kept](../atlas/families/h.md#a-step-coupling-keeps-at-every-horizon) · [A coupling saturated by what it has carried](../atlas/families/g.md#a-coupling-saturated-by-what-it-has-carried) · [A line that ends where the net ends, or while the net goes on](../atlas/families/a.md#turning-in-time) · [A race for position](../atlas/families/b.md#a-race-for-position-draws-everything) · [A reader rebuilt from the level it reads: its end does not come back](../atlas/families/a.md#a-reader-rebuilt-from-its-stock-ends-with-it) · [A relay reading late settles or leaves both ends without end](../atlas/families/f.md#late-relay-oscillates) · [A reserve defers the end](../atlas/families/a.md#reserve-defers-ending) · [A rule rebuilt from the members it limits](../atlas/families/h.md#a-rule-rebuilt-from-the-members-it-limits) · [A whole drawing beyond renewal ends](../atlas/families/b.md#whole-drawing-beyond-renewal-ends) · [Activity forms reference revision and makes it recur](../atlas/families/h.md#recurring-reference-revision) · [An arrow leaves change not recurring](../atlas/families/g.md#an-arrow-leaves-change-not-recurring) · [An end cascading along total dependence](../atlas/families/a.md#a-cascade-along-total-dependence) · [An order with a set point](../atlas/families/b.md#what-a-set-point-optimum-does-beyond) · [Beyond a band, support can sustain a cycle](../atlas/families/f.md#support-beyond-a-band-can-cycle) · [Beyond the gap an opposing exchange crosses and can oscillate for ever](../atlas/families/f.md#overshoot-beyond-the-gap) · [Coupled for each step](../atlas/families/b.md#coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it) · [Courses over a horizon](../atlas/families/b.md#horizon-optima-hold-the-greatest-renewal) · [Degeneration from a horizon](../atlas/families/a.md#degeneration-from-a-horizon) · [Division by exclusive footprints](../atlas/families/h.md#division-by-exclusive-footprints) · [Draining: below a drained level no history lasts](../atlas/families/a.md#market-finite-support-obstruction) · [Ending laws as regimes on a lineage](../atlas/families/a.md#ending-laws-as-regimes-on-a-lineage) · [Every optimum rebuilds a depleted base](../atlas/families/h.md#optima-rebuild-a-depleted-base) · [Four routes of transition, none a proved phase transition](../atlas/families/a.md#four-routes-of-transition) · [Groups with less leave nothing; groups on one family end together](../atlas/families/a.md#selection-among-groups-by-ending) · [LA4's season](../atlas/families/b.md#the-test-season-meets-the-optimum-laws) · [Loss of renewal for good](../atlas/families/a.md#loss-of-renewal-for-good) · [Lossless exchange can continue and return](../atlas/families/f.md#lossless-exchange-continues-and-returns) · [Never leaving a guard, conditions kept together, and lasting](../atlas/families/h.md#never-leaving-a-guard) · [No finite part bears taking](../atlas/families/b.md#no-finite-part-bears-taking) · [One law of exact thresholds, and the threshold in the plane of level and recent giving](../atlas/families/a.md#threshold-in-the-state-plane) · [One token moved back and forth: the conservative cycle of a net](../atlas/families/f.md#a-token-moved-back-and-forth-on-a-net) · [Others drawing first end the base](../atlas/families/b.md#others-drawing-first-end-the-base) · [Overcompensating giving can cycle for ever](../atlas/families/f.md#overcompensating-giving-cycles) · [Own count misses joint excess](../atlas/families/b.md#own-count-misses-joint-excess) · [Persisting is a filter on what was chosen: keeping above ending, on the occasions met](../atlas/families/h.md#persisting-filters-what-was-chosen) · [Re-optimizing at every step](../atlas/families/b.md#re-optimizing-above-a-renewal-ends-it) · [Rest at every resolution](../atlas/families/g.md#rest-at-every-resolution) · [Rest exactly where the total stops falling](../atlas/families/g.md#rest-exactly-where-falls-stop) · [Restraint within the joint slack keeps the need](../atlas/families/h.md#restraint-within-the-joint-slack) · [Risk minimization on a shared renewal](../atlas/families/b.md#risk-minimization-on-a-shared-renewal) · [Several drawers: drawers in turn and at once](../atlas/families/b.md#drawers-in-turn) · [Several optimizers](../atlas/families/b.md#several-optimizers-drain-by-their-joint-capacity) · [Slowing down before a condition's own end](../atlas/families/a.md#slowing-down-before-an-own-end) · [Succession on a carrier provided for migration](../atlas/families/h.md#succession-on-a-funded-carrier) · [Support passed on by later gainers](../atlas/families/h.md#support-passed-on) · [Supported repair and reformation of a sustaining relation](../atlas/families/h.md#supported-renewal-recovery) · [The ends of a rule rebuilt from its members: no holder, and the end, do not return](../atlas/families/a.md#a-rule-with-no-holder-does-not-return) · [The kind relay: widening within kinds, what it can form by name only returning](../atlas/families/h.md#kind-relay-keeps-widening-within-kinds) · [The market model's share, margin and ends](../atlas/families/a.md#market-model-share-margin-and-ends) · [The overshooting thermostat with the window open](../atlas/families/f.md#overshooting-thermostat-alternates) · [The point of no return of a regime](../atlas/families/a.md#margin-of-a-regime) · [The regime in any amounts, and its runs over the reals](../atlas/families/h.md#regime-in-any-amounts) · [The rest outruns the renewal](../atlas/families/b.md#the-rest-outruns-the-renewal) · [The rest theorem](../atlas/families/g.md#continued-change-needs-openness) · [The stock buys time where the rebuild draws on it](../atlas/families/h.md#the-stock-buys-time-where-the-rebuild-draws-on-it) · [Thresholds of waiting](../atlas/families/e.md#thresholds-of-waiting) · [Weighting later draws less](../atlas/families/b.md#a-weighting-faster-than-renewal-ends-the-base) · [What a rise draws from beyond](../atlas/families/b.md#what-a-rise-draws-from-beyond) · [What closes what can form: a net draw on a required condition](../atlas/families/g.md#closing-needs-net-draw) · [What decides giving against keeping on a flow](../atlas/families/e.md#what-decides-giving-against-keeping-on-a-flow) · [What giving that waits draws on](../atlas/families/e.md#what-giving-that-waits-draws-on) · [What keeping forgoes, and a coupling against it](../atlas/families/b.md#keeping-forgoes-the-renewal-at-the-need) · [What taking all that is given excludes](../atlas/families/b.md#what-taking-all-excludes) · [What training installs](../atlas/families/d.md#what-training-installs) · [Where a rising take ends](../atlas/families/b.md#where-a-rising-take-ends) · [Where a run of a regime comes to rest](../atlas/families/g.md#where-a-run-of-a-regime-comes-to-rest) · [Which selections survive and remain executable when the lumping changes](../atlas/families/d.md#selection-when-the-lumping-changes)
 
@@ -65,9 +65,9 @@ Each of the atlas's 184 dynamics in one plain sentence, under the tie more of it
 <a id="tie-needs-dependent-stock"></a>
 ## what depends on it · needs · a stock
 
-65 dynamics speak of this tie: 23 of the 25 listed here, and 42 listed elsewhere. 2 of those listed here have more laws on a thinner tie of this kind, named with its two roles. [What the laws say of it](LAWS.md#tie-needs-dependent-stock).
+65 dynamics speak of this tie: 23 of the 25 listed here, and 42 listed elsewhere. 2 of those listed here have more theorems on a thinner tie of this kind, named with its two roles. [What the theorems say of it](LAWS.md#tie-needs-dependent-stock).
 
-| Dynamic | In one sentence | Its ties | Laws written up, of those in Lean | Tests |
+| Dynamic | In one sentence | Its ties | Theorems written up, of those in Lean | Tests |
 |---|---|---|---:|---:|
 | [A confined rise within a whole](../atlas/families/a.md#confined-rise-within-a-whole) | A line of descent thriving inside a larger whole ends once what the whole lives on is overdrawn until too little is left, if every descendant still depends on it. | **needs** · goes on through · draws on · gives back to · selects, favours | 4 of 5 | 0 |
 | [A coupling for each step kept](../atlas/families/h.md#a-step-coupling-keeps-at-every-horizon) | A gain for each step a stock meets a need keeps every best course meeting it, at any horizon, where it covers the renewal forgone and exceeds the final drain. | **needs** · reaches / lies beyond · draws on · gives back to | 6 of 18 | 0 |
@@ -96,7 +96,7 @@ Each of the atlas's 184 dynamics in one plain sentence, under the tie more of it
 | [What keeping forgoes, and a coupling against it](../atlas/families/b.md#keeping-forgoes-the-renewal-at-the-need) | Keeping a stock where something needs it forgoes regrowth each step and what is left at the end; a reward for keeping below that total fails, one above works. | **needs** · gives back to · draws on · selects, favours · reaches / lies beyond | 5 of 9 | 0 |
 
 <details>
-<summary>42 more speak of it, each listed where more of its laws are</summary>
+<summary>42 more speak of it, each listed where more of its theorems are</summary>
 
 [A consumer that switches stays consuming, on the whole-run reading](../atlas/families/a.md#substitution-preserves-consumption) · [A loss made only together](../atlas/families/b.md#joint-difference-making) · [A race for position](../atlas/families/b.md#a-race-for-position-draws-everything) · [A reader rebuilt from the level it reads: its end does not come back](../atlas/families/a.md#a-reader-rebuilt-from-its-stock-ends-with-it) · [An end cascading along total dependence](../atlas/families/a.md#a-cascade-along-total-dependence) · [An order with a set point](../atlas/families/b.md#what-a-set-point-optimum-does-beyond) · [Chosen encounters: records only narrow the candidates, and a wrong unique binding can meet the stopping rule](../atlas/families/d.md#encounter-selection-and-revision) · [Consumption ends with its feeders](../atlas/families/a.md#consumption-ends-with-feeders) · [Degeneration from a horizon](../atlas/families/a.md#degeneration-from-a-horizon) · [Dormancy over a stretch, and an ending that is final](../atlas/families/a.md#dormancy-over-a-stretch) · [Ending laws as regimes on a lineage](../atlas/families/a.md#ending-laws-as-regimes-on-a-lineage) · [Every optimum rebuilds a depleted base](../atlas/families/h.md#optima-rebuild-a-depleted-base) · [Groups with less leave nothing; groups on one family end together](../atlas/families/a.md#selection-among-groups-by-ending) · [LA4's season](../atlas/families/b.md#the-test-season-meets-the-optimum-laws) · [Own count misses joint excess](../atlas/families/b.md#own-count-misses-joint-excess) · [Persisting is a filter on what was chosen: keeping above ending, on the occasions met](../atlas/families/h.md#persisting-filters-what-was-chosen) · [Position does not protect](../atlas/families/b.md#position-does-not-protect) · [Reading in time: a selection read off continuation reads a loss before its point of no return, or too late](../atlas/families/b.md#reading-a-loss-in-time) · [Readings carried along a line, told apart by its standing late only within its coupling closure](../atlas/families/h.md#readings-carried-and-filtered) · [Readings revised at descent: a share moving by selection and revision, locked where closed under revision](../atlas/families/h.md#readings-revised-spread-and-locked) · [Renewal and consumption classify runs](../atlas/families/h.md#becoming-renewal-reading) · [Renewing and consuming formation](../atlas/families/h.md#renewing-consuming-formation) · [Revisiting, novelty and forgetting on the levels alone](../atlas/families/g.md#returning-novelty-forgetting-on-levels) · [Runaway, and the distance to the break that does not couple in](../atlas/families/d.md#a-break-read-only-by-threshold) · [Selection blind beyond the coupling closure](../atlas/families/b.md#unselected-beyond-the-coupling-closure) · [Several drawers: drawers in turn and at once](../atlas/families/b.md#drawers-in-turn) · [Several optimizers](../atlas/families/b.md#several-optimizers-drain-by-their-joint-capacity) · [Slowing down before a condition's own end](../atlas/families/a.md#slowing-down-before-an-own-end) · [Succession on a carrier provided for migration](../atlas/families/h.md#succession-on-a-funded-carrier) · [Support passed on by later gainers](../atlas/families/h.md#support-passed-on) · [The capture of a target](../atlas/families/c.md#target-capture) · [The kind relay: widening within kinds, what it can form by name only returning](../atlas/families/h.md#kind-relay-keeps-widening-within-kinds) · [The market model's share, margin and ends](../atlas/families/a.md#market-model-share-margin-and-ends) · [The rest outruns the renewal](../atlas/families/b.md#the-rest-outruns-the-renewal) · [Thresholds of waiting](../atlas/families/e.md#thresholds-of-waiting) · [Unceasing arising needs renewal](../atlas/families/g.md#unceasing-generation-needs-renewal) · [Weighting later draws less](../atlas/families/b.md#a-weighting-faster-than-renewal-ends-the-base) · [What decides giving against keeping on a flow](../atlas/families/e.md#what-decides-giving-against-keeping-on-a-flow) · [What giving that waits draws on](../atlas/families/e.md#what-giving-that-waits-draws-on) · [What keeping widening needs, and what carries it](../atlas/families/g.md#what-keeping-widening-needs) · [What taking all that is given excludes](../atlas/families/b.md#what-taking-all-excludes) · [Where a rising take ends](../atlas/families/b.md#where-a-rising-take-ends)
 
@@ -105,9 +105,9 @@ Each of the atlas's 184 dynamics in one plain sentence, under the tie more of it
 <a id="tie-selects-rule-selected"></a>
 ## a rule · selects and favours · what it selects among
 
-46 dynamics speak of this tie: 22 of the 22 listed here, and 24 listed elsewhere. [What the laws say of it](LAWS.md#tie-selects-rule-selected).
+46 dynamics speak of this tie: 22 of the 22 listed here, and 24 listed elsewhere. [What the theorems say of it](LAWS.md#tie-selects-rule-selected).
 
-| Dynamic | In one sentence | Its ties | Laws written up, of those in Lean | Tests |
+| Dynamic | In one sentence | Its ties | Theorems written up, of those in Lean | Tests |
 |---|---|---|---:|---:|
 | [A chooser's rule read from the count of its choices](../atlas/families/c.md#capture-by-counted-choices) | A rule set from the count of its own choices repeats them: each side of a threshold keeps its choice, and above it the lock outlasts any unread loss. | **selects, favours** · is set from · reaches / lies beyond | 4 of 9 | 1 |
 | [A counter-rule read from the share it selects](../atlas/families/c.md#a-counter-rule-read-from-its-own-share) | A rule made to break a lock can itself lock where it is set from the share of what it favours; reading losses beyond that share can unlock it. | **selects, favours** · is set from · reaches / lies beyond | 3 of 5 | 2 |
@@ -133,7 +133,7 @@ Each of the atlas's 184 dynamics in one plain sentence, under the tie more of it
 | [What training installs](../atlas/families/d.md#what-training-installs) | Training fixes what a learner does only on the courses it actually runs, and beyond them only as far as its representation lumps a history with one of them. | **selects, favours** · is read through · is of · reaches / lies beyond · draws on · gives back to | 6 of 18 | 5 |
 
 <details>
-<summary>24 more speak of it, each listed where more of its laws are</summary>
+<summary>24 more speak of it, each listed where more of its theorems are</summary>
 
 [A confined rise within a whole](../atlas/families/a.md#confined-rise-within-a-whole) · [A formed goal revised, and the operations it goes on through](../atlas/families/h.md#formed-goal-revision-continuation) · [A reading against the share does not ratchet](../atlas/families/c.md#a-reading-against-the-share-does-not-ratchet) · [A reading kept by its update, and the reading its own history carries](../atlas/families/d.md#a-reading-kept-by-its-update) · [A rule rebuilt from the members it limits](../atlas/families/h.md#a-rule-rebuilt-from-the-members-it-limits) · [Chosen encounters: records only narrow the candidates, and a wrong unique binding can meet the stopping rule](../atlas/families/d.md#encounter-selection-and-revision) · [Courses over a horizon](../atlas/families/b.md#horizon-optima-hold-the-greatest-renewal) · [Every optimum rebuilds a depleted base](../atlas/families/h.md#optima-rebuild-a-depleted-base) · [Groups with less leave nothing; groups on one family end together](../atlas/families/a.md#selection-among-groups-by-ending) · [LA4's season](../atlas/families/b.md#the-test-season-meets-the-optimum-laws) · [Never leaving a guard, conditions kept together, and lasting](../atlas/families/h.md#never-leaving-a-guard) · [Obscuration and reopening](../atlas/families/d.md#obscuration-and-reopening) · [Others drawing first end the base](../atlas/families/b.md#others-drawing-first-end-the-base) · [Readings carried along a line, told apart by its standing late only within its coupling closure](../atlas/families/h.md#readings-carried-and-filtered) · [Rewarding those who break the routes of correction (the third order)](../atlas/families/c.md#selection-for-narrowing-what-couples-in) · [Self-reproducing selection across carriers (the corpus's meta-attractor)](../atlas/families/c.md#self-reproducing-selection-across-carriers) · [Several drawers: drawers in turn and at once](../atlas/families/b.md#drawers-in-turn) · [The capture of a target](../atlas/families/c.md#target-capture) · [The ends of a rule rebuilt from its members: no holder, and the end, do not return](../atlas/families/a.md#a-rule-with-no-holder-does-not-return) · [The ends of drift absorb; fixation, with and without selection in the draw](../atlas/families/a.md#fixation-by-drift) · [The selection term and a lineage's fate](../atlas/families/h.md#the-selection-term-and-a-lineages-fate) · [What a rise draws from beyond](../atlas/families/b.md#what-a-rise-draws-from-beyond) · [What an optimum does beyond what couples in](../atlas/families/b.md#what-an-optimum-does-beyond-what-couples-in) · [What keeping forgoes, and a coupling against it](../atlas/families/b.md#keeping-forgoes-the-renewal-at-the-need)
 
@@ -142,9 +142,9 @@ Each of the atlas's 184 dynamics in one plain sentence, under the tie more of it
 <a id="tie-is-of-reading-subject"></a>
 ## a reading · is of, and accords or misses · what it is of
 
-31 dynamics speak of this tie: 14 of the 14 listed here, and 17 listed elsewhere. 2 of those listed here have more laws on a thinner tie of this kind, named with its two roles. [What the laws say of it](LAWS.md#tie-is-of-reading-subject).
+31 dynamics speak of this tie: 14 of the 14 listed here, and 17 listed elsewhere. 2 of those listed here have more theorems on a thinner tie of this kind, named with its two roles. [What the theorems say of it](LAWS.md#tie-is-of-reading-subject).
 
-| Dynamic | In one sentence | Its ties | Laws written up, of those in Lean | Tests |
+| Dynamic | In one sentence | Its ties | Theorems written up, of those in Lean | Tests |
 |---|---|---|---:|---:|
 | [A code formed between formations](../atlas/families/c.md#a-code-formed-between-formations) | Codes pairing senses with forms, changing only by copying one another, agree as the start and order of copying decide; where law and start are symmetric, exchanged codes never agree. | **is of** (a reading to a reading) · is revised by · is of | 6 of 21 | 0 |
 | [A code held as counts, learned from what is heard](../atlas/families/c.md#a-code-held-as-counts) | Agents holding counts of words and learning from what they hear, under a law privileging no agent and no word, never all hold one top word from a symmetric start. | **is of** (a reading to a reading) · is revised by · is of | 3 of 14 | 0 |
@@ -162,7 +162,7 @@ Each of the atlas's 184 dynamics in one plain sentence, under the tie more of it
 | [What recurs at fine steps can read as quiet at coarser ones](../atlas/families/f.md#recurring-at-fine-steps-quiet-at-coarser) | Read only at coarser steps, what begins and ends again and again in between can read as still; yet beginnings that recur in the coarse reading recur underneath. | **is of** | 3 of 5 | 0 |
 
 <details>
-<summary>17 more speak of it, each listed where more of its laws are</summary>
+<summary>17 more speak of it, each listed where more of its theorems are</summary>
 
 [A formed goal revised, and the operations it goes on through](../atlas/families/h.md#formed-goal-revision-continuation) · [A reading informed and revalued along one law: the updates commute, the courses do not](../atlas/families/d.md#a-reading-informed-and-revalued) · [A revision of a reading that opens a correction, along one process](../atlas/families/h.md#a-revision-that-opens-a-correction) · [Activity forms reference revision and makes it recur](../atlas/families/h.md#recurring-reference-revision) · [Adaptive closure: a reference changed outside what is retained is not resolved from the view](../atlas/families/d.md#adaptive-closure-cannot-resolve) · [Chosen encounters: records only narrow the candidates, and a wrong unique binding can meet the stopping rule](../atlas/families/d.md#encounter-selection-and-revision) · [Growth by attachment, and what a cut returns](../atlas/families/h.md#growth-constrained-fragmentation) · [Mutual dependence, and the exponential pace that loops of couplings give](../atlas/families/h.md#mutual-dependence-and-its-pace) · [Position does not protect](../atlas/families/b.md#position-does-not-protect) · [Recovery after interrupted change](../atlas/families/h.md#recoverable-mediated-change) · [Repeated publication under negation](../atlas/families/f.md#publication-under-negation-alternates) · [Revisiting, novelty and forgetting on the levels alone](../atlas/families/g.md#returning-novelty-forgetting-on-levels) · [Risk minimization on a shared renewal](../atlas/families/b.md#risk-minimization-on-a-shared-renewal) · [Succession on a carrier provided for migration](../atlas/families/h.md#succession-on-a-funded-carrier) · [The exit from a margin](../atlas/families/a.md#exit-from-a-margin) · [What training installs](../atlas/families/d.md#what-training-installs) · [Which selections survive and remain executable when the lumping changes](../atlas/families/d.md#selection-when-the-lumping-changes)
 
@@ -171,9 +171,9 @@ Each of the atlas's 184 dynamics in one plain sentence, under the tie more of it
 <a id="tie-passes-on-pattern-parts"></a>
 ## what goes on · goes on through its parts · its parts
 
-29 dynamics speak of this tie: 15 of the 15 listed here, and 14 listed elsewhere. [What the laws say of it](LAWS.md#tie-passes-on-pattern-parts).
+29 dynamics speak of this tie: 15 of the 15 listed here, and 14 listed elsewhere. [What the theorems say of it](LAWS.md#tie-passes-on-pattern-parts).
 
-| Dynamic | In one sentence | Its ties | Laws written up, of those in Lean | Tests |
+| Dynamic | In one sentence | Its ties | Theorems written up, of those in Lean | Tests |
 |---|---|---|---:|---:|
 | [A closed cycle sustains unceasing arising, without dissipation](../atlas/families/f.md#closed-cycle-without-dissipation) | A closed cycle that loses nothing can keep things beginning without end, one unit going round; where each beginning lowers something that never rises, beginning cannot go on without end. | **goes on through** · gives back to · draws on · passes in or out | 3 of 13 | 0 |
 | [A pattern outlasting its carriers lasts through passing](../atlas/families/h.md#a-pattern-lasts-through-passing) | A pattern outlasting each carrier lasts only while carriers keep beginning; where carrying comes only by passing, it keeps being passed, and ends within a carrier's span once passing stops. | **goes on through** | 5 of 9 | 0 |
@@ -192,7 +192,7 @@ Each of the atlas's 184 dynamics in one plain sentence, under the tie more of it
 | [The selection term and a lineage's fate](../atlas/families/h.md#the-selection-term-and-a-lineages-fate) | Selection within a line of descent, measured step by step, does not settle whether the line goes on or ends, unless it is at work again and again without end. | **goes on through** · selects, favours | 6 of 12 | 0 |
 
 <details>
-<summary>14 more speak of it, each listed where more of its laws are</summary>
+<summary>14 more speak of it, each listed where more of its theorems are</summary>
 
 [A confined rise within a whole](../atlas/families/a.md#confined-rise-within-a-whole) · [A goal along a lineage, need drift along a lineage, and what descent can form](../atlas/families/h.md#what-a-lineage-carries) · [A selection read off the pool its own course gives registers no removal](../atlas/families/b.md#selection-read-off-its-own-survivors) · [Degeneration from a horizon](../atlas/families/a.md#degeneration-from-a-horizon) · [Ending laws as regimes on a lineage](../atlas/families/a.md#ending-laws-as-regimes-on-a-lineage) · [Joint practice forms further participation and continuation](../atlas/families/h.md#joint-practice-forms-continuation) · [Lossless exchange can continue and return](../atlas/families/f.md#lossless-exchange-continues-and-returns) · [Mutation and the balance it sets](../atlas/families/h.md#mutation-and-the-balance-it-sets) · [Persisting is a filter on what was chosen: keeping above ending, on the occasions met](../atlas/families/h.md#persisting-filters-what-was-chosen) · [Readings revised at descent: a share moving by selection and revision, locked where closed under revision](../atlas/families/h.md#readings-revised-spread-and-locked) · [Self-reproducing selection across carriers (the corpus's meta-attractor)](../atlas/families/c.md#self-reproducing-selection-across-carriers) · [The ends of a rule rebuilt from its members: no holder, and the end, do not return](../atlas/families/a.md#a-rule-with-no-holder-does-not-return) · [The ends of drift absorb; fixation, with and without selection in the draw](../atlas/families/a.md#fixation-by-drift) · [What keeping widening needs, and what carries it](../atlas/families/g.md#what-keeping-widening-needs)
 
@@ -201,9 +201,9 @@ Each of the atlas's 184 dynamics in one plain sentence, under the tie more of it
 <a id="tie-reaches-stock-rule"></a>
 ## a stock · reaches, or lies beyond · a rule
 
-26 dynamics speak of this tie: 3 of the 9 listed here, and 23 listed elsewhere. 6 of those listed here have more laws on a thinner tie of this kind, named with its two roles. [What the laws say of it](LAWS.md#tie-reaches-stock-rule).
+26 dynamics speak of this tie: 3 of the 9 listed here, and 23 listed elsewhere. 6 of those listed here have more theorems on a thinner tie of this kind, named with its two roles. [What the theorems say of it](LAWS.md#tie-reaches-stock-rule).
 
-| Dynamic | In one sentence | Its ties | Laws written up, of those in Lean | Tests |
+| Dynamic | In one sentence | Its ties | Theorems written up, of those in Lean | Tests |
 |---|---|---|---:|---:|
 | [A loss made only together](../atlas/families/b.md#joint-difference-making) | A loss can be made by several parts only together: withhold any one and it still happens, withhold all and it does not; no single part makes the difference. | **reaches / lies beyond** (its parts to a stock) · needs · draws on | 3 of 12 | 0 |
 | [Coupled for each step](../atlas/families/b.md#coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it) | Drawers taking turns at one stock, each doing its best, leave nothing whenever what each gains per step from keeping a needed level is less than that level. | **reaches / lies beyond** · draws on · gives back to | 5 of 10 | 0 |
@@ -216,7 +216,7 @@ Each of the atlas's 184 dynamics in one plain sentence, under the tie more of it
 | [The rest outruns the renewal](../atlas/families/b.md#the-rest-outruns-the-renewal) | Where the rest outrun a stock's renewal, which needs it, the stock falls for good whatever another drawer takes; a score reading it only afterwards scores restraint and taking alike. | **reaches / lies beyond** (the drawers to a rule) · draws on · gives back to · needs | 3 of 5 | 9 |
 
 <details>
-<summary>23 more speak of it, each listed where more of its laws are</summary>
+<summary>23 more speak of it, each listed where more of its theorems are</summary>
 
 [A chooser's rule read from the count of its choices](../atlas/families/c.md#capture-by-counted-choices) · [A counter-rule read from the share it selects](../atlas/families/c.md#a-counter-rule-read-from-its-own-share) · [A coupling for each step kept](../atlas/families/h.md#a-step-coupling-keeps-at-every-horizon) · [A habit read as capture by counted choices](../atlas/families/c.md#habit-lock-in-active-inference) · [A pool that recruits through itself](../atlas/families/d.md#a-pool-that-recruits-through-itself) · [A race for position](../atlas/families/b.md#a-race-for-position-draws-everything) · [A relay reading late settles or leaves both ends without end](../atlas/families/f.md#late-relay-oscillates) · [An order with a set point](../atlas/families/b.md#what-a-set-point-optimum-does-beyond) · [Closed capture (meta-attractor, in the glossary's sense)](../atlas/families/c.md#closed-capture) · [Cooperation read as giving that waits on giving](../atlas/families/e.md#cooperation-read-as-giving-that-waits) · [Courses over a horizon](../atlas/families/b.md#horizon-optima-hold-the-greatest-renewal) · [How loops form within the unfolding](../atlas/families/f.md#how-loops-form) · [LA4's season](../atlas/families/b.md#the-test-season-meets-the-optimum-laws) · [Re-optimizing at every step](../atlas/families/b.md#re-optimizing-above-a-renewal-ends-it) · [Rewarding those who break the routes of correction (the third order)](../atlas/families/c.md#selection-for-narrowing-what-couples-in) · [Several optimizers](../atlas/families/b.md#several-optimizers-drain-by-their-joint-capacity) · [The lock draws its readers out](../atlas/families/c.md#the-lock-draws-its-readers-out) · [Two-sided regulation, and regulation that reads late](../atlas/families/h.md#two-sided-regulation-and-late-reading) · [Weighting later draws less](../atlas/families/b.md#a-weighting-faster-than-renewal-ends-the-base) · [What a rise draws from beyond](../atlas/families/b.md#what-a-rise-draws-from-beyond) · [What an optimum does beyond what couples in](../atlas/families/b.md#what-an-optimum-does-beyond-what-couples-in) · [What keeping forgoes, and a coupling against it](../atlas/families/b.md#keeping-forgoes-the-renewal-at-the-need) · [What training installs](../atlas/families/d.md#what-training-installs)
 
@@ -225,9 +225,9 @@ Each of the atlas's 184 dynamics in one plain sentence, under the tie more of it
 <a id="tie-revised-by-reading-subject"></a>
 ## a reading · is revised by · what it is of
 
-20 dynamics speak of this tie: 5 of the 5 listed here, and 15 listed elsewhere. [What the laws say of it](LAWS.md#tie-revised-by-reading-subject).
+20 dynamics speak of this tie: 5 of the 5 listed here, and 15 listed elsewhere. [What the theorems say of it](LAWS.md#tie-revised-by-reading-subject).
 
-| Dynamic | In one sentence | Its ties | Laws written up, of those in Lean | Tests |
+| Dynamic | In one sentence | Its ties | Theorems written up, of those in Lean | Tests |
 |---|---|---|---:|---:|
 | [A revision of a reading that opens a correction, along one process](../atlas/families/h.md#a-revision-that-opens-a-correction) | A change in how situations are read makes a new correction possible only if it tells apart situations once read alike, or lets something be done that could not be. | **is revised by** · is of · is read through | 3 of 8 | 1 |
 | [Chosen encounters: records only narrow the candidates, and a wrong unique binding can meet the stopping rule](../atlas/families/d.md#encounter-selection-and-revision) | Further records can only narrow what a form may mean, never bring a meaning back; in one built case every form resolves to one meaning and the answers are wrong. | **is revised by** · selects, favours · reaches / lies beyond · is of · needs | 3 of 16 | 0 |
@@ -236,7 +236,7 @@ Each of the atlas's 184 dynamics in one plain sentence, under the tie more of it
 | [What seeking cannot separate](../atlas/families/d.md#what-seeking-cannot-separate) | Seeking evidence cannot correct a wrong ranking of two hypotheses that every available experiment treats alike, however the experiments are chosen. | **is revised by** · reaches / lies beyond | 3 of 10 | 0 |
 
 <details>
-<summary>15 more speak of it, each listed where more of its laws are</summary>
+<summary>15 more speak of it, each listed where more of its theorems are</summary>
 
 [A family of readings within what it reads](../atlas/families/d.md#readings-within-what-they-read) · [A prediction read by what it predicts](../atlas/families/d.md#a-prediction-read-by-what-it-predicts) · [A reading informed and revalued along one law: the updates commute, the courses do not](../atlas/families/d.md#a-reading-informed-and-revalued) · [A reading kept by its update, and the reading its own history carries](../atlas/families/d.md#a-reading-kept-by-its-update) · [A selection read off the pool its own course gives registers no removal](../atlas/families/b.md#selection-read-off-its-own-survivors) · [Activity forms reference revision and makes it recur](../atlas/families/h.md#recurring-reference-revision) · [Adaptive closure: a reference changed outside what is retained is not resolved from the view](../atlas/families/d.md#adaptive-closure-cannot-resolve) · [Evidence through change: readings propagated through admitted changes, and a change recorded as none](../atlas/families/d.md#evidence-through-change) · [Extrapolation by elimination](../atlas/families/d.md#learning-by-refutation) · [Joint practice forms further participation and continuation](../atlas/families/h.md#joint-practice-forms-continuation) · [Obscuration and reopening](../atlas/families/d.md#obscuration-and-reopening) · [Readings revised at descent: a share moving by selection and revision, locked where closed under revision](../atlas/families/h.md#readings-revised-spread-and-locked) · [What a course chosen through its model does not test](../atlas/families/d.md#what-a-course-chosen-through-its-model-does-not-test) · [What holding an act for a reading is worth: a listing that fixes the sign and never meets the stop](../atlas/families/d.md#a-stop-passed-by-a-listing-that-fixes-the-sign) · [Which selections survive and remain executable when the lumping changes](../atlas/families/d.md#selection-when-the-lumping-changes)
 
@@ -245,14 +245,14 @@ Each of the atlas's 184 dynamics in one plain sentence, under the tie more of it
 <a id="tie-read-through-rule-readers"></a>
 ## a rule · is read through · its readers
 
-17 dynamics speak of this tie: 0 of the 1 listed here, and 17 listed elsewhere. 1 of those listed here has more laws on a thinner tie of this kind, named with its two roles. [What the laws say of it](LAWS.md#tie-read-through-rule-readers).
+17 dynamics speak of this tie: 0 of the 1 listed here, and 17 listed elsewhere. 1 of those listed here has more theorems on a thinner tie of this kind, named with its two roles. [What the theorems say of it](LAWS.md#tie-read-through-rule-readers).
 
-| Dynamic | In one sentence | Its ties | Laws written up, of those in Lean | Tests |
+| Dynamic | In one sentence | Its ties | Theorems written up, of those in Lean | Tests |
 |---|---|---|---:|---:|
 | [Which selections survive and remain executable when the lumping changes](../atlas/families/d.md#selection-when-the-lumping-changes) | When what is lumped together changes, every selection possible before stays possible exactly when no old distinction is lost; carrying one out also needs a stock that covers its acts. | **is read through** (a rule to a reading) · is of · draws on · gives back to · is revised by | 6 of 17 | 0 |
 
 <details>
-<summary>17 more speak of it, each listed where more of its laws are</summary>
+<summary>17 more speak of it, each listed where more of its theorems are</summary>
 
 [A cascade at the histories reached, and readers reading readers](../atlas/families/d.md#a-cascade-at-the-histories-reached) · [A pool that recruits through itself](../atlas/families/d.md#a-pool-that-recruits-through-itself) · [A selection read off the pool its own course gives registers no removal](../atlas/families/b.md#selection-read-off-its-own-survivors) · [Adaptive closure: a reference changed outside what is retained is not resolved from the view](../atlas/families/d.md#adaptive-closure-cannot-resolve) · [Capture reaching the routes of 明 (the second order)](../atlas/families/c.md#capture-reaching-the-routes-of-correction) · [Closed capture (meta-attractor, in the glossary's sense)](../atlas/families/c.md#closed-capture) · [Evidence through change: readings propagated through admitted changes, and a change recorded as none](../atlas/families/d.md#evidence-through-change) · [Readers drawn from the selected](../atlas/families/c.md#readers-drawn-from-the-selected) · [Reading in time: a selection read off continuation reads a loss before its point of no return, or too late](../atlas/families/b.md#reading-a-loss-in-time) · [Readings carried along a line, told apart by its standing late only within its coupling closure](../atlas/families/h.md#readings-carried-and-filtered) · [Runaway, and the distance to the break that does not couple in](../atlas/families/d.md#a-break-read-only-by-threshold) · [Selection blind beyond the coupling closure](../atlas/families/b.md#unselected-beyond-the-coupling-closure) · [The critical mass: what comes back to the shapers, read by readers drawn from the selected](../atlas/families/c.md#shaping-read-by-readers-drawn-from-the-selected) · [The lock draws its readers out](../atlas/families/c.md#the-lock-draws-its-readers-out) · [The loss read in time by the others, joined to the critical mass](../atlas/families/c.md#loss-read-in-time-by-the-others) · [The stock buys time where the rebuild draws on it](../atlas/families/h.md#the-stock-buys-time-where-the-rebuild-draws-on-it) · [What training installs](../atlas/families/d.md#what-training-installs)
 
@@ -261,14 +261,14 @@ Each of the atlas's 184 dynamics in one plain sentence, under the tie more of it
 <a id="tie-set-from-rule-selected"></a>
 ## a rule · is set from · what it selects among
 
-16 dynamics speak of this tie: 1 of the 1 listed here, and 15 listed elsewhere. [What the laws say of it](LAWS.md#tie-set-from-rule-selected).
+16 dynamics speak of this tie: 1 of the 1 listed here, and 15 listed elsewhere. [What the theorems say of it](LAWS.md#tie-set-from-rule-selected).
 
-| Dynamic | In one sentence | Its ties | Laws written up, of those in Lean | Tests |
+| Dynamic | In one sentence | Its ties | Theorems written up, of those in Lean | Tests |
 |---|---|---|---:|---:|
 | [A reading against the share does not ratchet](../atlas/families/c.md#a-reading-against-the-share-does-not-ratchet) | A rule that keeps favouring, but is reset so that a larger share of what it favours never gives a higher rule, is never reset above an earlier resetting. | **is set from** · selects, favours | 2 of 2 | 0 |
 
 <details>
-<summary>15 more speak of it, each listed where more of its laws are</summary>
+<summary>15 more speak of it, each listed where more of its theorems are</summary>
 
 [A chooser's rule read from the count of its choices](../atlas/families/c.md#capture-by-counted-choices) · [A counter-rule read from the share it selects](../atlas/families/c.md#a-counter-rule-read-from-its-own-share) · [A habit read as capture by counted choices](../atlas/families/c.md#habit-lock-in-active-inference) · [A rule rebuilt from the members it limits](../atlas/families/h.md#a-rule-rebuilt-from-the-members-it-limits) · [A threshold reading, read one step late, from a start against it](../atlas/families/f.md#threshold-reading-read-late-alternates) · [Capture reaching the routes of 明 (the second order)](../atlas/families/c.md#capture-reaching-the-routes-of-correction) · [Capture through the rule](../atlas/families/c.md#capture-through-the-rule) · [Closed capture (meta-attractor, in the glossary's sense)](../atlas/families/c.md#closed-capture) · [Never leaving a guard, conditions kept together, and lasting](../atlas/families/h.md#never-leaving-a-guard) · [Readers drawn from the selected](../atlas/families/c.md#readers-drawn-from-the-selected) · [Self-reproducing selection across carriers (the corpus's meta-attractor)](../atlas/families/c.md#self-reproducing-selection-across-carriers) · [The capacity to shape the rule, selected by what comes back to it](../atlas/families/c.md#shaping-the-rule-selected-by-what-comes-back) · [The critical mass: what comes back to the shapers, read by readers drawn from the selected](../atlas/families/c.md#shaping-read-by-readers-drawn-from-the-selected) · [The lock draws its readers out](../atlas/families/c.md#the-lock-draws-its-readers-out) · [The market model's share, margin and ends](../atlas/families/a.md#market-model-share-margin-and-ends)
 
@@ -277,9 +277,9 @@ Each of the atlas's 184 dynamics in one plain sentence, under the tie more of it
 <a id="tie-gives-to-pattern-pattern"></a>
 ## what goes on · gives to, waiting on · what goes on
 
-11 dynamics speak of this tie: 8 of the 9 listed here, and 3 listed elsewhere. 1 of those listed here has more laws on a thinner tie of this kind, named with its two roles. [What the laws say of it](LAWS.md#tie-gives-to-pattern-pattern).
+11 dynamics speak of this tie: 8 of the 9 listed here, and 3 listed elsewhere. 1 of those listed here has more theorems on a thinner tie of this kind, named with its two roles. [What the theorems say of it](LAWS.md#tie-gives-to-pattern-pattern).
 
-| Dynamic | In one sentence | Its ties | Laws written up, of those in Lean | Tests |
+| Dynamic | In one sentence | Its ties | Theorems written up, of those in Lean | Tests |
 |---|---|---|---:|---:|
 | [A circular dependence: maintenance running or a wait no one can begin](../atlas/families/e.md#a-circular-wait-needs-a-reserve-present) | In one built model, two sides passing activity to each other are jointly active only if they started so; starting from rest takes a reserve already present, not one still to come. | **gives to, waiting on** · draws on | 2 of 9 | 0 |
 | [A pair tolerates only within a window](../atlas/families/e.md#a-pair-tolerates-only-within-a-window) | In a pair, a last-step rule where more giving never brings less cannot both restore mutual giving after one withholding and answer a constant withholder; a two-step window does both. | **gives to, waiting on** | 6 of 23 | 0 |
@@ -292,7 +292,7 @@ Each of the atlas's 184 dynamics in one plain sentence, under the tie more of it
 | [Without memory, a withholding returns around every loop of waits](../atlas/families/f.md#withholding-returns-around-a-loop) | Where each gives exactly when all it waits on just gave, a withholding moves along the waits, returns around every loop, and passes out where no chain is long enough. | **gives to, waiting on** | 3 of 12 | 0 |
 
 <details>
-<summary>3 more speak of it, each listed where more of its laws are</summary>
+<summary>3 more speak of it, each listed where more of its theorems are</summary>
 
 [Cooperation read as giving that waits on giving](../atlas/families/e.md#cooperation-read-as-giving-that-waits) · [Offspring read from giving that waits](../atlas/families/e.md#offspring-read-from-giving-that-waits) · [What giving that waits draws on](../atlas/families/e.md#what-giving-that-waits-draws-on)
 
@@ -301,14 +301,14 @@ Each of the atlas's 184 dynamics in one plain sentence, under the tie more of it
 <a id="tie-reaches-stock-readers"></a>
 ## a stock · reaches, or lies beyond · its readers
 
-7 dynamics speak of this tie: 1 of the 1 listed here, and 6 listed elsewhere. [What the laws say of it](LAWS.md#tie-reaches-stock-readers).
+7 dynamics speak of this tie: 1 of the 1 listed here, and 6 listed elsewhere. [What the theorems say of it](LAWS.md#tie-reaches-stock-readers).
 
-| Dynamic | In one sentence | Its ties | Laws written up, of those in Lean | Tests |
+| Dynamic | In one sentence | Its ties | Theorems written up, of those in Lean | Tests |
 |---|---|---|---:|---:|
 | [A pool that recruits through itself](../atlas/families/d.md#a-pool-that-recruits-through-itself) | A pool that admits its next readers only through what its present readers read comes to read a loss only through readers it would have admitted without the loss. | **reaches / lies beyond** · is read through · reaches / lies beyond | 4 of 12 | 0 |
 
 <details>
-<summary>6 more speak of it, each listed where more of its laws are</summary>
+<summary>6 more speak of it, each listed where more of its theorems are</summary>
 
 [Capture reaching the routes of 明 (the second order)](../atlas/families/c.md#capture-reaching-the-routes-of-correction) · [Readers drawn from the selected](../atlas/families/c.md#readers-drawn-from-the-selected) · [Selection blind beyond the coupling closure](../atlas/families/b.md#unselected-beyond-the-coupling-closure) · [The critical mass: what comes back to the shapers, read by readers drawn from the selected](../atlas/families/c.md#shaping-read-by-readers-drawn-from-the-selected) · [The loss read in time by the others, joined to the critical mass](../atlas/families/c.md#loss-read-in-time-by-the-others) · [What a rise draws from beyond](../atlas/families/b.md#what-a-rise-draws-from-beyond)
 
@@ -317,15 +317,15 @@ Each of the atlas's 184 dynamics in one plain sentence, under the tie more of it
 <a id="tie-needs-renewer-stock"></a>
 ## what gives back · needs · a stock
 
-6 dynamics speak of this tie: 2 of the 2 listed here, and 4 listed elsewhere. [What the laws say of it](LAWS.md#tie-needs-renewer-stock).
+6 dynamics speak of this tie: 2 of the 2 listed here, and 4 listed elsewhere. [What the theorems say of it](LAWS.md#tie-needs-renewer-stock).
 
-| Dynamic | In one sentence | Its ties | Laws written up, of those in Lean | Tests |
+| Dynamic | In one sentence | Its ties | Theorems written up, of those in Lean | Tests |
 |---|---|---|---:|---:|
 | [The point of no return of a regime](../atlas/families/a.md#margin-of-a-regime) | Under a standing draw, a stock that gives back by its level has an exact point: from below it the stock runs out; from at or above, it holds. | **needs** · draws on · gives back to | 6 of 13 | 9 |
 | [Where a run of a regime comes to rest](../atlas/families/g.md#where-a-run-of-a-regime-comes-to-rest) | A stock drawn on steadily, which gives back no less when more is left and stays within bounds, stops changing within a limited number of steps. | **needs** · draws on · gives back to · gives to, waiting on | 3 of 7 | 3 |
 
 <details>
-<summary>4 more speak of it, each listed where more of its laws are</summary>
+<summary>4 more speak of it, each listed where more of its theorems are</summary>
 
 [A whole drawing beyond renewal ends](../atlas/families/b.md#whole-drawing-beyond-renewal-ends) · [Loss of renewal for good](../atlas/families/a.md#loss-of-renewal-for-good) · [Position does not protect](../atlas/families/b.md#position-does-not-protect) · [Where a rising take ends](../atlas/families/b.md#where-a-rising-take-ends)
 
@@ -334,9 +334,9 @@ Each of the atlas's 184 dynamics in one plain sentence, under the tie more of it
 <a id="tie-reaches-stock-stock"></a>
 ## a stock · reaches, or lies beyond · a stock
 
-6 dynamics speak of this tie: 4 of the 4 listed here, and 2 listed elsewhere. [What the laws say of it](LAWS.md#tie-reaches-stock-stock).
+6 dynamics speak of this tie: 4 of the 4 listed here, and 2 listed elsewhere. [What the theorems say of it](LAWS.md#tie-reaches-stock-stock).
 
-| Dynamic | In one sentence | Its ties | Laws written up, of those in Lean | Tests |
+| Dynamic | In one sentence | Its ties | Theorems written up, of those in Lean | Tests |
 |---|---|---|---:|---:|
 | [A coupling saturated by what it has carried](../atlas/families/g.md#a-coupling-saturated-by-what-it-has-carried) | A link carrying one stock's level into another, never strengthening with what it has carried, shuts off for good exactly where its strength reaches zero. | **reaches / lies beyond** · gives back to | 4 of 13 | 0 |
 | [An end cascading along total dependence](../atlas/families/a.md#a-cascade-along-total-dependence) | If a drawn-on stock gets nothing back once another is empty, the other's end ends it too; an end runs down every chain of such dependence, a ring ending together. | **reaches / lies beyond** · draws on · gives back to · needs | 6 of 21 | 0 |
@@ -344,7 +344,7 @@ Each of the atlas's 184 dynamics in one plain sentence, under the tie more of it
 | [Whether a loop closes, keeps or widens a difference](../atlas/families/f.md#whether-a-loop-closes-a-difference) | A difference sent round a loop shrinks only if some link passes on less than it receives; with whole-number multiplying links it vanishes at once, stays, or grows without limit. | **reaches / lies beyond** | 5 of 13 | 0 |
 
 <details>
-<summary>2 more speak of it, each listed where more of its laws are</summary>
+<summary>2 more speak of it, each listed where more of its theorems are</summary>
 
 [Cooperation read as giving that waits on giving](../atlas/families/e.md#cooperation-read-as-giving-that-waits) · [Mutual dependence, and the exponential pace that loops of couplings give](../atlas/families/h.md#mutual-dependence-and-its-pace)
 
@@ -353,14 +353,14 @@ Each of the atlas's 184 dynamics in one plain sentence, under the tie more of it
 <a id="tie-crosses-pattern-stock"></a>
 ## what goes on · passes in or out · a stock
 
-4 dynamics speak of this tie: 0 of the 1 listed here, and 4 listed elsewhere. 1 of those listed here has more laws on a thinner tie of this kind, named with its two roles. [What the laws say of it](LAWS.md#tie-crosses-pattern-stock).
+4 dynamics speak of this tie: 0 of the 1 listed here, and 4 listed elsewhere. 1 of those listed here has more theorems on a thinner tie of this kind, named with its two roles. [What the theorems say of it](LAWS.md#tie-crosses-pattern-stock).
 
-| Dynamic | In one sentence | Its ties | Laws written up, of those in Lean | Tests |
+| Dynamic | In one sentence | Its ties | Theorems written up, of those in Lean | Tests |
 |---|---|---|---:|---:|
 | [Growth by attachment, and what a cut returns](../atlas/families/h.md#growth-constrained-fragmentation) | Where a whole grows by attaching each new member to an earlier one, cutting any link separates its ends; one added join prevents this exactly where it bridges that link. | **passes in or out** (its parts to what goes on) · is of | 3 of 13 | 0 |
 
 <details>
-<summary>4 more speak of it, each listed where more of its laws are</summary>
+<summary>4 more speak of it, each listed where more of its theorems are</summary>
 
 [A closed cycle sustains unceasing arising, without dissipation](../atlas/families/f.md#closed-cycle-without-dissipation) · [Rest at every resolution](../atlas/families/g.md#rest-at-every-resolution) · [Rest exactly where the total stops falling](../atlas/families/g.md#rest-exactly-where-falls-stop) · [The rest theorem](../atlas/families/g.md#continued-change-needs-openness)
 
@@ -369,10 +369,10 @@ Each of the atlas's 184 dynamics in one plain sentence, under the tie more of it
 <a id="tie-crosses-stock-stock"></a>
 ## a stock · passes in or out · a stock
 
-4 dynamics speak of this tie: 0 of the 0 listed here, and 4 listed elsewhere. [What the laws say of it](LAWS.md#tie-crosses-stock-stock).
+4 dynamics speak of this tie: 0 of the 0 listed here, and 4 listed elsewhere. [What the theorems say of it](LAWS.md#tie-crosses-stock-stock).
 
 <details>
-<summary>4 more speak of it, each listed where more of its laws are</summary>
+<summary>4 more speak of it, each listed where more of its theorems are</summary>
 
 [A continuing family cannot go unfed from beyond](../atlas/families/h.md#continuing-self-fed-from-beyond) · [No finite part bears taking](../atlas/families/b.md#no-finite-part-bears-taking) · [Revisiting, novelty and forgetting on the levels alone](../atlas/families/g.md#returning-novelty-forgetting-on-levels) · [What keeping widening needs, and what carries it](../atlas/families/g.md#what-keeping-widening-needs)
 
@@ -381,16 +381,16 @@ Each of the atlas's 184 dynamics in one plain sentence, under the tie more of it
 <a id="tie-reaches-subject-readers"></a>
 ## what it is of · reaches, or lies beyond · its readers
 
-4 dynamics speak of this tie: 3 of the 3 listed here, and 1 listed elsewhere. [What the laws say of it](LAWS.md#tie-reaches-subject-readers).
+4 dynamics speak of this tie: 3 of the 3 listed here, and 1 listed elsewhere. [What the theorems say of it](LAWS.md#tie-reaches-subject-readers).
 
-| Dynamic | In one sentence | Its ties | Laws written up, of those in Lean | Tests |
+| Dynamic | In one sentence | Its ties | Theorems written up, of those in Lean | Tests |
 |---|---|---|---:|---:|
 | [A cascade at the histories reached, and readers reading readers](../atlas/families/d.md#a-cascade-at-the-histories-reached) | Where readers act in turn and each later one acts the same whatever reaches it, at the acts it actually meets, the acts carry only what reached the earlier ones. | **reaches / lies beyond** · is read through · reaches / lies beyond | 3 of 11 | 1 |
 | [Adaptive closure: a reference changed outside what is retained is not resolved from the view](../atlas/families/d.md#adaptive-closure-cannot-resolve) | If the standard a judgment was checked against changes and nothing kept records it, no repeating, producing or re-reading of what was kept reveals the change; reopening and inspecting can. | **reaches / lies beyond** · is of · is read through · is revised by | 3 of 8 | 0 |
 | [What a course chosen through its model does not test](../atlas/families/d.md#what-a-course-chosen-through-its-model-does-not-test) | Anything that chooses its acts by its own model tests that model only where those acts lead: a model right along that path and wrong off it can stay unrefuted. | **reaches / lies beyond** · is revised by | 6 of 20 | 2 |
 
 <details>
-<summary>1 more speak of it, each listed where more of its laws are</summary>
+<summary>1 more speak of it, each listed where more of its theorems are</summary>
 
 [What seeking cannot separate](../atlas/families/d.md#what-seeking-cannot-separate)
 
@@ -399,15 +399,15 @@ Each of the atlas's 184 dynamics in one plain sentence, under the tie more of it
 <a id="tie-reaches-subject-reading"></a>
 ## what it is of · reaches, or lies beyond · a reading
 
-4 dynamics speak of this tie: 2 of the 2 listed here, and 2 listed elsewhere. [What the laws say of it](LAWS.md#tie-reaches-subject-reading).
+4 dynamics speak of this tie: 2 of the 2 listed here, and 2 listed elsewhere. [What the theorems say of it](LAWS.md#tie-reaches-subject-reading).
 
-| Dynamic | In one sentence | Its ties | Laws written up, of those in Lean | Tests |
+| Dynamic | In one sentence | Its ties | Theorems written up, of those in Lean | Tests |
 |---|---|---|---:|---:|
 | [A reading informed and revalued along one law: the updates commute, the courses do not](../atlas/families/d.md#a-reading-informed-and-revalued) | A reading changes only through what it reads; shown part of the world and given new values, in either order, it comes to one state, though its answers meanwhile can differ. | **reaches / lies beyond** · is revised by · reaches / lies beyond · is of | 3 of 16 | 1 |
 | [Position does not protect](../atlas/families/b.md#position-does-not-protect) | A part's position among the others gives no protection: where a supply is drawn past what comes back, whatever depends on it ends, the part with the largest amount included. | **reaches / lies beyond** · is of · draws on · needs | 6 of 14 | 0 |
 
 <details>
-<summary>2 more speak of it, each listed where more of its laws are</summary>
+<summary>2 more speak of it, each listed where more of its theorems are</summary>
 
 [A wrong projection admitted at every step while the move goes in step with what it leaves out](../atlas/families/d.md#a-wrong-projection-admitted-at-every-step) · [What holding an act for a reading is worth: a listing that fixes the sign and never meets the stop](../atlas/families/d.md#a-stop-passed-by-a-listing-that-fixes-the-sign)
 
@@ -416,10 +416,10 @@ Each of the atlas's 184 dynamics in one plain sentence, under the tie more of it
 <a id="tie-read-through-reading-readers"></a>
 ## a reading · is read through · its readers
 
-4 dynamics speak of this tie: 0 of the 0 listed here, and 4 listed elsewhere. [What the laws say of it](LAWS.md#tie-read-through-reading-readers).
+4 dynamics speak of this tie: 0 of the 0 listed here, and 4 listed elsewhere. [What the theorems say of it](LAWS.md#tie-read-through-reading-readers).
 
 <details>
-<summary>4 more speak of it, each listed where more of its laws are</summary>
+<summary>4 more speak of it, each listed where more of its theorems are</summary>
 
 [A merged distinction returns only from a form held outside, or by coining](../atlas/families/g.md#merged-distinctions-stay-merged) · [A prediction read by what it predicts](../atlas/families/d.md#a-prediction-read-by-what-it-predicts) · [Correction is not calibration: references recover the report, and later change defeats it](../atlas/families/d.md#correction-is-not-calibration) · [Every loss passes a juncture](../atlas/families/a.md#every-loss-passes-a-juncture)
 
@@ -428,9 +428,9 @@ Each of the atlas's 184 dynamics in one plain sentence, under the tie more of it
 <a id="role-pattern"></a>
 ## One role alone: what goes on
 
-4 dynamics whose written-up laws are about no tie, and mostly about this role.
+4 dynamics whose written-up theorems are about no tie, and mostly about this role.
 
-| Dynamic | In one sentence | Its ties | Laws written up, of those in Lean | Tests |
+| Dynamic | In one sentence | Its ties | Theorems written up, of those in Lean | Tests |
 |---|---|---|---:|---:|
 | [Degeneration from a horizon](../atlas/families/a.md#degeneration-from-a-horizon) | When nothing that carries a thing on is still active at some fixed step, it ends along every path; saying where requires deciding, point by point, whether it continues. | goes on through · needs · draws on · gives back to | 6 of 11 | 0 |
 | [Ending laws as regimes on a lineage](../atlas/families/a.md#ending-laws-as-regimes-on-a-lineage) | A line of descent ends where what it lives on is overdrawn or drained at each step; a doubling draw never refilled must stop; the stock only sets the deadline. | goes on through · draws on · gives back to · needs | 6 of 13 | 0 |
@@ -440,9 +440,9 @@ Each of the atlas's 184 dynamics in one plain sentence, under the tie more of it
 <a id="role-stock"></a>
 ## One role alone: a stock
 
-11 dynamics whose written-up laws are about no tie, and mostly about this role.
+11 dynamics whose written-up theorems are about no tie, and mostly about this role.
 
-| Dynamic | In one sentence | Its ties | Laws written up, of those in Lean | Tests |
+| Dynamic | In one sentence | Its ties | Theorems written up, of those in Lean | Tests |
 |---|---|---|---:|---:|
 | [A relay reading late settles or leaves both ends without end](../atlas/families/f.md#late-relay-oscillates) | A switch correcting a level from old readings settles it inside its band when lateness times push fits the band; otherwise it can swing past both ends for ever. | reaches / lies beyond · gives back to · draws on | 6 of 9 | 0 |
 | [Beyond a band, support can sustain a cycle](../atlas/families/f.md#support-beyond-a-band-can-cycle) | Two stocks that each give back only while enough is left of the other can keep each other going in a cycle for ever, though each alone would run out. | gives to, waiting on · draws on · gives back to | 4 of 7 | 0 |
@@ -459,49 +459,49 @@ Each of the atlas's 184 dynamics in one plain sentence, under the tie more of it
 <a id="role-dependent"></a>
 ## One role alone: what depends on it
 
-1 dynamic whose written-up laws are about no tie, and mostly about this role.
+1 dynamic whose written-up theorems are about no tie, and mostly about this role.
 
-| Dynamic | In one sentence | Its ties | Laws written up, of those in Lean | Tests |
+| Dynamic | In one sentence | Its ties | Theorems written up, of those in Lean | Tests |
 |---|---|---|---:|---:|
 | [Dormancy over a stretch, and an ending that is final](../atlas/families/a.md#dormancy-over-a-stretch) | Left unsupported for as many steps as its decaying reserve holds, something is inactive at the last of them; if that ending is final, support returning later revives nothing. | needs · draws on | 4 of 5 | 0 |
 
 <a id="role-selected"></a>
 ## One role alone: what it selects among
 
-1 dynamic whose written-up laws are about no tie, and mostly about this role.
+1 dynamic whose written-up theorems are about no tie, and mostly about this role.
 
-| Dynamic | In one sentence | Its ties | Laws written up, of those in Lean | Tests |
+| Dynamic | In one sentence | Its ties | Theorems written up, of those in Lean | Tests |
 |---|---|---|---:|---:|
 | [The ends of drift absorb; fixation, with and without selection in the draw](../atlas/families/a.md#fixation-by-drift) | Drawing each generation from the last, nearly every way of drawing ends with one kind alone, by its starting share when none is favoured; a favoured kind can be lost. | selects, favours · goes on through | 6 of 15 | 0 |
 
 <a id="anything-that-goes-on"></a>
 ## Anything that goes on
 
-23 dynamics name no role: their laws hold of every course, every process or every relation. They are the web's legend: what staying, leaving, returning and resting mean on every tie. 6 more are listed with them: they name ties, and their written-up laws name no role.
+23 dynamics name no role: their theorems hold of every course, every process or every relation. They are the web's legend: what staying, leaving, returning and resting mean on every tie. 6 more are listed with them: they name ties, and their written-up theorems name no role.
 
-| Dynamic | In one sentence | Its ties | Laws written up, of those in Lean | Tests |
+| Dynamic | In one sentence | Its ties | Theorems written up, of those in Lean | Tests |
 |---|---|---|---:|---:|
 | [A course that only returns](../atlas/families/f.md#a-course-that-only-returns) | A course that changes at every step but only goes back and forth does not keep widening what it can reach: what one step opens, the next step loses. | none | 3 of 8 | 0 |
 | [A map moving every value never rests along its run](../atlas/families/f.md#a-map-moving-every-value-never-rests) | A value stepped again and again by a map that moves every value never rests: from every start, each step differs from the one before. | none | 4 of 5 | 0 |
 | [A regularity kept and left along its own line](../atlas/families/h.md#a-regularity-kept-and-changed) | A regularity that is kept can always be kept one step more; a line of continuation ends only by a step that leaves its regularity. | none | 6 of 7 | 0 |
 | [A run round a loop keeps changing](../atlas/families/f.md#a-run-round-a-loop-keeps-changing) | Where a change a process can reach can also be undone, some course goes round that loop and keeps changing; a course that keeps changing never settles. | none | 3 of 5 | 0 |
 | [Basins of a determined law, one cycle each](../atlas/families/a.md#basins-of-a-determined-law) | Where each state has one next state, courses that meet form a basin; with finitely many states every course enters a cycle within that many steps, one cycle per basin. | none | 4 of 4 | 0 |
-| [Capture reaching the routes of 明 (the second order)](../atlas/families/c.md#capture-reaching-the-routes-of-correction) | A reading, not a law: a locked selection can come to set the very routes by which what it does not read could reach it. | is set from · is read through · reaches / lies beyond | 0 of 0 | 0 |
+| [Capture reaching the routes of 明 (the second order)](../atlas/families/c.md#capture-reaching-the-routes-of-correction) | A reading, not a theorem: a locked selection can come to set the very routes by which what it does not read could reach it. | is set from · is read through · reaches / lies beyond | 0 of 0 | 0 |
 | [Ceasing needs arising; under a bounded list the two keep pace](../atlas/families/g.md#ceasing-needs-arising) | Where finitely many things are present at each step, endings can recur without end only if beginnings do; if their number keeps returning under a bound, the two recur together. | none | 6 of 20 | 0 |
-| [Cooperation read as giving that waits on giving](../atlas/families/e.md#cooperation-read-as-giving-that-waits) | A reading, not a result: it pairs cooperation among strangers with laws, proved elsewhere, of giving that waits on other giving along long chains; the pairing is untested. | gives to, waiting on · reaches / lies beyond | 0 of 0 | 0 |
+| [Cooperation read as giving that waits on giving](../atlas/families/e.md#cooperation-read-as-giving-that-waits) | A reading, not a result: it pairs cooperation among strangers with theorems, proved elsewhere, on giving that waits on other giving along long chains; the pairing is untested. | gives to, waiting on · reaches / lies beyond | 0 of 0 | 0 |
 | [Drawn exactly where it does not return](../atlas/families/a.md#attraction-is-not-returning) | Where each state has one next state, a state is drawn into a region never left exactly when its course never comes back to it; once in, always in. | none | 4 of 15 | 0 |
 | [Four routes of transition, none a proved phase transition](../atlas/families/a.md#four-routes-of-transition) | A reading, with none proved, names four routes out of a region that keeps a course: a parameter change, a shock, failed correction, or change too fast for correction. | gives back to · draws on | 0 of 0 | 0 |
 | [Generation, keeping and degeneration at two grains](../atlas/families/h.md#generation-and-degeneration-at-two-grains) | Something made of parts can go on by renewing them, go on by keeping them, or end on every branch; going on and ending on every branch never hold together. | none | 4 of 17 | 0 |
-| [Laws path by path, and rest not in expectation](../atlas/families/g.md#laws-with-noise) | With chance in what is taken and given, the laws of exchange hold along each single run; balance carries to the average of runs, coming to rest does not. | none | 3 of 6 | 0 |
-| [Locked seeking](../atlas/families/d.md#locked-seeking) | A seeking locked onto a target that cannot be met at rest never rests with it met; which seeking is so locked is a reading, not a law. | none | 3 of 3 | 0 |
+| [Laws path by path, and rest not in expectation](../atlas/families/g.md#laws-with-noise) | With chance in what is taken and given, the theorems on exchange hold along each single run; balance carries to the average of runs, coming to rest does not. | none | 3 of 6 | 0 |
+| [Locked seeking](../atlas/families/d.md#locked-seeking) | A seeking locked onto a target that cannot be met at rest never rests with it met; which seeking is so locked is a reading, not a theorem. | none | 3 of 3 | 0 |
 | [Necessarily drawn exactly what does not return](../atlas/families/a.md#necessarily-drawn-is-not-returning) | Where courses branch, a state is lost for good on every path exactly when no path leads back to it; lost on some path, it may still return on another. | none | 3 of 9 | 0 |
 | [Not going out of a region](../atlas/families/a.md#not-going-out-of-a-region) | Nothing leaves a region when no member relates to anything outside; where each step stays in or crosses out, a path from inside to outside has a crossing step. | none | 4 of 10 | 0 |
-| [Obscuration and reopening](../atlas/families/d.md#obscuration-and-reopening) | A reading, with no law: a seeking locks when a once-useful habit becomes the fixed measure of later cases; it reopens when a blocked relation regains effect. | selects, favours · is revised by · reaches / lies beyond | 0 of 0 | 0 |
+| [Obscuration and reopening](../atlas/families/d.md#obscuration-and-reopening) | A reading, with no theorem: a seeking locks when a once-useful habit becomes the fixed measure of later cases; it reopens when a blocked relation regains effect. | selects, favours · is revised by · reaches / lies beyond | 0 of 0 | 0 |
 | [Recurrence under every law of change](../atlas/families/f.md#recurrence-without-premise) | Among finitely many configurations every course keeps coming back to one it was at; where the law fixes each next configuration and merges no two, every configuration returns, and conversely. | none | 3 of 15 | 0 |
 | [Recurrence without decidedness](../atlas/families/f.md#recurrence-without-decidedness) | In a finite family, where beginnings keep coming, endings cannot stop for good, and the reverse; a step of ending is found where what holds at each step is decided. | none | 3 of 7 | 0 |
 | [Returning where the course branches](../atlas/families/f.md#returning-where-the-course-branches) | When a process can branch, every configuration can come back exactly where each region it never leaves keeps all of its own possibilities; keeping every possibility overall is not enough. | none | 3 of 6 | 0 |
 | [Rewarding those who break the routes of correction (the third order)](../atlas/families/c.md#selection-for-narrowing-what-couples-in) | A reading, not proved: a rule favouring whatever breaks the routes that could correct it selects for reading less; as capability grows, what it acts on outgrows what it reads. | selects, favours · reaches / lies beyond | 0 of 0 | 0 |
-| [Self-reproducing selection across carriers (the corpus's meta-attractor)](../atlas/families/c.md#self-reproducing-selection-across-carriers) | A working definition, with no law yet: an organization whose effects help rebuild the conditions that select it, going on while its carriers change. | goes on through · selects, favours · is set from | 0 of 0 | 0 |
+| [Self-reproducing selection across carriers (the corpus's meta-attractor)](../atlas/families/c.md#self-reproducing-selection-across-carriers) | A working definition, with no theorem yet: an organization whose effects help rebuild the conditions that select it, going on while its carriers change. | goes on through · selects, favours · is set from | 0 of 0 | 0 |
 | [The grammar's law of rest: falls that end do not recur](../atlas/families/g.md#falls-that-end-do-not-recur) | Where every chain of falls must run out, a line that never rises cannot keep falling again and again: it comes to rest, though no last fall is named. | none | 3 of 10 | 0 |
 | [The last change of a run](../atlas/families/g.md#the-last-change-of-a-run) | In a finite world where no change can be undone, a run changes only so many times, but naming the last change takes deciding at every step whether another comes. | none | 3 of 9 | 0 |
 | [The law of waxing and waning](../atlas/families/f.md#waxing-and-waning-returns) | Shift six two-valued lines up one place, the top re-entering at the bottom flipped: no two figures merge, so every figure returns, twelve steps on, and none rests. | none | 3 of 13 | 0 |

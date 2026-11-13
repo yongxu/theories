@@ -1,0 +1,2 @@
+241 REWORD is not written as a theorem => is not listed among the card's theorems
+checked 45 changed, 6 kept

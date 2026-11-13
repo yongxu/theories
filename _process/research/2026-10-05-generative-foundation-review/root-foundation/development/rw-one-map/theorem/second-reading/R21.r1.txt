@@ -1,0 +1,6 @@
+936 REWORD the theorem verifies a given policy, not how one chooses => the theorem holds of a given policy, not of how one chooses
+941 REWORD 两条已证的定理 => 两条定理
+944 REWORD never on the theorem's forbidden cases => never on the cases the theorem rules out
+945 REWORD 不看定理所禁的情形 => 不看定理排除的情形
+951 REWORD Mixtures pass only near the theorem => Mixtures pass only near the theorem's choices
+checked 39 changed, 14 kept

@@ -1,0 +1,4 @@
+610 WRONG data-key sense: filed in built_cases, not the card's laws list
+575 REWORD theorems, proved elsewhere, of giving that waits => theorems, proved elsewhere, on giving that waits
+595 REWORD this place meets the regulation theorems by reading only => this place comes under the regulation theorems by reading only
+checked 31 changed, 21 kept

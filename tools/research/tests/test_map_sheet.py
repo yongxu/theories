@@ -1,6 +1,6 @@
-"""The map (map_sheet.py) against what it promises: an arrow joins boxes the sheet has; an arrow that names a law has
-had a reader set its sentence against the Lean, and every law named is a declaration in the Lean; a name, a tag and a
-law's sentence use no word that fits only a person; a step of a path is told and stands on something; a laid test is in
+"""The map (map_sheet.py) against what it promises: an arrow joins boxes the sheet has; an arrow that names a theorem has
+had a reader set its sentence against the Lean, and every theorem named is a declaration in the Lean; a name, a tag and a
+theorem's sentence use no word that fits only a person; a step of a path is told and stands on something; a laid test is in
 the tests table; an arrow is drawn in full along a row, between neighbouring rows or along a clear corridor, and is a
 stub otherwise; the views are written from one build, the same bytes each time, in English and in Chinese; the site
 publishes every view; and the repository's own data passes."""
@@ -70,16 +70,16 @@ class ValidationTests(unittest.TestCase):
         self.assertIn('passage a>a: from a box to itself', errors(data(passages__passages__0=arrow('a', 'a'))))
         self.assertIn('passage a>c: listed twice', errors(data(passages__passages__0=arrow('a', 'c'))))
 
-    def test_an_arrow_that_names_a_law_has_had_a_reader(self):
-        self.assertIn('passage a>b: names a law and no reader has set its sentence against the Lean', errors(data(passages__passages__0=arrow('a', 'b', readers=0))))
+    def test_an_arrow_that_names_a_theorem_has_had_a_reader(self):
+        self.assertIn('passage a>b: names a theorem and no reader has set its sentence against the Lean', errors(data(passages__passages__0=arrow('a', 'b', readers=0))))
         self.assertEqual(errors(data(passages__passages__0=arrow('a', 'b', readers=1))), '')
 
-    def test_an_arrow_drawn_as_proved_names_a_law_and_a_reading_need_not(self):
-        self.assertIn('passage a>b: drawn as law and names no law', errors(data(passages__passages__0=arrow('a', 'b', laws=[]))))
+    def test_an_arrow_drawn_as_proved_names_a_theorem_and_a_reading_need_not(self):
+        self.assertIn('passage a>b: drawn as law and names no theorem', errors(data(passages__passages__0=arrow('a', 'b', laws=[]))))
         self.assertEqual(errors(data(passages__passages__4=arrow('c', 'g', 'reading'))), '')
         self.assertIn('unknown kind route', errors(data(passages__passages__0=arrow('a', 'b', 'route'))))
 
-    def test_a_law_named_is_a_declaration_in_the_lean(self):
+    def test_a_theorem_named_is_a_declaration_in_the_lean(self):
         self.assertIn('passage a>b: Becoming.X.law is not a declaration in the Lean', errors(data(), lean={'stays'}))
         names = map_sheet.lean_names()
         self.assertIn('lock_outlives_loss', names)   # a theorem by its last name
@@ -249,7 +249,7 @@ class RepositoryTests(unittest.TestCase):
         cls.m = map_sheet.build(cls.d); cls.m['dyn_names'] = cls.dyn; cls.m['totals'] = map_sheet.totals()
         cls.pages, cls.errors = map_sheet.render()
 
-    def test_the_repository_s_map_passes_and_every_law_it_names_is_in_the_lean(self):
+    def test_the_repository_s_map_passes_and_every_theorem_it_names_is_in_the_lean(self):
         self.assertEqual(self.errors, [])
         self.assertEqual(map_sheet.validate(self.d, dyn_ids=set(self.dyn), test_ids=self.tests, lean=map_sheet.lean_names()), [])
 
@@ -355,7 +355,7 @@ class RepositoryTests(unittest.TestCase):
         self.assertIn('| The %d boxes, with their sentences and examples |' % c['boxes'], page)
         self.assertIn('Drawn so far: %d boxes on %d rows, %d paths told step by step, %d tests laid on them.' % (c['boxes'], c['rows'], c['paths'], c['tests']), page)
         self.assertEqual(c['records'], len({rec for t in self.d['laid']['tests'] for rec in t.get('records', [t['test']])}))
-        self.assertIn('%d are tied to a definition or a law in the Lean' % c['anchored'], page)
+        self.assertIn('%d are tied to a definition or a theorem in the Lean' % c['anchored'], page)
         tot = map_sheet.totals()
         self.assertEqual(tot['all_tests'], len(self.tests))
         self.assertEqual(tot['dynamics'], len(self.dyn))
@@ -364,7 +364,7 @@ class RepositoryTests(unittest.TestCase):
         self.assertIn('most of the %d ways out of a condition and the %d passages between conditions' % (tot['exits'], tot['transitions']), page)
 
     def test_what_the_whole_map_says_of_its_arrows_along_a_row_is_what_the_counts_give(self):
-        # the page: most that run right are laws of the course itself; most that run back need something given, or are built
+        # the page: most that run right are proved of the course itself; most that run back need something given, or are built
         along = self.m['counts']['along']
         right = {k[6:]: v for k, v in along.items() if k.startswith('right/')}
         left = {k[5:]: v for k, v in along.items() if k.startswith('left/')}

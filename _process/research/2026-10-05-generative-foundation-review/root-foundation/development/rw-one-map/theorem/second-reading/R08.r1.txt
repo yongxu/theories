@@ -1,0 +1,2 @@
+267 REWORD not a derived theorem => not a theorem
+checked 38 changed, 15 kept

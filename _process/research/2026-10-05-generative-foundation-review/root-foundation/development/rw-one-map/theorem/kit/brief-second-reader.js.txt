@@ -1,0 +1,38 @@
+export const meta = {
+  name: 'wm-verify',
+  description: 'Second readers check every "law" turned into "theorem" in the map\'s data, and every use that was kept (read-only; findings written to scratch files)',
+  phases: [{ title: 'Verify', detail: 'one Opus reader per sheet' }],
+}
+const DIR = '/Users/ren/theories/tmp/r7/sheet/wm/run'
+const BRIEF = `You are the second reader of a renaming in the data files of the map of the theory of becoming (repository /Users/ren/theories). You did not make the changes. Try to find what is wrong with them. This is reading work: edit no repository file, run no tests, builds or git commands (the machine is shared and very busy). Use Read, and Write for your one findings file.
+
+WHAT WAS DONE. The account used to call its own proved statements "laws". From today they are "theorems" (定理). A first reader sorted every use of "law" (and in Chinese of 定律 and 律), and each use sorted as "one of this account's own proved statements" was replaced by "theorem" (定理). "Law" (律, 定律) was kept wherever it names something else:
+ - a model's step or dynamics (Lean's \`Law\`: a function giving each configuration its one next; "a determined law", "under a law", "under any law", "its own law", a configuration "the law leaves unchanged", "a law that reads / keeps / merges / favours / commutes", "a local / blanketed / weighted / support-gated law", "the renewal law" where it is the model's step, "follows a fixed law"); in Chinese 律 said of a step (任何律之下, 律所不改的状态);
+ - another field's law, a science's law in general, a probability law, law in the legal or scriptural sense (Goodhart's law, 排中律, the law found in the temple);
+ - what holds in every model of a class, the thing a completeness or counting theorem counts ("the counting laws", "the counting law", "order laws" as conditions a model's step meets);
+ - something not proved that is put as a regularity (a thesis, conjecture, reading: "not a law relating keeping to the optimality gap");
+ - fixed names kept for now: "shared law", "law 5", "§7.2 law 1", a record's or prediction's own label or a bridge's name taken from a test's record (fields named name or label), a data key or kind named in the text ("kind: law", "the law field", "laws and built_cases are empty").
+
+YOUR SHEET. It is made of blocks, one per record of a JSON data file (a card of one dynamic, a case of one test, an arrow of the map, a path, a test laid on the map). A block starts with "=== <file>: <what the record is>", then context lines in parentheses (what the record is about and the Lean statements it reads), then one line per text field, "[field] text", as the text will stand. Every "theorem" / "定理" that replaced "law" / "定律" / "律" carries a tag ⟦id⟧. Every use that was kept carries ⟦id:kept⟧. A line "REWORDED BY HAND after the swap" under a field gives a phrase the coordinator then reworded: the field will read with the new phrase in place of the old.
+
+FOR EVERY TAG ⟦id⟧ (changed) decide one of:
+ OK      It is one of this account's own proved statements (stated with hypotheses, proved in Lean, holding of every case that meets them), and the sentence says the same thing as before.
+ WRONG   It is not: it is one of the kept senses above. The word must go back. Say which sense.
+ REWORD  It is a proved statement, but after the swap the sentence is false, says something different, or does not read as English (or Chinese): a changed scope in a negative; "each theorem is a theorem"; "proved theorem" (a theorem is proved already); "theorem of X" where "theorem on X" is needed (X is the subject, not the owner); a theorem said to be "followed" or "obeyed" by a system, or to call, decide, forbid, permit or rank something; a wrong article or number. Give the exact smallest replacement: old phrase => new phrase (the old phrase copied from the sheet without its tags).
+FOR EVERY TAG ⟦id:kept⟧ say nothing unless the thing there is plainly one of the account's own proved statements: then list it as MISSED.
+FOR EVERY "REWORDED BY HAND" line: check that the new phrase says what the old sentence said (with "law" read as the proved statement) and reads well; if not, list it as HAND with what is wrong and your replacement.
+English and Chinese fields of one record say the same thing: where the English use is a proved statement and the Chinese beside it was kept (or the other way round), that is a finding too.
+
+HOW TO CHECK. The line with its block's context usually settles it. The card's list of Lean statements tells you what its "theorems" are; "the main / principal / head / general theorem", "its theorems", "no theorem here says" speak of them. A step is what a model does next: if "step" or "dynamics" could stand there, it is not a theorem. Do not approve by default: for each tag ask what the thing is.
+
+OUTPUT. Write ${DIR}/<SHEET>.r1.txt (SHEET is your sheet's name, such as R07): one line for every finding, in one of these forms, then a last line "checked <number of changed tags you examined> changed, <number of kept tags you examined> kept":
+<id> WRONG <which sense, at most 12 words>
+<id> REWORD <old phrase> => <new phrase>
+<id> MISSED <why it is a proved statement, at most 12 words>
+HAND <the old phrase's first words> : <what is wrong> => <your replacement>
+Then reply with one line: the sheet name and the counts of OK, WRONG, REWORD, MISSED, HAND. Nothing else.`
+phase('Verify')
+const res = await parallel(args.map(u => () =>
+  agent(`${BRIEF}\n\nYOUR SHEET: ${u.name}. Read ${DIR}/${u.name}.review.md whole (${u.tags} tags, ${u.changed} of them changed; from ${u.files.join(', ')}).`,
+    { label: `verify:${u.name}`, phase: 'Verify', model: 'opus', effort: 'high' })))
+return res.map((r, i) => ({ sheet: args[i].name, reply: r }))
