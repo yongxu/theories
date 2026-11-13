@@ -398,6 +398,7 @@ import Becoming.ReadingsPersist
 import Becoming.FromTheDynamics
 import Becoming.ReadOffInTime
 import Becoming.TurningInTime
+import Becoming.WayOfUnits
 import Becoming.ReadingsSpread
 import Becoming.SignificanceStatements
 
@@ -5062,7 +5063,45 @@ tagged instance or application.
   `TurningInTime.Three` (giving `min z (12 - z)`, uses five and three, a need of one, from nine): first
   marked at step 0 or 1 the line never ends, at step 2 it turns and ends and the line under the way's
   class ends while the net goes on, with no marked level it ends as it was. The marks, `AloneOutside`,
-  the kept kind and its one use are premises, not derived. A leaf: a model.
+  the kept kind and its one use are premises, not derived. Imported by `Becoming.WayOfUnits`; a model.
+* `Becoming.WayOfUnits` (L2, only through its one import, `Becoming.TurningInTime`): a way of units,
+  a turn with no mark given (board item WU). It states no continuation condition and no
+  valuation, and uses none. A unit is a pair of numbers, the level it needs to go on
+  (`WayOfUnits.need`) and what it takes from the level at each step (`WayOfUnits.use`); a way is the
+  list of units present. After a step the way is the units whose need the level meets
+  (`WayOfUnits.after`, the root's `GrammarLaws.keep`), and the level is `RegimeMargin.step` under what
+  the units present take together (`WayOfUnits.taken`, `WayOfUnits.left`); the net
+  (`WayOfUnits.net`) is `TurningInTime.pair`'s step while some unit goes on (`WayOfUnits.Goes`) and
+  nothing where none does. Where the level is below the need of one unit of the way and meets the need
+  of another, the line under the way's class ends there while the net goes on
+  (`WayOfUnits.ends_while_net_goes`). With every unit of the start needing something, nothing given
+  from nothing, the start at most `hi`, and, at every way the course reaches with some unit going on
+  there and at every step before it, the start's included, giving short of what the way takes below
+  `y` of it, meeting it from there up to `hi` and the step keeping the level within `hi`
+  (`WayOfUnits.Regime`), the line never ends exactly where, the net going on until then, the course
+  comes to a way that is not empty, every unit's need met at the level and the level at or above what
+  the way takes and `y` of it (`WayOfUnits.Holds`, `WayOfUnits.unending_iff_holds`). For a first unit
+  needing `m` and taking `h` and a second needing `n ≤ m` and taking `H₂`, under
+  `TurningInTime.turns_in_time_iff`'s regime premises with `H₁ := h + H₂` and a start below
+  `h + H₂ + y₁` and at most `hi`, the line never ends exactly where, at the first level below `m` of
+  the course as it was, `n` is met and the level one step later is at or above `H₂ + y₂`
+  (`WayOfUnits.two_units_iff`): by `turns_in_time_iff` on a carrier of two values, the first unit
+  there or ended, for which `AloneOutside`, `turns`, `kept`, `uses` and `uses₁` are proved, not
+  assumed (`WayOfUnits.first_outside`, `WayOfUnits.first_turns`, `WayOfUnits.first_kept`,
+  `WayOfUnits.first_uses`, `WayOfUnits.first_uses₁`), and a transfer
+  (`WayOfUnits.unending_iff_carrier`). Under `two_units_iff`'s premises a greater need of the first
+  unit never ends a line that did not end (`WayOfUnits.greater_need`), and with the same needs and the
+  same sum taken neither does more of the use on the first unit (`WayOfUnits.more_use_on_first`). With
+  `n ≤ m` and a first unit that takes nothing, under any giving and from any start, the line never
+  ends exactly where the line of the second unit alone never ends (`WayOfUnits.takes_nothing_iff_alone`);
+  so, with giving short of `H₂` below `y₁`, the start below `H₂ + y₁`, nothing given from nothing and
+  `n` positive, the line ends (`WayOfUnits.takes_nothing_ends`). Witnesses `WayOfUnits.With` and
+  `WayOfUnits.Against` (giving `min z (12 - z)`, needs nine and one, five taken together, from nine):
+  with the first unit taking four the line never ends (`With.goes_on`, by `two_units_iff`;
+  `With.goes_on_holds`, by `unending_iff_holds`; `With.levels`), with it taking one the line ends
+  (`Against.turns_and_ends`). The needs, the uses, `y`, `y₁`, `y₂` and the regime's premises are
+  given; units only end; the marks of a way that conditions on a reading are not derived. A leaf: a
+  model.
 * `Becoming.Composition` (L1): joint plans of joint frames: nested decompositions read through
   a description.
 * `Becoming.LastingRuns` (L1): lasting and reaching on runs and courses.
