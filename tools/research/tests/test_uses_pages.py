@@ -33,7 +33,7 @@ FIRST_CLAUSE_QUALIFIERS = ('whether or not it has any say here and whether or no
 # (10 November 2026, round 6's Q6.2) the field is re-said by what a course draws on, opens and closes and who bears it, so its
 # first Proved line opens with the laws beneath that question, not with a widening check, and its Conditional line links 07 §4
 # for each ranking's scope
-TOOL_SENTENCE = ('The laws beneath the question need no premise', "a result ranking the wider course above names its order among its theorem's "
+TOOL_SENTENCE = ('The theorems beneath the question need no premise', "a result ranking the wider course above names its order among its theorem's "
                  'hypotheses: self-concern with the condition held de se, an order meeting C (`Comparison`), or the '
                  'practical commitments J1/J2 (`Priority`), each with its scope at '
                  '[07 §4](chapters/07-SIGNIFICANCE.md#scope-and-order)',
@@ -204,7 +204,7 @@ class UsesCells(unittest.TestCase):
         # the ninth pass (K4): the direction offered under the condition, its theorems taking J1/J2 and not the condition
         conditional = next(l for l in lines if l.startswith('**Conditional.**'))
         # the ninth pass's last text round (its verifier's point): the frame said once, "not a law", then K4's "offered under"
-        self.assertTrue(conditional.startswith('**Conditional.** A direction for AI, not a law, comparing plans'), conditional[:80])
+        self.assertTrue(conditional.startswith('**Conditional.** A direction for AI, not a theorem, comparing plans'), conditional[:80])
         self.assertEqual(conditional.count('offered'), 1)
         for phrase in ('offered under the continuation condition, [J1–J4](chapters/08-METHOD.md#premise-card) and a '
                        'correspondence to actual systems; its theorems take J1/J2 and compare moves by what their outcomes '
@@ -334,7 +334,7 @@ class UsesCells(unittest.TestCase):
                        'going on is no sign that nothing is lost',
                        'Takers each within what a renewal gives can together exceed it',
                        '#r-own-count-misses-joint-excess',
-                       'they are mixed, some positive weighting ranking them each way, and the laws weigh them for no one',
+                       'they are mixed, some positive weighting ranking them each way, and the theorems weigh them for no one',
                        'its evaluation as right or wrong (which forms within becoming, in those who judge it, not in its '
                        'explanation)'):
             self.assertIn(phrase, joined)
@@ -383,7 +383,7 @@ class UsesCells(unittest.TestCase):
         # the ninth pass (K4): offered under the condition, its rankings taking J1/J2 and not the condition (07 §7)
         self.assertIn('offered under the continuation condition, J1–J4 and a correspondence to actual systems; its rankings take J1/J2 and '
                       'compare plans by what they admit, without using the condition', handover_line)
-        lake = next(p for p in text.split('\n\n') if p.startswith('**What the laws say.**'))
+        lake = next(p for p in text.split('\n\n') if p.startswith('**What the theorems say.**'))
         self.assertIn('in the test no instruction tried preserved it', lake)  # the test's result, as its README says (H13)
         self.assertIn('Seeing the bed is needed there for a choice to answer to its loss, and not enough', counts)
         # AG-F (10 November 2026): the checklist states the aligned state as AGENTS.md's sentence and the goal's first two
@@ -401,9 +401,9 @@ class UsesCells(unittest.TestCase):
         seeing = next(p for p in valley.split('\n\n') if p.startswith('**What each course draws on, opens and closes, and who bears it.**'))
         self.assertIn('[T8](chapters/07-SIGNIFICANCE.md#t8)', seeing)
         laws = next(p for p in valley.split('\n\n') if p.startswith('**What the theorems say beneath it, with no premise.**'))
-        for phrase in ('closing needs a net draw', 'that is a relation between the two courses', 'the laws weigh it for no one'):
+        for phrase in ('closing needs a net draw', 'that is a relation between the two courses', 'the theorems weigh it for no one'):
             self.assertIn(phrase, laws)
-        self.assertLess(valley.index('**What each course draws on'), valley.index('**What the laws say beneath it'))
+        self.assertLess(valley.index('**What each course draws on'), valley.index('**What the theorems say beneath it'))
         self.assertNotIn('self-concern', valley)
         self.assertIn('<a id="three-courses-for-a-valley-widening-mixed-courses-and-what-is-offered"></a>', text)  # the old link kept
         zh = page(THEORY + 'USES-EXAMPLES.zh.md')
@@ -516,7 +516,7 @@ class HowItStands(unittest.TestCase):
         self.assertTrue(by_label['Proved'].startswith(f'**Proved.** {first}. '), by_label['Proved'][:60])
         proved = '\n'.join(l for l in lines if l.startswith('**Proved.**'))  # since AG-F, in the second Proved line
         self.assertIn('In [04 §8]', proved)
-        self.assertIn('they are mixed, some positive weighting ranking them each way, and the laws weigh them for no one', proved)
+        self.assertIn('they are mixed, some positive weighting ranking them each way, and the theorems weigh them for no one', proved)
         self.assertIn(f'**Conditional.** {second[0].upper() + second[1:]}.', lines)
         self.assertTrue(by_label['Open'].startswith(f'**Open.** {third[0].upper() + third[1:]}. '), by_label['Open'][:60])
         self.assertNotIn('; '.join(TOOL_SENTENCE), page(USES))  # no longer one line under one label
@@ -653,7 +653,7 @@ class WhatEachFieldAdds(unittest.TestCase):
         line = self.fields()['Wisdom traditions']
         self.assertNotIn('credited there to the sciences', line)
         for phrase in ('08 credits no tradition with a result and names nothing added for one',
-                       "Which laws those are is this page's reading",
+                       "Which theorems those are is this page's reading",
                        'to Hume; to Fine and Wilf (1965); to Moore (1956); and to Gold (1967).',
                        'BECOMING-TWENTY-FIRST-REVIEW.md#5-how-the-traditions-and-the-sciences-map-onto-it'):
             self.assertIn(phrase, line)
@@ -783,7 +783,7 @@ class AuditSheet(unittest.TestCase):
         self.assertIn('the person who directs the work has read its important parts, and no independent human review is '
                       'recorded yet', head)
         self.assertNotIn("no person's review", head.split('-->', 1)[1])
-        self.assertIn('it does not say the law is false. Where a row says so, an answer may instead count against a '
+        self.assertIn('it does not say the theorem is false. Where a row says so, an answer may instead count against a '
                       "conjecture (T3's clause, in row 3).", self.sheet)
 
     def rows(self):
