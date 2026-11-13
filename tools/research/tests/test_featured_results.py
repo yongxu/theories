@@ -13,6 +13,13 @@ FIRST_SCREEN, LEAD = '_process/navigation/README-FIRST-SCREEN.md', '_process/nav
 REPOSITORY = '_process/navigation/REPOSITORY.md'
 
 
+def agents_aim():
+    """The aim as AGENTS.md states it, read from the file (DW, 13 November 2026). The pages are held to its words by
+    reference: when the sentence is said again, the pages change with it and no test puts an earlier wording back."""
+    text = (Path(__file__).resolve().parents[3] / 'AGENTS.md').read_text(encoding='utf-8')
+    return re.search(r'we want to design (an alignment in which [^.]*)\.', text).group(1)
+
+
 def result(ident, status='reviewed-scoped'):
     return {
         'id': ident, 'status': status, 'kind': 'argument',
@@ -445,15 +452,13 @@ class FirstScreenTests(unittest.TestCase):
             self.assertNotIn(old, screen)
         # the meta-attractor's closed form with the closed-capture record's hypotheses, not "proved to lock" alone
         self.assertNotIn('proved to lock', screen)
-        self.assertIn('a locked start stays locked however large an unread loss grows', screen)
+        self.assertIn('a locked start stays locked however large a loss grows that makes no difference to either', screen)
         # the aim as AGENTS.md states it, word for word (the ninth pass, K8; from the fourth pass to the eighth the screen said
         # it as GOALS#generative-alignment and AJ's plan §1 state condition 1, which is one of the goal's conditions; which
         # wording is right is Ren's); since AG-F's fix round its whole sentence, "humans and AI, selecting together" in place
         # of "people, institutions and trained systems" (its screens verifier); the meta-attractor's closed form at 02 §9; and
         # whether a loss counts said as forming within becoming, not as a reading attached to neutral laws (07 §1)
-        self.assertIn('an alignment that keeps humans and AI, selecting together, out of instrumental convergence and the '
-                      'meta-attractor: a joint selection that reads beyond its own share and does not come to select for control '
-                      'over its own selection', screen)
+        self.assertIn(agents_aim(), screen)  # DW (13 November 2026): by reference to AGENTS.md
         self.assertNotIn('people, institutions and trained systems', screen)
         self.assertNotIn("the rule still reads what lies beyond the shapers' share", screen)
         self.assertIn('02-MAP.md#r-closed-capture', screen)

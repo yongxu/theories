@@ -10,6 +10,13 @@ from tools.research import mirror, navigation, registry, research
 from tools.research.reading_catalogue import anchors_from_text
 
 
+def agents_aim():
+    """The aim as AGENTS.md states it, read from the file (DW, 13 November 2026). The pages are held to its words by
+    reference: when the sentence is said again, the pages change with it and no test puts an earlier wording back."""
+    text = (Path(__file__).resolve().parents[3] / 'AGENTS.md').read_text(encoding='utf-8')
+    return re.search(r'we want to design (an alignment in which [^.]*)\.', text).group(1)
+
+
 def result(ident, status='recorded-checked', kind='theorem', deps=(), statement=True):
     r = {'id': ident, 'status': status, 'kind': kind, 'family': 'F01', 'title': {'en': ident + ' title'},
          'canonical_source': 'theories/' + ident + '.md', '_record_path': 'theories/results/records/' + ident + '.json',
@@ -53,11 +60,10 @@ class RegisterAndStubTests(unittest.TestCase):
         # pass 9b (10 November 2026): AGENTS.md's clause word for word, "a joint selection" said once; since AG-F's fix round
         # the same day, who selects together in AGENTS.md's words too, as the fronts now say it
         stub = render([result('a')])['RESEARCH.md']
-        self.assertIn('toward the alignment we want, one that keeps humans and AI, selecting together, out of instrumental '
-                      'convergence and the meta-attractor: a joint selection that reads beyond its own share and does not come to '
-                      'select for control over its own selection;', stub)
+        # DW (13 November 2026): the aim by reference to AGENTS.md, not as a literal
+        self.assertIn('from it we want to design ' + agents_aim() + ';', stub)
         self.assertNotIn('people, institutions and trained systems', stub)
-        self.assertEqual(stub.count('a joint selection'), 1)
+        self.assertEqual(stub.count(agents_aim()), 1)
 
     def test_register_index_is_a_stub_keeping_its_anchors(self):
         page = registry.render_index([result('a')])
@@ -527,32 +533,35 @@ class OnePageMakingAndMetaAttractor(unittest.TestCase):
 
     def test_the_meta_attractor_and_the_aim(self):
         what = self.paragraph(self.page('ONE-PAGE.md'), '**What it is.**')
-        self.assertIn('Where winning comes to buy power over the rule that selects, the loop is what the work calls the '
+        # DW (13 November 2026): the loop said without a contest (no "winning", "buy power")
+        self.assertIn('Where what a selection raises comes to set the selection, the loop is what the work calls the '
                       '[meta-attractor](../meta-attractor/README.md)', what)
+        self.assertNotIn('buy power', what)
         # AG review, fifth pass: the closed form can lock, under the conditions 02 §9 states (astra, fourth cold reading, 2)
-        self.assertIn('can lock ([02 §9](chapters/02-MAP.md#r-closed-capture)): where selection does not lower the favoured share '
-                      'and the rule and its reading follow it upward and keep favouring it, a course once locked stays locked', what)
+        self.assertIn('can lock ([02 §9](chapters/02-MAP.md#r-closed-capture)) under three conditions: selection does not lower the '
+                      'favoured share; a share not lower sets again a rule not lower; and a rule not lower than a favouring one '
+                      'still favours. Then a course once locked stays locked', what)
         self.assertNotIn('is proved to lock', what)
         # AG-F's fix round (10 November 2026, astra's cold reading): the loss passing every bound is a premise of
         # `ClosedCapture.lock_outlives_loss` (`Accrues`, at least one unit a step), not something the lock gives
-        self.assertIn('stays locked whatever loss nothing in it reads, and if that loss grows by at least one unit each step, it '
-                      'passes every bound without breaking the lock', what)
+        self.assertIn('stays locked whatever the loss, and if the loss grows by at least one unit each step, it '
+                      'passes every bound and the lock holds', what)
         self.assertNotIn('while a loss nothing in it reads passes every bound', what)
         self.assertNotIn('is not in the laws but in a reading', what)
         aim = self.paragraph(self.page('ONE-PAGE.md'), '**Alignment.**')
         # AG-F (10 November 2026): the aligned state as AGENTS.md's sentence and the goal's first two conditions, the
         # meta-attractor the two failing together; no condition comparing courses by widening (round 6's first high finding)
-        self.assertIn('the rule they shape still reads what lies beyond their share, so that a loss there can turn it', aim)
+        self.assertIn('something other than their share still makes a difference to the rule, so that a loss that makes no '
+                      'difference to their share can turn it', aim)
         self.assertIn('Read on the map, it asks two things.', aim)
-        self.assertIn('A lock, once formed, is left in time', aim)
+        self.assertIn('a lock, once formed, gives way early enough', aim)
         self.assertNotIn('compared by widening', aim)
         self.assertIn('(../../GOALS.md#generative-alignment)', aim)
         # the ninth pass's last text round (10 November 2026): the aim as AGENTS.md states it, its whole sentence, in What it
         # is and in Alignment, as the first screen, USES and MAP say it; until then this asserted the clause absent, the
         # fourth pass's choice after AJ5 (29 October), which predates AGENTS.md (9 November); AJ's condition 1 stays, as
         # the goal's first condition, where the Alignment paragraph lists the goal's conditions
-        aim_clause = ('a joint selection that reads beyond its own share and does not come to select for control over its '
-                      'own selection')
+        aim_clause = agents_aim()  # DW (13 November 2026): by reference
         for text in (what, aim):
             self.assertIn(aim_clause, text)
             self.assertNotIn('into neither instrumental convergence', text)

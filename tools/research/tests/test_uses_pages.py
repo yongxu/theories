@@ -14,6 +14,12 @@ except ImportError:  # run from outside the repository
     from tools.research import navigation
 
 ROOT = Path(__file__).resolve().parents[3]
+
+
+def agents_aim():
+    """The aim as AGENTS.md states it, read from the file (DW, 13 November 2026). The pages are held to its words by
+    reference: when the sentence is said again, the pages change with it and no test puts an earlier wording back."""
+    return re.search(r'we want to design (an alignment in which [^.]*)\.', (ROOT / 'AGENTS.md').read_text(encoding='utf-8')).group(1)
 THEORY = 'theories/becoming/'
 USES, EXAMPLES, ONE_PAGE, MAP = THEORY + 'USES.md', THEORY + 'USES-EXAMPLES.md', THEORY + 'ONE-PAGE.md', THEORY + 'chapters/02-MAP.md'
 METHOD, SCIENCES, DIRECTION = THEORY + 'chapters/08-METHOD.md', THEORY + 'review/SCIENCES.md', THEORY + 'COLLECTIVE-DIRECTION.md'
@@ -248,18 +254,20 @@ class UsesCells(unittest.TestCase):
         text = page(USES)
         first = next(p for p in text.split('\n\n') if p.startswith('The account is a map'))
         # the closed form said as able to lock, with its conditions (AG review, fifth pass; astra's fourth-pass point 2)
-        for phrase in ('how winning comes to buy power over the rule that selects: the loop the work calls the '
-                       '[meta-attractor](../meta-attractor/README.md). Its closed form, where the rule and how it is read are '
-                       'both formed from the share it selects, can lock: on stated models, where selection does not lower the '
-                       'favoured share and the rule and its reading follow it upward and keep favouring it, a locked start '
-                       'stays locked however large an unread loss grows ([02 §9](chapters/02-MAP.md#r-closed-capture))',
+        # DW (13 November 2026): the loop said without a contest, the closed form with its three conditions, the aim by
+        # reference to AGENTS.md
+        for phrase in ('Where what a selection raises comes to set the selection, the loop is what the work calls the '
+                       '[meta-attractor](../meta-attractor/README.md). Its closed form, where what is selected next and the '
+                       'rule (how the selection selects at a step) as each step sets it again follow from the share and the '
+                       'rule alone, how the rule is set again being formed from the share too, can lock: on stated models, '
+                       'where selection does not lower the favoured share, a share not lower sets again a rule not lower, and '
+                       'a rule not lower than a favouring one still favours, a locked start stays locked however large a loss '
+                       'grows that makes no difference to either ([02 §9](chapters/02-MAP.md#r-closed-capture))',
                        # the aim as AGENTS.md states it (the ninth pass, K8; in AG-F, 10 November 2026, its words "humans and
                        # AI, selecting together", the aligned state's first sentence): AJ's condition-1 wording is the goal's
                        # first condition, kept in People and AI, labelled
-                       'From this map we want to design an alignment that keeps humans and AI, selecting together, out of '
-                       'instrumental convergence and the meta-attractor: a joint selection that reads beyond its own share and '
-                       'does not come to select for control over its own selection '
-                       '([the goal](../../GOALS.md#generative-alignment))'):
+                       'From this map we want to design ' + agents_aim()
+                       + ' ([the goal](../../GOALS.md#generative-alignment))'):
             self.assertIn(phrase, first)
         self.assertNotIn("the rule still reads what lies beyond the shapers' share", first)
         brief = next(p for p in text.split('\n\n') if p.startswith('**In brief.**'))
@@ -391,8 +399,7 @@ class UsesCells(unittest.TestCase):
         # opens and closes and who bears it, the laws beneath with no premise, and no ranking worked into it (round 6, Q6.2;
         # the uses lens's fix of working self-concern into it rejected)
         checklist = section(text, '### AJ as a checklist', '**What the goal is not.**')
-        for phrase in ('a joint selection that reads beyond its own share and does not come to select for control over its own '
-                       'selection. Read on the map, it asks two things.', 'is the two failing together'):
+        for phrase in (agents_aim() + '. Read on the map, it asks two things.', 'Where both fail, the'):
             self.assertIn(phrase, checklist)
         for phrase in ('compared by widening', 'compares courses by widening', 'three conditions'):
             self.assertNotIn(phrase, checklist)
@@ -1163,10 +1170,9 @@ class MethodAndGlossariesAtTheirStrength(unittest.TestCase):
         self.assertNotIn('read in time, the continuation condition cannot hold over every step', where)
         # the ninth pass: the aim as AGENTS.md states it (K8), and the direction's J1/J2 among the orders a ranking result
         # names (K4)
-        self.assertIn('a joint selection that reads beyond its own share and does not come to select for control over its own '
-                      'selection', where)
+        self.assertIn(agents_aim(), where)  # DW (13 November 2026): by reference
         # AG-F's fix round: the aim's whole sentence in AGENTS.md's words, as the first screen now says it
-        self.assertIn('an alignment that keeps humans and AI, selecting together, out of instrumental convergence', where)
+        self.assertNotIn('a joint selection that reads beyond its own share', where)
         self.assertNotIn('people, institutions and trained systems', where)
         self.assertIn("such as the direction's J1/J2, whose theorems compare moves by what their outcomes admit and do not use "
                       'the condition', where)

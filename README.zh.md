@@ -4,6 +4,8 @@
 
 [English](README.md) · **首页** · [一页](theories/becoming/ONE-PAGE.zh.md) · [用途](theories/becoming/USES.zh.md) · [实例](theories/becoming/USES-EXAMPLES.zh.md) · [总览](theories/becoming/THE-THEORY-OF-BECOMING.zh.md) · [八章（英文）](theories/becoming/chapters/README.md) · [古文（第六章）](theories/becoming/chapters/06-CLASSICAL-TEXTS.md) · [检验](TESTS.zh.md) · [图集（英文）](theories/becoming/results/atlas/ATLAS.md) · [对照表](theories/becoming/results/atlas/CROSSWALK.zh.md) · [怎样长成](theories/LINEAGE.zh.md) · [术语表](GLOSSARY.zh.md) · [审查包](theories/becoming/review/README.zh.md)
 
+*本版落后于英文版：它依 2026 年 11 月 13 日的[英文版](README.md)译出，英文版此后有改动，本版尚未随之修订；有出入处，以英文版为准。*
+
 > 这一版仍在修订之中。
 
 *前面这几段约 11–14 分钟，全页约 13–17 分钟；下面各个入口各注明所需时间。*
@@ -42,8 +44,8 @@
 |---|---|---|
 | [一页](theories/becoming/ONE-PAGE.zh.md) | 全论最短的一层：它是什么，一个情形，根，诸律、各自看到了多远、什么会表明它错，伦理 | 约 32–41 分钟 |
 | [用途](theories/becoming/USES.zh.md) | 逐个领域：今天能用它做什么，各部分看到了多远 | 约 36–47 分钟 |
-| [实例](theories/becoming/USES-EXAMPLES.zh.md) | 每个领域一例或数例，各说明看到了多远 | 约 57–74 分钟 |
-| [总览](theories/becoming/THE-THEORY-OF-BECOMING.zh.md) | 全论的一小时层，按八章的顺序 | 约 79–103 分钟 |
+| [实例](theories/becoming/USES-EXAMPLES.zh.md) | 每个领域一例或数例，各说明看到了多远 | 约 57–75 分钟 |
+| [总览](theories/becoming/THE-THEORY-OF-BECOMING.zh.md) | 全论的一小时层，按八章的顺序 | 约 80–103 分钟 |
 | [开篇](theories/becoming/OPENING.zh.md) | 第一人称写下的信念：这件事为什么要紧（[英文原文](theories/becoming/OPENING.md)） | 正文约 20–26 分钟，注释另计 |
 | [八章](theories/becoming/chapters/README.md) | 各章正文，诸结果的所属之处；除第六章外为英文 | 每章约 2–9.5 小时 |
 | [古文（第六章）](theories/becoming/chapters/06-CLASSICAL-TEXTS.md) | 从古文读出文法，检验它，记下分歧；中文 | 约 130–170 分钟 |
@@ -51,7 +53,7 @@
 | [对照表](theories/becoming/results/atlas/CROSSWALK.zh.md) | 早先的理论文件夹与各思想领域，在现行的本论中各读作什么，附图、计数与各组一览；各组的条目在英文页上 | 约 8–10 分钟 |
 | [理论图](theories/becoming/results/THEORY-GRAPH.md) | 概念、结果、模块、文本与各章之间的连接；英文，其中的各章一览有[中文版](theories/becoming/results/THEORY-GRAPH.zh.md)（约 33–43 分钟） | 约 81–106 分钟 |
 | [怎样长成](theories/LINEAGE.zh.md) | 本论怎样从更早的文字与理论文件夹长成 | 全文约 134–175 分钟；十分钟的部分是“弧线简述”、“简述”中的六个阶段与图及其图例；加上标签与这些线索，约 38–50 分钟 |
-| [术语表](GLOSSARY.zh.md) | 每个词的一义与其所属之处 | 约 35–46 分钟 |
+| [术语表](GLOSSARY.zh.md) | 每个词的一义与其所属之处 | 约 36–46 分钟 |
 | [审查包](theories/becoming/review/README.zh.md) | 给审读者的材料与问题；古文、佛学两份与重新归类的编码手册为中文 | 封面约 10–13 分钟 |
 
 **语言。** 除第六章、古文与佛学两份审查材料及重新归类的编码手册外，各章、记录、检验与理论图都是英文（理论图的各章一览有中文版）。各中文版由 AI 译自英文；义以英文版为准。
