@@ -111,7 +111,7 @@ WORDS = {
         'backward': '同上；章序在前的一章的结果使用章序在后的一章的结果时，线色较深。',
         'interpretive': '诠释（interpretive），用于论证上的依赖（虚线；{m} 次及以上的配对）。',
         'application': '应用（application），一个被复用的结果，连同其对应与所添的前提（点线）。',
-        'spoke': '辐条：粗细表示该章核心模块中在文法上陈述其律者所占的比例，其数写在章旁，作“m 个模块中 k 个在文法上”。它计的是模块，不是推导而得的结果。',
+        'spoke': '辐条：粗细表示该章核心模块中在文法上陈述其定理者所占的比例，其数写在章旁，作“m 个模块中 k 个在文法上”。它计的是模块，不是推导而得的结果。',
         'spoke_label': '{m} 个模块中 {k} 个在文法上',
         'laws_head': '五条共律（08 §7）：依于每一条的核心行；斜线部分是其编译后的类型或值达到文法的行',
         'law_all': '{c} 行，全部达到', 'law_some': '{c} 行，{k} 行达到', 'law_rep': '双向表示，不推导',
@@ -1033,7 +1033,7 @@ def description(results, pairs, s, lang, modules=None):
         return (f'八章围绕文法排成一圈，按其结果数定大小（{sizes}）。'
                 f'章与章之间共有 {total} 次记为 formal-reuse 的使用，画出 {drawn} 个至少 {DRAW_MIN} 次的配对；{total} 次中有 {backward} 次是逆向的，'
                 f'即章序在前的一章的结果使用章序在后的一章的结果，其所在配对有 {DRAW_MIN} 次或以上时画得较深（章的编号是为阅读，不是证明的次序）。'
-                + (f'每章到文法的辐条，示该章在文法上陈述其律的核心模块（{spokes}）。' if spokes else '')
+                + (f'每章到文法的辐条，示该章在文法上陈述其定理的核心模块（{spokes}）。' if spokes else '')
                 + (f'{sum(n.values())} 项核心声明相对于根之边的位置：{n.get("derived", 0)} 项推导而得，{n.get("under a stated hypothesis", 0)} 项在一个所述的假设之下，'
                    f'{n.get("counting", 0)} 项为计数，{sum(n.values()) - n.get("derived", 0) - n.get("under a stated hypothesis", 0) - n.get("counting", 0)} 项处于一个指明的距离。' if n else '')
                 + '其下，五条共律各有依于它的核心行与其中达到文法者（'
@@ -1290,7 +1290,7 @@ def picture_key(s, lang, page='theories/becoming/ONE-PAGE.md'):
     tg = os.path.relpath(PAGE_ZH if lang == 'zh' else 'theories/becoming/results/THEORY-GRAPH.md', Path(page).parent)
     total, d, h, c, rest = n['117'], n['11'], n['1'], n['6'], n['99']
     if lang == 'zh':
-        return (f'文法在中央，八章围绕它排成一圈，每个圆按其结果数定大小；辐条的粗细是该章核心模块中在文法上陈述其律者所占的比例。'
+        return (f'文法在中央，八章围绕它排成一圈，每个圆按其结果数定大小；辐条的粗细是该章核心模块中在文法上陈述其定理者所占的比例。'
                 f'实线计一章的结果使用另一章结果、由 AI 写成的记录归为 formal-reuse 的次数（没有任何检查核对一次使用是否见于 Lean），'
                 f'章序在前的一章的结果使用章序在后的一章的结果时较深。T1 到 T8 位于其所属之处，按检验结局着色（T8 已论证，无检验）。'
                 f'{total} 项核心声明中，{d} 项[推导而得]({gl}#derived)，{h} 项为一个根形式的一步情形、在一个所述的假设之下，{c} 项为计数之定理、位于文法以下，'
@@ -1318,7 +1318,7 @@ def how_to_read(s, lang, page='theories/becoming/ONE-PAGE.md'):
     share = (d + h) / total
     if lang == 'zh':
         about = '约十分之一' if 0.085 <= share <= 0.115 else f'{d + h} 项'
-        return (f'每个圆是一章，按其结果数定大小，围绕中央的文法排成一圈；辐条的粗细标出比例、章旁的计数标出数目：该章核心模块中在文法上陈述其律者。'
+        return (f'每个圆是一章，按其结果数定大小，围绕中央的文法排成一圈；辐条的粗细标出比例、章旁的计数标出数目：该章核心模块中在文法上陈述其定理者。'
                 f'从一章到另一章的实线，计其结果使用另一章结果、记为 formal-reuse 的次数，[RESULT-WORKFLOW]({wf}) 把这一类留给已核验的推理，这里由 AI 写成的记录指定，'
                 f'没有任何检查核对一次使用是否见于 Lean；章与章之间的虚线与点线是别种依赖，较深的曲线是章序在前的一章的结果使用章序在后的一章的结果，章的编号是为阅读。'
                 f'{total} 项核心声明中，{about}被读作文法之律或根形式的情形：{d} 项[推导而得]({gl}#derived)，为文法之律的情形，{h} 项为一个根形式（root form）的一步情形，'
@@ -1625,7 +1625,7 @@ def zh_page(graph):
              f'{sum(small)} 次）' + (f'，其中 {other_kind} 个画作{other_zh}' if other_kind else '') + f'；不画作虚线的：少于 '
              f'{INTERPRETIVE_MIN} 次的 {len(interp_small)} 个诠释配对（{sum(interp_small)} 条边）；少于 {LABEL_MIN} 次的曲线不标数字。“各章之间边的种类”末尾的配对列表列出'
              f'有边的每一个配对。圆旁的“章内使用”计同一章结果之间的 formal-reuse，章内的诠释边见 interpretive 表的对角线。章旁的“m 个模块中 k 个在文法上”与辐条的粗细，'
-             f'计该区域核心模块中在文法上陈述其律的那些，如[英文版](THEORY-GRAPH.md)各区域的列表所示。'
+             f'计该区域核心模块中在文法上陈述其定理的那些，如[英文版](THEORY-GRAPH.md)各区域的列表所示。'
              + (f'{"、".join("「" + zname(k) + "」" for k in others)}的结果（{outside} 条边涉及它们）只在那份列表中。' if outside else '')
              + f'延续条件、自我关切与 C 在排序结果取用它们之处作为假设进入第七章：“{cap[4]["zh"]}”（[07]({rel(cap[4]["home"])})）。T1 到 T8 位于其所属之处，按检验'
              f'结局着色；它们的话选自[总览]({rel(s["theses_homes"]["zh"])})论题表中各自所在的行，先说各自看到了多远，见上面的论题表。', '',
@@ -1634,7 +1634,7 @@ def zh_page(graph):
              f'（[08 §7]({rel(cap[0]["home"], cap[0]["anchor"])})）。又，“{cap[5]["zh"]}”；“{cap[3]["zh"]}”'
              f'（[08 §7]({rel(cap[3]["home"], cap[3]["anchor"])})）。达到文法，是一项声明编译后的类型或值的那种依赖；推导而得是'
              f'根之边上的一种位置，即一项声明被读作文法之律的一个情形，经由在 Lean 中作为等价核验的桥接与审阅所读的支持（某行载有它们之处）。'
-             f'所以 45 与 11 计的是不同的东西，而曲线两者都不画。辐条也不画：它计的是在文法上陈述其律的模块，不是达到文法的结果。', '',
+             f'所以 45 与 11 计的是不同的东西，而曲线两者都不画。辐条也不画：它计的是在文法上陈述其定理的模块，不是达到文法的结果。', '',
              '### 各章之间边的种类', '<a id="edge-kinds-between-chapters"></a>', '',
              '从第一个区域的结果到第二个区域的结果的边，按各记录给其依赖的种类（`formal-reuse`、`interpretive`、`application`）'
              '与其 `related` 列表（类比，不是依赖）计。两个区域相同的一行，计该区域之内的边。区域以其所在章在总览中的标题称之；'

@@ -335,7 +335,7 @@ class Drawing(unittest.TestCase):
                                    '#the-spine-what-it-shows-and-does-not-show')),
                            ('zh', ('文法在中央，八章围绕它排成一圈', '核心模块', '由 AI 写成的记录归为 formal-reuse 的次数（没有任何检查核对一次使用是否见于 Lean）',
                                    '章序在前的一章的结果使用章序在后的一章的结果时较深', 'T1 到 T8 位于其所属之处，按检验结局着色（T8 已论证，无检验）',
-                                   '位于文法以下', '各有其理由', '11 项[推导而得]', '1 项为一个根形式', '6 项为计数之律', '99 项处于一个[指明的距离]',
+                                   '位于文法以下', '各有其理由', '11 项[推导而得]', '1 项为一个根形式', '6 项为计数之定理', '99 项处于一个[指明的距离]',
                                    '#the-spine-what-it-shows-and-does-not-show'))):
             key = spine.picture_key(s, lang)
             for phrase in kept:
