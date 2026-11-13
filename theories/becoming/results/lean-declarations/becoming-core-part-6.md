@@ -4746,5 +4746,25 @@ Definitions and types:
 
 </details>
 
+<a id="module-99ea0db6a80e"></a>
+
+<details>
+<summary>SensitivityWebs.lean — 4 explicit declarations</summary>
+
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SensitivityWebs.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+
+`experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SensitivityWebs.lean`
+
+Imports: `Becoming.Tail`, `Becoming.Propagation`
+
+| Theorem or lemma | Line |
+|---|---:|
+| [Becoming.SensitivityWebs.exchange_alike_of_insensitiveAt](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SensitivityWebs.lean#L46) | 46 |
+| [Becoming.SensitivityWebs.exchange_alike_of_insensitive](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SensitivityWebs.lean#L58) | 58 |
+| [Becoming.SensitivityWebs.wholeLaw_not_through](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SensitivityWebs.lean#L72) | 72 |
+| [Becoming.SensitivityWebs.tailLaw_courseWorld_balanced_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SensitivityWebs.lean#L85) | 85 |
+
+</details>
+
 [All topics and modules](../LEAN-DECLARATIONS.md) · [Becoming pure core, all parts](../lean-declarations/becoming-core.md) · [part 5](../lean-declarations/becoming-core-part-5.md) · [part 7](../lean-declarations/becoming-core-part-7.md)
 
