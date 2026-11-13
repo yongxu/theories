@@ -8,7 +8,7 @@ Two relations are kept apart by two phrases: what **makes a difference to** a se
 
 - **C1.** A selection (a reward, a judge, a market, a vote, a training run) is one dynamic among others, some of which sustain it.
 - **C2.** Two courses that differ in nothing that makes a difference to the selection are selected alike. How much is left of what sustains the selection can be among what makes no difference to it; then the selection can use that up while nothing in it yet differs.
-- **C3.** And where each step sets the selection again only from the share it already favours, the selection goes on the same way until what sustains it gives out, unless its running down makes a difference to the selection early enough.
+- **C3.** And where each step sets the selection again only from the share it already favours, the selection goes on the same way until what sustains it gives out, unless that running down makes a difference to the selection early enough.
 - **A.** From this map we want to design an alignment in which what sustains humans and AI keeps making a difference, early enough, to how they select together, and in which shaping how they select does not become what they select for.
 - **N.** Instrumental convergence and the meta-attractor name what happens when this does not hold. (On the pages: "a correspondence and not a theorem".)
 - **T** (one-line descriptions). the differences that make a difference to a selection (a reward, a judge, a market, a vote, a training run), how what sustains it can run down while that makes no difference to it, and how it can go on the same way until that gives out, or turn early enough
