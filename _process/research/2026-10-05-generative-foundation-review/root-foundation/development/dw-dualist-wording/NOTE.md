@@ -116,7 +116,7 @@ And the aim leaves out time, "which is the centre's whole condition".
 
 The three versions are on one page for Ren's read: [CENTRE-SENTENCE.md](CENTRE-SENTENCE.md).
 
-## "Read" in the Lean: what each definition states (added 13 November, 11:35 WIB)
+## "Read" in the Lean: what each definition states (added 13 November, 11:29 WIB)
 
 Thirteen AI readers (Opus) opened every definition and field of the package named with "read" (133, in 66 modules) and said what each states with the word taken out; a fourteenth sorted them from the bottom up by the relation stated ([`lean/read-in-the-lean.json`](lean/read-in-the-lean.json), each row with the module, the name, the statement, and the relational name that stands beside it).
 
