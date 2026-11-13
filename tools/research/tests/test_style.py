@@ -83,6 +83,9 @@ class LintTests(unittest.TestCase):
 
     def test_statement_leads_with_what_the_result_does(self):
         self.assertIn('negation-lead', self.rules(v2_record(statement={'en': 'No run returns.', 'zh': '无运行返回。'})))
+        # a statement of which differences make a difference is the theorem's own relation, not a negation to lead away from
+        self.assertNotIn('negation-lead', self.rules(v2_record(
+            statement={'en': 'A fall of the level makes no difference to the way while the level meets the need.', 'zh': '水平满足所需时，其下降于其道无别。'})))
         self.assertNotIn('negation-lead', self.rules(v2_record(statement={'en': 'A run returns exactly when it is lossless.', 'zh': '运行恰在无损时返回。'})))
 
     def test_does_not_show_items_are_short(self):

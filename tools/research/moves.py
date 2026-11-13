@@ -604,7 +604,8 @@ class Plan:
             rg = shutil.which('rg')
             if rg:
                 inventory_set = set(self.files if getattr(self, 'files', None) else tracked(self.root)) | set(untracked(self.root))
-                command = [rg, '-l', '-0', '-F', '--hidden', '--no-messages', '-f', name, '-g', '!.git']
+                # --no-ignore-dot: the root .ignore keeps kept history out of plain searches; a move must still find it
+                command = [rg, '-l', '-0', '-F', '--hidden', '--no-messages', '--no-ignore-dot', '-f', name, '-g', '!.git']
                 command += [x for prefix in self.EXCLUDED for x in ('-g', '!/' + prefix + '**')]
                 out = subprocess.run(command, cwd=self.root, stdin=subprocess.DEVNULL, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
                 if out.returncode in (0, 1):

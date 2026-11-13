@@ -14,7 +14,7 @@ GOALS.md             generated: scopes, ordered by authorization state
 OPEN-QUESTIONS.md    generated: targets, open items, decisions pending Ren
 DEPENDENCIES.md      generated: compact dependency adjacency and used-by
 RESEARCH.md, MAP.md, GLOSSARY.md   short current pages or stubs; paths and anchors kept
-Makefile, .gitignore, .gitattributes, .github/
+Makefile, .gitignore, .gitattributes, .ignore, .github/
 
 theories/becoming/            the canonical theory, in four layers: one page, overview, eight chapters, the evidence
   ONE-PAGE.md                 the one page (with ONE-PAGE.zh.md)
@@ -68,6 +68,8 @@ tmp/, work/                   scratch; nothing tracked
 **`_process/`.** Coordination and process: the work board, directives, goals, this page, the result workflow and the config. `architecture/` holds manifests, the hash-addressed record snapshots (`architecture/history/<hash>/`, unchanged and never renamed), move receipts and repair evidence. `research/` holds studies; the generative-foundation review is the one live study, and its retired material goes to `history/` beside `root-foundation/`. Retired whole studies, handoffs and the board's closed rows go to `_process/history/`.
 
 **`sources/`.** Imported originals and Ren's directive records only. Bytes never change; files never move. A redacted or adapted reading edition is labelled and registered, and the original stays.
+
+**Searching.** The root `.ignore` (13 November 2026) leaves `_process/history/`, `_process/architecture/history/` and the saved check copies (`becoming-checks/`) out of plain ripgrep searches, so that a search meets what is current first; `rg --no-ignore-dot` or `research.py find --archives` searches them too, and nothing is removed.
 
 **`tools/`.** Shared infrastructure in `tools/research/` (path roles, moves, landing, scanners, tests), publishing builders in `tools/publishing/`. Old dated tool paths stay as compatibility entry points.
 
