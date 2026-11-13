@@ -2042,3 +2042,7 @@ the terrain picture first on the fronts;
 AA's crosswalk entries landed (content tip `179d679ff`; atlas entries only, nothing paid): 從善如登 read from TM's stored 《國語·周語下》, its quote verbatim, 和實生物 naming the stored 《國語·鄭語》, and three 王陽明 entries given the laws TM's reading of the stored 《傳習錄》 found nearby;
 checked by the atlas's validation, focused tests, the render, strict-fresh, links and `make gate`;
 TM's reading of 《大學》 landed (content tip `c2e9bbb4c`; texts only, nothing paid): two Wikisource pages, 《禮記·大學》 and 《大學章句》, stored with provenance, twelve claims read onto the map, one blank;
+AA's six-family pass landed (content tip `de9c5631e`; atlas entries and evidence, no Lean, nothing paid; fourteen agents on Ren's "Yes, about 14"): families A, B, E, F, G and H read to C and D's rule, every hypothesis binder of 1,655 laws mapped to a premise and every exit given its destination (70 exits now name a dynamic, 55 of them across families), with 122 cases of general laws and 10 joins of two dynamics, each said with how far it is seen;
+checked by two fresh readers, the atlas's validation, focused tests, the render, strict-fresh, links and `make gate`;
+RW's fourteenth piece landed (content tip `118a31f4a`; nothing paid): the atlas in the shared navigation line in both languages, the reader's site's address on README's first screen and MAP, LINEAGE cut at the third push with point 51 (10 November: from ranking by widening to the dynamics connected and mapped), an anchor for every point and a title for 50;
+Ren's "Once, after AG-F" kept in sources;
