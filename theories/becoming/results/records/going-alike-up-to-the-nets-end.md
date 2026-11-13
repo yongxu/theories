@@ -110,7 +110,7 @@ Reading (AI-written, from its knowledge): the root's two names for one gap becom
 |---|---|---|
 | proof | [GrammarPath.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarPath.lean) | `Becoming.«同行可决则至终有常»`, `Becoming.«后不定则至终有常可不同行»`, `Becoming.«局定后则至终有常当且仅当同行可决»`, `Becoming.«有常当且仅当至终有常可续»`, `Becoming.«至终有常则可决»`, `Becoming.«至终有常可续则有常»`, `Becoming.«至终有常局定后则同行»` |
 | proof | [GuardedStep.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardedStep.lean) | `Becoming.Law.stepWhile`, `Becoming.Law.stepWhile_always`, `Becoming.Law.stepWhile_constant_iff`, `Becoming.Law.stepWhile_continues_iff`, `Becoming.Law.stepWhile_fixed`, `Becoming.Law.stepWhile_goesAlike_iff`, `Becoming.Law.stepWhile_guarded_iff`, `Becoming.Law.stepWhile_hasSucc_iff`, `Becoming.Law.stepWhile_none_iff`, `Becoming.Law.stepWhile_step`, `Becoming.Law.stepWhile_steps_iff`, `Becoming.Law.stepWhile_toEnd_decides`, `Becoming.Law.stepWhile_toEnd_iff`, `Becoming.Law.stepWhile_unending_iff` |
-| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261113T023828.938796Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261113T054936.915391Z/verification.json) | — |
 | integration | [NOTE.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tt-turning-in-time/NOTE.md) | — |
 | integration | [DESIGN.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tt-turning-in-time/DESIGN.md) | — |
 | integration | [DESIGN-R2.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tt-turning-in-time/DESIGN-R2.md) | — |
@@ -127,4 +127,4 @@ Aliases: `going alike and constancy up to the net's end`, `a law's step while it
 
 </details>
 
-Documentary review UTC: `2026-11-13T04:06:30+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-13T05:51:05+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

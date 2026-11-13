@@ -52,16 +52,29 @@ and level are this model's labels, not terms of the root.
   `turns`, `kept`, `uses` and `uses₁` are proved, not assumed (`first_outside`, `first_turns`,
   `first_kept`, `first_uses`, `first_uses₁`), and a transfer: from this start the units' line never
   ends exactly where the carrier's line never ends (`unending_iff_carrier`).
-* **Comparisons of two units**, under `two_units_iff`'s premises. A greater need of the first unit
-  never ends a line that did not end (`greater_need`, by the course as it was never rising below
-  `h + H₂ + y₁`, `level_le_of_le`). With the same needs and the same sum taken, more of the use on the
-  first unit never ends a line that did not end (`more_use_on_first`).
+* **A line of two units that never ends stays at or above `H₂ + y₂`, below which the level under the
+  second unit's use falls** (`unending_above`). With `n ≤ m`, nothing given from nothing, giving
+  short of `H₂` below `y₂` and `0 < n`, under any use of the first unit and from any start: if the
+  line from a first unit needing
+  `m` and a second needing `n` and taking `H₂` never ends, every level of its course is at or above
+  `H₂ + y₂`. Below it each step, under a use of at least `H₂`, leaves nothing or a lower level
+  (`step_falls`), so the level comes to nothing, below `n` (`carrier_falls`, `carrier_above`).
+* **Comparisons of two units**, not through `two_units_iff`, from any start at most `hi`. With
+  `n ≤ m`, nothing given from nothing, and `Short`, `Meets` and `Keeps` at the second unit's use `H₂`
+  from `y₂` up to `hi`: a greater need `m' ≥ m` of the first unit never ends a line that did not end
+  (`greater_need`). With `n ≤ m`, nothing given from nothing, `Short`, `Meets` and `Keeps` at the
+  second unit's use `H₂'` in the line compared, the same sum taken `h + H₂ = h' + H₂'` and `h ≤ h'`:
+  more of the use on the first unit never ends a line that did not end (`more_use_on_first`). Each
+  rests on `carrier_above`, the step of `unending_above`: the two lines have the same course until
+  they leave each other, the level there is at or above the second unit's use and `y` of it, and from
+  there the second unit alone holds (`alone_holds`, by `RegimeMargin.holds`); at `n = 0` both lines
+  never end.
 * **A unit that takes nothing** (`takes_nothing_iff_alone`). With `n ≤ m`, under any giving and from
   any start, the line from a first unit needing `m` and taking nothing and a second needing `n` and
   taking `H₂` never ends exactly where the line of the second unit alone never ends: whether the first
-  unit is there or has ended, the level's course is the same. So below the second unit's own point of
-  no return, with every need positive, the line ends (`takes_nothing_ends`, `RegimeMargin.ends_below`
-  for the second unit).
+  unit is there or has ended, the level's course is the same. So from a start below `H₂ + y₁`, with
+  giving short of `H₂` below `y₁`, nothing given from nothing and every need positive, the line ends
+  (`takes_nothing_ends`, `RegimeMargin.ends_below` for the second unit).
 * **Two ways from one start** (`With`, `Against`). Giving `min z (12 - z)`
   (`TurningInTime.Three.giving`), from the level nine, needs nine and one, the two units taking five
   together: with the first taking four and the second one, the levels run 9, 8, 6, 10, 12, 12 and the
@@ -69,6 +82,15 @@ and level are this model's labels, not terms of the root.
   `With.levels`); with the first taking one and the second four, they run 9, 8, 6, 4, 0 and the line
   ends (`Against.turns_and_ends`). The needs, the sum taken and the levels up to the first unit's
   ending are the same; which unit takes the larger use differs.
+* **Where something is given from nothing, the comparisons fail** (`GivenFromNothing`). Giving two at
+  nothing and at two and nothing elsewhere, with `Short`, `Meets` and `Keeps` at the second unit's use
+  three from four up to six (`GivenFromNothing.regime`), from six: a first unit needing two and taking
+  one with a second needing two and taking three never ends, and with the first needing seven the
+  line ends (`GivenFromNothing.greater_need_fails`); a first unit needing seven and taking nothing
+  with a second taking four never ends, and with them taking one and three the line ends
+  (`GivenFromNothing.more_use_fails`). So neither comparison holds without nothing given from
+  nothing. A line that comes to a configuration its step leaves as it is, some unit going on there and
+  at every step before, never ends (`unending_of_fixed`).
 
 ## What is given and what is not shown
 
@@ -83,15 +105,25 @@ changes depends on the way, so `unending_iff_holds` does not go through `turns_i
 `two_units_iff` does only for two units and from a start below `h + H₂ + y₁` and at most `hi`. A start
 at or above `h + H₂ + y₁`, a start that already holds with both units among them, is outside
 `two_units_iff`; `unending_iff_holds` covers it under its own premises, which ask `Meets` and `Keeps`
-at `h + H₂` with `y (h + H₂)` too, where `two_units_iff` asks only `Short` there. `greater_need` and `more_use_on_first` are for two units below `h + H₂ + y₁`; the
-comparison for any number of units is not stated. Their proofs go through `two_units_iff` and so use
-all of its premises; simulations kept with the study's reports (not in Lean) found each statement
-true with some of them dropped (among others: for `greater_need`, the bound below
-`h + H₂ + y₁`; for `more_use_on_first`, the regime at `H₂`), which is not proved here. Readings, not theorems: that `ReadingsSpread`'s overdrawn focal line is such a
-unit; that the gauges `near` and `mid` of `Becoming.ReadOffInTime`'s witness of one loss, which need
-more and take nothing, are the case of `takes_nothing_iff_alone`, at whose ending the level's course
-is as it was, so that they can only be read; anything about keeping a unit from ending by lowering
-its need. Nothing here is about a trained system.
+at `h + H₂` with `y (h + H₂)` too, where `two_units_iff` asks only `Short` there. `greater_need` and
+`more_use_on_first` do not go through `two_units_iff`: they are proved for two units from any start
+at most `hi`, with `n ≤ m`, nothing given from nothing, and `Short`, `Meets` and `Keeps` at the second
+unit's use (in the line compared, for `more_use_on_first`), without `0 < n`, `n ≤ H₂ + y₂`, `Short`
+at `h + H₂` or a bound on the start below `h + H₂ + y₁`, and `more_use_on_first` without the regime
+at `H₂`. The comparison for any number of units is not stated. Nothing given from nothing cannot be
+dropped from either comparison (`GivenFromNothing`, proved). For each other premise, computed cases,
+not Lean, show it needed too: a simulation of this module (in the reports on its study) gives, with
+that premise dropped and the others kept, a giving and a start at which the statement fails, for
+`greater_need` without `n ≤ m`, `m ≤ m'`, `Short`, `Meets`, `Keeps` or the start at most `hi`, for
+`more_use_on_first` without `n ≤ m`, `Short`, `Meets`, `Keeps`, the same sum, `h ≤ h'` or the start
+at most `hi`, and for `unending_above` without `n ≤ m` or nothing given from nothing. `unending_above`
+asks `0 < n`: at `n = 0` the line never ends from any start (`unending_needs_nothing`), a start below
+`H + y` among them.
+Readings, not theorems: that `ReadingsSpread`'s overdrawn focal line is such a unit; that the gauges
+`near` and `mid` of `Becoming.ReadOffInTime`'s witness of one loss, which need more and take
+nothing, are the case of `takes_nothing_iff_alone`, at whose ending the level's course is as it was,
+so that they can only be read; anything about keeping a unit from ending by lowering its need.
+Nothing here is about a trained system.
 
 Every declaration has an empty axiom report.
 -/
@@ -442,39 +474,7 @@ theorem unending_iff_holds {giving y : Nat → Nat} {hi : Nat} {w : List (Nat ×
           | ⟨v, mv⟩ => Eq.subst (motive := fun j => Goes (course giving (w, x) j)) e.symm
               (Eq.subst (motive := Goes) at_i.symm ⟨v, mv, Nat.le_trans (met v mv) s.2⟩)⟩
 
-/-! ## 5. The level's course as it was never rises below the point of no return -/
-
-/-- From a start below `H + y`, where giving falls short of `H` below `y` and nothing is given from
-nothing, the level's course under `H` stays within its start. `RegimeMargin.Adjusted.orbit_bound`
-(fallen by at least the steps taken) in the regime's form, by `RegimeMargin.Adjusted.orbit_regime`. -/
-theorem level_le_start {giving : Nat → Nat} {H y x : Nat} (short : RegimeMargin.Short giving H y)
-    (nothing : RegimeMargin.FromNothing giving) (below : x < H + y) (t : Nat) :
-    Law.orbit (RegimeMargin.step giving H) x t ≤ x :=
-  Nat.le_trans (Nat.le_of_eq (RegimeMargin.Adjusted.orbit_regime giving H (x, 0) t).symm)
-    (Nat.le_trans
-      (RegimeMargin.Adjusted.orbit_bound short (RegimeMargin.Adjusted.regime_staysShort giving H)
-        (RegimeMargin.Adjusted.regime_fromNothing nothing) below
-        (RegimeMargin.Adjusted.draw_pos short below) t).2.2
-      (Nat.sub_le x t))
-
-/-- **The course as it was never rises.** Under the premises of `level_le_start` (giving short of `H`
-below `y`, nothing given from nothing, a start below `H + y`), for `a ≤ b` the level at `b` is at most
-the level at `a`: `level_le_start` from the level at `a`, which is below `H + y` too. This is
-`Optimum.never_rises` in the regime's form, which the package reaches only inside the private
-`TurningInTime.regime_levels`. -/
-theorem level_le_of_le {giving : Nat → Nat} {H y x : Nat} (short : RegimeMargin.Short giving H y)
-    (nothing : RegimeMargin.FromNothing giving) (below : x < H + y) {a b : Nat} (le : a ≤ b) :
-    Law.orbit (RegimeMargin.step giving H) x b ≤ Law.orbit (RegimeMargin.step giving H) x a :=
-  match le_dest le with
-  | ⟨k, e⟩ => Eq.subst
-      (motive := fun j => Law.orbit (RegimeMargin.step giving H) x j ≤
-        Law.orbit (RegimeMargin.step giving H) x a)
-      e.symm
-      (Nat.le_trans (Nat.le_of_eq (Law.orbit_add _ x a k))
-        (level_le_start short nothing
-          (Nat.lt_of_le_of_lt (level_le_start short nothing below a) below) k))
-
-/-! ## 6. Two units, and the tie to TurningInTime -/
+/-! ## 5. Two units, and the tie to TurningInTime -/
 
 /-- The carrier's way after a step: the first unit is still there (`true`) where it was there and the
 level meets its need `m`. -/
@@ -656,84 +656,292 @@ theorem two_units_iff {giving : Nat → Nat} {m h n H₂ y₁ y₂ hi x : Nat}
           Nat.lt_of_le_of_lt (Nat.le_of_eq (same T)) belowT,
           Nat.le_trans enough (Nat.le_of_eq (same (T + 1)).symm)⟩⟩)
 
+/-! ## 6. A line of two units that never ends stays at or above `H₂ + y₂`, below which the level under the second unit's use falls -/
+
+/-- The carrier's step: the way after a step (`firstAfter`) and the level under what the way takes
+(`firstUse`). The step of `carrierCourse`. -/
+abbrev carrierStep (giving : Nat → Nat) (m h H₂ : Nat) : Bool × Nat → Bool × Nat :=
+  TurningInTime.pair (firstAfter m) (fun b z => RegimeMargin.step giving (firstUse h H₂ b) z)
+
+/-- **Below `H + y`, a step lowers the level or leaves nothing.** With giving short of
+`H` below `y` (`short`), nothing given from nothing (`nothing`), a use `U` at least `H` (`more`) and a
+level `z` below `H + y` (`below`): the step under `U` leaves nothing, or less than `z`. Where `z` is
+below `U` the step takes all of it and nothing is given from nothing; otherwise what is left is below
+`y`, and giving there is short of `H`, so of `U`. -/
+theorem step_falls {giving : Nat → Nat} {H y U z : Nat} (short : RegimeMargin.Short giving H y)
+    (nothing : RegimeMargin.FromNothing giving) (more : H ≤ U) (below : z < H + y) :
+    RegimeMargin.step giving U z = 0 ∨ RegimeMargin.step giving U z < z :=
+  (Nat.lt_or_ge z U).elim
+    (fun lt =>
+      have gone : z - U = 0 := sub_eq_zero_of_le (Nat.le_of_lt lt)
+      .inl (by
+        show z - U + giving (z - U) = 0
+        rw [gone]
+        exact (Nat.zero_add (giving 0)).trans nothing))
+    (fun ge =>
+      have leftBelow : z - U < y := (Nat.lt_or_ge (z - U) y).elim id fun atLeast =>
+        absurd (Nat.le_trans (Nat.add_le_add more atLeast) (Nat.le_of_eq (add_sub_of_le ge)))
+          (Nat.not_le_of_gt below)
+      have less : giving (z - U) < U := Nat.lt_of_lt_of_le (short (z - U) leftBelow) more
+      .inr (Nat.lt_of_lt_of_le (Nat.add_lt_add_left less (z - U))
+        (Nat.le_of_eq (Naturals.sub_add_cancel ge))))
+
+/-- What the way of two units takes is at least `U` wherever the second unit's use `H₂` is
+(`low : U ≤ H₂`), whether the first unit is there or has ended. -/
+theorem use_at_least {h H₂ U : Nat} (low : U ≤ H₂) : ∀ b, U ≤ firstUse h H₂ b
+  | true => Nat.le_trans low (Nat.le_add_left H₂ h)
+  | false => low
+
+/-- **From a level below `U + y`, the carrier's level falls at every step until it is nothing.** With `U ≤ H₂` (`low`), giving short of `U` below `y` (`short`), nothing given from
+nothing (`nothing`) and the level at step `k` below `U + y` (`below`): `j` steps later the level is
+nothing, or at least `j` below the level at `k`. By `step_falls` and `use_at_least`, by induction on
+`j`. -/
+theorem carrier_falls {giving : Nat → Nat} {m h H₂ U y x k : Nat} (low : U ≤ H₂)
+    (short : RegimeMargin.Short giving U y) (nothing : RegimeMargin.FromNothing giving)
+    (below : (carrierCourse giving m h H₂ x k).2 < U + y) :
+    ∀ j, (carrierCourse giving m h H₂ x (k + j)).2 = 0 ∨
+      (carrierCourse giving m h H₂ x (k + j)).2 + j ≤ (carrierCourse giving m h H₂ x k).2
+  | 0 => .inr (Nat.le_refl _)
+  | j + 1 =>
+    have prev := carrier_falls (m := m) (h := h) (x := x) low short nothing below j
+    have curBelow : (carrierCourse giving m h H₂ x (k + j)).2 < U + y := prev.elim
+      (fun zero => Nat.lt_of_le_of_lt (Nat.le_of_eq zero)
+        (Nat.lt_of_le_of_lt (Nat.zero_le _) below))
+      (fun le => Nat.lt_of_le_of_lt (Nat.le_trans (Nat.le_add_right _ j) le) below)
+    have falls := step_falls (U := firstUse h H₂ (carrierCourse giving m h H₂ x (k + j)).1)
+      short nothing (use_at_least low _) curBelow
+    falls.elim .inl fun lt =>
+      .inr (prev.elim
+        (fun zero => absurd (Nat.lt_of_lt_of_le lt (Nat.le_of_eq zero)) (Nat.not_lt_zero _))
+        (fun le =>
+          have moved : RegimeMargin.step giving
+                (firstUse h H₂ (carrierCourse giving m h H₂ x (k + j)).1)
+                (carrierCourse giving m h H₂ x (k + j)).2 + j + 1 ≤
+              (carrierCourse giving m h H₂ x k).2 :=
+            Nat.le_trans (Nat.le_of_eq (Nat.add_right_comm _ 1 j).symm)
+              (Nat.le_trans (Nat.add_le_add_right (Nat.succ_le_of_lt lt) j) le)
+          moved))
+
+/-- **While the second unit's need is met at every step, the carrier's level stays at or above
+`U + y`.** With `U ≤ H₂` (`low`), giving short of `U` below `y` (`short`), nothing given from nothing
+(`nothing`), `0 < n` (`needs`) and `n` met at every step of the carrier's course from `true` at `x`
+(`all`): every level of that course is at or above `U + y`. From a level below it the level is
+nothing within as many steps as it stood (`carrier_falls`), below `n`. -/
+theorem carrier_above {giving : Nat → Nat} {m h n H₂ U y x : Nat} (low : U ≤ H₂)
+    (short : RegimeMargin.Short giving U y) (nothing : RegimeMargin.FromNothing giving)
+    (needs : 0 < n) (all : ∀ k, n ≤ (carrierCourse giving m h H₂ x k).2) (k : Nat) :
+    U + y ≤ (carrierCourse giving m h H₂ x k).2 :=
+  (Nat.lt_or_ge (carrierCourse giving m h H₂ x k).2 (U + y)).elim
+    (fun below =>
+      have gone : (carrierCourse giving m h H₂ x (k + (carrierCourse giving m h H₂ x k).2)).2 ≤ 0 :=
+        (carrier_falls low short nothing below (carrierCourse giving m h H₂ x k).2).elim
+          Nat.le_of_eq
+          (fun le => le_of_add_le_add_right _ (Nat.le_trans le (Nat.le_of_eq (Nat.zero_add _).symm)))
+      absurd (Nat.lt_of_lt_of_le needs (Nat.le_trans (all _) gone)) (Nat.lt_irrefl 0))
+    id
+
+/-- **A line of two units that never ends stays at or above `H + y`, below which the level under the
+second unit's use falls.** With `n ≤ m` (`order`), nothing given from nothing (`nothing`), giving short of `H`
+below `y` (`short`) and `0 < n` (`needs`), under any `h` and from any start `x`: if the line from a
+first unit needing `m` and taking `h` and a second needing `n` and taking `H` never ends, every level
+of its course is at or above `H + y`. By `goes_iff_carrier`, `carrier_above` at `U := H` and
+`course_twoWay`. At `n = 0` the line never ends from any start (`unending_needs_nothing`), below
+`H + y` too; `needs` is asked for that reason. -/
+theorem unending_above {giving : Nat → Nat} {m h n H y x : Nat} (order : n ≤ m)
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H y)
+    (needs : 0 < n) (never : «不穷» (net giving) «一» ([(m, h), (n, H)], x)) :
+    ∀ k, H + y ≤ (course giving ([(m, h), (n, H)], x) k).2 :=
+  have all : ∀ k, n ≤ (carrierCourse giving m h H x k).2 :=
+    (goes_iff_carrier order).mp (Law.stepWhile_unending_iff.mp never)
+  fun k => Nat.le_trans (carrier_above (Nat.le_refl H) short nothing needs all k)
+    (Nat.le_of_eq (congrArg Prod.snd (course_twoWay (n := n) k fun j _ => all j)).symm)
+
+/-- **With a second unit that needs nothing, the line never ends.** Under any giving, for any `m`,
+`h`, `H` and from any start `x`: the line from a first unit needing `m` and taking `h` and a second
+needing nothing and taking `H` never ends, since the second unit goes on at every level
+(`goes_iff_carrier`). -/
+theorem unending_needs_nothing {giving : Nat → Nat} {m h H x : Nat} :
+    «不穷» (net giving) «一» ([(m, h), (0, H)], x) :=
+  Law.stepWhile_unending_iff.mpr ((goes_iff_carrier (Nat.zero_le m)).mpr fun _ => Nat.zero_le _)
+
+/-- The step under `Keeps` at the second unit's use `H₂` keeps the level within `hi` whatever the way
+of two units takes: at `h + H₂` it is the step under `H₂` from what is left after `h`, which is at
+most the level. Premise: `Keeps` at `H₂` up to `hi` (`keeps`). -/
+theorem keeps_use {giving : Nat → Nat} {h H₂ hi : Nat} (keeps : RegimeMargin.Keeps giving H₂ hi) :
+    ∀ b, RegimeMargin.Keeps giving (firstUse h H₂ b) hi
+  | true => fun z le => by
+    show z - (h + H₂) + giving (z - (h + H₂)) ≤ hi
+    rw [← Naturals.sub_sub z h H₂]
+    exact keeps (z - h) (Nat.le_trans (Nat.sub_le z h) le)
+  | false => keeps
+
+/-- **The carrier's level stays within `hi`.** With the step under `H₂` keeping the level within `hi`
+(`keeps`) and the start at most `hi` (`high`): every level of the carrier's course from `true` at `x`
+is at most `hi`. By `keeps_use`, by induction on the step. -/
+theorem carrier_within {giving : Nat → Nat} {m h H₂ hi x : Nat}
+    (keeps : RegimeMargin.Keeps giving H₂ hi) (high : x ≤ hi) :
+    ∀ k, (carrierCourse giving m h H₂ x k).2 ≤ hi
+  | 0 => high
+  | k + 1 => keeps_use (h := h) keeps (carrierCourse giving m h H₂ x k).1
+      (carrierCourse giving m h H₂ x k).2 (carrier_within keeps high k)
+
+/-- **The second unit alone holds from at or above `H₂ + y`.** With giving meeting `H₂` from `y` up to
+`hi` (`meets`) and the step under `H₂` keeping the level within `hi` (`keeps`): from a carrier
+configuration with the first unit ended, `n` met, the level at or above `H₂ + y` and at most `hi`,
+the next has the first unit ended, `n` met and the level at or above `H₂ + y`. By
+`RegimeMargin.holds`, one step. -/
+theorem alone_holds {giving : Nat → Nat} {m h n H₂ y hi : Nat}
+    (meets : RegimeMargin.Meets giving H₂ y hi) (keeps : RegimeMargin.Keeps giving H₂ hi) :
+    ∀ s : Bool × Nat, s.1 = false → n ≤ s.2 → H₂ + y ≤ s.2 → s.2 ≤ hi →
+      (carrierStep giving m h H₂ s).1 = false ∧ n ≤ (carrierStep giving m h H₂ s).2 ∧
+        H₂ + y ≤ (carrierStep giving m h H₂ s).2
+  | (false, z), _, met, low, high =>
+    have up : z ≤ RegimeMargin.step giving H₂ z := (RegimeMargin.holds meets keeps low high 1).1
+    ⟨rfl, Nat.le_trans met up, Nat.le_trans low up⟩
+  | (true, _), ended, _, _, _ => absurd ended.symm Bool.false_ne_true
+
 /-! ## 7. Comparisons of two units -/
 
-/-- **A greater need of the first unit never ends a line that did not end.** Under `two_units_iff`'s
-premises (`n ≤ m`, nothing given from nothing, `Short`, `Meets`, `Keeps` at `H₂` from `y₂` up to `hi`,
-`0 < n ≤ H₂ + y₂`, giving short of `h + H₂` below `y₁`, the start below `h + H₂ + y₁` and at most
-`hi`), for `m ≤ m'`: if the line with the first unit needing `m` never ends, neither does the line with
-it needing `m'`. The course as it was does not depend on the need; it never rises
-(`level_le_of_le`), so the first level below `m'` comes no later than the first below `m`, and neither
-it nor the level after it is lower. The proof uses every premise of `two_units_iff`, the start below
-`h + H₂ + y₁` among them; whether the statement needs that bound is not shown here. -/
-theorem greater_need {giving : Nat → Nat} {m m' h n H₂ y₁ y₂ hi x : Nat}
+/-- At a level that meets `m'`, with `m ≤ m'` (`more`), the carrier's step with the first unit needing
+`m'` is its step with it needing `m`: the first unit, there or ended, stays so in both. -/
+theorem step_above_need {giving : Nat → Nat} {m m' h H₂ : Nat} (more : m ≤ m') :
+    ∀ s : Bool × Nat, m' ≤ s.2 → carrierStep giving m' h H₂ s = carrierStep giving m h H₂ s
+  | (b, z), ge => by
+    show (b && decide (m' ≤ z), RegimeMargin.step giving (firstUse h H₂ b) z) =
+      (b && decide (m ≤ z), RegimeMargin.step giving (firstUse h H₂ b) z)
+    rw [decide_eq_true ge, decide_eq_true (Nat.le_trans more ge)]
+
+/-- Along the carrier's courses from `true` at `x`, with the first unit needing `m'` and needing `m`:
+at every step they are the same, or the first has the first unit ended, `n` met and the level at or
+above `H₂ + y₂`. Premises: `m ≤ m'` (`more`), nothing given from nothing (`nothing`), `Short`, `Meets`,
+`Keeps` at `H₂` from `y₂` up to `hi` (`short`, `meets`, `keeps`), the start at most `hi` (`high`),
+`0 < n` (`needs`), and `n` met at every step of the course with `m` (`all`). The two leave each other
+at the first level below `m'`, the first unit there or already ended in both; from there
+`carrier_above` and `alone_holds`. -/
+theorem greater_need_along {giving : Nat → Nat} {m m' h n H₂ y₂ hi x : Nat} (more : m ≤ m')
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H₂ y₂)
+    (meets : RegimeMargin.Meets giving H₂ y₂ hi) (keeps : RegimeMargin.Keeps giving H₂ hi)
+    (high : x ≤ hi) (needs : 0 < n) (all : ∀ k, n ≤ (carrierCourse giving m h H₂ x k).2) :
+    ∀ k, carrierCourse giving m' h H₂ x k = carrierCourse giving m h H₂ x k ∨
+      ((carrierCourse giving m' h H₂ x k).1 = false ∧ n ≤ (carrierCourse giving m' h H₂ x k).2 ∧
+        H₂ + y₂ ≤ (carrierCourse giving m' h H₂ x k).2)
+  | 0 => .inl rfl
+  | k + 1 => match greater_need_along more nothing short meets keeps high needs all k with
+    | .inr ⟨ended, met, low⟩ => .inr (alone_holds (m := m') (h := h) meets keeps _ ended met low
+        (carrier_within (m := m') (h := h) keeps high k))
+    | .inl same =>
+      have next : carrierCourse giving m' h H₂ x (k + 1) =
+          carrierStep giving m' h H₂ (carrierCourse giving m h H₂ x k) :=
+        congrArg (carrierStep giving m' h H₂) same
+      (Nat.lt_or_ge (carrierCourse giving m h H₂ x k).2 m').elim
+        (fun lt => .inr (Eq.subst
+          (motive := fun s : Bool × Nat => s.1 = false ∧ n ≤ s.2 ∧ H₂ + y₂ ≤ s.2) next.symm
+          ⟨first_turns m' (carrierCourse giving m h H₂ x k).1 (carrierCourse giving m h H₂ x k).2 lt,
+           all (k + 1), carrier_above (Nat.le_refl H₂) short nothing needs all (k + 1)⟩))
+        (fun ge => .inl (next.trans (step_above_need more _ ge)))
+
+/-- **A greater need of the first unit never ends a line that did not end.** With `n ≤ m` (`order`),
+`m ≤ m'` (`more`), nothing given from nothing (`nothing`), giving short of `H₂` below `y₂` (`short`),
+meeting it from `y₂` up to `hi` (`meets`), the step under `H₂` keeping the level within `hi`
+(`keeps`), and the start at most `hi` (`high`); under any `h` and any `n`: if the line with the first
+unit needing `m` never ends, neither does the line with it needing `m'`. At `n = 0` both lines never
+end. Otherwise the line with `m'` has the course of the line with `m` until a level below `m'` with
+the first unit there; one step later its level is the other line's, so `n` is met and it is at or
+above `H₂ + y₂` (`carrier_above`, as in `unending_above`), and from there the second unit alone holds
+(`alone_holds`, `RegimeMargin.holds`, within `hi` by `carrier_within`): `greater_need_along`. -/
+theorem greater_need {giving : Nat → Nat} {m m' h n H₂ y₂ hi x : Nat}
     (order : n ≤ m) (more : m ≤ m') (nothing : RegimeMargin.FromNothing giving)
     (short : RegimeMargin.Short giving H₂ y₂) (meets : RegimeMargin.Meets giving H₂ y₂ hi)
-    (keeps : RegimeMargin.Keeps giving H₂ hi) (needs : 0 < n) (within : n ≤ H₂ + y₂)
-    (short₁ : RegimeMargin.Short giving (h + H₂) y₁) (below : x < h + H₂ + y₁) (high : x ≤ hi) :
+    (keeps : RegimeMargin.Keeps giving H₂ hi) (high : x ≤ hi) :
     «不穷» (net giving) «一» ([(m, h), (n, H₂)], x) →
       «不穷» (net giving) «一» ([(m', h), (n, H₂)], x) :=
   fun never =>
-    match (two_units_iff order nothing short meets keeps needs within short₁ below high).mp never with
-    | ⟨T, _, atT, belowT, enough⟩ =>
-      (two_units_iff (m := m') (Nat.le_trans order more) nothing short meets keeps needs within
-          short₁ below high).mpr
-        (match first_of_decided
-            (P := fun j => m' ≤ Law.orbit (RegimeMargin.step giving (h + H₂)) x j)
-            (Q := fun j => Law.orbit (RegimeMargin.step giving (h + H₂)) x j < m')
-            (fun j => (Nat.lt_or_ge (Law.orbit (RegimeMargin.step giving (h + H₂)) x j) m').elim
-              .inr .inl) T with
-          | .inl all => absurd (all T (Nat.le_refl T))
-              (Nat.not_le_of_gt (Nat.lt_of_lt_of_le belowT more))
-          | .inr ⟨T', le, belowT', before'⟩ =>
-            ⟨T', before', Nat.le_trans atT (level_le_of_le short₁ nothing below le), belowT',
-              Nat.le_trans enough
-                (level_le_of_le short₁ nothing below (Nat.succ_le_succ le))⟩)
+    have all : ∀ k, n ≤ (carrierCourse giving m h H₂ x k).2 :=
+      (goes_iff_carrier order).mp (Law.stepWhile_unending_iff.mp never)
+    Law.stepWhile_unending_iff.mpr ((goes_iff_carrier (Nat.le_trans order more)).mpr
+      ((Nat.lt_or_ge 0 n).elim
+        (fun needs k => (greater_need_along more nothing short meets keeps high needs all k).elim
+          (fun same => Nat.le_trans (all k) (Nat.le_of_eq (congrArg Prod.snd same).symm))
+          (fun alone => alone.2.1))
+        (fun zero _ => Nat.le_trans zero (Nat.zero_le _))))
 
-/-- **More of the use on the first unit never ends a line that did not end.** Under `two_units_iff`'s
-premises for the uses `h, H₂` with `y₂` and for `h', H₂'` with `y₂'` (each pair with its own
-`Short`, `Meets`, `Keeps` and `n` at most `H₂ + y₂`, resp. `H₂' + y₂'`), the same needs `n ≤ m`, the
-same sum taken `h + H₂ = h' + H₂'` with one `y₁`, and `h ≤ h'`: if the line with the first unit
-taking `h` never ends, neither does the line with it taking `h'`. The course as it was is the same, and
-the level from which the rest holds is not higher: `H₂' ≤ H₂`, and `y₂' ≤ y₂` from `Short` at `H₂'`
-and `Meets` at `H₂` (at `y₂`, within `hi` since the level never rises from `x ≤ hi`). The regime at
-`H₂` is asked so that the first line is read through `two_units_iff`; whether the statement needs it is
-not shown here. -/
-theorem more_use_on_first {giving : Nat → Nat} {m n h H₂ y₂ h' H₂' y₂' y₁ hi x : Nat}
+/-- With the same sum taken (`sum : h + H₂ = h' + H₂'`), the carrier's step with the first unit there
+is the same under the uses `h, H₂` and `h', H₂'`. -/
+theorem step_same_sum {giving : Nat → Nat} {m h H₂ h' H₂' : Nat} (sum : h + H₂ = h' + H₂') :
+    ∀ s : Bool × Nat, s.1 = true → carrierStep giving m h' H₂' s = carrierStep giving m h H₂ s
+  | (true, z), _ => by
+    show (firstAfter m true z, RegimeMargin.step giving (h' + H₂') z) =
+      (firstAfter m true z, RegimeMargin.step giving (h + H₂) z)
+    rw [sum]
+  | (false, _), there => absurd there Bool.false_ne_true
+
+/-- The first unit is there or has ended. -/
+theorem there_or_ended : ∀ b : Bool, b = true ∨ b = false
+  | true => .inl rfl
+  | false => .inr rfl
+
+/-- Along the carrier's courses from `true` at `x`, with the uses `h', H₂'` and `h, H₂`: at every step
+they are the same, or the first has the first unit ended, `n` met and the level at or above
+`H₂' + y₂'`. Premises: nothing given from nothing (`nothing`), `Short`, `Meets`, `Keeps` at `H₂'` from
+`y₂'` up to `hi` (`short'`, `meets'`, `keeps'`), the same sum taken (`sum`), `H₂' ≤ H₂` (`lessUse`),
+the start at most `hi` (`high`), `0 < n` (`needs`), and `n` met at every step of the course with
+`h, H₂` (`all`). The two leave each other where the first unit has ended; every level of the course
+with `h, H₂` is at or above `H₂' + y₂'` (`carrier_above` at `U := H₂'`), and from there
+`alone_holds`. -/
+theorem more_use_along {giving : Nat → Nat} {m n h H₂ h' H₂' y₂' hi x : Nat}
+    (nothing : RegimeMargin.FromNothing giving) (short' : RegimeMargin.Short giving H₂' y₂')
+    (meets' : RegimeMargin.Meets giving H₂' y₂' hi) (keeps' : RegimeMargin.Keeps giving H₂' hi)
+    (sum : h + H₂ = h' + H₂') (lessUse : H₂' ≤ H₂) (high : x ≤ hi) (needs : 0 < n)
+    (all : ∀ k, n ≤ (carrierCourse giving m h H₂ x k).2) :
+    ∀ k, carrierCourse giving m h' H₂' x k = carrierCourse giving m h H₂ x k ∨
+      ((carrierCourse giving m h' H₂' x k).1 = false ∧ n ≤ (carrierCourse giving m h' H₂' x k).2 ∧
+        H₂' + y₂' ≤ (carrierCourse giving m h' H₂' x k).2)
+  | 0 => .inl rfl
+  | k + 1 => match more_use_along nothing short' meets' keeps' sum lessUse high needs all k with
+    | .inr ⟨ended, met, low⟩ => .inr (alone_holds (m := m) (h := h') meets' keeps' _ ended met low
+        (carrier_within (m := m) (h := h') keeps' high k))
+    | .inl same =>
+      have next : carrierCourse giving m h' H₂' x (k + 1) =
+          carrierStep giving m h' H₂' (carrierCourse giving m h H₂ x k) :=
+        congrArg (carrierStep giving m h' H₂') same
+      (there_or_ended (carrierCourse giving m h H₂ x k).1).elim
+        (fun there => .inl (next.trans (step_same_sum sum _ there)))
+        (fun ended => .inr (Eq.subst
+          (motive := fun s : Bool × Nat => s.1 = false ∧ n ≤ s.2 ∧ H₂' + y₂' ≤ s.2) next.symm
+          (alone_holds (m := m) (h := h') meets' keeps' _ ended (all k)
+            (carrier_above lessUse short' nothing needs all k)
+            (Nat.le_trans (Nat.le_of_eq (congrArg Prod.snd same).symm)
+              (carrier_within (m := m) (h := h') keeps' high k)))))
+
+/-- **More of the use on the first unit never ends a line that did not end.** With `n ≤ m` (`order`),
+nothing given from nothing (`nothing`), giving short of `H₂'` below `y₂'` (`short'`), meeting it from
+`y₂'` up to `hi` (`meets'`), the step under `H₂'` keeping the level within `hi` (`keeps'`), the same
+sum taken `h + H₂ = h' + H₂'` (`sum`), `h ≤ h'` (`more`), and the start at most `hi` (`high`); no
+regime at `H₂`: if the line with the first unit taking `h` and the second `H₂` never ends, neither does
+the line with them taking `h'` and `H₂'`. At `n = 0` both lines never end. Otherwise, while the first
+unit is there both lines take the same sum and have the same course; every level of the first line is
+at or above `H₂' + y₂'`, since `H₂' ≤ H₂` and below it the level would come to nothing
+(`carrier_above`); so where the first unit has ended, the second unit alone taking `H₂'` holds
+(`alone_holds`, `RegimeMargin.holds`, within `hi` by `carrier_within`): `more_use_along`. -/
+theorem more_use_on_first {giving : Nat → Nat} {m n h H₂ h' H₂' y₂' hi x : Nat}
     (order : n ≤ m) (nothing : RegimeMargin.FromNothing giving)
-    (short : RegimeMargin.Short giving H₂ y₂) (meets : RegimeMargin.Meets giving H₂ y₂ hi)
-    (keeps : RegimeMargin.Keeps giving H₂ hi) (within : n ≤ H₂ + y₂)
     (short' : RegimeMargin.Short giving H₂' y₂') (meets' : RegimeMargin.Meets giving H₂' y₂' hi)
-    (keeps' : RegimeMargin.Keeps giving H₂' hi) (within' : n ≤ H₂' + y₂')
-    (needs : 0 < n) (sum : h + H₂ = h' + H₂') (more : h ≤ h')
-    (short₁ : RegimeMargin.Short giving (h + H₂) y₁) (below : x < h + H₂ + y₁) (high : x ≤ hi) :
+    (keeps' : RegimeMargin.Keeps giving H₂' hi) (sum : h + H₂ = h' + H₂') (more : h ≤ h')
+    (high : x ≤ hi) :
     «不穷» (net giving) «一» ([(m, h), (n, H₂)], x) →
       «不穷» (net giving) «一» ([(m, h'), (n, H₂')], x) :=
   fun never =>
-    match (two_units_iff order nothing short meets keeps needs within short₁ below high).mp never with
-    | ⟨T, before, atT, belowT, enough⟩ =>
-      have top : H₂ + y₂ ≤ hi :=
-        Nat.le_trans enough (Nat.le_trans (level_le_start short₁ nothing below (T + 1)) high)
-      have lessUse : H₂' ≤ H₂ := Naturals.le_of_add_le_add_left (k := h)
-        (Nat.le_trans (Nat.add_le_add_right more H₂') (Nat.le_of_eq sum.symm))
-      have lessY : y₂' ≤ y₂ := (Nat.lt_or_ge y₂ y₂').elim
-        (fun lt => absurd
-          (meets y₂ (Nat.le_refl y₂) (Nat.le_trans (Nat.le_of_eq (Nat.add_comm y₂ H₂)) top))
-          (Nat.not_le_of_gt (Nat.lt_of_lt_of_le (short' y₂ lt) lessUse)))
-        id
-      have rhs : ∃ T, (∀ j, j < T → m ≤ Law.orbit (RegimeMargin.step giving (h + H₂)) x j) ∧
-          n ≤ Law.orbit (RegimeMargin.step giving (h + H₂)) x T ∧
-          Law.orbit (RegimeMargin.step giving (h + H₂)) x T < m ∧
-          H₂' + y₂' ≤ Law.orbit (RegimeMargin.step giving (h + H₂)) x (T + 1) :=
-        ⟨T, before, atT, belowT, Nat.le_trans (Nat.add_le_add lessUse lessY) enough⟩
-      (two_units_iff (h := h') (H₂ := H₂') order nothing short' meets' keeps' needs within'
-          (Eq.subst (motive := fun H => RegimeMargin.Short giving H y₁) sum short₁)
-          (Eq.subst (motive := fun H => x < H + y₁) sum below) high).mpr
-        (Eq.subst (motive := fun H =>
-            ∃ T, (∀ j, j < T → m ≤ Law.orbit (RegimeMargin.step giving H) x j) ∧
-              n ≤ Law.orbit (RegimeMargin.step giving H) x T ∧
-              Law.orbit (RegimeMargin.step giving H) x T < m ∧
-              H₂' + y₂' ≤ Law.orbit (RegimeMargin.step giving H) x (T + 1)) sum rhs)
+    have all : ∀ k, n ≤ (carrierCourse giving m h H₂ x k).2 :=
+      (goes_iff_carrier order).mp (Law.stepWhile_unending_iff.mp never)
+    have lessUse : H₂' ≤ H₂ := Naturals.le_of_add_le_add_left (k := h)
+      (Nat.le_trans (Nat.add_le_add_right more H₂') (Nat.le_of_eq sum.symm))
+    Law.stepWhile_unending_iff.mpr ((goes_iff_carrier order).mpr
+      ((Nat.lt_or_ge 0 n).elim
+        (fun needs k =>
+          (more_use_along nothing short' meets' keeps' sum lessUse high needs all k).elim
+            (fun same => Nat.le_trans (all k) (Nat.le_of_eq (congrArg Prod.snd same).symm))
+            (fun alone => alone.2.1))
+        (fun zero _ => Nat.le_trans zero (Nat.zero_le _))))
 
 /-! ## 8. A unit that takes nothing -/
 
@@ -782,7 +990,7 @@ theorem takes_nothing_iff_alone {giving : Nat → Nat} {m n H₂ x : Nat} (order
           ∀ k, n ≤ Law.orbit (RegimeMargin.step giving H₂) x k).trans
       (goes_iff_alone.symm.trans Law.stepWhile_unending_iff.symm)))
 
-/-- **Where the first unit takes nothing, below the second unit's point of no return the line ends.**
+/-- **Where the first unit takes nothing, from below `H₂ + y₁` the line ends.**
 With `n ≤ m` (`order`), nothing given from nothing (`nothing`), `0 < n` (`needs`), giving short of
 `H₂` below `y₁` (`short₁`) and the start `x` below `H₂ + y₁` (`below`): the line from
 `[(m, 0), (n, H₂)]` at `x` ends. By `takes_nothing_iff_alone`, the level's course under `H₂` coming to
@@ -897,6 +1105,78 @@ theorem turns_and_ends :
    fun never => absurd (Law.stepWhile_unending_iff.mp never 4) (by decide)⟩
 
 end Against
+
+/-! ## 10. Where something is given from nothing, the comparisons fail -/
+
+/-- **A configuration the pair's step leaves as it is stays so.** Under any giving, from any `s` with
+`TurningInTime.pair after (left giving) s = s` (`fixed`): the course from `s` is `s` at every step. -/
+theorem course_fixed {giving : Nat → Nat} {s : List (Nat × Nat) × Nat}
+    (fixed : TurningInTime.pair after (left giving) s = s) : ∀ k, course giving s k = s
+  | 0 => rfl
+  | k + 1 => (congrArg (TurningInTime.pair after (left giving)) (course_fixed fixed k)).trans fixed
+
+/-- **A line that comes to a configuration its step leaves as it is, some unit going on there and at
+every step before, never ends.** Under any giving, from any `s`, at a step `t` with some unit going
+on at every step before `t` (`before`), the course at `t` left as it is by the pair's step
+(`fixed`) and some unit going on there (`goes`). By `course_fixed` and `Law.orbit_add`. -/
+theorem unending_of_fixed {giving : Nat → Nat} {s : List (Nat × Nat) × Nat} {t : Nat}
+    (before : ∀ j, j < t → Goes (course giving s j))
+    (fixed : TurningInTime.pair after (left giving) (course giving s t) = course giving s t)
+    (goes : Goes (course giving s t)) : «不穷» (net giving) «一» s :=
+  Law.stepWhile_unending_iff.mpr fun k => (Nat.lt_or_ge k t).elim (before k) fun ge =>
+    match le_dest ge with
+    | ⟨i, e⟩ => Eq.subst (motive := fun j => Goes (course giving s j)) e.symm
+        (Eq.subst (motive := Goes) ((Law.orbit_add _ s t i).trans (course_fixed fixed i)).symm goes)
+
+namespace GivenFromNothing
+
+/-- A giving that gives two at nothing and at two, and nothing elsewhere. -/
+def giving : Nat → Nat
+  | 0 => 2
+  | 2 => 2
+  | _ => 0
+
+/-- **The regime at the use three, with something given from nothing.** Giving is short of three
+below four, meets three from four up to six (no level qualifies), and the step under three keeps the
+level within six; it gives two at nothing, so `FromNothing` fails. Checked level by level. -/
+theorem regime :
+    RegimeMargin.Short giving 3 4 ∧ RegimeMargin.Meets giving 3 4 6 ∧ RegimeMargin.Keeps giving 3 6 ∧
+      ¬ RegimeMargin.FromNothing giving :=
+  ⟨RegimeMargin.short_of_below rfl, RegimeMargin.meets_of_below rfl, RegimeMargin.keeps_of_below rfl,
+   fun e => absurd (e : giving 0 = 0) (by decide : ¬ giving 0 = 0)⟩
+
+/-- **Without nothing given from nothing, a greater need ends a line that did not end.** Under
+`giving`, from six, with a second unit needing two and taking three (`regime` at three with `y₂ = 4`
+and `hi = 6`; `n ≤ m`, `m ≤ m'` and the start at most `hi` hold): with the first unit needing two and
+taking one, the levels run 6, 4, 2, 2, … with both units there, and the line never ends; with it
+needing seven, the first unit ends at six, the second alone takes three at four and leaves one, below
+two, and the line ends. So `greater_need` fails without `nothing`. -/
+theorem greater_need_fails :
+    «不穷» (net giving) «一» ([(2, 1), (2, 3)], 6) ∧ ¬ «不穷» (net giving) «一» ([(7, 1), (2, 3)], 6) :=
+  ⟨unending_of_fixed (t := 2) (fun j lt => match j, lt with
+      | 0, _ => by decide
+      | 1, _ => by decide
+      | j + 2, lt => absurd lt (Nat.not_lt_of_ge (Nat.le_add_left 2 j)))
+    rfl (by decide),
+   fun never => absurd (Law.stepWhile_unending_iff.mp never 2) (by decide)⟩
+
+/-- **Without nothing given from nothing, more of the use on the first unit ends a line that did not
+end.** Under `giving`, from six, with a first unit needing seven (`regime` at the second unit's use
+three with `y₂' = 4` and `hi = 6`; `n ≤ m`, the same sum four, `h ≤ h'` and the start at most `hi`
+hold): with the first unit taking nothing and the second four, the first unit ends at six and the
+levels run 6, 4, 2, 2, …, and the line never ends; with them taking one and three, the second unit
+alone takes three at four and leaves one, below two, and the line ends. So `more_use_on_first` fails
+without `nothing`. -/
+theorem more_use_fails :
+    «不穷» (net giving) «一» ([(7, 0), (2, 4)], 6) ∧ ¬ «不穷» (net giving) «一» ([(7, 1), (2, 3)], 6) :=
+  ⟨unending_of_fixed (t := 2) (fun j lt => match j, lt with
+      | 0, _ => by decide
+      | 1, _ => by decide
+      | j + 2, lt => absurd lt (Nat.not_lt_of_ge (Nat.le_add_left 2 j)))
+    rfl (by decide),
+   greater_need_fails.2⟩
+
+end GivenFromNothing
 
 end WayOfUnits
 end Becoming

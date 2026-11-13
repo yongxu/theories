@@ -26,7 +26,7 @@ For two units it is the exact condition of turning in time, with its premises ab
 
 If the unit that ended took four, one is taken after: ten, twelve, twelve, and the line never ends. If it took one, four is taken after: four, nothing, and the line ends. The needs, the sum taken and the levels up to the ending are the same.
 
-Three comparisons, for two units, from a start below the level at which both would hold:
+A line of two units that never ends stays at or above the level below which the second unit's own course falls (`unending_above`). Three comparisons, for two units:
 
 - A greater need of the unit that ends first never ends a line that did not end (`greater_need`).
 - More of the use on that unit never ends a line that did not end (`more_use_on_first`).
@@ -41,7 +41,7 @@ Three comparisons, for two units, from a start below the level at which both wou
 ## What is not shown
 
 - Units only end. Nothing builds a unit, and nothing says why a unit that needs more is there.
-- The three comparisons are for two units. Simulations found them true with some premises dropped; that is not proved.
+- The three comparisons are for two units. None is stated for more.
 - The marks of a way that conditions on a reading are not derived.
 - Nothing here is about a trained system.
 - It is not learning with no learner. It is the case below it: correction with no reader.

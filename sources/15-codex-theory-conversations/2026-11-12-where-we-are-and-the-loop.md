@@ -119,3 +119,11 @@ To the session, at 20:33:
 > push first so I can read it on GitHub, then continue
 
 *AI-authored.* Main was pushed to the public remote at `8274231b2` at 07:01 WIB, its screen clean (254 files changed since `eba914400`; the three files over 2 MB are core receipts, which pass). The full gate was not run before this push, because he asked for the push first; it was started after it. On GitHub the one page's picture was drawn small, since the file stated no size; both pictures were given one, and a second push the same morning carried that and this record. "Then continue" is taken as: go on to what the page for him names as not shown, how what brings a level's difference to a way comes to stand.
+
+## 13 November, about 12:20: continue
+
+*Added 13 November 2026, 12:27 WIB. AI-authored except the quoted line.* By noon the session had landed board item WU (a way of units) and its one page, had read another session's scan of the wording for a subject facing an object (board item DW) and checked that session's drafts of the centre sentence against the Lean, and had started re-proving two of WU's theorems with fewer premises. The app's session then stopped when the token account was switched. Ren wrote, when it came back:
+
+> continue please - token account switched, restart your stopped workflow as well
+
+*AI-authored.* The stopped work was restarted from where it had been cut off (its implementer had already re-proved both theorems in scratch), claimed on the board as WU2, and landed after a reader's check. The session went on without asking between items, as his words to it and, as relayed, to the other sessions that day ask.

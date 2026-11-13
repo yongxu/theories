@@ -1948,6 +1948,7 @@
    "Becoming.WayOfUnits.first_kept",
    "Becoming.WayOfUnits.first_uses",
    "Becoming.WayOfUnits.first_uses₁",
+   "Becoming.WayOfUnits.unending_above",
    "Becoming.WayOfUnits.greater_need",
    "Becoming.WayOfUnits.more_use_on_first",
    "Becoming.WayOfUnits.takes_nothing_iff_alone",
@@ -1957,7 +1958,9 @@
    "Becoming.WayOfUnits.With.goes_on_holds",
    "Becoming.WayOfUnits.With.levels",
    "Becoming.WayOfUnits.Against.way",
-   "Becoming.WayOfUnits.Against.turns_and_ends"
+   "Becoming.WayOfUnits.Against.turns_and_ends",
+   "Becoming.WayOfUnits.GivenFromNothing.greater_need_fails",
+   "Becoming.WayOfUnits.GivenFromNothing.more_use_fails"
   ],
   "base": "any type",
   "hypotheses": [
@@ -2145,7 +2148,7 @@
     "source": "theories/becoming/chapters/02-MAP.md#r-turning-in-time"
    },
    {
-    "en": "For a way of units: the comparison theorems for any number of units, and their premises trimmed to what the simulations found enough; a way that builds units; the marks of a way that conditions on a reading. None is stated.",
+    "en": "For a way of units: the comparison theorems for any number of units; a way that builds units; the marks of a way that conditions on a reading. None is stated.",
     "source": "theories/becoming/chapters/02-MAP.md#r-a-way-of-units"
    }
   ],
@@ -2310,6 +2313,17 @@
     ]
    },
    {
+    "law": "Becoming.WayOfUnits.unending_above",
+    "takes": [
+     "wayofunits-order",
+     "regimemargin-fromnothing",
+     "regimemargin-short",
+     "optimum-coupled-need-positive",
+     "wayofunits-first-line-unending",
+     "regimemargin-step"
+    ]
+   },
+   {
     "law": "Becoming.WayOfUnits.greater_need",
     "takes": [
      "wayofunits-order",
@@ -2319,9 +2333,6 @@
      "regimemargin-short",
      "regimemargin-meets",
      "regimemargin-keeps",
-     "optimum-coupled-need-positive",
-     "turningintime-within",
-     "regimemargin-start-below-point",
      "regimemargin-start-level-le-hi",
      "regimemargin-step"
     ]
@@ -2337,9 +2348,6 @@
      "regimemargin-short",
      "regimemargin-meets",
      "regimemargin-keeps",
-     "optimum-coupled-need-positive",
-     "turningintime-within",
-     "regimemargin-start-below-point",
      "regimemargin-start-level-le-hi",
      "regimemargin-step"
     ]
@@ -2376,6 +2384,14 @@
    },
    {
     "law": "Becoming.WayOfUnits.Against.turns_and_ends",
+    "takes": []
+   },
+   {
+    "law": "Becoming.WayOfUnits.GivenFromNothing.greater_need_fails",
+    "takes": []
+   },
+   {
+    "law": "Becoming.WayOfUnits.GivenFromNothing.more_use_fails",
     "takes": []
    }
   ]

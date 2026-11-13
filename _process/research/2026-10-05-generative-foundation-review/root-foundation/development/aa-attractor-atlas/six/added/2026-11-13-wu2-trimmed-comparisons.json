@@ -1,0 +1,101 @@
+{
+ "family": "A",
+ "note": "AI-written, 13 November 2026. Board item WU2: greater_need and more_use_on_first were restated with fewer premises, so their rows are replaced (run with --replace); unending_above and the two witnesses of GivenFromNothing are new. Binder names as lister.py's aaRow printed them (2026-11-13-wu2-trimmed-comparisons.lister.txt); the comparison's antecedent has a hygienic name. regimemargin-step is taken as a definition where the statement names the units' net, as in the earlier rows.",
+ "laws": {
+  "Becoming.WayOfUnits.unending_above": {
+   "binders": {
+    "order": [
+     "wayofunits-order"
+    ],
+    "nothing": [
+     "regimemargin-fromnothing"
+    ],
+    "short": [
+     "regimemargin-short"
+    ],
+    "needs": [
+     "optimum-coupled-need-positive"
+    ],
+    "never": [
+     "wayofunits-first-line-unending"
+    ]
+   },
+   "takes_unbound": {
+    "regimemargin-step": "definition"
+   }
+  },
+  "Becoming.WayOfUnits.greater_need": {
+   "binders": {
+    "order": [
+     "wayofunits-order"
+    ],
+    "more": [
+     "wayofunits-greater-need"
+    ],
+    "nothing": [
+     "regimemargin-fromnothing"
+    ],
+    "short": [
+     "regimemargin-short"
+    ],
+    "meets": [
+     "regimemargin-meets"
+    ],
+    "keeps": [
+     "regimemargin-keeps"
+    ],
+    "high": [
+     "regimemargin-start-level-le-hi"
+    ],
+    "a._@._internal._hyg.0": [
+     "wayofunits-first-line-unending"
+    ]
+   },
+   "takes_unbound": {
+    "regimemargin-step": "definition"
+   }
+  },
+  "Becoming.WayOfUnits.more_use_on_first": {
+   "binders": {
+    "order": [
+     "wayofunits-order"
+    ],
+    "nothing": [
+     "regimemargin-fromnothing"
+    ],
+    "short'": [
+     "regimemargin-short"
+    ],
+    "meets'": [
+     "regimemargin-meets"
+    ],
+    "keeps'": [
+     "regimemargin-keeps"
+    ],
+    "sum": [
+     "wayofunits-same-sum"
+    ],
+    "more": [
+     "wayofunits-more-on-first"
+    ],
+    "high": [
+     "regimemargin-start-level-le-hi"
+    ],
+    "a._@._internal._hyg.0": [
+     "wayofunits-first-line-unending"
+    ]
+   },
+   "takes_unbound": {
+    "regimemargin-step": "definition"
+   }
+  },
+  "Becoming.WayOfUnits.GivenFromNothing.greater_need_fails": {
+   "binders": {},
+   "takes_unbound": {}
+  },
+  "Becoming.WayOfUnits.GivenFromNothing.more_use_fails": {
+   "binders": {},
+   "takes_unbound": {}
+  }
+ }
+}
