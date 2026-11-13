@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-13T05:51:04+00:00",
+  "reviewed_at_utc": "2026-11-13T05:53:14+00:00",
   "statement": {
     "en": "A way is the units present, each going on while the level meets its need and taking its use. Under the regime's premises along the course, its line never ends exactly where it comes to a way that is not empty, whose units' needs are all met at a level from which what they take together holds.",
     "zh": "一个方式就是在场的各单元，各在水位满足其所需时继续，并各取其用量。在沿途的体制前提之下，这条线永不终止，当且仅当它走到一个非空的方式，其各单元所需皆被满足，且水位守得住它们合取之量。"
@@ -460,6 +460,8 @@
         "Becoming.WayOfUnits.first_uses",
         "Becoming.WayOfUnits.first_uses₁",
         "Becoming.WayOfUnits.goes",
+        "Becoming.WayOfUnits.unending_above",
+        "Becoming.WayOfUnits.unending_needs_nothing",
         "Becoming.WayOfUnits.greater_need",
         "Becoming.WayOfUnits.left",
         "Becoming.WayOfUnits.more_use_on_first",
@@ -472,7 +474,11 @@
         "Becoming.WayOfUnits.two_units_iff",
         "Becoming.WayOfUnits.unending_iff_carrier",
         "Becoming.WayOfUnits.unending_iff_holds",
-        "Becoming.WayOfUnits.use"
+        "Becoming.WayOfUnits.use",
+        "Becoming.WayOfUnits.GivenFromNothing.giving",
+        "Becoming.WayOfUnits.GivenFromNothing.regime",
+        "Becoming.WayOfUnits.GivenFromNothing.greater_need_fails",
+        "Becoming.WayOfUnits.GivenFromNothing.more_use_fails"
       ],
       "sha256": "98e38ed2c45c835b4f20626a81e000b81a4c511bdc3003aa48623bb32950c347"
     },
@@ -510,6 +516,11 @@
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/wu-a-way-of-units/readers/v2-premises.md",
       "role": "review",
       "sha256": "66506af18cd2799963fde2e75ca1912494f5459fa2ff839725d18c49c87fc212"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/wu-a-way-of-units/readers/t1-trim.md",
+      "role": "review",
+      "sha256": "1d9e594354e9c96af14c9970e29a1f8ef11429274022fdc3006492ff8d94869c"
     },
     {
       "path": "theories/becoming/chapters/02-MAP.md",
