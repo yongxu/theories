@@ -15,10 +15,9 @@
   },
   "theories/becoming/ONE-PAGE.zh.md": {
    "revised": "2026-11-13",
-   "english": "e3ef188714313f8195e9eba18dc59ab50823cebc2875545f2bd7b1aec36e4f03",
-   "chinese": "28272fe9a6d217badb989127bca6809423737264e023c37fae0ca1da9baa511b",
-   "english_commit": "d4d69d406",
-   "unchanged": "the English changed one pronoun (its running down became that running down); the Chinese already says 这耗减"
+   "english": "c7490b01e2997f1a3c3e837b03e368a4467ab8068c7005ab8a5afefa67670613",
+   "chinese": "dfbc58bd90bc7d56bba0bbb3b7666fb81de2323af25f0c8d4cee9ef87645ff23",
+   "english_commit": "f324f3990"
   },
   "theories/becoming/OPENING.zh.md": {
    "revised": "2026-11-13",
