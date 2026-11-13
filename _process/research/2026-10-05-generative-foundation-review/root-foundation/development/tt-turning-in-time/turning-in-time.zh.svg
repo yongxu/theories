@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" role="img" aria-label="水位从九开始逐步变化：照旧走是九、八、六、二、零；在九或八处转，守得住；在六处转，太晚。">
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="360" viewBox="0 0 720 360" role="img" aria-label="水位从九开始逐步变化：照旧走是九、八、六、二、零；在九或八处转，守得住；在六处转，太晚。">
 <rect width="720" height="360" fill="#ffffff"/>
 <line x1="76" y1="300" x2="660" y2="300" stroke="#e6e6e6" stroke-width="1"/>
 <text x="66" y="304" text-anchor="end" font-size="12" fill="#555555" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">0</text>
