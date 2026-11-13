@@ -1,0 +1,8 @@
+1 B
+2 B
+3 G decide
+4 A
+5 A
+6 N the selection laws
+7 N the count laws
+8 N the blindness law

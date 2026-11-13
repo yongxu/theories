@@ -1,0 +1,6 @@
+02-MAP--00 116 27 REWORD Loss for good is a theorem of every balanced flow => Loss for good is proved of every balanced flow
+02-MAP--00 151 34 REWORD are theorems of arising => are theorems on arising
+02-MAP--02 25 4 REWORD One theorem of exact thresholds => One theorem on exact thresholds
+02-MAP--02 41 11 REWORD are theorems of scalar steps and rank no courses => concern scalar steps and rank no courses
+02-MAP--02 44 13 REWORD Theorems of scalar steps on levels; they rank no courses => Theorems on scalar steps on levels; they rank no courses
+checked 44

@@ -1,0 +1,37 @@
+1 N the law of a common response
+2 G tell which requirement is better
+3 B
+4 N the laws of easing
+5 A
+6 U B or C: probability law over cases
+7 B
+8 B
+9 B
+10 A
+11 B
+12 B
+13 B
+14 B
+15 B
+16 B
+17 B
+18 A
+19 B
+20 B
+21 N the selection laws
+22 N the selection laws
+23 N the selection laws
+24 B
+25 B
+26 A
+27 A
+28 N the law of several optimizers
+29 A
+30 A
+31 A
+32 N the law of shaping
+33 B
+34 N the capture laws
+35 N the law of shaping
+36 N the law of shaping
+37 A

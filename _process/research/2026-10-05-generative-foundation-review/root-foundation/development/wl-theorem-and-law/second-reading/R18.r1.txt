@@ -1,0 +1,4 @@
+07-SIGNIFICANCE--04 76 1 WRONG what the dynamics hold, a truth not a proof (premise P2)
+07-SIGNIFICANCE--06 86 11 WRONG what the dynamics hold; counts truths, not proofs
+07-SIGNIFICANCE--06 107 12 WRONG what the dynamics hold; counts truths, not proofs
+checked 53

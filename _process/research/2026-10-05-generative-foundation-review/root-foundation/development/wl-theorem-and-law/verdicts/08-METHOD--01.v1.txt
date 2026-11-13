@@ -1,0 +1,41 @@
+1 A
+2 A
+3 B
+4 A
+5 A
+6 N the counting laws
+7 A
+8 A
+9 N census, counting and loop laws
+10 A
+11 B
+12 B
+13 A
+14 A
+15 A
+16 A
+17 A
+18 B
+19 A
+20 N the census laws
+21 A
+22 A
+23 A
+24 A
+25 A
+26 A
+27 A
+28 B
+29 N the arising-ceasing law
+30 A
+31 B
+32 A
+33 B
+34 B
+35 B
+36 B
+37 A
+38 A
+39 A
+40 A
+41 B

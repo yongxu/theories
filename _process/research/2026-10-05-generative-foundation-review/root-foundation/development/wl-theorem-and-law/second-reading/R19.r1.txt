@@ -1,0 +1,4 @@
+07-SIGNIFICANCE--09 142 26 REWORD state the theorems of the loop => state the theorems on the loop
+07-SIGNIFICANCE--09 150 28 REWORD The theorem of several optimizers => The theorem on several optimizers
+07-SIGNIFICANCE--08 9 - MISSED [§3.5's law](#r-selection-read-off-continuations) with standing late as the selection
+checked 48

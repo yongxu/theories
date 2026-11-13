@@ -1,0 +1,19 @@
+1 C
+2 B
+3 B
+4 B
+5 U B or C; starting distribution, probability's sense
+6 A
+7 U B or C; starting distribution, probability's sense
+8 A
+9 T empirical law relating keeping to gap, not shown
+10 B
+11 B
+12 B
+13 B
+14 B
+15 B
+16 B
+17 B
+18 B
+19 B

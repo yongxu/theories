@@ -1,0 +1,10 @@
+THE-THEORY-OF-BECOMING--00 20 5 WRONG what holds of the dynamics (non-entailment, truth scope), not proofs
+THE-THEORY-OF-BECOMING--00 63 19 WRONG what holds of the dynamics (order free by construction), not proofs
+THE-THEORY-OF-BECOMING--00 104 29 REWORD a flame meets these theorems too => these theorems hold of a flame too
+THE-THEORY-OF-BECOMING--01 23 5 WRONG what holds of the dynamics; argument premise needs truth scope
+THE-THEORY-OF-BECOMING--01 23 6 WRONG what holds of the dynamics; "no theorem" weakens the premise
+THE-THEORY-OF-BECOMING--01 25 8 WRONG nothing holding of the dynamics privileges the class; truth scope
+THE-THEORY-OF-BECOMING--01 31 13 REWORD a theorem of one optimizer => a theorem on one optimizer
+THE-THEORY-OF-BECOMING--01 62 22 REWORD A theorem, or a theorem of the root => A theorem of the root
+THE-THEORY-OF-BECOMING--01 63 24 REWORD Like any theorem it stands or falls => It stands or falls
+checked 48

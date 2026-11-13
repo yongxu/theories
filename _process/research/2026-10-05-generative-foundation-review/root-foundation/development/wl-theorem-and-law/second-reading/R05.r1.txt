@@ -1,0 +1,4 @@
+USES-EXAMPLES--00 32 6 REWORD a theorem answers the second, third and fourth => theorems answer the second, third and fourth
+USES-EXAMPLES--00 96 23 REWORD a theorem of one long-horizon optimizer => a theorem on one long-horizon optimizer
+USES-EXAMPLES--01 55 12 REWORD these are theorems of direction and source => these are theorems on direction and source
+checked 41

@@ -1,0 +1,35 @@
+export const meta = {
+  name: 'wl-verify',
+  description: 'Second readers check every "law" turned into "theorem" on the reading path (read-only; findings written to scratch files)',
+  phases: [{ title: 'Verify', detail: 'one Opus reader per sheet of changed lines' }],
+}
+const DIR = '/Users/ren/theories/tmp/r7/words/run'
+const BRIEF = `You are the second reader of a renaming in the texts of the theory of becoming (repository /Users/ren/theories). You did not make the changes. Try to find what is wrong with them. This is reading work: edit no repository file, run no tests, builds or git commands (the machine is shared and busy). Use Read, and Write for your one findings file.
+
+WHAT WAS DONE. The account used to call its own proved statements "laws". From today they are "theorems". A first reader sorted every use of "law", and each use sorted as "one of this account's own proved statements" was replaced by "theorem". "Law" was kept wherever it names something else:
+ - a model's step or dynamics (Lean's \`Law\`: a function giving each configuration its one next; "a determined law", "under a law", "its own law", "a law that reads / keeps / merges", "a local / blanketed / exchangeable law", "act law", "a law read off a history");
+ - another field's law, a science's law in general, a probability law (a distribution), law in the legal sense;
+ - what holds in every model of a class, the thing a completeness or counting theorem counts ("the premises add at most one law", "the laws of one step", "no law that holds of every net");
+ - something not proved: a thesis, conjecture, reading, open or wanted statement ("one law across domains, conjectured");
+ - fixed names kept for now ("shared law", "law 5", record titles).
+
+YOUR SHEET. Each block is one changed line (a whole paragraph, list item or table row), headed "=== <piece> line <n>". Every "theorem" that replaced "law" carries a tag ⟦id⟧. A tag ⟦m⟧ marks a phrase the coordinator reworded by hand. An untagged "law" was kept on purpose.
+
+FOR EVERY TAG decide one of:
+ OK      It is one of this account's own proved statements (stated with hypotheses, proved in Lean, holding of every case that meets them), and the sentence says the same thing as before.
+ WRONG   It is not: it is one of the kept senses above. The word must go back to "law". Say which sense.
+ REWORD  It is a proved statement, but after the swap the sentence is false, says something different, or does not read as English: a changed scope in a negative ("no law that holds of every net" counts truths, "no theorem" counts proofs); "each theorem is a theorem"; "theorem of X" where "theorem on X" is needed to be understood; a theorem said to be "followed" or "obeyed" by a system; a wrong article or number. Give the exact smallest replacement: old phrase => new phrase (the old phrase copied from the sheet without its tags).
+Also, where an untagged "law" on a sheet line is plainly one of the account's own proved statements, list it as MISSED with the phrase.
+
+HOW TO CHECK. The line alone often settles it. Where it does not, open the piece's original, ${DIR}/<piece>.orig.md, at the same line number, and read around it (the original still has "law"). A Lean name in backticks beside it, a **Theorem** / **Calibration** / **Conditional** label, or a link to a record, is a sign that it is proved. An **Assessment**, a **Reading**, "conjectured", "open", "not shown", "not proved", "wanted" are signs that it is not. Do not approve by default: for each tag ask what the thing is.
+
+OUTPUT. Write ${DIR}/<SHEET>.r1.txt (SHEET is your sheet's name, such as R07): one line for every tag that is not OK and every MISSED, in this form, then a last line "checked <number of tags you examined>":
+<piece> <line> <id> WRONG <which sense, at most 12 words>
+<piece> <line> <id> REWORD <old phrase> => <new phrase>
+<piece> <line> - MISSED <phrase>
+Then reply with one line: the sheet name and the counts of OK, WRONG, REWORD, MISSED. Nothing else.`
+phase('Verify')
+const res = await parallel(args.map(u => () =>
+  agent(`${BRIEF}\n\nYOUR SHEET: ${u.name}. Read ${DIR}/${u.name}.review.md whole (${u.lines} changed lines of ${u.file}, ${u.tags} tags; pieces: ${u.pieces.join(', ')}).`,
+    { label: `verify:${u.name}`, phase: 'Verify', model: 'opus', effort: 'high' })))
+return res.map((r, i) => ({ sheet: args[i].name, reply: r }))

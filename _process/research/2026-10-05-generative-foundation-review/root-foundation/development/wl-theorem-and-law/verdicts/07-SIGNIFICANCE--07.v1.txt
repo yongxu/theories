@@ -1,0 +1,17 @@
+1 N the closure laws
+2 A
+3 G no law is gained
+4 A
+5 U B or A: World premises named
+6 N the meet law
+7 N the meet law
+8 G choose
+9 A
+10 A
+11 A
+12 N the dated persistence law
+13 N the region law
+14 U B or A: a theorem's premises
+15 A
+16 N the closure laws
+17 A

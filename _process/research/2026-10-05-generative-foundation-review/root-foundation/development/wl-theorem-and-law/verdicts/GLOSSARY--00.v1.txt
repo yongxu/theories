@@ -1,0 +1,24 @@
+1 G verdict (a law's verdict holds on a region)
+2 N first law (spine's name for Flow.Gainless)
+3 C
+4 C
+5 U B or T: AI reading, law of a capacity
+6 B
+7 G evaluate
+8 G negative: no law gives a ranking
+9 A
+10 G weigh
+11 A
+12 N grammar laws
+13 A
+14 N grammar laws
+15 U A or B: "a law of its model"
+16 A
+17 A
+18 A
+19 W
+20 C
+21 D
+22 A
+23 G rank
+24 D

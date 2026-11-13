@@ -1,0 +1,5 @@
+04-LIFE--00 5 5 REWORD a flame meets the same theorems => the same theorems hold of a flame
+04-LIFE--00 104 24 REWORD The general theorem of each is a => The general statement of each is a
+04-LIFE--01 29 6 REWORD the stock theorem of the carrying lineages => the stock theorem read on the carrying lineages
+04-LIFE--01 82 27 REWORD Each theorem is a **Theorem** => Each row is a **Theorem**
+checked 59

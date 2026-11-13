@@ -1,0 +1,25 @@
+1 U A or T: a statement not yet a grammar theorem
+2 A
+3 D
+4 D
+5 A
+6 A
+7 N the activity laws
+8 N the count law
+9 A
+10 B
+11 A
+12 N the learnability laws
+13 A
+14 A
+15 A
+16 N the lineage laws
+17 A
+18 N covering laws
+19 N the image law
+20 A
+21 N the image law
+22 B
+23 N the order laws
+24 N the law of rest
+25 A

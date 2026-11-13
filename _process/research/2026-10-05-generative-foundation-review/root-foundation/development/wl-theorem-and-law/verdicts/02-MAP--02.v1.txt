@@ -1,0 +1,24 @@
+1 A
+2 B
+3 B
+4 N one law of exact thresholds
+5 B
+6 A
+7 A
+8 N the closure law
+9 N the regime's rest law
+10 G rank
+11 G rank
+12 N the adjusted law
+13 G rank
+14 B
+15 U B or T, T2's posited next-giving law
+16 U B or T, T2's posited next-giving law
+17 A
+18 B
+19 B
+20 B
+21 B
+22 A
+23 A
+24 A

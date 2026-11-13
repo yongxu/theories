@@ -1,0 +1,13 @@
+1 G evaluate
+2 A
+3 B
+4 A
+5 U W or C, law as command
+6 A
+7 A
+8 A
+9 A
+10 U A or B
+11 A
+12 U N or B, law of exchange
+13 G no law says

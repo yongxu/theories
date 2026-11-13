@@ -1,0 +1,51 @@
+[
+{
+"id": 1,
+"line": 9,
+"start": 2,
+"end": 5,
+"word": "Law"
+},
+{
+"id": 2,
+"line": 37,
+"start": 234,
+"end": 238,
+"word": "laws"
+},
+{
+"id": 3,
+"line": 56,
+"start": 2335,
+"end": 2339,
+"word": "laws"
+},
+{
+"id": 4,
+"line": 56,
+"start": 2739,
+"end": 2742,
+"word": "law"
+},
+{
+"id": 5,
+"line": 59,
+"start": 416,
+"end": 419,
+"word": "law"
+},
+{
+"id": 6,
+"line": 61,
+"start": 6,
+"end": 10,
+"word": "laws"
+},
+{
+"id": 7,
+"line": 61,
+"start": 247,
+"end": 250,
+"word": "law"
+}
+]

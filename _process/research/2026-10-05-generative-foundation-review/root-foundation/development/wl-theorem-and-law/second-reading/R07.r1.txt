@@ -1,0 +1,6 @@
+FREE-ENERGY-PRINCIPLE--00 43 16 REWORD its general theorems of any relation read as condition => its general theorems on any relation read as condition
+FREE-ENERGY-PRINCIPLE--00 63 26 REWORD the theorems of a code formed between formations => the theorems on a code formed between formations
+FREE-ENERGY-PRINCIPLE--00 94 44 REWORD the theorems of a code formed between formations => the theorems on a code formed between formations
+FREE-ENERGY-PRINCIPLE--00 96 46 REWORD a theorem of the couplings and the courses => a theorem on the couplings and the courses
+FREE-ENERGY-PRINCIPLE--00 123 66 REWORD Every theorem named is near-definitional => Every theorem or witness named is near-definitional
+checked 30

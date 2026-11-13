@@ -1,0 +1,107 @@
+[
+{
+"id": 1,
+"line": 6,
+"start": 28,
+"end": 32,
+"word": "laws"
+},
+{
+"id": 2,
+"line": 19,
+"start": 476,
+"end": 479,
+"word": "law"
+},
+{
+"id": 3,
+"line": 30,
+"start": 111,
+"end": 115,
+"word": "laws"
+},
+{
+"id": 4,
+"line": 36,
+"start": 11,
+"end": 15,
+"word": "laws"
+},
+{
+"id": 5,
+"line": 36,
+"start": 1082,
+"end": 1086,
+"word": "laws"
+},
+{
+"id": 6,
+"line": 45,
+"start": 99,
+"end": 103,
+"word": "laws"
+},
+{
+"id": 7,
+"line": 49,
+"start": 20,
+"end": 23,
+"word": "law"
+},
+{
+"id": 8,
+"line": 53,
+"start": 6,
+"end": 9,
+"word": "law"
+},
+{
+"id": 9,
+"line": 55,
+"start": 88,
+"end": 91,
+"word": "law"
+},
+{
+"id": 10,
+"line": 55,
+"start": 132,
+"end": 136,
+"word": "laws"
+},
+{
+"id": 11,
+"line": 55,
+"start": 334,
+"end": 337,
+"word": "law"
+},
+{
+"id": 12,
+"line": 55,
+"start": 903,
+"end": 907,
+"word": "laws"
+},
+{
+"id": 13,
+"line": 57,
+"start": 62,
+"end": 65,
+"word": "law"
+},
+{
+"id": 14,
+"line": 57,
+"start": 302,
+"end": 306,
+"word": "laws"
+},
+{
+"id": 15,
+"line": 69,
+"start": 379,
+"end": 382,
+"word": "law"
+}
+]

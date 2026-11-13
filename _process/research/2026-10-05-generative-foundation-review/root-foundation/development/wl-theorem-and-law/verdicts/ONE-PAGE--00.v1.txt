@@ -1,0 +1,22 @@
+1 G weigh
+2 G mark
+3 A
+4 G forbid
+5 A
+6 A
+7 A
+8 A
+9 A
+10 A
+11 N counting laws
+12 D
+13 A
+14 N the selection laws
+15 C
+16 A
+17 A
+18 G pick
+19 U A or B: laws of the World, processes
+20 B
+21 A
+22 A

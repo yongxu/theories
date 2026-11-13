@@ -1,0 +1,46 @@
+1 T T2's conjectured law, a thesis
+2 A
+3 T one law across domains, conjectured
+4 T unification claimed across fields
+5 A
+6 T one law across domains conjectured
+7 A
+8 A
+9 C
+10 T unification claimed beyond source field
+11 N the optimum law
+12 B
+13 B
+14 B
+15 B
+16 U B or C, law standing outside
+17 A
+18 B
+19 B
+20 C
+21 A
+22 D
+23 A
+24 A
+25 G forbid
+26 A
+27 A
+28 B
+29 A
+30 A
+31 A
+32 A
+33 D
+34 D
+35 A
+36 W
+37 W
+38 G forbids no relation
+39 G forbids through its hypotheses
+40 C
+41 C
+42 W
+43 W
+44 C
+45 C
+46 C

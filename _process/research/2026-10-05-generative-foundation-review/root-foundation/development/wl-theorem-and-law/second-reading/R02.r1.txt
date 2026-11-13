@@ -1,0 +1,2 @@
+ONE-PAGE--00 30 8 REWORD a theorem of one optimizer => a theorem on one optimizer
+checked 19

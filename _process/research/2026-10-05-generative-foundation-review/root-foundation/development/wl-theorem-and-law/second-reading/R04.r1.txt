@@ -1,0 +1,4 @@
+USES--00 85 16 REWORD the checked theorems of knowing => the checked theorems on knowing
+USES--00 124 24 REWORD theorems of optima => theorems on optima
+USES--01 7 2 REWORD one theorem of the optimum under room => one theorem on the optimum under room
+checked 26

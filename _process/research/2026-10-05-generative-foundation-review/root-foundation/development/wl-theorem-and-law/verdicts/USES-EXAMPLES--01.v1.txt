@@ -1,0 +1,15 @@
+1 A
+2 A
+3 A
+4 A
+5 G weigh
+6 A
+7 A
+8 A
+9 G found no law
+10 A
+11 B
+12 G no evaluation
+13 A
+14 A
+15 T T2's law, a conjectured thesis

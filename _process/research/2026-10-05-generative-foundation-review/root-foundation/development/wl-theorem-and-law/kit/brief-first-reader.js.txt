@@ -1,0 +1,52 @@
+export const meta = {
+  name: 'wl-classify',
+  description: 'Sort each use of "law" on the reading path into its sense (read-only; verdicts written to scratch files)',
+  phases: [{ title: 'Classify', detail: 'one Opus reader per unit of one or two pieces' }],
+}
+const DIR = '/Users/ren/theories/tmp/r7/words/run'
+const RULES = `You are sorting uses of the word "law" in the texts of the theory of becoming (a research repository at /Users/ren/theories). This is reading work. Edit no repository file, run no tests, builds or git commands (the machine is shared and busy). Use only Read, and Write for your one verdict file per piece.
+
+WHY. The account has called its own proved statements "laws". From today they are called "theorems". "Law" stays wherever it names something else. Your verdicts decide, use by use, which is which. A use wrongly marked A becomes a false sentence, so when you cannot tell, mark U.
+
+WHAT TO READ. Each piece is a part of one chapter or page, in a file <piece>.marked.md. Read it whole, in order. Every use you must sort is followed by a tag like ⟦17⟧. Uses inside code, links, headings and quotations carry no tag and are not yours.
+
+CLASSES. Give every tag exactly one:
+
+A  One of this account's own proved statements: stated with hypotheses and proved (in Lean), holding of every case that meets its hypotheses. Signs: it follows from premises, is proved, holds of something, has hypotheses or a boundary, is stated on a model or on the grammar, has a Lean name beside it, stands under a Theorem / Calibration / Conditional label, is counted among central or checked laws, a record or a chapter states it. Test: "theorem" could stand there and the sentence would say the same thing.
+
+G  An A use whose sentence has the proved statement doing, or being denied to do, a ruler's or judge's act: weigh, evaluate, rank, forbid, permit, command, pick, choose, decide, require, rule out, single out, answer, tell, mark as good or bad. Also every negative about the account's statements as a whole: "no law …", "none of the laws …", "the laws do not …", "no law here …". (The coordinator words these sentences.) Note: the verb.
+
+B  A model's step or dynamics: Lean's \`Law\`, a function giving each configuration its one next; how something goes on. Signs: "a determined law", "under a law", "by its (own) law", "the model's law", "its law" said of a model, system, formation, reader, agent or process; a law that reads, keeps, merges, generates, tolerates, drives, moves; "a blanketed / local / exchangeable / support-gated / deterministic / indeterministic / uniform / partial / joint law"; "act law"; "candidate laws" each predicting the next value; "a law read off a history"; "(any type; a determined law)" inside a theorem's label; "a law of the whole"; "closed under the law"; "two courses of one law". Test: "step" or "dynamics" could stand there.
+
+C  Another field's law, a science's law in general, or law in the legal sense: Zipf's law, Goodhart's law, a power law, the law of large numbers, conservation laws, thermodynamics' first or second law, evolution's classical laws, "a science's law", "a law of nature", a statute.
+
+D  Part of a fixed name that is kept for now: "shared law(s)" (共律), "law 3" / "laws 1 to 5" as a record's numbered item, "law families", "master law", a record's quoted or italic title.
+
+E  What holds in every model of a class, the thing a completeness or counting theorem counts: "the premises add at most one law", "the whole law of counting", "the laws of one step", "no further law holds in every model". Test: "theorem" there would count proofs, where the sentence counts truths.
+
+N  A name, containing the word, of one theorem or a family of theorems of the account: "the selection laws", "the grammar laws", "the optimum laws", "the stage law", "the law of forming", "the closure law", "the counting laws", "the timing law". (Each name is decided once by the coordinator.) Note: the name. If you cannot tell whether such a name names a theorem or a model's step, mark U.
+
+T  Something called a law that the account has not proved: a thesis, a reading, an assessment, a conjecture, a hoped-for or candidate statement.
+
+W  The sentence defines the word "law" or is about the word itself.
+
+U  Unsure. Note: the two classes you are between.
+
+HOW TO DECIDE. By what the thing is in that sentence, not by the words near it. One paragraph often holds both A and B. "The law" right after a model, a system or a course is usually B; after "the root", "the account", "the theory", a chapter, a section or a record it is usually A. "A law with content is conditional", "each law follows from its premises", "the root's laws hold of every relation" are A. Do not let a run of one class carry you: read each sentence.
+
+OUTPUT. For each piece write one plain text file <piece>.v1.txt beside the marked file: one line per tag, in order, "<id> <class>" and, for G, N, T and U, a note of at most ten words after it. Example lines:
+1 A
+2 B
+3 G weigh
+4 N the selection laws
+5 U A or E
+Every tag of the piece must have exactly one line. Then reply with one line per piece: the piece name and the count of each class. Nothing else.`
+phase('Classify')
+const units = args
+const res = await parallel(units.map(u => () => {
+  const pieces = Object.keys(u.counts)
+  const list = pieces.map(p => `- ${DIR}/${p}.marked.md  (${u.counts[p]} tags; write ${DIR}/${p}.v1.txt)`).join('\n')
+  return agent(`${RULES}\n\nYOUR PIECES (read them in this order; they are consecutive parts of one file):\n${list}`,
+    { label: `classify:${u.label}`, phase: 'Classify', model: 'opus', effort: 'medium' })
+}))
+return res.map((r, i) => ({ unit: units[i].label, reply: r }))

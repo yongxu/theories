@@ -1,0 +1,6 @@
+05-COLLECTIVES--02 34 8 REWORD Drawing at once from portions is the same theorem => Drawing at once from portions falls under the same theorem
+05-COLLECTIVES--05 12 4 REWORD The theorem of a revision is the region. => For a revision, the theorem is the region's.
+05-COLLECTIVES--00 41 - MISSED by [the outrun law](#r-the-rest-outruns-the-renewal) (target is a **Theorem**; => the outrun theorem)
+05-COLLECTIVES--03 9 - MISSED ([the law](#r-a-commuting-learner-drives-no-unread-choice)) (target is a **Theorem**; => the theorem)
+05-COLLECTIVES--04 39 - MISSED what holds instead is a law of the whole distribution (the proved exchangeability result; => a theorem on the whole distribution)
+checked 56

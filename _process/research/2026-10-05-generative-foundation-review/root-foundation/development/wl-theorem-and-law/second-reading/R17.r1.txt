@@ -1,0 +1,4 @@
+07-SIGNIFICANCE--01 50 5 WRONG order laws: irreflexivity, transitivity an order satisfies, not statements
+07-SIGNIFICANCE--01 50 - MISSED the uniform law of support passing on fixes a recency form
+07-SIGNIFICANCE--01 55 - MISSED The uniform law of support passing on ([02](02-MAP.md#r-support-passed-on))
+checked 23

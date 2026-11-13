@@ -1,0 +1,13 @@
+1 A
+2 A
+3 A
+4 A
+5 A
+6 A
+7 A
+8 N the laws of renewal
+9 A
+10 G answer
+11 G single out
+12 G rule out
+13 A

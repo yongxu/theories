@@ -1,0 +1,18 @@
+1 N the group laws
+2 A
+3 N the gate laws
+4 C
+5 N the family law
+6 N the copying law
+7 B
+8 B
+9 A
+10 A
+11 B
+12 A
+13 G negative: no fracture law
+14 B
+15 N the law of forming
+16 N the share laws
+17 T open: carriers' joint law above one
+18 T open: cap laws asked of carriers alone

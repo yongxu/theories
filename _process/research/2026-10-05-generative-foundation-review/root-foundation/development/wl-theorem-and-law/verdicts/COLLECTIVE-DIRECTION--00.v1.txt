@@ -1,0 +1,24 @@
+1 A
+2 A
+3 A
+4 A
+5 A
+6 G weigh (weigh for no one)
+7 G weigh (weigh it for no one)
+8 A
+9 B
+10 A
+11 N capture law
+12 G rule out
+13 G rule out (table header beside "What it rules out")
+14 B
+15 G say (procedure from laws says whether)
+16 A
+17 N the capture laws
+18 B
+19 G say (do not say which holds)
+20 B
+21 A
+22 A
+23 A
+24 A

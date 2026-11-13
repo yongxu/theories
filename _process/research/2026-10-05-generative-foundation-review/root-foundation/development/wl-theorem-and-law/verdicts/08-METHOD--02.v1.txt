@@ -1,0 +1,46 @@
+1 D
+2 G rank
+3 D
+4 B
+5 B
+6 A
+7 B
+8 D
+9 A
+10 D
+11 E
+12 D
+13 D
+14 A
+15 D
+16 B
+17 B
+18 D
+19 U A or B, declarations that are laws of models
+20 D
+21 A
+22 D
+23 A
+24 D
+25 D
+26 U A or B, declarations that are laws of models
+27 A
+28 A
+29 A
+30 U A or B, declarations that are laws of models
+31 G settles
+32 A
+33 A
+34 U A or B, declarations that are laws of models
+35 G settles
+36 T premises asked of small models, not proved
+37 N the law of a common response
+38 A
+39 A
+40 A
+41 G settles
+42 A
+43 A
+44 C
+45 A
+46 C

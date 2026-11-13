@@ -1,0 +1,5 @@
+02-MAP--05 9 2 REWORD the theorem of the rule as the pool of readers => the theorem on the rule as the pool of readers
+02-MAP--05 15 3 REWORD is the theorem of the capacity to shape the rule => is the theorem on the capacity to shape the rule
+02-MAP--05 22 4 REWORD the one frozen test of the timing theorem on a trained judge => the one frozen test of the timing theorem's premise on a trained judge
+02-MAP--05 33 9 REWORD Every theorem is a short composition => Each of its theorems is a short composition
+checked 23

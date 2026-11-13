@@ -1,0 +1,4 @@
+COLLECTIVE-DIRECTION--00 54 10 REWORD It is one optimizer's theorem, not a collective exit => It is a theorem on one optimizer, not a collective exit
+COLLECTIVE-DIRECTION--00 58 11 REWORD Every capture theorem here is a two-kind count model => Every capture theorem here is on a two-kind count model
+COLLECTIVE-DIRECTION--00 91 22 REWORD both the use and the error of the theorems lie => both the use of the theorems and the error in applying them lie
+checked 19

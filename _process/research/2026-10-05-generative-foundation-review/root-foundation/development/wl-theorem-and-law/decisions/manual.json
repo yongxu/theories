@@ -1,0 +1,50 @@
+[
+{
+"piece": "COLLECTIVE-DIRECTION--00",
+"line": 62,
+"old": "Each law below",
+"new": "Each statement below"
+},
+{
+"piece": "05-COLLECTIVES--04",
+"line": 86,
+"old": "no market law ranks arrangements",
+"new": "no theorem on markets ranks arrangements"
+},
+{
+"piece": "01-ROOT--01",
+"line": 5,
+"old": "A law written in the grammar",
+"new": "A statement written in the grammar"
+},
+{
+"piece": "05-COLLECTIVES--04",
+"line": 39,
+"old": "a law of the whole distribution",
+"new": "a theorem on the whole distribution"
+},
+{
+"piece": "05-COLLECTIVES--00",
+"line": 41,
+"old": "[the outrun law](",
+"new": "[the outrun theorem]("
+},
+{
+"piece": "05-COLLECTIVES--03",
+"line": 2,
+"old": "[the commuting law](",
+"new": "[the commuting theorem]("
+},
+{
+"piece": "05-COLLECTIVES--04",
+"line": 36,
+"old": "[commuting law](",
+"new": "[commuting theorem]("
+},
+{
+"piece": "05-COLLECTIVES--03",
+"line": 11,
+"old": "[the set-point law](",
+"new": "[the set-point theorem]("
+}
+]

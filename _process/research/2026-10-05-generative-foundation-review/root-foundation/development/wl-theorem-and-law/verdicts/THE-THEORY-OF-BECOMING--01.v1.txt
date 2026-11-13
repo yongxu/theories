@@ -1,0 +1,31 @@
+1 A
+2 A
+3 G weigh
+4 G evaluates
+5 U G or B: "no law of the dynamics fixes"
+6 U G or B: "no law fixes the boundary"
+7 U T or A: "meets the law" seems the condition
+8 G singles out
+9 A
+10 B
+11 B
+12 A
+13 A
+14 A
+15 A
+16 A
+17 N the selection laws
+18 C
+19 A
+20 T T2's law, a thesis
+21 N the readers-drawn law
+22 A
+23 G forbids none
+24 A
+25 C
+26 U T or B: open "law of exchange"
+27 A
+28 A
+29 A
+30 B
+31 A

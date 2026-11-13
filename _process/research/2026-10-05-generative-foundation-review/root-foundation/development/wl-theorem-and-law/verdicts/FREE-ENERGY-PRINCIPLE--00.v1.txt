@@ -1,0 +1,71 @@
+1 A
+2 A
+3 B
+4 A
+5 B
+6 A
+7 A
+8 B
+9 G forbid no sentence
+10 B
+11 B
+12 B
+13 B
+14 U A or B: law of courses enabling forbidding
+15 G forbid no relation
+16 G forbid no relation
+17 G forbids through hypotheses
+18 N renewal and coupling laws
+19 B
+20 B
+21 B
+22 A
+23 B
+24 B
+25 B
+26 A
+27 N the code law
+28 A
+29 A
+30 B
+31 B
+32 B
+33 E
+34 B
+35 B
+36 N the agent laws
+37 G forbids
+38 A
+39 B
+40 C
+41 B
+42 B
+43 A
+44 A
+45 N the code law
+46 G forbids
+47 B
+48 U A or B: law of courses enabling forbidding
+49 B
+50 B
+51 B
+52 B
+53 B
+54 B
+55 B
+56 B
+57 N renewal and coupling laws
+58 B
+59 U A or B: law on identical cells gives way
+60 B
+61 B
+62 U B or A: discrete law for footnote 13
+63 A
+64 A
+65 A
+66 A
+67 A
+68 N the code law
+69 A
+70 B
+71 B

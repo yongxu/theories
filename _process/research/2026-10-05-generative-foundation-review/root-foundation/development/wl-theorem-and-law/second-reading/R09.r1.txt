@@ -1,0 +1,4 @@
+01-ROOT--01 12 8 WRONG the count equation after+taken=before+given, a condition, not proved
+01-ROOT--03 24 7 WRONG dynamics a description carries; configurations as a law sees them
+01-ROOT--03 30 10 WRONG dynamics carried by a description (`carries_law_alike_iff`), not proved statements
+checked 72

@@ -1,0 +1,40 @@
+1 G settle: laws on dynamics alone do not settle
+2 A
+3 B
+4 B
+5 G says: no law of the dynamics says
+6 G weigh
+7 A
+8 A
+9 N counting laws
+10 D
+11 A
+12 B
+13 A
+14 A
+15 G forbid none
+16 A
+17 A
+18 C
+19 G ranks: no law of the dynamics ranks
+20 G weigh
+21 A
+22 A
+23 B
+24 B
+25 A
+26 B
+27 B
+28 B
+29 A
+30 C
+31 A
+32 A
+33 B
+34 B
+35 B
+36 A
+37 A
+38 T corpus's conditional statements read, not proved
+39 A
+40 A

@@ -1,0 +1,6 @@
+08-METHOD--03 24 27 REWORD one theorem of presence across the two models => one theorem on presence across the two models
+08-METHOD--03 26 31 REWORD general theorems of blanketed laws => general theorems on blanketed laws
+08-METHOD--03 63 68 REWORD to theorems of symmetry and identification => to theorems on symmetry and identification
+08-METHOD--04 67 32 REWORD are theorems of the exchange => are theorems on the exchange
+08-METHOD--05 113 40 REWORD the theorems of what a selection reaches => the theorems on what a selection reaches
+checked 66

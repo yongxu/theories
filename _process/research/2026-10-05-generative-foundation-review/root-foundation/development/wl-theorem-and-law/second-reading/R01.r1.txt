@@ -1,0 +1,3 @@
+GLOSSARY--00 72 8 REWORD No theorem of the dynamics gives one => No theorem on the dynamics gives one
+GLOSSARY--00 80 11 WRONG a law of becoming (holds every case); 生生不息 is wished, unproved
+checked 12

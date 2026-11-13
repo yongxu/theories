@@ -1,0 +1,5 @@
+08-METHOD--00 60 12 WRONG what holds in every world of a class, not a proof
+08-METHOD--00 117 23 REWORD stated as theorems of arising => stated as theorems on arising
+08-METHOD--01 169 30 REWORD the arising–ceasing theorem over every finite world (`World.law_iff_em`) is a lemma of that theorem => that the arising–ceasing theorem over every finite world needs it (`World.law_iff_em`) is a lemma of that theorem
+08-METHOD--02 28 28 REWORD the theorems of a closure through borrowed steps => the theorems on a closure through borrowed steps
+checked 86

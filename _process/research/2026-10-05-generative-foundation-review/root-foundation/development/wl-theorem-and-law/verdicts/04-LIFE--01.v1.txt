@@ -1,0 +1,30 @@
+1 D
+2 G deciding a lineage's region
+3 A
+4 N the response law
+5 A
+6 N the stock law
+7 N response, selection, factor, stretch, next-step, offspring-number laws
+8 N the carriers' law
+9 N the response law
+10 D
+11 C
+12 N the general law
+13 A
+14 A
+15 N the flow laws
+16 N the family law
+17 N the group law
+18 A
+19 A
+20 A
+21 N the step law
+22 A
+23 N the founding laws
+24 N the lineage law
+25 N the founding laws
+26 A
+27 A
+28 A
+29 N its slack law
+30 A

@@ -1,0 +1,28 @@
+1 B
+2 A
+3 B
+4 A
+5 A
+6 B
+7 B
+8 A
+9 B
+10 B
+11 B
+12 U A or B; label "any types for the law"
+13 B
+14 A
+15 B
+16 B
+17 A
+18 A
+19 N the worth laws
+20 G choose; "choosing as the worth law does"
+21 B
+22 B
+23 B
+24 B
+25 A
+26 A
+27 N the lumping law
+28 G does not say which requirement is right

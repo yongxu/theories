@@ -1,0 +1,7 @@
+1 A
+2 A
+3 A
+4 G compares no courses
+5 A
+6 A
+7 A

@@ -1,0 +1,31 @@
+1 A
+2 C
+3 A
+4 N the coupled family law
+5 A
+6 A
+7 C
+8 A
+9 A
+10 N the law of passing
+11 N grammar laws
+12 A
+13 G says better; no law here
+14 A
+15 G the laws do not check
+16 A
+17 A
+18 N grammar laws
+19 U N (law of forming) or B (how dependence forms)
+20 B
+21 N the law of forming
+22 A
+23 A
+24 A
+25 B
+26 A
+27 A
+28 B
+29 B
+30 B
+31 N the support laws
