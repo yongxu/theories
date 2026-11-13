@@ -34481,5 +34481,190 @@
   "seeded_from": [
    "Lean"
   ]
+ },
+ {
+  "id": "wayofunits-unit-above-level",
+  "name": {
+   "en": "a unit whose need is above the level"
+  },
+  "statement": {
+   "en": "a unit p of the way w whose need is above the level x: p ∈ w ∧ x < need p"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.WayOfUnits.ends_while_net_goes"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/chapters/02-MAP.md#r-a-way-of-units",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "wayofunits-unit-met",
+  "name": {
+   "en": "a unit whose need the level meets"
+  },
+  "statement": {
+   "en": "a unit q of the way w whose need the level x meets: q ∈ w ∧ need q ≤ x"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.WayOfUnits.ends_while_net_goes"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/chapters/02-MAP.md#r-a-way-of-units",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "wayofunits-needs-positive",
+  "name": {
+   "en": "every unit of the start needs something"
+  },
+  "statement": {
+   "en": "every unit of the start's way w needs a positive level: ∀ u, u ∈ w → 0 < need u"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.WayOfUnits.unending_iff_holds"
+  ],
+  "holds_in": [
+   "Becoming.WayOfUnits.With.goes_on_holds"
+  ],
+  "fails_in": [],
+  "home": "theories/becoming/chapters/02-MAP.md#r-a-way-of-units",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "wayofunits-regime-along",
+  "name": {
+   "en": "the regime along the course"
+  },
+  "statement": {
+   "en": "at every way the course from (w, x) reaches with some unit going on there and at every step before it, the start's included, giving is short of what the way takes below y of it, meets it from there up to hi, and the step under it keeps the level within hi: ∀ k, (∀ j, j ≤ k → Goes (course giving (w, x) j)) → Regime giving y hi (course giving (w, x) k).1 (WayOfUnits.Regime)"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.WayOfUnits.unending_iff_holds"
+  ],
+  "holds_in": [
+   "Becoming.WayOfUnits.With.goes_on_holds"
+  ],
+  "fails_in": [],
+  "home": "theories/becoming/chapters/02-MAP.md#r-a-way-of-units",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "wayofunits-order",
+  "name": {
+   "en": "the second unit needs no more than the first"
+  },
+  "statement": {
+   "en": "of the two units, the second's need n is at most the first's need m: n ≤ m"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.WayOfUnits.unending_iff_carrier",
+   "Becoming.WayOfUnits.two_units_iff",
+   "Becoming.WayOfUnits.greater_need",
+   "Becoming.WayOfUnits.more_use_on_first",
+   "Becoming.WayOfUnits.takes_nothing_iff_alone",
+   "Becoming.WayOfUnits.takes_nothing_ends"
+  ],
+  "holds_in": [
+   "Becoming.WayOfUnits.With.goes_on"
+  ],
+  "fails_in": [],
+  "home": "theories/becoming/chapters/02-MAP.md#r-a-way-of-units",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "wayofunits-greater-need",
+  "name": {
+   "en": "a greater need of the first unit"
+  },
+  "statement": {
+   "en": "the first unit's need in the second line is at least its need in the first: m ≤ m'"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.WayOfUnits.greater_need"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/chapters/02-MAP.md#r-a-way-of-units",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "wayofunits-same-sum",
+  "name": {
+   "en": "the same sum taken"
+  },
+  "statement": {
+   "en": "the two ways of two units take the same sum: h + H₂ = h' + H₂'"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.WayOfUnits.more_use_on_first"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/chapters/02-MAP.md#r-a-way-of-units",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "wayofunits-more-on-first",
+  "name": {
+   "en": "more of the use on the first unit"
+  },
+  "statement": {
+   "en": "the first unit takes at least as much in the second way as in the first: h ≤ h'"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.WayOfUnits.more_use_on_first"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "theories/becoming/chapters/02-MAP.md#r-a-way-of-units",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "wayofunits-first-line-unending",
+  "name": {
+   "en": "the first line never ends"
+  },
+  "statement": {
+   "en": "of two lines compared, the line from the first way of two units never ends in the units' net: «不穷» (net giving) «一» ([(m, h), (n, H₂)], x); an instance of grammar-buqiong, kept apart because here it is the comparison's antecedent, the line whose not ending is carried to the second"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.WayOfUnits.greater_need",
+   "Becoming.WayOfUnits.more_use_on_first"
+  ],
+  "holds_in": [
+   "Becoming.WayOfUnits.With.goes_on"
+  ],
+  "fails_in": [],
+  "home": "theories/becoming/chapters/02-MAP.md#r-a-way-of-units",
+  "seeded_from": [
+   "Lean"
+  ]
  }
 ]

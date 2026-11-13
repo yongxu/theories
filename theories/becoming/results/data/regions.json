@@ -2825,6 +2825,11 @@
    "region": "map",
    "base": "general",
    "note": "TurningInTime TT: a pair of a way and a level cut by a need; a line that ends where the net ends, or while the net goes on; the first marked level (02 §11)"
+  },
+  "a-way-of-units": {
+   "region": "map",
+   "base": "general",
+   "note": "WayOfUnits WU: a way of units, each a need and a use; the line never ends exactly where it comes to units whose needs are met at a level from which what they take holds; for two units, turning in time with its premises on marks proved (02 §11)"
   }
  },
  "modules": {
@@ -4842,6 +4847,11 @@
    "region": "map",
    "base": "general",
    "note": "TT turning in time: a line that ends where the net ends, or ends while the net goes on, on a pair of a way and a level cut by a need (02 §11)"
+  },
+  "Becoming.WayOfUnits": {
+   "region": "map",
+   "base": "general",
+   "note": "WU a way of units: a turn with no mark given, on TurningInTime's pair; units go on while the level meets their need and take their use (02 §11)"
   }
  }
 }
