@@ -5089,9 +5089,14 @@ tagged instance or application.
   there or ended, for which `AloneOutside`, `turns`, `kept`, `uses` and `uses₁` are proved, not
   assumed (`WayOfUnits.first_outside`, `WayOfUnits.first_turns`, `WayOfUnits.first_kept`,
   `WayOfUnits.first_uses`, `WayOfUnits.first_uses₁`), and a transfer
-  (`WayOfUnits.unending_iff_carrier`). Under `two_units_iff`'s premises a greater need of the first
-  unit never ends a line that did not end (`WayOfUnits.greater_need`), and with the same needs and the
-  same sum taken neither does more of the use on the first unit (`WayOfUnits.more_use_on_first`). With
+  (`WayOfUnits.unending_iff_carrier`). A line of two units that never
+  ends, the second needing something, stays at or above `H₂ + y₂` where nothing is given from nothing
+  and giving is short of `H₂` below `y₂` (`WayOfUnits.unending_above`). So, with `n ≤ m`, nothing given
+  from nothing, `Short`, `Meets`, `Keeps` at the second unit's use and a start at most `hi`, a greater
+  need of the first unit never ends a line that did not end (`WayOfUnits.greater_need`), and with the
+  same needs and the same sum taken neither does more of the use on the first unit, the premises
+  asked at the lesser second use (`WayOfUnits.more_use_on_first`). Where something is given from
+  nothing both comparisons fail (`WayOfUnits.GivenFromNothing`). With
   `n ≤ m` and a first unit that takes nothing, under any giving and from any start, the line never
   ends exactly where the line of the second unit alone never ends (`WayOfUnits.takes_nothing_iff_alone`);
   so, with giving short of `H₂` below `y₁`, the start below `H₂ + y₁`, nothing given from nothing and
