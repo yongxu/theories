@@ -15,10 +15,9 @@
   },
   "theories/becoming/ONE-PAGE.zh.md": {
    "revised": "2026-11-13",
-   "english": "7d1ea896aa8a0895156ea259600664335ccf2a5021180acef94635c56ddb8315",
-   "chinese": "dfbc58bd90bc7d56bba0bbb3b7666fb81de2323af25f0c8d4cee9ef87645ff23",
-   "english_commit": "4ebadd6b0",
-   "unchanged": "the English changed only the English one page's stated reading time (thirty to forty became thirty-one to forty); the Chinese states its own computed time"
+   "english": "f018f1c1d5b1ca16ce8119b08369675d671302952315fbea7687f3239404f232",
+   "chinese": "c42128a25666a2aff848e2fce47bfd1c92decfe9c8c2f2290bc8499ee41290b8",
+   "english_commit": "93f8de6d4"
   },
   "theories/becoming/OPENING.zh.md": {
    "revised": "2026-11-13",
@@ -28,10 +27,9 @@
   },
   "theories/becoming/THE-THEORY-OF-BECOMING.zh.md": {
    "revised": "2026-11-13",
-   "english": "c44f9e9c06d20295cd88cd325072cb6b75e09b5ca3d5e1594ca6c263607212d5",
-   "chinese": "ff39f71d12c6096588ebddc670fd2677f285df2fa431d93605d906b63f5a4a6e",
-   "english_commit": "d4d69d406",
-   "unchanged": "the English changed one pronoun (its running down became that running down); the Chinese already says 这耗减"
+   "english": "f3597ebad9ca3543620bc267e074e3634f8bc50311fea48c34b3c28c259e38af",
+   "chinese": "71b3b9c0bc1acd5ada519ab6c192386eae759d88e3e0c56a22b07fe93e00e6be",
+   "english_commit": "93f8de6d4"
   },
   "theories/becoming/USES-EXAMPLES.zh.md": {
    "revised": "2026-11-13",
