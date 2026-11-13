@@ -88,11 +88,11 @@ WORDS = {
         'backward': 'The same, darker where an earlier chapter’s results use a later one’s.',
         'interpretive': 'interpretive, kept for “an argument dependency” (dashed; pairs with {m} or more).',
         'application': 'application, a reused result with its correspondence and added premises (dotted).',
-        'spoke': 'Spoke: its width is the share of the chapter’s core modules that state their laws on the grammar, given beside the chapter as “k of m modules on the grammar”. It counts modules, not results derived.',
+        'spoke': 'Spoke: its width is the share of the chapter’s core modules that state their theorems on the grammar, given beside the chapter as “k of m modules on the grammar”. It counts modules, not results derived.',
         'spoke_label': '{k} of {m} modules on the grammar',
         'laws_head': 'The five shared laws (08 §7): central rows on each; hatched, those whose compiled type or value reaches the grammar',
         'law_all': '{c} rows, all {c} reach', 'law_some': '{c} rows, {k} reach', 'law_rep': 'represented both ways, not derived',
-        'laws_note': 'Rows, not declarations: {rested} of the {rows} central rows (nine declarations stand in two) rest on at least one law, some on several. Reaching the grammar is not being derived: only the {d} derived above are read as cases of grammar laws, and {h} as a root form at one step, under a stated hypothesis. A bar of few rows is widened to be seen; the words give the counts.',
+        'laws_note': 'Rows, not declarations: {rested} of the {rows} central rows (nine declarations stand in two) rest on at least one law, some on several. Reaching the grammar is not being derived: only the {d} derived above are read as cases of grammar theorems, and {h} as a root form at one step, under a stated hypothesis. A bar of few rows is widened to be seen; the words give the counts.',
         'related': 'Not drawn: related, for analogy ({n} edges), and the formal-reuse curves of pairs under {m} uses; counts under {k} are not written. THEORY-GRAPH.md’s edge kinds between chapters, its tables and pair list, have them all.',
         'theses': 'The theses',
         'theses_note': 'T1–T8 at their homes; what each claims, how far it has been seen and its tests: the theses table in THEORY-GRAPH.md, “The chapters at a glance”.',
@@ -227,7 +227,7 @@ def check(s):
         errors.append(f'the edge record has {len(derived_rows())} derived declarations; THEORY-GRAPH says eleven')
     if standing and str(central_total()) != standing['counts'][0][0]:
         errors.append(f'the shared-laws data places {central_total()} central declarations; the standing line counts otherwise')
-    holds(METHOD, "every model's law in a row is proved from it, except balance's, which the grammar represents and does not derive")
+    holds(METHOD, "every model's theorem in a row is proved from it, except balance's, which the grammar represents and does not derive")
     if central_rows() is None:
         errors.append('08 §7 no longer says how many of the central rows rest on at least one shared law')
     fv = s.get('first_view')
@@ -1238,7 +1238,7 @@ def shared_laws_section(s, rel, lang):
     link = rel(METHOD, 'shared-laws-and-connectivity')
     rested = re.search(r'(\d+) rest on at least one', caps[6]['text']).group(1)
     reach, no_anchor = rows_reaching() or (0, 0)
-    column = "every model's law in a row is proved from it, except balance's, which the grammar represents and does not derive"
+    column = "every model's theorem in a row is proved from it, except balance's, which the grammar represents and does not derive"
     cells = {name: cell for name, cell in shared_laws_cells()}
     if lang == 'zh':
         names, words = s['laws_zh']['names'], s['laws_zh']['statements']
@@ -1262,7 +1262,7 @@ def shared_laws_section(s, rel, lang):
                       f'([08 §7]({link})). The last column is 08 §7\'s count of those rows whose compiled type or value reaches the grammar; of the 126 rows, '
                       f'{reach} reach it, {no_anchor} of them on no anchor, so {reach - no_anchor} on a shared law; the column adds to {sum(reaching_the_grammar(n, c) or 0 for n, _, _, c in rows)}, '
                       f'more than {reach - no_anchor}, because a row can rest on several laws, the finite-run rows on closure too. It says what a row\'s compiled type or value reaches, not that the row is a case of the law: only the eleven above are '
-                      f'read as cases of grammar laws, and one, `GroupEnding.Flow.all_end`, as the root form `RootForms.outside_leaves_no_offspring` at one step, under a stated hypothesis.', '']
+                      f'read as cases of grammar theorems, and one, `GroupEnding.Flow.all_end`, as the root form `RootForms.outside_leaves_no_offspring` at one step, under a stated hypothesis.', '']
 
 
 def circular_paragraph(graph, lang):
@@ -1296,7 +1296,7 @@ def picture_key(s, lang, page='theories/becoming/ONE-PAGE.md'):
                 f'{total} 项核心声明中，{d} 项[推导而得]({gl}#derived)，{h} 项为一个根形式的一步情形、在一个所述的假设之下，{c} 项为计数之律、位于文法以下，'
                 f'{rest} 项处于一个[指明的距离]({gl}#named-distance)、各有其理由（[这幅图显示什么、不显示什么]({tg}#the-spine-what-it-shows-and-does-not-show)）。')
     return (f'The grammar is at the centre and the eight chapters on a ring around it, each circle sized by its results; a spoke\'s width '
-            f'is the share of the chapter\'s core modules that state their laws on the grammar. A solid curve counts one chapter\'s uses of '
+            f'is the share of the chapter\'s core modules that state their theorems on the grammar. A solid curve counts one chapter\'s uses of '
             f'another\'s results that the AI-written records class as formal-reuse (nothing checks a use against the Lean), darker where an '
             f'earlier chapter\'s results use a later one\'s. T1 to T8 stand at their homes, coloured by how their tests came out (T8, argued, '
             f'has none). Of the {total} central declarations, {d} are [derived]({gl}#derived), {h} is a '
@@ -1325,12 +1325,12 @@ def how_to_read(s, lang, page='theories/becoming/ONE-PAGE.md'):
                 f'在一个所述的假设之下；其余或为计数之律，位于文法以下（{c} 项），或处于一个[指明的距离]({gl}#named-distance)，各有其指明的理由（{rest} 项）。')
     about = 'About a tenth' if 0.085 <= share <= 0.115 else f'{d + h}'
     return (f'Each circle is a chapter, sized by its results, on a ring around the grammar at the centre; a spoke\'s width gives the share, '
-            f'and the count beside its chapter the number, of the chapter\'s core modules that state their laws on the grammar. A solid curve '
+            f'and the count beside its chapter the number, of the chapter\'s core modules that state their theorems on the grammar. A solid curve '
             f'from one chapter to another counts the uses of the other\'s results recorded as formal-reuse, the kind [RESULT-WORKFLOW]({wf}) '
             f'keeps for verified inferences, here assigned by the AI-written records with no check against the Lean; dashed and dotted curves '
             f'between chapters are other dependences, and a darker curve is an earlier chapter\'s results using a later one\'s, the chapters '
-            f'being numbered for reading. {about} of the {total} central declarations are read as cases of grammar laws or of a root form: '
-            f'{d} [derived]({gl}#derived), cases of grammar laws, and {h}, a root form at one step, under a stated hypothesis; the rest are '
+            f'being numbered for reading. {about} of the {total} central declarations are read as cases of grammar theorems or of a root form: '
+            f'{d} [derived]({gl}#derived), cases of grammar theorems, and {h}, a root form at one step, under a stated hypothesis; the rest are '
             f'counting laws, below the grammar ({c}), or stand at a [named distance]({gl}#named-distance), each with its reason named ({rest}).')
 
 
@@ -1420,7 +1420,7 @@ def lead(graph, page_path):
                   f'hypothesis, counting and, by reason, at a named distance, with an example for {examples_drawn(s)[0]} of the classes' + (' and the single declaration of the class of one' if examples_drawn(s)[1] else '') + f', in its record\'s words, the derived one with the glossary\'s note on its closure]({rel(FIRST["en"])})', '',
                   f'*Generated by `tools/research/spine.py` from [the shared-laws data]({rel(registry.SHARED_LAWS)}) and [spine.json]({rel(DATA)}); '
                   f'[in Chinese]({rel(FIRST["zh"])}).*', '',
-                  f'**The eleven derived**, each read as a case of grammar laws by an AI-written review ([of the record]({rel(REVIEW_U4)}), [of `Listed.coming_of_ceasing`\'s row]({rel(REVIEW_U4C)})); '
+                  f'**The eleven derived**, each read as a case of grammar theorems by an AI-written review ([of the record]({rel(REVIEW_U4)}), [of `Listed.coming_of_ceasing`\'s row]({rel(REVIEW_U4C)})); '
                   f'every recorded review so far is by AI ([08]({rel(m08, "review-status")})). Eight of them, all but the last three rows below, are, in 08 §7\'s words, "the eight connected rows that the '
                   f'reading of connected rows took as derived": a row that reaches the grammar, without balance in its statement, is connected by the rule '
                   f'([DESIGN-BOUNDARY]({rel(DESIGN_BOUNDARY)}) §2, rules 1 and 2), and [the reading of connected rows]({rel(CONNECTED_READING)}), also AI-written, '
@@ -1487,7 +1487,7 @@ def section(graph, page_path):
              f'{INTERPRETIVE_MIN} ({sum(interp_small)} edges); and the counts of curves under {LABEL_MIN} uses are not '
              f'written. The list under "Edge kinds between chapters" has every pair with an edge. Beside a circle, "within" counts formal-reuse between results of '
              f'the same chapter; interpretive edges within a chapter are on the diagonal of the interpretive table. A spoke\'s width, and the "k of m '
-             f'modules on the grammar" beside its chapter, count the region\'s core modules that state their laws on the grammar, as the region lists below '
+             f'modules on the grammar" beside its chapter, count the region\'s core modules that state their theorems on the grammar, as the region lists below '
              f'say. '
              + (f'Results in {", ".join(name.get(k, k) for k in others)} ({outside} edges touch them) are in that list only. '
                 if outside else '')

@@ -629,7 +629,7 @@
     {
       "path": "theories/becoming/chapters/07-SIGNIFICANCE.md",
       "role": "statement",
-      "sha256": "a5f31510d40c29b2cb054c8fb637a1801395b00ed84d8958d388bd72adb6391f"
+      "sha256": "f5f336991fc3c824eea9936bd068a05db025c2c033b8f76e9472f908c63e3111"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",

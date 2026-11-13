@@ -400,7 +400,7 @@ class UsesCells(unittest.TestCase):
                          '**What it does not show.**')
         seeing = next(p for p in valley.split('\n\n') if p.startswith('**What each course draws on, opens and closes, and who bears it.**'))
         self.assertIn('[T8](chapters/07-SIGNIFICANCE.md#t8)', seeing)
-        laws = next(p for p in valley.split('\n\n') if p.startswith('**What the laws say beneath it, with no premise.**'))
+        laws = next(p for p in valley.split('\n\n') if p.startswith('**What the theorems say beneath it, with no premise.**'))
         for phrase in ('closing needs a net draw', 'that is a relation between the two courses', 'the laws weigh it for no one'):
             self.assertIn(phrase, laws)
         self.assertLess(valley.index('**What each course draws on'), valley.index('**What the laws say beneath it'))
@@ -1123,7 +1123,7 @@ class MethodAndGlossariesAtTheirStrength(unittest.TestCase):
                        # AG-F (10 November 2026, round 6's two high findings): the ethics as a term, dynamics first, said
                        # in the one line the fronts share; widening a relation between two courses; each row that restated
                        # the chain says its result in one clause and links 07 §4
-                       '| ethics (伦理) | no law of the account evaluates: there is no should beyond becoming and no good and '
+                       '| ethics (伦理) | no theorem of the account evaluates: there is no should beyond becoming and no good and '
                        'evil set over it; right and wrong form within it, in people and AI, and the ethics emerges from '
                        'continuation, from a life going on through what sustains it',
                        'counting the losses that never come back to whoever causes them',

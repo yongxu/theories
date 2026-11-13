@@ -460,7 +460,7 @@ START_PLAIN = {
     'what-an-optimum-does-beyond-what-couples-in': (ONE_PAGE, 'With *room* (every eligible outcome left higher beyond is beaten on what couples in), every optimum of an order rising with what couples in drains what lies beyond as far as any eligible outcome does'),
     'closed-capture': (ONE_PAGE, 'A rule read from the share it raises can lock and outlive a growing loss it does not read'),
     'own-count-misses-joint-excess': (ONE_PAGE, 'Takers each within what a renewal gives can together exceed it; where the renewal depends on what it renews, enough such steps in a row from a low enough level end it and what depends on the condition as much'),
-    'one-root-to-its-edge': (ONE_PAGE, 'Of the central results a few are cases of the root, more use its laws in their proofs and most use none'),
+    'one-root-to-its-edge': (ONE_PAGE, 'Of the central results a few are cases of the root, more use its theorems in their proofs and most use none'),
 }
 # How far each result has been seen, in its homes' words: the one page's column of that name first (AG review, 9 November
 # 2026: until then "How it stands", printed as "Its standing"), which its record's hypotheses do not carry (closed capture's
@@ -533,7 +533,7 @@ def start_here_lines(records, path, homes):
     # AG review, fifth pass: 07's Bases, not "two readings"; the ethics emerges from continuation (07 §4). Sixth pass
     # (messages 10 and 11 of 9 November: C as a second premise giving order was the mistake): 07's Bases as it now says it.
     # Seventh pass: 07 §4's own sentence, "takes" once (the sixth pass's verifier).
-    return lines + ['', 'No law here evaluates, and the ethics emerges from continuation; each ranking result names the hypotheses its theorem takes: '
+    return lines + ['', 'No theorem here evaluates, and the ethics emerges from continuation; each ranking result names the hypotheses its theorem takes: '
                     + link(CHAPTERS + '/07-SIGNIFICANCE.md#scope-and-order', path, 'the continuation condition, self-concern or `Comparison` (C)') + ', and any further premise it uses.', '']
 
 
@@ -661,7 +661,7 @@ OPEN_LEAD = {
     'premises': (CH07, 'Each ranking result names the hypotheses its theorem takes: the continuation condition, self-concern or `Comparison` (C), and any further premise it uses.'),
     'not-own': (CH07, 'Neither the condition nor self-concern stands above becoming: each represents a scope or a property of an order within the account, used as a hypothesis where a theorem takes it, and whether and how formations come to hold them is the open target; the results say what follows where they are held.'),
     'crux': (CH07, 'whether all of one\'s effects are one\'s own, in the sense of whose losses count, argued for and against and not settled.'),
-    'crux-laws': (CH07, 'The laws do not answer it.'),
+    'crux-laws': (CH07, 'The theorems do not answer it.'),
     'crux-standing': (CH07, 'An AI reading throughout: argued, not proved.'),
     'c-question': (CH08, 'How scope and order form within the dynamics, as dynamics connected to the rest of the map: among them, whether and how a life forms a self-concerned order, and how far standpoints count past their own line (the step of invariance, which fixes scope); which formations come to hold such orders, and how the orders spread, lock and fare.'),
     'c-definition': (CH08, 'C\'s no-loss extension is widening by definition, so the definition carries no "better"'),

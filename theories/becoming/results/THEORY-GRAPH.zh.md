@@ -58,11 +58,11 @@
 |---|---|---|---:|---:|
 | 闭包 | 一个关系所传递的，恰好达到其闭包 | `«所闭当且仅当同一或及»`; `WithinClosure` is `«所闭»` by definition | 42 | 42 |
 | 平衡 | 一个水平由所给与所取而变化，在每一步，也在每一段上 | `«守数当且仅当可对»`, `«程守数当且仅当可对»`: represented both ways (`Flow.balances_iff_units`), not derived | 54 | 16 |
-| 有限运行 | 当一个列表包含每一构型时，一条律恰在每一构型都返回之处不并合（`Law.lossless_iff_returns`）；对每一条律，无须列表，一个构型恰在它不返回之处被吸入（`Law.drawn_iff_not_returns`）；当每一个无上升而后有最小下降的进程都终止时，沿一条不上升的线的下降不会再现，而在有限预算之内，最小损失使这些进程终止（`Amounts.rests`）；静止不是被吸入的一种情形 | `«入当且仅当有不返»`, `«有限遍后定后则定前当且仅当皆返»`, `«尽则不或屡»`; the row's three laws are proved from them | 14 | 14 |
+| 有限运行 | 当一个列表包含每一构型时，一条律恰在每一构型都返回之处不并合（`Law.lossless_iff_returns`）；对每一条律，无须列表，一个构型恰在它不返回之处被吸入（`Law.drawn_iff_not_returns`）；当每一个无上升而后有最小下降的进程都终止时，沿一条不上升的线的下降不会再现，而在有限预算之内，最小损失使这些进程终止（`Amounts.rests`）；静止不是被吸入的一种情形 | `«入当且仅当有不返»`, `«有限遍后定后则定前当且仅当皆返»`, `«尽则不或屡»`; the row's three theorems are proved from them | 14 | 14 |
 | 归并 | 一个单独读取的部分恰在其余部分对它不造成差别之处带有一条律 | `«像定后当且仅当同行»`; `GoAlikeUnder` is `«同行»` at each move | 2 | 1 |
 | 扩大 | 扩大（包含并超出）是非自反、单向且传递的；在延续条件之下，它是保留并添加；在一个有限列表上，它恰是凡给每个所列之物一个大于零的权重、再把权重相加的计法都排得更高者（`Weighting.widens_iff_every_positive`） | `«广不可逆»`, `«广之传递»`; `Web.Widens` and `Weighting.WidensOn` are `«广»` of what is admitted | 8 | 1 |
 
-第三栏照录 08 §7 的原文：它指明该律在 `Becoming.GrammarLaws` 中的陈述以及锚如何读它；用 08 §7 的话说，“every model's law in a row is proved from it, except balance's, which the grammar represents and does not derive”（表中一行里每个模型之律都由它证明，平衡除外，文法表示平衡而不推导它）。这些计数相加为 120，多于依于至少一条的 87 行，因为一行可以依于多条：“126 个核心行（九项声明各占两行）中，87 行至少依于一条”（[08 §7](../chapters/08-METHOD.md#shared-laws-and-connectivity)）。最后一栏是 08 §7 所计的、这些行中其编译后的类型或值达到文法的行数；126 行中有 46 行达到文法，其中 3 行不依于任何锚，所以依于一条共律的有 43 行；这一栏相加为 74，多于 43，是因为一行可以依于多条律，有限运行的各行也依于闭包。它说的是一行编译后的类型或值达到什么，不是说该行是这条律的一个情形：被读作文法之律之情形的，只有上面的十一项，另有一项 `GroupEnding.Flow.all_end` 在一个所述的假设之下被读作根形式 `RootForms.outside_leaves_no_offspring` 的一步。
+第三栏照录 08 §7 的原文：它指明该律在 `Becoming.GrammarLaws` 中的陈述以及锚如何读它；用 08 §7 的话说，“every model's theorem in a row is proved from it, except balance's, which the grammar represents and does not derive”（表中一行里每个模型之律都由它证明，平衡除外，文法表示平衡而不推导它）。这些计数相加为 120，多于依于至少一条的 87 行，因为一行可以依于多条：“126 个核心行（九项声明各占两行）中，87 行至少依于一条”（[08 §7](../chapters/08-METHOD.md#shared-laws-and-connectivity)）。最后一栏是 08 §7 所计的、这些行中其编译后的类型或值达到文法的行数；126 行中有 46 行达到文法，其中 3 行不依于任何锚，所以依于一条共律的有 43 行；这一栏相加为 74，多于 43，是因为一行可以依于多条律，有限运行的各行也依于闭包。它说的是一行编译后的类型或值达到什么，不是说该行是这条律的一个情形：被读作文法之律之情形的，只有上面的十一项，另有一项 `GroupEnding.Flow.all_end` 在一个所述的假设之下被读作根形式 `RootForms.outside_leaves_no_offspring` 的一步。
 
 <a id="do-the-recorded-uses-form-a-cycle"></a>
 

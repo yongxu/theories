@@ -421,7 +421,7 @@ def page(graph):
                       + ', '.join(f'`{m["name"].split(".", 1)[1]}`' for m in sorted(ms, key=lambda m: m['name'])), '']
     off = [m for m in by.get('module', []) if not m['on_grammar']]
     lines += ['', '## Not yet on the root', '',
-              f'{len(off)} of {len(by.get("module", []))} core modules do not yet state their laws on the grammar (they '
+              f'{len(off)} of {len(by.get("module", []))} core modules do not yet state their theorems on the grammar (they '
               'neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is '
               'the restructure\'s remaining formal work. A result marked · is not yet stated by a section of a live '
               'chapter.', '']

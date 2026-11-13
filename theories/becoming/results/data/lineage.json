@@ -1604,7 +1604,7 @@
     {
      "path": "theories/becoming/chapters/08-METHOD.md",
      "locator": "§6 Expressible is not derived, line 373",
-     "quote": "A law proved on a model can usually be written in the grammar's vocabulary, but writing it there does not prove it there.",
+     "quote": "A theorem proved on a model can usually be written in the grammar's vocabulary, but writing it there does not prove it there.",
      "private": false
     }
    ],
@@ -1824,13 +1824,13 @@
     {
      "path": "theories/becoming/chapters/08-METHOD.md",
      "locator": "§7, One mechanism, stated once (line 427)",
-     "quote": "The name says only that: it ranks no law above another and rules nothing",
+     "quote": "The name says only that: it ranks no theorem above another and rules nothing",
      "private": false
     },
     {
      "path": "GLOSSARY.md",
      "locator": "row 'shared law (共律)' (line 81)",
-     "quote": "It ranks no law and rules nothing; formerly \"master law\" (主律)",
+     "quote": "It ranks no theorem and rules nothing; formerly \"master law\" (主律)",
      "private": false
     }
    ],
@@ -2622,7 +2622,7 @@
     "zh": "见于第八章 §7 与 §10、第一章 §7、现 id 为 shared-laws-on-the-grammar 的记录之标题与词汇表；因为「主律」陈述等级与统治，而第八章 §7 量度的只是证明上的依存"
    },
    "evidence_path": "GLOSSARY.md",
-   "quote": "It ranks no law and rules nothing; formerly \"master law\" (主律)",
+   "quote": "It ranks no theorem and rules nothing; formerly \"master law\" (主律)",
    "label": "public"
   },
   {

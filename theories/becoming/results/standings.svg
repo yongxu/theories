@@ -20,9 +20,9 @@
 <rect x="159" y="172" width="12" height="12" rx="1.5" fill="#1c1917" stroke="#57534e" stroke-width="0.6"/>
 <rect x="174" y="172" width="12" height="12" rx="1.5" fill="#1c1917" stroke="#57534e" stroke-width="0.6"/>
 <text x="286" y="183" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">11 derived</text>
-<text x="286" y="201" font-size="14" text-anchor="start" fill="#57534e">each a case of grammar laws, through bridges checked in Lean as equivalences and</text>
-<text x="286" y="219" font-size="14" text-anchor="start" fill="#57534e">support the review reads where a row has them; the case rests on those reviews,</text>
-<text x="286" y="237" font-size="14" text-anchor="start" fill="#57534e">each AI-written</text>
+<text x="286" y="201" font-size="14" text-anchor="start" fill="#57534e">each a case of grammar theorems, through bridges checked in Lean as equivalences</text>
+<text x="286" y="219" font-size="14" text-anchor="start" fill="#57534e">and support the review reads where a row has them; the case rests on those</text>
+<text x="286" y="237" font-size="14" text-anchor="start" fill="#57534e">reviews, each AI-written</text>
 <text x="286" y="255" font-size="14" text-anchor="start" fill="#1c1917">For example, Flow.beyond_gives_nothing: A formation beyond the closure that takes</text>
 <text x="286" y="273" font-size="14" text-anchor="start" fill="#1c1917">part at a step gives nothing at that step to a condition a member of the closure</text>
 <text x="286" y="291" font-size="14" text-anchor="start" fill="#1c1917">then requires (the closure: a formation's feeding closure)</text>
@@ -67,7 +67,7 @@
 <rect x="84" y="553" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
 <rect x="99" y="553" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
 <text x="286" y="549" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">22 connected</text>
-<text x="286" y="567" font-size="14" text-anchor="start" fill="#57534e">reaching grammar laws without being declared a case of one</text>
+<text x="286" y="567" font-size="14" text-anchor="start" fill="#57534e">reaching grammar theorems without being declared a case of one</text>
 <rect x="24" y="586" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
 <rect x="39" y="586" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
 <rect x="54" y="586" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
@@ -155,7 +155,7 @@
 <rect x="54" y="802" width="12" height="12" rx="1.5" fill="#e7e5e4" stroke="#57534e" stroke-width="0.6"/>
 <text x="286" y="813" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">3 keeping significance free</text>
 <text x="286" y="831" font-size="14" text-anchor="start" fill="#57534e">as chapter 7 intends</text>
-<text x="24" y="858" font-size="13" text-anchor="start" fill="#57534e">A named distance says why a declaration is not read as a case of grammar laws; the edge record does not show</text>
+<text x="24" y="858" font-size="13" text-anchor="start" fill="#57534e">A named distance says why a declaration is not read as a case of grammar theorems; the edge record does not show</text>
 <text x="24" y="875" font-size="13" text-anchor="start" fill="#57534e">that a distance is a gap or a failure. The hypotheses ranking results take, the continuation condition and the</text>
 <text x="24" y="892" font-size="13" text-anchor="start" fill="#57534e">requirement on an order each takes (in many, C; in the direction's, J1 and J2; in others, self-concern), are not</text>
 <text x="24" y="909" font-size="13" text-anchor="start" fill="#57534e">among these: none stands on the edge.</text>

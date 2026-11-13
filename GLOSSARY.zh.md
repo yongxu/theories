@@ -3,6 +3,8 @@
 
 [English](GLOSSARY.md) · [首页](README.zh.md) · [一页](theories/becoming/ONE-PAGE.zh.md) · [用途](theories/becoming/USES.zh.md) · [实例](theories/becoming/USES-EXAMPLES.zh.md) · [总览](theories/becoming/THE-THEORY-OF-BECOMING.zh.md) · [八章（英文）](theories/becoming/chapters/README.md) · [古文（第六章）](theories/becoming/chapters/06-CLASSICAL-TEXTS.md) · [检验](TESTS.zh.md) · [图集（英文）](theories/becoming/results/atlas/ATLAS.md) · [对照表](theories/becoming/results/atlas/CROSSWALK.zh.md) · [怎样长成](theories/LINEAGE.zh.md) · **术语表** · [审查包](theories/becoming/review/README.zh.md)
 
+*本版落后于英文版：它依 2026 年 11 月 11 日的[英文版](GLOSSARY.md)译出，英文版此后有改动，本版尚未随之修订；有出入处，以英文版为准。*
+
 *AI 译自英文版，尚无经人审查的记录；义以英文版为准。*
 
 生灭变化之论的词语，每一个只有一义、一个所属之处：定义它的那一章的那一节。别处用到一个词，都取这一义，并链接到那里。汉语术语在引入之处释义一次。除第六章外，各章与理论图皆为英文（理论图的各章一览有中文版）。文法的每一个概念及其 Lean 名称，都列在[理论图](theories/becoming/results/THEORY-GRAPH.md#the-grammars-concepts)中；较早文本所用的标签与现行术语的对照，见[方法一章](theories/becoming/chapters/08-METHOD.md#names)。本页所取代的术语表（规范章的 §10，连同其形式术语索引及其与语料词汇的对照）与该章一同保存在历史之中；九月的语料术语表（192 个词条）保存在[它自己的历史](_process/history/2026-09-consolidation/GLOSSARY.md)中。
@@ -109,4 +111,4 @@
 | 假设（hypotheses） | 一条定理自身的局部前提（有限、已列出、已判定……），写进其陈述之中 | [第八章 §2](theories/becoming/chapters/08-METHOD.md#standings-and-bases) |
 | 定理（theorem） | 本理论自己已证明的一个陈述：对其假设所容许的每一个关系、载体或模型都成立，从它所成立的对象上读出，而不是加于其上；只经由其假设而有内容。2026 年 11 月 13 日以前称为本理论的“律” | [第八章 §10](theories/becoming/chapters/08-METHOD.md#law) |
 | 律（law） | `Law` 是一个确定之步的脊柱之名，即一个关系（`next x = y`），不是其构形所遵从的一条规则；一类模型的律，是在该类每一个模型中都成立者；一门科学的律，冠以该科学之名。三者都不是*定理*，为人所执持的规则也不在其中 | [第八章 §10](theories/becoming/chapters/08-METHOD.md#law) |
-| 共律（shared law） | 许多核心结果共有、并经由它而证明的一条定理，在持有它的最低一层只陈述一次：闭包、平衡、有限运行、归并、扩大。它不给任何定理排序，也不统辖任何东西。此名在诸名修订之前，仍用旧字称定理；旧称“master law”（主律），这一名称只保留在它被匹配而不被阅读之处（一个旧 id、旧锚点）以及历史之中 | [第八章 §7](theories/becoming/chapters/08-METHOD.md#shared-laws-and-connectivity) |
+| 共律（shared law） | 许多核心结果共有、并经由它而证明的一条定理，在持有它的最低一层只陈述一次：闭包、平衡、有限运行、归并、扩大。它不给任何定理排序，也不统辖任何东西；旧称“master law”（主律），这一名称只保留在它被匹配而不被阅读之处（一个旧 id、旧锚点）以及历史之中。“共律”一名在诸名修订之前，仍用旧字称定理 | [第八章 §7](theories/becoming/chapters/08-METHOD.md#shared-laws-and-connectivity) |

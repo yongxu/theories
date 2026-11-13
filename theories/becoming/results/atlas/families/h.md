@@ -267,7 +267,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Open.**
   - That a given system regulates a level, which level, how late it reads, or the size of its step. ([two-sided-regulation-and-late-reading.md#does-not-show--未表明](../../records/two-sided-regulation-and-late-reading.md#does-not-show--未表明))
   - One policy keeping a band from every start in it under late reading; several regulated levels lumped into one; regulation of several conditions at once. ([two-sided-regulation-and-late-reading.md#does-not-show--未表明](../../records/two-sided-regulation-and-late-reading.md#does-not-show--未表明))
-  - That holding a level is good: the laws say what holds it and how wide a band it needs. ([two-sided-regulation-and-late-reading.md#does-not-show--未表明](../../records/two-sided-regulation-and-late-reading.md#does-not-show--未表明))
+  - That holding a level is good: the theorems say what holds it and how wide a band it needs. ([two-sided-regulation-and-late-reading.md#does-not-show--未表明](../../records/two-sided-regulation-and-late-reading.md#does-not-show--未表明))
   - That actual formations read only their own conditions. ([regulation-from-one-side-and-locally.md#does-not-show--未表明](../../records/regulation-from-one-side-and-locally.md#does-not-show--未表明))
   - Rest at m from one side only, under exchanges reading the whole: not stated. ([regulation-from-one-side-and-locally.md#does-not-show--未表明](../../records/regulation-from-one-side-and-locally.md#does-not-show--未表明))
   - Regulation and passing are supplied; amounts of giving, thresholds with memory, real loop factors and noisy rules are open. ([05-COLLECTIVES.md#r-conditions-kept-together](../../../chapters/05-COLLECTIVES.md#r-conditions-kept-together))

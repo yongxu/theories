@@ -321,7 +321,7 @@
   },
   "family": "A",
   "mechanism": {
-   "en": "Where courses branch, a configuration is necessarily drawn into a region where every run from it enters, possibly drawn where some reachable configuration lies in it. Every process necessarily draws exactly what does not return, a returning configuration having a run round to it for ever, built constructively; possibly drawn is losing oneself on some course, allowing return on another (OneWay, a witness). Runs are infinite, so a dead end, having no run, is necessarily drawn vacuously: the law quantifies over runs and does not say a course entering the region exists. Under every process what can be had n steps on is a region the process never leaves. Failing to return is failing to keep: every configuration reachable from s is reachable from t exactly where t leads back to s; return belongs to the law, not to the change, and a reading that omits the configuration reached can hide the loss (a witness). With configurations of a state and a self-keeping rule on which alone the next depends, a perturbed state is drawn back at once. \"Necessarily\" and \"possibly\" quantify over runs and weigh none."
+   "en": "Where courses branch, a configuration is necessarily drawn into a region where every run from it enters, possibly drawn where some reachable configuration lies in it. Every process necessarily draws exactly what does not return, a returning configuration having a run round to it for ever, built constructively; possibly drawn is losing oneself on some course, allowing return on another (OneWay, a witness). Runs are infinite, so a dead end, having no run, is necessarily drawn vacuously: the theorem quantifies over runs and does not say a course entering the region exists. Under every process what can be had n steps on is a region the process never leaves. Failing to return is failing to keep: every configuration reachable from s is reachable from t exactly where t leads back to s; return belongs to the law, not to the change, and a reading that omits the configuration reached can hide the loss (a witness). With configurations of a state and a self-keeping rule on which alone the next depends, a perturbed state is drawn back at once. \"Necessarily\" and \"possibly\" quantify over runs and weigh none."
   },
   "records": [
    "necessarily-drawn-is-not-returning",
@@ -5408,7 +5408,7 @@
   },
   "family": "A",
   "mechanism": {
-   "en": "Reading [AI reading, D65; of the boundary and attraction results of the market model, family A's market-model-share-margin-and-ends], in 05's words: \"At the original parameters with M < 0 a distinct protected region remains: a negative margin says a degenerate region can appear, not that every history enters it. Four routes of transition are distinct, none a proved phase transition: a parameter change removing a region's retention, a shock into another retained region, a failure stopping correction, and change too fast for correction. Attraction is not continuation: a selection absorbing perturbations can still erode its support, and a lost capacity needs actual entry, which the share law lacks. A real loss need not form a meta-attractor, and withdrawing one practice does not end the returning relation.\""
+   "en": "Reading [AI reading, D65; of the boundary and attraction results of the market model, family A's market-model-share-margin-and-ends], in 05's words: \"At the original parameters with M < 0 a distinct protected region remains: a negative margin says a degenerate region can appear, not that every history enters it. Four routes of transition are distinct, none a proved phase transition: a parameter change removing a region's retention, a shock into another retained region, a failure stopping correction, and change too fast for correction. Attraction is not continuation: a selection absorbing perturbations can still erode its support, and a lost capacity needs actual entry, which the share theorem lacks. A real loss need not form a meta-attractor, and withdrawing one practice does not end the returning relation.\""
   },
   "records": [],
   "declarations": [],
@@ -7630,7 +7630,7 @@
   },
   "family": "B",
   "mechanism": {
-   "en": "An order is nearing where it ranks above every nearer outcome: strictly single-peaked at the set point condition by condition, each peak not depending on the others. Where the family holds a condition no asymmetric nearing order is rising. Below the set point it rises: among outcomes up to the set point its optima stand at the least level beyond exactly where room holds there. Where an eligible outcome reaches the set point every optimum stands at it, whatever the room; the class asks nothing of what lies beyond. In a balanced step in which the whole gains nothing (World), the beyond then falls by the family's shortfall from its set point with what the step loses. Several nearing optimizers draw their joint shortfall as one with their joint set point. Over n steps, formations alone with their families, holding their stocks, their losses together above what the rest gives a gated condition at each step, from a level below n + m, end it however small each loss; no order or choice enters that law. What protects the beyond at the set point is the choice among equal optima, which no law here models. An optimum is that field's frame, taken over supplied eligible outcomes."
+   "en": "An order is nearing where it ranks above every nearer outcome: strictly single-peaked at the set point condition by condition, each peak not depending on the others. Where the family holds a condition no asymmetric nearing order is rising. Below the set point it rises: among outcomes up to the set point its optima stand at the least level beyond exactly where room holds there. Where an eligible outcome reaches the set point every optimum stands at it, whatever the room; the class asks nothing of what lies beyond. In a balanced step in which the whole gains nothing (World), the beyond then falls by the family's shortfall from its set point with what the step loses. Several nearing optimizers draw their joint shortfall as one with their joint set point. Over n steps, formations alone with their families, holding their stocks, their losses together above what the rest gives a gated condition at each step, from a level below n + m, end it however small each loss; no order or choice enters that theorem. What protects the beyond at the set point is the choice among equal optima, which no law here models. An optimum is that field's frame, taken over supplied eligible outcomes."
   },
   "records": [
    "what-a-set-point-optimum-does-beyond"
@@ -8959,7 +8959,7 @@
     "source": "theories/becoming/results/records/a-race-for-position-draws-everything.md#does-not-show--未表明"
    },
    {
-    "en": "[Conjecture, from an earlier account; not formalized.] The ends a selection for position can reach: a frozen mutual destruction, a deadlocked structure of power, the parts coming to read themselves as one whole, collapse, and winner takes all; which of them the laws of position, capture and joint excess admit, and under which hypotheses.",
+    "en": "[Conjecture, from an earlier account; not formalized.] The ends a selection for position can reach: a frozen mutual destruction, a deadlocked structure of power, the parts coming to read themselves as one whole, collapse, and winner takes all; which of them the theorems of position, capture and joint excess admit, and under which hypotheses.",
     "source": "theories/becoming/chapters/05-COLLECTIVES.md#open"
    }
   ],
@@ -11598,7 +11598,7 @@
     "source": "theories/becoming/results/records/what-position-reads.md#does-not-show--未表明"
    },
    {
-    "en": "[Conjecture, from an earlier account; not formalized.] The ends a selection for position can reach: a frozen mutual destruction, a deadlocked structure of power, the parts coming to read themselves as one whole, collapse, and winner takes all; which of them the laws of position, capture and joint excess admit, and under which hypotheses.",
+    "en": "[Conjecture, from an earlier account; not formalized.] The ends a selection for position can reach: a frozen mutual destruction, a deadlocked structure of power, the parts coming to read themselves as one whole, collapse, and winner takes all; which of them the theorems of position, capture and joint excess admit, and under which hypotheses.",
     "source": "theories/becoming/chapters/05-COLLECTIVES.md#open"
    }
   ],
@@ -16011,7 +16011,7 @@
   },
   "family": "C",
   "mechanism": {
-   "en": "Reading [AI reading, D68]. Take a counter-rule read monotonically from the share it selects, where selection does not lower its carriers' share under a favouring rule. Where every rule it reads favours its carriers, it locks from any start by the step after its second reading step, as the rule it replaced did, and only a change of law, such as reading what lies beyond its share, leaves the lock for long. Where its reading favours only above a threshold, a locked start stays locked where favouring is kept upward, and a change carrying the share across the threshold leaves. From a start against its reading it may never lock (a witness). The imperial examination is read as this case in the meta-attractor line: designed to dilute hereditary capture, \"it later became a proxy trap of its own\". It rests on the capture laws, not on the law of shaping. That any actual counter-rule reads its share so is the reading's premise."
+   "en": "Reading [AI reading, D68]. Take a counter-rule read monotonically from the share it selects, where selection does not lower its carriers' share under a favouring rule. Where every rule it reads favours its carriers, it locks from any start by the step after its second reading step, as the rule it replaced did, and only a change of law, such as reading what lies beyond its share, leaves the lock for long. Where its reading favours only above a threshold, a locked start stays locked where favouring is kept upward, and a change carrying the share across the threshold leaves. From a start against its reading it may never lock (a witness). The imperial examination is read as this case in the meta-attractor line: designed to dilute hereditary capture, \"it later became a proxy trap of its own\". It rests on the capture theorems, not on the law of shaping. That any actual counter-rule reads its share so is the reading's premise."
   },
   "records": [],
   "declarations": [
@@ -17358,7 +17358,7 @@
     "source": "theories/becoming/results/records/seeking-boundary.md#does-not-show--未表明"
    },
    {
-    "en": "When runs settle is 08's: in a world that a list holds, some run from a configuration keeps changing exactly where a reachable change can be undone; that no run keeps changing does not give settling constructively; worlds that no list holds are outside these laws.",
+    "en": "When runs settle is 08's: in a world that a list holds, some run from a configuration keeps changing exactly where a reachable change can be undone; that no run keeps changing does not give settling constructively; worlds that no list holds are outside these theorems.",
     "source": "theories/becoming/chapters/08-METHOD.md#r-when-the-runs-of-a-process-settle"
    },
    {
@@ -23365,7 +23365,7 @@
     "source": "theories/becoming/results/records/two-sided-regulation-and-late-reading.md#does-not-show--未表明"
    },
    {
-    "en": "That holding a level is good: the laws say what holds it and how wide a band it needs.",
+    "en": "That holding a level is good: the theorems say what holds it and how wide a band it needs.",
     "source": "theories/becoming/results/records/two-sided-regulation-and-late-reading.md#does-not-show--未表明"
    }
   ],
@@ -29612,7 +29612,7 @@
   },
   "family": "G",
   "mechanism": {
-   "en": "A law of exchange with noise is a relation of exchange, along every realization of which the course is a run, so the laws over every relation of exchange hold path by path. In the periphery (Lean's standard axioms through Mathlib), with integrable amounts, balance along every realization passes to the expectation and rest does not: a condition ending at a random step rests along every realization while its expected level falls at every step (a witness): a law that a run comes to rest does not pass to the expectation of the runs."
+   "en": "A law of exchange with noise is a relation of exchange, along every realization of which the course is a run, so the theorems over every relation of exchange hold path by path. In the periphery (Lean's standard axioms through Mathlib), with integrable amounts, balance along every realization passes to the expectation and rest does not: a condition ending at a random step rests along every realization while its expected level falls at every step (a witness): a law that a run comes to rest does not pass to the expectation of the runs."
   },
   "records": [
    "laws-with-noise"
@@ -31898,7 +31898,7 @@
     "source": "theories/becoming/results/records/two-sided-regulation-and-late-reading.md#does-not-show--未表明"
    },
    {
-    "en": "That holding a level is good: the laws say what holds it and how wide a band it needs.",
+    "en": "That holding a level is good: the theorems say what holds it and how wide a band it needs.",
     "source": "theories/becoming/results/records/two-sided-regulation-and-late-reading.md#does-not-show--未表明"
    },
    {

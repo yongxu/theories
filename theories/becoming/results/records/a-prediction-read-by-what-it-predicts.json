@@ -248,7 +248,7 @@
     {
       "path": "theories/becoming/chapters/03-KNOWING.md",
       "role": "statement",
-      "sha256": "cf7cf491bbab6e900aec09e5b4270f211c64df53adcc72dc26f07eeac8add7b6"
+      "sha256": "b1072a44ae2f14bd2428d932c4134be6d46f990f98f5c8ab444190ebbf528eaf"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",

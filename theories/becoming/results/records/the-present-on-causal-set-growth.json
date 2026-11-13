@@ -804,7 +804,7 @@
     {
       "path": "theories/becoming/chapters/01-ROOT.md",
       "role": "statement",
-      "sha256": "ae19869513f22776ae085269d23412dad1d9caa076268af090c8e2522f07adbd"
+      "sha256": "d4bdf16f85baaabaa5278222e4ad0285886c50d58b0eec56ddf04ee170601ac7"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean",

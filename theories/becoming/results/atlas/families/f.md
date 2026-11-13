@@ -128,7 +128,7 @@ The account's dynamics (attractors, locks, drains, absorptions, cycles, closures
 - **Tests.** None.
 - **Open.**
   - That a given system regulates a level, which level, how late it reads, or the size of its step. ([two-sided-regulation-and-late-reading.md#does-not-show--未表明](../../records/two-sided-regulation-and-late-reading.md#does-not-show--未表明))
-  - That holding a level is good: the laws say what holds it and how wide a band it needs. ([two-sided-regulation-and-late-reading.md#does-not-show--未表明](../../records/two-sided-regulation-and-late-reading.md#does-not-show--未表明))
+  - That holding a level is good: the theorems say what holds it and how wide a band it needs. ([two-sided-regulation-and-late-reading.md#does-not-show--未表明](../../records/two-sided-regulation-and-late-reading.md#does-not-show--未表明))
 - **Beyond its couplings.** Not stated.
 - **Sources.** [02-MAP.md#r-two-sided-regulation-and-late-reading](../../../chapters/02-MAP.md#r-two-sided-regulation-and-late-reading), [02-MAP.md#r-regulation-from-one-side-and-locally](../../../chapters/02-MAP.md#r-regulation-from-one-side-and-locally)
 

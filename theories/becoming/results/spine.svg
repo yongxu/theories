@@ -19,9 +19,9 @@
 <rect x="20" y="171" width="860" height="96" rx="6" fill="#f5f5f4" stroke="#e7e5e4"/>
 <text x="32" y="188" font-size="15" font-weight="bold" text-anchor="start" fill="#1c1917">Places of the 117 central declarations against the edge of one root (08 §7):</text>
 <rect x="32" y="198" width="10" height="10" fill="#1c1917" stroke="#57534e" stroke-width="0.5"/>
-<text x="46" y="208" font-size="15" text-anchor="start" fill="#1c1917">11 derived, each a case of grammar laws</text>
-<rect x="360.2" y="198" width="10" height="10" fill="#57534e" stroke="#57534e" stroke-width="0.5"/>
-<text x="374.2" y="208" font-size="15" text-anchor="start" fill="#1c1917">1 under a stated hypothesis</text>
+<text x="46" y="208" font-size="15" text-anchor="start" fill="#1c1917">11 derived, each a case of grammar theorems</text>
+<rect x="396.2" y="198" width="10" height="10" fill="#57534e" stroke="#57534e" stroke-width="0.5"/>
+<text x="410.2" y="208" font-size="15" text-anchor="start" fill="#1c1917">1 under a stated hypothesis</text>
 <rect x="32" y="218" width="10" height="10" fill="#a8a29e" stroke="#57534e" stroke-width="0.5"/>
 <text x="46" y="228" font-size="15" text-anchor="start" fill="#1c1917">6 counting, below the grammar</text>
 <rect x="288.8" y="218" width="10" height="10" fill="#e7e5e4" stroke="#57534e" stroke-width="0.5"/>
@@ -56,8 +56,8 @@
 <text x="700.8" y="376" font-size="13" text-anchor="start" fill="#1c1917">8 rows, 1 reach</text>
 <text x="32" y="413" font-size="13" text-anchor="start" fill="#57534e">Rows, not declarations: 87 of the 126 central rows (nine declarations stand in two) rest on at least one law,</text>
 <text x="32" y="429" font-size="13" text-anchor="start" fill="#57534e">some on several. Reaching the grammar is not being derived: only the 11 derived above are read as cases of</text>
-<text x="32" y="445" font-size="13" text-anchor="start" fill="#57534e">grammar laws, and 1 as a root form at one step, under a stated hypothesis. A bar of few rows is widened to be</text>
-<text x="32" y="461" font-size="13" text-anchor="start" fill="#57534e">seen; the words give the counts.</text>
+<text x="32" y="445" font-size="13" text-anchor="start" fill="#57534e">grammar theorems, and 1 as a root form at one step, under a stated hypothesis. A bar of few rows is widened to</text>
+<text x="32" y="461" font-size="13" text-anchor="start" fill="#57534e">be seen; the words give the counts.</text>
 <line x1="450" y1="657.3" x2="450" y2="789.6" stroke="#a8a29e" stroke-opacity="0.45" stroke-width="2.8" stroke-linecap="round"/>
 <line x1="582.7" y1="716.9" x2="492.4" y2="807.2" stroke="#a8a29e" stroke-opacity="0.45" stroke-width="2.2" stroke-linecap="round"/>
 <line x1="635.1" y1="849.6" x2="510" y2="849.6" stroke="#a8a29e" stroke-opacity="0.45" stroke-width="2" stroke-linecap="round"/>
@@ -226,14 +226,15 @@
 <text x="506" y="1617.3" font-size="14" text-anchor="start" fill="#1c1917">correspondence and added premises (dotted).</text>
 <line x1="470" y1="1634.3" x2="496" y2="1634.3" stroke="#a8a29e" stroke-opacity="0.45" stroke-width="3.4" stroke-linecap="round"/>
 <text x="506" y="1639.3" font-size="14" text-anchor="start" fill="#1c1917">Spoke: its width is the share of the chapter’s</text>
-<text x="506" y="1657.3" font-size="14" text-anchor="start" fill="#1c1917">core modules that state their laws on the grammar,</text>
-<text x="506" y="1675.3" font-size="14" text-anchor="start" fill="#1c1917">given beside the chapter as “k of m modules on the</text>
-<text x="506" y="1693.3" font-size="14" text-anchor="start" fill="#1c1917">grammar”. It counts modules, not results derived.</text>
-<text x="506" y="1715.3" font-size="14" text-anchor="start" fill="#1c1917">Not drawn: related, for analogy (1,498 edges), and</text>
-<text x="506" y="1733.3" font-size="14" text-anchor="start" fill="#1c1917">the formal-reuse curves of pairs under 10 uses;</text>
-<text x="506" y="1751.3" font-size="14" text-anchor="start" fill="#1c1917">counts under 15 are not written. THEORY-GRAPH.md’s</text>
-<text x="506" y="1769.3" font-size="14" text-anchor="start" fill="#1c1917">edge kinds between chapters, its tables and pair</text>
-<text x="506" y="1787.3" font-size="14" text-anchor="start" fill="#1c1917">list, have them all.</text>
+<text x="506" y="1657.3" font-size="14" text-anchor="start" fill="#1c1917">core modules that state their theorems on the</text>
+<text x="506" y="1675.3" font-size="14" text-anchor="start" fill="#1c1917">grammar, given beside the chapter as “k of m</text>
+<text x="506" y="1693.3" font-size="14" text-anchor="start" fill="#1c1917">modules on the grammar”. It counts modules, not</text>
+<text x="506" y="1711.3" font-size="14" text-anchor="start" fill="#1c1917">results derived.</text>
+<text x="506" y="1733.3" font-size="14" text-anchor="start" fill="#1c1917">Not drawn: related, for analogy (1,498 edges), and</text>
+<text x="506" y="1751.3" font-size="14" text-anchor="start" fill="#1c1917">the formal-reuse curves of pairs under 10 uses;</text>
+<text x="506" y="1769.3" font-size="14" text-anchor="start" fill="#1c1917">counts under 15 are not written. THEORY-GRAPH.md’s</text>
+<text x="506" y="1787.3" font-size="14" text-anchor="start" fill="#1c1917">edge kinds between chapters, its tables and pair</text>
+<text x="506" y="1805.3" font-size="14" text-anchor="start" fill="#1c1917">list, have them all.</text>
 <text x="24" y="1902" font-size="13" text-anchor="start" fill="#57534e">Generated by tools/research/spine.py from theory-graph.json and spine.json; THEORY-GRAPH.md, “What the picture</text>
 <text x="24" y="1918" font-size="13" text-anchor="start" fill="#57534e">shows and does not show”, says so.</text>
 </svg>
