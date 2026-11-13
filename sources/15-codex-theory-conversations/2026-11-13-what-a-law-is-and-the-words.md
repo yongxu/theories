@@ -41,3 +41,11 @@ At 01:39:
 > Yes, theorem
 
 *AI-authored.* What followed is board item WL: the uses of "law" on the English reading path were sorted one by one by AI readers, each use sorted as one of the account's own proved statements became "theorem" after a second reader's check, and chapter 08 §10 and the glossary were rewritten as the stated reversal. "Law" stays for a determined step (`Law`), for what holds in every model of a class, for a science's law, and in names given before the change.
+
+## 13 November, 09:02 WIB: after the landing
+
+*AI-authored context.* The session had reported WL on main at `2ed2d6da0`, not pushed, with three decisions put to him to overturn (which negatives keep "law", names and headings keeping the word for now, "theorem on X"), what was not done and whose it is, and the question whether to push. He answered:
+
+> I think your direction and judgment should be right this time, right? At least generally, looking at what you're replying. But always be careful and we're aiming the completeness of the, well, not necessarily the completeness, but where the picture the full picture and where the things can be as we have talked many times. Feel free to push, no need to ask.
+
+*AI-authored.* Main was pushed to the public remote at `dcd6e21ac` at 09:04 WIB, its screen clean (366 files changed since `ed131f9af`). The session read "no need to ask" as covering its pushes of landed, gated work in this line; the licence, who is sent what, and paid runs stay his. It then went on to what still says "law" of a theorem: headings, link texts, record titles and texts, and the Chinese pages.
