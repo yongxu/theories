@@ -16,7 +16,7 @@ This is what we want. Say it plainly.
 
 Work that draws the map further (an attractor, transition or correspondence mapped); work that couples it to something actual (a test that could fail, frozen before it runs; a trained system; an alignment design); work that lets someone understand it (the one page, a case, a picture, in both languages). Choose by what an item advances, and land it. A limit holds while its reason does; none forbids the work that would change it.
 
-Saying is part of the map too: a sentence couples a reader into it. Say what is there, what it lets someone see or do, and how far it has been seen (proved, tested, argued, a reading, or wanted), once, where it is said. Saying more than is there, or less, leaves a reader seeing what is not. Truthfulness, rigour and every other principle, this file's included, are patterns within the map, formed and changing like the rest, not rules standing above it. 道可道，非常道: a name points; it does not hold.
+Saying is part of the map too: a sentence couples a reader into it. Say what is there, what it lets someone see or do, and how far it has been seen (proved, tested, argued, a reading, or wanted), once, where it is said. Of each sentence and picture ask: is the respect said; is a pair said as one relation with two ends; is separateness shown, not assumed; is "better" said with what it is compared to. Saying more than is there, or less, leaves a reader seeing what is not. Truthfulness, rigour and every other principle, this file's included, are patterns within the map, formed and changing like the rest, not rules standing above it. 道可道，非常道: a name points; it does not hold.
 
 Keep counterexamples, failed candidates and failed tests. They are where the map was wrong, and part of it.
 
@@ -34,4 +34,4 @@ Keep counterexamples, failed candidates and failed tests. They are where the map
 - Other models read the same whole material for their own perspective, not a divided share.
 
 <a id="begin-with-one-relational-unfolding"></a>
-Start from [the one page](theories/becoming/ONE-PAGE.md) and the home of what you touch; for formal work, [method](theories/becoming/chapters/08-METHOD.md), which begins with [the one relational unfolding](theories/becoming/chapters/08-METHOD.md#one-relational-unfolding). Earlier versions of this file are in `_process/history/`, the last [before the map](_process/history/2026-11-09-instructions/AGENTS-before-the-map.md).
+Start from [the one page](theories/becoming/ONE-PAGE.md) and the home of what you touch; for formal work, [method](theories/becoming/chapters/08-METHOD.md), which begins with [the one relational unfolding](theories/becoming/chapters/08-METHOD.md#beginning-within-the-one-unfolding). Earlier versions of this file are in `_process/history/`, the last [before the four questions](_process/history/2026-11-13-instructions/AGENTS-before-the-four-questions.md); they are kept as history, not as instructions.

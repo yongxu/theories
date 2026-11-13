@@ -236,3 +236,25 @@ The coordinator answered that there are not two: the model is one state and one 
 #### What was done (AI-authored)
 
 The coordinator put these words, with tests drawn from them for a sentence or a picture (one going-on and its paces before any parts; "two" as a warning; nothing above and nothing outside; a boundary as a finding with an extent), at the head of the notes its later sessions load first, and marked the note that had proposed the two rings as withdrawn where it stands. It told the session that holds the centre sentence of AGENTS.md (board item DW), since that sentence is the first thing every session reads and changes only after he has read the change. It said back to him two things it holds beside his words: that fitting back onto itself is a condition and can fail, which is the case the account is about; and that no hard separation is not no difference. The map's pages were not changed.
+
+### The dig, and three sentences in AGENTS.md (13 November 2026)
+
+#### Context (AI-authored)
+
+After his words on dynamics within dynamics, and the coordinator's answer, he said:
+
+#### Ren's words
+
+> lets dig into the repo and see what else needs to be changed
+
+#### What was done (AI-authored)
+
+Eight AI readers each took one layer of what a new session loads, is told to do or has to fill in (the text loaded verbatim, the session notes, the process texts, the data structures, the tools' page text and saved briefs, the Lean as it is read, what a search turns up, and the first pages a session is sent to), and a ninth checked eighteen of their findings at the source and ranked twelve changes. Their reports are kept outside the tracked files. The critic's verdict: the old shape sits mostly in a few texts loaded first and in the copies and test pins that put them back, and in an absence, since the four questions for a sentence stood in no tracked text on a session's path. The coordinator added head notes to the notes its later sessions load and put his words of that day, with the four questions, at the head of the board's "way now" (`d3eae43d1`). It then put three small edits to AGENTS.md to him in full: the four questions after "once, where it is said."; the link to the method chapter pointed at the chapter's first section, since the anchor it used lies far down the chapter; and earlier versions of the file said to be kept as history, not as instructions. He answered with the answer the coordinator had written:
+
+#### Ren's words
+
+> Apply them
+
+#### What was done (AI-authored)
+
+The three edits were made in the landing that carries this entry, and the file as it stood before them is kept as `_process/history/2026-11-13-instructions/AGENTS-before-the-four-questions.md`. The second paragraph of AGENTS.md, which states the centre, was not changed: it waits for his read of the versions another session holds for him.
