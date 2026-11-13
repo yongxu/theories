@@ -1,7 +1,7 @@
 {
  "about": "MV: the shared laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/shared_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261113T054936.915391Z",
- "core_sources_sha256": "4d0ccbf64cf920883eb1c236086edea215480441e3c55ee873b017127173c82e",
+ "core_receipt": "20261113T133009.897615Z",
+ "core_sources_sha256": "7d369dc0c1790750097de8e33e62adf655e99de4262b9cbed868e30004da0fd3",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "438b65fe8bc281ab9796cfbff00af7db8441123a5aba8f3779f7c08586b443c7",
@@ -58,16 +58,16 @@
   ]
  },
  "counts": {
-  "laws": 4333,
+  "laws": 4338,
   "no_declarations": 9,
   "outside": 391,
-  "grammar": 1019,
-  "balance, represented": 633,
+  "grammar": 1020,
+  "balance, represented": 636,
   "anchor, not reached": 137,
-  "no shared law": 2144,
+  "no shared law": 2145,
   "vocabulary_only": 96,
   "closure": 583,
-  "balance": 882,
+  "balance": 886,
   "return": 256,
   "lumping": 92,
   "order": 105
@@ -54784,6 +54784,69 @@
     ],
     "grammar": true,
     "dependence": "grammar"
+   },
+   {
+    "law": 16,
+    "declarations": [
+     "Becoming.TurningInTime.turned",
+     "Becoming.TurningInTime.Turned",
+     "Becoming.TurningInTime.MeetsNeed",
+     "Becoming.TurningInTime.turned_meets_of_above",
+     "Becoming.TurningInTime.above_of_turned_meets",
+     "Becoming.TurningInTime.turned_meets_iff",
+     "Becoming.TurningInTime.recoverable_of_above",
+     "Becoming.TurningInTime.above_of_recoverable",
+     "Becoming.TurningInTime.recoverable_iff_above"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": false,
+    "dependence": "balance, represented"
+   },
+   {
+    "law": 17,
+    "declarations": [
+     "Becoming.TurningInTime.noReturnAt_iff_first_below",
+     "Becoming.TurningInTime.noReturnAt_of_below"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": false,
+    "dependence": "balance, represented"
+   },
+   {
+    "law": 18,
+    "declarations": [
+     "Becoming.TurningInTime.course_turned"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 19,
+    "declarations": [
+     "Becoming.TurningInTime.noReturn_exists",
+     "Becoming.TurningInTime.turns_in_time_iff_before"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 20,
+    "declarations": [
+     "Becoming.TurningInTime.Three.noReturn"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": false,
+    "dependence": "balance, represented"
    }
   ],
   "two-act-worlds-carry-the-difference": [
@@ -66703,7 +66766,7 @@
   ],
   "lean_check": {
    "toolchain": "leanprover/lean4:v4.29.1",
-   "modules_sha256": "a98178170feff9426ffd6c8a940787e24e4f9c754dee5021049032d905e55806",
+   "modules_sha256": "1ff3886af9e4f0ae2b64e15a5cace222828035b8d652e9a838424d7b31c2d814",
    "check_sha256": "e5ef1c274e3e3f81aa13dbe78732d1f6883a207a5685f736102ee4a2d5b1fc34",
    "ran": true
   },

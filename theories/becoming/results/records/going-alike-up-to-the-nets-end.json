@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-13T05:51:05+00:00",
+  "reviewed_at_utc": "2026-11-13T13:31:07+00:00",
   "statement": {
     "en": "With the successor fixed where a class leads, constancy up to the net's end is going alike with it decided whether the next conditions anything; constancy is constancy up to the net's end with a next. A law's step cut where it cannot go on has a fixed successor and lines ending where the net ends.",
     "zh": "后继在类所及之处唯一时，一类至终有常，当且仅当它同行、且所及者是否还为他事之缘可以判定；有常则是至终有常而所及处皆有后继。一条律的步在不能继续之处截断，后继仍唯一，其线可以终于网尽之处。"
@@ -347,14 +347,14 @@
       "sha256": "c2269dbd724f709b9ef35f59bac16bbe5597a1e4786531daa94e044a82b7a323"
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261113T054936.915391Z/verification.json",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261113T133009.897615Z/verification.json",
       "role": "receipt",
-      "sha256": "36305b6c817422715083a1ff5dfb3d511a4bd33003660e9c525d69f4b04c0269"
+      "sha256": "bc54fc45f16a2b92d1fcfcac8090993f1401ae5f64dfee71f3b36b16351b93d7"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tt-turning-in-time/NOTE.md",
       "role": "integration",
-      "sha256": "d1928bf2c8052f0ef64374125d0aacfe60b8f23107ecd191fe462ec63e7d0b61"
+      "sha256": "bda3e6a389782515b09e54890f0c1bc54d002d1a87d7231f073af67f2bb617a6"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tt-turning-in-time/DESIGN.md",
@@ -369,12 +369,12 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tt-turning-in-time/READER.md",
       "role": "review",
-      "sha256": "133872b61c7fcb92c266614193eea7a42e93059d1b7f573722148f4855bf037b"
+      "sha256": "e18bf13046322f3b13a09fb0c06b3673e2370eab37206f74a1568279b924353a"
     },
     {
       "path": "theories/becoming/chapters/02-MAP.md",
       "role": "statement",
-      "sha256": "8be0095fa2260a58716fe37ef42f3cd24fb04d717c0b6a3882ccf5ab8fa742bb"
+      "sha256": "ce9b73963daa7e80e3206b5da05fdeb1158b965204bbcc8cc5d23a5768346723"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-11-12-where-we-are-and-the-loop.md",
@@ -385,14 +385,14 @@
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarPath.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261113T054936.915391Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261113T133009.897615Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarPath",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardedStep.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261113T054936.915391Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261113T133009.897615Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GuardedStep",
       "success_pointer": "/status",
       "success_value": "passed"
