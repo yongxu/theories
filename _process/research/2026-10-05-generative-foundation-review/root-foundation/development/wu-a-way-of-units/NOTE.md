@@ -118,3 +118,17 @@ Four further scripts from the session's scratch folder are named by no report an
 | `kit/` | `fill_records.py`, which binds the record to the core run, and the lander's commands |
 
 Files copied from the session's scratch folder are kept as written. The reports name scratch paths, which this note maps to `sim/`.
+
+## WU2: the comparisons with only the premises they need (13 November 2026)
+
+*AI-written, 13 November 2026. Appended; the sections above are as they stood at WU's landing, and where they differ this section is the later word.*
+
+Board item WU2. `greater_need` and `more_use_on_first` were proved through `two_units_iff` and carried all of its premises. They are now proved outside it, on one new theorem, and ask less.
+
+- **`unending_above`** (new). With `n ≤ m`, nothing given from nothing, giving short of `H` below `y` and `0 < n`: a line from two units that never ends has every level of its course at or above `H + y`. With `n = 0` the line never ends from any start (`unending_needs_nothing`), so the positive need stays.
+- **`greater_need`** now asks `n ≤ m`, `m ≤ m'`, nothing given from nothing, `Short`, `Meets`, `Keeps` at `H₂` with `y₂` up to `hi`, and the start at most `hi`. It no longer asks `0 < n`, `n ≤ H₂ + y₂`, `Short` at `h + H₂`, or a start below `h + H₂ + y₁`.
+- **`more_use_on_first`** now asks `n ≤ m`, nothing given from nothing, the same sum with `h ≤ h'`, `Short`, `Meets`, `Keeps` at `H₂'` with `y₂'` up to `hi`, and the start at most `hi`. It asks nothing at `H₂`.
+- **`GivenFromNothing`** (new, a witness). Under a giving of two at nothing and at two, with the regime at the use three holding and nothing given from nothing failing, both comparisons fail from six: so that premise cannot be dropped, by proof.
+- No other statement changed. `level_le_start` and `level_le_of_le` are gone with the old proofs, and with them the module's use of `RegimeMargin.Adjusted`; items 5 to 7 of "What is proved" above describe the earlier form. The module now has 85 declarations, 64 of them theorems.
+
+How it was made: the trimmed statements were simulated before any proof ([`TRIM.md`](TRIM.md)); one AI agent re-proved them in scratch; one AI reader translated the three statements into python and found no failing case, and for each premise kept a computed case in which the statement fails without it ([`readers/t1-trim.md`](readers/t1-trim.md), scripts in `sim/t1/`). Those cases are computed, not Lean. The sentence above that simulations "found each true with some of its premises dropped" is settled by this: the premises dropped are now dropped by proof.

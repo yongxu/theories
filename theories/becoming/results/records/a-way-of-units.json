@@ -85,15 +85,23 @@
       ]
     },
     {
-      "en": "greater_need: under two_units_iff's premises (n ≤ m, FromNothing, Short, Meets, Keeps at H₂ with y₂ up to hi, 0 < n ≤ H₂ + y₂, Short at h + H₂ with y₁, x < h + H₂ + y₁, x ≤ hi) and m ≤ m': if the line from ([(m, h), (n, H₂)], x) never ends, the line from ([(m', h), (n, H₂)], x) never ends.",
-      "zh": "greater_need：在 two_units_iff 的全部前提下，且 m ≤ m'：若第一个单元所需为 m 时从 x 起的线永不终止，所需为 m' 时这条线也永不终止。",
+      "en": "unending_above: with n ≤ m, FromNothing, Short giving H y and 0 < n: if the line from ([(m, h), (n, H)], x) never ends, every level of its course is at or above H + y. With n = 0 the line never ends from any start under any giving (unending_needs_nothing), so 0 < n cannot be dropped.",
+      "zh": "unending_above：n ≤ m，无中不生有，给还在 y 以下不足 H，0 < n：若从 ([(m, h), (n, H)], x) 起的线永不终止，其进程每一步的水位都不低于 H + y。n = 0 时这条线在任何给还下、从任何起点都永不终止（unending_needs_nothing），故 0 < n 不可去。",
+      "declarations": [
+        "Becoming.WayOfUnits.unending_above",
+        "Becoming.WayOfUnits.unending_needs_nothing"
+      ]
+    },
+    {
+      "en": "greater_need: with n ≤ m, m ≤ m', FromNothing, Short, Meets and Keeps at H₂ with y₂ up to hi, and x ≤ hi: if the line from ([(m, h), (n, H₂)], x) never ends, the line from ([(m', h), (n, H₂)], x) never ends. No positive n, no bound on n and no start below h + H₂ + y₁ is asked.",
+      "zh": "greater_need：n ≤ m，m ≤ m'，无中不生有，H₂ 处以 y₂ 至 hi 有 Short、Meets、Keeps，x ≤ hi：若第一个单元所需为 m 时从 x 起的线永不终止，所需为 m' 时也永不终止。不要求 n 为正，也不要求起点低于 h + H₂ + y₁。",
       "declarations": [
         "Becoming.WayOfUnits.greater_need"
       ]
     },
     {
-      "en": "more_use_on_first: with n ≤ m, FromNothing, 0 < n, h + H₂ = h' + H₂', h ≤ h', Short at h + H₂ with y₁, x < h + H₂ + y₁, x ≤ hi, and for H₂ with y₂ and for H₂' with y₂' each Short, Meets up to hi, Keeps up to hi and n at most the sum: if the line from ([(m, h), (n, H₂)], x) never ends, the line from ([(m, h'), (n, H₂')], x) never ends.",
-      "zh": "more_use_on_first：所需相同（n ≤ m），总取用相同（h + H₂ = h' + H₂'），h ≤ h'；two_units_iff 的前提对 (h, H₂, y₂) 与 (h', H₂', y₂') 各自成立，共用 y₁、hi 与起点 x。若第一个单元取 h 时线永不终止，取 h' 时也永不终止。",
+      "en": "more_use_on_first: with n ≤ m, FromNothing, h + H₂ = h' + H₂', h ≤ h', Short, Meets and Keeps at H₂' with y₂' up to hi, and x ≤ hi: if the line from ([(m, h), (n, H₂)], x) never ends, the line from ([(m, h'), (n, H₂')], x) never ends. Nothing is asked at H₂, of n beyond n ≤ m, or of the start beyond x ≤ hi.",
+      "zh": "more_use_on_first：n ≤ m，无中不生有，h + H₂ = h' + H₂'，h ≤ h'，H₂' 处以 y₂' 至 hi 有 Short、Meets、Keeps，x ≤ hi：若第一个单元取 h 时线永不终止，取 h' 时也永不终止。对 H₂ 处无所要求。",
       "declarations": [
         "Becoming.WayOfUnits.more_use_on_first"
       ]
@@ -141,6 +149,16 @@
         "Becoming.WayOfUnits.Against.way",
         "Becoming.WayOfUnits.Against.turns_and_ends"
       ]
+    },
+    {
+      "en": "GivenFromNothing: under a giving of two at nothing and at two and nothing elsewhere, Short, Meets and Keeps hold at the use three with y four and hi six while FromNothing fails (regime); from six, [(2, 1), (2, 3)] never ends and [(7, 1), (2, 3)] ends (greater_need_fails), and [(7, 0), (2, 4)] never ends while [(7, 1), (2, 3)] ends (more_use_fails): both comparisons fail without FromNothing.",
+      "zh": "GivenFromNothing：给还在零与二处给二、别处不给时，用量三处以 y 四、hi 六有 Short、Meets、Keeps，而无中生有（regime）；从六起，[(2, 1), (2, 3)] 永不终止而 [(7, 1), (2, 3)] 终止（greater_need_fails），[(7, 0), (2, 4)] 永不终止而 [(7, 1), (2, 3)] 终止（more_use_fails）：去掉“无中不生有”，两个比较都不成立。",
+      "declarations": [
+        "Becoming.WayOfUnits.GivenFromNothing.giving",
+        "Becoming.WayOfUnits.GivenFromNothing.regime",
+        "Becoming.WayOfUnits.GivenFromNothing.greater_need_fails",
+        "Becoming.WayOfUnits.GivenFromNothing.more_use_fails"
+      ]
     }
   ],
   "hypotheses": [
@@ -154,10 +172,10 @@
       "en": "For unending_iff_holds: every unit of the start needing something; nothing given from nothing; the start at most hi; and Regime (Short, Meets and Keeps at what the way takes, with y of it, up to hi) at every way the course reaches with some unit going on there and at every step before it, the start's included. Not at every sub-way of the start, and not at the way where the net stops."
     },
     {
-      "en": "For two_units_iff and greater_need: n ≤ m; nothing given from nothing; Short, Meets and Keeps at H₂ with y₂ up to hi; 0 < n ≤ H₂ + y₂; Short at h + H₂ with y₁; the start below h + H₂ + y₁ and at most hi. greater_need adds m ≤ m'. A start at or above h + H₂ + y₁ is outside both."
+      "en": "For two_units_iff: n ≤ m; nothing given from nothing; Short, Meets and Keeps at H₂ with y₂ up to hi; 0 < n ≤ H₂ + y₂; Short at h + H₂ with y₁; the start below h + H₂ + y₁ and at most hi. A start at or above h + H₂ + y₁ is outside it."
     },
     {
-      "en": "For more_use_on_first: these premises for both pairs of uses, (h, H₂) with y₂ and (h', H₂') with y₂', with one y₁, one hi and one start, the same needs n ≤ m, h + H₂ = h' + H₂' and h ≤ h'."
+      "en": "For greater_need: n ≤ m, m ≤ m', nothing given from nothing, Short, Meets and Keeps at H₂ with y₂ up to hi, the start at most hi. For more_use_on_first: n ≤ m, nothing given from nothing, the same sum h + H₂ = h' + H₂' with h ≤ h', Short, Meets and Keeps at H₂' with y₂' up to hi, the start at most hi. For unending_above: n ≤ m, nothing given from nothing, Short at H with y, 0 < n."
     },
     {
       "en": "takes_nothing_iff_alone asks only n ≤ m, under any giving and from any start; takes_nothing_ends adds nothing given from nothing, 0 < n, giving short of H₂ below y₁ and the start below H₂ + y₁. ends_while_net_goes asks one unit of the way whose need is above the level and one whose need it meets, under any giving."
@@ -176,7 +194,7 @@
       "kind": "scope"
     },
     {
-      "en": "The comparison theorems are for two units from below the point of no return of what both take; simulations found them true with some premises dropped, which is not proved.",
+      "en": "The comparison theorems are for two units; none is stated for any number of units. That nothing given from nothing is needed is proved (GivenFromNothing); for each other premise they keep, only computed cases, not Lean, show it needed.",
       "kind": "scope"
     },
     {
@@ -208,6 +226,12 @@
       "detail": {
         "en": "Found by simulation, not in Lean: each premise of two_units_iff dropped alone has a case where the exact condition fails; without the step under H₂ keeping the level within hi, the levels 10, 9, 10, 11, 5 end the line while the condition on the course as it was holds; without n ≤ m, a first unit needing nothing keeps the line going while the condition, which asks a level below m, cannot hold."
       }
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/wu-a-way-of-units/readers/t1-trim.md",
+      "detail": {
+        "en": "Found by simulation, not in Lean: each premise greater_need and more_use_on_first keep has a computed case in which the comparison fails without it (for nothing given from nothing the case is also a Lean witness, GivenFromNothing). Without the start at most hi: under giving 0, 4, 3, 0, 4, 4, 0 with hi five, units needing eight and one and taking one and three stay at eight from eight, while with the first needing nine the levels run eight, eight, nine, six, three, nothing."
+      }
     }
   ],
   "standard_boundaries": [
@@ -221,10 +245,10 @@
     "conditional-not-universal"
   ],
   "validation_scope": {
-    "en": "Pure core, axiom reports empty in the scratch build (66 declarations, 47 theorems); a leaf, in the Lean's second layer only through its one import, TurningInTime. Compositions of landed theorems (RegimeMargin's point of no return and holding, turns_in_time_iff, the cut step's line) with an induction on the way's length; the witnesses computed. AI-written; a first design that claimed the marks derived was cut back, and the design, the Lean and the landing were each read by other AI agents set to refute them. Their simulations are not in Lean. No person's review of it is recorded yet."
+    "en": "Pure core, axiom reports empty (85 declarations, 64 theorems); a leaf, in the Lean's second layer only through its one import, TurningInTime. Compositions of landed theorems (RegimeMargin's point of no return and holding, turns_in_time_iff, the cut step's line) with an induction on the way's length; the witnesses computed. AI-written; a first design that claimed the marks derived was cut back, and the design, the Lean and the landing were each read by other AI agents set to refute them. Their simulations are not in Lean. No person's review of it is recorded yet."
   },
   "next_delta": {
-    "en": "Trim the comparison theorems' premises by proofs outside two_units_iff; state the comparison for any number of units; a way that builds units; join ReadingsSpread's overdrawn focal line and ReadOffInTime's gauges to the units by theorem; a test on a trained system, held."
+    "en": "State the comparison for any number of units; a way that builds units; join ReadingsSpread's overdrawn focal line and ReadOffInTime's gauges to the units by theorem; a test on a trained system, held."
   },
   "correspondence": {
     "en": "Reading (AI-written, from the home section's reading and the module's header): where a way is units that each take, the first of turning in time's three levels, where the level's fall first makes a difference to the way, is the need of a unit, and no mark is given; units end, one or several at a step, until what remains holds on what is left or until none goes on. An ending that takes nothing with it changes nothing in the level's course and can only be read: that the gauges near and mid of ReadOffInTime's witness of one loss, which need more and take nothing, are this case is a reading, their model being another. That ReadingsSpread's overdrawn focal line, which takes from its source while the source lasts and is removed once the source stands below its need while the wide line persists, is such a unit is a reading too. Nothing here is about keeping a unit from ending by lowering its need. No near work was read for this item beyond turning-in-time's."
@@ -290,25 +314,6 @@
         },
         "conditions": {
           "en": "Its own premises at what the way takes, with y of it, up to hi."
-        },
-        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean"
-      }
-    },
-    {
-      "id": "regime-point-under-adjusting-giving",
-      "relation": "formal-reuse",
-      "detail": {
-        "en": "Reuses the bound on the adjusted run in the regime's form (RegimeMargin.Adjusted.orbit_regime, orbit_bound, regime_staysShort, regime_fromNothing, draw_pos) for the course as it was never rising."
-      },
-      "interface": {
-        "output": {
-          "en": "From below H + y, under giving short of H below y and nothing from nothing, the level's course stays within its start."
-        },
-        "input": {
-          "en": "The level of the course as it was, under h + H₂."
-        },
-        "conditions": {
-          "en": "Giving short of h + H₂ below y₁; the start below h + H₂ + y₁."
         },
         "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean"
       }
@@ -529,6 +534,9 @@
   "history": [
     {
       "en": "13 November 2026, board item WU, on Ren's words of 13 November kept in sources (sources/15-codex-theory-conversations/2026-11-12-where-we-are-and-the-loop.md): added. A first design that claimed the marks of turns_in_time_iff derived was cut back after three AI readers; it is kept in the study folder wu-a-way-of-units (DESIGN-attacked.md) with their reports."
+    },
+    {
+      "en": "13 November 2026, board item WU2: greater_need and more_use_on_first re-proved outside two_units_iff with fewer premises, on the new theorem unending_above; no other statement changed. A reader's computed cases for each premise kept are in the study folder (readers/t1-trim.md)."
     }
   ]
 }
