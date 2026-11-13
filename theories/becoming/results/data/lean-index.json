@@ -15732,6 +15732,8 @@
       "receipt_bytes_match": true,
       "package_readme": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
       "direct_documentation_links_from": [
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/wu-a-way-of-units/A-WAY-OF-UNITS.md",
+        "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/wu-a-way-of-units/A-WAY-OF-UNITS.zh.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.zh.md"
       ],

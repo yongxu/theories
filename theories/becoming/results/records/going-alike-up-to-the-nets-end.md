@@ -40,7 +40,7 @@
 
 - That going alike gives constancy up to the net's end on a cut step where being able to go on is undecided: there it would decide a proposition. Witness: `Becoming.Law.stepWhile_toEnd_decides`.
 - That constancy up to the net's end gives going alike where the successor is not fixed. Witness: `Becoming.«后不定则至终有常可不同行»`.
-- That GrammarLaws' law joining constancy with going alike and a next is proved from these: it follows from them by an argument stated in the module's header, and its proof there is its own.
+- That GrammarLaws' theorem joining constancy with going alike and a next is proved from these: it follows from them by an argument stated in the module's header, and its proof there is its own.
 - That the cut step is the package's guarded law: that law asks its guard at both ends of a step, and the two are tied only from a configuration that can go on.
 - That any actual process has a step cut where it cannot go on, or where: the cut and its predicate are given.
 - **Counterexample:** Against going alike from constancy up to the net's end with any successor: where 0 conditions 1 and 2 and the class is the identity, the class is constant up to the net's end and does not go alike («后不定则至终有常可不同行»). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarPath.lean)
@@ -51,7 +51,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Pure core, axiom reports empty. Seven short laws and header sentences added to GrammarPath after «有常则至终有常», nothing else changed, and a module of one definition and thirteen laws, near-definitional; the two witnesses computed on two and three occurrences. Written by AI agents: implemented in two rounds, with last fixes by the coordinating session, and read cold for statements, duplicates and conformance by five AI agents in two rounds and by the coordinating session; no human audit yet.
+Pure core, axiom reports empty. Seven short theorems and header sentences added to GrammarPath after «有常则至终有常», nothing else changed, and a module of one definition and thirteen theorems, near-definitional; the two witnesses computed on two and three occurrences. Written by AI agents: implemented in two rounds, with last fixes by the coordinating session, and read cold for statements, duplicates and conformance by five AI agents in two rounds and by the coordinating session; no human audit yet.
 
 Canonical source: [GrammarPath.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarPath.lean)
 
@@ -78,15 +78,15 @@ Reading (AI-written, from its knowledge): the root's two names for one gap becom
   - Output: Going alike and its pointwise form; n steps of a relation.
   - Input: The cut step, and the class leading from an occurrence.
   - Preserved conditions: None beyond their own. [GuardedStep.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardedStep.lean)
-- **formal-reuse**: [what-a-line-holds-and-a-regularity-takes-in](what-a-line-holds-and-a-regularity-takes-in.md). Reuses constancy up to the net's end and its law from constancy («至终有常», «有常则至终有常»).
+- **formal-reuse**: [what-a-line-holds-and-a-regularity-takes-in](what-a-line-holds-and-a-regularity-takes-in.md). Reuses constancy up to the net's end and its theorem from constancy («至终有常», «有常则至终有常»).
   - Output: Constancy up to the net's end, and constancy giving it.
   - Input: Any relation and class.
   - Preserved conditions: None beyond their own. [GrammarPath.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarPath.lean)
 - **formal-reuse**: [wen-in-the-grammar](wen-in-the-grammar.md). Reuses a law's whole step read as 缘, its successor in a line and the value class (Law.step, Law.step_hasSucc_iff, sameValue).
-  - Output: The whole step's laws.
+  - Output: The whole step's theorems.
   - Input: The whole step at the class met with being able to go on.
   - Preserved conditions: None beyond their own. [GuardedStep.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardedStep.lean)
-- **formal-reuse**: [a-regularity-kept-and-changed](a-regularity-kept-and-changed.md). Reuses the whole step's law of a line that never ends (Law.unending_iff_steps).
+- **formal-reuse**: [a-regularity-kept-and-changed](a-regularity-kept-and-changed.md). Reuses the whole step's theorem on a line that never ends (Law.unending_iff_steps).
   - Output: A line under the whole step never ends exactly where each step continues under the class.
   - Input: The class met with being able to go on.
   - Preserved conditions: None beyond its own. [GuardedStep.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardedStep.lean)
@@ -99,7 +99,7 @@ Reading (AI-written, from its knowledge): the root's two names for one gap becom
   - Input: The law under one disturbance, from a start that can go on.
   - Preserved conditions: A decidable predicate. [GuardedStep.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardedStep.lean)
 - related, not a proved adapter: [constancy-read-at-a-members-class](constancy-read-at-a-members-class.md). The same condition at a member's class; a line that ends while the net goes on breaks it there.
-- related, not a proved adapter: [what-the-net-fixes-of-ones-own-class](what-the-net-fixes-of-ones-own-class.md). Its law «类闭则本类常闭» takes a decided premise of another scope, over the member's block.
+- related, not a proved adapter: [what-the-net-fixes-of-ones-own-class](what-the-net-fixes-of-ones-own-class.md). Its theorem «类闭则本类常闭» takes a decided premise of another scope, over the member's block.
 
 **Used by:** [a-way-of-units](a-way-of-units.md) · [turning-in-time](turning-in-time.md)
 
@@ -127,4 +127,4 @@ Aliases: `going alike and constancy up to the net's end`, `a law's step while it
 
 </details>
 
-Documentary review UTC: `2026-11-13T02:39:22+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-13T04:06:30+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

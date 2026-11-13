@@ -28,7 +28,7 @@
    - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
 9. From a way of a kind every step keeps and that uses H₂, with nothing given from nothing, giving short of H₂ below y₂ and meeting it from y₂ up to hi, the step under H₂ keeping the level within hi, a positive need at most H₂ + y₂ and the level at most hi, the line never ends exactly where the level is at or above H₂ + y₂. (`Becoming.TurningInTime.unending_iff_above`)
    - *Shared laws, by Lean dependency:* balance; its declarations reach the grammar.
-10. With the premises of the two laws above, a way after a marked step of the kept kind, giving short of H₁ below y₁, every way on alone's orbit using at least H₁ and the start below H₁ + y₁ and at most hi: the line never ends exactly where there is such a step T and the level of the course as it was at T + 1 is at or above H₂ + y₂. (`Becoming.TurningInTime.turns_in_time_iff`)
+10. With the premises of the two theorems above, a way after a marked step of the kept kind, giving short of H₁ below y₁, every way on alone's orbit using at least H₁ and the start below H₁ + y₁ and at most hi: the line never ends exactly where there is such a step T and the level of the course as it was at T + 1 is at or above H₂ + y₂. (`Becoming.TurningInTime.turns_in_time_iff`)
     - *Shared laws, by Lean dependency:* balance; its declarations reach the grammar.
 11. At a level that meets the need, where the way after the step is of another kind, the configuration ends under the kind's class and still conditions something; with AloneOutside, a kind alone keeps and some unmarked level that meets the need, the kind's class is then not constant up to the net's end at that configuration's class. Both hold at every need. (`Becoming.TurningInTime.kind_ends_while_net_goes`, `Becoming.TurningInTime.kind_not_toEnd_of_turn`)
     - *Shared laws, by Lean dependency:* no shared law's anchor; its declarations reach the grammar.
@@ -45,7 +45,7 @@
 ## Conditions
 
 - No axiom. Discrete steps; any type of ways and whole-number levels; one function giving the way after a step and one giving the level after it, each of the way and the level.
-- Which levels make a difference to the way is given: the marked levels and alone (AloneOutside) are a premise of every law that uses them.
+- Which levels make a difference to the way is given: the marked levels and alone (AloneOutside) are a premise of every theorem that uses them.
 - A kept kind is kept at every step (kept), a way after a marked step is of it (turns), and every way of it has one standing use H₂ (uses); with these the course after the turn has one point of no return.
 - Where the regime is used, the level's step is RegimeMargin.step giving (use w), one giving for every way and nothing given from nothing: the way enters the level's step only through use.
 - For the fate after the turn: giving short of H₂ below y₂ and meeting it from y₂ up to hi, the step under H₂ keeping the level within hi, a positive need at most H₂ + y₂, the level at most hi. For the course as it was: giving short of H₁ below y₁, every way on alone's orbit using at least H₁, the start below H₁ + y₁.
@@ -60,8 +60,8 @@
 - That what brings a level's difference to a way stands on the level whose difference it brings: that the marked levels are levels of the quantity the going on needs is a choice of the model.
 - That the kept kind is kept at every step, or has one standing use: both are premises.
 - That the courses of RuleCapture's and ClosedCapture's models need nothing of what they use: their step is total by construction, so in them no line ends where the net ends.
-- Any join with ReadOffInTime's laws of reading in time: they are on another model, and only its first_of_decided is used here.
-- That ClosedCapture's and PoolFromCourse's laws of their own loop (course_past, window_past_course, window_never_read) follow from agrees_until_marked: they keep their own proofs.
+- Any join with ReadOffInTime's theorems on reading in time: they are on another model, and only its first_of_decided is used here.
+- That ClosedCapture's and PoolFromCourse's theorems on their own loop (course_past, window_past_course, window_never_read) follow from agrees_until_marked: they keep their own proofs.
 - Anything about a trained system, or that any actual course has this pair's form.
 - That comparing the three levels is new: of the near work, several papers were read only in part or from an abstract.
 - **Counterexample:** Against reading a turn as enough: in Three, first marked at six the way turns with two left, below the kept kind's point of no return six, and two steps later the line conditions nothing (Three.turned_and_ends); first marked at nine or eight it never ends (Three.goes_on). [source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean)
@@ -72,14 +72,14 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Pure core, axiom reports empty; imported by Becoming.WayOfUnits, in the Lean's second layer only through two theorems it imports. Compositions of landed theorems (Optimum's level theorems, RegimeMargin's point of no return, the root's conditions, the joined two-level step) with one split at the first marked level; the witness computed on its model. Written by AI agents: a first attempt held after a cold reading found it restated root laws; implemented in two rounds and read cold by five AI agents and the coordinating session; no person's review of it is recorded yet.
+Pure core, axiom reports empty; imported by Becoming.WayOfUnits, in the Lean's second layer only through two theorems it imports. Compositions of landed theorems (Optimum's level theorems, RegimeMargin's point of no return, the root's conditions, the joined two-level step) with one split at the first marked level; the witness computed on its model. Written by AI agents: a first attempt held after a cold reading found it restated theorems of the root; implemented in two rounds and read cold by five AI agents and the coordinating session; no person's review of it is recorded yet.
 
 Canonical source: [TurningInTime.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean)
 
 <a id="next--下一步"></a>
 ## Next
 
-Prove ClosedCapture's and PoolFromCourse's courses instances of the pair, so that their own-loop laws are derived below from agrees_until_marked; move «类闭则本类常闭» and first_of_decided down, putting the module in the first layer; give the step T in closed form by Optimum.reread_deadline_iff; a test on a trained system, held.
+Prove ClosedCapture's and PoolFromCourse's courses instances of the pair, so that their own-loop theorems are derived below from agrees_until_marked; move «类闭则本类常闭» and first_of_decided down, putting the module in the first layer; give the step T in closed form by Optimum.reread_deadline_iff; a test on a trained system, held.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -91,11 +91,11 @@ Reading (AI-written, from the home section's reading and the study folder's NEAR
 <a id="dependencies--依赖"></a>
 ### Dependencies
 
-- **formal-reuse**: [going-alike-up-to-the-nets-end](going-alike-up-to-the-nets-end.md). Reuses the cut step and its laws, and going alike from constancy up to the net's end (Law.stepWhile and its steps, end, unending, going-alike, constancy and constancy-up-to-the-end laws; «至终有常局定后则同行»).
+- **formal-reuse**: [going-alike-up-to-the-nets-end](going-alike-up-to-the-nets-end.md). Reuses the cut step and its theorems, and going alike from constancy up to the net's end (Law.stepWhile and its steps, end, unending, going-alike, constancy and constancy-up-to-the-end theorems; «至终有常局定后则同行»).
   - Output: A line on the cut step, its end, and its classes' conditions.
   - Input: The net, the pair's step cut where the level is below the need.
   - Preserved conditions: Whether the level meets the need, decided by the order on whole numbers. [TurningInTime.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean)
-- **formal-reuse**: [re-optimizing-above-a-renewal-ends-it](re-optimizing-above-a-renewal-ends-it.md). Reuses the level's laws (Optimum.ends_within, never_rises, level_le_start).
+- **formal-reuse**: [re-optimizing-above-a-renewal-ends-it](re-optimizing-above-a-renewal-ends-it.md). Reuses the level's theorems (Optimum.ends_within, never_rises, level_le_start).
   - Output: A level given at most r and taking more than r falls below a positive need within as many steps as it stood at, and never rises.
   - Input: The level of the course as it was.
   - Preserved conditions: At most r given and more than r taken at every step. [TurningInTime.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean)
@@ -159,7 +159,7 @@ Reading (AI-written, from the home section's reading and the study folder's NEAR
   - Output: The reading through [N, K) and off the first part elsewhere.
   - Input: The way after a step of the regrouped course.
   - Preserved conditions: None. [TurningInTime.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean)
-- related, not a proved adapter: [a-pool-read-off-the-course](a-pool-read-off-the-course.md). Its laws window_through, window_past and window_unread state pointwise where the reading through [N, K) reads off the first part; here the two courses agree until the level first lies in [N, K).
+- related, not a proved adapter: [a-pool-read-off-the-course](a-pool-read-off-the-course.md). Its theorems window_through, window_past and window_unread state pointwise where the reading through [N, K) reads off the first part; here the two courses agree until the level first lies in [N, K).
 - related, not a proved adapter: [a-loss-read-before-its-point-of-no-return](a-loss-read-before-its-point-of-no-return.md). A point of no return read on courses on another model; the two are not joined.
 - related, not a proved adapter: [the-route-is-the-relation-in-time](the-route-is-the-relation-in-time.md). Reading in time on ReadOffInTime's model, not joined to the pair.
 
@@ -189,4 +189,4 @@ Aliases: `turning in time`, `a line that ends where the net ends, or while the n
 
 </details>
 
-Documentary review UTC: `2026-11-13T02:39:22+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-13T04:06:30+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

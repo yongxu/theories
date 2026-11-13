@@ -116,10 +116,43 @@ And the aim leaves out time, "which is the centre's whole condition".
 
 The three versions are on one page for Ren's read: [CENTRE-SENTENCE.md](CENTRE-SENTENCE.md).
 
+## "Read" in the Lean: what each definition states (added 13 November, 11:35 WIB)
+
+Thirteen AI readers (Opus) opened every definition and field of the package named with "read" (133, in 66 modules) and said what each states with the word taken out; a fourteenth sorted them from the bottom up by the relation stated ([`lean/read-in-the-lean.json`](lean/read-in-the-lean.json), each row with the module, the name, the statement, and the relational name that stands beside it).
+
+**The one word stands for about fifteen relations, and most already have a word.**
+
+| Definitions | What they state | Words the package or the root already has |
+|---|---|---|
+| 20 | What a step gives (an exchange law's take and give, a member's act, a rule's next value, a level's next value) is the same wherever a named part of the configuration or of the level history is the same, so nothing outside that part makes a difference to it. | depends only on; goes alike. In the package: Mechanism.DependsOnlyOn, Laws.GoAlike, PartDependsOnlyOn, ExchangeLaw.GivesAlike, Nonanticipating (with AgreeUpTo), … |
+| 14 | A verdict taken of a whole course, candidate or configuration (a selection, an answer, a score, a feature, a ranking, the truth of a statement) is the same on any two that a stated alikeness or map does not tell apart. | alike through; selects through. In the package: Web.AlikeThrough / AlikeThroughUpTo / AlikeThroughAll (133 is itself the word), Web.SelectsThrough / SelectsThroughAll, … |
+| 14 | A named thing's level or state enters another's exchange or next state, either as a relation, schedule or strength that is supplied, or because changing the first alone changes the second. | couples into; makes a difference to. In the package: CouplesAt, Couples, Upstream, OnLoop, Web.CoupledInto, CoupledIntoAt, the parameter obs, ExchangeLaw.RespondsWithin … |
+| 13 | The slower level's next value (the rule) is given as a function of the faster level's configuration: of the share alone, of the loss beyond it, of a pooled or windowed mix, or of nothing. | No word of its own for the map. Around it: Pace.turn / paced (the slot h), Drawn.pool, ClosedCapture.join, Stands K (the window), Ideals.Monotone (same relation as … |
+| 13 | A map sends each configuration (or mode, or route point) to a value and merges some of them, and a course, a family or another function is taken through that map; where two such maps of one thing exist, they may or may not agree. | Learning.Lumped (for what goes alike across the merged), Parting.course val r, Learning.prefixOf, the projection π of PartDependsOnlyOn, Readout.Decodes, SingleValued, … |
+| 8 | A value is taken at a position or step given by an index map: a token at a site, a quantity at a position in a list, a flow or a level at the step another clock's step corresponds to. | Copying.tick / steps and Supplies (the pending-list counterparts), Web.sample, Stutter and Stutter.Moves, Tower.refine, pick, the siblings beforeAt / afterAt / cellAt. |
+| 8 | Each member of a line carries a label; the label picks which exchange law governs that member, and an offspring's label is its parent's, or its parent's revised by what the parent met. | Generations.RevisesBy (InheritsReading is its identity case, by Flow.inheritsReading_iff), ExchangeLaw.withAct, carrying, ClosedFrom, revisedIn / revisedOut, … |
+| 7 | Each domain gives, or fails to give, a report of an installation's epoch, serial, address and key, and the report counts as support where it equals what the request expects. | Transactions.observed, expected, the premise faithful, certificate; the twin on the issuing side is named without the word: Approvals, approvalSupport, … |
+| 6 | A code or form stands for a configuration, a sense or an answer, and the code-side relation gives back what the coded thing answers. | Presentation.encode, answers, Exact, Joint, probes, TellsApart, Formula.eval, records / observe; List.mapM in shape for 103. |
+| 6 | A region of configurations is closed under the step: a state that admits the world goes on admitting it after every move and update, whatever is absent stays absent, and whatever is settled at a step stays as it was. | closed under; goes on through. In the package: «闭» (GrammarLaws), Frame.ClosedUnder, Frame.Invariant, «及» (reach), LeadsInto, closed_of_keptBy, kept_iff_closed; for 44 … |
+| 5 | A web (who is active, who draws on what, who requires what) is built from a flow or from a law's course: active exactly where it exchanges, drawing exactly where it takes, requiring a condition exactly where its exchange must stop once that level falls below the need. | For the slots: Flow.Exchanging, positive take, ExchangeLaw.RespondsBelow / MayRespondBelow, Web.Dependent. For the construction as a whole there is no word without the … |
+| 5 | A step, a condition or an occasion lies inside or outside the set that a schedule visits or that a selection is fitted on. | ReadingSchedule.Within (every stretch of a steps contains a visit), 'schedule', 'update step'; Learning.Determines, Learning.Free, Training.AgreeOn, the data predicate D. |
+| 4 | Two courses first come apart, in a group's admissions or under a family of selections, at a step where the losing course can still come back; a formation that takes and gives nothing and has the greater need is where they come apart first, and a selection can hold on a course that ends such a line. | comes back. In the package: Web.FirstApart, TellsApartAt, Recoverable, NoReturnAt, Web.Admits with requires / need (only_habitat_near, only_habitat_mid), RemovesLine, … |
+| 4 | One role of a joint law holds its own weights and values over the candidates and answers go or off at each candidate by comparing what going on gains with what it loses. | byRule (byReading is byRule of the test gain < loss, by rfl), RevisionPlans.held with its rule argument r, BestAt, Model, Holder (the counterpart role), joint, answerOf. |
+| 2 | Units draw from a supply and raise a level toward a set level, age, end at a span, and are themselves made again from a source. | St.ages, Present, Source (given, supply, level, none), BuysTime, «闭» (supplied r) Present; 'replenish' or 'intake' for the arithmetic (min(l + k, m) below m). |
+
+What this shows:
+
+- **Nothing in these definitions faces anything.** Fourteen of the fifteen families state a dependence, a constancy on a class, a map, a closure, a schedule or a label. Only one, four definitions from the off-switch models, names a party that answers yes or no to a candidate.
+- **The three largest are the dependence sense**, 48 definitions: what a step gives depends only on a named part; a verdict on a whole course goes alike through an alikeness; one level couples into another's exchange. The package has words for all three (`DependsOnlyOn`, `GoAlike`, `AlikeThroughUpTo`, `SelectsThrough`, `CouplesAt`, `Sensitive`), in several cases tied to the "read" name by a theorem.
+- **Three families have no word of their own**: the map that gives the slower level's next value from the faster one's (the rule's revision, 13 definitions, the centre of the lock); the web built from an exchange (5); and the reports of the transaction models (7).
+- **The six cuts another session proposed from five modules are six of the fifteen** and leave out nine families holding 76 definitions.
+
+So the glossary's row for "read" is this table, and the count of the prose follows it: each sentence takes the word of the family its theorem's definition is in. Where a family has no word, the choice of one is a decision for the module's owner and Ren, not for a pass.
+
 ## How far this has been checked
 
 The scan is AI readers' reading, sixteen of them, with one critic over the rest. The counts are grep counts over the twenty English pages and include link text and anchors. A sample count of "read" and "beyond" was made and showed that the classes it used do not hold. No person has read the findings.
 
 ## Cost
 
-The scan: about 2.8 million subagent tokens, sixteen agents. The sample: about 0.7 million, eight agents.
+The scan: about 2.8 million subagent tokens, sixteen agents. The sample: about 0.7 million, eight agents. The Lean table: about 1.4 million, fourteen agents.

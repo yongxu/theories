@@ -1,0 +1,47 @@
+export const meta = {
+  name: 'dw-read-in-the-lean',
+  description: 'What each Lean definition named with "read" in fact states (read-only), then a synthesis into families of relations',
+  phases: [
+    { title: 'Definitions', detail: 'one Opus reader per group of modules' },
+    { title: 'Families', detail: 'one reader clusters the definitions by what they state' },
+  ],
+}
+const L = '/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming'
+const BRIEF = `You are reading Lean definitions in the package of the theory of becoming (repository /Users/ren/theories). Reading work only: edit nothing, run no builds, tests or git commands (the machine is shared and busy; do NOT run lake or lean). Use Read and Grep.
+
+WHY. The account's prose uses "read" about 4,300 times ("a rule reads the share", "readers", "a reading", "unread"), and the word makes a knower facing a thing known where the account's root has only relations of dependence. A sample count showed that the word stands for many different relations, and that they cannot be told apart from the prose. They can be told apart from the Lean: each definition named with "read" states something exact. Your job is to say, for each definition in your list, what it states, with the word "read" taken out.
+
+FOR EACH NAME in your list, open the module (${L}/<module>) and find the definition or the structure field. Give:
+ - what it states, in one or two plain sentences, as a relation between named things, without the words read, reader, reading, observe or see. Use the definition's own body: "X at the next step is the same for any two histories that agree on Y", "the level of c makes a difference to g's exchange", "a function from the share to a ratio", "a list of members with weights", "the step at which …". Be exact about what is related to what, and in which direction.
+ - its shape: PREDICATE on what, FUNCTION from what to what, a STRUCTURE's FIELD of what type, a SET or LIST of what.
+ - whether the same module or an imported one has a name for the same relation without "read" (DependsOnlyOn, Sensitive, AlikeThroughUpTo, Couples, ClosedUnder, GoAlike, or a name in Chinese characters such as «依» or «同行»), and whether a theorem ties them (give its name).
+ - one line from the module's docstring for it, quoted exactly, if it has one.
+Where a name in your list is not about this at all (for instance "reread" as a list operation, or a false match), say so in one line and move on.`
+const ROWS = { type: 'object', properties: { rows: { type: 'array', items: { type: 'object', properties: {
+  module: { type: 'string' }, name: { type: 'string' }, states: { type: 'string' }, shape: { type: 'string' },
+  beside: { type: 'string', description: 'a relational name for the same thing, and the theorem tying them, or "none found"' },
+  docstring: { type: 'string' } }, required: ['module', 'name', 'states', 'shape', 'beside'] } } }, required: ['rows'] }
+phase('Definitions')
+const got = (await parallel(args.map(u => () =>
+  agent(`${BRIEF}\n\nYOUR LIST (${u.n} names):\n${u.items.map(i => `- ${i.module}: ${i.names.join(', ')}`).join('\n')}`,
+    { label: `defs:${u.key}`, phase: 'Definitions', model: 'opus', effort: 'high', schema: ROWS })))).filter(Boolean)
+const rows = got.flatMap(g => g.rows)
+const table = rows.map((r, i) => `${i + 1}. ${r.module} · ${r.name} [${r.shape}] ${r.states} | beside: ${r.beside}`).join('\n')
+phase('Families')
+const FAM = { type: 'object', properties: {
+  families: { type: 'array', items: { type: 'object', properties: {
+    relation: { type: 'string', description: 'the relation, said in one sentence without read, reader, reading' },
+    proposed_words: { type: 'string', description: 'words the package or the root already has for it' },
+    members: { type: 'array', items: { type: 'string' }, description: 'module · name' },
+    count: { type: 'integer' }, note: { type: 'string' } }, required: ['relation', 'proposed_words', 'members', 'count'] } },
+  against_the_six: { type: 'string' }, not_placed: { type: 'array', items: { type: 'string' } }, summary: { type: 'string' } },
+  required: ['families', 'against_the_six', 'not_placed', 'summary'] }
+const fam = await agent(`You are sorting what the Lean package of the theory of becoming (repository /Users/ren/theories) means by "read". Reading work only: edit nothing, run no builds, tests or git commands. You may open Lean files under ${L} to settle a doubtful case.
+
+Below are ${rows.length} definitions and fields named with "read", each with what it states (the word taken out), its shape, and a relational name that stands beside it if one was found. Cluster them from the bottom up by WHAT RELATION IS STATED, not by the name: two definitions are in one family when they state the same relation between the same kinds of thing in the same direction. Expect between six and fifteen families. For each family give the relation in one sentence, the words the package or the root already has for it (from the "beside" entries and from the root's own terms: conditions, depends only on, alike through, couples into, makes a difference to, goes on through, closed under, comes back), its members, and anything that makes it two families and not one.
+
+Then compare with a cut another session proposed from five modules: (1) a step's dependence on a level; (2) a kept relation between a formation's state and the worlds it admits (ReadingLoop: KeptBy, Sound, Possible); (3) what a rule's revision counts (the pool and the window); (4) what raises a level toward a set level and is itself rebuilt (ReaderRebuilding); (5) a variant a line carries that sets how the carrier acts (ReadingsSpread, byReading); (6) a gauge: a line with a greater need, taking nothing, on whose ending a selection can be constant (ReadOffInTime). Say which of your families each of the six is, which of the six your table does not show, and which of your families the six leave out. List the rows you could not place. End with a summary of five sentences at most: how many relations the one word stands for, which is the largest, and which families already have a word.
+
+THE DEFINITIONS
+${table}`, { label: 'families', phase: 'Families', effort: 'high', schema: FAM })
+return { rows, fam }

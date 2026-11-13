@@ -1,4 +1,4 @@
-# The centre sentence: three versions for Ren's read
+# The centre sentence: four versions for Ren's read
 
 *AI-written, 13 November 2026. None is applied. The sentence stands in AGENTS.md, whose direction changes only after Ren has read the change, and on the first screen of four fronts.*
 
@@ -7,6 +7,16 @@
 > It is first a map for alignment: what a selection (a reward, a judge, a market, a vote, a training run) reaches, what it drains beyond what it reads, how it locks on what it already chose. From it we want to design an alignment that keeps humans and AI, selecting together, out of instrumental convergence and the meta-attractor: a joint selection that reads beyond its own share and does not come to select for control over its own selection.
 
 Sixty-eight words. A doer (a selection), a knower's verb (reads), a place (beyond), a self (its own) and control.
+
+## 0. Short, in the frame of his words to the map session
+
+On 13 November, about 11:35 WIB, Ren said to the map session (kept in `sources/15-codex-theory-conversations/2026-11-08-representation-to-eight.md`): "They're just like dynamics within dynamics, or maybe just different dynamics that interact with each other … that God itself is a pattern that interact with other patterns. Instead of something transcendental. And there's absolutely no need for any dualism or hard separation with boundaries … I hope if there are something that's like wrong currently, those things can also be corrected so it does not affect future sessions to default back to the dualism."
+
+The second paragraph of AGENTS.md is where sessions start. A short form in that frame, written by this session and read by no one else:
+
+> It is first a map for alignment. A reward, a judge, a market, a vote or a training run is one dynamic among the dynamics it goes on through. Courses alike in what couples into it are selected alike, so what it goes on through can fall while nothing in it differs; and where it is set from the share it has favoured, it stays as it was until that gives out, unless the fall comes to make a difference in time. From this we want to design an alignment in which what humans and AI select through together stays coupled, in time, to what they go on through, and is not shaped only by what comes back to those who shape it.
+
+About 115 words. It keeps what version 1 proves and drops the optimum's clause, which the one page can carry. "It" is the selecting, said as one dynamic among others and not as a doer over a beyond. It still has "selected", "favoured" and "we … design".
 
 ## 1. From the theorems' own statements, with the Lean check folded in
 
@@ -32,4 +42,4 @@ About 100 words, close to the present length. "A selection" is still the one thi
 
 ## What the choice is
 
-Version 1 is the only one that says nothing the theorems do not. It is too long for a second paragraph of AGENTS.md as it stands. Two ways to use it: keep its first two sentences and its aim in AGENTS.md and let the one page carry all of it; or let AGENTS.md say the centre as chapter 02 §11 now does ("a line that stays alike in a respect ends where the net ends, or ends while the net goes on") and give the selection as its first case. Either is for Ren's read.
+Version 0 is the one short enough for AGENTS.md and in his own frame; it has not been checked against the Lean clause by clause as version 1 was. Version 1 is the only one checked, and it says nothing the theorems do not. It is too long for a second paragraph of AGENTS.md as it stands. Two ways to use it: keep its first two sentences and its aim in AGENTS.md and let the one page carry all of it; or let AGENTS.md say the centre as chapter 02 §11 now does ("a line that stays alike in a respect ends where the net ends, or ends while the net goes on") and give the selection as its first case. Either is for Ren's read.

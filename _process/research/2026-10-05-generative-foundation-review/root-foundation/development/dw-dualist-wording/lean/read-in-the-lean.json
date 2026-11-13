@@ -1,0 +1,1329 @@
+{
+ "rows": [
+  {
+   "module": "Interleavings.lean",
+   "name": "LocalLaw.reads (structure field)",
+   "states": "For every exchange e, any two configurations s and s' that agree on every relatum e touches, and any relatum x that e touches: the state e's action gives x from s equals the state it gives x from s'. So what an exchange makes of a touched relatum depends only on the states of the relata it touches (with keeps, untouched relata are left as they were).",
+   "shape": "STRUCTURE FIELD of LocalLaw X E σ, type ∀ e s s' x, (∀ y, touches e y = true → s y = s' y) → touches e x = true → act e s x = act e s' x (a proof obligation, a Prop-valued field).",
+   "beside": "none found by name in this module or its imports (World, Reordering): the field is a footprint-locality condition, the same kind of relation as Mechanism.DependsOnlyOn (a step's outcome determined by a projection of the state), but Mechanism is not imported and no theorem ties them. Within the module the field is used in the commuting of exchanges with disjoint footprints (lines 255, 275, 284, 1000, 1008); reads_renumber and world_renumber_reads carry a hypothesis of the same shape (∀ l l', agree on touched relata → R l → R l') under the local name 'reads'.",
+   "docstring": "\"it touches determine (`reads`).\" (from: \"Exchanges acting locally on relata: each exchange touches some relata, leaves every other relatum's state as it was (`keeps`), and changes a relatum it touches as the states of the relata it touches determine (`reads`).\")"
+  },
+  {
+   "module": "Latency.lean",
+   "name": "Relay.reads",
+   "states": "A fixed relation from the three nodes (source, relay, reader) to the two conditions (first, second): it holds exactly for (relay, first) and (reader, second), false otherwise. It is supplied as the level-coupling relation `obs` of TimedResponse, so it says which condition's level couples into which node.",
+   "shape": "PREDICATE on Node × Spot (a function Node → Spot → Prop).",
+   "beside": "It is the `obs` argument of TimedResponse.CoupledIntoAt (W.requires s g c ∨ obs g c) and of Testing.CoupledInto (W.DependsOn g c ∨ obs g c); so 'n reads c' is 'c is coupled by level into n'. Tied in Relay.reader_far (CoupledIntoAt (web false) reads .reader s c → ... 2 < 1 + n), not_reached_at_two and reached_at_three.",
+   "docstring": "\"The relay is coupled by level into the first condition, the reader into the second.\""
+  },
+  {
+   "module": "Latency.lean",
+   "name": "Relay.readAt",
+   "states": "Given a step t and a level history l, the Boolean whether the level of the second condition at step t is positive. Its value depends only on l at (t, second).",
+   "shape": "FUNCTION from Nat × (Nat → Spot → Nat) to Bool.",
+   "beside": "It is an instance of the `read` parameter of TimedResponse.answer_alike_far, whose premise is that the answer is equal on histories AlikeThroughUpTo obs g (Testing.AlikeThroughUpTo: alike at every step up to t on the conditions coupled into g). No theorem in the module proves readAt respects AlikeThroughUpTo; the theorem about it is Relay.answers_two_and_three (equal at step 2 between web false and web true, different at step 3).",
+   "docstring": "\"The reader reads the second condition.\""
+  },
+  {
+   "module": "ListingValuation.lean",
+   "name": "Reader (structure)",
+   "states": "One role's part of the joint law: a weight for each candidate world, a value of going on and a value of switching off at each world under each valuation state, a map from a world to what a demonstration there shows, and a revision of the valuation state by a presented input. With it, Reader.update filters the listing by what a demonstration shows or revises the valuation by a presented input, and Reader.answerOf gives the Bool answer of a (listing, valuation) state.",
+   "shape": "STRUCTURE Reader W V O X with fields weight : W → Nat, goVal : V → W → Nat, offVal : V → W → Nat, reveal : W → O, revalue : V → X → V.",
+   "beside": "No relational name; it is the counterpart of Holder (the other role's part) and the two are combined by joint on Blanket.Blanketed, where this role's state is the internal part and it depends on the holding role only through Input (Reader.input), and the holding role depends on it only through the answer. No theorem renames it; the module's prose names it 'the reading formation'.",
+   "docstring": "\"**The reading role's part of the joint law**: the weights on candidate worlds, the values of going\""
+  },
+  {
+   "module": "ListingValuation.lean",
+   "name": "reading (WeightsApart.reading and OneListing.reading)",
+   "states": "Two worked-example definitions, each a Model: WeightsApart.reading lists candidates 0, 1, 2 with weights 1, 2, 2 (against holding's 2, 1, 1); OneListing.reading lists false and true each weighted 1 (against holding's single candidate false). Each is the second role's model of candidates, set beside the holding role's model.",
+   "shape": "A LIST of members with weights (Model Nat, Model Bool: a list of candidates and a weight function).",
+   "beside": "none found; it is a constant named by role, compared with the sibling constant `holding` in the same namespace (WeightsApart, OneListing); no relation name stands for it.",
+   "docstring": "\"The reading formation's model: the same candidates weighted 1, 2 and 2.\" (WeightsApart); \"The reading formation lists both, each weighted one.\" (OneListing)"
+  },
+  {
+   "module": "LossMatching.lean",
+   "name": "Frame.ReadsAt",
+   "states": "Along run r, for claim c, time τ and a relation support between states and claims: at every step t from τ on, c is realized in r's state at t if and only if support holds of c in r's state at τ. So realization of c from τ onward is fixed by one fact at τ.",
+   "shape": "PREDICATE on (Frame, Run, claim c, time τ, support : S → C → Prop).",
+   "beside": "readsAt_iff_settled: (∃ support, F.ReadsAt r c τ support) ↔ ∀ t ≥ τ, (realized at t ↔ realized at τ), i.e. realization of c is constant from τ on (stated inline, no separate name; Frontier.Settled and Remainder.SettledFrom are different relations). Also ReadsAt.loss_retained (missed at τ → not realized at any later t) and not_readsAt_of_recovery.",
+   "docstring": "\"Along the run `r`, claim `c` is read at time `τ`: from `τ` on, `c` is realized exactly where `support` held of it at `τ`.\""
+  },
+  {
+   "module": "LumpedSeeking.lean",
+   "name": "Agree.readBoth",
+   "states": "A likelihood: for each coin bias (heads, fair, tails) and each pair of toss outcomes, a weight in sixteenths (heads-biased: 9,3,3,1; fair: 4 each; tails-biased: 1,3,3,9). Its weights differ between the heads- and tails-biased coins, unlike `agreeing`, which gives both biases the same weights.",
+   "shape": "FUNCTION from Bias × (Bool × Bool) to Nat.",
+   "beside": "Tied (same module): Tied lik h₁ h₂ := ∀ o, lik h₁ o = lik h₂ o; readBoth is a likelihood under which heads and tails are not Tied (no theorem states ¬ Tied readBoth directly; it is used in seeking_turns_tails, where the posterior order turns, against seeking_keeps_tails under `agreeing`, which ties them).",
+   "docstring": "\"**A model reading both tosses**: an outcome weighs its chance under the bias, in sixteenths\""
+  },
+  {
+   "module": "LumpedSeeking.lean",
+   "name": "Agree.pickReading",
+   "states": "A choice of experiment as a function of the course so far: weight 1 for experiment true (the one using readBoth) and 0 for experiment false (the one using agreeing), whatever the course.",
+   "shape": "FUNCTION from List (Bool × (Bool × Bool)) × Bool to Nat (the `choose` argument of seekWeight).",
+   "beside": "It is the `choose` of seekWeight; seek_tied says that for any choose, a pair Tied under every experiment stays tied over every course (the choice weights depend only on the course). Used in seeking_turns_tails.",
+   "docstring": "\"A policy choosing the experiment reading both tosses, whatever the course so far.\""
+  },
+  {
+   "module": "LumpedSeeking.lean",
+   "name": "Agree.readCourse",
+   "states": "A fixed course: one step, with experiment true chosen and outcome (true, true), two heads.",
+   "shape": "A LIST (one element) of LIST of (experiment Bool, outcome Bool × Bool).",
+   "beside": "none; a data constant named after the experiment it uses, the counterpart of agreeCourse; used in seeking_turns_tails.",
+   "docstring": "\"One course of seeking: one step, the experiment reading both tosses, two heads.\""
+  },
+  {
+   "module": "AssurancePlans.lean",
+   "name": "leftReading",
+   "states": "In the Routes example (three modes 0, 1, 2), the boolean value of a mode is true exactly when the mode is `zero`. It merges modes `one` and `two`. Together with the response leftRespond (route one on true, else route zero) it is Adequate: the route chosen from this boolean value arrives from every mode (left_adequate).",
+   "shape": "FUNCTION Mode (Fin 3) -> Bool, `decide (m = zero)`",
+   "beside": "No name without \"read\" in the module or its imports (Assurance, Witnesses). The relation it takes part in is `Adequate reading respond` (∀ m, the route `respond (reading m)` arrives from (m, false)), and coarsening is written inline as `∃ forget, ∀ m, q m = forget (p m)` (no_coarsest_adequate, common_coarsening_constant). Theorems: left_adequate, adequate_merges_outcomes, no_coarsest_adequate.",
+   "docstring": "Whether the mode is `zero`."
+  },
+  {
+   "module": "AssurancePlans.lean",
+   "name": "rightReading",
+   "states": "In the Routes example, the boolean value of a mode is true exactly when the mode is `two`. It merges modes `zero` and `one`. With rightRespond (route zero on true, else route two) it is Adequate: the chosen route arrives from every mode (right_adequate). Any function of the mode that is a function of both leftReading and rightReading is constant (common_coarsening_constant).",
+   "shape": "FUNCTION Mode (Fin 3) -> Bool, `decide (m = two)`",
+   "beside": "none found. As for leftReading, the relations are the inline Adequate and the inline factoring `∃ forget, q m = forget (p m)`. Theorems: right_adequate, common_coarsening_inadequate, no_coarsest_adequate.",
+   "docstring": "Whether the mode is `two`."
+  },
+  {
+   "module": "BeyondCoupling.lean",
+   "name": "ActReadsWithin",
+   "states": "A premise on a family of exchange laws indexed by significance (act : (Pos → Nat → F → Prop) → ExchangeLaw F C). Take any two significances sig, sig' that agree (iff) at every position and step on every formation in `region`. Then at every step t, under every level history l, for every formation h with part h = true and every condition c that is coupled (obs) into some member of region, (act sig) and (act sig') have equal take and equal give at (t, h, l, c). In other words, on conditions coupled into the region, the part's act depends only on the significance's values on the region.",
+   "shape": "PREDICATE on (act : (Pos → Nat → F → Prop) → ExchangeLaw F C, part : F → Bool, W : Web F C, obs : F → C → Prop, region : F → Prop)",
+   "beside": "No general named relation. It has the same shape as the `agree` premise of act_courses_unselected_throughout (take/give equal on conditions coupled into the closure), and significance_courses_unselected uses it, with region := WithinClosureOf (CoupledFromEither …) group, to supply that premise. Not tied to DependsOnlyOn or Sensitive by any theorem.",
+   "docstring": "A premise on how significance acts, not a law."
+  },
+  {
+   "module": "BeyondCoupling.lean",
+   "name": "ReadOffContinuations",
+   "states": "Take any two level histories l, l' such that, at every step t, every member g of `group` is admitted by the web at t under l exactly when it is admitted under l'. Then `select` holds at l exactly when it holds at l'. So the selection's value on a level history is fixed by the members' admissions at every step and by nothing else. No coupling or closure enters.",
+   "shape": "PREDICATE on (W : Web F C, group : F → Prop, select : (Nat → C → Nat) → Prop)",
+   "beside": "It is Web.ReadOffCouplings with obs := thresholdOnly (readOffCouplings_thresholdOnly_iff). It implies ReadOffCouplings for every obs (ReadOffContinuations.couplings). Alike under all such selections ↔ admissions alike at every step (readOffContinuations_alike_iff). Web.ContinuationClass is an instance (continuationClass_reads, separates_continuations). Generic form: Learning.Training.Through (alike, select), with alike := admissions alike at every step, though no theorem ties the two.",
+   "docstring": "Histories admitting every member alike at every step are selected alike."
+  },
+  {
+   "module": "BeyondCoupling.lean",
+   "name": "ReadOffCouplings",
+   "states": "Take any two level histories l, l' that are Web.AlikeThrough obs g at every step t for every member g of `group`: admission of g alike, and the level of every condition c with obs g c equal. Then `select` holds at l exactly when it holds at l'. So the selection is invariant under changes that leave every member's admission and coupled-in levels unchanged over the whole run.",
+   "shape": "PREDICATE on (W : Web F C, obs : F → C → Prop, group : F → Prop, select : (Nat → C → Nat) → Prop)",
+   "beside": "Web.SelectsThroughAll obs group t select (Selection.lean) is the up-to-step-t form. SelectsThroughAll.readOffCouplings and SelectsThrough.readOffCouplings give ReadOffCouplings from it. readOffCouplings_alike_iff: alike under every such selection ↔ ∀ member, ∀ t, AlikeThrough (from selects_alike_all_iff). readOffCouplings_alike_of_steps. Built on Web.AlikeThrough and AlikeThroughUpTo (Testing.lean). Also ReadOffCouplings.mono.",
+   "docstring": "A selection read off what couples into a group's members over the whole run: histories alike through every member's couplings at every step are selected alike."
+  },
+  {
+   "module": "BlanketCouplings.lean",
+   "name": "agentReads",
+   "states": "The projection of a four-part configuration onto its internal, sensory and active parts, as the triple (internal, sensory, active). In BlanketDetermined it is the map π of PartDependsOnlyOn P π agentParts: configurations equal on these three parts go, under one move, to configurations equal on the internal and active parts.",
+   "shape": "FUNCTION Parts I S A E -> I × S × A",
+   "beside": "It takes part in PartDependsOnlyOn P agentReads agentParts (the agent half of BlanketDetermined) and PartConsistentFamily H agentReads agentParts (BlanketConsistentFamily). Theorems: blanketed_determined, blanketed_step_alike, shownBy_blanketDetermined_iff, admitted_iff. PartDependsOnlyOn is the general relation, and it has DependsOnlyOn and GoAlike as its cases by definition. The projection itself has no other name.",
+   "docstring": "What the agent's next state reads: the internal, sensory and active parts."
+  },
+  {
+   "module": "BlanketCouplings.lean",
+   "name": "readFamily",
+   "states": "Given a map π : X → Parts I S A E and a family H of (state history, move history) pairs on X, this is the family on Parts that contains (g, m) exactly when some h with H h m satisfies g n = π (h n) at every step n. It is the pointwise image of the family under π, with the move histories kept.",
+   "shape": "FUNCTION from (π : X → Parts I S A E) and (H : (Nat → X) → (Nat → M) → Prop) to a family (Nat → Parts I S A E) → (Nat → M) → Prop",
+   "beside": "none found (no image or map-of-family name elsewhere). Theorems about it: const_consistent, injective_consistent (π injective and BlanketConsistentFamily (readFamily π H) → ConsistentFamily H), whole_iff (BlanketConsistentFamily (readFamily whole H) ↔ ConsistentFamily H).",
+   "docstring": "A family read by `π`: the histories `π` makes of its histories, step by step."
+  },
+  {
+   "module": "BlanketCouplings.lean",
+   "name": "worldReads",
+   "states": "The projection of a four-part configuration onto its sensory, active and external parts, as the triple (sensory, active, external). In BlanketDetermined it is the map π of PartDependsOnlyOn P π worldParts: configurations equal on these three parts go, under one move, to configurations equal on the sensory and external parts.",
+   "shape": "FUNCTION Parts I S A E -> S × A × E",
+   "beside": "It takes part in PartDependsOnlyOn P worldReads worldParts (the world half of BlanketDetermined) and PartConsistentFamily H worldReads worldParts. Theorems: blanketed_determined, blanketed_step_alike, shownBy_partDependsOnlyOn_iff. The projection itself has no other name.",
+   "docstring": "What the world's next state reads: the sensory, active and external parts."
+  },
+  {
+   "module": "Cascade.lean",
+   "name": "ReadsOnlyActsFrom",
+   "states": "For a sequence of members acting in turn (Turns W O A), every member n ≥ k has a law whose value does not depend on its own coupling value. For all o, o' and every list `before` of earlier acts, law n o before = law n o' before. This holds on all inputs, including ones no run reaches.",
+   "shape": "PREDICATE on (T : Turns W O A, k : Nat)",
+   "beside": "No named insensitivity relation is used. It is the negation, for all n ≥ k, of what separates_at characterises (law n giving different acts on two coupling values after the same earlier acts). With AlikeBefore k (couplings of members j < k equal), it gives acts_alike_of_cascade, act_alike_of_cascade and law_alike_of_cascade, and cascade_through: every select on the first N acts is Learning.Training.Through (AlikeBefore k).",
+   "docstring": "This is independence on all of the law's inputs, including histories no run reaches, not only on the runs that occur."
+  },
+  {
+   "module": "FallibleInquiry.lean",
+   "name": "read",
+   "states": "Two things carry this name. (1) In the general theorems (answer_alike_beyond_response, different_answers_not_beyond, answer_alike_beyond_law, and the Weighted section) it is a supplied variable: a function from a level history (Nat → C → Nat) to an optional yes/no answer. It always comes with the premise `through`: for any two histories l, l' that are alike through g's couplings at every step up to t (W.AlikeThroughUpTo obs g l l' t), the function gives the same answer. So it is an answer that depends only on what couples into g up to t. The theorems conclude that this answer is the same in both courses when g is outside the reach of the varying part. (2) In namespace Witness, `def read (l : Nat → Unit → Nat) : Option Bool := some (decide (0 < l 1 ()))` is concrete: the answer is `some true` exactly when the one condition's level at step 1 is positive, and `some false` otherwise.",
+   "shape": "(1) FUNCTION from level histories (Nat → C → Nat) to Option Bool, bound as a theorem argument and constrained by the premise `through`. In the Weighted section it is indexed by X, so its type is X → (Nat → C → Nat) → Option Bool. (2) FUNCTION (Nat → Unit → Nat) → Option Bool (Witness.read).",
+   "beside": "The relation the premise names is W.AlikeThroughUpTo (Testing.lean): the answer is constant on classes of histories alike through g's couplings up to t. No named predicate for \"factors through AlikeThroughUpTo\" exists in the module; the premise is spelled out in each theorem. For the witness, `Witness.read_through` proves that premise: on (web false), histories alike through `false`'s couplings up to step 1 give equal answers. `Witness.correct_answers` gives the two values.",
+   "docstring": "\"Every response through a formation's complete past couplings agrees outside responsive reach.\" (on answer_alike_beyond_response; the def itself has no docstring)"
+  },
+  {
+   "module": "FormedLoops.lean",
+   "name": "readOff",
+   "states": "A coupling-strength schedule built from the threshold world's own level. The strength at step u, on the level at step s, is 1 when s = u and the threshold world's level of its one condition at step u is at least θ. In every other case it is 0. It is Closing.Threshold.reading θ applied to the level history of thresholdWorld θ.",
+   "shape": "FUNCTION Nat → Bool → Unit → Nat → Unit → Nat (a strength schedule k u h c s d), with parameter θ : Nat",
+   "beside": "The schedule-maker it instantiates, Closing.Threshold.reading, satisfies Closing.ReadsBefore: the strengths at step t are equal for any two level histories that agree up to t (AgreeUpTo l l' t). That name is itself a \"read\" name; its read-free content is AgreeUpTo, and the theorem is Closing.Threshold.reads : ReadsBefore (reading θ). thresholdWorld_course states that the loop OnLoop … (strengthsBefore (θ+1) (readOff θ)) holds and the loop OnLoop … (strengthsBefore θ (readOff θ)) does not, so the loop forms at step θ. No read-free name for readOff itself.",
+   "docstring": "\"The couplings the threshold world reads off its own standing.\""
+  },
+  {
+   "module": "Fragments.lean",
+   "name": "readJoint",
+   "states": "For a presentation p and two codes a, b: there is a configuration s such that p's relation holds for a with the probe `after s` and for b with the probe `before s`. Here p.read is the Presentation field of type C → Q → Prop, a relation between codes and probes. Decoded, it says that the fragment coded by a joins the idle fragment at s from the left, and the fragment coded by b joins it from the right.",
+   "shape": "PREDICATE on a Presentation (Fragment S A) (Probe S) C and two codes a b : C",
+   "beside": "The relation on fragments is Joint P f g, and the same condition stated on fragments is joint_iff_probes: Joint P f g ↔ ∃ s, probes P f (.after s) ∧ probes P g (.before s). readJoint_iff ties the two: when p is Exact for probes P, readJoint p (p.encode f) (p.encode g) ↔ Joint P f g. The field it uses, Presentation.read (Presentations.lean), is also a \"read\" name. Exact says p.read (p.encode m) q ↔ answers m q.",
+   "docstring": "\"Joining read from codes: some configuration the first code joins before staying at and the second after.\""
+  },
+  {
+   "module": "Frequency.lean",
+   "name": "Frequency.readsLate",
+   "states": "A yes/no value for conditions d, c and steps n, m. It is true exactly when the following total is at least 1: over the steps s from 0 to m with n ≤ s, sum, over the formations h present at m and outside the part, the strength k m h c s d. Put plainly: at step m, some present formation outside the part exchanges with c, with positive strength, on the level of d at some step s with n ≤ s ≤ m.",
+   "shape": "FUNCTION (part, k, present, d, c, n, m) → Bool; a decidable two-place family in n, m for fixed d, c",
+   "beside": "It is the decision of ∃ s, n ≤ s ∧ CouplesAt cs part k present m s d c (CouplesAt, Remainder.lean). Two theorems tie them. Frequency.readsLate_of_couplesAt gives CouplesAt … m s d c with n ≤ s → readsLate … = true. Frequency.couplesAt_of_readsLate gives the converse when every condition is listed (∀ c, c ∈ cs). It is used in recurs_or_stops, which links it to CouplingRecurs and StopsBy.",
+   "docstring": "\"**Whether a late level is read at a step.** At step `m` a formation present, outside the part, exchanges with `c` with positive strength on a level of `d` at a step from `n` on.\""
+  },
+  {
+   "module": "HeldForReading.lean",
+   "name": "byReading",
+   "states": "The dependence sense does not apply here: the name is a decision policy. For each candidate c it gives the move `off` when gain c < loss c, and `go` otherwise, including when they are equal. It is byRule applied to the test gain c < loss c. \"Reading\" names the off-switch literature's human, who knows the candidate. It does not name a relation of dependence.",
+   "shape": "FUNCTION C → Move, parameterised by gain loss : C → Nat",
+   "beside": "Read-free name: byRule (fun c => decide (gain c < loss c)); byReading is defined as exactly that, so it holds by rfl. Theorems: byReading_of_lt, byReading_of_not_lt and byReading_best (it is BestAt [go, off] (shifted gain loss) at each candidate). Also shortfall_byReading and after_byReading.",
+   "docstring": "\"**The policy after a reading that tells the candidate and stops by the supplied values**: it stops exactly where the loss exceeds the gain, and goes on where they are equal\""
+  },
+  {
+   "module": "HexagramSequences.lean",
+   "name": "Reads",
+   "states": "For a law next and places q, k: some hexagram s exists for which flipping the line at q changes the line at k of the next hexagram, (next (flip q s)).line k ≠ (next s).line k. So line k of the next configuration is not fixed independently of line q of the present one: changing q alone can change it. The direction runs from line q of the present configuration to line k of the next.",
+   "shape": "PREDICATE on (next : Hexagram → Hexagram) and two places q k : Place",
+   "beside": "It is the failure of Learning.Lumped for any map blind to place q. runsOrder_blind_not_lumped turns runsOrder_reads (Reads next q k for every q, k when next runs the received order) into ¬ Learning.Lumped π (fun s => (next s).line k) for every π with π (flip q s) = π s. It has the same shape as ExchangeLaw.Sensitive in Counterfactual.lean (changing c's levels alone changes h's exchange), but no theorem ties the two.",
+   "docstring": "\"The line at `k` of the next configuration reads the line at `q`: at some configuration, changing the line at `q` changes the line at `k` of the next.\""
+  },
+  {
+   "module": "HexagramSequences.lean",
+   "name": "readsb",
+   "states": "A decidable check on a list of hexagrams. It is true when two consecutive pairs (st, st') of the list exist such that the first member of st' is the first member of st with line q flipped, and the second members of the two pairs differ at line k. It gives a witness inside the list that line k of the successor changes when line q of the present hexagram is flipped.",
+   "shape": "FUNCTION (List Hexagram, Place, Place) → Bool",
+   "beside": "Tied to Reads in one direction only. reads_of_readsb: if Follows next l and readsb l q k = true, then Reads next q k. runsOrder_reads uses it with the received order. No converse theorem exists.",
+   "docstring": "\"Two steps of a list, the second from the first's start changed at `q`, going on to lines that differ at `k`, told step by step.\""
+  },
+  {
+   "module": "IdleRemoval.lean",
+   "name": "Flow.readAt",
+   "states": "Reindexes a flow by a function of steps σ. At step s, the new flow's present list, takings and givings are those of L at step σ s. It is precomposition with σ. Nothing is summed or merged.",
+   "shape": "FUNCTION (Flow F C, Nat → Nat) → Flow F C",
+   "beside": "Its counterpart for webs is Web.sample (Sampling.lean), which reindexes in the same way: level, active, requires, need and draws are taken at σ s. It is not Flow.sample (Sampling.lean): that one sums over each span of fine steps. No theorem ties readAt to Flow.sample. It is used in World.withoutIdle (v.flow.readAt σ with v.web.sample σ). withoutIdle_sameAt shows that each step n of the world matches step σ (ρ n), relatum by relatum (Web.SameAt). Also see withoutIdle_premises and withoutIdle_totals.",
+   "docstring": "\"A flow read at the steps `σ`: across step `s` the exchange across step `σ s`.\""
+  },
+  {
+   "module": "Readout.lean",
+   "name": "Reading",
+   "states": "Reading π f k v holds where some configuration s has π s = k and f s = v: the relation, from a reduced value k to a value v, that pairs k with every value f takes on the configurations π sends to k. It is the image of f's graph pushed along π; it gives at most one v per k exactly where f goes alike across configurations π merges.",
+   "shape": "PREDICATE (a relation K → V → Prop) built from π : S → K and f : S → V; defined as ∃ s, π s = k ∧ f s = v.",
+   "beside": "Learning.Lumped π f (Learning.lean:834: π i = π i' → f i = f i'). Tied by Readout.reading_single_iff: SingleValued (Reading π f) ↔ Lumped π f. Also Readout.Decodes π f g (f s = g (π s)), with lumped_of_decodes. Lumped is the same 'goes alike across what π merges' relation that Mechanism.DependsOnlyOn / Laws.GoAlike state for a Process's step; no theorem here ties Reading to those directly.",
+   "docstring": "What `f` reads through `π`: `f` takes the value `v` at some configuration `π` sends to `k`."
+  },
+  {
+   "module": "Readout.lean",
+   "name": "ReadsDirectly",
+   "states": "Given part : S → (p : P) → G p, a family read : (c : C) → S → W c and an assignment use : P → C, it holds where, for every part p and configurations s, s', equal values of the function read (use p) at s and s' force equal part p at s and s'. Direction: agreement under the assigned function determines agreement at the part (the function separates whatever that part separates); the converse direction is ThroughParts.",
+   "shape": "PREDICATE on (part, read, use): ∀ p s s', read (use p) s = read (use p) s' → part s p = part s' p. The argument named `read` is just a C-indexed family of functions on S.",
+   "beside": "Readout.ThroughParts part read (∀ c s s', (∀ p, part s p = part s' p) → read c s = read c s': each function depends only on the parts, i.e. a DependsOnlyOn/Lumped-shaped condition). Tied by Readout.agree_iff_parts: under ThroughParts and ReadsDirectly, (∀ c, read c s = read c s') ↔ ∀ p, part s p = part s' p; and supplied_agree_iff_parts. Unrelated homonym: BlanketWeights.lean has a namespace ReadsDirectly holding an example rate (rate depends on the external bit, `reads_external`), not this predicate.",
+   "docstring": "`use p` reads part `p` directly: configurations it reads alike agree at that part."
+  },
+  {
+   "module": "Reconfiguration.lean",
+   "name": "survivingReads",
+   "states": "A worked-example value, not a relation: the assignment from domains to optional observations that gives nothing at domains d < 2 (the two members sharing a cause) and, at every other domain, the observation of the renewed installation at the root address (its epoch, serial, address [] and the key located there). It is passed to Transactions.guardedExecute with survivingApprovals in repaired_completes.",
+   "shape": "FUNCTION Domain → Option Observation (type Transactions.Readings), a concrete definition.",
+   "beside": "Transactions.Readings := Domain → Option Observation; Transactions.observed w address (the Observation an installation gives at an address); Transactions.faithfulReads w p (every domain gives observed w p.address); Transactions.readSupport p reports d (domain d's entry equals what request p expects). No relational name of the DependsOnlyOn kind applies; no theorem ties survivingReads to faithfulReads.",
+   "docstring": "Readings of the members outside the shared cause."
+  },
+  {
+   "module": "RegimeMargin.lean",
+   "name": "ReadsPointwise",
+   "states": "For a law f from states (ι → Nat) to states, it holds where two states equal at every condition j are sent to states equal at every condition i. It says f's output at each condition is the same for any two inputs that agree at every condition. Note: with funext (which rests on the Quot.sound axiom) every f satisfies it; the module states it as a premise because it keeps an empty axiom report, and proves it from KeepsBelow by antisymmetry.",
+   "shape": "PREDICATE on f : (ι → Nat) → (ι → Nat): ∀ x y, (∀ j, x j = y j) → ∀ i, f x i = f y i.",
+   "beside": "Same shape as RegimeMargin.Pointwise G (each giving G i returns the same for inputs equal at every condition) and RegimeMargin.respects. Tied by pointwise_step (Pointwise G → ReadsPointwise (step Drawn.whole G H)), reads_of_keepsBelow (KeepsBelow f → ReadsPointwise f), and used by run_alike_of (runs from states equal at every condition stay equal at every condition), stays_at, repeats, ends_iff_within, ending_iff. It is a DependsOnlyOn/Lumped-shaped condition with π the pointwise-equality relation; no theorem ties it to Mechanism.DependsOnlyOn by name.",
+   "docstring": "**A law of states reads them condition by condition**: states alike at every condition go to states alike at every condition."
+  },
+  {
+   "module": "Regulation.lean",
+   "name": "ReadsLate",
+   "states": "For a delay ℓ and a rule ρ (from the rest's record of give/take pairs to the regulator's give/take at each step), it holds where, at every step t, what ρ gives and takes is the same for any two records that agree at every step s with s + ℓ < t. ρ's answer at t depends only on the record up to step t − ℓ − 1.",
+   "shape": "PREDICATE on (ℓ : Nat, ρ : Rule), Rule := Record → Nat → Nat × Nat, Record := Nat → Nat × Nat: ∀ δ δ' t, (∀ s, s + ℓ < t → δ s = δ' s) → ρ δ t = ρ δ' t.",
+   "beside": "Closest named relation: Testing.AlikeThroughUpTo (levels alike through a step), and in shape a time-delayed DependsOnlyOn; no theorem in Regulation ties ReadsLate to either. Its own consequences: ReadsLate.alike (records agreeing before T give the same answer at every step up to T + ℓ), late_spread, late_band, no_narrower_band (the least band is 2(ℓ+1)d), levels_alike; lateReturn_readsLate gives a rule satisfying it.",
+   "docstring": "**The rule reads `ℓ` steps late.** What it gives and takes at step `t` is the same for two records of the rest that agree at every step `s` with `s + ℓ < t`: the steps whose effect on the level shows by the level at `t - ℓ`."
+  },
+  {
+   "module": "Revision.lean",
+   "name": "read",
+   "states": "In namespace Revising: for a state s = (stock, link, response) and an alternative b : Bool, it returns b where the link coordinate s.2.1 is true and false otherwise. So the built link makes the two alternatives give different values; without it both give false. It is used only to define Revising.alike s b c := read s b = read s c, the lumping of alternatives at state s.",
+   "shape": "FUNCTION State → Bool → Bool (State := Nat × Bool × Bool).",
+   "beside": "Revising.alike (defined from it), used as the lumping in Registration.Keeps alike s t (every pair alike at t is alike at s) and Registration.AlikeUpTo; Learning.Training.Through. RevisionRuns has a theorem with conclusion Registration.Keeps Revising.alike s t where s.2 = (false, false) (around line 430). No theorem ties read itself to DependsOnlyOn or Lumped.",
+   "docstring": "The built link separates two represented alternatives."
+  },
+  {
+   "module": "RevisionPlans.lean",
+   "name": "reading",
+   "states": "The rule on candidates that returns true at candidate c exactly where gain c < offGain c (switching the law off at c gains more than keeping it). Put into held weight r a, it gives the plan that switches off at the weight of the candidates where it returns true and keeps at the others.",
+   "shape": "FUNCTION C → Bool: fun c => decide (gain c < offGain c).",
+   "beside": "No relational name. It is one instance of the rule argument r : C → Bool of RevisionPlans.held; theorems about it: excess_reading (held weight (reading gain offGain) a has excess 0), the balance theorems (above_iff, not_above_iff), and the hold/evade examples (hold_four_below).",
+   "docstring": "**The reading that tells the candidate**: it stops exactly where switching off gains more than keeping."
+  },
+  {
+   "module": "Routes.lean",
+   "name": "routeRead",
+   "states": "The end value of a route point: 0 at a level point (.level τ c) and 1 at the source. Summed by counting.transfer over the route weights, it makes routeSum the total weight of the courses that end at a source.",
+   "shape": "FUNCTION RoutePoint C → Nat, defined by cases.",
+   "beside": "No relational name; it is the end-value argument of counting.transfer / counting.along in routeSum (Routes.lean) and in CourseWorlds.lean:429. Weights.sum_courses expands the transfer it feeds.",
+   "docstring": "What is read at the end of a course: whether it has reached a source."
+  },
+  {
+   "module": "ClosedCapture.lean",
+   "name": "Unread",
+   "states": "For a two-level step on pairs (a, b) (a the share, b what lies beyond it) with a fast update f and a rule update h: the share component of f((a,b), g) is the same for any two b, b' with the same a and rule g, and h((a,b), g) is the same for any two b, b'. That is, the next share and the next rule depend only on the share and the current rule, not on b. Body: (∀ a b b' g, (f (a, b) g).1 = (f (a, b') g).1) ∧ ∀ a b b' g, h (a, b) g = h (a, b') g.",
+   "shape": "PREDICATE on a pair of functions f : A × B → R → A × B and h : A × B → R → R.",
+   "beside": "Same relation as GoAlike (Laws.lean) of the two-level process Pace.step f h reads under the projection loopPart (share, rule, step count). Tied by goAlike_of_unread (Unread → GoAlike for every schedule), identifiesAlike_iff_unread (IdentifiesAlike of loopPart along every schedule ↔ Unread), courses_alike_iff_unread (courses from starts with equal share and rule have equal share and rule at every step, along every schedule ↔ Unread), unread_course and reads_beyond_of_apart (¬Unread from a step where such courses differ). Close in kind to DependsOnlyOn (Mechanism.lean, not imported here); no theorem ties them directly. A relational name would be 'the share-and-rule part does not depend on B'.",
+   "docstring": "**Neither the share's next value nor the rule read reads what lies beyond the share.**"
+  },
+  {
+   "module": "ClosedCapture.lean",
+   "name": "joinRead",
+   "states": "Given a rule update hA : A → R → R defined on the share alone, joinRead hA is the rule update on pairs that applies hA to the first component and ignores the second: joinRead hA (a, b) g = hA a g. It lifts a share-only rule update to the pair (share, what lies beyond).",
+   "shape": "FUNCTION from (A → R → R) to (A × B → R → R).",
+   "beside": "join_unread: Unread (join fA fB) (joinRead hA), i.e. the lifted update does not depend on B by construction; turn_join and join_course: the joined course equals the share's own course on share and rule. No relation-named counterpart; the name could be 'the share's rule update, lifted to the pair'.",
+   "docstring": "The share's reading, read on the pair."
+  },
+  {
+   "module": "ClosedCapture.lean",
+   "name": "closedRead",
+   "states": "In the witness Beyond: the rule update that returns the rule hi (carriers four offspring to each other's one) whatever the share and whatever the current rule: closedRead _ _ = hi. It depends on nothing.",
+   "shape": "FUNCTION CarrierCounts → CarrierCounts → CarrierCounts (constant).",
+   "beside": "Used as joinRead closedRead, so Unread holds via join_unread. closed_locked: the course under it has loss ≥ t at step t, is Locked at every step, and the share never falls below twoToOne. Note the word is doubly off: this update does not depend on the share either; it is constant. A relational name: 'the constant rule hi'.",
+   "docstring": "Read from the share alone: favouring the carriers four to one at every share."
+  },
+  {
+   "module": "ClosedCapture.lean",
+   "name": "lossRead",
+   "states": "In the witness Beyond: the rule update on (share, loss) pairs that returns hi while the loss p.2 is below 1 and lo (others four to one) once the loss is at least 1, ignoring the share and the current rule. So the next rule depends on the loss, which lies beyond the share.",
+   "shape": "FUNCTION (CarrierCounts × Nat) → CarrierCounts → CarrierCounts.",
+   "beside": "open_reads: ¬ Unread (join select lossStep) lossRead (two starts equal in share and rule, losses 0 and 1, give different rules at step 1, via reads_beyond_of_apart). lossRead_turns: from loss ≥ 1 the returned rule does not favour the carriers. open_turned, open_falls. Relational name: 'the rule as a function of the loss (threshold 1)'; the relation is 'the next rule depends on the loss', i.e. ¬Unread.",
+   "docstring": "Read from the loss: favouring the carriers while the loss is below one, the others after."
+  },
+  {
+   "module": "ClosedCapture.lean",
+   "name": "read",
+   "states": "Two uses. (1) In section Readers it is a variable read : Q → S → G → G: the function giving the next rule from a second-level state q (called 'the reading'), the share x and the current rule g. (2) In namespace Proportional it is the def read q _ _ := q: the next rule is the second-level state q itself, ignoring share and current rule.",
+   "shape": "(1) FUNCTION variable Q → S → G → G; (2) FUNCTION CarrierCounts → CarrierCounts → CarrierCounts → CarrierCounts (projection onto the first argument).",
+   "beside": "readMono (Proportional): monotone in q and x. Enters ReadsShare (RuleCapture.lean: the rule update is monotone in the share alone) through both_reads: monotone read and monotone mind give ReadsShare P (both MG MQ) (readers read mind). No relation-named counterpart; a plain name would be 'rule from state' (1) or 'the rule is the state' (2).",
+   "docstring": "The rule read is the reading."
+  },
+  {
+   "module": "ClosedCapture.lean",
+   "name": "readers",
+   "states": "Given read : Q → S → G → G and mind : S → Q → Q, readers read mind is the rule update on pairs (rule g, state q): at share x it first forms the new state q' = mind x q, then the new rule read q' x g, and returns (read (mind x q) x g, mind x q). It composes a state update from the share with a rule update from the new state and the share into one update of the pair. Also used as the name of hypotheses order.le v u / order.le u v in Drawn (pool_mono, pool_against, pool_reads, pool_through): there it names the premise that the carriers' weight vector u is at least / at most the others' v in the ratio order.",
+   "shape": "FUNCTION (Q → S → G → G) → (S → Q → Q) → S → G × Q → G × Q (the def); and a hypothesis name of type order.le v u (a PROPOSITION comparing two CarrierCounts).",
+   "beside": "both_reads: ReadsShare P (both MG MQ) (readers read mind) under monotonicity of read and mind, i.e. the paired update is monotone in the share alone; then readers_not_below, reading_absorbed, readers_uniform_locks carry RuleCapture's lock laws to the pair. No relation-named counterpart; a plain name would be 'the paired update (state, then rule)'.",
+   "docstring": "**The reading read from the share**: at a reading step the reading is formed from the share (`mind`), and the rule is read from the share through the reading so formed (`read`)."
+  },
+  {
+   "module": "ClosedCapture.lean",
+   "name": "poolRead",
+   "states": "In namespace Drawn: poolRead u v x _ := pool u v x, the rule update that ignores the current rule and returns the pool of the population x with weight vectors u (each carrier's) and v (each other's): carrier part x.carrier*u.carrier + x.other*v.carrier, other part x.carrier*u.other + x.other*v.other. The next rule is a population-weighted sum of two fixed rules.",
+   "shape": "FUNCTION CarrierCounts → CarrierCounts → CarrierCounts → CarrierCounts → CarrierCounts (the last argument, the current rule, unused).",
+   "beside": "pool_reads_iff: ReadsShare order order (poolRead u v) ↔ order.le v u (the update is monotone in the share exactly where u favours carriers at least as much as v); pool_reads, pool_against (antitone where u ≤ v), pool_through, pool_not_rising, through_locks. Relational name: 'the population-weighted pool of u and v'.",
+   "docstring": "The pool read at a reading step, from the population alone."
+  },
+  {
+   "module": "Closing.lean",
+   "name": "ReadsBefore",
+   "states": "For a strength law κ that takes a level history l and gives coupling strengths κ l t h c s d: for every step t, any two level histories l, l' that agree at every step up to t (AgreeUpTo l l' t) give the same strengths at t for every formation h, condition c, earlier step s and condition d. The strengths at t depend only on the levels up to t.",
+   "shape": "PREDICATE on κ : (Nat → C → Nat) → Nat → F → C → Nat → C → Nat.",
+   "beside": "The same shape as ExchangeLaw.Nonanticipating (Counterfactual.lean: the law gives alike under histories that AgreeUpTo t), applied to the strengths rather than to the law. Tied by ExchangeLaw.carryingRead_nonanticipating: ReadsBefore κ → (ExchangeLaw.carryingRead cs part σ κ).Nonanticipating. Relational name: 'κ is nonanticipating' / 'κ at t depends only on levels up to t'.",
+   "docstring": "**Strengths read from the levels so far.** At each step the strengths depend on the levels up to that step only."
+  },
+  {
+   "module": "Closing.lean",
+   "name": "ExchangeLaw.carryingRead",
+   "states": "The exchange law that takes nothing and, at step t, has formation h give condition c the amount carriedGive cs part σ (κ l) t h c l: σ t h c if h is in the part, otherwise the sum over earlier steps s ≤ t and listed conditions d of the strength κ l t h c s d times the level l s d. It is ExchangeLaw.carrying (Propagation.lean) with the fixed strengths k replaced by strengths κ l computed from the level history itself.",
+   "shape": "FUNCTION from (cs : List C, part : F → Bool, σ, κ) to ExchangeLaw F C (a structure with take and give).",
+   "beside": "ExchangeLaw.carrying (Propagation.lean) is the fixed-strength version. formedCourse_eq_carried: under ReadsBefore κ, the course it generates (formedCourse) equals carried cs part σ (κ (formedCourse …)) …, the carrying law's course with the strengths the course itself produces. carryingRead_nonanticipating ties it to Nonanticipating. Relational name: 'the carrying law with history-dependent strengths'.",
+   "docstring": "**The carrying law with read strengths.** The part gives its gaps, each formation outside it what the strengths read from the levels make of them, and nothing is taken."
+  },
+  {
+   "module": "Closing.lean",
+   "name": "reading",
+   "states": "In Closing.Threshold: the strength law with one condition: for level history l, step u, formation h, condition c, earlier step s and condition d, the strength is 1 if s = u and the level at u has reached θ (θ ≤ l u ()), else 0. The exchange into the one condition responds to its current level once that level is at least θ.",
+   "shape": "FUNCTION Nat → (Nat → Unit → Nat) → Nat → Bool → Unit → Nat → Unit → Nat (θ, then a strength law κ).",
+   "beside": "reads θ : ReadsBefore (reading θ), i.e. its strengths at u depend only on the level at u. Feeds level, strengths, level_succ, forms, not_formed, unforeseen. Relational name: 'the threshold coupling at θ' (the strength from the current level, switched on at θ).",
+   "docstring": "The exchange of the formation outside the part with the one condition responds to its current level once that level has reached `θ`."
+  },
+  {
+   "module": "CodeAcquisition.lean",
+   "name": "readEvidence",
+   "states": "A parsing function on record lists: a list of exactly three records (x, y, z) is mapped to some Evidence ⟨a, b, xs⟩ where a is the single value of x if x is a record of probe p0, b the single value of y if y is a record of p1, xs the values of z if z is a record of orderProbe; every other list (lengths 0, 1, 2, 4+, or wrong expressions or value counts) maps to none. Not a dependence relation: here 'read' means decode or parse.",
+   "shape": "FUNCTION List (Expr × List Bool) → Option Evidence.",
+   "beside": "records_supply_evidence: readEvidence (trialRecords c) = some (observe c), i.e. decoding the three probe records of c gives c's probe values (decoding is a left inverse of record-making on these lists); used in interpretationFromRecords and step_evidence. Not about dependence; a plain name would be 'parseEvidence' or 'evidenceOfRecords'.",
+   "docstring": "The probes read off three records in probe order, or none."
+  },
+  {
+   "module": "ContextualRuns.lean",
+   "name": "readings",
+   "states": "The list of the values val(state t) of a run for t = n-1 down to 0: the first n configurations of the run each mapped through val : σ → C → Bool to a valuation of the claims C, latest first. Body: Learning.prefixOf (Parting.course val r) n, where Parting.course val r = fun t => val (r.state t). 'Reading' here means one value of the map val, i.e. a valuation C → Bool assigned to a configuration; nothing about dependence.",
+   "shape": "FUNCTION (abbrev) from a map val : σ → C → Bool, a run r : Run P and n : Nat to a LIST of valuations (C → Bool) of length n.",
+   "beside": "Same object without 'read': Parting.course val r (the course of a run through a map) and Learning.prefixOf (prefix of a course, latest first); readings is literally prefixOf (course val r) n, so they are tied by definition (abbrev), no separate theorem. The same module's `passes val r` (the set of valuations v with ∃ t, val (r.state t) = v) is the whole-run counterpart; no theorem ties passes to readings directly. No DependsOnlyOn/Sensitive analogue applies.",
+   "docstring": "The context-free readings of the first `n` configurations of a run, the latest first."
+  },
+  {
+   "module": "Continuity.lean",
+   "name": "ReadsAdjacent",
+   "states": "For a relation rel on relata R, a list us and a law of levels law : (R → Nat) → R → Nat: for every listed relatum x and any two configurations a, b, if a x = b x and a y = b y at every listed y adjacent to x under rel, then law a x = law b x. That is, the law's next level at x is the same for any two configurations that agree at x and at its listed neighbours: the next level at x depends only on the levels at x and its adjacent listed relata (a locality condition on the law).",
+   "shape": "PREDICATE on (rel : R → R → Bool, us : List R, law : (R → Nat) → R → Nat).",
+   "beside": "It is a per-relatum, neighbourhood form of Mechanism.DependsOnlyOn (P π: two configurations alike under π step to one configuration), but stated for a function law and a neighbourhood projection at each x; Continuity does not import or name DependsOnlyOn for it, and no theorem ties them. Used with Conserves in conservedOn_of_law and balancesOn_of_law (local conservation from global). The instance `reads : ReadsAdjacent together all swap` shows the two-relatum swap meets it.",
+   "docstring": "A law of levels reads only adjacent relata: its next level at a listed relatum is the same from two configurations that agree there and at every listed relatum adjacent to it."
+  },
+  {
+   "module": "Copying.lean",
+   "name": "Reads",
+   "states": "For a site map read : Nat → Option α, a starting index i and a word x0 :: x1 :: ...: read i = some x0, read (i+1) = some x1, and so on for every token of the word (True for the empty word). That is, the given site map supplies exactly the word's tokens at consecutive sites starting at i; it is agreement of a function Nat → Option α with a list on an index window.",
+   "shape": "PREDICATE on (read : Nat → Option α, i : Nat, word : List α), defined by recursion on the list.",
+   "beside": "No name without 'read' for this relation in Copying or Gated. Tied to readSteps by Copying.reading_iff: n = word.length steps of readSteps produce built ++ word exactly when Reads read built.length word ∧ Supplies word pool ∧ use draw prev word ≤ free.",
+   "docstring": "The site `i` of a word read through `read`: each site reads the word's token."
+  },
+  {
+   "module": "Copying.lean",
+   "name": "readStep",
+   "states": "A function from a copy-in-progress s : Scan α and an optional token o to the next Scan: if o = none, or nothing is pending, s is unchanged; if o = some x and a token is pending, x is attached (appended to built, removed from the pool, draw s.previous x moved from free to used) provided the pool holds x and the free support covers draw s.previous x; otherwise s is unchanged. It is the module's tick (one move of the copy) with the attached token supplied from outside (o) instead of taken from the head of pending; the pending head is dropped regardless of whether it equals x.",
+   "shape": "FUNCTION from Scan α and Option α to Scan α (parameterised by draw : Option α → α → Nat).",
+   "beside": "Copying.tick is the same move with the token taken from s.pending's head; no theorem in the module ties readStep to tick. readStep_extends states its product only grows (∃ tail, built' = built ++ tail).",
+   "docstring": "One move of a copy attaching what the reading gives at the next site, given that reading."
+  },
+  {
+   "module": "Copying.lean",
+   "name": "readSteps",
+   "states": "n-fold iteration of readTick: readSteps read 0 s = s, readSteps read (n+1) s = readSteps read n (readTick read s). The state of the copy after n moves in which each attached token is the value of the site map read at the current length of the product.",
+   "shape": "FUNCTION from a site map (Nat → Option α), a count n : Nat and Scan α to Scan α.",
+   "beside": "Copying.steps is the same iteration of tick (token from pending). No theorem ties readSteps to steps. Theorems: readSteps_fixed (a fixed point of readTick stays fixed), readSteps_extends (product only grows), reading_iff (ties readSteps to Reads, Supplies and use).",
+   "docstring": "`n` moves of a copy reading through `read`."
+  },
+  {
+   "module": "Copying.lean",
+   "name": "readTick",
+   "states": "readTick read s = readStep s (read s.built.length): one move of the copy in which the token offered for attachment is the value of the site map read at index equal to the current length of the product built. So the token attached at site i is a function of i through read, not of the pending list.",
+   "shape": "FUNCTION from a site map (Nat → Option α) and Scan α to Scan α.",
+   "beside": "Copying.tick is the counterpart with the token from s.pending; no tying theorem. readSteps iterates it.",
+   "docstring": "One move of a copy reading through `read`: the token attached at site `i` is what `read` reads at `i`."
+  },
+  {
+   "module": "CountedCodes.lean",
+   "name": "ReadsCountByCount",
+   "states": "For a rule : M → (F → V) → (F → V) → F → V: for every m, and count vectors c, c', d, d', if c w = c' w and d w = d' w at every word w, then rule m c d w = rule m c' d' w at every w. It is pointwise extensionality of the rule in its two count arguments (the result depends on the counts only through their values word by word), stated because funext is not used; the docstring says it restricts nothing else.",
+   "shape": "PREDICATE on rule : M → (F → V) → (F → V) → F → V.",
+   "beside": "No relational name in the module or imports for this extensionality (it is the pointwise-congruence form of a function's dependence on its arguments, not DependsOnlyOn on a process). Used together with CommutesWithRenaming in hear_keeps and tied_hears_tied; no theorem ties it to another name.",
+   "docstring": "The rule reads the counts count by count: counts that agree at every word give one result."
+  },
+  {
+   "module": "Dispatch.lean",
+   "name": "reread",
+   "states": "Not about dependence. A function giving the State after drawing ticket.1.length + 1 units: reserve minus (length+1), time plus (length+1), drawn plus (length+1). It is the cost of checking the found route's address again in the current tree before acting ('re-read' = an operational recheck, a cost charge).",
+   "shape": "FUNCTION from Ticket and State to State.",
+   "beside": "It equals the result of Actuation.draw (length+1) (length+1) s where draw succeeds; used via draw_some in dispatch_completes. Not part of the read-as-dependence family.",
+   "docstring": "The state after the re-read's draw."
+  },
+  {
+   "module": "DrawnShaping.lean",
+   "name": "drawnRead",
+   "states": "The rule-update map for the paced two-level course: drawnRead a p c hi lo pos x g = drawn a p c hi lo pos x, i.e. the new rule at an update step is the pool (ClosedCapture.Drawn.pool) of the two shaped rules RuleShaping.shaped a hi p c and shaped a lo p c, each weighted as the population x counts its carriers and others; the second argument (the current rule g) is ignored. So the updated rule is a function of the population x alone. In Pace.turn it is applied at steps where the schedule `reads` is true; elsewhere the rule is kept.",
+   "shape": "FUNCTION from CarrierCounts × CarrierCounts (population, current rule, the latter unused) to CarrierCounts; plays the role h : S → R → R in Pace.paced.",
+   "beside": "The relational name for its property is RuleCapture.ReadsShare (h is monotone in the population/share alone: P.le x y → M.le (h x g) (h y g')), itself containing 'read'. Tied by DrawnShaping.drawn_reads_iff: ReadsShare order order (drawnRead …) ↔ lo ≤ hi, and drawn_against (hi ≤ lo gives ReadsShare against the reversed order). Also feeds Locked in the lock theorems.",
+   "docstring": "The rule read at a reading step, from the population alone."
+  },
+  {
+   "module": "ExchangePremises.lean",
+   "name": "readWeb",
+   "states": "ExchangeRelation.readWeb L l need is the Web built by Flow.readOff from a flow L and level history l: level = l, active = L.Exchanging (a formation is active exactly where it exchanges), draws f c = 0 < L.take t f c, need = need, and requires t f c = RespondsBelow l t f c (need t f c): under every history differing from l at most in c's level at t, with that level below the need, no exchange the relation admits has f exchange. So 'requires' is defined as necessary non-exchange of f when c's level is changed alone to fall below the need (a counterfactual dependence of f's exchange on c's level), and the rest of the web is copied from the flow.",
+   "shape": "FUNCTION from a flow L : Flow F C, a level history l : Nat → C → Nat and need : Nat → F → C → Nat to a Web F C (a structure with fields level, active, requires, need, draws); defined in namespace ExchangeRelation (parallel ExchangeLaw.readWeb in Reading.lean for a law's course).",
+   "beside": "Flow.readOff (Reading.lean) is the construction; RespondsBelow is the relation it puts into `requires`. readWeb_dependent: on every run (rel.Runs present l L) the web is Dependent. relation_readWeb_requires ties the relation's web over the law's course to ExchangeLaw.readWeb; relation_readWeb_may ties it to MayRespondBelow. Counterfactual.ExchangeLaw.Sensitive (changing c's levels alone changes h's exchange at some step) is a nearby relation, but no theorem ties it to readWeb or RespondsBelow.",
+   "docstring": "The web read off a run: activity and drawing read off its exchange, the levels the history's, and a formation requiring a condition at its need exactly where its exchange necessarily responds to the condition falling below that need."
+  },
+  {
+   "module": "ReaderRebuilding.lean",
+   "name": "read",
+   "states": "Not a knower-known relation: an arithmetic replenishment. read m k l is the level after k units each add one unit to the level l while it is below the set level m: if l < m it is min(l + k, m), otherwise l is unchanged. In step it is applied only when the supply is on, with k the number of units present (x.ages.length) and l the level after the draw.",
+   "shape": "FUNCTION Nat → Nat → Nat → Nat (set level m, count of units k, level l) to the new level",
+   "beside": "none found: no dependence name applies, this is a capped addition (min(l + k, m) below m). Its only law here is read_pos (1 ≤ m and 1 ≤ k give 1 ≤ read m k l). A plain name would be 'replenish' or 'intake'.",
+   "docstring": "The read: `k` units, in turn, each take one while the level is below `m`."
+  },
+  {
+   "module": "ReaderRebuilding.lean",
+   "name": "reader (what a reader is in this module)",
+   "states": "The 'reader' is the list of units with their ages (field St.ages : List Nat) that draw from the supply into the level; it is present where that list is non-empty (Present x := x.ages ≠ []). Units age by one a step and end at the span s; where fewer than n remain, one new unit is made from the rule's Source (given, supply, level, none). It is a regenerating constraint holding a stock, not anything facing an object.",
+   "shape": "STRUCTURE FIELD St.ages : List Nat (ages of units); PREDICATE Present on St; the rebuild source is the inductive Source",
+   "beside": "The region where the units are present is shown closed under the supplied step with «闭» (GrammarLaws): theorem «供则读者之域闭» : «闭» (supplied r) Present; the emptied state is «闭» under the net (theorem «取于储者绝而不复»). The family law «以储买时当且仅当取于储» : BuysTime r ↔ r.source = .level. No dependence-relation name.",
+   "docstring": "An occurrence: the level, and the reader's units by age."
+  },
+  {
+   "module": "Reading.lean",
+   "name": "Flow.readOff",
+   "states": "Given a flow L and supplied levels, requirements and needs, builds the web whose activity is L.Exchanging (f is present at t and takes or gives a positive amount of some condition) and whose drawing relation is 'L.take t f c > 0'. So a formation is active exactly where it exchanges and draws on exactly the conditions it takes from; levels, requirements and needs pass through unchanged.",
+   "shape": "FUNCTION from a Flow F C plus (level : Nat → C → Nat, requires : Nat → F → C → Prop, need : Nat → F → C → Nat) to a Web F C (a constructor filling Web's fields)",
+   "beside": "Activity is Flow.Exchanging (same module); ties: readOff_acting (L.Acting of it), readOff_taking (L.Taking of it), and acting_taking_iff_wider: for any web W, L.Acting W ∧ L.Taking W ↔ every Exchanging f is W.active and every positive take is W.draws. Not a dependence relation; a 'web derived from the exchange'.",
+   "docstring": "The web read off the exchange: the levels, requirements and needs given, a formation active exactly where it exchanges, and drawing on exactly what it takes from."
+  },
+  {
+   "module": "Reading.lean",
+   "name": "ExchangeLaw.readWeb",
+   "states": "The web derived from the course a law of exchange generates from a start: activity and drawing as in Flow.readOff applied to law.course, levels law.levels, and f requires c at need n exactly where RespondsBelow holds: under every level history that differs from the generated one at most in c's level at step t, with that level below n, f does not exchange across t. So requirement is a counterfactual dependence of f's exchange on c's level, not a fact of the course (requirement_beyond_course: two laws with one identical course give opposite requirements).",
+   "shape": "FUNCTION from an ExchangeLaw F C, present : Nat → List F, start : C → Nat, need : Nat → F → C → Nat to a Web F C",
+   "beside": "Requirement slot is ExchangeLaw.RespondsBelow (same module). Closest dependence names: Counterfactual.Sensitive / InsensitiveAt (c's levels alone change h's exchange at some step); no theorem ties RespondsBelow to Sensitive found. ExchangePremises.lean has ExchangeRelation.readWeb (requirement as necessary response over an admitted relation) tied by ExchangeLaw.relation_readWeb_requires and relation_readWeb_may. Laws here: supported_of_responds (exchanging and responding give n ≤ l t c), readWeb_dependent, reading_glue.",
+   "docstring": "The web read off the course the law generates: activity and drawing read off its exchange, and a formation requiring a condition at its need exactly where its exchange responds to the condition falling below that need."
+  },
+  {
+   "module": "Reading.lean",
+   "name": "ExchangeLaw.readWorld",
+   "states": "The World whose relata are of one type R, whose flow is the course the law generates from start, and whose web is ExchangeLaw.readWeb of that course (activity = exchanging, drawing = positive take, requirement = RespondsBelow at the given need).",
+   "shape": "FUNCTION from ExchangeLaw R R, present, start, need to World (World.of R (law.course …) (law.readWeb …))",
+   "beside": "Ties: readWorld_glue (with the rest counted: Balanced, Acting, Taking, Dependent hold with no premise); readWorld_closed_iff (for a Nonanticipating law, the rest is never active ↔ law.Feasible). Nonanticipating is defined via GivesAlike/AgreeUpTo in Counterfactual (exchange at t depends only on levels up to t).",
+   "docstring": "The course a law generates over one kind of relatum, read as a world with activity, drawing and requirement read off the law."
+  },
+  {
+   "module": "ReadingSchedule.lean",
+   "name": "Unread",
+   "states": "For a schedule s : Nat → X (which condition is attended at each step), x is not the scheduled condition at any of the k steps from T: for all j < k, s (T + j) ≠ x. A gap of length k in the schedule's visits to x.",
+   "shape": "PREDICATE on (s : Nat → X, x : X, T k : Nat)",
+   "beside": "Its complement in windows is Within s x a (every stretch of a steps contains a step with s = x). Tied by within_iff: Within s x a ↔ ∀ T, ¬ Unread s x T a (equality decided), and Within.unread_lt, read_or_unread. Used in Flow.Balances.loses_of_unread (a gap lets a part withdrawn late draw (k+1+ℓ)d). Homonym, different relation: ClosedCapture.Unread f h (the share's next value and the rule do not depend on what lies beyond the share), tied to GoAlike by ClosedCapture.goAlike_of_unread.",
+   "docstring": "The schedule `s` leaves `x` unread for the `k` steps from `T`."
+  },
+  {
+   "module": "ReadingSchedule.lean",
+   "name": "Code.reader",
+   "states": "The schedule a binary code generates: the function giving, at each step, which condition (if any) the code visits. idle gives none at every step, leaf x gives some x at every step, node l r alternates steps between the two branches' schedules (weave: even steps l, odd steps r).",
+   "shape": "FUNCTION Code X → (Nat → Option X)",
+   "beside": "none found as a dependence name; it is a schedule. Tied to Within by Code.At.reads: a condition at depth k is visited within every 2^k steps (Within K.reader (some x) (2^k)); kraft_reads and half_suffices build on it.",
+   "docstring": "What a code reads at each step."
+  },
+  {
+   "module": "Readings.lean",
+   "name": "ChangeReading",
+   "states": "A two-element index type naming the two ways a condition's change across a step is computed: standing (from the level before and after) and exchange (from what the flow gave and took). It is a label, a 'context' index of a Contextual system, not a relation.",
+   "shape": "INDUCTIVE TYPE with constructors standing | exchange",
+   "beside": "Used as the context type K of Contextual (Context.lean). No dependence-name counterpart; a plainer name would be 'ChangeMeasure' or 'ChangeAccount'.",
+   "docstring": "Two readings of change: by standing, and by exchange."
+  },
+  {
+   "module": "Readings.lean",
+   "name": "Flow.changeReadings",
+   "states": "A contextual system over steps that gives, for each condition c and step t, two pairs (rise, fall): by standing, (level(t+1) − level(t), level(t) − level(t+1)); by exchange, (given − taken, taken − given), truncated subtraction. Every condition lies within both contexts. The two pairs are equal exactly where level(t+1) + taken = level(t) + given (balance).",
+   "shape": "FUNCTION from Flow F C and Web F C to Contextual Nat ChangeReading C (Nat × Nat) (within := always True, shows := the two computed pairs)",
+   "beside": "Agreement/gluing are Contextual.Agree and Contextual.Glues (Context.lean; Glues s := one context-free assignment equals every context's value). Ties: changes_agree_iff ((b−a, a−b) = (q−p, p−q) ↔ b + p = a + q), Flow.changeReadings_agree_iff, changeReadings_glue_iff, changeReadings_glue_everywhere_iff (glues at every t ↔ L.Balances W), changeReadings_free_iff, changeReadings_glue_counting_rest, World.unity.",
+   "docstring": "What each reading reads of the change of each condition across the step from `t`, as what it rose and what it fell: standing reads the rise and the fall of the level; exchange reads what the flow gave beyond what it took, and took beyond what it gave."
+  },
+  {
+   "module": "ReadingLoop.lean",
+   "name": "Sound",
+   "states": "For a predicate B : M → W → Prop (which worlds a state admits), the configuration (w, m) satisfies B m w: the world is among those the state admits.",
+   "shape": "PREDICATE on W × M, parameterized by B : M → W → Prop",
+   "beside": "Shown closed with «闭» (GrammarLaws) under the loop relation joint: closed_of_keptBy gives «闭» (joint world sense update act) (Sound B) from KeptBy. ClosedUnder in Frame.lean is the same closure shape; no theorem in this module ties them.",
+   "docstring": "The configurations at which the state's reading holds of the world."
+  },
+  {
+   "module": "ReadingLoop.lean",
+   "name": "KeptBy",
+   "states": "The admitted-worlds predicate B : M → W → Prop is preserved by the update under every act: if state m admits w and the world moves from w to w' under any act a, then the updated state update m a (sense w') admits w'. A closure (invariance) condition of B along world moves, with the state updated from the act and the sensed value of the new world.",
+   "shape": "PREDICATE on (world : W → A → W → Prop, sense : W → O, update : M → A → O → M, B : M → W → Prop)",
+   "beside": "Closure «闭» (GrammarLaws: ∀ x y, P x → R x y → P y). Theorem closed_of_keptBy: KeptBy … B → «闭» (joint world sense update act) (Sound B) for every act policy; kept_iff_closed ties closure to preservation along every finite reach «及». keeps_iff_leadsInto, keeps_continues_iff, keeping_policy_iff use it. Trivial cases: everything_kept, nothing_kept (preservation carries no information).",
+   "docstring": "**A reading kept by the update**: wherever the state reads the world and the world becomes `w'` under any act, the updated state reads `w'`."
+  },
+  {
+   "module": "ReadingLoop.lean",
+   "name": "Possible",
+   "states": "For a history of (act, sensed value) pairs, newest first, the set of worlds compatible with it: the empty history gives the start worlds; (a, o) :: h gives the worlds w' such that some w compatible with h moves to w' under a and sense w' = o. It is the forward image of the starts along the recorded acts, filtered by the recorded values.",
+   "shape": "FUNCTION List (A × O) → (W → Prop), i.e. a SET of worlds for each history, defined by recursion on the list",
+   "beside": "Ties: possible_kept (KeptBy world sense record (Possible …)); possible_least (it is the least predicate preserved by recording that holds at the starts); possible_of_reached / reached_of_possible (with Generated act); history_keeps_iff, history_continues_iff. Structurally an iterated image related to «依» (GrammarConditionals: every Q y has an R-predecessor in P), but no theorem ties them.",
+   "docstring": "**The worlds possible after a history**: where a course from a start, taking the history's acts and sensing its values, could be."
+  },
+  {
+   "module": "ReadingLoop.lean",
+   "name": "the module as a whole: what a 'reading' is here",
+   "states": "A 'reading' is a predicate B : M → W → Prop assigning to each internal state the set of worlds it admits. The module's laws are about this predicate being preserved along the joint world-and-state step (KeptBy, closure «闭»), about acts that lead only into a task from every admitted world (LeadsInto, LeadsIntoEnabled), and about the compatible-world set of a recorded history (Possible). In Loop, the 'reading' is instead the list of candidate prediction functions not yet contradicted by the answers so far (Loop.keep, kept_iff). The sections on sensing (sensed_alike_iff, alike_within, observed_alike) state that two worlds give one sensed course exactly where they answer the acts alike.",
+   "shape": "PREDICATE B : M → W → Prop (state-indexed set of admitted worlds); Loop: a STRUCTURE whose internal part holds a List H of candidates",
+   "beside": "«闭» via closed_of_keptBy and kept_iff_closed; «及» (reach). The sensing-alike results connect to Blanketed.agent_through_sensory (Blanket.lean) and Untested.floor_forgoes is a case of alike_of_kept. No DependsOnlyOn/GoAlike tie stated in this module.",
+   "docstring": "what senses, predicts and chooses is the internal part of one determined law, told apart by which part reads which"
+  },
+  {
+   "module": "ReadingsPersist.lean",
+   "name": "Flow.InheritsReading",
+   "states": "For a flow L on a web W and a labelling read : X -> Sig: for every step t and relata x, g, if x descends from g across the step from t (g is present at t, g gives x a positive amount, and x comes to stand across the step; Evolution's DescendsAt), then x's label equals g's label. The label is constant along every descent edge, in the direction parent g to offspring x.",
+   "shape": "PREDICATE on (flow L, web W, labelling read : X -> Sig); body: forall t x g, L.DescendsAt W t x g -> read x = read g",
+   "beside": "ReadingsSpread's Flow.RevisesBy names the general relation (offspring's label = upd (parent's label) (what was sensed)); InheritsReading is RevisesBy with the identity update, by theorem Flow.inheritsReading_iff (ReadingsSpread.lean). Consequence in this module: Flow.lineOf_carries (every member of every cohort of lineOf has the founders' label). Tied by: Flow.inheritsReading_iff.",
+   "docstring": "Readings are inherited along descent in the flow: whoever descends from a relatum carries its reading."
+  },
+  {
+   "module": "ReadingsPersist.lean",
+   "name": "ReadingsPersist.Habitat.Reading",
+   "states": "A three-valued type of labels, own | source | whole, for the witness's line. The labels have no content of their own: all that distinguishes them is two functions of them, draw (units the line's slot takes from the source s per step when standing and fed: own 2, source 1, whole 1) and clears (whether the slot takes the habitat h at the first step: own true, source true, whole false), which enter the line's conduct and so act back sigma. The docstring's 'what the members count' is not modelled beyond these two numbers.",
+   "shape": "INDUCTIVE TYPE with three constructors (own, source, whole); used as the index Sig of act : Reading -> ExchangeLaw Rel Rel",
+   "beside": "none found as a separate name; its effect is carried by draw, clears and act back sigma in the same namespace. Not tied by a theorem to DependsOnlyOn or Sensitive.",
+   "docstring": "What the line's members count: their own line only, the line and the source it draws on, or everything, the dweller included."
+  },
+  {
+   "module": "ReadingsPersist.lean",
+   "name": "ExchangeLaw.ReadsThroughOwn",
+   "states": "For a label-indexed family of exchange laws act : Sig -> ExchangeLaw X X, a web W and a coupling relation obs: for every label sigma, every relatum h, every step t and any two level histories l, l', if l and l' are alike through h's couplings at every step up to t (W admits h under both or neither, and every condition c with obs h c has the same level under both), then act sigma gives h the same take and the same give toward every condition across the step from t. What h exchanges depends only on the levels coupled into h and on h's admission, for every label and every relatum.",
+   "shape": "PREDICATE on (act : Sig -> ExchangeLaw X X, W : Web X X, obs : X -> X -> Prop); body: forall sigma h t l l', W.AlikeThroughUpTo obs h l l' t -> (act sigma).GivesAlike t h l l'",
+   "beside": "Counterfactual.lean's ExchangeLaw.Through W obs part names the same relation for the relata outside a part (part h = false), built from Testing's Web.AlikeThroughUpTo and Counterfactual's GivesAlike. Theorem ReadsThroughOwn.through_act gives (act sigma).Through W obs part for every sigma and every part (one direction only; the converse is not stated, though it would follow at the all-false part). Theorem byReading_through gives (byReading act read).Through W obs part.",
+   "docstring": "Each relatum's act, whatever reading it carries, reads only what couples into that relatum."
+  },
+  {
+   "module": "ReadingsPersist.lean",
+   "name": "RemovesItsReaders",
+   "states": "For a selection select on courses, an assignment slotsOf of slots to line indices, a set of line indices readers, and a course l: the course l satisfies select, and some line i in the set readers is removed by l (RemovesLine: some slot of i has positive level at step 0, and there is a step T from which no slot of i has positive level). The set readers is a free argument; the definition does not relate it to what select depends on, or to anything else about select.",
+   "shape": "PREDICATE on (select : (Nat -> X -> Nat) -> Prop, slotsOf : I -> X -> Prop, readers : I -> Prop, l : Nat -> X -> Nat); body: select l AND exists i, readers i AND RemovesLine slotsOf l i",
+   "beside": "RemovesLine (same module) is its second conjunct, with RemovesLine.not_standsLate (a removed line does not stand late). Witness: Habitat.cleared_removes_its_readers, with readers := (i = .d), the dweller's line, whose slots are fed only while the habitat stands (fed: d0, d1 need level of h at least 1). No name without the word for the whole conjunction.",
+   "docstring": "the selection holds at a course that removes a line of readers from the pool that course gives."
+  },
+  {
+   "module": "ReadingsPersist.lean",
+   "name": "ExchangeLaw.byReading",
+   "states": "Given a label-indexed family of exchange laws act : Sig -> ExchangeLaw X X and a labelling read : X -> Sig, the exchange law in which each relatum h, at every step, under every history, toward every condition, takes and gives exactly what act (read h) gives h. A composition: the relatum's label picks which law governs that relatum's exchanges.",
+   "shape": "FUNCTION from (act : Sig -> ExchangeLaw X X, read : X -> Sig) to ExchangeLaw X X; body: take t h l c = (act (read h)).take t h l c, give likewise",
+   "beside": "Counterfactual's ExchangeLaw.withAct part act' (a part acting by one law, the rest by another). Theorem byReading_withAct: where every member of part has label sig, byReading act read agrees on take and give with (byReading act read).withAct part (act sig). Also byReading_nonanticipating, byReading_through, and the witnesses Habitat.world_byReading and ReadingsSpread.Commons.world_byReading.",
+   "docstring": "Every relatum carries a reading (`read`), and across each step exchanges as the act that reading gives (`act`, Bound's act indexed by what is carried)."
+  },
+  {
+   "module": "ReadingsPersist.lean",
+   "name": "ReadingsPersist.Habitat.readOf",
+   "states": "For a label sigma, the labelling of the witness's relata that gives sigma to the line's two slots a0, a1 (isA x = true) and the label whole to every other relatum (s, h, d0, d1), whose conduct does not use the label.",
+   "shape": "FUNCTION from Reading x Rel to Reading; body: bif isA x then sigma else .whole",
+   "beside": "isA (the line's slots). Theorem Habitat.world_byReading: byReading (act back) (readOf sigma) has the same take and give as world back sigma = (restLaw back).withAct isA (act back sigma). Theorem Habitat.inherits: (flowOf back sigma lev).InheritsReading (webOf lev) (readOf sigma); Habitat.lineA_carries.",
+   "docstring": "The readings carried when the line carries `σ`: the line `σ`, every other relatum everything (the others' conduct does not depend on it)."
+  },
+  {
+   "module": "ReadingsSpread.lean",
+   "name": "ReadingsSpread.Commons.Reading",
+   "states": "A three-valued type of labels, own | source | whole, for the commons witness's focal line. As in ReadingsPersist, the labels differ only through two functions: drawS (units a focal slot takes from the source per step when standing and fed: own 2, source 1, whole 2, so here whole draws two, unlike ReadingsPersist's draw where whole draws one) and clears (own true, source true, whole false: whether the focal slot takes one unit of the habitat while it stands, and then also passes its standing to a second slot n0->n1, n2->n3).",
+   "shape": "INDUCTIVE TYPE with three constructors (own, source, whole); the index of act back : Reading -> ExchangeLaw Rel Rel",
+   "beside": "none found as a separate name; its effect is carried by drawS, clears and act in the same namespace. A distinct type from ReadingsPersist.Habitat.Reading with the same constructor names; no theorem ties the two.",
+   "docstring": "The focal line's reading: its own line only, the line and its source, or everything."
+  },
+  {
+   "module": "ReadingsSpread.lean",
+   "name": "read (ReadingsSpread.Revised.read, ReadingsSpread.Contact.read; and the parameter read : α -> Sig)",
+   "states": "Two witness tables and one generic parameter. Revised.read : Nat -> Bool gives true to members 0, 2, 3, 4 and false to 1 and every member from 5 on: which members of Revised.generations carry the label true (the docstring's 'narrow'). Contact.read : Nat -> Bool gives false to member 1 and true to every other. In the module's general part, read : α -> Sig is a variable naming any assignment of a label to each member, used by Generations.RevisesBy (kid's label = upd (parent's label) (what the parent sensed)), ClosedFrom, carrying (amount 1 where inR of the label holds, else 0), revisedIn/revisedOut (counts of parent-kid pairs where the label crosses into / out of the region inR), and standingCount.",
+   "shape": "FUNCTION from member index (Nat) to Bool (the two witnesses); in general a FUNCTION from members α to labels Sig (a parameter, not a definition)",
+   "beside": "No name without the word for the labelling itself; the relations over it are named Generations.RevisesBy, ClosedFrom, carrying, revisedIn, revisedOut. Ties for the witnesses: Revised.rises_then_revised (counts under carrying read id); Contact.removed_revises (removed.RevisesBy read (fun t p => read (senseSelf t p)) copy, so each kid's label equals its parent's) and Contact.removed_locked (every member from step 1 on has label true, via fixed_of_present).",
+   "docstring": "Member `0` carries the narrow reading, `1` the wide one; later members carry the narrow one."
+  },
+  {
+   "module": "ReadingsSpread.lean",
+   "name": "ReadingsSpread.Contact.readMet",
+   "states": "A table Nat -> Bool giving true to members 0 and 2 and false to every other: the labels in the course met (cohort 0 = [0, 1]; 0's kid is 3, 1's kid is 4). With senseOther pairing member 0 with member 1 (and every other member with itself) and update copy, each kid's label equals the label of the member its parent is paired with, so 3, the kid of 0, takes 1's label false.",
+   "shape": "FUNCTION from member index (Nat) to Bool",
+   "beside": "Generations.RevisesBy in the same module. Theorems: met_revises (met.RevisesBy readMet (fun t p => readMet (senseOther t p)) copy) and met_replaced (3 is in cohort 1 and readMet 3 is not true, via Generations.revised_out).",
+   "docstring": "Members `3` on carry the wide reading in this course."
+  },
+  {
+   "module": "ReadingsSpread.lean",
+   "name": "ReadingsSpread.Commons.readOf",
+   "states": "For a label sigma, the labelling of the commons witness's relata that gives sigma to the focal line's four slots n0, n1, n2, n3 (isFocal x = true) and the label whole to every other relatum (w0, w1, s, h, d0, d1), whose conduct does not use the label.",
+   "shape": "FUNCTION from Reading x Rel to Reading; body: bif isFocal x then sigma else .whole",
+   "beside": "isFocal (the focal slots). Theorem Commons.world_byReading: byReading (act back) (readOf sigma) has the same take and give as world back sigma = (restLaw back).withAct isFocal (act back sigma).",
+   "docstring": "The readings carried when the focal line carries `σ`: every other relatum reads everything."
+  },
+  {
+   "module": "PremiseWitnesses.lean",
+   "name": "ReadsNoOrder",
+   "states": "For a statement `law` taking a datum d and an order `better` on configurations: for every datum d and every two orders, if law holds at d with the first order it holds at d with the second. So the truth of law at each datum is the same under every order; the order makes no difference to it.",
+   "shape": "PREDICATE on a statement law : D → (S → S → Prop) → Prop (def ReadsNoOrder {D} (law) : Prop := ∀ d better better', law d better → law d better').",
+   "beside": "No name without \"read\" found for this relation in the module or its imports. Its docstring says it is the pattern of Significance.ReadsOnlyDynamics (also a read-name), with the order in place of the significance. The theorem ReadsNoOrder.not_entails uses it: such a statement, if it entails C (Comparison) at d on a frame with an Extension, fails at d for every order. PremisesTogether.ListedPaths.condition_reads_no_order gives an instance.",
+   "docstring": "A statement about some data and an order on configurations reads no order when its truth does not change with the order"
+  },
+  {
+   "module": "PremisesTogether.lean",
+   "name": "reading (IdleStep.reading)",
+   "states": "A function on step numbers that sends 0 to 0 and n+1 to n. Steps 0 and 1 both go to 0 (step 0 is idle), and after that each step goes one further (each later step moves). It is the witness stuttering: it sends each step of the world to a step of the course with the idle steps removed.",
+   "shape": "FUNCTION Nat → Nat (a concrete definition in namespace IdleStep).",
+   "beside": "Stutter (Stuttering.lean) is the relation's name without \"read\": ρ 0 = 0, each step stays or goes up by one, and every step is hit. Stutter.Moves (IdleRemoval.lean) relates it to `moving` (s ↦ s+1), and World.IdleAt (IdleRemoval.lean) says nothing takes part and every relatum is unmoved at its idle steps. Tied by IdleStep.stutter : Stutter reading, IdleStep.moves : Stutter.Moves reading moving, IdleStep.idle : world.IdleAt reading, and IdleStep.premises_hold. A second, unrelated docstring use in the same module is MatchedCourses.lossesAlike (\"The reading relating the non-base claims and the base only to itself\"): an equivalence relation on Claim, with no read-name.",
+   "docstring": "The reading idle at the first step and moving at every other."
+  },
+  {
+   "module": "Presentations.lean",
+   "name": "field read (Presentation.read)",
+   "states": "The second field of a Presentation (the first is encode : M → C). It is a relation between codes and questions: read c q is the proposition that code c answers yes to question q. Exact answers p says that for every configuration m and question q, read (encode m) q ↔ answers m q, so the code-side relation reproduces the configuration's answers.",
+   "shape": "STRUCTURE FIELD of type C → Q → Prop (a binary relation from codes to questions) in structure Presentation M Q C.",
+   "beside": "The configuration-side counterpart is `answers : M → Q → Prop`, the family fixed before any code. They are tied by the definition Exact (∀ m q, p.read (p.encode m) q ↔ answers m q). canonical_exact proves the canonical presentation (encode := answers, read := fun c q => c q) exact, and matches_iff_equal_answers relates two presentations' codes by ∀ q, p.read c q ↔ r.read d q. The field itself has no non-read name.",
+   "docstring": "A code for each configuration and a reading of each code at each question."
+  },
+  {
+   "module": "PropositionIdentity.lean",
+   "name": "Formula.read",
+   "states": "Given a formula φ whose atoms are `none` and `some y`, the fixed propositions `fixed`, and a proposition a: the proposition φ states when atom none stands for a and atom some y stands for fixed y. In other words, a is put into φ's one open slot with the other atoms held fixed. The result is φ.eval (Formula.atoms fixed a).",
+   "shape": "FUNCTION from (φ : Formula (Option β)), (fixed : β → Prop) and (a : Prop) to Prop; for fixed φ and fixed it is a function Prop → Prop.",
+   "beside": "Formula.eval is the same relation without \"read\": by definition Formula.read φ fixed a = φ.eval (Formula.atoms fixed a). Formula.read_congr (from Formula.eval_congr) says that interderivable a ↔ b give interderivable φ.read fixed a ↔ φ.read fixed b, with no axiom. In the module's terms (Learning.Lumped relation), lumped_iff and extensional_iff_lumped say the stronger demand, that every function Prop → V take one value at both ends of every interderivation, is propext; byName (fun p => p) is the case that needs it.",
+   "docstring": "The reading of a proposition through a formula, the other atoms held fixed."
+  },
+  {
+   "module": "ReachedCascade.lean",
+   "name": "ReadsOnlyActsAlong",
+   "states": "For a Turns system T, a position k and a world w: for every member n ≥ k and every two couplings o, o', T.law n o (T.acts w n) = T.law n o' (T.acts w n). So at the list of earlier acts that world w actually produces, the act of each member from k on is the same whatever its own coupling. Member n's coupling makes no difference to its act at that history, though it may at other lists of acts.",
+   "shape": "PREDICATE on (k : Nat) and (w : W), given T : Turns W O A.",
+   "beside": "LawAlikeAlong k w w' (same module) is the weaker, two-world form: the act is the same for the couplings of w and of w' at w's history. lawAlikeAlong_of_along derives it for every w' from ReadsOnlyActsAlong. The every-list form is Cascade's ReadsOnlyActsFrom (also a read-name), and readsOnlyActsAlong_of_from goes from it to this one. The consequence is stated with a non-read name: cascade_through_along gives Learning.Training.Through (T.AlikeBefore k) for any selection on acts, where AlikeBefore k w w' says the couplings of members before k are equal. Turns.Unreached.along and not_from show the predicate is strictly weaker than ReadsOnlyActsFrom.",
+   "docstring": "From member `k` on, every member acts alike whatever its own coupling at the list of acts world `w` gives it: at the histories `w` reaches, not on every list."
+  },
+  {
+   "module": "ReadInTime.lean",
+   "name": "readFrom (Window.readFrom)",
+   "states": "A function from a bound N and a step t to the state at step t of one fixed witness course, lossCourse 1 0 3 5 2 0 N with the rule recomputed at every step from the start `even`. The state is ((counts of carriers and others, loss counter), rule in force). The loss counter starts at 0 and grows by one a step. In the pooled rule the others' return is lo = 2 while the counter is below N and lo' = 0 once it reaches N; the shapers' return is hi = 5 throughout. N is the step from which the others' return switches.",
+   "shape": "FUNCTION Nat → Nat → (CarrierCounts × Nat) × CarrierCounts (an abbrev of the bound and the step).",
+   "beside": "lossCourse (same module) is the general form, and readFrom N t unfolds to it by definition (abbrev); lossCourse in turn abbreviates course / Thinned.course over shapedLossPool (Thinned.lossPool), whose switch is Nat.ble (ℓ+1) N. The theorems on readFrom are Window.in_time (switching at N = 2: Locked the other way from step 4), Window.between and Window.too_late (switching at N = 3: not turned, locked in the shapers' favour from step 6). No name without \"read\" for the switch itself.",
+   "docstring": "The course in which the others read the loss from step `N`."
+  },
+  {
+   "module": "ReadOffInTime.lean",
+   "name": "ReadableInTime (Web.ReadableInTime)",
+   "states": "For a web W, a group of formations, the feasible courses, a property keeps of courses, and two courses l (the losing one) and l': there is a step T such that T is the first step apart of l and l' for the group (FirstApart: some member's admission differs between l and l' at T, and every member's admission agrees at every earlier step) and l is still Recoverable at T (some feasible course agreeing with l at every step up to T has keeps).",
+   "shape": "PREDICATE on (W, group, feasible, keeps, l, l'): ∃ T, W.FirstApart group l l' T ∧ Recoverable feasible keeps l T.",
+   "beside": "Built from FirstApart and Recoverable / NoReturnAt (same module), which are its non-read parts. readableInTime_iff: given FirstApart at T and NoReturnAt at N, it holds exactly where T < N. Failures are given by too_late_of_alike, too_late_of_unreached, too_late_within_margin and too_late_of_own. Admission alike up to a step is tied to SelectsThroughAll thresholdOnly / AlikeThroughAll by alikeThroughAll_thresholdOnly_iff.",
+   "docstring": "Readable in time: the first step at which a selection read off the group's continuations can tell the losing course `l` from `l'` is a step at which `l` is still recoverable."
+  },
+  {
+   "module": "ReadOffInTime.lean",
+   "name": "ReadsInTime (Web.ReadsInTime)",
+   "states": "For a family of selections sel (one predicate on courses for each step), feasible, keeps and two courses l and l': there is a step T at which the family first separates l and l' (TellsApartAt: sel T gives them different truth values, and every sel s with s < T gives them the same), and l is still Recoverable at T.",
+   "shape": "PREDICATE on (sel : Nat → (Nat → C → Nat) → Prop, feasible, keeps, l, l'): ∃ T, TellsApartAt sel l l' T ∧ Recoverable feasible keeps l T.",
+   "beside": "Built from TellsApartAt and Recoverable (same module, no read-names). ReadsInTime.readable: if each sel s is a selection through the group's couplings up to s by threshold only (Selection.SelectsThroughAll thresholdOnly group s (sel s), i.e. histories AlikeThroughAll are selected alike) and FirstApart holds at T, then ReadsInTime gives ReadableInTime. This rests on TellsApartAt.not_before (the family separates no earlier than the first step apart).",
+   "docstring": "A family of selections reads in time: it tells the losing course `l` from `l'` apart at a step at which `l` is still recoverable."
+  },
+  {
+   "module": "ReadOffInTime.lean",
+   "name": "near, mid (FourReaders.Formation.near / .mid: the two gauges)",
+   "states": "Two constructors of the witness's Formation type. A gauge is a formation that takes and gives nothing (take and give are 0 for it) and whose only requirement is the habitat. Its need is 3 for near and 2 for mid. So its admission at a step is exactly 'the habitat level at that step is at least its need'. Under the never-stop course the habitat goes 4,3,2,1,0, and under the spared course s0 it stays 4. So near's admission first differs between the two courses at step 2 and mid's at step 3; the cleared course's point of no return is step 3.",
+   "shape": "CONSTRUCTORS of the inductive Formation (elements of a finite type), given their meaning by the clauses of flow, requires and need.",
+   "beside": "Their relation to the habitat is stated without \"read\" by requires/need and Web.Admits (Admission.lean: every required condition's level is at least the need), and by only_habitat_near and only_habitat_mid (a gauge requires only the habitat). The theorems near_firstApart (FirstApart at 2) and mid_firstApart (at 3) tie them to FirstApart. near_inTime gives ReadableInTime via readableInTime_iff and noReturn, with its gap against its margin 4 − 3; mid_atThePoint gives not ReadableInTime while the dweller is still admitted at step 3. The word 'gauge' appears only in docstrings and has no definition of its own.",
+   "docstring": "Needs: the near gauge 3, the mid gauge 2, the first relay 4, every other need 1."
+  },
+  {
+   "module": "Observation.lean",
+   "name": "ExchangeLaw.ReadsInto",
+   "states": "For every formation h with part h = false, every step t, condition c and histories l, l' : Nat -> C -> Nat: if l and l' agree at every (s, d) with s <= t and reads t h c s d = true, then law.take t h l c = law.take t h l' c and law.give t h l c = law.give t h l' c. So what h takes from and gives to c across the step from t is the same under any two histories that agree on the levels the schedule marks for (t, h, c).",
+   "shape": "PREDICATE on (law : ExchangeLaw F C, part : F -> Bool, reads : Nat -> F -> C -> Nat -> C -> Bool); a per-condition dependence-only-on statement",
+   "beside": "Thresholds.ExchangeLaw.ReadsAt is the same relation per formation (gives alike, one schedule for all conditions); tied by ExchangeLaw.ReadsAt.readsInto (ReadsAt -> ReadsInto) and ExchangeLaw.Through.readsInto (Counterfactual's Through -> ReadsInto). Propagation's ExchangeLaw.RespondsWithin (coupling strength) is tied by ExchangeLaw.ReadsInto.respondsWithin_unread: an unmarked level has RespondsWithin strength 0; ExchangeLaw.ReadsInto.restrict: the strengths restricted to marked levels (restrictInto) are RespondsWithin strengths. Mechanism.DependsOnlyOn has the same general shape for a Process; no theorem ties it to ReadsInto.",
+   "docstring": "**The law reads into each condition a schedule.** Across the step from `t`, what each formation"
+  },
+  {
+   "module": "Observation.lean",
+   "name": "readCouplings",
+   "states": "Turns a schedule into strengths: the strength at (t, h, c, s, d) is 1 where reads t h c s d = true and 0 elsewhere (the indicator of the schedule). It is restrictInto reads with every strength set to 1.",
+   "shape": "FUNCTION from a schedule (Nat -> F -> C -> Nat -> C -> Bool) to strengths (Nat -> F -> C -> Nat -> C -> Nat)",
+   "beside": "Its routes are Couples/CouplesAt/Upstream (Loops, Remainder) taken at these strengths. couplesAt_readCouplings: CouplesAt at restrictInto reads k implies CouplesAt at readCouplings reads; upstream_readCouplings: the same for Upstream under strengthsBefore T. apart_only_downstream and exchange_alike_off_downstream state their conclusions with Upstream over strengthsBefore t (readCouplings reads).",
+   "docstring": "The routes of reading: one where the schedule marks a level read into a condition, zero"
+  },
+  {
+   "module": "Observation.lean",
+   "name": "Observation.Measure.reads",
+   "states": "The witness schedule for Measure.law T N (one formation, two conditions: stock = true, record = false): reads T t () c s d is true exactly when s = t and either c is the stock and d is the record, or c is the record, d is the stock and T <= t. So the draw from the stock depends on the record at the same step, and what is added to the record depends, from step T on, on the stock at the same step.",
+   "shape": "FUNCTION from T : Nat to a schedule Nat -> Unit -> Bool -> Nat -> Bool -> Bool",
+   "beside": "Tied to ExchangeLaw.ReadsInto by Observation.Measure.readsInto: (law T N).ReadsInto (fun _ => false) (reads T). No separate name without read.",
+   "docstring": "What it reads: into the stock, the record at the step; into the record, from `T` on, the stock"
+  },
+  {
+   "module": "OneStep.lean",
+   "name": "readAt",
+   "states": "Given a quantity q : Passage -> Nat and a list of passages Q, sends a position some j to q (pick Q j), the quantity of the passage at position j of Q, and no position (none) to 0. It is an evaluation at a position, not a dependence relation.",
+   "shape": "FUNCTION (q : Passage -> Nat) (Q : List Passage) : Option Nat -> Nat",
+   "beside": "Siblings of the same shape without read: beforeAt, afterAt, cellAt. Theorems taken_node and given_node: the witness flow's taken/given at node x equals readAt Passage.taken (P t) (track σ ρ x t) / readAt Passage.given ...; cellAt_total: the column total of cellAt equals readAt q Q; readAt_pos: a positive value comes from some position j with 0 < q (pick Q j). Not about dependence-only-on.",
+   "docstring": "A reading of the passage at a position, nothing at no position."
+  },
+  {
+   "module": "OverExchange.lean",
+   "name": "World.ReadOffExchange",
+   "states": "A world w is ReadOffExchange when there exist an exchange relation rel over w's relata and a list of present relata at each step such that w's flow is a run of rel along w's levels (at each t the flow's present list is present t and its take/give are admitted by rel under those levels), and every requirement w.web.requires t f c is matched by rel.RespondsBelow at the need: under every history differing from the actual at most in c's level at t, with that level below w.web.need t f c, no exchange admitted by rel has f exchanging. So the world's flow is generated by some exchange relation, and each requirement is a necessary stop of the requiring relatum's exchange when the required level falls below the need.",
+   "shape": "PREDICATE on a World (an existential over an ExchangeRelation and a presence schedule)",
+   "beside": "No name without read for the same relation. Tied by ExchangeRelation.Runs.readOffExchange (every run of a relation, with any need, gives such a world), ExchangeLaw.readWorld_readOffExchange (every law's course does), World.ReadOffExchange.dependent (implies w.withRest.Dependent; one direction only), World.takingUnsupported_not_readOff (not every world is one).",
+   "docstring": "**The world is read off a relation of exchange**: its flow is a run, along its standings, of a"
+  },
+  {
+   "module": "PoolFromCourse.lean",
+   "name": "NotReadmitted",
+   "states": "For every configuration p and rule g, if present p is false then present (f p g) is false: the set of configurations where present fails is closed under the step f, for every rule.",
+   "shape": "PREDICATE on (present : A × B -> Prop, f : A × B -> R -> A × B)",
+   "beside": "Same shape as Frame.ClosedUnder (the grammar's «闭») with rel p q := exists g, q = f p g and region := not present, and as Frame.Invariant for not present; no theorem in this module ties them. Used in closed_stays_closed; instance stands_not_readmitted: NotReadmitted (Stands K) (join fA fB) where the loss accrues.",
+   "docstring": "**The selection brings no reader of the beyond back** once none is in the pool."
+  },
+  {
+   "module": "PoolFromCourse.lean",
+   "name": "ReadsThroughPresent",
+   "states": "For every configuration p and rule g, if present p is false then h p g = hA p.1 g: wherever present fails, the next rule given by h equals hA applied to the share component p.1 alone, so h there does not vary with the second component.",
+   "shape": "PREDICATE on (present : A × B -> Prop, hA : A -> R -> R, h : A × B -> R -> R)",
+   "beside": "With present everywhere false it says h = ClosedCapture.joinRead hA; ClosedCapture.Unread states h independent of the second component everywhere (no theorem ties ReadsThroughPresent to Unread). read_absent: two configurations where present fails and with equal share give the same h. window_through: ReadsThroughPresent (Stands K) hA (windowRead hA hL N K); window_unread: with K <= N, ReadsThroughPresent (fun _ => False) hA (windowRead ...).",
+   "docstring": "**Where no reader of what lies beyond the share is in the pool, the rule read is the"
+  },
+  {
+   "module": "PoolFromCourse.lean",
+   "name": "boundRead",
+   "states": "boundRead hA hL p g = windowRead hA hL 0 p.2.2 (p.1, p.2.1) g: on a configuration (share, loss, bound), the next rule is hL (share, loss) g when loss < bound and hA share g otherwise; the window with lower end 0 and upper end taken from the configuration's third coordinate.",
+   "shape": "FUNCTION (hA : A -> R -> R) (hL : A × Nat -> R -> R) : A × Nat × Nat -> R -> R",
+   "beside": "bound_course: the paced course of withBound fA fB with boundRead hA hL equals the window's course with K fixed, K carried as a coordinate. boundRead_reads: RuleCapture.ReadsShare (boundOrder P) M (boundRead hA hL), i.e. boundRead is monotone in share, in loss and, reversed, in the bound (given monoL and against). ReadsShare is itself monotonicity: P.le x y -> M.le (h x g) (h y g').",
+   "docstring": "The window read with its bound taken from the configuration, the readers reading from when they"
+  },
+  {
+   "module": "PoolFromCourse.lean",
+   "name": "readLoss",
+   "states": "A witness: the constant function sending every (counts, loss) and rule to lo. Used as hL in window := windowRead (threshold hi lo) readLoss 0 4.",
+   "shape": "FUNCTION CarrierCounts × Nat -> CarrierCounts -> CarrierCounts (constant lo)",
+   "beside": "No relation named; it is the hL argument of windowRead in the Drained witness (Drained.premises, clock_turned, strong_undone, weak_turned).",
+   "docstring": "The readers of the loss read the rule as `lo` from when they stand."
+  },
+  {
+   "module": "PoolFromCourse.lean",
+   "name": "windowRead",
+   "states": "windowRead hA hL N K p g is hL p g when N <= p.2 < K and hA p.1 g otherwise: while the loss coordinate lies in [N, K) the next rule is given by hL from the whole configuration, and outside it by hA from the share alone.",
+   "shape": "FUNCTION (hA : A -> R -> R) (hL : A × Nat -> R -> R) (N K : Nat) : A × Nat -> R -> R",
+   "beside": "Stands K p := p.2 < K. window_through: ReadsThroughPresent (Stands K) hA (windowRead hA hL N K); window_unread: K <= N gives ReadsThroughPresent (fun _ => False), i.e. windowRead equals hA on the share everywhere; window_past: for K <= p.2, windowRead hA hL N K p g = ClosedCapture.joinRead hA p g.",
+   "docstring": "**The readers of the loss read it as `hL` while it lies in `[N, K)`**; elsewhere the rule is read"
+  },
+  {
+   "module": "PooledEnvelopes.lean",
+   "name": "physicalReads",
+   "states": "In the witness situation s, sends each domain d to none when the actual model's vulnerability of d fails under s.roots, and otherwise to some (observed s.installation []), the installation's epoch, serial, address [] and the key located at it. It is a report of the installation's state by the members that still work.",
+   "shape": "FUNCTION Situation -> Readings, where Readings := Domain -> Option Observation (abbrev in Transactions.lean)",
+   "beside": "Sibling without read: physicalApprovals (Situation -> Approvals, Domain -> Option Request). Used by respond (guardedExecute ... (physicalReads s) (physicalApprovals s)). Transactions.observed gives the reported value. Not a dependence-only-on relation.",
+   "docstring": "Members the actual faults leave working report the installation; failed ones withhold."
+  },
+  {
+   "module": "PooledEnvelopes.lean",
+   "name": "readResponses, readFaithful (hypotheses of member_completes and pooled_completes); reads : Readings",
+   "states": "Not definitions: hypothesis names. readResponses: every roster member d not failed under roots has reads d = some (expected p) (it reports what the request expects). readFaithful: for such d, any reported o with reads d = some o equals observed w p.address (the report matches the installation at the request's address). reads is a variable of type Readings := Domain -> Option Observation.",
+   "shape": "hypotheses (propositions over d) in theorems; reads a FUNCTION Domain -> Option Observation",
+   "beside": "Paired with issueResponses / issueFaithful on approvals, same shape without read; passed to Transactions.certified_completes, whose own hypotheses carry the same names.",
+   "docstring": "none (hypothesis names)"
+  },
+  {
+   "module": "PooledEnvelopes.lean",
+   "name": "poolReady, every_candidate_ready_pool_not",
+   "states": "False matches: the letters 'read' inside 'ready'. poolReady is readiness of a fault envelope on four members; nothing about dependence.",
+   "shape": "FUNCTION Envelope -> Bool; a theorem",
+   "beside": "none found (not about this)",
+   "docstring": "Readiness of a listed envelope on the four members."
+  },
+  {
+   "module": "RuleCapture.lean",
+   "name": "ReadsShare",
+   "states": "The rule function h : S → R → R is order-preserving in the share alone. For any shares x, y with P.le x y, and any two prior rules g, g' (taken independently), M.le (h x g) (h y g'). So a share no lower gives a resulting rule no lower, whatever rule each was applied to. The second argument makes no difference to the order, so h's output order depends only on the share.",
+   "shape": "PREDICATE on (P : Preorder S, M : Preorder R, h : S → R → R)",
+   "beside": "Ideals.Monotone P Q f (Ideals.lean:630, ∀ a b, P.le a b → Q.le (f a) (f b)) is the same relation for a one-argument map. ReadsShare is that monotonicity holding uniformly across the ignored second argument (even across different g, g'). No theorem ties ReadsShare to Ideals.Monotone. Theorems on it: ReadsShare.reverse (reversing both orders keeps it), ReadsShare.pair (closed under pairing), and proportional_reads, threshold, byMargin (instances).",
+   "docstring": "**The rule read is a monotone function of the share alone.** The rule read at a share not lower is not lower, whatever rules the two readings meet."
+  },
+  {
+   "module": "RuleCapture.lean",
+   "name": "pairReading",
+   "states": "The componentwise product of two rule-update functions. From h₁ : S → R₁ → R₁ and h₂ : S → R₂ → R₂ it builds the function taking a share x and a pair of rules (g₁, g₂) to (h₁ x g₁, h₂ x g₂). The same share feeds both components.",
+   "shape": "FUNCTION from (S → R₁ → R₁) × (S → R₂ → R₂) to (S → R₁ × R₂ → R₁ × R₂)",
+   "beside": "No name without 'read' (it is Prod.map of h₁ x and h₂ x at a shared x). Tie: ReadsShare.pair says that if h₁ and h₂ are each monotone in the share, then pairReading h₁ h₂ is monotone in the share under pairOrder M₁ M₂. pair_locks uses it.",
+   "docstring": "Two rules, each read from the share."
+  },
+  {
+   "module": "Segmentation.lean",
+   "name": "readAll",
+   "states": "Not a dependence relation. It is a list operation: it applies a partial decoding function res : List α → Option M to each group in a list of groups. It returns some of the list of results when every group decodes, and none if any group fails (the Option traverse/mapM).",
+   "shape": "FUNCTION from (List α → Option M) and List (List α) to Option (List M)",
+   "beside": "Equivalent to List.mapM res in Option, but no such name is used. Tie: readAll_map_iff says readAll res (ws.map word) = some (ws.map meaning) exactly when res (word w) = some (meaning w) for each w in ws. reads_every_iff lifts this through chunks/encode. SharedCodes.lean uses it at lines 785 and 809.",
+   "docstring": "Read each group; `none` where some group is not read."
+  },
+  {
+   "module": "SelectionPool.lean",
+   "name": "ReadsCouplings",
+   "states": "A widened level-coupling relation built from obs, o and a. Formation g is coupled by level to condition c when obs g c holds, or when g is o and c is coupled into a: W.CoupledInto obs a c, meaning a depends on c by threshold (W.DependsOn) or obs a c. So o gets, in addition to its own level couplings, a level coupling to everything coupled into a.",
+   "shape": "FUNCTION from (W : Web F C, obs : F → C → Prop, o a : F) to a relation F → C → Prop (a coupling-by-level relation)",
+   "beside": "It is an instance of a coupling-by-level relation 'obs', fed to Web.AlikeThrough, SelectsThrough and CoupledInto (Testing.lean). Ties: AlikeThrough.of_reads says that two histories alike through o under ReadsCouplings are alike through o under obs and through a under obs. SelectsThroughAll.reads says that a selection through the pooled coupling of o and a is a selection through o under ReadsCouplings. Flow.withinCoupling_reads and withinCoupling_reads_iff say that o's coupling closure lies within, or equals, the union of o's and a's closures.",
+   "docstring": "`o` reads `a`'s couplings: beside the coupling by level `obs`, `o` is coupled by level into every condition coupled into `a`, by threshold or by level."
+  },
+  {
+   "module": "Sensitivity.lean",
+   "name": "ReadsWithin",
+   "states": "At step t, for formation h, under history l, the law's exchange depends only on the conditions in the list cs. Take any history l' that has the same levels as l on every condition in cs at every step s ≤ t. Then the law gives h the same take and give at t under l and l' (law.GivesAlike t h l l'). The relation is anchored at l, and the agreement is required only on cs, up to t.",
+   "shape": "PREDICATE on (law : ExchangeLaw F C, t : Nat, h : F, l : Nat → C → Nat, cs : List C)",
+   "beside": "A restricted form of ExchangeLaw.Nonanticipating (Counterfactual.lean: the exchange at t depends only on levels up to t, on all conditions) and of InsensitiveAt (agreement on all but one condition). Ties: Nonanticipating.readsWithin_of_every says that when cs lists every condition, Nonanticipating gives ReadsWithin. alike_of_sensitive_agree_within says that under Nonanticipating and ReadsWithin, agreement up to t on the conditions h is Sensitive to gives GivesAlike. No name for exactly this.",
+   "docstring": "At `t`, for `h`, under `l`, the law reads within the conditions of `cs`: every history agreeing with `l` on them up to `t` gives alike with `l`."
+  },
+  {
+   "module": "Sensitivity.lean",
+   "name": "ReadsFinitely",
+   "states": "For every step t, formation h and history l, there is a finite list of conditions cs such that ReadsWithin t h l cs holds. That is, the exchange at t depends only on the levels of finitely many conditions up to t, and the list may vary with t, h and l.",
+   "shape": "PREDICATE on law : ExchangeLaw F C",
+   "beside": "Ties to Nonanticipating, Sensitive and Through (Counterfactual.lean). ReadsFinitely.nonanticipating says ReadsFinitely implies Nonanticipating. Nonanticipating.readsFinitely_of_every gives the converse when the conditions are finite. ReadsFinitely.through_sensitive says it gives law.Through W law.Sensitive part. ReadsFinitely.least_coupling says Sensitive is the least coupling the law goes through, up to ¬¬. ReadsFinitely.alike_of_insensitive. Counterexamples: tailLaw_not_readsFinitely and no_list (no single list works for all t, l).",
+   "docstring": "The law reads finitely many conditions: at every step, for every formation and under every history, it reads within some list of conditions, the list possibly depending on the history."
+  },
+  {
+   "module": "SharedCodes.lean",
+   "name": "ReadsAs",
+   "states": "Form x is the form that code c assigns to sense n: c n = x. It is just equality of c's value at n with x, the preimage relation of the code.",
+   "shape": "PREDICATE on (c : M → F, x : F, n : M), defined as c n = x",
+   "beside": "Its universal form is TellsApart (injectivity of the code, ∀ n n', c n = c n' → n = n'). Tie: self_reads_iff says that (∀ m n, c n = c m ↔ n = m) holds exactly when TellsApart c. reads_iff says that for an injective cg, the n with cg n = cf m is exactly m iff cf m = cg m. reads_other.",
+   "docstring": "A formation with code `c` reads the form `x` as the sense `n` where `c` gives `n` the form `x`."
+  },
+  {
+   "module": "Significance.lean",
+   "name": "ReadsOnlyDynamics",
+   "states": "The statement law : D → (Pos → Nat → F → Prop) → Prop is invariant in its second argument. If it holds of dynamics d with significance sig, it holds of d with every other significance sig'. So its truth depends on d alone.",
+   "shape": "PREDICATE on law : D → (Pos → Nat → F → Prop) → Prop",
+   "beside": "none found with a non-'read' name (it is invariance, or independence, of the second argument). Ties: readsOnlyDynamics_of says any statement that factors through d alone has it. ReadsOnlyDynamics.admits_rival says such a statement holding with some sig also holds with a bounded (rival) significance. ReadsOnlyDynamics.not_entails says such a statement cannot entail Unrestricted. SignificanceStatements.lean cites it.",
+   "docstring": "A statement about a dynamics (a world, a web, a flow or any other) and a significance reads only the dynamics when its truth does not change with the significance."
+  },
+  {
+   "module": "Thresholds.lean",
+   "name": "ReadsAt",
+   "states": "Given a schedule reads : Nat → F → C → Bool, the law's exchange for each formation h outside the part, across the step from t, depends only on the conditions the schedule marks true at (t, h). Take any two histories l, l' that agree, at every step s ≤ t, on every condition d with reads t h d = true. Then law.GivesAlike t h l l'.",
+   "shape": "PREDICATE on (law : ExchangeLaw F C, part : F → Bool, reads : Nat → F → C → Bool)",
+   "beside": "A schedule-indexed form of ExchangeLaw.Through and Nonanticipating (Counterfactual.lean). Ties: Nonanticipating.readsAt_all says Nonanticipating gives ReadsAt with the all-true schedule. ExchangeLaw.Through.readsAt says Through gives ReadsAt for any schedule covering CoupledInto. ReadsAt.respondsWithin_unread says an unmarked condition has response strength 0. ReadsAt.restrict. ReadsBelow.standing_readsAt.",
+   "docstring": "**The law reads a schedule.** Across the step from `t`, for each formation `h` outside the part, the law reads only the conditions `reads t h` marks: under histories agreeing on those up to `t`, it gives alike."
+  },
+  {
+   "module": "Thresholds.lean",
+   "name": "ReadsBelow",
+   "states": "For each formation h outside the part, across the step from t, take two histories l, l' in which stock c stands at least θ s at every step s ≤ t in both, and every condition other than c agrees at every s ≤ t. Then the law gives h alike. While c is at or above its threshold, the exchange does not depend on c's exact level, only on its being at or above θ.",
+   "shape": "PREDICATE on (law : ExchangeLaw F C, part : F → Bool, c : C, θ : Nat → Nat)",
+   "beside": "Close to ExchangeLaw.InsensitiveAt (Counterfactual.lean), which drops c entirely. ReadsBelow drops c only on the region where c ≥ θ. No theorem ties it to InsensitiveAt. Ties: ExchangeLaw.Through.readsBelow says Through, with c not level-coupled and θ at least the needs, gives ReadsBelow. ReadsBelow.standing_readsAt says the standing law satisfies ReadsAt with the schedule offStock mark. ReadsBelow.standing_unread and standing_no_loop. break_carried_nowhere.",
+   "docstring": "**The law reads a stock only below a threshold.** For each formation outside the part, across the step from `t`: under histories alike up to `t` off the stock `c`, in both of which `c` has stood at each step `s` at least `θ s`, the law gives alike."
+  },
+  {
+   "module": "Thresholds.lean",
+   "name": "restrictReads",
+   "states": "The strength function k with every entry for an unmarked condition set to zero. At (t, h, c, s, d), the strength is k t h c s d if the schedule marks d for h at t (reads t h d = true), and 0 otherwise.",
+   "shape": "FUNCTION from (reads : Nat → F → C → Bool, k : Nat → F → C → Nat → C → Nat) to Nat → F → C → Nat → C → Nat (a strength function)",
+   "beside": "Feeds Loops.Couples, CouplesAt, Upstream and OnLoop (strength-based coupling, Loops.lean). Ties: ExchangeLaw.ReadsAt.restrict says that under ReadsAt, the restricted strengths are still response strengths of the law (RespondsWithin). couples_reads says every Couples of the restricted strengths has some formation outside the part marking d. upstream_unread and not_onLoop_unread say a condition no one marks has nothing downstream but itself and lies on no loop.",
+   "docstring": "The strengths restricted to what is read: a strength from a level `h` does not read at `t` is zero."
+  },
+  {
+   "module": "TimedResponse.lean",
+   "name": "Delayed.readAt",
+   "states": "For a step t and a level history l over the single condition (), the Boolean that is true exactly when the level of () at step t under l is above zero: decide (0 < l t ()). It is a function of the history alone; which formation's couplings it depends through is stated only by the theorem read_through.",
+   "shape": "FUNCTION Nat -> (Nat -> Unit -> Nat) -> Bool (a step and a level history to a Boolean)",
+   "beside": "In the module the generic hypothesis `read : (Nat -> C -> Nat) -> A` with `through : forall l l', W.AlikeThroughUpTo obs g l l' D -> read l = read l'` (in answer_alike_before, different_answers_not_unreached, different_answers_reached) is the dependence relation: a function of histories constant on histories alike through g's couplings up to D. Theorem Delayed.read_through ties readAt t to it: readAt t takes one value on any two histories that are AlikeThroughUpTo through formation `false` up to t. Web.ScoresThrough (Selection.lean) has the same shape for Nat-valued scores; no theorem in this module ties readAt to ScoresThrough. Delayed.answers_before_and_after: readAt 1 agrees on the two webs, readAt 2 differs.",
+   "docstring": "none on readAt itself; the namespace comment: \"A delayed native exchange. The source is true, the distinct reader is false.\""
+  },
+  {
+   "module": "Tower.lean",
+   "name": "Tower.reads",
+   "states": "For a tower T, reads n s is the step of level n that corresponds to step s of level 0: reads 0 s = s and reads (n+1) s = T.refine n (reads n s), i.e. the composite of the strictly increasing time maps refine (n-1) after ... after refine 0. It is a time map between levels; no knower is involved.",
+   "shape": "FUNCTION Nat -> Nat -> Nat (a level n and a level-0 step to a level-n step); defined by recursion on n inside namespace Tower with T explicit",
+   "beside": "No read-free name for the composite in the module; it is the time map used by Web.sample (Becoming.Sampling). Theorems: Tower.web_zero (T.web 0 = (T.web n).sample (T.reads n)), Tower.level_zero ((T.web 0).level s c = (T.web n).level (T.reads n s) c), Tower.reads_strict (Strict (T.reads n)).",
+   "docstring": "\"The step of level `n` at which step `s` of level `0` is read.\""
+  },
+  {
+   "module": "Training.lean",
+   "name": "Training.Reads",
+   "states": "Given candidates cand : Theta -> E -> ExchangeLaw and a selection select : Theta -> Prop, every two candidates whose executions generate the same courses (SameCourses: in every situation the same levels and the same take and give for every formation at every step) are either both selected or both not selected. The selection is constant on classes of candidates with identical courses.",
+   "shape": "PREDICATE on (cand, select), with law, part, present, start as section variables: forall theta theta', SameCourses (cand theta) (cand theta') -> (select theta <-> select theta')",
+   "beside": "Same shape as Learning's Training.Through (alike := SameCourses on candidates) and as Web.SelectsThrough (Selection.lean) over courses instead of histories; no theorem ties Reads to either by name. Tied in the module: TrainsThrough.reads (a TrainsThrough selection, constant on candidates alike through r's couplings up to T, satisfies Reads); trained_alike_of_along uses Reads to conclude select theta <-> select theta'.",
+   "docstring": "\"A training over the candidates `cand`, each executed in each situation, reads each candidate through its courses: candidates with the same courses are selected alike.\""
+  },
+  {
+   "module": "Training.lean",
+   "name": "Training.ReadsThrough",
+   "states": "For a lumping rho of histories, a part and an act law a: for every member h of the part (part h = true), every step t and every two level histories l, l' that rho lumps together for h at t, the law a gives h the same take and give for every condition across the step from t (ExchangeLaw.GivesAlike t h l l'). The members' exchange depends on the history only through rho's classes.",
+   "shape": "PREDICATE on (rho : Lumping F C, part : F -> Bool, a : ExchangeLaw F C)",
+   "beside": "ExchangeLaw.Through (Counterfactual.lean) is the same relation for the coupling lumping, stated for non-members; ExchangeLaw.Nonanticipating is the same for the agreement lumping. Theorems: ReadsThrough.of_through (a.Through W obs (fun h => !part h) -> ReadsThrough (Lumping.coupling W obs) part a), ReadsThrough.through (the converse), ReadsThrough.of_nonanticipating (a.Nonanticipating -> ReadsThrough Lumping.agreement part a). Learning.Lumped is the analogue for a plain function lumped by pi.",
+   "docstring": "\"An act law reads through a lumping for the part: each member exchanges alike under histories it lumps together up to the step.\""
+  },
+  {
+   "module": "Transactions.lean",
+   "name": "Transactions.Readings",
+   "states": "An assignment to each domain (a Nat) of either nothing or one Observation (epoch, serial, address, optional key): the reports the domains give about an installation.",
+   "shape": "abbrev for a FUNCTION type Domain -> Option Observation",
+   "beside": "Its twin for issuers is Approvals := Domain -> Option Request. No dependence relation is involved; the tie to the installation is the premise `faithful` (reads d = some o -> o = observed w p.address) in accepted_reading_matches and gate_route.",
+   "docstring": "\"The readings of the domains.\""
+  },
+  {
+   "module": "Transactions.lean",
+   "name": "Transactions.faithfulReads",
+   "states": "For an installation w and request p, the assignment in which every domain reports some (observed w p.address): the installation's own epoch, serial, the request's address and the key located at that address in w's tree.",
+   "shape": "FUNCTION Installation -> Request -> Readings (a constant report for every domain)",
+   "beside": "Paired with faithfulApprovals; used in the worked examples (single_issuer_rejected, the two-domain shutdown, consumed-request theorems). It satisfies the `faithful` premise of accepted_reading_matches for any bad set; no theorem states that by name.",
+   "docstring": "\"Every reader reports the installation.\""
+  },
+  {
+   "module": "Transactions.lean",
+   "name": "Transactions.readSupport",
+   "states": "For a request p, an assignment of reports and a domain d, true exactly when d's report equals some (expected p), i.e. d reports the epoch, serial, address and key the request expects. It is the per-domain support fed to the fault-envelope certificate in gate.",
+   "shape": "FUNCTION Request -> Readings -> Domain -> Bool",
+   "beside": "Its twin is approvalSupport (true when d approves exactly p). Theorem accepted_reading_matches: if every roster domain outside an admitted bad set reports only observed w p.address and certificate roster faults (readSupport p reads) = true, then expected p = observed w p.address; gate_route builds on it.",
+   "docstring": "\"A domain supports a request's reading where it reports what the request expects.\""
+  },
+  {
+   "module": "Transactions.lean",
+   "name": "field reads",
+   "states": "Not a structure field: no structure in the module (Scope, Installation, Request, Observation, Outcome) has a field named reads. `reads : Readings` is an explicit parameter (or section variable) of gate, passGate, execute and the theorems about them: the domains' reports passed to the gate.",
+   "shape": "PARAMETER of type Readings (Domain -> Option Observation), not a field",
+   "beside": "none found beyond Readings and readSupport above; also readFaults (the fault envelope for reporters) and readBad / readFaithful / readResponses as hypothesis names in the certificates-available theorems.",
+   "docstring": "none"
+  },
+  {
+   "module": "TreeSearch.lean",
+   "name": "TreeSearch.read",
+   "states": "For a search configuration s, the Scan made of its verdict (found t if a ticket is held, exhausted if the frontier is empty, pending otherwise) and its count of inspections made. It is a projection of the configuration onto the scan's two fields; no dependence relation is stated.",
+   "shape": "FUNCTION Search -> Scan, read s = <verdict s, s.inspected>",
+   "beside": "No read-free alternative name. Theorems tying it to the scan: orbit_reads_scan (read (Law.orbit advance <f, none, 0> n) = scan n f), run_reads_scan and run_reads_discover (along every run from the start, read (r.state n) = scan n f / discover n root), found_without_reading_rest. Here 'read' means 'the scan a configuration corresponds to'.",
+   "docstring": "\"What a configuration reads as a scan.\""
+  },
+  {
+   "module": "Unread.lean",
+   "name": "Learning.Cue.read",
+   "states": "For an occasion i = (cue, content) : Bool x Bool, the proposition that the cue is up, i.1 = true. It marks the occasions that serve as the data D: the selection is through agreement on them (Training.AgreeOn read), and Determines / Free are taken with read as the data.",
+   "shape": "PREDICATE on Occasion (Bool x Bool), i.e. a SET of occasions",
+   "beside": "It is an instance of the data predicate D in Learning.Determines, Learning.Free and Training.AgreeOn (Learning.lean). Theorems: Cue.seen_twin (with the identity lumping, a selected twin agreeing on every occasion where read holds and acting otherwise at (false, true)), Cue.unseen_fixed (Determines (Lumped (fun i => i.2)) read (false, true), via lumped_determines).",
+   "docstring": "\"Read exactly where the cue is up.\""
+  },
+  {
+   "module": "Unread.lean",
+   "name": "Unread (as the module uses it)",
+   "states": "The module defines no declaration named Unread. An 'unread occasion' is an input x with not D x (not R x) for the data predicate; the module's content is two relations at such x from Learning: Determines (Lumped pi) D x (within functions constant on pi's classes, equal values on D force equal values at x), which holds exactly when some d with D d has pi d = pi x (determines_lumped_iff, for D a list and two distinct values); and Free (Lumped pi) D x (any member's values on D combine with any value at x) when no d in D shares x's pi-class (free_lumped). In determines_iff_not_not, `unread` is only a hypothesis name for not P.",
+   "shape": "no definition; the relations are PREDICATES Determines and Free on (class of functions, data predicate, input) from Learning.lean",
+   "beside": "Learning.Determines, Learning.Free, Learning.Lumped, Training.Through, Training.AgreeOn. Theorems: free_lumped (no data in x's class -> Free (Lumped pi) D x), twin_selected (from free_lumped and Training.unselected_beyond_data), lumped_determines and determines_lumped_iff (Learning.lean), determines_iff_not_not (one occasion, data where P: Determines iff not not P).",
+   "docstring": "module title: \"What readings fix of what is not read (未读之定)\""
+  },
+  {
+   "module": "Unrolling.lean",
+   "name": "Learnable.ReadOff",
+   "states": "For every configuration s, the feature val at s equals G applied to the sequence k ↦ some (reg (orbit of next from s, k steps on)). The feature is a function of the future of s under the law taken through the map reg: val = G ∘ (future through reg). Direction: val is determined by (factors through) that future sequence.",
+   "shape": "PREDICATE on (next : S → S, reg : S → R, val : S → V, G : (Nat → Option R) → V); a Prop: ∀ s, val s = G (fun k => some (reg (Law.orbit next s k)))",
+   "beside": "Law.SameFuture (Recurrence.lean: ∀ n, o (orbit next s n) = o (orbit next s' n)) names the equivalence that ReadOff factors through. No theorem states ReadOff ↔ (SameFuture → val equal). The ties are: Learnable.learnable_iff (Learnable.lean), where learnability ↔ features agreeing from some step on across Law.SameFuture; Learnable.reads_of_agree, where agreement across SameFuture gives val = fromWorld … of the future; Learnable.learnable_iff_reading, where learnability ↔ ∃ G (respecting pointwise equality) with val equal to G of the future from some step on, which is the eventual form of ReadOff. ReadOff itself is used only in reading_predicts.",
+   "docstring": "A feature is read off the future through the map by `G`: at every configuration, it is `G` of the values through the map along the orbit from there."
+  },
+  {
+   "module": "Unrolling.lean",
+   "name": "Learnable.readAt",
+   "states": "Given a list l of configurations and a sequence f : Nat → Option R, it returns the first x in l such that the first 2|l| − 1 entries of f equal the first 2|l| − 1 values through reg along the orbit starting from orbit next x |l|. It returns none if no x in l fits. It is a lookup: a configuration of the list whose future |l| steps on, through the map, matches f on a prefix of length 2|l| − 1.",
+   "shape": "FUNCTION from (next : S → S, reg : S → R, l : List S, f : Nat → Option R) to Option S, built with Identification.firstFit over l",
+   "beside": "Used in fromWorld (val of the found x, |l| steps on, with default v₀). The match on a 2|l| − 1 prefix is turned into Law.SameFuture by Law.sameFuture_iff_below inside Learnable.reads_of_agree. No name without 'read' for this lookup.",
+   "docstring": "The configuration of `l` read for a future: the first whose configuration as many steps on as the list is long has that future through the map before `2N - 1`."
+  },
+  {
+   "module": "Unrolling.lean",
+   "name": "Learnable.reading",
+   "states": "Given G : (Nat → Option R) → V and a prefix r : List R, it returns some (G applied to the sequence k ↦ what the lasso-elimination extrapolation, unrolled on its own proposals, proposes k steps ahead of r). It is the extrapolation that runs the fixed lasso extrapolation forward without end and applies G to the result.",
+   "shape": "FUNCTION from G : (Nat → Option R) → V to an extrapolation List R → Option V: reading G r = some (G (Learning.ahead (Learning.byElimination Learning.lassos) r))",
+   "beside": "No name without 'read' for it. Ties: Learnable.reading_predicts (ReadOff + G respecting pointwise equality → PredictsFrom … (reading G) s from Identification's bound on); Learnable.reading_predicts_from (the eventual version); Learnable.learnable_iff_reading (an extrapolation exists ↔ some G works from some step on; the ← direction uses reading G); LearnableRuns.learnable_iff_reading (along runs). The lemma reads_of_agree is a theorem about fromWorld, not about reading.",
+   "docstring": "The extrapolation given a reading of futures: it unrolls the extrapolation by elimination over the lasso candidates and proposes the reading of what that proposes ahead."
+  },
+  {
+   "module": "Weightings.lean",
+   "name": "Weighting.ReadsSetsOn",
+   "states": "On the pair a, b: R ranks a above b exactly when O ranks kept a above kept b, and R ranks b above a exactly when O ranks kept b above kept a. On that one pair, the ranking R of presentations agrees, both ways, with the order O on courses composed with kept. The relation is R ↔ O ∘ kept, restricted to {a, b}.",
+   "shape": "PREDICATE on (kept : P → X → Bool, R : P → P → Prop, O : (X → Bool) → (X → Bool) → Prop, a b : P): (R b a ↔ O (kept b) (kept a)) ∧ (R a b ↔ O (kept a) (kept b))",
+   "beside": "No name without 'read' in Weightings or its imports (Boundaries, GroupEnding). It is a pair-local 'R factors through kept'. Theorems using it: Weighting.reads_increasingAt, Weighting.narrower_above_net, Weighting.reads_ranksNet, Weighting.reads_increment_of, Weighting.reads_increment. No theorem derives it from ReadsSets, although it follows by instantiation. Also, in this docstring '`R b a` reads \"`a` is ranked above `b`\"' is a notation gloss, a different sense of 'read'.",
+   "docstring": "A ranking of presentations reads the sets on the pair `a`, `b`: it ranks them, each way, as the order `O` ranks the courses they keep."
+  },
+  {
+   "module": "Weightings.lean",
+   "name": "Weighting.ReadsSets",
+   "states": "For every pair a, b: R ranks a above b exactly when O ranks kept a above kept b. The ranking of presentations is the order on courses pulled back along kept, so two presentations that keep the same course are ranked alike. Wording and order of telling make no difference.",
+   "shape": "PREDICATE on (kept : P → X → Bool, R : P → P → Prop, O : (X → Bool) → (X → Bool) → Prop): ∀ a b, R b a ↔ O (kept b) (kept a)",
+   "beside": "No name without 'read' (no DependsOnlyOn-style name in this module). It is 'R depends only on kept / factors through kept'. Theorem: Weighting.reads_ranksNet_widens (ReadsSets under ranksNet with every listed item weighing above zero → never a narrowing above its widening). No named theorem ReadsSets → ReadsSetsOn.",
+   "docstring": "A ranking of presentations reads the sets: on every pair it ranks as `O` ranks the courses kept, so it depends on the courses alone, not on how they are told."
+  },
+  {
+   "module": "Pace.lean",
+   "name": "reads (parameter of Pace.turn / step / paced)",
+   "states": "reads : Nat → Bool is a schedule of step counts. At a step t where reads t = true, the rule's next value is h (x t) (g t), a function of the fast configuration and the rule. Where reads t = false, the rule's next value is g t, unchanged. 'A reading step' is a t with reads t = true. 'A rule that never reads' is ∀ t, reads t = false, so the rule is constant (rule_kept) and the same for any two starting fast configurations (rule_unreached).",
+   "shape": "FUNCTION Nat → Bool (the set of update steps); turn : Bool → S × R → S × R selects between (f x g, h x g) and (f x g, g)",
+   "beside": "No name without 'read'. Theorems: Pace.rule_kept, Pace.never_reads_course, Pace.rule_unreached, Pace.never_reads_lost/merged/loses, Pace.rule_until_reading, Pace.rule_alike_until_reading, Pace.rule_at_reading, Pace.paced_stretch ('the rule is not read' = reads false over a stretch), Pace.Copying.rule_parts.",
+   "docstring": "and the rule changes only at reading steps, `g (t + 1) = h (x t) (g t)` where `reads t` and `g (t + 1) = g t` elsewhere."
+  },
+  {
+   "module": "Pace.lean",
+   "name": "'neither level's step reads the fast configuration' (hypotheses of turn_byRule, byRule_reabsorbed)",
+   "states": "∀ x x' g, f x g = f x' g and ∀ x x' g, h x g = h x' g. The next fast configuration and the next rule are the same for any two fast configurations with the same rule, so they depend on the rule alone. Here 'reads' means 'depends on', a different relation from the update schedule above.",
+   "shape": "PREDICATE (two hypotheses) on f : S → R → S and h : S → R → R: constancy in the first argument",
+   "beside": "Pace.byRule_reabsorbed is stated to be the instance of Law.perturbation_reabsorbed (Becoming.Capture), with the rule and step count as that law's rule. Its premise is a 'next depends only on the rule' condition. Pace names no DependsOnlyOn-style predicate for it.",
+   "docstring": "Where neither level's step reads the fast configuration, one turn does not either."
+  },
+  {
+   "module": "Pace.lean",
+   "name": "'read through a map' / 'read whole' (heldCourse, paced_held, stretch_fixed, whole_fixed)",
+   "states": "'Read through o' means composed with a map o : S → O: heldCourse f g o x t = o (state t of the run of y ↦ f y g from x). 'Read whole' means the course of configurations itself, with no map: whole_fixed concerns (Law.run next s).state directly. pace_law's 2N − 1 bound is for courses composed with a map; whole_fixed's N + 1 is for uncomposed courses. 'What one level reads of another' in the docstring is this composition.",
+   "shape": "FUNCTION heldCourse : (S → R → S) → R → (S → O) → S → Nat → O; the 'whole' case is the identity map (no definition)",
+   "beside": "No name without 'read'. Theorems: Pace.paced_held, Pace.held_fixed (instance of Identification.bounded_agree), Pace.stretch_fixed, Pace.pace_law, Pace.whole_fixed, Pace.whole_fixed_exact.",
+   "docstring": "The course a rule generates where it is held from the fast configuration `x`, read through `o`: the run of the law the held rule gives."
+  },
+  {
+   "module": "Pace.lean",
+   "name": "'reads … only through what a pool reads' (rule_through_pool, its variable named read)",
+   "states": "Hypothesis ∀ x g, h x g = H (read x) g, with read : S → O. The rule update factors through a map of the fast configuration, so h depends on x only via read x. The theorem: at an update step r, two courses with the same rule at r and equal read-values of their fast configurations at r have the same rule at r + 1.",
+   "shape": "PREDICATE (factorisation hypothesis) on h : S → R → R, a map read : S → O and H : O → R → R; theorem conclusion is an equality of rules",
+   "beside": "No name without 'read'. It is a factor-through (DependsOnlyOn-like) premise stated inline; no tie to Mechanism.DependsOnlyOn (not imported). Theorem: Pace.rule_through_pool, which uses rule_at_reading.",
+   "docstring": "Where the rule reads the fast configuration only through what a pool reads of it (`h x g = H (read x) g`), two courses with one rule at a reading step, whose fast configurations the pool reads alike there, have one rule after it"
+  },
+  {
+   "module": "Selection.lean",
+   "name": "Web.SelectsThrough",
+   "states": "For all level histories l, l': if l and l' are alike through f's couplings at every step up to t (AlikeThroughUpTo obs f l l' t), then select l ↔ select l'. The selection gives the same verdict on histories that agree on what couples into f up to t. It is invariant under, or factors through, that equivalence.",
+   "shape": "PREDICATE on (W : Web F C, obs : F → C → Prop, f : F, t : Nat, select : (Nat → C → Nat) → Prop)",
+   "beside": "It is defined from AlikeThroughUpTo (Testing.lean). Tie: Web.selects_alike_iff ((∀ select, SelectsThrough … select → (select l ↔ select l')) ↔ AlikeThroughUpTo obs g l l' t); Web.class_selects; Web.separates; Web.SelectsThrough.excludes_iff. Nat-valued analogue: Web.ScoresThrough; group version Web.SelectsThroughAll / AlikeThroughAll (SelectsThrough.all). Closure: SelectsThrough.later, .widen, .not, .and. The parameter is named obs ('observe'), though it means 'c couples into g'.",
+   "docstring": "A selection is through `f`'s couplings up to `t`: histories alike through `f`'s couplings up to `t` are selected alike."
+  },
+  {
+   "module": "Selection.lean (defined in Testing.lean)",
+   "name": "Web.AlikeThroughUpTo",
+   "states": "For every step s ≤ t, AlikeThrough obs g l l' s holds. AlikeThrough at s means W.Admits (l s) s g ↔ W.Admits (l' s) s g, so the two histories admit g alike at s. It also requires l s c = l' s c for every condition c with obs g c, so every condition coupled into g has the same level in both histories at s. It relates two histories l, l' : Nat → C → Nat relative to formation g and step t.",
+   "shape": "PREDICATE (binary relation on level histories, parameterised by W, obs : F → C → Prop, g : F, t : Nat): ∀ s, s ≤ t → W.AlikeThrough obs g l l' s",
+   "beside": "It is itself the non-'read' name for the equivalence that 'a selection reads' summarises. It is an equivalence: AlikeThrough.refl, AlikeThroughUpTo.symm, AlikeThroughUpTo.trans. It defines Web.Excludes and Web.ClassThrough (Testing.lean). Tied to selection by Web.selects_alike_iff, Web.separates and Web.scores_alike_iff.",
+   "docstring": "Alike through `g`'s couplings at every step up to `t`."
+  }
+ ],
+ "families": {
+  "families": [
+   {
+    "relation": "What a step gives (an exchange law's take and give, a member's act, a rule's next value, a level's next value) is the same wherever a named part of the configuration or of the level history is the same, so nothing outside that part makes a difference to it.",
+    "proposed_words": "depends only on; goes alike. In the package: Mechanism.DependsOnlyOn, Laws.GoAlike, PartDependsOnlyOn, ExchangeLaw.GivesAlike, Nonanticipating (with AgreeUpTo), ExchangeLaw.Through, InsensitiveAt, Learning.Lumped. Proved ties exist for Unread -> GoAlike (goAlike_of_unread), ReadsBefore -> Nonanticipating, ReadsThroughOwn -> Through, ReadsThrough <-> Through, ReadsFinitely -> Nonanticipating, ReadsAt/ReadsInto <- Through.",
+    "members": [
+     "BeyondCoupling · ActReadsWithin (3)",
+     "Cascade · ReadsOnlyActsFrom (9)",
+     "ClosedCapture · Unread (10)",
+     "Closing · ReadsBefore (17)",
+     "Continuity · ReadsAdjacent (22)",
+     "CountedCodes · ReadsCountByCount (27)",
+     "Interleavings · LocalLaw.reads (39)",
+     "Observation · ExchangeLaw.ReadsInto (48)",
+     "PoolFromCourse · ReadsThroughPresent (54)",
+     "ReachedCascade · ReadsOnlyActsAlong (65)",
+     "ReadingsPersist · ExchangeLaw.ReadsThroughOwn (85)",
+     "RegimeMargin · ReadsPointwise (96)",
+     "Regulation · ReadsLate (97)",
+     "Sensitivity · ReadsWithin (105)",
+     "Sensitivity · ReadsFinitely (106)",
+     "Thresholds · ReadsAt (109)",
+     "Thresholds · ReadsBelow (110)",
+     "Training · ReadsThrough (115)",
+     "Pace · 'neither level's step reads the fast configuration' (129)",
+     "Pace · rule_through_pool premise h x g = H (read x) g (131)"
+    ],
+    "count": 20,
+    "note": "One relation, four ways the 'named part' is cut, which could be told apart in the wording: by time (17, 97, 105, 106: levels up to t, or up to t minus a delay), by place (22, 39, 48, 109, 110: neighbours, touched relata, marked conditions, a stock above its threshold), by coupling (85, 115, 3: what couples into the formation or the region), and by one argument dropped (9, 10, 54, 65, 129, 131: 'does not depend on' what lies beyond the share, on the own coupling, on the fast configuration). 27 and 96 are pointwise extensionality stated only because funext is avoided; they restrict nothing. 9 holds on all inputs and 65 only at the history the world produces. Most ties to DependsOnlyOn itself are by shape, not by theorem (Mechanism is often not imported)."
+   },
+   {
+    "relation": "A verdict taken of a whole course, candidate or configuration (a selection, an answer, a score, a feature, a ranking, the truth of a statement) is the same on any two that a stated alikeness or map does not tell apart.",
+    "proposed_words": "alike through; selects through. In the package: Web.AlikeThrough / AlikeThroughUpTo / AlikeThroughAll (133 is itself the word), Web.SelectsThrough / SelectsThroughAll, Web.ScoresThrough, Learning.Training.Through, Learning.Lumped, Law.SameFuture, SameCourses, Readout.ThroughParts; for the two statement rows the root's 'makes no difference to'.",
+    "members": [
+     "BeyondCoupling · ReadOffContinuations (4)",
+     "BeyondCoupling · ReadOffCouplings (5)",
+     "FallibleInquiry · read with premise through, and Witness.read (31)",
+     "Latency · Relay.readAt (41)",
+     "TimedResponse · Delayed.readAt (112)",
+     "Training · Training.Reads (114)",
+     "Selection · Web.SelectsThrough (132)",
+     "Selection/Testing · Web.AlikeThroughUpTo (133)",
+     "Unrolling · Learnable.ReadOff (123)",
+     "Weightings · Weighting.ReadsSetsOn (126)",
+     "Weightings · Weighting.ReadsSets (127)",
+     "Readout · ReadsDirectly (94)",
+     "PremiseWitnesses · ReadsNoOrder (61)",
+     "Significance · ReadsOnlyDynamics (108)"
+    ],
+    "count": 14,
+    "note": "Same shape as the first family (constant on classes); kept apart because the thing that goes alike is a verdict on a whole course, not what a step gives. Three things could make it more than one: (a) 61 and 108 are statements whose truth a free slot (the order, the significance) makes no difference to, with 'alike' meaning the same dynamics; (b) 126 and 127 are iff, so the ranking is the pull-back along kept, stronger than factoring; (c) 94 runs the other way round from its sibling ThroughParts: the part is alike wherever the assigned function's value is alike (the function tells apart whatever the part tells apart). 41 and 112 are instances of the variable in 31; no theorem proves 41 respects AlikeThroughUpTo."
+   },
+   {
+    "relation": "A named thing's level or state enters another's exchange or next state, either as a relation, schedule or strength that is supplied, or because changing the first alone changes the second.",
+    "proposed_words": "couples into; makes a difference to. In the package: CouplesAt, Couples, Upstream, OnLoop, Web.CoupledInto, CoupledIntoAt, the parameter obs, ExchangeLaw.RespondsWithin (strength), ExchangeLaw.carrying, ExchangeLaw.Sensitive, ¬Learning.Lumped, Tied (and its failure).",
+    "members": [
+     "Closing · ExchangeLaw.carryingRead (18)",
+     "Closing · Threshold.reading (19)",
+     "FormedLoops · readOff (32)",
+     "Frequency · Frequency.readsLate (34)",
+     "Latency · Relay.reads (40)",
+     "Observation · readCouplings (49)",
+     "Observation · Observation.Measure.reads (50)",
+     "SelectionPool · ReadsCouplings (104)",
+     "Thresholds · restrictReads (111)",
+     "HexagramSequences · Reads (36)",
+     "HexagramSequences · readsb (37)",
+     "LumpedSeeking · Agree.readBoth (45)",
+     "LumpedSeeking · Agree.pickReading (46)",
+     "LumpedSeeking · Agree.readCourse (47)"
+    ],
+    "count": 14,
+    "note": "Two families if cut strictly. Supplied coupling (18, 19, 32, 34, 40, 49, 50, 104, 111): a relation obs, a Boolean schedule of marked levels, or a strength; the word is 'couples into' and the package has it (CouplesAt, CoupledInto). Coupling shown by a difference (36, 37, 45-47): flipping q changes k; an experiment's weights differ between two hypotheses; the word is 'makes a difference to' (Sensitive, not Tied). ReadsFinitely.least_coupling (Sensitive is the least coupling a law goes through) is the proved bridge between the two. 18, 19 and 32 are strengths computed from the level history itself (the coupling switches on at a threshold). 46 and 47 are data that only serve 45."
+   },
+   {
+    "relation": "A web (who is active, who draws on what, who requires what) is built from a flow or from a law's course: active exactly where it exchanges, drawing exactly where it takes, requiring a condition exactly where its exchange must stop once that level falls below the need.",
+    "proposed_words": "For the slots: Flow.Exchanging, positive take, ExchangeLaw.RespondsBelow / MayRespondBelow, Web.Dependent. For the construction as a whole there is no word without the one in question ('the web derived from the exchange', 'the web the course shows').",
+    "members": [
+     "ExchangePremises · ExchangeRelation.readWeb (30)",
+     "OverExchange · World.ReadOffExchange (52)",
+     "Reading · Flow.readOff (72)",
+     "Reading · ExchangeLaw.readWeb (73)",
+     "Reading · ExchangeLaw.readWorld (74)"
+    ],
+    "count": 5,
+    "note": "The requirement slot is itself a 'makes a difference' relation (a level changed alone stops the exchange), so this family contains the third one inside it; RespondsBelow is not tied to Sensitive by any theorem. 52 is the existence statement (some relation generates this world), the others are constructions."
+   },
+   {
+    "relation": "The slower level's next value (the rule) is given as a function of the faster level's configuration: of the share alone, of the loss beyond it, of a pooled or windowed mix, or of nothing.",
+    "proposed_words": "No word of its own for the map. Around it: Pace.turn / paced (the slot h), Drawn.pool, ClosedCapture.join, Stands K (the window), Ideals.Monotone (same relation as ReadsShare for a one-argument map, not tied by theorem). Plain names offered by the rows themselves: 'the share's rule update lifted to the pair', 'the constant rule hi', 'the rule as a function of the loss', 'the population-weighted pool of u and v', 'the paired update'.",
+    "members": [
+     "ClosedCapture · joinRead (11)",
+     "ClosedCapture · closedRead (12)",
+     "ClosedCapture · lossRead (13)",
+     "ClosedCapture · read (14)",
+     "ClosedCapture · readers (15)",
+     "ClosedCapture · poolRead (16)",
+     "DrawnShaping · drawnRead (29)",
+     "PoolFromCourse · boundRead (55)",
+     "PoolFromCourse · readLoss (56)",
+     "PoolFromCourse · windowRead (57)",
+     "ReadInTime · Window.readFrom (66)",
+     "RuleCapture · ReadsShare (101)",
+     "RuleCapture · pairReading (102)"
+    ],
+    "count": 13,
+    "note": "These are maps, not relations; the relation each one bears is stated elsewhere: 'does not depend on what lies beyond the share' is Unread and ReadsThroughPresent (first family), 'no carrier of the beyond comes back' is NotReadmitted (kept family). 101 ReadsShare is the one relation here and is a different one: order-preserving in the share whatever the prior rule (monotone), which would make it a family of one. 12 and 56 are constant maps, so the word is doubly off for them. 15 also names a hypothesis (order.le v u) in Drawn. 66 is a course, named for the step from which the loss enters the pool."
+   },
+   {
+    "relation": "A step, a condition or an occasion lies inside or outside the set that a schedule visits or that a selection is fitted on.",
+    "proposed_words": "ReadingSchedule.Within (every stretch of a steps contains a visit), 'schedule', 'update step'; Learning.Determines, Learning.Free, Training.AgreeOn, the data predicate D.",
+    "members": [
+     "ReadingSchedule · Unread (75)",
+     "ReadingSchedule · Code.reader (76)",
+     "Pace · reads (schedule parameter of turn/step/paced) (128)",
+     "Unread · Learning.Cue.read (121)",
+     "Unread · Unread as the module uses it (122)"
+    ],
+    "count": 5,
+    "note": "Two families if cut by kind: steps in time (75, 76, 128: when a condition is visited, when the rule is revised) and occasions in a data set (121, 122: where the selection was fitted, and what is fixed or free outside it). 75 is a homonym of ClosedCapture.Unread (first family). 128 is a different relation from 129 in the same module."
+   },
+   {
+    "relation": "A map sends each configuration (or mode, or route point) to a value and merges some of them, and a course, a family or another function is taken through that map; where two such maps of one thing exist, they may or may not agree.",
+    "proposed_words": "Learning.Lumped (for what goes alike across the merged), Parting.course val r, Learning.prefixOf, the projection π of PartDependsOnlyOn, Readout.Decodes, SingleValued, Adequate and the inline 'forget' factoring, Revising.alike, Registration.Keeps, Contextual / Agree / Glues, Flow.Balances.",
+    "members": [
+     "AssurancePlans · leftReading (1)",
+     "AssurancePlans · rightReading (2)",
+     "BlanketCouplings · agentReads (6)",
+     "BlanketCouplings · readFamily (7)",
+     "BlanketCouplings · worldReads (8)",
+     "ContextualRuns · readings (21)",
+     "Readout · Reading (93)",
+     "Revision · read (98)",
+     "TreeSearch · read (120)",
+     "Pace · 'read through a map' / heldCourse (130)",
+     "Readings · ChangeReading (77)",
+     "Readings · Flow.changeReadings (78)",
+     "Routes · routeRead (100)"
+    ],
+    "count": 13,
+    "note": "This is the map itself, the thing the first two families are stated relative to; the map carries no relation alone. 77 and 78 could be a family of their own: two accounts of one change (by standing, by exchange) that agree exactly where the flow balances. 7, 21, 93 and 130 are images or courses through the map; 1, 2, 6, 8, 98, 120, 100 are the maps. 100 is weakly placed (an end value fed to a sum)."
+   },
+   {
+    "relation": "A code or form stands for a configuration, a sense or an answer, and the code-side relation gives back what the coded thing answers.",
+    "proposed_words": "Presentation.encode, answers, Exact, Joint, probes, TellsApart, Formula.eval, records / observe; List.mapM in shape for 103.",
+    "members": [
+     "CodeAcquisition · readEvidence (20)",
+     "Fragments · readJoint (33)",
+     "Presentations · Presentation.read (63)",
+     "PropositionIdentity · Formula.read (64)",
+     "Segmentation · readAll (103)",
+     "SharedCodes · ReadsAs (107)"
+    ],
+    "count": 6,
+    "note": "64 is evaluation of a formula with one slot filled (Formula.eval is the same thing by definition) and sits here only loosely. 107 is plain equality c n = x. No dependence is stated by any member."
+   },
+   {
+    "relation": "A value is taken at a position or step given by an index map: a token at a site, a quantity at a position in a list, a flow or a level at the step another clock's step corresponds to.",
+    "proposed_words": "Copying.tick / steps and Supplies (the pending-list counterparts), Web.sample, Stutter and Stutter.Moves, Tower.refine, pick, the siblings beforeAt / afterAt / cellAt.",
+    "members": [
+     "Copying · Reads (23)",
+     "Copying · readStep (24)",
+     "Copying · readSteps (25)",
+     "Copying · readTick (26)",
+     "IdleRemoval · Flow.readAt (38)",
+     "OneStep · readAt (51)",
+     "PremisesTogether · IdleStep.reading (62)",
+     "Tower · Tower.reads (113)"
+    ],
+    "count": 8,
+    "note": "Two families if cut by kind: copying from a template, where the site map supplies each token attached (23-26), and reindexing between clocks (38, 62, 113), with 51 a bare evaluation at a position. 62 and 113 are the index maps themselves, 38 and 51 the value taken along one."
+   },
+   {
+    "relation": "Each member of a line carries a label; the label picks which exchange law governs that member, and an offspring's label is its parent's, or its parent's revised by what the parent met.",
+    "proposed_words": "Generations.RevisesBy (InheritsReading is its identity case, by Flow.inheritsReading_iff), ExchangeLaw.withAct, carrying, ClosedFrom, revisedIn / revisedOut, lineOf_carries, draw / drawS / clears (the only content the labels have).",
+    "members": [
+     "ReadingsPersist · Flow.InheritsReading (83)",
+     "ReadingsPersist · Habitat.Reading (84)",
+     "ReadingsPersist · ExchangeLaw.byReading (87)",
+     "ReadingsPersist · Habitat.readOf (88)",
+     "ReadingsSpread · Commons.Reading (89)",
+     "ReadingsSpread · read (Revised.read, Contact.read, parameter read) (90)",
+     "ReadingsSpread · Contact.readMet (91)",
+     "ReadingsSpread · Commons.readOf (92)"
+    ],
+    "count": 8,
+    "note": "Two relations on one object: the label sets the conduct (87, with 84, 88, 89, 92 as its types and tables) and the label passes down the line (83, with 90, 91). The label has no content beyond two numbers that enter the conduct; nothing in it faces anything. 87 is a homonym of HeldForReading.byReading."
+   },
+   {
+    "relation": "Two courses first come apart, in a group's admissions or under a family of selections, at a step where the losing course can still come back; a formation that takes and gives nothing and has the greater need is where they come apart first, and a selection can hold on a course that ends such a line.",
+    "proposed_words": "comes back. In the package: Web.FirstApart, TellsApartAt, Recoverable, NoReturnAt, Web.Admits with requires / need (only_habitat_near, only_habitat_mid), RemovesLine, StandsLate. 'Gauge' is in docstrings only.",
+    "members": [
+     "ReadOffInTime · Web.ReadableInTime (67)",
+     "ReadOffInTime · Web.ReadsInTime (68)",
+     "ReadOffInTime · FourReaders.Formation.near / .mid (69)",
+     "ReadingsPersist · RemovesItsReaders (86)"
+    ],
+    "count": 4,
+    "note": "Three things under one head: the timing relation (67, 68: first apart before the point of no return), the formation whose admission shows it (69, two constructors, no definition), and the ending of a line under a selection (86). In 86 the set called readers is a free argument, tied to the selection by nothing in the definition; only the witness makes it the line fed while the habitat stands."
+   },
+   {
+    "relation": "A region of configurations is closed under the step: a state that admits the world goes on admitting it after every move and update, whatever is absent stays absent, and whatever is settled at a step stays as it was.",
+    "proposed_words": "closed under; goes on through. In the package: «闭» (GrammarLaws), Frame.ClosedUnder, Frame.Invariant, «及» (reach), LeadsInto, closed_of_keptBy, kept_iff_closed; for 44 the inline 'realization constant from τ on' (readsAt_iff_settled).",
+    "members": [
+     "ReadingLoop · Sound (79)",
+     "ReadingLoop · KeptBy (80)",
+     "ReadingLoop · Possible (81)",
+     "ReadingLoop · the module's B : M → W → Prop and Loop (82)",
+     "PoolFromCourse · NotReadmitted (53)",
+     "LossMatching · Frame.ReadsAt (44)"
+    ],
+    "count": 6,
+    "note": "79-82 are one relation between a state and the worlds it admits; 53 is closure of an absent region under the two-level step (the letters are inside 're-admitted', though its docstring does mean the carriers of what lies beyond the share); 44 is constancy from a step on, placed here weakly and could stand alone as 'settled'. Only 80 is tied to «闭» by theorem; 53 and Frame.ClosedUnder share a shape without a tie."
+   },
+   {
+    "relation": "One role of a joint law holds its own weights and values over the candidates and answers go or off at each candidate by comparing what going on gains with what it loses.",
+    "proposed_words": "byRule (byReading is byRule of the test gain < loss, by rfl), RevisionPlans.held with its rule argument r, BestAt, Model, Holder (the counterpart role), joint, answerOf.",
+    "members": [
+     "HeldForReading · byReading (35)",
+     "ListingValuation · Reader (42)",
+     "ListingValuation · WeightsApart.reading, OneListing.reading (43)",
+     "RevisionPlans · reading (99)"
+    ],
+    "count": 4,
+    "note": "35 and 99 are the same rule, decide (gain c < loss c). 42 and 43 are the role's part and its model, named by role from the off-switch literature's human; this is the one family where the word names a party standing over against a candidate, so it is the nearest to a subject facing an object."
+   },
+   {
+    "relation": "Each domain gives, or fails to give, a report of an installation's epoch, serial, address and key, and the report counts as support where it equals what the request expects.",
+    "proposed_words": "Transactions.observed, expected, the premise faithful, certificate; the twin on the issuing side is named without the word: Approvals, approvalSupport, faithfulApprovals, issueResponses / issueFaithful, physicalApprovals.",
+    "members": [
+     "PooledEnvelopes · physicalReads (58)",
+     "PooledEnvelopes · readResponses, readFaithful, reads (hypotheses) (59)",
+     "Reconfiguration · survivingReads (95)",
+     "Transactions · Readings (116)",
+     "Transactions · faithfulReads (117)",
+     "Transactions · readSupport (118)",
+     "Transactions · reads (parameter) (119)"
+    ],
+    "count": 7,
+    "note": "59 and 119 are hypothesis and parameter names, not definitions. A plain word ('report') is available from the rows' own descriptions; the package uses none."
+   },
+   {
+    "relation": "Units draw from a supply and raise a level toward a set level, age, end at a span, and are themselves made again from a source.",
+    "proposed_words": "St.ages, Present, Source (given, supply, level, none), BuysTime, «闭» (supplied r) Present; 'replenish' or 'intake' for the arithmetic (min(l + k, m) below m).",
+    "members": [
+     "ReaderRebuilding · read (70)",
+     "ReaderRebuilding · reader (St.ages, Present) (71)"
+    ],
+    "count": 2,
+    "note": "70 is a capped addition and 71 is not a declaration (the field is ages). Nothing here depends on, or stands over against, anything; it is a regenerating holder of a stock."
+   }
+  ],
+  "against_the_six": "Family numbers below follow the order of the families list (1 step depends only on; 2 verdict alike through; 3 couples into / makes a difference; 4 web built from an exchange; 5 the rule's revision as a map; 6 inside or outside what is visited or fitted on; 7 a map that merges; 8 code stands for; 9 taken at a position or step; 10 label a line carries; 11 apart while return is open; 12 kept / closed under; 13 role answering go or off; 14 reports; 15 replenishing units).\n\n(1) A step's dependence on a level = family 1, the largest (20 rows). It is narrower than the table: it does not cover family 2 (a verdict on a whole course going alike, 14 rows), and 'which level' is family 3 (the coupling relation, schedule or strength itself).\n(2) The kept relation between a state and the worlds it admits = family 12 (rows 79-82). The table adds two rows of the same closure shape from other modules: PoolFromCourse.NotReadmitted and LossMatching.Frame.ReadsAt.\n(3) What a rule's revision counts (pool and window) = family 5 (13 rows, from ClosedCapture, DrawnShaping, PoolFromCourse, ReadInTime, RuleCapture). Its relations are filed elsewhere: ClosedCapture.Unread and ReadsThroughPresent in family 1, NotReadmitted in family 12, Pace's schedule of revision steps in family 6. ReadsShare (monotone in the share) sits in family 5 as a different relation.\n(4) What raises a level toward a set level and is itself rebuilt = family 15 (2 rows).\n(5) A variant a line carries that sets how the carrier acts = family 10 (8 rows); the table shows it holds two relations (the label picks the law; the label passes or is revised down the line).\n(6) The gauge = family 11, but only row 69 is the gauge; rows 67-68 are the timing relation (first apart before no return) and 86 is a selection holding on a course that ends a line.\n\nWhich of the six the table does not show: none is absent; all six have rows. Three rest on rows that are not declarations carrying the word: (6) the gauge is two constructors, with 'gauge' in docstrings only; (4) the units are the field St.ages with Present; (2) the admitted-worlds predicate B is a parameter of the module.\n\nWhich families the six leave out: nine of the fifteen, 76 of the 133 rows: family 2 (verdict alike through: SelectsThrough, ReadOffCouplings, Training.Reads, ReadsSets, ReadsOnlyDynamics), family 3 (couples into / makes a difference: Relay.reads, readCouplings, HexagramSequences.Reads), family 4 (the web built from an exchange: Flow.readOff, readWeb, readWorld), family 6 (schedule and data coverage), family 7 (the merging map and courses through it), family 8 (code and what it stands for), family 9 (value taken at a position or step), family 13 (the role answering go or off) and family 14 (reports of an installation). Family 2 and family 3 are the ones a five-module cut most misleads about, since together with family 1 they are the dependence sense proper (48 rows) and the package has words for all three.",
+  "not_placed": [
+   "Dispatch · reread (28): a cost charge for checking a route's address again (Actuation.draw of length+1); no relation of any family is stated.",
+   "PooledEnvelopes · poolReady, every_candidate_ready_pool_not (60): false match, the letters inside 'ready'.",
+   "Unrolling · Learnable.readAt (124): a first-fit lookup of a listed configuration whose future matches a prefix; near family 2 (it serves SameFuture) and family 9 (a lookup), but states neither.",
+   "Unrolling · Learnable.reading (125): a constructed extrapolation (G applied to the unrolled lasso prediction); it serves ReadOff (family 2) but is a construction with no relation of its own."
+  ],
+  "summary": "Sorted by the relation stated, the 133 rows fall into fifteen families, six of which split again on a strict cut, so the one word stands for about fifteen to twenty relations; four rows are not placed (one false match, one cost charge, two constructions). The largest is 'what a step gives depends only on a named part' (20 rows), and with its two neighbours, 'a verdict goes alike through an alikeness' (14) and 'couples into / makes a difference to' (14), the dependence sense covers 48 rows. Those three have words in the package and the root (DependsOnlyOn, GoAlike, GivesAlike, Nonanticipating, Through; AlikeThroughUpTo, SelectsThrough, Lumped; CouplesAt, CoupledInto, Sensitive), as do kept/closed under («闭», ClosedUnder), the carried label (RevisesBy, withAct), apart-in-time (FirstApart, TellsApartAt, Recoverable), code (encode, answers, Exact, eval), taken-at-a-step (sample, Stutter, tick), coverage (Within, Determines, Free), the merging map (course, prefixOf, Contextual), the go-or-off role (byRule) and the replenishing units (Present, Source). No word without the one in question exists for the rule's revision map (13 rows), for the web built from an exchange (5 rows, though its slots have Exchanging and RespondsBelow), or for the reports (7 rows, whose twin on the issuing side is named Approvals). The six-way cut from five modules matches six of the fifteen families and leaves out nine holding 76 rows; only the go-or-off role (4 rows) names a party standing over against a candidate. This is a reading of the supplied descriptions, with five doubtful rows checked against their Lean docstrings; nothing was edited, built or run."
+ }
+}
