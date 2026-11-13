@@ -722,8 +722,8 @@ class PassAndFailWords(unittest.TestCase):
         self.assertIn('no test of a thesis run so far has human participants', empirical)
 
     def test_audit_questions_agree(self):
-        self.assertIn('four questions of any selection', page(USES))
-        self.assertIn('The four questions for any selection, then a fifth for a judge', page(EXAMPLES))
+        self.assertIn('you can ask four things', page(USES))
+        self.assertIn('The four things to ask of any selection, then a fifth for a judge', page(EXAMPLES))
 
 
 class Examples(unittest.TestCase):

@@ -753,7 +753,7 @@ def page(model: dict) -> str:
             f'({_rel(LAWS_PAGE, here)}#anything-that-goes-on).', '',
             '## The ties', '',
             f'{c["edges"]} ties are drawn: each is the most-used tie of its kind, or one that at least {number(DRAWN_MIN)} dynamics speak of. '
-            'Each links to what its theorems say. Under each of the four questions stands the number of general theorems that conclude it; a theorem shown '
+            'Each links to what its theorems say. Under each of the four marks (begins, lasts, changes, ends) stands the number of general theorems that conclude it; a theorem shown '
             'by one built case alone is counted beside it (*+ 1 built*). Some theorems say what would follow if something their model holds fixed were '
             'changed from outside: they are counted under *given changed*. Neither a built case nor such a theorem fills a square.', '',
             '| Tie | Dynamics | Theorems, from how many dynamics | Begins | Lasts | Changes | Ends | Other forms | Given changed | Tests naming a theorem here | Tests on its dynamics |',
@@ -859,8 +859,8 @@ def laws_page(model: dict) -> str:
         '*one built case*: an example that shows it can happen, not a general theorem.',
         '- A condition is given by the name the atlas\'s ledger gives it; the ledger has its statement.',
         '- A general theorem is quoted before a built case, and an exact one before one that is only enough.',
-        f'- *{GIVEN}*: a theorem that says what would follow if something its model holds fixed were changed from outside. It answers none of the '
-        'four questions of the course itself and fills no square.', '',
+        f'- *{GIVEN}*: a theorem that says what would follow if something its model holds fixed were changed from outside. It concludes none of the '
+        'four marks of the course itself and fills no square.', '',
         '## The ties', '']
     for e in _drawn(model):
         out += [f'<a id="{_tie_anchor(e)}"></a>', f'### {_tie_name(model, e)}', '',

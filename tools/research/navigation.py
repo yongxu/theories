@@ -456,9 +456,9 @@ MAP_CHAPTER = CHAPTERS + '/02-MAP.md'
 # Each result's plain line, the one page's own words: the list opens on them, the record's statement after.
 START_PLAIN = {
     'continuation-relative-to-a-class': (ONE_PAGE, 'Sameness is in some respect, a *class*. Where one occurrence conditions another alike under the class, the second *continues* it.'),
-    'selection-through-couplings': (ONE_PAGE, 'The selections through a selector\'s couplings (what it reads or needs), together, reach exactly what couples into it'),
-    'what-an-optimum-does-beyond-what-couples-in': (ONE_PAGE, 'With *room* (every eligible outcome left higher beyond is beaten on what couples in), every optimum of an order rising with what couples in drains what lies beyond as far as any eligible outcome does'),
-    'closed-capture': (ONE_PAGE, 'A rule read from the share it raises can lock and outlive a growing loss it does not read'),
+    'selection-through-couplings': (ONE_PAGE, 'The selections through a selector\'s couplings (what can make a difference to it), together, reach exactly what couples into it'),
+    'what-an-optimum-does-beyond-what-couples-in': (ONE_PAGE, 'With *room* (wherever an eligible outcome leaves any of what makes no difference to the selector higher than another does, some eligible outcome beats the first on what makes a difference to it), every optimum of an order rising with what makes a difference to it leaves what makes none as low as any eligible outcome does'),
+    'closed-capture': (ONE_PAGE, 'A rule set again only from the share it already favours can lock and, on the theorem\'s three conditions, stay locked however large a loss grows that makes no difference either to what is selected next or to the rule'),
     'own-count-misses-joint-excess': (ONE_PAGE, 'Takers each within what a renewal gives can together exceed it; where the renewal depends on what it renews, enough such steps in a row from a low enough level end it and what depends on the condition as much'),
     'one-root-to-its-edge': (ONE_PAGE, 'Of the central results a few are cases of the root, more use its theorems in their proofs and most use none'),
 }
