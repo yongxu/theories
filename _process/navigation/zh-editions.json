@@ -15,9 +15,10 @@
   },
   "theories/becoming/ONE-PAGE.zh.md": {
    "revised": "2026-11-13",
-   "english": "c17413b4675be58afeb1e65346aaaa3c5e78c8a68a5ccbbafbaa76bda065dd98",
+   "english": "99bc2755afde164d4c1f1eb132fdeea930c42dd232bf29852e9c2083986309a6",
    "chinese": "2f039795fd6319cf1f9807a65650c5534b7ec96ce141031c02744fa208e39099",
-   "english_commit": "49df4b1a5"
+   "english_commit": "bbfb995ae",
+   "unchanged": "the English named two pronouns outright (it, that one); the Chinese already names both ends (对它不造成差别者, 前者)"
   },
   "theories/becoming/OPENING.zh.md": {
    "revised": "2026-11-13",
