@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-12T19:33:33+00:00",
+  "reviewed_at_utc": "2026-11-13T02:39:22+00:00",
   "statement": {
     "en": "With the successor fixed where a class leads, constancy up to the net's end is going alike with it decided whether the next conditions anything; constancy is constancy up to the net's end with a next. A law's step cut where it cannot go on has a fixed successor and lines ending where the net ends.",
     "zh": "后继在类所及之处唯一时，一类至终有常，当且仅当它同行、且所及者是否还为他事之缘可以判定；有常则是至终有常而所及处皆有后继。一条律的步在不能继续之处截断，后继仍唯一，其线可以终于网尽之处。"
@@ -347,9 +347,9 @@
       "sha256": "c2269dbd724f709b9ef35f59bac16bbe5597a1e4786531daa94e044a82b7a323"
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261112T193245.658896Z/verification.json",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261113T023828.938796Z/verification.json",
       "role": "receipt",
-      "sha256": "2d3c19ccb5bbce3d0f33de06b3f8ea28542910b8161104593a64f3979a3024b6"
+      "sha256": "16b80fb7a3944fdfaa954802fca87186b5355c53f747b5929a007b567d711fa2"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tt-turning-in-time/NOTE.md",
@@ -374,25 +374,25 @@
     {
       "path": "theories/becoming/chapters/02-MAP.md",
       "role": "statement",
-      "sha256": "269cd7fdc87dcf92022b01ec2f9505a4ebe6783794ec6b7573702ae43a1cfe3b"
+      "sha256": "fb4e4b84b58c909222caa26e2f7261ebde43459e8d2bc5753c72ffb9e6875023"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-11-12-where-we-are-and-the-loop.md",
       "role": "provenance",
-      "sha256": "ffe74808b0c3d0befd2b282f23889fff01dc6ec47659224710bd1b206c85d3be"
+      "sha256": "77d076ff96e3d3d72e46dd8ad4bb9c962dd73b94c721175df38f9574dd8ce3d9"
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarPath.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261112T193245.658896Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261113T023828.938796Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarPath",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardedStep.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261112T193245.658896Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261113T023828.938796Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GuardedStep",
       "success_pointer": "/status",
       "success_value": "passed"

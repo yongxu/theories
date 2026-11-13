@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-12T19:33:33+00:00",
+  "reviewed_at_utc": "2026-11-13T02:39:22+00:00",
   "statement": {
     "en": "On a way and a level cut by a need, under the regime's premises the line never ends exactly where the course as it was, the need met, is first marked and its level one step later is at or above the kept kind's point of no return. Unmarked and losing more than it is given, it ends where the net ends.",
     "zh": "一种延续的方式连同一个水位，水位不足所需即无后继。在调节律的前提下，线不穷，当且仅当照旧的进程在所需一直满足之下第一次落在标记水位，而一步之后的水位不低于所保持之类的不可返回点。无标记而所失多于所得，则线终于网尽之处。"
@@ -651,9 +651,9 @@
       "sha256": "10c8cc9a242da223987c191d70e68a869d0e6413019afa0d44346f9f629de230"
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261112T193245.658896Z/verification.json",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261113T023828.938796Z/verification.json",
       "role": "receipt",
-      "sha256": "2d3c19ccb5bbce3d0f33de06b3f8ea28542910b8161104593a64f3979a3024b6"
+      "sha256": "16b80fb7a3944fdfaa954802fca87186b5355c53f747b5929a007b567d711fa2"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tt-turning-in-time/NOTE.md",
@@ -683,18 +683,18 @@
     {
       "path": "theories/becoming/chapters/02-MAP.md",
       "role": "statement",
-      "sha256": "269cd7fdc87dcf92022b01ec2f9505a4ebe6783794ec6b7573702ae43a1cfe3b"
+      "sha256": "fb4e4b84b58c909222caa26e2f7261ebde43459e8d2bc5753c72ffb9e6875023"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-11-12-where-we-are-and-the-loop.md",
       "role": "provenance",
-      "sha256": "ffe74808b0c3d0befd2b282f23889fff01dc6ec47659224710bd1b206c85d3be"
+      "sha256": "77d076ff96e3d3d72e46dd8ad4bb9c962dd73b94c721175df38f9574dd8ce3d9"
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261112T193245.658896Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261113T023828.938796Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.TurningInTime",
       "success_pointer": "/status",
       "success_value": "passed"

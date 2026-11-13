@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "FILLED-BY-KIT",
+  "reviewed_at_utc": "2026-11-13T02:39:22+00:00",
   "statement": {
     "en": "A way is the units present, each going on while the level meets its need and taking its use. Under the regime's premises along the course, its line never ends exactly where it comes to a way that is not empty, whose units' needs are all met at a level from which what they take together holds.",
     "zh": "一个方式就是在场的各单元，各在水位满足其所需时继续，并各取其用量。在沿途的体制前提之下，这条线永不终止，当且仅当它走到一个非空的方式，其各单元所需皆被满足，且水位守得住它们合取之量。"
@@ -469,55 +469,63 @@
         "Becoming.WayOfUnits.unending_iff_holds",
         "Becoming.WayOfUnits.use"
       ],
-      "sha256": "FILLED-BY-KIT"
+      "sha256": "3bb2bb0a94f8c57a873af966d1d4ef4cebf9457e8fa689ffa7d44f5c6f5fc7ee"
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/RECEIPT_TIMESTAMP/verification.json",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261113T023828.938796Z/verification.json",
       "role": "receipt",
-      "sha256": "FILLED-BY-KIT"
+      "sha256": "16b80fb7a3944fdfaa954802fca87186b5355c53f747b5929a007b567d711fa2"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/wu-a-way-of-units/NOTE.md",
       "role": "integration",
-      "sha256": "FILLED-BY-KIT"
+      "sha256": "761a9ccbba45b40e81d0bd424ab6e0940f86ec49efa3969acee2fad4813e77c3"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/wu-a-way-of-units/DESIGN.md",
       "role": "integration",
-      "sha256": "FILLED-BY-KIT"
+      "sha256": "b1f4748674b1390a601324976106b5852cdcb2133aef6be2f37aabd060bd4519"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/wu-a-way-of-units/DESIGN-attacked.md",
       "role": "integration",
-      "sha256": "FILLED-BY-KIT"
+      "sha256": "1be4e33ec65c86f566407b636faffae2628a5437d9e1790d1ddcaf053af7bb38"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/wu-a-way-of-units/READER.md",
       "role": "review",
-      "sha256": "FILLED-BY-KIT"
+      "sha256": "bc72e63374204efd38cf23448c5e2ca128e343c1913cc4886624bae37adcdb65"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/wu-a-way-of-units/readers/r3-logic.md",
       "role": "review",
-      "sha256": "FILLED-BY-KIT"
+      "sha256": "499011b4ce39948321069017148568cc61b90ba09ad7b83ce250997e523cfc50"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/wu-a-way-of-units/readers/v2-premises.md",
       "role": "review",
-      "sha256": "FILLED-BY-KIT"
+      "sha256": "66506af18cd2799963fde2e75ca1912494f5459fa2ff839725d18c49c87fc212"
     },
     {
       "path": "theories/becoming/chapters/02-MAP.md",
       "role": "statement",
-      "sha256": "FILLED-BY-KIT"
+      "sha256": "fb4e4b84b58c909222caa26e2f7261ebde43459e8d2bc5753c72ffb9e6875023"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-11-12-where-we-are-and-the-loop.md",
       "role": "provenance",
-      "sha256": "FILLED-BY-KIT"
+      "sha256": "77d076ff96e3d3d72e46dd8ad4bb9c962dd73b94c721175df38f9574dd8ce3d9"
     }
   ],
-  "proof_bindings": [],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261113T023828.938796Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.WayOfUnits",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
   "history": [
     {
       "en": "13 November 2026, board item WU, on Ren's words of 13 November kept in sources (sources/15-codex-theory-conversations/2026-11-12-where-we-are-and-the-loop.md): added. A first design that claimed the marks of turns_in_time_iff derived was cut back after three AI readers; it is kept in the study folder wu-a-way-of-units (DESIGN-attacked.md) with their reports."
