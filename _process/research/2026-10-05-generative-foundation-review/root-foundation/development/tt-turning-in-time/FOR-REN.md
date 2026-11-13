@@ -59,3 +59,13 @@ If you want new names for the old ones, these are the words I would try on you: 
 
 - Lean: `Becoming/GrammarPath.lean` (seven laws added), `Becoming/GuardedStep.lean`, `Becoming/TurningInTime.lean`.
 - This folder: the plan and its log (`drafts/PLAN.md`), the design (`DESIGN.md`, `DESIGN-R2.md`), the maps of what exists (`map/`), every reader's report (`readers/`, in short in `READER.md`), the near work, the first attempt (`held/`).
+
+## After this page: the morning of 13 November
+
+*Added 13 November 2026, 10:07 WIB.*
+
+- **Pushed**, on your "push first so I can read it on GitHub, then continue". The full gate ran after that push, not before, and found one real failure from the landing: the atlas entry listed eleven theorems that had no rows in the atlas's binder mapping. It was fixed and landed the same morning, and the lesson is kept.
+- **"Theorem".** On your "Yes, theorem" to another session, the account's own proved statements are now called theorems on the reading path, and "law" stays for a model's determined step. 02 §11 follows that rule. This page, above, still says "laws" where it means theorems.
+- **One thing this page lists as given is now derived in one case.** Board item WU: where the way is made of units that each need and take, a turn needs no mark. The ending of a unit that takes is the turn. Its page, five minutes: [a way of units](../wu-a-way-of-units/A-WAY-OF-UNITS.md) ([中文](../wu-a-way-of-units/A-WAY-OF-UNITS.zh.md)). The marks of a way that conditions on a reading stay given, and this is not learning with no learner.
+- **What I got wrong that morning**, kept in that folder: my first design for WU claimed the marks "all follow". Three readers cut it back.
+- **What waits for you** is as above (items 1 to 4 and 6), and the push of what has landed since.
