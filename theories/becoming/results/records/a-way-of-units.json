@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-13T04:06:30+00:00",
+  "reviewed_at_utc": "2026-11-13T05:51:04+00:00",
   "statement": {
     "en": "A way is the units present, each going on while the level meets its need and taking its use. Under the regime's premises along the course, its line never ends exactly where it comes to a way that is not empty, whose units' needs are all met at a level from which what they take together holds.",
     "zh": "一个方式就是在场的各单元，各在水位满足其所需时继续，并各取其用量。在沿途的体制前提之下，这条线永不终止，当且仅当它走到一个非空的方式，其各单元所需皆被满足，且水位守得住它们合取之量。"
@@ -474,17 +474,17 @@
         "Becoming.WayOfUnits.unending_iff_holds",
         "Becoming.WayOfUnits.use"
       ],
-      "sha256": "3bb2bb0a94f8c57a873af966d1d4ef4cebf9457e8fa689ffa7d44f5c6f5fc7ee"
+      "sha256": "98e38ed2c45c835b4f20626a81e000b81a4c511bdc3003aa48623bb32950c347"
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261113T023828.938796Z/verification.json",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261113T054936.915391Z/verification.json",
       "role": "receipt",
-      "sha256": "16b80fb7a3944fdfaa954802fca87186b5355c53f747b5929a007b567d711fa2"
+      "sha256": "36305b6c817422715083a1ff5dfb3d511a4bd33003660e9c525d69f4b04c0269"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/wu-a-way-of-units/NOTE.md",
       "role": "integration",
-      "sha256": "59e5ae4c82568e723b933b685841abed0b8148ba754f8589c64e6a2ccd54accb"
+      "sha256": "4e634fe78c5e544e268b295a0c547c34435ac2c917320065b2e408524bc29fa9"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/wu-a-way-of-units/DESIGN.md",
@@ -499,7 +499,7 @@
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/wu-a-way-of-units/READER.md",
       "role": "review",
-      "sha256": "bc72e63374204efd38cf23448c5e2ca128e343c1913cc4886624bae37adcdb65"
+      "sha256": "f2852e58274fdba7cd18f425486f8d9a26d9c7d0f1ae7c148f96cc86db438592"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/wu-a-way-of-units/readers/r3-logic.md",
@@ -514,18 +514,18 @@
     {
       "path": "theories/becoming/chapters/02-MAP.md",
       "role": "statement",
-      "sha256": "a6c27e923c95de64c5f63da18ebea288074fa8c6fe3a0d2da6f4b80fbe9fb1ba"
+      "sha256": "8be0095fa2260a58716fe37ef42f3cd24fb04d717c0b6a3882ccf5ab8fa742bb"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-11-12-where-we-are-and-the-loop.md",
       "role": "provenance",
-      "sha256": "77d076ff96e3d3d72e46dd8ad4bb9c962dd73b94c721175df38f9574dd8ce3d9"
+      "sha256": "e4178180f019a8b3911d07cf186d1454d9c674c088bfddb266d766b8fe58684d"
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261113T023828.938796Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261113T054936.915391Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.WayOfUnits",
       "success_pointer": "/status",
       "success_value": "passed"
