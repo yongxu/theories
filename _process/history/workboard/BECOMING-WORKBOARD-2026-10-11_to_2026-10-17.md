@@ -2063,3 +2063,19 @@ RW's one map landed (content tip `4bf6e3c2d`; data, a tool and generated views, 
 the site's navigation and the home's ways in name it;
 the three rounds' notes, every reader's report and the two reviews before landing kept in development's `rw-one-map`;
 checked by eight AI readers in two reviews, the map's validation, focused tests, the render, strict-fresh, links, a site build and the plain gate;
+WL landed (content tip `ef740d861`; prose, tool strings, quoted phrases in data and generated views; no Lean, no new result, no record's claim changed, nothing paid; on Ren's "Yes, theorem" of 13 November, [his words](../../../sources/15-codex-theory-conversations/2026-11-13-what-a-law-is-and-the-words.md)): on the English reading path (the glossary, the one page, the overview, the uses pages, COLLECTIVE-DIRECTION, FREE-ENERGY-PRINCIPLE, ONE-ARGUMENT, chapters 01 to 05, 07 and 08) the account's own proved statements are called theorems (定理): 770 of 1,540 uses of "law" changed, each sorted by a first AI reader, the doubtful classes read by the coordinator, and every change checked by a second AI reader (741 of 802 confirmed, the rest decided one by one);
+"law" stays for a determined step (`Law`), for what holds in every model of a class ("no law of the dynamics ranks"), for a science's law, for what is not proved, and in names, headings and record titles;
+[08 §10](../../../theories/becoming/chapters/08-METHOD.md#law), 08's word table and the glossary rows, English and Chinese, state the change as the reversal of LN's entry of 1 November;
+`navigation.py`, `spine.py`, `connection_map.py`, `theory_graph.py`, two tests, `spine.json`, `lineage.json`, 74 atlas quotes and 38 quotations in the review packet's dossiers hold the new wording;
+128 records re-pointed, hash only;
+the Chinese fronts carry their dated banner behind the English.
+Not in it, each for its owner: 02 §11 (TT), the map's data (the map session), OPENING.md (Ren's text), chapter 06, the Chinese pages, record texts and titles, the ten headings that carry the word;
+the rule, the verdicts and the decisions are in [the study note](../../research/2026-10-05-generative-foundation-review/root-foundation/development/wl-theorem-and-law/NOTE.md);
+TT landed (content tip `65543cc60`; new Lean in the core, two records, an atlas entry and a map card, nothing paid; on Ren's words of 12 and 13 November): the centre stated from laws the package already had, as a line that stays alike in a respect ending where the net ends or while the net goes on;
+seven theorems added to `Becoming.GrammarPath` tie going alike to constancy up to the net's end;
+`Becoming.GuardedStep` is a determined law's step while it can go on;
+`Becoming.TurningInTime` is a way of going on and a level cut by a need, with the exact condition for a turn that holds, the lock's courses identified with it at a need of nothing, and a locked way that needs a level ending locked where the net ends;
+home 02 §11, records `going-alike-up-to-the-nets-end` and `turning-in-time`;
+the marks, the need and the kept kind are given, nothing is about a trained system, and the older lock modules keep their names;
+mapped by eighteen AI agents, implemented and read in two rounds and a follow-up, with the readers' reports and a held first attempt kept in the study folder `tt-turning-in-time`, where the centre on one page and a page for Ren await his read;
+core runs `20261112T175519.814370Z` and `20261112T183400.534891Z`, the render, the focused checks and the gate passed;
