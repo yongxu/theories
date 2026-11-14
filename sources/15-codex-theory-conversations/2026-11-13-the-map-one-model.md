@@ -2,7 +2,7 @@
 
 *Filed by the coordinator's session from a section written out by the session he spoke to. The times are that session's transcript stamps, converted to WIB (UTC+7); the texts are copied from the transcript, complete, his spellings kept. The transcript does not record how a message was entered: "spoken" and "typed" below are read from its style and are marked so. The context lines are that session's own account of what it had just shown him.*
 
-13 November 2026, 20:26 to 22:49 WIB. Ren's words in a Claude Code desktop session in `/Users/ren/theories` (a fresh session, not one of the sessions then at work on the map), kept verbatim. AI-authored context is labelled separately.
+13 November 2026, 20:26 to 22:49 WIB, and one message of 14 November in the last section. Ren's words in a Claude Code desktop session in `/Users/ren/theories` (a fresh session, not one of the sessions then at work on the map), kept verbatim. AI-authored context is labelled separately.
 
 ## Ren's words
 
@@ -47,3 +47,15 @@
 The session he spoke to changed nothing tracked. Its scratch is outside the tracked files (`tmp/r7/derived/`, the test page and the counts; `tmp/r7/one-model/`, the work on the design and the plan). It told the coordinator's session, which filed these words, put his sentence at the head of the board's "The way now", and starts no new view, picture or store of the map before his read of the design. The session he spoke to was reading every store, the process and his earlier words with read-only AI readers, toward one page of design and one plan for his read.
 
 Reading the record for that work, it found that the question had been asked and answered before. On 9 November he asked what better data structures the map could use; three models read the same material apart; their joint reading proposed one store, with exits, premises, situations and bindings as entries and every view generated, to go to the atlas, in its words "而不是另起一条平行的线" ([the joint reading](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/map-structures/readings/04-joint-reading.md)); he answered "交给 AA", the recommended one of two replies the session offered him ([his words of that day](2026-11-09-map-structures.md)). The atlas landed its first steps by 11 November. On 11 November the coordinator's session began the reader-facing map as a second store, `theories/becoming/results/map/`, with its own tools; it reads the history the same way.
+
+## After the page of design, 14 November 2026
+
+*Added on 14 November 2026 by the coordinator's session, from what the session he spoke to relayed; the words were found in that session's transcript as given here. The time is the transcript's stamp, 03:47:27 UTC, converted to WIB.*
+
+*Context (AI-authored):* that session wrote the page of design and the plan, "The map as one model", from nine AI readings of the stores and the record, six AI designs made apart, and seven AI readers set to break the first draft. The page is scratch and not tracked (`tmp/r7/one-model/THE-ONE-MODEL.md`). It proposes the atlas's entries as the one store, and a plan of five steps and about eighteen landings. The coordinator's session corrected three of its rules and one step, and the corrected page was sent to him. His message came after that.
+
+10:47:27 WIB (typed, by its style):
+
+> don't just follow my words, especially my past words. and the last few rounds of heading into the wrong direction made me concerned - so if we were going to implement this - what will be expected outcome? can we actually get the map
+
+*What the session answered (AI-authored, as that session relayed it to the coordinator's session; a judgment, with nothing built and the page unchanged):* the plan as written gives one consistent store with the gaps counted, and it does not expect him to take that as the map. By its count, with the six proved joins of turning in time entered, the piece around turning in time is 7 dynamics, the other two entries the centre's paragraph rests on stand apart in pieces of 9 and 3, and the 184 dynamics are 117 pieces with 93 alone. It said that `TurningInTime.lean` is itself one model, which states a version of each sentence of the centre's paragraph after the first, with the marks given. It proposed testing first whether a picture of that one model reads to him as the map, by one picture drawn by hand in scratch, and deferring the fold of the second store until a section has been accepted. That would break the page's first rule (no picture beside the one store), so it waits for his word.
