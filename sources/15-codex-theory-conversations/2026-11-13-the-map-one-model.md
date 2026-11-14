@@ -2,7 +2,7 @@
 
 *Filed by the coordinator's session from a section written out by the session he spoke to. The times are that session's transcript stamps, converted to WIB (UTC+7); the texts are copied from the transcript, complete, his spellings kept. The transcript does not record how a message was entered: "spoken" and "typed" below are read from its style and are marked so. The context lines are that session's own account of what it had just shown him.*
 
-13 November 2026, 20:26 to 22:49 WIB, and three messages of 14 November in the last section. Ren's words in a Claude Code desktop session in `/Users/ren/theories` (a fresh session, not one of the sessions then at work on the map), kept verbatim. AI-authored context is labelled separately.
+13 November 2026, 20:26 to 22:49 WIB, and six messages of 14 November in the last section. Ren's words in a Claude Code desktop session in `/Users/ren/theories` (a fresh session, not one of the sessions then at work on the map), kept verbatim. AI-authored context is labelled separately.
 
 ## Ren's words
 
@@ -50,7 +50,7 @@ Reading the record for that work, it found that the question had been asked and 
 
 ## After the page of design, 14 November 2026
 
-*Added on 14 November 2026 by the coordinator's session, from what the session he spoke to relayed; the words were found in that session's transcript as given here. The times are the transcript's stamps, 03:47:27, 04:11:17 and 05:28:34 UTC, converted to WIB; the second and third messages were added later the same day.*
+*Added on 14 November 2026 by the coordinator's session, from what the session he spoke to relayed; the words were found in that session's transcript as given here. The times are the transcripts' stamps (03:47:27, 04:11:17, 05:28:34, 05:38:50, 06:00:11 and 06:03:46 UTC), converted to WIB; the messages after the first were added later the same day, the last three from the transcripts of the sessions they were typed to.*
 
 *Context (AI-authored):* that session wrote the page of design and the plan, "The map as one model", from nine AI readings of the stores and the record, six AI designs made apart, and seven AI readers set to break the first draft. The page is scratch and not tracked (`tmp/r7/one-model/THE-ONE-MODEL.md`). It proposes the atlas's entries as the one store, and a plan of five steps and about eighteen landings. The coordinator's session corrected three of its rules and one step, and the corrected page was sent to him. His message came after that.
 
@@ -81,3 +81,27 @@ Reading the record for that work, it found that the question had been asked and 
 > I think at the core, it should be one unified map. There shall be no axioms, and all the theories are interconnected with each other and expands out into the situationality. But within the situation, the general dynamics and the understandings, the principles, or what we call truth, is within that map. That is what I'm trying to construct. Is this the direction we're currently moving? And are you firm that with the current design, we will be able to reach there? I really need those answers while I'm reading the MD files that you are sending me.
 
 *What the session answered (AI-authored, from that session's own note of it; a judgment):* that the design is the instrument for this and not the thing. In form it is in this direction: nothing stands above the map, a theorem with its conditions is the only carrier, and a principle is a theorem or a reading on the map. It cannot by itself unify the theory, and the session is not firm that it reaches there, since that depends on proofs. It offered him a reading marked as its own: "no axioms" cannot mean no conditions; it can mean that every condition is either concluded by a theorem on the map or is what a situation supplies, which is where the map expands into situations.
+
+*Context (AI-authored):* the desktop app was restarted. He wrote the same line to the coordinator's session and to the session he had spoken to.
+
+12:38:50 WIB (typed), to both sessions:
+
+> continue please - claude app is restarted
+
+*Context (AI-authored):* the session he had spoken to took it as leave for the first step of its corrected page, which reads only, and started a third round of twelve AI readers. The coordinator's session read it as "carry on with what was running" and told that session that the question its page puts to him stayed open. He then wrote to the coordinator's session:
+
+13:00:11 WIB (typed), to the coordinator's session:
+
+> my continue just meant to continue the session - let's wait for the other session's research outcome first
+
+13:03:46 WIB (typed), to a fork of the session he had spoken to:
+
+> you are the fork session, there is only one thing i want you to figure out: why's there 2 roots?
+
+*What came back (AI-authored, as that session relayed it at about 06:10 UTC; all of it read only, in scratch, with nothing tracked changed; where the coordinator's session checked a point itself, that is said):*
+
+- *The round.* Eight dynamics drawn fresh, one from each family, by a rule fixed beforehand. Read from the exact list alone: 43 answers as the Lean has it, 17 partly, none wrong, 4 silent, of 64. With a small layer entered by hand: 53, 9, none, 2. It names five faults in what is read from the Lean, found in this round and not fixed.
+- *The centre, by two second readers apart.* No single model carries the centre's paragraph; each sentence after the first is stated somewhere, across three models. One correction to its page: "how much is left of what sustains the selection can be among what makes no difference to it" is carried in the web by `Web.alikeThrough_raise` and `Web.break_not_bounded` (the atlas's entry `a-break-read-only-by-threshold`), and not by `Flow.unselected_beyond_coupling`, since a condition a formation depends on couples into it (`Web.CoupledInto`) and that theorem is about a part beyond what couples in. The coordinator's session read those four declarations and agrees; it also searched the front pages and the chapters for a sentence placing what sustains a selection beyond what couples into it, and found none. The page names five proofs that would join the paragraph, the nearest two small.
+- *The two roots.* The fork answered in scratch (`tmp/r7/one-model/WHY-TWO-ROOTS.md`): a process and the grammar's relation are one by definition both ways; the seam that is real is relations and amounts, which [the root chapter](../../theories/becoming/chapters/01-ROOT.md) states as "Amounts, the root's second sort".
+- *The store.* Reading the atlas's store against the Lean turned up rows that differ from it. Checked by the coordinator's session: the row of `ClosedCapture.lock_outlives_loss` lists `closedcapture-unread`, which the statement does not assume (the join's types give it, and `join_unread` proves it of the join); `TurningInTime.join_is_asItWas`, `window_is_pair` and `locked_ends_with_net` are declared under `turning-in-time` and are not among its laws. Reported by that session's readers and not checked by the coordinator's: an open item of `fixation-by-drift` that theorems of the same entry answer; the wording of `Replacement.lost_ge`; a condition listed for `Copying.reaches_first_only` that its statement does not assume. Of the ledger's 5,818 rows (a theorem with a condition it takes), by that session's count, 1,976 can be set against a named condition of the Lean and 1,773 of those agree; 3,605 name a condition that has no name in the Lean. No row was changed.
+- *The page.* "The graph under the map" was brought up to date at 06:10 UTC and sent to him again. It leaves him: whether this is the direction; which comes next (the two nearest proofs of the centre, as new Lean claimed on the board; an addition to the study of 15 October so that what a theorem assumes and concludes is read on main; the plan of 13 November rewritten), or none yet; and who holds it.
