@@ -2,7 +2,7 @@
 
 *Filed by the coordinator's session from a section written out by the session he spoke to. The times are that session's transcript stamps, converted to WIB (UTC+7); the texts are copied from the transcript, complete, his spellings kept. The transcript does not record how a message was entered: "spoken" and "typed" below are read from its style and are marked so. The context lines are that session's own account of what it had just shown him.*
 
-13 November 2026, 20:26 to 22:49 WIB, and one message of 14 November in the last section. Ren's words in a Claude Code desktop session in `/Users/ren/theories` (a fresh session, not one of the sessions then at work on the map), kept verbatim. AI-authored context is labelled separately.
+13 November 2026, 20:26 to 22:49 WIB, and two messages of 14 November in the last section. Ren's words in a Claude Code desktop session in `/Users/ren/theories` (a fresh session, not one of the sessions then at work on the map), kept verbatim. AI-authored context is labelled separately.
 
 ## Ren's words
 
@@ -50,7 +50,7 @@ Reading the record for that work, it found that the question had been asked and 
 
 ## After the page of design, 14 November 2026
 
-*Added on 14 November 2026 by the coordinator's session, from what the session he spoke to relayed; the words were found in that session's transcript as given here. The time is the transcript's stamp, 03:47:27 UTC, converted to WIB.*
+*Added on 14 November 2026 by the coordinator's session, from what the session he spoke to relayed; the words were found in that session's transcript as given here. The times are the transcript's stamps, 03:47:27 and 04:11:17 UTC, converted to WIB; the second message was added later the same day.*
 
 *Context (AI-authored):* that session wrote the page of design and the plan, "The map as one model", from nine AI readings of the stores and the record, six AI designs made apart, and seven AI readers set to break the first draft. The page is scratch and not tracked (`tmp/r7/one-model/THE-ONE-MODEL.md`). It proposes the atlas's entries as the one store, and a plan of five steps and about eighteen landings. The coordinator's session corrected three of its rules and one step, and the corrected page was sent to him. His message came after that.
 
@@ -59,3 +59,13 @@ Reading the record for that work, it found that the question had been asked and 
 > don't just follow my words, especially my past words. and the last few rounds of heading into the wrong direction made me concerned - so if we were going to implement this - what will be expected outcome? can we actually get the map
 
 *What the session answered (AI-authored, as that session relayed it to the coordinator's session; a judgment, with nothing built and the page unchanged):* the plan as written gives one consistent store with the gaps counted, and it does not expect him to take that as the map. By its count, with the six proved joins of turning in time entered, the piece around turning in time is 7 dynamics, the other two entries the centre's paragraph rests on stand apart in pieces of 9 and 3, and the 184 dynamics are 117 pieces with 93 alone. It said that `TurningInTime.lean` is itself one model, which states a version of each sentence of the centre's paragraph after the first, with the marks given. It proposed testing first whether a picture of that one model reads to him as the map, by one picture drawn by hand in scratch, and deferring the fold of the second store until a section has been accepted. That would break the page's first rule (no picture beside the one store), so it waits for his word.
+
+*Context (AI-authored):* his next message was to that answer.
+
+11:11:17 WIB (spoken, by its style):
+
+> Against my words is okay, as long as we're moving to the right direction. I think it is right approach to not start constructing the map right away, but to get the graph, the data structure, and the relationships right. I think that's what we were liking in the past. Please check for another
+
+*Note (AI-authored, not his words):* by its style the message was dictated; "liking" may be "lacking", and the last sentence stops short. That session read it as: check the graph, the data structure and the relationships again, and for another structure if this one is not right.
+
+*What followed (AI-authored, as that session relayed it):* it withdrew the one picture in scratch that it had proposed, so the page's first rule stands. It began a check that only reads and changes nothing tracked, in scratch: every Lean statement and proof of the package parsed against the package's list of declarations, and ten AI readers checking samples of the result by reading. Its counts from that check were not yet confirmed when this was filed and are not given here.
