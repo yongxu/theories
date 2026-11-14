@@ -2,7 +2,7 @@
 
 *Filed by the coordinator's session from a section written out by the session he spoke to. The times are that session's transcript stamps, converted to WIB (UTC+7); the texts are copied from the transcript, complete, his spellings kept. The transcript does not record how a message was entered: "spoken" and "typed" below are read from its style and are marked so. The context lines are that session's own account of what it had just shown him.*
 
-13 November 2026, 20:26 to 22:49 WIB, and six messages of 14 November in the last section. Ren's words in a Claude Code desktop session in `/Users/ren/theories` (a fresh session, not one of the sessions then at work on the map), kept verbatim. AI-authored context is labelled separately.
+13 November 2026, 20:26 to 22:49 WIB, and six messages of 14 November in the section after it; seven more, of that evening, are in the last section. Ren's words in a Claude Code desktop session in `/Users/ren/theories` (a fresh session, not one of the sessions then at work on the map), kept verbatim. AI-authored context is labelled separately.
 
 ## Ren's words
 
@@ -105,3 +105,72 @@ Reading the record for that work, it found that the question had been asked and 
 - *The two roots.* The fork answered in scratch (`tmp/r7/one-model/WHY-TWO-ROOTS.md`): a process and the grammar's relation are one by definition both ways; the seam that is real is relations and amounts, which [the root chapter](../../theories/becoming/chapters/01-ROOT.md) states as "Amounts, the root's second sort".
 - *The store.* Reading the atlas's store against the Lean turned up rows that differ from it. Checked by the coordinator's session: the row of `ClosedCapture.lock_outlives_loss` lists `closedcapture-unread`, which the statement does not assume (the join's types give it, and `join_unread` proves it of the join); `TurningInTime.join_is_asItWas`, `window_is_pair` and `locked_ends_with_net` are declared under `turning-in-time` and are not among its laws. Reported by that session's readers and not checked by the coordinator's: an open item of `fixation-by-drift` that theorems of the same entry answer; the wording of `Replacement.lost_ge`; a condition listed for `Copying.reaches_first_only` that its statement does not assume. Of the ledger's 5,818 rows (a theorem with a condition it takes), by that session's count, 1,976 can be set against a named condition of the Lean and 1,773 of those agree; 3,605 name a condition that has no name in the Lean. No row was changed.
 - *The page.* "The graph under the map" was brought up to date at 06:10 UTC and sent to him again. It leaves him: whether this is the direction; which comes next (the two nearest proofs of the centre, as new Lean claimed on the board; an addition to the study of 15 October so that what a theorem assumes and concludes is read on main; the plan of 13 November rewritten), or none yet; and who holds it.
+
+## The direction, 14 November 2026, evening
+
+*Added on 14 November 2026 by the session he spoke to (the Claude Code desktop session "Graph rendering and design issues", a fork of it). The texts are his messages as that session received them, complete, his spellings kept. The times are that session's clock when each message was read, not transcript stamps, given in WIB with UTC in brackets. "Typed" and "dictated" are read from the style. The context lines are that session's own account of what it had just sent him. What it wrote in answer is not tracked (`tmp/r7/one-model/`, where `DESIGN-LINES.md` is its working record); what it took from these words is on [the direction page](../../_process/DIRECTION.md), AI-written and for his read.*
+
+*Context (AI-authored):* after its page on relations and amounts.
+
+18:20 WIB, 14 November (11:20 UTC), typed:
+
+> alright, let use fable - to unify the "root" - which i am actually not sure if the "root" itself is the right name anymore.
+>
+> and how would you approach the occurrence? i think opus 5.5 tried but failed, don't remember if it is the same path. but patterns emerge from structures and dynamics, and the recognition of that pattern, and the identification of it, creating an "signifier" that projects to that pattern, kinda creates the unit, or identification of things, and with unit.
+>
+> I am not sure if i am right, maybe you have better approaches, but let's figure out how to do this, if we separate the "root" - it creates another dualism. i think people in the past may also thought about this? do you see a way?
+
+*Context (AI-authored):* after its report that four readers had broken the page "One form".
+
+18:55 WIB, 14 November (11:55 UTC), typed:
+
+> lines? what do you mean by lines? and now i think root is the wrong word as well
+>
+> i am not sure if a signifier is the right name, i think more like this:
+> differences -> structures -> dynamics
+>
+> and the dynamics that interact with the "relations/difference/structures/dynamics" that leads to the emergence of identification/representation. I think maybe looking at this from mechanistic interpretability/cognitive science/cybernetics/Chinese thinking would allow us to have the right words to describe it, even though i am myself not sure what are the best words. signifier is  not the right one to me, that's why i used "" - but i also not sure what is the right one
+>
+> occurrences is also emergent, imo. occur requires recognition, but, not totally sure
+>
+> i think it is not about my words, but what is behind my words. and for the existing work, a lot are actually misguide by reading my words to literally, my misuse/misunderstanding 
+>
+> also - even though many spoke about it in the past, that doesn't mean they are right, you need to think and understand, not just take what is as granted
+>
+> go for another around, think, think, and think, please. don't get trapped by the words
+
+*Context (AI-authored):* after its page "What I think is behind your words".
+
+20:20 WIB, 14 November (13:20 UTC), typed:
+
+> think for one more round - use fable sub agents, and do you best to understand the full picture - for lean - i think we may have done a lot works without actually understanding the direction. let's understand, i think you still need more understanding first
+
+*Context (AI-authored):* after its page "The Lean, whole".
+
+00:15 WIB, 15 November (17:15 UTC), typed:
+
+> your diagnosis i do agree, not sure if it is the full picture
+>
+> but your direction, i do not agree - i think my direction is more about how structures and dynamics works, and create a map that can guide, and the map is coherent, non-dualism, with explanation of how changes happen, within a bound(and what is beyond is situationality) , which does not mean it explains all, but for a structure of dynamics to continue to "exist and evolve", to last, to continue into the long horizon, there is a set of general principles that we should all be aligned to because it is "true"
+
+*Context (AI-authored):* after its reading of his direction and a candidate set of thirteen principles.
+
+00:27 WIB, 15 November (17:27 UTC), typed:
+
+> basically, but i think they should be one "whole thing" but not "pieces". i am not sure if you get what i mean - are we getting the "whole thing" this time, comparing to before?
+
+*Context (AI-authored):* after its answer "Not yet" and its try at the one thing.
+
+00:35 WIB, 15 November (17:35 UTC), typed:
+
+> i think for me it is more like "universal theory of evolution/becoming", or "what life aligns to", or how selection works, how ones future changes
+>
+> i think it may sound weird to you, but these goals - are actually one, and exists on one map, thats what i see it can become. not sure about why 13, i didn't look into but are we putting pieces together and connecting the dots? or just find ways to somehow create an illusion of this? we have been wrong on this many times, this time i really want to get it right
+
+*Context (AI-authored):* after its table of which pairs of his four goals a proof joins.
+
+01:40 WIB, 15 November (18:40 UTC), dictated:
+
+> I think this time the direction is finally getting right. But I don't know what is still missing, right? So I also don't know if this is the best approach, but selection or becoming just change itself sustains further change of what creates the change. I see many ways to frame this. Maybe let's think for another round and to think which way, or maybe in the preaching Chinese or some other version of Chinese, and to see what is actually the best way that will represent this. Um, And at the same time, I think this direction is right. And I just would love to for you to go for another round and create documents and changes the necessary places in the repo so that we can sustain this direction, not get drifted again. But I'm also not sure if this is already the best solution, so maybe we should also check on that.
+
+*AI note:* "preaching Chinese" is as the dictation gave it; the session reads it as "pre-Qin Chinese".
