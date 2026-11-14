@@ -38,6 +38,7 @@ Checked on 14 November by four AI readers and two attackers who reopened every c
 - **The whole chain exists only in built examples** where the link is put in by hand: being favoured, drawing more, overdrawing what the line needs, the line ending (`LineageDrawdown.Drain`, `ReadingsSpread.Commons`, `ReadingsPersist.Habitat`).
 - **One theorem is proved and used nowhere:** what goes on after a loss that does not return has changed what it needs, or it has ended (`Web.consumed_continues_transformed`, `Web.consumed_ends_when_fixed`). It is the nearest the Lean comes to his sentence.
 - **A failed try, kept.** The fifth row's missing statement was tried on paper the same day and is false as first worded. Two small worlds refute it: where what renews the stock goes on below the need, the stock comes back and the part cycles; and an order can prefer more of a family and still read the stock where two outcomes tie. With three premises changed it holds on paper, as two theorems under one set of premises.
+- **Two more failed tries, kept** (15 November, on paper). "A locked way never ends exactly where its first reading of the level comes before the point of no return" is false: a five-step course reads the level in time, recovers, is locked again and ends, because a check that fires once is undone when the level recovers. And the two lemmas meant to carry the World to the pair are false as first worded, and near-definitional when written exactly.
 
 ## What moves it, and what is drift
 
@@ -69,18 +70,9 @@ The four as one cover about half of what the chapters hold. Three things most li
 
 ## A route
 
-*Proposed and not started. New Lean is claimed on the board first.*
+*Proposed. New Lean is claimed on the board first.*
 
-A reader set against five new statements on the World (the flows and webs with generations of descent) judged the target right and that route not the best. The exact laws already stand on the pair of a way and a level (`TurningInTime`, `WayOfUnits`), which is tied to the grammar and holds the lock. Its proposal:
-
-1. Say first what is joined and what is not. This page does that.
-2. Prove the chain once on the pair.
-3. Carry the World to the pair by two lemmas, so that descent, balance and couplings come from the World.
-4. Prove new, on the World, only the link it alone can give: that what is favoured draws more.
-5. Say each conclusion as a region of the map: generating, keeping, degenerating.
-6. Before proving, freeze that the built examples must come out as cases.
-
-It fails if a World's stock takes the pair's form only under premises that built examples alone meet.
+The route is [the plan for the Lean](LEAN-TOWARD-THE-DIRECTION.md). Its first draft proposed to prove the chain once on the pair of a way and a level (`TurningInTime`, `WayOfUnits`) and to carry the World to the pair by two lemmas. Tried on paper, the centre statement was false as worded and the two lemmas came out as a dictionary between two vocabularies, not as joins. The plan as it stands starts from what held: on the pair, a lock that keeps an overdraw; then turning in time with a standing reading; then the World's own exact point.
 
 ## Earlier directions
 
@@ -105,7 +97,7 @@ Each is kept in the board's history, the instruction files under `_process/histo
 *Open, and his to choose. Each was made by one AI framer and attacked by three AI testers. The classical lines are AI-coined and have been heard by no reader of 文言.*
 
 - **His own sentence**, as above.
-- **A classical line as a name.** 「所以變者亦變也」: that by which there is change is itself changing. Or 「變而養其所以變，謂之生生」: change that keeps up what makes it change is called 生生. The second defines 生生 as one course within change and not all change, as chapter 06 already reads 生生之謂易; a tester warns that the word carries approval and may be heard as a ranking.
+- **A classical line as a name.** 「所以變者亦變也」: that by which there is change is itself changing. Or 「變而養其所以變，謂之生生」: change that keeps up what makes it change is called 生生. The second defines 生生 as one course within change and not all change, as chapter 06 already reads 生生之謂易; a tester warns that the word carries approval and may be heard as a ranking. A philology check of 15 November prefers 「變有養其所以變者，其所以變者又變焉」 (some change keeps up what makes it change, and what makes it change changes too), since 有…者 says "some" and so claims no law of all change.
 - **A plain sentence under it.** Change changes what brings it about. Whatever goes on, in the respect in which it goes on, does so only while what it draws on keeps being made up; when that fails for good it ends, or goes on changed in what it needs. And how much is left need not make a difference to which way it goes until it is past coming back.
 - **In modern Chinese.** 变化在改变造成它的。它靠的东西补得上，它才接着变；补不上，它就到头，或者改了所靠的再接着变。可是还剩多少，未必来得及影响它往哪边变。
 
@@ -117,3 +109,4 @@ The four are then four readings of the one sentence: along the generations, evol
 
 - **14 November 2026, 19:45 UTC, before his first read.** After the coordinator's session checked rows 5 and 6 against the Lean, by its own reading and three readers set to refute it. Row 5 no longer says "for another formation's dependence" or "the blindness a premise": the statement of `Web.course_lost_iff` lets the formation be any, and its premise is that the order puts its family first. The row now names the two nearer statements and says why none is a join. Row 6 now names the theorems of `ReadOffInTime` and says why they are not counted.
 - **14 November 2026, 19:47 UTC, before his first read.** After a second note from the coordinator's session. Row 6's "Missing" asked for the point of no return derived from a stock and the first step apart derived from what is read. Both are proved for a way in general on the pair (`TurningInTime.turns_in_time_iff_before`, with the point from `noReturnAt_iff_first_below`), and the row had cited neither. It now cites them, and what is missing is narrower: that the way be a selection, with what it responds to derived.
+- **14 November 2026, 19:55 UTC, before his first read.** The section "A route" now points to the plan for the Lean and says what the paper tries found; two failed tries are added to the list under the table; one classical line is added to the ways of saying the seed. No row changes.
