@@ -1,6 +1,6 @@
 # The direction
 
-*AI-written (Fable), 14 November 2026, for Ren's read. About six minutes. His words below are the direction. Everything else on this page is an AI's reading of them and of the Lean, checked by AI readers and testers and by no person, and it is his to correct. This page changes only after he has read the change. It restates nothing of [AGENTS.md](../AGENTS.md); where the two differ, his words decide.*
+*AI-written (Fable), 14 November 2026, for Ren's read. About six minutes. His words below are the direction. Everything else on this page is an AI's reading of them and of the Lean, checked by AI readers and testers and by no person, and it is his to correct. His words and the reading change only after he has read the change. The table is corrected when a check finds an error, and each correction is listed at the foot with its date. It restates nothing of [AGENTS.md](../AGENTS.md); where the two differ, his words decide.*
 
 ## His words
 
@@ -31,8 +31,8 @@ Checked on 14 November by four AI readers and two attackers who reopened every c
 | What sustains with what can still form | Yes, by a general law | `Flow.family_excess_ends`; `Flow.not_keepsOpening_of_dissipated_requirements` | The exact point of no return for a renewed stock. It is proved for one level in another model (`TurningInTime.noReturnAt_iff_first_below`). |
 | Evolution with selection | In the counting sense only | `Founding.varied_before`; `SelectionTerm.Generations.mean_step` | Descent together with a selection through what makes a difference to it. No statement names both. |
 | Evolution with what can still form | No | nearest `Flow.begins_late_of_keepsOpening`, a necessary condition | For a line of descent, the step from which it can no longer be kept. |
-| Selection with what sustains it | Not for its own support | `Web.course_lost_iff`, for another formation's dependence, the blindness a premise | A selection drawing down what it itself depends on while nothing it reads differs. |
-| Selection with what can still form | In two models no theorem ties | `ReadInTime.deadline` on counts; `Web.course_lost_iff` on the web | A selection reading, or missing, a loss before its point of no return, in one model. |
+| Selection with what sustains it | No | Three near statements, none a join. `Web.course_lost_iff`: an optimum's draw ends a dependence, any formation's, with nothing coming back to the optimum; that its order puts its family first is a premise, and priority is not blindness. `TurningInTime.locked_ends_with_net`: a locked selection's own need, with the overdraw and the not-responding both premises. `Web.alikeThrough_raise`, `Web.break_not_bounded`: a stock not read by level makes no difference while the formation is supported, with no selection named and nothing drawn. | A selection drawing down what it itself depends on while nothing it reads differs. |
+| Selection with what can still form | In two models no theorem ties; on one web only near-definitionally | `ReadInTime.deadline` on counts; `Web.course_lost_iff` on the web. `Web.readableInTime_iff` and the `too_late` theorems of `ReadOffInTime` name a selection and the point of no return on one web and are not counted as joins: the first holds once the first step apart and the point are given, and the others assume that the loss is past or that what is kept is every member's admission. | A selection reading, or missing, a loss before its point of no return, in one model, with the point derived from a stock and the first step apart derived from what the selection reads. |
 
 - **Every weak join passes through selection.** It stands in the Lean in four forms that no theorem ties together: a counting term, selection through couplings, an optimum, and a rule set again from the share it favours.
 - **The whole chain exists only in built examples** where the link is put in by hand: being favoured, drawing more, overdrawing what the line needs, the line ending (`LineageDrawdown.Drain`, `ReadingsSpread.Commons`, `ReadingsPersist.Habitat`).
@@ -112,3 +112,7 @@ Each is kept in the board's history, the instruction files under `_process/histo
 How far each part has been seen: the first sentence is argued (08 §1, "activity forming and changing the conditions of further activity") and is not a theorem of every model. The middle is proved, as a necessary condition. The last is proved for another's dependence, or with no selection named; as a law of a selection's own support it is wanted.
 
 The four are then four readings of the one sentence: along the generations, evolution; from what is drawn on, what life aligns to; from which way it goes, selection; looking ahead, how one's future changes. "Read as", not "is", until the rows are joined.
+
+## Corrections
+
+- **14 November 2026, 19:45 UTC, before his first read.** After the coordinator's session checked rows 5 and 6 against the Lean, by its own reading and three readers set to refute it. Row 5 no longer says "for another formation's dependence" or "the blindness a premise": the statement of `Web.course_lost_iff` lets the formation be any, and its premise is that the order puts its family first. The row now names the two nearer statements and says why none is a join. Row 6 now names the theorems of `ReadOffInTime` and says why they are not counted.
