@@ -108,7 +108,7 @@ Reading the record for that work, it found that the question had been asked and 
 
 ## The direction, 14 November 2026, evening
 
-*Added on 14 November 2026 by the session he spoke to (the Claude Code desktop session "Graph rendering and design issues", a fork of it), and brought up to date the same night. The texts are his messages as that session received them, complete, his spellings kept. For the first seven messages of the evening the times are the transcript's stamps as the coordinator's session read them; for the later ones they are that session's clock when each message was read. All are given in WIB with UTC in brackets. "Typed" and "dictated" are read from the style. The context lines are that session's own account of what it had just sent him. What it wrote in answer is not tracked (`tmp/r7/one-model/`, where `DESIGN-LINES.md` is its working record); what it took from these words is on [the direction page](../../_process/DIRECTION.md), AI-written and for his read.*
+*Added on 14 November 2026 by the session he spoke to (the Claude Code desktop session "Graph rendering and design issues", a fork of it), and brought up to date the same night. The texts are his messages as that session received them, complete, his spellings kept. The times are the transcripts' stamps as the coordinator's session read them, given in WIB with UTC in brackets. "Typed" and "dictated" are read from the style. The context lines are that session's own account of what it had just sent him. What it wrote in answer is not tracked (`tmp/r7/one-model/`, where `DESIGN-LINES.md` is its working record); what it took from these words is on [the direction page](../../_process/DIRECTION.md), AI-written and for his read.*
 
 *Two messages of the early afternoon, not filed before (found unfiled by the coordinator's session, which gave the second as typed to it).*
 
@@ -193,7 +193,7 @@ Reading the record for that work, it found that the question had been asked and 
 
 *Context (AI-authored):* after its report of the round on framing and of what it changed in the repository.
 
-02:18 WIB, 15 November (about 19:18 UTC, by the session's clock when it was read), typed:
+02:18:52 WIB, 15 November (19:18:52 UTC, transcript stamp), typed:
 
 > * What is still missing. The four as one cover about half of what the chapters hold. Three gaps are most likely to matter:
 >    * how what selects itself comes to be and changes;
@@ -212,7 +212,7 @@ Reading the record for that work, it found that the question had been asked and 
 
 *Context (AI-authored):* after its note that the round on the Lean plan and on Chinese was running.
 
-02:29 WIB, 15 November (about 19:29 UTC, by the session's clock when it was read), dictated:
+02:29:15 WIB, 15 November (19:29:15 UTC, transcript stamp), dictated:
 
 > Oh, I think your approach is right. I think along the way we did a lot of interesting things, but they're just not integrated. And a lot of the early direction somehow just suddenly made a turn. But Ford's advances might have something that can really help us down the road. So good job.
 
@@ -220,12 +220,12 @@ Reading the record for that work, it found that the question had been asked and 
 
 *Context (AI-authored):* while the round on the Lean plan and on Chinese was running.
 
-02:31 WIB, 15 November (about 19:31 UTC, by the session's clock when it was read), dictated:
+02:31:24 WIB, 15 November (19:31:24 UTC, transcript stamp), dictated:
 
 > And at the same time, I also think we might be repeating a lot of the things and just create the whole uh, repo really, really big. So that becomes ineffective to read. Um, Maybe this also needs improvements, but maybe I'm asking too much in one like plan, and you can just leave it us later, which is also fine. Depends on the work itself. If we can get things like well clear and we can know how to curate a particular understanding or traverse them, that would be great. Not sure if those works are already been done or not doing very well, but it's worth attention.
 
 *Context (AI-authored):* after its count of the repository's size and its note on traversal.
 
-02:37 WIB, 15 November (about 19:37 UTC, by the session's clock when it was read), dictated:
+02:37:14 WIB, 15 November (19:37:14 UTC, transcript stamp), dictated:
 
 > Okay, I think this is gonna be a long plan, but I think you can perform well, right? Right now, I'm going to sleep, and I think this time you're getting it right. So after you plan well, for the last one, I still don't know if your final direction is gonna be what, but I think from your understanding that you see after a few rounds where I'm trying to show the direction. So if you think the plan is good, and we can start execution. I'll see you tomorrow. Thank you.
