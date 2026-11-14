@@ -2,7 +2,7 @@
 
 *Filed by the coordinator's session from a section written out by the session he spoke to. The times are that session's transcript stamps, converted to WIB (UTC+7); the texts are copied from the transcript, complete, his spellings kept. The transcript does not record how a message was entered: "spoken" and "typed" below are read from its style and are marked so. The context lines are that session's own account of what it had just shown him.*
 
-13 November 2026, 20:26 to 22:49 WIB, and two messages of 14 November in the last section. Ren's words in a Claude Code desktop session in `/Users/ren/theories` (a fresh session, not one of the sessions then at work on the map), kept verbatim. AI-authored context is labelled separately.
+13 November 2026, 20:26 to 22:49 WIB, and three messages of 14 November in the last section. Ren's words in a Claude Code desktop session in `/Users/ren/theories` (a fresh session, not one of the sessions then at work on the map), kept verbatim. AI-authored context is labelled separately.
 
 ## Ren's words
 
@@ -50,7 +50,7 @@ Reading the record for that work, it found that the question had been asked and 
 
 ## After the page of design, 14 November 2026
 
-*Added on 14 November 2026 by the coordinator's session, from what the session he spoke to relayed; the words were found in that session's transcript as given here. The times are the transcript's stamps, 03:47:27 and 04:11:17 UTC, converted to WIB; the second message was added later the same day.*
+*Added on 14 November 2026 by the coordinator's session, from what the session he spoke to relayed; the words were found in that session's transcript as given here. The times are the transcript's stamps, 03:47:27, 04:11:17 and 05:28:34 UTC, converted to WIB; the second and third messages were added later the same day.*
 
 *Context (AI-authored):* that session wrote the page of design and the plan, "The map as one model", from nine AI readings of the stores and the record, six AI designs made apart, and seven AI readers set to break the first draft. The page is scratch and not tracked (`tmp/r7/one-model/THE-ONE-MODEL.md`). It proposes the atlas's entries as the one store, and a plan of five steps and about eighteen landings. The coordinator's session corrected three of its rules and one step, and the corrected page was sent to him. His message came after that.
 
@@ -73,3 +73,11 @@ Reading the record for that work, it found that the question had been asked and 
 *Added later on 14 November 2026 (AI-authored; this paragraph as that session relayed it, the next the coordinator's own):* the check came back at 05:25 UTC. Ten AI readers set samples of it against the Lean. Of 36 sampled pairs of dynamics where a theorem of one is used in proving a theorem of the other and the store records no relation, they found a real relation in 24, one in part in 9 and none in 3; of 17 dynamics that stood alone under every count, 13 are related in the Lean. So the counts in its answer of that morning ("117 pieces with 93 alone") and its sentence to him that most dynamics are joined by no proof describe the store's record, not the proofs. By its count the sentence holds at the centre only: no proof use joins the four entries the centre's paragraph rests on to each other. It withdrew the part "What the one model is" of its page of 13 November as not right and wrote another page for his read, "The graph under the map" (`tmp/r7/one-model/THE-GRAPH.md`, scratch, sent to him): theorems carry the relations, what the Lean can say is extracted from it and not typed, and a dynamic is a reading over them. As its first step that page asks for an extraction of what each statement names and each proof uses.
 
 *The coordinator's session (AI-authored):* that extraction is on main since 15 October 2026. [The study of how the theorems connect](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/THEOREM-CONNECTIVITY.md), made in answer to his question of that day, lists for every constant of the checked run what its statement and its proof use, from the checker's cache with nothing compiled. The coordinator's session ran it once that afternoon, reading only (25 seconds; 58,833 constants over 407 modules), and told that session, so that the page does not ask him to release building it again.
+
+*Context (AI-authored):* he was reading the page "The graph under the map" when he spoke. In the order of the day this message came three minutes after the check came back, before the two notes above were written.
+
+12:28:34 WIB (spoken, by its style):
+
+> I think at the core, it should be one unified map. There shall be no axioms, and all the theories are interconnected with each other and expands out into the situationality. But within the situation, the general dynamics and the understandings, the principles, or what we call truth, is within that map. That is what I'm trying to construct. Is this the direction we're currently moving? And are you firm that with the current design, we will be able to reach there? I really need those answers while I'm reading the MD files that you are sending me.
+
+*What the session answered (AI-authored, from that session's own note of it; a judgment):* that the design is the instrument for this and not the thing. In form it is in this direction: nothing stands above the map, a theorem with its conditions is the only carrier, and a principle is a theorem or a reading on the map. It cannot by itself unify the theory, and the session is not firm that it reaches there, since that depends on proofs. It offered him a reading marked as its own: "no axioms" cannot mean no conditions; it can mean that every condition is either concluded by a theorem on the map or is what a situation supplies, which is where the map expands into situations.
