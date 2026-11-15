@@ -1,8 +1,8 @@
 # The direction
 
-*AI-written (Fable), 14 November 2026, for Ren's read. About six minutes. His words below are the direction. Everything else on this page is an AI's reading of them and of the Lean, checked by AI readers and testers and by no person, and it is his to correct. His words and the reading change only after he has read the change. The table is corrected when a check finds an error, and each correction is listed at the foot with its date. It restates nothing of [AGENTS.md](../AGENTS.md); where the two differ, his words decide.*
+*AI-written (Fable), 14 November 2026, for Ren's read; its head note and three lines re-said on 15 November. About six minutes. The direction is an idea that Ren and the AI are still working out. His words below are how he has pointed at it so far. He says of them, on 15 November, that he is trying "to talk around the idea so that the ideas becomes more clear", that word by word he does not have "the confidence that my words are pointing to the precise direction", and that they are to be thought about, not taken as true. So they are kept here as the trace of how the idea was approached, not as its text. The reading is an AI's statement of what the idea is, held by the AI as its own, to be argued with and corrected by him and by anyone. Where his words and the reading differ, that is a question to think through, and neither decides. The reading changes only after he has seen the change. The table is corrected when a check finds an error, and each correction is listed at the foot with its date. Checked by AI readers and testers and by no person.*
 
-## His words
+## How he has pointed at it
 
 14 November 2026, in the evening, to one session ([all of them, verbatim](../sources/15-codex-theory-conversations/2026-11-13-the-map-one-model.md#the-direction-14-november-2026-evening)):
 
@@ -16,8 +16,8 @@
 
 ## The reading
 
-- **One thing, four ways in.** Evolution and becoming, what life aligns to, how selection works, and how one's future changes are to be one account on one map, and not four accounts side by side.
-- **His sentence is the seed:** change itself sustains the further change of what creates the change. How best to say it is open and his. Candidates are at the end of this page.
+- **One thing, several ways in.** Evolution and becoming, what life aligns to, how selection works, and how one's future changes are ways in that he named in one sentence, with "or" between them. They are examples of entrances, not a list of parts. That they lead to one account is the hypothesis. The table below takes them a pair at a time only as a check of what is proved; its four and its six are not the form of the map.
+- **A sentence of his, taken as a seed and not as a law:** change itself sustains the further change of what creates the change. Said of all change it is false in the models. What it points at, as the AI reads it: some ways of going on keep up what they rest on and some run it down, the two can look alike from inside until late, and the difference between them is the subject. How best to say it is open. Candidates are at the end of this page.
 - **A whole can fail.** A sentence that covers a list is cheap. The four are one only as far as a proof joins them inside one model, with what that model takes as given stated. Past that, a telling of them as one is an illusion.
 - **Within a bound.** Each principle holds under its premises. Whether a situation meets them lies beyond the map and is tested there.
 
@@ -110,3 +110,4 @@ The four are then four readings of the one sentence: along the generations, evol
 - **14 November 2026, 19:45 UTC, before his first read.** After the coordinator's session checked rows 5 and 6 against the Lean, by its own reading and three readers set to refute it. Row 5 no longer says "for another formation's dependence" or "the blindness a premise": the statement of `Web.course_lost_iff` lets the formation be any, and its premise is that the order puts its family first. The row now names the two nearer statements and says why none is a join. Row 6 now names the theorems of `ReadOffInTime` and says why they are not counted.
 - **14 November 2026, 19:47 UTC, before his first read.** After a second note from the coordinator's session. Row 6's "Missing" asked for the point of no return derived from a stock and the first step apart derived from what is read. Both are proved for a way in general on the pair (`TurningInTime.turns_in_time_iff_before`, with the point from `noReturnAt_iff_first_below`), and the row had cited neither. It now cites them, and what is missing is narrower: that the way be a selection, with what it responds to derived.
 - **14 November 2026, 19:55 UTC, before his first read.** The section "A route" now points to the plan for the Lean and says what the paper tries found; two failed tries are added to the list under the table; one classical line is added to the ways of saying the seed. No row changes.
+- **15 November 2026, 03:05 UTC.** After his words of that morning ("You use my words as if those words are like the truth"). The head note no longer says that his words are the direction or that they decide; the first section is retitled; two lines of the reading say that the four are examples of ways in and that his sentence is a seed, not a law. No row changes.
