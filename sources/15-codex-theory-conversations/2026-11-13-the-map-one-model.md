@@ -232,7 +232,12 @@ Reading the record for that work, it found that the question had been asked and 
 
 *Context (AI-authored):* after its morning report (the plan on main, its first stage proved in scratch, the proposed AGENTS.md and the note on Chinese for his read) and its note on a second worked case. The direction page and the proposed AGENTS.md had put his quoted sentences at their head as the direction.
 
-10:03 WIB, 15 November (about 03:03 UTC, by the session's clock when it was read), dictated:
+10:01:47 WIB, 15 November (03:01:47 UTC, transcript stamp), dictated:
 
 > I have one concern. You use my words as if those words are like the truth, but in fact, I don't know everything. I sometimes just give you what I think is right. I think we really need to think about my words as well, because I'm trying to talk around the idea so that the ideas becomes more clear. But if word by word, I don't even have the confidence that my words are pointing to the precise direction. But you seem to take it a lot more seriously and literally than I take them myself. Uh, Do you see a problem here?
 
+*Context (AI-authored):* after its answer that it saw the problem, with its own statement of the idea and four places where it would push on his words.
+
+10:09:20 WIB, 15 November (03:09:20 UTC, transcript stamp), dictated:
+
+> I'm always with some uncertainties because many things I also not quite sure. Even with the selection, there seems to be a selector and what's selected. I mean, using the word might be fine, but if we literally follows the meaning of the word, then it falls into another dualism trap, right? Again, I could also be wrong here. I think not to take my words too literally and only follows my thinking is not right. Like we go along the direction and along the way, I think as we work, we will build and understand more and create this like unified whole map that can become actually very useful for the society, for the individual, for the AI, and become a base of the alignment. That's what I'm looking for. Yeah, I think for another round, I feel like there are still things like here and there feels a little bit too rigid.
