@@ -1,0 +1,882 @@
+{
+ "v2:625012fdc789b803b6a8491c0ffeb254c6159517c5fbe286027d07d7e0ce38ea": {
+  "exact": [
+   {
+    "name": "Dependence (Web F C := Dependence Nat F C, line 57)",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean",
+    "line": "48",
+    "statement": "structure Dependence (S : Type u) (F C : Type) where\n  level : S → C → Nat\n  active : S → F → Prop\n  requires : S → F → C → Prop\n  need : S → F → C → Nat\n  draws : S → F → C → Prop"
+   },
+   {
+    "name": "Flow",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/World.lean",
+    "line": "61",
+    "statement": "structure Flow (F C : Type) where\n  present : Nat → List F\n  take : Nat → F → C → Nat\n  give : Nat → F → C → Nat"
+   },
+   {
+    "name": "Flow.Balances",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean",
+    "line": "278",
+    "statement": "def Balances (W : Web F C) : Prop :=\n  ∀ t c, W.level (t + 1) c + L.taken t c = W.level t c + L.given t c"
+   },
+   {
+    "name": "Flow.joint_keeps",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean",
+    "line": "248",
+    "statement": "theorem joint_keeps (balances : L.Balances W) {t : Nat} {c : C}\n    (within : L.WithinJoint t c) : W.level t c ≤ W.level (t + 1) c"
+   },
+   {
+    "name": "Flow.excess_lowers",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean",
+    "line": "272",
+    "statement": "theorem excess_lowers (balances : L.Balances W) {t : Nat} {c : C}\n    (excess : L.given t c < L.taken t c) : W.level (t + 1) c + 1 ≤ W.level t c"
+   },
+   {
+    "name": "Flow.stays_below",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean",
+    "line": "468",
+    "statement": "theorem stays_below (balances : L.Balances W) (acting : L.Acting W)\n    (dependent : W.Dependent) {c : C} {m : Nat}\n    (gated : ∀ t f, f ∈ L.present t → 0 < L.give t f c →\n      W.requires t f c ∧ m ≤ W.need t f c)\n    {T : Nat} (below : W.level T c < m) : ∀ n, W.level (T + n) c < m"
+   },
+   {
+    "name": "Flow.Balances.kept_iff",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JointDraw.lean",
+    "line": "114",
+    "statement": "theorem Balances.kept_iff (balances : L.Balances W) :\n    W.need t g c ≤ W.level (t + 1) c ↔ W.need t g c + L.taken t c ≤ W.level t c + L.given t c"
+   },
+   {
+    "name": "RegimeMargin.step",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
+    "line": "249",
+    "statement": "def step (g : Nat → Nat) (H x : Nat) : Nat := (x - H) + g (x - H)"
+   },
+   {
+    "name": "RegimeMargin.ends_iff_below",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean",
+    "line": "741",
+    "statement": "theorem ends_iff_below {g : Nat → Nat} {H y hi x : Nat} (pos : 0 < H + y) (short : Short g H y)\n    (nothing : FromNothing g) (meets : Meets g H y hi) (keeps : Keeps g H hi) (high : x ≤ hi) :\n    (∃ n, (Law.run (step g H) x).state n = 0) ↔ x < H + y"
+   },
+   {
+    "name": "WayOfUnits.Holds",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean",
+    "line": "172",
+    "statement": "def Holds (y : Nat → Nat) (s : List (Nat × Nat) × Nat) : Prop :=\n  s.1 ≠ [] ∧ (∀ u, u ∈ s.1 → need u ≤ s.2) ∧ taken s.1 + y (taken s.1) ≤ s.2"
+   },
+   {
+    "name": "WayOfUnits.unending_iff_holds",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean",
+    "line": "450",
+    "statement": "theorem unending_iff_holds {giving y : Nat → Nat} {hi : Nat} {w : List (Nat × Nat)} {x : Nat}\n    (needs : ∀ u, u ∈ w → 0 < need u) (nothing : RegimeMargin.FromNothing giving) (high : x ≤ hi)\n    (along : ∀ k, (∀ j, j ≤ k → Goes (course giving (w, x) j)) →\n      Regime giving y hi (course giving (w, x) k).1) :\n    «不穷» (net giving) «一» (w, x) ↔\n      ∃ k, (∀ j, j < k → Goes (course giving (w, x) j)) ∧ Holds y (course giving (w, x) k)"
+   },
+   {
+    "name": "WayOfUnits.after_eq_iff",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean",
+    "line": "268",
+    "statement": "theorem after_eq_iff {w : List (Nat × Nat)} {x : Nat} : after w x = w ↔ ∀ u, u ∈ w → need u ≤ x"
+   }
+  ],
+  "findings": [
+   {
+    "claim": "(a) No general instance in the files; one built case; a general instance on paper.",
+    "evidence": "Not found: a declaration reading RegimeMargin.step as a Flow (grep RegimeMargin over Becoming/*.lean: nine files; only ReadOffInTime also has Balances). There a balanced web's habitat (balances, ReadOffInTime.lean:934) is the regime's run once the clearer stops (stopped_is_regime, 1068); the dweller's take is \"if 1 ≤ habitat k t then 1 else 0\" (855). The Flow family has no step function: records along the step index, tied by Balances. On paper: F = C = Unit, level := the orbit of step g H, take := min level H, give := g (level - H). Script (/Users/ren/theories/tmp/r7/one-model/check/round9/readers/stock/worlds.py): Balances holds in all 112 cases tried; with take := H it fails at exactly the 28 with level < H, since step's subtraction is truncated and Balances has none."
+   },
+   {
+    "claim": "(a) On that instance both halves of ends_iff_below are Flow's two one-step laws.",
+    "evidence": "Argued, not Lean: Short and FromNothing give given < taken at every positive level below H + y (excess_lowers); Meets gives taken ≤ given from H + y to hi (joint_keeps)."
+   },
+   {
+    "claim": "(b) No iff on a level for all later steps in the Flow family; its exact law is for one step.",
+    "evidence": "Balances.kept_iff (quoted) and Balances.broken_iff (JointDraw.lean:104) carry the step's taken and given as terms. Other \"↔\" found: Continuation.lean:145 (inward_iff_not_fed), RenewalFlow.lean:273 (activity of two webs), Flow.lean:288 and 409 (balance restated). Nearest pair for a level: stays_below from below; from above only laws whose premise is the step's exchange (joint_keeps; restores, Continuation.lean:364). give is a free field, not a function of the level."
+   },
+   {
+    "claim": "(b) The gap has a countermodel in the files.",
+    "evidence": "Exceeding (Continuation.lean): every need 1, levels 4, 2, 0, all end (all_end, 726). Alone: same renewer, one taker, level 4 for ever (all_continue, 896). The givers' need m is where a stock stays below, not its point of no return; RegimeMargin.root_above_need (764) puts the regime's point at least the draw above the need."
+   },
+   {
+    "claim": "(b) The rest of what was asked, by line.",
+    "evidence": "family_excess_ends (Continuation.lean:573) is excess_lowers and stays_below for a family's stock, from \"start : W.stock ds T < n + m\". Excess is a premise, not a definition; stock is \"total cs (W.level t)\" (Arising.lean:126). not_keepsOpening_of_dissipated_requirements (KeepingWidening.lean:1151) and begins_late_of_keepsOpening (1015) name no level. noReturnAt_iff_first_below (TurningInTime.lean:1672) and recoverable_iff_above (1659) take \"fall : ∀ t, X (t + 1) ≤ X t\". RegimeMargin: ends_below 705, stays_ended 712, ends_beyond_giving 721, holds 730. WayOfUnits: Regime 177, course_within 390 (Keeps only), reaches_holds 405."
+   },
+   {
+    "claim": "(c) Four places use that a unit leaves exactly itself.",
+    "evidence": "reaches_holds 417 and 433-434, \"length_keep_lt m (goes_false_of_lt lt)\": an unmet unit shortens the way, the descent on ℓ. Line 424, \"(mem_course_iff giving (w, x) u k).mp m).1\": a later unit was in the start, carrying needs. falls (368) and stays (356) through fixed_while (336), by \"GrammarLaws.keep_all S\" (343): with every need met the way is the same list, so one draw and one regime. Holds has no \"unchanged\" clause because after_eq_iff makes it \"every need met\"."
+   },
+   {
+    "claim": "(c) What breaks with kids.",
+    "evidence": "The length can grow; later units need not be in the start; with every need met the way is still replaced, so the draw changes each step and no one regime applies."
+   },
+   {
+    "claim": "(c) The measure: none on the way alone; the stock gives a bound, and the exact side becomes a return.",
+    "evidence": "No measure once a kind leaves two of itself or kinds leave each other (Worlds 3, 1). On a course that goes on, with positive needs and FromNothing, taken w < level at every step (else the level left is giving 0 = 0); so within hi and with positive uses the length is below hi. With finitely many kinds reachable the course returns to a configuration it was in. Argued, not Lean."
+   },
+   {
+    "claim": "(d) Not as worded.",
+    "evidence": "\"Unchanged\" is what the if-half needs, but then \"every need met\" must go (World 2), a side from above is missing (World 2'), and it is not necessary (World 1)."
+   }
+  ],
+  "already_there": [
+   "WayOfUnits.unending_of_fixed (WayOfUnits.lean:1122): a course reaching a configuration its step leaves as it is never ends; the return of period one.",
+   "RegimeMargin.Coupled.Indexed.returns_within (RegimeMargin.lean:2862), ends_iff_within (2913): the finite argument (a bounded run returns; ending decided within the count), for webs of levels.",
+   "Law.stepWhile_unending_iff (GuardedStep.lean:143): never ends exactly where it can go on along the whole orbit; C has to say more.",
+   "Flow.Balances.kept_iff (JointDraw.lean:114): the Flow family's exact law, for one step.",
+   "ReadOffInTime.stopped_is_regime with balances (ReadOffInTime.lean:1068, 934): one built web whose level is the regime's run."
+  ],
+  "hand_tries": [
+   {
+    "world": "World 1: A need 1 use 1 kids [B]; B need 1 use 2 kids [A]; giving 4 ↦ 1, 3 ↦ 2, else 0; from ([A], 5).",
+    "outcome": "Ways A, B, A, B; level 5 throughout. Never ends, never unchanged: C's only-if fails."
+   },
+   {
+    "world": "World 2: A need 1 use 1 kids [A, B]; B need 13 use 1 kids [B]; giving z = min z (12 - z); from ([A, B], 6).",
+    "outcome": "Way [A, B] at every step, levels 6, 8, 12, 12. Never ends; B's need is never met, so C's holding is never reached: only-if fails by the second clause."
+   },
+   {
+    "world": "World 2': the same, B's need 9.",
+    "outcome": "At the start: not empty, unchanged, 6 ≥ 4 (the point for a draw of 2). At 12 B goes on and A leaves another: nine units by step 9; levels 6, 8, 12 six times, 10, 4, 0. Ends at step 10: more level ended it."
+   },
+   {
+    "world": "World 3: A need 1 use 1 kids [A, A]; same giving; from ([A], 6).",
+    "outcome": "1, 2, 4, 8, 16, 32 units; levels 6, 10, 12, 12, 8, 0. Ends; holding unreachable; C holds with both sides false, as B."
+   }
+  ],
+  "obstacles": [
+   "Flow's exchange is not a function of the level; a threshold on the level cannot be exact in the family itself. Exactness enters with Short, Meets and Keeps.",
+   "With kids the fate is not monotone in the level (World 2'): no single point from below is exact.",
+   "The plan's kept failure: a join that only renames is a dictionary. The instance of (a) counts only if a Flow law then concludes something of the regime."
+  ],
+  "suggested_statements": [
+   "S1, if-half of C: some unit goes on at (w, x); after w x = w; taken w + y ≤ x ≤ hi; Meets and Keeps at taken w; every unit of w with need above x has need above hi. Then the net never ends. WayOfUnits.stays is the case kids u = [u].",
+   "S2, exact by return: with positive needs and uses on every kind reachable, FromNothing, the level within hi and finitely many kinds reachable, the net never ends exactly where the course comes back to a configuration it was in, some unit going on until then. A finite check, not a threshold.",
+   "S3, joins B to C: on a course that goes on, taken (way k) < level k at every step.",
+   "S4, the join of (a): the flow and web of the regime with take := min, Balances proved; then ends_below from Flow.excess_bounded and holds from joint_keeps.",
+   "S5: C as written is unending_iff_holds plus ways whose multiplying is balanced by units leaving nothing (kids A = [A, B], kids B = []); otherwise frozen criterion C is met."
+  ]
+ },
+ "v2:4d2b510abe7ae1b4b4a59ec9f88b2f5cf91ba5f81bdaffc14ede72a372a44f05": {
+  "exact": [
+   {
+    "name": "TurningInTime.toEnd_iff",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean",
+    "line": "332",
+    "statement": "theorem toEnd_iff (need : Nat) (after : W → Nat → W) (left : W → Nat → Nat) :\n    «至终有常» (net need after left) (sameValue (Prod.fst : W × Nat → W)) ↔\n      ∀ w x x', need ≤ x → need ≤ x' → after w x = after w x'"
+   },
+   {
+    "name": "Web.RecruitsThrough",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolCourse.lean",
+    "line": "77",
+    "statement": "def RecruitsThrough (W : Web F C) (obs : F → C → Prop)\n    (pool : Nat → (Nat → C → Nat) → F → Prop) : Prop :=\n  ∀ t l l', SameMembers pool l l' t → W.AlikeThroughAll obs (pool t l) l l' t →\n    SameMembers pool l l' (t + 1)"
+   },
+   {
+    "name": "Web.RecruitsThrough.members_alike (section variables: recruits : W.RecruitsThrough obs pool, start : SameMembers pool l l' 0)",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolCourse.lean",
+    "line": "107",
+    "statement": "theorem members_alike :\n    ∀ T, (∀ s, s < T → W.AlikeThroughAll obs (pool s l) l l' s) → SameMembers pool l l' T"
+   },
+   {
+    "name": "WayOfUnits.mem_course_iff",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean",
+    "line": "279",
+    "statement": "theorem mem_course_iff (giving : Nat → Nat) (s : List (Nat × Nat) × Nat) (u : Nat × Nat) :\n    ∀ n, u ∈ (course giving s n).1 ↔ u ∈ s.1 ∧ ∀ j, j < n → need u ≤ (course giving s j).2"
+   },
+   {
+    "name": "GrammarLaws.keep_congr",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
+    "line": "455",
+    "statement": "theorem keep_congr {p q : α → Bool} : ∀ l : List α, (∀ x, x ∈ l → p x = q x) →\n    keep p l = keep q l"
+   },
+   {
+    "name": "Learning.Training.keeps_through_iff",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Revision.lean",
+    "line": "41",
+    "statement": "theorem keeps_through_iff {old new : X → X → Prop}\n    (refl : ∀ x, old x x) (symm : ∀ x y, old x y → old y x)\n    (trans : ∀ x y z, old x y → old y z → old x z) :\n    (∀ select, Through old select → Through new select) ↔\n      (∀ x y, new x y → old x y)"
+   },
+   {
+    "name": "Revising.alike (read s b is b where the link s.2.1 is built, false otherwise, line 159)",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Revision.lean",
+    "line": "161",
+    "statement": "def alike (s : State) (b c : Bool) : Prop := read s b = read s c"
+   },
+   {
+    "name": "Web.consumed_continues_transformed",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean",
+    "line": "269",
+    "statement": "theorem consumed_continues_transformed (dependent : W.Dependent) {T : Nat} {g : F} {c : C}\n    (below : ∀ t, T < t → W.level t c < W.need T g c) {t : Nat} (later : T < t)\n    (active : W.active t g) : ¬ (W.requires t g c ∧ W.need T g c ≤ W.need t g c)"
+   },
+   {
+    "name": "«至终有常»",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarPath.lean",
+    "line": "235",
+    "statement": "def «至终有常» (R E : «际» α) : Prop :=\n  ∀ u u', E u u' → ∀ v, R u v → (∃ v', R u' v' ∧ E v v') ∨ ∀ w, ¬ R u' w"
+   },
+   {
+    "name": "«本类至终有常»",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarPath.lean",
+    "line": "308",
+    "statement": "def «本类至终有常» (R E : «际» α) (m : α) : Prop :=\n  ∀ u u', E m u → E m u' → ∀ v, R u v → (∃ v', R u' v' ∧ E v v') ∨ ∀ w, ¬ R u' w"
+   },
+   {
+    "name": "«所缘同于»",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarPath.lean",
+    "line": "172",
+    "statement": "def «所缘同于» (R E : «际» α) (m : α) : Prop := ∀ v, R m v → E m v"
+   },
+   {
+    "name": "«后类»",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OwnClass.lean",
+    "line": "170",
+    "statement": "def «后类» (R : «际» α) (m : α) : «际» α := fun x y => x = y ∨ («所闭» R m x ∧ «所闭» R m y)"
+   }
+  ],
+  "findings": [
+   {
+    "claim": "(a) Not found: a theorem in which an alikeness is computed from a going-on's own response and also changes along the course by what the course keeps. Three nearest, each lacking a different half.",
+    "evidence": "(1) TurningInTime.toEnd_iff (quoted): computed from the response `after`, in the root's word, on the model L extends. Lacks: one class for every way at once (∀ w), so nothing changes along a course; one need for the whole way. (2) PoolCourse members_alike (quoted): who reads changes with who stays. Lacks: RecruitsThrough is a premise, `obs` is supplied, the level history is given and the pool draws nothing. (3) Revising (Revision.lean:161 quoted, controlled_revision :256): a lumping read off the state, changed by the course's acts, on a stock. Lacks: one built witness under a supplied controller; the general law Registration.run_keeps (:100) takes `step_keeps` as a premise."
+   },
+   {
+    "claim": "The other named modules, located and read, are further off. Not quoted (limit of twelve).",
+    "evidence": "Closing.lean: forms_by_closing :332, formedCourse_eq_carried :527 (strengths read off the course, the reading κ supplied). HeldPossible.lean: RuleTower.process :543, possible_iff_held :581 (fixed scheme; the held relation SameFrom given). LearnedGrouping.lean: reception_changes_parse :386 (one computed witness). ContinuingRevision.lean: new_available_choice :317, retired_choice :374, repeats_iff :576. Dependence.lean: consumed_ends_when_fixed :284. Counterfactual.lean:157 Sensitive; Sensitivity.lean:367 tailLaw_no_least_coupling (no least coupling with infinitely many conditions; L has one stock and a finite way, so no bearing found). Grammar.lean:232 «同族». OwnClass.lean:757 Flow.CouplingClass (a root class made from couplings; obs supplied, no time)."
+   },
+   {
+    "claim": "A1's relation is already there under two names (reading of definitions, not Lean-checked).",
+    "evidence": "WayOfUnits.lean:147 `after w x := GrammarLaws.keep (goes x) w`, so A1 for kids u = [u] is keep_congr (quoted) at p := goes x, q := goes x'. And 'meets the same needs' is Web.AlikeThrough (Testing.lean:186) with `thresholdOnly` (Testing.lean:157, nothing coupled by level), pooled over the way by AlikeThroughAll (Testing.lean:224)."
+   },
+   {
+    "claim": "D1 is near-trivial and already there in substance; its cut is in the wrong place.",
+    "evidence": "With copies only, v ∈ after w x gives v ∈ w; for kids u = [u] that is the forward half of mem_course_iff (quoted). It uses neither giving nor the level's course, so it holds with the stock removed. The cut is on needs, not kinds: a kid that is not a copy but has a need already in the way leaves D1 true (try 3), so D1's premise is stronger than needed and D2's 'not a copy' is not sufficient. The form with content: the relation changes at a step exactly where some need in the way is unmet there (WayOfUnits.after_eq_iff :268 read on needs)."
+   },
+   {
+    "claim": "D2 is new as a statement, with two limits already in the Lean.",
+    "evidence": "Not found: any unit in WayOfUnits or TurningInTime leaving another kind; TurningInTime.AloneOutside (:320) has `marked : Nat → Prop`, not depending on the way. Limit 1: by A1, two levels alike to w give the same next way, so in L a new need never arrives because of a difference the way does not yet respond to. PoolCourse says this of pools (members_alike; exits scheduled_apart :251, called_not_through :227). `kids : U → List U` is the scheduled exit only, so 'in time' in L is a schedule racing the fall, not a response to it. Limit 2: once the new kind is there the course is a WayOfUnits course (try 4 has WayOfUnits.With's levels)."
+   },
+   {
+    "claim": "D3 as worded is two facts side by side, and its one-statement form says nothing new.",
+    "evidence": "Its second half is the relation's definition; its first is A1 iterated. The two-course form (ways equal up to N exactly where the levels are alike to the common way at every step before N) is members_alike with first_apart (PoolCourse.lean:120), RecruitsThrough discharged by A1; with the relation defined as the kernel of `after w` it holds by unfolding. This is the plan's 'dictionary' failure. What L adds to PoolCourse is RecruitsThrough proved, and the level made by the pool's draw."
+   },
+   {
+    "claim": "The relation is computed from the response only if defined as the kernel `after w x = after w x'`.",
+    "evidence": "'Meets the same needs' is strictly finer where a unit leaves nothing (try 7). They agree where every unit leaves something: argued by hand (met sets are nested; an extra non-empty block lengthens the list), true on every other try."
+   },
+   {
+    "claim": "(b) Root words: the instantiation exists; the two-way sentence is the root theorem, already general.",
+    "evidence": "α := List U × Nat; R := L's net (WayOfUnits.net giving is already a «际», :163); E := sameValue Prod.fst, the way's class used at WayOfUnits.lean:323 and in toEnd_iff. Unfolded by hand: «本类至终有常» R E (w,x) says any two levels at which w goes give the same `after w`; «所缘同于» R E (w,x) says the step keeps the way. Both at (w,x) make «后类» R (w,x) the least such class («后类最细», OwnClass.lean:257). The graded relation is «核» R E inside a way's block (Grammar.lean:375; only TurningInTime.core_apart_below_need :415 is about it); 'constant under R, inside E' is «根» (Grammar.lean:380). Not found (GrammarPath.lean 300–500, OwnClass theorem list): any law for how «本类至终有常» at a member passes across a step that leaves the member's class. That is where D would add something in root terms."
+   },
+   {
+    "claim": "consumed_continues_transformed is used nowhere, and L could use it only with lines as formations.",
+    "evidence": "grep over Becoming/: Dependence.lean:261–272 only (Units.lean:396 is a separate theorem; Reserve.lean:335 a docstring). Web is `Dependence Nat F C` (World.lean:57). Reading L's course as a Web (level the course's, active = in the way with need met) makes Dependent hold by definition; consumed_ends_when_fixed is then kids u = [u]. A Web formation keeps its name while its need changes, which in L is a line of descent, not a unit. Not tried in Lean."
+   },
+   {
+    "claim": "The root's open list does not count L as closing its item on self-changing conditions.",
+    "evidence": "/Users/ren/theories/theories/becoming/chapters/01-ROOT.md:670 lists as not yet stated a change of the law of change with no fixed scheme, a space of rules not given with the carrier, and readers formed from the selected in the grammar's terms. L's kinds and `kids` are given with the carrier: a fixed scheme."
+   }
+  ],
+  "already_there": [
+   "A1 for kids u = [u]: GrammarLaws.keep_congr (GrammarLaws.lean:455) through WayOfUnits.after (:147).",
+   "'Meets the same needs': Web.AlikeThrough with thresholdOnly, pooled by AlikeThroughAll (Testing.lean:157, 186, 224).",
+   "The way's class constant up to the net's end exactly where no level makes a difference: TurningInTime.toEnd_iff (:332); its failure at a way: WayOfUnits.ends_while_net_goes (:323).",
+   "D1 for kids u = [u]: WayOfUnits.mem_course_iff (:279) and after_eq_iff (:268).",
+   "D3's two-course form, and that a new reader never comes from a difference not yet read: Web.RecruitsThrough.members_alike, first_apart, alike_iff (PoolCourse.lean:107, 120, 138), with RecruitsThrough assumed.",
+   "Marks derived, not given, for two units: WayOfUnits.first_outside (:573), two_units_iff (:625).",
+   "Every old selection kept exactly where the new relation merges nothing: Learning.Training.keeps_through_iff (Revision.lean:41); D1 is its 'lost' side.",
+   "The two-way sentence for any net and class: «根» (Grammar.lean:380)."
+  ],
+  "hand_tries": [
+   {
+    "world": "1. D1, no kids but itself: [(9,4),(1,1)] from 9 (WayOfUnits.With.way), and [(9,1),(1,4)] (Against.way). giving z = min z (12 - z) throughout.",
+    "outcome": "Levels 9, 8, 6, 10, 12, 12; needs in the way {1,9}, {1,9}, {1}, … The relation coarsens once, at the step after level 8 fell below need 9. Against: 9, 8, 6, 4, 0, same coarsening, ends. D1 holds."
+   },
+   {
+    "world": "2. D1, copies that multiply: one kind (need 3, use 1), kids [A, A], from 9.",
+    "outcome": "1, 2, 4, 8, 16, 32 units; levels 9, 12, 12, 12, 8, 0; needs {3} at every step. D1 holds and says nothing: the relation never changes while the draw doubles and the level goes 12, 8, 0."
+   },
+   {
+    "world": "3. Boundary: a kid not a copy with the same need, G (1, 5) leaving g (1, 2), from 9.",
+    "outcome": "Levels 9, 8, 12, 12, …; needs {1} throughout. D1 holds without its premise; D2's premise is met and no level comes to make a new difference."
+   },
+   {
+    "world": "4. D2 in time: G (need 1, use 4) leaves H (need 9, use 4); H and S (1, 1) leave themselves; way [G, S] from 9.",
+    "outcome": "Ways GS, HS, S, S, …; levels 9, 8, 6, 10, 12, 12 (WayOfUnits.With's levels). 9 and 8 are alike to [G,S] and not to [H,S]. From 8: 8, 6, 2, 2, …"
+   },
+   {
+    "world": "5. D2 later: H arrives at step 2 (G, G1, H) or step 3 (G, G1, G2, H), from 9.",
+    "outcome": "Step 2: 9, 8, 6, 2, 2, … goes on at exactly S's point of no return. Step 3: 9, 8, 6, 2, 0, ends, the same levels as with no new kind (GS: 9, 8, 6, 2, 0)."
+   },
+   {
+    "world": "6. D2 too late by a low need: H needs 3, arrives at step 1, from 9.",
+    "outcome": "9, 8, 6, 2, 0. H ends at level 2, after the fall could be stopped; the line ends."
+   },
+   {
+    "world": "7. Kernel boundary: d (need 5, use 1, no kids) with b (1, 1), from 9.",
+    "outcome": "Levels 4 and 6 give the same next way and meet different needs: 'same needs met' is finer than the way's own response."
+   }
+  ],
+  "obstacles": [
+   "No Lean was run. The unfoldings of «本类至终有常» and «所缘同于» at the way's class, the Web reading of L, and 'kernel = same needs met where every unit leaves something' are by hand.",
+   "No single non-trivial two-way statement was found on paper: each candidate reduces to a definition plus A1.",
+   "By A1, L cannot form a reader of the fall because of the fall. If step 6 means that, `kids` must depend on something the way already responds to, and then nothing new is read.",
+   "TurningInTime's laws take `marked : Nat → Prop` fixed. With marks that depend on the way and change along the course, whether turns_in_time_iff_kept_below carries over is untested.",
+   "sameValue Prod.fst is too fine once copies multiply ([A] and [A, A] differ); the class has to be of the kinds present, as `sameValue (fun s => κ s.1)` in TurningInTime.kind_toEnd_of_unmarked (:381)."
+  ],
+  "suggested_statements": [
+   "Define the relation as the kernel, Alike w x x' := after w x = after w x', and prove it is 'meets the same needs in w' where every unit of w has a kid; keep try 7 as the countermodel without that premise.",
+   "Marks read off the way: ∀ w x, (∀ u ∈ w, need u ≤ x) → after w x = alone w, with alone w the kids of every unit. This is AloneOutside with `marked` depending on the way, and is how D joins steps 1 and 2.",
+   "Sharp D1, on needs: where no kid has a need its parent's way lacks, the needs of after w x are the needs of w that x meets; so the relation changes at a step exactly where a need is unmet.",
+   "The limit of L, stated as a law: for x, x' alike to w, a need is in after w x exactly where it is in after w x'. A new difference never arrives because of a difference not yet made.",
+   "In root words: with no new need, «本类至终有常» (net) (class of kinds present) at a configuration holds at every configuration its course reaches; try 4 as the witness that with a new need it holds at ([G,S], 9) and fails at ([H,S], 8).",
+   "L's course read as a Web, so that Web.RecruitsThrough is proved of it and members_alike, first_apart and consumed_continues_transformed apply to it; otherwise D lands beside PoolCourse and does not join it."
+  ]
+ },
+ "v2:5fb13f3da9f7886219d538e8bf2defcd5893b9dcf693fafc4298f96ac1055cd8": {
+  "exact": [
+   {
+    "name": "Web.Lost",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean",
+    "line": "159",
+    "statement": "def Lost (c : C) : Prop :=\n  ∃ g T, W.Broken T g c ∧ ∀ t, T < t → W.level t c < W.need T g c"
+   },
+   {
+    "name": "Web.lost_iff",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+    "line": "2701",
+    "statement": "theorem lost_iff {g d : Nat → Nat} {k : Nat}\n    (step : ∀ t, W.level (t + 1) c = W.level t c + g t - d t)\n    (renewing : ∀ t, m ≤ W.level t c → g t = r) (renews : ∀ t, g t ≤ r)\n    (draws : ∀ t, d t = k) (needs : 0 < m) (depends : ∀ t, W.requires t f c)\n    (need : ∀ t, W.need t f c = m) (start : m ≤ W.level 0 c) : W.Lost c ↔ r < k"
+   },
+   {
+    "name": "Beyond.lossStep",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean",
+    "line": "344",
+    "statement": "def lossStep (p : CarrierCounts × Nat) (_ : CarrierCounts) : Nat := p.2 + 1"
+   },
+   {
+    "name": "PoolFromCourse.bear",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolFromCourse.lean",
+    "line": "498",
+    "statement": "def bear (onShapers onOthers : Nat) (g : CarrierCounts) : CarrierCounts :=\n  ⟨g.carrier + onOthers, g.other + onShapers,\n    Nat.lt_of_lt_of_le g.other_pos (Nat.le_add_right _ _)⟩"
+   },
+   {
+    "name": "PoolFromCourse.borne_by_others_raises",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolFromCourse.lean",
+    "line": "536",
+    "statement": "theorem borne_by_others_raises {onOthers : Nat → Nat} :\n    Raises (liftShare (B := Nat) order) favours (borneStep (fun _ => 0) onOthers)"
+   },
+   {
+    "name": "PoolFromCourse.Borne.others_locked",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolFromCourse.lean",
+    "line": "782",
+    "statement": "theorem others_locked (t : Nat) :\n    Locked order favours (threshold hi lo) ((onOthers t).1.1, (onOthers t).2) ∧\n      order.le twoToOne (onOthers t).1.1 ∧ order.le hi (onOthers t).2"
+   },
+   {
+    "name": "WayOfUnits.mem_course_iff",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean",
+    "line": "279",
+    "statement": "theorem mem_course_iff (giving : Nat → Nat) (s : List (Nat × Nat) × Nat) (u : Nat × Nat) :\n    ∀ n, u ∈ (course giving s n).1 ↔ u ∈ s.1 ∧ ∀ j, j < n → need u ≤ (course giving s j).2"
+   },
+   {
+    "name": "WayOfUnits.mem_after_iff",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean",
+    "line": "261",
+    "statement": "theorem mem_after_iff {w : List (Nat × Nat)} {x : Nat} {u : Nat × Nat} :\n    u ∈ after w x ↔ u ∈ w ∧ need u ≤ x"
+   },
+   {
+    "name": "WayOfUnits.takes_nothing_iff_alone",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean",
+    "line": "984",
+    "statement": "theorem takes_nothing_iff_alone {giving : Nat → Nat} {m n H₂ x : Nat} (order : n ≤ m) :\n    «不穷» (net giving) «一» ([(m, 0), (n, H₂)], x) ↔ «不穷» (net giving) «一» ([(n, H₂)], x)"
+   },
+   {
+    "name": "SelectionTerm.Generations.kept_iff",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsPersist.lean",
+    "line": "280",
+    "statement": "theorem kept_iff {G : Generations α} {Q : α → Prop} {T : Nat} (fixed : ∀ x, x ∈ G.family T → Q x) :\n    (∀ n x, x ∈ G.family (T + n) → Q x) ↔ «闭» (G.descentFrom T) (fun y => Q y.2)"
+   },
+   {
+    "name": "ReadingsPersist.Habitat.beyond_which_persist",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsPersist.lean",
+    "line": "1264",
+    "statement": "theorem beyond_which_persist :\n    ¬ (lineA false .own overdrawn).Persists ∧\n    ((lineA false .source cleared).Persists ∧ ¬ (lineD false .source cleared).Persists) ∧\n    ((lineA false .whole keep).Persists ∧ (lineD false .whole keep).Persists)"
+   },
+   {
+    "name": "ReadingsPersist.Habitat.beyond_standing_unselected",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsPersist.lean",
+    "line": "1222",
+    "statement": "theorem beyond_standing_unselected :\n    StandsLate (fun x => isA x = true) ((world false .source).levels present start) ↔\n      StandsLate (fun x => isA x = true) ((world false .whole).levels present start)"
+   }
+  ],
+  "findings": [
+   {
+    "claim": "(a) Permanence is proved in five unjoined forms. None is stated for a way of units on a level.",
+    "evidence": "(1) Web.Lost is permanent because the draw is assumed to stay at k (lost_iff's premise `draws`; course_lost_iff, Optimum.lean:2722, same). (2) lossStep is a counter that only rises, with no bearer. (3) What is absent stays absent whatever the level does: mem_course_iff (as a corollary only; no theorem in WayOfUnits.lean states the never-returning, grep for 'never'/'return' in its statements found none), first_kept (WayOfUnits.lean:589), Generations.family_nil_from (ReadingsPersist.lean:647), root «取于储者绝而不复» (ReaderRebuilding.lean:404), «无持者不复» (RuleRebuilding.lean:698). With.levels (WayOfUnits.lean:1032) already shows the level back at 12 with the unit that needs 9 gone. (4) A point of no return over feasible courses: ReadOffInTime.NoReturnAt (ReadOffInTime.lean:595), noReturn (:1011). (5) ReadInTime.deadline (ReadInTime.lean:631, not quoted for the cap): from a reading step N at or past g.other*c*x.other the course is Locked at every step N+1+k; permanence of a lock, not of a loss to a bearer."
+   },
+   {
+    "claim": "(a) Who bears is handed in as a parameter in PoolFromCourse, and derived only in ReadingsPersist.Habitat, where 'no difference to those who drew' is already a law.",
+    "evidence": "bear takes two numbers; borneStep (PoolFromCourse.lean:504) applies them. Laws: borne_by_shapers_favours_iff (:524, c + l ≤ s), borne_by_others_favours_iff (:530, c ≤ s + l), borne_by_others_raises. shapers_turned (:736) and shapers_left (:753) are computed (rfl, decide); others_locked holds for every t by closed_stays_closed. In Habitat the dweller's line requires the habitat the line clears: beyond_which_persist is the case, and line_standing_unselected (ReadingsPersist.lean:459), reader_kept_alike (:505) and their instance beyond_standing_unselected are the law. That model has two conditions (source, habitat). Chapters: 'never come back' at 08-METHOD.md:95 points to 07 §3.3 (07-SIGNIFICANCE.md:203; Downstream.one_way, Continuation.lean:981); 'does not come back' at 01-ROOT.md:671 and 07-SIGNIFICANCE.md:696; 不复 at 04-LIFE.md:264, 05-COLLECTIVES.md:416, 06-CLASSICAL-TEXTS.md:369 and :607; 不復 and 不可復: not found."
+   },
+   {
+    "claim": "(b) E1 is already there. E2 is true by definition.",
+    "evidence": "E1 without descent is mem_course_iff's first conjunct, the page's own frozen failure. With descent it is kept_iff with Q := 'not of kind K' (exact, an iff), once L's way is shown to be G.family for G.kids t u := kids u if need u ≤ level t, else []; Generations.kids is step-indexed (SelectionTerm.lean:413). Only that identification is new, and it is frozen clause A(4). E2: `use` does not occur in mem_after_iff."
+   },
+   {
+    "claim": "(b) E3's last clause is false inside the regime wherever the lost unit drew: A goes on because B ended.",
+    "evidence": "Simulation (not Lean), giving min z (12 - z): [(1,3),(1,2)] from 9 runs 9, 8, 6, 2, 0 and ends; with B = (9,2) A holds at 6. All 5 two-drawer cases on the grid behave so. Reason: B lost means the level fell under the joint draw, so the start is below the hold of H + h, and with both kept RegimeMargin.ends_below takes it to nothing. This is the strict companion of greater_need (WayOfUnits.lean:852). The course itself is an instance of two_units_iff (:625) with B first; Against (:1096) has the same shape and ends."
+   },
+   {
+    "claim": "(b) On one stock inside the regime, a loss that makes no difference to the drawers while every drawer goes on is impossible; it happens exactly where a premise is left.",
+    "evidence": "Simulation: 0 violations over three-unit ways (needs 1,4,7,10,15; uses 0,1,2,3,5), starts 1 to 12. Exits found: start above hi (1044 cases); a drawer that needs nothing ([(0,3),(5,0)] from 5: levels 5,4,2,0, the bystander lost, the drawer 'goes on' at 0); something given from nothing ([(2,1),(4,0)] from 4 on GivenFromNothing.giving: 4,3,4,3, the bystander lost, the drawer forever). A giving where Meets fails was not tried."
+   },
+   {
+    "claim": "(c) On this giving within 12, the two-kind E3 case sits on the edge of holding.",
+    "evidence": "All 14 cases with use A > use B > 0, B met at the start and holding alone, arrive exactly at 2·use A; one level lower ends ((1,3) from 5: 5,4,2,0)."
+   },
+   {
+    "claim": "What ran.",
+    "evidence": "No Lean build, no test. Three Python simulations of seconds each: /Users/ren/theories/tmp/r7/one-model/check/round9/readers/losses/e3_check.py, e3_check2.py, e3_check3.py. A first oversized run was stopped at 120 s and shrunk."
+   }
+  ],
+  "already_there": [
+   "E1 with descent: SelectionTerm.Generations.kept_iff and kept_of_descent (ReadingsPersist.lean:280, :293); without descent: WayOfUnits.mem_course_iff.",
+   "E2: WayOfUnits.mem_after_iff; ends_while_net_goes (WayOfUnits.lean:323).",
+   "E3's 'no difference' for a unit that takes nothing, two units only: carrier_level_zero (WayOfUnits.lean:956), takes_nothing_iff_alone, takes_nothing_ends (:998).",
+   "E3's two-drawer course: two_units_iff (WayOfUnits.lean:625); the level returning with the unit gone: With.levels (:1032).",
+   "E3 whole, on two conditions: ReadingsPersist.Habitat.beyond_which_persist with line_standing_unselected and beyond_standing_unselected; RemovesLine (ReadingsPersist.lean:549), cleared_removes_its_readers.",
+   "Earlier loss never ends the rest, two units: greater_need (WayOfUnits.lean:852), more_use_on_first (:926). The many-unit form is declared not stated in the module note."
+  ],
+  "hand_tries": [
+   {
+    "world": "giving z = min z (12 - z); A = (need 1, use 3), B = (need 9, use 2); start 9",
+    "outcome": "B alone: levels 9, 12, 12, ...; never ends. A and B: ([A,B],9), ([A,B],8), ([A],6), ([A],6), ...; B is in the way at steps 0 and 1 and never from step 2; the level stays 6 < 9. A alone at 6: 6, 6, 6, ... (Holds exactly: 3 + 3 ≤ 6). For contrast, A alone at 9: 9, 12, 12."
+   },
+   {
+    "world": "same, with B kept by a lower need: A = (1,3), B' = (1,2), start 9",
+    "outcome": "9, 8, 6, 2, 0: the line ends. A's going on in the first world rests on B's loss."
+   },
+   {
+    "world": "three kinds inside the regime: A = (1,3), B = (9,2), C = (7,0), start 9",
+    "outcome": "([A,B,C],9), ([A,B,C],8), ([A,C],6), ([A],6), ...: C gone from step 3; levels and the presence of A and B identical to the course without C. This is the E3 case with a law under it (S1)."
+   },
+   {
+    "world": "start above hi: A = (1,3), B = (15,0), start 20",
+    "outcome": "B alone: 20 forever. A and B: 20, 17, 14, 12, 12, ...; B in the way at steps 0 to 2, never from 3. A alone from 20: the same levels. A alone at 12: 12 forever. B drew nothing, bore the loss, and A's course is unchanged; no edge."
+   },
+   {
+    "world": "break of the many-unit comparison: raise the need of a unit not of least need, three units, starts 1 to 12",
+    "outcome": "No case found where it ends a line that did not end (0 on the grid). Not a proof."
+   }
+  ],
+  "obstacles": [
+   "E3 as a law of 'loss on others, no difference to the drawers, drawers go on' cannot hold in L under the regime with one stock. It needs a second stock, which the page puts under 'Not in this candidate', or a start above hi, a drawer that needs nothing, or something given from nothing.",
+   "PoolFromCourse's bearing is on CarrierCounts with bear's two numbers supplied. No map from L's need and use to them exists; without one, L's losses and the lock's losses stay two islands.",
+   "'Kind' is not defined in L; E1 needs it (a predicate on U kept by kids).",
+   "S1 to S3 below are unproved. The simulations are small grids on one giving."
+  ],
+  "suggested_statements": [
+   "S1 (no difference; any giving, any start). Let Z be a predicate on U with use u = 0 on Z and Z kept by kids. Writing w∖Z for w without Z-units: for every n, (course (w∖Z, x) n).2 = (course (w, x) n).2 and (course (w∖Z, x) n).1∖Z = (course (w, x) n).1∖Z. Two-unit case with kids u = [u]: carrier_level_zero, takes_nothing_iff_alone. Break: a Z-unit with a kid that draws. Simulation with kids u = [u]: 0 violations.",
+   "S2 (who bears, inside the regime). kids u = [u]; D the units of w with use > 0, H := taken D; FromNothing giving, Short giving H y, Meets giving H y hi, Keeps giving H hi, x ≤ hi, every unit of D with need > 0. If every unit of D is in the way at every step, then every unit of w with need ≤ x is in the way at every step. Route: S1, then RegimeMargin.holds or ends_below, as WayOfUnits.stays (:356) and falls (:368). Each premise has a countermodel above.",
+   "S3 (a drawer's loss is what the rest goes on by). A = (n, H), B = (m, h), 0 < n ≤ m ≤ x ≤ hi, FromNothing, Short, Meets and Keeps at H + h. If B leaves the way and the line from ([B, A], x) never ends, the line from ([(n, h), A], x) ends.",
+   "S4 (E1 as a case, not a rewording). (course (w, x) n).1 = G.family n for G.first := w and G.kids t u := kids u if need u ≤ (course (w, x) t).2, else []; then kept_iff gives E1 exactly, and the Generations laws apply to L (frozen clause A(4))."
+  ]
+ },
+ "v2:a1578686c1878b8c8d7fd785be965d5f8e1b5b4aed27c14f1a2098c34a3c645d": {
+  "exact": [
+   {
+    "name": "WayOfUnits.after",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean",
+    "line": "147",
+    "statement": "def after (w : List (Nat × Nat)) (x : Nat) : List (Nat × Nat) := GrammarLaws.keep (goes x) w"
+   },
+   {
+    "name": "WayOfUnits.unending_iff_holds",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean",
+    "line": "450-455",
+    "statement": "theorem unending_iff_holds {giving y : Nat → Nat} {hi : Nat} {w : List (Nat × Nat)} {x : Nat}\n    (needs : ∀ u, u ∈ w → 0 < need u) (nothing : RegimeMargin.FromNothing giving) (high : x ≤ hi)\n    (along : ∀ k, (∀ j, j ≤ k → Goes (course giving (w, x) j)) →\n      Regime giving y hi (course giving (w, x) k).1) :\n    «不穷» (net giving) «一» (w, x) ↔\n      ∃ k, (∀ j, j < k → Goes (course giving (w, x) j)) ∧ Holds y (course giving (w, x) k)"
+   },
+   {
+    "name": "GrammarLaws.keep_congr",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean",
+    "line": "455-456",
+    "statement": "theorem keep_congr {p q : α → Bool} : ∀ l : List α, (∀ x, x ∈ l → p x = q x) →\n    keep p l = keep q l"
+   },
+   {
+    "name": "SelectionTerm.Generations.born_eq",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionTerm.lean",
+    "line": "448",
+    "statement": "theorem born_eq (t : Nat) : born (G.family t) (G.kids t) = G.size (t + 1)"
+   },
+   {
+    "name": "SelectionTerm.Generations.reached_from",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsPersist.lean",
+    "line": "266-267",
+    "statement": "theorem reached_from (G : Generations α) (T : Nat) :\n    ∀ n x, x ∈ G.family (T + n + 1) → ∃ y, y ∈ G.family T ∧ «及» (G.descentFrom T) (T, y) (T + n + 1, x)"
+   },
+   {
+    "name": "SelectionTerm.Generations.kept_of_descent",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsPersist.lean",
+    "line": "293-295",
+    "statement": "theorem kept_of_descent {G : Generations α} {Q : α → Prop}\n    (keeps : ∀ t p k, p ∈ G.family t → k ∈ G.kids t p → Q p → Q k) (founders : ∀ x, x ∈ G.first → Q x) :\n    ∀ t x, x ∈ G.family t → Q x"
+   },
+   {
+    "name": "TurningInTime.agrees_until_marked",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean",
+    "line": "427-430",
+    "statement": "theorem agrees_until_marked {marked : Nat → Prop} {alone : W → W} {after : W → Nat → W}\n    (outside : AloneOutside marked alone after) (left : W → Nat → Nat) (s : W × Nat) :\n    ∀ n, (∀ j, j < n → ¬ marked (Law.orbit (asItWas alone left) s j).2) →\n      Law.orbit (pair after left) s n = Law.orbit (asItWas alone left) s n"
+   },
+   {
+    "name": "TurningInTime.ends_with_net_regime",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean",
+    "line": "550-558",
+    "statement": "theorem ends_with_net_regime {marked : Nat → Prop} {alone : W → W} {after : W → Nat → W}\n    (outside : AloneOutside marked alone after) {need : Nat} (needs : 0 < need)\n    (un : ∀ x, need ≤ x → ¬ marked x) {giving : Nat → Nat} {use : W → Nat} {H y : Nat}\n    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H y)\n    {w : W} {x : Nat} (uses : ∀ j, H ≤ use (Law.orbit alone w j)) (below : x < H + y) :\n    ∃ n t, n ≤ x ∧\n      «迭» (net need after (fun w x => RegimeMargin.step giving (use w) x)) n (w, x) t ∧\n      (∀ v, ¬ net need after (fun w x => RegimeMargin.step giving (use w) x) t v) ∧\n      t.1 = Law.orbit alone w n"
+   }
+  ],
+  "findings": [
+   {
+    "claim": "(a) WayOfUnits is a leaf in Lean; what binds it lies outside Lean.",
+    "evidence": "grep 'import Becoming.WayOfUnits': only Becoming.lean:401; TurningInTime names it once, in a docstring (664). Record a-way-of-units.json: 40 declarations, proof_bindings to /source_sha256/Becoming.WayOfUnits of receipt 20261113T133009. Atlas dynamics.json, entry turning-in-time: 37 of 142 declarations. premises.json: 10 entries."
+   },
+   {
+    "claim": "(a) Generalised in place, 55 of 85 declarations change statement (fit/wu_decls.py).",
+    "evidence": "Sections 1-4: all but all_iff_while, length_keep_le, length_keep_lt. Sections 5-8: twoWay, taken_twoWay, after_twoWay, goes_twoWay, course_twoWay, goes_iff_carrier, unending_iff_carrier, two_units_iff, unending_above, unending_needs_nothing, greater_need, more_use_on_first, goes_iff_alone, takes_nothing_iff_alone, takes_nothing_ends. Sections 9-10: all but GivenFromNothing.giving and .regime. Sections 5-9 stand on the literal way [(m, h), (n, H₂)]: re-instantiated, not generalised."
+   },
+   {
+    "claim": "(a) Less mass for the same joins: a new module importing WayOfUnits and ReadingsPersist, its first theorem the bridge to kids u = [u].",
+    "evidence": "In place adds no join and costs a core run and re-pointing record, atlas and premise rows. TurningInTime's import closure (fit/imports.py) has SelectionTerm, Capture, Flow, RuleCapture, PoolFromCourse; not ReadingsPersist, LineageDrawdown, ReadingsSpread. Stated again at a general unit type: met_or_unmet (250), mem_after_iff (261), goesDecidable (313)."
+   },
+   {
+    "claim": "(c) A met unit with no kids ends the net with every need met (try 1).",
+    "evidence": "B excludes it (use u < taken (kids u) forces kids u ≠ []); C, D, E do not."
+   },
+   {
+    "claim": "(c) C's only-if is false as written; without its clause 'the way unchanged by the step' its if is false.",
+    "evidence": "Tries 2-4. The level reads the way only through taken (left, WayOfUnits.lean:155), so what must stand is taken, not the way."
+   },
+   {
+    "claim": "(c) B1 fails for the empty way and holds at step 0 for a reason that is not growth. B2 held wherever tried.",
+    "evidence": "Try 5: 1,647 of 15,675 starts already had an unmet need. B1's argument (taken rises past hi) does not use need v ≤ need u; B2 needs it."
+   },
+   {
+    "claim": "(c) B says nothing of WayOfUnits, and LineageDrawdown.Drain is not a case of it.",
+    "evidence": "At kids u = [u] the premise reads use u < use u. Drain: kidsP is step-indexed (LineageDrawdown.lean:306-312, '| 5 => bif t == 9 then [] else [7]'), its draw grows at one step only, member 2 is childless while active, and ungated the renewer gives three whatever the pool (giveOf, 250-252): read as L's giving, FromNothing fails."
+   },
+   {
+    "claim": "(c) A1-A3 hold unchanged with the stock removed, the page's own criterion A(3).",
+    "evidence": "They speak only of after, which mentions neither giving nor left. A4 uses the stock, and is RegimeMargin.ends_iff_below (RegimeMargin.lean:741) on one unit (try 6)."
+   },
+   {
+    "claim": "(c) E2 at one step is mem_after_iff (261); along a course it is false. D3's second half is the definition of alike. E3's last clause is false of the level.",
+    "evidence": "With.way = [(9, 4), (1, 1)] never ends (1022); Against.way = [(9, 1), (1, 4)] ends (1096): same needs and sum, uses differ. Try 7."
+   },
+   {
+    "claim": "(d) reaches_holds (405) and unending_iff_holds reach a witness by bounded search.",
+    "evidence": "Law.stepWhile_unending_iff (GuardedStep.lean:143) turns «不穷» into ∀ n. reaches_holds recurses on a bound ℓ on the way's length; met_or_unmet and Nat.lt_or_ge decide each stage; below taken + y, falls (368) finds the first unmet step by first_of_decided (ReadOffInTime.lean:196) within the z steps RegimeMargin.ends_below (705) gives; length_keep_lt (234) lowers ℓ. Backward: Nat.lt_or_ge, le_dest, stays (356, on RegimeMargin.holds, 730)."
+   },
+   {
+    "claim": "(d) Hardest: B2 where units are shed, and any only-if of C. flatMap has no length measure.",
+    "evidence": "A measure that survives: a bound on the needs in the way. With need v ≤ need u, after a step with an unmet need every need is at most the level, below the old bound (argued; held throughout try 5). For C beyond a standing draw nothing decides at a step: reaches_holds decides by the level against taken + y of one fixed way."
+   },
+   {
+    "claim": "(e) What could retire or become a one-line case.",
+    "evidence": "reaches_holds and unending_iff_holds: the case kids u = [u] of C for descent that keeps the draw; length_keep_le/lt then serve only after_eq_iff (268), which nothing uses. mem_course_iff's forward half: kept_of_descent. step_falls (671) and TurningInTime.held_above (665) are one fact proved twice; B needs it again. taken (150) is Prelude.total (Prelude.lean:760) at use, redefined. Three.lock_share_stays, rise_orbit, rise_above, rise_lock_ends (TurningInTime.lean:2110-2166) become one case once the use reads the share; now lockUse v = use v.2.1 (2058)."
+   }
+  ],
+  "already_there": [
+   "A1 at kids u = [u]: keep_congr.",
+   "A2: born_eq, once the way is Generations.family (SelectionTerm.lean:421-423) with kids t u := kids u where need u ≤ the level at step t, else []. Generations.kids is step-indexed (413), so the generations depend on the start.",
+   "A3: agrees_until_marked at marked := (· < M), alone := (·.flatMap kids), M bounding every need. It joins L to the pair's orbit without the guard.",
+   "B with all needs equal to n: ends_with_net_regime at marked := (· < n), H := y := hi + 1 (Short follows from Keeps at use 0) from the step where taken passes hi; the rise from Flow.total_lt_of_mem (Flow.lean:138) and Generations.total_flatMap (SelectionTerm.lean:441). Lock form: locked_ends_with_net_regime (TurningInTime.lean:1222); its draws and below (1231-1232) then follow where the use reads the share.",
+   "D1: kept_of_descent at Q := (· ∈ w). E1: reached_from, contraposed. E3: two_units_iff (WayOfUnits.lean:625)."
+  ],
+  "hand_tries": [
+   {
+    "world": "1. need 1, use 1, kids [], Three.giving, from 12",
+    "outcome": "(['A'], 12), ([], 12): ended, every need met"
+   },
+   {
+    "world": "2. kids A = [B], kids B = [A], need 1, use 1, from 12",
+    "outcome": "level 12 throughout, way never unchanged, never ends"
+   },
+   {
+    "world": "3. need 1, use 0, kids [A, A], from 6",
+    "outcome": "lengths 1, 2, 4, …; never ends"
+   },
+   {
+    "world": "4. need 1, use 0, kids [], from 6",
+    "outcome": "Holds at step 0, ended at step 1"
+   },
+   {
+    "world": "5. Random models meeting B's premises",
+    "outcome": "with need v ≤ need u all 15,675 ended, within (greatest need)·(hi+3) steps; without it 36 of 18,363 had not after 400"
+   },
+   {
+    "world": "6. One unit (1, 5), kids u = [u], from 9 and from 10",
+    "outcome": "9, 8, 6, 2, 0 ends; 10, 10, … holds"
+   },
+   {
+    "world": "7. A = (1, 3), B = (9, 2), kids u = [u], from 9",
+    "outcome": "with B: 9, 8, then A alone at 6; A alone: 9, 12, …"
+   }
+  ],
+  "obstacles": [
+   "TurningInTime.net cuts at one need; WayOfUnits.Goes depends on the way (its header, 102-105). B with unequal needs does not go through ends_with_net_regime.",
+   "Nothing was built (load average 111); the tries are computed, not Lean. Scripts: /Users/ren/theories/tmp/r7/one-model/check/round9/readers/fit/ (sim.py, wu_decls.py, imports.py, atlas.py, atlas2.py)."
+  ],
+  "suggested_statements": [
+   "Bridge: at kids u = [u] on Nat × Nat, L's after is WayOfUnits.after and its course WayOfUnits.course.",
+   "One comparison, under need v ≤ need u and positive needs: use u < taken (kids u) ends; taken (kids u) = use u with kids u ≠ [] gives unending_iff_holds; WayOfUnits is the second.",
+   "On the pair: AloneOutside, un, FromNothing, Keeps giving 0 hi, x ≤ hi and use rising along alone's orbit give ends_with_net_regime's conclusion with below and short concluded.",
+   "The other end of A1: the level's course reads the way only through taken (step_same_sum, 870; carrier_level_zero, 956). With A1 it is one relation, and it uses the stock."
+  ]
+ },
+ "v2:c05aecbd82721e258437bc5a87b5c1fffb1d0cba20ef4114cfbd45f894472758": {
+  "exact": [
+   {
+    "name": "Web.SelectsThrough",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Selection.lean",
+    "line": "137",
+    "statement": "def SelectsThrough (W : Web F C) (obs : F → C → Prop) (f : F) (t : Nat)\n    (select : (Nat → C → Nat) → Prop) : Prop :=\n  ∀ l l', W.AlikeThroughUpTo obs f l l' t → (select l ↔ select l')"
+   },
+   {
+    "name": "Web.alikeThrough_raise",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Runaway.lean",
+    "line": "153",
+    "statement": "theorem alikeThrough_raise [DecidableEq C] {c : C} (unobserved : ¬ obs g c) (d : Nat)\n    {t : Nat} (supported : W.Supported t g) :\n    W.AlikeThrough obs g W.level (W.raise c d).level t"
+   },
+   {
+    "name": "share_rises_through (nearest to question a)",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Selection.lean",
+    "line": "446",
+    "statement": "theorem share_rises_through {history : α → Nat → C → Nat} {kids : α → List α}\n    {select : (Nat → C → Nat) → Prop} {ms es : List α} {a b : Nat}\n    (carriers : ∀ p, p ∈ ms → select (history p)) (others : ∀ p, p ∈ es → ¬ select (history p))\n    (rewarded : ∀ p, select (history p) → a ≤ (kids p).length)\n    (unrewarded : ∀ p, ¬ select (history p) → (kids p).length ≤ b)\n    (lt : b < a) (some : 0 < ms.length) (some' : 0 < es.length) :\n    ms.length * offspringCount es kids < offspringCount ms kids * es.length"
+   },
+   {
+    "name": "SelectionTerm.Generations",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionTerm.lean",
+    "line": "411",
+    "statement": "structure Generations (α : Type) where\n  first : List α\n  kids : Nat → α → List α\n  amount : Nat → α → Nat"
+   },
+   {
+    "name": "SelectionTerm.Generations.mean_step",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionTerm.lean",
+    "line": "461",
+    "statement": "theorem mean_step (t : Nat) :\n    G.size t * G.sum (t + 1) + (G.size t * G.loweredAt t + G.discordAt t) =\n      G.size (t + 1) * G.sum t + (G.concordAt t + G.size t * G.raisedAt t)"
+   },
+   {
+    "name": "Optimum.Rising (where the free order `better` is bound)",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+    "line": "550",
+    "statement": "def Rising (ds : List C) (better : (C → Nat) → (C → Nat) → Prop) : Prop :=\n  ∀ o o', Exceeds ds o' o → better o' o"
+   },
+   {
+    "name": "ExchangeLaw.Sensitive",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Counterfactual.lean",
+    "line": "157",
+    "statement": "def Sensitive (h : F) (c : C) : Prop :=\n  ∃ t, ¬ law.InsensitiveAt t h c"
+   },
+   {
+    "name": "Founding.varied_before",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Founding.lean",
+    "line": "235",
+    "statement": "theorem varied_before (G : Generations α) {v : Nat}\n    (founded : ∀ p, p ∈ G.family 0 → G.amount 0 p = v) {t : Nat}\n    (selected : G.concordAt t ≠ 0 ∨ G.discordAt t ≠ 0) :\n    ∃ s, s < t ∧ (0 < G.raisedAt s ∨ 0 < G.loweredAt s)"
+   },
+   {
+    "name": "WayOfUnits.fixed_while (A3 in the case kids u = [u])",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean",
+    "line": "336",
+    "statement": "theorem fixed_while {giving : Nat → Nat} {S : List (Nat × Nat)} {z : Nat} :\n    ∀ i, (∀ j, j < i → ∀ u, u ∈ S →\n        need u ≤ Law.orbit (RegimeMargin.step giving (taken S)) z j) →\n      course giving (S, z) i = (S, Law.orbit (RegimeMargin.step giving (taken S)) z i)"
+   }
+  ],
+  "findings": [
+   {
+    "claim": "(a) No statement in the package names both unequal continuing and alikeness.",
+    "evidence": "joint_scan.py (/Users/ren/theories/tmp/r7/one-model/check/round9/readers/selection/) over every declaration statement in Becoming/*.lean: none names both a count word (kids, offspringCount, offspringNumber, Generations, DescendsAt, born, concordAt, discordAt) and an alikeness word (SelectsThrough, AlikeThrough*, ScoresThrough, GivesAlike, RespondsThroughCoupling). Nearest: share_rises_through (quoted): `select` is a free predicate; Web.SelectsThrough stands only in its docstring (Selection.lean:443-445); the proof is share_rises alone. Next, counts against support or a stock, no alikeness: SelectionTerm.Flow.support_not_against (SelectionTerm.lean:389), LineageDrawdown.next_empty_of_unmet (LineageDrawdown.lean:146)."
+   },
+   {
+    "claim": "The forms of selection stand on four carriers with no shared type.",
+    "evidence": "Couplings: a predicate on a Web's level histories (unselected_beyond_coupling Selection.lean:345; subthreshold_alike Testing.lean:779; policy_keeps_difference Runaway.lean:90). Count: Generations holds no level (Exact SelectionTerm.lean:352; shift_step SelectionShift.lean:263). Rule from share, on two preorders: RuleCapture.Raises :145, ReadsShare :150, Locked :160, CarrierCounts.share_not_lower_counts :549; offspringCount is in Capture.lean:64. Optimum: `better` is a free variable bound only by Rising (Reoptimizes Optimum.lean:2601; Web.lost_iff :2701; course_lost_iff :2722; a witness's lost_iff :3039). Located, not quoted, for the word limit."
+   },
+   {
+    "claim": "(b) With kids u = [u], A1 to A3 are one-step consequences of what is there; none is stated in A's wording.",
+    "evidence": "A1: `after` is GrammarLaws.keep (goes x) w (WayOfUnits.lean:147), so A1 is GrammarLaws.keep_congr (GrammarLaws.lean:455); \"after w x = after\" in WayOfUnits.lean: not found. TurningInTime.toEnd_iff (:332) already has `∀ w x x', need ≤ x → need ≤ x' → after w x = after w x'` as an exact condition. A3: fixed_while (quoted) at both starts; general: agrees_until_marked (TurningInTime.lean:427). A2 with offspring: Generations.born_eq (SelectionTerm.lean:448). mem_course_iff :279, after_eq_iff :268, ends_while_net_goes :323: as the page says."
+   },
+   {
+    "claim": "A4's pair is not in the Lean.",
+    "evidence": "WayOfUnits.With.way :1016 and Against.way :1090 start at nine and differ in which unit takes more; TurningInTime.Three's first witnesses (:1960-2016) start at (true, 9) and vary the mark. Two starts differing only in level: not found there."
+   },
+   {
+    "claim": "(c) L's course can be given as a Generations; nothing obstructs the typing; three small lemmas are missing.",
+    "evidence": "Instance: first := w; kids t u := if need u ≤ (course giving (w, x) t).2 then kids u else []; amount _ := use. Missing: family t = (course t).1; taken w = total w use (WayOfUnits.lean:150, Prelude.lean:760, same recursion); for WayOfUnits as the case, keep p l = l.flatMap (fun u => cond (p u) [u] []) (flatMap in GrammarLaws, WayOfUnits, TurningInTime: not found). Computed (try_A.py): on every course tried the family is the way and mean_step's sides are equal."
+   },
+   {
+    "claim": "With amount := use the term's sign is free; With and Against are its two signs.",
+    "evidence": "Computed at step 1 (level 8, the unit needing nine ends): With [(9,4),(1,1)]: discord 3, mean use 5/2 to 1, never ends; Against [(9,1),(1,4)]: concord 3, mean 5/2 to 4, ends. For an amount that does not rise with need, discord_zero_of_below (SelectionTerm.lean:366) and not_lower_step (:549) would apply to the instance."
+   }
+  ],
+  "already_there": [
+   "A1, kids u = [u]: GrammarLaws.keep_congr :455; general `after`: TurningInTime.toEnd_iff :332",
+   "A2: Generations.born_eq, SelectionTerm.lean:448",
+   "A3: WayOfUnits.fixed_while :336; TurningInTime.agrees_until_marked :427; on a Web, Testing.subthreshold_alike :779",
+   "Generations on a stock, built: LineageDrawdown.ends_of_drawdown :177 (offspring numbers supplied, docstring :49-50); ReadingsSpread.Commons.overdrawn_spreads_then_ends :1222 (not read further)",
+   "Not there: A with offspring; A4's pair; a count joined to alikeness"
+  ],
+  "hand_tries": [
+   {
+    "world": "I, kids u = [u]: one unit (need 1, use 6); starts 12 and 11",
+    "outcome": "12: level 12 at every step, never ends. 11: levels 11, 10, 8, 4, 0; no next at step 4. Ways equal at steps 0-4. But 11 is below the point of no return (12) from the start: under a fixed way a level at or above it never falls (WayOfUnits.lean:22-23), so \"falls toward its point of no return\" needs a way that changes."
+   },
+   {
+    "world": "A3 on every pair of levels 0..12: world I (three starts) and G=(need m, use 1 or 2, kids [G,S]), S=(1,1,[S]), m=1..12",
+    "outcome": "No failure of A3, nor of the stronger form with A1's relation (the same needs met) in place of every need met."
+   },
+   {
+    "world": "Offspring, the lower start ends: A=(need 6, use 3, kids [B,A]), B=(2,2,[C]), C=(5,1,[]); start [A]",
+    "outcome": "6: A@6, BA@6, CBA@2, C@0; no next at step 3. 9: A@9, BA@12, CBA@12 from then on; never ends. Ways equal at steps 0-2 while growing."
+   },
+   {
+    "world": "Offspring, the higher start ends: A=(need 1, use 3, kids [B,B]), B=(3,1,[C,B]), C=(12,1,[A]); start [A]",
+    "outcome": "6: A@6, BB@6, CBCB@8 from then on; never ends. 7: A@7, BB@8, CBCB@12, ACBACB@12, ten units@4, sixteen@0; no next at step 5. Ways equal at steps 0-2. At 12 C's need is met and its offspring A draws three. Rechecked by hand."
+   },
+   {
+    "world": "Searches: 432 worlds G=(need 1..12, use 0..3, kids [G,S], [G,S,S] or [S,G]), S=(1, use 1..3, [S]); 6,000 random three-kind worlds (seed 20261116)",
+    "outcome": "First family: no start whose way grew at two steps never ends; in the courses printed the level stays at 12 for every draw up to 6 and leaves it only at 7, which no level holds. Random worlds: 26 pairs of starts with growth at two steps while alike, one ending and one not; in 7 the lower start ends, in 19 the higher."
+   }
+  ],
+  "obstacles": [
+   "The Generations is read off the course (kids t reads the level at t) and holds no level; mean_step says nothing of the stock unless a statement names left = RegimeMargin.step giving (G.sum t).",
+   "mean_step is on the mean; the stock takes the total. For B the identity is Evolution.price (Evolution.lean:117) with offspring_eq (SelectionTerm.lean:454).",
+   "A unit with kids u = [] goes on and leaves nothing (C above): the net's end and G.size = 0 part by a step.",
+   "As a SelectsThrough, A1 needs a Web with the units as formations, one condition and empty obs; there it is admits_through (Selection.lean:211) per unit.",
+   "No module in Becoming/ imports WayOfUnits (grep); SelectionTerm imports only Evolution, so one module can import both.",
+   "One search script ran a doubling world to the 120 s limit and was killed; rerun without it in seconds."
+  ],
+  "suggested_statements": [
+   "Candidates, not proved. (1) The instance: G.family t = (course t).1, G.sum t = taken (course t).1, and the next level is RegimeMargin.step giving (G.sum t) of this one.",
+   "(2) Alike levels, one count (A1 and A2 in one induction): if at every j < n the two levels meet the same needs in the j-th way, the families are equal up to n and offspringNumber, concordAt, discordAt agree before n. With a constant level and no new kinds, two courses part at step 0 or never, so parting after alike steps needs the stock (test A(3)); with new kinds a constant level can part them later, which is D2.",
+   "(3) With kids u = [u]: 0 < G.concordAt t ∨ 0 < G.discordAt t gives p, q in the way with need p ≤ level < need q (SelectionShift.Generations.varies_of_selection :279), hence ends_while_net_goes's conclusion there.",
+   "(4) The sign: read more_use_on_first (WayOfUnits.lean:926) as selection against use never ending a line that did not end.",
+   "(5) A4 without \"falls toward\": two starts differing only in level, ways equal while growing, then one ends and one never; keep the pair where the start with more ends."
+  ]
+ },
+ "v2:e48a2d5887296cf112b169c6f88c59c93f4b168bcdf16e18848b3f939b1925f4": {
+  "exact": [
+   {
+    "name": "LineageDrawdown.Drain.kidsP",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageDrawdown.lean",
+    "line": "306-312",
+    "statement": "def kidsP (t : Nat) : Nat → List Nat\n  | 4 => bif t == 0 then [5, 6] else []\n  | 5 => bif t == 9 then [] else [7]\n  | 6 => bif t == 9 then [] else [8]\n  | 7 => [5]\n  | 8 => [6]\n  | _ => []"
+   },
+   {
+    "name": "LineageDrawdown.Drain.gated_ends",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageDrawdown.lean",
+    "line": "613-615",
+    "statement": "theorem gated_ends :\n    «退化» (lineStep (flow true (courseP true)) (web true (courseP true)) (oneKind Nat))\n      ((web true (courseP true)).kindClass (oneKind Nat)) (0, 4)"
+   },
+   {
+    "name": "ReadingsSpread.Commons.conduct (three cases of it)",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsSpread.lean",
+    "line": "686-687, 699-700, 705-706",
+    "statement": "  | .n0, .n1 | .n2, .n3 =>\n      (0, bif st && fd && clears σ && hh then 1 else 0)\n  | .n0, .s | .n1, .s | .n2, .s | .n3, .s =>\n      (bif st && fd then drawS σ else 0, 0)\n  | .s, .s =>\n      (0, bif back then 0 else 3)"
+   },
+   {
+    "name": "Reproduction.Flow.lineage_ends",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reproduction.lean",
+    "line": "613-617",
+    "statement": "theorem lineage_ends {ds : List X} (descended : SelectionTerm.Flow.Descended L W G)\n    (within : ∀ t p k, p ∈ G.family t → k ∈ G.kids t p → k ∈ ds)\n    (balances : ∀ t, t < W.stock ds 0 + 1 → L.BalancesOn W ds t)\n    (dissipates : ∀ t, t < W.stock ds 0 + 1 → L.DissipatesOn ds t) :\n    G.size (W.stock ds 0 + 1) = 0"
+   },
+   {
+    "name": "LineageRegimes.multiplying_takers_stop",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageRegimes.lean",
+    "line": "345-353",
+    "statement": "theorem multiplying_takers_stop (balances : L.Balances W) {c : C} {T n : Nat}\n    (unfed : ∀ i, i < n → L.given (T + i) c = 0) (first : 1 ≤ G.size T)\n    (multiplies : ∀ j, j + 1 < n → 2 * G.size (T + j) ≤ G.size (T + j + 1))\n    (distinct : ∀ j, j < n → Distinct (G.family (T + j)))\n    (needs : ∀ j p, j < n → p ∈ G.family (T + j) → W.active (T + j) p →\n      p ∈ L.present (T + j) ∧ 0 < L.take (T + j) p c)\n    (beyond : W.level T c + 1 < 2 ^ n) :\n    ¬ ∀ j p, j < n → p ∈ G.family (T + j) → W.active (T + j) p"
+   },
+   {
+    "name": "PoolFromCourse.Drained.drain",
+    "file": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolFromCourse.lean",
+    "line": "563-564",
+    "statement": "def drain (p : CarrierCounts × Nat) (_ : CarrierCounts) : Nat :=\n  p.2 + 1 + (if 16 * p.1.other ≤ p.1.carrier then 40 else 0)"
+   }
+  ],
+  "findings": [
+   {
+    "claim": "(a) Not found: units with needs on a renewed level whose offspring multiply.",
+    "evidence": "Grep of Becoming/: the seven modules using `RegimeMargin.step` or `.Short` (DrawHistory, RoomRuns, ReadOffInTime, RegimeMargin, RunTurns, TurningInTime, WayOfUnits) contain `kids`, `offspring`, `flatMap` zero times; none of the 24 modules with `kids` mentions `RegimeMargin`. WayOfUnits.lean:97: \"Units only end. Nothing here builds a unit\"."
+   },
+   {
+    "claim": "(a) Nearest: `multiplying_takers_stop`, B with nothing given and the growth a premise on the course.",
+    "evidence": "`multiplies` on `G.size (T + j)`, the page's frozen B(1). Its witness `MultiplyingTakers` (LineageRegimes.lean:385; `kids` supplied at :445) is L's course for A (need 1, use 1, kids [A, A]), giving nothing, pool 3: sizes 1, 2, 4, pool 3, 2, 0 (script)."
+   },
+   {
+    "claim": "(a) The ending is there; a draw rising from what units leave is in no law found.",
+    "evidence": "`LineageDrawdown.next_empty_of_unmet` (:146) is L's empty `after`. Given on the course: dissipation in `lineage_ends` (model: `Flow X X`, World.lean:61, with `SelectionTerm.Generations`, SelectionTerm.lean:411; nothing flows in; no need); `excess : ∀ k, k < n → L.replenishment ds (T + k) < L.uptake ds (T + k)` in `coupled_generation_childless` (GroupEnding.lean:238) and `LineageRegimes.degeneration_of_family_excess` (:173). `LineageRegions.generation_degenerates_iff` (:673) reads an ending already given. `SelectionShift.Generations.shift_step` (:263): `k` more kids each, both selection terms unchanged."
+   },
+   {
+    "claim": "(b) Where the link is put in by hand.",
+    "evidence": "Drain: `draw` (LineageDrawdown.lean:227, `| _ + 4 => 2`) and `kidsP` are separate definitions keyed on the numeral 4; :51 \"the offspring numbers are supplied, not derived from the draws\"; `t == 9` writes the end into the census; `giveOf` (:250), `generations` (:284, `kids := κ.kids`). Commons: a second kid exactly where the habitat is taken; ReadingsSpread.lean:79 \"The acts are assigned by design.\" Habitat: `draw` (ReadingsPersist.lean:692, `| .own => 2`) from the reading; nothing multiplies. `Drained.drain`: the `if`; PoolFromCourse.lean:96 \"What is not derived: … that any drain grows with a share\"; `drained` (:579), `drain_mono` (:607), `strong_undone` (:660) concern a loss that only accrues: no stock, need or unit."
+   },
+   {
+    "claim": "(c) Drain's course is a course of L; its ending is not a case of B.",
+    "evidence": "Instance: U = {r, d0, d1}; level := pool plus that step's gift; need 4; use 1, 2, 2; kids r ↦ [], d0 ↦ [d1, d1], d1 ↦ [d1]; giving 3 from 1 up, 0 at 0 (gate), or 3 everywhere (outside). Script: with the gate L's twelve levels equal the Lean's, `t == 9` coming out of the need. B's premises fail: r leaves none; d1 is countermodel (ii); no `hi`; outside, giving 0 = 3. The ending is one multiplying step (3 to 4), then a standing take of 4 over at most 3 given: `RegimeMargin.ends_below` (RegimeMargin.lean:705)."
+   },
+   {
+    "claim": "(c) Commons' overdrawn course is a course of L only if unmet units draw nothing; B2 is false in it.",
+    "evidence": "Instance: U = {F0, F1, W}; level := source; need 5, 5, 1; use 2, 2, 1; kids F0 ↦ [F1, F1], F1 ↦ [F1], W ↦ [W]; giving 3 everywhere. Lean `overSource` (ReadingsSpread.lean:846): 5, 5, 3, 5, 7; L as worded: 5, 5, 3, 3, 5. B's premises fail as in Drain. The net never ends: `overdrawn_spreads_then_ends` (:1222) concludes `StandsLate (slotsOf .wide) overdrawn`."
+   },
+   {
+    "claim": "(d) With every premise and a start at most `hi`, B2 did not fail; B1 as worded says less than an overdraw.",
+    "evidence": "Script /Users/ren/theories/tmp/r7/one-model/check/round9/readers/descent/try_b.py. By hand, not Lean: the greatest need in the way never rises and falls wherever one unit ends while another goes on; otherwise what the way takes rises; once it reaches the level, what is left is giving 0 = 0. B1 follows from B2, never uses `need v ≤ need u`, and holds in W2 while the level never falls."
+   }
+  ],
+  "already_there": [
+   "`LineageRegimes.multiplying_takers_stop`: B where nothing is given."
+  ],
+  "hand_tries": [
+   {
+    "world": "W1, every premise: A (need 1, use 1, kids [A, A]); giving min z (12 − z); hi 12; start 9.",
+    "outcome": "1@9, 2@12, 4@12, 8@12, 16@8, 32@0: ends at step 5."
+   },
+   {
+    "world": "W2, page's (i): A (need 1, use 1, kids [A, B]); B (need 100, use 1, kids [B, B]); start 12.",
+    "outcome": "[A]@12, then [A, B]@12 forever. B2 fails; B1 holds as worded at step 1."
+   },
+   {
+    "world": "W3, page's (ii): A (need 1, use 2, kids [A]); start 12.",
+    "outcome": "[A]@12 forever. Both fail."
+   },
+   {
+    "world": "W4, page's (iii): A (need 1), B (need 13), each use 1, kids itself; start 12.",
+    "outcome": "[A, B]@12, [A]@12 forever: share one of two to all, draw 2 to 1. B2 fails."
+   },
+   {
+    "world": "W5, start above hi: giving min z (12 − z) up to 12, z above; unit k: need 1, use k, kids [k + 1]; start 14.",
+    "outcome": "B FAILS AS WORDED, every other premise met: [0]@14, [1]@28, [2]@54, [3]@104, [4]@202, …, level at least 13 · 2^n; no need unmet, no end."
+   },
+   {
+    "world": "W6 need 0; W7 giving 3 everywhere (A, kids [A, A], start 9).",
+    "outcome": "Levels 9, 12, 12, 12, 8, 0, 0, … and 9, 11, 12, 11, 6, 3, 3, …; neither ends."
+   },
+   {
+    "world": "W8 giving nothing; W9 a use of nothing.",
+    "outcome": "Both end; W8 also with kids [A]."
+   },
+   {
+    "world": "W10 empty start; W11 A with no kids (growth premise fails).",
+    "outcome": "B1 FAILS AS WORDED: the way is empty with no need unmet. B2 holds."
+   },
+   {
+    "world": "3,179 random worlds, every premise, start ≤ hi ≤ 9; unmet units drawing or not.",
+    "outcome": "B2 never failed."
+   },
+   {
+    "world": "3,101 worlds: S closed under kids, not entered from outside, meeting B's premises, beside arbitrary units.",
+    "outcome": "S always gone; in 332 the net went on without it."
+   },
+   {
+    "world": "2,401 worlds, weaker: S of one need m, kids drawing no less (≤), giving 0 < m, S taking more than is given at any level; no hi.",
+    "outcome": "S always gone (a first run's four failures were my size cap)."
+   }
+  ],
+  "obstacles": [
+   "'From any start' with a bound on the level 'under any draw': over all starts unsatisfiable (with no draw the step is at least the start); read as `RegimeMargin.Keeps` it leaves W5.",
+   "L's `taken` sums the whole way (WayOfUnits.lean:150). The examples' unmet members draw nothing: `| f + 2, 0 => bif activeOf gate φ (f + 2) then draw (f + 2) else 0` (LineageDrawdown.lean:247).",
+   "`RegimeMargin.step` renews what is left after the draw; Drain's take draws on that step's gift (4 from a pool of 1). With level := pool, giving 0 would have to be 3, 2, 1 and 0.",
+   "B2 speaks of the net; in Commons one line ends and another goes on, and its habitat and dweller need a second stock."
+  ],
+  "suggested_statements": [
+   "Rise: for S closed under kids with `use u < taken (kids u)`, at each step where every unit of S in the way is met, what S takes rises by at least their number.",
+   "Fall: S closed under kids, not entered from outside, of one need m, `use u ≤ taken (kids u)`, `giving 0 < m`: from a step where S, all met, takes more than is given at any level, S is gone at a later step. Drain, Commons' focal line, Habitat's overdrawn line and MultiplyingTakers meet it, checked by hand.",
+   "B as on the page: Rise then Fall for one need, the start at most hi; unequal needs by the argument in (d).",
+   "B1: from a start where every need of a way that is not empty is met, at some step the level is below a need it met before."
+  ]
+ }
+}

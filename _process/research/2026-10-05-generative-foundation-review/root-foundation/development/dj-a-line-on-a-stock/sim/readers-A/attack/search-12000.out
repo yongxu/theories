@@ -1,0 +1,37 @@
+rise         all premises           tested=10270  undetermined=0    no countermodel
+rise         drop grows             tested=2      undetermined=0    COUNTERMODEL: need=(1, 12) use=(1, 0) kids=((1, 1), (1,)) giving=- way(counts)=(1, 0) level=4 S=[0, 1] | S takes 1 of the way, 1 units, 0 of the next way
+rise         drop met               tested=11     undetermined=0    COUNTERMODEL: need=(7, 7, 7) use=(1, 0, 2) kids=((1, 2), (), (0, 2)) giving=- way(counts)=(1, 1, 1) level=5 S=[0, 2] | S takes 3 of the way, 2 units, 0 of the next way
+fall         all premises           tested=2035   undetermined=0    no countermodel
+fall         drop keeps             tested=325    undetermined=0    COUNTERMODEL: need=(7, 7) use=(3, 0) kids=((1,), (1,)) giving=gives2-z way(counts)=(2, 0) level=13 S=[0, 1] | course: [2, 0]@13 -> [0, 2]@7 -> [0, 2]@7 -> [0, 2]@7 -> [0, 2]@7 -> [0, 2]@7 -> [0, 2]@7 -> [0, 2]@7
+fall         drop low               tested=5      undetermined=1    COUNTERMODEL: need=(0,) use=(1,) kids=((0,),) giving=zero way(counts)=(2,) level=10 S=[0] | course: [2]@10 -> [2]@8 -> [2]@6 -> [2]@4 -> [2]@2 -> [2]@0 -> [2]@0 -> [2]@0
+fall         drop one               tested=44     undetermined=0    COUNTERMODEL: need=(12, 9, 3) use=(2, 3, 0) kids=((0,), (1, 2), (2,)) giving=table[0, 4, 5] way(counts)=(1, 2, 2) level=10 S=[0, 1, 2] | course: [1, 2, 2]@10 -> [0, 2, 4]@7 -> [0, 0, 4]@5 -> [0, 0, 4]@5 -> [0, 0, 4]@5 -> [0, 0, 4]@5 -> [0, 0, 4]@5 -> [0, 0, 4]@5
+fall         drop over              tested=5      undetermined=1    COUNTERMODEL: need=(4,) use=(3,) kids=((0,),) giving=hump14 way(counts)=(1,) level=9 S=[0] | course: [1]@9 -> [1]@12 -> [1]@14 -> [1]@14 -> [1]@14 -> [1]@14 -> [1]@14 -> [1]@14
+fall         drop same              tested=119    undetermined=3    COUNTERMODEL: need=(1, 0) use=(3, 1) kids=((0,), (0, 1)) giving=table[0, 2, 0, 1] way(counts)=(1, 1) level=1 S=[0] | course: [1, 1]@1 -> [2, 1]@0 -> [1, 1]@0 -> [1, 1]@0 -> [1, 1]@0 -> [1, 1]@0 -> [1, 1]@0 -> [1, 1]@0
+line_ends    all premises           tested=6129   undetermined=0    no countermodel
+line_ends    drop down              tested=259    undetermined=0    COUNTERMODEL: need=(2, 12) use=(2, 1) kids=((0, 1, 1), (1, 1, 1)) giving=table[0, 1, 2, 4, 0, 5] way(counts)=(1, 2) level=7 S=[0, 1] | course: [1, 2]@7 -> [1, 2]@7 -> [1, 2]@7 -> [1, 2]@7 -> [1, 2]@7 -> [1, 2]@7 -> [1, 2]@7 -> [1, 2]@7
+line_ends    drop grows             tested=5      undetermined=0    COUNTERMODEL: need=(10, 10) use=(0, 0) kids=((0, 0), (1,)) giving=table[0, 0, 4, 4, 3, 4, 0, 0, 4, 6, 3] way(counts)=(0, 1) level=13 S=[1] | course: [0, 1]@13 -> [0, 1]@13 -> [0, 1]@13 -> [0, 1]@13 -> [0, 1]@13 -> [0, 1]@13 -> [0, 1]@13 -> [0, 1]@13
+line_ends    drop high              tested=580    undetermined=69   no countermodel
+line_ends    drop keeps             tested=6701   undetermined=64   no countermodel
+line_ends    drop needs             tested=6962   undetermined=655  no countermodel
+line_ends    drop nothing           tested=7715   undetermined=450  no countermodel
+line_ends    drop same              tested=33     undetermined=0    COUNTERMODEL: need=(0, 7) use=(1, 3) kids=((0, 1), (0, 1, 1)) giving=zero way(counts)=(1, 1) level=14 S=[1] | course: [1, 1]@14 -> [2, 3]@10 -> [5, 8]@0 -> [5, 5]@0 -> [5, 5]@0 -> [5, 5]@0 -> [5, 5]@0 -> [5, 5]@0
+way_ends     all premises           tested=7242   undetermined=0    no countermodel
+way_ends     drop down              tested=176    undetermined=0    COUNTERMODEL: need=(12, 1) use=(1, 3) kids=((0, 1), (0, 1)) giving=table[0, 4, 1, 5, 0, 6, 4, 4, 5, 4, 2, 4] way(counts)=(1, 1) level=5 S=[0, 1] | course: [1, 1]@5 -> [1, 1]@5 -> [1, 1]@5 -> [1, 1]@5 -> [1, 1]@5 -> [1, 1]@5 -> [1, 1]@5 -> [1, 1]@5
+way_ends     drop grows             tested=1      undetermined=0    COUNTERMODEL: need=(4,) use=(1,) kids=((0,),) giving=table[0, 2, 0, 0, 2, 6, 4, 3, 1, 3, 2, 6, 3] way(counts)=(1,) level=5 S=[0] | course: [1]@5 -> [1]@6 -> [1]@11 -> [1]@12 -> [1]@17 -> [1]@16 -> [1]@15 -> [1]@14
+way_ends     drop high              tested=713    undetermined=72   no countermodel
+way_ends     drop keeps             tested=8145   undetermined=90   no countermodel
+way_ends     drop needs             tested=8088   undetermined=828  no countermodel
+way_ends     drop nothing           tested=9321   undetermined=560  no countermodel
+need_unmet   all premises           tested=4501   undetermined=0    no countermodel
+need_unmet   drop grows             tested=1      undetermined=0    COUNTERMODEL: need=(1, 3) use=(0, 0) kids=((0, 1), ()) giving=table[0, 5, 4, 2] way(counts)=(1, 2) level=6 | hi=6 | course: [1, 2]@6 -> [1, 1]@6 -> [1, 1]@6 -> [1, 1]@6 -> [1, 1]@6 -> [1, 1]@6 -> [1, 1]@6 -> [1, 1]@6
+need_unmet   drop high              tested=467    undetermined=78   no countermodel
+need_unmet   drop keeps             tested=4878   undetermined=85   no countermodel
+need_unmet   drop met               tested=3      undetermined=0    COUNTERMODEL: need=(6,) use=(3,) kids=((0, 0, 0),) giving=table[0, 1, 3, 3, 6, 0, 3, 4, 5] way(counts)=(1,) level=3 | hi=13 | course: [1]@3 -> [0]@0 -> [0]@0 -> [0]@0 -> [0]@0 -> [0]@0 -> [0]@0 -> [0]@0
+need_unmet   drop ne                tested=6      undetermined=0    COUNTERMODEL: need=(5,) use=(3,) kids=((0, 0, 0),) giving=hump10 way(counts)=(0,) level=4 | hi=10 | course: [0]@4 -> [0]@8 -> [0]@10 -> [0]@10 -> [0]@10 -> [0]@10 -> [0]@10 -> [0]@10
+need_unmet   drop needs             tested=3      undetermined=0    COUNTERMODEL: need=(0,) use=(1,) kids=((0, 0),) giving=hump12 way(counts)=(2,) level=11 | hi=12 | course: [2]@11 -> [4]@12 -> [8]@12 -> [16]@8 -> [32]@0 -> [64]@0 -> [128]@0 -> [256]@0
+need_unmet   drop nothing           tested=1      undetermined=0    COUNTERMODEL: need=(2,) use=(2,) kids=((0, 0),) giving=table[3, 3, 2, 5, 1, 1, 1, 3, 5, 4, 1, 1, 2, 6] way(counts)=(1,) level=8 | hi=19 | course: [1]@8 -> [2]@7 -> [4]@8 -> [8]@3 -> [16]@3 -> [32]@3 -> [64]@3 -> [128]@3
+need_unmet: first step with a need unmet, minus the least hi that fits (the Lean's bound allows up to +2): [(-17, 72), (-16, 120), (-15, 155), (-14, 273), (-13, 409), (-12, 610), (-11, 634), (-10, 540), (-9, 407), (-8, 390), (-7, 294), (-6, 229), (-5, 163), (-4, 103), (-3, 57), (-2, 29), (-1, 6), (0, 18), (1, 1)]
+taken_below  all premises           tested=12000  undetermined=0    no countermodel
+taken_below  drop nothing           tested=3      undetermined=0    COUNTERMODEL: need=(1,) use=(1,) kids=((0,),) giving=one_at_zero way(counts)=(1,) level=9 | at step 8: takes 1, level 1, and a need is met at the next step | course: [1]@9 -> [1]@8 -> [1]@7 -> [1]@6 -> [1]@5 -> [1]@4 -> [1]@3 -> [1]@2
+taken_below  drop needs             tested=1      undetermined=0    COUNTERMODEL: need=(0, 0) use=(3, 2) kids=((1,), (0, 1)) giving=table[0, 0, 4, 4, 3, 4, 0, 0, 4, 6, 3] way(counts)=(0, 1) level=9 | at step 2: takes 7, level 6, and a need is met at the next step | course: [0, 1]@9 -> [1, 1]@7 -> [1, 2]@6 -> [2, 3]@0 -> [3, 5]@0 -> [5, 8]@0 -> [8, 13]@0 -> [13, 21]@0
+seconds: 20.3

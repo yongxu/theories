@@ -1,0 +1,584 @@
+shared-laws.json @ 33930 : "dependence": "no shared law"    }   ],   "on-whom-the-loss-falls": [    {     "law": 1,     "declarations": [      "Becoming
+
+shared-laws.json @ 42119 :     "dependence": "grammar"    }   ],   "rest-exactly-where-falls-stop": [    {     "law": 1,     "declarations": [      "Bec
+
+shared-laws.json @ 66500 : s": {       "en": "A level rising faster than the weighting falls is rebuilt, in natural-number levels and weights."      }, 
+
+shared-laws.json @ 68863 : s": {       "en": "A level rising faster than the weighting falls is rebuilt, in natural-number levels and weights."      }, 
+
+turning-in-time.json @ 335 :       "en": "A level given at most r and taking more than r falls below a positive need within as many steps as it stood at, 
+
+a-way-of-units.json @ 310 : urse under H comes to nothing; from H + y up to hi it never falls below its start."         },         "input": {           "
+
+a-way-of-units.md @ 110 : urse under H comes to nothing; from H + y up to hi it never falls below its start.   - Input: The level under what a way take
+
+turning-in-time.md @ 111 :    - Output: A level given at most r and taking more than r falls below a positive need within as many steps as it stood at, 
+
+dynamics.json @ 1502 :  standing draw H leaves, the draw taken first. Where giving falls short of the draw below y, gives nothing from nothing, meet
+
+dynamics.json @ 1502 : exactly where it starts below H + y; a positive level below falls at every step and stays nothing. Where giving stops below a
+
+dynamics.json @ 1502 : g the draw, more than that exactly where giving at the need falls short of the draw. Draws add, and their rises at the point 
+
+dynamics.json @ 1540 : tarts below H + y; from H + y up to the top the level never falls below its start."     },     "strength": "exact",     "reco
+
+dynamics.json @ 1571 : act threshold",     "condition": {      "en": "Where giving falls short of the draw below y, gives nothing from nothing, meet
+
+dynamics.json @ 1584 :   "en": "a start level from H + y up to hi: the level never falls below its start nor exceeds hi"      }     }    },    {    
+
+dynamics.json @ 1624 : th b + H n ≤ x; where giving is at most Y and Y ≤ H ≤ b, it falls below b within any n with x < b + (H − Y) n."     },     "d
+
+dynamics.json @ 2195 :  to the way after a step, while the net still ends where it falls below the need."   },   "sources": [    "theories/becoming/
+
+dynamics.json @ 2718 :  each one and lowered p by each zero, so that its rises and falls balance under the weights, reaches the need or falls below 
+
+dynamics.json @ 2718 : es and falls balance under the weights, reaches the need or falls below it at some step on courses taking at most n·p·q/m² of
+
+dynamics.json @ 2771 : ot-show--未表明"    },    {     "en": "A level whose rises and falls do not balance, more than two values, or steps that are not
+
+dynamics.json @ 2831 :  the steps counted. The law is near-definitional: the level falls at each active step, so it bounds the run as a ranking func
+
+dynamics.json @ 3229 :  i drains once j stays within its draw; in whole numbers it falls by its draw at every step and, the draw positive, is nothin
+
+dynamics.json @ 3422 :  "open": [    {     "en": "Partial dependence, where giving falls without stopping; the time of a cascade along a chain beyon
+
+dynamics.json @ 4675 :  d, d at least one, closed under the steps that do not end, falls by d a step and ends. It is one minimal model of one kind, 
+
+dynamics.json @ 4752 : l of at least one; where A is the renewal plus d, the level falls by d a step and the family ends in level zero with no membe
+
+dynamics.json @ 4767 : ": "a constant take of the renewal plus d, d ≥ 1: the level falls by d a step and the family ends in level zero with no membe
+
+dynamics.json @ 5968 : eserve does not rise while its formation is unsupported and falls where it is active then (a representational premise); the z
+
+dynamics.json @ 6358 : tected: some level θ ≤ q ≤ 1 under some influence 0 ≤ w ≤ λ falls below θ at the next step"     },     "law": "RegimeBoundary
+
+dynamics.json @ 6612 : take by exclusive footprints at every step, the level never falls below its start; that an actual division is by exclusive fo
+
+dynamics.json @ 7248 : ly within what is given at every step, the level of c never falls below its start"     },     "law": "Becoming.Flow.level_kep
+
+dynamics.json @ 7941 : p in which the whole gains nothing (World), the beyond then falls by the family's shortfall from its set point with what the 
+
+dynamics.json @ 8333 : ast two steps, every optimum of every order whose weighting falls at every step, however slightly, ends the stock at once and
+
+dynamics.json @ 8371 : y at least y at every step, rises faster than the weighting falls at each step, over at least two steps, with a capacity draw
+
+dynamics.json @ 8375 : and some level within reach rises faster than the weighting falls, with what stands at it at least it and a capacity drawing 
+
+dynamics.json @ 8404 : nce and breaks the dweller needing two; where the weighting falls at every step, with others drawing all but half, every opti
+
+dynamics.json @ 8417 : um-next-stands-at-most-level",      "optimum-next-weighting-falls"     ]    }   ],   "transitions": [],   "tests": [],   "ope
+
+dynamics.json @ 8429 :  },    {     "en": "Holding a level where what stands at it falls below it; an order valuing what is left at the horizon at a
+
+dynamics.json @ 8437 : in is out of reach; holding a level where what stands at it falls below it; several optimizers ranking whole courses.",     "
+
+dynamics.json @ 8443 :  what stands at the start and at nothing, and the weighting falls at every step over a horizon of at least two steps, every o
+
+dynamics.json @ 8513 : um-next-stands-at-most-level",      "optimum-next-weighting-falls",      "optimum-next-capacity-covers-start",      "optimum-
+
+dynamics.json @ 8527 : um-next-stands-at-most-level",      "optimum-next-weighting-falls",      "optimum-next-capacity-covers-start",      "optimum-
+
+dynamics.json @ 8556 : um-next-stands-at-most-level",      "optimum-next-weighting-falls",      "optimum-next-capacity-covers-start",      "optimum-
+
+dynamics.json @ 10050 : the start with its renewal renews faster than the weighting falls at each step, w t y < w (t + 1) (y + R y), over at least tw
+
+dynamics.json @ 10054 :  some level y within reach renews faster than the weighting falls (w t y < w (t + 1) (y + R y) at every step), with reach and
+
+dynamics.json @ 10798 : "from": {       "en": "every optimum among the open courses falls below m at some step within the horizon (w + q n + e < r n 
+
+dynamics.json @ 10982 : with what the whole loses are the two before, so the beyond falls by at least the rise. The slack is what the conditions beyo
+
+dynamics.json @ 11085 : taker which raises the store, yet the share reaching beyond falls from a half to nothing at the next generation, the taker's 
+
+dynamics.json @ 11089 : yet the taker's offspring do not reach beyond and the share falls from a half to nothing: selection alone does not carry the 
+
+dynamics.json @ 11789 : ss every change of amounts the positions' rises total their falls, so a part's change of position is the opposite of the chan
+
+dynamics.json @ 12034 : not a theorem), natural-number amounts. A dissipated family falls across a step by at least its number of takers, and balance
+
+dynamics.json @ 12034 : d on across N steps each conveying from a member, its stock falls by at least N: from a stock S at most S stages are conveyed
+
+dynamics.json @ 13576 : e read is not the share-readers', a step at which the share falls) remain; this dynamic's way out, a loss coupled into a read
+
+dynamics.json @ 14231 : h the start's rule and every rule read favouring, the share falls at no step and the course is locked from the step after its
+
+dynamics.json @ 14231 : fter its first reading step. Locked, neither share nor rule falls, and a perturbation keeping the rule's direction is absorbe
+
+dynamics.json @ 14393 : nd while the course stays locked and neither share nor rule falls below the start. Where the reading too is formed monotonica
+
+dynamics.json @ 14907 :  "exits": [    {     "to": {      "en": "the shapers' share falls strictly at every step of the run, nothing coming back to t
+
+dynamics.json @ 14911 : : with a positive cost and the shapers present, their share falls at every step; where something does come back, the shared p
+
+dynamics.json @ 14963 : o": {       "en": "the reverse strict inequality: the share falls across the stretch"      }     }    },    {     "kind": "cr
+
+dynamics.json @ 14970 : ve the share rises strictly at every step and from below it falls strictly at every step, the shapers present; under every sc
+
+dynamics.json @ 14982 : ad there (what comes back lo), shapers present: their share falls strictly at every step"      },      "to": {       "en": "t
+
+dynamics.json @ 14992 : cts for shaping exactly where c times the spread of shaping falls short of s times it with m q times the spread among groups:
+
+dynamics.json @ 15005 : aping"      },      "to": {       "en": "c times the spread falls short: the whole selects for shaping (read over the rationa
+
+dynamics.json @ 15012 : e, read over the rationals, c times the variance of shaping falls short of s times it with q times the covariance, member by 
+
+dynamics.json @ 15025 : ot select for shaping"      },      "to": {       "en": "it falls short: the whole selects for shaping"      }     }    }   ]
+
+dynamics.json @ 15204 : step and the course is locked for it, below it the capacity falls at every step and the course is locked the other way, witho
+
+dynamics.json @ 15960 : rst policy at every step and neither the share nor the rule falls; below it the chooser takes the second policy at every step
+
+dynamics.json @ 17006 :  such a course is never locked at a step, or that its share falls."   },   "records": [    "a-reading-against-the-share-does-
+
+dynamics.json @ 17028 : inst the share is never locked at a step, or that its share falls.",     "source": "theories/becoming/results/records/a-readi
+
+dynamics.json @ 17065 : n loop, a lock formed there kept for good. On whom the loss falls decides its sign: borne by the others it is a return to the
+
+dynamics.json @ 17065 : e shapers past what the rule in force gives them, the share falls strictly."   },   "records": [    "the-lock-draws-its-reade
+
+dynamics.json @ 17070 : out",    "a-pool-read-off-the-course",    "on-whom-the-loss-falls"   ],   "declarations": [    "Becoming.PoolFromCourse.windo
+
+dynamics.json @ 17158 : ,     "index": 4    },    {     "record": "on-whom-the-loss-falls",     "index": 1    },    {     "record": "on-whom-the-loss
+
+dynamics.json @ 17162 : ,     "index": 1    },    {     "record": "on-whom-the-loss-falls",     "index": 2    },    {     "record": "on-whom-the-loss
+
+dynamics.json @ 17166 : ,     "index": 2    },    {     "record": "on-whom-the-loss-falls",     "index": 3    }   ],   "forbids": {    "en": "A locke
+
+dynamics.json @ 17176 : ead is not the share-readers', or a step at which the share falls"     },     "law": "Becoming.PoolFromCourse.locked_along", 
+
+dynamics.json @ 17180 :  reading steps read as the share-readers do and whose share falls at no step; so it is left only where a reader present reads
+
+dynamics.json @ 17180 : der present reads otherwise at a reading step, or the share falls."     },     "strength": "necessary",     "records": [     
+
+dynamics.json @ 17215 : f the loss: borne by the carriers at four a unit, the share falls across each step from 1 to 4 while the rule in force favour
+
+dynamics.json @ 17219 : rength": "witness",     "records": [      "on-whom-the-loss-falls"     ],     "source": "theories/becoming/chapters/02-MAP.md
+
+dynamics.json @ 17221 : ": "theories/becoming/chapters/02-MAP.md#r-on-whom-the-loss-falls",     "drops": [      "rulecapture-raises"     ]    }   ], 
+
+dynamics.json @ 17263 : ": "theories/becoming/chapters/02-MAP.md#r-on-whom-the-loss-falls"    }   ],   "valence": "none asserted",   "beyond": {    "
+
+dynamics.json @ 17274 :    "theories/becoming/chapters/02-MAP.md#r-on-whom-the-loss-falls"   ],   "standing_without_record": null,   "premises": [   
+
+dynamics.json @ 21286 : d demonstration, holding for the reading formation's answer falls short, by the reference on the listing of both worlds, by 1
+
+dynamics.json @ 21290 :  formation's listing of both worlds, holding for the answer falls short by 1 at step 1 and by nothing at step 2 (a witness; t
+
+dynamics.json @ 21301 : e, the reversed valuation and a presented input, the answer falls short of the reference by 1 at step 1 and by nothing at ste
+
+dynamics.json @ 21305 :  reference on the first world alone, holding for the answer falls short by 1 at step 1 and by nothing at step 2 (a witness; t
+
+dynamics.json @ 22442 : ot-show--未表明"    },    {     "en": "A limit: that the share falls to nothing is by hand, a ratio of the weights.",     "sourc
+
+dynamics.json @ 22796 : the answerers' share rises strictly exactly where γ < β and falls strictly exactly where β < γ (assorted_raises_iff, assorted
+
+dynamics.json @ 22835 : s at their needs a formation giving to one that never gives falls below its need and never stands again, its line over m + 1 
+
+dynamics.json @ 23392 : ne. Giving is two from nothing and nothing from more, so it falls as what is left rises. The regime's step keeps every level 
+
+dynamics.json @ 24032 : the locked configuration with its rule reversed), the share falls at every even step and the rule at every odd step, without 
+
+dynamics.json @ 24672 : tly where it keeps every possibility; a quantity that never falls along an orbit and rises at some step of it rules out a law
+
+dynamics.json @ 24794 : urrence-every-configuration-listed",      "recurrence-never-falls-along-orbit",      "seeking-morethannow"     ],     "case_o
+
+dynamics.json @ 25233 :  every whole instant and between every two rises to two and falls back. So a reading at steps that shows no change does not s
+
+dynamics.json @ 26230 : ink gives on at least what it receives the difference never falls, so a loop closes a difference only through a link giving b
+
+dynamics.json @ 26321 : ing_needs_less",     "takes": [      "loopreturn-difference-falls"     ]    },    {     "law": "Becoming.LoopReturn.closes_wi
+
+dynamics.json @ 26393 : ishing_no_return",     "takes": []    }   ]  },  {   "id": "falls-that-end-do-not-recur",   "name": {    "en": "The grammar's
+
+dynamics.json @ 26395 : ot-recur",   "name": {    "en": "The grammar's law of rest: falls that end do not recur"   },   "family": "G",   "mechanism":
+
+dynamics.json @ 26399 : ver amounts is proved from this one, and an amount's strict falls stopping is by definition their non-recurrence. Rest is not
+
+dynamics.json @ 26516 : es": [      "amounts-still-unrefuted",      "amounts-strict-falls-end"     ]    },    {     "law": "Becoming.Amounts.rests_un
+
+dynamics.json @ 28628 : cover, balance, dissipation, embodiment and the stopping of falls proved in place (whole_noEndlessFall); the general law sits
+
+dynamics.json @ 28628 : EndlessFall); the general law sits under rest-exactly-where-falls-stop (family G)"       }      }     ]    },    {     "law":
+
+dynamics.json @ 28737 : antity of its configuration is an arrow from T on (it never falls, and it rises across every step at which the configuration 
+
+dynamics.json @ 29389 : ts-recur"     ]    }   ]  },  {   "id": "rest-exactly-where-falls-stop",   "name": {    "en": "Rest exactly where the total s
+
+dynamics.json @ 29395 : ver gives back all it takes takes nothing) has a total that falls strictly at every change of a level, with no least loss, an
+
+dynamics.json @ 29395 :  as far as can be refuted, exactly where its total's strict falls stop. With a census of the active relata, every relatum emb
+
+dynamics.json @ 29398 : s is not shown."   },   "records": [    "rest-exactly-where-falls-stop",    "rest-theorem-in-any-amounts"   ],   "declaration
+
+dynamics.json @ 29421 : ",   "hypotheses": [    {     "record": "rest-exactly-where-falls-stop",     "index": 1    },    {     "record": "rest-theore
+
+dynamics.json @ 29433 :  [    {     "to": {      "en": "the family's total's strict falls do not stop from T on (¬ M.FallsStop (v.stock M ds) T), so 
+
+dynamics.json @ 29437 :  as far as can be refuted, exactly where its total's strict falls stop; the edge is that they do not stop."     },     "stren
+
+dynamics.json @ 29441 : rength": "exact",     "records": [      "rest-exactly-where-falls-stop"     ],     "source": "theories/becoming/chapters/02-M
+
+dynamics.json @ 29443 :  "theories/becoming/chapters/02-MAP.md#r-rest-exactly-where-falls-stop",     "drops": [      "amounts-fallsstop"     ]    }, 
+
+dynamics.json @ 29450 : ss, in any amounts along an amount d that does not rise and falls strictly at every step: a standing passed between two relat
+
+dynamics.json @ 29454 : edge": {      "en": "Along an amount that does not rise and falls strictly at every step, a standing passed between two relat
+
+dynamics.json @ 29459 :     "rest-theorem-in-any-amounts",      "rest-exactly-where-falls-stop"     ],     "source": "theories/becoming/chapters/02-M
+
+dynamics.json @ 29477 : ngth": "witness",     "records": [      "rest-exactly-where-falls-stop"     ],     "source": "theories/becoming/chapters/02-M
+
+dynamics.json @ 29479 :  "theories/becoming/chapters/02-MAP.md#r-rest-exactly-where-falls-stop",     "drops": [      "amounts-noendlessfall"     ]   
+
+dynamics.json @ 29489 : ively, the absence of an endless fall: from an amount whose falls recur only as far as can be refuted, an amount falling at e
+
+dynamics.json @ 29489 : ry step is not built without choosing the steps at which it falls; classically, with dependent choice, the conditions coincid
+
+dynamics.json @ 29490 : rce": "theories/becoming/results/records/rest-exactly-where-falls-stop.md#does-not-show--未表明"    },    {     "en": "That the 
+
+dynamics.json @ 29494 : rce": "theories/becoming/results/records/rest-exactly-where-falls-stop.md#does-not-show--未表明"    },    {     "en": "That any 
+
+dynamics.json @ 29498 : rce": "theories/becoming/results/records/rest-exactly-where-falls-stop.md#does-not-show--未表明"    },    {     "en": "How soon 
+
+dynamics.json @ 29502 : rce": "theories/becoming/results/records/rest-exactly-where-falls-stop.md#does-not-show--未表明"    },    {     "en": "The other
+
+dynamics.json @ 29516 :  "theories/becoming/chapters/02-MAP.md#r-rest-exactly-where-falls-stop",    "theories/becoming/chapters/02-MAP.md#r-rest-theo
+
+dynamics.json @ 29614 :  "takes": [      "pass-amount-nonrising",      "pass-amount-falls"     ]    },    {     "law": "Becoming.Pass.levels_unlisted
+
+dynamics.json @ 29621 :  "takes": [      "pass-amount-nonrising",      "pass-amount-falls"     ]    }   ]  },  {   "id": "least-loss-rest",   "name":
+
+dynamics.json @ 29633 : s, possibly dense: where an amount does not rise from T on, falls by at least ε at each step at which P holds, and m copies o
+
+dynamics.json @ 29633 : configurations a list holds, an amount not rising from T on falls strictly at most as often as the list is long, over any amo
+
+dynamics.json @ 29633 : g any process's run whose configurations a list holds, such falls come to rest. In whole numbers, a count balanced across eac
+
+dynamics.json @ 29633 :  stretch and losing at least one more than it gains at each falls by at least the stretch's length; where marking is decided,
+
+dynamics.json @ 29682 : the dyadic amounts, Archimedean: across each step the stock falls by its loss, the stock does not rise, every loss is above n
+
+dynamics.json @ 29682 : ove nothing not every step loses at least ε, and its strict falls recur"     },     "law": "Becoming.Halving.never_rests",   
+
+dynamics.json @ 29699 : n": "a witness in layered amounts: the stock does not rise, falls by at least a least loss above nothing at every step, holds
+
+dynamics.json @ 29699 : ds every multiple of that loss at the start, and its strict falls recur"     },     "law": "Becoming.Layered.never_rests",   
+
+dynamics.json @ 29717 : s no list holds (¬ ∃ l, ∀ t, stock t ∈ l), while its strict falls recur"     },     "law": "Becoming.Halving.stock_unlisted",
+
+dynamics.json @ 29721 :  that recur need a reading no list holds: the halving stock falls strictly at every step, and no list holds its values."     
+
+dynamics.json @ 29757 : oes-not-show--未表明"    },    {     "en": "How far the amount falls, or that it approaches any value: the law bounds how often 
+
+dynamics.json @ 29757 : r that it approaches any value: the law bounds how often it falls strictly.",     "source": "theories/becoming/results/record
+
+dynamics.json @ 29845 : currence-every-configuration-listed",      "leastloss-orbit-falls",      "leastloss-loss-positive"     ]    },    {     "law"
+
+dynamics.json @ 29853 :  "takes": [      "learning-orbit-held",      "leastloss-run-falls",      "leastloss-loss-positive"     ]    },    {     "law"
+
+dynamics.json @ 29923 : step rests along every realization while its expected level falls at every step (a witness): a law that a run comes to rest d
+
+dynamics.json @ 29951 :  comes to rest from step ω + 1 on, while the expected level falls strictly at every step and never rests"     },     "law": "
+
+dynamics.json @ 29955 :  "Every realization comes to rest, while the expected level falls strictly at every step and never rests."     },     "streng
+
+dynamics.json @ 30822 :    "to": {      "en": "a witness for any bound B that never falls and passes every number: in the world slow B a census is co
+
+dynamics.json @ 32713 : alance, with such a division at every step, the level never falls below its start. Footprints are lists of units and the plan
+
+dynamics.json @ 32870 :  + c < r, a coupling of at most c a step with c + e < n + m falls below what keeping forgoes, so every optimum breaks the dep
+
+dynamics.json @ 33222 : mum-e-plus-d-le-c",      "optimum-step-to-n",      "optimum-falls-below-m"     ]    },    {     "law": "Becoming.Optimum.fron
+
+dynamics.json @ 34103 : here k ≤ w it never rises, whatever c, and with any loss it falls at each step at which carriers remain, the error threshold;
+
+dynamics.json @ 34131 :   "to": {      "en": "carriers present, the carriers' share falls across the step: c k (c + d) < c (c k + (c m + d w)), the s
+
+dynamics.json @ 34135 : "Where k ≤ w, with any loss and carriers present, the share falls at each step at which carriers remain."     },     "strengt
+
+dynamics.json @ 34149 :  k ≤ w the share never rises, whatever c, and with any loss falls at each step at which carriers remain: the error threshold.
+
+dynamics.json @ 34163 : k ≤ w: the share never rises, whatever c, and with any loss falls at each step at which carriers remain (the error threshold)
+
+dynamics.json @ 34175 : arted below it, it stays at or below it and its share never falls.",     "source": "theories/becoming/results/records/mutatio
+
+dynamics.json @ 34621 : at which no condition of a finite family rises, one of them falls (a supplied premise, which does not involve the arising for
+
+dynamics.json @ 35119 :  supplied wear law with no recovery (the rate only holds or falls, which carries much of this), formation within renewal cont
+
+dynamics.json @ 36346 : k of the stock"      },      "to": {       "en": "the stock falls short of d · requiredBy b n k: no trace of n rounds of copy
+
+dynamics.json @ 36366 :  k · 2^n units"      },      "to": {       "en": "the stock falls short of d · k(2^n − 1): no trace of n rounds of doubling r
+
+dynamics.json @ 36775 :    },      "to": {       "en": "the reserve or the deadline falls short of n + 1: no resumption of n + 1 steps publishes, and
+
+dynamics.json @ 39159 : g a run where from T on a condition's level never rises and falls across every step at which a formation is active, the forma
+
+dynamics.json @ 39194 : From T on a condition's level never rises across a step and falls across every step at which a formation is active: the forma
+
+dynamics.json @ 39283 : numbers, the least loss ε := 1, the marked steps the strict falls of the rank and m := rank T + 1 (Amounts.whole_within); res
+
+premises.json @ 5492 : : "learning-mono",   "name": {    "en": "a count that never falls"   },   "statement": {    "en": "the count f never falls fr
+
+premises.json @ 5495 : er falls"   },   "statement": {    "en": "the count f never falls from one step to the next: f t ≤ f (t + 1) for every t"   }
+
+premises.json @ 6228 : statement": {    "en": "what comes back below the threshold falls short of the cost (lo < c)"   },   "kind": "hypothesis of a
+
+premises.json @ 7342 : "home": "theories/becoming/results/records/on-whom-the-loss-falls.md#conditions--条件",   "seeded_from": [    "Lean"   ]  },  {
+
+premises.json @ 7361 : "home": "theories/becoming/results/records/on-whom-the-loss-falls.md#conditions--条件",   "seeded_from": [    "Lean"   ]  },  {
+
+premises.json @ 7380 : "home": "theories/becoming/results/records/on-whom-the-loss-falls.md#conditions--条件",   "seeded_from": [    "Lean"   ]  },  {
+
+premises.json @ 7934 : "id": "amounts-fallsstop",   "name": {    "en": "the strict falls stop"   },   "statement": {    "en": "the amount's strict f
+
+premises.json @ 7937 : s stop"   },   "statement": {    "en": "the amount's strict falls stop from T on, as far as can be refuted: it is not the cas
+
+premises.json @ 7945 : ome": "theories/becoming/results/records/rest-exactly-where-falls-stop.md#conditions--条件",   "seeded_from": [    "Lean"   ]  
+
+premises.json @ 8013 :  "en": "at each step from T on at which P holds, the amount falls by at least ε (∀ t, T ≤ t → P t → M.le (M.add (s (t + 1)) ε
+
+premises.json @ 8035 :  "en": "at each step from T on at which P holds, the amount falls by at least ε, as far as can be refuted (∀ t, T ≤ t → P t →
+
+premises.json @ 8093 : "no endless fall"   },   "statement": {    "en": "no amount falls without end: every amount that, as far as can be refuted, d
+
+premises.json @ 8093 : can be refuted, does not rise from a step on has its strict falls stop from there (M.NoEndlessFall)"   },   "kind": "hypothes
+
+premises.json @ 8103 : ome": "theories/becoming/results/records/rest-exactly-where-falls-stop.md#conditions--条件",   "seeded_from": [    "Lean"   ]  
+
+premises.json @ 8148 : ome": "theories/becoming/results/records/rest-exactly-where-falls-stop.md#conditions--条件",   "seeded_from": [    "Lean"   ]  
+
+premises.json @ 8199 : eeded_from": [    "Lean"   ]  },  {   "id": "amounts-strict-falls-end",   "name": {    "en": "the courses of strict falls end
+
+premises.json @ 8201 : ict-falls-end",   "name": {    "en": "the courses of strict falls end"   },   "statement": {    "en": "every course from the 
+
+premises.json @ 8261 : ome": "theories/becoming/results/records/rest-exactly-where-falls-stop.md#conditions--条件",   "seeded_from": [    "Lean"   ]  
+
+premises.json @ 10910 : the gap to m: ¬ L.WithinGap W m t c, so either what c gives falls short of what it takes by more than the level's excess over
+
+premises.json @ 10910 : es by more than the level's excess over m, or what it takes falls short of what it gives by more than the level's shortfall b
+
+premises.json @ 14390 : ": "grammarlaws-ends",   "name": {    "en": "the courses of falls end"   },   "statement": {    "en": "every course of steps 
+
+premises.json @ 14410 :   },  {   "id": "grammarlaws-lu",   "name": {    "en": "the falls recur"   },   "statement": {    "en": "the steps of F recur
+
+premises.json @ 15310 : ome": "theories/becoming/results/records/rest-exactly-where-falls-stop.md#conditions--条件",   "seeded_from": [    "Lean"   ]  
+
+premises.json @ 15321 : amounts"   },   "statement": {    "en": "c's level rises or falls across the step from t, read in the amounts (v.Rises M t c 
+
+premises.json @ 15368 : ome": "theories/becoming/results/records/rest-exactly-where-falls-stop.md#conditions--条件",   "seeded_from": [    "Lean"   ]  
+
+premises.json @ 16371 : eded_from": [    "Lean"   ]  },  {   "id": "leastloss-orbit-falls",   "name": {    "en": "the reading falls along the orbit" 
+
+premises.json @ 16373 :  "leastloss-orbit-falls",   "name": {    "en": "the reading falls along the orbit"   },   "statement": {    "en": "along the 
+
+premises.json @ 16390 : seeded_from": [    "Lean"   ]  },  {   "id": "leastloss-run-falls",   "name": {    "en": "the reading falls along the run"   
+
+premises.json @ 16392 : ": "leastloss-run-falls",   "name": {    "en": "the reading falls along the run"   },   "statement": {    "en": "along the ru
+
+premises.json @ 16903 : rom": [    "Lean"   ]  },  {   "id": "loopreturn-difference-falls",   "name": {    "en": "a difference fallen below its start
+
+premises.json @ 17363 : t": {    "en": "q marks the changes of the line g: it never falls along g and rises across every step at which the configurat
+
+premises.json @ 17653 :  "novelty-loses-at-change",   "name": {    "en": "the stock falls at every change"   },   "statement": {    "en": "from T on,
+
+premises.json @ 17656 : step at which the family's configuration changes, its stock falls (∀ t, T ≤ t → W.Changes cs t → W.stock cs (t + 1) < W.stock
+
+premises.json @ 17950 : bound-nondecreasing",   "name": {    "en": "the bound never falls"   },   "statement": {    "en": "the bound B does not fall 
+
+premises.json @ 18010 : p"   },   "statement": {    "en": "the condition c rises or falls across the step from t (W.Rises t c ∨ W.Falls t c)"   },   
+
+premises.json @ 19200 : ",   "seeded_from": [    "Lean"   ]  },  {   "id": "optimum-falls-below-m",   "name": {    "en": "a fall below the need"   },
+
+premises.json @ 20966 : name": {    "en": "a level rising faster than the weighting falls"   },   "statement": {    "en": "at each step to the n-th, 
+
+premises.json @ 20969 : ep to the n-th, the level y rises faster than the weighting falls: w t * y < w (t + 1) * G (t + 1) y"   },   "kind": "hypothe
+
+premises.json @ 20990 : step to the n-th, for every positive level z, the weighting falls at least as fast as what stands at z rises over it: 0 < z →
+
+premises.json @ 21011 : step to the n-th, for every positive level z, the weighting falls faster than what stands at z rises over it: 0 < z → w (t + 
+
+premises.json @ 21216 : om": [    "Lean"   ]  },  {   "id": "optimum-next-weighting-falls",   "name": {    "en": "the weighting falls at every step" 
+
+premises.json @ 21218 : -next-weighting-falls",   "name": {    "en": "the weighting falls at every step"   },   "statement": {    "en": "at each step
+
+premises.json @ 21221 : tement": {    "en": "at each step to the n-th the weighting falls: w (t + 1) < w t"   },   "kind": "hypothesis of a law",   "
+
+premises.json @ 23129 :  "seeded_from": [    "Lean"   ]  },  {   "id": "pass-amount-falls",   "name": {    "en": "the amount falls strictly at every 
+
+premises.json @ 23131 : "id": "pass-amount-falls",   "name": {    "en": "the amount falls strictly at every step"   },   "statement": {    "en": "the
+
+premises.json @ 23134 : at every step"   },   "statement": {    "en": "the amount d falls strictly across every step: before the step it is not withi
+
+premises.json @ 23143 : ome": "theories/becoming/results/records/rest-exactly-where-falls-stop.md#conditions--条件",   "seeded_from": [    "Lean"   ]  
+
+premises.json @ 23163 : ome": "theories/becoming/results/records/rest-exactly-where-falls-stop.md#conditions--条件",   "seeded_from": [    "Lean"   ]  
+
+premises.json @ 24302 : ded_from": [    "Lean"   ]  },  {   "id": "recurrence-never-falls-along-orbit",   "name": {    "en": "a quantity never fallin
+
+premises.json @ 24307 : orbit"   },   "statement": {    "en": "the quantity q never falls along the orbit of s: ∀ n, q (orbit next s n) ≤ q (orbit ne
+
+premises.json @ 24989 : w beyond all giving"   },   "statement": {    "en": "giving falls short of the draw H at every level (∀ z, g z < H)"   },   "
+
+premises.json @ 26127 : iving short below y"   },   "statement": {    "en": "giving falls short of the draw H at every level below y (RegimeMargin.Sh
+
+premises.json @ 26602 : at which the formation f is active, the condition c's level falls"   },   "kind": "hypothesis of a law",   "lean": [    "Rela
+
+premises.json @ 31441 :  formation arises and no condition of cs rises, one of them falls (W.Depletes cs (fun t => ∃ f, W.Arises t f))"   },   "kind"
+
+premises.json @ 31480 :  the family's configuration is an arrow from T on: it never falls across a step, and it rises across every step at which the 
+
+premises.json @ 31682 : s r t f): unsupported there, the reserve does not rise, and falls if f is active"   },   "kind": "hypothesis of a law",   "le
+
+premises.json @ 31875 : caying reserve"   },   "statement": {    "en": "the reserve falls across every step at which its formation is unsupported and
+
+premises.json @ 31894 :  (W.DecaysAcross r t f): unsupported there and positive, it falls"   },   "kind": "hypothesis of a law",   "lean": [    "Beco
+
+premises.json @ 34423 : ome": "theories/becoming/results/records/rest-exactly-where-falls-stop.md#conditions--条件",   "seeded_from": [    "Lean"   ]  
+
+premises.json @ 34461 : ome": "theories/becoming/results/records/rest-exactly-where-falls-stop.md#conditions--条件",   "seeded_from": [    "Lean"   ]  
+
+premises.json @ 34480 : ome": "theories/becoming/results/records/rest-exactly-where-falls-stop.md#conditions--条件",   "seeded_from": [    "Lean"   ]  
+
+mapping.json @ 12042 : ost-level"     ]    },    {     "position": 9,     "name": "falls",     "type": "∀ (t : Nat), t < n → w (t + 1) < w t",     "
+
+mapping.json @ 12045 : + 1) < w t",     "premises": [      "optimum-next-weighting-falls"     ]    },    {     "position": 10,     "name": "drawsDow
+
+mapping.json @ 12115 : st-level"     ]    },    {     "position": 10,     "name": "falls",     "type": "∀ (t : Nat), t < n → w (t + 1) < w t",     "
+
+mapping.json @ 12118 : + 1) < w t",     "premises": [      "optimum-next-weighting-falls"     ]    },    {     "position": 11,     "name": "drawsDow
+
+mapping.json @ 12188 : raw-more"     ]    },    {     "position": 10,     "name": "falls",     "type": "∀ (t : Nat), t < n → w (t + 1) ≤ w t",     "
+
+mapping.json @ 12269 : st-level"     ]    },    {     "position": 15,     "name": "falls",     "type": "∀ (t : Nat), t < n → w (t + 1) < w t",     "
+
+mapping.json @ 12272 : + 1) < w t",     "premises": [      "optimum-next-weighting-falls"     ]    },    {     "position": 16,     "name": "drawsDow
+
+mapping.json @ 12358 : raw-more"     ]    },    {     "position": 15,     "name": "falls",     "type": "∀ (t : Nat), t < n → w (t + 1) ≤ w t",     "
+
+mapping.json @ 26273 : Becoming.«一» (s T)",     "premises": [      "amounts-strict-falls-end"     ]    }   ],   "takes_unbound": {}  },  "Becoming.A
+
+mapping.json @ 31239 : nonrising"     ]    },    {     "position": 5,     "name": "falls",     "type": "∀ (t : Nat), ¬M.le (d t) (d (t + 1))",     "
+
+mapping.json @ 31242 : .le (d t) (d (t + 1))",     "premises": [      "pass-amount-falls"     ]    }   ],   "takes_unbound": {}  },  "Becoming.Pass.
+
+mapping.json @ 31262 : nonrising"     ]    },    {     "position": 5,     "name": "falls",     "type": "∀ (t : Nat), ¬M.le (d t) (d (t + 1))",     "
+
+mapping.json @ 31265 : .le (d t) (d (t + 1))",     "premises": [      "pass-amount-falls"     ]    }   ],   "takes_unbound": {}  },  "Becoming.Amoun
+
+mapping.json @ 31277 : ister",   "binders": [    {     "position": 7,     "name": "falls",     "type": "∀ (t : Nat), T ≤ t → t < T + n → M.le (M.add
+
+mapping.json @ 31362 : ister",   "binders": [    {     "position": 8,     "name": "falls",     "type": "∀ (t : Nat), T ≤ t → M.le (M.add (s (t + 1))
+
+mapping.json @ 31393 : chimedean"     ]    },    {     "position": 8,     "name": "falls",     "type": "∀ (t : Nat), T ≤ t → M.le (M.add (s (t + 1))
+
+mapping.json @ 31469 : n-listed"     ]    },    {     "position": 10,     "name": "falls",     "type": "∀ (n : Nat), M.le (M.add (q (Becoming.Law.or
+
+mapping.json @ 31472 : .orbit next s n))",     "premises": [      "leastloss-orbit-falls"     ]    },    {     "position": 12,     "name": "positive
+
+mapping.json @ 31500 : bit-held"     ]    },    {     "position": 11,     "name": "falls",     "type": "∀ (n : Nat), M.le (M.add (q (r.state (n + 1)
+
+mapping.json @ 31503 : n)) (q (r.state n))",     "premises": [      "leastloss-run-falls"     ]    },    {     "position": 13,     "name": "positive
+
+mapping.json @ 34237 :  next s (n + 1))",     "premises": [      "recurrence-never-falls-along-orbit"     ]    },    {     "position": 9,     "name"
+
+mapping.json @ 35526 : ister",   "binders": [    {     "position": 4,     "name": "falls",     "type": "(Becoming.Law.run (Becoming.LoopReturn.retur
+
+mapping.json @ 35529 : state n < d",     "premises": [      "loopreturn-difference-falls"     ]    }   ],   "takes_unbound": {}  },  "Becoming.LoopR
+
+mapping.json @ 38758 :    "type": "x (t + 1) < m",     "premises": [      "optimum-falls-below-m"     ]    }   ],   "takes_unbound": {}  },  "Becomi
+
+02-MAP.md @ 166 : ss `N` steps each conveying from a member, a family's stock falls by at least `N`: from a stock `S` at most `S` stages are co
+
+02-MAP.md @ 198 : possibly dense): where an amount does not rise from `T` on, falls by at least `ε` at each step at which `P` holds, and `m` co
+
+02-MAP.md @ 201 : nfigurations a list holds, an amount not rising from `T` on falls strictly at most as often as the list is long, over any amo
+
+02-MAP.md @ 201 : g any process's run whose configurations a list holds, such falls come to rest. Recurring falls need a reading no list holds 
+
+02-MAP.md @ 201 : igurations a list holds, such falls come to rest. Recurring falls need a reading no list holds (`Halving.stock_unlisted`) ([r
+
+02-MAP.md @ 218 : ver gives back all it takes takes nothing) has a total that falls strictly at every change of a level, with no least loss (`W
+
+02-MAP.md @ 218 : ** (World; witness): along an amount that does not rise and falls strictly at every step, a standing passed between two relat
+
+02-MAP.md @ 220 : t-theorem-in-any-amounts.md)).  <a id="r-rest-exactly-where-falls-stop"></a> **Theorem** (World). Over any amounts, a family 
+
+02-MAP.md @ 221 :  as far as can be refuted, exactly where its total's strict falls stop (`World.InAmounts.change_stops_iff`), and under the en
+
+02-MAP.md @ 221 : s not shown ([record](../results/records/rest-exactly-where-falls-stop.md)).  <a id="r-rest-by-balance"></a> **Theorem** (any
+
+02-MAP.md @ 224 :  stretch and losing at least one more than it gains at each falls by at least the stretch's length (`Amounts.falls_by_stretch
+
+02-MAP.md @ 256 : . For one condition under a standing draw `H`: where giving falls short of the draw below `y`, gives nothing from nothing, me
+
+02-MAP.md @ 256 : g the draw, more than that exactly where giving at the need falls short of the draw (`RegimeMargin.beyond_draw_iff`); under t
+
+02-MAP.md @ 256 : aw no lower, and raises it exactly where the lowered giving falls short of the draw at the old least level (`RegimeMargin.low
+
+02-MAP.md @ 258 : before`); where giving is at most `Y`, with `Y ≤ H ≤ d`, it falls below `d` within `n` steps from any level below `d + (H − Y
+
+02-MAP.md @ 261 :  each one and lowered p by each zero, so that its rises and falls balance under the weights. The courses of n steps in which 
+
+02-MAP.md @ 261 : hts. The courses of n steps in which it reaches the need or falls below it at some step weigh, times m·m, at most n·p·q·(p + 
+
+02-MAP.md @ 282 : s, a run whose first step does not lower it and which later falls names two levels, the lower first, that the step carries th
+
+02-MAP.md @ 285 : y level up to `hi`, a level `x` with `H + y ≤ x ≤ hi` never falls below `x` while the inflow rests, under the same draw (`Dra
+
+02-MAP.md @ 288 : , for one condition under a standing draw `H`, where giving falls short of the draw below `y`, gives nothing from nothing, me
+
+02-MAP.md @ 291 : three forbidden items, and under a rising draw their giving falls below the curve about three days before the break (post hoc
+
+02-MAP.md @ 353 : ink gives on at least what it receives the difference never falls, so a loop closes a difference only through a link giving b
+
+02-MAP.md @ 388 : eserve does not rise while its formation is unsupported and falls where it is active then; the zero reserve is exactly activi
+
+02-MAP.md @ 404 : h the start's rule and every rule read favouring, the share falls at no step and the course is locked from the step after its
+
+02-MAP.md @ 404 : leCapture.favouring_locks`). Locked, neither share nor rule falls; a perturbation keeping the rule's direction is absorbed at
+
+02-MAP.md @ 415 : nd while the course stays locked and neither share nor rule falls below the start (`ClosedCapture.lock_outlives_loss`); a rea
+
+02-MAP.md @ 421 : `). With nothing coming back and a cost, the shapers' share falls strictly at every step, the shapers present (`RuleShaping.n
+
+02-MAP.md @ 421 : ' share rises strictly at every step; from a start below it falls strictly at every step (`RuleShaping.threshold_rises`, `Rul
+
+02-MAP.md @ 424 : s for shaping exactly where `c` times the spread of shaping falls short of `s` times it with `m q` times the spread among gro
+
+02-MAP.md @ 424 :  read over the rationals, `c` times the variance of shaping falls short of `s` times it with `q` times the covariance, member
+
+02-MAP.md @ 427 : hare rises strictly at every step; strictly disfavoured, it falls strictly at every step, the shapers present (`DrawnShaping.
+
+02-MAP.md @ 430 : st_ge`, `DrawnReplacement.fixed_ge`). A bound on the weight falls across the distance from the mass: where the rule read at `
+
+02-MAP.md @ 433 : pers, with `lo ≤ hi` and `lo' ≤ hi`, the late reading never falls along that course (`ReadInTime.late_never_falls`); read fro
+
+02-MAP.md @ 436 : y is taken at every step and neither the share nor the rule falls, also where the score favours the second policy (`κc < κo`)
+
+02-MAP.md @ 436 : nce it would turn; counted from the posterior, three to one falls at the first step while the weighted rule still favours the
+
+02-MAP.md @ 452 :  back to the rule-makers alone and costs them, the capacity falls; where it costs them nothing either, it is selected neither
+
+02-MAP.md @ 454 : ck than it costs is not thereby selected: below the mass it falls (`DrawnShaping.CriticalMass.few_falls`). Where `lo < c < hi
+
+02-MAP.md @ 473 :  reading steps read as the share-readers do and whose share falls at no step, the lock is kept and neither share nor rule end
+
+02-MAP.md @ 473 :  while the course stays locked ([below](#r-on-whom-the-loss-falls)). Where the selection raises the share under every favouri
+
+02-MAP.md @ 473 : e is locked at every later step, and neither share nor rule falls below where it was (`PoolFromCourse.closed_stays_closed`). 
+
+02-MAP.md @ 478 : lock-draws-its-readers-out.md)).  <a id="r-on-whom-the-loss-falls"></a> **Theorem** (counts; witness). *On whom the loss fall
+
+02-MAP.md @ 479 : alls"></a> **Theorem** (counts; witness). *On whom the loss falls.* With the loss one a step, write a loss borne as [the capa
+
+02-MAP.md @ 479 : e shapers past what the rule in force gives them, the share falls strictly, the shapers present (`PoolFromCourse.borne_falls`
+
+02-MAP.md @ 479 : ne by the carriers at four for each unit of loss, the share falls across each of the three steps from step 1 to step 4 while 
+
+02-MAP.md @ 479 : hers_locked`) ([record](../results/records/on-whom-the-loss-falls.md)).  **What registers a removal.** [07 §4.12](07-SIGNIFIC
+
+02-MAP.md @ 485 : ule with no reader of the loss ([above](#r-on-whom-the-loss-falls)).  Two more are where the theorems above leave room, the s
+
+02-MAP.md @ 489 : an optimizer aiming at it; it needs only that what is drawn falls on those who would read it. Read so, it is instrumental con
+

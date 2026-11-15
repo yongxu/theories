@@ -1,0 +1,131 @@
+def Alike (need : U → Nat) (kids : U → List U) (w : List U) (x x' : Nat) : Prop
+
+theorem alike_of_met {w : List U} {x x' : Nat} (same : ∀ u, u ∈ w → (need u ≤ x ↔ need u ≤ x')) :
+    Alike need kids w x x'
+
+theorem alike_iff {w : List U} {x x' : Nat} (leaves : ∀ u, u ∈ w → kids u ≠ []) :
+    Alike need kids w x x' ↔ ∀ u, u ∈ w → (need u ≤ x ↔ need u ≤ x')
+
+theorem need_in_after {x n : Nat} {w : List U} (some : ∃ v, v ∈ after need kids w x ∧ need v = n) :
+    ∃ u v, u ∈ w ∧ need u ≤ x ∧ v ∈ kids u ∧ need v = n
+
+theorem needs_after_iff (inherit : ∀ u v, v ∈ kids u → need v = need u) (some : ∀ u, kids u ≠ [])
+    {x n : Nat} {w : List U} :
+    (∃ v, v ∈ after need kids w x ∧ need v = n) ↔ ∃ u, u ∈ w ∧ need u = n ∧ n ≤ x
+
+theorem needs_kept (inherit : ∀ u v, v ∈ kids u → need v = need u) (some : ∀ u, kids u ≠ [])
+    {x n : Nat} {w : List U} (met : ∀ u, u ∈ w → need u ≤ x) :
+    (∃ v, v ∈ after need kids w x ∧ need v = n) ↔ ∃ u, u ∈ w ∧ need u = n
+
+theorem ways_of_alike {g g' : Nat → Nat} {use use' : U → Nat} {w : List U} {x x' n : Nat}
+    (alike : ∀ j, j < n → Alike need kids (course need kids g use (w, x) j).1
+      (course need kids g use (w, x) j).2 (course need kids g' use' (w, x') j).2) :
+    ∀ j, j ≤ n → (course need kids g use (w, x) j).1 = (course need kids g' use' (w, x') j).1
+  | 0, _ => rfl
+  | j + 1, le =>
+    (alike j le).trans
+      (congrArg (fun l => after need kids l (course need kids g' use' (w, x') j).2)
+        (ways_of_alike alike j (Nat.le_of_succ_le le)))
+
+/-- **Ways alike.** For two givings `g`, `g'`, two uses `use`, `use'`, two start levels `x`, `x'` and
+one way `w`, under one `need` and `kids`: if for every `j < n` the two levels at step `j` meet the
+same needs among the units of the first course's way there (`alike`), the two ways are the same at
+every step `j ≤ n`: in this model no new difference arrives from a difference not yet made. The case
+of `ways_of_alike` by `after_alike` (meeting the same needs is finer than being `Alike`:
+`AlikeFiner`). -/
+theorem ways_alike {g g' : Nat → Nat} {use use' : U → Nat} {w : List U} {x x' n : Nat}
+    (alike : ∀ j, j < n → ∀ u, u ∈ (course need kids g use (w, x) j).1 →
+      (need u ≤ (course need kids g use (w, x) j).2 ↔ need u ≤ (course need kids g' use' (w, x') j).2)) :
+    ∀ j, j ≤ n → (course need kids g use (w, x) j).1 = (course need kids g' use' (w, x') j).1
+
+theorem ways_alike {g g' : Nat → Nat} {use use' : U → Nat} {w : List U} {x x' n : Nat}
+    (alike : ∀ j, j < n → ∀ u, u ∈ (course need kids g use (w, x) j).1 →
+      (need u ≤ (course need kids g use (w, x) j).2 ↔ need u ≤ (course need kids g' use' (w, x') j).2)) :
+    ∀ j, j ≤ n → (course need kids g use (w, x) j).1 = (course need kids g' use' (w, x') j).1
+
+theorem never_in (closed : ∀ u v, v ∈ kids u → S v → S u) {giving : Nat → Nat}
+    {s : List U × Nat} (none : ∀ u, u ∈ s.1 → ¬ S u) :
+    ∀ j u, u ∈ (course need kids giving use s j).1 → ¬ S u
+
+theorem gone_from (closed : ∀ u v, v ∈ kids u → S v → S u) {giving : Nat → Nat}
+    {s : List U × Nat} {k : Nat}
+    (gone : ∀ u, u ∈ (course need kids giving use s k).1 → ¬ S u) :
+    ∀ j, k ≤ j → ∀ u, u ∈ (course need kids giving use s j).1 → ¬ S u
+
+theorem account {s : List U × Nat} (N : Nat)
+    (within : ∀ t, t < N →
+      taken use (course need kids giving use s t).1 ≤ (course need kids giving use s t).2) :
+    (course need kids giving use s N).2 +
+        total (steps 0 N) (fun t => taken use (course need kids giving use s t).1) =
+      s.2 + total (steps 0 N) (fun t => giving ((course need kids giving use s t).2 -
+        taken use (course need kids giving use s t).1))
+
+theorem account_unending (nothing : RegimeMargin.FromNothing giving) {s : List U × Nat}
+    (needs : Needing need kids s.1) (never : «不穷» (net need kids giving use) «一» s) (N : Nat) :
+    (course need kids giving use s N).2 +
+        total (steps 0 N) (fun t => taken use (course need kids giving use s t).1) =
+      s.2 + total (steps 0 N) (fun t => giving ((course need kids giving use s t).2 -
+        taken use (course need kids giving use s t).1))
+
+def strip (Z : U → Prop) [DecidablePred Z] : List U → List U
+  | [] => []
+  | u :: w => if Z u then strip Z w else u :: strip Z w
+
+section Nothing
+
+variable {need : U → Nat} {kids : U → List U} {use : U → Nat} {giving : Nat → Nat}
+  {Z : U → Prop} [DecidablePred Z]
+
+theorem strip_pos {u : U} {w : List U} (h : Z u) : strip Z (u :: w) = strip Z w
+
+theorem takes_nothing (zero : ∀ u, Z u → use u = 0) (inZ : ∀ u v, Z u → v ∈ kids u → Z v)
+    (w : List U) (x : Nat) (n : Nat) :
+    (course need kids giving use (strip Z w, x) n).2 = (course need kids giving use (w, x) n).2 ∧
+      strip Z (course need kids giving use (strip Z w, x) n).1 =
+        strip Z (course need kids giving use (w, x) n).1
+
+theorem strip_course (zero : ∀ u, Z u → use u = 0) (inZ : ∀ u v, Z u → v ∈ kids u → Z v)
+    {s s' : List U × Nat} (ways : strip Z s.1 = strip Z s'.1) (level : s.2 = s'.2) :
+    ∀ n, (course need kids giving use s n).2 = (course need kids giving use s' n).2 ∧
+      strip Z (course need kids giving use s n).1 = strip Z (course need kids giving use s' n).1
+  | 0 => ⟨level, ways⟩
+  | n + 1 => match strip_course zero inZ ways level n with
+    | ⟨l, e⟩ =>
+      ⟨(left_of_taken (giving
+
+theorem alike_not_met :
+    Alike need kids [d, b] 4 6 ∧ ¬ (∀ u, u ∈ [d, b] → (need u ≤ 4 ↔ need u ≤ 6))
+
+theorem lost :
+    (∀ n, (course need kids TurningInTime.Three.giving use ([A, B], 9) n).2 =
+        (course need kids TurningInTime.Three.giving use ([A, B, C], 9) n).2 ∧
+      strip (fun u => isC u = true) (course need kids TurningInTime.Three.giving use ([A, B], 9) n).1 =
+        strip (fun u => isC u = true)
+          (course need kids TurningInTime.Three.giving use ([A, B, C], 9) n).1) ∧
+    course need kids TurningInTime.Three.giving use ([A, B, C], 9) 1 = ([A, B, C], 8) ∧
+    course need kids TurningInTime.Three.giving use ([A, B, C], 9) 2 = ([A, C], 6) ∧
+    (∀ k, course need kids TurningInTime.Three.giving use ([A, B, C], 9) (3 + k) = ([A], 6)) ∧
+    course need kids TurningInTime.Three.giving use ([A, B], 9) 1 = ([A, B], 8) ∧
+    (∀ k, course need kids TurningInTime.Three.giving use ([A, B], 9) (2 + k) = ([A], 6)) ∧
+    «不穷» (net need kids TurningInTime.Three.giving use) «一» ([A, B, C], 9)
+
+theorem multiplying_takers :
+    (∀ t, (LineageRegimes.MultiplyingTakers.generations.family t).length =
+        (course Doubling.need Doubling.kids nothingGiven Doubling.use ([()], 3) t).1.length ∧
+      LineageRegimes.MultiplyingTakers.web.level t 0 =
+        (course Doubling.need Doubling.kids nothingGiven Doubling.use ([()], 3) t).2 ∧
+      ((∃ p, p ∈ LineageRegimes.MultiplyingTakers.generations.family t ∧
+          LineageRegimes.MultiplyingTakers.web.active t p) ↔
+        Goes Doubling.need (course Doubling.need Doubling.kids nothingGiven Doubling.use ([()], 3) t))) ∧
+    (∃ n, ¬ Goes Doubling.need (course Doubling.need Doubling.kids nothingGiven Doubling.use ([()], 3) n)) ∧
+    ¬ «不穷» (net Doubling.need Doubling.kids nothingGiven Doubling.use) «一» ([()], 3)
+
+theorem drain :
+    (∀ t, ((LineageDrawdown.Drain.generations (LineageDrawdown.Drain.courseP true)).family t).length =
+        (course need kids gift use ([r, d0], 11) t).1.length ∧
+      (LineageDrawdown.Drain.web true (LineageDrawdown.Drain.courseP true)).level t 0 +
+          gift ((LineageDrawdown.Drain.web true (LineageDrawdown.Drain.courseP true)).level t 0) =
+        (course need kids gift use ([r, d0], 11) t).2) ∧
+    course need kids gift use ([r, d0], 11) 1 = ([d1, d1], 11) ∧
+    (∃ n, ∀ k, n ≤ k → ∀ u, u ∈ (course need kids gift use ([r, d0], 11) (1 + k)).1 →
+      ¬ isD u = true)

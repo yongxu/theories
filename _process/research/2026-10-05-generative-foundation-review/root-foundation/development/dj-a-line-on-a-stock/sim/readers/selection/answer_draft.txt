@@ -1,0 +1,38 @@
+def SelectsThrough (W : Web F C) (obs : F → C → Prop) (f : F) (t : Nat)
+    (select : (Nat → C → Nat) → Prop) : Prop :=
+  ∀ l l', W.AlikeThroughUpTo obs f l l' t → (select l ↔ select l')
+theorem alikeThrough_raise [DecidableEq C] {c : C} (unobserved : ¬ obs g c) (d : Nat)
+    {t : Nat} (supported : W.Supported t g) :
+    W.AlikeThrough obs g W.level (W.raise c d).level t
+theorem share_rises_through {history : α → Nat → C → Nat} {kids : α → List α}
+    {select : (Nat → C → Nat) → Prop} {ms es : List α} {a b : Nat}
+    (carriers : ∀ p, p ∈ ms → select (history p)) (others : ∀ p, p ∈ es → ¬ select (history p))
+    (rewarded : ∀ p, select (history p) → a ≤ (kids p).length)
+    (unrewarded : ∀ p, ¬ select (history p) → (kids p).length ≤ b)
+    (lt : b < a) (some : 0 < ms.length) (some' : 0 < es.length) :
+    ms.length * offspringCount es kids < offspringCount ms kids * es.length
+structure Generations (α : Type) where
+  first : List α
+  kids : Nat → α → List α
+  amount : Nat → α → Nat
+theorem mean_step (t : Nat) :
+    G.size t * G.sum (t + 1) + (G.size t * G.loweredAt t + G.discordAt t) =
+      G.size (t + 1) * G.sum t + (G.concordAt t + G.size t * G.raisedAt t)
+def Exact (ps : List α) (kids : α → List α) (a b : α → Nat) : Prop :=
+  ∀ p, p ∈ ps → ∀ k, k ∈ kids p → b k = a p
+def ReadsShare (P : Ideals.Preorder S) (M : Ideals.Preorder R) (h : S → R → R) : Prop :=
+  ∀ x y g g', P.le x y → M.le (h x g) (h y g')
+def Rising (ds : List C) (better : (C → Nat) → (C → Nat) → Prop) : Prop :=
+  ∀ o o', Exceeds ds o' o → better o' o
+def Sensitive (h : F) (c : C) : Prop :=
+  ∃ t, ¬ law.InsensitiveAt t h c
+theorem varied_before (G : Generations α) {v : Nat}
+    (founded : ∀ p, p ∈ G.family 0 → G.amount 0 p = v) {t : Nat}
+    (selected : G.concordAt t ≠ 0 ∨ G.discordAt t ≠ 0) :
+    ∃ s, s < t ∧ (0 < G.raisedAt s ∨ 0 < G.loweredAt s)
+theorem mem_course_iff (giving : Nat → Nat) (s : List (Nat × Nat) × Nat) (u : Nat × Nat) :
+    ∀ n, u ∈ (course giving s n).1 ↔ u ∈ s.1 ∧ ∀ j, j < n → need u ≤ (course giving s j).2
+theorem fixed_while {giving : Nat → Nat} {S : List (Nat × Nat)} {z : Nat} :
+    ∀ i, (∀ j, j < i → ∀ u, u ∈ S →
+        need u ≤ Law.orbit (RegimeMargin.step giving (taken S)) z j) →
+      course giving (S, z) i = (S, Law.orbit (RegimeMargin.step giving (taken S)) z i)

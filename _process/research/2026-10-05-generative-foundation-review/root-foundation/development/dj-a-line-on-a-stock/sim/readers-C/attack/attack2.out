@@ -1,0 +1,19 @@
+== E by hand: locked_turns_in_time_share_iff with one premise dropped ==
+ base (Three.share_read_goes_on on three rules): premises failing []; never ends True; right side True; net levels [9, 8, 6, 6]; as it was [9, 8]
+ no monotone: premises failing ['monotone']; never ends True; right side False; net levels [9, 8, 6, 6]; as it was [9, 8, 6, 6]
+ no upper: premises failing ['upper']; never ends True; right side False; net levels [9, 8, 6, 6, 6]; as it was [9, 8, 6, 6, 6]
+ no meets: premises failing ['meets']; never ends False; right side True; net levels [9, 8, 5, 4, 2, 0]; as it was [9]
+ no keeps: premises failing ['keeps']; never ends False; right side True; net levels [8, 7, 9, 5, 1, 0]; as it was [8]
+ no high: premises failing ['high']; never ends False; right side True; net levels [12, 7, 4, 2, 0]; as it was [12]
+ windowAfter as the case sA := fA (read_at_eight_ends): premises failing ['sets']; never ends False; right side True; net levels [9, 8, 6, 6, 2, 0]; as it was [9, 8]
+== ends_with_net_rising: is the rise needed at every step? ==
+ use rising for j < hi and standing after: 1436 models, 0 not ended by step hi + 1
+== Three.rise_count_ends: where the use first is at least the level ==
+  step 0: share/use 3, level 12, use >= level: False, use > largest giving 6: False
+  step 1: share/use 4, level 12, use >= level: False, use > largest giving 6: False
+  step 2: share/use 5, level 12, use >= level: False, use > largest giving 6: False
+  step 3: share/use 6, level 12, use >= level: False, use > largest giving 6: False
+  step 4: share/use 7, level 12, use >= level: False, use > largest giving 6: True
+  step 5: share/use 8, level 10, use >= level: False, use > largest giving 6: True
+  step 6: share/use 9, level 4, use >= level: True, use > largest giving 6: True
+  step 7: share/use 10, level 0, use >= level: True, use > largest giving 6: True

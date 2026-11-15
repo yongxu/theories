@@ -1,0 +1,198 @@
+=== LineOnAStock.lean Holds
+def Holds (need use : U → Nat) (y : Nat → Nat) (s : List U × Nat) : Prop
+=== LineOnAStock.lean Regime
+def Regime (giving : Nat → Nat) (use : U → Nat) (y : Nat → Nat) (hi : Nat) (w : List U) : Prop
+=== LineOnAStock.lean Needing
+def Needing (need : U → Nat) (kids : U → List U) (w : List U) : Prop
+=== LineOnAStock.lean mem_after_iff
+theorem mem_after_iff {x : Nat} {v : U} {w : List U} :
+    v ∈ after need kids w x ↔ ∃ u, u ∈ w ∧ need u ≤ x ∧ v ∈ kids u
+=== LineOnAStock.lean after_alike
+theorem after_alike {x x' : Nat} :
+    ∀ {w : List U}, (∀ u, u ∈ w → (need u ≤ x ↔ need u ≤ x')) →
+      after need kids w x = after need kids w x'
+  | [], _ => rfl
+  | u :: w, same => by
+    show cond (decide (need u ≤ x)) (kids u) [] ++ after need kids w x =
+      cond (decide (need u ≤ x')) (kids u) [] ++ after need kids w x'
+    rw [decide_le_congr (same u (.head w)), after_alike fun v m => same v (.tail u m)]
+
+/-- **Two ways side by side step side by side at one level.** The way after a step of `w₁ ++ w₂` at
+`x` is the way after the step of `w₁` at `x`, then that of `w₂` at `x`. For any `need` and `kids`. -/
+theorem after_append (x : Nat) :
+    ∀ w₁ w₂ : List U, after need kids (w₁ ++ w₂) x = after need kids w₁ x ++ after need kids w₂ x
+  | [], _ => rfl
+  | u :: w₁, w₂ =>
+    (congrArg (cond (decide (need u ≤ x)) (kids u) [] ++ ·) (after_append x w₁ w₂)).trans
+      (ListTests.append_assoc _ _ _).symm
+
+/-- **The level reads the way only through what it takes.** The level after a step at two ways that
+take the same is the same. For any giving and use. -/
+theorem left_of_taken {giving : Nat → Nat} {use : U → Nat} {w₁ w₂ : List U} {x : Nat}
+    (same : taken use w₁ = taken use w₂) : left giving use w₁ x = left giving use w₂ x
+=== LineOnAStock.lean left_of_taken
+theorem left_of_taken {giving : Nat → Nat} {use : U → Nat} {w₁ w₂ : List U} {x : Nat}
+    (same : taken use w₁ = taken use w₂) : left giving use w₁ x = left giving use w₂ x
+=== LineOnAStock.lean ways_alike
+theorem ways_alike {g g' : Nat → Nat} {use use' : U → Nat} {w : List U} {x x' n : Nat}
+    (alike : ∀ j, j < n → ∀ u, u ∈ (course need kids g use (w, x) j).1 →
+      (need u ≤ (course need kids g use (w, x) j).2 ↔ need u ≤ (course need kids g' use' (w, x') j).2)) :
+    ∀ j, j ≤ n → (course need kids g use (w, x) j).1 = (course need kids g' use' (w, x') j).1
+  | 0, _ => rfl
+  | j + 1, le =>
+    (after_alike (alike j le)).trans
+      (congrArg (fun l => after need kids l (course need kids g' use' (w, x') j).2)
+        (ways_alike alike j (Nat.le_of_succ_le le)))
+
+/-- The course as generations of descent (`SelectionTerm.Generations`): the first family is the start's
+way, the kids of `u` at step `t` are `kids u` where the level at step `t` meets `need u` and nothing
+otherwise, and the amount is the use. The kids are read off the course's own levels. -/
+def generations (need : U → Nat) (kids : U → List U) (giving : Nat → Nat) (use : U → Nat)
+    (s : List U × Nat) : SelectionTerm.Generations U where
+  first
+=== LineOnAStock.lean kids_alike
+theorem kids_alike {g g' : Nat → Nat} {use use' : U → Nat} {w : List U} {x x' n : Nat}
+    (alike : ∀ j, j < n → ∀ u, u ∈ (course need kids g use (w, x) j).1 →
+      (need u ≤ (course need kids g use (w, x) j).2 ↔ need u ≤ (course need kids g' use' (w, x') j).2))
+    {j : Nat} (lt : j < n) {u : U} (mu : u ∈ (course need kids g use (w, x) j).1) :
+    (generations need kids g use (w, x)).kids j u = (generations need kids g' use' (w, x')).kids j u
+=== LineOnAStock.lean born_alike
+theorem born_alike {g g' : Nat → Nat} {use use' : U → Nat} {w : List U} {x x' n : Nat}
+    (alike : ∀ j, j < n → ∀ u, u ∈ (course need kids g use (w, x) j).1 →
+      (need u ≤ (course need kids g use (w, x) j).2 ↔ need u ≤ (course need kids g' use' (w, x') j).2))
+    {j : Nat} (lt : j < n) :
+    SelectionTerm.born ((generations need kids g use (w, x)).family j)
+        ((generations need kids g use (w, x)).kids j) =
+      SelectionTerm.born ((generations need kids g' use' (w, x')).family j)
+        ((generations need kids g' use' (w, x')).kids j)
+=== LineOnAStock.lean way_generation
+theorem way_generation {giving : Nat → Nat} {use : U → Nat} {w : List U} {x : Nat} :
+    ∀ n, (∀ j, j < n → ∀ u, u ∈ generation kids j w →
+        need u ≤ (course need kids giving use (w, x) j).2) →
+      (course need kids giving use (w, x) n).1 = generation kids n w
+  | 0, _ => rfl
+  | n + 1, met => by
+    have ih
+=== LineOnAStock.lean line_from_line
+theorem line_from_line (closed : ∀ u v, v ∈ kids u → S v → S u) {w : List U} {x : Nat} {v : U}
+    (mv : v ∈ after need kids w x) (sv : S v) : ∃ u, u ∈ w ∧ need u ≤ x ∧ S u ∧ v ∈ kids u
+=== LineOnAStock.lean gone_from
+theorem gone_from (closed : ∀ u v, v ∈ kids u → S v → S u) {giving : Nat → Nat}
+    {s : List U × Nat} {k : Nat}
+    (gone : ∀ u, u ∈ (course need kids giving use s k).1 → ¬ S u) :
+    ∀ j, k ≤ j → ∀ u, u ∈ (course need kids giving use s j).1 → ¬ S u
+=== LineOnAStock.lean line_ends
+theorem line_ends [DecidablePred S] (nothing : RegimeMargin.FromNothing giving)
+    (keeps : RegimeMargin.Keeps giving 0 hi) (closed : ∀ u v, v ∈ kids u → S v → S u)
+    (grows : ∀ u, S u → use u < lineTake S use (kids u)) (needs : ∀ u, S u → 0 < need u)
+    (down : ∀ u v, S u → v ∈ kids u → need v ≤ need u) {w : List U} {x : Nat} (high : x ≤ hi) :
+    ∃ n, ∀ k, n ≤ k → ∀ u, u ∈ (course need kids giving use (w, x) k).1 → ¬ S u
+=== LineOnAStock.lean fall
+theorem fall [DecidablePred S] (closed : ∀ u v, v ∈ kids u → S v → S u) {m : Nat}
+    (one : ∀ u, S u → need u = m)
+    (keeps : ∀ u, S u → use u ≤ lineTake S use (kids u)) (low : giving 0 < m)
+    {w : List U} {x : Nat} (over : ∀ z, giving z < lineTake S use w) :
+    ∃ n, ∀ k, n ≤ k → ∀ u, u ∈ (course need kids giving use (w, x) k).1 → ¬ S u
+=== LineOnAStock.lean need_unmet
+theorem need_unmet {hi : Nat} (nothing : RegimeMargin.FromNothing giving)
+    (keeps : RegimeMargin.Keeps giving 0 hi)
+    (grows : ∀ u, use u < taken use (kids u)) (needs : ∀ u, 0 < need u)
+    {w : List U} {x : Nat} (high : x ≤ hi) (ne : w ≠ []) (met : ∀ u, u ∈ w → need u ≤ x) :
+    ∃ n, 0 < n ∧ n ≤ hi + 1 ∧ ∃ u, u ∈ (course need kids giving use (w, x) n).1 ∧
+      (course need kids giving use (w, x) n).2 < need u
+=== LineOnAStock.lean step_lowers
+theorem step_lowers {giving : Nat → Nat} {H y D z : Nat} (short : RegimeMargin.Short giving H y)
+    (nothing : RegimeMargin.FromNothing giving) (more : H ≤ D) (below : z < H + y) :
+    RegimeMargin.step giving D z = 0 ∨ RegimeMargin.step giving D z < z
+=== LineOnAStock.lean reaches_holds
+theorem reaches_holds {y : Nat → Nat} {hi : Nat} {w : List U} {x : Nat}
+    (down : ∀ u v, v ∈ kids u → need v ≤ need u) (needs : Needing need kids w)
+    (nothing : RegimeMargin.FromNothing giving)
+    (along : ∀ k, (∀ j, j ≤ k → Goes need (course need kids giving use (w, x) j)) →
+      Regime giving use y hi (course need kids giving use (w, x) k).1)
+    (all : ∀ k, Goes need (course need kids giving use (w, x) k)) :
+    ∃ k, Holds need use y (course need kids giving use (w, x) k)
+=== LineOnAStock.lean unending_iff_holds
+theorem unending_iff_holds {y : Nat → Nat} {hi : Nat} {w : List U} {x : Nat}
+    (even : ∀ u, taken use (kids u) = use u) (some : ∀ u, kids u ≠ [])
+    (down : ∀ u v, v ∈ kids u → need v ≤ need u) (needs : Needing need kids w)
+    (nothing : RegimeMargin.FromNothing giving) (high : x ≤ hi)
+    (along : ∀ k, (∀ j, j ≤ k → Goes need (course need kids giving use (w, x) j)) →
+      Regime giving use y hi (course need kids giving use (w, x) k).1) :
+    «不穷» (net need kids giving use) «一» (w, x) ↔
+      ∃ k, (∀ j, j < k → Goes need (course need kids giving use (w, x) j)) ∧
+        Holds need use y (course need kids giving use (w, x) k)
+=== LineOnAStock.lean taken_below
+theorem taken_below (nothing : RegimeMargin.FromNothing giving) {s : List U × Nat}
+    (needs : Needing need kids s.1) {n : Nat}
+    (goes : Goes need (course need kids giving use s (n + 1))) :
+    taken use (course need kids giving use s n).1 < (course need kids giving use s n).2
+=== LineOnAStock.lean unending_taken_below
+theorem unending_taken_below (nothing : RegimeMargin.FromNothing giving) {s : List U × Nat}
+    (needs : Needing need kids s.1) (never : «不穷» (net need kids giving use) «一» s) (n : Nat) :
+    taken use (course need kids giving use s n).1 < (course need kids giving use s n).2
+=== LineOnAStock.lean one_need_ends
+theorem one_need_ends {hi n : Nat} (one : ∀ u, need u = n) (pos : 0 < n)
+    (grows : ∀ u, use u < taken use (kids u)) (nothing : RegimeMargin.FromNothing giving)
+    (keeps : RegimeMargin.Keeps giving 0 hi) {w : List U} {x : Nat} (high : x ≤ hi) (ne : w ≠ []) :
+    ∃ m t, m ≤ 2 * hi + 1 ∧ «迭» (net need kids giving use) m (w, x) t ∧
+      (∀ v, ¬ net need kids giving use t v) ∧ t.1 = generation kids m w
+=== LineOnAStock.lean all_but_down
+theorem all_but_down :
+    RegimeMargin.FromNothing hump10 ∧ RegimeMargin.Keeps hump10 0 10 ∧
+      (∀ u, use u < taken use (kids u)) ∧ (∀ u, 0 < need u) ∧ 8 ≤ 10 ∧
+      ¬ (∀ u v, v ∈ kids u → need v ≤ need u) ∧
+      «不穷» (net need kids hump10 use) «一» ([B, A, B], 8)
+=== LineOnAStock.lean all_but_grows
+theorem all_but_grows :
+    RegimeMargin.FromNothing TurningInTime.Three.giving ∧
+      RegimeMargin.Keeps TurningInTime.Three.giving 0 12 ∧ (∀ u, 0 < need u) ∧
+      (∀ u v, v ∈ kids u → need v ≤ need u) ∧ 12 ≤ 12 ∧
+      ¬ (∀ u, use u < taken use (kids u)) ∧
+      «不穷» (net need kids TurningInTime.Three.giving use) «一» ([()], 12)
+=== LineOnAStock.lean holds_by_law
+theorem holds_by_law : «不穷» (net need kids TurningInTime.Three.giving use) «一» ([()], 12)
+=== LineOnAStock.lean unmet_by_law
+theorem unmet_by_law :
+    ∃ n, 0 < n ∧ n ≤ 13 ∧ ∃ u, u ∈ (course need kids TurningInTime.Three.giving use ([()], 12) n).1 ∧
+      (course need kids TurningInTime.Three.giving use ([()], 12) n).2 < need u
+=== LineOnAStock.lean higher_ends
+theorem higher_ends :
+    (∀ j, j ≤ 2 → (course need kids TurningInTime.Three.giving use ([A], 6) j).1 =
+      (course need kids TurningInTime.Three.giving use ([A], 7) j).1) ∧
+    «不穷» (net need kids TurningInTime.Three.giving use) «一» ([A], 6) ∧
+    ¬ «不穷» (net need kids TurningInTime.Three.giving use) «一» ([A], 7)
+=== LineOnAStock.lean gone
+theorem gone :
+    (∃ n, ∀ k, n ≤ k → ∀ u, u ∈ (course need kids TurningInTime.Three.giving use ([()], 12) k).1 →
+      ¬ True) ∧
+    course need kids TurningInTime.Three.giving use ([()], 12) 1 = ([()], 10) ∧
+    course need kids TurningInTime.Three.giving use ([()], 12) 2 = ([()], 6) ∧
+    course need kids TurningInTime.Three.giving use ([()], 12) 3 = ([()], 0) ∧
+    (∀ k, course need kids TurningInTime.Three.giving use ([()], 12) (4 + k) = ([], 0))
+=== WayOfUnits.lean unending_unit
+theorem unending_unit (giving : Nat → Nat) (s : List (Nat × Nat) × Nat) :
+    «不穷» (LineOnAStock.net need (fun u => [u]) giving use) «一» s ↔ «不穷» (net giving) «一» s
+=== WayOfUnits.lean course_unit
+theorem course_unit (giving : Nat → Nat) (s : List (Nat × Nat) × Nat) (n : Nat) :
+    LineOnAStock.course need (fun u => [u]) giving use s n = course giving s n
+=== WayOfUnits.lean holds_unit
+theorem holds_unit {y : Nat → Nat} (s : List (Nat × Nat) × Nat) :
+    LineOnAStock.Holds need use y s ↔ Holds y s
+=== WayOfUnits.lean regime_unit
+theorem regime_unit {giving y : Nat → Nat} {hi : Nat} (w : List (Nat × Nat)) :
+    LineOnAStock.Regime giving use y hi w ↔ Regime giving y hi w
+=== WayOfUnits.lean unending_taken_below
+theorem unending_taken_below {giving : Nat → Nat} {s : List (Nat × Nat) × Nat}
+    (nothing : RegimeMargin.FromNothing giving) (needs : ∀ u, u ∈ s.1 → 0 < need u)
+    (never : «不穷» (net giving) «一» s) (n : Nat) :
+    taken (course giving s n).1 < (course giving s n).2
+=== WayOfUnits.lean anyGoes_eq
+theorem anyGoes_eq (x : Nat) : ∀ w : List (Nat × Nat), anyGoes x w = LineOnAStock.anyMet need x w
+  | [] => rfl
+  | u :: w => congrArg (goes x u || ·) (anyGoes_eq x w)
+
+/-- `anyGoes` is true exactly where some unit of the way goes on at `x`: `LineOnAStock.anyMet_iff`
+through `anyGoes_eq`. -/
+theorem anyGoes_iff (x : Nat) :
+    ∀ w : List (Nat × Nat), anyGoes x w = true ↔ ∃ u, u ∈ w ∧ need u ≤ x

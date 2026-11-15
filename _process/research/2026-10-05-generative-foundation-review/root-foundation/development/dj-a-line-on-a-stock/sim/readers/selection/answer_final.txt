@@ -1,0 +1,71 @@
+def SelectsThrough (W : Web F C) (obs : F → C → Prop) (f : F) (t : Nat)
+    (select : (Nat → C → Nat) → Prop) : Prop :=
+  ∀ l l', W.AlikeThroughUpTo obs f l l' t → (select l ↔ select l')
+theorem alikeThrough_raise [DecidableEq C] {c : C} (unobserved : ¬ obs g c) (d : Nat)
+    {t : Nat} (supported : W.Supported t g) :
+    W.AlikeThrough obs g W.level (W.raise c d).level t
+theorem share_rises_through {history : α → Nat → C → Nat} {kids : α → List α}
+    {select : (Nat → C → Nat) → Prop} {ms es : List α} {a b : Nat}
+    (carriers : ∀ p, p ∈ ms → select (history p)) (others : ∀ p, p ∈ es → ¬ select (history p))
+    (rewarded : ∀ p, select (history p) → a ≤ (kids p).length)
+    (unrewarded : ∀ p, ¬ select (history p) → (kids p).length ≤ b)
+    (lt : b < a) (some : 0 < ms.length) (some' : 0 < es.length) :
+    ms.length * offspringCount es kids < offspringCount ms kids * es.length
+structure Generations (α : Type) where
+  first : List α
+  kids : Nat → α → List α
+  amount : Nat → α → Nat
+theorem mean_step (t : Nat) :
+    G.size t * G.sum (t + 1) + (G.size t * G.loweredAt t + G.discordAt t) =
+      G.size (t + 1) * G.sum t + (G.concordAt t + G.size t * G.raisedAt t)
+def Rising (ds : List C) (better : (C → Nat) → (C → Nat) → Prop) : Prop :=
+  ∀ o o', Exceeds ds o' o → better o' o
+def Sensitive (h : F) (c : C) : Prop :=
+  ∃ t, ¬ law.InsensitiveAt t h c
+theorem varied_before (G : Generations α) {v : Nat}
+    (founded : ∀ p, p ∈ G.family 0 → G.amount 0 p = v) {t : Nat}
+    (selected : G.concordAt t ≠ 0 ∨ G.discordAt t ≠ 0) :
+    ∃ s, s < t ∧ (0 < G.raisedAt s ∨ 0 < G.loweredAt s)
+theorem fixed_while {giving : Nat → Nat} {S : List (Nat × Nat)} {z : Nat} :
+    ∀ i, (∀ j, j < i → ∀ u, u ∈ S →
+        need u ≤ Law.orbit (RegimeMargin.step giving (taken S)) z j) →
+      course giving (S, z) i = (S, Law.orbit (RegimeMargin.step giving (taken S)) z i)
+(a) No statement in the package names both unequal continuing and alikeness.
+joint_scan.py (/Users/ren/theories/tmp/r7/one-model/check/round9/readers/selection/) over every declaration statement in Becoming/*.lean: none names both a count word (kids, offspringCount, offspringNumber, Generations, DescendsAt, born, concordAt, discordAt) and an alikeness word (SelectsThrough, AlikeThrough*, ScoresThrough, GivesAlike, RespondsThroughCoupling). Nearest: share_rises_through (quoted): `select` is a free predicate; Web.SelectsThrough stands only in its docstring (Selection.lean:443-445); the proof is share_rises alone. Next, counts against support or a stock, no alikeness: SelectionTerm.Flow.support_not_against (SelectionTerm.lean:389), LineageDrawdown.next_empty_of_unmet (LineageDrawdown.lean:146).
+The forms of selection stand on four carriers with no shared type.
+Couplings: a predicate on a Web's level histories (unselected_beyond_coupling Selection.lean:345; subthreshold_alike Testing.lean:779; policy_keeps_difference Runaway.lean:90). Count: Generations holds no level (Exact SelectionTerm.lean:352; shift_step SelectionShift.lean:263). Rule from share, on two preorders: RuleCapture.Raises :145, ReadsShare :150, Locked :160, CarrierCounts.share_not_lower_counts :549; offspringCount is in Capture.lean:64. Optimum: `better` is a free variable bound only by Rising (Reoptimizes Optimum.lean:2601; Web.lost_iff :2701; course_lost_iff :2722; a witness's lost_iff :3039).
+(b) With kids u = [u], A1 to A3 are one-step consequences of what is there; none is stated in A's wording.
+A1: `after` is GrammarLaws.keep (goes x) w (WayOfUnits.lean:147), so A1 is GrammarLaws.keep_congr (GrammarLaws.lean:455); "after w x = after" in WayOfUnits.lean: not found. TurningInTime.toEnd_iff (:332) already has `∀ w x x', need ≤ x → need ≤ x' → after w x = after w x'` as an exact condition. A3: fixed_while (quoted) at both starts; general: agrees_until_marked (TurningInTime.lean:427). A2 with offspring: Generations.born_eq (SelectionTerm.lean:448). mem_course_iff :279, after_eq_iff :268, ends_while_net_goes :323 are as the page says.
+A4's pair is not in the Lean.
+WayOfUnits.With.way :1016 and Against.way :1090 start at nine and differ in which unit takes more; TurningInTime.Three's first witnesses (:1960-2016) start at (true, 9) and vary the mark. Two starts differing only in level: not found there.
+(c) L's course can be given as a Generations; nothing obstructs the typing; three small lemmas are missing.
+Instance: first := w; kids t u := if need u ≤ (course giving (w, x) t).2 then kids u else []; amount _ := use. Missing: family t = (course t).1; taken w = total w use (WayOfUnits.lean:150, Prelude.lean:760, same recursion); for WayOfUnits as the case, keep p l = l.flatMap (fun u => cond (p u) [u] []) (flatMap in GrammarLaws, WayOfUnits, TurningInTime: not found). Computed (try_A.py): on every course tried the family is the way and mean_step's sides are equal.
+With amount := use the term's sign is free; With and Against are its two signs.
+Computed at step 1 (level 8, the unit needing nine ends): With [(9,4),(1,1)]: discord 3, mean use 5/2 to 1, never ends; Against [(9,1),(1,4)]: concord 3, mean 5/2 to 4, ends. For an amount that does not rise with need, discord_zero_of_below (SelectionTerm.lean:366) and not_lower_step (:549) apply as they stand.
+A1, kids u = [u]: GrammarLaws.keep_congr :455; general `after`: TurningInTime.toEnd_iff :332
+A2: Generations.born_eq, SelectionTerm.lean:448
+A3: WayOfUnits.fixed_while :336; TurningInTime.agrees_until_marked :427; on a Web, Testing.subthreshold_alike :779
+Generations on a stock, built: LineageDrawdown.ends_of_drawdown :177 (offspring numbers supplied, docstring :49-50); ReadingsSpread.Commons.overdrawn_spreads_then_ends :1222 (not read further)
+Not there: A with offspring; A4's pair; a count joined to alikeness
+I, kids u = [u]: one unit (need 1, use 6); starts 12 and 11
+12: level 12 at every step, never ends. 11: levels 11, 10, 8, 4, 0; no next at step 4. Ways equal at steps 0-4. But 11 is below the point of no return (12) from the start: under a fixed way a level at or above it never falls (WayOfUnits.lean:22-23), so "falls toward its point of no return" needs a way that changes.
+A3 on every pair of levels 0..12: world I (three starts) and G=(need m, use 1 or 2, kids [G,S]), S=(1,1,[S]), m=1..12
+No failure of A3, nor of the stronger form with A1's relation (the same needs met) in place of every need met.
+Offspring, the lower start ends: A=(need 6, use 3, kids [B,A]), B=(2,2,[C]), C=(5,1,[]); start [A]
+6: A@6, BA@6, CBA@2, C@0; no next at step 3. 9: A@9, BA@12, CBA@12 from then on; never ends. Ways equal at steps 0-2 while growing.
+Offspring, the higher start ends: A=(need 1, use 3, kids [B,B]), B=(3,1,[C,B]), C=(12,1,[A]); start [A]
+6: A@6, BB@6, CBCB@8 from then on; never ends. 7: A@7, BB@8, CBCB@12, ACBACB@12, ten units@4, sixteen@0; no next at step 5. Ways equal at steps 0-2. At 12 C's need is met and its offspring A draws three. Rechecked by hand.
+Searches: 432 worlds G=(need 1..12, use 0..3, kids [G,S], [G,S,S] or [S,G]), S=(1, use 1..3, [S]); 6,000 random three-kind worlds (seed 20261116)
+First family: no start whose way grew at two steps never ends; in the courses printed the level stays at 12 for every draw up to 6 and leaves it only at 7, which no level holds. Random worlds: 26 pairs of starts with growth at two steps while alike, one ending and one not; in 7 the lower start ends, in 19 the higher.
+The Generations is read off the course (kids t reads the level at t) and holds no level; mean_step says nothing of the stock unless a statement names left = RegimeMargin.step giving (G.sum t).
+mean_step is on the mean; the stock takes the total. For B the identity is Evolution.price (Evolution.lean:117) with offspring_eq (SelectionTerm.lean:454).
+WayOfUnits is on Nat × Nat with GrammarLaws.keep; L is on U with flatMap: test A(2) needs the bridge lemma.
+A unit with kids u = [] goes on and leaves nothing (C above): the net's end and G.size = 0 part by a step.
+As a SelectsThrough, A1 needs a Web with the units as formations, one condition and empty obs; there it is admits_through (Selection.lean:211) per unit.
+No module in Becoming/ imports WayOfUnits (grep); SelectionTerm imports only Evolution, so one module can import both.
+One search script first included a doubling world, ran to the 120 s limit and was killed; rerun without it in seconds.
+Candidates, not proved. (1) The instance: G.family t = (course t).1, G.sum t = taken (course t).1, and the next level is RegimeMargin.step giving (G.sum t) of this one.
+(2) Alike levels, one count (A1 and A2 in one induction): if at every j < n the two levels meet the same needs in the j-th way, the families are equal up to n and offspringNumber, concordAt, discordAt agree before n. With a constant level and no new kinds, two courses part at step 0 or never, so parting after alike steps needs the stock (test A(3)); with new kinds a constant level can part them later, which is D2.
+(3) With kids u = [u]: 0 < G.concordAt t ∨ 0 < G.discordAt t gives p, q in the way with need p ≤ level < need q (SelectionShift.Generations.varies_of_selection :279), hence ends_while_net_goes's conclusion there.
+(4) The sign: read more_use_on_first (WayOfUnits.lean:926) as selection against use never ending a line that did not end.
+(5) A4 without "falls toward": two starts differing only in level, ways equal while growing, then one ends and one never; keep the pair where the start with more ends.

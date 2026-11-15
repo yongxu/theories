@@ -1,0 +1,40 @@
+# Brief: a line on a stock, third pass: what it responds to, what is lost, the account (in scratch only)
+
+*AI-written (Fable, holding the design; board row DJ), 16 November 2026. For the implementer. Nothing new here is proved. This pass adds to `SCR/Becoming/LineOnAStock.lean` after the pass before it (read that pass's report, given to you below, and the file as it stands).*
+
+## The task
+
+Add the laws below to `SCR/Becoming/LineOnAStock.lean` (SCR = `/Users/ren/theories/tmp/r7/one-model/lean-scratch/`), keeping it and `SCR/Becoming/WayOfUnits.lean` building with every axiom report empty and no warning. Touch no tracked file. Land nothing. Change no statement the pass before you left, unless it is false (then give the countermodel).
+
+- Package (PKG): `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/`. No Mathlib.
+- Build, from PKG, in the background, with a log: `LEAN_TIMEOUT=3600 python3 -B scratch_build.py /Users/ren/theories/tmp/r7/one-model/lean-scratch/ Becoming.LineOnAStock Becoming.WayOfUnits > /Users/ren/theories/tmp/r7/one-model/lean-scratch/buildB-<N>.log 2>&1`. One build at a time; before each, `uptime`, and `ps` for a `lean`, `scratch_build` or `check_becoming` still alive. Never run `check_becoming.py` with any flag.
+- Not allowed: `omega`, `simp`, `funext`, `Classical`, `propext`, `native_decide`, `sorry`, any axiom. `decide` only on small closed facts.
+- Docstrings say exactly what the Lean proves. Use what the package has before writing a lemma again (`Prelude`, `Flow`'s totals, `Naturals`); name each existing law a proof rests on.
+
+## What six readers and three refuters found, which these laws are shaped by
+
+- In this model a new difference never arrives because of a difference not yet made: two levels that meet the same needs in the way give the same next way, new kinds included. What the way responds to changes only where a need is unmet, or on descent's own schedule.
+- "Meets the same needs" is finer than the way's own response where a unit leaves nothing: `d` (need 5, use 1, no kids) with `b` (need 1, use 1, leaving itself): levels 4 and 6 give the same next way and meet different needs.
+- On one stock inside a regime, a unit that draws and is lost is what the rest goes on by. A loss that makes no difference to anything else is that of a unit that takes nothing.
+- Reading the course as a `Web` with a `Flow` is a dictionary (every one-step `Flow` law's premise is, under balance, its conclusion again). What survives is the plain account: while what the way takes is within the level, level and takings and givings balance over any stretch.
+
+## What to prove, in this order (stop and report on any item that resists; never leave a broken file)
+
+1. **What makes a difference to a way, exactly.** `Alike need kids w x x' := after need kids w x = after need kids w x'` (the way's own response). (a) Levels that meet the same needs in `w` are alike (`after_alike`, restated). (b) Where every unit of `w` leaves a kid (`∀ u, u ∈ w → kids u ≠ []`), levels alike to `w` meet the same needs in `w`. Route: for `x ≤ x'` the next way at `x'` is at least as long as at `x`, and strictly longer if some unit of `w` has `x < need u ≤ x'` (each unit's block at `x'` contains its block at `x`); equal lists have equal lengths; `Nat.le_total` for the two orders. (c) The kept countermodel above as a closed theorem: alike, and not the same needs met.
+2. **What the next way responds to.** With `inherit : ∀ u v, v ∈ kids u → need v = need u` and `some : ∀ u, kids u ≠ []`: a need `n` is the need of a unit of `after need kids w x` exactly where it is the need of a unit of `w` and `n ≤ x`. (So the needs in the way, and with them which levels are alike, change at a step exactly where a need is unmet.) And with no premise: every need in the next way is the need of a kid of a unit of `w` met at `x`.
+3. **No new difference from one not yet made, along courses.** This is the pass before's alike law (`ways_alike` or its name): check that its docstring says this plainly and add nothing if it does. If it is not there, prove it: one `need` and `kids`, two givings, uses and start levels, one way; if at every `j < n` the two levels are `Alike` to the first course's way at step `j`, the two ways are equal at every `j ≤ n`.
+4. **Units that take nothing make no difference.** For `Z : U → Prop` (decidable) with `∀ u, Z u → use u = 0` and `∀ u v, Z u → v ∈ kids u → Z v`: write `strip` for the way without its `Z`-units. For every `n`: the level at step `n` of the course from `(strip w, x)` is the level at step `n` of the course from `(w, x)`, and `strip` of the two ways at step `n` are equal. A closed case on `TurningInTime.Three.giving` with `kids u = [u]`: `A` = need 1, use 3; `B` = need 9, use 2; `C` = need 7, use 0; from 9. Check by your own computation first, and state: `C` is in the way at steps 0 to 2 and at no later step shown; the levels are those of the course of `[A, B]` from 9 (9, 8, 6, 6, …); the line never ends.
+5. **What is lost does not come back.** Check that the pass before's `gone_from` (with `closed`) says: once no unit of a line is in the way, none ever is; so a line with no unit in the start way never has one. Add the second as a named corollary if it is not there. Nothing more.
+6. **The account.** For every `N`: if at every step `t < N` what the way takes is at most the level, then the level at step `N` plus the sum over `t < N` of what the way took at `t` equals the start level plus the sum over `t < N` of what was given at `t` (`giving` of what was left). Look first for the package's own statement of this (`Prelude`'s `balance_over_stretch_on`, `Amounts.falls_by_stretch`, `Stock.along` and `Stock.carried_iff` in `Becoming/Stock.lean`, `RegimeMargin.Adjusted.step_balances`) and rest on it; if none fits in about twenty lines, prove it directly and say which you looked at and why it did not fit. Corollary: on a line that never ends (positive needs, nothing given from nothing) it holds for every `N` (`unending_taken_below`).
+7. **Two built examples as cases, if they can be had (try last, and stop early).** `LineageRegimes.MultiplyingTakers` (LineageRegimes.lean near 385 to 460) has, by a reader's computation, the course of this model for one kind (need 1, use 1, kids two copies) with nothing given, from a pool of 3: sizes 1, 2, 4 and pool 3, 2, 0. `LineageDrawdown.Drain` (gated) has, by a reader's computation, the course of this model for `U = {r, d0, d1}`, need 4, uses 1, 2, 2, kids `r ↦ []`, `d0 ↦ [d1, d1]`, `d1 ↦ [d1]`, giving 3 from 1 up and 0 at 0, the level being the pool plus that step's gift. First say, from the import graph, whether `LineOnAStock` can import those modules without a cycle and what it would add to the closure. If it can: state and prove, for `MultiplyingTakers`, that its own family sizes and pool at the steps its Lean names are those of the course here, and that `way_ends` (or `need_unmet`) then gives its stop; then try `Drain` with `fall`. If either needs more than about sixty lines, or a statement of the built example would have to change, stop and report exactly what obstructs. Do not restate their numbers as a fresh worked case without the equality: that would be one more copy.
+
+## What I need back
+
+- The file's path and line count; the last build log's path and closing lines; that every axiom report is empty.
+- For each numbered item: theorem names and statements verbatim as they stand, or why it is not there.
+- Which existing laws of the package each proof rests on.
+- Anything changed from this brief and why; anything false as written, with its countermodel; every premise not needed.
+
+## Hard rules
+
+No edit outside SCR and your notes folder `/Users/ren/theories/tmp/r7/one-model/check/round9/implementer-B/`. No git command that writes; never `git prune`, `git gc`, `git clean`. No test suite, no gate, no core run. This Mac is shared and always busy: one Lean build at a time, in the background with a log; a timeout under load is rerun once alone before it is called a failure.

@@ -1,0 +1,706 @@
+{
+ "note": "AI-written. Reports of workflow wf_a381e60a-001, 16 November 2026: two repair implementers and three readers who did not write the Lean.",
+ "repair:lock": {
+  "files": [
+   "/Users/ren/theories/tmp/r7/one-model/lean-scratch/Becoming/TurningInTime.lean",
+   "/Users/ren/theories/tmp/r7/one-model/lean-scratch/buildRT-1.log",
+   "/Users/ren/theories/tmp/r7/one-model/lean-scratch/buildRT-2.log",
+   "/Users/ren/theories/tmp/r7/one-model/lean-scratch/buildRT-3.log",
+   "/Users/ren/theories/tmp/r7/one-model/check/round9/implementer-RT/TurningInTime.before-RT.lean",
+   "/Users/ren/theories/tmp/r7/one-model/check/round9/implementer-RT/tracked-vs-scratch.diff"
+  ],
+  "last_build_log": "/Users/ren/theories/tmp/r7/one-model/lean-scratch/buildRT-3.log. It is the third of three builds, each of Becoming.TurningInTime only, run one at a time from PKG in the background: LEAN_TIMEOUT=3600 python3 -B scratch_build.py /Users/ren/theories/tmp/r7/one-model/lean-scratch/ Becoming.TurningInTime. Before each build I checked uptime (load 13 to 30) and ps; no other lean, scratch_build or check_becoming run was alive. buildRT-1 compiled but was not clean, and both faults are fixed. (1) An unused binder `t` gave a warning. (2) propext showed up in four axiom reports, coming from core's Nat.sub_eq_zero_of_le; I replaced it with the Prelude's axiom-free sub_eq_zero_of_le. buildRT-2 was green. buildRT-3 was run after the docstring-only edits that followed, and is green. The built copy in .build is byte-identical to the scratch file (cmp printed nothing). I did not run check_becoming.py, any test suite or the gate, and I did not build LineOnAStock.",
+  "build_closing_lines": "\"ran\": [\"Becoming.TurningInTime\",\"BecomingTurningInTimeAxiomAudit\",\"BecomingTurningInTimeSignatures\",\"Becoming.TurningInTime.PreludeOnly\"], \"reused\": 296, \"unclean\": [], \"audits\": {\"Becoming.TurningInTime\": {\"theorems\": 78, \"declarations\": 105, \"with_axioms\": {}}}. The log has 0 lines matching \"warning\" or \"error\". The pass before had 72 theorems and 99 declarations. The 78 are the 72, plus rises_from and kept_within (now public), plus four new ones: rising_takes_all, rising_meets_level, windowAfter_every_is_share and share_corrected_on_course. In the declaration count, short_of_keeps (private) was removed and takes_at_hi (private) was added.",
+  "axioms_all_empty": "Yes. \"with_axioms\" is {} for Becoming.TurningInTime (78 theorems, 105 declarations). None of omega, simp, funext, Classical, propext, native_decide, sorry or axiom appears on an added line. decide is used only on closed small facts: `12 < 7 + 6`, and the bounded `before` and `read` at T = 1 in Three.share_read_goes_on.",
+  "existing_statements_unchanged": "Yes. The tracked PKG file equals HEAD (git diff --quiet). `diff tracked scratch` has these hunks: 74c74,81; 133c140,145; 148c160,170; 198c220,230; 233,237c265,272; 241c276,277; 274,276c310,316; 566a607,743; 1028c1205,1209; 1035c1216,1224; 1244a1434,1495; 1482a1734,1751; 1483a1753,1921; 2500a2939,3093. It removes 15 tracked lines, and every one is docstring text, never a statement. Thirteen are in the module header: one ending line each of the 'What this module adds' bullets on ending, the lock and Three; the sentence on windowAfter and the two lists of laws in 'What is given', which now name the new laws; and the three lines saying 'nothing here derives an overdraw from a lock, or that the use depends on the share or the rule', which are re-said. Two are ending lines of section 6's docstring, which were extended. Each removed line comes back changed or extended in the new text. The 'Added after the above' paragraph is gone. All the 'a' hunks are additions between declarations.",
+  "items": [
+   {
+    "item": "1. The shared fact, said once and public: rises_from (now public, rise asked only for j < n)",
+    "status": "proved, green",
+    "theorems": [
+     "theorem rises_from {use : W → Nat} {alone : W → W} {w : W} {n : Nat}\n    (rises : ∀ j, j < n → use (Law.orbit alone w j) < use (Law.orbit alone w (j + 1))) :\n    ∀ j, j ≤ n → j ≤ use (Law.orbit alone w j)"
+    ],
+    "rests_on": [
+     "Nat.succ_le_of_lt, Nat.lt_of_le_of_lt, Nat.le_of_succ_le, Nat.lt_of_succ_le (induction on j)"
+    ]
+   },
+   {
+    "item": "1. kept_within, public, statement unchanged",
+    "status": "proved, green",
+    "theorems": [
+     "theorem kept_within {giving : Nat → Nat} {hi : Nat} (keeps : RegimeMargin.Keeps giving 0 hi)\n    (d : Nat) {x : Nat} (high : x ≤ hi) : RegimeMargin.step giving d x ≤ hi"
+    ],
+    "rests_on": [
+     "RegimeMargin.Keeps (definition)",
+     "Nat.sub_le"
+    ]
+   },
+   {
+    "item": "1. rising_takes_all, new and public; statement exactly as the brief gives it",
+    "status": "proved, green",
+    "theorems": [
+     "theorem rising_takes_all {alone : W → W} {giving : Nat → Nat} {use : W → Nat} {hi : Nat}\n    (nothing : RegimeMargin.FromNothing giving) (keeps : RegimeMargin.Keeps giving 0 hi)\n    {w : W} {x : Nat} (high : x ≤ hi)\n    (rises : ∀ j, j < hi → use (Law.orbit alone w j) < use (Law.orbit alone w (j + 1))) :\n    (Law.orbit (asItWas alone (fun w x => RegimeMargin.step giving (use w) x)) (w, x) (hi + 1)).2 = 0"
+    ],
+    "rests_on": [
+     "private takes_at_hi: every level of the course as it was is at most hi by kept_within (induction), and rises_from at hi",
+     "asItWas_way",
+     "sub_eq_zero_of_le (Prelude)",
+     "Nat.zero_add"
+    ]
+   },
+   {
+    "item": "1. rising_meets_level, new and public: the first step at which the use is at least the level (the brief's '∃ j, j ≤ hi ∧ level j ≤ use j', with 'first' stated as well)",
+    "status": "proved, green",
+    "theorems": [
+     "theorem rising_meets_level {alone : W → W} {giving : Nat → Nat} {use : W → Nat} {hi : Nat}\n    (keeps : RegimeMargin.Keeps giving 0 hi) {w : W} {x : Nat} (high : x ≤ hi)\n    (rises : ∀ j, j < hi → use (Law.orbit alone w j) < use (Law.orbit alone w (j + 1))) :\n    ∃ j, j ≤ hi ∧\n      (Law.orbit (asItWas alone (fun w x => RegimeMargin.step giving (use w) x)) (w, x) j).2 ≤\n        use (Law.orbit alone w j) ∧\n      ∀ i, i < j → use (Law.orbit alone w i) <\n        (Law.orbit (asItWas alone (fun w x => RegimeMargin.step giving (use w) x)) (w, x) i).2"
+    ],
+    "rests_on": [
+     "first_of_decided",
+     "private takes_at_hi",
+     "Nat.lt_or_ge"
+    ]
+   },
+   {
+    "item": "2. ends_with_net_rising with the bound that is reached (hi + 1); rise asked only for j < hi; short_of_keeps and the regime_levels / Optimum.ends_within route deleted from it",
+    "status": "proved, green",
+    "theorems": [
+     "theorem ends_with_net_rising {marked : Nat → Prop} {alone : W → W} {after : W → Nat → W}\n    (outside : AloneOutside marked alone after) {need : Nat} (needs : 0 < need)\n    (un : ∀ x, need ≤ x → ¬ marked x) {giving : Nat → Nat} {use : W → Nat} {hi : Nat}\n    (nothing : RegimeMargin.FromNothing giving) (keeps : RegimeMargin.Keeps giving 0 hi)\n    {w : W} {x : Nat} (high : x ≤ hi)\n    (rises : ∀ j, j < hi → use (Law.orbit alone w j) < use (Law.orbit alone w (j + 1))) :\n    ∃ n t, n ≤ hi + 1 ∧\n      «迭» (net need after (fun w x => RegimeMargin.step giving (use w) x)) n (w, x) t ∧\n      (∀ v, ¬ net need after (fun w x => RegimeMargin.step giving (use w) x) t v) ∧\n      t.1 = Law.orbit alone w n"
+    ],
+    "rests_on": [
+     "rising_takes_all",
+     "private ends_of_below at N := hi + 1 (first_of_decided, agrees_until_marked, asItWas_way, Law.stepWhile_steps_iff, Law.stepWhile_none_iff)"
+    ]
+   },
+   {
+    "item": "2. locked_ends_rising with n ≤ hi + 1; more stays state-wise",
+    "status": "proved, green",
+    "theorems": [
+     "theorem locked_ends_rising {P : Ideals.Preorder A} {M : Ideals.Preorder R}\n    {favours : R → Prop} {fA : A → R → A} {hA : A → R → R} {reads : Nat → Bool}\n    (raises : Raises P favours fA) (monotone : ReadsShare P M hA)\n    (upper : ∀ {g g'}, M.le g g' → favours g → favours g') {marked : Nat → Prop}\n    {after : A × R × Nat → Nat → A × R × Nat}\n    (outside : AloneOutside marked (windowAlone fA hA reads) after) {need : Nat} (needs : 0 < need)\n    (un : ∀ x, need ≤ x → ¬ marked x) {giving : Nat → Nat} {use : A × R × Nat → Nat} {hi : Nat}\n    (nothing : RegimeMargin.FromNothing giving) (keeps : RegimeMargin.Keeps giving 0 hi)\n    {w : A × R × Nat} {x : Nat} (high : x ≤ hi) (locked : Locked M favours hA (w.1, w.2.1))\n    (more : ∀ v : A × R × Nat, P.le w.1 v.1 → M.le w.2.1 v.2.1 →\n      use v < use (windowAlone fA hA reads v)) :\n    ∃ n t, n ≤ hi + 1 ∧\n      «迭» (net need after (fun w x => RegimeMargin.step giving (use w) x)) n (w, x) t ∧\n      (∀ v, ¬ net need after (fun w x => RegimeMargin.step giving (use w) x) t v) ∧\n      t.1 = Law.orbit (windowAlone fA hA reads) w n ∧ Locked M favours hA (t.1.1, t.1.2.1)"
+    ],
+    "rests_on": [
+     "ends_with_net_rising",
+     "locked_alone_not_below",
+     "locked_alone"
+    ]
+   },
+   {
+    "item": "3. count_rises asks only what it uses: fav : favours w.2.1 in place of locked",
+    "status": "proved, green",
+    "theorems": [
+     "theorem count_rises {P : Ideals.Preorder Nat} {M : Ideals.Preorder R} {favours : R → Prop}\n    {fA : Nat → R → Nat} {hA : Nat → R → R} {reads : Nat → Bool}\n    (upper : ∀ {g g'}, M.le g g' → favours g → favours g')\n    (rise : ∀ a g, favours g → a < fA a g) {use : Nat × R × Nat → Nat} {u : Nat} (pos : 0 < u)\n    (count : ∀ v, use v = v.1 * u) {w : Nat × R × Nat} (fav : favours w.2.1) :\n    ∀ v : Nat × R × Nat, P.le w.1 v.1 → M.le w.2.1 v.2.1 →\n      use v < use (windowAlone fA hA reads v)"
+    ],
+    "rests_on": [
+     "Nat.mul_lt_mul_of_pos_right",
+     "upper with fav"
+    ]
+   },
+   {
+    "item": "4. The correction on the share, composed: share_corrected_on_course, which joins the T of the course as it was to the pair's course",
+    "status": "proved, green",
+    "theorems": [
+     "theorem share_corrected_on_course {Low : A → Prop} {kept : R → Prop} (fA : A → R → A)\n    (hA : A → R → R) (sA : A × Nat → R → A) (hL : A × Nat → R → R) (N K : Nat)\n    (sets : ∀ (p : A × Nat) (g : R), N ≤ p.2 → p.2 < K → Low (sA p g) ∧ kept (hL p g))\n    (lowRule : ∀ a g, Low a → kept (hA a g)) (lowStays : ∀ a g, Low a → kept g → Low (fA a g))\n    (left : A × R × Nat → Nat → Nat) (s : (A × R × Nat) × Nat) {T : Nat}\n    (before : ∀ j, j < T →\n      ¬ (N ≤ (Law.orbit (asItWas (windowAlone fA hA (fun _ => true)) left) s j).2 ∧\n        (Law.orbit (asItWas (windowAlone fA hA (fun _ => true)) left) s j).2 < K))\n    (read : N ≤ (Law.orbit (asItWas (windowAlone fA hA (fun _ => true)) left) s T).2 ∧\n      (Law.orbit (asItWas (windowAlone fA hA (fun _ => true)) left) s T).2 < K) :\n    ∀ k, Low (Law.orbit (pair (windowAfterShare fA hA sA hL N K) left) s (T + 1 + k)).1.1 ∧\n      kept (Law.orbit (pair (windowAfterShare fA hA sA hL N K) left) s (T + 1 + k)).1.2.1"
+    ],
+    "rests_on": [
+     "agrees_until_marked",
+     "window_share_alone_outside",
+     "share_corrected_stays"
+    ]
+   },
+   {
+    "item": "4. windowAfter reading at every step is windowAfterShare at sA p g := fA p.1 g (pointwise)",
+    "status": "proved, green",
+    "theorems": [
+     "theorem windowAfter_every_is_share (fA : A → R → A) (hA : A → R → R) (hL : A × Nat → R → R)\n    (N K : Nat) (w : A × R × Nat) (x : Nat) :\n    windowAfter fA hA hL N K (fun _ => true) w x =\n      windowAfterShare fA hA (fun p g => fA p.1 g) hL N K w x"
+    ],
+    "rests_on": [
+     "if_pos, if_neg on windowRead's condition and windowAfterShare's"
+    ]
+   },
+   {
+    "item": "5 and 2. Three.rise_count_ends: the law's bound is now n ≤ 12 + 1, and three conjuncts state where the old kind of overdraw begins (step 4, H = 7, y = 6). I recomputed the course myself first: levels 12,12,12,12,12,10,4,0 with shares 3 to 10; Short giving 7 6 holds; 12 < 13. The fifth conjunct of Three.share_read_goes_on now goes through share_corrected_on_course at the same T = 1 as the iff; its statement is unchanged.",
+    "status": "proved, green",
+    "theorems": [
+     "theorem rise_count_ends :\n    (∃ n t, n ≤ 12 + 1 ∧\n      «迭» (net 1 riseAfter (fun w x => RegimeMargin.step giving (drawerUse w) x)) n\n        ((3, true, 0), 12) t ∧\n      (∀ v, ¬ net 1 riseAfter (fun w x => RegimeMargin.step giving (drawerUse w) x) t v) ∧\n      t.1 = Law.orbit (windowAlone riseShare lockRead (fun _ => true)) (3, true, 0) n ∧\n      RuleCapture.Locked ruleOrder (fun g => g = true) lockRead (t.1.1, t.1.2.1)) ∧\n    Law.orbit (pair riseAfter (fun w x => RegimeMargin.step giving (drawerUse w) x))\n        ((3, true, 0), 12) 1 = ((4, true, 1), 12) ∧\n    Law.orbit (pair riseAfter (fun w x => RegimeMargin.step giving (drawerUse w) x))\n        ((3, true, 0), 12) 2 = ((5, true, 2), 12) ∧\n    Law.orbit (pair riseAfter (fun w x => RegimeMargin.step giving (drawerUse w) x))\n        ((3, true, 0), 12) 3 = ((6, true, 3), 12) ∧\n    Law.orbit (pair riseAfter (fun w x => RegimeMargin.step giving (drawerUse w) x))\n        ((3, true, 0), 12) 4 = ((7, true, 4), 12) ∧\n    Law.orbit (pair riseAfter (fun w x => RegimeMargin.step giving (drawerUse w) x))\n        ((3, true, 0), 12) 5 = ((8, true, 5), 10) ∧\n    Law.orbit (pair riseAfter (fun w x => RegimeMargin.step giving (drawerUse w) x))\n        ((3, true, 0), 12) 6 = ((9, true, 6), 4) ∧\n    «迭» (net 1 riseAfter (fun w x => RegimeMargin.step giving (drawerUse w) x)) 7\n      ((3, true, 0), 12) ((10, true, 7), 0) ∧\n    (∀ v, ¬ net 1 riseAfter (fun w x => RegimeMargin.step giving (drawerUse w) x)\n      ((10, true, 7), 0) v) ∧\n    RegimeMargin.step giving (drawerUse (3, true, 0)) 12 = 12 ∧\n    (∀ H y, H ≤ drawerUse (3, true, 0) → RegimeMargin.Short giving H y → ¬ 12 < H + y) ∧\n    RegimeMargin.Short giving 7 6 ∧ 7 ≤ drawerUse (7, true, 4) ∧ 12 < 7 + 6 ∧\n    RuleCapture.Locked ruleOrder (fun g => g = true) lockRead (10, true)"
+    ],
+    "rests_on": [
+     "locked_ends_rising",
+     "count_rises (u = 1, fav := rfl)",
+     "RegimeMargin.keeps_of_below",
+     "RegimeMargin.short_of_below",
+     "Naturals.lt_of_add_lt_add_left",
+     "Law.stepWhile_steps_iff, Law.stepWhile_none_iff"
+    ]
+   },
+   {
+    "item": "6. Docstrings and the header, each read against its statement",
+    "status": "done, green",
+    "theorems": [],
+    "rests_on": [
+     "Every docstring now reads as the brief asked. (1) ends_with_net_rising is titled 'A use that rises against a level that cannot pass `hi` ends the line within `hi + 1` steps.'; it says it concludes the ending and no step past a point of no return, and that a cap (keeps, high) and the rise (rises) are given in place of uses, short and below. (2) locked_ends_rising says that `more` can be met by a use that reads only the step count while the share never moves, that the rise with the share is count_rises's case, and what the lock's premises are used for. (3) count_rises says that P.le, hA and reads are not used. (4) Three.rise_count_ends says that Raises and ReadsShare keep the rule favouring, and that the strict rise is count_rises's `rise`. It gives the one-line inference from the start conjunct, marked as argued, and says from which step the old law applies: three Lean conjuncts, plus the draws and Locked parts argued in the docstring. (5) share_corrected_stays says only what it states. (6) locked_turns_in_time_share_iff says it is turns_in_time_iff at the kind Low ∧ kept, that the correction reaches the share because sets is given, that the overdraw is still given (draws, below), and that only the 'if' side has a worked case. (7) The 'What stays given' lists are removed where they were incomplete. The one in locked_turns_in_time_share_iff is now complete: all 18 premises are named. (8) Header: the place the brief names is re-said once. In locked_ends_with_net_regime, locked_ends_on_window and locked_turns_in_time_share_iff, below and draws are given. In locked_ends_rising neither is; keeps, high and more are given instead, and it concludes an ending. No law concludes that the use depends on the share or the rule (count_rises asks it as `count`). 'Added after the above' is removed. The new laws are added to 'What this module adds' (the ending, lock and Three bullets), to section 6's docstring, and to the two lists of laws in 'What is given'. The sentence 'a share that falls under the rule the window reads … is not tried' is kept."
+    ]
+   }
+  ],
+  "changed_from_brief": [
+   "rising_meets_level states the step at which the use first meets the level: ∃ j ≤ hi, level j ≤ use j, with use i < level i for every i < j. The brief's suggested form was only ∃ j ≤ hi ∧ level j ≤ use j, which j = hi satisfies trivially. It does not take `nothing`, which it does not need.",
+   "A private helper takes_at_hi (the level at step hi is at most the use there) is shared by rising_takes_all and rising_meets_level, so the bound on the levels is proved once.",
+   "share_corrected_on_course asks only what it uses. It needs sets, lowRule, lowStays and two parts of locked_turns_in_time_share_iff's right side, `before` (the second half of the first conjunct) and `read` (the third conjunct). It holds for any level step `left` and any start s, rather than taking all of the iff's premises. Name chosen: share_corrected_on_course.",
+   "windowAfter_every_is_share is stated pointwise (for each w and x), because funext is not allowed. That the two nets or courses coincide is not stated, and its docstring says so.",
+   "Three.share_read_goes_on's fifth conjunct is now proved by share_corrected_on_course instead of share_corrected_stays. Its statement is unchanged. This puts the join to use in the worked case.",
+   "Item 5: only the three conjuncts the brief named are added. That draws and Locked (7, true) hold at step 4, and so that locked_ends_with_net_regime applies from there, is argued in the docstring and is not a Lean instance.",
+   "The header's two lists of laws whose level step is RegimeMargin.step, and of laws that need Meets, Keeps, within and high, now include the new laws that meet them.",
+   "regime_levels is kept: it is tracked and used by five other laws. ends_with_net_rising no longer uses it, and no longer uses Optimum.ends_within."
+  ],
+  "false_as_written": [],
+  "premises_not_needed": [
+   "count_rises: the share-order hypothesis P.le w.1 v.1 is not used. It is kept so that the conclusion has `more`'s form. hA and reads appear only in the conclusion. The docstring says both.",
+   "rising_meets_level: `nothing` is not asked, since it is not needed.",
+   "share_corrected_on_course: none of locked_turns_in_time_share_iff's lock, regime, need, draws, below or high premises is needed, so none is asked.",
+   "Every premise of rises_from, kept_within, rising_takes_all, ends_with_net_rising, locked_ends_rising and windowAfter_every_is_share is used. The build has no unused-variable warning."
+  ],
+  "not_done": [
+   "LineOnAStock was not built or touched, as the brief says. It calls ends_with_net_rising with an every-j `rises`, and its bound comes from the old 2 * hi + 1, so it will not compile until the next pass repairs it. Its own keeps_any duplicates kept_within, which is now public.",
+   "No Lean statement says that locked_ends_with_net_regime applies from step 4 of Three.rise_count_ends. Only Short giving 7 6, 7 ≤ drawerUse (7, true, 4) and 12 < 7 + 6 are stated.",
+   "That the nets of windowAfter (reading at every step) and windowAfterShare with sA := fA p.1 coincide is not stated. Only the pointwise step equality is.",
+   "No full suite, gate or check_becoming run, by the brief's rules. The evidence is selected: three scratch builds of Becoming.TurningInTime with its axiom audit and signatures step. Nothing was landed, no git write was made, no tracked file was touched. The notes folder holds the pre-pass copy and the diff."
+  ]
+ },
+ "repair:line": {
+  "files": [
+   "/Users/ren/theories/tmp/r7/one-model/lean-scratch/Becoming/LineOnAStock.lean (2,031 lines; 2,057 before)",
+   "/Users/ren/theories/tmp/r7/one-model/lean-scratch/Becoming/WayOfUnits.lean (1,121 lines; tracked 1,182, pass before 1,257)",
+   "/Users/ren/theories/tmp/r7/one-model/lean-scratch/Becoming/LineOnAStockCases.lean (257 lines; new)",
+   "/Users/ren/theories/tmp/r7/one-model/lean-scratch/Becoming/TurningInTime.lean (not edited; cmp-identical to the pre-pass copy)",
+   "/Users/ren/theories/tmp/r7/one-model/check/round9/implementer-RL/before/ (copies of the three files before the first edit)",
+   "/Users/ren/theories/tmp/r7/one-model/check/round9/implementer-RL/LineOnAStock.diff and WayOfUnits.diff",
+   "/Users/ren/theories/tmp/r7/one-model/check/round9/implementer-RL/scripts/ (closure.py, named.py, uses.py, sizes.py, headers.py; read-only)"
+  ],
+  "last_build_log": "/Users/ren/theories/tmp/r7/one-model/lean-scratch/buildRL-8.log",
+  "build_closing_lines": "No error or warning line. \"modules\": 163, \"unclean\": []. Audits: Becoming.TurningInTime 78 theorems with_axioms {}; Becoming.LineOnAStock 111 theorems with_axioms {}; Becoming.WayOfUnits 68 theorems / 88 declarations with_axioms {}; Becoming.LineOnAStockCases 10 theorems / 16 declarations with_axioms {}. Seconds: LineOnAStock 5.1, WayOfUnits 1.1, LineOnAStockCases 0.9, plus the PreludeOnly and signature steps. Earlier builds that were red are in buildRL-1 to -7. buildRL-1 was red because of LineOnAStock's old one_need_ends, as the pass before said it would be. Builds 4 and 5 were green but showed propext in DrainCase.nil_of_length, which came from the prelude's Nat.succ_ne_zero; I replaced it with Nat.noConfusion. Nothing failed from a timeout.",
+  "axioms_all_empty": "Yes. All four audits in buildRL-8.log have with_axioms {}. No omega, simp, funext, Classical, propext, native_decide, sorry or axiom was used. decide is used only on closed facts.",
+  "existing_statements_unchanged": "I compared WayOfUnits headers up to `:=` against the tracked file with a script: scripts/headers.py, copied from the reader's script. Result: 85 tracked declarations, 'headers changed: []'. No definition of a remaining tracked declaration changed. Two bodies changed, and their statements did not: fixed_while is now derived from LineOnAStock.course_generation, and the goesDecidable instance is now LineOnAStock.goesDecidable need s.\n\nI removed 13 WayOfUnits declarations that the tracked file has: goes_false_of_lt, mem_of_ne_nil, goes_of_holds, length_keep_le, length_keep_lt, met_or_unmet, after_eq_iff, mem_course_iff, anyGoes, anyGoes_iff, falls, course_within, reaches_holds. I also removed anyGoes_eq and goes_unit, which the pass before had added. Evidence for each: scripts/named.py greps shared-laws.json, records/*.json, atlas/entries/*.json, six/mapping.json and every file under chapters/ for `WayOfUnits.<name>` and for the bare backticked name. Every removed name shows QUALIFIED:0 ANY:0. scripts/uses.py shows that no remaining proof in the four scratch modules uses any of them.\n\nThe theorems that are now cases of the general module: unending_iff_holds, fixed_while (new), unending_taken_below, course_fixed, step_falls, and goesDecidable (new). The bridge is after_unit, taken_unit, step_unit, course_unit, net_unit (new), unending_unit, holds_unit and regime_unit.\n\nBecoming.lean is tracked and I did not touch it. Its description of WayOfUnits' imports ('only through its one import, Becoming.TurningInTime') is already stale against the scratch copy.",
+  "items": [
+   {
+    "item": "1. The two built examples moved to the new module LineOnAStockCases (imports Becoming.LineOnAStock and Becoming.LineageDrawdown); LineOnAStock imports TurningInTime, SelectionTerm, ReadingsPersist. Closures (modules, self included, by scripts/closure.py): LineOnAStock 157 -> 148, WayOfUnits 158 -> 149, LineOnAStockCases 159 (the readers' self-excluded counts: 156 -> 147, 157 -> 148). They shrink by nine, not ten: ten for LineageDrawdown, plus one for ReadingsPersist (item 4). Titles say 'has the sizes ... of'.",
+    "status": "proved, green",
+    "theorems": [
+     "theorem agree (t : Nat) :\n    (LineageRegimes.MultiplyingTakers.generations.family t).length =\n        (course Doubling.need Doubling.kids nothingGiven Doubling.use ([()], 3) t).1.length ∧\n      LineageRegimes.MultiplyingTakers.web.level t 0 =\n        (course Doubling.need Doubling.kids nothingGiven Doubling.use ([()], 3) t).2 ∧\n      ((∃ p, p ∈ LineageRegimes.MultiplyingTakers.generations.family t ∧\n          LineageRegimes.MultiplyingTakers.web.active t p) ↔\n        Goes Doubling.need (course Doubling.need Doubling.kids nothingGiven Doubling.use ([()], 3) t))",
+     "theorem multiplying_takers :\n    (∀ t, (LineageRegimes.MultiplyingTakers.generations.family t).length =\n        (course Doubling.need Doubling.kids nothingGiven Doubling.use ([()], 3) t).1.length ∧\n      LineageRegimes.MultiplyingTakers.web.level t 0 =\n        (course Doubling.need Doubling.kids nothingGiven Doubling.use ([()], 3) t).2 ∧\n      ((∃ p, p ∈ LineageRegimes.MultiplyingTakers.generations.family t ∧\n          LineageRegimes.MultiplyingTakers.web.active t p) ↔\n        Goes Doubling.need (course Doubling.need Doubling.kids nothingGiven Doubling.use ([()], 3) t))) ∧\n    (∃ t, ¬ ∃ p, p ∈ LineageRegimes.MultiplyingTakers.generations.family t ∧\n      LineageRegimes.MultiplyingTakers.web.active t p) ∧\n    ¬ «不穷» (net Doubling.need Doubling.kids nothingGiven Doubling.use) «一» ([()], 3)",
+     "theorem gift_eq (φ : LineageDrawdown.Drain.Phase) (k : Nat → List Nat) :\n    LineageDrawdown.Drain.giveOf true φ k 1 0 = gift (LineageDrawdown.Drain.levelOf φ 0)",
+     "theorem need_agrees : ∀ p, 4 ≤ p + gift p ↔ 1 ≤ p",
+     "theorem drain :\n    (∀ t, ((LineageDrawdown.Drain.generations (LineageDrawdown.Drain.courseP true)).family t).length =\n        (course need kids gift use ([r, d0], 11) t).1.length ∧\n      (LineageDrawdown.Drain.web true (LineageDrawdown.Drain.courseP true)).level t 0 +\n          gift ((LineageDrawdown.Drain.web true (LineageDrawdown.Drain.courseP true)).level t 0) =\n        (course need kids gift use ([r, d0], 11) t).2 ∧\n      (LineageDrawdown.Drain.generations (LineageDrawdown.Drain.courseP true)).sum t =\n        taken use (course need kids gift use ([r, d0], 11) t).1) ∧\n    (∀ t, (LineageDrawdown.Drain.flow true (LineageDrawdown.Drain.courseP true)).give t 1 0 =\n      gift ((LineageDrawdown.Drain.web true (LineageDrawdown.Drain.courseP true)).level t 0)) ∧\n    (∀ p, 4 ≤ p + gift p ↔ 1 ≤ p) ∧\n    ∃ n, ∀ k, n ≤ k → (LineageDrawdown.Drain.generations (LineageDrawdown.Drain.courseP true)).family k = []"
+    ],
+    "rests_on": [
+     "way_ends (multiplying_takers' second conjunct, through agree at the step way_ends gives)",
+     "LineageRegimes.MultiplyingTakers.inactive (agree at step 2)",
+     "fall at the line of the drawers, never_in at S := isD u = false (every unit from step 1 is a drawer), Law.orbit_add, le_dest, LineageDrawdown.Drain.familyP_eq, Nat.noConfusion (drain's ending)",
+     "decide_eq_true (gift_eq)"
+    ]
+   },
+   {
+    "item": "2. One arithmetic, said once: keeps_any deleted (ends_low and ends_high use TurningInTime.kept_within); grows_while, LineOnAStock.course_within and present_while deleted. need_unmet is the law where alikeness and the stock meet; one_need_ends is need_unmet plus a case split, bound hi + 1, ne dropped.",
+    "status": "proved, green",
+    "theorems": [
+     "theorem kids_of_grows (grows : ∀ u, use u < taken use (kids u)) : ∀ u, kids u ≠ []",
+     "theorem course_asItWas {s : List U × Nat} :\n    ∀ n, (∀ j, j < n → ∀ u, u ∈ (course need kids giving use s j).1 →\n        need u ≤ (course need kids giving use s j).2) →\n      course need kids giving use s n = Law.orbit (TurningInTime.asItWas (allKids kids)\n        (fun w x => RegimeMargin.step giving (taken use w) x)) s n",
+     "theorem way_while_met {w : List U} {x n : Nat}\n    (met : ∀ j, j < n → ∀ u, u ∈ (course need kids giving use (w, x) j).1 →\n      need u ≤ (course need kids giving use (w, x) j).2) :\n    (course need kids giving use (w, x) n).1 = generation kids n w",
+     "theorem generations_rise (grows : ∀ u, use u < taken use (kids u)) {w : List U} (ne : w ≠ []) :\n    ∀ j, taken use (Law.orbit (allKids kids) w j) < taken use (Law.orbit (allKids kids) w (j + 1))",
+     "theorem need_unmet {hi : Nat} (nothing : RegimeMargin.FromNothing giving)\n    (keeps : RegimeMargin.Keeps giving 0 hi) (grows : ∀ u, use u < taken use (kids u))\n    {w : List U} {x : Nat} (needs : Needing need kids w) (high : x ≤ hi) (ne : w ≠ [])\n    (met : ∀ u, u ∈ w → need u ≤ x) :\n    ∃ n, 0 < n ∧ n ≤ hi + 1 ∧\n      (∀ j, j < n → ∀ u, u ∈ (course need kids giving use (w, x) j).1 →\n        need u ≤ (course need kids giving use (w, x) j).2) ∧\n      (∀ j, j ≤ n → (course need kids giving use (w, x) j).1 = generation kids j w) ∧\n      ∃ u, u ∈ (course need kids giving use (w, x) n).1 ∧ (course need kids giving use (w, x) n).2 < need u",
+     "theorem one_need_ends {hi n : Nat} (one : ∀ u, need u = n) (pos : 0 < n)\n    (grows : ∀ u, use u < taken use (kids u)) (nothing : RegimeMargin.FromNothing giving)\n    (keeps : RegimeMargin.Keeps giving 0 hi) {w : List U} {x : Nat} (high : x ≤ hi) :\n    ∃ m t, m ≤ hi + 1 ∧ «迭» (net need kids giving use) m (w, x) t ∧\n      (∀ v, ¬ net need kids giving use t v) ∧ t.1 = generation kids m w",
+     "theorem unmet_by_law :\n    ∃ n, 0 < n ∧ n ≤ 13 ∧\n      (∀ j, j < n → ∀ u, u ∈ (course need kids TurningInTime.Three.giving use ([()], 12) j).1 →\n        need u ≤ (course need kids TurningInTime.Three.giving use ([()], 12) j).2) ∧\n      (∀ j, j ≤ n → (course need kids TurningInTime.Three.giving use ([()], 12) j).1 =\n        generation kids j [()]) ∧\n      ∃ u, u ∈ (course need kids TurningInTime.Three.giving use ([()], 12) n).1 ∧\n        (course need kids TurningInTime.Three.giving use ([()], 12) n).2 < need u"
+    ],
+    "rests_on": [
+     "TurningInTime.rising_takes_all (the bound of need_unmet)",
+     "TurningInTime.asItWas_way, after_of_met, generation_orbit (course_asItWas, way_while_met)",
+     "allKids_rises, generation_mem, length_pos_of_mem (generations_rise)",
+     "first_of_decided, met_or_unmet (need_unmet)",
+     "need_unmet, generation_mem, Law.stepWhile_steps_iff, Law.stepWhile_none_iff, the Goes instance (one_need_ends; its docstring says that it and TurningInTime.locked_ends_rising both rest on rising_takes_all)",
+     "TurningInTime.kept_within (ends_low, ends_high)"
+    ]
+   },
+   {
+    "item": "3. Alike: ways_of_alike deleted and ways_alike proved directly from after_alike; kids_alike deleted; born_alike kept, told as ways_alike at j + 1 read through SelectionTerm.Generations.born_eq; alike_iff unchanged and usable (Alike kept).",
+    "status": "proved, green",
+    "theorems": [
+     "theorem ways_alike {g g' : Nat → Nat} {use use' : U → Nat} {w : List U} {x x' n : Nat}\n    (alike : ∀ j, j < n → ∀ u, u ∈ (course need kids g use (w, x) j).1 →\n      (need u ≤ (course need kids g use (w, x) j).2 ↔ need u ≤ (course need kids g' use' (w, x') j).2)) :\n    ∀ j, j ≤ n → (course need kids g use (w, x) j).1 = (course need kids g' use' (w, x') j).1",
+     "theorem born_alike {g g' : Nat → Nat} {use use' : U → Nat} {w : List U} {x x' n : Nat}\n    (alike : ∀ j, j < n → ∀ u, u ∈ (course need kids g use (w, x) j).1 →\n      (need u ≤ (course need kids g use (w, x) j).2 ↔ need u ≤ (course need kids g' use' (w, x') j).2))\n    {j : Nat} (lt : j < n) :\n    SelectionTerm.born ((generations need kids g use (w, x)).family j)\n        ((generations need kids g use (w, x)).kids j) =\n      SelectionTerm.born ((generations need kids g' use' (w, x')).family j)\n        ((generations need kids g' use' (w, x')).kids j)"
+    ],
+    "rests_on": [
+     "after_alike (ways_alike)",
+     "born_eq_length = SelectionTerm.Generations.born_eq with family_eq (born_alike)"
+    ]
+   },
+   {
+    "item": "4. Facts that exist. never_in and gone_from now rest on SelectionTerm.Generations.kept_of_descent; importing ReadingsPersist adds one module to the closure. taken_allKids rests on SelectionTerm.Generations.total_flatMap. sum_eq, lineCount_true and present_while are removed. WayOfUnits.course_within is removed and LineOnAStock.within_along kept. step_overdrawn is not changed. after_append is kept, with its docstring.",
+    "status": "proved, green (step_overdrawn left as it was)",
+    "theorems": [
+     "theorem never_in (closed : ∀ u v, v ∈ kids u → S v → S u) {giving : Nat → Nat}\n    {s : List U × Nat} (none : ∀ u, u ∈ s.1 → ¬ S u) :\n    ∀ j u, u ∈ (course need kids giving use s j).1 → ¬ S u",
+     "theorem gone_from (closed : ∀ u v, v ∈ kids u → S v → S u) {giving : Nat → Nat}\n    {s : List U × Nat} {k : Nat}\n    (gone : ∀ u, u ∈ (course need kids giving use s k).1 → ¬ S u) :\n    ∀ j, k ≤ j → ∀ u, u ∈ (course need kids giving use s j).1 → ¬ S u",
+     "theorem taken_allKids (even : ∀ u, taken use (kids u) = use u) (w : List U) :\n    taken use (allKids kids w) = taken use w"
+    ],
+    "rests_on": [
+     "SelectionTerm.Generations.kept_of_descent (ReadingsPersist) through family_eq and mem_cond (never_in)",
+     "never_in at the course from step k, Law.orbit_add, le_dest (gone_from)",
+     "SelectionTerm.Generations.total_flatMap, allKids_flatMap, total_congr (taken_allKids)",
+     "Line counts, docstring included, before -> now: gone_from 13 -> 11, never_in 6 -> 8 (19 -> 19 together); taken_allKids 7 -> 6; WayOfUnits.course_within 12 -> removed. step_overdrawn stays at 12: going through RegimeMargin.step_falls_by needs AtMost giving (T - 1), 0 < T from short 0, and 0 < H - (T - 1), which makes it longer, so I left it."
+    ]
+   },
+   {
+    "item": "5. takes_nothing is told for what it concludes, and the kept countermodel is in Lean. My try to derive WayOfUnits.takes_nothing_iff_alone or carrier_level_zero from takes_nothing did not make either shorter. The strip of the first unit fails when (n, H₂) = (m, 0), and the ending still needs n ≤ m. Both docstrings now say the WayOfUnits law is the exact form for two units where the first needs no less than the second.",
+    "status": "proved, green; the try to derive takes_nothing_iff_alone was not taken",
+    "theorems": [
+     "theorem takes_nothing (zero : ∀ u, Z u → use u = 0) (inZ : ∀ u v, Z u → v ∈ kids u → Z v)\n    (w : List U) (x : Nat) (n : Nat) :\n    (course need kids giving use (strip Z w, x) n).2 = (course need kids giving use (w, x) n).2 ∧\n      strip Z (course need kids giving use (strip Z w, x) n).1 =\n        strip Z (course need kids giving use (w, x) n).1",
+     "theorem ending_differs :\n    (∀ n, (course need kids nothingGiven use ([A], 5) n).2 =\n        (course need kids nothingGiven use ([A, C], 5) n).2 ∧\n      strip (fun u => isC u = true) (course need kids nothingGiven use ([A], 5) n).1 =\n        strip (fun u => isC u = true) (course need kids nothingGiven use ([A, C], 5) n).1) ∧\n    «不穷» (net need kids nothingGiven use) «一» ([A, C], 5) ∧\n    «迭» (net need kids nothingGiven use) 1 ([A], 5) ([A], 4) ∧\n    (∀ v, ¬ net need kids nothingGiven use ([A], 4) v)"
+    ],
+    "rests_on": [
+     "takes_nothing, unending_of_fixed, Law.stepWhile_steps_iff, Law.stepWhile_none_iff (ending_differs, in namespace LineOnAStock.NothingTakenEnds; nothingGiven is now a top-level def in LineOnAStock)",
+     "I checked first by hand: ([A, C], 5) -> ([A, C], 4) -> ([C], 3), and the step leaves ([C], 3) as it is; ([A], 5) -> ([A], 4), where no need is met."
+    ]
+   },
+   {
+    "item": "6. WayOfUnits gets smaller: 1,257 -> 1,121 lines (tracked 1,182). Removed: the 13 tracked and 2 untracked declarations listed under existing_statements_unchanged. net_unit added, so 'the net is this module's' is now a statement. fixed_while and goesDecidable are derived from LineOnAStock, so the LineOnAStock docstrings that call them its cases are now true. The module bullet says in one place what rests on LineOnAStock and what does not.",
+    "status": "proved, green",
+    "theorems": [
+     "theorem net_unit (giving : Nat → Nat) (s t : List (Nat × Nat) × Nat) :\n    LineOnAStock.net need (fun u => [u]) giving use s t ↔ net giving s t",
+     "theorem fixed_while {giving : Nat → Nat} {S : List (Nat × Nat)} {z : Nat} :\n    ∀ i, (∀ j, j < i → ∀ u, u ∈ S →\n        need u ≤ Law.orbit (RegimeMargin.step giving (taken S)) z j) →\n      course giving (S, z) i = (S, Law.orbit (RegimeMargin.step giving (taken S)) z i)",
+     "instance goesDecidable (s : List (Nat × Nat) × Nat) : Decidable (Goes s)"
+    ],
+    "rests_on": [
+     "step_unit (net_unit)",
+     "LineOnAStock.course_generation with course_unit, generation_unit, taken_unit, by rw (fixed_while 17 -> 13 lines)",
+     "LineOnAStock.goesDecidable need s (goesDecidable; anyGoes, anyGoes_eq and anyGoes_iff removed with it)"
+    ]
+   },
+   {
+    "item": "7. A closed instance of unending_iff_holds whose offspring are not the unit itself: LineOnAStock.TwoForOne. P has need 1, use 2, kids [Q, Q]; Q has need 1, use 1, kids [Q]; giving TurningInTime.Three.giving, y := id, hi := 12, from level 4. The course is ([P], 4), then ([Q, Q], 4) at every step from 1. Regime holds at both ways (Short 2 2, Meets 2 2 12, Keeps 2 12), and ([P], 4) holds since 2 + 2 ≤ 4.",
+    "status": "proved, green",
+    "theorems": [
+     "theorem holds_by_law :\n    course need kids TurningInTime.Three.giving use ([P], 4) 1 = ([Q, Q], 4) ∧\n    (∀ k, course need kids TurningInTime.Three.giving use ([P], 4) (1 + k) = ([Q, Q], 4)) ∧\n    «不穷» (net need kids TurningInTime.Three.giving use) «一» ([P], 4)"
+    ],
+    "rests_on": [
+     "unending_iff_holds (mpr at k = 0)",
+     "course_fixed, Law.orbit_add",
+     "RegimeMargin.short_of_below, meets_of_below, keeps_of_below"
+    ]
+   },
+   {
+    "item": "8. Docstrings, each read against its statement. LineOnAStock's module docstring is rewritten with the laws sorted under true headings: under any giving and use; asking nothing of the giving (rise, never_in, gone_from, takes_nothing, account); needing the stock. 'Three cases per unit' now says each law asks its case of every unit, or of every unit of a closed line, and that a mixed way such as HigherStartEnds falls under none. needs_kept is told as one direction (via needs_after_iff). way_generation is told as by after_of_met. ProperLine.gone gives three sizes with three levels (9 at 12, 17 at 6, 33 at 0). ways_alike carries the 'no new difference' claim with its premise. The top line of each module is 'AI-written, <date>.' with no 'scratch', 'stage' or 'pass'.",
+    "status": "done, green",
+    "theorems": [],
+    "rests_on": []
+   }
+  ],
+  "changed_from_brief": [
+   "need_unmet takes `needs : Needing need kids w` instead of `∀ u, 0 < need u`. The brief allowed this if it cost nothing, and it does: the unit used is in generation (hi + 1) of w. Because of it, {w} {x} now come before `needs` in the binder order. The rest of the conclusion is exactly the brief's.",
+   "one_need_ends goes through need_unmet, not ends_with_net_rising: 32 lines against the old 40. `ne` is dropped by deciding Goes (w, x) at the start. When it fails (the way is empty or x < n) the net ends at step 0, so this costs one `if`.",
+   "never_in and gone_from now rest on kept_of_descent, which adds ReadingsPersist (one module). The two together are 19 lines as before, not shorter. I kept them because the fact is then said once, and because DrainCase uses never_in for 'every unit from step 1 is a drawer'.",
+   "The closures shrink by nine modules, not ten, for the same reason.",
+   "multiplying_takers' correspondence is split into its own theorem `agree`, and multiplying_takers restates it. Its old conjunct `∃ n, ¬ Goes ...` is replaced by the brief's family conjunct.",
+   "drain no longer has the conjuncts `course ... 1 = ([d1, d1], 11)` and 'no drawer in the way from some step'. It gains the draws equality (generations.sum = taken use), gift_eq, need_agrees and the empty family from some step on.",
+   "Besides the brief's list, I removed from WayOfUnits goes_false_of_lt, mem_of_ne_nil, met_or_unmet, after_eq_iff, length_keep_le, length_keep_lt and anyGoes_iff: once their users were gone no proof used them, and nothing tracked names them. goes_unit and anyGoes_eq, both untracked, went too.",
+   "LineOnAStock.goesDecidable and course_generation are now true as 'their cases' because the WayOfUnits bodies are derived from them. That changes the bodies of WayOfUnits' fixed_while and goesDecidable instance; their statements are the same.",
+   "Section '## 9. One law, two cases' is renamed '## 9. In a world of one need'."
+  ],
+  "false_as_written": [
+   "takes_nothing read as 'whether the net ends is the same' is false. The kept countermodel is LineOnAStock.NothingTakenEnds.ending_differs: A has need 5, use 1; C has need 1, use 0; each leaves itself; nothing is given; start at 5. With C the net never ends; without C it ends at step 1, at ([A], 4).",
+   "The prelude's Nat.succ_ne_zero depends on propext (Prelude.lean:183 says so). Using it in DrainCase brought propext into the audit, so I use Nat.noConfusion instead.",
+   "No statement in the brief turned out false."
+  ],
+  "premises_not_needed": [
+   "need_unmet: `down` is not asked; its docstring says so. `needs` is trimmed to the descendants of w.",
+   "one_need_ends: `ne` is not needed (dropped).",
+   "LineOnAStock.reaches_holds: `hi` does nothing, since only `Short` of `along` is used. This is unchanged and already said.",
+   "rising_meets_level is not used here."
+  ],
+  "not_done": [
+   "No full suite, gate or check_becoming.py run, by the brief's rules and the machine rule. The evidence is selected: eight scratch builds of the four modules, with axiom audits and the WayOfUnits signatures step. The last one, buildRL-8, is clean.",
+   "Becoming.lean (tracked) was not built against the scratch tree. Its WayOfUnits paragraph still says WayOfUnits imports only TurningInTime, and the new LineOnAStockCases module is not in its import list. Both wait for landing.",
+   "Nothing landed, no git write, no tracked file touched (git status shows only the pre-existing .claude/launch.json change).",
+   "step_overdrawn does not go through RegimeMargin.step_falls_by, because that would be longer.",
+   "No law of LineOnAStock goes through TurningInTime's net any more (one_need_ends uses need_unmet). The join with the lock is the shared law rising_takes_all, as the docstrings say.",
+   "LineOnAStock is only slightly smaller (2,057 -> 2,031), even with 140 lines moved out. The new countermodel, the TwoForOne instance, the longer module docstring and need_unmet's helpers take most of it back. Counting the new module, the line on a stock is 2,288 lines."
+  ]
+ },
+ "readR:lock": {
+  "most_serious": [
+   {
+    "theorem": "share_corrected_on_course (scratch l.1896-1920)",
+    "finding": "The bold title says more than the statement, by one step. The statement gives a Low share and a kept rule from step T + 1; the title says from the first step the window reads. The body (\"at step `T + 1 + k`\") and the header (l.169, \"from the step after the first step the window reads\") are exact.",
+    "evidence": "l.1896: \"**From the first step the window reads on the course as it was, the pair's course has a `Low` share and a `kept` rule.**\" l.1916: `∀ k, Low (Law.orbit (pair (windowAfterShare fA hA sA hL N K) left) s (T + 1 + k)).1.1 ∧`. On Three at T = 1 the pair's configuration is ((3, true, 1), 8) (first conjunct of share_read_goes_on, l.3049 on): share three, not below three, rule true. My recomputation agrees."
+   },
+   {
+    "theorem": "module header l.220-223, against Three.rise_count_ends (l.2966)",
+    "finding": "The header credits the seven steps to the law. The law's conjunct gives only some n ≤ 13 and some t; the seven steps are a separate computed conjunct, and no term ties the two. The theorem's own docstring is exact (l.2948: \"a line that ends within `12 + 1` steps\").",
+    "evidence": "l.222: \"the line ends `Locked` in seven steps through `locked_ends_rising` and `count_rises`\". l.2967: `(∃ n t, n ≤ 12 + 1 ∧`. l.2985-2986: `«迭» (net 1 riseAfter (fun w x => RegimeMargin.step giving (drawerUse w) x)) 7 ((3, true, 0), 12) ((10, true, 7), 0) ∧`, proved by `(Law.stepWhile_steps_iff 7).mpr ⟨by decide, rfl⟩`."
+   },
+   {
+    "theorem": "Three.rise_count_ends docstring (l.2943, l.2964-2965)",
+    "finding": "\"the four steps before, held at twelve, are what `locked_ends_rising` adds here\" says more than the Lean. The old law is excluded in Lean at step 0 only; steps 1 to 3 are unstated. \"met from step 4\" is three conjuncts; `draws` and Locked (7, true) there are argued (the docstring says so), and there is no Lean instance of the old law from step 4.",
+    "evidence": "l.2990: `(∀ H y, H ≤ drawerUse (3, true, 0) → RegimeMargin.Short giving H y → ¬ 12 < H + y) ∧`. l.2991: `RegimeMargin.Short giving 7 6 ∧ 7 ≤ drawerUse (7, true, 4) ∧ 12 < 7 + 6 ∧`. My computation (not Lean): at steps 1, 2, 3 (shares 4, 5, 6, level 12) no H at most the share and y with Short put 12 below H + y; at step 4 the least pair is (7, 6). The sentence is true; only step 0 is proved."
+   }
+  ],
+  "other_findings": [
+   {
+    "theorem": "module header l.310-316 (lens 3)",
+    "finding": "No sentence says or implies that a law concludes an overdraw, or that the use depends on the share or the rule. But the list of laws in which `below` and `draws` are given omits locked_turns_in_time_on_window_iff, which takes both; it reads as complete.",
+    "evidence": "l.314: \"what it concludes is the ending, not a step past a point of no return.\" l.315: \"No law here concludes that the use depends on the share or the rule: `count_rises` asks it (`count`)\". l.310: \"In `locked_ends_with_net_regime`, `locked_ends_on_window` and `locked_turns_in_time_share_iff` the start\"; window law l.1661 `(draws : ∀ v : A × R × Nat, P.le w.1 v.1 → M.le w.2.1 v.2.1 → H₁ ≤ use v)`, l.1662 `(below : x < H₁ + y₁)` (said for it at l.244)."
+   },
+   {
+    "theorem": "count_rises title (l.1474) and section 6 docstring (l.1208-1209)",
+    "finding": "Two sentences disagree on strictness. Both say \"a count that every favouring rule raises\"; the header (l.144-145) says \"raises strictly\", as the statement does. In this module `Raises` is the weak relation, under which count_rises fails (lockShare).",
+    "evidence": "l.1487: `(rise : ∀ a g, favours g → a < fA a g)`. RuleCapture.lean:146: `∀ x g, favours g → P.le x (f x g)`."
+   },
+   {
+    "theorem": "rising_takes_all (l.671-685)",
+    "finding": "The title says two things; the statement is the second. That the use takes the whole level at step hi is only in the private takes_at_hi (l.657-661); publicly it holds at some j ≤ hi (rising_meets_level).",
+    "evidence": "l.671: \"takes the whole level, and the level after it is nothing.\" l.685: `(Law.orbit (asItWas alone (fun w x => RegimeMargin.step giving (use w) x)) (w, x) (hi + 1)).2 = 0 :=`"
+   },
+   {
+    "theorem": "ends_of_below (private, l.612-635)",
+    "finding": "Not said once: its body repeats ends_with_net's match (l.517-533) line for line. ends_with_net could be its case at N := s.2 with the statement untouched.",
+    "evidence": "l.620-635 against l.517-533: the same `first_of_decided … agrees_until_marked … Law.stepWhile_steps_iff … asItWas_way` term."
+   },
+   {
+    "theorem": "rising_meets_level (l.700)",
+    "finding": "Exact docstring, but no proof in the four scratch modules uses it; it is a leaf named in the header (l.78-79).",
+    "evidence": "grep over TurningInTime, LineOnAStock, WayOfUnits, LineOnAStockCases: docstring mentions only."
+   },
+   {
+    "theorem": "locked_ends_rising docstring (l.1448)",
+    "finding": "A true remark with no Lean instance, not marked as argued.",
+    "evidence": "\"a use that reads only the step count meets it with the share never moving.\" True because windowAlone's count is `w.2.2 + 1` (l.1292)."
+   },
+   {
+    "theorem": "header l.140; locked_ends_with_net_regime docstring l.1406-1407 (tracked text)",
+    "finding": "\"The lock keeps an overdraw that stands; it does not bring one about.\" now stands unscoped beside locked_ends_rising. It stays true of the lock's premises (the rise is given: `more`, or `rise` with `count`), but on Three.rise_count_ends nothing stands at the start and the old law's premises hold at step 4. One \"there\" would scope it.",
+    "evidence": "l.140, followed at once by \"With a cap on the level … a `Locked` start ends `Locked` within `hi + 1` steps\"."
+   },
+   {
+    "theorem": "ends_with_net_rising (lens 5)",
+    "finding": "The bound hi + 1 is stated (l.736, l.1462, l.2967) and the proof is rising_takes_all plus the private split. The bound is reached, by my computation only; no docstring claims tightness.",
+    "evidence": "l.740-742: `ends_of_below outside un (left := …) (s := (w, x)) (N := hi + 1) (Eq.subst (motive := fun z => z < need) (rising_takes_all nothing keeps high rises).symm needs)`. Not Lean: giving z = hi − z for 0 < z ≤ hi, use j at step j, start hi, need 1: first level below the need at step hi + 1, for hi = 1 to 5."
+   }
+  ],
+  "per_theorem": [
+   {
+    "theorem": "rises_from (l.639)",
+    "concluded": "j ≤ use of the way after j steps, for j ≤ n",
+    "assumed": "strict rise of the use at steps j < n of alone's orbit",
+    "note": "Used. n is the number of rise steps asked and the range of j. Docstring exact."
+   },
+   {
+    "theorem": "kept_within (l.650)",
+    "concluded": "step giving d x ≤ hi, any d",
+    "assumed": "Keeps giving 0 hi; x ≤ hi",
+    "note": "Both used. hi caps the level before and after one step. Exact."
+   },
+   {
+    "theorem": "takes_at_hi (private, l.657)",
+    "concluded": "level of the course as it was at step hi ≤ use there",
+    "assumed": "keeps, high, rises (j < hi)",
+    "note": "All used. Docstring says \"rising_takes_all's premises\" though `nothing` is not asked."
+   },
+   {
+    "theorem": "rising_takes_all (l.681)",
+    "concluded": "level of the course as it was at step hi + 1 is 0",
+    "assumed": "nothing, keeps, high, rises (j < hi)",
+    "note": "All used (`nothing` at l.692). hi caps the start and every level and counts the rise steps. Title's first half is not in the statement."
+   },
+   {
+    "theorem": "rising_meets_level (l.700)",
+    "concluded": "∃ j ≤ hi with level ≤ use at j and use < level before j",
+    "assumed": "keeps, high, rises; no `nothing`",
+    "note": "All used. Exact."
+   },
+   {
+    "theorem": "ends_with_net_rising (l.730)",
+    "concluded": "∃ n ≤ hi + 1, a line of n steps to a configuration that conditions nothing, its way alone taken n times",
+    "assumed": "outside, needs, un, nothing, keeps, high, rises (j < hi)",
+    "note": "All seven used and named. An ending, no overdraw. Exact."
+   },
+   {
+    "theorem": "locked_ends_rising (l.1451)",
+    "concluded": "the same with windowAlone, and the end Locked",
+    "assumed": "raises, monotone, upper, locked, outside, needs, un, nothing, keeps, high, more",
+    "note": "All used (l.1465-1471). `more` is asked at every way not below the start's; only the first hi orbit steps use it (`fun j _`). Exact."
+   },
+   {
+    "theorem": "count_rises (l.1484)",
+    "concluded": "use v < use (windowAlone v) for every v whose rule is not below w's",
+    "assumed": "upper, rise (strict), pos, count (use = share × u), fav",
+    "note": "The P.le hypothesis, hA and reads are unused, and the docstring says so. That the use depends on the share is the premise `count`."
+   },
+   {
+    "theorem": "windowAfterShare (l.1740), window_share_alone_outside (l.1747), windowAfter_every_is_share (l.1758)",
+    "concluded": "the definition; AloneOutside off [N, K); pointwise equality with windowAfter at sA := fA",
+    "assumed": "nothing",
+    "note": "Exact; the third says the nets are not stated as one."
+   },
+   {
+    "theorem": "locked_turns_in_time_share_iff (l.1828)",
+    "concluded": "never ends ↔ ∃ T: need met and no level in [N, K) before T, both at T, and level of the course as it was at T + 1 ≥ H₂ + y₂",
+    "assumed": "18 premises; overdraw given (`draws` l.1843, `below` l.1844); closure given (sets, lowRule, lowStays)",
+    "note": "All passed to turns_in_time_iff (l.1863-1870), all named. hi bounds the start (`high : x ≤ hi`); H₂ + y₂ bounds the level after the read step. Exact."
+   },
+   {
+    "theorem": "share_corrected_stays (l.1879)",
+    "concluded": "Low share and kept rule at steps T + 1 + k of the pair's course",
+    "assumed": "sets, lowRule, lowStays; level at the pair's step T in [N, K)",
+    "note": "All used. Exact."
+   },
+   {
+    "theorem": "share_corrected_on_course (l.1906)",
+    "concluded": "the same",
+    "assumed": "sets, lowRule, lowStays; `before` and `read` on the course as it was",
+    "note": "All used. `before` and `read` are literally two parts of the iff's right side. Title off by one."
+   },
+   {
+    "theorem": "Three.rise_count_ends (l.2966)",
+    "concluded": "shares 3 to 10, levels 12, 12, 12, 12, 12, 10, 4, 0; ends at ((10, true, 7), 0)",
+    "assumed": "closed case",
+    "note": "Recomputed independently: every number matches; Keeps giving 0 12 holds; step giving 3 12 = 12."
+   },
+   {
+    "theorem": "Three.share_read_goes_on (l.3049)",
+    "concluded": "((3, true, 0), 9), ((3, true, 1), 8), then ((0, false, n + 2), 6); never ends",
+    "assumed": "closed case",
+    "note": "Recomputed: matches. Course as it was 9, 8, 6, 2, 0; the right side holds at T = 1 only; Short 5 5, Short 3 3, Meets 3 3 12, Keeps 3 12 hold."
+   }
+  ],
+  "earlier_findings": [
+   "C-premises 0, C-attack 0 (rise at every step; told as an overdraw): repaired. `rises : ∀ j, j < hi → …` (l.735); l.726 \"What is concluded is the ending\".",
+   "C-premises 1 (`more` does not read the share): repaired, l.1447-1449 and header l.315-316.",
+   "C-premises 2 (share_corrected_stays told as \"what goes on\"; no join of the two T): repaired, l.1876-1878 and share_corrected_on_course (l.1906). The join with the iff is by matching hypotheses; in Three both sit at T := 1 separately (l.3087, l.3090).",
+   "C-premises 3, C-attack 1 (the reading overwrites the share; overdraw still given; \"are concluded here\"): repaired, l.1809-1813, l.1821.",
+   "C-premises other 0 (bound 2 * hi + 1; \"`keeps` bounds giving\"): repaired, l.736; short_of_keeps is gone.",
+   "C-premises other 1, C-attack other 2 (count_rises asks all of Locked): repaired, `fav : favours w.2.1` (l.1488); unused parts said (l.1482).",
+   "C-premises other 2, C-attack 2 and other 3 (Raises credited with the rise; where the overdraw begins): repaired, l.2948-2950 and l.2991, with the remainder in my third finding.",
+   "C-premises other 3, C-attack other 1 (incomplete \"What stays given\" lists): repaired; none remains in new docstrings.",
+   "C-premises other 4 (ends_of_below copies ends_with_net's second half): not repaired, l.612-635; the Optimum route is gone (l.740-742).",
+   "C-premises other 5 (share law's title drops the need met at and before T): unchanged, l.1801-1803; it follows from the last conjunct since the course as it was never rises.",
+   "C-premises other 6 (tracked statements unchanged): still so; see what_ran.",
+   "C-attack other 0 (two header sentences disagree; new laws not in the lists): repaired, l.310-316; \"Added after the above\" is gone; laws listed at l.74-81, 140-145, 160-170, 220-230, 1205-1224.",
+   "C-attack other 4 (no statement relates windowAfterShare to windowAfter): repaired pointwise, l.1758.",
+   "AB-joins 3 (LineOnAStock re-proves kept_within and rises_from): repaired on this side; both public (l.650, l.639).",
+   "Still unstated, as the readers noted: a too-late case on the share window; the use H₂ from T + 1."
+  ],
+  "what_ran": "Read only; no Lean build, test, gate or git write. Read /Users/ren/theories/tmp/r7/one-model/lean-scratch/buildRT-3.log and buildRL-8.log myself: unclean [], Becoming.TurningInTime 78 theorems, 105 declarations, with_axioms {}. The scratch file (04:19) predates buildRT-3 (04:20) and is cmp-identical to the built copy. Tracked file equals HEAD.\n\nDiff, lens 1: 14 hunks. Header: 74c74,81; 133c140,145; 148c160,170; 198c220,230; 233,237c265,272; 241c276,277; 274,276c310,316. Section 6 docstring: 1028c1205,1209; 1035c1216,1224. Between declarations: 566a607,743; 1244a1434,1495; 1482a1734,1751; 1483a1753,1921; 2500a2939,3093. 15 lines removed, every one inside the module header or section 6's comment block. With comments stripped, the tracked code is unchanged line for line; the only code differences are four pure insertions. 22 new declarations (14 public theorems, 5 private, 3 defs); none removed. No forbidden tactic on an added line.\n\nScripts (seconds each) and the diff are in /Users/ren/theories/tmp/r7/one-model/check/round9/readers-R/lock/ : diffcheck.py, decls.py, recompute.py, tracked-vs-scratch.diff. Computations marked \"not Lean\" are mine and unchecked by Lean. The full suite was not run."
+ },
+ "readR:line": {
+  "most_serious": [
+   {
+    "theorem": "need_unmet (LineOnAStock l.987; docstring l.975-986; module l.58-64)",
+    "finding": "The statement is sound and as asked: n is the first unmet step, the way up to n is the generation, the bound is on n, and the proof is from the public TurningInTime.rising_takes_all (l.1007). The docstring says more: nothing concluded says the stock was used up. `down` is not asked, so the unmet need can be a kid's higher need at a level that never fell. No alike law is in the proof (after_of_met through course_asItWas), so the module's title for it also says more.",
+    "evidence": "Concluded, l.995: `∃ u, u ∈ (course need kids giving use (w, x) n).1 ∧ (course need kids giving use (w, x) n).2 < need u`. Docstring l.982: `This is the model's form of \"the way uses up what it rests on while nothing in it yet differs\"`; module l.58: `**Where alikeness and the stock meet** (`need_unmet`)`. Instance (script, not Lean): a (need 1, use 1, kids b b), b (need 13, use 1, kids b b), min z (12 - z), ([a], 12): all seven premises hold; step 1 is ([b, b], 12). Of 83,803 premise-true instances 3,885 have level(n) at or above the start; none of the 50,021 where kids need no more than their parent."
+   },
+   {
+    "theorem": "LineOnAStockCases: agree (l.52), multiplying_takers (l.78), drain (l.179)",
+    "finding": "Each built example's ending passes through a law in the proof term, but the equalities it is carried by take the example's own ending as input, and each ending conjunct already holds without any law. The title 'and the law `fall` ends its family' (l.166) says more. Equated with the examples' Lean: family size, pool (for Drain with gift on it), for the takers whether a member is active, for Drain the total of draws and the renewer's giving (gift_eq, l.140). Restated: need, use, kids, start. Drain's need one is not in any statement.",
+    "evidence": "l.63: `absurd act (LineageRegimes.MultiplyingTakers.inactive p)`; l.93: `fun act => stop ((agree n).2.2.mp act)`; the conjunct l.86 `∃ t, ¬ ∃ p, p ∈ LineageRegimes.MultiplyingTakers.generations.family t ∧ …` holds at t = 3 by `family_late` (empty family). Drain: l.203 `LineageDrawdown.Drain.familyP_eq true (t + 10)` feeds `(sizes k).1` at l.252; tracked `familyP | _ + 10 => []`, so l.190 is familyP_eq at n = 10. l.149 `theorem need_agrees : ∀ p, 4 ≤ p + gift p ↔ 1 ≤ p` has no Drain term (LineageDrawdown l.281 `need _ _ _ := 1`, by reading). Steps: way_ends → agree; fall at ([d1, d1], 11) → never_in → Law.orbit_add → sizes → nil_of_length."
+   },
+   {
+    "theorem": "met_or_unmet (l.239-240), mem_of_ne_nil (l.277)",
+    "finding": "Two docstrings name declarations the repair removed from WayOfUnits.",
+    "evidence": "l.240: `` `WayOfUnits.met_or_unmet` is its case. ``; l.277: `` `WayOfUnits.mem_of_ne_nil` is its case. `` grep of scratch WayOfUnits.lean for either name: no line. The other nine `WayOfUnits.` names cited exist and are derived (goesDecidable l.337, fixed_while l.361, step_falls l.620, course_fixed l.1052)."
+   },
+   {
+    "theorem": "one_need_ends (l.1031; docstring l.1029-1030)",
+    "finding": "Statement sound (bound hi + 1, `ne` gone, step 0 cases said, all six premises used). One docstring sentence is false as written: way_ends also asks `down`, and the file keeps the countermodel.",
+    "evidence": "l.1029: `With needs that differ, `way_ends` (no bound on the step) holds instead.` way_ends l.912: `(down : ∀ u v, v ∈ kids u → need v ≤ need u)`; KidsNeedMore.all_but_down l.1445-1446: `¬ (∀ u v, v ∈ kids u → need v ≤ need u) ∧ «不穷» (net need kids hump10 use) «一» ([B, A, B], 8)`."
+   }
+  ],
+  "other_findings": [
+   {
+    "theorem": "way_generation (l.521), way_while_met (l.946)",
+    "finding": "One fact stated twice; the docstrings cite the copy no proof uses.",
+    "evidence": "way_generation is called only by itself (l.527). need_unmet's proof uses `way_while_met` (l.1011, l.1016); its docstring l.981 and module l.62 cite `way_generation`."
+   },
+   {
+    "theorem": "unending_iff_holds (l.1176), TwoForOne.holds_by_law (l.1535), module l.74-78",
+    "finding": "The theorem docstring is exact and all seven premises are used. The module bullet says less (omits `nothing`, `high`, and 'some need met at every step before') and more: only P's offspring are not itself, the course is fixed from step 1, and only the 'if' side at k = 0 is exercised.",
+    "evidence": "l.1183: `∃ k, (∀ j, j < k → Goes need (course need kids giving use (w, x) j)) ∧`; l.1525: `| Q => [Q]`; l.1561-1562: `.mpr ⟨0, …`. `Regime` along the course is assumed (`along`), with y and hi given."
+   },
+   {
+    "theorem": "after_append (l.327), module l.25-26",
+    "finding": "Still used by no proof; 'reach each other only through the level' is a reading, the statement is about `after` alone.",
+    "evidence": "l.328: `after need kids (w₁ ++ w₂) x = after need kids w₁ x ++ after need kids w₂ x`; no other use in the three modules."
+   },
+   {
+    "theorem": "NothingTakenEnds.ending_differs (l.2000)",
+    "finding": "The docstring's course values are not conjuncts (unlike TakesNothing.lost); they recompute.",
+    "evidence": "l.1995: `the course is `([A, C], 4)`, then `([C], 3)``; the statement has only the takes_nothing conjunct, `«不穷»`, `«迭» … 1 ([A], 5) ([A], 4)` and no next."
+   },
+   {
+    "theorem": "need_unmet, one_need_ends, alike_iff, needs_after_iff, account, taken_below",
+    "finding": "`grows` is asked of every unit of the type while `needs` is trimmed to descendants. No closed instance of one_need_ends, alike_iff (positive side), needs_after_iff, account or taken_below.",
+    "evidence": "l.988: `(grows : ∀ u, use u < taken use (kids u))` beside l.989 `(needs : Needing need kids w)`."
+   }
+  ],
+  "per_theorem": [
+   {
+    "theorem": "need_unmet l.987",
+    "concluded": "A first step n, 0 < n ≤ hi + 1, with some need unmet; every need met before n; way at j the j-th generation for j ≤ n.",
+    "assumed": "nothing; Keeps giving 0 hi; grows (every unit); Needing w; x ≤ hi; w ≠ []; every need met at start.",
+    "note": "All used. hi caps start and levels; the bound is reached (script). `met` gives only 0 < n."
+   },
+   {
+    "theorem": "one_need_ends l.1031",
+    "concluded": "The net ends at some m ≤ hi + 1, its way the m-th generation.",
+    "assumed": "one need n > 0; grows; nothing; keeps; x ≤ hi.",
+    "note": "Step 0 where way empty or x < n: said. Joins the lock only by sharing rising_takes_all; said so."
+   },
+   {
+    "theorem": "after_alike l.315, alike_of_met l.404",
+    "concluded": "Next ways equal.",
+    "assumed": "The two levels meet the same needs in w.",
+    "note": "Derived. `Alike` (l.396) is defined as equal next ways."
+   },
+   {
+    "theorem": "alike_iff l.471",
+    "concluded": "Alike ↔ same needs met.",
+    "assumed": "Every unit of w leaves a kid.",
+    "note": "Derived by lengths; AlikeFiner shows the premise is needed."
+   },
+   {
+    "theorem": "ways_alike l.540",
+    "concluded": "Ways equal at every j ≤ n.",
+    "assumed": "For j < n the two levels meet the same needs of the first course's way.",
+    "note": "Told as the law, with its premise; derived from after_alike; nothing of giving, use or stock, as said."
+   },
+   {
+    "theorem": "born_alike l.580",
+    "concluded": "Same number born at j < n.",
+    "assumed": "As ways_alike.",
+    "note": "ways_alike at j + 1 under length; told so."
+   },
+   {
+    "theorem": "never_in l.657, gone_from l.667",
+    "concluded": "A closed line absent at a step is absent after.",
+    "assumed": "closed.",
+    "note": "kept_of_descent through family_eq; exact."
+   },
+   {
+    "theorem": "takes_nothing l.1390",
+    "concluded": "At every n equal levels, and equal ways once stripped of Z.",
+    "assumed": "Z takes nothing; Z leaves only Z.",
+    "note": "Docstring exact; says the ending is not carried."
+   },
+   {
+    "theorem": "unending_iff_holds l.1176",
+    "concluded": "Never ends ↔ some k with a need met before k and Holds at k.",
+    "assumed": "even, some, down, Needing, nothing, x ≤ hi, Regime along the course.",
+    "note": "All used; exact relative to the given y."
+   },
+   {
+    "theorem": "way_ends l.909, line_ends l.885, fall l.766",
+    "concluded": "Some step with no need met and the net ends; a line gone from some step.",
+    "assumed": "As their docstrings list.",
+    "note": "Unchanged; no bound, said."
+   },
+   {
+    "theorem": "agree l.52, drain l.179 (Cases)",
+    "concluded": "Step-by-step equalities of sizes, pool or pool with gift, draws total; an ending conjunct each.",
+    "assumed": "None (closed).",
+    "note": "rfl to steps 2 and 9; tails from the examples' own tables."
+   }
+  ],
+  "earlier_findings": [
+   "one_need_ends bound 2 * hi + 1, `ne`, title naming the route: repaired (l.1020, l.1033-1034).",
+   "need_unmet 'no premise on the kids' needs': repaired (l.977-981, `Needing` l.989).",
+   "ways_of_alike, kids_alike assume what they conclude: repaired, both deleted; ways_alike direct from after_alike (l.546).",
+   "born_alike a renaming: kept and told as that (l.576-579).",
+   "takes_nothing title says more; countermodel not in Lean: repaired (l.1383-1389; ending_differs l.2000).",
+   "unending_iff_holds has no instance with other offspring: repaired for P only (TwoForOne l.1535). 'Need met before k follows from Holds': still not stated.",
+   "gone_from, never_in, taken_allKids, keeps_any proved again: repaired (l.660, l.673, l.1066; kept_within l.824, l.843). step_overdrawn (l.698): not changed, said.",
+   "Module docstring: need_unmet's premises, headings, needs_kept, 'three cases per unit': repaired (l.58-62, l.40, l.54, l.37-38, l.80-85).",
+   "'WayOfUnits.goesDecidable / fixed_while is its case' not derived: repaired; two new stale names (l.240, l.277).",
+   "ProperLine docstring: repaired (l.1836-1837).",
+   "Case titles 'is the course of': repaired (Cases l.45, l.165). 'Neither ending derived from a law': repaired in form only; familyP_eq (l.203) and inactive (l.63) remain inputs. Drain's need not matched in Lean: still so (need_agrees l.149).",
+   "after_append used by no proof; no closed case of one_need_ends, taken_below, needs_after_iff, account: not repaired."
+  ],
+  "what_ran": "AI-written (Fable), 16 November 2026. Read whole: scratch LineOnAStock.lean and LineOnAStockCases.lean; scratch TurningInTime l.328-347 and l.630-743; the tracked examples (LineageRegimes MultiplyingTakers, LineageDrawdown Drain), SelectionTerm.Generations, kept_of_descent, first_of_decided. Build logs read: buildRL-8.log and buildRT-3.log, `\"unclean\": []`, `\"with_axioms\": {}` for all four modules, no warning or error line; 111 and 10 theorems match a grep; the built copies are cmp-identical to the scratch files and the oleans are newer. No Lean build, test or gate run; no file edited but my script. Script (not Lean, about 16 s): /Users/ren/theories/tmp/r7/one-model/check/round9/readers-R/line/check.py. No counterexample: need_unmet 83,803 premise-true instances (bound hi + 1 reached in 193, never later); one_need_ends 43,748 (never later than hi + 1); rising_takes_all 75,540 (level still positive at step hi in 312); ways_alike and born_alike 120,000; never_in and gone_from 96,443; takes_nothing 45,629; course_asItWas and way_while_met 120,000; generations_rise 10,942. 40 figures of the worked courses, kept countermodels and both built examples' tables recomputed: none differs."
+ },
+ "readR:smaller": {
+  "most_serious": [
+   {
+    "finding": "The law read back onto each built example concludes what the reading had already taken in from the example.",
+    "theorem": "LineOnAStockCases: DrainCase.drain (179), MultiplyingTakersCase.multiplying_takers (78)",
+    "evidence": "`drain` ends `∃ n, ∀ k, n ≤ k → (LineageDrawdown.Drain.generations (LineageDrawdown.Drain.courseP true)).family k = []` (190), through `fall` (222). But `sizes` at `t + 10` uses `LineageDrawdown.Drain.familyP_eq true (t + 10)` (203), and tracked `familyP` has `| _ + 10 => []` (LineageDrawdown.lean:325): that lemma alone gives the conjunct, with the bound 10 that `fall` lacks. `multiplying_takers`' `∃ t, ¬ ∃ p, p ∈ … .family t ∧ … .web.active t p` (86-87) comes from `way_ends` through `agree` (93); `agree` at step 2 is proved by `absurd act (LineageRegimes.MultiplyingTakers.inactive p)` (63), which is that conjunct at t = 2. \"Then gives\" (module docstring 15-16, 19-20) is true of the proof term; the law adds nothing there."
+   },
+   {
+    "finding": "Three declarations removed from WayOfUnits are still named: two as \"cases\" in LineOnAStock docstrings, one in a tracked record.",
+    "theorem": "LineOnAStock.met_or_unmet (241), mem_of_ne_nil (278)",
+    "evidence": "LineOnAStock.lean:240 \"`WayOfUnits.met_or_unmet` is its case.\"; :277 \"`WayOfUnits.mem_of_ne_nil` is its case.\" Neither is in scratch WayOfUnits. theories/becoming/results/records/a-way-of-units.json:297 (rendered .md:108): \"Whether some unit goes on, decided by anyGoes.\"; `anyGoes` (tracked 293) is removed. The repair report's \"QUALIFIED:0 ANY:0\" searched `WayOfUnits.<name>` and backticked names only. The other twelve removed names occur only in lean-declarations/becoming-core-part-7.md and lean-index.json. No other module of the package uses any of the thirteen (only Becoming.lean imports WayOfUnits)."
+   },
+   {
+    "finding": "Facts still proved again though they exist.",
+    "evidence": "(a) Cases `nil_of_length` (161-163, `List Nat`) is `Becoming.nil_of_length_zero` (Prelude.lean:1026, any type, no axiom). (b) TurningInTime's private `ends_of_below` (612-634) and `ends_with_net` (506-533): lines 618-634 are 517-533 with `N` for `s.2`; `ends_with_net` is `ends_of_below` with `Optimum.ends_within` and keeps its own proof. (c) `step_overdrawn` (LineOnAStock 698-707), first disjunct: `RegimeMargin.step_falls_by` (RegimeMargin.lean:880); unchanged. (d) `WayOfUnits.unending_of_fixed` (1061-1068) repeats `LineOnAStock.unending_of_fixed` (1289-1299), not through `unending_unit`. (e) `step_zero` (690-694) is written inline again in `TurningInTime.rising_takes_all` (691-692) and `held_above` (848-851)."
+   },
+   {
+    "finding": "Inside LineOnAStock the rise and what follows from it are each argued twice; `rising_takes_all` carries `need_unmet` and `one_need_ends`, not `way_ends` or `line_ends`.",
+    "theorem": "allKids_rises (955), ends_high (828), way_generation (521)",
+    "evidence": "`allKids_rises` (`taken use w + w.length ≤ taken use (allKids kids w)`) is `rise` (628) at the line of every unit with every need met, by a second induction; `need_unmet` rests on it (1007, through `generations_rise`), `ends_high` on `rise` (842). `ends_high` runs its own fuel, `hi + 1 ≤ lineTake S use s.1 + k` (834), the argument of TurningInTime's `rises_from` and `takes_at_hi`. `way_generation` and `way_while_met` (946) both conclude `(course need kids giving use (w, x) n).1 = generation kids n w`; no proof uses the first, yet docstrings 62 and 981 cite it where the proof uses the second (1011, 1016)."
+   }
+  ],
+  "other_findings": [
+   {
+    "finding": "(1) WayOfUnits against the tracked file, by script: smaller, statements and definitions kept.",
+    "evidence": "Tracked 1,182 lines, 85 declarations; scratch 1,121 lines, 88 (232 lines out, 171 in). Removed, 13: goes_false_of_lt, mem_of_ne_nil, goes_of_holds, length_keep_le, length_keep_lt, met_or_unmet, after_eq_iff, mem_course_iff, anyGoes, anyGoes_iff, falls, course_within, reaches_holds. Added, 16: fifteen bridge lemmas (194-300) and `unending_taken_below` (418). The 72 kept headers are unchanged up to `:=`, in the same order; the 19 kept `def`/`abbrev` are unchanged. Five bodies changed: `fixed_while` (361), `unending_iff_holds` (395), `step_falls` (620), `course_fixed` (1052), and the instance `goesDecidable` (337), which is data: `LineOnAStock.goesDecidable need s` in place of `decidable_of_iff (anyGoes s.2 s.1 = true) (anyGoes_iff s.2 s.1)`."
+   },
+   {
+    "finding": "(2) Sizes: one file is smaller, the landing is larger.",
+    "evidence": "TurningInTime 3,097 (tracked 2,504), LineOnAStock 2,031, WayOfUnits 1,121 (1,182), LineOnAStockCases 257: 6,506 lines against 3,686 tracked. Import closures (Becoming modules, self included): LineOnAStock 148, WayOfUnits 149 (tracked 147; LineOnAStock and ReadingsPersist are new in it), Cases 159. ReadingsPersist (1,415 lines) is imported for one use, `kept_of_descent` (660)."
+   },
+   {
+    "finding": "(3) Laws, not definitions, that LineOnAStock rests on.",
+    "evidence": "`TurningInTime.rising_takes_all` (1007), `asItWas_way` (951), `kept_within` (824, 843), `held_above` (718); `RegimeMargin.holds` (1196), its only RegimeMargin law outside closed cases; `SelectionTerm.Generations.born_eq` (574), `total_flatMap` (1066); `kept_of_descent` (ReadingsPersist.lean:293; 660); from Flow.lean only list totals: `total_le` (214), `total_append` (218, 962), `le_total_of_mem` (225, 891); Prelude: `balance_over_stretch_on` (1254) and small arithmetic and list lemmas. No law of TurningInTime's net, no `RegimeMargin.ends_below`. `rising_takes_all` itself uses RegimeMargin's definitions only."
+   },
+   {
+    "finding": "(4) Six WayOfUnits declarations are derived from LineOnAStock, and each \"case\" docstring but the two above names a derivation that is in the Lean.",
+    "evidence": "`unending_iff_holds` (402), `fixed_while` (366), `unending_taken_below` (424), `course_fixed` (1055), `goesDecidable` (338), and `step_falls` (623), which is the same statement, not a case in `kids`. LineOnAStock 77, 272, 712, 1076, 1174, 1281 match. `takes_nothing_iff_alone` is told as \"the exact form of what `LineOnAStock.takes_nothing` gives\" (WayOfUnits 919-922; LineOnAStock 1388-1389): no derivation joins them, and WayOfUnits 103-106 lists it as not resting on LineOnAStock."
+   },
+   {
+    "finding": "(5) Frozen test A (\"fires\": by that test nothing has changed).",
+    "evidence": "A(1) passes by the letter: `born_alike` (588) uses `ways_alike` and `born_eq_length`; `need_unmet` (987) joins the rise with \"every need met\" (`after_of_met`), not with `after_alike`. A(2) passes: `course_unit` (WayOfUnits 230). A(3) still fires for `after_alike` (315), `alike_iff` (471), `ways_alike` (540; its docstring: \"Nothing is asked of the givings, the uses or the stock\") and `born_alike`; not for `need_unmet`. A(4) passes: `family_eq` (561)."
+   },
+   {
+    "finding": "(5) Frozen test B.",
+    "evidence": "B(1) passes: `grows : ∀ u, use u < taken use (kids u)` (988); `generations_rise` (966) makes the course's rise from it. B(2): Drain's family ending is concluded through `fall` (Cases 190, 222), by the letter only (first finding); Commons is not in LineOnAStock or the cases; WayOfUnits 135 keeps it as a reading, and no reason is given. B(3) passes: `locked_ends_rising` (TurningInTime 1451) has neither `draws` nor `below`; `more` (1460) is given, and is joined to `count_rises` only in `Three.rise_count_ends` (2993-3002)."
+   },
+   {
+    "finding": "(5) Frozen tests C, D, E and the whole.",
+    "evidence": "C: the regime is still assumed along the course (`along`, 1180-1181, as WayOfUnits 397-398); units that multiply and vary are covered once, `TwoForOne.holds_by_law` (1535): `[P]`, then `[Q, Q]` for ever. D passes: `Alike` (396) is computed from the way; `ways_alike` is on ways that change; no theorem says the relation coarsens along a course. E(1) passes: `never_in` (657) by `kept_of_descent` under `closed`; `mem_course_iff` is gone. E(3) not applicable: that course is not in Lean; `takes_nothing` (1390) is under `TakesNothing.lost` (1943). Whole passes: four tracked WayOfUnits theorems and the instance are now proved from LineOnAStock, which rests on the laws under (3); nothing of RuleCapture."
+   }
+  ],
+  "per_theorem": [
+   {
+    "theorem": "LineOnAStock.need_unmet (987)",
+    "concluded": "`∃ n, 0 < n ∧ n ≤ hi + 1 ∧ …`: every need met before `n`, the way `generation kids j w` up to `n`, a need unmet at `n`",
+    "assumed": "`nothing`, `keeps : RegimeMargin.Keeps giving 0 hi`, `grows`, `needs : Needing need kids w`, `high`, `ne`, `met`",
+    "note": "The bound is from `TurningInTime.rising_takes_all` (1007). The docstring cites `way_generation`; the proof uses `way_while_met`."
+   },
+   {
+    "theorem": "LineOnAStock.one_need_ends (1031)",
+    "concluded": "`∃ m t, m ≤ hi + 1 ∧ «迭» (net need kids giving use) m (w, x) t ∧ (∀ v, ¬ net need kids giving use t v) ∧ t.1 = generation kids m w`",
+    "assumed": "`one`, `pos`, `grows`, `nothing`, `keeps`, `high`",
+    "note": "Through `need_unmet` (1038), so \"rests on `rising_takes_all`\" is in the Lean. No closed instance."
+   },
+   {
+    "theorem": "TurningInTime.rising_takes_all (681)",
+    "concluded": "`(Law.orbit (asItWas alone (fun w x => RegimeMargin.step giving (use w) x)) (w, x) (hi + 1)).2 = 0`",
+    "assumed": "`nothing`, `keeps`, `high`, `rises` for `j < hi`",
+    "note": "Used at TurningInTime 742 and LineOnAStock 1007."
+   }
+  ],
+  "earlier_findings": [
+   "\"Joined, nothing smaller\" (joins reader): repaired for WayOfUnits, 1,257 to 1,121, below the tracked 1,182; `falls`, `course_within`, `goes_of_holds`, `mem_course_iff`, `reaches_holds` are removed. The ten case-only modules left its closure. LineOnAStock 2,057 to 2,031; with Cases, 2,288.",
+   "\"Neither built example's ending is derived from a law\": repaired by the letter only (Cases 93, 222-252; first finding). `gift_eq` (140) now ties `gift` to Drain's `giveOf`.",
+   "\"The count side of alike is its premise restated\": `kids_alike` and `ways_of_alike` are deleted; `born_alike` (580) is told as `ways_alike` read as a count. A(3) still fires for the alike laws.",
+   "\"Proved again\": repaired for `never_in` and `gone_from` (`kept_of_descent`, 660), `keeps_any` (deleted; `TurningInTime.kept_within` at 824, 843), `grows_while` (deleted), `taken_allKids` (`total_flatMap`, 1066), `WayOfUnits.course_within` (removed; `within_along` 1093), `one_need_ends` (from `need_unmet`, `hi + 1`, 1034-1038). Not repaired: `step_overdrawn` (698).",
+   "\"Docstrings that say more\": repaired for the net (`net_unit`, WayOfUnits 236), `goesDecidable` (338), `fixed_while` (366), `way_generation` (520, \"By `after_of_met`\"). New in this pass: LineOnAStock 240 and 277.",
+   "\"`after_append`, `sum_eq` used by no proof\": `sum_eq` removed; `after_append` (327) unchanged.",
+   "\"Every WayOfUnits statement unchanged\": confirmed for the 72 kept.",
+   "C readers, the bound `2 * hi + 1`: repaired, `n ≤ hi + 1` (TurningInTime 736) by `rising_takes_all` (742); the split it needs is a second copy (third finding, b)."
+  ],
+  "what_ran": "Read only: no build, test, gate or git write. Read: scratch LineOnAStock and LineOnAStockCases whole; WayOfUnits 1-440 and every line naming LineOnAStock; TurningInTime 496-860, 1426-1495; tracked WayOfUnits 184-470; STEPS-3-7-ON-PAPER.md; the five readers' reports. Last logs, read myself: buildRT-3.log (Becoming.TurningInTime, 78 theorems, 105 declarations, `with_axioms: {}`, `unclean: []`) and buildRL-8.log (163 modules, `unclean: []`; LineOnAStock 111/182, WayOfUnits 68/88, LineOnAStockCases 10/16, each `with_axioms: {}`). Neither records an exit code. `cmp`: all four scratch files equal the built copies. Scripts, each under 25 seconds, in /Users/ren/theories/tmp/r7/one-model/check/round9/readers-R/smaller/: compare.py, named.py, ctx.py, rests.py, unused.py, closure.py. The searches are by name and regular expression, not by Lean."
+ }
+}

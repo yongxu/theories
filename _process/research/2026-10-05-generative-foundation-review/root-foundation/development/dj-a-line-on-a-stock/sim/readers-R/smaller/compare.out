@@ -1,0 +1,94 @@
+lines tracked 1182 scratch 1121
+decls tracked 85 scratch 88
+kinds tracked {'abbrev': 3, 'def': 17, 'instance': 1, 'theorem': 64}
+kinds scratch {'abbrev': 3, 'def': 16, 'instance': 1, 'theorem': 68}
+
+REMOVED (13):
+   Becoming.WayOfUnits.goes_false_of_lt tracked line 188 theorem 
+   Becoming.WayOfUnits.mem_of_ne_nil tracked line 196 theorem 
+   Becoming.WayOfUnits.goes_of_holds tracked line 202 theorem 
+   Becoming.WayOfUnits.length_keep_le tracked line 224 theorem 
+   Becoming.WayOfUnits.length_keep_lt tracked line 234 theorem 
+   Becoming.WayOfUnits.met_or_unmet tracked line 250 theorem 
+   Becoming.WayOfUnits.after_eq_iff tracked line 268 theorem 
+   Becoming.WayOfUnits.mem_course_iff tracked line 279 theorem 
+   Becoming.WayOfUnits.anyGoes tracked line 293 def 
+   Becoming.WayOfUnits.anyGoes_iff tracked line 298 theorem 
+   Becoming.WayOfUnits.falls tracked line 368 theorem 
+   Becoming.WayOfUnits.course_within tracked line 390 theorem 
+   Becoming.WayOfUnits.reaches_holds tracked line 405 theorem 
+
+ADDED (16):
+   Becoming.WayOfUnits.cond_single scratch line 198 theorem
+   Becoming.WayOfUnits.after_unit scratch line 204 theorem
+   Becoming.WayOfUnits.taken_unit scratch line 211 theorem
+   Becoming.WayOfUnits.step_unit scratch line 216 theorem
+   Becoming.WayOfUnits.orbit_congr scratch line 224 theorem
+   Becoming.WayOfUnits.course_unit scratch line 230 theorem
+   Becoming.WayOfUnits.net_unit scratch line 236 theorem
+   Becoming.WayOfUnits.unending_unit scratch line 243 theorem
+   Becoming.WayOfUnits.allKids_unit scratch line 253 theorem
+   Becoming.WayOfUnits.generation_unit scratch line 258 theorem
+   Becoming.WayOfUnits.needing_unit scratch line 265 theorem
+   Becoming.WayOfUnits.holds_unit scratch line 270 theorem
+   Becoming.WayOfUnits.regime_unit scratch line 277 theorem
+   Becoming.WayOfUnits.along_unit scratch line 285 theorem
+   Becoming.WayOfUnits.down_unit scratch line 299 theorem
+   Becoming.WayOfUnits.unending_taken_below scratch line 418 theorem
+
+HEADERS CHANGED (kept names): []
+order of kept names same: True
+DEFINITIONS CHANGED: []
+kept defs: 19
+BODIES CHANGED (5):
+   Becoming.WayOfUnits.goesDecidable instance tracked line 313 scratch line 337
+   Becoming.WayOfUnits.fixed_while theorem tracked line 336 scratch line 361
+   Becoming.WayOfUnits.unending_iff_holds theorem tracked line 450 scratch line 395
+   Becoming.WayOfUnits.step_falls theorem tracked line 671 scratch line 620
+   Becoming.WayOfUnits.course_fixed theorem tracked line 1113 scratch line 1052
+
+searched files: 1172
+files that mention WayOfUnits at all: 9
+    theories/becoming/results/data/shared-laws.json
+    theories/becoming/results/records/turning-in-time.json
+    theories/becoming/results/records/a-way-of-units.json
+    theories/becoming/results/records/a-way-of-units.md
+    theories/becoming/results/records/turning-in-time.md
+    theories/becoming/results/atlas/entries/dynamics.json
+    theories/becoming/results/atlas/entries/premises.json
+    _process/research/2026-10-05-generative-foundation-review/root-foundation/development/aa-attractor-atlas/six/mapping.json
+    theories/becoming/chapters/02-MAP.md
+
+REMOVED NAMES in records/atlas/mapping/chapters/shared-laws:
+  goes_false_of_lt       qualified:0  bare in a WayOfUnits-mentioning file:0  bare anywhere:0 []
+  mem_of_ne_nil          qualified:0  bare in a WayOfUnits-mentioning file:0  bare anywhere:0 []
+  goes_of_holds          qualified:0  bare in a WayOfUnits-mentioning file:0  bare anywhere:0 []
+  length_keep_le         qualified:0  bare in a WayOfUnits-mentioning file:0  bare anywhere:0 []
+  length_keep_lt         qualified:0  bare in a WayOfUnits-mentioning file:0  bare anywhere:0 []
+  met_or_unmet           qualified:0  bare in a WayOfUnits-mentioning file:0  bare anywhere:0 []
+  after_eq_iff           qualified:0  bare in a WayOfUnits-mentioning file:0  bare anywhere:0 []
+  mem_course_iff         qualified:0  bare in a WayOfUnits-mentioning file:0  bare anywhere:0 []
+  anyGoes                qualified:0  bare in a WayOfUnits-mentioning file:2  bare anywhere:2 ['theories/becoming/results/records/a-way-of-units.json', 'theories/becoming/results/records/a-way-of-units.md']
+  anyGoes_iff            qualified:0  bare in a WayOfUnits-mentioning file:0  bare anywhere:0 []
+  falls                  qualified:0  bare in a WayOfUnits-mentioning file:9  bare anywhere:290 ['theories/becoming/results/data/shared-laws.json', 'theories/becoming/results/records/turning-in-time.json', 'theories/becoming/results/records/a-way-of-units.json']
+  course_within          qualified:0  bare in a WayOfUnits-mentioning file:0  bare anywhere:0 []
+  reaches_holds          qualified:0  bare in a WayOfUnits-mentioning file:0  bare anywhere:0 []
+
+package lean files: 405
+tracked modules whose CODE (comments stripped) mentions WayOfUnits: ['Becoming.lean']
+   mentions WayOfUnits only in comments/docstrings: Becoming/TurningInTime.lean
+
+REMOVED NAMES used in other package modules (code and docstrings):
+  goes_false_of_lt       tracked-other:[]  scratch:[]
+  mem_of_ne_nil          tracked-other:[]  scratch:[('LineOnAStock.lean', 277)]
+  goes_of_holds          tracked-other:[]  scratch:[]
+  length_keep_le         tracked-other:[]  scratch:[]
+  length_keep_lt         tracked-other:[]  scratch:[]
+  met_or_unmet           tracked-other:[]  scratch:[('LineOnAStock.lean', 240)]
+  after_eq_iff           tracked-other:[]  scratch:[]
+  mem_course_iff         tracked-other:[]  scratch:[]
+  anyGoes                tracked-other:[]  scratch:[]
+  anyGoes_iff            tracked-other:[]  scratch:[]
+  falls                  tracked-other:[]  scratch:[('WayOfUnits.lean', 24), ('WayOfUnits.lean', 57), ('WayOfUnits.lean', 609), ('WayOfUnits.lean', 631), ('WayOfUnits.lean', 647), ('WayOfUnits.lean', 649), ('WayOfUnits.lean', 680)]
+  course_within          tracked-other:[]  scratch:[]
+  reaches_holds          tracked-other:[]  scratch:[]

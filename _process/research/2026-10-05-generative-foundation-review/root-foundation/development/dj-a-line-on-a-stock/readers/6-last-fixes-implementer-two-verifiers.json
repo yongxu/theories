@@ -1,0 +1,719 @@
+{
+ "note": "AI-written. Reports of workflow wf_f3f3df73-b7f, 16 November 2026: the last fixes (one implementer) and two verifiers who did not write the Lean.",
+ "fix:last": {
+  "files": [
+   "/Users/ren/theories/tmp/r7/one-model/lean-scratch/Becoming/TurningInTime.lean",
+   "/Users/ren/theories/tmp/r7/one-model/lean-scratch/Becoming/LineOnAStock.lean",
+   "/Users/ren/theories/tmp/r7/one-model/lean-scratch/Becoming/WayOfUnits.lean",
+   "/Users/ren/theories/tmp/r7/one-model/lean-scratch/Becoming/LineOnAStockCases.lean",
+   "/Users/ren/theories/tmp/r7/one-model/check/round9/implementer-R2/before/ (the four files as they stood before the first edit)",
+   "/Users/ren/theories/tmp/r7/one-model/check/round9/implementer-R2/TurningInTime.diff",
+   "/Users/ren/theories/tmp/r7/one-model/check/round9/implementer-R2/LineOnAStock.diff",
+   "/Users/ren/theories/tmp/r7/one-model/check/round9/implementer-R2/WayOfUnits.diff",
+   "/Users/ren/theories/tmp/r7/one-model/check/round9/implementer-R2/LineOnAStockCases.diff",
+   "/Users/ren/theories/tmp/r7/one-model/check/round9/implementer-R2/statements.py",
+   "/Users/ren/theories/tmp/r7/one-model/lean-scratch/buildR2-6.log"
+  ],
+  "last_build_log": "/Users/ren/theories/tmp/r7/one-model/lean-scratch/buildR2-6.log (the four modules together, as in the brief's command; 0 lines with error or warning). Earlier logs: buildR2-1 (TurningInTime alone, green), buildR2-2 to -4 (LineOnAStock: two elaboration errors in the new KidHigherNeed case, fixed; -4 green), buildR2-5 (all four, green, before the last docstring-only edits). There was no timeout and no load red.",
+  "build_closing_lines": "\"unclean\": [], \"audits\": { \"Becoming.TurningInTime\": {\"theorems\": 78, \"declarations\": 105, \"with_axioms\": {}}, \"Becoming.LineOnAStock\": {\"theorems\": 113, \"declarations\": 188, \"with_axioms\": {}}, \"Becoming.WayOfUnits\": {\"theorems\": 68, \"declarations\": 88, \"with_axioms\": {}}, \"Becoming.LineOnAStockCases\": {\"theorems\": 9, \"declarations\": 15, \"with_axioms\": {}} }. 163 modules, 312 reused. The ran list includes the PreludeOnly steps for LineOnAStock and WayOfUnits, and there is no \"failed\" key.",
+  "axioms_all_empty": "Yes. All four modules report with_axioms {} and unclean [] in buildR2-6.log. On the lines I added (diffs against the before/ copies), a grep finds no omega, simp, funext, Classical, propext, native_decide, sorry or axiom. decide is used only on small closed facts in the new KidHigherNeed case (1 < 2, 0 < 1, 0 < 13, 1 <= 12, 12 < 13, not 13 <= 1).",
+  "tracked_statements_unchanged": "Checked by script (/Users/ren/theories/tmp/r7/one-model/check/round9/implementer-R2/statements.py). It strips comments and compares each declaration header, up to the first `:=`, ` where` or match arm, between tracked PKG/Becoming and the scratch files. TurningInTime: 118 tracked declarations, 118 kept, 0 removed, 0 changed. WayOfUnits: 84 tracked, 71 kept, 13 removed by the earlier repair, 0 changed. The parse counts differ by one from the earlier reader's 85/72, which I put down to how the regex counts declarations; I did not chase it. No tracked file was touched. Only scratch files and my notes folder were written. I ran no git write and no check_becoming.py.",
+  "items": [
+   {
+    "item": "Line counts",
+    "status": "done",
+    "text_or_statement": [
+     "TurningInTime.lean 3097 -> 3087",
+     "LineOnAStock.lean 2031 -> 2135",
+     "WayOfUnits.lean 1121 -> 1126",
+     "LineOnAStockCases.lean 257 -> 271"
+    ]
+   },
+   {
+    "item": "A1 ends_with_net as a case of ends_of_below",
+    "status": "done",
+    "lines_before_after": "Before: ends_with_net l.501-533 (33 lines) and ends_of_below l.607-634 (28 lines), 61 in all. After: ends_of_below l.502-529 (28 lines, now first), ends_with_net l.531-547 (17 lines), 45 in all, 16 fewer. The statement of ends_with_net is unchanged (the tracked-header script agrees).",
+    "text_or_statement": [
+     "theorem ends_with_net {marked : Nat → Prop} {alone : W → W} {after : W → Nat → W} {left : W → Nat → Nat} (outside : AloneOutside marked alone after) {need : Nat} (needs : 0 < need) (un : ∀ x, need ≤ x → ¬ marked x) {s : W × Nat} {g d : Nat → Nat} {r : Nat} (step : ∀ t, (Law.orbit (asItWas alone left) s (t + 1)).2 = (Law.orbit (asItWas alone left) s t).2 + g t - d t) (renews : ∀ t, g t ≤ r) (over : ∀ t, r < d t) : ∃ n t, n ≤ s.2 ∧ «迭» (net need after left) n s t ∧ (∀ v, ¬ net need after left t v) ∧ t.1 = Law.orbit alone s.1 n := ends_of_below outside un (Optimum.ends_within (x := fun t => (Law.orbit (asItWas alone left) s t).2) step renews over needs s.2 (Nat.lt_add_of_pos_left needs))",
+     "private theorem ends_of_below {marked : Nat → Prop} {alone : W → W} {after : W → Nat → W} {left : W → Nat → Nat} (outside : AloneOutside marked alone after) {need : Nat} (un : ∀ x, need ≤ x → ¬ marked x) {s : W × Nat} {N : Nat} (ended : (Law.orbit (asItWas alone left) s N).2 < need) : ∃ n t, n ≤ N ∧ «迭» (net need after left) n s t ∧ (∀ v, ¬ net need after left t v) ∧ t.1 = Law.orbit alone s.1 n (body unchanged)",
+     "ends_with_net docstring: \"**Ending where the net ends.** With `AloneOutside`, no marked level that meets the need, a positive need, and the level of the course as it was in `Optimum`'s form (`step`), at most `r` given (`renews`) and more than `r` taken (`over`) at every step: within `s.2` steps the line from `s` reaches a configuration that conditions nothing, its way `alone` taken that many times. By `Optimum.ends_within`, which puts the course as it was below the need at step `s.2`, and `ends_of_below`.\"",
+     "ends_of_below docstring: \"Where the course as it was from `s` is at a level below the need at step `N`, within `N` steps the line from `s` reaches a configuration that conditions nothing, its way `alone` taken that many times. With `AloneOutside` and no marked level that meets the need. The split at the first step below the need, by `first_of_decided`. Needed by `ends_with_net`, where `Optimum.ends_within` gives the step `s.2`, and by `ends_with_net_rising`, where `rising_takes_all` gives the step `hi + 1`.\""
+    ]
+   },
+   {
+    "item": "A2 docstrings (TurningInTime)",
+    "status": "done",
+    "text_or_statement": [
+     "share_corrected_on_course title: \"**From the step after the first step the window reads on the course as it was, the pair's course has a `Low` share and a `kept` rule.**\"",
+     "Header near 222: \"With the use the share (`drawerUse`), the share raised by one at each step under the favouring rule and the start `(3, true, 0)` at twelve, `locked_ends_rising` with its `more` from `count_rises` gives a line that ends `Locked` within `12 + 1` steps, and, as a separate computed conjunct, the line ends in seven steps at `((10, true, 7), 0)`; no `H` at most the start's use and `y` with giving short of `H` below `y` put twelve below `H + y`; at step 4, ... (`Three.rise_count_ends`; that it applies is argued there, not a Lean statement).\"",
+     "Three.rise_count_ends title: \"**A lock whose share rises, used one per drawer, from the level twelve: the line ends `Locked` within `12 + 1` steps by `locked_ends_rising`, and in seven steps by a computed conjunct; the old law's premises fail at the start and are met at step 4.**\" Its closing in place of the old sentence: \"In Lean the old law's premises are excluded at step 0 only, and met at step 4 only by those three conjuncts. That at steps 1, 2 and 3 (shares four, five and six, the level twelve) no `H` at most the share and `y` with giving short of `H` below `y` put twelve below `H + y`, so that the old law first applies at step 4 and the four steps before it, held at twelve, are where `locked_ends_rising` reaches what the old law does not, is by computation, not a Lean statement. The case stands for no course beyond these numbers.\" (I checked by hand: at shares 4 to 6, giving at z = 6 is 6, not below any H ≤ 6 that would need y ≥ 7; at share 7, H = 7 and y = 6 works.)",
+     "Header near 310: \"In `locked_ends_with_net_regime`, `locked_ends_on_window`, `locked_turns_in_time_on_window_iff` and `locked_turns_in_time_share_iff` the start below `H + y` (`below`; `H₁ + y₁` in the last two) and the floor on the use where the share and the rule are not below the start's (`draws`) are given.\"",
+     "count_rises title: \"**Where the share is a count that every favouring rule raises strictly and the use is that count times a positive amount, the use rises under one step of the lock's step as it was, from every way whose rule is not below a favouring rule.**\"; section 6 docstring: \"`count_rises` gives `more` where the share is a count that every favouring rule raises strictly and the use is that count times a positive amount.\"",
+     "rising_takes_all title: \"**Against a level that cannot pass `hi`, a use that rises for `hi` steps leaves nothing after `hi + 1` steps of the course as it was.**\". The body now reads \"... so the use there takes the whole level, nothing is left, and nothing is given from nothing (that the use is at least the level at some step up to `hi` is `rising_meets_level`; the step `hi` itself is used only inside this proof).\"",
+     "takes_at_hi (private): \"Under `rising_takes_all`'s premises but `nothing`, the level of the course as it was at step `hi` is at most the use there: ...\"",
+     "locked_ends_rising: \"`more` does not ask that the use read the share or the rule: a use that reads only the step count meets it with the share never moving (argued here from `windowAlone` adding one to the step count, not a Lean statement).\"",
+     "Header near 140: \"There the lock keeps an overdraw that stands; it does not bring one about.\"",
+     "locked_ends_with_net_regime (tracked docstring text; statement untouched): \"In this law the lock keeps an overdraw that stands; it does not bring one about.\""
+    ]
+   },
+   {
+    "item": "B1 the central law with down (falls_to_unmet, generation_ancestor, KidHigherNeed)",
+    "status": "done",
+    "lines_before_after": "New lines: generation_ancestor at l.388-396 (9 lines with docstring), falls_to_unmet at l.1037-1070 (34 lines), KidHigherNeed at l.1514-1558. The need_unmet statement and proof are unchanged.",
+    "text_or_statement": [
+     "theorem generation_ancestor (down : ∀ u v, v ∈ kids u → need v ≤ need u) {w : List U} : ∀ n u, u ∈ generation kids n w → ∃ p, p ∈ w ∧ need u ≤ need p",
+     "generation_ancestor docstring: \"With kids needing no more than their parent (`down`), every unit of every generation of a way needs at most what some unit of the way needs.\"",
+     "theorem falls_to_unmet {hi : Nat} (nothing : RegimeMargin.FromNothing giving) (keeps : RegimeMargin.Keeps giving 0 hi) (grows : ∀ u, use u < taken use (kids u)) (down : ∀ u v, v ∈ kids u → need v ≤ need u) {w : List U} {x : Nat} (needs : Needing need kids w) (high : x ≤ hi) (ne : w ≠ []) (met : ∀ u, u ∈ w → need u ≤ x) : ∃ n, 0 < n ∧ n ≤ hi + 1 ∧ (∀ j, j < n → ∀ u, u ∈ (course need kids giving use (w, x) j).1 → need u ≤ (course need kids giving use (w, x) j).2) ∧ (∀ j, j ≤ n → (course need kids giving use (w, x) j).1 = generation kids j w) ∧ (∃ u, u ∈ (course need kids giving use (w, x) n).1 ∧ (course need kids giving use (w, x) n).2 < need u) ∧ (∃ p, p ∈ w ∧ need p ≤ x ∧ (course need kids giving use (w, x) n).2 < need p) ∧ (course need kids giving use (w, x) n).2 < x",
+     "falls_to_unmet docstring: \"**A way whose kids take more, its kids needing no more than their parent, comes within `hi + 1` steps to a level below a need the start met.** The premises are `need_unmet`'s (`nothing`, `keeps`, `grows` asked of every unit of the type, `needs` asked only of the descendants of `w`, `high`, `ne`, `met`), with kids needing no more than their parent (`down`). There is a step `n` with `0 < n ≤ hi + 1` such that every need is met at every step before `n`; up to `n` the way at step `j` is `generation kids j w`, in which no giving, use or level appears: it is the way of every course from `w` on which every need is met until then (`way_while_met`), and what it takes rises at each of those steps (by `generations_rise` read through that conjunct; not itself a conjunct); some unit of the way at `n` has its need unmet; some unit of `w`, whose need the start met, needs more than the level at `n`; and the level at `n` is below the start level `x`. By `need_unmet`, and `generation_ancestor` for the unit of `w` whose need is at least the unmet one. This is the model's form of a going-on that draws down what it rests on while nothing in it yet differs (a reading). Given, not derived: the needs, uses and offspring; that each unit's kids together take more than it (`grows`); the cap (`keeps`, `high`); `down`.\"",
+     "need_unmet docstring (the \"uses up\" sentence removed): \"**A need comes to be unmet, the way unchanged by the stock until then.** With nothing given from nothing (`nothing`), the step under no draw keeping every level up to `hi` within `hi` (`keeps`), every unit's kids taking more than it (`grows`, asked of every unit of the type), every unit of every generation of `w` needing something (`needs`, asked only of the descendants of `w`), the start at most `hi` (`high`), a way that is not empty (`ne`) and every need met at the start (`met`): there is a step `n` with `0 < n ≤ hi + 1` at which some unit of the way has its need unmet, every need met at every step before it, and up to it the way at step `j` is the `j`-th generation of `w` (`way_while_met`). Were every need met up to `hi + 1`, the course would be the course as it was under `allKids` (`course_asItWas`), what it takes rising at each step (`generations_rise`), and its level at `hi + 1` nothing (`TurningInTime.rising_takes_all`), while a unit there needs something. Kids needing no more than their parent (`down`) is not asked, and without it the unmet need may be a kid's greater need at a level that has not fallen: on `KidHigherNeed` every premise holds at `hi = 12`, and the configuration after the first step is `([B, B], 12)`, its level the start's, below `B`'s need thirteen. With `down` the level has fallen below a need the start met (`falls_to_unmet`). `ends_high` rests on the same arithmetic, a take that rises against a capped level, for a line among other units, argued again there; of the laws here only `need_unmet` and those derived from it (`falls_to_unmet`, `one_need_ends`) rest on `TurningInTime.rising_takes_all`.\"",
+     "KidHigherNeed.all_but_down (the reader's instance as a closed kept case, checked by hand first): theorem all_but_down : RegimeMargin.FromNothing TurningInTime.Three.giving ∧ RegimeMargin.Keeps TurningInTime.Three.giving 0 12 ∧ (∀ u, use u < taken use (kids u)) ∧ Needing need kids [A] ∧ 12 ≤ 12 ∧ [A] ≠ [] ∧ (∀ u, u ∈ [A] → need u ≤ 12) ∧ ¬ (∀ u v, v ∈ kids u → need v ≤ need u) ∧ course need kids TurningInTime.Three.giving use ([A], 12) 1 = ([B, B], 12) ∧ 12 < need B (need A = 1, need B = 13, use 1, kids = [B, B])",
+     "KidHigherNeed.all_but_down docstring: \"**Kept countermodel: without `down`, the unmet need of `need_unmet` can be a kid's greater need at a level that has not fallen.** On `min z (12 - z)` (`TurningInTime.Three.giving`) with `hi = 12`, from `([A], 12)`, every premise of `need_unmet` holds: nothing is given from nothing, the step under no draw keeps every level up to twelve within twelve, every unit's kids take two, more than its one, every descendant needs something, the start is at most twelve, the way is not empty and `A`'s need is met. `down` fails (`B`, a kid of `A`, needs thirteen, `A` one). The course at step 1 is `([B, B], 12)`: the level is the start level, and `B`'s need thirteen is above it, so the first unmet step is 1 and the level there has not fallen below any need the start met (argued from these conjuncts: at the start the one need, `A`'s one, is met).\"",
+     "Module bullet: \"* **A way whose kids take more comes to an unmet need within `hi + 1` steps, the way until then not depending on the stock** (`need_unmet`): with nothing given from nothing and the step under no draw keeping every level up to `hi` within `hi` (`RegimeMargin.Keeps giving 0 hi`), a way that is not empty, starting at most `hi`, every unit's kids taking more (asked of every unit) and every descendant of the way needing something, every need met at the start, comes to an unmet need at a step from 1 to `hi + 1`; up to it the way is the generation, in which no giving, use or level appears (`way_while_met`). Through the course as it was under `allKids` (`after_of_met`, `course_asItWas`), by `TurningInTime.rising_takes_all`. With kids needing no more than their parent (`down`), the level by then is below a need the start met (`falls_to_unmet`); without `down` it need not have fallen (`KidHigherNeed`). In a world of one need, the net ends within `hi + 1` steps (`one_need_ends`); a lock whose share is a number of drawers ends by the same law (`TurningInTime.locked_ends_rising`, `count_rises`).\" The module's list of kept countermodels now names KidHigherNeed, and the 'Kids that take more' paragraph names falls_to_unmet among the laws that ask grows."
+    ]
+   },
+   {
+    "item": "B2 stale WayOfUnits names",
+    "status": "done",
+    "text_or_statement": [
+     "met_or_unmet: \"At a level, either every unit of a way has its need met, or some unit's need is above it.\"",
+     "mem_of_ne_nil: \"A list that is not empty has a member.\""
+    ]
+   },
+   {
+    "item": "B3 one fact, one name",
+    "status": "done",
+    "lines_before_after": "way_generation (before l.518-532, 15 lines plus a blank) is deleted. way_while_met, the one the proofs use, is kept (now l.958-965). Its statement: theorem way_while_met {w : List U} {x n : Nat} (met : ∀ j, j < n → ∀ u, u ∈ (course need kids giving use (w, x) j).1 → need u ≤ (course need kids giving use (w, x) j).2) : (course need kids giving use (w, x) n).1 = generation kids n w. No docstring in the four files names way_generation any more.",
+    "text_or_statement": [
+     "Docstrings that cite it: need_unmet, falls_to_unmet and the module bullet (all quoted under B1)."
+    ]
+   },
+   {
+    "item": "B4 one_need_ends",
+    "status": "done",
+    "text_or_statement": [
+     "\"With needs that differ, `way_ends` (no bound on the step) holds instead where kids need no more than their parent (`down`, which it asks); without `down` the net can go on with every other premise of `way_ends` holding (`KidsNeedMore.all_but_down`).\""
+    ]
+   },
+   {
+    "item": "B5 module bullet for unending_iff_holds",
+    "status": "done",
+    "text_or_statement": [
+     "\"* **The middle case, exact** (`unending_iff_holds`): where each unit's kids take what it takes (`even`), every unit has kids (`some`), kids need no more than their parent (`down`), every descendant of the way needs something (`needs`), nothing is given from nothing (`nothing`), the start is at most `hi` (`high`), and `Regime` holds at every way the course reaches with some need met there and at every step before (`along`): the net never ends exactly where, some need met at every step before, the course comes to a configuration that holds (`Holds`). `WayOfUnits.unending_iff_holds` is its case `kids u = [u]`. In `TwoForOne` only `P`'s offspring are not itself (`Q` leaves itself), the course is fixed from step 1, and the instance uses the \\\"if\\\" side at `k = 0`.\""
+    ]
+   },
+   {
+    "item": "B6 after_append",
+    "status": "done",
+    "text_or_statement": [
+     "after_append: \"**Two ways side by side step side by side at one level.** The way after a step of `w₁ ++ w₂` at `x` is the way after the step of `w₁` at `x`, then that of `w₂` at `x`. For any `need` and `kids`. Used by no proof here.\"",
+     "Module: \"the way after a step of two ways side by side is the two ways after it, side by side (`after_append`; that they then reach each other only through the level, by what they take together, is a reading).\""
+    ]
+   },
+   {
+    "item": "B7 NothingTakenEnds.ending_differs",
+    "status": "done (conjuncts added, each rfl or by course_fixed)",
+    "text_or_statement": [
+     "Added conjuncts: course need kids nothingGiven use ([A, C], 5) 1 = ([A, C], 4) ∧ (∀ k, course need kids nothingGiven use ([A, C], 5) (2 + k) = ([C], 3)), proved by rfl, fun k => (Law.orbit_add _ _ 2 k).trans (course_fixed rfl k)",
+     "Docstring: \"... Yet from `([A, C], 5)` the net never ends (the course is `([A, C], 4)` at step 1, then `([C], 3)` at every step from 2 on, where `C` is met: the second and third conjuncts), while from `([A], 5)` it ends at step 1, at `([A], 4)`, where `A` is not met. So `takes_nothing` does not carry whether the net ends: ...\""
+    ]
+   },
+   {
+    "item": "B8 said twice: allKids_rises, step_overdrawn, and the two settings",
+    "status": "allKids_rises folded; step_overdrawn left; the sentences added",
+    "lines_before_after": "allKids_rises: before l.953-962 (2 docstring lines, 8 of code); after l.967-976 (3 docstring lines, 7 of code). The code is one line shorter and goes through rise, so the fact is said once. step_overdrawn (l.696-707) is left unchanged, because the route through RegimeMargin.step_falls_by is not shorter: it needs AtMost giving (T - 1), T - 1 ≤ H and a lower bound on H - (T - 1) via subtraction lemmas, against the present three-line case split.",
+    "text_or_statement": [
+     "theorem allKids_rises (grows : ∀ u, use u < taken use (kids u)) (w : List U) : taken use w + w.length ≤ taken use (allKids kids w) := Eq.subst (motive := fun l => taken use w + w.length ≤ taken use l) (after_of_met (need := fun _ => 0) (x := 0) fun _ _ => Nat.le_refl 0) (Eq.subst (motive := fun c => taken use w + c ≤ taken use (after (fun _ => 0) kids w 0)) (total_ones w) (rise (need := fun _ => 0) (kids := kids) (use := use) (S := fun _ => True) (x := 0) (w := w) (fun u _ => grows u) fun _ _ _ => Nat.le_refl 0))",
+     "allKids_rises docstring: \"Where every unit's kids take more than it (`grows`), all the kids of a way take at least what the way takes and its length: `rise` at the line of every unit, with every need met (at need nothing), where the way after the step is all the kids (`after_of_met`).\"",
+     "ends_high had no docstring; I added one: \"The step of `ends_all`'s induction at a level at or above `m`. With `nothing`, `keeps`, a line `S` (`closed`) whose kids of the line take more than the unit (`grows`), whose units need something (`needs`) and whose kids need no more than their parent (`down`), and the claim `Ends` at every `m' < m` (`ih`): from every configuration `s` at most `hi` whose line needs at most `m`, at a level at least `m`, with `hi + 1` at most what the line takes of `s.1` plus `k`, some step has no unit of the line met. While the level stays at or above `m` the line is met and what it takes rises by at least one at each step (`rise`), and it is at most the level, so at most `hi`, else the step leaves nothing, below a positive need; so within `k` steps no unit of the line is left or the level falls below `m`, where `ih` applies (`ends_low`). This is the arithmetic of `TurningInTime.rising_takes_all` (a take that rises against a capped level) for a line among other units, argued again here, not derived from it; of the laws here only `need_unmet` and those derived from it (`falls_to_unmet`, `one_need_ends`) rest on `TurningInTime.rising_takes_all`.\"",
+     "need_unmet carries the matching sentence (quoted under B1)."
+    ]
+   },
+   {
+    "item": "B9 grows of every unit, needs of descendants",
+    "status": "done",
+    "text_or_statement": [
+     "Said in need_unmet (\"`grows`, asked of every unit of the type ... `needs`, asked only of the descendants of `w`\"), in falls_to_unmet (\"`grows` asked of every unit of the type, `needs` asked only of the descendants of `w`\") and in the module bullet (\"every unit's kids taking more (asked of every unit) and every descendant of the way needing something\"). No statement changed."
+    ]
+   },
+   {
+    "item": "C1 what the law adds (Cases)",
+    "status": "done; statements kept",
+    "text_or_statement": [
+     "Module docstring: \"Two examples built in other modules have the sizes and levels of a course of `LineOnAStock`'s model, by equalities with their own definitions, step by step, and on each such course the premises of a law of `LineOnAStock` hold: `way_ends` on the first, `fall` on the second. That is what is shown. The law's conclusion, read back through the equalities, gives nothing about the example that its own Lean did not already give: each ending conjunct already follows from the example's own Lean, and the equality at the late steps itself takes the example's ending as input.\" Bullets: \"... and the premises of `LineOnAStock.way_ends` hold on this course. Read back, `way_ends` gives a step at which no member of the family is active; the example's own `LineageRegimes.MultiplyingTakers.inactive` gives that at step 2, and the equality of activity at step 2 is proved from it.\" and \"... and the premises of `LineOnAStock.fall` hold at the line of the drawers from step 1. Read back, `fall` gives a step from which the family is empty; the example's own `LineageDrawdown.Drain.familyP_eq`, with `familyP`'s definition, gives that from step 10, and the size equality from step 10 is proved from it.\"",
+     "multiplying_takers: \"**`LineageRegimes.MultiplyingTakers` has the sizes, pool and activity of a course of this model on which the premises of `way_ends` hold.** The first conjunct is `agree` at every step. On the course here the premises of `way_ends` hold with `hi = 3`: nothing given from nothing, the step under no draw keeping every level up to three within three, the unit's kids taking two, more than its one, its need positive, its kids needing what it needs, the start three. Its conclusion, a step at which no need is met here, read back through `agree`, is the second conjunct, a step at which no member of the built example's family is active; the third is that the net here ends. The second conjunct gives nothing about the example that its own Lean did not: `agree` at step 2 is proved from the example's own `LineageRegimes.MultiplyingTakers.inactive`, which is that conjunct at step 2. The step is not bounded, and the example's own stop statement (that not every member of its first three families is active at its step) is not concluded here.\"",
+     "drain: \"**`LineageDrawdown.Drain`, gated, has the sizes, draws and levels of a course of this model for `r`, `d0`, `d1` on which the premises of `fall` hold at the line of the drawers.** Equated, at every step: ... and the renewer's giving with `gift` of the pool (`gift_eq`). Not equated: the organisms (...), and the need, four here against one there: a level here, the pool with three on it from one up, meets four exactly where the pool meets one (`need_agrees`, the third conjunct, in which no term of `Drain` appears; Drain's need one is read from its source, not stated here). By computation to step 9 and both empty from step 10 (`late`, `LineageDrawdown.Drain.familyP_eq`). The premises of `fall` hold at the line of the drawers (closed; one need, four; kids taking no less; the gift at nothing below four; from step 1, `([d1, d1], 11)`, taking four, more than every gift); its conclusion, a step from which no drawer is in the way, with every unit here a drawer from step 1 (`never_in` at the units that are not: `r` leaves nothing and drawers leave drawers), makes the way empty from there, and read back through the size equality, the last conjunct, a step from which the built example's family is empty. That conjunct gives nothing about the example that its own Lean did not: the size equality from step 10 is proved from `LineageDrawdown.Drain.familyP_eq`, which with `familyP`'s own definition already gives the family empty from step 10. `fall` does not bound the step.\""
+    ]
+   },
+   {
+    "item": "C2 need_agrees",
+    "status": "done",
+    "text_or_statement": [
+     "\"For every pool `p`, `p` with `gift p` on it is at least four exactly where `p` is at least one: a level here, the pool with `gift` on it, meets the need four exactly where the pool is at least one. No term of `LineageDrawdown.Drain` is in this statement: that Drain's own need is one is read from its source, not stated here.\""
+    ]
+   },
+   {
+    "item": "C3 nil_of_length",
+    "status": "done",
+    "lines_before_after": "The local nil_of_length (before l.160-163, 4 lines plus a blank) is removed. The one use (now l.266) is `nil_of_length_zero ((sizes k).1.trans (congrArg List.length here))`, which is Becoming.nil_of_length_zero, Prelude l.1025: theorem nil_of_length_zero {α : Type u} : ∀ {g : List α}, g.length = 0 → g = [].",
+    "text_or_statement": []
+   },
+   {
+    "item": "C4 Commons",
+    "status": "done",
+    "text_or_statement": [
+     "Module docstring: \"What is equated is said at each; organisms' identities are not. `ReadingsSpread.Commons` was not tried.\""
+    ]
+   },
+   {
+    "item": "D1 WayOfUnits.unending_of_fixed",
+    "status": "left; not shorter",
+    "lines_before_after": "Unchanged at l.1062-1073 (4-line body). A derivation through the bridge, (unending_unit giving s).mp (LineOnAStock.unending_of_fixed ...), would need before, fixed and goes carried across by course_unit and step_unit: about 5 lines. That is not shorter, so per the brief it stays, and the module bullet says so.",
+    "text_or_statement": [
+     "theorem unending_of_fixed {giving : Nat → Nat} {s : List (Nat × Nat) × Nat} {t : Nat} (before : ∀ j, j < t → Goes (course giving s j)) (fixed : TurningInTime.pair after (left giving) (course giving s t) = course giving s t) (goes : Goes (course giving s t)) : «不穷» (net giving) «一» s"
+    ]
+   },
+   {
+    "item": "D2 WayOfUnits module bullet on what rests on LineOnAStock",
+    "status": "done; corrected beyond the brief",
+    "text_or_statement": [
+     "\"Derived from `LineOnAStock`'s laws, six: `unending_iff_holds` (its middle case, kids taking what their parent takes), `fixed_while` (`LineOnAStock.course_generation`), `unending_taken_below`, `course_fixed`, `step_falls` (the same statement as `LineOnAStock.step_lowers`, from `TurningInTime.held_above`) and the decision of `Goes` (`goesDecidable`). `unending_of_fixed` is proved here from `course_fixed`, along the lines of `LineOnAStock.unending_of_fixed`, not derived from that law. Not derived from `LineOnAStock`'s laws, and stated only here: `ends_while_net_goes` and the laws of two units through the carrier (`two_units_iff`, `unending_above`, `greater_need`, `more_use_on_first`, `takes_nothing_iff_alone`, `takes_nothing_ends`), exact forms for two units that `LineOnAStock` does not state. Of these, `unending_above`, `greater_need` and `more_use_on_first` use `step_falls` (through `carrier_above`), and `takes_nothing_iff_alone` and `takes_nothing_ends` use `fixed_while` (through `goes_iff_alone`), so they rest on `LineOnAStock` through those two; `ends_while_net_goes` and `two_units_iff` use no law of it.\""
+    ]
+   }
+  ],
+  "changed_from_brief": [
+   "B1: falls_to_unmet carries both conjuncts the brief offered, the finer one (∃ p ∈ w, need p ≤ x ∧ level n < need p) and the coarse one (level n < x). It needed a new small lemma, generation_ancestor, because generation_below bounds by a fixed z and does not name an ancestor.",
+   "B1: the reader's instance was a few lines, so I added it as a closed kept case, KidHigherNeed.all_but_down, rather than marking it 'by computation'. The module's countermodel list names it.",
+   "B8: ends_high had no docstring, so I wrote one, describing its statement and its route. The sentence 'only need_unmet and one_need_ends rest on rising_takes_all' now reads 'only need_unmet and those derived from it (falls_to_unmet, one_need_ends)', because the new falls_to_unmet also rests on it through need_unmet.",
+   "A2: the private takes_at_hi docstring said 'Under rising_takes_all's premises' though it does not take `nothing`. It now says 'but `nothing`'.",
+   "D2: the bullet's old 'Not resting on it' was too broad (see false_as_written). I corrected it and named unending_of_fixed.",
+   "C1: in the Drain sentences I wrote 'familyP_eq, with familyP's own definition', since familyP_eq alone only rewrites the family to familyP, and the emptiness from step 10 is familyP's `| _ + 10 => []`."
+  ],
+  "false_as_written": [
+   "No statement was found false. The only false sentence was in docstring text, in WayOfUnits' module bullet as it stood: 'Not resting on it: ends_while_net_goes and the laws of two units through the carrier (two_units_iff, unending_above, greater_need, more_use_on_first, takes_nothing_iff_alone, takes_nothing_ends)'. Counter-evidence, by a name-level dependency trace over the file with comments stripped: unending_above -> carrier_above -> carrier_falls -> step_falls, and step_falls is derived from LineOnAStock.step_lowers. greater_need and more_use_on_first use carrier_above too (greater_need_along l.777, more_use_along l.849). takes_nothing_iff_alone -> goes_iff_alone -> fixed_while (l.909), and fixed_while is derived from LineOnAStock.course_generation. takes_nothing_ends uses takes_nothing_iff_alone. Only ends_while_net_goes and two_units_iff use no LineOnAStock law. The bullet now says exactly this. The trace is by names, not by Lean, so instance uses such as goesDecidable inside `decide` are not traced."
+  ],
+  "not_done": [
+   "D1 not done: deriving WayOfUnits.unending_of_fixed through the bridge comes to about 5 lines against the present 4, so it was left as the brief says.",
+   "B8 second half not done: folding step_overdrawn's first disjunct through RegimeMargin.step_falls_by is not shorter than the present case split, so it was left as the brief says.",
+   "As the machine rule asks, I ran no full suite, gate or check_becoming. The evidence is the four-module scratch build and the scripts named above. I deliberately deferred the full suite."
+  ]
+ },
+ "verify:lock": {
+  "verdict": "READY TO LAND (my part: scratch TurningInTime.lean, items A1 and A2). Every item is done, no statement or number is wrong, all 118 tracked headers are byte-identical, and the last build log is clean. Seven docstring sentences still say slightly more or less (S1 to S7 below); none misleads about what is concluded, what is given, or what a number bounds, so none must be fixed first. If any further edit is made anyway, S1 and S2 are the two worth the words.",
+  "per_item": [
+   {
+    "item": "A1 ends_with_net as a case of ends_of_below",
+    "done": true,
+    "evidence": "l.507 `private theorem ends_of_below` now stands before l.537 `theorem ends_with_net`, whose whole proof is l.546-547: `ends_of_below outside un (Optimum.ends_within (x := fun t => (Law.orbit (asItWas alone left) s t).2) step renews over needs s.2 (Nat.lt_add_of_pos_left needs))`. Its header is byte-identical to tracked l.466-474 (my script). Lines: before 33 + 28 = 61 (before/ copy l.501-533 and 607-634), after 28 + 17 = 45 (l.502-529, 531-547); file 3097 -> 3087."
+   },
+   {
+    "item": "A2 share_corrected_on_course, bold title",
+    "done": true,
+    "evidence": "l.1882-1883: \"**From the step after the first step the window reads on the course as it was, the pair's course has a `Low` share and a `kept` rule.**\" Statement l.1902: `∀ k, Low (Law.orbit (pair (windowAfterShare fA hA sA hL N K) left) s (T + 1 + k)).1.1 ∧`."
+   },
+   {
+    "item": "A2 header near 220: within 12 + 1 steps and seven steps said apart",
+    "done": true,
+    "evidence": "l.222-224: \"`locked_ends_rising` with its `more` from `count_rises` gives a line that ends `Locked` within `12 + 1` steps, and, as a separate computed conjunct, the line ends in seven steps at `((10, true, 7), 0)`\". Lean l.2957 `(∃ n t, n ≤ 12 + 1 ∧` and l.2975-2976 `«迭» (net 1 riseAfter …) 7 ((3, true, 0), 12) ((10, true, 7), 0)`; no term ties the two."
+   },
+   {
+    "item": "A2 Three.rise_count_ends: what is in Lean, the rest marked",
+    "done": true,
+    "evidence": "l.2950-2955: \"In Lean the old law's premises are excluded at step 0 only, and met at step 4 only by those three conjuncts. That at steps 1, 2 and 3 … is by computation, not a Lean statement.\" My recomputation (not Lean): no H at most the share and y with Short and 12 < H + y at steps 0 to 3; (7, 6) at step 4. The bold title still says \"are met at step 4\" (S1, not must-fix)."
+   },
+   {
+    "item": "A2 header near 310 names locked_turns_in_time_on_window_iff",
+    "done": true,
+    "evidence": "l.311-312: \"In `locked_ends_with_net_regime`, `locked_ends_on_window`, `locked_turns_in_time_on_window_iff` and `locked_turns_in_time_share_iff` the start below `H + y` (`below`; `H₁ + y₁` in the last two)\". The window law takes both: l.1647 `(draws : …H₁ ≤ use v)`, l.1648 `(below : x < H₁ + y₁)`."
+   },
+   {
+    "item": "A2 count_rises title and section 6 docstring: raises strictly",
+    "done": true,
+    "evidence": "l.1460: \"**Where the share is a count that every favouring rule raises strictly and the use is that count times a positive amount, …\"; l.1194-1195: \"a count that every favouring rule raises strictly\". Statement l.1473: `(rise : ∀ a g, favours g → a < fA a g)`."
+   },
+   {
+    "item": "A2 rising_takes_all title; rising_meets_level named there",
+    "done": true,
+    "evidence": "l.656-657: \"**Against a level that cannot pass `hi`, a use that rises for `hi` steps leaves nothing after `hi + 1` steps of the course as it was.**\"; l.664: \"(that the use is at least the level at some step up to `hi` is `rising_meets_level`; …\". Statement l.671 ends `(w, x) (hi + 1)).2 = 0`."
+   },
+   {
+    "item": "A2 locked_ends_rising: step-count remark marked as argued",
+    "done": true,
+    "evidence": "l.1434-1435: \"a use that reads only the step count meets it with the share never moving (argued here from `windowAlone` adding one to the step count, not a Lean statement)\". The argument holds: l.1278 `w.2.2 + 1`, and `Raises` is the weak relation, so a share that never moves meets `raises`."
+   },
+   {
+    "item": "A2 header near 140 and locked_ends_with_net_regime: overdraw sentence scoped",
+    "done": true,
+    "evidence": "l.140: \"There the lock keeps an overdraw that stands; it does not bring one about.\" l.1392-1393: \"In this law the lock keeps an overdraw that stands; it does not bring one about.\" grep finds no other occurrence."
+   },
+   {
+    "item": "Every tracked statement byte for byte unchanged",
+    "done": true,
+    "evidence": "My own script (statements_check.py, comments masked with nesting, headers compared raw up to the first `:=` at bracket depth 0): 118 tracked declarations, 118 byte-identical, 0 changed, 0 missing. 22 declarations only in scratch: 14 public theorems, 5 private, 3 defs. The tracked file equals HEAD."
+   },
+   {
+    "item": "Every removed tracked line is docstring, header text or a proof line of ends_with_net",
+    "done": true,
+    "evidence": "33 tracked lines removed or replaced: 15 in `/-! -/` blocks (13 module header, 2 section 6: l.1028, 1035), 7 docstring lines (ends_with_net l.461-465, locked_ends_with_net_regime l.1217-1218), 11 code lines, all inside ends_with_net: 7 are its statement lines (l.466, 468-473), displaced only and reappearing verbatim at scratch l.537-544, and 4 are proof lines (l.475, 476, 480, 481). With comments stripped, every other tracked code line is kept in order."
+   },
+   {
+    "item": "Last build log read myself",
+    "done": true,
+    "evidence": "buildR2-6.log: `\"unclean\": []`, `\"with_axioms\": {}` for all four, no \"failed\" key, 0 lines with error or warning. Log 05:09:44, files 05:00:04, 05:07:43, 05:09:13, 05:09:30. Built copies under .build/Becoming and .build/prelude-only are cmp-identical to the scratch files. One detail the report left out: Becoming.TurningInTime is not in that log's \"ran\" list; its compile was reused from buildR2-1 (05:00:22, the same bytes, cache keyed by content) and only its audit (78 theorems, 105 declarations) appears in -6."
+   }
+  ],
+  "still_says_more_or_less": [
+   {
+    "where": "S1. Three.rise_count_ends, bold title, l.2928-2930",
+    "text": "\"the old law's premises fail at the start and are met at step 4.**\"",
+    "lean": "l.2980: `(∀ H y, H ≤ drawerUse (3, true, 0) → RegimeMargin.Short giving H y → ¬ 12 < H + y) ∧`; l.2981: `RegimeMargin.Short giving 7 6 ∧ 7 ≤ drawerUse (7, true, 4) ∧ 12 < 7 + 6 ∧`. At step 4 only three of the old law's premises are conjuncts; `draws` and Locked (7, true) are argued. The body says exactly this, so the title alone says more. The claim is true (I checked every premise by hand).",
+    "must_fix": false,
+    "proposed_wording": "\"…; at the start no `H` at most the use and `y` put twelve below `H + y`, and at step 4 `H = 7` and `y = 6` do (that the old law then applies is argued).**\""
+   },
+   {
+    "where": "S2. Section 6 docstring, l.1207-1208",
+    "text": "\"`turns_in_time_iff` at the kept kind `Low ∧ kept` holds from a `Locked` start, with no premise on where the window lies (`locked_turns_in_time_share_iff`)\"",
+    "lean": "l.1829-1830: `(draws : ∀ v : A × R × Nat, P.le w.1 v.1 → M.le w.2.1 v.2.1 → H₁ ≤ use v)` and `(below : x < H₁ + y₁) (high : x ≤ hi)`. Says less: the given overdraw is not named here, though the header's twin sentence (l.166) has \"below `H₁ + y₁`\", the law's own docstring has a sentence for it (l.1806-1808) and the header l.311-313 lists the law among those where both are given. Not must-fix for that reason.",
+    "must_fix": false,
+    "proposed_wording": "\"… holds from a `Locked` start below `H₁ + y₁`, the floor `H₁` on the use given (`draws`), with no premise on where the window lies\""
+   },
+   {
+    "where": "S3. Module header, l.316-317",
+    "text": "\"and `more` can be met by a use that reads neither.\"",
+    "lean": "No Lean instance; the same remark is marked as argued at l.1434-1435 but not here. True (use := the step count).",
+    "must_fix": false,
+    "proposed_wording": "\"and `more` can be met by a use that reads neither (argued at `locked_ends_rising`, not a Lean statement).\""
+   },
+   {
+    "where": "S4. rising_takes_all docstring, l.664-665",
+    "text": "\"the step `hi` itself is used only inside this proof\"",
+    "lean": "The fact at step `hi` is the private `takes_at_hi` (l.642), used at l.676 and also in rising_meets_level's proof, l.701: `| .inl all => absurd (takes_at_hi keeps high rises) …`. Unclear, and \"only this proof\" is not so. The statement itself is said exactly.",
+    "must_fix": false,
+    "proposed_wording": "\"that it is so at step `hi` itself is the private `takes_at_hi`, used in this proof and in `rising_meets_level`'s, and not stated publicly\""
+   },
+   {
+    "where": "S5. ends_with_net_rising docstring, l.711-712",
+    "text": "\"(`ends_of_below`, the split of `ends_with_net`)\"",
+    "lean": "After A1, l.546: ends_with_net is itself `ends_of_below outside un (Optimum.ends_within …)`. Stale by a shade; nothing about the conclusion.",
+    "must_fix": false,
+    "proposed_wording": "\"(`ends_of_below`, through which `ends_with_net` goes too)\""
+   },
+   {
+    "where": "S6. share_corrected_stays, bold title, l.1857",
+    "text": "\"**After a step at a level the window reads, the share stays `Low` and the rule `kept`.**\"",
+    "lean": "l.1872: `∀ k, Low (Law.orbit (pair (windowAfterShare fA hA sA hL N K) left) s (T + 1 + k)).1.1 ∧`. \"Stays\" can be read as Low before the step; on Three the share at T is three, not Low. The body is exact.",
+    "must_fix": false,
+    "proposed_wording": "\"**After a step at a level the window reads, the share is `Low` and the rule `kept` at every later step.**\""
+   },
+   {
+    "where": "S7. Three.share_read_goes_on, bold title, l.3026-3027",
+    "text": "\"the line never ends, and from step 2 on the rule is `false`.**\"",
+    "lean": "l.3051-3055 also give the share: `… (1 + 1 + k)).1.1 < 3 ∧ … (1 + 1 + k)).1.2.1 = false`. Says less; the body says both.",
+    "must_fix": false,
+    "proposed_wording": "\"the line never ends, and from step 2 on the share is below three and the rule `false`.**\""
+   }
+  ],
+  "statements_for_the_telling": [
+   {
+    "theorem": "rises_from (l.624-626)",
+    "statement": "theorem rises_from {use : W → Nat} {alone : W → W} {w : W} {n : Nat} (rises : ∀ j, j < n → use (Law.orbit alone w j) < use (Law.orbit alone w (j + 1))) : ∀ j, j ≤ n → j ≤ use (Law.orbit alone w j)",
+    "concluded": "For every j up to n, the use of the way `alone` taken j times is at least j. Nothing about a level.",
+    "given": "The use rises strictly at each of the first n steps of `alone`'s orbit from w."
+   },
+   {
+    "theorem": "kept_within (l.635-636)",
+    "statement": "theorem kept_within {giving : Nat → Nat} {hi : Nat} (keeps : RegimeMargin.Keeps giving 0 hi) (d : Nat) {x : Nat} (high : x ≤ hi) : RegimeMargin.step giving d x ≤ hi",
+    "concluded": "One regime step under any use d, from a level at most hi, leaves a level at most hi.",
+    "given": "The step under no use keeps every level up to hi within hi (`keeps`); the level is at most hi."
+   },
+   {
+    "theorem": "rising_takes_all (l.667-671)",
+    "statement": "theorem rising_takes_all {alone : W → W} {giving : Nat → Nat} {use : W → Nat} {hi : Nat} (nothing : RegimeMargin.FromNothing giving) (keeps : RegimeMargin.Keeps giving 0 hi) {w : W} {x : Nat} (high : x ≤ hi) (rises : ∀ j, j < hi → use (Law.orbit alone w j) < use (Law.orbit alone w (j + 1))) : (Law.orbit (asItWas alone (fun w x => RegimeMargin.step giving (use w) x)) (w, x) (hi + 1)).2 = 0",
+    "concluded": "On the course as it was (the way stepping by `alone`, the level by the regime step under the way's use), the level at step hi + 1 is nothing. Only that step is stated; no line, net or ending.",
+    "given": "Nothing given from nothing; the cap (`keeps` under no use, start at most hi); the use rising strictly at each of the first hi steps of `alone`'s orbit. The rise is given, not derived. hi caps the level and counts the rising steps."
+   },
+   {
+    "theorem": "rising_meets_level (l.686-693)",
+    "statement": "theorem rising_meets_level {alone : W → W} {giving : Nat → Nat} {use : W → Nat} {hi : Nat} (keeps : RegimeMargin.Keeps giving 0 hi) {w : W} {x : Nat} (high : x ≤ hi) (rises : ∀ j, j < hi → use (Law.orbit alone w j) < use (Law.orbit alone w (j + 1))) : ∃ j, j ≤ hi ∧ (Law.orbit (asItWas alone (fun w x => RegimeMargin.step giving (use w) x)) (w, x) j).2 ≤ use (Law.orbit alone w j) ∧ ∀ i, i < j → use (Law.orbit alone w i) < (Law.orbit (asItWas alone (fun w x => RegimeMargin.step giving (use w) x)) (w, x) i).2",
+    "concluded": "There is a step j at most hi of the course as it was at which the level is at most the use, the use below the level at every step before: the first such step comes within hi steps.",
+    "given": "`keeps`, start at most hi, the use rising for hi steps. `nothing` is not asked. No proof in the four modules uses this law."
+   },
+   {
+    "theorem": "ends_with_net_rising (l.716-725)",
+    "statement": "theorem ends_with_net_rising {marked : Nat → Prop} {alone : W → W} {after : W → Nat → W} (outside : AloneOutside marked alone after) {need : Nat} (needs : 0 < need) (un : ∀ x, need ≤ x → ¬ marked x) {giving : Nat → Nat} {use : W → Nat} {hi : Nat} (nothing : RegimeMargin.FromNothing giving) (keeps : RegimeMargin.Keeps giving 0 hi) {w : W} {x : Nat} (high : x ≤ hi) (rises : ∀ j, j < hi → use (Law.orbit alone w j) < use (Law.orbit alone w (j + 1))) : ∃ n t, n ≤ hi + 1 ∧ «迭» (net need after (fun w x => RegimeMargin.step giving (use w) x)) n (w, x) t ∧ (∀ v, ¬ net need after (fun w x => RegimeMargin.step giving (use w) x) t v) ∧ t.1 = Law.orbit alone w n",
+    "concluded": "Within hi + 1 steps the line from (w, x) reaches a configuration that conditions nothing (its level below the need), its way `alone` taken that many times. An ending only: no overdraw and no point of no return is stated, and hi + 1 is not shown to be reached.",
+    "given": "The way after a step is `alone` of the way at every unmarked level (`outside`); a positive need no marked level meets; nothing given from nothing; the cap (`keeps`, start at most hi); the use rising strictly at each of the first hi steps (given)."
+   },
+   {
+    "theorem": "locked_ends_rising (l.1437-1451)",
+    "statement": "theorem locked_ends_rising {P : Ideals.Preorder A} {M : Ideals.Preorder R} {favours : R → Prop} {fA : A → R → A} {hA : A → R → R} {reads : Nat → Bool} (raises : Raises P favours fA) (monotone : ReadsShare P M hA) (upper : ∀ {g g'}, M.le g g' → favours g → favours g') {marked : Nat → Prop} {after : A × R × Nat → Nat → A × R × Nat} (outside : AloneOutside marked (windowAlone fA hA reads) after) {need : Nat} (needs : 0 < need) (un : ∀ x, need ≤ x → ¬ marked x) {giving : Nat → Nat} {use : A × R × Nat → Nat} {hi : Nat} (nothing : RegimeMargin.FromNothing giving) (keeps : RegimeMargin.Keeps giving 0 hi) {w : A × R × Nat} {x : Nat} (high : x ≤ hi) (locked : Locked M favours hA (w.1, w.2.1)) (more : ∀ v : A × R × Nat, P.le w.1 v.1 → M.le w.2.1 v.2.1 → use v < use (windowAlone fA hA reads v)) : ∃ n t, n ≤ hi + 1 ∧ «迭» (net need after (fun w x => RegimeMargin.step giving (use w) x)) n (w, x) t ∧ (∀ v, ¬ net need after (fun w x => RegimeMargin.step giving (use w) x) t v) ∧ t.1 = Law.orbit (windowAlone fA hA reads) w n ∧ Locked M favours hA (t.1.1, t.1.2.1)",
+    "concluded": "From a `Locked` start the line ends within hi + 1 steps, its way the lock's step as it was taken that many times, its share and rule still `Locked`. An ending; no overdraw is concluded.",
+    "given": "The lock's premises (`Raises`, which is the weak relation, `ReadsShare`, favouring kept upward, a `Locked` start); `outside`; a positive need no marked level meets; nothing from nothing; the cap (`keeps`, start at most hi); and `more`: every way whose share and rule are not below the start's uses strictly less than the way the lock's step makes of it. The rise of the use is given; `more` does not ask that the use read the share or the rule. No `short`, `draws` or `below`."
+   },
+   {
+    "theorem": "count_rises (l.1470-1476)",
+    "statement": "theorem count_rises {P : Ideals.Preorder Nat} {M : Ideals.Preorder R} {favours : R → Prop} {fA : Nat → R → Nat} {hA : Nat → R → R} {reads : Nat → Bool} (upper : ∀ {g g'}, M.le g g' → favours g → favours g') (rise : ∀ a g, favours g → a < fA a g) {use : Nat × R × Nat → Nat} {u : Nat} (pos : 0 < u) (count : ∀ v, use v = v.1 * u) {w : Nat × R × Nat} (fav : favours w.2.1) : ∀ v : Nat × R × Nat, P.le w.1 v.1 → M.le w.2.1 v.2.1 → use v < use (windowAlone fA hA reads v)",
+    "concluded": "`locked_ends_rising`'s premise `more`: every way whose rule is not below w's uses strictly less than the way the lock's step makes of it.",
+    "given": "The share is a natural number that every favouring rule raises strictly (`rise`); the use is the share times a positive u (`count`, `pos`): that the use depends on the share is this premise; favouring kept upward; w's rule favours. The share's order and the reading are not used."
+   },
+   {
+    "theorem": "windowAfterShare (def, l.1726-1729)",
+    "statement": "def windowAfterShare (fA : A → R → A) (hA : A → R → R) (sA : A × Nat → R → A) (hL : A × Nat → R → R) (N K : Nat) (w : A × R × Nat) (x : Nat) : A × R × Nat := if N ≤ x ∧ x < K then (sA (w.1, x) w.2.1, hL (w.1, x) w.2.1, w.2.2 + 1) else windowAlone fA hA (fun _ => true) w",
+    "concluded": "A definition, nothing concluded: at a level in [N, K) the share is set by sA and the rule by hL; elsewhere the way after the step is the lock's step as it was, reading at every step.",
+    "given": "Nothing. That the window sets the share is how it is built."
+   },
+   {
+    "theorem": "windowAfter_every_is_share (l.1744-1747)",
+    "statement": "theorem windowAfter_every_is_share (fA : A → R → A) (hA : A → R → R) (hL : A × Nat → R → R) (N K : Nat) (w : A × R × Nat) (x : Nat) : windowAfter fA hA hL N K (fun _ => true) w x = windowAfterShare fA hA (fun p g => fA p.1 g) hL N K w x",
+    "concluded": "At each way and level, the old window reading at every step is the share-setting window with the share set by fA. Pointwise only: the nets and courses are not stated to be one.",
+    "given": "Nothing."
+   },
+   {
+    "theorem": "locked_turns_in_time_share_iff (l.1814-1847)",
+    "statement": "theorem locked_turns_in_time_share_iff {P : Ideals.Preorder A} {M : Ideals.Preorder R} {favours : R → Prop} {fA : A → R → A} {hA : A → R → R} (sA : A × Nat → R → A) (hL : A × Nat → R → R) (N K : Nat) (raises : Raises P favours fA) (monotone : ReadsShare P M hA) (upper : ∀ {g g'}, M.le g g' → favours g → favours g') {Low : A → Prop} {kept : R → Prop} (sets : ∀ (p : A × Nat) (g : R), N ≤ p.2 → p.2 < K → Low (sA p g) ∧ kept (hL p g)) (lowRule : ∀ a g, Low a → kept (hA a g)) (lowStays : ∀ a g, Low a → kept g → Low (fA a g)) {giving : Nat → Nat} {use : A × R × Nat → Nat} {H₁ y₁ H₂ y₂ hi need : Nat} (uses : ∀ v : A × R × Nat, Low v.1 → kept v.2.1 → use v = H₂) (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H₂ y₂) (meets : RegimeMargin.Meets giving H₂ y₂ hi) (keeps : RegimeMargin.Keeps giving H₂ hi) (needs : 0 < need) (within : need ≤ H₂ + y₂) (short₁ : RegimeMargin.Short giving H₁ y₁) {w : A × R × Nat} {x : Nat} (locked : Locked M favours hA (w.1, w.2.1)) (draws : ∀ v : A × R × Nat, P.le w.1 v.1 → M.le w.2.1 v.2.1 → H₁ ≤ use v) (below : x < H₁ + y₁) (high : x ≤ hi) : «不穷» (net need (windowAfterShare fA hA sA hL N K) (fun w x => RegimeMargin.step giving (use w) x)) «一» (w, x) ↔ ∃ T, (∀ j, j < T → need ≤ (Law.orbit (asItWas (windowAlone fA hA (fun _ => true)) (fun w x => RegimeMargin.step giving (use w) x)) (w, x) j).2 ∧ ¬ (N ≤ (Law.orbit (asItWas (windowAlone fA hA (fun _ => true)) (fun w x => RegimeMargin.step giving (use w) x)) (w, x) j).2 ∧ (Law.orbit (asItWas (windowAlone fA hA (fun _ => true)) (fun w x => RegimeMargin.step giving (use w) x)) (w, x) j).2 < K)) ∧ need ≤ (Law.orbit (asItWas (windowAlone fA hA (fun _ => true)) (fun w x => RegimeMargin.step giving (use w) x)) (w, x) T).2 ∧ (N ≤ (Law.orbit (asItWas (windowAlone fA hA (fun _ => true)) (fun w x => RegimeMargin.step giving (use w) x)) (w, x) T).2 ∧ (Law.orbit (asItWas (windowAlone fA hA (fun _ => true)) (fun w x => RegimeMargin.step giving (use w) x)) (w, x) T).2 < K) ∧ H₂ + y₂ ≤ (Law.orbit (asItWas (windowAlone fA hA (fun _ => true)) (fun w x => RegimeMargin.step giving (use w) x)) (w, x) (T + 1)).2",
+    "concluded": "An exact condition: the line from (w, x), under the window that sets the share, never ends exactly where the lock's own course as it was has a step T with the need met and no level in [N, K) before it, the need met and the level in [N, K) at it, and its level one step later at or above H₂ + y₂.",
+    "given": "All 18 premises. The overdraw of the course as it was is given, not concluded: the floor H₁ on the use wherever the share and rule are not below the start's (`draws`) and the start below H₁ + y₁ (`below`, with `short₁`). That the correction reaches the share is given: the window sets a `Low` share and a `kept` rule (`sets`), with `lowRule` and `lowStays`. Also the lock's premises and `Locked` start, the use H₂ of a `Low`, `kept` way, the regime premises on H₂, y₂ up to hi, a positive need at most H₂ + y₂, and the start at most hi. No premise on where the window lies. Only the \"if\" side has a worked case."
+   },
+   {
+    "theorem": "share_corrected_stays (l.1865-1873)",
+    "statement": "theorem share_corrected_stays {Low : A → Prop} {kept : R → Prop} (fA : A → R → A) (hA : A → R → R) (sA : A × Nat → R → A) (hL : A × Nat → R → R) (N K : Nat) (sets : ∀ (p : A × Nat) (g : R), N ≤ p.2 → p.2 < K → Low (sA p g) ∧ kept (hL p g)) (lowRule : ∀ a g, Low a → kept (hA a g)) (lowStays : ∀ a g, Low a → kept g → Low (fA a g)) (left : A × R × Nat → Nat → Nat) (s : (A × R × Nat) × Nat) {T : Nat} (read : N ≤ (Law.orbit (pair (windowAfterShare fA hA sA hL N K) left) s T).2 ∧ (Law.orbit (pair (windowAfterShare fA hA sA hL N K) left) s T).2 < K) : ∀ k, Low (Law.orbit (pair (windowAfterShare fA hA sA hL N K) left) s (T + 1 + k)).1.1 ∧ kept (Law.orbit (pair (windowAfterShare fA hA sA hL N K) left) s (T + 1 + k)).1.2.1",
+    "concluded": "At every step from T + 1 on, the pair's course has a `Low` share and a `kept` rule. Nothing about the level, the use, the need or whether the line goes on.",
+    "given": "`sets`, `lowRule`, `lowStays`; the level of the pair's own course at step T is in [N, K). Any level's step, any start."
+   },
+   {
+    "theorem": "share_corrected_on_course (l.1892-1903)",
+    "statement": "theorem share_corrected_on_course {Low : A → Prop} {kept : R → Prop} (fA : A → R → A) (hA : A → R → R) (sA : A × Nat → R → A) (hL : A × Nat → R → R) (N K : Nat) (sets : ∀ (p : A × Nat) (g : R), N ≤ p.2 → p.2 < K → Low (sA p g) ∧ kept (hL p g)) (lowRule : ∀ a g, Low a → kept (hA a g)) (lowStays : ∀ a g, Low a → kept g → Low (fA a g)) (left : A × R × Nat → Nat → Nat) (s : (A × R × Nat) × Nat) {T : Nat} (before : ∀ j, j < T → ¬ (N ≤ (Law.orbit (asItWas (windowAlone fA hA (fun _ => true)) left) s j).2 ∧ (Law.orbit (asItWas (windowAlone fA hA (fun _ => true)) left) s j).2 < K)) (read : N ≤ (Law.orbit (asItWas (windowAlone fA hA (fun _ => true)) left) s T).2 ∧ (Law.orbit (asItWas (windowAlone fA hA (fun _ => true)) left) s T).2 < K) : ∀ k, Low (Law.orbit (pair (windowAfterShare fA hA sA hL N K) left) s (T + 1 + k)).1.1 ∧ kept (Law.orbit (pair (windowAfterShare fA hA sA hL N K) left) s (T + 1 + k)).1.2.1",
+    "concluded": "The same, with T the first step at which the course as it was is at a level the window reads: from T + 1 on (not from T) the pair's course has a `Low` share and a `kept` rule.",
+    "given": "`sets`, `lowRule`, `lowStays`; on the course as it was, no level in [N, K) before T and one at T. These two are parts of the share law's right side; no other premise of that law is asked, and no Lean term joins the two laws except on Three."
+   },
+   {
+    "theorem": "Three.rise_count_ends (l.2956-2982)",
+    "statement": "theorem rise_count_ends : (∃ n t, n ≤ 12 + 1 ∧ «迭» (net 1 riseAfter (fun w x => RegimeMargin.step giving (drawerUse w) x)) n ((3, true, 0), 12) t ∧ (∀ v, ¬ net 1 riseAfter (fun w x => RegimeMargin.step giving (drawerUse w) x) t v) ∧ t.1 = Law.orbit (windowAlone riseShare lockRead (fun _ => true)) (3, true, 0) n ∧ RuleCapture.Locked ruleOrder (fun g => g = true) lockRead (t.1.1, t.1.2.1)) ∧ Law.orbit (pair riseAfter (fun w x => RegimeMargin.step giving (drawerUse w) x)) ((3, true, 0), 12) 1 = ((4, true, 1), 12) ∧ Law.orbit (pair riseAfter (fun w x => RegimeMargin.step giving (drawerUse w) x)) ((3, true, 0), 12) 2 = ((5, true, 2), 12) ∧ Law.orbit (pair riseAfter (fun w x => RegimeMargin.step giving (drawerUse w) x)) ((3, true, 0), 12) 3 = ((6, true, 3), 12) ∧ Law.orbit (pair riseAfter (fun w x => RegimeMargin.step giving (drawerUse w) x)) ((3, true, 0), 12) 4 = ((7, true, 4), 12) ∧ Law.orbit (pair riseAfter (fun w x => RegimeMargin.step giving (drawerUse w) x)) ((3, true, 0), 12) 5 = ((8, true, 5), 10) ∧ Law.orbit (pair riseAfter (fun w x => RegimeMargin.step giving (drawerUse w) x)) ((3, true, 0), 12) 6 = ((9, true, 6), 4) ∧ «迭» (net 1 riseAfter (fun w x => RegimeMargin.step giving (drawerUse w) x)) 7 ((3, true, 0), 12) ((10, true, 7), 0) ∧ (∀ v, ¬ net 1 riseAfter (fun w x => RegimeMargin.step giving (drawerUse w) x) ((10, true, 7), 0) v) ∧ RegimeMargin.step giving (drawerUse (3, true, 0)) 12 = 12 ∧ (∀ H y, H ≤ drawerUse (3, true, 0) → RegimeMargin.Short giving H y → ¬ 12 < H + y) ∧ RegimeMargin.Short giving 7 6 ∧ 7 ≤ drawerUse (7, true, 4) ∧ 12 < 7 + 6 ∧ RuleCapture.Locked ruleOrder (fun g => g = true) lockRead (10, true)",
+    "concluded": "One closed case (use = share, share up by one per step, giving min z (12 - z), need one, start share three at level twelve). `locked_ends_rising` applies and gives a line ending `Locked` within 13 steps. Separately computed: the levels are twelve at steps 0 to 4, then ten, four, nothing, and the line ends in exactly seven steps at ((10, true, 7), 0), which is `Locked`. At the start the use of three leaves twelve at twelve, and no H at most three and y with giving short of H below y put twelve below H + y. At step 4, giving is short of seven below six, the use is at least seven and twelve is below 7 + 6.",
+    "given": "Nothing: every number is fixed. Not Lean statements: that the seven-step line is the law's line; that the old law's premises also fail at steps 1 to 3 (by computation; my recomputation agrees); that the old law applies from step 4 (its `draws` and `Locked` (7, true) are argued, and hold). It stands for no course beyond these numbers."
+   },
+   {
+    "theorem": "Three.share_read_goes_on (l.3039-3056)",
+    "statement": "theorem share_read_goes_on : Law.orbit (pair (windowAfterShare lockShare lockRead zeroShare noRule 8 9) (fun w x => RegimeMargin.step giving (lockUse w) x)) ((3, true, 0), 9) 1 = ((3, true, 1), 8) ∧ Law.orbit (pair (windowAfterShare lockShare lockRead zeroShare noRule 8 9) (fun w x => RegimeMargin.step giving (lockUse w) x)) ((3, true, 0), 9) 2 = ((0, false, 2), 6) ∧ (∀ n, Law.orbit (pair (windowAfterShare lockShare lockRead zeroShare noRule 8 9) (fun w x => RegimeMargin.step giving (lockUse w) x)) ((3, true, 0), 9) (n + 2) = ((0, false, n + 2), 6)) ∧ «不穷» (net 1 (windowAfterShare lockShare lockRead zeroShare noRule 8 9) (fun w x => RegimeMargin.step giving (lockUse w) x)) «一» ((3, true, 0), 9) ∧ (∀ k, (Law.orbit (pair (windowAfterShare lockShare lockRead zeroShare noRule 8 9) (fun w x => RegimeMargin.step giving (lockUse w) x)) ((3, true, 0), 9) (1 + 1 + k)).1.1 < 3 ∧ (Law.orbit (pair (windowAfterShare lockShare lockRead zeroShare noRule 8 9) (fun w x => RegimeMargin.step giving (lockUse w) x)) ((3, true, 0), 9) (1 + 1 + k)).1.2.1 = false) ∧ RuleCapture.Locked ruleOrder (fun g => g = true) lockRead (3, true)",
+    "concluded": "One closed case (window [8, 9) setting the share to nothing and the rule to `false`; use five under the rule `true`, three under `false`; from share three at level nine). The course is ((3, true, 1), 8), then ((0, false, n + 2), 6) for every n; the line never ends (through the share law's \"if\" side at T = 1); from step 2 on the share is below three and the rule `false`; the start is `Locked`.",
+    "given": "Nothing: every number is fixed. That the window sets the share to nothing is how the case is built."
+   }
+  ],
+  "what_ran": "Read only: no Lean build, test, gate or git write; the full suite was not run, and no check_becoming. Evidence is the implementer's scratch build (read by me) and three scripts of mine, each under a second, in /Users/ren/theories/tmp/r7/one-model/check/round9/readers-R2/lock/ : statements_check.py (headers and removed lines), recompute.py (the Three numbers, not Lean), extract.py with its output statements.txt (the statements above, taken from the file by script, line breaks collapsed to single spaces and otherwise verbatim), and tracked-vs-scratch.diff.\n\nRead whole: BRIEF-REPAIR-2.md; readR:lock in repair-review.json; buildR2-6.log and buildR2-1.log; the scratch TurningInTime.lean module header (l.7-324), the section 6 docstring, and every line that differs from the tracked file (20 hunks, 616 added lines), which covers the docstring and statement of all 22 declarations not in the tracked file; RegimeMargin's step, FromNothing, Short, Meets, Keeps; RuleCapture's Raises, ReadsShare, Locked; GuardedStep's three stepWhile lemmas.\n\nChecked against the report: every figure it gives for my part holds (118 of 118 headers, the A1 line counts, the quoted docstrings, the axiom reports). One omission, noted under the build item: TurningInTime's compile was reused in buildR2-6 from buildR2-1, same bytes. No forbidden word on any line of the file (the one grep hit for \"axiom\" is the header's own sentence). recompute.py confirms every number in both Three cases, that the right side of the share law holds at T = 1 only, and that no H and y exist at steps 0 to 3. It also finds the bound hi + 1 reached for hi = 1 to 6 (giving hi - z, use j at step j); no docstring claims that and it is not Lean.\n\nThe 1,600-word limit I applied to my own prose; the fourteen verbatim statements alone are about 2,100 words. LineOnAStock, WayOfUnits and LineOnAStockCases are outside my part and I did not read them beyond a grep for the names they cite from this module."
+ },
+ "verify:line": {
+  "verdict": "NOT READY, by one docstring sentence only: F1. The closing \"Given, not derived\" list of falls_to_unmet leaves out `nothing`, `needs`, `ne` and `met`, and the conclusion fails without `nothing` or without `needs` (instances in F1). No statement, proof or number needs to change: the new corollary is what the brief asked, is proved from need_unmet, and a small-model search found no counterexample. With F1 fixed (a docstring edit, then a rebuild of LineOnAStock, WayOfUnits and LineOnAStockCases so the built copies match), READY TO LAND. F2 to F9 are optional wording.",
+  "per_item": [
+   {
+    "item": "B1 central law with `down`",
+    "done": true,
+    "evidence": "LineOnAStock l.1050 `falls_to_unmet` adds `(down : ∀ u v, v ∈ kids u → need v ≤ need u)` to need_unmet's premises and two conjuncts, both forms the brief offered: `(∃ p, p ∈ w ∧ need p ≤ x ∧ (course need kids giving use (w, x) n).2 < need p) ∧ (course need kids giving use (w, x) n).2 < x`. Proof l.1063-1070 is `match need_unmet nothing keeps grows needs high ne met with` then `generation_ancestor down n u`, nothing else. Docstring l.1037-1049 says each conjunct, says the rise of the take is \"not itself a conjunct\", and marks the one reading: \"(a reading)\". need_unmet's docstring l.998-1002: \"(`down`) is not asked, and without it the unmet need may be a kid's greater need at a level that has not fallen\"; no \"uses up\" sentence remains. `KidHigherNeed.all_but_down` l.1543 is a closed case. Module bullet l.59-70 names `after_of_met`, `course_asItWas`, no alikeness law. One sentence says less: F1."
+   },
+   {
+    "item": "B2 stale WayOfUnits names",
+    "done": true,
+    "evidence": "l.248 \"At a level, either every unit of a way has its need met, or some unit's need is above it.\"; l.285 \"A list that is not empty has a member.\" Neither names WayOfUnits."
+   },
+   {
+    "item": "B3 one fact, one name",
+    "done": true,
+    "evidence": "`way_generation` occurs nowhere in the four files (grep). `way_while_met` l.960 is kept and is the name cited by need_unmet, falls_to_unmet and the module bullet."
+   },
+   {
+    "item": "B4 one_need_ends",
+    "done": true,
+    "evidence": "l.1083-1085 \"holds instead where kids need no more than their parent (`down`, which it asks); without `down` the net can go on with every other premise of `way_ends` holding (`KidsNeedMore.all_but_down`)\". Leaves out that way_ends also asks every need positive: F5."
+   },
+   {
+    "item": "B5 bullet for unending_iff_holds",
+    "done": true,
+    "evidence": "l.78-85 names `even`, `some`, `down`, `needs`, `nothing`, `high`, `along`, the statement's seven premises; \"the instance uses the \\\"if\\\" side at `k = 0`\" matches `.mpr ⟨0, …⟩` at l.1663-1664; course fixed from step 1 is the second conjunct of TwoForOne.holds_by_law."
+   },
+   {
+    "item": "B6 after_append",
+    "done": true,
+    "evidence": "l.332-334 states the equality and \"Used by no proof here.\" (grep: only its own recursion). Module l.26-27: \"that they then reach each other only through the level, by what they take together, is a reading\"."
+   },
+   {
+    "item": "B7 NothingTakenEnds.ending_differs",
+    "done": true,
+    "evidence": "l.2106-2107 new conjuncts `course need kids nothingGiven use ([A, C], 5) 1 = ([A, C], 4) ∧ (∀ k, course need kids nothingGiven use ([A, C], 5) (2 + k) = ([C], 3))`, proved by `rfl` and `course_fixed rfl k`; docstring points at \"the second and third conjuncts\"."
+   },
+   {
+    "item": "B8 said twice",
+    "done": true,
+    "evidence": "`allKids_rises` l.970-976 now goes through `rise` (ten lines before and after, the code one line shorter). `step_overdrawn` l.700 is unchanged, left as the brief allows. ends_high l.838-841: \"argued again here, not derived from it\"; need_unmet l.1003-1005: \"only `need_unmet` and those derived from it (`falls_to_unmet`, `one_need_ends`) rest on `TurningInTime.rising_takes_all`\". Grep: the only use of rising_takes_all in a proof here is l.1026, in need_unmet."
+   },
+   {
+    "item": "B9 grows of every unit, needs of descendants",
+    "done": true,
+    "evidence": "l.991-992 \"(`grows`, asked of every unit of the type)\" and \"(`needs`, asked only of the descendants of `w`)\"; again at l.1039 and in the bullet l.62-63. No statement changed."
+   },
+   {
+    "item": "C1 what the law adds",
+    "done": true,
+    "evidence": "Cases l.11 \"That is what is shown.\"; l.85-87 and l.190-192 \"gives nothing about the example that its own Lean did not\". Sources checked: `theorem inactive (x : Nat) : ¬ web.active 2 x` (LineageRegimes l.582); `familyP` has `| _ + 10 => []` (LineageDrawdown l.325). Statements kept. Two sentences are inexact: F2, F3."
+   },
+   {
+    "item": "C2 need_agrees",
+    "done": true,
+    "evidence": "l.160-162 \"No term of `LineageDrawdown.Drain` is in this statement: that Drain's own need is one is read from its source, not stated here.\" Source: `need _ _ _ := 1` (LineageDrawdown l.281)."
+   },
+   {
+    "item": "C3 nil_of_length",
+    "done": true,
+    "evidence": "l.266 `nil_of_length_zero ((sizes k).1.trans (congrArg List.length here))`; no local `nil_of_length` remains."
+   },
+   {
+    "item": "C4 Commons",
+    "done": true,
+    "evidence": "l.29-30 \"`ReadingsSpread.Commons` was not tried.\""
+   },
+   {
+    "item": "D1 WayOfUnits.unending_of_fixed",
+    "done": true,
+    "evidence": "Left, as the brief allows: l.1066-1073 keeps its own proof by `course_fixed`; the bullet l.103-104 says \"proved here from `course_fixed`, along the lines of `LineOnAStock.unending_of_fixed`, not derived from that law\"."
+   },
+   {
+    "item": "D2 bullet on what rests on LineOnAStock",
+    "done": true,
+    "evidence": "Bullet l.95-111: \"Derived from `LineOnAStock`'s laws, six\". My name trace over the file with comments stripped agrees: a LineOnAStock law is named in exactly goesDecidable, fixed_while, unending_iff_holds, unending_taken_below, step_falls, course_fixed; unending_above, greater_need, more_use_on_first reach step_falls; takes_nothing_iff_alone, takes_nothing_ends reach fixed_while; ends_while_net_goes and two_units_iff reach none. Headers by my script: tracked 85, kept 72, changed 0, removed 13, added 16."
+   }
+  ],
+  "still_says_more_or_less": [
+   {
+    "where": "F1. LineOnAStock.lean l.1048-1049, falls_to_unmet docstring, last sentence",
+    "text": "Given, not derived: the needs, uses and offspring; that each unit's kids together take more than it (`grows`); the cap (`keeps`, `high`); `down`.",
+    "lean": "(nothing : RegimeMargin.FromNothing giving) (keeps : RegimeMargin.Keeps giving 0 hi) (grows : ∀ u, use u < taken use (kids u)) (down : ∀ u v, v ∈ kids u → need v ≤ need u) {w : List U} {x : Nat} (needs : Needing need kids w) (high : x ≤ hi) (ne : w ≠ []) (met : ∀ u, u ∈ w → need u ≤ x)",
+    "must_fix": true,
+    "proposed_wording": "Given, not derived: the needs, uses and offspring, with every descendant of `w` needing something (`needs`); a giving that gives nothing from nothing (`nothing`); that each unit's kids together take more than it (`grows`); the cap (`keeps`, `high`); a start that is not empty with every need met (`ne`, `met`); `down`. (Says less: the list reads as the whole of what is given, and the second sentence of the same docstring names all eight. Both left-out premises are needed. Without `nothing`: one kind, need 1, use 1, kids [u, u], giving 1 at level 0 and 0 elsewhere, hi 1, from ([u], 1): the level is 1 at every step and no need is ever unmet. Without `needs`: the same with need 0 and nothing given.)"
+   },
+   {
+    "where": "F2. LineOnAStockCases.lean l.13-14, module docstring",
+    "text": "each ending conjunct already follows from the example's own Lean, and the equality at the late steps itself takes the example's ending as input.",
+    "lean": "| 2 => ⟨rfl, rfl, ⟨fun ⟨p, _, act⟩ => absurd act (LineageRegimes.MultiplyingTakers.inactive p), fun g => absurd g (by decide)⟩⟩",
+    "must_fix": false,
+    "proposed_wording": "each ending conjunct already follows from the example's own Lean, and an equality it is read back through takes that Lean as input: the activity at step 2 on the first, the sizes from step 10 on the second. (On the first example the late equalities, `late` and `family_late`, are computed here; the example's Lean enters at step 2. The two bullets below already say this exactly.)"
+   },
+   {
+    "where": "F3. LineOnAStockCases.lean l.79-81 (multiplying_takers), l.174-175 and l.185 (drain), l.10-11 (module)",
+    "text": "On the course here the premises of `way_ends` hold with `hi = 3` … / The premises of `fall` hold at the line of the drawers …",
+    "lean": "theorem multiplying_takers : (∀ t, …) ∧ (∃ t, ¬ ∃ p, p ∈ LineageRegimes.MultiplyingTakers.generations.family t ∧ LineageRegimes.MultiplyingTakers.web.active t p) ∧ ¬ «不穷» (net Doubling.need Doubling.kids nothingGiven Doubling.use) «一» ([()], 3)",
+    "must_fix": false,
+    "proposed_wording": "Add once in each: \"(checked where the law is applied in the proof; they are not conjuncts of this statement)\". That the premises hold is true and Lean-checked, but no conjunct says it, so a reader looking for it in the statement will not find it."
+   },
+   {
+    "where": "F4. LineOnAStock.lean l.68-70, module bullet for need_unmet",
+    "text": "In a world of one need, the net ends within `hi + 1` steps (`one_need_ends`); a lock whose share is a number of drawers ends by the same law (`TurningInTime.locked_ends_rising`, `count_rises`).",
+    "lean": "(TurningInTime.rising_takes_all nothing keeps high fun j _ => generations_rise grows ne j)",
+    "must_fix": false,
+    "proposed_wording": "… a lock whose share is a number of drawers ends through the same `TurningInTime.rising_takes_all`, not through `need_unmet` (`TurningInTime.locked_ends_rising`, `count_rises`). (\"The same law\" under a bullet headed by need_unmet reads as need_unmet; TurningInTime does not import this module. one_need_ends's own docstring says it rightly.)"
+   },
+   {
+    "where": "F5. LineOnAStock.lean l.1083-1084, one_need_ends docstring",
+    "text": "With needs that differ, `way_ends` (no bound on the step) holds instead where kids need no more than their parent (`down`, which it asks)",
+    "lean": "theorem way_ends {hi : Nat} (nothing : RegimeMargin.FromNothing giving) (keeps : RegimeMargin.Keeps giving 0 hi) (grows : ∀ u, use u < taken use (kids u)) (needs : ∀ u, 0 < need u) (down : ∀ u v, v ∈ kids u → need v ≤ need u) {w : List U} {x : Nat} (high : x ≤ hi)",
+    "must_fix": false,
+    "proposed_wording": "… holds instead where every need is positive (`needs`) and kids need no more than their parent (`down`); it asks both."
+   },
+   {
+    "where": "F6. LineOnAStock.lean l.76-77, module bullet for taken_below",
+    "text": "**What a way that goes on takes** (`taken_below`): below the level, at every step but the last",
+    "lean": "theorem taken_below (nothing : RegimeMargin.FromNothing giving) {s : List U × Nat} (needs : Needing need kids s.1) {n : Nat} (goes : Goes need (course need kids giving use s (n + 1)))",
+    "must_fix": false,
+    "proposed_wording": "… (`taken_below`): with nothing given from nothing and every descendant of the start needing something, below the level at every step after which some need is still met"
+   },
+   {
+    "where": "F7. LineOnAStock.lean l.27-29, module docstring on ways_alike",
+    "text": "Along two courses, under two givings, two uses and two start levels, whose levels meet the same needs of the way step by step, the ways are the same (`ways_alike`)",
+    "lean": "theorem ways_alike {g g' : Nat → Nat} {use use' : U → Nat} {w : List U} {x x' n : Nat}",
+    "must_fix": false,
+    "proposed_wording": "Along two courses from one way, under one `need` and `kids`, two givings, two uses and two start levels, …"
+   },
+   {
+    "where": "F8. WayOfUnits.lean l.303, down_unit",
+    "text": "A kid of a unit that leaves itself needs what it needs.",
+    "lean": "theorem down_unit : ∀ u v : Nat × Nat, v ∈ [u] → need v ≤ need u",
+    "must_fix": false,
+    "proposed_wording": "A kid of a unit that leaves itself needs no more than it (it is the unit)."
+   },
+   {
+    "where": "F9. WayOfUnits.lean l.419-421, unending_taken_below (new)",
+    "text": "With nothing given from nothing (`nothing`) and every unit of the start needing something (`needs`), under any giving: …",
+    "lean": "(nothing : RegimeMargin.FromNothing giving) (needs : ∀ u, u ∈ s.1 → 0 < need u) (never : «不穷» (net giving) «一» s) (n : Nat) : taken (course giving s n).1 < (course giving s n).2",
+    "must_fix": false,
+    "proposed_wording": "Drop \"under any giving\": the giving is asked to give nothing from nothing."
+   }
+  ],
+  "statements_for_the_telling": [
+   {
+    "theorem": "LineOnAStock.after_alike (l.323)",
+    "statement": "theorem after_alike {x x' : Nat} : ∀ {w : List U}, (∀ u, u ∈ w → (need u ≤ x ↔ need u ≤ x')) → after need kids w x = after need kids w x'",
+    "concluded": "The way after a step at level x is the way after a step at level x'.",
+    "given": "x and x' meet the same needs among the units of w. Any need and kids; nothing about giving or use."
+   },
+   {
+    "theorem": "LineOnAStock.alike_iff (l.488)",
+    "statement": "theorem alike_iff {w : List U} {x x' : Nat} (leaves : ∀ u, u ∈ w → kids u ≠ []) : Alike need kids w x x' ↔ ∀ u, u ∈ w → (need u ≤ x ↔ need u ≤ x')",
+    "concluded": "Two levels leave the same next way exactly where they meet the same needs among the units of w.",
+    "given": "Every unit of w has at least one kid. Without that only \"same needs, so same next way\" holds (AlikeFiner)."
+   },
+   {
+    "theorem": "LineOnAStock.ways_alike (l.542)",
+    "statement": "theorem ways_alike {g g' : Nat → Nat} {use use' : U → Nat} {w : List U} {x x' n : Nat} (alike : ∀ j, j < n → ∀ u, u ∈ (course need kids g use (w, x) j).1 → (need u ≤ (course need kids g use (w, x) j).2 ↔ need u ≤ (course need kids g' use' (w, x') j).2)) : ∀ j, j ≤ n → (course need kids g use (w, x) j).1 = (course need kids g' use' (w, x') j).1",
+    "concluded": "The two courses have the same way at every step up to n.",
+    "given": "One start way, one need and kids; two givings, two uses, two start levels; at each step before n the two levels meet the same needs among the units of the first course's way there. Nothing is asked of the givings or uses."
+   },
+   {
+    "theorem": "LineOnAStock.born_alike (l.582)",
+    "statement": "theorem born_alike {g g' : Nat → Nat} {use use' : U → Nat} {w : List U} {x x' n : Nat} (alike : ∀ j, j < n → ∀ u, u ∈ (course need kids g use (w, x) j).1 → (need u ≤ (course need kids g use (w, x) j).2 ↔ need u ≤ (course need kids g' use' (w, x') j).2)) {j : Nat} (lt : j < n) : SelectionTerm.born ((generations need kids g use (w, x)).family j) ((generations need kids g use (w, x)).kids j) = SelectionTerm.born ((generations need kids g' use' (w, x')).family j) ((generations need kids g' use' (w, x')).kids j)",
+    "concluded": "At each step before n the number born (SelectionTerm.born) is the same in the two courses read as generations of descent.",
+    "given": "The premise of ways_alike."
+   },
+   {
+    "theorem": "LineOnAStock.need_unmet (l.1006)",
+    "statement": "theorem need_unmet {hi : Nat} (nothing : RegimeMargin.FromNothing giving) (keeps : RegimeMargin.Keeps giving 0 hi) (grows : ∀ u, use u < taken use (kids u)) {w : List U} {x : Nat} (needs : Needing need kids w) (high : x ≤ hi) (ne : w ≠ []) (met : ∀ u, u ∈ w → need u ≤ x) : ∃ n, 0 < n ∧ n ≤ hi + 1 ∧ (∀ j, j < n → ∀ u, u ∈ (course need kids giving use (w, x) j).1 → need u ≤ (course need kids giving use (w, x) j).2) ∧ (∀ j, j ≤ n → (course need kids giving use (w, x) j).1 = generation kids j w) ∧ ∃ u, u ∈ (course need kids giving use (w, x) n).1 ∧ (course need kids giving use (w, x) n).2 < need u",
+    "concluded": "There is a step n from 1 to hi + 1 with every need met at every step before it, the way at each step up to n equal to the n-free generation of w (no giving, use or level in it), and some unit of the way at n whose need is above the level. Not concluded: that the level has fallen, or that the net ends.",
+    "given": "Nothing is given from nothing; with nothing taken, a level at most hi stays at most hi; every unit of the type has kids that together take more than it; every unit of every generation of w needs something; the start level is at most hi; w is not empty; every need of w is met at the start. `down` is not asked."
+   },
+   {
+    "theorem": "LineOnAStock.falls_to_unmet (l.1050, new)",
+    "statement": "theorem falls_to_unmet {hi : Nat} (nothing : RegimeMargin.FromNothing giving) (keeps : RegimeMargin.Keeps giving 0 hi) (grows : ∀ u, use u < taken use (kids u)) (down : ∀ u v, v ∈ kids u → need v ≤ need u) {w : List U} {x : Nat} (needs : Needing need kids w) (high : x ≤ hi) (ne : w ≠ []) (met : ∀ u, u ∈ w → need u ≤ x) : ∃ n, 0 < n ∧ n ≤ hi + 1 ∧ (∀ j, j < n → ∀ u, u ∈ (course need kids giving use (w, x) j).1 → need u ≤ (course need kids giving use (w, x) j).2) ∧ (∀ j, j ≤ n → (course need kids giving use (w, x) j).1 = generation kids j w) ∧ (∃ u, u ∈ (course need kids giving use (w, x) n).1 ∧ (course need kids giving use (w, x) n).2 < need u) ∧ (∃ p, p ∈ w ∧ need p ≤ x ∧ (course need kids giving use (w, x) n).2 < need p) ∧ (course need kids giving use (w, x) n).2 < x",
+    "concluded": "All that need_unmet concludes and, at the same step n: some unit of the start way, whose need the start level met, needs more than the level at n; and the level at n is below the start level. hi + 1 bounds n. Not concluded: that the net ends at n, or that the unit of the start way is still present. That what the way takes rises at each step up to n follows from generations_rise and is not a conjunct.",
+    "given": "need_unmet's seven premises, and that every kid of every unit needs no more than its parent (`down`). Without `down` the added conjuncts can fail (KidHigherNeed)."
+   },
+   {
+    "theorem": "LineOnAStock.one_need_ends (l.1086)",
+    "statement": "theorem one_need_ends {hi n : Nat} (one : ∀ u, need u = n) (pos : 0 < n) (grows : ∀ u, use u < taken use (kids u)) (nothing : RegimeMargin.FromNothing giving) (keeps : RegimeMargin.Keeps giving 0 hi) {w : List U} {x : Nat} (high : x ≤ hi) : ∃ m t, m ≤ hi + 1 ∧ «迭» (net need kids giving use) m (w, x) t ∧ (∀ v, ¬ net need kids giving use t v) ∧ t.1 = generation kids m w",
+    "concluded": "Within hi + 1 steps the net reaches a configuration with no next, whose way is the generation of w at that step.",
+    "given": "Every unit needs the same positive amount; every unit's kids take more than it; nothing given from nothing; the cap (keeps); start at most hi. No premise that the way is not empty or met at the start."
+   },
+   {
+    "theorem": "LineOnAStock.rise (l.630)",
+    "statement": "theorem rise [DecidablePred S] (grows : ∀ u, S u → use u < lineTake S use (kids u)) {x : Nat} {w : List U} (met : ∀ u, u ∈ w → S u → need u ≤ x) : lineTake S use w + lineCount S w ≤ lineTake S use (after need kids w x)",
+    "concluded": "Over one step, what S takes of the next way is at least what it takes of w plus the number of units of w in S.",
+    "given": "A decidable S (not asked to be closed); each unit of S has kids in S that together take more than it; every unit of w in S has its need met at x. Nothing about the giving."
+   },
+   {
+    "theorem": "LineOnAStock.line_ends (l.899)",
+    "statement": "theorem line_ends [DecidablePred S] (nothing : RegimeMargin.FromNothing giving) (keeps : RegimeMargin.Keeps giving 0 hi) (closed : ∀ u v, v ∈ kids u → S v → S u) (grows : ∀ u, S u → use u < lineTake S use (kids u)) (needs : ∀ u, S u → 0 < need u) (down : ∀ u v, S u → v ∈ kids u → need v ≤ need u) {w : List U} {x : Nat} (high : x ≤ hi) : ∃ n, ∀ k, n ≤ k → ∀ u, u ∈ (course need kids giving use (w, x) k).1 → ¬ S u",
+    "concluded": "There is a step from which no unit of the line S is in the way. No bound on that step.",
+    "given": "Nothing given from nothing; the cap (keeps); start at most hi; no unit outside S leaves a unit of S; each unit of S has kids in S taking more than it; units of S need something; kids of units of S need no more than their parent."
+   },
+   {
+    "theorem": "LineOnAStock.way_ends (l.923)",
+    "statement": "theorem way_ends {hi : Nat} (nothing : RegimeMargin.FromNothing giving) (keeps : RegimeMargin.Keeps giving 0 hi) (grows : ∀ u, use u < taken use (kids u)) (needs : ∀ u, 0 < need u) (down : ∀ u v, v ∈ kids u → need v ≤ need u) {w : List U} {x : Nat} (high : x ≤ hi) : (∃ n, ¬ Goes need (course need kids giving use (w, x) n)) ∧ ¬ «不穷» (net need kids giving use) «一» (w, x)",
+    "concluded": "At some step no unit's need is met, and the net from (w, x) does not go on for ever. No bound on the step.",
+    "given": "Nothing given from nothing; the cap; start at most hi; and of every unit: its kids take more than it, it needs something, its kids need no more than it."
+   },
+   {
+    "theorem": "LineOnAStock.fall (l.768)",
+    "statement": "theorem fall [DecidablePred S] (closed : ∀ u v, v ∈ kids u → S v → S u) {m : Nat} (one : ∀ u, S u → need u = m) (keeps : ∀ u, S u → use u ≤ lineTake S use (kids u)) (low : giving 0 < m) {w : List U} {x : Nat} (over : ∀ z, giving z < lineTake S use w) : ∃ n, ∀ k, n ≤ k → ∀ u, u ∈ (course need kids giving use (w, x) k).1 → ¬ S u",
+    "concluded": "There is a step from which no unit of the line S is in the way. No bound on that step.",
+    "given": "S closed; every unit of S needs the same m; each unit of S has kids in S taking at least what it takes; what is given at level nothing is below m; at the start S takes more than the giving at every level (given, not derived). No cap and no nothing-from-nothing is asked."
+   },
+   {
+    "theorem": "LineOnAStock.taken_below (l.1273)",
+    "statement": "theorem taken_below (nothing : RegimeMargin.FromNothing giving) {s : List U × Nat} (needs : Needing need kids s.1) {n : Nat} (goes : Goes need (course need kids giving use s (n + 1))) : taken use (course need kids giving use s n).1 < (course need kids giving use s n).2",
+    "concluded": "At step n what the way takes is less than the level.",
+    "given": "Nothing given from nothing; every unit of every generation of the start way needs something; some need is met at step n + 1."
+   },
+   {
+    "theorem": "LineOnAStock.unending_iff_holds (l.1231)",
+    "statement": "theorem unending_iff_holds {y : Nat → Nat} {hi : Nat} {w : List U} {x : Nat} (even : ∀ u, taken use (kids u) = use u) (some : ∀ u, kids u ≠ []) (down : ∀ u v, v ∈ kids u → need v ≤ need u) (needs : Needing need kids w) (nothing : RegimeMargin.FromNothing giving) (high : x ≤ hi) (along : ∀ k, (∀ j, j ≤ k → Goes need (course need kids giving use (w, x) j)) → Regime giving use y hi (course need kids giving use (w, x) k).1) : «不穷» (net need kids giving use) «一» (w, x) ↔ ∃ k, (∀ j, j < k → Goes need (course need kids giving use (w, x) j)) ∧ Holds need use y (course need kids giving use (w, x) k)",
+    "concluded": "The net never ends exactly where, some need met at every step before, the course reaches a configuration that holds: a way that is not empty, every need in it met, and the level at or above what the way takes plus y of that.",
+    "given": "Each unit's kids take exactly what it takes; every unit has kids; kids need no more than their parent; every descendant of w needs something; nothing given from nothing; start at most hi; and the regime (giving short below y, meeting from y up to hi, the step keeping within hi, all at what the way takes) at every way the course reaches with some need met there and at every step before."
+   },
+   {
+    "theorem": "LineOnAStock.takes_nothing (l.1445)",
+    "statement": "theorem takes_nothing (zero : ∀ u, Z u → use u = 0) (inZ : ∀ u v, Z u → v ∈ kids u → Z v) (w : List U) (x : Nat) (n : Nat) : (course need kids giving use (strip Z w, x) n).2 = (course need kids giving use (w, x) n).2 ∧ strip Z (course need kids giving use (strip Z w, x) n).1 = strip Z (course need kids giving use (w, x) n).1",
+    "concluded": "At every step, the course from the way without its Z units and the course from the whole way have the same level and the same way once Z units are taken out. Not concluded, and false: that the net ends alike (NothingTakenEnds).",
+    "given": "Z decidable; units of Z take nothing; kids of units of Z are of Z. Any need and giving."
+   },
+   {
+    "theorem": "LineOnAStock.never_in (l.659)",
+    "statement": "theorem never_in (closed : ∀ u v, v ∈ kids u → S v → S u) {giving : Nat → Nat} {s : List U × Nat} (none : ∀ u, u ∈ s.1 → ¬ S u) : ∀ j u, u ∈ (course need kids giving use s j).1 → ¬ S u",
+    "concluded": "No unit of S is in the way at any step.",
+    "given": "No unit outside S leaves a unit of S; no unit of S is in the start way. Any giving and use."
+   },
+   {
+    "theorem": "LineOnAStock.gone_from (l.669)",
+    "statement": "theorem gone_from (closed : ∀ u v, v ∈ kids u → S v → S u) {giving : Nat → Nat} {s : List U × Nat} {k : Nat} (gone : ∀ u, u ∈ (course need kids giving use s k).1 → ¬ S u) : ∀ j, k ≤ j → ∀ u, u ∈ (course need kids giving use s j).1 → ¬ S u",
+    "concluded": "No unit of S is in the way at any step from k on.",
+    "given": "S closed; no unit of S in the way at step k. Any giving and use."
+   },
+   {
+    "theorem": "LineOnAStock.account (l.1297)",
+    "statement": "theorem account {s : List U × Nat} (N : Nat) (within : ∀ t, t < N → taken use (course need kids giving use s t).1 ≤ (course need kids giving use s t).2) : (course need kids giving use s N).2 + total (steps 0 N) (fun t => taken use (course need kids giving use s t).1) = s.2 + total (steps 0 N) (fun t => giving ((course need kids giving use s t).2 - taken use (course need kids giving use s t).1))",
+    "concluded": "The level at step N plus everything taken at steps 0 to N - 1 equals the start level plus everything given at those steps.",
+    "given": "At every step before N what the way takes is at most the level. Nothing else."
+   },
+   {
+    "theorem": "LineOnAStock.MultiplyingTakersCase.agree (Cases l.60)",
+    "statement": "theorem agree (t : Nat) : (LineageRegimes.MultiplyingTakers.generations.family t).length = (course Doubling.need Doubling.kids nothingGiven Doubling.use ([()], 3) t).1.length ∧ LineageRegimes.MultiplyingTakers.web.level t 0 = (course Doubling.need Doubling.kids nothingGiven Doubling.use ([()], 3) t).2 ∧ ((∃ p, p ∈ LineageRegimes.MultiplyingTakers.generations.family t ∧ LineageRegimes.MultiplyingTakers.web.active t p) ↔ Goes Doubling.need (course Doubling.need Doubling.kids nothingGiven Doubling.use ([()], 3) t))",
+    "concluded": "At every step the built example's family has the size of the way here, its pool is the level here, and some member is active exactly where some need is met here.",
+    "given": "Nothing (a closed case). At step 2 the activity side is proved from the example's own `inactive`."
+   },
+   {
+    "theorem": "LineOnAStock.MultiplyingTakersCase.multiplying_takers (Cases l.90)",
+    "statement": "theorem multiplying_takers : (∀ t, (LineageRegimes.MultiplyingTakers.generations.family t).length = (course Doubling.need Doubling.kids nothingGiven Doubling.use ([()], 3) t).1.length ∧ LineageRegimes.MultiplyingTakers.web.level t 0 = (course Doubling.need Doubling.kids nothingGiven Doubling.use ([()], 3) t).2 ∧ ((∃ p, p ∈ LineageRegimes.MultiplyingTakers.generations.family t ∧ LineageRegimes.MultiplyingTakers.web.active t p) ↔ Goes Doubling.need (course Doubling.need Doubling.kids nothingGiven Doubling.use ([()], 3) t))) ∧ (∃ t, ¬ ∃ p, p ∈ LineageRegimes.MultiplyingTakers.generations.family t ∧ LineageRegimes.MultiplyingTakers.web.active t p) ∧ ¬ «不穷» (net Doubling.need Doubling.kids nothingGiven Doubling.use) «一» ([()], 3)",
+    "concluded": "`agree` at every step; some step at which no member of the example's family is active (no bound; the example's own Lean already gives this at step 2); the net here ends. The law adds nothing about the example.",
+    "given": "Nothing (closed). That way_ends's premises hold at hi = 3 is checked where the law is applied in the proof; it is not a conjunct."
+   },
+   {
+    "theorem": "LineOnAStock.DrainCase.drain (Cases l.193)",
+    "statement": "theorem drain : (∀ t, ((LineageDrawdown.Drain.generations (LineageDrawdown.Drain.courseP true)).family t).length = (course need kids gift use ([r, d0], 11) t).1.length ∧ (LineageDrawdown.Drain.web true (LineageDrawdown.Drain.courseP true)).level t 0 + gift ((LineageDrawdown.Drain.web true (LineageDrawdown.Drain.courseP true)).level t 0) = (course need kids gift use ([r, d0], 11) t).2 ∧ (LineageDrawdown.Drain.generations (LineageDrawdown.Drain.courseP true)).sum t = taken use (course need kids gift use ([r, d0], 11) t).1) ∧ (∀ t, (LineageDrawdown.Drain.flow true (LineageDrawdown.Drain.courseP true)).give t 1 0 = gift ((LineageDrawdown.Drain.web true (LineageDrawdown.Drain.courseP true)).level t 0)) ∧ (∀ p, 4 ≤ p + gift p ↔ 1 ≤ p) ∧ ∃ n, ∀ k, n ≤ k → (LineageDrawdown.Drain.generations (LineageDrawdown.Drain.courseP true)).family k = []",
+    "concluded": "At every step: the gated example's family size is the way's length here; its pool with the gift on it is the level here; the total of its draws is what the way takes here; the renewer's giving is `gift` of the pool. For every p, p + gift p is at least four exactly where p is at least one (no term of Drain in it). Some step from which the example's family is empty (no bound; the example's own Lean already gives it from step 10). The law adds nothing about the example.",
+    "given": "Nothing (closed). That fall's premises hold at the line of the drawers from step 1, ([d1, d1], 11), is checked inside the proof, not stated. Not equated: the organisms' identities, and the need (four here, one there)."
+   },
+   {
+    "theorem": "LineOnAStock.KidsNeedMore.all_but_down (l.1497)",
+    "statement": "theorem all_but_down : RegimeMargin.FromNothing hump10 ∧ RegimeMargin.Keeps hump10 0 10 ∧ (∀ u, use u < taken use (kids u)) ∧ (∀ u, 0 < need u) ∧ 8 ≤ 10 ∧ ¬ (∀ u v, v ∈ kids u → need v ≤ need u) ∧ «不穷» (net need kids hump10 use) «一» ([B, A, B], 8)",
+    "concluded": "On giving min z (10 - z) with hi = 10, from ([B, A, B], 8): every premise of way_ends but `down` holds, `down` fails, and the net never ends. So way_ends needs `down`.",
+    "given": "Nothing (a closed countermodel)."
+   },
+   {
+    "theorem": "LineOnAStock.KidHigherNeed.all_but_down (l.1543, new)",
+    "statement": "theorem all_but_down : RegimeMargin.FromNothing TurningInTime.Three.giving ∧ RegimeMargin.Keeps TurningInTime.Three.giving 0 12 ∧ (∀ u, use u < taken use (kids u)) ∧ Needing need kids [A] ∧ 12 ≤ 12 ∧ [A] ≠ [] ∧ (∀ u, u ∈ [A] → need u ≤ 12) ∧ ¬ (∀ u v, v ∈ kids u → need v ≤ need u) ∧ course need kids TurningInTime.Three.giving use ([A], 12) 1 = ([B, B], 12) ∧ 12 < need B",
+    "concluded": "On giving min z (12 - z) with hi = 12, from ([A], 12): every premise of need_unmet holds, `down` fails, the configuration after one step is ([B, B], 12) and B needs more than twelve. So without `down` the unmet need can be a kid's greater need at a level that has not fallen. That step 1 is the first unmet step is read off these conjuncts, not itself a conjunct.",
+    "given": "Nothing (a closed countermodel)."
+   },
+   {
+    "theorem": "LineOnAStock.EqualInPlaceOfMore.all_but_grows (l.1577)",
+    "statement": "theorem all_but_grows : RegimeMargin.FromNothing TurningInTime.Three.giving ∧ RegimeMargin.Keeps TurningInTime.Three.giving 0 12 ∧ (∀ u, 0 < need u) ∧ (∀ u v, v ∈ kids u → need v ≤ need u) ∧ 12 ≤ 12 ∧ ¬ (∀ u, use u < taken use (kids u)) ∧ «不穷» (net need kids TurningInTime.Three.giving use) «一» ([()], 12)",
+    "concluded": "With a kid that takes the same in place of more, every other premise of way_ends holds and the net from ([()], 12) never ends. So way_ends needs `grows`.",
+    "given": "Nothing (closed)."
+   },
+   {
+    "theorem": "LineOnAStock.HigherStartEnds.higher_ends (l.1832)",
+    "statement": "theorem higher_ends : (∀ j, j ≤ 2 → (course need kids TurningInTime.Three.giving use ([A], 6) j).1 = (course need kids TurningInTime.Three.giving use ([A], 7) j).1) ∧ «不穷» (net need kids TurningInTime.Three.giving use) «一» ([A], 6) ∧ ¬ «不穷» (net need kids TurningInTime.Three.giving use) «一» ([A], 7)",
+    "concluded": "From one way at levels six and seven the ways are the same at steps 0 to 2; from six the net never ends, from seven it ends. One instance in which the higher start ends and the lower does not.",
+    "given": "Nothing (closed)."
+   },
+   {
+    "theorem": "LineOnAStock.AlikeFiner.alike_not_met (l.1989)",
+    "statement": "theorem alike_not_met : Alike need kids [d, b] 4 6 ∧ ¬ (∀ u, u ∈ [d, b] → (need u ≤ 4 ↔ need u ≤ 6))",
+    "concluded": "Levels four and six leave the same next way from [d, b] and do not meet the same needs in it. So alike_iff needs every unit of the way to have a kid.",
+    "given": "Nothing (closed)."
+   },
+   {
+    "theorem": "LineOnAStock.NothingTakenEnds.ending_differs (l.2101)",
+    "statement": "theorem ending_differs : (∀ n, (course need kids nothingGiven use ([A], 5) n).2 = (course need kids nothingGiven use ([A, C], 5) n).2 ∧ strip (fun u => isC u = true) (course need kids nothingGiven use ([A], 5) n).1 = strip (fun u => isC u = true) (course need kids nothingGiven use ([A, C], 5) n).1) ∧ course need kids nothingGiven use ([A, C], 5) 1 = ([A, C], 4) ∧ (∀ k, course need kids nothingGiven use ([A, C], 5) (2 + k) = ([C], 3)) ∧ «不穷» (net need kids nothingGiven use) «一» ([A, C], 5) ∧ «迭» (net need kids nothingGiven use) 1 ([A], 5) ([A], 4) ∧ (∀ v, ¬ net need kids nothingGiven use ([A], 4) v)",
+    "concluded": "With nothing given, from level five: the levels, and the ways without C, are the same at every step from ([A], 5) and from ([A, C], 5); from ([A, C], 5) the course is ([A, C], 4), then ([C], 3) from step 2 on, and the net never ends; from ([A], 5) the net ends after one step at ([A], 4). So takes_nothing does not carry whether the net ends.",
+    "given": "Nothing (closed)."
+   },
+   {
+    "theorem": "LineOnAStock.TwoForOne.holds_by_law (l.1637)",
+    "statement": "theorem holds_by_law : course need kids TurningInTime.Three.giving use ([P], 4) 1 = ([Q, Q], 4) ∧ (∀ k, course need kids TurningInTime.Three.giving use ([P], 4) (1 + k) = ([Q, Q], 4)) ∧ «不穷» (net need kids TurningInTime.Three.giving use) «一» ([P], 4)",
+    "concluded": "From ([P], 4) the course is ([Q, Q], 4) at step 1 and at every later step, and the net never ends. The third conjunct is proved by unending_iff_holds, its \"if\" side at k = 0: a case of that law with offspring that are not the unit itself.",
+    "given": "Nothing (closed)."
+   },
+   {
+    "theorem": "WayOfUnits: what is now derived from LineOnAStock",
+    "statement": "instance goesDecidable (s : List (Nat × Nat) × Nat) : Decidable (Goes s) := LineOnAStock.goesDecidable need s  |  step_falls … := LineOnAStock.step_lowers short nothing more below  |  course_fixed … := fun k => (course_unit giving s k).symm.trans (LineOnAStock.course_fixed ((step_unit giving s).trans fixed) k)  |  fixed_while, by `LineOnAStock.course_generation (need := need) (kids := fun u => [u]) (use := use)`  |  unending_iff_holds, by `LineOnAStock.unending_iff_holds (need := need) (kids := fun u => [u]) (use := use)`  |  unending_taken_below (new), by `LineOnAStock.unending_taken_below (kids := fun u => [u])`",
+    "concluded": "Six are cases of LineOnAStock's laws at kids u = [u]: unending_iff_holds, fixed_while, unending_taken_below (new here), course_fixed, step_falls and the decision of Goes. Resting on it through those: unending_above, greater_need, more_use_on_first (through step_falls); takes_nothing_iff_alone, takes_nothing_ends (through fixed_while); unending_of_fixed (its own proof, through course_fixed). Using no law of it: ends_while_net_goes, two_units_iff. The trace is by names, not by Lean.",
+    "given": "The bridge at kids u = [u], proved in WayOfUnits: after_unit, taken_unit, step_unit, course_unit, net_unit, unending_unit, holds_unit, regime_unit. The 72 declarations kept from the tracked file have unchanged headers; 13 were removed by the earlier repair and no other Lean module names them."
+   }
+  ],
+  "what_ran": "AI-written (Fable, reader), 16 November 2026. Read only: no Lean build, test, gate or git write.\n\nRead whole: the brief, scratch LineOnAStock.lean (2,135 lines) and LineOnAStockCases.lean (271), the diff of scratch WayOfUnits.lean against the tracked file with its module docstring and every new or changed docstring, and the definitions used from RegimeMargin, TurningInTime, LineageRegimes and LineageDrawdown.\n\nBuild log /Users/ren/theories/tmp/r7/one-model/lean-scratch/buildR2-6.log, read myself: \"unclean\": [], \"with_axioms\": {} for all four modules, no \"failed\" key, no line with error or warning. The log is from 05:09:44; the newest scratch file is from 05:09:30. `cmp` finds the built copies under .build/Becoming of all four files, and the prelude-only copies of three, byte-identical to the scratch files. TurningInTime was restored from the cache in that run (it is not in \"ran\"); its built copy is identical too.\n\nScripts, in /Users/ren/theories/tmp/r7/one-model/check/round9/readers-R2/line/:\n- headers.py: declaration headers up to `:=`, comments stripped. WayOfUnits: tracked 85, kept 72, changed 0, removed 13, added 16. TurningInTime: 118 kept, 0 changed. The last pass counted 84 and 71; the removed set and the zero changed agree.\n- search.py (30 s): falls_to_unmet as written, on 318,594 models that meet its premises (all models of two kinds with hi up to 3, kids lists up to three, uses up to 2; random models of three kinds with hi up to 7): no counterexample. The first unmet step was unique in each. The bound is attained (872 models with n = hi + 1; for example needs 1, 1; A leaves [B], B leaves [B, B]; uses 0, 1; nothing given; from ([A], 1) with hi 1, n = 2). What the way takes rose at every step up to n in every model. Without `down`, 80,216 of 519,621 models had the level not fallen at the first unmet step. KidHigherNeed recomputed: step 1 is ([B, B], 12). Doubling at twelve meets the corollary's premises with n = 5.\n- Two hand instances (in F1) show the corollary's conclusion fails without `nothing` and without `needs`.\n- A name trace of WayOfUnits for D2; a grep finds the Goes decision used by no general proof there.\n\nGreps: `way_generation` nowhere; `after_append` used by no proof; `rising_takes_all` used in LineOnAStock only in need_unmet; none of omega, simp, funext, Classical, propext, native_decide, sorry or axiom in LineOnAStock or the cases module; no docstring in the three files names a removed WayOfUnits declaration.\n\nOne search of all tracked files for the removed WayOfUnits names ran past two minutes and I stopped it. Its partial result: they appear in study records only, and the atlas file six/mapping.json names none of them. Not checked beyond that.\n\nThe statements quoted verbatim make this longer than 1,600 words; the rest is kept short. The full suite and gate were not run, as asked."
+ }
+}

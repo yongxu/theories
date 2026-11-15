@@ -1,0 +1,54 @@
+== A. namespace Three, recomputed ==
+rise_count course: [((3, True, 0), 12), ((4, True, 1), 12), ((5, True, 2), 12), ((6, True, 3), 12), ((7, True, 4), 12), ((8, True, 5), 10), ((9, True, 6), 4), ((10, True, 7), 0)]
+ first step below need 1: 7  bound 2*12+1 = 25
+ step giving 3 12 = 12  giving 0 = 0  Keeps giving 0 12: True
+ (H,y) with H<=3, Short giving H y, 12 < H+y: []
+ old premises (floor H <= use from there on, Short, level < H+y) first meetable at step 4 (7, True, 4) 12 e.g. (7, 6)
+read_at_eight (old) course: [((3, True, 0), 9), ((3, True, 1), 8), ((3, False, 2), 6), ((3, True, 3), 6), ((3, True, 4), 2), ((3, True, 5), 0), ((3, True, 6), 0)]
+share_read course: [((3, True, 0), 9), ((3, True, 1), 8), ((0, False, 2), 6), ((0, False, 3), 6), ((0, False, 4), 6), ((0, False, 5), 6), ((0, False, 6), 6)]
+ as it was: [9, 8, 6, 2, 0, 0]  T=1: read True  level at T+1 >= 6: True
+ Short 5 5: True  Short 3 3: True  Meets 3 3 12: True  Keeps 3 12: True
+riseShare variant (not in Lean): [((3, True, 0), 9), ((4, True, 1), 8), ((0, False, 2), 6), ((0, False, 3), 6), ((0, False, 4), 6), ((0, False, 5), 6)]
+== B. ends_with_net_rising, every small model ==
+ models: 22596  no counterexample;  largest ending step by hi: {0: 0, 1: 2, 2: 3, 3: 4, 4: 5} (stated bound 2*hi+1; hi+1 is reached)
+== C. ends_with_net_rising with one premise dropped (hand models, simulated 200 steps) ==
+ no `nothing` (giving 0 = 1, giving 1 = 0, hi 1, x 1, need 1, use j): None
+ no `keeps` (giving z = z + 5 for z > 0, x 3, use j): None
+ no `high` (giving 0 up to hi = 2, z + 5 above; x 3): None
+ `rises` weakened to <= (use 0 always, x 3): None
+ `rises` only for j < 50 then constant (use min(j, 5), Three.giving, x 12): None
+ need 0: None
+ no `un` (level hi marked, way reset there): after 200 steps level 4
+== D. locked_ends_rising / count_rises, mutated models ==
+ models meeting every premise: 25466  none fails; largest (ending step - (hi+1)): -1
+ count_rises: models meeting its premises 40922 none fails; with one premise dropped and `more` false: 6230
+  drop raises -> conclusion fails, e.g. {'d': {0: -1, 1: -1, 2: -1}, 'fav': (1, 2), 'thr': 3, 'rlo': 0, 'rhi': 2, 'gdep': False, 'reads': 'all', 'use': ('steps', 2, (4, 0, 0)), 'giv': 'three', 'hi': 12, 'x': 12, 'need': 1, 'a0': 3, 'g0': 2}
+  drop monotone -> conclusion fails, e.g. {'d': {0: 0, 1: 1, 2: 1}, 'fav': (1, 2), 'thr': 5, 'rlo': 2, 'rhi': 0, 'gdep': False, 'reads': 'all', 'use': ('count', 1, (0, 0, 0)), 'giv': 'three', 'hi': 12, 'x': 12, 'need': 1, 'a0': 3, 'g0': 2}
+  drop upper -> conclusion fails, e.g. {'d': {0: 0, 1: 1, 2: 1}, 'fav': (1,), 'thr': 3, 'rlo': 0, 'rhi': 2, 'gdep': False, 'reads': 'all', 'use': ('count', 1, (0, 0, 0)), 'giv': 'three', 'hi': 12, 'x': 12, 'need': 1, 'a0': 3, 'g0': 1}
+  drop needs -> conclusion fails, e.g. {'d': {0: 0, 1: 1, 2: 1}, 'fav': (1, 2), 'thr': 3, 'rlo': 0, 'rhi': 2, 'gdep': False, 'reads': 'all', 'use': ('count', 1, (0, 0, 0)), 'giv': 'three', 'hi': 12, 'x': 12, 'need': 0, 'a0': 3, 'g0': 2}
+  drop nothing -> conclusion fails, e.g. {'d': {0: 0, 1: 1, 2: 1}, 'fav': (1, 2), 'thr': 3, 'rlo': 2, 'rhi': 2, 'gdep': False, 'reads': 'all', 'use': ('count', 1, (0, 0, 0)), 'giv': 'from0', 'hi': 12, 'x': 12, 'need': 1, 'a0': 3, 'g0': 2}
+  drop keeps -> conclusion fails, e.g. {'d': {0: 0, 1: 1, 2: 1}, 'fav': (1, 2), 'thr': 3, 'rlo': 0, 'rhi': 2, 'gdep': False, 'reads': 'all', 'use': ('count', 1, (0, 0, 0)), 'giv': 'big', 'hi': 12, 'x': 12, 'need': 1, 'a0': 3, 'g0': 2}
+  drop high -> conclusion fails, e.g. {'d': {0: 0, 1: 1, 2: 1}, 'fav': (1, 2), 'thr': 3, 'rlo': 0, 'rhi': 2, 'gdep': False, 'reads': 'all', 'use': ('count', 1, (0, 0, 0)), 'giv': 'big', 'hi': 0, 'x': 12, 'need': 1, 'a0': 3, 'g0': 1}
+  drop locked -> conclusion fails, e.g. {'d': {0: 0, 1: 1, 2: 1}, 'fav': (1, 2), 'thr': 5, 'rlo': 0, 'rhi': 2, 'gdep': False, 'reads': 'even', 'use': ('count', 1, (0, 0, 0)), 'giv': 'three', 'hi': 12, 'x': 12, 'need': 2, 'a0': 3, 'g0': 2}
+  drop more -> conclusion fails, e.g. {'d': {0: -1, 1: 0, 2: 0}, 'fav': (1, 2), 'thr': 3, 'rlo': 0, 'rhi': 2, 'gdep': False, 'reads': 'all', 'use': ('count', 1, (0, 0, 0)), 'giv': 'three', 'hi': 12, 'x': 12, 'need': 1, 'a0': 3, 'g0': 2}
+== E. locked_turns_in_time_share_iff / share_corrected_stays, mutated models ==
+ models meeting every premise: 15886  of them never ending: 12640  iff holds in all
+ share_corrected_stays along the net's line, violations under its three premises: 0
+  drop raises -> iff fails (never ends: True , right side: False ) changed: {'d': {0: 0, 1: -1, 2: -1}, 'K': 5}
+  drop monotone -> no failing model found in this family
+  drop upper -> no failing model found in this family
+  drop sets -> iff fails (never ends: False , right side: True ) changed: {'sA': 5}
+  drop lowRule -> iff fails (never ends: False , right side: True ) changed: {'thr': 0}
+  drop lowStays -> iff fails (never ends: False , right side: True ) changed: {'d': {0: 1, 1: 0, 2: 0}}
+  drop uses -> iff fails (never ends: False , right side: True ) changed: {'u': {0: 6, 1: 4, 2: 5}}
+  drop nothing -> iff fails (never ends: True , right side: False ) changed: {'giv': 'from0', 'x': 5}
+  drop short -> iff fails (never ends: True , right side: False ) changed: {'y2': 5}
+  drop meets -> no failing model found in this family
+  drop keeps -> no failing model found in this family
+  drop needs -> iff fails (never ends: True , right side: False ) changed: {'x': 2, 'need': 0}
+  drop within -> iff fails (never ends: False , right side: True ) changed: {'need': 8}
+  drop short1 -> iff fails (never ends: True , right side: False ) changed: {'x': 11, 'y1': 9}
+  drop locked -> iff fails (never ends: True , right side: False ) changed: {'u': {0: 3, 1: 3, 2: 6}, 'a0': 1}
+  drop draws -> iff fails (never ends: True , right side: False ) changed: {'u': {0: 3, 1: 3, 2: 3}}
+  drop below -> iff fails (never ends: True , right side: False ) changed: {'N': 4, 'x': 11}
+  drop high -> no failing model found in this family
