@@ -716,7 +716,7 @@
         "Becoming.TurningInTime.turns_in_time_iff_before",
         "Becoming.TurningInTime.Three.noReturn"
       ],
-      "sha256": "e4d3b015767a40ca83cad6147e74d2a6e66269b97ba09dd236ad756a8106be62"
+      "sha256": "f6fe0984671dda8c41a086392a31c5c76deae11fc005ffe02c00a5908fa10b1a"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261113T133009.897615Z/verification.json",
@@ -763,12 +763,18 @@
       "role": "receipt",
       "sha256": "9f128a3410b64620eaf06cc3e8af745d0f78fb7577367f8b26dde130c5b38a92",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261115T153402.052649Z/verification.json",
+      "role": "receipt",
+      "sha256": "5cf33b3f7a98a5f73e0f47753a78d4aaaeffbaa7bc38b6cfa74907eac05973d0",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261115T033911.021704Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261115T153402.052649Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.TurningInTime",
       "success_pointer": "/status",
       "success_value": "passed"

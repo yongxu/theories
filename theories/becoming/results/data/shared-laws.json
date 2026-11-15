@@ -1,7 +1,7 @@
 {
  "about": "MV: the shared laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/shared_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261115T033911.021704Z",
- "core_sources_sha256": "614fad362834b4e07b86d83ec7fc73ca1d9a188a8ba955052006c58410b87168",
+ "core_receipt": "20261115T153402.052649Z",
+ "core_sources_sha256": "561376238e37a5bbd791a1377149f30547b94f84f074e898228d98188b0f6fd5",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "438b65fe8bc281ab9796cfbff00af7db8441123a5aba8f3779f7c08586b443c7",
@@ -66766,7 +66766,7 @@
   ],
   "lean_check": {
    "toolchain": "leanprover/lean4:v4.29.1",
-   "modules_sha256": "154954b5b70e5c8e143e6cf53310683f1506f41942cc648358976e0211c8da87",
+   "modules_sha256": "d46f14067397e1556ac36ac316abdfee46ab002af62853108c64f9cf9da9fb89",
    "check_sha256": "e5ef1c274e3e3f81aa13dbe78732d1f6883a207a5685f736102ee4a2d5b1fc34",
    "ran": true
   },
