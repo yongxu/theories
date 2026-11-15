@@ -203,11 +203,11 @@
       "zh": "held_above：无中不生有，给还在 y 以下不足 H，用量 U 不少于 H，水位 c 高于零且 U 之下的一步不使之降低：H + y ≤ c。"
     },
     {
-      "en": "unending_iff_above_kept_below: from a way of the kept kind that uses H₂, at most hi, under unending_iff_above's regime premises and need, with c above nothing, the kind kept by every step only at a level from H₂ + y₂ up to below c, every way's step taking every level from c up to hi to one from c up to hi, and every way the course reaches using at least H₂: the line never ends exactly where the level is at or above H₂ + y₂.",
+      "en": "unending_iff_above_kept_below: from a way of the kept kind, whose ways use H₂, at a level at most hi, under unending_iff_above's regime premises and need, with c above nothing, the kind kept by every step only at a level from H₂ + y₂ up to below c, every way's step taking every level from c up to hi to one from c up to hi, and every way the course reaches using at least H₂: the line never ends exactly where the level is at or above H₂ + y₂.",
       "declarations": [
         "Becoming.TurningInTime.unending_iff_above_kept_below"
       ],
-      "zh": "unending_iff_above_kept_below：自所保持之类、取用 H₂、不高于 hi 的方式起，在 unending_iff_above 的体制前提与所需之下，c 高于零，该类只需在 H₂ + y₂ 至 c 以下的水位被每一步保持，每个方式的一步把 c 至 hi 的水位带到 c 至 hi，进程所到的方式取用皆不少于 H₂：线不穷，当且仅当水位不低于 H₂ + y₂。"
+      "zh": "unending_iff_above_kept_below：自所保持之类、取用 H₂ 的方式，水位不高于 hi，在 unending_iff_above 的体制前提与所需之下，c 高于零，该类只需在 H₂ + y₂ 至 c 以下的水位被每一步保持，每个方式的一步把 c 至 hi 的水位带到 c 至 hi，进程所到的方式取用皆不少于 H₂：线不穷，当且仅当水位不低于 H₂ + y₂。"
     },
     {
       "en": "turns_in_time_iff_kept_below: turns_in_time_iff with kept replaced by the kind kept only at a level from H₂ + y₂ up to below a positive c, every way's step taking every level from c up to hi to one from c up to hi, and every way the pair's course reaches from a way of the kept kind using at least H₂; and the start at most hi replaced by the level of the course as it was after every marked step at most hi. Its conclusion is turns_in_time_iff's.",
@@ -231,11 +231,11 @@
       "zh": "locked_alone_not_below：在 RuleCapture 的 Raises、ReadsShare 与偏向向上保持之下，自 Locked 的方式起，沿锁照旧的步（windowAlone）走 n 步，份额与规则都不低于起点的，对每个 n 皆然。"
     },
     {
-      "en": "locked_ends_with_net_regime: with the level's step RegimeMargin.step giving (use w), the lock's premises, AloneOutside at windowAlone, a positive need no marked level meets, nothing given from nothing, giving short of H below y, every way whose share and rule are not below the start's using at least H (draws), and the start below H + y: a Locked start reaches within x steps a configuration that conditions nothing, still Locked.",
+      "en": "locked_ends_with_net_regime: with the level's step RegimeMargin.step giving (use w), the lock's premises, AloneOutside at windowAlone, a positive need no marked level meets, nothing given from nothing, giving short of H below y, every way whose share and rule are not below the start's using at least H (draws), and the start below H + y: a Locked start reaches, within as many steps as the start's level, a configuration that conditions nothing, still Locked.",
       "declarations": [
         "Becoming.TurningInTime.locked_ends_with_net_regime"
       ],
-      "zh": "locked_ends_with_net_regime：水位的步为 RegimeMargin.step giving (use w)，锁的前提，windowAlone 处的 AloneOutside，所需为正且无标记水位满足它，无中不生有，给还在 y 以下不足 H，份额与规则不低于起点的方式取用皆不少于 H（draws），起点低于 H + y：自 Locked 的起点，线在 x 步之内到达无所缘的构形，仍为 Locked。"
+      "zh": "locked_ends_with_net_regime：水位的步为 RegimeMargin.step giving (use w)，锁的前提，windowAlone 处的 AloneOutside，所需为正且无标记水位满足它，无中不生有，给还在 y 以下不足 H，份额与规则不低于起点的方式取用皆不少于 H（draws），起点低于 H + y：自 Locked 的起点，线在不多于起点水位的步数之内到达无所缘的构形，仍为 Locked。"
     },
     {
       "en": "locked_ends_on_window: locked_ends_with_net_regime with the way after a step windowAfter fA hA hL N K reads and the levels in [N, K) marked, no marked level meeting the need where K ≤ N or K ≤ need. The start below H + y and the floor on the use are given in both.",
@@ -256,7 +256,7 @@
       "declarations": [
         "Becoming.TurningInTime.locked_turns_in_time_on_window_iff"
       ],
-      "zh": "locked_turns_in_time_on_window_iff：窗口上的 turns_in_time_iff_kept_below，所保持之类为规则满足 kept 的方式：在锁的前提下自 Locked 的起点，每一步都读取，读取在 [N, K) 给出 kept 的规则，N ≤ H₂ + y₂，c ≤ K，规则 kept 的方式取用 H₂、每个方式不少于 H₂，无中不生有，H₂ 至 hi 的体制前提，所需为正且不超过 H₂ + y₂，c 为正，safe，y₁ 以下所给不足 H₁，份额与规则不低于起点处的下限 H₁，起点低于 H₁ + y₁，窗口所读之步后的水位不高于 hi：线不穷，当且仅当在锁自己的进程第一个落在 [N, K) 的一步（此处及此前所需皆满足），一步之后的水位不低于 H₂ + y₂。"
+      "zh": "locked_turns_in_time_on_window_iff：窗口上的 turns_in_time_iff_kept_below，所保持之类为规则满足 kept 的方式：在锁的前提下自 Locked 的起点，每一步都读取，读取在 [N, K) 给出 kept 的规则，N ≤ H₂ + y₂，c ≤ K，规则 kept 的方式取用 H₂、每个方式不少于 H₂，无中不生有，RegimeMargin 在 H₂ 处以 y₂ 至 hi 的前提（Short、Meets、Keeps），所需为正且不超过 H₂ + y₂，c 为正，safe，y₁ 以下所给不足 H₁，份额与规则不低于起点处的下限 H₁，起点低于 H₁ + y₁，窗口所读之步后的水位不高于 hi：线不穷，当且仅当在锁自己的进程第一个落在 [N, K) 的一步（此处及此前所需皆满足），一步之后的水位不低于 H₂ + y₂。"
     },
     {
       "en": "Three.lock_ends: on the lock's own types (the share a number by ≤, the rule false below true, the rule read true from a share of three up, a use of five under true and three under false, no level marked), from (3, true, 0) at nine every premise of locked_ends_with_net_regime holds and the line ends in four steps at ((3, true, 4), 0), Locked; (2, true) is not Locked. Along it the share stays three (lock_share_stays).",
@@ -351,7 +351,7 @@
       "declarations": [
         "Becoming.TurningInTime.locked_turns_in_time_share_iff"
       ],
-      "zh": "locked_turns_in_time_share_iff：windowAfterShare 上、以份额 Low 且规则 kept 的方式为保持之类的 turns_in_time_iff：在锁的前提下自 Locked 的起点，有 sets、lowRule、lowStays，份额与规则不低于起点处的下限 H₁，起点低于 H₁ + y₁ 且不高于 hi，y₁ 以下所给不足 H₁，Low、kept 的方式取用 H₂，无中不生有，H₂ 至 hi 的体制前提，所需为正且不超过 H₂ + y₂，对窗口位置不设前提：线不穷，当且仅当在锁自己的进程第一个落在 [N, K) 的一步（此处及此前所需皆满足），一步之后的水位不低于 H₂ + y₂。"
+      "zh": "locked_turns_in_time_share_iff：windowAfterShare 上、以份额 Low 且规则 kept 的方式为保持之类的 turns_in_time_iff：在锁的前提下自 Locked 的起点，有 sets、lowRule、lowStays，份额与规则不低于起点处的下限 H₁，起点低于 H₁ + y₁ 且不高于 hi，y₁ 以下所给不足 H₁，Low、kept 的方式取用 H₂，无中不生有，RegimeMargin 在 H₂ 处以 y₂ 至 hi 的前提（Short、Meets、Keeps），所需为正且不超过 H₂ + y₂，对窗口位置不设前提：线不穷，当且仅当在锁自己的进程第一个落在 [N, K) 的一步（此处及此前所需皆满足），一步之后的水位不低于 H₂ + y₂。"
     },
     {
       "en": "share_corrected_stays: with sets, lowRule and lowStays, after a step of the pair's course at a level in [N, K) the share is Low and the rule kept at every later step; share_corrected_on_course: so from the step after the first step at which the course as it was is at a level the window reads. Neither says anything of the level, the use or whether the line goes on.",
@@ -410,7 +410,7 @@
       "en": "For the lock on the regime: RuleCapture's Raises and ReadsShare, favouring kept upward and a Locked start; AloneOutside at windowAlone; a positive need no marked level meets; nothing given from nothing. Then either giving short of H below y, the floor H on the use where share and rule are not below the start's (draws) and the start below H + y; or the cap of the rising laws and more, the rise of the use given."
     },
     {
-      "en": "On the window: every step reads; the reading gives a kept rule at every level in [N, K) (corrects), with N ≤ H₂ + y₂ and c ≤ K, every way using at least H₂ and the ways with a kept rule H₂; or, where it sets the share too, a Low share and a kept rule there (sets), the rule read off a Low share kept (lowRule), a Low share staying Low under a kept rule (lowStays), the Low, kept ways using H₂, with the regime premises for H₂ up to hi and a positive need at most H₂ + y₂."
+      "en": "On the window: every step reads; the reading gives a kept rule at every level in [N, K) (corrects), with N ≤ H₂ + y₂ and c ≤ K, every way using at least H₂ and the ways with a kept rule H₂; or, where it sets the share too, a Low share and a kept rule there (sets), the rule read off a Low share kept (lowRule), a Low share staying Low under a kept rule (lowStays), the Low, kept ways using H₂, with the regime premises for H₂ up to hi and a positive need at most H₂ + y₂. Both window laws also take the overdraw of the course as it was as given (giving short of H₁ below y₁, the floor H₁ where share and rule are not below the start's, the start below H₁ + y₁) and a bound hi: on the level after each step the window reads, or on the start where the share is set too."
     },
     {
       "en": "For the rising laws: the step under no use keeping every level up to hi within hi (RegimeMargin.Keeps giving 0 hi) and the start at most hi; the use rising strictly at each of the first hi steps of alone's orbit (rises). count_rises asks a share that is a natural number every favouring rule raises strictly, a use that is that number times a positive amount, favouring kept upward and the start's rule favouring."
@@ -483,7 +483,7 @@
     "conditional-not-universal"
   ],
   "validation_scope": {
-    "en": "Pure core, axiom reports empty (scratch build of 16 November: 105 declarations, 78 theorems); imported by Becoming.LineOnAStock and Becoming.WayOfUnits, in the Lean's second layer only through two theorems it imports. Compositions of landed theorems (Optimum's, RegimeMargin's, the root's, the joined two-level step, RuleCapture's lock) with one split at the first marked level; the witnesses computed. Written by AI agents and read by AI agents set to refute it, the laws of 16 November among them; no person's review of it is recorded yet."
+    "en": "Pure core, axiom reports empty (scratch build of 16 November: 105 public declarations, 78 of them theorems, and 35 private lemmas); imported by Becoming.LineOnAStock and Becoming.WayOfUnits, in the Lean's second layer only through two theorems it imports. Compositions of landed theorems (Optimum's, RegimeMargin's, the root's, the joined two-level step, RuleCapture's lock) with one split at the first marked level; the witnesses computed. Written by AI agents and read by AI agents set to refute it, the laws of 16 November among them; no person's review of it is recorded yet."
   },
   "next_delta": {
     "en": "Prove ClosedCapture's and PoolFromCourse's courses instances of the pair, so that their own-loop theorems are derived below from agrees_until_marked; move «类闭则本类常闭» and first_of_decided down, putting the module in the first layer; give the step T in closed form by Optimum.reread_deadline_iff; a test on a trained system, held."
@@ -1032,7 +1032,7 @@
       "en": "15 November 2026, board row DJ, stage 2 (core run 20261115T153402.052649Z): held_above; unending_iff_above and turns_in_time_iff became the case c := hi + 1 of laws in which the kind is kept only below a level (unending_iff_above_kept_below, turns_in_time_iff_kept_below), with kept_or_marked; window_corrected and locked_turns_in_time_on_window_iff; Three's noRule, read_at_eight_ends, read_to_ten, held_at_six and unlocked_goes_on. No existing statement changed. Appended here on 16 November."
     },
     {
-      "en": "16 November 2026, board row DJ, with the new record a-line-on-a-stock: kept_within, rises_from, rising_takes_all, rising_meets_level, ends_with_net_rising, locked_ends_rising and count_rises; windowAfterShare with window_share_alone_outside and windowAfter_every_is_share, locked_turns_in_time_share_iff, share_corrected_stays and share_corrected_on_course; Three's drawerUse, rise_count_ends, zeroShare and share_read_goes_on. ends_with_net's proof became a case of a private lemma it shares with ends_with_net_rising; its statement is unchanged. Laws and hypotheses appended for these and for stages 1 and 2; nothing earlier renumbered. A first telling of the lock's new law as an overdraw that comes about was refuted by readers: it concludes an ending."
+      "en": "16 November 2026, board row DJ, with the new record a-line-on-a-stock: kept_within, rises_from, rising_takes_all, rising_meets_level, ends_with_net_rising, locked_ends_rising and count_rises; windowAfterShare with window_share_alone_outside and windowAfter_every_is_share, locked_turns_in_time_share_iff, share_corrected_stays and share_corrected_on_course; Three's drawerUse, rise_count_ends, zeroShare and share_read_goes_on. ends_with_net's proof became a case of a private lemma it shares with ends_with_net_rising; its statement is unchanged. Laws and hypotheses appended for these and for stages 1 and 2; nothing earlier renumbered. A first telling of the lock's new law as an overdraw that comes about was refuted by readers: it concludes an ending. Before the core run, after a reading against the Lean: two laws of 15 November say where hi and the bound on the steps fall, the hypothesis on the window names the overdraw and the bound it takes, and the count of declarations says public."
     }
   ]
 }

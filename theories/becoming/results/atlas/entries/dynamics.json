@@ -2442,7 +2442,7 @@
      {
       "law": "Becoming.LineOnAStock.unending_iff_holds",
       "how": {
-       "en": "The general law at kids u = [u] on units of two numbers, through the bridge in WayOfUnits (course_unit, net_unit, unending_unit, holds_unit, regime_unit): its even and some hold since each unit's one kid is itself, its down by down_unit, its Needing from every unit of the start needing something (needing_unit), its regime along the course from this law's (along_unit). The statement is unchanged."
+       "en": "The general law at kids u = [u] on units of two numbers, through the bridge in WayOfUnits (unending_unit, course_unit, holds_unit, and along_unit with regime_unit): its even and some hold since each unit's one kid is itself, its down by down_unit, its Needing from every unit of the start needing something (needing_unit), its regime along the course from this law's (along_unit). The statement is unchanged."
       }
      }
     ]
@@ -2561,7 +2561,7 @@
   },
   "family": "A",
   "mechanism": {
-   "en": "A configuration is a way, a list of units each with a need, a use and the units it leaves, and a level. After a step each unit whose need the level meets leaves its kids and the others leave nothing; the level is the regime's step under what the units present take together; there is a next while some need is met. The way reads the level only through which needs it meets, and the level reads the way only through what it takes: with no premise on the stock, two courses from one way whose levels meet the same needs step by step have the same ways and the same number born. With nothing given from nothing, the step under no use keeping the level within hi, kids taking more than their parent, every descendant needing something and a start not empty, at most hi, with every need met, a first unmet need comes within hi + 1 steps, the way until then the generation of descent; with kids needing no more than their parent the level there is below a need the start met, and with positive needs the net ends. Where kids take exactly what their parent takes, under the regime along the course, the net never ends exactly where its course comes to a configuration that holds; WayOfUnits is the case of units leaving themselves. The needs, uses and offspring, the cap and the regime are given."
+   "en": "A configuration is a way, a list of units each with a need, a use and the units it leaves, and a level. After a step each unit whose need the level meets leaves its kids and the others leave nothing; the level is the regime's step under what the units present take together; there is a next while some need is met. The way reads the level only through which needs it meets, and the level reads the way only through what it takes: with no premise on the stock, two courses from one way whose levels meet the same needs step by step have the same ways and the same number born. With nothing given from nothing, the step under no use keeping the level within hi, kids taking more than their parent, every descendant needing something and a start not empty, at most hi, with every need met, a first unmet need comes within hi + 1 steps, the way until then the generation of descent; with kids needing no more than their parent the level there is below a need the start met, and, with every unit's need positive as well, the net ends. Where kids take exactly what their parent takes, under the regime along the course, the net never ends exactly where its course comes to a configuration that holds; WayOfUnits is the case of units leaving themselves. The needs, uses and offspring, that kids take more or the same and need no more, nothing given from nothing, the cap and the regime are given."
   },
   "records": [
    "a-line-on-a-stock"
@@ -2844,7 +2844,7 @@
     },
     "law": "Becoming.LineOnAStock.line_ends",
     "edge": {
-     "en": "With nothing given from nothing, the cap and a start at most hi, a line no unit outside which leaves a unit of it, whose units' kids in it take more, need something and need no more than their parent, is gone from some step on (line_ends), and stays gone (gone_from). With kids taking no less, one need m, giving at nothing below m and what the line takes at the start more than every giving, the same holds with no cap asked (fall)."
+     "en": "With nothing given from nothing, the cap and a start at most hi, a line no unit outside which leaves a unit of it, whose units need something and have kids in it that take more than the unit, every kid of its units needing no more than its parent, is gone from some step on (line_ends), and stays gone (gone_from). With kids taking no less, one need m, giving at nothing below m and what the line takes at the start more than every giving, the same holds with no cap asked (fall)."
     },
     "strength": "sufficient",
     "records": [

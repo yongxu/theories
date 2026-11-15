@@ -183,7 +183,7 @@
     },
     {
       "en": "unending_taken_below: on a course that never ends, with nothing given from nothing and every unit of the start needing something, what the way takes is below the level at every step; the case kids u = [u] of LineOnAStock.unending_taken_below.",
-      "zh": "unending_taken_below：在永不终止的进程上，无中不生有、起点各单元都有所需时，方式所取在每一步都低于水位；即 LineOnAStock.unending_taken_below 在 kids u = [u] 时的情形。",
+      "zh": "unending_taken_below：在永不终止的进程上，无中不生有、起点各单元所需为正时，方式所取在每一步都低于水位；即 LineOnAStock.unending_taken_below 在 kids u = [u] 时的情形。",
       "declarations": [
         "Becoming.WayOfUnits.unending_taken_below"
       ]
@@ -322,7 +322,7 @@
           "en": "The units' net, the pair's step cut where no unit goes on; the carrier's net."
         },
         "conditions": {
-          "en": "Whether some unit goes on, decided by goesDecidable, LineOnAStock.goesDecidable at kids u = [u]."
+          "en": "Whether some unit goes on, decided by goesDecidable, which is LineOnAStock.goesDecidable at this module's need."
         },
         "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean"
       }
@@ -350,11 +350,11 @@
       "id": "shared-laws-on-the-grammar",
       "relation": "formal-reuse",
       "detail": {
-        "en": "Reuses the root's keep (GrammarLaws.keep, keep_all, mem_keep) as the way after a step."
+        "en": "Reuses the root's keep (GrammarLaws.keep, mem_keep) as the way after a step."
       },
       "interface": {
         "output": {
-          "en": "What keep keeps is the members that pass, in order; a list all of whose members pass is kept whole."
+          "en": "What keep keeps is the members that pass, in order."
         },
         "input": {
           "en": "The units of a way, tested by whether the level meets their need."
@@ -594,7 +594,7 @@
       "en": "13 November 2026, board item WU2: greater_need and more_use_on_first re-proved outside two_units_iff with fewer premises, on the new theorem unending_above; no other statement changed. A reader's computed cases for each premise kept are in the study folder (readers/t1-trim.md)."
     },
     {
-      "en": "16 November 2026, board row DJ, with the new record a-line-on-a-stock: the module now imports Becoming.LineOnAStock, and six declarations (unending_iff_holds, its statement unchanged, fixed_while, the new unending_taken_below, course_fixed, step_falls and the decision of Goes) are derived from that module's laws at kids u = [u], through fifteen new declarations at that case. Thirteen helpers that no proof used and no record named were removed (goes_false_of_lt, mem_of_ne_nil, goes_of_holds, length_keep_le, length_keep_lt, met_or_unmet, after_eq_iff, mem_course_iff, anyGoes, anyGoes_iff, falls, course_within, reaches_holds): their general forms are in LineOnAStock, and whether a unit is present along a course is said there by descent. The dependency on when-a-selection-read-off-continuation-reads is removed, since first_of_decided is no longer used here; the condition of the cut step, which named anyGoes, is re-said."
+      "en": "16 November 2026, board row DJ, with the new record a-line-on-a-stock: the module now imports Becoming.LineOnAStock, and six declarations (unending_iff_holds, its statement unchanged, fixed_while, the new unending_taken_below, course_fixed, step_falls and the decision of Goes) are derived from that module's laws at kids u = [u], through fifteen new declarations at that case. Thirteen helpers that no proof used and no record named were removed (goes_false_of_lt, mem_of_ne_nil, goes_of_holds, length_keep_le, length_keep_lt, met_or_unmet, after_eq_iff, mem_course_iff, anyGoes, anyGoes_iff, falls, course_within, reaches_holds): their general forms are in LineOnAStock, and whether a unit is present along a course is said there by descent. The dependency on when-a-selection-read-off-continuation-reads is removed, since first_of_decided is no longer used here; the condition of the cut step, which named anyGoes, is re-said. Before the core run, after a reading against the Lean: the dependency on shared-laws-on-the-grammar no longer names keep_all, which no proof uses now, and goesDecidable is said at this module's need."
     }
   ]
 }

@@ -998,7 +998,8 @@ tagged instance or application.
   near-definitional). The gate makes the formations' end last; these laws judge the line from before
   that step. In a witness, a line drawn past a renewal given from no condition, from too small a
   stock, degenerates, the coupled gate failing (`LineageDrawdown.Drain.outside_ends`,
-  `LineageDrawdown.Drain.not_gated`). A leaf.
+  `LineageDrawdown.Drain.not_gated`). Imported by `Becoming.ReadingsSpread` and
+  `Becoming.LineOnAStockCases`.
 * `Becoming.GroupEnding` (L1): selection among groups through conditions of their own. Where
   every group with less of an amount than another leaves no offspring, nothing is discordant
   among the groups, so the whole selects for the amount exactly where k times the within-group
@@ -4898,7 +4899,8 @@ tagged instance or application.
   the line reading its source persists and clears the dweller's habitat as the line reading everything
   persists and spares it, the line reading itself alone ends, and the clearing course removes the dweller's
   line; where the dweller renews the source, the clearing line ends with the dweller's, and selection read
-  off the course's pool still passes. A leaf; short laws, none new as mathematics. The closure law on
+  off the course's pool still passes. Imported by `Becoming.ReadingsSpread` and `Becoming.LineOnAStock`;
+  short laws, none new as mathematics. The closure law on
   dated descent its `Flow.lineOf_carries` is a case of (`SelectionTerm.Generations.kept_iff`) lies here.
 * `Becoming.ReadOffInTime` (L2, through `Becoming.BeyondCoupling`, `Becoming.ConditionInTime`,
   `Becoming.Propagation` and `Becoming.RegimeMargin`): when a selection read off continuation reads a
@@ -5040,7 +5042,8 @@ tagged instance or application.
   `alone`'s orbit, the level of the course as it was at step `hi + 1` is nothing
   (`TurningInTime.rising_takes_all`), and, under those premises but `nothing`, the first step at which
   the use is at least the level comes within `hi` steps (`TurningInTime.rising_meets_level`); with
-  `AloneOutside` and a positive need that no marked level meets as well, the line reaches within
+  `AloneOutside` and a positive need that no marked level meets added to `rising_takes_all`'s premises,
+  `nothing` among them, the line reaches within
   `hi + 1` steps a configuration that conditions nothing, its way `alone` taken that many times
   (`TurningInTime.ends_with_net_rising`). What is concluded is an ending; the rise of the use is given,
   and no floor on the use and no start below a point of no return are asked.
@@ -5137,7 +5140,7 @@ tagged instance or application.
   window lies, the line never ends exactly where, at the first step of the lock's own course as it was
   whose level lies in `[N, K)`, the need met there and at every step before, the level one step later is
   at or above `H₂ + y₂` (`TurningInTime.locked_turns_in_time_share_iff`). That the reading sets such a
-  share and rule (`sets`), and the overdraw of the course as it was (`draws`, `below`), are given. After
+  share and rule (`sets`), and the overdraw of the course as it was (`draws`, `below`), are given. Under `sets`, `lowRule` and `lowStays`, for any level's step and any start, after
   a step of the pair's course at a level in `[N, K)` the share is `Low` and the rule `kept` at every
   later step (`TurningInTime.share_corrected_stays`), and so from the step after the first step at which
   the course as it was is at a level the window reads (`TurningInTime.share_corrected_on_course`);
@@ -5160,8 +5163,8 @@ tagged instance or application.
   class ends while the net goes on, with no marked level it ends as it was. The marks, `AloneOutside`,
   the kept kind and its one use are premises, not derived. Imported by `Becoming.LineOnAStock` and
   `Becoming.WayOfUnits`; a model.
-* `Becoming.LineOnAStock` (L2, through `Becoming.TurningInTime` and `Becoming.ReadingsPersist`; it
-  imports `Becoming.SelectionTerm` too): a line on a stock, units that leave offspring on a renewed
+* `Becoming.LineOnAStock` (L2, through `Becoming.TurningInTime` and `Becoming.ReadingsPersist`; it imports `Becoming.SelectionTerm` too):
+  a line on a stock, units that leave offspring on a renewed
   level (board item DJ). It states no continuation condition and no valuation. A unit has a need, a use
   and the units it leaves (`kids`); a way is a list of units, a level a number. After a step at level
   `x` each unit of the way leaves its kids where `x` meets its need and nothing where it does not
@@ -5186,10 +5189,13 @@ tagged instance or application.
   is an AI reading); without `down` the unmet need can be a kid's greater need at a level that has not
   fallen (`LineOnAStock.KidHigherNeed`). With `grows`, positive needs, `down`, nothing given from
   nothing, that cap and a start at most `hi`, the net does not go on for ever, with no bound on the step
-  (`LineOnAStock.way_ends`; for a closed line among other units, `LineOnAStock.line_ends`); without
+  (`LineOnAStock.way_ends`); without
   `down`, or with kids taking the same in place of more, it can go on (`LineOnAStock.KidsNeedMore`,
   `LineOnAStock.EqualInPlaceOfMore`); where every unit needs the same positive amount, it ends within
-  `hi + 1` steps (`LineOnAStock.one_need_ends`). A closed line of one need `m` whose kids take no less
+  `hi + 1` steps (`LineOnAStock.one_need_ends`). With nothing given from nothing, that cap and a start at
+  most `hi`, a closed line among other units, whose units need something and have kids of the line that
+  take more than the unit, every kid of its units needing no more than it, is gone from the way from
+  some step on; the net is not concluded to end (`LineOnAStock.line_ends`). A closed line of one need `m` whose kids take no less
   than it, with `giving 0 < m` and taking at the start more than every giving, is gone from some step
   on, with no cap asked (`LineOnAStock.fall`). Where each unit's kids take exactly what it takes, every
   unit has kids, `down`, every descendant needs something, nothing is given from nothing, the start is
@@ -5211,8 +5217,8 @@ tagged instance or application.
   regime are given; nothing makes a new kind; no exact condition for a way whose kids take more, or
   less, never ending is stated; nothing is about a trained system. Imported by `Becoming.WayOfUnits` and
   `Becoming.LineOnAStockCases`; a model.
-* `Becoming.WayOfUnits` (L2, through its two imports, `Becoming.TurningInTime` and
-  `Becoming.LineOnAStock`): a way of units,
+* `Becoming.WayOfUnits` (L2, through its two imports, `Becoming.TurningInTime` and `Becoming.LineOnAStock`):
+  a way of units,
   a turn with no mark given (board item WU). It states no continuation condition and no
   valuation, and uses none. A unit is a pair of numbers, the level it needs to go on
   (`WayOfUnits.need`) and what it takes from the level at each step (`WayOfUnits.use`); a way is the
@@ -5265,7 +5271,8 @@ tagged instance or application.
   `WayOfUnits.more_use_on_first` rest on it through `step_falls`, and
   `WayOfUnits.takes_nothing_iff_alone` and `WayOfUnits.takes_nothing_ends` through `fixed_while`;
   `WayOfUnits.ends_while_net_goes` and `WayOfUnits.two_units_iff` use no law of it. Thirteen helpers
-  that no proof used were removed (among them `anyGoes` and `falls`); their general forms are in
+  that no proof uses once these six are so derived were removed (among them `anyGoes` and `falls`,
+  which served the proofs these derivations replaced); general forms of most of them are in
   `LineOnAStock`, and whether a unit is present along a course is said there by descent.
   The needs, the uses, `y`, `y₁`, `y₂` and the regime's premises are
   given; units only end; the marks of a way that conditions on a reading are not derived. A leaf: a
@@ -5278,7 +5285,8 @@ tagged instance or application.
   premises of `LineOnAStock.way_ends` hold on that course, checked where the law is applied in the
   proof, not a conjunct (`LineOnAStock.MultiplyingTakersCase.multiplying_takers`).
   `LineageDrawdown.Drain`, gated, has at every step the family size, the pool with the renewer's gift on
-  it, the total of the draws and the renewer's giving of a course of this model, and the premises of
+  it and the total of the draws of a course of this model, the renewer's giving being this model's
+  `gift` of the example's pool, and the premises of
   `LineOnAStock.fall` hold at the line of the drawers from step 1, checked inside the proof
   (`LineOnAStock.DrainCase.drain`). Each example's ending already follows from its own Lean, which the
   equalities take as input; the laws add nothing about the examples. The organisms' identities, and the
