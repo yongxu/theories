@@ -483,7 +483,7 @@
     "conditional-not-universal"
   ],
   "validation_scope": {
-    "en": "Pure core, axiom reports empty (scratch build of 16 November: 105 declarations, 78 theorems); imported by Becoming.LineOnAStock and Becoming.WayOfUnits, in the Lean's second layer only through two theorems it imports. Compositions of landed theorems (Optimum's, RegimeMargin's, the root's, the joined two-level step, RuleCapture's lock) with one split at the first marked level; the witnesses computed. Written by AI agents and read by AI agents set to refute it, the laws of 15 and 16 November by two verifiers each; no person's review of it is recorded yet."
+    "en": "Pure core, axiom reports empty (scratch build of 16 November: 105 declarations, 78 theorems); imported by Becoming.LineOnAStock and Becoming.WayOfUnits, in the Lean's second layer only through two theorems it imports. Compositions of landed theorems (Optimum's, RegimeMargin's, the root's, the joined two-level step, RuleCapture's lock) with one split at the first marked level; the witnesses computed. Written by AI agents and read by AI agents set to refute it, the laws of 16 November among them; no person's review of it is recorded yet."
   },
   "next_delta": {
     "en": "Prove ClosedCapture's and PoolFromCourse's courses instances of the pair, so that their own-loop theorems are derived below from agrees_until_marked; move «类闭则本类常闭» and first_of_decided down, putting the module in the first layer; give the step T in closed form by Optimum.reread_deadline_iff; a test on a trained system, held."
