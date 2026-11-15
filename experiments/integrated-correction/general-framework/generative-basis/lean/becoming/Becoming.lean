@@ -5037,9 +5037,9 @@ tagged instance or application.
   a kind every step keeps that uses `H₂`, under `RegimeMargin`'s premises for `H₂` up to `hi`, a
   positive need at most `H₂ + y₂` and the level at most `hi`, the line never ends exactly where the
   level is at or above `H₂ + y₂` (`TurningInTime.unending_iff_above`), the case `c := hi + 1` of a law
-  with the kind kept by every step only at a level from `H₂ + y₂` up to below a positive level `c`,
-  every way's step taking every level from `c` up to `hi` to a level from `c` up to `hi`, and every way
-  the course reaches using at least `H₂` (`TurningInTime.unending_iff_above_kept_below`; with nothing
+  in which the kind need be kept by every step only at a level from `H₂ + y₂` up to below a positive
+  level `c`, every way's step taking every level from `c` up to `hi` to a level from `c` up to `hi`,
+  and every way the course reaches using at least `H₂` (`TurningInTime.unending_iff_above_kept_below`; with nothing
   given from nothing and giving short of `H` below `y`, a positive level that a step under a use of at
   least `H` does not lower is at or above `H + y`, `TurningInTime.held_above`); composed, with the way
   after a marked step of that kind, uses of at least `H₁` along `alone`'s orbit, giving short of `H₁`
@@ -5047,7 +5047,8 @@ tagged instance or application.
   such a step `T` and the level of the course as it was at `T + 1` is at or above `H₂ + y₂`
   (`TurningInTime.turns_in_time_iff`), the case `c := hi + 1` of a law with its premise that every step
   keeps the kind replaced by those four (kept below `c`, the levels from `c` up to `hi`, the floor on
-  the use, `c` positive) and its premise that the start is at most `hi` replaced by: after every marked
+  the use, asked there along the pair's course from every way of the kept kind at every level, `c`
+  positive) and its premise that the start is at most `hi` replaced by: after every marked
   step of the course as it was the level is at most `hi` (`TurningInTime.turns_in_time_iff_kept_below`).
   With `AloneOutside`, decided marks and a way after a marked step of the kept kind, a kind kept by
   every step at the levels of a band is kept at every level, or every level of the band is marked
@@ -5078,7 +5079,8 @@ tagged instance or application.
   `Locked` way that uses at least `H` wherever its share and rule are not below the start's, from a
   level below `H + y`, ends `Locked` where the net ends, with no premise on the level's course
   (`TurningInTime.locked_ends_with_net_regime`; on the window, `TurningInTime.locked_ends_on_window`).
-  The start below `H + y` and the floor on the use are given, not derived from the lock. Where every
+  The start below `H + y`, the floor on the use and that no marked level meets the need are given, not
+  derived from the lock. Where every
   step reads and the window's reading gives, at every level in `[N, K)`, a rule of which a given
   predicate holds, the rule after a step at such a level is one too (`TurningInTime.window_corrected`);
   so on such a window with `N ≤ H₂ + y₂` and `c ≤ K`, ways whose rule meets the predicate using `H₂`
