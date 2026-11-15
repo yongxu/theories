@@ -37,7 +37,7 @@ Three statements the first draft rested on were tried by hand. All three failed 
 6. **How what selects comes to be and changes.** What is selected forms the coupling, and the coupling changes what is selected, in one statement. The earlier work this starts from: couplings formed in a course (`Closing`), a lumping changed by the course's own acts (`Revision`), rules with no top rule (`HeldPossible`), and `Web.consumed_continues_transformed`, which is proved and used nowhere.
 7. **Losses that never come back.** Starts from the modules of 9 and 10 November on what persists. It may end where it began: reading a loss does not settle what to do about it, and counting it stays the step the ethics offers.
 8. **A case from outside.** No Lean. The conditions of the first stages put as questions someone outside the work can ask of a case of their own.
-9. **Said in the grammar's own terms.** Each conclusion stated also as going on without end, generating, degenerating (`«不穷»`, `«生成»`, `«退化»`). This is where the question about Chinese meets the Lean.
+9. **In the grammar's own terms, where that joins.** Not a pass of its own. A stage states its conclusion as going on without end or ending (`«不穷»`, `«亡»`) where that joins it to the root, as steps 1 and 2 did. No conclusion is said again for the sake of the idiom (Ren, 16 November: the aim is not the language, or results said again).
 
 Re-sayings are folded where a module is already open for one of these. Folding as its own pass was tried on 18 October: it added adapters and retired nothing. If the size does not come down this way, we change it.
 
@@ -54,7 +54,7 @@ The repository is too large to read. As something is understood better its telli
 
 ## What is Ren's
 
-- **One choice never put to him.** On 23 October an AI plan decided that old theorems would not be said again from the base. Turning all the Lean may mean they should be. This plan does not decide it.
+- **The choice about old theorems, answered.** On 23 October an AI plan decided that old theorems would not be said again from the base. It was put to him on 15 November. On 16 November he said that it is not about results being said again, or about the language: the aim is a map that is joined and simple ([his words](../sources/15-codex-theory-conversations/2026-11-13-the-map-one-model.md#the-direction-14-november-2026-evening), the last message there). So an old theorem is touched where a join is found that makes it a case, or where it can be retired; none is restated as a pass.
 - New test designs and paid runs, held since 6 November, and who is sent what. Stage 8 needs these.
 
 After each stage he is told in a few lines what it showed. The next does not wait.

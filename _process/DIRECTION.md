@@ -4,7 +4,7 @@
 
 ## Where we are heading
 
-One map of how things come to be, go on, change and end, whole enough that a person, a society or an AI can find its own course on it: what that course rests on, what cannot reach it, and whether it can still turn. We want it to be of use to each, and a base for alignment.
+One map of how things come to be, go on, change and end, whole enough that a person, a society or an AI can find its own course on it: what that course rests on, what cannot reach it, and whether it can still turn. We want it to be of use to each, and a base for alignment. We want it joined and simple: its parts made to meet, and each thing said once.
 
 ## The idea, as we understand it now
 
@@ -45,7 +45,7 @@ Going on along [the plan for the Lean](LEAN-TOWARD-THE-DIRECTION.md), which is t
 - Whether unequal continuing and alikeness can be stated together. The two steps before it, on a rule that keeps an overdraw going and on turning in time with a correction that stays in force, landed on 15 November.
 - Then what we expect to find missing: how what selects comes to be and changes, which now includes a correction that reaches what the rule is set from; losses that never come back to whoever causes them; a case from outside the work.
 
-Classical Chinese is being tried as a way of saying these things. What that has found is in chapter 06 and in a note of 15 November.
+Whether classical Chinese says these things better was looked at on 15 November (chapter 06 and a note of that day). It is not what we are after: a result said again in another idiom, or from another base, is worth it where it joins or shortens.
 
 ## How we work on it
 
