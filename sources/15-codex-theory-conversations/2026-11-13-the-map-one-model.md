@@ -2,7 +2,7 @@
 
 *Filed by the coordinator's session from a section written out by the session he spoke to. The times are that session's transcript stamps, converted to WIB (UTC+7); the texts are copied from the transcript, complete, his spellings kept. The transcript does not record how a message was entered: "spoken" and "typed" below are read from its style and are marked so. The context lines are that session's own account of what it had just shown him.*
 
-13 November 2026, 20:26 to 22:49 WIB, and six messages of 14 November in the section after it; two more of that afternoon, eleven of that evening and five of 15 November are in the last section. Ren's words in a Claude Code desktop session in `/Users/ren/theories` (a fresh session, not one of the sessions then at work on the map), kept verbatim. AI-authored context is labelled separately.
+13 November 2026, 20:26 to 22:49 WIB, and six messages of 14 November in the section after it; two more of that afternoon, eleven of that evening, five of 15 November and one of the night of 16 November are in the last section. Ren's words in a Claude Code desktop session in `/Users/ren/theories` (a fresh session, not one of the sessions then at work on the map), kept verbatim. AI-authored context is labelled separately.
 
 ## Ren's words
 
@@ -259,3 +259,12 @@ Reading the record for that work, it found that the question had been asked and 
 20:22:24 WIB, 15 November (13:22:24 UTC, transcript stamp):
 
 > continue please
+
+*Context (AI-authored):* after stage 2 landed and the session told him what it showed, what had gone wrong on the way, and what was still with him: the proposed AGENTS.md (not applied), the note on Chinese, and whether old theorems should be said again from the base.
+
+01:40:01 WIB, 16 November (18:40:01 UTC of 15 November, transcript stamp):
+
+> continue with the next step, and next step.... till you finish
+>
+> yes, agents.md should be updated  
+> it is not about the language or being said again, we aim to reach an interconnected map that is elegant and unified
