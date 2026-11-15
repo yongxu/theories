@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "FILLED-BY-KIT",
+  "reviewed_at_utc": "2026-11-15T23:40:59+00:00",
   "statement": {
     "en": "A way of units reads the level only by needs met. Capped at hi, nothing from nothing, needs met at first: if kids take more, a need is unmet within hi + 1 steps, the level then below a start need if they need no more; if the same, under the regime, the net never ends exactly where its course holds.",
     "zh": "由单元组成的方式只凭哪些所需被满足来读取水位。水位以 hi 为上限、无中不生有、起点所需皆满足时，后代所取更多的方式在 hi + 1 步内遇到未满足的所需，此前只是传承的世代；后代所需不多于亲代，则那时水位低于起点满足过的某个所需；所取相等时，在沿途体制前提下，网永不终止当且仅当进程走到守得住处。"
@@ -532,7 +532,7 @@
     "conditional-not-universal"
   ],
   "validation_scope": {
-    "en": "Pure core, axiom reports empty in the scratch builds (LineOnAStock 188 declarations, 113 theorems; LineOnAStockCases 15, 9), the core run's receipt to be bound; in the Lean's second layer through TurningInTime and ReadingsPersist, imported by WayOfUnits. AI-written; read by AI agents set to refute it: six readers before any Lean, thirteen readings of the Lean in four rounds, one join on paper refuted. Their searches on small worlds are not proofs. No person's review of it is recorded."
+    "en": "Pure core, axiom reports empty in core run 20261115T233900.527774Z (LineOnAStock 188 declarations, 113 theorems; LineOnAStockCases 15, 9); in the Lean's second layer through TurningInTime and ReadingsPersist, imported by WayOfUnits. AI-written; read by AI agents set to refute it: six readers before any Lean, thirteen readings of the Lean in four rounds, one join on paper refuted. Their searches on small worlds are not proofs. No person's review of it is recorded."
   },
   "next_delta": {
     "en": "An exact condition for a way whose kids take more, or less, never ending; a way that comes to read the fall, its kids or needs changed by the course; the course as a Web with a Flow folded where Continuation is next open; ReadingsSpread's commons as a course of this model; a test on a trained system, held."
@@ -962,7 +962,7 @@
         "Becoming.LineOnAStock.ways_alike",
         "Becoming.LineOnAStock.within_along"
       ],
-      "sha256": "FILLED-BY-KIT"
+      "sha256": "0ef17a87eee22e9719af732a166e67ee9315d8daf533bad5f3c51d511206ecf6"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineOnAStockCases.lean",
@@ -984,60 +984,75 @@
         "Becoming.LineOnAStock.MultiplyingTakersCase.late",
         "Becoming.LineOnAStock.MultiplyingTakersCase.multiplying_takers"
       ],
-      "sha256": "FILLED-BY-KIT"
+      "sha256": "9cc20f55f6e3733486499cfbaccc5163ba8cd106485e7e8dd539864aafe84e5a"
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/RECEIPT_TIMESTAMP/verification.json",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261115T233900.527774Z/verification.json",
       "role": "receipt",
-      "sha256": "FILLED-BY-KIT"
+      "sha256": "cc1317f9057e8e2dc0cec9681d956b2285fb4f051e6719f54463e14f4327f38a"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/NOTE.md",
       "role": "integration",
-      "sha256": "FILLED-BY-KIT"
+      "sha256": "a1cfe66a9ac0bb5ff6c50da938beee73fb9406a24c9e9022c1ab9bf99ae5f587"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/PAPER.md",
       "role": "integration",
-      "sha256": "FILLED-BY-KIT"
+      "sha256": "ee4387a5498a7c91720f0d4721549325e756f8e2d13ca5f621b4fec6a1570ea9"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/readers/1-before-any-lean-six-readers.json",
       "role": "review",
-      "sha256": "FILLED-BY-KIT"
+      "sha256": "cee68498c9e8839215159cfd0843025522d480c3a35585d952d48385fe167ad5"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/readers/2-stage-a-implementer-and-three-readers.json",
       "role": "review",
-      "sha256": "FILLED-BY-KIT"
+      "sha256": "ffd55e54b140b23c1479e9474a62ae03951ff9d71831ad3438130b04a36ea54e"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/readers/3-course-as-a-web-proposer-and-two-refuters.json",
       "role": "review",
-      "sha256": "FILLED-BY-KIT"
+      "sha256": "e74f4f63fe4e438fcb02bd8c7f9a7c3051e64181d111648a4e658da0694e283e"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/readers/4-passes-c-a2-b-three-implementers-five-readers.json",
       "role": "review",
-      "sha256": "FILLED-BY-KIT"
+      "sha256": "e91468b2fccc06474a787c19f4d51fb15bfd232029f1ecb74eceec76ad922fa2"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/readers/5-repair-two-implementers-three-readers.json",
       "role": "review",
-      "sha256": "FILLED-BY-KIT"
+      "sha256": "423e593bc6579d67ec46888f7df22859cfe1992aa18e65b08c12c2b325ad6289"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/readers/6-last-fixes-implementer-two-verifiers.json",
       "role": "review",
-      "sha256": "FILLED-BY-KIT"
+      "sha256": "03084cc9181f55a4e71167a4cb6456b1d6f4bf15c76300caa123bb58bea02b48"
     },
     {
       "path": "sources/15-codex-theory-conversations/2026-11-13-the-map-one-model.md",
       "role": "provenance",
-      "sha256": "FILLED-BY-KIT"
+      "sha256": "8406e3e4ac8de486ca4ee54924621e35d4b67b983effdf18dc9a67379662bad4"
     }
   ],
-  "proof_bindings": [],
+  "proof_bindings": [
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineOnAStock.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261115T233900.527774Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.LineOnAStock",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineOnAStockCases.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261115T233900.527774Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.LineOnAStockCases",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    }
+  ],
   "history": [
     {
       "en": "16 November 2026, board row DJ, the plan's steps 3 to 7 tried as laws of one model, on Ren's words of 16 November kept in sources (sources/15-codex-theory-conversations/2026-11-13-the-map-one-model.md): added, with TurningInTime extended and WayOfUnits made to rest on the new module. Six readers before any Lean found several candidate laws false or too weak as worded; a first module proved a dozen facts again and joined at definitions only; the course read as a Web with a Flow was refuted as a dictionary; a telling of the lock's law as an overdraw that comes about, a bound twice the true one and need_unmet told without down were found by readers and corrected. The study folder dj-a-line-on-a-stock keeps the readers' reports and the held versions. Before the core run, after three readers set to refute the texts read them against the Lean, the statement and the claim name the regime of unending_iff_holds and the premises of the first law; positive needs are said with down, not in place of it; line_ends asks a positive need of every unit of the line and that every kid of its units needs no more; the reading of falls_to_unmet rests on all its given premises; does_not_show keeps KidHigherNeed as witness for the level only, the ending said as not concluded; account's premise on the level is said; «迭» is credited to shared-laws-on-the-grammar; the built examples' record moved from related to a formal-reuse dependency; Chinese wording aligned with the existing records (守得住, 所需为正)."

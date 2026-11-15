@@ -524,7 +524,7 @@
         "Becoming.WayOfUnits.down_unit",
         "Becoming.WayOfUnits.unending_taken_below"
       ],
-      "sha256": "98e38ed2c45c835b4f20626a81e000b81a4c511bdc3003aa48623bb32950c347"
+      "sha256": "98ce34656cc7437c485ee7bfcc0858610e72e72bb3fcf08584188592a1e07f52"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261113T133009.897615Z/verification.json",
@@ -575,12 +575,18 @@
       "path": "sources/15-codex-theory-conversations/2026-11-12-where-we-are-and-the-loop.md",
       "role": "provenance",
       "sha256": "e4178180f019a8b3911d07cf186d1454d9c674c088bfddb266d766b8fe58684d"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261115T233900.527774Z/verification.json",
+      "role": "receipt",
+      "sha256": "cc1317f9057e8e2dc0cec9681d956b2285fb4f051e6719f54463e14f4327f38a",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261113T133009.897615Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261115T233900.527774Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.WayOfUnits",
       "success_pointer": "/status",
       "success_value": "passed"

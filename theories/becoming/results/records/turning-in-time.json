@@ -954,7 +954,7 @@
         "Becoming.TurningInTime.Three.zeroShare",
         "Becoming.TurningInTime.Three.share_read_goes_on"
       ],
-      "sha256": "f6fe0984671dda8c41a086392a31c5c76deae11fc005ffe02c00a5908fa10b1a"
+      "sha256": "e29dd04d555f0b243231408a6c30956dacc04a3d6f45aab1c99fbdde5c8c835f"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261113T133009.897615Z/verification.json",
@@ -1007,12 +1007,18 @@
       "role": "receipt",
       "sha256": "5cf33b3f7a98a5f73e0f47753a78d4aaaeffbaa7bc38b6cfa74907eac05973d0",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261115T233900.527774Z/verification.json",
+      "role": "receipt",
+      "sha256": "cc1317f9057e8e2dc0cec9681d956b2285fb4f051e6719f54463e14f4327f38a",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261115T153402.052649Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261115T233900.527774Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.TurningInTime",
       "success_pointer": "/status",
       "success_value": "passed"

@@ -1,7 +1,7 @@
 {
  "about": "MV: the shared laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/shared_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261115T153402.052649Z",
- "core_sources_sha256": "561376238e37a5bbd791a1377149f30547b94f84f074e898228d98188b0f6fd5",
+ "core_receipt": "20261115T233900.527774Z",
+ "core_sources_sha256": "8bacea8f88f5683619fdc1e4826787b98b8917dc239fadcb5610a1996c7e8211",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "438b65fe8bc281ab9796cfbff00af7db8441123a5aba8f3779f7c08586b443c7",
@@ -58,16 +58,16 @@
   ]
  },
  "counts": {
-  "laws": 4338,
+  "laws": 4396,
   "no_declarations": 9,
   "outside": 391,
-  "grammar": 1020,
+  "grammar": 1057,
   "balance, represented": 636,
   "anchor, not reached": 137,
-  "no shared law": 2145,
-  "vocabulary_only": 96,
+  "no shared law": 2166,
+  "vocabulary_only": 105,
   "closure": 583,
-  "balance": 886,
+  "balance": 895,
   "return": 256,
   "lumping": 92,
   "order": 105
@@ -2047,6 +2047,473 @@
     ],
     "grammar": false,
     "dependence": "balance, represented"
+   }
+  ],
+  "a-line-on-a-stock": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.LineOnAStock.after",
+     "Becoming.LineOnAStock.taken",
+     "Becoming.LineOnAStock.left",
+     "Becoming.LineOnAStock.Goes",
+     "Becoming.LineOnAStock.step",
+     "Becoming.LineOnAStock.net",
+     "Becoming.LineOnAStock.course",
+     "Becoming.LineOnAStock.anyMet",
+     "Becoming.LineOnAStock.anyMet_iff",
+     "Becoming.LineOnAStock.goesDecidable",
+     "Becoming.LineOnAStock.after_flatMap",
+     "Becoming.LineOnAStock.mem_after_iff"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.LineOnAStock.allKids",
+     "Becoming.LineOnAStock.generation",
+     "Becoming.LineOnAStock.Needing",
+     "Becoming.LineOnAStock.after_of_met",
+     "Becoming.LineOnAStock.allKids_flatMap",
+     "Becoming.LineOnAStock.mem_allKids_iff",
+     "Becoming.LineOnAStock.generation_orbit"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.LineOnAStock.mem_generation",
+     "Becoming.LineOnAStock.generation_mem",
+     "Becoming.LineOnAStock.generation_below",
+     "Becoming.LineOnAStock.generation_ancestor"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.LineOnAStock.after_alike",
+     "Becoming.LineOnAStock.left_of_taken",
+     "Becoming.LineOnAStock.after_append",
+     "Becoming.LineOnAStock.decide_le_congr"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.LineOnAStock.Alike",
+     "Becoming.LineOnAStock.alike_of_met",
+     "Becoming.LineOnAStock.alike_iff",
+     "Becoming.LineOnAStock.met_of_alike_le",
+     "Becoming.LineOnAStock.block_le",
+     "Becoming.LineOnAStock.block_lt",
+     "Becoming.LineOnAStock.after_length_le",
+     "Becoming.LineOnAStock.after_length_lt",
+     "Becoming.LineOnAStock.AlikeFiner.Kind",
+     "Becoming.LineOnAStock.AlikeFiner.need",
+     "Becoming.LineOnAStock.AlikeFiner.kids",
+     "Becoming.LineOnAStock.AlikeFiner.alike_not_met"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.LineOnAStock.need_in_after",
+     "Becoming.LineOnAStock.needs_after_iff",
+     "Becoming.LineOnAStock.needs_kept"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 7,
+    "declarations": [
+     "Becoming.LineOnAStock.ways_alike",
+     "Becoming.LineOnAStock.generations",
+     "Becoming.LineOnAStock.family_eq",
+     "Becoming.LineOnAStock.born_eq_length",
+     "Becoming.LineOnAStock.born_alike"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 8,
+    "declarations": [
+     "Becoming.LineOnAStock.rise",
+     "Becoming.LineOnAStock.draw_rises",
+     "Becoming.LineOnAStock.draw_holds",
+     "Becoming.LineOnAStock.lineTake",
+     "Becoming.LineOnAStock.lineCount",
+     "Becoming.LineOnAStock.lineTake_le_taken",
+     "Becoming.LineOnAStock.lineTake_append",
+     "Becoming.LineOnAStock.lineCount_pos",
+     "Becoming.LineOnAStock.line_or_none",
+     "Becoming.LineOnAStock.lineTake_true"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 9,
+    "declarations": [
+     "Becoming.LineOnAStock.line_from_line",
+     "Becoming.LineOnAStock.none_after",
+     "Becoming.LineOnAStock.never_in",
+     "Becoming.LineOnAStock.gone_from",
+     "Becoming.LineOnAStock.gone_after"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 10,
+    "declarations": [
+     "Becoming.LineOnAStock.need_unmet",
+     "Becoming.LineOnAStock.course_asItWas",
+     "Becoming.LineOnAStock.way_while_met",
+     "Becoming.LineOnAStock.kids_of_grows",
+     "Becoming.LineOnAStock.allKids_rises",
+     "Becoming.LineOnAStock.generations_rise"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 11,
+    "declarations": [
+     "Becoming.LineOnAStock.falls_to_unmet"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 12,
+    "declarations": [
+     "Becoming.LineOnAStock.way_ends"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 13,
+    "declarations": [
+     "Becoming.LineOnAStock.line_ends",
+     "Becoming.LineOnAStock.ends_all",
+     "Becoming.LineOnAStock.ends_high",
+     "Becoming.LineOnAStock.ends_low",
+     "Becoming.LineOnAStock.Ends",
+     "Becoming.LineOnAStock.Below",
+     "Becoming.LineOnAStock.NoneMet",
+     "Becoming.LineOnAStock.below_after",
+     "Becoming.LineOnAStock.below_keeps",
+     "Becoming.LineOnAStock.none_shift"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 14,
+    "declarations": [
+     "Becoming.LineOnAStock.one_need_ends"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 15,
+    "declarations": [
+     "Becoming.LineOnAStock.fall",
+     "Becoming.LineOnAStock.fall_from",
+     "Becoming.LineOnAStock.fall_low",
+     "Becoming.LineOnAStock.step_overdrawn",
+     "Becoming.LineOnAStock.step_zero"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 16,
+    "declarations": [
+     "Becoming.LineOnAStock.step_lowers"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 17,
+    "declarations": [
+     "Becoming.LineOnAStock.Holds",
+     "Becoming.LineOnAStock.Regime"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 18,
+    "declarations": [
+     "Becoming.LineOnAStock.unending_iff_holds",
+     "Becoming.LineOnAStock.reaches_holds",
+     "Becoming.LineOnAStock.reaches_from",
+     "Becoming.LineOnAStock.within_along",
+     "Becoming.LineOnAStock.taken_allKids",
+     "Becoming.LineOnAStock.taken_generation",
+     "Becoming.LineOnAStock.course_generation"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 19,
+    "declarations": [
+     "Becoming.LineOnAStock.taken_below",
+     "Becoming.LineOnAStock.unending_taken_below"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 20,
+    "declarations": [
+     "Becoming.LineOnAStock.account",
+     "Becoming.LineOnAStock.account_unending"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 21,
+    "declarations": [
+     "Becoming.LineOnAStock.course_fixed",
+     "Becoming.LineOnAStock.unending_of_fixed"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 22,
+    "declarations": [
+     "Becoming.LineOnAStock.takes_nothing",
+     "Becoming.LineOnAStock.strip",
+     "Becoming.LineOnAStock.strip_pos",
+     "Becoming.LineOnAStock.strip_neg",
+     "Becoming.LineOnAStock.strip_append",
+     "Becoming.LineOnAStock.strip_all",
+     "Becoming.LineOnAStock.strip_strip",
+     "Becoming.LineOnAStock.taken_strip",
+     "Becoming.LineOnAStock.strip_after",
+     "Becoming.LineOnAStock.strip_course",
+     "Becoming.LineOnAStock.nothingGiven",
+     "Becoming.LineOnAStock.NothingTakenEnds.Kind",
+     "Becoming.LineOnAStock.NothingTakenEnds.need",
+     "Becoming.LineOnAStock.NothingTakenEnds.use",
+     "Becoming.LineOnAStock.NothingTakenEnds.kids",
+     "Becoming.LineOnAStock.NothingTakenEnds.isC",
+     "Becoming.LineOnAStock.NothingTakenEnds.ending_differs"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 23,
+    "declarations": [
+     "Becoming.LineOnAStock.hump10",
+     "Becoming.LineOnAStock.KidsNeedMore.Kind",
+     "Becoming.LineOnAStock.KidsNeedMore.need",
+     "Becoming.LineOnAStock.KidsNeedMore.use",
+     "Becoming.LineOnAStock.KidsNeedMore.kids",
+     "Becoming.LineOnAStock.KidsNeedMore.fixed",
+     "Becoming.LineOnAStock.KidsNeedMore.all_but_down"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 24,
+    "declarations": [
+     "Becoming.LineOnAStock.KidHigherNeed.Kind",
+     "Becoming.LineOnAStock.KidHigherNeed.need",
+     "Becoming.LineOnAStock.KidHigherNeed.use",
+     "Becoming.LineOnAStock.KidHigherNeed.kids",
+     "Becoming.LineOnAStock.KidHigherNeed.all_but_down"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 25,
+    "declarations": [
+     "Becoming.LineOnAStock.EqualInPlaceOfMore.need",
+     "Becoming.LineOnAStock.EqualInPlaceOfMore.use",
+     "Becoming.LineOnAStock.EqualInPlaceOfMore.kids",
+     "Becoming.LineOnAStock.EqualInPlaceOfMore.all_but_grows",
+     "Becoming.LineOnAStock.EqualInPlaceOfMore.holds_by_law"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 26,
+    "declarations": [
+     "Becoming.LineOnAStock.TwoForOne.Kind",
+     "Becoming.LineOnAStock.TwoForOne.need",
+     "Becoming.LineOnAStock.TwoForOne.use",
+     "Becoming.LineOnAStock.TwoForOne.kids",
+     "Becoming.LineOnAStock.TwoForOne.holds_by_law"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 27,
+    "declarations": [
+     "Becoming.LineOnAStock.HigherStartEnds.Kind",
+     "Becoming.LineOnAStock.HigherStartEnds.need",
+     "Becoming.LineOnAStock.HigherStartEnds.use",
+     "Becoming.LineOnAStock.HigherStartEnds.kids",
+     "Becoming.LineOnAStock.HigherStartEnds.from_six",
+     "Becoming.LineOnAStock.HigherStartEnds.from_seven",
+     "Becoming.LineOnAStock.HigherStartEnds.higher_ends"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 28,
+    "declarations": [
+     "Becoming.LineOnAStock.Doubling.need",
+     "Becoming.LineOnAStock.Doubling.use",
+     "Becoming.LineOnAStock.Doubling.kids",
+     "Becoming.LineOnAStock.Doubling.course_values",
+     "Becoming.LineOnAStock.Doubling.ends_by_law",
+     "Becoming.LineOnAStock.Doubling.unmet_by_law"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 29,
+    "declarations": [
+     "Becoming.LineOnAStock.Overdrawn.need",
+     "Becoming.LineOnAStock.Overdrawn.use",
+     "Becoming.LineOnAStock.Overdrawn.kids",
+     "Becoming.LineOnAStock.Overdrawn.short",
+     "Becoming.LineOnAStock.Overdrawn.gone",
+     "Becoming.LineOnAStock.ProperLine.Kind",
+     "Becoming.LineOnAStock.ProperLine.need",
+     "Becoming.LineOnAStock.ProperLine.use",
+     "Becoming.LineOnAStock.ProperLine.kids",
+     "Becoming.LineOnAStock.ProperLine.isD",
+     "Becoming.LineOnAStock.ProperLine.gone"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 30,
+    "declarations": [
+     "Becoming.LineOnAStock.TakesNothing.Kind",
+     "Becoming.LineOnAStock.TakesNothing.need",
+     "Becoming.LineOnAStock.TakesNothing.use",
+     "Becoming.LineOnAStock.TakesNothing.kids",
+     "Becoming.LineOnAStock.TakesNothing.isC",
+     "Becoming.LineOnAStock.TakesNothing.lost"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 31,
+    "declarations": [
+     "Becoming.LineOnAStock.NoKids.need",
+     "Becoming.LineOnAStock.NoKids.use",
+     "Becoming.LineOnAStock.NoKids.kids",
+     "Becoming.LineOnAStock.NoKids.ends_met",
+     "Becoming.LineOnAStock.ShareRises.Kind",
+     "Becoming.LineOnAStock.ShareRises.need",
+     "Becoming.LineOnAStock.ShareRises.use",
+     "Becoming.LineOnAStock.ShareRises.kids",
+     "Becoming.LineOnAStock.ShareRises.isC",
+     "Becoming.LineOnAStock.ShareRises.course_values",
+     "Becoming.LineOnAStock.ShareRises.goes_on"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 32,
+    "declarations": [
+     "Becoming.LineOnAStock.MultiplyingTakersCase.late",
+     "Becoming.LineOnAStock.MultiplyingTakersCase.family_late",
+     "Becoming.LineOnAStock.MultiplyingTakersCase.agree",
+     "Becoming.LineOnAStock.MultiplyingTakersCase.multiplying_takers"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 33,
+    "declarations": [
+     "Becoming.LineOnAStock.DrainCase.Kind",
+     "Becoming.LineOnAStock.DrainCase.need",
+     "Becoming.LineOnAStock.DrainCase.use",
+     "Becoming.LineOnAStock.DrainCase.kids",
+     "Becoming.LineOnAStock.DrainCase.gift",
+     "Becoming.LineOnAStock.DrainCase.isD",
+     "Becoming.LineOnAStock.DrainCase.late",
+     "Becoming.LineOnAStock.DrainCase.gift_eq",
+     "Becoming.LineOnAStock.DrainCase.need_agrees",
+     "Becoming.LineOnAStock.DrainCase.empty_of",
+     "Becoming.LineOnAStock.DrainCase.drain"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
    }
   ],
   "a-loss-read-before-its-point-of-no-return": [
@@ -4323,9 +4790,7 @@
      "Becoming.WayOfUnits.Regime",
      "Becoming.WayOfUnits.unending_iff_holds"
     ],
-    "shared_laws": [
-     "balance"
-    ],
+    "shared_laws": [],
     "grammar": true,
     "dependence": "grammar"
    },
@@ -4431,9 +4896,7 @@
     "declarations": [
      "Becoming.WayOfUnits.With.goes_on_holds"
     ],
-    "shared_laws": [
-     "balance"
-    ],
+    "shared_laws": [],
     "grammar": true,
     "dependence": "grammar"
    },
@@ -4463,6 +4926,38 @@
      "Becoming.WayOfUnits.GivenFromNothing.regime",
      "Becoming.WayOfUnits.GivenFromNothing.greater_need_fails",
      "Becoming.WayOfUnits.GivenFromNothing.more_use_fails"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 18,
+    "declarations": [
+     "Becoming.WayOfUnits.cond_single",
+     "Becoming.WayOfUnits.after_unit",
+     "Becoming.WayOfUnits.taken_unit",
+     "Becoming.WayOfUnits.step_unit",
+     "Becoming.WayOfUnits.orbit_congr",
+     "Becoming.WayOfUnits.course_unit",
+     "Becoming.WayOfUnits.net_unit",
+     "Becoming.WayOfUnits.unending_unit",
+     "Becoming.WayOfUnits.allKids_unit",
+     "Becoming.WayOfUnits.generation_unit",
+     "Becoming.WayOfUnits.needing_unit",
+     "Becoming.WayOfUnits.holds_unit",
+     "Becoming.WayOfUnits.regime_unit",
+     "Becoming.WayOfUnits.along_unit",
+     "Becoming.WayOfUnits.down_unit"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 19,
+    "declarations": [
+     "Becoming.WayOfUnits.unending_taken_below"
     ],
     "shared_laws": [],
     "grammar": true,
@@ -54847,6 +55342,261 @@
     ],
     "grammar": false,
     "dependence": "balance, represented"
+   },
+   {
+    "law": 21,
+    "declarations": [
+     "Becoming.TurningInTime.held_above"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 22,
+    "declarations": [
+     "Becoming.TurningInTime.unending_iff_above_kept_below"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 23,
+    "declarations": [
+     "Becoming.TurningInTime.turns_in_time_iff_kept_below"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 24,
+    "declarations": [
+     "Becoming.TurningInTime.kept_or_marked"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 25,
+    "declarations": [
+     "Becoming.TurningInTime.locked_alone_not_below"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 26,
+    "declarations": [
+     "Becoming.TurningInTime.locked_ends_with_net_regime"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 27,
+    "declarations": [
+     "Becoming.TurningInTime.locked_ends_on_window"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 28,
+    "declarations": [
+     "Becoming.TurningInTime.window_corrected"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 29,
+    "declarations": [
+     "Becoming.TurningInTime.locked_turns_in_time_on_window_iff"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 30,
+    "declarations": [
+     "Becoming.TurningInTime.Three.shareOrder",
+     "Becoming.TurningInTime.Three.ruleOrder",
+     "Becoming.TurningInTime.Three.lockShare",
+     "Becoming.TurningInTime.Three.lockRead",
+     "Becoming.TurningInTime.Three.lockUse",
+     "Becoming.TurningInTime.Three.lockAfter",
+     "Becoming.TurningInTime.Three.lock_ends",
+     "Becoming.TurningInTime.Three.lock_share_stays"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 31,
+    "declarations": [
+     "Becoming.TurningInTime.Three.riseShare",
+     "Becoming.TurningInTime.Three.riseAfter",
+     "Becoming.TurningInTime.Three.rise_orbit",
+     "Becoming.TurningInTime.Three.rise_above",
+     "Becoming.TurningInTime.Three.rise_lock_ends"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 32,
+    "declarations": [
+     "Becoming.TurningInTime.Three.noRule",
+     "Becoming.TurningInTime.Three.read_at_eight_ends",
+     "Becoming.TurningInTime.Three.read_to_ten",
+     "Becoming.TurningInTime.Three.held_at_six"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 33,
+    "declarations": [
+     "Becoming.TurningInTime.Three.unlocked_goes_on"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 34,
+    "declarations": [
+     "Becoming.TurningInTime.kept_within",
+     "Becoming.TurningInTime.rises_from"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 35,
+    "declarations": [
+     "Becoming.TurningInTime.rising_takes_all",
+     "Becoming.TurningInTime.rising_meets_level"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 36,
+    "declarations": [
+     "Becoming.TurningInTime.ends_with_net_rising"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 37,
+    "declarations": [
+     "Becoming.TurningInTime.locked_ends_rising"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 38,
+    "declarations": [
+     "Becoming.TurningInTime.count_rises"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 39,
+    "declarations": [
+     "Becoming.TurningInTime.windowAfterShare",
+     "Becoming.TurningInTime.window_share_alone_outside",
+     "Becoming.TurningInTime.windowAfter_every_is_share"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 40,
+    "declarations": [
+     "Becoming.TurningInTime.locked_turns_in_time_share_iff"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 41,
+    "declarations": [
+     "Becoming.TurningInTime.share_corrected_stays",
+     "Becoming.TurningInTime.share_corrected_on_course"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 42,
+    "declarations": [
+     "Becoming.TurningInTime.Three.drawerUse",
+     "Becoming.TurningInTime.Three.rise_count_ends"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "grammar_vocabulary_only": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 43,
+    "declarations": [
+     "Becoming.TurningInTime.Three.zeroShare",
+     "Becoming.TurningInTime.Three.share_read_goes_on"
+    ],
+    "shared_laws": [
+     "balance"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
    }
   ],
   "two-act-worlds-carry-the-difference": [
@@ -66766,7 +67516,7 @@
   ],
   "lean_check": {
    "toolchain": "leanprover/lean4:v4.29.1",
-   "modules_sha256": "d46f14067397e1556ac36ac316abdfee46ab002af62853108c64f9cf9da9fb89",
+   "modules_sha256": "80fc2b36d47cf2d8c12a8965d40f1a9d133146a0af214e6f78bc6e68cceadf9a",
    "check_sha256": "e5ef1c274e3e3f81aa13dbe78732d1f6883a207a5685f736102ee4a2d5b1fc34",
    "ran": true
   },
