@@ -12,7 +12,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 | Topic | Entries | theorem/lemma occurrences |
 |---|---:|---:|
-| [Becoming pure core](lean-declarations/becoming-core.md) | 389 | 19,163 |
+| [Becoming pure core](lean-declarations/becoming-core.md) | 389 | 19,171 |
 | [Becoming instances and applications](lean-declarations/becoming-ring.md) | 18 | 1,054 |
 | [The ethics and the generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
 | [Valuation development and liangzhi](lean-declarations/valuation.md) | 19 | 202 |
@@ -636,7 +636,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [OrganizationalRuleInheritance.lean](lean-declarations/ethics-part-1.md#module-d6cdb351c744) | The ethics and the generative direction |
 | [OrganizedScaleLoop.lean](lean-declarations/learning.md#module-fa24e61409c5) | Learning, prediction and dynamics |
 | [OutcomeContinuation.lean](lean-declarations/core.md#module-c48ee824a0b3) | Generative core and relational structure |
-| [OverExchange.lean](lean-declarations/becoming-core-part-5.md#module-958bcd7f9971) | Becoming pure core |
+| [OverExchange.lean](lean-declarations/becoming-core-part-4.md#module-958bcd7f9971) | Becoming pure core |
 | [OwnClass.lean](lean-declarations/becoming-core-part-5.md#module-ba36a94fd1ca) | Becoming pure core |
 | [OwnWidening.lean](lean-declarations/becoming-core-part-5.md#module-4cd46e389136) | Becoming pure core |
 | [Pace.lean](lean-declarations/becoming-core-part-5.md#module-f1acf0f3e260) | Becoming pure core |

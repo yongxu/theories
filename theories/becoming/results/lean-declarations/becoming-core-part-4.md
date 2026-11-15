@@ -4608,5 +4608,81 @@ Definitions and types:
 
 </details>
 
+<a id="module-958bcd7f9971"></a>
+
+<details>
+<summary>OverExchange.lean — 57 explicit declarations</summary>
+
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+
+`experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean`
+
+Imports: `Becoming.Exclusion`, `Becoming.Observation`, `Becoming.OwnWidening`, `Becoming.Reproduction`, `Becoming.GroupEnding`, `Becoming.Wholes`, `Becoming.Direction`, `Becoming.ExchangePremises`
+
+| Theorem or lemma | Line |
+|---|---:|
+| [Becoming.World.withRest_acting](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L101) | 101 |
+| [Becoming.World.withRest_taking](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L105) | 105 |
+| [Becoming.World.withRest_rest_idle](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L111) | 111 |
+| [Becoming.World.withRest_some](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L123) | 123 |
+| [Becoming.World.withRest_comes_to_rest_unrefuted](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L134) | 134 |
+| [Becoming.World.withRest_uptake_needs_replenishment](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L145) | 145 |
+| [Becoming.World.withRest_replenishes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L152) | 152 |
+| [Becoming.World.withRest_restores](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L159) | 159 |
+| [Becoming.World.withRest_renewedBy](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L168) | 168 |
+| [Becoming.World.withRest_replenishment_unbounded](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L175) | 175 |
+| [Becoming.World.withRest_opens](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L183) | 183 |
+| [Becoming.World.withRest_unexcluded_beyond_coupling](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L192) | 192 |
+| [Becoming.World.withRest_unselected_beyond_coupling](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L204) | 204 |
+| [Becoming.World.withRest_unselected_beyond_pool](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L217) | 217 |
+| [Becoming.World.withRest_retains_iff_within_margin](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L231) | 231 |
+| [Becoming.World.withRest_widens_iff_others_within](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L244) | 244 |
+| [Becoming.World.withRest_lineage_ends](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L258) | 258 |
+| [Becoming.World.withRest_closed_lineage_lowered](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L269) | 269 |
+| [Becoming.World.withRest_rises_iff_inactive](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L282) | 282 |
+| [Becoming.World.withRest_all_end](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L298) | 298 |
+| [Becoming.World.withRest_present](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L312) | 312 |
+| [Becoming.World.withRest_start](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L317) | 317 |
+| [Becoming.World.withRest_comparison_within_response](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L324) | 324 |
+| [Becoming.World.withRest_counterfactual_is_course](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L358) | 358 |
+| [Becoming.World.withRest_act_unselected](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L376) | 376 |
+| [Becoming.World.withRest_act_selected_by_pool](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L398) | 398 |
+| [Becoming.World.withRest_widening_selected_by_pool](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L429) | 429 |
+| [Becoming.World.withRest_apart_only_downstream](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L461) | 461 |
+| [Becoming.World.ReadOffExchange.dependent](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L503) | 503 |
+| [Becoming.ExchangeRelation.Runs.readOffExchange](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L513) | 513 |
+| [Becoming.ExchangeLaw.readWorld_readOffExchange](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L520) | 520 |
+| [Becoming.World.takingUnsupported_not_readOff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L535) | 535 |
+| [Becoming.World.ReadOffExchange.consumption_ends_with_feeders](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L548) | 548 |
+| [Becoming.World.ReadOffExchange.continuing_excludes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L560) | 560 |
+| [Becoming.World.ReadOffExchange.outrun_below](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L573) | 573 |
+| [Becoming.World.ReadOffExchange.roles_dependent](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L587) | 587 |
+| [Becoming.World.ReadOffExchange.selection_within](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L592) | 592 |
+| [Becoming.World.ReadOffExchange.selected_le](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L603) | 603 |
+| [Becoming.World.ReadOffExchange.transmitted_supported](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L614) | 614 |
+| [Becoming.World.ReadOffExchange.support_not_lower](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L624) | 624 |
+| [Becoming.World.ReadOffExchange.support_moved_rises](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L636) | 636 |
+| [Becoming.World.ReadOffExchange.family_childless](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L651) | 651 |
+| [Becoming.World.ReadOffExchange.coupled_end_together](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L665) | 665 |
+| [Becoming.World.ReadOffExchange.family_excess_ends](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L687) | 687 |
+| [Becoming.ExchangeRelation.respondsBelow_supports](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L728) | 728 |
+| [Becoming.ExchangeRelation.respondsBelow_local](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L733) | 733 |
+| [Becoming.ExchangeRelation.respondsBelow_weakest](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L741) | 741 |
+| [Becoming.ExchangeRelation.mayRespond_not_supports](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L750) | 750 |
+| [Becoming.NoisyLaw.course_runs](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L780) | 780 |
+| [Becoming.NoisyLaw.readOffExchange](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L788) | 788 |
+
+Definitions and types:
+
+- `def` [Becoming.World.ReadOffExchange](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L493) (L493)
+- `def` [Becoming.World.takingUnsupported](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L528) (L528)
+- `def` [Becoming.ExchangeRelation.Supports](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L716) (L716)
+- `def` [Becoming.ExchangeRelation.Local](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L722) (L722)
+- `structure` [Becoming.NoisyLaw](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L763) (L763)
+- `def` [Becoming.NoisyLaw.relation](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L772) (L772)
+- `def` [Becoming.NoisyLaw.realize](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OverExchange.lean#L776) (L776)
+
+</details>
+
 [All topics and modules](../LEAN-DECLARATIONS.md) · [Becoming pure core, all parts](../lean-declarations/becoming-core.md) · [part 3](../lean-declarations/becoming-core-part-3.md) · [part 5](../lean-declarations/becoming-core-part-5.md)
 
