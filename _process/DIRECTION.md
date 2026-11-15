@@ -33,18 +33,17 @@ Three more, untested and offered only so that the idea can be tried on something
 ## What we have found so far
 
 - **Pieces of it are proved, each under its own conditions.** What lives on something nothing renews ends when that runs out. Where what renews a stock also needs it, once below the need it does not come back. After such a loss, whatever still goes on has changed what it needs. A course does not differ where nothing reaches it. A rule set again from what it already favours stays as it is. And on the keeping side: a way that comes to respond to a falling level before its point of no return does not end there, and one that responds later does.
-- **They do not yet meet.** These stand in separate models. Where they fail to meet is selection.
+- **Most do not yet meet.** These stand in separate models, and where they fail to meet is selection. Two of them now stand in one model with a rule set again from what it favours. Where its level makes no difference to it, it ends still locked. Where the level is read, the line goes on exactly where the first reading comes early enough, provided the corrected rule is kept wherever the level then goes, short of a level from which every rule holds it. What then goes on is not always the corrected rule: in one worked course it is the old rule again, at a level where its draw is met. In both, the overdraw and the reading are given, not derived.
 - **"Selection" in the Lean is two relations.** One is unequal continuing: of what could go on, some does, or leaves more. The other is alikeness: what happens is the same wherever what reaches it is the same. No theorem states both together. Two of the Lean's four forms have nothing that chooses. The other two have a slot filled from outside, a free predicate and a free order, and that is the gap below: how what selects comes to be.
-- **Trying to join them taught us things.** Several statements we expected to hold were false when tried by hand. One of them: a correction that fires once is undone when things recover. On paper it holds only if the correction stays in force.
+- **Trying to join them taught us things.** Several statements we expected to hold were false when tried by hand. One finding: a correction to the rule alone lasts only while the level is read; where it is not, the rule is set again from the share. So "a locked rule goes on exactly where its first reading is early enough" is false as first worded. With the condition said above, it is now proved.
 - **The Lean is large and mostly unjoined.** About 20,000 theorems in 403 modules, written as answers to one question after another. Its core is small.
 
 ## What we are trying next
 
 Going on along [the plan for the Lean](LEAN-TOWARD-THE-DIRECTION.md), which is the order as it looks now. It holds the table of what a proof says today.
 
-- Turning in time, with a correction that stays in force. The small theorem before it, about a rule that keeps an overdraw going, landed on 15 November.
-- Whether unequal continuing and alikeness can be stated together.
-- Then what we expect to find missing: how what selects comes to be and changes; losses that never come back to whoever causes them; a case from outside the work.
+- Whether unequal continuing and alikeness can be stated together. The two steps before it, on a rule that keeps an overdraw going and on turning in time with a correction that stays in force, landed on 15 November.
+- Then what we expect to find missing: how what selects comes to be and changes, which now includes a correction that reaches what the rule is set from; losses that never come back to whoever causes them; a case from outside the work.
 
 Classical Chinese is being tried as a way of saying these things. What that has found is in chapter 06 and in a note of 15 November.
 
@@ -52,7 +51,7 @@ Classical Chinese is being tried as a way of saying these things. What that has 
 
 We think together. Each says what they understand in their own words and where they disagree, and neither's sentences are followed to the letter.
 
-A proof that fails is news about the idea. We try not to fool ourselves: we say what is proved, what is shown only in a built example, and what we hope. A telling that keeps growing is a sign we have not understood it yet.
+A proof that fails is news about the idea. We try not to fool ourselves: we say what is proved, what is shown only in a built example, and what we hope. What a proof showed is told after someone who did not write it has read it against the Lean; on 15 November such readings changed what one step was said to show, twice. A telling that keeps growing is a sign we have not understood it yet.
 
 The idea is said again when something found changes it, a proof, a failed try or a case, and the finding is named beside the change.
 

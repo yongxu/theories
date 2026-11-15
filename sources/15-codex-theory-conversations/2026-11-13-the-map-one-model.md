@@ -2,7 +2,7 @@
 
 *Filed by the coordinator's session from a section written out by the session he spoke to. The times are that session's transcript stamps, converted to WIB (UTC+7); the texts are copied from the transcript, complete, his spellings kept. The transcript does not record how a message was entered: "spoken" and "typed" below are read from its style and are marked so. The context lines are that session's own account of what it had just shown him.*
 
-13 November 2026, 20:26 to 22:49 WIB, and six messages of 14 November in the section after it; two more of that afternoon and eleven of that evening are in the last section. Ren's words in a Claude Code desktop session in `/Users/ren/theories` (a fresh session, not one of the sessions then at work on the map), kept verbatim. AI-authored context is labelled separately.
+13 November 2026, 20:26 to 22:49 WIB, and six messages of 14 November in the section after it; two more of that afternoon, eleven of that evening and five of 15 November are in the last section. Ren's words in a Claude Code desktop session in `/Users/ren/theories` (a fresh session, not one of the sessions then at work on the map), kept verbatim. AI-authored context is labelled separately.
 
 ## Ren's words
 
@@ -108,7 +108,7 @@ Reading the record for that work, it found that the question had been asked and 
 
 ## The direction, 14 November 2026, evening
 
-*Added on 14 November 2026 by the session he spoke to (the Claude Code desktop session "Graph rendering and design issues", a fork of it), and brought up to date the same night. The texts are his messages as that session received them, complete, his spellings kept. The times are the transcripts' stamps as the coordinator's session read them, given in WIB with UTC in brackets. "Typed" and "dictated" are read from the style. The context lines are that session's own account of what it had just sent him. What it wrote in answer is not tracked (`tmp/r7/one-model/`, where `DESIGN-LINES.md` is its working record); what it took from these words is on [the direction page](../../_process/DIRECTION.md), AI-written and for his read.*
+*Added on 14 November 2026 by the session he spoke to (the Claude Code desktop session "Graph rendering and design issues", a fork of it), and brought up to date the same night and on 15 November. The texts are his messages as that session received them, complete, his spellings kept. The times are the transcripts' stamps as the coordinator's session read them, given in WIB with UTC in brackets. "Typed" and "dictated" are read from the style. The context lines are that session's own account of what it had just sent him. What it wrote in answer is not tracked (`tmp/r7/one-model/`, where `DESIGN-LINES.md` is its working record); what it took from these words is on [the direction page](../../_process/DIRECTION.md), AI-written and for his read.*
 
 *Two messages of the early afternoon, not filed before (found unfiled by the coordinator's session, which gave the second as typed to it).*
 
@@ -247,3 +247,15 @@ Reading the record for that work, it found that the question had been asked and 
 10:34:14 WIB, 15 November (03:34:14 UTC, transcript stamp):
 
 > Yes, land it
+
+*Context (AI-authored):* after stage 1 landed. The readers of the second step's first Lean had come back, one of the second readers stopped by the account's weekly limit; the session's own turn then stopped on that limit's notice (12:15 WIB), and nothing had been reported to him since 11:48 WIB.
+
+20:01:05 WIB, 15 November (13:01:05 UTC, transcript stamp):
+
+> Try again
+
+*Context (AI-authored):* after the stopped reader was rerun and the session reported that the readers' findings changed what the second step showed, that the scratch proof was being restructured, and that it would land it after reading the build and the diff itself. The restructure was still running.
+
+20:22:24 WIB, 15 November (13:22:24 UTC, transcript stamp):
+
+> continue please
