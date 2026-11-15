@@ -1,0 +1,10 @@
+import Becoming.LineOnAStockCases
+#check @Becoming.LineOnAStock.MultiplyingTakersCase.late
+#check @Becoming.LineOnAStock.MultiplyingTakersCase.family_late
+#check @Becoming.LineOnAStock.MultiplyingTakersCase.agree
+#check @Becoming.LineOnAStock.MultiplyingTakersCase.multiplying_takers
+#check @Becoming.LineOnAStock.DrainCase.late
+#check @Becoming.LineOnAStock.DrainCase.gift_eq
+#check @Becoming.LineOnAStock.DrainCase.need_agrees
+#check @Becoming.LineOnAStock.DrainCase.empty_of
+#check @Becoming.LineOnAStock.DrainCase.drain
