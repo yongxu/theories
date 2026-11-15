@@ -398,7 +398,9 @@ import Becoming.ReadingsPersist
 import Becoming.FromTheDynamics
 import Becoming.ReadOffInTime
 import Becoming.TurningInTime
+import Becoming.LineOnAStock
 import Becoming.WayOfUnits
+import Becoming.LineOnAStockCases
 import Becoming.ReadingsSpread
 import Becoming.SignificanceStatements
 
@@ -5030,7 +5032,19 @@ tagged instance or application.
   way `alone` taken that many times (`TurningInTime.ends_with_net`, by `Optimum.ends_within`); with the
   level's step `RegimeMargin.step giving (use w)` (`TurningInTime.regime_step_eq`), nothing given from
   nothing, giving short of `H` below `y`, uses of at least `H` along `alone`'s orbit and a start below
-  `H + y`, those premises hold (`TurningInTime.ends_with_net_regime`). With decided marks and the
+  `H + y`, those premises hold (`TurningInTime.ends_with_net_regime`).
+  Where the step under no use keeps every level up to `hi` within `hi`, so does the step under any use
+  (`TurningInTime.kept_within`); a use that rises strictly at each of the first `n` steps of `alone`'s
+  orbit is at least `j` after `j` steps, up to `n` (`TurningInTime.rises_from`). With nothing given from
+  nothing, that cap, a start at most `hi` and the use rising strictly at each of the first `hi` steps of
+  `alone`'s orbit, the level of the course as it was at step `hi + 1` is nothing
+  (`TurningInTime.rising_takes_all`), and, under those premises but `nothing`, the first step at which
+  the use is at least the level comes within `hi` steps (`TurningInTime.rising_meets_level`); with
+  `AloneOutside` and a positive need that no marked level meets as well, the line reaches within
+  `hi + 1` steps a configuration that conditions nothing, its way `alone` taken that many times
+  (`TurningInTime.ends_with_net_rising`). What is concluded is an ending; the rise of the use is given,
+  and no floor on the use and no start below a point of no return are asked.
+  With decided marks and the
   course as it was coming below the need, the line never ends exactly where at a step `T` of the course
   as it was, the need met and no level marked before it, the need met and the level marked at it, the
   line from the next configuration never ends (`TurningInTime.unending_iff_first_marked`); from a way of
@@ -5080,7 +5094,17 @@ tagged instance or application.
   level below `H + y`, ends `Locked` where the net ends, with no premise on the level's course
   (`TurningInTime.locked_ends_with_net_regime`; on the window, `TurningInTime.locked_ends_on_window`).
   The start below `H + y`, the floor on the use and that no marked level meets the need are given, not
-  derived from the lock. Where every
+  derived from the lock.
+  With `locked_ends_with_net_regime`'s `short`, `draws` and `below` replaced by a cap on the level
+  (`RegimeMargin.Keeps giving 0 hi`, the start at most `hi`) and by `more`, that every way whose share
+  and rule are not below the start's uses strictly less than the way the lock's step as it was makes of
+  it, a `Locked` start reaches within `hi + 1` steps a configuration that conditions nothing, still
+  `Locked` (`TurningInTime.locked_ends_rising`, by `ends_with_net_rising`). What is concluded is an
+  ending; the rise of the use is given. `TurningInTime.count_rises` gives `more` where the share is a
+  natural number that every favouring rule raises strictly, the use is that number times a positive
+  amount, favouring is kept by a rule not lower and the start's rule favours; no law concludes that the
+  use depends on the share or the rule.
+  Where every
   step reads and the window's reading gives, at every level in `[N, K)`, a rule of which a given
   predicate holds, the rule after a step at such a level is one too (`TurningInTime.window_corrected`);
   so on such a window with `N ≤ H₂ + y₂` and `c ≤ K`, ways whose rule meets the predicate using `H₂`
@@ -5098,12 +5122,97 @@ tagged instance or application.
   window reads. Nothing is concluded about whether the way that goes on is `Locked`; from one start that
   is not `Locked` the two sides differ (`TurningInTime.Three.unlocked_goes_on`), with every other
   premise met there by an argument in its docstring, not a Lean statement.
-  For a level course `X` that never rises and starts at most `hi`, with the feasible courses `X` turned to a standing use `H` at some step, the start included, and what is asked of a course the need met at every step, under nothing given from nothing, `RegimeMargin`'s premises for `H` up to `hi` and a positive need at most `H + y`: `X` is recoverable at `N` exactly where `H + y ≤ X N` (`TurningInTime.recoverable_iff_above`), so its point of no return, a step, is the first step at which its level is below `H + y`, `RegimeMargin`'s point of no return, a level (`TurningInTime.noReturnAt_iff_first_below`). On the pair the level course is the course as it was turned at `T + 1`, for `T` its first marked step (`TurningInTime.course_turned`), and under `turns_in_time_iff`'s premises the line never ends exactly where `T + 1` comes before the point of no return of the course as it was (`TurningInTime.noReturn_exists`, `TurningInTime.turns_in_time_iff_before`); in `Three` that point is step 3 (`TurningInTime.Three.noReturn`), and on the lock's own types a `Locked` start at nine meets every premise of `locked_ends_with_net_regime` and ends `Locked` in four steps, its share left as it is (`TurningInTime.Three.lock_ends`, `TurningInTime.Three.lock_share_stays`) or raised by one at each step (`TurningInTime.Three.rise_orbit`, `TurningInTime.Three.rise_above`, `TurningInTime.Three.rise_lock_ends`); on the lock's own types with a window that gives the rule `false` (`TurningInTime.Three.noRule`), from the way `(3, true, 0)` at nine: read at eight only (`[8, 9)`) the right side of `turns_in_time_iff` holds at `T = 1` and the line ends in five steps (`TurningInTime.Three.read_at_eight_ends`); read from six to below ten, the line never ends from nine and ends from seven, and the kind is not kept at every level (`TurningInTime.Three.read_to_ten`); read from six to below nine, the first step the window reads is step 1, the level then holds at six and the line never ends, the kind not kept at every level (`TurningInTime.Three.held_at_six`); and from the way `(2, true, 0)` at nine, which is not `Locked`, with the window `[6, 8)`, the line never ends and no step of the lock's own course is at a level the window reads (`TurningInTime.Three.unlocked_goes_on`). Witness
+  A window that reads at every step and sets the share as well as the rule at a level in `[N, K)`
+  (`TurningInTime.windowAfterShare`, the share by `sA`, the rule by `hL`) is the lock's step as it was,
+  reading at every step, at every other level (`TurningInTime.window_share_alone_outside`), and
+  `windowAfter` reading at every step is, pointwise, its case with the share set by `fA`
+  (`TurningInTime.windowAfter_every_is_share`). On it `turns_in_time_iff` holds at the kept kind of ways
+  whose share is `Low` and whose rule is `kept`: under `RuleCapture.turn_locked`'s premises from a
+  `Locked` start, given that the window sets a `Low` share and a `kept` rule (`sets`), that the rule
+  read off a `Low` share is `kept` (`lowRule`) and that a `Low` share stays `Low` under a `kept` rule
+  (`lowStays`), the floor `H₁` on the use wherever the share and rule are not below the start's
+  (`draws`), the start below `H₁ + y₁` (`below`) and at most `hi`, the use `H₂` of a way with a `Low`
+  share and a `kept` rule, nothing given from nothing, giving short of `H₁` below `y₁`, `RegimeMargin`'s
+  premises for `H₂` up to `hi` and a positive need at most `H₂ + y₂`, with no premise on where the
+  window lies, the line never ends exactly where, at the first step of the lock's own course as it was
+  whose level lies in `[N, K)`, the need met there and at every step before, the level one step later is
+  at or above `H₂ + y₂` (`TurningInTime.locked_turns_in_time_share_iff`). That the reading sets such a
+  share and rule (`sets`), and the overdraw of the course as it was (`draws`, `below`), are given. After
+  a step of the pair's course at a level in `[N, K)` the share is `Low` and the rule `kept` at every
+  later step (`TurningInTime.share_corrected_stays`), and so from the step after the first step at which
+  the course as it was is at a level the window reads (`TurningInTime.share_corrected_on_course`);
+  neither says anything of the level, the use or whether the line goes on.
+  For a level course `X` that never rises and starts at most `hi`, with the feasible courses `X` turned to a standing use `H` at some step, the start included, and what is asked of a course the need met at every step, under nothing given from nothing, `RegimeMargin`'s premises for `H` up to `hi` and a positive need at most `H + y`: `X` is recoverable at `N` exactly where `H + y ≤ X N` (`TurningInTime.recoverable_iff_above`), so its point of no return, a step, is the first step at which its level is below `H + y`, `RegimeMargin`'s point of no return, a level (`TurningInTime.noReturnAt_iff_first_below`). On the pair the level course is the course as it was turned at `T + 1`, for `T` its first marked step (`TurningInTime.course_turned`), and under `turns_in_time_iff`'s premises the line never ends exactly where `T + 1` comes before the point of no return of the course as it was (`TurningInTime.noReturn_exists`, `TurningInTime.turns_in_time_iff_before`); in `Three` that point is step 3 (`TurningInTime.Three.noReturn`), and on the lock's own types a `Locked` start at nine meets every premise of `locked_ends_with_net_regime` and ends `Locked` in four steps, its share left as it is (`TurningInTime.Three.lock_ends`, `TurningInTime.Three.lock_share_stays`) or raised by one at each step (`TurningInTime.Three.rise_orbit`, `TurningInTime.Three.rise_above`, `TurningInTime.Three.rise_lock_ends`); on the lock's own types with a window that gives the rule `false` (`TurningInTime.Three.noRule`), from the way `(3, true, 0)` at nine: read at eight only (`[8, 9)`) the right side of `turns_in_time_iff` holds at `T = 1` and the line ends in five steps (`TurningInTime.Three.read_at_eight_ends`); read from six to below ten, the line never ends from nine and ends from seven, and the kind is not kept at every level (`TurningInTime.Three.read_to_ten`); read from six to below nine, the first step the window reads is step 1, the level then holds at six and the line never ends, the kind not kept at every level (`TurningInTime.Three.held_at_six`); and from the way `(2, true, 0)` at nine, which is not `Locked`, with the window `[6, 8)`, the line never ends and no step of the lock's own course is at a level the window reads (`TurningInTime.Three.unlocked_goes_on`).
+  With the use the share (`TurningInTime.Three.drawerUse`), the share raised by one at each step under
+  the favouring rule, from the way `(3, true, 0)` at twelve, every premise of `locked_ends_rising` holds
+  at `hi = 12`, its `more` from `count_rises`, and the line ends `Locked` within `12 + 1` steps;
+  computed separately, it ends in seven steps at `((10, true, 7), 0)`; at the start no `H` at most the
+  start's use and `y` with giving short of `H` below `y` put twelve below `H + y`, and at step 4 giving
+  is short of seven below six, the use is at least seven and twelve is below `7 + 6`
+  (`TurningInTime.Three.rise_count_ends`; that `locked_ends_with_net_regime` applies from step 4 is
+  argued there, not a Lean statement). On the band `[8, 9)` from nine, with the window setting the share
+  to nothing (`TurningInTime.Three.zeroShare`) and the rule to `false`, the line never ends, through
+  `locked_turns_in_time_share_iff` at `T = 1`, and from step 2 the share is below three and the rule
+  `false` (`TurningInTime.Three.share_read_goes_on`).
+  Witness
   `TurningInTime.Three` (giving `min z (12 - z)`, uses five and three, a need of one, from nine): first
   marked at step 0 or 1 the line never ends, at step 2 it turns and ends and the line under the way's
   class ends while the net goes on, with no marked level it ends as it was. The marks, `AloneOutside`,
-  the kept kind and its one use are premises, not derived. Imported by `Becoming.WayOfUnits`; a model.
-* `Becoming.WayOfUnits` (L2, only through its one import, `Becoming.TurningInTime`): a way of units,
+  the kept kind and its one use are premises, not derived. Imported by `Becoming.LineOnAStock` and
+  `Becoming.WayOfUnits`; a model.
+* `Becoming.LineOnAStock` (L2, through `Becoming.TurningInTime` and `Becoming.ReadingsPersist`; it
+  imports `Becoming.SelectionTerm` too): a line on a stock, units that leave offspring on a renewed
+  level (board item DJ). It states no continuation condition and no valuation. A unit has a need, a use
+  and the units it leaves (`kids`); a way is a list of units, a level a number. After a step at level
+  `x` each unit of the way leaves its kids where `x` meets its need and nothing where it does not
+  (`LineOnAStock.after`), and the level becomes `RegimeMargin.step giving (taken use w) x`, `taken` the
+  total of the uses of the units present (`LineOnAStock.taken`, `LineOnAStock.left`); the net
+  (`LineOnAStock.net`) is `TurningInTime.pair`'s step while some unit's need is met
+  (`LineOnAStock.Goes`), and the course read as `SelectionTerm.Generations` is
+  `LineOnAStock.generations`. With no premise on the stock: two levels leave the same next way where
+  they meet the same needs among its units (`LineOnAStock.after_alike`), and exactly there where every
+  unit of the way has a kid (`LineOnAStock.alike_iff`; without that not, `LineOnAStock.AlikeFiner`);
+  along two courses from one way, under two givings, two uses and two start levels, whose levels meet
+  the same needs of the way step by step, the ways are the same (`LineOnAStock.ways_alike`) and the same
+  number is born (`LineOnAStock.born_alike`). With nothing given from nothing, the step under no use
+  keeping every level up to `hi` within `hi`, each unit's kids together taking more than it (`grows`),
+  every descendant of the way needing something, and a start that is not empty, at most `hi`, with every
+  need met: there is a first step from 1 to `hi + 1` at which some need is unmet, every need met before
+  it and the way up to it the generation of descent (`LineOnAStock.generation`), in which no giving, use
+  or level appears (`LineOnAStock.need_unmet`, by `TurningInTime.rising_takes_all`); it does not
+  conclude that the level fell or that the net ends. With kids needing no more than their parent
+  (`down`) as well, the level at that step is below a need the start met and below the start level
+  (`LineOnAStock.falls_to_unmet`; that this draws down what it rests on while nothing in it yet differs
+  is an AI reading); without `down` the unmet need can be a kid's greater need at a level that has not
+  fallen (`LineOnAStock.KidHigherNeed`). With `grows`, positive needs, `down`, nothing given from
+  nothing, that cap and a start at most `hi`, the net does not go on for ever, with no bound on the step
+  (`LineOnAStock.way_ends`; for a closed line among other units, `LineOnAStock.line_ends`); without
+  `down`, or with kids taking the same in place of more, it can go on (`LineOnAStock.KidsNeedMore`,
+  `LineOnAStock.EqualInPlaceOfMore`); where every unit needs the same positive amount, it ends within
+  `hi + 1` steps (`LineOnAStock.one_need_ends`). A closed line of one need `m` whose kids take no less
+  than it, with `giving 0 < m` and taking at the start more than every giving, is gone from some step
+  on, with no cap asked (`LineOnAStock.fall`). Where each unit's kids take exactly what it takes, every
+  unit has kids, `down`, every descendant needs something, nothing is given from nothing, the start is
+  at most `hi`, and the regime (`LineOnAStock.Regime`) holds at every way the course reaches with some
+  need met there and at every step before, the net never ends exactly where, some need met at every step
+  before, the course comes to a configuration that holds: a way that is not empty, every need in it met,
+  and the level at or above what the way takes and `y` of that (`LineOnAStock.Holds`,
+  `LineOnAStock.unending_iff_holds`; `LineOnAStock.TwoForOne` is a case whose offspring are not the unit
+  itself). With no unit outside a line leaving a unit of it, a line with no unit in the way never has
+  one, and what is gone does not come back (`LineOnAStock.never_in`, `LineOnAStock.gone_from`, by
+  `SelectionTerm.Generations.kept_of_descent`). With nothing given from nothing and every descendant
+  needing something, what the way takes is below the level at every step after which some need is met
+  (`LineOnAStock.taken_below`). Units that take nothing and leave only units like them leave the levels,
+  and the way once they are taken out, as they are (`LineOnAStock.takes_nothing`), and can change
+  whether the net ends (`LineOnAStock.NothingTakenEnds`). While what the way takes is within the level,
+  the level and everything taken balance the start and everything given over any stretch
+  (`LineOnAStock.account`). Whether the net ends is not monotone in the start level
+  (`LineOnAStock.HigherStartEnds`). The needs, uses and offspring, `grows`, `down`, the cap and the
+  regime are given; nothing makes a new kind; no exact condition for a way whose kids take more, or
+  less, never ending is stated; nothing is about a trained system. Imported by `Becoming.WayOfUnits` and
+  `Becoming.LineOnAStockCases`; a model.
+* `Becoming.WayOfUnits` (L2, through its two imports, `Becoming.TurningInTime` and
+  `Becoming.LineOnAStock`): a way of units,
   a turn with no mark given (board item WU). It states no continuation condition and no
   valuation, and uses none. A unit is a pair of numbers, the level it needs to go on
   (`WayOfUnits.need`) and what it takes from the level at each step (`WayOfUnits.use`); a way is the
@@ -5143,9 +5252,37 @@ tagged instance or application.
   `WayOfUnits.Against` (giving `min z (12 - z)`, needs nine and one, five taken together, from nine):
   with the first unit taking four the line never ends (`With.goes_on`, by `two_units_iff`;
   `With.goes_on_holds`, by `unending_iff_holds`; `With.levels`), with it taking one the line ends
-  (`Against.turns_and_ends`). The needs, the uses, `y`, `y₁`, `y₂` and the regime's premises are
+  (`Against.turns_and_ends`).
+  With each unit leaving itself where its need is met (`kids u = [u]`), `LineOnAStock`'s way after a
+  step, what a way takes, step, course, net, `Holds` and `Regime` are this module's
+  (`WayOfUnits.after_unit`, `WayOfUnits.taken_unit`, `WayOfUnits.step_unit`, `WayOfUnits.course_unit`,
+  `WayOfUnits.net_unit`, `WayOfUnits.unending_unit`, `WayOfUnits.holds_unit`, `WayOfUnits.regime_unit`).
+  Six declarations are derived from `LineOnAStock`'s laws at that case: `WayOfUnits.unending_iff_holds`
+  (its statement unchanged), `WayOfUnits.fixed_while`, `WayOfUnits.unending_taken_below` (on a course
+  that never ends, with nothing given from nothing and every unit of the start needing something, what
+  the way takes is below the level at every step), `WayOfUnits.course_fixed`, `WayOfUnits.step_falls`
+  and the decision of `WayOfUnits.Goes`. `WayOfUnits.unending_above`, `WayOfUnits.greater_need` and
+  `WayOfUnits.more_use_on_first` rest on it through `step_falls`, and
+  `WayOfUnits.takes_nothing_iff_alone` and `WayOfUnits.takes_nothing_ends` through `fixed_while`;
+  `WayOfUnits.ends_while_net_goes` and `WayOfUnits.two_units_iff` use no law of it. Thirteen helpers
+  that no proof used were removed (among them `anyGoes` and `falls`); their general forms are in
+  `LineOnAStock`, and whether a unit is present along a course is said there by descent.
+  The needs, the uses, `y`, `y₁`, `y₂` and the regime's premises are
   given; units only end; the marks of a way that conditions on a reading are not derived. A leaf: a
   model.
+* `Becoming.LineOnAStockCases` (L2, through `Becoming.LineOnAStock` and `Becoming.LineageDrawdown`): two
+  built examples with the sizes and levels of courses of `Becoming.LineOnAStock`'s model (board item
+  DJ). `LineageRegimes.MultiplyingTakers` has, at every step, the family size, pool and activity of the
+  course of the doubling unit (`LineOnAStock.Doubling`) with nothing given from `([()], 3)`: its
+  lengths, levels and whether some need is met (`LineOnAStock.MultiplyingTakersCase.agree`); the
+  premises of `LineOnAStock.way_ends` hold on that course, checked where the law is applied in the
+  proof, not a conjunct (`LineOnAStock.MultiplyingTakersCase.multiplying_takers`).
+  `LineageDrawdown.Drain`, gated, has at every step the family size, the pool with the renewer's gift on
+  it, the total of the draws and the renewer's giving of a course of this model, and the premises of
+  `LineOnAStock.fall` hold at the line of the drawers from step 1, checked inside the proof
+  (`LineOnAStock.DrainCase.drain`). Each example's ending already follows from its own Lean, which the
+  equalities take as input; the laws add nothing about the examples. The organisms' identities, and the
+  need (four here, one there), are not equated. A leaf.
 * `Becoming.Composition` (L1): joint plans of joint frames: nested decompositions read through
   a description.
 * `Becoming.LastingRuns` (L1): lasting and reaching on runs and courses.

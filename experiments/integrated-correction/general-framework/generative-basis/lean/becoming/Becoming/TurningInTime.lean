@@ -71,7 +71,14 @@ configurations and step, not terms of the root.
   with the way `alone` taken that many times (`ends_with_net`, by `Optimum.ends_within`). With the
   step's level `RegimeMargin.step giving (use w) x` (`regime_step_eq`), nothing given from nothing,
   giving short of `H` below `y`, uses of at least `H` along `alone`'s orbit and a start below
-  `H + y`, the premises hold (`ends_with_net_regime`).
+  `H + y`, the premises hold (`ends_with_net_regime`). Where the step under no use keeps every level up
+  to `hi` within `hi` (`kept_within`: then so does the step under any use), from a level at most `hi`,
+  a use that rises strictly at each of the first `hi` steps of `alone`'s orbit (at least `j` after `j`
+  steps, `rises_from`) takes the whole level: with nothing given from nothing, the level of the course
+  as it was at step `hi + 1` is nothing (`rising_takes_all`), and the first step at which the use is at
+  least the level comes within `hi` steps (`rising_meets_level`). With `AloneOutside`, a positive need
+  and no marked level that meets it, the line then ends within `hi + 1` steps (`ends_with_net_rising`),
+  with no floor on the use and no start below a point of no return given.
 * **The split at the first marked level.** With `AloneOutside` and decided marks, where the course as
   it was comes to a level below the need, the line never ends exactly where there is a step `T` of
   the course as it was, the need met and no level marked before it, the need met and the level marked
@@ -130,7 +137,12 @@ configurations and step, not terms of the root.
   keep the use from falling below `H` along it. What stays assumed: the start below `H + y`,
   `RegimeMargin`'s point of no return under a standing use `H` (`below` with `short`); the floor on the
   use where the share and the rule are not below the start's (`draws`); and the not-responding
-  (`outside` with `un`). The lock keeps an overdraw that stands; it does not bring one about. Where
+  (`outside` with `un`). There the lock keeps an overdraw that stands; it does not bring one about. With a
+  cap on the level (`keeps`, a start at most `hi`) and a use that rises under each step of the lock
+  wherever the share and the rule are not below the start's (`more`) in place of `short`, `draws` and
+  `below`, a `Locked` start ends `Locked` within `hi + 1` steps (`locked_ends_rising`, by
+  `ends_with_net_rising`); `count_rises` gives `more` where the share is a count that every favouring
+  rule raises strictly and the use is that count times a positive amount. Where
   every step reads and the window's reading gives, at every level in `[N, K)`, a rule of which a given
   predicate holds (written `kept` there; not section 5's premise `kept`), the rule after a step at such
   a level is one too (`window_corrected`). On a window that starts at or below
@@ -145,7 +157,17 @@ configurations and step, not terms of the root.
   which the level falls up to the first step the window reads are held at or above `H₁`; that the start
   is below `H₁ + y₁` stays given. From a start that is not `Locked` the statement can fail: on
   `Three.unlocked_goes_on` the line never ends with no step read, and every other premise is met there
-  (argued in its docstring, not a Lean statement).
+  (argued in its docstring, not a Lean statement). A window that reads at every step and sets the share
+  as well as the rule at a level in `[N, K)` (`windowAfterShare`, the share by `sA`, the rule by `hL`;
+  `windowAfter` reading at every step is its case with the share set by `fA`, pointwise,
+  `windowAfter_every_is_share`) is `windowAlone` at every other level (`window_share_alone_outside`).
+  Where the share it sets is `Low` and the rule it sets `kept` (`sets`), the rule read off a `Low` share
+  is `kept` (`lowRule`) and a `Low` share stays `Low` under a `kept` rule (`lowStays`),
+  `turns_in_time_iff` at the kept kind `Low ∧ kept` holds on it from a `Locked` start below `H₁ + y₁`,
+  with no premise on where the window lies (`locked_turns_in_time_share_iff`); after a step at a level
+  the window reads, the pair's course has a `Low` share and a `kept` rule at every later step
+  (`share_corrected_stays`), and so from the step after the first step the window reads on the course
+  as it was (`share_corrected_on_course`).
 * **The point of no return, a level and a step** (section 7). `RegimeMargin` calls the level `H + y`
   the point of no return under a standing use `H`; `Becoming.ReadOffInTime` calls the first step at
   which a course is not recoverable its point of no return (`NoReturnAt`). For any level course `X`
@@ -195,7 +217,18 @@ configurations and step, not terms of the root.
   `hi = 6`, `c = 7` and `T = 1`, with the kind not kept at every level (`Three.held_at_six`). At
   `[6, 8)`, from the way `(2, true, 0)` at nine, which is not `Locked`, the rule read off the share two
   is `false`, the use falls to three without the level being read, and the line never ends with no step
-  of the lock's own course at a level the window reads (`Three.unlocked_goes_on`).
+  of the lock's own course at a level the window reads (`Three.unlocked_goes_on`). With the use the
+  share (`drawerUse`), the share raised by one at each step under the favouring rule and the start
+  `(3, true, 0)` at twelve, `locked_ends_rising` with its `more` from `count_rises` gives a line that
+  ends `Locked` within `12 + 1` steps, and, as a separate computed conjunct, the line ends in seven
+  steps at `((10, true, 7), 0)`; no `H` at most the start's use and `y` with giving short of `H` below `y` put twelve
+  below `H + y`; at step 4, the way `(7, true, 4)` at twelve, giving is short of seven below six, the
+  use is at least seven and twelve is below `7 + 6`, so that `locked_ends_with_net_regime` applies from
+  there (`Three.rise_count_ends`; that it applies is argued there, not a Lean statement). On the band `[8, 9)` from nine, with the window setting
+  the share to nothing as well as the rule to `false`, the line never ends, through
+  `locked_turns_in_time_share_iff` at `T = 1`, and from step 2 the share is below three and the rule
+  `false` (`Three.share_read_goes_on`); with the share left as it steps, `Three.read_at_eight_ends`
+  ends on that band.
 
 ## What is given and what is not shown
 
@@ -230,15 +263,19 @@ there `kept` fails, no `c` above six meets `keptBelow`, and no `c` from one to s
 `high` (argued here, not a Lean statement); on `Three.read_to_ten` and `Three.held_at_six`, which meet
 the premises of `locked_turns_in_time_on_window_iff`, the pair's level course is that turn (by
 computation, not a Lean statement). A share whose step reads the level is not expressed by `windowAfter`
-(its share steps by `fA` of the share and the rule in force); a share that falls under the rule the
-window reads, so that the rule read off it changes, is not tried. In `ends_with_net_regime`,
-`locked_ends_with_net_regime`, `locked_ends_on_window`, `unending_iff_above`,
-`unending_iff_above_kept_below`, `turns_in_time_iff_kept_below`, `locked_turns_in_time_on_window_iff`
-and `turns_in_time_iff` the level's step is `RegimeMargin.step giving (use w)`, with one `giving` for
+(its share steps by `fA` of the share and the rule in force); `windowAfterShare` sets the share at a
+level the window reads (by `sA`), and in `locked_turns_in_time_share_iff` the correction reaches the
+share because that reading sets it (`sets`, given); a share that falls under the rule the window reads,
+so that the rule read off it changes, is not tried. In `ends_with_net_regime`,
+`locked_ends_with_net_regime`, `locked_ends_on_window`, `ends_with_net_rising`, `locked_ends_rising`,
+`unending_iff_above`, `unending_iff_above_kept_below`, `turns_in_time_iff_kept_below`,
+`locked_turns_in_time_on_window_iff`, `locked_turns_in_time_share_iff` and `turns_in_time_iff` the
+level's step is `RegimeMargin.step giving (use w)`, with one `giving` for
 every way and nothing given from nothing (`RegimeMargin.FromNothing giving`): the way enters the level's
 step only through `use`. That the marked levels are levels of the same quantity the going on needs is a
 choice of the model, and so are these. `unending_iff_above`, `unending_iff_above_kept_below`,
-`turns_in_time_iff_kept_below`, `locked_turns_in_time_on_window_iff` and `turns_in_time_iff` need giving
+`turns_in_time_iff_kept_below`, `locked_turns_in_time_on_window_iff`, `locked_turns_in_time_share_iff`
+and `turns_in_time_iff` need giving
 to meet `H₂` from `y₂` up to `hi` (`RegimeMargin.Meets`), the step under `H₂` to keep the level within
 `hi` (`RegimeMargin.Keeps`), the need at most `H₂ + y₂` (`within`) and a level at most `hi` (`high`: in
 `turns_in_time_iff_kept_below` and `locked_turns_in_time_on_window_iff` the level after a marked step,
@@ -271,9 +308,14 @@ is how they are built. They have a total step, so in them no line ends where the
 it was that comes below the need, do not apply to them; the laws on a kind's class hold at every need.
 Where the way's step as it was is the lock's, under `turn_locked`'s premises and `ends_with_net`'s (a
 positive need among them), a `Locked` start ends `Locked` where the net ends (`locked_ends_with_net`).
-In `locked_ends_with_net_regime` and `locked_ends_on_window` the start below `H + y` (`below`) and the
-floor on the use where the share and the rule are not below the start's (`draws`) are given: nothing
-here derives an overdraw from a lock, or that the use depends on the share or the rule.
+In `locked_ends_with_net_regime`, `locked_ends_on_window`, `locked_turns_in_time_on_window_iff` and
+`locked_turns_in_time_share_iff` the start below `H + y` (`below`; `H₁ + y₁` in the last two) and the floor on the use where the share and the rule are
+not below the start's (`draws`) are given. In `locked_ends_rising` neither is; a cap on the level (`keeps`, `high`) and the
+rise of the use under each step of the lock wherever the share and the rule are not below the start's
+(`more`) are given instead, and what it concludes is the ending, not a step past a point of no return.
+No law here concludes that the use depends on the share or the rule: `count_rises` asks it (`count`),
+and `more` can be met by a use that reads neither (argued at `locked_ends_rising`, not a Lean
+statement).
 Under the regime the level of the course as it was is
 `DrawHistory.underDraws` along `alone`'s orbit; that identification is not stated. `locked_at_class` is
 stated where the beyond is a loss (`B = Nat`), as `ClosedCapture.lockedAlike` is. `locked_stays`,
@@ -458,27 +500,22 @@ theorem alike_along {marked : Nat → Prop} {alone : W → W} {after : W → Nat
 
 /-! ## 4. Ending where the net ends -/
 
-/-- **Ending where the net ends.** With `AloneOutside`, no marked level that meets the need, a
-positive need, and the level of the course as it was in `Optimum`'s form (`step`), at most `r` given
-(`renews`) and more than `r` taken (`over`) at every step: within `s.2` steps the line from `s`
-reaches a configuration that conditions nothing, its way `alone` taken that many times. By
-`Optimum.ends_within` and `first_of_decided`. -/
-theorem ends_with_net {marked : Nat → Prop} {alone : W → W} {after : W → Nat → W}
+/-- Where the course as it was from `s` is at a level below the need at step `N`, within `N` steps the
+line from `s` reaches a configuration that conditions nothing, its way `alone` taken that many times.
+With `AloneOutside` and no marked level that meets the need. The split at the first
+step below the need, by `first_of_decided`. Needed by `ends_with_net`, where `Optimum.ends_within` gives
+the step `s.2`, and by `ends_with_net_rising`, where `rising_takes_all` gives the step `hi + 1`. -/
+private theorem ends_of_below {marked : Nat → Prop} {alone : W → W} {after : W → Nat → W}
     {left : W → Nat → Nat} (outside : AloneOutside marked alone after)
-    {need : Nat} (needs : 0 < need) (un : ∀ x, need ≤ x → ¬ marked x)
-    {s : W × Nat} {g d : Nat → Nat} {r : Nat}
-    (step : ∀ t, (Law.orbit (asItWas alone left) s (t + 1)).2 =
-      (Law.orbit (asItWas alone left) s t).2 + g t - d t)
-    (renews : ∀ t, g t ≤ r) (over : ∀ t, r < d t) :
-    ∃ n t, n ≤ s.2 ∧ «迭» (net need after left) n s t ∧ (∀ v, ¬ net need after left t v) ∧
+    {need : Nat} (un : ∀ x, need ≤ x → ¬ marked x) {s : W × Nat} {N : Nat}
+    (ended : (Law.orbit (asItWas alone left) s N).2 < need) :
+    ∃ n t, n ≤ N ∧ «迭» (net need after left) n s t ∧ (∀ v, ¬ net need after left t v) ∧
       t.1 = Law.orbit alone s.1 n :=
-  have ended := Optimum.ends_within (x := fun t => (Law.orbit (asItWas alone left) s t).2)
-    step renews over needs s.2 (Nat.lt_add_of_pos_left needs)
   match first_of_decided (P := fun t => need ≤ (Law.orbit (asItWas alone left) s t).2)
       (Q := fun t => (Law.orbit (asItWas alone left) s t).2 < need)
       (fun t => (Nat.lt_or_ge (Law.orbit (asItWas alone left) s t).2 need).elim
-        .inr .inl) s.2 with
-  | .inl all => absurd (all s.2 (Nat.le_refl _)) (Nat.not_le_of_gt ended)
+        .inr .inl) N with
+  | .inl all => absurd (all N (Nat.le_refl _)) (Nat.not_le_of_gt ended)
   | .inr ⟨m, within, below, before⟩ =>
     have agree : ∀ j, j ≤ m →
         Law.orbit (pair after left) s j = Law.orbit (asItWas alone left) s j :=
@@ -491,6 +528,24 @@ theorem ends_with_net {marked : Nat → Prop} {alone : W → W} {after : W → N
       Law.stepWhile_none_iff.mpr (Eq.subst (motive := fun z : W × Nat => ¬ need ≤ z.2)
         (agree m (Nat.le_refl m)).symm (Nat.not_le_of_gt below)),
       (congrArg Prod.fst (agree m (Nat.le_refl m))).trans (asItWas_way alone left s m)⟩
+
+/-- **Ending where the net ends.** With `AloneOutside`, no marked level that meets the need, a
+positive need, and the level of the course as it was in `Optimum`'s form (`step`), at most `r` given
+(`renews`) and more than `r` taken (`over`) at every step: within `s.2` steps the line from `s`
+reaches a configuration that conditions nothing, its way `alone` taken that many times. By
+`Optimum.ends_within`, which puts the course as it was below the need at step `s.2`, and
+`ends_of_below`. -/
+theorem ends_with_net {marked : Nat → Prop} {alone : W → W} {after : W → Nat → W}
+    {left : W → Nat → Nat} (outside : AloneOutside marked alone after)
+    {need : Nat} (needs : 0 < need) (un : ∀ x, need ≤ x → ¬ marked x)
+    {s : W × Nat} {g d : Nat → Nat} {r : Nat}
+    (step : ∀ t, (Law.orbit (asItWas alone left) s (t + 1)).2 =
+      (Law.orbit (asItWas alone left) s t).2 + g t - d t)
+    (renews : ∀ t, g t ≤ r) (over : ∀ t, r < d t) :
+    ∃ n t, n ≤ s.2 ∧ «迭» (net need after left) n s t ∧ (∀ v, ¬ net need after left t v) ∧
+      t.1 = Law.orbit alone s.1 n :=
+  ends_of_below outside un (Optimum.ends_within (x := fun t => (Law.orbit (asItWas alone left) s t).2)
+    step renews over needs s.2 (Nat.lt_add_of_pos_left needs))
 
 /-- `RegimeMargin.step` in `Optimum`'s form, where nothing gives from nothing. -/
 theorem regime_step_eq {giving : Nat → Nat} (nothing : RegimeMargin.FromNothing giving) (d x : Nat) :
@@ -563,6 +618,116 @@ theorem ends_with_net_regime {marked : Nat → Prop} {alone : W → W} {after : 
     (fun t => congrArg (fun v => RegimeMargin.step giving (use v) (Law.orbit (asItWas alone
       (fun w x => RegimeMargin.step giving (use w) x)) (w, x) t).2) (asItWas_way alone _ (w, x) t))
   ends_with_net outside needs un (s := (w, x)) levels.1 levels.2.1 levels.2.2
+
+/-- **A use that rises at each of the first `n` steps is at least `j` after `j` steps, up to `n`.**
+Where the use strictly rises at each step `j < n` of `alone`'s orbit from `w` (`rises`), the use of
+the way `alone` taken `j` times is at least `j`, for every `j` at most `n`. By induction on `j`. -/
+theorem rises_from {use : W → Nat} {alone : W → W} {w : W} {n : Nat}
+    (rises : ∀ j, j < n → use (Law.orbit alone w j) < use (Law.orbit alone w (j + 1))) :
+    ∀ j, j ≤ n → j ≤ use (Law.orbit alone w j)
+  | 0, _ => Nat.zero_le _
+  | j + 1, le => Nat.succ_le_of_lt (Nat.lt_of_le_of_lt (rises_from rises j (Nat.le_of_succ_le le))
+      (rises j (Nat.lt_of_succ_le le)))
+
+/-- **Where the step under no use keeps every level up to `hi` within `hi`, so does the step under
+any use.** With `RegimeMargin.Keeps giving 0 hi` (`keeps`), for every use `d` and every level `x` at
+most `hi` (`high`), `RegimeMargin.step giving d x` is at most `hi`: it is the step under no use from
+`x - d`, which is at most `x`. -/
+theorem kept_within {giving : Nat → Nat} {hi : Nat} (keeps : RegimeMargin.Keeps giving 0 hi)
+    (d : Nat) {x : Nat} (high : x ≤ hi) : RegimeMargin.step giving d x ≤ hi :=
+  keeps (x - d) (Nat.le_trans (Nat.sub_le x d) high)
+
+/-- Under `rising_takes_all`'s premises but `nothing`, the level of the course as it was at step `hi`
+is at most the use there: every level of that course is at most `hi` (`kept_within`, step by step),
+and the use at step `hi` is at least `hi` (`rises_from`). Needed by `rising_takes_all` and `rising_meets_level`. -/
+private theorem takes_at_hi {alone : W → W} {giving : Nat → Nat} {use : W → Nat} {hi : Nat}
+    (keeps : RegimeMargin.Keeps giving 0 hi) {w : W} {x : Nat} (high : x ≤ hi)
+    (rises : ∀ j, j < hi → use (Law.orbit alone w j) < use (Law.orbit alone w (j + 1))) :
+    (Law.orbit (asItWas alone (fun w x => RegimeMargin.step giving (use w) x)) (w, x) hi).2 ≤
+      use (Law.orbit alone w hi) :=
+  have within : ∀ t, (Law.orbit (asItWas alone
+      (fun w x => RegimeMargin.step giving (use w) x)) (w, x) t).2 ≤ hi := fun t => by
+    induction t with
+    | zero => exact high
+    | succ t ih =>
+      exact kept_within keeps (use (Law.orbit (asItWas alone
+        (fun w x => RegimeMargin.step giving (use w) x)) (w, x) t).1) ih
+  Nat.le_trans (within hi) (rises_from rises hi (Nat.le_refl hi))
+
+/-- **Against a level that cannot pass `hi`, a use that rises for `hi` steps leaves nothing after
+`hi + 1` steps of the course as it was.** On the course as it was from `(w, x)`, the way stepping by `alone` and
+the level by `RegimeMargin.step giving (use w)`: with nothing given from nothing (`nothing`), the step
+under no use keeping every level up to `hi` within `hi` (`keeps`, `RegimeMargin.Keeps giving 0 hi`),
+the start's level `x` at most `hi` (`high`), and the use rising strictly at each of the first `hi`
+steps of `alone`'s orbit from `w` (`rises`), the level at step `hi + 1` is nothing. Every level of the
+course is at most `hi` (`kept_within`, step by step); the use at step `hi` is at least `hi`
+(`rises_from`); so the use there takes the whole level, nothing is left, and nothing is given from
+nothing (that the use is at least the level at some step up to `hi` is `rising_meets_level`; that it
+is so at step `hi` itself is the private `takes_at_hi`, used in this proof and in
+`rising_meets_level`'s, and not stated publicly). No floor on the use and no start below a point of no
+return is asked: the use may start at nothing. -/
+theorem rising_takes_all {alone : W → W} {giving : Nat → Nat} {use : W → Nat} {hi : Nat}
+    (nothing : RegimeMargin.FromNothing giving) (keeps : RegimeMargin.Keeps giving 0 hi)
+    {w : W} {x : Nat} (high : x ≤ hi)
+    (rises : ∀ j, j < hi → use (Law.orbit alone w j) < use (Law.orbit alone w (j + 1))) :
+    (Law.orbit (asItWas alone (fun w x => RegimeMargin.step giving (use w) x)) (w, x) (hi + 1)).2 = 0 :=
+  have takes : (Law.orbit (asItWas alone (fun w x => RegimeMargin.step giving (use w) x)) (w, x) hi).2
+      ≤ use (Law.orbit (asItWas alone (fun w x => RegimeMargin.step giving (use w) x)) (w, x) hi).1 :=
+    Eq.subst (motive := fun v => (Law.orbit (asItWas alone
+        (fun w x => RegimeMargin.step giving (use w) x)) (w, x) hi).2 ≤ use v)
+      (asItWas_way alone _ (w, x) hi).symm (takes_at_hi keeps high rises)
+  (congrArg (fun z => z + giving z) (sub_eq_zero_of_le takes)).trans
+    ((Nat.zero_add (giving 0)).trans nothing)
+
+/-- **Where a use rises for `hi` steps against a level that cannot pass `hi`, the first step at which
+the use is at least the level comes within `hi` steps.** Under `rising_takes_all`'s premises but
+`nothing` (that is, `keeps`, `high` and `rises`), there is a step `j` at most `hi` of the
+course as it was from `(w, x)` at which the level is at most the use of the way `alone` taken `j` times,
+the use below the level at every step before it. By `first_of_decided`, bounded at step `hi`, where the
+level is at most the use (as in `rising_takes_all`). At that step the use takes the whole level. -/
+theorem rising_meets_level {alone : W → W} {giving : Nat → Nat} {use : W → Nat} {hi : Nat}
+    (keeps : RegimeMargin.Keeps giving 0 hi) {w : W} {x : Nat} (high : x ≤ hi)
+    (rises : ∀ j, j < hi → use (Law.orbit alone w j) < use (Law.orbit alone w (j + 1))) :
+    ∃ j, j ≤ hi ∧
+      (Law.orbit (asItWas alone (fun w x => RegimeMargin.step giving (use w) x)) (w, x) j).2 ≤
+        use (Law.orbit alone w j) ∧
+      ∀ i, i < j → use (Law.orbit alone w i) <
+        (Law.orbit (asItWas alone (fun w x => RegimeMargin.step giving (use w) x)) (w, x) i).2 :=
+  match first_of_decided
+      (P := fun t => use (Law.orbit alone w t) <
+        (Law.orbit (asItWas alone (fun w x => RegimeMargin.step giving (use w) x)) (w, x) t).2)
+      (Q := fun t =>
+        (Law.orbit (asItWas alone (fun w x => RegimeMargin.step giving (use w) x)) (w, x) t).2 ≤
+          use (Law.orbit alone w t))
+      (fun _ => Nat.lt_or_ge _ _) hi with
+  | .inl all => absurd (takes_at_hi keeps high rises) (Nat.not_le_of_gt (all hi (Nat.le_refl hi)))
+  | .inr ⟨j, le, takes, before⟩ => ⟨j, le, takes, before⟩
+
+/-- **A use that rises against a level that cannot pass `hi` ends the line within `hi + 1` steps.**
+With `AloneOutside` (`outside`), a positive need (`needs`) that no marked level meets (`un`), nothing
+given from nothing (`nothing`), the step under no use keeping every level up to `hi` within `hi`
+(`keeps`, `RegimeMargin.Keeps giving 0 hi`), the start's level `x` at most `hi` (`high`), and the use
+rising strictly at each of the first `hi` steps of `alone`'s orbit from `w` (`rises`): within `hi + 1`
+steps the line from `(w, x)` reaches a configuration that conditions nothing, its way `alone` taken
+that many times. By `rising_takes_all` the level of the course as it was is nothing at step `hi + 1`,
+below the need; the line ends at the first step of that course below the need (`ends_of_below`, through
+which `ends_with_net` goes too). What is concluded is the ending; no step past a point of no return is
+stated. In place of `ends_with_net_regime`'s floor on the use (`uses`) and start below a point of no
+return (`below`, with `short`), a cap on the level (`keeps`, `high`) and the rise of the use for `hi`
+steps (`rises`) are given. -/
+theorem ends_with_net_rising {marked : Nat → Prop} {alone : W → W} {after : W → Nat → W}
+    (outside : AloneOutside marked alone after) {need : Nat} (needs : 0 < need)
+    (un : ∀ x, need ≤ x → ¬ marked x) {giving : Nat → Nat} {use : W → Nat} {hi : Nat}
+    (nothing : RegimeMargin.FromNothing giving) (keeps : RegimeMargin.Keeps giving 0 hi)
+    {w : W} {x : Nat} (high : x ≤ hi)
+    (rises : ∀ j, j < hi → use (Law.orbit alone w j) < use (Law.orbit alone w (j + 1))) :
+    ∃ n t, n ≤ hi + 1 ∧
+      «迭» (net need after (fun w x => RegimeMargin.step giving (use w) x)) n (w, x) t ∧
+      (∀ v, ¬ net need after (fun w x => RegimeMargin.step giving (use w) x) t v) ∧
+      t.1 = Law.orbit alone w n :=
+  ends_of_below outside un (left := fun w x => RegimeMargin.step giving (use w) x) (s := (w, x))
+    (N := hi + 1)
+    (Eq.subst (motive := fun z => z < need) (rising_takes_all nothing keeps high rises).symm needs)
 
 /-! ## 5. Turning in time, exactly -/
 
@@ -1025,14 +1190,27 @@ and `ends_with_net`'s, a `Locked` start ends `Locked` where the net ends (`locke
 wherever its share and rule are not below the start's, from a level below `H + y`, ends `Locked` where
 the net ends (`locked_ends_with_net_regime`), and so on the window with the levels in `[N, K)` marked
 (`locked_ends_on_window`). The start below `H + y` and the floor on the use are given there; the lock's
-premises keep the use from falling below `H`, and do not bring the start below `H + y`. Where every step
+premises keep the use from falling below `H`, and do not bring the start below `H + y`. With a cap on
+the level (`keeps`, `high`) and a use that rises under each step of the lock wherever the share and the
+rule are not below the start's (`more`) in their place, a `Locked` way ends `Locked` within `hi + 1`
+steps (`locked_ends_rising`, by `ends_with_net_rising`); `count_rises` gives `more` where the share is a
+count that every favouring rule raises strictly and the use is that count times a positive amount. Where every step
 reads and the window's reading gives a rule that is `kept` at every level in `[N, K)`, the rule after a
 step at such a level is `kept` (`window_corrected`), whatever the share's step `fA` and the reading off
 the share `hA`. On a window that starts at or below `H₂ + y₂` and ends at or above `c`, a `Locked` way
 from a level below `H₁ + y₁` never ends exactly where its first step at a level the window reads
 leaves the level at or above `H₂ + y₂` (`locked_turns_in_time_on_window_iff`): the lock's premises,
 with `draws`, give the uses of at least `H₁` along the lock's own course, and `window_corrected` gives
-`turns` and `keptBelow` where the window starts at or below `H₂ + y₂` and ends at or above `c`.
+`turns` and `keptBelow` where the window starts at or below `H₂ + y₂` and ends at or above `c`. A
+window that reads at every step and sets the share as well as the rule (`windowAfterShare`;
+`windowAfter` reading at every step is its case with the share set by `fA`, pointwise,
+`windowAfter_every_is_share`) is `windowAlone` outside `[N, K)` (`window_share_alone_outside`); where it
+sets a `Low` share and a `kept` rule, the rule read off a `Low` share is `kept` and a `Low` share stays
+`Low` under a `kept` rule, `turns_in_time_iff` at the kept kind `Low ∧ kept` holds from a `Locked`
+start below `H₁ + y₁`, the floor `H₁` on the use given (`draws`), with no premise on where the window
+lies (`locked_turns_in_time_share_iff`), and the share and
+the rule stay so after a step the window reads (`share_corrected_stays`), so from the step after the
+first step the window reads on the course as it was (`share_corrected_on_course`).
 Nothing here re-proves `locked_stays`, `lock_line`, `window_never_read`, `window_past_course` or
 `course_past`; `locked_alone` is
 `locked_stays`'s counterpart on `windowAlone` from any step count, by the same law, `turn_locked`. -/
@@ -1214,8 +1392,8 @@ lies below `H + y` (`below`, with `short`: `H + y` is `RegimeMargin`'s point of 
 standing use `H`, so the start is already past it); the floor on the use wherever the share and the
 rule are not below the start's (`draws`, asked at every step count, though only counts from the
 start's on occur along the course); the not-responding, no marked level meeting the need (`un`) and
-the lock's step as it was outside the marks (`outside`); and the positive need (`needs`). The lock
-keeps an overdraw that stands; it does not bring one about. By `ends_with_net_regime`,
+the lock's step as it was outside the marks (`outside`); and the positive need (`needs`). In this
+law the lock keeps an overdraw that stands; it does not bring one about. By `ends_with_net_regime`,
 `locked_alone_not_below` and `locked_alone`. `Three.lock_ends` meets every premise on the lock's own
 types; `Three.rise_lock_ends` meets them where the share rises at each step, which does not show that
 the rise bears on the ending, since the use there reads only the rule. -/
@@ -1241,6 +1419,68 @@ theorem locked_ends_with_net_regime {P : Ideals.Preorder A} {M : Ideals.Preorder
     ⟨n, t, within, line, ends, way,
       Eq.subst (motive := fun z : A × R × Nat => Locked M favours hA (z.1, z.2.1)) way.symm
         (locked_alone raises monotone upper (reads := reads) locked n)⟩
+
+/-- **A `Locked` way whose use rises under each step of the lock, wherever its share and rule are not
+below the start's, against a level that cannot pass `hi`, ends `Locked` within `hi + 1` steps.** As
+`locked_ends_with_net_regime`, with its `short`, `draws` and `below` replaced: the step under no use
+keeps every level up to `hi` within `hi` (`keeps`, `RegimeMargin.Keeps giving 0 hi`), the start's level
+`x` is at most `hi` (`high`), and every way whose share and rule are not below the start's uses less
+than the way the lock's step as it was makes of it (`more`). The other premises are
+`locked_ends_with_net_regime`'s: `Raises`, `ReadsShare` and favouring kept upward (`raises`,
+`monotone`, `upper`), `outside`, a positive need (`needs`) that no marked level meets (`un`), nothing
+given from nothing (`nothing`) and the `Locked` start (`locked`). Then within `hi + 1` steps the line
+from `(w, x)` reaches a configuration that conditions nothing, its way `windowAlone` taken that many
+times, its share and rule still `Locked`. By `ends_with_net_rising`, its `rises` from `more` through
+`locked_alone_not_below`, and `locked_alone`. The lock's premises keep the share and the rule along the
+lock's own course not below the start's, so that `more` applies at each of its steps, and they give
+the last conjunct, the end `Locked`; they are used for nothing else. `more` does not ask that the use
+read the share or the rule: a use that reads only the step count meets it with the share never moving
+(argued here from `windowAlone` adding one to the step count, not a Lean statement). That the use rises with the share is `count_rises`'s case. What is concluded is the ending; no step past
+a point of no return is stated. -/
+theorem locked_ends_rising {P : Ideals.Preorder A} {M : Ideals.Preorder R}
+    {favours : R → Prop} {fA : A → R → A} {hA : A → R → R} {reads : Nat → Bool}
+    (raises : Raises P favours fA) (monotone : ReadsShare P M hA)
+    (upper : ∀ {g g'}, M.le g g' → favours g → favours g') {marked : Nat → Prop}
+    {after : A × R × Nat → Nat → A × R × Nat}
+    (outside : AloneOutside marked (windowAlone fA hA reads) after) {need : Nat} (needs : 0 < need)
+    (un : ∀ x, need ≤ x → ¬ marked x) {giving : Nat → Nat} {use : A × R × Nat → Nat} {hi : Nat}
+    (nothing : RegimeMargin.FromNothing giving) (keeps : RegimeMargin.Keeps giving 0 hi)
+    {w : A × R × Nat} {x : Nat} (high : x ≤ hi) (locked : Locked M favours hA (w.1, w.2.1))
+    (more : ∀ v : A × R × Nat, P.le w.1 v.1 → M.le w.2.1 v.2.1 →
+      use v < use (windowAlone fA hA reads v)) :
+    ∃ n t, n ≤ hi + 1 ∧
+      «迭» (net need after (fun w x => RegimeMargin.step giving (use w) x)) n (w, x) t ∧
+      (∀ v, ¬ net need after (fun w x => RegimeMargin.step giving (use w) x) t v) ∧
+      t.1 = Law.orbit (windowAlone fA hA reads) w n ∧ Locked M favours hA (t.1.1, t.1.2.1) :=
+  have held := locked_alone_not_below raises monotone upper (reads := reads) locked
+  match ends_with_net_rising outside needs un nothing keeps (w := w) high
+      (fun j _ => more _ (held j).1 (held j).2) with
+  | ⟨n, t, within, line, ends, way⟩ =>
+    ⟨n, t, within, line, ends, way,
+      Eq.subst (motive := fun z : A × R × Nat => Locked M favours hA (z.1, z.2.1)) way.symm
+        (locked_alone raises monotone upper (reads := reads) locked n)⟩
+
+/-- **Where the share is a count that every favouring rule raises strictly and the use is that count
+times a positive amount, the use rises under one step of the lock's step as it was, from every way whose rule
+is not below a favouring rule.** The share a natural number (`A = Nat`, with any order `P`); every
+favouring rule raises it strictly (`rise`); the use of a way its share times `u` (`count`), with `u`
+positive (`pos`); favouring kept by a rule not lower (`upper`); and the rule of `w` favouring (`fav`):
+then every way `v` whose rule is not below `w`'s uses less than `windowAlone fA hA reads v`. This is
+`locked_ends_rising`'s premise `more` at a start `w` whose rule favours, as a `Locked` start's does
+(the first half of `Locked`). Used: `v`'s rule favours (by `upper` from `w`'s), so the share rises by
+`rise`, and the use with it by `count` and `pos`. Not used: the share's order (`P.le w.1 v.1`, asked
+only so that the form is `more`'s) and the reading (`hA`, `reads`). -/
+theorem count_rises {P : Ideals.Preorder Nat} {M : Ideals.Preorder R} {favours : R → Prop}
+    {fA : Nat → R → Nat} {hA : Nat → R → R} {reads : Nat → Bool}
+    (upper : ∀ {g g'}, M.le g g' → favours g → favours g')
+    (rise : ∀ a g, favours g → a < fA a g) {use : Nat × R × Nat → Nat} {u : Nat} (pos : 0 < u)
+    (count : ∀ v, use v = v.1 * u) {w : Nat × R × Nat} (fav : favours w.2.1) :
+    ∀ v : Nat × R × Nat, P.le w.1 v.1 → M.le w.2.1 v.2.1 →
+      use v < use (windowAlone fA hA reads v) :=
+  fun v _ ruleUp =>
+    Eq.subst (motive := fun z => z < use (windowAlone fA hA reads v)) (count v).symm
+      (Eq.subst (motive := fun z => v.1 * u < z) (count (windowAlone fA hA reads v)).symm
+        (Nat.mul_lt_mul_of_pos_right (rise v.1 v.2.1 (upper ruleUp fav)) pos))
 
 /-- One step of the joined two-level step with any reading `h`, regrouped, is one step of the pair.
 Needed by `regroup_orbit`. -/
@@ -1480,6 +1720,194 @@ theorem window_paced (fA : A → R → A) (fB : A × Nat → R → Nat) (hA : A 
   (congrArg windowRegroup
       (ClosedCapture.orbit_paced (join fA fB) (windowRead hA hL N K) reads c t)).symm.trans
     (window_is_pair fA fB hA hL N K reads (c.1, c.2, 0) t)
+
+/-- The way after a step of a window that reads at every step and sets the share as well as the rule:
+at a level `x` in `[N, K)` the share becomes `sA (w.1, x) w.2.1` and the rule `hL (w.1, x) w.2.1`;
+elsewhere the way after the step is `windowAlone fA hA (fun _ => true) w`, the share stepping by `fA`
+and the rule read off the share by `hA`. The step count goes up by one either way. Beside `windowAfter`,
+whose share steps by `fA` at every level. -/
+def windowAfterShare (fA : A → R → A) (hA : A → R → R) (sA : A × Nat → R → A)
+    (hL : A × Nat → R → R) (N K : Nat) (w : A × R × Nat) (x : Nat) : A × R × Nat :=
+  if N ≤ x ∧ x < K then (sA (w.1, x) w.2.1, hL (w.1, x) w.2.1, w.2.2 + 1)
+  else windowAlone fA hA (fun _ => true) w
+
+/-- **Outside the window that sets the share, the way after a step is the lock's step as it was.** At
+every level not in `[N, K)`, `windowAfterShare` is `windowAlone fA hA (fun _ => true)`. -/
+theorem window_share_alone_outside (fA : A → R → A) (hA : A → R → R) (sA : A × Nat → R → A)
+    (hL : A × Nat → R → R) (N K : Nat) :
+    AloneOutside (fun x => N ≤ x ∧ x < K) (windowAlone fA hA (fun _ => true))
+      (windowAfterShare fA hA sA hL N K) :=
+  fun _ _ outside => if_neg outside
+
+/-- **The window that reads at every step is the window that sets the share, with the share set by
+`fA`.** For every way `w` and level `x`, `windowAfter fA hA hL N K (fun _ => true) w x` is
+`windowAfterShare fA hA (fun p g => fA p.1 g) hL N K w x`: in `[N, K)` both take the share by `fA` and
+the rule by `hL`, and elsewhere both are `windowAlone fA hA (fun _ => true) w`. Pointwise, by the two
+sides of `windowRead`'s condition; that the two nets or courses are one is not stated. -/
+theorem windowAfter_every_is_share (fA : A → R → A) (hA : A → R → R) (hL : A × Nat → R → R)
+    (N K : Nat) (w : A × R × Nat) (x : Nat) :
+    windowAfter fA hA hL N K (fun _ => true) w x =
+      windowAfterShare fA hA (fun p g => fA p.1 g) hL N K w x :=
+  if read : N ≤ x ∧ x < K then
+    (congrArg (fun g => (fA w.1 w.2.1, g, w.2.2 + 1))
+      (if_pos read : windowRead hA hL N K (w.1, x) w.2.1 = hL (w.1, x) w.2.1)).trans
+      (if_pos read : windowAfterShare fA hA (fun p g => fA p.1 g) hL N K w x =
+        (fA w.1 w.2.1, hL (w.1, x) w.2.1, w.2.2 + 1)).symm
+  else
+    (congrArg (fun g => (fA w.1 w.2.1, g, w.2.2 + 1))
+      (if_neg read : windowRead hA hL N K (w.1, x) w.2.1 = hA w.1 w.2.1)).trans
+      (if_neg read : windowAfterShare fA hA (fun p g => fA p.1 g) hL N K w x =
+        windowAlone fA hA (fun _ => true) w).symm
+
+/-- At a level in `[N, K)`, where the window sets the share to a `Low` one and the rule to a `kept` one
+(`sets`), the way after a step of `windowAfterShare` has a `Low` share and a `kept` rule. Needed by
+`locked_turns_in_time_share_iff` and `share_corrected_stays`. -/
+private theorem share_turns {Low : A → Prop} {kept : R → Prop} (fA : A → R → A) (hA : A → R → R)
+    (sA : A × Nat → R → A) (hL : A × Nat → R → R) (N K : Nat)
+    (sets : ∀ (p : A × Nat) (g : R), N ≤ p.2 → p.2 < K → Low (sA p g) ∧ kept (hL p g))
+    (v : A × R × Nat) (z : Nat) (read : N ≤ z ∧ z < K) :
+    Low (windowAfterShare fA hA sA hL N K v z).1 ∧ kept (windowAfterShare fA hA sA hL N K v z).2.1 :=
+  Eq.subst (motive := fun u : A × R × Nat => Low u.1 ∧ kept u.2.1)
+    (if_pos read : (if N ≤ z ∧ z < K then (sA (v.1, z) v.2.1, hL (v.1, z) v.2.1, v.2.2 + 1)
+      else windowAlone fA hA (fun _ => true) v) = (sA (v.1, z) v.2.1, hL (v.1, z) v.2.1, v.2.2 + 1)).symm
+    (sets (v.1, z) v.2.1 read.1 read.2)
+
+/-- From a way with a `Low` share and a `kept` rule, the way after a step of `windowAfterShare` has a
+`Low` share and a `kept` rule, at every level: in `[N, K)` by `sets`; elsewhere the share steps by `fA`,
+which keeps a `Low` share `Low` under a `kept` rule (`lowStays`), and the rule is read off the `Low`
+share by `hA`, which gives a `kept` rule there (`lowRule`). Needed by `locked_turns_in_time_share_iff`
+and `share_corrected_stays`. -/
+private theorem share_kept {Low : A → Prop} {kept : R → Prop} (fA : A → R → A) (hA : A → R → R)
+    (sA : A × Nat → R → A) (hL : A × Nat → R → R) (N K : Nat)
+    (sets : ∀ (p : A × Nat) (g : R), N ≤ p.2 → p.2 < K → Low (sA p g) ∧ kept (hL p g))
+    (lowRule : ∀ a g, Low a → kept (hA a g)) (lowStays : ∀ a g, Low a → kept g → Low (fA a g))
+    (v : A × R × Nat) (z : Nat) (kind : Low v.1 ∧ kept v.2.1) :
+    Low (windowAfterShare fA hA sA hL N K v z).1 ∧ kept (windowAfterShare fA hA sA hL N K v z).2.1 :=
+  if read : N ≤ z ∧ z < K then share_turns fA hA sA hL N K sets v z read
+  else Eq.subst (motive := fun u : A × R × Nat => Low u.1 ∧ kept u.2.1)
+    (if_neg read : (if N ≤ z ∧ z < K then (sA (v.1, z) v.2.1, hL (v.1, z) v.2.1, v.2.2 + 1)
+      else windowAlone fA hA (fun _ => true) v) = windowAlone fA hA (fun _ => true) v).symm
+    (⟨lowStays v.1 v.2.1 kind.1 kind.2, lowRule v.1 v.2.1 kind.1⟩ :
+      Low (fA v.1 v.2.1) ∧ kept (hA v.1 v.2.1))
+
+/-- **A correction that sets the share as well as the rule: a `Locked` way from a level below
+`H₁ + y₁` never ends exactly where its first step at a level the window reads leaves the level at or
+above `H₂ + y₂`.** It is `turns_in_time_iff` at the kept kind `Low ∧ kept`: the levels in `[N, K)`
+marked, the lock's step as it was reading at every step (`windowAlone fA hA (fun _ => true)`) as
+`alone`, the way after a step `windowAfterShare fA hA sA hL N K` (`window_share_alone_outside`), and the
+kept kind the ways whose share is `Low` and whose rule is `kept`. That theorem's `turns` and `kept` are
+met here from three given premises, with none on where the window lies: the window sets a `Low` share
+and a `kept` rule (`sets`); off a `Low` share the rule read is `kept` (`lowRule`); under a `kept` rule a
+`Low` share steps to a `Low` share (`lowStays`). So the correction reaches the share because the
+window's reading sets it (`sets`, given), not because the share falls under the corrected rule. Its
+`uses₁` is met from the lock's premises, as in `locked_turns_in_time_on_window_iff`: under `Raises`,
+`ReadsShare` and favouring kept upward (`raises`, `monotone`, `upper`), from a `Locked` start (`locked`)
+the share and the rule along the lock's own course are never below the start's
+(`locked_alone_not_below`), so with `draws` every way on it uses at least `H₁`. The other premises are
+`turns_in_time_iff`'s: the use `H₂` of a way with a `Low` share and a `kept` rule (`uses`); the regime
+premises (`nothing`, `short`, `meets`, `keeps`); the need, positive (`needs`) and at most `H₂ + y₂`
+(`within`); giving short of `H₁` below `y₁` (`short₁`); and the start at most `hi` (`high`). The
+overdraw of the course as it was stays given, as in the laws before: the floor `H₁` on the use where the
+share and the rule are not below the start's (`draws`) and the start below `H₁ + y₁` (`below`). The
+right side is on the lock's own course, the orbit of `asItWas (windowAlone fA hA (fun _ => true))` from
+`(w, x)`; from step `T + 1` on, for its `T`, the pair's course has a `Low` share and a `kept` rule
+(`share_corrected_on_course`). The level's step is the regime's, `RegimeMargin.step giving (use w)`.
+Only the "if" side has a worked case (`Three.share_read_goes_on`; on the same band with the share left
+by `fA`, `Three.read_at_eight_ends` ends). -/
+theorem locked_turns_in_time_share_iff {P : Ideals.Preorder A} {M : Ideals.Preorder R}
+    {favours : R → Prop} {fA : A → R → A} {hA : A → R → R} (sA : A × Nat → R → A)
+    (hL : A × Nat → R → R) (N K : Nat)
+    (raises : Raises P favours fA) (monotone : ReadsShare P M hA)
+    (upper : ∀ {g g'}, M.le g g' → favours g → favours g')
+    {Low : A → Prop} {kept : R → Prop}
+    (sets : ∀ (p : A × Nat) (g : R), N ≤ p.2 → p.2 < K → Low (sA p g) ∧ kept (hL p g))
+    (lowRule : ∀ a g, Low a → kept (hA a g)) (lowStays : ∀ a g, Low a → kept g → Low (fA a g))
+    {giving : Nat → Nat} {use : A × R × Nat → Nat} {H₁ y₁ H₂ y₂ hi need : Nat}
+    (uses : ∀ v : A × R × Nat, Low v.1 → kept v.2.1 → use v = H₂)
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H₂ y₂)
+    (meets : RegimeMargin.Meets giving H₂ y₂ hi) (keeps : RegimeMargin.Keeps giving H₂ hi)
+    (needs : 0 < need) (within : need ≤ H₂ + y₂)
+    (short₁ : RegimeMargin.Short giving H₁ y₁)
+    {w : A × R × Nat} {x : Nat} (locked : Locked M favours hA (w.1, w.2.1))
+    (draws : ∀ v : A × R × Nat, P.le w.1 v.1 → M.le w.2.1 v.2.1 → H₁ ≤ use v)
+    (below : x < H₁ + y₁) (high : x ≤ hi) :
+    «不穷» (net need (windowAfterShare fA hA sA hL N K)
+        (fun w x => RegimeMargin.step giving (use w) x)) «一» (w, x) ↔
+      ∃ T, (∀ j, j < T →
+          need ≤ (Law.orbit (asItWas (windowAlone fA hA (fun _ => true))
+            (fun w x => RegimeMargin.step giving (use w) x)) (w, x) j).2 ∧
+          ¬ (N ≤ (Law.orbit (asItWas (windowAlone fA hA (fun _ => true))
+              (fun w x => RegimeMargin.step giving (use w) x)) (w, x) j).2 ∧
+            (Law.orbit (asItWas (windowAlone fA hA (fun _ => true))
+              (fun w x => RegimeMargin.step giving (use w) x)) (w, x) j).2 < K)) ∧
+        need ≤ (Law.orbit (asItWas (windowAlone fA hA (fun _ => true))
+          (fun w x => RegimeMargin.step giving (use w) x)) (w, x) T).2 ∧
+        (N ≤ (Law.orbit (asItWas (windowAlone fA hA (fun _ => true))
+            (fun w x => RegimeMargin.step giving (use w) x)) (w, x) T).2 ∧
+          (Law.orbit (asItWas (windowAlone fA hA (fun _ => true))
+            (fun w x => RegimeMargin.step giving (use w) x)) (w, x) T).2 < K) ∧
+        H₂ + y₂ ≤ (Law.orbit (asItWas (windowAlone fA hA (fun _ => true))
+          (fun w x => RegimeMargin.step giving (use w) x)) (w, x) (T + 1)).2 :=
+  have held := locked_alone_not_below raises monotone upper (reads := fun _ => true) locked
+  turns_in_time_iff (marked := fun z => N ≤ z ∧ z < K) (alone := windowAlone fA hA (fun _ => true))
+    (after := windowAfterShare fA hA sA hL N K) (Kept := fun v => Low v.1 ∧ kept v.2.1)
+    (window_share_alone_outside fA hA sA hL N K)
+    (share_turns fA hA sA hL N K sets)
+    (share_kept fA hA sA hL N K sets lowRule lowStays)
+    (fun v kind => uses v kind.1 kind.2) nothing short meets keeps needs within short₁
+    (fun j => draws _ (held j).1 (held j).2) below high
+
+/-- **After a step at a level the window reads, the share is `Low` and the rule `kept` at every later
+step.** Along the
+pair's course with the way after a step `windowAfterShare fA hA sA hL N K` and any level's step `left`,
+from any start `s`: where the level at step `T` of that course lies in `[N, K)` (`read`), for every `k`
+the way at step `T + 1 + k` has a `Low` share and a `kept` rule. Under `sets`, `lowRule` and `lowStays`
+(as in `locked_turns_in_time_share_iff`), by induction: the step at `T` sets them (`sets`), and every
+later step keeps them, in the window by `sets` and outside it by `lowStays` and `lowRule`. It says
+nothing of the level, the use, the need or whether the net's line goes on; the pair's course is total,
+and the kind holds on it after the line has ended too. -/
+theorem share_corrected_stays {Low : A → Prop} {kept : R → Prop} (fA : A → R → A) (hA : A → R → R)
+    (sA : A × Nat → R → A) (hL : A × Nat → R → R) (N K : Nat)
+    (sets : ∀ (p : A × Nat) (g : R), N ≤ p.2 → p.2 < K → Low (sA p g) ∧ kept (hL p g))
+    (lowRule : ∀ a g, Low a → kept (hA a g)) (lowStays : ∀ a g, Low a → kept g → Low (fA a g))
+    (left : A × R × Nat → Nat → Nat) (s : (A × R × Nat) × Nat) {T : Nat}
+    (read : N ≤ (Law.orbit (pair (windowAfterShare fA hA sA hL N K) left) s T).2 ∧
+      (Law.orbit (pair (windowAfterShare fA hA sA hL N K) left) s T).2 < K) :
+    ∀ k, Low (Law.orbit (pair (windowAfterShare fA hA sA hL N K) left) s (T + 1 + k)).1.1 ∧
+      kept (Law.orbit (pair (windowAfterShare fA hA sA hL N K) left) s (T + 1 + k)).1.2.1
+  | 0 => share_turns fA hA sA hL N K sets
+      (Law.orbit (pair (windowAfterShare fA hA sA hL N K) left) s T).1
+      (Law.orbit (pair (windowAfterShare fA hA sA hL N K) left) s T).2 read
+  | k + 1 => share_kept fA hA sA hL N K sets lowRule lowStays
+      (Law.orbit (pair (windowAfterShare fA hA sA hL N K) left) s (T + 1 + k)).1
+      (Law.orbit (pair (windowAfterShare fA hA sA hL N K) left) s (T + 1 + k)).2
+      (share_corrected_stays fA hA sA hL N K sets lowRule lowStays left s read k)
+
+/-- **From the step after the first step the window reads on the course as it was, the pair's course
+has a `Low` share and a `kept` rule.** Under `sets`, `lowRule` and `lowStays`, for any level's step `left` and any
+start `s`: where at no step before `T` the level of the course as it was (the orbit of
+`asItWas (windowAlone fA hA (fun _ => true)) left` from `s`) lies in `[N, K)` (`before`) and at step `T`
+it does (`read`), for every `k` the way at step `T + 1 + k` of the pair's course
+(`pair (windowAfterShare fA hA sA hL N K) left` from `s`) has a `Low` share and a `kept` rule. Up to `T`
+the pair's course is the course as it was (`agrees_until_marked` with `window_share_alone_outside`), so
+its level at `T` is in `[N, K)`; then `share_corrected_stays`. Where the right side of
+`locked_turns_in_time_share_iff` holds at `T`, `before` and `read` are two of its parts; no other
+premise of that law is asked. -/
+theorem share_corrected_on_course {Low : A → Prop} {kept : R → Prop} (fA : A → R → A)
+    (hA : A → R → R) (sA : A × Nat → R → A) (hL : A × Nat → R → R) (N K : Nat)
+    (sets : ∀ (p : A × Nat) (g : R), N ≤ p.2 → p.2 < K → Low (sA p g) ∧ kept (hL p g))
+    (lowRule : ∀ a g, Low a → kept (hA a g)) (lowStays : ∀ a g, Low a → kept g → Low (fA a g))
+    (left : A × R × Nat → Nat → Nat) (s : (A × R × Nat) × Nat) {T : Nat}
+    (before : ∀ j, j < T →
+      ¬ (N ≤ (Law.orbit (asItWas (windowAlone fA hA (fun _ => true)) left) s j).2 ∧
+        (Law.orbit (asItWas (windowAlone fA hA (fun _ => true)) left) s j).2 < K))
+    (read : N ≤ (Law.orbit (asItWas (windowAlone fA hA (fun _ => true)) left) s T).2 ∧
+      (Law.orbit (asItWas (windowAlone fA hA (fun _ => true)) left) s T).2 < K) :
+    ∀ k, Low (Law.orbit (pair (windowAfterShare fA hA sA hL N K) left) s (T + 1 + k)).1.1 ∧
+      kept (Law.orbit (pair (windowAfterShare fA hA sA hL N K) left) s (T + 1 + k)).1.2.1 :=
+  share_corrected_stays fA hA sA hL N K sets lowRule lowStays left s
+    (Eq.subst (motive := fun z : (A × R × Nat) × Nat => N ≤ z.2 ∧ z.2 < K)
+      (agrees_until_marked (window_share_alone_outside fA hA sA hL N K) left s T before).symm read)
 
 end Lock
 
@@ -2497,6 +2925,166 @@ theorem unlocked_goes_on :
      | n + 3 => fun read => absurd
          (Eq.subst (motive := fun s : (Nat × Bool × Nat) × Nat => s.2 < 8) (unlocked_alone_orbit n)
            read.2) (by decide : ¬ 12 < 8)⟩
+
+/-- One use per drawer: the use of a way is its share. -/
+def drawerUse (v : Nat × Bool × Nat) : Nat := v.1
+
+/-- **A lock whose share rises, used one per drawer, from the level twelve: the line ends `Locked`
+within `12 + 1` steps by `locked_ends_rising`, and in seven steps by a computed conjunct; at the start
+no `H` at most the use and `y` with giving short of `H` below `y` put twelve below `H + y`, and at
+step 4 `H = 7` and `y = 6` do (that the old law then applies is argued).** On the lock's own types as in
+`rise_lock_ends` (the share by `riseShare`, the rule read `true` from a share of three up at every step,
+`lockRead`, no level marked, giving `min z (12 - z)`, a need of one), with the use the share
+(`drawerUse`), from the way `(3, true, 0)` at the level twelve. Every premise of `locked_ends_rising`
+holds at `hi = 12`, with its `more` from `count_rises` at `u = 1` and the start's rule favouring (the
+first conjunct: a line that ends within `12 + 1` steps, `Locked`). `Raises` and `ReadsShare` keep the
+rule favouring along the course; the strict rise of the share is `count_rises`'s own premise `rise`,
+met by `riseShare`. The course runs shares three to ten, levels twelve, twelve, twelve, twelve, twelve,
+ten, four, nothing: `((3, true, 0), 12)`, `((4, true, 1), 12)`, `((5, true, 2), 12)`,
+`((6, true, 3), 12)`, `((7, true, 4), 12)`, `((8, true, 5), 10)`, `((9, true, 6), 4)`, and in seven
+steps it reaches `((10, true, 7), 0)`, which conditions nothing, its share ten and rule `true` `Locked`.
+At the start the use of three leaves the level twelve where it is (`RegimeMargin.step giving 3 12 =
+12`), and no `H` at most the start's use and `y` with giving short of `H` below `y` put twelve below
+`H + y` (the conjunct after it). Since `ends_with_net_regime`'s `uses` at step 0 and
+`locked_ends_with_net_regime`'s `draws` at the start itself ask a floor `H` at most three, and both ask
+a start below `H + y` with giving short of `H` below `y`, their premises are not met from this start
+(argued here from that conjunct). From step 4, the way `(7, true, 4)` at the level twelve, they are met
+with `H = 7` and `y = 6`: giving is short of seven below six (`RegimeMargin.Short giving 7 6`), the use
+there is at least seven (`7 ≤ drawerUse (7, true, 4)`), and twelve is below `7 + 6` (the three
+conjuncts before the last); every way whose share is not below seven uses at least seven, since the use
+is the share, and `(7, true)` is `Locked` (argued here, not Lean statements). In Lean the old law's
+premises are excluded at step 0 only, and met at step 4 only by those three conjuncts. That at steps
+1, 2 and 3 (shares four, five and six, the level twelve) no `H` at most the share and `y` with giving
+short of `H` below `y` put twelve below `H + y`, so that the old law first applies at step 4 and the
+four steps before it, held at twelve, are where `locked_ends_rising` reaches what the old law does
+not, is by computation, not a Lean statement. The case stands for no course beyond these numbers. -/
+theorem rise_count_ends :
+    (∃ n t, n ≤ 12 + 1 ∧
+      «迭» (net 1 riseAfter (fun w x => RegimeMargin.step giving (drawerUse w) x)) n
+        ((3, true, 0), 12) t ∧
+      (∀ v, ¬ net 1 riseAfter (fun w x => RegimeMargin.step giving (drawerUse w) x) t v) ∧
+      t.1 = Law.orbit (windowAlone riseShare lockRead (fun _ => true)) (3, true, 0) n ∧
+      RuleCapture.Locked ruleOrder (fun g => g = true) lockRead (t.1.1, t.1.2.1)) ∧
+    Law.orbit (pair riseAfter (fun w x => RegimeMargin.step giving (drawerUse w) x))
+        ((3, true, 0), 12) 1 = ((4, true, 1), 12) ∧
+    Law.orbit (pair riseAfter (fun w x => RegimeMargin.step giving (drawerUse w) x))
+        ((3, true, 0), 12) 2 = ((5, true, 2), 12) ∧
+    Law.orbit (pair riseAfter (fun w x => RegimeMargin.step giving (drawerUse w) x))
+        ((3, true, 0), 12) 3 = ((6, true, 3), 12) ∧
+    Law.orbit (pair riseAfter (fun w x => RegimeMargin.step giving (drawerUse w) x))
+        ((3, true, 0), 12) 4 = ((7, true, 4), 12) ∧
+    Law.orbit (pair riseAfter (fun w x => RegimeMargin.step giving (drawerUse w) x))
+        ((3, true, 0), 12) 5 = ((8, true, 5), 10) ∧
+    Law.orbit (pair riseAfter (fun w x => RegimeMargin.step giving (drawerUse w) x))
+        ((3, true, 0), 12) 6 = ((9, true, 6), 4) ∧
+    «迭» (net 1 riseAfter (fun w x => RegimeMargin.step giving (drawerUse w) x)) 7
+      ((3, true, 0), 12) ((10, true, 7), 0) ∧
+    (∀ v, ¬ net 1 riseAfter (fun w x => RegimeMargin.step giving (drawerUse w) x)
+      ((10, true, 7), 0) v) ∧
+    RegimeMargin.step giving (drawerUse (3, true, 0)) 12 = 12 ∧
+    (∀ H y, H ≤ drawerUse (3, true, 0) → RegimeMargin.Short giving H y → ¬ 12 < H + y) ∧
+    RegimeMargin.Short giving 7 6 ∧ 7 ≤ drawerUse (7, true, 4) ∧ 12 < 7 + 6 ∧
+    RuleCapture.Locked ruleOrder (fun g => g = true) lockRead (10, true) :=
+  ⟨locked_ends_rising (P := shareOrder) (M := ruleOrder) (favours := fun g => g = true)
+      (fA := riseShare) (hA := lockRead) (reads := fun _ => true) (marked := fun _ => False)
+      (after := riseAfter) (giving := giving) (use := drawerUse) (hi := 12)
+      (w := (3, true, 0)) (x := 12)
+      (fun x _ favoured =>
+        Eq.subst (motive := fun b : Bool => x ≤ riseShare x b) favoured.symm (Nat.le_succ x))
+      (fun _ _ _ _ le read => decide_eq_true (Nat.le_trans (of_decide_eq_true read) le))
+      (fun le f => le f) (fun _ _ _ => rfl) (by decide) (fun _ _ none => none) rfl
+      (RegimeMargin.keeps_of_below rfl) (Nat.le_refl 12) ⟨rfl, fun _ => rfl⟩
+      (count_rises (P := shareOrder) (M := ruleOrder) (favours := fun g => g = true)
+        (fA := riseShare) (hA := lockRead) (reads := fun _ => true) (use := drawerUse) (u := 1)
+        (w := (3, true, 0)) (fun le f => le f)
+        (fun a _ favoured =>
+          Eq.subst (motive := fun b : Bool => a < riseShare a b) favoured.symm (Nat.lt_succ_self a))
+        (by decide) (fun v => (Nat.mul_one v.1).symm) rfl),
+   rfl, rfl, rfl, rfl, rfl, rfl,
+   (Law.stepWhile_steps_iff 7).mpr ⟨by decide, rfl⟩,
+   Law.stepWhile_none_iff.mpr (by decide),
+   rfl,
+   fun _ y le short big =>
+     have over : 12 < 3 + y := Nat.lt_of_lt_of_le big (Nat.add_le_add_right le y)
+     have three : 3 < y := Naturals.lt_of_add_lt_add_left (k := 3)
+       (Nat.lt_trans (by decide : 3 + 3 < 12) over)
+     absurd (Nat.lt_of_lt_of_le (short 3 three) le) (by decide : ¬ giving 3 < 3),
+   RegimeMargin.short_of_below rfl, Nat.le_refl 7, by decide,
+   ⟨rfl, fun _ => rfl⟩⟩
+
+/-- The share the window sets: nothing, whatever the share, the level and the rule in force. -/
+def zeroShare (_ : Nat × Nat) (_ : Bool) : Nat := 0
+
+/-- From the way `(3, true, 0)` at the level nine, with the window `[8, 9)` setting the share to
+nothing and the rule to `false`, the configuration at step `n + 2` is `((0, false, n + 2), 6)`, for every
+`n`: at six, outside the window, the rule read off the share nothing is `false`, and the step under the
+use of three leaves six. By induction, as `held_orbit`. Needed by `share_read_goes_on`. -/
+private theorem share_held_orbit : ∀ n,
+    Law.orbit (pair (windowAfterShare lockShare lockRead zeroShare noRule 8 9)
+        (fun w x => RegimeMargin.step giving (lockUse w) x)) ((3, true, 0), 9) (n + 2) =
+      ((0, false, n + 2), 6)
+  | 0 => rfl
+  | n + 1 =>
+    congrArg (pair (windowAfterShare lockShare lockRead zeroShare noRule 8 9)
+      (fun w x => RegimeMargin.step giving (lockUse w) x)) (share_held_orbit n)
+
+/-- **Read at eight, the share set as well as the rule: the line never ends, and from step 2 on the share
+is below three and the rule `false`.** On the lock's own types as in `read_at_eight_ends` (`lockShare`, `lockRead`, `lockUse`,
+giving `min z (12 - z)`, a need of one), on the same band `[8, 9)`, the window now setting the share to
+nothing (`zeroShare`) as well as the rule to `false` (`noRule`), from the way `(3, true, 0)` at the level
+nine. The course is `((3, true, 0), 9)`, `((3, true, 1), 8)`, `((0, false, 2), 6)`, and then
+`((0, false, n + 2), 6)` for every `n` (the third conjunct): eight is read and the step from it, still
+under the use of five, leaves six; at six, outside the window, the rule is read off the share nothing,
+`false`, the use is three and six is left. The line never ends by `locked_turns_in_time_share_iff` at
+`Low a := a < 3`, `kept g := g = false`, `H₁ = y₁ = 5`, `H₂ = y₂ = 3`, `hi = 12` and `T = 1` (the
+fourth conjunct). From step 2 on the share is below three and the rule `false`, by
+`share_corrected_on_course` at the same `T = 1` of the course as it was (the fifth). The start is `Locked`. On this band, with the share
+left by `lockShare` where the window reads, `read_at_eight_ends` ends: six is outside the window, the
+rule is read off the share three again (`true`) and the use is five again. -/
+theorem share_read_goes_on :
+    Law.orbit (pair (windowAfterShare lockShare lockRead zeroShare noRule 8 9)
+        (fun w x => RegimeMargin.step giving (lockUse w) x)) ((3, true, 0), 9) 1 =
+      ((3, true, 1), 8) ∧
+    Law.orbit (pair (windowAfterShare lockShare lockRead zeroShare noRule 8 9)
+        (fun w x => RegimeMargin.step giving (lockUse w) x)) ((3, true, 0), 9) 2 =
+      ((0, false, 2), 6) ∧
+    (∀ n, Law.orbit (pair (windowAfterShare lockShare lockRead zeroShare noRule 8 9)
+        (fun w x => RegimeMargin.step giving (lockUse w) x)) ((3, true, 0), 9) (n + 2) =
+      ((0, false, n + 2), 6)) ∧
+    «不穷» (net 1 (windowAfterShare lockShare lockRead zeroShare noRule 8 9)
+        (fun w x => RegimeMargin.step giving (lockUse w) x)) «一» ((3, true, 0), 9) ∧
+    (∀ k, (Law.orbit (pair (windowAfterShare lockShare lockRead zeroShare noRule 8 9)
+          (fun w x => RegimeMargin.step giving (lockUse w) x)) ((3, true, 0), 9) (1 + 1 + k)).1.1 < 3 ∧
+      (Law.orbit (pair (windowAfterShare lockShare lockRead zeroShare noRule 8 9)
+          (fun w x => RegimeMargin.step giving (lockUse w) x)) ((3, true, 0), 9)
+          (1 + 1 + k)).1.2.1 = false) ∧
+    RuleCapture.Locked ruleOrder (fun g => g = true) lockRead (3, true) :=
+  have sets : ∀ (p : Nat × Nat) (g : Bool), 8 ≤ p.2 → p.2 < 9 →
+      zeroShare p g < 3 ∧ noRule p g = false :=
+    fun _ _ _ _ => ⟨(by decide : 0 < 3), rfl⟩
+  have lowRule : ∀ (a : Nat) (g : Bool), a < 3 → lockRead a g = false :=
+    fun _ _ low => decide_eq_false (Nat.not_le_of_gt low)
+  have lowStays : ∀ (a : Nat) (g : Bool), a < 3 → g = false → lockShare a g < 3 :=
+    fun _ _ low _ => low
+  ⟨rfl, rfl, share_held_orbit,
+   (locked_turns_in_time_share_iff (P := shareOrder) (M := ruleOrder)
+      (favours := fun g => g = true) (fA := lockShare) (hA := lockRead) zeroShare noRule 8 9
+      (fun x _ _ => Nat.le_refl x)
+      (fun _ _ _ _ le read => decide_eq_true (Nat.le_trans (of_decide_eq_true read) le))
+      (fun le f => le f) (Low := fun a => a < 3) (kept := fun g => g = false) sets lowRule lowStays
+      (giving := giving) (use := lockUse) (H₁ := 5) (y₁ := 5) (H₂ := 3) (y₂ := 3) (hi := 12)
+      (need := 1) (w := (3, true, 0)) (x := 9)
+      (fun _ _ k => Eq.subst (motive := fun b => use b = 3) k.symm rfl)
+      rfl (RegimeMargin.short_of_below rfl) (RegimeMargin.meets_of_below rfl)
+      (RegimeMargin.keeps_of_below rfl) (by decide) (by decide) (RegimeMargin.short_of_below rfl)
+      ⟨rfl, fun _ => rfl⟩
+      (fun v _ rule => Eq.subst (motive := fun b => 5 ≤ use b) (rule rfl).symm (Nat.le_refl 5))
+      (by decide) (by decide)).mpr ⟨1, by decide, by decide, by decide, by decide⟩,
+   share_corrected_on_course lockShare lockRead zeroShare noRule 8 9 (Low := fun a => a < 3)
+     (kept := fun g => g = false) sets lowRule lowStays
+     (fun w x => RegimeMargin.step giving (lockUse w) x) ((3, true, 0), 9) (T := 1) (by decide)
+     (by decide),
+   ⟨rfl, fun _ => rfl⟩⟩
 
 end Three
 
