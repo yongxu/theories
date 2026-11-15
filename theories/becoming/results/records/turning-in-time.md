@@ -192,6 +192,7 @@ Reading (AI-written, from the home section's reading and the study folder's NEAR
 | statement | [02-MAP.md](../../chapters/02-MAP.md) | — |
 | provenance | [2026-11-12-where-we-are-and-the-loop.md](../../../../sources/15-codex-theory-conversations/2026-11-12-where-we-are-and-the-loop.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261115T033911.021704Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261115T153402.052649Z/verification.json) | — |
 
 Aliases: `turning in time`, `a line that ends where the net ends, or while the net goes on`, `Becoming.TurningInTime.turns_in_time_iff`, `Becoming.TurningInTime.unending_iff_first_marked`
 
