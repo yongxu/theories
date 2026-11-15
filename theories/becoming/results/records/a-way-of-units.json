@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-13T13:31:07+00:00",
+  "reviewed_at_utc": "2026-11-15T23:02:13+00:00",
   "statement": {
     "en": "A way is the units present, each going on while the level meets its need and taking its use. Under the regime's premises along the course, its line never ends exactly where it comes to a way that is not empty, whose units' needs are all met at a level from which what they take together holds.",
     "zh": "一个方式就是在场的各单元，各在水位满足其所需时继续，并各取其用量。在沿途的体制前提之下，这条线永不终止，当且仅当它走到一个非空的方式，其各单元所需皆被满足，且水位守得住它们合取之量。"
@@ -47,8 +47,8 @@
       ]
     },
     {
-      "en": "unending_iff_holds: with every unit of w needing something, FromNothing, x ≤ hi, and Regime giving y hi at the way of course k for every k with Goes at every step j ≤ k: the line from (w, x) in net giving never ends exactly where at some k, Goes at every step before k, Holds y: the way not empty, every need met, taken + y (taken) at most the level.",
-      "zh": "unending_iff_holds：w 各单元所需为正，无中不生有，x ≤ hi，且凡 j ≤ k 时都有 Goes 的 k，course k 处的方式满足 Regime giving y hi。则从 (w, x) 起的线永不终止，当且仅当有某个 k，此前各步都有 Goes，而在 k 处 Holds y：方式非空，各所需都被满足，水位不低于所取之量加其 y。",
+      "en": "unending_iff_holds: with every unit of w needing something, FromNothing, x ≤ hi, and Regime giving y hi at the way of course k for every k with Goes at every step j ≤ k: the line from (w, x) in net giving never ends exactly where at some k, Goes at every step before k, Holds y: the way not empty, every need met, taken + y (taken) at most the level. It is the case kids u = [u] of LineOnAStock.unending_iff_holds.",
+      "zh": "unending_iff_holds：w 各单元所需为正，无中不生有，x ≤ hi，且凡 j ≤ k 时都有 Goes 的 k，course k 处的方式满足 Regime giving y hi。则从 (w, x) 起的线永不终止，当且仅当有某个 k，此前各步都有 Goes，而在 k 处 Holds y：方式非空，各所需都被满足，水位不低于所取之量加其 y。即 LineOnAStock.unending_iff_holds 于 kids u = [u]。",
       "declarations": [
         "Becoming.WayOfUnits.Holds",
         "Becoming.WayOfUnits.Regime",
@@ -159,6 +159,34 @@
         "Becoming.WayOfUnits.GivenFromNothing.greater_need_fails",
         "Becoming.WayOfUnits.GivenFromNothing.more_use_fails"
       ]
+    },
+    {
+      "en": "At kids u = [u], each unit leaving itself, LineOnAStock's way after a step, what a way takes, step, course and net are this module's (after_unit, taken_unit, step_unit, course_unit, net_unit, unending_unit), as are Holds and Regime (holds_unit, regime_unit); unending_iff_holds, fixed_while, unending_taken_below, course_fixed, step_falls and the decision of Goes are derived from LineOnAStock's laws there.",
+      "zh": "在 kids u = [u] 时，LineOnAStock 一步之后的方式、所取、步、进程与网即本模块的（after_unit、taken_unit、step_unit、course_unit、net_unit、unending_unit），Holds 与 Regime 亦然（holds_unit、regime_unit）；unending_iff_holds、fixed_while、unending_taken_below、course_fixed、step_falls 与 Goes 的判定由其律推出。",
+      "declarations": [
+        "Becoming.WayOfUnits.cond_single",
+        "Becoming.WayOfUnits.after_unit",
+        "Becoming.WayOfUnits.taken_unit",
+        "Becoming.WayOfUnits.step_unit",
+        "Becoming.WayOfUnits.orbit_congr",
+        "Becoming.WayOfUnits.course_unit",
+        "Becoming.WayOfUnits.net_unit",
+        "Becoming.WayOfUnits.unending_unit",
+        "Becoming.WayOfUnits.allKids_unit",
+        "Becoming.WayOfUnits.generation_unit",
+        "Becoming.WayOfUnits.needing_unit",
+        "Becoming.WayOfUnits.holds_unit",
+        "Becoming.WayOfUnits.regime_unit",
+        "Becoming.WayOfUnits.along_unit",
+        "Becoming.WayOfUnits.down_unit"
+      ]
+    },
+    {
+      "en": "unending_taken_below: on a course that never ends, with nothing given from nothing and every unit of the start needing something, what the way takes is below the level at every step; the case kids u = [u] of LineOnAStock.unending_taken_below.",
+      "zh": "unending_taken_below：在永不终止的进程上，无中不生有、起点各单元都有所需时，方式所取在每一步都低于水位；即 LineOnAStock.unending_taken_below 在 kids u = [u] 时的情形。",
+      "declarations": [
+        "Becoming.WayOfUnits.unending_taken_below"
+      ]
     }
   ],
   "hypotheses": [
@@ -245,7 +273,7 @@
     "conditional-not-universal"
   ],
   "validation_scope": {
-    "en": "Pure core, axiom reports empty (85 declarations, 64 theorems); a leaf, in the Lean's second layer only through its one import, TurningInTime. Compositions of landed theorems (RegimeMargin's point of no return and holding, turns_in_time_iff, the cut step's line) with an induction on the way's length; the witnesses computed. AI-written; a first design that claimed the marks derived was cut back, and the design, the Lean and the landing were each read by other AI agents set to refute them. Their simulations are not in Lean. No person's review of it is recorded yet."
+    "en": "Pure core, axiom reports empty (scratch build of 16 November: 88 declarations, 68 theorems); in the Lean's second layer through its two imports, TurningInTime and LineOnAStock. Six declarations are derived from LineOnAStock's laws at kids u = [u]; the two-unit laws are compositions of landed theorems (RegimeMargin's point of no return and holding, turns_in_time_iff, the cut step's line); the witnesses computed. AI-written; the design, the Lean and the landing were each read by other AI agents set to refute them. Their simulations are not in Lean. No person's review of it is recorded yet."
   },
   "next_delta": {
     "en": "State the comparison for any number of units; a way that builds units; join ReadingsSpread's overdrawn focal line and ReadOffInTime's gauges to the units by theorem; a test on a trained system, held."
@@ -294,7 +322,7 @@
           "en": "The units' net, the pair's step cut where no unit goes on; the carrier's net."
         },
         "conditions": {
-          "en": "Whether some unit goes on, decided by anyGoes."
+          "en": "Whether some unit goes on, decided by goesDecidable, LineOnAStock.goesDecidable at kids u = [u]."
         },
         "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean"
       }
@@ -333,25 +361,6 @@
         },
         "conditions": {
           "en": "None."
-        },
-        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean"
-      }
-    },
-    {
-      "id": "when-a-selection-read-off-continuation-reads",
-      "relation": "formal-reuse",
-      "detail": {
-        "en": "Reuses the first step at which a decided predicate fails (first_of_decided)."
-      },
-      "interface": {
-        "output": {
-          "en": "Of a decided predicate on the first steps, either it holds at every one or there is a first step where it fails."
-        },
-        "input": {
-          "en": "Whether every unit's need is met along a way's own course; whether the course as it was is at or above m'."
-        },
-        "conditions": {
-          "en": "The predicate decided, on whole numbers and finite lists."
         },
         "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean"
       }
@@ -409,6 +418,25 @@
         },
         "conditions": {
           "en": "None."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean"
+      }
+    },
+    {
+      "id": "a-line-on-a-stock",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Rests on the line on a stock at kids u = [u], through the bridge (after_unit, taken_unit, step_unit, course_unit, net_unit, unending_unit, holds_unit, regime_unit): unending_iff_holds (by LineOnAStock.unending_iff_holds), fixed_while (course_generation), unending_taken_below, course_fixed, step_falls (step_lowers) and the decision of Goes (goesDecidable) are derived from its laws. unending_above, greater_need and more_use_on_first rest on it through step_falls, takes_nothing_iff_alone and takes_nothing_ends through fixed_while; ends_while_net_goes and two_units_iff use no law of it."
+      },
+      "interface": {
+        "output": {
+          "en": "Where each unit's kids take what it takes, every unit has kids, kids need no more than their parent, every descendant needs something, nothing is given from nothing, the start is at most hi and the regime holds along the course, the net never ends exactly where, some need met at every step before, its course comes to a configuration that holds."
+        },
+        "input": {
+          "en": "Units of two numbers each leaving itself where its need is met: the way after a step is the units that go on."
+        },
+        "conditions": {
+          "en": "At kids u = [u] each unit's one kid takes what it takes and every unit has a kid; kids need no more than their parent (down_unit); every unit of the start needing something gives Needing (needing_unit); the regime along this course is the regime along that one (along_unit); course, net, Holds and Regime agree (course_unit, net_unit, unending_unit, holds_unit, regime_unit). The statement of unending_iff_holds is unchanged."
         },
         "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean"
       }
@@ -478,7 +506,23 @@
         "Becoming.WayOfUnits.GivenFromNothing.giving",
         "Becoming.WayOfUnits.GivenFromNothing.regime",
         "Becoming.WayOfUnits.GivenFromNothing.greater_need_fails",
-        "Becoming.WayOfUnits.GivenFromNothing.more_use_fails"
+        "Becoming.WayOfUnits.GivenFromNothing.more_use_fails",
+        "Becoming.WayOfUnits.cond_single",
+        "Becoming.WayOfUnits.after_unit",
+        "Becoming.WayOfUnits.taken_unit",
+        "Becoming.WayOfUnits.step_unit",
+        "Becoming.WayOfUnits.orbit_congr",
+        "Becoming.WayOfUnits.course_unit",
+        "Becoming.WayOfUnits.net_unit",
+        "Becoming.WayOfUnits.unending_unit",
+        "Becoming.WayOfUnits.allKids_unit",
+        "Becoming.WayOfUnits.generation_unit",
+        "Becoming.WayOfUnits.needing_unit",
+        "Becoming.WayOfUnits.holds_unit",
+        "Becoming.WayOfUnits.regime_unit",
+        "Becoming.WayOfUnits.along_unit",
+        "Becoming.WayOfUnits.down_unit",
+        "Becoming.WayOfUnits.unending_taken_below"
       ],
       "sha256": "98e38ed2c45c835b4f20626a81e000b81a4c511bdc3003aa48623bb32950c347"
     },
@@ -548,6 +592,9 @@
     },
     {
       "en": "13 November 2026, board item WU2: greater_need and more_use_on_first re-proved outside two_units_iff with fewer premises, on the new theorem unending_above; no other statement changed. A reader's computed cases for each premise kept are in the study folder (readers/t1-trim.md)."
+    },
+    {
+      "en": "16 November 2026, board row DJ, with the new record a-line-on-a-stock: the module now imports Becoming.LineOnAStock, and six declarations (unending_iff_holds, its statement unchanged, fixed_while, the new unending_taken_below, course_fixed, step_falls and the decision of Goes) are derived from that module's laws at kids u = [u], through fifteen new declarations at that case. Thirteen helpers that no proof used and no record named were removed (goes_false_of_lt, mem_of_ne_nil, goes_of_holds, length_keep_le, length_keep_lt, met_or_unmet, after_eq_iff, mem_course_iff, anyGoes, anyGoes_iff, falls, course_within, reaches_holds): their general forms are in LineOnAStock, and whether a unit is present along a course is said there by descent. The dependency on when-a-selection-read-off-continuation-reads is removed, since first_of_decided is no longer used here; the condition of the cut step, which named anyGoes, is re-said."
     }
   ]
 }

@@ -1,0 +1,1010 @@
+{
+  "schema_version": 2,
+  "id": "a-line-on-a-stock",
+  "title": {
+    "en": "A line on a stock: units that leave offspring on a renewed level",
+    "zh": "存量上的一条线：在更新的水位上留下后代的单元"
+  },
+  "kind": "theorem",
+  "status": "recorded-checked",
+  "family": "F01",
+  "reviewed_at_utc": "FILLED-BY-KIT",
+  "statement": {
+    "en": "A way of units reads the level only by the needs it meets. Capped at hi, a way whose offspring take more meets an unmet need within hi + 1 steps, till then plain descent, the level then below a start need if they need no more; if they take the same, the net never ends exactly where its course holds.",
+    "zh": "由单元组成的方式只凭哪些所需被满足来读取水位。水位以 hi 为上限时，后代所取更多的方式在 hi + 1 步之内遇到未被满足的所需，此前只是传承的世代；后代所需不多于亲代时，那时的水位低于起点满足过的某个所需；后代所取相等时，网永不终止，当且仅当其进程走到守得住之处。"
+  },
+  "claim": {
+    "en": "A unit has a need, a use and the units it leaves; after a step at a level each unit of the way leaves its kids where the level meets its need and nothing where it does not, and the level is the regime's step under what the units present take together. With no premise on the stock, two levels that meet the same needs among a way's units leave the same next way, exactly so where every unit has a kid, and two courses from one way whose levels meet the same needs step by step have the same ways. With nothing given from nothing, the step under no use keeping the level within hi, each unit's kids taking more than it, every descendant needing something and a start not empty, at most hi, with every need met, a first unmet need comes within hi + 1 steps, the way until then the generation of descent; with kids needing no more than their parent the level there is below a need the start met, and with positive needs the net ends. Where each unit's kids take exactly what it takes, under the regime along the course, the net never ends exactly where its course comes to a configuration that holds.",
+    "zh": "单元有所需、用量和它留下的单元；在一个水位上走一步，方式中水位满足其所需的单元留下后代，其余什么也不留，水位是在场单元合取之量下的体制之步。对存量不设前提：满足方式中各单元相同所需的两个水位留下相同的下一个方式，每个单元都有后代时恰是如此；从同一方式出发、水位逐步满足相同所需的两个进程方式相同。无中不生有，不用时的一步把水位保持在 hi 以内，每个单元的后代所取多于它，每个后代都有所需，起点非空、不高于 hi 且所需皆被满足：在 hi + 1 步之内出现第一个未被满足的所需，此前方式就是传承的世代；后代所需不多于亲代时那里的水位低于起点满足过的某个所需，所需皆为正时网终止。每个单元的后代所取恰等于它时，在沿途的体制之下，网永不终止，当且仅当其进程走到一个成立的构形。"
+  },
+  "laws": [
+    {
+      "en": "A unit has a need, a use and the units it leaves (kids); a way is a list of units. after w x: each unit of w in turn leaves its kids where x meets its need and nothing where it does not; taken w is the total of the uses of the units present; left is RegimeMargin.step giving (taken w) x. Goes: some unit's need is met; net is Law.stepWhile Goes of TurningInTime.pair after left; course is the pair's orbit.",
+      "zh": "单元有所需、用量与所留单元（kids）；方式是单元的列表。after w x：w 各单元在 x 满足其所需时留下后代，否则不留；taken w 是用量之和；left 即 RegimeMargin.step giving (taken w) x。Goes：有所需被满足；net 是 pair after left 上的 Law.stepWhile Goes；course 是其轨道。",
+      "declarations": [
+        "Becoming.LineOnAStock.after",
+        "Becoming.LineOnAStock.taken",
+        "Becoming.LineOnAStock.left",
+        "Becoming.LineOnAStock.Goes",
+        "Becoming.LineOnAStock.step",
+        "Becoming.LineOnAStock.net",
+        "Becoming.LineOnAStock.course",
+        "Becoming.LineOnAStock.anyMet",
+        "Becoming.LineOnAStock.anyMet_iff",
+        "Becoming.LineOnAStock.goesDecidable",
+        "Becoming.LineOnAStock.after_flatMap",
+        "Becoming.LineOnAStock.mem_after_iff"
+      ]
+    },
+    {
+      "en": "allKids w: the kids of every unit of w, in order, which is the way after a step at which every need is met (after_of_met); generation j w: allKids taken j times, with no giving, use or level in it; Needing w: every unit of every generation of w needs something.",
+      "zh": "allKids w：w 各单元的后代依次排列，即每个所需都被满足的一步之后的方式（after_of_met）；generation j w：allKids 连取 j 次，其中没有给还、用量或水位；Needing w：w 每一代的每个单元都有所需。",
+      "declarations": [
+        "Becoming.LineOnAStock.allKids",
+        "Becoming.LineOnAStock.generation",
+        "Becoming.LineOnAStock.Needing",
+        "Becoming.LineOnAStock.after_of_met",
+        "Becoming.LineOnAStock.allKids_flatMap",
+        "Becoming.LineOnAStock.mem_allKids_iff",
+        "Becoming.LineOnAStock.generation_orbit"
+      ]
+    },
+    {
+      "en": "A unit of the way at step k of any course is a unit of generation k w (mem_generation). Where every unit has kids, every generation of a way with a member has one (generation_mem); with kids needing no more than their parent, every unit of every generation of w needs at most what some unit of w needs (generation_ancestor, generation_below).",
+      "zh": "任何进程第 k 步方式中的单元都属于 generation k w（mem_generation）。每个单元都有后代时，有成员之方式的每一代都有成员（generation_mem）；后代所需不多于亲代时，w 每一代的每个单元所需不超过 w 中某单元所需（generation_ancestor、generation_below）。",
+      "declarations": [
+        "Becoming.LineOnAStock.mem_generation",
+        "Becoming.LineOnAStock.generation_mem",
+        "Becoming.LineOnAStock.generation_below",
+        "Becoming.LineOnAStock.generation_ancestor"
+      ]
+    },
+    {
+      "en": "With no premise on the stock, under any need and kids: where x and x' meet the same needs among the units of w, the way after a step at x is the way after a step at x' (after_alike); under any giving and use, two ways that take the same leave the same level after a step (left_of_taken); the way after a step of w₁ ++ w₂ is the way after the step of w₁, then that of w₂ (after_append).",
+      "zh": "对存量不设前提，在任何所需与后代下：x 与 x' 若满足 w 中各单元的相同所需，在 x 一步之后的方式就是在 x' 一步之后的方式（after_alike）；在任何给还与用量下，所取相同的两个方式一步之后留下相同的水位（left_of_taken）；w₁ ++ w₂ 一步之后的方式是 w₁ 一步之后的方式接上 w₂ 的（after_append）。",
+      "declarations": [
+        "Becoming.LineOnAStock.after_alike",
+        "Becoming.LineOnAStock.left_of_taken",
+        "Becoming.LineOnAStock.after_append",
+        "Becoming.LineOnAStock.decide_le_congr"
+      ]
+    },
+    {
+      "en": "Alike w x x': the way after a step at x is the way after a step at x'. Levels meeting the same needs in w are alike to it (alike_of_met). Where every unit of w has a kid, two levels are alike to w exactly where they meet the same needs among its units (alike_iff). Without that premise not: four and six are alike to [d, b], d needing five and leaving nothing, and do not meet the same needs (AlikeFiner.alike_not_met).",
+      "zh": "Alike w x x'：在 x 一步之后的方式就是在 x' 一步之后的方式。满足 w 中相同所需的水位对 w 相似（alike_of_met）。w 的每个单元都有后代时，两个水位对 w 相似，当且仅当它们满足其单元的相同所需（alike_iff）。否则不然：四与六对 [d, b] 相似（d 所需五、无后代），所满足者却不同（AlikeFiner.alike_not_met）。",
+      "declarations": [
+        "Becoming.LineOnAStock.Alike",
+        "Becoming.LineOnAStock.alike_of_met",
+        "Becoming.LineOnAStock.alike_iff",
+        "Becoming.LineOnAStock.met_of_alike_le",
+        "Becoming.LineOnAStock.block_le",
+        "Becoming.LineOnAStock.block_lt",
+        "Becoming.LineOnAStock.after_length_le",
+        "Becoming.LineOnAStock.after_length_lt",
+        "Becoming.LineOnAStock.AlikeFiner.Kind",
+        "Becoming.LineOnAStock.AlikeFiner.need",
+        "Becoming.LineOnAStock.AlikeFiner.kids",
+        "Becoming.LineOnAStock.AlikeFiner.alike_not_met"
+      ]
+    },
+    {
+      "en": "Every need in the way after a step is the need of a kid of a unit of the way whose need the level met (need_in_after), with no premise. With kids needing what their parent needs and every unit leaving a kid, a need is in the way after a step at x exactly where it is the need of a unit of w and at most x (needs_after_iff); where every need of w is met at x, the needs after the step are those of w (needs_kept).",
+      "zh": "一步之后的方式中的每个所需，都是水位满足了其所需的某个单元之后代的所需（need_in_after），无前提。后代所需同于亲代、每个单元都留下后代时，一个所需出现在 x 处一步之后的方式中，当且仅当它是 w 中某单元的所需且不超过 x（needs_after_iff）；w 的所需在 x 处都被满足时，一步之后的所需就是 w 的（needs_kept）。",
+      "declarations": [
+        "Becoming.LineOnAStock.need_in_after",
+        "Becoming.LineOnAStock.needs_after_iff",
+        "Becoming.LineOnAStock.needs_kept"
+      ]
+    },
+    {
+      "en": "ways_alike: for one way w under one need and kids, with two givings, two uses and two start levels, if at every step j < n the two levels meet the same needs among the units of the first course's way at j, the two courses have the same way at every step up to n. Read as SelectionTerm.Generations (generations, family_eq), the number born at every step before n is the same in both (born_alike, through born_eq_length).",
+      "zh": "ways_alike：同一方式 w、所需与后代，两种给还、用量与起点水位：若每一步 j < n 两水位满足第一个进程在 j 处方式中各单元的相同所需，则直到 n 每一步方式相同。读作 SelectionTerm.Generations（generations、family_eq），n 之前每步所生数目相同（born_alike，经 born_eq_length）。",
+      "declarations": [
+        "Becoming.LineOnAStock.ways_alike",
+        "Becoming.LineOnAStock.generations",
+        "Becoming.LineOnAStock.family_eq",
+        "Becoming.LineOnAStock.born_eq_length",
+        "Becoming.LineOnAStock.born_alike"
+      ]
+    },
+    {
+      "en": "rise: for any decidable S, no closure asked, whose units' kids with S take more than the unit, where every unit of w with S has its need met at x, what S takes of the way after the step is at least what it takes of w and the number of its units in w. Where the kids with S take at least what the unit takes, what S takes does not fall at such a step (draw_holds).",
+      "zh": "rise：任何可判定的 S（不要求封闭），其单元带 S 的后代所取多于该单元：若 w 中带 S 的单元在 x 处所需都被满足，S 在一步之后的方式中所取，不少于它在 w 中所取加上它在 w 中的单元数。带 S 的后代所取不少于该单元时，S 所取在这样的一步不减少（draw_holds）。",
+      "declarations": [
+        "Becoming.LineOnAStock.rise",
+        "Becoming.LineOnAStock.draw_rises",
+        "Becoming.LineOnAStock.draw_holds",
+        "Becoming.LineOnAStock.lineTake",
+        "Becoming.LineOnAStock.lineCount",
+        "Becoming.LineOnAStock.lineTake_le_taken",
+        "Becoming.LineOnAStock.lineTake_append",
+        "Becoming.LineOnAStock.lineCount_pos",
+        "Becoming.LineOnAStock.line_or_none",
+        "Becoming.LineOnAStock.lineTake_true"
+      ]
+    },
+    {
+      "en": "With no unit outside a line S leaving a unit of S (closed), under any giving and use: a unit of S in the way after a step is a kid of a unit of S whose need was met (line_from_line); with no unit of S in the start's way, none is in the way at any step (never_in, by SelectionTerm.Generations.kept_of_descent); with none at step k, none at any later step (gone_from; gone_after where none of S is met at k).",
+      "zh": "线外无单元留下线 S 的单元（closed）时，任何给还与用量下：一步后方式中 S 的单元是 S 中所需被满足者的后代（line_from_line）；起点无 S 的单元则每步皆无（never_in，由 kept_of_descent）；第 k 步无则此后皆无（gone_from；第 k 步 S 无一被满足见 gone_after）。",
+      "declarations": [
+        "Becoming.LineOnAStock.line_from_line",
+        "Becoming.LineOnAStock.none_after",
+        "Becoming.LineOnAStock.never_in",
+        "Becoming.LineOnAStock.gone_from",
+        "Becoming.LineOnAStock.gone_after"
+      ]
+    },
+    {
+      "en": "need_unmet: with nothing given from nothing, the step under no use keeping levels up to hi within hi, each unit's kids taking more than it (grows), every descendant of w needing something, w not empty, a start at most hi meeting every need: at a step n from 1 to hi + 1 some need is unmet, all met before, and the way at each step j up to n is generation j w. Not concluded: that the level fell, or that the net ends.",
+      "zh": "need_unmet：无中不生有，不用时的一步把不高于 hi 的水位保持在 hi 以内，每个单元的后代合取多于它（grows），w 的每个后代都有所需，w 非空，起点不高于 hi 且所需皆被满足：第 1 到 hi + 1 步间某步 n 有所需未被满足，此前皆被满足，直到 n 每步 j 的方式是 generation j w。并未推出水位已降或网终止。",
+      "declarations": [
+        "Becoming.LineOnAStock.need_unmet",
+        "Becoming.LineOnAStock.course_asItWas",
+        "Becoming.LineOnAStock.way_while_met",
+        "Becoming.LineOnAStock.kids_of_grows",
+        "Becoming.LineOnAStock.allKids_rises",
+        "Becoming.LineOnAStock.generations_rise"
+      ]
+    },
+    {
+      "en": "falls_to_unmet: with need_unmet's premises and kids needing no more than their parent (down), at that step n some unit of w whose need the start met needs more than the level, and the level is below the start level. Without down not (KidHigherNeed.all_but_down). That this draws down what it rests on while nothing in it yet differs is an AI reading.",
+      "zh": "falls_to_unmet：need_unmet 的前提之外再有后代所需不多于亲代（down），则在那一步 n，w 中某个起点满足过其所需的单元所需高于水位，水位也低于起点水位。没有 down 则不然（KidHigherNeed.all_but_down）。把这读作“在其中尚无差别时耗尽它所凭依的”，是 AI 的读法。",
+      "declarations": [
+        "Becoming.LineOnAStock.falls_to_unmet"
+      ]
+    },
+    {
+      "en": "way_ends: with nothing given from nothing, the step under no use keeping every level up to hi within hi, the start at most hi, and, of every unit, its kids taking more than it, a positive need and kids needing no more than it: at some step no need is met, and the net does not go on for ever. No bound on the step.",
+      "zh": "way_ends：无中不生有，不用时的一步把不高于 hi 的水位保持在 hi 以内，起点不高于 hi，且每个单元的后代所取多于它、所需为正、后代所需不多于它：某一步无所需被满足，网并非永续。不给出步数的上界。",
+      "declarations": [
+        "Becoming.LineOnAStock.way_ends"
+      ]
+    },
+    {
+      "en": "line_ends: with nothing given from nothing, the same cap and a start at most hi, for a line S no unit outside which leaves a unit of it, whose units' kids in S take more than the unit, need something and need no more than it: from some step no unit of S is in the way. No bound on the step; by strong induction on a bound on the line's needs (ends_all).",
+      "zh": "line_ends：无中不生有，同一上限，起点不高于 hi，线 S 之外没有单元留下 S 的单元，S 的单元在 S 中的后代所取多于该单元、皆有所需、所需不多于它：从某一步起方式中没有 S 的单元。不给出步数上界；对线所需的上界作强归纳（ends_all）。",
+      "declarations": [
+        "Becoming.LineOnAStock.line_ends",
+        "Becoming.LineOnAStock.ends_all",
+        "Becoming.LineOnAStock.ends_high",
+        "Becoming.LineOnAStock.ends_low",
+        "Becoming.LineOnAStock.Ends",
+        "Becoming.LineOnAStock.Below",
+        "Becoming.LineOnAStock.NoneMet",
+        "Becoming.LineOnAStock.below_after",
+        "Becoming.LineOnAStock.below_keeps",
+        "Becoming.LineOnAStock.none_shift"
+      ]
+    },
+    {
+      "en": "one_need_ends: where every unit needs the same positive amount, each unit's kids take more than it, nothing is given from nothing and the step under no use keeps every level up to hi within hi, the net from any start at most hi reaches within hi + 1 steps a configuration with no next, its way the generation of w at that step. No premise that w is not empty or met at the start.",
+      "zh": "one_need_ends：每个单元所需都是同一个正数，每个单元的后代所取多于它，无中不生有，不用时的一步把不高于 hi 的水位保持在 hi 以内：从任何不高于 hi 的起点，网在 hi + 1 步之内到达没有后继的构形，其方式是 w 在那一步的世代。不要求 w 非空或起点满足所需。",
+      "declarations": [
+        "Becoming.LineOnAStock.one_need_ends"
+      ]
+    },
+    {
+      "en": "fall: for a closed line S of one need m whose units' kids in S take at least what the unit takes, with giving 0 below m and what S takes at the start more than the giving at every level, from some step no unit of S is in the way; no bound on the step, no cap and no nothing from nothing asked. step_overdrawn: a step under a draw every giving falls short of leaves less than the level, or what is given at nothing.",
+      "zh": "fall：所需皆为 m 的封闭线 S，其单元在 S 中的后代所取不少于该单元，giving 0 低于 m，起点 S 所取多于任何水位上的给还：从某一步起方式中没有 S 的单元，不给出步数上界。不要求上限，也不要求无中不生有。step_overdrawn：在每种给还都不足的取用下，一步留下的少于原水位，或为零处所给。",
+      "declarations": [
+        "Becoming.LineOnAStock.fall",
+        "Becoming.LineOnAStock.fall_from",
+        "Becoming.LineOnAStock.fall_low",
+        "Becoming.LineOnAStock.step_overdrawn",
+        "Becoming.LineOnAStock.step_zero"
+      ]
+    },
+    {
+      "en": "step_lowers: with giving short of H below y, nothing given from nothing, a draw D at least H and a level z below H + y, the step under D leaves nothing or less than z; it is TurningInTime.held_above contraposed, and WayOfUnits.step_falls is this.",
+      "zh": "step_lowers：给还在 y 以下不足 H，无中不生有，取用 D 不少于 H，水位 z 低于 H + y：D 之下的一步留下零或少于 z；它是 TurningInTime.held_above 的逆否，WayOfUnits.step_falls 即此。",
+      "declarations": [
+        "Becoming.LineOnAStock.step_lowers"
+      ]
+    },
+    {
+      "en": "Holds need use y s: the way of s is not empty, every need in it is met at the level, and the level is at or above what the way takes and y of that. Regime giving use y hi w: giving short of what w takes below y of it, meeting it from there up to hi, and the step under it keeping the level within hi. WayOfUnits.Holds and WayOfUnits.Regime for any units.",
+      "zh": "Holds need use y s：s 的方式非空，其中所需在水位处皆被满足，且水位不低于方式所取之量加其 y。Regime giving use y hi w：给还在 w 所取之 y 以下不足其所取，自此至 hi 足以抵之，其下的一步把水位保持在 hi 以内。即任意单元的 WayOfUnits.Holds 与 WayOfUnits.Regime。",
+      "declarations": [
+        "Becoming.LineOnAStock.Holds",
+        "Becoming.LineOnAStock.Regime"
+      ]
+    },
+    {
+      "en": "unending_iff_holds: with each unit's kids taking what it takes (even), every unit having kids, kids needing no more than their parent, every descendant of w needing something, nothing given from nothing, the start at most hi, and Regime at every way the course reaches, some need met there and before: the net never ends exactly where, some need met at each step before, the course comes to a configuration that holds.",
+      "zh": "unending_iff_holds：每个单元的后代所取恰等于它（even），每个单元都有后代，后代所需不多于亲代，w 的每个后代都有所需，无中不生有，起点不高于 hi，且凡进程所到、此处及此前每步都有所需被满足的方式都满足 Regime giving use y hi：网永不终止，当且仅当进程（此前每步都有所需被满足）走到一个成立的构形。",
+      "declarations": [
+        "Becoming.LineOnAStock.unending_iff_holds",
+        "Becoming.LineOnAStock.reaches_holds",
+        "Becoming.LineOnAStock.reaches_from",
+        "Becoming.LineOnAStock.within_along",
+        "Becoming.LineOnAStock.taken_allKids",
+        "Becoming.LineOnAStock.taken_generation",
+        "Becoming.LineOnAStock.course_generation"
+      ]
+    },
+    {
+      "en": "taken_below: with nothing given from nothing and every descendant of the start's way needing something, under any kids, where some need is met at step n + 1, what the way takes at step n is below the level there; where the net never ends, so at every step (unending_taken_below, of which WayOfUnits.unending_taken_below is the case kids u = [u]).",
+      "zh": "taken_below：无中不生有，起点方式的每个后代都有所需，在任何后代之下：第 n + 1 步若有所需被满足，第 n 步方式所取低于那里的水位；网永不终止时每一步都如此（unending_taken_below，WayOfUnits.unending_taken_below 是其 kids u = [u] 的情形）。",
+      "declarations": [
+        "Becoming.LineOnAStock.taken_below",
+        "Becoming.LineOnAStock.unending_taken_below"
+      ]
+    },
+    {
+      "en": "account: under any need, kids, giving and use, if at every step before N what the way takes is at most the level, the level at step N plus everything taken at steps 0 to N − 1 is the start level plus everything given at those steps (Prelude's balance_over_stretch_on). With nothing given from nothing and every descendant needing something, on a net that never ends it holds for every N (account_unending).",
+      "zh": "account：在任何所需、后代、给还与用量下，从任何起点：若 N 之前每一步方式所取都不超过水位，第 N 步的水位加上第 0 至 N − 1 步所取的总和，等于起点水位加上那些步所给的总和（Prelude 的 balance_over_stretch_on）。无中不生有、每个后代都有所需时，在永不终止的网上对每个 N 成立（account_unending）。",
+      "declarations": [
+        "Becoming.LineOnAStock.account",
+        "Becoming.LineOnAStock.account_unending"
+      ]
+    },
+    {
+      "en": "A configuration the step leaves as it is stays so (course_fixed, of which WayOfUnits.course_fixed is the case); a course that comes to such a configuration, some need met there and at every step before, never ends (unending_of_fixed).",
+      "zh": "一步不改变的构形就一直如此（course_fixed，WayOfUnits.course_fixed 是其情形）；进程走到这样的构形，且此处及此前每步都有所需被满足，则永不终止（unending_of_fixed）。",
+      "declarations": [
+        "Becoming.LineOnAStock.course_fixed",
+        "Becoming.LineOnAStock.unending_of_fixed"
+      ]
+    },
+    {
+      "en": "takes_nothing: for a decidable Z whose units take nothing and whose units' kids are all of Z, under any need, kids and giving, at every step the course from w without its units of Z (strip) and the course from w have the same level, and the same way once Z is taken out. Whether the net ends can differ: with nothing given, from ([A, C], 5) it never ends, from ([A], 5) it ends (NothingTakenEnds.ending_differs).",
+      "zh": "takes_nothing：可判定的 Z，其单元什么也不取、后代都属于 Z：任何所需、后代与给还下，每一步，从除去 Z 单元的方式（strip）出发与从 w 出发的进程水位相同，除去 Z 后方式也相同。网是否终止可以不同：无给还时，从 ([A, C], 5) 起永不终止，从 ([A], 5) 起一步后终止（NothingTakenEnds.ending_differs）。",
+      "declarations": [
+        "Becoming.LineOnAStock.takes_nothing",
+        "Becoming.LineOnAStock.strip",
+        "Becoming.LineOnAStock.strip_pos",
+        "Becoming.LineOnAStock.strip_neg",
+        "Becoming.LineOnAStock.strip_append",
+        "Becoming.LineOnAStock.strip_all",
+        "Becoming.LineOnAStock.strip_strip",
+        "Becoming.LineOnAStock.taken_strip",
+        "Becoming.LineOnAStock.strip_after",
+        "Becoming.LineOnAStock.strip_course",
+        "Becoming.LineOnAStock.nothingGiven",
+        "Becoming.LineOnAStock.NothingTakenEnds.Kind",
+        "Becoming.LineOnAStock.NothingTakenEnds.need",
+        "Becoming.LineOnAStock.NothingTakenEnds.use",
+        "Becoming.LineOnAStock.NothingTakenEnds.kids",
+        "Becoming.LineOnAStock.NothingTakenEnds.isC",
+        "Becoming.LineOnAStock.NothingTakenEnds.ending_differs"
+      ]
+    },
+    {
+      "en": "KidsNeedMore.all_but_down: on min z (10 − z) (hump10) with hi = 10, A needing four, taking two, leaving B, A, B, and B needing nine, taking one, leaving B, B: every premise of way_ends but down holds, and from ([B, A, B], 8) the step leaves the configuration as it is (fixed) and the net never ends.",
+      "zh": "KidsNeedMore.all_but_down：给还 min z (10 − z)（hump10），hi = 10，A 所需四、取二、留下 B、A、B，B 所需九、取一、留下 B、B：way_ends 除 down 之外的前提皆成立，从 ([B, A, B], 8) 起一步不改变构形（fixed），网永不终止。",
+      "declarations": [
+        "Becoming.LineOnAStock.hump10",
+        "Becoming.LineOnAStock.KidsNeedMore.Kind",
+        "Becoming.LineOnAStock.KidsNeedMore.need",
+        "Becoming.LineOnAStock.KidsNeedMore.use",
+        "Becoming.LineOnAStock.KidsNeedMore.kids",
+        "Becoming.LineOnAStock.KidsNeedMore.fixed",
+        "Becoming.LineOnAStock.KidsNeedMore.all_but_down"
+      ]
+    },
+    {
+      "en": "KidHigherNeed.all_but_down: on giving min z (12 − z) with hi = 12, A needing one and B thirteen, each taking one and leaving B, B: from ([A], 12) every premise of need_unmet holds, down fails, the configuration after one step is ([B, B], 12) and B needs more than twelve.",
+      "zh": "KidHigherNeed.all_but_down：给还 min z (12 − z)，hi = 12，A 所需一、B 所需十三，各取一、各留下 B、B：从 ([A], 12) 起 need_unmet 的前提皆成立，down 不成立，一步之后的构形是 ([B, B], 12)，B 所需高于十二。",
+      "declarations": [
+        "Becoming.LineOnAStock.KidHigherNeed.Kind",
+        "Becoming.LineOnAStock.KidHigherNeed.need",
+        "Becoming.LineOnAStock.KidHigherNeed.use",
+        "Becoming.LineOnAStock.KidHigherNeed.kids",
+        "Becoming.LineOnAStock.KidHigherNeed.all_but_down"
+      ]
+    },
+    {
+      "en": "EqualInPlaceOfMore: on giving min z (12 − z) with hi = 12, one unit needing one, taking one and leaving itself: every premise of way_ends but grows holds and from ([()], 12) the net never ends (all_but_grows); the same is a case of unending_iff_holds with y := id (holds_by_law).",
+      "zh": "EqualInPlaceOfMore：给还 min z (12 − z)，hi = 12，一个单元所需一、取一、留下自己：way_ends 除 grows 之外的前提皆成立，从 ([()], 12) 起网永不终止（all_but_grows）；这也是 unending_iff_holds 在 y := id 时的情形（holds_by_law）。",
+      "declarations": [
+        "Becoming.LineOnAStock.EqualInPlaceOfMore.need",
+        "Becoming.LineOnAStock.EqualInPlaceOfMore.use",
+        "Becoming.LineOnAStock.EqualInPlaceOfMore.kids",
+        "Becoming.LineOnAStock.EqualInPlaceOfMore.all_but_grows",
+        "Becoming.LineOnAStock.EqualInPlaceOfMore.holds_by_law"
+      ]
+    },
+    {
+      "en": "TwoForOne.holds_by_law: on giving min z (12 − z), P taking two and leaving Q, Q, Q taking one and leaving itself, both needing one: from ([P], 4) the course is ([Q, Q], 4) at every step from 1 on, and the net never ends, by unending_iff_holds at k = 0 with y := id and hi := 12: a case whose offspring are not the unit itself.",
+      "zh": "TwoForOne.holds_by_law：给还 min z (12 − z)，P 取二、留下 Q、Q，Q 取一、留下自己，皆所需一：从 ([P], 4) 起，自第 1 步起进程都是 ([Q, Q], 4)，网永不终止，由 unending_iff_holds 于 k = 0、y := id、hi := 12：后代不是单元自身的情形。",
+      "declarations": [
+        "Becoming.LineOnAStock.TwoForOne.Kind",
+        "Becoming.LineOnAStock.TwoForOne.need",
+        "Becoming.LineOnAStock.TwoForOne.use",
+        "Becoming.LineOnAStock.TwoForOne.kids",
+        "Becoming.LineOnAStock.TwoForOne.holds_by_law"
+      ]
+    },
+    {
+      "en": "HigherStartEnds.higher_ends: on giving min z (12 − z), A needing one, taking three and leaving B, B, B needing three, taking one and leaving C, B, and C needing twelve, taking one and leaving A: from ([A], 6) and ([A], 7) the ways are the same at steps 0 to 2 (by ways_alike), from six the net never ends (from_six) and from seven it ends (from_seven).",
+      "zh": "HigherStartEnds.higher_ends：给还 min z (12 − z)，A 所需一、取三、留下 B、B，B 所需三、取一、留下 C、B，C 所需十二、取一、留下 A：从 ([A], 6) 与 ([A], 7) 起，第 0 至 2 步方式相同（由 ways_alike），从六起网永不终止（from_six），从七起终止（from_seven）。",
+      "declarations": [
+        "Becoming.LineOnAStock.HigherStartEnds.Kind",
+        "Becoming.LineOnAStock.HigherStartEnds.need",
+        "Becoming.LineOnAStock.HigherStartEnds.use",
+        "Becoming.LineOnAStock.HigherStartEnds.kids",
+        "Becoming.LineOnAStock.HigherStartEnds.from_six",
+        "Becoming.LineOnAStock.HigherStartEnds.from_seven",
+        "Becoming.LineOnAStock.HigherStartEnds.higher_ends"
+      ]
+    },
+    {
+      "en": "Doubling: on giving min z (12 − z), one unit needing one, taking one and leaving two of itself, from twelve: the levels at steps 0 to 5 are 12, 12, 12, 12, 8, 0, the ways have 1 to 32 units, and at step 5 no need is met and the net ends (course_values); it is a case of way_ends (ends_by_law) and of need_unmet at hi = 12 (unmet_by_law).",
+      "zh": "Doubling：给还 min z (12 − z)，一个单元所需一、取一、留下两个自己，从十二起：第 0 至 5 步水位为 12、12、12、12、8、0，方式有 1 至 32 个单元，第 5 步无所需被满足，网终止（course_values）；它是 way_ends（ends_by_law）与 hi = 12 时 need_unmet（unmet_by_law）的情形。",
+      "declarations": [
+        "Becoming.LineOnAStock.Doubling.need",
+        "Becoming.LineOnAStock.Doubling.use",
+        "Becoming.LineOnAStock.Doubling.kids",
+        "Becoming.LineOnAStock.Doubling.course_values",
+        "Becoming.LineOnAStock.Doubling.ends_by_law",
+        "Becoming.LineOnAStock.Doubling.unmet_by_law"
+      ]
+    },
+    {
+      "en": "On giving min z (12 − z): one unit needing one, taking seven and leaving itself, from ([()], 12), is a case of fall, the way empty from step 4 (Overdrawn.gone); the line of D, which leaves D, D, beside O, which leaves itself, both needing one and taking one, from ([D, O], 12), is a case of line_ends with a line that is a proper part of the way (ProperLine.gone).",
+      "zh": "给还 min z (12 − z)：一个单元所需一、取七、留下自己，从 ([()], 12) 起，是 fall 的情形，第 4 步起方式为空（Overdrawn.gone）；留下 D、D 的 D 之线与留下自己的 O 并存，皆所需一、取一，从 ([D, O], 12) 起，是线为方式真部分时 line_ends 的情形（ProperLine.gone）。",
+      "declarations": [
+        "Becoming.LineOnAStock.Overdrawn.need",
+        "Becoming.LineOnAStock.Overdrawn.use",
+        "Becoming.LineOnAStock.Overdrawn.kids",
+        "Becoming.LineOnAStock.Overdrawn.short",
+        "Becoming.LineOnAStock.Overdrawn.gone",
+        "Becoming.LineOnAStock.ProperLine.Kind",
+        "Becoming.LineOnAStock.ProperLine.need",
+        "Becoming.LineOnAStock.ProperLine.use",
+        "Becoming.LineOnAStock.ProperLine.kids",
+        "Becoming.LineOnAStock.ProperLine.isD",
+        "Becoming.LineOnAStock.ProperLine.gone"
+      ]
+    },
+    {
+      "en": "TakesNothing.lost: on giving min z (12 − z), from ([A, B, C], 9) and from ([A, B], 9), C taking nothing and leaving itself, the levels and the ways without C are the same at every step, by takes_nothing; C is in the way at steps 0 to 2 and at no step after, and the net from ([A, B, C], 9) never ends.",
+      "zh": "TakesNothing.lost：给还 min z (12 − z)，从 ([A, B, C], 9) 与 ([A, B], 9) 起，C 什么也不取、留下自己：由 takes_nothing，每一步水位相同、去掉 C 后方式相同；C 只在第 0 至 2 步在方式中，从 ([A, B, C], 9) 起网永不终止。",
+      "declarations": [
+        "Becoming.LineOnAStock.TakesNothing.Kind",
+        "Becoming.LineOnAStock.TakesNothing.need",
+        "Becoming.LineOnAStock.TakesNothing.use",
+        "Becoming.LineOnAStock.TakesNothing.kids",
+        "Becoming.LineOnAStock.TakesNothing.isC",
+        "Becoming.LineOnAStock.TakesNothing.lost"
+      ]
+    },
+    {
+      "en": "On giving min z (12 − z): a met unit with no kids, from one unit at twelve, leaves the empty way one step later and the net ends (NoKids.ends_met); from ([C, O], 12), C leaving itself and O nothing, both needing one and taking two, the way is [C] from step 1, the level twelve at every step, and the net never ends: C's share of what is taken rises while the number of drawers falls (ShareRises).",
+      "zh": "给还 min z (12 − z)：没有后代而所需被满足的单元，从十二起一步后留下空的方式，网终止（NoKids.ends_met）；从 ([C, O], 12) 起，C 留下自己、O 什么也不留，皆所需一、取二，自第 1 步起方式是 [C]，水位每步为十二，网永不终止：汲取者变少时 C 所取的份额上升（ShareRises）。",
+      "declarations": [
+        "Becoming.LineOnAStock.NoKids.need",
+        "Becoming.LineOnAStock.NoKids.use",
+        "Becoming.LineOnAStock.NoKids.kids",
+        "Becoming.LineOnAStock.NoKids.ends_met",
+        "Becoming.LineOnAStock.ShareRises.Kind",
+        "Becoming.LineOnAStock.ShareRises.need",
+        "Becoming.LineOnAStock.ShareRises.use",
+        "Becoming.LineOnAStock.ShareRises.kids",
+        "Becoming.LineOnAStock.ShareRises.isC",
+        "Becoming.LineOnAStock.ShareRises.course_values",
+        "Becoming.LineOnAStock.ShareRises.goes_on"
+      ]
+    },
+    {
+      "en": "MultiplyingTakersCase.agree: at every step the family size, pool and activity of LineageRegimes.MultiplyingTakers are the length, level and whether some need is met of the course of the doubling unit with nothing given from ([()], 3); multiplying_takers adds that the example has a step with no member active and that the net here ends, way_ends' premises checked where the law is applied in the proof, not a conjunct.",
+      "zh": "MultiplyingTakersCase.agree：每一步 LineageRegimes.MultiplyingTakers 的族之大小、池与活动，就是加倍单元在无给还下从 ([()], 3) 出发的进程之长度、水位与是否有所需被满足；multiplying_takers 另有：该例某一步无成员活动，此处的网终止；way_ends 的前提在证明中应用该律处检验，并非合取项。",
+      "declarations": [
+        "Becoming.LineOnAStock.MultiplyingTakersCase.late",
+        "Becoming.LineOnAStock.MultiplyingTakersCase.family_late",
+        "Becoming.LineOnAStock.MultiplyingTakersCase.agree",
+        "Becoming.LineOnAStock.MultiplyingTakersCase.multiplying_takers"
+      ]
+    },
+    {
+      "en": "DrainCase.drain: at every step the gated LineageDrawdown.Drain's family size, pool with the renewer's gift on it, total of the draws and renewer's giving are the length, level, take and gift of the pool of this model's course from ([r, d0], 11); the example's family is empty from some step on. That fall's premises hold at the drawers' line from step 1 is checked in the proof, not stated.",
+      "zh": "DrainCase.drain：每一步，有门控的 LineageDrawdown.Drain 的族之大小、加上更新者所给的池、汲取总量与更新者所给，就是本模型从 ([r, d0], 11) 出发的进程之方式长度、水位、方式所取与池的 gift；该例的族从某一步起为空。fall 的前提自第 1 步起在汲取者之线上成立，是在证明中检验的，并非陈述。",
+      "declarations": [
+        "Becoming.LineOnAStock.DrainCase.Kind",
+        "Becoming.LineOnAStock.DrainCase.need",
+        "Becoming.LineOnAStock.DrainCase.use",
+        "Becoming.LineOnAStock.DrainCase.kids",
+        "Becoming.LineOnAStock.DrainCase.gift",
+        "Becoming.LineOnAStock.DrainCase.isD",
+        "Becoming.LineOnAStock.DrainCase.late",
+        "Becoming.LineOnAStock.DrainCase.gift_eq",
+        "Becoming.LineOnAStock.DrainCase.need_agrees",
+        "Becoming.LineOnAStock.DrainCase.empty_of",
+        "Becoming.LineOnAStock.DrainCase.drain"
+      ]
+    }
+  ],
+  "hypotheses": [
+    {
+      "en": "No axiom. Discrete steps; any type of units, each with a need, a use and the list of units it leaves; a way is a list of units, repeats kept and counted; whole-number levels; one giving, a function of what is left after the take, the same for every way."
+    },
+    {
+      "en": "The level's step is RegimeMargin.step giving (taken use w): what every unit present at the step takes, summed, is taken first and as much as there is, and giving is added from what is left. A unit whose need the level meets leaves its kids; one whose need it does not meet leaves nothing."
+    },
+    {
+      "en": "The alikeness laws (after_alike, alike_iff, ways_alike, born_alike) and never_in, gone_from, takes_nothing and account ask nothing of the giving: no premise on the stock. alike_iff asks that every unit of the way has a kid; never_in and gone_from that no unit outside the line leaves a unit of it; takes_nothing that the units of Z take nothing and leave only units of Z."
+    },
+    {
+      "en": "The cap: the step under no use keeps every level up to hi within hi (RegimeMargin.Keeps giving 0 hi), the start at most hi; and nothing given from nothing (RegimeMargin.FromNothing giving). need_unmet, falls_to_unmet, way_ends, line_ends and one_need_ends take both."
+    },
+    {
+      "en": "Kids that take more: each unit's kids together take more than it (grows), asked of every unit for need_unmet, falls_to_unmet, way_ends and one_need_ends, of every unit of a closed line for line_ends. For fall: kids taking no less, of one need m, with giving 0 below m and what the line takes at the start more than every giving."
+    },
+    {
+      "en": "Kids needing no more than their parent (down), for falls_to_unmet, way_ends, line_ends and unending_iff_holds; positive needs: every descendant of the start's way needing something (Needing) for need_unmet, falls_to_unmet, unending_iff_holds and taken_below, every unit for way_ends; one positive need for every unit for one_need_ends. need_unmet asks the start not empty with every need met."
+    },
+    {
+      "en": "For unending_iff_holds: each unit's kids taking exactly what it takes (even), every unit having kids, down, Needing, nothing given from nothing, the start at most hi, and Regime (Short, Meets and Keeps at what the way takes, with y of it, up to hi) at every way the course reaches with some need met there and at every step before. The regime along the course is assumed, not derived."
+    },
+    {
+      "en": "The needs, uses and offspring, y and hi are parameters given with the carrier; nothing makes a new kind or changes kids. FromNothing, Keeps, Short, Meets and Regime are premises on the giving, as in TurningInTime and WayOfUnits."
+    }
+  ],
+  "does_not_show": [
+    {
+      "en": "An exact condition for a way whose kids take more, or less, never ending; with one way, whether the net ends is not monotone in the start level.",
+      "kind": "scope",
+      "witness": "Becoming.LineOnAStock.HigherStartEnds.higher_ends"
+    },
+    {
+      "en": "That the level has fallen, or that the net ends, at the first unmet need of need_unmet: without down the unmet need can be a kid's greater need at a level that has not fallen.",
+      "kind": "non-implication",
+      "witness": "Becoming.LineOnAStock.KidHigherNeed.all_but_down"
+    },
+    {
+      "en": "That units which take nothing make no difference to whether the net ends: they leave the levels as they are, and can change the ending.",
+      "kind": "non-implication",
+      "witness": "Becoming.LineOnAStock.NothingTakenEnds.ending_differs"
+    },
+    {
+      "en": "A new kind, or a way that comes to read the fall because of the fall: needs, uses and offspring are given, and no new difference arrives from a difference not yet made.",
+      "kind": "scope"
+    },
+    {
+      "en": "That the alikeness laws meet the stock: they hold with no premise on it, and meet the laws that need it only through every need being met.",
+      "kind": "scope"
+    },
+    {
+      "en": "Anything about the two built examples beyond their sizes and levels: each ending already follows from the example's own Lean, and the organisms' identities and the need are not equated.",
+      "kind": "correspondence"
+    },
+    {
+      "en": "Anything about a trained system, or that any actual course has this model's form.",
+      "kind": "correspondence"
+    }
+  ],
+  "counterexamples": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineOnAStock.lean",
+      "detail": {
+        "en": "Against way_ends without down: on min z (10 − z) with hi = 10, a unit needing four whose kids include one needing nine, every other premise holding, the configuration ([B, A, B], 8) is left as it is and the net never ends (KidsNeedMore.all_but_down)."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineOnAStock.lean",
+      "detail": {
+        "en": "Against reading need_unmet as a fall: on min z (12 − z) from ([A], 12), every premise of need_unmet holding and down failing, the unmet need after one step is that of the kids B, B at twelve, a level that has not fallen (KidHigherNeed.all_but_down)."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineOnAStock.lean",
+      "detail": {
+        "en": "Against way_ends with kids that take the same in place of more: one unit needing one, taking one and leaving itself, from ([()], 12) on min z (12 − z), every other premise holding, never ends (EqualInPlaceOfMore.all_but_grows)."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineOnAStock.lean",
+      "detail": {
+        "en": "Against a monotone fate in the start level: from ([A], 6) the net never ends and from ([A], 7) it ends, the ways the same at steps 0 to 2 (HigherStartEnds.higher_ends)."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineOnAStock.lean",
+      "detail": {
+        "en": "Against alike_iff without every unit having a kid: levels four and six are alike to [d, b], d needing five and leaving nothing, and do not meet the same needs in it (AlikeFiner.alike_not_met)."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineOnAStock.lean",
+      "detail": {
+        "en": "Against units that take nothing making no difference to the ending: with nothing given, the levels from ([A], 5) and ([A, C], 5) are the same at every step, the first net ends after one step and the second never ends (NothingTakenEnds.ending_differs)."
+      }
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineOnAStock.lean",
+      "detail": {
+        "en": "Against every need met while the net goes on: a met unit with no kids, from one unit at twelve, leaves the empty way one step later and the net ends with every need met at the start (NoKids.ends_met)."
+      }
+    }
+  ],
+  "standard_boundaries": [
+    "no-ethical-premise",
+    "no-evaluation",
+    "decidability",
+    "discrete-steps",
+    "formal-not-empirical",
+    "names-provisional",
+    "omission-not-refutation",
+    "conditional-not-universal"
+  ],
+  "validation_scope": {
+    "en": "Pure core, axiom reports empty in the scratch builds (LineOnAStock 188 declarations, 113 theorems; LineOnAStockCases 15, 9), the core run's receipt to be bound; in the Lean's second layer through TurningInTime and ReadingsPersist, imported by WayOfUnits. AI-written; read by AI agents set to refute it: six readers before any Lean, thirteen readings of the Lean in five rounds, one join on paper refuted. Their searches on small worlds are not proofs. No person's review of it is recorded."
+  },
+  "next_delta": {
+    "en": "An exact condition for a way whose kids take more, or less, never ending; a way that comes to read the fall, its kids or needs changed by the course; the course as a Web with a Flow folded where Continuation is next open; ReadingsSpread's commons as a course of this model; a test on a trained system, held."
+  },
+  "correspondence": {
+    "en": "Reading (AI-written, from the study note): falls_to_unmet is this model's form of a going-on that draws down what it rests on while nothing in it yet differs. Until the first unmet need the way at each step is the generation of descent, in which no giving, use or level appears; by then the level is below a need the start met. That reading rests on grows, the cap and down, which are given; without down the law does not hold (KidHigherNeed). The two built examples, MultiplyingTakers and the gated Drain, match courses of this model in sizes and levels only. No near work was read for this item beyond turning-in-time's."
+  },
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineOnAStock.lean",
+  "aliases": [
+    "a line on a stock",
+    "units that leave offspring on a renewed level",
+    "Becoming.LineOnAStock.need_unmet",
+    "Becoming.LineOnAStock.falls_to_unmet",
+    "Becoming.LineOnAStock.unending_iff_holds",
+    "Becoming.LineOnAStock.ways_alike"
+  ],
+  "dependencies": [
+    {
+      "id": "turning-in-time",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses the pair's step and the course as it was (TurningInTime.pair, asItWas, asItWas_way), the rising take against a capped level (rising_takes_all, kept_within), held_above in step_lowers, and the witnesses' giving (Three.giving)."
+      },
+      "interface": {
+        "output": {
+          "en": "On the course as it was, a use rising strictly at each of the first hi steps against a level the step under no use keeps within hi, with nothing given from nothing, leaves the level nothing at step hi + 1."
+        },
+        "input": {
+          "en": "The course while every need is met, the course as it was under allKids, with what the generations take as the use."
+        },
+        "conditions": {
+          "en": "The rise from generations_rise (grows, the way not empty); the cap and nothing given from nothing, taken as premises."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineOnAStock.lean"
+      }
+    },
+    {
+      "id": "margin-of-a-regime",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses the regime's step and its premises (RegimeMargin.step, FromNothing, Short, Meets, Keeps), holds in unending_iff_holds, and keeps_of_below, meets_of_below, short_of_below and Peaked's min lemmas in the worked cases."
+      },
+      "interface": {
+        "output": {
+          "en": "From H + y up to hi, under its premises at H, the level never falls below its start."
+        },
+        "input": {
+          "en": "The level under what a way takes, the sum of its units' uses."
+        },
+        "conditions": {
+          "en": "Its own premises at what the way takes, with y of it, up to hi (Regime), assumed along the course."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineOnAStock.lean"
+      }
+    },
+    {
+      "id": "selection-term-over-generations",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses the generations of descent and what they count (SelectionTerm.Generations, SelectionTerm.born, Generations.born_eq, Generations.total_flatMap)."
+      },
+      "interface": {
+        "output": {
+          "en": "The number born at a step is the size of the next family; what the offspring take together is the total over the family's units."
+        },
+        "input": {
+          "en": "The course read as generations (generations, family_eq): the family the way, a unit's kids its kids where its need is met."
+        },
+        "conditions": {
+          "en": "None beyond reading the course so."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineOnAStock.lean"
+      }
+    },
+    {
+      "id": "where-a-reading-locks",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses descent keeping a property (SelectionTerm.Generations.kept_of_descent) in never_in."
+      },
+      "interface": {
+        "output": {
+          "en": "A property every unit of the first family has, kept by every unit's kids, is had by every unit of every family."
+        },
+        "input": {
+          "en": "Not being of the line S, at the course read as generations."
+        },
+        "conditions": {
+          "en": "No unit outside S leaves a unit of S (closed)."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineOnAStock.lean"
+      }
+    },
+    {
+      "id": "going-alike-up-to-the-nets-end",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses the cut step (Law.stepWhile and stepWhile_unending_iff, stepWhile_steps_iff, stepWhile_none_iff)."
+      },
+      "interface": {
+        "output": {
+          "en": "Under the one, the line on the cut step never ends exactly where it can go on at every configuration of the orbit."
+        },
+        "input": {
+          "en": "The net, the pair's step cut where no unit's need is met."
+        },
+        "conditions": {
+          "en": "Whether some need is met, decided along the way (goesDecidable)."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineOnAStock.lean"
+      }
+    },
+    {
+      "id": "when-a-selection-read-off-continuation-reads",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses the first step at which a decided predicate fails (first_of_decided) in need_unmet."
+      },
+      "interface": {
+        "output": {
+          "en": "Of a decided predicate on the first steps, either it holds at every one or there is a first step where it fails."
+        },
+        "input": {
+          "en": "Whether every unit's need is met along the course."
+        },
+        "conditions": {
+          "en": "The predicate decided, on whole numbers and finite lists."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineOnAStock.lean"
+      }
+    },
+    {
+      "id": "census-balance",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses the balance over a stretch (Prelude's balance_over_stretch_on) in account."
+      },
+      "interface": {
+        "output": {
+          "en": "Where each step of a stretch balances, the end with everything lost balances the start with everything gained."
+        },
+        "input": {
+          "en": "The level and what the way takes and is given at each step."
+        },
+        "conditions": {
+          "en": "What the way takes at most the level at each step before N."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineOnAStock.lean"
+      }
+    },
+    {
+      "id": "continuation-relative-to-a-class",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses the root's predicates «不穷» and «迭»."
+      },
+      "interface": {
+        "output": {
+          "en": "A line never ends; n steps of a relation."
+        },
+        "input": {
+          "en": "The net under the one."
+        },
+        "conditions": {
+          "en": "None."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineOnAStock.lean"
+      }
+    },
+    {
+      "id": "recurrence-without-premise",
+      "relation": "formal-reuse",
+      "detail": {
+        "en": "Reuses the orbit's sum (Law.orbit_add)."
+      },
+      "interface": {
+        "output": {
+          "en": "The orbit after k + i steps is the orbit after i steps from the configuration after k."
+        },
+        "input": {
+          "en": "The course and the level's course."
+        },
+        "conditions": {
+          "en": "None."
+        },
+        "evidence": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineOnAStock.lean"
+      }
+    }
+  ],
+  "related": [
+    {
+      "id": "a-way-of-units",
+      "detail": {
+        "en": "Its model is this one's case kids u = [u] on units of two numbers: WayOfUnits' after, taken, step, course, net, Holds and Regime are this model's there (WayOfUnits.course_unit, holds_unit, regime_unit and the rest), and six of its declarations, unending_iff_holds among them with its statement unchanged, are derived from this module's laws."
+      }
+    },
+    {
+      "id": "ending-laws-as-regimes-on-a-lineage",
+      "detail": {
+        "en": "Its LineageRegimes.MultiplyingTakers and the gated LineageDrawdown.Drain have, at every step, the sizes and levels of courses of this model on which the premises of way_ends, or of fall, hold (LineOnAStockCases); only sizes and levels are equated, each example's ending already follows from its own Lean, and the laws add nothing about the examples."
+      }
+    }
+  ],
+  "references": [
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineOnAStock.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.LineOnAStock.Alike",
+        "Becoming.LineOnAStock.AlikeFiner.Kind",
+        "Becoming.LineOnAStock.AlikeFiner.alike_not_met",
+        "Becoming.LineOnAStock.AlikeFiner.kids",
+        "Becoming.LineOnAStock.AlikeFiner.need",
+        "Becoming.LineOnAStock.Below",
+        "Becoming.LineOnAStock.Doubling.course_values",
+        "Becoming.LineOnAStock.Doubling.ends_by_law",
+        "Becoming.LineOnAStock.Doubling.kids",
+        "Becoming.LineOnAStock.Doubling.need",
+        "Becoming.LineOnAStock.Doubling.unmet_by_law",
+        "Becoming.LineOnAStock.Doubling.use",
+        "Becoming.LineOnAStock.Ends",
+        "Becoming.LineOnAStock.EqualInPlaceOfMore.all_but_grows",
+        "Becoming.LineOnAStock.EqualInPlaceOfMore.holds_by_law",
+        "Becoming.LineOnAStock.EqualInPlaceOfMore.kids",
+        "Becoming.LineOnAStock.EqualInPlaceOfMore.need",
+        "Becoming.LineOnAStock.EqualInPlaceOfMore.use",
+        "Becoming.LineOnAStock.Goes",
+        "Becoming.LineOnAStock.HigherStartEnds.Kind",
+        "Becoming.LineOnAStock.HigherStartEnds.from_seven",
+        "Becoming.LineOnAStock.HigherStartEnds.from_six",
+        "Becoming.LineOnAStock.HigherStartEnds.higher_ends",
+        "Becoming.LineOnAStock.HigherStartEnds.kids",
+        "Becoming.LineOnAStock.HigherStartEnds.need",
+        "Becoming.LineOnAStock.HigherStartEnds.use",
+        "Becoming.LineOnAStock.Holds",
+        "Becoming.LineOnAStock.KidHigherNeed.Kind",
+        "Becoming.LineOnAStock.KidHigherNeed.all_but_down",
+        "Becoming.LineOnAStock.KidHigherNeed.kids",
+        "Becoming.LineOnAStock.KidHigherNeed.need",
+        "Becoming.LineOnAStock.KidHigherNeed.use",
+        "Becoming.LineOnAStock.KidsNeedMore.Kind",
+        "Becoming.LineOnAStock.KidsNeedMore.all_but_down",
+        "Becoming.LineOnAStock.KidsNeedMore.fixed",
+        "Becoming.LineOnAStock.KidsNeedMore.kids",
+        "Becoming.LineOnAStock.KidsNeedMore.need",
+        "Becoming.LineOnAStock.KidsNeedMore.use",
+        "Becoming.LineOnAStock.Needing",
+        "Becoming.LineOnAStock.NoKids.ends_met",
+        "Becoming.LineOnAStock.NoKids.kids",
+        "Becoming.LineOnAStock.NoKids.need",
+        "Becoming.LineOnAStock.NoKids.use",
+        "Becoming.LineOnAStock.NoneMet",
+        "Becoming.LineOnAStock.NothingTakenEnds.Kind",
+        "Becoming.LineOnAStock.NothingTakenEnds.ending_differs",
+        "Becoming.LineOnAStock.NothingTakenEnds.isC",
+        "Becoming.LineOnAStock.NothingTakenEnds.kids",
+        "Becoming.LineOnAStock.NothingTakenEnds.need",
+        "Becoming.LineOnAStock.NothingTakenEnds.use",
+        "Becoming.LineOnAStock.Overdrawn.gone",
+        "Becoming.LineOnAStock.Overdrawn.kids",
+        "Becoming.LineOnAStock.Overdrawn.need",
+        "Becoming.LineOnAStock.Overdrawn.short",
+        "Becoming.LineOnAStock.Overdrawn.use",
+        "Becoming.LineOnAStock.ProperLine.Kind",
+        "Becoming.LineOnAStock.ProperLine.gone",
+        "Becoming.LineOnAStock.ProperLine.isD",
+        "Becoming.LineOnAStock.ProperLine.kids",
+        "Becoming.LineOnAStock.ProperLine.need",
+        "Becoming.LineOnAStock.ProperLine.use",
+        "Becoming.LineOnAStock.Regime",
+        "Becoming.LineOnAStock.ShareRises.Kind",
+        "Becoming.LineOnAStock.ShareRises.course_values",
+        "Becoming.LineOnAStock.ShareRises.goes_on",
+        "Becoming.LineOnAStock.ShareRises.isC",
+        "Becoming.LineOnAStock.ShareRises.kids",
+        "Becoming.LineOnAStock.ShareRises.need",
+        "Becoming.LineOnAStock.ShareRises.use",
+        "Becoming.LineOnAStock.TakesNothing.Kind",
+        "Becoming.LineOnAStock.TakesNothing.isC",
+        "Becoming.LineOnAStock.TakesNothing.kids",
+        "Becoming.LineOnAStock.TakesNothing.lost",
+        "Becoming.LineOnAStock.TakesNothing.need",
+        "Becoming.LineOnAStock.TakesNothing.use",
+        "Becoming.LineOnAStock.TwoForOne.Kind",
+        "Becoming.LineOnAStock.TwoForOne.holds_by_law",
+        "Becoming.LineOnAStock.TwoForOne.kids",
+        "Becoming.LineOnAStock.TwoForOne.need",
+        "Becoming.LineOnAStock.TwoForOne.use",
+        "Becoming.LineOnAStock.account",
+        "Becoming.LineOnAStock.account_unending",
+        "Becoming.LineOnAStock.after",
+        "Becoming.LineOnAStock.after_alike",
+        "Becoming.LineOnAStock.after_append",
+        "Becoming.LineOnAStock.after_flatMap",
+        "Becoming.LineOnAStock.after_length_le",
+        "Becoming.LineOnAStock.after_length_lt",
+        "Becoming.LineOnAStock.after_of_met",
+        "Becoming.LineOnAStock.alike_iff",
+        "Becoming.LineOnAStock.alike_of_met",
+        "Becoming.LineOnAStock.allKids",
+        "Becoming.LineOnAStock.allKids_flatMap",
+        "Becoming.LineOnAStock.allKids_rises",
+        "Becoming.LineOnAStock.anyMet",
+        "Becoming.LineOnAStock.anyMet_iff",
+        "Becoming.LineOnAStock.below_after",
+        "Becoming.LineOnAStock.below_keeps",
+        "Becoming.LineOnAStock.block_le",
+        "Becoming.LineOnAStock.block_lt",
+        "Becoming.LineOnAStock.born_alike",
+        "Becoming.LineOnAStock.born_eq_length",
+        "Becoming.LineOnAStock.course",
+        "Becoming.LineOnAStock.course_asItWas",
+        "Becoming.LineOnAStock.course_fixed",
+        "Becoming.LineOnAStock.course_generation",
+        "Becoming.LineOnAStock.decide_le_congr",
+        "Becoming.LineOnAStock.draw_holds",
+        "Becoming.LineOnAStock.draw_rises",
+        "Becoming.LineOnAStock.ends_all",
+        "Becoming.LineOnAStock.ends_high",
+        "Becoming.LineOnAStock.ends_low",
+        "Becoming.LineOnAStock.fall",
+        "Becoming.LineOnAStock.fall_from",
+        "Becoming.LineOnAStock.fall_low",
+        "Becoming.LineOnAStock.falls_to_unmet",
+        "Becoming.LineOnAStock.family_eq",
+        "Becoming.LineOnAStock.generation",
+        "Becoming.LineOnAStock.generation_ancestor",
+        "Becoming.LineOnAStock.generation_below",
+        "Becoming.LineOnAStock.generation_mem",
+        "Becoming.LineOnAStock.generation_orbit",
+        "Becoming.LineOnAStock.generations",
+        "Becoming.LineOnAStock.generations_rise",
+        "Becoming.LineOnAStock.goesDecidable",
+        "Becoming.LineOnAStock.gone_after",
+        "Becoming.LineOnAStock.gone_from",
+        "Becoming.LineOnAStock.hump10",
+        "Becoming.LineOnAStock.ite_le",
+        "Becoming.LineOnAStock.kids_of_grows",
+        "Becoming.LineOnAStock.left",
+        "Becoming.LineOnAStock.left_of_taken",
+        "Becoming.LineOnAStock.lineCount",
+        "Becoming.LineOnAStock.lineCount_pos",
+        "Becoming.LineOnAStock.lineTake",
+        "Becoming.LineOnAStock.lineTake_append",
+        "Becoming.LineOnAStock.lineTake_le_taken",
+        "Becoming.LineOnAStock.lineTake_true",
+        "Becoming.LineOnAStock.line_ends",
+        "Becoming.LineOnAStock.line_from_line",
+        "Becoming.LineOnAStock.line_or_none",
+        "Becoming.LineOnAStock.mem_after_iff",
+        "Becoming.LineOnAStock.mem_allKids_iff",
+        "Becoming.LineOnAStock.mem_cond",
+        "Becoming.LineOnAStock.mem_cond_of",
+        "Becoming.LineOnAStock.mem_generation",
+        "Becoming.LineOnAStock.mem_of_ne_nil",
+        "Becoming.LineOnAStock.met_of_alike_le",
+        "Becoming.LineOnAStock.met_or_unmet",
+        "Becoming.LineOnAStock.need_in_after",
+        "Becoming.LineOnAStock.need_unmet",
+        "Becoming.LineOnAStock.needs_after_iff",
+        "Becoming.LineOnAStock.needs_kept",
+        "Becoming.LineOnAStock.net",
+        "Becoming.LineOnAStock.never_in",
+        "Becoming.LineOnAStock.none_after",
+        "Becoming.LineOnAStock.none_shift",
+        "Becoming.LineOnAStock.nothingGiven",
+        "Becoming.LineOnAStock.one_need_ends",
+        "Becoming.LineOnAStock.reaches_from",
+        "Becoming.LineOnAStock.reaches_holds",
+        "Becoming.LineOnAStock.rise",
+        "Becoming.LineOnAStock.step",
+        "Becoming.LineOnAStock.step_lowers",
+        "Becoming.LineOnAStock.step_overdrawn",
+        "Becoming.LineOnAStock.step_zero",
+        "Becoming.LineOnAStock.strip",
+        "Becoming.LineOnAStock.strip_after",
+        "Becoming.LineOnAStock.strip_all",
+        "Becoming.LineOnAStock.strip_append",
+        "Becoming.LineOnAStock.strip_course",
+        "Becoming.LineOnAStock.strip_neg",
+        "Becoming.LineOnAStock.strip_pos",
+        "Becoming.LineOnAStock.strip_strip",
+        "Becoming.LineOnAStock.strong_below",
+        "Becoming.LineOnAStock.taken",
+        "Becoming.LineOnAStock.taken_allKids",
+        "Becoming.LineOnAStock.taken_below",
+        "Becoming.LineOnAStock.taken_generation",
+        "Becoming.LineOnAStock.taken_strip",
+        "Becoming.LineOnAStock.takes_nothing",
+        "Becoming.LineOnAStock.unending_iff_holds",
+        "Becoming.LineOnAStock.unending_of_fixed",
+        "Becoming.LineOnAStock.unending_taken_below",
+        "Becoming.LineOnAStock.way_ends",
+        "Becoming.LineOnAStock.way_while_met",
+        "Becoming.LineOnAStock.ways_alike",
+        "Becoming.LineOnAStock.within_along"
+      ],
+      "sha256": "FILLED-BY-KIT"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineOnAStockCases.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.LineOnAStock.DrainCase.Kind",
+        "Becoming.LineOnAStock.DrainCase.drain",
+        "Becoming.LineOnAStock.DrainCase.empty_of",
+        "Becoming.LineOnAStock.DrainCase.gift",
+        "Becoming.LineOnAStock.DrainCase.gift_eq",
+        "Becoming.LineOnAStock.DrainCase.isD",
+        "Becoming.LineOnAStock.DrainCase.kids",
+        "Becoming.LineOnAStock.DrainCase.late",
+        "Becoming.LineOnAStock.DrainCase.need",
+        "Becoming.LineOnAStock.DrainCase.need_agrees",
+        "Becoming.LineOnAStock.DrainCase.use",
+        "Becoming.LineOnAStock.MultiplyingTakersCase.agree",
+        "Becoming.LineOnAStock.MultiplyingTakersCase.family_late",
+        "Becoming.LineOnAStock.MultiplyingTakersCase.late",
+        "Becoming.LineOnAStock.MultiplyingTakersCase.multiplying_takers"
+      ],
+      "sha256": "FILLED-BY-KIT"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/RECEIPT_TIMESTAMP/verification.json",
+      "role": "receipt",
+      "sha256": "FILLED-BY-KIT"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/NOTE.md",
+      "role": "integration",
+      "sha256": "FILLED-BY-KIT"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/PAPER.md",
+      "role": "integration",
+      "sha256": "FILLED-BY-KIT"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/readers/1-before-any-lean-six-readers.json",
+      "role": "review",
+      "sha256": "FILLED-BY-KIT"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/readers/2-stage-a-implementer-and-three-readers.json",
+      "role": "review",
+      "sha256": "FILLED-BY-KIT"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/readers/3-course-as-a-web-proposer-and-two-refuters.json",
+      "role": "review",
+      "sha256": "FILLED-BY-KIT"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/readers/4-passes-c-a2-b-three-implementers-five-readers.json",
+      "role": "review",
+      "sha256": "FILLED-BY-KIT"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/readers/5-repair-two-implementers-three-readers.json",
+      "role": "review",
+      "sha256": "FILLED-BY-KIT"
+    },
+    {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/readers/6-last-fixes-implementer-two-verifiers.json",
+      "role": "review",
+      "sha256": "FILLED-BY-KIT"
+    },
+    {
+      "path": "sources/15-codex-theory-conversations/2026-11-13-the-map-one-model.md",
+      "role": "provenance",
+      "sha256": "FILLED-BY-KIT"
+    }
+  ],
+  "proof_bindings": [],
+  "history": [
+    {
+      "en": "16 November 2026, board row DJ, the plan's steps 3 to 7 tried as laws of one model, on Ren's words of 16 November kept in sources (sources/15-codex-theory-conversations/2026-11-13-the-map-one-model.md): added, with TurningInTime extended and WayOfUnits made to rest on the new module. Six readers before any Lean found several candidate laws false or too weak as worded; a first module proved a dozen facts again and joined at definitions only; the course read as a Web with a Flow was refuted as a dictionary; a telling of the lock's law as an overdraw that comes about, a bound twice the true one and need_unmet told without down were found by readers and corrected. The study folder dj-a-line-on-a-stock keeps the readers' reports and the held versions."
+    }
+  ]
+}
