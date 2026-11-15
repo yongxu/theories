@@ -2911,7 +2911,74 @@
   "sources": [
    "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/NOTE.md#r-a-line-on-a-stock"
   ],
-  "standing_without_record": null
+  "standing_without_record": null,
+  "premises": [
+   {
+    "law": "Becoming.LineOnAStock.way_ends",
+    "takes": [
+     "regimemargin-fromnothing",
+     "regimemargin-keeps",
+     "lineonastock-grows",
+     "lineonastock-needs-positive",
+     "lineonastock-down",
+     "regimemargin-start-level-le-hi",
+     "regimemargin-step"
+    ]
+   },
+   {
+    "law": "Becoming.LineOnAStock.need_unmet",
+    "takes": [
+     "regimemargin-fromnothing",
+     "regimemargin-keeps",
+     "lineonastock-grows",
+     "lineonastock-needing",
+     "regimemargin-start-level-le-hi",
+     "lineonastock-start-not-empty",
+     "lineonastock-start-met",
+     "regimemargin-step"
+    ]
+   },
+   {
+    "law": "Becoming.LineOnAStock.falls_to_unmet",
+    "takes": [
+     "regimemargin-fromnothing",
+     "regimemargin-keeps",
+     "lineonastock-grows",
+     "lineonastock-down",
+     "lineonastock-needing",
+     "regimemargin-start-level-le-hi",
+     "lineonastock-start-not-empty",
+     "lineonastock-start-met",
+     "regimemargin-step"
+    ]
+   },
+   {
+    "law": "Becoming.LineOnAStock.line_ends",
+    "takes": [
+     "regimemargin-fromnothing",
+     "regimemargin-keeps",
+     "lineonastock-closed-line",
+     "lineonastock-line-grows",
+     "lineonastock-line-needs-positive",
+     "lineonastock-line-down",
+     "regimemargin-start-level-le-hi",
+     "regimemargin-step"
+    ]
+   },
+   {
+    "law": "Becoming.LineOnAStock.unending_iff_holds",
+    "takes": [
+     "lineonastock-even",
+     "lineonastock-some",
+     "lineonastock-down",
+     "lineonastock-needing",
+     "regimemargin-fromnothing",
+     "regimemargin-start-level-le-hi",
+     "lineonastock-regime-along",
+     "regimemargin-step"
+    ]
+   }
+  ]
  },
  {
   "id": "threshold-in-the-state-plane",

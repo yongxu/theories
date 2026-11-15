@@ -47047,5 +47047,330 @@
   "source": "lister",
   "binders": [],
   "takes_unbound": {}
+ },
+ "Becoming.LineOnAStock.way_ends": {
+  "family": "A",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 7,
+    "name": "nothing",
+    "type": "Becoming.RegimeMargin.FromNothing giving",
+    "premises": [
+     "regimemargin-fromnothing"
+    ]
+   },
+   {
+    "position": 8,
+    "name": "keeps",
+    "type": "Becoming.RegimeMargin.Keeps giving 0 hi",
+    "premises": [
+     "regimemargin-keeps"
+    ]
+   },
+   {
+    "position": 9,
+    "name": "grows",
+    "type": "∀ (u : U), use u < Becoming.LineOnAStock.taken use (kids u)",
+    "premises": [
+     "lineonastock-grows"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "needs",
+    "type": "∀ (u : U), 0 < need u",
+    "premises": [
+     "lineonastock-needs-positive"
+    ]
+   },
+   {
+    "position": 11,
+    "name": "down",
+    "type": "∀ (u v : U), v ∈ kids u → need v ≤ need u",
+    "premises": [
+     "lineonastock-down"
+    ]
+   },
+   {
+    "position": 14,
+    "name": "high",
+    "type": "x ≤ hi",
+    "premises": [
+     "regimemargin-start-level-le-hi"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "regimemargin-step": "definition"
+  }
+ },
+ "Becoming.LineOnAStock.need_unmet": {
+  "family": "A",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 7,
+    "name": "nothing",
+    "type": "Becoming.RegimeMargin.FromNothing giving",
+    "premises": [
+     "regimemargin-fromnothing"
+    ]
+   },
+   {
+    "position": 8,
+    "name": "keeps",
+    "type": "Becoming.RegimeMargin.Keeps giving 0 hi",
+    "premises": [
+     "regimemargin-keeps"
+    ]
+   },
+   {
+    "position": 9,
+    "name": "grows",
+    "type": "∀ (u : U), use u < Becoming.LineOnAStock.taken use (kids u)",
+    "premises": [
+     "lineonastock-grows"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "needs",
+    "type": "Becoming.LineOnAStock.Needing need kids w",
+    "premises": [
+     "lineonastock-needing"
+    ]
+   },
+   {
+    "position": 13,
+    "name": "high",
+    "type": "x ≤ hi",
+    "premises": [
+     "regimemargin-start-level-le-hi"
+    ]
+   },
+   {
+    "position": 14,
+    "name": "ne",
+    "type": "w ≠ []",
+    "premises": [
+     "lineonastock-start-not-empty"
+    ]
+   },
+   {
+    "position": 15,
+    "name": "met",
+    "type": "∀ (u : U), u ∈ w → need u ≤ x",
+    "premises": [
+     "lineonastock-start-met"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "regimemargin-step": "definition"
+  }
+ },
+ "Becoming.LineOnAStock.falls_to_unmet": {
+  "family": "A",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 7,
+    "name": "nothing",
+    "type": "Becoming.RegimeMargin.FromNothing giving",
+    "premises": [
+     "regimemargin-fromnothing"
+    ]
+   },
+   {
+    "position": 8,
+    "name": "keeps",
+    "type": "Becoming.RegimeMargin.Keeps giving 0 hi",
+    "premises": [
+     "regimemargin-keeps"
+    ]
+   },
+   {
+    "position": 9,
+    "name": "grows",
+    "type": "∀ (u : U), use u < Becoming.LineOnAStock.taken use (kids u)",
+    "premises": [
+     "lineonastock-grows"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "down",
+    "type": "∀ (u v : U), v ∈ kids u → need v ≤ need u",
+    "premises": [
+     "lineonastock-down"
+    ]
+   },
+   {
+    "position": 13,
+    "name": "needs",
+    "type": "Becoming.LineOnAStock.Needing need kids w",
+    "premises": [
+     "lineonastock-needing"
+    ]
+   },
+   {
+    "position": 14,
+    "name": "high",
+    "type": "x ≤ hi",
+    "premises": [
+     "regimemargin-start-level-le-hi"
+    ]
+   },
+   {
+    "position": 15,
+    "name": "ne",
+    "type": "w ≠ []",
+    "premises": [
+     "lineonastock-start-not-empty"
+    ]
+   },
+   {
+    "position": 16,
+    "name": "met",
+    "type": "∀ (u : U), u ∈ w → need u ≤ x",
+    "premises": [
+     "lineonastock-start-met"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "regimemargin-step": "definition"
+  }
+ },
+ "Becoming.LineOnAStock.line_ends": {
+  "family": "A",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 9,
+    "name": "nothing",
+    "type": "Becoming.RegimeMargin.FromNothing giving",
+    "premises": [
+     "regimemargin-fromnothing"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "keeps",
+    "type": "Becoming.RegimeMargin.Keeps giving 0 hi",
+    "premises": [
+     "regimemargin-keeps"
+    ]
+   },
+   {
+    "position": 11,
+    "name": "closed",
+    "type": "∀ (u v : U), v ∈ kids u → S v → S u",
+    "premises": [
+     "lineonastock-closed-line"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "grows",
+    "type": "∀ (u : U), S u → use u < Becoming.LineOnAStock.lineTake S use (kids u)",
+    "premises": [
+     "lineonastock-line-grows"
+    ]
+   },
+   {
+    "position": 13,
+    "name": "needs",
+    "type": "∀ (u : U), S u → 0 < need u",
+    "premises": [
+     "lineonastock-line-needs-positive"
+    ]
+   },
+   {
+    "position": 14,
+    "name": "down",
+    "type": "∀ (u v : U), S u → v ∈ kids u → need v ≤ need u",
+    "premises": [
+     "lineonastock-line-down"
+    ]
+   },
+   {
+    "position": 17,
+    "name": "high",
+    "type": "x ≤ hi",
+    "premises": [
+     "regimemargin-start-level-le-hi"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "regimemargin-step": "definition"
+  }
+ },
+ "Becoming.LineOnAStock.unending_iff_holds": {
+  "family": "A",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 10,
+    "name": "even",
+    "type": "∀ (u : U), Becoming.LineOnAStock.taken use (kids u) = use u",
+    "premises": [
+     "lineonastock-even"
+    ]
+   },
+   {
+    "position": 11,
+    "name": "some",
+    "type": "∀ (u : U), kids u ≠ []",
+    "premises": [
+     "lineonastock-some"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "down",
+    "type": "∀ (u v : U), v ∈ kids u → need v ≤ need u",
+    "premises": [
+     "lineonastock-down"
+    ]
+   },
+   {
+    "position": 13,
+    "name": "needs",
+    "type": "Becoming.LineOnAStock.Needing need kids w",
+    "premises": [
+     "lineonastock-needing"
+    ]
+   },
+   {
+    "position": 14,
+    "name": "nothing",
+    "type": "Becoming.RegimeMargin.FromNothing giving",
+    "premises": [
+     "regimemargin-fromnothing"
+    ]
+   },
+   {
+    "position": 15,
+    "name": "high",
+    "type": "x ≤ hi",
+    "premises": [
+     "regimemargin-start-level-le-hi"
+    ]
+   },
+   {
+    "position": 16,
+    "name": "along",
+    "type": "∀ (k : Nat),\n  (∀ (j : Nat), j ≤ k → Becoming.LineOnAStock.Goes need (Becoming.LineOnAStock.course need kids giving use (w, x) j)) →\n    Becoming.LineOnAStock.Regime giving use y hi (Becoming.LineOnAStock.course need kids giving use (w, x) k).fst",
+    "premises": [
+     "lineonastock-regime-along"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "regimemargin-step": "definition"
+  }
  }
 }

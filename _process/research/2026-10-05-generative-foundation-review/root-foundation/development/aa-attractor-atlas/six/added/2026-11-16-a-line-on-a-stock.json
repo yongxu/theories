@@ -1,0 +1,146 @@
+{
+ "family": "A",
+ "note": "AI-written, 16 November 2026. Five theorems of Becoming.LineOnAStock the entry a-line-on-a-stock lists under `premises` (board row DJ): the laws of its exits and its transition, and falls_to_unmet, named in an exit's edge. Binder names as lister.py's aaRow printed them (2026-11-16-a-line-on-a-stock.lister.txt), run once against the scratch build of 16 November (buildR3-1), whose four sources are byte for byte the branch's. Each binder's premises are those the entry lists for the theorem. RegimeMargin.Keeps giving 0 hi, the step under no use keeping the level within hi, is regimemargin-keeps at H := 0. RegimeMargin.step under the net (LineOnAStock.left) is regimemargin-step, taken as a definition, as in TurningInTime's and WayOfUnits' rows.",
+ "laws": {
+  "Becoming.LineOnAStock.way_ends": {
+   "binders": {
+    "nothing": [
+     "regimemargin-fromnothing"
+    ],
+    "keeps": [
+     "regimemargin-keeps"
+    ],
+    "grows": [
+     "lineonastock-grows"
+    ],
+    "needs": [
+     "lineonastock-needs-positive"
+    ],
+    "down": [
+     "lineonastock-down"
+    ],
+    "high": [
+     "regimemargin-start-level-le-hi"
+    ]
+   },
+   "takes_unbound": {
+    "regimemargin-step": "definition"
+   }
+  },
+  "Becoming.LineOnAStock.need_unmet": {
+   "binders": {
+    "nothing": [
+     "regimemargin-fromnothing"
+    ],
+    "keeps": [
+     "regimemargin-keeps"
+    ],
+    "grows": [
+     "lineonastock-grows"
+    ],
+    "needs": [
+     "lineonastock-needing"
+    ],
+    "high": [
+     "regimemargin-start-level-le-hi"
+    ],
+    "ne": [
+     "lineonastock-start-not-empty"
+    ],
+    "met": [
+     "lineonastock-start-met"
+    ]
+   },
+   "takes_unbound": {
+    "regimemargin-step": "definition"
+   }
+  },
+  "Becoming.LineOnAStock.falls_to_unmet": {
+   "binders": {
+    "nothing": [
+     "regimemargin-fromnothing"
+    ],
+    "keeps": [
+     "regimemargin-keeps"
+    ],
+    "grows": [
+     "lineonastock-grows"
+    ],
+    "down": [
+     "lineonastock-down"
+    ],
+    "needs": [
+     "lineonastock-needing"
+    ],
+    "high": [
+     "regimemargin-start-level-le-hi"
+    ],
+    "ne": [
+     "lineonastock-start-not-empty"
+    ],
+    "met": [
+     "lineonastock-start-met"
+    ]
+   },
+   "takes_unbound": {
+    "regimemargin-step": "definition"
+   }
+  },
+  "Becoming.LineOnAStock.line_ends": {
+   "binders": {
+    "nothing": [
+     "regimemargin-fromnothing"
+    ],
+    "keeps": [
+     "regimemargin-keeps"
+    ],
+    "closed": [
+     "lineonastock-closed-line"
+    ],
+    "grows": [
+     "lineonastock-line-grows"
+    ],
+    "needs": [
+     "lineonastock-line-needs-positive"
+    ],
+    "down": [
+     "lineonastock-line-down"
+    ],
+    "high": [
+     "regimemargin-start-level-le-hi"
+    ]
+   },
+   "takes_unbound": {
+    "regimemargin-step": "definition"
+   }
+  },
+  "Becoming.LineOnAStock.unending_iff_holds": {
+   "binders": {
+    "even": [
+     "lineonastock-even"
+    ],
+    "some": [
+     "lineonastock-some"
+    ],
+    "down": [
+     "lineonastock-down"
+    ],
+    "needs": [
+     "lineonastock-needing"
+    ],
+    "nothing": [
+     "regimemargin-fromnothing"
+    ],
+    "high": [
+     "regimemargin-start-level-le-hi"
+    ],
+    "along": [
+     "lineonastock-regime-along"
+    ]
+   },
+   "takes_unbound": {
+    "regimemargin-step": "definition"
+   }
+  }
+ }
+}
