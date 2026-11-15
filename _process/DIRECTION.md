@@ -42,8 +42,7 @@ Three more, untested and offered only so that the idea can be tried on something
 
 Going on along [the plan for the Lean](LEAN-TOWARD-THE-DIRECTION.md), which is the order as it looks now. It holds the table of what a proof says today.
 
-- Landing the small theorem proved in scratch, about a rule that keeps an overdraw going.
-- Turning in time, with a correction that stays in force.
+- Turning in time, with a correction that stays in force. The small theorem before it, about a rule that keeps an overdraw going, landed on 15 November.
 - Whether unequal continuing and alikeness can be stated together.
 - Then what we expect to find missing: how what selects comes to be and changes; losses that never come back to whoever causes them; a case from outside the work.
 
