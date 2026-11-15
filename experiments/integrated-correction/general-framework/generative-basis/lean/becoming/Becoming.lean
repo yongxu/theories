@@ -5036,12 +5036,23 @@ tagged instance or application.
   line from the next configuration never ends (`TurningInTime.unending_iff_first_marked`); from a way of
   a kind every step keeps that uses `H₂`, under `RegimeMargin`'s premises for `H₂` up to `hi`, a
   positive need at most `H₂ + y₂` and the level at most `hi`, the line never ends exactly where the
-  level is at or above `H₂ + y₂` (`TurningInTime.unending_iff_above`); composed, with the way after a
-  marked step of that kind, uses of at least `H₁` along `alone`'s orbit, giving short of `H₁` below `y₁`
-  and the start below `H₁ + y₁` and at most `hi`, the line never ends exactly where there is such a step
-  `T` and the level of the course as it was at `T + 1` is at or above `H₂ + y₂`
-  (`TurningInTime.turns_in_time_iff`). Where at a level that meets the need the way after the step is
-  of another kind, the line under the kind's class ends there while the net goes on
+  level is at or above `H₂ + y₂` (`TurningInTime.unending_iff_above`), the case `c := hi + 1` of a law
+  with the kind kept by every step only at a level from `H₂ + y₂` up to below a positive level `c`,
+  every way's step taking every level from `c` up to `hi` to a level from `c` up to `hi`, and every way
+  the course reaches using at least `H₂` (`TurningInTime.unending_iff_above_kept_below`; with nothing
+  given from nothing and giving short of `H` below `y`, a positive level that a step under a use of at
+  least `H` does not lower is at or above `H + y`, `TurningInTime.held_above`); composed, with the way
+  after a marked step of that kind, uses of at least `H₁` along `alone`'s orbit, giving short of `H₁`
+  below `y₁` and the start below `H₁ + y₁` and at most `hi`, the line never ends exactly where there is
+  such a step `T` and the level of the course as it was at `T + 1` is at or above `H₂ + y₂`
+  (`TurningInTime.turns_in_time_iff`), the case `c := hi + 1` of a law with its premise that every step
+  keeps the kind replaced by those four (kept below `c`, the levels from `c` up to `hi`, the floor on
+  the use, `c` positive) and its premise that the start is at most `hi` replaced by: after every marked
+  step of the course as it was the level is at most `hi` (`TurningInTime.turns_in_time_iff_kept_below`).
+  With `AloneOutside`, decided marks and a way after a marked step of the kept kind, a kind kept by
+  every step at the levels of a band is kept at every level, or every level of the band is marked
+  (`TurningInTime.kept_or_marked`). Where at a level that meets the need the way after the step is of
+  another kind, the line under the kind's class ends there while the net goes on
   (`TurningInTime.kind_ends_while_net_goes`), and with a kind `alone` keeps and some unmarked level that
   meets the need, the kind's class is not constant up to the net's end at that member's class
   (`TurningInTime.kind_not_toEnd_of_turn`, by `«出类不随则本类不至终有常»`). At a need of nothing,
@@ -5067,8 +5078,25 @@ tagged instance or application.
   `Locked` way that uses at least `H` wherever its share and rule are not below the start's, from a
   level below `H + y`, ends `Locked` where the net ends, with no premise on the level's course
   (`TurningInTime.locked_ends_with_net_regime`; on the window, `TurningInTime.locked_ends_on_window`).
-  The start below `H + y` and the floor on the use are given, not derived from the lock.
-  For a level course `X` that never rises and starts at most `hi`, with the feasible courses `X` turned to a standing use `H` at some step, the start included, and what is asked of a course the need met at every step, under nothing given from nothing, `RegimeMargin`'s premises for `H` up to `hi` and a positive need at most `H + y`: `X` is recoverable at `N` exactly where `H + y ≤ X N` (`TurningInTime.recoverable_iff_above`), so its point of no return, a step, is the first step at which its level is below `H + y`, `RegimeMargin`'s point of no return, a level (`TurningInTime.noReturnAt_iff_first_below`). On the pair the level course is the course as it was turned at `T + 1`, for `T` its first marked step (`TurningInTime.course_turned`), and under `turns_in_time_iff`'s premises the line never ends exactly where `T + 1` comes before the point of no return of the course as it was (`TurningInTime.noReturn_exists`, `TurningInTime.turns_in_time_iff_before`); in `Three` that point is step 3 (`TurningInTime.Three.noReturn`), and on the lock's own types a `Locked` start at nine meets every premise of `locked_ends_with_net_regime` and ends `Locked` in four steps, its share left as it is (`TurningInTime.Three.lock_ends`, `TurningInTime.Three.lock_share_stays`) or raised by one at each step (`TurningInTime.Three.rise_orbit`, `TurningInTime.Three.rise_above`, `TurningInTime.Three.rise_lock_ends`). Witness
+  The start below `H + y` and the floor on the use are given, not derived from the lock. Where every
+  step reads and the window's reading gives, at every level in `[N, K)`, a rule of which a given
+  predicate holds, the rule after a step at such a level is one too (`TurningInTime.window_corrected`);
+  so on such a window with `N ≤ H₂ + y₂` and `c ≤ K`, ways whose rule meets the predicate using `H₂`
+  and every way using at least `H₂`, under `RuleCapture.turn_locked`'s premises, from a `Locked` start
+  whose ways with share and rule not below the start's use at least `H₁`, from a level below
+  `H₁ + y₁`, with nothing given from nothing, giving short of `H₁` below `y₁`, `RegimeMargin`'s
+  premises for `H₂` up to `hi`, a positive need at most `H₂ + y₂`, `c` positive, every way's step
+  taking every level from `c` up to `hi` to a level from `c` up to `hi`, and the level after every step
+  of the lock's own course that the window reads at most `hi`: the line never ends exactly where, at the
+  first step of the lock's own course whose level lies in `[N, K)`, the need met there and at every step
+  before, the level one step later is at or above `H₂ + y₂`
+  (`TurningInTime.locked_turns_in_time_on_window_iff`). Given, not derived: that the reading gives such
+  a rule and that every step reads; where the window lies; the floors on the uses; the start below
+  `H₁ + y₁`; the premise on the levels from `c` up to `hi`; the bound on the level after a step the
+  window reads. Nothing is concluded about whether the way that goes on is `Locked`; from one start that
+  is not `Locked` the two sides differ (`TurningInTime.Three.unlocked_goes_on`), with every other
+  premise met there by an argument in its docstring, not a Lean statement.
+  For a level course `X` that never rises and starts at most `hi`, with the feasible courses `X` turned to a standing use `H` at some step, the start included, and what is asked of a course the need met at every step, under nothing given from nothing, `RegimeMargin`'s premises for `H` up to `hi` and a positive need at most `H + y`: `X` is recoverable at `N` exactly where `H + y ≤ X N` (`TurningInTime.recoverable_iff_above`), so its point of no return, a step, is the first step at which its level is below `H + y`, `RegimeMargin`'s point of no return, a level (`TurningInTime.noReturnAt_iff_first_below`). On the pair the level course is the course as it was turned at `T + 1`, for `T` its first marked step (`TurningInTime.course_turned`), and under `turns_in_time_iff`'s premises the line never ends exactly where `T + 1` comes before the point of no return of the course as it was (`TurningInTime.noReturn_exists`, `TurningInTime.turns_in_time_iff_before`); in `Three` that point is step 3 (`TurningInTime.Three.noReturn`), and on the lock's own types a `Locked` start at nine meets every premise of `locked_ends_with_net_regime` and ends `Locked` in four steps, its share left as it is (`TurningInTime.Three.lock_ends`, `TurningInTime.Three.lock_share_stays`) or raised by one at each step (`TurningInTime.Three.rise_orbit`, `TurningInTime.Three.rise_above`, `TurningInTime.Three.rise_lock_ends`); on the lock's own types with a window that gives the rule `false` (`TurningInTime.Three.noRule`), from the way `(3, true, 0)` at nine: read at eight only (`[8, 9)`) the right side of `turns_in_time_iff` holds at `T = 1` and the line ends in five steps (`TurningInTime.Three.read_at_eight_ends`); read from six to below ten, the line never ends from nine and ends from seven, and the kind is not kept at every level (`TurningInTime.Three.read_to_ten`); read from six to below nine, the first step the window reads is step 1, the level then holds at six and the line never ends, the kind not kept at every level (`TurningInTime.Three.held_at_six`); and from the way `(2, true, 0)` at nine, which is not `Locked`, with the window `[6, 8)`, the line never ends and no step of the lock's own course is at a level the window reads (`TurningInTime.Three.unlocked_goes_on`). Witness
   `TurningInTime.Three` (giving `min z (12 - z)`, uses five and three, a need of one, from nine): first
   marked at step 0 or 1 the line never ends, at step 2 it turns and ends and the line under the way's
   class ends while the net goes on, with no marked level it ends as it was. The marks, `AloneOutside`,
