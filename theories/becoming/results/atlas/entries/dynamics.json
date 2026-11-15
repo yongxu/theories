@@ -1998,7 +1998,40 @@
    "Becoming.WayOfUnits.Against.way",
    "Becoming.WayOfUnits.Against.turns_and_ends",
    "Becoming.WayOfUnits.GivenFromNothing.greater_need_fails",
-   "Becoming.WayOfUnits.GivenFromNothing.more_use_fails"
+   "Becoming.WayOfUnits.GivenFromNothing.more_use_fails",
+   "Becoming.TurningInTime.rises_from",
+   "Becoming.TurningInTime.kept_within",
+   "Becoming.TurningInTime.rising_takes_all",
+   "Becoming.TurningInTime.rising_meets_level",
+   "Becoming.TurningInTime.ends_with_net_rising",
+   "Becoming.TurningInTime.locked_ends_rising",
+   "Becoming.TurningInTime.count_rises",
+   "Becoming.TurningInTime.windowAfterShare",
+   "Becoming.TurningInTime.window_share_alone_outside",
+   "Becoming.TurningInTime.windowAfter_every_is_share",
+   "Becoming.TurningInTime.locked_turns_in_time_share_iff",
+   "Becoming.TurningInTime.share_corrected_stays",
+   "Becoming.TurningInTime.share_corrected_on_course",
+   "Becoming.TurningInTime.Three.drawerUse",
+   "Becoming.TurningInTime.Three.rise_count_ends",
+   "Becoming.TurningInTime.Three.zeroShare",
+   "Becoming.TurningInTime.Three.share_read_goes_on",
+   "Becoming.WayOfUnits.cond_single",
+   "Becoming.WayOfUnits.after_unit",
+   "Becoming.WayOfUnits.taken_unit",
+   "Becoming.WayOfUnits.step_unit",
+   "Becoming.WayOfUnits.orbit_congr",
+   "Becoming.WayOfUnits.course_unit",
+   "Becoming.WayOfUnits.net_unit",
+   "Becoming.WayOfUnits.unending_unit",
+   "Becoming.WayOfUnits.allKids_unit",
+   "Becoming.WayOfUnits.generation_unit",
+   "Becoming.WayOfUnits.needing_unit",
+   "Becoming.WayOfUnits.holds_unit",
+   "Becoming.WayOfUnits.regime_unit",
+   "Becoming.WayOfUnits.along_unit",
+   "Becoming.WayOfUnits.down_unit",
+   "Becoming.WayOfUnits.unending_taken_below"
   ],
   "base": "any type",
   "hypotheses": [
@@ -2404,6 +2437,14 @@
      "regimemargin-start-level-le-hi",
      "wayofunits-regime-along",
      "regimemargin-step"
+    ],
+    "case_of": [
+     {
+      "law": "Becoming.LineOnAStock.unending_iff_holds",
+      "how": {
+       "en": "The general law at kids u = [u] on units of two numbers, through the bridge in WayOfUnits (course_unit, net_unit, unending_unit, holds_unit, regime_unit): its even and some hold since each unit's one kid is itself, its down by down_unit, its Needing from every unit of the start needing something (needing_unit), its regime along the course from this law's (along_unit). The statement is unchanged."
+      }
+     }
     ]
    },
    {
@@ -2511,6 +2552,366 @@
     "takes": []
    }
   ]
+ },
+ {
+  "id": "a-line-on-a-stock",
+  "name": {
+   "en": "A line on a stock: units that leave offspring on a renewed level",
+   "zh": "存量上的一条线：在更新的水位上留下后代的单元"
+  },
+  "family": "A",
+  "mechanism": {
+   "en": "A configuration is a way, a list of units each with a need, a use and the units it leaves, and a level. After a step each unit whose need the level meets leaves its kids and the others leave nothing; the level is the regime's step under what the units present take together; there is a next while some need is met. The way reads the level only through which needs it meets, and the level reads the way only through what it takes: with no premise on the stock, two courses from one way whose levels meet the same needs step by step have the same ways and the same number born. With nothing given from nothing, the step under no use keeping the level within hi, kids taking more than their parent, every descendant needing something and a start not empty, at most hi, with every need met, a first unmet need comes within hi + 1 steps, the way until then the generation of descent; with kids needing no more than their parent the level there is below a need the start met, and with positive needs the net ends. Where kids take exactly what their parent takes, under the regime along the course, the net never ends exactly where its course comes to a configuration that holds; WayOfUnits is the case of units leaving themselves. The needs, uses and offspring, the cap and the regime are given."
+  },
+  "records": [
+   "a-line-on-a-stock"
+  ],
+  "declarations": [
+   "Becoming.LineOnAStock.after",
+   "Becoming.LineOnAStock.taken",
+   "Becoming.LineOnAStock.left",
+   "Becoming.LineOnAStock.Goes",
+   "Becoming.LineOnAStock.step",
+   "Becoming.LineOnAStock.net",
+   "Becoming.LineOnAStock.course",
+   "Becoming.LineOnAStock.allKids",
+   "Becoming.LineOnAStock.generation",
+   "Becoming.LineOnAStock.lineTake",
+   "Becoming.LineOnAStock.lineCount",
+   "Becoming.LineOnAStock.Holds",
+   "Becoming.LineOnAStock.Regime",
+   "Becoming.LineOnAStock.Needing",
+   "Becoming.LineOnAStock.mem_cond",
+   "Becoming.LineOnAStock.mem_cond_of",
+   "Becoming.LineOnAStock.decide_le_congr",
+   "Becoming.LineOnAStock.ite_le",
+   "Becoming.LineOnAStock.lineTake_le_taken",
+   "Becoming.LineOnAStock.lineTake_append",
+   "Becoming.LineOnAStock.lineCount_pos",
+   "Becoming.LineOnAStock.line_or_none",
+   "Becoming.LineOnAStock.met_or_unmet",
+   "Becoming.LineOnAStock.anyMet",
+   "Becoming.LineOnAStock.anyMet_iff",
+   "Becoming.LineOnAStock.goesDecidable",
+   "Becoming.LineOnAStock.mem_of_ne_nil",
+   "Becoming.LineOnAStock.strong_below",
+   "Becoming.LineOnAStock.after_flatMap",
+   "Becoming.LineOnAStock.mem_after_iff",
+   "Becoming.LineOnAStock.after_alike",
+   "Becoming.LineOnAStock.after_append",
+   "Becoming.LineOnAStock.left_of_taken",
+   "Becoming.LineOnAStock.after_of_met",
+   "Becoming.LineOnAStock.allKids_flatMap",
+   "Becoming.LineOnAStock.mem_allKids_iff",
+   "Becoming.LineOnAStock.generation_orbit",
+   "Becoming.LineOnAStock.generation_mem",
+   "Becoming.LineOnAStock.generation_below",
+   "Becoming.LineOnAStock.generation_ancestor",
+   "Becoming.LineOnAStock.mem_generation",
+   "Becoming.LineOnAStock.Alike",
+   "Becoming.LineOnAStock.alike_of_met",
+   "Becoming.LineOnAStock.block_le",
+   "Becoming.LineOnAStock.block_lt",
+   "Becoming.LineOnAStock.after_length_le",
+   "Becoming.LineOnAStock.after_length_lt",
+   "Becoming.LineOnAStock.met_of_alike_le",
+   "Becoming.LineOnAStock.alike_iff",
+   "Becoming.LineOnAStock.need_in_after",
+   "Becoming.LineOnAStock.needs_after_iff",
+   "Becoming.LineOnAStock.needs_kept",
+   "Becoming.LineOnAStock.ways_alike",
+   "Becoming.LineOnAStock.generations",
+   "Becoming.LineOnAStock.family_eq",
+   "Becoming.LineOnAStock.born_eq_length",
+   "Becoming.LineOnAStock.born_alike",
+   "Becoming.LineOnAStock.draw_rises",
+   "Becoming.LineOnAStock.rise",
+   "Becoming.LineOnAStock.draw_holds",
+   "Becoming.LineOnAStock.line_from_line",
+   "Becoming.LineOnAStock.none_after",
+   "Becoming.LineOnAStock.never_in",
+   "Becoming.LineOnAStock.gone_from",
+   "Becoming.LineOnAStock.gone_after",
+   "Becoming.LineOnAStock.step_zero",
+   "Becoming.LineOnAStock.step_overdrawn",
+   "Becoming.LineOnAStock.step_lowers",
+   "Becoming.LineOnAStock.fall_low",
+   "Becoming.LineOnAStock.fall_from",
+   "Becoming.LineOnAStock.fall",
+   "Becoming.LineOnAStock.Below",
+   "Becoming.LineOnAStock.NoneMet",
+   "Becoming.LineOnAStock.below_after",
+   "Becoming.LineOnAStock.below_keeps",
+   "Becoming.LineOnAStock.Ends",
+   "Becoming.LineOnAStock.none_shift",
+   "Becoming.LineOnAStock.ends_low",
+   "Becoming.LineOnAStock.ends_high",
+   "Becoming.LineOnAStock.ends_all",
+   "Becoming.LineOnAStock.line_ends",
+   "Becoming.LineOnAStock.lineTake_true",
+   "Becoming.LineOnAStock.way_ends",
+   "Becoming.LineOnAStock.kids_of_grows",
+   "Becoming.LineOnAStock.course_asItWas",
+   "Becoming.LineOnAStock.way_while_met",
+   "Becoming.LineOnAStock.allKids_rises",
+   "Becoming.LineOnAStock.generations_rise",
+   "Becoming.LineOnAStock.need_unmet",
+   "Becoming.LineOnAStock.falls_to_unmet",
+   "Becoming.LineOnAStock.one_need_ends",
+   "Becoming.LineOnAStock.taken_allKids",
+   "Becoming.LineOnAStock.taken_generation",
+   "Becoming.LineOnAStock.course_generation",
+   "Becoming.LineOnAStock.within_along",
+   "Becoming.LineOnAStock.reaches_from",
+   "Becoming.LineOnAStock.reaches_holds",
+   "Becoming.LineOnAStock.unending_iff_holds",
+   "Becoming.LineOnAStock.taken_below",
+   "Becoming.LineOnAStock.unending_taken_below",
+   "Becoming.LineOnAStock.account",
+   "Becoming.LineOnAStock.account_unending",
+   "Becoming.LineOnAStock.course_fixed",
+   "Becoming.LineOnAStock.unending_of_fixed",
+   "Becoming.LineOnAStock.strip",
+   "Becoming.LineOnAStock.strip_pos",
+   "Becoming.LineOnAStock.strip_neg",
+   "Becoming.LineOnAStock.strip_append",
+   "Becoming.LineOnAStock.strip_all",
+   "Becoming.LineOnAStock.strip_strip",
+   "Becoming.LineOnAStock.taken_strip",
+   "Becoming.LineOnAStock.strip_after",
+   "Becoming.LineOnAStock.strip_course",
+   "Becoming.LineOnAStock.takes_nothing",
+   "Becoming.LineOnAStock.hump10",
+   "Becoming.LineOnAStock.nothingGiven",
+   "Becoming.LineOnAStock.KidsNeedMore.Kind",
+   "Becoming.LineOnAStock.KidsNeedMore.need",
+   "Becoming.LineOnAStock.KidsNeedMore.use",
+   "Becoming.LineOnAStock.KidsNeedMore.kids",
+   "Becoming.LineOnAStock.KidsNeedMore.fixed",
+   "Becoming.LineOnAStock.KidsNeedMore.all_but_down",
+   "Becoming.LineOnAStock.KidHigherNeed.Kind",
+   "Becoming.LineOnAStock.KidHigherNeed.need",
+   "Becoming.LineOnAStock.KidHigherNeed.use",
+   "Becoming.LineOnAStock.KidHigherNeed.kids",
+   "Becoming.LineOnAStock.KidHigherNeed.all_but_down",
+   "Becoming.LineOnAStock.EqualInPlaceOfMore.need",
+   "Becoming.LineOnAStock.EqualInPlaceOfMore.use",
+   "Becoming.LineOnAStock.EqualInPlaceOfMore.kids",
+   "Becoming.LineOnAStock.EqualInPlaceOfMore.all_but_grows",
+   "Becoming.LineOnAStock.EqualInPlaceOfMore.holds_by_law",
+   "Becoming.LineOnAStock.TwoForOne.Kind",
+   "Becoming.LineOnAStock.TwoForOne.need",
+   "Becoming.LineOnAStock.TwoForOne.use",
+   "Becoming.LineOnAStock.TwoForOne.kids",
+   "Becoming.LineOnAStock.TwoForOne.holds_by_law",
+   "Becoming.LineOnAStock.ShareRises.Kind",
+   "Becoming.LineOnAStock.ShareRises.need",
+   "Becoming.LineOnAStock.ShareRises.use",
+   "Becoming.LineOnAStock.ShareRises.kids",
+   "Becoming.LineOnAStock.ShareRises.isC",
+   "Becoming.LineOnAStock.ShareRises.course_values",
+   "Becoming.LineOnAStock.ShareRises.goes_on",
+   "Becoming.LineOnAStock.Doubling.need",
+   "Becoming.LineOnAStock.Doubling.use",
+   "Becoming.LineOnAStock.Doubling.kids",
+   "Becoming.LineOnAStock.Doubling.course_values",
+   "Becoming.LineOnAStock.Doubling.ends_by_law",
+   "Becoming.LineOnAStock.Doubling.unmet_by_law",
+   "Becoming.LineOnAStock.HigherStartEnds.Kind",
+   "Becoming.LineOnAStock.HigherStartEnds.need",
+   "Becoming.LineOnAStock.HigherStartEnds.use",
+   "Becoming.LineOnAStock.HigherStartEnds.kids",
+   "Becoming.LineOnAStock.HigherStartEnds.from_six",
+   "Becoming.LineOnAStock.HigherStartEnds.from_seven",
+   "Becoming.LineOnAStock.HigherStartEnds.higher_ends",
+   "Becoming.LineOnAStock.NoKids.need",
+   "Becoming.LineOnAStock.NoKids.use",
+   "Becoming.LineOnAStock.NoKids.kids",
+   "Becoming.LineOnAStock.NoKids.ends_met",
+   "Becoming.LineOnAStock.Overdrawn.need",
+   "Becoming.LineOnAStock.Overdrawn.use",
+   "Becoming.LineOnAStock.Overdrawn.kids",
+   "Becoming.LineOnAStock.Overdrawn.short",
+   "Becoming.LineOnAStock.Overdrawn.gone",
+   "Becoming.LineOnAStock.ProperLine.Kind",
+   "Becoming.LineOnAStock.ProperLine.need",
+   "Becoming.LineOnAStock.ProperLine.use",
+   "Becoming.LineOnAStock.ProperLine.kids",
+   "Becoming.LineOnAStock.ProperLine.isD",
+   "Becoming.LineOnAStock.ProperLine.gone",
+   "Becoming.LineOnAStock.AlikeFiner.Kind",
+   "Becoming.LineOnAStock.AlikeFiner.need",
+   "Becoming.LineOnAStock.AlikeFiner.kids",
+   "Becoming.LineOnAStock.AlikeFiner.alike_not_met",
+   "Becoming.LineOnAStock.TakesNothing.Kind",
+   "Becoming.LineOnAStock.TakesNothing.need",
+   "Becoming.LineOnAStock.TakesNothing.use",
+   "Becoming.LineOnAStock.TakesNothing.kids",
+   "Becoming.LineOnAStock.TakesNothing.isC",
+   "Becoming.LineOnAStock.TakesNothing.lost",
+   "Becoming.LineOnAStock.NothingTakenEnds.Kind",
+   "Becoming.LineOnAStock.NothingTakenEnds.need",
+   "Becoming.LineOnAStock.NothingTakenEnds.use",
+   "Becoming.LineOnAStock.NothingTakenEnds.kids",
+   "Becoming.LineOnAStock.NothingTakenEnds.isC",
+   "Becoming.LineOnAStock.NothingTakenEnds.ending_differs",
+   "Becoming.LineOnAStock.MultiplyingTakersCase.late",
+   "Becoming.LineOnAStock.MultiplyingTakersCase.family_late",
+   "Becoming.LineOnAStock.MultiplyingTakersCase.agree",
+   "Becoming.LineOnAStock.MultiplyingTakersCase.multiplying_takers",
+   "Becoming.LineOnAStock.DrainCase.Kind",
+   "Becoming.LineOnAStock.DrainCase.need",
+   "Becoming.LineOnAStock.DrainCase.use",
+   "Becoming.LineOnAStock.DrainCase.kids",
+   "Becoming.LineOnAStock.DrainCase.gift",
+   "Becoming.LineOnAStock.DrainCase.isD",
+   "Becoming.LineOnAStock.DrainCase.late",
+   "Becoming.LineOnAStock.DrainCase.gift_eq",
+   "Becoming.LineOnAStock.DrainCase.need_agrees",
+   "Becoming.LineOnAStock.DrainCase.empty_of",
+   "Becoming.LineOnAStock.DrainCase.drain"
+  ],
+  "base": "any type",
+  "hypotheses": [
+   {
+    "record": "a-line-on-a-stock",
+    "index": 1
+   },
+   {
+    "record": "a-line-on-a-stock",
+    "index": 2
+   },
+   {
+    "record": "a-line-on-a-stock",
+    "index": 3
+   },
+   {
+    "record": "a-line-on-a-stock",
+    "index": 4
+   },
+   {
+    "record": "a-line-on-a-stock",
+    "index": 5
+   },
+   {
+    "record": "a-line-on-a-stock",
+    "index": 6
+   },
+   {
+    "record": "a-line-on-a-stock",
+    "index": 7
+   },
+   {
+    "record": "a-line-on-a-stock",
+    "index": 8
+   }
+  ],
+  "forbids": {
+   "en": "Under way_ends' premises, a net that never ends. Under need_unmet's premises, every need met at every step from 1 to hi + 1. Under unending_iff_holds' premises, a net that never ends whose course never comes to a configuration that holds, and one that ends where it comes to one. Under ways_alike's premise, two courses from one way whose ways differ up to that step."
+  },
+  "exits": [
+   {
+    "to": {
+     "en": "the net ends: at some step no need is met, with no bound on the step; within hi + 1 steps where every unit needs the same positive amount"
+    },
+    "law": "Becoming.LineOnAStock.way_ends",
+    "edge": {
+     "en": "With nothing given from nothing, the step under no use keeping every level up to hi within hi, a start at most hi, and, of every unit, kids taking more than it, a positive need and kids needing no more than it, the net does not go on for ever (way_ends; one_need_ends gives the bound hi + 1 in a world of one need). Without kids needing no more, or with kids taking the same in place of more, it can go on (KidsNeedMore, EqualInPlaceOfMore)."
+    },
+    "strength": "sufficient",
+    "records": [
+     "a-line-on-a-stock"
+    ],
+    "source": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/NOTE.md#r-a-line-on-a-stock"
+   },
+   {
+    "to": {
+     "en": "a first unmet need within hi + 1 steps, the way until then the generation of descent; with kids needing no more than their parent, the level there below a need the start met and below the start level"
+    },
+    "law": "Becoming.LineOnAStock.need_unmet",
+    "edge": {
+     "en": "With nothing given from nothing, the cap, kids taking more than their parent, every descendant of the start's way needing something and a start not empty, at most hi, with every need met: some need is unmet at a step from 1 to hi + 1 (need_unmet), not concluding that the level fell or that the net ends; with down as well, the level there is below a need the start met (falls_to_unmet). Without down the unmet need can be a kid's greater need at a level that has not fallen (KidHigherNeed)."
+    },
+    "strength": "sufficient",
+    "records": [
+     "a-line-on-a-stock"
+    ],
+    "source": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/NOTE.md#r-a-line-on-a-stock"
+   },
+   {
+    "to": {
+     "en": "a closed line is gone from the way from some step on, and what is gone does not come back"
+    },
+    "law": "Becoming.LineOnAStock.line_ends",
+    "edge": {
+     "en": "With nothing given from nothing, the cap and a start at most hi, a line no unit outside which leaves a unit of it, whose units' kids in it take more, need something and need no more than their parent, is gone from some step on (line_ends), and stays gone (gone_from). With kids taking no less, one need m, giving at nothing below m and what the line takes at the start more than every giving, the same holds with no cap asked (fall)."
+    },
+    "strength": "sufficient",
+    "records": [
+     "a-line-on-a-stock"
+    ],
+    "source": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/NOTE.md#r-a-line-on-a-stock"
+   }
+  ],
+  "transitions": [
+   {
+    "kind": "exact threshold",
+    "condition": {
+     "en": "Where kids take exactly what their parent takes, every unit has kids, kids need no more than their parent, every descendant needs something, nothing is given from nothing, the start is at most hi and the regime holds at every way the course reaches with some need met there and before: the net never ends exactly where, some need met at every step before, the course comes to a configuration that holds, a way not empty, every need in it met, the level at or above what it takes and y of that."
+    },
+    "declarations": [
+     "Becoming.LineOnAStock.unending_iff_holds",
+     "Becoming.LineOnAStock.Holds",
+     "Becoming.LineOnAStock.Regime"
+    ],
+    "records": [
+     "a-line-on-a-stock"
+    ],
+    "between": {
+     "from": {
+      "en": "the course never comes, some need met at every step before, to a configuration that holds: the net ends"
+     },
+     "to": {
+      "en": "it comes to one: the net never ends"
+     }
+    }
+   }
+  ],
+  "tests": [],
+  "open": [
+   {
+    "en": "Needs, uses and offspring come with the carrier: nothing makes a new kind or changes kids, and no reader of the fall forms because of the fall, so the open item of 01-ROOT on how a difference comes to make a difference is not closed.",
+    "source": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/NOTE.md#r-a-line-on-a-stock"
+   },
+   {
+    "en": "No exact condition for a way whose kids take more, or less, never ending; with one way, whether the net ends is not monotone in the start level (HigherStartEnds).",
+    "source": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/NOTE.md#r-a-line-on-a-stock"
+   },
+   {
+    "en": "unending_iff_holds asks the regime along the course, as WayOfUnits did.",
+    "source": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/NOTE.md#r-a-line-on-a-stock"
+   },
+   {
+    "en": "The alikeness laws hold with no stock; they and the stock meet in need_unmet and falls_to_unmet only through every need met, not through after_alike. line_ends and way_ends argue the rising take against the cap again; only need_unmet and what rests on it rest on TurningInTime.rising_takes_all.",
+    "source": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/NOTE.md#r-a-line-on-a-stock"
+   },
+   {
+    "en": "The course read as a Web with a Flow is a dictionary: under balance each one-step Flow premise is its conclusion again. A fold is owed when Continuation is next open.",
+    "source": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/NOTE.md#r-a-line-on-a-stock"
+   },
+   {
+    "en": "A share that falls under the corrected rule, a reading at some steps only, and ReadingsSpread.Commons as a course of this model are not tried.",
+    "source": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/NOTE.md#r-a-line-on-a-stock"
+   }
+  ],
+  "valence": "none asserted",
+  "beyond": {
+   "en": "The level between the needs of a way: two levels that meet the same needs leave the same next way, so how much is left above the needs met makes no difference to the way after the step, while it still enters the level after it."
+  },
+  "sources": [
+   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/NOTE.md#r-a-line-on-a-stock"
+  ],
+  "standing_without_record": null
  },
  {
   "id": "threshold-in-the-state-plane",
