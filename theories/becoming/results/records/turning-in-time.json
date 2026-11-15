@@ -716,7 +716,7 @@
         "Becoming.TurningInTime.turns_in_time_iff_before",
         "Becoming.TurningInTime.Three.noReturn"
       ],
-      "sha256": "a03bcaebcd89205328b7c71f322600dc69de80438222063a7349a7e7bd6f7083"
+      "sha256": "e4d3b015767a40ca83cad6147e74d2a6e66269b97ba09dd236ad756a8106be62"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261113T133009.897615Z/verification.json",
@@ -757,12 +757,18 @@
       "path": "sources/15-codex-theory-conversations/2026-11-12-where-we-are-and-the-loop.md",
       "role": "provenance",
       "sha256": "e4178180f019a8b3911d07cf186d1454d9c674c088bfddb266d766b8fe58684d"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261115T033911.021704Z/verification.json",
+      "role": "receipt",
+      "sha256": "9f128a3410b64620eaf06cc3e8af745d0f78fb7577367f8b26dde130c5b38a92",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261113T133009.897615Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261115T033911.021704Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.TurningInTime",
       "success_pointer": "/status",
       "success_value": "passed"
