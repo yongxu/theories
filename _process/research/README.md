@@ -115,7 +115,7 @@ Studies retired as a whole are under [`_process/history/`](../history/):
 | `2026-11-04-instructions/` | 2 |
 | `2026-11-09-instructions/` | 4 |
 | `2026-11-13-instructions/` | 2 |
-| `2026-11-16-instructions/` | 1 |
+| `2026-11-16-instructions/` | 2 |
 | `workboard/` | 1 |
 | `worktree-salvage-2026-10-18/` | 391 |
 
