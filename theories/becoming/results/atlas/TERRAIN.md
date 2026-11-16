@@ -14,7 +14,7 @@ The atlas's views: [the atlas](ATLAS.md) · [the premise ledger](PREMISES.md) ·
 
 ## A. Absorption and ending
 
-30 dynamics, 44 exits.
+31 dynamics, 47 exits.
 
 ```mermaid
 flowchart LR
@@ -28,28 +28,29 @@ flowchart LR
   n7["Three outcomes of a loss: restored, transformed, or ended…"]
   n8["The point of no return of a regime"]
   n9["A line that ends where the net ends, or while the net goes…"]
-  n10["One law of exact thresholds, and the threshold in the plane…"]
-  n11["The exit from a margin"]
-  n12["Consumption ends with its feeders"]
-  n13["A consumer that switches stays consuming, on the whole-run…"]
-  n14["An end cascading along total dependence"]
-  n15["Beyond a band, support can sustain a cycle"]:::other
-  n16["Co-ending along dependence"]
-  n17["A whole of every part ends with one part' the grade between…"]
-  n18["A confined rise within a whole"]
-  n19["Ending laws as regimes on a lineage"]
-  n20["The ends of drift absorb' fixation, with and without…"]
-  n21["The ends of a rule rebuilt from its members: no holder, and…"]
-  n22["A reader rebuilt from the level it reads: its end does not…"]
-  n23["What ungated steps keep' an empty pool stays empty"]
-  n24["Groups with less leave nothing' groups on one family end…"]
-  n25["Draining: below a drained level no history lasts"]
-  n26["Never leaving a guard, conditions kept together, and lasting"]:::other
-  n27["Four routes of transition, none a proved phase transition"]
-  n28["Slowing down before a condition's own end"]
-  n29["A reserve defers the end"]
-  n30["Dormancy over a stretch, and an ending that is final"]
-  n31["The market model's share, margin and ends"]
+  n10["A line on a stock: units that leave offspring on a renewed…"]
+  n11["One law of exact thresholds, and the threshold in the plane…"]
+  n12["The exit from a margin"]
+  n13["Consumption ends with its feeders"]
+  n14["A consumer that switches stays consuming, on the whole-run…"]
+  n15["An end cascading along total dependence"]
+  n16["Beyond a band, support can sustain a cycle"]:::other
+  n17["Co-ending along dependence"]
+  n18["A whole of every part ends with one part' the grade between…"]
+  n19["A confined rise within a whole"]
+  n20["Ending laws as regimes on a lineage"]
+  n21["The ends of drift absorb' fixation, with and without…"]
+  n22["The ends of a rule rebuilt from its members: no holder, and…"]
+  n23["A reader rebuilt from the level it reads: its end does not…"]
+  n24["What ungated steps keep' an empty pool stays empty"]
+  n25["Groups with less leave nothing' groups on one family end…"]
+  n26["Draining: below a drained level no history lasts"]
+  n27["Never leaving a guard, conditions kept together, and lasting"]:::other
+  n28["Four routes of transition, none a proved phase transition"]
+  n29["Slowing down before a condition's own end"]
+  n30["A reserve defers the end"]
+  n31["Dormancy over a stretch, and an ending that is final"]
+  n32["The market model's share, margin and ends"]
   e1(["outside the region R at step n + 1 from inside it at step n: the move…"])
   n0 -.->|necessary| e1
   e2(["a witness: in Exit…"])
@@ -83,56 +84,62 @@ flowchart LR
   n9 -->|sufficient| e15
   e16(["from the level nine, first marked at six: the way turns with two…"])
   n9 -.->|witness| e16
-  e17(["from a level up to hi at or above the threshold for its recent…"])
-  n10 ==>|exact| e17
-  e18(["some formation supported at a step t from T before T + n feeds g's…"])
-  n12 -.->|necessary| e18
-  e19(["a witness: with either of two redundant feeders, or both, the…"])
-  n12 -.->|witness| e19
-  e20(["a witness on a separate flow: with Overshoot's dependences, each…"])
-  n12 -.->|witness| e20
-  n12 -->|sufficient| n13
-  e21(["where the consumer consumes through no dependence that such a change…"])
-  n13 ==>|exact| e21
-  e22(["a witness: a lone formation consuming only through its own dependence…"])
+  e17(["the net ends: at some step no need is met, with no bound on the step'…"])
+  n10 -->|sufficient| e17
+  e18(["a first unmet need within hi + 1 steps, the way until then the…"])
+  n10 -->|sufficient| e18
+  e19(["a closed line is gone from the way from some step on, and what is…"])
+  n10 -->|sufficient| e19
+  e20(["from a level up to hi at or above the threshold for its recent…"])
+  n11 ==>|exact| e20
+  e21(["some formation supported at a step t from T before T + n feeds g's…"])
+  n13 -.->|necessary| e21
+  e22(["a witness: with either of two redundant feeders, or both, the…"])
   n13 -.->|witness| e22
-  e23(["a witness: with no draw on the middle condition of a three-link…"])
-  n14 -.->|witness| e23
-  e24(["a witness of mutual support: from level two the first condition ends…"])
-  n14 -.->|witness| e24
-  n14 -.->|witness| n15
-  e25(["a witness with a recent giving: one condition under a draw of two…"])
+  e23(["a witness on a separate flow: with Overshoot's dependences, each…"])
+  n13 -.->|witness| e23
+  n13 -->|sufficient| n14
+  e24(["where the consumer consumes through no dependence that such a change…"])
+  n14 ==>|exact| e24
+  e25(["a witness: a lone formation consuming only through its own dependence…"])
   n14 -.->|witness| e25
-  e26(["a whole of every part active at every step from T on, exactly where…"])
-  n17 ==>|exact| e26
-  e27(["a witness: in Generations, a formation that is the whole of every…"])
-  n17 -.->|witness| e27
-  e28(["a witness: in Body, the spreading lineage, whose descendant needs…"])
-  n18 -.->|witness| e28
-  e29(["a witness: from the same stock s ≥ 1, a relay never in excess and…"])
-  n19 -.->|witness| e29
-  e30(["a witness: a renewer giving two units at every step and requiring…"])
-  n19 -.->|witness| e30
-  e31(["a witness without the gate: the renewer's own line, giving to the…"])
+  e26(["a witness: with no draw on the middle condition of a three-link…"])
+  n15 -.->|witness| e26
+  e27(["a witness of mutual support: from level two the first condition ends…"])
+  n15 -.->|witness| e27
+  n15 -.->|witness| n16
+  e28(["a witness with a recent giving: one condition under a draw of two…"])
+  n15 -.->|witness| e28
+  e29(["a whole of every part active at every step from T on, exactly where…"])
+  n18 ==>|exact| e29
+  e30(["a witness: in Generations, a formation that is the whole of every…"])
+  n18 -.->|witness| e30
+  e31(["a witness: in Body, the spreading lineage, whose descendant needs…"])
   n19 -.->|witness| e31
-  e32(["a witness: without dissipation, a lossless relay keeps a lineage of…"])
-  n19 -.->|witness| e32
-  e33(["another rule of the family: from no holder and no other, at a quota…"])
-  n21 -->|sufficient| e33
-  e34(["another rule of the family: a reader rebuilt from the supply, at…"])
-  n22 -->|sufficient| e34
-  e35(["the course contains a gated move: some move a of the plan has gate a…"])
-  n23 -.->|necessary| e35
-  e36(["the course splits into a prefix that keeps the quantity, a gated step…"])
-  n23 -.->|necessary| e36
-  n25 -->|sufficient| n26
-  n25 ==>|exact| n26
-  e37(["a witness: a formation unsupported at the first three steps and…"])
-  n30 -.->|witness| e37
-  e38(["where the margin M = α(1 − θ) − βλθ is negative, the floor is not…"])
-  n31 ==>|exact| e38
-  e39(["a witness: in the original example at β = 1/2 with no shocks, from…"])
-  n31 -.->|witness| e39
+  e32(["a witness: from the same stock s ≥ 1, a relay never in excess and…"])
+  n20 -.->|witness| e32
+  e33(["a witness: a renewer giving two units at every step and requiring…"])
+  n20 -.->|witness| e33
+  e34(["a witness without the gate: the renewer's own line, giving to the…"])
+  n20 -.->|witness| e34
+  e35(["a witness: without dissipation, a lossless relay keeps a lineage of…"])
+  n20 -.->|witness| e35
+  e36(["another rule of the family: from no holder and no other, at a quota…"])
+  n22 -->|sufficient| e36
+  e37(["another rule of the family: a reader rebuilt from the supply, at…"])
+  n23 -->|sufficient| e37
+  e38(["the course contains a gated move: some move a of the plan has gate a…"])
+  n24 -.->|necessary| e38
+  e39(["the course splits into a prefix that keeps the quantity, a gated step…"])
+  n24 -.->|necessary| e39
+  n26 -->|sufficient| n27
+  n26 ==>|exact| n27
+  e40(["a witness: a formation unsupported at the first three steps and…"])
+  n31 -.->|witness| e40
+  e41(["where the margin M = α(1 − θ) − βλθ is negative, the floor is not…"])
+  n32 ==>|exact| e41
+  e42(["a witness: in the original example at β = 1/2 with no shocks, from…"])
+  n32 -.->|witness| e42
   classDef other stroke-dasharray: 3 3
 ```
 
@@ -148,6 +155,7 @@ flowchart LR
 | [Three outcomes of a loss: restored, transformed, or ended where dependence is fixed](families/a.md#three-outcomes-of-a-loss) | 1. the condition meets g's earlier need at t (W.need T g c ≤ W.level t c): where g is active at t with a dependence on c at least as strong as at T, the loss is restored at t (necessary; dropping [the level stays below the need](premises/a.md#web-below-need-after))<br>2. at every step t after T at which g is still active, g no longer requires c at a need at least its need at T: its dependence on c has weakened or dissolved (¬ (W.requires t g c ∧ W.need T g c ≤ W.need t g c)) (necessary; dropping [dependence fixed after T](premises/a.md#web-fixed-after))<br>3. a witness: from one configuration of one process, three runs break the same dependence at the first step, read at the step's start: in one the formation ends and the loss is lost; in one the dependence dissolves as one on a second condition forms, the formation stays active and the loss is lost; in one the formation waits, the condition is renewed, and the dependence is kept again from step 2 (witness) | — |
 | [The point of no return of a regime](families/a.md#margin-of-a-regime) | 1. from a start level up to hi, the condition ends (its level is 0 at some step) exactly where the start is below H + y: from H + y up to hi it never ends (exact)<br>2. a witness with giving that adjusts one unit a step toward the regime's (Adjusted.Between and Settles): from level 4 with recent giving 6 the level is at least 7 from the second step on, and from level 5 with recent giving 0 it is 0 from the second step on, where the regime's own step ends the condition from 4 and holds it from 5 (witness; dropping [the regime's step](premises/a.md#regimemargin-step)) | — |
 | [A line that ends where the net ends, or while the net goes on](families/a.md#turning-in-time) | 1. the line reaches, within as many steps as its starting level, a configuration that conditions nothing, its way the function outside the marks taken that many times: it ends where the net ends (sufficient)<br>2. the line never ends: at the first marked step, the need met there and before, the level of the course as it was one step later is at or above H2 + y2 (exact; dropping [no marked level that meets the need](premises/a.md#turningintime-unmarked))<br>3. the line under the kind's class ends while the net goes on, and the kind's class is not constant up to the net's end at that member's class (sufficient)<br>4. from the level nine, first marked at six: the way turns with two left, the line conditions nothing two steps later, and its line under the class of ways ends at six while the net goes on (a witness) (dropping [no marked level that meets the need](premises/a.md#turningintime-unmarked)) | — |
+| [A line on a stock: units that leave offspring on a renewed level (存量上的一条线：在更新的水位上留下后代的单元)](families/a.md#a-line-on-a-stock) | 1. the net ends: at some step no need is met, with no bound on the step; within hi + 1 steps where every unit needs the same positive amount (sufficient)<br>2. a first unmet need within hi + 1 steps, the way until then the generation of descent; with kids needing no more than their parent, the level there below a need the start met and below the start level (sufficient)<br>3. a closed line is gone from the way from some step on, and what is gone does not come back (sufficient) | — |
 | [One law of exact thresholds, and the threshold in the plane of level and recent giving](families/a.md#threshold-in-the-state-plane) | 1. from a level up to hi at or above the threshold for its recent giving, the run does not come to rest below the draw (exact) | — |
 | [The exit from a margin](families/a.md#exit-from-a-margin) | **none: no exit is stated** | — |
 | [Consumption ends with its feeders](families/a.md#consumption-ends-with-feeders) | 1. some formation supported at a step t from T before T + n feeds g's continuation there (∃ t f, L.FedBy W (g, t) (f, t) ∧ W.Supported t f) (necessary; dropping [feeders unsupported](premises/a.md#flow-feeders-unsupported))<br>2. a witness: with either of two redundant feeders, or both, the consumer is active and supported at every step (witness; dropping [feeders unsupported](premises/a.md#flow-feeders-unsupported), [unfed while active](premises/a.md#flow-unfed))<br>3. a witness on a separate flow: with Overshoot's dependences, each formation taking only from its own condition, the flow balances and both formations are active and supported at every step (witness)<br>4. [A consumer that switches stays consuming, on the whole-run reading](families/a.md#substitution-preserves-consumption) (sufficient; dropping [requires the condition while active](premises/a.md#flow-requires-while-active)) | [A consumer that switches stays consuming, on the whole-run reading](families/a.md#substitution-preserves-consumption) (sufficient) |
@@ -1388,6 +1396,7 @@ flowchart LR
 | `Becoming.Law.Commutes.apart` | [What a commuting law keeps apart, and what a learner's symmetry fixes](families/d.md#what-a-commuting-law-keeps-apart) | `Becoming.Law.Commutes.self_apart` ([A map moving every value never rests along its run](families/f.md#a-map-moving-every-value-never-rests)) | D, F |
 | `Becoming.Law.lossless_iff_returns` | [Recurrence under every law of change](families/f.md#recurrence-without-premise) | `Becoming.Hexagram.every_returns_iff` ([The law of waxing and waning (消息之律)](families/f.md#waxing-and-waning-returns)) | F |
 | `Becoming.Law.merged_stays` | — | `Becoming.SharedCodes.resolved_alike_merged` ([A merged distinction returns only from a form held outside, or by coining](families/g.md#merged-distinctions-stay-merged)) | G |
+| `Becoming.LineOnAStock.unending_iff_holds` | [A line on a stock: units that leave offspring on a renewed level (存量上的一条线：在更新的水位上留下后代的单元)](families/a.md#a-line-on-a-stock) | `Becoming.WayOfUnits.unending_iff_holds` ([A line that ends where the net ends, or while the net goes on](families/a.md#turning-in-time)) | A |
 | `Becoming.Marks.change_not_recurring` | — | `Becoming.Flow.Balances.arrow_stops` ([An arrow leaves change not recurring](families/g.md#an-arrow-leaves-change-not-recurring)) | G |
 | `Becoming.Optimum.Above.full` | — | `Becoming.Optimum.MutualBest.full` ([Several optimizers](families/b.md#several-optimizers-drain-by-their-joint-capacity)) | B |
 | `Becoming.Optimum.InTurn.levels_through` | — | `Becoming.Optimum.InTurn.position_levels` ([A race for position](families/b.md#a-race-for-position-draws-everything)) | B |

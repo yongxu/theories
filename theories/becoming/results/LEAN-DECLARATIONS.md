@@ -12,7 +12,7 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 | Topic | Entries | theorem/lemma occurrences |
 |---|---:|---:|
-| [Becoming pure core](lean-declarations/becoming-core.md) | 389 | 19,189 |
+| [Becoming pure core](lean-declarations/becoming-core.md) | 391 | 19,334 |
 | [Becoming instances and applications](lean-declarations/becoming-ring.md) | 18 | 1,054 |
 | [The ethics and the generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
 | [Valuation development and liangzhi](lean-declarations/valuation.md) | 19 | 202 |
@@ -441,7 +441,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [GrammarConditionals.lean](lean-declarations/becoming-core-part-2.md#module-a4c1ca9cdf38) | Becoming pure core |
 | [GrammarCourse.lean](lean-declarations/becoming-core-part-2.md#module-cc6fc7f03b4e) | Becoming pure core |
 | [GrammarCrossing.lean](lean-declarations/becoming-core-part-2.md#module-e861b9c79f9d) | Becoming pure core |
-| [GrammarLaws.lean](lean-declarations/becoming-core-part-3.md#module-9ff25be30275) | Becoming pure core |
+| [GrammarLaws.lean](lean-declarations/becoming-core-part-2.md#module-9ff25be30275) | Becoming pure core |
 | [GrammarMap.lean](lean-declarations/becoming-core-part-3.md#module-3c1996315d3a) | Becoming pure core |
 | [GrammarPath.lean](lean-declarations/becoming-core-part-3.md#module-f9c8cd7b5a1a) | Becoming pure core |
 | [GrammarReadings.lean](lean-declarations/becoming-core-part-3.md#module-ae9784542ef0) | Becoming pure core |
@@ -544,7 +544,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [LearnedProcedureTransmission.lean](lean-declarations/ethics-part-1.md#module-314ffd0b4f8a) | The ethics and the generative direction |
 | [Learning.lean](lean-declarations/becoming-core-part-3.md#module-d65f42130cd4) | Becoming pure core |
 | [LearningCorrespondence.lean](lean-declarations/ethics-part-1.md#module-2aadf9f9573e) | The ethics and the generative direction |
-| [LearningRuns.lean](lean-declarations/becoming-core-part-4.md#module-9f33b42f8566) | Becoming pure core |
+| [LearningRuns.lean](lean-declarations/becoming-core-part-3.md#module-9f33b42f8566) | Becoming pure core |
 | [LeastLoss.lean](lean-declarations/becoming-core-part-4.md#module-359473829457) | Becoming pure core |
 | [LegacyReconciliation.lean](lean-declarations/other.md#module-b662dec55785) | Other formal studies |
 | [LevelCoupling.lean](lean-declarations/becoming-core-part-4.md#module-41d793a8ed35) | Becoming pure core |
@@ -553,6 +553,8 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [Lifting.lean](lean-declarations/becoming-core-part-4.md#module-d94bf165cf48) | Becoming pure core |
 | [Likeness.lean](lean-declarations/becoming-core-part-4.md#module-b00054b2fe2f) | Becoming pure core |
 | [LimitVerification.lean](lean-declarations/becoming-core-part-4.md#module-39b79d5784de) | Becoming pure core |
+| [LineOnAStock.lean](lean-declarations/becoming-core-part-4.md#module-3573c4dc8b1c) | Becoming pure core |
+| [LineOnAStockCases.lean](lean-declarations/becoming-core-part-4.md#module-4d10d19e9e64) | Becoming pure core |
 | [LineageAudit.lean](lean-declarations/valuation.md#module-7d1b924b40d2) | Valuation development and liangzhi |
 | [LineageDrawdown.lean](lean-declarations/becoming-core-part-4.md#module-7b87ffe50415) | Becoming pure core |
 | [LineageInProcess.lean](lean-declarations/valuation.md#module-45b450e65721) | Valuation development and liangzhi |
@@ -636,7 +638,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [OrganizationalRuleInheritance.lean](lean-declarations/ethics-part-1.md#module-d6cdb351c744) | The ethics and the generative direction |
 | [OrganizedScaleLoop.lean](lean-declarations/learning.md#module-fa24e61409c5) | Learning, prediction and dynamics |
 | [OutcomeContinuation.lean](lean-declarations/core.md#module-c48ee824a0b3) | Generative core and relational structure |
-| [OverExchange.lean](lean-declarations/becoming-core-part-4.md#module-958bcd7f9971) | Becoming pure core |
+| [OverExchange.lean](lean-declarations/becoming-core-part-5.md#module-958bcd7f9971) | Becoming pure core |
 | [OwnClass.lean](lean-declarations/becoming-core-part-5.md#module-ba36a94fd1ca) | Becoming pure core |
 | [OwnWidening.lean](lean-declarations/becoming-core-part-5.md#module-4cd46e389136) | Becoming pure core |
 | [Pace.lean](lean-declarations/becoming-core-part-5.md#module-f1acf0f3e260) | Becoming pure core |

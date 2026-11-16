@@ -74,6 +74,8 @@ Reading (the AI's, from its knowledge): fixation under copying is absorbing as i
 - related, not a proved adapter: [a-selection-removing-its-readers](a-selection-removing-its-readers.md). Removing one's readers, here read as removing the variation that could revise one.
 - related, not a proved adapter: [a-pool-read-off-the-course](a-pool-read-off-the-course.md). Its readers not readmitted, read on these generations: no revision into a reading's region where its count is none (absent_step); readmission a revision in, from beyond the cohort where variation is drawn from what is present.
 
+**Used by:** [a-line-on-a-stock](a-line-on-a-stock.md)
+
 <a id="sources--来源"></a>
 ### Sources
 

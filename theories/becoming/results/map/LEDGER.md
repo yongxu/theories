@@ -15,7 +15,7 @@ The layer under [the map](THE-MAP.md): the account's theorems and tests, filed o
 
 ![The web: eleven kinds of role and the ties between them, each tie with four squares filled where a general theorem shows what makes it begin, last, change or end](the-web.svg)
 
-*How to read the picture.* Each box is a kind of role. Each arrow is a kind of tie between two roles, heavier where more of the 184 dynamics speak of it; a dynamic is one pattern of [the atlas](../atlas/ATLAS.md), with the theorems about it. The four squares under a tie stand for begins, lasts, changes and ends (生 住 异 亡). A filled square: a general theorem shows what makes it so. A square with a small mark inside: only a built case shows it, an example that it can happen. An empty square: no theorem written up here shows it. A green dot: a prediction written down before its test was run, and then scored for or against, names a theorem on this tie. A green ring: a test with such a verdict bears on a dynamic that speaks of it. A tie gathers theorems on separate models that each name this kind of tie; an arrow is not a route.
+*How to read the picture.* Each box is a kind of role. Each arrow is a kind of tie between two roles, heavier where more of the 185 dynamics speak of it; a dynamic is one pattern of [the atlas](../atlas/ATLAS.md), with the theorems about it. The four squares under a tie stand for begins, lasts, changes and ends (生 住 异 亡). A filled square: a general theorem shows what makes it so. A square with a small mark inside: only a built case shows it, an example that it can happen. An empty square: no theorem written up here shows it. A green dot: a prediction written down before its test was run, and then scored for or against, names a theorem on this tie. A green ring: a test with such a verdict bears on a dynamic that speaks of it. A tie gathers theorems on separate models that each name this kind of tie; an arrow is not a route.
 
 **[The same ledger to operate](the-web.html)** shows every theorem with its conditions and every case with its predictions: choose a tie, a role, a dynamic or a test. (GitHub shows that file as source; [it opens here](https://yongxu.github.io/theories/theories/becoming/results/map/the-web.html).) The same data as pages: [what the theorems say, tie by tie](LAWS.md), [every dynamic, by tie](DYNAMICS.md) and [every test as a case](CASES.md).
 
@@ -58,12 +58,12 @@ A theorem's sentence uses these words and its model's own terms; a case uses its
 
 | Tie | Dynamics | Theorems, from how many dynamics | Begins | Lasts | Changes | Ends | Other forms | Given changed | Tests naming a theorem here | Tests on its dynamics |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| [the drawers · draws on · a stock](LAWS.md#tie-draws-on-drawers-stock) | 81 | 34 from 25 | 0 | 1 | 0 | 1 | 30 | 2 | 1 | 28 |
-| [what gives back · gives back to · a stock](LAWS.md#tie-gives-back-renewer-stock) | 79 | 19 from 13 | 0 | 1 | 0 | 0 | 13 | 5 | 0 | 24 |
-| [what depends on it · needs · a stock](LAWS.md#tie-needs-dependent-stock) | 65 | 65 from 35 | 1 | 6 | 0 | 11 | 39 | 8 | 1 | 24 |
+| [the drawers · draws on · a stock](LAWS.md#tie-draws-on-drawers-stock) | 82 | 35 from 26 | 0 | 1 | 0 | 1 | 31 | 2 | 1 | 28 |
+| [what gives back · gives back to · a stock](LAWS.md#tie-gives-back-renewer-stock) | 80 | 19 from 13 | 0 | 1 | 0 | 0 | 13 | 5 | 0 | 24 |
+| [what depends on it · needs · a stock](LAWS.md#tie-needs-dependent-stock) | 66 | 69 from 36 | 1 | 6 | 0 | 13 | 41 | 8 | 1 | 24 |
 | [a rule · selects and favours · what it selects among](LAWS.md#tie-selects-rule-selected) | 46 | 76 from 30 | 4 | 17 | 0 | 1 | 42 + 2 built | 10 | 8 | 14 |
 | [a reading · is of, and accords or misses · what it is of](LAWS.md#tie-is-of-reading-subject) | 31 | 31 from 19 | 4 | 6 + 1 built | 0 | 0 | 19 + 1 built | 0 | 0 | 7 |
-| [what goes on · goes on through its parts · its parts](LAWS.md#tie-passes-on-pattern-parts) | 29 | 48 from 18 | 0 + 2 built | 7 + 3 built | 0 | 7 | 18 + 1 built | 10 | 0 | 1 |
+| [what goes on · goes on through its parts · its parts](LAWS.md#tie-passes-on-pattern-parts) | 30 | 51 from 19 | 0 + 2 built | 7 + 3 built | 0 | 9 | 19 + 1 built | 10 | 0 | 1 |
 | [a stock · reaches, or lies beyond · a rule](LAWS.md#tie-reaches-stock-rule) | 26 | 12 from 6 | 0 | 0 | 0 | 0 | 11 | 1 | 3 | 13 |
 | [a reading · is revised by · what it is of](LAWS.md#tie-revised-by-reading-subject) | 20 | 20 from 12 | 0 | 7 | 0 + 2 built | 0 | 11 | 0 | 0 | 0 |
 | [a rule · is read through · its readers](LAWS.md#tie-read-through-rule-readers) | 17 | 5 from 4 | 0 | 1 | 0 | 0 | 4 | 0 | 0 | 13 |
@@ -89,7 +89,7 @@ A theorem's sentence uses these words and its model's own terms; a case uses its
 - *gives to, waiting on*: a stock to a stock (2), what depends on it to what depends on it (1; 2 theorems), what goes on to what depends on it (1).
 - *is set from*: a rule to a reading (2), a rule to a rule (1; 1 theorem), a rule to its parts (1), a rule to what goes on (1).
 - *is read through*: a rule to a reading (2; 4 theorems), its readers to its readers (2).
-- *reaches, or lies beyond*: a reading to a rule (3; 1 theorem), a reading to what it is of (1), a reading to what it selects among (1; 1 theorem), a rule to a stock (1; 1 theorem), a stock to a reading (2; 1 theorem), a stock to what goes on (1; 2 theorems), a stock to what it selects among (1), its parts to a stock (1; 3 theorems), the drawers to a rule (2; 2 theorems), the drawers to its readers (3; 3 theorems), what depends on it to a reading (1; 1 theorem), what goes on to a rule (1), what goes on to what depends on it (1; 2 theorems), what it is of to a rule (2; 1 theorem), what it selects among to a rule (1; 1 theorem).
+- *reaches, or lies beyond*: a reading to a rule (3; 1 theorem), a reading to what it is of (1), a reading to what it selects among (1; 1 theorem), a rule to a stock (1; 1 theorem), a stock to a reading (2; 1 theorem), a stock to what goes on (2; 4 theorems), a stock to what it selects among (1), its parts to a stock (1; 3 theorems), the drawers to a rule (2; 2 theorems), the drawers to its readers (3; 3 theorems), what depends on it to a reading (1; 1 theorem), what goes on to a rule (1), what goes on to what depends on it (1; 2 theorems), what it is of to a rule (2; 1 theorem), what it selects among to a rule (1; 1 theorem).
 - *is of, and accords or misses*: a reading to a reading (2; 4 theorems), a reading to a stock (1).
 - *is revised by*: a reading to a reading (3; 1 theorem), a reading to a rule (1), what goes on to a reading (1; 1 theorem).
 - *passes in or out*: its parts to what goes on (1; 3 theorems).
@@ -124,27 +124,27 @@ For 89 of the 295 frozen predictions the tests' own records name where the predi
 
 | | |
 |---|---|
-| Dynamics placed | 184; 23 of them hold of anything that goes on and name no role |
+| Dynamics placed | 185; 23 of them hold of anything that goes on and name no role |
 | Ties between roles | 19 drawn; 39 thinner ones listed |
-| Principal theorems written up | 778 write-ups of 731 Lean theorems; 723 of the 731 are among the 2,105 Lean theorems the atlas lists with premises. Counting a theorem once in a place: 420 on a tie, 222 on one role, 102 on anything that goes on |
+| Principal theorems written up | 788 write-ups of 741 Lean theorems; 728 of the 741 are among the 2,110 Lean theorems the atlas lists with premises. Counting a theorem once in a place: 430 on a tie, 222 on one role, 102 on anything that goes on |
 | Drawn ties where no general theorem shows | a beginning: 14 (on 1, one built case does); a lasting: 8; a change: 19 (on 2, one built case does); an end: 13 |
 | Tests | 66; in 47 at least one frozen prediction got a verdict |
 | Frozen predictions | 295: 117 agreed, 8 not rejected, 64 disagreed, 17 could not tell, 89 with no verdict; 18 more entries were not frozen |
 | Conditions assessed in cases | 598: 274 met, 106 failed, 218 not checked |
 | Bridges the tests rest on | 327: 49 held, 58 failed, 66 by construction, 154 not checked |
 | Lean theorems a prediction names | 145; 70 are among the atlas's theorems with premises, 75 are not |
-| Dynamics a test bears on | 36 of 184 |
+| Dynamics a test bears on | 36 of 185 |
 | Drawn ties and the tests | a frozen prediction with a verdict names a theorem on 4; a test with such a verdict bears on a dynamic of 7 more; none on 8 |
 
 ## What it does not hold
 
 - **The kinds do not hold everything.** Every card says what of its dynamic the roles, ties, marks, forms and frames leave out: most often amounts, theorems that name no role, and conclusions that fit no form. The note is on the ledger to operate, under each dynamic.
 - **A tie gathers separate models.** Roles of two models are drawn as one place where each model names that kind of role. Where no proof joins the two models, that sameness is a reading. Each tie's section says how many dynamics its theorems come from; the picture draws one line.
-- **Only principal theorems are written up.** A card takes its dynamic's main results and most of the theorems its exits and transitions cite: 731 Lean theorems, where the atlas lists 2,105 with premises.
+- **Only principal theorems are written up.** A card takes its dynamic's main results and most of the theorems its exits and transitions cite: 741 Lean theorems, where the atlas lists 2,110 with premises.
 - **The question a theorem is filed under is a reading of its statement.** A theorem written up on several cards can be read under a different question on each; in a place it counts once, by the write-up of the course itself.
 - **A filled square says a general theorem concludes that mark, not how much is known.** One theorem fills it.
 - **A prediction's place rests on a reading of its test's record:** whether it was frozen, which conditions were met, and what was seen. The reading is the case's; the test's folder is the record.
-- **A condition is given by its name in the atlas's ledger.** The ledger keeps its statement, and for 7 theorems it lists none.
+- **A condition is given by its name in the atlas's ledger.** The ledger keeps its statement, and for 12 theorems it lists none.
 - **The Chinese is provisional.**
 
 ## How it was made

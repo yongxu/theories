@@ -101,7 +101,7 @@ Reading (AI-written, from its knowledge): the root's two names for one gap becom
 - related, not a proved adapter: [constancy-read-at-a-members-class](constancy-read-at-a-members-class.md). The same condition at a member's class; a line that ends while the net goes on breaks it there.
 - related, not a proved adapter: [what-the-net-fixes-of-ones-own-class](what-the-net-fixes-of-ones-own-class.md). Its theorem «类闭则本类常闭» takes a decided premise of another scope, over the member's block.
 
-**Used by:** [a-way-of-units](a-way-of-units.md) · [turning-in-time](turning-in-time.md)
+**Used by:** [a-line-on-a-stock](a-line-on-a-stock.md) · [a-way-of-units](a-way-of-units.md) · [turning-in-time](turning-in-time.md)
 
 <a id="sources--来源"></a>
 ### Sources

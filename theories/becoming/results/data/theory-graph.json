@@ -501,6 +501,18 @@
    "page": "theories/becoming/results/records/a-line-alive-after-a-window.md"
   },
   {
+   "id": "record:a-line-on-a-stock",
+   "type": "result",
+   "record": "a-line-on-a-stock",
+   "title": "A line on a stock: units that leave offspring on a renewed level",
+   "title_zh": "存量上的一条线：在更新的水位上留下后代的单元",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "unassigned",
+   "base": "",
+   "page": "theories/becoming/results/records/a-line-on-a-stock.md"
+  },
+  {
    "id": "record:a-loss-read-before-its-point-of-no-return",
    "type": "result",
    "record": "a-loss-read-before-its-point-of-no-return",
@@ -11530,9 +11542,20 @@
    "type": "module",
    "name": "Becoming.TurningInTime",
    "level": "L2",
-   "theorems": 64,
+   "theorems": 78,
    "region": "map",
    "base": "general",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.LineOnAStock",
+   "type": "module",
+   "name": "Becoming.LineOnAStock",
+   "level": "L2",
+   "theorems": 113,
+   "region": "unassigned",
+   "base": "",
    "on_grammar": true,
    "reaches_grammar": true
   },
@@ -11541,9 +11564,20 @@
    "type": "module",
    "name": "Becoming.WayOfUnits",
    "level": "L2",
-   "theorems": 64,
+   "theorems": 68,
    "region": "map",
    "base": "general",
+   "on_grammar": true,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.LineOnAStockCases",
+   "type": "module",
+   "name": "Becoming.LineOnAStockCases",
+   "level": "L2",
+   "theorems": 9,
+   "region": "unassigned",
+   "base": "",
    "on_grammar": true,
    "reaches_grammar": true
   },
@@ -34559,6 +34593,31 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.LineOnAStock",
+   "to": "module:Becoming.ReadingsPersist",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.LineOnAStock",
+   "to": "module:Becoming.SelectionTerm",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.LineOnAStock",
+   "to": "module:Becoming.TurningInTime",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.LineOnAStockCases",
+   "to": "module:Becoming.LineOnAStock",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.LineOnAStockCases",
+   "to": "module:Becoming.LineageDrawdown",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.LineageDrawdown",
    "to": "module:Becoming.LineageRegimes",
    "type": "imports"
@@ -36705,6 +36764,11 @@
   },
   {
    "from": "module:Becoming.WayOfUnits",
+   "to": "module:Becoming.LineOnAStock",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.WayOfUnits",
    "to": "module:Becoming.TurningInTime",
    "type": "imports"
   },
@@ -37437,6 +37501,87 @@
    "from": "record:a-line-alive-after-a-window",
    "to": "record:what-persisting-shows-of-an-order",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:a-line-on-a-stock",
+   "to": "module:Becoming.LineOnAStock",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:a-line-on-a-stock",
+   "to": "module:Becoming.LineOnAStockCases",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:a-line-on-a-stock",
+   "to": "record:a-way-of-units",
+   "type": "related"
+  },
+  {
+   "from": "record:a-line-on-a-stock",
+   "to": "record:census-balance",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:a-line-on-a-stock",
+   "to": "record:continuation-relative-to-a-class",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:a-line-on-a-stock",
+   "to": "record:ending-laws-as-regimes-on-a-lineage",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:a-line-on-a-stock",
+   "to": "record:going-alike-up-to-the-nets-end",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:a-line-on-a-stock",
+   "to": "record:margin-of-a-regime",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:a-line-on-a-stock",
+   "to": "record:recurrence-without-premise",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:a-line-on-a-stock",
+   "to": "record:selection-term-over-generations",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:a-line-on-a-stock",
+   "to": "record:shared-laws-on-the-grammar",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:a-line-on-a-stock",
+   "to": "record:turning-in-time",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:a-line-on-a-stock",
+   "to": "record:when-a-selection-read-off-continuation-reads",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:a-line-on-a-stock",
+   "to": "record:where-a-reading-locks",
+   "type": "formal-reuse",
+   "interface": true
   },
   {
    "from": "record:a-loss-read-before-its-point-of-no-return",
@@ -38179,6 +38324,12 @@
   },
   {
    "from": "record:a-way-of-units",
+   "to": "record:a-line-on-a-stock",
+   "type": "formal-reuse",
+   "interface": true
+  },
+  {
+   "from": "record:a-way-of-units",
    "to": "record:a-loss-read-before-its-point-of-no-return",
    "type": "related"
   },
@@ -38231,12 +38382,6 @@
   {
    "from": "record:a-way-of-units",
    "to": "record:wen-in-the-grammar",
-   "type": "formal-reuse",
-   "interface": true
-  },
-  {
-   "from": "record:a-way-of-units",
-   "to": "record:when-a-selection-read-off-continuation-reads",
    "type": "formal-reuse",
    "interface": true
   },
