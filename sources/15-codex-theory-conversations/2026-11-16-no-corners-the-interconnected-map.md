@@ -120,3 +120,12 @@ and, in a further fork, on a reply button the fork had offered ("In the full ses
 > please be the session to carry on - start all the unfinished subagents and make sure the quality of our work doesn't degrade because of this switch
 
 *Context (AI-authored):* that session listed every run of agents of the last three days from its journal and found none cut off by the switch: the last, the read of 21 sentences against the Lean, had returned whole at 23:11 WIB on 16 November. What was unfinished was what that read left owed. It started those in prepared form, nothing tracked changing: the one statement the read thought worth trying, proved outside the package; the repairs to the atlas as a file; the direction page said again from the checked wordings, and shorter, for his read; and a reader set to the answer on causality and karma.
+
+
+*Context (AI-authored):* the run of eleven agents came back at about 04:13 WIB. The session told him what it found, among it that the fork's answer on causality and karma was wrong in two claims and said too much in others, with the corrected answer; that the one statement tried was proved outside the package and made no older proof shorter; and that the direction page said again was truer in four places and not shorter, sent to him as a file for his read. Of the repairs to the atlas it said: five hold as written, three hold if reworded, two say more than the Lean and are dropped; and it asked on a reply button whether to apply those the second reader passed ("Yes, apply those", "Not yet"). The words below are the label of the button he chose.
+
+04:24:03 WIB, 17 November (16 November 21:24:03 UTC, transcript stamp):
+
+> Yes, apply those
+
+*Context (AI-authored):* the session applied eight edits (the five as written, which are six by entry, and two of the three reworded, in the second reader's words; the third reworded one was held back, since it needs rows in the premise ledger that were not prepared), had the applied diff read by an agent who had written none of it, landed it and pushed.
