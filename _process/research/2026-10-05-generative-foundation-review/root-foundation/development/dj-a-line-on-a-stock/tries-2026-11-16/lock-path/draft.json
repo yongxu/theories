@@ -1,0 +1,73 @@
+{
+ "answer_in_one_paragraph": "AI-written. covering_locks is a path that shows its leaving. unending_iff_above is the law on arrival; turns_in_time_iff with course_turned leaves. lock_outlives_loss shows staying: a case (join_course), no path. Closed-capture to turning-in-time is apart: two models of one lock, one way over two levels that cannot be one. The composition does not typecheck through count_rises; a version on the count of carriers holds in search, but its ending does not pass through the lock. RuleRebuilding's step is a pair only as every function is.",
+ "links": [
+  {
+   "from": "turning-in-time",
+   "to": "margin-of-a-regime",
+   "statement": "TurningInTime.lean:958 unending_iff_above, from a way of the kept kind: «不穷» (net need after (fun w x => RegimeMargin.step giving (use w) x)) «一» (w, x) ↔ H₂ + y₂ ≤ x",
+   "standing": "already a theorem; condition 4 only with turns_in_time_iff (:1070) and course_turned (:2190)",
+   "evidence": "Its start is already of the kept kind, its level already the regime's under H₂ (private kept_run, :808). The leaving is turns_in_time_iff's premise `turns`. Its only-if is by Optimum.ends_within, not ends_iff_below. Atlas: on the existing exit by turns_in_time_iff set to: margin-of-a-regime, to_law: unending_iff_above; exact; drops turningintime-unmarked."
+  },
+  {
+   "from": "closed-capture",
+   "to": "turning-in-time",
+   "statement": "TurningInTime.lean:1440 locked_ends_rising: from a Locked way the line of net need after (fun w x => RegimeMargin.step giving (use w) x) ends within hi + 1 steps, Locked (:1400 likewise, within x steps)",
+   "standing": "apart as a path: two models of one lock",
+   "evidence": "Neither law uses join, joinRead, Accrues, Unread or the loss; the lock is RuleCapture's. The way is shared (join_is_asItWas, :1536, at a need of nothing). The levels cannot be one: at level 0 Accrues asks at least 1, the regime's step with FromNothing gives 0. Atlas: no exit from closed-capture; the exit is capture-through-the-rule's, to turning-in-time by locked_ends_rising: sufficient, drops nothing, adds a needed level."
+  },
+  {
+   "from": "capture-through-the-rule",
+   "to": "closed-capture",
+   "statement": "ClosedCapture.lean:307 lock_outlives_loss: b + t ≤ (paced (join fA fB) (joinRead hA) reads ((a, b), g) t).1.2 ∧ Locked … at t ∧ share and rule not below the start's",
+   "standing": "a renaming as a path: two theorems side by side; join_course (:248) is the case link, already a theorem",
+   "evidence": "It is loss_grows beside locked_stays and locked_not_below carried by join_course. It shows staying: a locked configuration with an unread beyond attached is at once closed-capture's. Atlas: no exit; a case_of from lock_outlives_loss to RuleCapture.locked_stays, how: join_course."
+  },
+  {
+   "from": "shaping-the-rule-selected-by-what-comes-back",
+   "to": "capture-through-the-rule",
+   "statement": "RuleShaping.lean:443 covering_locks, given mono, ∀ x, c ≤ σ x, c ≤ s: ∀ r, reads r = true → Locked CarrierCounts.order CarrierCounts.favours (byBack a p c pos σ) (paced … (x, shaped a s p c pos) (r + 1))",
+   "standing": "already a theorem that shows it; meets condition 4",
+   "evidence": "It is favouring_locks at byBack. Atlas exit: to capture-through-the-rule; law covering_locks; edge: where what comes back to the shapers alone is read monotonically from their share and covers the cost at every share, a course from a rule covering the cost is locked from the step after its first reading step; sufficient; drops nothing. drawn_locked_either (DrawnShaping:378) starts locked."
+  },
+  {
+   "from": "shaping-the-rule-selected-by-what-comes-back",
+   "to": "turning-in-time",
+   "statement": "From q, the configuration covering_locks locks at step r + 1, at a level l ≤ hi stepping by RegimeMargin.step giving (w.1.carrier * u): the line of net need from ((q.1, q.2, r + 1), l) ends within hi + 1 steps, Locked (CarrierCounts.order, CarrierCounts.favours, byBack a p c pos σ)",
+   "standing": "a theorem to prove; the three laws do not compose as typed",
+   "premises": "covering_locks' own; 0 < x.carrier; 2 ≤ a + c + p; 0 < u; ends_with_net_rising's",
+   "evidence": "count_rises needs A = Nat and a strict rise under every favouring rule; on CarrierCounts the tie ⟨1,1⟩ favours and moves nothing. Without 2 ≤ a + c + p that tie, at no cost, on giving min z (12 − z), stays Locked at level 12. Sketch: covering_locks; an invariant along windowAlone's orbit (carriers present, each leaving two) gives the rise; ends_with_net_rising; locked_alone. Search: 88,704 cases, none failing.",
+   "lean_lines_estimate": "about 70",
+   "imports_it_would_add": "none; TurningInTime imports RuleShaping through PoolFromCourse",
+   "first_obstacle": "The ending takes no lock: ends_with_net_rising gives it alone (⟨2,5⟩ disfavours yet doubles the carriers). locked_ends_rising's `more` fails from a tie."
+  },
+  {
+   "from": "a-rule-rebuilt-from-the-members-it-limits",
+   "to": "turning-in-time",
+   "statement": "RuleRebuilding.lean:226 net r := fun x y => ∃ m, y = step r m x; :218 the level after: x.level + r.renewal - take x",
+   "standing": "a renaming for one move's step; apart for the net and the laws with marks or the regime's step",
+   "evidence": "Both points of the earlier reader hold. Every function on W × Nat is a pair of its two components. The net branches and is total. Give-then-take is RegimeMargin.step for no giving: level 1, renewal 4, take 3 asks giving 0 = 2; level 3 asks 4. The way reads the level where level + renewal < take, which depends on the way, so AloneOutside leaves at most one level unmarked and `un` fails. Only toEnd_iff, constant_iff and kind_ends_while_net_goes apply, adding nothing."
+  }
+ ],
+ "apart": [
+  {
+   "what_is_read_as_one": "closed-capture's loss and the level a lock needs",
+   "countermodel_or_reason": "They meet only under the reading level = K − loss, which neither side defines; Accrues is then locked_ends_with_net's `over` with nothing given (argued; 5,608 cases)."
+  },
+  {
+   "what_is_read_as_one": "a share rising and a count of drawers rising",
+   "countermodel_or_reason": "LineOnAStock.ShareRises (:1677): the share goes from two of four to two of two as the drawers go from two to one."
+  },
+  {
+   "what_is_read_as_one": "the lock coming and the line ending Locked",
+   "countermodel_or_reason": "Start rule shaped 1 5 0 1, σ = 1, first reading at step 3, share ⟨1,1⟩, level 12: the line ends at step 3, not Locked."
+  }
+ ],
+ "against_the_four_conditions": [
+  "unending_iff_above: 1, 2, 3 yes (give-then-take holds from 9, below 10); 4 not alone.",
+  "covering_locks: all four; 3: false were favouring strict (c = s is a tie).",
+  "join_course with lock_outlives_loss: 1, 2, 3 yes (Beyond.open_falls); 4 no: staying.",
+  "locked_ends_rising, as capture-through-the-rule's: 1, 4 yes; 2 adds `more` on a free `use`; 3 weak: a use reading only the step count meets it (:1436).",
+  "The composed statement: 1, 4 yes; 2 adds 2 ≤ a + c + p; 3 fails on the lock's side: the ending stands if Locked changes."
+ ],
+ "what_ran": "Read only: both round-11 papers, six atlas entries, the Lean named. One script: /Users/ren/theories/tmp/r7/one-model/check/round11/lock-path/check.py; small grids, not proofs. No build, test, gate, edit or git write."
+}

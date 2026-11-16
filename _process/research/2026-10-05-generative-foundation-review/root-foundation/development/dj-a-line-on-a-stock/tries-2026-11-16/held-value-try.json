@@ -1,0 +1,225 @@
+{
+ "note": "AI-written. Reports of workflow wf_dfa3b0ce-429, 16 November 2026: a value a loop holds that is set again, tried on paper (two seats and one refuter).",
+ "seat:statements-and-searches": {
+  "answer_in_one_paragraph": "AI-written. Pace.paced takes the model as it stands. Argued and searched, not proved: a value set above the take ends from every start under a ceiling, by step (2·hi + 1)·L; a fixed value has the regime's fate from the level where the take arrives, not from the start; from what the stock gave, every level is a rest by definition, and only reaching one is not; a top gives the fixed case once the take is within c of it. The lock's premises are false here. No older law becomes a case.",
+  "statements": [
+   {
+    "statement": "Pace.paced takes the model as it stands.",
+    "standing": "follows on paper (definitions unfolded)",
+    "evidence": "Pace.lean:112: `def paced (f : S → R → S) (h : S → R → R) (reads : Nat → Bool) (c : S × R) (t : Nat) : S × R`. S := Nat × Nat, R := Nat, f := ClosedCapture.join A (fun p _ => RegimeMargin.step g p.1 p.2). Choices: Pace.turn computes both from the configuration before the step, so the stock steps under the take as it stands and the reading sees the level before. The other order and reading after also fit. Pace's step is total: ending is the level reaching nothing. A level ℓ steps old needs a buffer in S."
+   },
+   {
+    "statement": "(a) set_above_ends: ∃ n ≤ (2·hi + 1)·L, level n = 0.",
+    "standing": "follows on paper; holds in search (310,000 courses)",
+    "premises": "Between m x (A x m), strictly nearer off m; ∀ p m, p.1 < h p m; FromNothing g; Keeps g 0 hi; level ≤ hi; a reading in every L steps.",
+    "evidence": "The take ξ_k at reading k has ξ_{k+1} ≥ min(ξ_k, ξ_{k−1}) + 1, so it is at least hi at reading 2·hi. Latest found at hi = 12: step 17 (bound 25).",
+    "rests_on": "TurningInTime.kept_within; rising_takes_all's inner step, not that law."
+   },
+   {
+    "statement": "(b) held_fixed: from step gap x m on the take is m and the level is Law.orbit (RegimeMargin.step g m) from the level Y there; ends ↔ Y < m + y.",
+    "standing": "follows on paper; holds in search (53,976 courses)",
+    "premises": "∀ p m, h p m = m; ends_iff_below's premises at H := m.",
+    "evidence": "On the way: 16,939 courses end before the take arrives; 9,706 end though the start level holds under m (take above m); 3,655 last though it ends (take below).",
+    "rests_on": "Pace.rule_kept; Between.gap_falls, Between.stays; RegimeMargin.ends_iff_below."
+   },
+   {
+    "statement": "(c) from_gave_at_once: (level − take) − held stays the same; what is left steps by z ↦ (y − x − m) + g z. Tent: goes on ↔ m < y − x ∨ (m = y − x ∧ 1 ≤ m < hi).",
+    "standing": "follows on paper; holds in search (17,992 starts)",
+    "premises": "reading every step; A x m = m; h p m = g (p.2 − p.1).",
+    "evidence": "m′ = g z, x′ = m, y′ = z + g z. Slower moves: no closed condition found; least levels in outputs.txt."
+   },
+   {
+    "statement": "(c) Smallest late case: tent 2, by one, take 0, level 1, held 2. Reading every step: rest (1, 2, 1). Reading from step 1: (1, 2, 2), (2, 2, 1), (1, 0, 1).",
+    "standing": "already a theorem (mechanism); the case computed",
+    "evidence": "Pace.rule_until_reading, Pace.lean:247: `(before : ∀ u, u < r → reads u = false) (c : S × R) : ∀ t, t ≤ r → (paced f h reads c t).2 = c.2`. \"In time\" is a first reading step. With a reading at step 0, or old readings as if the start had stood, nothing kept ended (23,583 starts). Regulation.ReadsLate reads a rest's record; no rest here: apart."
+   },
+   {
+    "statement": "(d) top_region: (held = s ∧ s ≤ take + c) is kept by every turn; inside it is the fixed case at s.",
+    "standing": "follows on paper; holds in search (467,712 courses)",
+    "premises": "h p _ = min (p.1 + c) s.",
+    "evidence": "At a reading min (x + c) s = s, and the moved take stays within c of s or above it. Every lasting course enters the region.",
+    "rests_on": "Pace.stays_turned; then (b)."
+   },
+   {
+    "statement": "Fixed, from the take, top: take and held are the same from every start level.",
+    "standing": "already a theorem",
+    "evidence": "ClosedCapture.join_alike, ClosedCapture.lean:231: `(paced (join fA fB) (joinRead hA) reads ((a, b), g) t).1.1 = (paced … ((a, b'), g) t).1.1 ∧ …`. The stock sources are not Unread: 2,286 of 2,304 starts differ."
+   }
+  ],
+  "false_or_empty": [
+   {
+    "claim": "It ends whatever the stock gives.",
+    "why": "False without a ceiling.",
+    "countermodel": "g z = z, by one, c = 1, take 0, held 1, level 2: 2, 4, 6, 10, 16, 28, …"
+   },
+   {
+    "claim": "The from-itself ending is rising_takes_all.",
+    "why": "Its `rises` fails.",
+    "countermodel": "takes 3, 3, 4, 4, 5, 5; at once 3, 10, 4, 11."
+   },
+   {
+    "claim": "Fixed: the regime's fate from the start.",
+    "why": "Only from arrival.",
+    "countermodel": "tent 12, m = 3: take 9, level 12 ends; take 0, level 4 goes on."
+   },
+   {
+    "claim": "With a top, fixed from the step held = s.",
+    "why": "Held can leave s.",
+    "countermodel": "by one, c = 1, s = 2, take 0, held 2: next held 1."
+   },
+   {
+    "claim": "The lock's ending is this, a premise derived.",
+    "why": "count_rises's `rise` fails at a = g; Raises under ≤ at a = g + 1; `more` wherever take ≥ held. Renamed (rule: held above take) it is Three.riseShare again.",
+    "countermodel": "A g g = g."
+   },
+   {
+    "claim": "From the stock, it holds.",
+    "why": "At a rest it says nothing: take equals giving by definition."
+   }
+  ],
+  "against_the_frozen_tests": [
+   "1. Met, thinly: tent 12, by one, take 3, level 9, held 3: `h p m = m` goes on, `p.1 < h p m` ends at step 11. Two conclusions on one model.",
+   "2. Not met: countermodels. If rising_takes_all asked only that the use reach hi (all its proof uses), this ending and the lock's would be cases of one lemma; that law is of 13 November.",
+   "3. Not met: the new statements rest on older laws (of 19 and 20 October); none becomes a case. Regulation's settling laws are on a Flow and Web. pace_law: no bearing.",
+   "4. Met: one model, every source."
+  ],
+  "for_his_point": "A value held: an object, the rule's place in Pace's configuration, its course derived. From what the stock gave, where it rests is fixed by the start, not handed in; but nothing opposes departure. A level it returns to needs a reserve or a top, both handed in. A signal read: handed in, as h and the schedule. ClosedCapture.Unread says which readings the stock makes no difference to; which reading a loop has is not derived. A need of what is read: handed in. The need is a number, and the loop goes on moving the take on an empty stock.",
+  "what_ran": "Seven Python scripts (seconds each), with outputs.txt, in /Users/ren/theories/tmp/r7/one-model/check/round11/exact-model/. No build, test, gate or git write. Givings tent, refill, gated tent; ceilings 1..12; moves by one, by half, at once; c 1..3; schedules every 1..5 with offsets, never, squares; over 800,000 courses. Lean statements read, no proof rechecked."
+ },
+ "seat:existing-laws-as-cases": {
+  "answer_in_one_paragraph": "The guess needs no new structure: it is `Pace.paced` at chosen types. The lock is not a case of it: it ends under every schedule, never reading included, its share running away under a rule that stands, where the guess rises only by its reading. `rise` and `count` come out renamed; `more` is false on the guess's own course. No old law becomes a case; no proof loses a line. As laws it is three arguments under one definition; \"from the stock\" is an identity when the take moves at once and, lagged, shares the fixed value's fate on every tent searched.",
+  "statements": [
+   {
+    "statement": "The lock, its share read as the value held, is a case of the guess by a definition unfolded.",
+    "standing": "false",
+    "evidence": "`reads` is free in `locked_ends_rising` (TurningInTime.lean:1440), and `count_rises` (1473) says \"Not used: … the reading (`hA`, `reads`)\": the lock ends without ever reading, where the guess is its fixed case. The share is on any preorder; `Regulation.Between` needs a level. A tie ⟨1,1⟩ favours (RuleCapture.lean:491) and moves nothing; ⟨2,1⟩ under ⟨2,1⟩ gives ⟨4,1⟩, past the rule."
+   },
+   {
+    "statement": "`rise` and `count` follow from \"set again above the take\" and \"moves to it at once\".",
+    "standing": "says nothing",
+    "evidence": "A renaming of `rise` (`a < fA a g`) and of `count` at `u = 1`. In paced form even a take moving at once runs 3, 3, 4, 4, 5 against the lock's 3, 4, 5."
+   },
+   {
+    "statement": "`more` follows with the take in the share's place and the value in the rule's (the guess as `windowAlone`, TurningInTime.lean:1279).",
+    "standing": "false",
+    "evidence": "From take 3, held 3, reading every step, the takes are 3, 3, 4, 4, 5, 5: `more` and `rising_takes_all`'s `rises` (669) fail at 5 of 10 steps. `RuleCapture.Raises` (RuleCapture.lean:145) fails for every non-empty `favours`: a take one above the value is lowered."
+   },
+   {
+    "statement": "Set from itself, the line ends from every start under every schedule that reads without end.",
+    "standing": "follows on paper",
+    "evidence": "Every turn keeps take ≤ value and a reading turn enters it; two steps after a reading step the take is one higher; the level stays within `hi`; a take at least the level leaves nothing. It is `rising_takes_all` with the rise restated per reading. Searched: 175,200 starts and schedules on tents 8, 12, 16 all end.",
+    "premises": "`Keeps g 0 hi`, `FromNothing g`, start within `hi`, positive need, a move of one unit.",
+    "rests_on": "`Pace.stays_turned` (Pace.lean:162), `kept_within` (TurningInTime.lean:636)."
+   },
+   {
+    "statement": "Regulation's settling laws hold of the fast loop with no new instance.",
+    "standing": "follows on paper",
+    "evidence": "Only for a value that stays: the take is `relayLevel 0 m m 1 x₀` (Regulation.lean:1831) with its `relayFlow` and `relayWeb`; from below a positive value `relay_threshold` (1989) already settles it. `Flow.gap_falls` (298, 6 lines), `settles_at` (333, 12), `settles` (375, 4) need this relay within the gap and opposing: unstated; 4,500 triples checked. A value set again needs a new web."
+   },
+   {
+    "statement": "`Pace.rule_until_reading` and `pace_law` become cases.",
+    "standing": "says nothing",
+    "evidence": "The guess is their instance at `R := Nat`, alike for all three sources. Proofs 9 lines (Pace.lean:247) and 22 (539), unchanged."
+   },
+   {
+    "statement": "`RegimeMargin.holds` and `ends_iff_below` are the fixed value once the take has arrived.",
+    "standing": "follows on paper",
+    "evidence": "`Between.stays` (Regulation.lean:118) keeps the take; the stock is then the regime's run (`DrawHistory.underDraws_constant`, DrawHistory.lean:136), or `unending_iff_above` (TurningInTime.lean:958) at the kept kind \"take = value = H\". The laws (RegimeMargin.lean:730, 8 lines; 741, 18) apply unchanged."
+   },
+   {
+    "statement": "ReaderRebuilding is a case of the guess, or the guess of it.",
+    "standing": "false",
+    "evidence": "Its set level is a field that never changes, and its family law (ReaderRebuilding.lean:462) has no premise on it; it lifts the stock from a supply (`read`, 87), the guess moves a take."
+   },
+   {
+    "statement": "No new structure.",
+    "standing": "follows on paper",
+    "evidence": "The guess is `Pace.paced` (Pace.lean:112) at `S := Nat × Nat`, `R := Nat`, and `pair (windowAfter …) (windowLeft fB)` (TurningInTime.lean:1271; `window_paced`, 1714): take as share, value as rule, `fB (x, y) _ := RegimeMargin.step g x y`, the stock read by `hL`. To write: one fast step, a move (`Regulation.relay m m 1`, Regulation.lean:1167), three readings: terms."
+   },
+   {
+    "statement": "\"From the stock\" is more than handing the giving to the reading.",
+    "standing": "holds in search only",
+    "evidence": "With a take that is what the stock just gave it says nothing: what is left is left + g left − g left (2,646 starts). With the unit lag, on tents 8, 12, 16 its fate is the fixed value's at all 3,000 starts and schedules within the band; they part (fixed ends, stock goes on) only under a flat top or a gate (150 of 4,716)."
+   }
+  ],
+  "false_or_empty": [
+   {
+    "claim": "The lock is a value set again from itself.",
+    "why": "Its rise is the fast step's under a rule that stands; the guess's is the reading's.",
+    "countermodel": "`Three.rise_count_ends`'s lock (TurningInTime.lean:2961), simulated, ends at step 7 reading always, every fourth step, or never. The guess, never reading, goes on from level 12."
+   },
+   {
+    "claim": "One model whose three sources differ only in one function.",
+    "why": "True of any three readings under `Pace.paced`: empty. The fates need three arguments: `RegimeMargin.holds`; `rising_takes_all` restated; an identity, or an unproved law of the lag."
+   }
+  ],
+  "against_the_frozen_tests": [
+   "Test 1: on the probe's tent only \"itself\" parts from the others; \"from the stock\" parts from \"fixed\" only by a premise on the giving.",
+   "Test 2: its second branch holds; the lock is not this. No premise is derived.",
+   "Test 3: not met; each old law is used as it stands. Beside the guess: `RegimeMargin.Adjusted.Between` (RegimeMargin.lean:325) is `Regulation.Between (g e) r (A e r)` (2,744 triples agree), named together nowhere: a giving that lags the stock, with exact fates (694).",
+   "Test 4: met, cheaply: `Pace.paced` takes any two-level law on these types."
+  ],
+  "for_his_point": "The value held would be an object: a place of the state, already `Pace.paced`'s rule. That moves what is handed in one level up, from the number to the reading that sets it. Set from the stock, every amount left is a rest, the take being what it gives (176 searched), so the start and the schedule decide which value is held at rest: the loop hands a value back and does not form one. The signal is handed in as the shape of the reading; `Pace.rule_through_pool` (Pace.lean:276) says which differences then reach the value. The need is a number on the stock, handed in. A reading that itself ends without what it reads is only in ReaderRebuilding, whose set level never moves.",
+  "what_ran": "Read Pace, RuleCapture and ReaderRebuilding whole, and the cited parts of Regulation, RegimeMargin, TurningInTime and DrawHistory, in /Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/. Ran the coordinator's probe and four scripts, kept with outputs in /Users/ren/theories/tmp/r7/one-model/check/round11/seat-tests-234/. `git log` for dates. No build, test or tracked edit. Searches are not proofs; \"on paper\" is argued, not checked."
+ },
+ "refute:held-value": {
+  "verdict": "AI-written (Fable, refuter). As a join the fourth try fails: tests 1 and 4 are met by construction, test 2 only by its countermodel branch, test 3 not at all. Nothing handed in comes to be. One seat statement is broken, three need a premise or an order said, and the page's probe sentence over-says. WORTH BUILDING: only the reach lemma with `rising_takes_all` as its case, then `set_above_ends` under it; the held-value model as a module, not yet.",
+  "survive": [
+   "(a) set above the take ends by step (2·hi + 1)·L: 0 of 40,000 random moves, sources (reading the stock too), givings and schedules pass the bound, in both orders of taking, reading before or after; the bound is reached. Each of four premises dropped (strict nearing, strictly above, readings without end, a ceiling) leaves a course that goes on.",
+   "(c) at once, in the seat's order: the tent condition holds at 1,183 of 1,183 starts, and (level − take) − held never changes.",
+   "(d) the top's region is kept under every `Between` move, strict or not (1,689 of 1,689).",
+   "The lock is not this: `Three.riseShare` under a standing rule ends at step 7 never reading; the guess never reading goes on. `count_rises`'s `rise` contradicts `Between.at_level` (Regulation.lean:113) at a = g, so no premise on the setting can give it.",
+   "Not rechecked: Regulation's relay claims, ReaderRebuilding, the late case."
+  ],
+  "broken": [
+   {
+    "claim": "Seat 2: on tents, from the stock has the fixed value's fate; they part only under a flat top or a gate.",
+    "how": "It searched starts with held = take only (0 of 780 part there, mine too). On tent 12 with held off the take, 1,068 of 8,112 starts part, the stock source going on (take 0, level 1, held 2: fixed ends at step 3, stock rests at take 1, level 2). On 60 random givings under a ceiling the stock source ends where the fixed one goes on at 720 of 33,116 starts (giving 0,0,2,4,0,2,0,0; take 4, level 7, held 0)."
+   },
+   {
+    "claim": "Seat 1 (c): the exact condition for going on.",
+    "how": "It is the chosen order's, and `Pace.paced` leaves the order open. Reading after the step flips the fate at 175 of 1,183 starts (take 0, level 6, held 7: ends at step 7; reading after, it rests at take 5 on level 10). The other order of taking flips 70 of 2,028."
+   },
+   {
+    "claim": "Seat 1 (b): from arrival, ends ↔ Y < m + y.",
+    "how": "`high` at the arrival level is a premise on the course unless `Keeps g 0 hi` is added: g = 0,1,2,0,2,0, hi 4, m 2, y 2, take 0, level 4 runs 4, 6, 5, 3, 2, 0; the arrival level 5 is at least m + y and it ends."
+   },
+   {
+    "claim": "Both seats: `Regulation.Between` as it stands.",
+    "how": "The identity move is `Between` (`Between.refl`), and under it the from-itself course goes on. Strict nearing is a premise more."
+   },
+   {
+    "claim": "The page: set from the stock, it settles at a take of six on a level of twelve.",
+    "how": "That is one of the probe's four printed courses (reading every fourth step from nine); reading every step from nine it alternates takes three and four. Every amount left is a rest by substitution; of 16 one-unit changes at rests none returns; one unit lost ends it at each of the six rests on the tent's rising side, six on twelve included."
+   }
+  ],
+  "frozen_tests": [
+   "Test 1: met in the letter, by construction. From tent 12, take 3, held 3, level 9, h = m goes on and h above the take ends. 'Above the take' is the rise put on the value, and the theorem is the regime's law beside the rising law's inner step.",
+   "Test 2: first branch failed; met only by its countermodel. No premise is derived; renamed, the rise is put in by hand. The from-itself ending is not `rising_takes_all` as stated (`rises` fails at 6 of 12 steps, by one and at once) and is its inner step (20,000 of 20,000 courses: the level is nothing the step after the take first reaches it). It is more than the premise restated only in this: the reach is derived, at any pace of reading, also where the reading reads the stock. By the frozen clause the ending itself counts as nothing.",
+   "Test 3: not met. Each old law is used as it stands; none is replaced.",
+   "Test 4: met cheaply, with strict nearing added and the order of taking and reading left open.",
+   "'Set again from the stock' is true by how it was built where it is true, and is no holding: no rest opposes departure; against a fixed value it is never worse on tents and refills (28,224 starts) and worse on other givings."
+  ],
+  "one_model_or_three": "One definition, two kinds, three arguments. Fixed, from the take and with a top never read the stock: that is `TurningInTime.asItWas` at a way of take, held and count (`join_alike`, read as quoted). From the stock reads it at every level. The fates come from the regime's point of no return after arrival, from the take reaching the ceiling, and from a conservation that holds at once in one order. 'Only the source differs' is true of the definition and empty as a law.",
+  "worth_building": [
+   {
+    "what": "The reach lemma, with `rising_takes_all` as its case",
+    "statement": "On the pair's course with `FromNothing giving`, `Keeps giving 0 hi` and a start within hi: a use of at least hi at step n leaves the level nothing at step n + 1. `rising_takes_all` follows by `rises_from` at n = hi, its proof replaced.",
+    "first_obstacle": "`takes_at_hi` (TurningInTime.lean:651) is private, shared with `rising_meets_level`, and stated on `asItWas alone`; a reading of the stock needs it on `pair after left`. Build only if net lines do not rise."
+   },
+   {
+    "what": "`set_above_ends`, after it, as a second case",
+    "statement": "On `Pace.paced` at take, level and held: the move `Between` and strictly nearer, every reading setting the value above the take, a reading in every L steps, and the first lemma's premises: the level is nothing by step (2·hi + 1)·L. So a course that lasts has a reading that sets the value at or below the take.",
+    "first_obstacle": "The count runs over readings, not steps (the take at a reading exceeds the lesser of the two before); Pace has no premise for a schedule with bounded gaps."
+   }
+  ],
+  "keep_on_paper": [
+   "The fixed case: two old laws in sequence.",
+   "The top: on tent 12, tops one to six go on from every start level and seven to twelve end from every one; the top is handed in.",
+   "From the stock, with its countermodels both ways and its dependence on the order of reading.",
+   "The lock apart from a value set from itself, with its countermodel."
+  ],
+  "what_it_would_add_for_his_point": "It would put the value a loop holds in the state, its course derived, in the centre's own pair. It would say one thing of it: on a stock with a ceiling, a value that every reading sets above what is taken ends the stock at any pace of reading, whatever else is read, so lasting needs a reading that sets it at or below the take. A top gives the regime's point of no return at the top, and helps only within what the stock gives. It would still hand in what is read and what is made of it, the order and schedule, the need, the ceiling and the top.",
+  "what_ran": "refute.py (38 s), refute2.py and refute3.py (under 1 s each), with refute.out, refute2.out and refute3.out, in /Users/ren/theories/tmp/r7/one-model/check/round11/refuter-held-value/; the coordinator's probe rerun. Lean statements read in Pace, Regulation, RegimeMargin, TurningInTime, RuleCapture and ClosedCapture; nothing built, tested, gated, edited or written to git. Searches are not proofs; the two lemmas are argued, not checked."
+ }
+}

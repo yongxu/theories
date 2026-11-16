@@ -1,0 +1,38 @@
+1. Two units that each leave themselves (WayOfUnits), all needs met at the start
+   tent, ceiling 12, P needs 1 takes 1, Q needs 9 takes 5, start [P,Q]: never-ending levels [7, 8, 10, 11, 12]
+   inflow min(3,12-z), same units: never-ending levels [7, 8, 10, 11]  course from 11: [11, 8, 5, 7, 9, 11]  from 12: [12, 9, 6, 0, 0, 0]
+   inflow min(2,12-z), units (need 6, use 3) and (need 2, use 1): never-ending levels [5, 7, 9, 11] ; among levels 6..12: [7, 9, 11]
+
+2. The smallest ceiling at which two units under two_units_iff's premises have never-ending starts
+   that are not an up-set among the levels meeting both needs (uses 1..4, rising step maps)
+   ceiling 7, one from anything (g rising): unit (need 5, use 2) and unit (need 1, use 1); y2=1 y1=8;
+      levels within the premises [5, 6, 7]; never ending from [6]
+   (every start checked here agreed with the right side of two_units_iff)
+
+3. Sandwich: with a rising step map, if the ways from x and x'' agree for 14 steps (or to the end), so do the ways from any level between
+   nothing                          step rising True   (world, way) cases 112500, violations 0
+   tent min(z,hi-z)                 step rising True   (world, way) cases 112500, violations 0
+   inflow min(2,hi-z)               step rising True   (world, way) cases 112500, violations 0
+   logistic z(hi-z)/hi              step rising True   (world, way) cases 112500, violations 0
+   fold (hi-2z below half)          step rising False  (world, way) cases 112500, violations 5748
+   one from anything (g rising)     step rising True   (world, way) cases 112500, violations 0
+
+4. The levels from which every unit's need is met at every step and the way is never empty (all met for ever); ceiling 5
+   nothing                          step rising True   non-empty 0, not an up-set 0, not within the never-ending 0
+   tent min(z,hi-z)                 step rising True   non-empty 5690, not an up-set 0, not within the never-ending 0
+   inflow min(2,hi-z)               step rising True   non-empty 5790, not an up-set 0, not within the never-ending 0
+   logistic z(hi-z)/hi              step rising True   non-empty 1412, not an up-set 0, not within the never-ending 0
+   fold (hi-2z below half)          step rising False  non-empty 5238, not an up-set 1652, not within the never-ending 0
+   one from anything (g rising)     step rising True   non-empty 1760, not an up-set 0, not within the never-ending 0
+
+5. One kind (so one need): never-ending levels that are not an up-set, by giving (ceiling 6, kids 0..3 copies, uses 1..3)
+   nothing                          step rising True   cases 144, not an up-set 0 
+   tent min(z,hi-z)                 step rising True   cases 144, not an up-set 0 
+   inflow min(2,hi-z)               step rising True   cases 144, not an up-set 0 
+   logistic z(hi-z)/hi              step rising True   cases 144, not an up-set 0 
+   fold (hi-2z below half)          step rising False  cases 144, not an up-set 11 e.g. need 4 use 1 kids 1 copies, 2 unit(s): [4, 6]
+   one from anything (g rising)     step rising True   cases 144, not an up-set 0 
+
+6. HigherStartEnds, the class B B C C (take 4) under the tent at ceiling 12: levels 3..11 from which the level
+   under a standing take of 4 stays within 3..11 for ever (C's need 12 never met):
+    [8] ; boundary H + y = 4 + 4 = 8; fixed levels of the take-4 step: [0, 8, 12]

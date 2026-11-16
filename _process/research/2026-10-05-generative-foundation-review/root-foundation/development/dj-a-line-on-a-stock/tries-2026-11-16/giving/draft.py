@@ -1,0 +1,68 @@
+# AI-written (Fable, seat "giving", round 11), 16 November 2026. The report as returned, kept for the record; counts its words.
+import json
+R = {
+"answer_in_one_paragraph": "AI-written (Fable). For members that are always there, 'the stock gives by what is left' and 'members give' are one function, so the generative region is RegimeMargin's holding region renamed; it is new only where givers are units of the way. October's Law is not the proposed step unfolded: it reads needs before anything is taken. For a taker needing nothing under a standing draw the two are one step read half a step apart; that phase lemma is the one new theorem found, and gives October's law its exact boundary. The formula in (a) as written contradicts ends_beyond_giving.",
+"statements": [
+ {"statement": "(a) Two orders are in use. RegimeMargin.step (:249), LineOnAStock.left (:146): all present take first; giving reads what is left; LineOnAStock.after (:137) reads needs before the take. RelationalRenewal.Law.level (deeper:246): needs read on the level, one balance, the taker takes only while met, kinds act again when the level returns.",
+  "standing": "follows on paper",
+  "evidence": "Definitions unfolded; transcription checked against five Lean values."},
+ {"statement": "(b) A rising giving with g 0 = 0 is exactly the sum of members of need m giving g m - g (m-1), needs read on what is left.",
+  "standing": "says nothing",
+  "evidence": "A renaming of g (telescoping; 15,625 checked); Gated g 1 is FromNothing g."},
+ {"statement": "(b) min z (12 - z) is not a sum of givers.",
+  "standing": "follows on paper",
+  "evidence": "A sum of givers rises. It is six givers (needs 1 to 6) less six takers (needs 7 to 12)."},
+ {"statement": "(c) Where every giver needs something, nothing is given from nothing.",
+  "standing": "already a theorem",
+  "evidence": "Flow.given_zero_below, Continuation.lean:457, at m = 1."},
+ {"statement": "(c) Law is two kinds by unfolding only in its own order (level_succ, deeper:256). Against the take-first step it is a dictionary: they part at the phase, the taker's gate, kinds coming back (pulse 2), and schedules.",
+  "standing": "follows on paper",
+  "evidence": "Start 2, renew 1, needG 2, needF 0, draw 1: Law 2, 2, 2; RegimeMargin.step, same giving and start: 2, 1, 0."},
+ {"statement": "Phase lemma. With needF = 0 and standing draw H = draw - contrib (contrib <= draw): Law.level t = (run of RegimeMargin.step g H from start + H) t - H, where g z = renew if needG <= z.",
+  "standing": "follows on paper",
+  "evidence": "With z = x - H: ((x - H) + g (x - H)) - H = (z + g z) - H. 3,240 laws searched.",
+  "cases_it_would_have": "For such laws: within_renewal_sustains (Adjusted.holds_from :661); the overdraw crossing and endings (falls_within :910, ends_beyond_giving :721, stays_ended :712). New: with 0 < H <= renew the level ends exactly from starts below needG (30 laws).",
+  "what_it_would_delete": "With the next statement for schedules: no_return_below_support, permanently_below, overdraw_crosses_support (deeper:357-417, 57 lines)."},
+ {"statement": "A schedule of draws each at least H keeps Law's level at or below the standing-H course.",
+  "standing": "holds in search only",
+  "evidence": "20,000 laws. The Lean orders runs in the level only (step_mono :1112)."},
+ {"statement": "(d) Standing takes T, givers gated on what is left: the boundary is T + y, y least with total giving covering T. A pure giver never raises it.",
+  "standing": "already a theorem",
+  "evidence": "By (b): ends_iff_below :741, within its band; lowered_raises :802, :808. 53,744 starts searched."},
+ {"statement": "(d) In Law's order, each gated member giving at least its take, one standing taker H: the level ends exactly from starts below the least z whose net giving covers H: the net take's boundary, on what is left.",
+  "standing": "follows on paper",
+  "evidence": "The phase lemma with ends_iff_below; 42,000 starts searched."},
+ {"statement": "(e) Regions kept by giving are proved six times, never as a region: Crossing (:1013), MutualActivation.saves (:3465), Relay.cycles (:3582), Coupled.ends_iff_below (:3306), within_renewal_sustains with cultivation (deeper:325, :515), Stock.repeat_covered_iff (:319).",
+  "standing": "already a theorem",
+  "evidence": "Statements read.",
+  "cases_it_would_have": "New case: on min z (12 - z) a standing take of 7 ends from every start; with one giver (need at most 6, gives 1) starts from 13 (searched to 40) rest at 13, lower ones end: ends_iff_below at hi = 13."}
+],
+"false_or_empty": [
+ {"claim": "The step (x - T) + g(x - T) + G, G gated on the level before the take.",
+  "why": "It gives from nothing left. Read givers' needs where giving is read.",
+  "countermodel": "g = 0, a taker of 5 needing nothing, a giver (need 1, gives 4): from 4 it stays at 4; RegimeMargin's order and Law's end."},
+ {"claim": "October's law becomes a case and its proof goes.",
+  "why": "Its loss for good was already made a case on 18 October (SupportGated.below_for_good) and the direct proof stayed: Becoming.Dependence imports RelationalRenewal."},
+ {"claim": "root_mono or rises_by_draw gives 'a giver lowers the boundary' for a member that also takes.",
+  "why": "Both need giving down with the draw up. Such a member, giving back at least its take, raised the level's boundary in 3,324 of 3,552 cases; on what is left, only for needs above the old root."},
+ {"claim": "Every rising giving with nothing from nothing is a sum of gated givers, on two stocks.",
+  "why": "Needs on both.",
+  "countermodel": "g(a,b) = min 1 (a+b): the member needing (1,1) would give -1."},
+ {"claim": "A generative region: a band each of whose givers needs it.",
+  "why": "For members always there it is (d) renamed (root_above_need :764). Read as 'each is met throughout', Relay refutes it.",
+  "countermodel": "Relay: only the first gives at (2,3), only the second at (3,2); with givers gone once unmet it ends by step 4."}
+],
+"against_the_frozen_tests": [
+ "Test 1: givers bring no threshold where takes are gated. In Law's order with g = 0, a member giving back its take (need 1) beside a taker (need 2, takes 2) goes on from odd starts and ends from even ones (18 of 1,296 pairs). The start decides, by where the taker first goes unmet.",
+ "Test 2: folding givers into g deletes nothing. The phase lemma with the schedule comparison could make deeper:357-417 cases, if Law's theorems move below RegimeMargin. Unbuilt.",
+ "Test 3: a separate G carried through LineOnAStock.left lengthens every lemma citing it. Unmeasured."
+],
+"what_ran": "Read only: the brief's pages, RelationalRenewal and RenewalFlow whole, the named parts of RegimeMargin, Stock, Continuation, Dependence, LineOnAStock; git log for dates. Two Python transcriptions, searches not proofs: /Users/ren/theories/tmp/r7/one-model/check/round11/giving/check_giving.py, /Users/ren/theories/tmp/r7/one-model/check/round11/giving/check_more.py. No Lean built, nothing tracked edited."
+}
+def words(o):
+    if isinstance(o, str): return len(o.split())
+    if isinstance(o, dict): return sum(words(v) for v in o.values())
+    return sum(words(v) for v in o)
+if __name__ == "__main__":
+    print("words:", words(R), "by field:", {k: words(v) for k, v in R.items()})
+    json.dump(R, open("/Users/ren/theories/tmp/r7/one-model/check/round11/giving/report.json", "w"), ensure_ascii=False, indent=1)

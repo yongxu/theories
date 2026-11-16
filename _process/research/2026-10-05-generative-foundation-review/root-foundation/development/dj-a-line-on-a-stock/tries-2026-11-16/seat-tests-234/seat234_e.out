@@ -1,0 +1,8 @@
+tent 8: in-band starts x schedules 432; fates differ at 0 {}; first []
+tent 12: in-band starts x schedules 936; fates differ at 0 {}; first []
+tent 16: in-band starts x schedules 1632; fates differ at 0 {}; first []
+flat top 6 on 20: in-band starts x schedules 2520; fates differ at 66 {('ends', 'goes on'): 66}; first [(1, 14, 7, 'ends', 'goes on'), (1, 15, 7, 'ends', 'goes on'), (1, 16, 7, 'ends', 'goes on')]
+flat top 4 on 14: in-band starts x schedules 1260; fates differ at 42 {('ends', 'goes on'): 42}; first [(1, 10, 5, 'ends', 'goes on'), (1, 11, 5, 'ends', 'goes on'), (1, 12, 5, 'ends', 'goes on')]
+gated at 2, gives 4, to 12: in-band starts x schedules 936; fates differ at 42 {('ends', 'goes on'): 42}; first [(1, 8, 5, 'ends', 'goes on'), (1, 9, 5, 'ends', 'goes on'), (1, 10, 5, 'ends', 'goes on')]
+take at once, held set one above at every step: [3, 3, 4, 4, 5, 5, 6, 6, 7, 7] (the lock of Three.rise_count_ends: 3,4,5,6,7,8,9,10)
+flat top, start (14, take 7, held 7): fixed ('ends', 5) ; stock ('goes on', None) [(14, 7, 7), (13, 7, 6), (12, 6, 6), (12, 6, 6), (12, 6, 6), (12, 6, 6)]

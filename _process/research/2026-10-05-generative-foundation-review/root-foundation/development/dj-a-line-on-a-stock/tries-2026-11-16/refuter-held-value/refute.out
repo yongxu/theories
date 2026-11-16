@@ -1,0 +1,41 @@
+(a) bound (2hi+1)L, 40000 random moves, sources above the take, givings, schedules, both orders, reading before/after:
+    courses past the bound: 0 []
+    latest end / bound: 1.0 {('O1', 'after'): 1.0, ('O2', 'before'): 0.933, ('O1', 'before'): 1.0, ('O2', 'after'): 0.667}
+(a) one premise dropped, the course goes on:
+     identity move (Between holds by Between.refl; not strictly nearer) -> True
+     set at-or-above (h = take), not strictly above -> True
+     finitely many readings (reads only before step 3) -> True
+     no ceiling (g z = z) -> True
+     something from nothing (g 0 = 1) -> True
+(a) rising_takes_all`s `rises` (strict at every step), failures in 12 steps:
+     ('by one', 1) [3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9] fails at 6
+     ('by one', 2) [3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9] fails at 6
+     ('by one', 3) [3, 3, 4, 4, 4, 5, 5, 5, 6, 6, 6, 7, 7] fails at 8
+     ('at once', 1) [3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9] fails at 6
+     ('at once', 2) [3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9] fails at 6
+     ('at once', 3) [3, 3, 4, 4, 4, 5, 5, 5, 6, 6, 6, 7, 7] fails at 8
+(a) end = the step after the first step where take >= level: (20000, 20000)
+(c)
+     at once: seat condition mismatches -> (0, 1183)
+     at once: conserved quantity broken -> 0
+     at once: rests among left 0..hi -> [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+     at once: one unit lost or added at each rest -> [(1, -1, 'ends'), (1, 1, 'rests at take 5 level 12'), (2, -1, 'ends'), (2, 1, 'rests at take 5 level 12'), (3, -1, 'ends'), (3, 1, 'rests at take 5 level 12'), (4, -1, 'ends'), (4, 1, 'rests at take 5 level 12'), (5, -1, 'ends'), (5, 1, 'rests at take 5 level 12'), (6, -1, 'ends'), (6, 1, 'out of range'), (7, -1, 'rests at take 5 level 12'), (7, 1, 'out of range'), (8, -1, 'rests at take 4 level 12'), (8, 1, 'out of range'), (9, -1, 'rests at take 3 level 12'), (9, 1, 'out of range'), (10, -1, 'rests at take 2 level 12'), (10, 1, 'out of range'), (11, -1, 'rests at take 1 level 12'), (11, 1, 'out of range')]
+     by one: rests among left 0..hi -> [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+     by one: one unit lost or added at each rest -> [(1, -1, 'ends'), (1, 1, 'rests at take 5 level 12'), (2, -1, 'ends'), (2, 1, 'rests at take 5 level 12'), (3, -1, 'ends'), (3, 1, 'rests at take 5 level 12'), (4, -1, 'ends'), (4, 1, 'rests at take 5 level 12'), (5, -1, 'ends'), (5, 1, 'rests at take 5 level 12'), (6, -1, 'ends'), (6, 1, 'out of range'), (7, -1, 'rests at take 5 level 12'), (7, 1, 'out of range'), (8, -1, 'rests at take 4 level 12'), (8, 1, 'out of range'), (9, -1, 'rests at take 3 level 12'), (9, 1, 'out of range'), (10, -1, 'rests at take 2 level 12'), (10, 1, 'out of range'), (11, -1, 'rests at take 1 level 12'), (11, 1, 'out of range')]
+     by one, start take = held: stock and fixed part at -> (0, 780, [])
+(c) probe (take 3, held 3, by one, reading every step): rest by start level: {1: None, 2: None, 3: None, 4: None, 5: None, 6: (3, 6, 3), 7: (5, 12, 6), 8: (4, 12, 5), 9: (4, 12, 3), 10: (4, 12, 3), 11: (3, 12, 4), 12: (3, 12, 3)}
+(d) region kept under every Between move: 1689 of 1689
+(d) tent 12, by one, c 1, start take 0 held 0; top s -> start levels 1..12:
+     1 ............
+     2 ............
+     3 ............
+     4 ............
+     5 ............
+     6 ............
+     7 xxxxxxxxxxxx
+     8 xxxxxxxxxxxx
+     9 xxxxxxxxxxxx
+     10 xxxxxxxxxxxx
+     11 xxxxxxxxxxxx
+     12 xxxxxxxxxxxx
+lock (Three.riseShare, rule standing) never reading ends at step (7, 'goes on')

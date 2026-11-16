@@ -1,0 +1,21 @@
+{
+  "tree": "/Users/ren/tmp/dj/batch17/reach-and-held-value",
+  "modules": 151,
+  "ran": [
+    "Becoming.ScratchReach",
+    "BecomingScratchReachAxiomAudit"
+  ],
+  "reused": 150,
+  "unclean": [],
+  "audits": {
+    "Becoming.ScratchReach": {
+      "theorems": 20,
+      "declarations": 33,
+      "with_axioms": {}
+    }
+  },
+  "seconds": {
+    "Becoming.ScratchReach": 2.329,
+    "BecomingScratchReachAxiomAudit": 0.362
+  }
+}

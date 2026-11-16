@@ -1,0 +1,21 @@
+{
+  "tree": "/Users/ren/tmp/dj/batch17/takes-the-whole",
+  "modules": 152,
+  "ran": [
+    "Becoming.ScratchTakesTheWhole",
+    "BecomingScratchTakesTheWholeAxiomAudit"
+  ],
+  "reused": 151,
+  "unclean": [],
+  "audits": {
+    "Becoming.ScratchTakesTheWhole": {
+      "theorems": 35,
+      "declarations": 46,
+      "with_axioms": {}
+    }
+  },
+  "seconds": {
+    "Becoming.ScratchTakesTheWhole": 0.668,
+    "BecomingScratchTakesTheWholeAxiomAudit": 0.379
+  }
+}

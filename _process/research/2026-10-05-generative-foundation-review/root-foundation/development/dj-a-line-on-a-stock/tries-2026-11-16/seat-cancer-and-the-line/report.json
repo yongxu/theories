@@ -1,0 +1,68 @@
+{
+ "answer_in_one_paragraph": "AI-written (Fable), 16 November 2026. Neither link holds as a theorem. (1) Apart, both ways. `ConfinedRise.ends` is a lineage ending with a whole whose conditions fall below their gate and do not return, the excess anyone's. `line_ends` is a line ending alone, below its own need, on a stock that can recover while other units go on (C). The Web-with-a-Flow dictionary is an obstacle here too (the statement needs a flow and a web defined from the course), but it is not why they are apart: C balances at every step. What decides whether the line takes the whole with it is the order of needs: where the line has one need and every other unit needs at least that, the net ends when the line does (argued by hand, one side only; 1,500 random worlds, none against). (2) The ending laws are not cases of each other. The rise is one definition: `generations_rise` is `MoreThanNow` unfolded, so `need_unmet` does derive the step-by-step rise, from `grows`, which stays supplied. It is not derived from what taking gains: a unit's kids do not depend on its use.",
+ "links": [
+  {
+   "from": "a-line-on-a-stock",
+   "to": "confined-rise-within-a-whole",
+   "statement": "A closed line whose kids of the line take more is a `ConfinedRise` on the stock, its excess derived.",
+   "standing": "apart",
+   "evidence": "Founding.lean:161-175; LineOnAStock.lean:904-911. Under `ends`' base premises, with one condition whose level is the course's: `excess` and balance make the level fall throughout [T, T+n); afterwards `family_excess_ends` (Continuation.lean:573) with `gated` and `acting` leaves nothing given; `draws` puts T at or before the line's last step. So the level never rises from T on. In C it does.",
+   "first_obstacle": "The whole does not end; `grows` is of take, `Rise.selected` of offspring number (B)."
+  },
+  {
+   "from": "confined-rise-within-a-whole",
+   "to": "a-line-on-a-stock",
+   "statement": "A confined rise gives a line whose kids take more.",
+   "standing": "apart",
+   "evidence": "`Body.confined_rise` (Founding.lean:741): the confined founder takes one at step 0, its offspring nothing; `kids` differs by step (:438). `take`, `give` and `kids` are free in time: no rule."
+  },
+  {
+   "from": "Founding.Flow.ConfinedRise.ends",
+   "to": "LineOnAStock.gone_after, never_in",
+   "statement": "`lineage (generations need kids giving use (w, x)) h k = []` under `line_ends`' premises, for a line whose kids are all of it.",
+   "standing": "a renaming",
+   "evidence": "It restates `line_ends` in `SelectionLevels.lineage` and stays true if `ConfinedRise` changes; both sides already share `SelectionTerm.Generations` (LineOnAStock.lean:560, :664). Why nothing returns differs: there the gate keeps the conditions down; here the level may return and `closed` leaves no unit to restart."
+  },
+  {
+   "from": "a-line-on-a-stock (need_unmet; TurningInTime.rising_takes_all)",
+   "to": "where-a-rising-take-ends (Flow.seeking_bounded)",
+   "statement": "One is a case of the other by a definition unfolded.",
+   "standing": "apart",
+   "evidence": "Exhaustion.lean:117 takes `Balances`, at most `B` given a step, and a take that is a ledger entry. TurningInTime.lean:669 takes a cap on the level, `FromNothing`, and a use that is a draw asked, cut off at the level. After the counting the arguments differ."
+  },
+  {
+   "from": "where-a-rising-take-ends (more_accumulates)",
+   "to": "turning-in-time, a-line-on-a-stock (rises_from)",
+   "statement": "`more_accumulates` (Exhaustion.lean:51): `(∀ i, i < n → MoreThanNow id g (T + i)) → g T + n ≤ g (T + n)`. `TurningInTime.rises_from` (:625) is its case T = 0, proved again by induction.",
+   "standing": "already a theorem that shows it, of the counting only; condition 4 does not apply (no path)",
+   "evidence": "`MoreThanNow q g n := q (g n) < q (g (n + 1))` (Seeking.lean:73). By the same unfolding `generations_rise` (LineOnAStock.lean:985) and `rising_takes_all`'s `rises` are `MoreThanNow`: a renaming. By reading.",
+   "premises": "`rises`, unchanged",
+   "lean_lines_estimate": "about 4 in place of 6",
+   "imports_it_would_add": "None if `more_accumulates` moves to Seeking, which both already import; Exhaustion is not in TurningInTime's closure.",
+   "first_obstacle": "`0 + i` needs `Nat.zero_add`."
+  }
+ ],
+ "apart": [
+  {
+   "what_is_read_as_one": "A closed line that grows, and a confined rise",
+   "countermodel_or_reason": "C: a, b, c need 17, use 1, 2, 3, kids [b], [c], [a, a, a, a]; O needs 1, uses 1, kids [O]; giving z = min z (17 - z); start ([a, O], 17). `line_ends`' premises hold for {a, b, c}. Levels 17, 17, 17, 17, 17, 16, 6, 10, 17, ...; the line has 1, 1, 1, 4, 4, 4 units, none from step 6; selection within goes for it at step 2 (concord 3, discord 0). The level rises at steps 6 and 7; O goes on."
+  },
+  {
+   "what_is_read_as_one": "'Kids together take more' and 'selection within goes for it'",
+   "countermodel_or_reason": "B: D_k needs 11, uses k, kids [D_(k+1)], beside O; giving min z (12 - z); start ([D_1, O], 12). `line_ends`' premises hold; the line is gone from step 7; concord is 0 at every step, discord 1 at step 6."
+  },
+  {
+   "what_is_read_as_one": "A rising take in a ledger and a rising use against a cap",
+   "countermodel_or_reason": "`Doubling` on min z (12 - z) from ([()], 12): uses 1, 2, 4, 8, 16 at levels 12, 12, 12, 12, 8. With take := use, balance fails at step 4; with what is in fact taken (1, 2, 4, 8, 8) more-than-now fails at step 3, every need met. Conversely `Seeker` gives two whatever is left; its level is unbounded."
+  },
+  {
+   "what_is_read_as_one": "Cancer's four marks as premises: ConfinedRise.ends | line_ends | locked_ends_rising",
+   "countermodel_or_reason": "Closed on itself: absent (`confined` is closure in the whole) | `closed` | `locked`, `raises`, `monotone`, `upper`. A take not covered or growing: `excess`, `start`, the uptake anyone's (`draws` unused) | `grows`, with `keeps`, `high` | `more`, with `keeps`, `high`. Nothing of the level reaching how it selects: absent | by construction, with `down` | `outside`, `un`. Needing what it uses up: `confined`, `gated` | `needs` | `needs`."
+  }
+ ],
+ "against_the_four_conditions": [
+  "`rises_from` from `more_accumulates`: (1) both sides' definitions, no structure: met. (2) no premise added: met. (3) false if `MoreThanNow` were `≤`: met. (4) no path. It joins a lemma beneath both dynamics, not the two atlas entries.",
+  "Nothing else is called a theorem: the line as a confined rise fails (1) and is false on C."
+ ],
+ "what_ran": "Read the two papers, the atlas entries, the Lean on both sides of each link, and the round-9 dictionary report. No build, test, gate, git write or tracked edit; nothing compiled. Six Python scripts in /Users/ren/theories/tmp/r7/one-model/check/round11/seat-cancer-and-the-line/ (0.4 to 4.3 s each): worked courses and searches over 40 or 60 steps, not proofs. Kept failure: world A, a doubling line, takes the stock to nothing. My mistake: the first tumour.py looped for about 100 s before I stopped my own process; fixed."
+}

@@ -1,0 +1,9 @@
+tent 12   by one : starts 6084; stock goes on where fixed ends 801; stock ends where fixed goes on 0 e.g. []
+tent 12   at once: starts 6084; stock goes on where fixed ends 165; stock ends where fixed goes on 0 e.g. []
+refill 8  by one : starts 1944; stock goes on where fixed ends 105; stock ends where fixed goes on 0 e.g. []
+refill 8  at once: starts 1944; stock goes on where fixed ends 0; stock ends where fixed goes on 0 e.g. []
+refill 12 by one : starts 6084; stock goes on where fixed ends 231; stock ends where fixed goes on 0 e.g. []
+refill 12 at once: starts 6084; stock goes on where fixed ends 0; stock ends where fixed goes on 0 e.g. []
+60 random givings within a ceiling (by one): starts 33116 ; stock ends where fixed goes on 720 ; first (7, [0, 0, 2, 4, 0, 2, 0, 0], (1, 4, 7, 0))
+   stock: [(4, 7, 0), (3, 7, 4), (4, 4, 0), (3, 0, 0), (2, 0, 0), (1, 0, 0), (0, 0, 0), (0, 0, 0), (0, 0, 0), (0, 0, 0)]
+   fixed: [(4, 7, 0), (3, 7, 0), (2, 4, 0), (1, 4, 0), (0, 7, 0), (0, 7, 0), (0, 7, 0), (0, 7, 0), (0, 7, 0), (0, 7, 0)]

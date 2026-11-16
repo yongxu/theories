@@ -1,0 +1,576 @@
+{
+ "note": "AI-written. Reports of workflow wf_b3f452de-604, 16 November 2026: six read-only seats on what the Lean and the atlas already hold (attractors, transitions, the meta-attractor, the generative and continuation dynamics, paths, one state space).",
+ "seat:generative-and-continuation": {
+  "answer_in_one_paragraph": "AI-written (Fable). \"Keeps remaking what it rests on\" has no Lean object; three families hold pieces. The grammar has renewal without end and generate/keep/degenerate, with no stock. The World family has renewing and consuming as whole-run classes, exclusive, not exhaustive, no boundary; its laws are one-step keeping, needs of going on, and endings. Exact boundaries exist only where giving is a function of what is left: RegimeMargin (one condition, and a web under mutual support) and the November line, whose iffs conclude 不穷 under 一, where the grammar proves no 生生. In the line, units only take; the stock remakes itself. The join was a dictionary because Flow's give is free, so under balance a premise is its conclusion; October's RenewalFlow built the same instance for a gated level law, and the study never names it. Joins that are not one: below both (Amounts, found in round 9), or a level law made a case of the regime.",
+  "what_exists": [
+   {
+    "what": "Exact point of no return, one condition",
+    "where": "B/RegimeMargin.lean:741 ends_iff_below; :730 holds",
+    "statement_in_plain_words": "Under a standing draw H a level ends exactly where it starts below H + y; from there up it never falls below its start.",
+    "given": "Giving short of H below y and meeting it up to a top; nothing from nothing; band kept; the draw."
+   },
+   {
+    "what": "Goings-on that remake each other, with a boundary",
+    "where": "B/RegimeMargin.lean:3306 Coupled.ends_iff_below; :2913 ends_iff_within; :3582 Relay.cycles",
+    "statement_in_plain_words": "Conditions each giving from what is left of all: each ends exactly below a threshold that falls as partners rise. In Relay each alone ends from every level; together neither ends.",
+    "given": "Standing draws, giving rising in each, a band; Relay is one built case outside it."
+   },
+   {
+    "what": "The line on a stock",
+    "where": "B/LineOnAStock.lean:1239, :1011, :146",
+    "statement_in_plain_words": "Offspring taking the same: unending exactly where a holding state is reached. Taking more: a need unmet within ceiling plus one. `left` passes the way only through `taken`: units never give.",
+    "given": "even or grows of every unit, down, the regime along the course."
+   },
+   {
+    "what": "Whole-run classes",
+    "where": "B/Dependence.lean:166, :169, :222; B/Horizon.lean:147",
+    "statement_in_plain_words": "Renewing excludes consuming; any reading fixed by h steps that includes every renewing run includes a consuming one.",
+    "given": "Draws free at each step."
+   },
+   {
+    "what": "World laws, one-sided",
+    "where": "B/Continuation.lean:248, :468; B/Arising.lean:190; B/KeepingWidening.lean:339; B/Reproduction.lean:613",
+    "statement_in_plain_words": "Within joint giving the level holds one step; below a gate it stays below; unceasing arising needs renewers recurring; a finite balanced whole keeps widening nowhere; a lineage in a dissipated closed family ends.",
+    "given": "Balance, acting, dependent, gate, dissipation."
+   },
+   {
+    "what": "Repetition without end",
+    "where": "B/Stock.lean:319 repeat_covered_iff",
+    "statement_in_plain_words": "A course repeats for ever exactly where its first pass is covered and its return covers its draw.",
+    "given": "Draw and return read off acts."
+   },
+   {
+    "what": "The grammar's regions",
+    "where": "B/Grammar.lean:259, :284; B/GrammarMap.lean:80, :274, :286; B/LineageRegimes.lean:173, :1086",
+    "statement_in_plain_words": "生生 is renewal without end, none under the one; 生成, 守, 退化, 新而尽 at two grains. World lineages are placed there; the stock forces neither fate.",
+    "given": "Two classes; World premises."
+   },
+   {
+    "what": "The third course",
+    "where": "B/Dependence.lean:269; B/Substitution.lean:158",
+    "statement_in_plain_words": "After a loss, what stays active changed its need; a substituting consumer persists, still consuming.",
+    "given": "Dependent. Absent from regime and line."
+   },
+   {
+    "what": "October's level law",
+    "where": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/deeper/RelationalRenewal.lean:236-254; B/RenewalFlow.lean:125, :200",
+    "statement_in_plain_words": "A level renewed only while it meets its renewer's need is a balanced flow; below that need it stays below.",
+    "given": "Take defined as what the step removes."
+   }
+  ],
+  "same_thing_under_two_names": [
+   "Each within renewal, together beyond it: RelationalRenewal.Law.jointly_consuming (deeper:571), SupportGated.jointly_ends (RenewalFlow:239), Continuation's WithinOwn/WithinJoint, RegimeMargin.Peaked (:958).",
+   "Alike until late: Horizon.finite_reading_includes_consumption (:147), LineageRegions.Courses.same_terms_two_fates (:1626), LineOnAStock.need_unmet with ways_alike (:547).",
+   "Loss for good: Continuation.stays_below/never_returns_below (:468, :450), SupportGated.below_for_good, RegimeMargin.stays_ended (:712).",
+   "Ending passed along dependence: RegimeMargin Coupled.Indexed.ends_downstream (:2210), LabelledRoles Web.coextinct (:50).",
+   "A relay or closed cycle built six times as a witness, no law over them: Arising.Recycle (:484), Roles.Shuttle, Successive.relay, LineageRegimes.Handover, KindRelay, Coupled.Relay.",
+   "Perhaps, unchecked: LineOnAStock.HigherStartEnds (:1780) and Coupled.MutualInhibition.breaks_order (:3502), fate not monotone in level where one only takes from another."
+  ],
+  "what_is_missing": [
+   "A model where what goes on gives to what it rests on, has needs, and has an exact boundary.",
+   "Any theorem placing the regime's regions or the lock on 生成/守/退化: 02-MAP.md line 56 says sections 4 to 9 are not read as regions.",
+   "In the World family, a sufficient condition for going on beyond one step, other than built relays.",
+   "The third course where boundaries are exact: needs are fixed there.",
+   "A boundary in how the draw grows: even and grows are separate theorems asked of every unit; the mixed case has one countermodel."
+  ],
+  "outgrown_words_or_models": [
+   "生生 carries three senses, none with a stock: Grammar.lean:259, 02-MAP.md:61 (生成 'is not 生生'), 01-ROOT.md:155.",
+   "DIRECTION.md lines 15 and 35, 'keep remaking what it rests on', 'the keeping side': what is proved is a line taking within what the stock itself gives back.",
+   "Plan item 4, 'what is given is a free field, so no exact point': RenewalFlow's level law sits in that family, and Stock.lean:319 is exact.",
+   "02-MAP section 3.1, 'the class belongs to the run': true with free draws; under a standing draw the start decides (RegimeMargin:741). Neither telling names the other.",
+   "'Regime, not level' (LineageRegimes:1086) beside 'the point is exact': no theorem states both.",
+   "Record ids keeping 'generation' for arising."
+  ],
+  "candidate_links": [
+   {
+    "from": "RenewingIn / ConsumingIn (Dependence.lean)",
+    "to": "RegimeMargin.ends_iff_below",
+    "kind": "an exact boundary between two regions",
+    "statement_to_try": "On the static web of a regime with giving gated at a need, within the band, the drawer renews exactly from H + y up and consumes exactly below; Renewable.class_belongs_to_the_run becomes the free-draw case.",
+    "why_it_might_fail": "Unfolded it is holds and stays_ended plus definitions; the web supplied is the dictionary's inert side."
+   },
+   {
+    "from": "RelationalRenewal.Law, RenewalFlow",
+    "to": "RegimeMargin.step",
+    "kind": "a case",
+    "statement_to_try": "With no contribution and draw H, Law.level is the regime's step with giving `renew` from needG − H up wherever H is within the level; below_for_good and the pulse pair follow and are deleted.",
+    "why_it_might_fail": "October's gate reads the level before the draw; they part at the overdraw step. The focal stops drawing below its need, so its end is a rest."
+   },
+   {
+    "from": "a-line-on-a-stock",
+    "to": "RegimeMargin Coupled.Indexed",
+    "kind": "a case",
+    "statement_to_try": "With finitely many kinds and counts within B, the line is a pointwise law on stock and counts; ends_iff_within decides the mixed case; units that give make thresholds exact.",
+    "why_it_might_fail": "A growing line leaves every B; ways repeat units of any type; a finite check is no boundary."
+   },
+   {
+    "from": "LineOnAStock.need_unmet, way_ends",
+    "to": "margin-of-a-regime",
+    "kind": "a path from one region to another",
+    "statement_to_try": "Under grows the level does not fall until the first step below the joint take's point of no return, then falls to an unmet need.",
+    "why_it_might_fail": "No such point for a draw giving never meets; units dropping lower the take and the path can re-enter."
+   },
+   {
+    "from": "a-line-on-a-stock",
+    "to": "generation-and-degeneration-at-two-grains",
+    "kind": "an exact boundary between two regions",
+    "statement_to_try": "On unit occurrences, a holding line with turnover is 全生成, WayOfUnits 全守, a growing line 新而有终.",
+    "why_it_might_fail": "The net's carrier has no index for copies; the split may follow from the fine class alone."
+   }
+  ],
+  "what_ran": "Read only. B = /Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ . Read AGENTS.md, DIRECTION.md, the plan, the round-9 review, the web reader's report, parts of Becoming.lean, chapters 01, 02 and 04, and the modules named; grep, sed, and two inline Python reads of dynamics.json and cards.json, under a second each. No file written, no build, test, gate or git command. No candidate statement was compiled; link 1 was checked by hand only."
+ },
+ "seat:attractors": {
+  "answer_in_one_paragraph": "One notion, a set the course does not leave, is said in about ten vocabularies and bridged only at the root («闭» = Law.Absorbing = Frame.Invariant). The centre's modules (RuleCapture, ClosedCapture, RegimeMargin, TurningInTime, LineOnAStock, WayOfUnits) never cite Absorbing, Drawn, basins, the kernel or the root's regions 生成, 守, 退化; the one bridge is TurningInTime.locked_closed. Two-fate partitions of starts with an exact boundary are proved several times; three sets covering every start only at the root, given excluded middle, and in the hexagram example. Ends, holds, locked is stated nowhere as a trichotomy, and the proofs make it the wrong shape: Locked is closed in the way's coordinate, ending is decided in the level's, and the two cross.",
+  "what_exists": [
+   {
+    "what": "Closed, drawn, basins, kernel",
+    "where": "Attraction.lean:110, :190 drawn_iff_not_returns, :384 basin_one_cycle; GrammarLaws.lean:235 «闭»; Viability.lean:55, :59; Lasting.lean:458, :831; GuardedStep.lean:143",
+    "statement_in_plain_words": "A configuration enters a region the law never leaves exactly where it does not come back. Never leaving a guard is lying in a closed set within it. Basins are used by no other module."
+   },
+   {
+    "what": "Three regions cover",
+    "where": "GrammarMap.lean:157 «全三域之周», :97, :101, :107; MapRegions.lean:128",
+    "statement_in_plain_words": "Every point generates, keeps or reaches an end; no two together.",
+    "given": "Excluded middle, exactly (:177)."
+   },
+   {
+    "what": "Two fates of a level",
+    "where": "RegimeMargin.lean:741 ends_iff_below, :1670 fates, :2716, :3333; cycles :1467, :3582",
+    "statement_in_plain_words": "A level up to hi comes to nothing exactly below H + y; within a band every state rests on one side of a threshold.",
+    "given": "Short, Meets, Keeps, FromNothing; rising giving and a band, else a run can cycle."
+   },
+   {
+    "what": "The lock",
+    "where": "RuleCapture.lean:160 Locked, :169 turn_locked, :294 uniform_locks, :807, :849; ClosedCapture.lean:755, :900, :918",
+    "statement_in_plain_words": "Every turn keeps Locked; under a reading favouring at every share all starts lock. Under a threshold reading: a mirror lock, and a course in neither for ever.",
+    "given": "Raises, ReadsShare, favouring kept upward."
+   },
+   {
+    "what": "A lock on a level",
+    "where": "TurningInTime.lean:958 unending_iff_above, :1232 locked_closed, :1400, :1440, :1633, :1817",
+    "statement_in_plain_words": "From a kept kind the line never ends exactly at or above H₂ + y₂. A Locked start below its point ends Locked. Docstring :1615: nothing is concluded about whether what goes on is Locked.",
+    "given": "The kind closed under the step (premise kept); the overdraw, or a draw rising with the share."
+   },
+   {
+    "what": "A line on a stock",
+    "where": "LineOnAStock.lean:188 Holds, :1239 unending_iff_holds, :674 gone_from",
+    "statement_in_plain_words": "Never ends exactly where the course comes to Holds. That Holds is closed under the step is inside the proof, not stated.",
+    "given": "even, some, down, needs, nothing, Regime along the course."
+   },
+   {
+    "what": "More than one closed set",
+    "where": "RuleRebuilding.lean:457, :698, :1197 «域闭», :1368; HexagramLaws.lean:390 basin_iff, :440",
+    "statement_in_plain_words": "Gone, no holder and held-in-band are each «闭»; its header: no classification of the ends. Hexagrams: three basins, every start placed.",
+    "given": "A finite decided example, the second."
+   }
+  ],
+  "same_thing_under_two_names": [
+   "A region never left: «闭», Law.Absorbing, Frame.Invariant (bridged, Attraction.lean:148, :420); unbridged: Lasting's K, GuardHorizon.Closed, RuleRebuilding.Closed, the premise kept, turn_locked, Holds, the levels from H + y.",
+   "Never ends: «不穷» on stepWhile; Viability.Kernel; «延», «生生» (GrammarMap.lean:225, :360); no step at nothing (RegimeMargin). \"Ends\" is level nothing there, below a need in TurningInTime.",
+   "Point of no return: H + y; the two thresholds (joined, RegimeMargin.lean:1550); Holds' level; ReadOffInTime.NoReturnAt (bridged); Junctures.Juncture (unbridged)."
+  ],
+  "what_is_missing": [
+   "The centre's unending sets stated as kernels with Holds, Locked and the levels from H + y as certificates: three theorems each prove again that a closed set within the guard never ends.",
+   "A partition of starts where there is both a lock and a level: ends Locked, goes on corrected, goes on Locked are worked courses only (Three.lock_ends, held_at_six, read_to_ten).",
+   "The centre on the root's regions: under «一» nothing begins, so every unending course there keeps by vacuity.",
+   "A transition as a change of parameter (05-COLLECTIVES.md line 365: none proved)."
+  ],
+  "outgrown_words_or_models": [
+   "\"Meta-attractor\" (02-MAP.md:412, atlas closed-capture): no Lean ties Locked to Absorbing or Drawn. Attraction.lean:77-81 says \"not derived here\"; locked_closed now gives it in one line.",
+   "\"Goes on the same way until what sustains it gives out\" (AGENTS.md): proved with the overdraw given (:1400) or the draw rising with the share (:1440). In Three.read_to_ten the lock's own rule goes on where its draw is met.",
+   "\"Region\" names four things: sets of formations (Regions.lean), kinds of point (MapRegions), closed sets of states (RuleRebuilding), premises on giving (Regime)."
+  ],
+  "candidate_links": [
+   {
+    "from": "Holds; RegimeMargin.holds; premise kept",
+    "to": "Viability.Certificate, Lasting.avoids_iff_closed",
+    "kind": "a case",
+    "statement_to_try": "Under unending_iff_holds' premises Holds is «闭» under the net; the right-to-left halves of unending_iff_holds, unending_iff_above and RegimeMargin.holds become one lemma.",
+    "why_it_might_fail": "Regime is assumed along one course, so Holds may not be closed as a set; may delete no proof."
+   },
+   {
+    "from": "locked_ends_with_net_regime, locked_ends_rising",
+    "to": "unending_iff_above at the kind Locked",
+    "kind": "an exact boundary",
+    "statement_to_try": "A Locked way with a fixed draw never ends exactly at or above H₁ + y₁, staying Locked; where the draw rises strictly with the share no Locked start goes on.",
+    "why_it_might_fail": "The rule may rise under the lock, so the draw is only bounded below."
+   },
+   {
+    "from": "Locked and its mirror",
+    "to": "Alternating",
+    "kind": "an exact boundary",
+    "statement_to_try": "Threshold reading on counts: where rule in force and rule read agree, locked that way for good; where they disagree, locked next step exactly if one step does not carry the share across the threshold.",
+    "why_it_might_fail": "At equal counts both locks hold; false for general orders."
+   },
+   {
+    "from": "unending_iff_holds",
+    "to": "«全三域之周»",
+    "kind": "a case",
+    "statement_to_try": "Read at the way's line and the unit, a course reaching Holds keeps where each unit leaves itself and generates where none does; any other reaches an end, without excluded middle.",
+    "why_it_might_fail": "A unit has no occurrence in a state of list and level; the boundary may be definitional."
+   }
+  ],
+  "what_ran": "Read only: grep, sed and inline Python; nothing built, tested or written. Lean files are in /Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ at 2f8454ea3. Headers and cited statements read, not every proof."
+ },
+ "seat:paths": {
+  "answer_in_one_paragraph": "As a graph of where a course can go, the atlas is 108 pieces: 86 dynamics alone, the largest 30. Counting only links that carry a law it is 114 pieces, the largest 12; the piece of 30 hangs on 12 exits that no law shows. The capture family, home of the meta-attractor, has one of 17 dynamics linked by a law, though its Lean modules import one another in a chain. No atlas link runs from a lock to turning or from turning to renewal; TurningInTime proves the first. Cancer (confined-rise-within-a-whole) is alone, on the carrier the line on a stock uses. The centre's seven exits end in words that existing dynamics already name.",
+  "what_exists": [
+   {
+    "what": "The graph",
+    "where": "dynamics.json, by graph.py",
+    "statement_in_plain_words": "136 links on 95 pairs: 70 exits naming a dynamic, 56 case_of, 10 joinings. Pieces: 30, 9, 6, 6, 5, then small. Hubs: unselected-beyond-the-coupling-closure (9 neighbours), the-rest-outruns-the-renewal (6). Linked: A 17/31, B 19/26, C 4/17, D 6/22, E 7/10, F 15/24, G 11/18, H 20/37.",
+    "given": "A link is a matched key, not a checked correspondence."
+   },
+   {
+    "what": "Paths between four groups (my sorting: 22 lock, 24 renewal, 33 drain, 21 turning)",
+    "where": "groups.py",
+    "statement_in_plain_words": "Exit with a law: drain to renewal (others-drawing-first-end-the-base to optima-rebuild-a-depleted-base, sufficient), drain to turning (market-finite-support-obstruction to never-leaving-a-guard, exact), renewal to turning, turning to drain, lock to drain (one). Argued or read only (07, 02 §10): drain to lock, three exits. Absent: lock to turning, turning to renewal."
+   },
+   {
+    "what": "Lock to end; lock to turn or end",
+    "where": "TurningInTime.lean:1440 locked_ends_rising; :1633 locked_turns_in_time_on_window_iff",
+    "statement_in_plain_words": "A Locked way whose draw rises against a capped level ends still Locked within hi + 1 steps. Listed under turning-in-time; an exit of no lock dynamic.",
+    "given": "Raises, ReadsShare, the rise (count_rises:1473); for the window: low, covers, safe, corrects."
+   },
+   {
+    "what": "How the lock forms",
+    "where": "RuleShaping.lean:443 covering_locks",
+    "statement_in_plain_words": "What comes back to the shapers, monotone in the share and covering the cost, locks the loop. No exit to a lock dynamic.",
+    "given": "Offspring carry the capacity; no noise."
+   },
+   {
+    "what": "Cancer",
+    "where": "Founding.lean:170 Flow.ConfinedRise.ends",
+    "statement_in_plain_words": "A lineage selected within a whole, confined to conditions in excess, has no member after they end.",
+    "given": "Balance, descent, gated renewal, confinement, and the excess itself."
+   },
+   {
+    "what": "The centre's exits as existing dynamics (my reading)",
+    "where": "turning-in-time, a-line-on-a-stock",
+    "statement_in_plain_words": "ends_with_net and turns_in_time_iff: the two sides of margin-of-a-regime (RegimeMargin.lean:705, :730), and reading-a-loss-in-time. kind_ends_while_net_goes: a-regularity-kept-and-changed, three-outcomes-of-a-loss. way_ends, need_unmet: where-a-rising-take-ends, confined-rise-within-a-whole. line_ends: what-a-gate-keeps, attraction-is-not-returning."
+   }
+  ],
+  "same_thing_under_two_names": [
+   "A rising take passes a bounded giving: Flow.exceeds_of_more (Exhaustion.lean:85), TurningInTime.rising_takes_all (:669), LineOnAStock.need_unmet (:1011).",
+   "A selected line ends with what it draws on: Founding ConfinedRise.ends (:170), LineOnAStock.line_ends (:904); both on SelectionTerm.Generations.",
+   "In time exactly where the first difference precedes the point of no return: ReadOffInTime.readableInTime_iff (:661), TurningInTime.turns_in_time_iff_before (:2289), one NoReturnAt.",
+   "A region every step keeps: Law.Absorbing (Attraction.lean:110), «闭» in locked_closed (TurningInTime.lean:1232), RegimeMargin.stays_ended (:712), LineOnAStock.gone_from (:674), Viability's certificate.",
+   "A way rebuilt from the level it draws on: TurningInTime.pair (:337), RuleRebuilding's and ReaderRebuilding's nets (both import only GrammarLaws)."
+  ],
+  "what_is_missing": [
+   "Ten edges; together 108 pieces become 98 and the largest 61. Lean has the law, the atlas no entry: turning-in-time to margin-of-a-regime (unending_iff_above, TurningInTime.lean:958); closed-capture to turning-in-time (locked_ends_rising, on the regime's level, not ClosedCapture's loss); capture-through-the-rule to closed-capture (lock_outlives_loss, ClosedCapture.lean:307); shaping-the-rule-selected-by-what-comes-back to capture-through-the-rule (covering_locks).",
+   "Law to prove: margin-of-a-regime to threshold-in-the-state-plane (ends_iff_below, RegimeMargin.lean:741, as leading_exact, :1550, whose docstring claims every point of no return there); loss-of-renewal-for-good to unceasing-generation-needs-renewal (below the need for good, arising is not unceasing); margin-of-a-regime to never-leaving-a-guard; a-rule-rebuilt-from-the-members-it-limits to turning-in-time (its net as a pair); a-line-on-a-stock to confined-rise-within-a-whole; a-line-on-a-stock to where-a-rising-take-ends.",
+   "From renewal to a lock there is one witness. selection-read-off-its-own-survivors says of the meta-attractor itself: a join not made."
+  ],
+  "outgrown_words_or_models": [
+   "\"Meta-attractor\" names three unlinked things: closed-capture (a rule, no stock), self-reproducing-selection-across-carriers (no law), confined rise (a stock, no rule).",
+   "Exits ending in a state in words (258 of 328), and families as the map's form: the lock's newest laws are filed in A, its dynamics in C.",
+   "\"The rise is supplied, not derived\" (where-a-rising-take-ends), and Founding's \"its drawing does not enter\": need_unmet and count_rises now derive a rise.",
+   "turning-in-time's open item that ReadOffInTime is not joined: TurningInTime.lean:2087-2343 uses its Recoverable and NoReturnAt."
+  ],
+  "candidate_links": [
+   {
+    "from": "a-line-on-a-stock",
+    "to": "confined-rise-within-a-whole",
+    "kind": "a case",
+    "statement_to_try": "On one condition under the regime's step, a closed line whose kids together take more meets Founding's excess and start, so ConfinedRise.ends needs no excess given.",
+    "why_it_might_fail": "Flow's balance counts every taker; the study note found that reading a dictionary."
+   },
+   {
+    "from": "shaping-the-rule-selected-by-what-comes-back",
+    "to": "turning-in-time",
+    "kind": "a composition",
+    "statement_to_try": "covering_locks, then count_rises, then locked_ends_rising: a loop that comes to lock on a capped level ends Locked.",
+    "why_it_might_fail": "count_rises asks one number strictly raised; covering_locks' share is two counts under a ratio order, ties favoured."
+   },
+   {
+    "from": "reading-a-loss-in-time",
+    "to": "turning-in-time",
+    "kind": "an exact boundary",
+    "statement_to_try": "The first marked step is the first step apart of the course and the course as it was; turns_in_time_iff_before is readableInTime_iff one step on.",
+    "why_it_might_fail": "Readable is not responding; a lock breaks kept (Three.read_at_eight_ends, :2638)."
+   },
+   {
+    "from": "margin-of-a-regime",
+    "to": "never-leaving-a-guard",
+    "kind": "an invariance",
+    "statement_to_try": "Under the regime's step the kernel of 'the need is met' is exactly the levels from H + y to hi.",
+    "why_it_might_fail": "With a changing way no threshold in the level exists (HigherStartEnds, LineOnAStock.lean:1780)."
+   },
+   {
+    "from": "a-line-on-a-stock",
+    "to": "generation-and-degeneration-at-two-grains",
+    "kind": "a case",
+    "statement_to_try": "An unending course is generation at the grains of unit and way, WayOfUnits is keeping, way_ends is degeneration.",
+    "why_it_might_fail": "Units are values: a kid equal to its parent cannot be told from staying."
+   }
+  ],
+  "what_ran": "Read only. Four Python scripts of seconds each (graph.py, groups.py, reuse.py and inline checks) under /Users/ren/theories/tmp/r7/one-model/check/round10/paths/, with grep and reads of the Lean. No build, test, gate, tracked edit or writing git command. The four groups are hand-sorted; exit-to-dynamic matches are readings."
+ },
+ "seat:transitions": {
+  "answer_in_one_paragraph": "The thresholds are already there, mostly one of three boundaries seen in several models: a level against a draw plus its root (H + y), a draw against a renewal (k ≤ r), a share against a critical mass. Each separates ending from never ending for one course, or one lock from its reverse. Closed regions are named elsewhere (生成/后守/退化, Viability.Kernel, RuleRebuilding's Within); no threshold of the centre is stated between two of them. Lock to renewing is stated only as ending or not from a Locked start, reading and renewal given.",
+  "what_exists": [
+   {
+    "what": "Point of no return, level and step",
+    "where": "RegimeMargin.lean:741; TurningInTime.lean:2100; ReadOffInTime.lean:661",
+    "statement_in_plain_words": "A level comes to nothing exactly where it starts below H + y; a falling course's point of no return is its first step below; a loss is readable in time exactly where the first step apart comes earlier.",
+    "given": "A standing draw; giving a function of what is left."
+   },
+   {
+    "what": "Turning in time; the lock on a stock",
+    "where": "TurningInTime.lean:1070, :1633, :1817, :1232",
+    "statement_in_plain_words": "The line never ends exactly where the level one step after the first marked level is at or above the corrected kind's H₂ + y₂; so too from a Locked start, whose region is closed.",
+    "given": "The marks, what they set, the overdraw. Whether what goes on is Locked is not concluded (docstring :1615)."
+   },
+   {
+    "what": "A line on a stock",
+    "where": "LineOnAStock.lean:1239, :1840",
+    "statement_in_plain_words": "Never ends exactly where the course reaches a state with every need met and the level at or above what the way takes plus its root. No threshold on the start: seven ends, six does not.",
+    "given": "Offspring together take the same and need no more."
+   },
+   {
+    "what": "Critical mass, between two locks",
+    "where": "ReadInTime.lean:292, :319; ChoiceCountCapture.lean:291, :343",
+    "statement_in_plain_words": "Read from step N, a course is locked for the shapers for good or against them for good, by its side of a critical share; one step is undecided.",
+    "given": "Readers drawn from the selected; no stock."
+   },
+   {
+    "what": "A rule rebuilt from its members",
+    "where": "RuleRebuilding.lean:897, :1197, :698",
+    "statement_in_plain_words": "From the steady state the rule is held for ever exactly inside a band of quotas; a region is closed with the level never falling; no holder stays no holder.",
+    "given": "Steady state only (:55). Its one import is GrammarLaws."
+   },
+   {
+    "what": "Two named regions against a stock",
+    "where": "LineageRegimes.lean:1086; MapRegions.lean:128",
+    "statement_in_plain_words": "At every stock one gated course generates and another degenerates: with giving free, the stock decides neither. Every point generates, keeps from some point on, or degenerates.",
+    "given": "Excluded middle."
+   }
+  ],
+  "same_thing_under_two_names": [
+   "H + y: RegimeMargin.ends_iff_below; TurningInTime.unending_iff_above (:958) and recoverable_iff_above, built from its two halves. ReadOffInTime.recoverable_iff_regime (:1097) is the same boundary in a witness, not derived (TurningInTime.lean:294).",
+   "k ≤ r, unjoined: Optimum.kept_iff_within (:2342), RuleRebuilding «恒取不逾生则存» (:493), RegimeMargin.ends_beyond_giving (:721). Optimum.reread_deadline_iff (:2396) is the exact form of RegimeMargin.not_before with falls_within.",
+   "'Never ends' of a guarded step (GuardedStep.lean:143) is membership in Viability.Kernel (Viability.lean:55); no unending_iff says so."
+  ],
+  "what_is_missing": [
+   "A threshold stated between two named closed regions. RegimeMargin proves each side closed (holds :730, stays_ended :712) and names neither; the centre's modules never mention 生成, 守 or 退化.",
+   "A lock-to-renewing boundary. The lock family's exits reach the reverse lock (ReadInTime.turned_iff); on a stock the far side is a fixed draw a given regime meets, and a late reading ends corrected.",
+   "In the atlas no transition's 'between' names a dynamic, and its kind 'exact threshold' (31 of 105) means any iff."
+  ],
+  "outgrown_words_or_models": [
+   "ONE-PAGE.md:30 says of 'a lock, once formed' the exact sentence that needs the corrected kind kept; Three.read_at_eight_ends (TurningInTime.lean:2638) refutes it for a lock.",
+   "The plan's item 4 calls 'no exact point on a level where giving is free' argued on paper; LineageRegimes.stock_forces_neither is a Lean statement of it for gated pairs.",
+   "'Four routes of transition, none a proved phase transition' (05-COLLECTIVES.md:365): a parameter change, and a correction too late or stopped, have exact theorems in RegimeMargin and TurningInTime; the atlas entry cites none."
+  ],
+  "candidate_links": [
+   {
+    "from": "RegimeMargin.ends_iff_below",
+    "to": "Viability.Kernel",
+    "kind": "a case",
+    "statement_to_try": "The kernel of 'level positive, at most hi' is exactly [H + y, hi], and below H + y is closed; unending_iff_above is read off it.",
+    "why_it_might_fail": "The guards differ; it may delete no proof."
+   },
+   {
+    "from": "TurningInTime.locked_closed",
+    "to": "share_corrected_stays, RegimeMargin.holds",
+    "kind": "an exact boundary between two regions",
+    "statement_to_try": "From a Locked start a course stays Locked until it ends, or enters and stays in 'share Low, rule kept, level at least H₂ + y₂': which, by the level after the first reading.",
+    "why_it_might_fail": "A late reading is a third fate; the regions are not shown disjoint; the renewal is given."
+   },
+   {
+    "from": "Optimum.reread_deadline_iff",
+    "to": "TurningInTime.noReturnAt_iff_first_below",
+    "kind": "a case",
+    "statement_to_try": "With r given while the need is met and k > r drawn, the point of no return is the step T with m + T(k − r) ≤ x₀ < m + (T + 1)(k − r).",
+    "why_it_might_fail": "Optimum gives on the level before the draw, RegimeMargin on what is left."
+   },
+   {
+    "from": "ReadInTime.kept_early_iff",
+    "to": "ReadOffInTime.NoReturnAt",
+    "kind": "a case",
+    "statement_to_try": "The first step at which the late reading favours the shapers is the lock's point of no return, as in turns_in_time_iff_before.",
+    "why_it_might_fail": "One step is undecided and opens a new round; NoReturnAt is typed on levels."
+   },
+   {
+    "from": "LineOnAStock.unending_iff_holds",
+    "to": "MapRegions «三域之周»",
+    "kind": "an exact boundary between two regions",
+    "statement_to_try": "Short of a holding state the line degenerates; from one it keeps from some point on, or generates, by whether in the end every unit leaves only its like.",
+    "why_it_might_fail": "Units are kinds without identity, so 'a part begins' may be empty."
+   }
+  ],
+  "what_ran": "AI-written. Read only: grep, sed, short scans of theorem statements and of dynamics.json (scripts in /Users/ren/theories/tmp/r7/one-model/check/round10/phase-transitions/); no build, test or gate. Lean: /Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/. Statements and docstrings read, not proofs."
+ },
+ "seat:meta-attractor": {
+  "answer_in_one_paragraph": "Not one object. No declaration in Becoming bears the name; the account reads as one the share-and-rule loop (RuleCapture's family), the lock on a stock (TurningInTime) and selection by persistence (ReadingsPersist). Holding is a theorem; entry only with reading-from-the-share fixed as a property of the law (that a rule comes to be so set is only said); using up only on a needed stock, the tie from share to draw given. Exits: sufficient conditions, some exact, none shown complete. Locked and overdrawing are independent: one built course returns to the lock and never ends. As an attractor beside a renewing course it needs one total step on share, rule and level (exists), both regions absorbing (proved apart), and every start's basin (proved only from a locked, overdrawing start).",
+  "what_exists": [
+   {
+    "what": "Holds (theorem)",
+    "where": "RuleCapture.lean:169 turn_locked, :182 locked_stays, :258",
+    "statement_in_plain_words": "A rule that favours and is not above what its share's reading gives stays so; a direction-keeping change of rule is absorbed at the next reading.",
+    "given": "Raises; ReadsShare (rule read monotone in the share); favouring kept upward."
+   },
+   {
+    "what": "Entry, law given (theorem)",
+    "where": "RuleCapture.lean:320 favouring_locks; DrawnShaping.lean:378 drawn_locked_either; RuleShaping.lean:160 favours_iff; PoolFromCourse.lean:314 window_past_course",
+    "statement_in_plain_words": "Where start and every reading favour, locked from the first reading; with readers drawn from the selected, locked one way or the other by the start's share. Shaping is favoured exactly where what returns to shapers alone covers its cost. Once its readers are gone, the course is the share's own loop.",
+    "given": "ReadsShare, the pool, and where readers go: fixed for the whole course."
+   },
+   {
+    "what": "What it does to what it draws on (theorems)",
+    "where": "ClosedCapture.lean:307 lock_outlives_loss; TurningInTime.lean:1400, :1440 locked_ends_rising, :1473 count_rises",
+    "statement_in_plain_words": "Nothing needed: locked, the loss passes every bound and the lock stays. On a needed stock a locked way ends still locked, if already overdrawing or, within the ceiling plus one, if its draw rises each step.",
+    "given": "The loss grows whatever the course does. On the stock: level unread; draw = share count times a positive amount; ceiling; nothing from nothing."
+   },
+   {
+    "what": "Exits (theorems)",
+    "where": "ClosedCapture.lean:291 turned_by_loss, :900; ReadInTime.lean:631; TurningInTime.lean:1633, :1817; DrawnReplacement.lean:211",
+    "statement_in_plain_words": "A reading of the loss unlocks; counts at the reading decide for good; on a stock the line goes on exactly where the first reading leaves the level at or above the corrected kind's point of no return; drift leaves either lock.",
+    "given": "The reading, its band, what it sets; the overdraw before it."
+   },
+   {
+    "what": "Built examples only",
+    "where": "PoolFromCourse.lean:753; TurningInTime.lean:2638, :2728 Three.read_to_ten; ReadingsSpread.lean:1222",
+    "statement_in_plain_words": "A loss borne by shapers unlocks; a corrected rule alone is undone; a locked course goes on where its draw is met; a reading spreads by selection, then ends."
+   },
+   {
+    "what": "Attractor and basin (cited by none above)",
+    "where": "Attraction.lean:110 Absorbing, :114 DrawnInto; /Users/ren/theories/experiments/market-generativity/meta-attractor/RecursiveSelection.lean:149 and CollectiveDestruction.lean:166 exact_basin",
+    "statement_in_plain_words": "A region a law never leaves and what is drawn into it; the older package proves an exact basin for a self-maintaining regime and a destructive one.",
+    "given": "Toy laws, outside the Becoming package."
+   }
+  ],
+  "same_thing_under_two_names": [
+   "A region the step keeps: RuleCapture.locked_stays; TurningInTime.locked_alone (:1301) and locked_closed (:1232); ReadingsSpread.fixed_of_closedFrom (:150, 'not named Locked'); ChoiceCountCapture.counted_locks (:291).",
+   "What is not read changes nothing: ClosedCapture.courses_alike_iff_unread (:202), PoolFromCourse.window_never_read (:295), PoolCourse.alike_iff (:137)."
+  ],
+  "what_is_missing": [
+   "A course on which reading-from-the-share comes about.",
+   "One statement with shaping selected, the lock and a needed stock: RuleShaping has no stock, TurningInTime's lock no shapers, LineOnAStock no rule.",
+   "The tie from share to draw. On CarrierCounts the share is a ratio of two counts that both multiply.",
+   "Atlas: closed-capture has no exit to turning-in-time, where the lock-on-a-stock laws are filed."
+  ],
+  "outgrown_words_or_models": [
+   "02 §9's Definition, the GLOSSARY and the atlas label 'closed-capture (meta-attractor)': a loop reading nothing beyond its share. That case never ends (02 §11: 'nothing in them needs what they use'); AGENTS.md's 'until what sustains it gives out' is TurningInTime's.",
+   "The meta-attractor as the opposite of a renewing course: GENERATIVE-REGIMES defines it as a self-reproducing regime, and the lock renews itself in what it reads. Cancer is locked and overdrawing, one cell of four.",
+   "'Only a change of the law leaves' (meta-attractor README, 9 November; RuleCapture.lean:47): on a stock the line also ends, and Three.read_to_ten goes on locked."
+  ],
+  "candidate_links": [
+   {
+    "from": "TurningInTime.locked_turns_in_time_share_iff (:1817), its corrected kind",
+    "to": "RuleCapture.Locked reversed (DrawnShaping.drawn_from_below, :356)",
+    "kind": "a case",
+    "statement_to_try": "The corrected kind is the same loop locked the other way, so lowRule and lowStays follow from turn_locked: one loop, two locks; the upper ends, the lower holds.",
+    "why_it_might_fail": "uses asks a draw of exactly H₂; locked downward the share keeps moving, and less draw need not hold (LineOnAStock.HigherStartEnds)."
+   },
+   {
+    "from": "TurningInTime's locked laws",
+    "to": "LineOnAStock.unending_iff_holds",
+    "kind": "an exact boundary",
+    "statement_to_try": "From a locked start whose level is never read, the line never ends exactly where the lock's draw comes to a level that holds it.",
+    "why_it_might_fail": "Under count_rises the draw never settles; with a top on the share it is RegimeMargin.ends_iff_below again."
+   },
+   {
+    "from": "ReadInTime.turned_iff, deadline",
+    "to": "TurningInTime.turns_in_time_iff_before",
+    "kind": "a composition",
+    "statement_to_try": "Where the others read a needed level's fall, the line goes on exactly where they read while still outnumbering the shapers and before its point of no return.",
+    "why_it_might_fail": "ReadInTime's loss grows every step by premise; a level can hold."
+   },
+   {
+    "from": "RuleCapture.Locked; RegimeMargin's kept levels",
+    "to": "Attraction.Absorbing, DrawnInto",
+    "kind": "a case",
+    "statement_to_try": "Locked is Absorbing for the paced step; DrawnShaping's two locks split the starts at the critical mass; the two regions of ends_iff_below are absorbing.",
+    "why_it_might_fail": "A net with a need is partial, Attraction is for total laws; this may add a name only."
+   }
+  ],
+  "what_ran": "Read only: grep, sed, Python reads of dynamics.json; no build, test, gate or edit. Lean under /Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/. Statements read from signatures and docstrings; no proof rechecked. Read in part: meta-attractor README, GOALS.md, 07 §4, PoolCourse, RuleRebuilding."
+ },
+ "seat:one-state-space": {
+  "answer_in_one_paragraph": "The smallest space is already here twice, unjoined: one level and two needs. RelationalRenewal.Law has a giver that renews only while the level meets its need, and a taker; WayOfUnits.two_units_iff has two takers on a stock that gives by what is left. Read regions on both ends, the way and the level: kept and going on; run down and going on (a taker needing nothing); run down and ended; one dropped, the rest kept. The boundary is the level against take + y(take), rising with the take (rises_by_draw), absent above the greatest giving (ends_beyond_giving). A fixed take never crosses it; a rising take crosses down with no difference yet; a falling take crosses back only where the level after the turn is on its side. The centre cannot say the second region: its laws assume every unit needs something, and its 'never ends' is true of a taker needing nothing (my script, not Lean). Fix beforehand: a given premise becomes a conclusion; changing the stock alone, and the way alone, each flips the conclusion; a named proof older than 12 November returns as a case; the right side is a condition on the start. 'Holds with the stock removed' cannot test a law about a locked course: it holds there by definition.",
+  "what_exists": [
+   {
+    "what": "Renewer and taker on one level",
+    "where": "lean/deeper/RelationalRenewal.lean:236, :503, :438, :547",
+    "statement_in_plain_words": "A taker needing nothing of the level overdraws and goes on for ever while the renewer loses it for good (independent_overdraw_persists); one needing it ends itself; two courses alike in their own activity, one renewing, one consuming.",
+    "given": "renew + contrib < draw from some step"
+   },
+   {
+    "what": "The frame both centre models share",
+    "where": "TurningInTime.lean:337, :718, :1070; LineOnAStock.lean:155",
+    "statement_in_plain_words": "Both are a way W with a use on RegimeMargin's step: units at W = List U, the lock at W = share, rule, count. Ending and turning hold for any W.",
+    "given": "turning: a start already overdrawn, the kind kept"
+   },
+   {
+    "what": "A mark that is a need",
+    "where": "WayOfUnits.lean:580 two_units_iff",
+    "statement_in_plain_words": "Two units, the first needing more: never ends exactly where, when its need is first unmet, the level after is at or above the second's point of no return.",
+    "given": "a start below the joint point of no return"
+   },
+   {
+    "what": "Regions and basins of any determined law",
+    "where": "Attraction.lean:110, :190, :384; GrammarMap.lean:157",
+    "statement_in_plain_words": "Drawn into an absorbing region exactly where it does not return; each basin has one cycle; every point generates, keeps or degenerates.",
+    "given": "finiteness; excluded middle"
+   },
+   {
+    "what": "Exact points of no return on coupled levels",
+    "where": "RegimeMargin.lean:2113, :2153, :2610, :2687",
+    "statement_in_plain_words": "Every run comes to rest; each level ends exactly below a threshold; raising a level never ends what held.",
+    "given": "every giving rises with every level; a band; constant draws"
+   }
+  ],
+  "same_thing_under_two_names": [
+   "'Stays' is Law.Absorbing; only locked_closed (TurningInTime.lean:1232) says so. Not locked_stays (RuleCapture.lean:182), never_in (LineOnAStock.lean:664), Flow.stays_below (Continuation.lean:468), RegimeMargin.holds (:730).",
+   "Nothing given below a need: Law's needG, Flow.given_zero_below (Continuation.lean:457), RegimeMargin.Gated (:268); in LineOnAStock the premise FromNothing.",
+   "Cancer, unjoined: Founding.Flow.ConfinedRise.ends (Founding.lean:170) and LineOnAStock.line_ends (:904).",
+   "'Locked': RuleCapture.Locked (:160), AloneOutside (TurningInTime.lean:362), and below a point of no return. locked_ends_rising joins the first to an ending only through `more`, which a use reading only the step count meets (:1436)."
+  ],
+  "what_is_missing": [
+   "A unit that gives: in the centre the stock gives by what is left; 'holds' is restraint, not renewal.",
+   "The region where the taker goes on and the stock does not: `needs` excludes it from need_unmet, way_ends, unending_iff_holds.",
+   "For a rising take, the step of crossing (TurningInTime.lean:1438)."
+  ],
+  "outgrown_words_or_models": [
+   "'One model' and 'two models sharing one lemma': they share the frame and its laws; each lacks the other's exact theorem.",
+   "'Exactly where it holds' (DIRECTION line 39): unending_iff_holds' right side is a condition on the course, not a place.",
+   "'Nothing comes to respond to the fall because of the fall' (line 44): in two_units_iff the way responds by losing a unit.",
+   "'Selection' as a threshold on a need: that is who the level still carries. What selects is `kids`, fixed; elsewhere a rule (CarrierCounts.select) or an optimum (Optimum.lean:6743).",
+   "'Never ends' as the kept side: 'Persistence and success do not certify renewal' (RelationalRenewal.lean:502).",
+   "The nine steps: item 6 is the centre, not a step. Keep: tests frozen first, countermodels, turns_in_time_iff, two_units_iff."
+  ],
+  "candidate_links": [
+   {
+    "from": "RelationalRenewal.Law",
+    "to": "LineOnAStock",
+    "kind": "a case",
+    "statement_to_try": "Let a met unit also give. Law is the two-unit case; with no outside giving FromNothing follows from Needing; independent_overdraw_persists returns as a case.",
+    "why_it_might_fail": "Law gives on the level before taking, the regime after: perhaps a dictionary, as the Flow reading was."
+   },
+   {
+    "from": "TurningInTime.turns_in_time_iff",
+    "to": "LineOnAStock.line_ends",
+    "kind": "an exact boundary",
+    "statement_to_try": "A closed growing line of one need m beside a rest that holds alone: the rest never ends exactly where, at the first level below m, the level after is at or above the rest's point of no return. two_units_iff is its case.",
+    "why_it_might_fail": "turns_in_time_iff asks a start already overdrawn; unequal needs in the line break `kept`."
+   },
+   {
+    "from": "RuleCapture.CarrierCounts.select (:497)",
+    "to": "LineOnAStock.need_unmet",
+    "kind": "a case",
+    "statement_to_try": "With kids read from the way's counts (select is one such generation), locked_ends_rising and count_rises are need_unmet, and are deleted.",
+    "why_it_might_fail": "The share is a ratio and can rise while the draw falls (ShareRises); need_unmet's proof fixes `kids`."
+   },
+   {
+    "from": "RegimeMargin.Indexed",
+    "to": "LineOnAStock.HigherStartEnds",
+    "kind": "an exact boundary",
+    "statement_to_try": "Counts of kinds as further levels: where every coupling rises, rest and exact thresholds; a draw rising with a count is the first coupling that breaks ends_of_below.",
+    "why_it_might_fail": "Indexed's draws are constant; perhaps nothing carries over."
+   }
+  ],
+  "what_ran": "Read only: statements and docstrings (few proof bodies), DIRECTION, the plan, round 9's review; grep; short Python (/Users/ren/theories/tmp/r7/one-model/check/round10/designer-critic/three_portrait.py; a need-0 unit in LineOnAStock's step). No build, test, gate, edit or git write."
+ }
+}

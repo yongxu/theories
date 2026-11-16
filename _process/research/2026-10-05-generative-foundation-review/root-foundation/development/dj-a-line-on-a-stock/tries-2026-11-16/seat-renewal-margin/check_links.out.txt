@@ -1,0 +1,18 @@
+== link 1 ==
+(a) flicker of need 1 < m=5 on a level held at 3: arisings in 200 steps = 100; every premise of Flow.stays_below holds; arising that takes = 0
+(b) 4000 random gated flows, 2809 fall below m: refutations of 'given 0, level never rises, uptake steps <= level, arisings-that-take <= level' = 0
+    most plain arisings (taking or not) after the crossing in one run of 60 steps: 106  (plain arising is not bounded by the level)
+== link 2 ==
+parameter sets meeting pos, Short, FromNothing, Meets, Keeps (hi<=4, g<=4, H<=3): 1799
+kernel of '0 < z <= hi' differs from [H+y, hi]: 0
+some level below H+y steps to H+y or above (complement not closed): 0
+some level x below H+y is not at 0 after x steps: 0
+guard 'm <= z <= hi' (giving gated at m>0, H>0): 2551 cases, kernel differs from [H+y, hi]: 0
+== link 3 ==
+giving not rising with what is left among them: 1258
+'ends' not closed downward up to hi: 0
+'rests below the draw' differs from 'ends' on levels up to hi: 0
+with H+y <= hi+1 (1040 cases): leading-threshold at step 3hi+3 differs from H+y: 0; equal with giving NOT rising: 773
+with H+y > hi+1: leading-threshold differs from H+y: 759 (reach is needed)
+runs from [H+y, hi] that never come to rest (giving not rising): 0
+an instance meeting ends_iff_below's premises whose step does not keep the order of levels (g, H, y, hi, step table): ((0, 3, 1, 1, 0), 1, 1, 4, [0, 0, 4, 3, 4])

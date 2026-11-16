@@ -1,0 +1,31 @@
+== A. from itself: does it end from every start, every periodic schedule; how late ==
+   starts x schedules tried: 175200; not ending: 0
+   latest ending step by (tent top level c, reading period k): {(8, 1): 13, (8, 2): 14, (8, 3): 19, (8, 4): 24, (8, 6): 34, (8, 8): 44, (12, 1): 17, (12, 2): 18, (12, 3): 25, (12, 4): 32, (12, 6): 46, (12, 8): 60, (16, 1): 21, (16, 2): 22, (16, 3): 32, (16, 4): 41, (16, 6): 59, (16, 8): 77}
+== B. is the take strictly higher after every step (locked_ends_rising `more`, rising_takes_all `rises`)? ==
+   read every 1: takes [3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8]; steps at which the take does not rise: 5 of 10
+   read every 2: takes [3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8]; steps at which the take does not rise: 5 of 10
+   read every 4: takes [3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 6, 6, 6, 6, 7, 7, 7]; steps at which the take does not rise: 12 of 16
+== C. from itself, once take <= held: two steps after a reading step the take is at least one higher ==
+   reading steps checked: 48037; violations: 0
+== D. the lock of Three.rise_count_ends under other schedules (share a, rule true, use = share) ==
+   lock, reads every step: ends at step 7 with share 10
+   lock, reads every 4: ends at step 7 with share 10
+   lock, reads never: ends at step 7 with share 10
+   guess, from itself, never reading (start 12, take 3, held 3): ('goes on', None)
+== E. fixed against from-the-stock: do the fates ever differ from one start (held = take at the start)? ==
+   tent 8: starts x schedules 1680; fates differ at 28: {('ends', 'goes on'): 28}; first: [(1, 14, 5, 'ends', 'goes on'), (1, 15, 5, 'ends', 'goes on')]
+   tent 12: starts x schedules 1680; fates differ at 4: {('ends', 'goes on'): 4}; first: [(1, 20, 7, 'ends', 'goes on'), (2, 20, 7, 'ends', 'goes on')]
+   tent 16: starts x schedules 1680; fates differ at 0: {}; first: []
+   flat top 6 on 20: starts x schedules 1680; fates differ at 44: {('ends', 'goes on'): 44}; first: [(1, 14, 7, 'ends', 'goes on'), (1, 15, 7, 'ends', 'goes on')]
+   flat top 4 on 14: starts x schedules 1680; fates differ at 92: {('ends', 'goes on'): 92}; first: [(1, 10, 5, 'ends', 'goes on'), (1, 11, 5, 'ends', 'goes on')]
+   gated 2 gives 4 (to 12): starts x schedules 1680; fates differ at 104: {('ends', 'goes on'): 104}; first: [(1, 8, 5, 'ends', 'goes on'), (1, 9, 5, 'ends', 'goes on')]
+   the probe itself (tent 12, take 3, held 3, levels 1..12, six schedules): fixed and stock fates all the same: True
+== F. from the stock with a take that moves at once (x' = m) and m = what the stock just gave, read at every step ==
+   starts 2646; courses where what is left changes after the first step: 0
+== G. the fast loop under a held value that stays is Regulation.relay at lateness 0, band [m, m], step 1 ==
+   (m, start, step) triples 4500; relay level differs from the take or is cut at nothing: 0; not within the gap: 0; not opposing: 0
+== H. RuleCapture.Raises for the fast step `toward`, order <= on takes ==
+   pairs (take, held) at which the step lowers the take: [(1, 0), (2, 0), (2, 1), (3, 0), (3, 1), (3, 2)] ... count 15 of 36: every held value has one (take = held + 1)
+   CarrierCounts.select: share (2,1) under rule (2,1) -> (4, 1) past the rule; under the tie (1,1) -> (2, 1) unmoved though the tie favours (1 <= 1)
+== I. the fixed source once the take has arrived: fate against RegimeMargin.ends_iff_below (H + y) ==
+   (tent, take, level) triples 464; starts below H + y (or a take beyond all giving) that do not end: 0

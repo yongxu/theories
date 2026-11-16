@@ -1,0 +1,291 @@
+{
+ "note": "AI-written. Reports of workflow wf_e5bd5313-282, 16 November 2026: a paper try of one space (three seats and one refuter).",
+ "seat:regions-and-old-proofs": {
+  "answer_in_one_paragraph": "The region lemma is in the root already: for an orbit and a target (Lasting.avoids_iff_closed, Lasting.lean:458; closed_orbit :451) and for a process and a guard (Viability.kernel_iff_certificate, Viability.lean:85). For «不穷» of the pair's net it is one unwritten composition. Using it removes about 20 lines of 9,819 in the four centre modules and deletes no old proof: none of the seven named is a case of pair under the regime's step by unfolding, and none gets shorter. A band with a class of ways is too narrow for the case test 1 names. turns_in_time_iff is already factored as a crossing and a destination.",
+  "statements": [
+   {
+    "statement": "Root form: if P is «闭» under «续» R E, each member has a successor, and P x, then «不穷» R E x; what x reaches is such a P.",
+    "standing": "follows on paper",
+    "evidence": "Three lines from «闭之及» (GrammarLaws.lean:313) and the definition of «不穷» (Grammar.lean:243). Not stated in Lean; RoomNet.lean inlines it (:575, :593, :672)."
+   },
+   {
+    "statement": "Pair form: if Q s gives Q (pair after left s) and need ≤ s.2, then Q is «闭» under the net and the net is «不穷» from each member; «不穷» from s holds exactly where such a Q holds s. For Q = K × B with AloneOutside and no level of B marked, the way's clause is that alone keeps K.",
+    "standing": "follows on paper",
+    "evidence": "Law.stepWhile_unending_iff (GuardedStep.lean:143) with Lasting.avoids_iff_closed (:458); about six lines, not compiled.",
+    "cases_it_would_have": "unending_iff_above right to left (TurningInTime.lean:947-951; its region is already there as kept_below_step :855, a union of two products); unending_of_fixed (LineOnAStock.lean:1352); RegimeMargin.holds (:730) on the level alone.",
+    "what_it_would_delete": "kept_below_run (TurningInTime.lean:884-899, 16 lines: closed_orbit proved again); the inductions inside RegimeMargin.Adjusted.holds (:645) and holds_from (:661), about 9 lines. No adapter: Lasting is already imported."
+   },
+   {
+    "statement": "Holds (LineOnAStock.lean:188) alone is not closed. Holds with the level at most hi and Regime at the way is closed as a set under even, some and down; the regime along the course is needed only before the course holds.",
+    "standing": "follows on paper",
+    "evidence": "after_of_met (:354) and taken_allKids (:1126): the next way takes the same, and Regime reads a way only through what it takes. The right-to-left half of unending_iff_holds (:1251-1272, 22 lines) would be about as long."
+   },
+   {
+    "statement": "locked_closed (TurningInTime.lean:1232) and turn_locked (RuleCapture.lean:169) as cases of the lemma.",
+    "standing": "says nothing",
+    "evidence": "They are its premise, a class «闭» under the way's own step, on a total step with no need. RuleCapture already concludes by a closure lemma (Pace.stays_turned, Pace.lean:162). No line changes."
+   },
+   {
+    "statement": "turns_in_time_iff (:1070) between two regions: from E (as it was, below H1 + y1) the line never ends exactly where the first marked step, the need met through it, lands in Kept × [H2 + y2, hi].",
+    "standing": "says nothing",
+    "evidence": "It renames the theorem's right side by turns and high. The Lean is already so factored: unending_iff_first_marked (:739) is the crossing, unending_iff_above (:958) splits the destination. Gain: a four-line schema (:1052-1056) taking any destination law."
+   },
+   {
+    "statement": "Upward crossing: at a level that newly meets the need of a unit with kids, the next way is strictly longer; two levels give a way different next ways exactly where a need lies between them.",
+    "standing": "already a theorem",
+    "evidence": "after_length_lt (LineOnAStock.lean:464), alike_iff (:493), ways_alike (:547). What an upward crossing decides for the fate has no law, only the worked case higher_ends (:1840)."
+   },
+   {
+    "statement": "In HigherStartEnds each way has at most one never-ending level (from [A] only six); every never-ending course settles on ([C,B],4) or ([C,B,C,B],8), fixed, with C's need unmet; all such starts lie on level = 6a + 3b + c, and as many starts on that line end.",
+    "standing": "holds in search only",
+    "evidence": "1,079 starts: ways of one to six units, levels 0 to 12; 17 never end. On paper: with every need met at every step the counts go (a,b,c) to (c, 2a+b, b) and the take passes 12."
+   },
+   {
+    "statement": "Best old candidates, with first obstacles: RuleRebuilding's «恒取不逾生则存» (:493, 2 November), the guess's region stated for that model; RelationalRenewal.independent_overdraw_persists (:503).",
+    "standing": "follows on paper",
+    "evidence": "RuleRebuilding: its net branches over moves (pair is a function; Viability.disturbed fits) and its level gives before it takes, with the end inside the step. October: the renewal's gate is read before the take, so the regime's giving would be renew·[needG ≤ z + d], depending on the draw; it exists exactly where d < needG or renew = 0 (384 triples searched), and not for draw t or contrib t."
+   }
+  ],
+  "false_or_empty": [
+   {
+    "claim": "A region is a band with a class of ways, the band at or above every need in the class.",
+    "why": "True as a sufficient condition, and empty in the case test 1 names: regions there are sets of pairs, not products.",
+    "countermodel": "HigherStartEnds: ([C,B,C,B],8) goes on with C's need of 12 unmet; the smallest ways × levels product closed under the step that holds ([A],6) also holds ([C,B,C,B],0), which ends."
+   },
+   {
+    "claim": "The seven old proofs become cases and are deleted.",
+    "why": "ConfinedRise.ends (Founding.lean:170), below_for_good (RenewalFlow.lean:200) and gated_ends (LineageDrawdown.lean:613) are already three-to-ten-line instances of Flow laws on time-indexed ledgers; overdrawn_spreads_then_ends (ReadingsSpread.lean:1222) is a computed course; Optimum.kept_iff_within (:2342) is on any sequence and upstream (TurningInTime's endings call Optimum.ends_within); RuleRebuilding's «域闭» (:1197) and «尽而不复» (:457) are already «闭». Each is a pair only by a dictionary."
+   },
+   {
+    "claim": "Holds is closed.",
+    "why": "It fails without the regime and the cap in the set.",
+    "countermodel": "One unit, need 1, use 1, its own kid, y = 0, nothing given: ([()],1) holds; the step leaves ([()],0)."
+   }
+  ],
+  "against_the_frozen_tests": [
+   "Test 1: not reached by a region lemma. It gives both fates only through a certificate, and in the case the smallest certificate holding ([A],6) is its orbit, which is the course run. The search shows isolated levels, not thresholds: a finding to keep.",
+   "Test 2: not met from this seat. Only RegimeMargin.Adjusted.holds and holds_from (20 October) become cases, of Lasting.closed_orbit (14 October); their statements stay and nothing is deleted.",
+   "Test 3: about 20 lines shorter of 9,819, or about 8 with a named pair lemma added, nearly all from private inductions written after 12 November. By the paper's own rule this is a law retold with no old proof deleted."
+  ],
+  "what_ran": "Read only. Read Viability and GuardedStep whole, and the cited parts of Lasting, Attraction, GrammarLaws, RegimeMargin, TurningInTime, LineOnAStock, RuleCapture, Founding, Optimum, RuleRebuilding, ReadingsSpread, LineageDrawdown, RenewalFlow and deeper/RelationalRenewal; file dates by git log. Four Python scripts, under a second each, in /Users/ren/theories/tmp/r7/one-model/check/round11/seat-1-3-5/ (higher_start.py, recurrent.py, line.py, october_step.py): searches, not proofs. No Lean was built; the Lean lines proposed are uncompiled and the line counts are estimates."
+ },
+ "seat:both-fates-from-the-start": {
+  "answer_in_one_paragraph": "Test 1 fails as worded, and the worked case shows less than its telling. In HigherStartEnds's world on min z (12 - z), every way has at most one level from which it never ends (from [A]: six only; five and seven both end). Below that level the level runs down with no C ever met; above it a C comes to be met and the take outruns the level. Every never-ending course sits on one of two fixed configurations (B C at 4, B B C C at 8), with ending one level either side. So no threshold, band or half-space on the start sorts the fates; the exact start conditions are equations that are the first two steps written out. In general, with a rising step map: a way's levels are cut into intervals of constant itinerary; the starts from which everyone is met for ever are an up-set; one need gives an up-set. Kids needing no more, taking the same, and a rising giving together do not.",
+  "statements": [
+   {
+    "statement": "HigherStartEnds, ways of up to three units, levels 0 to 12: 8 of 260 starts never end, one level per way: A 6, B 3, BB 6, BC 4, AC 7, BCC 5, BBC 7, ACC 8; the other 12 ways none. Along each way's levels: endings by running down, then that level, then endings after a C is met.",
+    "standing": "holds in search only (260 starts); six and seven from [A] are already a theorem: higher_ends, LineOnAStock.lean:1840",
+    "evidence": "a_output.txt. Exact on all 5,915 starts of up to 12 units: (no A, one or two B's, level = 3b + c <= 11) or (one A, no B, level = 6 + c <= 11). These are the starts that are at (BC,4) or (BBCC,8) within two steps."
+   },
+   {
+    "statement": "Itinerary intervals. For one way and a giving whose step z + g z is rising: if the courses from x < x'' have the same ways at every step, so has every level between. So each way's levels are cut into intervals of one itinerary and one fate, each cut a threshold of a composed level map at a need.",
+    "standing": "follows on paper",
+    "evidence": "Induction: a level between meets what x meets and misses what x'' misses, so the next way is the same (after_alike, :328); levels stay ordered. Rests on a rising step; RegimeMargin.step_mono (:1112) asks g rising, which the tent is not. Search: 0 violations in 562,500 cases; 5,748 with a step that is not rising.",
+    "cases_it_would_have": "Six against seven: the level after two steps under takes 3 then 2 reaches C's need twelve exactly from seven up.",
+    "what_it_would_delete": "Nothing."
+   },
+   {
+    "statement": "The levels from which every unit is met at every step (way never empty) are an up-set and never end, in any world with a rising step. One need is its case: the never-ending starts are an up-set.",
+    "standing": "follows on paper",
+    "evidence": "The way is the generation (way_while_met, :965), levels ordered by the same induction. Search: 0 of 14,652 non-empty sets not an up-set; one need, 0 of 4,190. Its even, down case is Holds (if-half of unending_iff_holds, :1239). For [A] in HigherStartEnds this set is empty: six lasts only because C is remade each step and never met.",
+    "what_it_would_delete": "Nothing found."
+   },
+   {
+    "statement": "Two-sided band. A class of one standing take H, kept at levels from H + y to below c, rising step, f < c fixed by the take-H step: from H + y <= x <= f the course stays there.",
+    "standing": "follows on paper",
+    "evidence": "Lower edge as RegimeMargin.holds (:730); upper: step x <= step f = f. For B B C C: boundary 8, fixed levels 0, 8, 12, so the band is level 8 alone (c_output.txt item 6). unending_iff_above_kept_below (TurningInTime.lean:920) has the lower edge and asks safe above c, which fails here.",
+    "what_it_would_delete": "Not RegimeMargin.holds: Keeps is not a fixed level."
+   },
+   {
+    "statement": "The start-only theorem that does give six: never ends exactly where the start lies in a set closed under the step with some need met throughout.",
+    "standing": "already a theorem: Lasting.avoids_iff_closed (Lasting.lean:458); Viability.kernel_iff_certificate (Viability.lean:85)",
+    "evidence": "For six the least such set is from_six's three configurations; checking it is that proof (unending_of_fixed, :1352, t = 2). Running under another name, same cost. Seven's ending has no law: grows fails for A, down for C; it is five steps computed."
+   },
+   {
+    "statement": "How often. Two kinds, ceiling 6, exhaustive, four rising-step givings, non-empty sets: up-set 25,264, interval 1,812, neither 12. Three kinds sampled, ceiling 12: 3,219, 1,747, 23. Step not rising: 4,932, 6,202, 1,516.",
+    "standing": "holds in search only (32,400 worlds by 5 ways per giving; 3,000 sampled worlds by 9 ways per giving)",
+    "evidence": "b_two_hi6.txt, b_three_hi12.txt. Smallest neither with a rising step: ceiling 6 (none at 4 or 5), tent, P (need 1, use 1, leaves P), Q (need 4, use 1, leaves P P), start [P, Q]: never ending from 3, 5, 6."
+   }
+  ],
+  "false_or_empty": [
+   {
+    "claim": "With kids needing no more than their parent, kids taking the same, every unit leaving kids, a rising giving and every need met at the start, the never-ending starts are an up-set.",
+    "why": "The higher start keeps the larger taker one step longer and lands lower. All premises of two_units_iff (WayOfUnits.lean:580) hold; every start checked agreed with its right side. It does hold where the level falls at most one a step while both are there (paper; 0 of 1,855).",
+    "countermodel": "Ceiling 7, giving 1 from anything positive, units (need 5, use 2) and (need 1, use 1), each leaving itself: from 5 ends, from 6 never ends, from 7 ends."
+   },
+   {
+    "claim": "A threshold in the level per way, or in level minus take, or a potential rising in the level, sorts HigherStartEnds.",
+    "why": "Per way: higher_ends. Level minus take 3: ([A],6) never ends, ([B],4) ends. ([A],6) lies midway between two ending starts.",
+    "countermodel": "([A],5) ends, ([A],6) never, ([A],7) ends."
+   },
+   {
+    "claim": "A course that enters a region never ends, if the band is at or above every need in the class.",
+    "why": "It does not cover six: C's need twelve stays above level 8 for ever, and the class is kept because C is unmet. The premise wanted is some need met, and the class kept at the band's levels."
+   },
+   {
+    "claim": "Its regions are not all cut by thresholds.",
+    "why": "With a rising step every cut on a way's level axis is a threshold; what fails is one threshold per way and an order of the fates. And six is in no region with a second level: it is a balance between two ways of ending."
+   },
+   {
+    "claim": "The level never reaches the next need above, as a condition on the start.",
+    "why": "Says nothing beyond the course: on the table it is necessary (0 of 69 courses that meet a C last) and not sufficient (106 end with no C met); for B B C C it is level = 8."
+   }
+  ],
+  "against_the_frozen_tests": [
+   "Test 1 fails as worded. No condition of threshold, band or half-space kind on the start gives both fates: the never-ending set from [A] is the single level six. What gives both is the closed-set theorem, whose premise for six is the three-step run, or the equation level = 6 + c, which is two steps written out. The case is also a poor test of regions: six is a knife-edge, not a region. A fairer test would use a world where a lower interval lasts and a higher one ends (the ceiling-6 world above).",
+   "Test 2: nothing here moves it. The statements that hold (itinerary intervals, the all-met up-set, the two-sided band) are new; no proof older than 12 November becomes a case of them. RegimeMargin.holds (file of 20 October) is not a case of the two-sided band.",
+   "Test 3: from this seat the Lean would be longer, not shorter."
+  ],
+  "what_ran": "Read only. Python transcription and searches in /Users/ren/theories/tmp/r7/one-model/check/round11/seat2-both-fates/ (model.py, a_higher_start_ends.py, b_general.py, c_checks.py, d_unit_fall.py, with their outputs). The transcription reproduces from_six and from_seven and agrees with two_units_iff's right side on every start checked. Ways are kept as counts per kind (the fate depends on nothing else: argued, not proved). Uses 1 to 3, needs from 1; use 0 not searched. Runs took 0.2 to 16 seconds, except a first version of c_checks.py that used about two minutes of CPU before I cut it down. Searches are not proofs. No Lean build, no test, no gate, no tracked file edited; git log read for file dates only."
+ },
+ "seat:members-that-give": {
+  "answer_in_one_paragraph": "AI-written (Fable). For members that are always there, 'the stock gives by what is left' and 'members give' are one function, so the generative region is RegimeMargin's holding region renamed; it is new only where givers are units of the way. October's Law is not the proposed step unfolded: it reads needs before anything is taken. For a taker needing nothing under a standing draw the two are one step read half a step apart; that phase lemma is the one new theorem found, and gives October's law its exact boundary. The formula in (a) as written contradicts ends_beyond_giving.",
+  "statements": [
+   {
+    "statement": "(a) Two orders are in use. RegimeMargin.step (:249), LineOnAStock.left (:146): all present take first; giving reads what is left; LineOnAStock.after (:137) reads needs before the take. RelationalRenewal.Law.level (deeper:246): needs read on the level, one balance, the taker takes only while met, kinds act again when the level returns.",
+    "standing": "follows on paper",
+    "evidence": "Definitions unfolded; transcription checked against five Lean values."
+   },
+   {
+    "statement": "(b) A rising giving with g 0 = 0 is exactly the sum of members of need m giving g m - g (m-1), needs read on what is left.",
+    "standing": "says nothing",
+    "evidence": "A renaming of g (telescoping; 15,625 checked); Gated g 1 is FromNothing g."
+   },
+   {
+    "statement": "(b) min z (12 - z) is not a sum of givers.",
+    "standing": "follows on paper",
+    "evidence": "A sum of givers rises. It is six givers (needs 1 to 6) less six takers (needs 7 to 12)."
+   },
+   {
+    "statement": "(c) Where every giver needs something, nothing is given from nothing.",
+    "standing": "already a theorem",
+    "evidence": "Flow.given_zero_below, Continuation.lean:457, at m = 1."
+   },
+   {
+    "statement": "(c) Law is two kinds by unfolding only in its own order (level_succ, deeper:256). Against the take-first step it is a dictionary: they part at the phase, the taker's gate, kinds coming back (pulse 2), and schedules.",
+    "standing": "follows on paper",
+    "evidence": "Start 2, renew 1, needG 2, needF 0, draw 1: Law 2, 2, 2; RegimeMargin.step, same giving and start: 2, 1, 0."
+   },
+   {
+    "statement": "Phase lemma. With needF = 0 and standing draw H = draw - contrib (contrib <= draw): Law.level t = (run of RegimeMargin.step g H from start + H) t - H, where g z = renew if needG <= z.",
+    "standing": "follows on paper",
+    "evidence": "With z = x - H: ((x - H) + g (x - H)) - H = (z + g z) - H. 3,240 laws searched.",
+    "cases_it_would_have": "For such laws: within_renewal_sustains (Adjusted.holds_from :661); the overdraw crossing and endings (falls_within :910, ends_beyond_giving :721, stays_ended :712). New: with 0 < H <= renew the level ends exactly from starts below needG (30 laws).",
+    "what_it_would_delete": "With the next statement for schedules: no_return_below_support, permanently_below, overdraw_crosses_support (deeper:357-417, 57 lines)."
+   },
+   {
+    "statement": "A schedule of draws each at least H keeps Law's level at or below the standing-H course.",
+    "standing": "holds in search only",
+    "evidence": "20,000 laws. The Lean orders runs in the level only (step_mono :1112)."
+   },
+   {
+    "statement": "(d) Standing takes T, givers gated on what is left: the boundary is T + y, y least with total giving covering T. A pure giver never raises it.",
+    "standing": "already a theorem",
+    "evidence": "By (b): ends_iff_below :741, within its band; lowered_raises :802, :808. 53,744 starts searched."
+   },
+   {
+    "statement": "(d) In Law's order, each gated member giving at least its take, one standing taker H: the level ends exactly from starts below the least z whose net giving covers H: the net take's boundary, on what is left.",
+    "standing": "follows on paper",
+    "evidence": "The phase lemma with ends_iff_below; 42,000 starts searched."
+   },
+   {
+    "statement": "(e) Regions kept by giving are proved six times, never as a region: Crossing (:1013), MutualActivation.saves (:3465), Relay.cycles (:3582), Coupled.ends_iff_below (:3306), within_renewal_sustains with cultivation (deeper:325, :515), Stock.repeat_covered_iff (:319).",
+    "standing": "already a theorem",
+    "evidence": "Statements read.",
+    "cases_it_would_have": "New case: on min z (12 - z) a standing take of 7 ends from every start; with one giver (need at most 6, gives 1) starts from 13 (searched to 40) rest at 13, lower ones end: ends_iff_below at hi = 13."
+   }
+  ],
+  "false_or_empty": [
+   {
+    "claim": "The step (x - T) + g(x - T) + G, G gated on the level before the take.",
+    "why": "It gives from nothing left. Read givers' needs where giving is read.",
+    "countermodel": "g = 0, a taker of 5 needing nothing, a giver (need 1, gives 4): from 4 it stays at 4; RegimeMargin's order and Law's end."
+   },
+   {
+    "claim": "October's law becomes a case and its proof goes.",
+    "why": "Its loss for good was already made a case on 18 October (SupportGated.below_for_good) and the direct proof stayed: Becoming.Dependence imports RelationalRenewal."
+   },
+   {
+    "claim": "root_mono or rises_by_draw gives 'a giver lowers the boundary' for a member that also takes.",
+    "why": "Both need giving down with the draw up. Such a member, giving back at least its take, raised the level's boundary in 3,324 of 3,552 cases; on what is left, only for needs above the old root."
+   },
+   {
+    "claim": "Every rising giving with nothing from nothing is a sum of gated givers, on two stocks.",
+    "why": "Needs on both.",
+    "countermodel": "g(a,b) = min 1 (a+b): the member needing (1,1) would give -1."
+   },
+   {
+    "claim": "A generative region: a band each of whose givers needs it.",
+    "why": "For members always there it is (d) renamed (root_above_need :764). Read as 'each is met throughout', Relay refutes it.",
+    "countermodel": "Relay: only the first gives at (2,3), only the second at (3,2); with givers gone once unmet it ends by step 4."
+   }
+  ],
+  "against_the_frozen_tests": [
+   "Test 1: givers bring no threshold where takes are gated. In Law's order with g = 0, a member giving back its take (need 1) beside a taker (need 2, takes 2) goes on from odd starts and ends from even ones (18 of 1,296 pairs). The start decides, by where the taker first goes unmet.",
+   "Test 2: folding givers into g deletes nothing. The phase lemma with the schedule comparison could make deeper:357-417 cases, if Law's theorems move below RegimeMargin. Unbuilt.",
+   "Test 3: a separate G carried through LineOnAStock.left lengthens every lemma citing it. Unmeasured."
+  ],
+  "what_ran": "Read only: the brief's pages, RelationalRenewal and RenewalFlow whole, the named parts of RegimeMargin, Stock, Continuation, Dependence, LineOnAStock; git log for dates. Two Python transcriptions, searches not proofs: /Users/ren/theories/tmp/r7/one-model/check/round11/giving/check_giving.py, /Users/ren/theories/tmp/r7/one-model/check/round11/giving/check_more.py. No Lean built, nothing tracked edited."
+ },
+ "refute:one-space": {
+  "verdict": "AI-written (Fable, refuter seat). By the three frozen tests the try has changed nothing yet. The seats' negative findings hold under an independent transcription (ways as lists, not counts). Their positive statements survive, but each is a root lemma retold or a band of one level in the worked case. The one claimed deletion of an old proof (October's lines 357-417) does not stand.\nNOT YET: test 1 is met only by running the course, no proof older than 12 November is deleted, and the only shortening is about twenty lines, nearly all from a private lemma written 15 November.",
+  "survive": [
+   "Root and pair forms (seat 1): true, trivially. The pair form is Lasting.avoids_iff_closed (Lasting.lean:458) said with `can`. Composed as cited it yields not-not-can, so in the axiom-free core it is closed_orbit proved again or needs Goes decided; 'six lines' is low.",
+   "Holds with level at most hi and Regime is closed under even, some, down: the paper argument checks (kids take the same, so Regime at the next way is the same). Search: 0 of 239 members left it; Holds alone was left in 13,329 steps. Small sample.",
+   "HigherStartEnds table, reproduced with lists: 1,079 starts, 17 never end, no way with two such levels; 34 starts on level = 6a+3b+c, 17 end. Added: on all 1,079, never ending equals being at a fixed going configuration within two steps.",
+   "Itinerary intervals, all-met up-set, one need (seat 2): 0 violations in 5,477 random worlds where seat 2 had not searched (use 0, need 0, childless units, levels past the ceiling). The premise doing the work is the rising step z + g z. From [A] the classes are [0], [1-4], [5], [6], [7-12]: six is an interval of one level.",
+   "Two-sided band: holds; in the worked case it is level 8 alone, which is unending_of_fixed (LineOnAStock.lean:1352).",
+   "Seat 2's countermodels reproduced: ceiling 7 under two_units_iff's premises lasts from 4 and 6, ends from 5 and 7; ceiling 6, [P,Q], lasts from 3, 5, 6, ends from 4.",
+   "Products fail: the least ways-by-levels set closed under the net and holding ([A],6) has levels 0, 2, ..., 12 and 74 members with no need met, ([A],0) among them.",
+   "Phase lemma: holds on 9,800 laws, needG = 0 and start below H included. It is three lines of algebra."
+  ],
+  "broken": [
+   {
+    "claim": "Seat 3: the phase lemma with the schedule comparison would delete no_return_below_support, permanently_below, overdraw_crosses_support (deeper:357-417, 57 lines).",
+    "how": "The three are stated and used for any needF and any schedule: permanently_below at bound needF > 0 (RelationalRenewal.lean:481); overdraw_consuming at arbitrary L in ActiveReading:89, Ranking:397, Relevance:360, HorizonWebs:110; overdraw_crosses_support in RenewalFlow:228. malignant (:518), together (:565), escalation (:590) have needF of 1 or more. The phase equation fails for needF >= 1 in 1,892 of 4,000 laws: start 1, renew 0, needG 1, needF 2, draw 1 gives Law 1,1,1 and the shifted step 1,0,0. RelationalRenewal is upstream of RegimeMargin (through Dependence), so the three would also have to move. Recount: 61 lines, 59 non-blank."
+   },
+   {
+    "claim": "Seat 3 (search only): a schedule of draws each at least H keeps Law's level at or below the standing-H course.",
+    "how": "True only at needF = 0, where it follows on paper (the step rises in the level and falls in the draw). With needF > 0: start 4, renew 1, needG 2, needF 4, H 2: standing 4,3,4,3; draws 3,2,2 give 4,2,3,4. 1,100 of 20,000."
+   },
+   {
+    "claim": "Seat 3 (d): in Law's order the level ends exactly from starts below the least z whose net giving covers H.",
+    "how": "Fails where that z is 0 and givers needing nothing give exactly H: from 0 the level stays 0 with the givers still giving (199 of 84,000 starts, all of this kind). The premise wanted: every giver needs something."
+   },
+   {
+    "claim": "Seat 1: the inductions in Adjusted.holds and holds_from save about 9 lines.",
+    "how": "Their bodies are 8 and 7 lines (RegimeMargin.lean:650-657, 664-670); by closed_orbit about 5 each, so about 5 saved, uncompiled. Both statements stay (used at :685, :734, :1069, :1075)."
+   },
+   {
+    "claim": "Seat 2: Holds is the even, down case of the all-met up-set.",
+    "how": "A dictionary. The up-set statement gives no T + y, and nothing in unending_iff_holds (LineOnAStock.lean:1239) shortens."
+   }
+  ],
+  "cases_judged": [
+   "kept_below_run (TurningInTime.lean:884-899, docstring from 879) against Lasting.closed_orbit at kept_below_step: a case by unfolding (same Law.orbit, same shape). Deletable, about 19 lines net. Added 15 November (34ca69c76), so not an old proof.",
+   "Adjusted.holds, holds_from (21 October, 7e5859542) against closed_orbit: by unfolding. Bodies shorten; nothing is deleted.",
+   "unending_of_fixed as a case of the pair form: its region is the orbit, and showing it closed is course_fixed. Same cost.",
+   "locked_closed, turn_locked, and turns_in_time_iff 'between two regions': premises or renamings, as seat 1 says.",
+   "October's laws through the phase lemma: a change of coordinate (the level against what is left), a real lemma, on needF = 0 with constant net draw only. Neither an unfolding nor a deletion. RenewalFlow.below_for_good (:200) already tells permanently_below as a Flow instance; this would tell it a third time.",
+   "Rising giving as a sum of gated givers, and the (d) boundary: renamings of g, as seat 3 says.",
+   "Founding:170, RenewalFlow:200, LineageDrawdown:613, opened: two-to-eight-line instances of other laws. A pair only by dictionary."
+  ],
+  "frozen_tests": [
+   "Test 1: failed; met only by running the course under another name. From [A] the never-ending levels are {6}. The exact start condition equals 'fixed within two steps'. The closed-set theorem's certificate at ([A],6) is from_six's three configurations, and seven's ending is five computed steps with no law.",
+   "Test 2: not met. No proof older than 12 November is deleted. TurningInTime is first of 13 November, LineOnAStock of 16 November; the two October proofs touched keep their statements.",
+   "Test 3: at most about 24 lines of 9,819 (0.2%), about 19 of them written 15 November. Each new statement (pair lemma, intervals, band, phase lemma) lengthens. By the paper's own rule, a law retold."
+  ],
+  "worth_building": [
+   "Nothing as a result.",
+   "One tidy, riding on the next change that already rebuilds TurningInTime (no build for it alone on this machine): delete kept_below_run for Lasting.closed_orbit, and the same inside Adjusted.holds and holds_from. Report it as closure used once, not as a join.",
+   "Before any Lean, on paper: refreeze test 1 on a world that has regions (seat 2's ceiling 6: [P] lasts from 2 to 6; [P,Q] from 3, 5, 6), and try whether itinerary intervals with a crossing law replace an existing proof (the crossing in turns_in_time_iff, ways_alike). Only if one goes: intervals first, then the two-sided band."
+  ],
+  "keep_on_paper": [
+   "Test 1's failure with its table: regions here are sets of pairs, not band by class; six is a knife-edge between two ways of ending.",
+   "The two countermodel worlds, and odd against even starts in Law's order.",
+   "The phase lemma with its bounds (needF = 0, constant net draw) and the three breaks above.",
+   "The tent is six givers less six takers; members that are always there add no region beyond RegimeMargin's."
+  ],
+  "what_ran": "Read only. Read the paper whole; Lasting, Viability, GuardedStep, Grammar at the cited lines; TurningInTime 330-372, 845-960; LineOnAStock 100-200, 1195-1362, 1760-1855; RegimeMargin 240-256, 630-745, 1105-1120; WayOfUnits 560-600; RelationalRenewal 205-606; Founding, RenewalFlow, LineageDrawdown, Pace, RuleCapture at the cited lines; git log for dates only. Four scripts in /Users/ren/theories/tmp/r7/one-model/check/round11/refuter/ (r1_line.py 16 s, r2_law.py 4 s, r3_imports.py, r4_holds_and_edge.py 4 s): searches, not proofs. Not done: seat 2's frequency counts were not recounted; other modules were not searched for re-proofs of closed_orbit; no Lean was compiled, so every line count of a replacement is an estimate. No test, no gate, no tracked file edited."
+ }
+}

@@ -1,0 +1,242 @@
+===== model.py =====
+moves are Between and strictly nearer on 0..29: True
+fixed   read every 1: start levels 1..12 -> xxxxx.......
+fixed   read every 4: start levels 1..12 -> xxxxx.......
+itself  read every 1: start levels 1..12 -> xxxxxxxxxxxx
+itself  read every 4: start levels 1..12 -> xxxxxxxxxxxx
+stock   read every 1: start levels 1..12 -> xxxxx.......
+stock   read every 4: start levels 1..12 -> xxxxx.......
+===== a_itself.py =====
+1. 260820 courses (tent and refill, ceilings 1..12, three moves, c in 1..3, six schedules, starts on a grid):
+   not ended within (2 hi + 1) L steps: 0 []
+   latest ending step at ceiling 12, tent (rows: move, c; columns: schedule) and the bound (2*12+1) L:
+                          every 1         every 2         every 3         every 5  every 5 from 4     two of five
+   by one   c=1               17              17              23              35              39              35
+   by one   c=2               11              13              14              20              24              20
+   by one   c=3               11              11              12              15              19              15
+   by half  c=1               17              17              23              35              39              35
+   by half  c=2               11              13              14              20              24              20
+   by half  c=3               10              10              10              14              18              14
+   at once  c=1               17              17              23              35              39              35
+   at once  c=2               10              10              13              19              23              19
+   at once  c=3                8               8              10              14              18              14
+                               25              50              75             125             125             125
+2. by one, c=1, read every 1: takes [3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8] levels [12, 12, 12, 12, 12, 12, 12, 12, 12, 10, 6, 0]; rises at every step: False
+2. at once, c=1, read every 1: takes [3, 10, 4, 11] levels [12, 12, 4, 0]; rises at every step: False
+2. by one, c=2, read every 1: takes [3, 3, 4, 5, 6, 7, 8, 9, 10] levels [12, 12, 12, 12, 12, 12, 10, 4, 0]; rises at every step: False
+2. by one, c=3, read every 4: takes [3, 3, 4, 5, 6, 6, 7, 8, 9, 9] levels [12, 12, 12, 12, 12, 12, 12, 10, 4, 0]; rises at every step: False
+3. for every set level g in 0..5 some take a has not (a < A a g): True; and some take has not (a <= A a g): True  (e.g. a = g + 1)
+   `more` at use = take fails at v = (take 9, set level 4): A 9 4 = 8
+   the region x <= m <= x + c is kept by every turn, take and set level never falling in it: violations 0
+4. doubling g z = z: start take 0, held 1, start levels 1..24, horizon 3000: does not end within the horizon from: {('by one', 1, 1): (2, '...', 24), ('by one', 1, 3): (2, '...', 24), ('by one', 2, 1): (2, '...', 24), ('by one', 2, 3): (2, '...', 24), ('by half', 1, 1): (2, '...', 24), ('by half', 1, 3): (2, '...', 24), ('by half', 2, 1): (2, '...', 24), ('by half', 2, 3): (2, '...', 24), ('at once', 1, 1): (2, '...', 24), ('at once', 1, 3): (2, '...', 24), ('at once', 2, 1): (2, '...', 24), ('at once', 2, 3): (2, '...', 24)}
+4. flat g z = min z 3: start take 0, held 1, start levels 1..24, horizon 3000: ends from every one
+4. crossing: start take 0, held 1, start levels 1..24, horizon 3000: ends from every one
+4. concave: start take 0, held 1, start levels 1..24, horizon 3000: does not end within the horizon from: {('by one', 1, 1): (1, '...', 24), ('by one', 1, 3): (1, '...', 24), ('by one', 2, 1): (1, '...', 24), ('by one', 2, 3): (1, '...', 24), ('by half', 1, 1): (1, '...', 24), ('by half', 1, 3): (1, '...', 24), ('by half', 2, 1): (1, '...', 24), ('by half', 2, 3): (1, '...', 24), ('at once', 1, 1): (1, '...', 24), ('at once', 1, 3): (1, '...', 24), ('at once', 2, 1): (1, '...', 24), ('at once', 2, 3): (1, '...', 24)}
+   doubling, by one, c=1, from level 2: [(0, 2), (1, 4), (1, 6), (2, 10), (2, 16), (3, 28), (3, 50), (4, 94), (4, 180), (5, 352), (5, 694), (6, 1378)]
+5. both orders of the fast step, reading before or after the step (47232 courses, tent 6 and 12): not ended within (2 hi + 1) L + 1: 0
+   1.9 s
+===== b_fixed.py =====
+(a) addendum, readings at the squares, tent 3, 6, 9 (1836 courses): not ended by step (2 hi)^2 + 1: 0; latest 31
+1. 53976 courses (tent and refill, ceilings 1..12, three moves, every set level and start take 0..hi+1, start levels 1..hi):
+   the fate differs from the regime's fate under a standing take m from the level at the step the take reaches m: 0
+   the take reaches m later than the gap |x0 - m|: 0;  a schedule that never reads gives another course than h = m: 0
+   ends before the take arrives: 16939; smallest (ceiling, giving, move, m, x0, y0, end step): (1, 'refill', 'by half', 0, 2, 1, 1)
+   ends though the start level holds under a standing take m: 9706; smallest: (1, 'refill', 'at once', 0, 1, 1, 1)
+      of these the take started above m in 9706, below m in 0
+   lasts though the start level ends under a standing take m: 3655; smallest: (2, 'refill', 'at once', 1, 0, 1)
+      of these the take started below m in 3655, above m in 0
+   tent 12, m=3, start take 9, level 8 (standing take 3 from 8: goes on): ends at step 1; (take, level): [(9, 8), (8, 0)]
+   tent 12, m=3, start take 0, level 5 (standing take 3 from 5: ends): goes on; (take, level): [(0, 5), (1, 10), (2, 12), (3, 12), (3, 12)]
+   tent 12, m=3, start take 9, level 12 (standing take 3 from 12: goes on): ends at step 2; (take, level): [(9, 12), (8, 6), (7, 0)]
+   tent 12, m=3, start take 0, level 4 (standing take 3 from 4: ends): goes on; (take, level): [(0, 4), (1, 8), (2, 12), (3, 12), (3, 12)]
+   tent 12, m=3, start take 3, level 12 (standing take 3 from 12: goes on): goes on; (take, level): [(3, 12), (3, 12)]
+2. ends_iff_below on the tent, ceilings 1..12, every draw whose premises hold: 343 of 343 levels agree (54 draws without the premises)
+3. a larger start take lasting where a smaller one ends (tent): 0; smallest: None
+   0.3 s
+===== c_stock.py =====
+1. at once, read every step (17992 starts, tent and refill, ceilings 1..12):
+   fate differs from the one-place map z -> (z0 - m0) + g z staying positive: 0;  (y - x) - m not carried along: 0
+   tent: fate differs from "z0 > m0, or z0 = m0 with 1 <= z0 <= hi - 1" (z0 = y0 - x0): 0
+2. tent 12, by one, read every step: least start level that goes on (rows start take 0..8, columns start held 0..8; - none):
+   take 0:    1   1   1   1   1   1   1   1   1
+   take 1:    2   2   3   3   3   3   3   3   3
+   take 2:    3   3   4   5   5   5   5   5   5
+   take 3:    5   5   5   6   7   7   7   7   7
+   take 4:    7   7   7   7   8   9   9   9   9
+   take 5:    9   9   9   9   9  10  11  11  11
+   take 6:   11  11  11  11  11  11  12   -   -
+   take 7:    -   -   -   -   -   -   -   -   -
+   take 8:    -   -   -   -   -   -   -   -   -
+   rows where a higher start level ends after a lower one goes on: 0
+2. tent 12, by half, read every step: least start level that goes on (rows start take 0..8, columns start held 0..8; - none):
+   take 0:    1   1   1   2   2   3   3   4   4
+   take 1:    2   2   3   3   4   4   5   5   6
+   take 2:    3   3   4   5   5   6   6   7   7
+   take 3:    4   5   5   6   7   7   8   8   9
+   take 4:    6   6   7   7   8   9   9  10  10
+   take 5:    7   8   8   9   9  10  11  11   -
+   take 6:    9   9  10  10  11  11  12   -   -
+   take 7:   10  11  11  12  12   -   -   -   -
+   take 8:   12  12   -   -   -   -   -   -   -
+   rows where a higher start level ends after a lower one goes on: 0
+2. tent 12, at once, read every step: least start level that goes on (rows start take 0..8, columns start held 0..8; - none):
+   take 0:    1   1   2   3   4   5   6   7   8
+   take 1:    2   2   3   4   5   6   7   8   9
+   take 2:    3   3   4   5   6   7   8   9  10
+   take 3:    4   4   5   6   7   8   9  10  11
+   take 4:    5   5   6   7   8   9  10  11  12
+   take 5:    6   6   7   8   9  10  11  12   -
+   take 6:    7   7   8   9  10  11  12   -   -
+   take 7:    8   8   9  10  11  12   -   -   -
+   take 8:    9   9  10  11  12   -   -   -   -
+   rows where a higher start level ends after a lower one goes on: 0
+   rests (take, level, held) for the tent 12, one for each amount left 1..11: [(1, 2, 1), (2, 4, 2), (3, 6, 3), (4, 8, 4), (5, 10, 5), (6, 12, 6), (5, 12, 5), (4, 12, 4), (3, 12, 3), (2, 12, 2), (1, 12, 1)]; each is fixed by a turn: True
+   lasting courses that come to a rest / to a cycle, by move: {'by one': (150, 485), 'by half': (149, 353), 'at once': (132, 309)}
+3. kept by reading every step, ended by a sparse or late reading (ceilings 1..12, every start with take and held 0..hi+1, level 1..hi):
+   tent: ended / kept, by move (by one, by half, at once); first found as (ceiling, take, level, held) for by one
+      read every 2 from step 0              0/2486     0/1989     0/1717   None
+      read every 2 from step 1            304/2486   519/1989   240/1717   (2, 0, 1, 2)
+      read every 3 from step 0              0/2486     0/1989     0/1717   None
+      read every 3 from step 1            304/2486   519/1989   240/1717   (2, 0, 1, 2)
+      read every 3 from step 2            429/2486   654/1989   240/1717   (2, 0, 1, 2)
+      read every 4 from step 0              0/2486     0/1989     0/1717   None
+      read every 4 from step 1            304/2486   519/1989   240/1717   (2, 0, 1, 2)
+      read every 4 from step 2            429/2486   654/1989   240/1717   (2, 0, 1, 2)
+      read every 4 from step 3            627/2486   688/1989   240/1717   (2, 0, 1, 2)
+      reading old by 1, history stood       0/2486     0/1989     0/1717   None
+      reading old by 1, history held      304/2486   488/1989   216/1717   (2, 0, 1, 2)
+      reading old by 2, history stood       0/2486     0/1989     0/1717   None
+      reading old by 2, history held      429/2486   633/1989   240/1717   (2, 0, 1, 2)
+      reading old by 3, history stood       0/2486     0/1989     0/1717   None
+      reading old by 3, history held      627/2486   682/1989   240/1717   (2, 0, 1, 2)
+   refill: ended / kept, by move (by one, by half, at once); first found as (ceiling, take, level, held) for by one
+      read every 2 from step 0              0/4071     0/4049     0/3367   None
+      read every 2 from step 1             44/4071   200/4049     0/3367   (2, 0, 1, 2)
+      read every 3 from step 0              0/4071     0/4049     0/3367   None
+      read every 3 from step 1             44/4071   200/4049     0/3367   (2, 0, 1, 2)
+      read every 3 from step 2            104/4071   542/4049     0/3367   (2, 0, 1, 2)
+      read every 4 from step 0              0/4071     0/4049     0/3367   None
+      read every 4 from step 1             44/4071   200/4049     0/3367   (2, 0, 1, 2)
+      read every 4 from step 2            104/4071   542/4049     0/3367   (2, 0, 1, 2)
+      read every 4 from step 3            176/4071   682/4049     0/3367   (2, 0, 1, 2)
+      reading old by 1, history stood       0/4071     0/4049     0/3367   None
+      reading old by 1, history held       44/4071   200/4049     0/3367   (2, 0, 1, 2)
+      reading old by 2, history stood       0/4071     0/4049     0/3367   None
+      reading old by 2, history held      104/4071   542/4049     0/3367   (2, 0, 1, 2)
+      reading old by 3, history stood       0/4071     0/4049     0/3367   None
+      reading old by 3, history held      176/4071   682/4049     0/3367   (2, 0, 1, 2)
+   gated tent: ended / kept, by move (by one, by half, at once); first found as (ceiling, take, level, held) for by one
+      read every 2 from step 0              0/2364     0/1920     0/1620   None
+      read every 2 from step 1            231/2364   504/1920   221/1620   (2, 0, 2, 1)
+      read every 3 from step 0              0/2364     0/1920     0/1620   None
+      read every 3 from step 1            231/2364   504/1920   221/1620   (2, 0, 2, 1)
+      read every 3 from step 2            350/2364   637/1920   221/1620   (2, 0, 2, 1)
+      read every 4 from step 0              0/2364     0/1920     0/1620   None
+      read every 4 from step 1            231/2364   504/1920   221/1620   (2, 0, 2, 1)
+      read every 4 from step 2            350/2364   637/1920   221/1620   (2, 0, 2, 1)
+      read every 4 from step 3            548/2364   671/1920   221/1620   (2, 0, 2, 1)
+      reading old by 1, history stood       0/2364     0/1920     0/1620   None
+      reading old by 1, history held      231/2364   473/1920   198/1620   (2, 0, 2, 1)
+      reading old by 2, history stood       0/2364     0/1920     0/1620   None
+      reading old by 2, history held      350/2364   616/1920   221/1620   (2, 0, 2, 1)
+      reading old by 3, history stood       0/2364     0/1920     0/1620   None
+      reading old by 3, history held      548/2364   665/1920   221/1620   (2, 0, 2, 1)
+   smallest sparse case on the tent: ceiling 2, by half, (2, 1), start take 0, level 1, held 2
+      read every step: (take, level, held) [(0, 1, 2), (1, 2, 1), (1, 2, 1)]
+      read every 2 from step 1: (take, level, held) [(0, 1, 2), (1, 2, 2), (2, 2, 1), (1, 0, 1)]
+   smallest late case on the tent: ceiling 2, by half, (1, 'held'), start take 0, level 1, held 2
+      read every step: (take, level, held) [(0, 1, 2), (1, 2, 1), (1, 2, 1)]
+      old by 1, history held: (take, level, held) [(0, 1, 2), (1, 2, 2), (2, 2, 1), (1, 0, 1)]
+   tent 12, by one, start take 5, held 5, first reading at step r and at every step after: least start level that goes on,
+   beside the least level from which a standing take 5 leaves, after r steps, a level that reading at every step keeps
+      r = 0: 10 | 10;      r = 1: 10 | 10;      r = 2: 10 | 10;      r = 3: 10 | 10;      r = 4: 10 | 10;      r = 5: 10 | 10;
+4. held := level less a reserve r (tent 12): starts (take, held 0..13, level 1..12) that go on, of 2352; and where they come to
+   r= 2 by one   every 1:     1 go on; rests (take, level): [(2, 4)]
+   r= 2 by one   every 3:     1 go on; rests (take, level): [(2, 4)]
+   r= 2 by half  every 1:     1 go on; rests (take, level): [(2, 4)]
+   r= 2 by half  every 3:     1 go on; rests (take, level): [(2, 4)]
+   r= 2 at once  every 1:     1 go on; rests (take, level): [(2, 4)]
+   r= 2 at once  every 3:     4 go on; rests (take, level): [(2, 4)]
+   r= 4 by one   every 1:     1 go on; rests (take, level): [(4, 8)]
+   r= 4 by one   every 3:     1 go on; rests (take, level): [(4, 8)]
+   r= 4 by half  every 1:     1 go on; rests (take, level): [(4, 8)]
+   r= 4 by half  every 3:     1 go on; rests (take, level): [(4, 8)]
+   r= 4 at once  every 1:     1 go on; rests (take, level): [(4, 8)]
+   r= 4 at once  every 3:     7 go on; rests (take, level): [(4, 8)]
+   r= 6 by one   every 1:   635 go on; rests (take, level): [(6, 12)]
+   r= 6 by one   every 3:   635 go on; rests (take, level): [(6, 12)]
+   r= 6 by half  every 1:   553 go on; rests (take, level): [(6, 12)]
+   r= 6 by half  every 3:   548 go on; rests (take, level): [(6, 12)]
+   r= 6 at once  every 1:   464 go on; rests (take, level): [(6, 12)]
+   r= 6 at once  every 3:   463 go on; rests (take, level): [(6, 12)]
+   r= 8 by one   every 1:   635 go on; rests (take, level): [(4, 12)]
+   r= 8 by one   every 3:   635 go on; rests (take, level): [(4, 12)]
+   r= 8 by half  every 1:   627 go on; rests (take, level): [(4, 12)]
+   r= 8 by half  every 3:   613 go on; rests (take, level): [(4, 12)]
+   r= 8 at once  every 1:   541 go on; rests (take, level): [(4, 12)]
+   r= 8 at once  every 3:   549 go on; rests (take, level): [(4, 12)]
+   r=10 by one   every 1:   635 go on; rests (take, level): [(2, 12)]
+   r=10 by one   every 3:   635 go on; rests (take, level): [(2, 12)]
+   r=10 by half  every 1:   645 go on; rests (take, level): [(2, 12)]
+   r=10 by half  every 3:   641 go on; rests (take, level): [(2, 12)]
+   r=10 at once  every 1:   598 go on; rests (take, level): [(2, 12)]
+   r=10 at once  every 3:   604 go on; rests (take, level): [(2, 12)]
+5. one start (take 3, level 9, held 3), tent 12, by one, read every step; only the source differs:
+   held fixed              : goes on; comes to (take, level, held) (3, 12, 3)
+   from the take, +1       : ends at step 11; comes to (take, level, held) (8, 0, 9)
+   what the stock gave     : goes on; comes to (take, level, held) (4, 12, 3)
+   level less a reserve 6  : goes on; comes to (take, level, held) (6, 12, 6)
+   above the take, top 3   : goes on; comes to (take, level, held) (3, 12, 3)
+   above the take, top 5   : goes on; comes to (take, level, held) (5, 12, 5)
+   above the take, top 6   : goes on; comes to (take, level, held) (6, 12, 6)
+   above the take, top 7   : ends at step 11; comes to (take, level, held) (7, 0, 7)
+   2.0 s
+===== d_top.py =====
+1. the region (held = s and s <= take + c) left by a turn: 0 (three moves, c 1..3, s 0..13, takes 0..17, reading or not)
+2. 467712 courses (tent, ceilings 1..12, three moves, c 1..2, every top 0..hi, read every 1, 2, 3):
+   lasting courses that never enter the region: 0;  ended before entering it: 124400
+   fate from the first step in the region differs from the fixed case at s from that configuration: 0; differs from the regime under a standing take s from the level where the take reaches s: 0
+   courses where the held value equals s before the region is entered: 58617; smallest (ceiling, L, c, move, s, x0, y0, m0): (2, 1, 1, 'at once', 2, 0, 1, 2)
+      (take, level, held): [(0, 1, 2), (2, 2, 1), (1, 0, 2)]
+   the held value at the top and then off it again (start level at the ceiling): 2315; smallest (6, 1, 'at once', 2, 0, 2); moves: ['at once', 'by half', 'by one']
+      (take, level, held): [(0, 6, 2), (2, 6, 1), (1, 6, 2), (2, 6, 2), (2, 6, 2), (2, 6, 2), (2, 6, 2), (2, 6, 2), (2, 6, 2), (2, 6, 2), (2, 6, 2), (2, 6, 2)]
+3. tent 12, by one, c = 1, read every step, start take 0, held 0: fate by top s (rows) and start level 1..12 (columns); . goes on, x ends
+   s=0: ............   standing take s from the same level: ............
+   s=1: ............   standing take s from the same level: x...........
+   s=2: ............   standing take s from the same level: xxx.........
+   s=3: ............   standing take s from the same level: xxxxx.......
+   s=4: ............   standing take s from the same level: xxxxxxx.....
+   s=5: ............   standing take s from the same level: xxxxxxxxx...
+   s=6: ............   standing take s from the same level: xxxxxxxxxxx.
+   s=7: xxxxxxxxxxxx   standing take s from the same level: xxxxxxxxxxxx
+   s=8: xxxxxxxxxxxx   standing take s from the same level: xxxxxxxxxxxx
+   2.4 s
+===== e_extra.py =====
+1. tent 12, by one, value from what the stock gave, start take 0, held 6; first reading at step r, then every step:
+   least start level that goes on | the same computed as: run the fixed case (held 6) for r steps, then ask whether reading at every step keeps that configuration
+   r=0: 1 | 1;   r=1: 2 | 2;   r=2: 2 | 2;   r=3: 2 | 2;   r=4: 2 | 2;   r=5: 2 | 2;   r=6: 2 | 2;   r=7: 2 | 2;
+   held value differs from the start's at a step up to and including the first reading step: 0
+2. held := level less a reserve r, tent 12: kept by reading every step and ended by reading every L (first reading at step 0)
+   r= 6 by one   every 2: 0 of 635 kept are ended; smallest (take, level, held) None; ended by every step but kept: 0
+   r= 6 by one   every 3: 0 of 635 kept are ended; smallest (take, level, held) None; ended by every step but kept: 0
+   r= 6 by half  every 2: 16 of 553 kept are ended; smallest (take, level, held) (5, 8, 3); ended by every step but kept: 11
+   r= 6 by half  every 3: 17 of 553 kept are ended; smallest (take, level, held) (5, 8, 3); ended by every step but kept: 12
+   r= 6 at once  every 2: 18 of 464 kept are ended; smallest (take, level, held) (8, 9, 0); ended by every step but kept: 17
+   r= 6 at once  every 3: 18 of 464 kept are ended; smallest (take, level, held) (8, 9, 0); ended by every step but kept: 17
+   r= 8 by one   every 2: 0 of 635 kept are ended; smallest (take, level, held) None; ended by every step but kept: 0
+   r= 8 by one   every 3: 0 of 635 kept are ended; smallest (take, level, held) None; ended by every step but kept: 0
+   r= 8 by half  every 2: 8 of 627 kept are ended; smallest (take, level, held) (7, 10, 1); ended by every step but kept: 0
+   r= 8 by half  every 3: 14 of 627 kept are ended; smallest (take, level, held) (7, 10, 1); ended by every step but kept: 0
+   r= 8 at once  every 2: 8 of 541 kept are ended; smallest (take, level, held) (10, 11, 0); ended by every step but kept: 16
+   r= 8 at once  every 3: 8 of 541 kept are ended; smallest (take, level, held) (10, 11, 0); ended by every step but kept: 16
+   r=10 by one   every 2: 0 of 635 kept are ended; smallest (take, level, held) None; ended by every step but kept: 0
+   r=10 by one   every 3: 0 of 635 kept are ended; smallest (take, level, held) None; ended by every step but kept: 0
+   r=10 by half  every 2: 3 of 645 kept are ended; smallest (take, level, held) (9, 12, 0); ended by every step but kept: 0
+   r=10 by half  every 3: 4 of 645 kept are ended; smallest (take, level, held) (9, 12, 0); ended by every step but kept: 0
+   r=10 at once  every 2: 0 of 598 kept are ended; smallest (take, level, held) None; ended by every step but kept: 6
+   r=10 at once  every 3: 0 of 598 kept are ended; smallest (take, level, held) None; ended by every step but kept: 6
+   r=6, by half, read every 1, start (0, 7, 13): [(0, 7, 13), (7, 12, 1), (4, 10, 6), (5, 12, 4), (4, 12, 6), (5, 12, 6), (6, 12, 6), (6, 12, 6)]
+   r=6, by half, read every 2, start (0, 7, 13): [(0, 7, 13), (7, 12, 1), (4, 10, 1), (2, 12, 4), (3, 12, 4), (4, 12, 6), (5, 12, 6), (6, 12, 6), (6, 12, 6), (6, 12, 6)]
+3. tent 2, by one, start (take 0, level 1, held 2), read every step: goes on; [(0, 1, 2), (1, 2, 1), (1, 2, 1)]
+3. tent 2, by one, start (take 0, level 1, held 2), read every 2 from step 1: ends; [(0, 1, 2), (1, 2, 2), (2, 2, 1), (1, 0, 1)]
+4. starts whose (take, held) course over 30 steps differs from the course at start level 12, of 2304 each: {'fixed': 0, 'itself': 0, 'top 5': 0, 'gave': 2286, 'reserve 6': 2304}

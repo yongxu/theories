@@ -1,0 +1,45 @@
+transcription agrees with from_six and from_seven (ways as counts)
+
+fate table: rows are start ways (counts as letters), columns levels 0..12
+  N = never ends; d = ends with no C ever met (the level ran down); u = ends after a C was met
+way      take   0  1  2  3  4  5  6  7  8  9 10 11 12   never-ending levels
+(empty)    0    .  .  .  .  .  .  .  .  .  .  .  .  .   []  empty
+C          1    .  .  .  .  .  .  .  .  .  .  .  .  u   []  empty
+B          1    .  .  .  N  u  u  u  u  u  u  u  u  u   [3]  interval
+A          3    .  d  d  d  d  d  N  u  u  u  u  u  u   [6]  interval
+CC         2    .  .  .  .  .  .  .  .  .  .  .  .  u   []  empty
+BC         2    .  .  .  d  N  u  u  u  u  u  u  u  u   [4]  interval
+BB         2    .  .  .  d  d  d  N  u  u  u  u  u  u   [6]  interval
+AC         4    .  d  d  d  d  d  d  N  u  u  u  u  u   [7]  interval
+AB         4    .  d  d  d  d  d  d  d  d  u  u  u  u   []  empty
+AA         6    .  d  d  d  d  d  d  d  d  d  d  u  u   []  empty
+CCC        3    .  .  .  .  .  .  .  .  .  .  .  .  u   []  empty
+BCC        3    .  .  .  d  d  N  u  u  u  u  u  u  u   [5]  interval
+BBC        3    .  .  .  d  d  d  d  N  u  u  u  u  u   [7]  interval
+BBB        3    .  .  .  d  d  d  d  d  d  u  u  u  u   []  empty
+ACC        5    .  d  d  d  d  d  d  d  N  u  u  u  u   [8]  interval
+ABC        5    .  d  d  d  d  d  d  d  d  d  u  u  u   []  empty
+ABB        5    .  d  d  d  d  d  d  d  d  d  d  u  u   []  empty
+AAC        7    .  d  d  d  d  d  d  d  d  d  d  d  u   []  empty
+AAB        7    .  d  d  d  d  d  d  d  d  d  d  d  d   []  empty
+AAA        9    .  d  d  d  d  d  d  d  d  d  d  d  d   []  empty
+
+starts: 260; never ending: 8
+never-ending starts: [('B', 3), ('A', 6), ('BC', 4), ('BB', 6), ('AC', 7), ('BCC', 5), ('BBC', 7), ('ACC', 8)]
+
+1. threshold in the level per way: fails for 8 of 20 ways: ['B', 'A', 'BC', 'BB', 'AC', 'BCC', 'BBC', 'ACC']
+   ways with more than one never-ending level: []
+2. level minus take: values at which both fates occur: [2, 3, 4]
+   so no condition on level minus take alone is exact; a threshold in particular is not
+3. potential: ([A],5) ends, ([A],6) never, ([A],7) ends -> no function monotone in the level at a fixed way,
+   and no half-space in (counts, level), separates: (A,6) is the midpoint of two ending starts
+4. 'no A, one or two B's, level = 3b + c <= 11' or 'one A, no B, level = 6 + c <= 11': exact on the table: True
+   and on every way of up to 12 units, levels 0..12 (5915 starts): True
+5. courses on which a C is met at some step: never ending 0, ending 69;
+   ending with no C ever met (and some need met at the start): 106
+   so 'no C is ever met' is necessary for never ending on this table and far from sufficient
+
+6. never-ending configurations with at most 12 units: 21; of them fixed under the step: [('BC', 4), ('BBCC', 8)]
+   every never-ending course ends in: [('BBCC', 8), ('BC', 4)]
+   at BC: level 4 fixed; level 3 -> ends; level 5 -> ends
+   at BBCC: level 8 fixed; level 7 -> ends; level 9 -> ends

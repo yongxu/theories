@@ -1,0 +1,267 @@
+{
+ "note": "AI-written. Reports of workflow wf_ce1f1c8f-7a6, 16 November 2026: the missing links tried on paper (three seats and one refuter).",
+ "seat:renewal-and-the-roots-language": {
+  "answer_in_one_paragraph": "None of the three is a path between dynamics. (1) The sentence as written is false: a dependent of lower need can arise for ever below its renewers' need (countermodel). For dependents at a need of at least m it is already Flow.ends_below with \"active\" weakened to \"arises\". What is new is short: below the gate nothing is given again, so arising that takes does not recur. (2) The kernel statement is true, about 12 lines, and is ends_iff_below with both sides negated: a renaming. (3) ends_iff_below is not a case of leading_exact and is not derived so. The join that exists is threshold_regime, which runs from the regime to the plane; its premise that giving rises looks droppable.",
+  "links": [
+   {
+    "from": "loss-of-renewal-for-good",
+    "to": "unceasing-generation-needs-renewal",
+    "statement": "theorem Flow.below_ends_arising_taking (balances : L.Balances W) (acting : L.Acting W) (dependent : W.Dependent) (gated : ∀ t f, f ∈ L.present t → 0 < L.give t f c → W.requires t f c ∧ m ≤ W.need t f c) (below : W.level T c < m) : ¬ ∀ N, ∃ t f, N ≤ t ∧ L.ArisesTaking W [c] t f. Path form: joint_excess_ends's `excess` and `start` in place of `below`.",
+    "standing": "a theorem to prove (for dependents at need ≥ m: a renaming of Flow.ends_below, Continuation.lean:495)",
+    "premises": "Those of Flow.stays_below (Continuation.lean:468); ArisesTaking (Flow.lean:332) as replenishment_recurs takes it. None added.",
+    "evidence": "Sketch: stays_below gives level < m from T on; given_zero_below (:457) gives L.given t c = 0, so replenishment [c] t = 0; Flow.replenishment_recurs_from (Flow.lean:598) refutes recurring arising that takes. Search: 4,000 random gated flows, 2,809 crossings, no refutation. No old proof is deleted; lines rise. Atlas: an exit on unceasing-generation-needs-renewal to loss-of-renewal-for-good, strength necessary.",
+    "first_obstacle": "None in the proof. In the wording: with plain Arises it is false, and the 'not active before' half of Arises is never used; the law holds of any recurring uptake.",
+    "imports_it_would_add": "None: Continuation.lean already depends on Flow.lean and Arising.lean.",
+    "lean_lines_estimate": "10 to 14; about 30 with the path form and the family form."
+   },
+   {
+    "from": "margin-of-a-regime",
+    "to": "never-leaving-a-guard",
+    "statement": "Viability.Kernel (Law.process (step g H)) (fun z => 0 < z ∧ z ≤ hi) x ↔ H + y ≤ x ∧ x ≤ hi, under pos, Short, FromNothing, Meets, Keeps.",
+    "standing": "a renaming (of ends_iff_below, RegimeMargin.lean:741, both sides negated, with holds' upper bound, through Kernel's definition)",
+    "evidence": "Proof: guard at x and ends_iff_below.mpr through Branching.law_reach_iff (Recurrence.lean:304); back by holds (:730). No law of the root is used; kernel_iff_certificate, kernel_largest and avoids_iff_closed add nothing after it. The complement is closed by Adjusted.step_below (:485); the basin is ends_below, which is Lasting.Variant.reaches (:704) with the level as its own variant. Both are already the regime's. Search: 1,799 parameter sets, kernel always [H + y, hi]; guard 'need met' (gated at m > 0), 2,551 cases, the same. Double negation: avoids_iff_closed states the guard as ¬ target, so a positive guard returns as ¬¬. Here it is a Nat order: two lines, no axiom (in general it cannot be removed: Lasting.dual_needs_decision, :842). Kernel taken directly avoids it. Atlas: no exit.",
+    "first_obstacle": "RegimeMargin's runs are of Law.process (Recurrence.lean:143); avoids_iff_kernel, Reaches, Lasts and Variant speak of disturbed (determined next) (Lasting.lean:467). No lemma joins the two.",
+    "imports_it_would_add": "None: RegimeMargin.lean imports Lasting and Recurrence.",
+    "lean_lines_estimate": "about 12"
+   },
+   {
+    "from": "threshold-in-the-state-plane",
+    "to": "margin-of-a-regime",
+    "statement": "theorem threshold_regime (grows : ∀ a b, a ≤ b → g a ≤ g b) (short : Short g H y) (nothing : FromNothing g) (meets : Meets g H y hi) (keeps : Keeps g H hi) (given : r ≤ hi) (reach : H + y ≤ hi + 1) : Adjusted.threshold (fun e _ => g e) H hi r = H + y",
+    "standing": "already a theorem that shows it (RegimeMargin.threshold_regime, RegimeMargin.lean:1698); condition 4 not met: it restricts the plane's law to the regime's step, and no course leaves",
+    "evidence": "Its proof evaluates the leading threshold by holds (:1706) and ends_below (:1712): regime to plane. ends_iff_below (:741) comes from Adjusted.ends_iff_below (:676), before `leading` (:1497) exists; leading_exact is called at :1646, :2691 and :2988 only. Deriving ends_iff_below through leading_exact deletes nothing: `down` and `exact` are discharged by holds, ends_below and stays_ended, and leading_eq then asks for the iff itself. The docstring at :1548 ('Every point of no return in this module is this law') over-says for :676, :694, :741. Found: `grows` and `given` look droppable: 773 instances with giving not rising, no failure; by hand, below the point the level is 0 from step x on (stays_ended) and above it stays at least H (holds). The proof would lose about 10 lines. Not built. Atlas: an edge by threshold_regime, exact, as a case."
+   }
+  ],
+  "apart": [
+   {
+    "what_is_read_as_one": "'Below the need for good, arising is not unceasing' (LINKS-ON-PAPER) and what the Lean can prove",
+    "countermodel_or_reason": "One condition at level 3 for ever; renewers need 5, so are inactive and give nothing; a formation requiring it at need 1 is active at odd steps and takes nothing. Balances, Acting, Dependent, the gate and 'below 5' all hold, and it arises at every even step (script: 100 arisings in 200 steps)."
+   },
+   {
+    "what_is_read_as_one": "ends_iff_below as leading_exact 'for its own reading and check' (docstring, RegimeMargin.lean:1548)",
+    "countermodel_or_reason": "g = (0,3,1,1,0), H = 1, y = 1, hi = 4 meets every premise of ends_iff_below and ends exactly below 2, but its step table [0,0,4,3,4] does not keep the order of levels, so the plane's law (Rises) does not apply. Notch.no_threshold on the band up to 4 fails Meets. These are two sufficient conditions for an exact point, meeting at threshold_regime."
+   },
+   {
+    "what_is_read_as_one": "A determined law as a process: Law.process next (Recurrence.lean:143) and disturbed (determined next) (fun _ => True) (Lasting.lean:467)",
+    "countermodel_or_reason": "Two different Process values. No lemma identifies their kernels; each is tied to the orbit separately (law_reach_iff; orbit_eq_history)."
+   }
+  ],
+  "against_the_four_conditions": [
+   "Link 1 (to prove). 1: met; Flow's gate and level, ArisesTaking, no new structure. 2: met; stays_below's premises only. 3: false without the gate (Flow.lean's Oscillation; Restored.returns) and false without the taking (countermodel); not sensitive to the 'not active before' half of Arises, where it only renames uptake_needs_replenishment_from. 4: with `below` it shows what loss for good excludes, not a leaving; with `excess` and `start` it shows the leaving from above the gate.",
+   "Link 3 (threshold_regime, existing). 1: met. 2: met; `grows` is the plane side's Rises, and fewer if it is dropped. 3: met; the value moves with H and y, and the equation fails without `reach` (759 instances). 4: not met; it is a case, not a path.",
+   "Link 2 (the kernel statement). 1 and 2: met. 3: met by the letter only; once Kernel is unfolded it is ends_iff_below negated, so it restates a definition and counts as nothing. 4: no path."
+  ],
+  "what_ran": "Read only: no Lean build, no test, no gate, no tracked edit. One Python script, 0.5 s: /Users/ren/theories/tmp/r7/one-model/check/round11/seat-renewal-margin/check_links.py, output in check_links.out.txt beside it. It enumerates regimes with hi ≤ 4, g ≤ 4, H ≤ 3 and 4,000 random gated flows. These are searches, not proofs. Nothing proposed here was compiled."
+ },
+ "seat:the-locks-path": {
+  "answer_in_one_paragraph": "AI-written. covering_locks is a path that shows its leaving. unending_iff_above is the law on arrival; turns_in_time_iff with course_turned leaves. lock_outlives_loss shows staying: a case (join_course), no path. Closed-capture to turning-in-time is apart: two models of one lock, one way over two levels that cannot be one. The composition does not typecheck through count_rises; a version on the count of carriers holds in search, but its ending does not pass through the lock. RuleRebuilding's step is a pair only as every function is.",
+  "links": [
+   {
+    "from": "turning-in-time",
+    "to": "margin-of-a-regime",
+    "statement": "TurningInTime.lean:958 unending_iff_above, from a way of the kept kind: «不穷» (net need after (fun w x => RegimeMargin.step giving (use w) x)) «一» (w, x) ↔ H₂ + y₂ ≤ x",
+    "standing": "already a theorem; condition 4 only with turns_in_time_iff (:1070) and course_turned (:2190)",
+    "evidence": "Its start is already of the kept kind, its level already the regime's under H₂ (private kept_run, :808). The leaving is turns_in_time_iff's premise `turns`. Its only-if is by Optimum.ends_within, not ends_iff_below. Atlas: on the existing exit by turns_in_time_iff set to: margin-of-a-regime, to_law: unending_iff_above; exact; drops turningintime-unmarked."
+   },
+   {
+    "from": "closed-capture",
+    "to": "turning-in-time",
+    "statement": "TurningInTime.lean:1440 locked_ends_rising: from a Locked way the line of net need after (fun w x => RegimeMargin.step giving (use w) x) ends within hi + 1 steps, Locked (:1400 likewise, within x steps)",
+    "standing": "apart as a path: two models of one lock",
+    "evidence": "Neither law uses join, joinRead, Accrues, Unread or the loss; the lock is RuleCapture's. The way is shared (join_is_asItWas, :1536). The levels cannot be one: at level 0 Accrues asks at least 1, the regime's step with FromNothing gives 0. Atlas: no exit from closed-capture; the exit is capture-through-the-rule's, to turning-in-time by locked_ends_rising: sufficient, drops nothing, adds a needed level."
+   },
+   {
+    "from": "capture-through-the-rule",
+    "to": "closed-capture",
+    "statement": "ClosedCapture.lean:307 lock_outlives_loss: b + t ≤ (paced (join fA fB) (joinRead hA) reads ((a, b), g) t).1.2 ∧ Locked … at t ∧ share and rule not below the start's",
+    "standing": "a renaming as a path: two theorems side by side; join_course (:248) is the case link, already a theorem",
+    "evidence": "It is loss_grows beside locked_stays and locked_not_below carried by join_course. It shows staying: a locked configuration with an unread beyond attached is at once closed-capture's. Atlas: no exit; a case_of from lock_outlives_loss to RuleCapture.locked_stays, how: join_course."
+   },
+   {
+    "from": "shaping-the-rule-selected-by-what-comes-back",
+    "to": "capture-through-the-rule",
+    "statement": "RuleShaping.lean:443 covering_locks, given mono, ∀ x, c ≤ σ x, c ≤ s: ∀ r, reads r = true → Locked CarrierCounts.order CarrierCounts.favours (byBack a p c pos σ) (paced … (x, shaped a s p c pos) (r + 1))",
+    "standing": "already a theorem that shows it; meets condition 4",
+    "evidence": "It is favouring_locks at byBack. Atlas exit: to capture-through-the-rule; law covering_locks; edge: where what comes back to the shapers alone is read monotonically from their share and covers the cost at every share, a course from a rule covering the cost is locked from the step after its first reading step; sufficient; drops nothing. drawn_locked_either (DrawnShaping:378) starts locked."
+   },
+   {
+    "from": "shaping-the-rule-selected-by-what-comes-back",
+    "to": "turning-in-time",
+    "statement": "From q, the configuration covering_locks locks at step r + 1, at a level l ≤ hi stepping by RegimeMargin.step giving (w.1.carrier * u): the line of net need from ((q.1, q.2, r + 1), l) ends within hi + 1 steps, Locked (CarrierCounts.order, CarrierCounts.favours, byBack a p c pos σ)",
+    "standing": "a theorem to prove; the three laws do not compose as typed",
+    "premises": "covering_locks' own; 0 < x.carrier; 2 ≤ a + c + p; 0 < u; ends_with_net_rising's",
+    "evidence": "count_rises needs A = Nat and a strict rise under every favouring rule; on CarrierCounts the tie ⟨1,1⟩ favours and moves nothing. Without 2 ≤ a + c + p that tie, at no cost, on giving min z (12 − z), stays Locked at level 12. Sketch: covering_locks; an invariant along windowAlone's orbit (carriers present, each leaving two) gives the rise; ends_with_net_rising; locked_alone. Search: 88,704 cases, none failing.",
+    "lean_lines_estimate": "about 70",
+    "imports_it_would_add": "none; TurningInTime imports RuleShaping through PoolFromCourse",
+    "first_obstacle": "The ending takes no lock: ends_with_net_rising gives it alone (⟨2,5⟩ disfavours yet doubles the carriers). locked_ends_rising's `more` fails from a tie."
+   },
+   {
+    "from": "a-rule-rebuilt-from-the-members-it-limits",
+    "to": "turning-in-time",
+    "statement": "RuleRebuilding.lean:226 net r := fun x y => ∃ m, y = step r m x; :218 the level after: x.level + r.renewal - take x",
+    "standing": "a renaming for one move's step; apart for the net and the laws with marks or the regime's step",
+    "evidence": "Both points of the earlier reader hold. Every function on W × Nat is a pair of its two components. The net branches and is total. Give-then-take is RegimeMargin.step for no giving: level 1, renewal 4, take 3 asks giving 0 = 2; level 3 asks 4. The way reads the level where level + renewal < take, which depends on the way, so AloneOutside leaves at most one level unmarked and `un` fails. Only toEnd_iff, constant_iff and kind_ends_while_net_goes apply, adding nothing."
+   }
+  ],
+  "apart": [
+   {
+    "what_is_read_as_one": "closed-capture's loss and the level a lock needs",
+    "countermodel_or_reason": "They meet only under the reading level = K − loss, which neither side defines; Accrues is then locked_ends_with_net's `over` with nothing given (argued; 5,608 cases)."
+   },
+   {
+    "what_is_read_as_one": "a share rising and a count of drawers rising",
+    "countermodel_or_reason": "LineOnAStock.ShareRises (:1677): the share goes from two of four to two of two as the drawers go from two to one."
+   },
+   {
+    "what_is_read_as_one": "the lock coming and the line ending Locked",
+    "countermodel_or_reason": "Start rule shaped 1 5 0 1, σ = 1, first reading at step 3, share ⟨1,1⟩, level 12: the line ends at step 3, not Locked."
+   }
+  ],
+  "against_the_four_conditions": [
+   "unending_iff_above: 1, 2, 3 yes (give-then-take holds from 9, below 10); 4 not alone.",
+   "covering_locks: all four; 3: false were favouring strict (c = s is a tie).",
+   "join_course with lock_outlives_loss: 1, 2, 3 yes (Beyond.open_falls); 4 no: staying.",
+   "locked_ends_rising, as capture-through-the-rule's: 1, 4 yes; 2 adds `more` on a free `use`; 3 weak: a use reading only the step count meets it (:1436).",
+   "The composed statement: 1, 4 yes; 2 adds 2 ≤ a + c + p; 3 fails on the lock's side: the ending stands if Locked changes."
+  ],
+  "what_ran": "Read only: both round-11 papers, six atlas entries, the Lean named. One script: /Users/ren/theories/tmp/r7/one-model/check/round11/lock-path/check.py; small grids, not proofs. No build, test, gate, edit or git write."
+ },
+ "seat:cancer-and-the-line": {
+  "answer_in_one_paragraph": "AI-written (Fable), 16 November 2026. Neither link holds as a theorem. (1) Apart, both ways. `ConfinedRise.ends` is a lineage ending with a whole whose conditions fall below their gate and do not return. `line_ends` is a line ending alone, below its own need, on a stock that can recover while other units go on (C). The Web-with-a-Flow dictionary is an obstacle here too (a flow and a web must be defined from the course), but it is not why they are apart: C balances at every step. What decides whether the line takes the whole with it is the order of needs: where the line has one need and every other unit needs at least that, the net ends when the line does (argued by hand, one side only; 1,500 random worlds, none against). (2) The ending laws are not cases of each other; the counting under them is proved twice. The rise is one definition: `generations_rise` is `MoreThanNow` unfolded, so `need_unmet` derives the step-by-step rise, from `grows`, which stays supplied. It is not derived from what taking gains: a unit's kids do not depend on its use.",
+  "links": [
+   {
+    "from": "a-line-on-a-stock",
+    "to": "confined-rise-within-a-whole",
+    "statement": "A closed line whose kids of the line take more is a `ConfinedRise` on the stock, its excess derived.",
+    "standing": "apart",
+    "evidence": "Founding.lean:161-175; LineOnAStock.lean:904-911. Under `ends`' base premises, with one condition whose level is the course's: `excess` and balance make the level fall throughout [T, T+n); afterwards `family_excess_ends` (Continuation.lean:573) with `gated` and `acting` leaves nothing given; `draws` puts T at or before the line's last step. So the level never rises from T on. In C it does.",
+    "first_obstacle": "The whole does not end; `grows` is of take, `Rise.selected` of offspring number (B)."
+   },
+   {
+    "from": "confined-rise-within-a-whole",
+    "to": "a-line-on-a-stock",
+    "statement": "A confined rise gives a line whose kids take more.",
+    "standing": "apart",
+    "evidence": "`Body.confined_rise` (Founding.lean:741): the confined founder takes one at step 0, its offspring nothing; `kids` differs by step (:438). `take`, `give` and `kids` are free in time: no rule."
+   },
+   {
+    "from": "Founding.Flow.ConfinedRise.ends",
+    "to": "LineOnAStock.gone_after, never_in",
+    "statement": "`lineage (generations need kids giving use (w, x)) h k = []` under `line_ends`' premises, for a line whose kids are all of it.",
+    "standing": "a renaming",
+    "evidence": "It restates `line_ends` in `SelectionLevels.lineage` and stays true if `ConfinedRise` changes; both sides already share `SelectionTerm.Generations` (LineOnAStock.lean:560, :664). Why nothing returns differs: there the gate keeps the conditions down; here the level may return and `closed` leaves no unit to restart."
+   },
+   {
+    "from": "a-line-on-a-stock (need_unmet; TurningInTime.rising_takes_all)",
+    "to": "where-a-rising-take-ends (Flow.seeking_bounded)",
+    "statement": "One is a case of the other by a definition unfolded.",
+    "standing": "apart",
+    "evidence": "Exhaustion.lean:117 takes `Balances`, at most `B` given a step, and a take that is a ledger entry. TurningInTime.lean:669 takes a cap on the level, `FromNothing`, and a use that is a draw asked, cut off at the level. After the counting the arguments differ."
+   },
+   {
+    "from": "where-a-rising-take-ends (more_accumulates)",
+    "to": "turning-in-time, a-line-on-a-stock (rises_from)",
+    "statement": "`more_accumulates` (Exhaustion.lean:51): `(∀ i, i < n → MoreThanNow id g (T + i)) → g T + n ≤ g (T + n)`. `TurningInTime.rises_from` (:625) is its case T = 0, proved again by induction.",
+    "standing": "already a theorem that shows it, of the counting only; condition 4 does not apply (no path)",
+    "evidence": "`MoreThanNow q g n := q (g n) < q (g (n + 1))` (Seeking.lean:73). By the same unfolding `generations_rise` (LineOnAStock.lean:985) and `rising_takes_all`'s `rises` are `MoreThanNow`: a renaming. By reading.",
+    "premises": "`rises`, unchanged",
+    "lean_lines_estimate": "about 4 in place of 6",
+    "imports_it_would_add": "None if `more_accumulates` moves to Seeking, which both already import; Exhaustion is not in TurningInTime's closure.",
+    "first_obstacle": "`0 + i` needs `Nat.zero_add`."
+   }
+  ],
+  "apart": [
+   {
+    "what_is_read_as_one": "A closed line that grows, and a confined rise",
+    "countermodel_or_reason": "C: a, b, c need 17, use 1, 2, 3, kids [b], [c], [a, a, a, a]; O needs 1, uses 1, kids [O]; giving z = min z (17 - z); start ([a, O], 17). `line_ends`' premises hold for {a, b, c}. Levels 17, 17, 17, 17, 17, 16, 6, 10, 17, ...; the line has 1, 1, 1, 4, 4, 4 units, none from step 6; selection within goes for it at step 2 (concord 3, discord 0). The level rises at steps 6 and 7; O goes on."
+   },
+   {
+    "what_is_read_as_one": "'Kids together take more' and 'selection within goes for it'",
+    "countermodel_or_reason": "B: D_k needs 11, uses k, kids [D_(k+1)], beside O; giving min z (12 - z); start ([D_1, O], 12). `line_ends`' premises hold; the line is gone from step 7; concord is 0 at every step, discord 1 at step 6."
+   },
+   {
+    "what_is_read_as_one": "A rising take in a ledger and a rising use against a cap",
+    "countermodel_or_reason": "`Doubling` on min z (12 - z) from ([()], 12): uses 1, 2, 4, 8, 16 at levels 12, 12, 12, 12, 8. With take := use, balance fails at step 4; with what is in fact taken (1, 2, 4, 8, 8) more-than-now fails at step 3, every need met. Conversely `Seeker`'s level is unbounded."
+   },
+   {
+    "what_is_read_as_one": "Cancer's four marks as premises: ConfinedRise.ends | line_ends | locked_ends_rising",
+    "countermodel_or_reason": "Closed on itself: absent (`confined` is closure in the whole) | `closed` | `locked`, `raises`, `monotone`, `upper`. A take not covered or growing: `excess`, `start`, the uptake anyone's (`draws` unused) | `grows`, with `keeps`, `high` | `more`, with `keeps`, `high`. Nothing of the level reaching how it selects: absent | by construction, with `down` | `outside`, `un`. Needing what it uses up: `confined`, `gated` | `needs` | `needs`."
+   }
+  ],
+  "against_the_four_conditions": [
+   "`rises_from` from `more_accumulates`: (1) both sides' definitions, no structure: met. (2) no premise added: met. (3) false if `MoreThanNow` were `≤`: met. (4) no path. It joins a lemma beneath both dynamics, not the two atlas entries.",
+   "Nothing else is called a theorem: the line as a confined rise fails (1) and is false on C."
+  ],
+  "what_ran": "Read the two papers, the atlas entries, both sides' Lean and the round-9 dictionary report. No build, test, gate, git write or tracked edit; nothing compiled. Six Python scripts in /Users/ren/theories/tmp/r7/one-model/check/round11/seat-cancer-and-the-line/ (0.4 to 4.3 s each): worked courses and searches over 40 or 60 steps, not proofs. Kept failure: world A, a doubling line, takes the stock to nothing. My mistake: the first tumour.py looped for about 100 s before I stopped my own process; fixed."
+ },
+ "refute:links": {
+  "verdict": "AI-written (Fable, set to refute), 16 November 2026. Of the ten links, the Lean already shows two as paths. Two more are a joining and a case: true, but not paths. One small law is worth building. The rest are apart or renamings, and the seats' verdicts on those held when I reread both sides. Three seat proposals fail as worded (under broken). Cancer, the confined rise, stays joined to nothing.\nWORTH DOING: enter the two exits, the joining and the case as what they are, and build the one law that below the gate uptake does not recur.",
+  "enter_in_atlas_now": [
+   {
+    "from": "shaping-the-rule-selected-by-what-comes-back",
+    "to": "capture-through-the-rule",
+    "law": "Becoming.RuleShaping.covering_locks",
+    "exit_text": "New exit, sufficient, drops none: where what comes back to the shapers alone is read monotonically from their share and covers the cost at every share, a course from a rule covering the cost is locked from the step after its first reading step. Also case_of RuleCapture.favouring_locks (the whole proof, RuleShaping.lean:451).",
+    "meets_condition_4": "Yes. Worked course: not locked at steps 0 to 2, locked from 3; with cover failing below parity, never locked. `covers` is capture's `uniform`."
+   },
+   {
+    "from": "turning-in-time",
+    "to": "margin-of-a-regime",
+    "law": "Becoming.TurningInTime.course_turned (to_law: Becoming.TurningInTime.unending_iff_above)",
+    "exit_text": "New exit beside the existing one, sufficient, drops turningintime-unmarked: from the step after the first marked level the pair's level is the regime's own run under H₂ (`turned`, :1940); the line then never ends exactly where that level is at or above H₂ + y₂.",
+    "meets_condition_4": "Yes, by a premise: `turns` is given, not derived."
+   },
+   {
+    "from": "capture-through-the-rule",
+    "to": "turning-in-time",
+    "law": "Becoming.TurningInTime.locked_ends_rising",
+    "exit_text": "Not an exit. A compose: joint_law locked_ends_rising, the lock's share, rule and step count read as the pair's way (role: rule); standing proved.",
+    "meets_condition_4": "No. The start is already a pair and the conclusion is the line's end. Condition 2 fails (`more`, on a free use); the lock only keeps the course where `more` is asked and gives the last conjunct (docstring, :1432)."
+   },
+   {
+    "from": "closed-capture",
+    "to": "capture-through-the-rule",
+    "law": "Becoming.ClosedCapture.lock_outlives_loss",
+    "exit_text": "Not an exit. A case_of: RuleCapture.locked_stays, carried by join_course (:248); loss_grows stands beside it.",
+    "meets_condition_4": "No: staying. It holds by how `join` and `joinRead` are defined, so it records what closed capture is built on. Not a new join."
+   }
+  ],
+  "build_in_lean": [
+   {
+    "link": "loss-of-renewal-for-good with unceasing-generation-needs-renewal",
+    "statement": "theorem Flow.below_ends_uptake (balances : L.Balances W) (acting : L.Acting W) (dependent : W.Dependent) (gated : ∀ t f, f ∈ L.present t → 0 < L.give t f c → W.requires t f c ∧ m ≤ W.need t f c) (below : W.level T c < m) : ¬ ∀ N, ∃ t, N ≤ t ∧ 0 < L.uptake [c] t. Then the ArisesTaking form as a corollary, and the path form with `excess` and `start` for `below`.",
+    "first_obstacle": "None in the proof: stays_below (Continuation.lean:468), given_zero_below (:457), Flow.uptake_needs_replenishment_from. In the telling: ArisesTaking's 'arises' half is unused, so say it of uptake; with plain Arises it is false (the seat's countermodel holds by hand).",
+    "judged": "Conditions 1 and 2 hold; 4 in the path form; 3 for the gate and the taking, not for arising. One law feeds the other: not two side by side. About 12 lines added, none deleted. No module has both stays_below and ArisesTaking today. Unbuilt."
+   },
+   {
+    "link": "capture-through-the-rule with turning-in-time, the ending carried by favouring",
+    "statement": "locked_ends_rising with `more` discharged by count_rises (:1473): from a Locked start, the share a count every favouring rule raises strictly, use = count × u, the line ends Locked within hi + 1 steps. Then RuleCapture.favouring_locks in front.",
+    "first_obstacle": "For the prefix, no lemma carries `paced fA hA reads` to `Law.orbit (windowAlone fA hA reads)` from a later step count. Shaping does not meet `rise`: on CarrierCounts ⟨1,1⟩ favours and moves nothing.",
+    "judged": "One line; only the witness uses count_rises today (:2997). Favouring, which the lock keeps, raises the use, so condition 3 holds on the lock's side. Optional."
+   }
+  ],
+  "broken": [
+   {
+    "claim": "Lock seat: set the existing exit by turns_in_time_iff to margin-of-a-regime, exact.",
+    "how": "That exit's destination is 'the line never ends', one side of the regime's point; below it the turned course is the regime's too (course_turned asks nothing of the level). 'Exact' would be said of entering the regime, which no law says. turns_in_time_iff assumes the move (`turns`)."
+   },
+   {
+    "claim": "Lock seat: the composed theorem with use = carriers × u, as 'a theorem to prove'.",
+    "how": "Its ending takes no lock. `select` multiplies carriers by g.carrier whatever g.other (RuleCapture.lean:497): under ⟨2,5⟩, which disfavours, 3 carriers become 6, then 12. Built, it is covering_locks beside ends_with_net_rising: nothing, by the frozen rule."
+   },
+   {
+    "claim": "Cancer seat: rises_from from more_accumulates is 'already a theorem that shows it'.",
+    "how": "A counting lemma under no atlas entry. It needs more_accumulates moved to Seeking (Exhaustion is outside TurningInTime's imports, by script) and two `0 + i` rewrites; no lines fall. As a case_of it would join two dynamics by arithmetic."
+   }
+  ],
+  "keep_on_paper": [
+   "Cancer and the line: apart. C rerun by hand: levels 17, 17, 17, 17, 17, 16, 6, 10, 17; the line gone from step 6, O going on; line_ends' premises hold. The sides share no carrier, so any theorem needs a new dictionary (condition 1).",
+   "The regime's kernel: Kernel (Viability.lean:55) unfolds to never reaching nothing; ends_iff_below negated. A renaming.",
+   "A rule rebuilt as a pair: apart. Give-then-take (RuleRebuilding.lean:219) against take-then-give (RegimeMargin.lean:249): level 1, renewal 4, take 3 asks giving 0 = 2; level 3 asks 4.",
+   "threshold_regime: a case with no slot in the atlas (not a case_of in its sense; no course leaves); the plane's mechanism already says it. That `grows` is droppable rests on 773 instances.",
+   "RegimeMargin.lean:1548's docstring over-says: ends_iff_below (:741) is not proved through leading_exact."
+  ],
+  "numbers": "By the round-10 count (an exit naming a dynamic, a case_of whose general law another dynamic lists, a compose): now 185 dynamics, 108 pieces, 86 alone, largest 30. With the two exits: 106, 85, 32. With the compose and the case_of: 104, 84, 40. With the law built: 103, 84, 49. The paper's ten gave 98, 82, 61. Counting only links a law carries: 114, 89, 12 now; then 112, 88, 12; 110, 87, 12; 109, 87, 21. The largest piece's growth rests on exits no law shows. By a law, turning-in-time's piece goes from 2 to 12. The confined rise stays alone throughout.",
+  "what_ran": "Read only: the paper whole, both sides' Lean statements for every link, the atlas entries, and the validator's rules for exits, case_of and compose (tools/research/atlas.py). Four Python scripts under a second each in /Users/ren/theories/tmp/r7/one-model/check/round11/refuter-links/ (imports.py, numbers.py, numbers2.py, lock_checks.py): counts and worked courses, not proofs. No build, test, gate, tracked edit or git write. Nothing compiled. The seats' searches were not rerun."
+ }
+}

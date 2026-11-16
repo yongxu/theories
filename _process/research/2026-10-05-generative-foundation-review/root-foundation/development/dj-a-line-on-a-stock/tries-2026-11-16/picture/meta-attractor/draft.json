@@ -1,0 +1,86 @@
+{
+ "answer_in_one_paragraph": "Not one object. No declaration in Becoming bears the name; the account reads as one the share-and-rule loop (RuleCapture's family), the lock on a stock (TurningInTime) and selection by persistence (ReadingsPersist). Holding is a theorem; entry only with reading-from-the-share fixed as a property of the law (that a rule comes to be so set is only said); using up only on a needed stock, the tie from share to draw given. Exits: sufficient conditions, some exact, none shown complete. Locked and overdrawing are independent: one built course returns to the lock and never ends. As an attractor beside a renewing course it needs one total step on share, rule and level (exists), both regions absorbing (proved apart), and every start's basin (proved only from a locked, overdrawing start).",
+ "what_exists": [
+  {
+   "what": "Holds (theorem)",
+   "where": "RuleCapture.lean:169 turn_locked, :182 locked_stays, :258",
+   "statement_in_plain_words": "A rule that favours and is not above what its share's reading gives stays so; a direction-keeping change of rule is absorbed at the next reading.",
+   "given": "Raises; ReadsShare (rule read monotone in the share); favouring kept upward."
+  },
+  {
+   "what": "Entry, law given (theorem)",
+   "where": "RuleCapture.lean:320 favouring_locks; DrawnShaping.lean:378 drawn_locked_either; RuleShaping.lean:160 favours_iff; PoolFromCourse.lean:314 window_past_course",
+   "statement_in_plain_words": "Where start and every reading favour, locked from the first reading; with readers drawn from the selected, locked one way or the other by the start's share. Shaping is favoured exactly where what returns to shapers alone covers its cost. Once its readers are gone, the course is the share's own loop.",
+   "given": "ReadsShare, the pool, and where readers go: fixed for the whole course."
+  },
+  {
+   "what": "What it does to what it draws on (theorems)",
+   "where": "ClosedCapture.lean:307 lock_outlives_loss; TurningInTime.lean:1400, :1440 locked_ends_rising, :1473 count_rises",
+   "statement_in_plain_words": "Nothing needed: locked, the loss passes every bound and the lock stays. On a needed stock a locked way ends still locked, if already overdrawing or, within the ceiling plus one, if its draw rises each step.",
+   "given": "The loss grows whatever the course does. On the stock: level unread; draw = share count times a positive amount; ceiling; nothing from nothing."
+  },
+  {
+   "what": "Exits (theorems)",
+   "where": "ClosedCapture.lean:291 turned_by_loss, :900; ReadInTime.lean:631; TurningInTime.lean:1633, :1817; DrawnReplacement.lean:211",
+   "statement_in_plain_words": "A reading of the loss unlocks; counts at the reading decide for good; on a stock the line goes on exactly where the first reading leaves the level at or above the corrected kind's point of no return; drift leaves either lock.",
+   "given": "The reading, its band, what it sets; the overdraw before it."
+  },
+  {
+   "what": "Built examples only",
+   "where": "PoolFromCourse.lean:753; TurningInTime.lean:2638, :2728 Three.read_to_ten; ReadingsSpread.lean:1222",
+   "statement_in_plain_words": "A loss borne by shapers unlocks; a corrected rule alone is undone; a locked course goes on where its draw is met; a reading spreads by selection, then ends."
+  },
+  {
+   "what": "Attractor and basin (cited by none above)",
+   "where": "Attraction.lean:110 Absorbing, :114 DrawnInto; /Users/ren/theories/experiments/market-generativity/meta-attractor/RecursiveSelection.lean:149 and CollectiveDestruction.lean:166 exact_basin",
+   "statement_in_plain_words": "A region a law never leaves and what is drawn into it; the older package proves an exact basin for a self-maintaining regime and a destructive one.",
+   "given": "Toy laws, outside the Becoming package."
+  }
+ ],
+ "same_thing_under_two_names": [
+  "A region the step keeps: RuleCapture.locked_stays; TurningInTime.locked_alone (:1301) and locked_closed (:1232); ReadingsSpread.fixed_of_closedFrom (:150, 'not named Locked'); ChoiceCountCapture.counted_locks (:291).",
+  "What is not read changes nothing: ClosedCapture.courses_alike_iff_unread (:202), PoolFromCourse.window_never_read (:295), PoolCourse.alike_iff (:137)."
+ ],
+ "what_is_missing": [
+  "A course on which reading-from-the-share comes about.",
+  "One statement with shaping selected, the lock and a needed stock: RuleShaping has no stock, TurningInTime's lock no shapers, LineOnAStock no rule.",
+  "The tie from share to draw. On CarrierCounts the share is a ratio of two counts that both multiply.",
+  "Atlas: closed-capture has no exit to turning-in-time, where the lock-on-a-stock laws are filed."
+ ],
+ "outgrown_words_or_models": [
+  "02 §9's Definition, the GLOSSARY and the atlas label 'closed-capture (meta-attractor)': a loop reading nothing beyond its share. That case never ends (02 §11: 'nothing in them needs what they use'); AGENTS.md's 'until what sustains it gives out' is TurningInTime's.",
+  "The meta-attractor as the opposite of a renewing course: GENERATIVE-REGIMES defines it as a self-reproducing regime, and the lock renews itself in what it reads. Cancer is locked and overdrawing, one cell of four.",
+  "'Only a change of the law leaves' (meta-attractor README, 9 November; RuleCapture.lean:47): on a stock the line also ends, and Three.read_to_ten goes on locked."
+ ],
+ "candidate_links": [
+  {
+   "from": "TurningInTime.locked_turns_in_time_share_iff (:1817), its corrected kind",
+   "to": "RuleCapture.Locked reversed (DrawnShaping.drawn_from_below, :356)",
+   "kind": "a case",
+   "statement_to_try": "The corrected kind is the same loop locked the other way, so lowRule and lowStays follow from turn_locked: one loop, two locks; the upper ends, the lower holds.",
+   "why_it_might_fail": "uses asks a draw of exactly H₂; locked downward the share keeps moving, and less draw need not hold (LineOnAStock.HigherStartEnds)."
+  },
+  {
+   "from": "TurningInTime's locked laws",
+   "to": "LineOnAStock.unending_iff_holds",
+   "kind": "an exact boundary",
+   "statement_to_try": "From a locked start whose level is never read, the line never ends exactly where the lock's draw comes to a level that holds it.",
+   "why_it_might_fail": "Under count_rises the draw never settles; with a top on the share it is RegimeMargin.ends_iff_below again."
+  },
+  {
+   "from": "ReadInTime.turned_iff, deadline",
+   "to": "TurningInTime.turns_in_time_iff_before",
+   "kind": "a composition",
+   "statement_to_try": "Where the others read a needed level's fall, the line goes on exactly where they read while still outnumbering the shapers and before its point of no return.",
+   "why_it_might_fail": "ReadInTime's loss grows every step by premise; a level can hold."
+  },
+  {
+   "from": "RuleCapture.Locked; RegimeMargin's kept levels",
+   "to": "Attraction.Absorbing, DrawnInto",
+   "kind": "a case",
+   "statement_to_try": "Locked is Absorbing for the paced step; DrawnShaping's two locks split the starts at the critical mass; the two regions of ends_iff_below are absorbing.",
+   "why_it_might_fail": "A net with a need is partial, Attraction is for total laws; this may add a name only."
+  }
+ ],
+ "what_ran": "Read only: grep, sed, Python reads of dynamics.json; no build, test, gate or edit. Lean under /Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/. Statements read from signatures and docstrings; no proof rechecked. Read in part: meta-attractor README, GOALS.md, 07 §4, PoolCourse, RuleRebuilding."
+}

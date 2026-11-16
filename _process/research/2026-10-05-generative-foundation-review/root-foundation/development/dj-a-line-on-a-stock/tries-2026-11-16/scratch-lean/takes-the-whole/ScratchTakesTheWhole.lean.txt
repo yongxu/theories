@@ -1,0 +1,732 @@
+import Becoming.LineOnAStock
+
+/-!
+# A growing line takes everything with it where nothing else needs less than it
+
+AI-written (Fable), 16 November 2026. Scratch; not on main.
+
+On `LineOnAStock`'s model (units with needs, kids and uses on a level with a giving), with nothing
+added to the model.
+
+## What is proved
+
+* `TurningInTime.rising_floor_takes_all`: on any orbit whose level steps by `RegimeMargin.step` under
+  a take, with nothing given from nothing, the step under no take keeping every level up to `hi`
+  within `hi` and a start at most `hi`: where the take is at least a quantity that rises at each of
+  the first `hi` steps, the level at step `hi + 1` is nothing. `TurningInTime.rising_takes_all` is its
+  case where the quantity is the take (`rising_takes_all_as_case`).
+* `falls_below`: for any decidable `S` whose units' kids of `S` take more than the unit, with the
+  units of `S` on the course needing at most `m`, `0 < m`, the same three premises on the giving and
+  the start, and a unit of `S` in the start way: within `hi + 1` steps the level is below `m`, at
+  least `m` at every step before, a unit of `S` in the way at every step up to it. Nothing is asked of
+  the other units, and no closure. `ends_all` (so `line_ends` and `way_ends`) follows from it without
+  `ends_high` (`ends_all_as_case`).
+* `takes_the_whole`: with every unit of `S` needing exactly `m` and every unit not of `S` needing at
+  least `m`, at that step no need is met and the net has ended, within `hi + 1` steps.
+  `one_need_ends` is its case at the line of every unit (`one_need_ends_as_case`).
+* `line_gone_within`: without the premise on the other units and without a unit of the line at the
+  start, a closed line of one need is gone from a step at most `hi + 2`; the rest may go on
+  (`OutsideNeedsLess`).
+* `line_way`: while every unit of a closed line is met, the way stripped of the units not of the line
+  is the generation so stripped.
+
+## Kept countermodels and worked courses
+
+* `OutsideNeedsLess`: a unit outside the line that needs less than the line. Every other premise of
+  `takes_the_whole` holds, the line is gone from step 6, and the net never ends.
+* `ProperLine.no_line_unit`: no unit of the line in the start way. Every other premise holds and the
+  net never ends.
+* `EqualInPlaceOfMore.all_but_grows_whole`: kids that take what the unit takes. Every other premise
+  holds and the net never ends.
+* `OutsideNeedsMore`: a unit outside the line that needs more than it. Every premise holds and the
+  net ends at step 2 with a way that is not the generation of the start way: `one_need_ends`' last
+  conjunct cannot be had as it stands.
+
+Every declaration has an empty axiom report.
+-/
+
+universe u
+
+namespace Becoming
+namespace TurningInTime
+
+/-- **Against a level that cannot pass `hi`, a take that is at least a quantity rising for `hi` steps
+leaves nothing after `hi + 1` steps.** On the orbit of any `next` from `s`, read by a level, a take
+and a quantity `q`: with nothing given from nothing (`nothing`), the step under no take keeping every
+level up to `hi` within `hi` (`keeps`), the level after a step being `RegimeMargin.step giving` under
+the take, at every configuration (`steps`), `q` at most the take at every configuration (`floor`),
+the start's level at most `hi` (`high`), and `q` rising strictly at each of the first `hi` steps of
+the orbit (`rises`): the level at step `hi + 1` is nothing. Every level of the orbit is at most `hi`
+(`kept_within`, step by step); `q` at step `hi` is at least `hi` (`rises_from`); so the take there is
+at least the level, nothing is left, and nothing is given from nothing. Nothing is asked of the take
+but that it is at least `q`: it may fall. -/
+theorem rising_floor_takes_all {W : Type u} {next : W → W} {level take q : W → Nat}
+    {giving : Nat → Nat} {hi : Nat} (nothing : RegimeMargin.FromNothing giving)
+    (keeps : RegimeMargin.Keeps giving 0 hi)
+    (steps : ∀ t, level (next t) = RegimeMargin.step giving (take t) (level t))
+    (floor : ∀ t, q t ≤ take t) {s : W} (high : level s ≤ hi)
+    (rises : ∀ j, j < hi → q (Law.orbit next s j) < q (Law.orbit next s (j + 1))) :
+    level (Law.orbit next s (hi + 1)) = 0 :=
+  have within : ∀ j, level (Law.orbit next s j) ≤ hi := fun j => by
+    induction j with
+    | zero => exact high
+    | succ j ih => exact Nat.le_trans (Nat.le_of_eq (steps (Law.orbit next s j))) (kept_within keeps _ ih)
+  have takes : level (Law.orbit next s hi) ≤ take (Law.orbit next s hi) :=
+    Nat.le_trans (within hi) (Nat.le_trans (rises_from rises hi (Nat.le_refl hi)) (floor _))
+  (steps (Law.orbit next s hi)).trans
+    ((congrArg (fun z => z + giving z) (sub_eq_zero_of_le takes)).trans
+      ((Nat.zero_add (giving 0)).trans nothing))
+
+/-- **`rising_takes_all`, as a case.** The statement of `TurningInTime.rising_takes_all`, proved from
+`rising_floor_takes_all` on the course as it was, with the quantity the use itself: the level's step
+is `RegimeMargin.step giving` under the use by definition, and the use along that course is the use
+along `alone`'s orbit (`asItWas_way`). The private `takes_at_hi` is not used. -/
+theorem rising_takes_all_as_case {W : Type u} {alone : W → W} {giving : Nat → Nat} {use : W → Nat}
+    {hi : Nat} (nothing : RegimeMargin.FromNothing giving) (keeps : RegimeMargin.Keeps giving 0 hi)
+    {w : W} {x : Nat} (high : x ≤ hi)
+    (rises : ∀ j, j < hi → use (Law.orbit alone w j) < use (Law.orbit alone w (j + 1))) :
+    (Law.orbit (asItWas alone (fun w x => RegimeMargin.step giving (use w) x)) (w, x) (hi + 1)).2 = 0 :=
+  have way := asItWas_way alone (fun w x => RegimeMargin.step giving (use w) x) (w, x)
+  rising_floor_takes_all (next := asItWas alone (fun w x => RegimeMargin.step giving (use w) x))
+    (level := Prod.snd) (take := fun c => use c.1) (q := fun c => use c.1) nothing keeps
+    (fun _ => rfl) (fun _ => Nat.le_refl _) (s := (w, x)) high
+    fun j lt => Eq.subst (motive := fun v => use v <
+        use (Law.orbit (asItWas alone (fun w x => RegimeMargin.step giving (use w) x)) (w, x) (j + 1)).1)
+      (way j).symm
+      (Eq.subst (motive := fun v => use (Law.orbit alone w j) < use v) (way (j + 1)).symm (rises j lt))
+
+end TurningInTime
+
+namespace LineOnAStock
+
+variable {U : Type}
+
+/-! ## 1. The level comes below the need of a growing line -/
+
+section Falls
+
+variable {need : U → Nat} {kids : U → List U} {use : U → Nat} {giving : Nat → Nat}
+  {S : U → Prop} {hi m : Nat}
+
+/-- A unit of `S` whose kids of `S` together take more than it (`grows`) has a kid of `S`: what `S`
+takes of its kids is positive, and a positive total has a positive member (`total_pos`). -/
+theorem line_kid [DecidablePred S] (grows : ∀ u, S u → use u < lineTake S use (kids u)) {u : U}
+    (su : S u) : ∃ v, v ∈ kids u ∧ S v :=
+  match total_pos (q := fun v => if S v then use v else 0) (kids u)
+      (Nat.lt_of_le_of_lt (Nat.zero_le (use u)) (grows u su)) with
+  | ⟨v, mv, positive⟩ => ⟨v, mv, (Decidable.em (S v)).elim id fun h =>
+      absurd (Nat.lt_of_lt_of_le positive (Nat.le_of_eq (if_neg h))) (Nat.lt_irrefl 0)⟩
+
+/-- With the step under no take keeping every level up to `hi` within `hi` (`keeps`), from a level at
+most `hi` (`high`) every level of the course is at most `hi`. `TurningInTime.kept_within`, step by
+step. -/
+theorem level_within (keeps : RegimeMargin.Keeps giving 0 hi) {s : List U × Nat} (high : s.2 ≤ hi) :
+    ∀ j, (course need kids giving use s j).2 ≤ hi
+  | 0 => high
+  | j + 1 => TurningInTime.kept_within keeps _ (level_within keeps high j)
+
+/-- **While the level meets `m`, a unit of `S` stays in the way.** For any decidable `S` (no closure
+is asked) whose units' kids of `S` take more than the unit (`grows`), every unit of `S` in a way of
+the course needing at most `m` (`below`), and a unit of `S` in the start way (`mem`, `line`): if the
+level is at least `m` at every step before `n` (`before`), a unit of `S` is in the way at every step
+up to `n`. A unit of `S` met at a step leaves a kid of `S` (`line_kid`, `mem_after_iff`). -/
+theorem line_while [DecidablePred S] (grows : ∀ u, S u → use u < lineTake S use (kids u))
+    {s : List U × Nat}
+    (below : ∀ j u, u ∈ (course need kids giving use s j).1 → S u → need u ≤ m)
+    {u₀ : U} (mem : u₀ ∈ s.1) (line : S u₀) {n : Nat}
+    (before : ∀ j, j < n → m ≤ (course need kids giving use s j).2) :
+    ∀ j, j ≤ n → ∃ u, u ∈ (course need kids giving use s j).1 ∧ S u
+  | 0, _ => ⟨u₀, mem, line⟩
+  | j + 1, le => match line_while grows below mem line before j (Nat.le_of_succ_le le) with
+    | ⟨u, mu, su⟩ => match line_kid grows su with
+      | ⟨v, mv, sv⟩ => ⟨v, (mem_after_iff (need := need) (kids := kids)
+            (w := (course need kids giving use s j).1) (x := (course need kids giving use s j).2)).mpr
+          ⟨u, mu, Nat.le_trans (below j u mu su) (before j (Nat.lt_of_succ_le le)), mv⟩, sv⟩
+
+/-- **The level comes below the need of a growing line within `hi + 1` steps.** For any decidable `S`
+(no closure is asked, and nothing is asked of the units not of `S`): with each unit of `S` having
+kids of `S` that together take more than it (`grows`), nothing given from nothing (`nothing`), the
+step under no take keeping every level up to `hi` within `hi` (`keeps`), `0 < m` (`pos`), the start
+level at most `hi` (`high`), every unit of `S` in a way of the course needing at most `m` (`below`),
+and a unit of `S` in the start way (`mem`, `line`): there is a step `n ≤ hi + 1` at which the level is
+below `m`, the level at least `m` at every step before `n`, and a unit of `S` in the way at every step
+up to `n`. Were the level at least `m` at every step up to `hi + 1`, the units of `S` would be met and
+one of them present at each step (`line_while`), so what `S` takes would rise at each step (`rise`,
+`lineCount_pos`); what the way takes is at least that (`lineTake_le_taken`); so the level at `hi + 1`
+would be nothing (`TurningInTime.rising_floor_takes_all`), below `m`. The step is the first with the
+level below `m` (`first_of_decided`). -/
+theorem falls_below [DecidablePred S] (grows : ∀ u, S u → use u < lineTake S use (kids u))
+    (nothing : RegimeMargin.FromNothing giving) (keeps : RegimeMargin.Keeps giving 0 hi)
+    (pos : 0 < m) {s : List U × Nat} (high : s.2 ≤ hi)
+    (below : ∀ j u, u ∈ (course need kids giving use s j).1 → S u → need u ≤ m)
+    {u₀ : U} (mem : u₀ ∈ s.1) (line : S u₀) :
+    ∃ n, n ≤ hi + 1 ∧ (∀ j, j < n → m ≤ (course need kids giving use s j).2) ∧
+      (course need kids giving use s n).2 < m ∧
+      ∀ j, j ≤ n → ∃ u, u ∈ (course need kids giving use s j).1 ∧ S u :=
+  match first_of_decided
+      (P := fun j => m ≤ (course need kids giving use s j).2)
+      (Q := fun j => (course need kids giving use s j).2 < m)
+      (fun j => (Nat.lt_or_ge (course need kids giving use s j).2 m).symm) (hi + 1) with
+  | .inl all =>
+    have before : ∀ j, j < hi + 1 → m ≤ (course need kids giving use s j).2 :=
+      fun j lt => all j (Nat.le_of_lt lt)
+    have zero : (course need kids giving use s (hi + 1)).2 = 0 :=
+      TurningInTime.rising_floor_takes_all (next := step need kids giving use) (level := Prod.snd)
+        (take := fun c => taken use c.1) (q := fun c => lineTake S use c.1) nothing keeps
+        (fun _ => rfl) (fun _ => lineTake_le_taken _) high
+        fun j lt =>
+          match line_while grows below mem line before j (Nat.le_of_lt (Nat.lt_succ_of_lt lt)) with
+          | ⟨_, mu, su⟩ =>
+            have up : lineTake S use (course need kids giving use s j).1 + 1 ≤
+                lineTake S use (after need kids (course need kids giving use s j).1
+                  (course need kids giving use s j).2) :=
+              Nat.le_trans (Nat.add_le_add_left (lineCount_pos su mu) _)
+                (rise grows fun v mv sv =>
+                  Nat.le_trans (below j v mv sv) (before j (Nat.lt_succ_of_lt lt)))
+            Nat.lt_of_succ_le up
+    absurd (Nat.le_trans (all (hi + 1) (Nat.le_refl _)) (Nat.le_of_eq zero)) (Nat.not_le_of_gt pos)
+  | .inr ⟨n, le, low, before⟩ => ⟨n, le, before, low, line_while grows below mem line before⟩
+
+end Falls
+
+/-! ## 2. The line's part of the way -/
+
+section Way
+
+variable {need : U → Nat} {kids : U → List U} {use : U → Nat} {giving : Nat → Nat}
+  {S : U → Prop}
+
+/-- With the kids of units of `Z` all of `Z` (`inZ`), all the kids of a way stripped of `Z` are, so
+stripped, all the kids of the way, so stripped. `strip_after` at a need of nothing, where the way after
+a step is all the kids (`after_of_met`). -/
+theorem strip_allKids {Z : U → Prop} [DecidablePred Z] (inZ : ∀ u v, Z u → v ∈ kids u → Z v)
+    (w : List U) : strip Z (allKids kids (strip Z w)) = strip Z (allKids kids w) :=
+  (congrArg (strip Z) (after_of_met (need := fun _ => 0) (kids := kids) (x := 0) (w := strip Z w)
+      fun _ _ => Nat.le_refl 0)).symm.trans
+    ((strip_after (need := fun _ => 0) inZ 0 w).trans
+      (congrArg (strip Z) (after_of_met (need := fun _ => 0) (kids := kids) (x := 0) (w := w)
+        fun _ _ => Nat.le_refl 0)))
+
+/-- For a line `S` (`closed`: no unit outside it leaves a unit of it): where every unit of `S` in `w`
+has its need met at `x`, the way after the step, stripped of the units not of `S`, is all the kids of
+`w` so stripped. A unit of `S` leaves its kids; a unit not of `S` leaves, met or not, no unit of
+`S` (`strip_all`). -/
+theorem line_after_met [DecidablePred S] (closed : ∀ u v, v ∈ kids u → S v → S u) {x : Nat} :
+    ∀ {w : List U}, (∀ u, u ∈ w → S u → need u ≤ x) →
+      strip (fun v => ¬ S v) (after need kids w x) = strip (fun v => ¬ S v) (allKids kids w)
+  | [], _ => rfl
+  | u :: w, met =>
+    have head : strip (fun v => ¬ S v) (cond (decide (need u ≤ x)) (kids u) []) =
+        strip (fun v => ¬ S v) (kids u) :=
+      (Decidable.em (S u)).elim
+        (fun su => congrArg (fun b => strip (fun v => ¬ S v) (cond b (kids u) []))
+          (decide_eq_true (met u (.head w) su)))
+        (fun ns => (strip_all (Z := fun v => ¬ S v) fun v mv sv =>
+            ns (closed u v (mem_cond mv).2 sv)).trans
+          (strip_all (Z := fun v => ¬ S v) fun v mv sv => ns (closed u v mv sv)).symm)
+    (strip_append (Z := fun v => ¬ S v) (cond (decide (need u ≤ x)) (kids u) [])
+        (after need kids w x)).trans
+      ((congrArg (· ++ strip (fun v => ¬ S v) (after need kids w x)) head).trans
+        ((congrArg (strip (fun v => ¬ S v) (kids u) ++ ·)
+            (line_after_met closed fun v mm => met v (.tail u mm))).trans
+          (strip_append (Z := fun v => ¬ S v) (kids u) (allKids kids w)).symm))
+
+/-- **While every unit of a line is met, the line's part of the way is the line's part of the
+generation.** For a line `S` (`closed`), under any `need`, giving and use, from any start: where at
+every step before `n` every unit of `S` in the way has its need met (`met`), the way at step `n`
+stripped of the units not of `S` is the `n`-th generation of the start way so stripped. No giving, use
+or level appears in the generation, and nothing is asked of the units not of `S`: whether they are met
+makes no difference to the line's part. By `line_after_met` and `strip_allKids`, step by step.
+`way_while_met` is the like statement for the whole way where every need is met. -/
+theorem line_way [DecidablePred S] (closed : ∀ u v, v ∈ kids u → S v → S u) {w : List U} {x : Nat} :
+    ∀ n, (∀ j, j < n → ∀ u, u ∈ (course need kids giving use (w, x) j).1 → S u →
+        need u ≤ (course need kids giving use (w, x) j).2) →
+      strip (fun v => ¬ S v) (course need kids giving use (w, x) n).1 =
+        strip (fun v => ¬ S v) (generation kids n w)
+  | 0, _ => rfl
+  | n + 1, met =>
+    have inZ : ∀ u v, ¬ S u → v ∈ kids u → ¬ S v := fun u v ns mv sv => ns (closed u v mv sv)
+    (line_after_met closed (met n (Nat.lt_succ_self n))).trans
+      ((strip_allKids inZ (course need kids giving use (w, x) n).1).symm.trans
+        ((congrArg (fun l => strip (fun v => ¬ S v) (allKids kids l))
+            (line_way closed n fun j lt => met j (Nat.lt_succ_of_lt lt))).trans
+          (strip_allKids inZ (generation kids n w))))
+
+end Way
+
+/-! ## 3. Where nothing else needs less, everything ends with the line -/
+
+section Whole
+
+variable {need : U → Nat} {kids : U → List U} {use : U → Nat} {giving : Nat → Nat}
+  {S : U → Prop} {hi m : Nat}
+
+/-- **A growing line of one need takes everything with it where nothing else needs less than it.**
+For any decidable `S`: with every unit of `S` needing `m` (`one`), `0 < m` (`pos`), each unit of `S`
+having kids of `S` that together take more than it (`grows`), every unit not of `S` needing at least
+`m` (`outside`), nothing given from nothing (`nothing`), the step under no take keeping every level up
+to `hi` within `hi` (`keeps`), the start level at most `hi` (`high`), and a unit of `S` in the start
+way (`mem`, `line`): there is a step `n ≤ hi + 1` such that the level is at least `m` at every step
+before `n` and below `m` at step `n`; the net from `(w, x)` reaches the course's configuration at step
+`n` in `n` steps; that configuration conditions nothing, no need being met there; and, where no unit
+outside `S` leaves a unit of `S` (closure, asked by this last conjunct only), the way there stripped
+of the units not of `S` is the `n`-th generation of `w` so stripped (`line_way`). By `falls_below`
+(which rests on `rise` and `TurningInTime.rising_floor_takes_all`): at the first step with the level
+below `m` no need is met, every need being at least `m`; before it a unit of `S` is in the way and
+met (`Law.stepWhile_steps_iff`, `Law.stepWhile_none_iff`). `one_need_ends`' conjunct that the way
+there is the generation of `w` is not concluded and does not hold: a unit not of `S` that needs more
+than `m` can be unmet at a level that meets `m` (`OutsideNeedsMore.way_not_generation`); where every
+unit is of `S` it follows from the second conjunct by `way_while_met` (`one_need_ends_as_case`).
+Without `outside` the net can go on
+(`OutsideNeedsLess.all_but_outside`); without a unit of `S` in the start way it can go on
+(`ProperLine.no_line_unit`); with kids that take what the unit takes in place of more it can go on
+(`EqualInPlaceOfMore.all_but_grows_whole`). -/
+theorem takes_the_whole [DecidablePred S] (one : ∀ u, S u → need u = m) (pos : 0 < m)
+    (grows : ∀ u, S u → use u < lineTake S use (kids u)) (outside : ∀ u, ¬ S u → m ≤ need u)
+    (nothing : RegimeMargin.FromNothing giving) (keeps : RegimeMargin.Keeps giving 0 hi)
+    {w : List U} {x : Nat} (high : x ≤ hi) {u₀ : U} (mem : u₀ ∈ w) (line : S u₀) :
+    ∃ n, n ≤ hi + 1 ∧
+      (∀ j, j < n → m ≤ (course need kids giving use (w, x) j).2) ∧
+      (course need kids giving use (w, x) n).2 < m ∧
+      «迭» (net need kids giving use) n (w, x) (course need kids giving use (w, x) n) ∧
+      (∀ v, ¬ net need kids giving use (course need kids giving use (w, x) n) v) ∧
+      ((∀ u v, v ∈ kids u → S v → S u) →
+        strip (fun v => ¬ S v) (course need kids giving use (w, x) n).1 =
+          strip (fun v => ¬ S v) (generation kids n w)) :=
+  match falls_below (s := (w, x)) grows nothing keeps pos high
+      (fun _ u _ su => Nat.le_of_eq (one u su)) mem line with
+  | ⟨n, le, before, low, units⟩ =>
+    ⟨n, le, before, low,
+     (Law.stepWhile_steps_iff n).mpr ⟨fun j lj => match units j (Nat.le_of_lt lj) with
+       | ⟨u, mu, su⟩ => ⟨u, mu, Nat.le_trans (Nat.le_of_eq (one u su)) (before j lj)⟩, rfl⟩,
+     Law.stepWhile_none_iff.mpr fun ⟨c, _, lc⟩ => Nat.not_le_of_gt low (Nat.le_trans
+       ((Decidable.em (S c)).elim (fun sc => Nat.le_of_eq (one c sc).symm) (outside c)) lc),
+     fun closed => line_way closed n fun j lj u _ su =>
+       Nat.le_trans (Nat.le_of_eq (one u su)) (before j lj)⟩
+
+/-- **A growing line of one need is gone within `hi + 2` steps, whatever else is in the way.** For a
+line `S` (`closed`: no unit outside it leaves a unit of it), with every unit of `S` needing `m`
+(`one`), `0 < m` (`pos`), each unit of `S` having kids of `S` that together take more than it
+(`grows`), nothing given from nothing (`nothing`), the step under no take keeping every level up to
+`hi` within `hi` (`keeps`) and the start level at most `hi` (`high`); nothing is asked of the units
+not of `S`, and no unit of `S` need be in the start way: there is a step `n ≤ hi + 2` from which no
+unit of `S` is in the way. With no unit of `S` in the start way that is step 0 (`gone_from`);
+otherwise the step after the level comes below `m` (`falls_below`, `gone_after`). `line_ends` states
+no such step; in place of one need it asks that the units of `S` need something and that every kid of
+a unit of `S` need no more than it, so neither law's premises contain the other's. Whether the net
+ends is not concluded: on `OutsideNeedsLess` it does not. -/
+theorem line_gone_within [DecidablePred S] (closed : ∀ u v, v ∈ kids u → S v → S u)
+    (one : ∀ u, S u → need u = m) (pos : 0 < m)
+    (grows : ∀ u, S u → use u < lineTake S use (kids u))
+    (nothing : RegimeMargin.FromNothing giving) (keeps : RegimeMargin.Keeps giving 0 hi)
+    {w : List U} {x : Nat} (high : x ≤ hi) :
+    ∃ n, n ≤ hi + 2 ∧
+      ∀ k, n ≤ k → ∀ u, u ∈ (course need kids giving use (w, x) k).1 → ¬ S u :=
+  (line_or_none (S := S) w).elim
+    (fun nm => ⟨0, Nat.zero_le _, gone_from closed (k := 0) nm⟩)
+    (fun ⟨_, mem, line⟩ =>
+      match falls_below (s := (w, x)) grows nothing keeps pos high
+          (fun _ u _ su => Nat.le_of_eq (one u su)) mem line with
+      | ⟨n, le, _, low, _⟩ => ⟨n + 1, Nat.succ_le_succ le,
+          gone_after closed fun u _ su => Nat.lt_of_lt_of_le low (Nat.le_of_eq (one u su).symm)⟩)
+
+end Whole
+
+/-! ## 4. Laws of `LineOnAStock` as cases -/
+
+section Cases
+
+variable {need : U → Nat} {kids : U → List U} {use : U → Nat} {giving : Nat → Nat}
+  {S : U → Prop} {hi : Nat}
+
+/-- **`one_need_ends`, as a case.** The statement of `LineOnAStock.one_need_ends`, proved from
+`takes_the_whole` at the line of every unit: an empty way ends at step 0; otherwise its first unit is
+of the line, no unit is outside it, and the level being at least the one need at every step before
+the end, every need is met until then and the way there is the generation (`way_while_met`).
+`need_unmet` is not used. -/
+theorem one_need_ends_as_case {n : Nat} (one : ∀ u, need u = n) (pos : 0 < n)
+    (grows : ∀ u, use u < taken use (kids u)) (nothing : RegimeMargin.FromNothing giving)
+    (keeps : RegimeMargin.Keeps giving 0 hi) {w : List U} {x : Nat} (high : x ≤ hi) :
+    ∃ m t, m ≤ hi + 1 ∧ «迭» (net need kids giving use) m (w, x) t ∧
+      (∀ v, ¬ net need kids giving use t v) ∧ t.1 = generation kids m w :=
+  match w with
+  | [] => ⟨0, ([], x), Nat.zero_le _, (Law.stepWhile_steps_iff 0).mpr
+      ⟨fun _ lt => absurd lt (Nat.not_lt_zero _), rfl⟩,
+      Law.stepWhile_none_iff.mpr (fun ⟨_, mu, _⟩ => nomatch mu), rfl⟩
+  | _ :: w' =>
+    match takes_the_whole (S := fun _ => True) (fun u _ => one u) pos
+        (fun u _ => Nat.lt_of_lt_of_le (grows u) (Nat.le_of_eq (lineTake_true _).symm))
+        (fun _ ns => absurd trivial ns) nothing keeps high (.head w') trivial with
+    | ⟨m, le, before, _, steps, stops, _⟩ => ⟨m, _, le, steps, stops,
+        way_while_met fun j lj u _ => Nat.le_trans (Nat.le_of_eq (one u)) (before j lj)⟩
+
+/-- With `closed` and `down`, a start way whose line needs at most `m` keeps it so at every step of
+the course: `below_keeps`, step by step. -/
+theorem below_along (closed : ∀ u v, v ∈ kids u → S v → S u)
+    (down : ∀ u v, S u → v ∈ kids u → need v ≤ need u) {m : Nat} {s : List U × Nat}
+    (below : Below need S m s.1) : ∀ j, Below need S m (course need kids giving use s j).1
+  | 0 => below
+  | j + 1 => below_keeps closed down (below_along closed down below j) _
+
+/-- **`ends_all`, as a case.** The statement of `LineOnAStock.ends_all`, proved by the same strong
+induction with `falls_below` in the place of `ends_high`: from a configuration at most `hi` whose line
+needs at most `m`, either no unit of the line is in the way, or (`falls_below`, the line needing at
+most `m` along the course by `below_along`) some step has the level below `m`, from where the claim
+below `m` applies (`ends_low`). `ends_high` is not used. -/
+theorem ends_all_as_case [DecidablePred S] (nothing : RegimeMargin.FromNothing giving)
+    (keeps : RegimeMargin.Keeps giving 0 hi) (closed : ∀ u v, v ∈ kids u → S v → S u)
+    (grows : ∀ u, S u → use u < lineTake S use (kids u)) (needs : ∀ u, S u → 0 < need u)
+    (down : ∀ u v, S u → v ∈ kids u → need v ≤ need u) (m : Nat) :
+    Ends need kids giving use S hi m :=
+  strong_below (P := Ends need kids giving use S hi)
+    (fun _ ih s high below => (line_or_none (S := S) s.1).elim
+      (fun nm => ⟨0, fun u mu su => absurd su (nm u mu)⟩)
+      (fun ⟨u₀, mu₀, su₀⟩ =>
+        match falls_below grows nothing keeps
+            (Nat.lt_of_lt_of_le (needs u₀ su₀) (below u₀ mu₀ su₀)) high
+            (below_along closed down below) mu₀ su₀ with
+        | ⟨n, _, _, low, _⟩ =>
+          match ends_low keeps closed down ih (course need kids giving use s n)
+              (level_within keeps high n) low with
+          | ⟨k, nm⟩ => ⟨n + k, Eq.subst (motive := NoneMet need S) (Law.orbit_add _ s n k).symm nm⟩))
+    (m + 1) m (Nat.lt_succ_self m)
+
+end Cases
+
+/-! ## 5. Kept countermodels and worked courses -/
+
+namespace OutsideNeedsLess
+
+/-- Four kinds (the paper record's `a`, `b`, `c` and `O`). -/
+inductive Kind
+  | A
+  | B
+  | C
+  | O
+
+open Kind
+
+/-- `A`, `B` and `C` need seventeen, `O` one. -/
+def need : Kind → Nat
+  | A => 17
+  | B => 17
+  | C => 17
+  | O => 1
+
+/-- `A` takes one, `B` two, `C` three, `O` one. -/
+def use : Kind → Nat
+  | A => 1
+  | B => 2
+  | C => 3
+  | O => 1
+
+/-- `A` leaves `B`; `B` leaves `C`; `C` leaves four `A`; `O` leaves itself. -/
+def kids : Kind → List Kind
+  | A => [B]
+  | B => [C]
+  | C => [A, A, A, A]
+  | O => [O]
+
+/-- The units of the line: `A`, `B` and `C`. -/
+def isLine : Kind → Bool
+  | A => true
+  | B => true
+  | C => true
+  | O => false
+
+/-- Giving `min z (17 - z)`. -/
+def giving (z : Nat) : Nat := min z (17 - z)
+
+/-- No unit outside the line leaves a unit of it: `O` leaves `O`. -/
+theorem closed : ∀ u v, v ∈ kids u → isLine v = true → isLine u = true :=
+  fun u v mv sv => match u, v, mv, sv with
+    | A, _, _, _ => rfl
+    | B, _, _, _ => rfl
+    | C, _, _, _ => rfl
+    | O, _, .head _, sv => sv
+    | O, _, .tail _ mm, _ => nomatch mm
+
+/-- Every unit of the line needs seventeen. -/
+theorem one : ∀ u, isLine u = true → need u = 17 :=
+  fun u su => match u, su with
+    | A, _ => rfl
+    | B, _ => rfl
+    | C, _ => rfl
+    | O, su => absurd su Bool.false_ne_true
+
+/-- Each unit of the line has kids of the line that together take more than it: two against one,
+three against two, four against three. -/
+theorem grows : ∀ u, isLine u = true → use u < lineTake (fun u => isLine u = true) use (kids u) :=
+  fun u su => match u, su with
+    | A, _ => by decide
+    | B, _ => by decide
+    | C, _ => by decide
+    | O, su => absurd su Bool.false_ne_true
+
+/-- Step 1 of the course from `([A, O], 17)`. -/
+theorem at1 : course need kids giving use ([A, O], 17) 1 = ([B, O], 17) := rfl
+
+/-- Step 2, from step 1 by one step. -/
+theorem at2 : course need kids giving use ([A, O], 17) 2 = ([C, O], 17) :=
+  (congrArg (step need kids giving use) at1).trans rfl
+
+/-- Step 3, from step 2 by one step. -/
+theorem at3 : course need kids giving use ([A, O], 17) 3 = ([A, A, A, A, O], 17) :=
+  (congrArg (step need kids giving use) at2).trans rfl
+
+/-- Step 4, from step 3 by one step. -/
+theorem at4 : course need kids giving use ([A, O], 17) 4 = ([B, B, B, B, O], 17) :=
+  (congrArg (step need kids giving use) at3).trans rfl
+
+/-- Step 5, from step 4 by one step: of the nine the way takes, eight are given back. -/
+theorem at5 : course need kids giving use ([A, O], 17) 5 = ([C, C, C, C, O], 16) :=
+  (congrArg (step need kids giving use) at4).trans rfl
+
+/-- Step 6, from step 5 by one step: sixteen does not meet the line's seventeen, and `O` is left. -/
+theorem at6 : course need kids giving use ([A, O], 17) 6 = ([O], 6) :=
+  (congrArg (step need kids giving use) at5).trans rfl
+
+/-- Step 7, from step 6 by one step. -/
+theorem at7 : course need kids giving use ([A, O], 17) 7 = ([O], 10) :=
+  (congrArg (step need kids giving use) at6).trans rfl
+
+/-- Step 8, from step 7 by one step. -/
+theorem at8 : course need kids giving use ([A, O], 17) 8 = ([O], 17) :=
+  (congrArg (step need kids giving use) at7).trans rfl
+
+/-- **Kept countermodel: a unit outside the line that needs less than the line. Every other premise
+of `takes_the_whole` holds, the line is gone from step 6, and the net never ends.** On
+`min z (17 - z)` with `hi = 17` and `m = 17`, the line of `A`, `B`, `C`: nothing is given from
+nothing; the step under no take keeps every level up to seventeen within seventeen; no unit outside
+the line leaves a unit of it; every unit of the line needs seventeen, which is positive; each unit of
+the line has kids of the line that together take more than it; the start seventeen is at most
+seventeen; `A`, of the line, is in the start way `[A, O]`. The premise that every unit not of the line
+needs at least seventeen fails: `O` needs one. By computation the course from `([A, O], 17)` is
+`[B, O]`, `[C, O]`, `[A, A, A, A, O]`, `[B, B, B, B, O]` at seventeen, `[C, C, C, C, O]` at sixteen,
+then `[O]` at six, at ten, and at seventeen from step 8 on, which the step leaves as it is. No unit of
+the line is in the way from step 6 on (`gone_from`), and the net never ends (`unending_of_fixed`): the
+line is gone and `O` goes on at a level back at seventeen. -/
+theorem all_but_outside :
+    RegimeMargin.FromNothing giving ∧ RegimeMargin.Keeps giving 0 17 ∧
+    (∀ u v, v ∈ kids u → isLine v = true → isLine u = true) ∧
+    (∀ u, isLine u = true → need u = 17) ∧ 0 < 17 ∧
+    (∀ u, isLine u = true → use u < lineTake (fun u => isLine u = true) use (kids u)) ∧
+    17 ≤ 17 ∧ A ∈ [A, O] ∧ isLine A = true ∧
+    ¬ (∀ u, ¬ isLine u = true → 17 ≤ need u) ∧
+    course need kids giving use ([A, O], 17) 1 = ([B, O], 17) ∧
+    course need kids giving use ([A, O], 17) 2 = ([C, O], 17) ∧
+    course need kids giving use ([A, O], 17) 3 = ([A, A, A, A, O], 17) ∧
+    course need kids giving use ([A, O], 17) 4 = ([B, B, B, B, O], 17) ∧
+    course need kids giving use ([A, O], 17) 5 = ([C, C, C, C, O], 16) ∧
+    course need kids giving use ([A, O], 17) 6 = ([O], 6) ∧
+    course need kids giving use ([A, O], 17) 7 = ([O], 10) ∧
+    (∀ k, course need kids giving use ([A, O], 17) (8 + k) = ([O], 17)) ∧
+    (∀ k, 6 ≤ k →
+      ∀ u, u ∈ (course need kids giving use ([A, O], 17) k).1 → ¬ isLine u = true) ∧
+    «不穷» (net need kids giving use) «一» ([A, O], 17) :=
+  ⟨rfl, RegimeMargin.keeps_of_below rfl, closed, one, by decide, grows, Nat.le_refl 17, .head _, rfl,
+   fun h => absurd (h O Bool.false_ne_true) (by decide),
+   at1, at2, at3, at4, at5, at6, at7,
+   fun k => (Law.orbit_add _ _ 8 k).trans
+     ((congrArg (fun c => course need kids giving use c k) at8).trans (course_fixed rfl k)),
+   gone_from closed (k := 6) (fun u mu su =>
+     match u, (Eq.subst (motive := fun c : List Kind × Nat => u ∈ c.1) at6 mu : u ∈ [O]), su with
+     | _, .head _, su => absurd su Bool.false_ne_true
+     | _, .tail _ mm, _ => nomatch mm),
+   unending_of_fixed (t := 8)
+     (fun j lt => match j, lt with
+       | 0, _ => ⟨A, .head _, by decide⟩
+       | 1, _ => Eq.subst (motive := Goes need) at1.symm ⟨O, .tail _ (.head _), by decide⟩
+       | 2, _ => Eq.subst (motive := Goes need) at2.symm ⟨O, .tail _ (.head _), by decide⟩
+       | 3, _ => Eq.subst (motive := Goes need) at3.symm ⟨A, .head _, by decide⟩
+       | 4, _ => Eq.subst (motive := Goes need) at4.symm ⟨B, .head _, by decide⟩
+       | 5, _ => Eq.subst (motive := Goes need) at5.symm
+           ⟨O, .tail _ (.tail _ (.tail _ (.tail _ (.head _)))), by decide⟩
+       | 6, _ => Eq.subst (motive := Goes need) at6.symm ⟨O, .head _, by decide⟩
+       | 7, _ => Eq.subst (motive := Goes need) at7.symm ⟨O, .head _, by decide⟩
+       | j + 8, lt => absurd lt (Nat.not_lt_of_ge (Nat.le_add_left 8 j)))
+     (Eq.subst (motive := fun c => step need kids giving use c = c) at8.symm rfl)
+     (Eq.subst (motive := Goes need) at8.symm ⟨O, .head _, by decide⟩)⟩
+
+/-- **On the same world, by `line_gone_within`:** the premises that law asks hold (it asks nothing of
+`O`), so the line is gone from a step at most nineteen. By `all_but_outside` it is gone from step 6. -/
+theorem gone_by_law :
+    ∃ n, n ≤ 19 ∧ ∀ k, n ≤ k →
+      ∀ u, u ∈ (course need kids giving use ([A, O], 17) k).1 → ¬ isLine u = true :=
+  line_gone_within (need := need) (kids := kids) (use := use) (giving := giving)
+    (S := fun u => isLine u = true) (hi := 17) (m := 17) closed one (by decide) grows rfl
+    (RegimeMargin.keeps_of_below rfl) (Nat.le_refl 17)
+
+end OutsideNeedsLess
+
+namespace ProperLine
+
+open Kind
+
+/-- **Kept countermodel: no unit of the line in the start way. Every other premise of
+`takes_the_whole` holds, and the net never ends.** On `ProperLine`'s kinds (`D` leaves `D, D`, `O`
+leaves `O`, both need one and take one) and `min z (12 - z)`, with `hi = 12`, `m = 1` and the line of
+`D`: every unit of the line needs one, which is positive; `D`'s kids of the line take two, more than
+its one; `O`, not of the line, needs one, at least one; nothing is given from nothing; the step under
+no take keeps every level up to twelve within twelve; the start twelve is at most twelve. No unit of
+the line is in the start way `[O]`. The step leaves `([O], 12)` as it is, and the net never ends. -/
+theorem no_line_unit :
+    (∀ u, isD u = true → need u = 1) ∧ 0 < 1 ∧
+    (∀ u, isD u = true → use u < lineTake (fun u => isD u = true) use (kids u)) ∧
+    (∀ u, ¬ isD u = true → 1 ≤ need u) ∧
+    RegimeMargin.FromNothing TurningInTime.Three.giving ∧
+    RegimeMargin.Keeps TurningInTime.Three.giving 0 12 ∧ 12 ≤ 12 ∧
+    ¬ (∃ u, u ∈ [O] ∧ isD u = true) ∧
+    «不穷» (net need kids TurningInTime.Three.giving use) «一» ([O], 12) :=
+  ⟨fun _ _ => rfl, by decide,
+   fun u su => match u, su with
+     | D, _ => by decide
+     | O, su => absurd su Bool.false_ne_true,
+   fun _ _ => Nat.le_refl 1, rfl, RegimeMargin.keeps_of_below rfl, Nat.le_refl 12,
+   (fun ⟨u, (mu : u ∈ [O]), su⟩ => match u, mu, su with
+     | _, .head _, su => absurd su Bool.false_ne_true
+     | _, .tail _ mm, _ => nomatch mm),
+   unending_of_fixed (t := 0) (fun _ lt => absurd lt (Nat.not_lt_zero _)) rfl
+     ⟨O, .head _, by decide⟩⟩
+
+end ProperLine
+
+namespace EqualInPlaceOfMore
+
+/-- **Kept countermodel: equal in place of more. Every other premise of `takes_the_whole` holds, and
+the net never ends.** On `EqualInPlaceOfMore`'s one unit (needing one, taking one, leaving itself) and
+`min z (12 - z)`, with `hi = 12`, `m = 1` and the line of every unit: every unit needs one, which is
+positive; no unit is outside the line; nothing is given from nothing; the step under no take keeps
+every level up to twelve within twelve; the start twelve is at most twelve; the unit is in the start
+way. `grows` fails: its kid takes one, what it takes. The net from `([()], 12)` never ends
+(`all_but_grows`, whose world this is). -/
+theorem all_but_grows_whole :
+    (∀ u : Unit, True → need u = 1) ∧ 0 < 1 ∧ (∀ u : Unit, ¬ True → 1 ≤ need u) ∧
+    RegimeMargin.FromNothing TurningInTime.Three.giving ∧
+    RegimeMargin.Keeps TurningInTime.Three.giving 0 12 ∧ 12 ≤ 12 ∧ () ∈ [()] ∧
+    ¬ (∀ u : Unit, True → use u < lineTake (fun _ => True) use (kids u)) ∧
+    «不穷» (net need kids TurningInTime.Three.giving use) «一» ([()], 12) :=
+  ⟨fun _ _ => rfl, by decide, fun _ _ => Nat.le_refl 1, rfl, RegimeMargin.keeps_of_below rfl,
+   Nat.le_refl 12, .head _, fun h => absurd (h () trivial) (by decide), all_but_grows.2.2.2.2.2.2⟩
+
+end EqualInPlaceOfMore
+
+namespace OutsideNeedsMore
+
+/-- Two kinds. -/
+inductive Kind
+  | D
+  | O
+
+open Kind
+
+/-- `D` needs one, `O` eleven. -/
+def need : Kind → Nat
+  | D => 1
+  | O => 11
+
+/-- `D` takes six, `O` one. -/
+def use : Kind → Nat
+  | D => 6
+  | O => 1
+
+/-- `D` leaves `D, D`; `O` leaves itself. -/
+def kids : Kind → List Kind
+  | D => [D, D]
+  | O => [O]
+
+/-- The units of kind `D`. -/
+def isD : Kind → Bool
+  | D => true
+  | O => false
+
+/-- Every unit of the line needs one. -/
+theorem one : ∀ u, isD u = true → need u = 1 :=
+  fun u su => match u, su with
+    | D, _ => rfl
+    | O, su => absurd su Bool.false_ne_true
+
+/-- `D`'s kids of the line take twelve, more than its six. -/
+theorem grows : ∀ u, isD u = true → use u < lineTake (fun u => isD u = true) use (kids u) :=
+  fun u su => match u, su with
+    | D, _ => by decide
+    | O, su => absurd su Bool.false_ne_true
+
+/-- Every unit not of the line needs at least one: `O` needs eleven. -/
+theorem outside : ∀ u, ¬ isD u = true → 1 ≤ need u :=
+  fun u ns => match u, ns with
+    | D, ns => absurd rfl ns
+    | O, _ => by decide
+
+/-- No unit outside the line leaves a unit of it: `O` leaves `O`. -/
+theorem closed : ∀ u v, v ∈ kids u → isD v = true → isD u = true :=
+  fun u v mv sv => match u, v, mv, sv with
+    | D, _, _, _ => rfl
+    | O, _, .head _, sv => sv
+    | O, _, .tail _ mm, _ => nomatch mm
+
+/-- **Kept countermodel for `one_need_ends`' last conjunct: every premise of `takes_the_whole` holds,
+and where the net ends the way is not the generation of the start way.** On `min z (12 - z)` with
+`hi = 12`, `m = 1` and the line of `D`: every unit of the line needs one, which is positive; `D`'s
+kids of the line take more than it; `O`, not of the line, needs eleven, at least one; no unit outside
+the line leaves a unit of it; nothing is given from nothing; the step under no take keeps every level
+up to twelve within twelve; the start twelve is at most twelve; `D`, of the line, is in the start way
+`[D, O]`. By computation the course is `([D, D, O], 10)` at step 1, where ten meets `D`'s one and not
+`O`'s eleven, and `([D, D, D, D], 0)` at step 2, while the second generation of `[D, O]` is
+`[D, D, D, D, O]`. For every `n` and `t`: if the net from `([D, O], 12)` reaches `t` in `n` steps and
+`t` conditions nothing, then `t.1` is not `generation kids n [D, O]` (in the proof only `n = 2` meets
+the two conditions). Stripped of the units not of the line, the way at step 2 and the second
+generation are the same, as `takes_the_whole`'s last conjunct says. -/
+theorem way_not_generation :
+    (∀ u, isD u = true → need u = 1) ∧ 0 < 1 ∧
+    (∀ u, isD u = true → use u < lineTake (fun u => isD u = true) use (kids u)) ∧
+    (∀ u, ¬ isD u = true → 1 ≤ need u) ∧
+    (∀ u v, v ∈ kids u → isD v = true → isD u = true) ∧
+    RegimeMargin.FromNothing TurningInTime.Three.giving ∧
+    RegimeMargin.Keeps TurningInTime.Three.giving 0 12 ∧ 12 ≤ 12 ∧ D ∈ [D, O] ∧ isD D = true ∧
+    course need kids TurningInTime.Three.giving use ([D, O], 12) 1 = ([D, D, O], 10) ∧
+    course need kids TurningInTime.Three.giving use ([D, O], 12) 2 = ([D, D, D, D], 0) ∧
+    generation kids 2 [D, O] = [D, D, D, D, O] ∧
+    (∀ n t, «迭» (net need kids TurningInTime.Three.giving use) n ([D, O], 12) t →
+      (∀ v, ¬ net need kids TurningInTime.Three.giving use t v) → t.1 ≠ generation kids n [D, O]) ∧
+    strip (fun v => ¬ isD v = true) [D, D, D, D] =
+      strip (fun v => ¬ isD v = true) [D, D, D, D, O] :=
+  ⟨one, by decide, grows, outside, closed, rfl, RegimeMargin.keeps_of_below rfl, Nat.le_refl 12,
+   .head _, rfl, rfl, rfl, rfl,
+   fun n t steps stops => match (Law.stepWhile_steps_iff n).mp steps with
+     | ⟨goes, e⟩ =>
+       have stop : ¬ Goes need (course need kids TurningInTime.Three.giving use ([D, O], 12) n) :=
+         Eq.subst (motive := fun c => ¬ Goes need c) e (Law.stepWhile_none_iff.mp stops)
+       match n, goes, e, stop with
+       | 0, _, _, stop => absurd (by decide) stop
+       | 1, _, _, stop => absurd (by decide) stop
+       | 2, _, e, _ => fun same =>
+           absurd (congrArg List.length ((congrArg Prod.fst e).symm.trans same)) (by decide)
+       | n + 3, goes, _, _ =>
+           absurd (goes 2 (Nat.lt_of_lt_of_le (by decide) (Nat.le_add_left 3 n))) (by decide),
+   rfl⟩
+
+/-- **The same world, by `takes_the_whole`:** within thirteen steps the net from `([D, O], 12)` ends,
+the level at least one at every step before and below one there, and the way there stripped of the
+units not of the line is the generation so stripped. By `way_not_generation` the step is 2. -/
+theorem ends_by_law :
+    ∃ n, n ≤ 13 ∧
+      (∀ j, j < n → 1 ≤ (course need kids TurningInTime.Three.giving use ([D, O], 12) j).2) ∧
+      (course need kids TurningInTime.Three.giving use ([D, O], 12) n).2 < 1 ∧
+      «迭» (net need kids TurningInTime.Three.giving use) n ([D, O], 12)
+        (course need kids TurningInTime.Three.giving use ([D, O], 12) n) ∧
+      (∀ v, ¬ net need kids TurningInTime.Three.giving use
+        (course need kids TurningInTime.Three.giving use ([D, O], 12) n) v) ∧
+      strip (fun v => ¬ isD v = true)
+          (course need kids TurningInTime.Three.giving use ([D, O], 12) n).1 =
+        strip (fun v => ¬ isD v = true) (generation kids n [D, O]) :=
+  match takes_the_whole (need := need) (kids := kids) (use := use)
+      (giving := TurningInTime.Three.giving) (S := fun u => isD u = true) (hi := 12) (m := 1)
+      (w := [D, O]) (x := 12) (u₀ := D) one (by decide) grows outside rfl
+      (RegimeMargin.keeps_of_below rfl) (Nat.le_refl 12) (.head _) rfl with
+  | ⟨n, le, before, low, steps, stops, way⟩ => ⟨n, le, before, low, steps, stops, way closed⟩
+
+end OutsideNeedsMore
+
+end LineOnAStock
+end Becoming

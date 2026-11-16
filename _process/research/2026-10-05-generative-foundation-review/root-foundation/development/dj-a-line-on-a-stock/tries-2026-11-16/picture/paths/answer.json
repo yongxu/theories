@@ -1,0 +1,95 @@
+{
+ "answer_in_one_paragraph": "As a graph of where a course can go, the atlas is 108 pieces: 86 dynamics alone, the largest 30. Counting only links that carry a law it is 114 pieces, the largest 12; the piece of 30 hangs on 12 exits that no law shows. The capture family, home of the meta-attractor, has one of 17 dynamics linked by a law, though its Lean modules import one another in a chain. No atlas link runs from a lock to turning or from turning to renewal; TurningInTime proves the first. Cancer (confined-rise-within-a-whole) is alone, on the carrier the line on a stock uses. The centre's seven exits end in words that existing dynamics already name.",
+ "what_exists": [
+  {
+   "what": "The graph",
+   "where": "dynamics.json, by graph.py",
+   "statement_in_plain_words": "136 links on 95 pairs: 70 exits naming a dynamic, 56 case_of, 10 joinings. Pieces: 30, 9, 6, 6, 5, then small. Hubs: unselected-beyond-the-coupling-closure (9 neighbours), the-rest-outruns-the-renewal (6). Linked: A 17/31, B 19/26, C 4/17, D 6/22, E 7/10, F 15/24, G 11/18, H 20/37.",
+   "given": "A link is a matched key, not a checked correspondence."
+  },
+  {
+   "what": "Paths between four groups (my sorting: 22 lock, 24 renewal, 33 drain, 21 turning)",
+   "where": "groups.py",
+   "statement_in_plain_words": "Exit with a law: drain to renewal (others-drawing-first-end-the-base to optima-rebuild-a-depleted-base, sufficient), drain to turning (market-finite-support-obstruction to never-leaving-a-guard, exact), renewal to turning, turning to drain, lock to drain (one). Argued or read only (07, 02 §10): drain to lock, three exits. Absent: lock to turning, turning to renewal."
+  },
+  {
+   "what": "Lock to end; lock to turn or end",
+   "where": "TurningInTime.lean:1440 locked_ends_rising; :1633 locked_turns_in_time_on_window_iff",
+   "statement_in_plain_words": "A Locked way whose draw rises against a capped level ends still Locked within hi + 1 steps. Listed under turning-in-time; an exit of no lock dynamic.",
+   "given": "Raises, ReadsShare, the rise (count_rises:1473); for the window: low, covers, safe, corrects."
+  },
+  {
+   "what": "How the lock forms",
+   "where": "RuleShaping.lean:443 covering_locks",
+   "statement_in_plain_words": "What comes back to the shapers, monotone in the share and covering the cost, locks the loop. No exit to a lock dynamic.",
+   "given": "Offspring carry the capacity; no noise."
+  },
+  {
+   "what": "Cancer",
+   "where": "Founding.lean:170 Flow.ConfinedRise.ends",
+   "statement_in_plain_words": "A lineage selected within a whole, confined to conditions in excess, has no member after they end.",
+   "given": "Balance, descent, gated renewal, confinement, and the excess itself."
+  },
+  {
+   "what": "The centre's exits as existing dynamics (my reading)",
+   "where": "turning-in-time, a-line-on-a-stock",
+   "statement_in_plain_words": "ends_with_net and turns_in_time_iff: the two sides of margin-of-a-regime (RegimeMargin.lean:705, :730), and reading-a-loss-in-time. kind_ends_while_net_goes: a-regularity-kept-and-changed, three-outcomes-of-a-loss. way_ends, need_unmet: where-a-rising-take-ends, confined-rise-within-a-whole. line_ends: what-a-gate-keeps, attraction-is-not-returning."
+  }
+ ],
+ "same_thing_under_two_names": [
+  "A rising take passes a bounded giving: Flow.exceeds_of_more (Exhaustion.lean:85), TurningInTime.rising_takes_all (:669), LineOnAStock.need_unmet (:1011).",
+  "A selected line ends with what it draws on: Founding ConfinedRise.ends (:170), LineOnAStock.line_ends (:904); both on SelectionTerm.Generations.",
+  "In time exactly where the first difference precedes the point of no return: ReadOffInTime.readableInTime_iff (:661), TurningInTime.turns_in_time_iff_before (:2289), one NoReturnAt.",
+  "A region every step keeps: Law.Absorbing (Attraction.lean:110), «闭» in locked_closed (TurningInTime.lean:1232), RegimeMargin.stays_ended (:712), LineOnAStock.gone_from (:674), Viability's certificate.",
+  "A way rebuilt from the level it draws on: TurningInTime.pair (:337), RuleRebuilding's and ReaderRebuilding's nets (both import only GrammarLaws)."
+ ],
+ "what_is_missing": [
+  "Ten edges; together 108 pieces become 98 and the largest 61. Lean has the law, the atlas no entry: turning-in-time to margin-of-a-regime (unending_iff_above, TurningInTime.lean:958); closed-capture to turning-in-time (locked_ends_rising, on the regime's level, not ClosedCapture's loss); capture-through-the-rule to closed-capture (lock_outlives_loss, ClosedCapture.lean:307); shaping-the-rule-selected-by-what-comes-back to capture-through-the-rule (covering_locks).",
+  "Law to prove: margin-of-a-regime to threshold-in-the-state-plane (ends_iff_below, RegimeMargin.lean:741, as leading_exact, :1550, whose docstring claims every point of no return there); loss-of-renewal-for-good to unceasing-generation-needs-renewal (below the need for good, arising is not unceasing); margin-of-a-regime to never-leaving-a-guard; a-rule-rebuilt-from-the-members-it-limits to turning-in-time (its net as a pair); a-line-on-a-stock to confined-rise-within-a-whole; a-line-on-a-stock to where-a-rising-take-ends.",
+  "From renewal to a lock there is one witness. selection-read-off-its-own-survivors says of the meta-attractor itself: a join not made."
+ ],
+ "outgrown_words_or_models": [
+  "\"Meta-attractor\" names three unlinked things: closed-capture (a rule, no stock), self-reproducing-selection-across-carriers (no law), confined rise (a stock, no rule).",
+  "Exits ending in a state in words (258 of 328), and families as the map's form: the lock's newest laws are filed in A, its dynamics in C.",
+  "\"The rise is supplied, not derived\" (where-a-rising-take-ends), and Founding's \"its drawing does not enter\": need_unmet and count_rises now derive a rise.",
+  "turning-in-time's open item that ReadOffInTime is not joined: TurningInTime.lean:2087-2343 uses its Recoverable and NoReturnAt."
+ ],
+ "candidate_links": [
+  {
+   "from": "a-line-on-a-stock",
+   "to": "confined-rise-within-a-whole",
+   "kind": "a case",
+   "statement_to_try": "On one condition under the regime's step, a closed line whose kids together take more meets Founding's excess and start, so ConfinedRise.ends needs no excess given.",
+   "why_it_might_fail": "Flow's balance counts every taker; the study note found that reading a dictionary."
+  },
+  {
+   "from": "shaping-the-rule-selected-by-what-comes-back",
+   "to": "turning-in-time",
+   "kind": "a composition",
+   "statement_to_try": "covering_locks, then count_rises, then locked_ends_rising: a loop that comes to lock on a capped level ends Locked.",
+   "why_it_might_fail": "count_rises asks one number strictly raised; covering_locks' share is two counts under a ratio order, ties favoured."
+  },
+  {
+   "from": "reading-a-loss-in-time",
+   "to": "turning-in-time",
+   "kind": "an exact boundary",
+   "statement_to_try": "The first marked step is the first step apart of the course and the course as it was; turns_in_time_iff_before is readableInTime_iff one step on.",
+   "why_it_might_fail": "Readable is not responding; a lock breaks kept (Three.read_at_eight_ends, :2638)."
+  },
+  {
+   "from": "margin-of-a-regime",
+   "to": "never-leaving-a-guard",
+   "kind": "an invariance",
+   "statement_to_try": "Under the regime's step the kernel of 'the need is met' is exactly the levels from H + y to hi.",
+   "why_it_might_fail": "With a changing way no threshold in the level exists (HigherStartEnds, LineOnAStock.lean:1780)."
+  },
+  {
+   "from": "a-line-on-a-stock",
+   "to": "generation-and-degeneration-at-two-grains",
+   "kind": "a case",
+   "statement_to_try": "An unending course is generation at the grains of unit and way, WayOfUnits is keeping, way_ends is degeneration.",
+   "why_it_might_fail": "Units are values: a kid equal to its parent cannot be told from staying."
+  }
+ ],
+ "what_ran": "Read only. Four Python scripts of seconds each (graph.py, groups.py, reuse.py and inline checks) under /Users/ren/theories/tmp/r7/one-model/check/round10/paths/, with grep and reads of the Lean. No build, test, gate, tracked edit or writing git command. The four groups are hand-sorted; exit-to-dynamic matches are readings."
+}

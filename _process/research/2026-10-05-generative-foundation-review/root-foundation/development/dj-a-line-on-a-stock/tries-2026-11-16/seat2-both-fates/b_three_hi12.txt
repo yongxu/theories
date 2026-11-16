@@ -1,0 +1,77 @@
+
+=== three kinds, 3000 worlds drawn at random per giving (seed 20261116): kids lists of 0..3, uses 1..3, needs 1..12; ceiling 12; start ways of [1, 2] units (9 ways); levels 0..12 ===
+
+giving: nothing   [step z+g(z) rising: True; g rising: True]   worlds: 3000
+  restriction                           empty   up-set interval  neither | all-met levels only:  up-set interval  neither
+  any world                             27000        0        0        0 |                           0        0        0
+  down (kids need no more)               3780        0        0        0 |                           0        0        0
+  even (kids take the same)                36        0        0        0 |                           0        0        0
+  down, even, every unit has kids          36        0        0        0 |                           0        0        0
+  kids u = [u] (WayOfUnits)                 9        0        0        0 |                           0        0        0
+  one need                                207        0        0        0 |                           0        0        0
+
+giving: tent min(z,hi-z)   [step z+g(z) rising: True; g rising: False]   worlds: 3000
+  restriction                           empty   up-set interval  neither | all-met levels only:  up-set interval  neither
+  any world                             24468     1599      923       10 |                        1607      276        0
+  down (kids need no more)               3152      517      105        6 |                         523        1        0
+  even (kids take the same)                 0       35        0        1 |                          36        0        0
+  down, even, every unit has kids           0       35        0        1 |                          36        0        0
+  kids u = [u] (WayOfUnits)                 0        9        0        0 |                           9        0        0
+  one need                                193       14        0        0 |                          14        0        0
+
+giving: inflow min(2,hi-z)   [step z+g(z) rising: True; g rising: False]   worlds: 3000
+  restriction                           empty   up-set interval  neither | all-met levels only:  up-set interval  neither
+  any world                             26068      606      318        8 |                         610       85        1
+  down (kids need no more)               3470      230       78        2 |                         231        3        1
+  even (kids take the same)                18       15        2        1 |                          15        0        1
+  down, even, every unit has kids          18       15        2        1 |                          15        0        1
+  kids u = [u] (WayOfUnits)                 0        9        0        0 |                           9        0        0
+  one need                                201        6        0        0 |                           6        0        0
+
+giving: logistic z(hi-z)/hi   [step z+g(z) rising: True; g rising: False]   worlds: 3000
+  restriction                           empty   up-set interval  neither | all-met levels only:  up-set interval  neither
+  any world                             25762      825      411        2 |                         827      108        0
+  down (kids need no more)               3415      300       64        1 |                         301        2        0
+  even (kids take the same)                13       21        2        0 |                          21        0        0
+  down, even, every unit has kids          13       21        2        0 |                          21        0        0
+  kids u = [u] (WayOfUnits)                 0        9        0        0 |                           9        0        0
+  one need                                202        5        0        0 |                           5        0        0
+
+giving: fold (hi-2z below half)   [step z+g(z) rising: False; g rising: False]   worlds: 3000
+  restriction                           empty   up-set interval  neither | all-met levels only:  up-set interval  neither
+  any world                             24053     1108     1186      653 |                        1149      588      526
+  down (kids need no more)               3216      347      153       64 |                         352       92       53
+  even (kids take the same)                 8       23        5        0 |                          23        5        0
+  down, even, every unit has kids           8       23        5        0 |                          23        5        0
+  kids u = [u] (WayOfUnits)                 0        9        0        0 |                           9        0        0
+  one need                                202        4        0        1 |                           4        0        1
+
+giving: one from anything (g rising)   [step z+g(z) rising: True; g rising: True]   worlds: 3000
+  restriction                           empty   up-set interval  neither | all-met levels only:  up-set interval  neither
+  any world                             26713      189       95        3 |                         189       16        0
+  down (kids need no more)               3658       76       45        1 |                          76        3        0
+  even (kids take the same)                29        6        1        0 |                           6        0        0
+  down, even, every unit has kids          29        6        1        0 |                           6        0        0
+  kids u = [u] (WayOfUnits)                 5        4        0        0 |                           4        0        0
+  one need                                205        2        0        0 |                           2        0        0
+
+smallest found (by total kids, then units in the start way, total use, total need):
+  [fold (hi-2z below half)] neither: need (9, 6, 4) use (3, 3, 2) kids ((1,), (0,), ()) start counts (0, 1, 0) never-ending levels [6, 12]
+  [fold (hi-2z below half)] not an up-set: need (8, 8, 2) use (1, 3, 3) kids ((0, 2), (), ()) start counts (1, 0, 0) never-ending levels [9]
+  [fold (hi-2z below half)] not an up-set among all-met levels; down, even, some: need (12, 9, 9) use (3, 3, 2) kids ((1,), (1,), (2,)) start counts (0, 2, 0) never-ending levels [9]
+  [fold (hi-2z below half)] not an up-set; down, even, some: need (12, 9, 9) use (3, 3, 2) kids ((1,), (1,), (2,)) start counts (0, 2, 0) never-ending levels [9]
+  [inflow min(2,hi-z)] neither: need (9, 3, 7) use (1, 2, 1) kids ((1, 1, 1), (), (2,)) start counts (1, 0, 1) never-ending levels [7, 8, 12]
+  [inflow min(2,hi-z)] not an up-set: need (11, 9, 2) use (1, 2, 2) kids ((1,), (1,), (0, 1)) start counts (0, 0, 1) never-ending levels [10]
+  [inflow min(2,hi-z)] not an up-set among all-met levels; down, even, some: need (6, 4, 3) use (3, 3, 1) kids ((0,), (2, 2, 2), (2,)) start counts (1, 0, 1) never-ending levels [5, 7, 9, 11]
+  [inflow min(2,hi-z)] not an up-set; down, even, some: need (6, 4, 3) use (3, 3, 1) kids ((0,), (2, 2, 2), (2,)) start counts (1, 0, 1) never-ending levels [5, 7, 9, 11]
+  [logistic z(hi-z)/hi] neither: need (3, 1, 10) use (3, 1, 2) kids ((2, 2, 2), (1,), (0,)) start counts (0, 1, 1) never-ending levels [5, 6, 7, 8, 9, 11, 12]
+  [logistic z(hi-z)/hi] not an up-set: need (12, 9, 9) use (3, 3, 2) kids ((1,), (1,), (2,)) start counts (1, 0, 1) never-ending levels [11]
+  [logistic z(hi-z)/hi] not an up-set; down, even, some: need (12, 9, 9) use (3, 3, 2) kids ((1,), (1,), (2,)) start counts (1, 0, 1) never-ending levels [11]
+  [one from anything (g rising)] neither: need (10, 1, 8) use (3, 1, 1) kids ((1, 2), (1,), (0, 0)) start counts (0, 1, 1) never-ending levels [3, 4, 5, 6, 7, 9, 10]
+  [one from anything (g rising)] not an up-set: need (9, 3, 7) use (1, 2, 1) kids ((1, 1, 1), (), (2,)) start counts (1, 0, 1) never-ending levels [8]
+  [one from anything (g rising)] not an up-set; down, even, some: need (5, 9, 8) use (1, 2, 3) kids ((0,), (0, 0), (0, 0, 0)) start counts (1, 1, 0) never-ending levels [7, 8]
+  [tent min(z,hi-z)] neither: need (2, 9, 10) use (3, 2, 3) kids ((2,), (0,), (2,)) start counts (0, 1, 1) never-ending levels [9, 11, 12]
+  [tent min(z,hi-z)] not an up-set: need (5, 12, 1) use (1, 1, 1) kids ((), (1, 1), (2,)) start counts (0, 1, 1) never-ending levels [3, 4, 5, 6, 7, 8, 9, 10, 11]
+  [tent min(z,hi-z)] not an up-set; down, even, some: need (5, 9, 8) use (1, 2, 3) kids ((0,), (0, 0), (0, 0, 0)) start counts (0, 1, 1) never-ending levels [8, 10, 11, 12]
+
+seconds: 3.4

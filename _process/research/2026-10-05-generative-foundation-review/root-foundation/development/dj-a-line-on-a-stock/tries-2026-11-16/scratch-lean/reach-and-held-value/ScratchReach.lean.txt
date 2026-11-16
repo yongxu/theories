@@ -1,0 +1,777 @@
+import Becoming.TurningInTime
+import Becoming.Regulation
+
+/-!
+# Scratch: a use that reaches `hi` leaves nothing, and a held value set above the take
+
+AI-written (Fable), 16 November 2026. Scratch; not on main.
+
+Two statements, the second resting on the first. Take, level, value, use, giving and reading are this
+model's labels for parts of its configurations and steps, not terms of the root.
+
+## 1. The reach lemma
+
+A level `X` that steps by `RegimeMargin.step giving (D t)`, the use `D t` any amount at each step.
+
+* Where the use is at least the level, the step leaves nothing, with nothing given from nothing
+  (`step_takes_all`).
+* Where the step under no use keeps every level up to `hi` within `hi` and the start is at most `hi`,
+  every level is at most `hi` (`levels_within`, by `TurningInTime.kept_within` at each step).
+* So, with all three premises, a use of at least `hi` at step `n` leaves the level nothing at step
+  `n + 1` (`reach_levels`).
+* On the pair's course, whatever the way after a step (`after` any function of way and level), these
+  are `pair_within` and `reach`.
+* `TurningInTime.rising_takes_all` restated and proved from `reach` by `TurningInTime.rises_from`
+  (`rising_takes_all_by_reach`), and `TurningInTime.rising_meets_level` restated and proved with
+  `pair_within` in place of the private `takes_at_hi` (`rising_meets_level_by_within`).
+
+## 2. A value that every reading sets above the take
+
+`Pace.paced` at a fast configuration of a take `x` and a level `y`, and a held value `m`. The fast step is
+`ClosedCapture.join A fB`: the take moves to `A x m`, whatever the level is.
+
+* **The take's rise** (`set_above_rises`), for any step `fB` of the level. Premises: the take after a
+  move is at least whatever the take and the value both are at least (`low`); below the value the take
+  rises strictly (`raises`); every reading sets the value above the take as it stood or above the take
+  as moved (`above`); every `L` steps in a row hold a reading step (`gaps`). Then at step `k * (L + 1)`
+  the take and the value are both at least `k`.
+* **The ending** (`set_above_takes_all`), where the level steps by
+  `RegimeMargin.step giving (use x m)` with a use at least whatever the take and the value both are at
+  least (`least`): with nothing given from nothing, the step under no use keeping every level up to `hi`
+  within `hi`, and the start's level at most `hi`, the level at step `hi * (L + 1) + 1` is nothing. By
+  `set_above_rises` at `k := hi` and `reach_levels`.
+* **As it was asked** (`set_above_ends`): the level under the take as it stands, the value read from
+  the configuration before the step (the order `Pace.turn` has), the move `Regulation.Between` and
+  rising strictly below the value, every reading above the take: some step `n ≤ (2 * hi + 1) * L` has
+  the level nothing. `Between` gives `low` (`low_of_between`), and a take strictly nearer the value
+  wherever they differ gives `raises` (`raises_of_nearer`). The other order of taking
+  (`set_above_ends_moved_first`) and the reading after the step, in either order of taking
+  (`set_above_ends_read_after`), end by the same step.
+* **Each premise dropped, a course that never ends** (`Needed`): the take not rising below the value
+  (`Needed.not_rising`), the value set at the take and not above it (`Needed.not_above`), no reading
+  step (`Needed.not_read`), something given from nothing (`Needed.from_nothing`), a level not kept
+  within `hi`, or a start above it (`Needed.no_cap`), and a take that falls below both the take and the
+  value (`Needed.not_low`).
+
+What is not here: that the level stays nothing after it is nothing; a least step; a bound that is
+reached for `L` above one; the ending as the end of a line under a need (`TurningInTime.net`).
+
+Every declaration the scratch build audits (the public ones) has an empty axiom report, and each
+private lemma is used by one of them.
+-/
+
+namespace Becoming
+namespace ScratchReach
+
+open TurningInTime
+
+universe u
+
+variable {W : Type u}
+
+/-! ## 1. The reach lemma -/
+
+/-- **A use of at least the level leaves nothing.** With nothing given from nothing (`nothing`), where
+the level `x` is at most the use `d` (`takes`), `RegimeMargin.step giving d x` is nothing: the use takes
+all there is, and nothing is given from nothing. No premise on `hi`. -/
+theorem step_takes_all {giving : Nat → Nat} (nothing : RegimeMargin.FromNothing giving) {d x : Nat}
+    (takes : x ≤ d) : RegimeMargin.step giving d x = 0 :=
+  (congrArg (fun z => z + giving z) (sub_eq_zero_of_le takes)).trans
+    ((Nat.zero_add (giving 0)).trans nothing)
+
+/-- **A level that steps by the regime's step, under any uses, stays within `hi`.** A level `X` that
+steps by `RegimeMargin.step giving (D t)` at each step `t` (`step`), where the step under no use keeps
+every level up to `hi` within `hi` (`keeps`, `RegimeMargin.Keeps giving 0 hi`) and the start `X 0` is at
+most `hi` (`high`): every `X t` is at most `hi`. By `TurningInTime.kept_within` at each step. Nothing is
+asked of the uses `D`. -/
+theorem levels_within {giving : Nat → Nat} {hi : Nat} (keeps : RegimeMargin.Keeps giving 0 hi)
+    {X D : Nat → Nat} (high : X 0 ≤ hi)
+    (step : ∀ t, X (t + 1) = RegimeMargin.step giving (D t) (X t)) : ∀ t, X t ≤ hi
+  | 0 => high
+  | t + 1 => Nat.le_trans (Nat.le_of_eq (step t))
+      (kept_within keeps (D t) (levels_within keeps high step t))
+
+/-- **The reach lemma, on a level and its uses.** A level `X` that steps by
+`RegimeMargin.step giving (D t)` at each step `t` (`step`), with nothing given from nothing (`nothing`),
+the step under no use keeping every level up to `hi` within `hi` (`keeps`,
+`RegimeMargin.Keeps giving 0 hi`) and the start `X 0` at most `hi` (`high`): where the use at step `n`
+is at least `hi` (`reaches`), the level at step `n + 1` is nothing. The level at step `n` is at most
+`hi` (`levels_within`), so at most the use, which takes all of it (`step_takes_all`). Nothing is asked
+of the uses at other steps. -/
+theorem reach_levels {giving : Nat → Nat} {hi : Nat} (nothing : RegimeMargin.FromNothing giving)
+    (keeps : RegimeMargin.Keeps giving 0 hi) {X D : Nat → Nat} (high : X 0 ≤ hi)
+    (step : ∀ t, X (t + 1) = RegimeMargin.step giving (D t) (X t)) {n : Nat} (reaches : hi ≤ D n) :
+    X (n + 1) = 0 :=
+  (step n).trans (step_takes_all nothing (Nat.le_trans (levels_within keeps high step n) reaches))
+
+/-- **On the pair's course every level is at most `hi`.** On the course of
+`pair after (fun w x => RegimeMargin.step giving (use w) x)` from `(w, x)`, the way after a step any
+function `after` of the way and the level: where the step under no use keeps every level up to `hi`
+within `hi` (`keeps`) and the start's level `x` is at most `hi` (`high`), the level at every step `t` is
+at most `hi`. `levels_within` read on the pair. On the course as it was
+(`after := fun w _ => alone w`), at `t := hi`, it is the first half of the private
+`TurningInTime.takes_at_hi`. -/
+theorem pair_within {after : W → Nat → W} {giving : Nat → Nat} {use : W → Nat} {hi : Nat}
+    (keeps : RegimeMargin.Keeps giving 0 hi) {w : W} {x : Nat} (high : x ≤ hi) (t : Nat) :
+    (Law.orbit (pair after (fun w x => RegimeMargin.step giving (use w) x)) (w, x) t).2 ≤ hi :=
+  levels_within keeps
+    (X := fun t => (Law.orbit (pair after (fun w x => RegimeMargin.step giving (use w) x)) (w, x) t).2)
+    (D := fun t =>
+      use (Law.orbit (pair after (fun w x => RegimeMargin.step giving (use w) x)) (w, x) t).1)
+    high (fun _ => rfl) t
+
+/-- **The reach lemma, on the pair's course.** On the course of
+`pair after (fun w x => RegimeMargin.step giving (use w) x)` from `(w, x)`, the way after a step any
+function `after` of the way and the level: with nothing given from nothing (`nothing`), the step under no
+use keeping every level up to `hi` within `hi` (`keeps`, `RegimeMargin.Keeps giving 0 hi`) and the
+start's level `x` at most `hi` (`high`), where the way at step `n` uses at least `hi` (`reaches`), the
+level at step `n + 1` is nothing. `reach_levels` read on the pair. No premise says how the use came to
+be at least `hi`: a rise at every step (`TurningInTime.rising_takes_all`, restated below as
+`rising_takes_all_by_reach`) is one way, and a way whose next way reads the level is allowed. -/
+theorem reach {after : W → Nat → W} {giving : Nat → Nat} {use : W → Nat} {hi : Nat}
+    (nothing : RegimeMargin.FromNothing giving) (keeps : RegimeMargin.Keeps giving 0 hi)
+    {w : W} {x : Nat} (high : x ≤ hi) {n : Nat}
+    (reaches : hi ≤
+      use (Law.orbit (pair after (fun w x => RegimeMargin.step giving (use w) x)) (w, x) n).1) :
+    (Law.orbit (pair after (fun w x => RegimeMargin.step giving (use w) x)) (w, x) (n + 1)).2 = 0 :=
+  reach_levels nothing keeps
+    (X := fun t => (Law.orbit (pair after (fun w x => RegimeMargin.step giving (use w) x)) (w, x) t).2)
+    (D := fun t =>
+      use (Law.orbit (pair after (fun w x => RegimeMargin.step giving (use w) x)) (w, x) t).1)
+    high (fun _ => rfl) reaches
+
+/-- **`TurningInTime.rising_takes_all`, restated, from the reach lemma.** The statement is that law's,
+word for word: on the course as it was from `(w, x)`, with nothing given from nothing (`nothing`), the
+step under no use keeping every level up to `hi` within `hi` (`keeps`), the start's level `x` at most
+`hi` (`high`), and the use rising strictly at each of the first `hi` steps of `alone`'s orbit from `w`
+(`rises`), the level at step `hi + 1` is nothing. By `reach` at `n := hi` on the course as it was
+(`after := fun w _ => alone w`), its `reaches` from `TurningInTime.rises_from` through
+`TurningInTime.asItWas_way`. -/
+theorem rising_takes_all_by_reach {alone : W → W} {giving : Nat → Nat} {use : W → Nat} {hi : Nat}
+    (nothing : RegimeMargin.FromNothing giving) (keeps : RegimeMargin.Keeps giving 0 hi)
+    {w : W} {x : Nat} (high : x ≤ hi)
+    (rises : ∀ j, j < hi → use (Law.orbit alone w j) < use (Law.orbit alone w (j + 1))) :
+    (Law.orbit (asItWas alone (fun w x => RegimeMargin.step giving (use w) x)) (w, x) (hi + 1)).2 = 0 :=
+  reach (after := fun w _ => alone w) (use := use) (w := w) (n := hi) nothing keeps high
+    (Eq.subst (motive := fun v => hi ≤ use v) (asItWas_way alone _ (w, x) hi).symm
+      (rises_from rises hi (Nat.le_refl hi)))
+
+/-- **`TurningInTime.rising_meets_level`, restated, with `pair_within` in place of the private
+`takes_at_hi`.** The statement is that law's, word for word: under `keeps`, `high` and `rises` as in
+`rising_takes_all_by_reach`, there is a step `j` at most `hi` of the course as it was from `(w, x)` at
+which the level is at most the use of the way `alone` taken `j` times, the use below the level at every
+step before it. The proof is that law's, with the level at step `hi` at most `hi` by `pair_within` and
+`hi` at most the use there by `TurningInTime.rises_from`. -/
+theorem rising_meets_level_by_within {alone : W → W} {giving : Nat → Nat} {use : W → Nat} {hi : Nat}
+    (keeps : RegimeMargin.Keeps giving 0 hi) {w : W} {x : Nat} (high : x ≤ hi)
+    (rises : ∀ j, j < hi → use (Law.orbit alone w j) < use (Law.orbit alone w (j + 1))) :
+    ∃ j, j ≤ hi ∧
+      (Law.orbit (asItWas alone (fun w x => RegimeMargin.step giving (use w) x)) (w, x) j).2 ≤
+        use (Law.orbit alone w j) ∧
+      ∀ i, i < j → use (Law.orbit alone w i) <
+        (Law.orbit (asItWas alone (fun w x => RegimeMargin.step giving (use w) x)) (w, x) i).2 :=
+  match first_of_decided
+      (P := fun t => use (Law.orbit alone w t) <
+        (Law.orbit (asItWas alone (fun w x => RegimeMargin.step giving (use w) x)) (w, x) t).2)
+      (Q := fun t =>
+        (Law.orbit (asItWas alone (fun w x => RegimeMargin.step giving (use w) x)) (w, x) t).2 ≤
+          use (Law.orbit alone w t))
+      (fun _ => Nat.lt_or_ge _ _) hi with
+  | .inl all => absurd (Nat.le_trans (pair_within (after := fun w _ => alone w) (use := use) keeps high hi)
+      (rises_from rises hi (Nat.le_refl hi))) (Nat.not_le_of_gt (all hi (Nat.le_refl hi)))
+  | .inr ⟨j, le, takes, before⟩ => ⟨j, le, takes, before⟩
+
+/-! ## 2. A value that every reading sets above the take -/
+
+section HeldValue
+
+variable {A : Nat → Nat → Nat} {fB : Nat × Nat → Nat → Nat} {h : Nat × Nat → Nat → Nat}
+  {reads : Nat → Bool}
+
+/-- The fast configuration after one turn is the fast step's, reading or not. Needed by
+`level_steps`. -/
+private theorem turn_fast (f : Nat × Nat → Nat → Nat × Nat) (h : Nat × Nat → Nat → Nat) :
+    ∀ (b : Bool) (p : (Nat × Nat) × Nat), (Pace.turn f h b p).1 = f p.1 p.2
+  | true, _ => rfl
+  | false, _ => rfl
+
+/-- One turn keeps whatever the take and the value both are at least. Where the take after a move is
+at least whatever the take and the value both are at least (`low`) and every reading sets the value
+above the take as it stood or above the take as moved (`above`): after one turn, reading or not, from a
+take and a value both at least `k`, both are at least `k`. Needed by `reading_raises` and
+`lower_kept`. -/
+private theorem turn_lower (low : ∀ x m k, k ≤ x → k ≤ m → k ≤ A x m)
+    (above : ∀ (p : Nat × Nat) (m : Nat), p.1 < h p m ∨ A p.1 m < h p m) {k : Nat} :
+    ∀ (b : Bool) (p : (Nat × Nat) × Nat), k ≤ p.1.1 → k ≤ p.2 →
+      k ≤ (Pace.turn (ClosedCapture.join A fB) h b p).1.1 ∧
+        k ≤ (Pace.turn (ClosedCapture.join A fB) h b p).2
+  | true, p, kx, km =>
+    ⟨low p.1.1 p.2 k kx km, (above p.1 p.2).elim
+      (fun set => Nat.le_of_lt (Nat.lt_of_le_of_lt kx set))
+      (fun set => Nat.le_of_lt (Nat.lt_of_le_of_lt (low p.1.1 p.2 k kx km) set))⟩
+  | false, p, kx, km => ⟨low p.1.1 p.2 k kx km, km⟩
+
+/-- One turn from a take below the value raises what both are at least. Where below the value the take
+rises strictly (`raises`) and every reading sets the value above the take as it stood or above the take
+as moved (`above`): after one turn, reading or not, from a take at least `k` and below the value, the
+take and the value are both at least `k + 1`. Needed by `reading_raises`. -/
+private theorem turn_raises (raises : ∀ x m, x < m → x < A x m)
+    (above : ∀ (p : Nat × Nat) (m : Nat), p.1 < h p m ∨ A p.1 m < h p m) {k : Nat} :
+    ∀ (b : Bool) (p : (Nat × Nat) × Nat), k ≤ p.1.1 → p.1.1 < p.2 →
+      k + 1 ≤ (Pace.turn (ClosedCapture.join A fB) h b p).1.1 ∧
+        k + 1 ≤ (Pace.turn (ClosedCapture.join A fB) h b p).2
+  | true, p, kx, below =>
+    have moved : k + 1 ≤ A p.1.1 p.2 :=
+      Nat.succ_le_of_lt (Nat.lt_of_le_of_lt kx (raises p.1.1 p.2 below))
+    ⟨moved, (above p.1 p.2).elim
+      (fun set => Nat.succ_le_of_lt (Nat.lt_of_le_of_lt kx set))
+      (fun set => Nat.le_of_lt (Nat.lt_of_le_of_lt moved set))⟩
+  | false, p, kx, below =>
+    ⟨Nat.succ_le_of_lt (Nat.lt_of_le_of_lt kx (raises p.1.1 p.2 below)),
+      Nat.succ_le_of_lt (Nat.lt_of_le_of_lt kx below)⟩
+
+/-- A reading turn and the turn after it raise what the take and the value both are at least. Under
+`low`, `raises` and `above`: from a take and a value both at least `k`, after a reading turn and one
+more turn, reading or not, both are at least `k + 1`. After the reading turn the take is at least `k`
+and the value at least `k + 1`; where the take is then below the value the next turn raises both
+(`turn_raises`), and otherwise the take is at least `k + 1` already and the next turn keeps both
+(`turn_lower`). Needed by `reading_step`. -/
+private theorem reading_raises (low : ∀ x m k, k ≤ x → k ≤ m → k ≤ A x m)
+    (raises : ∀ x m, x < m → x < A x m)
+    (above : ∀ (p : Nat × Nat) (m : Nat), p.1 < h p m ∨ A p.1 m < h p m) {k : Nat} (b : Bool)
+    (p : (Nat × Nat) × Nat) (kx : k ≤ p.1.1) (km : k ≤ p.2) :
+    k + 1 ≤ (Pace.turn (ClosedCapture.join A fB) h b
+        (Pace.turn (ClosedCapture.join A fB) h true p)).1.1 ∧
+      k + 1 ≤ (Pace.turn (ClosedCapture.join A fB) h b
+        (Pace.turn (ClosedCapture.join A fB) h true p)).2 :=
+  have moved : k ≤ A p.1.1 p.2 := low p.1.1 p.2 k kx km
+  have set : k + 1 ≤ h p.1 p.2 := (above p.1 p.2).elim
+    (fun lt => Nat.succ_le_of_lt (Nat.lt_of_le_of_lt kx lt))
+    (fun lt => Nat.succ_le_of_lt (Nat.lt_of_le_of_lt moved lt))
+  (Nat.lt_or_ge (A p.1.1 p.2) (h p.1 p.2)).elim
+    (fun below => turn_raises (fB := fB) raises above b
+      (Pace.turn (ClosedCapture.join A fB) h true p) moved below)
+    (fun reached => turn_lower (fB := fB) low above b
+      (Pace.turn (ClosedCapture.join A fB) h true p) (Nat.le_trans set reached) set)
+
+/-- Along the course, what the take and the value both are at least is kept. Under `low` and `above`:
+where at step `t` the take and the value are both at least `k`, they are at every later step.
+`Pace.stays_turned` at `turn_lower`. Needed by `gap_raises`. -/
+private theorem lower_kept (low : ∀ x m k, k ≤ x → k ≤ m → k ≤ A x m)
+    (above : ∀ (p : Nat × Nat) (m : Nat), p.1 < h p m ∨ A p.1 m < h p m)
+    (c : (Nat × Nat) × Nat) {k t : Nat}
+    (lower : k ≤ (Pace.paced (ClosedCapture.join A fB) h reads c t).1.1 ∧
+      k ≤ (Pace.paced (ClosedCapture.join A fB) h reads c t).2) (j : Nat) :
+    k ≤ (Pace.paced (ClosedCapture.join A fB) h reads c (t + j)).1.1 ∧
+      k ≤ (Pace.paced (ClosedCapture.join A fB) h reads c (t + j)).2 :=
+  Pace.stays_turned (f := ClosedCapture.join A fB) (h := h) (reads := reads)
+    (Q := fun p : (Nat × Nat) × Nat => k ≤ p.1.1 ∧ k ≤ p.2)
+    (fun b p held => turn_lower low above b p held.1 held.2) c lower j
+
+/-- Two steps after a reading step, what the take and the value both are at least is one more. Under
+`low`, `raises` and `above`: where step `r` reads (`at_r`) and the take and the value at step `r` are
+both at least `k`, at step `r + 2` both are at least `k + 1`. `reading_raises` on the course, by
+`Pace.paced_succ` twice. Needed by `gap_raises`. -/
+private theorem reading_step (low : ∀ x m k, k ≤ x → k ≤ m → k ≤ A x m)
+    (raises : ∀ x m, x < m → x < A x m)
+    (above : ∀ (p : Nat × Nat) (m : Nat), p.1 < h p m ∨ A p.1 m < h p m)
+    (c : (Nat × Nat) × Nat) {k r : Nat} (at_r : reads r = true)
+    (lower : k ≤ (Pace.paced (ClosedCapture.join A fB) h reads c r).1.1 ∧
+      k ≤ (Pace.paced (ClosedCapture.join A fB) h reads c r).2) :
+    k + 1 ≤ (Pace.paced (ClosedCapture.join A fB) h reads c (r + 1 + 1)).1.1 ∧
+      k + 1 ≤ (Pace.paced (ClosedCapture.join A fB) h reads c (r + 1 + 1)).2 :=
+  have one : Pace.paced (ClosedCapture.join A fB) h reads c (r + 1) =
+      Pace.turn (ClosedCapture.join A fB) h true (Pace.paced (ClosedCapture.join A fB) h reads c r) :=
+    (Pace.paced_succ c r).trans (congrArg
+      (fun b => Pace.turn (ClosedCapture.join A fB) h b
+        (Pace.paced (ClosedCapture.join A fB) h reads c r)) at_r)
+  have two : Pace.paced (ClosedCapture.join A fB) h reads c (r + 1 + 1) =
+      Pace.turn (ClosedCapture.join A fB) h (reads (r + 1))
+        (Pace.turn (ClosedCapture.join A fB) h true
+          (Pace.paced (ClosedCapture.join A fB) h reads c r)) :=
+    (Pace.paced_succ c (r + 1)).trans
+      (congrArg (Pace.turn (ClosedCapture.join A fB) h (reads (r + 1))) one)
+  Eq.subst (motive := fun q : (Nat × Nat) × Nat => k + 1 ≤ q.1.1 ∧ k + 1 ≤ q.2) two.symm
+    (reading_raises low raises above (reads (r + 1))
+      (Pace.paced (ClosedCapture.join A fB) h reads c r) lower.1 lower.2)
+
+/-- Over `L + 1` steps, what the take and the value both are at least is one more. Under `low`,
+`raises`, `above` and a reading step in every `L` steps in a row (`gaps`): where at step `t` the take
+and the value are both at least `k`, at step `t + (L + 1)` both are at least `k + 1`. Some step `r` from
+`t` to below `t + L` reads; the lower bound is kept up to `r` (`lower_kept`), is one more at `r + 2`
+(`reading_step`), and that is kept up to `t + (L + 1)`. Needed by `set_above_rises`. -/
+private theorem gap_raises (low : ∀ x m k, k ≤ x → k ≤ m → k ≤ A x m)
+    (raises : ∀ x m, x < m → x < A x m)
+    (above : ∀ (p : Nat × Nat) (m : Nat), p.1 < h p m ∨ A p.1 m < h p m) {L : Nat}
+    (gaps : ∀ t, ∃ r, t ≤ r ∧ r < t + L ∧ reads r = true)
+    (c : (Nat × Nat) × Nat) {k t : Nat}
+    (lower : k ≤ (Pace.paced (ClosedCapture.join A fB) h reads c t).1.1 ∧
+      k ≤ (Pace.paced (ClosedCapture.join A fB) h reads c t).2) :
+    k + 1 ≤ (Pace.paced (ClosedCapture.join A fB) h reads c (t + (L + 1))).1.1 ∧
+      k + 1 ≤ (Pace.paced (ClosedCapture.join A fB) h reads c (t + (L + 1))).2 :=
+  match gaps t with
+  | ⟨r, tr, rL, at_r⟩ =>
+    match le_dest tr,
+      le_dest (show r + 1 + 1 ≤ t + (L + 1) from Nat.succ_le_succ (Nat.succ_le_of_lt rL)) with
+    | ⟨a, ea⟩, ⟨b, eb⟩ =>
+      have atR : k ≤ (Pace.paced (ClosedCapture.join A fB) h reads c r).1.1 ∧
+          k ≤ (Pace.paced (ClosedCapture.join A fB) h reads c r).2 :=
+        Eq.subst (motive := fun n => k ≤ (Pace.paced (ClosedCapture.join A fB) h reads c n).1.1 ∧
+          k ≤ (Pace.paced (ClosedCapture.join A fB) h reads c n).2) ea.symm
+          (lower_kept low above c lower a)
+      Eq.subst (motive := fun n => k + 1 ≤ (Pace.paced (ClosedCapture.join A fB) h reads c n).1.1 ∧
+        k + 1 ≤ (Pace.paced (ClosedCapture.join A fB) h reads c n).2) eb.symm
+        (lower_kept low above c (reading_step low raises above c at_r atR) b)
+
+/-- **Where every reading sets the value above the take, the take and the value are both at least `k`
+at step `k * (L + 1)`.** On `Pace.paced` at a fast configuration of a take and a level and a held value,
+the fast step `ClosedCapture.join A fB`: the take `x` under the value `m` moves to `A x m`, and the level
+steps by any `fB`. Premises: the take after a move is at least whatever the take and the value both are
+at least (`low`; `Regulation.Between m x (A x m)` gives it, `low_of_between`); below the value the take
+rises strictly (`raises`); every reading `h p m` is above the take `p.1` as it stood or above the take
+`A p.1 m` as moved (`above`), whatever else the reading reads, the level included; and every `L` steps
+in a row hold a reading step (`gaps`). Then for every `k`, at step `k * (L + 1)` the take and the value
+are both at least `k`. By induction on `k` through `gap_raises`. Not asked: that the take does not pass
+the value, that it does not move away from the value from above, anything of the level's step, or
+anything of the start. -/
+theorem set_above_rises (low : ∀ x m k, k ≤ x → k ≤ m → k ≤ A x m)
+    (raises : ∀ x m, x < m → x < A x m)
+    (above : ∀ (p : Nat × Nat) (m : Nat), p.1 < h p m ∨ A p.1 m < h p m) {L : Nat}
+    (gaps : ∀ t, ∃ r, t ≤ r ∧ r < t + L ∧ reads r = true) (c : (Nat × Nat) × Nat) :
+    ∀ k, k ≤ (Pace.paced (ClosedCapture.join A fB) h reads c (k * (L + 1))).1.1 ∧
+      k ≤ (Pace.paced (ClosedCapture.join A fB) h reads c (k * (L + 1))).2
+  | 0 => ⟨Nat.zero_le _, Nat.zero_le _⟩
+  | k + 1 =>
+    Eq.subst (motive := fun n => k + 1 ≤ (Pace.paced (ClosedCapture.join A fB) h reads c n).1.1 ∧
+      k + 1 ≤ (Pace.paced (ClosedCapture.join A fB) h reads c n).2) (Nat.succ_mul k (L + 1)).symm
+      (gap_raises low raises above gaps c (set_above_rises low raises above gaps c k))
+
+end HeldValue
+
+/-- The level of the two-level course steps by the regime's step under the use of the take and the
+value there. On `Pace.paced` with the fast step
+`ClosedCapture.join A (fun p m => RegimeMargin.step giving (use p.1 m) p.2)`, by `Pace.paced_succ` and
+`turn_fast`. Needed by `set_above_takes_all` and `Needed.from_nothing`. -/
+private theorem level_steps {A : Nat → Nat → Nat} {h : Nat × Nat → Nat → Nat} {reads : Nat → Bool}
+    {giving : Nat → Nat} {use : Nat → Nat → Nat} (c : (Nat × Nat) × Nat) (t : Nat) :
+    (Pace.paced (ClosedCapture.join A (fun p m => RegimeMargin.step giving (use p.1 m) p.2)) h reads c
+        (t + 1)).1.2 =
+      RegimeMargin.step giving
+        (use (Pace.paced (ClosedCapture.join A (fun p m => RegimeMargin.step giving (use p.1 m) p.2)) h
+            reads c t).1.1
+          (Pace.paced (ClosedCapture.join A (fun p m => RegimeMargin.step giving (use p.1 m) p.2)) h
+            reads c t).2)
+        (Pace.paced (ClosedCapture.join A (fun p m => RegimeMargin.step giving (use p.1 m) p.2)) h
+          reads c t).1.2 :=
+  (congrArg (fun q : (Nat × Nat) × Nat => q.1.2) (Pace.paced_succ c t)).trans
+    (congrArg Prod.snd (turn_fast _ h (reads t) _))
+
+/-- `hi * (L + 1) + 1` is at most `(2 * hi + 1) * L` where `L` is at least one. Needed by `ends_by`. -/
+private theorem step_bound {hi L : Nat} (pos : 1 ≤ L) : hi * (L + 1) + 1 ≤ (2 * hi + 1) * L :=
+  Nat.le_trans
+    (Nat.add_le_add
+      (Nat.le_trans (Nat.le_of_eq (Nat.mul_succ hi L))
+        (Nat.add_le_add_left
+          (Nat.le_trans (Nat.le_of_eq (Nat.mul_one hi).symm) (Nat.mul_le_mul_left hi pos)) (hi * L)))
+      pos)
+    (Nat.le_of_eq ((Nat.succ_mul (2 * hi) L).trans
+      (congrArg (· + L) ((congrArg (· * L) (Naturals.two_mul hi)).trans (add_mul_split hi hi L)))).symm)
+
+/-- Where every `L` steps in a row hold a reading step (`gaps`, which makes `L` at least one), an
+amount that is nothing at step `hi * (L + 1) + 1` is nothing at some step at most `(2 * hi + 1) * L`.
+Needed by `set_above_ends`, `set_above_ends_moved_first` and `set_above_ends_read_after`. -/
+private theorem ends_by {reads : Nat → Bool} {hi L : Nat}
+    (gaps : ∀ t, ∃ r, t ≤ r ∧ r < t + L ∧ reads r = true) {X : Nat → Nat}
+    (ended : X (hi * (L + 1) + 1) = 0) : ∃ n, n ≤ (2 * hi + 1) * L ∧ X n = 0 :=
+  match gaps 0 with
+  | ⟨r, _, rL, _⟩ =>
+    ⟨hi * (L + 1) + 1,
+      step_bound (Nat.succ_le_of_lt (Nat.lt_of_le_of_lt (Nat.zero_le r)
+        (Eq.subst (motive := fun z => r < z) (Nat.zero_add L) rL))),
+      ended⟩
+
+/-- `Regulation.Between m x (A x m)` at every take and value gives `set_above_rises`'s `low`: the take
+after a move is at least whatever the take and the value both are at least. Only the two lower bounds of
+`Between` are used. -/
+theorem low_of_between {A : Nat → Nat → Nat} (between : ∀ x m, Regulation.Between m x (A x m)) :
+    ∀ x m k, k ≤ x → k ≤ m → k ≤ A x m :=
+  fun x m _ kx km => (Nat.le_total m x).elim
+    (fun mx => Nat.le_trans km ((between x m).1 mx).1)
+    (fun xm => Nat.le_trans kx ((between x m).2 xm).1)
+
+/-- A take that moves strictly nearer the value wherever they differ, the gap `gap (A x m) m` below
+`gap x m` (`nearer`), rises strictly below the value: `set_above_rises`'s `raises`. Below the value a take
+that did not rise would be no nearer. What `nearer` says from above the value is not used. -/
+theorem raises_of_nearer {A : Nat → Nat → Nat}
+    (nearer : ∀ x m, x ≠ m → gap (A x m) m < gap x m) : ∀ x m, x < m → x < A x m :=
+  fun x m below => (Nat.lt_or_ge x (A x m)).elim id
+    (fun back => absurd
+      (Nat.lt_of_lt_of_le (nearer x m (Nat.ne_of_lt below))
+        (Nat.le_trans (Nat.le_of_eq (Regulation.gap_of_ge (Nat.le_of_lt below)))
+          (Nat.le_trans (Optimum.sub_le_sub_left_of_le back m)
+            (Nat.le_of_eq (Regulation.gap_of_ge (Nat.le_trans back (Nat.le_of_lt below))).symm))))
+      (Nat.lt_irrefl _))
+
+/-- **A held value that every reading sets above the take leaves the level nothing at step
+`hi * (L + 1) + 1`.** On `Pace.paced` at a fast configuration of a take `x` and a level `y` and a held
+value `m`: the take moves to `A x m`, the level steps by `RegimeMargin.step giving (use x m)`, and at a
+reading step the value becomes `h (x, y) m`. Premises: the take after a move is at least whatever the
+take and the value both are at least (`low`); below the value the take rises strictly (`raises`); every
+reading is above the take as it stood or above the take as moved (`above`); every `L` steps in a row hold
+a reading step (`gaps`); the use is at least whatever the take and the value both are at least (`least`:
+the take as it stands, `use := fun x _ => x`, and the take as moved, `use := A`, both meet it); nothing
+is given from nothing (`nothing`); the step under no use keeps every level up to `hi` within `hi`
+(`keeps`, `RegimeMargin.Keeps giving 0 hi`); and the start's level is at most `hi` (`high`). Then the
+level at step `hi * (L + 1) + 1` is nothing. The take and the value are both at least `hi` at step
+`hi * (L + 1)` (`set_above_rises`), so the use there is, and `reach_levels` gives the rest. Not
+concluded: that the level is nothing at no earlier step, or that it stays nothing. -/
+theorem set_above_takes_all {A : Nat → Nat → Nat} {h : Nat × Nat → Nat → Nat} {reads : Nat → Bool}
+    {giving : Nat → Nat} {use : Nat → Nat → Nat} {hi L : Nat}
+    (low : ∀ x m k, k ≤ x → k ≤ m → k ≤ A x m) (raises : ∀ x m, x < m → x < A x m)
+    (above : ∀ (p : Nat × Nat) (m : Nat), p.1 < h p m ∨ A p.1 m < h p m)
+    (gaps : ∀ t, ∃ r, t ≤ r ∧ r < t + L ∧ reads r = true)
+    (least : ∀ x m k, k ≤ x → k ≤ m → k ≤ use x m)
+    (nothing : RegimeMargin.FromNothing giving) (keeps : RegimeMargin.Keeps giving 0 hi)
+    {c : (Nat × Nat) × Nat} (high : c.1.2 ≤ hi) :
+    (Pace.paced (ClosedCapture.join A (fun p m => RegimeMargin.step giving (use p.1 m) p.2)) h reads c
+      (hi * (L + 1) + 1)).1.2 = 0 :=
+  have risen := set_above_rises (fB := fun p m => RegimeMargin.step giving (use p.1 m) p.2) low raises
+    above gaps c hi
+  reach_levels nothing keeps
+    (X := fun t => (Pace.paced
+      (ClosedCapture.join A (fun p m => RegimeMargin.step giving (use p.1 m) p.2)) h reads c t).1.2)
+    (D := fun t => use
+      (Pace.paced (ClosedCapture.join A (fun p m => RegimeMargin.step giving (use p.1 m) p.2)) h
+        reads c t).1.1
+      (Pace.paced (ClosedCapture.join A (fun p m => RegimeMargin.step giving (use p.1 m) p.2)) h
+        reads c t).2)
+    high (level_steps (A := A) (h := h) (reads := reads) (giving := giving) (use := use) c)
+    (least _ _ hi risen.1 risen.2)
+
+/-- **A held value that every reading sets above what is taken ends the stock: the statement as it was
+asked, in the order of taking and reading `Pace.turn` has.** On `Pace.paced` at a fast configuration of
+a take `x` and a level `y` and a held value `m`: the take moves to `A x m`, the level steps under the
+take as it stands, `RegimeMargin.step giving x y`, and at a reading step the value becomes `h (x, y) m`,
+read from the configuration before the step. Premises: the take after a move lies between the take and
+the value (`between`, `Regulation.Between m x (A x m)`); below the value the take rises strictly
+(`raises`); every reading sets the value above the take, for every fast configuration `p` and value `m`,
+`p.1 < h p m` (`above`); every `L` steps in a row hold a reading step (`gaps`: `Pace` has no such
+premise, so it is a hypothesis here); nothing is given from nothing (`nothing`); the step under no take
+keeps every level up to `hi` within `hi` (`keeps`, `RegimeMargin.Keeps giving 0 hi`); and the start's
+level is at most `hi` (`high`). Then at some step `n` at most `(2 * hi + 1) * L` the level is nothing:
+the step `hi * (L + 1) + 1` (`set_above_takes_all` at `use := fun x _ => x`), which is at most
+`(2 * hi + 1) * L` since `gaps` makes `L` at least one. Of `between`, only that the take after a move is
+not below both the take and the value is used (`low_of_between`); strict nearing is asked only from
+below the value, and a take that moves strictly nearer wherever it differs from the value meets `raises`
+(`raises_of_nearer`). -/
+theorem set_above_ends {A : Nat → Nat → Nat} {h : Nat × Nat → Nat → Nat} {reads : Nat → Bool}
+    {giving : Nat → Nat} {hi L : Nat}
+    (between : ∀ x m, Regulation.Between m x (A x m)) (raises : ∀ x m, x < m → x < A x m)
+    (above : ∀ (p : Nat × Nat) (m : Nat), p.1 < h p m)
+    (gaps : ∀ t, ∃ r, t ≤ r ∧ r < t + L ∧ reads r = true)
+    (nothing : RegimeMargin.FromNothing giving) (keeps : RegimeMargin.Keeps giving 0 hi)
+    {c : (Nat × Nat) × Nat} (high : c.1.2 ≤ hi) :
+    ∃ n, n ≤ (2 * hi + 1) * L ∧
+      (Pace.paced (ClosedCapture.join A (fun p _ => RegimeMargin.step giving p.1 p.2)) h reads c
+        n).1.2 = 0 :=
+  ends_by gaps
+    (X := fun n => (Pace.paced (ClosedCapture.join A (fun p _ => RegimeMargin.step giving p.1 p.2)) h
+      reads c n).1.2)
+    (set_above_takes_all (use := fun x _ => x) (low_of_between between) raises
+      (fun p m => .inl (above p m)) gaps (fun _ _ _ kx _ => kx) nothing keeps high)
+
+/-- **The other order of taking: the take moves first, and the level steps under the take as moved.**
+`set_above_ends` with the level's step `RegimeMargin.step giving (A x m) y` in place of
+`RegimeMargin.step giving x y`; every premise and the conclusion are otherwise the same.
+`set_above_takes_all` at `use := A`, whose `least` is `low_of_between`. -/
+theorem set_above_ends_moved_first {A : Nat → Nat → Nat} {h : Nat × Nat → Nat → Nat}
+    {reads : Nat → Bool} {giving : Nat → Nat} {hi L : Nat}
+    (between : ∀ x m, Regulation.Between m x (A x m)) (raises : ∀ x m, x < m → x < A x m)
+    (above : ∀ (p : Nat × Nat) (m : Nat), p.1 < h p m)
+    (gaps : ∀ t, ∃ r, t ≤ r ∧ r < t + L ∧ reads r = true)
+    (nothing : RegimeMargin.FromNothing giving) (keeps : RegimeMargin.Keeps giving 0 hi)
+    {c : (Nat × Nat) × Nat} (high : c.1.2 ≤ hi) :
+    ∃ n, n ≤ (2 * hi + 1) * L ∧
+      (Pace.paced (ClosedCapture.join A (fun p m => RegimeMargin.step giving (A p.1 m) p.2)) h reads c
+        n).1.2 = 0 :=
+  ends_by gaps
+    (X := fun n => (Pace.paced
+      (ClosedCapture.join A (fun p m => RegimeMargin.step giving (A p.1 m) p.2)) h reads c n).1.2)
+    (set_above_takes_all (use := A) (low_of_between between) raises
+      (fun p m => .inl (above p m)) gaps (low_of_between between) nothing keeps high)
+
+/-- **The other order of reading: the value is read from the configuration after the step.** The
+reading at a fast configuration `p` under the value `m` is `h` of the fast configuration after the step,
+`h (ClosedCapture.join A … p m) m`, in either order of taking (any `use` that meets `least`). `between`,
+`raises`, `gaps`, `nothing`, `keeps` and `high` are `set_above_ends`'s, `least` is
+`set_above_takes_all`'s, and `above` says of `h` what it says there, `p.1 < h p m` for every fast
+configuration `p` and value `m`; here it is used at the configuration after the step, so the value is set
+above the take as moved. The conclusion is the same. `set_above_takes_all` with the second branch of its
+`above`. -/
+theorem set_above_ends_read_after {A : Nat → Nat → Nat} {h : Nat × Nat → Nat → Nat}
+    {reads : Nat → Bool} {giving : Nat → Nat} {use : Nat → Nat → Nat} {hi L : Nat}
+    (between : ∀ x m, Regulation.Between m x (A x m)) (raises : ∀ x m, x < m → x < A x m)
+    (above : ∀ (p : Nat × Nat) (m : Nat), p.1 < h p m)
+    (gaps : ∀ t, ∃ r, t ≤ r ∧ r < t + L ∧ reads r = true)
+    (least : ∀ x m k, k ≤ x → k ≤ m → k ≤ use x m)
+    (nothing : RegimeMargin.FromNothing giving) (keeps : RegimeMargin.Keeps giving 0 hi)
+    {c : (Nat × Nat) × Nat} (high : c.1.2 ≤ hi) :
+    ∃ n, n ≤ (2 * hi + 1) * L ∧
+      (Pace.paced (ClosedCapture.join A (fun p m => RegimeMargin.step giving (use p.1 m) p.2))
+        (fun p m =>
+          h (ClosedCapture.join A (fun p m => RegimeMargin.step giving (use p.1 m) p.2) p m) m)
+        reads c n).1.2 = 0 :=
+  ends_by gaps
+    (X := fun n => (Pace.paced
+      (ClosedCapture.join A (fun p m => RegimeMargin.step giving (use p.1 m) p.2))
+      (fun p m => h (ClosedCapture.join A (fun p m => RegimeMargin.step giving (use p.1 m) p.2) p m) m)
+      reads c n).1.2)
+    (set_above_takes_all (use := use) (low_of_between between) raises
+      (fun p m => .inr (above
+        (ClosedCapture.join A (fun p m => RegimeMargin.step giving (use p.1 m) p.2) p m) m))
+      gaps least nothing keeps high)
+
+/-! ## 3. Each premise dropped, a course that never ends
+
+Six small courses. Each theorem states the premises of `set_above_ends` (for `not_low`, of
+`set_above_takes_all`) that its course meets, and that the level is never nothing; the premise left out
+is the one the course does not meet. -/
+
+namespace Needed
+
+/-- A stock that gives nothing at any level. -/
+def barren (_ : Nat) : Nat := 0
+
+/-- A stock that gives one from nothing, and nothing from any other level. -/
+def spring (z : Nat) : Nat := 1 - z
+
+/-- A stock that gives as much as is left. -/
+def doubling (z : Nat) : Nat := z
+
+/-- The tent on four: what is left, or what it lacks of four, whichever is less. -/
+def tent (z : Nat) : Nat := min z (4 - z)
+
+/-- The take that never moves. -/
+def stay (x _ : Nat) : Nat := x
+
+/-- The take that moves to the value at once. -/
+def atOnce (_ m : Nat) : Nat := m
+
+/-- The take that rises by one below the value, and falls to nothing at or above it. -/
+def fall (x m : Nat) : Nat := if x < m then x + 1 else 0
+
+/-- The reading that sets the value one above the take. -/
+def oneAbove (p : Nat × Nat) (_ : Nat) : Nat := p.1 + 1
+
+/-- The reading that sets the value at the take. -/
+def atTake (p : Nat × Nat) (_ : Nat) : Nat := p.1
+
+/-- The schedule that reads at every step. -/
+def always (_ : Nat) : Bool := true
+
+/-- The schedule that never reads. -/
+def never (_ : Nat) : Bool := false
+
+/-- A configuration that the turn at every step takes to itself is the course's at every step. Needed
+by `not_rising`, `not_above` and `not_read`. -/
+private theorem fixed_course {f : Nat × Nat → Nat → Nat × Nat} {h : Nat × Nat → Nat → Nat}
+    {reads : Nat → Bool} {c : (Nat × Nat) × Nat} (fixed : ∀ t, Pace.turn f h (reads t) c = c) :
+    ∀ t, Pace.paced f h reads c t = c
+  | 0 => rfl
+  | t + 1 => (Pace.paced_succ c t).trans
+      ((congrArg (Pace.turn f h (reads t)) (fixed_course fixed t)).trans (fixed t))
+
+/-- The take that moves to the value at once lies between the take and the value. Needed by the
+courses of this section that use `atOnce`. -/
+private theorem between_atOnce : ∀ x m, Regulation.Between m x (atOnce x m) :=
+  fun _ m => ⟨fun mx => ⟨Nat.le_refl m, mx⟩, fun xm => ⟨xm, Nat.le_refl m⟩⟩
+
+/-- The schedule that reads at every step has a reading step in every one step. Needed by the courses
+of this section that read at every step. -/
+private theorem always_gaps : ∀ t, ∃ r, t ≤ r ∧ r < t + 1 ∧ always r = true :=
+  fun t => ⟨t, Nat.le_refl t, Nat.lt_succ_self t, rfl⟩
+
+/-- **Without the strict rise below the value, a course that never ends.** The take never moves
+(`stay`), which is `Regulation.Between`; every reading sets the value one above the take; every step
+reads; nothing is given at any level, so nothing from nothing, and the step under no take keeps every
+level up to one within one; the start has take nothing, level one and value one. The level is one at
+every step. Only `set_above_ends`'s `raises` is not met. -/
+theorem not_rising :
+    (∀ x m, Regulation.Between m x (stay x m)) ∧
+    (∀ (p : Nat × Nat) (m : Nat), p.1 < oneAbove p m) ∧
+    (∀ t, ∃ r, t ≤ r ∧ r < t + 1 ∧ always r = true) ∧
+    RegimeMargin.FromNothing barren ∧ RegimeMargin.Keeps barren 0 1 ∧
+    ∀ t, (Pace.paced (ClosedCapture.join stay (fun p _ => RegimeMargin.step barren p.1 p.2)) oneAbove
+      always ((0, 1), 1) t).1.2 = 1 :=
+  ⟨fun x m => Regulation.Between.refl m x, fun p _ => Nat.lt_succ_self p.1, always_gaps, rfl,
+    RegimeMargin.keeps_of_below rfl,
+    fun t => congrArg (fun q : (Nat × Nat) × Nat => q.1.2)
+      (fixed_course (f := ClosedCapture.join stay (fun p _ => RegimeMargin.step barren p.1 p.2))
+        (h := oneAbove) (reads := always) (c := ((0, 1), 1)) (fun _ => rfl) t)⟩
+
+/-- **With the value set at the take and not above it, a course that never ends.** The take moves to
+the value at once (`atOnce`), which is `Regulation.Between` and rises strictly below the value; every
+reading sets the value at the take (`atTake`); every step reads; nothing is given at any level; the
+start has take nothing, level one and value nothing. The level is one at every step. Only
+`set_above_ends`'s `above` is not met. -/
+theorem not_above :
+    (∀ x m, Regulation.Between m x (atOnce x m)) ∧ (∀ x m, x < m → x < atOnce x m) ∧
+    (∀ t, ∃ r, t ≤ r ∧ r < t + 1 ∧ always r = true) ∧
+    RegimeMargin.FromNothing barren ∧ RegimeMargin.Keeps barren 0 1 ∧
+    ∀ t, (Pace.paced (ClosedCapture.join atOnce (fun p _ => RegimeMargin.step barren p.1 p.2)) atTake
+      always ((0, 1), 0) t).1.2 = 1 :=
+  ⟨between_atOnce, fun _ _ lt => lt, always_gaps, rfl, RegimeMargin.keeps_of_below rfl,
+    fun t => congrArg (fun q : (Nat × Nat) × Nat => q.1.2)
+      (fixed_course (f := ClosedCapture.join atOnce (fun p _ => RegimeMargin.step barren p.1 p.2))
+        (h := atTake) (reads := always) (c := ((0, 1), 0)) (fun _ => rfl) t)⟩
+
+/-- **With no reading step, a course that never ends.** The take moves to the value at once; every
+reading would set the value one above the take; no step reads (`never`); nothing is given at any level;
+the start has take nothing, level one and value nothing. The level is one at every step. Only
+`set_above_ends`'s `gaps` is not met, at any `L`. -/
+theorem not_read :
+    (∀ x m, Regulation.Between m x (atOnce x m)) ∧ (∀ x m, x < m → x < atOnce x m) ∧
+    (∀ (p : Nat × Nat) (m : Nat), p.1 < oneAbove p m) ∧
+    RegimeMargin.FromNothing barren ∧ RegimeMargin.Keeps barren 0 1 ∧
+    ∀ t, (Pace.paced (ClosedCapture.join atOnce (fun p _ => RegimeMargin.step barren p.1 p.2)) oneAbove
+      never ((0, 1), 0) t).1.2 = 1 :=
+  ⟨between_atOnce, fun _ _ lt => lt, fun p _ => Nat.lt_succ_self p.1, rfl,
+    RegimeMargin.keeps_of_below rfl,
+    fun t => congrArg (fun q : (Nat × Nat) × Nat => q.1.2)
+      (fixed_course (f := ClosedCapture.join atOnce (fun p _ => RegimeMargin.step barren p.1 p.2))
+        (h := oneAbove) (reads := never) (c := ((0, 1), 0)) (fun _ => rfl) t)⟩
+
+/-- Under `spring`, the step from the level one leaves one under every use. Needed by
+`spring_level`. -/
+private theorem spring_one : ∀ d, RegimeMargin.step spring d 1 = 1
+  | 0 => rfl
+  | d + 1 => (congrArg (fun z => z + spring z)
+      (sub_eq_zero_of_le (Nat.succ_le_succ (Nat.zero_le d)))).trans rfl
+
+/-- The level of `from_nothing`'s course is one at every step. Needed by `from_nothing`. -/
+private theorem spring_level : ∀ t,
+    (Pace.paced (ClosedCapture.join atOnce (fun p _ => RegimeMargin.step spring p.1 p.2)) oneAbove
+      always ((0, 1), 1) t).1.2 = 1
+  | 0 => rfl
+  | t + 1 =>
+    (level_steps (A := atOnce) (h := oneAbove) (reads := always) (giving := spring)
+      (use := fun x _ => x) ((0, 1), 1) t).trans
+      ((congrArg (RegimeMargin.step spring _) (spring_level t)).trans (spring_one _))
+
+/-- **With something given from nothing, a course that never ends.** The take moves to the value at
+once; every reading sets the value one above the take; every step reads; the stock gives one from
+nothing and nothing from any other level (`spring`), and the step under no take keeps every level up to
+one within one; the start has take nothing, level one and value one. The level is one at every step.
+Only `set_above_ends`'s `nothing` is not met. (The take still passes every amount, since the course
+meets `set_above_rises`'s premises; that is argued here, not a Lean statement.) -/
+theorem from_nothing :
+    (∀ x m, Regulation.Between m x (atOnce x m)) ∧ (∀ x m, x < m → x < atOnce x m) ∧
+    (∀ (p : Nat × Nat) (m : Nat), p.1 < oneAbove p m) ∧
+    (∀ t, ∃ r, t ≤ r ∧ r < t + 1 ∧ always r = true) ∧ RegimeMargin.Keeps spring 0 1 ∧
+    ∀ t, (Pace.paced (ClosedCapture.join atOnce (fun p _ => RegimeMargin.step spring p.1 p.2)) oneAbove
+      always ((0, 1), 1) t).1.2 = 1 :=
+  ⟨between_atOnce, fun _ _ lt => lt, fun p _ => Nat.lt_succ_self p.1, always_gaps,
+    RegimeMargin.keeps_of_below rfl, spring_level⟩
+
+/-- The region `no_cap`'s course stays in: the value is the take or one above it, and the level is at
+least twice one more than the take. -/
+def Ahead (p : (Nat × Nat) × Nat) : Prop :=
+  p.1.1 ≤ p.2 ∧ p.2 ≤ p.1.1 + 1 ∧ p.1.1 + 1 + (p.1.1 + 1) ≤ p.1.2
+
+/-- Every turn of `no_cap`'s step keeps `Ahead`, reading or not: the take becomes the value, at most
+one more; a reading sets the value one above the old take; and twice what the take leaves is at least
+twice two more than the old take. Needed by `ahead_course`. -/
+private theorem ahead_kept (b : Bool) (p : (Nat × Nat) × Nat) (inside : Ahead p) :
+    Ahead (Pace.turn (ClosedCapture.join atOnce (fun p _ => RegimeMargin.step doubling p.1 p.2))
+      oneAbove b p) :=
+  have left : p.1.1 + 1 + 1 ≤ p.1.2 - p.1.1 := Naturals.le_sub_of_add_le
+    (show p.1.1 + (p.1.1 + 1 + 1) ≤ p.1.2 from Nat.le_trans
+      (Nat.le_of_eq (congrArg Nat.succ (Nat.add_comm p.1.1 (p.1.1 + 1)))) inside.2.2)
+  have next : p.2 + 1 ≤ p.1.2 - p.1.1 := Nat.le_trans (Nat.succ_le_succ inside.2.1) left
+  have level : p.2 + 1 + (p.2 + 1) ≤ p.1.2 - p.1.1 + (p.1.2 - p.1.1) := Nat.add_le_add next next
+  match b with
+  | true => ⟨inside.2.1, Nat.succ_le_succ inside.1, level⟩
+  | false => ⟨Nat.le_refl p.2, Nat.le_succ p.2, level⟩
+
+/-- `no_cap`'s course is in `Ahead` at every step, under every schedule of reading. Needed by
+`no_cap`. -/
+private theorem ahead_course (reads : Nat → Bool) : ∀ t,
+    Ahead (Pace.paced (ClosedCapture.join atOnce (fun p _ => RegimeMargin.step doubling p.1 p.2))
+      oneAbove reads ((0, 2), 1) t)
+  | 0 => ⟨Nat.le_succ 0, Nat.le_refl 1, Nat.le_refl 2⟩
+  | t + 1 => Eq.subst (motive := Ahead) (Pace.paced_succ ((0, 2), 1) t).symm
+      (ahead_kept (reads t) _ (ahead_course reads t))
+
+/-- **With a level not kept within `hi`, or a start above it, a course that never ends.** The take
+moves to the value at once; every reading sets the value one above the take; every step reads; the stock
+gives as much as is left (`doubling`), nothing from nothing; the start has take nothing, level two and
+value one. The level is above nothing at every step: it is at least twice one more than the take
+throughout (`Ahead`). At `hi := 0` the step under no take keeps the level nothing at nothing, and only
+`set_above_ends`'s `high` is not met, the start's level being two; at `hi := 2` the start is within `hi`
+and only `keeps` is not met, the step under no take taking two to four. -/
+theorem no_cap :
+    (∀ x m, Regulation.Between m x (atOnce x m)) ∧ (∀ x m, x < m → x < atOnce x m) ∧
+    (∀ (p : Nat × Nat) (m : Nat), p.1 < oneAbove p m) ∧
+    (∀ t, ∃ r, t ≤ r ∧ r < t + 1 ∧ always r = true) ∧
+    RegimeMargin.FromNothing doubling ∧ RegimeMargin.Keeps doubling 0 0 ∧
+    RegimeMargin.step doubling 0 2 = 4 ∧
+    ∀ t, 0 < (Pace.paced (ClosedCapture.join atOnce (fun p _ => RegimeMargin.step doubling p.1 p.2))
+      oneAbove always ((0, 2), 1) t).1.2 :=
+  ⟨between_atOnce, fun _ _ lt => lt, fun p _ => Nat.lt_succ_self p.1, always_gaps, rfl,
+    RegimeMargin.keeps_of_below rfl, rfl,
+    fun t => Nat.lt_of_lt_of_le (Nat.succ_pos _) (ahead_course always t).2.2⟩
+
+/-- The region `not_low`'s course stays in: four configurations, the level four in each. -/
+def Cycle (p : (Nat × Nat) × Nat) : Prop :=
+  p = ((0, 4), 0) ∨ p = ((0, 4), 1) ∨ p = ((1, 4), 1) ∨ p = ((0, 4), 2)
+
+/-- A reading turn of `not_low`'s step keeps `Cycle`: the first configuration goes to the second, the
+second to the third, the third to the fourth, the fourth to the third. Needed by `cycle_course`. -/
+private theorem cycle_kept (p : (Nat × Nat) × Nat) : Cycle p →
+    Cycle (Pace.turn (ClosedCapture.join fall (fun p _ => RegimeMargin.step tent p.1 p.2))
+      oneAbove true p)
+  | .inl e => .inr (.inl ((congrArg (Pace.turn
+      (ClosedCapture.join fall (fun p _ => RegimeMargin.step tent p.1 p.2)) oneAbove true) e).trans rfl))
+  | .inr (.inl e) => .inr (.inr (.inl ((congrArg (Pace.turn
+      (ClosedCapture.join fall (fun p _ => RegimeMargin.step tent p.1 p.2)) oneAbove true) e).trans rfl)))
+  | .inr (.inr (.inl e)) => .inr (.inr (.inr ((congrArg (Pace.turn
+      (ClosedCapture.join fall (fun p _ => RegimeMargin.step tent p.1 p.2)) oneAbove true) e).trans rfl)))
+  | .inr (.inr (.inr e)) => .inr (.inr (.inl ((congrArg (Pace.turn
+      (ClosedCapture.join fall (fun p _ => RegimeMargin.step tent p.1 p.2)) oneAbove true) e).trans rfl)))
+
+/-- `not_low`'s course is in `Cycle` at every step. Needed by `not_low`. -/
+private theorem cycle_course : ∀ t,
+    Cycle (Pace.paced (ClosedCapture.join fall (fun p _ => RegimeMargin.step tent p.1 p.2))
+      oneAbove always ((0, 4), 0) t)
+  | 0 => .inl rfl
+  | t + 1 => Eq.subst (motive := Cycle) (Pace.paced_succ ((0, 4), 0) t).symm
+      (cycle_kept _ (cycle_course t))
+
+/-- In `Cycle` the level is four. Needed by `not_low`. -/
+private theorem cycle_level {p : (Nat × Nat) × Nat} : Cycle p → p.1.2 = 4
+  | .inl e => congrArg (fun q : (Nat × Nat) × Nat => q.1.2) e
+  | .inr (.inl e) => congrArg (fun q : (Nat × Nat) × Nat => q.1.2) e
+  | .inr (.inr (.inl e)) => congrArg (fun q : (Nat × Nat) × Nat => q.1.2) e
+  | .inr (.inr (.inr e)) => congrArg (fun q : (Nat × Nat) × Nat => q.1.2) e
+
+/-- **With a take that falls below both the take and the value, a course that never ends.** The take
+rises by one below the value and falls to nothing at or above it (`fall`), so below the value it rises
+strictly; every reading sets the value one above the take; every step reads; the stock is the tent on
+four, nothing from nothing, and the step under no take keeps every level up to four within four; the
+start has take nothing, level four and value nothing. The takes run nothing, nothing, one, nothing, one,
+and so on, and the level is four at every step. Only `set_above_takes_all`'s `low` is not met (so
+`set_above_ends`'s `between` is not): at take one and value one the take falls to nothing. -/
+theorem not_low :
+    (∀ x m, x < m → x < fall x m) ∧ (∀ (p : Nat × Nat) (m : Nat), p.1 < oneAbove p m) ∧
+    (∀ t, ∃ r, t ≤ r ∧ r < t + 1 ∧ always r = true) ∧
+    RegimeMargin.FromNothing tent ∧ RegimeMargin.Keeps tent 0 4 ∧ fall 1 1 = 0 ∧
+    ∀ t, (Pace.paced (ClosedCapture.join fall (fun p _ => RegimeMargin.step tent p.1 p.2)) oneAbove
+      always ((0, 4), 0) t).1.2 = 4 :=
+  ⟨fun x _ lt => Eq.subst (motive := fun z => x < z) (if_pos lt).symm (Nat.lt_succ_self x),
+    fun p _ => Nat.lt_succ_self p.1, always_gaps, rfl, RegimeMargin.keeps_of_below rfl, rfl,
+    fun t => cycle_level (cycle_course t)⟩
+
+end Needed
+
+end ScratchReach
+end Becoming

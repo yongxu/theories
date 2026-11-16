@@ -1,0 +1,22 @@
+{
+  "tree": "/Users/ren/tmp/dj/batch17/below-ends-uptake",
+  "modules": 22,
+  "ran": [
+    "Becoming.ScratchBelowEndsUptake",
+    "BecomingScratchBelowEndsUptakeAxiomAudit"
+  ],
+  "reused": 21,
+  "unclean": [],
+  "audits": {
+    "Becoming.ScratchBelowEndsUptake": {
+      "theorems": 32,
+      "declarations": 39,
+      "with_axioms": {}
+    }
+  },
+  "seconds": {
+    "Becoming.ScratchBelowEndsUptake": 7.395,
+    "BecomingScratchBelowEndsUptakeAxiomAudit": 0.629
+  }
+}
+exit 0

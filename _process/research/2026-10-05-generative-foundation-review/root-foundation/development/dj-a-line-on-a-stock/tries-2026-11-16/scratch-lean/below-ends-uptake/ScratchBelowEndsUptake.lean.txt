@@ -1,0 +1,598 @@
+import Becoming.Continuation
+
+/-!
+# Below the need of what gives to it, taking from a condition does not go on
+
+AI-written (Fable), 16 November 2026. Scratch; not on main.
+
+`Becoming.Continuation` proves the loss of renewal for good on a flow: where whatever gives to a
+condition depends on it at a need of at least `m` and is supported where it gives, a level below
+`m` stays below (`Flow.stays_below_at`) and nothing is given to it (`Flow.given_zero_below`).
+`Becoming.Flow` proves that taking at arbitrarily late steps needs giving
+(`Flow.uptake_needs_replenishment_from`). This module makes the two meet in one law, and keeps
+what the law does not say.
+
+* **The law, on one condition.** From a step `T` at which the level of `c` is below `m`, with, at
+  every step from `T` on, the flow balanced on `c` and whatever gives to `c` depending on it at a
+  need of at least `m` and supported where it gives: it is not the case that something is taken
+  from `c` at arbitrarily late steps (`Flow.below_ends_uptake_from`). Under balance everywhere,
+  only active formations giving and activity needing support, the premises are those of
+  `Flow.stays_below` (`Flow.below_ends_uptake`). So formations that take from `c` at their first
+  active step do not arise at arbitrarily late steps (`Flow.below_ends_arising_taking`), and `n`
+  steps of joint excess from a level below `n + m` end the taking from a level that may be at or
+  above the need (`Flow.joint_excess_ends_uptake`).
+* **The same law of a family read as one.** With the coupled gate of
+  `Flow.family_stays_below_at`, nothing is given to a family whose stock is below `m`
+  (`Flow.family_replenishment_zero_below`, the family form of `Flow.given_zero_below`); from such
+  a step on the stock stays below and nothing is given (`Flow.family_unreplenished_below_from`),
+  and taking from the family does not recur (`Flow.family_below_ends_uptake_from`).
+* **How much.** Over any `N` steps from `T` the stock after them, with all that was taken across
+  them, is the stock at `T`, and something is taken at fewer than `m` of those steps
+  (`Flow.family_uptake_within_below_from`).
+* **A step from which on nothing is taken.** That there is one is not refuted
+  (`Flow.family_uptake_stops_unrefuted_below_from`). The step is not exhibited.
+* **What the law does not say: arising.** "Below the need for good, arising is not unceasing" is
+  false. In `Sprouting` every premise of the law holds from step one, the level standing at one
+  below the renewer's need of two, and a formation that depends on the condition at need one and
+  takes nothing arises across every even step (`Sprouting.arises_for_ever_below`). The law holds
+  of taking, and of arising only where the arising takes.
+* **Each premise is needed.** One giver and one taker at every step, with the level, the giver's
+  need and its activity as parameters: something is taken at every step, one premise failing and
+  the other four holding. The gate (`OnePremiseLess.gate_needed`); the level below the need
+  (`OnePremiseLess.below_needed`); activity needing support (`OnePremiseLess.support_needed`);
+  only active formations giving (`OnePremiseLess.acting_needed`); balance
+  (`OnePremiseLess.balance_needed`).
+* **Checks, not laws to land.** The paper record's proof from `Flow.stays_below`,
+  `Flow.given_zero_below` and `Flow.uptake_needs_replenishment_from` alone
+  (`Flow.below_ends_uptake_by_the_three_laws`). `Flow.given_zero_below` and the one-condition law
+  as the family laws at the family of the one condition (`Flow.given_zero_below_as_case`,
+  `Flow.below_ends_uptake_from_as_case`), and `Flow.family_stays_below_at` with its step "nothing
+  is given" by `Flow.family_replenishment_zero_below` (`Flow.family_stays_below_at_as_case`).
+
+No new structure carries the laws: each is stated in the definitions of `Becoming.Flow` and
+`Becoming.Continuation` as they stand, and the witnesses are small flows and webs. No ethical
+predicate, ranking or axiom occurs.
+-/
+
+namespace Becoming
+
+variable {F C : Type}
+
+namespace Flow
+
+variable {L : Flow F C} {W : Web F C}
+
+/-! ## A family of conditions read as one -/
+
+/-- **Nothing is given to a family whose stock is below the need of what gives to it**, at one
+step. Premises, all at the step `t`: whatever takes part and gives to a member of the family is
+supported there (`givers`); whatever takes part and gives to a member depends on some member at a
+need of at least `m` (`gated`, the coupled gate); the family's stock is below `m` (`below`). Then
+the family's replenishment across the step from `t` is zero. A giver's need is at most the level of
+the member it depends on, which is at most the stock. The family form of `Flow.given_zero_below`;
+the step `none` inside the proof of `Flow.family_stays_below_at` proves the same inline. -/
+theorem family_replenishment_zero_below {ds : List C} {m t : Nat}
+    (givers : ∀ d, d ∈ ds → L.GiversSupported W t d)
+    (gated : ∀ f, f ∈ L.present t → ∀ d, d ∈ ds → 0 < L.give t f d →
+      ∃ e, e ∈ ds ∧ W.requires t f e ∧ m ≤ W.need t f e)
+    (below : W.stock ds t < m) : L.replenishment ds t = 0 :=
+  total_eq_zero fun d mem => total_eq_zero fun f present => eq_zero_of_not_pos fun gives =>
+    match gated f present d mem gives with
+    | ⟨e, inside, depends, high⟩ =>
+      Nat.lt_irrefl m (Nat.lt_of_le_of_lt (Nat.le_trans high (Nat.le_trans
+        (givers d mem f present gives e depends)
+        (le_total_of_mem (q := W.level t) inside))) below)
+
+/-- **From a stock below the need on, the stock stays below and nothing is given.** Premises, each
+at every step from `T` on: the flow balances on the family (`balances`); whatever takes part and
+gives to a member is supported there (`givers`); whatever takes part and gives to a member depends
+on some member at a need of at least `m` (`gated`). And at `T` the family's stock is below `m`
+(`below`). Then at every step `t` from `T` on the stock is below `m` and the family's replenishment
+across the step from `t` is zero. `Flow.family_stays_below_at` at the offset of `t` from `T`, then
+`Flow.family_replenishment_zero_below` at `t`. -/
+theorem family_unreplenished_below_from {ds : List C} {m T : Nat}
+    (balances : ∀ t, T ≤ t → L.BalancesOn W ds t)
+    (givers : ∀ t, T ≤ t → ∀ d, d ∈ ds → L.GiversSupported W t d)
+    (gated : ∀ t f, T ≤ t → f ∈ L.present t → ∀ d, d ∈ ds → 0 < L.give t f d →
+      ∃ e, e ∈ ds ∧ W.requires t f e ∧ m ≤ W.need t f e)
+    (below : W.stock ds T < m) :
+    ∀ t, T ≤ t → W.stock ds t < m ∧ L.replenishment ds t = 0 :=
+  fun t later => match Nat.le.dest later with
+    | ⟨n, sum⟩ =>
+      have low : W.stock ds t < m := Eq.subst (motive := fun s => W.stock ds s < m) sum
+        (family_stays_below_at below n (fun k _ => balances (T + k) (Nat.le_add_right T k))
+          (fun k f _ => gated (T + k) f (Nat.le_add_right T k))
+          fun k _ => givers (T + k) (Nat.le_add_right T k))
+      ⟨low, family_replenishment_zero_below (givers t later) (fun f => gated t f later) low⟩
+
+/-- **Below the need of what gives to it, taking from a family does not go on for ever.** Premises,
+each at every step from `T` on: the flow balances on the family (`balances`); whatever takes part
+and gives to a member is supported there (`givers`); whatever takes part and gives to a member
+depends on some member at a need of at least `m` (`gated`). And at `T` the family's stock is below
+`m` (`below`). Then it is not the case that the family's uptake is positive at arbitrarily late
+steps. Nothing is given from `T` on (`Flow.family_unreplenished_below_from`), and uptake at
+arbitrarily late steps needs replenishment at some step from `T` on
+(`Flow.uptake_needs_replenishment_from`). Nothing is asked of who takes, of what a taker depends
+on, or of any step before `T`. -/
+theorem family_below_ends_uptake_from {ds : List C} {m T : Nat}
+    (balances : ∀ t, T ≤ t → L.BalancesOn W ds t)
+    (givers : ∀ t, T ≤ t → ∀ d, d ∈ ds → L.GiversSupported W t d)
+    (gated : ∀ t f, T ≤ t → f ∈ L.present t → ∀ d, d ∈ ds → 0 < L.give t f d →
+      ∃ e, e ∈ ds ∧ W.requires t f e ∧ m ≤ W.need t f e)
+    (below : W.stock ds T < m) : ¬ ∀ N, ∃ t, N ≤ t ∧ 0 < L.uptake ds t :=
+  fun recurs => uptake_needs_replenishment_from balances recurs fun t later =>
+    (family_unreplenished_below_from balances givers gated below t later).2
+
+/-- **How much is taken below the need: what the family held, and no more.** Under the premises of
+`Flow.family_below_ends_uptake_from` (balance on the family, givers supported and the coupled gate
+at a need of at least `m`, each at every step from `T` on; the stock below `m` at `T`), over any `N`
+steps from `T`: the stock after them, with everything taken from the family across them, is the
+stock at `T`; and the steps among them at which anything is taken number fewer than `m`. The
+balance over a stretch (`Flow.accumulates_on`) with nothing given, and each step that takes taking
+at least one unit (`count_le`). -/
+theorem family_uptake_within_below_from {ds : List C} {m T : Nat}
+    (balances : ∀ t, T ≤ t → L.BalancesOn W ds t)
+    (givers : ∀ t, T ≤ t → ∀ d, d ∈ ds → L.GiversSupported W t d)
+    (gated : ∀ t f, T ≤ t → f ∈ L.present t → ∀ d, d ∈ ds → 0 < L.give t f d →
+      ∃ e, e ∈ ds ∧ W.requires t f e ∧ m ≤ W.need t f e)
+    (below : W.stock ds T < m) (N : Nat) :
+    W.stock ds (T + N) + total (steps T N) (L.uptake ds) = W.stock ds T ∧
+      count (steps T N) (L.uptake ds) < m :=
+  have whole : W.stock ds (T + N) + total (steps T N) (L.uptake ds) = W.stock ds T :=
+    (accumulates_on T N fun t from_ _ => balances t from_).trans
+      ((congrArg (W.stock ds T + ·) (total_eq_zero fun t mem =>
+        (family_unreplenished_below_from balances givers gated below t
+          (between_of_mem_steps mem).1).2)).trans (Nat.add_zero _))
+  ⟨whole, Nat.lt_of_le_of_lt (Nat.le_trans (count_le (L.uptake ds) (steps T N))
+    (Nat.le_trans (Nat.le_add_left _ _) (Nat.le_of_eq whole))) below⟩
+
+/-- **That taking stops for good is not refuted.** Under the premises of
+`Flow.family_below_ends_uptake_from` (balance on the family, givers supported and the coupled gate
+at a need of at least `m`, each at every step from `T` on; the stock below `m` at `T`), it is not
+the case that there is no step from `T` on from which on the family's uptake is zero at every step.
+It rests on the law of rest as far as can be refuted (`Amounts.rests_unrefuted`) at whole-number
+amounts: from `T` on the stock never rises, and it falls by at least one across each step at which
+anything is taken. The step itself is not exhibited: the premises do not say when the last taking
+comes (argued, not proved here: a step exhibited under these premises would say, of every course
+of a level that never rises, from which step it is constant). -/
+theorem family_uptake_stops_unrefuted_below_from {ds : List C} {m T : Nat}
+    (balances : ∀ t, T ≤ t → L.BalancesOn W ds t)
+    (givers : ∀ t, T ≤ t → ∀ d, d ∈ ds → L.GiversSupported W t d)
+    (gated : ∀ t f, T ≤ t → f ∈ L.present t → ∀ d, d ∈ ds → 0 < L.give t f d →
+      ∃ e, e ∈ ds ∧ W.requires t f e ∧ m ≤ W.need t f e)
+    (below : W.stock ds T < m) : ¬¬ ∃ S, T ≤ S ∧ ∀ t, S ≤ t → L.uptake ds t = 0 :=
+  fun never =>
+    have step : ∀ t, T ≤ t → W.stock ds (t + 1) + L.uptake ds t = W.stock ds t :=
+      fun t later => (balances t later).over.trans ((congrArg (W.stock ds t + ·)
+        (family_unreplenished_below_from balances givers gated below t later).2).trans
+          (Nat.add_zero _))
+    Amounts.rests_unrefuted (M := Amounts.whole) (s := W.stock ds) (ε := 1)
+      (P := fun t => 0 < L.uptake ds t) (m := W.stock ds T + 1)
+      (fun t later no => no (Nat.le_trans (Nat.le_add_right _ _) (Nat.le_of_eq (step t later))))
+      (fun t later positive no => no (Nat.le_trans (Nat.add_le_add_left positive _)
+        (Nat.le_of_eq (step t later))))
+      (Amounts.whole_within (W.stock ds T))
+      fun N from_ no => never ⟨N, from_, fun t later =>
+        eq_zero_of_not_pos fun positive => no ⟨t, later, positive⟩⟩
+
+/-! ## One condition -/
+
+/-- **Below the need of what gives to it, taking from a condition does not go on for ever**, from a
+step on. Premises, each at every step from `T` on: the flow balances on `c` (`balances`); whatever
+takes part and gives to `c` is supported there (`givers`); whatever takes part and gives to `c`
+depends on `c` at a need of at least `m` (`gated`). And at `T` the level of `c` is below `m`
+(`below`). Then it is not the case that something is taken from `c` at arbitrarily late steps (the
+uptake of the family of `c` alone is what is taken from `c`). Proved from three laws as they stand:
+the level stays below `m` (`Flow.stays_below_at`, at the offset of each later step from `T`), so
+nothing is given to `c` (`Flow.given_zero_below`), and uptake at arbitrarily late steps needs
+replenishment at some step from `T` on (`Flow.uptake_needs_replenishment_from`). Nothing is asked
+of who takes, of what a taker depends on, or of any step before `T`. -/
+theorem below_ends_uptake_from {c : C} {m T : Nat}
+    (balances : ∀ t, T ≤ t → L.BalancesOn W [c] t)
+    (givers : ∀ t, T ≤ t → L.GiversSupported W t c)
+    (gated : ∀ t f, T ≤ t → f ∈ L.present t → 0 < L.give t f c →
+      W.requires t f c ∧ m ≤ W.need t f c)
+    (below : W.level T c < m) : ¬ ∀ N, ∃ t, N ≤ t ∧ 0 < L.uptake [c] t :=
+  fun recurs => uptake_needs_replenishment_from balances recurs fun t later =>
+    match Nat.le.dest later with
+    | ⟨n, sum⟩ => given_zero_below (givers t later) (fun f => gated t f later)
+        (Eq.subst (motive := fun s => W.level s c < m) sum
+          (stays_below_at below n (fun k _ => balances (T + k) (Nat.le_add_right T k))
+            (fun k f _ => gated (T + k) f (Nat.le_add_right T k))
+            fun k _ => givers (T + k) (Nat.le_add_right T k)))
+
+/-- **Below the need of what gives to it, taking from a condition does not go on for ever.**
+Premises, those of `Flow.stays_below`: the flow balances the web (`balances`); only active
+formations give (`acting`); a formation is active only where the conditions it then depends on
+support it (`dependent`); at every step, whatever takes part and gives to `c` depends on `c` at a
+need of at least `m` (`gated`); at `T` the level of `c` is below `m` (`below`). Then it is not the
+case that something is taken from `c` at arbitrarily late steps. The case of
+`Flow.below_ends_uptake_from` in which the premises hold at every step, givers being supported
+because they are active (`Flow.Acting.giversSupported`). -/
+theorem below_ends_uptake (balances : L.Balances W) (acting : L.Acting W)
+    (dependent : W.Dependent) {c : C} {m : Nat}
+    (gated : ∀ t f, f ∈ L.present t → 0 < L.give t f c →
+      W.requires t f c ∧ m ≤ W.need t f c)
+    {T : Nat} (below : W.level T c < m) : ¬ ∀ N, ∃ t, N ≤ t ∧ 0 < L.uptake [c] t :=
+  below_ends_uptake_from (fun t _ => balances.on [c] t)
+    (fun t _ => acting.giversSupported dependent t c) (fun t f _ => gated t f) below
+
+/-- **So arising that takes does not go on for ever below the need.** Under the premises of
+`Flow.below_ends_uptake` (balance, only active formations giving, activity needing support, every
+giver to `c` depending on `c` at a need of at least `m`, the level of `c` below `m` at `T`), it is
+not the case that formations taking from `c` at their first active step arise at arbitrarily late
+steps. The arising enters only through the uptake it brings (`Flow.uptake_pos`); of arising that
+takes nothing the conclusion is false (`Sprouting.arises_for_ever_below`). -/
+theorem below_ends_arising_taking (balances : L.Balances W) (acting : L.Acting W)
+    (dependent : W.Dependent) {c : C} {m : Nat}
+    (gated : ∀ t f, f ∈ L.present t → 0 < L.give t f c →
+      W.requires t f c ∧ m ≤ W.need t f c)
+    {T : Nat} (below : W.level T c < m) : ¬ ∀ N, ∃ t f, N ≤ t ∧ L.ArisesTaking W [c] t f :=
+  fun arising => below_ends_uptake balances acting dependent gated below fun N =>
+    match arising N with
+    | ⟨t, _, later, _, present, takes⟩ =>
+      ⟨t + 1, Nat.le_succ_of_le later, uptake_pos present takes⟩
+
+/-- **Joint excess that brings the level below the need ends the taking.** Premises: balance
+(`balances`); only active formations give (`acting`); activity needs support (`dependent`); at
+every step, whatever takes part and gives to `c` depends on `c` at a need of at least `m`
+(`gated`); across each of `n` consecutive steps from `T` more is taken from `c` than is given to
+it (`excess`); at `T` the level of `c` is below `n + m` (`start`). Then it is not the case that
+something is taken from `c` at arbitrarily late steps. The excess brings the level below `m` at
+`T + n` (`Flow.below_of_excess`), and from there `Flow.below_ends_uptake`: the course leaves from
+a level that may be at or above the need. -/
+theorem joint_excess_ends_uptake (balances : L.Balances W) (acting : L.Acting W)
+    (dependent : W.Dependent) {c : C} {m : Nat}
+    (gated : ∀ t f, f ∈ L.present t → 0 < L.give t f c →
+      W.requires t f c ∧ m ≤ W.need t f c)
+    {T n : Nat} (excess : ∀ k, k < n → L.given (T + k) c < L.taken (T + k) c)
+    (start : W.level T c < n + m) : ¬ ∀ N, ∃ t, N ≤ t ∧ 0 < L.uptake [c] t :=
+  below_ends_uptake balances acting dependent gated (T := T + n)
+    (below_of_excess balances (ds := [c]) excess start)
+
+/-! ## Checks: the paper record's proof, and the laws of one condition as cases of the family's -/
+
+/-- A check, not a law to land. The statement of `Flow.below_ends_uptake`, proved from the three
+laws the paper record names and from no law of this module: the level stays below `m`
+(`Flow.stays_below`), so nothing is given to `c` (`Flow.given_zero_below`), and uptake at
+arbitrarily late steps needs replenishment at some step from `T` on
+(`Flow.uptake_needs_replenishment_from`). -/
+theorem below_ends_uptake_by_the_three_laws (balances : L.Balances W) (acting : L.Acting W)
+    (dependent : W.Dependent) {c : C} {m : Nat}
+    (gated : ∀ t f, f ∈ L.present t → 0 < L.give t f c →
+      W.requires t f c ∧ m ≤ W.need t f c)
+    {T : Nat} (below : W.level T c < m) : ¬ ∀ N, ∃ t, N ≤ t ∧ 0 < L.uptake [c] t :=
+  fun recurs => uptake_needs_replenishment_from (T := T) (fun t _ => balances.on [c] t) recurs
+    fun t later => match Nat.le.dest later with
+      | ⟨n, sum⟩ => given_zero_below (acting.giversSupported dependent t c) (gated t)
+          (Eq.subst (motive := fun s => W.level s c < m) sum
+            (stays_below balances acting dependent gated below n))
+
+/-- A check, not a law to land. The statement of `Flow.given_zero_below`, proved as
+`Flow.family_replenishment_zero_below` at the family of the one condition `c`. -/
+theorem given_zero_below_as_case {m t : Nat} {c : C} (givers : L.GiversSupported W t c)
+    (gated : ∀ f, f ∈ L.present t → 0 < L.give t f c → W.requires t f c ∧ m ≤ W.need t f c)
+    (below : W.level t c < m) : L.given t c = 0 :=
+  family_replenishment_zero_below (ds := [c]) (of_single givers)
+    (fun f present => gate_single (gated f present)) below
+
+/-- A check, not a law to land. The statement of `Flow.family_stays_below_at`, proved as it stands
+in `Becoming.Continuation` except that the step "nothing is given" is
+`Flow.family_replenishment_zero_below`. -/
+theorem family_stays_below_at_as_case {ds : List C} {m T : Nat} (below : W.stock ds T < m) :
+    ∀ n, (∀ k, k < n → L.BalancesOn W ds (T + k)) →
+      (∀ k f, k < n → f ∈ L.present (T + k) → ∀ d, d ∈ ds → 0 < L.give (T + k) f d →
+        ∃ e, e ∈ ds ∧ W.requires (T + k) f e ∧ m ≤ W.need (T + k) f e) →
+      (∀ k, k < n → ∀ d, d ∈ ds → L.GiversSupported W (T + k) d) →
+      W.stock ds (T + n) < m
+  | 0, _, _, _ => below
+  | n + 1, balances, gated, givers =>
+    have before := family_stays_below_at_as_case below n
+      (fun k lt => balances k (Nat.lt_succ_of_lt lt))
+      (fun k f lt => gated k f (Nat.lt_succ_of_lt lt))
+      fun k lt => givers k (Nat.lt_succ_of_lt lt)
+    have none : L.replenishment ds (T + n) = 0 := family_replenishment_zero_below
+      (givers n (Nat.lt_succ_self n)) (fun f => gated n f (Nat.lt_succ_self n)) before
+    Nat.lt_of_le_of_lt
+      (Nat.le_trans (Nat.le_add_right _ (L.uptake ds (T + n)))
+        (Nat.le_of_eq ((balances n (Nat.lt_succ_self n)).over.trans
+          (congrArg (W.stock ds (T + n) + ·) none))))
+      before
+
+/-- A check, not a law to land. The statement of `Flow.below_ends_uptake_from`, proved as
+`Flow.family_below_ends_uptake_from` at the family of the one condition `c`: a gate on `c` is the
+coupled gate on that family (`Flow.gate_single`). -/
+theorem below_ends_uptake_from_as_case {c : C} {m T : Nat}
+    (balances : ∀ t, T ≤ t → L.BalancesOn W [c] t)
+    (givers : ∀ t, T ≤ t → L.GiversSupported W t c)
+    (gated : ∀ t f, T ≤ t → f ∈ L.present t → 0 < L.give t f c →
+      W.requires t f c ∧ m ≤ W.need t f c)
+    (below : W.level T c < m) : ¬ ∀ N, ∃ t, N ≤ t ∧ 0 < L.uptake [c] t :=
+  family_below_ends_uptake_from balances (fun t later => of_single (givers t later))
+    (fun t f later present => gate_single (gated t f later present)) below
+
+end Flow
+
+/-! ## What the law does not say: arising that takes nothing goes on below the need -/
+
+namespace Sprouting
+
+/-- A renewer of one condition, a taker from it, and a sprout that depends on the condition at a
+lower need and neither takes nor gives. -/
+inductive Formation where
+  | renewer
+  | taker
+  | sprout
+
+open Formation
+
+/-- The odd steps. -/
+def odd : Nat → Prop
+  | 0 => False
+  | 1 => True
+  | n + 2 => odd n
+
+/-- No doubled step is odd. -/
+theorem not_odd_double : ∀ n, ¬ odd (2 * n)
+  | 0 => fun no => no
+  | n + 1 => not_odd_double n
+
+/-- The step after a doubled step is odd. -/
+theorem odd_after_double : ∀ n, odd (2 * n + 1)
+  | 0 => trivial
+  | n + 1 => odd_after_double n
+
+/-- The renewer and the taker take part across the first step only; after it nothing takes
+part. -/
+def present : Nat → List Formation
+  | 0 => [renewer, taker]
+  | _ + 1 => []
+
+/-- Across the first step the renewer gives one unit and the taker takes two. The sprout takes
+nothing and gives nothing at any step. -/
+def flow : Flow Formation Unit where
+  present := present
+  take _ f _ := match f with
+    | renewer => 0
+    | taker => 2
+    | sprout => 0
+  give _ f _ := match f with
+    | renewer => 1
+    | taker => 0
+    | sprout => 0
+
+/-- The condition stands at two at step zero and at one from step one on. Each formation depends on
+it: the renewer and the taker at need two, the sprout at need one. The renewer and the taker are
+active at step zero only; the sprout is active at the odd steps. -/
+def web : Web Formation Unit where
+  level t _ := Witnesses.profile [2] 1 t
+  active t f := match f with
+    | renewer => Witnesses.profile [True] False t
+    | taker => Witnesses.profile [True] False t
+    | sprout => odd t
+  requires _ _ _ := True
+  need _ f _ := match f with
+    | renewer => 2
+    | taker => 2
+    | sprout => 1
+  draws _ f _ := match f with
+    | renewer => False
+    | taker => True
+    | sprout => False
+
+/-- The flow balances the web: across the first step two are taken and one is given, and the level
+goes from two to one; after it nothing is taken or given and the level stays at one. -/
+theorem balances : flow.Balances web
+  | 0, () => rfl
+  | _ + 1, () => rfl
+
+/-- Only active formations give: the one giver, the renewer, gives across the first step, where it
+is active. -/
+theorem acting : flow.Acting web
+  | 0, renewer, _, _, _ => trivial
+  | 0, taker, _, _, _ => trivial
+  | 0, sprout, _, _, gives => absurd gives (Nat.lt_irrefl 0)
+  | _ + 1, _, _, no, _ => nomatch no
+
+/-- Activity needs support: the renewer and the taker are active only at step zero, where the level
+of two meets their need of two; the sprout is active only at odd steps, where the level of one
+meets its need of one. -/
+theorem dependent : web.Dependent
+  | 0, renewer, _, _, _ => Nat.le_refl 2
+  | 0, taker, _, _, _ => Nat.le_refl 2
+  | 0, sprout, dead, _, _ => nomatch dead
+  | _ + 1, renewer, dead, _, _ => nomatch dead
+  | _ + 1, taker, dead, _, _ => nomatch dead
+  | _ + 1, sprout, _, _, _ => Nat.le_refl 1
+
+/-- The gate at need two: the one giver to the condition, the renewer, depends on it at need
+two. -/
+theorem gated : ∀ t f, f ∈ flow.present t → 0 < flow.give t f () →
+    web.requires t f () ∧ 2 ≤ web.need t f ()
+  | _, renewer, _, _ => ⟨trivial, Nat.le_refl 2⟩
+  | _, taker, _, gives => absurd gives (Nat.lt_irrefl 0)
+  | _, sprout, _, gives => absurd gives (Nat.lt_irrefl 0)
+
+/-- Only active formations take, and only from conditions they draw on: the one that takes, the
+taker, takes across the first step, where it is active and draws on the condition. -/
+theorem taking : flow.Taking web
+  | 0, renewer, _, _, takes => absurd takes (Nat.lt_irrefl 0)
+  | 0, taker, _, _, _ => ⟨trivial, trivial⟩
+  | 0, sprout, _, _, takes => absurd takes (Nat.lt_irrefl 0)
+  | _ + 1, _, _, no, _ => nomatch no
+
+/-- The sprout arises across every doubled step: inactive there, active at the next. -/
+theorem sprout_arises (n : Nat) : web.Arises (2 * n) sprout :=
+  ⟨not_odd_double n, odd_after_double n⟩
+
+/-- **Below the need of what gives to a condition, arising can go on for ever.** In this flow and
+web every premise of `Flow.below_ends_uptake` holds with the need `m` at two and `T` at one: the
+flow balances the web, only active formations give, activity needs support, at every step whatever
+takes part and gives to the condition depends on it at a need of at least two, and at step one the
+level is below two. Beyond the law's premises, only active formations take, and only from
+conditions they draw on. The gate is not idle, and the level comes below the need through one step
+at which more is taken than given: at step zero the level is not below two, the renewer takes part
+and gives, and less is given than taken. At every step the sprout depends on the condition at a
+need below two and takes nothing from it. Arising is unceasing (`Web.Unceasing`): the sprout
+arises across every even step. And, as the law says, it is not the case that something is taken
+from the condition at arbitrarily late steps. So "below the need for good, arising is not
+unceasing" is false; what the law ends is taking. -/
+theorem arises_for_ever_below :
+    flow.Balances web ∧ flow.Acting web ∧ web.Dependent ∧
+      (∀ t f, f ∈ flow.present t → 0 < flow.give t f () →
+        web.requires t f () ∧ 2 ≤ web.need t f ()) ∧
+      web.level 1 () < 2 ∧ flow.Taking web ∧
+      (¬ web.level 0 () < 2 ∧ renewer ∈ flow.present 0 ∧ 0 < flow.give 0 renewer () ∧
+        flow.given 0 () < flow.taken 0 ()) ∧
+      (∀ t, web.requires t sprout () ∧ web.need t sprout () < 2 ∧ flow.take t sprout () = 0) ∧
+      web.Unceasing ∧ ¬ ∀ N, ∃ t, N ≤ t ∧ 0 < flow.uptake [()] t :=
+  ⟨balances, acting, dependent, gated, Nat.lt_succ_self 1, taking,
+   ⟨Nat.lt_irrefl 2, .head _, Nat.zero_lt_one, Nat.lt_succ_self 1⟩,
+   fun _ => ⟨trivial, Nat.lt_succ_self 1, rfl⟩,
+   fun N => ⟨2 * N, sprout, Nat.le_mul_of_pos_left N Nat.zero_lt_two, sprout_arises N⟩,
+   Flow.below_ends_uptake balances acting dependent gated (c := ()) (m := 2) (T := 1)
+     (Nat.lt_succ_self 1)⟩
+
+end Sprouting
+
+/-! ## Each premise is needed -/
+
+namespace OnePremiseLess
+
+/-- A giver (`true`) and a taker (`false`) take part at every step: the taker takes one unit from
+the one condition and the giver gives it `gives` units. -/
+def flow (gives : Nat) : Flow Bool Unit where
+  present _ := [true, false]
+  take _ f _ := match f with
+    | true => 0
+    | false => 1
+  give _ f _ := match f with
+    | true => gives
+    | false => 0
+
+/-- The condition stands at `level` at every step. The giver depends on it at need `need` and is
+active exactly where `live` holds; the taker depends on nothing, draws on the condition and is
+active at every step. -/
+def web (level need : Nat) (live : Prop) : Web Bool Unit where
+  level _ _ := level
+  active _ f := match f with
+    | true => live
+    | false => True
+  requires _ f _ := match f with
+    | true => True
+    | false => False
+  need _ _ _ := need
+  draws _ f _ := match f with
+    | true => False
+    | false => True
+
+/-- Whatever the giver gives, something is taken from the condition at every step. -/
+theorem uptake_recurs (gives : Nat) : ∀ N, ∃ t, N ≤ t ∧ 0 < (flow gives).uptake [()] t :=
+  fun N => ⟨N, Nat.le_refl N, Nat.zero_lt_one⟩
+
+/-- Where the giver gives one unit, the flow balances the web at any constant level: one is taken
+and one is given at every step. -/
+theorem balances (level need : Nat) (live : Prop) : (flow 1).Balances (web level need live) :=
+  fun _ _ => rfl
+
+/-- Only active formations give, where the giver is active if it gives anything. -/
+theorem acting {gives level need : Nat} {live : Prop} (alive : 0 < gives → live) :
+    (flow gives).Acting (web level need live)
+  | _, true, _, _, positive => alive positive
+  | _, false, _, _, positive => absurd positive (Nat.lt_irrefl 0)
+
+/-- Activity needs support, where the level meets the giver's need if the giver is active: the
+taker depends on nothing. -/
+theorem dependent {level need : Nat} {live : Prop} (met : live → need ≤ level) :
+    (web level need live).Dependent
+  | _, true, active, _, _ => met active
+  | _, false, _, _, no => nomatch no
+
+/-- The gate at need `m`, where the giver's need is at least `m` if it gives anything: the giver
+is the only formation that gives. -/
+theorem gated {gives level need m : Nat} {live : Prop} (high : 0 < gives → m ≤ need) :
+    ∀ t f, f ∈ (flow gives).present t → 0 < (flow gives).give t f () →
+      (web level need live).requires t f () ∧ m ≤ (web level need live).need t f ()
+  | _, true, _, positive => ⟨trivial, high positive⟩
+  | _, false, _, positive => absurd positive (Nat.lt_irrefl 0)
+
+/-- **The gate is needed.** The level stands at one, below two; the giver depends on the condition
+at a need of zero, is active, and gives one at every step. The flow balances the web, only active
+formations give, activity needs support and the level is below two at step zero; the gate at need
+two fails, the giver's need being below two; and something is taken from the condition at every
+step. -/
+theorem gate_needed :
+    (flow 1).Balances (web 1 0 True) ∧ (flow 1).Acting (web 1 0 True) ∧
+      (web 1 0 True).Dependent ∧ (web 1 0 True).level 0 () < 2 ∧
+      (¬ ∀ t f, f ∈ (flow 1).present t → 0 < (flow 1).give t f () →
+        (web 1 0 True).requires t f () ∧ 2 ≤ (web 1 0 True).need t f ()) ∧
+      ∀ N, ∃ t, N ≤ t ∧ 0 < (flow 1).uptake [()] t :=
+  ⟨balances 1 0 True, acting fun _ => trivial, dependent fun _ => Nat.zero_le 1,
+   Nat.lt_succ_self 1,
+   fun gate => Nat.not_succ_le_zero 1 (gate 0 true (.head _) Nat.zero_lt_one).2,
+   uptake_recurs 1⟩
+
+/-- **The level below the need is needed.** The level stands at two; the giver depends on the
+condition at need two, is active, and gives one at every step. The flow balances the web, only
+active formations give, activity needs support and the gate at need two holds; the level is not
+below two at any step; and something is taken from the condition at every step. -/
+theorem below_needed :
+    (flow 1).Balances (web 2 2 True) ∧ (flow 1).Acting (web 2 2 True) ∧
+      (web 2 2 True).Dependent ∧
+      (∀ t f, f ∈ (flow 1).present t → 0 < (flow 1).give t f () →
+        (web 2 2 True).requires t f () ∧ 2 ≤ (web 2 2 True).need t f ()) ∧
+      (∀ t, ¬ (web 2 2 True).level t () < 2) ∧
+      ∀ N, ∃ t, N ≤ t ∧ 0 < (flow 1).uptake [()] t :=
+  ⟨balances 2 2 True, acting fun _ => trivial, dependent fun _ => Nat.le_refl 2,
+   gated fun _ => Nat.le_refl 2, fun _ => Nat.lt_irrefl 2, uptake_recurs 1⟩
+
+/-- **Activity needing support is needed.** The level stands at one, below two; the giver depends
+on the condition at need two, is active all the same, and gives one at every step. The flow
+balances the web, only active formations give, the gate at need two holds and the level is below
+two at step zero; the giver is active where the level does not meet its need; and something is
+taken from the condition at every step. -/
+theorem support_needed :
+    (flow 1).Balances (web 1 2 True) ∧ (flow 1).Acting (web 1 2 True) ∧
+      (∀ t f, f ∈ (flow 1).present t → 0 < (flow 1).give t f () →
+        (web 1 2 True).requires t f () ∧ 2 ≤ (web 1 2 True).need t f ()) ∧
+      (web 1 2 True).level 0 () < 2 ∧ ¬ (web 1 2 True).Dependent ∧
+      ∀ N, ∃ t, N ≤ t ∧ 0 < (flow 1).uptake [()] t :=
+  ⟨balances 1 2 True, acting fun _ => trivial, gated fun _ => Nat.le_refl 2,
+   Nat.lt_succ_self 1,
+   fun supported => Nat.not_succ_le_self 1 (supported 0 true trivial () trivial),
+   uptake_recurs 1⟩
+
+/-- **Only active formations giving is needed.** The level stands at one, below two; the giver
+depends on the condition at need two, is never active, and gives one at every step all the same.
+The flow balances the web, activity needs support, the gate at need two holds and the level is
+below two at step zero; the giver gives where it is not active; and something is taken from the
+condition at every step. With `OnePremiseLess.support_needed`: of the two premises that make
+givers supported, neither can be dropped. -/
+theorem acting_needed :
+    (flow 1).Balances (web 1 2 False) ∧ (web 1 2 False).Dependent ∧
+      (∀ t f, f ∈ (flow 1).present t → 0 < (flow 1).give t f () →
+        (web 1 2 False).requires t f () ∧ 2 ≤ (web 1 2 False).need t f ()) ∧
+      (web 1 2 False).level 0 () < 2 ∧ ¬ (flow 1).Acting (web 1 2 False) ∧
+      ∀ N, ∃ t, N ≤ t ∧ 0 < (flow 1).uptake [()] t :=
+  ⟨balances 1 2 False, dependent (fun dead => nomatch dead), gated fun _ => Nat.le_refl 2,
+   Nat.lt_succ_self 1, fun acts => acts 0 true () (.head _) Nat.zero_lt_one,
+   uptake_recurs 1⟩
+
+/-- **Balance is needed.** The level stands at one at every step, below two, while the taker takes
+one at every step and nothing is given: the level does not change by what is taken and given. Only
+active formations give (nothing gives), activity needs support, the gate at need two holds
+(nothing gives) and the level is below two at step zero; the flow does not balance the web; and
+something is taken from the condition at every step. -/
+theorem balance_needed :
+    (flow 0).Acting (web 1 2 False) ∧ (web 1 2 False).Dependent ∧
+      (∀ t f, f ∈ (flow 0).present t → 0 < (flow 0).give t f () →
+        (web 1 2 False).requires t f () ∧ 2 ≤ (web 1 2 False).need t f ()) ∧
+      (web 1 2 False).level 0 () < 2 ∧ ¬ (flow 0).Balances (web 1 2 False) ∧
+      ∀ N, ∃ t, N ≤ t ∧ 0 < (flow 0).uptake [()] t :=
+  ⟨acting fun positive => absurd positive (Nat.lt_irrefl 0), dependent (fun dead => nomatch dead),
+   gated fun positive => absurd positive (Nat.lt_irrefl 0), Nat.lt_succ_self 1,
+   fun balanced => Nat.succ_ne_self 1 (balanced 0 ()), uptake_recurs 0⟩
+
+end OnePremiseLess
+
+end Becoming

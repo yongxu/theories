@@ -1,0 +1,157 @@
+{
+ "note": "AI-written. Report of workflow wf_af6660da-74c, 16 November 2026: one reader confirming the rewritten page THE-PICTURE.md.",
+ "confirm": {
+  "verdict": "AI-written (Fable). Eighteen of nineteen must-fix findings are taken up; F4's over-negative returns in a new sentence (N3). Items 1, 2, 3 and 6 say what the statements say. The cancer sentence holds (N4). October is right by git log (RelationalRenewal.lean 9 October; RenewalFlow.lean 14 to 18 October); \"sufficient only\" is right, one implication. 生生 (Grammar.lean:254) and cancer with no rule (Founding.lean:166) are right. Three negatives say more than the Lean; one sentence does not parse at one reading.\nPAGE NOT READY: N1, N2, N3, N6",
+  "taken_up": [
+   {
+    "id": "F1, A2, P4",
+    "done": true,
+    "now_says": "\"From a start already below the old boundary [...] given that the lesser take then stays.\""
+   },
+   {
+    "id": "F2, A3, P3",
+    "done": true,
+    "now_says": "\"No theorem states the crossing of the boundary\""
+   },
+   {
+    "id": "F3",
+    "done": true,
+    "now_says": "\"Given that what comes back falls short of the take below some level\""
+   },
+   {
+    "id": "F4",
+    "done": false,
+    "now_says": "Table gone, but \"There are regions but no basins\" denies items 1 and 4 (N3)."
+   },
+   {
+    "id": "F5",
+    "done": true,
+    "now_says": "\"And an October law, sufficient only\""
+   },
+   {
+    "id": "A1",
+    "done": true,
+    "now_says": "\"A take that stands has one boundary.\" Three ways dropped."
+   },
+   {
+    "id": "B1",
+    "done": true,
+    "now_says": "Four cells removed."
+   },
+   {
+    "id": "B2",
+    "done": true,
+    "now_says": "\"Cancer is four things together. [...] Nothing has them come about\""
+   },
+   {
+    "id": "C1",
+    "done": true,
+    "now_says": "\"'what is favoured draws more' would still be put in\""
+   },
+   {
+    "id": "D1",
+    "done": true,
+    "now_says": "\"It counts as something only if all three hold\""
+   },
+   {
+    "id": "P1",
+    "done": true,
+    "now_says": "\"Most pieces [...] Two are not there.\" The first is over-said (N1)."
+   },
+   {
+    "id": "P2",
+    "done": true,
+    "now_says": "\"Your wider sense [...] has no theorem\"; cancer now under \"Say if either is off.\""
+   },
+   {
+    "id": "P5",
+    "done": true,
+    "now_says": "\"one built pair holds together where neither holds alone\""
+   },
+   {
+    "id": "P6",
+    "done": true,
+    "now_says": "Moved: \"生生 as you mean it is not reached\""
+   },
+   {
+    "id": "P7",
+    "done": true,
+    "now_says": "\"Decided before trying.\" One new fragment (N2)."
+   }
+  ],
+  "findings": [
+   {
+    "id": "N1",
+    "must_fix": true,
+    "sentence": "Nothing that goes on gives back to what it rests on, with an exact condition. / Giving, in two corners.",
+    "what_is_so": "The Lean has one, of 14 October: a course that takes from a stock and returns to it repeats without end exactly where its first pass is covered and what it returns covers what it takes. Missing is giving in the models of items 1 to 6.",
+    "evidence": "Stock.lean:319 repeat_covered_iff `… ↔ Covered draw replenish n w ∧ total w draw ≤ total w replenish`.",
+    "proposed_wording": "\"In the models of items 1 to 6, nothing that goes on gives back to what it rests on.\" Item 7: \"Giving, in three corners\", adding that October law as exact."
+   },
+   {
+    "id": "N2",
+    "must_fix": true,
+    "sentence": "How a lock forms on a stock. One worked case.",
+    "what_is_so": "Unnamed. I find two, of another kind: a corrected rule returns to the lock, once going on, once ending. The law setting the rule from the share is there from the start.",
+    "evidence": "TurningInTime.lean:2728 Three.read_to_ten `((3, false, 2), 10)` then `((3, true, 3), 12)`; :2638 Three.read_at_eight_ends.",
+    "proposed_wording": "\"How a lock comes about on a stock: nothing. In two worked courses a corrected rule returns to a lock whose law was there from the start.\""
+   },
+   {
+    "id": "N3",
+    "must_fix": true,
+    "sentence": "There are regions but no basins",
+    "what_is_so": "Each model splits its own starts: item 1 up to the ceiling, the two locks, the pair of stocks in its band. The Lean's general language of basins is used by none.",
+    "evidence": "RegimeMargin.lean:741, :730, :3333 fates; DrawnShaping.lean:378; Attraction.lean:110-117.",
+    "proposed_wording": "\"Each model splits its own starts (items 1 and 4). No space with both a lock and a level has every start's fate, and no split is said as a basin.\""
+   },
+   {
+    "id": "N6",
+    "must_fix": true,
+    "sentence": "A rule set again from a share that counts those who draw ends, still locked, given also that nothing reads the level.",
+    "what_is_so": "True to the Lean, but it reads \"those who draw ends\", and \"locked\" comes before item 4.",
+    "evidence": "TurningInTime.lean:1473 count_rises `(count : ∀ v, use v = v.1 * u)`.",
+    "proposed_wording": "\"So does a rule set again from its own share, where the share counts those who draw: it ends, the rule still set that way (the lock, item 4), given also that nothing reads the level.\""
+   },
+   {
+    "id": "N4",
+    "must_fix": false,
+    "sentence": "The lock's ending law (item 2) takes all four as given and concludes the ending.",
+    "what_is_so": "Right. Closed on itself: `raises`, `monotone`, `upper`, `locked`. Growing take: `more`. Level not reaching how it selects: `outside`, `un`. Needing what it uses up: `needs`. Also given: `keeps`, `high` (ceiling), `nothing`. \"Not covered\" is the law beside it.",
+    "evidence": "TurningInTime.lean:1440-1450; :1400 (`short`, `draws`, `below`).",
+    "proposed_wording": "None needed; or name both laws."
+   },
+   {
+    "id": "N5",
+    "must_fix": false,
+    "sentence": "A rule set from its own share in its favour stays so.",
+    "what_is_so": "Items 4 and 7 carry no \"given\"; both theorems assume.",
+    "evidence": "TurningInTime.lean:1232 `raises`, `monotone`, `upper`; RegimeMargin.lean:3319 `band`.",
+    "proposed_wording": "Item 4: \"Given that a favouring rule does not lower the share, and a higher share is not read as a lower rule: [...]\""
+   },
+   {
+    "id": "N7",
+    "must_fix": false,
+    "sentence": "Two are proved and not said so",
+    "what_is_so": "RegimeMargin.ends_beyond_giving, one side only; TurningInTime.turns_in_time_iff_before, exact.",
+    "evidence": "RegimeMargin.lean:721 `(beyond : ∀ z, g z < H)`; TurningInTime.lean:2289.",
+    "proposed_wording": "Add \"the first on one side only\"."
+   },
+   {
+    "id": "N8",
+    "must_fix": false,
+    "sentence": "In the Lean the name is given to the lock (item 4). Your wider sense, [...]",
+    "what_is_so": "No Lean declaration bears the name; the atlas gives it. The wider sense is the atlas's AI wording. Item 5's heading says one case of all.",
+    "evidence": "dynamics.json: closed-capture; self-reproducing-selection-across-carriers, declarations [].",
+    "proposed_wording": "\"In the atlas the name is given to the lock. The wider sense I read in your texts [...] has no theorem; say if it is not yours.\" Item 5: \"need not decide\"."
+   },
+   {
+    "id": "N9",
+    "must_fix": false,
+    "sentence": "that is who the level still carries, and who leaves which successors was handed in.",
+    "what_is_so": "Needs two readings; \"handed in\" is the page's \"given\".",
+    "evidence": "Page line 38.",
+    "proposed_wording": "\"That threshold only says who the level still carries. What selects is who leaves which successors, and that was given.\""
+   }
+  ]
+ }
+}

@@ -1,0 +1,94 @@
+{
+ "verdict": "AI-written (Fable, set to refute). None of the six is a link by the four conditions: no proposed statement joins regulation, set points or boundaries to the lock, the level or the line by a law. Every 'apart' and 'renaming' stands. Link 1's theorem fails as written and survives search from step count 0, inside the centre; link 2's is `RegimeMargin.holds` at one step, renamed; link 3's survives search, a law of one dynamic. WORTH DOING: enter the rooms under the regime and the two-level course under the lock in the atlas, and prove `cut_ends`; keep every regulation-to-centre link on paper.",
+ "modules_checked": [
+  {
+   "module": "Regulation.lean",
+   "exact_in_plain_words": "Exact on `Opposes`, `WithinGap`, `settles`, `ReadsLate`. `no_narrower_band` also asks `0 < a`. Wrong in the seat's 'apart': the relay's exchange is its answer to the level ℓ steps before (`RelaysLate`).",
+   "where": "Regulation.lean:261, 886, 1185"
+  },
+  {
+   "module": "Continuation.lean, Restoration.lean, Pace.lean",
+   "exact_in_plain_words": "`restores` asks net giving only where `W.level T c ≤ W.level (T + k) c`. The rest exact.",
+   "where": "Continuation.lean:364; Pace.lean:247"
+  },
+  {
+   "module": "RoomRuns.lean, RoomNet.lean",
+   "exact_in_plain_words": "Exact. `next_open : next m c 0 x = RegimeMargin.step (heater m c) 1 x`, no premise.",
+   "where": "RoomRuns.lean:40, 89"
+  },
+  {
+   "module": "ReaderRebuilding.lean",
+   "exact_in_plain_words": "Exact, given `1 ≤ count`, `1 ≤ setLevel` where supplied.",
+   "where": "ReaderRebuilding.lean:196, 244, 404"
+  },
+  {
+   "module": "RegimeMargin.Adjusted",
+   "exact_in_plain_words": "`comes_to_rest` also asks `RestsAtDraw A g H` and a start up to hi in level and recent giving.",
+   "where": "RegimeMargin.lean:1367"
+  },
+  {
+   "module": "SetPointOptimum.lean",
+   "exact_in_plain_words": "`held_draws_lost` needs the set point before and after the step. `held_excess_ends` has no order ('No order or choice enters these laws'). The rest exact.",
+   "where": "SetPointOptimum.lean:537, 759"
+  },
+  {
+   "module": "Optimum.lean",
+   "exact_in_plain_words": "`course_kept_iff` exact. `frontier_holds` says more than the seat: `x (n + 1) = 0`, nothing left after the last step.",
+   "where": "Optimum.lean:2740, 3831"
+  },
+  {
+   "module": "Boundaries.lean",
+   "exact_in_plain_words": "Exact, except: invariance carries what the condition adds to the presupposition (`boundaryInvariant_iff_all`), not 'the whole content'.",
+   "where": "Boundaries.lean:173, 468"
+  },
+  {
+   "module": "GoalFormationRevision.lean, MachineInstances.lean",
+   "exact_in_plain_words": "Exact; the goal is none at a tie. Axioms not rechecked.",
+   "where": "GoalFormationRevision.lean:238; MachineInstances.lean:551"
+  }
+ ],
+ "build_in_lean": [
+  {
+   "link": "3. The reader under a cut (first)",
+   "statement": "`cut_ends (hs : r.source = .level) (hspan : 1 ≤ r.span) (x : St) : (run r false (x.level + r.span) x).ages = []`",
+   "first_obstacle": "`quiet_end` covers units of one age; ageing must empty any list within the span.",
+   "judged": "No failure on 23,760 small starts. It closes the entry's first open item. Not a link: as a case of `ends_with_net` the need of two is put onto the reader, whose own net goes on below it."
+  },
+  {
+   "link": "1. A first reading that comes too late (second)",
+   "statement": "From `((a, g, 0), x)`: `∀ u, u < r → reads u = false`, `∀ v, H₂ ≤ use v`, `FromNothing giving`, `Short giving H₂ y₂`, `0 < need`, the level of `asItWas (windowAlone fA hA reads)` under the regime's step below `H₂ + y₂` at `r + 1`; then `¬ «不穷» (net need (windowAfter fA hA hL N K reads) …) «一» ((a, g, 0), x)`.",
+   "first_obstacle": "`regime_levels` is private and starts at step 0; `agrees_until_marked` marks levels, not steps.",
+   "judged": "No line goes on in 2,222,796 small cases. The ending half of a case the header calls not covered (a schedule reading at some steps only). It names nothing of Regulation."
+  }
+ ],
+ "enter_in_atlas_now": [
+  "`overshooting-thermostat-alternates` as a case of `margin-of-a-regime`, by `Rooms.next_open`, `Rooms.Matched.window_held` (by `RegimeMargin.holds`) and `Rooms.Unheated.window_cold` (by `stays_ended`), none listed in any dynamic; and of `overcompensating-giving-cycles` by `alternation_shifted`. The regime's piece: 30 to 33.",
+  "The two-level course: the record `how-fast-a-rule-may-change` has no dynamic; no `Becoming.Pace` declaration is in dynamics.json. `RuleCapture.locked_stays` is proved by `Pace.stays_turned` on `Pace.paced`; `window_paced` puts the window on it. A staying and an identity, not paths."
+ ],
+ "broken": [
+  {
+   "claim": "Link 1 as written, from any way w.",
+   "how": "Three's giving, uses 5 and 3, H₂ = y₂ = 3, r = 5, start count 5, level 9: as it was 9, 8, 6, 2, 0; the window course 9, 8, 10, 12, 12 goes on (checks.py)."
+  },
+  {
+   "claim": "Link 2 is a theorem to prove.",
+   "how": "For x ≤ hi, `Between hi x (step g H x)` unfolds to `x ≤ step ∧ step ≤ hi`: `holds` at n = 1, `Meets` carrying one half, `Keeps` the other (fails 3). The flow half needs a carrier defined for it (fails 1; the atlas entry's own open item)."
+  },
+  {
+   "claim": "Link 1 apart from Regulation.",
+   "how": "Stands; sharper: `ReadsLate 0` answers from the record before t, and the regime's giving reads what the step's own draw leaves."
+  },
+  {
+   "claim": "Seat 2: a nearing order ends a condition by joint excess.",
+   "how": "`held_excess_ends` is of formations holding their stocks; the module says the course of choices is not formalized."
+  }
+ ],
+ "keep_on_paper": [
+  "Links 4, 5, 6 as judged (the pairing with `locked_closed` fits only at universe 0, by reading).",
+  "`Optimum.Nearer` is defined by `Regulation.Between`: a shared definition, not a law.",
+  "Boundaries' two records have no dynamic: a predicate with no step.",
+  "Mine, by search only (510,801 stretches): a set level in the place of Pace's rule. Where the fast step lies between rule and level, nearer off it, a stretch without reading as long as the gap ends at the rule; read at every step with `h x m = x + 2`, it never does. His to see before any Lean."
+ ],
+ "his_point_in_the_lean_today": "The value a loop holds is a number handed in (`m` of `Flow.Opposes`, `s` of `Nearing`), a field of a rule (`Rooms.heater m c`, `ReaderRebuilding.Rule.setLevel`), or computed: the band `RegimeMargin.holds` keeps (`Matched.window_held`: the matched heater's m is held), and in the lock the rule, set again from the share at each reading step. The signal is an object as `Regulation.ReadsLate` and as the window's levels and schedule; `ReadsShare`, `marked` and `AloneOutside` are premises. A boundary is proved in two places, the point of no return H + y (`ends_iff_below`) and the locked region (`locked_closed`); `Boundaries.Boundary` is any region closed under a supplied relation, and nothing there draws. A goal formed from feedback is in the periphery only (`learnedGoal`, then `reform`); a slower loop setting what a faster holds is `Pace.paced`, and in the core no set level stands in its rule's place (grep, not a proof).",
+ "what_ran": "Read only: no build, test, gate, tracked edit or git write; no Lean compiled. Scripts in /Users/ren/theories/tmp/r7/one-model/check/round11/refuter-regulation/ : checks.py (36 s), pieces.py, setlevel_in_rule.py. Searches are not proofs."
+}

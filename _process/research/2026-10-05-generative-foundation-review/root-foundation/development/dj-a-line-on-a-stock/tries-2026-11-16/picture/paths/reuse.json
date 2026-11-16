@@ -1,0 +1,979 @@
+[
+[
+"closed-cycle-without-dissipation",
+"unceasing-generation-needs-renewal",
+true,
+{
+"Becoming.Web.Unceasing": [
+"Becoming.Oscillation.unceasing"
+],
+"Becoming.Web.Unceasing.activeRenewer_recurs": [
+"Becoming.Oscillation.unceasing"
+]
+}
+],
+[
+"closed-cycle-without-dissipation",
+"more-needs-renewers",
+false,
+{
+"Becoming.Web.Unceasing.activeRenewer_recurs": [
+"Becoming.Oscillation.unceasing"
+]
+}
+],
+[
+"capture-by-counted-choices",
+"unselected-beyond-the-coupling-closure",
+false,
+{
+"Becoming.Flow.unselected_beyond_coupling": [
+"Becoming.ChoiceCountCapture.unchosen_beyond_coupling"
+]
+}
+],
+[
+"capture-by-counted-choices",
+"seeking-boundary",
+false,
+{
+"Becoming.Flow.unselected_beyond_coupling": [
+"Becoming.ChoiceCountCapture.unchosen_beyond_coupling"
+]
+}
+],
+[
+"capture-by-counted-choices",
+"closed-capture",
+false,
+{
+"Becoming.ClosedCapture.lock_outlives_loss": [
+"Becoming.ChoiceCountCapture.counted_outlives_loss"
+],
+"Becoming.ClosedCapture.Accrues": [
+"Becoming.ChoiceCountCapture.counted_outlives_loss"
+]
+}
+],
+[
+"habit-lock-in-active-inference",
+"closed-capture",
+false,
+{
+"Becoming.ClosedCapture.lock_outlives_loss": [
+"Becoming.ChoiceCountCapture.counted_outlives_loss"
+],
+"Becoming.ClosedCapture.Accrues": [
+"Becoming.ChoiceCountCapture.counted_outlives_loss"
+]
+}
+],
+[
+"what-a-commuting-law-keeps-apart",
+"a-map-moving-every-value-never-rests",
+true,
+{
+"Becoming.Diagonal.Moves": [
+"Becoming.Law.Commutes.apart",
+"Becoming.Law.Commutes.breaks",
+"Becoming.Law.Commutes.not_drawn_to_one"
+]
+}
+],
+[
+"recurring-reference-revision",
+"becoming-renewal-reading",
+true,
+{
+"Becoming.Run.not_of_depletion": [
+"Becoming.ContinuingRevision.no_run_without_return"
+]
+}
+],
+[
+"readings-within-what-they-read",
+"recurrence-without-premise",
+false,
+{
+"Becoming.Law.Returns": [
+"Becoming.Diagonal.negation_returns"
+]
+}
+],
+[
+"a-map-moving-every-value-never-rests",
+"recurrence-without-premise",
+false,
+{
+"Becoming.Law.Returns": [
+"Becoming.Diagonal.negation_returns"
+]
+}
+],
+[
+"shaping-read-by-readers-drawn-from-the-selected",
+"readers-drawn-from-the-selected",
+false,
+{
+"Becoming.ClosedCapture.Drawn.pool": [
+"Becoming.DrawnShaping.drawn"
+],
+"Becoming.ClosedCapture.Drawn.pool_reads_iff": [
+"Becoming.DrawnShaping.drawn_reads_iff"
+],
+"Becoming.ClosedCapture.Drawn.pool_against": [
+"Becoming.DrawnShaping.drawn_against"
+]
+}
+],
+[
+"shaping-read-by-readers-drawn-from-the-selected",
+"shaping-the-rule-selected-by-what-comes-back",
+false,
+{
+"Becoming.RuleShaping.shaped": [
+"Becoming.DrawnShaping.drawn",
+"Becoming.DrawnShaping.drawn_against",
+"Becoming.DrawnShaping.drawn_reads_iff"
+]
+}
+],
+[
+"fixation-by-drift",
+"selection-among-groups-by-ending",
+true,
+{
+"Becoming.GroupEnding.Flow.raises_of_inactive": [
+"Becoming.Drift.Flow.ended_falls_back"
+]
+}
+],
+[
+"lossless-exchange-continues-and-returns",
+"recurrence-without-premise",
+false,
+{
+"Becoming.Law.Returns": [
+"Becoming.Flow.Balances.returns_of_conserving"
+]
+}
+],
+[
+"risk-minimization-on-a-shared-renewal",
+"the-rest-outruns-the-renewal",
+true,
+{
+"Becoming.Flow.outrun_ends": [
+"Becoming.FreeEnergyGuarantees.RiskAndNeeds.need_ends"
+],
+"Becoming.Flow.outrun_below": [
+"Becoming.FreeEnergyGuarantees.RiskAndNeeds.expectation_not_course",
+"Becoming.FreeEnergyGuarantees.RiskAndNeeds.need_ends"
+],
+"Becoming.Flow.outrun_reading_alike": [
+"Becoming.FreeEnergyGuarantees.RiskAndNeeds.restraint_unread"
+]
+}
+],
+[
+"risk-minimization-on-a-shared-renewal",
+"what-a-set-point-optimum-does-beyond",
+false,
+{
+"Becoming.Optimum.HeldPair.held_end": [
+"Becoming.FreeEnergyGuarantees.SharedModels.held_not_one"
+]
+}
+],
+[
+"risk-minimization-on-a-shared-renewal",
+"own-count-misses-joint-excess",
+false,
+{
+"Becoming.Exceeding.all_end": [
+"Becoming.FreeEnergyGuarantees.SharedModels.alike_not_one"
+],
+"Becoming.Alone.all_continue": [
+"Becoming.FreeEnergyGuarantees.SharedModels.alike_not_one"
+],
+"Becoming.Exceeding.own_not_joint": [
+"Becoming.FreeEnergyGuarantees.SharedModels.alike_not_one"
+],
+"Becoming.Flow.ends_below": [
+"Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.three_end"
+],
+"Becoming.Flow.stays_below": [
+"Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.three_end"
+]
+}
+],
+[
+"risk-minimization-on-a-shared-renewal",
+"loss-of-renewal-for-good",
+false,
+{
+"Becoming.Flow.ends_below": [
+"Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.three_end"
+]
+}
+],
+[
+"persisting-filters-what-was-chosen",
+"mutual-dependence-and-its-pace",
+false,
+{
+"Becoming.Flow.returning_downstream_iff_mutuallyDependent": [
+"Becoming.FromTheDynamics.Alternating.joined"
+]
+}
+],
+[
+"closed-capture",
+"a-regularity-kept-and-changed",
+false,
+{
+"Becoming.Law.unending_iff_steps": [
+"Becoming.ClosedCapture.lock_line"
+],
+"Becoming.Law.unending_alike": [
+"Becoming.ClosedCapture.loss_ends_line"
+]
+}
+],
+[
+"a-stop-passed-by-a-listing-that-fixes-the-sign",
+"what-a-course-chosen-through-its-model-does-not-test",
+false,
+{
+"Becoming.ReadingLoop.Loop.rests_of_unrefuted": [
+"Becoming.HeldForReading.SignLoop.rests_unread"
+]
+}
+],
+[
+"rule-raised-every-other-step",
+"where-the-possible-grows",
+true,
+{
+"Becoming.Reaching.PossibleHeld": [
+"Becoming.RaisedEveryOther.both",
+"Becoming.RaisedEveryOther.held_keeps_widening"
+],
+"Becoming.RaisedRule.whole_every": [
+"Becoming.RaisedEveryOther.whole_every"
+]
+}
+],
+[
+"a-course-that-only-returns",
+"where-the-possible-grows",
+false,
+{
+"Becoming.Reaching.PossibleHeld": [
+"Becoming.Oscillating.generation_without_widening",
+"Becoming.Oscillating.held_widens"
+]
+}
+],
+[
+"waxing-and-waning-returns",
+"recurrence-without-premise",
+true,
+{
+"Becoming.Law.Returns": [
+"Becoming.Hexagram.waxWane_returns"
+],
+"Becoming.Law.lossless_iff_returns": [
+"Becoming.Hexagram.every_returns_iff",
+"Becoming.Hexagram.waxWane_returns"
+]
+}
+],
+[
+"waxing-and-waning-returns",
+"returning-where-the-course-branches",
+false,
+{
+"Becoming.Branching.Returns": [
+"Becoming.Hexagram.every_returns_iff"
+]
+}
+],
+[
+"continued-change-needs-openness",
+"rest-exactly-where-falls-stop",
+true,
+{
+"Becoming.World.InAmounts.rests_unrefuted_of_stops": [
+"Becoming.World.rests_unrefuted"
+]
+}
+],
+[
+"what-keeping-widening-needs",
+"returning-novelty-forgetting-on-levels",
+false,
+{
+"Becoming.Flow.rise_from_rest_or_open": [
+"Becoming.Web.KeepsWidening.from_rest_or_open"
+]
+}
+],
+[
+"closed-cycle-without-dissipation",
+"what-keeping-widening-needs",
+true,
+{
+"Becoming.Flow.not_keepsWidening_along_supportedPassing": [
+"Becoming.KindRelay.not_keepsWidening_supportedPassing"
+]
+}
+],
+[
+"kind-relay-keeps-widening-within-kinds",
+"what-keeping-widening-needs",
+true,
+{
+"Becoming.Flow.not_keepsWidening_of_dissipated_requirements": [
+"Becoming.KindRelay.Fed.requirements_not_dissipated"
+]
+}
+],
+[
+"the-last-change-of-a-run",
+"when-the-runs-of-a-process-settle",
+false,
+{
+"Becoming.Settling.OneWay.lpo_of_settles": [
+"Becoming.LastChange.lpo_iff_settles"
+]
+}
+],
+[
+"a-line-on-a-stock",
+"margin-of-a-regime",
+false,
+{
+"Becoming.RegimeMargin.step": [
+"Becoming.LineOnAStock.course_asItWas",
+"Becoming.LineOnAStock.course_generation",
+"Becoming.LineOnAStock.left"
+],
+"Becoming.RegimeMargin.holds": [
+"Becoming.LineOnAStock.unending_iff_holds"
+]
+}
+],
+[
+"a-line-on-a-stock",
+"turning-in-time",
+true,
+{
+"Becoming.TurningInTime.pair": [
+"Becoming.LineOnAStock.step"
+],
+"Becoming.Law.stepWhile": [
+"Becoming.LineOnAStock.net"
+],
+"Becoming.TurningInTime.held_above": [
+"Becoming.LineOnAStock.step_lowers"
+],
+"Becoming.TurningInTime.kept_within": [
+"Becoming.LineOnAStock.ends_high",
+"Becoming.LineOnAStock.ends_low"
+],
+"Becoming.Law.stepWhile_unending_iff": [
+"Becoming.LineOnAStock.Doubling.course_values",
+"Becoming.LineOnAStock.HigherStartEnds.from_seven",
+"Becoming.LineOnAStock.NoKids.ends_met"
+],
+"Becoming.TurningInTime.asItWas": [
+"Becoming.LineOnAStock.course_asItWas"
+],
+"Becoming.TurningInTime.asItWas_way": [
+"Becoming.LineOnAStock.way_while_met"
+],
+"Becoming.TurningInTime.rising_takes_all": [
+"Becoming.LineOnAStock.need_unmet"
+],
+"Becoming.Law.stepWhile_steps_iff": [
+"Becoming.LineOnAStock.NothingTakenEnds.ending_differs",
+"Becoming.LineOnAStock.one_need_ends"
+],
+"Becoming.Law.stepWhile_none_iff": [
+"Becoming.LineOnAStock.NothingTakenEnds.ending_differs",
+"Becoming.LineOnAStock.one_need_ends"
+],
+"Becoming.TurningInTime.Three.giving": [
+"Becoming.LineOnAStock.Doubling.course_values",
+"Becoming.LineOnAStock.Doubling.ends_by_law",
+"Becoming.LineOnAStock.Doubling.unmet_by_law"
+]
+}
+],
+[
+"ending-laws-as-regimes-on-a-lineage",
+"degeneration-from-a-horizon",
+true,
+{
+"Becoming.Web.kind_every_branch_ends_of_gone": [
+"Becoming.LineageRegimes.degeneration_of_family_excess"
+]
+}
+],
+[
+"when-the-runs-of-a-process-settle",
+"returning-where-the-course-branches",
+false,
+{
+"Becoming.Branching.Returns": [
+"Becoming.Onward.KeepsMoving.returns",
+"Becoming.Onward.run_iff_returning"
+]
+}
+],
+[
+"continued-change-needs-openness",
+"continuing-self-fed-from-beyond",
+false,
+{
+"Becoming.Throughput.throughput": [
+"Becoming.World.rest_needs_standing"
+]
+}
+],
+[
+"re-optimizing-above-a-renewal-ends-it",
+"several-optimizers-drain-by-their-joint-capacity",
+true,
+{
+"Becoming.Optimum.MutualBest.full": [
+"Becoming.Optimum.Renewing.restrained_course_not_best"
+]
+}
+],
+[
+"a-step-coupling-keeps-at-every-horizon",
+"keeping-forgoes-the-renewal-at-the-need",
+true,
+{
+"Becoming.Web.frontier_breaks_below": [
+"Becoming.Web.frontier_breaks_stepwise_long"
+]
+}
+],
+[
+"a-weighting-faster-than-renewal-ends-the-base",
+"others-drawing-first-end-the-base",
+true,
+{
+"Becoming.Optimum.Next.frontier_below": [
+"Becoming.Optimum.frontier_below_weighted"
+],
+"Becoming.Optimum.Next.exhausting_frontier": [
+"Becoming.Optimum.exhausting_frontier"
+],
+"Becoming.Optimum.Next.frontier_exhausts": [
+"Becoming.Optimum.frontier_exhausts"
+],
+"Becoming.Optimum.Next.frontier_leaves": [
+"Becoming.Optimum.frontier_leaves"
+]
+}
+],
+[
+"optima-rebuild-a-depleted-base",
+"others-drawing-first-end-the-base",
+true,
+{
+"Becoming.Optimum.Next.frontier_rebuilds": [
+"Becoming.Optimum.frontier_rebuilds"
+],
+"Becoming.Web.Next.frontier_rebuilds": [
+"Becoming.Optimum.frontier_rebuilds"
+]
+}
+],
+[
+"optima-rebuild-a-depleted-base",
+"a-weighting-faster-than-renewal-ends-the-base",
+true,
+{
+"Becoming.Optimum.frontier_exhausts": [
+"Becoming.Optimum.Holding.doubling_rebuilds"
+]
+}
+],
+[
+"drawers-in-turn",
+"coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it",
+false,
+{
+"Becoming.Optimum.Coupled.AtOnce.drain_perfect_iff": [
+"Becoming.Web.drain_perfect_broken",
+"Becoming.Web.whole_drain_broken"
+]
+}
+],
+[
+"recurrence-without-premise",
+"learning-by-refutation",
+false,
+{
+"Becoming.Learning.diagonal_not_lasso": [
+"Becoming.Parting.free_unbounded"
+]
+}
+],
+[
+"a-pattern-lasts-through-passing",
+"whole-persists-through-generation",
+true,
+{
+"Becoming.Web.Covered.arises_within": [
+"Becoming.PatternRelay.shifts",
+"Becoming.Web.begins_within"
+]
+}
+],
+[
+"the-lock-draws-its-readers-out",
+"readers-drawn-from-the-selected",
+false,
+{
+"Becoming.ClosedCapture.Drawn.pool": [
+"Becoming.PoolFromCourse.window_standing_thinned"
+],
+"Becoming.ClosedCapture.Thinned.lossPool": [
+"Becoming.PoolFromCourse.window_standing_thinned"
+]
+}
+],
+[
+"the-lock-draws-its-readers-out",
+"shaping-the-rule-selected-by-what-comes-back",
+false,
+{
+"Becoming.RuleShaping.shaped": [
+"Becoming.PoolFromCourse.bear_shaped_others",
+"Becoming.PoolFromCourse.bear_shaped_shapers",
+"Becoming.PoolFromCourse.borne_by_others_favours_iff"
+],
+"Becoming.RuleShaping.favours_iff": [
+"Becoming.PoolFromCourse.borne_by_others_favours_iff",
+"Becoming.PoolFromCourse.borne_by_shapers_favours_iff"
+]
+}
+],
+[
+"the-lock-draws-its-readers-out",
+"threshold-reading-read-late-alternates",
+false,
+{
+"Becoming.RuleCapture.Alternating.before_locked": [
+"Becoming.PoolFromCourse.Borne.others_locked"
+]
+}
+],
+[
+"loss-read-in-time-by-the-others",
+"readers-drawn-from-the-selected",
+false,
+{
+"Becoming.ClosedCapture.Thinned.lossPool": [
+"Becoming.ReadInTime.shapedLossPool"
+],
+"Becoming.ClosedCapture.Thinned.read_late_kept": [
+"Becoming.ReadInTime.kept_iff",
+"Becoming.ReadInTime.kept_once_favoured"
+],
+"Becoming.ClosedCapture.Drawn.pool_against": [
+"Becoming.ReadInTime.at_most_one_between"
+],
+"Becoming.ClosedCapture.Drawn.pool": [
+"Becoming.ReadInTime.kept_next_round_iff"
+]
+}
+],
+[
+"loss-read-in-time-by-the-others",
+"shaping-the-rule-selected-by-what-comes-back",
+false,
+{
+"Becoming.RuleShaping.shaped": [
+"Becoming.ReadInTime.kept_next_round_iff",
+"Becoming.ReadInTime.shapedLossPool"
+]
+}
+],
+[
+"loss-read-in-time-by-the-others",
+"shaping-read-by-readers-drawn-from-the-selected",
+false,
+{
+"Becoming.DrawnShaping.drawn": [
+"Becoming.ReadInTime.Window.in_time",
+"Becoming.ReadInTime.at_most_one_between",
+"Becoming.ReadInTime.deadline"
+],
+"Becoming.DrawnShaping.drawn_reads_iff": [
+"Becoming.ReadInTime.at_most_one_between",
+"Becoming.ReadInTime.late_never_falls"
+],
+"Becoming.DrawnShaping.drawn_locks": [
+"Becoming.ReadInTime.at_most_one_between",
+"Becoming.ReadInTime.kept_early_iff",
+"Becoming.ReadInTime.kept_once_favoured"
+],
+"Becoming.DrawnShaping.drawn_from_below": [
+"Becoming.ReadInTime.at_most_one_between"
+],
+"Becoming.DrawnShaping.critical_iff": [
+"Becoming.ReadInTime.least_iff"
+]
+}
+],
+[
+"reading-a-loss-in-time",
+"margin-of-a-regime",
+true,
+{
+"Becoming.RegimeMargin.step": [
+"Becoming.FourReaders.recoverable_iff_regime"
+]
+}
+],
+[
+"readings-carried-and-filtered",
+"persisting-filters-what-was-chosen",
+true,
+{
+"Becoming.Flow.persisting_keeping_above_ending": [
+"Becoming.Flow.carried_keeping_above_ending"
+]
+}
+],
+[
+"readings-revised-spread-and-locked",
+"ending-laws-as-regimes-on-a-lineage",
+false,
+{
+"Becoming.LineageDrawdown.below_iff": [
+"Becoming.Flow.carriers_drawn_down"
+]
+}
+],
+[
+"recurrence-without-premise",
+"returning-where-the-course-branches",
+false,
+{
+"Becoming.Branching.Returns": [
+"Becoming.Law.Returns"
+]
+}
+],
+[
+"overcompensating-giving-cycles",
+"where-a-run-of-a-regime-comes-to-rest",
+true,
+{
+"Becoming.RegimeMargin.Adjusted.Rises": [
+"Becoming.RegimeMargin.Crossing.rises_without_rest"
+],
+"Becoming.RegimeMargin.Adjusted.Band": [
+"Becoming.RegimeMargin.Alternation.alternates"
+]
+}
+],
+[
+"threshold-in-the-state-plane",
+"margin-of-a-regime",
+false,
+{
+"Becoming.RegimeMargin.step": [
+"Becoming.RegimeMargin.Adjusted.fates"
+]
+}
+],
+[
+"threshold-in-the-state-plane",
+"where-a-run-of-a-regime-comes-to-rest",
+true,
+{
+"Becoming.RegimeMargin.Adjusted.Rises": [
+"Becoming.RegimeMargin.threshold_regime"
+],
+"Becoming.RegimeMargin.Adjusted.Band": [
+"Becoming.RegimeMargin.Notch.no_threshold",
+"Becoming.RegimeMargin.threshold_regime"
+]
+}
+],
+[
+"where-a-run-of-a-regime-comes-to-rest",
+"least-loss-rest",
+false,
+{
+"Becoming.Amounts.unmarked_within": [
+"Becoming.RegimeMargin.Coupled.Indexed.rests_by"
+]
+}
+],
+[
+"support-beyond-a-band-can-cycle",
+"where-a-run-of-a-regime-comes-to-rest",
+false,
+{
+"Becoming.RegimeMargin.Coupled.Indexed.Band": [
+"Becoming.RegimeMargin.Coupled.Relay.threshold_beyond_band"
+]
+}
+],
+[
+"support-beyond-a-band-can-cycle",
+"a-cascade-along-total-dependence",
+true,
+{
+"Becoming.RegimeMargin.Coupled.Indexed.ends_iff_below_within": [
+"Becoming.RegimeMargin.Coupled.Relay.threshold_beyond_band"
+]
+}
+],
+[
+"overshoot-beyond-the-gap",
+"supported-renewal-recovery",
+false,
+{
+"Becoming.Flow.restores": [
+"Becoming.Regulation.Overshooting.never_at"
+]
+}
+],
+[
+"position-does-not-protect",
+"own-count-misses-joint-excess",
+false,
+{
+"Becoming.Flow.joint_excess_ends": [
+"Becoming.Race.greatest_ends"
+]
+}
+],
+[
+"becoming-renewal-reading",
+"least-loss-rest",
+true,
+{
+"Becoming.Amounts.rests": [
+"Becoming.falls_not_recurring"
+]
+}
+],
+[
+"overshooting-thermostat-alternates",
+"margin-of-a-regime",
+false,
+{
+"Becoming.RegimeMargin.step": [
+"Becoming.Rooms.Overshooting.alternates",
+"Becoming.Rooms.Overshooting.alternation_shifted"
+]
+}
+],
+[
+"overshooting-thermostat-alternates",
+"where-the-possible-grows",
+true,
+{
+"Becoming.Run.not_keepsWidening_of_returns": [
+"Becoming.Rooms.Overshooting.not_widening"
+]
+}
+],
+[
+"overshooting-thermostat-alternates",
+"overcompensating-giving-cycles",
+false,
+{
+"Becoming.RegimeMargin.Alternation.giving": [
+"Becoming.Rooms.Overshooting.alternation_shifted"
+]
+}
+],
+[
+"capture-through-the-rule",
+"threshold-reading-read-late-alternates",
+false,
+{
+"Becoming.RuleCapture.Alternating.before_locked": [
+"Becoming.RuleCapture.Reversed.not_absorbed"
+]
+}
+],
+[
+"a-counter-rule-read-from-its-own-share",
+"threshold-reading-read-late-alternates",
+false,
+{
+"Becoming.RuleCapture.Alternating.before_locked": [
+"Becoming.RuleCapture.Reversed.not_absorbed"
+]
+}
+],
+[
+"seeking-boundary",
+"lossless-exchange-continues-and-returns",
+false,
+{
+"Becoming.Law.succ_open": [
+"Becoming.succ_more"
+]
+}
+],
+[
+"what-a-set-point-optimum-does-beyond",
+"own-count-misses-joint-excess",
+false,
+{
+"Becoming.Flow.joint_excess_ends": [
+"Becoming.Optimum.nearing_as_rising"
+]
+}
+],
+[
+"restoring-giving-from-the-worst-start",
+"thresholds-of-waiting",
+true,
+{
+"Becoming.Tolerance.KeepsInclusionInto.course": [
+"Becoming.Tolerance.KeepsInclusion.course"
+]
+}
+],
+[
+"turning-in-time",
+"margin-of-a-regime",
+false,
+{
+"Becoming.RegimeMargin.step": [
+"Becoming.TurningInTime.Three.held_at_six",
+"Becoming.TurningInTime.Three.left",
+"Becoming.TurningInTime.Three.lock_ends"
+],
+"Becoming.RegimeMargin.ends_iff_below": [
+"Becoming.TurningInTime.share_corrected_on_course"
+],
+"Becoming.RegimeMargin.ends_below": [
+"Becoming.WayOfUnits.takes_nothing_ends"
+]
+}
+],
+[
+"turning-in-time",
+"capture-through-the-rule",
+false,
+{
+"Becoming.RuleCapture.Locked": [
+"Becoming.TurningInTime.Three.lock_ends",
+"Becoming.TurningInTime.Three.read_at_eight_ends",
+"Becoming.TurningInTime.Three.read_to_ten"
+]
+}
+],
+[
+"revision-with-an-undecided-value",
+"readings-within-what-they-read",
+true,
+{
+"Becoming.Diagonal.revision_never_rests": [
+"Becoming.Undecided.liar_two_valued_never_rests"
+]
+}
+],
+[
+"revision-with-an-undecided-value",
+"a-map-moving-every-value-never-rests",
+true,
+{
+"Becoming.Diagonal.revision_never_rests": [
+"Becoming.Undecided.liar_two_valued_never_rests"
+],
+"Becoming.Diagonal.flip_moves": [
+"Becoming.Undecided.liar_two_valued_never_rests"
+],
+"Becoming.Diagonal.Moves": [
+"Becoming.Undecided.liar_both_sides",
+"Becoming.Undecided.monotone_not_moves",
+"Becoming.Undecided.neg_not_moves"
+]
+}
+],
+[
+"turning-in-time",
+"a-line-on-a-stock",
+true,
+{
+"Becoming.LineOnAStock.after": [
+"Becoming.WayOfUnits.after_unit",
+"Becoming.WayOfUnits.step_unit"
+],
+"Becoming.LineOnAStock.taken": [
+"Becoming.WayOfUnits.taken_unit"
+],
+"Becoming.LineOnAStock.step": [
+"Becoming.WayOfUnits.step_unit"
+],
+"Becoming.LineOnAStock.left": [
+"Becoming.WayOfUnits.step_unit"
+],
+"Becoming.LineOnAStock.course": [
+"Becoming.WayOfUnits.along_unit",
+"Becoming.WayOfUnits.course_unit",
+"Becoming.WayOfUnits.unending_taken_below"
+],
+"Becoming.LineOnAStock.net": [
+"Becoming.WayOfUnits.net_unit",
+"Becoming.WayOfUnits.unending_unit"
+],
+"Becoming.LineOnAStock.Goes": [
+"Becoming.WayOfUnits.along_unit",
+"Becoming.WayOfUnits.unending_unit"
+],
+"Becoming.LineOnAStock.allKids": [
+"Becoming.WayOfUnits.allKids_unit",
+"Becoming.WayOfUnits.generation_unit"
+],
+"Becoming.LineOnAStock.generation": [
+"Becoming.WayOfUnits.generation_unit"
+],
+"Becoming.LineOnAStock.Needing": [
+"Becoming.WayOfUnits.needing_unit"
+],
+"Becoming.LineOnAStock.Holds": [
+"Becoming.WayOfUnits.holds_unit",
+"Becoming.WayOfUnits.unending_iff_holds"
+],
+"Becoming.LineOnAStock.Regime": [
+"Becoming.WayOfUnits.along_unit",
+"Becoming.WayOfUnits.regime_unit"
+],
+"Becoming.LineOnAStock.unending_iff_holds": [
+"Becoming.WayOfUnits.unending_iff_holds"
+],
+"Becoming.LineOnAStock.unending_taken_below": [
+"Becoming.WayOfUnits.unending_taken_below"
+]
+}
+],
+[
+"whole-drawing-beyond-renewal-ends",
+"selection-among-groups-by-ending",
+false,
+{
+"Becoming.Flow.family_excess_ends": [
+"Becoming.Web.Whole.family_excess_ends"
+]
+}
+]
+]

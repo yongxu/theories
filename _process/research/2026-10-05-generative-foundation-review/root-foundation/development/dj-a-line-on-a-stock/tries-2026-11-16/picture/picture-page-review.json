@@ -1,0 +1,251 @@
+{
+ "note": "AI-written. Reports of workflow wf_b072312a-291, 16 November 2026: three readers of the page THE-PICTURE.md before Ren saw it.",
+ "read:from-his-seat": {
+  "verdict": "Read cold, the shape is right: it says it is AI-written and unbuilt, parts \"proved\" from \"not yet\", and names what may fail. It is not ready. In five places \"proved\" covers more than the theorem (P1 to P5). \"Words the proofs have outgrown\" is unfair to him twice: his meta-attractor and 生生 are not outgrown, they are not reached (P2, P6). Some bullets are fragments, and \"fixed\" can be read as \"repaired\" (P7). The old frame returns at the end: a count closes the page (P9), and \"one model\" is retired, then proposed again as \"the smallest space\"; say so. It is ten minutes for him, not five: cut the last paragraph to one sentence, the Boundaries row, and \"Mine of this week\" to two items. The ending hands him the session's work (P10).\nPAGE NOT READY: P1, P2, P3, P4, P5, P6, P7.",
+  "findings": [
+   {
+    "id": "P1",
+    "sentence": "The pieces of the picture you describe are already in the Lean.",
+    "what_is_so": "Not all: the page itself names a missing half, and his wider meta-attractor has no theorem.",
+    "evidence": "Page line 19: \"This is the missing generative half.\" dynamics.json, self-reproducing-selection-across-carriers: declarations [].",
+    "proposed_wording": "Most pieces of the picture you describe are in the Lean. Two are not: nothing that goes on gives back to what it rests on, and the meta-attractor in your wider sense has no theorem.",
+    "must_fix": true
+   },
+   {
+    "id": "P2",
+    "sentence": "The meta-attractor as first written is the lock. Cancer is the lock on the wrong side of the boundary, or the lock with a take that grows.",
+    "what_is_so": "Two readings told as found; he wrote \"meta-attractor(cancer)\" today. The atlas says his meta-attractor is wider than the lock. The Lean's cancer is a rise within a whole, with no rule in it.",
+    "evidence": "dynamics.json, same entry: \"The corpus's meta-attractor is wider than 元吸引子\". Founding.lean:58: \"Readings (the AI's). Cancer is read as a confined rise\".",
+    "proposed_wording": "In the Lean, the meta-attractor is the lock. Yours is wider: something whose effects rebuild what selects it, across changes of who carries it. No theorem states that. Cancer is in the Lean as a third thing: a line that rises inside a whole and ends with it. My guess, not proved: cancer is the lock whose take is not covered, or grows.",
+    "must_fix": true
+   },
+   {
+    "id": "P3",
+    "sentence": "A course can end up on the wrong side without the level having fallen yet, by its own growth. Proved, with the growth given",
+    "what_is_so": "Proved: an ending, or an unmet need, within the ceiling plus one steps. No crossing of a boundary is stated. The rise is proved between two fixed takes.",
+    "evidence": "TurningInTime.lean:1436, locked_ends_rising: \"What is concluded is the ending; no step past a point of no return is stated.\" RegimeMargin.lean:793 rises_by_draw: \"H + y + (H' - H) ≤ H' + y'\".",
+    "proposed_wording": "Of two fixed takes the larger has the higher boundary: proved. With the growth given, such a line or rule ends within the ceiling plus one steps: proved. That it crosses the boundary before the level falls is my picture; no theorem states the crossing.",
+    "must_fix": true
+   },
+   {
+    "id": "P4",
+    "sentence": "The course is kept exactly where the level after that turn is on the kept side of the new boundary. Proved, exact.",
+    "what_is_so": "Exact only from a start already below the old boundary, with the reading and what it sets given, and the correction staying. On a lock it need not stay.",
+    "evidence": "TurningInTime.lean:1070 turns_in_time_iff: \"(kept : ∀ w x, Kept w → Kept (after w x))\", \"(below : x < H₁ + y₁)\". :2638 Three.read_at_eight_ends: \"premise `kept` fails here\".",
+    "proposed_wording": "Proved, exact, for a course that starts below the old boundary, with what is read and what a reading sets given, and the corrected rule staying corrected. On a lock it need not: one worked course ends that way.",
+    "must_fix": true
+   },
+   {
+    "id": "P5",
+    "sentence": "and a pair can hold together when neither holds alone. (Table: \"A pair in mutual support that never rests.\")",
+    "what_is_so": "The pair is one built case, told inside the exact law and tabled as a proved region.",
+    "evidence": "RegimeMargin.lean:3582 Relay.cycles: only `first`, `second`, draws \"1 1\", start \"(2, 3)\". :3306 Coupled.ends_iff_below asks \"(band : Band ...)\".",
+    "proposed_wording": "In one built pair the two hold together where neither holds alone. (Table: \"one built case\".)",
+    "must_fix": true
+   },
+   {
+    "id": "P6",
+    "sentence": "生生 carries three senses in the texts, none of them with a stock. (Under \"Words the proofs have outgrown\".)",
+    "what_is_so": "The proofs have not reached this word, and the Lean says so. Under this heading he reads that they passed it.",
+    "evidence": "Grammar.lean:254: \"It does not yet tell renewal that sustains life from turnover that destroys it\".",
+    "proposed_wording": "Move to what is missing: \"生生 as you mean it is not reached. The Lean's 生生 is renewal without end, with no stock.\"",
+    "must_fix": true
+   },
+   {
+    "id": "P7",
+    "sentence": "\"Never ends\" as the good side. / that was fixed / fixed now / Or the condition is on the whole course and not on the start.",
+    "what_is_so": "Fragments. \"Fixed\" means handed in, then decided beforehand; he may read \"repaired\". Bullets do not say whose words they are. The page's own \"kept side\" carries the word it retires.",
+    "evidence": "Page lines 44, 46, 57.",
+    "proposed_wording": "\"'Never ends' as the kept side (mine, still in this page): a taker that needs nothing never ends while the level is lost.\" \"What selects is who leaves which successors, and that is handed in.\" \"Decided before trying: any one of these means nothing has changed.\"",
+    "must_fix": true
+   },
+   {
+    "id": "P8",
+    "sentence": "Terms not said first: \"take\", \"kept side\", \"four cells, not three states\", \"carriers with no law\", \"a dictionary\".",
+    "what_is_so": "He would stop at each.",
+    "evidence": "Page lines 11 to 59.",
+    "proposed_wording": "\"Call how much there is the level, and how much is taken each step the take.\" \"At or above the boundary.\" \"Four combinations, where we spoke of three states (ended, holding, locked).\" \"A selection that continues across changes of who carries it, with no theorem.\" \"A renaming that proves nothing new.\"",
+    "must_fix": false
+   },
+   {
+    "id": "P9",
+    "sentence": "Cheap and true meanwhile. ... the map's 108 pieces would become 98 and its largest would go from 30 dynamics to 61",
+    "what_is_so": "A count closes the page, and \"cheap\" follows his \"no corners\". The numbers need the six unproved links.",
+    "evidence": "My recount on dynamics.json: the four alone give 104 pieces, largest 40; all ten give 98 and 61.",
+    "proposed_wording": "Meanwhile four links whose law is already in the Lean can be entered in the atlas. That is bookkeeping, not the map advancing.",
+    "must_fix": false
+   },
+   {
+    "id": "P10",
+    "sentence": "Tell me where this picture is wrong.",
+    "what_is_so": "Checking against the Lean is the session's work. Only he can say whether it is the picture he means.",
+    "evidence": "DIRECTION.md line 67: \"a proof that can fail, and his read at his pace\".",
+    "proposed_wording": "Two things only you can say: whether cancer as you mean it is the lock that overdraws, the rise within a whole, or both; and whether \"generative\" means what goes on giving back to what it rests on. Readers are checking each \"proved\" against the Lean. Unless you say otherwise I try the paper design next.",
+    "must_fix": false
+   }
+  ],
+  "checked_and_fine": [
+   "\"One boundary ... proved, and exact\": RegimeMargin.lean:741, :730. Add \"where the stock has such a level\" (:721 has none).",
+   "\"Proved closed\": TurningInTime.lean:1232 locked_closed.",
+   "\"A lock whose take is met goes on\": TurningInTime.lean:2728, told as a worked course.",
+   "October: RelationalRenewal.lean:503; the quoted words are its docstring, the overdraw given.",
+   "\"Only a change of the law leaves a lock\": RuleCapture.lean:47 still stands (ending locked is not leaving). Soften.",
+   "The header, \"the missing generative half\" and \"It may fail\" are plain."
+  ],
+  "what_ran": "Read only: AGENTS.md, DIRECTION.md, his words of 16 November, /Users/ren/theories/tmp/r7/one-model/THE-PICTURE.md, the six reports; statements and docstrings, no proof bodies, in /Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ (RegimeMargin, TurningInTime, LineOnAStock, WayOfUnits, RuleCapture, Founding, Grammar) and /Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/deeper/RelationalRenewal.lean; chapter 01; /Users/ren/theories/theories/becoming/results/atlas/entries/dynamics.json. One Python recount of the atlas's pieces, under a second. No build, test, gate, edit or git write."
+ },
+ "read:against-the-lean": {
+  "verdict": "AI-written (Fable). The spine holds: the lock closed, four cells each with a worked course, the October quotation exact, the atlas counts right on recount. Five places say more than the Lean or cannot be followed.\nPAGE NOT READY: F1, F2, F3, F4, F5",
+  "findings": [
+   {
+    "id": "F1",
+    "must_fix": true,
+    "sentence": "The course is kept exactly where the level after that turn is on the kept side of the new boundary. Proved, exact.",
+    "what_is_so": "Exact only from a start already on the wrong side, and only where the lesser take stays in force. A rule set again from its share need not stay corrected: one worked course is read in time, the level after the turn on the kept side, and the line ends.",
+    "evidence": "TurningInTime.lean:1070 turns_in_time_iff asks `(kept : ∀ w x, Kept w → Kept (after w x))` and `(below : x < H₁ + y₁)`. :2638 Three.read_at_eight_ends: \"The right side of `turns_in_time_iff` holds ... while the line ends\". Exact for a lock at :1633 and :1817. Two members: WayOfUnits.lean:580.",
+    "proposed_wording": "From a start already on the wrong side, the course is kept exactly where [...], provided the lesser take stays in force. A rule set again from its share need not stay corrected: in one worked course the reading comes in time and the line still ends. It stays where the reading also lowers the share."
+   },
+   {
+    "id": "F2",
+    "must_fix": true,
+    "sentence": "A course can end up on the wrong side without the level having fallen yet, by its own growth. Proved, with the growth given",
+    "what_is_so": "The two growth laws conclude an ending within the ceiling plus one steps, where nothing reads the level. Neither states a crossing. \"The boundary rises\" compares two standing takes. A level unfallen while the take outgrows all giving is one worked course.",
+    "evidence": "TurningInTime.lean:1440 locked_ends_rising, docstring: \"What is concluded is the ending; no step past a point of no return is stated.\" LineOnAStock.lean:1011 need_unmet: `∃ n, 0 < n ∧ n ≤ hi + 1 ∧ …`; :1736 Doubling.course_values: levels \"12, 12, 12, 12, 8, 0\".",
+    "proposed_wording": "Of two takes the larger has the higher boundary. A take that grows against a level with a ceiling ends: proved, with the growth given, for a line [...] and a rule [...]. No law yet states the crossing; one worked course shows the level standing at twelve while the take doubles."
+   },
+   {
+    "id": "F3",
+    "must_fix": true,
+    "sentence": "For a given take there is a level below which what comes back cannot cover it. [...] This is proved, and exact.",
+    "what_is_so": "That there is such a level is given: what comes back falls short below it and covers the take from there up to a ceiling. With another shape there need be none.",
+    "evidence": "RegimeMargin.lean:741 ends_iff_below `(short : Short g H y) (nothing : FromNothing g) (meets : Meets g H y hi) (keeps : Keeps g H hi)`; :1762 Notch.no_threshold: \"from four the run comes to rest ... at nothing, and from three ... it rests at three\".",
+    "proposed_wording": "Where what comes back falls short of a given take below some level and covers it from there up to a ceiling, that level is the boundary. [...] Proved and exact, that shape given."
+   },
+   {
+    "id": "F4",
+    "must_fix": true,
+    "sentence": "Not yet: Any boundary stated between two named regions.",
+    "what_is_so": "It contradicts the Proved cells beside it: Ended and Holding have their exact boundary, the two locks the critical share. Missing: names for the level's two sides, and any boundary in the root's regions.",
+    "evidence": "RegimeMargin.lean:741 with :712, :730. DrawnShaping.lean:378 drawn_locked_either: \"locked in the shapers' favour at every step or locked the other way at every step\".",
+    "proposed_wording": "The level's two sides named, or any boundary said in the root's regions. Only the two locks, either side of the critical share, are named."
+   },
+   {
+    "id": "F5",
+    "must_fix": true,
+    "sentence": "Turning back to renewing: nothing.",
+    "what_is_so": "It cannot be told from \"Lock to kept\" and \"Running down to renewal\" beside it. Its source is an atlas count over the reader's hand-sorted groups. The Lean has an October law of coming back, sufficient only.",
+    "evidence": "RenewalFlow.lean:189 repair_restores: \"contributes more than it draws at each of the `needG - level` steps from `T`, the condition is back at the sustaining need\".",
+    "proposed_wording": "From a turn to a course that remakes what it rests on: no link in the atlas, no law this month. October has one sufficient law: a level comes back where what goes on gives more than it takes for long enough."
+   },
+   {
+    "id": "F6",
+    "must_fix": false,
+    "sentence": "The meta-attractor as first written is the lock. Cancer is the lock on the wrong side [...] \"Meta-attractor\" names three unjoined things",
+    "what_is_so": "The lock is the map's definition; the map says the wider working definition is not shown to contain it or be contained. The atlas names two things meta-attractor; the confined rise is its cancer, with no rule or share. Placing cancer at the lock is the page's proposal.",
+    "evidence": "02-MAP.md:412, :463 \"not shown to contain closed capture or to be contained by it\"; atlas `confined-rise-within-a-whole`; Founding.lean:170.",
+    "proposed_wording": "The meta-attractor as the map defines it is the lock. I would place cancer at the lock on the wrong side [...]. That is my placing: where the Lean speaks of cancer there is no rule."
+   },
+   {
+    "id": "F7",
+    "must_fix": false,
+    "sentence": "each one's threshold falls as its partners rise, and a pair can hold together when neither holds alone",
+    "what_is_so": "The theorem is Coupled.threshold_falls: no higher as a partner rises, given each giving rising with what is left of each, standing takes and a band. A strict fall and the pair are worked cases.",
+    "evidence": "RegimeMargin.lean:3319 `threshold … y' ≤ threshold … y`; :3465 saves; :3582 Relay.cycles.",
+    "proposed_wording": "each one's threshold does not rise as its partners rise; in worked cases it falls, and a pair holds together when neither holds alone."
+   },
+   {
+    "id": "F8",
+    "must_fix": false,
+    "sentence": "a taker that needs nothing of the level goes on for ever while the level is lost for whoever needs it",
+    "what_is_so": "Given that it takes more than the renewal and what it gives. The quotation is exact.",
+    "evidence": "RelationalRenewal.lean:503 `(over : ∀ t, T0 ≤ t → L.renew + L.contrib t < L.draw t)`; docstring: \"A focal formation independent of the condition can draw beyond its renewal, continue at every step and form without bound, while the formation that depends on the condition loses it for ever. Persistence and success do not certify renewal.\"",
+    "proposed_wording": "a taker that needs nothing of the level, and takes more than comes back, goes on for ever [...]"
+   }
+  ],
+  "checked_and_fine": [
+   "\"The boundary rises\": RegimeMargin.lean:793 rises_by_draw, by at least the difference of the takes.",
+   "The lock closed: RuleCapture.lean:169, TurningInTime.lean:1232, given three conditions on how share and rule move. It uses the root's closed region, so \"never uses it\" is \"once\".",
+   "Four cells: each has a worked course (Three.lock_ends, read_to_ten, unlocked_goes_on), not a theorem.",
+   "Table, other items: each carried by a law, except \"a pair that never rests\" (one worked course) and \"kept to locked\" (the reader's witness has no stock).",
+   "Atlas: no lock links to turning in time. Recounted: 108 pieces, 86 alone, largest 30; with ten links 98 and 61.",
+   "Outgrown words are where the page says. A locked line that ends has not left the lock (RuleCapture.lean:48).",
+   "\"One corner only\": Stock.lean:319 is another exact law with a return in it.",
+   "Not verified: \"about ten vocabularies\"; 生生 \"three senses\"."
+  ],
+  "what_ran": "Read only: statements and docstrings (not proof bodies), grep, sed, git log for dates, inline Python recounting the atlas graph in memory. No build, test, gate, edit or writing git command."
+ },
+ "read:attack-the-picture": {
+  "verdict": "AI-written (Fable). The figure is half true: ways one and two share one object, carried along a course only where the take comes to stand; way three is another; where who is there depends on the level, no boundary decides. The proposed space is a dictionary until restricted, and its headline gain is a premise moved.\nPAGE NOT READY: A1, A2, A3, B1, B2, C1, D1",
+  "findings": [
+   {
+    "id": "A1",
+    "must_fix": true,
+    "sentence": "**What goes on moves the boundary.** … There are three ways.",
+    "what_is_so": "Ways one and two share one object: the level H + y of a standing take. Along a course it is proved only where the take in the end stands or every take is held. Way three is another object: one stock's edge of ending by where its partner starts, defined by running the course; there nothing that takes gives. Where who is there depends on the level, the present boundary decides nothing: from seven the course is at or above it for three steps and ends; from six it goes on.",
+    "evidence": "RegimeMargin.lean:741 ends_iff_below `… ↔ x < H + y`; :3286 `threshold … := leading (ending …) (hi + 1)`. LineOnAStock.lean:1840 higher_ends `«不穷» … ([A], 6) ∧ ¬ «不穷» … ([A], 7)`.",
+    "proposed_wording": "One boundary for a take that stands; along a course, proved where the take comes to stand. Where who is there depends on the level it decides nothing: in one worked case the higher start ends. Way three is another boundary."
+   },
+   {
+    "id": "A2",
+    "must_fix": true,
+    "sentence": "The course is kept exactly where the level after that turn is on the kept side of the new boundary. Proved, exact.",
+    "what_is_so": "Exact from a start already below the old boundary, where the lower take then stays. A corrected rule set again from the share breaks it: read in time, and the line ends.",
+    "evidence": "TurningInTime.lean:1070 turns_in_time_iff `(kept : ∀ w x, Kept w → Kept (after w x)) … (below : x < H₁ + y₁)`; :2638 read_at_eight_ends: \"Read at eight, in time, and the line still ends\".",
+    "proposed_wording": "Add: from a start already below the old boundary, provided the lower take then stays. A corrected rule need not stay: one worked course is read in time and still ends."
+   },
+   {
+    "id": "A3",
+    "must_fix": true,
+    "sentence": "A course can end up on the wrong side without the level having fallen yet … Proved",
+    "what_is_so": "The laws conclude an unmet need, or an ending, within the ceiling plus one steps and state no crossing. The crossing with the level unmoved is one worked course.",
+    "evidence": "TurningInTime.lean:1438: \"no step past a point of no return is stated\"; :2961 rise_count_ends `12 < 7 + 6`. LineOnAStock.lean:1011 need_unmet.",
+    "proposed_wording": "Proved, with the growth given: the line comes to an unmet need, and the lock ends, within the ceiling plus one steps. That either is past the boundary before the level falls is one worked course."
+   },
+   {
+    "id": "B1",
+    "must_fix": true,
+    "sentence": "They are independent, so there are four cells, not three states.",
+    "what_is_so": "Independent only because the take is a free function of the way. Under the proposal's tie (the take a count that favouring raises), every lock needing a capped stock that nothing reads ends: locked-and-kept is empty. Courses: locked, running out, Three.lock_ends; locked, kept, the tail of Three.read_to_ten; not locked, kept, Three.unlocked_goes_on; not locked, running out, none found where there is a rule. Cells are states, not fates: a locked start below its boundary goes on if read in time.",
+    "evidence": "TurningInTime.lean:1440 locked_ends_rising, :1473 count_rises `(rise : ∀ a g, favours g → a < fA a g)`; :2501, :2728, :2906.",
+    "proposed_wording": "Separate questions, so four cells; three have a worked course. Independent only while the take does not follow the share. A cell says where a course is, not how it ends."
+   },
+   {
+    "id": "B2",
+    "must_fix": true,
+    "sentence": "Cancer is the lock on the wrong side of the boundary, or the lock with a take that grows.",
+    "what_is_so": "A definition proposed, not a reading: the map's cancer theorem has no lock, its meta-attractor no stock. It keeps closing on itself and using up. It leaves out that nothing of the level reaches how it selects (the README's \"most dangerous property\"; premise `un` of the lock-ends laws), that it needs what it uses up, and the whole it is favoured within.",
+    "evidence": "Founding.lean:166 ConfinedRise.ends: \"Its selection within, and its drawing, do not enter\". TurningInTime.lean:1446 `un`. Atlas closed-capture: `Unread`.",
+    "proposed_wording": "Cancer as four together: closed on itself; a take unmet or growing; nothing of the level reaching how it selects in time; needing what it uses up. No theorem has all four."
+   },
+   {
+    "id": "C1",
+    "must_fix": true,
+    "sentence": "\"What is favoured draws more\" then follows from descent; today it is a premise.",
+    "what_is_so": "Unrestricted, the space is a dictionary: it is already `pair`. Smallest restriction found: take and give add over members; giving rises with what is left, nothing from nothing; who leaves what reads the way only through counts, rising; needs do not rise along descent; for exactness, descent conserves take and give. A giving member then lowers the boundary by a law already there. The headline moves a premise: today's `rise` and `count` become share-as-a-count (as a ratio it fails) and the given offspring. Mutual support is no case of one level: takers lower, and the order of fates breaks.",
+    "evidence": "TurningInTime.lean:337 `def pair (after : W → Nat → W) (left : W → Nat → Nat)`; :1473. LineOnAStock.lean:1705 ShareRises. RegimeMargin.lean:783 root_mono; :3502 breaks_order.",
+    "proposed_wording": "With the share a count and favoured meaning leaving more, the favoured kind draws more: today's law, its premise moved into who leaves what. Nothing is derived yet."
+   },
+   {
+    "id": "D1",
+    "must_fix": true,
+    "sentence": "*What would count as nothing having changed, fixed now.* …",
+    "what_is_so": "The first passes by making a premise a definition (C1). The second is passed today by an exact law that changes with the giving alone and with the take alone: the weakest. The third passes by a dictionary unless the Lean gets shorter; the lock's two laws named to go are days old. The fourth: a start fixes its course, so a course condition is a start condition.",
+    "evidence": "RegimeMargin.lean:741; :3281 `ending … := decide (…)`.",
+    "proposed_wording": "Fixed now: one theorem, whose premises run no course, gives both fates of the worked case where the higher start ends; a named proof older than 12 November returns as its case; the Lean is shorter after."
+   },
+   {
+    "id": "E1",
+    "must_fix": false,
+    "sentence": "## Attractors, transitions, paths: what is proved today",
+    "what_is_so": "The table gives thresholds in the state, regions without basins, and paths between different spaces. Two parameter transitions are proved, not said as such: the take against the greatest giving; the first reading's step against the point of no return. A full answer needs one named space; every start's fate; for each parameter the value at which a region appears or vanishes; one drawing, each arrow marked law, case or missing. \"Generative\" here means giving back only.",
+    "evidence": "RegimeMargin.lean:721; TurningInTime.lean:2289; 05-COLLECTIVES.md:365 \"none a proved phase transition\".",
+    "proposed_wording": "Not on this page yet: a transition as a parameter passing a value; every start's fate; one drawing."
+   }
+  ],
+  "checked_and_fine": [
+   "A standing take's boundary is exact under its stated shape of giving.",
+   "\"A lock whose take is met goes on\": Three.read_to_ten."
+  ],
+  "what_ran": "Read only: the page, the six reports, the README paragraph, the atlas entries; statements and docstrings, few proof bodies, in /Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ and /Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/deeper/RelationalRenewal.lean. A one-second script recomputed the higher-start course. Nothing built or edited. C1's restriction and D1's test are mine, uncompiled."
+ }
+}
