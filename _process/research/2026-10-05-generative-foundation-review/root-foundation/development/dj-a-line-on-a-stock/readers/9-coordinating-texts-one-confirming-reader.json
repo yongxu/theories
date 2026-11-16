@@ -1,0 +1,136 @@
+{
+ "note": "AI-written. Report of workflow wf_149dfaf8-78f, 16 November 2026: one reader confirming the last corrected clauses.",
+ "confirm": {
+  "verdict": "AI-written (Fable). Read only: nothing built, run or edited. All fourteen findings are taken up. I opened after_alike, alike_iff, ways_alike, need_unmet, falls_to_unmet, way_ends, unending_iff_holds, takes_nothing, gone_from, NothingTakenEnds, KidsNeedMore, locked_ends_rising, count_rises, both window laws and read_at_eight_ends. No changed sentence says more than its Lean. Two edits broke their own sentences on the questions page (R1, R2). As an outside reader: the opening section and question 5 can be followed; question 4 can, except its last changed sentence; question 7 cannot at its second and last sentences. R3 to R7 are optional.\nTEXTS NOT READY: R1, R2",
+  "taken_up": [
+   {
+    "id": "lean:N1",
+    "done": true,
+    "now_says": "\"Who comes next depends only on which needs the level meets. Where every unit leaves offspring it depends on exactly that: levels that meet different needs leave different next ways.\""
+   },
+   {
+    "id": "lean:N2",
+    "done": true,
+    "now_says": "Plan: \"That this is the only way is argued from `takes_nothing`, not a Lean statement.\" Direction: \"…and leaves only its like changes nothing in the stock or in the rest; in one small case it still changes whether anything goes on.\""
+   },
+   {
+    "id": "lean:N3",
+    "done": true,
+    "now_says": "\"that inequality is proved to decide where the band that is read starts at or below that point … Whether the condition on the band's top is needed is not shown.\" True to the Lean; hard to parse (R1)."
+   },
+   {
+    "id": "lean:N4",
+    "done": true,
+    "now_says": "Queue: \"(`alike_iff`, where every unit of the way leaves offspring; `ways_alike`; no premise on the stock)\". Plan: \"under item 4's premises\", \"nothing is given from nothing\". Row 7: \"as in question 6 without the share, and:\". Leftovers: R4, R5."
+   },
+   {
+    "id": "lean:N5",
+    "done": true,
+    "now_says": "\"a line once gone does not come back, and one case in which a loss changes nothing else\"; \"Favouring does not lower the share (in question 4 it adds to it)\"; \"a positive amount\"; \"at a step no theorem bounds\". Row 4 still has \"an amount\" (R4)."
+   },
+   {
+    "id": "lean:N6",
+    "done": true,
+    "now_says": "\"Two rounds of AI readers read drafts of it\"; plan: \"said more than the Lean in a dozen places … Three readers found them\". NOTE.md is not among the four drafts; /Users/ren/theories/tmp/r7/one-model/check/round9/land3_note_fix.py carries its sentence (read, not run)."
+   },
+   {
+    "id": "out:N1",
+    "done": true,
+    "now_says": "As lean:N1."
+   },
+   {
+    "id": "out:N2",
+    "done": true,
+    "now_says": "\"Where offspring together take the same and need no more, every unit leaves some and needs something, and nothing comes back from nothing, the line goes on without end exactly where…\""
+   },
+   {
+    "id": "out:N3",
+    "done": true,
+    "now_says": "\"If every member's successors together draw exactly what it drew…\"; \"Successors that together draw less than their parent are not covered.\""
+   },
+   {
+    "id": "out:N4",
+    "done": true,
+    "now_says": "\"its top is a level from which the level does not fall back under any rule, or one the level never reaches.\" \"The turn\" is gone from the page. The sentence around it is still hard (R1)."
+   },
+   {
+    "id": "out:N5",
+    "done": true,
+    "now_says": "\"At some levels a reading sets the rule instead; the rule it sets is the corrected rule, with one fixed draw. The rule overdraws when its level is already below the point of no return (question 2) of the draw it keeps.\" \"It ends\" in questions 4, 6 and 7 (R2)."
+   },
+   {
+    "id": "out:N6",
+    "done": true,
+    "now_says": "Both pages: \"below a need that was met at the start, and so below where it started\"."
+   },
+   {
+    "id": "out:N7",
+    "done": true,
+    "now_says": "\"which a test fixed beforehand named as nothing having changed\"; \"Two sentences of the idea are read onto theorems of one small model, and a third theorem says where such a line holds\"; \"(16 November)\" twice; \"the rule is set again from the share.\""
+   },
+   {
+    "id": "out:N8",
+    "done": true,
+    "now_says": "\"In the one model it is handed in.\" is dropped; \"and, as said above, levels that meet the same needs leave the same next way.\""
+   }
+  ],
+  "findings": [
+   {
+    "id": "R1",
+    "file": "/private/tmp/claude-501/-Users-ren-theories/b9a0280b-abc4-4a5f-afc4-0f672b361d9d/scratchpad/dry5/_process/A-CASE-FROM-OUTSIDE.md",
+    "text_says": "Question 7: \"that inequality is proved to decide where the band that is read starts at or below that point, and its top is a level from which…\" Three sentences on: \"Under those conditions, a first reading … still corrects the rule, and it ends.\"",
+    "lean_or_fact_says": "`locked_turns_in_time_on_window_iff` has `low`, `covers` (`c ≤ K`, so the top is at or above such a level) and `safe` as premises. The text is true to it, but \"decide where the band … starts\" reads as deciding where the band starts, and \"those conditions\" now sits after two sentences on where the conditions fail, so it can be taken for them, where nothing is proved.",
+    "proposed_wording": "Where it sets the rule only, the same inequality is proved to settle it under two conditions on the band that is read: it starts at or below that point; and its top is at or above a level from which the level does not fall back under any rule, or is one the level never reaches after the reading. Under these two, a first reading that leaves the level below that point still corrects the rule, and what goes on ends all the same. Where the band starts above that point, a course can meet the inequality and still end (question 6's worked course). Whether the condition on the top is needed is not shown.",
+    "must_fix": true
+   },
+   {
+    "id": "R2",
+    "file": "/private/tmp/claude-501/-Users-ren-theories/b9a0280b-abc4-4a5f-afc4-0f672b361d9d/scratchpad/dry5/_process/A-CASE-FROM-OUTSIDE.md",
+    "text_says": "Question 4: \"the level at that step is below a need that was met at the start, and so below where it started, and it ends, at a step no theorem bounds.\"",
+    "lean_or_fact_says": "`way_ends` concludes a step at which no need is met; nothing says the level comes to nothing. The two edits put \"it\" (the level) next to \"it ends\", which now reads as the level ending.",
+    "proposed_wording": "…and so below the level it started from. With that premise what goes on also ends: at some step, which no theorem bounds, no need is met.",
+    "must_fix": true
+   },
+   {
+    "id": "R3",
+    "file": "/private/tmp/claude-501/-Users-ren-theories/b9a0280b-abc4-4a5f-afc4-0f672b361d9d/scratchpad/dry5/_process/LEAN-TOWARD-THE-DIRECTION.md",
+    "text_says": "\"…offspring take more and need no more than their parent, every unit needs something, and the level has a ceiling with nothing given from nothing. Without the second of these the line can go on (`KidsNeedMore`).\"",
+    "lean_or_fact_says": "`KidsNeedMore.all_but_down` drops `down` only. In the longer list \"the second\" can be counted as \"every unit needs something\". Item 5 says it plainly.",
+    "proposed_wording": "Without offspring needing no more than their parent the line can go on (`KidsNeedMore`).",
+    "must_fix": false
+   },
+   {
+    "id": "R4",
+    "file": "/private/tmp/claude-501/-Users-ren-theories/b9a0280b-abc4-4a5f-afc4-0f672b361d9d/scratchpad/dry5/_process/A-CASE-FROM-OUTSIDE.md",
+    "text_says": "Row 4: \"is the share times an amount with every favouring raising the share\". Row 5: \"That kids take exactly what their parent took\". Row 7: \"as in question 6 without the share\", where row 6 has \"which then stay\".",
+    "lean_or_fact_says": "`count_rises (pos : 0 < u)`; `even : taken use (kids u) = use u`; the window law gives nothing about the corrected rule staying. The questions say the first two rightly; the rows were left behind.",
+    "proposed_wording": "Row 4: \"the share times a positive amount\". Row 5: \"That each unit's kids together take exactly what it took\". Row 7: \"question 6's givens other than those on the share (nothing is given about the corrected rule staying), and:\".",
+    "must_fix": false
+   },
+   {
+    "id": "R5",
+    "file": "/private/tmp/claude-501/-Users-ren-theories/b9a0280b-abc4-4a5f-afc4-0f672b361d9d/scratchpad/dry5/_process/BECOMING-WORKBOARD.md",
+    "text_says": "Queue: \"where every unit leaves offspring that take the same and need no more than it, every unit needing something, the net never ends exactly where…\"",
+    "lean_or_fact_says": "`unending_iff_holds` also takes `nothing`, and `even` is of the kids together.",
+    "proposed_wording": "where every unit leaves offspring that together take the same and need no more than it, every unit needing something and nothing given from nothing, …",
+    "must_fix": false
+   },
+   {
+    "id": "R6",
+    "file": "/private/tmp/claude-501/-Users-ren-theories/b9a0280b-abc4-4a5f-afc4-0f672b361d9d/scratchpad/dry5/_process/DIRECTION.md",
+    "text_says": "\"…hold with the stock taken out, which a test fixed beforehand named as nothing having changed.\" \"The model says that a line once gone does not come back, and one case in which a loss changes nothing else\".",
+    "lean_or_fact_says": "Both are true (frozen test A(3); `gone_from`, `takes_nothing`). The first is a garden path; in the second \"says\" has no verb for \"one case\".",
+    "proposed_wording": "\"…hold with the stock taken out, an outcome fixed beforehand as one that would count as nothing having changed.\" \"…does not come back, and gives one case in which a loss changes nothing else\".",
+    "must_fix": false
+   },
+   {
+    "id": "R7",
+    "file": "/private/tmp/claude-501/-Users-ren-theories/b9a0280b-abc4-4a5f-afc4-0f672b361d9d/scratchpad/dry5/_process/A-CASE-FROM-OUTSIDE.md",
+    "text_says": "Opening: \"At some levels a reading sets the rule instead\"; \"when its level is already below\".",
+    "lean_or_fact_says": "True to `windowAfter`, `below` and `draws`. \"A reading\" is not yet said to be of the level, and the level is the stock's.",
+    "proposed_wording": "At some levels the level is read, and the reading sets the rule instead … The rule overdraws when the level is already below…",
+    "must_fix": false
+   }
+  ]
+ }
+}

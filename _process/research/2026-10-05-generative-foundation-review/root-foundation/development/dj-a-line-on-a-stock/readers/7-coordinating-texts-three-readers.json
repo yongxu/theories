@@ -1,0 +1,352 @@
+{
+ "note": "AI-written. Reports of workflow wf_89bd8fd7-d9c, 16 November 2026: three readers of the drafted plan, direction page, board clauses and page of questions.",
+ "read:from-outside": {
+  "findings": [
+   {
+    "id": "C1",
+    "file": "/private/tmp/claude-501/-Users-ren-theories/b9a0280b-abc4-4a5f-afc4-0f672b361d9d/scratchpad/dry3/_process/A-CASE-FROM-OUTSIDE.md",
+    "text_says": "Q7: \"'Early enough' is one inequality: the level after the step at which it is first read is at or above the corrected draw's point of no return\"; table: `locked_turns_in_time_on_window_iff`, \"Given: As in question 6.\"",
+    "lean_or_fact_says": "`Three.read_at_eight_ends` proves that inequality (`3 + 3 ≤ …(T + 1)).2`) together with `¬ «不穷»`. `locked_turns_in_time_on_window_iff` also takes `low : N ≤ H₂ + y₂`, `covers : c ≤ K`, `safe`. Only `locked_turns_in_time_share_iff` asks nothing of where the band lies.",
+    "evidence": "Question 6's own worked course is \"read in time … ended\". A reader of 7 takes the inequality as enough when only the rule is corrected.",
+    "proposed_wording": "Where a reading sets the share as well, \"early enough\" is one inequality: (as now). Where it sets the rule only, that inequality decides only if the band that is read starts at or below that point and reaches a level that is safe under every rule; otherwise it can hold and the line still end (question 6's worked course). Under those conditions a later first reading corrects and the line still ends. Add the three premises to the table.",
+    "must_fix": true
+   },
+   {
+    "id": "C2",
+    "file": "/private/tmp/claude-501/-Users-ren-theories/b9a0280b-abc4-4a5f-afc4-0f672b361d9d/scratchpad/dry3/_process/A-CASE-FROM-OUTSIDE.md",
+    "text_says": "Q4: \"Is its draw growing as it goes on?\" … \"So with a growing draw the question is not whether a shortfall comes.\" … \"within as many steps as the ceiling plus one\"",
+    "lean_or_fact_says": "`need_unmet` takes `grows : ∀ u, use u < taken use (kids u)`: every unit, every step, whatever the level. `locked_ends_rising` takes `more`, a `Locked` start and `un : ∀ x, need ≤ x → ¬ marked x` (nothing reads the level). Levels are `Nat`.",
+    "evidence": "Nearly every real case is growing now. The reader answers yes, takes the shortfall as certain, and reads ceiling plus one as a forecast in their own units. This is where the page promises more than the model gives.",
+    "proposed_wording": "4. Does its draw grow at every step, for as long as every need is met? The theorems ask this of every member at every step, and of the rule while nothing reads the level. Growing now is not enough. (…) The count of steps is in the model's whole-number levels: a bound in the model, not a forecast.",
+    "must_fix": true
+   },
+   {
+    "id": "C3",
+    "file": "A-CASE-FROM-OUTSIDE.md Q9; DIRECTION.md \"Trying to join them\"; LEAN-TOWARD-THE-DIRECTION.md item 7 (all in /private/tmp/claude-501/-Users-ren-theories/b9a0280b-abc4-4a5f-afc4-0f672b361d9d/scratchpad/dry3/_process/)",
+    "text_says": "\"its loss can be read, and is not felt through the stock. *Proved.* It can still change whether anything goes on at all.\" Direction: \"…and can still change whether anything goes on.\"",
+    "lean_or_fact_says": "`NothingTakenEnds.ending_differs`: from `([A, C], 5)` the course is `([C], 3)` from step 2 on. Its docstring: \"a unit that takes nothing can keep the net going after every unit that takes something has stopped being met.\" `takes_nothing` gives equal levels and equal other units; nothing in it reads the loss.",
+    "evidence": "A reader takes it that losing such a member can bring the rest down. The Lean shows only that it may itself be what is left.",
+    "proposed_wording": "Case: \"Its loss changes neither the level nor any other member. *Proved.* It can be the only thing still going on: with it something goes on, without it nothing does, and nothing else differs. *A small case.*\" Direction and plan: \"A loss of something that takes nothing changes nothing in the stock or in the rest. It changes whether anything goes on only where that thing is all that is left.\"",
+    "must_fix": true
+   },
+   {
+    "id": "C4",
+    "file": "/private/tmp/claude-501/-Users-ren-theories/b9a0280b-abc4-4a5f-afc4-0f672b361d9d/scratchpad/dry3/_process/A-CASE-FROM-OUTSIDE.md",
+    "text_says": "Q5: \"If the draw does not grow, where does it come to hold? If what each member leaves behind draws what the member drew, it goes on without end exactly where … *Proved, with the conditions on what comes back assumed all along the course.*\"",
+    "lean_or_fact_says": "`unending_iff_holds` also takes `some : ∀ u, kids u ≠ []` and `down : ∀ u v, v ∈ kids u → need v ≤ need u` (kept countermodel `NoKids`). `even` is equality; a shrinking draw is not covered.",
+    "evidence": "Question 4 says \"If successors need no more\"; its absence here reads as not needed. Only the table has it.",
+    "proposed_wording": "5. If every member's successors draw exactly what it drew, where does it come to hold? If also every member leaves at least one successor, and successors need no more than their parents, it goes on without end exactly where … (as now).",
+    "must_fix": true
+   },
+   {
+    "id": "C5",
+    "file": "/private/tmp/claude-501/-Users-ren-theories/b9a0280b-abc4-4a5f-afc4-0f672b361d9d/scratchpad/dry3/_process/A-CASE-FROM-OUTSIDE.md",
+    "text_says": "Header: \"Prepared for Ren; sending it to anyone is his … step 8 of the plan … checked in Lean\"; \"The idea the map is drawn for\"; \"A rule set again from what it already favours, in the cases where the way is a rule and a share.\"",
+    "lean_or_fact_says": "`LineOnAStock` docstring, \"What is not here\": \"a lock on these units\". No result has members and a rule together. \"unit\" (model), \"member\" (questions), \"successors\", \"offspring\" (table) are one thing under four words; \"rule\", \"share\", \"the line\", \"ends\", \"the band\", \"the turn\" are used before they are said.",
+    "evidence": "The first screen says how far it is checked. It says what it is only to someone inside the work. Questions 4b, 6, 7 and 8 cannot be read cold.",
+    "proposed_wording": "Open: \"Nine questions to ask of something you know that lives on a stock that renews. Each comes from a small mathematical model in which the answer was proved and checked by machine (the proof checker Lean), or worked through on one example. None has been tried on a real case. No person has checked this page. AI-written.\" Then: \"Two kinds of way are worked out, never both at once: members, and a rule with a share. The rule favours something, favouring adds to its share, and each step the rule is set again from the share. 'Ends' means no need is met any more.\" One word each for member and successor, table included.",
+    "must_fix": false
+   },
+   {
+    "id": "C6",
+    "file": "/private/tmp/claude-501/-Users-ren-theories/b9a0280b-abc4-4a5f-afc4-0f672b361d9d/scratchpad/dry3/_process/A-CASE-FROM-OUTSIDE.md",
+    "text_says": "Q2: \"Suppose that below some level what comes back falls short of the draw. Then the draw plus that level is a point of no return\"",
+    "lean_or_fact_says": "`RegimeMargin.Short g H y` is about what is left (`z < y → g z < H`); `ends_iff_below` concludes `x < H + y`, for a fixed `H`, and takes `Meets g H y hi` and `Keeps g H hi`.",
+    "evidence": "Read as the stock's level before the draw, the reader's threshold is too high by the draw. The two conditions are announced and not said.",
+    "proposed_wording": "Hold the draw fixed. Suppose that when less than some amount is left after the draw, what comes back falls short of the draw, and that from that amount up to the ceiling it covers the draw. Then the draw plus that amount is a point of no return: …",
+    "must_fix": false
+   },
+   {
+    "id": "D1",
+    "file": "/private/tmp/claude-501/-Users-ren-theories/b9a0280b-abc4-4a5f-afc4-0f672b361d9d/scratchpad/dry3/_process/DIRECTION.md",
+    "text_says": "\"It fails to be one if selection cannot be shown as a case of it. Since 16 November it is shown in one small model, where what selects is given\"",
+    "lean_or_fact_says": "Study note, frozen tests: \"A. (1) passes thinly … (3) still fires for `after_alike`, `alike_iff`, `ways_alike`, `born_alike`: they hold with the stock removed\"; \"C. Fires in part\". The draft plan says it (\"What did not come out\"); this page does not.",
+    "evidence": "He reads that the page's own failure condition is lifted, and cannot see that a test frozen beforehand still fires.",
+    "proposed_wording": "Since 16 November one small model has selection as a step of it: which needs the level meets decides who leaves offspring. What selects is given there, and the join is thin: the laws of alikeness hold with the stock taken out, and one test frozen beforehand still fires. How what selects comes to be is not shown.",
+    "must_fix": true
+   },
+   {
+    "id": "D2",
+    "file": "/private/tmp/claude-501/-Users-ren-theories/b9a0280b-abc4-4a5f-afc4-0f672b361d9d/scratchpad/dry3/_process/DIRECTION.md",
+    "text_says": "\"Three of them now meet in one small model (16 November): a line on a stock.\" Four sub-bullets follow, the fourth: \"The same arithmetic, against the same ceiling, ends a rule set again from the share it favours…\"",
+    "lean_or_fact_says": "`LineOnAStock`, \"What is not here\": \"a lock on these units\". `locked_ends_rising` is in `TurningInTime` on `A × R × Nat`; it shares one lemma, `rising_takes_all`, with `need_unmet`, and takes `locked` and `un` (no level read). The note's \"three\" are three sentences of the idea, not three of the pieces listed above.",
+    "evidence": "He cannot tell which three, counts four, and takes the rule and share to be inside the model. Joined is what he weighs.",
+    "proposed_wording": "\"Two sentences of the idea now have a proved form in one small model (16 November), and a third beside it.\" Move the fourth item out: \"Beside the model, not in it: one counting lemma serves both. Where nothing reads the level, it ends a locked rule set again from the share it favours, given that each favouring adds to the share and the draw is the share times an amount. No overdraw is asked at the start. The model has no rule and no share in it.\"",
+    "must_fix": true
+   },
+   {
+    "id": "D3",
+    "file": "/private/tmp/claude-501/-Users-ren-theories/b9a0280b-abc4-4a5f-afc4-0f672b361d9d/scratchpad/dry3/_process/DIRECTION.md",
+    "text_says": "\"This is the third paragraph above in a model, with the growth given.\"",
+    "lean_or_fact_says": "LANDING-WHAT: \"'Draws down what it rests on while nothing in it yet differs' is a **reading**, said only of `falls_to_unmet`, and marked as a reading.\" `falls_to_unmet` also takes `nothing`, `keeps`, `high`, `needs`, `ne`, `met`. The paragraph names three ways; the law is about one.",
+    "evidence": "\"Is\" tells a reading as a result. \"The ceiling\" arrives without having been said of the stock.",
+    "proposed_wording": "We read this as one sentence of the third paragraph above: used up while nothing in the way yet differs. That is a reading. Given: the growth, a ceiling the level cannot pass, nothing coming back from nothing, every need met at the start. (Say the ceiling where the model is introduced.)",
+    "must_fix": true
+   },
+   {
+    "id": "D4",
+    "file": "/private/tmp/claude-501/-Users-ren-theories/b9a0280b-abc4-4a5f-afc4-0f672b361d9d/scratchpad/dry3/_process/DIRECTION.md",
+    "text_says": "\"Where offspring take the same, the line goes on without end exactly where it comes to a state its level can hold.\"",
+    "lean_or_fact_says": "LANDING-WHAT: \"`unending_iff_holds`: the regime along the course is **assumed**; its one closed case beyond `WayOfUnits` is `TwoForOne`.\" It also takes `some` and `down`.",
+    "evidence": "Nothing here is marked as given, beside a sub-bullet that marks its given. \"A state its level can hold\" is a phrase he would stop on.",
+    "proposed_wording": "Where offspring take the same and need no more, and every unit leaves some, the line goes on without end exactly where it comes to a state in which every need is met and the level is at or above the point of no return of what they take together. That the stock has such a point along the course is assumed. Beyond the earlier result there is one worked case.",
+    "must_fix": true
+   },
+   {
+    "id": "D5",
+    "file": "/private/tmp/claude-501/-Users-ren-theories/b9a0280b-abc4-4a5f-afc4-0f672b361d9d/scratchpad/dry3/_process/DIRECTION.md",
+    "text_says": "\"A correction to the rule alone is undone wherever the level is not read, and what then goes on is not always the corrected rule.\" Also \"no overdraw is asked at the start\" beside \"The overdraw before the reading … are given.\"",
+    "lean_or_fact_says": "The general fact is `window_alone_outside`: outside the band the rule is read off the share again. The undoing and the old rule going on are `Three.read_at_eight_ends` and `Three.read_to_ten`, closed cases. The tracked page said \"in one worked course\".",
+    "evidence": "Two worked courses read as a law. The two sentences on the overdraw read as a contradiction. \"Off that the corrected rule is read again\" is hard to parse.",
+    "proposed_wording": "Where the level is not read, a correction to the rule alone does not hold: the rule is read off the share again. In one worked course that undoes the correction and the line ends; in another, what goes on is the old rule. Where a reading also lowers the share, and a low share gives the corrected rule and stays low, the proviso is not needed and what goes on is the corrected rule. Given for both exact conditions: the overdraw before the reading, and what a reading sets.",
+    "must_fix": true
+   },
+   {
+    "id": "D6",
+    "file": "/private/tmp/claude-501/-Users-ren-theories/b9a0280b-abc4-4a5f-afc4-0f672b361d9d/scratchpad/dry3/_process/DIRECTION.md",
+    "text_says": "\"What is given is the gap.\" \"In the new model they are one step read from two ends.\" \"a way that comes to respond to a falling level\" (first bullet). \"403 modules\"; \"one module became a case of a more general one\".",
+    "lean_or_fact_says": "The note says \"one step read from two ends\" of the way and the level, not of the two relations. \"Gap\" in the idea is between what a thing rests on and what makes a difference. LANDING-WHAT: six declarations derived; `ends_while_net_goes` and `two_units_iff` use no law of it; 1,182 lines to 1,126. Two new modules make 403 stale.",
+    "evidence": "\"How what selects comes to be\" is said four times (idea, found, next, do not know) and \"ends still locked\" twice. The first bullet's \"comes to respond\" reads as the thing later said to be not reached. \"Losses that never come back\" left the next list with no word on what it became.",
+    "proposed_wording": "Heading: \"What is handed in is what is still missing.\" \"In the new model one step does both: a unit leaves offspring where the level meets its need, and two levels that meet the same needs leave the same next way.\" First bullet: \"a way that is given a response to a falling level…\". Last bullet: \"one module's main results became cases of a more general module's; it went from 1,182 lines to 1,126, and the landing added about 2,900.\" Keep \"how what selects comes to be\" in found and next only.",
+    "must_fix": false
+   }
+  ],
+  "checked_and_fine": [
+   "Case header: says each answer is a theorem or a worked course in a small model, none tried on an actual case, no person has checked the page.",
+   "Case Q3 against `ways_alike` and `agrees_until_marked`: no premise on the stock, as told.",
+   "Case Q6 first worked course against `Three.read_at_eight_ends` (9, 8, 6, 6, 2, 0), and Q8 against `Three.read_to_ten` (9, 8, 10, 12, 12): told as the Lean has them, each marked as a worked course.",
+   "Case Q6 second bullet: \"That a reading does this is assumed, not derived\" matches `sets`, `lowRule`, `lowStays`.",
+   "Case \"What these do not answer\" matches the study note's boundary; the higher start that ends is `HigherStartEnds.higher_ends`.",
+   "Direction, first sub-bullet against `alike_iff` and `ways_alike`; \"If offspring need no more than their parents\" carries `down` for `falls_to_unmet`.",
+   "Direction: \"the proviso is not needed\" matches `locked_turns_in_time_share_iff` having no premise on the band; \"what goes on is the corrected rule\" matches `share_corrected_on_course`.",
+   "Direction, \"Trying to join them\": the sentences on the overdraw law and on `down` match LANDING-WHAT.",
+   "Read only. Nothing built or run; one file count and one line count."
+  ],
+  "summary": "Case page. The first screen says well how far it is checked. It says what the page is only in the work's own words (Ren, step 8, the plan, Lean unglossed, \"the map\"), and five minutes is short for it. A reader with a case can use questions 1, 3 and 8 as written. Questions 2, 4, 5, 7 and 9 would be misread (C1 to C4, C6). Questions 4b, 6 and 7 cannot be read until \"rule\" and \"share\" are said (C5). It promises more than the model gives at question 4: growth now is taken for growth at every step, and a count of steps for a forecast.\n\nDirection page. \"What we have found so far\" marks its dates, but he could not see from it alone what is still given. It mixes 15 and 16 November inside one bullet. It leaves out four givens: the ceiling, the assumed regime, the level not being read, every need met at the start. It tells two worked courses as a law. It nests the lock inside a model that has no lock. It does not say that a test frozen beforehand still fires. Terms he would stop on: \"the ceiling\", \"a state its level can hold\", \"the proviso\", \"off that\", \"one step read from two ends\", \"the gap\".\n\nNot checked: the plan and the board beyond the one plan sentence in C3.\n\nTEXTS NOT READY: fix first D2, D5, D1, C1, C2; then D3, D4, C3, C4."
+ },
+ "read:direction-and-questions": {
+  "findings": [
+   {
+    "id": "D1",
+    "file": "DIRECTION.md, bullet \"A rule set again from what it favours, read in time\"",
+    "text_says": "\"Where its level makes no difference to it, it ends still locked.\" ... \"The overdraw before the reading, and that a reading corrects, are given.\"",
+    "lean_or_fact_says": "`locked_ends_with_net_regime` asks `(draws : ... → H ≤ use v) (below : x < H + y)`; `locked_ends_rising` asks `more`, `keeps`, `high` in their place. `locked_turns_in_time_share_iff` also asks `lowStays`.",
+    "evidence": "The tracked text said \"In both, the overdraw and the reading are given\". The edit ties the overdraw to the reading case only. Without it the sentence is false in the model: the lock at twelve draws five, five comes back, twelve again, for ever (steps 3 and 4 of `Three.read_to_ten`).",
+    "proposed_wording": "\"Where its level makes no difference to it and it already overdraws, it ends still locked.\" Last sentence: \"Given throughout: the overdraw before any reading, which levels are read, that a reading corrects, and, where it sets the share, that the share then stays low.\"",
+    "must_fix": true
+   },
+   {
+    "id": "D2",
+    "file": "DIRECTION.md, fourth sub-bullet under \"Three of them now meet in one small model\"",
+    "text_says": "\"The same arithmetic, against the same ceiling, ends a rule set again from the share it favours, where each favouring adds to the share and the draw is the share times an amount\"",
+    "lean_or_fact_says": "`locked_ends_rising ... (outside : AloneOutside marked ...) (needs : 0 < need) (un : ∀ x, need ≤ x → ¬ marked x)`. LineOnAStock header: \"a lock on these units are not here\"; the lock ends \"through the same `TurningInTime.rising_takes_all`, not through `need_unmet`\".",
+    "evidence": "That no level it goes on at is read is given, and is left out; with a reading the law does not apply. Placed under \"a line on a stock\", the rule reads as part of that model; it shares one lemma with it. \"Three of them\" names no three.",
+    "proposed_wording": "\"Outside this model, on the rule: the same lemma, against the same kind of ceiling, ends a rule set again from the share it favours whose level makes no difference to it, where each favouring adds to the share and the draw is the share times an amount.\" Name the three pieces in the bullet's first line.",
+    "must_fix": true
+   },
+   {
+    "id": "D3",
+    "file": "DIRECTION.md, second sub-bullet",
+    "text_says": "\"This is the third paragraph above in a model, with the growth given.\"",
+    "lean_or_fact_says": "`falls_to_unmet` docstring: \"This is the model's form of a going-on that draws down what it rests on while nothing in it yet differs (a reading).\" It concludes a step, an unmet need and a lower level.",
+    "evidence": "LANDING-WHAT: this telling \"is a reading, said only of `falls_to_unmet`, and marked as a reading\". The paragraph's other two courses (remaking, changing what it rests on) are not in the theorem.",
+    "proposed_wording": "\"We read this as the second sentence of the third paragraph above, in a model, with the growth given.\"",
+    "must_fix": true
+   },
+   {
+    "id": "D4",
+    "file": "DIRECTION.md, first and third sub-bullets",
+    "text_says": "\"Where offspring take the same, the line goes on without end exactly where it comes to a state its level can hold.\" Also: \"What makes a difference to who comes next is which needs the level meets. Two courses whose levels meet the same needs have the same ways\"",
+    "lean_or_fact_says": "`unending_iff_holds (even) (some : ∀ u, kids u ≠ []) (down) (needs) (nothing) (high) (along : ... → Regime giving use y hi (course ... k).1)`. `alike_iff (leaves : ∀ u, u ∈ w → kids u ≠ [])`. `ways_alike` has one start way `w`.",
+    "evidence": "LANDING-WHAT: \"the regime along the course is assumed\". Without `leaves`, alike levels can meet different needs (`AlikeFiner`).",
+    "proposed_wording": "\"Where offspring take the same and need no more than their parents, the line goes on without end exactly where it comes to a state its level can hold. The conditions on what comes back are assumed all along the course.\" And: \"...which needs the level meets (exactly so where every unit leaves offspring). Two courses from one start whose levels...\"",
+    "must_fix": true
+   },
+   {
+    "id": "A1",
+    "file": "A-CASE-FROM-OUTSIDE.md, question 7 and its table row",
+    "text_says": "\"'Early enough' is one inequality\"; row 7: \"The right side of `TurningInTime.locked_turns_in_time_on_window_iff` and of `locked_turns_in_time_share_iff`. | As in question 6.\"",
+    "lean_or_fact_says": "The window law has no `sets`. It asks `(every) (corrects) (least : ∀ v, H₂ ≤ use v) (low : N ≤ H₂ + y₂) (covers : c ≤ K) (safe ...) (high ...)`.",
+    "evidence": "`Three.read_at_eight_ends` has the inequality as a conjunct (`∃ T, ... 3 + 3 ≤ ...(T + 1)).2`; T = 1, level six) beside `¬ «不穷»`: early enough by this test, and ended. `low` fails there.",
+    "proposed_wording": "\"Where a reading sets the share as well, 'early enough' is one inequality: ... Where it sets the rule only, the inequality is exact only if the band that is read starts at or below that point and reaches a level from which every rule holds the level. Otherwise a course can meet it and end (question 6).\" Given: \"Share law: as in question 6. Window law: every step reads; the band as said; no way draws less than the corrected draw; the overdraw before the reading.\"",
+    "must_fix": true
+   },
+   {
+    "id": "A2",
+    "file": "A-CASE-FROM-OUTSIDE.md, question 4 and its table row",
+    "text_says": "\"A rule is set again from the share it already favours, each favouring adds to the share, and the draw is the share times an amount.\" ... \"for the rule, the end of the line. Until then nothing in it differed from its course on a limitless stock.\"",
+    "lean_or_fact_says": "`locked_ends_rising ... (outside ...) (needs : 0 < need) (un : ∀ x, need ≤ x → ¬ marked x)`, concluding `t.1 = Law.orbit (windowAlone fA hA reads) w n`.",
+    "evidence": "For members \"nothing differed\" is concluded (`need_unmet`: the way is `generation kids j w`). For the rule it is the premise `un` said again, and Given leaves it out.",
+    "proposed_wording": "Second form: add \"and nothing reads the level\". Then: \"Until then, for members, who is there is who would be there with every need met. For the rule, that nothing reads the level is given.\" Given: add \"on the rule, that no level at which it goes on is read, and that it needs something of the level\".",
+    "must_fix": true
+   },
+   {
+    "id": "D5",
+    "file": "DIRECTION.md, \"one relation\" paragraph and bullet \"What is given is the gap\"",
+    "text_says": "\"Since 16 November it is shown in one small model, where what selects is given\"; \"In the new model they are one step read from two ends.\"",
+    "lean_or_fact_says": "Header: \"The way and the level are one step, read from each end.\" Unequal continuing is `after`'s definition; alikeness is `after_alike`, `alike_iff`; `born_alike` counts offspring alike.",
+    "evidence": "The Lean's two ends are the way and the level, not the two relations. The note grades the join: test A(1) \"passes thinly\", A(3) \"still fires\"; the alikeness laws meet the stock \"only through 'every need met'\". The plan keeps this; this page drops it.",
+    "proposed_wording": "\"Since 16 November one small model has all four in one theorem, with what selects given. The join is thin: the laws of alikeness hold with no stock in them.\" And: \"In the new model both are said of one step: a unit leaves offspring where the level meets its need, and levels that meet the same needs leave the same next way.\"",
+    "must_fix": false
+   },
+   {
+    "id": "D6",
+    "file": "DIRECTION.md (two bullets) and A-CASE-FROM-OUTSIDE.md question 6",
+    "text_says": "\"A correction to the rule alone is undone wherever the level is not read\"; \"A correction to the rule alone lasts only while the level is read.\"; \"the correction is undone outside the band of levels that is read.\"",
+    "lean_or_fact_says": "`window_alone_outside`: outside `[N, K)` the step is `windowAlone`, the rule read off the share. Header: \"a share that falls under the rule the window reads ... is not tried.\"",
+    "evidence": "That the old rule comes back is seen on `Three.read_at_eight_ends` and `read_to_ten`, where the share stays three. It is how the model is built, plus two worked courses, not a law.",
+    "proposed_wording": "\"Where the level is not read, the rule is set again from the share. In the worked courses the share is unchanged, so the correction is undone.\"",
+    "must_fix": false
+   },
+   {
+    "id": "A3",
+    "file": "A-CASE-FROM-OUTSIDE.md, question 3 and its table row",
+    "text_says": "\"Until the level gets there, its course is the one it would have on a stock without limit.\" Given: \"Nothing about the stock.\"",
+    "lean_or_fact_says": "`agrees_until_marked (outside : AloneOutside marked alone after) ... Law.orbit (pair after left) s n = Law.orbit (asItWas alone left) s n`: the same `left`, the same stock. `way_while_met`: the way is `generation kids n w`.",
+    "evidence": "With marked levels the comparison is with the level never read, on the same stock. The level's own course is not a limitless stock's in either case. `way_while_met` carries the sentence and is not in the table.",
+    "proposed_wording": "\"Until the level gets there, who is there is who would be there if the level made no difference: every need met, or the level never read.\" \"Proved: two courses from one start ...\" Add `LineOnAStock.way_while_met`; Given: add \"for marked levels, that outside them the level makes no difference to the way\".",
+    "must_fix": false
+   },
+   {
+    "id": "A4",
+    "file": "A-CASE-FROM-OUTSIDE.md, question 4, italic note",
+    "text_says": "\"It is what the first difference will be, and whether it comes early enough (questions 6 and 7).\"",
+    "lean_or_fact_says": "Both turning laws ask `(draws ...) (below : x < H₁ + y₁)`. `Three.rise_count_ends`: `∀ H y, H ≤ drawerUse (3, true, 0) → RegimeMargin.Short giving H y → ¬ 12 < H + y`.",
+    "evidence": "Questions 6 and 7 are proved from a start already below a point of no return. The worked growing draw starts where there is none. No theorem joins a growing draw to a reading.",
+    "proposed_wording": "Add: \"No theorem here joins a growing draw to a reading: questions 6 and 7 are proved from a start that already overdraws.\"",
+    "must_fix": false
+   },
+   {
+    "id": "A5",
+    "file": "A-CASE-FROM-OUTSIDE.md, questions 1, 2, 5, 6, 9",
+    "text_says": "Q1 \"The theorems below assume yes to each.\" Q2 \"the level holds\". Q5 and Q6 Given. Q9 \"its loss can be read, and is not felt through the stock. Proved.\"",
+    "lean_or_fact_says": "`ends_iff_below (pos : 0 < H + y)` concludes `(∃ n, ... = 0) ↔ x < H + y`; holding is `RegimeMargin.holds`. `unending_iff_holds (needs)`. `locked_turns_in_time_share_iff (uses) (within : need ≤ H₂ + y₂) (locked)`. `takes_nothing` concludes equal levels and equal ways without `Z`.",
+    "evidence": "The theorems of questions 3 and 9 ask nothing of the stock. Without `needs`, or without `within`, the exact law fails. Nothing in `takes_nothing` is about reading.",
+    "proposed_wording": "Q1: \"The theorems that speak of the stock assume yes to each.\" Q2: name `RegimeMargin.holds`. Q4, Q5 Given: \"every member needs something\". Q6 Given: \"the corrected kind has one draw; the need is at most its point of no return; the start is locked\". Q9: \"its loss changes no level and no other member. Proved.\"",
+    "must_fix": false
+   },
+   {
+    "id": "D7",
+    "file": "DIRECTION.md, last bullet of \"What we have found so far\"",
+    "text_says": "\"On 16 November one module became a case of a more general one and got shorter\"; \"403 modules\"",
+    "lean_or_fact_says": "Six declarations of `WayOfUnits` are derived from `LineOnAStock`; `ends_while_net_goes` and `two_units_iff` use no law of it. 1,182 lines to 1,126 is right. The root imports 403 modules today; this landing adds two.",
+    "evidence": "LANDING-WHAT, the `WayOfUnits` bullet; line counts and the root's import count by script.",
+    "proposed_wording": "\"...one module came to rest on a more general one (six of its laws are now cases of it) and got shorter...\"; \"403 modules when counted on 14 November\".",
+    "must_fix": false
+   }
+  ],
+  "checked_and_fine": [
+   "Every name in the table exists in the Lean: `RegimeMargin.ends_iff_below` is the one at line 741, outside `Adjusted`. `Doubling`, `TwoForOne` and `With` are namespaces, not theorems.",
+   "Recomputed by hand from `min z (12 - z)`: `Three.read_at_eight_ends` (levels 9, 8, 6, 6, 2, 0), `read_to_ten` (9, 8, 10, 12, 12 with the old rule back; from seven 7, 4, 2, 0), `held_at_six`, `share_read_goes_on` (9, 8, 6, 6 with share nothing), `rise_count_ends` (12 five times, 10, 4, 0; shares three to ten; seven steps), `Doubling` (12, 12, 12, 12, 8, 0; 1 to 32 units), `TwoForOne`, `HigherStartEnds`, `NothingTakenEnds`. All match the conjuncts and the page's italic notes for questions 6 and 8.",
+   "Question 2 follows from `ends_iff_below` under its Given; question 5 from `unending_iff_holds`, told as a law with the regime assumed; question 6's share bullet from `locked_turns_in_time_share_iff` with `share_corrected_on_course`; question 9's last claim from `gone_from` under `closed`. Questions 6 (first bullet), 8 and 9 (second claim) are told as worked courses, which they are.",
+   "DIRECTION: \"within as many steps as the ceiling on the level plus one\"; \"below something the start could meet\" with offspring needing no more; \"on any two stocks\"; \"no overdraw is asked at the start\"; the window proviso (`keptBelow`, `safe`); \"what then goes on is not always the corrected rule\"; \"the proviso is not needed\"; \"an overdraw comes about\" concluding an ending; the loss that takes nothing; \"In the one model it is handed in\". Each matches its theorem.",
+   "Neither page says anything of a trained system, and both say no person has checked them."
+  ],
+  "summary": "AI-written (Fable), a read of the two pages against the four scratch Lean files; nothing was built, run or edited. No name is missing and every worked course recomputes as told. Six sentences say more than the Lean. In DIRECTION.md: the edit took the given overdraw away from \"it ends still locked\" (D1); the lock's new law is told without its premise that the level is not read, and inside a model it is not in (D2); a reading is told as an identity (D3); the exact middle case is told without the regime assumed along the course (D4). In A-CASE-FROM-OUTSIDE.md: question 7's inequality is given as the test for a rule-only reading, where the page's own worked course meets it and ends (A1); question 4 tells the rule's not being read as a result (A2). D3 and D4 are wordings LANDING-WHAT says must not come back. The other six findings are optional; D5 is the one worth the words, since it is the page's own test of whether the idea is one.\n\nTEXTS NOT READY: fix D1, D2, D3, D4, A1, A2 first."
+ },
+ "read:plan-and-board": {
+  "findings": [
+   {
+    "id": "P1",
+    "file": "/private/tmp/claude-501/-Users-ren-theories/b9a0280b-abc4-4a5f-afc4-0f672b361d9d/scratchpad/dry3/_process/LEAN-TOWARD-THE-DIRECTION.md",
+    "text_says": "Item 5: \"Given that each unit's offspring together take more than it, a ceiling the level cannot pass, and nothing given from nothing: … (`need_unmet`) … and with every need positive the net ends (`way_ends`).\" And: \"Given there: that the use rises with each step of the lock\".",
+    "lean_or_fact_says": "`need_unmet` also asks `(needs : Needing need kids w) … (ne : w ≠ []) (met : ∀ u, u ∈ w → need u ≤ x)`. `way_ends` bounds no step. `locked_ends_rising` also asks `(outside : AloneOutside marked (windowAlone fA hA reads) after) … (un : ∀ x, need ≤ x → ¬ marked x)`.",
+    "evidence": "With needs of nothing no need is ever unmet (the verifier's F1 instance). \"With every need positive\" at `way_ends` makes that premise look new there. Item 1 of this page lists \"the level making no difference\" as assumed; here it is dropped.",
+    "proposed_wording": "\"Given that each unit's offspring together take more than it, that every unit needs something, a ceiling the level cannot pass, nothing given from nothing, and a start that is not empty with every need met: … Given also that offspring need no more than their parent, the level at that step is below a need the start met (`falls_to_unmet`), and the net ends, at a step no law bounds (`way_ends`). … Given there: that the level makes no difference to the rule while the need is met, as in item 1, and that the use rises with each step of the lock, …\"",
+    "must_fix": true
+   },
+   {
+    "id": "P2",
+    "file": "/private/tmp/claude-501/-Users-ren-theories/b9a0280b-abc4-4a5f-afc4-0f672b361d9d/scratchpad/dry3/_process/LEAN-TOWARD-THE-DIRECTION.md",
+    "text_says": "Item 4: \"Where offspring take what their parent took, the line never ends exactly where its course comes to a state that holds … (the regime along the course is assumed)\". Rows 2 and 4: \"proved where offspring take what their parent took\", \"For offspring that take the same, exactly\". Board Queue: \"where offspring take the same, the net never ends exactly where its course comes to hold\".",
+    "lean_or_fact_says": "`unending_iff_holds … (even : ∀ u, taken use (kids u) = use u) (some : ∀ u, kids u ≠ []) (down : ∀ u v, v ∈ kids u → need v ≤ need u) (needs …) (nothing …) (high …) (along …)`.",
+    "evidence": "Both left-out premises are needed (my hand check, not Lean). On `min z (12 - z)`: A needing one leaves B needing thirteen, each taking one; ([A], 6) holds and the net ends at step 1. A unit that takes nothing and has no offspring holds, then the way is empty.",
+    "proposed_wording": "Item 4: \"Where every unit has offspring that together take what it took and need no more than it, the line never ends exactly where …\". Rows 2 and 4 and the Queue: add \"and need no more than their parent\".",
+    "must_fix": true
+   },
+   {
+    "id": "P3",
+    "file": "/private/tmp/claude-501/-Users-ren-theories/b9a0280b-abc4-4a5f-afc4-0f672b361d9d/scratchpad/dry3/_process/LEAN-TOWARD-THE-DIRECTION.md",
+    "text_says": "After the table: \"The chain from drawing more to ending is now a law in one model (…), with \"offspring take more\" given.\" Row 1: \"the ending, follow from it\". Row 4: \"for offspring that all take more, an ending\". Item 4: \"Where every unit's offspring take more there is no such point: the line ends\".",
+    "lean_or_fact_says": "`way_ends (nothing …) (keeps …) (grows …) (needs : ∀ u, 0 < need u) (down : ∀ u v, v ∈ kids u → need v ≤ need u) … (high : x ≤ hi)`. `KidsNeedMore.all_but_down : … (∀ u, use u < taken use (kids u)) ∧ … ∧ «不穷» (net need kids hump10 use) «一» ([B, A, B], 8)`.",
+    "evidence": "With growth alone the line can go on. This is the telling the page's own new bullet says failed without that premise.",
+    "proposed_wording": "\"… is now a law in one model (…), given that offspring take more and need no more than their parent, on a level with a ceiling and nothing given from nothing. Without the second the line can go on (`KidsNeedMore`).\" Row 1: \"… follow from it under item 5's other premises.\" Row 4: \"for offspring that all take more and need no more than their parent, an ending\". Item 4: \"… the line ends, under item 5's premises\".",
+    "must_fix": true
+   },
+   {
+    "id": "P4",
+    "file": "/private/tmp/claude-501/-Users-ren-theories/b9a0280b-abc4-4a5f-afc4-0f672b361d9d/scratchpad/dry3/_process/LEAN-TOWARD-THE-DIRECTION.md",
+    "text_says": "Item 7: \"On one stock, a unit that takes something and is lost is what the rest then goes on by.\"",
+    "lean_or_fact_says": "No theorem. `LineOnAStock`'s header: \"Losses of units that take something … are not here.\" `WayOfUnits.Against.turns_and_ends`: the first unit, taking one, ends at eight, and `¬ «不穷» (net TurningInTime.Three.giving) «一» (way, 9)`. `WayOfUnits.With.goes_on` with `With.levels`: the first, taking four, ends at eight and the second goes on.",
+    "evidence": "A worked course told as a law, among sentences that each name a theorem. A second worked course goes the other way.",
+    "proposed_wording": "\"The loss of a unit that takes something is not in the model's laws. In one worked course it is what the rest goes on by (`WayOfUnits.With.goes_on`); in another the rest ends all the same (`WayOfUnits.Against.turns_and_ends`).\"",
+    "must_fix": true
+   },
+   {
+    "id": "P5",
+    "file": "/private/tmp/claude-501/-Users-ren-theories/b9a0280b-abc4-4a5f-afc4-0f672b361d9d/scratchpad/dry3/_process/LEAN-TOWARD-THE-DIRECTION.md",
+    "text_says": "Item 5: \"`LineageDrawdown.Drain` and `LineageRegimes.MultiplyingTakers` have the sizes and levels of courses of the model on which the laws' premises hold\". After the table: \"(`LineageDrawdown.Drain`, `ReadingsSpread.Commons`, `ReadingsPersist.Habitat`); two have the sizes and levels\".",
+    "lean_or_fact_says": "`DrainCase.drain` applies `fall … (w := [d1, d1]) (x := 11)`, which asks `(over : ∀ z, giving z < lineTake S use w)`. `grows` fails there (`d1 => [d1]`, `r => []`). Of the three examples listed only `Drain` is in `LineOnAStockCases`; the other is `MultiplyingTakers`.",
+    "evidence": "Item 5 names no `fall`, so \"the laws\" reads as the growth laws. On Drain's course the overdraw is given, from step 1.",
+    "proposed_wording": "\"`LineageRegimes.MultiplyingTakers` has the sizes and levels of a course on which `way_ends`' premises hold. `LineageDrawdown.Drain`, gated, has those of a course on which another law's premises hold from step 1 (`fall`: a line that already takes more than is ever given, so the overdraw is given there). The laws add nothing about either, …\" After the table: \"… stay (…). `Drain`, and `LineageRegimes.MultiplyingTakers`, have the sizes and levels of courses of the model (`LineOnAStockCases`).\"",
+    "must_fix": true
+   },
+   {
+    "id": "B1",
+    "file": "/private/tmp/claude-501/-Users-ren-theories/b9a0280b-abc4-4a5f-afc4-0f672b361d9d/scratchpad/dry3/_process/BECOMING-WORKBOARD.md",
+    "text_says": "Row DJ: \"what stays given: the needs, the uses and the offspring, that offspring take more or the same, the ceiling on the level, the regime along the course, and on the lock the rise of the use and that a reading corrects\". Queue: \"… where a reading sets the share too (`locked_turns_in_time_share_iff`); the needs, uses and offspring, the growth, the ceiling, the regime along the course and that a reading corrects are given\".",
+    "lean_or_fact_says": "`locked_turns_in_time_share_iff … (draws : ∀ v …, H₁ ≤ use v) (below : x < H₁ + y₁)`. Also given: `down`, `nothing`, and on the lock `un`.",
+    "evidence": "In the Queue the share law comes straight after \"no overdraw asked at the start\", and its given overdraw is not said. LANDING-WHAT asks for it.",
+    "proposed_wording": "Row: \"what stays given: the needs, the uses and the offspring; that offspring take more or the same, and need no more than their parent; the ceiling on the level and nothing given from nothing; the regime along the course; on the lock, that the level makes no difference while the need is met, the rise of the use, and for the share law the overdraw before a reading and that a reading corrects.\" Queue: \"… where a reading sets the share too, the overdraw before it given (…)\".",
+    "must_fix": true
+   },
+   {
+    "id": "P6",
+    "file": "/private/tmp/claude-501/-Users-ren-theories/b9a0280b-abc4-4a5f-afc4-0f672b361d9d/scratchpad/dry3/_process/LEAN-TOWARD-THE-DIRECTION.md",
+    "text_says": "Item 3: \"exactly there if every unit leaves offspring (`alike_iff`); along two courses on any two stocks whose levels meet the same needs step by step, the ways are the same (`ways_alike`). Both are in one statement in `need_unmet` (item 5).\"",
+    "lean_or_fact_says": "`alike_iff … (leaves : ∀ u, u ∈ w → kids u ≠ [])`. `ways_alike {g g' …} {use use' …} {w : List U} {x x' n : Nat}`: one start way, two uses. `need_unmet` has no conjunct in which one unit goes on and another does not; its proof uses `way_while_met`, not the alikeness laws.",
+    "evidence": "\"Leaves offspring\" was used one sentence earlier for a need being met. \"Both\" strengthens the conclusion; the next sentence partly takes it back.",
+    "proposed_wording": "\"… exactly there if every unit of the way has offspring to leave (`alike_iff`); along two courses from one start way, on any two stocks and under any two uses, whose levels meet the same needs step by step, the ways are the same (`ways_alike`). `need_unmet` (item 5) has a part of each: while every need is met the way is the same on every stock, and then a need is not met.\"",
+    "must_fix": false
+   },
+   {
+    "id": "P7",
+    "file": "/private/tmp/claude-501/-Users-ren-theories/b9a0280b-abc4-4a5f-afc4-0f672b361d9d/scratchpad/dry3/_process/LEAN-TOWARD-THE-DIRECTION.md",
+    "text_says": "Plan: \"thirteen helper lemmas of `WayOfUnits`, which no proof used and no record named, were removed\". Board: \"thirteen helper lemmas that nothing used removed\"; \"thirteen unused helper lemmas removed\".",
+    "lean_or_fact_says": "In the tracked file `unending_iff_holds` is proved from `reaches_holds` and `course_within`, and `goesDecidable` from `anyGoes`, which is a definition. `theories/becoming/results/records/a-way-of-units.json`, line 297: \"decided by anyGoes\".",
+    "evidence": "grep of the tracked `WayOfUnits.lean` and of the records.",
+    "proposed_wording": "\"thirteen helper declarations of `WayOfUnits` (twelve lemmas and one definition) were removed when it came to rest on the general module. Only its own proofs had used them, and those now go through the general forms. One record sentence named one (`anyGoes`).\" Board: \"thirteen helpers that nothing uses any longer removed\".",
+    "must_fix": false
+   },
+   {
+    "id": "P8",
+    "file": "/private/tmp/claude-501/-Users-ren-theories/b9a0280b-abc4-4a5f-afc4-0f672b361d9d/scratchpad/dry3/_process/LEAN-TOWARD-THE-DIRECTION.md",
+    "text_says": "Row 2: \"in the web-and-flow family there is none, since what is given there is a free field\". Row 6, \"What is missing\": \"the tie from the rule to how much is drawn\" is gone.",
+    "lean_or_fact_says": "No Lean theorem states the negative; PAPER.md has it as a reader's argument from `Continuation`'s `Exceeding` and `Alone`. In `locked_turns_in_time_share_iff` the tie is still given: `(uses : ∀ v, Low v.1 → kept v.2.1 → use v = H₂)`, `draws`.",
+    "evidence": "The table is headed \"What a proof says today\".",
+    "proposed_wording": "Row 2: \"…; in the web-and-flow family none can be stated on a level, since what is given there is a free field (argued on paper, not a Lean statement).\" Row 6: \"What the rule responds to, and how much a share and rule draw, derived and not given. …\"",
+    "must_fix": false
+   },
+   {
+    "id": "P9",
+    "file": "/private/tmp/claude-501/-Users-ren-theories/b9a0280b-abc4-4a5f-afc4-0f672b361d9d/scratchpad/dry3/_process/LEAN-TOWARD-THE-DIRECTION.md",
+    "text_says": "Item 4: \"With one way that mixes the two, a higher start can end …\". New bullet: \"was false as first proved\"; \"Each is kept with its countermodel\".",
+    "lean_or_fact_says": "In `HigherStartEnds`, `A`'s offspring take less (two against three) and `B`'s and `C`'s more; none takes the same. Nothing proved was false: `need_unmet` stands and its telling said more (NOTE, step 6). Two of the five have countermodels, in the Lean.",
+    "evidence": "`HigherStartEnds.use`, `kids`; NOTE.md.",
+    "proposed_wording": "\"With one way in which some offspring take less and some more, a higher start ends where a lower one does not (`HigherStartEnds`).\" \"… said more than what was first proved (`need_unmet`): without the premise …\" \"Each is kept in the study folder; the two countermodels are in the Lean (`KidHigherNeed`, `NothingTakenEnds`).\"",
+    "must_fix": false
+   }
+  ],
+  "checked_and_fine": [
+   "Counts against /Users/ren/theories/tmp/r7/one-model/lean-scratch/buildR3-1.log: TurningInTime 78/105, LineOnAStock 113/188, WayOfUnits 68/88, LineOnAStockCases 9/15; every with_axioms empty, unclean empty, rc=0; the log is newer than the four files. It counts public declarations (TurningInTime has 35 private theorems besides).",
+   "wc: WayOfUnits 1,182 to 1,126; the whole 2,947 more (588 + 2,141 + 274 - 56), so 'about 2,900' stands.",
+   "By script: all 118 tracked TurningInTime headers and every definition body unchanged, 22 declarations added; WayOfUnits 72 headers unchanged, 13 removed, 16 added, only `goesDecidable`'s term changed; the six derivations are at their call sites.",
+   "The Queue clause is one line (line 40; the board keeps 109 lines).",
+   "Every name in items 3 to 8 and in the six rows exists. `kept_of_descent` is `SelectionTerm.Generations.kept_of_descent` in ReadingsPersist.lean, and `never_in` is proved from it.",
+   "True to their statements: `falls_to_unmet`; `KidHigherNeed`, `KidsNeedMore`; `rising_takes_all` under both `need_unmet` and `locked_ends_rising`; `count_rises`; item 6 whole (`sets`, `lowRule`, `lowStays`, `draws`, `below`; `share_corrected_on_course`; `Three.share_read_goes_on` on the band where `Three.read_at_eight_ends` ends); `never_in`, `gone_from`; `takes_nothing` with `NothingTakenEnds`; `WayOfUnits.unending_iff_holds` as a case, statement unchanged.",
+   "The head line (3,545 words, nine minutes at the page's earlier rate), step 2's 'Not tried', 'thirteen times' (3 + 5 + 3 + 2), item 8 and 'What is Ren's'.",
+   "Not checkable yet: 'the core run passed', the gate counts, 'on the branch by a reviewer'. They are true only once those happen."
+  ],
+  "summary": "AI-written (Fable), read only: no build, test or edit. I read the plan and board drafts against the four scratch modules, opening each statement named.\n\nThe numbers, the names, and what is said to be unchanged, removed or derived all check. No sentence names a theorem that does not exist.\n\nSix passages say more than the Lean, five in the same way: a law is told with fewer premises than it has. The premise most often dropped is that offspring need no more than their parent, which the page's own new bullet says the growth law fails without. The sixth (P4) tells a worked course as a law, and a second worked course goes the other way. P5 also puts `Drain` under the growth laws; its course meets only `fall`, where the overdraw is given.\n\nFour more are smaller wordings (P6 to P9), none misleading about what is proved.\n\nThe two countermodels in P2 are my hand checks, not Lean.\n\nTEXTS NOT READY: fix first P3, P2, P4, then P1, P5, B1."
+ }
+}
