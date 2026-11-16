@@ -1,0 +1,1057 @@
+@Becoming.LineOnAStock.mem_cond : ∀ {U : Type} {a : U} {l : List U} {b : Bool},
+  (a ∈ bif b then l else []) → b = true ∧ a ∈ l
+@Becoming.LineOnAStock.mem_cond_of : ∀ {U : Type} {a : U} {l : List U} {b : Bool},
+  b = true → a ∈ l → a ∈ bif b then l else []
+@Becoming.LineOnAStock.decide_le_congr : ∀ {n x x' : Nat}, (n ≤ x ↔ n ≤ x') → decide (n ≤ x) = decide (n ≤ x')
+@Becoming.LineOnAStock.ite_le : ∀ {U : Type} {S : U → Prop} [inst : DecidablePred S] (u : U) (a : Nat),
+  (if S u then a else 0) ≤ a
+@Becoming.LineOnAStock.lineTake_le_taken : ∀ {U : Type} {S : U → Prop} [inst : DecidablePred S] {use : U → Nat}
+  (w : List U), Becoming.LineOnAStock.lineTake S use w ≤ Becoming.LineOnAStock.taken use w
+@Becoming.LineOnAStock.lineTake_append : ∀ {U : Type} {S : U → Prop} [inst : DecidablePred S] {use : U → Nat}
+  (a b : List U),
+  Becoming.LineOnAStock.lineTake S use (a ++ b) =
+    Becoming.LineOnAStock.lineTake S use a + Becoming.LineOnAStock.lineTake S use b
+@Becoming.LineOnAStock.lineCount_pos : ∀ {U : Type} {S : U → Prop} [inst : DecidablePred S] {u : U},
+  S u → ∀ {w : List U}, u ∈ w → 0 < Becoming.LineOnAStock.lineCount S w
+@Becoming.LineOnAStock.line_or_none : ∀ {U : Type} {S : U → Prop} [DecidablePred S] (w : List U),
+  (∀ (u : U), u ∈ w → ¬S u) ∨ ∃ u, u ∈ w ∧ S u
+@Becoming.LineOnAStock.met_or_unmet : ∀ {U : Type} (need : U → Nat) (z : Nat) (w : List U),
+  (∀ (u : U), u ∈ w → need u ≤ z) ∨ ∃ u, u ∈ w ∧ z < need u
+@Becoming.LineOnAStock.anyMet_iff : ∀ {U : Type} (need : U → Nat) (x : Nat) (w : List U),
+  Becoming.LineOnAStock.anyMet need x w = true ↔ ∃ u, u ∈ w ∧ need u ≤ x
+@Becoming.LineOnAStock.mem_of_ne_nil : ∀ {U : Type} {l : List U}, l ≠ [] → ∃ v, v ∈ l
+@Becoming.LineOnAStock.strong_below : ∀ {P : Nat → Prop},
+  (∀ (m : Nat), (∀ (m' : Nat), m' < m → P m') → P m) → ∀ (M m : Nat), m < M → P m
+@Becoming.LineOnAStock.after_flatMap : ∀ {U : Type} {need : U → Nat} {kids : U → List U} (x : Nat) (w : List U),
+  Becoming.LineOnAStock.after need kids w x = List.flatMap (fun u => bif decide (need u ≤ x) then kids u else []) w
+@Becoming.LineOnAStock.mem_after_iff : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {x : Nat} {v : U} {w : List U},
+  v ∈ Becoming.LineOnAStock.after need kids w x ↔ ∃ u, u ∈ w ∧ need u ≤ x ∧ v ∈ kids u
+@Becoming.LineOnAStock.after_alike : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {x x' : Nat} {w : List U},
+  (∀ (u : U), u ∈ w → (need u ≤ x ↔ need u ≤ x')) →
+    Becoming.LineOnAStock.after need kids w x = Becoming.LineOnAStock.after need kids w x'
+@Becoming.LineOnAStock.after_append : ∀ {U : Type} {need : U → Nat} {kids : U → List U} (x : Nat) (w₁ w₂ : List U),
+  Becoming.LineOnAStock.after need kids (w₁ ++ w₂) x =
+    Becoming.LineOnAStock.after need kids w₁ x ++ Becoming.LineOnAStock.after need kids w₂ x
+@Becoming.LineOnAStock.left_of_taken : ∀ {U : Type} {giving : Nat → Nat} {use : U → Nat} {w₁ w₂ : List U} {x : Nat},
+  Becoming.LineOnAStock.taken use w₁ = Becoming.LineOnAStock.taken use w₂ →
+    Becoming.LineOnAStock.left giving use w₁ x = Becoming.LineOnAStock.left giving use w₂ x
+@Becoming.LineOnAStock.after_of_met : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {x : Nat} {w : List U},
+  (∀ (u : U), u ∈ w → need u ≤ x) → Becoming.LineOnAStock.after need kids w x = Becoming.LineOnAStock.allKids kids w
+@Becoming.LineOnAStock.allKids_flatMap : ∀ {U : Type} {kids : U → List U} (w : List U),
+  Becoming.LineOnAStock.allKids kids w = List.flatMap kids w
+@Becoming.LineOnAStock.mem_allKids_iff : ∀ {U : Type} {kids : U → List U} {v : U} {w : List U},
+  v ∈ Becoming.LineOnAStock.allKids kids w ↔ ∃ u, u ∈ w ∧ v ∈ kids u
+@Becoming.LineOnAStock.generation_orbit : ∀ {U : Type} {kids : U → List U} (w : List U) (n : Nat),
+  Becoming.LineOnAStock.generation kids n w = Becoming.Law.orbit (Becoming.LineOnAStock.allKids kids) w n
+@Becoming.LineOnAStock.generation_mem : ∀ {U : Type} {kids : U → List U},
+  (∀ (u : U), kids u ≠ []) →
+    ∀ {v : U} {w : List U}, v ∈ w → ∀ (n : Nat), ∃ u, u ∈ Becoming.LineOnAStock.generation kids n w
+@Becoming.LineOnAStock.generation_below : ∀ {U : Type} {need : U → Nat} {kids : U → List U},
+  (∀ (u v : U), v ∈ kids u → need v ≤ need u) →
+    ∀ {z : Nat} {w : List U},
+      (∀ (u : U), u ∈ w → need u ≤ z) → ∀ (n : Nat) (u : U), u ∈ Becoming.LineOnAStock.generation kids n w → need u ≤ z
+@Becoming.LineOnAStock.generation_ancestor : ∀ {U : Type} {need : U → Nat} {kids : U → List U},
+  (∀ (u v : U), v ∈ kids u → need v ≤ need u) →
+    ∀ {w : List U} (n : Nat) (u : U), u ∈ Becoming.LineOnAStock.generation kids n w → ∃ p, p ∈ w ∧ need u ≤ need p
+@Becoming.LineOnAStock.mem_generation : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {giving : Nat → Nat}
+  {use : U → Nat} (s : List U × Nat) (k : Nat) (u : U),
+  u ∈ (Becoming.LineOnAStock.course need kids giving use s k).fst → u ∈ Becoming.LineOnAStock.generation kids k s.fst
+@Becoming.LineOnAStock.alike_of_met : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {w : List U} {x x' : Nat},
+  (∀ (u : U), u ∈ w → (need u ≤ x ↔ need u ≤ x')) → Becoming.LineOnAStock.Alike need kids w x x'
+@Becoming.LineOnAStock.block_le : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {u : U} {x x' : Nat},
+  x ≤ x' → (bif decide (need u ≤ x) then kids u else []).length ≤ (bif decide (need u ≤ x') then kids u else []).length
+@Becoming.LineOnAStock.block_lt : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {u : U} {x x' : Nat},
+  x < need u →
+    need u ≤ x' →
+      kids u ≠ [] →
+        (bif decide (need u ≤ x) then kids u else []).length < (bif decide (need u ≤ x') then kids u else []).length
+@Becoming.LineOnAStock.after_length_le : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {x x' : Nat},
+  x ≤ x' →
+    ∀ (w : List U),
+      (Becoming.LineOnAStock.after need kids w x).length ≤ (Becoming.LineOnAStock.after need kids w x').length
+@Becoming.LineOnAStock.after_length_lt : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {x x' : Nat},
+  x ≤ x' →
+    ∀ {u : U},
+      x < need u →
+        need u ≤ x' →
+          kids u ≠ [] →
+            ∀ {w : List U},
+              u ∈ w →
+                (Becoming.LineOnAStock.after need kids w x).length < (Becoming.LineOnAStock.after need kids w x').length
+@Becoming.LineOnAStock.met_of_alike_le : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {w : List U} {x x' : Nat},
+  x ≤ x' → Becoming.LineOnAStock.Alike need kids w x x' → ∀ {u : U}, u ∈ w → kids u ≠ [] → need u ≤ x' → need u ≤ x
+@Becoming.LineOnAStock.alike_iff : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {w : List U} {x x' : Nat},
+  (∀ (u : U), u ∈ w → kids u ≠ []) →
+    (Becoming.LineOnAStock.Alike need kids w x x' ↔ ∀ (u : U), u ∈ w → (need u ≤ x ↔ need u ≤ x'))
+@Becoming.LineOnAStock.need_in_after : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {x n : Nat} {w : List U},
+  (∃ v, v ∈ Becoming.LineOnAStock.after need kids w x ∧ need v = n) →
+    ∃ u v, u ∈ w ∧ need u ≤ x ∧ v ∈ kids u ∧ need v = n
+@Becoming.LineOnAStock.needs_after_iff : ∀ {U : Type} {need : U → Nat} {kids : U → List U},
+  (∀ (u v : U), v ∈ kids u → need v = need u) →
+    (∀ (u : U), kids u ≠ []) →
+      ∀ {x n : Nat} {w : List U},
+        (∃ v, v ∈ Becoming.LineOnAStock.after need kids w x ∧ need v = n) ↔ ∃ u, u ∈ w ∧ need u = n ∧ n ≤ x
+@Becoming.LineOnAStock.needs_kept : ∀ {U : Type} {need : U → Nat} {kids : U → List U},
+  (∀ (u v : U), v ∈ kids u → need v = need u) →
+    (∀ (u : U), kids u ≠ []) →
+      ∀ {x n : Nat} {w : List U},
+        (∀ (u : U), u ∈ w → need u ≤ x) →
+          ((∃ v, v ∈ Becoming.LineOnAStock.after need kids w x ∧ need v = n) ↔ ∃ u, u ∈ w ∧ need u = n)
+@Becoming.LineOnAStock.ways_alike : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {g g' : Nat → Nat}
+  {use use' : U → Nat} {w : List U} {x x' n : Nat},
+  (∀ (j : Nat),
+      j < n →
+        ∀ (u : U),
+          u ∈ (Becoming.LineOnAStock.course need kids g use (w, x) j).fst →
+            (need u ≤ (Becoming.LineOnAStock.course need kids g use (w, x) j).snd ↔
+              need u ≤ (Becoming.LineOnAStock.course need kids g' use' (w, x') j).snd)) →
+    ∀ (j : Nat),
+      j ≤ n →
+        (Becoming.LineOnAStock.course need kids g use (w, x) j).fst =
+          (Becoming.LineOnAStock.course need kids g' use' (w, x') j).fst
+@Becoming.LineOnAStock.family_eq : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {giving : Nat → Nat}
+  {use : U → Nat} (s : List U × Nat) (t : Nat),
+  (Becoming.LineOnAStock.generations need kids giving use s).family t =
+    (Becoming.LineOnAStock.course need kids giving use s t).fst
+@Becoming.LineOnAStock.born_eq_length : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {giving : Nat → Nat}
+  {use : U → Nat} (s : List U × Nat) (t : Nat),
+  Becoming.SelectionTerm.born ((Becoming.LineOnAStock.generations need kids giving use s).family t)
+      ((Becoming.LineOnAStock.generations need kids giving use s).kids t) =
+    (Becoming.LineOnAStock.course need kids giving use s (t + 1)).fst.length
+@Becoming.LineOnAStock.born_alike : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {g g' : Nat → Nat}
+  {use use' : U → Nat} {w : List U} {x x' n : Nat},
+  (∀ (j : Nat),
+      j < n →
+        ∀ (u : U),
+          u ∈ (Becoming.LineOnAStock.course need kids g use (w, x) j).fst →
+            (need u ≤ (Becoming.LineOnAStock.course need kids g use (w, x) j).snd ↔
+              need u ≤ (Becoming.LineOnAStock.course need kids g' use' (w, x') j).snd)) →
+    ∀ {j : Nat},
+      j < n →
+        Becoming.SelectionTerm.born ((Becoming.LineOnAStock.generations need kids g use (w, x)).family j)
+            ((Becoming.LineOnAStock.generations need kids g use (w, x)).kids j) =
+          Becoming.SelectionTerm.born ((Becoming.LineOnAStock.generations need kids g' use' (w, x')).family j)
+            ((Becoming.LineOnAStock.generations need kids g' use' (w, x')).kids j)
+@Becoming.LineOnAStock.draw_rises : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {use : U → Nat} {S : U → Prop}
+  [inst : DecidablePred S] {bonus : U → Nat},
+  (∀ (u : U), S u → use u + bonus u ≤ Becoming.LineOnAStock.lineTake S use (kids u)) →
+    ∀ {x : Nat} {w : List U},
+      (∀ (u : U), u ∈ w → S u → need u ≤ x) →
+        (Becoming.LineOnAStock.lineTake S use w + Becoming.total w fun u => if S u then bonus u else 0) ≤
+          Becoming.LineOnAStock.lineTake S use (Becoming.LineOnAStock.after need kids w x)
+@Becoming.LineOnAStock.rise : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {use : U → Nat} {S : U → Prop}
+  [inst : DecidablePred S],
+  (∀ (u : U), S u → use u < Becoming.LineOnAStock.lineTake S use (kids u)) →
+    ∀ {x : Nat} {w : List U},
+      (∀ (u : U), u ∈ w → S u → need u ≤ x) →
+        Becoming.LineOnAStock.lineTake S use w + Becoming.LineOnAStock.lineCount S w ≤
+          Becoming.LineOnAStock.lineTake S use (Becoming.LineOnAStock.after need kids w x)
+@Becoming.LineOnAStock.draw_holds : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {use : U → Nat} {S : U → Prop}
+  [inst : DecidablePred S],
+  (∀ (u : U), S u → use u ≤ Becoming.LineOnAStock.lineTake S use (kids u)) →
+    ∀ {x : Nat} {w : List U},
+      (∀ (u : U), u ∈ w → S u → need u ≤ x) →
+        Becoming.LineOnAStock.lineTake S use w ≤
+          Becoming.LineOnAStock.lineTake S use (Becoming.LineOnAStock.after need kids w x)
+@Becoming.LineOnAStock.line_from_line : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {S : U → Prop},
+  (∀ (u v : U), v ∈ kids u → S v → S u) →
+    ∀ {w : List U} {x : Nat} {v : U},
+      v ∈ Becoming.LineOnAStock.after need kids w x → S v → ∃ u, u ∈ w ∧ need u ≤ x ∧ S u ∧ v ∈ kids u
+@Becoming.LineOnAStock.none_after : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {S : U → Prop},
+  (∀ (u v : U), v ∈ kids u → S v → S u) →
+    ∀ {w : List U} {x : Nat},
+      (∀ (u : U), u ∈ w → S u → x < need u) → ∀ (v : U), v ∈ Becoming.LineOnAStock.after need kids w x → ¬S v
+@Becoming.LineOnAStock.never_in : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {use : U → Nat} {S : U → Prop},
+  (∀ (u v : U), v ∈ kids u → S v → S u) →
+    ∀ {giving : Nat → Nat} {s : List U × Nat},
+      (∀ (u : U), u ∈ s.fst → ¬S u) →
+        ∀ (j : Nat) (u : U), u ∈ (Becoming.LineOnAStock.course need kids giving use s j).fst → ¬S u
+@Becoming.LineOnAStock.gone_from : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {use : U → Nat} {S : U → Prop},
+  (∀ (u v : U), v ∈ kids u → S v → S u) →
+    ∀ {giving : Nat → Nat} {s : List U × Nat} {k : Nat},
+      (∀ (u : U), u ∈ (Becoming.LineOnAStock.course need kids giving use s k).fst → ¬S u) →
+        ∀ (j : Nat), k ≤ j → ∀ (u : U), u ∈ (Becoming.LineOnAStock.course need kids giving use s j).fst → ¬S u
+@Becoming.LineOnAStock.gone_after : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {use : U → Nat} {S : U → Prop},
+  (∀ (u v : U), v ∈ kids u → S v → S u) →
+    ∀ {giving : Nat → Nat} {s : List U × Nat} {k : Nat},
+      (∀ (u : U),
+          u ∈ (Becoming.LineOnAStock.course need kids giving use s k).fst →
+            S u → (Becoming.LineOnAStock.course need kids giving use s k).snd < need u) →
+        ∀ (j : Nat), k + 1 ≤ j → ∀ (u : U), u ∈ (Becoming.LineOnAStock.course need kids giving use s j).fst → ¬S u
+@Becoming.LineOnAStock.step_zero : ∀ {giving : Nat → Nat} {H x : Nat},
+  Becoming.RegimeMargin.FromNothing giving → x ≤ H → Becoming.RegimeMargin.step giving H x = 0
+@Becoming.LineOnAStock.step_overdrawn : ∀ {giving : Nat → Nat} {T H x : Nat},
+  (∀ (z : Nat), giving z < T) →
+    T ≤ H → Becoming.RegimeMargin.step giving H x < x ∨ Becoming.RegimeMargin.step giving H x = giving 0
+@Becoming.LineOnAStock.step_lowers : ∀ {giving : Nat → Nat} {H y D z : Nat},
+  Becoming.RegimeMargin.Short giving H y →
+    Becoming.RegimeMargin.FromNothing giving →
+      H ≤ D → z < H + y → Becoming.RegimeMargin.step giving D z = 0 ∨ Becoming.RegimeMargin.step giving D z < z
+@Becoming.LineOnAStock.fall_low : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {use : U → Nat} {giving : Nat → Nat}
+  {S : U → Prop},
+  (∀ (u v : U), v ∈ kids u → S v → S u) →
+    ∀ {m : Nat},
+      (∀ (u : U), S u → need u = m) →
+        ∀ {s : List U × Nat} {k : Nat},
+          (Becoming.LineOnAStock.course need kids giving use s k).snd < m →
+            ∃ n, ∀ (j : Nat), n ≤ j → ∀ (u : U), u ∈ (Becoming.LineOnAStock.course need kids giving use s j).fst → ¬S u
+@Becoming.LineOnAStock.fall_from : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {use : U → Nat}
+  {giving : Nat → Nat} {S : U → Prop} [inst : DecidablePred S],
+  (∀ (u v : U), v ∈ kids u → S v → S u) →
+    ∀ {m : Nat},
+      (∀ (u : U), S u → need u = m) →
+        (∀ (u : U), S u → use u ≤ Becoming.LineOnAStock.lineTake S use (kids u)) →
+          giving 0 < m →
+            ∀ (s : List U × Nat) (f k : Nat),
+              (Becoming.LineOnAStock.course need kids giving use s k).snd ≤ f →
+                (∀ (z : Nat),
+                    giving z <
+                      Becoming.LineOnAStock.lineTake S use
+                        (Becoming.LineOnAStock.course need kids giving use s k).fst) →
+                  ∃ n,
+                    ∀ (j : Nat),
+                      n ≤ j → ∀ (u : U), u ∈ (Becoming.LineOnAStock.course need kids giving use s j).fst → ¬S u
+@Becoming.LineOnAStock.fall : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {use : U → Nat} {giving : Nat → Nat}
+  {S : U → Prop} [inst : DecidablePred S],
+  (∀ (u v : U), v ∈ kids u → S v → S u) →
+    ∀ {m : Nat},
+      (∀ (u : U), S u → need u = m) →
+        (∀ (u : U), S u → use u ≤ Becoming.LineOnAStock.lineTake S use (kids u)) →
+          giving 0 < m →
+            ∀ {w : List U} {x : Nat},
+              (∀ (z : Nat), giving z < Becoming.LineOnAStock.lineTake S use w) →
+                ∃ n,
+                  ∀ (k : Nat),
+                    n ≤ k → ∀ (u : U), u ∈ (Becoming.LineOnAStock.course need kids giving use (w, x) k).fst → ¬S u
+@Becoming.LineOnAStock.below_after : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {S : U → Prop},
+  (∀ (u v : U), v ∈ kids u → S v → S u) →
+    (∀ (u v : U), S u → v ∈ kids u → need v ≤ need u) →
+      ∀ (w : List U) (x : Nat), Becoming.LineOnAStock.Below need S x (Becoming.LineOnAStock.after need kids w x)
+@Becoming.LineOnAStock.below_keeps : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {S : U → Prop},
+  (∀ (u v : U), v ∈ kids u → S v → S u) →
+    (∀ (u v : U), S u → v ∈ kids u → need v ≤ need u) →
+      ∀ {m : Nat} {w : List U},
+        Becoming.LineOnAStock.Below need S m w →
+          ∀ (x : Nat), Becoming.LineOnAStock.Below need S m (Becoming.LineOnAStock.after need kids w x)
+@Becoming.LineOnAStock.none_shift : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {use : U → Nat}
+  {giving : Nat → Nat} {S : U → Prop} {s : List U × Nat} {j : Nat},
+  Becoming.LineOnAStock.NoneMet need S
+      (Becoming.LineOnAStock.course need kids giving use (Becoming.LineOnAStock.step need kids giving use s) j) →
+    ∃ k, Becoming.LineOnAStock.NoneMet need S (Becoming.LineOnAStock.course need kids giving use s k)
+@Becoming.LineOnAStock.ends_low : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {use : U → Nat} {giving : Nat → Nat}
+  {S : U → Prop} {hi : Nat},
+  Becoming.RegimeMargin.Keeps giving 0 hi →
+    (∀ (u v : U), v ∈ kids u → S v → S u) →
+      (∀ (u v : U), S u → v ∈ kids u → need v ≤ need u) →
+        ∀ {m : Nat},
+          (∀ (m' : Nat), m' < m → Becoming.LineOnAStock.Ends need kids giving use S hi m') →
+            ∀ (s : List U × Nat),
+              s.snd ≤ hi →
+                s.snd < m →
+                  ∃ k, Becoming.LineOnAStock.NoneMet need S (Becoming.LineOnAStock.course need kids giving use s k)
+@Becoming.LineOnAStock.ends_high : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {use : U → Nat}
+  {giving : Nat → Nat} {S : U → Prop} {hi : Nat} [inst : DecidablePred S],
+  Becoming.RegimeMargin.FromNothing giving →
+    Becoming.RegimeMargin.Keeps giving 0 hi →
+      (∀ (u v : U), v ∈ kids u → S v → S u) →
+        (∀ (u : U), S u → use u < Becoming.LineOnAStock.lineTake S use (kids u)) →
+          (∀ (u : U), S u → 0 < need u) →
+            (∀ (u v : U), S u → v ∈ kids u → need v ≤ need u) →
+              ∀ {m : Nat},
+                (∀ (m' : Nat), m' < m → Becoming.LineOnAStock.Ends need kids giving use S hi m') →
+                  ∀ (k : Nat) (s : List U × Nat),
+                    s.snd ≤ hi →
+                      Becoming.LineOnAStock.Below need S m s.fst →
+                        m ≤ s.snd →
+                          hi + 1 ≤ Becoming.LineOnAStock.lineTake S use s.fst + k →
+                            ∃ j,
+                              Becoming.LineOnAStock.NoneMet need S
+                                (Becoming.LineOnAStock.course need kids giving use s j)
+@Becoming.LineOnAStock.ends_all : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {use : U → Nat} {giving : Nat → Nat}
+  {S : U → Prop} {hi : Nat} [inst : DecidablePred S],
+  Becoming.RegimeMargin.FromNothing giving →
+    Becoming.RegimeMargin.Keeps giving 0 hi →
+      (∀ (u v : U), v ∈ kids u → S v → S u) →
+        (∀ (u : U), S u → use u < Becoming.LineOnAStock.lineTake S use (kids u)) →
+          (∀ (u : U), S u → 0 < need u) →
+            (∀ (u v : U), S u → v ∈ kids u → need v ≤ need u) →
+              ∀ (m : Nat), Becoming.LineOnAStock.Ends need kids giving use S hi m
+@Becoming.LineOnAStock.line_ends : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {use : U → Nat}
+  {giving : Nat → Nat} {S : U → Prop} {hi : Nat} [inst : DecidablePred S],
+  Becoming.RegimeMargin.FromNothing giving →
+    Becoming.RegimeMargin.Keeps giving 0 hi →
+      (∀ (u v : U), v ∈ kids u → S v → S u) →
+        (∀ (u : U), S u → use u < Becoming.LineOnAStock.lineTake S use (kids u)) →
+          (∀ (u : U), S u → 0 < need u) →
+            (∀ (u v : U), S u → v ∈ kids u → need v ≤ need u) →
+              ∀ {w : List U} {x : Nat},
+                x ≤ hi →
+                  ∃ n,
+                    ∀ (k : Nat),
+                      n ≤ k → ∀ (u : U), u ∈ (Becoming.LineOnAStock.course need kids giving use (w, x) k).fst → ¬S u
+@Becoming.LineOnAStock.lineTake_true : ∀ {U : Type} {use : U → Nat} (w : List U),
+  Becoming.LineOnAStock.lineTake (fun x => True) use w = Becoming.LineOnAStock.taken use w
+@Becoming.LineOnAStock.way_ends : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {use : U → Nat} {giving : Nat → Nat}
+  {hi : Nat},
+  Becoming.RegimeMargin.FromNothing giving →
+    Becoming.RegimeMargin.Keeps giving 0 hi →
+      (∀ (u : U), use u < Becoming.LineOnAStock.taken use (kids u)) →
+        (∀ (u : U), 0 < need u) →
+          (∀ (u v : U), v ∈ kids u → need v ≤ need u) →
+            ∀ {w : List U} {x : Nat},
+              x ≤ hi →
+                (∃ n, ¬Becoming.LineOnAStock.Goes need (Becoming.LineOnAStock.course need kids giving use (w, x) n)) ∧
+                  ¬Becoming.«不穷» (Becoming.LineOnAStock.net need kids giving use) Becoming.«一» (w, x)
+@Becoming.LineOnAStock.kids_of_grows : ∀ {U : Type} {kids : U → List U} {use : U → Nat},
+  (∀ (u : U), use u < Becoming.LineOnAStock.taken use (kids u)) → ∀ (u : U), kids u ≠ []
+@Becoming.LineOnAStock.course_asItWas : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {use : U → Nat}
+  {giving : Nat → Nat} {s : List U × Nat} (n : Nat),
+  (∀ (j : Nat),
+      j < n →
+        ∀ (u : U),
+          u ∈ (Becoming.LineOnAStock.course need kids giving use s j).fst →
+            need u ≤ (Becoming.LineOnAStock.course need kids giving use s j).snd) →
+    Becoming.LineOnAStock.course need kids giving use s n =
+      Becoming.Law.orbit
+        (Becoming.TurningInTime.asItWas (Becoming.LineOnAStock.allKids kids) fun w x =>
+          Becoming.RegimeMargin.step giving (Becoming.LineOnAStock.taken use w) x)
+        s n
+@Becoming.LineOnAStock.way_while_met : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {use : U → Nat}
+  {giving : Nat → Nat} {w : List U} {x n : Nat},
+  (∀ (j : Nat),
+      j < n →
+        ∀ (u : U),
+          u ∈ (Becoming.LineOnAStock.course need kids giving use (w, x) j).fst →
+            need u ≤ (Becoming.LineOnAStock.course need kids giving use (w, x) j).snd) →
+    (Becoming.LineOnAStock.course need kids giving use (w, x) n).fst = Becoming.LineOnAStock.generation kids n w
+@Becoming.LineOnAStock.allKids_rises : ∀ {U : Type} {kids : U → List U} {use : U → Nat},
+  (∀ (u : U), use u < Becoming.LineOnAStock.taken use (kids u)) →
+    ∀ (w : List U),
+      Becoming.LineOnAStock.taken use w + w.length ≤
+        Becoming.LineOnAStock.taken use (Becoming.LineOnAStock.allKids kids w)
+@Becoming.LineOnAStock.generations_rise : ∀ {U : Type} {kids : U → List U} {use : U → Nat},
+  (∀ (u : U), use u < Becoming.LineOnAStock.taken use (kids u)) →
+    ∀ {w : List U},
+      w ≠ [] →
+        ∀ (j : Nat),
+          Becoming.LineOnAStock.taken use (Becoming.Law.orbit (Becoming.LineOnAStock.allKids kids) w j) <
+            Becoming.LineOnAStock.taken use (Becoming.Law.orbit (Becoming.LineOnAStock.allKids kids) w (j + 1))
+@Becoming.LineOnAStock.need_unmet : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {use : U → Nat}
+  {giving : Nat → Nat} {hi : Nat},
+  Becoming.RegimeMargin.FromNothing giving →
+    Becoming.RegimeMargin.Keeps giving 0 hi →
+      (∀ (u : U), use u < Becoming.LineOnAStock.taken use (kids u)) →
+        ∀ {w : List U} {x : Nat},
+          Becoming.LineOnAStock.Needing need kids w →
+            x ≤ hi →
+              w ≠ [] →
+                (∀ (u : U), u ∈ w → need u ≤ x) →
+                  ∃ n,
+                    0 < n ∧
+                      n ≤ hi + 1 ∧
+                        (∀ (j : Nat),
+                            j < n →
+                              ∀ (u : U),
+                                u ∈ (Becoming.LineOnAStock.course need kids giving use (w, x) j).fst →
+                                  need u ≤ (Becoming.LineOnAStock.course need kids giving use (w, x) j).snd) ∧
+                          (∀ (j : Nat),
+                              j ≤ n →
+                                (Becoming.LineOnAStock.course need kids giving use (w, x) j).fst =
+                                  Becoming.LineOnAStock.generation kids j w) ∧
+                            ∃ u,
+                              u ∈ (Becoming.LineOnAStock.course need kids giving use (w, x) n).fst ∧
+                                (Becoming.LineOnAStock.course need kids giving use (w, x) n).snd < need u
+@Becoming.LineOnAStock.falls_to_unmet : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {use : U → Nat}
+  {giving : Nat → Nat} {hi : Nat},
+  Becoming.RegimeMargin.FromNothing giving →
+    Becoming.RegimeMargin.Keeps giving 0 hi →
+      (∀ (u : U), use u < Becoming.LineOnAStock.taken use (kids u)) →
+        (∀ (u v : U), v ∈ kids u → need v ≤ need u) →
+          ∀ {w : List U} {x : Nat},
+            Becoming.LineOnAStock.Needing need kids w →
+              x ≤ hi →
+                w ≠ [] →
+                  (∀ (u : U), u ∈ w → need u ≤ x) →
+                    ∃ n,
+                      0 < n ∧
+                        n ≤ hi + 1 ∧
+                          (∀ (j : Nat),
+                              j < n →
+                                ∀ (u : U),
+                                  u ∈ (Becoming.LineOnAStock.course need kids giving use (w, x) j).fst →
+                                    need u ≤ (Becoming.LineOnAStock.course need kids giving use (w, x) j).snd) ∧
+                            (∀ (j : Nat),
+                                j ≤ n →
+                                  (Becoming.LineOnAStock.course need kids giving use (w, x) j).fst =
+                                    Becoming.LineOnAStock.generation kids j w) ∧
+                              (∃ u,
+                                  u ∈ (Becoming.LineOnAStock.course need kids giving use (w, x) n).fst ∧
+                                    (Becoming.LineOnAStock.course need kids giving use (w, x) n).snd < need u) ∧
+                                (∃ p,
+                                    p ∈ w ∧
+                                      need p ≤ x ∧
+                                        (Becoming.LineOnAStock.course need kids giving use (w, x) n).snd < need p) ∧
+                                  (Becoming.LineOnAStock.course need kids giving use (w, x) n).snd < x
+@Becoming.LineOnAStock.one_need_ends : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {use : U → Nat}
+  {giving : Nat → Nat} {hi n : Nat},
+  (∀ (u : U), need u = n) →
+    0 < n →
+      (∀ (u : U), use u < Becoming.LineOnAStock.taken use (kids u)) →
+        Becoming.RegimeMargin.FromNothing giving →
+          Becoming.RegimeMargin.Keeps giving 0 hi →
+            ∀ {w : List U} {x : Nat},
+              x ≤ hi →
+                ∃ m t,
+                  m ≤ hi + 1 ∧
+                    Becoming.«迭» (Becoming.LineOnAStock.net need kids giving use) m (w, x) t ∧
+                      (∀ (v : List U × Nat), ¬Becoming.LineOnAStock.net need kids giving use t v) ∧
+                        t.fst = Becoming.LineOnAStock.generation kids m w
+@Becoming.LineOnAStock.taken_allKids : ∀ {U : Type} {kids : U → List U} {use : U → Nat},
+  (∀ (u : U), Becoming.LineOnAStock.taken use (kids u) = use u) →
+    ∀ (w : List U),
+      Becoming.LineOnAStock.taken use (Becoming.LineOnAStock.allKids kids w) = Becoming.LineOnAStock.taken use w
+@Becoming.LineOnAStock.taken_generation : ∀ {U : Type} {kids : U → List U} {use : U → Nat},
+  (∀ (u : U), Becoming.LineOnAStock.taken use (kids u) = use u) →
+    ∀ (w : List U) (n : Nat),
+      Becoming.LineOnAStock.taken use (Becoming.LineOnAStock.generation kids n w) = Becoming.LineOnAStock.taken use w
+@Becoming.LineOnAStock.course_generation : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {use : U → Nat}
+  {giving : Nat → Nat},
+  (∀ (u : U), Becoming.LineOnAStock.taken use (kids u) = use u) →
+    ∀ {S : List U} {z : Nat} (i : Nat),
+      (∀ (j : Nat),
+          j < i →
+            ∀ (u : U),
+              u ∈ Becoming.LineOnAStock.generation kids j S →
+                need u ≤
+                  Becoming.Law.orbit (Becoming.RegimeMargin.step giving (Becoming.LineOnAStock.taken use S)) z j) →
+        Becoming.LineOnAStock.course need kids giving use (S, z) i =
+          (Becoming.LineOnAStock.generation kids i S,
+            Becoming.Law.orbit (Becoming.RegimeMargin.step giving (Becoming.LineOnAStock.taken use S)) z i)
+@Becoming.LineOnAStock.within_along : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {use : U → Nat}
+  {giving y : Nat → Nat} {hi : Nat} {s : List U × Nat},
+  (∀ (k : Nat),
+      (∀ (j : Nat), j ≤ k → Becoming.LineOnAStock.Goes need (Becoming.LineOnAStock.course need kids giving use s j)) →
+        Becoming.LineOnAStock.Regime giving use y hi (Becoming.LineOnAStock.course need kids giving use s k).fst) →
+    s.snd ≤ hi →
+      ∀ (k : Nat),
+        (∀ (j : Nat), j < k → Becoming.LineOnAStock.Goes need (Becoming.LineOnAStock.course need kids giving use s j)) →
+          (Becoming.LineOnAStock.course need kids giving use s k).snd ≤ hi
+@Becoming.LineOnAStock.reaches_from : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {use : U → Nat}
+  {giving y : Nat → Nat} {hi : Nat} {w : List U} {x : Nat},
+  (∀ (u v : U), v ∈ kids u → need v ≤ need u) →
+    Becoming.LineOnAStock.Needing need kids w →
+      Becoming.RegimeMargin.FromNothing giving →
+        (∀ (k : Nat),
+            (∀ (j : Nat),
+                j ≤ k → Becoming.LineOnAStock.Goes need (Becoming.LineOnAStock.course need kids giving use (w, x) j)) →
+              Becoming.LineOnAStock.Regime giving use y hi
+                (Becoming.LineOnAStock.course need kids giving use (w, x) k).fst) →
+          (∀ (k : Nat), Becoming.LineOnAStock.Goes need (Becoming.LineOnAStock.course need kids giving use (w, x) k)) →
+            ∀ {m : Nat},
+              (∀ (m' : Nat),
+                  m' < m →
+                    ∀ (f k : Nat),
+                      (Becoming.LineOnAStock.course need kids giving use (w, x) k).snd ≤ f →
+                        Becoming.LineOnAStock.Below need (fun x => True) m'
+                            (Becoming.LineOnAStock.course need kids giving use (w, x) k).fst →
+                          ∃ k',
+                            Becoming.LineOnAStock.Holds need use y
+                              (Becoming.LineOnAStock.course need kids giving use (w, x) k')) →
+                ∀ (f k : Nat),
+                  (Becoming.LineOnAStock.course need kids giving use (w, x) k).snd ≤ f →
+                    Becoming.LineOnAStock.Below need (fun x => True) m
+                        (Becoming.LineOnAStock.course need kids giving use (w, x) k).fst →
+                      ∃ k',
+                        Becoming.LineOnAStock.Holds need use y
+                          (Becoming.LineOnAStock.course need kids giving use (w, x) k')
+@Becoming.LineOnAStock.reaches_holds : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {use : U → Nat}
+  {giving y : Nat → Nat} {hi : Nat} {w : List U} {x : Nat},
+  (∀ (u v : U), v ∈ kids u → need v ≤ need u) →
+    Becoming.LineOnAStock.Needing need kids w →
+      Becoming.RegimeMargin.FromNothing giving →
+        (∀ (k : Nat),
+            (∀ (j : Nat),
+                j ≤ k → Becoming.LineOnAStock.Goes need (Becoming.LineOnAStock.course need kids giving use (w, x) j)) →
+              Becoming.LineOnAStock.Regime giving use y hi
+                (Becoming.LineOnAStock.course need kids giving use (w, x) k).fst) →
+          (∀ (k : Nat), Becoming.LineOnAStock.Goes need (Becoming.LineOnAStock.course need kids giving use (w, x) k)) →
+            ∃ k, Becoming.LineOnAStock.Holds need use y (Becoming.LineOnAStock.course need kids giving use (w, x) k)
+@Becoming.LineOnAStock.unending_iff_holds : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {use : U → Nat}
+  {giving y : Nat → Nat} {hi : Nat} {w : List U} {x : Nat},
+  (∀ (u : U), Becoming.LineOnAStock.taken use (kids u) = use u) →
+    (∀ (u : U), kids u ≠ []) →
+      (∀ (u v : U), v ∈ kids u → need v ≤ need u) →
+        Becoming.LineOnAStock.Needing need kids w →
+          Becoming.RegimeMargin.FromNothing giving →
+            x ≤ hi →
+              (∀ (k : Nat),
+                  (∀ (j : Nat),
+                      j ≤ k →
+                        Becoming.LineOnAStock.Goes need (Becoming.LineOnAStock.course need kids giving use (w, x) j)) →
+                    Becoming.LineOnAStock.Regime giving use y hi
+                      (Becoming.LineOnAStock.course need kids giving use (w, x) k).fst) →
+                (Becoming.«不穷» (Becoming.LineOnAStock.net need kids giving use) Becoming.«一» (w, x) ↔
+                  ∃ k,
+                    (∀ (j : Nat),
+                        j < k →
+                          Becoming.LineOnAStock.Goes need
+                            (Becoming.LineOnAStock.course need kids giving use (w, x) j)) ∧
+                      Becoming.LineOnAStock.Holds need use y
+                        (Becoming.LineOnAStock.course need kids giving use (w, x) k))
+@Becoming.LineOnAStock.taken_below : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {use : U → Nat}
+  {giving : Nat → Nat},
+  Becoming.RegimeMargin.FromNothing giving →
+    ∀ {s : List U × Nat},
+      Becoming.LineOnAStock.Needing need kids s.fst →
+        ∀ {n : Nat},
+          Becoming.LineOnAStock.Goes need (Becoming.LineOnAStock.course need kids giving use s (n + 1)) →
+            Becoming.LineOnAStock.taken use (Becoming.LineOnAStock.course need kids giving use s n).fst <
+              (Becoming.LineOnAStock.course need kids giving use s n).snd
+@Becoming.LineOnAStock.unending_taken_below : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {use : U → Nat}
+  {giving : Nat → Nat},
+  Becoming.RegimeMargin.FromNothing giving →
+    ∀ {s : List U × Nat},
+      Becoming.LineOnAStock.Needing need kids s.fst →
+        Becoming.«不穷» (Becoming.LineOnAStock.net need kids giving use) Becoming.«一» s →
+          ∀ (n : Nat),
+            Becoming.LineOnAStock.taken use (Becoming.LineOnAStock.course need kids giving use s n).fst <
+              (Becoming.LineOnAStock.course need kids giving use s n).snd
+@Becoming.LineOnAStock.account : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {use : U → Nat} {giving : Nat → Nat}
+  {s : List U × Nat} (N : Nat),
+  (∀ (t : Nat),
+      t < N →
+        Becoming.LineOnAStock.taken use (Becoming.LineOnAStock.course need kids giving use s t).fst ≤
+          (Becoming.LineOnAStock.course need kids giving use s t).snd) →
+    ((Becoming.LineOnAStock.course need kids giving use s N).snd +
+        Becoming.total (Becoming.steps 0 N) fun t =>
+          Becoming.LineOnAStock.taken use (Becoming.LineOnAStock.course need kids giving use s t).fst) =
+      s.snd +
+        Becoming.total (Becoming.steps 0 N) fun t =>
+          giving
+            ((Becoming.LineOnAStock.course need kids giving use s t).snd -
+              Becoming.LineOnAStock.taken use (Becoming.LineOnAStock.course need kids giving use s t).fst)
+@Becoming.LineOnAStock.account_unending : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {use : U → Nat}
+  {giving : Nat → Nat},
+  Becoming.RegimeMargin.FromNothing giving →
+    ∀ {s : List U × Nat},
+      Becoming.LineOnAStock.Needing need kids s.fst →
+        Becoming.«不穷» (Becoming.LineOnAStock.net need kids giving use) Becoming.«一» s →
+          ∀ (N : Nat),
+            ((Becoming.LineOnAStock.course need kids giving use s N).snd +
+                Becoming.total (Becoming.steps 0 N) fun t =>
+                  Becoming.LineOnAStock.taken use (Becoming.LineOnAStock.course need kids giving use s t).fst) =
+              s.snd +
+                Becoming.total (Becoming.steps 0 N) fun t =>
+                  giving
+                    ((Becoming.LineOnAStock.course need kids giving use s t).snd -
+                      Becoming.LineOnAStock.taken use (Becoming.LineOnAStock.course need kids giving use s t).fst)
+@Becoming.LineOnAStock.course_fixed : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {use : U → Nat}
+  {giving : Nat → Nat} {s : List U × Nat},
+  Becoming.LineOnAStock.step need kids giving use s = s →
+    ∀ (k : Nat), Becoming.LineOnAStock.course need kids giving use s k = s
+@Becoming.LineOnAStock.unending_of_fixed : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {use : U → Nat}
+  {giving : Nat → Nat} {s : List U × Nat} {t : Nat},
+  (∀ (j : Nat), j < t → Becoming.LineOnAStock.Goes need (Becoming.LineOnAStock.course need kids giving use s j)) →
+    Becoming.LineOnAStock.step need kids giving use (Becoming.LineOnAStock.course need kids giving use s t) =
+        Becoming.LineOnAStock.course need kids giving use s t →
+      Becoming.LineOnAStock.Goes need (Becoming.LineOnAStock.course need kids giving use s t) →
+        Becoming.«不穷» (Becoming.LineOnAStock.net need kids giving use) Becoming.«一» s
+@Becoming.LineOnAStock.strip_pos : ∀ {U : Type} {Z : U → Prop} [inst : DecidablePred Z] {u : U} {w : List U},
+  Z u → Becoming.LineOnAStock.strip Z (u :: w) = Becoming.LineOnAStock.strip Z w
+@Becoming.LineOnAStock.strip_neg : ∀ {U : Type} {Z : U → Prop} [inst : DecidablePred Z] {u : U} {w : List U},
+  ¬Z u → Becoming.LineOnAStock.strip Z (u :: w) = u :: Becoming.LineOnAStock.strip Z w
+@Becoming.LineOnAStock.strip_append : ∀ {U : Type} {Z : U → Prop} [inst : DecidablePred Z] (a b : List U),
+  Becoming.LineOnAStock.strip Z (a ++ b) = Becoming.LineOnAStock.strip Z a ++ Becoming.LineOnAStock.strip Z b
+@Becoming.LineOnAStock.strip_all : ∀ {U : Type} {Z : U → Prop} [inst : DecidablePred Z] {l : List U},
+  (∀ (v : U), v ∈ l → Z v) → Becoming.LineOnAStock.strip Z l = []
+@Becoming.LineOnAStock.strip_strip : ∀ {U : Type} {Z : U → Prop} [inst : DecidablePred Z] (w : List U),
+  Becoming.LineOnAStock.strip Z (Becoming.LineOnAStock.strip Z w) = Becoming.LineOnAStock.strip Z w
+@Becoming.LineOnAStock.taken_strip : ∀ {U : Type} {use : U → Nat} {Z : U → Prop} [inst : DecidablePred Z],
+  (∀ (u : U), Z u → use u = 0) →
+    ∀ (w : List U),
+      Becoming.LineOnAStock.taken use (Becoming.LineOnAStock.strip Z w) = Becoming.LineOnAStock.taken use w
+@Becoming.LineOnAStock.strip_after : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {Z : U → Prop}
+  [inst : DecidablePred Z],
+  (∀ (u v : U), Z u → v ∈ kids u → Z v) →
+    ∀ (x : Nat) (w : List U),
+      Becoming.LineOnAStock.strip Z (Becoming.LineOnAStock.after need kids (Becoming.LineOnAStock.strip Z w) x) =
+        Becoming.LineOnAStock.strip Z (Becoming.LineOnAStock.after need kids w x)
+@Becoming.LineOnAStock.strip_course : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {use : U → Nat}
+  {giving : Nat → Nat} {Z : U → Prop} [inst : DecidablePred Z],
+  (∀ (u : U), Z u → use u = 0) →
+    (∀ (u v : U), Z u → v ∈ kids u → Z v) →
+      ∀ {s s' : List U × Nat},
+        Becoming.LineOnAStock.strip Z s.fst = Becoming.LineOnAStock.strip Z s'.fst →
+          s.snd = s'.snd →
+            ∀ (n : Nat),
+              (Becoming.LineOnAStock.course need kids giving use s n).snd =
+                  (Becoming.LineOnAStock.course need kids giving use s' n).snd ∧
+                Becoming.LineOnAStock.strip Z (Becoming.LineOnAStock.course need kids giving use s n).fst =
+                  Becoming.LineOnAStock.strip Z (Becoming.LineOnAStock.course need kids giving use s' n).fst
+@Becoming.LineOnAStock.takes_nothing : ∀ {U : Type} {need : U → Nat} {kids : U → List U} {use : U → Nat}
+  {giving : Nat → Nat} {Z : U → Prop} [inst : DecidablePred Z],
+  (∀ (u : U), Z u → use u = 0) →
+    (∀ (u v : U), Z u → v ∈ kids u → Z v) →
+      ∀ (w : List U) (x n : Nat),
+        (Becoming.LineOnAStock.course need kids giving use (Becoming.LineOnAStock.strip Z w, x) n).snd =
+            (Becoming.LineOnAStock.course need kids giving use (w, x) n).snd ∧
+          Becoming.LineOnAStock.strip Z
+              (Becoming.LineOnAStock.course need kids giving use (Becoming.LineOnAStock.strip Z w, x) n).fst =
+            Becoming.LineOnAStock.strip Z (Becoming.LineOnAStock.course need kids giving use (w, x) n).fst
+Becoming.LineOnAStock.KidsNeedMore.fixed : Becoming.LineOnAStock.step Becoming.LineOnAStock.KidsNeedMore.need
+    Becoming.LineOnAStock.KidsNeedMore.kids Becoming.LineOnAStock.hump10 Becoming.LineOnAStock.KidsNeedMore.use
+    ([Becoming.LineOnAStock.KidsNeedMore.Kind.B, Becoming.LineOnAStock.KidsNeedMore.Kind.A,
+        Becoming.LineOnAStock.KidsNeedMore.Kind.B],
+      8) =
+  ([Becoming.LineOnAStock.KidsNeedMore.Kind.B, Becoming.LineOnAStock.KidsNeedMore.Kind.A,
+      Becoming.LineOnAStock.KidsNeedMore.Kind.B],
+    8)
+Becoming.LineOnAStock.KidsNeedMore.all_but_down : Becoming.RegimeMargin.FromNothing Becoming.LineOnAStock.hump10 ∧
+  Becoming.RegimeMargin.Keeps Becoming.LineOnAStock.hump10 0 10 ∧
+    (∀ (u : Becoming.LineOnAStock.KidsNeedMore.Kind),
+        Becoming.LineOnAStock.KidsNeedMore.use u <
+          Becoming.LineOnAStock.taken Becoming.LineOnAStock.KidsNeedMore.use
+            (Becoming.LineOnAStock.KidsNeedMore.kids u)) ∧
+      (∀ (u : Becoming.LineOnAStock.KidsNeedMore.Kind), 0 < Becoming.LineOnAStock.KidsNeedMore.need u) ∧
+        8 ≤ 10 ∧
+          (¬∀ (u v : Becoming.LineOnAStock.KidsNeedMore.Kind),
+                v ∈ Becoming.LineOnAStock.KidsNeedMore.kids u →
+                  Becoming.LineOnAStock.KidsNeedMore.need v ≤ Becoming.LineOnAStock.KidsNeedMore.need u) ∧
+            Becoming.«不穷»
+              (Becoming.LineOnAStock.net Becoming.LineOnAStock.KidsNeedMore.need Becoming.LineOnAStock.KidsNeedMore.kids
+                Becoming.LineOnAStock.hump10 Becoming.LineOnAStock.KidsNeedMore.use)
+              Becoming.«一»
+              ([Becoming.LineOnAStock.KidsNeedMore.Kind.B, Becoming.LineOnAStock.KidsNeedMore.Kind.A,
+                  Becoming.LineOnAStock.KidsNeedMore.Kind.B],
+                8)
+Becoming.LineOnAStock.KidHigherNeed.all_but_down : Becoming.RegimeMargin.FromNothing
+    Becoming.TurningInTime.Three.giving ∧
+  Becoming.RegimeMargin.Keeps Becoming.TurningInTime.Three.giving 0 12 ∧
+    (∀ (u : Becoming.LineOnAStock.KidHigherNeed.Kind),
+        Becoming.LineOnAStock.KidHigherNeed.use u <
+          Becoming.LineOnAStock.taken Becoming.LineOnAStock.KidHigherNeed.use
+            (Becoming.LineOnAStock.KidHigherNeed.kids u)) ∧
+      Becoming.LineOnAStock.Needing Becoming.LineOnAStock.KidHigherNeed.need Becoming.LineOnAStock.KidHigherNeed.kids
+          [Becoming.LineOnAStock.KidHigherNeed.Kind.A] ∧
+        12 ≤ 12 ∧
+          [Becoming.LineOnAStock.KidHigherNeed.Kind.A] ≠ [] ∧
+            (∀ (u : Becoming.LineOnAStock.KidHigherNeed.Kind),
+                u ∈ [Becoming.LineOnAStock.KidHigherNeed.Kind.A] → Becoming.LineOnAStock.KidHigherNeed.need u ≤ 12) ∧
+              (¬∀ (u v : Becoming.LineOnAStock.KidHigherNeed.Kind),
+                    v ∈ Becoming.LineOnAStock.KidHigherNeed.kids u →
+                      Becoming.LineOnAStock.KidHigherNeed.need v ≤ Becoming.LineOnAStock.KidHigherNeed.need u) ∧
+                Becoming.LineOnAStock.course Becoming.LineOnAStock.KidHigherNeed.need
+                      Becoming.LineOnAStock.KidHigherNeed.kids Becoming.TurningInTime.Three.giving
+                      Becoming.LineOnAStock.KidHigherNeed.use ([Becoming.LineOnAStock.KidHigherNeed.Kind.A], 12) 1 =
+                    ([Becoming.LineOnAStock.KidHigherNeed.Kind.B, Becoming.LineOnAStock.KidHigherNeed.Kind.B], 12) ∧
+                  12 < Becoming.LineOnAStock.KidHigherNeed.need Becoming.LineOnAStock.KidHigherNeed.Kind.B
+Becoming.LineOnAStock.EqualInPlaceOfMore.all_but_grows : Becoming.RegimeMargin.FromNothing
+    Becoming.TurningInTime.Three.giving ∧
+  Becoming.RegimeMargin.Keeps Becoming.TurningInTime.Three.giving 0 12 ∧
+    (∀ (u : Unit), 0 < Becoming.LineOnAStock.EqualInPlaceOfMore.need u) ∧
+      (∀ (u v : Unit),
+          v ∈ Becoming.LineOnAStock.EqualInPlaceOfMore.kids u →
+            Becoming.LineOnAStock.EqualInPlaceOfMore.need v ≤ Becoming.LineOnAStock.EqualInPlaceOfMore.need u) ∧
+        12 ≤ 12 ∧
+          (¬∀ (u : Unit),
+                Becoming.LineOnAStock.EqualInPlaceOfMore.use u <
+                  Becoming.LineOnAStock.taken Becoming.LineOnAStock.EqualInPlaceOfMore.use
+                    (Becoming.LineOnAStock.EqualInPlaceOfMore.kids u)) ∧
+            Becoming.«不穷»
+              (Becoming.LineOnAStock.net Becoming.LineOnAStock.EqualInPlaceOfMore.need
+                Becoming.LineOnAStock.EqualInPlaceOfMore.kids Becoming.TurningInTime.Three.giving
+                Becoming.LineOnAStock.EqualInPlaceOfMore.use)
+              Becoming.«一» ([()], 12)
+Becoming.LineOnAStock.EqualInPlaceOfMore.holds_by_law : Becoming.«不穷»
+  (Becoming.LineOnAStock.net Becoming.LineOnAStock.EqualInPlaceOfMore.need Becoming.LineOnAStock.EqualInPlaceOfMore.kids
+    Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.EqualInPlaceOfMore.use)
+  Becoming.«一» ([()], 12)
+Becoming.LineOnAStock.TwoForOne.holds_by_law : Becoming.LineOnAStock.course Becoming.LineOnAStock.TwoForOne.need
+      Becoming.LineOnAStock.TwoForOne.kids Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.TwoForOne.use
+      ([Becoming.LineOnAStock.TwoForOne.Kind.P], 4) 1 =
+    ([Becoming.LineOnAStock.TwoForOne.Kind.Q, Becoming.LineOnAStock.TwoForOne.Kind.Q], 4) ∧
+  (∀ (k : Nat),
+      Becoming.LineOnAStock.course Becoming.LineOnAStock.TwoForOne.need Becoming.LineOnAStock.TwoForOne.kids
+          Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.TwoForOne.use
+          ([Becoming.LineOnAStock.TwoForOne.Kind.P], 4) (1 + k) =
+        ([Becoming.LineOnAStock.TwoForOne.Kind.Q, Becoming.LineOnAStock.TwoForOne.Kind.Q], 4)) ∧
+    Becoming.«不穷»
+      (Becoming.LineOnAStock.net Becoming.LineOnAStock.TwoForOne.need Becoming.LineOnAStock.TwoForOne.kids
+        Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.TwoForOne.use)
+      Becoming.«一» ([Becoming.LineOnAStock.TwoForOne.Kind.P], 4)
+Becoming.LineOnAStock.ShareRises.course_values : Becoming.LineOnAStock.course Becoming.LineOnAStock.ShareRises.need
+      Becoming.LineOnAStock.ShareRises.kids Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.ShareRises.use
+      ([Becoming.LineOnAStock.ShareRises.Kind.C, Becoming.LineOnAStock.ShareRises.Kind.O], 12) 1 =
+    ([Becoming.LineOnAStock.ShareRises.Kind.C], 12) ∧
+  (∀ (k : Nat),
+      Becoming.LineOnAStock.course Becoming.LineOnAStock.ShareRises.need Becoming.LineOnAStock.ShareRises.kids
+          Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.ShareRises.use
+          ([Becoming.LineOnAStock.ShareRises.Kind.C, Becoming.LineOnAStock.ShareRises.Kind.O], 12) (1 + k) =
+        ([Becoming.LineOnAStock.ShareRises.Kind.C], 12)) ∧
+    Becoming.LineOnAStock.lineTake (fun u => Becoming.LineOnAStock.ShareRises.isC u = true)
+          Becoming.LineOnAStock.ShareRises.use
+          [Becoming.LineOnAStock.ShareRises.Kind.C, Becoming.LineOnAStock.ShareRises.Kind.O] =
+        2 ∧
+      Becoming.LineOnAStock.taken Becoming.LineOnAStock.ShareRises.use
+            [Becoming.LineOnAStock.ShareRises.Kind.C, Becoming.LineOnAStock.ShareRises.Kind.O] =
+          4 ∧
+        Becoming.LineOnAStock.lineTake (fun u => Becoming.LineOnAStock.ShareRises.isC u = true)
+              Becoming.LineOnAStock.ShareRises.use [Becoming.LineOnAStock.ShareRises.Kind.C] =
+            2 ∧
+          Becoming.LineOnAStock.taken Becoming.LineOnAStock.ShareRises.use [Becoming.LineOnAStock.ShareRises.Kind.C] = 2
+Becoming.LineOnAStock.ShareRises.goes_on : Becoming.«不穷»
+  (Becoming.LineOnAStock.net Becoming.LineOnAStock.ShareRises.need Becoming.LineOnAStock.ShareRises.kids
+    Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.ShareRises.use)
+  Becoming.«一» ([Becoming.LineOnAStock.ShareRises.Kind.C, Becoming.LineOnAStock.ShareRises.Kind.O], 12)
+Becoming.LineOnAStock.Doubling.course_values : (Becoming.LineOnAStock.course Becoming.LineOnAStock.Doubling.need
+        Becoming.LineOnAStock.Doubling.kids Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.Doubling.use
+        ([()], 12) 1).snd =
+    12 ∧
+  (Becoming.LineOnAStock.course Becoming.LineOnAStock.Doubling.need Becoming.LineOnAStock.Doubling.kids
+          Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.Doubling.use ([()], 12) 2).snd =
+      12 ∧
+    (Becoming.LineOnAStock.course Becoming.LineOnAStock.Doubling.need Becoming.LineOnAStock.Doubling.kids
+            Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.Doubling.use ([()], 12) 3).snd =
+        12 ∧
+      (Becoming.LineOnAStock.course Becoming.LineOnAStock.Doubling.need Becoming.LineOnAStock.Doubling.kids
+              Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.Doubling.use ([()], 12) 4).snd =
+          8 ∧
+        (Becoming.LineOnAStock.course Becoming.LineOnAStock.Doubling.need Becoming.LineOnAStock.Doubling.kids
+                Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.Doubling.use ([()], 12) 5).snd =
+            0 ∧
+          (Becoming.LineOnAStock.course Becoming.LineOnAStock.Doubling.need Becoming.LineOnAStock.Doubling.kids
+                    Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.Doubling.use ([()], 12) 1).fst.length =
+              2 ∧
+            (Becoming.LineOnAStock.course Becoming.LineOnAStock.Doubling.need Becoming.LineOnAStock.Doubling.kids
+                      Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.Doubling.use ([()], 12) 2).fst.length =
+                4 ∧
+              (Becoming.LineOnAStock.course Becoming.LineOnAStock.Doubling.need Becoming.LineOnAStock.Doubling.kids
+                        Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.Doubling.use ([()], 12)
+                        3).fst.length =
+                  8 ∧
+                (Becoming.LineOnAStock.course Becoming.LineOnAStock.Doubling.need Becoming.LineOnAStock.Doubling.kids
+                          Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.Doubling.use ([()], 12)
+                          4).fst.length =
+                    16 ∧
+                  (Becoming.LineOnAStock.course Becoming.LineOnAStock.Doubling.need Becoming.LineOnAStock.Doubling.kids
+                            Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.Doubling.use ([()], 12)
+                            5).fst.length =
+                      32 ∧
+                    ¬Becoming.LineOnAStock.Goes Becoming.LineOnAStock.Doubling.need
+                          (Becoming.LineOnAStock.course Becoming.LineOnAStock.Doubling.need
+                            Becoming.LineOnAStock.Doubling.kids Becoming.TurningInTime.Three.giving
+                            Becoming.LineOnAStock.Doubling.use ([()], 12) 5) ∧
+                      ¬Becoming.«不穷»
+                          (Becoming.LineOnAStock.net Becoming.LineOnAStock.Doubling.need
+                            Becoming.LineOnAStock.Doubling.kids Becoming.TurningInTime.Three.giving
+                            Becoming.LineOnAStock.Doubling.use)
+                          Becoming.«一» ([()], 12)
+Becoming.LineOnAStock.Doubling.ends_by_law : (∃ n,
+    ¬Becoming.LineOnAStock.Goes Becoming.LineOnAStock.Doubling.need
+        (Becoming.LineOnAStock.course Becoming.LineOnAStock.Doubling.need Becoming.LineOnAStock.Doubling.kids
+          Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.Doubling.use ([()], 12) n)) ∧
+  ¬Becoming.«不穷»
+      (Becoming.LineOnAStock.net Becoming.LineOnAStock.Doubling.need Becoming.LineOnAStock.Doubling.kids
+        Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.Doubling.use)
+      Becoming.«一» ([()], 12)
+Becoming.LineOnAStock.Doubling.unmet_by_law : ∃ n,
+  0 < n ∧
+    n ≤ 13 ∧
+      (∀ (j : Nat),
+          j < n →
+            ∀ (u : Unit),
+              u ∈
+                  (Becoming.LineOnAStock.course Becoming.LineOnAStock.Doubling.need Becoming.LineOnAStock.Doubling.kids
+                      Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.Doubling.use ([()], 12) j).fst →
+                Becoming.LineOnAStock.Doubling.need u ≤
+                  (Becoming.LineOnAStock.course Becoming.LineOnAStock.Doubling.need Becoming.LineOnAStock.Doubling.kids
+                      Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.Doubling.use ([()], 12) j).snd) ∧
+        (∀ (j : Nat),
+            j ≤ n →
+              (Becoming.LineOnAStock.course Becoming.LineOnAStock.Doubling.need Becoming.LineOnAStock.Doubling.kids
+                    Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.Doubling.use ([()], 12) j).fst =
+                Becoming.LineOnAStock.generation Becoming.LineOnAStock.Doubling.kids j [()]) ∧
+          ∃ u,
+            u ∈
+                (Becoming.LineOnAStock.course Becoming.LineOnAStock.Doubling.need Becoming.LineOnAStock.Doubling.kids
+                    Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.Doubling.use ([()], 12) n).fst ∧
+              (Becoming.LineOnAStock.course Becoming.LineOnAStock.Doubling.need Becoming.LineOnAStock.Doubling.kids
+                    Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.Doubling.use ([()], 12) n).snd <
+                Becoming.LineOnAStock.Doubling.need u
+Becoming.LineOnAStock.HigherStartEnds.from_six : Becoming.LineOnAStock.course Becoming.LineOnAStock.HigherStartEnds.need
+      Becoming.LineOnAStock.HigherStartEnds.kids Becoming.TurningInTime.Three.giving
+      Becoming.LineOnAStock.HigherStartEnds.use ([Becoming.LineOnAStock.HigherStartEnds.Kind.A], 6) 1 =
+    ([Becoming.LineOnAStock.HigherStartEnds.Kind.B, Becoming.LineOnAStock.HigherStartEnds.Kind.B], 6) ∧
+  Becoming.LineOnAStock.course Becoming.LineOnAStock.HigherStartEnds.need Becoming.LineOnAStock.HigherStartEnds.kids
+        Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.HigherStartEnds.use
+        ([Becoming.LineOnAStock.HigherStartEnds.Kind.A], 6) 2 =
+      ([Becoming.LineOnAStock.HigherStartEnds.Kind.C, Becoming.LineOnAStock.HigherStartEnds.Kind.B,
+          Becoming.LineOnAStock.HigherStartEnds.Kind.C, Becoming.LineOnAStock.HigherStartEnds.Kind.B],
+        8) ∧
+    Becoming.LineOnAStock.course Becoming.LineOnAStock.HigherStartEnds.need Becoming.LineOnAStock.HigherStartEnds.kids
+          Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.HigherStartEnds.use
+          ([Becoming.LineOnAStock.HigherStartEnds.Kind.A], 6) 3 =
+        ([Becoming.LineOnAStock.HigherStartEnds.Kind.C, Becoming.LineOnAStock.HigherStartEnds.Kind.B,
+            Becoming.LineOnAStock.HigherStartEnds.Kind.C, Becoming.LineOnAStock.HigherStartEnds.Kind.B],
+          8) ∧
+      Becoming.«不穷»
+        (Becoming.LineOnAStock.net Becoming.LineOnAStock.HigherStartEnds.need Becoming.LineOnAStock.HigherStartEnds.kids
+          Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.HigherStartEnds.use)
+        Becoming.«一» ([Becoming.LineOnAStock.HigherStartEnds.Kind.A], 6)
+Becoming.LineOnAStock.HigherStartEnds.from_seven : Becoming.LineOnAStock.course
+      Becoming.LineOnAStock.HigherStartEnds.need Becoming.LineOnAStock.HigherStartEnds.kids
+      Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.HigherStartEnds.use
+      ([Becoming.LineOnAStock.HigherStartEnds.Kind.A], 7) 1 =
+    ([Becoming.LineOnAStock.HigherStartEnds.Kind.B, Becoming.LineOnAStock.HigherStartEnds.Kind.B], 8) ∧
+  Becoming.LineOnAStock.course Becoming.LineOnAStock.HigherStartEnds.need Becoming.LineOnAStock.HigherStartEnds.kids
+        Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.HigherStartEnds.use
+        ([Becoming.LineOnAStock.HigherStartEnds.Kind.A], 7) 2 =
+      ([Becoming.LineOnAStock.HigherStartEnds.Kind.C, Becoming.LineOnAStock.HigherStartEnds.Kind.B,
+          Becoming.LineOnAStock.HigherStartEnds.Kind.C, Becoming.LineOnAStock.HigherStartEnds.Kind.B],
+        12) ∧
+    Becoming.LineOnAStock.course Becoming.LineOnAStock.HigherStartEnds.need Becoming.LineOnAStock.HigherStartEnds.kids
+          Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.HigherStartEnds.use
+          ([Becoming.LineOnAStock.HigherStartEnds.Kind.A], 7) 3 =
+        ([Becoming.LineOnAStock.HigherStartEnds.Kind.A, Becoming.LineOnAStock.HigherStartEnds.Kind.C,
+            Becoming.LineOnAStock.HigherStartEnds.Kind.B, Becoming.LineOnAStock.HigherStartEnds.Kind.A,
+            Becoming.LineOnAStock.HigherStartEnds.Kind.C, Becoming.LineOnAStock.HigherStartEnds.Kind.B],
+          12) ∧
+      Becoming.LineOnAStock.course Becoming.LineOnAStock.HigherStartEnds.need Becoming.LineOnAStock.HigherStartEnds.kids
+            Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.HigherStartEnds.use
+            ([Becoming.LineOnAStock.HigherStartEnds.Kind.A], 7) 4 =
+          ([Becoming.LineOnAStock.HigherStartEnds.Kind.B, Becoming.LineOnAStock.HigherStartEnds.Kind.B,
+              Becoming.LineOnAStock.HigherStartEnds.Kind.A, Becoming.LineOnAStock.HigherStartEnds.Kind.C,
+              Becoming.LineOnAStock.HigherStartEnds.Kind.B, Becoming.LineOnAStock.HigherStartEnds.Kind.B,
+              Becoming.LineOnAStock.HigherStartEnds.Kind.B, Becoming.LineOnAStock.HigherStartEnds.Kind.A,
+              Becoming.LineOnAStock.HigherStartEnds.Kind.C, Becoming.LineOnAStock.HigherStartEnds.Kind.B],
+            4) ∧
+        (Becoming.LineOnAStock.course Becoming.LineOnAStock.HigherStartEnds.need
+                  Becoming.LineOnAStock.HigherStartEnds.kids Becoming.TurningInTime.Three.giving
+                  Becoming.LineOnAStock.HigherStartEnds.use ([Becoming.LineOnAStock.HigherStartEnds.Kind.A], 7)
+                  5).fst.length =
+            16 ∧
+          (Becoming.LineOnAStock.course Becoming.LineOnAStock.HigherStartEnds.need
+                  Becoming.LineOnAStock.HigherStartEnds.kids Becoming.TurningInTime.Three.giving
+                  Becoming.LineOnAStock.HigherStartEnds.use ([Becoming.LineOnAStock.HigherStartEnds.Kind.A], 7) 5).snd =
+              0 ∧
+            ¬Becoming.«不穷»
+                (Becoming.LineOnAStock.net Becoming.LineOnAStock.HigherStartEnds.need
+                  Becoming.LineOnAStock.HigherStartEnds.kids Becoming.TurningInTime.Three.giving
+                  Becoming.LineOnAStock.HigherStartEnds.use)
+                Becoming.«一» ([Becoming.LineOnAStock.HigherStartEnds.Kind.A], 7)
+Becoming.LineOnAStock.HigherStartEnds.higher_ends : (∀ (j : Nat),
+    j ≤ 2 →
+      (Becoming.LineOnAStock.course Becoming.LineOnAStock.HigherStartEnds.need
+            Becoming.LineOnAStock.HigherStartEnds.kids Becoming.TurningInTime.Three.giving
+            Becoming.LineOnAStock.HigherStartEnds.use ([Becoming.LineOnAStock.HigherStartEnds.Kind.A], 6) j).fst =
+        (Becoming.LineOnAStock.course Becoming.LineOnAStock.HigherStartEnds.need
+            Becoming.LineOnAStock.HigherStartEnds.kids Becoming.TurningInTime.Three.giving
+            Becoming.LineOnAStock.HigherStartEnds.use ([Becoming.LineOnAStock.HigherStartEnds.Kind.A], 7) j).fst) ∧
+  Becoming.«不穷»
+      (Becoming.LineOnAStock.net Becoming.LineOnAStock.HigherStartEnds.need Becoming.LineOnAStock.HigherStartEnds.kids
+        Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.HigherStartEnds.use)
+      Becoming.«一» ([Becoming.LineOnAStock.HigherStartEnds.Kind.A], 6) ∧
+    ¬Becoming.«不穷»
+        (Becoming.LineOnAStock.net Becoming.LineOnAStock.HigherStartEnds.need Becoming.LineOnAStock.HigherStartEnds.kids
+          Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.HigherStartEnds.use)
+        Becoming.«一» ([Becoming.LineOnAStock.HigherStartEnds.Kind.A], 7)
+Becoming.LineOnAStock.NoKids.ends_met : (∀ (u : Unit), u ∈ [()] → Becoming.LineOnAStock.NoKids.need u ≤ 12) ∧
+  Becoming.LineOnAStock.course Becoming.LineOnAStock.NoKids.need Becoming.LineOnAStock.NoKids.kids
+        Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.NoKids.use ([()], 12) 1 =
+      ([], 12) ∧
+    ¬Becoming.«不穷»
+        (Becoming.LineOnAStock.net Becoming.LineOnAStock.NoKids.need Becoming.LineOnAStock.NoKids.kids
+          Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.NoKids.use)
+        Becoming.«一» ([()], 12)
+Becoming.LineOnAStock.Overdrawn.short : ∀ (z : Nat), Becoming.TurningInTime.Three.giving z < 7
+Becoming.LineOnAStock.Overdrawn.gone : (∃ n,
+    ∀ (k : Nat),
+      n ≤ k →
+        ∀ (u : Unit),
+          u ∈
+              (Becoming.LineOnAStock.course Becoming.LineOnAStock.Overdrawn.need Becoming.LineOnAStock.Overdrawn.kids
+                  Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.Overdrawn.use ([()], 12) k).fst →
+            ¬True) ∧
+  Becoming.LineOnAStock.course Becoming.LineOnAStock.Overdrawn.need Becoming.LineOnAStock.Overdrawn.kids
+        Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.Overdrawn.use ([()], 12) 1 =
+      ([()], 10) ∧
+    Becoming.LineOnAStock.course Becoming.LineOnAStock.Overdrawn.need Becoming.LineOnAStock.Overdrawn.kids
+          Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.Overdrawn.use ([()], 12) 2 =
+        ([()], 6) ∧
+      Becoming.LineOnAStock.course Becoming.LineOnAStock.Overdrawn.need Becoming.LineOnAStock.Overdrawn.kids
+            Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.Overdrawn.use ([()], 12) 3 =
+          ([()], 0) ∧
+        ∀ (k : Nat),
+          Becoming.LineOnAStock.course Becoming.LineOnAStock.Overdrawn.need Becoming.LineOnAStock.Overdrawn.kids
+              Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.Overdrawn.use ([()], 12) (4 + k) =
+            ([], 0)
+Becoming.LineOnAStock.ProperLine.gone : (∃ n,
+    ∀ (k : Nat),
+      n ≤ k →
+        ∀ (u : Becoming.LineOnAStock.ProperLine.Kind),
+          u ∈
+              (Becoming.LineOnAStock.course Becoming.LineOnAStock.ProperLine.need Becoming.LineOnAStock.ProperLine.kids
+                  Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.ProperLine.use
+                  ([Becoming.LineOnAStock.ProperLine.Kind.D, Becoming.LineOnAStock.ProperLine.Kind.O], 12) k).fst →
+            ¬Becoming.LineOnAStock.ProperLine.isD u = true) ∧
+  Becoming.LineOnAStock.course Becoming.LineOnAStock.ProperLine.need Becoming.LineOnAStock.ProperLine.kids
+        Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.ProperLine.use
+        ([Becoming.LineOnAStock.ProperLine.Kind.D, Becoming.LineOnAStock.ProperLine.Kind.O], 12) 1 =
+      ([Becoming.LineOnAStock.ProperLine.Kind.D, Becoming.LineOnAStock.ProperLine.Kind.D,
+          Becoming.LineOnAStock.ProperLine.Kind.O],
+        12) ∧
+    Becoming.LineOnAStock.course Becoming.LineOnAStock.ProperLine.need Becoming.LineOnAStock.ProperLine.kids
+          Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.ProperLine.use
+          ([Becoming.LineOnAStock.ProperLine.Kind.D, Becoming.LineOnAStock.ProperLine.Kind.O], 12) 2 =
+        ([Becoming.LineOnAStock.ProperLine.Kind.D, Becoming.LineOnAStock.ProperLine.Kind.D,
+            Becoming.LineOnAStock.ProperLine.Kind.D, Becoming.LineOnAStock.ProperLine.Kind.D,
+            Becoming.LineOnAStock.ProperLine.Kind.O],
+          12) ∧
+      (Becoming.LineOnAStock.course Becoming.LineOnAStock.ProperLine.need Becoming.LineOnAStock.ProperLine.kids
+                Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.ProperLine.use
+                ([Becoming.LineOnAStock.ProperLine.Kind.D, Becoming.LineOnAStock.ProperLine.Kind.O], 12) 3).fst.length =
+          9 ∧
+        (Becoming.LineOnAStock.course Becoming.LineOnAStock.ProperLine.need Becoming.LineOnAStock.ProperLine.kids
+                Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.ProperLine.use
+                ([Becoming.LineOnAStock.ProperLine.Kind.D, Becoming.LineOnAStock.ProperLine.Kind.O], 12) 3).snd =
+            12 ∧
+          (Becoming.LineOnAStock.course Becoming.LineOnAStock.ProperLine.need Becoming.LineOnAStock.ProperLine.kids
+                    Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.ProperLine.use
+                    ([Becoming.LineOnAStock.ProperLine.Kind.D, Becoming.LineOnAStock.ProperLine.Kind.O], 12)
+                    4).fst.length =
+              17 ∧
+            (Becoming.LineOnAStock.course Becoming.LineOnAStock.ProperLine.need Becoming.LineOnAStock.ProperLine.kids
+                    Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.ProperLine.use
+                    ([Becoming.LineOnAStock.ProperLine.Kind.D, Becoming.LineOnAStock.ProperLine.Kind.O], 12) 4).snd =
+                6 ∧
+              (Becoming.LineOnAStock.course Becoming.LineOnAStock.ProperLine.need Becoming.LineOnAStock.ProperLine.kids
+                        Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.ProperLine.use
+                        ([Becoming.LineOnAStock.ProperLine.Kind.D, Becoming.LineOnAStock.ProperLine.Kind.O], 12)
+                        5).fst.length =
+                  33 ∧
+                (Becoming.LineOnAStock.course Becoming.LineOnAStock.ProperLine.need
+                        Becoming.LineOnAStock.ProperLine.kids Becoming.TurningInTime.Three.giving
+                        Becoming.LineOnAStock.ProperLine.use
+                        ([Becoming.LineOnAStock.ProperLine.Kind.D, Becoming.LineOnAStock.ProperLine.Kind.O], 12)
+                        5).snd =
+                    0 ∧
+                  ∀ (k : Nat),
+                    Becoming.LineOnAStock.course Becoming.LineOnAStock.ProperLine.need
+                        Becoming.LineOnAStock.ProperLine.kids Becoming.TurningInTime.Three.giving
+                        Becoming.LineOnAStock.ProperLine.use
+                        ([Becoming.LineOnAStock.ProperLine.Kind.D, Becoming.LineOnAStock.ProperLine.Kind.O], 12)
+                        (6 + k) =
+                      ([], 0)
+Becoming.LineOnAStock.AlikeFiner.alike_not_met : Becoming.LineOnAStock.Alike Becoming.LineOnAStock.AlikeFiner.need
+    Becoming.LineOnAStock.AlikeFiner.kids
+    [Becoming.LineOnAStock.AlikeFiner.Kind.d, Becoming.LineOnAStock.AlikeFiner.Kind.b] 4 6 ∧
+  ¬∀ (u : Becoming.LineOnAStock.AlikeFiner.Kind),
+      u ∈ [Becoming.LineOnAStock.AlikeFiner.Kind.d, Becoming.LineOnAStock.AlikeFiner.Kind.b] →
+        (Becoming.LineOnAStock.AlikeFiner.need u ≤ 4 ↔ Becoming.LineOnAStock.AlikeFiner.need u ≤ 6)
+Becoming.LineOnAStock.TakesNothing.lost : (∀ (n : Nat),
+    (Becoming.LineOnAStock.course Becoming.LineOnAStock.TakesNothing.need Becoming.LineOnAStock.TakesNothing.kids
+            Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.TakesNothing.use
+            ([Becoming.LineOnAStock.TakesNothing.Kind.A, Becoming.LineOnAStock.TakesNothing.Kind.B], 9) n).snd =
+        (Becoming.LineOnAStock.course Becoming.LineOnAStock.TakesNothing.need Becoming.LineOnAStock.TakesNothing.kids
+            Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.TakesNothing.use
+            ([Becoming.LineOnAStock.TakesNothing.Kind.A, Becoming.LineOnAStock.TakesNothing.Kind.B,
+                Becoming.LineOnAStock.TakesNothing.Kind.C],
+              9)
+            n).snd ∧
+      Becoming.LineOnAStock.strip (fun u => Becoming.LineOnAStock.TakesNothing.isC u = true)
+          (Becoming.LineOnAStock.course Becoming.LineOnAStock.TakesNothing.need Becoming.LineOnAStock.TakesNothing.kids
+              Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.TakesNothing.use
+              ([Becoming.LineOnAStock.TakesNothing.Kind.A, Becoming.LineOnAStock.TakesNothing.Kind.B], 9) n).fst =
+        Becoming.LineOnAStock.strip (fun u => Becoming.LineOnAStock.TakesNothing.isC u = true)
+          (Becoming.LineOnAStock.course Becoming.LineOnAStock.TakesNothing.need Becoming.LineOnAStock.TakesNothing.kids
+              Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.TakesNothing.use
+              ([Becoming.LineOnAStock.TakesNothing.Kind.A, Becoming.LineOnAStock.TakesNothing.Kind.B,
+                  Becoming.LineOnAStock.TakesNothing.Kind.C],
+                9)
+              n).fst) ∧
+  Becoming.LineOnAStock.course Becoming.LineOnAStock.TakesNothing.need Becoming.LineOnAStock.TakesNothing.kids
+        Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.TakesNothing.use
+        ([Becoming.LineOnAStock.TakesNothing.Kind.A, Becoming.LineOnAStock.TakesNothing.Kind.B,
+            Becoming.LineOnAStock.TakesNothing.Kind.C],
+          9)
+        1 =
+      ([Becoming.LineOnAStock.TakesNothing.Kind.A, Becoming.LineOnAStock.TakesNothing.Kind.B,
+          Becoming.LineOnAStock.TakesNothing.Kind.C],
+        8) ∧
+    Becoming.LineOnAStock.course Becoming.LineOnAStock.TakesNothing.need Becoming.LineOnAStock.TakesNothing.kids
+          Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.TakesNothing.use
+          ([Becoming.LineOnAStock.TakesNothing.Kind.A, Becoming.LineOnAStock.TakesNothing.Kind.B,
+              Becoming.LineOnAStock.TakesNothing.Kind.C],
+            9)
+          2 =
+        ([Becoming.LineOnAStock.TakesNothing.Kind.A, Becoming.LineOnAStock.TakesNothing.Kind.C], 6) ∧
+      (∀ (k : Nat),
+          Becoming.LineOnAStock.course Becoming.LineOnAStock.TakesNothing.need Becoming.LineOnAStock.TakesNothing.kids
+              Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.TakesNothing.use
+              ([Becoming.LineOnAStock.TakesNothing.Kind.A, Becoming.LineOnAStock.TakesNothing.Kind.B,
+                  Becoming.LineOnAStock.TakesNothing.Kind.C],
+                9)
+              (3 + k) =
+            ([Becoming.LineOnAStock.TakesNothing.Kind.A], 6)) ∧
+        Becoming.LineOnAStock.course Becoming.LineOnAStock.TakesNothing.need Becoming.LineOnAStock.TakesNothing.kids
+              Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.TakesNothing.use
+              ([Becoming.LineOnAStock.TakesNothing.Kind.A, Becoming.LineOnAStock.TakesNothing.Kind.B], 9) 1 =
+            ([Becoming.LineOnAStock.TakesNothing.Kind.A, Becoming.LineOnAStock.TakesNothing.Kind.B], 8) ∧
+          (∀ (k : Nat),
+              Becoming.LineOnAStock.course Becoming.LineOnAStock.TakesNothing.need
+                  Becoming.LineOnAStock.TakesNothing.kids Becoming.TurningInTime.Three.giving
+                  Becoming.LineOnAStock.TakesNothing.use
+                  ([Becoming.LineOnAStock.TakesNothing.Kind.A, Becoming.LineOnAStock.TakesNothing.Kind.B], 9) (2 + k) =
+                ([Becoming.LineOnAStock.TakesNothing.Kind.A], 6)) ∧
+            Becoming.«不穷»
+              (Becoming.LineOnAStock.net Becoming.LineOnAStock.TakesNothing.need Becoming.LineOnAStock.TakesNothing.kids
+                Becoming.TurningInTime.Three.giving Becoming.LineOnAStock.TakesNothing.use)
+              Becoming.«一»
+              ([Becoming.LineOnAStock.TakesNothing.Kind.A, Becoming.LineOnAStock.TakesNothing.Kind.B,
+                  Becoming.LineOnAStock.TakesNothing.Kind.C],
+                9)
+Becoming.LineOnAStock.NothingTakenEnds.ending_differs : (∀ (n : Nat),
+    (Becoming.LineOnAStock.course Becoming.LineOnAStock.NothingTakenEnds.need
+            Becoming.LineOnAStock.NothingTakenEnds.kids Becoming.LineOnAStock.nothingGiven
+            Becoming.LineOnAStock.NothingTakenEnds.use ([Becoming.LineOnAStock.NothingTakenEnds.Kind.A], 5) n).snd =
+        (Becoming.LineOnAStock.course Becoming.LineOnAStock.NothingTakenEnds.need
+            Becoming.LineOnAStock.NothingTakenEnds.kids Becoming.LineOnAStock.nothingGiven
+            Becoming.LineOnAStock.NothingTakenEnds.use
+            ([Becoming.LineOnAStock.NothingTakenEnds.Kind.A, Becoming.LineOnAStock.NothingTakenEnds.Kind.C], 5) n).snd ∧
+      Becoming.LineOnAStock.strip (fun u => Becoming.LineOnAStock.NothingTakenEnds.isC u = true)
+          (Becoming.LineOnAStock.course Becoming.LineOnAStock.NothingTakenEnds.need
+              Becoming.LineOnAStock.NothingTakenEnds.kids Becoming.LineOnAStock.nothingGiven
+              Becoming.LineOnAStock.NothingTakenEnds.use ([Becoming.LineOnAStock.NothingTakenEnds.Kind.A], 5) n).fst =
+        Becoming.LineOnAStock.strip (fun u => Becoming.LineOnAStock.NothingTakenEnds.isC u = true)
+          (Becoming.LineOnAStock.course Becoming.LineOnAStock.NothingTakenEnds.need
+              Becoming.LineOnAStock.NothingTakenEnds.kids Becoming.LineOnAStock.nothingGiven
+              Becoming.LineOnAStock.NothingTakenEnds.use
+              ([Becoming.LineOnAStock.NothingTakenEnds.Kind.A, Becoming.LineOnAStock.NothingTakenEnds.Kind.C], 5)
+              n).fst) ∧
+  Becoming.LineOnAStock.course Becoming.LineOnAStock.NothingTakenEnds.need Becoming.LineOnAStock.NothingTakenEnds.kids
+        Becoming.LineOnAStock.nothingGiven Becoming.LineOnAStock.NothingTakenEnds.use
+        ([Becoming.LineOnAStock.NothingTakenEnds.Kind.A, Becoming.LineOnAStock.NothingTakenEnds.Kind.C], 5) 1 =
+      ([Becoming.LineOnAStock.NothingTakenEnds.Kind.A, Becoming.LineOnAStock.NothingTakenEnds.Kind.C], 4) ∧
+    (∀ (k : Nat),
+        Becoming.LineOnAStock.course Becoming.LineOnAStock.NothingTakenEnds.need
+            Becoming.LineOnAStock.NothingTakenEnds.kids Becoming.LineOnAStock.nothingGiven
+            Becoming.LineOnAStock.NothingTakenEnds.use
+            ([Becoming.LineOnAStock.NothingTakenEnds.Kind.A, Becoming.LineOnAStock.NothingTakenEnds.Kind.C], 5)
+            (2 + k) =
+          ([Becoming.LineOnAStock.NothingTakenEnds.Kind.C], 3)) ∧
+      Becoming.«不穷»
+          (Becoming.LineOnAStock.net Becoming.LineOnAStock.NothingTakenEnds.need
+            Becoming.LineOnAStock.NothingTakenEnds.kids Becoming.LineOnAStock.nothingGiven
+            Becoming.LineOnAStock.NothingTakenEnds.use)
+          Becoming.«一»
+          ([Becoming.LineOnAStock.NothingTakenEnds.Kind.A, Becoming.LineOnAStock.NothingTakenEnds.Kind.C], 5) ∧
+        Becoming.«迭»
+            (Becoming.LineOnAStock.net Becoming.LineOnAStock.NothingTakenEnds.need
+              Becoming.LineOnAStock.NothingTakenEnds.kids Becoming.LineOnAStock.nothingGiven
+              Becoming.LineOnAStock.NothingTakenEnds.use)
+            1 ([Becoming.LineOnAStock.NothingTakenEnds.Kind.A], 5)
+            ([Becoming.LineOnAStock.NothingTakenEnds.Kind.A], 4) ∧
+          ∀ (v : List Becoming.LineOnAStock.NothingTakenEnds.Kind × Nat),
+            ¬Becoming.LineOnAStock.net Becoming.LineOnAStock.NothingTakenEnds.need
+                Becoming.LineOnAStock.NothingTakenEnds.kids Becoming.LineOnAStock.nothingGiven
+                Becoming.LineOnAStock.NothingTakenEnds.use ([Becoming.LineOnAStock.NothingTakenEnds.Kind.A], 4) v
