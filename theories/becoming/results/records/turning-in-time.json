@@ -1019,12 +1019,18 @@
       "role": "receipt",
       "sha256": "73cc954f8b223ac65438739dc14e2c8d5c2f844a4a1fd5191ed6984d1bd37eae",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261116T014928.328589Z/verification.json",
+      "role": "receipt",
+      "sha256": "b1b1d38130a11a9651761a7ae7569916c8dcbcb4d1bda8e5206aaeeaa8637f0f",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261116T002918.572610Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261116T014928.328589Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.TurningInTime",
       "success_pointer": "/status",
       "success_value": "passed"

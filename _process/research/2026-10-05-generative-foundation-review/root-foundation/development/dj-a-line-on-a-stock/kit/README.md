@@ -13,4 +13,4 @@ python3 -B _process/research/2026-10-05-generative-foundation-review/root-founda
 
 With no timestamp it takes the run named by `becoming-verification.json`'s `retained_run`.
 
-The record hashes the two modules, the receipt, `NOTE.md`, `PAPER.md`, the eight reports in `readers/` (1 to 6, 10 and 11) and `sources/15-codex-theory-conversations/2026-11-13-the-map-one-model.md`. A later edit to any of them drifts the record, and the kit must be run again; an edit to either module needs a new core run first, since the receipt must bind the module's current bytes.
+The record hashes the two modules, the receipt, `NOTE.md`, `PAPER.md`, the nine reports in `readers/` (1 to 6, 10, 11 and 12) and `sources/15-codex-theory-conversations/2026-11-13-the-map-one-model.md`. A later edit to any of them drifts the record, and the kit must be run again; an edit to either module needs a new core run first, since the receipt must bind the module's current bytes.

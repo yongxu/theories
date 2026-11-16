@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-16T00:31:43+00:00",
+  "reviewed_at_utc": "2026-11-16T01:52:23+00:00",
   "statement": {
     "en": "A way reads the level only by needs met. Capped at hi, nothing from nothing, positive needs met at first, each unit with kids, none needing more: if they together take more, the level is below a start need by step hi + 1; if the same, under the regime, the net never ends just where its course holds.",
     "zh": "方式只凭哪些所需被满足来读取水位。水位以 hi 为上限、无中不生有、所需皆为正、起点皆满足、每个单元都有后代且后代所需不多于它时：其后代合起来所取更多，则 hi + 1 步内水位低于起点满足过的某个所需，此前只是传承的世代；合起来所取相等，则在沿途体制前提下，网永不终止当且仅当进程走到守得住处。"
@@ -532,7 +532,7 @@
     "conditional-not-universal"
   ],
   "validation_scope": {
-    "en": "Pure core, axiom reports empty in core run 20261116T002918.572610Z (LineOnAStock 188 declarations, 113 theorems; LineOnAStockCases 15, 9); in the Lean's second layer through TurningInTime and ReadingsPersist, imported by WayOfUnits. AI-written; read by AI agents set to refute it: six readers before any Lean, thirteen readings of the Lean in four rounds, one join on paper refuted; then three readers of the landing's texts and records, a reviewer of its first run, and one reader of the map card. Their searches on small worlds are not proofs. No person's review of it is recorded."
+    "en": "Pure core, axiom reports empty in core run 20261116T014928.328589Z (LineOnAStock 188 declarations, 113 theorems; LineOnAStockCases 15, 9); in the Lean's second layer through TurningInTime and ReadingsPersist, imported by WayOfUnits. AI-written; read by AI agents set to refute it: six readers before any Lean, thirteen readings of the Lean in four rounds, one join on paper refuted; then three readers of its texts and records, a reviewer of its first run, one reader of the map card and a sweep of its texts. Their searches on small worlds are not proofs. No person's review of it is recorded."
   },
   "next_delta": {
     "en": "An exact condition for a way whose units' kids together take more, or less, never ending; a way that comes to read the fall, its kids or needs changed by the course; the course as a Web with a Flow folded where Continuation is next open; ReadingsSpread's commons as a course of this model; a test on a trained system, held."
@@ -987,9 +987,9 @@
       "sha256": "9cc20f55f6e3733486499cfbaccc5163ba8cd106485e7e8dd539864aafe84e5a"
     },
     {
-      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261116T002918.572610Z/verification.json",
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261116T014928.328589Z/verification.json",
       "role": "receipt",
-      "sha256": "73cc954f8b223ac65438739dc14e2c8d5c2f844a4a1fd5191ed6984d1bd37eae"
+      "sha256": "b1b1d38130a11a9651761a7ae7569916c8dcbcb4d1bda8e5206aaeeaa8637f0f"
     },
     {
       "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/NOTE.md",
@@ -1042,6 +1042,11 @@
       "sha256": "202696c489b0002c5b386ac2ebdc0245618eb90aa854d49a4088e6382d097302"
     },
     {
+      "path": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/readers/12-sweep-of-the-registering-texts.md",
+      "role": "review",
+      "sha256": "165c292e3cc5e091432bee2f85ad38f790fba7391737e408050235bdcc3cbf95"
+    },
+    {
       "path": "sources/15-codex-theory-conversations/2026-11-13-the-map-one-model.md",
       "role": "provenance",
       "sha256": "8406e3e4ac8de486ca4ee54924621e35d4b67b983effdf18dc9a67379662bad4"
@@ -1050,14 +1055,14 @@
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineOnAStock.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261116T002918.572610Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261116T014928.328589Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.LineOnAStock",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineOnAStockCases.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261116T002918.572610Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261116T014928.328589Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.LineOnAStockCases",
       "success_pointer": "/status",
       "success_value": "passed"
