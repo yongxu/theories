@@ -5193,11 +5193,12 @@ tagged instance or application.
   `down`, or with kids taking the same in place of more, it can go on (`LineOnAStock.KidsNeedMore`,
   `LineOnAStock.EqualInPlaceOfMore`); where every unit needs the same positive amount, it ends within
   `hi + 1` steps (`LineOnAStock.one_need_ends`). With nothing given from nothing, that cap and a start at
-  most `hi`, a closed line among other units, whose units need something and have kids of the line that
-  take more than the unit, every kid of its units needing no more than it, is gone from the way from
-  some step on; the net is not concluded to end (`LineOnAStock.line_ends`). A closed line of one need `m` whose kids take no less
-  than it, with `giving 0 < m` and taking at the start more than every giving, is gone from some step
-  on, with no cap asked (`LineOnAStock.fall`). Where each unit's kids take exactly what it takes, every
+  most `hi`, a closed line among other units, each of whose units needs something, has kids of the line
+  that together take more than it, and has kids that each need no more than it, is gone from the way
+  from some step on; the net is not concluded to end (`LineOnAStock.line_ends`). A closed line of one
+  need `m`, each of whose units has kids of the line that together take no less than it, with
+  `giving 0 < m` and, given, the line taking at the start more than every giving, is gone from some
+  step on, with no cap asked (`LineOnAStock.fall`). Where each unit's kids take exactly what it takes, every
   unit has kids, `down`, every descendant needs something, nothing is given from nothing, the start is
   at most `hi`, and the regime (`LineOnAStock.Regime`) holds at every way the course reaches with some
   need met there and at every step before, the net never ends exactly where, some need met at every step
