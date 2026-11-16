@@ -3358,7 +3358,7 @@
    },
    "family": "A",
    "mechanism": {
-    "en": "A configuration is a way, a list of units each with a need, a use and the units it leaves, and a level. After a step each unit whose need the level meets leaves its kids and the others leave nothing; the level is the regime's step under what the units present take together; there is a next while some need is met. The way reads the level only through which needs it meets, and the level reads the way only through what it takes: with no premise on the stock, two courses from one way whose levels meet the same needs step by step have the same ways and the same number born. With nothing given from nothing, the step under no use keeping the level within hi, kids taking more than their parent, every descendant needing something and a start not empty, at most hi, with every need met, a first unmet need comes within hi + 1 steps, the way until then the generation of descent; with kids needing no more than their parent the level there is below a need the start met, and, with every unit's need positive as well, the net ends. Where each unit's kids together take exactly what it takes, under the regime along the course, the net never ends exactly where its course comes to a configuration that holds; WayOfUnits is the case of units leaving themselves. The needs, uses and offspring, that kids take more or the same and need no more, nothing given from nothing, the cap and the regime are given."
+    "en": "A configuration is a way, a list of units each with a need, a use and the units it leaves, and a level. After a step each unit whose need the level meets leaves its kids and the others leave nothing; the level is the regime's step under what the units present take together; there is a next while some need is met. The way reads the level only through which needs it meets, and the level reads the way only through what it takes: with no premise on the stock, two courses from one way whose levels meet the same needs step by step have the same ways and the same number born. With nothing given from nothing, the step under no use keeping the level within hi, each unit's kids together taking more than it, every descendant needing something and a start not empty, at most hi, with every need met, a first unmet need comes within hi + 1 steps, the way until then the generation of descent; with kids needing no more than their parent the level there is below a need the start met, and, with every unit's need positive as well, the net ends. Where each unit's kids together take exactly what it takes, every unit has kids and kids need no more than their parent, with nothing given from nothing, every descendant needing something and the start at most hi, under the regime along the course, the net never ends exactly where its course comes to a configuration that holds; WayOfUnits is the case of units leaving themselves. The needs, uses and offspring, that each unit's kids together take more or the same and each need no more, nothing given from nothing, the cap and the regime are given."
    },
    "records": [
     "a-line-on-a-stock"
@@ -3609,7 +3609,7 @@
      "record": "a-line-on-a-stock",
      "index": 5,
      "text": {
-      "en": "Kids that take more: each unit's kids together take more than it (grows), asked of every unit for need_unmet, falls_to_unmet, way_ends and one_need_ends, of every unit of a closed line for line_ends. For fall: kids taking no less, of one need m, with giving 0 below m and what the line takes at the start more than every giving."
+      "en": "Each unit's kids together take more than it (grows): asked of every unit for need_unmet, falls_to_unmet, way_ends and one_need_ends; for line_ends, each unit of a closed line has kids of the line that together take more than it. For fall: a closed line of one need m, each unit with kids of the line that together take no less than it, giving 0 below m, and the line taking at the start more than every giving."
      }
     },
     {
@@ -3623,7 +3623,7 @@
      "record": "a-line-on-a-stock",
      "index": 7,
      "text": {
-      "en": "For unending_iff_holds: each unit's kids taking exactly what it takes (even), every unit having kids, down, Needing, nothing given from nothing, the start at most hi, and Regime (Short, Meets and Keeps at what the way takes, with y of it, up to hi) at every way the course reaches with some need met there and at every step before. The regime along the course is assumed, not derived."
+      "en": "For unending_iff_holds: each unit's kids together taking exactly what it takes (even), every unit having kids, down, Needing, nothing given from nothing, the start at most hi, and Regime (Short, Meets and Keeps at what the way takes, with y of it, up to hi) at every way the course reaches with some need met there and at every step before. The regime along the course is assumed, not derived."
      }
     },
     {
@@ -3644,7 +3644,7 @@
      },
      "law": "Becoming.LineOnAStock.way_ends",
      "edge": {
-      "en": "With nothing given from nothing, the step under no use keeping every level up to hi within hi, a start at most hi, and, of every unit, kids taking more than it, a positive need and kids needing no more than it, the net does not go on for ever (way_ends; one_need_ends gives the bound hi + 1 in a world of one need). Without kids needing no more, or with kids taking the same in place of more, it can go on (KidsNeedMore, EqualInPlaceOfMore)."
+      "en": "With nothing given from nothing, the step under no use keeping every level up to hi within hi, a start at most hi, and, of every unit, kids together taking more than it, a positive need and kids needing no more than it, the net does not go on for ever (way_ends; one_need_ends gives the bound hi + 1 in a world of one need). Without kids needing no more, or with a unit's kids together taking the same in place of more, it can go on (KidsNeedMore, EqualInPlaceOfMore)."
      },
      "strength": "sufficient",
      "records": [
@@ -3665,7 +3665,7 @@
      },
      "law": "Becoming.LineOnAStock.need_unmet",
      "edge": {
-      "en": "With nothing given from nothing, the cap, kids taking more than their parent, every descendant of the start's way needing something and a start not empty, at most hi, with every need met: some need is unmet at a step from 1 to hi + 1 (need_unmet), not concluding that the level fell or that the net ends; with down as well, the level there is below a need the start met (falls_to_unmet). Without down the unmet need can be a kid's greater need at a level that has not fallen (KidHigherNeed)."
+      "en": "With nothing given from nothing, the cap, each unit's kids together taking more than it, every descendant of the start's way needing something and a start not empty, at most hi, with every need met: some need is unmet at a step from 1 to hi + 1 (need_unmet), not concluding that the level fell or that the net ends; with down as well, the level there is below a need the start met (falls_to_unmet). Without down the unmet need can be a kid's greater need at a level that has not fallen (KidHigherNeed)."
      },
      "strength": "sufficient",
      "records": [
@@ -3686,7 +3686,7 @@
      },
      "law": "Becoming.LineOnAStock.line_ends",
      "edge": {
-      "en": "With nothing given from nothing, the cap and a start at most hi, a line no unit outside which leaves a unit of it, whose units need something and have kids in it that take more than the unit, every kid of its units needing no more than its parent, is gone from some step on (line_ends), and stays gone (gone_from). With one need m, each unit of the line having kids of the line that together take no less than it, giving at nothing below m and, given, what the line takes at the start more than every giving, the same holds with no cap asked (fall)."
+      "en": "With nothing given from nothing, the cap and a start at most hi, a line no unit outside which leaves a unit of it, whose units need something and have kids in it that together take more than the unit, every kid of its units needing no more than its parent, is gone from some step on (line_ends), and stays gone (gone_from). With one need m, each unit of the line having kids of the line that together take no less than it, giving at nothing below m and, given, what the line takes at the start more than every giving, the same holds with no cap asked (fall)."
      },
      "strength": "sufficient",
      "records": [
@@ -3740,7 +3740,7 @@
      "source": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/NOTE.md#r-a-line-on-a-stock"
     },
     {
-     "en": "No exact condition for a way whose kids take more, or less, never ending; with one way, whether the net ends is not monotone in the start level (HigherStartEnds).",
+     "en": "No exact condition for a way whose units' kids together take more, or less, never ending; with one way, whether the net ends is not monotone in the start level (HigherStartEnds).",
      "source": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/NOTE.md#r-a-line-on-a-stock"
     },
     {
@@ -3831,6 +3831,46 @@
       "regimemargin-fromnothing",
       "regimemargin-start-level-le-hi",
       "lineonastock-regime-along",
+      "regimemargin-step"
+     ]
+    },
+    {
+     "law": "Becoming.LineOnAStock.fall",
+     "takes": [
+      "lineonastock-closed-line",
+      "lineonastock-line-one-need",
+      "lineonastock-line-keeps",
+      "lineonastock-giving-below-line-need",
+      "lineonastock-line-over",
+      "regimemargin-step"
+     ]
+    },
+    {
+     "law": "Becoming.LineOnAStock.gone_from",
+     "takes": [
+      "lineonastock-closed-line",
+      "lineonastock-line-gone-at",
+      "regimemargin-step"
+     ]
+    },
+    {
+     "law": "Becoming.LineOnAStock.ways_alike",
+     "takes": [
+      "lineonastock-levels-meet-alike",
+      "regimemargin-step"
+     ]
+    },
+    {
+     "law": "Becoming.LineOnAStock.alike_iff",
+     "takes": [
+      "lineonastock-way-leaves"
+     ]
+    },
+    {
+     "law": "Becoming.LineOnAStock.takes_nothing",
+     "takes": [
+      "lineonastock-z-takes-nothing",
+      "lineonastock-z-kids-in-z",
       "regimemargin-step"
      ]
     }
@@ -83632,7 +83672,7 @@
   {
    "id": "lineonastock-grows",
    "name": {
-    "en": "each unit's kids take more than it"
+    "en": "each unit's kids together take more than it"
    },
    "statement": {
     "en": "every unit's kids together take more than the unit: ∀ u, use u < taken use (kids u), asked of every unit of the type"
@@ -83778,10 +83818,14 @@
    },
    "kind": "hypothesis of a law",
    "lean": [
-    "Becoming.LineOnAStock.line_ends"
+    "Becoming.LineOnAStock.line_ends",
+    "Becoming.LineOnAStock.fall",
+    "Becoming.LineOnAStock.gone_from"
    ],
    "holds_in": [
-    "Becoming.LineOnAStock.ProperLine.gone"
+    "Becoming.LineOnAStock.ProperLine.gone",
+    "Becoming.LineOnAStock.Overdrawn.gone",
+    "Becoming.LineOnAStock.DrainCase.drain"
    ],
    "fails_in": [],
    "home": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/NOTE.md#r-a-line-on-a-stock",
@@ -83793,7 +83837,7 @@
   {
    "id": "lineonastock-line-grows",
    "name": {
-    "en": "the line's kids in it take more than the unit"
+    "en": "the line's kids in it together take more than the unit"
    },
    "statement": {
     "en": "every unit of the line S has kids in S that together take more than it: ∀ u, S u → use u < lineTake S use (kids u)"
@@ -83917,6 +83961,208 @@
    "holds_in": [
     "Becoming.LineOnAStock.TwoForOne.holds_by_law",
     "Becoming.LineOnAStock.EqualInPlaceOfMore.holds_by_law"
+   ],
+   "fails_in": [],
+   "home": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/NOTE.md#r-a-line-on-a-stock",
+   "seeded_from": [
+    "Lean"
+   ],
+   "page": "theories/becoming/results/atlas/premises/a.md"
+  },
+  {
+   "id": "lineonastock-line-one-need",
+   "name": {
+    "en": "every unit of the line needs the same m"
+   },
+   "statement": {
+    "en": "every unit of the line S needs the one level m: ∀ u, S u → need u = m"
+   },
+   "kind": "hypothesis of a law",
+   "lean": [
+    "Becoming.LineOnAStock.fall"
+   ],
+   "holds_in": [
+    "Becoming.LineOnAStock.Overdrawn.gone",
+    "Becoming.LineOnAStock.DrainCase.drain"
+   ],
+   "fails_in": [],
+   "home": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/NOTE.md#r-a-line-on-a-stock",
+   "seeded_from": [
+    "Lean"
+   ],
+   "page": "theories/becoming/results/atlas/premises/a.md"
+  },
+  {
+   "id": "lineonastock-line-keeps",
+   "name": {
+    "en": "the line's kids in it together take no less than the unit"
+   },
+   "statement": {
+    "en": "every unit of the line S has kids in S that together take at least what it takes: ∀ u, S u → use u ≤ lineTake S use (kids u)"
+   },
+   "kind": "hypothesis of a law",
+   "lean": [
+    "Becoming.LineOnAStock.fall"
+   ],
+   "holds_in": [
+    "Becoming.LineOnAStock.Overdrawn.gone",
+    "Becoming.LineOnAStock.DrainCase.drain"
+   ],
+   "fails_in": [],
+   "home": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/NOTE.md#r-a-line-on-a-stock",
+   "seeded_from": [
+    "Lean"
+   ],
+   "page": "theories/becoming/results/atlas/premises/a.md"
+  },
+  {
+   "id": "lineonastock-giving-below-line-need",
+   "name": {
+    "en": "giving at nothing below the line's need"
+   },
+   "statement": {
+    "en": "what is given at a level of nothing is below the line's need m: giving 0 < m"
+   },
+   "kind": "hypothesis of a law",
+   "lean": [
+    "Becoming.LineOnAStock.fall"
+   ],
+   "holds_in": [
+    "Becoming.LineOnAStock.Overdrawn.gone",
+    "Becoming.LineOnAStock.DrainCase.drain"
+   ],
+   "fails_in": [],
+   "home": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/NOTE.md#r-a-line-on-a-stock",
+   "seeded_from": [
+    "Lean"
+   ],
+   "page": "theories/becoming/results/atlas/premises/a.md"
+  },
+  {
+   "id": "lineonastock-line-over",
+   "name": {
+    "en": "the line takes at the start more than every giving"
+   },
+   "statement": {
+    "en": "what the line S takes of the start's way w is more than what is given at every level: ∀ z, giving z < lineTake S use w"
+   },
+   "kind": "hypothesis of a law",
+   "lean": [
+    "Becoming.LineOnAStock.fall"
+   ],
+   "holds_in": [
+    "Becoming.LineOnAStock.Overdrawn.gone",
+    "Becoming.LineOnAStock.DrainCase.drain"
+   ],
+   "fails_in": [],
+   "home": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/NOTE.md#r-a-line-on-a-stock",
+   "seeded_from": [
+    "Lean"
+   ],
+   "page": "theories/becoming/results/atlas/premises/a.md"
+  },
+  {
+   "id": "lineonastock-line-gone-at",
+   "name": {
+    "en": "no unit of the line in the way at a step"
+   },
+   "statement": {
+    "en": "at step k no unit of the way of the course from s is of the line S: ∀ u, u ∈ (course need kids giving use s k).1 → ¬ S u"
+   },
+   "kind": "hypothesis of a law",
+   "lean": [
+    "Becoming.LineOnAStock.gone_from"
+   ],
+   "holds_in": [],
+   "fails_in": [],
+   "home": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/NOTE.md#r-a-line-on-a-stock",
+   "seeded_from": [
+    "Lean"
+   ],
+   "page": "theories/becoming/results/atlas/premises/a.md"
+  },
+  {
+   "id": "lineonastock-levels-meet-alike",
+   "name": {
+    "en": "two courses' levels meet the same needs step by step"
+   },
+   "statement": {
+    "en": "at every step j before n, the levels of two courses from one way w, under two givings g, g', two uses use, use' and two start levels x, x', meet the same needs of the first course's way: ∀ j, j < n → ∀ u, u ∈ (course need kids g use (w, x) j).1 → (need u ≤ (course need kids g use (w, x) j).2 ↔ need u ≤ (course need kids g' use' (w, x') j).2)"
+   },
+   "kind": "hypothesis of a law",
+   "lean": [
+    "Becoming.LineOnAStock.ways_alike"
+   ],
+   "holds_in": [
+    "Becoming.LineOnAStock.HigherStartEnds.higher_ends"
+   ],
+   "fails_in": [],
+   "home": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/NOTE.md#r-a-line-on-a-stock",
+   "seeded_from": [
+    "Lean"
+   ],
+   "page": "theories/becoming/results/atlas/premises/a.md"
+  },
+  {
+   "id": "lineonastock-way-leaves",
+   "name": {
+    "en": "every unit of the way has a kid"
+   },
+   "statement": {
+    "en": "every unit of the way w leaves at least one unit: ∀ u, u ∈ w → kids u ≠ []"
+   },
+   "kind": "hypothesis of a law",
+   "lean": [
+    "Becoming.LineOnAStock.alike_iff"
+   ],
+   "holds_in": [],
+   "fails_in": [
+    "Becoming.LineOnAStock.AlikeFiner.alike_not_met"
+   ],
+   "home": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/NOTE.md#r-a-line-on-a-stock",
+   "seeded_from": [
+    "Lean"
+   ],
+   "page": "theories/becoming/results/atlas/premises/a.md"
+  },
+  {
+   "id": "lineonastock-z-takes-nothing",
+   "name": {
+    "en": "the units of Z take nothing"
+   },
+   "statement": {
+    "en": "every unit of the decidable kind Z takes nothing: ∀ u, Z u → use u = 0"
+   },
+   "kind": "hypothesis of a law",
+   "lean": [
+    "Becoming.LineOnAStock.takes_nothing"
+   ],
+   "holds_in": [
+    "Becoming.LineOnAStock.TakesNothing.lost",
+    "Becoming.LineOnAStock.NothingTakenEnds.ending_differs"
+   ],
+   "fails_in": [],
+   "home": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/NOTE.md#r-a-line-on-a-stock",
+   "seeded_from": [
+    "Lean"
+   ],
+   "page": "theories/becoming/results/atlas/premises/a.md"
+  },
+  {
+   "id": "lineonastock-z-kids-in-z",
+   "name": {
+    "en": "the units of Z leave only units of Z"
+   },
+   "statement": {
+    "en": "every kid of a unit of Z is of Z: ∀ u v, Z u → v ∈ kids u → Z v"
+   },
+   "kind": "hypothesis of a law",
+   "lean": [
+    "Becoming.LineOnAStock.takes_nothing"
+   ],
+   "holds_in": [
+    "Becoming.LineOnAStock.TakesNothing.lost",
+    "Becoming.LineOnAStock.NothingTakenEnds.ending_differs"
    ],
    "fails_in": [],
    "home": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/NOTE.md#r-a-line-on-a-stock",

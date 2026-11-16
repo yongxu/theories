@@ -62,7 +62,7 @@
     - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 26. locked_ends_with_net_regime: with the level's step RegimeMargin.step giving (use w), the lock's premises, AloneOutside at windowAlone, a positive need no marked level meets, nothing given from nothing, giving short of H below y, every way whose share and rule are not below the start's using at least H (draws), and the start below H + y: a Locked start reaches, within as many steps as the start's level, a configuration that conditions nothing, still Locked. (`Becoming.TurningInTime.locked_ends_with_net_regime`)
     - *Shared laws, by Lean dependency:* balance; its declarations reach the grammar's vocabulary only.
-27. locked_ends_on_window: locked_ends_with_net_regime with the way after a step windowAfter fA hA hL N K reads and the levels in [N, K) marked, no marked level meeting the need where K ≤ N or K ≤ need. The start below H + y and the floor on the use are given in both. (`Becoming.TurningInTime.locked_ends_on_window`)
+27. locked_ends_on_window: locked_ends_with_net_regime with the way after a step windowAfter fA hA hL N K reads and the levels in [N, K) marked; it asks K ≤ N or K ≤ need (un), under which no marked level meets the need. The start below H + y and the floor on the use are given in both. (`Becoming.TurningInTime.locked_ends_on_window`)
     - *Shared laws, by Lean dependency:* balance; its declarations reach the grammar's vocabulary only.
 28. window_corrected: where every step reads and the window's reading hL gives a rule of which kept holds at every level in [N, K), whatever the share and rule in force, the rule after a step of windowAfter fA hA hL N K reads at such a level is kept. (`Becoming.TurningInTime.window_corrected`)
     - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
@@ -245,6 +245,7 @@ Reading (AI-written, from the home section's reading and the study folder's NEAR
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261115T153402.052649Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261115T233900.527774Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261116T002918.572610Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261116T014928.328589Z/verification.json) | — |
 
 Aliases: `turning in time`, `a line that ends where the net ends, or while the net goes on`, `Becoming.TurningInTime.turns_in_time_iff`, `Becoming.TurningInTime.unending_iff_first_marked`
 
