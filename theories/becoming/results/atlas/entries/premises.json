@@ -34946,7 +34946,7 @@
  {
   "id": "lineonastock-even",
   "name": {
-   "en": "kids take exactly what their parent takes"
+   "en": "each unit's kids together take exactly what it takes"
   },
   "statement": {
    "en": "every unit's kids together take exactly what the unit takes: ∀ u, taken use (kids u) = use u"
