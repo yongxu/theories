@@ -132,7 +132,7 @@ For each of the 19 drawn ties and each role, one theorem for each question that 
 <a id="tie-passes-on-pattern-parts"></a>
 ### what goes on · goes on through its parts · its parts
 
-延续者 · 传／守 · 部分. It goes on while its parts turn over (passes on), or with the same parts (keeps). [30 dynamics](DYNAMICS.md#tie-passes-on-pattern-parts) speak of it; its 51 principal theorems come from 19 of them.
+延续者 · 传／守 · 部分. It goes on while its parts turn over (passes on), or with the same parts (keeps). [30 dynamics](DYNAMICS.md#tie-passes-on-pattern-parts) speak of it; its 50 principal theorems come from 19 of them.
 
 - **What makes it begin** (2 theorems). In one built case the two stocks' total stays one at every step, and a part begins at arbitrarily late steps. *(one built case; `Recycle.closed_unceasing`, [A closed cycle sustains unceasing arising, without dissipation](../atlas/families/f.md#closed-cycle-without-dissipation))*
 - **What makes it last** (10 theorems). A goal lasts down every lineage keeping it until giving, from a carrying founder, exactly where it passes at every descent from a carrier. *(exactly where; `Flow.goal_descends_iff`, [A goal along a lineage, need drift along a lineage, and what descent can form](../atlas/families/h.md#what-a-lineage-carries))*
@@ -143,7 +143,7 @@ For each of the 19 drawn ties and each role, one theorem for each question that 
 - **Read backward: what holding it shows** (4 theorems). The whole's beginning across a step shows a part beginning across the same step. *If:* a whole of its parts; the whole arising. *(enough for it; `Web.Whole.arises_part`, [A whole persists through the arising of its parts](../atlas/families/h.md#whole-persists-through-generation))*
 - **The same as, in another model**. The passing premise holds exactly where every occurrence carrying the pattern after a step has a predecessor (有前) under the pattern's class. *(exactly where; of every course of every process; `Web.byPassing_iff_hasPred`, [A pattern outlasting its carriers lasts through passing](../atlas/families/h.md#a-pattern-lasts-through-passing))*
 - **No theorem here shows** what makes it change.
-- **If something given were changed** (10 theorems). Readings are inherited along descent exactly where descent revises them by the update that keeps the reading whatever is sensed. *Its conditions are in its Lean statement; the atlas's ledger does not list them.* *(exactly where; of every course of every process; `Flow.inheritsReading_iff`, [Readings carried along a line, told apart by its standing late only within its coupling closure](../atlas/families/h.md#readings-carried-and-filtered))*
+- **If something given were changed** (9 theorems). Where the rebuild draws on the supply instead, a reader that is gone begins again at the next supplied step, from every level. *If:* a reader rebuilt from the supply; at least one unit wanted. *(enough for it; `ReaderRebuilding.«取于供者复»`, [A reader rebuilt from the level it reads: its end does not come back](../atlas/families/a.md#a-reader-rebuilt-from-its-stock-ends-with-it))*
 
 <a id="tie-reaches-stock-rule"></a>
 ### a stock · reaches, or lies beyond · a rule
@@ -224,9 +224,9 @@ For each of the 19 drawn ties and each role, one theorem for each question that 
 <a id="tie-revised-by-reading-subject"></a>
 ### a reading · is revised by · what it is of
 
-读法 · 随所遇而改 · 所读者. The reading is revised by what comes back from what it acted on or met. [20 dynamics](DYNAMICS.md#tie-revised-by-reading-subject) speak of it; its 20 principal theorems come from 12 of them.
+读法 · 随所遇而改 · 所读者. The reading is revised by what comes back from what it acted on or met. [20 dynamics](DYNAMICS.md#tie-revised-by-reading-subject) speak of it; its 19 principal theorems come from 11 of them.
 
-- **What makes it last** (7 theorems). At each step a candidate is still kept exactly where it was listed and has predicted every answer taken in so far. *If:* decided. *(exactly where; `ReadingLoop.Loop.kept_iff`, [What a course chosen through its model does not test](../atlas/families/d.md#what-a-course-chosen-through-its-model-does-not-test))*
+- **What makes it last** (6 theorems). At each step a candidate is still kept exactly where it was listed and has predicted every answer taken in so far. *If:* decided. *(exactly where; `ReadingLoop.Loop.kept_iff`, [What a course chosen through its model does not test](../atlas/families/d.md#what-a-course-chosen-through-its-model-does-not-test))*
 - **What makes it change** (2 theorems). In one built case, two values under negation: publication goes on, and each step's value differs from the step before, from every start. *(one built case; `ReflexivePrediction.Negating.alternates`, [Repeated publication under negation](../atlas/families/f.md#publication-under-negation-alternates))*
 - **What keeps it from beginning**. A candidate after a later step of a run was a candidate after every earlier step; so none ruled out begins again. *If:* a candidate along the run. *(enough for it; `Courses.run_narrows`, [Chosen encounters: records only narrow the candidates, and a wrong unique binding can meet the stopping rule](../atlas/families/d.md#encounter-selection-and-revision))*
 - **Where the line falls** (5 theorems). Given any record weighing something under a tied pair, one's share is at most the other's exactly where its prior weight is. *If:* Tied; weighs, in LumpedSeeking; and 3 more. *(exactly where; `LumpedSeeking.posterior_le_iff_prior`, [What seeking cannot separate](../atlas/families/d.md#what-seeking-cannot-separate))*

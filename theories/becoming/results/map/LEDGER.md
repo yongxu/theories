@@ -63,9 +63,9 @@ A theorem's sentence uses these words and its model's own terms; a case uses its
 | [what depends on it · needs · a stock](LAWS.md#tie-needs-dependent-stock) | 66 | 69 from 36 | 1 | 6 | 0 | 13 | 41 | 8 | 1 | 24 |
 | [a rule · selects and favours · what it selects among](LAWS.md#tie-selects-rule-selected) | 46 | 76 from 30 | 4 | 17 | 0 | 1 | 42 + 2 built | 10 | 8 | 14 |
 | [a reading · is of, and accords or misses · what it is of](LAWS.md#tie-is-of-reading-subject) | 31 | 31 from 19 | 4 | 6 + 1 built | 0 | 0 | 19 + 1 built | 0 | 0 | 7 |
-| [what goes on · goes on through its parts · its parts](LAWS.md#tie-passes-on-pattern-parts) | 30 | 51 from 19 | 0 + 2 built | 7 + 3 built | 0 | 9 | 19 + 1 built | 10 | 0 | 1 |
+| [what goes on · goes on through its parts · its parts](LAWS.md#tie-passes-on-pattern-parts) | 30 | 50 from 19 | 0 + 2 built | 7 + 3 built | 0 | 9 | 19 + 1 built | 9 | 0 | 1 |
 | [a stock · reaches, or lies beyond · a rule](LAWS.md#tie-reaches-stock-rule) | 26 | 12 from 6 | 0 | 0 | 0 | 0 | 11 | 1 | 3 | 13 |
-| [a reading · is revised by · what it is of](LAWS.md#tie-revised-by-reading-subject) | 20 | 20 from 12 | 0 | 7 | 0 + 2 built | 0 | 11 | 0 | 0 | 0 |
+| [a reading · is revised by · what it is of](LAWS.md#tie-revised-by-reading-subject) | 20 | 19 from 11 | 0 | 6 | 0 + 2 built | 0 | 11 | 0 | 0 | 0 |
 | [a rule · is read through · its readers](LAWS.md#tie-read-through-rule-readers) | 17 | 5 from 4 | 0 | 1 | 0 | 0 | 4 | 0 | 0 | 13 |
 | [a rule · is set from · what it selects among](LAWS.md#tie-set-from-rule-selected) | 16 | 4 from 4 | 0 | 0 | 0 + 1 built | 0 | 3 | 0 | 0 | 4 |
 | [what goes on · gives to, waiting on · what goes on](LAWS.md#tie-gives-to-pattern-pattern) | 11 | 24 from 8 | 3 | 3 + 1 built | 0 | 4 | 11 | 2 | 0 | 0 |
@@ -126,7 +126,7 @@ For 89 of the 295 frozen predictions the tests' own records name where the predi
 |---|---|
 | Dynamics placed | 185; 23 of them hold of anything that goes on and name no role |
 | Ties between roles | 19 drawn; 39 thinner ones listed |
-| Principal theorems written up | 788 write-ups of 741 Lean theorems; 733 of the 741 are among the 2,115 Lean theorems the atlas lists with premises. Counting a theorem once in a place: 430 on a tie, 222 on one role, 102 on anything that goes on |
+| Principal theorems written up | 786 write-ups of 739 Lean theorems; 732 of the 739 are among the 2,115 Lean theorems the atlas lists with premises. Counting a theorem once in a place: 428 on a tie, 222 on one role, 102 on anything that goes on |
 | Drawn ties where no general theorem shows | a beginning: 14 (on 1, one built case does); a lasting: 8; a change: 19 (on 2, one built case does); an end: 13 |
 | Tests | 66; in 47 at least one frozen prediction got a verdict |
 | Frozen predictions | 295: 117 agreed, 8 not rejected, 64 disagreed, 17 could not tell, 89 with no verdict; 18 more entries were not frozen |
@@ -140,11 +140,11 @@ For 89 of the 295 frozen predictions the tests' own records name where the predi
 
 - **The kinds do not hold everything.** Every card says what of its dynamic the roles, ties, marks, forms and frames leave out: most often amounts, theorems that name no role, and conclusions that fit no form. The note is on the ledger to operate, under each dynamic.
 - **A tie gathers separate models.** Roles of two models are drawn as one place where each model names that kind of role. Where no proof joins the two models, that sameness is a reading. Each tie's section says how many dynamics its theorems come from; the picture draws one line.
-- **Only principal theorems are written up.** A card takes its dynamic's main results and most of the theorems its exits and transitions cite: 741 Lean theorems, where the atlas lists 2,115 with premises.
+- **Only principal theorems are written up.** A card takes its dynamic's main results and most of the theorems its exits and transitions cite: 739 Lean theorems, where the atlas lists 2,115 with premises.
 - **The question a theorem is filed under is a reading of its statement.** A theorem written up on several cards can be read under a different question on each; in a place it counts once, by the write-up of the course itself.
 - **A filled square says a general theorem concludes that mark, not how much is known.** One theorem fills it.
 - **A prediction's place rests on a reading of its test's record:** whether it was frozen, which conditions were met, and what was seen. The reading is the case's; the test's folder is the record.
-- **A condition is given by its name in the atlas's ledger.** The ledger keeps its statement, and for 7 theorems it lists none.
+- **A condition is given by its name in the atlas's ledger.** The ledger keeps its statement, and for 6 theorems it lists none.
 - **The Chinese is provisional.**
 
 ## How it was made

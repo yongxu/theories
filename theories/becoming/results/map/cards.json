@@ -9458,28 +9458,6 @@
      "by_outside": true,
      "strength": "sufficient",
      "evidence": "theorem not_allPersist_of_removes {i : I} (removes : RemovesLine slotsOf l i) : ¬ AllPersist slotsOf l — ReadingsPersist.lean (beside it, AllPersist.survivors : AllPersist slotsOf l → SurvivorsPersist slotsOf l, which exit 1 also cites)"
-    },
-    {
-     "lean": "Becoming.Flow.closedFrom_of_standing",
-     "items": [
-      "exit 4"
-     ],
-     "about": 4,
-     "sameness": "a reading within the region, or outside it",
-     "form": "tie",
-     "mark": "lasts",
-     "frame": "one-course",
-     "then_en": "From that step on, a reading in the region, revised by the reading of a relatum standing then, stays in the region.",
-     "then_zh": "自那一步起，域内的读法随当时立着者的读法而改，改后仍在域内。",
-     "compare_en": "",
-     "main_ifs": [
-      "readingsspread-standing-carry-region",
-      "readingsspread-source-standing",
-      "readingsspread-update-keeps-region"
-     ],
-     "by_outside": false,
-     "strength": "sufficient",
-     "evidence": "(stands : ∀ t g, T ≤ t → g ∈ G.family t → 0 < W.level t (src t g)) (keeps : ∀ σ τ, P σ → P τ → P (upd σ τ)) (carried : ∀ t y, T ≤ t → 0 < W.level t y → P (read y)) : G.ClosedFrom read (fun t g => read (src t g)) upd P T — ReadingsSpread.lean (home dynamic: readings-revised-spread-and-locked)"
     }
    ],
    "built_cases": [
@@ -26380,24 +26358,6 @@
      "by_outside": false,
      "strength": "sufficient",
      "evidence": "(picks : ∀ o, ch.pick o = sig) (none : «无环» ch.Shown) : ∃ P : «际» Sig, … ch.Accords P ∧ ∀ x y, ch.Met x y → ¬ ((world x).course present start).Overdraws … ds m → ((world y).course present start).Overdraws … ds m → P x y (Becoming/ReadingsPersist.lean)"
-    },
-    {
-     "lean": "Becoming.Flow.inheritsReading_iff",
-     "items": [
-      "exit 5"
-     ],
-     "about": 0,
-     "sameness": "the reading a descendant carries",
-     "form": "same-as",
-     "mark": "",
-     "frame": "every-course",
-     "then_en": "Readings are inherited along descent exactly where descent revises them by the update that keeps the reading whatever is sensed.",
-     "then_zh": "读法沿传衍照样承下，恰在传衍时的修订是“不论所感、读法不变”的更新之时。",
-     "compare_en": "",
-     "main_ifs": [],
-     "by_outside": true,
-     "strength": "exact",
-     "evidence": "L.InheritsReading W read ↔ L.RevisesBy W read (fun _ _ => ()) (fun σ _ => σ) (Becoming/ReadingsSpread.lean)"
     }
    ],
    "built_cases": [

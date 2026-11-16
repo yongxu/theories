@@ -14,11 +14,11 @@ The map lives in five stores built apart. `tools/research/atlas_index.py` reads 
 
 | What | Measured |
 |---|---:|
-| Exits that name a destination (a dynamic, or a state in words) that a law shows | 314 of 328 |
-| Exits that name a destination no law shows (argued, conjectured, read or open) | 14 of 328 |
+| Exits that name a destination (a dynamic, or a state in words) that a law shows | 312 of 329 |
+| Exits that name a destination no law shows (argued, conjectured, read or open) | 17 of 329 |
 | Dynamics with no exit | 56 of 185 |
 | Transitions that name what they lie between | 97 of 105 |
-| Exits that say which premise they drop (none, where they leave within the premises) | 310 of 328 |
+| Exits that say which premise they drop (none, where they leave within the premises) | 308 of 329 |
 | Dynamics read for the premises their laws take | 185 of 185 |
 | Tests bound to the dynamics they bear on, by the atlas's bindings (only dynamics read for their premises are bound) | 22 of 66 |
 | Tests joined to records exactly: a record cites a file in a folder holding that test alone | 6 of 66 |
@@ -34,13 +34,13 @@ The map lives in five stores built apart. `tools/research/atlas_index.py` reads 
 
 ## Exits and transitions
 
-328 exits on 185 dynamics. 70 name another dynamic as their destination and 258 name a state in words (14 of these 328 with no law showing it: argued, conjectured, read or open); 0 name none. 161 are witnesses: a constructed example that shows a course can leave, with no condition for it. 56 dynamics have no exit. 97 of 105 transitions name what they lie between (their `between`); the rest have a kind, a condition, declarations and records, and no ends yet.
+329 exits on 185 dynamics. 71 name another dynamic as their destination and 258 name a state in words (17 of these 329 with no law showing it: argued, conjectured, read or open); 0 name none. 161 are witnesses: a constructed example that shows a course can leave, with no condition for it. 56 dynamics have no exit. 97 of 105 transitions name what they lie between (their `between`); the rest have a kind, a condition, declarations and records, and no ends yet.
 
 | Family | Dynamics | With no exit | Exits | Naming a destination | Witnesses | Transitions |
 |---|---:|---:|---:|---:|---:|---:|
 | A. Absorption and ending | 31 | 9 | 47 | 47 | 21 | 32 |
 | B. Drains beyond what couples in | 26 | 3 | 70 | 70 | 33 | 12 |
-| C. Capture of the selection | 17 | 5 | 25 | 25 | 11 | 18 |
+| C. Capture of the selection | 17 | 5 | 26 | 26 | 11 | 18 |
 | D. Locks of knowing | 22 | 7 | 29 | 29 | 19 | 8 |
 | E. Waiting and reciprocity | 10 | 4 | 14 | 14 | 4 | 5 |
 | F. Cycles and alternation | 24 | 17 | 8 | 8 | 2 | 7 |
@@ -237,8 +237,8 @@ The map lives in five stores built apart. `tools/research/atlas_index.py` reads 
 | [readings-carried-and-filtered](families/h.md#readings-carried-and-filtered) (exit 2) | [unselected-beyond-the-coupling-closure](families/b.md#unselected-beyond-the-coupling-closure) | sufficient |
 | [readings-carried-and-filtered](families/h.md#readings-carried-and-filtered) (exit 3) | witness: where the dweller's line renews the source, the line reading itself and its source clears the habitat and does not persist, nor does the dweller's line, while the line reading everything persists and so does the dweller's | witness |
 | [readings-carried-and-filtered](families/h.md#readings-carried-and-filtered) (exit 4) | [selection-read-off-its-own-survivors](families/b.md#selection-read-off-its-own-survivors) | witness |
-| [readings-carried-and-filtered](families/h.md#readings-carried-and-filtered) (exit 5) | [readings-revised-spread-and-locked](families/h.md#readings-revised-spread-and-locked) | exact |
-| [readings-revised-spread-and-locked](families/h.md#readings-revised-spread-and-locked) (exit 1) | [a-reading-kept-by-its-update](families/d.md#a-reading-kept-by-its-update) | exact |
+| [readings-carried-and-filtered](families/h.md#readings-carried-and-filtered) (exit 5) | [readings-revised-spread-and-locked](families/h.md#readings-revised-spread-and-locked) | reading |
+| [readings-revised-spread-and-locked](families/h.md#readings-revised-spread-and-locked) (exit 1) | [a-reading-kept-by-its-update](families/d.md#a-reading-kept-by-its-update) | reading |
 | [readings-revised-spread-and-locked](families/h.md#readings-revised-spread-and-locked) (exit 2) | the region's carriers at T + n + 1 are exactly the revisions into it: drawn below their need, the carriers leave no carrying kid by descent, so the region's spread by selection stops and only revision moves it | sufficient |
 | [readings-revised-spread-and-locked](families/h.md#readings-revised-spread-and-locked) (exit 3) | [unselected-beyond-the-coupling-closure](families/b.md#unselected-beyond-the-coupling-closure) | sufficient |
 | [readings-revised-spread-and-locked](families/h.md#readings-revised-spread-and-locked) (exit 4) | [selection-read-off-its-own-survivors](families/b.md#selection-read-off-its-own-survivors) | witness |
@@ -276,7 +276,7 @@ The map lives in five stores built apart. `tools/research/atlas_index.py` reads 
 | [selection-read-off-its-own-survivors](families/b.md#selection-read-off-its-own-survivors) (exit 1) | read off a fixed pool, selection by persistence fails at every course removing a line alive at the start: the removal registered | sufficient |
 | [selection-read-off-its-own-survivors](families/b.md#selection-read-off-its-own-survivors) (exit 2) | not reached here: the meta-attractor itself, a selection by share coming to select for control of its rule, would need RuleShaping's counts read off the pool the course gives, a join not made; read off its survivors the selection reads nothing beyond them as closed capture reads nothing beyond its share, a likeness of shape (SurvivorsPersist beside Unread), not a law | open |
 | [selection-read-off-its-own-survivors](families/b.md#selection-read-off-its-own-survivors) (exit 3) | [readers-drawn-from-the-selected](families/c.md#readers-drawn-from-the-selected) | reading |
-| [selection-read-off-its-own-survivors](families/b.md#selection-read-off-its-own-survivors) (exit 4) | [readings-revised-spread-and-locked](families/h.md#readings-revised-spread-and-locked) | sufficient |
+| [selection-read-off-its-own-survivors](families/b.md#selection-read-off-its-own-survivors) (exit 4) | [readings-revised-spread-and-locked](families/h.md#readings-revised-spread-and-locked) | reading |
 | [selection-read-off-its-own-survivors](families/b.md#selection-read-off-its-own-survivors) (exit 5) | [the-lock-draws-its-readers-out](families/c.md#the-lock-draws-its-readers-out) | argued |
 | [selection-when-the-lumping-changes](families/d.md#selection-when-the-lumping-changes) (exit 1) | where the new relation makes alike a pair the old one tells apart, some selection through the old relation is not through the new one | exact |
 | [selection-when-the-lumping-changes](families/d.md#selection-when-the-lumping-changes) (exit 2) | run jointly with a process, the stock process executes a course exactly where the stock covers it and the process can execute it; where either fails, the course is not executed | exact |
@@ -286,6 +286,7 @@ The map lives in five stores built apart. `tools/research/atlas_index.py` reads 
 | [shaping-read-by-readers-drawn-from-the-selected](families/c.md#shaping-read-by-readers-drawn-from-the-selected) (exit 1) | from a start the rule read there favours, the others reading the loss from step N, steps N and N + 1 reading: locked the other way under the late reading at every step from N + 2, exactly where the late reading favours the others (ties included) at the share of step N + 1 | exact |
 | [shaping-read-by-readers-drawn-from-the-selected](families/c.md#shaping-read-by-readers-drawn-from-the-selected) (exit 2) | drawn one member at a time, from every count i ≤ M the histories losing every shaper weigh at least ((M + 1)(a + c + p))^i times every later history, above the critical mass too; from shapers present within reach of the top, those fixing them weigh at least a^k, below it too: either lock is left with positive weight | sufficient |
 | [shaping-the-rule-selected-by-what-comes-back](families/c.md#shaping-the-rule-selected-by-what-comes-back) (exit 1) | the shapers' share falls strictly at every step of the run, nothing coming back to them alone, the cost positive and shapers present at the start | sufficient |
+| [shaping-the-rule-selected-by-what-comes-back](families/c.md#shaping-the-rule-selected-by-what-comes-back) (exit 2) | [capture-through-the-rule](families/c.md#capture-through-the-rule) | sufficient |
 | [substitution-preserves-consumption](families/a.md#substitution-preserves-consumption) (exit 1) | where the consumer consumes through no dependence that such a change leaves, not every such change keeps it consuming (¬ ∀ V, DependenceChanged V f T₀ → V.ConsumingIn f) | exact |
 | [substitution-preserves-consumption](families/a.md#substitution-preserves-consumption) (exit 2) | a witness: a lone formation consuming only through its own dependence from step 0; on the web where that dependence is dissolved (DependenceChanged from 0) it no longer consumes | witness |
 | [succession-on-a-funded-carrier](families/h.md#succession-on-a-funded-carrier) (exit 1) | the carrier's step is blocked: step returns none, so no successor generation is realized at that step | sufficient |
