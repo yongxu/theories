@@ -1,6 +1,6 @@
 # Ren: far from it is fine; no corners cut; the interconnected map with its attractors, transitions and paths; no holding on to old words
 
-16 November 2026, 10:49 and 13:53 WIB, with four more of that afternoon (14:08, 16:11, 16:26 and 16:57) and two of that evening (21:00 and 21:06) at the end. Ren's words in a Claude Code desktop session in `/Users/ren/theories` (the fork he spoke to on 14 to 16 November, which holds board row DJ), kept verbatim, his spellings kept. The times are that session's transcript stamps, converted to WIB (UTC+7). AI-authored context is labelled separately. His earlier words of that day, of 01:40 and 10:47 WIB, are in [the file of 13 November](2026-11-13-the-map-one-model.md#the-direction-14-november-2026-evening).
+16 November 2026, 10:49 and 13:53 WIB, with four more of that afternoon (14:08, 16:11, 16:26 and 16:57) and three of that evening (21:00, 21:06 and 22:05) at the end. Ren's words in a Claude Code desktop session in `/Users/ren/theories` (the fork he spoke to on 14 to 16 November, which holds board row DJ), kept verbatim, his spellings kept. The times are that session's transcript stamps, converted to WIB (UTC+7). AI-authored context is labelled separately. His earlier words of that day, of 01:40 and 10:47 WIB, are in [the file of 13 November](2026-11-13-the-map-one-model.md#the-direction-14-november-2026-evening).
 
 ## Ren's words
 
@@ -69,3 +69,9 @@
 21:06:58 WIB, 16 November (14:06:58 UTC, transcript stamp):
 
 > exactly, i think now you understand. and, knowing it is not about words in inaccurate, or misunderstood, concludes. as we see farther, we update our direction, this is such a moment and there will be more to come
+
+*Context (AI-authored):* the session had said the direction page again, had it read twice by AI readers who did not write it, landed it with the day's record and pushed. It had put before him, in the conversation and as a file, four additions to the two paragraphs of AGENTS.md that state the idea and to the paragraph after them, with one pointer sentence said again, and had asked on a reply button whether to apply them ("Yes, apply", "Not yet"). The text he was shown is kept as `direction/AGENTS.proposed.md` in the study folder `dj-a-line-on-a-stock/tries-2026-11-16`. The words below are the label of the button he chose.
+
+22:05:07 WIB, 16 November (15:05:07 UTC, transcript stamp):
+
+> Yes, apply
