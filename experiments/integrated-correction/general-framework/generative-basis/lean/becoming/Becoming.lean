@@ -5190,11 +5190,12 @@ tagged instance or application.
   fallen (`LineOnAStock.KidHigherNeed`). With `grows`, positive needs, `down`, nothing given from
   nothing, that cap and a start at most `hi`, the net does not go on for ever, with no bound on the step
   (`LineOnAStock.way_ends`); without
-  `down`, or with kids taking the same in place of more, it can go on (`LineOnAStock.KidsNeedMore`,
-  `LineOnAStock.EqualInPlaceOfMore`); where every unit needs the same positive amount, it ends within
-  `hi + 1` steps (`LineOnAStock.one_need_ends`). With nothing given from nothing, that cap and a start at
+  `down`, or with a unit's kids together taking the same in place of more, it can go on
+  (`LineOnAStock.KidsNeedMore`, `LineOnAStock.EqualInPlaceOfMore`); with `grows`, nothing given from
+  nothing, that cap and a start at most `hi`, where every unit needs the same positive amount the net
+  ends within `hi + 1` steps (`LineOnAStock.one_need_ends`). With nothing given from nothing, that cap and a start at
   most `hi`, a closed line among other units, each of whose units needs something, has kids of the line
-  that together take more than it, and has kids that each need no more than it, is gone from the way
+  that together take more than it, and has no kid that needs more than it, is gone from the way
   from some step on; the net is not concluded to end (`LineOnAStock.line_ends`). A closed line of one
   need `m`, each of whose units has kids of the line that together take no less than it, with
   `giving 0 < m` and, given, the line taking at the start more than every giving, is gone from some

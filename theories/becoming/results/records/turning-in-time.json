@@ -238,11 +238,11 @@
       "zh": "locked_ends_with_net_regime：水位的步为 RegimeMargin.step giving (use w)，锁的前提，windowAlone 处的 AloneOutside，所需为正且无标记水位满足它，无中不生有，给还在 y 以下不足 H，份额与规则不低于起点的方式取用皆不少于 H（draws），起点低于 H + y：自 Locked 的起点，线在不多于起点水位的步数之内到达无所缘的构形，仍为 Locked。"
     },
     {
-      "en": "locked_ends_on_window: locked_ends_with_net_regime with the way after a step windowAfter fA hA hL N K reads and the levels in [N, K) marked, no marked level meeting the need where K ≤ N or K ≤ need. The start below H + y and the floor on the use are given in both.",
+      "en": "locked_ends_on_window: locked_ends_with_net_regime with the way after a step windowAfter fA hA hL N K reads and the levels in [N, K) marked; it asks K ≤ N or K ≤ need (un), under which no marked level meets the need. The start below H + y and the floor on the use are given in both.",
       "declarations": [
         "Becoming.TurningInTime.locked_ends_on_window"
       ],
-      "zh": "locked_ends_on_window：locked_ends_with_net_regime，一步之后的方式为 windowAfter fA hA hL N K reads，[N, K) 中的水位被标记，K ≤ N 或 K ≤ need 时无标记水位满足所需。两者中起点低于 H + y 与用量的下限都是给定的。"
+      "zh": "locked_ends_on_window：locked_ends_with_net_regime，一步之后的方式为 windowAfter fA hA hL N K reads，[N, K) 中的水位被标记；要求 K ≤ N 或 K ≤ need（un），此时无标记水位满足所需。两者中起点低于 H + y 与用量的下限都是给定的。"
     },
     {
       "en": "window_corrected: where every step reads and the window's reading hL gives a rule of which kept holds at every level in [N, K), whatever the share and rule in force, the rule after a step of windowAfter fA hA hL N K reads at such a level is kept.",
