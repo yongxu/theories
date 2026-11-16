@@ -508,8 +508,8 @@
    "title_zh": "存量上的一条线：在更新的水位上留下后代的单元",
    "status": "recorded-checked",
    "kind": "theorem",
-   "region": "unassigned",
-   "base": "",
+   "region": "map",
+   "base": "general",
    "page": "theories/becoming/results/records/a-line-on-a-stock.md"
   },
   {
@@ -11554,8 +11554,8 @@
    "name": "Becoming.LineOnAStock",
    "level": "L2",
    "theorems": 113,
-   "region": "unassigned",
-   "base": "",
+   "region": "map",
+   "base": "general",
    "on_grammar": true,
    "reaches_grammar": true
   },
@@ -11576,8 +11576,8 @@
    "name": "Becoming.LineOnAStockCases",
    "level": "L2",
    "theorems": 9,
-   "region": "unassigned",
-   "base": "",
+   "region": "map",
+   "base": "general",
    "on_grammar": true,
    "reaches_grammar": true
   },
