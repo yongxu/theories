@@ -5198,7 +5198,7 @@ tagged instance or application.
   from some step on; the net is not concluded to end (`LineOnAStock.line_ends`). A closed line of one
   need `m`, each of whose units has kids of the line that together take no less than it, with
   `giving 0 < m` and, given, the line taking at the start more than every giving, is gone from some
-  step on, with no cap asked (`LineOnAStock.fall`). Where each unit's kids take exactly what it takes, every
+  step on, with no cap asked (`LineOnAStock.fall`). Where each unit's kids together take exactly what it takes, every
   unit has kids, `down`, every descendant needs something, nothing is given from nothing, the start is
   at most `hi`, and the regime (`LineOnAStock.Regime`) holds at every way the course reaches with some
   need met there and at every step before, the net never ends exactly where, some need met at every step
