@@ -70,11 +70,13 @@ Each docstring names all its premises.
   (`one_need_ends`); a lock whose share is a number of drawers ends through the same
   `TurningInTime.rising_takes_all`, not through `need_unmet` (`TurningInTime.locked_ends_rising`,
   `count_rises`).
-* **A line that grows ends** (`line_ends`): with the stock so bounded and a closed line whose kids take
-  more, whose needs are positive and whose kids need no more than their parent, the line is gone from
-  some step on; for the line of every unit, the net ends (`way_ends`). No bound on the step.
-* **Fall** (`fall`): a closed line of one need `m` whose kids take no less than it, taking more than
-  every giving, with `giving 0 < m`, is gone from some step on.
+* **A line that grows ends** (`line_ends`): with the stock so bounded and a closed line each of whose
+  units has kids of the line that together take more than it, needs something, and has kids that need
+  no more than it, the line is gone from some step on; for the line of every unit, the net ends
+  (`way_ends`). No bound on the step.
+* **Fall** (`fall`): a closed line of one need `m`, each of whose units has kids of the line that
+  together take no less than it, taking at the start more than every giving (given), with
+  `giving 0 < m`, is gone from some step on.
 * **What a way that goes on takes** (`taken_below`): with nothing given from nothing and every
   descendant of the start needing something, below the level at every step after which some need is
   still met; on a net that never ends, the account holds for every `N` (`account_unending`).
