@@ -1,6 +1,6 @@
 # Ren: far from it is fine; no corners cut; the interconnected map with its attractors, transitions and paths; no holding on to old words
 
-16 November 2026, 10:49 and 13:53 WIB, with four more of that afternoon (14:08, 16:11, 16:26 and 16:57) and three of that evening (21:00, 21:06 and 22:05) at the end. Ren's words in a Claude Code desktop session in `/Users/ren/theories` (the fork he spoke to on 14 to 16 November, which holds board row DJ), kept verbatim, his spellings kept. The times are that session's transcript stamps, converted to WIB (UTC+7). AI-authored context is labelled separately. His earlier words of that day, of 01:40 and 10:47 WIB, are in [the file of 13 November](2026-11-13-the-map-one-model.md#the-direction-14-november-2026-evening).
+16 November 2026, 10:49 and 13:53 WIB, with four more of that afternoon (14:08, 16:11, 16:26 and 16:57) and four of that evening (21:00, 21:06, 22:05 and 22:24) at the end. Ren's words in a Claude Code desktop session in `/Users/ren/theories` (the fork he spoke to on 14 to 16 November, which holds board row DJ), kept verbatim, his spellings kept. The times are that session's transcript stamps, converted to WIB (UTC+7). AI-authored context is labelled separately. His earlier words of that day, of 01:40 and 10:47 WIB, are in [the file of 13 November](2026-11-13-the-map-one-model.md#the-direction-14-november-2026-evening).
 
 ## Ren's words
 
@@ -75,3 +75,9 @@
 22:05:07 WIB, 16 November (15:05:07 UTC, transcript stamp):
 
 > Yes, apply
+
+*Context (AI-authored):* the four additions had been applied to AGENTS.md and pushed. The session had proposed, as the next step and with its size, a read of what the Lean already holds on readings, set against the evening's understanding sentence by sentence before anything new is tried: five AI readers, one per family of modules, and one set to refute them. It had asked on a reply button whether to start it that night ("Yes, start", "Not tonight"). The words below are the label of the button he chose.
+
+22:24:27 WIB, 16 November (15:24:27 UTC, transcript stamp):
+
+> Yes, start
