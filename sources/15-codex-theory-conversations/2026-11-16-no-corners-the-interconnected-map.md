@@ -81,3 +81,42 @@
 22:24:27 WIB, 16 November (15:24:27 UTC, transcript stamp):
 
 > Yes, start
+
+
+## After a switch of account: the map of "causality", of "karma", and which session carries on (17 November 2026, 00:02 to 02:07 WIB)
+
+*Added on 17 November 2026 by the session that was asked to carry on (AI-written, Fable). His words are taken from the sessions' transcripts with their stamps. Context: on the evening of 16 November the account in use on the machine was switched. The session that had carried this work since 14 November stayed whole, but an older fork of 14 November carried the same title, and he opened that one and wrote there; it lacked everything after 14 November 13:03 WIB.*
+
+00:02:35 WIB, 17 November (16 November 17:02:35 UTC, transcript stamp), typed, to the older fork:
+
+> great. we are mapping out the map of "causality", of "karma", i am not using the words literally, in their own definition, but you see the isomophenism right?
+
+*Context (AI-authored):* the fork's last answer, of 14 November, had been on why the Lean has two roots: that a process and the grammar's relation are one thing written twice, and that the root which is two is relations and amounts.
+
+01:24:08 WIB (18:24:08 UTC):
+
+> continue please
+
+01:25:19 WIB (18:25:19 UTC):
+
+> actually - maybe some part of the session is lost - recover it, and you have tools like ai-usagebar that can sync sessions with the last account that was working on this machine
+
+*Context (AI-authored):* the fork found that nothing was lost: the full session's transcript was whole and its record was in every account's list, so there was nothing to sync, and it changed nothing. It read the full session's last day and answered his question on causality and karma as its own judgment: that the structure is the same (conditions, many to many; a thing as a class over a continuation; action that changes the conditions of further action; a reading taken for the whole; many acting on one reading; running down unseen and turning in time), and that it parts at return matched in moral kind, at every act being stored, and at everything arising from conditions, which the grammar takes as a model's premise. That answer was not read by anyone who did not write it before it was given; a reader was set to it afterwards.
+
+01:30:44 WIB (18:30:44 UTC):
+
+> great - not only for this project, for all claude sessions, memories, context
+
+01:59 to 02:04 WIB: he set the model back to Fable and wrote (19:01:39 UTC):
+
+> alright - now start your sessions and all the subagents, lines, from the last session
+
+and, in a further fork, on a reply button the fork had offered ("In the full session", "Here"), chose (19:03:59 UTC):
+
+> In the full session
+
+02:07:33 WIB (19:07:33 UTC), to the session that then carried on:
+
+> please be the session to carry on - start all the unfinished subagents and make sure the quality of our work doesn't degrade because of this switch
+
+*Context (AI-authored):* that session listed every run of agents of the last three days from its journal and found none cut off by the switch: the last, the read of 21 sentences against the Lean, had returned whole at 23:11 WIB on 16 November. What was unfinished was what that read left owed. It started those in prepared form, nothing tracked changing: the one statement the read thought worth trying, proved outside the package; the repairs to the atlas as a file; the direction page said again from the checked wordings, and shorter, for his read; and a reader set to the answer on causality and karma.
