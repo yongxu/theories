@@ -2830,6 +2830,11 @@
    "region": "map",
    "base": "general",
    "note": "WayOfUnits WU: a way of units, each a need and a use; the line never ends exactly where it comes to units whose needs are met at a level from which what they take holds; for two units, turning in time with its premises on marks proved (02 §11)"
+  },
+  "a-line-on-a-stock": {
+   "region": "map",
+   "base": "general",
+   "note": "LineOnAStock DJ: a way of units, each with a need, a use and the kids it leaves, on a level; the way reads the level only by needs met; with kids taking more the net, or a closed line, is gone from some step on, under stated premises (study NOTE, r-a-line-on-a-stock)"
   }
  },
  "modules": {
@@ -4852,6 +4857,16 @@
    "region": "map",
    "base": "general",
    "note": "WU a way of units: a turn with no mark given, on TurningInTime's pair; units go on while the level meets their need and take their use (02 §11)"
+  },
+  "Becoming.LineOnAStock": {
+   "region": "map",
+   "base": "general",
+   "note": "DJ a line on a stock: units with needs, uses and kids on a level given back by one giving; endings of the net and of a closed line, and where the net never ends, each under its stated premises"
+  },
+  "Becoming.LineOnAStockCases": {
+   "region": "map",
+   "base": "general",
+   "note": "DJ the two built examples of LineageRegimes and LineageDrawdown as courses of LineOnAStock's model"
   }
  }
 }
