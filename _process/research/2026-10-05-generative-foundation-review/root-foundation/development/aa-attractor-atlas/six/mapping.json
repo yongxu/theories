@@ -47372,5 +47372,154 @@
   "takes_unbound": {
    "regimemargin-step": "definition"
   }
+ },
+ "Becoming.LineOnAStock.fall": {
+  "family": "A",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 8,
+    "name": "closed",
+    "type": "∀ (u v : U), v ∈ kids u → S v → S u",
+    "premises": [
+     "lineonastock-closed-line"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "one",
+    "type": "∀ (u : U), S u → need u = m",
+    "premises": [
+     "lineonastock-line-one-need"
+    ]
+   },
+   {
+    "position": 11,
+    "name": "keeps",
+    "type": "∀ (u : U), S u → use u ≤ Becoming.LineOnAStock.lineTake S use (kids u)",
+    "premises": [
+     "lineonastock-line-keeps"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "low",
+    "type": "giving 0 < m",
+    "premises": [
+     "lineonastock-giving-below-line-need"
+    ]
+   },
+   {
+    "position": 15,
+    "name": "over",
+    "type": "∀ (z : Nat), giving z < Becoming.LineOnAStock.lineTake S use w",
+    "premises": [
+     "lineonastock-line-over"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "regimemargin-step": "definition"
+  }
+ },
+ "Becoming.LineOnAStock.gone_from": {
+  "family": "A",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 6,
+    "name": "closed",
+    "type": "∀ (u v : U), v ∈ kids u → S v → S u",
+    "premises": [
+     "lineonastock-closed-line"
+    ]
+   },
+   {
+    "position": 10,
+    "name": "gone",
+    "type": "∀ (u : U), u ∈ (Becoming.LineOnAStock.course need kids giving use s k).fst → ¬S u",
+    "premises": [
+     "lineonastock-line-gone-at"
+    ]
+   },
+   {
+    "position": 12,
+    "name": "a._@._internal._hyg.0",
+    "type": "k ≤ j",
+    "premises": []
+   },
+   {
+    "position": 14,
+    "name": "a._@._internal._hyg.0",
+    "type": "u ∈ (Becoming.LineOnAStock.course need kids giving use s j).fst",
+    "premises": []
+   }
+  ],
+  "takes_unbound": {
+   "regimemargin-step": "definition"
+  }
+ },
+ "Becoming.LineOnAStock.ways_alike": {
+  "family": "A",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 12,
+    "name": "alike",
+    "type": "∀ (j : Nat),\n  j < n →\n    ∀ (u : U),\n      u ∈ (Becoming.LineOnAStock.course need kids g use (w, x) j).fst →\n        (need u ≤ (Becoming.LineOnAStock.course need kids g use (w, x) j).snd ↔\n          need u ≤ (Becoming.LineOnAStock.course need kids g' use' (w, x') j).snd)",
+    "premises": [
+     "lineonastock-levels-meet-alike"
+    ]
+   },
+   {
+    "position": 14,
+    "name": "a._@._internal._hyg.0",
+    "type": "j ≤ n",
+    "premises": []
+   }
+  ],
+  "takes_unbound": {
+   "regimemargin-step": "definition"
+  }
+ },
+ "Becoming.LineOnAStock.alike_iff": {
+  "family": "A",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 7,
+    "name": "leaves",
+    "type": "∀ (u : U), u ∈ w → kids u ≠ []",
+    "premises": [
+     "lineonastock-way-leaves"
+    ]
+   }
+  ],
+  "takes_unbound": {}
+ },
+ "Becoming.LineOnAStock.takes_nothing": {
+  "family": "A",
+  "source": "lister",
+  "binders": [
+   {
+    "position": 8,
+    "name": "zero",
+    "type": "∀ (u : U), Z u → use u = 0",
+    "premises": [
+     "lineonastock-z-takes-nothing"
+    ]
+   },
+   {
+    "position": 9,
+    "name": "inZ",
+    "type": "∀ (u v : U), Z u → v ∈ kids u → Z v",
+    "premises": [
+     "lineonastock-z-kids-in-z"
+    ]
+   }
+  ],
+  "takes_unbound": {
+   "regimemargin-step": "definition"
+  }
  }
 }

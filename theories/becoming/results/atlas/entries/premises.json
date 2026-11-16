@@ -34729,7 +34729,7 @@
  {
   "id": "lineonastock-grows",
   "name": {
-   "en": "each unit's kids take more than it"
+   "en": "each unit's kids together take more than it"
   },
   "statement": {
    "en": "every unit's kids together take more than the unit: ∀ u, use u < taken use (kids u), asked of every unit of the type"
@@ -34869,10 +34869,14 @@
   },
   "kind": "hypothesis of a law",
   "lean": [
-   "Becoming.LineOnAStock.line_ends"
+   "Becoming.LineOnAStock.line_ends",
+   "Becoming.LineOnAStock.fall",
+   "Becoming.LineOnAStock.gone_from"
   ],
   "holds_in": [
-   "Becoming.LineOnAStock.ProperLine.gone"
+   "Becoming.LineOnAStock.ProperLine.gone",
+   "Becoming.LineOnAStock.Overdrawn.gone",
+   "Becoming.LineOnAStock.DrainCase.drain"
   ],
   "fails_in": [],
   "home": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/NOTE.md#r-a-line-on-a-stock",
@@ -34883,7 +34887,7 @@
  {
   "id": "lineonastock-line-grows",
   "name": {
-   "en": "the line's kids in it take more than the unit"
+   "en": "the line's kids in it together take more than the unit"
   },
   "statement": {
    "en": "every unit of the line S has kids in S that together take more than it: ∀ u, S u → use u < lineTake S use (kids u)"
@@ -35002,6 +35006,199 @@
   "holds_in": [
    "Becoming.LineOnAStock.TwoForOne.holds_by_law",
    "Becoming.LineOnAStock.EqualInPlaceOfMore.holds_by_law"
+  ],
+  "fails_in": [],
+  "home": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/NOTE.md#r-a-line-on-a-stock",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "lineonastock-line-one-need",
+  "name": {
+   "en": "every unit of the line needs the same m"
+  },
+  "statement": {
+   "en": "every unit of the line S needs the one level m: ∀ u, S u → need u = m"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.LineOnAStock.fall"
+  ],
+  "holds_in": [
+   "Becoming.LineOnAStock.Overdrawn.gone",
+   "Becoming.LineOnAStock.DrainCase.drain"
+  ],
+  "fails_in": [],
+  "home": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/NOTE.md#r-a-line-on-a-stock",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "lineonastock-line-keeps",
+  "name": {
+   "en": "the line's kids in it together take no less than the unit"
+  },
+  "statement": {
+   "en": "every unit of the line S has kids in S that together take at least what it takes: ∀ u, S u → use u ≤ lineTake S use (kids u)"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.LineOnAStock.fall"
+  ],
+  "holds_in": [
+   "Becoming.LineOnAStock.Overdrawn.gone",
+   "Becoming.LineOnAStock.DrainCase.drain"
+  ],
+  "fails_in": [],
+  "home": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/NOTE.md#r-a-line-on-a-stock",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "lineonastock-giving-below-line-need",
+  "name": {
+   "en": "giving at nothing below the line's need"
+  },
+  "statement": {
+   "en": "what is given at a level of nothing is below the line's need m: giving 0 < m"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.LineOnAStock.fall"
+  ],
+  "holds_in": [
+   "Becoming.LineOnAStock.Overdrawn.gone",
+   "Becoming.LineOnAStock.DrainCase.drain"
+  ],
+  "fails_in": [],
+  "home": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/NOTE.md#r-a-line-on-a-stock",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "lineonastock-line-over",
+  "name": {
+   "en": "the line takes at the start more than every giving"
+  },
+  "statement": {
+   "en": "what the line S takes of the start's way w is more than what is given at every level: ∀ z, giving z < lineTake S use w"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.LineOnAStock.fall"
+  ],
+  "holds_in": [
+   "Becoming.LineOnAStock.Overdrawn.gone",
+   "Becoming.LineOnAStock.DrainCase.drain"
+  ],
+  "fails_in": [],
+  "home": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/NOTE.md#r-a-line-on-a-stock",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "lineonastock-line-gone-at",
+  "name": {
+   "en": "no unit of the line in the way at a step"
+  },
+  "statement": {
+   "en": "at step k no unit of the way of the course from s is of the line S: ∀ u, u ∈ (course need kids giving use s k).1 → ¬ S u"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.LineOnAStock.gone_from"
+  ],
+  "holds_in": [],
+  "fails_in": [],
+  "home": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/NOTE.md#r-a-line-on-a-stock",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "lineonastock-levels-meet-alike",
+  "name": {
+   "en": "two courses' levels meet the same needs step by step"
+  },
+  "statement": {
+   "en": "at every step j before n, the levels of two courses from one way w, under two givings g, g', two uses use, use' and two start levels x, x', meet the same needs of the first course's way: ∀ j, j < n → ∀ u, u ∈ (course need kids g use (w, x) j).1 → (need u ≤ (course need kids g use (w, x) j).2 ↔ need u ≤ (course need kids g' use' (w, x') j).2)"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.LineOnAStock.ways_alike"
+  ],
+  "holds_in": [
+   "Becoming.LineOnAStock.HigherStartEnds.higher_ends"
+  ],
+  "fails_in": [],
+  "home": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/NOTE.md#r-a-line-on-a-stock",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "lineonastock-way-leaves",
+  "name": {
+   "en": "every unit of the way has a kid"
+  },
+  "statement": {
+   "en": "every unit of the way w leaves at least one unit: ∀ u, u ∈ w → kids u ≠ []"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.LineOnAStock.alike_iff"
+  ],
+  "holds_in": [],
+  "fails_in": [
+   "Becoming.LineOnAStock.AlikeFiner.alike_not_met"
+  ],
+  "home": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/NOTE.md#r-a-line-on-a-stock",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "lineonastock-z-takes-nothing",
+  "name": {
+   "en": "the units of Z take nothing"
+  },
+  "statement": {
+   "en": "every unit of the decidable kind Z takes nothing: ∀ u, Z u → use u = 0"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.LineOnAStock.takes_nothing"
+  ],
+  "holds_in": [
+   "Becoming.LineOnAStock.TakesNothing.lost",
+   "Becoming.LineOnAStock.NothingTakenEnds.ending_differs"
+  ],
+  "fails_in": [],
+  "home": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/NOTE.md#r-a-line-on-a-stock",
+  "seeded_from": [
+   "Lean"
+  ]
+ },
+ {
+  "id": "lineonastock-z-kids-in-z",
+  "name": {
+   "en": "the units of Z leave only units of Z"
+  },
+  "statement": {
+   "en": "every kid of a unit of Z is of Z: ∀ u v, Z u → v ∈ kids u → Z v"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.LineOnAStock.takes_nothing"
+  ],
+  "holds_in": [
+   "Becoming.LineOnAStock.TakesNothing.lost",
+   "Becoming.LineOnAStock.NothingTakenEnds.ending_differs"
   ],
   "fails_in": [],
   "home": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/NOTE.md#r-a-line-on-a-stock",

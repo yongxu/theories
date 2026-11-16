@@ -1,0 +1,74 @@
+{
+ "family": "A",
+ "note": "AI-written, 16 November 2026. The five other theorems of Becoming.LineOnAStock the map's card for a-line-on-a-stock writes up (board row DJ): fall, gone_from, ways_alike, alike_iff and takes_nothing. Binder names as lister.py's aaRow printed them (2026-11-16-a-line-on-a-stock-five-more.lister.txt), run once against the scratch build of 16 November (buildR3-2), whose four sources are byte for byte the branch's. Each binder's premises are those the entry lists for the theorem. The hygienic binders of gone_from (k ≤ j, and u in the way at step j) and of ways_alike (j ≤ n) are the antecedents of the conclusion's own quantifiers, not premises of the law, and are given none; add_rows.py gives a name that occurs twice the same premises, and gone_from's two would otherwise share one list. RegimeMargin.step under the net (LineOnAStock.left) is regimemargin-step, taken as a definition, as in the first five rows; alike_iff reads one step's way only and does not take it.",
+ "laws": {
+  "Becoming.LineOnAStock.fall": {
+   "binders": {
+    "closed": [
+     "lineonastock-closed-line"
+    ],
+    "one": [
+     "lineonastock-line-one-need"
+    ],
+    "keeps": [
+     "lineonastock-line-keeps"
+    ],
+    "low": [
+     "lineonastock-giving-below-line-need"
+    ],
+    "over": [
+     "lineonastock-line-over"
+    ]
+   },
+   "takes_unbound": {
+    "regimemargin-step": "definition"
+   }
+  },
+  "Becoming.LineOnAStock.gone_from": {
+   "binders": {
+    "closed": [
+     "lineonastock-closed-line"
+    ],
+    "gone": [
+     "lineonastock-line-gone-at"
+    ],
+    "a._@._internal._hyg.0": []
+   },
+   "takes_unbound": {
+    "regimemargin-step": "definition"
+   }
+  },
+  "Becoming.LineOnAStock.ways_alike": {
+   "binders": {
+    "alike": [
+     "lineonastock-levels-meet-alike"
+    ],
+    "a._@._internal._hyg.0": []
+   },
+   "takes_unbound": {
+    "regimemargin-step": "definition"
+   }
+  },
+  "Becoming.LineOnAStock.alike_iff": {
+   "binders": {
+    "leaves": [
+     "lineonastock-way-leaves"
+    ]
+   },
+   "takes_unbound": {}
+  },
+  "Becoming.LineOnAStock.takes_nothing": {
+   "binders": {
+    "zero": [
+     "lineonastock-z-takes-nothing"
+    ],
+    "inZ": [
+     "lineonastock-z-kids-in-z"
+    ]
+   },
+   "takes_unbound": {
+    "regimemargin-step": "definition"
+   }
+  }
+ }
+}
