@@ -1,0 +1,266 @@
+[
+ {
+  "id": "a1",
+  "kind": "a",
+  "dynamic": "readings-carried-and-filtered",
+  "field": "exits[4]",
+  "before": {
+   "to": "readings-revised-spread-and-locked",
+   "law": "Becoming.Flow.inheritsReading_iff",
+   "edge": {
+    "en": "Inheritance along descent is revision by the update that keeps the reading; letting the update read what the parent sensed, readings vary at descent, and a region's count moves by Price's equation with revision as its transmission term"
+   },
+   "strength": "exact",
+   "records": [
+    "readings-revised-at-descent"
+   ],
+   "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-readings-revised-at-descent",
+   "to_law": "Becoming.Flow.inheritsReading_iff",
+   "drops": [
+    "flow-inheritsreading"
+   ]
+  },
+  "after": {
+   "to": "readings-revised-spread-and-locked",
+   "law": null,
+   "edge": {
+    "en": "Read, and shown by no law as a leaving: Flow.inheritsReading_iff states that readings are inherited along descent exactly where descent revises them by the update that returns the reading, with nothing sensed. Both directions of its proof are the identity, so it says by the two definitions that inheritance is revision at that update, and it takes no course from the one to the other. Letting the update read what the parent sensed is another premise in the place of inheritance, not a step of a course. A region's count moves by Price's equation, with the descents into and out of the region as its transmission terms, on any generations and with no premise on how a kid's reading comes from its parent's (share_step, a law of the dynamic this leads to); where every kid carries its parent's reading, both are none at every step (revised_none_of_inherits, whose premise is on the generations' kids, not Flow.InheritsReading)"
+   },
+   "strength": null,
+   "records": [],
+   "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-readings-revised-at-descent",
+   "standing_without_law": "reading"
+  },
+  "lean": [
+   "Becoming.Flow.inheritsReading_iff (Becoming/ReadingsSpread.lean:195, proof :197-198)",
+   "Becoming.Flow.RevisesBy (Becoming/ReadingsSpread.lean:191)",
+   "Becoming.Flow.InheritsReading (Becoming/ReadingsPersist.lean:356)",
+   "Becoming.SelectionTerm.Generations.share_step (Becoming/ReadingsSpread.lean:278)"
+  ],
+  "statement_says": "With no premise: in a flow on a web, readings are inherited along descent (whoever descends from a relatum carries its reading) exactly where descent revises them with a sense that has the one value of Unit and the update that returns the reading unchanged; each direction of the proof hands its hypothesis through as it is.",
+  "why": "The store has this as an 'exact' exit that drops flow-inheritsreading and is placed by the law. The statement is an equivalence of two definitions at one update (RevisesBy at fun σ _ => σ unfolds to InheritsReading): it gives no condition under which a course leaves, and it shows no premise failing, so 'exact', 'to_law' and 'drops' say more than it does. The second half of the old edge (readings vary, Price's equation) is share_step's, not this law's. Prepared as the smallest change the validator allows that keeps the edge: an exit no law shows, standing 'reading', the law named in the edge as what it is. The chapter section cited says 'Inheritance is the update that keeps the reading (Flow.inheritsReading_iff)' (07-SIGNIFICANCE.md line 797), and that section is the destination's home, which is what the six-family brief asks of a no-law exit to a dynamic. The other way to repair it, if the second reader judges that a containment is no exit at all: remove the exit and keep the first two sentences of the new edge as an open item. Whether the standing word is 'reading' or 'argued' is a judgment; 'reading' is used because nothing argues that a course leaves.",
+  "second_reader": "holds if reworded"
+ },
+ {
+  "id": "a2",
+  "kind": "a",
+  "dynamic": "selection-read-off-its-own-survivors",
+  "field": "exits[3]",
+  "before": {
+   "to": "readings-revised-spread-and-locked",
+   "law": "Becoming.Flow.closedFrom_of_standing",
+   "edge": {
+    "en": "Where revision copies the reading of a relatum standing then, the update keeps a region wherever both lie in it, and from a step on every relatum standing carries the region, as on a course that has removed the lines carrying the other readings, the region is closed under revision from that step on, so fixed then it stays fixed: removing the readers removes the revisers, under copying"
+   },
+   "strength": "sufficient",
+   "records": [
+    "where-a-reading-locks"
+   ],
+   "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-where-a-reading-locks",
+   "to_law": "Becoming.Flow.closedFrom_of_standing",
+   "drops": []
+  },
+  "after": {
+   "to": "readings-revised-spread-and-locked",
+   "law": null,
+   "edge": {
+    "en": "Read, not a law that starts from a removal: Flow.closedFrom_of_standing states that where each member senses the reading of a relatum standing then, the update keeps a region wherever both lie in it, and from a step on every relatum standing carries the region, the region is closed under revision on the course from that step on. Its statement has no line, no removal and no reader: that every relatum standing carries the region is its premise. That a course which has removed the lines carrying the other readings meets that premise, so that removing the readers removes the revisers under copying, is the chapter's AI reading; the module's own note says the law is shown on supplied generations"
+   },
+   "strength": null,
+   "records": [],
+   "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#readings-spread",
+   "standing_without_law": "reading"
+  },
+  "lean": [
+   "Becoming.Flow.closedFrom_of_standing (Becoming/ReadingsSpread.lean:210, statement :210-215)",
+   "Becoming.SelectionTerm.Generations.ClosedFrom (Becoming/ReadingsSpread.lean:141)",
+   "Becoming.RemovesLine (Becoming/ReadingsPersist.lean:549), Becoming.AliveIn (:535), Becoming.RemovesItsReaders (:555): none occurs in the statement",
+   "head note, Becoming/ReadingsSpread.lean:109-113 (the AI reading) and :115-117 (what is not derived)"
+  ],
+  "statement_says": "Where from T on each member of the cohort senses the reading of a relatum whose level is positive at that step (stands), the update keeps the region P wherever both the reading and what is sensed lie in it (keeps), and from T on every relatum whose level is positive carries a reading in P (carried), the region is closed under revision on the course from T on (G.ClosedFrom read (fun t g => read (src t g)) upd P T); nothing in it names a line, a removal or a reader.",
+  "why": "The store has this as a 'sufficient' exit from selection-read-off-its-own-survivors, placed by the law. The law is stated wholly in the destination's own terms and a web's levels: the state after a removal enters only as its premise 'carried', and no statement derives that premise from RemovesLine or RemovesItsReaders. So the leaving is by premise. The law stays where it is listed, under readings-revised-spread-and-locked (its declarations and its premise row are untouched). Prepared as an exit no law shows, standing 'reading': ReadingsSpread.lean:109-113 gives 'removing one's readers removes one's revisers (J2's RemovesItsReaders, read at the level of readings)' under 'Readings (the AI's, 10 November 2026)', and 07-SIGNIFICANCE.md line 827 gives it as '[AI reading, route (b)'s K1]'. The source moves from #r-where-a-reading-locks to the section anchor #readings-spread because that paragraph stands in the section after the anchor r-a-narrow-reading-in-a-commons, not under r-where-a-reading-locks.",
+  "second_reader": "holds as written"
+ },
+ {
+  "id": "a3",
+  "kind": "a",
+  "dynamic": "readings-revised-spread-and-locked",
+  "field": "exits[0]",
+  "before": {
+   "to": "a-reading-kept-by-its-update",
+   "law": "Becoming.SelectionTerm.Generations.kept_iff",
+   "edge": {
+    "en": "The lock is the reading loop's kept region read across descent: where a region of readings holds every member at a step, it holds every member at every later step exactly where it is closed under descent from that step on, the grammar's closure law on dated descent; with descent read as revision, a region closed under the update on the course stays fixed"
+   },
+   "strength": "exact",
+   "records": [
+    "where-a-reading-locks"
+   ],
+   "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-where-a-reading-locks",
+   "to_law": "Becoming.SelectionTerm.Generations.kept_iff",
+   "drops": []
+  },
+  "after": {
+   "to": "a-reading-kept-by-its-update",
+   "law": null,
+   "edge": {
+    "en": "Read, with no Lean statement relating the two: the chapter reads revision at descent as the reading loop's update across a step. On that reading a region of readings closed under revision stands where the loop has a reading kept by its update, a likeness of shape and not a law. What the Lean states is on each side alone. Where a region holds every member at a step, it holds every member at every later step exactly where it is closed under descent from that step on (SelectionTerm.Generations.kept_iff, on dated descent); a region kept along every finite reach of a relation is a closed region, and conversely (ReadingLoop.kept_iff_closed, on any relation). Each proof uses the grammar's closure law «闭之及»; neither statement has both a cohort of descent and the loop's step, and ReadingsPersist and ReadingsSpread do not import ReadingLoop"
+   },
+   "strength": null,
+   "records": [],
+   "source": "theories/becoming/chapters/07-SIGNIFICANCE.md#r-readings-revised-at-descent",
+   "standing_without_law": "reading"
+  },
+  "lean": [
+   "Becoming.SelectionTerm.Generations.kept_iff (Becoming/ReadingsPersist.lean:280, docstring :275-279, proof :282-289)",
+   "Becoming.SelectionTerm.Generations.descentFrom (Becoming/ReadingsPersist.lean:262)",
+   "Becoming.ReadingLoop.kept_iff_closed (Becoming/ReadingLoop.lean:143)",
+   "Becoming.ReadingLoop.joint (Becoming/ReadingLoop.lean:157), Becoming.ReadingLoop.KeptBy (:166)",
+   "«闭之及» (Becoming/GrammarLaws.lean:313)",
+   "imports: Becoming/ReadingsPersist.lean:1-2, Becoming/ReadingsSpread.lean:1-2; ReadingLoop named only in docstrings (Becoming/ReadingsPersist.lean:278, Becoming/ReadingsSpread.lean:19 and :132)"
+  ],
+  "statement_says": "kept_iff: where Q holds of every member of the cohort at step T (fixed), Q holds of every member of every later cohort exactly where Q is closed under dated descent from T on; kept_iff_closed, with no premise: a region is kept along every finite reach of a relation exactly where it is closed under the relation; neither statement uses a term of the other's module.",
+  "why": "The store has this as an 'exact' exit to a-reading-kept-by-its-update, placed there by kept_iff. kept_iff is exact about the lock on dated descent, and that law stays listed under this dynamic (declarations and premise row untouched). It does not place a course in the reading loop: its statement has descentFrom and the grammar's «闭», and names nothing of ReadingLoop. I followed the `import Becoming.*` lines from both modules by script: neither reaches ReadingLoop, directly or through what it imports (a script over import lines, not a build). The two laws are two uses of one grammar law, which the docstring at ReadingsPersist.lean:278 says. Prepared as an exit no law shows, standing 'reading', its source moved to the section whose line 797 says revision is 'the reading loop's update (ReadingLoop.joint) read across descent'. The other repair, if the second reader finds a likeness is no exit: remove it and keep the new edge's text as an open item.",
+  "second_reader": "holds as written"
+ },
+ {
+  "id": "b1",
+  "kind": "b",
+  "dynamic": "turning-in-time",
+  "field": "open[2]",
+  "before": {
+   "en": "The laws of reading in time on their own model (ReadOffInTime) are not joined; only first_of_decided is used.",
+   "source": "theories/becoming/chapters/02-MAP.md#r-turning-in-time"
+  },
+  "after": {
+   "en": "Reading in time on the pair beyond the point of no return: ReadOffInTime's selection side (FirstApart, TellsApartAt, ReadableInTime, ReadsInTime) is not instantiated, the pair having no web. Its point of no return of a course (Recoverable, NoReturnAt) is used, with the turns of a level course to one standing use as the feasible courses and the need met at every step as what is asked (recoverable_iff_above, noReturnAt_iff_first_below, turns_in_time_iff_before); other continuations are not among the feasible courses.",
+   "source": "theories/becoming/results/records/turning-in-time.md#does-not-show--未表明"
+  },
+  "lean": [
+   "Becoming.TurningInTime.recoverable_iff_above (Becoming/TurningInTime.lean:2087)",
+   "Becoming.TurningInTime.noReturnAt_iff_first_below (Becoming/TurningInTime.lean:2100)",
+   "Becoming.TurningInTime.turns_in_time_iff_before (Becoming/TurningInTime.lean:2289)",
+   "Becoming.TurningInTime.Turned (Becoming/TurningInTime.lean:1945), Becoming.TurningInTime.MeetsNeed (:1949)",
+   "Becoming.Recoverable (Becoming/ReadOffInTime.lean:591), Becoming.NoReturnAt (:595)",
+   "head note, Becoming/TurningInTime.lean:290-299 (what of ReadOffInTime is used, and what is not instantiated)"
+  ],
+  "statement_says": "recoverable_iff_above: for a level course X that never rises and starts at most hi, with nothing given from nothing, giving short of H below y and meeting it from y up to hi, the step under H keeping the level within hi, and a positive need at most H + y, X is recoverable at N (ReadOffInTime's Recoverable, the turns of X to H at any step feasible, the need met at every step asked) exactly where H + y ≤ X N; under the same premises noReturnAt_iff_first_below: N is X's point of no return (NoReturnAt) exactly where X N < H + y and H + y ≤ X n for every n < N; turns_in_time_iff_before is stated under edit c4.",
+  "why": "The open item says the laws of reading in time on their own model are not joined and only first_of_decided is used. The Lean now states the point of no return on ReadOffInTime's own definitions in three theorems, and its head note (TurningInTime.lean:290-293) says what is used and what is not. What is still open is the selection side, and the new text says only that. The record already has it (turning-in-time.json, does_not_show, the fifth item: 'Reading in time on the pair beyond the point of no return: ReadOffInTime's selection side (FirstApart, TellsApartAt, ReadableInTime) is not instantiated; the pair has no web.'), and the chapter has it under 'What is given' (02-MAP.md line 523), so only the store is behind. The source moves to the record's section, where the sentence is; ReadsInTime is added from the Lean head note, which lists four names where the record lists three.",
+  "second_reader": "holds as written"
+ },
+ {
+  "id": "c2a",
+  "kind": "c",
+  "dynamic": "shaping-the-rule-selected-by-what-comes-back",
+  "field": "premises[6].case_of",
+  "before": null,
+  "after": [
+   {
+    "law": "Becoming.RuleCapture.favouring_locks",
+    "how": {
+     "en": "favouring_locks with both orders the order of shares on the carrier counts (CarrierCounts.order), favouring read as the rule's count for the others being at most its count for the carriers (CarrierCounts.favours), the selection CarrierCounts.select and the reading what comes back read from the share (byBack a p c pos σ), from the start (x, shaped a s p c pos): its Raises discharged by CarrierCounts.raises, its ReadsShare from σ not lower at a share not lower (byBack_reads_iff), its reading favouring at every share from σ covering the cost at every share, and its start favouring from c ≤ s (both through favours_iff). The conclusion is favouring_locks's. favouring_locks is listed under capture-through-the-rule."
+    }
+   }
+  ],
+  "lean": [
+   "Becoming.RuleShaping.covering_locks (Becoming/RuleShaping.lean:443, statement :443-450, proof :451-452)",
+   "Becoming.RuleCapture.favouring_locks (Becoming/RuleCapture.lean:320, statement :320-323)",
+   "Becoming.RuleShaping.byBack (Becoming/RuleShaping.lean:426), byBack_reads_iff (:431), favours_iff (:160)",
+   "Becoming.RuleCapture.CarrierCounts.order (Becoming/RuleCapture.lean:478), favours (:491), select (:497), raises (:501)"
+  ],
+  "statement_says": "On the carrier counts with a > 0: where σ is not lower at a share not lower (mono), c ≤ σ x at every share (covers) and c ≤ s (start), then for every schedule of reading and every counts x, along the two-level course paced CarrierCounts.select (byBack a p c pos σ) reads from (x, shaped a s p c pos), the share at t + 1 is not lower than at t for every t, and at r + 1 for every reading step r the configuration is Locked in RuleCapture's sense.",
+  "why": "The proof term is favouring_locks applied to four arguments (RuleShaping.lean:451-452), and the conclusion is favouring_locks's at those values: a case in the six-family brief's sense (the general law is in the proof, the conclusion is its conclusion, it is stated for every value of what is fixed, and it sits under another dynamic). favouring_locks is a declaration of capture-through-the-rule and not of this dynamic, so the validator's own-law check passes. The row's law and takes are untouched, so the mapping row for this law still matches. No dynamic of family C or D carries a case_of today (counted by script: none); the validator allows one on any row.",
+  "second_reader": "holds as written"
+ },
+ {
+  "id": "c2b",
+  "kind": "c",
+  "dynamic": "shaping-the-rule-selected-by-what-comes-back",
+  "field": "exits[1]",
+  "before": null,
+  "after": {
+   "to": "capture-through-the-rule",
+   "law": "Becoming.RuleShaping.covering_locks",
+   "edge": {
+    "en": "Where what comes back to the shapers alone is read at each reading step from their share, is not lower at a share not lower, and covers the cost at every share, then from any counts under a rule after shaping whose return to the shapers alone covers the cost, under every schedule of reading, the shapers' share falls at no step and the course is locked at the step after every reading step: the rule in force favours the shapers and is not above what the reading of the share gives (RuleCapture.Locked). The statement concludes the lock at the step after a reading step. Of the start it says neither that it is locked nor that it is not: that would turn on whether the start's rule is above what is read at the start's share, which the three premises leave open. Under a schedule with no reading step it concludes only that the share falls at no step"
+   },
+   "strength": "sufficient",
+   "records": [
+    "shaping-the-rule-selected-by-what-comes-back"
+   ],
+   "source": "theories/becoming/chapters/02-MAP.md#r-shaping-the-rule-selected-by-what-comes-back",
+   "to_law": "Becoming.RuleShaping.covering_locks",
+   "drops": []
+  },
+  "lean": [
+   "Becoming.RuleShaping.covering_locks (Becoming/RuleShaping.lean:443, statement :443-450)",
+   "Becoming.RuleCapture.Locked (Becoming/RuleCapture.lean:160)",
+   "Becoming.RuleCapture.favouring_locks (Becoming/RuleCapture.lean:320)"
+  ],
+  "statement_says": "On the carrier counts with a > 0: where σ is not lower at a share not lower (mono), c ≤ σ x at every share (covers) and c ≤ s (start), then for every schedule of reading and every counts x, along the two-level course paced CarrierCounts.select (byBack a p c pos σ) reads from (x, shaped a s p c pos), the share at t + 1 is not lower than at t for every t, and at r + 1 for every reading step r the configuration is Locked in RuleCapture's sense.",
+  "why": "Appended as a new exit (the index is one past the present list, so `before` is null). The law's conclusion is the destination's defining condition, Locked, in the destination's own definition, which is what the brief asks before an exit names a dynamic; it is the same conclusion as the destination's law favouring_locks. It shows a path and not only where it ends: the share falling at no step from the start, and the lock stated from the step after a reading step. 'Sufficient': three premises, no converse. `drops` is empty because the exit stays within this dynamic's premises (ruleshaping-mono, -covers and -start-covers are premises its law takes). The links try of 16 November found this path and graded it sufficient; its worked course (not locked at steps 0 to 2, locked from 3) is a script's and is not repeated here. With c2a the two entries name each other twice, once as a case and once as a path; the store does this elsewhere (readings-carried-and-filtered, exit by line_standing_unselected and that law's case). If only one is wanted, the case is the one the proof term carries.",
+  "second_reader": "holds if reworded"
+ },
+ {
+  "id": "c3a",
+  "kind": "c",
+  "dynamic": "capture-by-counted-choices",
+  "field": "premises[4].case_of",
+  "before": null,
+  "after": [
+   {
+    "law": "Becoming.RuleCapture.locked_stays",
+    "how": {
+     "en": "locked_stays with the selection the chooser's step (choose, its Raises by choose_raises), the reading the counts weighted by the standing score (weighted κc κo pos, its ReadsShare by weighted_reads) and favouring kept upward by CarrierCounts.upper, at the start (t := 0) of the course from (x, weighted κc κo pos x x), which is locked by start_locked from the counts at or above the threshold. It gives the first part of the conclusion, the course locked at every step. locked_stays is listed under capture-through-the-rule."
+    }
+   },
+   {
+    "law": "Becoming.RuleCapture.locked_rises",
+    "how": {
+     "en": "locked_rises with the same selection, reading and start, at t := 0. It gives the second and third parts of the conclusion: across every step neither the share nor the rule is lower after than before. locked_rises sits under no dynamic of the atlas."
+    }
+   }
+  ],
+  "lean": [
+   "Becoming.ChoiceCountCapture.counted_locks (Becoming/ChoiceCountCapture.lean:291, statement :291-298, proof :299-311)",
+   "Becoming.ChoiceCountCapture.start_locked (Becoming/ChoiceCountCapture.lean:281), choose_raises (:241), weighted_reads (:265)",
+   "Becoming.RuleCapture.locked_stays (Becoming/RuleCapture.lean:182), used at ChoiceCountCapture.lean:302",
+   "Becoming.RuleCapture.locked_rises (Becoming/RuleCapture.lean:190), used at ChoiceCountCapture.lean:310",
+   "Becoming.RuleCapture.Locked (Becoming/RuleCapture.lean:160), Becoming.RuleCapture.CarrierCounts.upper (:523)"
+  ],
+  "statement_says": "With κo > 0: where the start counts x have κo · x.other ≤ κc · x.carrier (above), for every schedule of reading and every step t, the course paced choose (weighted κc κo pos) reads from (x, weighted κc κo pos x x) is Locked at t in RuleCapture's sense, and neither its share nor its rule is lower at t + 1 than at t.",
+  "why": "capture-by-counted-choices names capture-through-the-rule in no field, though the statement is in RuleCapture's Locked and Pace's course. A case and not an exit: the course is locked from the start, so nothing leaves. The conclusion is a conjunction: its first part is locked_stays's conclusion at these values and its other two parts are locked_rises's, each applied once in the proof (ChoiceCountCapture.lean:302 and :310), with start_locked discharging 'locked'. The brief's rule for a case is that the law's conclusion is the general law's; here it is the two general laws' conclusions together, and each `how` says which part. If the second reader holds the rule to one general law with the whole conclusion, this edit is to be dropped. locked_stays is a declaration of capture-through-the-rule (and of a-counter-rule-read-from-its-own-share) and not of this dynamic; locked_rises is listed under none. The row's law and takes are untouched.",
+  "second_reader": "holds as written"
+ },
+ {
+  "id": "c3b",
+  "kind": "c",
+  "dynamic": "habit-lock-in-active-inference",
+  "field": "premises[0].case_of",
+  "before": null,
+  "after": [
+   {
+    "law": "Becoming.RuleCapture.locked_stays",
+    "how": {
+     "en": "locked_stays with the selection the chooser's step (choose, its Raises by choose_raises), the reading the counts weighted by the standing score (weighted κc κo pos, its ReadsShare by weighted_reads) and favouring kept upward by CarrierCounts.upper, at the start (t := 0) of the course from (x, weighted κc κo pos x x), which is locked by start_locked from the counts at or above the threshold. It gives the first part of the conclusion, the course locked at every step. locked_stays is listed under capture-through-the-rule."
+    }
+   },
+   {
+    "law": "Becoming.RuleCapture.locked_rises",
+    "how": {
+     "en": "locked_rises with the same selection, reading and start, at t := 0. It gives the second and third parts of the conclusion: across every step neither the share nor the rule is lower after than before. locked_rises sits under no dynamic of the atlas."
+    }
+   }
+  ],
+  "lean": [
+   "Becoming.ChoiceCountCapture.counted_locks (Becoming/ChoiceCountCapture.lean:291, statement :291-298, proof :299-311)",
+   "Becoming.ChoiceCountCapture.start_locked (Becoming/ChoiceCountCapture.lean:281), choose_raises (:241), weighted_reads (:265)",
+   "Becoming.RuleCapture.locked_stays (Becoming/RuleCapture.lean:182), used at ChoiceCountCapture.lean:302",
+   "Becoming.RuleCapture.locked_rises (Becoming/RuleCapture.lean:190), used at ChoiceCountCapture.lean:310",
+   "Becoming.RuleCapture.Locked (Becoming/RuleCapture.lean:160), Becoming.RuleCapture.CarrierCounts.upper (:523)"
+  ],
+  "statement_says": "With κo > 0: where the start counts x have κo · x.other ≤ κc · x.carrier (above), for every schedule of reading and every step t, the course paced choose (weighted κc κo pos) reads from (x, weighted κc κo pos x x) is Locked at t in RuleCapture's sense, and neither its share nor its rule is lower at t + 1 than at t.",
+  "why": "counted_locks is listed under this entry too. The six-family pass's convention is that a law listed under two dynamics carries its case on both (its README: five laws do). Neither locked_stays nor locked_rises is among this entry's declarations. Same case and same caveat as c3a; dropped if c3a is dropped.",
+  "second_reader": "holds as written"
+ }
+]

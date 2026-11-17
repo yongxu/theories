@@ -1,0 +1,55 @@
+# Carrying the work on after the switch of session
+
+*AI-written (Fable, board row DJ), 17 November 2026, 02:32 WIB (19:32 UTC), from the clock. Written before any agent of this round was started. A working record: nothing here is proved, nothing is built and nothing tracked changes. Corrections are appended with their time and never overwrite.*
+
+## Why
+
+On 16 November the account in use was switched. The session that had carried the work since 14 November (b9a0280b) stayed whole, but Ren opened an older fork with the same title and wrote there. He then asked this session to carry on: "please be the session to carry on - start all the unfinished subagents and make sure the quality of our work doesn't degrade because of this switch".
+
+## What was checked first
+
+- Every workflow run of the related sessions (d521d158, b9a0280b, b2bb1a25, 0a624e8c) was listed from its journal. Fifty-one runs. Four show an agent started and never returned; in each the same seat was started again and returned (wf_b3c1521c, wf_e23a467f, wf_b3f452de), or the three seats were run again as a new run (wf_0911b140, then wf_9d7a366c). So no agent was cut off by the switch: the last run, the read of 21 sentences against the Lean (wf_d86dc274), returned all six reports at 16:11 UTC, before it.
+- What is unfinished is work that run and the one before it left owed, written at the end of round13's record and in the direction page's own list. This round starts those, each in prepared form.
+- Read before starting, so that the understanding is carried and not re-derived: the direction page as landed (_process/DIRECTION.md), round13's record whole, the last summary of b9a0280b and its turns after it, and the memory notes of 16 November.
+
+## What is started (four lines, eleven agents, all on Fable as the last runs were)
+
+1. **The one statement the last read thought worth trying: selection reads offspring numbers exactly up to position.** One agent proves it in a scratch tree outside the repository, or finds exactly why it does not hold; a second, who did not write it, reads the telling against the Lean.
+2. **The atlas repairs the last read found owed.** Three edges the Lean does not carry, one open item the Lean has overtaken, and the five links that hold and can be entered. One agent prepares the exact edits as a file beside this one and checks them with the atlas's own validator on a copy; a second reads each edit against the Lean statement it cites. Nothing is applied to the store.
+3. **The direction page said again from the checked wordings, and shorter.** One writer; three readers who did not write it (each sentence against round13's checked wording and the Lean statement behind it; what the landed page says that the shorter one lost; the four questions of the method chapter and Ren's corrections of 16 November); the writer revises; one reader confirms. The result is a proposed file beside this one. It is not landed: the change needs Ren's read, and one phrase of AGENTS.md goes stale with it.
+4. **My answer of 16 November to Ren on causality and karma, read by someone who did not write it.** It was given as a judgment. One reader sets each of its claims against the Lean, the atlas's readings of the Indian and Buddhist texts and chapter 06.
+
+## What counts against each (frozen now)
+
+1. The statement, in the refuter's words from round13: it does not go through with decidable equality alone; no line falls (SelectionShift's concord_shifted and discord_shifted are not shortened by it); it is told for more than one step; it is one piece of textbook arithmetic in two vocabularies, so that it joins two entries and teaches nothing; it says nothing of order of rank. Each of these is reported whichever way it comes out. A proof that builds is not the map advancing unless an older proof becomes its case.
+2. An edit counts only if the second reader finds the cited statement, with its premises, says what the edit says. An edit the validator refuses, or that the reader finds says more, is dropped and listed.
+3. The page fails if it is not shorter than the landed one (4,297 words); if any sentence of the idea says more than the checked wording round13 gives for it; if it loses something the landed page says that is not said elsewhere; if it writes a boundary, a ceiling or a kept side as a thing, or an either-or where both hold; or if it steers by a count. Each change is listed with the finding named beside it.
+4. Any claim of the answer that the reader finds says more than the Lean or the atlas holds is corrected to Ren in plain words.
+
+## What is not started, and why
+
+- Landing the three proofs of 16 November that stand outside the package, or the statement of line 1 if it proves: landing waits for Ren's word, as the last session told him.
+- Applying the atlas repairs or the direction page: his read first.
+- A further try on paper: the last read said what the Lean holds was not looked at before four tries; nothing new is tried before its findings are told.
+
+
+## 17 November 2026, 04:15 WIB (from the clock): what came back
+
+*AI-written (Fable). One run, eleven agents (workflow `wf_35a71aa5-0b1`), about 3.1 million tokens, 73 minutes. Their reports are `carry-on.json` beside this file. Nothing tracked changed. No person has checked any of it.*
+
+**1. The statement.** Proved outside the package (`/Users/ren/tmp/dj/batch18/position-terms/Becoming/ScratchPositionTerms.lean`; focused build only; 29 theorems, the build's summary reports no axiom for any). As written it holds, and it holds with no decidable equality (`keeps_iff_terms`); a sharper form needs concordance at two amounts only (`keeps_iff_own_concord`). Against what was frozen:
+- *Decidable equality alone:* yes, and less.
+- *Does a line fall:* **no.** SelectionShift's two shift laws and their helper are 19 lines; proved as cases they need 22 lines of helpers before the law itself. The second reader adds that the "case" uses only one direction and enters and leaves `Keeps` by `keeps_iff_common`: a re-proof under another name.
+- *Told for more than one step:* it is a law of one list at one moment. At a step of a course only one direction is proved (`kept_step`); the next generation's size is not a consequence of positions.
+- *Textbook arithmetic:* yes (covariance is unchanged by a common shift; the two-amount form is the equality case of Cauchy–Schwarz). Its worth is the joining.
+- *Order of rank:* RelativePosition has no statement on it; the module adds that the same positions keep which of two has more, and a witness that the same order does not give the same positions.
+- The reader found the report and the module's header saying more in four places, none touching the main law (a witness with one uniform amount told as "one amount is not enough"; "only one direction holds" where only one is proved; "the selection term" where the laws are on concordance and discordance each). Its safe telling is in the report.
+- **By the frozen test this is not the map advancing:** it builds, and no older proof becomes shorter. It would join `position-does-not-protect` to `the-selection-term-and-a-lineages-fate` on the list definitions; on the second entry's own terms only one direction.
+
+**2. The atlas repairs.** `atlas-repairs.json`, eleven edits; applied to a copy and passed the atlas's own validator there (`atlas-validate.log`). The second reader: five hold as written (the two wrong edges a2 and a3 lowered to readings; the overtaken open item b1; `covering_locks` as a case of `favouring_locks`; `counted_locks` as a case, on both entries that list it); three hold if reworded (a1, c1, c2b; its rewordings are in the report); **two say more than the Lean** (c4 and c5: they enter links 4 and 5 as joinings under a role word, reading or pool, that the statements do not give; the store's closed list of three roles has no word for a proved statement in two dynamics' definitions where what passes is none of the three). It also found link 6 can be recorded today as a case with its general law under no dynamic, and one over-saying in tracked text outside the list: the docstrings of `covering_locks` and `favouring_locks` and law 6 of the record say "locked from the step after its first reading step" where the statements conclude Locked at r + 1 for each reading step r.
+
+**3. The direction page.** `DIRECTION.proposed.md`, with `DIRECTION.changes.md` (every change with its finding), the first draft and the text before the last repairs kept beside them. Three readers found six things that had to change and twenty-three that should; the writer acted on all forty-two findings; a fourth reader passed it "with the small changes listed", and those six are made. **The aim of shorter was not reached:** 4,297 words landed, 4,005 in the first draft, 4,294 now; the idea itself is longer (about 1,430 against 1,269). What changed in the idea since the understanding Ren said yes to, four things: an account many act on can, we think, make itself so in what they do, and does not thereby become true of what it was about; position is each one's amount against the total, not who is ahead; a reading that reaches what is being taken turns a loop only if it also reads in time and is not outweighed; and not every running down is unseen. Four sentences of AGENTS.md's idea paragraph are left stale by it (listed in the changes), none contradicted.
+
+**4. The answer on causality and karma.** Of its twenty claims the reader found four carried by a statement, eight that the atlas records only in part or as a divergence, two the direction page says as a guess, four that nothing carries, and **two wrong**: "the fire passed on is continuity with no carrier" (the theorem has each carrier passing it to a next one; with none between, the grammar reads a new beginning), and that the atlas reads 雜阿含 296 as "truth held by no guardian" (it carries only "without this, not that" and withholds exactly the standing the answer quoted). "The deepest match is avidyā" is against the atlas: both its entries on the word are marked changed, divergence; in the texts read ignorance is not knowing stated things, ended by knowing. 共业, 异熟 and 回头 are the answerer's likenesses; the repository holds none. What it left out: the texts written against continuation itself (中论 refutes the line the account builds on; release as the line ending); that the repository's own earlier karma analogy is kept as history only; and the one place where Ren's word and a proof already meet (after an exchange and its reverse the levels show no difference and the history counts both). The corrected answer is in the report.
+
+*Correction, 17 November, 04:15 WIB (from the clock):* the count "4,294 now" above was taken before the page's line on what came of the read was brought up to date. With that line the proposed page is 4361 words, **longer than the landed page's 4,297**. By the test frozen above ("the page fails if it is not shorter than the landed one") it fails on length. It is truer in four places and not shorter; the telling is still growing.

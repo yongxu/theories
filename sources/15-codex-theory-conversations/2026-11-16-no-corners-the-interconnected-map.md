@@ -129,3 +129,13 @@ and, in a further fork, on a reply button the fork had offered ("In the full ses
 > Yes, apply those
 
 *Context (AI-authored):* the session applied eight edits (the five as written, which are six by entry, and two of the three reworded, in the second reader's words; the third reworded one was held back, since it needs rows in the premise ledger that were not prepared), had the applied diff read by an agent who had written none of it, landed it and pushed.
+
+## The direction page, read: "we have the direction, so we can start working on it" (17 November 2026, 10:26 WIB)
+
+*Context (AI-authored):* the direction page said again from the read against the Lean had been sent to him as a file at about 04:15 WIB (`DIRECTION.proposed.md`, not landed, waiting for his read). The session's last message before his listed it as waiting for his read. His message was spoken and transcribed; "proved" is kept as the transcript has it (the session read it as "approve").
+
+10:26:33 WIB, 17 November (03:26:33 UTC, transcript stamp):
+
+> I think I proved you can start working on this one and heading towards this direction. Not sure if there are some like details and words that are still wrong, but I think we have the direction, so we can start working on it.
+
+*Context (AI-authored):* the session took this as his word on the direction as that page says it, with details and words still open to be wrong, and as releasing work toward it. It landed the page as `_process/DIRECTION.md` with the read's record beside it, left AGENTS.md's paragraph of the idea as it was (three sentences of it put to him as a change to read), and began with the page's third item under "What we are trying next": a going-on that gives back to what it rests on.

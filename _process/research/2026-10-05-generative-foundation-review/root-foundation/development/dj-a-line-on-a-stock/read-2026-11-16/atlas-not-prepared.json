@@ -1,0 +1,45 @@
+{
+ "about": "AI-written (Fable), 17 November 2026, round 14. What was considered for the atlas's store and not prepared as an edit in atlas-repairs.json, each with its reason. Nothing here was applied anywhere. Lean paths are under experiments/integrated-correction/general-framework/generative-basis/lean/becoming/.",
+ "not_prepared": [
+  {
+   "what": "Link 6 of the read's list: RuleShaping.grouped_rises_iff (Becoming/RuleShaping.lean:663, by the read) as a case of SelectionLevels.rises_iff_kept (Becoming/SelectionLevels.lean:966, by the read).",
+   "why": "Set aside by the task: SelectionLevels has no dynamic, so no edge between two entries can come of it. I did not open either statement. One thing the store's rules do allow, said so that it is not lost: a case_of may name a general law that sits under no dynamic (the six-family pass's README counts 60 such), so the case could be recorded on the row of grouped_rises_iff without an edge. Whether the proof term is that law applied, with the whole conclusion, has to be read first."
+  },
+  {
+   "what": "Listing CountedCodes.read_relabels (Becoming/CountedCodes.lean:254) under a-code-held-as-counts as a declaration with a premise row.",
+   "why": "Needs more than a line. A premise row for a law of family C has to have a row in step2b/mapping.json (test_atlas, Step2bTests.test_every_listing_holds_its_binders: every row's law is in a mapping, and every mapping law is some row's), with each binder mapped to a ledger premise. Two of its binders are worded in the ledger for other laws' forms (countedcodes-onto 'at the meaning', countedcodes-greatest 'at step n of the law's run'), so the ledger's premises.json would need a line or two as well. Edit c1 names the law only as a joining's joint law, which the validator resolves against the Lean and which asks for no row."
+  },
+  {
+   "what": "Listing RuleCapture.locked_rises (Becoming/RuleCapture.lean:190), Flow.family_ends_below_at (Becoming/Continuation.lean:480) or noReturnAt_of_past (Becoming/ReadOffInTime.lean:632) under a dynamic, so that the cases and joinings that use them show an owner.",
+   "why": "Needs more than a line, for the same reason: each new listing as a law needs a premise row and a mapping row (six/mapping.json for families A, B and H; step2b/mapping.json for C). The edits name them as laws under no dynamic and say so in their text."
+  },
+  {
+   "what": "TurningInTime.noReturn_exists (Becoming/TurningInTime.lean:2252) and noReturnAt_of_below (:2148) as cases of noReturnAt_of_past (Becoming/ReadOffInTime.lean:632).",
+   "why": "Found while reading for c4, and outside the list. Each proof is noReturnAt_of_past applied (TurningInTime.lean:2266 and :2154), and each conclusion is that law's conclusion with the feasible courses, what is asked and the course fixed, so the case would hold by the brief's rule. Not prepared: neither is one of the three statements the read names, noReturnAt_of_past sits under no dynamic of the atlas (so the case gives no edge), and noReturnAt_of_below has no premise row in the store to carry a case_of."
+  },
+  {
+   "what": "A joining between reading-a-loss-in-time and margin-of-a-regime by TurningInTime.recoverable_iff_above (Becoming/TurningInTime.lean:2087) or noReturnAt_iff_first_below (:2100).",
+   "why": "Outside the list, and it would have to be written on one of those two entries. The Lean's head note (TurningInTime.lean:296-299) says the two theorems hold for any level course that never rises and starts at most hi and need nothing of the pair, so they tie reading in time's point of no return, a step, to the regime's point, a level. The store links those two entries today only by a witness exit (FourReaders.recoverable_iff_regime). Edit c4's map states the two theorems; a joining of their own is a further decision."
+  },
+  {
+   "what": "An exit from capture-by-counted-choices to capture-through-the-rule by ChoiceCountCapture.counted_locks.",
+   "why": "The course is locked from its start (start_locked, Becoming/ChoiceCountCapture.lean:281, and the conclusion holds at every step t from 0), so the law shows no leaving. Recorded as a case (c3a, c3b)."
+  },
+  {
+   "what": "Changing the 'to' of the exit by Flow.carriers_drawn_down (readings-revised-spread-and-locked, exits[1]) from words to ending-laws-as-regimes-on-a-lineage; and a case_of on its row.",
+   "why": "The drawn-down family is the law's premise (`draws`, Becoming/ReadingsSpread.lean:424-425) and its conclusion is about the region's count, so the law does not place the course in the lineage's dynamic. It is not a case either: it is this dynamic's own carriers_inactive_step with a premise discharged by two other laws, and its conclusion is not theirs. Recorded as a joining (c5), with the exit left in words."
+  },
+  {
+   "what": "An exit from turning-in-time to reading-a-loss-in-time, or a case_of on the rows of the three theorems.",
+   "why": "reading-a-loss-in-time is a selection read off a group's continuations on a web; the pair has no web and the selection side is not instantiated (Becoming/TurningInTime.lean:292-293), so no law places the course there. None of the three theorems has a law of that dynamic as its whole conclusion. Recorded as a joining (c4)."
+  },
+  {
+   "what": "The other repair of a1 and a3: removing the exit and keeping its text as an open item.",
+   "why": "Both were prepared as an exit no law shows, with standing 'reading', because the chapter says each relation in words and the store already carries joinings in words that way (this same entry's exit to the-lock-draws-its-readers-out, 'argued'). If the second reader holds that a containment (a1) or a likeness (a3) is no exit, removal with the new edge's text as an open item is the alternative; it is described in each edit's `why` and not written out as a second edit, so that the file holds one change for each place."
+  },
+  {
+   "what": "A Chinese text (zh) for the new and changed texts.",
+   "why": "None of the exits, cases, joinings or open items in the eight entries touched has one today; the validator asks for none."
+  }
+ ]
+}

@@ -1,0 +1,186 @@
+# The direction page said again on 17 November: every change, with its finding
+
+*AI-written (Fable, the writer of `DIRECTION.proposed.md` beside this file), 17 November 2026, 03:31 WIB from the clock. A first draft, written before any reader of this round. Nothing here is proved or built, and nothing tracked was changed. Ren has not read it.*
+
+**Names used below.** LANDED is `/Users/ren/theories/_process/DIRECTION.md` as on main at `ad082823f`. NEW is `DIRECTION.proposed.md` in this folder. READ is `/Users/ren/theories/tmp/r7/one-model/check/round13/READ-AGAINST-THE-LEAN.md`, whose sentences are numbered S1 to S21; "row" is a row of its table, in the refuter's wording. R12 is `/Users/ren/theories/tmp/r7/one-model/check/round12/direction-read.json` and `direction-confirm.json`. Lean files are in `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/`. "Opened" means I read the docstring and the statement at that line on 17 November; I opened no proof and built nothing. Where a finding rests on the READ alone, it says so.
+
+## Word counts
+
+Counted with `wc -w` (a link counts as one word).
+
+| | LANDED | NEW |
+|---|---|---|
+| The whole page | 4,297 | 4,005 |
+| Head note | 222 | 197 |
+| Where we are heading | 232 | 243 |
+| The idea | 1,269 | 1,420 |
+| What it looks like in a case | 97 | 139 |
+| What we have found so far | 1,533 | 933 |
+| What we are trying next | 314 | 387 |
+| How we work on it | 308 | 294 |
+| What we do not know, with the closing note | 273 | 343 |
+
+The page is shorter by about 290 words, 7 in 100. **The aim was not reached.** It was the idea in about six minutes and the whole in about twelve; at the landed page's own pace (4,297 words called twenty-one minutes, 1,269 called six) NEW is about nineteen minutes and its idea between six and seven. The idea is longer by about 150 words. What was cut is the findings: the theorem tellings now point to the plan, and the list of October's pieces points to the record of the day. What was added is what the READ gave: premises for five sentences, two things no sentence said, and a short account of the READ itself. A page of twelve minutes would need the idea cut by a fifth, which I could not do without dropping a premise or a sentence that is said nowhere else.
+
+## Changes to sentences of the idea
+
+Seventeen entries. Thirteen change what the idea says (eleven sentences said differently, two added). Two move a sentence out of the idea. Two are wording.
+
+**1. The paragraph "We think this is one relation" (a move).**
+- Was: "Since 16 November one small model has selection as a step of it: which needs the level meets decides who leaves offspring. What selects is given there, and the join is thin: the laws of alikeness hold with the stock taken out, an outcome fixed beforehand as one that would count as nothing having changed."
+- Is: "One small model now has selection as a step of it, with what selects handed in and the join thin (below)."
+- The finding: none. Both details are now under "What we have found so far" (the model's "What makes a difference" and "What is handed in"), so that each is said once.
+
+**2. The line that says how far the rest has been seen (wording).**
+- Was: "Since the evening of 16 November we understand the second paragraph further, in the next five paragraphs. They are not a result; what of them is in a model, and what is in none, is said below under 'Of a reading'."
+- Is: "What follows takes the second paragraph further. It was first said on the evening of 16 November, and is said here as a read of it against the Lean lets it be said. It is an understanding: no theorem states any sentence of it whole (below, 'Of a reading')."
+- The finding: READ, "The grades after checking": of the 21 sentences none is stated by a theorem as written; 19 in part; one in one built world; one in a docstring.
+
+**3. S4, what a loop cannot draw for itself.**
+- Was: "And some conditions hold of a loop whether or not it draws any distinction there: below its need it stops, and below some level what it lives on does not come back. The gap is between those and the distinctions it acts by,"
+- Is: "Some conditions are not of a loop's making. What it takes has to be there; and where it stops below its need, and what renews the level needs the level too, below that need the level does not come back. The gap is between such conditions and the distinctions the loop acts by."
+- The finding: READ, row S4 and "Sentences to say differently", S4. "Below its need it stops" is a premise (`Web.Dependent`, Dependence.lean:138, opened) or a definition (`RespondsBelow`, Reading.lean:210, opened), never a conclusion. "Does not come back" needs the premise that whatever gives to the level requires it (`gated` in `race_ends_greatest`, RelativePosition.lean:430, opened). `returns` (RelativePosition.lean:774, opened) is the kept world where a renewer that requires nothing restores the level.
+- Not carried: the row's last sentence, that whether a loop stops below its need is its law's response and is not in its course (`requirement_beyond_course`, Reading.lean:312, opened). And `race_ends_greatest` has two more premises the sentence does not say, as the row does not: balance, and that only active formations give.
+
+**4. S5, where the gap opens.**
+- Was: "and it can open in three places: at what is not registered, at what is registered and not held to, and at what is held to and cannot be acted on in time."
+- Is: "It can open at what is not registered; at what is registered and goes unanswered, or is outweighed where the loop is set; at what removes those who would register it; and at what cannot be acted on in time."
+- The finding: READ, row S5 (more places than three, each proved in its own model): `Flow.act_unselected_pool` (SelectionPool.lean:346, opened); `kept_iff` (ReadInTime.lean:155, opened); `window_never_read` (PoolFromCourse.lean:295, opened: the loss removes its readers before they read it); `keeps_iff_within` (ReadingSchedule.lean:879, opened).
+
+**5. Added: a running down with nothing unseen.**
+- Was: nothing.
+- Is: "And 'unseen' is not the whole of it: among two or more who draw in turn, free to leave nothing, on a stock that renews only at or above a need, each counting the need being met, every best response leaves nothing where that count is less than the need."
+- The finding: READ, the last paragraph of "Sentences to say differently" (found by reader D alone, the statement opened by the refuter). `gated_threshold` (CoupledDrawers.lean:774, opened, with the module's head note): with at least two drawers in turn and no floor, on the gated renewal, where `c < m` every coupled perfect profile draws everything at every step. "Best response" stands for the module's `Perfect`: at every step and from every amount, each drawer's rule is a best response, the others and its own later rules following the profile.
+- Not carried: that where the count is above the need every such profile keeps exactly the need (the same theorem), and that one drawer keeps where several in turn drain (`one_keeps_several_drain`, CoupledDrawers.lean:692, opened; over two steps).
+
+**6. S7, position.**
+- Was: "Where only who is ahead of whom is registered: no one rises in position unless another falls, and the rises total the falls, whatever anyone does. Taken for the world, that becomes 'every gain is another's loss', which is false wherever what all live on can grow, or shrink, for all."
+- Is: "Take position: each one's amount set against the total of all. No one rises in position unless another falls, and the rises total the falls, whatever anyone does. Taken for the world, that becomes 'every gain is another's loss', which is false of amounts wherever all can gain, or lose, the same amount: position stays the same when they do, so it tells a least that all have together and no most."
+- The finding: READ, row S7 and "Sentences to say differently", S7. The Lean's position is each amount against the total, not order of rank (`riseCount`, `fallCount`, RelativePosition.lean:109 and :116); `change_balances` (:121), `rise_needs_fall` (:167), `keeps_iff_common` (:276), `keeps_add` (:306), `keeps_exceeds` (:339: no most), `exceeds_iff_spread` (:349: a least, the spread above the lowest). All opened. Order of rank is stated in no module (READ, "What the understanding says and no module states", item 12).
+
+**7. S8, an account that many act on.**
+- Was: "Where many act on such an account it can make itself so, and what it leaves out can be used up while nothing they register differs."
+- Is: "Where many act on such an account it can lock, be given back by all who come after, or stay unrefuted because the acts chosen by it never meet the answer that would refute it. None of these is its coming true: that it can make itself so is what we think, and no model states it." And, after the next entry's sentence: "And what it leaves out can be used up while nothing they register differs."
+- The finding: READ, row S8, "Sharper in the Lean: S8 with S9" (three readers apart from one another), and item 3 of what no module states. `lock_outlives_loss` (ClosedCapture.lean:307, opened); `written_rests`, `omitted_rest` (SharedCodes.lean:1183, :1240, opened); `Loop.rests_of_unrefuted` (ReadingLoop.lean:672, opened); `favouring_locks` (RuleCapture.lean:320, not opened by me).
+- Unsure: the three laws are of a rule read from a share, of records written back by cohorts, and of one loop's candidate models. None has many acting on an account drawn from a reading. "Where many act on such an account it can" is the READ's wording, taken as given.
+
+**8. S9, when an account is given back.**
+- Was: "It need not: an account acted on comes true only where the response to it is the account again, and some defeat themselves."
+- Is: "Nor need it be given back: some responses leave no account that is, and where several are, the start decides which."
+- The finding: READ, row S9 and "Sentences to say differently", S9: "only where the response is the account again" is the definition of right (`Right`, ReflexivePrediction.lean:65), not a finding. The content is `none_right_of_moves` (:68), `Negating.none_right` (:206), `ThresholdResponse.reached_by_start` (:193: two are right, and the start decides which is reached). All opened. The row's "given back is not yet true of anything else" is entry 7's "None of these is its coming true".
+
+**9. S11, a closed loop that lasts.**
+- Was: "Closing takes away what could turn it, not what it lives on: a closed loop that takes within what comes back lasts."
+- Is: "It takes away what could turn the loop, not what it lives on: a closed loop whose take does not rise lasts exactly where the level is at or above that take's point of no return."
+- The finding: READ, row S11 and "Sharper in the Lean", S11. `unending_iff_above` (TurningInTime.lean:958, opened): a way of a kind every step keeps, using `H₂`, never ends exactly where the level is at or above `H₂ + y₂`, given nothing from nothing, giving short of `H₂` below `y₂` and meeting it from `y₂` up to `hi`, the step keeping the level within `hi`, a positive need at most `H₂ + y₂`, and the level at most `hi`. `kept_levels` (CoupledDrawers.lean:639, opened).
+- Unsure: the theorem has no closing and no reading in it; "a closed loop whose take does not rise" is the row's wording for "a way of a kept kind that uses one amount". The row's "from below it ends, though higher up the same take would be met" is carried only by "exactly".
+
+**10. S12, what others rest on.**
+- Was: "And where what is used up is what others rest on and the loop does not, it can go on without end while they lose it for good."
+- Is: "And where what is used up is what others rest on and nothing of it comes back to the loop, it can go on without end while it is gone for them for good."
+- The finding: READ, row S12. `window_locked_after_removal` (PoolFromCourse.lean:342, opened); `Flow.Balances.loses_of_unread` (ReadingSchedule.lean:690, docstring opened). "For good" as a law is in built worlds only (READ, item 10 of what no module states); the sentence keeps its "can".
+- Not carried: the row's second sentence, that a loss falling on the others can count as a return to those the loop favours (`borne_by_others_raises`, PoolFromCourse.lean:536, and the law two above it, `borne_by_others_favours_iff`; both opened).
+
+**11. S13, narrowing.**
+- Was: "Narrowing is one way a loop closes: everyone with a say in how it is set reads by one reading that misses what is being taken, and whoever comes new takes a reading from those already there."
+- Is: "Narrowing is one way a loop closes: the readings a newcomer can take one from are all of one kind that misses what is being taken, and revising among them yields only that kind."
+- The finding: READ, row S13. `Generations.fixed_of_present` (ReadingsSpread.lean:169, opened): what each member senses is the reading of a member of its cohort; the update keeps the region where both the reading and what is sensed lie in it; a region fixed at a step stays fixed. "That misses what is being taken" is the page's own premise and not the law's (R12, confirm, form-and-understanding, finding 3).
+- Moved to the findings ("Sharper in the Lean"): "one carrier of another reading who is heard reopens it" (`outside_returns`, SharedCodes.lean:1088, opened; said there of codes changed by hearing).
+
+**12. Added: selection can favour the narrowing.**
+- Was: nothing.
+- Is: "Selection can favour it: where taking feeds the taker and the loss lies beyond what comes back to it, the reading that leaves the loss out spreads (one built world)."
+- The finding: READ, the last paragraph of "Sentences to say differently" (four readers). `Commons.cleared_spreads` (ReadingsSpread.lean:1133, docstring and first conjuncts opened): with nothing coming back from the dweller, the narrow reading's count goes from one of three to two of three, rising by selection proper.
+- Not carried, and beside it in the Lean: `Flow.favours_reaching_beyond` (SelectionReach.lean:254, opened; its head note says it is not derived whether what is drawn from beyond is depended on); `favours_iff` (RuleShaping.lean:160, opened). The idea gives only the built world, with its standing, because the two laws do not have a reading in them.
+
+**13. S14, many readings, and one that reaches.**
+- Was: "Many readings that all miss it close as well; one reading that reaches it can turn in time."
+- Is: "Many readings that all miss it close as well, where pooling them reaches only what each reaches. One that reaches it turns the loop only if it reads in time and is not outweighed, and reaching does not fix which way."
+- The finding: READ, row S14 and "Sentences to say differently", S14. First half: `Flow.act_unselected_pool` (SelectionPool.lean:346, opened); the refuter found by hand, not built, that two readings which each miss a distinction can between them draw it. Second half: `keeps_iff_within` (ReadingSchedule.lean:879), `kept_iff` (ReadInTime.lean:155), and the kept failed candidate `Clearing.read_not_direction` (BeyondCoupling.lean:521); all opened. Also the first of the four things the five readers agreed on apart from one another: reaching is not turning.
+- Not carried: the row's "every turn proved leaves a loop locked the other way". `turned_iff` (ReadInTime.lean:185, opened) says so of its own course; `turned_by_loss` (ClosedCapture.lean:291, opened) concludes only that the rule in force does not favour. I did not check it of every turn, so I did not write it.
+
+**14. Moloch (wording).**
+- Was: "At the scale of a society the two together have been called Moloch, or a cancer; in the Lean their pieces are not joined (below)."
+- Is: "At the scale of a society the taking and the closing together have been called Moloch, or a cancer; in the Lean their pieces are not joined."
+- The finding: R12, confirm, form-and-understanding, finding 7 ("the two" and "the whole" pointed at nothing a new reader could find). READ, item 4 of what no module states: in the one theorem with both the taking and the closing, both are premises.
+
+**15. S19, what an argument can show.**
+- Was: "An argument that uses only what a reading registers cannot show what is running down; something has to be brought in."
+- Is: "An argument that uses only what a reading registers cannot show a running down that changes nothing the reading registers; something the running down does change has to be brought in, from beyond what the loop and those it reads through reach."
+- The finding: READ, row S19 and "Sentences to say differently", S19: it lacked its premise. `judges_iff_lumpedOn`, `no_judge_of_merged` (Readout.lean:274, :283); `unread_course`, `reads_beyond_of_apart` (ClosedCapture.lean:186, :212); `Flow.consequence_unselected_pool` (SelectionPool.lean:360, docstring). All opened.
+- Not carried: the other side of the law, that where the reading does tell the two cases apart it can.
+
+**16. The lake test in the paragraph on the map (a move).**
+- Was: "In the one tested case being told of what was running down was not enough: told of it and able to talk, one model of two kept it in 3 seasons of 10 with the community's goal alone, and in 8 when also told to count whatever depends on what their fishing changes; for the other model three of four frozen predictions failed."
+- Is: "Word of it was not enough in the one tested case (below)." The numbers are now in "What it looks like in a case", in the same words.
+- The finding: none; each thing said once. Checked against `/Users/ren/theories/theories/becoming/ONE-PAGE.md`, "One case".
+
+**17. S20, what can turn the map.**
+- Was: "What can is what this page asks of any reading: that a case, a failed test or a reader who disagrees can still turn it."
+- Is: the same, and then: "; a reader, only if heard by those who set it."
+- The finding: READ, row S20. `kept_iff` (SharedCodes.lean:303, opened): a hearing breaks a group's agreement only where the hearer is a member, hears at that sense, the rule takes the form, and the speaker's form differs.
+- Moved to the findings ("Sharper in the Lean"): "what an account was drawn from, kept beside it, bars another from taking its place" (`kept_bars`, SharedCodes.lean:1252, opened: records kept from before bar a different resolution). Not carried: "a failed test turns a loop only where something else is still held possible". The statement I opened for it (`Loop.kept_iff`, ReadingLoop.lean:589) says which candidates are kept; I did not find the "only where" in it, so it stays in the READ.
+
+### Sentences of the idea left as they were, with the sharper form elsewhere
+
+- **S10** (the two things together; a closing). The sharper form is under "Sharper in the Lean": at least three different premises, none of them being locked. Not carried: that selection over whoever is left is not turned by whom it removed (`survivorsPersist_of_settled`, ReadingsPersist.lean:569, opened).
+- **S16** (no top). Under "Sharper in the Lean": a level above adds nothing while it is formed from what the level below already reads (`both_reads`, ClosedCapture.lean:425, opened; there both are formed no lower from a share no lower). Not carried: the tower whose top makes no difference (`RuleTower.possible_iff_held`, HeldPossible.lean:581, opened) and the pace law (`pace_law`, Pace.lean:539, the statement line only).
+- **S18** (early enough). Under "What we do not know": the turn takes a step (`turns_in_time_iff_before`, TurningInTime.lean:2289, docstring opened: `T + 1 < N`), and three clocks no statement joins (READ, row S18 and item 11).
+- **S21** (a value fixed once). Under "Sharper in the Lean": a rule corrected once, and still favouring, is set back at the next reading (`perturbation_absorbed`, RuleCapture.lean:258, opened). Not carried: a rule that nothing reaches loses what it merges and regains nothing (`never_reads_loses`, `rule_unreached`, Pace.lean:213, :188, opened).
+- **S1, S2, S3, S6, S15, S17**: unchanged. Their rows' sharper forms are not on the page and stay in the READ. S3's is the readers' "reaching is not turning", which the findings carry.
+
+## What was cut, and where it is still said
+
+"The plan" is `/Users/ren/theories/_process/LEAN-TOWARD-THE-DIRECTION.md`. "The record of the day" is `/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/tries-2026-11-16/NOTE.md`. Both are tracked.
+
+| Cut from LANDED | Still said |
+|---|---|
+| Head note: four readers of the first draft, six places, two more readers | The record of the day, item 7 |
+| The model, "What makes a difference": "Where every unit leaves offspring it depends on exactly that" | The plan, item 3 (`alike_iff`) |
+| The model, "Used up": the list of premises (every unit needs something; nothing comes back from nothing; a start that is not empty with every need met) | The plan, item 5. NEW names the two premises on offspring and says the premise on the level once, as the Lean has it |
+| The model, "Where it holds", whole; the result of 13 November as its case; the one worked case | The plan, item 4 |
+| The lock, all three sub-bullets | The plan, items 1, 2, 5 and 6 |
+| "Of a reading": the five pieces the Lean held since October; that the fifth is the lock's own family | The record of the day, "What the Lean already held beside the evening's understanding" |
+| "None has yet been set against the understanding" | Overtaken: the READ did it |
+| "Found in no model", the list | The record of the day ("Not found in any model"); the goal formed in the periphery is in `LINKS-ON-PAPER.md` beside it; the lock and the confined growth, in `THE-PICTURE.md` beside it and in NEW's idea ("their pieces are not joined") |
+| "The day's tries", three sentences | The record of the day, items 2 to 6; NEW keeps "joined nothing new but one pair" |
+| "What is handed in": that selection was two relations no theorem stated together; "no new difference arrives from a difference not yet made" | The plan, items 3 and 6 |
+| "Trying to join them taught us things": the four cases | The plan, "What trying on paper found"; NEW's "How we work on it" keeps the general sentence |
+| "The Lean is large": 20,000 theorems in 403 modules; 1,182 lines to 1,126 | The plan ("How this came up"; the end of "The order as it looks now"). NEW keeps "six of its results now cases of it" and "about 2,900 lines", which I found nowhere else |
+| "What we are trying next": "It doubled in length on 16 November as corrections were added" | R12, confirm, form-and-understanding (the counts 2,134, 3,432, 3,809), kept in the record of the day's `direction/` folder |
+| The paragraph on classical Chinese: "a result said again in another idiom, or from another base, is worth it where it joins or shortens" | `/Users/ren/theories/AGENTS.md`, "What to work on" |
+| "How we work on it": "A telling that keeps growing is a sign we have not understood it yet" (said twice in LANDED) | NEW, once, in the last item of "What we are trying next" |
+| The closing note: "the page of 14 November"; the plan's "ceiling" | NEW says "the pages before it"; the premise is said under the model, where the plan's word is given once, in quotation marks, as the plan's |
+
+Nothing else was cut. "Where we are heading", "What it looks like in a case", "How we work on it" with its account of 16 November, and the eight things not known are kept in LANDED's words.
+
+## What is new outside the idea
+
+- **Where we are heading**: to the sign, "and three that it shows and the Lean does not carry" (READ, "Links marked by a reader that do not hold, and atlas edges the Lean does not carry").
+- **Of a reading**: what the READ found, where the five readers agreed apart from one another, four of the twelve things no module states, five sharper forms, and that the READ was not the map advancing. All from the READ, in its words where I could keep them.
+- **What we are trying next**: the first item now says what comes of the READ (the atlas repairs; the one statement). That both were started on 17 November with nothing applied or landed is from `CARRY-ON.md` in this folder, which I read; I did not look at either line of work. No try of my own is added.
+- **What we do not know**: one item added, whether "early enough" is one question.
+- **The closing note** names the two phrases of AGENTS.md below.
+
+## Sentences of AGENTS.md's paragraph of the idea that NEW would leave stale
+
+The paragraph is the second of `/Users/ren/theories/AGENTS.md`, "The idea, as now understood". NEW contradicts none of its sentences. It leaves three behind. That file is not mine to change, and its direction changes only after Ren has read the change.
+
+1. "What a going-on rests on and what makes a difference to it need not be the same, and the gap between the two is where things run down unseen, or turn in time."
+   Still true as far as it goes. Stale by what it leaves out: NEW says "unseen" is not the whole of it. It would have to add something like: "Not every running down is unseen: where each of many counts a need for less than taking brings, they can drain it in full view."
+2. "Where many act on one such account it can make itself so while what it leaves out is used up; it need not."
+   Stale in its standing. The READ found locking, being given back and staying unrefuted, and that none of these is the account coming true; no module states that an account comes true because many act on it. It would have to say something like: "Where many act on one such account it can lock, be given back by those who come after, or go unrefuted, while what it leaves out is used up. None of these is its coming true; that it can make itself so is what we think."
+3. "This is understood, not proved; the Lean holds pieces of it, not yet set against it."
+   Overtaken by the READ of the night of 16 November. It would have to say something like: "This is understood, not proved. Set against the Lean, no sentence of it is stated whole by a theorem, and most are stated in part."
+
+The other four sentences of that paragraph stand. In the paragraphs after it, "A value fixed once cannot be counted on to do this, ours included" and the three sentences on the map becoming the next single measure stand as they are; NEW adds only that a reader turns it if heard by those who set it.
+
+## What a reader of this draft should press on
+
+- **Two links in NEW point at files that are not tracked.** The READ's record and this list are under `tmp/`, which git ignores. NEW links them at `_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/read-2026-11-16/`. That folder does not exist. If NEW lands, both files have to be filed there in the same landing, or the links are dead and "is in its record" is not yet true (the same finding as R12, against-the-record, finding 5).
+- **The theorem tellings under "What we have found so far" now point to the plan for their premises.** The plan has every premise, and one of them under a word this page does not use for it. If a reader judges that pointing is cutting by dropping a premise, the three sub-bullets and the lock come back whole from LANDED, and the page is then about as long as LANDED.
+- **Entry 7.** "Where many act on such an account it can lock…" rests on three laws none of which has many acting on an account.
+- **Entry 9.** "A closed loop whose take does not rise" for a theorem with no closing in it.
+- **Entry 3.** Two premises of the law are not said.
+- **"That it can make itself so is what we think, and no model states it."** This is the sentence nearest to what Ren pointed at on 16 November at 21:00, and it is now said with less standing than the page he was shown gave it.
+- **The idea grew.** By the page's own sentence that is a sign we have not understood it yet.
