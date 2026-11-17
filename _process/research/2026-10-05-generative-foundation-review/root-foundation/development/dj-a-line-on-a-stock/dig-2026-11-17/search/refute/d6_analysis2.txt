@@ -1,0 +1,233 @@
+
+== (ii) rival, no priority anywhere, equal starts; by (kG,kT), cost, first condition: 8064 runs
+   ((1, 1), 'h', 'own')               G inf, T inf             71
+   ((1, 1), 'h', 'own')               both end, G first        164
+   ((1, 1), 'h', 'own')               both end, same step      533
+   ((1, 1), 'h', 'shared')            G inf, T inf             40
+   ((1, 1), 'h', 'shared')            both end, same step      728
+   ((1, 1), 'none', 'own')            G inf, T inf             60
+   ((1, 1), 'none', 'own')            both end, same step      516
+   ((1, 1), 'none', 'shared')         G inf, T inf             20
+   ((1, 1), 'none', 'shared')         both end, same step      556
+   ((1, 2), 'k', 'own')               both end, G first        300
+   ((1, 2), 'k', 'own')               both end, T first        2
+   ((1, 2), 'k', 'own')               both end, same step      274
+   ((1, 2), 'k', 'shared')            both end, G first        219
+   ((1, 2), 'k', 'shared')            both end, same step      357
+   ((1, 2), 'kh', 'own')              both end, G first        436
+   ((1, 2), 'kh', 'own')              both end, same step      332
+   ((1, 2), 'kh', 'shared')           both end, G first        264
+   ((1, 2), 'kh', 'shared')           both end, same step      504
+   ((2, 2), 'h', 'own')               G inf, T inf             33
+   ((2, 2), 'h', 'own')               both end, G first        213
+   ((2, 2), 'h', 'own')               both end, same step      522
+   ((2, 2), 'h', 'shared')            G inf, T inf             40
+   ((2, 2), 'h', 'shared')            both end, same step      728
+   ((2, 2), 'none', 'own')            G inf, T inf             60
+   ((2, 2), 'none', 'own')            both end, same step      516
+   ((2, 2), 'none', 'shared')         G inf, T inf             20
+   ((2, 2), 'none', 'shared')         both end, same step      556
+   no cost: runs where the two lines differ at all: 0 of 2304
+   G for ever and T ends: 0
+   both for ever with a cost to G: 184 [(((1, 1), 'h', 'own'), 71), (((1, 1), 'h', 'shared'), 40), (((2, 2), 'h', 'own'), 33), (((2, 2), 'h', 'shared'), 40)]
+       {'Aarr': 'shared', 'Barr': 'shared', 's': 3, 'A0': 0, 'hT': 1, 'ch': 1, 'b': 2, 'kG': 1, 'kT': 1, 'mode': ['rival', 1], 'B0': 0, 'oA': 'prop', 'oB': 'prop', 'timing': 'before'} start (1, 1) -> G inf T inf | G alone inf T alone 1
+       (step, nG, nT, A, B): [(0, 1, 1, (0,), (0,)), (1, 1, 1, (0,), (0,), 'repeats', 1)]
+       {'Aarr': 'shared', 'Barr': 'shared', 's': 3, 'A0': 0, 'hT': 1, 'ch': 1, 'b': 2, 'kG': 1, 'kT': 1, 'mode': ['rival', 1], 'B0': 0, 'oA': 'prop', 'oB': 'prop', 'timing': 'before'} start (2, 2) -> G inf T inf | G alone inf T alone 1
+       (step, nG, nT, A, B): [(0, 2, 2, (0,), (0,)), (1, 1, 1, (0,), (0,)), (2, 1, 1, (0,), (0,), 'repeats', 1)]
+   both for ever with kT = 2 (T multiplies): 153 [(((2, 2), 'h', 'own'), 33), (((2, 2), 'h', 'shared'), 40), (((2, 2), 'none', 'own'), 60), (((2, 2), 'none', 'shared'), 20)]
+       {'Aarr': 'shared', 'Barr': 'shared', 's': 3, 'A0': 0, 'hT': 1, 'ch': 1, 'b': 2, 'kG': 2, 'kT': 2, 'mode': ['rival', 1], 'B0': 0, 'oA': 'prop', 'oB': 'prop', 'timing': 'before'} start (1, 1) -> G inf T inf | G alone inf T alone 1
+       (step, nG, nT, A, B): [(0, 1, 1, (0,), (0,)), (1, 1, 1, (0,), (0,), 'repeats', 1)]
+       {'Aarr': 'shared', 'Barr': 'shared', 's': 3, 'A0': 0, 'hT': 1, 'ch': 1, 'b': 2, 'kG': 2, 'kT': 2, 'mode': ['rival', 1], 'B0': 0, 'oA': 'prop', 'oB': 'prop', 'timing': 'before'} start (2, 2) -> G inf T inf | G alone inf T alone 1
+       (step, nG, nT, A, B): [(0, 2, 2, (0,), (0,)), (1, 1, 1, (0,), (0,)), (2, 1, 1, (0,), (0,), 'repeats', 1)]
+       {'Aarr': 'shared', 'Barr': 'shared', 's': 3, 'A0': 0, 'hT': 1, 'ch': 1, 'b': 2, 'kG': 2, 'kT': 2, 'mode': ['rival', 1], 'B0': 2, 'oA': 'prop', 'oB': 'prop', 'timing': 'before'} start (1, 1) -> G inf T inf | G alone inf T alone 2
+       (step, nG, nT, A, B): [(0, 1, 1, (0,), (2,)), (1, 2, 2, (0,), (0,)), (2, 1, 1, (0,), (0,)), (3, 1, 1, (0,), (0,), 'repeats', 1)]
+   both end and G ends later than T: 2
+       {'Aarr': 'own', 'Barr': 'shared', 's': 1, 'A0': 6, 'hT': 2, 'ch': 0, 'b': 2, 'kG': 1, 'kT': 2, 'mode': ['rival', 1], 'B0': 8, 'oA': '-', 'oB': 'prop', 'timing': 'before'} start (1, 1) -> G 7 T 5 | G alone 3 T alone 3
+       (step, nG, nT, A, B): [(0, 1, 1, (6, 6), (8,)), (1, 1, 2, (5, 5), (7,)), (2, 1, 4, (4, 2), (4,)), (3, 1, 2, (3, 1), (3,)), (4, 1, 2, (2, 0), (2,)), (5, 1, 0, (1, 1), (3,)), (6, 1, 0, (0, 2), (4,)), (7, 0, 0, (1, 3), (4,))]
+       {'Aarr': 'own', 'Barr': 'shared', 's': 1, 'A0': 6, 'hT': 2, 'ch': 0, 'b': 2, 'kG': 1, 'kT': 2, 'mode': ['rival', 1], 'B0': 8, 'oA': '-', 'oB': 'prop', 'timing': 'after'} start (1, 1) -> G 7 T 5 | G alone 3 T alone 3
+       (step, nG, nT, A, B): [(0, 1, 1, (6, 6), (8,)), (1, 1, 2, (5, 5), (7,)), (2, 1, 4, (4, 2), (4,)), (3, 1, 2, (3, 1), (3,)), (4, 1, 2, (2, 0), (2,)), (5, 1, 0, (1, 1), (3,)), (6, 1, 0, (0, 2), (4,)), (7, 0, 0, (1, 3), (4,))]
+
+== (ii) rival, equal starts, kT = 2, by (first condition, who is served first from A, from B): 32256 runs
+   ('own', '-', 'G')                  G inf, T end             970
+   ('own', '-', 'G')                  G inf, T inf             150
+   ('own', '-', 'G')                  both end, G first        150
+   ('own', '-', 'G')                  both end, T first        599
+   ('own', '-', 'G')                  both end, same step      819
+   ('own', '-', 'T')                  both end, G first        1890
+   ('own', '-', 'T')                  both end, T first        2
+   ('own', '-', 'T')                  both end, same step      796
+   ('own', '-', 'prop')               G inf, T inf             93
+   ('own', '-', 'prop')               both end, G first        949
+   ('own', '-', 'prop')               both end, T first        2
+   ('own', '-', 'prop')               both end, same step      1644
+   ('shared', 'G', 'G')               G inf, T end             1081
+   ('shared', 'G', 'G')               G inf, T inf             39
+   ('shared', 'G', 'G')               both end, G first        156
+   ('shared', 'G', 'G')               both end, T first        630
+   ('shared', 'G', 'G')               both end, same step      782
+   ('shared', 'G', 'T')               G inf, T end             540
+   ('shared', 'G', 'T')               both end, G first        1129
+   ('shared', 'G', 'T')               both end, T first        239
+   ('shared', 'G', 'T')               both end, same step      780
+   ('shared', 'G', 'prop')            G inf, T end             630
+   ('shared', 'G', 'prop')            G inf, T inf             23
+   ('shared', 'G', 'prop')            both end, G first        496
+   ('shared', 'G', 'prop')            both end, T first        295
+   ('shared', 'G', 'prop')            both end, same step      1244
+   ('shared', 'T', 'G')               G inf, T end             465
+   ('shared', 'T', 'G')               G inf, T inf             25
+   ('shared', 'T', 'G')               both end, G first        828
+   ('shared', 'T', 'G')               both end, T first        355
+   ('shared', 'T', 'G')               both end, same step      1015
+   ('shared', 'T', 'T')               both end, G first        1760
+   ('shared', 'T', 'T')               both end, same step      928
+   ('shared', 'T', 'prop')            G inf, T inf             12
+   ('shared', 'T', 'prop')            both end, G first        1265
+   ('shared', 'T', 'prop')            both end, same step      1411
+   ('shared', 'prop', 'G')            G inf, T end             590
+   ('shared', 'prop', 'G')            G inf, T inf             32
+   ('shared', 'prop', 'G')            both end, G first        145
+   ('shared', 'prop', 'G')            both end, T first        401
+   ('shared', 'prop', 'G')            both end, same step      1520
+   ('shared', 'prop', 'T')            both end, G first        1218
+   ('shared', 'prop', 'T')            both end, same step      1470
+   ('shared', 'prop', 'prop')         G inf, T inf             60
+   ('shared', 'prop', 'prop')         both end, G first        483
+   ('shared', 'prop', 'prop')         both end, same step      2145
+   G for ever and T ends, G served first from B only (not from A), with a cost: 1462
+       {'Aarr': 'shared', 'Barr': 'shared', 's': 1, 'A0': 6, 'hT': 1, 'ch': 0, 'b': 1, 'kG': 1, 'kT': 2, 'mode': ['rival', 1], 'B0': 0, 'oA': 'T', 'oB': 'G', 'timing': 'before'} start (1, 1) -> G inf T 1 | G alone inf T alone 1
+       (step, nG, nT, A, B): [(0, 1, 1, (6,), (0,)), (1, 1, 0, (5,), (0,)), (2, 1, 0, (5,), (0,), 'repeats', 1)]
+       {'Aarr': 'shared', 'Barr': 'shared', 's': 1, 'A0': 6, 'hT': 1, 'ch': 0, 'b': 1, 'kG': 1, 'kT': 2, 'mode': ['rival', 1], 'B0': 0, 'oA': 'T', 'oB': 'G', 'timing': 'before'} start (2, 2) -> G inf T 1 | G alone inf T alone 1
+       (step, nG, nT, A, B): [(0, 2, 2, (6,), (0,)), (1, 2, 0, (3,), (0,)), (2, 2, 0, (2,), (0,)), (3, 2, 0, (1,), (0,)), (4, 2, 0, (0,), (0,)), (5, 1, 0, (0,), (0,)), (6, 1, 0, (0,), (0,), 'repeats', 1)]
+   G for ever and T ends, G served first from A only, with a cost: 858
+       {'Aarr': 'shared', 'Barr': 'shared', 's': 1, 'A0': 0, 'hT': 1, 'ch': 0, 'b': 1, 'kG': 1, 'kT': 2, 'mode': ['rival', 1], 'B0': 0, 'oA': 'G', 'oB': 'T', 'timing': 'before'} start (1, 1) -> G inf T 1 | G alone inf T alone 1
+       (step, nG, nT, A, B): [(0, 1, 1, (0,), (0,)), (1, 1, 0, (0,), (0,)), (2, 1, 0, (0,), (0,), 'repeats', 1)]
+       {'Aarr': 'shared', 'Barr': 'shared', 's': 1, 'A0': 0, 'hT': 1, 'ch': 0, 'b': 1, 'kG': 1, 'kT': 2, 'mode': ['rival', 1], 'B0': 0, 'oA': 'G', 'oB': 'T', 'timing': 'before'} start (2, 2) -> G inf T 1 | G alone inf T alone 1
+       (step, nG, nT, A, B): [(0, 2, 2, (0,), (0,)), (1, 1, 0, (0,), (0,)), (2, 1, 0, (0,), (0,), 'repeats', 1)]
+   G for ever and T ends although T is served first from B and G has no priority on A: 0 []
+
+== (i) rival, equal starts, by ((kG,kT), first condition, who is served first from A): 16128 runs
+   ((1, 1), 'own', '-')               G inf, T end             560
+   ((1, 1), 'own', '-')               both end, G first        96
+   ((1, 1), 'own', '-')               both end, T first        273
+   ((1, 1), 'own', '-')               both end, same step      415
+   ((1, 1), 'shared', 'G')            G inf, T end             560
+   ((1, 1), 'shared', 'G')            both end, G first        92
+   ((1, 1), 'shared', 'G')            both end, T first        289
+   ((1, 1), 'shared', 'G')            both end, same step      403
+   ((1, 1), 'shared', 'T')            G inf, T end             273
+   ((1, 1), 'shared', 'T')            both end, G first        410
+   ((1, 1), 'shared', 'T')            both end, T first        135
+   ((1, 1), 'shared', 'T')            both end, same step      526
+   ((1, 1), 'shared', 'prop')         G inf, T end             331
+   ((1, 1), 'shared', 'prop')         both end, T first        154
+   ((1, 1), 'shared', 'prop')         both end, same step      859
+   ((1, 2), 'own', '-')               G inf, T end             560
+   ((1, 2), 'own', '-')               both end, G first        68
+   ((1, 2), 'own', '-')               both end, T first        301
+   ((1, 2), 'own', '-')               both end, same step      415
+   ((1, 2), 'shared', 'G')            G inf, T end             560
+   ((1, 2), 'shared', 'G')            both end, G first        76
+   ((1, 2), 'shared', 'G')            both end, T first        305
+   ((1, 2), 'shared', 'G')            both end, same step      403
+   ((1, 2), 'shared', 'T')            G inf, T end             223
+   ((1, 2), 'shared', 'T')            both end, G first        406
+   ((1, 2), 'shared', 'T')            both end, T first        121
+   ((1, 2), 'shared', 'T')            both end, same step      594
+   ((1, 2), 'shared', 'prop')         G inf, T end             255
+   ((1, 2), 'shared', 'prop')         both end, G first        126
+   ((1, 2), 'shared', 'prop')         both end, T first        142
+   ((1, 2), 'shared', 'prop')         both end, same step      821
+   ((2, 2), 'own', '-')               G inf, T end             560
+   ((2, 2), 'own', '-')               both end, G first        68
+   ((2, 2), 'own', '-')               both end, T first        297
+   ((2, 2), 'own', '-')               both end, same step      419
+   ((2, 2), 'shared', 'G')            G inf, T end             560
+   ((2, 2), 'shared', 'G')            both end, G first        80
+   ((2, 2), 'shared', 'G')            both end, T first        305
+   ((2, 2), 'shared', 'G')            both end, same step      399
+   ((2, 2), 'shared', 'T')            G inf, T end             213
+   ((2, 2), 'shared', 'T')            both end, G first        406
+   ((2, 2), 'shared', 'T')            both end, T first        119
+   ((2, 2), 'shared', 'T')            both end, same step      606
+   ((2, 2), 'shared', 'prop')         G inf, T end             348
+   ((2, 2), 'shared', 'prop')         both end, T first        184
+   ((2, 2), 'shared', 'prop')         both end, same step      812
+   kG = kT = 2: G alone for ever, with T present G ends: 559 [(('T', 'h'), 183), (('T', 'none'), 164), (('prop', 'h'), 115), (('prop', 'none'), 97)]
+       {'Aarr': 'shared', 'Barr': 'own', 's': 1, 'A0': 0, 'hT': 1, 'ch': 0, 'b': 1, 'kG': 2, 'kT': 2, 'mode': ['rival', 1], 'B0': 0, 'oA': 'prop', 'oB': '-', 'timing': 'before'} start (1, 1) -> G 1 T 1 | G alone inf T alone 1
+       (step, nG, nT, A, B): [(0, 1, 1, (0,), (0, 0)), (1, 0, 0, (1,), (0, 0))]
+       {'Aarr': 'shared', 'Barr': 'own', 's': 1, 'A0': 0, 'hT': 1, 'ch': 0, 'b': 1, 'kG': 2, 'kT': 2, 'mode': ['rival', 1], 'B0': 0, 'oA': 'prop', 'oB': '-', 'timing': 'before'} start (2, 2) -> G 1 T 1 | G alone inf T alone 1
+       (step, nG, nT, A, B): [(0, 2, 2, (0,), (0, 0)), (1, 0, 0, (1,), (0, 0))]
+       {'Aarr': 'shared', 'Barr': 'own', 's': 1, 'A0': 0, 'hT': 1, 'ch': 0, 'b': 1, 'kG': 2, 'kT': 2, 'mode': ['rival', 1], 'B0': 0, 'oA': 'T', 'oB': '-', 'timing': 'before'} start (1, 1) -> G 1 T 1 | G alone inf T alone 1
+       (step, nG, nT, A, B): [(0, 1, 1, (0,), (0, 0)), (1, 0, 0, (0,), (0, 0))]
+   G alone for ever?, by (s >= hG, b >= r, first offspring possible):
+      (False, 's<hG', 'b<r', 'B0<r and after') 192
+      (False, 's<hG', 'b<r', 'B0>0 or before') 960
+      (False, 's<hG', 'b>=r', 'B0<r and after') 576
+      (False, 's<hG', 'b>=r', 'B0>0 or before') 2880
+      (False, 's>=hG', 'b<r', 'B0<r and after') 576
+      (False, 's>=hG', 'b<r', 'B0>0 or before') 2880
+      (False, 's>=hG', 'b>=r', 'B0<r and after') 1344
+      (True, 's>=hG', 'b>=r', 'B0>0 or before') 6720
+   given G alone goes on: with T present, G goes on? by (first condition, order):
+      ('own', '-', True) 1680
+      ('shared', 'G', True) 1680
+      ('shared', 'T', False) 971
+      ('shared', 'T', True) 709
+      ('shared', 'prop', False) 746
+      ('shared', 'prop', True) 934
+   (i) T ends at step, by (B0, r): [((0, 1, 1), 2688), ((0, 2, 1), 2688), ((2, 1, 1), 546), ((2, 1, 2), 1696), ((2, 1, 3), 446), ((2, 2, 1), 546), ((2, 2, 2), 2142), ((8, 1, 1), 546), ((8, 1, 2), 192), ((8, 1, 3), 500), ((8, 1, 4), 658), ((8, 1, 5), 350), ((8, 1, 6), 18), ((8, 1, 7), 54), ((8, 1, 8), 12), ((8, 1, 9), 358), ((8, 2, 1), 546), ((8, 2, 2), 608), ((8, 2, 3), 1096), ((8, 2, 4), 44), ((8, 2, 5), 394)]
+
+== (i) threshold, own first conditions (lines decoupled), equal starts, by (B0, cost): 2016 runs
+   (0, 'h')                           G inf, T end             80
+   (0, 'h')                           both end, T first        24
+   (0, 'h')                           both end, same step      152
+   (0, 'k')                           G inf, T end             40
+   (0, 'k')                           both end, T first        4
+   (0, 'k')                           both end, same step      52
+   (0, 'kh')                          G inf, T end             40
+   (0, 'kh')                          both end, T first        12
+   (0, 'kh')                          both end, same step      76
+   (0, 'none')                        G inf, T end             80
+   (0, 'none')                        both end, T first        8
+   (0, 'none')                        both end, same step      104
+   (2, 'h')                           G end, T inf             64
+   (2, 'h')                           G inf, T inf             160
+   (2, 'h')                           both end, G first        16
+   (2, 'h')                           both end, same step      16
+   (2, 'k')                           G inf, T inf             80
+   (2, 'k')                           both end, T first        4
+   (2, 'k')                           both end, same step      12
+   (2, 'kh')                          G end, T inf             32
+   (2, 'kh')                          G inf, T inf             80
+   (2, 'kh')                          both end, G first        8
+   (2, 'kh')                          both end, same step      8
+   (2, 'none')                        G inf, T inf             160
+   (2, 'none')                        both end, same step      32
+   (8, 'h')                           G end, T inf             64
+   (8, 'h')                           G inf, T inf             160
+   (8, 'h')                           both end, G first        16
+   (8, 'h')                           both end, same step      16
+   (8, 'k')                           G inf, T inf             80
+   (8, 'k')                           both end, T first        4
+   (8, 'k')                           both end, same step      12
+   (8, 'kh')                          G end, T inf             32
+   (8, 'kh')                          G inf, T inf             80
+   (8, 'kh')                          both end, G first        8
+   (8, 'kh')                          both end, same step      8
+   (8, 'none')                        G inf, T inf             160
+   (8, 'none')                        both end, same step      32
+       {'Aarr': 'own', 'Barr': 'own', 's': 1, 'A0': 0, 'hT': 1, 'ch': 1, 'b': 1, 'kG': 1, 'kT': 1, 'mode': ['thr', 1], 'B0': 2, 'oA': '-', 'oB': '-', 'timing': 'before'} start (1, 1) -> G 1 T inf | G alone 1 T alone inf
+       (step, nG, nT, A, B): [(0, 1, 1, (0, 0), (2, 2)), (1, 0, 1, (1, 0), (2, 2)), (2, 0, 1, (2, 0), (2, 2), 'repeats', 1)]
+       {'Aarr': 'own', 'Barr': 'own', 's': 1, 'A0': 0, 'hT': 1, 'ch': 1, 'b': 1, 'kG': 1, 'kT': 1, 'mode': ['thr', 1], 'B0': 2, 'oA': '-', 'oB': '-', 'timing': 'before'} start (2, 2) -> G 1 T inf | G alone 1 T alone inf
+       (step, nG, nT, A, B): [(0, 2, 2, (0, 0), (2, 2)), (1, 0, 1, (1, 0), (2, 2)), (2, 0, 1, (2, 0), (2, 2), 'repeats', 1)]
+
+== pooling: G ends in (i) and goes on for ever in (ii): 328 [(('G', True, True, 2), 180), (('G', True, True, 8), 112), (('prop', True, True, 2), 34), (('prop', True, True, 8), 2)]
+       {'Aarr': 'shared', 'Barr': 'own', 's': 1, 'A0': 6, 'hT': 1, 'ch': 0, 'b': 1, 'kG': 2, 'kT': 2, 'mode': ['rival', 1], 'B0': 8, 'oA': 'T', 'oB': '-', 'timing': 'after'} start (1, 1) -> G 3 T 4 | G alone inf T alone 3
+       (step, nG, nT, A, B): [(0, 1, 1, (6,), (8, 8)), (1, 2, 2, (5,), (7, 6)), (2, 4, 4, (2,), (5, 2)), (3, 0, 2, (0,), (5, 0)), (4, 0, 0, (0,), (5, 0))]
+       {'Aarr': 'shared', 'Barr': 'shared', 's': 1, 'A0': 6, 'hT': 1, 'ch': 0, 'b': 1, 'kG': 2, 'kT': 2, 'mode': ['rival', 1], 'B0': 8, 'oA': 'T', 'oB': 'G', 'timing': 'after'} start (1, 1) -> G inf T 3 | G alone inf T alone 3
+       (step, nG, nT, A, B): [(0, 1, 1, (6,), (8,)), (1, 2, 2, (5,), (5,)), (2, 4, 1, (2,), (2,)), (3, 2, 0, (0,), (2,)), (4, 2, 0, (0,), (1,)), (5, 1, 0, (0,), (1,)), (6, 1, 0, (0,), (1,), 'repeats', 1)]
+       {'Aarr': 'shared', 'Barr': 'own', 's': 1, 'A0': 6, 'hT': 1, 'ch': 0, 'b': 1, 'kG': 2, 'kT': 2, 'mode': ['rival', 1], 'B0': 8, 'oA': 'T', 'oB': '-', 'timing': 'after'} start (3, 1) -> G 3 T 4 | G alone inf T alone 3
+       (step, nG, nT, A, B): [(0, 3, 1, (6,), (8, 8)), (1, 6, 2, (3,), (5, 6)), (2, 4, 4, (0,), (3, 2)), (3, 0, 2, (0,), (3, 0)), (4, 0, 0, (0,), (3, 0))]
+       {'Aarr': 'shared', 'Barr': 'shared', 's': 1, 'A0': 6, 'hT': 1, 'ch': 0, 'b': 1, 'kG': 2, 'kT': 2, 'mode': ['rival', 1], 'B0': 8, 'oA': 'T', 'oB': 'G', 'timing': 'after'} start (3, 1) -> G inf T 2 | G alone inf T alone 3
+       (step, nG, nT, A, B): [(0, 3, 1, (6,), (8,)), (1, 6, 2, (3,), (3,)), (2, 3, 0, (0,), (2,)), (3, 2, 0, (0,), (1,)), (4, 1, 0, (0,), (1,)), (5, 1, 0, (0,), (1,), 'repeats', 1)]

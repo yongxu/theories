@@ -1,0 +1,2 @@
+runs 193536
+nice -n 10 python3 d6_model.py d6_results.jsonl  4.84s user 0.52s system 36% cpu 14.712 total

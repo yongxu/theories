@@ -1,0 +1,292 @@
+runs 193536  undecided: 0
+
+== (i) own second conditions, offspring TAKE from it (rival): 32256 runs
+   G inf, T end               9837
+   both end, G first          4486
+   both end, T first          5194
+   both end, same step        12739
+   -- by Aarr
+      own        G inf, T end               3360
+      own        both end, G first          492
+      own        both end, T first          1727
+      own        both end, same step        2485
+      shared     G inf, T end               6477
+      shared     both end, G first          3994
+      shared     both end, T first          3467
+      shared     both end, same step        10254
+   (a) T goes on for ever or undecided: 0
+   G goes on for ever: 9837  G ends: 22419
+   G ends although G alone (2 units, same parameters) goes on for ever: 3603
+      of these by Aarr/oA: [(('shared', 'T'), 2075), (('shared', 'prop'), 1528)]
+      e.g. {'Aarr': 'shared', 'Barr': 'own', 's': 1, 'A0': 0, 'hT': 1, 'ch': 0, 'b': 1, 'kG': 1, 'kT': 1, 'mode': ['rival', 1], 'B0': 0, 'oA': 'T', 'oB': '-', 'timing': 'before', 'nG': 1, 'nT': 1, 'endG': 1, 'endT': 1, 'aloneG': 'inf', 'aloneT': 1}
+      e.g. {'Aarr': 'shared', 'Barr': 'own', 's': 1, 'A0': 0, 'hT': 1, 'ch': 0, 'b': 1, 'kG': 1, 'kT': 1, 'mode': ['rival', 1], 'B0': 0, 'oA': 'T', 'oB': '-', 'timing': 'before', 'nG': 2, 'nT': 2, 'endG': 1, 'endT': 1, 'aloneG': 'inf', 'aloneT': 1}
+      e.g. {'Aarr': 'shared', 'Barr': 'own', 's': 1, 'A0': 0, 'hT': 1, 'ch': 0, 'b': 1, 'kG': 1, 'kT': 1, 'mode': ['rival', 1], 'B0': 0, 'oA': 'T', 'oB': '-', 'timing': 'before', 'nG': 1, 'nT': 3, 'endG': 1, 'endT': 1, 'aloneG': 'inf', 'aloneT': 1}
+      e.g. {'Aarr': 'shared', 'Barr': 'own', 's': 1, 'A0': 0, 'hT': 1, 'ch': 0, 'b': 1, 'kG': 1, 'kT': 1, 'mode': ['rival', 1], 'B0': 0, 'oA': 'T', 'oB': '-', 'timing': 'before', 'nG': 3, 'nT': 1, 'endG': 1, 'endT': 1, 'aloneG': 'inf', 'aloneT': 1}
+   G ends and G alone ends too: 18816  by (b>=r*kG?, b, r, kG): [((False, 1, 1, 2), 1152), ((False, 1, 2, 1), 6144), ((False, 1, 2, 2), 3072), ((False, 2, 2, 2), 1024), ((True, 1, 1, 1), 2304), ((True, 2, 1, 1), 2048), ((True, 2, 1, 2), 1024), ((True, 2, 2, 1), 2048)]
+   G alone for ever, by (b, r): [((1, 1, False), 3456), ((1, 1, True), 5760), ((1, 2, False), 9216), ((2, 1, False), 3072), ((2, 1, True), 3840), ((2, 2, False), 3072), ((2, 2, True), 3840)]
+   G ends no later than T: 17225 by Aarr/oA: [(('own', '-'), 2977), (('shared', 'G'), 2938), (('shared', 'T'), 6105), (('shared', 'prop'), 5205)]
+   own A and own B: runs where G's verdict differs from G alone: 0 (lines decoupled if 0)
+
+== (i) own second conditions, offspring only REQUIRE a standing (threshold m=1, nothing taken): 16128 runs
+   G end, T inf               3568
+   G inf, T end               3385
+   G inf, T inf               2864
+   both end, G first          320
+   both end, T first          684
+   both end, same step        5307
+   -- by B0
+      0          G inf, T end               1605
+      0          both end, T first          348
+      0          both end, same step        3423
+      2          G end, T inf               1784
+      2          G inf, T end               890
+      2          G inf, T inf               1432
+      2          both end, G first          160
+      2          both end, T first          168
+      2          both end, same step        942
+      8          G end, T inf               1784
+      8          G inf, T end               890
+      8          G inf, T inf               1432
+      8          both end, G first          160
+      8          both end, T first          168
+      8          both end, same step        942
+   (a) T for ever while G ends: 3568 by Aarr/oA/cost: [(('own', '-', 'h'), 256), (('own', '-', 'kh'), 128), (('shared', 'G', 'h'), 224), (('shared', 'G', 'kh'), 104), (('shared', 'T', 'h'), 816), (('shared', 'T', 'k'), 320), (('shared', 'T', 'kh'), 448), (('shared', 'T', 'none'), 536), (('shared', 'prop', 'h'), 192), (('shared', 'prop', 'k'), 188), (('shared', 'prop', 'kh'), 256), (('shared', 'prop', 'none'), 100)]
+      e.g. {'Aarr': 'shared', 'Barr': 'own', 's': 1, 'A0': 0, 'hT': 1, 'ch': 0, 'b': 1, 'kG': 1, 'kT': 1, 'mode': ['thr', 1], 'B0': 2, 'oA': 'T', 'oB': '-', 'timing': 'before', 'nG': 1, 'nT': 1, 'endG': 1, 'endT': 'inf', 'aloneG': 'inf', 'aloneT': 'inf'}
+      e.g. {'Aarr': 'shared', 'Barr': 'own', 's': 1, 'A0': 0, 'hT': 1, 'ch': 0, 'b': 1, 'kG': 1, 'kT': 1, 'mode': ['thr', 1], 'B0': 2, 'oA': 'T', 'oB': '-', 'timing': 'before', 'nG': 2, 'nT': 2, 'endG': 1, 'endT': 'inf', 'aloneG': 'inf', 'aloneT': 'inf'}
+      e.g. {'Aarr': 'shared', 'Barr': 'own', 's': 1, 'A0': 0, 'hT': 1, 'ch': 0, 'b': 1, 'kG': 1, 'kT': 1, 'mode': ['thr', 1], 'B0': 2, 'oA': 'T', 'oB': '-', 'timing': 'before', 'nG': 1, 'nT': 3, 'endG': 1, 'endT': 'inf', 'aloneG': 'inf', 'aloneT': 'inf'}
+   (a) T for ever (at least as long as G): 6432 of 16128  by B0: [(2, 3216), (8, 3216)]
+
+== (ii) one shared second condition, rival: 96768 runs
+   G inf, T end               14144
+   G inf, T inf               2072
+   both end, G first          30545
+   both end, T first          8685
+   both end, same step        41322
+   -- by Aarr
+      own        G inf, T end               2979
+      own        G inf, T inf               1193
+      own        both end, G first          8499
+      own        both end, T first          2006
+      own        both end, same step        9515
+      shared     G inf, T end               11165
+      shared     G inf, T inf               879
+      shared     both end, G first          22046
+      shared     both end, T first          6679
+      shared     both end, same step        31807
+   -- by oB
+      G          G inf, T end               8986
+      G          G inf, T inf               988
+      G          both end, G first          4539
+      G          both end, T first          5883
+      G          both end, same step        11860
+      T          G inf, T end               2226
+      T          G inf, T inf               407
+      T          both end, G first          17019
+      T          both end, T first          1119
+      T          both end, same step        11485
+      prop       G inf, T end               2932
+      prop       G inf, T inf               677
+      prop       both end, G first          8987
+      prop       both end, T first          1683
+      prop       both end, same step        17977
+   -- by timing
+      after      G inf, T end               5705
+      after      G inf, T inf               790
+      after      both end, G first          13802
+      after      both end, T first          3642
+      after      both end, same step        24445
+      before     G inf, T end               8439
+      before     G inf, T inf               1282
+      before     both end, G first          16743
+      before     both end, T first          5043
+      before     both end, same step        16877
+   -- by <function cost at 0x10256d760>
+      h          G inf, T end               5227
+      h          G inf, T inf               987
+      h          both end, G first          11368
+      h          both end, T first          3174
+      h          both end, same step        16108
+      k          G inf, T end               1968
+      k          G inf, T inf               154
+      k          both end, G first          5020
+      k          both end, T first          1225
+      k          both end, same step        5457
+      kh         G inf, T end               2168
+      kh         G inf, T inf               312
+      kh         both end, G first          7328
+      kh         both end, T first          1364
+      kh         both end, same step        7260
+      none       G inf, T end               4781
+      none       G inf, T inf               619
+      none       both end, G first          6829
+      none       both end, T first          2922
+      none       both end, same step        12497
+   (b) G outlasts T (G for ever and T ends, or G ends later): 22829
+      by (Aarr, oA, oB, timing):
+         ('own', '-', 'G', 'after') 1888
+         ('own', '-', 'G', 'before') 2658
+         ('own', '-', 'T', 'after') 7
+         ('own', '-', 'T', 'before') 16
+         ('own', '-', 'prop', 'after') 165
+         ('own', '-', 'prop', 'before') 251
+         ('shared', 'G', 'G', 'after') 2088
+         ('shared', 'G', 'G', 'before') 2985
+         ('shared', 'G', 'T', 'after') 1029
+         ('shared', 'G', 'T', 'before') 1535
+         ('shared', 'G', 'prop', 'after') 1191
+         ('shared', 'G', 'prop', 'before') 1784
+         ('shared', 'T', 'G', 'after') 964
+         ('shared', 'T', 'G', 'before') 1320
+         ('shared', 'T', 'prop', 'after') 101
+         ('shared', 'T', 'prop', 'before') 152
+         ('shared', 'prop', 'G', 'after') 1229
+         ('shared', 'prop', 'G', 'before') 1737
+         ('shared', 'prop', 'T', 'after') 297
+         ('shared', 'prop', 'T', 'before') 461
+         ('shared', 'prop', 'prop', 'after') 388
+         ('shared', 'prop', 'prop', 'before') 583
+      by start (nG, nT): [((1, 1), 4614), ((1, 3), 3964), ((2, 2), 5521), ((3, 1), 8730)]
+      by cost: [('h', 8401), ('k', 3193), ('kh', 3532), ('none', 7703)]
+   (b) with no priority anywhere (oA prop or own A, oB prop): 1387
+      by (Aarr, timing, start, cost):
+         ('own', 'after', (1, 1), 'k') 1
+         ('own', 'after', (1, 3), 'h') 3
+         ('own', 'after', (1, 3), 'k') 1
+         ('own', 'after', (1, 3), 'kh') 1
+         ('own', 'after', (1, 3), 'none') 4
+         ('own', 'after', (3, 1), 'h') 53
+         ('own', 'after', (3, 1), 'k') 14
+         ('own', 'after', (3, 1), 'kh') 12
+         ('own', 'after', (3, 1), 'none') 76
+         ('own', 'before', (1, 1), 'k') 1
+         ('own', 'before', (1, 3), 'h') 8
+         ('own', 'before', (1, 3), 'k') 2
+         ('own', 'before', (1, 3), 'kh') 2
+         ('own', 'before', (1, 3), 'none') 8
+         ('own', 'before', (3, 1), 'h') 90
+         ('own', 'before', (3, 1), 'none') 140
+         ('shared', 'after', (3, 1), 'h') 152
+         ('shared', 'after', (3, 1), 'k') 47
+         ('shared', 'after', (3, 1), 'kh') 68
+         ('shared', 'after', (3, 1), 'none') 121
+         ('shared', 'before', (3, 1), 'h') 240
+         ('shared', 'before', (3, 1), 'k') 53
+         ('shared', 'before', (3, 1), 'kh') 88
+         ('shared', 'before', (3, 1), 'none') 202
+   (b) no priority and equal starts: 2
+      e.g. {'Aarr': 'own', 'Barr': 'shared', 's': 1, 'A0': 6, 'hT': 2, 'ch': 0, 'b': 2, 'kG': 1, 'kT': 2, 'mode': ['rival', 1], 'B0': 8, 'oA': '-', 'oB': 'prop', 'timing': 'before', 'nG': 1, 'nT': 1, 'endG': 7, 'endT': 5, 'aloneG': 3, 'aloneT': 3}
+      e.g. {'Aarr': 'own', 'Barr': 'shared', 's': 1, 'A0': 6, 'hT': 2, 'ch': 0, 'b': 2, 'kG': 1, 'kT': 2, 'mode': ['rival', 1], 'B0': 8, 'oA': '-', 'oB': 'prop', 'timing': 'after', 'nG': 1, 'nT': 1, 'endG': 7, 'endT': 5, 'aloneG': 3, 'aloneT': 3}
+   (b) no priority, equal starts, and a cost to G: 2
+      e.g. {'Aarr': 'own', 'Barr': 'shared', 's': 1, 'A0': 6, 'hT': 2, 'ch': 0, 'b': 2, 'kG': 1, 'kT': 2, 'mode': ['rival', 1], 'B0': 8, 'oA': '-', 'oB': 'prop', 'timing': 'before', 'nG': 1, 'nT': 1, 'endG': 7, 'endT': 5, 'aloneG': 3, 'aloneT': 3}
+      e.g. {'Aarr': 'own', 'Barr': 'shared', 's': 1, 'A0': 6, 'hT': 2, 'ch': 0, 'b': 2, 'kG': 1, 'kT': 2, 'mode': ['rival', 1], 'B0': 8, 'oA': '-', 'oB': 'prop', 'timing': 'after', 'nG': 1, 'nT': 1, 'endG': 7, 'endT': 5, 'aloneG': 3, 'aloneT': 3}
+   both go on for ever (nothing falls): 2072
+      by (Aarr, oA, oB, cost):
+         ('own', '-', 'G', 'h') 188
+         ('own', '-', 'G', 'k') 112
+         ('own', '-', 'G', 'kh') 188
+         ('own', '-', 'G', 'none') 112
+         ('own', '-', 'T', 'h') 122
+         ('own', '-', 'T', 'none') 100
+         ('own', '-', 'prop', 'h') 176
+         ('own', '-', 'prop', 'none') 195
+         ('shared', 'G', 'G', 'h') 58
+         ('shared', 'G', 'G', 'k') 20
+         ('shared', 'G', 'G', 'kh') 58
+         ('shared', 'G', 'G', 'none') 20
+         ('shared', 'G', 'T', 'h') 47
+         ('shared', 'G', 'T', 'none') 18
+         ('shared', 'G', 'prop', 'h') 81
+         ('shared', 'G', 'prop', 'none') 24
+         ('shared', 'T', 'G', 'h') 55
+         ('shared', 'T', 'G', 'k') 10
+         ('shared', 'T', 'G', 'kh') 33
+         ('shared', 'T', 'G', 'none') 22
+         ('shared', 'T', 'T', 'h') 40
+         ('shared', 'T', 'T', 'none') 20
+         ('shared', 'T', 'prop', 'h') 54
+         ('shared', 'T', 'prop', 'none') 27
+         ('shared', 'prop', 'G', 'h') 46
+         ('shared', 'prop', 'G', 'k') 12
+         ('shared', 'prop', 'G', 'kh') 33
+         ('shared', 'prop', 'G', 'none') 21
+         ('shared', 'prop', 'T', 'h') 40
+         ('shared', 'prop', 'T', 'none') 20
+         ('shared', 'prop', 'prop', 'h') 80
+         ('shared', 'prop', 'prop', 'none') 40
+      e.g. {'Aarr': 'shared', 'Barr': 'shared', 's': 3, 'A0': 0, 'hT': 1, 'ch': 1, 'b': 2, 'kG': 1, 'kT': 1, 'mode': ['rival', 1], 'B0': 0, 'oA': 'G', 'oB': 'G', 'timing': 'before', 'nG': 1, 'nT': 1, 'endG': 'inf', 'endT': 'inf', 'aloneG': 'inf', 'aloneT': 1}
+      e.g. {'Aarr': 'shared', 'Barr': 'shared', 's': 3, 'A0': 0, 'hT': 1, 'ch': 1, 'b': 2, 'kG': 1, 'kT': 1, 'mode': ['rival', 1], 'B0': 0, 'oA': 'G', 'oB': 'G', 'timing': 'before', 'nG': 2, 'nT': 2, 'endG': 'inf', 'endT': 'inf', 'aloneG': 'inf', 'aloneT': 1}
+      e.g. {'Aarr': 'shared', 'Barr': 'shared', 's': 3, 'A0': 0, 'hT': 1, 'ch': 1, 'b': 2, 'kG': 1, 'kT': 1, 'mode': ['rival', 1], 'B0': 0, 'oA': 'G', 'oB': 'G', 'timing': 'before', 'nG': 1, 'nT': 3, 'endG': 'inf', 'endT': 'inf', 'aloneG': 'inf', 'aloneT': 1}
+      e.g. {'Aarr': 'shared', 'Barr': 'shared', 's': 3, 'A0': 0, 'hT': 1, 'ch': 1, 'b': 2, 'kG': 1, 'kT': 1, 'mode': ['rival', 1], 'B0': 0, 'oA': 'G', 'oB': 'G', 'timing': 'before', 'nG': 3, 'nT': 1, 'endG': 'inf', 'endT': 'inf', 'aloneG': 'inf', 'aloneT': 1}
+   T for ever while G ends (must be 0: nobody gives to B once G is gone): 0
+   G ends first and T ends after it: 30545  gaps: [(1, 15645), (2, 10609), (3, 1567), (4, 1677), (5, 159), (6, 102), (7, 60), (8, 654), (9, 36), (10, 36)]
+   T alone for ever? {False: 96768}
+
+== (ii) one shared second condition, threshold: 48384 runs
+   G end, T inf               12255
+   G inf, T end               6675
+   G inf, T inf               10740
+   both end, G first          1128
+   both end, T first          1260
+   both end, same step        16326
+   -- by B0
+      0          G end, T inf               1551
+      0          G inf, T end               1335
+      0          G inf, T inf               2148
+      0          both end, G first          168
+      0          both end, T first          252
+      0          both end, same step        10674
+      2          G end, T inf               5352
+      2          G inf, T end               2670
+      2          G inf, T inf               4296
+      2          both end, G first          480
+      2          both end, T first          504
+      2          both end, same step        2826
+      8          G end, T inf               5352
+      8          G inf, T end               2670
+      8          G inf, T inf               4296
+      8          both end, G first          480
+      8          both end, T first          504
+      8          both end, same step        2826
+   -- by <function cost at 0x10256d760>
+      h          G end, T inf               5028
+      h          G inf, T end               2340
+      h          G inf, T inf               3720
+      h          both end, G first          396
+      h          both end, T first          480
+      h          both end, same step        6468
+      k          G end, T inf               1806
+      k          G inf, T end               930
+      k          G inf, T inf               1590
+      k          both end, G first          228
+      k          both end, T first          180
+      k          both end, same step        2178
+      kh         G end, T inf               3234
+      kh         G inf, T end               1020
+      kh         G inf, T inf               1560
+      kh         both end, G first          198
+      kh         both end, T first          270
+      kh         both end, same step        2934
+      none       G end, T inf               2187
+      none       G inf, T end               2385
+      none       G inf, T inf               3870
+      none       both end, G first          306
+      none       both end, T first          330
+      none       both end, same step        4746
+
+== pooling the two second conditions into one (same parameters, (i) -> (ii)), rival
+    ('G', 'G: end -> end', 'T: end -> end') 22127
+    ('G', 'G: end -> inf', 'T: end -> end') 284
+    ('G', 'G: end -> inf', 'T: end -> inf') 8
+    ('G', 'G: inf -> end', 'T: end -> end') 155
+    ('G', 'G: inf -> inf', 'T: end -> end') 8702
+    ('G', 'G: inf -> inf', 'T: end -> inf') 980
+    ('T', 'G: end -> end', 'T: end -> end') 22419
+    ('T', 'G: inf -> end', 'T: end -> end') 7204
+    ('T', 'G: inf -> inf', 'T: end -> end') 2226
+    ('T', 'G: inf -> inf', 'T: end -> inf') 407
+    ('prop', 'G: end -> end', 'T: end -> end') 22383
+    ('prop', 'G: end -> inf', 'T: end -> end') 32
+    ('prop', 'G: end -> inf', 'T: end -> inf') 4
+    ('prop', 'G: inf -> end', 'T: end -> end') 6264
+    ('prop', 'G: inf -> inf', 'T: end -> end') 2900
+    ('prop', 'G: inf -> inf', 'T: end -> inf') 673

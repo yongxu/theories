@@ -1,0 +1,39 @@
+'inf' verdicts rerun for 3000 steps without the proof: 1237 sampled of 65540, mismatches 0
+(ii) rival, no priority: (start, G has a cost, outcome)
+   ((1, 1), False, 'both for ever') 80
+   ((1, 1), False, 'same step') 1072
+   ((1, 1), True, 'G outlasts') 2
+   ((1, 1), True, 'T outlasts') 723
+   ((1, 1), True, 'both for ever') 113
+   ((1, 1), True, 'same step') 2042
+   ((1, 3), False, 'G outlasts') 12
+   ((1, 3), False, 'T outlasts') 379
+   ((1, 3), False, 'both for ever') 29
+   ((1, 3), False, 'same step') 732
+   ((1, 3), True, 'G outlasts') 17
+   ((1, 3), True, 'T outlasts') 1394
+   ((1, 3), True, 'both for ever') 11
+   ((1, 3), True, 'same step') 1458
+   ((2, 2), False, 'both for ever') 80
+   ((2, 2), False, 'same step') 1072
+   ((2, 2), True, 'T outlasts') 873
+   ((2, 2), True, 'both for ever') 71
+   ((2, 2), True, 'same step') 1936
+   ((3, 1), False, 'G outlasts') 539
+   ((3, 1), False, 'T outlasts') 26
+   ((3, 1), False, 'both for ever') 46
+   ((3, 1), False, 'same step') 541
+   ((3, 1), True, 'G outlasts') 817
+   ((3, 1), True, 'T outlasts') 541
+   ((3, 1), True, 'both for ever') 61
+   ((3, 1), True, 'same step') 1461
+G outlasts T from (1,3): 29 Counter({('own', False): 28, ('own', True): 1})
+       {'Aarr': 'own', 'Barr': 'shared', 's': 1, 'A0': 6, 'hT': 2, 'ch': 0, 'b': 1, 'kG': 1, 'kT': 1, 'mode': ['rival', 1], 'B0': 8, 'oA': '-', 'oB': 'prop', 'timing': 'before'} start (1, 3) -> G 7 T 3 | G alone 3 T alone 3
+       (step, nG, nT, A, B): [(0, 1, 3, (6, 6), (8,)), (1, 1, 3, (5, 1), (5,)), (2, 1, 1, (4, 0), (4,)), (3, 1, 0, (3, 1), (4,)), (4, 1, 0, (2, 2), (4,)), (5, 1, 0, (1, 3), (4,)), (6, 1, 0, (0, 4), (4,)), (7, 0, 0, (1, 5), (4,))]
+       {'Aarr': 'own', 'Barr': 'shared', 's': 1, 'A0': 6, 'hT': 2, 'ch': 0, 'b': 1, 'kG': 1, 'kT': 1, 'mode': ['rival', 1], 'B0': 8, 'oA': '-', 'oB': 'prop', 'timing': 'after'} start (1, 3) -> G 7 T 3 | G alone 3 T alone 3
+       (step, nG, nT, A, B): [(0, 1, 3, (6, 6), (8,)), (1, 1, 3, (5, 1), (5,)), (2, 1, 1, (4, 0), (4,)), (3, 1, 0, (3, 1), (4,)), (4, 1, 0, (2, 2), (4,)), (5, 1, 0, (1, 3), (4,)), (6, 1, 0, (0, 4), (4,)), (7, 0, 0, (1, 5), (4,))]
+G for ever, T ends, from (3,1), with a cost in offspring: 174
+       {'Aarr': 'shared', 'Barr': 'shared', 's': 1, 'A0': 6, 'hT': 1, 'ch': 0, 'b': 1, 'kG': 1, 'kT': 2, 'mode': ['rival', 1], 'B0': 2, 'oA': 'prop', 'oB': 'prop', 'timing': 'after'} start (3, 1) -> G inf T 1 | G alone inf T alone 2
+       (step, nG, nT, A, B): [(0, 3, 1, (6,), (2,)), (1, 1, 0, (3,), (4,)), (2, 1, 0, (3,), (4,), 'repeats', 1)]
+       {'Aarr': 'shared', 'Barr': 'shared', 's': 2, 'A0': 0, 'hT': 1, 'ch': 0, 'b': 1, 'kG': 1, 'kT': 2, 'mode': ['rival', 1], 'B0': 0, 'oA': 'prop', 'oB': 'prop', 'timing': 'before'} start (3, 1) -> G inf T 1 | G alone inf T alone 1
+       (step, nG, nT, A, B): [(0, 3, 1, (0,), (0,)), (1, 1, 0, (1,), (0,)), (2, 1, 0, (2,), (0,), 'repeats', 1)]

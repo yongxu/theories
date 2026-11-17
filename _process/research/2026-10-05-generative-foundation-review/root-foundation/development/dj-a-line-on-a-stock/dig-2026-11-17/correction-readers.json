@@ -1,0 +1,495 @@
+[
+ {
+  "read": [
+   "/Users/ren/theories/tmp/r7/one-model/check/round16/correction.DIRECTION.diff (whole)",
+   "/Users/ren/tmp/dj/wt/_process/DIRECTION.md (whole)",
+   "/Users/ren/tmp/dj/wt/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/dig-2026-11-17/NOTE.md and FROZEN-DIG-DEEPER.md (whole)",
+   ".../dig-2026-11-17/dig-readers.json (in part: every reader's verdict list, the D3 and D4 entries in full, the not_done fields as far as printed)",
+   ".../dig-2026-11-17/dig-readers-2.json (in part: every reader's verdict list, the E5 entries and the not_done fields)",
+   ".../second-way-2026-11-17/NOTE.md and FROZEN-THE-SECOND-WAY.md (whole); ScratchCovering.lean.txt (statement of covered); ScratchMixedWay.lean.txt (statement of mixed_turns_iff)",
+   ".../read-2026-11-16/DIRECTION.changes.md (entry 9 at lines 90-96, line 321, and a search for rises_by_draw)",
+   "Becoming/Continuation.lean (lines 1-330 and 600-920: WithinOwn, WithinJoint, joint_keeps, excess_lowers, Pair.own_not_joint, Exceeding, Coupled, Alone)",
+   "Becoming/RegimeMargin.lean (lines 249-265, 725-824, 2050-2250, 2560-2760: Short, Root, Meets, Keeps, rises_by_draw, Coupled.Indexed.step, ends_iff_below, threshold, fates)",
+   "Becoming/Admission.lean (lines 370-392 and 470-669: Admits, withhold, WithheldLevels, supported_iff_within_margin and its neighbours)",
+   "../deeper/RelationalRenewal.lean (whole, 606 lines)",
+   "Becoming/World.lean (whole); Becoming/Dependence.lean (lines 125-145: Supported, Dependent); Becoming/Flow.lean (lines 270-300: Balances, Acting, Taking)",
+   "Becoming/LineageDrawdown.lean (lines 1-70 and 205-679: Drain whole)",
+   "Becoming/ReadingsSpread.lean (lines 1-120, 625-925, 1100-1279: Commons, clearedBack_ends, overdrawnBack_ends)",
+   "Becoming/WayOfUnits.lean (lines 40-131 and 540-613: two_units_iff)",
+   "Becoming/TurningInTime.lean (lines 900-994: unending_iff_above and unending_iff_above_kept_below)",
+   "Becoming/LineOnAStock.lean (lines 128-165); Becoming/LineOnAStockCases.lean (lines 160-212: drain); Becoming/RenewalFlow.lean (opening account and declaration list)",
+   "sources/15-codex-theory-conversations/2026-11-16-no-corners-the-interconnected-map.md (lines 145-147)",
+   "name searches over Becoming/*.lean for WithinJoint, Coupled.Indexed, supported_iff_within_margin, the two overdraw laws, rises_by_draw, unending_iff_above, and for modules naming LineOnAStock or WayOfUnits"
+  ],
+  "findings": [
+   {
+    "where": "DIRECTION.md, third item under \"What we are trying next\": \"a going-on left as it was exactly while what others take, less what they give, stays within how far what it rests on stands above its need\"",
+    "kind": "says more than is there",
+    "must_fix": true,
+    "evidence": "Becoming/Admission.lean:633 `Balances.supported_iff_within_margin (balances : L.Balances W) (without : L.WithheldLevels part W l) : W.Supported t f ↔ ∀ c, W.requires t f c → W.need t f c + total (steps 0 t) (partTaken) ≤ l t c + total (steps 0 t) (partGiven)`. The conclusion is `Supported` (needs met at step t), not \"left as it was\" and not going on. The margin is on `l`, the levels with the part's exchange withheld (WithheldLevels, :507), not on the level that stands. The law also has an opening half (a part's net giving can make an unmet need met), which \"left as it was\" drops. The page's wording is the dig NOTE's \"thing noticed and not checked\", not its item 3.",
+    "wording": "a going-on's needs met exactly while what a part has taken so far, less what it has given, is within how far the levels without that part's exchange stand above those needs"
+   },
+   {
+    "where": "DIRECTION.md, third item: \"things that each give by what is left of the others, with exact thresholds\"",
+    "kind": "says more than is there",
+    "must_fix": true,
+    "evidence": "Becoming/RegimeMargin.lean:2113 `step G H x = fun i => D.add (D.sub (x i) (H i)) (G i (left D H x))`: each condition adds to its own level, by what is left of all of them (itself included); nothing passes between them. :2687 `ends_iff_below` holds in whole numbers under `rises` (each giving rises with what is left of each), a `Band` the step keeps, a finite list covering the conditions, and the others started at `y` within the band; the threshold (:2672) is defined by running the step to step `cs.length * hi + 1`. FROZEN-DIG-DEEPER.md E1: \"nothing passes between conditions, giving costs nothing ... It is a condition's own regrowth read off the others' levels, not sense (b).\"",
+    "wording": "levels that each regrow by what is left of all of them, nothing passing between them, each with an exact threshold within a band where giving rises with what is left"
+   },
+   {
+    "where": "DIRECTION.md, \"We are far from it\": \"No statement places the two ways with respect to each other. Each is in laws of its own, of different things in different modules, which no theorem joins\"",
+    "kind": "wrong",
+    "must_fix": true,
+    "evidence": "../deeper/RelationalRenewal.lean has both in one module, of one law family: :339 `within_renewal_renewing` (draw within renewal and contribution: renewing, active at every step), :421 `overdraw_consuming`, :438 and :503 the overdraw pair; :143 `renewing_not_consuming` proves the two exclude each other for any unfolding, :217 `fluctuating_neither` that they do not exhaust; :547 `own_trajectory_does_not_decide` and :571 `jointly_consuming` state both in one theorem (the second by grain: each alone renewing, together consuming); :592 `escalation_consumes` is a course passing from one to the other. What is absent there is the lock and units that multiply. Also \"each is in laws of its own\" contradicts the page's own later sentences: the taking and the closing are \"in the one theorem with both, both ... premises\" and \"in the Lean their pieces are not joined\". The negative is also unqualified, on reads in part.",
+    "wording": "No statement places the two ways with respect to each other where a line multiplies or a rule is set again. For a fixed pair on one level, staying within what is renewed and drawing beyond it are laws of one family, proved to exclude each other and not to exhaust the cases (`RelationalRenewal`); the readers found no theorem joining that to the line or to the lock (below, \"What we are trying next\")."
+   },
+   {
+    "where": "DIRECTION.md, third item: \"and no statement joins a line that multiplies to any of them.\"",
+    "kind": "says more than is there",
+    "must_fix": true,
+    "evidence": "The dig NOTE qualifies it (\"as far as two rounds and a sweep of the opening accounts of all the modules found\"); the page does not. The reports' own limits: in round two E5 is \"holds\" from two readers, each for its own files only, and \"not reached\" or \"in part\" from the rest; the sweep reader's not_done says about 315 of 355 accounts were read only at their first 13 lines and \"No Lean module was read from first to last\"; in round one D3 is \"not reached\" from three of seven. The accounts are AI-written. One reader (round two, the reader of Stock and the line) reported Becoming/LineOnAStockCases.lean:196 `drain`, which equates the sizes, takes and levels of a course of the line with the built balanced record `LineageDrawdown.Drain`, whose ending is by joint excess under a gated renewer: one built example, not a law. My name search found no module that names both the line's modules and WithinJoint, Coupled.Indexed, the margin law or the overdraw pair.",
+    "wording": "and the readers found no general statement that joins a line that multiplies to any of them (fourteen reads in part and a sweep of the modules' opening accounts; one built course is read both as the line's and as a balanced record, `LineOnAStockCases.drain`)."
+   },
+   {
+    "where": "DIRECTION.md, third item: \"readers set what the try had called missing against the Lean ..., and most of it was there:\"; and head note: \"two rounds of readers looked for what the try had called missing\"",
+    "kind": "wrong",
+    "must_fix": true,
+    "evidence": "FROZEN-THE-SECOND-WAY.md, 11:55 section: the try said what the second way \"needs, not tried\" and that \"October has pieces (two levels each renewed by the other, `RegimeMargin.Coupled`; ...)\": it named the second of the four as there. The first (\"staying within what is made again\") was denied by this page (\"the second is in no law of this month's models\"), not by the try; the third was the dig's own second-round guess E6 (\"stated nowhere\"), which failed; the fourth was found under E3. FROZEN-DIG-DEEPER.md, \"What this comes to\": \"Three times today I said something was not in the Lean (the second way in no law; goings-on resting on each other not tried; the difference between sparing and needing stated nowhere)\". \"Most of it\" is the second-way NOTE's phrase; every first-round guess came back \"holds in part\".",
+    "wording": "Third item: \"That afternoon readers looked in the Lean for what the try had called not tried, and for what this page and the dig's own guesses had said was not there ([the record]), and found these stated:\". Head note: \"looked for what the try had called not tried\"."
+   },
+   {
+    "where": "DIRECTION.md, third item: \"Each is told of something else (a record in which whether anything goes on is given and not concluded; a fixed cast under a law of the step; units that multiply on one level)\"",
+    "kind": "unclear to a reader who was not here",
+    "must_fix": true,
+    "evidence": "Four things are listed and three kinds. The first and third are on the record (Continuation.lean:234 on `Flow`; Admission.lean:633 on `Web`), the second and fourth are fixed casts under a law of the step (RegimeMargin.lean:2113; RelationalRenewal.lean:236 `Law`). None of the four as the page tells them is of \"units that multiply on one level\": that is the line itself (the dig NOTE's item 1 has a third home of staying within, `LineOnAStock.unending_iff_holds`, which the page does not mention). The next clause then says no statement joins a line that multiplies to \"any of them\", which reads as contradicting the third kind.",
+    "wording": "Each is told of something other than a line that multiplies: the first and third of a record in which whether anything goes on is given and not concluded, the second and fourth of a fixed cast under a law of the step;"
+   },
+   {
+    "where": "DIRECTION.md, third item: \"That join is not tried, and what it should be is not yet thought through.\"",
+    "kind": "says less than is there",
+    "must_fix": true,
+    "evidence": "dig-readers.json, guess D4 (carrying the line's course onto the web), judged by four readers, all \"holds in part\": the course has a balanced record with no definition changed exactly where the way's take is within the level; `Taking` and `Dependent` cannot both hold where an unmet unit takes; \"the line's laws stay laws of its step and not of the web\"; nothing built. The dig NOTE keeps this (\"Two joins I guessed would shorten something do not\"). The morning's \"That is not tried\" was already corrected once for the same reason (FROZEN-THE-SECOND-WAY.md, 16:37, line 82).",
+    "wording": "That join is not tried in Lean. On paper four readers found that a course of the line has a balanced record with no definition changed, and that the record's laws do not thereby become the line's; what the join should be is not yet thought through."
+   },
+   {
+    "where": "DIRECTION.md, \"Sharper in the Lean\": \"A separate law puts that point higher under a larger take that is given no more; no statement joins the two.\"",
+    "kind": "unclear to a reader who was not here",
+    "must_fix": true,
+    "evidence": "The law is Becoming/RegimeMargin.lean:793 `rises_by_draw (root : Root g H y) (root' : Root g' H' y') (le : H ≤ H') (lowered : Lowered g' g) : H + y + (H' - H) ≤ H' + y'`, and the clause is true of it. But the page names no theorem, and the bullet's opening says \"the list of changes has each law with its premises\": `rises_by_draw` is in neither DIRECTION.changes.md nor READ-AGAINST-THE-LEAN.md nor the dig's or the try's record (search), and DIRECTION.changes.md:321 still records the wording this replaces (\"that level moves when the take does\", cited to TurningInTime.lean:958). Its premise, that each take has a least level at which giving meets it (`Root`), is told nowhere. \"No statement joins the two\" I could check only by name: `rises_by_draw` is named in RegimeMargin.lean alone.",
+    "wording": "A separate law (`RegimeMargin.rises_by_draw`, in neither record: each take with a least level at which giving meets it) puts that point higher by at least the difference under a larger take that is given no more; a search by name found no statement joining the two."
+   },
+   {
+    "where": "DIRECTION.md, third item: \"(six tests written down before it ran, a seventh before any report was read)\"",
+    "kind": "says more than is there",
+    "must_fix": true,
+    "evidence": "FROZEN-THE-SECOND-WAY.md, 16:37 correction: the seventh \"was appended at 11:05, after the first agents had started ...; it says of itself that it was added before any report was read, which the files neither confirm nor contradict.\" The second-way NOTE says \"by its own account\".",
+    "wording": "(six tests written down before it ran, a seventh while it ran, by its own account before any report was read)"
+   },
+   {
+    "where": "DIRECTION.md, head note: \"Three sentences were changed that day ... the three were changed again and three other places narrowed. He has read none of these as they now stand.\"",
+    "kind": "unclear to a reader who was not here",
+    "must_fix": true,
+    "evidence": "The diff removes \"each named where it stands\" and names none of the six places; the dig NOTE does not list them either. \"That day\" has no near antecedent (the last date before it is \"the evening of 16 November\"). \"(the record)\" links the dig NOTE, which records the two rounds of readers; the coordinating session's check is the 16:37 section of FROZEN-THE-SECOND-WAY.md and an untracked file. \"Narrowed\" does not fit the sentence on the page's length, which was brought up to date. AGENTS.md lets the direction change only after he has read the change, so which sentences he has not read needs to be findable.",
+    "wording": "Three sentences were changed on 17 November by what a first try at the second way found (in \"We are far from it\", in \"What is still missing there\", and the third item under \"What we are trying next\"). That afternoon another AI session set the morning's telling against the Lean (appended to the try's frozen file) and two rounds of readers looked for what the try had called not tried ([the record]); the three were changed again and three other places changed (the law nearest \"a closed loop can go on\", this page's length, the closing note). He has read none of the six as they now stand."
+   },
+   {
+    "where": "DIRECTION.md, third item: \"one that overdraws what it needs ending itself, where one that does not need it goes on while what needs it is lost\"",
+    "kind": "says less than is there",
+    "must_fix": false,
+    "evidence": "../deeper/RelationalRenewal.lean:438 `dependent_overdraw_ends_itself (fPositive : 0 < L.needF) (fWithin : L.needF ≤ L.needG) (over : ∀ t, T0 ≤ t → L.renew + L.contrib t < L.draw t)`: the drawer's need must be no more than the renewer's (without it the level can recover and the drawer return), and the overdraw is at every step from some step on. :503 `independent_overdraw_persists (independent : L.needF = 0) (positive : 0 < L.needG)`: the drawer is active at every step because it needs nothing (`active` is `need ≤ level`), and what is lost is the support of what renews the level, for good (`ConsumingIn`).",
+    "wording": "one that overdraws what it needs, its need no more than that of what renews it, ending itself, where one that needs nothing of it goes on while what renews it loses it for good"
+   },
+   {
+    "where": "DIRECTION.md, \"What is still missing there\": \"whether the second then goes on is a law under premises on the stock and the start, the fall itself among them (`WayOfUnits.two_units_iff`)\"",
+    "kind": "says less than is there",
+    "must_fix": false,
+    "evidence": "Becoming/WayOfUnits.lean:580: premises `order : n ≤ m`, `needs : 0 < n`, `within : n ≤ H₂ + y₂` are on the needs, not on the stock or the start. The fall is not a hypothesis by name: `short₁ : Short giving (h + H₂) y₁` with `below : x < h + H₂ + y₁` give it (a start below the level under which giving falls short of both units' take). So \"the fall itself among them\" is right in substance and loose in form. The left side is \"the line from both units never ends\"; reading it as the second going on is fair, since the right side has the level below the first unit's need at T.",
+    "wording": "whether the second then goes on is a law under premises on the stock, the needs and the start, which give the fall (`WayOfUnits.two_units_iff`)"
+   },
+   {
+    "where": "DIRECTION.md, \"Sharper in the Lean\": \"has one start from which the line never ends and below which it ends.\"",
+    "kind": "unclear to a reader who was not here",
+    "must_fix": false,
+    "evidence": "Becoming/TurningInTime.lean:958 `unending_iff_above ... (high : x ≤ hi) : «不穷» ... (w, x) ↔ H₂ + y₂ ≤ x`: the line never ends from every start at or above the level `H₂ + y₂` and at most `hi`, not from one start. The wording before the change (\"one level\") was nearer.",
+    "wording": "has one level: from a start at or above it the line never ends, and from a start below it it ends."
+   },
+   {
+    "where": "DIRECTION.md, \"We are far from it\": \"In two built courses of early November something renews what others draw on beside a line that doubles once\"",
+    "kind": "unclear to a reader who was not here",
+    "must_fix": false,
+    "evidence": "The examples are not named. They are Becoming/LineageDrawdown.lean `Drain` (6 November; :306 `kidsP`: the drawer leaves two at step 0, then one each; :252 the renewer gives the pool three a step; one course in two variants) and Becoming/ReadingsSpread.lean `Commons` (10 November; six courses, not one; the focal line passes its standing to two slots at the first step). So \"two built courses\" is two built examples, and the second half is of two of Commons's courses (:1180 `clearedBack_ends`, :1252 `overdrawnBack_ends`).",
+    "wording": "In two built examples of 6 and 10 November (`LineageDrawdown.Drain`, `ReadingsSpread.Commons`) something renews what others draw on beside a line that doubles once; in courses of the second the line that renews is removed and then every line ends."
+   },
+   {
+    "where": "DIRECTION.md, closing note: \"on his word (\\\"can apply\\\") after he had read a first wording of them\"",
+    "kind": "says more than is there",
+    "must_fix": false,
+    "evidence": "sources/15-codex-theory-conversations/2026-11-16-no-corners-the-interconnected-map.md:145 has his sentence as \"And I think can apply.\"; :147, AI-authored context: \"the session read ... 'can apply' as his word on the three sentences of AGENTS.md\". That it was his word on those sentences is the session's reading of a transcribed fragment.",
+    "wording": "on his word as the session read it (\"And I think can apply\") after he had read a first wording of them"
+   },
+   {
+    "where": "DIRECTION.md, closing note: \"and he has not read those two as they now stand (the version before is in `_process/history/`)\"",
+    "kind": "unclear to a reader who was not here",
+    "must_fix": false,
+    "evidence": "_process/history/2026-11-17-instructions/AGENTS-before-17-november.md is AGENTS.md before the three sentences were applied. Placed after \"as they now stand\", the parenthesis reads as pointing to the first wording he read, which is not what that file holds.",
+    "wording": "Move the parenthesis to follow \"in three sentences on 17 November\", and say where the first wording he read is kept, or that it is not."
+   },
+   {
+    "where": "DIRECTION.md, third item: \"staying within what is made again, as a property of all that is taken from a thing together\"",
+    "kind": "exact",
+    "must_fix": false,
+    "evidence": "Becoming/Continuation.lean:234 `WithinJoint L t c := L.taken t c ≤ L.given t c` (joint take within what the step gives the condition); :229 `WithinOwn`; :653 `Pair.own_not_joint`: each within, together not. Tied to the level by :248 `joint_keeps` (under `Balances`, the level does not fall) and :272 `excess_lowers` (joint excess lowers it by at least one). It is a property at one step and concludes nothing about going on (`Alone.all_continue`, :896, stipulates activity). \"Made again\" stands for what any formation listed as present gives, which may be from nothing."
+   },
+   {
+    "where": "DIRECTION.md, third item: \"a record in which whether anything goes on is given and not concluded\"",
+    "kind": "exact",
+    "must_fix": false,
+    "evidence": "Becoming/World.lean:48-57: `Dependence` has `active : S → F → Prop` as a free field and `Web F C := Dependence Nat F C`; Becoming/Dependence.lean:138 `Dependent := ∀ t f, W.active t f → W.Supported t f` is the only tie, one way. The margin law concludes `Supported`, not activity."
+   },
+   {
+    "where": "DIRECTION.md, \"We are far from it\": \"in one of them the line that renews is removed and then every line ends.\"",
+    "kind": "exact",
+    "must_fix": false,
+    "evidence": "Becoming/ReadingsSpread.lean:1180 `clearedBack_ends`: `RemovesLine slotsOf clearedBack .dweller ∧ RemovesLine ... .focal ∧ RemovesLine ... .wide` and the population empty from step six; :707-708 the dweller gives the source three where `back` is true. In `Drain` no statement removes the renewer, and the page does not say one does."
+   },
+   {
+    "where": "DIRECTION.md, \"Sharper in the Lean\": \"under premises on the stock, the need and the start that the list of changes tells\"",
+    "kind": "exact",
+    "must_fix": false,
+    "evidence": "read-2026-11-16/DIRECTION.changes.md:96 lists every hypothesis of Becoming/TurningInTime.lean:958 `unending_iff_above` (kept, uses, nothing, short, meets, keeps, needs, within, kind, high) and its conclusion `↔ H₂ + y₂ ≤ x`. The same entry (:94) and :321 still quote two earlier wordings of the page's sentence."
+   }
+  ],
+  "exact_count": 15,
+  "not_done": "Nothing was built or run, and nothing in the repository or the worktree was changed. I read statements, hypotheses and docstrings; proofs only where they happened to be in the lines opened. The two reader files (about 400 KB each) were read in part: every reader's verdict list, the D3, D4 and E5 entries and the not_done fields; I did not read the other guesses' entries, the `laws` lists or the `beyond_the_guesses` texts whole, so a report that bears on a clause in a place I did not print can have been missed. The readers' own line numbers were checked only for the statements I opened. The readers' paths are under /Users/ren/theories/experiments (the main checkout), not the worktree at /Users/ren/tmp/dj/wt; I read the worktree's Lean and did not compare the two. The negatives (\\\"no statement joins a line that multiplies to any of them\\\", \\\"no statement joins the two\\\", \\\"no statement places the two ways\\\") I could test only by name searches over Becoming/*.lean and by what I happened to read in RelationalRenewal and RenewalFlow; a statement that joins them under other names would be missed. Not opened: the coordinating session's untracked result file (/Users/ren/tmp/rw/words14/check-landings-17-nov.result.json); the two sibling forms of `mixed_turns_iff`; `LineOnAStock.unending_iff_holds`; `Optimum`, `DrawnBeyond`, `OwnWidening` and the other statements the dig names beyond the four asked about; Dependence.lean beyond `Supported` and `Dependent`. Not checked: the unchanged parts of the page; AGENTS.md's three sentences against what the closing note says of them; whether the first wording Ren read is kept anywhere; the plan (LEAN-TOWARD-THE-DIRECTION.md). The word counts are `wc -w` on the working file (4,813; 4,773 at HEAD) and a split of the idea section (1,451 with its heading and italic note)."
+ },
+ {
+  "read": [
+   "/Users/ren/theories/tmp/r7/one-model/check/round16/correction.records.diff (whole; confirmed identical to `git diff -- _process/research sources` in /Users/ren/tmp/dj/wt)",
+   "/Users/ren/tmp/dj/wt/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/second-way-2026-11-17/NOTE.md (whole)",
+   "/Users/ren/tmp/dj/wt/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/second-way-2026-11-17/FROZEN-THE-SECOND-WAY.md (whole, lines 1-99; lines 1-82 unchanged from commit 2e5ad6895)",
+   "/Users/ren/tmp/dj/wt/sources/15-codex-theory-conversations/2026-11-16-no-corners-the-interconnected-map.md (the last three entries)",
+   "/Users/ren/tmp/dj/wt/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/second-way-2026-11-17/ScratchCovering.lean.txt (whole, 484 lines)",
+   "/Users/ren/tmp/dj/wt/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/second-way-2026-11-17/ScratchMixedWay.lean.txt (whole, 746 lines)",
+   "/Users/ren/tmp/rw/words14/check-landings-17-nov.result.json (parts covering, mixed, firstlook whole: every finding, verdict, missed list, could_not_check; part agents by its headers, summary and missed only)",
+   "Package Becoming/WayOfUnits.lean:560-592 (two_units_iff, statement and docstring)",
+   "Package Becoming/RegimeMargin.lean:244-268 (step, Short, Root, Meets, Keeps), :650-668 (Adjusted.holds_from), :700-746 (ends_below, ends_iff_below), :2076-2086 (Coupled.step), :3296-3312 (Coupled.ends_iff_below), :3455-3470 (saves), :3572-3590 (cycles)",
+   "Package Becoming/LineOnAStock.lean:765-780 (fall), :1225-1246 (unending_iff_holds), names of rise, Holds, ways_alike, need_unmet by grep",
+   "Package Becoming/TurningInTime.lean:1040-1092 (turns_in_time_iff statement; turns_in_time_iff_kept_below located at :993)",
+   "Package Becoming/LineageDrawdown.lean:30-46, 236-276, 298-312, 428-434, 543-548, 606-628; grep for Removes/removed/renewer",
+   "Package Becoming/ReadingsSpread.lean:700-710, 1170-1196 (clearedBack_ends)",
+   "Package Becoming/Interdependence.lean:410-450 (Overshoot.steadyFlow, steady_continues) and its first commit date by git log",
+   "/Users/ren/tmp/dj/wt/experiments/integrated-correction/general-framework/generative-basis/lean/deeper/RelationalRenewal.lean:232-252, 508-518 (Law, level, cultivation)",
+   "second-way-2026-11-17/second-way-first-look.json (each report's summary start and answer to test 4; report 5 findings 0-7 and test 3)",
+   "second-way-2026-11-17/search/statements/out_extra.txt:33-34, out_c2_wide0.txt and out_c2_all.txt line 1; listing of search/",
+   "tries-2026-11-16/giving/report.json (answer_in_one_paragraph)",
+   "dig-2026-11-17/NOTE.md and dig-2026-11-17/FROZEN-DIG-DEEPER.md (both whole)",
+   "stat creation and change times of /Users/ren/theories/tmp/r7/one-model/check/round15/ (FROZEN working copy, where-filed/ and its files, search folders, the reports' JSON)",
+   "Session transcript /Users/ren/.claude/projects/-Users-ren-theories/ea01aaba-6b8a-4a31-821f-64af6b7b94a0.jsonl: the user message stamped 2026-11-17T08:53:32.638Z, the assistant message before it (05:10:10Z), and the brief of 03:58:05Z naming RegimeMargin :299 and :676",
+   "`git show HEAD:_process/DIRECTION.md` line 73 and the worktree's diff of DIRECTION.md (only to place the quote \"That is not tried\")"
+  ],
+  "findings": [
+   {
+    "where": "NOTE.md, third paragraph of \"How it came out\": \"written before units that each leave only themselves and all have one need, no greater than the part's\"",
+    "kind": "says more than is there",
+    "must_fix": true,
+    "evidence": "ScratchMixedWay.lean.txt:446, :476, :538: every form takes `(needs : 0 < n)`; the frozen file's line 78 had it (`0 < n ≤ m`) and the rewrite dropped it. The first and third forms fail without it. Hand case, not Lean: giving 0 everywhere; part [k] with need 3, use 1, kids [k]; R = [r] with need 0, use 1, kids [r]; x = 5, hi = 5, y₂ = 5, y₁ = 10. Every premise of `mixed_turns_iff` (:439-448) but `needs` holds (Meets is vacuous since 5 + 1 > 5). The net never ends (need 0 is always met), while the right side fails: the course as it was runs 5, 3, 1, 0, so T = 2 and the level at T + 1 is 0 < H₂ + y₂ = 6. In the second form `ends` already forces 0 < n.",
+    "wording": "written before units that each leave only themselves and all have one need, positive and no greater than the part's"
+   },
+   {
+    "where": "NOTE.md, fourth paragraph: \"The frozen file's last section says that where what a going-on rests on is one amount standing apart, remaking it cannot be said.\"",
+    "kind": "wrong",
+    "must_fix": true,
+    "evidence": "After this landing the frozen file's last section is the one appended at 16:37 (FROZEN-THE-SECOND-WAY.md:84-99), which says the opposite: that this is an argument, not a result (:98). The sentence meant is in the 11:55 section, line 80: \"A going-on that remakes what it rests on is not sayable there\". The words \"remaking it cannot be said\" are the NOTE's own earlier gloss and are not in the frozen file.",
+    "wording": "The frozen file's 11:55 section says (line 80) that where what a going-on rests on is one amount standing apart, a going-on that remakes it \"is not sayable\"."
+   },
+   {
+    "where": "NOTE.md, fourth paragraph: \"And its \\\"That is not tried\\\", of goings-on that rest on each other, was wrong: a read the same afternoon found most of it already stated in the Lean\"",
+    "kind": "wrong",
+    "must_fix": true,
+    "evidence": "\"That is not tried\" is not in the frozen file. Line 82 has \"**What I think the second way needs, not tried:**\" and line 68 \"it is not tried yet\". The quoted sentence is the direction page's morning wording (`git show HEAD:_process/DIRECTION.md`, line 73, last sentence), and the dig's own record attributes it there: dig-2026-11-17/FROZEN-DIG-DEEPER.md:166-168, \"the morning's sentence on the direction page (\\\"That is not tried\\\") is still wrong ... October tried it in several places\". \"Was wrong\" also reaches further than the dig carries: line 82's last clause (\"never joined to a line that multiplies or to what comes back to the one that renews\") is what the dig confirms (dig NOTE.md:28, \"no statement joins a line that multiplies to any of them\"). The dig's standing is fourteen AI readers' reports, nothing built, most statements on one reader (dig NOTE.md:3).",
+    "wording": "And its \"not tried\", of goings-on that rest on each other (line 82; the direction page had \"That is not tried\"), was too wide: readers the same afternoon reported most of it already stated in the Lean, in separate modules, with the join to a line that multiplies still missing ([the dig's record](../dig-2026-11-17/NOTE.md))."
+   },
+   {
+    "where": "FROZEN-THE-SECOND-WAY.md:99, bullet \"Line 82\": \"And \\\"That is not tried\\\" was wrong: see [the dig's record]\"",
+    "kind": "wrong",
+    "must_fix": true,
+    "evidence": "Line 82 does not hold the quoted words; it holds \"not tried:\" in its bold lead. The quote is DIRECTION.md's (HEAD, line 73). The dig record keeps line 82's last clause standing (dig-2026-11-17/NOTE.md:28; FROZEN-DIG-DEEPER.md:275-276: \"No statement joins a line that multiplies to any of them\").",
+    "wording": "And \"not tried\" was too wide (the direction page had it as \"That is not tried\"): readers that afternoon reported goings-on that rest on each other stated in several modules; \"never joined to a line that multiplies\" stands. See [the dig's record](../dig-2026-11-17/NOTE.md)."
+   },
+   {
+    "where": "FROZEN-THE-SECOND-WAY.md:98, bullet \"Line 80\": \"\\\"remaking it cannot be said\\\" is an argument from the definitions of `gift` and `level`, not a result.\"",
+    "kind": "wrong",
+    "must_fix": true,
+    "evidence": "Line 80 does not contain \"remaking it cannot be said\" (that was NOTE.md's morning gloss, visible in the diff's removed line). Line 80 has \"A going-on that remakes what it rests on is not sayable there\". The substance is right: no declaration in either scratch module states it; it reads `gift` (ScratchCovering.lean.txt:47-48) and `level` (:52-53).",
+    "wording": "Line 80: \"is not sayable there\" is an argument from the definitions of `gift` and `level`, not a result."
+   },
+   {
+    "where": "sources/15-codex-theory-conversations/2026-11-16-no-corners-the-interconnected-map.md, last paragraph: \"the coordinating session set the morning's telling against the Lean and found five places that said more than it holds\"",
+    "kind": "wrong",
+    "must_fix": true,
+    "evidence": "check-landings-17-nov.result.json: 28 findings carry a verdict, all \"stands\" or \"narrowed\" (covering 5, mixed 5, firstlook 14, agents 4; `dropped` is empty). Five are marked must: COV-1, MIX-1 and FL-1 (DIRECTION.md says more than the Lean), FL-2 (NOTE.md:8, seven tests where the files have six: against the try's files, not the Lean) and AG-8 (DIRECTION.md:99, \"after he had read them\": against this sources record, not the Lean). So five is the count of musts, and only three of them are of the Lean.",
+    "wording": "the coordinating session set the morning's telling against the Lean and the records: 28 places were narrowed, five of them marked as must (three said more than the Lean holds, one more than the try's files, one more than this record)"
+   },
+   {
+    "where": "NOTE.md, first paragraph of \"How it came out\": \"units that add to the level and leave only themselves, beside units that only take and need at least as much, are the line's own course on a stock whose giving is renamed\"",
+    "kind": "says more than is there",
+    "must_fix": true,
+    "evidence": "The premises now match what the reports give (second-way-first-look.json report 5, finding 5 and test 3: order L, givers leaving exactly themselves, takers needing at least what givers need). But how far it is seen is not said, and the next sentence says \"both are proved in scratch\" of the other two. Report 5 finding 5 has standing \"follows on paper\"; test 3: \"on paper; 0 differing courses in 5 x 184,320 and 35,071 more\". No Lean statement carries it (the coordinating result lists it under could_not_check for the firstlook part).",
+    "wording": "units that add to the level and leave only themselves, beside units that only take and need at least as much, are (on paper and in search, not in Lean) the line's own course on a stock whose giving is renamed"
+   },
+   {
+    "where": "NOTE.md, third paragraph: \"with that need at most what those units take and the level from which giving meets it (`within`)\"",
+    "kind": "unclear to a reader who was not here",
+    "must_fix": false,
+    "evidence": "ScratchMixedWay.lean.txt:446 `(within : n ≤ H₂ + y₂)`: the bound is the sum. Without the formula the clause can be read as two bounds (at most what they take, and at most that level), which is a different and stronger premise. The frozen bullet for line 78 gives the formula; the NOTE does not.",
+    "wording": "with that need at most what those units take plus the level from which giving meets it (`within : n ≤ H₂ + y₂`)"
+   },
+   {
+    "where": "NOTE.md: \"(this paragraph was rewritten on the afternoon of 17 November, after the coordinating session set the first wording against the Lean ...)\"; FROZEN-THE-SECOND-WAY.md:84 heading; sources last paragraph \"the coordinating session\"",
+    "kind": "unclear to a reader who was not here",
+    "must_fix": false,
+    "evidence": "\"This paragraph\" is now four paragraphs. \"The coordinating session\" is introduced in none of the three texts; in the sources paragraph it stands beside \"the session\" (the one that took his words and ran the dig, session ea01aaba by dig-2026-11-17/FROZEN-DIG-DEEPER.md:3) with nothing to say it is another one (its result is under /Users/ren/tmp/rw/words14/).",
+    "wording": "(these four paragraphs were rewritten on the afternoon of 17 November, after another AI session, the one coordinating the landings, set the first wording against the Lean and found premises left out; the first wording is in the repository's history)"
+   },
+   {
+    "where": "FROZEN-THE-SECOND-WAY.md:88, first bullet: \"Six tests were written before the run, not seven. The seventh (line 43) was appended at 11:05, after the first agents had started (the working copy of this file was made at 10:56:49 and an agent's first file at 10:58:30)\"",
+    "kind": "wrong",
+    "must_fix": false,
+    "evidence": "Three details. (1) Line 43 holds the announcement (\"A seventh test follows from this, added before any report was read:\"); the test is line 45. (2) By stat of /Users/ren/theories/tmp/r7/one-model/check/round15/: 10:58:30 is the creation of the folder where-filed/; its first file, headlines.py, is 10:58:39. (3) Nothing above in this file says seven were written before the run (line 3 says the file was written before any agent ran; line 47 only \"against the seven tests\"); the claim corrected was NOTE.md:8 and DIRECTION.md:73, which a reader of this file alone cannot tell. \"At 11:05\" is the append's own heading (line 39); the files do not show when it was written (coordinating result, FL-15).",
+    "wording": "**Six tests were written before the run, not seven** (NOTE.md and the direction page had said seven). The seventh (line 45, announced at line 43) stands under the append headed 11:05, after the first agents had started (the working copy of this file was made at 10:56:49, an agent's first folder at 10:58:30 and its first file at 10:58:39)"
+   },
+   {
+    "where": "FROZEN-THE-SECOND-WAY.md:93, bullet \"Line 60\": \"the slip about `RegimeMargin` :299 and :676 was in what the reader of October was sent, not in this file, which names no line of `RegimeMargin`\"",
+    "kind": "unclear to a reader who was not here",
+    "must_fix": false,
+    "evidence": "True, but not from anything in the record: the briefs are not kept (coordinating result, firstlook could_not_check 3). I found it in the session transcript (ea01aaba, 2026-11-17T03:58:05Z, the brief: \"the two-stock step (:299, :676)\"). \"This file ... names no line\" is literally false of line 60 itself, which names both; the frozen text above the appends is meant (line 30 has no line numbers). FL-7's corrected wording also said what the two are, which the bullet drops: RegimeMargin.lean:299 is `Adjusted.step` and :676 is a theorem, `Adjusted.ends_iff_below`, not a step; the two-level step is `Coupled.step` :2081.",
+    "wording": "And the slip about `RegimeMargin` :299 and :676 was in the brief sent to the reader of October (\"the two-stock step (:299, :676)\"; the brief is in the session's transcript, not kept here), not in the frozen text above the appends, which names no line of `RegimeMargin`; :299 is `Adjusted.step` and :676 its exact law."
+   },
+   {
+    "where": "FROZEN-THE-SECOND-WAY.md:96, bullet \"Line 76\": \"\\\"A growing way that goes on is a way of sources\\\" holds where offspring together take more than their parent, and is an argument. On a stock that gives there is one built pair by evaluation (`Kept.side_by_side`)\"",
+    "kind": "says less than is there",
+    "must_fix": false,
+    "evidence": "(1) Line 76's words are \"So the growing way that goes on is a way of sources from nowhere\"; the quoted form is NOTE.md's morning wording. (2) `Kept.side_by_side` (ScratchCovering.lean.txt:461-479) is by evaluation only in its first half (the package's `Doubling.course_values` through `unending_zero_iff`, :476-478); the going on and \"what is left never falls\" are by `covered` with its premises checked (:472-475, :479). (3) COV-5's corrected wording also had \"holds as a law only ... among starts where what is left meets the need (`OneKind.unending_iff`)\": the comparison k·t ≤ b decides only together with a + t·N ≤ x (:418-420). The bullet leaves that out.",
+    "wording": "\"The growing way that goes on is a way of sources\" holds where offspring together take more than their parent, and is an argument. The one-kind comparison is a law only among starts where what is left meets the need (`OneKind.unending_iff`). On a stock that gives there is one built pair (`Kept.side_by_side`): the line's doubling course ends, by its evaluated course, and the same units each adding two go on, by `covered`."
+   },
+   {
+    "where": "FROZEN-THE-SECOND-WAY.md:97, bullet \"Line 78\": \"\\\"The stock's root\\\" is loose: the Lean has `Short` and `Meets`, and `y₂` is the root only where `y₂ + H₂` is within the ceiling.\"",
+    "kind": "says more than is there",
+    "must_fix": false,
+    "evidence": "RegimeMargin.lean:258 `Root g H y := H ≤ g y ∧ Short g H y`; :262 `Meets g H y hi := ∀ z, y ≤ z → z + H ≤ hi → H ≤ g z`. Where y₂ + H₂ ≤ hi the premises give Root; where it is above hi they say nothing of g y₂, so y₂ may or may not be the root. \"Is the root only where\" asserts the negative. The bullet also leaves line 78's \"a premise that brings the part below its need\" uncorrected, which the NOTE now tells rightly: each form gives or derives that the course with the part never cut comes below `n`, the others' need (ScratchMixedWay.lean.txt:477 `ends : ∃ N, levelAsItWas … N < n`; :551), which is stronger than below `m`.",
+    "wording": "\"The stock's root\" is loose: the Lean has `Short` and `Meets`, which make `y₂` the root only where `y₂ + H₂` is within the ceiling. And \"brings the part below its need\" says less than the forms take: the course with the part never cut comes below `n`, the others' need."
+   },
+   {
+    "where": "FROZEN-THE-SECOND-WAY.md:95, bullet \"Line 68\": \"In the model tried, what a unit adds makes no difference to who comes next except through which needs the level then meets, and the level is one for all; so a unit that adds is not favoured over others by it.\"",
+    "kind": "says less than is there",
+    "must_fix": false,
+    "evidence": "FL-9's corrected wording carried the standing and a second correction; both are dropped. Standing: at 11:23 this was on paper and in search; it is now `ways_alike_give` in scratch (ScratchCovering.lean.txt:156-163), for as long as the two levels meet the same needs of the first course's way; \"so ... not favoured\" is an argument. Second: line 68's \"by how the needs happen to lie\" was also to be narrowed (\"and by whether what is added covers what is taken\": report 3, the condition at g = 0 is b ≥ t and z* ≥ a).",
+    "wording": "In the model tried, what a unit adds makes no difference to who comes next except through which needs the level then meets (`ways_alike_give`, in scratch), and the level is one for all; so, by argument, a unit that adds is not favoured over others by it. Which outlasts the other turns on how the needs lie and on whether what is added covers what is taken."
+   },
+   {
+    "where": "FROZEN-THE-SECOND-WAY.md:90, bullet \"Line 52\": \"the condition is for givers that need something (a at least 1); with givers that need nothing the net never ends in every searched case.\"",
+    "kind": "says less than is there",
+    "must_fix": false,
+    "evidence": "Exact as far as it goes (search/statements/out_extra.txt:33: \"a = 0 (givers need nothing), order L, g = 0: never ends in 11520 of 11520\"). FL-3's verdict (narrowed) kept a second premise of the searched ranges that the bullet leaves out: the takers take something (search_c2.py ranges c 1..2), and need more than the givers (line 21, C2 (ii)).",
+    "wording": "the condition is for givers that need something (a at least 1) and, as searched, takers that take something; with givers that need nothing the net never ends in every searched case."
+   },
+   {
+    "where": "FROZEN-THE-SECOND-WAY.md:91, bullet \"Line 54\": \"C2 (i), repaired with a bounded giving, is `fall` after `rise` for the takers' going; the net's ending adds m at most a.\"",
+    "kind": "unclear to a reader who was not here",
+    "must_fix": false,
+    "evidence": "LineOnAStock.lean:773-777: `fall` concludes that no unit of the line is in the way from some step on, not that the net ends. Report 5 finding 4: \"the net's ending adds only m <= a\". \"Adds m at most a\" does not read as a premise. The three identifications in this bullet stand on paper in reports 0, 3 and 5, not in Lean; line 49's \"searches are searches, not proofs\" does not cover paper arguments.",
+    "wording": "C2 (i), repaired with a bounded giving, is `fall` after `rise` for the takers' going; that the net then ends needs m ≤ a as well. (These three are the readers' identifications on paper.)"
+   },
+   {
+    "where": "FROZEN-THE-SECOND-WAY.md:86: \"The coordinating session's full result, with the evidence under each, is at `/Users/ren/tmp/rw/words14/check-landings-17-nov.result.json` on the machine where it ran (not tracked).\"",
+    "kind": "unclear to a reader who was not here",
+    "must_fix": false,
+    "evidence": "Said honestly, but the evidence for sixteen corrections is then outside what the repository can regenerate, and no reader of the repository can open it. The file is 155 KB; the record folder already keeps two JSON reports of that size.",
+    "wording": "The coordinating session's full result, with the evidence under each, is kept beside this file as `check-landings-17-nov.result.json`. (If it is copied in; otherwise as written.)"
+   },
+   {
+    "where": "sources file, last paragraph: \"sent two rounds of seven readers to set them against the Lean, building nothing. The picture was wrong at its centre and most of what the session had called missing was already stated there, in separate modules\"",
+    "kind": "says more than is there",
+    "must_fix": false,
+    "evidence": "dig-2026-11-17/NOTE.md:8 and FROZEN-DIG-DEEPER.md:170-211: the second round read a second set of guesses (E1 to E6) and three senses of \"the second way\", not the first six. \"Was already stated there\" is told flat; the record gives its standing as fourteen AI readers' reports, no person having checked them, most statements on one reader (dig NOTE.md:3, :34). The rest is carried: \"The picture was wrong at its centre\" (dig NOTE.md:14), \"Three things I said were not in the Lean are in it\" (:21), nothing built (:3).",
+    "wording": "sent seven readers to set them against the Lean and seven more with a second set of guesses, building nothing. By their reports the picture was wrong at its centre and most of what the session had called missing was already stated there, in separate modules"
+   },
+   {
+    "where": "FROZEN-THE-SECOND-WAY.md appended section as a whole: notes of the coordinating result that carry no verdict and are not taken up",
+    "kind": "says less than is there",
+    "must_fix": false,
+    "evidence": "Not required by the brief (no \"stands\" or \"narrowed\"), listed so they are not lost. COV-7: line 63's \"32,400 cases, no mismatch\" is search/refute/s3.out:8, on a grid with a, k, N from 1, with \"never\" certified by the kept region and not run out. COV-8: line 63's sentence left out three premises of `covered` (the 11:55 append has them but does not say so). MIX-6: line 78's \"about 470\" general lines is 506 by count (the stored reader's report says 506). MIX-8: \"kids taking no less\" is needed in the first form only, and both countermodels are search outputs. MIX-12: line 80's \"Test 3: the mixed-way law is an existing theorem instantiated through a transfer\" is exact of `mixed_turns_iff` only; the other two forms rest on `turns_in_time_iff_ends`, new in the scratch (ScratchMixedWay.lean.txt:97-120).",
+    "wording": "- Line 63: the 32,400 cases are search/refute/s3.out's, with a, k, N from 1. Line 78: \"about 470\" is 506 by count. Line 80, Test 3: exact of `mixed_turns_iff` only; the other two forms rest on a generic step new in the scratch (`turns_in_time_iff_ends`)."
+   },
+   {
+    "where": "NOTE.md: \"`WayOfUnits.two_units_iff` is its case with the statement unchanged.\"",
+    "kind": "exact",
+    "must_fix": false,
+    "evidence": "Package Becoming/WayOfUnits.lean:580-589 and ScratchMixedWay.lean.txt:584-593 read side by side: the same ten premises and the same right side; :624 `same_statement : @two_units_iff = @WayOfUnits.two_units_iff := rfl`; the scratch proof goes through `mixed_turns_iff` (:599)."
+   },
+   {
+    "where": "sources file: the quoted words, the stamp, and the lead-in \"after the session had reported the first try ... on paper first\"",
+    "kind": "exact",
+    "must_fix": false,
+    "evidence": "Transcript ea01aaba, user message stamped 2026-11-17T08:53:32.638Z: \"I think this is the time maybe you need to dig a little bit deeper.\" (15:53:32 WIB). The assistant message before it (05:10:10Z) has \"this model cannot hold the second way\", \"each was read against its Lean by an agent who did not write it\", \"It is a small join\", \"Neither is landed\", and \"That is the next thing to read, before any new model, and on paper first.\" The context paragraph attributes each reading to the session and puts no words in his mouth."
+   }
+  ],
+  "exact_count": 39,
+  "not_done": "Nothing was built or run; that both scratch modules build clean with empty axiom reports rests on the stored logs.\n\nFirst check (take-up). Every finding with verdict \"stands\" or \"narrowed\" that concerns NOTE.md or the frozen file is taken up: COV-3, COV-4, COV-5, MIX-3, MIX-4, FL-2 to FL-10, FL-13, FL-14, and the four \"missed\" items of the covering, mixed and firstlook parts. None is left out whole. Left out in part, each reported above: FL-3 (takers that take something, as searched), FL-9 (the standing, and \"whether what is added covers what is taken\"), COV-5 (\"among starts where what is left meets the need\"), FL-7 (what :299 and :676 are). The agents part (AG-1 to AG-8) concerns AGENTS.md and DIRECTION.md; I read only its headers, summary and missed list. The changes to DIRECTION.md in the same worktree were not checked; they are not among my texts.\n\nNot opened or not re-derived:\n- That the first form's premises (`short₁`, `below`, `keepsUse`) entail that the course with the part never cut comes below `n`: I read `TurningInTime.turns_in_time_iff`'s statement and how the scratch calls it, not the private `regime_levels` its proof uses.\n- The Line 54 bullet's identifications (`ends_iff_below` where b = t; `ends_below` with `Adjusted.holds_from` for b > t; `unending_iff_holds` only where b ≤ t; `fall` after `rise`): checked against first-look reports 0, 3 and 5 and against the named statements' premises, not worked through by hand.\n- \"No statement removes the renewer\" (LineageDrawdown): grep for Removes/removed/renewer and the named statements, not a whole read. ReadingsSpread: `clearedBack_ends` and the dweller's giving only.\n- \"In all of them what is added has no source and nothing one leaves is taken by another\": read `Coupled.step`, `Law.level`, and the statements of `saves`, `cycles`, `Coupled.ends_iff_below`; not the givings of MutualActivation and Relay in full, nor `within_renewal_sustains`.\n- Search programs were not rerun. The a = 0 line and the statements search's run counts were read from the stored outputs; the refute search's \"several million cases, no total\" was taken from the coordinating finding's arithmetic and the absence of a total line, not summed by me.\n- The dig: NOTE.md and FROZEN-DIG-DEEPER.md read whole, the two readers' JSON files not opened; so \"most of it already stated in the Lean\" is checked against the dig's own telling only, not against the Lean.\n- The sources sentence \"corrected ... in one landing\": at my read (16:45 WIB) the four files were modified and uncommitted in /Users/ren/tmp/dj/wt and dig-2026-11-17/ was untracked, so this is not yet checkable.\n- The transcript: I read the message at 08:53:32Z and the assistant message before it; I did not look for anything said in forks or other sessions between 12:10 and 15:53 WIB.\n- The hand countermodel for the dropped `0 < n` is my own arithmetic, not Lean and not in any file.\n- The exact count of 39 is of clauses across the three texts (NOTE.md 15, the frozen section 20, the sources paragraph 4), counted by my own cut of the sentences."
+ },
+ {
+  "read": [
+   "NOTE.md (whole, every sentence) and FROZEN-DIG-DEEPER.md (whole), in /Users/ren/tmp/dj/wt/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/dig-2026-11-17/",
+   "dig-readers.json and dig-readers-2.json: all 14 reports' verdict lists, read lists and not_done headers; whole entries for round 1 D6 (refute), D4 (web-base), the 'picture' passages of all seven round-1 readers, beyond_the_guesses of feeding-and-return, lineage, the-november-line, refute and web-base; round 2 E1 (several-conditions, with beyond and not_done), E4 (stock-and-line, with not_done), E5 and not_done (sweep), E6 of four readers, sense (c) of four readers; the rest by search for the declarations named",
+   "Lean, statements with hypotheses and conclusion (no proofs judged), in /Users/ren/tmp/dj/wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/: Flow.lean 255-300 and 770-790 (Balances, Acting, Taking, Growing.growing); Dissipation.lean 230-262, 440-470, 1275-1385 (ClosedAt, DissipatesOn, Dissipative, opens, finite_taking_not_recurring, Spray.spray, witnesses_not_dissipative); Continuation.lean 118-200, 222-262, 610-660, 700-714 (FedFromBeyond, fed_from_beyond, WithinOwn, WithinJoint, joint_keeps, Lone.fed_not_recurring, Pair.own_not_joint); Admission.lean 488-660 (withhold, WithheldLevels, supported_iff_within_margin, closes_nothing, opens_nothing); DrawnBeyond.lean 80-130, 170-305 (slack, MetOn, breaks_beyond, favours_breaking_beyond); Optimum.lean 8150-8225, 8975-9040 (kept_returns, drain_perfect_iff); LineOnAStock.lean 128-205, 1150-1250, 1276-1332 (definitions, unending_iff_holds, taken_below, account); RegimeMargin.lean 1-60, 2055-2133, 2195-2235, 2640-2730 (opening account, Coupled.step, Indexed.step, DependsOn, ends_together, ends_iff_below, fates); Roles.lean 408-420, 636-685 (Embodied, arising_lowers_on); Gain.lean 180-300 (rises_late_of_newly_supported, rise_from_rest_or_open); KeepingWidening.lean 270-312 (passes_every_bound, from_rest_or_open head); RuleShaping.lean 128-182 (shaped, favours_iff); Wholes.lean 255-277, 392-404; OwnWidening.lean 142-154; World.lean 44-66; Entropy.lean GainlessOn, Gainless, lost; Retaining.lean by search for 'margin'",
+   "../deeper/RelationalRenewal.lean: declaration outline and lines 100-140, 225-270, 296-356, 380-392, 418-450, 496-516",
+   "/Users/ren/theories/tmp/r7/one-model/check/round16/search/refute/: d6_run.log (whole), d6_model.py (whole), d6_analysis.txt lines 1-140, d6_validate.txt (head), searches in d6_analysis2.txt; byte comparison with the filed copy under dig-2026-11-17/search/refute and a file-list diff of the two search folders",
+   "sources/15-codex-theory-conversations/2026-11-16-no-corners-the-interconnected-map.md lines 140-156 (the quoted words) and second-way-2026-11-17/FROZEN-THE-SECOND-WAY.md lines 43-99 by search",
+   "grep over Becoming/*.lean and ../deeper for uses of RegimeMargin's several-condition declarations and for general statements concluding W.active"
+  ],
+  "findings": [
+   {
+    "where": "NOTE.md line 14: \"What forbids giving from nothing is a further premise (`Flow.Dissipative`), which October's own examples of going on for ever fail\"",
+    "kind": "wrong",
+    "must_fix": true,
+    "evidence": "Dissipation.lean:248 `Dissipative := ∀ cs t, Distinct cs → L.ClosedAt cs t → L.DissipatesOn cs t` binds only families closed across the step. Dissipation.lean:1334 `Spray.spray : flow.Balances web ∧ … ∧ flow.Dissipative ∧ (∀ t, ¬ flow.Enclosed t) ∧ (∀ t, 0 < flow.give t .renewer 0 ∧ ∀ c, flow.take t .renewer c = 0) ∧ ∀ t, 0 < flow.takers [0] t`: a dissipative flow whose renewer gives from nothing at every step and where taking goes on. `witnesses_not_dissipative` (:1369) is of six named flows of Flow.lean only; Continuation.lean:633 `Lone.fed_not_recurring` is balanced, dissipative and goes on. Reports: web-base says 'across an enclosed step' and 'six of October's own flows'; feeding-and-return sorts the going-on examples into not dissipative and dissipative (Clearing, Lone). The frozen file kept 'six'; the note dropped it.",
+    "wording": "What forbids giving from nothing, across a step whose exchange lies within finitely many conditions, is a further premise (`Flow.Dissipative`), which six of October's examples of going on for ever are proved to fail (`witnesses_not_dissipative`); the examples that meet it take from a fresh condition at every step or have no enclosed step (`Lone`, `Clearing`, `Spray`)."
+   },
+   {
+    "where": "NOTE.md line 14: \"under it, with finitely many conditions, nothing that takes goes on, and what keeps being taken from is fed from beyond it\"",
+    "kind": "says more than is there",
+    "must_fix": true,
+    "evidence": "Dissipation.lean:461 `finite_taking_not_recurring (balances) (dissipative) (distinct : Distinct all) (every : ∀ c, c ∈ all) (cs) : ¬ ∀ N, ∃ t, N ≤ t ∧ 0 < L.takers cs t`: taking does not recur; it says nothing of whether a formation that took stays active. Continuation.lean:180 `fed_from_beyond (balances) (dissipative) (distinct : Distinct ds) (around : ∀ t, T₀ ≤ t → L.Around ds t) (recurs …) (N) : ¬ ∀ t, N ≤ t → ¬ L.FedFromBeyond ds t`: premises a finite family without repetition and the step's exchange enclosed around it from some step on; conclusion 'not, from any step on, never fed'. As joined in the note the second clause reads as holding with finitely many conditions, where its premise `recurs` cannot hold.",
+    "wording": "under it and balance, with finitely many conditions in all, no taking recurs without end (`finite_taking_not_recurring`); and a finite family taken from at arbitrarily late steps, its exchange enclosed in finitely many conditions from some step on, is not from any step on left unfed from beyond it (`fed_from_beyond`)."
+   },
+   {
+    "where": "NOTE.md line 14: \"Five readers found this independently.\"",
+    "kind": "wrong",
+    "must_fix": true,
+    "evidence": "dig-readers.json: all seven first-round reports say that `Flow.Balances` lets a formation give while taking nothing (feeding-and-return, lineage, pairs-and-groups, the-november-line, renewal, refute, web-base; each quotes Flow.lean:278). Five name the dissipation premise as what forbids it (feeding-and-return, pairs-and-groups via `DissipatesOn`, renewal, refute, web-base); the-november-line says 'Whether Dissipation … ask more of a giver was not in my files'; lineage does not mention it. `finite_taking_not_recurring` is cited by three, `fed_from_beyond` by two, `witnesses_not_dissipative` by two. 'This' follows five claims and fits the count of only one of them. The seven ran in one workflow on the same frozen file.",
+    "wording": "All seven first-round readers found that balance allows it; five named the dissipation premise; three cited the finite law, two each the fed-from-beyond law and the six failing examples."
+   },
+   {
+    "where": "NOTE.md line 16: \"and one second-round guess failed outright in each direction\"",
+    "kind": "says more than is there",
+    "must_fix": true,
+    "evidence": "dig-readers-2.json verdicts: E4 'fails' by the one reader who reached it (stock-and-line). E6 'fails' by the sweep reader only; the three others who reached it (roles, widening, gated-giving) gave 'holds in part', each saying the difference as E6 words it, of an arising, is not stated in their files. 'In each direction' is not explained.",
+    "wording": "and of the second round, E4 (a join that would shorten) failed by its one reader, and E6 ('stated nowhere') failed by one reader of four, the other three finding it held in part."
+   },
+   {
+    "where": "NOTE.md line 17: \"On October's web whether a formation is active is a free field, tied only by \\\"active gives supported\\\". So every general law read there concludes an ending, a level, or that something cannot go alongside; every \\\"continues\\\" is a built example whose web stipulates it. A law of a step, like the line's, is what can conclude that something goes on.\"",
+    "kind": "says more than is there",
+    "must_fix": true,
+    "evidence": "Other premises tie `active`: Flow.lean:292 `Acting` (what gives is active), :296 `Taking` (what takes is active), Roles.lean:414 `Embodied x := ∀ t, W.active t x ↔ 0 < W.level t x` (both ways, used by a law the note cites), Wholes `Whole`/`AllWhole`. General laws read in round 2 conclude going on: Wholes.lean:272 `Whole.persists_from … : ∀ t, T + d ≤ t → W.active t w`, :401 `AllWhole.persists_iff` (listed as a general law by the widening reader). The source, feeding-and-return item 1, says it of 'these files' (six modules read whole) and words the gap as 'a web in which activity follows from support; I did not find one here'. The last sentence is the writer's inference (web-base item 4: 'the web is a record and the line is a law'), proved nowhere.",
+    "wording": "On October's web `active` is a field that no premise read derives from support (`Dependent` runs from active to supported; `Acting` and `Taking` from giving or taking to active). In the six modules one reader read whole, every general law concludes an ending or a fact about a level, and every \"continues\" is a built example whose web stipulates it; `Wholes` concludes a whole's going on only from its parts'. A step in which activity is read off the level, like the line's, can conclude that something goes on (a reading)."
+   },
+   {
+    "where": "NOTE.md line 19: \"\\\"What places the two ways is where a line's giving lands\\\" failed. In about 190,000 exact small runs, what decides which line is left is who gets back what was given and who is short of what, the order of access included, not which condition the giving lands on. Its part about selection is `RuleShaping.favours_iff` and nothing more.\"",
+    "kind": "unclear to a reader who was not here",
+    "must_fix": true,
+    "evidence": "Verdict: all five readers who reached D6 gave 'holds in part', the refute reader included; 'fails as worded' is the writer's (frozen file), and the note's own heading says every first-round guess held in part. Runs: d6_run.log 'runs 193536'; d6_analysis.txt line 1 'runs 193536  undecided: 0'; d6_validate.txt: 1,237 of 65,540 for-ever verdicts rerun for 3,000 steps, 0 mismatches. So the number is right, but they are runs of a two-kind integer model the refute reader wrote in Python (d6_model.py), not of the Lean or of the line's model; his not_done: 'one family of models … exact on this grid … not proved in general', and 'Nothing here is a Lean theorem'. 'What decides …' is his beyond item 4 nearly word for word. The frozen file also says the ending half is in no module read; the note drops that. RuleShaping.lean:160 `favours_iff : CarrierCounts.favours (shaped a s p c pos) ↔ c ≤ s` is as cited.",
+    "wording": "\"What places the two ways is where a line's giving lands\" held only in part by its five readers and fails as I worded it. In 193,536 exact runs of a small two-kind model one reader wrote in Python (one family of models, not the Lean's), what decides which line is left is who gets back what was given and who is short of what, the order of access included, not which condition the giving lands on. Its part about selection is `RuleShaping.favours_iff` and nothing more; its part about ending is in no module read."
+   },
+   {
+    "where": "NOTE.md line 22: \"as a sufficient condition for going on in `RelationalRenewal` (`within_renewal_renewing`)\" and \"exactly on the line only where each unit's offspring take what it takes (`LineOnAStock.unending_iff_holds`)\"",
+    "kind": "says more than is there",
+    "must_fix": false,
+    "evidence": "../deeper/RelationalRenewal.lean:339 `within_renewal_renewing (within : ∀ t, L.draw t ≤ L.renew + L.contrib t) (gStart : L.needG ≤ L.start) (fStart : L.needF ≤ L.start)`: both needs met at the start are premises; the file is outside the package `Becoming` (the frozen file says so, the note does not). LineOnAStock.lean:1239 `unending_iff_holds` has seven premises (`even`, `some`, `down`, `needs`, `nothing`, `high`, `along`); the note names `even` alone.",
+    "wording": "as a sufficient condition for going on, both needs met at the start, in `RelationalRenewal` (`within_renewal_renewing`; beside the package, in `deeper/`) … and exactly on the line under seven premises, one of them that each unit's offspring take what it takes (`LineOnAStock.unending_iff_holds`)."
+   },
+   {
+    "where": "NOTE.md line 23: \"Conditions that give by what is left of each other, as laws of a step with two-way thresholds (`RegimeMargin`'s `Indexed.ends_iff_below`, `fates`, `ends_together`). … no other module uses these laws.\"",
+    "kind": "says more than is there",
+    "must_fix": true,
+    "evidence": "RegimeMargin.lean:2113 `Indexed.step G H x := fun i => D.add (D.sub (x i) (H i)) (G i (left D H x))`: each condition gives to its own level. :2687 `ends_iff_below (rises : ∀ i, Rises Drawn.whole (G i)) (band : Band G H hi) (covers : ∀ i, i ∈ cs) (high) (highs)`: whole numbers, finitely many conditions, every giving rising with what is left of every condition, within a band; the threshold is `leading (ending G H (cs.length * hi + 1) y i) (hi + 1)`, found by running the step (several-conditions reader, items 3 and 4). :2219 `ends_together` needs `pos` (every dependent's draw positive) and is not a threshold. 'No other module uses' is by grep on names (several-conditions beyond 5; the-november-line 3); my grep agrees (Amounts.lean names two in doc comments only).",
+    "wording": "Conditions each giving to its own level by a law of what is left of all, as laws of a step: in whole numbers, for finitely many conditions under constant draws, where each giving rises with what is left of each and within a band, a condition ends exactly below a threshold found by running the step (`Indexed.ends_iff_below`, `fates`); two that each give nothing where nothing is left of the other, their draws positive, end together or not at all (`ends_together`). Nothing passes between the conditions, giving costs nothing and there are no units; by a search for their names no other module uses these laws."
+   },
+   {
+    "where": "NOTE.md line 21 with item 3 (line 24): \"Three things I said were not in the Lean are in it\" … \"The difference between drawing on what others can spare and on what they need, two-way, on a balanced flow set against the levels with a part's exchange withheld: another formation stays supported exactly where …\"",
+    "kind": "says more than is there",
+    "must_fix": true,
+    "evidence": "What was said (E6): 'the difference between arising on what others pass on and arising on what others need is stated nowhere'. Admission.lean:633 `supported_iff_within_margin (balances) (without : L.WithheldLevels part W l) {t} {f} : W.Supported t f ↔ ∀ c, W.requires t f c → W.need t f c + total (steps 0 t) (fun s => L.partTaken part s c) ≤ l t c + total (steps 0 t) (fun s => L.partGiven part s c)`: of any formation `f` (not 'another'), at one step (not 'stays'), of a part's exchange summed up to that step, on a given record. Sweep reader's corrected wording: 'It is not stated of arising, and not as a law of a step'; the frozen file keeps that sentence, the note drops it. Three of the four readers on E6 said the difference as E6 worded it is not stated in their files.",
+    "wording": "The difference between a part's drawing on what others can spare and on what they need, two-way, on a balanced flow set against the levels with the part's exchange withheld: a formation is supported at a step exactly where, for every condition it requires, its need with what the part has taken up to then is at most the withheld level with what the part has given (`Admission.supported_iff_within_margin`). It is stated of a part's net exchange on a record, not of an arising and not as a law of a step."
+   },
+   {
+    "where": "NOTE.md line 24: \"above the slack a dependence beyond breaks (`DrawnBeyond.breaks_beyond`), for a formation the group that gains does not couple into (`favours_breaking_beyond`)\"",
+    "kind": "says more than is there",
+    "must_fix": true,
+    "evidence": "DrawnBeyond.lean:205 `breaks_beyond (balances) (gainless : L.GainlessOn (ds ++ rest) t) (met : W.MetOn dep rest t) (exceeds : W.stock ds t + W.slack dep rest t < W.stock ds (t + 1) + L.lost (ds ++ rest) t) : ∃ c, c ∈ rest ∧ W.Broken t (dep c) c`: one-way; the premise that the family and the conditions beyond together gain nothing across the step is dropped, and 'slack' (:90, what the conditions beyond stand above the needs named on them) and what is above it (the family's rise with the whole's loss) are not said. :293 `favours_breaking_beyond` concludes `¬ members (dep c) ∧ ∀ h, members h → ¬ W.CoupledInto obs h c`: the formation is outside the group and it is the condition that no member couples into; no premise says the group gains (the premises are `listed`, `apart`, and `rewards : select W.level → … < W.stock ds (t + 1)`). The writer says he opened `breaks_beyond` himself.",
+    "wording": "where a family and the conditions beyond it together gain nothing across a step, a rise of the family by more than what those conditions stand above the needs on them breaks one of those dependences (`DrawnBeyond.breaks_beyond`, one-way); where every condition a group's members couple into lies in the family and a selection holds only where the family so rises, the broken dependence is of a formation outside the group, on a condition no member couples into (`favours_breaking_beyond`)."
+   },
+   {
+    "where": "NOTE.md line 26: \"a drawer that needs the level it overdraws ends itself, and one that does not need it goes on while what needs it is lost for good (`RelationalRenewal.dependent_overdraw_ends_itself` against `independent_overdraw_persists`, general laws of one step with a fixed cast)\"",
+    "kind": "says more than is there",
+    "must_fix": true,
+    "evidence": "../deeper/RelationalRenewal.lean:438 `dependent_overdraw_ends_itself (fPositive : 0 < L.needF) (fWithin : L.needF ≤ L.needG) (over : ∀ t, T0 ≤ t → L.renew + L.contrib t < L.draw t)`: the drawer's need at most the renewer's is a premise (the step at :246 goes on adding `renew` while the level meets `needG`, so with a higher `needF` the drawer need not stay ended), and the overdraw is at every step from some step on. :503 `independent_overdraw_persists (independent : L.needF = 0) (positive : 0 < L.needG) (over …)` is as told. The writer says he opened this pair himself.",
+    "wording": "a drawer that needs the level at no more than its renewer does and overdraws it at every step from some step on ends itself, and one that does not need it goes on while what needs it loses it for good (…)."
+   },
+   {
+    "where": "NOTE.md line 28: \"as far as two rounds and a sweep of the opening accounts of all the modules found\" and line 34: \"The sweep read the modules' opening accounts, which are AI-written, and opened the Lean only of the candidates it named.\"",
+    "kind": "says more than is there",
+    "must_fix": true,
+    "evidence": "Sweep report (dig-readers-2.json, last entry), not_done: 'The brief asked me to read the extracted accounts file through. I did not … What I read of the 355 modules not on the read list: the first 13 lines (cut at 1,150 characters) of every account; the whole account of 19; bullet heads of 21 more … About 315 accounts were read only at their head, so a module whose bearing shows only deep in its account can have been missed … The 51 accounts of modules on the read list I did not read at all.' And: 'For each declaration reported I read its statement … not its proof'; named definitions in hypotheses (WithheldLevels' body, Perfect, portion, Gainless' body) not unfolded; about 40 modules 'relevant by their heads but not opened in the Lean'.",
+    "wording": "as far as two rounds and a sweep of the heads of the modules' opening accounts found … The sweep read the first 13 lines of the opening account of each of 355 modules, 19 accounts whole and the bullet heads of 21 more; the accounts are AI-written. It opened the Lean only of the candidates it named, at their statements, and names about 40 modules that looked relevant and were not opened."
+   },
+   {
+    "where": "NOTE.md line 28: \"the line's course has a balanced record with no definition changed, but the web's laws are not the line's (`Taking` and `Dependent` cannot both hold where a unit whose need is unmet still takes)\"",
+    "kind": "says more than is there",
+    "must_fix": true,
+    "evidence": "web-base report, D4: the carrying is 'ON PAPER, field by field'; 'THE THEOREM THAT WOULD SAY SO (not proved, not compiled)'; 'With this, Balances is exactly ∀ t, T_t ≤ x_t … a Python search over 140,000 steps of random small lines found no mismatch'; against (1): 'BALANCE FAILS AT AN OVERDRAWN STEP'. His not_done: 'The theorem statements written for D4 are on paper: not compiled, not proved'. The frozen file keeps 'exactly where the way's take is within the level at every step'; the note drops it and does not say the record is unproved.",
+    "wording": "on paper, with no Lean written, each course of the line can be recorded as a flow on a web with no definition changed, and the record balances exactly where the way's take is within the level at every step (one reader's carrying, checked by a search over small cases); under that record the web's laws are not the line's (…)"
+   },
+   {
+    "where": "NOTE.md line 28: \"putting the line on `Stock` would take out at most 18 proof lines and bring in about 27\"",
+    "kind": "says less than is there",
+    "must_fix": true,
+    "evidence": "stock-and-line report, E4: 'About 27 to 29 lines in against 18 out. These counts of what would come in are my estimate from reading; nothing was compiled'; corrected wording 'take out at most the 18 proof lines of account and bring in about 27 or more'; not_done: 'the line counts for what the carrying would bring in (about 27 to 29) are my estimate of proofs I did not write. The 18 … counted from the file'. LineOnAStock.lean:1312-1329 is the 18-line proof of `account`. So 18 is as the report says; 'about 27' is the low end of the range and its limit is dropped.",
+    "wording": "putting the line on `Stock` would take out at most the 18 proof lines of `account` (counted) and bring in about 27 to 29 (the reader's estimate of proofs not written)"
+   },
+   {
+    "where": "NOTE.md line 30: \"and new formation without end in a finite family needs gain from beyond it (`Gain.rises_late_of_newly_supported`, `KeepsWidening.passes_every_bound`)\"",
+    "kind": "says more than is there",
+    "must_fix": true,
+    "evidence": "Gain.lean:205 `rises_late_of_newly_supported (increasing) (from_) (req : ∀ n, W.RequiresWithin cs (f n)) (first : ∀ n, W.FirstSupported T (at_ n) (f n)) (M) : ∃ t, M ≤ t ∧ W.stock cs t < W.stock cs (t + 1)`; KeepingWidening.lean:287 `passes_every_bound (keeps) (req) (K M) : ∃ t, M ≤ t ∧ K < W.stock cs t`. Neither mentions a flow, balance, dissipation or anything beyond the family; both conclude only that the family's stock rises. 'From beyond' is Gain.lean:279 `rise_from_rest_or_open (gainless : L.Gainless) (distinct) (rise) : (L.withImbalance W).NetGiver cs t none ∨ ¬ L.ClosedAt cs t`, which the frozen file and the sweep reader cite and the note drops. The premise is formations first supported (able to form), not formed.",
+    "wording": "and where formations first supported at ever later steps each require, fixed, only members of a finite family, the family's stock rises at arbitrarily late steps (`Gain.rises_late_of_newly_supported`; past every bound where the course keeps widening, `KeepsWidening.passes_every_bound`), and where nothing comes from nothing each such rise is from what the flow does not count or across the family's boundary (`Gain.rise_from_rest_or_open`)."
+   },
+   {
+    "where": "NOTE.md line 30: \"*Under dissipation the third sense runs the other way.*\" and \"every such arising\"",
+    "kind": "unclear to a reader who was not here",
+    "must_fix": false,
+    "evidence": "The three senses are listed only in FROZEN-DIG-DEEPER.md (appended 16:17); the note never says which is the third. Roles.lean:650 `Embodied.arising_lowers_on (balances) (dissipates : L.DissipatesOn ds t) (embodied : W.Embodied x) (mem : x ∈ ds) (arises : W.Arises t x) : W.stock ds (t + 1) < W.stock ds t`: 'such' stands for `Embodied` (:414, standing as a condition exactly while active). Otherwise the sentence is as the Lean and the roles reader have it.",
+    "wording": "*Under dissipation the third sense (arising as something others can rest on) runs the other way.* … every arising of something that stands as a condition exactly while it is active lowers the stock of a family dissipated on that holds it"
+   },
+   {
+    "where": "NOTE.md line 32: \"The two-way laws the second round found share a shape: a going-on that rests on something at a need is left as it was exactly while others' net take stays within how far that thing stands above the need.\"",
+    "kind": "says more than is there",
+    "must_fix": true,
+    "evidence": "Only Admission.lean:633 `supported_iff_within_margin` and OwnWidening.lean:146 `widens_iff_others_within` are two-way with that shape, and they say 'is supported' / 'widens', against the withheld levels, not 'left as it was'. The frozen file's third instance, DrawnBeyond.lean:205 `breaks_beyond`, is one-way. The other two-way laws the second round found do not have the shape by their statements: RegimeMargin.lean:2687 `ends_iff_below` (a computed threshold on the condition's own level), :2219 `ends_together`, Optimum.lean:9027 `drain_perfect_iff`, Wholes.lean:401 `AllWhole.persists_iff`. The note names none of the laws meant.",
+    "wording": "Two of the two-way laws the second round found (`Admission.supported_iff_within_margin`, `OwnWidening.widens_iff_others_within`) share a shape, and `DrawnBeyond.breaks_beyond` has one direction of it: what rests on something at a need is supported exactly while a part's net take stays within how far that thing, without the part, stands above the need."
+   },
+   {
+    "where": "NOTE.md line 32: \"`RegimeMargin`'s own opening account says its point of no return is that margin \\\"with the rest responding\\\", where `Retaining`'s holds the rest as it was.\"",
+    "kind": "says more than is there",
+    "must_fix": false,
+    "evidence": "RegimeMargin.lean:10-13: '`Becoming.Retaining`'s margin law compares the levels with a part and the levels without it while the rest's exchanges are held as they were (`Flow.WithheldLevels`). On measured data that comparison holds as an identity; what a measurement can test is the margin with the rest responding. This module states that margin.' The quoted words are verbatim and the contrast with Retaining is fair. The account says the module states that margin; it does not say the point of no return is it. Retaining is not named elsewhere in the note; its law (Retaining.lean:188, :241) is proved from Admission's `supported_iff_within_margin_at`, which is the link a reader needs. No Lean statement joins the two (Retaining occurs in RegimeMargin.lean at line 10 only), which the note's 'not tried' covers.",
+    "wording": "`RegimeMargin`'s own opening account (AI-written) says the module states the margin \"with the rest responding\", where the margin law of `Retaining` (built on `Admission`'s) holds the rest as it was."
+   },
+   {
+    "where": "NOTE.md line 3: \"The writer opened four of the statements named below himself (`Admission.supported_iff_within_margin`, `DrawnBeyond.breaks_beyond`, `Optimum.kept_returns`, and the pair in `RelationalRenewal`); the rest stand on one reader each unless a count is given.\"",
+    "kind": "unclear to a reader who was not here",
+    "must_fix": true,
+    "evidence": "Nothing stored records the writer's reading, so it is his say-so and not a check a reader can rely on: the note's telling of two of the statements he lists still drops a premise (`breaks_beyond`'s `gainless`; `dependent_overdraw_ends_itself`'s `fWithin : L.needF ≤ L.needG`). Five statements are listed, not four. 'One reader each' also hides the kind of read: `Admission.closes_nothing` and `Optimum.drain_perfect_iff` stand on the sweep reader, who read statements only and did not unfold `WithheldLevels`, `Perfect` or `portion`; other items stand on several readers with no count given (balance allowing a giver, seven).",
+    "wording": "The writer says he opened five of the statements named below himself (…); there is no record of that reading and it is not an independent check. The rest stand on the readers' reports, some on one reader who read the statement and not its proof."
+   },
+   {
+    "where": "NOTE.md line 16: \"The frozen file has each verdict with its evidence. Three of them matter most:\"",
+    "kind": "unclear to a reader who was not here",
+    "must_fix": false,
+    "evidence": "The first two bullets are not verdicts on guesses: in FROZEN-DIG-DEEPER.md they stand under 'What I had not seen at all' (from the readers' beyond_the_guesses); only the third is a verdict (D6).",
+    "wording": "The frozen file has each verdict with its evidence. Three things from the round matter most:"
+   }
+  ],
+  "exact_count": 29,
+  "not_done": "Nothing was built or run; no Lean proof was judged, only statements (hypotheses and conclusion), and named definitions inside hypotheses were unfolded only where shown in the read list (not `Around`, `Band`, `Perfect`, `portion`, `Regime`'s parts, `KeepsWidening`'s parts, `RequiresWithin` beyond its body line). I did not read the 14 reports whole (about 820,000 characters): I read every verdict, every read list head, and the entries and passages that bear on the note's claims; a limit stated only in an unread law entry could have been missed. Not checked: the note's sentence on what the direction wants against _process/DIRECTION.md; the clock times (15:58, 16:15, 16:17, 16:34 WIB) and that the guesses were written before the readers ran (file times of the readers' scripts, 16:03 to 16:22, are consistent, nothing more); that nothing in the atlas changed (git status of the worktree shows changes only under _process/ and sources/, and the new dig folder); the D6 runs were not rerun and the program's argument for its 'for ever' verdicts was read, not checked; the readers' other Python searches were not opened. 'No other module uses these laws' was checked only by my own grep on names over Becoming/*.lean and ../deeper. 'Offspring on the web are a supplied list' and 'no module has the four together' were not checked beyond the reports. `OwnWidening.widens_iff_others_within`, `Wholes` and `Retaining` were opened at one statement each. The exact count is of sentences or clauses I judged to say what the Lean statement or the report says; it includes clauses that are the writer's own say-so about his session (nothing built, no person has read it), which I could not check."
+ }
+]
