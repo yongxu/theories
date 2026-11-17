@@ -1,0 +1,21 @@
+{
+  "tree": "/Users/ren/tmp/dj/batch19/mixed",
+  "modules": 153,
+  "ran": [
+    "Becoming.ScratchMixedWay",
+    "BecomingScratchMixedWayAxiomAudit"
+  ],
+  "reused": 152,
+  "unclean": [],
+  "audits": {
+    "Becoming.ScratchMixedWay": {
+      "theorems": 40,
+      "declarations": 48,
+      "with_axioms": {}
+    }
+  },
+  "seconds": {
+    "Becoming.ScratchMixedWay": 7.153,
+    "BecomingScratchMixedWayAxiomAudit": 0.504
+  }
+}

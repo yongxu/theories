@@ -1,0 +1,19 @@
+== C2 (ii): m > a, c >= 1.  exact conditions tried against the simulated fate ==
+L zero decided 17280 never 104 open 0 takers never unmet 0 | mismatches: condA(L,g=0) 0  condB(B,g=0) 1469  Holds at j+1 0
+L min(z,3) decided 17280 never 192 open 0 takers never unmet 0 | mismatches: condA(L,g=0) 90  condB(B,g=0) 1648  Holds at j+1 0
+L hump12 decided 17280 never 192 open 0 takers never unmet 0 | mismatches: condA(L,g=0) 90  condB(B,g=0) 1506  Holds at j+1 0
+L z decided 17280 never 192 open 0 takers never unmet 0 | mismatches: condA(L,g=0) 90  condB(B,g=0) 1511  Holds at j+1 0
+L 2z decided 13321 never 232 open 3959 takers never unmet 0 | mismatches: condA(L,g=0) 130  condB(B,g=0) 1370  Holds at j+1 0
+B zero decided 17280 never 10086 open 0 takers never unmet 4872 | mismatches: condA(L,g=0) 5110  condB(B,g=0) 0  Holds at j+1 776
+     first mismatch of Holds at j+1: ({'a': 1, 'm': 2, 't': 2, 'b': 1, 'c': 1, 'k': 2, 'NG': 1, 'n0': 1, 'x0': 1}, ('never', 'invB', 1), 0, [(True, 1, 1, 0), (True, 0, 1, 0), (True, 0, 1, 0), (True, 0, 1, 0)])
+B min(z,3) decided 17280 never 10114 open 0 takers never unmet 4872 | mismatches: condA(L,g=0) 5140  condB(B,g=0) 30  Holds at j+1 776
+     first mismatch of Holds at j+1: ({'a': 1, 'm': 2, 't': 2, 'b': 1, 'c': 1, 'k': 2, 'NG': 1, 'n0': 1, 'x0': 1}, ('never', 'invB', 1), 0, [(True, 1, 1, 0), (True, 0, 1, 0), (True, 0, 1, 0), (True, 0, 1, 0)])
+B hump12 decided 17250 never 10084 open 30 takers never unmet 4872 | mismatches: condA(L,g=0) 5112  condB(B,g=0) 26  Holds at j+1 776
+     first mismatch of Holds at j+1: ({'a': 1, 'm': 2, 't': 2, 'b': 1, 'c': 1, 'k': 2, 'NG': 1, 'n0': 1, 'x0': 1}, ('never', 'invB', 1), 0, [(True, 1, 1, 0), (True, 0, 1, 0), (True, 0, 1, 0), (True, 0, 1, 0)])
+B z decided 17280 never 10114 open 0 takers never unmet 4872 | mismatches: condA(L,g=0) 5140  condB(B,g=0) 30  Holds at j+1 776
+     first mismatch of Holds at j+1: ({'a': 1, 'm': 2, 't': 2, 'b': 1, 'c': 1, 'k': 2, 'NG': 1, 'n0': 1, 'x0': 1}, ('never', 'invB', 1), 0, [(True, 1, 1, 0), (True, 0, 1, 0), (True, 0, 1, 0), (True, 0, 1, 0)])
+B 2z decided 14821 never 8940 open 2459 takers never unmet 4872 | mismatches: condA(L,g=0) 3966  condB(B,g=0) 40  Holds at j+1 653
+     first mismatch of Holds at j+1: ({'a': 1, 'm': 2, 't': 2, 'b': 1, 'c': 1, 'k': 2, 'NG': 1, 'n0': 1, 'x0': 1}, ('never', 'invB', 1), 0, [(True, 1, 1, 0), (True, 0, 1, 0), (True, 0, 1, 0), (True, 0, 1, 0)])
+== C2 (ii) order L, g = 0: the closed form against the simulated fate ==
+  cases 69120 (x0 in 0..59) never 104 mismatches 0
+python3 s2_two_kinds.py ii iic  1.89s user 0.03s system 87% cpu 2.183 total

@@ -1,0 +1,484 @@
+import Becoming.LineOnAStock
+
+/-!
+# Scratch: a way that grows and goes on
+
+AI-written (Claude, Opus), 17 November 2026. SCRATCH: outside the package, not landed, not read by
+anyone who did not write it. Built only with `scratch_build.py` against the checker's cache. The words
+line, stock, need, use, give and kids are working names of this one model's parts, as in
+`LineOnAStock`; they are not the map's words.
+
+## The model
+
+`LineOnAStock` with one more thing a unit does: `give : U → Nat`. In the order "on what is left"
+(order L of `tmp/r7/one-model/check/round15/FROZEN-THE-SECOND-WAY.md`): with `z = x - taken use w`,
+the next level is `z + giving z + gift need give w z`, where `gift` is the total of `give u` over the
+units `u` of `w` with `need u ≤ z` (`level`). The way after a step is `LineOnAStock.after`, as before.
+`step`, `net` and `course` are `LineOnAStock`'s with `level` in place of `left`.
+
+## What is proved here
+
+* `level_zero`, `course_zero`, `unending_zero_iff`: with `give = 0` the level is `LineOnAStock.left`,
+  the course is `LineOnAStock.course`, and the net never ends exactly where `LineOnAStock.net` never
+  ends.
+* `ways_alike_any`: alikeness over any two level laws. `ways_alike_line` is `LineOnAStock.ways_alike`
+  re-derived from it; `ways_alike_give` the same for two gives.
+* `covered`: units that have kids, kids needing no more than their parent, each unit giving at least
+  what its kids together take, from a way that is not empty with every need at most what is left:
+  the way is its generations, every need is at most what is left, what is left never falls, and the
+  net never ends.
+* `OneKind.unending_iff`: one kind on a stock that gives nothing, exactly.
+* `Kept.side_by_side`: `LineOnAStock.Doubling` (nothing put back; ends) beside the same units each
+  putting back two (never ends, what is left never falls).
+
+Every declaration is meant to have an empty axiom report; the build log says whether it has.
+-/
+
+namespace Becoming
+namespace ScratchCovering
+
+open LineOnAStock
+
+variable {U : Type}
+
+/-! ## 1. The model -/
+
+/-- What the units of `w` whose need `z` meets put back: the total of `give u` over them. -/
+def gift (need give : U → Nat) (w : List U) (z : Nat) : Nat :=
+  total w fun u => cond (decide (need u ≤ z)) (give u) 0
+
+/-- The level after a step, putting back on what is left (order L): with `z = x - taken use w`, it is
+`z + giving z` (`RegimeMargin.step`) and what the units met at `z` put back. -/
+def level (need : U → Nat) (giving : Nat → Nat) (use give : U → Nat) (w : List U) (x : Nat) : Nat :=
+  RegimeMargin.step giving (taken use w) x + gift need give w (x - taken use w)
+
+/-- The pair's step: the way after a step (`LineOnAStock.after`) and the level after it. -/
+abbrev step (need : U → Nat) (kids : U → List U) (giving : Nat → Nat) (use give : U → Nat) :
+    List U × Nat → List U × Nat :=
+  TurningInTime.pair (after need kids) (level need giving use give)
+
+/-- The net: the pair's step while some unit's need is met (`LineOnAStock.Goes`). -/
+def net (need : U → Nat) (kids : U → List U) (giving : Nat → Nat) (use give : U → Nat) :
+    «际» (List U × Nat) :=
+  Law.stepWhile (Goes need) (step need kids giving use give)
+
+/-- The course: the pair's orbit from `s`. -/
+abbrev course (need : U → Nat) (kids : U → List U) (giving : Nat → Nat) (use give : U → Nat)
+    (s : List U × Nat) : Nat → List U × Nat :=
+  Law.orbit (step need kids giving use give) s
+
+/-! ## 2. Nothing put back is the line on a stock -/
+
+theorem cond_zero : ∀ b : Bool, cond b (0 : Nat) 0 = 0
+  | true => rfl
+  | false => rfl
+
+/-- With `give = 0` nothing is put back, at any way and level. -/
+theorem gift_zero (need : U → Nat) (z : Nat) : ∀ w : List U, gift need (fun _ => 0) w z = 0
+  | [] => rfl
+  | u :: w => (congrArg (· + gift need (fun _ => 0) w z) (cond_zero (decide (need u ≤ z)))).trans
+      ((Nat.zero_add _).trans (gift_zero need z w))
+
+/-- **With `give = 0` the level is `LineOnAStock.left`**, at every way and level, under any `need`,
+giving and use. -/
+theorem level_zero (need : U → Nat) (giving : Nat → Nat) (use : U → Nat) (w : List U) (x : Nat) :
+    level need giving use (fun _ => 0) w x = left giving use w x :=
+  congrArg (RegimeMargin.step giving (taken use w) x + ·) (gift_zero need _ w)
+
+/-- **With `give = 0` the course is `LineOnAStock.course`**, at every step, from every start, under
+any `need`, `kids`, giving and use. -/
+theorem course_zero (need : U → Nat) (kids : U → List U) (giving : Nat → Nat) (use : U → Nat)
+    (s : List U × Nat) :
+    ∀ n, course need kids giving use (fun _ => 0) s n = LineOnAStock.course need kids giving use s n
+  | 0 => rfl
+  | n + 1 =>
+    (congrArg (step need kids giving use (fun _ => 0)) (course_zero need kids giving use s n)).trans
+      (congrArg (Prod.mk (after need kids (LineOnAStock.course need kids giving use s n).1
+          (LineOnAStock.course need kids giving use s n).2))
+        (level_zero need giving use (LineOnAStock.course need kids giving use s n).1
+          (LineOnAStock.course need kids giving use s n).2))
+
+/-- **With `give = 0` the net never ends exactly where `LineOnAStock.net` never ends**, from every
+start, under any `need`, `kids`, giving and use: `Law.stepWhile_unending_iff` on both sides and
+`course_zero`. -/
+theorem unending_zero_iff (need : U → Nat) (kids : U → List U) (giving : Nat → Nat) (use : U → Nat)
+    (s : List U × Nat) :
+    «不穷» (net need kids giving use (fun _ => 0)) «一» s ↔
+      «不穷» (LineOnAStock.net need kids giving use) «一» s :=
+  have same : (∀ n, Goes need (course need kids giving use (fun _ => 0) s n)) ↔
+      ∀ n, Goes need (LineOnAStock.course need kids giving use s n) :=
+    ⟨fun all n => Eq.subst (motive := Goes need) (course_zero need kids giving use s n) (all n),
+     fun all n => Eq.subst (motive := Goes need) (course_zero need kids giving use s n).symm (all n)⟩
+  Law.stepWhile_unending_iff.trans (same.trans Law.stepWhile_unending_iff.symm)
+
+/-! ## 3. Alike under any level law -/
+
+/-- **Ways alike under any two level laws.** For any `lv lv' : List U → Nat → Nat`, one `need` and
+`kids`, one way `w` and two start levels `x`, `x'`: if for every `j < n` the two levels at step `j` of
+the orbits of `TurningInTime.pair (after need kids) lv` from `(w, x)` and of
+`TurningInTime.pair (after need kids) lv'` from `(w, x')` meet the same needs among the units of the
+first orbit's way there (`alike`), the two ways are the same at every step `j ≤ n`. Nothing is asked of
+`lv` or `lv'`. By `LineOnAStock.after_alike`, step by step. -/
+theorem ways_alike_any {need : U → Nat} {kids : U → List U} (lv lv' : List U → Nat → Nat)
+    {w : List U} {x x' n : Nat}
+    (alike : ∀ j, j < n → ∀ u, u ∈ (Law.orbit (TurningInTime.pair (after need kids) lv) (w, x) j).1 →
+      (need u ≤ (Law.orbit (TurningInTime.pair (after need kids) lv) (w, x) j).2 ↔
+        need u ≤ (Law.orbit (TurningInTime.pair (after need kids) lv') (w, x') j).2)) :
+    ∀ j, j ≤ n → (Law.orbit (TurningInTime.pair (after need kids) lv) (w, x) j).1 =
+      (Law.orbit (TurningInTime.pair (after need kids) lv') (w, x') j).1
+  | 0, _ => rfl
+  | j + 1, le =>
+    (after_alike (alike j le)).trans
+      (congrArg (fun l => after need kids l
+          (Law.orbit (TurningInTime.pair (after need kids) lv') (w, x') j).2)
+        (ways_alike_any lv lv' alike j (Nat.le_of_succ_le le)))
+
+/-- **`LineOnAStock.ways_alike`, re-derived** from `ways_alike_any` at
+`lv = LineOnAStock.left g use`, `lv' = LineOnAStock.left g' use'`; its statement verbatim, with
+`course` written `LineOnAStock.course` (inside this namespace `course` is the course with `give`).
+For two givings `g`, `g'`, two uses, two start levels, one way and one `need` and `kids`: if for every
+`j < n` the two levels at step `j` meet the same needs of the first course's way there, the ways agree
+at every `j ≤ n`. -/
+theorem ways_alike_line {need : U → Nat} {kids : U → List U} {g g' : Nat → Nat} {use use' : U → Nat}
+    {w : List U} {x x' n : Nat}
+    (alike : ∀ j, j < n → ∀ u, u ∈ (LineOnAStock.course need kids g use (w, x) j).1 →
+      (need u ≤ (LineOnAStock.course need kids g use (w, x) j).2 ↔
+        need u ≤ (LineOnAStock.course need kids g' use' (w, x') j).2)) :
+    ∀ j, j ≤ n → (LineOnAStock.course need kids g use (w, x) j).1 =
+      (LineOnAStock.course need kids g' use' (w, x') j).1 :=
+  ways_alike_any (left g use) (left g' use') alike
+
+/-- **What a unit puts back makes no difference to who comes next while the same needs are met.**
+For two givings `g`, `g'`, two uses `use`, `use'`, two gives `give`, `give'`, two start levels `x`,
+`x'`, one way `w` and one `need` and `kids`: if for every `j < n` the levels at step `j` of the two
+courses with putting back meet the same needs of the first course's way there (`alike`), the ways
+agree at every `j ≤ n`. `ways_alike_any` at the two `level`s. -/
+theorem ways_alike_give {need : U → Nat} {kids : U → List U} {g g' : Nat → Nat}
+    {use use' give give' : U → Nat} {w : List U} {x x' n : Nat}
+    (alike : ∀ j, j < n → ∀ u, u ∈ (course need kids g use give (w, x) j).1 →
+      (need u ≤ (course need kids g use give (w, x) j).2 ↔
+        need u ≤ (course need kids g' use' give' (w, x') j).2)) :
+    ∀ j, j ≤ n → (course need kids g use give (w, x) j).1 =
+      (course need kids g' use' give' (w, x') j).1 :=
+  ways_alike_any (level need g use give) (level need g' use' give') alike
+
+/-! ## 4. The covered way -/
+
+/-- What all the kids of a way take is the total over the way of what each unit's kids take. -/
+theorem taken_allKids (kids : U → List U) (use : U → Nat) :
+    ∀ w : List U, taken use (allKids kids w) = total w fun u => taken use (kids u)
+  | [] => rfl
+  | u :: w => (total_append use (allKids kids w) (kids u)).trans
+      (congrArg (taken use (kids u) + ·) (taken_allKids kids use w))
+
+/-- Where every need of `w` is met at `z`, what is put back is every unit's give. -/
+theorem gift_all {need give : U → Nat} {z : Nat} :
+    ∀ {w : List U}, (∀ u, u ∈ w → need u ≤ z) → gift need give w z = total w give
+  | [], _ => rfl
+  | u :: w, met =>
+    (congrArg (fun b => cond b (give u) 0 + gift need give w z) (decide_eq_true (met u (.head w)))).trans
+      (congrArg (give u + ·) (gift_all fun v m => met v (.tail u m)))
+
+/-- **One covered step.** With kids needing no more than their parent (`down`) and each unit giving at
+least what its kids together take (`covers`), under any giving: from a configuration `s` every need of
+whose way is at most what is left, `s.2 - taken use s.1` (`met`), the way after the step is all the
+kids, what is left after the step is at least what was left, and every need of the next way is at most
+what is left after the step. -/
+theorem step_covered {need use give : U → Nat} {kids : U → List U} {giving : Nat → Nat}
+    (down : ∀ u v, v ∈ kids u → need v ≤ need u) (covers : ∀ u, taken use (kids u) ≤ give u)
+    {s : List U × Nat} (met : ∀ u, u ∈ s.1 → need u ≤ s.2 - taken use s.1) :
+    (step need kids giving use give s).1 = allKids kids s.1 ∧
+      s.2 - taken use s.1 ≤
+        (step need kids giving use give s).2 - taken use (step need kids giving use give s).1 ∧
+      ∀ v, v ∈ (step need kids giving use give s).1 →
+        need v ≤ (step need kids giving use give s).2 - taken use (step need kids giving use give s).1 :=
+  have hafter : after need kids s.1 s.2 = allKids kids s.1 :=
+    after_of_met fun u m => Nat.le_trans (met u m) (Nat.sub_le _ _)
+  have hkids : taken use (allKids kids s.1) ≤ total s.1 give :=
+    Nat.le_trans (Nat.le_of_eq (taken_allKids kids use s.1)) (total_le s.1 fun u _ => covers u)
+  have hlevel : level need giving use give s.1 s.2 =
+      (s.2 - taken use s.1) + giving (s.2 - taken use s.1) + total s.1 give :=
+    congrArg ((s.2 - taken use s.1) + giving (s.2 - taken use s.1) + ·) (gift_all met)
+  have hlow : taken use (allKids kids s.1) + (s.2 - taken use s.1) ≤ level need giving use give s.1 s.2 :=
+    Nat.le_trans (Nat.add_le_add_right hkids _)
+      (Nat.le_trans (Nat.le_of_eq (Nat.add_comm _ _))
+        (Nat.le_trans (Nat.add_le_add_right (Nat.le_add_right _ _) _) (Nat.le_of_eq hlevel.symm)))
+  have hz : s.2 - taken use s.1 ≤ level need giving use give s.1 s.2 - taken use (after need kids s.1 s.2) :=
+    Eq.subst (motive := fun l => s.2 - taken use s.1 ≤ level need giving use give s.1 s.2 - taken use l)
+      hafter.symm (Naturals.le_sub_of_add_le hlow)
+  ⟨hafter, hz, fun v mv => match (mem_after_iff (need := need) (kids := kids)).mp mv with
+    | ⟨p, mp, _, mk⟩ => Nat.le_trans (down p v mk) (Nat.le_trans (met p mp) hz)⟩
+
+/-- **The covered way: a way that grows and goes on.** Premises: every unit has kids (`some`); kids
+need no more than their parent (`down`); each unit gives at least what its kids together take
+(`covers : taken use (kids u) ≤ give u`); any giving; a way `w` that is not empty (`ne`) every unit of
+which has its need at most what is left after the take, `x - taken use w` (`met`). Conclusion: at
+every step `n` the way is `generation kids n w`, every need of it is at most what is left there
+(`level - taken`), what is left at step `n + 1` is at least what is left at step `n`, and the net never
+ends (`«不穷» (net …) «一» (w, x)`, as `LineOnAStock.unending_iff_holds` states it). The way may grow
+without bound. By `step_covered`, step by step, and `generation_mem`. -/
+theorem covered {need use give : U → Nat} {kids : U → List U} {giving : Nat → Nat}
+    (some : ∀ u, kids u ≠ []) (down : ∀ u v, v ∈ kids u → need v ≤ need u)
+    (covers : ∀ u, taken use (kids u) ≤ give u) {w : List U} {x : Nat} (ne : w ≠ [])
+    (met : ∀ u, u ∈ w → need u ≤ x - taken use w) :
+    (∀ n, (course need kids giving use give (w, x) n).1 = generation kids n w ∧
+      (∀ u, u ∈ (course need kids giving use give (w, x) n).1 →
+        need u ≤ (course need kids giving use give (w, x) n).2 -
+          taken use (course need kids giving use give (w, x) n).1) ∧
+      (course need kids giving use give (w, x) n).2 -
+          taken use (course need kids giving use give (w, x) n).1 ≤
+        (course need kids giving use give (w, x) (n + 1)).2 -
+          taken use (course need kids giving use give (w, x) (n + 1)).1) ∧
+    «不穷» (net need kids giving use give) «一» (w, x) :=
+  have inv : ∀ n, (course need kids giving use give (w, x) n).1 = generation kids n w ∧
+      ∀ u, u ∈ (course need kids giving use give (w, x) n).1 →
+        need u ≤ (course need kids giving use give (w, x) n).2 -
+          taken use (course need kids giving use give (w, x) n).1 := by
+    intro n
+    induction n with
+    | zero => exact ⟨rfl, met⟩
+    | succ n ih =>
+      have st := step_covered (giving := giving) down covers ih.2
+      exact ⟨st.1.trans (congrArg (allKids kids) ih.1), st.2.2⟩
+  have all : ∀ n, (course need kids giving use give (w, x) n).1 = generation kids n w ∧
+      (∀ u, u ∈ (course need kids giving use give (w, x) n).1 →
+        need u ≤ (course need kids giving use give (w, x) n).2 -
+          taken use (course need kids giving use give (w, x) n).1) ∧
+      (course need kids giving use give (w, x) n).2 -
+          taken use (course need kids giving use give (w, x) n).1 ≤
+        (course need kids giving use give (w, x) (n + 1)).2 -
+          taken use (course need kids giving use give (w, x) (n + 1)).1 :=
+    fun n => ⟨(inv n).1, (inv n).2, (step_covered (giving := giving) down covers (inv n).2).2.1⟩
+  ⟨all, Law.stepWhile_unending_iff.mpr fun n =>
+    match mem_of_ne_nil ne with
+    | ⟨v, mv⟩ => match generation_mem some mv n with
+      | ⟨u, mu⟩ =>
+        have mu' : u ∈ (course need kids giving use give (w, x) n).1 :=
+          Eq.subst (motive := fun l => u ∈ l) (inv n).1.symm mu
+        ⟨u, mu', Nat.le_trans ((inv n).2 u mu') (Nat.sub_le _ _)⟩⟩
+
+/-! ## 5. One kind, exact, on a stock that gives nothing -/
+
+/-- A number at most another leaves nothing when taken from it. -/
+theorem sub_zero_of_le : ∀ {a b : Nat}, a ≤ b → a - b = 0
+  | 0, b, _ => Nat.zero_sub b
+  | a + 1, 0, h => absurd h (Nat.not_succ_le_zero a)
+  | a + 1, b + 1, h => (Nat.succ_sub_succ a b).trans (sub_zero_of_le (Nat.le_of_succ_le_succ h))
+
+/-- Where `c < d` and `0 < y`, `y + c - d < y`. -/
+theorem add_sub_lt {y c d : Nat} (pos : 0 < y) (lt : c < d) : y + c - d < y :=
+  (Nat.lt_or_ge (y + c) d).elim
+    (fun below => Nat.lt_of_le_of_lt (Nat.le_of_eq (sub_zero_of_le (Nat.le_of_lt below))) pos)
+    (fun within => Nat.lt_of_add_lt_add_right (n := d)
+      (Nat.lt_of_le_of_lt (Nat.le_of_eq (Naturals.sub_add_cancel within)) (Nat.add_lt_add_left lt y)))
+
+/-- A total of one number over a list is the list's length times it. -/
+theorem total_const' (c : Nat) : ∀ w : List U, total w (fun _ => c) = w.length * c
+  | [] => (Nat.zero_mul c).symm
+  | _ :: w => (congrArg (c + ·) (total_const' c w)).trans
+      ((Nat.add_comm _ _).trans (Nat.succ_mul _ c).symm)
+
+/-- Where no need of `w` is met at `z`, nothing is put back. -/
+theorem gift_none {need give : U → Nat} {z : Nat} :
+    ∀ {w : List U}, (∀ u, u ∈ w → z < need u) → gift need give w z = 0
+  | [], _ => rfl
+  | u :: w, unmet =>
+    (congrArg (fun b => cond b (give u) 0 + gift need give w z)
+        (decide_eq_false (Nat.not_le_of_gt (unmet u (.head w))))).trans
+      ((Nat.zero_add _).trans (gift_none fun v m => unmet v (.tail u m)))
+
+namespace OneKind
+
+/-- Every unit needs `a`. -/
+def need (a : Nat) (_ : Unit) : Nat := a
+/-- Every unit takes `t`. -/
+def use (t : Nat) (_ : Unit) : Nat := t
+/-- Every unit puts back `b`. -/
+def give (b : Nat) (_ : Unit) : Nat := b
+/-- Every unit leaves `k` units of the kind. -/
+def kids (k : Nat) (_ : Unit) : List Unit := List.replicate k ()
+/-- The stock gives nothing of itself. -/
+def nothing (_ : Nat) : Nat := 0
+
+/-- A way of `N ≥ 1` units is not empty. -/
+theorem replicate_ne {N : Nat} (pos : 1 ≤ N) : List.replicate N () ≠ [] :=
+  match N, pos with
+  | _ + 1, _ => List.cons_ne_nil _ _
+
+/-- A way of the kind has `N` units. -/
+theorem length_rep : ∀ N, (List.replicate N ()).length = N
+  | 0 => rfl
+  | N + 1 => congrArg (· + 1) (length_rep N)
+
+/-- What a way of the kind takes: its length times `t`. -/
+theorem taken_eq (t : Nat) (w : List Unit) : taken (use t) w = w.length * t :=
+  total_const' t w
+
+/-- What the kids of a unit take: `k * t`. -/
+theorem kids_take (k t : Nat) (u : Unit) : taken (use t) (kids k u) = k * t :=
+  (taken_eq t _).trans (congrArg (· * t) (length_rep k))
+
+/-- **One step of the kind, every unit met and the need met on what is left.** Where the level `s.2`
+meets `a` and what is left, `z = s.2 - taken`, meets `a` too: the next level is `z` and every unit's
+`b`, and the next way takes its length times `k * t`. -/
+theorem one_step {a t b k : Nat} {s : List Unit × Nat} (metx : a ≤ s.2)
+    (metz : a ≤ s.2 - taken (use t) s.1) :
+    (step (need a) (kids k) nothing (use t) (give b) s).2 =
+        (s.2 - taken (use t) s.1) + s.1.length * b ∧
+      taken (use t) (step (need a) (kids k) nothing (use t) (give b) s).1 = s.1.length * (k * t) :=
+  have hafter : after (need a) (kids k) s.1 s.2 = allKids (kids k) s.1 :=
+    after_of_met fun _ _ => metx
+  ⟨congrArg ((s.2 - taken (use t) s.1) + ·)
+      ((gift_all (need := need a) (give := give b) fun _ _ => metz).trans (total_const' b s.1)),
+   (congrArg (taken (use t)) hafter).trans
+     ((taken_allKids (kids k) (use t) s.1).trans
+       ((total_const' (taken (use t) (List.replicate k ())) s.1).trans
+         (congrArg (s.1.length * ·) (kids_take k t ()))))⟩
+
+/-- What a way of `N` units of the kind takes: `N * t`. -/
+theorem taken_rep (t N : Nat) : taken (use t) (List.replicate N ()) = N * t :=
+  (taken_eq t _).trans (congrArg (· * t) (length_rep N))
+
+/-- The course of the kind from `N` units at `x`. -/
+abbrev C (a t b k N x : Nat) : Nat → List Unit × Nat :=
+  course (need a) (kids k) nothing (use t) (give b) (List.replicate N (), x)
+
+/-- What is left at step `n` of that course: the level less what the way takes. -/
+abbrev Left (a t b k N x n : Nat) : Nat := (C a t b k N x n).2 - taken (use t) (C a t b k N x n).1
+
+/-- Where what is left at a step is below every need, the next level is what is left (nothing is
+put back and the stock gives nothing). -/
+theorem next_of_unmet {a t b k : Nat} {s : List Unit × Nat} (below : s.2 - taken (use t) s.1 < a) :
+    (step (need a) (kids k) nothing (use t) (give b) s).2 = s.2 - taken (use t) s.1 + 0 :=
+  congrArg (s.2 - taken (use t) s.1 + nothing (s.2 - taken (use t) s.1) + ·)
+    (gift_none (need := need a) (give := give b) (z := s.2 - taken (use t) s.1) (w := s.1)
+      fun _ _ => below)
+
+/-- **The "only if" side.** Units of one kind needing `a ≥ 1` (`ha`), taking `t`, putting back `b`,
+leaving `k` units of the kind, on a stock that gives nothing, from `N` units at `x`: if the net never
+ends, then `k * t ≤ b` and `a + t * N ≤ x`. What is left meets `a` at every step, or nothing is put
+back and the next level is below `a`; at step 0 that is `a + t * N ≤ x`; and were `b < k * t`, what is
+left would fall by at least one at every step (`one_step`, `add_sub_lt`) for ever. No premise on `k`
+or `N` is used here. -/
+theorem only_if {a t b k N x : Nat} (ha : 1 ≤ a)
+    (never : «不穷» (net (need a) (kids k) nothing (use t) (give b)) «一» (List.replicate N (), x)) :
+    k * t ≤ b ∧ a + t * N ≤ x :=
+  have goes := Law.stepWhile_unending_iff.mp never
+  have left_met : ∀ n, a ≤ Left a t b k N x n := fun n =>
+    (Nat.lt_or_ge (Left a t b k N x n) a).elim
+      (fun below => match goes (n + 1) with
+        | ⟨_, _, le⟩ => absurd (Nat.le_trans le (Nat.le_of_eq
+            (next_of_unmet (b := b) (k := k) (s := C a t b k N x n) below)))
+            (Nat.not_le_of_gt below))
+      id
+  have l0 : a ≤ x - N * t :=
+    Nat.le_trans (left_met 0) (Nat.le_of_eq (congrArg (x - ·) (taken_rep t N)))
+  have start : a + t * N ≤ x :=
+    (Nat.lt_or_ge x (N * t)).elim
+      (fun lt => absurd (Nat.le_trans l0 (Nat.le_of_eq (sub_zero_of_le (Nat.le_of_lt lt))))
+        (Nat.not_le_of_gt (Nat.lt_of_lt_of_le Nat.zero_lt_one ha)))
+      (fun within => Nat.le_trans (Nat.le_of_eq (Nat.add_comm a (t * N)))
+        (Nat.le_trans (Nat.le_of_eq (congrArg (· + a) (Nat.mul_comm t N)))
+          (Naturals.add_le_of_le_sub within l0)))
+  (Nat.lt_or_ge b (k * t)).elim
+    (fun short =>
+      have falls : ∀ n, Left a t b k N x (n + 1) < Left a t b k N x n := fun n =>
+        match goes n with
+        | ⟨_, mu, le⟩ =>
+          have os := one_step (a := a) (t := t) (b := b) (k := k) (s := C a t b k N x n) le
+            (left_met n)
+          Nat.lt_of_le_of_lt
+            (Nat.le_of_eq ((congrArg (· - taken (use t) (C a t b k N x (n + 1)).1) os.1).trans
+              (congrArg ((C a t b k N x n).2 - taken (use t) (C a t b k N x n).1 +
+                (C a t b k N x n).1.length * b - ·) os.2)))
+            (add_sub_lt (Nat.lt_of_lt_of_le Nat.zero_lt_one (Nat.le_trans ha (left_met n)))
+              (Naturals.mul_lt_mul_of_pos (length_pos_of_mem mu) short))
+      have down : ∀ n, Left a t b k N x n + n ≤ Left a t b k N x 0 := by
+        intro n
+        induction n with
+        | zero => exact Nat.le_refl _
+        | succ n ih =>
+          exact Nat.le_trans
+            (Nat.le_of_eq ((congrArg (Left a t b k N x (n + 1) + ·) (Nat.add_comm n 1)).trans
+              (Nat.add_assoc _ 1 n).symm))
+            (Nat.le_trans (Nat.add_le_add_right (falls n) n) ih)
+      absurd (Nat.le_trans (Nat.le_add_left _ _) (down (Left a t b k N x 0 + 1)))
+        (Nat.not_le_of_gt (Nat.lt_succ_self _)))
+    (fun covers => ⟨covers, start⟩)
+
+/-- **One kind, exact, on a stock that gives nothing.** Units of one kind each needing `a ≥ 1`
+(`ha`), taking `t`, putting back `b` and leaving `k ≥ 1` units of the kind (`hk`); the stock gives
+nothing of itself (`nothing`); a way of `N ≥ 1` units (`hN`) at level `x`; order L. The net never ends
+if and only if `k * t ≤ b` and `a + t * N ≤ x`. "If": `covered` (with `hk`, `hN`). "Only if":
+`only_if` (with `ha`). Each of `ha`, `hk`, `hN` is needed: with `a = 0`, `k ≥ 1` and `N ≥ 1` the
+net never ends whatever `t`, `b` and `x` (every need is met and the way is never empty), so the right
+side can fail while the left holds; with `k = 0` or `N = 0` the way is empty by step 1 or at step 0 and
+the net ends while the right side can hold (at `a = t = b = k = N = x = 0`). Searched, not proved, in
+`search/test_covering.py`. -/
+theorem unending_iff {a t b k N x : Nat} (ha : 1 ≤ a) (hk : 1 ≤ k) (hN : 1 ≤ N) :
+    «不穷» (net (need a) (kids k) nothing (use t) (give b)) «一» (List.replicate N (), x) ↔
+      k * t ≤ b ∧ a + t * N ≤ x :=
+  ⟨only_if ha,
+   fun ⟨covers, start⟩ =>
+    (covered (need := need a) (use := use t) (give := give b) (kids := kids k) (giving := nothing)
+      (fun _ => replicate_ne hk) (fun _ _ _ => Nat.le_refl a)
+      (fun u => Nat.le_trans (Nat.le_of_eq (kids_take k t u)) covers) (replicate_ne hN)
+      fun _ _ => Naturals.le_sub_of_add_le (Nat.le_trans (Nat.le_of_eq
+        ((congrArg (· + a) ((taken_rep t N).trans (Nat.mul_comm N t))).trans
+          (Nat.add_comm (t * N) a))) start)).2⟩
+
+end OneKind
+
+/-! ## 6. Kept: doubling, with nothing put back and with two put back -/
+
+namespace Kept
+
+/-- Each unit of `LineOnAStock.Doubling` puts back two: what its two kids take. -/
+def give (_ : Unit) : Nat := 2
+
+/-- **Doubling and putting back what the kids take, by evaluation.** Same units as
+`LineOnAStock.Doubling` (need one, use one, two kids), the same giving `min z (12 - z)`, from one unit
+at twelve, each unit putting back two: the levels at steps 1 to 5 are 14, 16, 20, 28, 44, the ways have
+2, 4, 8, 16, 32 units, and what is left (level less what the way takes) is 11 at step 0 and 12 at
+steps 1 to 5. -/
+theorem course_values :
+    (course Doubling.need Doubling.kids TurningInTime.Three.giving Doubling.use give ([()], 12) 1).2 = 14 ∧
+    (course Doubling.need Doubling.kids TurningInTime.Three.giving Doubling.use give ([()], 12) 2).2 = 16 ∧
+    (course Doubling.need Doubling.kids TurningInTime.Three.giving Doubling.use give ([()], 12) 3).2 = 20 ∧
+    (course Doubling.need Doubling.kids TurningInTime.Three.giving Doubling.use give ([()], 12) 4).2 = 28 ∧
+    (course Doubling.need Doubling.kids TurningInTime.Three.giving Doubling.use give ([()], 12) 5).2 = 44 ∧
+    (course Doubling.need Doubling.kids TurningInTime.Three.giving Doubling.use give ([()], 12) 5).1.length = 32 ∧
+    (course Doubling.need Doubling.kids TurningInTime.Three.giving Doubling.use give ([()], 12) 5).2 -
+      taken Doubling.use
+        (course Doubling.need Doubling.kids TurningInTime.Three.giving Doubling.use give ([()], 12) 5).1 = 12 :=
+  ⟨rfl, rfl, rfl, rfl, rfl, rfl, rfl⟩
+
+/-- **Two growing ways under one comparison.** With the same units (need one, use one, two kids), the
+same giving `min z (12 - z)` and the same start (one unit at twelve): with nothing put back
+(`give = 0`, which by `unending_zero_iff` is `LineOnAStock.Doubling`) the net ends; with each unit
+putting back two, what its kids take (`covered`, its premises checked), the net never ends and what is
+left never falls. -/
+theorem side_by_side :
+    ¬ «不穷» (net Doubling.need Doubling.kids TurningInTime.Three.giving Doubling.use (fun _ => 0))
+        «一» ([()], 12) ∧
+      «不穷» (net Doubling.need Doubling.kids TurningInTime.Three.giving Doubling.use give)
+        «一» ([()], 12) ∧
+      ∀ n, (course Doubling.need Doubling.kids TurningInTime.Three.giving Doubling.use give
+          ([()], 12) n).2 - taken Doubling.use (course Doubling.need Doubling.kids
+            TurningInTime.Three.giving Doubling.use give ([()], 12) n).1 ≤
+        (course Doubling.need Doubling.kids TurningInTime.Three.giving Doubling.use give
+          ([()], 12) (n + 1)).2 - taken Doubling.use (course Doubling.need Doubling.kids
+            TurningInTime.Three.giving Doubling.use give ([()], 12) (n + 1)).1 :=
+  have cov := covered (need := Doubling.need) (use := Doubling.use) (give := give)
+    (kids := Doubling.kids) (giving := TurningInTime.Three.giving)
+    (fun _ => List.cons_ne_nil _ _) (fun _ _ _ => Nat.le_refl 1) (fun _ => Nat.le_refl 2)
+    (List.cons_ne_nil _ _) (fun _ _ => (by decide : 1 ≤ 11))
+  ⟨fun never => (Doubling.course_values).2.2.2.2.2.2.2.2.2.2.2
+      ((unending_zero_iff Doubling.need Doubling.kids TurningInTime.Three.giving Doubling.use
+        ([()], 12)).mp never),
+   cov.2, fun n => (cov.1 n).2.2⟩
+
+end Kept
+
+end ScratchCovering
+end Becoming

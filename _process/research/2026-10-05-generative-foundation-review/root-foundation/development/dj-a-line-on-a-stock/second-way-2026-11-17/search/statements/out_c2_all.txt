@@ -1,0 +1,273 @@
+mode all | runs 1152000 | cpu seconds 6.7
+
+== item 1: m <= a ==
+L g=0              runs 28800: ends 28800, never 0 {}; takers go unmet in 28800, givers unmet no later in 28800 (strictly earlier 2738); later: 0
+B g=0              runs 28800: ends 15072, never 13728 {'P': 13728}; takers go unmet in 15072, givers unmet no later in 15072 (strictly earlier 4497); later: 0 | least never: {'a': 1, 't': 0, 'b': 1, 'm': 1, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x': 1, 'why': 'P'}
+L g=min(z,1)       runs 28800: ends 28800, never 0 {}; takers go unmet in 28800, givers unmet no later in 28800 (strictly earlier 1722); later: 0
+B g=min(z,1)       runs 28800: ends 15072, never 13728 {'P': 13728}; takers go unmet in 15072, givers unmet no later in 15072 (strictly earlier 4198); later: 0 | least never: {'a': 1, 't': 0, 'b': 1, 'm': 1, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x': 1, 'why': 'P'}
+L g=min(z,2)       runs 28800: ends 28800, never 0 {}; takers go unmet in 28800, givers unmet no later in 28800 (strictly earlier 1734); later: 0
+B g=min(z,2)       runs 28800: ends 15072, never 13728 {'P': 13728}; takers go unmet in 15072, givers unmet no later in 15072 (strictly earlier 4210); later: 0 | least never: {'a': 1, 't': 0, 'b': 1, 'm': 1, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x': 1, 'why': 'P'}
+L g=min(z,3)       runs 28800: ends 28800, never 0 {}; takers go unmet in 28800, givers unmet no later in 28800 (strictly earlier 1700); later: 0
+B g=min(z,3)       runs 28800: ends 15072, never 13728 {'P': 13728}; takers go unmet in 15072, givers unmet no later in 15072 (strictly earlier 4210); later: 0 | least never: {'a': 1, 't': 0, 'b': 1, 'm': 1, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x': 1, 'why': 'P'}
+L g=gate(z>=1:1)   runs 28800: ends 28800, never 0 {}; takers go unmet in 28800, givers unmet no later in 28800 (strictly earlier 1722); later: 0
+B g=gate(z>=1:1)   runs 28800: ends 15072, never 13728 {'P': 13728}; takers go unmet in 15072, givers unmet no later in 15072 (strictly earlier 4198); later: 0 | least never: {'a': 1, 't': 0, 'b': 1, 'm': 1, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x': 1, 'why': 'P'}
+L g=gate(z>=2:1)   runs 28800: ends 28800, never 0 {}; takers go unmet in 28800, givers unmet no later in 28800 (strictly earlier 1754); later: 0
+B g=gate(z>=2:1)   runs 28800: ends 15072, never 13728 {'P': 13728}; takers go unmet in 15072, givers unmet no later in 15072 (strictly earlier 4265); later: 0 | least never: {'a': 1, 't': 0, 'b': 1, 'm': 1, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x': 1, 'why': 'P'}
+L g=gate(z>=2:2)   runs 28800: ends 28800, never 0 {}; takers go unmet in 28800, givers unmet no later in 28800 (strictly earlier 1754); later: 0
+B g=gate(z>=2:2)   runs 28800: ends 15072, never 13728 {'P': 13728}; takers go unmet in 15072, givers unmet no later in 15072 (strictly earlier 4279); later: 0 | least never: {'a': 1, 't': 0, 'b': 1, 'm': 1, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x': 1, 'why': 'P'}
+L g=gate(z>=3:2)   runs 28800: ends 28800, never 0 {}; takers go unmet in 28800, givers unmet no later in 28800 (strictly earlier 2727); later: 0
+B g=gate(z>=3:2)   runs 28800: ends 15072, never 13728 {'P': 13728}; takers go unmet in 15072, givers unmet no later in 15072 (strictly earlier 4524); later: 0 | least never: {'a': 1, 't': 0, 'b': 1, 'm': 1, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x': 1, 'why': 'P'}
+
+== item 2: m > a ==
+L g=0              runs 43200: never 343 {'S': 343}, takers never unmet 0
+     exact: agrees 43200 of 43200
+     closed g=0: agrees 43200 of 43200
+     guess: left meets the need: agrees 43181 of 43200; disagreements e.g. [{'a': 1, 't': 1, 'b': 0, 'm': 4, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x': 3, 'never': False, 'xstar': 3, 'zstar': 1, 'Nstar': 1, 'x1': 1}, {'a': 1, 't': 1, 'b': 0, 'm': 4, 'c': 1, 'k': 3, 'G': 1, 'N': 1, 'x': 3, 'never': False, 'xstar': 3, 'zstar': 1, 'Nstar': 1, 'x1': 1}]
+B g=0              runs 43200: never 25449 {'P': 10392, 'R': 5576, 'S': 9481}, takers never unmet 10392
+     exact: agrees 43200 of 43200
+     closed g=0: agrees 43200 of 43200
+     guess: left meets the need: agrees 18079 of 43200; disagreements e.g. [{'a': 1, 't': 0, 'b': 1, 'm': 2, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x': 1, 'never': True, 'xstar': 1, 'zstar': 0, 'Nstar': 1, 'x1': 1}, {'a': 1, 't': 0, 'b': 1, 'm': 2, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x': 2, 'never': True, 'xstar': 1, 'zstar': 0, 'Nstar': 4, 'x1': 1}]
+L g=min(z,1)       runs 43200: never 566 {'R': 41, 'S': 525}, takers never unmet 0
+     exact: agrees 43200 of 43200
+     guess: left meets the need: agrees 42979 of 43200; disagreements e.g. [{'a': 1, 't': 1, 'b': 0, 'm': 5, 'c': 1, 'k': 2, 'G': 2, 'N': 1, 'x': 4, 'never': False, 'xstar': 4, 'zstar': 1, 'Nstar': 1, 'x1': 2}, {'a': 1, 't': 1, 'b': 0, 'm': 5, 'c': 1, 'k': 3, 'G': 2, 'N': 1, 'x': 4, 'never': False, 'xstar': 4, 'zstar': 1, 'Nstar': 1, 'x1': 2}]
+B g=min(z,1)       runs 43200: never 25528 {'P': 10392, 'R': 5571, 'S': 9565}, takers never unmet 10392
+     exact: agrees 43200 of 43200
+     guess: left meets the need: agrees 18017 of 43200; disagreements e.g. [{'a': 1, 't': 0, 'b': 1, 'm': 2, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x': 1, 'never': True, 'xstar': 1, 'zstar': 0, 'Nstar': 1, 'x1': 1}, {'a': 1, 't': 0, 'b': 1, 'm': 2, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x': 2, 'never': True, 'xstar': 1, 'zstar': 0, 'Nstar': 8, 'x1': 1}]
+L g=min(z,2)       runs 43200: never 564 {'R': 42, 'S': 522}, takers never unmet 0
+     exact: agrees 43200 of 43200
+     guess: left meets the need: agrees 42980 of 43200; disagreements e.g. [{'a': 1, 't': 1, 'b': 0, 'm': 5, 'c': 1, 'k': 2, 'G': 2, 'N': 1, 'x': 4, 'never': False, 'xstar': 4, 'zstar': 1, 'Nstar': 1, 'x1': 2}, {'a': 1, 't': 1, 'b': 0, 'm': 5, 'c': 1, 'k': 3, 'G': 2, 'N': 1, 'x': 4, 'never': False, 'xstar': 4, 'zstar': 1, 'Nstar': 1, 'x1': 2}]
+B g=min(z,2)       runs 43200: never 25526 {'P': 10392, 'R': 5578, 'S': 9556}, takers never unmet 10392
+     exact: agrees 43200 of 43200
+     guess: left meets the need: agrees 18018 of 43200; disagreements e.g. [{'a': 1, 't': 0, 'b': 1, 'm': 2, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x': 1, 'never': True, 'xstar': 1, 'zstar': 0, 'Nstar': 1, 'x1': 1}, {'a': 1, 't': 0, 'b': 1, 'm': 2, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x': 2, 'never': True, 'xstar': 1, 'zstar': 0, 'Nstar': 8, 'x1': 1}]
+L g=min(z,3)       runs 43200: never 564 {'R': 42, 'S': 522}, takers never unmet 0
+     exact: agrees 43200 of 43200
+     guess: left meets the need: agrees 42980 of 43200; disagreements e.g. [{'a': 1, 't': 1, 'b': 0, 'm': 5, 'c': 1, 'k': 2, 'G': 2, 'N': 1, 'x': 4, 'never': False, 'xstar': 4, 'zstar': 1, 'Nstar': 1, 'x1': 2}, {'a': 1, 't': 1, 'b': 0, 'm': 5, 'c': 1, 'k': 3, 'G': 2, 'N': 1, 'x': 4, 'never': False, 'xstar': 4, 'zstar': 1, 'Nstar': 1, 'x1': 2}]
+B g=min(z,3)       runs 43200: never 25526 {'P': 10392, 'R': 5578, 'S': 9556}, takers never unmet 10392
+     exact: agrees 43200 of 43200
+     guess: left meets the need: agrees 18018 of 43200; disagreements e.g. [{'a': 1, 't': 0, 'b': 1, 'm': 2, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x': 1, 'never': True, 'xstar': 1, 'zstar': 0, 'Nstar': 1, 'x1': 1}, {'a': 1, 't': 0, 'b': 1, 'm': 2, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x': 2, 'never': True, 'xstar': 1, 'zstar': 0, 'Nstar': 8, 'x1': 1}]
+L g=gate(z>=1:1)   runs 43200: never 566 {'R': 41, 'S': 525}, takers never unmet 0
+     exact: agrees 43200 of 43200
+     guess: left meets the need: agrees 42979 of 43200; disagreements e.g. [{'a': 1, 't': 1, 'b': 0, 'm': 5, 'c': 1, 'k': 2, 'G': 2, 'N': 1, 'x': 4, 'never': False, 'xstar': 4, 'zstar': 1, 'Nstar': 1, 'x1': 2}, {'a': 1, 't': 1, 'b': 0, 'm': 5, 'c': 1, 'k': 3, 'G': 2, 'N': 1, 'x': 4, 'never': False, 'xstar': 4, 'zstar': 1, 'Nstar': 1, 'x1': 2}]
+B g=gate(z>=1:1)   runs 43200: never 25528 {'P': 10392, 'R': 5571, 'S': 9565}, takers never unmet 10392
+     exact: agrees 43200 of 43200
+     guess: left meets the need: agrees 18017 of 43200; disagreements e.g. [{'a': 1, 't': 0, 'b': 1, 'm': 2, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x': 1, 'never': True, 'xstar': 1, 'zstar': 0, 'Nstar': 1, 'x1': 1}, {'a': 1, 't': 0, 'b': 1, 'm': 2, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x': 2, 'never': True, 'xstar': 1, 'zstar': 0, 'Nstar': 8, 'x1': 1}]
+L g=gate(z>=2:1)   runs 43200: never 410 {'R': 48, 'S': 362}, takers never unmet 0
+     exact: agrees 43200 of 43200
+     guess: left meets the need: agrees 43113 of 43200; disagreements e.g. [{'a': 1, 't': 1, 'b': 0, 'm': 4, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x': 3, 'never': False, 'xstar': 3, 'zstar': 1, 'Nstar': 1, 'x1': 1}, {'a': 1, 't': 1, 'b': 0, 'm': 4, 'c': 1, 'k': 3, 'G': 1, 'N': 1, 'x': 3, 'never': False, 'xstar': 3, 'zstar': 1, 'Nstar': 1, 'x1': 1}]
+B g=gate(z>=2:1)   runs 43200: never 25462 {'P': 10392, 'R': 5616, 'S': 9454}, takers never unmet 10392
+     exact: agrees 43200 of 43200
+     guess: left meets the need: agrees 18065 of 43200; disagreements e.g. [{'a': 1, 't': 0, 'b': 1, 'm': 2, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x': 1, 'never': True, 'xstar': 1, 'zstar': 0, 'Nstar': 1, 'x1': 1}, {'a': 1, 't': 0, 'b': 1, 'm': 2, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x': 2, 'never': True, 'xstar': 1, 'zstar': 0, 'Nstar': 4, 'x1': 1}]
+L g=gate(z>=2:2)   runs 43200: never 410 {'R': 40, 'S': 370}, takers never unmet 0
+     exact: agrees 43200 of 43200
+     guess: left meets the need: agrees 43114 of 43200; disagreements e.g. [{'a': 1, 't': 1, 'b': 0, 'm': 4, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x': 3, 'never': False, 'xstar': 3, 'zstar': 1, 'Nstar': 1, 'x1': 1}, {'a': 1, 't': 1, 'b': 0, 'm': 4, 'c': 1, 'k': 3, 'G': 1, 'N': 1, 'x': 3, 'never': False, 'xstar': 3, 'zstar': 1, 'Nstar': 1, 'x1': 1}]
+B g=gate(z>=2:2)   runs 43200: never 25462 {'P': 10392, 'R': 5614, 'S': 9456}, takers never unmet 10392
+     exact: agrees 43200 of 43200
+     guess: left meets the need: agrees 18066 of 43200; disagreements e.g. [{'a': 1, 't': 0, 'b': 1, 'm': 2, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x': 1, 'never': True, 'xstar': 1, 'zstar': 0, 'Nstar': 1, 'x1': 1}, {'a': 1, 't': 0, 'b': 1, 'm': 2, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x': 2, 'never': True, 'xstar': 1, 'zstar': 0, 'Nstar': 4, 'x1': 1}]
+L g=gate(z>=3:2)   runs 43200: never 334 {'R': 76, 'S': 258}, takers never unmet 0
+     exact: agrees 43200 of 43200
+     guess: left meets the need: agrees 43182 of 43200; disagreements e.g. [{'a': 1, 't': 1, 'b': 0, 'm': 4, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x': 3, 'never': False, 'xstar': 3, 'zstar': 1, 'Nstar': 1, 'x1': 1}, {'a': 1, 't': 1, 'b': 0, 'm': 4, 'c': 1, 'k': 3, 'G': 1, 'N': 1, 'x': 3, 'never': False, 'xstar': 3, 'zstar': 1, 'Nstar': 1, 'x1': 1}]
+B g=gate(z>=3:2)   runs 43200: never 25440 {'P': 10392, 'R': 5652, 'S': 9396}, takers never unmet 10392
+     exact: agrees 43200 of 43200
+     guess: left meets the need: agrees 18080 of 43200; disagreements e.g. [{'a': 1, 't': 0, 'b': 1, 'm': 2, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x': 1, 'never': True, 'xstar': 1, 'zstar': 0, 'Nstar': 1, 'x1': 1}, {'a': 1, 't': 0, 'b': 1, 'm': 2, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x': 2, 'never': True, 'xstar': 1, 'zstar': 0, 'Nstar': 4, 'x1': 1}]
+
+is the outcome a function of one number at the cut-off step (same order, giving, a, t, b, m, c, k, G; x* >= a)?  conflicts found:
+  g=0              {('L', 'z*'): 0, ('L', 'N*'): 340, ('L', 'x*'): 884, ('B', 'z*'): 0, ('B', 'N*'): 113, ('B', 'x*'): 687}
+  g=min(z,1)       {('L', 'z*'): 0, ('L', 'N*'): 423, ('L', 'x*'): 1193, ('B', 'z*'): 0, ('B', 'N*'): 143, ('B', 'x*'): 853}
+  g=min(z,2)       {('L', 'z*'): 0, ('L', 'N*'): 420, ('L', 'x*'): 895, ('B', 'z*'): 0, ('B', 'N*'): 140, ('B', 'x*'): 540}
+  g=min(z,3)       {('L', 'z*'): 0, ('L', 'N*'): 420, ('L', 'x*'): 873, ('B', 'z*'): 0, ('B', 'N*'): 140, ('B', 'x*'): 541}
+  g=gate(z>=1:1)   {('L', 'z*'): 0, ('L', 'N*'): 423, ('L', 'x*'): 1193, ('B', 'z*'): 0, ('B', 'N*'): 143, ('B', 'x*'): 853}
+  g=gate(z>=2:1)   {('L', 'z*'): 0, ('L', 'N*'): 362, ('L', 'x*'): 827, ('B', 'z*'): 0, ('B', 'N*'): 118, ('B', 'x*'): 556}
+  g=gate(z>=2:2)   {('L', 'z*'): 0, ('L', 'N*'): 362, ('L', 'x*'): 614, ('B', 'z*'): 0, ('B', 'N*'): 118, ('B', 'x*'): 327}
+  g=gate(z>=3:2)   {('L', 'z*'): 0, ('L', 'N*'): 334, ('L', 'x*'): 588, ('B', 'z*'): 0, ('B', 'N*'): 108, ('B', 'x*'): 402}
+  e.g. ('L', 'N*') (('L', '0', 1, 0, 0, 3, 1, 2, 1, 1), {'N': 1, 'x': 1, 'never': False, 'xstar': 1, 'zstar': 0, 'Nstar': 1}, {'N': 1, 'x': 2, 'never': True, 'xstar': 2, 'zstar': 1, 'Nstar': 1})
+  e.g. ('B', 'N*') (('B', '0', 1, 0, 0, 3, 1, 2, 1, 1), {'N': 1, 'x': 1, 'never': False, 'xstar': 1, 'zstar': 0, 'Nstar': 1}, {'N': 1, 'x': 2, 'never': True, 'xstar': 2, 'zstar': 1, 'Nstar': 1})
+  e.g. ('L', 'x*') (('L', '0', 1, 0, 0, 3, 1, 2, 1, 2), {'N': 1, 'x': 2, 'never': True, 'xstar': 2, 'zstar': 1, 'Nstar': 1}, {'N': 1, 'x': 3, 'never': False, 'xstar': 2, 'zstar': 0, 'Nstar': 2})
+  e.g. ('B', 'x*') (('B', '0', 1, 0, 0, 3, 1, 2, 1, 2), {'N': 1, 'x': 2, 'never': True, 'xstar': 2, 'zstar': 1, 'Nstar': 1}, {'N': 1, 'x': 3, 'never': False, 'xstar': 2, 'zstar': 0, 'Nstar': 2})
+
+== item 3: a higher start ends, a lower one never ends ==
+L g=0              parameter sets with such a pair: m>a 232, m<=a 0; pairs 6949, of which the higher start has a later cut-off step and more takers there: 6949
+     least (by sum of the numbers): (12, {'a': 1, 't': 0, 'b': 0, 'm': 3, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x_never': 2, 'x_ends': 3, 'cut_never': {'n': 0, 'x': 2, 'N': 1, 'G': 1, 'z': 1, 'x1': 1}, 'cut_ends': {'n': 1, 'x': 2, 'N': 2, 'G': 1, 'z': 0, 'x1': 0}})
+     least with b >= 1 and t >= 1: (16, {'a': 1, 't': 1, 'b': 1, 'm': 4, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x_never': 3, 'x_ends': 4, 'cut_never': {'n': 0, 'x': 3, 'N': 1, 'G': 1, 'z': 1, 'x1': 2}, 'cut_ends': {'n': 1, 'x': 3, 'N': 2, 'G': 1, 'z': 0, 'x1': 0}})
+B g=0              parameter sets with such a pair: m>a 116, m<=a 0; pairs 3569, of which the higher start has a later cut-off step and more takers there: 3569
+     least (by sum of the numbers): (12, {'a': 1, 't': 0, 'b': 0, 'm': 3, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x_never': 2, 'x_ends': 3, 'cut_never': {'n': 0, 'x': 2, 'N': 1, 'G': 1, 'z': 1, 'x1': 1}, 'cut_ends': {'n': 1, 'x': 2, 'N': 2, 'G': 1, 'z': 0, 'x1': 0}})
+     least with b >= 1 and t >= 1: (17, {'a': 2, 't': 1, 'b': 1, 'm': 4, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x_never': 3, 'x_ends': 4, 'cut_never': {'n': 0, 'x': 3, 'N': 1, 'G': 1, 'z': 1, 'x1': 2}, 'cut_ends': {'n': 1, 'x': 3, 'N': 2, 'G': 1, 'z': 0, 'x1': 1}})
+L g=min(z,1)       parameter sets with such a pair: m>a 372, m<=a 0; pairs 11538, of which the higher start has a later cut-off step and more takers there: 11538
+     least (by sum of the numbers): (12, {'a': 1, 't': 0, 'b': 0, 'm': 3, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x_never': 2, 'x_ends': 3, 'cut_never': {'n': 0, 'x': 2, 'N': 1, 'G': 1, 'z': 1, 'x1': 2}, 'cut_ends': {'n': 2, 'x': 2, 'N': 4, 'G': 1, 'z': 0, 'x1': 0}})
+     least with b >= 1 and t >= 1: (16, {'a': 1, 't': 1, 'b': 1, 'm': 4, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x_never': 3, 'x_ends': 4, 'cut_never': {'n': 0, 'x': 3, 'N': 1, 'G': 1, 'z': 1, 'x1': 3}, 'cut_ends': {'n': 2, 'x': 3, 'N': 4, 'G': 1, 'z': 0, 'x1': 0}})
+B g=min(z,1)       parameter sets with such a pair: m>a 172, m<=a 0; pairs 5206, of which the higher start has a later cut-off step and more takers there: 5206
+     least (by sum of the numbers): (12, {'a': 1, 't': 0, 'b': 0, 'm': 3, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x_never': 2, 'x_ends': 3, 'cut_never': {'n': 0, 'x': 2, 'N': 1, 'G': 1, 'z': 1, 'x1': 2}, 'cut_ends': {'n': 2, 'x': 2, 'N': 4, 'G': 1, 'z': 0, 'x1': 0}})
+     least with b >= 1 and t >= 1: (17, {'a': 2, 't': 1, 'b': 1, 'm': 4, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x_never': 3, 'x_ends': 4, 'cut_never': {'n': 0, 'x': 3, 'N': 1, 'G': 1, 'z': 1, 'x1': 3}, 'cut_ends': {'n': 2, 'x': 3, 'N': 4, 'G': 1, 'z': 0, 'x1': 1}})
+L g=min(z,2)       parameter sets with such a pair: m>a 372, m<=a 0; pairs 11504, of which the higher start has a later cut-off step and more takers there: 11504
+     least (by sum of the numbers): (12, {'a': 1, 't': 0, 'b': 0, 'm': 3, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x_never': 2, 'x_ends': 3, 'cut_never': {'n': 0, 'x': 2, 'N': 1, 'G': 1, 'z': 1, 'x1': 2}, 'cut_ends': {'n': 3, 'x': 0, 'N': 8, 'G': 1, 'z': 0, 'x1': 0}})
+     least with b >= 1 and t >= 1: (16, {'a': 1, 't': 1, 'b': 1, 'm': 4, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x_never': 3, 'x_ends': 4, 'cut_never': {'n': 0, 'x': 3, 'N': 1, 'G': 1, 'z': 1, 'x1': 3}, 'cut_ends': {'n': 3, 'x': 0, 'N': 8, 'G': 1, 'z': 0, 'x1': 0}})
+B g=min(z,2)       parameter sets with such a pair: m>a 172, m<=a 0; pairs 5172, of which the higher start has a later cut-off step and more takers there: 5172
+     least (by sum of the numbers): (12, {'a': 1, 't': 0, 'b': 0, 'm': 3, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x_never': 2, 'x_ends': 3, 'cut_never': {'n': 0, 'x': 2, 'N': 1, 'G': 1, 'z': 1, 'x1': 2}, 'cut_ends': {'n': 3, 'x': 0, 'N': 8, 'G': 1, 'z': 0, 'x1': 0}})
+     least with b >= 1 and t >= 1: (17, {'a': 2, 't': 1, 'b': 1, 'm': 4, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x_never': 3, 'x_ends': 4, 'cut_never': {'n': 0, 'x': 3, 'N': 1, 'G': 1, 'z': 1, 'x1': 3}, 'cut_ends': {'n': 3, 'x': 1, 'N': 8, 'G': 1, 'z': 0, 'x1': 0}})
+L g=min(z,3)       parameter sets with such a pair: m>a 372, m<=a 0; pairs 11504, of which the higher start has a later cut-off step and more takers there: 11504
+     least (by sum of the numbers): (12, {'a': 1, 't': 0, 'b': 0, 'm': 3, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x_never': 2, 'x_ends': 3, 'cut_never': {'n': 0, 'x': 2, 'N': 1, 'G': 1, 'z': 1, 'x1': 2}, 'cut_ends': {'n': 3, 'x': 0, 'N': 8, 'G': 1, 'z': 0, 'x1': 0}})
+     least with b >= 1 and t >= 1: (16, {'a': 1, 't': 1, 'b': 1, 'm': 4, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x_never': 3, 'x_ends': 4, 'cut_never': {'n': 0, 'x': 3, 'N': 1, 'G': 1, 'z': 1, 'x1': 3}, 'cut_ends': {'n': 3, 'x': 0, 'N': 8, 'G': 1, 'z': 0, 'x1': 0}})
+B g=min(z,3)       parameter sets with such a pair: m>a 172, m<=a 0; pairs 5172, of which the higher start has a later cut-off step and more takers there: 5172
+     least (by sum of the numbers): (12, {'a': 1, 't': 0, 'b': 0, 'm': 3, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x_never': 2, 'x_ends': 3, 'cut_never': {'n': 0, 'x': 2, 'N': 1, 'G': 1, 'z': 1, 'x1': 2}, 'cut_ends': {'n': 3, 'x': 0, 'N': 8, 'G': 1, 'z': 0, 'x1': 0}})
+     least with b >= 1 and t >= 1: (17, {'a': 2, 't': 1, 'b': 1, 'm': 4, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x_never': 3, 'x_ends': 4, 'cut_never': {'n': 0, 'x': 3, 'N': 1, 'G': 1, 'z': 1, 'x1': 3}, 'cut_ends': {'n': 3, 'x': 1, 'N': 8, 'G': 1, 'z': 0, 'x1': 0}})
+L g=gate(z>=1:1)   parameter sets with such a pair: m>a 372, m<=a 0; pairs 11538, of which the higher start has a later cut-off step and more takers there: 11538
+     least (by sum of the numbers): (12, {'a': 1, 't': 0, 'b': 0, 'm': 3, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x_never': 2, 'x_ends': 3, 'cut_never': {'n': 0, 'x': 2, 'N': 1, 'G': 1, 'z': 1, 'x1': 2}, 'cut_ends': {'n': 2, 'x': 2, 'N': 4, 'G': 1, 'z': 0, 'x1': 0}})
+     least with b >= 1 and t >= 1: (16, {'a': 1, 't': 1, 'b': 1, 'm': 4, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x_never': 3, 'x_ends': 4, 'cut_never': {'n': 0, 'x': 3, 'N': 1, 'G': 1, 'z': 1, 'x1': 3}, 'cut_ends': {'n': 2, 'x': 3, 'N': 4, 'G': 1, 'z': 0, 'x1': 0}})
+B g=gate(z>=1:1)   parameter sets with such a pair: m>a 172, m<=a 0; pairs 5206, of which the higher start has a later cut-off step and more takers there: 5206
+     least (by sum of the numbers): (12, {'a': 1, 't': 0, 'b': 0, 'm': 3, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x_never': 2, 'x_ends': 3, 'cut_never': {'n': 0, 'x': 2, 'N': 1, 'G': 1, 'z': 1, 'x1': 2}, 'cut_ends': {'n': 2, 'x': 2, 'N': 4, 'G': 1, 'z': 0, 'x1': 0}})
+     least with b >= 1 and t >= 1: (17, {'a': 2, 't': 1, 'b': 1, 'm': 4, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x_never': 3, 'x_ends': 4, 'cut_never': {'n': 0, 'x': 3, 'N': 1, 'G': 1, 'z': 1, 'x1': 3}, 'cut_ends': {'n': 2, 'x': 3, 'N': 4, 'G': 1, 'z': 0, 'x1': 1}})
+L g=gate(z>=2:1)   parameter sets with such a pair: m>a 292, m<=a 0; pairs 8334, of which the higher start has a later cut-off step and more takers there: 8334
+     least (by sum of the numbers): (12, {'a': 1, 't': 0, 'b': 0, 'm': 3, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x_never': 2, 'x_ends': 3, 'cut_never': {'n': 0, 'x': 2, 'N': 1, 'G': 1, 'z': 1, 'x1': 1}, 'cut_ends': {'n': 2, 'x': 1, 'N': 4, 'G': 1, 'z': 0, 'x1': 0}})
+     least with b >= 1 and t >= 1: (16, {'a': 1, 't': 1, 'b': 1, 'm': 4, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x_never': 3, 'x_ends': 4, 'cut_never': {'n': 0, 'x': 3, 'N': 1, 'G': 1, 'z': 1, 'x1': 2}, 'cut_ends': {'n': 2, 'x': 2, 'N': 4, 'G': 1, 'z': 0, 'x1': 0}})
+B g=gate(z>=2:1)   parameter sets with such a pair: m>a 134, m<=a 0; pairs 3862, of which the higher start has a later cut-off step and more takers there: 3862
+     least (by sum of the numbers): (12, {'a': 1, 't': 0, 'b': 0, 'm': 3, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x_never': 2, 'x_ends': 3, 'cut_never': {'n': 0, 'x': 2, 'N': 1, 'G': 1, 'z': 1, 'x1': 1}, 'cut_ends': {'n': 2, 'x': 1, 'N': 4, 'G': 1, 'z': 0, 'x1': 0}})
+     least with b >= 1 and t >= 1: (17, {'a': 2, 't': 1, 'b': 1, 'm': 4, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x_never': 3, 'x_ends': 4, 'cut_never': {'n': 0, 'x': 3, 'N': 1, 'G': 1, 'z': 1, 'x1': 2}, 'cut_ends': {'n': 2, 'x': 2, 'N': 4, 'G': 1, 'z': 0, 'x1': 1}})
+L g=gate(z>=2:2)   parameter sets with such a pair: m>a 292, m<=a 0; pairs 8334, of which the higher start has a later cut-off step and more takers there: 8334
+     least (by sum of the numbers): (12, {'a': 1, 't': 0, 'b': 0, 'm': 3, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x_never': 2, 'x_ends': 3, 'cut_never': {'n': 0, 'x': 2, 'N': 1, 'G': 1, 'z': 1, 'x1': 1}, 'cut_ends': {'n': 3, 'x': 0, 'N': 8, 'G': 1, 'z': 0, 'x1': 0}})
+     least with b >= 1 and t >= 1: (16, {'a': 1, 't': 1, 'b': 1, 'm': 4, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x_never': 3, 'x_ends': 4, 'cut_never': {'n': 0, 'x': 3, 'N': 1, 'G': 1, 'z': 1, 'x1': 2}, 'cut_ends': {'n': 3, 'x': 0, 'N': 8, 'G': 1, 'z': 0, 'x1': 0}})
+B g=gate(z>=2:2)   parameter sets with such a pair: m>a 134, m<=a 0; pairs 3862, of which the higher start has a later cut-off step and more takers there: 3862
+     least (by sum of the numbers): (12, {'a': 1, 't': 0, 'b': 0, 'm': 3, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x_never': 2, 'x_ends': 3, 'cut_never': {'n': 0, 'x': 2, 'N': 1, 'G': 1, 'z': 1, 'x1': 1}, 'cut_ends': {'n': 3, 'x': 0, 'N': 8, 'G': 1, 'z': 0, 'x1': 0}})
+     least with b >= 1 and t >= 1: (17, {'a': 2, 't': 1, 'b': 1, 'm': 4, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x_never': 3, 'x_ends': 4, 'cut_never': {'n': 0, 'x': 3, 'N': 1, 'G': 1, 'z': 1, 'x1': 2}, 'cut_ends': {'n': 3, 'x': 1, 'N': 8, 'G': 1, 'z': 0, 'x1': 0}})
+L g=gate(z>=3:2)   parameter sets with such a pair: m>a 232, m<=a 0; pairs 6798, of which the higher start has a later cut-off step and more takers there: 6798
+     least (by sum of the numbers): (12, {'a': 1, 't': 0, 'b': 0, 'm': 3, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x_never': 2, 'x_ends': 3, 'cut_never': {'n': 0, 'x': 2, 'N': 1, 'G': 1, 'z': 1, 'x1': 1}, 'cut_ends': {'n': 1, 'x': 2, 'N': 2, 'G': 1, 'z': 0, 'x1': 0}})
+     least with b >= 1 and t >= 1: (16, {'a': 1, 't': 1, 'b': 1, 'm': 4, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x_never': 3, 'x_ends': 4, 'cut_never': {'n': 0, 'x': 3, 'N': 1, 'G': 1, 'z': 1, 'x1': 2}, 'cut_ends': {'n': 1, 'x': 3, 'N': 2, 'G': 1, 'z': 0, 'x1': 0}})
+B g=gate(z>=3:2)   parameter sets with such a pair: m>a 116, m<=a 0; pairs 3418, of which the higher start has a later cut-off step and more takers there: 3418
+     least (by sum of the numbers): (12, {'a': 1, 't': 0, 'b': 0, 'm': 3, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x_never': 2, 'x_ends': 3, 'cut_never': {'n': 0, 'x': 2, 'N': 1, 'G': 1, 'z': 1, 'x1': 1}, 'cut_ends': {'n': 1, 'x': 2, 'N': 2, 'G': 1, 'z': 0, 'x1': 0}})
+     least with b >= 1 and t >= 1: (17, {'a': 2, 't': 1, 'b': 1, 'm': 4, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x_never': 3, 'x_ends': 4, 'cut_never': {'n': 0, 'x': 3, 'N': 1, 'G': 1, 'z': 1, 'x1': 2}, 'cut_ends': {'n': 1, 'x': 3, 'N': 2, 'G': 1, 'z': 0, 'x1': 1}})
+
+== item 4: orders L and B ==
+g=0              m<=a: outcomes differ in 13728 of 28800 runs
+        ('L ends, B never (P)', 'b<t', 'Gb>=a') 752
+        ('L ends, B never (P)', 'b>=t', 'Gb>=a') 12976
+        parameter sets: {'sets': 1152, 'same at every start': 552, 'differ; no shift of the start in -8..8 fits': 600}
+         {'never somewhere: L False, B False': 552, 'never somewhere: L False, B True': 600} e.g. {'a': 1, 't': 0, 'b': 1, 'm': 1, 'c': 1, 'k': 2, 'G': 1, 'N': 1}
+g=0              m>a: outcomes differ in 25106 of 43200 runs
+        ('L ends, B never (P)', 'b<t', 'Gb>=a') 184
+        ('L ends, B never (P)', 'b>=t', 'Gb>=a') 10208
+        ('L ends, B never (R)', 'b<t', 'Gb>=a') 1904
+        ('L ends, B never (R)', 'b>=t', 'Gb<a') 15
+        ('L ends, B never (R)', 'b>=t', 'Gb>=a') 3657
+        ('L ends, B never (S)', 'b>=t', 'Gb<a') 64
+        ('L ends, B never (S)', 'b>=t', 'Gb>=a') 9074
+        parameter sets: {'sets': 1728, 'same at every start': 580, 'differ; no shift of the start in -8..8 fits': 1096, 'differ; a shift of the start in -8..8 fits': 52}
+         {'never somewhere: L False, B False': 532, 'never somewhere: L False, B True': 964, 'never somewhere: L True, B True': 232} e.g. {'a': 1, 't': 0, 'b': 1, 'm': 2, 'c': 1, 'k': 2, 'G': 1, 'N': 1}
+g=min(z,1)       m<=a: outcomes differ in 13728 of 28800 runs
+        ('L ends, B never (P)', 'b<t', 'Gb>=a') 752
+        ('L ends, B never (P)', 'b>=t', 'Gb>=a') 12976
+        parameter sets: {'sets': 1152, 'same at every start': 552, 'differ; no shift of the start in -8..8 fits': 600}
+         {'never somewhere: L False, B False': 552, 'never somewhere: L False, B True': 600} e.g. {'a': 1, 't': 0, 'b': 1, 'm': 1, 'c': 1, 'k': 2, 'G': 1, 'N': 1}
+g=min(z,1)       m>a: outcomes differ in 24962 of 43200 runs
+        ('L ends, B never (P)', 'b<t', 'Gb>=a') 184
+        ('L ends, B never (P)', 'b>=t', 'Gb>=a') 10208
+        ('L ends, B never (R)', 'b<t', 'Gb<a') 4
+        ('L ends, B never (R)', 'b<t', 'Gb>=a') 1902
+        ('L ends, B never (R)', 'b>=t', 'Gb>=a') 3654
+        ('L ends, B never (S)', 'b>=t', 'Gb<a') 44
+        ('L ends, B never (S)', 'b>=t', 'Gb>=a') 8966
+        parameter sets: {'sets': 1728, 'same at every start': 600, 'differ; no shift of the start in -8..8 fits': 1096, 'differ; a shift of the start in -8..8 fits': 32}
+         {'never somewhere: L False, B False': 476, 'never somewhere: L False, B True': 880, 'never somewhere: L True, B True': 372} e.g. {'a': 1, 't': 0, 'b': 1, 'm': 2, 'c': 1, 'k': 2, 'G': 1, 'N': 1}
+g=min(z,2)       m<=a: outcomes differ in 13728 of 28800 runs
+        ('L ends, B never (P)', 'b<t', 'Gb>=a') 752
+        ('L ends, B never (P)', 'b>=t', 'Gb>=a') 12976
+        parameter sets: {'sets': 1152, 'same at every start': 552, 'differ; no shift of the start in -8..8 fits': 600}
+         {'never somewhere: L False, B False': 552, 'never somewhere: L False, B True': 600} e.g. {'a': 1, 't': 0, 'b': 1, 'm': 1, 'c': 1, 'k': 2, 'G': 1, 'N': 1}
+g=min(z,2)       m>a: outcomes differ in 24962 of 43200 runs
+        ('L ends, B never (P)', 'b<t', 'Gb>=a') 184
+        ('L ends, B never (P)', 'b>=t', 'Gb>=a') 10208
+        ('L ends, B never (R)', 'b<t', 'Gb<a') 4
+        ('L ends, B never (R)', 'b<t', 'Gb>=a') 1902
+        ('L ends, B never (R)', 'b>=t', 'Gb>=a') 3654
+        ('L ends, B never (S)', 'b>=t', 'Gb<a') 44
+        ('L ends, B never (S)', 'b>=t', 'Gb>=a') 8966
+        parameter sets: {'sets': 1728, 'same at every start': 600, 'differ; no shift of the start in -8..8 fits': 1096, 'differ; a shift of the start in -8..8 fits': 32}
+         {'never somewhere: L False, B False': 476, 'never somewhere: L False, B True': 880, 'never somewhere: L True, B True': 372} e.g. {'a': 1, 't': 0, 'b': 1, 'm': 2, 'c': 1, 'k': 2, 'G': 1, 'N': 1}
+g=min(z,3)       m<=a: outcomes differ in 13728 of 28800 runs
+        ('L ends, B never (P)', 'b<t', 'Gb>=a') 752
+        ('L ends, B never (P)', 'b>=t', 'Gb>=a') 12976
+        parameter sets: {'sets': 1152, 'same at every start': 552, 'differ; no shift of the start in -8..8 fits': 600}
+         {'never somewhere: L False, B False': 552, 'never somewhere: L False, B True': 600} e.g. {'a': 1, 't': 0, 'b': 1, 'm': 1, 'c': 1, 'k': 2, 'G': 1, 'N': 1}
+g=min(z,3)       m>a: outcomes differ in 24962 of 43200 runs
+        ('L ends, B never (P)', 'b<t', 'Gb>=a') 184
+        ('L ends, B never (P)', 'b>=t', 'Gb>=a') 10208
+        ('L ends, B never (R)', 'b<t', 'Gb<a') 4
+        ('L ends, B never (R)', 'b<t', 'Gb>=a') 1902
+        ('L ends, B never (R)', 'b>=t', 'Gb>=a') 3654
+        ('L ends, B never (S)', 'b>=t', 'Gb<a') 44
+        ('L ends, B never (S)', 'b>=t', 'Gb>=a') 8966
+        parameter sets: {'sets': 1728, 'same at every start': 600, 'differ; no shift of the start in -8..8 fits': 1096, 'differ; a shift of the start in -8..8 fits': 32}
+         {'never somewhere: L False, B False': 476, 'never somewhere: L False, B True': 880, 'never somewhere: L True, B True': 372} e.g. {'a': 1, 't': 0, 'b': 1, 'm': 2, 'c': 1, 'k': 2, 'G': 1, 'N': 1}
+g=gate(z>=1:1)   m<=a: outcomes differ in 13728 of 28800 runs
+        ('L ends, B never (P)', 'b<t', 'Gb>=a') 752
+        ('L ends, B never (P)', 'b>=t', 'Gb>=a') 12976
+        parameter sets: {'sets': 1152, 'same at every start': 552, 'differ; no shift of the start in -8..8 fits': 600}
+         {'never somewhere: L False, B False': 552, 'never somewhere: L False, B True': 600} e.g. {'a': 1, 't': 0, 'b': 1, 'm': 1, 'c': 1, 'k': 2, 'G': 1, 'N': 1}
+g=gate(z>=1:1)   m>a: outcomes differ in 24962 of 43200 runs
+        ('L ends, B never (P)', 'b<t', 'Gb>=a') 184
+        ('L ends, B never (P)', 'b>=t', 'Gb>=a') 10208
+        ('L ends, B never (R)', 'b<t', 'Gb<a') 4
+        ('L ends, B never (R)', 'b<t', 'Gb>=a') 1902
+        ('L ends, B never (R)', 'b>=t', 'Gb>=a') 3654
+        ('L ends, B never (S)', 'b>=t', 'Gb<a') 44
+        ('L ends, B never (S)', 'b>=t', 'Gb>=a') 8966
+        parameter sets: {'sets': 1728, 'same at every start': 600, 'differ; no shift of the start in -8..8 fits': 1096, 'differ; a shift of the start in -8..8 fits': 32}
+         {'never somewhere: L False, B False': 476, 'never somewhere: L False, B True': 880, 'never somewhere: L True, B True': 372} e.g. {'a': 1, 't': 0, 'b': 1, 'm': 2, 'c': 1, 'k': 2, 'G': 1, 'N': 1}
+g=gate(z>=2:1)   m<=a: outcomes differ in 13728 of 28800 runs
+        ('L ends, B never (P)', 'b<t', 'Gb>=a') 752
+        ('L ends, B never (P)', 'b>=t', 'Gb>=a') 12976
+        parameter sets: {'sets': 1152, 'same at every start': 552, 'differ; no shift of the start in -8..8 fits': 600}
+         {'never somewhere: L False, B False': 552, 'never somewhere: L False, B True': 600} e.g. {'a': 1, 't': 0, 'b': 1, 'm': 1, 'c': 1, 'k': 2, 'G': 1, 'N': 1}
+g=gate(z>=2:1)   m>a: outcomes differ in 25052 of 43200 runs
+        ('L ends, B never (P)', 'b<t', 'Gb>=a') 184
+        ('L ends, B never (P)', 'b>=t', 'Gb>=a') 10208
+        ('L ends, B never (R)', 'b<t', 'Gb>=a') 1904
+        ('L ends, B never (R)', 'b>=t', 'Gb<a') 12
+        ('L ends, B never (R)', 'b>=t', 'Gb>=a') 3658
+        ('L ends, B never (S)', 'b>=t', 'Gb<a') 38
+        ('L ends, B never (S)', 'b>=t', 'Gb>=a') 9048
+        parameter sets: {'sets': 1728, 'same at every start': 598, 'differ; no shift of the start in -8..8 fits': 1100, 'differ; a shift of the start in -8..8 fits': 30}
+         {'never somewhere: L False, B False': 514, 'never somewhere: L False, B True': 922, 'never somewhere: L True, B True': 292} e.g. {'a': 1, 't': 0, 'b': 1, 'm': 2, 'c': 1, 'k': 2, 'G': 1, 'N': 1}
+g=gate(z>=2:2)   m<=a: outcomes differ in 13728 of 28800 runs
+        ('L ends, B never (P)', 'b<t', 'Gb>=a') 752
+        ('L ends, B never (P)', 'b>=t', 'Gb>=a') 12976
+        parameter sets: {'sets': 1152, 'same at every start': 552, 'differ; no shift of the start in -8..8 fits': 600}
+         {'never somewhere: L False, B False': 552, 'never somewhere: L False, B True': 600} e.g. {'a': 1, 't': 0, 'b': 1, 'm': 1, 'c': 1, 'k': 2, 'G': 1, 'N': 1}
+g=gate(z>=2:2)   m>a: outcomes differ in 25052 of 43200 runs
+        ('L ends, B never (P)', 'b<t', 'Gb>=a') 184
+        ('L ends, B never (P)', 'b>=t', 'Gb>=a') 10208
+        ('L ends, B never (R)', 'b<t', 'Gb>=a') 1904
+        ('L ends, B never (R)', 'b>=t', 'Gb<a') 12
+        ('L ends, B never (R)', 'b>=t', 'Gb>=a') 3658
+        ('L ends, B never (S)', 'b>=t', 'Gb<a') 38
+        ('L ends, B never (S)', 'b>=t', 'Gb>=a') 9048
+        parameter sets: {'sets': 1728, 'same at every start': 598, 'differ; no shift of the start in -8..8 fits': 1100, 'differ; a shift of the start in -8..8 fits': 30}
+         {'never somewhere: L False, B False': 514, 'never somewhere: L False, B True': 922, 'never somewhere: L True, B True': 292} e.g. {'a': 1, 't': 0, 'b': 1, 'm': 2, 'c': 1, 'k': 2, 'G': 1, 'N': 1}
+g=gate(z>=3:2)   m<=a: outcomes differ in 13728 of 28800 runs
+        ('L ends, B never (P)', 'b<t', 'Gb>=a') 752
+        ('L ends, B never (P)', 'b>=t', 'Gb>=a') 12976
+        parameter sets: {'sets': 1152, 'same at every start': 552, 'differ; no shift of the start in -8..8 fits': 600}
+         {'never somewhere: L False, B False': 552, 'never somewhere: L False, B True': 600} e.g. {'a': 1, 't': 0, 'b': 1, 'm': 1, 'c': 1, 'k': 2, 'G': 1, 'N': 1}
+g=gate(z>=3:2)   m>a: outcomes differ in 25106 of 43200 runs
+        ('L ends, B never (P)', 'b<t', 'Gb>=a') 184
+        ('L ends, B never (P)', 'b>=t', 'Gb>=a') 10208
+        ('L ends, B never (R)', 'b<t', 'Gb>=a') 1904
+        ('L ends, B never (R)', 'b>=t', 'Gb<a') 14
+        ('L ends, B never (R)', 'b>=t', 'Gb>=a') 3658
+        ('L ends, B never (S)', 'b>=t', 'Gb<a') 64
+        ('L ends, B never (S)', 'b>=t', 'Gb>=a') 9074
+        parameter sets: {'sets': 1728, 'same at every start': 580, 'differ; no shift of the start in -8..8 fits': 1096, 'differ; a shift of the start in -8..8 fits': 52}
+         {'never somewhere: L False, B False': 532, 'never somewhere: L False, B True': 964, 'never somewhere: L True, B True': 232} e.g. {'a': 1, 't': 0, 'b': 1, 'm': 2, 'c': 1, 'k': 2, 'G': 1, 'N': 1}
+  examples of each kind of difference:
+    ('L ends, B never (P)', 'b<t', 'Gb>=a') {'g': '0', 'a': 1, 't': 2, 'b': 1, 'm': 1, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x': 1}
+    ('L ends, B never (P)', 'b>=t', 'Gb>=a') {'g': '0', 'a': 1, 't': 0, 'b': 1, 'm': 1, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x': 1}
+    ('L ends, B never (R)', 'b<t', 'Gb<a') {'g': 'min(z,1)', 'a': 2, 't': 2, 'b': 1, 'm': 5, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x': 4}
+    ('L ends, B never (R)', 'b<t', 'Gb>=a') {'g': '0', 'a': 1, 't': 2, 'b': 1, 'm': 2, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x': 1}
+    ('L ends, B never (R)', 'b>=t', 'Gb<a') {'g': '0', 'a': 2, 't': 1, 'b': 1, 'm': 4, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x': 3}
+    ('L ends, B never (R)', 'b>=t', 'Gb>=a') {'g': '0', 'a': 1, 't': 1, 'b': 1, 'm': 2, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x': 1}
+    ('L ends, B never (S)', 'b>=t', 'Gb<a') {'g': '0', 'a': 2, 't': 0, 'b': 1, 'm': 3, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x': 2}
+    ('L ends, B never (S)', 'b>=t', 'Gb>=a') {'g': '0', 'a': 1, 't': 0, 'b': 1, 'm': 2, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x': 1}
+
+== item 6: the condition holds and fails with the same a, m, k (order L, g = 0) ==
+(a, m, k) with m > a: 18; with both a start where it holds and one where it fails: 12
+    (1, 3, 2) {False: {'t': 0, 'b': 0, 'c': 1, 'G': 1, 'N': 1, 'x': 1, 'xstar': 1, 'zstar': 0, 'Nstar': 1}, True: {'t': 0, 'b': 0, 'c': 1, 'G': 1, 'N': 1, 'x': 2, 'xstar': 2, 'zstar': 1, 'Nstar': 1}}
+    (1, 3, 3) {False: {'t': 0, 'b': 0, 'c': 1, 'G': 1, 'N': 1, 'x': 1, 'xstar': 1, 'zstar': 0, 'Nstar': 1}, True: {'t': 0, 'b': 0, 'c': 1, 'G': 1, 'N': 1, 'x': 2, 'xstar': 2, 'zstar': 1, 'Nstar': 1}}
+    (1, 4, 2) {False: {'t': 0, 'b': 0, 'c': 1, 'G': 1, 'N': 1, 'x': 1, 'xstar': 1, 'zstar': 0, 'Nstar': 1}, True: {'t': 0, 'b': 0, 'c': 1, 'G': 1, 'N': 1, 'x': 2, 'xstar': 2, 'zstar': 1, 'Nstar': 1}}
+cpu seconds 6.7

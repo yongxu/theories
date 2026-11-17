@@ -1,0 +1,21 @@
+# AI-written scratch output (Claude, DJ batch 19), 17 Nov 2026; not landed
+seed 0 cases [checked, mismatches]: {'A': [7137, 0], 'B': [7334, 0], 'Bonly': [197, 0], 'unk': 0}
+seed 3 cases [checked, mismatches]: {'A': [7209, 0], 'B': [10918, 0], 'Bonly': [3709, 0], 'unk': 0}
+seed 4 cases [checked, mismatches]: {'A': [4555, 120], 'B': [0, 0], 'Bonly': [0, 0], 'unk': 3}
+('A', {'vals': [0, 6, 6, 4], 'us': [2, 2], 'skids': [[], [1, 0]], 'ur': [2, 2], 'n': 1, 'm': 7, 'c': [2, 0], 'x': 12, 'hi': 14, 'y2': 1, 'X': [12, 8, 8, 8, 8, 8, 8, 8], 'direct': True, 'right': None})
+('A', {'vals': [0, 6, 5, 4, 6, 2], 'us': [2, 3], 'skids': [[0], []], 'ur': [2], 'n': 2, 'm': 4, 'c': [1, 2], 'x': 12, 'hi': 14, 'y2': 1, 'X': [12, 7, 7, 7, 7, 7, 7, 7], 'direct': True, 'right': None})
+start above hi: 12667 checked, 182 mismatches
+{'vals': [0, 4, 0, 1, 0, 1, 1, 2, 4, 2, 1, 1, 1, 0, 2], 'us': [3, 3], 'skids': [[1], [1]], 'ur': [2], 'n': 2, 'm': 5, 'c': [0, 0], 'x': 6, 'hi': 0, 'y2': 0, 'X': [6, 4, 2, 0, 0, 0, 0, 0], 'direct': False, 'right': True}
+0 ends at step 0 [('gk', 0)]
+1 ends at step 1 [('gk', 1), ('g', 0)]
+2 ends at step 1 [('gk', 2), ('g', 0)]
+3 never ends (repeats at step 2) [('gk', 3), ('g', 2), ('g', 2)]
+4 never ends (repeats at step 2) [('gk', 4), ('g', 3), ('g', 3)]
+5 never ends (repeats at step 3) [('gk', 5), ('gkk', 4), ('g', 2), ('g', 2)]
+6 ends at step 3 [('gk', 6), ('gkk', 5), ('gkkkk', 3), ('g', 0)]
+7 ends at step 3 [('gk', 7), ('gkk', 6), ('gkkkk', 4), ('g', 0)]
+8 ends at step 3 [('gk', 8), ('gkk', 7), ('gkkkk', 5), ('gkkkkkkkk', 0)]
+9 ends at step 4 [('gk', 9), ('gkk', 8), ('gkkkk', 6), ('gkkkkkkkk', 2), ('g', 0)]
+10 ends at step 4 [('gk', 10), ('gkk', 9), ('gkkkk', 7), ('gkkkkkkkk', 3), ('g', 0)]
+11 ends at step 4 [('gk', 11), ('gkk', 10), ('gkkkk', 8), ('gkkkkkkkk', 4), ('g', 0)]
+12 ends at step 4 [('gk', 12), ('gkk', 11), ('gkkkk', 9), ('gkkkkkkkk', 5), ('gkkkkkkkkkkkkkkkk', 0)]

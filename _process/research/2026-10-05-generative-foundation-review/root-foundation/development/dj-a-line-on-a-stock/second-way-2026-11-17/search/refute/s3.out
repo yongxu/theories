@@ -1,0 +1,21 @@
+== (a) three kinds, givers leave exactly themselves, order L ==
+  worlds with a giver in the start way: 43671 | course differs from the folded one: 228 | of these with no giver unmet before the difference: 0 | fates differ: 0
+  smallest with different fates: None
+== (b) a giver cut off; the level comes back; the giving does not ==
+  with the giver a unit : [((0, 1, 2), 7), ((0, 2), 2), ((2,), 2), ((2,), 4), ((2,), 8), ((2,), 12), ((2,), 16)]
+  giving folded into g' : [((0, 1, 2), 7), ((0, 2), 2), ((2,), 2), ((2,), 4), ((2,), 9), ((2,), 14), ((2,), 19)]
+== (c) one kind of giver leaving k of itself, g = 0, order L ==
+  decided 32400 never 17568 open 0 mismatches with (b >= k*t and a <= x0 - t*N0): 0
+  need 1, use 1, give 2, leaves two of itself, from one unit at 2: (number, level) = [(1, 2), (2, 3), (4, 5), (8, 9), (16, 17), (32, 33), (64, 65)]
+  with g = hump12 : decided 21600 open 0 | condition true but ends: 0 | condition false but never ends: 975
+  with g = min(z,3) : decided 21600 open 0 | condition true but ends: 0 | condition false but never ends: 795
+  with g = z : decided 21600 open 0 | condition true but ends: 0 | condition false but never ends: 975
+== (d) the invariant regions on random worlds ==
+ order L : starts in the region 43689 | left it or what is left fell within 12 steps: 0 | ways that grew: 19924
+ order B : starts in the region 55652 | left it or what is left fell within 12 steps: 0 | ways that grew: 30639
+== (e) C2 (i) with one premise changed, order L, g = 0, m <= a, c >= 1 ==
+  givers leave two givers, takers two takers : cases 12960 never 0 open at 60 steps 2058 | first: ({'a': 1, 'm': 1, 't': 0, 'b': 1, 'c': 1, 'NG': 2, 'n0': 1, 'x0': 2}, ('open', 60))
+     ((givers, takers), level): [((2, 1), 2), ((4, 2), 3), ((8, 4), 5), ((16, 8), 9), ((32, 16), 17), ((64, 32), 33), ((128, 64), 65)]
+  givers leave themselves, takers leave one taker : cases 12960 never 1070 open at 60 steps 3328 | first: ({'a': 1, 'm': 1, 't': 0, 'b': 1, 'c': 1, 'NG': 1, 'n0': 1, 'x0': 2}, ('never', 'repeat', 1))
+     ((givers, takers), level): [((1, 1), 2), ((1, 1), 2), ((1, 1), 2), ((1, 1), 2), ((1, 1), 2), ((1, 1), 2), ((1, 1), 2)]
+python3 s3_beyond.py  13.52s user 0.15s system 93% cpu 14.632 total

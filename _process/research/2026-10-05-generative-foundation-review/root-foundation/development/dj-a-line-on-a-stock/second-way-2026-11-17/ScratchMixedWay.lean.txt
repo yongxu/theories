@@ -1,0 +1,746 @@
+import Becoming.WayOfUnits
+
+/-!
+# Scratch: a growing line beside units that leave themselves, in the line on a stock as it is
+
+AI-written (Claude, board row DJ, batch 19), 17 November 2026. SCRATCH: outside the package, not
+landed, not read by anyone who did not write it. Built only by `scratch_build.py` against the
+checker's cache. The words line, stock, need, use, kids are working names of one model's parts
+(`LineOnAStock`), not the map's words; nothing here is renamed.
+
+## What is here
+
+* **The transfer** (`course_beside`, `unending_beside`). In `LineOnAStock`'s model as it is (nothing
+  put back, no new definition of the level), a way `c ++ R` whose units of `R` each leave themselves
+  (`kids u = [u]`) and take `H` together: while every need of `R` is met at every step before `k`, the
+  course at step `k` is the part's own course beside `R` (`beside`: the part steps by `after`, the level
+  under `H` and what the part takes), with `R` after it. No premise on `c`. With `R` not empty, one need
+  `n` over `R`, and every unit of every generation of `c` needing at least `n`, the net from
+  `(c ++ R, x)` never ends exactly where `TurningInTime.net n` of the part's step never ends from
+  `(c, x)`.
+* **The growing line's own step** (`grown`, `after_line`, `unending_grown`): where every unit of `c`
+  is of a line `S` closed under kids and of one need `m ≥ n`, the part's step is "all kids where `m`
+  is met, nothing where it is not", for which `AloneOutside`, `turns`, `kept` and `uses` of
+  `TurningInTime` are proved here, not given.
+* **The exact turn** in three forms, each with every premise in its docstring:
+  `mixed_turns_iff` (the premises a reader derived by hand: standing overdraw `Short` at
+  `H₂ + taken use c` with the start below it, and every unit of the line taking at most what its kids
+  take), `mixed_turns_iff_ends` (the course as it was comes below `n`, in place of both; no premise on
+  what kids take), and `mixed_turns_iff_rising` (the line's kids take strictly more, a ceiling
+  `Keeps giving 0 hi`: the ending of the course as it was is derived by
+  `TurningInTime.rising_takes_all`, not given). The generic step of the second is
+  `turns_in_time_iff_ends`, `TurningInTime.turns_in_time_iff` with `short₁`, `uses₁` and `below`
+  replaced by the ending of the course as it was and a floor `H₂` on the use along it.
+* **`WayOfUnits.two_units_iff` again** (`Two.two_units_iff`), its statement verbatim, from
+  `mixed_turns_iff` through `WayOfUnits`' bridge (`unending_unit`); `Two.same_statement` checks by
+  `rfl` that its type is `WayOfUnits.two_units_iff`'s.
+* **A kept example** (`Example`): kinds `g` (need 1, use 1, kids `[g]`) and `k` (need 5, use 1, kids
+  `[k, k]`) on `fun z => if 1 ≤ z then 1 else 0`, way `[g, k]`: from five the net never ends, from
+  six it ends, the ways the same at steps 0 and 1 (`ways_alike`). From five it is also a case of
+  `mixed_turns_iff` (`Example.five_by_law`).
+
+Every declaration is meant to have an empty axiom report; the build log says whether it has.
+-/
+
+namespace Becoming
+namespace ScratchMixedWay
+
+/-! ## 1. A generic step: turning in time where the course as it was ends -/
+
+section Generic
+
+variable {W : Type}
+
+/-- Under a use `d` at least `H`, the step is the step under `H` from `z` less what `d` takes beyond
+`H`. For any giving. -/
+theorem step_more {giving : Nat → Nat} {H d : Nat} (le : H ≤ d) (z : Nat) :
+    RegimeMargin.step giving d z = RegimeMargin.step giving H (z - (d - H)) := by
+  have e : z - (d - H) - H = z - d :=
+    (Naturals.sub_sub z (d - H) H).trans (congrArg (z - ·) (Naturals.sub_add_cancel le))
+  show z - d + giving (z - d) = z - (d - H) - H + giving (z - (d - H) - H)
+  rw [e]
+
+/-- With the step under `H` keeping every level up to `hi` within `hi` (`keeps`), the step under any
+use `d` at least `H` (`le`) keeps a level `z` at most `hi` (`high`) within `hi`. -/
+theorem kept_within_more {giving : Nat → Nat} {H hi d z : Nat}
+    (keeps : RegimeMargin.Keeps giving H hi) (le : H ≤ d) (high : z ≤ hi) :
+    RegimeMargin.step giving d z ≤ hi :=
+  Nat.le_trans (Nat.le_of_eq (step_more le z)) (keeps _ (Nat.le_trans (Nat.sub_le z (d - H)) high))
+
+/-- Along the course as it was from `(w, x)`, every level is at most `hi`: with `Keeps` at `H` up to
+`hi` (`keeps`), every way of `alone`'s orbit from `w` using at least `H` (`floor`) and `x ≤ hi`
+(`high`). -/
+theorem asItWas_within {alone : W → W} {giving : Nat → Nat} {use : W → Nat} {H hi : Nat}
+    (keeps : RegimeMargin.Keeps giving H hi) {w : W} {x : Nat}
+    (floor : ∀ j, H ≤ use (Law.orbit alone w j)) (high : x ≤ hi) :
+    ∀ j, (Law.orbit (TurningInTime.asItWas alone
+      (fun w x => RegimeMargin.step giving (use w) x)) (w, x) j).2 ≤ hi
+  | 0 => high
+  | j + 1 => kept_within_more keeps
+      (Nat.le_trans (floor j)
+        (Nat.le_of_eq (congrArg use (TurningInTime.asItWas_way alone _ (w, x) j).symm)))
+      (asItWas_within keeps floor high j)
+
+/-- **Turning in time, exactly, where the course as it was ends.** `TurningInTime.turns_in_time_iff`
+with its premises `short₁`, `uses₁` and `below` replaced by two: every way of `alone`'s orbit from `w`
+using at least `H₂` (`floor`), and the course as it was from `(w, x)` coming to a level below the need
+at some step (`ends`). The other premises are `turns_in_time_iff`'s: `AloneOutside` (`outside`) and
+decided marks; a way after a marked step of the kept kind (`turns`); a kind every step keeps (`kept`)
+that uses `H₂` (`uses`); nothing given from nothing (`nothing`); giving short of `H₂` below `y₂`
+(`short`), meeting it from `y₂` up to `hi` (`meets`), the step under `H₂` keeping the level within
+`hi` (`keeps`); a positive need (`needs`) at most `H₂ + y₂` (`within`); the start `x` at most `hi`
+(`high`). Conclusion: the line from `(w, x)` never ends exactly where there is a step `T` of the course
+as it was, the need met and no level marked before it, the need met and the level marked at it, and the
+level of the course as it was at `T + 1` at or above `H₂ + y₂`. By
+`TurningInTime.unending_iff_first_marked` and `TurningInTime.unending_iff_above` from the way after
+the marked step, whose level is at most `hi` by `asItWas_within`. -/
+theorem turns_in_time_iff_ends {marked : Nat → Prop} [DecidablePred marked] {alone : W → W}
+    {after : W → Nat → W} {Kept : W → Prop} {giving : Nat → Nat} {use : W → Nat}
+    {H₂ y₂ hi need : Nat}
+    (outside : TurningInTime.AloneOutside marked alone after)
+    (turns : ∀ w x, marked x → Kept (after w x))
+    (kept : ∀ w x, Kept w → Kept (after w x)) (uses : ∀ w, Kept w → use w = H₂)
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H₂ y₂)
+    (meets : RegimeMargin.Meets giving H₂ y₂ hi) (keeps : RegimeMargin.Keeps giving H₂ hi)
+    (needs : 0 < need) (within : need ≤ H₂ + y₂) {w : W} {x : Nat}
+    (floor : ∀ j, H₂ ≤ use (Law.orbit alone w j)) (high : x ≤ hi)
+    (ends : ∃ N, (Law.orbit (TurningInTime.asItWas alone
+        (fun w x => RegimeMargin.step giving (use w) x)) (w, x) N).2 < need) :
+    «不穷» (TurningInTime.net need after (fun w x => RegimeMargin.step giving (use w) x)) «一» (w, x) ↔
+      ∃ T, (∀ j, j < T →
+          need ≤ (Law.orbit (TurningInTime.asItWas alone
+            (fun w x => RegimeMargin.step giving (use w) x)) (w, x) j).2 ∧
+          ¬ marked (Law.orbit (TurningInTime.asItWas alone
+            (fun w x => RegimeMargin.step giving (use w) x)) (w, x) j).2) ∧
+        need ≤ (Law.orbit (TurningInTime.asItWas alone
+          (fun w x => RegimeMargin.step giving (use w) x)) (w, x) T).2 ∧
+        marked (Law.orbit (TurningInTime.asItWas alone
+          (fun w x => RegimeMargin.step giving (use w) x)) (w, x) T).2 ∧
+        H₂ + y₂ ≤ (Law.orbit (TurningInTime.asItWas alone
+          (fun w x => RegimeMargin.step giving (use w) x)) (w, x) (T + 1)).2 :=
+  have above : ∀ T, marked (Law.orbit (TurningInTime.asItWas alone
+        (fun w x => RegimeMargin.step giving (use w) x)) (w, x) T).2 →
+      («不穷» (TurningInTime.net need after (fun w x => RegimeMargin.step giving (use w) x)) «一»
+        (TurningInTime.pair after (fun w x => RegimeMargin.step giving (use w) x)
+          (Law.orbit (TurningInTime.asItWas alone
+            (fun w x => RegimeMargin.step giving (use w) x)) (w, x) T)) ↔
+        H₂ + y₂ ≤ (Law.orbit (TurningInTime.asItWas alone
+          (fun w x => RegimeMargin.step giving (use w) x)) (w, x) (T + 1)).2) :=
+    fun T markedT => TurningInTime.unending_iff_above
+      (w := after (Law.orbit (TurningInTime.asItWas alone
+        (fun w x => RegimeMargin.step giving (use w) x)) (w, x) T).1
+        (Law.orbit (TurningInTime.asItWas alone
+          (fun w x => RegimeMargin.step giving (use w) x)) (w, x) T).2)
+      (x := (Law.orbit (TurningInTime.asItWas alone
+        (fun w x => RegimeMargin.step giving (use w) x)) (w, x) (T + 1)).2)
+      kept uses nothing short meets keeps needs within (turns _ _ markedT)
+      (asItWas_within keeps floor high (T + 1))
+  (TurningInTime.unending_iff_first_marked outside ends).trans
+    ⟨fun ⟨T, before, atT, markedT, onward⟩ =>
+      ⟨T, before, atT, markedT, (above T markedT).mp onward⟩,
+     fun ⟨T, before, atT, markedT, enough⟩ =>
+      ⟨T, before, atT, markedT, (above T markedT).mpr enough⟩⟩
+
+end Generic
+
+/-! ## 2. The transfer: a part of the way beside units that leave themselves -/
+
+section Mixed
+
+open LineOnAStock
+
+variable {U : Type} {need use : U → Nat} {kids : U → List U} {giving : Nat → Nat}
+
+/-- What two ways side by side take is what each takes, added. -/
+theorem taken_append (use : U → Nat) :
+    ∀ a b : List U, taken use (a ++ b) = taken use a + taken use b
+  | [], b => (Nat.zero_add (taken use b)).symm
+  | u :: a, b =>
+    show use u + taken use (a ++ b) = use u + taken use a + taken use b from
+      (congrArg (use u + ·) (taken_append use a b)).trans (Nat.add_assoc _ _ _).symm
+
+/-- Where every unit of `R` leaves itself, all the kids of `R` are `R`. -/
+theorem allKids_self : ∀ {R : List U}, (∀ u, u ∈ R → kids u = [u]) → allKids kids R = R
+  | [], _ => rfl
+  | u :: R, self =>
+    show kids u ++ allKids kids R = u :: R from
+      (congrArg (· ++ allKids kids R) (self u (.head R))).trans
+        (congrArg (u :: ·) (allKids_self fun v m => self v (.tail u m)))
+
+/-- Where every unit of `R` leaves itself and has its need met at `z`, the way after a step is `R`. -/
+theorem after_self {R : List U} (self : ∀ u, u ∈ R → kids u = [u]) {z : Nat}
+    (met : ∀ u, u ∈ R → need u ≤ z) : after need kids R z = R :=
+  (after_of_met met).trans (allKids_self self)
+
+/-- Where no unit of `w` has its need met at `z`, the way after a step is empty. -/
+theorem after_none {z : Nat} :
+    ∀ {w : List U}, (∀ u, u ∈ w → z < need u) → after need kids w z = []
+  | [], _ => rfl
+  | u :: w, unmet =>
+    show cond (decide (need u ≤ z)) (kids u) [] ++ after need kids w z = [] by
+      rw [decide_eq_false (Nat.not_le_of_gt (unmet u (.head w))),
+        after_none fun v m => unmet v (.tail u m)]
+      rfl
+
+/-- **The part's step beside `R`.** The part `c` of a way steps by `after`; the level steps under
+`H` (what `R` takes) and what the part takes. A pair (`TurningInTime.pair`). -/
+abbrev beside (need use : U → Nat) (kids : U → List U) (giving : Nat → Nat) (H : Nat) :
+    List U × Nat → List U × Nat :=
+  TurningInTime.pair (after need kids) (fun c z => RegimeMargin.step giving (H + taken use c) z)
+
+/-- **(1) The transfer.** For any `need`, `use`, `kids`, giving, part `c` and start `x`: with every
+unit of `R` leaving itself (`self`) and `R` taking `H` (`take`), where at every step `j` before `k` the
+level of the part's course beside `R` meets the need of every unit of `R` (`before`), the course of the
+line on a stock from `(c ++ R, x)` at step `k` is that part's way followed by `R`, at that level.
+Nothing is asked of `c`, of the giving or of the needs of `c`. By `after_append`, `after_self`
+(`after_of_met`) and `taken_append`, step by step. -/
+theorem course_beside {R : List U} {H : Nat} (self : ∀ u, u ∈ R → kids u = [u])
+    (take : taken use R = H) {c : List U} {x : Nat} :
+    ∀ k, (∀ j, j < k → ∀ u, u ∈ R →
+        need u ≤ (Law.orbit (beside need use kids giving H) (c, x) j).2) →
+      course need kids giving use (c ++ R, x) k =
+        ((Law.orbit (beside need use kids giving H) (c, x) k).1 ++ R,
+          (Law.orbit (beside need use kids giving H) (c, x) k).2)
+  | 0, _ => rfl
+  | k + 1, before => by
+    have ih := course_beside self take k fun j lt => before j (Nat.lt_succ_of_lt lt)
+    have met := before k (Nat.lt_succ_self k)
+    show step need kids giving use (course need kids giving use (c ++ R, x) k) =
+      ((beside need use kids giving H (Law.orbit (beside need use kids giving H) (c, x) k)).1 ++ R,
+        (beside need use kids giving H (Law.orbit (beside need use kids giving H) (c, x) k)).2)
+    rw [ih]
+    generalize Law.orbit (beside need use kids giving H) (c, x) k = s at met
+    show (after need kids (s.1 ++ R) s.2, RegimeMargin.step giving (taken use (s.1 ++ R)) s.2) =
+      (after need kids s.1 s.2 ++ R, RegimeMargin.step giving (H + taken use s.1) s.2)
+    rw [after_append, after_self self met, taken_append, take, Nat.add_comm (taken use s.1) H]
+
+/-- With `R` not empty (`ne`), every unit of `R` needing `n` (`rn`) and every unit of `c` needing at
+least `n` (`up`): some unit of `c ++ R` has its need met at `z` exactly where `z` meets `n`. -/
+theorem goes_append {R c : List U} {n z : Nat} (ne : R ≠ []) (rn : ∀ u, u ∈ R → need u = n)
+    (up : ∀ u, u ∈ c → n ≤ need u) : Goes need (c ++ R, z) ↔ n ≤ z :=
+  ⟨fun ⟨u, mu, le⟩ => (mem_append_cases mu).elim
+      (fun mc => Nat.le_trans (up u mc) le)
+      (fun mr => Nat.le_trans (Nat.le_of_eq (rn u mr).symm) le),
+   fun le => match mem_of_ne_nil ne with
+    | ⟨v, mv⟩ => ⟨v, mem_append_of_right c mv, Nat.le_trans (Nat.le_of_eq (rn v mv)) le⟩⟩
+
+/-- A unit of the part's way at step `k` beside `R` is a unit of the `k`-th generation of `c`. -/
+theorem mem_beside {H : Nat} {c : List U} {x : Nat} :
+    ∀ k u, u ∈ (Law.orbit (beside need use kids giving H) (c, x) k).1 → u ∈ generation kids k c
+  | 0, _, m => m
+  | k + 1, _, m =>
+    match (mem_after_iff (need := need) (kids := kids)
+        (w := (Law.orbit (beside need use kids giving H) (c, x) k).1)
+        (x := (Law.orbit (beside need use kids giving H) (c, x) k).2)).mp m with
+    | ⟨p, mp, _, mk⟩ => mem_allKids_iff.mpr ⟨p, mem_beside k p mp, mk⟩
+
+/-- **(1) The transfer, for the net.** With `R` not empty (`ne`), each unit of `R` leaving itself
+(`self`) and needing `n` (`rn`), `R` taking `H` (`take`), and every unit of every generation of `c`
+needing at least `n` (`up`): the net of the line on a stock from `(c ++ R, x)` never ends exactly
+where `TurningInTime.net n` of the part's step beside `R` never ends from `(c, x)`. Under any giving
+and use. By `course_beside`, `goes_append`, `mem_beside` and `WayOfUnits.all_iff_while`. -/
+theorem unending_beside {R c : List U} {n H x : Nat} (ne : R ≠ [])
+    (self : ∀ u, u ∈ R → kids u = [u]) (rn : ∀ u, u ∈ R → need u = n) (take : taken use R = H)
+    (up : ∀ k u, u ∈ generation kids k c → n ≤ need u) :
+    «不穷» (net need kids giving use) «一» (c ++ R, x) ↔
+      «不穷» (TurningInTime.net n (after need kids)
+        (fun c z => RegimeMargin.step giving (H + taken use c) z)) «一» (c, x) :=
+  Law.stepWhile_unending_iff.trans
+    ((WayOfUnits.all_iff_while fun k before =>
+        Eq.subst (motive := fun s => Goes need s ↔
+            n ≤ (Law.orbit (beside need use kids giving H) (c, x) k).2)
+          (course_beside (giving := giving) self take k fun j lt u mu =>
+            Nat.le_trans (Nat.le_of_eq (rn u mu)) (before j lt)).symm
+          (goes_append ne rn fun u mu => up k u (mem_beside k u mu))).trans
+      (Law.stepWhile_unending_iff (can := fun s : List U × Nat => n ≤ s.2)
+        (next := beside need use kids giving H) (s := (c, x))).symm)
+
+/-! ## 3. The growing line's own step -/
+
+/-- **The growing line's step**: all the kids of the part where `m` is met, nothing where it is not. -/
+def grown (m : Nat) (kids : U → List U) (c : List U) (z : Nat) : List U :=
+  cond (decide (m ≤ z)) (allKids kids c) []
+
+/-- Where every unit of `c` is of a line `S` (`line`) every unit of which needs `m` (`sm`), the way
+after a step of `c` is `grown`. -/
+theorem after_line {S : U → Prop} {m : Nat} (sm : ∀ u, S u → need u = m) {c : List U}
+    (line : ∀ u, u ∈ c → S u) (z : Nat) : after need kids c z = grown m kids c z :=
+  (Nat.lt_or_ge z m).elim
+    (fun lt =>
+      (after_none fun u mu => Nat.lt_of_lt_of_le lt (Nat.le_of_eq (sm u (line u mu)).symm)).trans
+        (show [] = cond (decide (m ≤ z)) (allKids kids c) [] by
+          rw [decide_eq_false (Nat.not_le_of_gt lt)]; rfl))
+    (fun ge =>
+      (after_of_met fun u mu => Nat.le_trans (Nat.le_of_eq (sm u (line u mu))) ge).trans
+        (show allKids kids c = cond (decide (m ≤ z)) (allKids kids c) [] by
+          rw [decide_eq_true ge]; rfl))
+
+/-- A line closed under kids (`closed`) keeps all the kids of its units in it. -/
+theorem line_allKids {S : U → Prop} (closed : ∀ u v, S u → v ∈ kids u → S v) {c : List U}
+    (line : ∀ u, u ∈ c → S u) : ∀ v, v ∈ allKids kids c → S v :=
+  fun v mv => match mem_allKids_iff.mp mv with
+    | ⟨u, mu, mk⟩ => closed u v (line u mu) mk
+
+/-- Every generation of a part of a closed line is of the line. -/
+theorem line_generation {S : U → Prop} (closed : ∀ u v, S u → v ∈ kids u → S v) {c : List U}
+    (line : ∀ u, u ∈ c → S u) : ∀ k u, u ∈ generation kids k c → S u
+  | 0 => line
+  | k + 1 => line_allKids closed (line_generation closed line k)
+
+/-- `grown` keeps the line. -/
+theorem line_grown {S : U → Prop} (closed : ∀ u v, S u → v ∈ kids u → S v) {m : Nat} {c : List U}
+    (line : ∀ u, u ∈ c → S u) (z : Nat) : ∀ v, v ∈ grown m kids c z → S v :=
+  fun v mv => by
+    unfold grown at mv
+    cases h : decide (m ≤ z) with
+    | true => rw [h] at mv; exact line_allKids closed line v mv
+    | false => rw [h] at mv; exact nomatch mv
+
+/-- From a part of a closed line of one need `m`, the part's course beside `R` is the course of
+`grown`'s pair, at every step, and its way is of the line. Under any giving. -/
+theorem beside_grown {S : U → Prop} {m H : Nat} (sm : ∀ u, S u → need u = m)
+    (closed : ∀ u v, S u → v ∈ kids u → S v) {c : List U} {x : Nat} (line : ∀ u, u ∈ c → S u) :
+    ∀ k, Law.orbit (beside need use kids giving H) (c, x) k =
+        Law.orbit (TurningInTime.pair (grown m kids)
+          (fun c z => RegimeMargin.step giving (H + taken use c) z)) (c, x) k ∧
+      ∀ u, u ∈ (Law.orbit (TurningInTime.pair (grown m kids)
+          (fun c z => RegimeMargin.step giving (H + taken use c) z)) (c, x) k).1 → S u
+  | 0 => ⟨rfl, line⟩
+  | k + 1 =>
+    have ih := beside_grown sm closed line k
+    ⟨(congrArg (beside need use kids giving H) ih.1).trans
+        (congrArg (fun l => (l, RegimeMargin.step giving (H + taken use
+            (Law.orbit (TurningInTime.pair (grown m kids)
+              (fun c z => RegimeMargin.step giving (H + taken use c) z)) (c, x) k).1)
+            (Law.orbit (TurningInTime.pair (grown m kids)
+              (fun c z => RegimeMargin.step giving (H + taken use c) z)) (c, x) k).2))
+          (after_line sm ih.2 _)),
+     line_grown closed ih.2 _⟩
+
+/-- **(1) The transfer, to the growing line's step.** With `R` not empty (`ne`), each unit of `R`
+leaving itself (`self`) and needing `n` (`rn`), `R` taking `H` (`take`), every unit of `c` of a line
+`S` (`line`) closed under kids (`closed`) every unit of which needs `m` (`sm`), and `n ≤ m` (`order`):
+the net from `(c ++ R, x)` never ends exactly where `TurningInTime.net n` of `grown m`'s pair, the
+level under `H` and what the part takes, never ends from `(c, x)`. Under any giving and use. -/
+theorem unending_grown {S : U → Prop} {R c : List U} {m n H x : Nat} (ne : R ≠ [])
+    (self : ∀ u, u ∈ R → kids u = [u]) (rn : ∀ u, u ∈ R → need u = n) (take : taken use R = H)
+    (line : ∀ u, u ∈ c → S u) (sm : ∀ u, S u → need u = m)
+    (closed : ∀ u v, S u → v ∈ kids u → S v) (order : n ≤ m) :
+    «不穷» (net need kids giving use) «一» (c ++ R, x) ↔
+      «不穷» (TurningInTime.net n (grown m kids)
+        (fun c z => RegimeMargin.step giving (H + taken use c) z)) «一» (c, x) :=
+  (unending_beside ne self rn take fun k u mu =>
+      Nat.le_trans order (Nat.le_of_eq (sm u (line_generation closed line k u mu)).symm)).trans
+    (Law.stepWhile_unending_iff.trans
+      ((⟨fun all k => Eq.subst (motive := fun s : List U × Nat => n ≤ s.2)
+            (beside_grown (giving := giving) (use := use) (x := x) sm closed line k).1 (all k),
+          fun all k => Eq.subst (motive := fun s : List U × Nat => n ≤ s.2)
+            (beside_grown (giving := giving) (use := use) (x := x) sm closed line k).1.symm (all k)⟩ :
+          (∀ k, n ≤ (Law.orbit (beside need use kids giving H) (c, x) k).2) ↔
+            ∀ k, n ≤ (Law.orbit (TurningInTime.pair (grown m kids)
+              (fun c z => RegimeMargin.step giving (H + taken use c) z)) (c, x) k).2).trans
+        (Law.stepWhile_unending_iff (can := fun s : List U × Nat => n ≤ s.2)
+          (next := TurningInTime.pair (grown m kids)
+            (fun c z => RegimeMargin.step giving (H + taken use c) z)) (s := (c, x))).symm))
+
+/-- Outside the levels below `m`, `grown` is `allKids`: `AloneOutside`, proved. -/
+theorem grown_outside (m : Nat) (kids : U → List U) :
+    TurningInTime.AloneOutside (fun z => z < m) (allKids kids) (grown m kids) :=
+  fun c z nm => by
+    show cond (decide (m ≤ z)) (allKids kids c) [] = allKids kids c
+    rw [decide_eq_true (Nat.ge_of_not_lt nm)]
+    rfl
+
+/-- Below `m`, `grown` is empty: `turns`, proved. -/
+theorem grown_turns (m : Nat) (kids : U → List U) : ∀ c z, z < m → grown m kids c z = [] :=
+  fun c z lt => by
+    show cond (decide (m ≤ z)) (allKids kids c) [] = []
+    rw [decide_eq_false (Nat.not_le_of_gt lt)]
+    rfl
+
+/-- Once empty, the part stays empty: `kept`, proved. -/
+theorem grown_kept (m : Nat) (kids : U → List U) : ∀ c z, c = [] → grown m kids c z = [] :=
+  fun c z e => by
+    subst e
+    show cond (decide (m ≤ z)) [] [] = []
+    cases decide (m ≤ z) <;> rfl
+
+/-- Where every unit of `w` takes at most what its kids take, `w` takes at most what all its kids
+take. -/
+theorem taken_le_allKids (keepsUse : ∀ u, use u ≤ taken use (kids u)) :
+    ∀ w : List U, taken use w ≤ taken use (allKids kids w)
+  | [] => Nat.le_refl 0
+  | u :: w =>
+    show use u + taken use w ≤ taken use (kids u ++ allKids kids w) from
+      Nat.le_trans (Nat.add_le_add (keepsUse u) (taken_le_allKids keepsUse w))
+        (Nat.le_of_eq (taken_append use _ _).symm)
+
+/-- `taken_le_allKids` for a part of a line, the premise asked of the line only. -/
+theorem taken_le_allKids_line {S : U → Prop} (keepsUse : ∀ u, S u → use u ≤ taken use (kids u)) :
+    ∀ w : List U, (∀ u, u ∈ w → S u) → taken use w ≤ taken use (allKids kids w)
+  | [], _ => Nat.le_refl 0
+  | u :: w, line =>
+    show use u + taken use w ≤ taken use (kids u ++ allKids kids w) from
+      Nat.le_trans (Nat.add_le_add (keepsUse u (line u (.head w)))
+          (taken_le_allKids_line keepsUse w fun v m => line v (.tail u m)))
+        (Nat.le_of_eq (taken_append use _ _).symm)
+
+/-- Along `allKids`' orbit from a part of a closed line, the way is of the line. -/
+theorem line_orbit {S : U → Prop} (closed : ∀ u v, S u → v ∈ kids u → S v) {c : List U}
+    (line : ∀ u, u ∈ c → S u) : ∀ j u, u ∈ Law.orbit (allKids kids) c j → S u
+  | 0 => line
+  | j + 1 => line_allKids closed (line_orbit closed line j)
+
+/-- Along `allKids`' orbit from a part of a closed line each of whose units takes at most what its
+kids take, what the part takes never falls below what `c` takes. -/
+theorem taken_orbit {S : U → Prop} (closed : ∀ u v, S u → v ∈ kids u → S v)
+    (keepsUse : ∀ u, S u → use u ≤ taken use (kids u)) {c : List U} (line : ∀ u, u ∈ c → S u) :
+    ∀ j, taken use c ≤ taken use (Law.orbit (allKids kids) c j)
+  | 0 => Nat.le_refl _
+  | j + 1 => Nat.le_trans (taken_orbit closed keepsUse line j)
+      (taken_le_allKids_line keepsUse _ (line_orbit closed line j))
+
+/-! ## 4. The exact turn -/
+
+/-- The level of the course as it was: the part `allKids` taken at every step from `c`, the level under
+`H` and what the part takes, from `x`. -/
+abbrev levelAsItWas (kids : U → List U) (use : U → Nat) (giving : Nat → Nat) (H : Nat) (c : List U)
+    (x : Nat) (j : Nat) : Nat :=
+  (Law.orbit (TurningInTime.asItWas (allKids kids)
+    (fun w z => RegimeMargin.step giving (H + taken use w) z)) (c, x) j).2
+
+/-- The right side of `TurningInTime`'s turn at `marked := (· < m)`, read with `n ≤ m`. -/
+theorem right_side_iff {X : Nat → Nat} {m n a : Nat} (order : n ≤ m) :
+    (∃ T, (∀ j, j < T → n ≤ X j ∧ ¬ X j < m) ∧ n ≤ X T ∧ X T < m ∧ a ≤ X (T + 1)) ↔
+      ∃ T, (∀ j, j < T → m ≤ X j) ∧ n ≤ X T ∧ X T < m ∧ a ≤ X (T + 1) :=
+  ⟨fun ⟨T, before, atT, belowT, enough⟩ =>
+     ⟨T, fun j lt => Nat.ge_of_not_lt (before j lt).2, atT, belowT, enough⟩,
+   fun ⟨T, before, atT, belowT, enough⟩ =>
+     ⟨T, fun j lt => ⟨Nat.le_trans order (before j lt), Nat.not_lt_of_ge (before j lt)⟩,
+       atT, belowT, enough⟩⟩
+
+/-- **(2) The exact turn, under the premises a reader derived by hand.** In `LineOnAStock`'s model as
+it is, for any `need`, `use`, `kids` and giving: `R` not empty (`ne`), each unit of `R` leaving itself
+(`self`) and needing `n` (`rn`), `R` taking `H₂` (`take`); every unit of `c` of a line `S` (`line`),
+every unit of `S` needing `m` (`sm`), the kids of a unit of `S` of `S` (`closed`); `n ≤ m` (`order`);
+each unit of `S` taking at most what its kids take together (`keepsUse`); nothing given from nothing
+(`nothing`); giving short of `H₂` below `y₂` (`short`), meeting it from `y₂` up to `hi` (`meets`), the
+step under `H₂` keeping the level within `hi` (`keeps`); `0 < n` (`needs`) and `n ≤ H₂ + y₂`
+(`within`); giving short of `H₂ + taken use c` below `y₁` (`short₁`), the start `x` below
+`H₂ + taken use c + y₁` (`below`) and at most `hi` (`high`). Conclusion: the net from `(c ++ R, x)`
+never ends exactly where there is a step `T` of the course as it was (`levelAsItWas`: `allKids` taken
+at every step from `c`, the level under `H₂` and what that takes) with the level at or above `m` before
+`T`, at or above `n` and below `m` at `T`, and at or above `H₂ + y₂` at `T + 1`. No decidability of `S`
+and no premise that the units of `R` are not of `S` is asked (the reader listed both). By
+`unending_grown` and `TurningInTime.turns_in_time_iff` on the carrier `List U` with
+`marked := (· < m)`, `alone := allKids kids`, `after := grown m kids`, `Kept := (· = [])`,
+`H₁ := H₂ + taken use c`; `uses₁` from `keepsUse` (`taken_orbit`). Without `keepsUse` it is false
+(the search kept a countermodel: a unit of the line with no kids, the take falling back to `H₂`). -/
+theorem mixed_turns_iff {S : U → Prop} {R c : List U} {m n H₂ y₁ y₂ hi x : Nat}
+    (ne : R ≠ []) (self : ∀ u, u ∈ R → kids u = [u]) (rn : ∀ u, u ∈ R → need u = n)
+    (take : taken use R = H₂) (line : ∀ u, u ∈ c → S u) (sm : ∀ u, S u → need u = m)
+    (closed : ∀ u v, S u → v ∈ kids u → S v) (order : n ≤ m)
+    (keepsUse : ∀ u, S u → use u ≤ taken use (kids u))
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H₂ y₂)
+    (meets : RegimeMargin.Meets giving H₂ y₂ hi) (keeps : RegimeMargin.Keeps giving H₂ hi)
+    (needs : 0 < n) (within : n ≤ H₂ + y₂)
+    (short₁ : RegimeMargin.Short giving (H₂ + taken use c) y₁)
+    (below : x < H₂ + taken use c + y₁) (high : x ≤ hi) :
+    «不穷» (net need kids giving use) «一» (c ++ R, x) ↔
+      ∃ T, (∀ j, j < T → m ≤ levelAsItWas kids use giving H₂ c x j) ∧
+        n ≤ levelAsItWas kids use giving H₂ c x T ∧ levelAsItWas kids use giving H₂ c x T < m ∧
+        H₂ + y₂ ≤ levelAsItWas kids use giving H₂ c x (T + 1) :=
+  (unending_grown ne self rn take line sm closed order).trans
+    ((TurningInTime.turns_in_time_iff (marked := fun z => z < m) (alone := allKids kids)
+        (after := grown m kids) (Kept := fun c => c = []) (giving := giving)
+        (use := fun c => H₂ + taken use c) (H₁ := H₂ + taken use c) (y₁ := y₁) (H₂ := H₂)
+        (y₂ := y₂) (hi := hi) (need := n) (w := c) (x := x)
+        (grown_outside m kids) (grown_turns m kids) (grown_kept m kids) (fun c e => by subst e; rfl)
+        nothing short meets keeps needs within short₁
+        (fun j => Nat.add_le_add_left (taken_orbit closed keepsUse line j) H₂) below high).trans
+      (right_side_iff order))
+
+/-- **(2) The exact turn, where the course as it was ends.** As `mixed_turns_iff`, with `short₁`,
+`below` and `keepsUse` replaced by one premise: the course as it was comes to a level below `n` at some
+step (`ends`). Premises: `ne`, `self`, `rn`, `take`, `line`, `sm`, `closed`, `order` as there; nothing
+given from nothing (`nothing`); `Short`, `Meets` and `Keeps` at `H₂` from `y₂` up to `hi` (`short`,
+`meets`, `keeps`); `0 < n` (`needs`), `n ≤ H₂ + y₂` (`within`); the start at most `hi` (`high`). The
+same conclusion. Nothing is asked of what the line's kids take. By `unending_grown` and
+`turns_in_time_iff_ends` (the floor `H₂` on the use is `H₂ ≤ H₂ + taken use _`). -/
+theorem mixed_turns_iff_ends {S : U → Prop} {R c : List U} {m n H₂ y₂ hi x : Nat}
+    (ne : R ≠ []) (self : ∀ u, u ∈ R → kids u = [u]) (rn : ∀ u, u ∈ R → need u = n)
+    (take : taken use R = H₂) (line : ∀ u, u ∈ c → S u) (sm : ∀ u, S u → need u = m)
+    (closed : ∀ u v, S u → v ∈ kids u → S v) (order : n ≤ m)
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H₂ y₂)
+    (meets : RegimeMargin.Meets giving H₂ y₂ hi) (keeps : RegimeMargin.Keeps giving H₂ hi)
+    (needs : 0 < n) (within : n ≤ H₂ + y₂) (high : x ≤ hi)
+    (ends : ∃ N, levelAsItWas kids use giving H₂ c x N < n) :
+    «不穷» (net need kids giving use) «一» (c ++ R, x) ↔
+      ∃ T, (∀ j, j < T → m ≤ levelAsItWas kids use giving H₂ c x j) ∧
+        n ≤ levelAsItWas kids use giving H₂ c x T ∧ levelAsItWas kids use giving H₂ c x T < m ∧
+        H₂ + y₂ ≤ levelAsItWas kids use giving H₂ c x (T + 1) :=
+  (unending_grown ne self rn take line sm closed order).trans
+    ((turns_in_time_iff_ends (marked := fun z => z < m) (alone := allKids kids)
+        (after := grown m kids) (Kept := fun c => c = []) (giving := giving)
+        (use := fun c => H₂ + taken use c) (H₂ := H₂) (y₂ := y₂) (hi := hi) (need := n)
+        (w := c) (x := x)
+        (grown_outside m kids) (grown_turns m kids) (grown_kept m kids) (fun c e => by subst e; rfl)
+        nothing short meets keeps needs within (fun j => Nat.le_add_right H₂ _) high ends).trans
+      (right_side_iff order))
+
+/-- Where every unit of the line takes strictly less than its kids together (`grows`), all the kids of
+a part of the line take strictly more than the part, where the part is not empty. -/
+theorem taken_lt_allKids_line {S : U → Prop} (grows : ∀ u, S u → use u < taken use (kids u)) :
+    ∀ w : List U, w ≠ [] → (∀ u, u ∈ w → S u) → taken use w < taken use (allKids kids w)
+  | [], ne, _ => absurd rfl ne
+  | u :: w, _, line =>
+    show use u + taken use w < taken use (kids u ++ allKids kids w) from
+      Nat.lt_of_lt_of_le
+        (Nat.add_lt_add_of_lt_of_le (grows u (line u (.head w)))
+          (taken_le_allKids_line (fun v sv => Nat.le_of_lt (grows v sv)) w
+            fun v m => line v (.tail u m)))
+        (Nat.le_of_eq (taken_append use _ _).symm)
+
+/-- Where every unit of the line takes strictly less than its kids, every unit of the line has kids, so
+all the kids of a part of the line that is not empty are not empty. -/
+theorem allKids_ne_nil {S : U → Prop} (grows : ∀ u, S u → use u < taken use (kids u)) :
+    ∀ w : List U, w ≠ [] → (∀ u, u ∈ w → S u) → allKids kids w ≠ []
+  | [], ne, _ => absurd rfl ne
+  | u :: w, _, line => fun e =>
+    have kidsNil : kids u = [] := HistoryIdeals.append_eq_nil_left e
+    Nat.not_lt_zero _
+      (Eq.subst (motive := fun l => use u < taken use l) kidsNil (grows u (line u (.head w))))
+
+/-- Along `allKids`' orbit from a part of the line that is not empty, with `grows`, the part stays not
+empty. -/
+theorem orbit_ne_nil {S : U → Prop} (grows : ∀ u, S u → use u < taken use (kids u))
+    (closed : ∀ u v, S u → v ∈ kids u → S v) {c : List U} (ne : c ≠ []) (line : ∀ u, u ∈ c → S u) :
+    ∀ j, Law.orbit (allKids kids) c j ≠ []
+  | 0 => ne
+  | j + 1 => allKids_ne_nil grows _ (orbit_ne_nil grows closed ne line j) (line_orbit closed line j)
+
+/-- **(2) The exact turn, where the line's own growth ends the course as it was.** As
+`mixed_turns_iff_ends`, with `ends` and `keeps` derived, not given: every unit of the line taking
+strictly less than its kids together (`grows`), the part `c` not empty (`cne`), and the step under no
+use keeping every level up to `hi` within `hi` (`keeps₀`, `RegimeMargin.Keeps giving 0 hi`, a
+ceiling), in place of `ends` and `Keeps giving H₂ hi`. Premises: `ne`, `self`, `rn`, `take`, `line`,
+`sm`, `closed`, `order`, `nothing`, `short`, `meets`, `needs`, `within`, `high`, `grows`, `cne`,
+`keeps₀`. The same conclusion. By `TurningInTime.rising_takes_all`: what the part takes rises at every
+step of the course as it was, so its level is nothing at step `hi + 1`, below `n`. No standing
+overdraw is given. -/
+theorem mixed_turns_iff_rising {S : U → Prop} {R c : List U} {m n H₂ y₂ hi x : Nat}
+    (ne : R ≠ []) (self : ∀ u, u ∈ R → kids u = [u]) (rn : ∀ u, u ∈ R → need u = n)
+    (take : taken use R = H₂) (line : ∀ u, u ∈ c → S u) (sm : ∀ u, S u → need u = m)
+    (closed : ∀ u v, S u → v ∈ kids u → S v) (order : n ≤ m)
+    (grows : ∀ u, S u → use u < taken use (kids u)) (cne : c ≠ [])
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H₂ y₂)
+    (meets : RegimeMargin.Meets giving H₂ y₂ hi) (keeps₀ : RegimeMargin.Keeps giving 0 hi)
+    (needs : 0 < n) (within : n ≤ H₂ + y₂) (high : x ≤ hi) :
+    «不穷» (net need kids giving use) «一» (c ++ R, x) ↔
+      ∃ T, (∀ j, j < T → m ≤ levelAsItWas kids use giving H₂ c x j) ∧
+        n ≤ levelAsItWas kids use giving H₂ c x T ∧ levelAsItWas kids use giving H₂ c x T < m ∧
+        H₂ + y₂ ≤ levelAsItWas kids use giving H₂ c x (T + 1) :=
+  have zero : levelAsItWas kids use giving H₂ c x (hi + 1) = 0 :=
+    TurningInTime.rising_takes_all (alone := allKids kids) (use := fun w => H₂ + taken use w)
+      nothing keeps₀ high fun j _ =>
+        Nat.add_lt_add_left
+          (taken_lt_allKids_line grows _ (orbit_ne_nil grows closed cne line j)
+            (line_orbit closed line j)) H₂
+  mixed_turns_iff_ends ne self rn take line sm closed order nothing short meets
+    (fun _ hz => kept_within_more keeps₀ (Nat.zero_le H₂) hz) needs within high
+    ⟨hi + 1, Nat.lt_of_le_of_lt (Nat.le_of_eq zero) needs⟩
+
+end Mixed
+
+/-! ## 5. `WayOfUnits.two_units_iff` as a case -/
+
+namespace Two
+
+open WayOfUnits
+
+/-- With each unit leaving itself, the course as it was from the first unit alone is that unit at the
+level's course under `h + H₂`. -/
+theorem asItWas_unit {giving : Nat → Nat} {m h H₂ x : Nat} : ∀ j,
+    Law.orbit (TurningInTime.asItWas (LineOnAStock.allKids (fun u : Nat × Nat => [u]))
+      (fun w z => RegimeMargin.step giving (H₂ + LineOnAStock.taken use w) z)) ([(m, h)], x) j =
+      ([(m, h)], Law.orbit (RegimeMargin.step giving (h + H₂)) x j)
+  | 0 => rfl
+  | j + 1 => by
+    show TurningInTime.asItWas (LineOnAStock.allKids (fun u : Nat × Nat => [u]))
+        (fun w z => RegimeMargin.step giving (H₂ + LineOnAStock.taken use w) z)
+        (Law.orbit (TurningInTime.asItWas (LineOnAStock.allKids (fun u : Nat × Nat => [u]))
+          (fun w z => RegimeMargin.step giving (H₂ + LineOnAStock.taken use w) z)) ([(m, h)], x) j) =
+      ([(m, h)], RegimeMargin.step giving (h + H₂) (Law.orbit (RegimeMargin.step giving (h + H₂)) x j))
+    rw [asItWas_unit j]
+    show ([(m, h)], RegimeMargin.step giving (H₂ + (h + 0)) _) = _
+    rw [Nat.add_zero, Nat.add_comm H₂ h]
+
+/-- **(3) `WayOfUnits.two_units_iff`, its statement verbatim, as a case of `mixed_turns_iff`.** At
+`U := Nat × Nat`, `need`, `use` of `WayOfUnits`, `kids u := [u]`, the line `S u := u = (m, h)`,
+`c := [(m, h)]` and `R := [(n, H₂)]`, through `WayOfUnits.unending_unit`; `keepsUse` holds since the
+unit's kid is itself, and `H₂ + taken use [(m, h)]` is `h + H₂` (`asItWas_unit`). Premises are
+`two_units_iff`'s: `order`, `nothing`, `short`, `meets`, `keeps`, `needs`, `within`, `short₁`,
+`below`, `high`. -/
+theorem two_units_iff {giving : Nat → Nat} {m h n H₂ y₁ y₂ hi x : Nat}
+    (order : n ≤ m) (nothing : RegimeMargin.FromNothing giving)
+    (short : RegimeMargin.Short giving H₂ y₂) (meets : RegimeMargin.Meets giving H₂ y₂ hi)
+    (keeps : RegimeMargin.Keeps giving H₂ hi) (needs : 0 < n) (within : n ≤ H₂ + y₂)
+    (short₁ : RegimeMargin.Short giving (h + H₂) y₁) (below : x < h + H₂ + y₁) (high : x ≤ hi) :
+    «不穷» (net giving) «一» ([(m, h), (n, H₂)], x) ↔
+      ∃ T, (∀ j, j < T → m ≤ Law.orbit (RegimeMargin.step giving (h + H₂)) x j) ∧
+        n ≤ Law.orbit (RegimeMargin.step giving (h + H₂)) x T ∧
+        Law.orbit (RegimeMargin.step giving (h + H₂)) x T < m ∧
+        H₂ + y₂ ≤ Law.orbit (RegimeMargin.step giving (h + H₂)) x (T + 1) :=
+  have e : h + H₂ = H₂ + LineOnAStock.taken use [(m, h)] := Nat.add_comm h H₂
+  have same : ∀ j, ScratchMixedWay.levelAsItWas (fun u : Nat × Nat => [u]) use giving H₂ [(m, h)] x j =
+      Law.orbit (RegimeMargin.step giving (h + H₂)) x j :=
+    fun j => congrArg Prod.snd (asItWas_unit j)
+  (unending_unit giving ([(m, h), (n, H₂)], x)).symm.trans
+    ((ScratchMixedWay.mixed_turns_iff (U := Nat × Nat) (need := need) (use := use)
+        (kids := fun u => [u]) (giving := giving) (S := fun u => u = (m, h))
+        (R := [(n, H₂)]) (c := [(m, h)]) (m := m) (n := n) (H₂ := H₂) (y₁ := y₁) (y₂ := y₂)
+        (hi := hi) (x := x)
+        (List.cons_ne_nil _ _) (fun _ _ => rfl)
+        (fun _ mu => congrArg need (CrossSituational.mem_singleton mu))
+        rfl (fun _ mu => CrossSituational.mem_singleton mu)
+        (fun _ e => congrArg need e)
+        (fun _ _ su mv => (CrossSituational.mem_singleton mv).trans su)
+        order (fun _ _ => Nat.le_refl _) nothing short meets keeps needs within
+        (Eq.subst (motive := fun t => RegimeMargin.Short giving t y₁) e short₁)
+        (Eq.subst (motive := fun t => x < t + y₁) e below) high).trans
+      ⟨fun ⟨T, before, atT, belowT, enough⟩ =>
+        ⟨T, fun j lt => Nat.le_trans (before j lt) (Nat.le_of_eq (same j)),
+          Nat.le_trans atT (Nat.le_of_eq (same T)),
+          Nat.lt_of_le_of_lt (Nat.le_of_eq (same T).symm) belowT,
+          Nat.le_trans enough (Nat.le_of_eq (same (T + 1)))⟩,
+       fun ⟨T, before, atT, belowT, enough⟩ =>
+        ⟨T, fun j lt => Nat.le_trans (before j lt) (Nat.le_of_eq (same j).symm),
+          Nat.le_trans atT (Nat.le_of_eq (same T).symm),
+          Nat.lt_of_le_of_lt (Nat.le_of_eq (same T)) belowT,
+          Nat.le_trans enough (Nat.le_of_eq (same (T + 1)).symm)⟩⟩)
+
+/-- The statement of `two_units_iff` here is `WayOfUnits.two_units_iff`'s: the two proofs are of one
+type (checked by `rfl`, proofs of one proposition being equal). -/
+theorem same_statement : @two_units_iff = @WayOfUnits.two_units_iff := rfl
+
+end Two
+
+/-! ## 6. A kept example -/
+
+namespace Example
+
+open LineOnAStock
+
+/-- Two kinds. -/
+inductive Kind
+  | g
+  | k
+
+open Kind
+
+/-- `g` needs one, `k` five. -/
+def need : Kind → Nat
+  | g => 1
+  | k => 5
+
+/-- Each takes one. -/
+def use (_ : Kind) : Nat := 1
+
+/-- `g` leaves itself; `k` leaves two of itself. -/
+def kids : Kind → List Kind
+  | g => [g]
+  | k => [k, k]
+
+/-- One where something is left, nothing where nothing is. -/
+def giving (z : Nat) : Nat := if 1 ≤ z then 1 else 0
+
+/-- **From five.** `[g, k]` at five, `[g, k, k]` at four, `[g]` at two, which the step leaves as it
+is; the net never ends. -/
+theorem from_five :
+    course need kids giving use ([g, k], 5) 1 = ([g, k, k], 4) ∧
+    course need kids giving use ([g, k], 5) 2 = ([g], 2) ∧
+    course need kids giving use ([g, k], 5) 3 = ([g], 2) ∧
+    «不穷» (net need kids giving use) «一» ([g, k], 5) :=
+  ⟨rfl, rfl, rfl, unending_of_fixed (t := 2)
+    (fun j lt => match j, lt with
+      | 0, _ => by decide
+      | 1, _ => by decide
+      | j + 2, lt => absurd lt (Nat.not_lt_of_ge (Nat.le_add_left 2 j)))
+    rfl (by decide)⟩
+
+/-- **From six.** `[g, k]` at six, `[g, k, k]` at five, `[g, k, k, k, k]` at three, `[g]` at nothing;
+no need is met there and the net ends. -/
+theorem from_six :
+    course need kids giving use ([g, k], 6) 1 = ([g, k, k], 5) ∧
+    course need kids giving use ([g, k], 6) 2 = ([g, k, k, k, k], 3) ∧
+    course need kids giving use ([g, k], 6) 3 = ([g], 0) ∧
+    ¬ «不穷» (net need kids giving use) «一» ([g, k], 6) :=
+  ⟨rfl, rfl, rfl, fun never => absurd (Law.stepWhile_unending_iff.mp never 3) (by decide)⟩
+
+/-- **The higher start ends because the growers were met one step longer.** The two ways are the same
+at steps 0 and 1, by `ways_alike` at `n = 1` (at step 0 the levels five and six meet the same needs);
+from five the net never ends, from six it ends. -/
+theorem higher_ends :
+    (∀ j, j ≤ 1 → (course need kids giving use ([g, k], 5) j).1 =
+      (course need kids giving use ([g, k], 6) j).1) ∧
+    «不穷» (net need kids giving use) «一» ([g, k], 5) ∧
+    ¬ «不穷» (net need kids giving use) «一» ([g, k], 6) :=
+  ⟨ways_alike fun j lt u _ => match j, lt, u with
+      | 0, _, g => by decide
+      | 0, _, k => by decide
+      | j + 1, lt, _ => absurd lt (Nat.not_lt_of_ge (Nat.le_add_left 1 j)),
+   from_five.2.2.2, from_six.2.2.2⟩
+
+/-- `giving` is at most one. -/
+theorem giving_le_one (z : Nat) : giving z ≤ 1 :=
+  (Nat.lt_or_ge z 1).elim
+    (fun lt => Nat.le_trans (Nat.le_of_eq (if_neg (Nat.not_le_of_gt lt))) (Nat.zero_le 1))
+    (fun ge => Nat.le_of_eq (if_pos ge))
+
+/-- **From five, by the law.** `mixed_turns_iff` at `c := [k]`, `R := [g]`, the line `S u := u = k`,
+`m = 5`, `n = 1`, `H₂ = 1`, `y₂ = 1`, `y₁ = 10`, `hi = 5`: the course as it was runs five, four, two;
+the first level below five is at step 1, and two is at or above `H₂ + y₂ = 2`. -/
+theorem five_by_law : «不穷» (net need kids giving use) «一» ([k] ++ [g], 5) :=
+  (ScratchMixedWay.mixed_turns_iff (need := need) (use := use) (kids := kids) (giving := giving)
+      (S := fun u => u = k) (R := [g]) (c := [k]) (m := 5) (n := 1) (H₂ := 1) (y₁ := 10)
+      (y₂ := 1) (hi := 5) (x := 5)
+      (List.cons_ne_nil _ _)
+      (fun u mu => by rw [CrossSituational.mem_singleton mu]; rfl)
+      (fun u mu => by rw [CrossSituational.mem_singleton mu]; rfl)
+      rfl (fun _ mu => CrossSituational.mem_singleton mu)
+      (fun u e => by subst e; rfl)
+      (fun u v su mv => by
+        subst su
+        exact match v, (mv : v ∈ [k, k]) with
+          | _, .head _ => rfl
+          | _, .tail _ (.head _) => rfl
+          | _, .tail _ (.tail _ m') => nomatch m')
+      (by decide)
+      (fun u su => by subst su; decide)
+      rfl
+      (fun z lt => by
+        have : z = 0 := Nat.eq_zero_of_le_zero (Nat.le_of_lt_succ lt)
+        subst this; decide)
+      (fun z hz _ => by
+        show 1 ≤ (if 1 ≤ z then 1 else 0)
+        rw [if_pos hz]
+        exact Nat.le_refl 1)
+      (fun z hz => by
+        show z - 1 + giving (z - 1) ≤ 5
+        cases z with
+        | zero => decide
+        | succ z =>
+          rw [Naturals.add_sub_cancel z 1]
+          exact Nat.le_trans (Nat.add_le_add_left (giving_le_one z) z) hz)
+      (by decide) (by decide)
+      (fun z _ => Nat.lt_of_le_of_lt (giving_le_one z) (by decide))
+      (by decide) (by decide)).mpr
+    ⟨1, fun j lt => match j, lt with
+        | 0, _ => by decide
+        | j + 1, lt => absurd lt (Nat.not_lt_of_ge (Nat.le_add_left 1 j)),
+      by decide, by decide, by decide⟩
+
+end Example
+
+end ScratchMixedWay
+end Becoming

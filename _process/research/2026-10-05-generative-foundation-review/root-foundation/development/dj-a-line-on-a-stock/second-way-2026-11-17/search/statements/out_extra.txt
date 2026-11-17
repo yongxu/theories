@@ -1,0 +1,43 @@
+(a) order L, m > a: the guess "x* >= a and z* >= a" against the outcome
+  g=0              {'agree': 43181, 'left meets need, ends [b<t]': 19}
+      e.g. left meets need, ends [b<t] {'a': 1, 't': 1, 'b': 0, 'm': 4, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x': 3, 'cut': {'n': 0, 'x': 3, 'N': 1, 'G': 1, 'z': 1, 'x1': 1}}
+  g=min(z,1)       {'agree': 42979, 'left meets need, ends [b<t]': 4, 'left below need, never ends [b>=t]': 206, 'left below need, never ends [b<t]': 11}
+      e.g. left meets need, ends [b<t] {'a': 1, 't': 1, 'b': 0, 'm': 5, 'c': 1, 'k': 2, 'G': 2, 'N': 1, 'x': 4, 'cut': {'n': 0, 'x': 4, 'N': 1, 'G': 2, 'z': 1, 'x1': 2}}
+      e.g. left below need, never ends [b>=t] {'a': 2, 't': 0, 'b': 0, 'm': 3, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x': 2, 'cut': {'n': 0, 'x': 2, 'N': 1, 'G': 1, 'z': 1, 'x1': 2}}
+      e.g. left below need, never ends [b<t] {'a': 2, 't': 1, 'b': 0, 'm': 4, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x': 3, 'cut': {'n': 0, 'x': 3, 'N': 1, 'G': 1, 'z': 1, 'x1': 2}}
+  g=min(z,2)       {'agree': 42980, 'left meets need, ends [b<t]': 4, 'left below need, never ends [b>=t]': 206, 'left below need, never ends [b<t]': 10}
+      e.g. left meets need, ends [b<t] {'a': 1, 't': 1, 'b': 0, 'm': 5, 'c': 1, 'k': 2, 'G': 2, 'N': 1, 'x': 4, 'cut': {'n': 0, 'x': 4, 'N': 1, 'G': 2, 'z': 1, 'x1': 2}}
+      e.g. left below need, never ends [b>=t] {'a': 2, 't': 0, 'b': 0, 'm': 3, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x': 2, 'cut': {'n': 0, 'x': 2, 'N': 1, 'G': 1, 'z': 1, 'x1': 2}}
+      e.g. left below need, never ends [b<t] {'a': 2, 't': 1, 'b': 0, 'm': 4, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x': 3, 'cut': {'n': 0, 'x': 3, 'N': 1, 'G': 1, 'z': 1, 'x1': 2}}
+  g=min(z,3)       {'agree': 42980, 'left meets need, ends [b<t]': 4, 'left below need, never ends [b>=t]': 206, 'left below need, never ends [b<t]': 10}
+      e.g. left meets need, ends [b<t] {'a': 1, 't': 1, 'b': 0, 'm': 5, 'c': 1, 'k': 2, 'G': 2, 'N': 1, 'x': 4, 'cut': {'n': 0, 'x': 4, 'N': 1, 'G': 2, 'z': 1, 'x1': 2}}
+      e.g. left below need, never ends [b>=t] {'a': 2, 't': 0, 'b': 0, 'm': 3, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x': 2, 'cut': {'n': 0, 'x': 2, 'N': 1, 'G': 1, 'z': 1, 'x1': 2}}
+      e.g. left below need, never ends [b<t] {'a': 2, 't': 1, 'b': 0, 'm': 4, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x': 3, 'cut': {'n': 0, 'x': 3, 'N': 1, 'G': 1, 'z': 1, 'x1': 2}}
+  g=gate(z>=1:1)   {'agree': 42979, 'left meets need, ends [b<t]': 4, 'left below need, never ends [b>=t]': 206, 'left below need, never ends [b<t]': 11}
+      e.g. left meets need, ends [b<t] {'a': 1, 't': 1, 'b': 0, 'm': 5, 'c': 1, 'k': 2, 'G': 2, 'N': 1, 'x': 4, 'cut': {'n': 0, 'x': 4, 'N': 1, 'G': 2, 'z': 1, 'x1': 2}}
+      e.g. left below need, never ends [b>=t] {'a': 2, 't': 0, 'b': 0, 'm': 3, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x': 2, 'cut': {'n': 0, 'x': 2, 'N': 1, 'G': 1, 'z': 1, 'x1': 2}}
+      e.g. left below need, never ends [b<t] {'a': 2, 't': 1, 'b': 0, 'm': 4, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x': 3, 'cut': {'n': 0, 'x': 3, 'N': 1, 'G': 1, 'z': 1, 'x1': 2}}
+  g=gate(z>=2:1)   {'agree': 43113, 'left meets need, ends [b<t]': 15, 'left below need, never ends [b>=t]': 70, 'left below need, never ends [b<t]': 2}
+      e.g. left meets need, ends [b<t] {'a': 1, 't': 1, 'b': 0, 'm': 4, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x': 3, 'cut': {'n': 0, 'x': 3, 'N': 1, 'G': 1, 'z': 1, 'x1': 1}}
+      e.g. left below need, never ends [b>=t] {'a': 3, 't': 0, 'b': 0, 'm': 4, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x': 3, 'cut': {'n': 0, 'x': 3, 'N': 1, 'G': 1, 'z': 2, 'x1': 3}}
+      e.g. left below need, never ends [b<t] {'a': 3, 't': 1, 'b': 0, 'm': 5, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x': 4, 'cut': {'n': 0, 'x': 4, 'N': 1, 'G': 1, 'z': 2, 'x1': 3}}
+  g=gate(z>=2:2)   {'agree': 43114, 'left meets need, ends [b<t]': 14, 'left below need, never ends [b>=t]': 70, 'left below need, never ends [b<t]': 2}
+      e.g. left meets need, ends [b<t] {'a': 1, 't': 1, 'b': 0, 'm': 4, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x': 3, 'cut': {'n': 0, 'x': 3, 'N': 1, 'G': 1, 'z': 1, 'x1': 1}}
+      e.g. left below need, never ends [b>=t] {'a': 3, 't': 0, 'b': 0, 'm': 4, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x': 3, 'cut': {'n': 0, 'x': 3, 'N': 1, 'G': 1, 'z': 2, 'x1': 4}}
+      e.g. left below need, never ends [b<t] {'a': 3, 't': 1, 'b': 0, 'm': 5, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x': 4, 'cut': {'n': 0, 'x': 4, 'N': 1, 'G': 1, 'z': 2, 'x1': 4}}
+  g=gate(z>=3:2)   {'agree': 43182, 'left meets need, ends [b<t]': 18}
+      e.g. left meets need, ends [b<t] {'a': 1, 't': 1, 'b': 0, 'm': 4, 'c': 1, 'k': 2, 'G': 1, 'N': 1, 'x': 3, 'cut': {'n': 0, 'x': 3, 'N': 1, 'G': 1, 'z': 1, 'x1': 1}}
+(b) order L, g = 0, m > a >= 1 (the wide range): the condition from the start numbers agrees 354240 of 354240 []
+(c) verdicts of twokind.run replayed (never: Goes at each of 60 steps; ends: Goes up to the end step and not at it): {('ends', ''): 13831, ('never', 'P'): 4152, ('never', 'R'): 883, ('never', 'S'): 1134} 0 failures
+(d) edges
+   a = 0 (givers need nothing), order L, g = 0: never ends in 11520 of 11520
+   a = 0 (givers need nothing), order B, g = 0: never ends in 11520 of 11520
+   m = 0 (takers need nothing): twokind.run returns never by Z at the first step with a taker; a taker is met at every level and leaves k takers
+   c = 0, a = m = 1, t = b = 0, g = 0, from 1: levels [1, 1, 1, 1, 1, 1] ways [2, 3, 5, 9, 17, 33] (the level rests at 1, every need met: never ends, m <= a)
+   g(z) = 2z, a = m = 1, t = 0, b = 0, c = 1, k = 2, from 3: levels [3, 6, 12, 24, 48, 96, 192, 384] takers [1, 2, 4, 8, 16, 32, 64, 128] (level = 3 * takers at every step; never ends, m <= a)
+(e) C1 with give, any two orders: steps reached with the levels alike at every earlier step: 16640; ways the same there: 16640; different: 0
+(f) order B, G*b >= a, m > a, all eight givings: "never ends exactly from starts at or above a" agrees 216000 of 216000
+cpu seconds 2.8
+(g) order B, m <= a, all eight givings: "never ends exactly where x >= a and G*b >= a" agrees 230400 of 230400
+(h) all eight givings, all a, m: of 3757 runs that never end in order L, 3757 never end in order B
+cpu seconds 4.1

@@ -1,0 +1,23 @@
+== The renaming: is the course with givers the Lean's course (give = 0) under
+   g'(z) = g(z) + b*NG*[a <= z] ?  compared step by step through the step the net ends ==
+L zero {'m>a': {'cases': 153600, 'course_differs': 0, 'fate_differs': 0}, 'm<=a': {'cases': 30720, 'course_differs': 0, 'fate_differs': 0}}
+L min(z,3) {'m>a': {'cases': 153600, 'course_differs': 0, 'fate_differs': 0}, 'm<=a': {'cases': 30720, 'course_differs': 0, 'fate_differs': 0}}
+L hump12 {'m>a': {'cases': 153600, 'course_differs': 0, 'fate_differs': 0}, 'm<=a': {'cases': 30720, 'course_differs': 0, 'fate_differs': 0}}
+L z {'m>a': {'cases': 153600, 'course_differs': 0, 'fate_differs': 0}, 'm<=a': {'cases': 30720, 'course_differs': 0, 'fate_differs': 0}}
+L 2z {'m>a': {'cases': 153600, 'course_differs': 0, 'fate_differs': 0}, 'm<=a': {'cases': 30720, 'course_differs': 0, 'fate_differs': 0}}
+B zero {'m>a': {'cases': 153600, 'course_differs': 100624, 'fate_differs': 81169}, 'm<=a': {'cases': 30720, 'course_differs': 21696, 'fate_differs': 15152}}
+     first with a different fate, m<=a ({'a': 1, 'm': 1, 't': 0, 'b': 1, 'c': 1, 'k': 2, 'NG': 1, 'n0': 1, 'x0': 1}, 'never', 'ends', [(True, 1, 1), (True, 2, 1), (True, 4, 1), (True, 8, 1), (True, 16, 1), (True, 32, 1)], [(True, 1, 1), (True, 2, 0)])
+     first with a different fate, m>a ({'a': 1, 'm': 2, 't': 0, 'b': 1, 'c': 1, 'k': 2, 'NG': 1, 'n0': 1, 'x0': 1}, 'never', 'ends', [(True, 1, 1), (True, 0, 1), (True, 0, 2), (True, 0, 3), (True, 0, 4), (True, 0, 5)], [(True, 1, 1), (True, 0, 0)])
+B min(z,3) {'m>a': {'cases': 153600, 'course_differs': 101198, 'fate_differs': 80225}, 'm<=a': {'cases': 30720, 'course_differs': 21696, 'fate_differs': 15152}}
+     first with a different fate, m<=a ({'a': 1, 'm': 1, 't': 0, 'b': 1, 'c': 1, 'k': 2, 'NG': 1, 'n0': 1, 'x0': 1}, 'never', 'ends', [(True, 1, 1), (True, 2, 1), (True, 4, 1), (True, 8, 1), (True, 16, 1), (True, 32, 1)], [(True, 1, 1), (True, 2, 0)])
+     first with a different fate, m>a ({'a': 1, 'm': 2, 't': 0, 'b': 1, 'c': 1, 'k': 2, 'NG': 1, 'n0': 1, 'x0': 1}, 'never', 'ends', [(True, 1, 1), (True, 0, 1), (True, 0, 3), (True, 0, 7), (True, 0, 11), (True, 0, 15)], [(True, 1, 1), (True, 0, 0)])
+B hump12 {'m>a': {'cases': 153600, 'course_differs': 101202, 'fate_differs': 80014}, 'm<=a': {'cases': 30720, 'course_differs': 21696, 'fate_differs': 15152}}
+     first with a different fate, m<=a ({'a': 1, 'm': 1, 't': 0, 'b': 1, 'c': 1, 'k': 2, 'NG': 1, 'n0': 1, 'x0': 1}, 'never', 'ends', [(True, 1, 1), (True, 2, 1), (True, 4, 1), (True, 8, 1), (True, 16, 1), (True, 32, 1)], [(True, 1, 1), (True, 2, 0)])
+     first with a different fate, m>a ({'a': 1, 'm': 2, 't': 0, 'b': 1, 'c': 1, 'k': 2, 'NG': 1, 'n0': 1, 'x0': 1}, 'never', 'ends', [(True, 1, 1), (True, 0, 1), (True, 0, 3), (True, 0, 7), (True, 0, 13), (True, 0, 14)], [(True, 1, 1), (True, 0, 0)])
+B z {'m>a': {'cases': 153600, 'course_differs': 95262, 'fate_differs': 75414}, 'm<=a': {'cases': 30720, 'course_differs': 20508, 'fate_differs': 14300}}
+     first with a different fate, m<=a ({'a': 1, 'm': 1, 't': 0, 'b': 1, 'c': 1, 'k': 2, 'NG': 1, 'n0': 1, 'x0': 1}, 'never', 'ends', [(True, 1, 1), (True, 2, 1), (True, 4, 1), (True, 8, 1), (True, 16, 1), (True, 32, 1)], [(True, 1, 1), (True, 2, 0)])
+     first with a different fate, m>a ({'a': 1, 'm': 2, 't': 0, 'b': 1, 'c': 1, 'k': 2, 'NG': 1, 'n0': 1, 'x0': 1}, 'never', 'ends', [(True, 1, 1), (True, 0, 1), (True, 0, 3), (True, 0, 7), (True, 0, 15), (True, 0, 31)], [(True, 1, 1), (True, 0, 0)])
+B 2z {'m>a': {'cases': 153600, 'course_differs': 50870, 'fate_differs': 39276}, 'm<=a': {'cases': 30720, 'course_differs': 11060, 'fate_differs': 7704}}
+     first with a different fate, m<=a ({'a': 1, 'm': 1, 't': 0, 'b': 1, 'c': 1, 'k': 2, 'NG': 1, 'n0': 1, 'x0': 1}, 'never', 'ends', [(True, 1, 1), (True, 2, 1), (True, 4, 1), (True, 8, 1), (True, 16, 1), (True, 32, 1)], [(True, 1, 1), (True, 2, 0)])
+     first with a different fate, m>a ({'a': 1, 'm': 2, 't': 0, 'b': 1, 'c': 1, 'k': 2, 'NG': 1, 'n0': 1, 'x0': 1}, 'never', 'ends', [(True, 1, 1), (True, 0, 1), (True, 0, 4), (True, 0, 13), (True, 0, 40), (True, 0, 121)], [(True, 1, 1), (True, 0, 0)])
+WIDE=1 python3 s2_two_kinds.py tr  17.82s user 0.11s system 96% cpu 18.609 total

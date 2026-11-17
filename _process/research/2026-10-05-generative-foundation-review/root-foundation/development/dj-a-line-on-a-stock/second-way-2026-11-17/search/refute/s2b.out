@@ -1,0 +1,16 @@
+('b=0', 't=0') worlds: 372
+   smallest: (12, {'a': 1, 'm': 3, 't': 0, 'b': 0, 'c': 1, 'k': 2, 'NG': 1, 'n0': 1}, 2, 3)
+     from 2 [(True, 1, 2, 1), (True, 0, 1, 1), (True, 0, 1, 1), (True, 0, 1, 1), (True, 0, 1, 1), (True, 0, 1, 1), (True, 0, 1, 1)]
+     from 3 [(True, 1, 3, 2), (True, 2, 2, 0), (True, 0, 0, 0)]
+   most changes of fate over x0 = 0..59: (4, {'a': 1, 'm': 6, 't': 0, 'b': 0, 'c': 1, 'k': 2, 'NG': 1, 'n0': 1}, 'eeNNNNNeNeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee')
+('b>=1', 't=0') worlds: 1116
+   smallest: (13, {'a': 1, 'm': 3, 't': 0, 'b': 1, 'c': 1, 'k': 2, 'NG': 1, 'n0': 1}, 2, 3)
+     from 2 [(True, 1, 2, 1), (True, 0, 2, 2), (True, 0, 3, 3), (True, 0, 4, 4), (True, 0, 5, 5), (True, 0, 6, 6), (True, 0, 7, 7)]
+     from 3 [(True, 1, 3, 2), (True, 2, 3, 1), (True, 4, 2, 0), (True, 0, 0, 0)]
+   most changes of fate over x0 = 0..59: (4, {'a': 1, 'm': 10, 't': 0, 'b': 1, 'c': 1, 'k': 2, 'NG': 1, 'n0': 1}, 'eeNNNNNNNNNeeNeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee')
+('b>=1', 't>=1') worlds: 900
+   smallest: (16, {'a': 1, 'm': 4, 't': 1, 'b': 1, 'c': 1, 'k': 2, 'NG': 1, 'n0': 1}, 3, 4)
+     from 3 [(True, 1, 3, 1), (True, 0, 2, 1), (True, 0, 2, 1), (True, 0, 2, 1), (True, 0, 2, 1), (True, 0, 2, 1), (True, 0, 2, 1)]
+     from 4 [(True, 1, 4, 2), (True, 2, 3, 0), (True, 0, 0, 0)]
+   most changes of fate over x0 = 0..59: (4, {'a': 1, 'm': 7, 't': 1, 'b': 1, 'c': 1, 'k': 2, 'NG': 1, 'n0': 1}, 'eeeNNNNNeNeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee')
+python3 s2b_iii_with_giving.py  0.45s user 0.02s system 75% cpu 0.631 total

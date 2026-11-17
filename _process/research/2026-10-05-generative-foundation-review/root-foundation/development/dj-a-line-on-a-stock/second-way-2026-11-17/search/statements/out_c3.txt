@@ -1,0 +1,37 @@
+range: a 0..5, t 0..3, b 0..4, G 1..3, x 0..40; per (order, giving): 14760 configurations
+how never-ends was decided (order, criterion):  {('L', 'N0'): 19680, ('L', 'S'): 67847, ('L', 'R'): 321, ('B', 'N0'): 19680, ('B', 'S'): 70655, ('B', 'R'): 6452}
+L g=0              never  9960 of 14760 | exact form agrees 14760 of 14760 | simple guess agrees 13926 of 14760 (a>=1: 12300 of 12300) | closed g=0 form agrees 14760 of 14760
+   simple guess fails at e.g. [{'a': 0, 't': 1, 'b': 0, 'G': 1, 'x': 0, 'never': True}, {'a': 0, 't': 1, 'b': 0, 'G': 1, 'x': 1, 'never': True}]
+L g=min(z,1)       never 10520 of 14760 | exact form agrees 14760 of 14760 | simple guess agrees 13366 of 14760 (a>=1: 11740 of 12300)
+   simple guess fails at e.g. [{'a': 0, 't': 1, 'b': 0, 'G': 1, 'x': 0, 'never': True}, {'a': 0, 't': 1, 'b': 0, 'G': 1, 'x': 1, 'never': True}]
+L g=min(z,2)       never 11430 of 14760 | exact form agrees 14760 of 14760 | simple guess agrees 12456 of 14760 (a>=1: 10830 of 12300)
+   simple guess fails at e.g. [{'a': 0, 't': 1, 'b': 0, 'G': 1, 'x': 0, 'never': True}, {'a': 0, 't': 1, 'b': 0, 'G': 1, 'x': 1, 'never': True}]
+L g=min(z,3)       never 12103 of 14760 | exact form agrees 14760 of 14760 | simple guess agrees 11783 of 14760 (a>=1: 10157 of 12300)
+   simple guess fails at e.g. [{'a': 0, 't': 1, 'b': 0, 'G': 1, 'x': 0, 'never': True}, {'a': 0, 't': 1, 'b': 0, 'G': 1, 'x': 1, 'never': True}]
+L g=gate(z>=1:1)   never 10520 of 14760 | exact form agrees 14760 of 14760 | simple guess agrees 13366 of 14760 (a>=1: 11740 of 12300)
+   simple guess fails at e.g. [{'a': 0, 't': 1, 'b': 0, 'G': 1, 'x': 0, 'never': True}, {'a': 0, 't': 1, 'b': 0, 'G': 1, 'x': 1, 'never': True}]
+L g=gate(z>=2:1)   never 10512 of 14760 | exact form agrees 14760 of 14760 | simple guess agrees 13374 of 14760 (a>=1: 11748 of 12300)
+   simple guess fails at e.g. [{'a': 0, 't': 1, 'b': 0, 'G': 1, 'x': 0, 'never': True}, {'a': 0, 't': 1, 'b': 0, 'G': 1, 'x': 1, 'never': True}]
+L g=gate(z>=2:2)   never 11422 of 14760 | exact form agrees 14760 of 14760 | simple guess agrees 12464 of 14760 (a>=1: 10838 of 12300)
+   simple guess fails at e.g. [{'a': 0, 't': 1, 'b': 0, 'G': 1, 'x': 0, 'never': True}, {'a': 0, 't': 1, 'b': 0, 'G': 1, 'x': 1, 'never': True}]
+L g=gate(z>=3:2)   never 11381 of 14760 | exact form agrees 14760 of 14760 | simple guess agrees 12505 of 14760 (a>=1: 10879 of 12300)
+   simple guess fails at e.g. [{'a': 0, 't': 1, 'b': 0, 'G': 1, 'x': 0, 'never': True}, {'a': 0, 't': 1, 'b': 0, 'G': 1, 'x': 1, 'never': True}]
+B g=0              never 11335 of 14760 | exact form agrees 14760 of 14760 | simple guess agrees 12551 of 14760 (a>=1: 10925 of 12300) | closed g=0 form agrees 14760 of 14760
+   simple guess fails at e.g. [{'a': 0, 't': 1, 'b': 0, 'G': 1, 'x': 0, 'never': True}, {'a': 0, 't': 1, 'b': 0, 'G': 1, 'x': 1, 'never': True}]
+B g=min(z,1)       never 11783 of 14760 | exact form agrees 14760 of 14760 | simple guess agrees 12103 of 14760 (a>=1: 10477 of 12300)
+   simple guess fails at e.g. [{'a': 0, 't': 1, 'b': 0, 'G': 1, 'x': 0, 'never': True}, {'a': 0, 't': 1, 'b': 0, 'G': 1, 'x': 1, 'never': True}]
+B g=min(z,2)       never 12433 of 14760 | exact form agrees 14760 of 14760 | simple guess agrees 11453 of 14760 (a>=1: 9827 of 12300)
+   simple guess fails at e.g. [{'a': 0, 't': 1, 'b': 0, 'G': 1, 'x': 0, 'never': True}, {'a': 0, 't': 1, 'b': 0, 'G': 1, 'x': 1, 'never': True}]
+B g=min(z,3)       never 12847 of 14760 | exact form agrees 14760 of 14760 | simple guess agrees 11039 of 14760 (a>=1: 9413 of 12300)
+   simple guess fails at e.g. [{'a': 0, 't': 1, 'b': 0, 'G': 1, 'x': 0, 'never': True}, {'a': 0, 't': 1, 'b': 0, 'G': 1, 'x': 1, 'never': True}]
+B g=gate(z>=1:1)   never 11783 of 14760 | exact form agrees 14760 of 14760 | simple guess agrees 12103 of 14760 (a>=1: 10477 of 12300)
+   simple guess fails at e.g. [{'a': 0, 't': 1, 'b': 0, 'G': 1, 'x': 0, 'never': True}, {'a': 0, 't': 1, 'b': 0, 'G': 1, 'x': 1, 'never': True}]
+B g=gate(z>=2:1)   never 11777 of 14760 | exact form agrees 14760 of 14760 | simple guess agrees 12109 of 14760 (a>=1: 10483 of 12300)
+   simple guess fails at e.g. [{'a': 0, 't': 1, 'b': 0, 'G': 1, 'x': 0, 'never': True}, {'a': 0, 't': 1, 'b': 0, 'G': 1, 'x': 1, 'never': True}]
+B g=gate(z>=2:2)   never 12427 of 14760 | exact form agrees 14760 of 14760 | simple guess agrees 11459 of 14760 (a>=1: 9833 of 12300)
+   simple guess fails at e.g. [{'a': 0, 't': 1, 'b': 0, 'G': 1, 'x': 0, 'never': True}, {'a': 0, 't': 1, 'b': 0, 'G': 1, 'x': 1, 'never': True}]
+B g=gate(z>=3:2)   never 12402 of 14760 | exact form agrees 14760 of 14760 | simple guess agrees 11484 of 14760 (a>=1: 9858 of 12300)
+   simple guess fails at e.g. [{'a': 0, 't': 1, 'b': 0, 'G': 1, 'x': 0, 'never': True}, {'a': 0, 't': 1, 'b': 0, 'G': 1, 'x': 1, 'never': True}]
+never verdicts replayed for 300 steps with every need met at each: 2228 sampled, 0 failures
+two giver kinds, p (need 1, use 0, give 0) and q (need 5, use 1, give 0), g = 0, from 3: [(['p', 'q'], 3), (['p'], 2), (['p'], 2), (['p'], 2)] ('never', 2)
+cpu seconds 1.2

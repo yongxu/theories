@@ -1,0 +1,30 @@
+== C2 (i): m <= a.  counts of fates; x0 in 0..14, both orders ==
+L zero {'c>=1': {'ends': 28800, 'never': 0, 'open': 0}, 'c=0': {'ends': 5912, 'never': 8488, 'open': 0}}
+     first not ending, c=0 ({'a': 1, 'm': 1, 't': 0, 'b': 0, 'c': 0, 'k': 2, 'NG': 1, 'n0': 1, 'x0': 1}, ('never', 'invL', 0))
+L min(z,3) {'c>=1': {'ends': 28800, 'never': 0, 'open': 0}, 'c=0': {'ends': 3660, 'never': 8760, 'open': 1980}}
+     first not ending, c=0 ({'a': 1, 'm': 1, 't': 0, 'b': 0, 'c': 0, 'k': 2, 'NG': 1, 'n0': 1, 'x0': 1}, ('never', 'invL', 0))
+L hump12 {'c>=1': {'ends': 28800, 'never': 0, 'open': 0}, 'c=0': {'ends': 3380, 'never': 11020, 'open': 0}}
+     first not ending, c=0 ({'a': 1, 'm': 1, 't': 0, 'b': 0, 'c': 0, 'k': 2, 'NG': 1, 'n0': 1, 'x0': 1}, ('never', 'invL', 0))
+L z {'c>=1': {'ends': 28800, 'never': 0, 'open': 0}, 'c=0': {'ends': 3380, 'never': 8800, 'open': 2220}}
+     first not ending, c=0 ({'a': 1, 'm': 1, 't': 0, 'b': 0, 'c': 0, 'k': 2, 'NG': 1, 'n0': 1, 'x0': 1}, ('never', 'invL', 0))
+L 2z {'c>=1': {'ends': 22352, 'never': 0, 'open': 6448}, 'c=0': {'ends': 2964, 'never': 8984, 'open': 2452}}
+     first not ending, c=0 ({'a': 1, 'm': 1, 't': 0, 'b': 0, 'c': 0, 'k': 2, 'NG': 1, 'n0': 1, 'x0': 1}, ('never', 'invL', 0))
+     first not ending, c>=1 ({'a': 1, 'm': 1, 't': 0, 'b': 0, 'c': 1, 'k': 2, 'NG': 1, 'n0': 1, 'x0': 3}, ('open', 120))
+B zero {'c>=1': {'ends': 18960, 'never': 9840, 'open': 0}, 'c=0': {'ends': 4908, 'never': 7580, 'open': 1912}}
+     first not ending, c=0 ({'a': 1, 'm': 1, 't': 0, 'b': 0, 'c': 0, 'k': 2, 'NG': 1, 'n0': 1, 'x0': 1}, ('never', 'repeat', 1))
+     first not ending, c>=1 ({'a': 1, 'm': 1, 't': 0, 'b': 1, 'c': 1, 'k': 2, 'NG': 1, 'n0': 1, 'x0': 1}, ('never', 'invB', 0))
+B min(z,3) {'c>=1': {'ends': 18960, 'never': 9840, 'open': 0}, 'c=0': {'ends': 3024, 'never': 5060, 'open': 6316}}
+     first not ending, c=0 ({'a': 1, 'm': 1, 't': 0, 'b': 0, 'c': 0, 'k': 2, 'NG': 1, 'n0': 1, 'x0': 1}, ('open', 120))
+     first not ending, c>=1 ({'a': 1, 'm': 1, 't': 0, 'b': 1, 'c': 1, 'k': 2, 'NG': 1, 'n0': 1, 'x0': 1}, ('never', 'invB', 0))
+B hump12 {'c>=1': {'ends': 18960, 'never': 9840, 'open': 0}, 'c=0': {'ends': 2744, 'never': 9744, 'open': 1912}}
+     first not ending, c=0 ({'a': 1, 'm': 1, 't': 0, 'b': 0, 'c': 0, 'k': 2, 'NG': 1, 'n0': 1, 'x0': 1}, ('never', 'repeat', 5))
+     first not ending, c>=1 ({'a': 1, 'm': 1, 't': 0, 'b': 1, 'c': 1, 'k': 2, 'NG': 1, 'n0': 1, 'x0': 1}, ('never', 'invB', 0))
+B z {'c>=1': {'ends': 18960, 'never': 9840, 'open': 0}, 'c=0': {'ends': 2744, 'never': 5100, 'open': 6556}}
+     first not ending, c=0 ({'a': 1, 'm': 1, 't': 0, 'b': 0, 'c': 0, 'k': 2, 'NG': 1, 'n0': 1, 'x0': 1}, ('open', 120))
+     first not ending, c>=1 ({'a': 1, 'm': 1, 't': 0, 'b': 1, 'c': 1, 'k': 2, 'NG': 1, 'n0': 1, 'x0': 1}, ('never', 'invB', 0))
+B 2z {'c>=1': {'ends': 15229, 'never': 9840, 'open': 3731}, 'c=0': {'ends': 2556, 'never': 5036, 'open': 6808}}
+     first not ending, c=0 ({'a': 1, 'm': 1, 't': 0, 'b': 0, 'c': 0, 'k': 2, 'NG': 1, 'n0': 1, 'x0': 1}, ('open', 120))
+     first not ending, c>=1 ({'a': 1, 'm': 1, 't': 0, 'b': 0, 'c': 1, 'k': 2, 'NG': 1, 'n0': 1, 'x0': 3}, ('open', 120))
+== C2 (i) in order B, g = 0, c >= 1, m <= a: is 'never' exactly (b*NG >= a and x0 >= a)? ==
+  cases 28800 never 9840 mismatches 0
+python3 s2_two_kinds.py i iB  2.52s user 0.03s system 94% cpu 2.701 total

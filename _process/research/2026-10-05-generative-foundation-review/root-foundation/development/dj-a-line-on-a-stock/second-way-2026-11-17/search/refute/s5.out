@@ -1,0 +1,6 @@
+(1) g = min(z,3), order L:
+   condA False fate never (12, {'a': 2, 'm': 3, 't': 0, 'b': 0, 'c': 1, 'k': 2, 'NG': 1, 'n0': 1, 'x0': 2}, 0, [(True, 1, 2, 1), (True, 0, 2, 2), (True, 0, 4, 4), (True, 0, 7, 7)])
+(2) random table givings, two kinds, order L:  {'m>=a': {'cases': 35071, 'course_differs': 0}, 'm<a': {'cases': 24929, 'course_differs': 73}}
+    first differing: ({'a': 6, 'm': 5, 't': 0, 'b': 1, 'c': 1, 'k': 2, 'NG': 2, 'n0': 1, 'x0': 5}, [0, 8, 0, 0, 4, 4, 8, 0, 2, 2, 4, 4, 1, 8, 0, 2], [(True, 1, 5), (False, 2, 8), (False, 4, 14), (False, 8, 14), (False, 16, 14), (False, 32, 0)], [(True, 1, 5), (False, 2, 8), (False, 4, 16), (False, 8, 15), (False, 16, 9), (False, 32, 0)])
+(3) Keeps g' 0 hi, g = 0, a = 2, b*NG = 1: holds for hi in [0, 1]
+python3 s5_details.py  1.17s user 0.03s system 81% cpu 1.482 total

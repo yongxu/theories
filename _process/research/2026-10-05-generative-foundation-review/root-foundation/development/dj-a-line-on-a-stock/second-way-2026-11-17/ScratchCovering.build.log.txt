@@ -1,0 +1,22 @@
+{
+  "tree": "/Users/ren/tmp/dj/batch19/covering",
+  "modules": 152,
+  "ran": [
+    "Becoming.ScratchCovering",
+    "BecomingScratchCoveringAxiomAudit"
+  ],
+  "reused": 151,
+  "unclean": [],
+  "audits": {
+    "Becoming.ScratchCovering": {
+      "theorems": 27,
+      "declarations": 40,
+      "with_axioms": {}
+    }
+  },
+  "seconds": {
+    "Becoming.ScratchCovering": 10.288,
+    "BecomingScratchCoveringAxiomAudit": 1.895
+  }
+}
+EXIT 0
