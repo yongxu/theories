@@ -1,0 +1,144 @@
+import Becoming.JointDraw
+import Becoming.Exclusion
+
+/-!
+# Scratch: within renewal at a step, and the two classes of a whole course, in what is taken and given
+
+AI-written (Claude, board row DJ), 18 November 2026. SCRATCH: outside the package, not landed, not
+read by anyone who did not write it. Built only by `scratch_build.py` against the checker's cache.
+The words formation, condition, web, flow are working names.
+
+`Becoming.JointDraw` states, on a balanced flow, when one dependence is broken across a step and
+when its need is met after it, in what is taken from the condition and given to it
+(`Flow.Balances.broken_iff`, `Flow.Balances.kept_iff`). This module carries those two to the class
+of a formation's event at a step (`Web.RenewingAt`) and to the classes of a whole course
+(`Web.Renewed`, `Web.RenewingIn`, `Web.Consumed`, `Web.ConsumingIn`). Every proof is a few lines
+from those two, `Flow.level_kept`, `Web.not_renewing_at_of_broken` and the definitions.
+
+* `Flow.Balances.renewingAt_iff`: within renewal at a step, exactly, in amounts.
+* `Flow.Balances.not_renewingAt_of_exceeds`: not within renewal where the level with all that is
+  given falls short of a met need with all that is taken.
+* `Flow.Balances.renewingAt_succ_iff`: from within renewal at a step to within renewal at the next,
+  exactly, where nothing new is taken part in, no dependence is new and no need has risen.
+* `Flow.Balances.renewed_iff`: a condition renewed over the course, exactly, in amounts.
+* `Flow.Balances.renewed_of_withinJoint`, `Flow.Balances.renewingIn_of_withinJoint`: taking jointly
+  within what is given at every step, at needs the start meets, is enough for renewing.
+* `Flow.Balances.level_succ_le_of_given_le`, `Flow.Balances.consumed_of_exceeds`,
+  `Flow.Balances.consumingIn_of_exceeds`: a shortfall at one step and no net giving after it is
+  enough for consuming.
+
+What is not here: anything of selecting or of turning; that leaving renewal at a step is consuming
+(it is not: `consumed_of_exceeds` asks besides that nothing is given back at any later step); who
+takes (the amounts are the joint ones, over every formation taking part).
+-/
+
+namespace Becoming
+
+variable {F C : Type}
+
+namespace Flow
+
+variable {L : Flow F C} {W : Web F C}
+
+/-- **Within renewal at a step, in amounts.** On a balanced flow a formation's event at `t` is
+within renewal exactly where it is active and, on every condition it takes part in and for every
+dependence on that condition holding at `t`, the need is met and the need with all that is taken
+is within the level with all that is given. -/
+theorem Balances.renewingAt_iff (balances : L.Balances W) {t : Nat} {f : F} :
+    W.RenewingAt t f ↔ W.active t f ∧ ∀ c, W.Participates t f c → ∀ g, W.requires t g c →
+      W.need t g c ≤ W.level t c ∧ W.need t g c + L.taken t c ≤ W.level t c + L.given t c :=
+  ⟨fun ⟨active, keeps⟩ => ⟨active, fun c joins g depends =>
+      ⟨(keeps c joins g depends).1, balances.kept_iff.mp (keeps c joins g depends).2⟩⟩,
+   fun ⟨active, within⟩ => ⟨active, fun c joins g depends =>
+      ⟨(within c joins g depends).1, balances.kept_iff.mpr (within c joins g depends).2⟩⟩⟩
+
+/-- **Not within renewal where the joint take exceeds.** Where a formation takes part in a
+condition, a dependence on it is met at `t`, and the level with all that is given falls short of
+the need with all that is taken, the formation's event at `t` is not within renewal. -/
+theorem Balances.not_renewingAt_of_exceeds (balances : L.Balances W) {t : Nat} {f g : F} {c : C}
+    (joins : W.Participates t f c) (depends : W.requires t g c)
+    (met : W.need t g c ≤ W.level t c)
+    (exceeds : W.level t c + L.given t c < W.need t g c + L.taken t c) : ¬ W.RenewingAt t f :=
+  Web.not_renewing_at_of_broken joins ((balances.broken_iff depends met).mpr exceeds)
+
+/-- **From one step to the next.** Let a formation's event at `t` be within renewal and the
+formation be active at `t + 1`; let it take part at `t + 1` in nothing it did not take part in at
+`t`, and let every dependence holding at `t + 1` on what it takes part in have held at `t` at a
+need no lower. Then its event at `t + 1` is within renewal exactly where, at `t + 1`, each such
+need with all that is taken is within the level with all that is given. -/
+theorem Balances.renewingAt_succ_iff (balances : L.Balances W) {t : Nat} {f : F}
+    (before : W.RenewingAt t f) (active : W.active (t + 1) f)
+    (same : ∀ c, W.Participates (t + 1) f c → W.Participates t f c)
+    (asks : ∀ c g, W.Participates (t + 1) f c → W.requires (t + 1) g c →
+      W.requires t g c ∧ W.need (t + 1) g c ≤ W.need t g c) :
+    W.RenewingAt (t + 1) f ↔ ∀ c, W.Participates (t + 1) f c → ∀ g, W.requires (t + 1) g c →
+      W.need (t + 1) g c + L.taken (t + 1) c ≤ W.level (t + 1) c + L.given (t + 1) c :=
+  ⟨fun after c joins g depends => ((balances.renewingAt_iff.mp after).2 c joins g depends).2,
+   fun within => balances.renewingAt_iff.mpr ⟨active, fun c joins g depends =>
+     ⟨Nat.le_trans (asks c g joins depends).2
+        (before.2 c (same c joins) g (asks c g joins depends).1).2,
+      within c joins g depends⟩⟩⟩
+
+/-- **A condition renewed over the course, in amounts.** On a balanced flow a condition is renewed
+exactly where, at every step, every dependence on it holding then is met and its need with all
+that is taken is within the level with all that is given. -/
+theorem Balances.renewed_iff (balances : L.Balances W) {c : C} :
+    W.Renewed c ↔ ∀ t g, W.requires t g c →
+      W.need t g c ≤ W.level t c ∧ W.need t g c + L.taken t c ≤ W.level t c + L.given t c :=
+  ⟨fun renewed t g depends =>
+      ⟨(renewed t g depends).1, balances.kept_iff.mp (renewed t g depends).2⟩,
+   fun within t g depends =>
+      ⟨(within t g depends).1, balances.kept_iff.mpr (within t g depends).2⟩⟩
+
+/-- **Jointly within what is given, the condition is renewed.** Where all that is taken from a
+condition is within what is given to it at every step, and every dependence on it is at a need the
+level at the start meets, the condition is renewed. -/
+theorem Balances.renewed_of_withinJoint (balances : L.Balances W) {c : C}
+    (within : ∀ t, L.WithinJoint t c)
+    (low : ∀ t g, W.requires t g c → W.need t g c ≤ W.level 0 c) : W.Renewed c :=
+  fun t g depends => ⟨Nat.le_trans (low t g depends) (level_kept balances within t),
+    Nat.le_trans (low t g depends) (level_kept balances within (t + 1))⟩
+
+/-- **Enough for renewing.** Where, on every condition a formation takes part in at any step, all
+that is taken is within what is given at every step and every dependence is at a need the level at
+the start meets, the formation is renewing over the course. -/
+theorem Balances.renewingIn_of_withinJoint (balances : L.Balances W) {f : F}
+    (within : ∀ t c, W.Participates t f c → ∀ s, L.WithinJoint s c)
+    (low : ∀ t c, W.Participates t f c → ∀ s g, W.requires s g c → W.need s g c ≤ W.level 0 c) :
+    W.RenewingIn f :=
+  fun t c joins => balances.renewed_of_withinJoint (within t c joins) (low t c joins)
+
+/-- The level does not rise across a step at which what is given is within what is taken. -/
+theorem Balances.level_succ_le_of_given_le (balances : L.Balances W) {t : Nat} {c : C}
+    (le : L.given t c ≤ L.taken t c) : W.level (t + 1) c ≤ W.level t c :=
+  le_of_add_le_add_right (L.taken t c)
+    (Nat.le_trans (Nat.le_of_eq (balances t c)) (Nat.add_le_add_left le _))
+
+/-- **A shortfall at one step and no net giving after it consume the condition.** Where a
+dependence on a condition holds at `T`, the level with all that is given falls short of its need
+with all that is taken across the step from `T`, and at every later step what is given to the
+condition is within what is taken from it, the condition is consumed. The dependence need not be
+met at `T`. -/
+theorem Balances.consumed_of_exceeds (balances : L.Balances W) {T : Nat} {g : F} {c : C}
+    (depends : W.requires T g c)
+    (exceeds : W.level T c + L.given T c < W.need T g c + L.taken T c)
+    (after : ∀ t, T < t → L.given t c ≤ L.taken t c) : W.Consumed c :=
+  ⟨g, T, depends, fun t later => by
+    induction later with
+    | refl =>
+      exact Nat.lt_of_add_lt_add_right
+        (Nat.lt_of_le_of_lt (Nat.le_of_eq (balances T c)) exceeds)
+    | @step m within earlier =>
+      exact Nat.lt_of_le_of_lt (balances.level_succ_le_of_given_le (after m within)) earlier⟩
+
+/-- **Enough for consuming.** With such a shortfall and no net giving after it, every formation
+that draws on the condition at any step is consuming over the course. -/
+theorem Balances.consumingIn_of_exceeds (balances : L.Balances W) {T s : Nat} {f g : F} {c : C}
+    (drawn : W.draws s f c) (depends : W.requires T g c)
+    (exceeds : W.level T c + L.given T c < W.need T g c + L.taken T c)
+    (after : ∀ t, T < t → L.given t c ≤ L.taken t c) : W.ConsumingIn f :=
+  ⟨s, c, drawn, balances.consumed_of_exceeds depends exceeds after⟩
+
+end Flow
+
+end Becoming

@@ -1,0 +1,22 @@
+{
+  "tree": "(scratch outside the repository)/dj/batch21/amounts",
+  "modules": 50,
+  "ran": [
+    "Becoming.ScratchStepInAmounts",
+    "BecomingScratchStepInAmountsAxiomAudit"
+  ],
+  "reused": 49,
+  "unclean": [],
+  "audits": {
+    "Becoming.ScratchStepInAmounts": {
+      "theorems": 9,
+      "declarations": 9,
+      "with_axioms": {}
+    }
+  },
+  "seconds": {
+    "Becoming.ScratchStepInAmounts": 4.657,
+    "BecomingScratchStepInAmountsAxiomAudit": 0.919
+  }
+}
+python3 -B scratch_build.py (scratch outside the repository)/dj/batch21/amounts   4.28s user 1.96s system 42% cpu 14.650 total
