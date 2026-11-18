@@ -10,7 +10,7 @@
 2. [`FROZEN-TRY.md`](FROZEN-TRY.md). Scratch programs read 28 statements out of the Lean and drew places from them. Six of seven guesses failed in whole or in part. What held: what a statement assumes and concludes can be read by program.
 3. [`FROZEN-BOTH.md`](FROZEN-BOTH.md). A first look at the theorems that name a class of a single step found no general statement that a course passes from within renewal to breaking or undermining. The program's second version read nineteen unseen statements without fault.
 4. [`FROZEN-JOIN.md`](FROZEN-JOIN.md), with [`ScratchStepInAmounts.lean.txt`](ScratchStepInAmounts.lean.txt) and its build log. Nine small statements from `Flow.Balances.kept_iff` and `broken_iff`; a reader set to refute called them arithmetic, not to be landed as a module, and one is in the package in another form.
-5. [`FROZEN-HOME.md`](FROZEN-HOME.md), with the seven reports behind the change to the direction page in `home-readers/`. The account's chapters set against the direction page, which linked to none of them; "We are far from it" was rewritten from the reports.
+5. [`FROZEN-HOME.md`](FROZEN-HOME.md), with the seven reports behind the change to the direction page in `home-readers/` (the three on the change itself are kept as text, since they quote links that resolve only from the direction page's place). The account's chapters set against the direction page, which linked to none of them; "We are far from it" was rewritten from the reports.
 
 **What the day shows, as the writer sees it.** Five times the first telling of a piece said more than its sources, and readers who took no part found it each time. Three rounds found in the Lean what the account's chapters already tell.
 
