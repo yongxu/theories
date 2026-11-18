@@ -8,7 +8,7 @@ Every record in the directive groups `15-*`, `16-*` of [sources](../sources/READ
 
 | Date | Record | Kind | Title | In register |
 |---|---|---|---|---|
-| 2026-11-18 | [2026-11-18-the-lean-before-the-words.md](../sources/15-codex-theory-conversations/2026-11-18-the-lean-before-the-words.md) | record | Ren: what can be derived and what cannot; the Lean before the words; the repository as an elegant representation; on this MacBook until the work is ready |  |
+| 2026-11-18 | [2026-11-18-the-lean-before-the-words.md](../sources/15-codex-theory-conversations/2026-11-18-the-lean-before-the-words.md) | record | Ren: what can be derived and what cannot; the Lean before the words; the repository as an elegant representation; on this MacBook until the work is ready | yes |
 | 2026-11-16 | [2026-11-16-no-corners-the-interconnected-map.md](../sources/15-codex-theory-conversations/2026-11-16-no-corners-the-interconnected-map.md) | record | Ren: far from it is fine; no corners cut; the interconnected map with its attractors, transitions and paths; no holding on to old words |  |
 | 2026-11-13 | [2026-11-13-what-a-law-is-and-the-words.md](../sources/15-codex-theory-conversations/2026-11-13-what-a-law-is-and-the-words.md) | record | Ren: what a law is, learning with no learner, and words that keep up with the theory | yes |
 | 2026-11-13 | [2026-11-13-the-map-one-model.md](../sources/15-codex-theory-conversations/2026-11-13-the-map-one-model.md) | direction | Ren: the map is far from what we want; the map as the single source, one model, as the next goal |  |
