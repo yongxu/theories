@@ -1,0 +1,210 @@
+*AI-written (Claude Fable), 19 November 2026, by one reader set to break S3 of `reader-independent.md` against the Lean, on paper. Nothing was built: no lake, no checker, no test of the package, no Lean written. Read whole, statements and proofs: `LineOnAStock.lean` lines 129 to 412 and 782 to 1296, `RuleCapture.lean` lines 104 to 217 and 464 to 674, and the definitions and the few lemmas of `Pace`, `RegimeMargin`, `TurningInTime` and `GuardedStep` listed below. Four small searches were run in memory from the command line, in three runs, and not saved; what they searched is in section 7.*
+
+# S3 against the Lean
+
+## Verdict
+
+**SOUND ON PAPER as an equivalence, with the statement corrected; not a join as stated, and the join it does make needs no lock.** No false step was found in either half and no small world disagreed. But as the proposal states it, S3 asks `along` (which `way_ends` does not have) and `keeps` (which `unending_iff_holds` does not have), so neither old theorem is its case. With the stock premises restated (section 3) both become cases, `way_ends` only in its second conjunct. And the equivalence holds for any sequence of rules once the right side says "no later rule favours": the lock's premises only turn that clause into a test at one configuration.
+
+## What was read
+
+- **Whole (statement and proof).** `LineOnAStock`: the model (`after`, `taken`, `left`, `Goes`, `step`, `net`, `course`, `allKids`, `generation`, `Holds`, `Regime`, `Needing`), section 3 (`after_of_met`, `mem_after_iff`, `generation_mem`, `generation_below`, `generation_ancestor`, `mem_generation`), sections 8 to 10 and the head of 11 (`Below`, `below_after`, `below_keeps`, `ends_low`, `ends_high`, `ends_all`, `line_ends`, `way_ends`, `kids_of_grows`, `course_asItWas`, `way_while_met`, `allKids_rises`, `generations_rise`, `need_unmet`, `falls_to_unmet`, `one_need_ends`, `taken_allKids`, `taken_generation`, `course_generation`, `within_along`, `reaches_from`, `reaches_holds`, `unending_iff_holds`, `taken_below`, `unending_taken_below`). `RuleCapture`: `reverse`, `Raises`, `ReadsShare`, `ReadsShare.reverse`, `Locked`, `turn_locked`, `locked_stays`, `locked_rises`, `locked_not_below`; `CarrierCounts` from the structure to `proportional_locks_down`. `Pace.turn`, `Pace.step`, `Pace.paced` (definitions). `RegimeMargin.step`, `FromNothing`, `Short`, `Meets`, `Keeps` (definitions). `TurningInTime.pair`, `asItWas` (definitions), `kept_within` (with proof). `GuardedStep.stepWhile` (definition).
+- **At the statement only.** `RegimeMargin.holds` (its proof calls `Adjusted` lemmas I did not open); `GuardedStep.stepWhile_unending_iff`; `LineOnAStock.TwoForOne` (definitions and the statement of `holds_by_law`).
+- **Used by name, not opened.** `step_lowers`, `step_zero`, `line_from_line`, `rise`, `TurningInTime.rising_takes_all`, the `Law.orbit` lemmas, `first_of_decided`.
+- **Not at all.** `TurningInTime`'s lock laws (`locked_alone` and after; only the opening lines of its section 6), `WayOfUnits`, the plan, the direction page, the writer's frozen paper and `AFTER-PROGRAMS.md`. The three other reader reports were searched for "S3" only (no mention). A file `break_s3.py` appeared in this folder while I worked; it is another reader's and I did not open it.
+- **The proposal.** `reader-independent.md`, whole.
+- A text search of `LineOnAStock`, `RuleCapture`, `TurningInTime`, `WayOfUnits` and `Pace` finds no `Classical`, `propext`, `funext` or `by_contra`. I did not run `#print axioms`. Where I say "constructive" below I mean a proof in the style of those files.
+
+## 1. S3 exactly, in the Lean's terms
+
+The proposal's step count `t` and schedule `reads` are idle under `every`, so I leave them out.
+
+**Given.** `U R A : Type`; `need use : U → Nat`; `kids : R → U → List U`; `giving y : Nat → Nat`; `hi : Nat`; `P : Ideals.Preorder A`; `M : Ideals.Preorder R`; `favours : R → Prop`; `share : List U → A`; `h : A → R → R`.
+
+**The step.** `TurningInTime.pair` at `W := List U × R`:
+
+- the way and rule after: `(w, g), x ↦ (LineOnAStock.after need (kids g) w x, h (share w) g)`;
+- the level after: `(w, g), x ↦ RegimeMargin.step giving (LineOnAStock.taken use w) x`.
+
+Write `c k = ((w_k, g_k), x_k)` for `Law.orbit` of that step from `((w, g), x)`, and `Goes_k` for `LineOnAStock.Goes need (w_k, x_k)`. The net is `Law.stepWhile` of the step while `Goes`.
+
+**Premises, as the proposal has them.**
+
+- `grows : ∀ g, favours g → ∀ u, use u < taken use (kids g u)`
+- `even : ∀ g, ¬ favours g → ∀ u, taken use (kids g u) = use u`
+- `some : ∀ g, ¬ favours g → ∀ u, kids g u ≠ []`
+- `down : ∀ g u v, v ∈ kids g u → need v ≤ need u`
+- `needs`: "every unit needs something". The proposal does not say of which units (section 2 below).
+- `nothing : RegimeMargin.FromNothing giving`; `keeps : RegimeMargin.Keeps giving 0 hi`; `high : x ≤ hi`
+- `along : ∀ k, (∀ j, j ≤ k → Goes_j) → LineOnAStock.Regime giving use y hi w_k`
+- `lowers : ∀ w g, ¬ favours g → P.le (share (allKids (kids g) w)) (share w)`
+- `monotone : RuleCapture.ReadsShare P M h`
+- `upper : ∀ {g g'}, M.le g g' → favours g → favours g'`
+
+**Conclusion.** `«不穷» net «一» ((w, g), x)` if and only if there is `k` with
+
+- `∀ j, j < k → Goes_j`,
+- `LineOnAStock.Holds need use y (w_k, x_k)`,
+- `¬ favours g_k`, and `M.le (h (share w_k) g_k) g_k`.
+
+## 2. Is the right side well formed?
+
+Yes, once written out. Three places where the proposal's words are loose.
+
+**"`Locked` with both orders reversed."** `Locked` takes `M`, `favours`, `h` and a pair; it does not mention `P`. The last two conjuncts are exactly
+
+`RuleCapture.Locked (RuleCapture.reverse M) (fun g => ¬ favours g) (fun w g => h (share w) g) (w_k, g_k)`.
+
+So one order is reversed in `Locked`, and the predicate is replaced by its negation. The order on shares is reversed only in the premises of `turn_locked`.
+
+**Kept by a step at which every need is met: yes.** Take `S := List U` with the order `P.le (share w) (share w')`, and `f w g := allKids (kids g) w`. `turn_locked` at `reverse` of that order, `reverse M` and `¬ favours` asks three things:
+
+- `Raises`: `∀ w g, ¬ favours g → P.le (share (f w g)) (share w)`. This is `lowers`.
+- `ReadsShare` for the two reversed orders. This is `monotone` by `ReadsShare.reverse`, pulled back along `share`.
+- in the place of `upper`: `M.le g' g → ¬ favours g → ¬ favours g'`. This is the contrapositive of `upper`. No new premise is needed.
+
+Where every need is met, the way after the step is `f w g` (`after_of_met` at `kids g`), so the model's step is `Pace.turn f _ true`, and `turn_locked` keeps the reversed lock. At a step with an unmet need nothing keeps it, and neither half of S3 needs that.
+
+**"The form of `proportional_locks_down`."** Close, not the same. That theorem uses `CarrierCounts.disfavours` (`carrier ≤ other`), a predicate of its own that overlaps `favours` at equal counts, with its own lemma `lower`. S3 uses `¬ favours`, for which `lower` is `upper` read backward.
+
+**A simpler right side says the same.** Under S3's premises, "`Holds` at `k`, `¬ favours g_k`, and `¬ favours (h (share w_k) g_k)`" for some `k` is equivalent to the right side as stated. The stated form gives it by `upper`. The other way, `lowers` and `monotone` give the reversed lock at `k + 1`, where the configuration still holds. So the order on rules need not appear in the conclusion: the way holds, and neither the rule in force nor the rule read off the present share favours. (On paper; no disagreement in the first search of section 7.)
+
+**Two more notes on the premises.** `ReadsShare` at `x = y` gives `M.le (h x g) (h x g')` for all `g`, `g'`. So the rule read is a function of the share alone, up to equivalence in `M`: the reading keeps no memory of the rule in force. And `needs` must be said of some set of units. For `unending_iff_holds` to be a case it cannot be "every unit of the type"; it must be `Needing`'s form: every unit of every way reachable from `w` by `allKids (kids g)` under any rules. At one rule that is `Needing need kids w`, and `way_ends`'s `∀ u, 0 < need u` implies it.
+
+## 3. The two claimed cases, premise by premise
+
+`share` must stay a parameter. At one rule take `R := PUnit`, `A := PUnit`; then `lowers`, `monotone`, `upper` and the last conjunct of the right side hold trivially. If the share were fixed as the number of units, `lowers` at one rule that does not favour would ask every unit to leave at most one. `unending_iff_holds` does not ask that, and its kept case `TwoForOne` (`P` leaves `Q, Q`) fails it.
+
+### At one rule that favours (`favours := True`)
+
+| | `way_ends` | S3 as stated |
+|---|---|---|
+| `nothing`, `keeps`, `high` | asked | asked |
+| `grows` | `∀ u` | the same |
+| `down` | asked | the same |
+| `needs` | `∀ u, 0 < need u` | no more than this |
+| `even`, `some`, `lowers`, `monotone`, `upper` | none | vacuous or trivial |
+| **`along`** | **none** | **asked** |
+| conclusion | `(∃ n, ¬ Goes (course n)) ∧ ¬ «不穷»` | `«不穷» ↔ False` |
+
+S3 asks `along`, and `way_ends` does not. It cannot be discharged. Example: `hi = 6`; giving `0, 2, 0, 2, 0, 0, 0` at levels 0 to 6 (nothing from nothing; `z + giving z ≤ 6` everywhere); one kind of unit, need one, use one, leaving two of itself; start `([u], 3)`. Every premise of `way_ends` holds. The start's need is met, so `along` asks `Regime` at a take of one, and no `y` gives it: at `y = 0` `Meets` fails at level 0; at `y = 1` `Meets` fails at level 2; at `y ≥ 2` `Short` fails at level 1.
+
+The conclusion is also short of `way_ends`. S3 gives `¬ «不穷»`. `way_ends` also gives a step at which no need is met. From "not at every step" to "at some step not" is a classical step, and the files read use none.
+
+**So `way_ends` is not a case of S3 as stated.** (It is S2 at one rule, word for word. But the proposal proves S2 by `way_ends` on tagged units, so that is a re-saying.)
+
+### At one rule that does not favour (`favours := False`)
+
+| | `unending_iff_holds` | S3 as stated |
+|---|---|---|
+| `even`, `some` | `∀ u` | the same |
+| `down`, `nothing`, `high` | asked | asked |
+| `needs` | `Needing need kids w` | the same, if stated as in section 2 |
+| `along` | asked | the same |
+| `grows`, `lowers`, `monotone`, `upper` | none | vacuous or trivial |
+| **`keeps`** (`Keeps giving 0 hi`) | **none** | **asked** |
+| conclusion | `«不穷» ↔ ∃ k, before ∧ Holds` | the same |
+
+The task asked whether `unending_iff_holds` has an `even` premise: it has, with `some`, of every unit. The mismatch is `keeps`. `Regime` holds `Keeps` only at the takes of the ways reached, which is weaker than `Keeps` at no draw (`kept_within` goes one way only). Example: `hi = 4`; giving `0, 1, 2, 2, 2` at levels 0 to 4; one kind of unit, need one, use two, leaving itself; start `([u], 4)`, `y 2 := 2`. `Regime` holds at a take of two (`Short` below 2; `Meets` at level 2; the step under a draw of two sends 0, 1, 2, 3, 4 to 0, 0, 0, 2, 4). Every premise of `unending_iff_holds` holds and the course is fixed. `Keeps giving 0 4` fails at level 3: `3 + 2 = 5`.
+
+**So `unending_iff_holds` is not a case of S3 as stated either.**
+
+### The repair
+
+Replace `keeps` and `along` by two premises on the course:
+
+- `keepsAlong : ∀ k, (∀ j, j ≤ k → Goes_j) → RegimeMargin.Keeps giving (taken use w_k) hi`
+- `regimeAlong : ∀ k, (∀ j, j ≤ k → Goes_j) → ¬ favours g_k → Short giving T (y T) ∧ Meets giving T (y T) hi`, with `T := taken use w_k`
+
+Both halves go through on paper with these. The cap on the level comes from `keepsAlong` by `within_along`'s induction. `reaches_holds` and `RegimeMargin.holds` are only used at steps whose rule does not favour. At `favours := True`, `regimeAlong` is vacuous and `keepsAlong` follows from `keeps` by `kept_within`. At `favours := False` the two together are `along`. Then `unending_iff_holds` is the case exactly, and `way_ends` in its second conjunct. The fourth search of section 7 found no disagreement with S3 under these premises, in worlds where `keeps` at no draw mostly fails; it had few courses that never end (633).
+
+`keeps` is in any case not needed beside `along` in S3 as stated: `within_along` gives the cap.
+
+## 4. The left-to-right half: where is the gap?
+
+I found no false step. Read classically, the four steps hold. The answers to the doubts raised, then what the sketch leaves out.
+
+**Step 1 (finitely many steps with an unmet need): holds.** A unit whose need is unmet leaves nothing (`after`), so it is not in the next way. By `mem_after_iff` every unit of the next way is a kid of a unit the level met, so by `down` it needs at most the level, which is below the unmet need. The largest need of the way never rises (`down` under every rule) and falls strictly at each such step. Units of lower need born later do not raise it. So there are at most as many such steps as the largest need at the start.
+
+**Step 2 (finitely many favouring steps after that): holds.** After the last unmet step every way is all the kids of the one before. What it takes rises by at least the number of units under a favouring rule (`allKids_rises` at `kids g`; the way is not empty on a course that goes on) and is unchanged under one that does not favour (`taken_allKids`). It is below the level (`taken_below`), and the level is at most `hi` at every step (`kept_within` from `keeps`, or `within_along`). The level can rise, but not above `hi`, so the bound is real. The rule cannot go back and forth for ever: each return to a favouring rule costs at least one of at most `hi`.
+
+**Step 3 (the reversed lock one step after the last favouring rule): holds.** Let every rule from `T` on not favour, every need met from `T` on. Then `g_{T+1} = h (share w_T) g_T`, and `share w_{T+1}` is not above `share w_T` (`lowers`), so by `monotone` the rule read off `share w_{T+1}` is not above `g_{T+1}`. The case the task raises, a share that stops moving while its reading favours, does happen: the rule then alternates (the proposal's course with `θ = 4`). It is excluded on a course that never ends, and by step 2, not by any premise on the reading. On such a course there is a last favouring rule, and the lock is found after it.
+
+**Step 4: what `reaches_holds` asks.** `down`; `Needing` of the start's way; `nothing`; `along` (only `Short` is used, but the full `Regime` is the premise); and `all`: some need met at every step. Nothing about what the kids take, no `keeps`, no `high`. It returns some step that holds, with no bound on it.
+
+**What the sketch leaves out.**
+
+1. `reaches_holds` must be applied to the course from the step where the reversed lock is found, not from the start. From the start it may return a holding step under a favouring rule, which is not S3's right side. The proposal's "from there" can be read this way; it should be said.
+2. "Finitely many, so a last one" is classical. In the style of the files read, the proof has to be one induction: on a bound on the needs (as `reaches_from`), then on what the cap leaves above the take (as `ends_high`), then on the level (as `reaches_from`), carrying the reversed lock. `reaches_holds` cannot then be used as it stands: when the lock is first found one does not know that no need will be unmet later, and an unmet need can break the lock. So step 4 is also proved afresh. This is more than "steps 1 to 3 and the assembly".
+3. That induction must decide whether the rule in force favours. `favours : R → Prop` needs `DecidablePred`.
+
+None of these makes the statement false.
+
+## 5. The right-to-left half, through the tagging
+
+**Is the tagged world a `LineOnAStock` world?** Yes. `U' := U × Nat`, `kids' (u, j) := (kids g_j u)` tagged `j + 1`, `need'` and `use'` by the first part. The rules `g_j` come from the model's own course, which is defined without the tagged world, so there is no circle in the definition. `kids'` depends on the unit and its tag, not on the tag only. `down` carries over from `down` under every rule. The needs carry over if `needs` covers the descendants under the actual rules (section 2).
+
+**Does "holds for ever" follow when every rule after `k` does not favour?** Yes. Tag from `k`. Then `even` and `some` hold of every tagged unit, and `unending_iff_holds` applies as it stands to the course from `(w_k, x_k)`, with `along` shifted and `x_k ≤ hi`.
+
+**But that every rule after `k` does not favour is not given; it is to be proved.** It follows from the reversed lock only at steps where every need is met, and that every need is met is what the tagged world's `course_generation`, `generation_below` and `RegimeMargin.holds` are to give. Two consequences for the route:
+
+- `even : ∀ u'` cannot be supplied before the induction is done. Either the two inductions run as one, or the tagged world is given default kids (`[(u, j + 1)]` where `g_j` favours), which again needs `favours` decidable.
+- The statement of `unending_iff_holds` is not enough. It says some need is met at every step; the lock needs every need met. So the route goes through its pieces (`course_generation`, `generation_below`, `RegimeMargin.holds`), which the proposal names, and not through the theorem.
+
+On paper the half holds: by induction on `i`, at step `k + i` the reversed lock holds, the take is the take at `k`, the level is the orbit of the step under that one draw, which never falls below `x_k` (`RegimeMargin.holds`), every need is at most `x_k`, and the way is not empty.
+
+**"For a `Locked` start, any such `k` is at least `n + 2`": holds on paper.** Steps before the first unmet need at `n` are steps of `turn` with `f := allKids (kids g)`; `turn_locked` (with `raises`) keeps `Locked` up to step `n`, so `g_n` favours; and `Locked` at `n` with `upper` makes `g_{n+1}` favour.
+
+## 6. Do the stock, the lock and the needs each do work?
+
+Plainly: **the stock and the needs do; the lock does not do the joining.**
+
+The equivalence holds with the reading exchanged for any sequence of rules `g_0, g_1, …`, in both halves, if the right side reads: *there is a step `k`, some need met at every step before it, at which the configuration holds and from which no rule favours.* Left to right is steps 1, 2 and 4 above; step 3 is not needed. Right to left is `unending_iff_holds` on units tagged from `k`, as it stands. The proposal's section 6 grants this for the left-to-right half only. Call this statement S3′.
+
+S3′ in turn is a statement about `LineOnAStock` alone, with no rule: units of a decidable kind whose kids take more, all other units' kids taking the same and not none, `down`, the needs, the stock. The net never ends exactly where the course comes to a holding configuration none of whose descendants is of the growing kind. `way_ends` is the case where every unit grows; `unending_iff_holds` the case where none does. (Argued on paper as above; searched small, section 7. I do not propose it; it shows what S3 joins.)
+
+So S3 is S3′ and one lemma. The lemma is `turn_locked` with the orders reversed: under `lowers`, `monotone`, `upper` and a reading at every step, "holds, and from here no rule favours" is the same as "holds, and here the reversed lock holds". Each lock premise is needed for that lemma: with any one of `lowers`, `monotone`, `upper` dropped, small worlds disagree with S3 (section 7), and never with S3′'s left-to-right half.
+
+What follows:
+
+- The two old theorems are cases of the part of S3 that has no lock in it. At one rule the lock's premises are trivial and are not exercised.
+- The new mathematics in S3 is the mixed induction of steps 1 and 2 joined to `reaches_from`'s. It is a join of `way_ends` and `unending_iff_holds`, in the proposal's first sense only: nothing retires if it is proved on top of them.
+- The lock's part of S3 is a test at one configuration for a clause about the whole future. It is small and it is already in the Lean as `turn_locked`; `proportional_locks_down` is an instance of the same reversal.
+- That the fallen level reaches the rule through who is left is not in S3's equivalence. It is in the last sentence only (`k ≥ n + 2`), which is `turn_locked` on steps where every need is met.
+
+By the proposal's own second test in its section 6, then, S3 as a statement about a lock is S3′ with a certificate.
+
+## 7. What was searched
+
+Four searches, in three runs of `python3` in memory from the command line, each run under ten seconds. They were not saved, so the counts cannot be rerun from a file. A course was counted as never ending when a configuration repeated. A search shows where a statement fails; it does not show that it holds.
+
+Common to all: two to four kinds of unit (to five in the third); needs from 1 to `hi`; uses 1 or 2 (to 3 in the fourth); kids random lists of one to three units needing no more; `hi` in 6, 8, 10, 12; giving `min z (hi - z)`, `min (2z) (hi - z)`, or random; starts every way of one to three units at every level from 0 to `hi`; `y T` the least level at which giving meets `T`. Starts at which a stock premise fails along the course were skipped.
+
+| Search | Starts with premises met | Never end | Disagreements |
+|---|---|---|---|
+| 1. S3 as stated. Three rules in a chain, favouring upward closed; share a weighted count by `≤` with `lowers` enforced; reading by two thresholds; every rule at the start | 256,401 | 25,652 | 0 with S3's right side; 0 with the simpler right side of section 2 |
+| 1a. The same with `lowers` not enforced | 116,244 | 11,774 | 1,487 |
+| 1b. The same with a reading not monotone (a random table) | 125,134 | 13,157 | 844 |
+| 1c. The same with favouring not upward closed | 119,106 | 11,831 | 7,481 |
+| 2. S3′: four rules, no order, no share, no reading; the rules a random prefix of up to six and then a cycle of one to three | 259,990 | 10,599 | 0, both directions |
+| 3. One `kids`, a kind that grows and the rest even; no rule | 358,358 | 47,228 | 0, both directions |
+| 4. S3 with the repaired stock premises of section 3; giving random up to `hi`, so `keeps` at no draw failed in 269,322 of these starts, and `Short` or `Meets` failed at a favouring step in 18,974 | 270,226 | 633 | 0 |
+
+In 1a to 1c the first disagreement printed was in each case a course that ends while the right side holds. I did not count the two directions apart there. In all of 1 to 1c, every course that never ended came to a holding step from which no rule favoured.
+
+These worlds differ from the proposal's in that the share is not the number of units and the needs, kids and givings are random. They share its limits: small numbers, a share ordered by `≤` on numbers, no share that is a ratio.
+
+## Findings
+
+- **MUST.** Neither old theorem is a case of S3 as stated (the proposal's section 4 says both are exact). S3 asks `along`, which `way_ends` does not have and which cannot be discharged (example in section 3). S3 asks `keeps`, which `unending_iff_holds` does not have (example in section 3). With `keeps` and `along` replaced by `keepsAlong` and `regimeAlong`, `unending_iff_holds` is the case exactly.
+- **MUST.** Even after that repair `way_ends` is a case only in its second conjunct. Its first, a step at which no need is met, does not follow from an equivalence about `«不穷»` without a classical step; the files read have none.
+- **MUST.** By the proposal's own test (its section 6, second bullet) S3 is a lock-free equivalence with a certificate. The reading can be exchanged for any sequence of rules in both halves, not only left to right, once the right side says "from here no rule favours" (S3′; on paper, and 259,990 small starts with no disagreement). The two old theorems are cases of S3′, and of a `LineOnAStock` statement with no rule at all. "The only statement here in which the stock, the lock and the units' needs each do work" says more than this shows: the lock's premises are each needed, but only for the one-configuration test, which is `turn_locked` reversed.
+- **MUST.** "About 9.2 million starts in three families, no disagreement" is said of S3. By the proposal's own section 7 the third family (3,791,256 starts) tested a variant with a different growth premise and a different right side. S3 as stated was tested on about 5.4 million starts in two families, in both of which the share is the number of units. The programs were not kept.
+- **LESSER.** The right side is well formed and is `Locked (reverse M) (fun g => ¬ favours g) (fun w g => h (share w) g) (w_k, g_k)`. "Both orders reversed" is loose: `Locked` has one order, and the predicate is negated. `turn_locked`'s premises are met in the reversed form by `lowers`, `ReadsShare.reverse`, and the contrapositive of `upper`. `proportional_locks_down` uses `disfavours` and `lower`, which are not `¬ favours` and `upper`.
+- **LESSER.** The right side can be said without the order on rules: the configuration holds, and neither the rule in force nor the rule read off the present share favours. Equivalent under S3's premises (on paper; search 1).
+- **LESSER.** No false step in the left-to-right sketch. Steps 1 to 3 hold as written, read classically; the alternation of the rule is excluded by step 2 (growth against the cap), not by a premise on the reading. Step 4 must apply `reaches_holds` to the course from the step where the lock is found.
+- **LESSER.** In the style of the files read, "finitely many, so a last one" is not available. The proof is one nested induction that carries the lock; `reaches_holds` cannot be used as it stands, and `favours` must be decidable. The fresh work is more than the proposal's "steps 1 to 3 and the assembly".
+- **LESSER.** Right to left through the tagging: the tagged world is a `LineOnAStock` world and `down` and the needs carry over. But `even` of every tagged unit is what the lock is to deliver, so the two inductions run as one or the tagged world needs default kids; and the statement of `unending_iff_holds` (some need met) is not enough for the lock (every need met), so the route is through its pieces.
+- **LESSER.** `needs` must be stated in `Needing`'s form (descendants under any rules), or `unending_iff_holds` is not a case. `share` must stay a parameter: with the share fixed as the number of units, `lowers` at one rule that does not favour excludes the kept case `TwoForOne`.
+- **LESSER.** `ReadsShare` makes the rule read a function of the share alone up to equivalence in `M`. Under `every` the step count and the schedule are idle.
+- **LESSER.** `k ≥ n + 2` from a `Locked` start holds on paper by `turn_locked`. S2 at one rule is `way_ends` word for word and is proved by it, so it is a re-saying (S2 was not my part; noted in passing).

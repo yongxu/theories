@@ -1,0 +1,183 @@
+#!/usr/bin/env python3
+"""A lock on units that multiply, on a level they need: the model of FROZEN-LOCK-ON-UNITS.md run on small numbers.
+
+AI-written scratch (19 November 2026). A search is a search, not a proof. Nothing here is the Lean's; the step follows
+the Lean's forms where they exist:
+  - units: LineOnAStock.after (a unit whose need the level meets leaves its kids, the others nothing) and
+    LineOnAStock.left (every unit present takes; the level steps by RegimeMargin.step);
+  - the rule: RuleCapture's turn, in which the rule is set again by a reading of the share BEFORE the step
+    (TurningInTime's regroup_step: `bif b then h (a, x) g else g`), and Locked: the rule in force favours and is
+    not above what the reading of the present share gives.
+Two kinds of unit, F (the favoured one) and O. Two rules, 0 and 1; 1 favours. kids[r][u] = (how many F, how many O).
+The share of a way is its number of F (or, with --proportion, nF / (nF + nO)). The reading is a threshold on the share.
+The giving is the tent min(z, c - z), which gives nothing from nothing and keeps every level up to c within c.
+
+Usage: python3 -B lock_on_units.py [--proportion]
+"""
+import itertools, json, sys
+from fractions import Fraction
+
+PROPORTION = '--proportion' in sys.argv
+
+
+def giving(c, z):
+    return max(0, min(z, c - z))
+
+
+def regime_step(c, H, x):
+    z = max(0, x - H)
+    return z + giving(c, z)
+
+
+def share(nF, nO):
+    if PROPORTION:
+        return Fraction(nF, nF + nO) if nF + nO else Fraction(0)
+    return nF
+
+
+class Model:
+    def __init__(self, c, need, use, kids, theta):
+        self.c, self.need, self.use, self.kids, self.theta = c, need, use, kids, theta   # need/use: (F, O)
+
+    def read(self, s):               # the rule read off a share: monotone in the share, the same whatever the rule in force
+        return 1 if s >= self.theta else 0
+
+    def locked(self, st):
+        nF, nO, r, x = st
+        return r == 1 and r <= self.read(share(nF, nO))
+
+    def met(self, st):               # every unit present has its need met
+        nF, nO, r, x = st
+        return (nF == 0 or self.need[0] <= x) and (nO == 0 or self.need[1] <= x)
+
+    def goes(self, st):              # some unit present has its need met (LineOnAStock.Goes)
+        nF, nO, r, x = st
+        return (nF > 0 and self.need[0] <= x) or (nO > 0 and self.need[1] <= x)
+
+    def taken(self, st):
+        nF, nO, r, x = st
+        return nF * self.use[0] + nO * self.use[1]
+
+    def step(self, st):
+        nF, nO, r, x = st
+        kF, kO = self.kids[r]
+        f = nF if self.need[0] <= x else 0       # F units whose need is met
+        o = nO if self.need[1] <= x else 0
+        nF2 = f * kF[0] + o * kO[0]
+        nO2 = f * kF[1] + o * kO[1]
+        r2 = self.read(share(nF, nO))            # the reading is of the share before the step
+        x2 = regime_step(self.c, self.taken(st), x)
+        return (nF2, nO2, r2, x2)
+
+    def run(self, st, limit=400, cap=10 ** 7):
+        """The course until the net ends (no unit's need met), a state repeats (it never ends), or the limit."""
+        seen, course = {}, [st]
+        while True:
+            if not self.goes(st): return 'ends', course
+            if st in seen: return 'never ends', course
+            seen[st] = len(course)
+            if len(course) > limit or st[0] + st[1] > cap: return 'undecided', course
+            st = self.step(st); course.append(st)
+
+
+def premises(m):
+    """Which of the frozen premises this instance meets."""
+    (kF1, kO1) = m.kids[1]
+    p = {}
+    p['raises'] = kF1[0] >= 1 if not PROPORTION else None            # count share: under the favouring rule F leaves at least one F
+    take = lambda k: k[0] * m.use[0] + k[1] * m.use[1]
+    p['grows_all'] = m.use[0] < take(kF1) and m.use[1] < take(kO1)   # under the favouring rule every unit's kids together take more
+    p['grows_F_only'] = m.use[0] < take(kF1) and m.use[1] <= take(kO1)
+    p['needs'] = m.need[0] > 0 and m.need[1] > 0
+    need_of = lambda k, parent: all(m.need[i] <= parent for i in (0, 1) if k[i] > 0)
+    p['down'] = need_of(kF1, m.need[0]) and need_of(kO1, m.need[1])   # under the favouring rule kids need no more than their parent
+    return p
+
+
+def raises_holds_here(m, st):
+    """Raises at this way, for whichever share: the share of the offspring under the favouring rule is not lower."""
+    nF, nO, r, x = st
+    kF, kO = m.kids[1]
+    return share(nF * kF[0] + nO * kO[0], nF * kF[1] + nO * kO[1]) >= share(nF, nO)
+
+
+def main():
+    out = {'share': 'proportion' if PROPORTION else 'count', 'instances': 0}
+    La_fail, Lb_fail, Lb_checked, La_checked = [], [], 0, 0
+    Lb_Fonly_fail, Lb_Fonly_checked = [], 0
+    falls_fail = []
+    after = {'ends': 0, 'never ends': 0, 'undecided': 0}
+    left_lock, kept_lock_ends, examples = [], [], {}
+    k2 = []
+    cs = (8, 12)
+    kid_choices = [(a, b) for a in range(0, 3) for b in range(0, 3)]
+    for c in cs:
+        for needF, needO in itertools.product(range(1, c + 1, 2), range(1, c + 1, 2)):
+            for useF, useO in itertools.product((1, 2), (1, 2)):
+                for kF1, kO1 in itertools.product(kid_choices, kid_choices):
+                    for kF0, kO0 in (((1, 0), (0, 1)), ((0, 0), (0, 1)), ((1, 0), (0, 0))):   # under the other rule: leave oneself, or F leaves nothing, or O leaves nothing
+                        for theta in ((1, 2, 3) if not PROPORTION else (Fraction(1, 3), Fraction(1, 2), Fraction(2, 3))):
+                            m = Model(c, (needF, needO), (useF, useO), {0: (kF0, kO0), 1: (kF1, kO1)}, theta)
+                            p = premises(m)
+                            for nF, nO, x in itertools.product((1, 2), (0, 1, 2), range(0, c + 1, 1)):
+                                out['instances'] += 1
+                                st = (nF, nO, 1, x)
+                                if not (m.locked(st) and m.met(st)): continue
+                                # the first step at which some need is unmet
+                                course = [st]; n = None
+                                for j in range(1, c + 3):
+                                    course.append(m.step(course[-1]))
+                                    if not m.met(course[-1]) or (course[-1][0] + course[-1][1] == 0):
+                                        n = j; break
+                                # L-a: while every need is met the configuration is locked (given Raises at each way met)
+                                upto = n if n is not None else len(course) - 1
+                                raises_ok = all(raises_holds_here(m, s) for s in course[:upto])
+                                if raises_ok and p['needs']:
+                                    La_checked += 1
+                                    if not all(m.locked(s) for s in course[:upto + 1] if s[0] + s[1] > 0 or True):
+                                        La_fail.append((c, m.need, m.use, m.kids, str(theta), st, course[:upto + 1]))
+                                # L-b: a need goes unmet within c + 1 steps
+                                if raises_ok and p['needs'] and p['grows_all']:
+                                    Lb_checked += 1
+                                    if n is None or n > c + 1 or course[n][0] + course[n][1] == 0:
+                                        Lb_fail.append((c, m.need, m.use, m.kids, str(theta), st, course))
+                                    elif p['down'] and not any(course[n][2 + 1] < nd <= x for nd, k in zip(m.need, course[0][:2]) if k > 0):
+                                        falls_fail.append((c, m.need, m.use, m.kids, str(theta), st, course[:n + 1]))
+                                if raises_ok and p['needs'] and p['grows_F_only'] and not p['grows_all']:
+                                    Lb_Fonly_checked += 1
+                                    if n is None or n > c + 1:
+                                        Lb_Fonly_fail.append((c, m.need, m.use, m.kids, str(theta), st, course[:6]))
+                                # L-c: what happens after the first unmet need, on the instances L-b covers
+                                if raises_ok and p['needs'] and p['grows_all'] and n is not None:
+                                    verdict, full = m.run(st)
+                                    after[verdict] += 1
+                                    if verdict == 'never ends':
+                                        last = full[-1]
+                                        rec = {'c': c, 'need': m.need, 'use': m.use, 'kids': {str(k): v for k, v in m.kids.items()}, 'theta': str(theta), 'start': st, 'course': full[:14]}
+                                        if not m.locked(last) and len(left_lock) < 400: left_lock.append(rec)
+                                        if m.locked(last) and 'locked and never ends' not in examples: examples['locked and never ends'] = rec
+                                    elif verdict == 'ends' and len(kept_lock_ends) < 3:
+                                        kept_lock_ends.append({'c': c, 'need': m.need, 'use': m.use, 'kids': {str(k): v for k, v in m.kids.items()}, 'theta': str(theta), 'start': st, 'course': full[:14], 'locked at the end': m.locked(full[-1])})
+                                # K2: beside a locked start that ends, a start that is not locked (the rule favours, the reading does not) and never ends
+                                if raises_ok and p['needs'] and p['grows_all'] and not PROPORTION and len(k2) < 6:
+                                    v1, f1 = m.run(st)
+                                    if v1 == 'ends':
+                                        m2 = Model(c, m.need, m.use, m.kids, nF + 1)       # the same units and level, read with a threshold the share does not reach
+                                        st2 = (nF, nO, 1, x)
+                                        if not m2.locked(st2):
+                                            v2, f2 = m2.run(st2)
+                                            if v2 == 'never ends':
+                                                k2.append({'c': c, 'need': m.need, 'use': m.use, 'kids': {str(k): v for k, v in m.kids.items()}, 'start': st, 'locked (theta %s)' % theta: {'verdict': v1, 'course': f1[:10]}, 'not locked (theta %s)' % (nF + 1): {'verdict': v2, 'course': f2[:10]}})
+    out.update({'L-a checked': La_checked, 'L-a failures': len(La_fail), 'L-b checked': Lb_checked, 'L-b failures': len(Lb_fail),
+                'L-b with down: level not below a need the start met': len(falls_fail),
+                'L-b with only F growing: checked': Lb_Fonly_checked, 'failures': len(Lb_Fonly_fail),
+                'after the first unmet need (L-b instances)': after,
+                'never ends with the lock left': len(left_lock), 'K2 pairs found': len(k2)})
+    print(json.dumps(out, indent=1))
+    json.dump({'summary': out, 'L-a failures': La_fail[:5], 'L-b failures': Lb_fail[:5], 'falls failures': falls_fail[:5],
+               'L-b F-only failures': Lb_Fonly_fail[:5], 'lock left and never ends': left_lock[:8], 'ends': kept_lock_ends,
+               'examples': examples, 'K2': k2}, open('results-%s.json' % out['share'], 'w'), indent=1, default=str)
+
+
+if __name__ == '__main__':
+    main()

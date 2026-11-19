@@ -1,0 +1,229 @@
+*AI-written (Claude Fable), 19 November 2026, by one reader working alone, who proposes and saw no other proposal. Nothing was built: no lake, no checker, no test of the package. Every proof here is a sketch on paper, and every course was computed by a few lines of python3 run from the command line. What was read is listed next.*
+
+# A lock on the units: one proposal
+
+## What was read
+
+- **Whole:** `AGENTS.md`; the plan (`_process/LEAN-TOWARD-THE-DIRECTION.md`); the direction page from its head note through "What we are trying next" (lines 1 to 106; "How we work on it" and "What we do not know" not read); chapter 2 §10 and §11 with "What this chapter does not show", and of §9 its opening paragraph and first two theorems.
+- **`LineOnAStock.lean`:** the opening account, sections 1 to 5 and 8 to 10 with their proofs (lines 1 to 692 and 782 to 1272), and the cases `ShareRises`, `Doubling`, `HigherStartEnds`. Sections 6, 7, 11 to 12b and the other cases: declaration names only.
+- **`RuleCapture.lean`:** the opening account, the definitions and the section `Lock` with proofs (lines 1 to 217), and `CarrierCounts` (464 to 674). The sections on perturbation, uniform readings, pairs, readings against the share, order, and the witnesses: declaration lines only.
+- **`TurningInTime.lean`:** the opening account, section 1, sections 3 and 4 with proofs (465 to 731), section 6 from its head to `window_alone_outside` (1167 to 1550, so `locked_alone`, `locked_alone_not_below`, `locked_ends_with_net_regime`, `locked_ends_rising`, `count_rises` with proofs), and in `Three` the lock's types, `lock_ends` and `rise_count_ends`. Sections 2, 5, 7 and the window laws after line 1550: only as the opening account tells them.
+- **At the statement only:** `Capture.share_not_lower`, `share_rises`, `share_rises_of_unsupported`; `SelectionTerm.Generations` (the structure); `RegimeMargin.step`, `FromNothing`, `Short`, `Meets`, `Keeps`, `holds`; `Pace.turn`, `step`, `paced`, `paced_succ`, `stays_turned`.
+- **Not opened:** `WayOfUnits.lean` beyond its first thirty lines, `PoolFromCourse`, `ClosedCapture`, `LineOnAStockCases`, the study notes, anything under `tmp/`.
+
+## The answer in short
+
+1. **In a world of one need the join is already there, unstated.** A lock on units all needing the same level is an instance of `TurningInTime.locked_ends_rising` as it stands, with the way of units in the place of the share. Its premise `more` is then proved from the units, and `outside` and `un` hold by `LineOnAStock.after_of_met`. No new theorem is needed for it. (Argued on paper, section 3.)
+2. **With needs that differ, the lock's version of `need_unmet` (S1 below) is a composition.** It is `need_unmet` on tagged units together with `locked_alone`. The lock does in it exactly what it does in `locked_ends_rising`: it keeps the rule favouring so that the growth premise applies at each step. If only S1 landed, I would count that as nothing having changed.
+3. **What the units add is a way for the level to reach the rule: through who is left.** A unit whose need is unmet leaves nothing, the share of the way changes, and a reading monotone in the share can set another rule. No window or mark is handed in. The statement worth trying is S3: an exact condition for a way under a rule set again from its share, of which `LineOnAStock.way_ends` and `LineOnAStock.unending_iff_holds` are the two cases with one rule. It was tested by brute force on small worlds (about 9.2 million starts in three families, no disagreement) and is not proved.
+4. **From being favoured to drawing more stays given.** The identity "use = share times an amount" goes; in its place stands a premise on the units: under a favouring rule a unit's offspring together take more than it. The kept case `ShareRises` shows that this cannot be dropped.
+
+## 1. The model
+
+In the Lean's own terms where they exist. New names are marked (new).
+
+- **Units.** `U : Type`, `need use : U → Nat`, as in `LineOnAStock`. Offspring now depend on the rule in force: `kids : R → U → List U` (new; `LineOnAStock` has `kids : U → List U`).
+- **The share of a way** (new): `share : List U → A`, given with the carrier, with `P : Ideals.Preorder A`. Two instances are meant. The number of units of a kind, `LineOnAStock.lineCount C w`, by `≤` (the order of `Three.shareOrder`). Or `RuleCapture.CarrierCounts` `⟨lineCount C w, lineCount (¬ C) w, _⟩` on ways where others are present.
+- **The rule and its reading**, as in `RuleCapture`: `M : Ideals.Preorder R`, `favours : R → Prop`, `h : A → R → R`, `reads : Nat → Bool`.
+- **A configuration** is `((w, g, t), x)`: a way `w : List U`, the rule in force `g : R`, the step count `t`, and the level `x`. This is `TurningInTime.pair`'s `W × Nat` at `W := List U × R × Nat`, the shape of `windowRegroup`.
+- **One step** (new definitions, built from old ones):
+  - the way: `LineOnAStock.after need (kids g) w x`. Each unit whose need the level meets leaves its offspring under the rule in force; the others leave nothing;
+  - the rule: `bif reads t then h (share w) g else g`. It is read at reading steps from the share of the way present at that step, before its units leave offspring. This is `Pace.turn`'s order. So a loss at step `j` shows in the share at `j + 1` and in the rule in force at `j + 2`;
+  - the level: `LineOnAStock.left giving use w x`, that is `RegimeMargin.step giving (taken use w) x`. Every unit present takes, met or not.
+- **The net**: `Law.stepWhile` of that step while `LineOnAStock.Goes need (w, x)`.
+- **The step as it was** (new name `lockAlone`): `TurningInTime.windowAlone (fun w g => allKids (kids g) w) (fun w g => h (share w) g) reads`. It has no giving, use or level in it.
+
+What the model is at its edges. With one rule (`R := PUnit`) it is `LineOnAStock`'s step. With `kids g u = [u]` for every rule it is the way of units. With the level taken out, the way and the rule step by `Pace.turn` on ways, so `RuleCapture`'s lock laws apply to it with `S := List U` and the order `P` pulled back along `share`.
+
+## 2. The statements
+
+### G. A lemma under four laws (the first thing to try)
+
+For any `W`, with `after : W → Nat → W`, `alone : W → W`, `use : W → Nat`, the level stepping by `RegimeMargin.step giving (use w)`, and a decided `Met : W → Nat → Prop`. Premises:
+
+- `outside`: where `Met w x`, `after w x = alone w`;
+- `nothing`: `RegimeMargin.FromNothing giving`; `keeps`: `RegimeMargin.Keeps giving 0 hi`; `high`: `x ≤ hi`;
+- `rises`: the use rises strictly at each of the first `hi` steps of `alone`'s orbit from `w`;
+- `starved`: no way on `alone`'s orbit from `w` is `Met` at the level nothing.
+
+Conclusion: there is `n ≤ hi + 1` with `Met` at every step before `n` of the pair's course, the course equal to the course as it was (`asItWas alone`) at every step up to `n`, and not `Met` at step `n`.
+
+This is `AloneOutside` with marks that may depend on the way. Chapter 2 §11 says that `TurningInTime`'s `marked` is a property of levels while in a way of units the level at which the way changes depends on the way; G is that difference removed.
+
+### S1. A locked way of units comes to an unmet need (the lock's `need_unmet`)
+
+Premises:
+
+- stock: `nothing`, `keeps`, `high` as above;
+- lock: `raises`: `∀ w g, favours g → P.le (share w) (share (allKids (kids g) w))`; `monotone : ReadsShare P M h`; `upper`: favouring kept by a rule not lower; `locked : Locked M favours h (share w, g)`;
+- growth, given: `grows : ∀ g, favours g → ∀ u, use u < taken use (kids g u)`;
+- start: `w ≠ []`, every need of `w` met at `x`, and every unit of every way on `lockAlone`'s orbit from `(w, g, t)` needs something.
+
+Conclusion: there is `n` with `0 < n ≤ hi + 1` such that every need is met at every step before `n`; up to `n` the way, rule and step count are `lockAlone` taken that many times; the share and rule are `Locked` at every step up to `n`; and at step `n` some unit of the way has its need unmet.
+
+With `down` under every rule (`∀ g u v, v ∈ kids g u → need v ≤ need u`), the level at `n` is below a need the start met and below the start level, as in `falls_to_unmet`. With one need, the net ends at `n`, still `Locked`.
+
+A variant of `grows` that I think is the better one: under a favouring rule no unit's offspring together take less than it, the units of a decidable kind `G` have offspring that together take more and include a unit of `G`, and the start has a unit of `G`. The worked courses below need it (their followers leave only themselves).
+
+### S2. No way of units goes on locked (the one-way half)
+
+Premises: `nothing`, `keeps`, `high`, `grows` and `down` as above, every unit needing something. No premise on the reading.
+
+Conclusion: if every rule in force along the course favours, some step has no need met, and the net ends. So from a `Locked` start under S1's lock premises, a net that never ends is at some step `k` under a rule that does not favour, and `k ≥ n + 2` for S1's `n`: the lock is left only after a step at which the level failed a need.
+
+### S3. When a way under a rule set again from its share never ends (exact; a candidate)
+
+Premises:
+
+- `every`: every step reads;
+- under a favouring rule `grows`; under a rule that does not favour, `even` (`taken use (kids g u) = use u`) and `some` (`kids g u ≠ []`);
+- `down` under every rule; every unit needs something; `nothing`; `keeps`; `high`;
+- `along`: `LineOnAStock.Regime giving use y hi` at every way the course reaches with some need met there and at every step before (as in `unending_iff_holds`);
+- `lowers`: `∀ w g, ¬ favours g → P.le (share (allKids (kids g) w)) (share w)`; `monotone`; `upper`.
+
+Conclusion: the net from `((w, g, t), x)` never ends exactly where there is a step `k`, some need met at every step before it, at which
+
+- the configuration holds (`LineOnAStock.Holds need use y`: the way not empty, every need met, the level at or above what the way takes and `y` of it), and
+- the rule in force does not favour and the rule read off the present share is not above it (`Locked` with both orders reversed, the form of `RuleCapture.CarrierCounts.proportional_locks_down`).
+
+For a `Locked` start, with `raises`, any such `k` is at least `n + 2`.
+
+In words: a way that multiplies under a rule set again from its share goes on without end only if the rule is turned and stays turned, and the level left when it is turned is at or above the point of no return of what is then taken. For a locked start the turn can come only through a need the fallen level no longer meets.
+
+## 3. Proof sketches, and what would be proved afresh
+
+**G.** `first_of_decided` on the pair's course up to `hi + 1`. If `Met` held at every step, the course would be the course as it was (by `outside`, step by step: the argument of `agrees_until_marked` and of `course_asItWas`, which are the same induction), its level at `hi + 1` nothing by `rising_takes_all`, against `starved`. Fresh: the statement and about thirty lines. Nothing in it is new mathematics.
+
+**The one-need case, by instance.** In `locked_ends_rising` take `A := List U`, `fA w g := allKids (kids g) w`, `hA w g := h (share w) g`, `use v := taken use v.1`, `marked x := x < n` for the one need `n`, and for the share's order "the share is not lower and, if the first way is not empty, neither is the second". Then `outside` is `after_of_met`; `un` is immediate; `raises` is S1's `raises` with `kids_of_grows`; and `more` follows from `allKids_rises` at `kids g`, the rule favouring by `upper` and the way not empty by the order. I checked each premise against the statement of `locked_ends_rising` on paper. Fresh: only the instance.
+
+**S1.** G at `W := List U × R × Nat` with `Met v x := ∀ u ∈ v.1, need u ≤ x`. `rises` comes from `locked_alone` (at `A := List U`, giving a favouring rule at every step of `lockAlone`'s orbit) and `allKids_rises` at each `kids g`. Fresh: that a way on the orbit is not empty (the induction of `generation_mem`, with the rule varying), and the assembly. With `down`: `generation_ancestor` with the rule varying, six lines.
+
+**S2.** Tag each unit with the step: `U' := U × Nat`, `kids' (u, j) := (kids g_j u)` tagged `j + 1`, where `g_j` is the rule in force at step `j` of the actual course. The course on `U'` under `LineOnAStock`'s step, tags erased, is the lock's course (fresh: about forty lines on `after` and `map`). If every `g_j` favours, `grows` and `down` hold on `U'`, and `way_ends` applies. That the lock is left only after an unmet need is `turn_locked` on ways: a step at which every need is met is a step of `lockAlone`, which keeps the lock; and a rule that does not favour at `k` means not `Locked` at `k - 1`.
+
+**S3, right to left.** From `k`: the reversed lock is kept by every step at which every need is met (`turn_locked` with `lowers`, `monotone` reversed, and `upper` read the other way), so every later rule does not favour and every later step is `even`. Then it is the right-to-left half of `unending_iff_holds` from step `k` (`course_generation`, `generation_below`, `RegimeMargin.holds`), through the tagging.
+
+**S3, left to right.** This half is new. On a course that never ends:
+
+1. only finitely many steps have an unmet need. At such a step every unit of the next way descends from a unit the level met, so by `down` its need is at most that level, which is below the largest need of the way: the largest need falls strictly. This is the induction on `m` inside `ends_all`, read as a count;
+2. after the last of them every step is a step of `lockAlone`. What the way takes then never falls, rises at every favouring step (`allKids_rises`), and stays below the level (`taken_below`), which is at most `hi` (`kept_within`). So only finitely many later rules favour;
+3. after the last favouring rule, at the next step, the rule read off the present share is not above the rule in force (`lowers` with `monotone`; this is where `every` is used);
+4. from there some step holds (`reaches_holds`, which asks nothing of what the kids take).
+
+Fresh: steps 1 to 3 and the assembly. I expect one to two hundred lines, and I expect the first wording to be wrong somewhere, as the plan's history says first wordings have been.
+
+## 4. Which older theorems become cases
+
+Each "exact" below is argued on paper from the statements read, not built.
+
+| Older theorem | Under the proposal |
+|---|---|
+| `LineOnAStock.need_unmet` | Exact case of G (at `Met w x := ∀ u ∈ w, need u ≤ x`), and of S1 at one rule (`R := PUnit`, `favours := True`). |
+| `TurningInTime.ends_with_net_rising` | Exact case of G (at `Met w x := need ≤ x`, `outside` from `AloneOutside` with `un`), then `Law.stepWhile_steps_iff` as now. |
+| `TurningInTime.locked_ends_rising` | G with `locked_alone`, as now through `ends_with_net_rising`. Not a case of S1: its share is any type and its `use` any function meeting `more`. |
+| `LineOnAStock.falls_to_unmet`, `one_need_ends` | Cases of S1 at one rule, with `down` or one need. |
+| `LineOnAStock.way_ends` | Exact case of S2 at one rule that favours; the left-to-right half of S3 at `favours := True`. |
+| `LineOnAStock.unending_iff_holds` | Exact case of S3 at one rule that does not favour (`favours := False`; the reversed lock holds trivially). `WayOfUnits.unending_iff_holds` stays its case. |
+| `TurningInTime.count_rises` | Not a case. For a count realised by units it is replaced by a proof of `more` from `allKids_rises`. A share that is an arbitrary `fA : Nat → R → Nat` is not a way of units: the number of offspring of a way is additive over its units (`after_append`). |
+| `Three.rise_count_ends` | Its course is a course of the model (course 1 below: the same shares and levels). The theorem itself is not derived. |
+| `LineOnAStock.course_asItWas`, `TurningInTime.agrees_until_marked` | One lemma, if G's `outside` is stated for marks that depend on the way. |
+
+Not cases, and not touched: `locked_ends_with_net_regime` (a standing overdraw with a floor), `locked_turns_in_time_on_window_iff` and `locked_turns_in_time_share_iff` (a reading of the level handed in), `turns_in_time_iff` and `WayOfUnits.two_units_iff`, `line_ends` and `fall` (a line that is a proper part of the way), `takes_nothing`, and the alikeness laws. `PoolFromCourse.borne_falls` (chapter 2 §10, a loss borne by the shapers lowers the share) is the nearest older statement to what S3 uses; it was read only as the chapter tells it, and it is a relative, not a case.
+
+One thing must be said plainly about "become cases". If S2 and S3 are proved through the tagging, they rest on `way_ends` and `reaches_holds`, and nothing old retires: the old theorems are cases in statement and the base in proof. They retire only if sections 8 to 10 of `LineOnAStock` are proved again with `kids` depending on the step, which is the same proofs with one more index, about five hundred lines reworked. I would do the tagging first, in scratch, to find out whether S3 is true.
+
+## 5. What stays given, and what the model cannot say
+
+Given:
+
+- the needs, the uses and the offspring under each rule, and so **how a rule favours**. That under a favouring rule a unit's offspring together take more than it is a premise (`grows`). `ShareRises`, read in the Lean, is a course of this model in which a share rises because the others leave nothing: what the way takes falls, and the line goes on. So a share is still not a draw. What the model gives is the place where the difference lies: a rule that favours by multiplying those who take, against one that favours by removing the others;
+- the reading, that it is monotone in the share, and that favouring is kept upward; the `Locked` start (`RuleCapture.favouring_locks`, read at its statement in the chapter, would give it from a reading that favours at every share, not tried here);
+- that the share does not fall under a favouring rule when every need is met (`raises`). For a count of carriers it follows where each carrier leaves a carrier; for `CarrierCounts` from `Capture.share_not_lower` where offspring carry their parent's kind. Both are premises on `kids`;
+- the giving, the cap, nothing from nothing, and for S3 the regime along the course, as now.
+
+The model cannot say:
+
+- anything about a way that remakes what it rests on. Units only take. The direction's second way is not in it, and this join does not move toward it;
+- a reading of the level itself, or by anyone other than the units present. The level reaches the rule only by removing units, one step late in the share and two in the rule;
+- a reading at some steps only (S3 asks `every`);
+- how needs, uses or offspring come to be, or any new kind;
+- for a share that is a ratio: what happens when the others are all gone (`CarrierCounts` asks others present);
+- a condition on the start alone. S3's right side is about the course, as `unending_iff_holds`'s is. A closed form like `two_units_iff`'s may exist for two kinds; with the two-step lag it looks three steps ahead, and I did not work it out.
+
+## 6. What would show the proposal is empty
+
+- **S1 is a dictionary plus an old lemma, and I say so now.** Delete the lock's premises and ask instead that every rule on `lockAlone`'s orbit favours: S1 still proves. Its lock does the one thing the docstring of `locked_ends_rising` already says the lock does there. And for one need it is an instance. If S1 is all that lands, nothing has changed except that `outside`, `un` and `count` are no longer premises.
+- **S3 would be empty** if any of these held:
+  - no course from a `Locked` start meets its right side. Then for locked starts it is S2 again. Against this: in the small worlds below, 31,089 locked starts in one family and 27,849 in another go on by the turn;
+  - the reading can be exchanged for any sequence of rules. For the left-to-right half as a bare "eventually no rule favours" that is so, and the lock does no work there. The lock's work in S3 is two things only: that "does not favour and stays so" is a property of one configuration (the reversed lock, derived, where `turns_in_time_iff` takes `kept` as a premise), and `k ≥ n + 2` from a locked start;
+  - the outcome never turns on the reading. Against this: course 2 and its two variants, one start under three thresholds;
+  - it is `unending_iff_holds` through the tagging. The right-to-left half is. The left-to-right half is not: under tagging the units are not all `even`.
+- **A fact against the proposal's reach.** Where every unit multiplies under a favouring rule (each leaves two or three copies), no locked start went on in the 502,215 starts tried. The take at least doubles, so the step after the first fall takes everything. The turn was in time only where growth is slow against the stock: one unit adding one a step, or each unit taking one more.
+- **What would count as a real join:** an old proof gets shorter or retires. G does that for two proofs. S3 does it only on the second route of section 4.
+
+## 7. Worked courses
+
+One family of units throughout. `L`, `F` and `H` each take one. `F` and `H` leave themselves under either rule. `L` leaves `L, F` under the favouring rule and itself under the other. `L` and `F` need one; `H` needs thirteen. The share is the number of units, by `≤`; the rule is `true` (favours) or `false`, read `true` from a share of `θ` up, at every step (the types of `Three.lockRead`). The premises met are S1's in the variant with `G := {L}`, and S3's in the same variant, whose right side then also allows a holding way with no `L` left. That variant was the one tested for this family.
+
+**Course 1. The lock ends with what it uses up.** Giving `min z (12 - z)`, `θ = 3`, from `[L, F, F]` at twelve.
+
+| step | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 |
+|---|---|---|---|---|---|---|---|---|
+| units | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
+| level | 12 | 12 | 12 | 12 | 12 | 10 | 4 | 0 |
+| rule | true | true | true | true | true | true | true | true |
+
+At step 7 no need is met; the share ten and the rule are `Locked`. These are the shares and levels of `Three.rise_count_ends` as read in the Lean. There the share is a number and the use is the share by a premise; here the use is what the units present take.
+
+**Course 2. The lock is left and something goes on.** Giving `min z (24 - z)`, `θ = 7`, from six `H` and one `L` at thirteen.
+
+| step | 0 | 1 | 2 | 3 | 4 | 5 | 6 |
+|---|---|---|---|---|---|---|---|
+| units | 6 H, L | 6 H, L, F | L, 2 F | L, 3 F | L, 3 F | L, 3 F | L, 3 F |
+| level | 13 | 12 | 8 | 10 | 12 | 16 | 24 |
+| rule | true | true | true | false | false | false | false |
+
+At step 1 the level twelve is below thirteen: the six `H` leave nothing (S1's `n = 1`). The share read at step 2 is three, so the rule in force at step 3 is `false` (`k = 3 = n + 2`). There four units take four, the point of no return of that take is eight, and the level is ten: the configuration holds, and the line never ends, at twenty-four from step 6.
+
+The same start under other readings: with `θ = 4` the rule is `false` at step 3 only, is read `true` off the share four at step 4, and the line ends at step 17 (left for one step and entered again: at step 3 the rule does not favour but the rule read off the present share does, so S3's right side fails there). With `θ ≤ 3` the lock is never left and the line ends at step 16.
+
+**Course 3. The outcome turns on a level.** The same way and `θ = 7`, from fourteen.
+
+| step | 0 | 1 | 2 | 3 | 4 | 5 |
+|---|---|---|---|---|---|---|
+| units | 6 H, L | 6 H, L, F | 6 H, L, 2 F | L, 3 F | L, 4 F | L, 4 F |
+| level | 14 | 14 | 12 | 6 | 4 | 0 |
+| rule | true | true | true | true | false | false |
+
+The need of `H` is first unmet one step later (`n = 2`), when nine take instead of eight. The rule is turned at step 4, where five units take five from a level of four, below their point of no return ten. The line ends at step 5. From twenty-four it ends at step 10 with the rule `true` throughout: the first unmet need comes at step 9, where sixteen take from a level of two. So here the lower start goes on and the higher ones end, as in `HigherStartEnds`: the sooner the fall reaches a need, the less is being taken when it does.
+
+**The brute-force test of S3.** Giving `min z (hi - z)`, share the number of units, thresholds as readings, every start level from nothing to `hi`, both rules at the start, a repeated configuration counted as never ending.
+
+| Family | Starts | Never end | Of those, from a `Locked` start | Disagreements with S3 |
+|---|---|---|---|---|
+| Units of a need and a use; under the favouring rule each takes one more; 1 to 3 units; `hi` 6, 8, 12, 13, 16 | 4,892,364 | 232,119 | 31,089 (all with `k ≥ n + 2`) | 0 |
+| Each unit leaves one, two or three copies under three rules, two thresholds; 1 to 4 units; `hi` 6, 9, 12, 16 | 502,215 | 24,767 | 0 | 0 |
+| `L`, `F`, `H` as above with several needs (the variant with `G`); 1 to 6 units; `hi` 8, 12, 16, 24 | 3,791,256 | 742,132 | 186,764, of which 27,849 by the turn with an `L` still present | 0 |
+
+This is a test on one stock shape and one kind of share and reading. It is not a proof, and it says nothing of a share that is a ratio.
+
+## Is the join worth making?
+
+Partly, and in this order.
+
+1. **G** first. It is small, it removes an argument made twice (`need_unmet` and `ends_with_net_rising`), and it puts marks that depend on the way under the same lemma as marks on levels. It can fail only by being awkward to state.
+2. **The one-need instance** as a worked case, so that a lock on units stands in the Lean at no cost and the plan's sentence on `count_rises` can be said more exactly.
+3. **S3 in scratch, by the tagging**, to learn whether it is true. It is the only statement here in which the stock, the lock and the units' needs each do work, and it is the first I know of in this material where the running down reaches the rule with nothing handed in to read it. Before it is tried, what counts as nothing having changed should be written down; my list is section 6.
+4. **Not S1 alone.**
+
+A different join that the direction asks for more is a way whose units also add to what they rest on, placed beside this one. Nothing here helps with it, and by the direction page a try on 17 November found that what a unit added came from nowhere. I do not propose it; I note that this proposal leaves it where it was.
+
+## Findings
+
+- **LESSER.** In a world of one need a lock on units is an instance of `locked_ends_rising` (on paper). The account of `LineOnAStock` ("a lock on these units [is] not here"), the plan's item 3 and the direction's "no model above has all three together" are right about what is stated; none says the instance exists. Searched: the files of the package that name `LineOnAStock.` (two: `LineOnAStockCases`, `WayOfUnits`) and those that name `Locked` (eleven) have no file in common. That search misses a lock on units written without either name, and anything outside the package.
+- **LESSER.** The brief for this read lists three premises of the lock's law. `locked_ends_rising` itself asks `more`, not that the use is the share times an amount; that is `count_rises`, which also asks that every favouring rule raises the count strictly (`rise`). The plan's item 5 says this correctly.
+- **LESSER.** S1, the direct "lock on units" law, is `need_unmet` on tagged units with `locked_alone`: a composition. Landed alone it would be a re-saying.
+- **LESSER.** G would make `need_unmet` and `ends_with_net_rising` cases of one lemma and `course_asItWas` and `agrees_until_marked` one induction (on paper).
+- **LESSER.** S3 is a candidate exact law with `way_ends` and `unending_iff_holds` as its one-rule cases; brute force found no disagreement in about 9.2 million small starts; not proved, and its left-to-right half is new work.
+- **LESSER.** From favoured to drawing more is still given, now as a premise on offspring under a favouring rule. `ShareRises` is the kept case that shows it is needed.
+- **LESSER.** Where every unit multiplies under the favouring rule, no locked start went on in the worlds tried: the turn came in time only under slow growth.
+- **No MUST found** in the parts of the Lean, the plan, the direction page and chapter 2 that were read. The chapters and the Lean beyond those parts were not read, so this says nothing of them.

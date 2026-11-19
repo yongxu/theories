@@ -1,0 +1,195 @@
+*AI-written (Claude Fable), 19 November 2026, by one reader set to break S3 of `reader-independent.md` by search. Read whole: `AGENTS.md` ("What we are doing" and the seven rules), `reader-independent.md`, `lock_on_units.py`. Read in the Lean with their proofs: the definitions and laws listed under "What was read". Not read: the plan, `FROZEN-LOCK-ON-UNITS.md`, `AFTER-PROGRAMS.md`, the other readers' reports and the other `break-*.md` files. Nothing was built: no lake, no checker, no test of the package. One Python file was written, `break_s3.py`, beside this report.*
+
+# S3 by search, in worlds its proposer did not run
+
+## Verdict
+
+**NO DISAGREEMENT FOUND** with S3 as it is stated in section 2 of the proposal. In 45,272,833 starts of 101,064 instances that meet every premise of S3 (each premise checked by the program), 5,035,783 courses never end, and in every one of the 45,272,833 the right side holds exactly where the course never ends. The worlds are seven families the proposer did not run: shares that are proportions, counts of one kind among two, three or four, a count read downward and a pair in a partial order; six shapes of giving besides the tent; three rules in a chain and two rules of one rank with a reading that depends on the rule in force; kinds that leave units of another kind under a rule that does not favour; starts under every rule.
+
+A search over small numbers shows where a statement fails. It does not show that S3 holds.
+
+Two things the proposal says do not survive, and neither is the formal statement:
+
+- its sentence "In words" under S3 says more than S3 does, and is false in 7,923 courses of this search (MUST 1);
+- its count of 9.2 million starts for S3 includes 3.79 million run against a different statement (MUST 2).
+
+One thing about reach: a never-ending course from a `Locked` start whose needs are all met at the start, with `raises`, did not occur in any of the six families first run (none among their 4,646,684 `Locked` starts with `raises`; how many of those meet every need at the start was not counted). It occurs in a seventh family made to look for it: 162 courses, 160 of them under a constant top-up, none under the tent.
+
+## What was read
+
+- **Whole, with proofs.** `LineOnAStock.lean`: lines 129 to 202 (`after`, `taken`, `left`, `Goes`, `step`, `net`, `course`, `allKids`, `generation`, `lineTake`, `lineCount`, `Holds`, `Regime`, `Needing`), 690 to 730 (`step_zero`, `step_overdrawn`, `step_lowers`), 786 to 822 (`Below`, `NoneMet`, `below_after`, `below_keeps`, `Ends`), 915 to 947 (`way_ends`, `kids_of_grows`), 1120 to 1292 (`taken_allKids`, `taken_generation`, `course_generation`, `within_along`, `reaches_from`, `reaches_holds`, `unending_iff_holds`, `taken_below`). `RuleCapture.lean`: 120 to 217 (`reverse`, `Raises`, `ReadsShare`, `ReadsShare.reverse`, `Locked`, `turn_locked`, `locked_stays`, `locked_rises`, `locked_not_below`), 464 to 500 (`CarrierCounts`, its `order`, `favours`, `disfavours`, `select`), 640 to 676 (`proportional_locks`, `proportional_locks_down`). `RegimeMargin.lean`: 245 to 268 (`step`, `FromNothing`, `Short`, `Root`, `Meets`, `Keeps`, `Gated`), 725 to 762 (`holds`, `ends_iff_below`). `GuardedStep.lean`: `stepWhile` and `stepWhile_unending_iff`. `Pace.lean`: `turn`, `step`. `TurningInTime.lean`: `pair`, `asItWas`, and `held_above` to the middle of its proof.
+- **At the statement only.** The declaration lines of `LineOnAStock.lean` up to line 1491 and of `RegimeMargin.lean` from 249 to 808. `ends_all`, on which `way_ends` rests, was not opened.
+- **Not at all.** The rest of `TurningInTime.lean` (`rising_takes_all`, `locked_alone`, `locked_ends_rising`, `count_rises`), `WayOfUnits.lean`, the plan, the frozen statement and its programs. I searched the other three readers' reports and the two writer's files for the string "S3" and found none; I did not read them.
+
+## S3 as I coded it
+
+The step is `lock_on_units.py`'s `Model.step` for any number of kinds and rules. A way is a tuple of counts, one per kind; every predicate used (`Goes`, `Holds`, `taken`, and my shares) is blind to the order of a list. Units whose need the level meets leave their kids under the rule in force; the rule is set again from the share of the way present, before the step, at every step; every unit present takes; the level steps by `z + giving z` with `z = max 0 (x - taken)`.
+
+| Lean notion | How it is coded |
+|---|---|
+| `Goes need (w, x)` | some unit present has need at most the level |
+| never ends | by `stepWhile_unending_iff`, `Goes` at every step of the orbit. With every step reading, the step is a function of (way, rule, level), so a repeated (way, rule, level) with `Goes` at every step up to it is a never-ending course, and a step without `Goes` is an end |
+| `Regime giving use y hi w`, `T = taken use w` | `Short giving T (y T)`: giving below `T` at every `z < y T`. `Meets giving T (y T) hi`: `T ≤ giving z` at every `z ≥ y T` with `z + T ≤ hi`. `Keeps giving T hi`: `step giving T x ≤ hi` for `x ≤ hi`. `y` is a given function, so I asked which `y T` can exist. Either some `z ≤ hi - T` has `giving z ≥ T`, and from the least such `z` (call it `y*`) to `hi - T` giving stays at or above `T`: then `y T = y*` is forced. Or no `z ≤ hi - T` has `giving z ≥ T`: then any admissible `y T` is above `hi - T`. Otherwise no `y T` exists and `Regime` fails at that take. The program checks this reduction against a brute force over `y` for every giving used |
+| `Holds need use y (w, x)` | `w` not empty, every need of `w` met at `x`, and `T + y T ≤ x`: coded as `T + y* ≤ x` in the first case and false in the second (levels stay within `hi`, which the walk keeps by `Keeps`) |
+| `along` | `Regime` at the way of step `k`, for every `k` with `Goes` at every step `j ≤ k` |
+| `Locked M favours h (share w, g)` | `favours g` and `M.le g (h (share w) g)` |
+| the reversed lock | not `favours g`, and `M.le (h (share w) g) g` |
+| the right side | there is `k`, `Goes` at every step before `k`, with `Holds` and the reversed lock at step `k` |
+| `M` | a rank on the rules: `M.le g g'` iff `rank g ≤ rank g'`. Two rules of one rank are each not above the other and are still two rules with their own kids, which is how a reading can depend on the rule in force and still meet `ReadsShare` |
+
+`ReadsShare` forces this last point. Taking `x = y` in `∀ x y g g', P.le x y → M.le (h x g) (h y g')` gives `M.le (h x g) (h x g')` both ways. So where `M` is antisymmetric a reading that meets `ReadsShare` cannot depend on the rule in force at all; it can only where two rules are each not above the other.
+
+Premises checked on each instance, none assumed from how the instance was made: `needs` (every kind needs something), `down` under every rule, `grows` under each favouring rule, `even` and `some` under each rule that does not favour, `nothing`, `keeps` (`Keeps giving 0 hi`), `upper`, `monotone` (`ReadsShare`, on every pair of shares of grid ways and every pair of rules), `lowers` (on every grid way). Per start: `high` (levels run from 0 to `hi`) and `along`. `every` is built in. The grid is every way that takes at most `hi`; no other way is on a course at a step followed by a step with `Goes`. So `monotone`, `lowers` and `raises` are checked on a finite grid, not for all ways: an instance could pass here and fail on a larger way that no course reaches.
+
+`raises` is not a premise of the equivalence. S3's last line asks it for `k ≥ n + 2`, and the program checks it on the grid too.
+
+## The program and the ranges
+
+`break_s3.py` (770 lines, sha256 `f2463852…77b893`), run as `python3 -B break_s3.py FAMILY N 19`. It writes no file. Each run took under 100 seconds. Its self-test reproduces the proposal's three worked courses, checks the regime reduction against brute force, and checks the memoised solver against a plain walk on 20,064 starts.
+
+Family H was added after families A to G had run; the code of A to G was not changed, and family F run again on the final file gives the same output.
+
+| Family | What varies | Ranges |
+|---|---|---|
+| A | shares, two kinds, two rules, tent | needs 1, 3, 6; uses 1, 2; kids of up to three units, of either kind, under either rule; `hi` 8, 12; shares: number of F, number of O, proportion of F, proportion of O (the empty way has share 0), how few O, how few F, all units, the pair (number of F, how few O) in the product order; 24 share-and-threshold pairs; starts 0 to 3 of each kind, both rules, every level. 40,000 of 111,744 instances by seeded shuffle |
+| B | givings | as A with `hi` 9, 12 and six shares; givings: a top-up of 1, 2, 4 capped at `hi`; nothing below a floor of 2 or 4 and the tent above; nothing below 3 and a top-up of 2 above; a hump `min (z (hi - z) / d) (hi - z)` with `d` 4, 6, `hi`; linear `min (a z / b) (hi - z)` at 1/2, 2, 3; a two-humped giving that breaks `Regime` at some takes. 40,000 of 363,168 |
+| C | readings, three rules | two kinds; chains with two favouring or with one favouring, two thresholds, including readings that skip a rule; rules of ranks (0, 0, 1) and (0, 1, 1) with the reading inside the shared rank set by the rule in force (stay, toggle) or by a parity of the share; five shares; five givings; `hi` 9, 12. 20,000 sampled |
+| D | three kinds | needs 1, 2, 4, 6; uses 1, 2; share a count, a proportion, or a count read downward of one or two kinds among three; two rules or three in a chain; six givings; `hi` 9, 12; starts 0 to 2 of each kind. 15,000 sampled |
+| E | one premise missing | two kinds, wide lists (a need of nothing, a use of nothing, any kids, a giving from nothing, a giving that doubles, favouring not kept upward, a reading against the order); an instance is run when exactly one premise fails. 300 instances for each of ten premises |
+| F | a kind that takes nothing | two kinds, uses (0, 1), (1, 0), (0, 2); needs 1, 3; `hi` 8. All 270 |
+| G | four kinds, slow growth | uses a permutation of 1 to 4, or from 1 to 3; needs from 1, 2, 4, 7, 9; kids of up to two units; five givings; `hi` 10, 14; share a count or a proportion of some of the kinds; two rules, or three with two favouring; starts of up to four units, at most two of a kind. 8,000 sampled |
+| H | a high-need kind that takes much, beside a slow chain | H with an even need from 4 to `hi` and use 1, 2, 3, 5, 7; L1, L2, L3 with need 1 and uses 1, 2, 3, each leaving the next under the favouring rule; H leaves H and L1, or two H, or H and L2, or H and L3; share number of H, all units, proportion of H; top-up 3, 4, 6, tent, linear, hump; `hi` 12, 16; starts 0 to 3 H and 0 to 2 L1. All 20,160 |
+
+## What the search found
+
+### With every premise met
+
+| Family | Instances | Starts compared | Never end | Right side holds | Disagreements |
+|---|---|---|---|---|---|
+| A shares | 25,976 | 8,581,080 | 795,884 | 795,884 | 0 |
+| B givings | 26,803 | 8,825,783 | 751,347 | 751,347 | 0 |
+| C readings | 14,091 | 7,288,380 | 702,275 | 702,275 | 0 |
+| D three kinds | 8,699 | 6,166,602 | 724,931 | 724,931 | 0 |
+| F takes nothing | 165 | 21,620 | 3,419 | 3,419 | 0 |
+| G slow growth | 5,170 | 7,588,728 | 511,234 | 511,234 | 0 |
+| H high need | 20,160 | 6,800,640 | 1,546,693 | 1,546,693 | 0 |
+| All | 101,064 | 45,272,833 | 5,035,783 | 5,035,783 | 0 |
+
+In family F a further 2,140 starts neither ended nor repeated in 300 steps (a way of units that take nothing can grow without the take growing). They are not compared. In all of them the right side held at a step seen.
+
+By the task's five points:
+
+- **(a) Shares.** No disagreement for a proportion (A: 8,426 instances, 2,780,940 starts), for a count of one kind among two (A), among three (D) and among four (G, H), for a count read downward (A: 5,285 instances), or for a pair in the product order (A: 3,169 instances).
+- **(b) Givings.** No disagreement under any of the six shapes. With all premises met in B: top-up 6,201 instances, floor and tent 4,051, floor and top-up 2,070, hump 6,327, linear 6,175, the two-humped giving 1,979 (on the starts where `along` still holds). `along` was tested on each course from `Regime`'s definition. It does work: on the 418,327 starts of otherwise sound instances where `along` fails, 11,608 end although the right side holds.
+- **(c) Readings.** No disagreement for a chain of three with two favouring (3,833 instances, 1,986,345 starts), a chain with one favouring and two not (3,253 instances), or a reading that depends on the rule in force (stay 1,749 instances, toggle 3,511; parity of the share 1,745).
+- **(d) Kinds leaving another kind under a rule that does not favour, `lowers` met.** No disagreement: A 10,210 such instances (3,368,700 starts, 347,478 never end), B 11,074, C 5,268, D 6,218, G 3,022. The share does move under a rule that does not favour, at a step with every need met, in 539,052 of the never-ending courses (A 137,470, B 124,886, C 85,249, D 153,871, G 37,576). Without `lowers`: below.
+- **(e) Starts under a rule that does not favour.** Half the starts. 3,638,446 of the 5,035,783 never-ending courses start there. In 1,703,972 never-ending courses the rule favours at some step and from a later step never again.
+
+### Without `lowers`
+
+Instances that meet every premise but `lowers` were run in every family: 20,885,343 starts. 866,318 of them end although the right side holds (A 265,160, B 208,188, C 124,166, D 205,246, E 6,060, F 2,667, G 54,831). None never ends with the right side failing. So in these worlds `lowers` does work only from right to left: it is what keeps a turned rule turned.
+
+The smallest course, shrunk by hand and run by the program. Two kinds F and O, each needing one and taking one. Under the rule that does not favour, F leaves F and O leaves an F. Under the favouring rule each leaves two of itself. The share is the number of F, read as favouring from one up. The tent with `hi = 2`. One O at level two, under the rule that does not favour:
+
+```
+step 0  way (0 F, 1 O)  rule 0-  level 2  share 0  read 0  takes 1  [Holds, reversed lock]
+step 1  way (1 F, 0 O)  rule 0-  level 2  share 1  read 1  takes 1  [Holds]
+step 2  way (1 F, 0 O)  rule 1+  level 2  share 1  read 1  takes 1  [Holds, Locked]
+step 3  way (2 F, 0 O)  rule 1+  level 2  share 2  read 1  takes 2  [Locked]
+step 4  way (4 F, 0 O)  rule 1+  level 0  share 4  read 1  takes 4  [no need met]   -> ends
+```
+
+The right side holds at step 0. The O leaves an F, the share rises under a rule that does not favour, the reading turns the rule to favouring, and the way grows to its end. Every premise but `lowers` is met (the program says so). The premise that removes it is `lowers`: with O leaving an O instead, the same start never ends and the right side holds.
+
+On paper: from left to right `lowers` is not needed where the rules are finitely many. After the last favouring rule, the reversed lock can fail at a step only if the rule read is above the rule in force, and the rank cannot rise forever; `Holds`, once reached under a constant take, is kept. The proposal's sketch uses `lowers` in step 3 of that half. For any type of rules, as the Lean would have it, `lowers` or a well-founded order would be needed there. This is an argument, not a proof, and the search agrees with it (no never-ending course without the right side in the 20.9 million starts above).
+
+### Each other premise taken away (family E, 300 instances each)
+
+| Premise missing | Starts (`along` holds) | Never end | Never ends, right side fails | Ends, right side holds |
+|---|---|---|---|---|
+| `needs` | 20,630 (84,145 more undecided) | 10,571 | 3,637 | 0 |
+| `down` | 103,395 | 7,431 | 24 | 2 |
+| `grows` | 106,039 | 11,314 | 1,287 | 0 |
+| `even` | 99,450 | 4,659 | 13 | 3,675 |
+| `some` | 100,125 | 14,804 | 0 | 630 |
+| `nothing` | 88,989 | 48,742 | 44,288 | 0 |
+| `keeps` | 65,380 (9,353 more undecided) | 220 | 0 | 0 |
+| `upper` | 134,640 | 9,490 | 0 | 4,640 |
+| `monotone` | 89,340 | 4,541 | 0 | 1,356 |
+| `lowers` | 105,555 | 2,457 | 0 | 6,060 |
+| `along` (family B) | 418,327 | 95,314 | 0 | 11,608 |
+
+Every premise but `keeps` has a disagreement when it alone is missing; the program prints the smallest course for each. `keeps` (`Keeps giving 0 hi`) showed none. `along` already asks `Keeps` at every take the course meets, and `unending_iff_holds` asks no `keeps` at nothing either. `some` can fail alone only for a kind that takes nothing, since `even` gives a kind that takes something kids that take as much. `every` and `high` were not taken away.
+
+### Courses from `Locked` starts
+
+| Family | `Locked` starts | Never end | Of those, `raises` holds | Of those, every need met at the start | With the rule held, ends |
+|---|---|---|---|---|---|
+| A | 2,107,211 | 6,798 | 51 | 0 | 6,798 |
+| B | 2,172,366 | 7,123 | 133 | 0 | 7,123 |
+| C | 1,914,642 | 5,507 | 71 | 0 | 5,507 |
+| D | 1,437,457 | 5,178 | 207 | 0 | 5,178 |
+| F | 5,319 | 109 | 0 | 0 | 109 |
+| G | 1,498,471 | 3,907 | 347 | 0 | 3,907 |
+| H | 2,208,000 | 135,264 | 95,232 | 162 | 135,264 |
+
+So S3 says something of `Locked` starts in every family: there are never-ending courses from them. But they are of three sorts.
+
+1. **`raises` fails** (67,845 of the 163,886): the favouring rule itself lowers the share, as where the share is how few F there are and the favouring rule multiplies F. The lock is then left with every need met and nothing lost. In 27,909 of these a rule that does not favour comes before step `n + 2`, or no need is ever unmet.
+2. **`raises` holds and a need is unmet at the start** (95,879): a unit that the start level already fails leaves nothing at step 0. The lock is left through a loss, but the loss is given in the start, not brought about by the fall.
+3. **`raises` holds and every need is met at the start** (162, all in H): the case S1 speaks of. The lock holds, the take rises, the level falls below the need of H, the H leave nothing, the share falls, and two steps later the rule is turned. 160 of the 162 are under a top-up, 2 under the hump, none under the tent or the linear giving. They occur with H taking 2, 3, 5 or 7.
+
+The last column is no evidence of anything: with S3's premises, a way under a held favouring rule ends by `way_ends`, so every never-ending course from a favouring start is one that the rule's change lets go on. The program confirms the count in all 163,886, and in all 1,397,337 never-ending courses from a favouring start.
+
+`k ≥ n + 2` from a `Locked` start with `raises` (S3's last line): no failure in the 96,041 never-ending courses where it applies.
+
+The smallest never-ending course from a `Locked` start with `raises` and every need met at the start. H needs 8 and takes 5; L1, L2, L3 need 1 and take 1, 2, 3. Under the favouring rule H leaves H and L1, L1 leaves L2, L2 leaves L3, L3 leaves two L3. Under the other rule each leaves itself. The share is the number of H, favouring from one up. A top-up of 4 capped at 12. One H at level 8:
+
+```
+step 0  way (1 H)        rule 1+  level  8  share 1  read 1  takes 5  [Locked]
+step 1  way (1 H, 1 L1)  rule 1+  level  7  share 1  read 1  takes 6  [a need unmet, Locked]
+step 2  way (1 L2)       rule 1+  level  5  share 0  read 0  takes 2  [Holds]
+step 3  way (1 L3)       rule 0-  level  7  share 0  read 0  takes 3  [Holds, reversed lock]
+step 4  way (1 L3)       rule 0-  level  8  ...  level 12 from step 8                -> never ends
+```
+
+Here `n = 1` and `k = 3`. With the rule held favouring the same start ends at step 6.
+
+### The sentence "In words"
+
+S3's right side asks `Holds` and the reversed lock at *some* step. The proposal's gloss says more: "goes on without end only if the rule is turned and stays turned, and the level left when it is turned is at or above the point of no return of what is then taken."
+
+In 7,923 never-ending courses (B 225, C 417, D 270, G 1,109, H 5,902) the rule favours at some step, and at the first step from which no rule favours again the level is below the point of no return of what is then taken, or that take has no such point within `hi`. The level goes on falling under the turned rule until a need is unmet, units are lost, and what is left holds. One of them (H needs 6 and takes 3, a top-up of 3 capped at 12, share all units, favouring from four up):
+
+```
+step 0  way (1 H)        rule 1+  level 6  share 1  read 0  takes 3  [Holds]
+step 1  way (1 H, 1 L1)  rule 0-  level 6  share 2  read 0  takes 4  [reversed lock]
+step 2  way (1 H, 1 L1)  rule 0-  level 5  share 2  read 0  takes 4  [a need unmet, reversed lock]
+step 3  way (1 L1)       rule 0-  level 4  share 1  read 0  takes 1  [Holds, reversed lock]
+...                                                                                   -> never ends
+```
+
+The rule is turned at step 1 and stays turned. What is then taken is 4, the top-up gives 3, and no level holds under a take of 4. S3 itself is right here: `k = 3`.
+
+## Findings
+
+- **MUST 1. The gloss under S3 says more than S3, and is false as worded.** "The level left when it is turned is at or above the point of no return of what is then taken" fails in 7,923 never-ending courses of this search (course above). What S3 states, and what the search bears out, is that at some step from which the rule stays turned the configuration holds; between the turn and that step the fall can go on and remove units. A telling of S3 should say that.
+- **MUST 2. The proposal's count for S3 is too large.** "The answer in short" (item 3) and its findings say S3 was tested on about 9.2 million starts. Its third family (3,791,256 starts) fails S3's premise `grows` as stated: F and H leave themselves under the favouring rule (my program checks this), and it was run against a variant whose right side "also allows a holding way with no L left", which is nowhere written as a statement. Section 7 says so; the summary lines do not. S3 as stated was run by its proposer on 5,394,579 starts, with never-ending `Locked` starts only in the first family.
+- **LESSER. No disagreement with S3 as stated** in 45,272,833 starts of 101,064 instances meeting every premise, in worlds (a) to (e). Not a proof.
+- **LESSER. `lowers` is needed, and only from right to left.** Without it 866,318 starts end although the right side holds; the smallest course has one unit and `hi = 2`. No course without it never ends against the right side. The proposal's sketch cites `lowers` for the left-to-right half, where on paper finitely many rules would do.
+- **LESSER. Every other premise does work but `keeps`.** `needs`, `down`, `grows`, `even`, `some`, `nothing`, `upper`, `monotone` and `along` each have a disagreement when missing alone. `keeps` showed none in 65,380 starts; `along` asks `Keeps` at each take met.
+- **LESSER. The gloss's second sentence needs `raises`.** "For a locked start the turn can come only through a need the fallen level no longer meets" fails in 27,909 never-ending courses from `Locked` starts where `raises` fails. S3's formal last line does ask `raises`, and with it `k ≥ n + 2` held in all 96,041 courses where it applies.
+- **LESSER. S3's own case is rare here.** A never-ending course from a `Locked` start with `raises` and every need met at the start occurred 162 times, only in the family made to find it, and never under the tent. In the other six families all 809 never-ending `Locked` starts with `raises` had a need unmet at the start. This agrees with the proposal's "fact against the proposal's reach" and sharpens it: of its 31,089 never-ending `Locked` starts, the proposal does not say how many met every need at the start.
+- **LESSER. A reading that meets `ReadsShare` cannot depend on the rule in force where `M` is antisymmetric.** It can only pick among rules each not above the other. The proposal's model takes `h : A → R → R` from `RuleCapture`; the second argument does nothing in any instance over a partial order.
+- **LESSER. "With the rule held favouring the course ends" is `way_ends`**, so that count is the count of never-ending courses from favouring starts and tells nothing more.
+
+## What this does not show
+
+- That S3 holds. Its left-to-right half is unproved.
+- Anything with `every` dropped (a reading at some steps only), with rules in a partial order that is not a rank, with a share that depends on the order of the list, or with kinds without bound (the proposer's first family, where each unit takes one more).
+- Ways larger than the starts run (three of a kind in A, B, C, H; two in D, F, G), `hi` above 16, more than four kinds, more than three rules.
+- `monotone`, `lowers` and `raises` beyond the grid of ways that take at most `hi`.
+- The 2,140 starts of family F that neither ended nor repeated.
+- Families C, D, G are samples by a fixed seed (19), and A and B are 40,000 of their instances by the same seed; E is 300 instances for each premise.
+
+To run again: `python3 -B break_s3.py selftest`, then `A 40000 19`, `B 40000 19`, `C 20000 19`, `D 15000 19`, `E 3000 19`, `F 100000 19`, `G 8000 19`, `H 30000 19` in place of `selftest`. Each prints its counts, a table by kind of instance, and the smallest course of each kind it kept. The printed output was not kept as a file.

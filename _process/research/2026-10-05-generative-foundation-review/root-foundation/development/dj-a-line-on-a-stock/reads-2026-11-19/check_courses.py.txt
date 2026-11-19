@@ -1,0 +1,19 @@
+#!/usr/bin/env python3
+"""The writer's own re-run of two things a reader found (AI-written scratch, 19 November 2026).
+Uses the model in lock_on_units.py. Run: python3 -B check_courses.py"""
+import sys; sys.argv = ['x']
+import lock_on_units as L
+
+kids = {1: ((1, 1), (0, 2)), 0: ((1, 0), (0, 1))}   # favouring: F leaves F and O, O leaves two O; other: each leaves itself
+
+class Held(L.Model):
+    def read(self, s): return 1                      # the rule held favouring whatever the share
+
+for name, M in (('rule set again', L.Model), ('rule held favouring', Held)):
+    v, c = M(32, (27, 1), (14, 1), kids, 1).run((1, 0, 1, 28))
+    print('bound 32, needs (27, 1), uses (14, 1), one F at level 28;', name + ':', v, c[:8])
+
+m = L.Model(8, (1, 1), (1, 1), kids, 2)              # the refuting reader's pair: count share, threshold 2
+for st in ((2, 0, 1, 6), (1, 1, 1, 6)):
+    v, c = m.run(st)
+    print('bound 8, needs (1, 1), uses (1, 1);', st, 'locked' if m.locked(st) else 'not locked', '->', v, c[:6])

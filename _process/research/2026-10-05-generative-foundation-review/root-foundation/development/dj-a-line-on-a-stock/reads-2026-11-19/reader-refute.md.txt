@@ -1,0 +1,159 @@
+*AI-written (Claude Fable), by one reader set to refute, 19 November 2026, 22:40 WIB by the clock. Read whole: `FROZEN-LOCK-ON-UNITS.md`, `AFTER-PROGRAMS.md` (it appeared in the folder at 22:23, while I was reading), the four programs and the five result files. In the Lean, read whole with proofs: `LineOnAStock`'s head account, definitions, section `All` (`way_ends`, `need_unmet`, `falls_to_unmet`, `one_need_ends`), `KidsNeedMore`, `KidHigherNeed`, `ShareRises`; `RuleCapture` lines 1 to 217 (`Raises`, `ReadsShare`, `Locked`, `turn_locked`, `locked_stays`); `Pace.turn`; `TurningInTime` lines 327 to 372, 600 to 740 (`rising_takes_all` and its neighbours) and 1195 to 1530 (the lock's laws through `count_rises` and `regroup_step`); `WayOfUnits.two_units_iff`. At the statement only: `after_of_met`, `ways_alike`, `share_not_lower_counts`, `unending_iff_above`, `turns_in_time_iff`, `Three.rise_count_ends`. Everything else in those modules by name only. The plan's items 1 to 9; chapter 2 section 11 whole, sections 9 and 10 not at all. Not read: the other readers' reports in the folder, the direction page. Built nothing; ran only my own `refute.py` (`python3 -B`, which writes no file).*
+
+# The lock on units, read by the reader set to refute
+
+## Findings in short
+
+**MUST** (the writer says something false, or more than the Lean or the search shows)
+
+1. **The six pairs shown against K2, and every kept "ends" example, are in a model where `Raises` as the frozen file states it is false.** In all of them F leaves two O and no F under the favouring rule (`kids 1 = [[0, 2], [1, 1]]`). From a way of one F alone the number of F goes from one to nothing. The programs ask `Raises` only at the ways a course visits (`raises_holds_here`); `premises()` computes `raises` for every way and never uses it. `AFTER-PROGRAMS.md` does not say this. Of the 1,824,162 starts on which L-a was checked, 237,858 meet `Raises` only along the course; of L-b's 948,072, 66,792 (my recount reproduces both totals exactly).
+2. **`AFTER-PROGRAMS.md`, L-d: "differ in 3,648 instances … and agree in 804" is wrong.** `results-4.json` has, where O's need is above its point of no return: differ 3,648; agree 6,612,456 (6,611,652 end, 804 never end).
+3. **Frozen file, "what would come out as a conclusion that is now a premise": only the first of its three comes out.** That the level makes no difference while every need is met does (it is `after_of_met` and `course_asItWas`, already in `LineOnAStock`). "That the use rises with the share" does not: in L-b the use rises because each unit's offspring are asked to take more (`grows`), whatever the share is. "That the offspring take more" stays a premise, asked on fewer rules.
+4. **Frozen file, "what would become a case": `locked_ends_rising` with `count_rises` does not become a case of L-b.** It is the other way round: L-b with one kind is a case of them. `count_rises` takes any step of the share that raises it strictly; `Three.rise_count_ends` uses `a + 1`, which no one kind of unit leaving so many offspring gives. `need_unmet` does become L-b's case of one rule.
+
+**LESSER**
+
+5. K2's pair differs in the reading's threshold, which is another law, not another start. Fair pairs exist in one model (below), so K2 is answered, but not by the pair shown.
+6. "The lock left and the rest goes on" is not only from a start that overdraws: I found 608 from starts that hold in a smaller range. But in all of those, and in every example the result files keep, O leaves itself under both rules, so the rule's change makes no difference to what remains.
+7. L-b is `need_unmet` after `locked_stays`. No premise is new. (K5: yes, a dictionary, with one real change of scope.)
+8. `results-proportion.json` says "K2 pairs found: 0". K2 is not searched under `--proportion` (`and not PROPORTION`). Pairs exist there too.
+9. L-a and L-b were checked on odd needs only; the second pass (all needs) tabulates outcomes and does not check them.
+10. The side statement "L-b with only F's offspring taking more: 0 failures" holds only because every start has an F. From a locked start with no F it fails.
+11. "The never-ends, still-locked courses have offspring born each step into a need never met" is said of 4,072 courses and shown on one.
+12. The frozen file cites `ways_alike` for the level making no difference while needs are met; the laws that say it are `after_of_met`, `course_asItWas`, `way_while_met`.
+13. `results-2.json`'s L-d check (16,320, all "ends") had no never-ending instance, so it tested one side only. "instances: 10,707,552" counts starts tried, not starts checked. Dead code: `or True` in the L-a check; the first clause of `rhs` in `lock_on_units_4.py` line 29.
+
+## (1) K1: does the program check L-a and L-b?
+
+It checks them, and in one respect something stronger: `Raises` is asked only at the ways the course visits, which is a weaker premise than the frozen file's. What it leaves out:
+
+- Two kinds, two rules, a threshold reading that ignores the rule in force. With two rules in a line, "favouring kept by a rule not lower" and "whatever rules the two readings meet" are never exercised.
+- Every start has the favouring rule in force and at least one F.
+- Needs are odd numbers (`range(1, c + 1, 2)`); bounds 8 and 12; uses 1 and 2; at most two offspring of each kind.
+- L-a's second clause (the way is the plain line of descent) is not checked; it is true by how `step` is written.
+
+**What I ran to break them** (`refute.py k1`, 150 seconds, random, seed 20261119; the count depends on the time budget). Two or three kinds; any cross-kind offspring; two to four rules, some of equal rank so that the rule read depends on the rule in force; favouring from rank one or rank two; seven shares (a count, a proportion, a weighted count, a difference, a capped count, a take, a pair ordered by parts, which is not a total order); uses of nothing; six givings (tent, refill to the bound, a constant, nothing, a logistic, a half); starts with a kind absent, the first kind included; the rule set again from the share before the step and, separately, of the new way, as the frozen file worded it.
+
+| | checked | failures |
+|---|---|---|
+| L-a | 1,987,027 | 0 |
+| L-b | 1,213,477 | 0 |
+| L-b with offspring needing no more: level below a need the start met | 105,560 | 0 |
+
+Of the L-b checks: three kinds 828,426; cross-kind offspring 1,190,207; a unit that takes nothing 455,982; the first kind absent at the start 230,595; more than one rule in force along the course 373,683; rule read of the new way 607,201; each giving about 200,000; shares from 25,010 (the pair) to 383,617 (weighted). **No countermodel was found.**
+
+That is what I expected after reading the Lean. L-a is `RuleCapture.turn_locked` at the step "all the kids under the rule in force"; its proof uses `Raises` only at the configuration it steps from. L-b's argument is `need_unmet`'s. So a search cannot break them inside their premises; it can only find where the wording and the premises part. It found none. A search is still a search: what it could miss is anything outside these shapes (rules not ranked in a line, shares that are not functions of the counts, levels above 12).
+
+## (2) K2: does the lock do work?
+
+**The paper's pair is not fair as shown**, for two reasons. It differs in the reading's threshold (1 against 2), which is a different law. And its model fails `Raises` at some way (finding 1).
+
+**A pair in one model, differing only in the start's share, exists** (`refute.py k2`, `k2p`; bound 8, needs 1, 3, 5, `Raises` asked of every way):
+
+- Count share, threshold 2, needs (1, 1), uses (1, 1). Under the favouring rule F leaves one F and one O, O leaves two O; under the other each leaves itself.
+  - Locked start, two F, level 6: (2, 0, level 6), (2, 2, 8), (2, 6, 8), (2, 14, 0). It ends.
+  - Not locked, one F and one O, level 6, the favouring rule in force: (1, 1, 6), (1, 3, rule not favouring, 8), and the same again. It never ends.
+  - Same number of units, same take, same level; one F is an O.
+- Proportion share, threshold one half, F and O alike in need, use and number of offspring (each leaves two of its kind under the favouring rule).
+  - One F at level 3: (1, 0, 3), (2, 0, 4), (4, 0, 4), (8, 0, 0). It ends.
+  - One O at level 3: (0, 1, 3), (0, 2, rule not favouring, 4), and the same again. It never ends.
+  - The two starts differ in nothing but which kind the share counts.
+
+Counts: with a count share, 52,560 locked starts that end, 16,403 with such a start beside them, 27 where the start beside takes at least as much; with a proportion, 15,504, 3,749 and 671.
+
+**The stronger question: is the ending owed to the lock's premises?** Yes (`refute.py drop`). With every other premise of L-b in place:
+
+- Without `Raises`: F and O each leave two O under the favouring rule. From one F, locked, level 4: (1, 0, 4), (0, 2, 6), (0, 4, rule not favouring, 8), and the same again. No need is ever unmet. 30 such in a small range.
+- Without a monotone reading (favouring only where the share is exactly 1): F leaves two F. From one F: (1, 0, 4), (2, 0, 6), (4, 0, rule not favouring, 8), and the same again. 175 such.
+
+**What this does and does not show.** The lock does work in L-b in exactly one place: it keeps the rule among those under which the units multiply. That the units multiply under a favouring rule and not under the other is how every model here is built (`kids 0` is "each leaves itself"). The lock does not make what is favoured draw more.
+
+## (3) K3: is `Raises` for a share of units derived or assumed?
+
+For the step at which every need is met (all the kids), it follows from something plainly about offspring. By brute force over all two-kind offspring with entries 0 to 3 and ways with entries 0 to 7 (`refute.py k3`), the two conditions agree in all 256 cases each:
+
+- **A count** (the number of F): `Raises` holds at every way exactly where each F leaves at least one F.
+- **A proportion**: exactly where each F leaves only F, at least one, and no fewer than an O leaves O. This is `RuleCapture.CarrierCounts.share_not_lower_counts`' comparison, with offspring of the favoured kind favoured.
+
+Neither is as strong as what the lock concludes, so K3 as worded does not bite. Two limits do:
+
+- **It is only for the step with every need met.** At a level below a favoured unit's need that unit leaves nothing and the count falls: (1 F, 1 O, level 4) with F needing 5 goes to (0, 1). So `Raises` is false of the model's own step, and L-a can say "locked" only up to the first unmet need. This is the same shape as `locked_ends_rising`'s `AloneOutside`, not an improvement on it.
+- **For a proportion, `Raises` says nothing about the draw.** `ShareRises` (read whole): from `([C, O], 12)`, C leaves itself and O nothing; C's part of what is taken goes from 2 of 4 to 2 of 2, the units from two to one, what the way takes from 4 to 2, the level stays 12 and the net never ends. There is no rule or reading in it. It meets the proportion's condition above. So a share of units can rise while the draw falls; `Raises` and "offspring take more" are two separate premises, and in the proportion run L-b rests wholly on the second.
+
+## (4) K4 and the three outcomes
+
+**The writer's reading of `results-2.json` and `results-3.json` is right** in every number I checked, and each example's course recomputes.
+
+**Is "the lock left and the rest goes on" only from a start that overdraws? No.** `refute.py k4` (bounds 12, 16, 20; F's use 1 to 6; O's 1 to 2; seven offspring shapes; one or two F, up to two O; offspring needing no more):
+
+| start | ends, still locked | ends, lock left | never ends, lock left |
+|---|---|---|---|
+| holds (the level would not fall under what the start takes) | 1,152,394 | 393,200 | 608 |
+| overdraws | 918,318 | 276,140 | 1,100 |
+
+One from a start that holds: bound 12, needs (11, 1), uses (6, 1), F leaves one F and one O, O leaves itself. From one F at level 12: (1, 0, 12), (1, 1, 12), (1, 2, 10), (0, 2, 4), then the rule no longer favours and (0, 2, 4) repeats.
+
+**But in these the leaving of the lock does nothing.** In all 608, in 1,040 of the 1,100, and in every example `results-3.json` and `results-4.json` keep, O leaves itself under both rules. I ran each again with a reading that favours at every share, so that the rule never changes: the course is the same and never ends. What happened is that the F ended and the O went on; the rule was set again afterwards and nobody was there for it to matter to.
+
+**Where the rule's change is what lets the rest go on.** For that O must leave different offspring under the two rules. In the first range I found 60, all from overdrawing starts. A second, narrower search over larger bounds (`refute.py turn`: 24, 32, 40) found 40 from starts that hold. One:
+
+- Bound 32, needs (27, 1), uses (14, 1). Under the favouring rule F leaves one F and one O, O leaves two O; under the other each leaves itself. From one F at level 28, which holds (28 less 14 is 14, and 14 is given back).
+- (1, 0, level 28), (1, 1, 28), (1, 3, 26): F's need of 27 is unmet. (0, 6, 18): no F, the share is nothing. (0, 12, rule not favouring, 24), and the same again. It never ends.
+- The same start read so that the rule stays favouring: … (0, 12, 24), (0, 24, 24), (0, 48, 0). It ends.
+
+All 40 end when the rule is kept favouring. So there is a course on which the favoured units' own growth draws the level down from a start that held, their need goes unmet, the share falls, the rule set again stops favouring, and that is why what remains holds.
+
+**The never-ending locked course** (F met, leaving each step an O whose need is never met) is not an artefact of the Python against the Lean. `LineOnAStock.KidsNeedMore` is the same course: A needs 4 and takes 2 and leaves B, A, B; B needs 9; from `([B, A, B], 8)` the step leaves the configuration as it is (`fixed`, by `rfl`). I put those numbers through `lock_on_units.py`'s step with A as F: fixed, locked, every premise but "offspring need no more". It is a feature of the convention both share: every unit present takes, and an unmet unit leaves nothing. The Lean keeps it as the countermodel showing `way_ends` needs `down`; `KidHigherNeed` is its one-step cousin for `need_unmet`.
+
+**One thing that follows, argued and not a Lean statement.** With one favouring rule, every unit's offspring taking more and needing no more: a course on which the rule favours at every step is `LineOnAStock`'s course under that rule's offspring, and `way_ends` ends it. So a line that never ends has left the favouring rule. No search found otherwise (`results-2`, `results-3`, mine).
+
+## (5) K5: is it a dictionary?
+
+L-b's premises, one by one:
+
+| L-b's premise | `need_unmet` | `locked_ends_rising` |
+|---|---|---|
+| a locked start | | `locked` |
+| `Raises` (of the step with every need met) | | `raises` |
+| the reading monotone in the share | | `monotone` |
+| favouring kept by a rule not lower | | `upper` |
+| under a favouring rule each unit's offspring take more | `grows`, asked of one `kids` | in the place of `more` (`count_rises`: `rise`, `count`, `pos`) |
+| every unit that can arise needs something | `needs` | `needs` (one need) |
+| a bound the level cannot pass | `keeps` | `keeps` |
+| the start within it | `high` | `high` |
+| nothing given from nothing | `nothing` | `nothing` |
+| a start that is not empty | `ne` | |
+| every need met at the start | `met` | |
+| (second sentence) offspring need no more | `falls_to_unmet`'s `down` | |
+
+**None is new.** No longer asked: `locked_ends_rising`'s `outside` and `un`, which for units are `after_of_met`, a law `LineOnAStock` already has.
+
+**The proof.** With one favouring rule, as in every run: L-a keeps the rule; the course is then `LineOnAStock`'s under that rule's offspring; `need_unmet` gives the rest word for word. With several favouring rules `need_unmet`'s argument is run again on the way together with the rule (`rising_takes_all` is already stated for any carrier), the lock's closure supplying "the rule favours" at each step. It is `rising_takes_all` with the lock's closure and nothing else.
+
+**What is gained.** One thing: the growth is asked only under favouring rules, and the lock is what keeps the course there. That is the only place the lock enters. What is not gained: any tie between the share and the draw. In L-b every unit's offspring take more, F's and O's alike, so which kind the share counts makes no difference to the rise. The plan's item 5 says "a share is still not a draw; that tie is this premise". After L-b it still is.
+
+## (6) L-d
+
+- **The added premise is the Lean's.** `two_units_iff` carries `needs : 0 < n` and `within : n ≤ H₂ + y₂`; `unending_iff_above` carries `needs : 0 < need` and `within : need ≤ H₂ + y₂`.
+- **Another form needs no added premise.** In each of the 3,648 differences O's need is met at the first level below F's need and unmet one step later (argued from the tent: with the right side true and O's need met one step later, the level under what the O take never falls; and so on every instance I ran). Stated as "the configuration one step later holds" (O present, its need met there, the level at or above its point of no return), which is `unending_iff_holds`' shape, the two sides agreed on all 2,548,800 instances I ran (bounds 12 and 16, F's use 1 to 6, O's 1 to 3), with nothing asked of O's need against its point of no return.
+- **Is it `two_units_iff` after the favoured kind has gone?** Not `two_units_iff` itself: that law has a first unit taking one fixed amount and a start already below the point of no return of what both take. Here F multiplies, may leave O (so what the rest takes is not known beforehand), and the start may hold. What L-d is: L-b up to the first level below F's need; F gone one step later (nothing leaves an F); then `unending_iff_above`, or `unending_iff_holds` on the O alone. Three known pieces in a row.
+- **Worth stating?** Only as a corollary. `LineOnAStock`'s account says it has no exact condition for a way whose offspring take more; L-d would be one, in a narrow shape (the growers share the greatest need, nothing else leaves them, the rest leave themselves). If stated, in the "holds" form.
+
+## (7) Verdict
+
+**Worth writing in Lean, if anything:** not L-b for its own sake, which is `need_unmet` composed with `locked_stays`. What the model has that the Lean lacks is the other side: the fall of the level making a difference to the rule, through the favoured units' unmet need and the share. `TurningInTime` gives its marked levels and its kept kind; chapter 2 section 11 says so under "What is given" ("the marks of a way that conditions on a reading are not" derived). Here the mark would be a unit's need. The smallest honest landing I can see is the model, L-a as an instance of `turn_locked`, L-b as a short corollary, the statement of (4) (a line that never ends has left the favouring rule), and the bound-32 course kept beside the same start with the rule held favouring. No exact condition for when it turns in time is in hand, and I would not promise one.
+
+**What the writer should be careful not to say:**
+
+- that the use rising with the share has come out as a conclusion (finding 3);
+- that the pairs in `results-count.json` meet the lock's premise as stated (finding 1);
+- that a lock "left" in `results-3.json`'s examples is the rule turning to any effect (finding 6);
+- that `locked_ends_rising` becomes a case (finding 4);
+- that `Raises` holds of the units' own step: it holds of the step with every need met;
+- that L-a and L-b are shown beyond what was run. My wider search is still a search.
+
+**Is leaving a lock because the favoured units ran out a turn in section 11's sense?** Section 11 has two. For a way of units it already calls the ending of a unit that takes, while another goes on, "a turn with no mark given" (`WayOfUnits.ends_while_net_goes`, as the chapter names it; I found the name in the Lean and did not read its statement). In that sense yes, but then the lock adds nothing: it is that turn, and in the examples the result files keep, the rule's change afterwards is idle. In the other sense (the way after a marked step is of a kind that is kept, and the line goes on exactly where enough is left) it is a turn only where what remains leaves different offspring under the two rules. The bound-32 course is one such, so the model can hold it. In the examples kept so far it is only an ending of some units.
+
+## What I ran
+
+`/Users/ren/theories/tmp/r7/one-model/check/join19/refute.py`, parts `k1` (150 s), `split`, `drop`, `k2`, `k2p`, `k3`, `k4`, `turn`, `same`, `ld` (about 45 s together). It imports `Model`, `premises` and `raises_holds_here` from `lock_on_units.py` and adds one wider model of its own for `k1`. It prints and writes nothing. `split` reproduces the first program's two totals (1,824,162 and 948,072), which is my check that I read that program rightly.

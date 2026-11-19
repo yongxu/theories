@@ -1,0 +1,770 @@
+#!/usr/bin/env python3
+"""break_s3.py: S3 of reader-independent.md, searched in worlds its proposer did not run.
+
+AI-written scratch (Claude Fable, 19 November 2026), by one reader. A search over small numbers shows where a
+statement fails; it does not show that it holds. Nothing here is the Lean's. It writes no file; it prints.
+
+The step is lock_on_units.py's Model.step, for any number of kinds and rules:
+  a way is a tuple of counts, one per kind (every predicate used is blind to the order of a list);
+  units whose need the level meets leave their kids under the rule in force, the others nothing
+    (LineOnAStock.after at `kids g`);
+  the rule is set again from the share of the way present, before the step, at every step (S3's `every`);
+  every unit present takes; the level steps by z + giving(z), z = max(0, x - taken) (RegimeMargin.step).
+
+How each Lean notion is coded (read in LineOnAStock.lean, RuleCapture.lean, RegimeMargin.lean, GuardedStep.lean):
+  Goes   (LineOnAStock.Goes): some unit present has need <= level.
+  never ends: `stepWhile_unending_iff` makes it "Goes at every step of the orbit". The step is a function of
+    (way, rule, level) alone when every step reads, so a repeated (way, rule, level) with Goes at every step up
+    to it is a never-ending course, and a step without Goes is an end.
+  Regime (LineOnAStock.Regime giving use y hi w), T = taken use w:
+    Short giving T (y T):     for all z < y T, giving z < T
+    Meets giving T (y T) hi:  for all z >= y T with z + T <= hi, T <= giving z
+    Keeps giving T hi:        for all x <= hi, step giving T x <= hi
+    y is a given function. For a T, a value y T with Short and Meets exists exactly where either
+      (i) some z <= hi - T has giving z >= T, and from the least such z (call it y*) up to hi - T giving stays
+          >= T: then y T = y* is forced; or
+      (ii) no z <= hi - T has giving z >= T: then y T is any value above hi - T with giving below T under it
+          (hi - T + 1 always serves), and T + y T > hi.
+    `RegimeTable` gives, at T, (ok, hold_at): hold_at = T + y* in case (i), None in case (ii) (no level <= hi holds).
+    `selfcheck_regime` checks this reduction by brute force over y for every giving table used.
+  Holds  (LineOnAStock.Holds need use y (w, x)): w not empty, every need of w met at x, T + y T <= x.
+    Coded: nonempty, all met, hold_at is not None, hold_at <= x. Levels stay <= hi (asserted), so case (ii)
+    gives False whatever y T is taken there.
+  along  (S3, as in unending_iff_holds): Regime at the way of step k for every k with Goes at every step j <= k.
+  Locked (RuleCapture.Locked): favours g and M.le g (h (share w) g).
+  reversed lock (S3's right side): not favours g, and M.le (h (share w) g) g.
+  The right side of S3 at a start: there is k, Goes at every step before k, with Holds and the reversed lock at
+    step k. (Holds gives Goes at k itself, so on a course it is: some step before the end, or on the cycle.)
+  M is a preorder on rules given by a rank: M.le g g' iff rank[g] <= rank[g'] (two rules of one rank are each
+    not above the other and are still two rules, with their own kids).
+  P is the order `le` that comes with the share.
+
+Premises of S3, each checked by the program on each instance (none assumed from how the instance was made):
+  needs    every kind needs something                         down   kids need no more than the parent, every rule
+  grows    under a favouring rule use u < taken(kids g u)     even   under a rule that does not favour, = use u
+  some     under a rule that does not favour, kids nonempty   nothing giving 0 = 0
+  keeps    Keeps giving 0 hi                                  high   start level <= hi
+  upper    M.le g g' and favours g give favours g'            every  built in
+  monotone ReadsShare: P.le x y gives M.le (h x g) (h y g') for all g, g'   (checked on every share of a grid way)
+  lowers   not favours g gives P.le (share (allKids (kids g) w)) (share w)  (checked on every grid way)
+  along    as above, per start
+  The grid: every way that takes at most hi (no other way is on a course at a step with Goes after it).
+  `raises` (not a premise of the equivalence; S3's last line asks it for k >= n + 2) is checked on the grid too.
+
+Families (each prints its counts, a table by kind of instance, and the smallest course of each kind kept):
+  A shares (count, proportion, a count read downward, all units, a pair in the product order); tent; two kinds
+  B givings other than the tent                    C three rules: chains, and two rules of one rank
+  D three kinds                                    E instances failing exactly one premise
+  F a kind that takes nothing                      G four kinds taking 1 to 4: slow growth
+  H a high-need kind that may take much beside a slow chain (made after A to G found no never-ending course
+    from a Locked start with every need met; A to G were not changed after their runs)
+An instance is run when all ten instance premises hold, or all but `lowers` (in E: all but any one). Starts: every
+way of the family's small ways, every rule, every level 0..hi. A start counts under ALL only where `along` holds too.
+
+Usage: python3 -B break_s3.py FAMILY [N] [SEED]     FAMILY in: selftest A B C D E F G H
+The runs reported in break-S3-search.md: A 40000, B 40000, C 20000, D 15000, E 3000, F 100000, G 8000, H 30000, all seed 19.
+"""
+import itertools, random, sys, time
+from fractions import Fraction
+
+LIMIT = 300          # steps before a course is called undecided
+TOP_FACTOR = 3       # giving tables reach TOP_FACTOR * hi (only a giving that breaks `keeps` goes above hi)
+
+
+# ---------------------------------------------------------------- givings
+def giving_fn(spec, hi):
+    k = spec[0]
+    if k == 'tent':        return lambda z: min(z, hi - z)                      # the proposer's
+    if k == 'topup':       return lambda z: 0 if z == 0 else min(spec[1], hi - z)   # a constant top-up, capped
+    if k == 'floor_tent':  return lambda z: 0 if z < spec[1] else min(z, hi - z)    # nothing below a floor
+    if k == 'floor_topup': return lambda z: 0 if z < spec[1] else min(spec[2], hi - z)
+    if k == 'hump':        return lambda z: min(z * (hi - z) // spec[1], hi - z)    # logistic-like
+    if k == 'linear':      return lambda z: min(spec[1] * z // spec[2], hi - z)     # linear, capped
+    if k == 'dip':         return lambda z: 0 if z % 3 == 2 else min(z, hi - z)     # two-humped: breaks Regime at some T
+    if k == 'gift':        return lambda z: min(spec[1], hi - z)                    # gives from nothing: breaks `nothing`
+    if k == 'over':        return lambda z: z                                       # doubles: breaks `keeps`
+    raise ValueError(spec)
+
+
+def giving_table(spec, hi):
+    f = giving_fn(spec, hi)
+    return tuple(max(0, f(z)) for z in range(TOP_FACTOR * hi + 1))
+
+
+_regime_cache = {}
+
+
+class RegimeTable:
+    """T -> (Regime holds for some y at T, the level from which Holds is true or None), computed when asked."""
+    def __init__(self, gspec, hi):
+        self.f, self.hi, self.memo = giving_fn(gspec, hi), hi, {}
+
+    def __getitem__(self, T):
+        v = self.memo.get(T)
+        if v is None:
+            hi, g = self.hi, (lambda z: max(0, self.f(z)))
+            ystar = next((z for z in range(0, hi - T + 1) if g(z) >= T), None)
+            ok = True if ystar is None else all(g(z) >= T for z in range(ystar, hi - T + 1))
+            keepsT = all(max(0, x - T) + g(max(0, x - T)) <= hi for x in range(hi + 1))
+            v = self.memo[T] = (ok and keepsT, None if ystar is None else T + ystar)
+        return v
+
+
+def regime_table(gspec, hi):
+    key = (gspec, hi)
+    if key not in _regime_cache: _regime_cache[key] = RegimeTable(gspec, hi)
+    return _regime_cache[key]
+
+
+def selfcheck_regime(gspec, hi):
+    """Brute force over y in 0..hi+1: Short and Meets as the Lean defines them; compare with regime_table."""
+    g = giving_table(gspec, hi)
+    reg = regime_table(gspec, hi)
+    for T in range(hi + 2):
+        ys = [y for y in range(hi + 2)
+              if all(g[z] < T for z in range(y))                                   # Short
+              and all(T <= g[z] for z in range(y, hi + 1) if z + T <= hi)]         # Meets
+        keepsT = all(max(0, x - T) + g[max(0, x - T)] <= hi for x in range(hi + 1))
+        assert (bool(ys) and keepsT) == reg[T][0], (gspec, hi, T, ys)
+        for x in range(hi + 1):                                                    # every admissible y gives one verdict
+            verdicts = {T + y <= x for y in ys}
+            assert len(verdicts) <= 1, (gspec, hi, T, x, ys)
+            if ys and reg[T][0]:
+                assert verdicts == {reg[T][1] is not None and reg[T][1] <= x}, (gspec, hi, T, x, ys, reg[T])
+    return True
+
+
+# ---------------------------------------------------------------- shares and readings
+def le_num(a, b): return a <= b
+def le_pair(a, b): return a[0] <= b[0] and a[1] <= b[1]
+
+
+def share_fn(spec):
+    """(share of a way, the order P)."""
+    k = spec[0]
+    if k == 'count':                       # the number of units of the kinds in spec[1]
+        S = spec[1]; return (lambda w: sum(w[i] for i in S)), le_num
+    if k == 'prop':                        # those kinds over all; the empty way has share 0
+        S = spec[1]; cache = {}
+        def f(w):
+            v = cache.get(w)
+            if v is None:
+                n = sum(w); v = Fraction(sum(w[i] for i in S), n) if n else Fraction(0); cache[w] = v
+            return v
+        return f, le_num
+    if k == 'fewer':                       # how few of the kinds in spec[1]: the count read downward
+        S = spec[1]; return (lambda w: -sum(w[i] for i in S)), le_num
+    if k == 'pair':                        # (how many of kind i, how few of kind j), by the product order: not total
+        i, j = spec[1], spec[2]; return (lambda w: (w[i], -w[j])), le_pair
+    raise ValueError(spec)
+
+
+def parity(v):
+    if isinstance(v, Fraction): return (v.numerator + v.denominator) % 2
+    if isinstance(v, tuple): return sum(v) % 2
+    return v % 2
+
+
+def read_fn(spec, le):
+    """h : share -> rule in force -> rule read.
+    ('levels', thresholds, classes, mode): the level of a share is the number of thresholds it is at or above
+    (thresholds a chain in P); classes[level] is the rules of that level; mode picks within the class:
+      first: its first rule;  stay: the rule in force if it is in the class;  toggle: the other one if it is;
+      parity: by a parity of the share.  stay and toggle make the reading depend on the rule in force.
+    ('anti', threshold): rule 1 below the threshold, rule 0 from it up (not monotone)."""
+    if spec[0] == 'anti':
+        th = spec[1]; return lambda s, g: 0 if le(th, s) else 1
+    _, ths, classes, mode = spec
+    def h(s, g):
+        c = classes[sum(1 for t in ths if le(t, s))]
+        if len(c) == 1 or mode == 'first': return c[0]
+        if mode == 'stay': return g if g in c else c[0]
+        if mode == 'toggle': return c[(c.index(g) + 1) % len(c)] if g in c else c[0]
+        if mode == 'parity': return c[parity(s) % len(c)]
+        raise ValueError(mode)
+    return h
+
+
+# ---------------------------------------------------------------- the model
+_grid_cache, _mono_cache, _order_cache = {}, {}, {}
+
+
+def grid(use, hi):
+    key = (use, hi)
+    if key not in _grid_cache:
+        K = len(use)
+        _grid_cache[key] = [w for w in itertools.product(range(hi + 1), repeat=K)
+                            if sum(a * b for a, b in zip(w, use)) <= hi]
+    return _grid_cache[key]
+
+
+class Model:
+    def __init__(self, need, use, rank, fav, kids, share, read, gspec, hi):
+        self.need, self.use, self.rank, self.fav, self.kids = need, use, rank, fav, kids
+        self.sspec, self.rspec, self.gspec, self.hi = share, read, gspec, hi
+        self.K, self.R = len(need), len(rank)
+        self.g = giving_table(gspec, hi)
+        self.reg = regime_table(gspec, hi)
+        self.share, self.le = share_fn(share)
+        self.read = read_fn(read, self.le)
+
+    # -- one step, and what is read off a configuration (way, rule, level)
+    def taken(self, w): return sum(a * b for a, b in zip(w, self.use))
+
+    def all_kids(self, w, r):
+        kr = self.kids[r]; new = [0] * self.K
+        for k in range(self.K):
+            if w[k]:
+                for j in range(self.K): new[j] += w[k] * kr[k][j]
+        return tuple(new)
+
+    def step(self, st):
+        w, r, x = st
+        met = tuple(w[k] if self.need[k] <= x else 0 for k in range(self.K))   # units whose need is met
+        w2 = self.all_kids(met, r)                                             # they leave kids under the rule in force
+        r2 = self.read(self.share(w), r)                                       # the rule read off the share before the step
+        z = max(0, x - self.taken(w))                                          # every unit present takes
+        return (w2, r2, z + self.g[z])
+
+    def goes(self, st):
+        w, r, x = st
+        return any(w[k] and self.need[k] <= x for k in range(self.K))
+
+    def all_met(self, st):
+        w, r, x = st
+        return all(w[k] == 0 or self.need[k] <= x for k in range(self.K))
+
+    def holds(self, st):
+        w, r, x = st
+        if not any(w) or not self.all_met(st): return False
+        at = self.reg[self.taken(w)][1]
+        return at is not None and at <= x
+
+    def regime_ok(self, st): return self.reg[self.taken(st[0])][0]
+
+    def locked(self, st):
+        w, r, x = st
+        return self.fav[r] and self.rank[r] <= self.rank[self.read(self.share(w), r)]
+
+    def rev_locked(self, st):
+        w, r, x = st
+        return (not self.fav[r]) and self.rank[self.read(self.share(w), r)] <= self.rank[r]
+
+    def turned(self, st): return self.holds(st) and self.rev_locked(st)        # S3's right side at one step
+
+    # -- S3's premises on the instance (all but `high` and `along`, which are per start)
+    def premises(self):
+        K, R, need, use, kids, fav, rank, hi = self.K, self.R, self.need, self.use, self.kids, self.fav, self.rank, self.hi
+        dot = lambda kt: sum(a * b for a, b in zip(kt, use))
+        p = {}
+        p['needs'] = all(n > 0 for n in need)
+        p['down'] = all(need[j] <= need[k] for r in range(R) for k in range(K) for j in range(K) if kids[r][k][j])
+        p['grows'] = all(use[k] < dot(kids[r][k]) for r in range(R) if fav[r] for k in range(K))
+        p['even'] = all(use[k] == dot(kids[r][k]) for r in range(R) if not fav[r] for k in range(K))
+        p['some'] = all(sum(kids[r][k]) > 0 for r in range(R) if not fav[r] for k in range(K))
+        p['nothing'] = self.g[0] == 0
+        p['keeps'] = all(x + self.g[x] <= hi for x in range(hi + 1))
+        p['upper'] = all(fav[b] for a in range(R) for b in range(R) if rank[a] <= rank[b] and fav[a])
+        ways = grid(use, hi)
+        mkey = (self.sspec, self.rspec, rank, use, hi)
+        if mkey not in _mono_cache:
+            vals = list({self.share(w) for w in ways})
+            _mono_cache[mkey] = all(rank[self.read(x, a)] <= rank[self.read(y, b)]
+                                    for x in vals for y in vals if self.le(x, y)
+                                    for a in range(R) for b in range(R))
+        p['monotone'] = _mono_cache[mkey]
+        def order(r, up):
+            key = (self.sspec, kids[r], use, hi, up)
+            if key not in _order_cache:
+                if up: _order_cache[key] = all(self.le(self.share(w), self.share(self.all_kids(w, r))) for w in ways)
+                else:  _order_cache[key] = all(self.le(self.share(self.all_kids(w, r)), self.share(w)) for w in ways)
+            return _order_cache[key]
+        p['lowers'] = all(order(r, False) for r in range(R) if not fav[r])
+        self.raises = all(order(r, True) for r in range(R) if fav[r])
+        return p
+
+    # -- every start of the instance: (never ends, right side, along); never ends is '?' where undecided
+    def solve(self, starts):
+        memo = {}
+        top = len(self.g) - 1
+        for st0 in starts:
+            if st0 in memo: continue
+            path, idx, s = [], {}, st0
+            while True:
+                if s in memo: tail = memo[s]; break
+                if s in idx:                                   # a configuration repeats, Goes at every step: never ends
+                    cyc = path[idx[s]:]; path = path[:idx[s]]
+                    tail = (True, any(self.turned(q) for q in cyc), all(self.regime_ok(q) for q in cyc))
+                    for q in cyc: memo[q] = tail
+                    break
+                if not self.goes(s):                           # the net ends here
+                    tail = memo[s] = (False, False, True); break
+                if len(path) >= LIMIT or s[2] > top or sum(s[0]) > 4000:
+                    tail = ('?', False, True); break           # neither ended nor repeated: undecided
+                idx[s] = len(path); path.append(s); s = self.step(s)
+            for q in reversed(path):
+                tail = (tail[0], self.turned(q) or tail[1], self.regime_ok(q) and tail[2])
+                memo[q] = tail
+        return memo
+
+    def course(self, st, hold_rule=False, limit=LIMIT):
+        """The course from st until it ends or repeats; with hold_rule the rule in force is never set again."""
+        seen, out = set(), [st]
+        while self.goes(st) and st not in seen and len(out) <= limit:
+            seen.add(st)
+            nxt = self.step(st)
+            if hold_rule: nxt = (nxt[0], st[1], nxt[2])
+            st = nxt; out.append(st)
+        verdict = 'ends' if not self.goes(st) else ('never ends' if st in seen else 'undecided')
+        return verdict, out
+
+    def describe(self):
+        return ('need %s use %s | rules: rank %s favours %s | kids by rule %s | share %s | reading %s | giving %s hi %d'
+                % (self.need, self.use, self.rank, tuple(int(f) for f in self.fav), self.kids, self.sspec, self.rspec, self.gspec, self.hi))
+
+    def show(self, st, hold_rule=False):
+        verdict, c = self.course(st, hold_rule)
+        lines = []
+        for j, q in enumerate(c):
+            flags = []
+            if self.goes(q): flags.append('goes')
+            if not self.all_met(q): flags.append('a need unmet')
+            if self.holds(q): flags.append('Holds')
+            if self.locked(q): flags.append('Locked')
+            if self.rev_locked(q): flags.append('reversed lock')
+            if not self.regime_ok(q): flags.append('Regime fails at this take')
+            lines.append('    step %2d  way %s  rule %d%s  level %2d  share %s  read %d  takes %d  [%s]'
+                         % (j, q[0], q[1], '+' if self.fav[q[1]] else '-', q[2], self.share(q[0]),
+                            self.read(self.share(q[0]), q[1]), self.taken(q[0]), ', '.join(flags)))
+        return '  ' + self.describe() + '\n' + '\n'.join(lines) + '\n    -> ' + verdict
+
+
+# ---------------------------------------------------------------- one family
+PREMS = ('needs', 'down', 'grows', 'even', 'some', 'nothing', 'keeps', 'upper', 'monotone', 'lowers')
+
+
+class Tally:
+    def __init__(self, name):
+        self.name, self.c, self.ex, self.by = name, {}, {}, {}
+        self.t0 = time.time()
+
+    def add(self, k, n=1): self.c[k] = self.c.get(k, 0) + n
+
+    def keep(self, k, size, m, st):                           # the smallest example of each kind
+        if k not in self.ex or size < self.ex[k][0]: self.ex[k] = (size, m, st)
+
+
+def run_model(m, start_ways, T, drop_ok=('lowers',), label=''):
+    """Run every start of an instance whose premises all hold, or all but one named in drop_ok."""
+    p = m.premises()
+    # (d): under a rule that does not favour, some kind leaves a unit of another kind
+    conv = any(m.kids[r][k][j] for r in range(m.R) if not m.fav[r] for k in range(m.K) for j in range(m.K) if j != k)
+    row = T.by.setdefault((label, 'other kind under a rule that does not favour' if conv else 'own kind only'), [0] * 7)
+    failed = tuple(k for k in PREMS if not p[k])
+    T.add('instances made')
+    if len(failed) > 1 or (failed and failed[0] not in drop_ok):
+        T.add('instances set aside (premises failing: more than one, or one not studied)'); return
+    tag = 'ALL' if not failed else 'without ' + failed[0]
+    T.add('instances | ' + tag)
+    if not failed:
+        row[0] += 1
+        if m.raises: T.add('instances | ALL | raises holds too')
+    starts = [(w, r, x) for w in start_ways for r in range(m.R) for x in range(m.hi + 1)]   # `high` by construction
+    memo = m.solve(starts)
+    for st in starts:
+        res = memo[st]
+        if res[0] == '?':                                    # not compared; say whether the right side was seen to hold
+            T.add('starts undecided (%s) | %s' % ('the right side holds at a step seen, along holds as far as seen' if res[1] and res[2]
+                                                  else 'the right side holds at no step seen' if not res[1] else 'along fails', tag))
+            continue
+        never, right, along = res
+        size = (sum(st[0]), m.hi, st[2])
+        if not along:
+            t2 = tag + ' and without along' if failed else 'without along'
+            if failed: continue                               # two premises missing: not studied
+            T.add('starts | ' + t2)
+            if never: T.add('never end | ' + t2)
+            if never != right:
+                kind = 'DISAGREE (never ends, right side fails) | ' if never else 'DISAGREE (ends, right side holds) | '
+                T.add(kind + t2); T.keep(kind + t2, size, m, st)
+            continue
+        T.add('starts | ' + tag)
+        if never: T.add('never end | ' + tag)
+        if right: T.add('right side holds | ' + tag)
+        if never != right:
+            kind = 'DISAGREE (never ends, right side fails) | ' if never else 'DISAGREE (ends, right side holds) | '
+            T.add(kind + tag); T.keep(kind + tag, size, m, st)
+        if failed: continue
+        # --- what follows is counted only where every premise of S3 holds
+        fav0 = m.fav[st[1]]
+        lock0 = m.locked(st)
+        row[1] += 1; row[2] += never; row[3] += (never != right)
+        row[4] += (never and not fav0); row[5] += (never and lock0); row[6] += (never and lock0 and m.raises)
+        T.add('starts | ALL | start rule %s' % ('favours, Locked' if lock0 else 'favours, not Locked' if fav0 else 'does not favour'))
+        if lock0 and m.raises: T.add('starts | ALL | Locked start | raises holds')
+        if never:
+            T.add('never end | ALL | start rule %s' % ('favours, Locked' if lock0 else 'favours, not Locked' if fav0 else 'does not favour'))
+            # S3 "in words": at the step from which no rule favours again, is the level at or above the point of
+            # no return of what is then taken?  (The statement asks Holds and the reversed lock at SOME step.)
+            v, c = m.course(st)
+            j0 = max([j for j, q in enumerate(c) if m.fav[q[1]]], default=-1) + 1
+            at = m.reg[m.taken(c[j0][0])][1]
+            when = 'the rule favours at some step, and' if j0 else 'no rule favours at any step, and'
+            if j0: T.add('never end | ALL | the rule favours at some step and from a later step on never again')
+            if at is None or at > c[j0][2]:
+                T.add('never end | ALL | %s at the first step from which none favours the level is below the point of no return of what is then taken' % when)
+                T.keep('never ends; %s at the first step from which none favours the level is below the point of no return of what is then taken' % when, size, m, st)
+            elif not m.turned(c[j0]):
+                T.add('never end | ALL | %s at the first step from which none favours the right side does not yet hold (a need unmet, or the read rule above)' % when)
+                T.keep('never ends; %s at the first step from which none favours the right side does not yet hold' % when, size, m, st)
+            if any(m.share(c[j][0]) != m.share(c[j + 1][0]) for j in range(len(c) - 1) if not m.fav[c[j][1]] and m.all_met(c[j])):
+                T.add('never end | ALL | the share moves at a step under a rule that does not favour with every need met')
+            if fav0:
+                v, _ = m.course(st, hold_rule=True)           # the same start with the rule held as it is
+                T.add('never end | ALL | start rule favours | with the rule held: ' + v)
+                if lock0: T.add('never end | ALL | Locked start | with the rule held: ' + v)
+            if lock0:
+                T.keep('a never-ending course from a Locked start', size, m, st)
+                v, c = m.course(st)
+                n = next((j for j, q in enumerate(c) if not m.all_met(q)), None)     # first step with a need unmet
+                k = next((j for j, q in enumerate(c) if m.turned(q)), None)          # first step of the right side
+                kf = next((j for j, q in enumerate(c) if not m.fav[q[1]]), None)     # first rule that does not favour
+                if n is None or kf is None or kf < n + 2:
+                    T.add('Locked start, never ends: a rule that does not favour before n + 2 (or no unmet need)')
+                    T.keep('Locked start, never ends: a rule that does not favour before n + 2 (or no unmet need)', size, m, st)
+                if m.raises:
+                    T.add('never end | ALL | Locked start | raises holds')
+                    T.keep('a never-ending course from a Locked start where raises holds', size, m, st)
+                    if n is not None and n >= 1:
+                        T.add('never end | ALL | Locked start | raises holds | every need met at the start')
+                        T.keep('a never-ending course from a Locked start where raises holds and every need is met at the start', size, m, st)
+                    if n is None or k is None or k < n + 2:
+                        T.add('K>=N+2 FAILS (Locked start, raises)'); T.keep('K>=N+2 FAILS (Locked start, raises)', size, m, st)
+                else:
+                    T.add('never end | ALL | Locked start | raises fails')
+                    if n is None or k is None or k < n + 2:
+                        T.add('k < n + 2 from a Locked start where raises fails')
+                        T.keep('k < n + 2 from a Locked start where raises fails', size, m, st)
+
+
+def report(T):
+    print('\n=== family %s: %.0f s ===' % (T.name, time.time() - T.t0))
+    for k in sorted(T.c): print('  %-95s %10d' % (k, T.c[k]))
+    print('\n  where every premise holds, by kind of instance:')
+    print('  %-62s %9s %9s %9s %9s %9s %9s %9s' % ('', 'instances', 'starts', 'never end', 'DISAGREE', 'nev,notfav', 'nev,Locked', 'nev,L,raises'))
+    for k in sorted(T.by):
+        if T.by[k][0]: print('  %-62s %9d %9d %9d %9d %9d %9d %9d' % ((k[0] + ' | ' + k[1])[:62], *T.by[k]))
+    for k in sorted(T.ex):
+        size, m, st = T.ex[k]
+        print('\n  smallest example: ' + k)
+        print(m.show(st))
+        if k.startswith('a never-ending course from a Locked start'):
+            print('  the same start with the rule held:')
+            print(m.show(st, hold_rule=True))
+    sys.stdout.flush()
+
+
+# ---------------------------------------------------------------- instance makers
+def kid_options(K, maxtotal):
+    return [t for t in itertools.product(range(maxtotal + 1), repeat=K) if sum(t) <= maxtotal]
+
+
+def kid_lists(need, use, opts, strict=True):
+    """Per kind: the kid tuples that grow and go down (for a favouring rule), and those that are even, non-empty
+    and go down (for a rule that does not favour). A way of making instances, not a check: run_model checks."""
+    K = len(need); dot = lambda kt: sum(a * b for a, b in zip(kt, use))
+    down = lambda k, kt: all(need[j] <= need[k] for j in range(K) if kt[j])
+    favs = [[kt for kt in opts if dot(kt) > use[k] and down(k, kt)] for k in range(K)]
+    nons = [[kt for kt in opts if dot(kt) == use[k] and sum(kt) > 0 and down(k, kt)] for k in range(K)]
+    return favs, nons
+
+
+def ways_upto(K, n): return [w for w in itertools.product(range(n + 1), repeat=K) if any(w)]
+
+
+CH2 = ((0, 1), (False, True))                                  # two rules, the upper favours
+
+
+def thr(*ths): return ('levels', tuple(ths), tuple((i,) for i in range(len(ths) + 1)), 'first')
+
+
+def family_A(N, seed):
+    """(a), (d), (e): two kinds, two rules, the tent; the share a count, a proportion, a count read downward,
+    all units, a pair by the product order. Kids of any kind under either rule (so an O may leave an F)."""
+    T = Tally('A: shares (two kinds, two rules, tent)')
+    F = Fraction
+    shares = ([(('count', (0,)), thr(t)) for t in (1, 2, 3)] + [(('count', (1,)), thr(t)) for t in (1, 2, 3)]
+              + [(('prop', (0,)), thr(t)) for t in (F(1, 3), F(1, 2), F(2, 3), F(1))]
+              + [(('prop', (1,)), thr(t)) for t in (F(1, 3), F(1, 2), F(2, 3), F(1))]
+              + [(('fewer', (1,)), thr(t)) for t in (-2, -1, 0)] + [(('fewer', (0,)), thr(t)) for t in (-2, -1)]
+              + [(('count', (0, 1)), thr(t)) for t in (2, 4)]
+              + [(('pair', 0, 1), thr(t)) for t in ((1, -1), (2, 0), (2, -2))])
+    models = []
+    opts = kid_options(2, 3)
+    for hi in (8, 12):
+        for need in itertools.product((1, 3, 6), repeat=2):
+            for use in itertools.product((1, 2), repeat=2):
+                favs, nons = kid_lists(need, use, opts)
+                for kf in itertools.product(*favs):
+                    for kn in itertools.product(*nons):
+                        for sh, rd in shares:
+                            models.append((need, use, CH2[0], CH2[1], (kn, kf), sh, rd, ('tent',), hi))
+    random.Random(seed).shuffle(models)
+    T.add('instances in the family (before the cap N)', len(models))
+    ways = ways_upto(2, 3)
+    for a in models[:N]: run_model(Model(*a), ways, T, label='share %s' % a[5][0])
+    return T
+
+
+GIVINGS = lambda hi: [('topup', 1), ('topup', 2), ('topup', 4), ('floor_tent', 2), ('floor_tent', 4), ('floor_topup', 3, 2),
+                      ('hump', 4), ('hump', 6), ('hump', hi), ('linear', 1, 2), ('linear', 2, 1), ('linear', 3, 1), ('dip',)]
+
+
+def family_B(N, seed):
+    """(b): givings other than the tent, two kinds, two rules; share a count or a proportion."""
+    T = Tally('B: givings (two kinds, two rules)')
+    F = Fraction
+    shares = [(('count', (0,)), thr(2)), (('count', (0,)), thr(3)), (('prop', (0,)), thr(F(1, 2))), (('prop', (0,)), thr(F(2, 3))),
+              (('count', (0, 1)), thr(3)), (('fewer', (1,)), thr(-1))]
+    models = []
+    opts = kid_options(2, 3)
+    for hi in (9, 12):
+        for gs in GIVINGS(hi):
+            selfcheck_regime(gs, hi)
+            for need in itertools.product((1, 3, 6), repeat=2):
+                for use in itertools.product((1, 2), repeat=2):
+                    favs, nons = kid_lists(need, use, opts)
+                    for kf in itertools.product(*favs):
+                        for kn in itertools.product(*nons):
+                            for sh, rd in shares:
+                                models.append((need, use, CH2[0], CH2[1], (kn, kf), sh, rd, gs, hi))
+    random.Random(seed).shuffle(models)
+    T.add('instances in the family (before the cap N)', len(models))
+    ways = ways_upto(2, 3)
+    for a in models[:N]: run_model(Model(*a), ways, T, label='giving %s' % a[7][0])
+    return T
+
+
+def family_C(N, seed):
+    """(c): three rules. A chain with two that favour, or two that do not; two rules of one rank with a reading
+    that depends on the rule in force (stay, toggle) or on a parity of the share. Sampled."""
+    T = Tally('C: readings (two kinds, three rules)')
+    F = Fraction; rng = random.Random(seed)
+    opts = kid_options(2, 3)
+    structures = [  # (rank, favours, how the classes are laid out)
+        ((0, 1, 2), (False, True, True), 'chain'), ((0, 1, 2), (False, False, True), 'chain'),
+        ((0, 0, 1), (False, False, True), 'classes'), ((0, 1, 1), (False, True, True), 'classes')]
+    share_ths = [(('count', (0,)), (1, 2, 3, 4)), (('prop', (0,)), (F(1, 4), F(1, 3), F(1, 2), F(2, 3), F(1))),
+                 (('count', (0, 1)), (2, 3, 4, 5)), (('fewer', (1,)), (-3, -2, -1, 0)), (('prop', (1,)), (F(1, 3), F(1, 2), F(2, 3)))]
+    ways = ways_upto(2, 3)
+    made = 0
+    while made < N:
+        hi = rng.choice((9, 12)); gs = rng.choice([('tent',), ('topup', 2), ('linear', 2, 1), ('hump', 6), ('floor_tent', 2)])
+        need = (rng.choice((1, 3, 6)), rng.choice((1, 3, 6))); use = (rng.choice((1, 2)), rng.choice((1, 2)))
+        favs, nons = kid_lists(need, use, opts)
+        if not all(favs) or not all(nons): continue
+        rank, fav, lay = rng.choice(structures)
+        kids = tuple(tuple(rng.choice((favs if fav[r] else nons)[k]) for k in range(2)) for r in range(3))
+        sh, ths = rng.choice(share_ths)
+        if lay == 'chain':
+            t1, t2 = sorted(rng.sample(ths, 2)) if rng.random() < 0.8 else (ths[1], ths[1])
+            classes = rng.choice([((0,), (1,), (2,)), ((0,), (1,), (2,)), ((0,), (0,), (2,)), ((0,), (2,), (2,)), ((1,), (1,), (2,)), ((0,), (1,), (1,))])
+            rd = ('levels', (t1, t2), classes, 'first')
+        else:
+            two = (0, 1) if rank == (0, 0, 1) else (1, 2)
+            one = (2,) if rank == (0, 0, 1) else (0,)
+            classes = (two, one) if rank == (0, 0, 1) else (one, two)
+            rd = ('levels', (rng.choice(ths),), classes, rng.choice(('stay', 'toggle', 'parity', 'toggle')))
+        lab = ('chain, favours %s' % (tuple(int(f) for f in fav),)) if lay == 'chain' else 'rank %s, %s' % (rank, rd[3])
+        run_model(Model(need, use, rank, fav, kids, sh, rd, gs, hi), ways, T, label=lab); made += 1
+    return T
+
+
+def family_D(N, seed):
+    """(a), (d): three kinds; the share counts one kind, or two, among three, or is a proportion of them.
+    Two rules, or three in a chain. Sampled."""
+    T = Tally('D: three kinds')
+    F = Fraction; rng = random.Random(seed)
+    opts = kid_options(3, 3)
+    ways = ways_upto(3, 2)
+    made = 0
+    while made < N:
+        hi = rng.choice((9, 12)); gs = rng.choice([('tent',), ('tent',), ('topup', 2), ('linear', 2, 1), ('hump', 6), ('floor_tent', 2), ('topup', 4)])
+        need = tuple(rng.choice((1, 2, 4, 6)) for _ in range(3)); use = tuple(rng.choice((1, 1, 2)) for _ in range(3))
+        favs, nons = kid_lists(need, use, opts)
+        if not all(favs) or not all(nons): continue
+        S = rng.choice([(0,), (1,), (2,), (0, 1), (1, 2), (0, 2)])
+        kind = rng.choice(('count', 'prop', 'fewer', 'prop', 'count'))
+        ths = {'count': (1, 2, 3, 4), 'fewer': (-3, -2, -1, 0), 'prop': (F(1, 4), F(1, 3), F(1, 2), F(2, 3), F(1))}[kind]
+        if rng.random() < 0.6:
+            rank, fav = CH2; rd = thr(rng.choice(ths))
+        else:
+            rank = (0, 1, 2); fav = rng.choice([(False, True, True), (False, False, True)])
+            rd = thr(*sorted(rng.sample(ths, 2)))
+        kids = tuple(tuple(rng.choice((favs if fav[r] else nons)[k]) for k in range(3)) for r in range(len(rank)))
+        lab = '%s of %d kind(s) among three, %d rules' % (kind, len(S), len(rank))
+        run_model(Model(need, use, rank, fav, kids, (kind, S), rd, gs, hi), ways, T, label=lab); made += 1
+    return T
+
+
+def family_E(N, seed):
+    """Each premise taken away in turn: instances that fail exactly one premise (two kinds, small), to see which
+    premises do work. Sampled from wide lists; an instance is run when exactly one premise fails."""
+    T = Tally('E: one premise missing')
+    F = Fraction; rng = random.Random(seed)
+    opts = kid_options(2, 3)
+    ways = ways_upto(2, 3)
+    made = 0
+    per = {}
+    for attempt in range(400 * N):
+        hi = rng.choice((8, 10))
+        gs = rng.choice([('tent',), ('topup', 2), ('linear', 2, 1), ('gift', 1), ('gift', 2), ('over',), ('tent',)])
+        need = (rng.choice((0, 1, 3, 5)), rng.choice((1, 1, 3, 5))); use = (rng.choice((1, 2, 1, 0)), rng.choice((1, 2)))
+        favs, nons = kid_lists(need, use, opts)
+        if not all(favs) or not all(nons): continue
+        if rng.random() < 0.5: rank, fav = CH2
+        else: rank, fav = rng.choice([((0, 1, 2), (False, True, False)), ((0, 1, 2), (False, True, True)), ((0, 1, 2), (True, False, True))])
+        R = len(rank)
+        kids = [[rng.choice((favs if fav[r] else nons)[k]) for k in range(2)] for r in range(R)]
+        if rng.random() < 0.6:                                   # spoil one kid entry: any tuple at all
+            kids[rng.randrange(R)][rng.randrange(2)] = rng.choice(opts)
+        kids = tuple(tuple(k) for k in kids)
+        kind = rng.choice(('count', 'prop')); ths = {'count': (1, 2, 3), 'prop': (F(1, 3), F(1, 2), F(2, 3))}[kind]
+        if rng.random() < 0.25: rd = ('anti', rng.choice(ths)) if R == 2 else thr(*sorted(rng.sample(ths, 2)))
+        else: rd = thr(rng.choice(ths)) if R == 2 else thr(*sorted(rng.sample(ths, 2)))
+        m = Model(need, use, rank, fav, kids, (kind, (0,)), rd, gs, hi)
+        p = m.premises(); failed = [k for k in PREMS if not p[k]]
+        if len(failed) != 1 or per.get(failed[0], 0) >= N // 10: continue
+        per[failed[0]] = per.get(failed[0], 0) + 1
+        run_model(m, ways, T, drop_ok=PREMS); made += 1
+        if made >= N: break
+    return T
+
+
+def family_F(N, seed):
+    """A kind that takes nothing (use 0) beside one that takes: two kinds, two rules, tent. A way of such units can
+    grow without the take growing, so a course may neither end nor repeat within the limit (counted undecided)."""
+    T = Tally('F: a kind that takes nothing')
+    F = Fraction
+    models = []
+    opts = kid_options(2, 2)
+    for hi in (8,):
+        for need in itertools.product((1, 3), repeat=2):
+            for use in ((0, 1), (1, 0), (0, 2)):
+                favs, nons = kid_lists(need, use, opts)
+                for kf in itertools.product(*favs):
+                    for kn in itertools.product(*nons):
+                        for sh, rd in [(('count', (0,)), thr(2)), (('prop', (0,)), thr(F(1, 2))), (('count', (1,)), thr(2))]:
+                            models.append((need, use, CH2[0], CH2[1], (kn, kf), sh, rd, ('tent',), hi))
+    random.Random(seed).shuffle(models)
+    T.add('instances in the family (before the cap N)', len(models))
+    ways = ways_upto(2, 2)
+    for a in models[:N]: run_model(Model(*a), ways, T, label='use %s' % (a[1],))
+    return T
+
+
+def family_G(N, seed):
+    """Slow growth, to look for never-ending courses from Locked starts: four kinds taking 1, 2, 3, 4 (in some
+    order), so that a unit's kids can take just one more; one or two rules that favour. Sampled."""
+    T = Tally('G: four kinds, slow growth')
+    F = Fraction; rng = random.Random(seed)
+    opts = kid_options(4, 2)
+    ways = [w for w in itertools.product(range(3), repeat=4) if any(w) and sum(w) <= 4]
+    made = 0
+    while made < N:
+        hi = rng.choice((10, 14)); gs = rng.choice([('tent',), ('tent',), ('topup', 3), ('linear', 2, 1), ('hump', 6), ('linear', 1, 2)])
+        use = tuple(rng.sample((1, 2, 3, 4), 4)) if rng.random() < 0.7 else tuple(rng.choice((1, 2, 3)) for _ in range(4))
+        need = tuple(rng.choice((1, 1, 2, 4, 7, 9)) for _ in range(4))
+        favs, nons = kid_lists(need, use, opts)
+        if not all(favs) or not all(nons): continue
+        S = rng.choice([(0,), (1,), (2,), (3,), (0, 1), (2, 3), (0, 1, 2), (0, 1, 2, 3)])
+        kind = rng.choice(('count', 'prop', 'count'))
+        ths = {'count': (1, 2, 3, 4, 5), 'prop': (F(1, 4), F(1, 3), F(1, 2), F(2, 3), F(1))}[kind]
+        if rng.random() < 0.7:
+            rank, fav = CH2; rd = thr(rng.choice(ths))
+        else:
+            rank = (0, 1, 2); fav = (False, True, True); rd = thr(*sorted(rng.sample(ths, 2)))
+        # kids under a favouring rule: the slowest growth offered, more often than not
+        slow = [sorted(f, key=lambda kt: sum(a * b for a, b in zip(kt, use)))[:3] for f in favs]
+        kids = tuple(tuple(rng.choice(((slow if rng.random() < 0.7 else favs) if fav[r] else nons)[k]) for k in range(4)) for r in range(len(rank)))
+        lab = '%s among four kinds, %d rules' % (kind, len(rank))
+        run_model(Model(need, use, rank, fav, kids, (kind, S), rd, gs, hi), ways, T, label=lab); made += 1
+    return T
+
+
+def family_H(N, seed):
+    """A lock on units all of whose needs are met, looked for where it can go on: a kind H of a high need that may
+    take much, and a chain L1, L2, L3 of need 1 taking 1, 2, 3, which an H can leave under the favouring rule.
+    Every instance of the lists below, shuffled by the seed and capped at N."""
+    T = Tally('H: a high-need kind that takes much, and a slow chain')
+    F = Fraction
+    own = ((1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 1, 0), (0, 0, 0, 1))
+    shares = ([(('count', (0,)), thr(t)) for t in (1, 2)] + [(('count', (0, 1, 2, 3)), thr(t)) for t in (2, 3, 4)]
+              + [(('prop', (0,)), thr(t)) for t in (F(1, 3), F(1, 2))])
+    models = []
+    for hi in (12, 16):
+        for nh in range(4, hi + 1, 2):
+            for uH in (1, 2, 3, 5, 7):
+                for kH in ((1, 1, 0, 0), (2, 0, 0, 0), (1, 0, 1, 0), (1, 0, 0, 1)):
+                    for k3 in ((0, 1, 0, 1), (0, 0, 0, 2)):
+                        fav = (kH, (0, 0, 1, 0), (0, 0, 0, 1), k3)
+                        for sh, rd in shares:
+                            for gs in (('topup', 3), ('topup', 4), ('topup', 6), ('tent',), ('linear', 2, 1), ('hump', 6)):
+                                models.append(((nh, 1, 1, 1), (uH, 1, 2, 3), CH2[0], CH2[1], (own, fav), sh, rd, gs, hi))
+    random.Random(seed).shuffle(models)
+    T.add('instances in the family (before the cap N)', len(models))
+    ways = [(a, c, 0, 0) for a in range(4) for c in range(3) if a + c]
+    for a in models[:N]: run_model(Model(*a), ways, T, label='giving %s' % a[7][0])
+    return T
+
+
+def selftest():
+    """The step against the proposer's worked courses (section 7), and the regime reduction against brute force."""
+    # kinds L, F, H; rule 1 favours; under it L leaves L, F and the others themselves; under rule 0 all leave themselves
+    kids = (((1, 0, 0), (0, 1, 0), (0, 0, 1)), ((1, 1, 0), (0, 1, 0), (0, 0, 1)))
+    mk = lambda hi, th: Model((1, 1, 13), (1, 1, 1), (0, 1), (False, True), kids, ('count', (0, 1, 2)), thr(th), ('tent',), hi)
+    v, c = mk(12, 3).course(((1, 2, 0), 1, 12))
+    assert [q[2] for q in c] == [12, 12, 12, 12, 12, 10, 4, 0] and v == 'ends', c            # course 1
+    v, c = mk(24, 7).course(((1, 0, 6), 1, 13))
+    assert [q[2] for q in c][:7] == [13, 12, 8, 10, 12, 16, 24] and v == 'never ends', c      # course 2
+    assert [q[1] for q in c][:7] == [1, 1, 1, 0, 0, 0, 0]
+    v, c = mk(24, 4).course(((1, 0, 6), 1, 13)); assert v == 'ends' and len(c) - 1 == 17, (v, len(c))
+    v, c = mk(24, 3).course(((1, 0, 6), 1, 13)); assert v == 'ends' and len(c) - 1 == 16, (v, len(c))
+    v, c = mk(24, 7).course(((1, 0, 6), 1, 14))
+    assert [q[2] for q in c] == [14, 14, 12, 6, 4, 0] and v == 'ends', c                      # course 3
+    m = mk(24, 7); memo = m.solve([((1, 0, 6), 1, 13)])
+    assert memo[((1, 0, 6), 1, 13)] == (True, True, True)
+    p = m.premises(); assert not p['grows'] and all(p[k] for k in PREMS if k != 'grows'), p   # the variant, not S3's `grows`
+    for hi in (8, 9, 10, 12):
+        for gs in [('tent',)] + GIVINGS(hi) + [('gift', 1), ('gift', 2)]: selfcheck_regime(gs, hi)
+    # the memoised solver against a plain walk of each start (never ends; the right side at some step; along)
+    rng = random.Random(7); opts = kid_options(2, 3); checked = 0
+    while checked < 20000:
+        need = (rng.choice((1, 3, 6)), rng.choice((1, 3, 6))); use = (rng.choice((1, 2)), rng.choice((1, 2)))
+        favs, nons = kid_lists(need, use, opts)
+        if not all(favs) or not all(nons): continue
+        hi = rng.choice((8, 9, 12)); gs = rng.choice([('tent',)] + GIVINGS(hi))
+        kids = (tuple(rng.choice(nons[k]) for k in range(2)), tuple(rng.choice(favs[k]) for k in range(2)))
+        sh, rd = rng.choice([(('count', (0,)), thr(2)), (('prop', (0,)), thr(Fraction(1, 2))), (('fewer', (1,)), thr(-1))])
+        m = Model(need, use, CH2[0], CH2[1], kids, sh, rd, gs, hi)
+        starts = [(w, r, x) for w in ways_upto(2, 2) for r in (0, 1) for x in range(hi + 1)]
+        memo = m.solve(starts)
+        for st in starts:
+            v, c = m.course(st)
+            live = c[:-1] if v == 'ends' else c                      # the steps with Goes
+            plain = (v == 'never ends', any(m.turned(q) for q in live), all(m.regime_ok(q) for q in live))
+            assert v != 'undecided' and memo[st] == plain, (m.describe(), st, memo[st], plain)
+            checked += 1
+    print('selftest: the three worked courses of section 7 are reproduced; the family of section 7 fails S3\'s `grows` as stated '
+          '(F and H leave themselves under the favouring rule); the regime reduction agrees with brute force over y; '
+          'the memoised solver agrees with a plain walk on %d starts.' % checked)
+
+
+if __name__ == '__main__':
+    fam = sys.argv[1] if len(sys.argv) > 1 else 'selftest'
+    N = int(sys.argv[2]) if len(sys.argv) > 2 else 2000
+    seed = int(sys.argv[3]) if len(sys.argv) > 3 else 19
+    if fam == 'selftest': selftest()
+    else:
+        print('family %s, N = %d instances, seed %d' % (fam, N, seed))
+        report({'A': family_A, 'B': family_B, 'C': family_C, 'D': family_D, 'E': family_E, 'F': family_F, 'G': family_G, 'H': family_H}[fam](N, seed))

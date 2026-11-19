@@ -1,0 +1,554 @@
+#!/usr/bin/env python3
+"""One reader's attempt to refute FROZEN-LOCK-ON-UNITS.md (K1, K2, K4, L-d).
+
+AI-written scratch (19 November 2026), by the reader set to refute. A search is a search, not a proof.
+It imports the two-kind model from lock_on_units.py (Model, premises, raises_holds_here) and adds one
+wider model of its own (class G) for K1. It writes no file; everything is printed.
+
+Usage: python3 -B refute.py [k1] [split] [drop] [k2] [k2p] [k3] [k4] [turn] [same] [ld]      (no argument: all parts)
+
+  k1    L-a and L-b on a wider model: two or three kinds, cross-kind offspring, two to four rules (some
+        of equal rank, so that the rule read can depend on the rule in force), seven shares (a count, a
+        proportion, a weighted count, a difference, a capped count, a take, a pair ordered by parts),
+        uses of nothing, six givings, starts with a kind absent, the rule set again from the share
+        before the step (the Lean's turn) or of the new way (the frozen file's wording).
+  split the first program's own range, split by whether Raises holds at every way or only along the course.
+  drop  L-b with one premise of the lock dropped (Raises; a reading monotone in the share), and the
+        writer's side statement "only F grows" at a start with no F.
+  k2    pairs in ONE model (one reading) that differ only in the start's share (k2p: the share a proportion).
+  k3    when Raises holds of the step with every need met, against a condition plainly about offspring.
+  k4    "the lock left and the rest goes on" from a start that holds; whether leaving the lock makes a
+        difference to the rest.
+  turn  the same from a start that holds with O multiplying under the favouring rule, over larger bounds.
+  same  the never-ending locked course against LineOnAStock.KidsNeedMore, on the same numbers.
+  ld    L-d in the form "comes to a configuration that holds".
+"""
+import itertools, json, random, sys, time
+from fractions import Fraction
+import lock_on_units as L
+from lock_on_units import Model, premises, raises_holds_here
+
+PARTS = [a for a in sys.argv[1:]] or ['k1', 'split', 'drop', 'k2', 'k2p', 'k3', 'k4', 'turn', 'same', 'ld']
+
+
+def show(d):
+    """Counts indented, each example on one line."""
+    for k, v in d.items():
+        if isinstance(v, dict) and all(isinstance(w, dict) for w in v.values()) and v:
+            print(k + ':')
+            for kk, vv in v.items(): print('  ' + str(kk) + ' :: ' + json.dumps(vv, default=str))
+        elif isinstance(v, dict):
+            print(k + ': ' + json.dumps(v, indent=1, default=str))
+        else:
+            print(k + ': ' + json.dumps(v, default=str))
+
+
+# ---------------------------------------------------------------------------------------------- k1
+GIVINGS = {
+    'tent': lambda c, z: max(0, min(z, c - z)),
+    'fill': lambda c, z: (c - z) if 0 < z <= c else 0,                 # refills to the cap from anything left
+    'const2': lambda c, z: min(2, c - z) if 0 < z <= c else 0,
+    'zero': lambda c, z: 0,
+    'logistic': lambda c, z: (z * (c - z)) // c if 0 <= z <= c else 0,
+    'half': lambda c, z: max(0, min(z // 2, c - z)),
+}
+
+
+def giving_ok(name, c):
+    g = GIVINGS[name]
+    return g(c, 0) == 0 and all(z + g(c, z) <= c for z in range(c + 1))      # FromNothing, Keeps giving 0 c
+
+
+class G:
+    """Kinds 0..K-1, rules 0..R-1 with a rank each (the rule order is by rank; a rule favours where its rank
+    is at least fav). kids[r][k] is a tuple of counts by kind. A state is (counts, rule, level)."""
+
+    def __init__(self, c, giving, need, use, ranks, fav, kids, share_kind, par, thetas, pick, read_after):
+        self.c, self.giving, self.need, self.use, self.ranks, self.fav = c, GIVINGS[giving], need, use, ranks, fav
+        self.kids, self.share_kind, self.par, self.thetas, self.pick, self.read_after = kids, share_kind, par, thetas, pick, read_after
+        self.K = len(need)
+        self.by_rank = {}
+        for r, k in enumerate(ranks): self.by_rank.setdefault(k, []).append(r)
+
+    def share(self, n):
+        k = self.share_kind
+        if k == 'count0': return n[0]
+        if k == 'prop0': return Fraction(n[0], sum(n)) if sum(n) else Fraction(0)
+        if k == 'weighted': return sum(w * a for w, a in zip(self.par, n))
+        if k == 'diff': return n[0] - n[1]
+        if k == 'capped': return min(n[0], self.par)
+        if k == 'take0': return n[0] * self.use[0]
+        if k == 'pair': return (n[0], -n[1])
+        raise ValueError(k)
+
+    def le(self, a, b):                       # the share order; for 'pair' by parts, not total
+        if self.share_kind == 'pair': return a[0] <= b[0] and a[1] <= b[1]
+        return a <= b
+
+    def key(self, s):                         # what the reading reads of a share; monotone in the share order
+        return s[0] if self.share_kind == 'pair' else s
+
+    def rho(self, s):                         # the rank read off a share: monotone, the same whatever the rule in force
+        return sum(1 for t in self.thetas if t <= self.key(s))
+
+    def read(self, n, g):                     # the rule read: of the rank rho, which rule of that rank may depend on g
+        rs = self.by_rank[self.rho(self.share(n))]
+        return rs[self.pick[g] % len(rs)]
+
+    def favours(self, g): return self.ranks[g] >= self.fav
+
+    def locked(self, st):
+        n, g, x = st
+        return self.favours(g) and self.ranks[g] <= self.ranks[self.read(n, g)]
+
+    def met(self, st):
+        n, g, x = st
+        return all(a == 0 or self.need[k] <= x for k, a in enumerate(n))
+
+    def all_kids(self, n, g):
+        return tuple(sum(n[k] * self.kids[g][k][j] for k in range(self.K)) for j in range(self.K))
+
+    def step(self, st):
+        n, g, x = st
+        live = tuple(a if self.need[k] <= x else 0 for k, a in enumerate(n))
+        n2 = self.all_kids(live, g)
+        g2 = self.read(n2 if self.read_after else n, g)
+        z = max(0, x - sum(a * self.use[k] for k, a in enumerate(n)))
+        return (n2, g2, z + self.giving(self.c, z))
+
+    def take(self, v): return sum(a * self.use[k] for k, a in enumerate(v))
+
+    def reachable(self, n):                   # the kinds that can arise from the start under favouring rules
+        seen = {k for k, a in enumerate(n) if a}
+        grew = True
+        while grew:
+            grew = False
+            for g in range(len(self.ranks)):
+                if not self.favours(g): continue
+                for k in list(seen):
+                    for j, a in enumerate(self.kids[g][k]):
+                        if a and j not in seen: seen.add(j); grew = True
+        return seen
+
+
+RANKS = [((0, 1), 1), ((0, 1, 1), 1), ((0, 1, 2), 1), ((0, 1, 2), 2), ((0, 0, 1), 1), ((0, 1, 1, 2), 1), ((0, 1, 1, 2), 2)]
+
+
+def random_instance(rng):
+    K = rng.choice((2, 3, 3))
+    c = rng.choice((6, 8, 10, 12))
+    giving = rng.choice(list(GIVINGS))
+    ranks, fav = rng.choice(RANKS)
+    need = tuple(rng.randint(1, c) if rng.random() > 0.05 else 0 for _ in range(K))
+    if rng.random() < 0.4: need = tuple(sorted(need, reverse=rng.random() < 0.5))
+    use = tuple(rng.choice((0, 1, 1, 2, 3)) for _ in range(K))
+    kids = []
+    for g, rk in enumerate(ranks):
+        row = []
+        for k in range(K):
+            v = tuple(rng.choice((0, 0, 1, 1, 2)) for _ in range(K))
+            if rk >= fav and rng.random() < 0.8:                       # lean toward kids that take more
+                for _ in range(12):
+                    if sum(a * use[j] for j, a in enumerate(v)) > use[k]: break
+                    v = tuple(rng.choice((0, 1, 1, 2, 2)) for _ in range(K))
+            row.append(v)
+        kids.append(tuple(row))
+    share_kind = rng.choice(('count0', 'prop0', 'weighted', 'diff', 'capped', 'take0', 'pair'))
+    par = None
+    if share_kind == 'weighted': par = tuple(rng.choice((0, 1, 2, 3)) for _ in range(K))
+    if share_kind == 'capped': par = rng.choice((1, 2, 3))
+    top = max(ranks)
+    if share_kind == 'prop0': pool = [Fraction(0), Fraction(1, 4), Fraction(1, 3), Fraction(1, 2), Fraction(2, 3), Fraction(1)]
+    elif share_kind == 'diff': pool = [-3, -2, -1, 0, 1, 2]
+    else: pool = [0, 1, 2, 3, 4]
+    thetas = sorted(rng.choice(pool) for _ in range(top))
+    pick = tuple(rng.randint(0, 3) for _ in ranks)
+    return G(c, giving, need, use, ranks, fav, tuple(kids), share_kind, par, thetas, pick, rng.random() < 0.5)
+
+
+def part_k1(budget=150.0, seed=20261119):
+    rng = random.Random(seed)
+    for name in GIVINGS:
+        for c in (6, 8, 10, 12): assert giving_ok(name, c), (name, c)
+    t0 = time.time()
+    tried = La = Lb = falls = 0
+    La_fail, Lb_fail, falls_fail = [], [], []
+    tags = {}
+    def tag(t): tags[t] = tags.get(t, 0) + 1
+    while time.time() - t0 < budget:
+        m = random_instance(rng)
+        for _ in range(8):
+            tried += 1
+            n0 = tuple(rng.choice((0, 0, 1, 1, 2, 3)) for _ in range(m.K))
+            if not any(n0): continue
+            g0 = rng.randrange(len(m.ranks))
+            lo = max(m.need[k] for k, a in enumerate(n0) if a)
+            if lo > m.c: continue
+            st = (n0, g0, rng.randint(lo, m.c))
+            if not (m.locked(st) and m.met(st)): continue
+            course, n = [st], None
+            for j in range(1, m.c + 3):
+                course.append(m.step(course[-1]))
+                if not m.met(course[-1]): n = j; break
+            upto = n if n is not None else len(course) - 1
+            # Raises asked only at the ways the course visits, under the rule in force there, where it favours
+            raises_ok = all((not m.favours(s[1])) or m.le(m.share(s[0]), m.share(m.all_kids(s[0], s[1]))) for s in course[:upto])
+            if not raises_ok: continue
+            La += 1
+            if not all(m.locked(s) for s in course[:upto + 1]):
+                La_fail.append((vars_of(m), course[:upto + 1]))
+            reach = m.reachable(n0)
+            favs = [g for g in range(len(m.ranks)) if m.favours(g)]
+            needs = all(m.need[k] > 0 for k in reach)
+            grows = all(m.take(m.kids[g][k]) > m.use[k] for g in favs for k in reach)
+            down = all(m.need[j] <= m.need[k] for g in favs for k in reach for j, a in enumerate(m.kids[g][k]) if a)
+            if needs and grows:
+                Lb += 1
+                tag('share ' + m.share_kind); tag('giving ' + [k for k, v in GIVINGS.items() if v is m.giving][0])
+                tag('kinds %d' % m.K); tag('ranks %s fav %d' % (m.ranks, m.fav))
+                tag('rule read %s' % ('of the new way' if m.read_after else 'before the step'))
+                if any(a == 0 for a in n0): tag('a kind absent at the start')
+                if n0[0] == 0: tag('kind 0 absent at the start')
+                if any(m.use[k] == 0 for k in reach): tag('a unit that takes nothing')
+                if any(a and j != k for g in favs for k in reach for j, a in enumerate(m.kids[g][k])): tag('cross-kind offspring')
+                if len(set(s[1] for s in course[:upto + 1])) > 1: tag('more than one rule in force along the course')
+                if n is None or n > m.c + 1 or not any(course[n][0]):
+                    Lb_fail.append((vars_of(m), course))
+                elif down:
+                    falls += 1
+                    if not any(a and course[n][2] < m.need[k] <= st[2] for k, a in enumerate(n0)):
+                        falls_fail.append((vars_of(m), course[:n + 1]))
+    out = {'starts tried': tried, 'L-a checked': La, 'L-a failures': len(La_fail), 'L-b checked': Lb, 'L-b failures': len(Lb_fail),
+           'L-b with down checked': falls, 'level not below a need the start met': len(falls_fail),
+           'L-b checked, by feature': dict(sorted(tags.items())), 'seconds': round(time.time() - t0, 1)}
+    print(json.dumps(out, indent=1, default=str))
+    for name, fl in (('L-a', La_fail), ('L-b', Lb_fail), ('falls', falls_fail)):
+        for f in fl[:3]: print('COUNTERMODEL', name, json.dumps(f, default=str))
+
+
+def vars_of(m):
+    return {'c': m.c, 'need': m.need, 'use': m.use, 'ranks': m.ranks, 'fav': m.fav, 'kids': m.kids, 'share': m.share_kind,
+            'par': m.par, 'thetas': [str(t) for t in m.thetas], 'pick': m.pick, 'read_after': m.read_after}
+
+
+# -------------------------------------------------------------------------------------------- split
+def part_split():
+    """lock_on_units.py's own range and checks of L-a and L-b (count share), split by whether Raises holds at
+    EVERY way (F leaves at least one F under the favouring rule) or only at the ways the course visits."""
+    L.PROPORTION = False
+    cnt = {}
+    def add(k): cnt[k] = cnt.get(k, 0) + 1
+    t0 = time.time()
+    kid_choices = [(a, b) for a in range(0, 3) for b in range(0, 3)]
+    for c in (8, 12):
+        for needF, needO in itertools.product(range(1, c + 1, 2), range(1, c + 1, 2)):
+            for useF, useO in itertools.product((1, 2), (1, 2)):
+                for kF1, kO1 in itertools.product(kid_choices, kid_choices):
+                    for kF0, kO0 in (((1, 0), (0, 1)), ((0, 0), (0, 1)), ((1, 0), (0, 0))):
+                        for theta in (1, 2, 3):
+                            m = Model(c, (needF, needO), (useF, useO), {0: (kF0, kO0), 1: (kF1, kO1)}, theta)
+                            p = premises(m)
+                            where = 'Raises at every way' if p['raises'] else 'Raises only along the course'
+                            for nF, nO, x in itertools.product((1, 2), (0, 1, 2), range(0, c + 1)):
+                                st = (nF, nO, 1, x)
+                                if not (m.locked(st) and m.met(st)): continue
+                                n, course = first_unmet(m, st)
+                                upto = n if n is not None else len(course) - 1
+                                if not all(raises_holds_here(m, s) for s in course[:upto]): continue
+                                add('L-a checked, ' + where)
+                                if not all(m.locked(s) for s in course[:upto + 1]): add('L-a FAILS, ' + where)
+                                if p['grows_all']:
+                                    add('L-b checked, ' + where)
+                                    if n is None or n > c + 1 or course[n][0] + course[n][1] == 0: add('L-b FAILS, ' + where)
+    show({'counts': dict(sorted(cnt.items())), 'seconds': round(time.time() - t0, 1)})
+
+
+# -------------------------------------------------------------------------------------------- drop
+class Band(Model):
+    """The two-kind model with a reading that is NOT monotone in the share: it favours only in a band."""
+    def __init__(self, c, need, use, kids, theta, theta2):
+        Model.__init__(self, c, need, use, kids, theta); self.theta2 = theta2
+    def read(self, s): return 1 if self.theta <= s < self.theta2 else 0
+
+
+def first_unmet(m, st):
+    course = [st]
+    for j in range(1, m.c + 3):
+        course.append(m.step(course[-1]))
+        if not m.met(course[-1]) or course[-1][0] + course[-1][1] == 0: return j, course
+    return None, course
+
+
+def part_drop():
+    ident = ((1, 0), (0, 1))
+    kid_choices = [(a, b) for a in range(3) for b in range(3)]
+    found = {}
+    counts = {'without Raises: locked start, every other premise of L-b, no need ever unmet and never ends': 0,
+              'without a monotone reading: the same': 0}
+    for c in (8,):
+        for needF, needO in itertools.product((1, 3), (1, 3)):
+            for useF, useO in itertools.product((1, 2), (1, 2)):
+                for kF1, kO1 in itertools.product(kid_choices, kid_choices):
+                    for theta in (1, 2):
+                        for band in (False, True):
+                            m = Band(c, (needF, needO), (useF, useO), {0: ident, 1: (kF1, kO1)}, theta, theta + 1) if band \
+                                else Model(c, (needF, needO), (useF, useO), {0: ident, 1: (kF1, kO1)}, theta)
+                            p = premises(m)
+                            if not (p['needs'] and p['grows_all'] and p['down']): continue
+                            for nF, nO, x in itertools.product((1, 2), (0, 1), range(max(needF, needO), c + 1)):
+                                st = (nF, nO, 1, x)
+                                if not (m.locked(st) and m.met(st)): continue
+                                n, course = first_unmet(m, st)
+                                upto = n if n is not None else len(course) - 1
+                                raises_ok = all(raises_holds_here(m, s) for s in course[:upto])
+                                verdict, full = m.run(st)
+                                if n is None and verdict == 'never ends':
+                                    if not band and not raises_ok:
+                                        k = 'without Raises: locked start, every other premise of L-b, no need ever unmet and never ends'
+                                    elif band and all(raises_holds_here(m, s) for s in full):
+                                        k = 'without a monotone reading: the same'
+                                    else: continue
+                                    counts[k] += 1
+                                    if k not in found:
+                                        found[k] = {'c': c, 'need': m.need, 'use': m.use, 'kids under the favouring rule': (kF1, kO1), 'kids under the other rule': ident,
+                                                    'reading': ('1 iff %d <= share < %d' % (theta, theta + 1)) if band else ('1 iff share >= %d' % theta),
+                                                    'start': st, 'course (nF, nO, rule, level)': full[:8], 'locked at each': [m.locked(s) for s in full[:8]]}
+    # the writer's side statement "L-b with only F growing", at a locked start with no F (a reading that favours at every share)
+    m = Model(8, (1, 1), (1, 1), {0: ident, 1: ((2, 0), (0, 1))}, 0)
+    st = (0, 1, 1, 8)
+    p = premises(m)
+    n, course = first_unmet(m, st)
+    verdict, full = m.run(st)
+    found['"only F grows" at a locked start with no F'] = {
+        'premises': p, 'locked': m.locked(st), 'met': m.met(st), 'Raises along the course': all(raises_holds_here(m, s) for s in course),
+        'first unmet step': n, 'verdict': verdict, 'course': full[:4]}
+    show({'counts': counts, 'examples': found})
+
+
+# ---------------------------------------------------------------------------------------------- k2
+def part_k2(proportion=False):
+    """One model, one reading: a locked start that ends; beside it a start with the same level and the favouring
+    rule in force whose share is below the threshold (so it is not locked), which never ends. With k2p the share
+    is the proportion nF / (nF + nO)."""
+    L.PROPORTION = proportion
+    kid_choices = [(a, b) for a in range(3) for b in range(3)]
+    cnt = {'locked starts under L-b premises that end': 0,
+           'with a not-locked start beside it (lower share, same level) that never ends': 0,
+           'of those: same number of O (only nF differs)': 0,
+           'of those: the not-locked start takes at least as much at the start': 0,
+           'of those: the not-locked start is the locked one with one F replaced by one O, uses equal': 0}
+    ex = {}
+    for c in (8,):
+        for needF, needO in itertools.product((1, 3, 5), (1, 3, 5)):
+            for useF, useO in itertools.product((1, 2), (1, 2)):
+                for kF1, kO1 in itertools.product(kid_choices, kid_choices):
+                    for kids0 in (((1, 0), (0, 1)),):
+                        for theta in ((Fraction(1, 2), Fraction(2, 3)) if proportion else (2, 3)):
+                            m = Model(c, (needF, needO), (useF, useO), {0: kids0, 1: (kF1, kO1)}, theta)
+                            p = premises(m)
+                            if not (p['needs'] and p['grows_all']): continue
+                            # Raises asked of EVERY way, as the frozen file and the Lean state it (part k3 gives the condition)
+                            every = (kF1[0] >= 1 and kF1[1] == 0 and kF1[0] >= kO1[1]) if proportion else kF1[0] >= 1
+                            if not every: cnt['models skipped: Raises fails at some way'] = cnt.get('models skipped: Raises fails at some way', 0) + 1; continue
+                            cnt['models kept: Raises holds at every way'] = cnt.get('models kept: Raises holds at every way', 0) + 1
+                            for nF, nO, x in itertools.product(((1, 2, 3) if proportion else (2, 3)), (0, 1, 2), range(1, c + 1)):
+                                st = (nF, nO, 1, x)
+                                if not (m.locked(st) and m.met(st)): continue
+                                n, course = first_unmet(m, st)
+                                upto = n if n is not None else len(course) - 1
+                                if not all(raises_holds_here(m, s) for s in course[:upto]): continue
+                                v1, f1 = m.run(st)
+                                if v1 != 'ends': continue
+                                cnt['locked starts under L-b premises that end'] += 1
+                                hit = set()
+                                for nF2, nO2 in itertools.product((range(0, 4) if proportion else range(1, theta)), range(0, 4)):
+                                    if nF2 + nO2 == 0: continue
+                                    st2 = (nF2, nO2, 1, x)
+                                    if m.locked(st2) or not m.met(st2): continue
+                                    v2, f2 = m2run(m, st2)
+                                    if v2 != 'never ends': continue
+                                    hit.add('any')
+                                    rec = {'c': c, 'need': m.need, 'use': m.use, 'kids under the favouring rule': (kF1, kO1), 'theta': str(theta),
+                                           'locked start': st, 'course from it (ends)': f1[:10], 'not-locked start': st2, 'course from it (never ends)': f2[:10]}
+                                    if nO2 == nO:
+                                        hit.add('sameO'); ex.setdefault('only nF differs', rec)
+                                    if m.taken(st2) >= m.taken(st):
+                                        hit.add('takes'); ex.setdefault('the not-locked start takes at least as much', rec)
+                                    if useF == useO and nF2 == nF - 1 and nO2 == nO + 1:
+                                        hit.add('swap'); ex.setdefault('one F replaced by one O, uses equal', rec)
+                                if 'any' in hit: cnt['with a not-locked start beside it (lower share, same level) that never ends'] += 1
+                                if 'sameO' in hit: cnt['of those: same number of O (only nF differs)'] += 1
+                                if 'takes' in hit: cnt['of those: the not-locked start takes at least as much at the start'] += 1
+                                if 'swap' in hit: cnt['of those: the not-locked start is the locked one with one F replaced by one O, uses equal'] += 1
+    L.PROPORTION = False
+    show({'share': 'proportion' if proportion else 'count', 'counts': cnt, 'examples': ex})
+
+
+def m2run(m, st):
+    return m.run(st)
+
+
+# ---------------------------------------------------------------------------------------------- k3
+def part_k3():
+    """When Raises holds of the step with every need met (all the kids), for two kinds: by brute force over
+    kids F -> (a, a2), O -> (b, b2) with entries 0..3 and ways (nF, nO) with entries 0..7, not both nothing,
+    against a condition plainly about offspring. The share of the empty way is taken as nothing."""
+    out = {}
+    for mode in ('count', 'proportion'):
+        agree = differ = hold = 0
+        for a, a2, b, b2 in itertools.product(range(4), repeat=4):
+            def sh(nF, nO):
+                if mode == 'count': return nF
+                return Fraction(nF, nF + nO) if nF + nO else Fraction(0)
+            raises = all(sh(nF * a + nO * b, nF * a2 + nO * b2) >= sh(nF, nO)
+                         for nF in range(8) for nO in range(8) if nF + nO)
+            if mode == 'count': plain = a >= 1                              # each F leaves at least one F
+            else: plain = a >= 1 and a2 == 0 and a >= b2                     # F leaves only F, at least one, and no fewer than an O leaves O
+            hold += raises
+            if raises == plain: agree += 1
+            else: differ += 1
+        out[mode] = {'kids tried': 256, 'Raises holds at every way': hold, 'agrees with the plain condition': agree, 'differs': differ}
+    # and of the step at a level: where a favoured unit's need is unmet it leaves nothing, and the count falls
+    m = Model(8, (5, 1), (1, 1), {0: ((1, 0), (0, 1)), 1: ((2, 0), (0, 1))}, 1)
+    st = (1, 1, 1, 4)
+    out['the step at a level below F\'s need'] = {'state': st, 'after': m.step(st), 'share falls': m.step(st)[0] < st[0]}
+    show(out)
+
+
+# ---------------------------------------------------------------------------------------------- k4
+def part_k4():
+    """Under L-b's premises with kids needing no more than their parent: courses that never end with the lock
+    left, from a start that holds (the level would not fall under what the start takes: on the tent, x >= 2 H).
+    And, for each found, whether leaving the lock makes a difference: the same start with a reading that favours
+    at every share (theta 0), under which the rule stays the favouring one."""
+    L.PROPORTION = False
+    shapes1 = [((2, 0), (0, 1)), ((1, 1), (0, 1)), ((2, 0), (0, 2)), ((1, 1), (0, 2)), ((2, 1), (0, 1)), ((1, 2), (0, 1)), ((2, 1), (0, 2))]
+    shapes0 = [((1, 0), (0, 1)), ((0, 0), (0, 1))]
+    cnt = {}
+    def add(k): cnt[k] = cnt.get(k, 0) + 1
+    ex = {}
+    t0 = time.time()
+    for c in (12, 16, 20):
+        for needF in range(1, c + 1):
+            for needO in range(1, needF + 1):
+                for useF, useO in itertools.product(range(1, 7), range(1, 3)):
+                    for k1 in shapes1:
+                        for k0 in shapes0:
+                            m = Model(c, (needF, needO), (useF, useO), {0: k0, 1: k1}, 1)
+                            p = premises(m)
+                            if not (p['needs'] and p['down'] and (p['grows_all'] or p['grows_F_only'])): continue
+                            for nF, nO in itertools.product((1, 2), (0, 1, 2)):
+                                H = nF * useF + nO * useO
+                                for x in range(max(needF, 1), c + 1):
+                                    st = (nF, nO, 1, x)
+                                    if not (m.locked(st) and m.met(st)): continue
+                                    holds = x >= 2 * H
+                                    verdict, full = m.run(st)
+                                    last = full[-1]
+                                    how = verdict + (', locked at the last state' if m.locked(last) else ', lock left')
+                                    add(('start holds: ' if holds else 'start overdraws: ') + how)
+                                    if verdict == 'never ends' and not m.locked(last):
+                                        differs = k1[1] != k0[1]            # O leaves other offspring under the favouring rule than under the other
+                                        tagk = ('start holds' if holds else 'start overdraws') + ', never ends, lock left, ' + \
+                                               ('O multiplies under the favouring rule' if differs else 'O leaves itself under both rules')
+                                        add(tagk)
+                                        mu = Model(c, m.need, m.use, m.kids, 0)        # the same units, read so that the rule never stops favouring
+                                        vu, fu = mu.run(st)
+                                        add(tagk + ' | with the rule kept favouring: ' + vu)
+                                        key = tagk + ' | with the rule kept favouring: ' + vu
+                                        if key not in ex:
+                                            ex[key] = {'c': c, 'need': m.need, 'use': m.use, 'kids under the favouring rule': k1, 'kids under the other rule': k0,
+                                                       'start': st, 'course (nF, nO, rule, level)': full[:14], 'the same start with the rule kept favouring': fu[:14]}
+    show({'counts': dict(sorted(cnt.items())), 'examples': ex, 'seconds': round(time.time() - t0, 1)})
+
+
+# -------------------------------------------------------------------------------------------- turn
+def part_turn():
+    """A wider, narrower search for the course K4 leaves open: a start that HOLDS, O multiplying under the
+    favouring rule and leaving itself under the other, the lock left, the line never ending; and beside it the
+    same start read so that the rule never stops favouring."""
+    L.PROPORTION = False
+    cnt = {}
+    def add(k): cnt[k] = cnt.get(k, 0) + 1
+    ex = {}
+    t0 = time.time()
+    for c in (24, 32, 40):
+        for needF in range(1, c + 1):
+            for needO in (1, 2):
+                if needO > needF: continue
+                for useF in range(1, c // 2 + 1):
+                    for k1 in (((2, 0), (0, 2)), ((1, 1), (0, 2)), ((2, 1), (0, 2))):
+                        m = Model(c, (needF, needO), (useF, 1), {0: ((1, 0), (0, 1)), 1: k1}, 1)
+                        p = premises(m)
+                        if not (p['needs'] and p['down'] and p['grows_all']): continue
+                        for nO in (0, 1):
+                            H = useF + nO
+                            for x in range(max(needF, 2 * H), c + 1):
+                                st = (1, nO, 1, x)
+                                if not (m.locked(st) and m.met(st)): continue
+                                verdict, full = m.run(st)
+                                how = verdict + (', locked at the last state' if m.locked(full[-1]) else ', lock left')
+                                add('start holds, O multiplies under the favouring rule: ' + how)
+                                if verdict == 'never ends' and not m.locked(full[-1]):
+                                    vu, fu = Model(c, m.need, m.use, m.kids, 0).run(st)
+                                    add('... never ends, lock left | with the rule kept favouring: ' + vu)
+                                    if len(ex) < 3:
+                                        ex['%d' % len(ex)] = {'c': c, 'need': m.need, 'use': m.use, 'kids under the favouring rule': k1, 'start': st,
+                                                             'course (nF, nO, rule, level)': full[:12], 'the same start with the rule kept favouring': fu[:12]}
+    show({'counts': dict(sorted(cnt.items())), 'examples': ex, 'seconds': round(time.time() - t0, 1)})
+
+
+# -------------------------------------------------------------------------------------------- same
+def part_same():
+    """LineOnAStock.KidsNeedMore on this model's step: A needs 4 takes 2 leaves B, A, B; B needs 9 takes 1 leaves
+    B, B; giving min z (10 - z); start ([B, A, B], 8). With A as F and B as O under the favouring rule."""
+    m = Model(10, (4, 9), (2, 1), {0: ((1, 0), (0, 1)), 1: ((1, 2), (0, 2))}, 1)
+    st = (1, 2, 1, 8)
+    p = premises(m)
+    show({'KidsNeedMore on this step': {'start': st, 'after one step': m.step(st), 'fixed': m.step(st) == st,
+                                                    'locked': m.locked(st), 'premises': p, 'verdict': m.run(st)[0]}})
+
+
+# ---------------------------------------------------------------------------------------------- ld
+def part_ld():
+    """L-d, O leaving itself under both rules, O needing no more than F, F multiplying under the favouring rule.
+    Tested form: the line never ends exactly where, at the first step n at which F's need is unmet, O is present
+    with its need met, and the configuration one step later HOLDS: O's need met there and the level at or above
+    2 H, H what the O then take (the tent's point of no return). No premise on O's need against 2 H."""
+    L.PROPORTION = False
+    cnt = {}
+    def add(k): cnt[k] = cnt.get(k, 0) + 1
+    diff = []
+    t0 = time.time()
+    for c in (12, 16):
+        for needF in range(1, c + 1):
+            for needO in range(1, needF + 1):
+                for useF, useO in itertools.product(range(1, 7), range(1, 4)):
+                    for kF1 in ((2, 0), (1, 1), (2, 1), (1, 2), (3, 0)):
+                        for kF0 in ((1, 0), (0, 0)):
+                            m = Model(c, (needF, needO), (useF, useO), {0: (kF0, (0, 1)), 1: (kF1, (0, 1))}, 1)
+                            for nF, nO in itertools.product((1, 2, 3), (0, 1, 2, 3)):
+                                for x in range(needF, c + 1):
+                                    st = (nF, nO, 1, x)
+                                    if not (m.locked(st) and m.met(st)): continue
+                                    course, n = [st], None
+                                    for j in range(1, c + 3):
+                                        course.append(m.step(course[-1]))
+                                        if course[-1][0] > 0 and course[-1][3] < needF: n = j; break
+                                        if course[-1][0] == 0: break
+                                    if n is None: add('F never unmet within the bound'); continue
+                                    sn = course[n]; s1 = m.step(sn)
+                                    H = s1[1] * useO
+                                    rhs = needO <= sn[3] and s1[1] > 0 and needO <= s1[3] and 2 * H <= s1[3]
+                                    lhs = m.run(st)[0] == 'never ends'
+                                    tag = 'need of O at most 2H' if needO <= 2 * H else 'need of O above 2H'
+                                    add(tag + (': agree, ' + ('never ends' if lhs else 'ends') if lhs == rhs else ': DIFFER'))
+                                    if s1[0] != 0: add('F still present one step after its need was unmet')
+                                    if lhs != rhs and len(diff) < 5: diff.append({'c': c, 'need': m.need, 'use': m.use, 'kF1': kF1, 'start': st, 'course': course, 'after': s1})
+    show({'counts': dict(sorted(cnt.items())), 'differ': diff, 'seconds': round(time.time() - t0, 1)})
+
+
+if __name__ == '__main__':
+    for part in PARTS:
+        print('=====', part)
+        {'k1': part_k1, 'split': part_split, 'drop': part_drop, 'k2': part_k2, 'k2p': lambda: part_k2(True), 'k3': part_k3, 'k4': part_k4, 'turn': part_turn, 'same': part_same, 'ld': part_ld}[part]()
