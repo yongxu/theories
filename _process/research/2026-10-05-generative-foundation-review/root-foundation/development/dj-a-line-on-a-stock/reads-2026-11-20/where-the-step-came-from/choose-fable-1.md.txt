@@ -1,0 +1,43 @@
+Written by Claude (Fable 5.2), reader 1, 20 November 2026. Read only: nothing was built or changed. I read statements and docstrings, no proofs, and what I say of courses is worked by hand from docstrings.
+
+I take "October's aim" to mean October's Lean and target (the web of formations and conditions) turned toward the direction. If he meant something else, the step still answers the question as CHOOSE.md puts it.
+
+**The next step.** Give November's pair (a way on a level it needs, `TurningInTime`) October's web, by putting beside the way those who rest on the same level at needs of their own. Then (a) the levels that turn the way are where one of those it reads first goes without, not handed in, and (b) renewing and consuming can be said of a way that locks or turns. Kind: on paper for a day against kept courses; if the frozen tests pass, a join in Lean inside `TurningInTime.lean`, no new module.
+
+**Why this, from the direction** (`/Users/ren/theories/_process/DIRECTION.md`).
+- Line 66 asks of every loop whether what it rests on, "and what it uses up that others rest on", reaches how it reads early enough. Others exist only on the web; "early enough" is exact only on the pair.
+- Lines 29 and 32 give the two exact statements of "in time", each lacking what the other has: 02 §11 takes the marks as given, 07 §3.6 takes the group and courses as handed in.
+- Line 11 keeps lock/turn and renewing/consuming as separate pairs; line 36 says no file names both.
+- Line 88: the only response to the fall because of the fall is a unit going without. Line 122: the turn itself takes a step.
+- The module says it of itself: "Its selection side (`FirstApart`, `TellsApartAt`, `ReadableInTime`, `ReadsInTime`) is not instantiated: the pair has no web" (`TurningInTime.lean`, lines 290–294), and "`AloneOutside` and the marks are given, not derived". Chapter 2 §11, "What is given", repeats both.
+
+**What exists toward it** (under `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/`).
+- Pair side: `TurningInTime.turns_in_time_iff`, `turns_in_time_iff_before` (never ends exactly where the step after the first marked step comes before the point of no return), `recoverable_iff_above`, `noReturnAt_iff_first_below`, `unmarked_interval_iff`.
+- Web side, `ReadOffInTime.lean`: `Web.FirstApart` (defined on `Web.Admits`, no flow needed), `FirstApart.alike_before`, `Web.readableInTime_iff`, `FourReaders.near_inTime`, `mid_atThePoint`, `dweller_late`, `recoverable_iff_regime`.
+- A need as the mark is already a theorem where the reader takes (`WayOfUnits.two_units_iff`) and where it takes nothing (`takes_nothing_iff_alone`). Chapter 2's reading calls the gauges' likeness "a reading: their model is another".
+- Classes: `Web.Consumed`, `Lost`, `RenewingIn`, `ConsumingIn` (`Dependence.lean`, lines 155–170). Not found in what was read: either class named in `TurningInTime`, `ReadOffInTime`, `LineOnAStock`, `WayOfUnits`, `RegimeMargin`, `PoolFromCourse` or `RuleCapture` (a search by name).
+- By hand from `Three.held_at_six`'s docstring (levels 9, 8, 6, 6, …): the way turns in time and never ends, while a dependent needing nine, met at the start, is met at no later step. So turned-in-time and consuming hold together on a kept course. On `Three.read_to_ten` (9, 8, 10, 12) that need is met again. This is my reading, not a Lean statement.
+
+**What was tried that is like it.**
+- 16 November: the line read as a web with a flow was a dictionary (plan, item 4). This uses only `Web` admission, not `Flow.Balances`, and runs the other way: the web's selection side is brought to the pair to remove a premise. It may still be a dictionary, since with a need substituted for the mark the law could be `turns_in_time_iff_before` re-spelled.
+- 19 November: a join in form only, because the level could not reach the rule. Here the level reaches the way through a reader's need, and that is what the first move checks.
+- The 19 November course would be an instance, and its open question gets terms: turned for the way, consumed for the favoured unit.
+
+**What would count against it** (to freeze first). Nothing has changed if:
+1. the proof uses no theorem of the selection side;
+2. `marked` or `AloneOutside` must still be given for a way read off a group's continuations;
+3. on every course meeting the premises, renewing coincides with never ending and consuming with ending;
+4. `FourReaders`' three gauges do not come out as cases without rewriting its courses (the module warns its course "is not of `RegimeMargin.step`'s form");
+5. readable in time and turning in time do not differ by the one step.
+
+That a reading turns the way toward the kept kind stays given (`turns`; `Clearing.read_not_direction`), and the step must not be told as showing it.
+
+**First move** (a day, paper only). Write the web of the pair on `Three` and on `FourReaders`: one condition, the way drawing, gauges at stated needs. Compute by hand the first step apart, the point of no return and both classes on `goes_on`, `turned_and_ends`, `held_at_six`, `read_to_ten`, `With.goes_on`, `Against.turns_and_ends` and the 19 November course. Mark each against tests 1–5, and have one reader who did not write it check.
+
+**Two alternatives, and why they come after.**
+- The second way, with units that give at a cost to a said receiver (direction, line 9; the dig found no module with the four together). "Remakes what others rest on" cannot be said of the pair until it has a web, and the 17 November try failed two ways without one.
+- The lock-free statement joining `LineOnAStock.unending_iff_holds` and `way_ends` (19 November record). It is a real join, but inside this month's model, silent on who reads, and about 500 lines are reworked before anything retires.
+
+I also weighed re-founding `RelationalRenewal.Law` on `RegimeMargin.step`. The gate is read before the draw there and after it here, so it likely needs a premise that is its conclusion.
+
+**Ren's to say.** Nothing blocks the first move. One thing to tell him, not ask: I read the alignment wanted (line 70) as the region that is turned in time and renewing. On that reading a lock left because its favoured units went without is on the map as a turn of the way and a consumption of those units, not the turning we want. If he reads it otherwise, test 3 means something different.

@@ -1,0 +1,47 @@
+*AI-written (Claude Fable 5.2), a reader who took no part. Lens: the reading of the tests, the kept items, the last section. 20 November 2026. Read whole: the brief, the note, the frozen file, AFTER-PROGRAMS, the direction page, the record of 19 November, three of the four reports; in part the blind rebuild, three results files, the records of 17 and 18 November, chapters 4 §8, 5 §10 and 5 §12. Two courses checked by hand; nothing run; no Lean opened.*
+
+## 1. The tests ("trips" = the outcome frozen as nothing having changed)
+
+1. Frozen: the regions, or the steps they are left, tell no two courses apart that ending and renewing/consuming do not. Came back: on the writer's processes two ending courses of different length already differ in those steps, so it passes vacuously; on the Lean's cases one reader found nothing sorted beyond each formation's ending *with its step*, a finer comparator than frozen. Applied **harder**.
+2. Frozen: the gap empty, or everything outside K, in every case and reading. Came back: empty on `Three` (against-lean 8) and on 19 November's courses (blind-rebuild LESSER 5); 100, 91 and 0 in the sweep by reading. **Harder**.
+3. Frozen: *each* region statement is an existing theorem renamed. Came back: yes on `Three`; on the units 285 exceptions and K given by no statement (against-lean 11: "partly a dictionary"). In the letter it does not trip there. **Harder**.
+4. Frozen: R for the lock's class only by assuming the lock. Came back: not assumed, and it does no work. **Harder**.
+5. Frozen: grain only cuts the way's regions down. Came back: 1,359 and 21,261 differ. **Harder**.
+6. Trips at one guard (other kind, "share": 0 against 18, `sweep.log`). **As frozen**.
+7. Frozen: no sentence holds in two models by one argument. The refuter found none "not a definition unfolded"; against-lean 9 gives one (`Recoverable` as `Keepable` where the reading fixes the configuration), "an argument and not an unfolding". **Harder**, by a qualifier added afterwards.
+
+In the letter four pass, 3 is unmet on the units, 6 trips once, 7 is arguable.
+
+- "So, by what I wrote beforehand, nothing has changed", and the title's "by its own tests": **says more**. It is by the refuting reader's reading, harder than the letter.
+- "tests 3 and 7 trip": **says less**. Against-lean 9 and 11 judge otherwise in part and are not told.
+- "No sentence across two models": **says more**; one reader found none.
+- Tests 4 and 6 have no bullet: **says less**.
+
+*The false premise* is the question's, not one test's. Test 1's comparator left out `NoReturnAt`, which November had; corrected, test 1 trips on the Lean's cases (reader-refute §7), and on made-up processes nothing could count (the frozen file's "What it cannot show"). The try could not have come out as a change. That is ill-posed, not a failed try: "nothing has changed" is right of the map and is no result against the frame. What was found is the premise corrected, and what November lacks narrowed (against-lean 1).
+
+## 2. The kept items
+
+- *19 November's course.* Program output; by hand, move 0 throughout gives 28, 28, 26, 22, 32 and one small unit for ever. "Its start is kept": **says less** (what goes on is a small unit made by the favouring step already set). "With … need 26 … everything ends": **says less**; on the lock's course only, the standstill held still keeps the start (AFTER-PROGRAMS line 25).
+- *The one configuration.* Confirmed by hand (27, 26, 24, end; threshold 1: 27, 26, 24, 18, 32). The refuter found four, none from a `Locked` start; "the lock's own kind of reading keeps" without that: **says more**.
+- *The 285.* The count is program output. "Kept only by first making something that outlasts, or by losing the heaviest unit sooner" is a reading of two traces, one outside the sweep (reader-refute §7): **says more**.
+- *On `Three`.* Two readers, not one; one "by search on 24 configurations and an argument". Rightly conditional.
+- "Only `Renewable` has a process with moves in the Lean": **says more**; true of the four cases worked. Chapters 4 §8 (04-LIFE.md:261) and 5 §12 (05-COLLECTIVES.md:411) tell families "chosen at every step, so every sequence … is a course" (Lean not opened).
+
+None reads as a theorem.
+
+## 3. "What I take from it"
+
+- "Each time … the Lean of the first way": **says more**. On the 18th the join was in `Flow.Balances.kept_iff`, the web's record (reads-2026-11-18/NOTE.md:12).
+- "more joined than this row has been telling": **says more**. The record supports "states more". Against "joined" it found: no file naming both `Keepable` and `Recoverable`; six notions of "some course keeps it" with no relation stated (against-lean 10); two conventions for "in time" (built-cases LESSER 6); no theorem from `Kernel` to `Keepable` (built-cases MUST 3). It should not reach the direction page (line 94: "large and mostly unjoined").
+- "adds names, not links": follows for this frame; it passes over the widening on `Three`.
+- "What has not been done …": no report here names chapter 4 §8 or 5 §10; no source is given. **Says more**: the support-gated family is on the direction page (lines 23, 102) and was placed today (built-cases, `stoppingMalignant`). "Under a selection" is not so of `cultivation` ("a `Law`'s draw is given", built-cases §4). The choice comes from the session's own earlier record, not a count.
+- "each already has a model to show him": **says more**. The 17th found the third sense "only in built examples that give from nothing or stipulate constant levels", the second "not for units that multiply" (FROZEN-DIG-DEEPER.md:254–268).
+
+*Left out:* the question held since the 19th. The record bears on it: in this family the stopping comes only when no counted unit is left, which is chapter 2 §10's second way a lock is left and under the Lean's lock premises never happens (reader-refute §6); in all 240 no favoured unit's need was ever met; in the 144 the standstill held keeps too; at need 26 there is no turn. Also: the 19 November note's "the rule's change is what lets the rest go on" (line 41) now says less; and, my reading, if a reading does no work from one known start, the direction's question needs a class of starts.
+
+*Cut:* "each time … the first way"; "more joined". *Add:* the above; that the places named have choices at every step. *Ren's:* whether that stopping is a turn; which sense is meant, after the session says which it holds and why; whether paper joins on this row stop; any change to the direction page.
+
+**Confirmed:** "third day running"; the readers' judgments as quoted; the counts against the results files; the three senses (dig NOTE.md:8). **Not checked:** any Lean statement; the programs; where the last section's list of places comes from.
+
+"Nothing has changed": right of the map, reached harder than the frozen letter; not too soft; it undersells the re-placing of 19 November's course.
+The record is sound to tell from once the verdict's warrant and the last section's two claims about the Lean are mended.

@@ -1,0 +1,184 @@
+*AI-written (Claude Fable), 20 November 2026, by one reader who took no part in the writing; read-only, nothing built, no proof checked. Read whole: `FROZEN-REGIONS.md`, `AFTER-PROGRAMS.md`, `NEXT-STEP.md`; `Viability.lean`, `JointKeeping.lean`, `Renewal.lean`; `RelationalRenewal.lean` from line 96 to its end; `Labelled.lean` 497 to 870 (the `Renewable` runs); `ReadOffInTime.lean` 560 to 1372 (`Recoverable`, `NoReturnAt`, `ReadableInTime`, all of `FourReaders`); `TurningInTime.lean` 2347 to 3092 (all of `Three`); `Dependence.lean` 60 to 260 (the web's classes); `GuardHorizon.lean` 55 to 140 and 300 to 465; `OpenedCorrection.lean` 1 to 200; `Ranking.lean` 700 to 800; the direction page from its head note to line 80. At the statement only: `TurningInTime`'s `Turned`, `MeetsNeed`, `recoverable_iff_above`, `noReturnAt_iff_first_below`, `course_turned`, `turns_in_time_iff_before`; `Keeping.KeptFor`, `keptFor_of_closed`, `Matching.keeping_matters`; `RenewalFlow` 80 to 100 and 250 to 266; `RegimeMargin.step`. Of `ONE-SPACE-ON-PAPER.md` the first 40 lines. Not read: `regions.py`, `regions_2.py`, the `results-*.json`, the four reports beside `NEXT-STEP.md`, the record of 19 November, the plan, `LineOnAStock`, `RuleCapture`, `WayOfUnits`, the chapters (except chapter 5 §4's theorem paragraph and three lines found by word). Dates of first appearance are from `git log -S` on the Lean directory (read-only).*
+
+# The cases the Lean already has, placed by hand
+
+## Verdict
+
+On the cases the Lean has built, the regions sort no two courses apart that ending (of each formation, with its step) and the web's two classes do not already sort. What the regions add is a step on one course, the step from which no course keeps a guard, and for two guards the Lean already states it as `NoReturnAt` (`FourReaders.noReturn`, `Three.noReturn`), both from November. The middle region (kept by a choice from a reading) is stated for none of these cases.
+
+## Findings
+
+**MUST 1. "Every law of November is about one course as it runs" and "October's root has names for that" are not so for `Recoverable` and `NoReturnAt`.** (`FROZEN-REGIONS.md`, "The question" and G2: "Two of October's notions".) `ReadOffInTime.Recoverable`, `NoReturnAt` and `FourReaders` first appear on 10 November 2026 (commit `401d8b124`, K3); `TurningInTime.noReturnAt_iff_first_below` on 13 November (`2d8933f78`, TT2). Of the frame's names only `Kernel`, `KeptFor`, `UniformPolicy`, `Viable` and `Keepable` are October's (their files were first added on 14, 15, 18, 18 and 19 October; that is the date of the file at its present path, not of each declaration). November's Lean compares a course with others open from the same place in three places: `FourReaders.recoverable_iff` and `noReturn` (the clearer's four courses), `TurningInTime` section 7 (`recoverable_iff_above`, `noReturnAt_iff_first_below`, `turns_in_time_iff_before`, with the turns to one standing use as the feasible courses), and `Three.noReturn`. So the edge of "some course keeps it" is already a November theorem on two built cases. The search was by `git log -S` on the declaration text within the Lean directory; it would miss the same definition under another name before 10 November.
+
+**MUST 2. No course leaves K.** (`FROZEN-REGIONS.md`: "Along a course that ends, each region is left at some step"; G6: "leaves K, then R, then Kp, then ends".) `Viability.kernel_certificate` and `kernel_step_iff` say K is closed under every step, and `Kernel.run` that every run from K stays within the guard. A course that ends by leaving a guard was never in that guard's K. There are at most two steps to compare (leaving R, leaving Kp) and the end. The programs' table of clocks does not use a step of leaving K, so its numbers are untouched.
+
+**MUST 3. "K is within R, and R within Kp, for every reading" needs a premise the Lean states.** `GuardHorizon.kernel_viable` takes `live`: every configuration reached has an enabled move. No theorem was found from `Kernel` to `Keepable` (searched: every line naming `Keepable` in `.lean` files of the package and `deeper/`; it is named only in `JointKeeping.lean`). A configuration with no step is in K where the guard holds and is not in Kp, since a `Run` has a step at every index. November's nets end at just such places (`net` is `Law.stepWhile`, a next only where the need is met; it is a relation, not a `Process`, so this is said of it read as one). The writer's processes give every configuration a move, so the programs are untouched; the sentence as a claim about the frame says more than the Lean.
+
+**LESSER 1.** "`Renewable`'s two runs, which the Lean already places (the focal activity in K; the sustaining one in Kp and not in K)". The Lean places one configuration, `withinRenewal.state 0`, which the two runs share. It places neither run apart from the other, and that is the theorem's point.
+
+**LESSER 2.** Outside Kp is not for good in the Lean's one process here. In `Renewable.process` a level of 0 is outside Kp for "the sustaining formation is active", and a draw of 0 leads back to 1, which is in Kp (`dipping`, `pausing`; `drawing_after_loss`: the condition returns). `Recoverable` differs: not recoverable stays so (`Recoverable.earlier`), because what it asks is asked of the whole course. G2's "they say the same" needs this said.
+
+**LESSER 3.** The writer's open question on `Three` (step 1 against the Lean's step 3) is settled by the Lean's statements: they say the same. See "Three" below.
+
+**LESSER 4.** The frozen file sets its three steps beside the direction page's three clocks. The page's three are: before what is taken cannot come back; while those who register it have weight; before it removes them. Only the first is a region's edge.
+
+**LESSER 5.** `FourReaders` is in `ReadOffInTime.lean` (762 to 1370), not in `TurningInTime.lean`, which names it once in a docstring.
+
+**LESSER 6.** The Lean has two conventions for "in time", both November's: `Web.readableInTime_iff` asks `T < N` (recoverable at the step of the reading), `turns_in_time_iff_before` asks `T + 1 < N` (the step from the level read is still under the old use). `Three.read_to_ten` from seven is the Lean's own case where the one step decides: read at step 0, and it ends. Test 6 of the frozen file is therefore already instanced in the Lean.
+
+## 1. Is there a process with more than one course, in the Lean?
+
+| case | in the Lean | the smallest honest choice of moves, where there is none |
+|---|---|---|
+| `Renewable` | **Yes.** `Renewable.process : Process Nat Nat`, `t = s + 1 − d` (`Labelled.lean` 552). The configuration is the level, the move the amount drawn, any natural number. Five named runs from the level 1: `withinRenewal`, `beyondRenewal`, `escalating`, `dipping`, `pausing`. | |
+| `cultivation`, `malignant` | **No process.** Each is one `Law`, a determined course of one level. The Lean has a family: `Law` takes any `draw` and `contrib`, and three theorems quantify over it (`within_renewal_sustains`, `overdraw_consuming`, `no_return_below_support`). For `malignant` it has one other law from the same start with the same first draw: `Ranking.stoppingMalignant`, set beside it by `Ranking.restraint`. For `cultivation` no second law from its start was found (searched "cultivation" in the package and `deeper/*.lean`; this misses a law with its numbers under another name). | The draw at each step, the other fields held. A construction. |
+| `FourReaders` | **No process; a family of four courses.** `Stop` (`s0`, `s1`, `s2`, `never`), `Feasible l := ∃ k, l = levels k`. All four start alike; each is the clearer stopping for good before step 0, 1, 2, or never. `Recoverable` and `NoReturnAt` are stated on this family. | Whether the clearer clears at this step. The Lean's four courses are its runs that stop once; a construction would add runs that resume. |
+| `Three` | **No process; a family of courses.** `Turned X giving 3`: the course as it was (9, 8, 6, 2, 0) turned for good to the use three at some step. `noReturn` is stated on it. The marks and windows are parameters of determined laws. One named course turns back by its own step (`read_at_eight_ends`) and is outside `Turned`. | The writer's (the take reset at every step). A construction; it adds courses that turn back. |
+
+Where there is a family and no process I write K\* for "every feasible course agreeing so far keeps what is asked" and Kp\* for "some does". Kp\* is the Lean's `Recoverable`. K\* is my reading; the Lean does not define it.
+
+## 2 and 3. The cases
+
+### Renewable (the Lean's process; on a web through `Conditions.along`)
+
+Regions, for every configuration `s`, by hand:
+
+- *The focal formation is active.* `conditions.active s .focal` is `True` at every `s` (`Renewal.lean` 77), so K everywhere. The Lean states it at the level 1.
+- *The sustaining formation is active* (`1 ≤ s`). K is empty: the draw `s + 1` gives `s + 1 − (s + 1) = 0`. Kp is `s ≥ 1`: the draw 1 for ever gives `s + 1 − 1 = s`; and `Keepable.start` gives the guard. The Lean states both at the level 1 only.
+- *The level is at least `b`*, `b ≥ 1`. K empty, Kp is `s ≥ b`, by the same two draws.
+
+So in this process Kp is the guard itself, and K is everything or nothing. No configuration stands within a guard and is already lost.
+
+| run (levels) | focal active | sustaining active | focal's class | sustaining's class |
+|---|---|---|---|---|
+| `withinRenewal` (1, 1, 1, …) | K, every step | Kp not K, every step | renewing (Lean) | renewing (by hand, from `Renewed ()`, which `renewal_without_arising` states) |
+| `beyondRenewal` (1, 0, 0, …) | K | Kp not K at 0; outside from step 1, where the guard fails | consuming (Lean) | neither (by hand: need 1 above level 0; it draws on nothing) |
+| `escalating` (1, 1, 0, 0, …) | K | Kp not K at 0 and 1; outside from 2 | consuming (Lean, `stepwise_includes_before_escalation`) | neither |
+| `dipping` (1, 0, 1, 1, …) | K | Kp not K at 0; outside at 1; **back in Kp from 2** | neither: not consuming (Lean, `dip_breaks_without_consuming`), not renewing (by hand: level 0 at step 1) | neither |
+| `pausing` (1, 0, 1, 2, 3, …) | K | Kp not K at 0; outside at 1; back in from 2 | neither: `¬ Consumed ()` (Lean, `drawing_after_loss`); not renewing by hand | neither |
+
+Sources: the first row's regions at step 0 are `kept_part_not_renewal`; every other step of it is the same configuration. The rest of the regions are my computation above applied to the level at each step.
+
+Five runs from one configuration carry three classes of the focal formation, and the regions at that configuration are the same for all five.
+
+### cultivation and malignant (one course each; on a web through `Law.unfolding` and `SupportGated.web`)
+
+Levels, from `level_succ`:
+
+- `cultivation` (start 2, renew 1, both needs 1, draw 2, contributes 1): `2 + 1 + 1 − 2 = 2`, at every step.
+- `malignant` (start 4, renew 1, sustaining need 2, focal need 1, draw 3, contributes 0): `4 + 1 − 3 = 2`; `2 + 1 − 3 = 0`; below both needs it stays. Levels 4, 2, 0, 0, …
+- `stoppingMalignant` (the same, draw 3 then 1): `4 + 1 − 3 = 2`; `2 + 1 − 1 = 2`. Levels 4, 2, 2, … (`stoppingMalignant_level`).
+
+| course | as the Lean has it (one course) | with the Lean's two laws | with the draw freed (a construction) | class |
+|---|---|---|---|---|
+| `cultivation` | both formations active at every step: K and Kp are one, and it is in both (the general `within_renewal_renewing`, whose premises hold: `2 ≤ 1 + 1`, `1 ≤ 2`; the sustaining one by hand, `1 ≤ 2`) | no second law found | Kp is `level ≥ 1` for both guards (draw 2 holds the level), K empty (draw `level + 2`). At 2: Kp not K, never left | focal renewing (Lean); sustaining renewing (by hand) |
+| `malignant` | both guards fail at step 2 (by hand; the Lean gives "from some step on" for each): in neither from the start | agrees with `stoppingMalignant` at steps 0 and 1, parts at step 2. Kp\* for both guards at 0 and 1; left at 2, the step both guards fail | Kp is `level ≥ 2` for the sustaining guard (draw 1), `level ≥ 1` for the focal (at 1, draw 0). K empty. At 4 and 2: Kp not K; at 0: outside. Left at step 2, where both guards fail | focal consuming (Lean); sustaining neither (by hand) |
+| `stoppingMalignant` | both active at every step | Kp\* at 0 and 1; K\* from 2 | Kp not K at every step | focal renewing (by hand from `stoppingMalignant_level`; `within_renewal_renewing` does not apply, its first draw being 3 against 1) |
+
+Three theorems on the family are region statements without the name: with every draw within renewal, the level never falls below the start (`within_renewal_sustains`: a certificate, were the moves so restricted); with every draw beyond it, the sustaining formation ends (`overdraw_consuming`); below the sustaining need the level does not come back for any law that restores no more than it draws (`no_return_below_support`). The last makes "outside Kp" for good in this family, which it is not in `Renewable`'s process.
+
+`malignant` and `stoppingMalignant` stand at the same level at steps 0 and 1 and take the same first draw (`malignant_restraint`, first conjunct). One is consuming and the other renewing. The regions at steps 0 and 1 are the same for both.
+
+### FourReaders (a family of four courses; on a web, `web k`, where `draws` is set to `requires`)
+
+Habitat along each course: `s0` 4, 4, …; `s1` 4, 3, 3, …; `s2` 4, 3, 2, 2, …; `never` 4, 3, 2, 1, 0, … News: 1 for ever on `s0`; 1, 1, 0 on the others. Second news: 1 for ever on `s0`; 1, 1, 1, 0 on the others. Every formation is `active` at every step (`active _ _ := True`), so activity as a guard is kept trivially. The guard that can fail is admission, the need met, which is what the Lean asks (`DwellerKept`).
+
+Courses agreeing with `never` up to step N: all four at 0; `s1`, `s2`, `never` at 1; `s2`, `never` at 2; `never` alone from 3 (habitat differs at 1, 2, 3).
+
+Along `never`:
+
+| guard (need) | kept on | Kp\* holds at steps | left at | the guard fails at | source |
+|---|---|---|---|---|---|
+| dweller (habitat ≥ 1) | `s0`, `s1`, `s2` | 0, 1, 2 | **3** | **4** | Lean: `recoverable_iff`, `noReturn` |
+| near gauge (habitat ≥ 3) | `s0`, `s1` | 0, 1 | 2 | 2 | by hand; the Lean has its first step apart, 2 |
+| mid gauge (habitat ≥ 2) | `s0`, `s1`, `s2` | 0, 1, 2 | 3 | 3 | by hand; first apart 3 in the Lean |
+| listener (second news ≥ 1) | `s0` | 0 | **1** | **3** | by hand; first apart 3 in the Lean |
+| first relay (habitat ≥ 4) | `s0` | 0 | 1 | 1 | by hand |
+| second relay (news ≥ 1) | `s0` | 0 | **1** | **2** | by hand |
+
+K\* is never held along `never`. Along the others it is entered one step after the courses part: on `s0` from step 1 for every guard; on `s1` from step 2 for the dweller and both gauges; on `s2` from step 3 for the dweller and the mid gauge. The clearer and the renewer require nothing and are admitted everywhere.
+
+The web's classes, by hand (the Lean states none for this case; searched `RenewingIn`, `ConsumingIn`, `Renewed`, `Consumed` in `ReadOffInTime.lean`):
+
+- On `s0` every condition keeps every need at every step: every formation is renewing.
+- On `s1`, `s2` and `never` the habitat is consumed (the first relay's need of 4 is met at step 0 and at no later step), news is consumed (from step 2) and the second news (from step 3). The dweller, both gauges and both relays and the listener draw on one of these, so each is consuming, on all three courses alike.
+- The clearer and the renewer take part in no condition (`draws` is `requires`, and they require nothing), so each is renewing on every course, the cleared one included.
+
+So the classes sort the four courses as `s0` against the other three. They do not tell `s1`, `s2` and `never` apart for any formation, and they count the clearer as renewing on the course it clears. The dweller's keeping sorts `never` against the other three. This web was built for admission and was not built for the classes.
+
+The Lean's "readable in time" here sets two steps of two guards against each other: the step a reader's own guard first fails against the step the dweller's Kp\* is left (3). The near gauge fails at 2, before 3. Under `TurningInTime`'s convention (act one step after the reading) it would be at the point, not before it; that is my arithmetic, not a Lean statement.
+
+### Three (families of courses; not on a web: "the pair has no web", `TurningInTime.lean` near line 291)
+
+`RegimeMargin.step g H x = (x − H) + g (x − H)`, giving `min z (12 − z)`. As it was, use five: `9 → 4 + 4 = 8 → 3 + 3 = 6 → 1 + 1 = 2 → 0`. Under three: `9 → 12`, `8 → 10`, `6 → 6`, `2 → 0`, `10 → 12`, `12 → 12`. Turned at step 0: 9, 12, 12, …; at 1: 9, 8, 10, 12, …; at 2: 9, 8, 6, 6, …; at 3 or later: 9, 8, 6, 2, 0. The first three keep the need of one.
+
+Guard: the level is at least one (`MeetsNeed 1`). The family is the Lean's `Turned`.
+
+| course (levels) | Kp\* (`Recoverable`) | K\* (by hand) | ends | source |
+|---|---|---|---|---|
+| as it was: `ends_as_it_was`, `lock_ends`, `rise_lock_ends`; `turned_and_ends` has the same levels (9, 8, 6, 2, 0) | steps 0, 1, 2; **left at 3** | never | level 0 at step 4 | Lean: `noReturn`, `NoReturnAt.recoverable_iff`; the end by each theorem's conjunct that the net reaches the level 0 in four steps |
+| `goes_on`, mark at nine; `read_to_ten` from nine; `unlocked_goes_on` (9, 8, 10, 12, …) | every step | from step 2 | never (Lean) | Kp\* and K\* by hand: from step 2 only the turn at 1 agrees |
+| `goes_on`, mark at eight; `held_at_six`; `share_read_goes_on` (9, 8, 6, 6, …) | every step | from step 3 | never (Lean) | by hand |
+| `read_at_eight_ends` (9, 8, 6, 6, 2, 0) | steps 0 to 2, where it agrees with the course as it was; from step 3 it is not a course of `Turned` | not determinable in the Lean's family | level 0 at step 5 (Lean) | |
+| `read_to_ten` from seven (7, 4, 2, 0) | as it was from seven is 7, 4, 0: Kp\* at step 0 (`6 ≤ 7`), left at 1 (`4 < 6`) | never | level 0 at step 3 (Lean) | by hand from `recoverable_iff_above`, whose premises hold as in `noReturn` (`7 < 10`, `7 ≤ 12`) |
+| `rise_count_ends` (12, 12, 12, 12, 12, 10, 4, 0; the use is the share) | no family in the Lean | | step 7 (Lean) | not determinable without a construction |
+
+**The writer's question.** In the writer's process the take set at a step is in force from the next. I recomputed its regions my own way (a fixed point over the 26 configurations with level at most 12) and get the writer's sets: Kp with five in force from 8 up, with three from 6 up; K with five from 10 up, with three from 8 up. With the take acting on the same step, Kp is the level at least 6 under either take, which is `recoverable_iff_above`'s `H₂ + y₂ ≤ X N`. Along the course as it was the writer's last configuration in Kp is at step 1 and the first outside is at step 2; the Lean's last recoverable step is 2 and its point of no return 3. The one step between them is the lag, and the Lean has the lag as a theorem: `turns_in_time_iff_before` asks `T + 1 < N` for the first marked step `T`, and `goes_on` (marks at steps 0 and 1) and `turned_and_ends` (mark at step 2) are its two sides here. So on `Three` the edge of Kp is `noReturn` with `turns_in_time_iff_before`, as G1 guessed. With three in force the writer's K (from 8 up) is not "never ending as it was" for that kind, which never ends from 6 up; it is "the next level is 10 or more".
+
+## Test 1, second half: do the regions sort differently from renewing and consuming?
+
+Differently, in both directions, and in neither direction do they sort anything that the ending of each formation does not.
+
+- *Same regions, different class.* `Renewable`'s runs at their shared start (Lean: `kept_part_not_renewal`; with the three other runs, three classes). `malignant` and `stoppingMalignant` at steps 0 and 1 (Lean for one class, by hand for the other). This direction is forced: a region is a fact of a configuration (`Kernel.run`; `Keepable` by its definition), so it cannot tell apart two courses while they stand at one configuration.
+- *Same class, different regions.* `FourReaders`' `s1`, `s2` and `never`: every formation has one class on all three, and the dweller's keeping is entered for good at step 2, entered at step 3, and lost at step 3. But the dweller's ending already tells `never` from the other two, and the near gauge's tells `s1` from `s2`.
+- *The step.* Where the regions say something the endings do not, it is a step on one course: no course keeps the guard from a step before the guard fails. The gap is 0 in `Renewable` and for `malignant`; 1 for the dweller and for `Three` (both Lean); 1 for the second relay and 2 for the listener (by hand); 0 for the gauges and the first relay. No two courses in these cases differ in that gap while agreeing in when they end.
+
+**What `kept_part_not_renewal` already settles.** Three things, at one configuration. That no course leaves a formation's own guard decides neither its class nor another's fate: two runs of opposite class share it. A second guard, at the same configuration, is in Kp and not in K, and the witnesses are the same two runs: the renewing run is why it is in Kp, the consuming run why it is not in K. And so a region is of the configuration and the guard, while the class is of the run. It does not settle anything about steps, being stated at the start only.
+
+One relation follows from the definitions in one line each, and is my working, not a Lean statement. Along a run on which a formation is renewing, each need on a condition it takes part in is met at every step, so the run itself keeps that guard from each of its steps. Along a run on which it is consuming, some need on a condition it draws on is unmet at every step after some step, so the run stands outside that guard's Kp from then on. Neither converse holds: `dipping` leaves Kp and is not consuming; `fluctuating` is never in Kp and is not consuming.
+
+## 4. A reading
+
+None of these cases has, in the Lean, a move chosen from a reading. `Renewable`'s moves are free; a `Law`'s draw is given; the clearer's stop is given (`means`), and the four readers' readings are set against the point of no return without any of them choosing anything; in `Three` the marks and windows are given.
+
+`UniformPolicy` outside `GuardHorizon.lean` (searched `UniformPolicy`, `FiberFeasible`, `uniform_viable`, `GuardHorizon.` in the `.lean` files of the package and `deeper/`): one use, `OpenedCorrection.Correctable`, with the built case `Linked` on `Revising`'s process. What is asked there is one acceptable and executable act, not a guard kept. Inside `GuardHorizon`, `uniform_viable` keeps a guard one step further. The search misses the same notion under another name, and there is one: `Keeping.KeptFor` (a class kept for `n` steps through what the steps keep, with plans), stated for built cases in `Matching.keeping_matters` (two steps) and `ChoicePoint.keptFor_each_not_joint` (every horizon). So the middle region is stated for no case named here, and for no built case as "for ever, by a choice from a reading of the configuration".
+
+## 5. One table
+
+Sources: **L** the Lean's statement (named), **h** my hand computation, **c** only with a construction. "Left" is the first step outside. K is never left (MUST 2), so its column says only whether it holds.
+
+| case | course | guard | at the start | K | Kp left at | guard fails at | class of the formation named | source |
+|---|---|---|---|---|---|---|---|---|
+| Renewable | `withinRenewal` | focal active | K | every step | never | never | focal renewing | L `kept_part_not_renewal` |
+| | | sustaining active | Kp not K | no | never | never | sustaining renewing | L at step 0; class h |
+| | `beyondRenewal` | focal active | K | every step | never | never | focal consuming | L |
+| | | sustaining active | Kp not K | no | 1 | 1 | sustaining neither | L at step 0 and for the end; class h |
+| | `escalating` | sustaining active | Kp not K | no | 2 | 2 | focal consuming | regions h; class L |
+| | `dipping` | sustaining active | Kp not K | no | 1, back in at 2 | 1 only | focal neither | regions h; not consuming L |
+| | `pausing` | sustaining active | Kp not K | no | 1, back in at 2 | 1 only | focal neither | regions h; not consumed L |
+| Law | `cultivation` | either active | one course: kept | (one course) | never | never | focal renewing | L; with moves c |
+| | `malignant` | either active | one course: lost; with `stoppingMalignant`: Kp\* | no | 2 | 2 | focal consuming | class L; steps h; family L (`Ranking`) |
+| | `stoppingMalignant` | either active | Kp\* | from 2 (K\*) | never | never | focal renewing | levels L; rest h |
+| FourReaders | `never` | dweller | Kp\* | no | 3 | 4 | dweller consuming | L `noReturn`; class h |
+| | | near gauge | Kp\* | no | 2 | 2 | consuming | h |
+| | | mid gauge | Kp\* | no | 3 | 3 | consuming | h |
+| | | listener | Kp\* | no | 1 | 3 | consuming | h |
+| | | first relay | Kp\* | no | 1 | 1 | consuming | h |
+| | | second relay | Kp\* | no | 1 | 2 | consuming | h |
+| | `s2` | dweller | Kp\* | from 3 (K\*) | never | never | consuming | h |
+| | | near gauge | Kp\* | no | 2 | 2 | consuming | h |
+| | `s1` | dweller, both gauges | Kp\* | from 2 (K\*) | never | never | consuming | h |
+| | `s0` | every reader | Kp\* | from 1 (K\*) | never | never | renewing | h |
+| | every course | clearer, renewer | K\* | every step | never | never | renewing | h |
+| Three | as it was from nine | level ≥ 1 | Kp\* | no | 3 (the writer's process: 2) | 4 | no web | L `noReturn`; the writer's c |
+| | mark at nine | level ≥ 1 | Kp\* | from 2 (K\*) | never | never | no web | ends not: L; regions h |
+| | mark at eight, `held_at_six` | level ≥ 1 | Kp\* | from 3 (K\*) | never | never | no web | ends not: L; regions h |
+| | `read_at_eight_ends` | level ≥ 1 | Kp\* | no | not in the Lean's family (the writer's process: 3) | 5 | no web | end L; rest c |
+| | as it was from seven (7, 4, 0) | level ≥ 1 | Kp\* (the writer's process: outside) | no | 1 | 2 | no web | h from `recoverable_iff_above`; that the windowed course from seven is read at step 0 and ends is L `read_to_ten` |
+| | `rise_count_ends` | level ≥ 1 | | | | 7 | no web | end L; regions c |
+
+## What the table shows that the Lean does not state in one place, and what it does not
+
+It shows four things. The Lean names regions and classes together in one theorem only, `kept_part_not_renewal`, at one configuration; for `FourReaders` and the laws both can be had by hand, and they sort differently. The step from which no course keeps a guard comes before the guard's own failing in a few rows only (the dweller, `Three`, the second relay, the listener), and the Lean has the first two as `NoReturnAt`. Every case where K\* holds for a guard that can fail is a family in which the turn or the stop is for good; in the Lean's one process here K is everything or nothing and Kp is the guard. And the Lean keeps two conventions for when a reading can still act, with one built case where the step between them decides.
+
+It does not show a middle region, since no case has a choice from a reading. It shows no pair of courses that the regions tell apart and the endings do not. It says nothing of units that multiply or of a rule set again from a share: the lock's courses in `Three` are placed by their levels only. It gives no class for `Three`, which has no web. And it is a table of built cases worked by hand: it shows where a statement fails, not that one holds.

@@ -1,0 +1,97 @@
+*AI-written (Claude Fable 5.2); lens: NOTE.md against the Lean at its statements; 20 November 2026. Read-only, nothing built, no proof checked.*
+
+**Read.** Whole: `Viability.lean`, `JointKeeping.lean`, `GuardHorizon.lean`, `Keeping.lean`. In part: `ReadOffInTime.lean` 1–125, 580–760, 960–1105; `TurningInTime.lean` 1–370, 1912–2505; `02-MAP.md` §11; `Frame.lean` (`Run`); `WayOfUnits.lean` 335–360; `LineOnAStock.lean` 1217–1262; `deeper/RelationalRenewal.lean` 233–252, 505–545. Statements were written down before any report was opened; `reader-against-lean.md` was then read whole, the other reports by word search only.
+
+## Sentences at fault
+
+1. *"The Lean of November already compares a course with the turns open from it: `ReadOffInTime.Recoverable` and `NoReturnAt` … which chapter 2 §11 tells."* **Says more** (premises dropped).
+   - `Recoverable feasible keeps l N := ∃ l', feasible l' ∧ AgreeUpTo l' l N ∧ keeps l'` (ReadOffInTime.lean:591–592). The feasible courses are a premise there.
+   - Only TurningInTime §7 makes them turns, and only to one standing use, held (`Turned`, 1945–1946; "other continuations are not considered", 1933–1934).
+   - `recoverable_iff_above` (2087–2092) also asks `fall`, `top`, `nothing`, `short`, `meets`, `keeps` and `0 < need ≤ H + y`.
+   - In `FourReaders` the feasible courses are four supplied stops (967–968).
+   - 02 §11 tells the four TurningInTime statements (02-MAP.md:508, 512) and sends `Recoverable`/`NoReturnAt` to 07 §3.6.
+   - That the frozen sentence is false stands.
+
+2. *"`ReadOffInTime.Recoverable`"* **Lesser.** There is no such namespace. They are `Becoming.Recoverable` and `Becoming.NoReturnAt` (section `NoReturn`, 585–596).
+
+3. *"`GuardHorizon.UniformPolicy` asks one choice good at every configuration."* **Says less.**
+   - The definition is `∃ policy : O → A, ∀ s, good s (policy (obs s))`, with `good` supplied (GuardHorizon.lean:326–327).
+   - It is `uniform_viable`'s premise `UniformPolicy read (Admissible P guard n)` (406–410) that asks every configuration. It does so for one horizon `n` and gives `n + 1` steps, not keeping for ever.
+   - With `good` relative to a closed set it can be written for a start, as the note's own reader showed (finding 5). The note keeps only "not the Lean's".
+
+4. *"From one known start on a determined process a reading does no work."* **Says more** than its source as worded.
+   - It is so of `Viability.KeptFor` (Keeping.lean:90–94), by argument from the definition, for each horizon. From a class of one configuration, with at most one successor per move, every `Seen` class is one configuration or empty. The empty class is kept once there is a move (`keptFor_empty`, 301). So `sense` drops out.
+   - No Lean statement of this was found in `Keeping.lean` or `JointKeeping.lean`; `KeptFor.finer` (288) is one direction only.
+   - The sentence names neither `KeptFor` nor that it is argued.
+   - Of the writer's own middle region a reading does do work, which the next clause concedes.
+
+5. *"Only `Renewable` has a process with moves in the Lean."* **False** as worded.
+   - The Lean has `ChoicePoint.process` (JointKeeping.lean:174), `Matching.process` (Keeping.lean:361) and `Viability.disturbed` (Viability.lean:137).
+   - It is true of the courses listed: `ReadOffInTime.lean`, `TurningInTime.lean` and `WayOfUnits.lean` hold no `Process` (grep).
+   - `ChoicePoint` and `Matching` are the frame's own built cases, and the note places neither.
+   - `Matching.keeping_matters` (435–438) is the only place found where what a step keeps does work, and its class has two starts. That supports sentence 4.
+
+6. *"the refuting reader names `WayOfUnits.ends_while_net_goes` and chapter 2 §9 for these."* **Lesser.**
+   - That theorem (WayOfUnits.lean:352–355) asks `p ∈ w`, `x < need p`, `q ∈ w`, `need q ≤ x`, under any giving. It is told in 02 §11 (02-MAP.md:515).
+   - reader-refute.md:54 gives §11 for the unit lost and §9 for the other kind removed.
+
+7. *"Two notions of 'some course keeps it' (G2)."* **Says less.** Also read: `GuardHorizon.Viable`, `DViable` and `PathSafe` (71–73, 145–147, 160–162), and `KeptFor`. `PathSafe` is for one start over `n` steps, with a choice from the whole configuration and the steps left. Its reader's finding 10 has this; the note dropped it.
+
+8. *"the places where the Lean already has a going-on that keeps up what it rests on, at a cost, under a selection: … `cultivation` beside `malignant`."* **Says more**, if all three are meant of each.
+   - `cultivation : Law := ⟨2, 1, 1, 1, fun _ => 2, fun _ => 1⟩` (RelationalRenewal.lean:515).
+   - `Law` has `start`, `renew`, `needG`, `needF`, `draw`, `contrib` (236–242).
+   - No selection was found in what was read (233–252, 505–545).
+   - `formation_does_not_decide` (521–535) says only that formation does not tell the two apart.
+
+9. *"Three regions"* nested (FROZEN: "K is within R, and R within Kp"). **Lesser**: a premise.
+   - `Run` is infinite (Frame.lean:64–67), so `Kernel` holds and `Keepable` fails at a configuration within the guard with no move.
+   - `kernel_viable` asks `live` (GuardHorizon.lean:134–135).
+   - No `Kernel → Keepable` was found in `Viability.lean` or `JointKeeping.lean`.
+   - On the writer's processes every move is enabled, so it holds there.
+
+## The two corrections
+
+- **First: so.** The premises above are missing from its telling (item 1).
+- **Second: so, as "not found in what was read".**
+  - `UniformPolicy` has no start in it. Outside `GuardHorizon.lean` its only other use is `OpenedCorrection.Correctable` (76), over every situation.
+  - `KeptFor` is of a class, for `n` steps, with recall. Its `sense` is a map of steps, not a reading of a configuration.
+  - A stationary choice from a reading, for one start, for ever, was not found in the four files read whole.
+  - "Does no work" is an argument, not a theorem (item 4).
+
+## Where I differ from `reader-against-lean.md`
+
+- **Agree, checked:** its findings 1, 2, 4, 5, 6, 8 and 10.
+- **`Three`, checked by a throwaway snippet (levels 0 to 12):**
+  - Kp is three in force from 6 and five in force from 8.
+  - K is three in force from 8 and five in force from 10.
+  - From (five, 9) the course is in Kp at steps 0 and 1 and out at step 2. That is the Lean's step 3 (`Three.noReturn`, 2457–2459; `T + 1 < N`, 2315).
+  - Mixtures of the two takes add nothing there.
+- **It does not say:**
+  - that `Recoverable`'s feasible courses are a premise at the definition (item 1);
+  - the liveness premise (item 9); its "nothing added" needs it;
+  - that the `KeptFor` sentence is argued and per horizon; it states it as fact.
+- **Small:** `Recoverable` also occurs in `Becoming.lean`'s docstring (4915, 5012), not in two files only. Still no file names both.
+- **Not checked by me:** its findings 3, 7, 11, and the `Onward` and `Parting` statements.
+
+## Confirmed
+
+- `Kernel` (Viability.lean:55–56) and `Keepable` (JointKeeping.lean:91–92, in namespace `Viability`) are as told.
+- The second false sentence is false: `kernel_certificate` (78–82) and `Kernel.run` (115–117).
+- Dates, by git log: `Recoverable` in 401d8b124, 10 November; the four TurningInTime statements in 2d8933f78, 13 November.
+- No live file names both `Keepable` and `Recoverable` (grep -w over `Becoming/*.lean` and `Becoming.lean`, dated copies left out).
+- "The middle region is stated for none": `UniformPolicy` is in `GuardHorizon.lean` and `OpenedCorrection.lean` only; `KeptFor` is in `Keeping.lean` and `JointKeeping.lean` only.
+- The G2 join with a reading that fixes the configuration: worked through on paper, it holds.
+
+## Could not check
+
+- Any proof.
+- The counts.
+- The paper checks on the units, on `FourReaders` and on `Renewable`.
+- "The line on a stock's holding law". The note does not name it. `LineOnAStock.unending_iff_holds` (1239–1247) has premises `even`, `some`, `down`, `needs`, `nothing`, `high`, `along`, and its right side is "comes to a configuration that `Holds`".
+- The three clocks against the direction page.
+- Chapters 4 §8, 5 §10 and §12.
+- The record of 17 November.
+
+**"Nothing has changed":** the right reading of the frozen tests from this lens. Tests 3 and 7 are confirmed on `Three` at the statements.
+
+**The record:** sound to tell from once items 1, 4, 5 and 8 are reworded; nothing in the two corrections was found false.

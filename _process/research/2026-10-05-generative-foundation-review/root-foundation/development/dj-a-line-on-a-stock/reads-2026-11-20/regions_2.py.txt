@@ -1,0 +1,99 @@
+#!/usr/bin/env python3
+"""Second pass, after regions.py's sweep was read (AI-written scratch, 20 November 2026; a search, not a proof).
+  anti   : among configurations kept by some rule set from the share and by no one rule held, is the reading that
+           keeps them of the lock's kind (rule 1 where the share is at least a threshold) or of the reverse kind
+           (rule 1 where the share is below a threshold)?
+  clocks : along each lock's own course from a start that some course keeps (rule 1 in force, threshold 1):
+           the first step whose configuration no course keeps (the point of no return), the first step at which
+           the rule in force no longer favours (the reading has moved), and the step at which it ends, if it does.
+  other0 : the same tally of regions where the rule that does not favour is not a standstill.
+Usage: python3 -B regions_2.py anti | clocks | other0
+"""
+import itertools, json, sys
+from regions import Units, reach, gfp, run_policy, kept_by_reading, kept_mono, classify, innermost, OUT
+
+KID = [(a, b) for a in range(0, 3) for b in range(0, 3)]
+FREEZE = ((1, 0), (0, 1))
+
+
+def instances(cs=(8, 12), rule0=(FREEZE,), conv='next'):
+    for c in cs:
+        for needF, needO in itertools.product((1, 3, 5, 7), (1, 3, 5)):
+            for useF, useO in itertools.product((1, 2), (1, 2)):
+                for kF1, kO1 in itertools.product(KID, KID):
+                    if kF1[0] < 1: continue
+                    for k0 in rule0:
+                        yield Units(c, (needF, needO), (useF, useO), {0: k0, 1: (kF1, kO1)}, conv)
+
+
+def starts_of(m):
+    return [(nF, nO, r, x) for nF in (0, 1, 2) for nO in (0, 1, 2) for x in range(0, m.c + 1) for r in (0, 1) if nF + nO > 0]
+
+
+def anti():
+    tally, ex = {}, {}
+    for m in instances():
+        g = m.guard('way'); starts = starts_of(m)
+        succ = reach(m, starts, g); K = gfp(succ, True); Kp = gfp(succ, False)
+        top = max([t[0] for t in succ] + [0]); share = m.obs('share')
+        for s in starts:
+            if not g(s) or s not in Kp or s in K: continue
+            up = kept_mono(m, s, g, top)
+            if 0 in up or top + 1 in up: continue                      # one rule held keeps it
+            down = [th for th in range(0, top + 2) if run_policy(m, s, lambda t: 1 if share(t) < th else 0, g)]
+            anyshare = kept_by_reading(m, s, share, g, Kp, K)
+            key = ('lock-kind threshold keeps' if up else 'no lock-kind threshold') + '; ' + \
+                  ('reverse-kind threshold keeps' if down else 'no reverse-kind threshold') + '; ' + \
+                  ('some function of the share keeps' if anyshare else 'no function of the share keeps')
+            tally[key] = tally.get(key, 0) + 1
+            if key not in ex:
+                ex[key] = {'c': m.c, 'need': m.need, 'use': m.use, 'kids under the favouring rule': m.kids[1], 'configuration': s,
+                           'lock-kind thresholds': up[:4], 'reverse-kind thresholds': down[:4]}
+    print(json.dumps(tally, indent=1)); json.dump({'tally': tally, 'examples': ex}, open('results-anti.json', 'w'), indent=1)
+
+
+def clocks():
+    tally, ex = {}, {}
+    for m in instances():
+        g = m.guard('way'); starts = starts_of(m)
+        succ = reach(m, starts, g); Kp = gfp(succ, False); K = gfp(succ, True)
+        for s in starts:
+            if s[2] != 1 or s[0] < 1 or not g(s) or s not in Kp: continue   # a locked start that some course keeps
+            course, t, seen = [], s, set()
+            while g(t) and t not in seen:
+                seen.add(t); course.append(t); t = m.step(t, 1 if t[0] >= 1 else 0)
+            ends = not g(t)
+            noret = next((i for i, u in enumerate(course) if u not in Kp), None)
+            moved = next((i for i, u in enumerate(course) if u[2] == 0), None)
+            if not ends:
+                key = 'never ends: ' + ('start kept whatever the rule' if s in K else
+                                        ('the rule stops favouring at some step' if moved is not None else 'the rule favours throughout'))
+            else:
+                if moved is None: key = 'ends: the rule favours to the end'
+                elif moved <= noret: key = 'ends: the rule stopped favouring at or before the point of no return (step %s against %s)' % ('=' if moved == noret else '<', 'it')
+                else: key = 'ends: the rule stopped favouring after the point of no return'
+            tally[key] = tally.get(key, 0) + 1
+            if key not in ex:
+                ex[key] = {'c': m.c, 'need': m.need, 'use': m.use, 'kids under the favouring rule': m.kids[1], 'course': course[:10],
+                           'first step no course keeps': noret, 'first step the rule in force does not favour': moved,
+                           'ends at step': len(course) if ends else None}
+    print(json.dumps(tally, indent=1)); json.dump({'tally': tally, 'examples': ex}, open('results-clocks.json', 'w'), indent=1)
+
+
+def other0():
+    out = {}
+    for name, k0 in (('standstill: each leaves itself', FREEZE), ('F leaves itself and an O, O itself', ((1, 1), (0, 1))),
+                     ('F leaves itself, O two O', ((1, 0), (0, 2))), ('F leaves two F, O nothing', ((2, 0), (0, 0)))):
+        tally = {}
+        for m in instances(cs=(8,), rule0=(k0,)):
+            g = m.guard('way'); starts = starts_of(m)
+            succ = reach(m, starts, g); K = gfp(succ, True); Kp = gfp(succ, False)
+            for s in starts:
+                if not g(s): continue
+                cl = innermost(classify(m, s, g, succ, K, Kp)); tally[cl] = tally.get(cl, 0) + 1
+        out[name] = tally; print(name, tally, flush=True)
+    json.dump(out, open('results-other0.json', 'w'), indent=1)
+
+
+if __name__ == '__main__':
+    {'anti': anti, 'clocks': clocks, 'other0': other0}[sys.argv[1]]()

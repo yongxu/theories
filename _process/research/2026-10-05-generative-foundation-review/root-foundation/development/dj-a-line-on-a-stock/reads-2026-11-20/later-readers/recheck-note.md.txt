@@ -1,0 +1,155 @@
+*AI-written (Claude Fable 5.2), 20 November 2026, by one reader who took no part in the try, its reading or its rewriting. Read whole: `NOTE.md` as it stands, `DIRECTION-CHANGE.md`, `FROZEN-REGIONS.md`, `AFTER-PROGRAMS.md`, the writer's four readers' reports, the four later readers' reports with their brief, the six `results-*.json` and `sweep.log`, the records of 18 and 19 November, `_process/DIRECTION.md` lines 1 to 39 and 96 to 106 (the rest by word search). Read in part: `reader-significance.md` (its findings in short, its chapter 5 and chapter 4 index, section 3.1 and 3.2), `dig-2026-11-17` (the three senses), `NEXT-STEP.md` (head), `regions.py` (the sweep's ranges), chapter 2 §11 by the four names. Lean at the statement and docstring, no proof: `Viability.Kernel`, `kernel_certificate`, `Kernel.run`; `Viability.Keepable` and what follows it in `JointKeeping.lean`; `GuardHorizon.Viable`, `Closed`, `kernel_viable`, `DViable`, `dViable_iff`, `UniformPolicy`, `uniform_viable`; `Keeping.KeptFor`; `Becoming.Recoverable`, `NoReturnAt`, `Web.readableInTime_iff`; `TurningInTime` section 7's account, `Turned`, `recoverable_iff_above`, `noReturnAt_iff_first_below`, `turns_in_time_iff_before`, `Three.goes_on`, `Three.noReturn`. Nothing was built and no program was run; one course was traced by hand; two commit dates were read from the log. Not checked: any proof; "I had said it to Ren that morning"; Ren's "Yes, on paper"; the readers' own programs.*
+
+# The rewritten note, read again
+
+**In short.** Of the faults the four later readers listed, nearly all are repaired; six are repaired only in part (the `UniformPolicy` form of the middle region, the 240, the family in which the level candidate breaks, the traces behind the 285, the astra reader's point on test 5, "nearly all … lost") and one, the pointer to where `AFTER-PROGRAMS.md` says more than its tables, is not. Read afresh, the note has eight places that are false or say more than their source (MUST 1 to 8), five of them in sentences new in the rewrite. The numbers all stand against the result files. The sentence proposed for the direction page is true by `results-course.json`; it has no MUST, and three lesser places.
+
+## 1. The later readers' faults, one by one
+
+**`fable-against-the-lean.md`**
+
+| item | now | present words |
+|---|---|---|
+| 1 `Recoverable` told without its premises | REPAIRED | "the feasible courses are a premise there … takes them to be the turns to one standing use, held, under its premises on the stock and the need" (lesser 1) |
+| 2 no namespace `ReadOffInTime` | REPAIRED | "`Becoming.Recoverable` and `NoReturnAt` (in `ReadOffInTime.lean` …)" |
+| 3 `UniformPolicy` says less | PARTLY | the sentence is gone; that the middle region can be written with `UniformPolicy` over a closed set is still not told (lesser 9) |
+| 4 "a reading does no work" unsourced | REPAIRED | "as the Lean's `KeptFor` has it … that is argued from the definition, not a theorem" |
+| 5 "Only `Renewable` has a process" | REPAIRED | "On `TurningInTime.Three` and on the units of 19 November the moves are my construction" |
+| 6 §11 and §9 misassigned | REPAIRED | "(chapter 2 §11) … (§9)" |
+| 7 "two notions" says less | REPAIRED, with MUST 3 | "one reader counts six notions" |
+| 8 `cultivation` "under a selection" | REPAIRED | removed |
+| 9 nesting needs a premise | REPAIRED, with MUST 6 | third bullet of the false sentences |
+
+**`fable-against-its-reports-and-results.md`**
+
+| item | now | present words |
+|---|---|---|
+| 1 "tests 3 and 7 trip" as one reader's | REPAIRED, with MUST 1 | "In my first form I took the refuting reader's summary …" |
+| 2 two more frozen sentences wrong | REPAIRED | "and three more were wrong", four bullets |
+| 3 the blind rebuild overtold | REPAIRED | "rebuilt the 19 November courses, the main row of the sweep and the clocks without seeing mine, and the rest after opening mine" |
+| 4 the 240 | PARTLY (MUST 2) | "In all 240 courses from starts not kept whatever the rule in which it stops" |
+| 5 "its zero is forced" | REPAIRED | removed |
+| 6 three edges and three clocks | REPAIRED | removed |
+| 7 "Only `Renewable`"; header; `cultivation` | REPAIRED | removed or reworded |
+| 8 tests 1, 4, 6 untold | REPAIRED | all seven numbered; test 6 names the guard and the Lean's two conventions |
+| 9 267,313 told of 19 November's units | REPAIRED | the sweep is described under test 2 (lesser 6) |
+| 10 "need 26 … everything ends" | REPAIRED | "the lock's own course and its twin both end …; the standstill held still keeps a small unit" |
+| 11 attributions and counts | REPAIRED but for one | "(three readers)"; "four configurations"; "not a definition unfolded"; "the guard holds so far". Not told: the break of the candidate on the units is in a family added after the sweep (lesser 8) |
+| 12 the refuter's judgment of the 285 | REPAIRED | "no law of November is about that, and it is where comparing courses has content" |
+| the two sentences of `AFTER-PROGRAMS.md` | NOT (MUST 4) | "where it says more than its tables is told above" |
+
+**`fable-the-tests-and-what-is-taken.md`**
+
+| item | now | present words |
+|---|---|---|
+| "by its own tests, nothing has changed" | REPAIRED | "So what follows is no result against the frame." |
+| "tests 3 and 7 trip" says less | REPAIRED | as above |
+| "No sentence across two models" | REPAIRED | "The refuting reader found none … Two others give candidates" |
+| tests 4 and 6 without a bullet | REPAIRED | |
+| the false premise is the question's | REPAIRED | "One reader's judgment, which I take …" (lesser 4) |
+| "its start is kept" | REPAIRED | "(a small unit that the favouring step already set has made)" |
+| need 26 | REPAIRED | |
+| one configuration, the lock's kind | REPAIRED | "four configurations were found, none from a locked start" |
+| the 285's "kept only by" | PARTLY | "In the ones traced …": two were traced, one outside the sweep (lesser 12) |
+| `Three`, one reader | REPAIRED | "Three readers, by hand or small search" |
+| "each time … the first way" | REPAIRED | removed |
+| "more joined than this row has been telling" | REPAIRED, with MUST 3 | "I do not conclude from it that the Lean is joined" |
+| "What has not been done …" | REPAIRED (lesser 16) | "A reader of 18 November already set …" |
+| "each already has a model to show him" | REPAIRED | removed |
+| left out: the question of the 19th | REPAIRED | second kept bullet; the list of what is Ren's |
+| add: the places named have choices at every step | NOT | not added (no fault in leaving it) |
+
+**`astra.md`**
+
+| bullet | now | present words |
+|---|---|---|
+| 1 "Every process below is the writer's construction" | REPAIRED | |
+| 2 the rebuild | REPAIRED | |
+| 3 tests 1 and 5 "could not have failed" | PARTLY | test 1 gives the two survivors of `Three.goes_on` as that reader holds them; that reader's point on test 5 (a kind lost on one course leaves open whether another keeps it) is not told, and "on processes I made up nothing could count" stands as one reader's judgment the writer takes |
+| 4 the two outer regions; tests 3 and 7 | REPAIRED | "the innermost region is 'five held keeps', the outer is 'three held keeps'"; 285; 532 |
+| 5 tests 2 and 4 say less | REPAIRED | 9 and 91; four configurations |
+| 6 test 6; "nearly all … being lost" | REPAIRED; PARTLY | "none … and 18"; the second is now the refuting reader's, still told of the configurations and not of the instances (lesser 7) |
+| 7 "No sentence across two models" | REPAIRED, with MUST 5 | the level candidate is given without its guard |
+| 8 the join's premises | REPAIRED | three premises given |
+| 9 the 240 | PARTLY (MUST 2) | |
+| 10 need 26; "the heaviest unit" | REPAIRED | "a unit had to be lost sooner" |
+| 11 "every mixture" | REPAIRED | "some mixture of the two takes keeps exactly where taking three from then on keeps" |
+| 12 "adds names, not links"; "has not been done"; "each has a model" | REPAIRED | "18 November: nine statements, called arithmetic; 19 November: … a course and a candidate kept" |
+
+## 2. MUST
+
+**MUST 1. "The four later readers do not agree with it"** (one reader's position told of four). The reader who read against the Lean writes: "'Nothing has changed': the right reading of the frozen tests from this lens. Tests 3 and 7 are confirmed on `Three` at the statements." Two hold it right and harder than the letter; only the astra reader holds it false. Put:
+
+> In my first form I took the refuting reader's summary: tests 3 and 7 trip. Of the four later readers, the one who read against the Lean holds that the right reading and confirms 3 and 7 on `Three`; two hold it right of the map and harder than the tests as frozen; the astra reader holds it too hard. In the letter of what I froze:
+
+**MUST 2. "In all 240 courses from starts not kept whatever the rule in which it stops"** (a count told of the wrong thing). The 240 are from starts that some course keeps and that are not kept whatever the rule (144 + 96; `reader-blind-rebuild.md` LESSER 1; the clocks table leaves out the 200,171 lock courses from starts no course keeps). The rule stops on some of those too, within the guard. By hand, in the sweep's ranges: bound 8, needs 7 and 1, uses 1 and 1, favouring kids F to (1, 0) and O to (0, 2), start (1, 2, favouring, 6) runs (0, 4, favouring, 6), (0, 8, not favouring, 4), end; no course keeps that start. Put:
+
+> In all 240 courses in which it stops, from starts that some course keeps and that are not kept whatever the rule, no favoured unit ever had its need met; in the 144 of them that go on, the standstill held keeps too.
+
+**MUST 3. "the same reads found six notions of 'some course keeps it' with no relation stated among them"** (more than the source; false of two of them). `reader-against-lean.md` finding 10 lists five beside `Keepable` and `Recoverable` (`Viable`, `DViable`, `KeptFor`, `KeepsMoving`, `Juncture`) and does not say that no relation is stated. "No relation stated" is the gloss of a later reader who opened no Lean. What was checked is narrower: no file names both `Keepable` and `Recoverable`. And `GuardHorizon.dViable_iff` (line 230) states `DViable` exactly as `Viable` in the law's process. Put:
+
+> I do not conclude from it that the Lean is joined: one of today's readers lists five more notions of "some course keeps it" beside `Keepable` and `Recoverable`; no file was found that names both of those two, and no reader looked for relations among the rest (one is stated, `GuardHorizon.dViable_iff`).
+
+and in the fourth bullet of the false sentences, for "one reader counts six notions": "one reader lists five more notions".
+
+**MUST 4. "`AFTER-PROGRAMS.md` (written before any reader; where it says more than its tables is told above)"** (false: nothing above tells it). The note nowhere names a sentence of that file. Put:
+
+> `AFTER-PROGRAMS.md` (written before any reader; readers found five places where it says more than its tables, none repeated in this note: that "nearly everything kept is kept by one rule held" belongs to the standstill; the fourth row's 667 under the lock's kind; "as guessed" under G4; "the share never moved"; "almost never does")
+
+**MUST 5. Test 7, the second candidate** (a premise dropped that changes the meaning). The astra reader gives it "for a minimum-level guard". Without that it is false on `Renewable` itself: asked that the level stay at or below an amount, the least draw held leaves the guard and the draw of one held keeps it. Put:
+
+> and, where what is asked is that the level stay at or above an amount, and the next level rises with the level and falls with the take, some course keeps exactly where the least take held keeps (on `Three` and on `Renewable`; it fails on the units, where a unit's sooner loss can save the rest)
+
+**MUST 6. "the Lean states it only with that premise (`GuardHorizon.kernel_viable`)"** (more than the Lean has). `kernel_viable` says: where no course leaves the guard and every configuration reached has an enabled move, the guard is kept for every number of steps (`Viable`). It does not reach `Keepable`, two readers found no theorem from `Kernel` to `Keepable`, and the middle region is not in the Lean. Put:
+
+> Needs a premise: every configuration reached has a move. It holds on my processes. The Lean has, with that premise, only that what is kept whatever the moves is kept for every number of steps by some moves (`GuardHorizon.kernel_viable`); no theorem from `Kernel` to `Keepable` was found.
+
+**MUST 7. "One reader draws from it that the direction's question needs a class of starts a reading cannot tell apart"** (a reader's sentence with words added). The reader wrote: "my reading, if a reading does no work from one known start, the direction's question needs a class of starts." Put:
+
+> One reader draws from it, as its own reading, that the direction's question needs a class of starts.
+
+**MUST 8. The header's "have been read by one further reader only where the last line says"** (points at nothing: the last line is about where the result files are). Words for the header are in section 5.
+
+## 3. The note afresh: every other telling sentence
+
+EXACT unless listed. Checked against the result files and found as told: 5,184; bounds 8 and 12; at most two of each kind at the start; 267,598; 100; 9; 91; 267,313; 285; 532; 1,359; 21,261; none and 18; four, none from a locked start; 144; 34,611; the three courses at need 27 and at need 26; `Three`'s two sets under both conventions. Checked at the Lean and found as told: `Kernel`, `Keepable`, `kernel_certificate`, `Kernel.run`, `Recoverable` with the feasible courses a parameter, `Turned` as turns to one standing use, `T < N` and `T + 1 < N`, `KeptFor` as a class kept for `n` steps; the dates 10 and 13 November; chapter 2 §11 names the four. "Three readers" under test 3 and under `Three` each have three or more behind them. The paragraph "One reader's judgment, which I take" is that reader's, told as one reader's. The two positions under test 1 are each given as its reader holds it. "Nine statements, called arithmetic" and "two older results end to end, a course and a candidate kept" are the records' own. The three senses are as the record of 17 November has them. "The sense I hold" is told as the writer's own.
+
+LESSER (LOOSE, with words where short):
+
+1. *First bullet.* `Three.noReturn` is in section 8, not 7. `recoverable_iff_above` also has premises on the course (never rising, starting at most `hi`): "under its premises on the course, the stock and the need". `FourReaders.noReturn`, among four stops, is November's too and is not told.
+2. *"Two of my readers found this independently"*: so; the refuting reader names `NoReturnAt` as well.
+3. *"every number agreed but for two differences in what is counted"*: one number differed (the sweep's "none", by population); the second difference changes no number.
+4. *"On the Lean's own cases the comparison it was to beat already included the point of no return."* The reader: the frozen comparison left out `NoReturnAt`, which November had; with it put in, test 1 trips on the Lean's cases.
+5. *Test 1.* "from its first step" is step 1 (the start, five in force at nine, is not kept whatever the take). The first reader's comparison also has "the web's two classes". "No theorem read says that of them" is the writer's, not the astra reader's; one reader adds that the sets follow from laws the Lean has (`RegimeMargin.holds`, `ends_iff_below`), not written out.
+6. *Test 2.* The guard is not named (something goes on). "Empty on `Three`" is one reader by hand; the program did not compute it.
+7. *Test 5.* Which count is which kind is not said (1,359 the favoured, 21,261 the other). The refuting reader's 21,113 "lie in instances where" the favouring rule leaves none of the other kind; the astra reader holds that this tells a table's property as a cause.
+8. *Test 7.* On `Three` as the Lean has it a level does not fix the take in force, and the first candidate is one step off there (`reader-against-lean.md` finding 9). The second candidate's failure on the units was found in a family added after the sweep (2 in 162,848), none in the sweep.
+9. *The middle region.* Still not told: it can be written with `UniformPolicy` over a closed set. `KeptFor` is for each number of steps.
+10. *First kept bullet.* "against its twin only": against going on favouring past that step; every such course ends, and stopping at any earlier move keeps something (each configuration on the course is kept by a rule held). "says more than that": two readers word it as "says the first only".
+11. *Second kept bullet.* The 34,611 are from starts that some course keeps.
+12. *Third kept bullet.* "the ones traced" are two, one of them outside the sweep.
+13. *"its point of no return is among turns to one standing use, held"*: on the stock; on `FourReaders` among four stops. *"no choice made from a reading on these courses"*: the readings there (marks, windows, the lock's share) are given and none is chosen among; the reader's words are "a choice quantified over".
+14. *"the third day a join worked out on paper"*: on the 18th the nine statements were scratch Lean, built once outside the package.
+15. *The senses.* "The first is that seen on one level that does not fall; the second is that with one of the goings-on set apart as an amount" are asserted flat. No record argues either and no reader had seen the paragraph: "As I read them, not argued: the first is …". The record of 17 November found the third's last clause in no law, only in built examples.
+16. *The last sentence.* Section 3.2 of `reader-significance.md` finds "none of the four" of chapter 5 §12, chapter 7 §5, chapter 4 §5 and chapter 4 §8. Chapter 5 §10 is not among them; of it the report says the lock is pointed to, not stated, and its general finding 4 covers it. It also says chapter 5 §12 and chapter 7 §5 "each place two ways of going on against each other exactly". Words: "A reader of 18 November already set chapter 5 §12, chapter 7 §5, chapter 4 §5 and chapter 4 §8 against the direction and found none of the four a theorem placing the two ways where a line multiplies or a rule is read again from its share; of chapter 5 §10 it found the lock pointed to, not stated."
+17. *"Where it is".* Nothing is filed yet: `reads-2026-11-20/` does not exist. `refute.py` is not listed.
+
+## 4. `DIRECTION-CHANGE.md`
+
+**The added sentence: true, no MUST.** By `results-course.json`: at need 27 with the rule that does not favour held from the first move the course comes to (0, 1, not favouring, 32) and repeats; with the rule held favouring it ends; at need 26 the course with the rule set again from the share and the course with the rule held favouring are the same five configurations and end at step 4, the count of favoured units 1 at steps 0 to 3. One reader rebuilt all six courses without seeing the writer's program. It says how it was seen ("by program"). Nothing else in "We are far from it" disagrees with it: the sentence before it tells the twin, and lines 29 and 32 already tell the point of no return.
+
+Lesser:
+
+- "matters only against the course with the rule held favouring": against going on favouring past that step (lesser 10 above). Words: "so the rule's change is what keeps something going only as against going on favouring".
+- "the course and that twin both end": at need 26 they are one course, and the rule that does not favour held still keeps something there. Words: "and with the counted unit's need one less the rule never stops favouring and the course ends, the count of favoured units not moving before the end, though holding the rule that does not favour still keeps something".
+- "the share" is the number of favoured units; as a proportion it falls at every step.
+- The link's target does not exist until the record is filed.
+- The two descriptions of where the head-note sentence goes disagree: "before 'No person has checked it against the Lean'" is at the note's end, and "after the sentence ending 'these are mended in its words and not read again.'" is near its start. The second is where 20 November's reads are told.
+
+**The head-note sentence: true, and says less.** Four readers did read a first form, and one more did set the sentence against the record. It leaves out that the four found the first form not sound to tell from as written, that two of them faulted its wording of the need-26 clause, and what the further reader found. Words:
+
+> On 20 November one sentence was added to "What is not there" from that day's record of a try by program, with no Lean written; one AI reader had rebuilt the course's numbers without seeing the writer's program. Four AI readers who took no part read a first form of the record and found it not sound to tell from as written; it was rewritten, and one more AI reader who took no part set the rewrite and the added sentence against the reports and the result files: nothing false in the added sentence and three lesser places in it, mended in its words and not read again.
+
+## 5. Words for the header of `NOTE.md`
+
+> *AI-written (Claude Fable), 20 November 2026. No Lean was written and nothing was built. Worked by one AI writer by program, then read by four AI readers the writer set (one rebuilt the courses of 19 November, the sweep's main row and the clocks without seeing the programs). A first form of this note was then read by four more who took no part, set on it by the session that ran the repository's survey (one of them astra 6.2). Each found it not sound to tell from as written; on its verdict one held it right, two right and harder than the tests as frozen, one too hard. The note was rewritten from their findings. One further AI reader who took no part then set the rewrite against the eight reports, the result files and the Lean's statements where a declaration is named (no proof read, nothing run): it found the earlier faults repaired but for seven (six of them in part), eight places false or saying more than their source, and seventeen lesser ones; these are mended in its words and not read again. No person has read it. A search over small numbers shows where a statement fails, not that it holds. Unit, way, share, rule, level, need, region are working names.*

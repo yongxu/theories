@@ -1,0 +1,43 @@
+Claude Fable 5.2 (reader 2), 20 November 2026. AI-written; read only, nothing built or run. Lean read at statements and opening accounts; chapters by search only; every absence below is a search by name.
+
+**The next step** (on paper, then one scratch statement). Say the direction's question "can it still be turned" as three regions of configurations, in the frame October's root already has:
+- where the way as it is keeps a need met on every course (`Viability.Kernel`);
+- where some choice made from what the way reads keeps it (`GuardHorizon.UniformPolicy` over `Admissible`);
+- where some course at all keeps it (`Viability.Keepable`).
+
+Then set November's exact laws and the two run classes against these regions on courses already built.
+
+I read "October's aim adjusted" this way: what October built for "unified, complete" (board line 11) is this general frame, and November's centre was written beside it. The step asks the direction's question in that frame and adds no model.
+
+**Why this, from the direction.**
+- Line 7: placed means "where … a course is doing the one or the other, where it passes between them". Line 25: the run classes "cannot say that a course began to use up at some step". A region can say it: the step a run leaves it.
+- Lines 44 and 66: "does what it rests on … still reach how it reads, early enough to turn it?" That is the difference between the second and third region. Line 62's case is a run leaving both.
+- Line 122: three clocks, "no statement was found that compares all three". Each clock is the leaving of one region.
+- The laws of `TurningInTime`, `LineOnAStock` and `WayOfUnits` conclude `«不穷» (net …) «一» s`, of one determined net. "Can no longer be turned" compares a course with the others open from the same configuration, which no such law can state.
+
+**What exists toward it.**
+- **The frame:** `Viability.Kernel`, `kernel_iff_certificate`, `kernel_step_iff` (`Viability.lean:55–98`); `Viability.Keepable` (`JointKeeping.lean:91`); `GuardHorizon.Viable`, `UniformPolicy`, `uniform_policy_iff_common`, `uniform_viable` (`GuardHorizon.lean:71, 326, 351, 406`); `Viability.keptFor_iff_plan` (`Keeping.lean`). Chapters 03 (lines 426–429, 560) and 05 (line 89) tell them.
+- **One built case with a run class and these regions:** `Renewable.kept_part_not_renewal` (`JointKeeping.lean:397`), on `class_belongs_to_the_run` (`Labelled.lean:564`). From one configuration one run renews and another consumes; the sustaining formation's activity is keepable and not in the kernel.
+- **The edges:** `RegimeMargin.ends_iff_below` (line 741), `RelationalRenewal.no_return_below_support`, `TurningInTime.turns_in_time_iff_kept_below`, `locked_turns_in_time_on_window_iff`, `locked_ends_rising`, `LineOnAStock.unending_iff_holds`.
+- **Not found in what was read:**
+  - `Kernel`, `Keepable` or `KeptFor` named in `TurningInTime`, `LineOnAStock`, `RegimeMargin`, `WayOfUnits`, `RuleCapture`, `ReadOffInTime`, `PoolFromCourse`, `Dependence`, `RenewalFlow` or `Retaining`.
+  - `Keepable`, `GuardHorizon` or `UniformPolicy` in any note of the study folder; the read of 16 November lists `GuardHorizon` as not opened.
+  - Any of these names on the direction page.
+
+**What was tried that is like it.** The one-space try of 16 November (`tries-2026-11-16/ONE-SPACE-ON-PAPER.md`) took regions as a band with a class of ways, for one determined way. Its tests were a threshold on the start, an old proof deleted and fewer lines; all three failed, and it found "the root already has the region lemma … it is not a join".
+
+Mine may be that dictionary again: each law's right side renamed "in the region". It differs in what is asked. It asks for the difference between three sets from one configuration, two of which need several courses and a reading, and that try opened neither. It is not judged by lines. It is not the renaming of 17 November (nothing gives), nor the join in form of 19 November (no law gets a premise).
+
+**What would count against it** (to freeze first). Nothing has changed if:
+1. On the built courses the regions sort no pair otherwise than `«不穷»`/`«亡»` and renewing/consuming already do. The courses: Renewable's two runs; `Three.read_at_eight_ends`, `held_at_six`, `unlocked_goes_on`; `cultivation` and `malignant`; the course of 19 November and its twin.
+2. "Keepable, but by no choice from what it reads" is empty, or is everything not kept, in each case.
+3. No sentence in the regions' terms holds in two models by one proof, each needing a bridge as long as the law it restates.
+4. The lock comes out as `RuleCapture.turn_locked` again, with "a choice from the share is the standing rule" assumed and not got from `uniform_policy_iff_common`.
+
+**The first move** (a day, no Lean). Take `Renewable`, and `TurningInTime.Three` with the moves "stay" and "turn to the corrected rule"; that process with a choice is my construction, not in the Lean. List by hand which configurations lie in each region for the guard "the need is met", and run tests 1 and 2. If they pass, write one sentence to attack: a run that draws on a condition is consuming once it leaves the region from which that dependence can be met again, and until then it can be turned.
+
+**Two alternatives, and why they come after.**
+- **The lock-free exact condition of 19 November in Lean** (growing and same-taking units; `unending_iff_holds` and half of `way_ends` as cases). It is real, but it is one edge of one region in the first way's model, about 500 lines reworked, and says nothing of turning. It comes after the regions say which edge it is.
+- **A model of the second way** with units that give at a cost to a said receiver (the four things the dig found together nowhere). Line 102 says "what it should be is not yet thought through", and under `Flow.Dissipative` remaking can only be staying within what something else makes again. The regions say what "keeps what it rests on keepable" asks before a model is built to show it.
+
+**What is Ren's to say.** Nothing before the step. The question held for him on 19 November was whether a rule that stops favouring because its units went without first is a turn. In this frame it becomes a question of grain (line 7): the course is kept for "something goes on" and lost for "the favoured unit goes on". I would show him that and not ask. Afterwards his are: whether these regions are what he recognises as the two ways (rule 2), and any re-saying of the board's October target, which changes direction text he reads. My reading of "October's aim" rests on a dictated sentence and may be wrong.

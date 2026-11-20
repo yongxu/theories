@@ -1,0 +1,827 @@
+#!/usr/bin/env python3
+"""rebuild.py -- AI-written (Claude Fable, one reader, 20 November 2026).
+
+An independent rebuild of the regions computation described in
+FROZEN-REGIONS.md ("The question"), written WITHOUT opening regions.py or
+regions_2.py.  Scratch; it writes no file, it prints.
+
+The process (the writer's construction, as given to this reader in words):
+  two kinds F and O, two rules 0 and 1, kids[rule][kind] = (F left, O left);
+  a configuration is (f, o, rule in force, level);
+  at a step each unit whose need is at most the level leaves its kids under the
+  rule in force, a unit whose need is unmet leaves nothing; every unit present
+  takes its use; z = max(0, level - total taken); the level becomes
+  z + min(z, c - z), not below nothing; the move sets the rule in force at the
+  next step.
+
+Regions, for a guard:
+  K   every sequence of moves stays within the guard for ever;
+  Kp  some sequence does;
+  R   there is a function from a reading to the move whose course from THIS
+      configuration stays within the guard for ever.  Readings: nothing (one
+      rule held); the number of F through a threshold (rule 1 exactly where
+      f >= t); any function of f; any function of (f, level).
+
+Methods (none is a depth-first search over partial choices):
+  K, Kp        greatest fixed points by removal along predecessors.
+  B            for readings of f: a greatest fixed point over SETS OF CHOICES.
+               W(x) = the set of all functions g: f -> move whose course from x
+               is kept, held as a bitmask over all 2^(fmax+1) functions;
+               W(x) = (W(succ0 x) & {g: g(f_x)=0}) | (W(succ1 x) & {g: g(f_x)=1}).
+               "One rule held" and "threshold" are read off W as particular g.
+  S            straight simulation of a named function until the guard fails
+               or a configuration repeats (constants, thresholds).
+  A            for any reading: take C = what can be reached from the start
+               inside Kp; a reading met by one configuration of C constrains
+               nothing; enumerate every assignment of moves to the readings met
+               by two or more configurations of C, and for each take the
+               greatest fixed point "kept by some sequence" in the graph so
+               restricted.
+  X            (sample cross-check) enumerate ALL functions over all readings
+               in C and simulate each.
+B, S and A are compared with each other on every start; X on a sample.
+"""
+import sys
+import time
+import json
+import itertools
+from collections import defaultdict, Counter
+
+LABELS = ['K', 'one rule held', 'threshold on F', 'function of F',
+          'function of F and level', 'some sequence only', 'none']
+
+
+class Model:
+    __slots__ = ('c', 'need', 'use', 'kids', 'conv')
+
+    def __init__(self, c, need, use, kids, conv='next'):
+        assert min(need) >= 1 and min(use) >= 1
+        self.c, self.need, self.use, self.kids, self.conv = c, need, use, kids, conv
+
+    def step(self, cfg, move):
+        f, o, r, l = cfg
+        if self.conv == 'this':     # EXTRA (after opening): the move is the rule of this step; r is always 0
+            k = self.kids[move]
+            move = 0
+        else:
+            k = self.kids[r]
+        nf = no = 0
+        if f and self.need[0] <= l:
+            nf += f * k[0][0]
+            no += f * k[0][1]
+        if o and self.need[1] <= l:
+            nf += o * k[1][0]
+            no += o * k[1][1]
+        z = l - (f * self.use[0] + o * self.use[1])
+        if z < 0:
+            z = 0
+        l2 = z + min(z, self.c - z)
+        if l2 < 0:
+            l2 = 0
+        return (nf, no, move, l2)
+
+    def guard(self, g, cfg):
+        f, o, r, l = cfg
+        if g == 0:      # something goes on
+            return (f > 0 and self.need[0] <= l) or (o > 0 and self.need[1] <= l)
+        if g == 1:      # a favoured unit goes on
+            return f > 0 and self.need[0] <= l
+        if g == 2:      # the level is at least 20
+            return l >= 20
+        if g == 3:      # EXTRA (after opening): a unit of the other kind goes on
+            return o > 0 and self.need[1] <= l
+        raise ValueError(g)
+
+
+class Regions:
+    """Regions of one model under one guard, on what can be reached from seeds."""
+
+    def __init__(self, model, g, seeds):
+        self.m, self.g = model, g
+        succ = {}
+        seen = set(seeds)
+        stack = list(seen)
+        while stack:
+            x = stack.pop()
+            if not model.guard(g, x):
+                continue                      # outside the guard: not expanded
+            a = model.step(x, 0)
+            b = model.step(x, 1)
+            succ[x] = (a, b)
+            for y in (a, b):
+                if y not in seen:
+                    seen.add(y)
+                    stack.append(y)
+        self.succ = succ
+        self.nodes = len(seen)
+        preds = defaultdict(list)
+        for x, (a, b) in succ.items():
+            preds[a].append(x)
+            preds[b].append(x)
+        # K: within the guard and both next configurations in K
+        K = set(succ)
+        queue = [y for y in seen if y not in succ]
+        while queue:
+            y = queue.pop()
+            for p in preds.get(y, ()):
+                if p in K:
+                    K.discard(p)
+                    queue.append(p)
+        # Kp: within the guard and some next configuration in Kp
+        Kp = set(succ)
+        cnt = {x: 2 for x in succ}
+        queue = [y for y in seen if y not in succ]
+        while queue:
+            y = queue.pop()
+            for p in preds.get(y, ()):
+                if p in Kp:
+                    cnt[p] -= 1
+                    if cnt[p] == 0:
+                        Kp.discard(p)
+                        queue.append(p)
+        self.K, self.Kp = K, Kp
+        self.fmax = max((x[0] for x in Kp), default=0)
+        self.W = None
+        self._cache = {}
+
+    # ---- method S: simulate a named function --------------------------
+    def kept_under(self, start, gfun):
+        seen = set()
+        x = start
+        while True:
+            if x not in self.succ:
+                return False
+            if x in seen:
+                return True
+            seen.add(x)
+            x = self.succ[x][gfun(x)]
+
+    # ---- method B: sets of functions of f as bitmasks ------------------
+    def build_W(self):
+        n = self.fmax + 1
+        nfun = 1 << n
+        ALL = (1 << nfun) - 1
+        M1 = []
+        for f in range(n):
+            mask = 0
+            for i in range(nfun):
+                if (i >> f) & 1:
+                    mask |= 1 << i
+            M1.append(mask)
+        M0 = [ALL ^ m for m in M1]
+        W = {x: ALL for x in self.Kp}
+        order = list(self.Kp)
+        changed = True
+        while changed:
+            changed = False
+            for x in order:
+                w = W[x]
+                if not w:
+                    continue
+                a, b = self.succ[x]
+                f = x[0]
+                nw = ((W.get(a, 0) & M0[f]) | (W.get(b, 0) & M1[f])) & w
+                if nw != w:
+                    W[x] = nw
+                    changed = True
+        self.W = W
+        self.nfun = nfun
+        # function index of "rule 1 exactly where f >= t"
+        self.thr_index = [(nfun - 1) & ~((1 << t) - 1) for t in range(n + 1)]
+
+    def B_classes(self, x):
+        """(one rule held, threshold, any function of f) by method B."""
+        if self.W is None:
+            self.build_W()
+        w = self.W.get(x, 0)
+        n = self.fmax + 1
+        const = bool((w >> self.thr_index[0]) & 1) or bool((w >> self.thr_index[n]) & 1)
+        thr = any((w >> i) & 1 for i in self.thr_index)
+        return const, thr, bool(w)
+
+    # ---- method A: enumerate over the readings that constrain ----------
+    def reach(self, start):
+        C = {start}
+        st = [start]
+        while st:
+            x = st.pop()
+            for y in self.succ[x]:
+                if y in self.Kp and y not in C:
+                    C.add(y)
+                    st.append(y)
+        return C
+
+    def _alive(self, start, C, rd, fixed):
+        alive = set(C)
+        changed = True
+        while changed:
+            changed = False
+            for x in list(alive):
+                r = rd(x)
+                a, b = self.succ[x]
+                if r in fixed:
+                    ok = (b if fixed[r] else a) in alive
+                else:
+                    ok = a in alive or b in alive
+                if not ok:
+                    alive.discard(x)
+                    changed = True
+            if start not in alive:
+                return False
+        return True
+
+    def exists_fn(self, start, rd, stats=None):
+        C = self.reach(start)
+        groups = defaultdict(list)
+        for x in C:
+            groups[rd(x)].append(x)
+        fixed = {}
+        branch = []
+        for r, v in groups.items():
+            if len(v) < 2:
+                continue
+            can0 = any(self.succ[x][0] in self.Kp for x in v)
+            can1 = any(self.succ[x][1] in self.Kp for x in v)
+            if can0 and can1:
+                branch.append(r)
+            elif can0:
+                fixed[r] = 0      # move 1 would lose every member: 0 does no worse
+            else:
+                fixed[r] = 1
+        if stats is not None:
+            stats['maxbranch'] = max(stats.get('maxbranch', 0), len(branch))
+        if len(branch) > 22:
+            raise RuntimeError('too many constrained readings: %d' % len(branch))
+        for assign in itertools.product((0, 1), repeat=len(branch)):
+            fx = dict(fixed)
+            fx.update(zip(branch, assign))
+            if self._alive(start, C, rd, fx):
+                return True
+        return False
+
+    # ---- method X: every function over every reading in C --------------
+    def exists_fn_brute(self, start, rd, cap=14):
+        C = self.reach(start)
+        rs = sorted({rd(x) for x in C})
+        if len(rs) > cap:
+            return None
+        for assign in itertools.product((0, 1), repeat=len(rs)):
+            g = dict(zip(rs, assign))
+            # outside C the course has already left Kp; any move will do there
+            if self.kept_under(start, lambda x: g.get(rd(x), 0)):
+                return True
+        return False
+
+    # ---- the innermost region ------------------------------------------
+    def innermost(self, x, stats=None, check=True):
+        if x in self._cache:
+            return self._cache[x]
+        lab = self._innermost(x, stats, check)
+        self._cache[x] = lab
+        return lab
+
+    def _innermost(self, x, stats, check):
+        if x in self.K:
+            return 'K'
+        if x not in self.Kp:
+            return 'none'
+        rdf = lambda y: y[0]
+        rdfl = lambda y: (y[0], y[3])
+        # S
+        s_const = (self.kept_under(x, lambda y: 0) or self.kept_under(x, lambda y: 1))
+        s_thr = s_const or any(
+            self.kept_under(x, (lambda t: (lambda y: 1 if y[0] >= t else 0))(t))
+            for t in range(1, self.fmax + 1))
+        # A
+        a_f = self.exists_fn(x, rdf, stats)
+        if check:
+            b_const, b_thr, b_f = self.B_classes(x)
+            if (b_const, b_thr, b_f) != (s_const, s_thr, a_f):
+                if stats is not None:
+                    stats['mismatch'] = stats.get('mismatch', 0) + 1
+                    stats.setdefault('mismatch_examples', []).append(
+                        (x, (b_const, b_thr, b_f), (s_const, s_thr, a_f)))
+        if s_const:
+            return 'one rule held'
+        if s_thr:
+            return 'threshold on F'
+        if a_f:
+            return 'function of F'
+        if self.exists_fn(x, rdfl, stats):
+            return 'function of F and level'
+        return 'some sequence only'
+
+
+def model_str(m):
+    return 'c=%d need=%s use=%s rule1: F->%s O->%s' % (
+        m.c, m.need, m.use, m.kids[1][0], m.kids[1][1])
+
+
+# ======================= (a) the course of 19 November =====================
+
+def lock_move(x):
+    return 1 if x[0] >= 1 else 0
+
+
+def run_course(model, start, movefn, maxlen=14):
+    xs = [start]
+    seen = {start}
+    while len(xs) < maxlen:
+        y = model.step(xs[-1], movefn(xs[-1]))
+        xs.append(y)
+        if y in seen:
+            break
+        seen.add(y)
+    return xs
+
+
+def part_a():
+    out = {}
+    kids = {1: ((1, 1), (0, 2)), 0: ((1, 0), (0, 1))}
+    for needF in (27, 26):
+        m = Model(32, (needF, 1), (14, 1), kids)
+        start = (1, 0, 1, 28)
+        courses = {
+            'rule set again from the share': run_course(m, start, lock_move),
+            'rule 1 held': run_course(m, start, lambda x: 1),
+            'rule 0 from the first move on': run_course(m, start, lambda x: 0),
+        }
+        seeds = set()
+        for xs in courses.values():
+            seeds.update(xs)
+        regs = [Regions(m, g, seeds) for g in (0, 1, 2)]
+        print('\n(a) need of F = %d   [c=32, needs (%d,1), uses (14,1)]' % (needF, needF))
+        print('    nodes reached per guard: %s; |K|: %s; |Kp|: %s' % (
+            [r.nodes for r in regs], [len(r.K) for r in regs], [len(r.Kp) for r in regs]))
+        res = {}
+        for name, xs in courses.items():
+            print('  course: %s' % name)
+            print('    %-4s %-18s | %-24s | %-24s | %-24s' % (
+                'i', '(f,o,rule,level)', 'something goes on', 'a favoured unit goes on', 'level >= 20'))
+            rows = []
+            for i, x in enumerate(xs):
+                st = {}
+                labs = [r.innermost(x, st) for r in regs]
+                assert not st.get('mismatch'), st
+                rep = ' (repeats)' if x in xs[:i] else ''
+                print('    %-4d %-18s | %-24s | %-24s | %-24s%s' % (i, x, labs[0], labs[1], labs[2], rep))
+                rows.append({'i': i, 'cfg': x, 'labels': labs})
+            res[name] = rows
+        out[needF] = res
+    return out
+
+
+# ======================= (b), (c) the sweep ================================
+
+def all_models():
+    for c in (8, 12):
+        for nF in (1, 3, 5, 7):
+            for nO in (1, 3, 5):
+                for uF in (1, 2):
+                    for uO in (1, 2):
+                        for a in (1, 2):
+                            for b in (0, 1, 2):
+                                for a2 in (0, 1, 2):
+                                    for b2 in (0, 1, 2):
+                                        kids = {1: ((a, b), (a2, b2)), 0: ((1, 0), (0, 1))}
+                                        yield Model(c, (nF, nO), (uF, uO), kids)
+
+
+def starts_of(m):
+    for f in range(3):
+        for o in range(3):
+            if f == 0 and o == 0:
+                continue
+            for r in (0, 1):
+                for l in range(m.c + 1):
+                    yield (f, o, r, l)
+
+
+def clock(R, start):
+    """The course from start with rule 1 exactly where f >= 1.  Returns a
+    category and details."""
+    xs = [start]
+    idx = {start: 0}
+    ended = False
+    while True:
+        x = xs[-1]
+        if x not in R.succ:
+            ended = True
+            break
+        y = R.succ[x][lock_move(x)]
+        if y in idx:
+            break
+        idx[y] = len(xs)
+        xs.append(y)
+    i0 = next((i for i, x in enumerate(xs) if x[2] == 0), None)   # rule in force 0
+    if not ended:
+        if start in R.K:
+            return 'never ends, start in K', ('rule0' if i0 is not None else 'rule1'), None
+        if i0 is None:
+            return 'never ends, rule 1 throughout', None, None
+        return 'never ends, rule becomes 0', None, None
+    e = len(xs) - 1
+    tstar = next(i for i, x in enumerate(xs) if x not in R.Kp)
+    if i0 is None:
+        return 'ends, rule 1 to the end', None, (e, tstar, None)
+    if i0 > tstar:
+        return 'ends, rule becomes 0 only after the first configuration no course keeps', i0 - tstar, (e, tstar, i0)
+    return 'ends, rule becomes 0 at or before that configuration', i0 - tstar, (e, tstar, i0)
+
+
+def sweep(models, sample_every=40):
+    counts = Counter()
+    counts_by_c = {8: Counter(), 12: Counter()}
+    clocks = Counter()
+    clocks_by_c = {8: Counter(), 12: Counter()}
+    clockK = Counter()
+    hist = Counter()            # (category, i0 - tstar)
+    hist_end = Counter()        # is the first rule-0 configuration the failing one
+    stats = {}
+    examples = {}
+    clock_examples = {}
+    nmodels = nstarts = 0
+    xcheck = Counter()
+    for mi, m in enumerate(models):
+        R = Regions(m, 0, list(starts_of(m)))
+        nmodels += 1
+        for s in starts_of(m):
+            nstarts += 1
+            lab = R.innermost(s, stats)
+            counts[lab] += 1
+            counts_by_c[m.c][lab] += 1
+            if lab not in examples:
+                examples[lab] = (model_str(m), s)
+            # (c)
+            if s[2] == 1 and s[0] >= 1 and m.guard(0, s) and s in R.Kp:
+                cat, d, det = clock(R, s)
+                clocks[cat] += 1
+                clocks_by_c[m.c][cat] += 1
+                if cat == 'never ends, start in K':
+                    clockK[d] += 1
+                elif cat.startswith('ends, rule becomes'):
+                    hist[(cat, d)] += 1
+                    hist_end[(cat, det[2] == det[0])] += 1
+                if cat not in clock_examples:
+                    clock_examples[cat] = (model_str(m), s, det)
+            # X on a sample
+            if mi % sample_every == 0 and s in R.Kp and s not in R.K:
+                for nm, rd, want in (
+                        ('f', (lambda y: y[0]), LABELS.index(lab) <= 3),
+                        ('f,l', (lambda y: (y[0], y[3])), LABELS.index(lab) <= 4)):
+                    got = R.exists_fn_brute(s, rd)
+                    if got is None:
+                        xcheck[nm + ' skipped'] += 1
+                    elif got == want:
+                        xcheck[nm + ' agree'] += 1
+                    else:
+                        xcheck[nm + ' DISAGREE'] += 1
+                        stats.setdefault('x_examples', []).append((model_str(m), s, nm, got, want))
+    return dict(nmodels=nmodels, nstarts=nstarts, counts=counts, counts_by_c=counts_by_c,
+                clocks=clocks, clocks_by_c=clocks_by_c, clockK=clockK, hist=hist,
+                hist_end=hist_end, stats=stats, examples=examples,
+                clock_examples=clock_examples, xcheck=xcheck)
+
+
+def merge(parts):
+    tot = None
+    for p in parts:
+        if tot is None:
+            tot = p
+            continue
+        tot['nmodels'] += p['nmodels']
+        tot['nstarts'] += p['nstarts']
+        for k in ('counts', 'clocks', 'clockK', 'hist', 'hist_end', 'xcheck'):
+            tot[k].update(p[k])
+        for c in (8, 12):
+            tot['counts_by_c'][c].update(p['counts_by_c'][c])
+            tot['clocks_by_c'][c].update(p['clocks_by_c'][c])
+        st, ps = tot['stats'], p['stats']
+        st['maxbranch'] = max(st.get('maxbranch', 0), ps.get('maxbranch', 0))
+        st['mismatch'] = st.get('mismatch', 0) + ps.get('mismatch', 0)
+        for k in ('mismatch_examples', 'x_examples'):
+            if k in ps:
+                st.setdefault(k, []).extend(ps[k])
+        for k in ('examples', 'clock_examples'):
+            for kk, v in p[k].items():
+                tot[k].setdefault(kk, v)
+    return tot
+
+
+def _work(chunk):
+    return sweep(chunk)
+
+
+# ======================= EXTRAS ============================================
+# Everything from here to main() was written AFTER regions.py, regions_2.py and
+# the result files were opened, to rebuild the numbers of AFTER-PROGRAMS.md that
+# the blind part did not cover.  It is a rebuild by the same methods (B, S, A),
+# not a blind one: the populations and tallies follow the writer's definitions.
+
+WRITER = {'K': 'K', 'one rule held': 'const', 'threshold on F': 'mono',
+          'function of F': 'share', 'function of F and level': 'share+level',
+          'some sequence only': 'Kp', 'none': 'none'}
+FREEZE = ((1, 0), (0, 1))
+
+
+def models_with(cs, rule0, conv):
+    for c in cs:
+        for nF in (1, 3, 5, 7):
+            for nO in (1, 3, 5):
+                for uF in (1, 2):
+                    for uO in (1, 2):
+                        for a in (1, 2):
+                            for b in (0, 1, 2):
+                                for a2 in (0, 1, 2):
+                                    for b2 in (0, 1, 2):
+                                        yield Model(c, (nF, nO), (uF, uO),
+                                                    {1: ((a, b), (a2, b2)), 0: rule0}, conv)
+
+
+def starts_conv(m):
+    if m.conv == 'next':
+        return list(starts_of(m))
+    return [(f, o, 0, l) for f in range(3) for o in range(3) for l in range(m.c + 1) if f + o > 0]
+
+
+def tally_family(cs, rule0, conv, guards=(0, 1, 3), grain=True, anti=False, lock=False):
+    names = {0: 'way', 1: 'F', 3: 'O'}
+    tally = {names[g]: Counter() for g in guards}
+    differs = Counter()
+    antit = Counter()
+    lockt = Counter()
+    stats = {}
+    n = 0
+    for m in models_with(cs, rule0, conv):
+        n += 1
+        starts = starts_conv(m)
+        labs = {}
+        regs = {}
+        for g in guards:
+            R = Regions(m, g, starts)
+            regs[g] = R
+            for s in starts:
+                if not m.guard(g, s):
+                    continue
+                lab = WRITER[R.innermost(s, stats)]
+                labs[(g, s)] = lab
+                tally[names[g]][lab] += 1
+        if grain:
+            for g in guards:
+                if g == 0:
+                    continue
+                for s in starts:
+                    if (g, s) in labs and labs[(g, s)] != labs.get((0, s)):
+                        differs[names[g]] += 1
+        R = regs[0]
+        if lock:
+            for s in starts:
+                if s[2] != 1 or s[0] < 1 or not m.guard(0, s):
+                    continue
+                goes = R.kept_under(s, lock_move)
+                lockt[('never ends' if goes else 'ends') + ', start in ' + labs[(0, s)]] += 1
+        if anti:
+            for s in starts:
+                lab = labs.get((0, s))
+                if lab in (None, 'K', 'const', 'none'):
+                    continue
+                up = any(R.kept_under(s, (lambda t: (lambda y: 1 if y[0] >= t else 0))(t))
+                         for t in range(0, R.fmax + 2))
+                down = any(R.kept_under(s, (lambda t: (lambda y: 1 if y[0] < t else 0))(t))
+                           for t in range(0, R.fmax + 2))
+                anyf = R.exists_fn(s, lambda y: y[0])
+                # the same three by method B
+                R.B_classes(s)
+                w = R.W.get(s, 0)
+                nn = R.fmax + 1
+                upB = any((w >> ((R.nfun - 1) & ~((1 << t) - 1))) & 1 for t in range(nn + 1))
+                downB = any((w >> ((1 << t) - 1)) & 1 for t in range(nn + 1))
+                if (up, down, anyf) != (upB, downB, bool(w)):
+                    stats['mismatch'] = stats.get('mismatch', 0) + 1
+                antit[(up, down, anyf)] += 1
+    return dict(n=n, tally=tally, differs=differs, anti=antit, lock=lockt, stats=stats)
+
+
+def three():
+    def lvl(x, w):
+        z = max(0, x - w)
+        return z + min(z, 12 - z)
+    out = {}
+    # the move sets the take of the next step
+    nodes = [(w, x) for w in (5, 3) for x in range(13)]
+    good = {s for s in nodes if s[1] >= 1}
+    succ = {s: [(a, lvl(s[1], s[0])) for a in (5, 3)] for s in good}
+    for name, every in (('K', True), ('Kp', False)):
+        S = set(good)
+        while True:
+            T = {s for s in S if (all if every else any)(t in S for t in succ[s])}
+            if T == S:
+                break
+            S = T
+        out['next ' + name] = sorted(S)
+    # the move is the take of this step
+    good = set(range(1, 13))
+    succ = {x: [lvl(x, a) for a in (5, 3)] for x in good}
+    for name, every in (('K', True), ('Kp', False)):
+        S = set(good)
+        while True:
+            T = {s for s in S if (all if every else any)(t in S for t in succ[s])}
+            if T == S:
+                break
+            S = T
+        out['this ' + name] = sorted(S)
+    s = (5, 9)
+    course = []
+    while s[1] >= 1:
+        course.append((s, s in out['next K'], s in out['next Kp']))
+        s = (5, lvl(s[1], 5))
+    out['from nine, take five (configuration, in K, in Kp)'] = course
+    return out
+
+
+def extras():
+    t0 = time.time()
+    print('\nEXTRAS (after the writer\'s programs were opened; methods B, S, A as before)')
+    r = tally_family((8, 12), FREEZE, 'next', anti=True, lock=True)
+    print(' sweep, move sets the rule of the next step: %d instances' % r['n'])
+    for g, t in r['tally'].items():
+        print('   %-4s %s  total %d' % (g, dict(sorted(t.items())), sum(t.values())))
+    print('   the kind\'s region is not the way\'s: %s' % dict(r['differs']))
+    print('   lock courses by class: %s' % dict(sorted(r['lock'].items())))
+    print('   anti (lock-kind threshold keeps, reverse-kind threshold keeps, some function of f keeps): %s' % dict(r['anti']))
+    print('   B/S/A mismatches: %d; most readings enumerated by A: %d' % (r['stats'].get('mismatch', 0), r['stats'].get('maxbranch', 0)))
+    r = tally_family((8, 12), FREEZE, 'this')
+    print(' sweep, move sets the rule of this step: %d instances' % r['n'])
+    for g, t in r['tally'].items():
+        print('   %-4s %s  total %d' % (g, dict(sorted(t.items())), sum(t.values())))
+    print('   the kind\'s region is not the way\'s: %s' % dict(r['differs']))
+    print('   B/S/A mismatches: %d; most readings enumerated by A: %d' % (r['stats'].get('mismatch', 0), r['stats'].get('maxbranch', 0)))
+    print(' other rule 0 (c = 8 only, guard: something goes on)')
+    for name, k0 in (('each leaves itself', FREEZE), ('F leaves itself and an O, O itself', ((1, 1), (0, 1))),
+                     ('F leaves itself, O two O', ((1, 0), (0, 2))), ('F leaves two F, O nothing', ((2, 0), (0, 0)))):
+        r = tally_family((8,), k0, 'next', guards=(0,), grain=False)
+        print('   %-36s %s  total %d; mismatches %d; most readings by A: %d' % (
+            name, dict(sorted(r['tally']['way'].items())), sum(r['tally']['way'].values()),
+            r['stats'].get('mismatch', 0), r['stats'].get('maxbranch', 0)))
+    print(' Three:')
+    for k, v in three().items():
+        print('   %s: %s' % (k, v))
+    print('[extras done in %.1fs]' % (time.time() - t0))
+
+
+def more():
+    """Three further checks, also written after opening."""
+    # (1) every row of results-course.json against my regions
+    import os
+    here = os.path.dirname(os.path.abspath(__file__))
+    d = json.load(open(os.path.join(here, 'results-course.json')))
+    kids = {1: ((1, 1), (0, 2)), 0: FREEZE}
+    gmap = {'way': 0, 'F': 1, 'O': 3, "('level', 20)": 2}
+    nrow = ncell = nbad = 0
+    for key, rows in d.items():
+        needF = int(key.split()[1].rstrip(','))
+        conv = 'next' if 'of the next step' in key else 'this'
+        m = Model(32, (needF, 1), (14, 1), kids, conv)
+        move = (lock_move if 'set again' in key else (lambda x: 1) if 'held favouring' in key else (lambda x: 0))
+        x = (1, 0, 1, 28) if conv == 'next' else (1, 0, 0, 28)
+        seen = set()
+        for row in rows:
+            cfg = tuple(row['configuration'])
+            mine = x if conv == 'next' else (x[0], x[1], x[3])
+            nrow += 1
+            if cfg != mine:
+                nbad += 1
+                print('   COURSE DIFFERS', key, cfg, mine)
+            if 'then' in row:
+                want = 'repeats: never ends' if (m.guard(0, x) and x in seen) else 'no need met: ends'
+                if row['then'] != want or (m.guard(0, x) and x not in seen):
+                    nbad += 1
+                    print('   END DIFFERS', key, row, want)
+                continue
+            for gname, g in gmap.items():
+                lab = WRITER[Regions(m, g, [x]).innermost(x)]
+                ncell += 1
+                if lab != row[gname]:
+                    nbad += 1
+                    print('   CELL DIFFERS', key, cfg, gname, row[gname], lab)
+            seen.add(x)
+            x = m.step(x, move(x))
+    print(' results-course.json: %d courses, %d rows, %d region cells compared, %d differences' % (len(d), nrow, ncell, nbad))
+
+    # (2) what the lock's courses that stop favouring are like; (3) one function for every start?
+    met_at_start = Counter()
+    first_f0 = Counter()
+    uni = Counter()
+    for m in all_models():
+        starts = list(starts_of(m))
+        R = Regions(m, 0, starts)
+        R.build_W()
+        for s in starts:
+            if s[2] == 1 and s[0] >= 1 and m.guard(0, s) and s in R.Kp and s not in R.K:
+                cat, dd, det = clock(R, s)
+                if 'becomes 0' in cat:
+                    # walk the course to the first configuration without an F
+                    x, i, ever_met = s, 0, False
+                    while x[0] >= 1:
+                        ever_met = ever_met or m.need[0] <= x[3]
+                        x = R.succ[x][1]
+                        i += 1
+                    met_at_start[(cat, 'an F had its need met at some step' if ever_met else 'no F ever had its need met')] += 1
+                    first_f0[(cat, i)] += 1
+        # one function of f (one constant) for every start that some function of f (some constant) keeps?
+        n = R.fmax + 1
+        allw = (1 << R.nfun) - 1
+        both = allw
+        some = False
+        c0 = c1 = cany = 0
+        for s in starts:
+            w = R.W.get(s, 0)
+            if w:
+                some = True
+                both &= w
+            k0 = (w >> R.thr_index[n]) & 1     # rule 0 held
+            k1 = (w >> R.thr_index[0]) & 1     # rule 1 held
+            if k0 or k1:
+                cany += 1
+                c0 += k0
+                c1 += k1
+        if some:
+            uni['instances with a start some function of f keeps'] += 1
+            if not both:
+                uni['... of which no one function of f keeps all such starts'] += 1
+        if cany:
+            uni['instances with a start one rule held keeps'] += 1
+            if c0 < cany and c1 < cany:
+                uni['... of which neither rule held keeps all such starts'] += 1
+    print(' lock courses on which the rule in force becomes 0 (start in Kp, not in K):')
+    for k, v in sorted(met_at_start.items()):
+        print('   %s | %s : %d' % (k[0], k[1], v))
+    for k, v in sorted(first_f0.items()):
+        print('   %s | first configuration without an F at index %d : %d' % (k[0], k[1], v))
+    print(' one choice for every start (starts of the sweep only):')
+    for k, v in uni.items():
+        print('   %s: %d' % (k, v))
+
+
+def main():
+    t0 = time.time()
+    args = sys.argv[1:]
+    if 'extras' in args:
+        extras()
+        return
+    if 'more' in args:
+        more()
+        return
+    if 'a' in args or not args:
+        part_a()
+        print('\n[(a) done in %.1fs]' % (time.time() - t0))
+    if 'sweep' in args or not args:
+        models = list(all_models())
+        limit = next((int(a[6:]) for a in args if a.startswith('limit=')), None)
+        if limit:
+            models = models[::max(1, len(models) // limit)]
+        procs = next((int(a[6:]) for a in args if a.startswith('procs=')), 1)
+        if procs > 1:
+            import multiprocessing as mp
+            n = 48
+            chunks = [models[i::n] for i in range(n)]
+            with mp.Pool(procs) as pool:
+                parts = pool.map(_work, chunks)
+            tot = merge(parts)
+        else:
+            tot = sweep(models)
+        print('\n(b) sweep: %d models, %d starts' % (tot['nmodels'], tot['nstarts']))
+        print('  guard "something goes on": starts by innermost region')
+        for lab in LABELS:
+            print('    %-28s %8d   (c=8: %7d, c=12: %7d)' % (
+                lab, tot['counts'][lab], tot['counts_by_c'][8][lab], tot['counts_by_c'][12][lab]))
+        print('  B/S/A mismatches: %d; largest number of readings enumerated by A: %d' % (
+            tot['stats'].get('mismatch', 0), tot['stats'].get('maxbranch', 0)))
+        print('  X sample cross-check: %s' % dict(tot['xcheck']))
+        for k in ('mismatch_examples', 'x_examples'):
+            if tot['stats'].get(k):
+                print('  %s: %s' % (k, tot['stats'][k][:5]))
+        print('  first example of each region:')
+        for lab in LABELS:
+            if lab in tot['examples']:
+                print('    %-28s %s start %s' % (lab, *tot['examples'][lab]))
+        print('\n(c) starts with rule 1 in force, f >= 1, guard holding, in Kp: %d' % sum(tot['clocks'].values()))
+        for cat, n in sorted(tot['clocks'].items()):
+            print('    %-78s %8d   (c=8: %7d, c=12: %7d)' % (
+                cat, n, tot['clocks_by_c'][8][cat], tot['clocks_by_c'][12][cat]))
+        print('    of "never ends, start in K": rule in force stays 1: %d; becomes 0: %d' % (
+            tot['clockK']['rule1'], tot['clockK']['rule0']))
+        print('    (index of first configuration with rule 0 in force) - (index of first configuration no course keeps):')
+        for (cat, d), n in sorted(tot['hist'].items()):
+            print('      %-78s d=%+d : %d' % (cat, d, n))
+        print('    is that first rule-0 configuration the one at which the guard fails?')
+        for (cat, b), n in sorted(tot['hist_end'].items()):
+            print('      %-78s %s : %d' % (cat, b, n))
+        print('    first example of each:')
+        for cat, v in sorted(tot['clock_examples'].items()):
+            print('      %s: %s start %s (end index, first not-Kp index, first rule-0 index)=%s' % (cat, *v))
+        print('\n[all done in %.1fs]' % (time.time() - t0))
+
+
+if __name__ == '__main__':
+    main()

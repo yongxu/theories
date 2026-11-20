@@ -1,0 +1,42 @@
+# The next step, worked out from the direction
+
+*AI-written (Claude Fable, the session that ran the survey), 20 November 2026, at Ren's word that morning: "From that, can you like figure out what the next step of choice should be?" Five readings: this session's own, which a reader set to break it broke; and three made blind to it (two Fable, one astra 6.2 at its highest effort), plus what the breaking reader put in its place. Their reports are beside this file. Statements and docstrings were read, no proofs; nothing was built. Ren has not read it. It is offered to the session that leads on the map and the direction, which holds this line; it orders nothing.*
+
+## What I chose first, and why it failed
+
+I chose a new small model of the second way: a unit that spends part of what it takes on keeping up what it rests on. A reader set to break it found:
+
+- It was tried on 17 November, twice in one day, and came out as the line on a stock with its giving renamed. On one shared level, a kind that pays in offspring for what comes to all alike loses share at every step, and that is its premise said again.
+- "The second way has no model" is false. `ReaderRebuilding` (chapter 4 §8), `cultivation` beside `malignant` in `RelationalRenewal`, `RuleRebuilding` (chapter 5 §12) and `Optimum` each have a going-on keeping up what it rests on at a cost.
+- A periphery model that the direction page and the plan never name has most of the case the direction most wants: in `experiments/market-generativity/formal/`, a renewing practice pays for maintenance, its share is selected by private profit, the rule is eroded by the other share's influence, and the stock is rebuilt by the renewing share (chapter 5 §10).
+- I glossed `Flow.Dissipative` wrongly.
+
+## What the four have in common
+
+They name four different steps. Three things are the same in all four.
+
+1. **No new model.** Each takes pieces October already built and sets November's centre against them: the web's selection side (`ReadOffInTime`), the regions of `Viability` and `GuardHorizon`, `RuleShaping`'s what-comes-back, or the kept courses themselves.
+2. **One question.** Each is a way of asking the direction's own question exactly: does what a going-on rests on reach how it selects, early enough to turn it, and at which grain.
+3. **On paper first**, on courses already built, with what would count as nothing having changed written down before.
+
+And the three who chose blind each answered the question held for Ren since 19 November the same way, without being asked: it is a matter of grain. A rule that stops favouring because the units it counts went without first is a turn in time for the way and for those left, and a loss for good for the units counted. The map should be able to say both at once.
+
+## The step
+
+One day, on paper, no Lean and no new model. Take the courses already built: `TurningInTime.Three`, `FourReaders`, `Renewable`'s two runs, `cultivation` and `malignant`, the course of 19 November with its twin, and that course with the counted unit's need changed from 27 to 26. For each, and at each grain (the way, each kind of unit, whoever else rests on the level), work out by hand:
+
+- whether it is kept as it goes, could be kept by a choice made from what it reads, could be kept by some course at all, or is lost;
+- the step at which it leaves each of these;
+- whether it renews or consumes, in the web's sense.
+
+It counts as nothing having changed if these sort no pair of courses differently from what ending and not ending, and renewing and consuming, already do; or if "could be kept, but by no choice from what it reads" comes out empty, or as everything not kept, in every case.
+
+If it passes, the table says which of the four steps is worth Lean. If it fails, that is kept, and the direction's "can it still be turned" is then not one question in this frame.
+
+## Why this and not one of the four alone
+
+Each of the four may be a dictionary again, and two of their writers say so. The table is the part all four need first, it costs a day, and it is the cheapest thing that can tell them apart.
+
+## Reports
+
+`choose-astra.md` (the course of 19 November and when it turns in time), `choose-fable-1.md` (give the pair October's web, so the levels that turn it are others' needs), `choose-fable-2.md` (three regions in October's frame), `break-fable.md` (what broke the first choice, and the join of `RuleShaping` to a level its givers keep).

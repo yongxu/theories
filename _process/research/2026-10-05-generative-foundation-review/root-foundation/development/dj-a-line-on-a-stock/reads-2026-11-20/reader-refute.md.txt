@@ -1,0 +1,96 @@
+*AI-written (Claude Fable 5.2), 20 November 2026, by one reader set to refute, read-only. Read whole: `FROZEN-REGIONS.md`, `AFTER-PROGRAMS.md`, `regions.py`, `regions_2.py`, the six `results-*.json` and `sweep.log`, the note of 19 November, `NEXT-STEP.md`, `choose-fable-2.md`, `break-fable.md`, chapter 2 §8 and §11. Read in part: the direction page (the head note's opening, lines 5 to 39, and its item on three clocks), chapter 2 §5, §9 and §10 (openings and first theorems), `ONE-SPACE-ON-PAPER.md` (through the record of 15:30). Lean at statements only, no proof followed: `Viability` 1 to 115, `JointKeeping.Keepable`, `GuardHorizon` (`Viable`, `UniformPolicy` and the eight statements after it), `ReadOffInTime` 585 to 640, `Pace.turn`/`paced`, `RuleCapture` 104 to 216 and 384 to 418, `TurningInTime` (`locked_closed`, `locked_alone`, `locked_ends_rising`, `count_rises`, `regroup_step`, `locked_turns_in_time_on_window_iff`, the point of no return section's definitions and three statements, `Three` to `noReturn`), `LineOnAStock` 132 to 200 and `unending_iff_holds`, `RegimeMargin.step` and four definitions, `WayOfUnits.ends_while_net_goes`. Not read at all: `Keeping.lean`, `RelationalRenewal.lean`, the plan, chapters 3, 5 and 7 (two lines of 3 by search), the other files beside `NEXT-STEP.md`, and the three other readers' reports and `rebuild.py` now in this folder. One program of my own, `refute.py` (nine small passes, each under a minute); nothing built. A search over small numbers shows where a statement fails, not that it holds.*
+
+# Set to refute: the regions of "can it still be turned"
+
+## Verdict
+
+The programs are right as far as I could check them; the numbers in `AFTER-PROGRAMS.md` reproduce. What they mean is less than the file's last section suggests. On the model the Lean's lock laws are about (a favouring rule, and a rule turned to under which what is taken stands), "kept by some course" is "the standing rule, held from here, keeps it" in 267,313 of 267,598 kept configurations, and a reading adds nothing: there the table is a dictionary of `WayOfUnits.unending_iff_holds` one step on. Tests 3 and 7 trip; test 6 trips in its letter at one guard; tests 2 and 4 pass only in the letter (4: the lock is not assumed, since the model lets the share fall at an unmet need, and it does no work); tests 1 and 5 could not have failed in a model where one move ends what another keeps and one unit can be lost while another goes on. Three small things are worth keeping, none of them a statement.
+
+## 1. The programs (no error found)
+
+**LESSER. `reach`, `gfp`, `run_policy`, `kept_by_reading`, `kept_mono`, `classify`, `clocks`: no wrong answer found.** How: by reading, and by `refute.py check` on all 5,184 instances of the standstill family (bounds 8 and 12, the Lean's order, guard "something goes on"):
+
+- my own step, written from `LineOnAStock.after`/`left` and `Pace.turn`, agrees with `Units.step` at every reachable configuration and both moves;
+- my own fixed point, taken horizon by horizon as `GuardHorizon.Viable` is defined, gives the same reachable set, the same K and the same Kp in every instance;
+- brute force over every function of the reading, on the readings met within Kp from the start, agrees with `kept_by_reading` at 31,003 configurations for the share and 31,003 for the share and level, among them all 100 that no rule held keeps: 0 disagreements.
+
+The three points asked. *A repeated configuration on the path counted as "for ever":* right. Every configuration on the path had its reading fixed when it was visited, and the partial choice only grows along a branch, so the course from the repeated configuration retraces the path. *True at once in K:* right, since K says every sequence of moves keeps, whatever is already fixed. *Complete:* both moves are tried at an unfixed reading with a fresh copy of the choice. *`const` when only rule 1 held keeps:* yes, counted (`0 in ths`); 185 of the sweep's 215,992. *The lock's own course in `clocks`:* threshold 1, starts with at least one F and rule 1 in force, so the start is `Locked` in `RuleCapture`'s sense for that reading.
+
+Not checked by me: the convention "this step" (the 310 and 18), the level guard, the split of the non-standstill rows among share, share and level, and Kp only (their sum reproduces), and those rows' "Kp only" by brute force.
+
+**LESSER. `mono` is wider than "the lock from here".** `kept_mono` tries every threshold, also those above the start's share, down to "never favour". Under such a reading a start with the favouring rule in force is not `Locked`. And the clocks table times only two things: the first step with rule 0 in force, and the first configuration no course keeps. It does not time the leaving of K or of any R, though G6 speaks of three.
+
+## 2. Tests 2 and 3: the gap, and whether it is a dictionary
+
+`refute.py main`, standstill, 670,464 configurations:
+
+| | configurations |
+|---|---|
+| no course keeps | 402,866 |
+| kept whatever the moves (K) | 51,506 |
+| rule 0 held keeps, rule 1 held does not | 215,275 |
+| each rule held keeps, some mixture ends | 532 |
+| rule 1 held keeps, rule 0 held does not | 185 |
+| some course keeps, no rule held | 100 |
+
+**LESSER (test 3 trips on this model). With a standstill, Kp is "the standstill held from here keeps" in all but 285 of 267,598 kept configurations.** That is the left side of `WayOfUnits.unending_iff_holds` at the configuration one step on (the step the rule in force has already set). The model's giving `min z (c − z)` meets that theorem's regime premises with `y` what the way takes and `hi` the bound; I argued this on paper and did not check it in Lean. On `Three` the same holds with no exception: under "next", K is exactly "five held keeps" and Kp exactly "three held keeps" (`refute.py three`), which is chapter 2 §5's point of no return at the two uses (`RegimeMargin.ends_iff_below`, read in the chapter's telling only). Under "this step" the first step of the course from nine whose level no takes keep is step 3, which is `Three.noReturn`; under "next" it is step 2, the one-step shift that `turns_in_time_iff_before` carries as `T + 1`. So the writer's question about the two countings has this answer: the Lean's `Turned` is the convention "this step", its lock and its pair are "next".
+
+**LESSER. All 285 exceptions lie in instances where the favouring rule lowers what some unit's offspring take** (an O leaves nothing, or turns into a lighter F). In the 384 instances where under the favouring rule each kind leaves only its own kind, at least one (the nearest in the sweep to chapter 2 §9's kinds), there is no exception and no gap at all: 11,272 K, 12,483 standstill held, 25,909 none, of 49,664. The 91 that no function of the share keeps are a lag effect: a rule must be applied a set number of times while the share does not move (traced: two O taking two each at level 7; one favouring step turns them into two F taking one each; the share reads nothing for two steps running, so a choice from the share favours twice). The kind of gap is October's already: moves good configuration by configuration need not be a choice from a reading, and a finer reading restores it (`GuardHorizon.statewise_not_uniform`, `uniform_finer`; those are of one step, not of a course for ever).
+
+**MUST. "So 'nearly everything kept is kept by one rule held' belongs to the standstill" says more than the table.** In the three rows without a standstill, one rule held (or K) still keeps 34,967 of 35,030, 34,207 of 36,081 and 12,355 of 13,075 kept configurations: 99.8, 94.8 and 94.5 in a hundred. What belongs to the standstill is narrower: that the rule which does not favour, held, keeps nearly all.
+
+**LESSER (test 2 passes only in its letter). The rows that enlarge the gap were added after the sweep was read, and their rule pairs are not ones the Lean or the direction is about.** What the lock's laws ask of a pair: of the favouring rules, `Raises` (the share not lowered), and for an ending that the use is at least `H₁` from a start below `H₁ + y₁`, or rises strictly (`more`); of rules that do not favour, `RuleCapture` asks nothing (a locked course never meets one, `turn_locked`); and the one law that turns, `locked_turns_in_time_on_window_iff`, asks that the rule turned to be `kept` with one standing use `H₂`, the least of all uses (`uses`, `least`), and its reading reads the level, not the share. That is the standstill row and `Three`. In rows 2 and 3 the other rule also multiplies units without limit, so both rules use up. In row 4 the other rule doubles F and leaves no O: by `Raises` on a count it favours. None of the three has a rule under which anything is given to the level, which is what the direction's second way asks.
+
+## 3. The lock's kind of reading: the 0, the 667, the 9
+
+**LESSER as worded ("here"), MUST NOT be told of the model. The 0 in the `mono` column is not forced by the standstill.** The argument reaches only this far: where no O leaves an F, the count of F does not fall under either rule while F's need is met, and does not rise under the standstill; so along a threshold reading's course the rule changes, after the first step, only once the counted kind has gone unmet. Such a course is one rule held, or favouring until the favoured are lost and then the standstill on what is left. The second can keep what no rule held keeps, and does in the writer's own instance: 19 November's rules with the counted unit's need 26, one F, rule 0 in force, level 27. Rule 0 held: 27, 26, 24, and nothing is left. Rule 1 held: the small units double to 64 and it ends. Threshold 1: 27, 26, 24, 18, 32, four small units for ever (`refute.py wide`). Three more in 640 instances with a large F. All four have rule 0 in force at the start. From starts with the favouring rule in force I found none (the sweep, both instances of 19 November at every start, 1,390 added instances). The sweep's 0 comes from its ranges: with uses of 1 and 2 no unit's going frees enough for what it left behind.
+
+**MUST. Row 4's 667 are not kept by the lock's kind.** All 667 lie in instances where F leaves one F under rule 1 and two under rule 0 (`refute.py other0`). There "rule 1 at or above a threshold" is "stop doubling F at the threshold": a cap. The row's label, "the rule that does not favour: F leaves two F, O nothing", with the column's meaning, says something false.
+
+**LESSER. The 9 are one rule pair** (F leaves two F and O nothing under the favouring rule; O takes twice what F does): favour below the threshold removes the heavier kind, stop above caps the doubling, and the lag lets it double once more (1, 2, 4 at threshold 2). The class is named in the Lean: `ReadsShare P (reverse M) h`, chapter 2 §9's reading against the share, of which the chapter states only that it does not ratchet (`against_not_rising`). The overshoot is §8's late reading in kind (`Regulation.no_narrower_band`). It is not §5: a margin has no reading in it. That such a reading keeps where the lock's kind cannot is stated in neither, in what I read. Nine configurations carry nothing.
+
+## 4. Test 5: grain
+
+**LESSER (the test could not fail; what differs is already told, except a timing).** For the favoured kind all 1,359 differences are "the kind: no course keeps it; the way: kept" (1,196 with a rule held, 156 in K, 7 other). A met F leaves an F under both rules, so F is lost only by its need going unmet while another unit goes on: `WayOfUnits.ends_while_net_goes`, chapter 2 §11. For the other kind, 21,113 of 21,261 lie in instances where an O leaves no O under the favouring rule: the selection removes it, which is §9, not a need. What the regions add is when: the kind is past keeping at a configuration where its need is still met. That is `NoReturnAt` with the kind's guard as what is asked; I did not find it instantiated on units, having searched only the statements listed above.
+
+## 5. Test 6: the convention
+
+**LESSER. The Lean's order for the lock is "next"** (`Pace.turn`: the rule read is `h` of the share before the step; `regroup_step`; the pair's `after`). The finding that the favoured unit is past keeping at the start is therefore not an artefact against the Lean: `Locked` has `favours p.2` as its first half, so every locked start has one favouring step already set. Its content is small: with rule 0 in force at the same way and level the favoured unit is kept by a rule held (`refute.py conv`); one favouring step leaves one small unit, and the level then runs 28, 28, 26, below 27, on a course found by a search built to find such courses. G4's "as guessed" should carry this, and should say that the way is in `const`, not only in R: the lock's reading is not what keeps it.
+
+**LESSER (test 6 trips in its letter, untold).** For the other kind's guard the region "share" is empty under "next" and has 18 under "this step" (the writer's `results-sweep.json`; not recomputed).
+
+## 6. The clocks
+
+**LESSER, MUST NOT be told as a finding. "Stopped favouring at or before the point of no return: 0" is forced in this family.** With threshold 1 on a count the rule stops favouring only when no F is left; under the favouring rule in force that needs F unmet and no O leaving an F; from then no F ever returns and the course is the standstill on the O that remain. For O alone the standstill is the best course (any other only multiplies or removes them; more units take more, and the step rises in the level), so if any course keeps the configuration at which the reading moved, the lock's own course does. In chapter 2 §10's words every such turn is the second way a lock is left: a step at which the share is not kept. Under the Lean's three premises a locked course never leaves (`turn_locked`), so the Lean's lock laws have no such row.
+
+Where it is not forced: with the standstill, thresholds 1 to 4 and up to four F at the start, none (`refute.py thresh`). With rule 0 not a standstill, 281 in each of rows 3 and 4 (225 where something multiplies under rule 1); there "stopping favouring" goes to the rule that multiplies.
+
+**LESSER. In all 144 courses that "turn in time", rule 0 held from the start keeps too, and rule 1 held does not.** The reading's turn keeps nothing a standstill held would not.
+
+**LESSER. 34,611 against 144 is the choice of ranges.** Where F needs no more than O: 0 turns. Where F needs more and something multiplies: 144 against 16,503. In 19 November's instance over all starts: 18 against 10 (need 27), 13 against 7 (need 26). With a large F: 979 against 3,815, and 3,818 against 12,274. "In this family it almost never does" is true of the family and of nothing else.
+
+**LESSER, MUST NOT be said. The three leavings are not the direction's three clocks.** The direction's are: before what is taken cannot come back; while those who register it still have weight in how the loop is set; before it removes them. Only the first is a region's edge (Kp).
+
+## 7. Test 7, and what the table is
+
+**LESSER (test 7 trips). I found no sentence in the regions' terms that holds on `Three` and on the units by one argument and is not a definition unfolded.** The one candidate: "some course keeps it exactly where the least-taking rule, held, keeps it". On `Three` it holds, by one comparison (the step rises in the level and falls in what is taken). On the units the same comparison breaks where a unit's loss helps the rest. With each kind leaving only its own kind, bound 32: one F (need 20, use 13) and one O (need 1, use 1), rule 0 in force, level 27. The standstill held runs 27, 26, 24, 20, 12 and ends. Favouring once doubles the O; the level runs 27, 26, 24, 18, the F goes unmet a step sooner while 18 is left, and two O go on (`refute.py trace`). Two such in 162,848 kept configurations of 750 instances; none in the sweep's 384.
+
+What the table is: a way of placing configurations, not courses, that proves nothing. Where the Lean's lock laws live it renames the holding law. Test 1 could not fail in any process with one move that ends and one that keeps; what the regions add to ending and not ending is the step at which Kp is left, which is `NoReturnAt`.
+
+## What the writer must not say
+
+- That tests 2 and 3 were passed on the model the lock's laws are about.
+- That the gap "belongs to the standstill" as worded, or that it grows on rule pairs of any standing.
+- That a reading of the lock's kind keeps nothing beyond a rule held, of the model; nor, from row 4, that it keeps 667.
+- The 0 of the clocks table as a result; the proportion 34,611 to 144 as anything about locks; the three leavings as the direction's three clocks.
+- That grain sorts anything chapter 2 §11 and §9 do not, beyond when.
+
+## Worth keeping
+
+1. **The start of 19 November's course is kept by the standstill held.** Against its twin the rule's change is what lets the rest go on; against never favouring again it is not. The note of 19 November says the first only. Beside it, the one configuration found where favouring and then stopping are both needed (need 26, rule 0 in force, level 27).
+2. **Kept by some course and not by standing still** (285 in the sweep, the two traced above): kept only by first making something that outlasts, or by losing sooner the unit that takes most. No law of November is about that, and it is where comparing courses has content. Found by search; no statement.
+3. **On `Three` only:** every mixture of the two uses keeps exactly where the turn to the lesser use does. That would widen the feasible courses of `recoverable_iff_above`, which chapter 2 §11 says leave other continuations out. By search on 24 configurations and an argument; false on units.
+
+## What my checks cannot show
+
+That any of this holds beyond the ranges run. The added families in `refute.py wide` were chosen by me after seeing the sweep, to find what it could not. "None found from locked starts" is a search. The regime premises of `unending_iff_holds` for this giving were checked on paper only.

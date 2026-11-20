@@ -1,0 +1,290 @@
+#!/usr/bin/env python3
+"""Regions of "can it still be turned", computed exactly on small numbers.
+
+AI-written scratch (Claude Fable, 20 November 2026), written after FROZEN-REGIONS.md and before any reader.
+A search is a search, not a proof. Nothing here is the Lean's. The processes are the writer's construction:
+the Lean's courses of November have no moves in them.
+
+The units (the model of 19 November, lock_on_units.py): two kinds F and O, two rules 0 and 1 (1 favours),
+kids[r][kind] = (how many F, how many O); a unit whose need the level meets leaves its kids under the rule in
+force, the others leave nothing; every unit present takes; the level steps by z + min(z, c - z), z = max(0, x - taken).
+  convention 'next' (the Lean's order for the lock): a configuration is (nF, nO, r, x), r the rule in force;
+      a move sets the rule in force at the next step.
+  convention 'this': a configuration is (nF, nO, x); a move is the rule used at this step.
+Regions, for a guard g:
+  K   kept as it goes: no sequence of moves leaves g            (Viability.Kernel)
+  Kp  kept by some course: some sequence of moves stays in g    (Viability.Keepable)
+  R   kept by a choice from a reading obs: some pi : obs -> move whose course from here stays in g.
+      Readings: 'const' (one rule for ever), 'mono' (rule 1 exactly where the number of F is at least a
+      threshold: the lock's class), 'share' (any function of the number of F), 'share+level', 'all' (= Kp).
+Guards, one for each grain: 'way' some unit's need met; 'F' an F present with its need met; 'O' likewise;
+  ('level', b) the level at least b.
+
+Usage: python3 -B regions.py course | sweep | three
+"""
+import itertools, json, sys
+from collections import deque
+
+OUT = 'OUT'
+
+
+def giving(c, z):
+    return max(0, min(z, c - z))
+
+
+class Units:
+    def __init__(self, c, need, use, kids, conv='next'):
+        self.c, self.need, self.use, self.kids, self.conv = c, need, use, kids, conv
+
+    def parts(self, s):
+        if self.conv == 'next':
+            return s
+        nF, nO, x = s
+        return nF, nO, None, x
+
+    def step(self, s, a):
+        nF, nO, r, x = self.parts(s)
+        rule = r if self.conv == 'next' else a
+        kF, kO = self.kids[rule]
+        f = nF if self.need[0] <= x else 0
+        o = nO if self.need[1] <= x else 0
+        nF2, nO2 = f * kF[0] + o * kO[0], f * kF[1] + o * kO[1]
+        z = max(0, x - (nF * self.use[0] + nO * self.use[1]))
+        x2 = z + giving(self.c, z)
+        return (nF2, nO2, a, x2) if self.conv == 'next' else (nF2, nO2, x2)
+
+    def guard(self, name):
+        if name == 'way':
+            return lambda s: (lambda nF, nO, r, x: (nF > 0 and self.need[0] <= x) or (nO > 0 and self.need[1] <= x))(*self.parts(s))
+        if name == 'F':
+            return lambda s: (lambda nF, nO, r, x: nF > 0 and self.need[0] <= x)(*self.parts(s))
+        if name == 'O':
+            return lambda s: (lambda nF, nO, r, x: nO > 0 and self.need[1] <= x)(*self.parts(s))
+        if isinstance(name, tuple) and name[0] == 'level':
+            return lambda s: self.parts(s)[3] >= name[1]
+        raise ValueError(name)
+
+    def obs(self, name):
+        if name == 'share':
+            return lambda s: self.parts(s)[0]
+        if name == 'share+level':
+            return lambda s: (self.parts(s)[0], self.parts(s)[3])
+        if name == 'all':
+            return lambda s: s
+        raise ValueError(name)
+
+
+MOVES = (0, 1)
+
+
+def reach(m, starts, g):
+    """All configurations within g reachable from the starts by any moves, with their successors."""
+    succ, todo = {}, deque(s for s in starts if g(s))
+    seen = set(todo)
+    while todo:
+        s = todo.popleft()
+        nxt = []
+        for a in MOVES:
+            t = m.step(s, a)
+            if g(t):
+                nxt.append(t)
+                if t not in seen:
+                    seen.add(t); todo.append(t)
+            else:
+                nxt.append(OUT)
+        succ[s] = nxt
+    return succ
+
+
+def gfp(succ, every):
+    """Greatest set S of configurations within the guard with (every / some) successor in S."""
+    S = set(succ)
+    changed = True
+    while changed:
+        changed = False
+        for s in list(S):
+            ok = [t != OUT and t in S for t in succ[s]]
+            if not (all(ok) if every else any(ok)):
+                S.discard(s); changed = True
+    return S
+
+
+def run_policy(m, s, choose, g, limit=100000):
+    """The course from s under a rule of choice; True if it stays within g for ever (a configuration repeats)."""
+    seen = set()
+    while True:
+        if not g(s): return False
+        if s in seen: return True
+        seen.add(s)
+        if len(seen) > limit: raise RuntimeError('no repeat')
+        s = m.step(s, choose(s))
+
+
+def kept_by_reading(m, s, obs, g, Kp, K):
+    """Is there pi : obs -> move whose course from s stays within g for ever? Depth-first over partial pi."""
+    def go(s, pi, path):
+        if s not in Kp: return False
+        if s in K or s in path: return True
+        o = obs(s)
+        if o in pi:
+            return go(m.step(s, pi[o]), pi, path | {s})
+        for a in MOVES:
+            if go(m.step(s, a), {**pi, o: a}, path | {s}): return True
+        return False
+    return go(s, {}, frozenset())
+
+
+def kept_mono(m, s, g, top):
+    """Thresholds th for which 'rule 1 exactly where the number of F is at least th' keeps g from s for ever.
+    th = 0 is rule 1 for ever, th = top + 1 rule 0 for ever."""
+    share = m.obs('share')
+    return [th for th in range(0, top + 2) if run_policy(m, s, lambda t: 1 if share(t) >= th else 0, g)]
+
+
+def classify(m, s, g, succ=None, K=None, Kp=None, readings=('const', 'mono', 'share', 'share+level')):
+    """Which regions s lies in, innermost first."""
+    if succ is None:
+        succ = reach(m, [s], g); K = gfp(succ, True); Kp = gfp(succ, False)
+    out = {'K': s in K, 'Kp': s in Kp}
+    top = max([m.parts(t)[0] for t in succ] + [0])
+    if 'mono' in readings or 'const' in readings:
+        ths = kept_mono(m, s, g, top) if s in Kp else []
+        out['const'] = (0 in ths) or (top + 1 in ths)
+        out['mono'] = bool(ths)
+        out['mono thresholds'] = ths[:6]
+    for name in ('share', 'share+level'):
+        if name in readings:
+            out[name] = kept_by_reading(m, s, m.obs(name), g, Kp, K)
+    return out
+
+
+ORDER = ('K', 'const', 'mono', 'share', 'share+level', 'Kp')
+
+
+def innermost(cl):
+    for name in ORDER:
+        if cl.get(name): return name
+    return 'none'
+
+
+# ----------------------------------------------------------------------------------------------------------------
+
+def course_table():
+    """The course of 19 November, its twin with the rule held, and both with the counted unit's need 26."""
+    kids = {1: ((1, 1), (0, 2)), 0: ((1, 0), (0, 1))}
+    res = {}
+    for needF in (27, 26):
+        for conv in ('next', 'this'):
+            m = Units(32, (needF, 1), (14, 1), kids, conv)
+            start = (1, 0, 1, 28) if conv == 'next' else (1, 0, 28)
+            share = m.obs('share')
+            for label, choose in (('rule set again from the share (threshold 1)', lambda t: 1 if share(t) >= 1 else 0),
+                                  ('rule held favouring', lambda t: 1),
+                                  ('rule never favouring', lambda t: 0)):
+                rows, s, seen = [], start, set()
+                gway = m.guard('way')
+                while gway(s) and s not in seen and len(rows) < 12:
+                    seen.add(s)
+                    row = {'configuration': s}
+                    for gname in ('way', 'F', 'O', ('level', 20)):
+                        row[str(gname)] = innermost(classify(m, s, m.guard(gname)))
+                    rows.append(row)
+                    s = m.step(s, choose(s))
+                rows.append({'configuration': s, 'then': 'repeats: never ends' if gway(s) else 'no need met: ends'})
+                res['need %d, move sets the rule of the %s step, %s' % (needF, conv, label)] = rows
+    json.dump(res, open('results-course.json', 'w'), indent=1, default=str)
+    for k, rows in res.items():
+        print('\n' + k)
+        for r in rows:
+            print('  ', r)
+
+
+def sweep():
+    """Small instances: how many configurations lie in each region, for each guard, under both conventions;
+    whether the grain's regions are the way's cut down; and the classes of the lock's own courses."""
+    out = {}
+    kid_choices = [(a, b) for a in range(0, 3) for b in range(0, 3)]
+    for conv in ('next', 'this'):
+        tally = {g: {} for g in ('way', 'F', 'O')}
+        grain_differs = {'F': 0, 'O': 0}
+        grain_examples = {}
+        lock_classes, examples, n_inst, n_conf = {}, {}, 0, 0
+        for c in (8, 12):
+            for needF, needO in itertools.product((1, 3, 5, 7), (1, 3, 5)):
+                for useF, useO in itertools.product((1, 2), (1, 2)):
+                    for kF1, kO1 in itertools.product(kid_choices, kid_choices):
+                        if kF1[0] < 1: continue                       # under the favouring rule each F leaves an F
+                        for kF0, kO0 in (((1, 0), (0, 1)),):          # under the other rule each leaves itself
+                            m = Units(c, (needF, needO), (useF, useO), {0: (kF0, kO0), 1: (kF1, kO1)}, conv)
+                            n_inst += 1
+                            starts = [((nF, nO, r, x) if conv == 'next' else (nF, nO, x))
+                                      for nF in (0, 1, 2) for nO in (0, 1, 2) for x in range(0, c + 1)
+                                      for r in ((0, 1) if conv == 'next' else (None,)) if nF + nO > 0]
+                            starts = list(dict.fromkeys(starts))
+                            cls = {}
+                            for gname in ('way', 'F', 'O'):
+                                g = m.guard(gname)
+                                succ = reach(m, starts, g); K = gfp(succ, True); Kp = gfp(succ, False)
+                                for s in starts:
+                                    if not g(s): continue
+                                    cl = innermost(classify(m, s, g, succ, K, Kp))
+                                    cls[(gname, s)] = cl
+                                    tally[gname][cl] = tally[gname].get(cl, 0) + 1
+                                    if gname == 'way':
+                                        n_conf += 1
+                                        key = 'way: ' + cl
+                                        if key not in examples:
+                                            examples[key] = {'c': c, 'need': m.need, 'use': m.use, 'kids under the favouring rule': (kF1, kO1), 'configuration': s}
+                            # grain: is the kind's region the way's region cut down to where the kind is present and met?
+                            for gname in ('F', 'O'):
+                                for s in starts:
+                                    if (gname, s) in cls and cls[(gname, s)] != cls.get(('way', s)):
+                                        grain_differs[gname] += 1
+                                        key = '%s: %s, way: %s' % (gname, cls[(gname, s)], cls.get(('way', s)))
+                                        if key not in grain_examples:
+                                            grain_examples[key] = {'c': c, 'need': m.need, 'use': m.use, 'kids under the favouring rule': (kF1, kO1), 'configuration': s}
+                            # the lock's own courses (convention 'next', a locked start: rule 1 in force, read by a threshold the share reaches)
+                            if conv == 'next':
+                                g = m.guard('way'); share = m.obs('share')
+                                for s in starts:
+                                    if s[2] != 1 or not g(s) or s[0] < 1: continue
+                                    th = 1
+                                    goes = run_policy(m, s, lambda t: 1 if share(t) >= th else 0, g)
+                                    key = ('never ends' if goes else 'ends') + ', start in ' + cls[('way', s)]
+                                    lock_classes[key] = lock_classes.get(key, 0) + 1
+        out[conv] = {'instances': n_inst, 'configurations (guard: the way)': n_conf, 'innermost region, by guard': tally,
+                     'configurations where the kind\'s region is not the way\'s': grain_differs,
+                     'grain examples': grain_examples, 'lock courses by class': lock_classes, 'examples': examples}
+        print(json.dumps({k: v for k, v in out[conv].items() if k not in ('examples', 'grain examples')}, indent=1))
+    json.dump(out, open('results-sweep.json', 'w'), indent=1, default=str)
+
+
+def three():
+    """TurningInTime.Three as a process: the take in force is five or three, the level gives min z (12 - z),
+    need one; a move sets the take of the next step (or, second convention, of this step)."""
+    def lvl(x, use):
+        z = max(0, x - use); return z + giving(12, z)
+    res = {}
+    for conv in ('next', 'this'):
+        if conv == 'next':
+            states = [(w, x) for w in (5, 3) for x in range(0, 13)]
+            step = lambda s, a: (a, lvl(s[1], s[0]))
+            x_of = lambda s: s[1]
+        else:
+            states = [(x,) for x in range(0, 13)]
+            step = lambda s, a: (lvl(s[0], a),)
+            x_of = lambda s: s[0]
+        g = lambda s: x_of(s) >= 1
+        succ = {s: [(step(s, a) if g(step(s, a)) else OUT) for a in (5, 3)] for s in states if g(s)}
+        K, Kp = gfp(succ, True), gfp(succ, False)
+        res[conv] = {'K (kept whatever the take)': sorted(K), 'Kp (kept by some takes)': sorted(Kp)}
+        if conv == 'next':
+            course, s = [], (5, 9)
+            while g(s) and len(course) < 8:
+                course.append({'configuration': s, 'in K': s in K, 'in Kp': s in Kp}); s = step(s, 5)
+            res[conv]['from nine as it was (take five)'] = course
+    print(json.dumps(res, indent=1)); json.dump(res, open('results-three.json', 'w'), indent=1)
+
+
+if __name__ == '__main__':
+    {'course': course_table, 'sweep': sweep, 'three': three}[sys.argv[1]]()

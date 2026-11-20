@@ -1,0 +1,149 @@
+*AI-written (Claude Fable), 20 November 2026, by one reader who took no part in the writing. Read whole: `FROZEN-REGIONS.md`; `AGENTS.md` ("What we are doing" and the seven rules); the record of 19 November (`reads-2026-11-19/NOTE.md`). Read in part: `_process/DIRECTION.md` (the head note, "Where we are heading" and the first paragraph of "We are far from it"). Opened only after Part 1 below was written (my program first ran at 09:55 WIB, from the clock), and then read whole: `AFTER-PROGRAMS.md`, `regions.py`, `regions_2.py`; the six `results-*.json` by every tally and, for `results-course.json`, every row by program. Not read at all: any Lean file, the plan, the chapters, `NEXT-STEP.md` and the reports beside it, `ONE-SPACE-ON-PAPER.md`. This part is the computation only, and nothing here says what the Lean says. Nothing was built; the writer's programs were read and not rerun (they rewrite the result files); no file was changed except this report and `rebuild.py` beside it. A search over small numbers shows where a statement fails, not that it holds.*
+
+**Verdict.** Every number in `AFTER-PROGRAMS.md` and in the result files that I rebuilt came back the same, by methods that share nothing with the writer's depth-first search; the only differences are two of counting convention that no configuration in the family tells apart. One sentence of `AFTER-PROGRAMS.md` says more than its own table shows (MUST 1), and the clocks table rests on courses of one narrow sort, which the text does not say (LESSER 1).
+
+# A blind rebuild of the regions computation
+
+## Part 1. My own program and its numbers, written before the writer's programs or results were opened
+
+`rebuild.py` (sha256 `a3a92e7c…66ba76` as first run) was written from "The question" in `FROZEN-REGIONS.md` and the particulars in my brief. It took 0.03 s for (a) and 4.4 s for the sweep.
+
+**How I read the definitions.** A configuration is (f, o, rule in force, level). At a step a unit whose need is at most the level leaves its kids under the rule in force; every unit present takes its use, met or not; z = max(0, level − taken); the next level is z + min(z, c − z); the move becomes the rule in force at the next configuration. So the two next configurations differ only in their rule. A configuration is in a region only if the guard holds at it. "One rule held" = the same move at every step from here (the rule already in force at the start is what the configuration has). "Threshold" = rule 1 exactly where f ≥ t, for every t from 0 up (t = 0 and t above every f are the two constants, so the classes are nested: K ⊆ one rule ⊆ threshold ⊆ function of f ⊆ function of (f, level) ⊆ Kp). R is asked per start: one function whose course from that start is kept.
+
+**Methods, none a depth-first search over partial choices.** K and Kp: greatest fixed points by removal along predecessors, on everything reachable from the starts through configurations within the guard (finite here: needs and uses are at least 1, so a configuration that takes its whole level is followed by level 0, where no need is met). For readings of f, method B: the set W(x) of all functions f → move whose course from x is kept, held as a bitmask over all 2^(fmax+1) functions and computed as a greatest fixed point, W(x) = (W(next₀ x) ∩ {g(f_x) = 0}) ∪ (W(next₁ x) ∩ {g(f_x) = 1}); "one rule" and "threshold" are particular members. Method S: plain simulation of the two constants and each threshold until the guard fails or a configuration repeats. Method A, for any reading: C = what is reachable from the start inside Kp; enumerate every assignment of moves to the readings that two or more configurations of C share, and for each take the fixed point "kept by some sequence" in the graph so restricted (readings met once constrain nothing). Method X, on every 40th model: all functions over all readings in C, each simulated. B, S and A agreed on every one of the 912,384 starts (0 mismatches); X agreed with A on 5,450 starts for each of the two readings (0 disagreements). A never had to enumerate more than 5 readings.
+
+### (a) The course of 19 November
+
+c = 32, uses (14, 1), rule 1: F → (1 F, 1 O), O → (0, 2 O); rule 0: each leaves itself; start (1, 0, rule 1, 28). Innermost region for each guard at each configuration; "one rule" means kept by one rule held and not in K. No configuration on any of these courses is in K under any guard.
+
+**F's need 27.**
+
+| course | i | (f, o, rule, level) | something goes on | a favoured unit goes on | level ≥ 20 |
+|---|---|---|---|---|---|
+| rule set again from the share | 0 | (1, 0, 1, 28) | one rule | none | one rule |
+| | 1 | (1, 1, 1, 28) | one rule | none | none |
+| | 2 | (1, 3, 1, 26) | one rule | none | none |
+| | 3 | (0, 6, 1, 18) | one rule | none | none |
+| | 4 | (0, 12, 0, 24), repeats for ever | one rule | none | one rule |
+| rule 1 held | 0 | (1, 0, 1, 28) | one rule | none | one rule |
+| | 1 | (1, 1, 1, 28) | one rule | none | none |
+| | 2 | (1, 3, 1, 26) | one rule | none | none |
+| | 3 | (0, 6, 1, 18) | one rule | none | none |
+| | 4 | (0, 12, 1, 24) | none | none | none |
+| | 5 | (0, 24, 1, 24) | none | none | none |
+| | 6 | (0, 48, 1, 0) | none | none | none |
+| rule 0 from the first move on | 0 | (1, 0, 1, 28) | one rule | none | one rule |
+| | 1 | (1, 1, 0, 28) | one rule | none | one rule |
+| | 2 | (1, 1, 0, 26) | one rule | none | one rule |
+| | 3 | (0, 1, 0, 22) | one rule | none | one rule |
+| | 4 | (0, 1, 0, 32), repeats for ever | one rule | none | one rule |
+
+**F's need 26.**
+
+| course | i | (f, o, rule, level) | something goes on | a favoured unit goes on | level ≥ 20 |
+|---|---|---|---|---|---|
+| rule set again from the share | 0 | (1, 0, 1, 28) | one rule | none | none |
+| | 1 | (1, 1, 1, 28) | none | none | none |
+| | 2 | (1, 3, 1, 26) | none | none | none |
+| | 3 | (1, 7, 1, 18) | none | none | none |
+| | 4 | (0, 14, 1, 0) | none | none | none |
+| rule 1 held | 0 to 4 | the same five configurations | as above | none | none |
+| rule 0 from the first move on | 0 | (1, 0, 1, 28) | one rule | none | none |
+| | 1 | (1, 1, 0, 28) | one rule | none | none |
+| | 2 | (1, 1, 0, 26) | one rule | none | none |
+| | 3 | (1, 1, 0, 22) | one rule | none | none |
+| | 4 | (0, 1, 0, 14) | one rule | none | none |
+| | 5 | (0, 1, 0, 26) | one rule | none | one rule |
+| | 6 | (0, 1, 0, 32), repeats for ever | one rule | none | one rule |
+
+What I take from my own table, before seeing the writer's: with need 27 the start is kept for "something goes on" by one rule held (rule 0; rule 1 held ends at step 6), for "a favoured unit goes on" by nothing at all, and for "level ≥ 20" by rule 0 held only (the lock's course drops to 18 at step 3). With need 26 the lock's course and rule 1 held are the same five configurations and end at step 4 (worded more exactly after Part 2 was written; the table is as first written); the start is still kept by rule 0 held for "something goes on", and by nothing for the other two guards. Nowhere on these courses is a region between "one rule held" and "none" occupied: the three readings of f, and "some sequence", sort nothing here that "one rule held" does not.
+
+### (b) The sweep, guard "something goes on"
+
+5,184 instances (c in 8, 12; F's need in 1, 3, 5, 7; O's in 1, 3, 5; uses in 1, 2 each; 54 kid tables under rule 1) and 912,384 starts.
+
+| innermost region | all | c = 8 | c = 12 |
+|---|---|---|---|
+| K | 51,506 | 15,495 | 36,011 |
+| one rule held | 215,992 | 61,636 | 154,356 |
+| threshold on the number of F | 0 | 0 | 0 |
+| any function of the number of F | 9 | 0 | 9 |
+| the number of F and the level | 91 | 31 | 60 |
+| some sequence only | 0 | 0 | 0 |
+| none | 644,786 | 296,086 | 348,700 |
+
+One example of each of the two thin classes, checked by hand:
+
+- *Function of f, not a threshold:* c = 12, needs (1, 1), uses (1, 2), rule 1: F → (2, 0), O → (0, 0); start (1, 2, rule 0, 9). Rule 0 held runs the level 9, 8, 6, 2, 0. Rule 1 while f = 1 drops the O's and doubles the F: (1, 2, 1, 8), (2, 0, 1, 6); then rule 0 from f = 2 on: (4, 0, 0, 8) for ever. The function is "rule 1 exactly where f is below 2", the threshold class turned over.
+- *Needs the level too:* c = 8, needs (1, 1), uses (1, 2), rule 1: F → (1, 1), O → (1, 0); start (0, 2, rule 0, 7). Kept by move 1 at (0, 2, 0, 7), move 0 at (0, 2, 1, 6), then (2, 0, 0, 4) for ever under rule 0. Both of the first two configurations read f = 0 and need different moves.
+
+### (c) The clocks along the lock's course
+
+Starts with rule 1 in force, at least one F, the guard "something goes on" holding, and in Kp: 52,117. The course sets rule 1 exactly where f ≥ 1. "The rule becomes 0" I counted by the rule in force: the first configuration on the course whose rule is 0 (one step after the first configuration with no F).
+
+| outcome | all | c = 8 | c = 12 |
+|---|---|---|---|
+| never ends, start in K | 16,986 | 4,849 | 12,137 |
+| never ends, rule 1 throughout (start not in K) | 280 | 140 | 140 |
+| never ends, the rule becomes 0 at some step (start not in K) | 144 | 72 | 72 |
+| ends, rule 1 to the end | 34,611 | 7,389 | 27,222 |
+| ends, the rule becomes 0 only after the first configuration no course keeps | 96 | 48 | 48 |
+| ends, the rule becomes 0 at or before that configuration | 0 | 0 | 0 |
+
+Of the 16,986 in K, the rule in force stays 1 on 16,423 and becomes 0 on 563. In all 96 of the fifth row the first configuration with rule 0 in force is exactly one step after the first configuration no course keeps, and is not the configuration at which the guard fails. Counted instead by the move (the configuration at which rule 0 is chosen, one step earlier), those 96 would fall "at" that configuration, and the last row would read 96 and the fifth 0: the split between the last two rows rests wholly on that convention.
+
+## Part 2. Comparison, written after the writer's files were opened
+
+### What was compared, and how it came out
+
+| the writer's number | where | mine | same? |
+|---|---|---|---|
+| the course of 19 November, need 27 and 26, three courses each, next-step convention: every configuration and its region for "something goes on", "a favoured unit goes on", "level ≥ 20" | `results-course.json`, `AFTER-PROGRAMS.md` | Part 1 (a), blind | the same at every configuration |
+| sweep, "something goes on": K 51,506; const 215,992; mono 0; share 9; share+level 91; Kp only 0 | `results-sweep.json` "next", `AFTER-PROGRAMS.md` | Part 1 (b), blind | the same |
+| the same row's "none": 402,866 of 670,464 | the same | 644,786 of 912,384 | a difference of population only (difference 1 below) |
+| clocks: 16,986; 280; 144; 34,611; 96; 0 | `results-clocks.json`, `AFTER-PROGRAMS.md` | Part 1 (c), blind | the same |
+| first example of each region and of each clock outcome | the two files | Part 1 | the same configurations (both programs go through the family in the same order) |
+| sweep, "a favoured unit goes on" (273,431; 129,404; 32,588; 0; 9; 24; 0) and "a unit of the other kind goes on" (337,662; 139,651; 20,344; 0; 0; 7; 0) | `results-sweep.json` "next" | extras | the same |
+| the kind's region is not the way's: 1,359 and 21,261 | the same | extras | the same |
+| lock courses by class: 200,171 ending from starts no course keeps; 34,707; 16,986; 424 | the same | extras | the same |
+| the 100: 9 kept by a reverse threshold and by no lock-kind threshold, 91 by no function of the number of F | `results-anti.json` | extras | the same |
+| this-step convention: way 25,144 / 155,097 / 310 / 18 / none 154,663 of 335,232; F and O rows; 1,263 and 5,395 | `results-sweep.json` "this" | extras | the same |
+| the four tables with another rule 0, bound 8 (among them mono 667; Kp only 56, 432, 24) | `results-other0.json` | extras | the same in every cell |
+| `Three`: K and Kp under both conventions, and the course from nine | `results-three.json` | extras | the same |
+| the twelve courses of `results-course.json` with all four guards and both conventions: 65 rows, 212 region cells | `results-course.json` | `rebuild.py more` | 0 differences |
+
+"Blind" rows were computed and written down before any of the writer's programs or results was opened. "Extras" were added to `rebuild.py` afterwards (marked in the file), following the writer's populations and tallies, by my methods B, S and A; they are a rebuild, not a blind one. After the extras were added the blind parts were rerun and gave the same output. Final `rebuild.py`: sha256 `973b0f6f…03409646`; `python3 -B rebuild.py` (blind parts, about 5 s), `… extras` (about 30 s), `… more` (about 3 s). Throughout, my three methods agreed with each other on every start (0 mismatches in every family, both conventions, all four rule-0 tables).
+
+### Every difference, with its cause
+
+1. **The "none" count of the sweep (402,866 against my 644,786).** Cause: `regions.py` line 229, `if not g(s): continue`: the writer tallies only starts at which the guard holds (670,464); I tallied all 912,384 starts and put the 241,920 at which nothing goes on under "none". 644,786 − 402,866 = 241,920 = 912,384 − 670,464. Neither is wrong; the writer's heading says "670,464 configurations in which something goes on". Example of a start in my count and not the writer's: c = 8, needs (1, 1), start (0, 1, rule 0, level 0).
+2. **Where "the rule becomes 0" is looked for.** `regions_2.py` line 67 looks for the first configuration with rule 0 in force only among configurations within the guard; mine also looks at the configuration at which the guard fails. No start in the family tells the two apart (in all 96 the first rule-0 configuration is within the guard), so the six numbers agree.
+
+There is no other difference. In particular the writer's `kept_by_reading` (depth-first over partial choices, with "in K" and "back on the path" as the two ways to succeed) gives, on every configuration compared, what a greatest fixed point over sets of functions (B), an enumeration over the shared readings with a restricted "some sequence" fixed point (A), and on a sample a plain enumeration of all functions (X) give. I read it and found no fault: a configuration met again on the path has its reading already assigned, so the course repeats; a configuration in K is kept under any completion.
+
+### What the agreement does not cover
+
+- **The process itself.** My brief gave me the step in words that follow the writer's program. Two programs agreeing on one description says nothing on whether that description is the model of 19 November as its record words it (it reads so to me: `reads-2026-11-19/NOTE.md`, "The model"), nor on whether the level's step is the Lean's `LineOnAStock` step. I opened no Lean.
+- **The share as a number.** Both programs read "the share" as the number of F. A share that is a proportion was not computed by either; the record of 19 November says a proportion "asks more".
+- **Individual grain examples** in `results-sweep.json` were not rechecked one by one; their counts agree.
+- **Sizes.** Bounds 8 and 12, starts with at most two of each kind, two rules, two kinds. Nothing here speaks beyond them.
+
+### Findings
+
+**MUST 1. "So 'nearly everything kept is kept by one rule held' belongs to the standstill" says more than its table.** (`AFTER-PROGRAMS.md`, under the second table.) By the table's own cells, of what some course keeps, the part in K or kept by one rule held is: standstill 77,131 of 77,162 (99.96%); "F leaves itself and an O, O itself" 34,967 of 35,030 (99.82%); "F leaves itself, O two O" 34,207 of 36,081 (94.8%); "F leaves two F, O nothing" 12,355 of 13,075 (94.5%). In the second row it is still nearly everything, and in the other two more than nine in ten. What the table shows is that the part kept by some course and by no one rule held goes from 4 in 10,000 under the standstill to 18 in 10,000, 5.2% and 5.5% without one. The sentence after it (1,614 of 36,081 kept by no choice from the share, in the third row) is right as it stands. The numbers themselves I confirm in every cell.
+
+**LESSER 1. The clocks table rests on one narrow sort of course, and the text does not say so.** In all 240 lock courses of the sweep on which the rule in force becomes 0 from a start that some course keeps and that is not in K (the 144 that never end and the 96 that end), no favoured unit ever has its need met: the level at the start is already below the F's need, the F's leave nothing at the first step, and the first configuration without an F is at index 1 (`rebuild.py more`). So the sweep holds no course like that of 19 November, where a favoured unit goes on, the level it draws down falls below its need, and the rule then turns; that course is at bound 32, outside the sweep's bounds of 8 and 12. The table's last three rows therefore say when a rule set from the share lets go of units that were never going on, and nothing about a lock left after running. "In this family it almost never does" (G6's line) is true and weaker than the search: among the 34,707 ending courses from starts some course keeps, the rule in force changes at or before the first configuration no course keeps in none.
+
+**LESSER 2. "After the point of no return" in the 96 is one step, and by the other count it is "at".** In all 96 the first configuration with rule 0 in force is exactly one step after the first configuration no course keeps; the share is nothing, and rule 0 is chosen, at that configuration itself. Counted by the move and not by the rule in force, the last two rows would read 0 and 96. The writer's example shows it: (1, 1, 1, 4), (0, 2, 1, 4), (0, 4, 0, 4) with needs (5, 1). The table's words are right for the count it uses; it should say which count.
+
+**LESSER 3. The heading of the sweep table gives one population for three rows.** "670,464 configurations in which something goes on" is the first row's. The second row is over the 435,456 starts in which a favoured unit goes on, the third over 497,664.
+
+**LESSER 4. "The share never moved" (need 26).** The number of F is 1 at steps 0 to 3; at step 4, the configuration at which no need is met, it is 0. "The share did not move before the end" is exact.
+
+**LESSER 5. On the course of 19 November no region between "one rule held" and "none" is occupied.** For every guard and both needs, every configuration on the three courses is in "one rule held" or in "none" (Part 1 (a); the same in `results-course.json`). G4's three memberships at the start are as the writer says (not K; kept by the lock's own reading; the favoured kind kept by no course), but the lock's reading is not needed there: rule 0 held keeps it. `AFTER-PROGRAMS.md` says "const" in its table and "as guessed" under G4; a reader of the second alone could take the share's reading to be what sorts the start.
+
+**LESSER 6. R as worded for one start is not one choice's region, even for "one rule held".** A number for the reader who sets the wording against the Lean; I did not read the Lean's `UniformPolicy`. In 91 of the 5,184 instances neither rule held keeps every start that one rule held keeps; in 24 no one function of the number of F keeps every start that some function of it keeps. Example of the second: c = 12, needs (1, 1), uses (1, 2), rule 1: F → (1, 1), O → (0, 0). The start (1, 0, rule 0, 2) is kept exactly by the functions with move 0 at f = 1 (rule 1 adds an O and the two take 3 from 2); the start (1, 2, rule 0, 9) exactly by those with move 1 at f = 1 (rule 0 keeps two O's that run the level 9, 8, 6, 2, 0). Both are tallied "const". Counted over the sweep's starts only.
+
+**LESSER 7. Two things the numbers show that `AFTER-PROGRAMS.md` leaves untold.** (i) Under the standstill "Kp only" is empty for all three guards and both conventions: the number of F with the level always suffices; it is first occupied where rule 0 is not a standstill (56, 432, 24). (ii) For the frozen test 6 (does the convention change which regions are empty): for "something goes on" and "a favoured unit goes on" the same regions are empty under both conventions (mono, Kp only); for "a unit of the other kind goes on", "share" is empty under next-step (0) and not under this-step (18). In the fourth rule-0 table K is empty (0 of 252,288).
+
+**No finding** on: the `Three` paragraph (K, Kp and the course from nine are as written; "the last configuration from which a turn keeps it is at step 1" follows: (5, 8) is in Kp by taking three next, (5, 6) is not); the course paragraph for need 27, including "stopped favouring at the last step at which that could still keep anything" (at step 3 the next configuration is "one rule held" with rule 0 and "none" with rule 1); the this-step sentence (the start (1, 0, 28) under rule 0 repeats itself); G5; the file hashes (`FROZEN.sha256` and `PROGRAMS.sha256` match the three files as they stand, and the files' times are in the order the texts state).

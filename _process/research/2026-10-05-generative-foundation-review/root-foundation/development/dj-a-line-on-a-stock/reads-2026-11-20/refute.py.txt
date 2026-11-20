@@ -1,0 +1,388 @@
+#!/usr/bin/env python3
+"""refute.py: one reader's checks of regions.py and regions_2.py, set to refute (AI-written scratch, Claude Fable,
+20 November 2026). A search over small numbers shows where a statement fails, not that it holds. Prints only;
+writes no file. The processes are the writer's construction, not the Lean's.
+
+  check : the writer's reach / gfp / kept_by_reading against the reader's own step, a horizon-by-horizon fixed
+          point, and brute force over every function of the reading (standstill family, bounds 8 and 12).
+  main  : the standstill family again, guard "something goes on", the Lean's order ('next'): K, rule 0 held,
+          rule 1 held, some course; who the 100 are; the lock's clocks at thresholds 1, 2, 3, with slices.
+  other0: the three rule pairs where the rule that does not favour is not a standstill (bound 8).
+  wide  : beyond the sweep's ranges: the instance of 19 November (needs 27 and 26) at every start, and a family
+          with a large favoured unit and small others; is anything kept by a reading of the lock's kind and by
+          no rule held?
+  thresh: the standstill family from locked starts with up to four favoured units, the lock read at thresholds 1 to 4.
+  grain : where the kind's region is not the way's (coarse labels), and by what the kind is lost.
+  conv  : the start of 19 November with the favouring rule in force and with the other in force.
+  three : Three under both conventions against "the smaller take held" and "the larger take held".
+  trace : three configurations that some course keeps and no rule held does, each with a course that keeps it.
+Usage: python3 -B refute.py check|main|other0|wide|thresh|grain|conv|three|trace
+"""
+import itertools, sys
+from regions import Units, reach, gfp, run_policy, kept_by_reading, kept_mono, classify, innermost, OUT, giving
+from regions_2 import instances, starts_of, FREEZE
+
+
+def P(*a):
+    print(*a, flush=True)
+
+
+def bump(d, k, n=1):
+    d[k] = d.get(k, 0) + n
+
+
+# ---- the reader's own step (convention 'next'), written from LineOnAStock.after / left and Pace.turn -------------
+def mystep(m, s, a):
+    nF, nO, r, x = s
+    kF, kO = m.kids[r]                      # the rule in force was set before this step
+    f = nF if x >= m.need[0] else 0         # a unit whose need the level meets leaves its kids
+    o = nO if x >= m.need[1] else 0
+    t = nF * m.use[0] + nO * m.use[1]       # every unit present takes
+    z = x - t if x >= t else 0              # RegimeMargin.step: (x - H) + g (x - H), truncated
+    back = min(z, m.c - z) if m.c >= z else 0
+    return (f * kF[0] + o * kO[0], f * kF[1] + o * kO[1], a, z + back)
+
+
+def goes(m, s):
+    nF, nO, r, x = s
+    return (nF > 0 and x >= m.need[0]) or (nO > 0 and x >= m.need[1])
+
+
+def my_regions(m, starts):
+    seen = set(s for s in starts if goes(m, s)); stack = list(seen); nxt = {}
+    while stack:
+        s = stack.pop()
+        nxt[s] = [t if goes(m, t) else None for t in (mystep(m, s, 0), mystep(m, s, 1))]
+        for t in nxt[s]:
+            if t is not None and t not in seen:
+                seen.add(t); stack.append(t)
+
+    def fix(q):                              # horizon by horizon (GuardHorizon.Viable n), until it stands
+        V = set(nxt)
+        while True:
+            W = {s for s in V if q([t is not None and t in V for t in nxt[s]])}
+            if W == V: return V
+            V = W
+    return nxt, fix(all), fix(any)
+
+
+def brute(m, s, obs, Kp, cap=18):
+    """Every function of the reading, on the readings met at configurations reachable from s within Kp."""
+    seen = {s}; stack = [s]
+    while stack:
+        u = stack.pop()
+        for a in (0, 1):
+            t = mystep(m, u, a)
+            if t in Kp and t not in seen:
+                seen.add(t); stack.append(t)
+    vals = sorted({obs(u) for u in seen})
+    if len(vals) > cap: return None
+    for bits in itertools.product((0, 1), repeat=len(vals)):
+        pi = dict(zip(vals, bits)); u, vis = s, set()
+        while u in Kp and u not in vis:
+            vis.add(u); u = mystep(m, u, pi[obs(u)])
+        if u in Kp: return True
+    return False
+
+
+def lock_course(m, s, th, g):
+    course, t, seen = [], s, set()
+    while g(t) and t not in seen:
+        seen.add(t); course.append(t); t = m.step(t, 1 if t[0] >= th else 0)
+    return course, (not g(t))
+
+
+def clock_class(course, ends, Kp, K):
+    noret = next((i for i, u in enumerate(course) if u not in Kp), None)
+    moved = next((i for i, u in enumerate(course) if u[2] == 0), None)
+    if not ends:
+        return 'never ends, ' + ('start in K' if course[0] in K else ('rule stops favouring' if moved is not None else 'favours throughout'))
+    if moved is None: return 'ends, favours to the end'
+    return 'ends, stopped favouring ' + ('AT OR BEFORE' if moved <= noret else 'after') + ' the point of no return'
+
+
+# ---------------------------------------------------------------------------------------------------------------
+def check():
+    bad, n, nb, unknown = [], 0, {'share': [0, 0], 'share+level': [0, 0]}, 0
+    for i, m in enumerate(instances()):
+        g = m.guard('way'); starts = starts_of(m)
+        succ = reach(m, starts, g); K = gfp(succ, True); Kp = gfp(succ, False)
+        nxt, myK, myKp = my_regions(m, starts)
+        n += 1
+        if set(succ) != set(nxt) or K != myK or Kp != myKp:
+            bad.append(('regions differ', m.c, m.need, m.use, m.kids[1]))
+        for s in succ:                                   # the step itself, at every reachable configuration
+            for a in (0, 1):
+                if m.step(s, a) != mystep(m, s, a): bad.append(('step differs', s, a))
+        for s in starts:                                 # the readings, by brute force: every configuration kept by
+            if not g(s) or s not in Kp or s in K: continue   # some course and no rule held; the rest in every seventh instance
+            held = run_policy(m, s, lambda t: 0, g) or run_policy(m, s, lambda t: 1, g)
+            if held and i % 7: continue
+            if not held: nb['no rule held'] = nb.get('no rule held', 0) + 1
+            for name in ('share', 'share+level'):
+                w = kept_by_reading(m, s, m.obs(name), g, Kp, K)
+                b = brute(m, s, m.obs(name), Kp)
+                if b is None: unknown += 1; continue
+                nb[name][0] += 1
+                if b != w:
+                    nb[name][1] += 1; bad.append(('reading differs', name, m.c, m.need, m.use, m.kids[1], s, w, b))
+    P('instances', n, '| readings compared [number, disagreeing], and how many of them no rule held keeps', nb,
+      '| too many readings for brute force', unknown)
+    P('disagreements', len(bad), bad[:5])
+
+
+def main():
+    T, non, clocks, ex, slices, turned = {}, {}, {}, {}, {}, {}
+    bothnotK = 0
+    for m in instances():
+        g = m.guard('way'); starts = starts_of(m)
+        succ = reach(m, starts, g); K = gfp(succ, True); Kp = gfp(succ, False)
+        top = max([t[0] for t in succ] + [0]); share = m.obs('share')
+        kF1, kO1 = m.kids[1]
+        grow = (kF1[0] * m.use[0] + kF1[1] * m.use[1] > m.use[0]) or (kO1[0] * m.use[0] + kO1[1] * m.use[1] > m.use[1])
+        for s in starts:
+            if not g(s): continue
+            c0 = run_policy(m, s, lambda t: 0, g); c1 = run_policy(m, s, lambda t: 1, g)
+            key = 'K' if s in K else ('rule 0 held and rule 1 held' if c0 and c1 else 'rule 0 held only' if c0 else
+                                      'rule 1 held only' if c1 else 'some course, no rule held' if s in Kp else 'none')
+            bump(T, key)
+            pure = kF1[1] == 0 and kO1[0] == 0 and kO1[1] >= 1   # under the favouring rule each kind leaves its own kind only, at least one
+            bump(T, ('each kind leaves only its own kind, at least one: ' if pure else 'the rest: ') + key)
+            if key == 'rule 1 held only':
+                bump(non, ('rule 1 held only', 'lowers some unit\'s take' if (kF1[0] * m.use[0] + kF1[1] * m.use[1] < m.use[0]) or
+                           (kO1[0] * m.use[0] + kO1[1] * m.use[1] < m.use[1]) else 'does not lower',
+                           'turns one kind into the other' if (kO1[0] > 0 or kF1[1] > 0) else 'does not'))
+            if key == 'some course, no rule held':
+                up = kept_mono(m, s, g, top)
+                sh = kept_by_reading(m, s, share, g, Kp, K)
+                # does the favouring rule lower what some unit's offspring take, or turn one kind into the other?
+                lowers = (kF1[0] * m.use[0] + kF1[1] * m.use[1] < m.use[0]) or (kO1[0] * m.use[0] + kO1[1] * m.use[1] < m.use[1])
+                turns = kO1[0] > 0 or kF1[1] > 0
+                bump(non, ('lock-kind' if up else 'share' if sh else 'not the share',
+                           'favouring rule lowers some unit\'s take' if lowers else 'does not lower',
+                           'turns one kind into the other' if turns else 'does not', 'kF1=%s kO1=%s' % (kF1, kO1)))
+            for th in (1, 2, 3):
+                if s[2] != 1 or s[0] < th or s not in Kp: continue
+                course, ends = lock_course(m, s, th, g)
+                cl = clock_class(course, ends, Kp, K)
+                bump(clocks, (th, cl))
+                if 'AT OR BEFORE' in cl and (th, cl) not in ex:
+                    ex[(th, cl)] = (m.c, m.need, m.use, m.kids[1], course[:8])
+                if th == 1:
+                    bump(slices, ('F needs more than O' if m.need[0] > m.need[1] else 'F needs no more than O',
+                                  'something multiplies under the favouring rule' if grow else 'nothing multiplies', cl))
+                    if cl == 'never ends, rule stops favouring':
+                        bump(turned, ('rule 0 held from the start keeps: %s' % c0, 'rule 1 held keeps: %s' % c1))
+    P('--- guard: something goes on; convention next; standstill; bounds 8 and 12')
+    for k in sorted(T): P('  %-32s %d' % (k, T[k]))
+    P('--- the configurations kept by some course and by no rule held')
+    for k in sorted(non, key=lambda k: -non[k]): P('  ', non[k], k)
+    P('--- the lock\'s own course from a locked start that some course keeps, by threshold')
+    for k in sorted(clocks): P('  ', k, clocks[k])
+    for k in ex: P('   example', k, ex[k])
+    P('--- threshold 1, sliced')
+    for k in sorted(slices): P('  ', k, slices[k])
+    P('--- the courses that never end with the rule stopping (threshold 1): would a rule held have kept them?')
+    for k in sorted(turned): P('  ', k, turned[k])
+
+
+def other0():
+    rows = (('standstill', FREEZE), ('F leaves itself and an O, O itself', ((1, 1), (0, 1))),
+            ('F leaves itself, O two O', ((1, 0), (0, 2))), ('F leaves two F, O nothing', ((2, 0), (0, 0))))
+    for name, k0 in rows:
+        T, mono, clocks, ex = {}, {}, {}, {}
+        for m in instances(cs=(8,), rule0=(k0,)):
+            g = m.guard('way'); starts = starts_of(m)
+            succ = reach(m, starts, g); K = gfp(succ, True); Kp = gfp(succ, False)
+            top = max([t[0] for t in succ] + [0])
+            for s in starts:
+                if not g(s): continue
+                c0 = run_policy(m, s, lambda t: 0, g); c1 = run_policy(m, s, lambda t: 1, g)
+                ths = [] if (c0 or c1 or s not in Kp) else kept_mono(m, s, g, top)
+                key = 'K' if s in K else ('rule 0 held and rule 1 held' if c0 and c1 else 'rule 0 held only' if c0 else
+                                          'rule 1 held only' if c1 else 'lock-kind reading, no rule held' if ths else
+                                          'some course, neither' if s in Kp else 'none')
+                bump(T, key)
+                if ths:
+                    bump(mono, ('F under rule 1 leaves %d F, under rule 0 leaves %d F' % (m.kids[1][0][0], k0[0][0]),
+                                'kO1=%s' % (m.kids[1][1],)))
+                if s[2] == 1 and s[0] >= 1 and s in Kp:
+                    course, ends = lock_course(m, s, 1, g)
+                    cl = clock_class(course, ends, Kp, K); bump(clocks, cl)
+                    kF1, kO1 = m.kids[1]
+                    grow = (kF1[0] * m.use[0] + kF1[1] * m.use[1] > m.use[0]) or (kO1[0] * m.use[0] + kO1[1] * m.use[1] > m.use[1])
+                    if 'AT OR BEFORE' in cl:
+                        cl2 = cl + (' | something multiplies under rule 1' if grow else ' | nothing multiplies under rule 1')
+                        bump(clocks, cl2)
+                        if cl2 not in ex: ex[cl2] = (m.c, m.need, m.use, m.kids[1], course[:8])
+        P('=== rule 0:', name)
+        for k in sorted(T): P('  %-34s %d' % (k, T[k]))
+        for k in sorted(mono, key=lambda k: -mono[k]): P('   lock-kind only:', mono[k], k)
+        for k in sorted(clocks): P('   clock:', k, clocks[k])
+        for k in ex: P('   example', k, ex[k])
+
+
+def wide():
+    kids19 = {1: ((1, 1), (0, 2)), 0: FREEZE}
+
+    def run(m, label, T, ex):
+        g = m.guard('way')
+        starts = [(nF, nO, r, x) for nF in (0, 1, 2) for nO in (0, 1, 2, 3) for x in range(0, m.c + 1) for r in (0, 1) if nF + nO > 0]
+        succ = reach(m, starts, g); K = gfp(succ, True); Kp = gfp(succ, False)
+        for s in starts:
+            if not g(s): continue
+            cl = innermost(classify(m, s, g, succ, K, Kp, readings=('const', 'mono')))
+            key = (label, 'rule in force at the start: %d' % s[2], cl)
+            bump(T, key)
+            if cl == 'mono' and key not in ex:
+                top = max([t[0] for t in succ] + [0])
+                ex[key] = (m.c, m.need, m.use, m.kids[1], s, 'thresholds', kept_mono(m, s, g, top)[:4])
+            if s[2] == 1 and s[0] >= 1 and s in Kp:
+                course, ends = lock_course(m, s, 1, g)
+                bump(T, (label, 'clock', clock_class(course, ends, Kp, K)))
+            kF1, kO1 = m.kids[1]
+            if kF1[1] == 0 and kO1[0] == 0 and kO1[1] >= 1:      # each kind leaves only its own kind, at least one
+                c0 = run_policy(m, s, lambda t: 0, g)
+                key = (label, 'own kind only', 'some course keeps: %s, rule 0 held keeps: %s' % (s in Kp, c0))
+                bump(T, key)
+                if s in Kp and not c0 and key not in ex:
+                    ex[key] = (m.c, m.need, m.use, m.kids[1], s)
+
+    T, ex = {}, {}
+    for needF in (27, 26):
+        run(Units(32, (needF, 1), (14, 1), kids19), '19 November, need %d' % needF, T, ex)
+    n = 0
+    for c in (16, 24):
+        for useF in (c // 4, c // 3, c // 2 - 2):
+            for needF in range(useF + 1, c, 2):
+                for kF1 in ((1, 1), (1, 2), (2, 0), (2, 1)):
+                    for kO1 in ((0, 0), (0, 1), (0, 2), (1, 0)):
+                        n += 1
+                        run(Units(c, (needF, 1), (useF, 1), {1: (kF1, kO1), 0: FREEZE}), 'large F, small O (bounds 16, 24)', T, ex)
+    for c in (16, 24, 32):                                       # each kind leaves only its own kind, a large F
+        for useF in range(3, c // 2 + 1, 2):
+            for needF in range(2, c, 3):
+                for useO in (1, 2):
+                    for kF1 in ((1, 0), (2, 0)):
+                        for kO1 in ((0, 1), (0, 2)):
+                            if (kF1, kO1) == ((1, 0), (0, 1)): continue
+                            n += 1
+                            run(Units(c, (needF, 1), (useF, useO), {1: (kF1, kO1), 0: FREEZE}), 'own kind only, large F (bounds 16, 24, 32)', T, ex)
+    P('instances in the two added families', n)
+    for k in sorted(T): P('  ', k, T[k])
+    for k in ex: P('   example', k, ex[k])
+    # the one worked by hand: 19 November's rules, need 26, one favoured unit at level 27, rule 0 in force
+    m = Units(32, (26, 1), (14, 1), kids19); g = m.guard('way'); s = (1, 0, 0, 27)
+    for label, choose in (('rule 0 held', lambda t: 0), ('rule 1 held', lambda t: 1), ('lock-kind, threshold 1', lambda t: 1 if t[0] >= 1 else 0)):
+        course, t, seen = [], s, set()
+        while g(t) and t not in seen and len(course) < 12:
+            seen.add(t); course.append(t); t = m.step(t, choose(t))
+        P('  ', label, course, 'then', t, 'never ends' if g(t) else 'ends')
+
+
+def trace():
+    """A course that keeps, where the standstill held does not: each kind leaves only its own kind."""
+    for m, s in ((Units(32, (20, 1), (13, 1), {1: ((1, 0), (0, 2)), 0: FREEZE}), (1, 1, 0, 27)),
+                 (Units(8, (1, 1), (1, 2), {1: ((1, 1), (1, 0)), 0: FREEZE}), (0, 2, 0, 7)),
+                 (Units(12, (1, 1), (1, 2), {1: ((2, 0), (0, 0)), 0: FREEZE}), (1, 2, 0, 9))):
+        g = m.guard('way'); succ = reach(m, [s], g); Kp = gfp(succ, False)
+        course, t, seen = [], s, set()
+        while t in Kp and t not in seen:
+            seen.add(t); a = next(a for a in (0, 1) if m.step(t, a) in Kp); course.append((t, a)); t = m.step(t, a)
+        P('bound', m.c, 'needs', m.need, 'uses', m.use, 'favouring rule', m.kids[1])
+        P('   a course that keeps (configuration, move):', course, 'then', t)
+        for label, a in (('rule 0 held', 0), ('rule 1 held', 1)):
+            c2, t, seen = [], s, set()
+            while g(t) and t not in seen and len(c2) < 12:
+                seen.add(t); c2.append(t); t = m.step(t, a)
+            P('  ', label, c2, 'then', t, 'never ends' if g(t) else 'ends')
+
+
+def thresh():
+    """Standstill, bounds 8 and 12, starts with up to four favoured units: the lock read with thresholds 1 to 4."""
+    clocks, ex = {}, {}
+    for m in instances():
+        g = m.guard('way')
+        starts = [(nF, nO, 1, x) for nF in (1, 2, 3, 4) for nO in (0, 1, 2) for x in range(0, m.c + 1)]
+        succ = reach(m, starts, g); K = gfp(succ, True); Kp = gfp(succ, False)
+        for s in starts:
+            if not g(s) or s not in Kp: continue
+            for th in (1, 2, 3, 4):
+                if s[0] < th: continue
+                course, ends = lock_course(m, s, th, g)
+                cl = clock_class(course, ends, Kp, K); bump(clocks, (th, cl))
+                if 'AT OR BEFORE' in cl and (th, cl) not in ex:
+                    ex[(th, cl)] = (m.c, m.need, m.use, m.kids[1], course[:8])
+    for k in sorted(clocks): P('  ', k, clocks[k])
+    for k in ex: P('   example', k, ex[k])
+
+
+def grain():
+    coarse = lambda cl: cl if cl in ('K', 'const', 'none') else 'kept, by no rule held'
+    T = {'F': {}, 'O': {}}; by = {}
+    for m in instances():
+        starts = starts_of(m); lab = {}
+        for gname in ('way', 'F', 'O'):
+            g = m.guard(gname)
+            succ = reach(m, starts, g); K = gfp(succ, True); Kp = gfp(succ, False)
+            for s in starts:
+                if g(s): lab[(gname, s)] = coarse(innermost(classify(m, s, g, succ, K, Kp, readings=('const', 'mono'))))
+        kF1, kO1 = m.kids[1]
+        for gname in ('F', 'O'):
+            for s in starts:
+                if (gname, s) in lab and lab[(gname, s)] != lab[('way', s)]:
+                    bump(T[gname], 'kind: %s, way: %s' % (lab[(gname, s)], lab[('way', s)]))
+                    if gname == 'O':
+                        bump(by, 'under the favouring rule an O leaves no O' if kO1[1] == 0 else 'an O leaves an O under both rules')
+    for gname in ('F', 'O'):
+        P('--- kind', gname, 'total', sum(T[gname].values()))
+        for k in sorted(T[gname], key=lambda k: -T[gname][k]): P('  ', T[gname][k], k)
+    P('--- O, by how an O can be lost'); [P('  ', by[k], k) for k in by]
+
+
+def conv():
+    kids19 = {1: ((1, 1), (0, 2)), 0: FREEZE}
+    for needF in (27, 26):
+        m = Units(32, (needF, 1), (14, 1), kids19)
+        for s in ((1, 0, 1, 28), (1, 0, 0, 28)):
+            P('need', needF, 'start', s, {gn: innermost(classify(m, s, m.guard(gn))) for gn in ('way', 'F')})
+        m2 = Units(32, (needF, 1), (14, 1), kids19, 'this')
+        P('need', needF, 'move sets the rule of this step, start (1, 0, 28)',
+          {gn: innermost(classify(m2, (1, 0, 28), m2.guard(gn))) for gn in ('way', 'F')})
+
+
+def three():
+    def lvl(x, use):
+        z = max(0, x - use); return z + giving(12, z)
+    g = lambda s: s[1] >= 1
+    step = lambda s, a: (a, lvl(s[1], s[0]))
+    states = [(w, x) for w in (5, 3) for x in range(0, 13) if x >= 1]
+    succ = {s: [(step(s, a) if g(step(s, a)) else OUT) for a in (5, 3)] for s in states}
+    K, Kp = gfp(succ, True), gfp(succ, False)
+
+    def held(s, a):
+        seen = set()
+        while g(s) and s not in seen:
+            seen.add(s); s = step(s, a)
+        return g(s)
+    P('next: Kp is "three held from here keeps":', Kp == {s for s in states if held(s, 3)},
+      '| K is "five held from here keeps":', K == {s for s in states if held(s, 5)})
+    lv = lambda x, a: lvl(x, a)
+    def held_level(x, a):
+        seen = set()
+        while x >= 1 and x not in seen:
+            seen.add(x); x = lv(x, a)
+        return x >= 1
+    P('this: levels from which three held keeps:', [x for x in range(1, 13) if held_level(x, 3)],
+      '| five held keeps:', [x for x in range(1, 13) if held_level(x, 5)])
+    xs, x = [], 9
+    while x >= 1: xs.append(x); x = lv(x, 5)
+    P('as it was from nine:', xs, '| first step whose level three held does not keep (this):',
+      next(i for i, x in enumerate(xs) if not held_level(x, 3)),
+      '| first step whose configuration (five in force, level) no takes keep (next):',
+      next(i for i, x in enumerate(xs) if (5, x) not in Kp))
+
+
+if __name__ == '__main__':
+    {'check': check, 'main': main, 'other0': other0, 'wide': wide, 'thresh': thresh, 'grain': grain, 'conv': conv,
+     'three': three, 'trace': trace}[sys.argv[1]]()

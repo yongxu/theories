@@ -1,0 +1,50 @@
+AI-written by Claude Fable, 20 November 2026. An independent read set to break the choice: statements and docstrings only, no proof read, nothing built or run, no person has checked it.
+
+Roots: R = /Users/ren/theories; B = R/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming; D = R/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock; C = R/theories/becoming/chapters.
+
+**Verdict.** The choice fails as worded. What stands: it is the direction page's third item, on paper, with its tests said first.
+
+**1. Facts**
+- **The three laws** exist (B/Dissipation.lean:461, :1369; B/Continuation.lean:180, which also asks the family enclosed around from some step).
+- **The gloss is wrong.** `Flow.Dissipative` says every formation gives a closed family strictly less than it takes (B/Dissipation.lean:242-248). This month's "nothing given from nothing" is `RegimeMargin.FromNothing`, the stock giving nothing at zero (B/LineOnAStock.lean:928, :1011). Without the strict loss a closed cycle goes on (B/Dissipation.lean:92-97).
+- **The inference fails.** Under those premises a unit that spends on the level less than it took from it lowers it at every step (`Balances.runs_down`, B/Dissipation.lean:387). What keeps the level is the handed-in `giving`, which has no named giver either (D/dig-2026-11-17/FROZEN-DIG-DEEPER.md:25-28, :135).
+- **"A unit only takes"** holds (B/LineOnAStock.lean:11-16).
+- **"Came from nowhere"** holds of `ScratchCovering` only. That afternoon's model had units give "part of what it took", with a named source and balance asserted (D/dig-2026-11-17/search/refute/d6_model.py:1-29).
+- **The dig's negative** is quoted rightly (D/dig-2026-11-17/NOTE.md:28). It is of the package, by a sweep of heads, with about 40 named modules unopened (:34).
+- **"The second has none"** is false (see 2). The dig had already counted three such sayings in one day (FROZEN-DIG-DEEPER.md:269-271).
+
+**2. Tried, or already there**
+- **All four together ran on 17 November:** two kinds that multiply, giving within what was taken, levels that run down, own or shared receiver, in 193,536 exact runs. No law came of it; "who gets back what was given" decides, and the selection half is `RuleShaping.favours_iff` (FROZEN-DIG-DEEPER.md:157-164).
+- **That morning's C2 is the choice's model** (D/second-way-2026-11-17/FROZEN-THE-SECOND-WAY.md:21). It came out as the line with its giving renamed (:54). The line's exact law reaches it "only where the givers give no more than they take" (:91), which is the choice's own-cost condition.
+- **A going-on keeping up what it rests on, at a cost, is already in the Lean:**
+  - B/ReaderRebuilding.lean:13-22 (C/04-LIFE.md:260-269): reader units carry from a supply into the level and are rebuilt from the level, with an exact family law. No offspring.
+  - R/experiments/integrated-correction/general-framework/generative-basis/lean/deeper/RelationalRenewal.lean:236-242, :339, :515-523: `cultivation` (draws 2, adds 1) beside `malignant`, in one law family.
+  - B/RuleRebuilding.lean (C/05-COLLECTIVES.md:409-425): cohorts entering by the step's law, "a keeper draws on what it keeps", a level that ends, an exact band, and an open-entry twin.
+  - B/Optimum.lean:8208, :9027: leaving at a cost, with what returns.
+- **A periphery model this row never names:** R/experiments/market-generativity/formal/MarketGenerativity.lean:13-23. A renewing practice pays a cost; its share is selected by private profit; the rule is eroded by the other share's influence; the stock is rebuilt by the renewing share. Its laws include `strict_loss_of_renewing_share` (RegimeBoundary.lean:303) and `high_coupled_history_never_fails` (RegimeAttraction.lean:532), told at C/05-COLLECTIVES.md:354-361. "Market" occurs nowhere in R/_process/DIRECTION.md or the plan.
+- **The choice's question has built answers:** `Drain` (the restrained member leaves none, the drawer two; B/LineageDrawdown.lean:36-44) and `Commons` (the line that renews is removed, then all end; B/ReadingsSpread.lean:73-96).
+
+**3. A renaming, by its own first and third tests**
+
+The smallest model: a unit needs n, takes t, spends s ≤ t on the level, and leaves fewer kids as s grows. T and S are the totals, z = x − T.
+- **Put back before the stock gives:** x' = (z + S) + g(z + S). That is `LineOnAStock` with use t − s. A remaking unit is one that uses less and leaves fewer, which is the plan's item 4 (`unending_iff_holds`) against item 5 (`way_ends`), both landed.
+- **Put back after the stock gives:** it differs only in the order within the step (FROZEN-DIG-DEEPER.md:153-156). For givers leaving themselves it is the renamed line, configuration for configuration (FROZEN-THE-SECOND-WAY.md:54).
+- **Raising the giving by more than s:** the surplus has no source, which is `covered`'s way of sources. With the source named it is 04 §8's reader with a varying count.
+- **The share question:** the level is one for all, so spending changes who comes next only through which needs are met (`ways_alike`; FROZEN-THE-SECOND-WAY.md:95). A kind that pays in offspring for what comes to all alike loses share at every step (`nothing_back_falls` with `favours_alike`, B/RuleShaping.lean:287, :175). "It loses its share while the level makes no difference" is the premise "it leaves fewer" said again; the try wrote this on 17 November (:68).
+
+It does not reduce to `RelationalRenewal`'s pair or chapter 5's drawers, which have fixed casts.
+
+**4. Against the direction page**
+
+It is item 3 (R/_process/DIRECTION.md:102). That item's open end is the join of the line to what October has, "not yet thought through", and row DJ's claim "stands for that" (R/_process/BECOMING-WORKBOARD.md:56). The choice thinks through a new model instead. Owed first:
+- **Which second way.** The dig found three senses (FROZEN-DIG-DEEPER.md:176-185). The page reads the two ways as renewing and consuming: "needs stay met, not that the formation remakes anything" (DIRECTION.md:19). The choice takes sense (b) unsaid. It also keeps one amount standing apart, which the try's seventh test tripped on (FROZEN-THE-SECOND-WAY.md:80; an argument, :99).
+- **Row DJ's question to Ren of 19 November** is unanswered, and a rule set again from the share on a falling level meets it again (D/reads-2026-11-19/NOTE.md:55).
+- **Ren's request** speaks of turning October's aim; the choice turns no October piece.
+
+**5. In its place**
+
+Put to Ren, on one page, the three senses with the model each already has (04 §8; 02 §3.1; 05 §10 and §12), beside the question of 19 November. Then, on paper, try the join 17 November named and nobody tried: `RuleShaping`'s what-comes-back made to depend on a level its givers keep, starting from the D6 program. It counts as nothing unless `favours_iff` and the line's holding law both become cases and the level's fall turns the selection before a need goes unmet.
+
+Why: with a shared level, remaking can only lose. What the alignment paragraph wants is the condition under which what sustains a selection reaches it early.
+
+**Not done.** `RuleRebuilding`, `Optimum` and the market files were read at statements or chapter text only. LINKS-ON-PAPER was searched, not read.

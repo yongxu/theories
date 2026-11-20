@@ -1,0 +1,78 @@
+*Report by Claude Fable 5.2. Lens: NOTE.md against its own evidence. 20 November 2026. Read-only; no program re-run; one throwaway trace of the 19 November courses.*
+
+Evidence is in `/Users/ren/theories/tmp/r7/one-model/check/regions20/`. Abbreviations: RF = `reader-refute.md`, RB = `reader-blind-rebuild.md`, AL = `reader-against-lean.md`, BC = `reader-built-cases.md`, by line.
+
+## Hashes and the frozen file
+
+- Both hash files match (`shasum -a 256`): `FROZEN-REGIONS.md` 85ad0025…, `regions.py` 783ff55e…, `regions_2.py` 991134dd….
+- File times: frozen file 09:39:51, `regions.py` 09:41:14, `FROZEN.sha256` 09:41:16. The hash was recorded after the program was saved, in the same second as its first result. That the tests came first rests on the file time, 83 seconds earlier, not on the hash.
+- The file has seven tests; none is dropped or added in the note. Test 1's comparison is widened and tests 4 and 6 get no telling (fault 8).
+
+## Sentences at fault
+
+1. **"By the refuting reader's judgment, which I take: tests 3 and 7 trip"**: **says more**. A second reader differs on test 3 and the note does not say so. AL:58–62 calls test 3 on the units "partly a dictionary": the frozen instance "Kp is `Holds` under the rule that takes least" "fails on the program's own family" (185 + 100), and no existing statement gives K (532 configurations), "no course keeps it", or the 9 and the 91. Test 3 trips whole only on `Three`.
+
+2. **"Two sentences I wrote beforehand were false"**: **says less**. Readers marked two more frozen sentences MUST, and the note leaves both untold.
+   - "K is within R, and R within Kp, for every reading" needs `live`; a configuration with no step is in K and not in Kp (BC:15).
+   - "October's root has names for that" and "Two of October's notions": `Recoverable` is November's (AL:11, BC:11). The note gives the date but not that the sentence was wrong.
+
+3. **"one of whom rebuilt the computation without seeing the writer's programs"** and **"writing its numbers down before opening mine, got every number the same"**: **says more**. Blind were only the 19 November courses (next-step), the sweep's "something goes on" row, and the clocks. The other-guard rows, 1,359 and 21,261, the 9/91 split, this-step, the other rule-0 tables and `Three` were rebuilt after opening the writer's files: "a rebuild, not a blind one" (RB:115). Its brief gave the step "in words that follow the writer's program" (RB:126). The rebuild did not cover 267,313 or 285 (RF, AL).
+
+4. **"in all 240 courses in which the rule stops favouring, no favoured unit ever had its need met"**: **says more**. The 240 are the courses from starts not in K (144 + 96; RB:135). The rule also stops favouring on 563 courses from K starts (RB:93), which the finding does not cover.
+
+5. **"its zero is forced"**: **says less**. The zero is under the count by rule in force; counted by the move the last two rows read 96 and 0, and "it should say which count" (RB:137). RF:64–66 argues it on paper for the standstill with threshold 1 only; without a standstill there are 281.
+
+6. **"The three region edges are not the direction page's three clocks"**: **lesser**. By the note's own second bullet K is never left, so there are two edges. The clocks table timed neither K nor R (RF:21).
+
+7. **"Only `Renewable` has a process with moves in the Lean"**: **says more**. It holds of the four cases the frozen file names; BC:144 itself names `Revising`'s process (`OpenedCorrection.Correctable`), `Matching.keeping_matters` and `ChoicePoint.keptFor_each_not_joint`.
+   - The header's "Every process below is the writer's construction" is not so of `Renewable.process`.
+   - The bullet drops `cultivation`, `malignant` and `stoppingMalignant`, which that reader placed (BC:64–80). The last section's "what has not been done … `cultivation` beside `malignant`" should say they were placed by hand, not read against the direction.
+
+8. **Tests 1, 4 and 6**: **says less**.
+   - Test 1 has two outcomes: "could not have failed" on the writer's models (RF:78), and trips on the Lean's cases (BC:7). The second uses a comparison widened from the frozen "ending and not ending" to "ending of each formation, with its step".
+   - Test 4 is never told: the lock is not assumed and "does no work" (RF:7).
+   - Test 6's guard is unnamed. It is the other kind: share 0 under next, 18 under this (`results-sweep.json`, key O). BC LESSER 6 is untold: the Lean already has both conventions (`readableInTime_iff` with `T < N`, `turns_in_time_iff_before` with `T + 1 < N`).
+
+9. **"is 'the standstill held from here keeps' in 267,313 of 267,598 kept configurations"**, told of "the units of 19 November": **lesser**. The count is the sweep's: 5,184 instances, bounds 8 and 12, at most two of each kind, guard "something goes on". The 19 November instance (bound 32) is outside it. The note never says what the sweep is.
+
+10. **"With the counted unit's need 26 and not 27 everything ends"**: **says less**. That is on the lock's course and with the rule held favouring. With the standstill from the first move one small unit goes on for ever (`results-course.json`, "need 26 … rule never favouring"; my trace agrees).
+
+11. **Attributions and counts**: **lesser**.
+    - "(two readers …)" for `Three`'s edge: three gave it (RF:36, AL:40, BC:126).
+    - "One reader, on paper" for the mixtures on `Three`: RF:92 says "by search on 24 configurations and an argument", and AL:41–42 has it by hand.
+    - "One configuration where favouring and then stopping are both needed": RF:46 found four ("three more in 640 instances").
+    - Test 7 drops the refuter's "and is not a definition unfolded". Its break is in a family the refuter added after seeing the sweep: 2 in 162,848, none in the sweep's 384 (RF:76).
+    - G2: the join also asks the guard at every step up to N (AL:48; BC LESSER 2). "Two notions" passes over AL:56, which lists five more.
+
+12. **"A few configurations kept by some course but not by standing still"**: **says less**. The refuter's judgment of them is left out: "No law of November is about that, and it is where comparing courses has content" (RF:91). This is the one place a reader says the frame has content, and it bears on the verdict.
+
+## The two sentences of AFTER-PROGRAMS.md
+
+- Only one sentence is marked by readers as saying more than its table: "So 'nearly everything kept is kept by one rule held' belongs to the standstill" (RF:40 and RB:133, the same sentence).
+- The other MUST is not a sentence saying more: row 4's label with the `mono` 667 "says something false" (RF:48).
+- Readers also marked as too strong: G4 "as guessed" (RF:58, RB:143), "the share never moved" (RB:141), G6 "almost never does" (RF:70, RB:135).
+- So "two of its sentences … by the readers" is inexact. The note repeats none of them: the gap is told as 100 with a standstill, the added rows are qualified, 667 is untold, and it says "does not move before the end" and "kept by the standstill held".
+
+## Confirmed
+
+- 267,598 (= 215,992 + 51,506 + 91 + 9), 100, 1,359, 21,261, 34,611, 144, 240, 267,313 and 285, in the result files and RF's table.
+- The bold verdict line is RF:7 word for word in substance.
+- "No error", and two counting differences, neither a fault (RB:119–122).
+- Both false sentences are in the frozen file as quoted, each found by two readers; `kernel_certificate` and `Kernel.run` exist (`Viability.lean`:78, 115).
+- Two readers each give a pair (AL:34, RB:145).
+- `Keepable` is in namespace `Viability` (`JointKeeping.lean`:57, 91).
+- By my trace: the need-27 course, its twin and the standstill; need 26 ends at step 4 with the share 1 through step 3; (1, 0, rule 0, 28) repeats; from (1, 0, rule 0, 27) with need 26 each rule held ends and threshold 1 keeps.
+- Last section: "market" is absent from `_process/DIRECTION.md` (word search); "the three senses" is in `dig-2026-11-17/FROZEN-DIG-DEEPER.md`:254; the 19 November note's own opening fits "already there".
+
+## Could not check
+
+- "I had also said it to Ren that morning."
+- Where the step came from (`NEXT-STEP.md` is barred).
+- Whether the 563 K-start courses share the 240's property.
+- The 18 November claim in the last section; chapter 4 §8 and chapter 5 §10 and §12.
+- Any Lean statement beyond the names; the outputs of `refute.py` and `rebuild.py`.
+
+## Verdict
+
+- **"Nothing has changed":** the right reading of the frozen tests, but too hard in its summary. "Names … what November's Lean already states" and "adds names, not links" pass over AL's "partly", the refuter's 285, and the ten-line join.
+- **The record:** sound to tell from for its numbers; the note is not yet sound to tell until faults 1 to 5 are mended.
