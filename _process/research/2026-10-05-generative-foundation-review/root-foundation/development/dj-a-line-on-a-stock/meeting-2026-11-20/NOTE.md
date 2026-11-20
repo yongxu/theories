@@ -72,3 +72,17 @@ Four AI agents, 1.21 million tokens by the run's own count, 54 minutes. The agen
 ## Where it is
 
 Beside this note, as text: the frozen file as it stands and as it was at 19:17, with its hash; the four reports and the checker's as text (`work-lock.md.txt`, `work-units.md.txt`, `refute.md.txt`, `lean-check.md.txt`, `check-note.md.txt`); the note as it was before the check; the programs as text. The result files are in `tmp/r7/one-model/check/meet20/`, which is not tracked.
+
+## Added 21 November 2026: the statement in units set against the table's rows
+
+*AI-written (Claude Fable). This note said above that before the statement in units (U2) were written in Lean it would first be set against the table's other rows, and that this was not done. On 21 November one AI reader who took no part (Claude Opus, capped at 45 tool calls, 32 used, 0.18 million tokens) did it, at statements and not proofs; its report is beside this note as `u2-against-rows.md.txt`. What follows is that reader's own summary, shortened, and no one has checked it. Not reached under the cap: the table's view, the bodies of `LineOnAStockCases`, and the kinds in `HigherStartEnds`.*
+
+- **U2 is not in the package**, in other names or as a case of a law that is there with nothing left over (not found in what was read). Its two halves are there: `TurningInTime.unending_iff_first_marked`, then `RegimeMargin.ends_iff_below` with `holds`, or `TurningInTime.unending_iff_above`, at the way reached.
+- **Why the whole is missing**, three reasons: no lemma takes the net of units, where each unit has its own need, to the net with one need, for ways that turn (the only transfers are `WayOfUnits.unending_iff_carrier`, for one fixed pair, and one in the scratch of 17 November); every turn law asks one take of every way of the kept kind, and U2's take at the turn grows with each growing step; and U2's "comes below `m`" is weaker than the premises those laws ask.
+- **The refuter was right in substance** that it is a composition, with two qualifications the reader argues and did not build: the composition holds only on a carrier built for each start, and one premise of the first law has to be widened.
+- **Its cases with statements unchanged:** `WayOfUnits.two_units_iff`, through `unending_unit`, except where its two pairs are equal, which needs one more line; `With.goes_on`, through `two_units_iff`; and, in the scratch only, `mixed_turns_iff` and `mixed_turns_iff_ends`.
+- **The reader expects no proof to get shorter.** "The part worth stating once is the units-to-carrier transfer: both existing transfers would become its cases."
+- **What to distrust in U2 as stated:** that some stayer is left is redundant; the first step below `m` needs a search in Lean; the equal-pairs case is not reached; "comes below `m`" cannot be derived in general; and two lemmas it rests on are only in the scratch.
+- **The other places** were of the same shape on another carrier, or apart. The nearest in shape is `Optimum.reread_kept_iff`, whose threshold after the turn is the need and not a point of no return.
+
+So the test read widely (a statement of any place the table has, in other names) does not trip for U2 in what this reader reached. What a Lean statement would add is small: one theorem and one worked course become its cases, a scratch proof is settled, and a transfer is stated once. Nothing here places the two ways. No Lean is written yet.
