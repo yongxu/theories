@@ -59,3 +59,26 @@ Three AI agents, 0.70 million tokens by the run's own count, 57 minutes; the cei
 ## Where it is
 
 Beside this note, as text: the three modules, their last build logs, the units implementer's report, the keepable implementer's return (its report file was refused by its tool, so its structured return is set down as the run's journal has it), the reader's report, and the checker's findings on this note. The working tree was `/Users/ren/tmp/dj/batch22`, which is not tracked.
+
+## Added later on 21 November: two smaller pieces, each standing by itself
+
+*AI-written (Claude Fable). Two more scratch modules, written by two AI implementers one after the other and read by an AI reader who took no part (Claude Opus, capped; 11 tool calls by its own count), who ran no build. The writer of this section read the two build logs himself and none of the Lean. The implementers' and the reader's returns are beside this note as one file, as the run's journal has them. No one has checked this section against them. Nothing in the package or in the renewal folder was changed.*
+
+Both were suggested by the coordinating session: to see whether the transfer stands without the rest of the units module, and to give the step law for `Keepable` a case.
+
+**What built**, by the two logs, each with exit 0, no module unclean and no declaration with an axiom, each on its first build:
+
+- `ScratchUnitsCarrier` (168 lines; 4 declarations, all theorems).
+- `ScratchRenewalBridge` (132 lines; 9 declarations, 7 of them theorems). Its build compiled nine files of October's renewal side from the checkout as they stand today (`Depletion`, `SupportNecessity` and seven `Renewal` files); no renewal file was copied into the scratch tree, because the checker's index finds them by file name. The one file copied was the night's `ScratchKeepableStep`, byte for byte.
+
+**The reader's verdict:** "I found no MUST-level problem in either piece. Every claimed case has the old statement character for character, each has an `rfl` check, and each is proved from the general theorem without calling the old one." It found four lesser points, two of them in docstrings.
+
+**The transfer alone** (`unending_carrier`, with `course_carrier`): a carrier with a reading into ways of units, a step and a use, and a property kept by the step; where the units' way after a step is the reading of the carrier's, the units take what the carrier uses, and some unit goes on exactly where the level meets one need `n`, the net of units never ends exactly where the carrier's net never ends. `WayOfUnits.unending_iff_carrier` is its case, with the statement character for character and an `rfl` check. By the implementer the package's own proof would not get shorter (4 lines against 10 from the transfer), no helper retires as things stand, and the package would grow by about 60 lines: "What the transfer buys is a join, not length." The reader's lesser point: the docstring's account of where one premise fails leaves out a way with a unit needing less than `n`.
+
+**The bridge** (`renewable_iff_keepable`): with no premise, a configuration of October's channel law is renewable exactly where being live is keepable from it under that law's process; a history of the law and a run of its process are the same three fields under other names. Two of October's theorems are then cases of the night's two, each with its statement identical in the text and an `rfl` check, and neither proved by calling the October theorem: `renewable_iff_step` from `keepable_step_iff`, and `renewability_not_generated` from `not_keepable_run` with October's own fact that what is not live stays not live. The second no longer decides whether a configuration is live. The reader's lesser points: the `rfl` checks show sameness up to unfolding, not of the letters, which were compared in the text; and the bridge was compiled against today's `Depletion.lean`, not the one the renewal folder's own checker pins.
+
+**Seen and not mended:** the renewal folder's own checker pins a hash of `Depletion.lean` that today's file no longer has. It was not run.
+
+**What it is.** The first proved link between October's renewal files and the package's keeping, in scratch: the step law for `Keepable` now has two older theorems as cases. It is a join of the smaller kind, 300 lines in the two modules. It does not place the two ways: by the read of the night before, what that link places is some run keeping a guard against none. Whether these enter the package is the same later choice as for the first two modules; by the bridge's implementer, whether a module that imports both sides could land was not tested.
+
+**What it cost:** three AI agents, 0.37 million tokens and 10 minutes by the run's own count; the ceiling was 0.6 million.

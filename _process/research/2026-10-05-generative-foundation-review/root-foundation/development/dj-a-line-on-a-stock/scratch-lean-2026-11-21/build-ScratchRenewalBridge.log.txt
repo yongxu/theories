@@ -1,0 +1,42 @@
+start 05:37:59
+{
+  "tree": "/Users/ren/tmp/dj/batch23",
+  "modules": 34,
+  "ran": [
+    "Depletion",
+    "RenewalBasics",
+    "RenewalAccounting",
+    "RenewalSufficiency",
+    "SupportNecessity",
+    "RenewalClosure",
+    "RenewalLink",
+    "RenewalCharacterization",
+    "RenewalConfigurations",
+    "Becoming.ScratchRenewalBridge",
+    "BecomingScratchRenewalBridgeAxiomAudit"
+  ],
+  "reused": 24,
+  "unclean": [],
+  "audits": {
+    "Becoming.ScratchRenewalBridge": {
+      "theorems": 7,
+      "declarations": 9,
+      "with_axioms": {}
+    }
+  },
+  "seconds": {
+    "Depletion": 2.458,
+    "RenewalBasics": 2.056,
+    "RenewalAccounting": 0.563,
+    "RenewalSufficiency": 0.534,
+    "SupportNecessity": 2.541,
+    "RenewalClosure": 0.53,
+    "RenewalLink": 0.528,
+    "RenewalCharacterization": 0.803,
+    "RenewalConfigurations": 0.531,
+    "Becoming.ScratchRenewalBridge": 0.349,
+    "BecomingScratchRenewalBridgeAxiomAudit": 0.326
+  }
+}
+exit 0 build 1
+end 05:38:08

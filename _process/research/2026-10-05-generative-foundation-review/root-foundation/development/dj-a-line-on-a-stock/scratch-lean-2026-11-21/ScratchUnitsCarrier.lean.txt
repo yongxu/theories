@@ -1,0 +1,168 @@
+import Becoming.WayOfUnits
+
+/-!
+# Scratch: the transfer of the net of units to a net on a carrier, alone, with one package case
+
+AI-written (Claude, board row DJ, batch 23, label transfer), 21 November 2026. SCRATCH: outside the
+package, not landed, not read by anyone who did not write it. Built only by `scratch_build.py`. The
+words unit, need, use, kids, way, level, carrier are working names of one model's parts
+(`LineOnAStock`, `WayOfUnits`), not the map's words. Nothing here is a new result of the theory.
+
+## What is here, and nothing else
+
+* `course_carrier` and `unending_carrier` (section 1): the transfer. For any carrier `W` with a
+  reading `way : W → List U`, a step `aft`, a use `cuse` and a need `n`, and a property `Inv` of the
+  carrier's configurations that its step keeps while `n` is met: where on `Inv` the units' way after a
+  step is the reading of the carrier's, the units take what the carrier uses, and some unit's need is
+  met exactly where `n` is, the net of units (`LineOnAStock.net`) from `(way c, x)` never ends exactly
+  where `TurningInTime.net n` of the carrier never ends from `(c, x)`.
+* `unending_iff_carrier_case` (section 2): `WayOfUnits.unending_iff_carrier` as a case of the
+  transfer, through `WayOfUnits.unending_unit`. Its statement is written with `WayOfUnits` opened, so
+  that it is the package's statement letter for letter; `carrier_same` checks by `rfl` that the two
+  statements are one up to unfolding.
+
+## What is copied, and what is used from the package
+
+`course_carrier`, `unending_carrier` and the proof of `unending_iff_carrier_case` are copied from the
+scratch of batch 22 (`/Users/ren/tmp/dj/batch22/Becoming/ScratchUnitsTurn.lean`, its section 2), the
+proofs unchanged. There the case's statement had its names qualified (`WayOfUnits.net`, …) and no
+`rfl` check; both are changed here. `carrier_same` is new. Nothing about growers, stayers, turns or
+the turn in units is here.
+
+Used from the package, not copied: `LineOnAStock`'s `after`, `taken`, `Goes`, `step`, `course`, `net`;
+`TurningInTime.pair` and `net`; `RegimeMargin.step`; `Law.stepWhile_unending_iff`; and from
+`WayOfUnits`, `all_iff_while` (for the transfer: the one thing the transfer itself takes from that
+module) and, for the case only, `unending_unit`, `after_unit`, `taken_unit`, `after_twoWay`,
+`taken_twoWay`, `goes_twoWay`.
+
+Every declaration is meant to have an empty axiom report; the build log says whether it has.
+-/
+
+namespace Becoming
+namespace ScratchUnitsCarrier
+
+/-! ## 1. The transfer -/
+
+section Transfer
+
+open LineOnAStock
+
+variable {U : Type} {need use : U → Nat} {kids : U → List U} {giving : Nat → Nat}
+
+/-- **The units' course is the carrier's course read as a way, while the carrier's need is met.**
+Premises: a carrier `W` with a reading `way`, a step `aft`, a use `cuse` and a need `n`; a property
+`Inv` of the carrier's configurations (way and level) such that, at every configuration `s` with
+`Inv` whose level meets `n`: the carrier's pair's step (the way by `aft`, the level by
+`RegimeMargin.step giving` under `cuse`) gives a configuration with `Inv` (`keepsInv`), the units' way
+after a step from `way s.1` at that level is `way` of the carrier's way after the step (`ways`), and
+`way s.1` takes `cuse s.1` (`takes`); and `Inv` at the start `(c, x)` (`start`). Conclusion: at every
+step `k` such that the carrier's level meets `n` at every step before `k`, the carrier's configuration
+at `k` has `Inv`, and the units' course from `(way c, x)` at `k` is `way` of the carrier's way at `k`
+with the carrier's level at `k`. Under any `need`, `use`, `kids` and giving. Nothing is said of a step
+after one at which the carrier's level is below `n`. By induction on `k`. -/
+theorem course_carrier {W : Type} {way : W → List U} {aft : W → Nat → W} {cuse : W → Nat} {n : Nat}
+    {Inv : W × Nat → Prop}
+    (keepsInv : ∀ s, Inv s → n ≤ s.2 →
+      Inv (TurningInTime.pair aft (fun c z => RegimeMargin.step giving (cuse c) z) s))
+    (ways : ∀ s, Inv s → n ≤ s.2 → after need kids (way s.1) s.2 = way (aft s.1 s.2))
+    (takes : ∀ s, Inv s → n ≤ s.2 → taken use (way s.1) = cuse s.1)
+    {c : W} {x : Nat} (start : Inv (c, x)) :
+    ∀ k, (∀ j, j < k → n ≤ (Law.orbit (TurningInTime.pair aft
+        (fun c z => RegimeMargin.step giving (cuse c) z)) (c, x) j).2) →
+      Inv (Law.orbit (TurningInTime.pair aft
+        (fun c z => RegimeMargin.step giving (cuse c) z)) (c, x) k) ∧
+      course need kids giving use (way c, x) k =
+        (way (Law.orbit (TurningInTime.pair aft
+            (fun c z => RegimeMargin.step giving (cuse c) z)) (c, x) k).1,
+          (Law.orbit (TurningInTime.pair aft
+            (fun c z => RegimeMargin.step giving (cuse c) z)) (c, x) k).2)
+  | 0, _ => ⟨start, rfl⟩
+  | k + 1, before =>
+    have ih := course_carrier keepsInv ways takes start k fun j lt => before j (Nat.lt_succ_of_lt lt)
+    have met := before k (Nat.lt_succ_self k)
+    ⟨keepsInv _ ih.1 met,
+      (congrArg (step need kids giving use) ih.2).trans
+        (congr (congrArg Prod.mk (ways _ ih.1 met))
+          (congrArg (fun t => RegimeMargin.step giving t
+            (Law.orbit (TurningInTime.pair aft
+              (fun c z => RegimeMargin.step giving (cuse c) z)) (c, x) k).2) (takes _ ih.1 met)))⟩
+
+/-- **The transfer.** The net of units, each with its own need (`LineOnAStock.net`), carried to
+`TurningInTime`'s net at one need. Premises: a carrier `W` with a reading `way : W → List U`, a step
+`aft`, a use `cuse` and a need `n`; a property `Inv` of the carrier's configurations (way and level)
+such that, at every configuration `s` with `Inv`: where the level meets `n`, the carrier's pair's step
+gives a configuration with `Inv` (`keepsInv`), the units' way after a step from `way s.1` at that
+level is `way` of the carrier's way after the step (`ways`), and `way s.1` takes `cuse s.1` (`takes`);
+and, whether or not the level meets `n`, some unit of `way s.1` has its need met at the level exactly
+where the level meets `n` (`goes`); and `Inv` at the start `(c, x)` (`start`). Conclusion: the net of
+units from `(way c, x)` never ends exactly where `TurningInTime.net n aft` with the level stepping
+under `cuse` never ends from `(c, x)`. Under any `need`, `use`, `kids` and giving. Nothing is concluded
+where `goes` fails (a way with no unit, or one none of whose units needs as little as `n`). By
+`course_carrier`, `WayOfUnits.all_iff_while` and `Law.stepWhile_unending_iff`. -/
+theorem unending_carrier {W : Type} {way : W → List U} {aft : W → Nat → W} {cuse : W → Nat}
+    {n : Nat} {Inv : W × Nat → Prop}
+    (keepsInv : ∀ s, Inv s → n ≤ s.2 →
+      Inv (TurningInTime.pair aft (fun c z => RegimeMargin.step giving (cuse c) z) s))
+    (ways : ∀ s, Inv s → n ≤ s.2 → after need kids (way s.1) s.2 = way (aft s.1 s.2))
+    (takes : ∀ s, Inv s → n ≤ s.2 → taken use (way s.1) = cuse s.1)
+    (goes : ∀ s, Inv s → (Goes need (way s.1, s.2) ↔ n ≤ s.2))
+    {c : W} {x : Nat} (start : Inv (c, x)) :
+    «不穷» (net need kids giving use) «一» (way c, x) ↔
+      «不穷» (TurningInTime.net n aft (fun c z => RegimeMargin.step giving (cuse c) z)) «一»
+        (c, x) :=
+  Law.stepWhile_unending_iff.trans
+    ((WayOfUnits.all_iff_while fun k before =>
+        Eq.subst (motive := fun s => Goes need s ↔
+            n ≤ (Law.orbit (TurningInTime.pair aft
+              (fun c z => RegimeMargin.step giving (cuse c) z)) (c, x) k).2)
+          (course_carrier keepsInv ways takes start k before).2.symm
+          (goes _ (course_carrier keepsInv ways takes start k before).1)).trans
+      (Law.stepWhile_unending_iff (can := fun s : W × Nat => n ≤ s.2)
+        (next := TurningInTime.pair aft (fun c z => RegimeMargin.step giving (cuse c) z))
+        (s := (c, x))).symm)
+
+end Transfer
+
+/-! ## 2. One package theorem as its case -/
+
+section Case
+
+open WayOfUnits
+
+/-- **`WayOfUnits.unending_iff_carrier` as a case of the transfer**, its statement the package's
+letter for letter (`WayOfUnits` is opened in this section so that `net`, `firstAfter` and `firstUse`
+are that module's). One premise: `n ≤ m` (`order`). Conclusion: `WayOfUnits`'s net from a first unit
+needing `m` and taking `h` and a second needing `n` and taking `H₂`, at the level `x`, never ends
+exactly where `TurningInTime.net n` of the carrier `Bool` (the first unit there or ended, by
+`firstAfter m`; the level under `firstUse h H₂`) never ends from `(true, x)`. Under any giving.
+By `unending_carrier` at `U := Nat × Nat`, `kids u := [u]`, the carrier `Bool`, the reading
+`WayOfUnits.twoWay`, the step `WayOfUnits.firstAfter m`, the use `WayOfUnits.firstUse h H₂` and `Inv`
+true of every configuration, through `WayOfUnits.unending_unit`; `ways`, `takes` and `goes` are
+`WayOfUnits.after_twoWay`, `taken_twoWay` and `goes_twoWay` (the first two after `after_unit` and
+`taken_unit`). Not by calling `WayOfUnits.unending_iff_carrier`, `goes_iff_carrier` or
+`course_twoWay`. -/
+theorem unending_iff_carrier_case {giving : Nat → Nat} {m h n H₂ x : Nat} (order : n ≤ m) :
+    «不穷» (net giving) «一» ([(m, h), (n, H₂)], x) ↔
+      «不穷» (TurningInTime.net n (firstAfter m)
+        (fun b z => RegimeMargin.step giving (firstUse h H₂ b) z)) «一» (true, x) :=
+  (WayOfUnits.unending_unit giving ([(m, h), (n, H₂)], x)).symm.trans
+    (unending_carrier (U := Nat × Nat) (need := WayOfUnits.need) (use := WayOfUnits.use)
+      (kids := fun u => [u]) (giving := giving) (W := Bool) (way := WayOfUnits.twoWay m h n H₂)
+      (aft := WayOfUnits.firstAfter m) (cuse := WayOfUnits.firstUse h H₂) (n := n)
+      (Inv := fun _ => True)
+      (fun _ _ _ => trivial)
+      (fun s _ met => (WayOfUnits.after_unit _ _).trans (WayOfUnits.after_twoWay met s.1))
+      (fun s _ _ => (WayOfUnits.taken_unit _).trans (WayOfUnits.taken_twoWay m h n H₂ s.1))
+      (fun s _ => WayOfUnits.goes_twoWay order s.1)
+      (c := true) (x := x) trivial)
+
+/-- The statement of `unending_iff_carrier_case` is `WayOfUnits.unending_iff_carrier`'s. No premise.
+The two proofs, each taken with all its arguments, are equal by `rfl`: proofs of one proposition are
+equal, and the equation is well typed only where the two statements are the same up to unfolding. This
+checks sameness up to unfolding, not the letters; the letters were compared in the text. -/
+theorem carrier_same : @unending_iff_carrier_case = @WayOfUnits.unending_iff_carrier := rfl
+
+end Case
+
+end ScratchUnitsCarrier
+end Becoming
