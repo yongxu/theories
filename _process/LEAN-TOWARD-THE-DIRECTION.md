@@ -1,6 +1,6 @@
 # The Lean toward the direction
 
-*AI-written (Fable), 15 November 2026. The order of work on the Lean as it looks now. It will change as the work teaches us. About ten minutes. It goes with [the direction](DIRECTION.md). Steps 3 to 7 were re-said on 16 November, after they were tried as one model. A first draft was attacked by another AI reader and three of its statements were tried by hand before any Lean; no person has checked it.*
+*AI-written (Fable), 15 November 2026. The order of work on the Lean as it looked on the morning of 16 November; the order since is on [the direction page](DIRECTION.md), under "What we are trying next". It will change as the work teaches us. About ten minutes. It goes with [the direction](DIRECTION.md). Steps 3 to 7 were re-said on 16 November, after they were tried as one model. A first draft was attacked by another AI reader and three of its statements were tried by hand before any Lean; no person has checked it.*
 
 ## How this came up
 
