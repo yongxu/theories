@@ -170,7 +170,7 @@ The account is written in four layers, each of which can be read through on its 
 
 ## Ongoing research
 
-The directions under way, each with its summary, its next step and the results it has established, are on [the research page](RESEARCH.md): [First priority: Theory of Becoming](RESEARCH.md#theory-of-becoming) · [Mapping the relational thread in Chinese thought onto the spine](RESEARCH.md#chinese-sources-and-becoming) · [Developing significance, comparison and practical judgment](RESEARCH.md#universal-intelligence-session) · [Investigating The Theory of Evolution](RESEARCH.md#theory-of-evolution) · [Advancing AI alignment](RESEARCH.md#generative-alignment).
+The directions under way, each with its summary, its next step and the results it has established, are on [the research page](RESEARCH.md): [The aim: one map, as the direction page tells it](RESEARCH.md#theory-of-becoming) · [Mapping the relational thread in Chinese thought onto the spine](RESEARCH.md#chinese-sources-and-becoming) · [Developing significance, comparison and practical judgment](RESEARCH.md#universal-intelligence-session) · [Investigating The Theory of Evolution](RESEARCH.md#theory-of-evolution) · [Advancing AI alignment](RESEARCH.md#generative-alignment).
 
 ## Research and repository
 
