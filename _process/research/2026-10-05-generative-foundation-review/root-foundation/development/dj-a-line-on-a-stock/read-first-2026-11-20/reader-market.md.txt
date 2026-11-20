@@ -1,0 +1,148 @@
+*AI-written (Claude Fable), by one reader who did not write the draft, 20 November 2026. Read whole: the seven Lean files of `experiments/market-generativity/formal/` (every definition and statement; the proofs passed under the eye and were not checked step by step), its `README.md`, chapter 5 §10 (`05-COLLECTIVES.md` l.353-381), the record `market-model-share-margin-and-ends.md`, `DRAFT-READING.md`, `_process/DIRECTION.md`, and `meta-attractor/MarketDiagnosis.lean` (72 lines, beside the folder). At the statement only: `Becoming/Viability.lean` l.205-260 and 296-325; `Becoming/Lasting.lean` l.100-180, 310-345, 400-442, 446-530, 536-576, 626-640, 712-752; `Becoming/RuleCapture.lean` l.100-200; `Becoming/RuleShaping.lean` l.545-582. By word search and counts only: the plan, the six verification receipts and their audit logs, the records of 17 to 20 November. Not read: the Python model, the study `MARKET-INTERNET-DEGENERATION.md`, the other three market records, the other twenty Lean files of `meta-attractor/` (import lines only), `AlignmentSuccession`. Nothing was built or run; the only git commands were `git log` reads.*
+
+# R6 against the Lean: the market model
+
+Paths: `F/` is `experiments/market-generativity/formal/`; `B/` is the package's `Becoming/`.
+
+## Verdict
+
+R6 is right that this model is nearer to "two ways placed with respect to each other" than anything the direction page names, and right that the page and the plan never name it. It is wrong in one clause ("the charge that comes back"), says more than the Lean in two (attraction and instability are proved at β = 1/2 only; no boundary between the two ways is stated in the state, only in the erosion parameter), and is short where the model is strongest for the direction: three later files state when a course can still be turned and when it cannot, and a fourth joins the model to the package.
+
+## 1. The model exactly
+
+**State** (`F/MarketGenerativity.lean` l.151-153): `x` (the renewing practice's share), `q` (quality of the charging mechanism), `w` (the other practice's influence), `budget` (the reserve that pays correction), and `stock : Fin n → Rat` (any finite number of supports). Five components, not three. The three-number state `(x, q, w)` is `RegimeBoundary.OperatingState` (`F/RegimeBoundary.lean` l.214), a projection in which correction is paid at every step and there is no error (l.216-219).
+
+**One step** (`operatingStep`, l.197-203, from the definitions at l.9-23):
+
+| Component | Next value | Reads |
+|---|---|---|
+| share | `x + η·x·(1−x)·(fine·q + lobby − cost)` | `x`, `q` |
+| quality | `clip01((1 − α·u − β·w)·q + α·u − error)`, `u = 1` if `fee ≤ budget`, else `0` | `q`, `w`, `budget`, the disturbance |
+| influence | `(1−μ)·w + μ·λ·(1−x)` | `w`, `x` |
+| reserve | `min cap (budget − fee·u + levy)` | `budget` |
+| stock `j` | `max 0 ((1−dep)·stock + (renewal+damage)·x − damage − baseline − shock)` | that stock, `x`, the disturbance |
+
+**Supplied**: every parameter (`Parameters`, l.142-145: price, levy, cost, fine, lobby, η, α, β, μ, λ, fee, cap; per stock its depreciation, renewal, damage, baseline, and whether it is `essential`), the bounds (`Bounds`, l.147-149: `xb qb wb ε`, per stock a floor and a shock bound), and the disturbances. The file's own head says so (l.3-5): "The policy, charges, reserve levy, measurement bounds, causal stock effects and protected floors are supplied inputs."
+
+**What follows, generally** (any parameters): under `Certificate p b` (21 inequalities, l.159-181) the rectangle `Safe p b` is kept by every step under every admissible disturbance (`rectangle_one_step` l.205, `rectangle_all_times` l.259), and a guarded history from it never stops (`safe_history_never_fails` l.299).
+
+**What selects what, in the model's terms.**
+
+- The share's step is a function of the share itself and of `q`, through the gap `fine·q + lobby − cost`. Price and levy cancel (`profits_difference` l.25-27). The factor `x·(1−x)` means a share of none stays none (`no_entry_at_zero` l.391; `zero_share_remains_zero`, `F/RegimeAttraction.lean` l.574).
+- The stock enters no other component. `supportStep` is read only in the `stock` field of `operatingStep`. This is by definition; as a theorem it is stated for particular parameter sets: the `(x, q, w)` history of the full model from `lift s initial` is the projection's history for every `initial` stock (`coupled_histories`, `F/RegimeAttraction.lean` l.499-501; likewise `pulse_coupling_history`, `partial_coupling_history`).
+- The stock does enter one thing: the guard. `guardedStep` (l.276-280) returns `none` when an essential stock is below its floor at the start or the end of a step, and `none` is kept (`failed_market_absorbing` l.291). So the stock makes no difference to which share is selected, and decides whether there is a market at all.
+- `q` is eroded by `β·w·q` and restored by `α·u·(1−q)`; `u` is 1 only where the reserve at the start of the step covers the fee (`payment_guard` l.40, `later_receipt_cannot_pay_earlier_correction` l.378). The reserve is fed by a levy that both practices pay alike (levy is in `profitR` and `profitE`, l.10-11).
+- `w` moves a fraction `μ` of the way toward `λ·(1−x)`: it follows the other share with a lag. The lobbying spend `lobby` is a constant in the gap and does not set `w`; `λ` is supplied (README l.22).
+
+## 2. The draft's sentences in R6
+
+| # | Draft | Mark | Against the statements |
+|---|---|---|---|
+| a | "a state of three numbers" | LOOSE | Five components (above). The three are the projection on which the regime results are proved. |
+| b | "advantage is `fine·q + lobby − cost` (`profits_difference`)" | EXACT | l.25-27. |
+| c | "it is selected exactly where the charge that comes back covers its cost" | WRONG in "comes back", LOOSE in "exactly" and "covers" | Nothing comes back to the renewing practice. `fine·q` is charged on the other (`profitE = price − levy − fine·q − lobby`, l.11); in the accounting it is a use of revenue, not a receipt of the renewing practice (`market_uses_accounting` l.398-400). The gap also has `lobby` in it, so the threshold is `fine·q + lobby > cost`, in the numbers `q > 3/8` (`example_threshold` l.360), not `fine·q ≥ cost`. No theorem states an "exactly": `share_strictly_increases` (l.83-85: `0 < x < 1`, `0 < η`, `0 < g` give `x < x'`) is one direction; `strict_loss_of_renewing_share` (`F/RegimeBoundary.lean` l.303-306: `0 < η`, `0 < fine`, `0 < x ≤ xd < 1`, `q ≤ qd < θ`) is the other, written with `fine·(q − θ)` and tied to the gap by `gap_correspondence` (l.313: where `fine·θ = cost − lobby`). At a gap of exactly zero, or a share of none or all, the share does not move. |
+| d | "Influence follows the other share and erodes `q`; paid correction restores it" | EXACT | `influenceStep` l.14, `qualityStep` l.16-17, `installed` l.15. |
+| e | "For a range of the erosion there are two fixed ends and a middle" | EXACT with the range missing | `family β` fixes everything but β as numbers (`F/RegimeAttraction.lean` l.11-12: α = 1/4, λ = 1, η = 1/5, fine 4, μ = 1/4, θ = 3/8, correction paid, no error). `high_fixed` (l.46): every β. `low_fixed` (l.61): `0 ≤ β ≤ 3/4`. `middle_fixed` (l.113): `5/12 ≤ β ≤ 3/4`. `fixed_classification` (l.68-71): for `0 < β ≤ 3/4` every fixed state in the unit box is one of the three. The middle is in the box exactly for `β ≥ 5/12` (`middle_physical_iff` l.95) and is the low end at `5/12` (`collision_at_boundary` l.122). So three distinct fixed states for `5/12 < β ≤ 3/4`, two below. |
+| f | "each end attracts a neighbourhood (`high_approaches`, `low_approaches`)" | MORE than the Lean as placed | Both are stated for `family (1/2)` only (l.307-311, l.321-325). High box: `1−r ≤ x ≤ 1`, `1−8r ≤ q ≤ 1`, `0 ≤ w ≤ 2r`, `r ≤ 1/32`, shrinking by 7/8 a step. Low box: `0 ≤ x ≤ r`, `1/3−r ≤ q ≤ 1/3+r`, `1−2r ≤ w ≤ 1`, `r ≤ 1/48`, shrinking by 79/80. The draft's sentence runs on from "for a range of the erosion". |
+| g | "the middle is unstable (`middle_unstable`)" | MORE as placed; LOOSE in "unstable" | l.430-432, at β = 1/2: for every ε > 0 some state of the unit box within ε of `(1/6, 3/8, 5/6)` has a share above 1/4 at some later step. One direction of leaving (share up, quality up, influence down: `UpperCone` l.352). Not stated: that it reaches the high box, that it stays away, or anything about states on the other side. The README says the same (l.100). |
+| h | "coupled to a stock that the renewing share rebuilds and the other damages" | EXACT | `supportStep` l.22-23, which also has depreciation, a baseline draw and a shock. In the coupling: depreciation 1/10, renewal 2, damage 1, baseline 0, floor 5. |
+| i | "the low end breaches the stock's floor in finitely many steps" | EXACT, for the box and the numbers | `low_support_fails_finitely` (l.456-458) and `coupled_eventual_floor_breach` (l.509-511): at β = 1/2, from every state of the low box with `r ≤ 1/48` and every initial stock, the stock is below 5 at some step; no shocks, correction paid. `low_guarded_history_fails` (l.558) adds that the guarded history is then `none`. |
+| j | "from a box about the high end the history never fails" | EXACT with a premise dropped | `high_coupled_history_never_fails` (l.532-535) asks also `5 ≤ stock` at the start. Without it the guard fails at once. |
+| k | "The stock makes no difference to the selection there: only `q` does" | EXACT of the definitions; LOOSE in "only `q`" | See §1: by definition of `operatingStep`; a theorem for the example's parameters (`coupled_histories`). The share's step reads the share too. And the guard reads the stock. |
+| l | "the market model of 6 October" | LOOSE | The base file is 6 October; every regime result the draft cites is 8 October (§4). |
+
+## 3. What the draft does not say and should
+
+**The margin** (`F/RegimeBoundary.lean`), for general parameters, not the family. With `M = α(1−θ) − β·λ·θ` (l.8-9):
+
+- `exact_floor_boundary` (l.20-24), for `α, β ≥ 0`, `α + β ≤ 1`, `0 ≤ λ ≤ 1`, `0 < θ ≤ 1`: with correction paid and no error, `q` stays at or above `θ` after one step from every `q` in `[θ, 1]` and every `w` in `[0, λ]`, exactly where `M ≥ 0`. A one-step statement about `q` alone.
+- `exact_low_certificate_boundary` (l.155-160), for `α > 0`, `β ≥ 0`, `0 ≤ λ ≤ 1`, `0 < θ < 1`: a low certificate exists exactly where `M < 0`. A low certificate (l.52-54) gives a box `0 ≤ x ≤ xd`, `0 ≤ q ≤ qd < θ`, `wd ≤ w ≤ λ` that every step keeps (`low_box_all_times` l.247, under sign and rate premises), and inside it a positive share falls strictly (`strict_loss_of_renewing_share`).
+
+So for general parameters the model states: a region in which the selection goes against the renewing practice at every step for ever exists exactly where `M < 0`. The README's own limit (l.86): "an invariant region, not a proved strict attractor or a complete basin boundary."
+
+**Passing from one way to the other** (`F/RegimeTransition.lean`, `F/PartialRegimeTransition.lean`). There is such a statement, in one direction, under a change of β that is handed in:
+
+- `exact_universal_landing_boundary` (`F/PartialRegimeTransition.lean` l.279-280), in the family, for `0 ≤ β ≤ 3/4`: every state of the unit box with a positive share reaches `Landing` (`x ≥ 3/4`, `q ≥ 1/2`, `w ≤ 1/4`) in finitely many steps, exactly where `β ≤ 5/12`. This is the three-number projection, with no stock.
+- `supercritical_low_box_never_lands` (l.291-293): for `5/12 < β ≤ 3/4` there is a low box from which no state ever lands.
+- `supported_finite_transition` (`F/RegimeTransition.lean` l.264-275, β = 0 for the pulse) and `supported_partial_transition` (`F/PartialRegimeTransition.lean` l.416-427, any `0 ≤ β ≤ 5/12`): for a positive share there is `N` such that, with initial stock at least the cover `K_N` (`K_0 = 5`, `K_{n+1} = (10/9)(K_n + 1 + cost)`, l.161-163), the guarded full history runs through the pulse, arrives in the safe rectangle, and then, with β back at 1/2, never fails. Sufficient, not least.
+- `no_uniform_pulse_duration` (l.349): no one `N` serves every positive share. `arbitrarily_small_error_blocks_universal_landing` (`F/PartialRegimeTransition.lean` l.334): at β = 5/12 an arbitrarily small constant error leaves a positive fixed state that never lands.
+- No statement was found, in the seven files, of a course that passes from the high way to the low way.
+
+**A point of no return** (`F/FiniteSupportObstruction.lean`). `every_finite_stock_has_obstructed_positive_seeds` (l.210-214): for every stock `≥ 5` there are `N > 0` and a positive `seedLimit N = 1/(6·(3/2)^N)` such that from every share `0 < x ≤ seedLimit N`, every `q` in `[0, 1]` and every `w`, the guarded history is `none` by step `N` under every schedule of β, every error and every nonnegative shock. Not "no finite set of supports suffices": every finite stock has positive shares that no change of the erosion can save, the share's growth rate and the stock's law being fixed. `support_required_for_small_prefix` (l.132-138) gives the stock needed to survive such a prefix; `projected_recovery_and_actual_failure` (l.243-247) gives one state that lands in the projection and whose full history stops; `too_late_even_without_extra_cost` (`F/RegimeTransition.lean` l.310) is one built state. The README calls the interval conservative, "not the exact viability boundary" (l.159).
+
+**Is anything a statement of "can still be turned"?** Yes, in three forms, none a basin boundary in the state:
+
+1. exact in the erosion: every positive share turns exactly where `β ≤ 5/12` (projection only);
+2. sufficient with the stock: enough cover carries the turn through;
+3. sufficient against: a share too small for the stock cannot be turned by any erosion schedule.
+
+Between 2 and 3 nothing is stated, except at the worst share: the stock alone lasts `n` steps at or above 5 exactly where it is at least `K_n` (`MarketInstances.cover_exact`, `F/MarketInstances.lean` l.328-330, at `x = 0`). At β = 1/2 the state has two attracting boxes and one escaping cone at the middle; no surface between two basins is stated.
+
+**The join to the package** (`F/MarketInstances.lean`, imports `Becoming.Viability` and `Becoming.Lasting`, l.1-5). Chapter 5 §10 names four theorems of any process (l.371-374): never leaving (`Viability.never_leaves_iff_certificate`, `B/Viability.lean` l.230), reaching (`Lasting.reaches_iff_funnel` l.572, `Lasting.avoids_iff_closed` l.458), lasting (`Lasting.lasts_iff_ladder` l.152), draining (`Lasting.Drains.leaves` l.333). The market instances:
+
+| Core law used | Market statement | By substitution? |
+|---|---|---|
+| `Viability.guarded_never_fails_iff` (l.311) | `never_fails_iff` (l.100-105), `safe_never_fails` (l.129), `safe_within_kernel` (l.136) | Yes: the market's history and guarded history are proved equal to the core's (`history_eq`, `guardedHistory_eq`), then the law applies. The certificate is the market's own rectangle. |
+| `Lasting.exhausts` (l.422, itself `Drains.leaves` applied) | `forces_failure_instance` (l.201-206), `obstructed_seeds_instance` (l.694) | Yes, with the market's three estimates as the premises. |
+| `Lasting.Ladder.lasts` (l.141), `Lasting.lasts_iff_of_exact` (l.175) | `cover_ladder` (l.252), `supported_prefix_instance` (l.284), `cover_exact` (l.328) | Yes. |
+| `Lasting.some_avoids_iff` (l.492), `reaches_excludes` (l.514), `fixed_avoids` (l.523), `Reaches.trans` (l.629), `orbit_reaches_iff_funnel` (l.737) | `never_lands_iff` (l.353), `lands_iff_margin` (l.375), `lands_iff_no_closed` (l.383), `landing_side_instance` (l.641), `landing_boundary_instance` (l.658), `lands_iff_funnel` (l.673) | In part. One direction of `lands_iff_no_closed` uses the market's own `exact_universal_landing_boundary`; the funnels are built from the market's gain estimates. |
+
+The four core laws are characterisations (a course never leaves exactly where some closed set holds it, and the like). What the instances add is the market's arithmetic; the file says so (l.60-61). The join is to laws of any law of change. No market file names `Locked`, `RuleCapture`, `RuleShaping`, `TurningInTime`, `RegimeMargin` or `LineOnAStock` (word search over `F/*.lean`: no hit). No package file names the market (word search over `B/` and `deeper/` for `MarketInstances` and `MarketGenerativity`: no hit).
+
+**Beside the folder**, and not in the draft: `meta-attractor/` has 21 Lean files, two importing `MarketGenerativity`. Only `MarketDiagnosis.lean` was read. It bears on "unseen": two states with the same share, quality, reserve and stock, and the same present gap, differing only in influence, have selections of opposite sign at the next step (`same_present_observation` l.19, `next_selection_opposes` l.35). In this model what is unseen at a step and turns the selection is the influence, not the stock.
+
+## 4. Axioms, standing, dates
+
+- `verification.json`: Lean 4.29.1, `Std` the only import, 39 declarations audited, axioms `propext`, `Classical.choice`, `Quot.sound`. In the later audit logs a few declarations report fewer (`[propext, Quot.sound]`, `[propext]`, two none); no `sorryAx` in any log (counts by `grep`).
+- `MarketInstances`: its retained run of 1 November reports all 53 audited declarations on the three axioms. The receipt binds `Becoming.Lasting` at a hash beginning `57ab5efb`; the file today hashes `0ed67252` and was last committed on 6 November. `Becoming.Viability` and `MarketInstances.lean` match their recorded hashes. So this receipt does not show `MarketInstances` checked against today's `Lasting.lean`. Not rebuilt here.
+- None of the seven files is in the package or its pure core. `MarketInstances` is periphery by its own head (l.10-11). The two core laws it instances are reported axiom-free in the package receipt of 16 November for `never_leaves_iff_certificate`; the others were not looked up.
+- First committed: `MarketGenerativity` 6 October; `RegimeBoundary`, `RegimeAttraction`, `RegimeTransition`, `PartialRegimeTransition` 8 October (the last changed 9 October); `FiniteSupportObstruction` 9 October; `MarketInstances` 14 October (last changed 1 November). The README (last changed 17 October) does not mention `MarketInstances`.
+
+## 5. Against the direction page, and the lock
+
+- Word search for "market" in any case in `_process/DIRECTION.md` and `_process/LEAN-TOWARD-THE-DIRECTION.md`: no hit in either. The page links chapter 5 at three other anchors and never at `#markets`. The draft's "never names" holds.
+- The reader of 18 November (`reader-significance.md` l.86) wrote of chapter 5 §10: "The lock is pointed to, not stated", citing the chapter's l.379. That is right of the chapter: l.379 is a pointer with three links into chapter 2.
+- Of the Lean: no lock is stated of the market, and the loop is not a lock in `RuleCapture`'s sense by substitution. `ReadsShare` (`B/RuleCapture.lean` l.150) asks that the rule read be a monotone function of the share alone, whatever rule it meets. The market's `q` is not read from the share: its next value depends on its present value and on `w`, which lags the other share. `Raises` (l.145) does hold in the market's terms where the gap is nonnegative (`share_step_bounds`, `F/MarketGenerativity.lean` l.69).
+- What the market files do state is the self-keeping on both sides, in their own terms: the safe rectangle, in which the gap stays nonnegative for ever (`rectangle_all_times`; its premise `correction_boundary`, l.175, is `Locked`'s second clause at the rectangle's corner, by my reading), and the low box, in which it stays negative for ever (`low_box_all_times`). No theorem ties either to `Locked`. Whether a weaker lock elsewhere in the package would take it was not looked for.
+- The draft's open question on `RuleShaping`'s threshold: by statement they differ. There what comes back is a step function of the share (`thresholdBack`, `B/RuleShaping.lean` l.458). In the market the sign of the selection is `q` against `θ`, and `q` is a state of its own. No theorem relates them.
+
+## 6. R6's last sentence, taken whole
+
+"a selection, a rule set again through the share's influence, a cost of renewing, what comes back, a stock rested on, two ways of going on with a boundary between them, and the stock running down unseen by the selection."
+
+- *A selection*: yes.
+- *A rule set again through the share's influence*: yes as a reading, with the rule keeping a memory and a restoring term, so not "set again from the share" as the lock has it.
+- *A cost of renewing*: yes, in money. The stock's renewal `renewal·x` is a separate supplied coefficient; no amount passes from the cost to the stock.
+- *What comes back*: no. A charge on the other.
+- *A stock rested on*: yes, by the market as a whole through a guard, with the floor and which stocks count handed in. Neither practice and no step of the selection rests on it.
+- *Two ways of going on*: at β = 1/2, in two boxes: from one the guarded history never stops, from the other it stops in finite time.
+- *A boundary between them*: not in the state. In the erosion, yes.
+- *The stock running down unseen by the selection*: yes, by definition of the step; a theorem for the example's parameters.
+
+**What the model lacks against the direction.** Nothing lets the stock reach the selection before the floor: the charge is on a practice's share, not on the stock's level, so "early enough" is absent by construction and the guard is the only place the stock is felt. Shares, not units that multiply, and no entry from none. The mechanism, the floors and which stocks are essential are supplied; the README names why such a mechanism forms as its open question (l.50). One grain. No course from the high way to the low. Attraction at one β. The renewal of the stock has no source in amounts. And it is joined to the package only through four characterisations of any law of change, not to the lock, to turning in time, to the line on a stock or to renewing and consuming on the web.
+
+## Findings
+
+**MUST**
+
+1. *"the charge that comes back covers its cost".* Nothing comes back to the renewing practice; the threshold has `lobby` in it; no theorem says "exactly". Put: "an interior share rises at a step where what the other practice is charged, `fine·q`, with what it spends on influence, exceeds the renewing practice's cost (`share_strictly_increases`), and falls where it is less (`strict_loss_of_renewing_share`, with `fine·θ = cost − lobby`); a share of none stays none. The charge is on the other; nothing comes back to the one that renews."
+2. *"each end attracts a neighbourhood; the middle is unstable"* placed after "for a range of the erosion". Put: "at β = 1/2 only, each end attracts a box about it (radius at most 1/32 at the high end, 1/48 at the low), and arbitrarily near the middle some state's share later exceeds 1/4; nothing is stated of the other directions, or of where such a state goes."
+3. *"two ways of going on with a boundary between them".* No boundary in the state is stated. Put: "two ways of going on at β = 1/2, each proved in a box; the boundary that is stated is in the erosion: in the family every positive share reaches the safe rectangle exactly where `β ≤ 5/12` (`exact_universal_landing_boundary`), and for general parameters a low region kept for ever exists exactly where `M = α(1−θ) − βλθ < 0` (`exact_low_certificate_boundary`). No basin boundary is stated."
+4. *"from a box about the high end the history never fails".* Put: "from a box about the high end, with the stock at or above its floor of 5 at the start and no shocks, the guarded history never fails."
+5. *R7's "R6 (all of it as shares …)".* Not all of it: nothing comes back to those who renew, what favours them does not depend on the level, the level's renewal has no source, and no boundary in the state. Put: "R6 (a cost to those who renew, a level their share keeps up, a rule their share moves, two outcomes in boxes at one erosion; as shares, outside the package; nothing comes back to them and the level reaches the selection only by ending it)."
+6. *Short on what bears most on the direction.* R6 cites nothing from `RegimeTransition`, `PartialRegimeTransition`, `FiniteSupportObstruction` or `MarketInstances`. Add: "Three later files state when a course can still be turned: with the erosion lowered to at most 5/12 and stock at least a cover `K_N`, a positive share is carried into the safe rectangle and stays (`supported_partial_transition`); for every finite stock there are positive shares that no schedule of the erosion saves (`every_finite_stock_has_obstructed_positive_seeds`); between the two nothing is stated. `MarketInstances` makes the never-failing, the cover, the obstruction and the landing boundary instances of four laws of `Viability` and `Lasting`."
+
+**LESSER**
+
+7. "a state of three numbers": five components; the three are a projection with correction always paid and no error.
+8. "For a range of the erosion": say the range. Three distinct fixed states for `5/12 < β ≤ 3/4`, the middle meeting the low end at 5/12; everything but β fixed as numbers.
+9. "only `q` does": the share's step reads the share and `q`; the guard reads the stock.
+10. "the market model of 6 October": the base file; the regime files are 8 and 9 October, the join 14 October to 1 November.
+11. "the standard three axioms reported": so for the base file; a few later declarations report fewer. The `MarketInstances` receipt binds an older `Lasting.lean` than today's.
+12. "its mechanism is supplied; much of it is for one set of numbers": fair. General in parameters: the safe rectangle under `Certificate`, and the margin's two equivalences. For a range of β: the fixed states, the landing boundary. For every schedule of β: the obstruction. At β = 1/2 only: attraction, the middle, the two coupled outcomes.
+13. The draft's own open questions, answered from the statements: the two ends are fixed for a range, attracting at one β; `RuleShaping`'s threshold is not the market's middle by statement; "the lock is pointed to, not stated" is right of the chapter and, as a named lock, of the Lean.
+14. Not in the draft: the `meta-attractor/` folder beside it, 21 Lean files, of which only `MarketDiagnosis` was read here.
+
+## Mine, not asked for
+
+Before any new Lean, the market's cover `K_N` and its seed limit could be set beside `TurningInTime`'s point of no return, to see whether they are the same kind of statement (a deadline for a turn, read off a level that the selection does not read). That is a read of two sets of statements, not a model.

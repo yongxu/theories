@@ -1,0 +1,95 @@
+*AI-written (Claude Fable), 20 November 2026, by one reader who took no part in the table or its note. Read: `NOTE.md`, `COLUMNS-AND-ROWS.md`, `build_table.py` and `two-ways-table.json` in the worktree (counts recomputed with python3); the worktree's diff of `_process/DIRECTION.md`; `PopulationCorrection.lean` whole (694 lines, statements and definitions; proofs only where short), `CollectiveDestruction.utility`, `POPULATION-README.md`, `population-verification.json`; for the spot-checks the named statements of `LineOnAStock`, `RuleShaping`, `ReadInTime`, `RuleRebuilding`, `TurningInTime`, `ContinuingRevision`, `PairFlow`, `SelectionTerm`, `SelectionPace`. Nothing was built or run; no proof was checked. Read-only git and grep only.*
+
+# Check of the table's note and the direction paragraph against the data file and the Lean
+
+## MUST
+
+**M1. NOTE, "How": "nine that two or more readers of the first round had named".** By the data file's `added` list seven were named by two or more readers. `DrawHistory` was named by one (centre, reader A); `HorizonWebs` and `Substitution` by one (web-classes, reader B, two entries of the same reader).
+Put: "nine that readers of the first round had named as likely to have four or more of the eight (seven of them by two or more readers; `DrawHistory`, and `HorizonWebs` with `Substitution`, by one each)".
+
+**M2. NOTE, "What it does not show": "Eight more were named by readers and not filled".** Nine. `LineageRegions` (in the package) is in the `added` list (keeping-lasting-ranking, reader A: "Likely five or six of the eight; to be confirmed from the statements"), is no row, is inside no row's data, and is not in the note's list. It is the unfilled place with the highest estimate, and it is in the package, where section 4 says what was not found.
+Put: "Nine more were named by readers and not filled: …, `LineageRegions` (by its one reader likely five or six of the eight), …".
+
+**M3. NOTE item 1 (third and fifth bullets) and the paragraph: the response law is supplied, and is told as a consequence.** The file's header: "Repertoire, realized receipts, response law and renewal remain supplied. … No repeated-game optimality claim is made." `allocated` (line 33) is a definition, `if active then min N (r + k) else r - k`, with the schedule `k` handed in; it is not derived from `payoff`. What is proved runs the other way: every slot whose action `allocated` changes gets the action that `payoff` ranks highest at that step, for every number of others (`revised_slot_is_optimal`, 85, premise `i < N`; with `strict_revision_advantage`). The note cites `allocated` for "takes the better" and leaves the law and the schedule out of "Supplied, not derived". The paragraph's "each revision takes the better of the two, **so** the number renewing rises where correction acts and falls where it does not" makes the supplied law follow from the payoffs.
+Put, NOTE third bullet: "…(`strict_revision_advantage`); the number renewing is moved by a supplied law (`allocated`: up by the schedule's `k` to at most `N` where funded, down by it where not), and every slot that law changes takes the action that pays more at that step (`revised_slot_is_optimal`)."
+Put, NOTE fifth bullet: "Supplied, not derived: the two actions, the payoffs (through `CollectiveDestruction.utility 2 1 …`), the charges of one and three, the law that moves the number renewing and its schedule, the reserve's cap at the fee, and the law by which capacity moves. The file claims nothing about what is best over a repeated game."
+Put, paragraph: "the number renewing is moved by a supplied law, up where correction acts and down where it does not, and each slot it changes takes the action that pays more at that step;" and "Its payoffs, its charges, the law that moves the number renewing and its law of capacity are supplied, …".
+
+**M4. Paragraph: "any statement that joins the package to that study of October" is false of the study.** "That study" is the study of the meta-attractor. Two of its files, both rows of the table, import the package and state package laws of other files of the study: `SharedStockInstances` (imports `Becoming.Weighted` and `CorrectionDependence`, first committed 15 October) and `VersionedTaskInstances` (imports `Becoming.Countdown`, `Gated`, `Stock`, 14 October). What I found by imports: `PopulationCorrection` imports only `CollectiveDestruction`, and only `PopulationRealization` imports it. NOTE item 4 ("the study of October in which the eight stand together") can be read the same way.
+Put, both: "and any statement that joins the package to that file (two other files of its study state package laws of other files of it; by its imports none reaches this one)".
+
+**M5. Paragraph, the changed sentence at "What is not there": "(outside the package, the table above has one place with slots that revise)".** Where it stands it says that place has the sentence's three with slots for units: units that each need a level, a rule set again from their share, that level as what they need. It does not. No slot needs anything: `N` is fixed, no slot ends, and neither `next` nor `payoff` reads capacity (both readers' b notes say "nothing reads capacity"); the reserve is what correction needs.
+Put: "(the table above is of eight other properties; the one place outside the package that has all eight has slots that revise, and no slot in it needs a level)", or drop the parenthesis.
+
+**M6. NOTE item 1 and the paragraph: both readers' caveat on the level is dropped.** The telling gives capacity at nothing as the outcome and "a level that can run down" as whole. In the file the amount something needs is the reserve (correction acts where it covers the fee), and under the named theorems' premise fee ≤ N it never falls once it covers the fee (`correction_stays_funded`); the amount that runs down to nothing is capacity, which nothing reads. For a direction that asks for a way that uses up what it rests on, this changes what "all eight" says.
+Put, NOTE fifth bullet and the paragraph's sentence on what is supplied, add: "Nothing in it reads capacity: what correction needs is the reserve, which, once it covers a fee no greater than the number of slots, does not fall."
+
+**M7. Paragraph: "something multiplies" and "the seven with what multiplies on a level that can run down".** Column a's yes is "leave offspring or grow in number by a law of the step". Of the seven, `PairFlow`'s a is a line that gains a fixed `own` at each active step (`lineAt` 530; its reader B: "nothing multiplies beyond a linear count"), and `RuleRebuilding`'s is a cohort of the quota's size wherever one teacher stands (settled; reader A gave in part: "nothing grows per member"). The note has a caveat; the paragraph has none.
+Put, in the paragraph's list of the eight: "something multiplies or grows in number by a law of the step".
+
+## (1) Counts: all RIGHT
+
+- 89 places, 712 cells, 643 agreed, 69 settled: RIGHT. No cell is open or "?".
+- 55 core, 30 outside, 3 programs, 1 scratch: RIGHT by reader A's field, which is what the view uses (`one()` takes A's). The readers differ on one row, `deeper/RelationalRenewal` (A outside, B core); its path is outside `becoming/Becoming/`, so A's is right by location. By B's field: 56, 29, 3, 1, and columns b 45, e 23.
+- Core places with each column whole, 14, 44, 1, 14, 22, 11, 25, 35: RIGHT.
+- c whole in one core place, `ContinuingRevision`, a = N there: RIGHT.
+- No core place with b, e, f all whole: RIGHT (also by B's 56).
+- a, e, f whole: `RuleShaping`, `DrawnShaping`, `ReadInTime`, `PoolFromCourse`: RIGHT; b is N, N, P, P; g and h are Y,Y / Y,Y / Y,Y / P,Y, so "both outcomes exact or a point of no return" holds.
+- a and b whole: the seven named: RIGHT. With e whole: `PairFlow`, `ReadingsSpread`, `ReadingsPersist`: RIGHT; their f is N, P, P.
+- b and f whole: the two rows of `TurningInTime` and `RuleRebuilding`: RIGHT; e is P in all three.
+- Market program seven; `ResponseCapacity`, `MarketInstances`, `MarketGenerativity` six: RIGHT; nothing else has six or more.
+- Paragraph: "of the seven … none has what comes back together with a rule set again from a share": RIGHT. "Two files of the market model … and one more file of the meta-attractor study … six of the eight": RIGHT. "69 of 712": RIGHT.
+- Also RIGHT: eleven groups fixed first; ten places in the second round; 21 Lean files and 21 rows of the meta-attractor folder; 406 `.lean` files in the package directory; chapter 2 §9 and §10 for the four places; chapter 5 §10 for the two market files.
+
+## (2) The telling of `PopulationCorrection`, sentence by sentence
+
+- "A fixed number N of slots … (`State`, `next`)": EXACT.
+- "Correction acts at a step exactly where the reserve covers a fee (`funded`)": EXACT (`decide (fee ≤ s.reserve)`, read by `next`).
+- "Each renewing contract pays one into the reserve; while correction acts the others are charged three each (`inflow`)": EXACT of the definition. Not said: `next` caps the reserve at the fee and spends the fee each step correction acts.
+- "While correction does not act, a renewing contract earns strictly less than a racing one, and while it acts, strictly more, whatever the others do": direction RIGHT. The action is `payoff`'s third argument, `race`; renewing is `race = false` (`slotAction r i = decide (r ≤ i)`: slots below the number renewing have action false; `payoff _ _ false = 6 − others`, the 6 of `privateReceipts`). LOOSE in one respect: the theorem compares one contract's two actions against the same number of others racing, at one step, not two contracts in one state.
+- "each revision takes the better (`allocated` …)": see M3. Also LOOSE: rises to at most `N`, falls to at least nothing.
+- "For every N, fee at most N, start with at most N renewing, and schedule revising at least one slot a step … (`exact_schedule_activation_boundary`)": premises complete (`hr`, `hf`, `hk`; every `cap`). `available k r t` is the sum over the first `t` steps of `offCount`, which starts at `r` and falls by the schedule each step: what the renewing contracts would pay in while correction never acts (the file: "a counterfactual ledger"); at `t = r` it is all they would ever pay (`contributions_stop`). "Can still pay" is a fair gloss; LOOSE in that "the reserve" is the start's.
+- "Short of that the course comes to none renewing, the reserve below the fee and capacity nothing, and stays there": EXACT. The theorem also asks `1 ≤ N`; it follows from fee ≤ N and the shortfall, so nothing is lost. `destructive_region_absorbing` is the fixed point `⟨0, B, 0⟩` for `B < fee`.
+- "a region stated on the start is never left (`Doomed`, `doom_history`)": true, LOOSE. `Doomed` is not the shortfall region: it is reserve plus the triangle number of those renewing below the fee, which is the shortfall at one slot a step (`unit_available_is_triangle`) and lies inside every such schedule's shortfall (`faster_replacement_reduces_available`); a faster schedule's shortfall is wider. `doom_history` asks only `1 ≤ k t`.
+- "Supplied, not derived …": incomplete, M3.
+- "Slots revise; nothing leaves offspring": RIGHT for this file.
+- "Its receipt allows the three standard axioms": RIGHT. The README: "Permitted standard logical dependencies are `propext`, `Quot.sound` and `Classical.choice`"; the receipt (passed, 8 October, its source hash equal to the present file's) lists none for the definitions and `propext, Quot.sound` for every theorem the note names; `revised_slot_is_optimal` adds `Classical.choice`.
+- "first committed 8 October 2026": RIGHT (`74cba5b13`, 2026-10-08). The theory page exists and has the section.
+- The header limits the telling in two ways: the response law is supplied (M3), and "better" is at the step only.
+- Paragraph only: "for every number of slots, every fee no greater than it and every schedule …" leaves out the start with at most that many renewing; implied by "slots", LESSER.
+
+## (3) Is "all eight whole" fair by the columns as fixed?
+
+By the letter of `COLUMNS-AND-ROWS.md`, yes for all eight. Four are generous, and the note should say so.
+
+- **a, Y by a settling, generous.** Reader B gave in part. The count of renewing among a fixed `N` moves by a handed-in `k` to at most `N`; it is "grow in number by a law of the step" with the speed supplied, and nothing multiplies.
+- **b, Y, generous.** No one amount meets both halves under the named theorems' premises: the reserve is needed and taken from but does not run down (it falls only for a fee above `N` or under `leakingNext`); capacity runs down and nothing needs it, which is the column's "in part".
+- **c, Y, fair if the level is the reserve.** A renewing contract keeps 6 of gross 7 and one goes to the reserve (`operating_receipts_accounted`), and unfunded it earns less. "Rests on" is then that renewing is the selected action only while the reserve covers the fee. On capacity c would fail: no giver rests on it.
+- **d, e, g, h: agree with Y.** h is carried by `Doomed` with `doom_history` over every schedule of at least one slot a step.
+- **f, Y, generous.** The rule (whether correction acts) is set again from the reserve, which the counts feed; `funding_iff_ledger` makes it the start's reserve plus summed counts. Once funded with fee ≤ N the count makes no further difference to the rule.
+
+The note should say, in item 1: "All eight by the columns' letter: the first by a settling (one reader gave in part); the level and the giving on the reserve, while the amount that runs down is capacity, which nothing reads; the rule set again through the reserve that the counts feed."
+
+## (4) Spot-checks against the Lean statements
+
+1. `LineOnAStock` c = N: RIGHT (`taken` 143, `left` 146: units only take; giving is a function of the level).
+2. `LineOnAStock` e = P: RIGHT (`takes_nothing` 1453 is about levels; `NothingTakenEnds.ending_differs` 2109 is a built course).
+3. `RuleShaping` b = N: RIGHT (`shaped` 150: `a, s, p, c` are constants of offspring counts).
+4. `ReadInTime` b = P: RIGHT (a loss that only grows, `Accrues`; nothing needs it).
+5. `RuleRebuilding` e = P: RIGHT (`稳开二试` 1368: two starts, each its own exact test; no return, no selection between them).
+6. `TurningInTime`, the lock row, e = P: RIGHT (1400 and 1633 give ending and never ending; nothing on what comes back).
+7. `ContinuingRevision` c = Y: by the letter (`execute` 66: `fuel - 1 + yield`; `step_conserves` 80). Lenient: the header calls the yield "a declared return" that renewal "receives", it is a parameter, and the cost is one unit of the same fuel. I would give Y only with those words.
+8. `ContinuingRevision` a = N: RIGHT (one carrier, `carrier + 1`).
+9. `PairFlow` f = N: RIGHT (`Setting.intends` 473 is supplied; `sends` 489 gates by activity).
+10. `Reproduction` e = N: RIGHT; P is arguable from `Displacement`, a built case, but no kind there gives, keeps or holds back.
+11. `RuleRebuilding` f = Y: by the letter for who enters (`door` 194, `entrant` 187 read `teachers`). The quota itself changes only by a handed-in revision gated on a holder standing (`reviseHeld` 200), which is the column's in part. Lenient; it carries "three places have a level and a rule set again from a share".
+12. `PairFlow` a = Y and `RuleRebuilding` a = Y: by the letter, lenient (M7).
+
+## LESSER
+
+- L1. NOTE section 3, first bullet: after `ContinuingRevision` add "(a renewal act that uses one unit of the fuel and brings a supplied yield into it)".
+- L2. NOTE item 1: name `revised_slot_is_optimal`; say "the start's reserve"; say `Doomed` is "a narrower region, the reserve with the triangle number of those renewing below the fee, never left under any such schedule".
+- L3. NOTE and paragraph, "inside the package": the finding is of the table's 55 places. The note says so under "What it does not show"; the paragraph does not. Put in the paragraph: "in the 55 places of the package that the table has".
+- L4. NOTE "55 places are in the package's core": the readers' field. For 17 of the 55 a reader's record mentions `propext` or the checker's layer; several say generated `injEq` lemmas depend on `propext` ("core by the record's layer, not by the letter").
+- L5. NOTE "What it does not show", second bullet: "a share that grows" is not exact for `PairFlow` (a line's amount) or `RuleRebuilding` (a cohort). Put: "for anything whose number grows by a law of the step".
+- L6. Paragraph: "each cell taken from a statement, not a proof" leaves out that three of the 89 are programs, read from code and stored output.

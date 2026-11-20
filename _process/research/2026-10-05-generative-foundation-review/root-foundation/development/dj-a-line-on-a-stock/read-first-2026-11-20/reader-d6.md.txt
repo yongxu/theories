@@ -1,0 +1,239 @@
+*AI-written (Claude Fable 5.2), by one reader who wrote none of what is read here, 20 November 2026. Read whole: `DRAFT-READING.md`; every file of `dig-2026-11-17/search/refute/` (`d6_model.py`, `d6_analyse.py`, `d6_analyse2.py`, `d6_validate.py`, `d5_giving_back.py`, the three `.txt` outputs, `d6_run.log`); `FROZEN-DIG-DEEPER.md`; the D6 entry and the read lists of the refuting reader's report in `dig-readers.json` (its entries on D1 to D5 not read). Read at the statement, with docstring and what proof scrolled by: the Lean passages listed at the end. Run: a copy of the program, in memory. Not read: any chapter, the market model, the plan, the reads of 18 to 20 November, `dig-readers-2.json`, the dig's `NOTE.md`, `ScratchCovering`'s Lean (its declaration list and the record's telling only). The direction page: head note, "Where we are heading" and "What we are trying next", long paragraphs cut short on my screen.*
+
+# R5 against the program of 17 November and against the Lean's statements
+
+## Verdict
+
+R5's description of the model is right in outline and blurs one thing the record had corrected (taking from the second condition against only requiring it to stand). Its two closing claims do not hold as written: the program's selection is `favours_iff` only at the steps where nothing is short and the giving does nothing, and its endings are of kinds the package does state, one-way, on October's web. The record said both sentences of the guess D6, and the draft moved them to the program.
+
+## What was run
+
+`d6_model.py` was copied to `/Users/ren/theories/tmp/r7/one-model/check/read20/d6_copy.py` (`cmp`: identical). I did not run its `main` (it would write a results file of about 50 MB); I imported the copy's `grid()`, `run()` and `alloc()` from inline `python3 -B` scripts kept in the session's scratchpad, outside the repository. Nothing was written in the study folder, and nothing in `read20/` but the copy and this report. The rerun gives 193,536 runs, 0 undecided, and the class counts of `d6_analysis.txt` (9,837; 3,568; 14,144; 12,255 and the rest). One probe goes beyond the frozen grid and is marked where used: `run()` at 13 by 13 starts for four of the grid's rules.
+
+## 1. The model, and R5 sentence by sentence
+
+The model (`d6_model.py` 5 to 32, 56 to 138). Two counts, `nG` and `nT`. One step:
+
+1. A named source gives `s` to each first condition, whatever its level.
+2. Each unit asks its take of its first condition (`hT`, and `hG = hT + ch` for a giver). A unit not served takes nothing, gives nothing and leaves nothing. A shared first condition that is short is served G first, T first, or in proportion rounded down.
+3. Each served giver gives `b ≤ hG` to its second condition, before or after this step's offspring.
+4. Each served unit asks for `kG` or `kT` offspring. In mode `rival` each offspring takes `r` from the unit's second condition; in mode `thr` offspring are left exactly where that condition stands at 1 or more, and nothing is taken.
+5. The next counts are the offspring.
+
+Balance is asserted at every level at every step. A verdict is an end step, or "for ever" proved by a repeated state.
+
+| R5 says | Against the program | Mark |
+|---|---|---|
+| "A small program of 17 November (D6)" | D6 is the guess; the program is its refuter. | LESSER |
+| "has all four together" | It has units, a cost, a level only givers feed, and a receiver. In 55,296 runs (2 in 7) giving costs the giver nothing (`ch = 0`, `kG = kT`). In a third (`kG = kT = 1`) nothing multiplies. | LESSER |
+| "no law came of it" | True: no Lean was written from it. | holds |
+| "one that gives part of what it took" | True; in 82,944 runs it gives all it took (`b = hG`). | LESSER |
+| "a first condition fed by a named source at every step" | True. The source gives at every level, to each first condition where they are own, and the level has no bound. So the first condition cannot be used up for good; only the second can. | LESSER |
+| "a second condition that offspring need and that only the givers feed" | "Need" hides two models. In two thirds of the runs offspring take from it; in a third they only require it to stand. It starts at 0, 2 or 8 that nobody gave. | MUST (M1) |
+| "own or shared" | Each condition is own or shared (four arrangements), with three orders of access at each shared one and two timings. | LESSER |
+| "193,536 exact runs" | True as a count. 32,256 repeat another run (mode `thr` with a shared second condition never reads `oB`), so 161,280 are distinct. 63,365 end both lines at the first step. | LESSER |
+| "what decided which line is left was who gets back what was given and who is short of what, the order of access included" | This is the record's reading of counts; no analysis of what decided was made. It fits the table below. It leaves out that a line is left alone in only 49,864 runs. | LESSER |
+| "Its part about selection is `favours_iff`" | Not so of the program (section 2). | MUST (M2) |
+| "its part about ending is in no module read" | Not so (section 3). | MUST (M3) |
+
+**M1, words to put instead:** "a second condition that offspring either take from (two thirds of the runs) or only require to stand at one (a third), which nothing but the givers feeds after a start of 0, 2 or 8; each condition own or shared, with an order of access where shared".
+
+Why it changes the meaning. Where offspring take from the second condition, the non-giver is never left alone (0 of 129,024) and goes on for ever only beside the giver (2,072). Where they only require it, the non-giver goes on for ever in 29,427 of 64,512. And once the condition stands (`B0 ≥ 1`), no outcome depends on what is given, on own or shared, or on timing: 0 of 1,536 groups of runs differ.
+
+### Outcomes by arrangement
+
+Distinct runs. "T ends G" counts runs where the giver alone (two units, same numbers) goes on for ever and with the other present it ends, over the runs where it goes on alone.
+
+| Mode | First condition | Second condition | Runs | G on, T ends | Both on | T on, G ends | Both end, G first | Both end, T first | Both end, same step | T ends G |
+|---|---|---|---|---|---|---|---|---|---|---|
+| rival | own | own | 8,064 | 3,360 | 0 | 0 | 492 | 1,727 | 2,485 | 0 / 3,360 |
+| rival | own | shared, G first | 8,064 | 2,760 | 600 | 0 | 520 | 1,786 | 2,398 | 0 / 3,360 |
+| rival | own | shared, T first | 8,064 | 0 | 222 | 0 | 5,519 | 23 | 2,300 | 3,138 / 3,360 |
+| rival | own | shared, in proportion | 8,064 | 219 | 371 | 0 | 2,460 | 197 | 4,817 | 2,770 / 3,360 |
+| rival | shared, G first | own | 8,064 | 3,360 | 0 | 0 | 500 | 1,766 | 2,438 | 0 / 3,360 |
+| rival | shared, T first | own | 8,064 | 1,285 | 0 | 0 | 2,742 | 674 | 3,363 | 2,075 / 3,360 |
+| rival | shared, in proportion | own | 8,064 | 1,832 | 0 | 0 | 752 | 1,027 | 4,453 | 1,528 / 3,360 |
+| rival | shared, G first | shared, G first | 8,064 | 3,204 | 156 | 0 | 498 | 1,869 | 2,337 | 0 / 3,360 |
+| rival | shared, G first | shared, T first | 8,064 | 1,774 | 65 | 0 | 3,138 | 790 | 2,297 | 1,521 / 3,360 |
+| rival | shared, G first | shared, in proportion | 8,064 | 2,004 | 105 | 0 | 1,377 | 971 | 3,607 | 1,251 / 3,360 |
+| rival | shared, T first | shared, G first | 8,064 | 1,282 | 120 | 0 | 2,745 | 1,002 | 2,915 | 1,958 / 3,360 |
+| rival | shared, T first | shared, T first | 8,064 | 0 | 60 | 0 | 5,213 | 0 | 2,791 | 3,300 / 3,360 |
+| rival | shared, T first | shared, in proportion | 8,064 | 134 | 81 | 0 | 3,674 | 119 | 4,056 | 3,145 / 3,360 |
+| rival | shared, in proportion | shared, G first | 8,064 | 1,740 | 112 | 0 | 776 | 1,226 | 4,210 | 1,508 / 3,360 |
+| rival | shared, in proportion | shared, T first | 8,064 | 452 | 60 | 0 | 3,149 | 306 | 4,097 | 2,848 / 3,360 |
+| rival | shared, in proportion | shared, in proportion | 8,064 | 575 | 120 | 0 | 1,476 | 396 | 5,497 | 2,665 / 3,360 |
+| thr | own | own | 4,032 | 480 | 1,920 | 384 | 96 | 152 | 1,000 | 0 / 2,400 |
+| thr | own | shared | 4,032 | 0 | 2,400 | 432 | 120 | 70 | 1,010 | 0 / 2,400 |
+| thr | shared, G first | own | 4,032 | 1,952 | 448 | 328 | 0 | 304 | 1,000 | 0 / 2,400 |
+| thr | shared, T first | own | 4,032 | 309 | 184 | 2,120 | 160 | 78 | 1,181 | 1,907 / 2,400 |
+| thr | shared, in proportion | own | 4,032 | 644 | 312 | 736 | 64 | 150 | 2,126 | 1,444 / 2,400 |
+| thr | shared, G first | shared | 4,032 | 1,840 | 560 | 362 | 0 | 260 | 1,010 | 0 / 2,400 |
+| thr | shared, T first | shared | 4,032 | 0 | 230 | 2,425 | 188 | 0 | 1,189 | 2,170 / 2,400 |
+| thr | shared, in proportion | shared | 4,032 | 385 | 390 | 866 | 68 | 90 | 2,233 | 1,625 / 2,400 |
+
+Before against after, same columns without the last, summed over orders:
+
+| Mode | First, second | Timing | G on, T ends | Both on | T on, G ends | Both end, G first | Both end, T first | Both end, same step |
+|---|---|---|---|---|---|---|---|---|
+| rival | own, own | after | 1,344 | 0 | 0 | 246 | 629 | 1,813 |
+| rival | own, own | before | 2,016 | 0 | 0 | 246 | 1,098 | 672 |
+| rival | own, shared | after | 1,234 | 447 | 0 | 3,619 | 826 | 5,970 |
+| rival | own, shared | before | 1,745 | 746 | 0 | 4,880 | 1,180 | 3,545 |
+| rival | shared, own | after | 2,455 | 0 | 0 | 1,997 | 1,216 | 6,428 |
+| rival | shared, own | before | 4,022 | 0 | 0 | 1,997 | 2,251 | 3,826 |
+| rival | shared, shared | after | 4,471 | 343 | 0 | 10,183 | 2,816 | 18,475 |
+| rival | shared, shared | before | 6,694 | 536 | 0 | 11,863 | 3,863 | 13,332 |
+| thr | own, own | after | 0 | 960 | 192 | 48 | 28 | 788 |
+| thr | own, own | before | 480 | 960 | 192 | 48 | 124 | 212 |
+| thr | own, shared | after | 0 | 960 | 192 | 48 | 28 | 788 |
+| thr | own, shared | before | 0 | 1,440 | 240 | 72 | 42 | 222 |
+| thr | shared, own | after | 890 | 472 | 1,592 | 112 | 140 | 2,842 |
+| thr | shared, own | before | 2,015 | 472 | 1,592 | 112 | 392 | 1,465 |
+| thr | shared, shared | after | 890 | 472 | 1,592 | 112 | 140 | 2,842 |
+| thr | shared, shared | before | 1,335 | 708 | 2,061 | 144 | 210 | 1,590 |
+
+What the table says:
+
+- **The giving line outlasts the other** (the first and fifth columns) in some runs of every arrangement but two: rival with the non-giver served first at both shared conditions, and `thr` with a shared second condition and the non-giver served first at the first. It does so most where its second condition is own or it is served first.
+- **The non-giver ends a giver that would go on alone** only through a condition they share, from which something is taken, at which the giver is not served first. In the eight arrangements with no such condition it never happens (0 of 3,360 or 2,400). In the other sixteen it happens in 1,251 to 3,300 of 3,360 (rival) and 1,444 to 2,170 of 2,400 (thr).
+- **The non-giver goes on after the giver ends** only in mode `thr`. There the second condition, once it stands, is never taken from, and the giver is short at the first condition, by its own cost or by the other being served before it.
+- **Both go on** on a shared second condition (rival: 2,072, the non-giver carried by what the givers give), and in mode `thr` where the second condition stands and neither line is short at the first.
+- **Both end** in 127,996 of the 193,536 runs. In half of these (63,365) both end at the first step and nothing ever starts; in 45,289 of those the second condition starts at 0.
+- With own first and own second conditions the lines do not touch: the giver's verdict equals its verdict alone in every run.
+
+## 2. Is the selection half `favours_iff` or `grouped_rises_iff`?
+
+The statements (`RuleShaping.lean`, with `RuleCapture.lean` 469 to 502):
+
+- `CarrierCounts` is two numbers, the second positive. `select x g` multiplies each kind's count by its number in `g`. `favours g` is `g.other ≤ g.carrier`.
+- `shaped a s p c` (:150) is the rule `⟨a + s + p, a + c + p⟩`, with `a > 0`.
+- `favours_iff` (:160): `favours (shaped a s p c) ↔ c ≤ s`.
+- `nothing_back_falls` (:287): with `s = 0` and `c > 0` the shapers' share falls strictly at every step.
+- `present_along` (:271): carriers present stay present.
+
+In this world every unit of a kind leaves the same positive number at every step, `s`, `p` and `c` are constants of the rule, nothing is ever short, and no line ends.
+
+**What the program's numbers show.** I counted every step at which both lines are present, up to the end or the first proved repeat: 337,176 steps.
+
+- **Nothing short for either line: 90,294 steps.** The step is exactly `select` by `⟨kG, kT⟩`. The givers' share stays in 66,587 (`kG = kT`) and falls in 23,707 (`kG < kT`); it never rises. This is `favours_iff` with `c = kT − kG` and `s = 0`. What is given, to which condition, and the extra take `ch` make no difference to the direction.
+- **Something short: 246,882 steps.** The share moves by which units are served. It goes all three ways in every cell of second condition, `ch` and `kT − kG`. At 196,864 of these steps the step is not a `select` by any rule of that type: units of one line fare differently, or the non-givers leave none.
+- **Only 3,256 runs** have nothing short at every such step, and in all of them both lines go on. Every run in which a line ends has a level short at some step.
+
+**The reading asked for** (cost `ch`, own second condition as `s`, shared as `p`) fails already where nothing is short. With a shared second condition, `ch = 1` and `kG = kT`, `favours_iff` so read says the share falls; in 25,608 such steps it stays. `ch` is a take from the first condition, not fewer offspring; it costs offspring only where that condition is short, and then it costs a unit all of them.
+
+Taking `c = ch + (kT − kG)` and `s = b` where the second condition is own, 0 where shared, the direction is as `favours_iff` gives it in 47,799 of the 90,294 steps with nothing short and 98,148 of the 246,882 others. With a shared second condition and a cost, where `nothing_back_falls` says the share falls at every step, it rises in 30,518 steps, stays in 78,287 and falls in 67,988.
+
+**Smallest cases where the two verdicts differ.**
+
+*The order of access.* Own first conditions, one shared second condition, `s = 1`, `A0 = 0`, `hT = hG = 1`, `b = 1`, `kG = 1`, `kT = 2`, `r = 1`, `B0 = 0`, gift before, start (1, 1). One unit of the second condition is given; one giver's offspring and two of the other's ask for it.
+
+- `RuleShaping`: nothing comes back to the givers alone and they leave one fewer, so their share falls at every step and both stay for ever.
+- Givers served first: the other line ends at step 1 and the giver goes on for ever.
+- The other served first: the giver ends at step 1, the other at step 2.
+- In proportion: both round to nothing and both end at step 1, the unit left standing.
+
+Three verdicts from one rule. The order of access makes what is shared come back to one line alone.
+
+*A line short of its first condition.* Own first and own second conditions, mode `thr`, `s = 1`, `A0 = 0`, `hT = 1`, `ch = 1`, `b = 1`, `kG = kT = 1`, `B0 = 2`, start (1, 1). The reading asked for gives `c = 1 ≤ s = 1`: the givers' share does not fall. In the program the source gives 1, the giver needs 2, is not served, and is gone at step 1; the other goes on for ever. The cost is paid as a need, and a unit short of its need leaves nothing whatever comes back.
+
+**`grouped_rises_iff`** (:663) is not it either; the program's writer said so and I agree after reading `Grouped` (:636). Its shared part is `q` to every member of a group for each shaper in it: it grows with the number who give and is not divided. In the program what is given is one amount divided among those who ask, by order. The statement is one step's inequality over offspring numbers, with no level and no ending.
+
+**M2, words to put instead:** "Where no unit of either line is short of anything (90,294 of the 337,176 steps at which both lines are present), a step of the program is `RuleShaping`'s selection by the two offspring numbers: the givers' share stays where the numbers are equal and falls where givers leave fewer, and what is given and where it lands make no difference (`favours_iff` with nothing coming back). At every other step the share moves by which units are served, that is by the levels and the order of access; no statement read gives its direction. Every run in which a line ends has such a step. The record's 'its selection half is `favours_iff`' was said of the guess D6."
+
+## 3. Is the ending half in the Lean?
+
+The record's sentence is wider than its source. The program's writer wrote that the ending half "is not in RuleShaping", and of one outcome that "the general law of this shape is `Interdependence.lean:165` `unfed_consumption_ends_at`". `FROZEN-DIG-DEEPER.md` (:162) made this "in no module read", and R5 carries that over.
+
+Each law below was read at its statement. "Would give" means: if its premises were met. None is met by the program as it stands, for the reason given.
+
+| Law | Outcome of the table it would give | Why its premises are not met as they stand |
+|---|---|---|
+| `Interdependence.unfed_consumption_ends_at` (:165) | The non-giver on its own second condition ends within that level (all 32,256 rival runs, by step `B0/r + 1`). Also the last stage of "both end, G first": once the giver is gone the other ends within what is left. | A law of a record on the web; a line would have to be read as one formation active while a unit of it is served. |
+| `Flow.joint_excess_ends` (`Continuation.lean` :553), `Exclusion.outrun_ends` (:156), `full_taking_ends` (:232) | "Both end" on a shared second condition: where whatever gives to a condition needs it, and more is taken than given for `n` steps from a level below `n + m`, all who need it at `m` are inactive from then on, takers included. | Its gate holds of the second condition and fails of the first (the source needs nothing). Its need is a standing at the start of a step; with the gift before, a giver's offspring are served from a level that stood at 0. |
+| `Exclusion.continuing_excludes` (:246) | "G on, T ends" where the giver is served first on a shared second condition and takes all that is given: no other takes alongside it for long. | The same gate and the same reading of need. |
+| `Exclusion.level_kept` (:300), `supported_of_within` (:339) | "Both on": taking jointly within what is given at every step, the level never falls and all stay supported. | It asks that formations depend on that one condition alone; the units need two. |
+| `LineOnAStock.line_ends` (:904), `way_ends` (:928) | A line whose offspring take more than it ends. Agrees with the table for the non-giver on an unfed second condition with `kT = 2`. | For a first condition, `nothing` (`g 0 = 0`) and `keeps` fail: the source gives at level nothing and the level has no bound. The table then has the opposite: a line with two offspring goes on for ever in 16,768 runs (giver) and 20,316 (other). |
+| `LineOnAStock.unending_iff_holds` (:1239) | The "exactly where" for a line with one offspring each, alone on one level that regrows from what is left of itself. No outcome of the table. | Neither condition is such a level: the first is fed at every level from outside, the second by the units. |
+| `RegimeMargin.Coupled` and `Indexed`: `ends_after` (:2173), `ends_of_partner` (:2193), `ends_together` (:2219) | A level whose giving depends on another's being left is used up after it. The same content as unfed consumption, said of levels. | Constant draws and no units; the program's draws are counts times takes. |
+| `RegimeMargin.Indexed.ends_iff_below` (:2687), `fates` (:2716) | A boundary that is a threshold in a starting level, not rising as the other levels rise. | Asks that each giving rise with what is left of all, so the step keeps the order of states. The lines compete, and the table is not monotone in starting levels (section 5). |
+| `RegimeMargin.Indexed.ends_iff_within` (:2913) | For any law of states whose run stays within a bound, whether a level ends is a finite check. This is the program's "for ever" test in law form. | Holds only where no level grows without bound; an untaken first condition does. |
+| `RelationalRenewal.dependent_overdraw_ends_itself` (:438), with `overdraw_consuming` (:421) | "Both end, G first": a drawer that needs the level and draws above renewal ends the renewer's support and then itself. | A fixed cast with a supplied draw that may exceed what is there. `over` asks a draw above renewal at every later step; a line served only from what stands cannot keep that once the stock is gone. Its renewer adds from nothing. |
+| `RelationalRenewal.independent_overdraw_persists` (:503) | "T on, G ends": a drawer that needs nothing of the level goes on while the other loses it for good. | No unit of the program draws on a condition it does not need. Where anything is taken from the second condition the outcome never occurs (0 of 129,024). In mode `thr` it occurs by another way: the non-giver overdraws nothing and the giver is short at the first condition. |
+
+**What none gives, in what was read:**
+
+- Which of two lines at one shared condition is cut short. A grep of `Becoming/*.lean` for "priority", "served first", "order of access" and "rationed" finds only "priority" in another sense (`Acceptance`, `Direction`, `FrontierFrames`). This misses an order said in other words.
+- The giver left alone because it is served first at a shared second condition.
+- The course in two stages as one statement for units that multiply: the non-giver ends the giver, then ends.
+- The exact region where the giver alone goes on, which the writer reports as `s ≥ hG`, `b ≥ r` and a first offspring possible (6,720 runs yes, every other equal-start run no). It is `b ≥ r` and not `b ≥ kG · r`.
+
+**The structural difference under all of this.** In the program shortage is rationing: the units that are short leave nothing and the rest go on. In `LineOnAStock` every unit whose need the level reaches is met, however many they are, and an overdraw leaves nothing for anyone. In `RelationalRenewal` the draw can exceed what is there. So a line that multiplies settles at the size its source carries in the program, where those laws' conclusion is an ending.
+
+**M3, words to put instead:** "Its endings are of kinds the package states one-way on October's web, each for a record and none for units whose number is an outcome of the step: a line taking from a condition nothing feeds ends within its level (`Interdependence.unfed_consumption_ends_at`); where those who give to a condition need it and more is taken than given for long enough, all who need it end, the takers included (`Flow.joint_excess_ends`, `Exclusion.outrun_ends`); taking jointly within what is given keeps all (`Exclusion.supported_of_within`). Not found: which line is cut short at a shared condition, and going on against ending as one 'exactly where' for lines that multiply. The line's and `RelationalRenewal`'s laws are of another step; their premises are not met."
+
+## 4. Does the program's model meet `Dissipative`?
+
+No. It meets the weaker thing the scratch proof lacked, and not the package's premise.
+
+- `Flow.DissipatesOn` (`Dissipation.lean` :242) asks of every formation taking part that what it gives the family, with one more if it takes, is at most what it takes. `Dissipative` (:248) asks this of every closed family at every step.
+- **The units.** A giver gives `b ≤ hG` out of what it took, and the grid drops `b > hG`. That is "no more than it takes", which `ScratchCovering`'s `give` was not (a number added to the level, tied to nothing taken). It is not "less when it takes" in the 82,944 runs with `b = hG`, unless the offspring's takes are counted as the unit's. The step itself does not check `b ≤ hG`; only `grid()` does.
+- **The source.** It is named, and the balance asserted at every step includes it. It gives `s ≥ 1` at every step and takes nothing. Read as a formation taking part, it fails `DissipatesOn` on the family of all conditions at every step. So the flow balances with the giver named and is not dissipative: the layer of `Growing.growing` (`Flow.lean` :784).
+- **What follows.** Under balance and dissipation with finitely many conditions, no taking recurs (`Dissipative.finite_taking_not_recurring`, :461). The program has 65,540 runs with a line going on for ever. Its goings-on are of the kind R1 describes: something a flow from beyond passes through, the beyond written as a formation that gives without taking.
+
+LESSER for the draft: R5 and R7 say "a source that is said". Add that it is said and gives from nothing, so R1's bound does not bear on the program's runs.
+
+## 5. Is the shape "two ways with a boundary between" in the table?
+
+Both sets are there. A boundary that is a threshold in one thing is not shown by the stored outputs.
+
+**In the stored outputs.** Call a rule everything but the start and the two starting levels: 6,720 distinct rules, each run from four starts and six pairs of levels. For 1,447 of them some start has the giver going on and another has the non-giver outlasting it and then ending. All are in mode rival.
+
+- *By the start's counts*, levels fixed: 2,694 of 40,320 rules-with-levels have both. The commonest pattern is the giver going on from (3, 1) and the other taking over from (1, 3). `d6_validate.txt` shows the same for a shared second condition, rival, with no priority: from (3, 1) the giver outlasts in 1,356 runs and the other in 567; from (1, 3), 29 and 1,773.
+- *By the second condition's starting level*, all else fixed: 1,782 rules have both. Raising it moves the giver from going on to being ended in 1,264, the other way in 517, and neither in 1.
+- *By the first condition's starting level*: raising it from 0 to 6 ends the giver in 1,125 and saves it in 1,338.
+
+So in the starting levels the boundary runs both ways across rules. Four starts cannot show a threshold's form.
+
+**In the probe** (outside the frozen grid; four rules with shared conditions, proportional access, rival, and a cost; `nG`, `nT` from 0 to 12). In all four the starts fall into three regions: the giver goes on and the other ends; both end at the same step; the other outlasts the giver and then ends. The giver's region is kept when `nG` rises and when `nT` falls. For `s = 2`, `A0 = 0`, `hT = hG = 1`, `b = 1`, `kG = 1`, `kT = 2`, `r = 1`, `B0 = 2`, gift before, the boundary is exact:
+
+- `nG > nT`: the giver goes on, the other ends.
+- `nG = nT`: both end at the same step.
+- `nG < nT`: the other outlasts the giver, then ends.
+
+It is a threshold in which line is the more numerous at the start. Its mechanism in that rule is rounding. The first condition has 2 for `nG + nT` askers; where they are more than two, shares in proportion, rounded down, give the larger line one unit and the smaller none, at the first step. The smaller line is cut off before anything is given or used up. That is not the direction's boundary, where what sustains the selection runs down and makes a difference or does not.
+
+**How to see it properly.** For a handful of rules, sweep `nG`, `nT` and both starting levels. Check whether the giver's region is kept as each rises or falls. Then separate rounding from the rule: scale counts, `s` and levels by a common factor, and change the order of access. A boundary that stays when scaled, and that moves with the second condition's level, would be of the direction's kind. I did not do this.
+
+MUST (M4) for R7's "R5 (all of it in a program)", since "all of it" includes "the two outcomes with the boundary between". **Words to put instead:** "R5 (in a program: both outcomes among its runs for 1,447 of its 6,720 rules, with four starts and six pairs of starting levels a rule, so no boundary was drawn; its source gives from nothing)".
+
+## Findings
+
+- **M1 (MUST).** "A second condition that offspring need" hides taking against only requiring, which the record had corrected and which reverses whether the non-giver can be left alone (0 of 129,024 against 29,427 of 64,512).
+- **M2 (MUST).** "Its part about selection is `favours_iff`" holds only at the 90,294 of 337,176 both-present steps where nothing is short, with nothing coming back; there giving makes no difference. The record said it of the guess.
+- **M3 (MUST).** "Its part about ending is in no module read" is wider than the writer's report and not so: unfed consumption, joint excess under a gate, and joint taking within what is given are stated on the web. What was not found is which line is cut short, and an "exactly where" for lines that multiply.
+- **M4 (MUST).** R7's "R5 (all of it in a program)": the stored outputs have both outcomes and no boundary.
+- **L1 (LESSER).** 32,256 of the 193,536 runs repeat another; 63,365 end both lines at the first step; a line is left alone in 49,864.
+- **L2 (LESSER).** The source is named and gives from nothing: balanced, not `Dissipative`. 82,944 runs have units that give all they took.
+- **L3 (LESSER).** In 2 of 7 runs giving has no cost; in a third nothing multiplies.
+- **L4 (LESSER).** The first condition cannot be used up for good (fed at every level); only the second can. `LineOnAStock`'s `FromNothing` excludes such a source, so no law of the line can take the program's first condition.
+- **L5 (LESSER).** `RegimeMargin.Indexed.ends_iff_within` (:2913) is the law form of the program's "for ever" test where levels stay bounded; the record does not note it.
+- **L6 (LESSER).** "(D6)" names the guess, not the program.
+
+## What was read in the Lean
+
+`B/` is `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/`.
+
+- `RuleShaping.lean` 138 to 312, 420 to 470, 560 to 725; its declaration list.
+- `RuleCapture.lean` 465 to 505.
+- `LineOnAStock.lean` 125 to 210, 598 to 692, 782 to 943, 1225 to 1300; its declaration list.
+- `RegimeMargin.lean` 240 to 280, 2060 to 2135, 2160 to 2224, 2450 to 2460, 2676 to 2748, 2810 to 2875 in parts, 2905 to 2925, 2980 to 3035, 3355 to 3405, 3521 to 3551; its declaration list from 1950.
+- `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/deeper/RelationalRenewal.lean` 1 to 44, 100 to 137, 228 to 512.
+- `Dissipation.lean` 225 to 262, 440 to 470, 1360 to 1375. `Flow.lean` 268 to 325, 770 to 792.
+- `Interdependence.lean` 158 to 177. `Continuation.lean` 205 to 262, 531 to 563. `Admission.lean` 580 to 606.
+- `Exclusion.lean` 1 to 60 (its opening account, which is commentary), 108 to 118, 150 to 270, 296 to 304, 334 to 348.
+
+No proof was checked and nothing was built.
+
+## Mine, not asked for
+
+The web already sets all kept against all ended for givers who need what they give to (`Exclusion.supported_of_within` against `outrun_ends`, with three built courses of the same members in `Exclusion`); I would read that module whole, and what stands between its two laws, before modelling anything. And before any Lean on the program, I would sweep the starts for a few rules with the copy and separate the boundary that whole-unit rounding makes from one that the second condition's level makes.
