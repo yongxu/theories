@@ -1,0 +1,261 @@
+# What the Lean states of things kept by goings-on: the places where a source is said under dissipation
+
+*AI-written (Claude Fable, a reader with the label source-said, launched by board row DJ's workflow), 20 November 2026, 20:32 WIB. A read: no statement, model or next step is proposed, no Lean was written or built, no test was run. The questions and guesses are those of `FROZEN-THE-READ.md` in this folder, which was read first and whole and not edited. Level, giving, source, keeper, family are working names.*
+
+Package: `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/`. Line numbers are of the files as they stood at the time above.
+
+## What was read, and what was not
+
+Read whole, statements, docstrings and (because the file was read through) proofs on the page:
+
+- `Dissipation.lean` 1 to 1392.
+- `Continuation.lean` 1 to 1135.
+- `Gain.lean` 1 to 381.
+- `Roles.lean` 1 to 1595.
+- `Entropy.lean` 1 to 897 and 1044 to 2247. **Not read:** 898 to 1043 (the lists of configurations, `mem_joinMap` to `distinct_configurationsWithin`), seen only as a list of declaration names.
+
+Read in part, to find what the five files use:
+
+- `World.lean` 40 to 112 (`Dependence`, `Web`, `Flow`, `World`); `Dependence.lean` 120 to 175 (`Supported`, `Dependent`, `Renewed`, `Consumed`, `RenewingIn`); `Flow.lean` 269 to 340, 388 to 396, 560 to 600, 665 to 685, 1005 to 1030 and names at 451 to 519; `Arising.lean` 93 to 134; `Change.lean` 479 to 485; `Imbalance.lean` 45 to 70; `Witnesses.lean` 69 to 103; `Locality.lean` 432 to 450; `InAmounts.lean` 300 to 340; `Space.lean` 185 to 200.
+- Met while reading, not in this group: `Exclusion.lean` 294 to 345; `Feeding.lean` 4 to 73, 333 to 358, 660 to 672; `Reserve.lean` 4 to 73; `RenewalFlow.lean` 3 to 41; `Clearing.lean` 160 to 172; `LabelledRoles.lean` at two names (50, 61).
+- The table of 20 November: the cells of four rows of `two-ways-table.json` ("Dissipation with Continuation.fed_from_beyond", "Continuation … with Exclusion", "Roles … with Gain", "Entropy (Passing, Shuttle)"). `TABLE.md`, `NOTE.md` and the other rows were not read.
+
+Where a proof was used to answer: only at `Web.changes_persist` (Entropy 1334), whose proof shows it is `merges_of_settles` (1318) contraposed. Every other answer is from a statement, a definition or a docstring.
+
+Every "not found" below means: not found in the line ranges just listed.
+
+## The frame all five places share (it answers part of questions 1 and 4 for each)
+
+- `Flow F C` (`World.lean` 61) is three supplied fields: `present : Nat → List F`, `take : Nat → F → C → Nat`, `give : Nat → F → C → Nat`. What each formation takes and gives at each step is a function of the step and the formation, handed in. It is not a function of the levels.
+- `Web F C` (`World.lean` 57, an abbreviation of `Dependence Nat F C`, 48) is five supplied fields of the step: `level`, `active`, `requires`, `need`, `draws`.
+- `Flow.Balances` (`Flow.lean` 278): `∀ t c, W.level (t + 1) c + L.taken t c = W.level t c + L.given t c`. Under it a level changes only by what the formations taking part take and give. So a level's rise is some formation's giving (`BalancesOn.rise_given`, `Flow.lean` 476, used at Dissipation 372): in this frame a level is not "a function handed in" in the sense of the coupled levels; it is what named formations give and take, where those amounts are a supplied table.
+- `Web.Dependent` (`Dependence.lean` 138): `∀ t f, W.active t f → W.Supported t f`. One direction only. No statement in what was read makes a supported formation active. `Flow.Acting` (`Flow.lean` 292): only active formations give. So what is derived is the negative half: an unsupported formation is not active and so gives nothing (`Flow.given_zero_below`, Continuation 457). The positive half, that a supported formation is active or gives, is nowhere a conclusion.
+
+This is why, in all five places, a general law can conclude that a going-on stops, or what a going-on needs, and a going-on that continues is either a premise or a built course.
+
+---
+
+## Place 1. `Dissipation.lean`
+
+**1. What is rested on, and is its being there the doing of a going-on in the model?**
+A finite family of conditions `cs` and its stock (`Web.stock`, `Arising.lean` 126), which formations take from (`Flow.takers`, `Flow.lean` 314). The general laws are of taking; `requires` enters only in the built `Rooted.web` (1040: each grower requires the pool at need one while active) and through `Taking` in `Flow.rise_exchange` (827). Under balance a member rises only as a formation gives to it (`BalancesOn.rise_lowers` 370 uses `rise_given`), so what is taken from is kept by formations of the model, by their supplied `give`. In the built courses the giver is a source: `Frontier.flow` (890: "the source burns the `t`th fuel, `t + 1` units, and gives the pool `t`"), `Lone.flow` (1154: burns two, gives one). The fuels are there by definition of the web (`Frontier.web` 905: the `n`th fuel "holds `n + 1` units until it burns"); nothing gives to a fuel.
+
+**2. From where does what is given come, and what does giving cost the giver?**
+From what the giver took. `Flow.DissipatesOn` (242): for every formation taking part, `total cs (L.give t f) + sign (total cs (L.take t f)) ≤ total cs (L.take t f)`: "gives the family no more than it takes from it, and less when it takes". `Flow.Dissipative` (248): `∀ cs t, Distinct cs → L.ClosedAt cs t → L.DissipatesOn cs t`.
+- `Flow.Dissipative.gives_less` (309), a general law. Premises: `dissipative : L.Dissipative`, `distinct : Distinct cs`, `closed : L.ClosedAt cs t`, `present : f ∈ L.present t`, `gives : 0 < L.give t f c`. Conclusion: `total cs (L.give t f) < total cs (L.take t f)`.
+- `Flow.Dissipative.giving_needs_uptake` (316), a general law. Premises: `dissipative`, `enclosed : L.Enclosed t`, `present`, `gives : 0 < L.give t f c`. Conclusion: `∃ d, 0 < L.take t f d`.
+The cost is stated, as a fall of the family's stock, not of a level of the giver: `Flow.BalancesOn.runs_down` (327; premises `balances : L.BalancesOn W cs t`, `dissipates : L.DissipatesOn cs t`; conclusion `W.stock cs (t + 1) + L.takers cs t ≤ W.stock cs t`). A formation of `Flow F C` has no standing of its own to lose (that appears only in `Roles`). In the built courses the source "requires nothing" (`Frontier.web` 912 `requires _ _ _ := False`; `Rooted.web` 1050; `Lone.web` 1172) and takes from a fuel that is fresh at each step. The docstring: "That a given quantity dissipates, and that the exchange at a step lies within finitely many conditions, are physical premises, not theorems" (101 to 102).
+
+**3. Is there a loop?**
+Not under dissipation. The general laws exclude a closed finite loop: `Flow.Dissipative.opens` (452) and `finite_taking_not_recurring` (461). In `Frontier`, `Rooted` and `Lone` the giver rests on nothing the takers give: growers and the eater give nothing (890, 1154), the source takes only fuel. The docstring names the loop as what dissipation removes: "Without dissipation a finite family can stay closed: the cycle of `Becoming.Flow` gives back what it takes (`Cycle.closed_more`)" (92 to 93), and `witnesses_not_dissipative` (1369) proves that six built flows in which taking recurs are not dissipative.
+
+**4. General laws that conclude going on without end.**
+None found. What the file's general laws conclude:
+- Endings. `Flow.taking_not_recurring_from` (415): premises `balances : ∀ t, T ≤ t → L.BalancesOn W cs t`, `dissipates : ∀ t, T ≤ t → L.DissipatesOn cs t`; conclusion `¬ ∀ N, ∃ t, N ≤ t ∧ 0 < L.takers cs t`. (No `Distinct`, no closure: dissipated-on is itself the premise.) `Flow.Dissipative.finite_taking_not_recurring` (461): premises `balances : L.Balances W`, `dissipative : L.Dissipative`, `distinct : Distinct all`, `every : ∀ c, c ∈ all`, any `cs`; same conclusion. Also `rising_not_recurring_from` (618), `standing_not_recurring_from` (631), `rising_not_recurring` (699), `standing_not_recurring` (708).
+- Necessary conditions. `Flow.Dissipative.opens` (452): premises `balances : L.Balances W`, `dissipative : L.Dissipative`, `distinct : Distinct ds`, `within : ∀ c, c ∈ cs → c ∈ ds`, `recurs : ∀ N, ∃ t, N ≤ t ∧ 0 < L.takers cs t`, any `T`; conclusion `¬ ∀ t, T ≤ t → L.ClosedAt ds t`. `Flow.taking_draws_in` (587): premises `balances`, `dissipative`, `distinct : Distinct ds`, `around : ∀ t, T₀ ≤ t → L.Around ds t`, `recurs : ∀ N, ∃ t, N ≤ t ∧ 0 < L.takers ds t`, any `N`; conclusion `¬ ∀ t, N ≤ t → L.Inward ds t`. Both conclusions are a refuted "from some step on, never"; neither is stated as "at some later step there is".
+- Re-readings whose premise is already a going-on: `More.takers_recur` (469: `L.More cs` gives taking at arbitrarily late steps), `takers_recur_of_arising` (476).
+Going on stands in built examples: `Frontier.more` (979, `flow.More [.pool]`), `Frontier.draws_in` (1018), `Rooted.rooted` (1127, with `web.Unceasing`), `Lone.lone` (1208, one taker at every step, nothing arises, not more without end), `Lone.draws_in` (1242), and `Spray.spray` (1334, no step enclosed, dissipation holding vacuously, a renewer giving while taking nothing). The docstring words it as consistency: "The premises are consistent with more without end" (81).
+No statement in the file is an iff (searched for `↔`: none).
+
+**5. What ends it, and who bears that?**
+Closure with dissipation (415, 461). The loss is the family's: `runs_down` (327), `Balances.takers_within` (406: takers over any later stretch number at most the stock), `Balances.falls_of_taking` (789: a formation taking makes some member fall). `Flow.rise_with_fall` (803; premises `balances : L.Balances W`, `dissipates : L.DissipatesOn ds t`, `mem : c ∈ ds`, `rises : W.Rises t c`; conclusion `∃ d, d ∈ ds ∧ d ≠ c ∧ W.Falls t d`) says another member than the one rising falls. That is of conditions. No statement that a formation which did not take ends was found; the docstring says "The fall is a lowering, not a ceasing: the member that falls may still stand" (78 to 79).
+
+**6. Does anything multiply, or get selected?**
+`Flow.More` (premise of `More.opens` 486) and `ArisesTaking` (premise of `opens_of_arising` 492) are premises. In `Frontier` one grower arises at each step by construction (`growers` 884). Nothing is selected: source and growers stand side by side in one built flow. Not found: any statement comparing those that give with those that do not.
+
+---
+
+## Place 2. `Continuation.lean`
+
+**1. What is rested on, and is its being there the doing of a going-on in the model?**
+Three things in this file.
+- A family fed across its edge. `Flow.Conveys` (117): `∃ f, f ∈ L.present t ∧ 0 < L.take t f c ∧ 0 < L.give t f d`. `Flow.FedFromBeyond` (122): `∃ c d, ¬ c ∈ ds ∧ d ∈ ds ∧ L.Conveys t c d`. So being fed is a formation of the model taking outside and giving inside, at one step.
+- A condition whose givers depend on it (the gate), section "Renewal that depends on what it renews" (372 on). The premise `gated : ∀ t f, f ∈ L.present t → 0 < L.give t f c → W.requires t f c ∧ m ≤ W.need t f c` (`stays_below` 468, `joint_excess_ends` 553) says what keeps the level rests on the level.
+- `Flow.FedBy` (1128), a definition: `e.2 = e'.2 ∧ ∃ c, W.requires e.2 e.1 c ∧ e'.1 ∈ L.present e'.2 ∧ 0 < L.give e'.2 e'.1 c`: "The continuation of `e`'s formation is fed by `e'`: at their common step, `e'`'s formation takes part and gives to a condition `e`'s formation requires." No theorem in this file uses it; it is used in `Feeding`, `Interdependence`, `OverExchange`, `Weightings`, `Standpoints`, `Clearing`, `BoundedSignificance` (by a search for the name; those statements were not read, except two in `Feeding`).
+In `Coupled` (733 to 869), a built example: `Coupled.flow` (760) has the taker take one unit from the patch and the renewer take one from the neighbour and give one to the patch; `Coupled.web` (776) has the renewer require the neighbour and the taker the patch. The patch is kept by a formation of the model that draws on a neighbour nothing gives to.
+
+**2. From where does what is given come, and what does giving cost the giver?**
+- In the conveying section the source is "beyond the family" and the cost is the family's under dissipation: `Flow.conveyed_loses` (208; premises `balances : ∀ t, S ≤ t → t < S + N → L.BalancesOn W ds t`, `dissipates : ∀ t, S ≤ t → t < S + N → L.DissipatesOn ds t`, `conveyed : ∀ t, S ≤ t → t < S + N → ∃ c d, c ∈ ds ∧ L.Conveys t c d`; conclusion `W.stock ds (S + N) + N ≤ W.stock ds S ∧ N ≤ W.stock ds S`).
+- In the joint and gated sections the giver is named and what it gives out of is not said. `WithinJoint` (234) is `L.taken t c ≤ L.given t c`; `given` is a premise's amount. The built renewers give from nothing: `Witnesses.relay` (`Witnesses.lean` 80: "the renewer gives `gives` units and takes nothing"), used by `Exceeding.flow` (680) and `Alone.flow` (874); `Downstream.flow` (926: the self takes nothing and gives the output one unit); `Mortal.flow` (1009).
+- `Coupled.flow` (760): the renewer gives what it took from the neighbour, one for one; the cost falls on the neighbour's level (`web` 779: two, then one, then nothing).
+- `Lone` (609 to 639), a built example: `Lone.fed` (614), the pool is fed from beyond at every step, the source conveying from the step's fuel; `Lone.fed_not_recurring` (633): `flow.Balances web ∧ flow.Dissipative ∧ (∀ t, flow.FedFromBeyond [.pool] t) ∧ ∀ n t, n < t → ∀ d, ¬ flow.Conveys t (.fuel n) d`. The docstring: "Being fed is needed; no condition it is fed from need recur … The one formation conveying, the source, is the same at every step" (26 to 29), and "The source of `Clearing`, like that of `Lone`, requires nothing" (86).
+No cost to a giver is in a statement of this file.
+
+**3. Is there a loop?**
+Yes, as a premise, and the law about it is an ending. The gate is the loop: whatever gives to the condition depends on it. `Flow.stays_below` (468; premises `balances : L.Balances W`, `acting : L.Acting W`, `dependent : W.Dependent`, `gated` as above, `below : W.level T c < m`; conclusion `∀ n, W.level (T + n) c < m`): "Once below `m`, always below `m`". The coupled form puts the gate on a family: `family_stays_below_at` (395), `family_excess_ends` (573).
+In `Coupled`, read as a pair, the renewer depends on the neighbour (`Coupled.gated` 843) and nothing gives to the neighbour: the keeper rests on something beyond what it keeps, and that runs out (`Coupled.all_end` 861, a built example).
+In `Alone` (871 to 901), a built example, every member requires the condition at need one, the renewer included (`web` 882), and the renewer gives two while the taker takes two: a keeper resting on what it keeps, going on by stipulation (`active` 878) and giving from nothing.
+In `Downstream.one_way` (981), a built example, no loop: "The derived extent runs one way."
+
+**4. General laws that conclude going on without end.**
+None found in this file. The nearest:
+- `Flow.joint_keeps` (248), a general law of one step. Premises: `balances : L.Balances W`, `within : L.WithinJoint t c`. Conclusion: `W.level t c ≤ W.level (t + 1) c`. It is not iterated in this file (it is in `Exclusion.lean` 300, under "other places").
+- `Flow.restores` (364), a general law of a finite stretch. Premises: `balances : L.Balances W`, `netGive : ∀ k, k < m - W.level T c → W.level T c ≤ W.level (T + k) c → L.taken (T + k) c < L.given (T + k) c`. Conclusion: `m ≤ W.level (T + (m - W.level T c)) c`. The net giving is a premise.
+- `Flow.fed_from_beyond` (180), a necessary condition. Premises: `[DecidableEq C]`, `balances : L.Balances W`, `dissipative : L.Dissipative`, `distinct : Distinct ds`, `around : ∀ t, T₀ ≤ t → L.Around ds t`, `recurs : ∀ N, ∃ t, N ≤ t ∧ 0 < L.takers ds t`, any `N`. Conclusion: `¬ ∀ t, N ≤ t → ¬ L.FedFromBeyond ds t`. With `rising_fed_from_beyond` (188) and `Web.embodiedArising_fed_from_beyond` (598).
+Going on is built: `Alone.all_continue` (896), `Mortal.without_continues` (1101), `Lone.fed` (614). The docstring on the witnesses: "The endings in these witnesses are stipulated in their activity; each witness shows its ending consistent with balance, support and dependence, and the general theorems are where an ending is derived" (84 to 86).
+What is handed in that would have to be someone's doing: that at each step what is given covers what is taken (`WithinJoint`), that someone gives net (`netGive`), and, in the gate, who the givers are.
+
+**Exact two-sided statements in this file.** One: `Flow.inward_iff_not_fed` (145), `[DecidableEq C]`: `L.Inward ds t ↔ ¬ L.FedFromBeyond ds t`. It is of two readings of one step, not of going on against ending. At one step the two joint laws rest on premises that are exact complements (`WithinJoint` is `taken ≤ given`; the premise of `excess_lowers` 272 is `given < taken`), so with balance a level falls across a step exactly where there is joint excess, by `joint_keeps_at` (241) and `excess_lowers_at` (267) together; the file does not state this as an iff, and over runs the two laws (`excess_bounded` 319, `joint_excess_ends` 553 against `joint_keeps`) do not meet.
+
+**5. What ends it, and who bears that?**
+Joint excess with the gate. `Flow.joint_excess_ends` (553; premises `balances : L.Balances W`, `acting : L.Acting W`, `dependent : W.Dependent`, `gated`, `excess : ∀ k, k < n → L.given (T + k) c < L.taken (T + k) c`, `start : W.level T c < n + m`; conclusion `∀ k g, W.requires (T + n + k) g c → m ≤ W.need (T + n + k) g c → ¬ W.active (T + n + k) g`): every formation depending on the condition at such a need, "the takers included". `Flow.family_excess_ends` (573; premises `balances`, `acting`, `dependent`, `gated : ∀ t f, f ∈ L.present t → ∀ d, d ∈ ds → 0 < L.give t f d → ∃ e, e ∈ ds ∧ W.requires t f e ∧ m ≤ W.need t f e`, `excess : ∀ k, k < n → L.replenishment ds (T + k) < L.uptake ds (T + k)`, `start : W.stock ds T < n + m`; conclusion `∀ k g e, e ∈ ds → W.requires (T + n + k) g e → m ≤ W.need (T + n + k) g e → ¬ W.active (T + n + k) g`). Its conclusion is of every formation depending on any member, with no premise that it took; the docstring: "a member read alone can be renewed within what is taken from it while its renewer draws the family down through another member". So the law lets the ending fall on one that took nothing, without saying so as a statement about cause.
+Built: `Mortal.after_its_end` (1064) with `Mortal.without_continues` (1101): the successor ends after the mortal formation has ended, and continues in the flow without it. `Downstream.one_way` (981): the one living on what the self gives ends when it stops giving. The docstring names `Clearing.undermines_within_renewal` (79 to 83; stated in `Clearing.lean` 172): a clearer supported at every step draws down the habitat of a dweller, which ends.
+
+**6. Does anything multiply, or get selected?**
+No. Two takers end all (`Exceeding.all_end` 726), one continues (`Alone.all_continue` 896): two built flows with the same renewer, not a selection. Not found: number growing, or a comparison of those that pass on with those that do not.
+
+---
+
+## Place 3. `Gain.lean`
+
+**1. What is rested on, and is its being there the doing of a going-on in the model?**
+A family's stock, which formations require (`Web.RequiresWithin` 179, `Web.FirstSupported` 192). Its rising is always someone's giving:
+- `Flow.rise_netGiver` (229), a general law with one premise: `rise : W.stock cs t < W.stock cs (t + 1)`. Conclusion: `∃ f, (L.withImbalance W).NetGiver cs t f`. "No premise: with the rest counted every flow balances".
+- `Flow.rise_given` (262), same premise. Conclusion: `(L.withImbalance W).NetGiver cs t none ∨ ∃ g, L.NetGiver cs t g`: the rest, or a formation of the flow.
+`NetGiver` (220): `f ∈ L.present t ∧ total cs (L.take t f) < total cs (L.give t f)`. The rest is the relatum `none` of `Flow.withImbalance` (`Imbalance.lean` 55), defined from the levels: it gives each condition what its level rose beyond what the flow gave it net. So the giver is either a formation whose giving is supplied, or the rest, which is whatever the listing leaves out: "The rest counts what the listed relata do not, so a finite whole new without end is one whose listing leaves out what gives to it" (52 to 53).
+
+**2. From where does what is given come, and what does giving cost the giver?**
+From beyond the family, in one of two ways.
+- `Flow.rise_from_rest_or_open` (279). Premises: `gainless : L.Gainless`, `distinct : Distinct cs`, `rise : W.stock cs t < W.stock cs (t + 1)`. Conclusion: `(L.withImbalance W).NetGiver cs t none ∨ ¬ L.ClosedAt cs t`.
+- `Flow.whole_rise_from_rest` (290). Premises: `every : ∀ c, c ∈ all`, `distinct : Distinct all`, `gainless : L.Gainless`, `rise : W.stock all t < W.stock all (t + 1)`. Conclusion: `(L.withImbalance W).NetGiver all t none`.
+No cost of giving is in a statement of this file. The docstring says what is not derived: "whether an actual part is open, which relatum the rest is in an actual unfolding, and whether its exchange is without end" (57 to 58).
+
+**3. Is there a loop?**
+The file states what a closed whole can do: return. `Flow.whole_bounded_of_rest_idle` (299), `whole_recurs_of_rest_idle` (312; premises `every`, `distinct`, `gainless`, `idle : ∀ t, T ≤ t → ¬ (L.withImbalance W).NetGiver all t none`; conclusion: from every step on the configuration takes one value at two steps, and where exchange recurs the configuration does not carry the count of its exchanges), `whole_not_new_of_rest_idle` (322). "For a finite whole there is no boundary to cross, and with the rest idle the whole recurs: unceasing arising within a bounded whole is return, not novelty without end" (48 to 49). Nothing here says a keeper rests on what it keeps.
+
+**4. General laws that conclude going on without end.**
+None found. The laws whose conclusion is "at arbitrarily late steps" take a going-on as premise and state what it needs:
+- `Web.rises_late_of_newly_supported` (205). Premises: `increasing : ∀ i j, i < j → at_ i < at_ j`, `from_ : ∀ n, T ≤ at_ n`, `req : ∀ n, W.RequiresWithin cs (f n)`, `first : ∀ n, W.FirstSupported T (at_ n) (f n)`, any `M`. Conclusion: `∃ t, M ≤ t ∧ W.stock cs t < W.stock cs (t + 1)`.
+- `Web.rises_late_of_new` (109), `rises_late_of_firsts` (160), `Flow.new_from_rest_or_open` (332), `new_beyond_every` (341), `newly_supported_from_rest_or_open` (351): the same shape.
+`whole_recurs_of_rest_idle` (312) concludes recurrence of a configuration, which a whole at rest also has. `Flow.counting_given_by_rest` (372) is a built example (`Web.counting`, nothing taking part, the rest giving one unit at every step).
+The one iff, `Flow.rest_netGiver_iff` (249), says when the rest gives net; it is a reading of the levels, not of going on against ending.
+
+**5. What ends it, and who bears that?**
+Not found: the file has no ending and no bearer. Its negative is `whole_not_new_of_rest_idle` (322): a finite whole under the first law with the rest idle is not new at every step.
+
+**6. Does anything multiply, or get selected?**
+Formations "first supported at steps without end" are a premise of 205. Nothing is counted or selected. Not found.
+
+---
+
+## Place 4. `Roles.lean`
+
+**1. What is rested on, and is its being there the doing of a going-on in the model?**
+Here what is rested on can be a going-on. `Web.Embodied` (414): `∀ t, W.active t x ↔ 0 < W.level t x`: "what it is to the others is its own activity". `Web.SelfBearing` (419).
+- `Web.Embodied.active_of_bearing` (441). Premises: `dependent : W.Dependent`, `embodied : W.Embodied y`, `active : W.active t g`, `bearing : W.requires t g y ∧ 0 < W.need t g y`. Conclusion: `W.active t y`. A dependent is active only while the embodied relatum it depends on is.
+- `Web.Embodied.arises_given` (505). Premises: `balances : L.Balances W`, `acting : L.Acting W`, `embodied : W.Embodied x`, `arises : W.Arises t x`. Conclusion: `∃ f, W.active t f ∧ f ∈ L.present t ∧ 0 < L.give t f x ∧ f ≠ x`. An embodied relatum comes to be only as another active formation gives to it.
+The docstring limits what that says of the giver: "The formation that gives need not be embodied, bear on itself or depend on anything (`SourceSeed`); where only embodied relata give, a premise the representation supplies, it is embodied too (`Embodied.arises_from_embodied`). A source standing at one exactly while active meets that premise and depends on nothing (`EmbodiedSource`): being embodied is a reading of standing, not of being a life" (59 to 63). And: "Which relata are embodied, and whether a formation bears on itself, are representational choices" (114 to 115).
+
+**2. From where does what is given come, and what does giving cost the giver?**
+- General, under dissipation: from the family, at the family's cost. `Web.Embodied.arising_lowers` (657). Premises: `balances : L.Balances W`, `dissipative : L.Dissipative`, `distinct : Distinct ds`, `closed : L.ClosedAt ds t`, `embodied : W.Embodied x`, `mem : x ∈ ds`, `arises : W.Arises t x`. Conclusion: `W.stock ds (t + 1) < W.stock ds t`. `Embodied.arising_with_fall` (672): another member falls across the same step.
+- Built, the giver's own standing: `Shuttle.flow` (1190: "Across each step the holder takes its own unit and gives it to the other side") with `Shuttle.next_off` (1588: `stands (holder t) (t + 1) = 0`). This is the one place in the group where a giver's cost in its own standing is in a statement, and it is of a built course.
+- Built, from beyond: `Throughput.flow` (1283: as in `Shuttle`, "and across the step from `t` the holder also burns two units of the `t`th fuel"); the fuels hold two units by definition and are never given to (`Throughput.web` 1296).
+- Built, from nothing: `Brood.flow` (999: generation `t` gives one unit to generation `t + 1`, "and nothing is taken"), `Brood.not_dissipative` (1032); `SourceSeed.flow` (1086).
+- `Mutualism` (736 to 812) has no flow. `Mutualism.web` (759) and `apart` (767) are webs whose levels are one and whose activity is `True` by definition. "Renew each other" (header, 90 to 91) is `Web.RenewingIn` (`Dependence.lean` 166: every dependence on a condition it takes part in is kept at every step), proved at 783 from the constant levels. Nothing is given, so no source and no cost.
+- `Predation` (814 to 860) has no flow either: `Predation.web` (828) gives both relata the level `uneaten t`, a stipulated profile.
+
+**3. Is there a loop?**
+Three built ones, of different kinds, and no general law of one.
+- A loop of dependence without giving: `Mutualism.web` (759), each requires itself and the other; `Mutualism.alive` (790): every event active and not undermining.
+- A loop of giving, closed, not dissipative: `Shuttle.shuttle` (1262): `flow.Balances web ∧ flow.Acting web ∧ web.Dependent ∧ (∀ x, web.Embodied x ∧ web.SelfBearing x) ∧ (∀ t, flow.ClosedAt [true, false] t) ∧ web.Unceasing ∧ ¬ flow.Dissipative`. Each side's standing is what the other gave it. Each side requires only itself (`web` 1207).
+- The same loop fed from beyond, dissipative: `Throughput.throughput` (1365), `Throughput.frontier` (1374), `Throughput.around` (1380), `Throughput.draws_in` (1401). The fuel is burnt by the holder and none of it is given on; it is what makes the flow dissipative on every closed family (`side_dissipates` 1339).
+The header says what these are for: "Each premise of `embodiedArising_not_recurring` is needed" (99).
+
+**4. General laws that conclude going on without end.**
+None found. The general laws are:
+- `Web.embodiedArising_not_recurring_on` (686). Premises: `balances : L.Balances W`, `dissipates : ∀ t, T ≤ t → L.DissipatesOn ds t`. Conclusion: `¬ ∀ N, ∃ t x, N ≤ t ∧ x ∈ ds ∧ W.Embodied x ∧ W.Arises t x`.
+- `Web.embodiedArising_opens` (695). Premises: `balances : L.Balances W`, `dissipative : L.Dissipative`, `distinct : Distinct ds`, `arising : ∀ N, ∃ t x, N ≤ t ∧ x ∈ ds ∧ W.Embodied x ∧ W.Arises t x`, any `T`. Conclusion: `¬ ∀ t, T ≤ t → L.ClosedAt ds t`. "That exchange need not touch the family (`SprayShuttle`)."
+- `embodiedArising_draws_in` (717, adding `around`), `embodiedArising_not_recurring` (725, a finite world), `embodiedArising_needs_replenishment` (636).
+Going on is built: `Mutualism.alive` (790), `Shuttle.recurs` (1253), `Throughput.throughput` (1365), `Brood.brood` (1019), `SprayShuttle.spray_shuttle` (1519), `Flicker.flicker` (1576).
+The iffs of the file (`roles_*` 211 to 375, `SelfBearing.met_iff` 432, `relabel_*` 560 to 572) are of readings, not of going on against ending.
+
+**5. What ends it, and who bears that?**
+- `Web.Embodied.ends_when_consumed` (448). Premises: `embodied : W.Embodied y`, `least : W.need T g y ≤ 1`, `below : ∀ t, T < t → W.level t y < W.need T g y`. Conclusion: `∀ t, T < t → ¬ W.active t y`. The one consumed ends; "below from `T` on" is a premise.
+- By 441 read the other way, the end of an embodied relatum ends whatever depends on it at a positive need (`coextinct`, `LabelledRoles.lean` 50, name only). `Web.Dependent.ceases_below` (494).
+- `Web.Embodied.ending_breaks` (457): drawing on an embodied relatum that bears on itself, across the step at which it ends, breaks its dependence "whatever ends it". `Wilting.wilting` (924), a built example: "the bee takes nothing, ever. Still, by `ending_breaks`, the bee's drawing at step two breaks the flower's dependence and is undermining". So one that took nothing is counted as undermining; the header says what is not stated: "That the drawing ends the relatum would need a counterfactual relation, which is not stated here" (50 to 51).
+- Built: `Predation.hare_ends` (850), `Predation.breaking` (856); `Predation.fox_ends` is in `LabelledRoles` (61, name only).
+No statement that the loss falls on one that did not cause it was found.
+
+**6. Does anything multiply, or get selected?**
+`Brood` (966 to 1061), a built example: each generation is given by the one before and stays standing (`standing` 969), so the number standing grows by one a step; it is not dissipative. Nothing is selected. Not found: a law of number, or a selection.
+
+---
+
+## Place 5. `Entropy.lean`
+
+**1. What is rested on, and is its being there the doing of a going-on in the model?**
+The file is of what a family keeps and loses, not of need: `requires` occurs in it only as `False` in the built webs (1749, 1981, 2079) and in `Web.withRecord` (354). What it gives for this question: `Flow.Balances.exchanges_of_change` (297; premises `balances : L.Balances W`, `mem : c ∈ cs`, `changes : W.Rises t c ∨ W.Falls t c`; conclusion `0 < L.exchanges cs t`): every change of a member's level is some formation's exchange with the family. In `Passing` (1712 to 1953), a built example, where the unit is at each step is the carrier's doing (`Passing.flow` 1740: "the carrier takes the unit from the side holding it and gives it to the other"); the carrier "stands at one throughout" (1727) by definition and nothing depends on anything (`Passing.web` 1746).
+
+**2. From where does what is given come, and what does giving cost the giver?**
+From what the same formation took from the same family.
+- `Flow.GainlessOn` (146): `∀ f, f ∈ L.present t → total cs (L.give t f) ≤ total cs (L.take t f)`. `Flow.ConservingOn` (151): the same with `=`. `Flow.Gainless` (156) and `Flow.Conserving` (160): of every family without repetition closed across the step.
+- The cost under dissipation is the family's, and is a record: `Flow.dissipatesOn_iff_conserved` (797), `dissipatesOn_iff_unitRecord` (467), `Flow.DissipatesOn.takers_le_lost` (664), `Flow.Balances.stock_dissipated` (707). The docstring: "This decomposes the least loss; it does not derive it" (42 to 43).
+- In `Passing` nothing is lost: `Passing.conserving` (1818), `passes` (1878: `∀ T N, flow.dissipated all T N = 0`).
+No cost to a giver, as distinct from the family, is in a statement.
+
+**3. Is there a loop?**
+A loop of where a unit is, not of keepers. `Passing.reverses` (1825): the exchange across each step is reversed across the next; `Passing.revisits` (1869); `Passing.history_without_arrow` (1947). The carrier that does the passing rests on nothing. Under dissipation the loop is excluded: `Flow.Dissipative.irreversible` (267) and `Flow.Balances.never_revisits` (1181; premises `balances : L.Balances W`, `dissipates : ∀ t, T ≤ t → L.DissipatesOn cs t`; conclusion `¬ W.Revisits cs T`).
+
+**4. General laws that conclude going on without end.**
+One found, and it is of a family's configuration, with no flow in it:
+- `Web.changes_persist` (1334). Premises: `determined : W.Determined cs T next`, that is `∀ t, T ≤ t → W.config cs (t + 1) = next (W.config cs t)` (1302); `apart : ¬ W.Merges cs T next`, that is `¬ ∃ t, T ≤ t ∧ W.Changes cs t ∧ next (W.config cs (t + 1)) = next (W.config cs t)` (1307); `from_ : T ≤ v`; `changes : W.Changes cs v`. Conclusion: `∀ n, W.Changes cs (v + n)`. "Merging nothing, change goes on … once its configuration changes across a step from `T` on, it changes across every later step." It is `Web.merges_of_settles` (1318) contraposed (proof read), of which the docstring says "No law of the flow is used."
+It is not an "exactly where": the converse (that a law which merges comes to rest) is not stated; `Entropy.Settling.merges` (2017) is a built example of merging with rest.
+Under the first law it has two general companions: `Flow.Balances.revisits_of_apart` (1349; adds `balances : L.Balances W`, `gainless : ∀ t, T ≤ t → L.GainlessOn cs t`; conclusion `¬¬ W.Revisits cs T`) and `Flow.Balances.returns_of_conserving` (1480; premises `balances`, `gainless`, `determined`, `lossless : Law.Lossless next`; conclusion `Law.Returns next (W.config cs T)`). Under dissipation it cannot apply to a family that changes: `Flow.Balances.merges_of_dissipates` (1380).
+What is handed in: `next`, a function from the configuration to the next configuration, that the levels follow it, and that it merges none of the configurations taken. Who makes each change, from what, and at what cost is not in the law.
+The laws named in the group are an ending and its contrapositive:
+- `Flow.Balances.rests_of_never_revisits` (1225). Premises: `balances : L.Balances W`, `gainless : ∀ t, T ≤ t → L.GainlessOn cs t`, `never : ¬ W.Revisits cs T`. Conclusion: `¬ ∀ N, ∃ t, N ≤ t ∧ W.Changes cs t`.
+- `Flow.Balances.unending_change_revisits` (1235). Premises: `balances`, `gainless`, `changing : ∀ N, ∃ t, N ≤ t ∧ W.Changes cs t`. Conclusion: `¬¬ W.Revisits cs T`.
+`Flow.Balances.recurs` (1461) concludes that the configuration takes one value at two steps from every step on, which holds at rest too. Going on with exchange is built: `Passing.passes` (1878), `Passing.history_grows` (1864), `Gathering.gathers` (2160, a record drawing one unit from a new relatum at every step, the world not finite).
+
+**Exact two-sided statements in this file.** `Reverses.gainlessOn_iff` (249), `balances_withRecord` (408), `balancesOn_withRecord` (418), `closedAt_withRecord` (431), `gainlessOn_withRecord_iff` (444), `dissipatesOn_iff_unitRecord` (467), `dissipatesOn_iff_recorded` (491), `dissipative_iff_unitRecord` (510), `gainlessOn_iff_inflow` (581), `conservingOn_withRecord_iff` (764), `dissipatesOn_iff_conserved` (797), `LevelWebs.config_mem_iff` (2237). Each is of one step or one reading (reversal, the record, the inflow). None is of going on against ending.
+
+**5. What ends it, and who bears that?**
+The least loss. `Flow.Balances.history_within` (734; premises `balances`, `dissipates : ∀ t, T ≤ t → L.DissipatesOn cs t`; conclusion: exchanges over any stretch are at most the takers, which are at most the amount dissipated, which is at most the stock at `T`), `Flow.Balances.loss_ceases` (744), `never_revisits` (1181) with `rests_of_never_revisits` (1225), `World.never_revisits` (1681). Also an arrow (`Flow.Balances.rests_of_arrow` 1282) and carrying the history (`exchange_stops_of_carries` 1616). The bearer is the family's stock. No statement about who among formations bears it was found.
+
+**6. Does anything multiply, or get selected?**
+No. What grows is a count of exchanges (`Passing.history_grows` 1864). Not found: anything in number, or a selection.
+
+---
+
+## The guesses, from this group
+
+**R1** (no general law concludes going on without end for goings-on that are among what each other rests on, except where the giving is a function of levels handed in).
+*For.* In the two places of this group where goings-on are among what each other rests on, the general laws are endings and necessities, and going on is built: `Roles` (embodied relata: general laws 441, 505, 657, 686, 695; built `Mutualism.alive` 790, `Shuttle.shuttle` 1262, `Throughput.throughput` 1365) and the gate of `Continuation` (general laws 468, 553, 573; built `Alone.all_continue` 896). `Web.Dependent` runs one way, so no law in the group concludes that anything is active.
+*Against, or to be weighed.* Three general statements conclude that something goes on, none of goings-on resting on each other: (a) `Web.changes_persist` (Entropy 1334), change at every later step, where the change is a function `next` of the levels handed in: the same kind of exception as R1 names, in another file; (b) `Flow.joint_keeps` (Continuation 248) at one step, iterated outside the group as `Flow.level_kept` and `Flow.supported_of_within` (`Exclusion.lean` 300, 339), where "taken at most given at every step" is the premise; (c) `Flow.stays_met_iff_at` (`Feeding.lean` 346), exact, under "other places". In (b) and (c) the giving is a premise at every step, not a function of levels.
+
+**R2** (where the source is said and a cost is stated, the general laws are one-sided; no law gives a sufficient condition).
+*For.* `Flow.taking_not_recurring_from` (Dissipation 415), `Dissipative.opens` (452), `finite_taking_not_recurring` (461), `taking_draws_in` (587), `Flow.fed_from_beyond` (Continuation 180), `Web.embodiedArising_not_recurring_on` (Roles 686), `embodiedArising_opens` (695), `Flow.rise_from_rest_or_open` (Gain 279), `Flow.Balances.never_revisits` (Entropy 1181). The other side stands in `Frontier`, `Rooted`, `Lone` (Dissipation 979, 1127, 1208; Continuation 633) and `Throughput` (Roles 1365), all built. The docstrings say so: "Being fed is needed" (Continuation 26), "The premises are consistent with more without end" (Dissipation 81).
+*Against.* Nothing found. Two things to keep when it is told: "is fed from beyond it" needs enclosure around the family from some step on and decided equality, and its conclusion is a refuted "never from some step on" (`¬ ∀ t, N ≤ t → ¬ L.FedFromBeyond ds t`); without enclosure taking recurs with nothing flowing in while dissipation holds vacuously (`Spray.spray`, Dissipation 1334; `SprayShuttle.spray_shuttle`, Roles 1519). And `changes_persist` is a sufficient condition for change, but where no source and no cost are stated, and it cannot hold of a changing family dissipated on (`merges_of_dissipates` 1380).
+
+**R3** (`LineageRegimes.Handover` is the nearest thing to the two ways as two built families of one model, with no edge stated).
+Not in this group; `LineageRegimes` was not read. What this group has of the same kind, built pairs with no edge stated between them: `Exceeding` against `Alone` (Continuation 726, 896, the same renewer with two takers and with one), `Mortal.after_its_end` against `without_continues` (1064, 1101), `Shuttle` against `Throughput` against `SprayShuttle` (Roles 1262, 1365, 1519), `Passing` against `Settling` (Entropy 1878, 2031). For the first pair the general laws on either side have premises that are exact complements at one step (taken at most given; given less than taken) and do not meet over a run.
+
+**R4** (outside the package, October's files state more for supplied mechanisms).
+Not in this group; none of those files was read.
+
+**R5** (in every place, what keeps is a supplied function, a stipulated table of who is active, or a premise; nothing that keeps is derived from what it rests on).
+*For, in all five places.* `Flow.take` and `Flow.give` are supplied functions of the step (`World.lean` 61); `Web.active` is supplied; the givers that go on are stipulated active and require nothing (`Frontier.web` 909 to 912, `Lone.web` 1171 to 1172, `Passing.web` 1748 to 1749) or give from nothing (`Witnesses.relay`, `Brood.flow` 999); in the general laws the keeping is a premise (`WithinJoint` in 248, `netGive` in 364, `gated` in 468, `gives_embodied` in Roles 514 "a premise supplied by the representation", `Determined` in Entropy 1334, `Gainless` and `Dissipative` throughout); the rest of `Gain` is defined as what the listing leaves out.
+*Against, in part.* Two things are derived, both in the direction of necessity. That a keeper exists: an embodied relatum arises only as another active formation gives to it (`Embodied.arises_given`, Roles 505), and every rise is given by some relatum (`Flow.rise_netGiver`, Gain 229). And that a keeper stops when what it rests on fails: under the gate, `Acting` and `Dependent`, nothing is given below the giver's need (`Flow.given_zero_below`, Continuation 457; `stays_below` 468). That a keeper keeps because what it rests on is there is not derived anywhere in the group.
+
+**The two outcomes the frozen file names.** "Already there" (a general law stating exactly when goings-on that pass along what comes from beyond them go on without end): not found in this group. "Not sayable here" (R5 of every place read): R5 holds of the five places of this group, with the two derived necessities above.
+
+## Places met that are not in this group and bear on the questions
+
+Whether another reader has them is not known to this reader.
+
+- **`Feeding.lean`** (737 lines; read: module docstring 4 to 73, statements 333 to 358 and 660 to 672). `Flow.stays_met_iff_at` (346), a general exact law. Premise: `balances : ∀ t, T ≤ t → L.BalancesOn W [c] t`. Statement: `(∀ t, T ≤ t → m ≤ W.level (t + 1) c) ↔ ∀ t, T ≤ t → m + L.taken t c ≤ W.level t c + L.given t c`. A need stays met at every later step exactly where at every step what stands with what is given covers what is taken and the need. It is two-sided and of going on without end, of a level; what is given is the flow's supplied amount at each step. The docstring: "These equivalences do not infer activity from support" (58). Also `Flow.meets_after_iff_at` (336), `meets_over_iff_at` (356), and the built `Redundant.either_suffices` (667: with both feeders or either alone the consumer is active and supported at every step) against `Redundant.neither_ends`. The docstring also names `Flow.FedAcross`, `Flow.CarriedTo` and `Provision.through_store` (a parent gives to a store and is not active after; its young later lives on it): feeding carried across steps.
+- **`Exclusion.lean`** (read: 294 to 345). `Flow.level_kept` (300), a general law concluding going on. Premises: `balances : L.Balances W`, `within : ∀ t, L.WithinJoint t c`. Conclusion: `∀ t, W.level 0 c ≤ W.level t c`. `Flow.supported_of_within` (339) adds `only : ∀ t e d, W.requires t e d → d = c` and `low : ∀ t e, W.requires t e c → W.need t e c ≤ W.level 0 c` and concludes `∀ t e, W.Supported t e`. Supported, not active; the giving is the premise.
+- **`Flow.lean`, `Cycle`** (read: 1005 to 1030). `Cycle.closed_more` (1016), a built example: "Each formation renews what it takes … arising is unceasing and the flow more without end, the family's total never changes, and as many formations give as take." A closed loop in which the renewers are the takers; not dissipative (`witnesses_not_dissipative`, Dissipation 1369). `Arising.lean` has a `Recycle` namespace (414, not read).
+- **`Reserve.lean`** (read: docstring 4 to 73). What is held: "`Dependent` is exactly the zero reserve (`carries_zero`)"; "A reserve defers the end and does not escape it" (`Carries.active_not_recurring`, `Carries.lasts`); "A reserve, like `Dependent`, is a premise supplied by the representation". Bears on R5 and on question 5 (lagged ending, `Carries.coextinct_lasts`).
+- **`RenewalFlow.lean`** (read: docstring 3 to 41). The support-gated family of `RelationalRenewal.Law` as a balanced flow: `SupportGated.repair_restores` through `Flow.restores`, `SupportGated.ends_for_good` through `Flow.ends_below_at`. A sustaining formation gives the renewal while the condition supports it: the gate of Continuation as one supplied family.
+- **`Clearing.lean`** (read: 160 to 172). `Clearing.undermines_within_renewal` (172), a built example: a clearer supported at every step, its one resource renewed and fed from beyond, clears a habitat; the dweller is inactive from step two on. Bears on question 5: the one that ends is not the one that drew.
+- **`Imbalance.lean`** (read: 45 to 70). `Flow.withImbalance` (55): the rest as one more relatum, defined from the levels. It is what "given by the rest" means in `Gain`.
+- **`LabelledRoles.lean`** (names only): `coextinct` (50), `Predation.fox_ends` (61).
+
+## Where the Lean differs from the table's cells for these rows
+
+- **"Entropy (Passing, Shuttle)", column g** (reader A: "Going on without end only in built Passing"; reader B: "Over runs, one-sided laws (rest; never revisiting), with built Passing going on"). The Lean has a general law concluding going on, `Web.changes_persist` (Entropy 1334), which neither cell names. It is of a family's configuration under a handed-in `next`, so the cells' sense (no general law of exchange going on) may stand, but the sentence as written is not what the file states.
+- **"Roles … with Gain", column e** (reader B: "bee and flower, renewing each other, all live"). `Mutualism` has no flow; the levels are constant by definition and "renewing" is `Web.RenewingIn` (`Dependence.lean` 166) of that web. Nothing is given by either to the other in the Lean.
+- **"Dissipation with Continuation.fed_from_beyond", column d** (reader B's note lists the premises as "balance, dissipation, enclosure" and says "something is conveyed in from beyond"). `Flow.fed_from_beyond` (Continuation 180) also has `[DecidableEq C]`, as reader A's note says, and its conclusion is `¬ ∀ t, N ≤ t → ¬ L.FedFromBeyond ds t` for every `N`, not a step at which something is conveyed.
+- **The frozen file's line for this row** ("going on appears only in built Frontier and Lone"): also in built `Rooted` (Dissipation 1127), `Spray` (1334), and, in `Roles`, `Throughput` (1365) and `SprayShuttle` (1519). The sense is unchanged.
+- **"Continuation … with Exclusion", column g** ("Two one-sided laws on complementary premises … no iff stated"): agrees with the Lean. To add: the premises are exact complements at one step only.

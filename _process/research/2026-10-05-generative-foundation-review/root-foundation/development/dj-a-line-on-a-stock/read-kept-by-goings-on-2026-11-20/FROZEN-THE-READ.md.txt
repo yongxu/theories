@@ -1,0 +1,57 @@
+# What the Lean already states of things kept by goings-on: the questions, fixed before any reader ran
+
+*AI-written (Claude Fable, board row DJ), 20 November 2026, 20:25 WIB, before any reader ran. Frozen: nothing above the line "After" is changed later. This is a read. No statement is proposed by it and no Lean is written. Level, giving, source, keeper, family are working names.*
+
+## What we are doing
+
+One map of how things come to be, go on, change and end, on which two ways of going on are placed with respect to each other: a way of selecting that uses up what it or others rest on and can no longer be turned, and a way that keeps remaking what it rests on ([the direction page](../../../../../_process/DIRECTION.md), "Where we are heading").
+
+On 20 November a first step was tried on paper and did not come out ([its record](../meet20/NOTE.md)): on one level whose giving is handed in, no statement was found that places the two ways. The order of work was turned, as the session's own reading: begin where what is rested on is itself kept by goings-on, and begin with a read of what the Lean already states there, before anything is proposed. Which sense of "the second way" the direction means is Ren's to say; this read is of the third of the three senses the record of 17 November told apart (arising as something others can rest on), closed into a loop or fed from beyond.
+
+## What is already held, before the read (from the table of 20 November; each cell an AI reader's reading of a statement)
+
+Taken by the writer from the data file `two-ways-table.json`, the notes (the settling reader's where a cell was settled, otherwise the first reader's) on the columns "gives at a cost", "the source is said", "what comes back" and "both outcomes, with the boundary exact", for twelve rows:
+
+- `Dissipation` with `Continuation.fed_from_beyond`: "Being fed is necessary, not shown sufficient; going on appears only in built Frontier and Lone."
+- `Roles` with `Gain`: "One-sided laws: dissipated on, embodied arising does not recur; recurring, the family opens. The other side only as built courses."
+- `Flow` with `KeepingWidening`: "One-sided general laws (what going on needs; where nothing keeps widening). Both outcomes meet only in built cases".
+- `Interdependence`: "One general one-sided law (ending within level-many steps); going on only as a built course."
+- `LineageRegimes` (Handover): "Generating and degenerating are both stated only for two built families, and the stock is shown to decide neither: no boundary."
+- `Weightings`, PassesOn and the tiers: "What a family is given is passed on from the supply above, each giving at most what it takes there: a premise, up the tiers. The top's source is unsaid."
+- `RegimeMargin`, MutualActivation and Relay: "The giving is a law of what the draws leave of the two levels, handed in and here defined by cases; no giver, and no supply it comes from."; "Exactness comes from the general laws, whose premises these cases prove."
+- `PairFlow`: "A gift is part of the giver's own standing; a renewer beyond the pair supplies each standing".
+
+So the table's cells, read together, say: where a source is said and a cost is stated, the general laws are endings and necessary conditions, and going on stands in built examples; where both ends are exact and general (the coupled levels), the giving is handed in and there is no giver. That is a reading of cells, by one writer, and it is what the read is to test at the statements.
+
+## The questions, the same for every place
+
+For each place, from its statements and docstrings (a proof only where the statement leaves a question open), with the declaration's name and line for every answer:
+
+1. **What is rested on, and is its being there the doing of a going-on in the model?** Name what needs what. Say whether what is needed is a level whose giving is a function handed in, or something another going-on gives, keeps or is.
+2. **From where does what is given come, and what does giving cost the giver?** From its own standing; from something beyond the family (a source that requires nothing, a supply that is on or off); from nothing. Is the cost in a statement?
+3. **Is there a loop?** Does the one that keeps rest on what those it keeps give or do, or only on something beyond them?
+4. **Every general law that concludes going on without end** (not an ending, not a necessary condition, not a built course), with all its premises. Is any "exactly where"? What in its premises is handed in that would have to be someone's doing?
+5. **What ends it, and who bears that?** Whose loss ends the others; does a statement say the loss falls on one that did not cause it?
+6. **Does anything multiply, or get selected, among those that pass on and those that do not?**
+
+## The guesses (each may be false)
+
+- **R1.** In the package, no general law concludes going on without end for goings-on that are among what each other rests on, except where the giving is a function of levels handed in (`RegimeMargin`'s coupled and indexed levels). Elsewhere going on is a built example.
+- **R2.** Where the source is said and a cost is stated, the general laws are one-sided: a family that keeps being taken from is fed from beyond it; a closed family dissipated on stops. No law gives a sufficient condition.
+- **R3.** `LineageRegimes.Handover`'s relay and run-down are the nearest thing to the two ways in this sense as two built families of one model, and nothing states the edge between them.
+- **R4.** Outside the package, October's files state more for supplied mechanisms (`ReproductionNetwork`, `CorrectionDependence`, `ResponseCapacity`, `CarrierDiagnosis`, `RenewingFormation`, `conditional/renewal`): at least one has a general two-ended law of a loop in which what is rested on is kept by what rests on it.
+- **R5 (against going this way).** In every place, what keeps is a supplied function, a stipulated table of who is active, or a premise; nothing that keeps is derived from what it rests on. If that holds everywhere, a statement of the second way here would have to hand in the keeping, and the step is really the next one in the order (how what a loop registers comes to be and is kept).
+
+## What would count as the read having found that the step is not needed, or not possible
+
+- **Already there.** A general law that states, exactly, when goings-on that pass along what comes from beyond them go on without end. Then nothing new is to be stated; the work is to tell it and join it.
+- **Not sayable here.** R5 holds of every place read.
+- Between the two, the read says what the nearest statements are and what each hands in.
+
+## How it is read, and what it costs
+
+Four AI readers, each with one group of places and these questions, who propose nothing: the places where a source is said under dissipation; the places that pass on, feed or relay; the places with exact laws of coupled levels, pairs and rebuilding; and October's and other files outside the package. About 1.2 million tokens. One checker of the note after.
+
+---
+
+## After

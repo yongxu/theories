@@ -1,0 +1,345 @@
+# The read, group "exact-and-pairs": coupled levels, pairs, rebuilding
+
+*AI-written (Claude Fable 5.2, a reader in a workflow of board row DJ), 20 November 2026, finished 20:37 WIB (clock read at 20:32 and 20:37). A read against [the frozen questions](FROZEN-THE-READ.md). It proposes no statement, no model and no next step. No Lean was written or built, no test run, no git command that changes anything. Level, giving, source, keeper, family are working names. "A general law" is said only of a statement over every model meeting its stated premises; "a built example" of one constructed course or supplied numbers. Line numbers are of the files as they stood at the read.*
+
+Package: `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/` (below `B/`). Outside it: `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/deeper/RelationalRenewal.lean`.
+
+## What was read, and what was not
+
+| File | Read (lines) | Not read |
+|---|---|---|
+| `B/RegimeMargin.lean` (3687) | 1-300 (opening account whole; the one level's definitions); 700-760; 2058-2427; 2485-2750; 2810-3039; 3205-3687 | 300-700 and 760-2058 (`Adjusted`, the need, draws adding, rest, `Drawn`: known only from the opening account); 2427-2485 (only `Band` 2425 and `within_draw` 2489 opened); 2750-2810; 3039-3205 (`Recent.plain`, `adjusted`, `Momentum`: opening account and declaration list only) |
+| `B/PairFlow.lean` (1098) | whole | nothing |
+| `B/PairSelection.lean` (2227) | 1-203 (opening account); 228-257; 456-472; 882-1020; 1100-1159; 1352-1440; 1803-2227 | 258-455, 473-881 (the counts); 1021-1099; 1160-1351; 1441-1802 (window against answering): known only from the opening account and the declaration list |
+| `B/ReaderRebuilding.lean` (509) | whole | nothing |
+| `B/RuleRebuilding.lean` (1961) | 1-262; 431-560; 634-781; 836-940; 972-1036; 1093-1122; 1160-1628; 1732-1961 | 262-430 (arithmetic, lists); 560-633; 782-835; 940-971; 1037-1092 (band witnesses: opening account only); 1123-1159; 1629-1731 (strand lemmas) |
+| `B/ContinuingRevision.lean` (587) | whole | nothing |
+| `B/CoupledDrawers.lean` (1054) | 1-150; 300-440; 536-1054 | 150-299 (pass lemmas, `leaves_nothing`, `leaves_need`, `need_best`: declaration list only); 440-535 |
+| `B/ReadingsSpread.lean` (1279) | 1-120 (opening account); 361-433; 637-900; 962-1277 | 120-360; 434-636 (`standingCount_unselected`, `Revised`, `Contact`): opening account only; 900-961 (balance proofs) |
+| `deeper/RelationalRenewal.lean` (606) | whole | nothing |
+| `B/Stock.lean` (not on the list) | 1-60; 270-345; 443-462; declaration list | the rest |
+| the table's data file | cells c, d, e, g of these rows (the first reader's note, or the settled note) | other cells, `TABLE.md`, `NOTE.md` |
+
+Proofs opened to settle a question the statement left open: `Coupled.Indexed.within_draw` (2491-2492), `Coupled.MutualActivation.saves` (3470-3474), `Coupled.Relay.threshold_beyond_band` (3661-3679), `«稳者恒持当且仅当在带»` (899-919), `«稳开二试»` (1374-1385), `repeats_iff` (578-585). Other proofs were on the page read and are not relied on.
+
+Not read at all: `LineageRegimes`, `Weightings`, `Flow`, `Optimum` (the uncoupled `InTurn` and `AtOnce`), `ReadingsPersist` (two definitions located by grep only), `LineageDrawdown`, `ReferencePlan`, `DrawnBeyond`, `WindowedWaiting`, `SelectionLevels`, `RuleShaping`, `GrammarLaws`, `RegimeReals`, `RenewingFormation`.
+
+---
+
+## 1. `RegimeMargin.lean`: the coupled and indexed levels, with `MutualActivation` and `Relay`
+
+**Q1. What is rested on, and is its being there a going-on's doing?** Each condition `i` has a level. Its next level is what its draw leaves of it with `G i` of what the draws leave of every condition: `Coupled.Indexed.step` 2113, `fun i => D.add (D.sub (x i) (H i)) (G i (left D H x))`; the pair is `Coupled.step` 2081. The giving `G : ι → (ι → V) → V` (for the pair `g₁ g₂ : V → V → V`) is an argument: a function handed in. A condition rests on another where `DependsOn` 2127 holds: "condition `i` gives nothing wherever nothing is left of condition `j`". So what a level rests on is the others' levels, read by a handed-in function; no going-on other than the levels is in the model. The draws `H i` are numbers; who draws, and where what is drawn goes, is not in the model.
+
+**Q2. From where, and at what cost?** From nothing. The giving is added to the receiver's own level and nothing is subtracted from any other level (2113, 2081-2083); the only subtraction is the draw. No cost is in any statement. Within a band the giving is at most the draw: `Indexed.within_draw` 2489 (premises: `rises : ∀ i, Rises Drawn.whole (G i)`, `band : Band G H hi`, `high : ∀ i, x i ≤ hi`).
+
+**Q3. A loop?** A loop of reading, not of passing. `Indexed.ends_together` 2219 is stated of two conditions each `Downstream` 2130 of the other; `Coupled.ends_together` 3389 of a pair each giving nothing where nothing is left of the other. `Relay.cycles` 3582 (a built example, supplied numbers) has each condition alone ending from every level and the pair from (2, 3) never ending. Nothing moves from one level to another.
+
+**Q4. General laws concluding going on without end.**
+- `Coupled.Indexed.fates` 2716, a general law. Premises: `[DecidableEq ι]`; `rises : ∀ i, Rises Drawn.whole (G i)` (each giving rises with what is left of each condition, "mutual support"); `band : Band G H hi` (2425: the step keeps every state with every level at most `hi` within `hi`); `cs : List ι` with `covers : ∀ i, i ∈ cs` (finitely many conditions, listed); `high : a ≤ hi`; `highs : ∀ j, y j ≤ hi`. Conclusion: some `N ≤ cs.length * hi + 1` from which the run from `setAt y i a` is still at every condition, with condition `i` nothing there if `a < threshold G H cs hi y i` and positive there if `threshold G H cs hi y i ≤ a`. The second branch is going on without end, at rest.
+- `Coupled.Indexed.ends_iff_below` 2687 (the exact law, below), `Coupled.ends_iff_below` 3306 and `Coupled.fates` 3333 (the pair: `rises₁ : Drawn.whole.Rises g₁`, `rises₂ : Drawn.whole.Rises g₂`, `band : Band Drawn.whole g₁ g₂ H₁ H₂ hi`, `high : x ≤ hi`, `high' : y ≤ hi`).
+- Beyond a band: `Coupled.Indexed.ends_iff_below_within` 2984. Premises: `keeps : KeepsBelow f` (2818, the law keeps the order of states), `covers`, `within : StaysWithin f B (setAt y i hi)` (the run from the top level considered stays within `B`), `high : a ≤ hi`. Conclusion: `EndsUnder f i (setAt y i a) ↔ a < thresholdWithin f cs B hi y i`.
+- `Coupled.Indexed.ends_together` 2219: premises `pos : ∀ i j, DependsOn Drawn.whole G i j → 0 < H i`, `there : Downstream … i k`, `back : Downstream … k i`; `Ends … i ↔ Ends … k`. Two-sided, but of one condition against another, not of going on against ending.
+- The one level (not this group's, cited by `Coupled.first_regime` 3406): `holds` 730 (`meets : Meets g H y hi`, `keeps : Keeps g H hi`, `low : H + y ≤ x`, `high : x ≤ hi`; the run never falls below `x` nor exceeds `hi`) and `ends_iff_below` 741.
+
+What is handed in that would have to be someone's doing: the giving functions `G`; the draws `H`; that giving rises with what is left of each (`Rises`); the band (which with `Rises` makes every giving at most its draw); beyond a band, that the run stays within a bound, which is a premise about the course itself. The threshold is not given by a formula in `G` and `H`: it is `leading (ending G H (cs.length * hi + 1) y i) (hi + 1)` (2672), read off the run at one step. Nothing says it lies within the band: in `MutualActivation.saves` 3465 it is 3 with a band up to 2 when the partner is at nothing, so every level in the band ends. That some state holds is shown only in built examples (`saves`, `Relay.cycles`).
+
+**Q5. What ends it, who bears it?** A level below its threshold ends. The end of one ends what depends on it: `Indexed.ends_of_partner` 2193 (`depends : DependsOn Drawn.whole G i j`, `pos : 0 < H i`, `ends` of `j`), and along chains `Indexed.ends_downstream` 2210 (`pos : ∀ i j, DependsOn … G i j → 0 < H i`). `Indexed.Chain.cascades` 2250 (built): the third does not depend on the first, the first ends, the third ends. Raising any level never ends one that held: `Indexed.ends_of_below` 2153 (`rises`, `reads` the part keeps the order, `below`). A statement that the loss falls on one that did not cause it: not found in what was read; no condition draws on another, and the draws have no drawer.
+
+**Q6. Multiplying or selecting?** Not found in what was read (2058-2427, 2485-2750, 2810-3039, 3205-3687).
+
+**The exact two-sided law, in full.** `Coupled.Indexed.ends_iff_below` 2687:
+
+```lean
+theorem ends_iff_below [DecidableEq ι] (rises : ∀ i, Rises Drawn.whole (G i)) {hi : Nat}
+    (band : Band G H hi) {cs : List ι} (covers : ∀ i, i ∈ cs) {y : ι → Nat} {i : ι} {a : Nat}
+    (high : a ≤ hi) (highs : ∀ j, y j ≤ hi) :
+    Ends Drawn.whole G H (fun x => x i) (setAt y i a) ↔ a < threshold G H cs hi y i
+```
+
+with `G : ι → (ι → Nat) → Nat`, `H : ι → Nat`, `Ends` 2123 ("from some step on, the level `part` reads off the state is nothing"). Docstring: "Within a band under mutual support, condition `i` ends from a level up to `hi`, the others as in `y` within the band, exactly where its level is below its threshold".
+
+---
+
+## 2. `PairFlow.lean`
+
+**Q1.** Each formation of the pair depends on its own standing: `ownStanding` 196, `needOf` 203, `WhileStanding.needs` 548. In `WhileStanding` the standing is kept by a renewer beyond the pair, which gives `S.renew p t` only while the formation is active (`renewal` 497), and by the partner's gift (`gets` 500). Activity is not stipulated: `isActive` 486 is `Nat.ble (G.need p) (standing x p)`. What the renewer offers, what each intends to give, and what a taker beyond draws are supplied patterns: `Setting` 472 (`intends`, `renew`, `draw`, `start`); the opening account, 69-71: "the intended giving, the renewal offered and the draws supplied as patterns". In `Routes` the standings are "held constant by construction" (29-30): `Routes.level` 305 gives every member `P.stand`, and `renewed` 252 is defined so that `drawn_eq` 336 holds.
+
+**Q2.** A gift comes from the giver's own standing: `WhileStanding.ownTake` 493 includes `G.gift` where it sends; `Parts.fits` 467 (`upkeep + own + gift ≤ need p`). The cost is in statements: `WhileStanding.balances` 645 (through `member_balance` 637); and, a built example, `GiverAtNeed.gift_lost` 1011 with `standings_differ` 1029. The renewal comes from beyond the pair, from a renewer that requires nothing (`ownStanding renewer _ = False` 198; "The renewer requires nothing, so this is not a gated renewal", 39-41) and whose level is 0 at every step (`level` 534-535): what it gives is taken from no condition, and no cost to it is stated. In `Routes`, part of a gift is lost on the way (`spill` 240) and part of what is kept spoils (`spoiled` 244).
+
+**Q3.** Each formation can give to the other's standing (`give` 581, 587), so within the pair there is a loop of giving. What it carries: `WhileStanding.runs_agree_until` 724, a general law: two runs with the same start, the same renewal offered and the same draws, one in which both intend to give at every step and one in which neither does, keep the same levels up to `T` where both formations are active at every step before `T` of the first ("mutual giving passes through"). And `met_needs_within_start` 172, a general law: `balances : L.Balances W`, `gainless : ∀ t, S ≤ t → t < S + N → L.GainlessOn (fs.map own) t`; the needs met at `S + N` total at most the family's stock at `S`: "no gift, exchange or timing within the family supports together formations whose needs exceed what it held". What each standing rests on beyond the gift is the renewer, beyond the pair. In the built `FailedRenewal`, the gain of sharing over keeping is "carried by the second's renewal, resumed once the two units lift it, an inflow from beyond the pair" (`lines_gain` 917, docstring 914-916).
+
+**Q4.** General laws concluding going on without end:
+- `Routes.supported` 368: `within : P.need ≤ P.stand`; both formations supported at every step, for every `Parts` and every pattern of giving `g`. General over the family, and by construction (the standing is the constant `P.stand`).
+- Not found in what was read: a general law in `WhileStanding` that a formation stays active at every step. `lineAt_of_active` 805 takes standing at every step as a premise, and `lines_agree_while_active` 818 standing at the same steps in two runs. `stays_fallen` 788 is an ending.
+- Built examples of going on: `FailedRenewal.levels_sharing` 866 (`∀ m, levels parts sharing (m + 4) = (3, 3)`), `GiverAtNeed.levels_kept` 990.
+
+Handed in: the renewal offered at each step, the intention to give at each step, the draws, the start; in `Routes`, the standing itself.
+
+**Q5.** A standing below its need gets no renewal, and with no gift does not stand again: `WhileStanding.stays_fallen` 788, a general law (`idle : isActive G (levels G S t) p = false`, `none : ∀ s, t ≤ s → sends G S s (levels G S s) (partner p) = false`), marked "near-definitional". Who bears, all built examples: `GiverAtNeed.gift_lost` 1011 (the giver, by its own gift; the receiver's line is the same either way, `withholder_same` 1025); `DrawnBelowNeed.drawn` 1052 and `fallen` 1063 (a taker beyond the pair draws two units once from the second's standing; the second "is active at no later step, although the taker draws nothing after"); `FailedRenewal.keeping_fallen` 877 (one supplied failure of renewal). In `DrawnBelowNeed` the loss falls on a formation that did not draw; the statement gives the draw and the fall and does not use the word cause.
+
+**Q6.** A line's level is "what a formation has given its descendants" (67-68); `Routes.line_offspring` 393 reads it as `Place.offspring`. Lines grow; no share and no selection is stated in this file (selection is `PairSelection`'s). Sharing against keeping is compared in built runs (`lines_gain` 917, `gift_lost` 1011).
+
+**Exact two-sided law of going on against ending:** none found in the file (read whole). `Routes.gap_iff` 405 is exact, of factors: under `routes : P.kept + P.spoiled = P.reach + P.spill`, `P.kept < P.reach + P.matched ↔ P.spill < P.spoiled + P.matched`.
+
+---
+
+## 3. `PairSelection.lean`
+
+**Q1.** In the runs nothing is rested on: giving is a law of the last two steps (`PairLaw` 216, `step` 238) and offspring are "a supplied formula" (162-163), `Place.offspring` 910; "that a formation is supported over the run is a premise of the reading, not checked here" (163-164). On the two webs, each formation depends on its own standing (`Needs.requires` 1843, `Renewed.requires` 2042). In `Renewed` the giver's standing is kept by a renewer "whose giving does not require its own level" (`renewer_free` 2091): `give renewer giver = 1` 2068. Levels there are constants (`web` 2052).
+
+**Q2.** In `Needs` the unit comes from the giver's own standing (`take 0 giver giver = 1` 1878, `give 0 giver receiver = 1` 1895; the giver's level goes from 2 to 1, `level` 1830-1833), into a pair "into which nothing flows" (`closed` 1960). The cost is in statements, built: `symmetry_moves` 1983 (needs two and two: the giver unsupported after), `childless` 1995, `symmetric_breaks` 2013; with needs one and two the rise is the giver's slack (`asymmetric_within_slack` 2022). In `Renewed` the unit comes from the renewer, beyond, at no stated cost (`inflow_one` 2094, `renewal_carried` 2103). As a general law, a bound: `rise_le_slack_inflow` 2141 (`balances`, `met : W.MetOn dep rest t`, `unbroken : ∀ c, c ∈ rest → ¬ W.Broken t (dep c) c`, `rise : W.stock ds (t + 1) = W.stock ds t + β`; then `β + L.lost (ds ++ rest) t ≤ W.slack dep rest t + L.inflow (ds ++ rest) t`), and `Place.received_factor_le` 2166, `Place.received_factor_zero` 2209, whose reading "is the hypothesis: nothing here makes the pair's run a flow on the web" (2164-2165).
+
+**Q3.** On the webs, no: the giver gives the receiver and the receiver gives nothing back (`Renewed.give receiver _ = 0` 2074). In the runs two laws can give each other at every step, but nothing is rested on there.
+
+**Q4.** General laws concluding going on without end: of the pattern of giving only. `counts_giving` 460: `hf : f (true, true) (true, true) = true`, `hg : g (true, true) (true, true) = true`, no errors; every formation receives at every step and withholds at none, for every `n`. It is of counts, not of anything kept. Of support: `Renewed.renewal_carried` 2103 and `Needs.asymmetry_gains` 1975, built examples ("single small witnesses with constant or few-valued levels, not general laws of renewal or need", 165-166). Handed in: the laws of giving, the errors, the factors `a β γ`, the pairing ("supplied … not formed", 162), and on the webs every level.
+
+**Q5.** In `Needs` under needs two and two the giver loses its own support by its own gift (`symmetry_moves` 1983, `childless` 1995). A statement that the loss falls on one that did not cause it: not found in what was read.
+
+**Q6.** Yes, this is the file's subject, one generation at a time ("no law here is of a course of generations", 164-165). General laws: `kind_rises_iff` 966 (a kind rises exactly where its members' mean offspring exceeds the others'); `never_rises_in_pairs` 1146 (`le : β ≤ γ`, `paired : ∀ g, g ∈ gs → ∃ s, g = [s, s.other]`, `others : ∀ s, s ∈ whole gs → s.kind = false → s.law s.side = withholding`; the kind is not selected for); `answering_never_rises` 1120; under complete assortment `assorted_raises_iff` 1376 (`pos : 0 < a`, `npos : 0 < n`, `some : 0 < x.carrier`; raised strictly `↔ γ < β`) and `assorted_lowers_iff` 1400 (`↔ β < γ`); `neutral` 1429. So among those that give and those that withhold, which is selected is exact in the supplied factors.
+
+**Exact two-sided law of going on against ending:** none found in what was read. The exact laws are of a share's rise.
+
+---
+
+## 4. `ReaderRebuilding.lean`
+
+**Q1.** Two things, each resting on the other. The level is lifted by the reader: "While the supply is on, the units read in turn, and each takes one unit from the supply while the level is below its set level `m`" (16-17; `read` 87, `step` 119). The reader's units age and end (`older` 90), and in the member `Source.level` a spent unit is rebuilt from the level (`rebuild` 103-109). So what is rested on, the level, is there by the reader's doing, and the reader is a going-on in the model (units with ages, a state variable), not a function handed in. What is handed in is the supply being on or off, "chosen at each step" (23; `net` 124), and the rule's order.
+
+**Q2.** What the read adds comes from the supply, beyond, which is on or off and has no amount ("Not modelled: … the supply's and the sink's amounts", 52-54); no cost to the supply is stated. Rebuilding a unit costs the level one unit: `rebuild` 109 (`l + 1 => ⟨l, 0 :: as⟩`), `rebuild_level` 174, `cut_level` 220 ("Under a cut, a step draws at most two units"). One unit of the level goes out at each step (15), to nowhere in the model.
+
+**Q3.** Yes: the reader keeps the level and is rebuilt from it; the supply is beyond both. The opening account's reading (57-59, marked an AI reading): "one constraint with turnover regenerated from the flow it regulates".
+
+**Q4.** General laws concluding going on:
+- `«供则读者不绝»` 196 and `«供则读者之域闭»` 209: premises `hs : r.source = .level`, `hn : 1 ≤ r.count`, `hm : 1 ≤ r.setLevel`; `Present` is closed under the supplied step, from every level, at every span. Going on without end along a course supplied at every step follows by repeating the step; that iteration as its own theorem: not found in the file (read whole).
+- `given_run` 435: a given reader at its set count keeps its units (it does not age: a stipulation).
+- Under a cut, a lower bound only: `«断而有储则读者存»` 244 (`hs : r.source = .level`, `hn : 1 ≤ r.count`, `2 * (k + 1) ≤ x.level`; present after `k + 1` steps).
+
+Handed in: that the supply is on; that the supply has whatever the read takes; the rule that a unit is made from one unit of the level.
+
+**Q5.** A cut with the stock run down: `«读者绝则无储»` 386 (`hs`, `hn`: gone after a step, the level is 0), and the empty state is closed under the whole net, supply on or off: `«取于储者绝而不复»` 404 (`hs : r.source = .level`). Rebuilt from the supply or never: gone after `s` steps of cut from every level (`«断则取于供者尽»` 356, `«不复建者尽»` 365); rebuilt from the supply it returns after one supplied step (`«取于供者复»` 423). "Not proved here: that the reader rebuilt from the level ends under a cut from every stock" (51). One reader and one level: who bears is not a question the model has.
+
+**Q6.** Not found in the file (read whole). The four members are compared by source, not selected among.
+
+**The exact two-sided law, in full.** It is over the family's sources, not of going on against ending along a course. `«以储买时当且仅当取于储»` 462:
+
+```lean
+def BuysTime (r : Rule) : Prop :=
+  (∀ k, ∃ l, Present (run r false (k + 1) (fresh r.count l))) ∧
+    ∃ k, (run r false k (fresh r.count 0)).ages = []
+
+theorem «以储买时当且仅当取于储» {r : Rule} (hn : 1 ≤ r.count) (hspan : 1 ≤ r.span) :
+    BuysTime r ↔ r.source = .level
+```
+
+The two ends under a standing supply are both general (`«供则读者之域闭»` 209; `«取于储者绝而不复»` 404) but are not joined into one iff over states.
+
+---
+
+## 5. `RuleRebuilding.lean`: the holders who keep a door
+
+**Q1.** The members rest on a level each draws one unit of (`take` 174). The level is there by a constant renewal `g` and by the take staying within it: `onward` 217, `x.level + r.renewal - take x`; `Ends` 214. The take is limited by the door, which is the holders' doing: `door` 194, `r.untaught - r.strength * teachers r x`, "each teacher turns away `c` of those who would come untaught". The holders are there by teaching: `taught` 180, in the member `.members` a cohort enters holding the quota only where holders of at least the teaching age stand. So the keepers of the door are a going-on in the model (cohorts by age, replaced every tenure: `«任满皆新»` 1546, `«域中任满皆新»` 1582), rebuilt from the members. The opening account says what this is and is not: "'holder' is a count and the door a formula: recognition, compliance and implementation are one bit here" (41-43); "no pair of teacher and pupil is modelled, only that count" (35-36).
+
+**Q2.** The renewal is a constant with no giver ("a constant renewal while anything is left", 118-119): from nothing. The count `f` who would come untaught, and whether entrants are on offer (`Move.on` 153), come from beyond. Cost of keeping: "Both draw alike, so a keeper draws on what it keeps, added by nothing else, and nothing here is a cost of keeping beyond that" (36-37). Nothing is given to the level by any member.
+
+**Q3.** Yes. The holders draw on the level that their door keeps within its renewal; if the level ends, every member leaves (`step` 222, `step_gone` 448); and each cohort of holders is taught by holders. The renewal and the entrants are beyond them.
+
+**Q4.** General laws concluding going on without end:
+- `«恒取不逾生则存»` 493: `hc : Closed r c F`, `ht : ∀ y, F y → take y = A`, `hA : A ≤ r.renewal`, `hx : F x`, `hL : 1 ≤ x.level`; at every step the family is kept and the level is not below its start.
+- `«稳者恒持当且仅当在带»` 897 and `«隙之律»` 1772: exact, below.
+- `«外授之稳同带»` 922: `ho : r.source = .outside`, `hl : r.teachingAge < r.tenure`, `hL : 1 ≤ L`; the same iff taught from outside.
+- `«域闭»` 1197 with `«域中储不减»` 1203, `within_run` 1573, `«域中任满皆新»` 1582: `hf : Fits r P Q`, that is `r.source = .members ∧ r.teachingAge < r.tenure ∧ 1 ≤ P ∧ P ≤ Q ∧ (Q + leak r P) * r.tenure ≤ r.renewal` (1106); along every course with entrants on offer at every step (`hon`) and every revision in `[P, Q]` (`hrev`), from a state `Within r P Q` (1097), the state stays in the region, the level does not fall, the rule is held, and after a tenure no holder cohort of the start remains.
+- `«无持而门开不逾生则存»` 1255 (going on with no holder): `hs : r.source = .members ∨ r.source = .none`, `hon : ∀ i, (c i).on = true`, `hA : r.untaught * r.tenure ≤ r.renewal`, `hx : NoHolder x`, `hlen : x.others.length ≤ r.tenure`, `he : Each (· ≤ r.untaught) x.others`, `hL : 1 ≤ x.level`.
+- `«稳开二试»` 1368: `hm : r.source = .members`, `hl : r.teachingAge < r.tenure`, `hq : 1 ≤ q`, `hL : 1 ≤ L`; `(Goes r (steady r q L) ↔ (q + leak r q) * r.tenure ≤ r.renewal) ∧ (Goes r (nobody r q L) ↔ r.untaught * r.tenure ≤ r.renewal) ∧ (r.renewal < (q + leak r q) * r.tenure → EndsUp r (steady r q L)) ∧ (r.renewal < r.untaught * r.tenure → EndsUp r (nobody r q L))`, with `Goes` 1345 the level present at every step and `EndsUp` 1348.
+
+Handed in: the renewal `g` (a number, with nothing that gives it); the count `f` who would come; entrants on offer at every step; the door's strength `c`; the teaching as a formula (a full quota wherever any teacher stands); the ending clause ("a modelling choice", 20-21); and for the exact laws the starting state (`steady`, `strands`) and the course `always` (no revision). The opening account: "This is the steady state's law and not the rule's" (55).
+
+**Q5.** The take exceeding the level and the renewal ends everything: `Ends` 214; then "level `0` with no member", closed under the net at every source (`«尽而不复»` 457). Holders and others leave alike. The rule can be held to the last state and the level still end: `«隙过生持至尽»` 1792 (general; `hm`, `hs : r.tenure = r.teachingAge + 1`, `hq : 1 ≤ q`, `hb : b.length = r.tenure`, `hk : 1 ≤ heldCount b`, `hA : r.renewal < heldCount b * (q + (r.untaught - r.strength * q)) + emptyCount b * r.untaught`), with the built `«稳存而隙不存»` 1870 and `«改而成隙则尽»` 1885. Passing fails by itself where teaching does not fit a tenure (`«不及任则持尽»` 658) or the quota is nothing (`«额零则持尽»` 677); no holder stays no holder (`«无持者不复»` 698, `hs : r.source = .members ∨ r.source = .none`). A statement that the loss falls on one that did not cause it: not found in what was read; the take is one sum of holders and others.
+
+**Q6.** Not found in what was read. A cohort enters at the quota, not in proportion to anything; there is no share. (The table's cell e says the same.)
+
+**The exact two-sided laws, in full.**
+
+```lean
+abbrev Band (r : Rule) (q : Nat) : Prop :=
+  r.teachingAge < r.tenure ∧ 1 ≤ q ∧ (q + leak r q) * r.tenure ≤ r.renewal
+
+theorem «稳者恒持当且仅当在带» {r : Rule} (hm : r.source = .members) {q L : Nat} (hL : 1 ≤ L) :
+    (∀ k, Held (run r always k (steady r q L))) ↔ Band r q
+
+theorem «隙之律» {r : Rule} (hm : r.source = .members) (hs : r.tenure = r.teachingAge + 1) {q L : Nat}
+    (hq : 1 ≤ q) (hL : 1 ≤ L) {b : List Bool} (hb : b.length = r.tenure) (hk : 1 ≤ heldCount b) :
+    (∀ n, Held (run r always n (strands r q b L))) ↔
+      heldCount b * (q + (r.untaught - r.strength * q)) + emptyCount b * r.untaught ≤ r.renewal
+```
+
+`leak r q := r.untaught - r.strength * q * (r.tenure - r.teachingAge)` (246); `steady` 251, `strands` 1613; `always` 234 is entrants on offer at every step and no revision; `Held` 237 is at least one holder. The other side of each is general too: `steady_ends` 872 and `«隙过生持至尽»` 1792 (gone at some step, held up to it).
+
+---
+
+## 6. `ContinuingRevision.lean`
+
+**Q1.** The fuel is rested on: every act uses some (`use` 72, `use_pos` 456). It is there by the going-on's own activity: a success at the next address enables one renewal (`execute` 48-68; `enabled_by_success` 502, `renew_needs_enabled` 488), and renewal returns `yield` to the fuel (line 66, `fuel := s.work.fuel - 1 + yield`). The yield is a parameter. The opening account: "The production relation, succession/retirement rule, stable Boolean contacts, faithful return and controller are supplied local laws" (24-25).
+
+**Q2.** The yield is credited with nothing in the model as its source. The account's own words: "The return is not creation from nothing: the counted installation is open to the productive relationship. No finite closed stock or arbitrary physical world is claimed to support unending production" (25-27). Cost is in statements: `step_conserves` 80, `trace_conserves` 111, `balanced` 452; a cycle uses nine (`word_use` 561).
+
+**Q3.** Yes within the going-on: success enables renewal, renewal returns fuel, fuel pays for the next revision and success. What is returned comes from beyond.
+
+**Q4.**
+- `repeats_iff` 576, exact, below: of one built seven-operation cycle (`word` 233), over every yield.
+- `cycles_at` 250: at yield `e + 9`, every number of cycles from `readyAt m u g 0`.
+- `continuing` 425: one actual unending run at yield nine, a built example ("One actual infinite Run under the supplied productive law and selected controller").
+- Necessary conditions along any run, general in the yield: `renew_recurs` 482, `success_recurs` 545 (premise: a `Run (P yield)` is given).
+
+Handed in: the yield; the controller (`choose` 129, "the policy is a disclosed premise", 135).
+
+**Q5.** The return cut: `no_run_without_return` 476 (no unending run of `P 0` under any controller), `cut_stops_next` 331; one extra use of fuel: `reserve_consumed` 367 (built). One going-on: who bears is not a question the model has.
+
+**Q6.** Carriers succeed one another (`unbounded_succession` 444); nothing multiplies and nothing is selected among. Not found in the file (read whole).
+
+**The exact two-sided law, in full.**
+
+```lean
+theorem repeats_iff (yield : Nat) :
+    (∃ s, ∀ k, Feasible (P yield) s (history k)) ↔ 9 ≤ yield
+```
+
+Docstring: "The cycle repeats without end exactly where the yield covers its use, at every yield: for every number of cycles from some configuration exactly where `9 ≤ yield`." Its left side is every finite number of cycles from some configuration, not an unending run; the unending run is the built `continuing` at yield nine.
+
+---
+
+## 7. `CoupledDrawers.lean`
+
+**Q1.** Several drawers draw on one level. What stands next is `G` of what all leave: a function handed in (`drawn` 105, `later` 113; for the laws above the need, the three premises of `section Gate` 431-434). The need `m` is met where what all leave is at least `m` (`stepCoupling` 66). What leaves the need is the drawers' own rules, and here the keeping is not handed in: it is concluded of every profile that is a best response (`Perfect` 126). What is handed in is the coupling: `c` added to each drawer's worth "for each step at which what all the drawers leave meets the need" (14-15), with nothing that gives it.
+
+**Q2.** What stands next comes from `G` (in the built `gatedRenewal` 656, `q` more at or above the need): from nothing, no giver. The coupling `c` comes from nothing. The cost of keeping is in the statements: leaving `b` of `a` forgoes drawing it (`Revises` 119-123, `a - b + later …`); "keeping adds `c` to its worth against the `m` it must leave" (27-28).
+
+**Q3.** Yes in this sense: the drawers rest on the level they leave or drain. What moves them to keep comes from beyond.
+
+**Q4.** No law of going on without end: every statement is over a horizon `N`, "nothing is valued after the horizon" (15-16). For every horizon, general laws:
+- `kept_above` 582: `gate : ∀ t x, x < m → G t x < m`, `holds : ∀ t x, m ≤ x → m ≤ G t x`, `regrows : ∀ t, G t 0 + m ≤ G t m`, `two : 1 < k`, `pos : 0 < m`, `above : m < c`, `perfect : Perfect G (fun _ _ _ => 0) rules k c m N`; every drawer at every step before `N` leaves exactly the need of an amount at least the need, and nothing of a smaller one.
+- `kept_levels` 639: `holds`, `one : 0 < k`, `start : m ≤ s`, `all : ∀ t, t < N → AllFollow rules k (keep m) t`; the level meets the need at every step up to `N`.
+- `keeping_perfect` 603: `gate`, `holds`, `regrows`, `two`, `pos`, `within : m ≤ c`; keeping the need is perfect.
+
+Handed in: the coupling `c` and its size against the need; the gate on `G`; no floor; the horizon.
+
+**Q5.** Below the need every best-response profile drains: `drains_below` 367 (`two : 1 < k`, `pos : 0 < m`, `below : c < m`, `perfect`; every drawer leaves nothing at every step before `N`, whatever `G`), `drain_perfect` 386. Under the drain a drawer after the first draws nothing (`drawn_drained` 307). One drawer keeps where several in turn drain at the same coupling: `one_keeps_several_drain` 692 (on `gatedRenewal`, `pos`, `below : c < m`, `keepingGains : 0 < c + q`, two steps). At once: `AtOnce.drain_perfect_iff` 895, `AtOnce.unpivotal_drain_perfect` 853, `AtOnce.Shores.drain_perfect` 1026 (two shores each below the need: the drain is perfect at every coupling, the need met at no step). A statement that the loss falls on one that did not cause it: not found in what was read.
+
+**Q6.** Not found in what was read. A rule is a best response, not a share.
+
+**The exact two-sided law, in full.** Four implications over one built renewal, not one iff; at `c = m` both profiles are perfect. `gated_threshold` 774:
+
+```lean
+theorem gated_threshold {q : Nat} (two : 1 < k) (pos : 0 < m) :
+    (c < m → ∀ rules, Perfect (gatedRenewal m q) (fun _ _ _ => 0) rules k c m N →
+      ∀ t, t < N → AllFollow rules k (fun _ => 0) t) ∧
+    (c ≤ m → Perfect (gatedRenewal m q) (fun _ _ _ => 0) (fun _ _ _ => 0) k c m N) ∧
+    (m ≤ c → Perfect (gatedRenewal m q) (fun _ _ _ => 0) (fun _ _ a => keep m a) k c m N) ∧
+    (m < c → ∀ rules, Perfect (gatedRenewal m q) (fun _ _ _ => 0) rules k c m N →
+      (∀ t, t < N → AllFollow rules k (keep m) t) ∧
+      ∀ s, m ≤ s → ∀ t, t < N → pass rules t 0 k (levels (gatedRenewal m q) rules k s t) = m)
+```
+
+The one iff in the file is of the drain being a best response, at once: `AtOnce.drain_perfect_iff` 895 (`pos : 0 < m`), and `AtOnce.drain_perfect_iff_reach` 948.
+
+---
+
+## 8. `ReadingsSpread.lean`: `Commons`
+
+**Q1.** The focal and the wide lines rest on a source (`requires` 761; `need` 764, five for a focal slot, one for the others); the dweller's line rests on a habitat. With `back = true` the source is there by the dweller's doing: "each fed dweller member gives it three" (docstring 681-682; `conduct` 707-708); with `back = false` "the source renews itself by three" (681; `conduct` 705-706). So in one of the two worlds what two lines rest on is given by a third line, a going-on in the model. The acts are supplied: "The acts are assigned by design" (79); "What is not derived: how a reading's act comes to be what it is" (115).
+
+**Q2.** The three units the dweller gives are taken from no condition: a dweller member takes only its own unit (684-685) and requires the habitat without taking from it. No cost of giving is stated. The habitat is renewed by nothing and is taken by a focal member that does not read the dweller (`clears` 660, `conduct` 701-702).
+
+**Q3.** No loop: the dweller keeps the source and rests on the habitat, not on anything the focal or wide lines give. The focal line can take what its keeper rests on.
+
+**Q4.** No general law of going on. Built examples: `keep_persists` 1167 (reading everything, either world, every line stands late), `cleared_spreads` 1133 (nothing coming back: the focal and wide lines stand late, the dweller's is removed). The file's general laws are of a share and one-sided: `Flow.supported_carriers_not_against` 378, `Flow.carriers_inactive_step` 399, `Flow.carriers_drawn_down` 421.
+
+**Q5.** Built examples. Where the dweller renewed the source and the focal line takes the habitat: `clearedBack_ends` 1180, the dweller's line removed from the second step, the focal from the third, the wide from the sixth, the population empty from the sixth on; `overdrawnBack_ends` 1252, every line removed by the third step. The wide line reads everything (`restLaw` 733, `readOf` 730) and draws one, and is removed. So the statements say that the loss falls on lines that did not take the habitat; that reading is in `conduct` and `readOf`, the theorems list the removals and do not use the word cause.
+
+**Q6.** Yes, built. "taking the habitat, a focal member passes its standing on to a second slot" (78-79; `conduct` 686-687): it multiplies. The narrow readings' count rises by selection proper across the first two steps (`cleared_spreads` 1137-1138, `clearedBack_ends` 1188-1189: discordance none, concordance positive), and where the loss returns the same spread ends with every line.
+
+**Exact two-sided law of going on against ending:** none found in what was read (the opening account says the closure iff, `kept_iff`, is in `ReadingsPersist`, not read).
+
+---
+
+## 9. `deeper/RelationalRenewal.lean` (outside the package)
+
+**Q1.** One condition, two formations. The condition is renewed while it supports the sustaining formation: `Law.level` 246-254 adds `L.renew` where `L.needG ≤ level L t`. The docstring: "a condition renewed by a formation that itself depends on it … Because renewal depends on the renewed condition, drawing it below that formation's support ends the renewal itself" (17-21). So what is rested on is there by the doing of one that rests on it. The amount is a number: `Law.renew` 238. The focal formation, while supported, draws `draw t` and contributes `contrib t`: supplied schedules (241-242).
+
+**Q2.** `renew` is added from nothing: nothing of the sustaining formation is lowered by it, and no cost of renewing or contributing is stated. (The table's cell d: "a giver is named, what it gives from is not." The Lean agrees.)
+
+**Q3.** Yes: the keeper rests on what it keeps. The focal formation may or may not depend on the condition (`needF = 0` is independence).
+
+**Q4.** A general law concluding going on without end:
+- `Law.within_renewal_renewing` 339 (with `within_renewal_sustains` 325): `within : ∀ t, L.draw t ≤ L.renew + L.contrib t`, `gStart : L.needG ≤ L.start`, `fStart : L.needF ≤ L.start`; `RenewingIn L.unfolding .focal ∧ (∀ t, L.unfolding.active t .focal) ∧ ∀ t, L.formed t = t`. Over every `Law`. `RenewingIn` 132 includes that the condition supports the sustaining formation at every step.
+- For any unfolding: `renewing_keeps_support` 149 (`renewing : RenewingIn U f`; supported at every step), which takes the renewing as its premise.
+- Built: `cultivation` 515 (`formation_does_not_decide` 523), `sharing` 538.
+
+Handed in: the number `renew`; that it is added exactly while the level is at or above `needG`; the schedules `draw` and `contrib` and the bound between them at every step.
+
+**Q5.** Drawing beyond renewal and contribution. `Law.overdraw_consuming` 421: `positive : 0 < L.needG`, `fWithin : L.needF ≤ L.needG`, `over : ∀ t, T0 ≤ t → L.renew + L.contrib t < L.draw t`; the focal formation is consuming and the sustaining formation is inactive from some step on, for ever. `Law.dependent_overdraw_ends_itself` 438: `fPositive : 0 < L.needF`, `fWithin`, `over`; the focal formation ends too, its formation bounded. `Law.no_return_below_support` 357: `noRestore : ∀ t, T ≤ t → L.contrib t ≤ L.draw t`, `below : L.level T < L.needG`; the level never rises above where it was. A general law that the loss falls on one that did not draw: `Law.independent_overdraw_persists` 503 (`independent : L.needF = 0`, `positive : 0 < L.needG`, `over`): the focal formation is active at every step and forms without bound "while the formation that depends on the condition loses it for ever"; the sustaining part draws nothing (`drawsPart` 310). And `Law.jointly_consuming` 571 (`within1 : ∀ t, d1 t ≤ renew`, `within2 : ∀ t, d2 t ≤ renew`, `joint : ∀ t, renew < d1 t + d2 t`, `positive : 0 < need`, `supported : need ≤ start`): each alone renewing, together consuming, "No single participant is the consumer".
+
+**Q6.** `formed` 265 counts units formed at active steps; formations do not multiply and nothing is selected. Not found in the file (read whole).
+
+**Exact two-sided law:** none. Two general one-sided laws whose premises are not complements: within at every step (339) and over at every step from some `T0` (421, 438); a schedule sometimes within and sometimes over is under neither. The classification is "exclusive and not exhaustive" (9-10; `renewing_not_consuming` 143, `fluctuating_neither` 217).
+
+---
+
+## The guesses, from this group
+
+**R1** (in the package, no general law of going on without end for goings-on among what each other rests on, except where the giving is a function of levels handed in).
+- For: in `PairFlow`, where two formations give each other from their own standings, going on is general only in `Routes.supported` 368, by construction, and otherwise built (`FailedRenewal.levels_sharing` 866); the general laws are a bound, a neutrality and an ending (`met_needs_within_start` 172, `runs_agree_until` 724, `stays_fallen` 788). `PairSelection`'s `Renewed` and `Commons`' courses are built. `CoupledDrawers` has no law beyond a horizon. The coupled levels are as R1 says (`Coupled.Indexed.fates` 2716, `ends_iff_below` 2687).
+- Against, in the package: `RuleRebuilding` concludes going on without end by general laws, two of them exact, where the keepers of a door draw on the level the door keeps and are taught by keepers: `«稳者恒持当且仅当在带»` 897, `«隙之律»` 1772, `«稳开二试»` 1368, `«域闭»` 1197 with `«域中任满皆新»` 1582. The renewal there is a constant with no giver, not a function of levels. `ReaderRebuilding`'s `«供则读者之域闭»` 209 is general for a reader rebuilt from the level it lifts, the supply on. `ContinuingRevision.repeats_iff` 576 is exact for one built cycle.
+- What decides it is how "among what each other rests on" is read. In `RuleRebuilding` and `ReaderRebuilding` it is one keeper and one level it keeps (in `RuleRebuilding` the keeper is cohorts that teach each other). If that counts, R1 as worded is false of the package. If it means several goings-on each of which gives to what another rests on, at a cost, this group has that only in `PairFlow`, and there R1 holds.
+
+**R2** (where the source is said and a cost is stated, the general laws are one-sided; no sufficient condition).
+- For: `PairFlow` and `PairSelection`, where the giver is a member and the cost is in the balance: the general laws are bounds and endings (`met_needs_within_start` 172, `stays_fallen` 788, `rise_le_slack_inflow` 2141, `Place.received_factor_zero` 2209). `ContinuingRevision`'s `renew_recurs` 482, `success_recurs` 545 and `no_run_without_return` 476 are of R2's two forms.
+- Against, depending on what "the source is said" covers: `ReaderRebuilding`'s `«供则读者之域闭»` 209 is a sufficient condition, with a supply on or off as source and the rebuild's cost on the level stated; the supply has no amount and bears no cost. `ContinuingRevision.repeats_iff` 576 has a sufficient side (`9 ≤ yield`), with the cost stated and the yield a parameter that nothing in the model gives.
+- Not found in what was read: a sufficient general law where what is given is taken from a giver's own standing.
+
+**R3** (`LineageRegimes.Handover` the nearest; no edge stated). `LineageRegimes` was not read by this reader, so nothing is said of it. From this group, bearing on "nearest": `RuleRebuilding` states, for a rule passed on by members, both outcomes with the edge exact (897, 1772), and sets a start with keepers beside a start without, each with its own exact test (`«稳开二试»` 1368; all four combinations occur, `«四境皆有»` 1942). What it does not have: the two starts are "two separately started states; the second is not reached from the first by this course" (77-78), and nothing multiplies or is selected between holders and others.
+
+**R4** (outside the package, at least one general two-ended law of a loop in which what is rested on is kept by what rests on it). `deeper/RelationalRenewal.lean` is such a loop (the condition is renewed while it supports the sustaining formation) with both ends general: `within_renewal_renewing` 339 and `overdraw_consuming` 421 with `dependent_overdraw_ends_itself` 438. They are two one-sided laws with a gap between their premises, not one exact law, and the renewal is a number handed in. So: for R4 if "two-ended" means both ends are general; against it if it means exact. Its opening account names `universal-ethics/generative-capacity/RenewingFormation.lean` as "the narrower law-class result" (36-38); not read.
+
+**R5** (in every place what keeps is a supplied function, a stipulated table of who is active, or a premise; nothing that keeps is derived from what it rests on).
+- For: the coupled levels (the giving is the argument `G`); `ContinuingRevision` (the yield a parameter, the controller "a disclosed premise"); `Commons` (the dweller's giving is a line of `conduct`, "assigned by design"); `RelationalRenewal` (`renew` a number, gated by the level); `PairSelection` (factors supplied; the webs' levels constants); `PairFlow` as to the renewal offered and the intention to give (supplied patterns, `Setting` 472).
+- Against, in part:
+  - `PairFlow`: who is active is not a table. `isActive` 486 is the standing meeting the need, and the renewal reads it.
+  - `ReaderRebuilding`: the keeper is a state variable rebuilt from the level it keeps, and its staying is a theorem (`«供则读者之域闭»` 209), as is its not returning (`«取于储者绝而不复»` 404). What is handed in is the supply being on, and the rule that a unit is made from a unit of the level.
+  - `RuleRebuilding`: the keepers are cohorts rebuilt by teaching, their staying exact in the rule's numbers (897, 1772); handed in are the renewal, the count who would come, entrants on offer, and the teaching as a formula.
+  - `CoupledDrawers`: keeping is concluded of every best-response profile (`kept_above` 582), not supposed; handed in is the coupling `c`, with no giver, and its size against the need.
+- So R5 does not hold of every place in this group as worded. In each place where the keeper's staying is derived, what feeds the level it keeps (a supply, a constant renewal, a coupling) is handed in with nothing in the model that gives it. Whether that is R5's point is a reading, not settled by the statements.
+
+**Against the frozen file's two ends.** "Already there" (a general law that states, exactly, when goings-on that pass along what comes from beyond them go on without end): not found in this group in that form. The nearest statements and what each hands in:
+
+| Statement | Exact? | General over | What passes along | Handed in |
+|---|---|---|---|---|
+| `Coupled.Indexed.ends_iff_below` 2687 | yes | every web of givings under mutual support within a band | nothing passes; givings read levels | the givings, the draws, the band; the threshold is read off the run |
+| `«稳者恒持当且仅当在带»` 897, `«隙之律»` 1772 | yes | every rule taught by members, from steady or gapped starts, entrants on offer, no revision | the rule, cohort to cohort | the renewal (no giver), the count who would come, the teaching formula |
+| `«域闭»` 1197 | no (sufficient) | every rule and region meeting `Fits`, every revision in `[P, Q]` | the rule, with revision | the same |
+| `«供则读者之域闭»` 209 | no (sufficient) | every span, count ≥ 1, set level ≥ 1 | the reader, rebuilt from the level it lifts | the supply being on, with no amount |
+| `ContinuingRevision.repeats_iff` 576 | yes | every yield, one built cycle | a reference, carrier to carrier | the yield, the controller |
+| `Stock.repeat_covered_iff` 319 (not on the list) | yes | every draw and replenish function, every course | nothing; one stock | what each act replenishes |
+| `Law.within_renewal_renewing` 339 (outside) | no (sufficient) | every `Law` | nothing; one condition | the number `renew`, the schedules |
+
+"Not sayable here" (R5 of every place read): not so in this group, by the four places above.
+
+---
+
+## Where the Lean differs from a cell's note
+
+- **`MutualActivation` and `Relay`, column g**: "Exactness comes from the general laws, whose premises these cases prove." For `MutualActivation` the premises of the band law are proved (`giving_rises` 3448, `band` 3457) and the two fates and two threshold values are stated by evaluation; the proof of `saves` (3470-3474) does not call `ends_iff_below`. For `Relay` the band law's premise is refuted, not proved: `threshold_beyond_band` 3625 has `∀ hi, 3 ≤ hi → ¬ Indexed.Band (pairGiving first second) (pairDraw 1 1) hi`. Its exactness is from the other general law, `ends_iff_below_within` 2984, which its proof does call (3673-3679), under the premise that the run stays within three.
+- **`ReaderRebuilding`, column g** ("The iff is over the four sources, not a level"): so in the Lean. The note does not mention that both ends under a standing supply are general (`«供则读者之域闭»` 209, `«取于储者绝而不复»` 404), though not joined into one iff.
+- **`CoupledDrawers`, column g** ("Implications, not one iff"): so in the Lean. Besides, every statement is over a horizon `N`; none is of going on without end.
+- **`ContinuingRevision`, column d** ("nothing in the model is its source"): so in the Lean's definitions. The opening account says more than the definitions do: "The return is not creation from nothing: the counted installation is open to the productive relationship" (25-27).
+- The other cells read for these rows (c, d, e, g of `PairFlow`, `PairSelection`, `RuleRebuilding`, `ReadingsSpread`, `RelationalRenewal`, the coupled levels) agree with the statements as read here.
+
+## Places met that are on no one's list here, and bear on the questions
+
+- **`B/Stock.lean`** (read: 1-60, 270-345, 443-462). `repeat_covered_iff` 319, a general exact law: `(∀ k, Covered draw replenish n (repeatCourse w k)) ↔ Covered draw replenish n w ∧ total w draw ≤ total w replenish`, "One course can be repeated any number of times from stock `n` exactly where its first pass is covered and its return covers its draw"; `product_repeat_iff` 336 for a cycle of any process run jointly with the stock (`cycle : Trace R x w x`); `cycles_need` 276 (necessary, in every balanced process); `Run.replenishes_of_draws` 449; `Run.draws_iff_replenishes` 456 (where the stock is bounded along the run, drawing and replenishment recur together). `ContinuingRevision`'s general laws are instances. What each act replenishes is a function handed in. The table lists it under "added", not as a row.
+- **`RegimeMargin.Coupled.Indexed.Recent`** 3018-3205 (declaration list and opening account only): a web in which each condition's giving also reads what each gave last; the bounded exact laws are said to hold of it (`Recent.keepsBelow` 3033).
+- **`B/Flow.lean`** (not read; cited): `Flow.Balances.breaks_beyond_inflow`, `stock_not_rises_over`, `GainlessOn`, `Flow.unsupported_childless`, `inflow`, `slack`, used by `PairFlow` 172-176 and `PairSelection` 2141-2158.
+- **`B/ReadingsPersist.lean`** (not read; two definitions located): `StandsLate` 421, `RemovesLine`, `Habitat`, and the closure iff `kept_iff` that `ReadingsSpread`'s opening account cites.
+- **`B/LineageDrawdown.lean`** (not read): `below_iff`, cited at `ReadingsSpread` 431.
+- **`B/Optimum.lean`** (not read): `InTurn.perfect_at_floors`, `AtOnce.drain_perfect_iff`, the uncoupled forms `CoupledDrawers` extends.
+- **`B/RegimeReals.lean`** (not read): named in `RegimeMargin`'s opening account (234-235) for convergence over the reals.
+- **`universal-ethics/generative-capacity/RenewingFormation.lean`** (not read): named in `RelationalRenewal` 36-38.

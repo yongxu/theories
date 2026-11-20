@@ -1,0 +1,280 @@
+# The read, group "outside the package": what these files state of things kept by goings-on
+
+*AI-written (Claude Fable, a reader in the workflow of board row DJ), 20 November 2026, 20:32 WIB. A read against the six questions of `FROZEN-THE-READ.md`. Nothing is proposed, no Lean was written, nothing was built or run. Every answer is from the Lean's statements and docstrings; where a proof was opened it is said. "Level", "giving", "keeper" are the frozen page's working names.*
+
+## What was read, and what was not
+
+Paths: `M/` is `/Users/ren/theories/experiments/market-generativity/meta-attractor/`, `R/` is `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/conditional/renewal/`, `G/` is `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/`.
+
+Read whole, every line (definitions, statements, docstrings; proofs passed over except where named):
+
+- `M/ReproductionNetwork.lean` 1-637, `M/CorrectionDependence.lean` 1-318, `M/ResponseCapacity.lean` 1-456, `M/CarrierDiagnosis.lean` 1-480, `M/CorrectionCommitment.lean` 1-352, `M/AdmissionRevision.lean` 1-339, `M/PopulationCorrection.lean` 1-694.
+- `G/RenewingFormation.lean` 1-641.
+- `R/RenewalBasics.lean` 1-232, `R/RenewalAccounting.lean` 1-312, `R/RenewalSufficiency.lean` 1-422, `R/RenewalClosure.lean` 1-485, `R/RenewalLink.lean` 1-383, `R/RenewalPremises.lean` 1-362.
+
+Read in part:
+
+- `R/RenewalCharacterization.lean`: 1-501 and 612-1053. Not read: 502-611, the body of the proof of `kept_through_window_has_population`.
+- `R/RenewalConfigurations.lean`: 1-219 and 340-539. Not read: 220-339 (helper lemmas `mem_aged_of_kept`, `agedN_empty`, `build`, `build_step`, `build_live`, `buildLength` and arithmetic; seen in the declaration list only).
+
+Seen only at the lines named (to state what an import supplies): `generative-basis/lean/GenerativeCore.lean` 19-37 (`Process`, `Enabled`, `Trace`); `generative-basis/lean/Depletion.lean` 32-36, 68-71; `M/CollectiveDestruction.lean` 3-15, 28-34, 163-167; `M/RecursiveSelection.lean` at five `↔` statement lines by grep; `conditional/ResourceContinuation.lean` 1-36, 143-163, 286-345; `conditional/SupportNecessity.lean` 255-267 and its declaration list; `conditional/RenewalExamples.lean` 1-40, 76-92 and its declaration list.
+
+Not read: `R/README.md`, `R/check.py`, the verification folders; the README files and Python of `M/`; the fourteen other Lean files of `M/`; `G/GenerativeComparison.lean` (imported by `RenewingFormation`) and the other files of `G/` (338 entries); the theory pages `COLLECTIVE-DESTRUCTIVE-ATTRACTORS.md` and `GENERATIVE-REGIMES.md` (as instructed). No proof was checked; standing (whether the files build today) was not looked at.
+
+**Imports of the package.** None of the sixteen files imports anything of `becoming/Becoming/`. Their imports are `Std`, `GenerativeCore` and `Depletion` (in `generative-basis/lean/`, beside the package, not in it), `SupportNecessity` (in `conditional/`), `RecursiveSelection`, `CollectiveDestruction`, `GenerativeComparison`, and each other. A grep of `becoming/Becoming/` for `SelfRenewing`, `renewal_closure`, `RenewsForever`, `ChannelLaw`, `exact_no_investment_viability`, `schedule_sufficiency`, `WearLaw`, `KeepsCapacity`, and for the eight file names, found nothing.
+
+**The table of 20 November.** Its cells for these rows (columns c, d, e, g) were compared after the Lean was read. They agree with the Lean except in two small places, said under place 1.
+
+---
+
+## Place 1. `conditional/renewal` (eight files, namespace `Generative.Conditional.Renewal`)
+
+**Mechanism supplied?** Yes. `ChannelLaw` (`RenewalAccounting` 41-45, "Supplied local law of a constraint–flow system") has four fields: `edge : Kind → Kind → Prop`, `span`, `demand`, `rate : Kind → Nat`. `RenewalPremises` 25-26: "The law itself, kinds, edges, spans, demands and rates, is the remaining supplied input. Deriving it from the generative core is roadmap Phase 4."
+
+**The model** (`RenewalAccounting`). A configuration is a reserve and a list of tokens, each a kind and the ticks it has left (`Token` 31, `Config` 36). One tick (`channelProcess` 141-145) with action `births : List Kind`: (1) `c'.tokens = aged c.tokens ++ formed law births`; (2) `c'.reserve + formation law births ≤ c.reserve + opened law.rate c.tokens`; (3) `∀ k, k ∈ births → ∃ tok, tok ∈ aged c.tokens ∧ law.edge tok.kind k`. `Live c` (148): some token has time left. `renewingProcess` (151-152): a tick with `Live c` before it.
+
+**Q1. What is rested on, and is its being there a going-on's doing?** A formation of kind `k` needs two things. A supporter: a token that is still there after this tick's aging, of a kind with an edge to `k` (clause 3; docstring 139-140: "Every formed token needs a support token that is still alive after aging, so it existed before this tick"). And provision: the formations' demand is paid from the reserve plus what live tokens open this tick (clause 2; `opened` 61-63, a live token of kind `k` contributes `rate k`). Both are another going-on's being or doing: tokens are formed, age and drop out (`aged` 50-53). Nothing here is a level whose giving is a function of levels handed in. What is handed in is how much a live token of each kind opens, how long it lasts, what forming it demands, and which kind can support which.
+
+**Q2. From where, and at what cost?** From beyond, and not as a quantity of the model. Header of `RenewalAccounting` 12-13: "The reserve law is the U1 law of `ResourceContinuation` with arrival bounded by what live tokens open; raw flow outside is unlimited." `RenewalClosure` 10-11: "No organization arrives from outside after time zero; raw flows are not represented here and may remain external." The cost stated is the cost of forming, charged to the common reserve: `opening_step` (167-170, premise: one step of `channelProcess law`): `openingPotential law c' + formation law births ≤ openingPotential law c + weighted law.rate (formed law births)`. No cost of giving falls on the giver: supporting is an existence condition (one supporter may support any number of formations), and opening comes out of a span that falls by one each tick whether or not anything is formed (`weighted_aged` 84-85).
+
+**Q3. Is there a loop?** Yes, two, and they are joined in one definition. Support: `DependenceClosed` (`RenewalClosure` 211-212), "every member depends on a member and supports a member". Provision: tokens are formed out of the reserve, and the reserve is fed only through what live tokens open. `SelfRenewing law B` (`RenewalCharacterization` 66-67) is `B ≠ [] ∧ SupportClosed law B ∧ formation law B ≤ spanOpening law B`, where `SupportClosed` (61-62) is `∀ k, k ∈ B → ∃ j, j ∈ B ∧ law.edge j k ∧ 2 ≤ law.span j` and `spanOpening` sums `rate k * span k`. The loop is found in histories and not only assumed: `late_occurrence_descends_from_realized_closure` (`RenewalClosure` 336-343) and `live_late_descends_from_realized_closure` (`RenewalLink` 288-296; premises: `X : Execution law`, `U` with `∀ k, k ∈ U`, `∀ k, law.span k ≤ D`, `Live (X.states t)`, `(U.length + 1) * D < t`) give a closed walk of support kinds each formed within the preceding `(U.length + 1) * D` ticks; `RenewalLink` 15-17 calls this "the timescale separation of Montévil and Mossio, here as a consequence rather than a definition". What the loop passes round comes from beyond it (Q2). A built example shows a provider outside every support closure: `danglingSupport` (894-898), `dangling_kind_outside_every_closure` (909-912), `dangling_support_renews_forever` (921); docstring 917-920: "Read only through support, a closure misses it. Read with provision as a second kind of dependence, `true` is generative for `false`."
+
+**Q4. General laws concluding going on without end.** All hold of every `ChannelLaw` meeting the premises; in all of them "going on" is that *some* history stays live, not that the history that occurs does.
+
+- `steady_renews` (`RenewalSufficiency` 226-231) and `steady_endless` (258-264). Premises: `B ≠ []`; `∀ k, k ∈ B → 0 < law.span k`; `∀ k, k ∈ B → law.span k ≤ N`; `∀ k, k ∈ B → ∃ j, j ∈ B ∧ law.edge j k ∧ 2 ≤ law.span j`; `formation law B ≤ spanOpening law B`. Conclusion: forming `B` on every tick from the steady configuration `⟨R, steady law B N⟩` is a renewing tick back to the same configuration, for any reserve `R`; hence an endless execution of `renewingProcess law`.
+- `balanced_closure_renews` (310-316): the same first four premises on `C`, and `∀ k, k ∈ C → law.demand k ≤ law.rate k * law.span k`.
+- `excess_supported_by_closure_renews` (343-351): `C ≠ []`; positive spans and the bound `N` on `C`; `0 < law.span q`; `law.span q ≤ N`; `C` support-closed with supporters of span at least two; `∃ j, j ∈ C ∧ law.edge j q ∧ 2 ≤ law.span j`; `law.demand q + 1 ≤ law.rate q * law.span q`. "The closure's own kinds may fall short; enough formations of the excess kind cover them."
+- `self_renewing_renews_forever` (`RenewalCharacterization` 196-198): `SelfRenewing law B → RenewsForever law`, where `RenewsForever law` (70-71) is `∃ H : History law, ∀ n, Live (H.states n)`.
+- `seeded_renewable` (`RenewalConfigurations` 355-357), of a configuration: `SelfRenewing law B`; `Seeded law c B` (214-215: each kind of `B` has a supporter in `c` with at least two ticks left); `(buildLength law B c + 1) * formation law B ≤ c.reserve`. Conclusion `Renewable law c` (43-44: some history from `c` stays live forever).
+- `renewable_of_more` (196-198): `Renewable law ⟨R, T⟩` and `R ≤ R'` give `Renewable law ⟨R', extra ++ T⟩`.
+
+Exact ("exactly where"):
+
+- **`renewal_closure_theorem`** (`RenewalCharacterization` 682-684). Premises: `law : ChannelLaw Kind`; `U : List Kind`; `complete : ∀ k, k ∈ U` (finitely many kinds). Statement: `RenewsForever law ↔ ∃ B, SelfRenewing law B`. Docstring 678-681: "With finitely many kinds, a law admits a history that renews forever exactly when it has a nonempty population of kinds, closed under support by constraints that outlast a tick, whose tokens open over their spans at least what forming them demands."
+- **`renewal_keeping_theorem`** (703-705). Same premises and any `K : Kind → Prop`: `KeepsForever law K ↔ ∃ B, SelfRenewing law B ∧ ∃ k, k ∈ B ∧ K k ∧ 0 < law.span k`, with `KeepsForever` (386-387) `∃ H : History law, ∀ n, Keeps K (H.states n)`.
+- `renewable_iff_step` (`RenewalConfigurations` 121-123), no premise: `Renewable law c ↔ Live c ∧ ∃ births c', (channelProcess law).step c births c' ∧ Renewable law c'`. A recursion, not a condition read off the configuration; `renewability_not_function_of_reserve_and_kinds` (474-476) and `renewability_not_function_of_tokens` (483-485), both of the built law `closedOpenBalanced`, say it is no function of the reserve and kinds present, nor of the tokens alone.
+
+The other end of the same law, for every history: `no_self_renewing_population_deadline` (741-745; premises: `U` complete, `¬ ∃ B, SelfRenewing law B`, any `H : History law`): `∃ t, t ≤ H.settle + (openingPotential law (H.states (H.settle + renewalWindow law U)) + 2) * renewalWindow law U ∧ ¬ Live (H.states t)`. With the further premise `∀ k, 1 ≤ law.demand k`, `no_self_renewing_population_explicit_deadline` (853-859) bounds the time from the law and the initial configuration alone. The premises are shown needed by built examples: `infinitely_many_kinds_break_the_equivalence` (`RenewalPremises` 139-141) and `zero_demand_defeats_initial_deadline` (331-334).
+
+**What is handed in that would have to be someone's doing.** (a) Which kinds are formed on each tick: `births` is the free action of the process, and the laws are existential over histories. `RenewalSufficiency` 24-25: "These are possibility results under supplied laws. They do not say a system reaches the steady configuration, nor that it would be favorable to." `RenewalCharacterization` 48-49: "Nothing here says which history occurs, or that continuation is favorable." (b) The four fields of the law. (c) The flow a live token opens, unlimited and outside. (d) The steady configuration itself, or a seeding with enough reserve: `renewability_not_generated` (`RenewalConfigurations` 129-130; premise `¬ Renewable law (H.states 0)`; conclusion `∀ n, ¬ Renewable law (H.states n)`), header 14-18: "A history can keep the possibility it starts with, or lose it, but it cannot create it. Only something added from outside, held provision or formed tokens, can".
+
+**Q5. What ends it, and who bears that?** Falling short: `short_kinds_cannot_renew_forever` (`RenewalAccounting` 260-264; premises `∀ k, law.span k ≤ D` and `∀ k, law.rate k * law.span k + 1 ≤ law.demand k`), "whatever the support edges"; `closed_open_short_cannot_renew_forever` (303-305, a built example: "Closure plus openness is not sufficient"). No support cycle: `acyclic_support_deadline` (`RenewalClosure` 393-397). No self-renewing population: the deadlines above. Nothing alive: `dead_stays_dead` (`RenewalConfigurations` 64-65). A choice: `keeping_and_losing_renewal` (494-499, a built example), "forming a token keeps renewability, while forming nothing loses it for good. The second successor holds more reserve than the first." Who bears: `lapsing_correction_cannot_be_kept` (982-983, a built example): a closure that exactly renews itself supports a correction kind that falls short, and no history keeps that kind. A statement that the loss falls on one that did not cause it: not found in what was read.
+
+**Q6. Does anything multiply, or get selected?** Tokens are counted by lists and a kind may be formed many times a tick; `excess_population` (366-369) uses `formation law C` repeats of an excess kind, and `potential_growth` (791-794; premises `∀ k, law.rate k ≤ A`, `∀ k, law.span k ≤ D`, `∀ k, 1 ≤ law.demand k`) bounds the opening potential's growth by a factor `1 + A * D` a tick. Nothing is selected: `RenewalConfigurations` 30-31, "Nothing here ranks histories or says which should be kept." A selection among kinds that open at least their demand and kinds that do not: not found in what was read.
+
+**Against the table.** Cell d ("A giver exists, a source does not"): the Lean's docstring does name the source, an unlimited raw flow outside; it is right that it is no quantity of the model. Cell g ("without one every history stops by an explicit time (positive demands)"): the deadline of 741-745 needs no premise on demands; positive demands are needed only for the deadline read from the initial configuration (853-859).
+
+---
+
+## Place 2. `G/RenewingFormation.lean`
+
+**Mechanism supplied?** Yes: `WearLaw` (58-62, "Supplied local law: how formation pressure changes the renewing organization") with `degrade : Nat → Nat → Nat` and three laws: `keep : ∀ r d, d ≤ r → degrade r d = r`; `wear : ∀ r d, r < d → 0 < r → degrade r d < r`; `bounded : ∀ r d, degrade r d ≤ r`. The pressure is a schedule `demand : Nat → Nat` handed in. Imports `GenerativeComparison` (same folder); nothing of the package.
+
+**Q1.** Formation rests on `stock + renew` (`formedAt` 65: `min d (c.stock + c.renew)`). `renew` is a number in the state, added every step (`next` 67-68). The header (6-10) calls it "an organization that restores those conditions at a rate" and says "These are differentiated aspects of one history, not independent owners exchanging resources." In the Lean it is a rate whose change is the supplied `degrade`; it is not a going-on with needs of its own.
+
+**Q2.** From nothing in the model: `renew` is added with no source. The renewer's cost appears only beyond the rate: header 12-14, "formation pressure within the renewal rate leaves the renewing organization intact; pressure beyond it draws on that organization and reduces its rate, which never recovers"; in statements, the `wear` field, `renewal_never_grows` (134-135), `renewal_loss_persists` (142-143), `beyond_loses_capacity_at_once` (494-496; premises `1 ≤ c0.renew`, `c0.renew < demand 0`).
+
+**Q3.** No loop. Nothing that forms gives to the rate; header 29-30: "更多 or rising complexity, which the law excludes by never letting renewal grow".
+
+**Q4.** General over every `WearLaw`, start and schedule:
+
+- `within_renewal_ceaseless` (178-179). Premise `WithinRenewal c0 demand` (90-91): `∀ n, 1 ≤ demand n ∧ demand n ≤ c0.renew`. Conclusion `Ceaseless law c0 demand` (82-83): `∀ n, 0 < formed law c0 demand n`. With it `within_renewal_invariant` (151-155): the rate stays, the stock does not fall, the whole pressure is formed.
+- `keeps_capacity_of_within` (469-470). Premise `∀ n, demand n ≤ c0.renew`. Conclusion `KeepsCapacity law c0 demand` (86-87): `∀ n, (path law c0 demand n).renew = c0.renew`.
+
+Exact: **`keeps_capacity_iff`** (480-482). Premise `1 ≤ c0.renew`. Statement: `KeepsCapacity law c0 demand ↔ ∀ n, demand n ≤ c0.renew`. This is exact of the rate being kept, not of formation going on. For `Ceaseless` there are two one-sided laws (178 and `beyond_current_not_ceaseless` 270-271, premise `BeyondCurrent law c0 demand`: `∀ n, (path law c0 demand n).renew < demand n`) and built examples between them: `wears_yet_ceaseless` (527-529), `rest_keeps_capacity_not_ceaseless` (507-508).
+
+Handed in: the schedule of pressure (it answers to nothing in the state), the rate, the wear law.
+
+**Q5.** `beyond_current_ceases` (257-259; premise `BeyondCurrent law c0 demand`): `∀ n, budget c0 ≤ n → formed law c0 demand n = 0`, with `budget c = c.stock + tri c.renew` (130). Who bears is stated: `consuming_part_ends_otherwise_ceaseless_formation` (359-363; premises `WithinRenewal c0 own`; `∀ n, c0.renew < other n`; `∀ n, share n ≤ formed law c0 (fun k => own k + other k) n`): `Ceaseless law c0 own ∧ ∀ n, budget c0 ≤ n → share n = 0`. `jointly_exceeding_parts_end_shared_formation` (370-375; premises `WithinRenewal c0 own`, `WithinRenewal c0 other`, `BeyondRenewal c0 (fun k => own k + other k)`, the same allocation bound): both parts ceaseless alone, every share of the joint formation ends. Header 45-46: "The sharper relation is the ending of shared formation that did not itself exceed renewal."
+
+**Q6.** Nothing multiplies. No selection is in the model. A count that would favour the consuming course is stated: `consuming_forms_more_first` (422-428; premises `1 ≤ c0.stock`, `1 ≤ c0.renew`): the surge has formed more after one step and less after the budget.
+
+---
+
+## Place 3. `M/ReproductionNetwork.lean`
+
+**Mechanism supplied?** Yes: `Network` (36-42) with `roles`, `threshold`, `wear`, `capacity : ι → Nat`, `output : ι → ι → Nat`. Header 3-6: "Conversion, replacement, thresholds and possible interventions remain supplied laws." Imports `GenerativeCore`; nothing of the package.
+
+**Q1.** Each role's stock rests on what the other roles give it while they are at or above their own thresholds: `incoming` (44-45) `total p.roles fun i => if p.threshold i ≤ s i then p.output i j else 0`; `advance` (47-48) `min (p.capacity j) (s j - p.wear j + incoming p s j)`. Header: "Their capacity to operate depends on stocks maintained by other roles." So what is needed is given by other goings-on in the model, and who gives is read from the givers' own stocks; how much each gives is the table `output`.
+
+**Q2.** What is given comes out of a common `material`, refilled by a `Supply` that is the action of the process: `outcome` (145-148) `material := s.material - demand p s.stock + a.material`; `process` (150-151). The giver's own stock is not debited. Cost in statements: `network_accounting` (122-124), `full_material_accounting` (153-157; premise `Ready p s`). `myopic_retention_prefers_no_return` (542-543, for the four built arrangements, every state): the arrangement that returns nothing keeps at least as much material after one round; its docstring: "a supplied one-round material-retention objective, not an ethical comparison".
+
+**Q3.** Yes. In `pair` (227-233) each role gives to the other; in `arrangement .ring` (366) each to the next. The keeper rests on what those it keeps give. Material and parts come from beyond the roles. A second loop: `admittedRule` (570-573) refuses the arrangement that returns nothing only while stocks 0 and 2 are at least 2, and those stocks are kept by the arrangements it admits (`admission_reproduced` 583-585). Its docstring: "It has no permanent protection when either represented authorization capacity is absent."
+
+**Q4.** General over every `Network`:
+
+- `maintenance_history` (92-94). Premises: `Maintenance p floor selected` (58-63), that is `∀ j ∈ p.roles, floor j ≤ p.capacity j`; `∀ i ∈ p.roles, selected i = true → p.threshold i ≤ floor i`; `∀ j ∈ p.roles, floor j ≤ floor j - p.wear j + minimumIncoming p selected j`; and `Box p floor s` (53-54): `∀ i ∈ p.roles, floor i ≤ s i ∧ s i ≤ p.capacity i`. Conclusion: `Box p floor (stockHistory p s t)` for every `t`. At this level material is not in the state.
+- `supported_history` (199-201) and `actual_history` (206-209). Premises: the same certificate and `Supported p floor s` (174-176): `Box p floor s.stock ∧ 0 < p.roles.length ∧ p.roles.length ≤ s.parts ∧ maximumDemand p ≤ s.material`. Conclusion: `Supported` at every time, as a trace of `process p`, under the supply `supplied p = ⟨p.roles.length, maximumDemand p⟩` (172) at every step.
+
+Of the four built arrangements: `changing_history_established` (529-532; premises `Established s` and `∀ t u, Established u → choose t u ≠ .broken`); `admission_reproduced` (583-585; premise `Established s`, any proposals).
+
+Exact: no law of going on against ending. `arrangement_certificate_iff` (373-374) is `Maintenance (arrangement kind) (fun _ => 2) (fun _ => true) ↔ kind ≠ .broken`: an iff on the certificate, for four built arrangements. A general law of ending: not found in what was read.
+
+Handed in: the supply at every step (enough for the largest possible demand); the table of what each gives; the thresholds; the choice of arrangement; the admission rule's form.
+
+**Q5.** Built examples only: `severed_pair_loses_both` (288), `unsupported_revision_breaks_reproduction` (404), `actual_myopic_loss` (559-562), `weak_authorization_allows_failure` (618-620); `cold_fixed` (277) and `no_eventual_joint_activation` (268-269) for a start that never reaches the floor. In `cutPair` (285-286) one direction of giving is cut and both stocks are lost; no statement says on whom the loss falls. Not found in what was read.
+
+**Q6.** Nothing multiplies (`generation` is a counter). A selection among arrangements that return and one that does not is stated: `myopic_retention_prefers_no_return`, `myopic_revision_is_strict_initially` (555-556), and its course `actual_myopic_loss` (a built example: stocks to zero in three cycles, material 41).
+
+---
+
+## Place 4. `M/AdmissionRevision.lean`
+
+**Mechanism supplied?** Yes. Header 3-4: "The read law, finite operation class, fallback and target floor remain supplied." Imports `ReproductionNetwork`; nothing of the package.
+
+**Q1 to Q3.** Inherited from the four-role installation of place 3. Added: a criterion read from a trial, `choose loss s` (17-18), which withholds (`.broken`) when every stock is at least `2 + loss i` and returns (`.separate`) otherwise; a record costs one material (`recordBody` 59-60). The criterion reads the stocks it governs and operates only while they are `Established` (`process`, `.operate` 93-95).
+
+**Q4.** `learned_preservation` (41-43). Premises: `∀ i, 1 ≤ loss i`; `Established s`. Conclusion: `Established (learnedHistory loss s t)` for every `t`. One-sided; a law of the built installation, general in the loss. `alternating_stock_for_all_time` (221-223) is a built course. Exact: none.
+
+**Q5.** A built course: `misleading_reading_licenses_actual_loss` (247-249), `damaged_criterion_cannot_operate` (258-259), `equipment_survives_while_admission_fails` (265-267).
+
+**Q6.** Nothing multiplies. `finite_material_advantage` (242-244, built numbers): the course with withholding holds 31 material against 23.
+
+---
+
+## Place 5. `M/CorrectionDependence.lean`
+
+**Mechanism supplied?** Yes. Header 3-8: "Harm, physical laws, truthful reports and authority are supplied correspondences." Imports `Std` only. Static: there is no course in time.
+
+**Q1.** Being able to stop without loss rests on a reserve covering the obligation (`Funded` 18; `exitLoss` 16). The reserve is there by a plan's provision (`extend` 32-33, `Plan.provision` 191): a doing, with a cost.
+
+**Q2.** From the giver's own receipt: `taskScore` (199-201) is `8 - provision + (if stops … then 0 else 4)`; comment 187-189, "Provision really leaves that receipt." Cost in statements: `extension_funded_iff_minimum_provision` (119-120), `funding_cost_is_unavoidable` (124-125), `costly_correction_has_real_task_conflict` (210-213, built numbers 5 against 12).
+
+**Q3.** No loop found in what was read: nothing comes back from the correction to what provisions it.
+
+**Q4.** No law of going on without end: not found in what was read (the file has no history). Exact static laws: `zero_loss_for_every_positive_harm_iff_funded` (82-83): `(∀ h, 0 < h → actualLoss s h h true true = 0) ↔ Funded s`; `extension_funded_iff_minimum_provision`: `Funded (extend s d f) ↔ neededProvision s d ≤ f`; `every_selection_within_iff_total_within` (170-171); `transfer_funded_exact` (306-308; premises `relief ≤ s.obligation`, `cost ≤ s.reserve`).
+
+**Q5.** Harm left standing: `every_unrestricted_optimum_is_unfunded_and_harmful` (231-234). On whom: "Harm … supplied correspondences"; not stated.
+
+**Q6.** Selection, yes, by a supplied score: `entrenched_is_unrestricted_best` (226), and 231-234: every plan best by task score provisions nothing. Among `Admissible` plans the provisioning one is best (`prepared_is_best_admissible_task_score` 268-269). Nothing multiplies.
+
+---
+
+## Place 6. `M/CorrectionCommitment.lean`
+
+**Mechanism supplied?** Yes. Header 3-6: "The contract is a supplied institution within the shared history, not a derived moral motivation." Imports `CorrectionDependence`. Static.
+
+**Q1, Q2.** The provisioning plan's being best rests on a posted stake and on an audit that tells the plans apart (`Separates` 27-29). The stake comes from one wealth, with the exit reserve and the audit: `jointly_fundable_deterrence_exact` (280-284; premise `exitReserve + auditCost ≤ wealth`): `(∃ f, exitReserve + auditCost + f ≤ wealth ∧ Margin gain good bad f) ↔ Margin gain good bad (wealth - exitReserve - auditCost)`. `settlement_conserves_posted_stake` (170-171).
+
+**Q3.** No loop in time found. What undoes it: `lost_custody_restores_old_incentive` (327-328), `internal_transfers_do_not_deter` (313-314).
+
+**Q4.** No law of going on without end: not found (static). Exact, of what is selected: `every_best_passes_iff_separation` (89-90): `(∀ p, Best n g b f p → passes p = true) ↔ Separates n g b f`.
+
+**Q5, Q6.** Selection is the subject (`Best` 24-25). `correction_incentive_does_not_ensure_participation` (339-340, built numbers). Nothing multiplies.
+
+---
+
+## Place 7. `M/ResponseCapacity.lean`
+
+**Mechanism supplied?** Yes. Header 3-6: "All flow laws and correspondence to actual harmful demands remain supplied… Zero support ends its represented organization; rebuilding from zero is outside its law." Imports `Std` only.
+
+Two models. First (9-16): `support` moved by two handed-in sequences `repair` and `loss`, zero absorbing. Second (171-183): `State` with `response` and `support`; `step demand investment s` (176-179) leaves `s` unchanged if `s.support = 0`, else `response := s.response + 2*investment - missed demand s.response` and `support := s.support + min demand s.response - (missed demand s.response + investment)`.
+
+**Q1.** First model: support rests on a repair that is a function of time handed in. Second model: support is refilled by the demand the response meets, and the response is built from support by investment and worn by misses. Comment 167-170: "successful responses replenish support, deadline misses consume it and impair later response, and investment uses current support to develop response capacity."
+
+**Q2.** Second model: what refills support is the demand met, and `demand` is a constant handed in. Investment is taken out of support: `immediate_support_prefers_no_investment` (188-189): `(step demand investment s).support ≤ (step demand 0 s).support`; `investment_has_real_opportunity_cost` (193-194, a built step).
+
+**Q3.** Yes, in the second model: support and response each rest on the other.
+
+**Q4.**
+
+- **`exact_no_investment_viability`** (318-320), no premise beyond `demand` and `s`: `(∀ t, 0 < (run demand (fun _ _ => 0) s t).support) ↔ 0 < s.support ∧ demand ≤ s.response`. Exact, for the policy that never invests. On the going-on side nothing is rebuilt: `full_response_history` (249-251; premises `0 < s.support`, `demand ≤ s.response`): the state at `t` is `⟨s.response, s.support + demand*t⟩`.
+- `expansion_margin` (369-373; premises `0 < s.support`, `demand ≤ s.response`): staying alive under added demand and added response `↔ addedDemand ≤ (s.response - demand) + addedResponse`.
+- `positive_iff_every_prefix` (45-46), first model, any `initial`, `repair`, `loss`: `0 < support initial repair loss t ↔ ∀ j, j ≤ t → 0 < balance initial repair loss j`.
+- `one_step_recovery_iff` (345-351; premises `0 < s.support`, `s.response < demand`): an investment within support that leaves support positive and covers demand next step exists `↔ missed demand s.response ≤ s.support ∧ 2*missed demand s.response < s.support + s.response`. Exact for one step.
+
+For a policy that invests, a law of going on without end: not found in what was read; `established_response_keeps_working` (264-265) is a built course.
+
+Handed in: the demand; the policy; the two conversion rates (two response per unit invested, one support per unit of demand met).
+
+**Q5.** `finite_failure_from_persistent_net_loss` (108-110; premise `∀ j, repair (start+j) + 1 ≤ loss (start+j)`); `no_investment_insufficient_response_eventually_halts` (289-291; premise `s.response < demand`); `loss_of_support_absorbing` (185-186); `irreversible_failure_even_if_balance_recovers` (92-95, built). One state bears it; nothing on who did not cause it.
+
+**Q6.** Selection: `LocallyOptimal` (385-388), `no_investment_locally_optimal` (390-391), and `all_locally_optimal_policies_eventually_halt` (438-441; premises `LocallyOptimal demand policy s`, `s.response < demand`): `∃ t, ∀ u, (run demand policy s (t+u)).support = 0`. Every policy chosen for the most support next step never invests while alive, and halts where the response is short. Nothing multiplies.
+
+---
+
+## Place 8. `M/CarrierDiagnosis.lean`
+
+**Mechanism supplied?** Yes. Header 3-7: "A supplied successor recipe changes carrier yield between two and three… Material conversion, faithful sensing, route isolation and supply remain local laws." Imports `RecursiveSelection`; nothing of the package. One built model with fixed numbers (threshold 3, ceiling 8, yield 2 or 3, wear 1); its laws are general over its states.
+
+**Q1.** A `condition` rests on what the present carrier returns: `emitted` (38) `if 3 ≤ s.condition then capacity s else 0`; `outcome` (48-53) `condition := min 8 (s.condition - 1 + returned i.cut s)`, with the carrier replaced at every cycle (`carrier := s.carrier+1`, `rich := !s.rich`, `parts := s.parts-1+i.parts`). The carrier emits only while the condition is at least 3.
+
+**Q2.** From a `feed` stock, `feed := s.feed - emitted s + i.feed`, refilled by an `Input` that is the action (`ordinary = ⟨1, 3, false⟩` 59). Cost in statements: `resource_accounting` (242-244; premise `Ready i s`), `replacement_accounting` (251-253), `repair_accounting` (292-294).
+
+**Q3.** Yes: the condition is kept by carriers that need the condition to emit. Feed and parts come from beyond.
+
+**Q4.** `recurrence_with_variant_carriers` (146-149). Premise `Stable s` (62-63): `3 ≤ s.condition ∧ s.condition ≤ 8 ∧ 0 < s.parts ∧ 3 ≤ s.feed`. Conclusion, for every `t`, under the `ordinary` input at every cycle: `Stable (recurring s t) ∧ (recurring s t).carrier = s.carrier+t ∧ (recurring s t).source = s.source`. `actual_recurring_trace` (167-168) gives it as a trace. `diagnosis_then_recurrence` (383-385; premise `Prepared s`, 302-304). One-sided. Exact: none in this file. Handed in: one part and three feed arriving every cycle; the successor recipe.
+
+**Q5.** `empty_feed_blocks` (259-260), `no_advance_funding` (266), and built seeds (`identification_without_repair_fails` 462, `funding_without_material_fails` 466). Who bears: not found in what was read.
+
+**Q6.** Carriers succeed one another, one at a time; nothing multiplies and nothing is selected here.
+
+---
+
+## Place 9. `M/PopulationCorrection.lean`
+
+**Mechanism supplied?** Yes. Header 3-6: "Repertoire, realized receipts, response law and renewal remain supplied." The payoff is `6 + CollectiveDestruction.utility 2 1 (if active then 3 else 0) others race` (17-18). Imports `CollectiveDestruction`; nothing of the package.
+
+**The model.** `State` (9-12): `renewing` (how many of `N` contracts renew), `reserve`, `capacity`. `next N fee cap k s` (39-44) with `active := funded fee s` (`fee ≤ s.reserve`, 15): `renewing := allocated N k active s.renewing` (33-34: `min N (r + k)` if active, else `r - k`); `reserve := min fee (s.reserve - (if active then fee else 0) + inflow N active s.renewing)`, with `inflow` (36-37) `r + if active then 3 * (N - r) else 0`; `capacity := min cap (s.capacity + s.renewing - (N - s.renewing))`.
+
+**Q1.** The shared capacity rests on more contracts renewing than not. Which way revising contracts go rests on the correction reserve being funded. The reserve rests on what the contracts pay in. So both things rested on are kept by the doings of the contracts, and which contracts renew is set by the reserve. Header: "an internally financed correction reserve."
+
+**Q2.** From the contracts' own receipts: `operating_receipts_accounted` (624-625): `grossReceipts N r = privateReceipts N r active + inflow N active r`; `treasury_accounted` (632-634). The cost to the one who renews is stated: `strict_revision_advantage` (24-25): `payoff active others active < payoff active others (!active)`, so with the reserve unfunded racing pays strictly more, for every count of others. The gross receipts themselves (7 a renewing contract, 8 another, 617) are numbers from nowhere in the model.
+
+**Q3.** Yes: funded, revisions go to renewing, the inflow covers the fee, and it stays funded.
+
+**Q4.** General over every `N`, `fee`, `cap`, schedule `k` and state `s`:
+
+- `correction_stays_funded` (94-96). Premises `s.renewing ≤ N`, `fee ≤ N`, `fee ≤ s.reserve`. Conclusion `fee ≤ (history N fee cap k s t).reserve` for every `t`.
+- `funded_constructive_region_reached` (328-333). Premises `1 ≤ N`, `fee ≤ N`, `s.renewing ≤ N`, `∀ t, 1 ≤ k t`, `fee ≤ s.reserve`. Conclusion `∃ t, ∀ u, renewing = N ∧ fee ≤ reserve ∧ cap ≤ capacity` at `t+u`.
+- `schedule_sufficiency_is_constructive` (553-558). Premises `1 ≤ N`, `s.renewing ≤ N`, `fee ≤ N`, `∀ t, 1 ≤ k t`, `fee ≤ s.reserve + available k s.renewing s.renewing`. Same conclusion. `schedule_sufficiency_reaches_full_state` (576-579), same premises: `∃ t, ∀ u, history N fee cap k s (t+u) = ⟨N, fee, cap⟩`.
+
+Exact, in two statements with complementary premises:
+
+- **`schedule_sufficiency_is_constructive`** as above, and **`schedule_shortfall_is_destructive`** (524-529). Premises `1 ≤ N`, `s.renewing ≤ N`, `fee ≤ N`, `∀ t, 1 ≤ k t`, `s.reserve + available k s.renewing s.renewing < fee`. Conclusion `∃ t, ∀ u, renewing = 0 ∧ reserve < fee ∧ capacity = 0` at `t+u`.
+- **`exact_schedule_activation_boundary`** (504-507). Premises `s.renewing ≤ N`, `fee ≤ N`, `∀ t, 1 ≤ k t`. Statement: `(∃ t, fee ≤ (history N fee cap k s t).reserve) ↔ fee ≤ s.reserve + available k s.renewing s.renewing`. Here `available` (385-387) sums `offCount` (381-383), the count still renewing at each period on the unfunded ledger. `exact_unit_speed_activation_boundary` (231-234) is the case `k = 1`: `↔ fee ≤ s.reserve + triangle s.renewing`.
+
+So every course of this model ends at `⟨N, fee, cap⟩` or at no renewing and no capacity, by one inequality on the start and the schedule. The margin at the going-on end is exact too: `all_renewing_leak_tolerance` (653-655; premises `0 < fee`, `s.reserve = fee`, `s.renewing = N`): `fee ≤ (leakingNext N fee cap k leak s).reserve ↔ fee + leak ≤ N`.
+
+Handed in: the schedule `k` of how many revise each period; that every reviser goes the locally better way (`allocated`; `revised_slot_is_optimal` 85-88 ties it to the payoff); the fee, the contribution rates 1 and 3, the receipts, the payoff constants; a fixed `N`; any top-up (`exact_schedule_topup` 516-519).
+
+**Q5.** `destructive_region_reached` (282-286; premises `1 ≤ N`, `∀ t, 1 ≤ k t`, `Doomed fee s`: `s.reserve + triangle s.renewing < fee`); `destructive_region_absorbing` (594-595; premise `B < fee`). The capacity lost is shared. `unprotected_collective_loss` (28-29; premise `3 ≤ N`): `payoff false ((N : Int) - 1) true < payoff false 0 false`. A statement that the loss falls on one that did not cause it: not found in what was read.
+
+**Q6.** Selected, yes: each revising slot takes the action that pays it more (`locally_optimal_revision` 20-21, `revised_slot_is_optimal`), so the count of those that pay in rises by `k` a period when the reserve is funded and falls by `k` when it is not. `faster_replacement_reduces_available` (398-399; premise `∀ j, slow j ≤ fast j`): faster revision leaves less to reach the first funding; `growth_closes_bootstrap` (350-351) against `slow_bootstraps` (348), built courses. The number of contracts is fixed; nothing multiplies.
+
+---
+
+## The guesses
+
+**R1** (in the package, going on without end for goings-on among what each other rests on is general only where the giving is a function of levels handed in). This group is outside the package and cannot test it. One fact bears: none of these files is imported by, or named in, the package (grep above), so whatever they state is not in the package through them.
+
+**R2** (where a source is said and a cost stated, the general laws are one-sided; no sufficient condition).
+*Against, outside the package.* `renewal_closure_theorem` and `self_renewing_renews_forever` (place 1) are sufficient and exact, with the cost of forming in `opening_step`. `schedule_sufficiency_is_constructive` with `schedule_shortfall_is_destructive` (place 9) are exact, with the source in `operating_receipts_accounted` and the cost in `strict_revision_advantage`. `maintenance_history` and `supported_history` (place 3) and `recurrence_with_variant_carriers` (place 8) are sufficient conditions with accounting statements beside them.
+*For.* In every one of these the source is beyond the family and never fails: an unlimited outside flow (place 1), a supply at every step (places 3, 8), receipts from nowhere (place 9), a demand constant (place 7). At the level of a configuration place 1 is one-sided in the guess's direction: `renewability_not_generated`, and "Only something added from outside … can". Where the rate has no source at all (place 2) the law of formation going on is one-sided.
+
+**R3** (`LineageRegimes.Handover` is the nearest thing to the two ways as two built families, with no edge stated). Not in this group. What this group has that the guess says is missing there: place 9 states both ends as general laws of one model with the edge exact; place 1 states both ends of a law class with the edge exact.
+
+**R4** (outside the package, at least one general two-ended law of a loop in which what is rested on is kept by what rests on it).
+*For.* Three statements.
+(i) `renewal_closure_theorem` (place 1): for every `ChannelLaw` with finitely many kinds, some history stays live forever exactly where a self-renewing population exists; without one, every history ends by a stated time. The loop is in the definition (support closed; forming paid from what the formed open) and is recovered from histories (`live_late_descends_from_realized_closure`).
+(ii) `schedule_sufficiency_is_constructive`, `schedule_shortfall_is_destructive`, `exact_schedule_activation_boundary` (place 9): a reserve kept by the contracts whose revisions it turns; every course goes one way or the other, by one inequality.
+(iii) `exact_no_investment_viability` (place 7): support and response each resting on the other, exact for one policy.
+*Against, or limits.* (i) is about what a law admits: the going-on side is "some history", the births are a free action, the flow is unlimited, a supporter pays nothing. (ii) is one model with supplied constants, a handed-in schedule and a fixed number of contracts; its going-on end bears a leak of at most `N - fee` a period (`all_renewing_leak_tolerance`), none where `fee = N` (`one_unit_diversion_breaks_zero_margin` 659-660, a built step). (iii) on its going-on side rebuilds nothing. The place whose loop is nearest to several goings-on each keeping what the others rest on, place 3, has only a one-sided law and no general ending.
+
+**R5** (in every place what keeps is a supplied function, a stipulated table of who is active, or a premise; nothing that keeps is derived from what it rests on).
+*For.* In every place the amount a keeper gives is handed in: `rate`, `span`, `demand`, `edge` (place 1); `output` and `threshold` (place 3); `renew` and `degrade` (place 2); `inflow`'s 1 and 3 and the payoff (place 9); the two conversion rates (place 7); the yield and the supply (place 8). `RenewalPremises` 25-26 says of place 1 that deriving the law "is roadmap Phase 4". And where going on is concluded, the act that keeps is a free action or a schedule: the births (place 1), the supply and the choice of arrangement (place 3), the policy (place 7), the revision schedule (place 9), the pressure (place 2).
+*Against.* Who is active is not a stipulated table in places 1, 3, 7, 8, 9: it is read from the state the others keep. A token is there because one was formed from the reserve under a live supporter, and the closure is "a consequence rather than a definition" (`RenewalLink` 16-17), "realized recently, not merely permitted by the edges" (`RenewalClosure` 334-335). A role gives only while its own stock, kept by the others, is at its threshold (`incoming`). The correction acts only while the reserve the contracts fill covers the fee (`funded`). So in these files the keeper's being there is an outcome of what it rests on; what it gives when it is there is handed in.
+
+**The frozen page's two ends.** Nearest to "already there" in this group is `renewal_closure_theorem` with `renewal_keeping_theorem`: tokens that open a flow from beyond and support the forming of their successors, with an exact condition for some history going on without end. It is outside the package, joined to nothing in it, and hands in what is listed under place 1, Q4. For "not sayable here" (R5 of every place): this group bears out R5's first clause in every place (the amount given, and the act that keeps, are handed in) and does not bear out its second clause in places 1, 3, 7, 8 and 9 (who is there to keep is an outcome of the state the others keep). Which of the two the frozen page's test turns on is not this reader's to say.
+
+## Other places met that bear on the questions
+
+None of these was read whole; each is named with what was seen.
+
+- `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/conditional/ResourceContinuation.lean` (read 1-36, 143-163, 286-345). `SustainLaw` (31-34): `∀ s a t, P.step s a t → held t + enacted s a t ≤ held s + arrived s a t`, "An empirical or model premise, not a consequence." General one-sided laws that being fed is necessary: `support_cycle_arrival_covers_enactment` (154-159), `unbounded_enactment_requires_unbounded_arrival` (290-297), `infinite_unit_execution_arrival_window` (311-319; premises the law and `∀ s a t, P.step s a t → 1 ≤ enacted s a t`). Header 15-17: "What arrives can be internal regeneration, conversion from an untracked store, or provision across the declared boundary. That arrival is necessary does not establish which of these supplies it". The reserve clause of place 1 is said to be this law.
+- `…/conditional/SupportNecessity.lean` (declaration list, and 255-267). `EpisodeSystem` (25), rank deadlines (`no_alive_after_bounded_rank_deadline` 139), `typeProcess` (151); built `renewing` (181) and `infiniteChain` (232); `external_arrivals_without_internal_parents` (263), docstring: "externally supplied organization is a substantive boundary". `RenewalClosure.episode_acyclic_deadline` (422-426) closes the gap this file names.
+- `…/conditional/RenewalExamples.lean` (1-40, 76-92, declaration list). `same_law_admits_continuation_and_loss` (84-88, a built three-phase law): one law admits an endless cycle and a terminal loss from the same start. Docstring 34-35: "Restoration brings two units, one of which the restoring event itself enacts. This is declared provision, not creation of support from nothing."
+- `M/RecursiveSelection.lean` (imported by place 8; seen at statement lines only). `exact_basin` (149-150): `(∃ t, iterate update q t = 8) ↔ 3 ≤ q` for `q ≤ 8`. In the table.
+- `M/CollectiveDestruction.lean` (imported by place 9; 3-15, 28-34, 163-167). `exact_basin` (166-167; premise `∀ t, 1 ≤ k t`): `(∃ t, run k s t = ⟨0, 0⟩) ↔ s.restraint < 2`. `utility` (9-10) is the supplied payoff place 9 uses. In the table.
+- `…/generative-basis/lean/Depletion.lean` (32-36, 68-71): `no_infinite_execution_under_depletion`, used by `short_kinds_cannot_renew_forever`.
+- Named in the table and not opened here: `deeper/RelationalRenewal.lean`; the meta-attractor files built on place 3's cycle (`ExpandingInquiry`, `TestingReorganization`, `CommonCauseDiscovery`), whose table cells report one-sided laws under an invariant.
