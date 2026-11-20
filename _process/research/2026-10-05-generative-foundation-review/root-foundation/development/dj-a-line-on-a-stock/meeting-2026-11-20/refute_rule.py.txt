@@ -1,0 +1,91 @@
+#!/usr/bin/env python3
+"""refute_rule.py: the units worker's "moved form" (stayers double under the favouring rule only), re-run
+independently. AI-written scratch (agent "refute", 20 November 2026). A search shows where a statement fails,
+not that it holds.
+
+Kinds: A stayer (need n, use a), B grower (need m >= n, use b). Rule 1 (favours): A -> A A, B -> ka A + ks B.
+Rule 0: every unit leaves itself. The rule for the next step is read from the way BEFORE the step: 1 where the
+number of growers is at least theta, else 0. Locked start: rule 1 in force and growers >= theta.
+Statement: on courses whose course as it was (rule 1 held, every need met) comes below m at a first step T:
+never ends <=> n met at T and T+1, some stayer at T, and the level at T+2 at or above the point of no return of
+four times what the stayers at T take (regime asked at that amount only).
+Givings are random tables here, not the worker's tent.
+"""
+import random, json, time
+t0 = time.time()
+rnd = random.Random(7)
+out = {}
+ex = []
+
+def tally(k, ok):
+    c = out.setdefault(k, [0, 0]); c[0] += 1
+    if not ok: c[1] += 1
+    return ok
+
+def rstep(g, H, x):
+    z = x - H if x > H else 0
+    return z + g[z]
+
+def giving(C, kind):
+    if kind == 0:
+        rho = rnd.randint(1, C)
+        return [max(0, min(z, rho, C - z)) for z in range(C + 1)]
+    if kind == 1:
+        peak = rnd.randint(1, C - 1); g = [0] * (C + 1); v = 0
+        for z in range(1, peak + 1):
+            v = min(v + rnd.randint(0, 2), C - z); g[z] = v
+        for z in range(peak + 1, C + 1):
+            v = min(max(0, v - rnd.randint(0, 2)), C - z); g[z] = v
+        return g
+    return [0] + [rnd.randint(0, C - z) for z in range(1, C + 1)]
+
+def point(g, H, C):
+    if H == 0: return False, None
+    r = next((z for z in range(C + 1) if g[z] >= H), None)
+    if r is None or r + H > C: return True, None
+    if any(g[z] < H for z in range(r, C - H + 1)): return False, None
+    return True, H + r
+
+for _ in range(12000):
+    C = rnd.randint(6, 24); g = giving(C, rnd.randint(0, 2))
+    n = rnd.randint(1, 3); m = rnd.randint(n, C + 1)
+    a, b = rnd.randint(1, 2), rnd.randint(1, 3)
+    ka, ks = rnd.randint(0, 2), rnd.randint(1, 2)
+    theta = rnd.randint(1, 2)
+    for p0 in (0, 1, 2):
+        for q0 in (theta, theta + 1):
+            for x0 in range(C + 1):
+                # the real course
+                p, q, r, x = p0, q0, 1, x0
+                seen = set(); fate = None
+                for _i in range(400):
+                    if not ((p and n <= x) or (q and m <= x)): fate = False; break
+                    if (p, q, r, x) in seen: fate = True; break
+                    seen.add((p, q, r, x))
+                    fa = p if n <= x else 0; fb = q if m <= x else 0
+                    if r == 1: p2, q2 = 2 * fa + ka * fb, ks * fb
+                    else: p2, q2 = fa, fb
+                    r2 = 1 if q >= theta else 0
+                    x = rstep(g, p * a + q * b, x); p, q, r = p2, q2, r2
+                    if p + q > 10 ** 5: break
+                if fate is None: continue
+                # the course as it was: rule 1 held, every need met
+                p, q, x, T = p0, q0, x0, None
+                for t in range(60):
+                    if x < m: T = t; break
+                    x2 = rstep(g, p * a + q * b, x); p, q, x = 2 * p + ka * q, ks * q, x2
+                    if p + q > 10 ** 5: break
+                if T is None:
+                    tally('course as it was never below m within 60 steps (left out)', True); continue
+                XT = x; XT1 = rstep(g, p * a + q * b, XT); XT2 = rstep(g, 2 * p * a, XT1)
+                ok, pt = point(g, 4 * p * a, C) if p else (True, None)
+                if not ok or (pt is not None and n > pt):
+                    tally('regime fails at four times the stayers (left out)', True); continue
+                rhs = p > 0 and n <= XT and n <= XT1 and pt is not None and XT2 >= pt
+                if not tally('moved form: never ends <=> right side', fate == rhs):
+                    if len(ex) < 3: ex.append(dict(C=C, g=g, n=n, m=m, a=a, b=b, ka=ka, ks=ks, theta=theta, start=(p0, q0, x0), fate=fate, T=T, XT=XT, XT1=XT1, XT2=XT2, pt=pt, pT=p))
+                if fate: tally('   never ends, counted', True)
+for k, v in sorted(out.items()): print(v[0], v[1], k)
+print('seconds', round(time.time() - t0, 1))
+for e in ex: print(e)
+json.dump(dict(results=out, examples=ex), open('/Users/ren/theories/tmp/r7/one-model/check/meet20/refute-results-rule.json', 'w'), indent=1)

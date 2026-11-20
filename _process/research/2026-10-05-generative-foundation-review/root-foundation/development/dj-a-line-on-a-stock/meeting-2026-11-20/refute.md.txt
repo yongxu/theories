@@ -1,0 +1,150 @@
+# The meeting of the two halves, set to refute: each kept statement against the eight frozen tests
+
+*AI-written (Claude Fable, agent "refute" of the workflow of 20 November 2026). I took no part in the two workers' work. No Lean was written and nothing was built. Each claim of mine is marked **argued** (on paper, step by step, by me alone, read by no one), **searched** (my own small Python programs; a search shows where a statement fails, not that it holds), **read** (a Lean statement opened at the source, file and line given) or **guess**. Negatives about the Lean are "not found in what was read"; what was read is listed at the end. Share, rule, level, unit, need, use, giving are working names. "The second way" below is only the first of the three senses the record of 17 November told apart (staying within what is made again); nothing here adds to a level or has goings-on resting on each other.*
+
+## In short
+
+1. **No statement places the two ways with respect to each other.** None has both ends, the edge and what a course passes by. Every statement that is exact trips test 1, 2 or 3, so by the frozen file's own rule **G5 stands in its outcome**: what is gained is a recognition, and some kept failures.
+2. **G5 is false in its letter.** The family is a window course by definition, but `locked_turns_in_time_on_window_iff` does not decide it (its `uses` asks one use of every way whose rule is the one the window sets), and where the level can come back to `M` the single-step condition has starts on the wrong side (my search: 773 of 191,281). "Nothing is to be stated" holds because nothing exact was found there, not because an old law covers it.
+3. **Two things the workers kept are wrong as worded** (found here):
+   - **U1a is false** where a bud leaves more buds than `ia·jb` (10,845 of 123,838 courses; one traced by hand below). The worker's range had `ib ≤ ia·jb` only. U1b's argument goes through U1a and so has a gap there; U1b itself had no failure in my search and can be argued by another route (given below, argued by me, unread).
+   - **U2's premise "at each `T`" excludes every start with no stayer** (there `H_0 = 0`, so `Short g 0 y_0` forces `y_0 = 0` and `n ≤ H_0 + y_0` fails), the worker's own worked example among them. Both programs ask the regime only at the step of the turn; so asked, no failure.
+4. **Two "not test 2" claims do not hold once the package's generic laws are opened.** BR is `Lasting.below_orbit` (`Lasting.lean` line 388) used twice. UP, MM and REST are `Lasting.orbit_mono` (line 376), `Lasting.below_orbit` and `BandRest.keeps_one_way` (`BandRest.lean` line 36) at the carrier (share, rule, level); what is new in them is one check, that the family's step keeps the order where the favoured draw less.
+5. **U2 is a composition by the Lean's own shape**: `TurningInTime.unending_iff_first_marked` (line 739, "split at the first marked level") followed by the regime's law at the way reached. `turns_in_time_iff` is proved as exactly that composition with one `H₂`; U2 reads the amount at the turn.
+6. Everything else the workers marked exact held in my independent search on wider families (random tables for giving, share step, use and reading); everything they marked refuted is refuted here too.
+
+## What I ran
+
+Three programs of my own, written from the statements and the Lean's definitions, not from the workers' code. Load average was about 7 to 10; each run under 40 seconds.
+
+| program | what | output |
+|---|---|---|
+| `refute_lock.py 40000` | 40,000 random lock models: share on 1 to 4 places, level up to 6 to 16, giving a random table (tent-like or any, made to meet each statement's premise), share steps random monotone tables with `fA(a, not) ≤ a ≤ fA(a, favours)`, use a random monotone table, `θ` in 0, 1, 2, and for BR a random reading as well as the family's | `refute-results-lock.json` |
+| `refute_units.py 6000` | 6,000 random worlds each for W1/W3, W2 (two kinds of grower, two of stayer, uses that differ, growers leaving either kind), and two kinds on one stock; givings of three shapes (tent with a slope, unimodal, any table) | `refute-results-units.json` |
+| `refute_rule.py` | 12,000 random worlds for the rule's "moved form" | `refute-results-rule.json` |
+
+"Never ends" is decided by a repeat in a finite state set. Units that take nothing and multiply were left out as undecided.
+
+### Counts (checked, failures)
+
+Lock home:
+
+| claim | checked | failures |
+|---|---|---|
+| BR, both implications, family's reading and a random reading, both signs | 8,899,727 | 0 |
+| HL (any giving meeting the regime at the last use, any use table) | 1,127,054 | 0 |
+| LATE (any use table, any giving with nothing from nothing) | 166,542 | 0 |
+| D-necessary, sign + | 190,508 | 0 |
+| D-sufficient, sign + (failures are starts on the wrong side) | 191,281 | **773** |
+| D-no-return (rule never favours again) / its level form with HL's premises | 161,192 / 97,503 | 0 / 0 |
+| UP, covering pairs, sign − | 2,353,986 | 0 |
+| MM, `M` against `M − 1`, sign − | 1,042,838 | 0 |
+| REST, both halves, and "the line never ends" | 616,516 / 407,100 / 563,141 | 0 |
+| G2's dichotomy with no premise on `M`, sign − | 660,255 | **216,138** |
+| NUP: sign + models whose locked never-ending starts are closed upward | 20,036 | **181** are not |
+| COUNTS | 39,024 | 0 |
+
+Units home:
+
+| claim | checked | failures |
+|---|---|---|
+| U1a where `ib ≤ ia·jb` | 459,584 | 0 |
+| U1a where `ib > ia·jb` | 123,838 | **10,845** |
+| U1b, a fall at some step ⟹ ends (`ib ≤ ia·jb` / `ib > ia·jb`) | 226,506 / 56,208 | 0 / 0 |
+| U1b, start at or above `m` ⟹ ends (the two classes) | 114,263 / 29,706 | 0 / 0 |
+| W1 without the regime premise, start at or above `m` ⟹ ends | 233,671 | 1,432 never end |
+| G4 first stop, W1: necessary | 196,336 | 0 |
+| G4 first stop, W1: sufficient (failures are wrong-side) | 20,014 | **13,079** |
+| E for W1 (never ends ⟺ comes to a configuration that stands) | 583,422 | 0 |
+| E for W3 | 388,836 | **3,140** (never end, never stand) |
+| W3 every bust | 248,442 | 0 |
+| U2, premises asked at the step of the turn only | 411,317 | 0 |
+| U2 where a premise fails at the turn: right side against fate | 203,817 | 58,985 differ |
+| two kinds, the one that doubles needs less or the same ⟹ ends; both double ⟹ ends | 289,365 / 249,210 | 0 / 0 |
+| the rule's moved form | 1,010,529 | 0 |
+
+## Checked by hand
+
+- **NUP's traced course** (`n = 4`, `uF = 2`, `uO = 0`, one place a step, tent on 20 with top 5, need 1, `M = 12`, share 2). From 11: `(2, favours, 11) → (3, not, 12) → (2, favours, 11)`, for ever. From 12: `(2, f, 12) → (3, f, 13) → (4, f, 12) → (4, f, 8) → (4, not, 0)`. As told.
+- **D-sufficient's smallest course** (`n = 1`, `uF = 3`, `uO = 1`, need 1, `M = 4`, share 0 at 3): levels 3, 4, 2, 2, 0; the other rule held from step 1 holds at 2 for ever. As told.
+- **W3's round** (`A`: need 1, use 1, `→ A B`; `B`: need 16, use 1, `→ B`; `g(z) = min(z, 4, 16 − z)`; one core at 10): `(1,0,10) (1,1,13) (1,1,15) (1,1,16) (1,2,16) (1,3,16) (1,4,16) (1,5,15) (1,1,13)`. A round of seven steps. As told, and the program agrees.
+- **U1a failing** (mine): `A` need 3, use 2, `→ A B`; `B` need 10, use 1, `→ A B B` (`jb = 1`, `ia = 1`, `ib = 2`); giving the table `0, 8, 2, 5, 2, 0, 1, 1, 0, 2, 0, 0` on levels 0 to 11; one core at 11. Ways and levels: `(1,0)` at 11, `(1,1)` at 11, `(2,3)` at 8, `(2,2)` at 9. What the way takes goes 2, 3, 7, 6: it falls at a step where `n = 3` is met. The invariant "at most `jb` buds per core" is not kept by a step at or above `m` unless `ib ≤ ia·jb`.
+
+## U1b argued without U1a (argued, by me; unread)
+
+Claim: W1 with the regime at what the way takes at each step where the level falls; if the level falls at a step `s`, every later way with `n` met before it takes at least what was taken at `s`. Then U0 applies.
+
+- *`s` at a level at or above `m`.* `p_{s+1} = p_s + q_s·ia`, `q_{s+1} = p_s·jb + q_s·ib`. At `s + 1` the take less the take at `s` is `q_s(ia·a + ib·b − b) + p_s·jb·b`, not negative where `ib ≥ 1`; where `ib = 0` buds never exceed `jb` a core, so `q_s·b ≤ p_s·jb·b`. Later, `p_t ≥ p_{s+1}` and `q_t ≥ p_{s+1}·jb`, so the take is at least `(p_s + q_s·ia)(a + jb·b) ≥ p_s·a + q_s·b`.
+- *`s` below `m` with `q_s ≤ p_s·jb`.* Later `p_t ≥ p_s`, `q_t ≥ p_s·jb ≥ q_s`.
+- *`s` below `m` with `q_s > p_s·jb`.* Then `s ≥ 1` and step `s − 1` was at or above `m` (a step below `m` leaves exactly `jb` a core, and the start has at most that). So the level fell at `s − 1` too, and the first case applies there.
+
+So U1b holds for every `ib`, with the regime asked at every fall; its writer's sentence "the first sentence is U0 with (a)" should be replaced.
+
+## Each statement, test by test
+
+Tests: 1 composition; 2 dictionary (as the task words it: a definition unfolded, or `PopulationCorrection`'s, the window law's or `mixed_turns_iff`'s in other names; "2 widened" is the frozen file's 19:36 reading, any place the package has); 3 handed in; 4 standing use; 5 not exact (my search); 6 no old law is a case; 7 not placed; 8 the source. Test 8 trips for none: nobody in either model adds to the level. Where I could not show a test passed it is marked tripped.
+
+### The lock's home
+
+| statement | my verdict | tests tripped | notes |
+|---|---|---|---|
+| G5-step | stands as a recognition; **tripped** | 2, 3, 7 | **Read**: `windowAfter` (`TurningInTime.lean` 1271), `windowRead` (`PoolFromCourse.lean` 252), `favours_iff` (`RuleShaping.lean` 160) say what the worker says. A definition unfolded; `M` is the family's parameter. |
+| G5-law | **survives** as a negative about a reduction | none apply | **Read** at line 1633: `uses : ∀ v, kept v.2.1 → use v = H₂` is over every way, so it fails wherever two shares use differently, whether or not the share moves (stronger than the worker wrote). The nearest law the worker did not list, `locked_turns_in_time_share_iff` (line 1817), does not cover the family either: its `sets` asks the window's reading to set a `Low` share at the read step, and in the family the share at that step still steps by `fA` (`windowAfter_every_is_share`, line 1747). Its docstring already names the gap: the correction reaches the share "because the window's reading sets it", "not because the share falls under the corrected rule". |
+| BR | **tripped** | 2 widened, 3, 6, 7 | Not 5 (8.9 million checks, random readings included). Against its writer's "not 2": BR is `Lasting.below_orbit` (line 388, "growth bounded by a monotone map stays below the map's orbit") at share × level with the held step, once in the order "uses no more, has no less" and once in its converse (**argued**: the course's next configuration is at or below the held step of its present one, because `fA(a, not) ≤ a ≤ fA(a, favours)`). No edge; between the brackets the fate goes both ways. |
+| HL | **tripped** | 1, 3, 4 (in substance), 7 | Not 5 (1,127,054). Not 6: `unending_iff_above` (line 958) at `J = 0`, instantiation as the worker gives it, checked against the statement. Test 4: not in the letter (the use changes before `J`), but it is exact because the use is one amount from `J` on and `J` does not depend on the level. |
+| LATE | **tripped** | 1, 2, 3, 4, 6, 7 | Not 5 (166,542, and it needs no monotone use or giving: argued and searched). `M` does no work. The fall never turns anything in time here: the "turned" end is empty. The flat form has the shape of `exact_schedule_activation_boundary` (**read**, `PopulationCorrection.lean` 504: a start amount plus what the share's course adds, against a threshold); not shown to be one statement. |
+| D-necessary | **tripped** | 1, 3, 6, 7 | Not 5 (190,508). BR at one step; a necessary condition only. |
+| D-sufficient | **refuted** | 5 | 773 of 191,281 here; the worker's smallest course checked by hand. |
+| D-no-return | **tripped** | 1, 2, 3, 6, 7; 4 in substance | Not 5 (161,192; level form 97,503). It is the split at the first marked level followed by HL; "never again" is handed in or holds only where `M` is above every level the stock keeps. |
+| NUP | **survives** as a finding | none | One course checked by hand, so the finding rests on a kept course, not only on a search; 181 of 20,036 random sign-+ models here. It places nothing by itself. |
+| UP-MM-REST | **tripped** | 2 widened, 3 in part, 6, 7 (head clause) | Not 5 (0 failures, counts above). Against "not 2 as far as read": each is a generic law of the package at the carrier (share, rule, level) with the product order. UP: `Lasting.orbit_mono` (376) with `GuardedStep.stepWhile_unending_iff` (143). MM: `Lasting.below_orbit` (388), since the step at the smaller `M` is pointwise at or above the step at the larger. REST: `BandRest.keeps_one_way` (36) and its converse. `RegimeMargin.ends_of_below` (2153, "raising any level never ends what held") is the same law on the web's carrier. What is new is the one check that the step keeps the order where the favoured draw less (**argued**, three lines). Test 7: it speaks of one sign only, and its going side is a set of fates (favouring regained, lost for good, alternating), not a way. |
+| G2-dichotomy | **refuted** | 5 | 216,138 of 660,255 with no premise on `M`. |
+| G3 | not found | 6 | Nothing to test. I found no statement either. |
+| COUNTS | **tripped** | 1, 2, 7 | Not 5 (39,024). A lock that ends in every case: it fails the 19:36 addition to test 7 too. |
+| G5-verdict | stands in outcome, false in letter | — | See "In short". |
+
+### The units' home
+
+| statement | my verdict | tests tripped | notes |
+|---|---|---|---|
+| U0 | **tripped** | 1, 2 | Argument re-read; both halves are as the Lean has them. |
+| U1a | **refuted as worded** | 5 | Holds with `ib ≤ ia·jb` added (459,584, no failure). |
+| U1b | **tripped**; true as far as searched | 1, 4, 7 | Not 5 (426,683, both classes). Its argument needs mending as above. |
+| G4-first-stop-W1 | **refuted** | 5, 4 | 13,079 of 20,014 on the wrong side; the necessary half no failure. |
+| E-if | **tripped** | 2 | Not 6: `unending_of_fixed` (`LineOnAStock.lean` 1352) is its case, checked against the statement. |
+| E-W1 | **tripped** | 1, 2 in part, 4, 6, 7 | Not 5 (583,422). |
+| U2 | **tripped** | 1, 2, 3 in part, 4, 7 | Not 5 (411,317, wider kinds, regime asked at the turn only). Not 6: `WayOfUnits.two_units_iff` (line 580) follows with its statement unchanged, the instantiation as the worker gives it plus `RegimeMargin.ends_below` to give "comes below `m`" from `short₁` and `below` (**argued**). Test 1, against its writer: the Lean has the first half as one law, `unending_iff_first_marked` (739); the second is `ends_iff_below` (`RegimeMargin.lean` 741) at the stayers left. That the inequality "needs both halves" is true of every such composition, `turns_in_time_iff` included. Test 3: no rule and no share is in it; of the two halves that were to meet, one is absent. |
+| W3-rounds | **survives** as a kept course | none | Checked by hand and by program (3,140 here). It places nothing. |
+| W3-every-bust | **tripped** | 1, 2, 4, 6, 7 | Not 5 (248,442). The outline argument re-read and filled (**argued**): holds. A condition at every bust, for ever, is not an edge. |
+| second-sign | **tripped** | 2, 4, 7 | The two "every course ends" cells re-run (538,575, no failure), with every use at least 1; a kind that multiplies and takes nothing is outside. |
+| rule | **tripped** | 1, 2, 4, 7 | Moved form re-run on random givings (1,010,529, no failure). That the rule does no work in W1 and W2 was not re-run by me. |
+
+## For the direction's sake
+
+**Does any statement place the two ways with respect to each other? No.**
+
+- *Both ends.* No statement has a way that uses up what it rests on at one end and a way that keeps remaking it at the other. The going sides found are: a standing use at or above its point of no return (HL, LATE, D-no-return, U2, E), which is test 7's own example; a set of fates closed upward (UP); and rounds (W3). None remakes anything.
+- *The edge.* Where an edge is exact it is the old one: a level, one step after a turn, against the point of no return of a use that then stands (tests 1 and 4). Where the fall changes who is favoured before the point of no return of what goes on (`M` above it, the level able to come back; kids that need more), no edge was found in either home, and three kept failures say why: the favouring comes back (D-sufficient), more level can end a line (NUP), growth is lost and regained for ever (W3).
+- *By what a course passes.* No statement has a course passing from one to the other. The alternating courses (the workers count 13,009 and 9,625 in the lock's home; the rounds in W3) are the only ones that go back and forth, and nothing is stated of them.
+
+**What is gained, plainly.**
+
+1. A recognition, with its limit: the family is a window course; the window law decides it only where the use reads the rule alone or the level cannot come back to `M`.
+2. One structural contrast, not an edge: where the favoured draw less the reading of the level keeps the order of configurations, where they draw more it reverses it. That is why one sign has a least level for each share and the other does not. It is a check of monotonicity put through three generic laws the package already has.
+3. In units, the turn by the fall with the standing amount read at the turn (U2), of which `two_units_iff` is a case; it is the 19 November paper statement with the step named and trips 1, 4 and 7.
+4. Kept failures and courses: D-sufficient, NUP, G2's dichotomy, G4's first stop, U1a, the W3 round.
+
+**If one statement had to be carried forward**, the two that come nearest, with the least premises under which my search found no failure and what to distrust:
+
+- **UP-MM-REST.** Premises: `fA(a, not) ≤ a ≤ fA(a, favours)` and `fA` monotone in the share under each rule; the use not rising with the share; `z + giving z` not falling as `z` rises; the reading "favours exactly where `x ≥ M` and `a ≥ θ`". Distrust: it is three generic laws at one carrier; "an edge exists" means only that the going configurations are closed upward, and no edge is stated; it says nothing where the favoured draw more; "draw less" is the first sense of the second way only.
+- **U2.** Premises: growers all needing `m`; every other unit leaving itself and needing `n`, `0 < n ≤ m`; nothing from nothing; start within `hi`; the step under the start's stayers' take keeping within `hi`; the course as it was coming below `m`; and the regime (`Short`, `Meets`, `n ≤ H_T + y_T`) **at the step `T` of the turn only**, with some stayer left there. Distrust: as written ("at each `T`") it excludes starts with no stayer, its own worked case among them; it is silent where the course as it was never comes below `m`; no rule and no share is in it; what goes on is one standing amount.
+
+## What I did not do
+
+- I did not set any statement against `PairFlow`, `PairSelection`, `RenewalFlow`, `JointDraw`, `Exclusion`, `RuleRebuilding`, `ContinuingRevision`, `ReaderRebuilding`, `LineageDrawdown`, `ReadingsSpread`, `ReadingsPersist`, `Ranking`, `SetPointOptimum` or the market model's files other than `PopulationCorrection.lean`. Of `CoupledDrawers.lean` I read the opening account only (lines 1 to 64): it is about perfect profiles over a horizon, and I found no statement here that is one of its bullets in other names; that is a reading of an account, not of its statements.
+- I did not re-run the workers' programs, their counts of how often each outcome occurs, the table of the second sign beyond two cells, or the rule on W1 and W2.
+- My paper arguments (BR as `below_orbit`, UP/MM/REST as the three generic laws, U1b's mended route, `two_units_iff` as a case of U2, U2 as a composition) are mine alone and unread. None was built.
+
+## What was read
+
+At the source, statements and docstrings (no proofs unless the proof term is short and shown with the statement): `RuleShaping.lean` `shaped` (150), `favours_iff` (160), `favours_alike` (175); `PoolFromCourse.lean` `windowRead` (252); `TurningInTime.lean` `pair` (337), `net` (352), `AloneOutside` (362), `unending_iff_first_marked` (739), `unending_iff_above_kept_below` (920), `unending_iff_above` (958), `turns_in_time_iff_kept_below` (conclusion and proof term, from 993), `turns_in_time_iff` (1070), `windowAfter` (1271), `windowLeft`, `windowAlone`, `locked_ends_rising` (1440), `locked_turns_in_time_on_window_iff` (1633), `windowAfterShare` (1729), `windowAfter_every_is_share` (1747), `locked_turns_in_time_share_iff` (1817), `above_of_recoverable`, `recoverable_iff_above` (2087), `turns_in_time_iff_before` (2289), `Three.drawerUse` (2930), `rise_count_ends` (docstring), `share_read_goes_on` (3044, docstring); `RegimeMargin.lean` `step` (249), `FromNothing`, `Short`, `Root`, `Meets`, `Keeps` (252 to 265), `ends_below` (705), `holds` (730), `ends_iff_below` (741), `step_mono` (1112), `rising_on`, `falling_on` (1967, 1976), the web's `step_mono`, `run_below`, `ends_of_below` (2139 to 2153), `falls_of_below` (1604); `Lasting.lean` `orbit_pair`, `orbit_mono` (376), `below_orbit` (388), `stays_below_iff` (396); `BandRest.lean` `keeps_one_way` (36); `GuardedStep.lean` `stepWhile_unending_iff` (143); `LineOnAStock.lean` `after` (138), `taken`, `left` (146), `Goes` (150), `Holds` (188), `Regime`, `Needing`, `unending_iff_holds` (1239), `unending_of_fixed` (1352), `KidsNeedMore` (from 1471); `WayOfUnits.lean` `unending_iff_holds` (400), `two_units_iff` (580); `RuleCapture.lean` names and lines only (`Raises` 145, `ReadsShare` 150, `Locked` 160, `turn_locked` 169, `select` 497); `PopulationCorrection.lean` lines 1 to 80 and 440 to 540; `ScratchMixedWay.lean.txt` lines 400 to 470 (`mixed_turns_iff`, 439); `CoupledDrawers.lean` lines 1 to 64. The frozen file whole, both workers' reports whole, `join19/NOTE.md` whole, the head of `units_rule.py` and the premise lines of `units_w2.py` (to see how U2's premise was asked). Not read: `regions20/NOTE.md`, the direction page beyond what the frozen file and `AGENTS.md` say of it, `ScratchCovering.lean.txt`, and the files listed under "What I did not do".

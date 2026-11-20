@@ -1,0 +1,169 @@
+# Check of NOTE.md against its five sources
+
+*AI-written (Claude, checker who took no part), 20 November 2026. Read whole: FROZEN-THE-MEETING.md, work-lock.md, work-units.md, refute.md, lean-check.md, NOTE.md. Ran nothing. Opened two Lean passages only to settle two citations (LineOnAStock.lean 112–124, Lasting.lean 366–400). MUST = false, or says more than its source. LESSER = unclear, could mislead, wording.*
+
+## Findings
+
+1. **MUST.** Note (What was asked): "three additions were written under its line "After" at 19:36, before any report was read, and the agents did not work from them."
+   Source, refute.md, tests: "'2 widened' is the frozen file's 19:36 reading, any place the package has"; COUNTS row: "it fails the 19:36 addition to test 7 too"; it read "The frozen file whole". work-units.md: read the "After" section at 19:51, "Nothing below was changed for it except the qualifier in the head note and one sentence under test 2". work-lock.md §10 read it at the end.
+   Fault: the refuter did work from the additions (test 2 widened, the addition to test 7). Only the two workers did not, and both read them at the end.
+   Put: "…before any report was read. The two workers did not work from them (both read them at the end; the units' worker then changed its head note and one sentence); the refuter did, and applied the widened test 2 and the addition to test 7."
+
+2. **MUST.** Note (How it came out): "test 3 (the level at which the favouring changes does no work)".
+   Source, FROZEN test 3: "**Handed in.** The level at which the favouring changes and what it changes to are premises that do the work `corrects` and `uses` do in the window law; the return adds no derivation."
+   Fault: the test is misstated. It asks whether the level is *handed in*, not whether it does no work. ("`M` does no work" is a finding about LATE, a different thing.)
+   Put: "test 3 (the level at which the favouring changes, and what it changes to, are handed in; the return adds no derivation)".
+
+3. **MUST.** Note (G1): "It is exact only where the rule never favours again, which is handed in, or holds where `M` lies above every level the stock keeps."
+   Source, work-lock.md §4: "**Exact where the rule never favours again after `T`** (argued…; searched…)"; "Where 'never favours again' is derived and not handed in…: where every level the stock keeps is below `M`".
+   Fault: the worker shows exactness *where* the rule never favours again (a sufficient condition), not *only* there.
+   Put: "It was found exact where the rule never favours again after the turn (argued by the lock's worker; searched by it and the refuter); that is handed in, or derived where `M` lies above every level the stock keeps."
+
+4. **MUST.** Note (Kept 1): "The window law decides the family only where the use reads the rule alone, or where the level cannot come back up to `M`."
+   Source, lean-check.md A2: "`uses : ∀ v …, kept v.2.1 → use v = H₂` … fails once two shares have different uses (`uF ≠ uO`, `n ≥ 1`), whether or not the share moves." work-lock.md §2: `uses` fails and "so does `safe`/`covers` wherever the level can come back up to `M`"; §4: where the level cannot come back, it is "the window law's own domain … with `uses` replaced by HL's stretch". work-lock.md §9: the use reading the rule is "argued from the premises, not run".
+   Fault: the two conditions are both needed, not either. Where the level cannot come back but the use follows the share, `uses` still fails, and what decides is D with HL's stretch, which is not the window law. (The refuter's "What is gained" 1 has the same "or"; its own G5-law row and the reader's A2 contradict it.)
+   Put: "The window law can decide the family only where the use reads the rule alone (argued, not run), and then also only where its `covers` and `safe` hold. Where the level cannot come back up to `M` but the use follows the share, the window law does not apply; the single-step condition with the worker's finite stretch is exact there (argued, searched), and that is not a law in Lean."
+
+5. **MUST.** Note (Kept 1): "The reader against the Lean found no turn law in `TurningInTime` whose use after the turn changes for a finite stretch and then stands; each asks one use of the kind turned to."
+   Source, lean-check.md D8: "was **not found** in TurningInTime's turn laws (920, 958, 993, 1070, 1633, 1817, 2289); each asks `uses` at the kind turned to."
+   Fault: told of every turn law in the module; the reader read seven.
+   Put: "Among the seven turn laws of `TurningInTime` the reader against the Lean read, none has a use after the turn that changes for a finite stretch and then stands; each asks one use of the kind turned to."
+
+6. **MUST.** Note (Kept 2): "The reader against the Lean confirms that for the third law, finds the first two of that shape, and adds…"
+   Source, lean-check.md A13: "REST's two clauses are `keeps_one_way` …. UP's argument is `B/Lasting.lean` `orbit_mono` (376) …. MM, a comparison of two steps at two `M`, was not found as one statement." What was read: "Lasting.lean 366–385". `below_orbit` is at Lasting.lean line 388 (refute.md; confirmed at the source), outside that range.
+   Fault: the reader found UP of `orbit_mono`'s shape, but it did not find MM to be one statement and did not read `below_orbit`. Also, it read the worker's report and not the refuter's, so "confirms" makes an independent reading sound like a check of the refuter.
+   Put: "Independently of the refuter, the reader against the Lean found REST to be `keeps_one_way` with its relation set; found UP's argument to be `orbit_mono`; did not find MM as one statement; and did not read `below_orbit`. It adds…"
+
+7. **MUST.** Note (Kept 3): "Where the fall changes who is favoured before the point of no return of what then goes on, no edge was found in either home, and three kept courses say why…"
+   Source, refute.md: "Where the fall changes who is favoured before the point of no return of what goes on (`M` above it, the level able to come back; kids that need more), no edge was found in either home". work-units.md U2: in W2 "the line never ends exactly where…", with 1,336 courses that never end after growth.
+   Fault: the refuter's parenthesis is dropped. Without it, the sentence contradicts U2 (Kept 4), which is an exact edge in units where the fall takes the growers before the point of no return of what goes on.
+   Put: "…before the point of no return of what then goes on, no edge was found in the lock's home (with `M` above the point of no return of the least use and the level able to come back up to `M`) or in units where kids need more than their parent, and three kept courses say why…"
+
+8. **MUST.** Note (Kept 4, U2): "Growers that all need `m`; every other unit leaves only itself and needs `n`, `0 < n ≤ m`; the regime's premises at the step of the turn, some stayer left there; the course with every need met coming below `m`. Then the line never ends exactly where, one step after the first step below `m`, the level is at or above the point of no return of what the stayers left by then take."
+   Source, work-units.md U2: premises also `FromNothing g`, "the start `x ≤ hi`", "`Keeps g H₀ hi`"; right side "`n ≤ X_T < m`, `R_T` not empty, and `H_T + y_T ≤ X_{T+1}`". refute.md's least premises keep "nothing from nothing; start within hi; the step under the start's stayers' take keeping within hi".
+   Fault: three premises and one clause of the right side (the level at the turn meets `n`) are dropped. Without `n ≤ X_T` the right side can hold where the stayers are not met at the turn and the line ends.
+   Put: "…`0 < n ≤ m`; nothing from nothing; the start within `hi`, and the step under what the start's stayers take keeping levels within `hi`; the regime's premises at the step of the turn, with some stayer left there; the course with every need met coming below `m`. Then the line never ends exactly where the level at the first step below `m` meets `n` and the level one step later is at or above the point of no return of what the stayers left by then take."
+
+9. **MUST.** Note (Kept 4): "As the worker wrote it, its premise "at each step" excludes every start with no stayer".
+   Source, work-units.md: "At each `T`: `Short g H_T y_T`, …"; refute.md: "U2's premise "at each `T`"".
+   Fault: the quotation is not word for word.
+   Put: "its premise "at each `T`"".
+
+10. **MUST.** Note (Kept 4, E): "For kids with a higher need, a line never ends exactly where its course comes to a configuration that stands…"
+    Source, work-units.md: "E-if, for any units…"; "E-only-if, for W1 (argued): `FromNothing`, `Keeps g 0 hi`, start at most `hi` with a core, `n > 0`." W3 is also kids with a higher need, and E fails there (refute.md: 3,140). In random worlds 1,836 never-ending courses never stand.
+    Fault: "exactly where" is told of kids with a higher need in general, with its premises dropped. It is argued for W1 only. The note's own clause about W3 shows the general sentence is false.
+    Put: "In W1 (a core with a lower need budding kids with a higher one, what growth added kept), with nothing from nothing, the stock kept within `hi` and a start within `hi` with a core, a line never ends exactly where…"
+
+11. **MUST.** Note (Kept 5): "an exact law for a kid whose need is higher than its parent's (the module's own account says there is none)".
+    Source, lean-check.md C2 cites "The opening account (line 120) says: "No exact condition for a way whose kids take more, or less, never ending."" LineOnAStock.lean line 119 has exactly that wording.
+    Fault: the account speaks of kids that *take* more or less, not of a higher *need*. The parenthesis claims more than the account says, and the note repeats the reader's citation without its words.
+    Put: "an exact law for a kid whose need is higher than its parent's (the module's account says there is no exact condition for kids that take more or less; of a higher need it says nothing directly, and `HigherStartEnds` shows the fate is not monotone in the start level)".
+
+12. **MUST.** Note (Corrections): "the window law asks eleven more premises than the four named there".
+    Source, lean-check.md D3: "also `every`, `least`, `low`, `covers`, `safe`, `high`, `short₁`, `pos`, `within`, and the regime premises."
+    Fault: the count of eleven is not in the source. Nine are named, plus "the regime premises" uncounted.
+    Put: "the window law asks nine more premises by name than the four named there, and the regime's premises besides".
+
+13. **MUST.** Note (Against the one case named): "None does: in the lock's home locked starts were found whose line never ends…"
+    Source, refute.md, COUNTS row: "A lock that ends in every case: it fails the 19:36 addition to test 7 too." work-lock.md §7: "Where the others draw anything, every start ends, in every sign".
+    Fault: one kept statement (counts that multiply, where the others draw anything) has a lock ending in every case, and the refuter says so. The note says none does.
+    Put: "One does: with counts that multiply, where the others draw anything, every start ends (the lock's worker, argued and searched), and the refuter marks it as failing this addition. Elsewhere, in the lock's home, locked starts were found whose line never ends, and the reader against the Lean names…"
+
+14. **MUST.** Note (What it turns): "What came back, in both homes: on such a level a way goes on for ever only as a standing use that the giving meets, or by losing its growth and regaining it."
+    Source, work-units.md G5: "no way in the line on a stock as it stands goes on for ever otherwise than by a standing use the giving meets, or by rounds of growth lost and regained" (units only). work-lock.md §4: of 23,302 never-ending lines, "13,009 alternate for ever" (share 2, 3, 2, 3 …). refute.md: the going sides include "a set of fates closed upward (UP)", and "The alternating courses … are the only ones that go back and forth". work-units.md "Beyond these families": 1,836 never-ending courses never stand, "the way itself goes round".
+    Fault: one worker's sentence, of one home, is told of both homes. In the lock's home lines go on for ever by alternating favouring, and in units' random worlds by ways going round. Neither is a standing use or growth lost and regained. This is the premise of the section's main step.
+    Put: "What came back: in units, a way goes on for ever only as a standing use that the giving meets, by losing its growth and regaining it, or (in random worlds) by a way that goes round; in the lock's home, also by the favouring lost and regained for ever. None of these remakes anything."
+
+15. **MUST.** Note (What it cost): "no statement survived as a meeting, and the reader against the Lean had swept the package for the same ideas."
+    Source, lean-check.md: "Package-wide greps: for the ideas of C1–C5"; "Not read: … PairFlow beyond its account, ReaderRebuilding and the other rows of the 19:36 section". refute.md: "I did not set any statement against `PairFlow`, `PairSelection`, …". work-lock.md §10 and work-units.md (test 2 row) say the same.
+    Fault: the reason given says more than was done. The greps were for C1–C5's ideas (a return paid at a level, a lock drawing less, and so on). Nobody set any statement against the fifteen rows, so the widened test 2 was applied to no statement. UP-MM-REST and U2 might be one of those rows in other names; the lock worker says UP, MM and REST "are of a shape those files may already state".
+    Put: "…was not run: no statement survived as a meeting. So the widened test 2 was applied to no statement: none of the four set any statement against those rows, and the reader read only the opening accounts of some of them."
+
+16. **LESSER.** Head note: "A fourth (Claude Opus)".
+    Source, lean-check.md: "AI-written (Claude, reader "lean" …)".
+    Fault: the model is not named in the source. Fine if the run record has it.
+    Put: keep it if the run's record names the model; otherwise "A fourth AI agent".
+
+17. **LESSER.** Note (What was asked): "paid only where a level is at or above an amount `M`".
+    Source, FROZEN: "some amount `m` (above the need)".
+    Fault: "above the need" is dropped, and the corrections later depend on it (`locked_ends_on_window` "does not apply to the family at all" holds because `M` > need). The frozen file also writes `m` where the note writes `M`.
+    Put: "at or above an amount `M` above the need".
+
+18. **LESSER.** Note (G2): "Above that, refuted (the refuter: 216,138 of 660,255 starts with no premise on `M`)".
+    Source, refute.md: "G2's dichotomy with no premise on `M`, sign − | 660,255 | 216,138". work-lock.md §5, for `M > Pmin`: 404,152 locked starts, with 68,787 + 10,397 + 9,625 never ending against the dichotomy.
+    Fault: the denominator includes starts with `M ≤ Pmin`, where the dichotomy is exact. Read after "Above that", it looks like a count of the starts above.
+    Put: "Above that, refuted (the refuter: 216,138 failures among 660,255 starts taken with no premise on `M`; the worker: 88,809 of 404,152 locked starts with `M` above)".
+
+19. **LESSER.** Note (G3): "Not found by either worker or by the refuter."
+    Source: work-lock.md §6 "G3 … **Not found**"; refute.md "I found no statement either". work-units.md never takes up G3 by name. It finds instead that "The sign of the difference in use does no work in any statement found".
+    Fault: "not found" is told of a worker who did not look for it as such.
+    Put: "Not found by the lock's worker or the refuter; in units the sign of the difference in use did no work in any statement found, so there was nothing for it to have as cases."
+
+20. **LESSER.** Note (G4): "every such start at or above the higher need ends (argued by the refuter by a route of its own …)".
+    Source, work-units.md U1(b): premises include "start at most `hi` with a core and `q₀ ≤ jb·p₀`" and the regime at each falling step. The worker argued it too, through U1a. The worker's search was on slope-1 givings only.
+    Fault: premises dropped; the worker's own (gapped) argument goes unmentioned.
+    Put: "…every such start (within `hi`, with a core and at most `jb` buds per core) at or above the higher need ends (argued by the worker through a lemma found false in part, and by the refuter by a route of its own, unread; no failure in either's search)".
+
+21. **LESSER.** Note (Kept 2): "So in the first the starts that never end are closed upward and shrink as `M` rises".
+    Source, work-lock.md / refute.md: premises `fA(a, not) ≤ a ≤ fA(a, favours)`, `fA` monotone, use monotone in the share, `z + giving z` not falling.
+    Fault: premises dropped, and the refuter's warning is left out: "an edge exists" means only closure upward, and no edge is stated.
+    Put: add "(with the share's step and the use monotone and `z + giving z` never falling; no edge is stated)".
+
+22. **LESSER.** Note (Kept 3): "In the lock's home the worker's search counts, among locked starts whose own course ends, lines that never end with the favouring lost for good, with it regained for good, and alternating for ever".
+    Source, work-lock.md: the "own course ends" population is sign + (§4: 279,796; 8,009 / 2,284 / 13,009). The sign − counts (§5) are of locked starts with `M > Pmin` whose level comes below `M` (68,787 / 10,397 / 9,625).
+    Fault: the population is right for one sign only.
+    Put: "…counts, where the favoured draw more, among locked starts whose own course ends, …; and where they draw less, among locked starts whose level comes below `M`, …".
+
+23. **LESSER.** Note (Kept 4): "`WayOfUnits.two_units_iff` follows with its statement unchanged through a bridge lemma of the package."
+    Source, work-units.md: "Where the two pairs are equal both right sides are false, and that case wants a line of its own." lean-check.md B10 names the bridge `WayOfUnits.unending_unit` (248). refute.md adds `RegimeMargin.ends_below`.
+    Fault: the equal-pairs exception is left out.
+    Put: "…through the bridge `WayOfUnits.unending_unit`, except where its two pairs are equal, which wants a line of its own."
+
+24. **LESSER.** Note (Kept 4): "*A way that goes on with its growing need met at every step grows at every step and ends* (argued by the worker from `rising_takes_all`, whose premises the reader against the Lean lists)."
+    Source, lean-check.md B14: "holds only with more. It asks `nothing`, `Keeps giving 0 hi`, `x ≤ hi`, and a use rising strictly at each of the first `hi` steps".
+    Fault: the reader's verdict ("holds only with more") is softened to a pointer.
+    Put: "(argued by the worker from `rising_takes_all`; the reader against the Lean: only with nothing from nothing, the stock kept within `hi` from a start within it, and the use rising strictly at each of the first `hi` steps)".
+
+25. **LESSER.** Note (Kept 4): "*The sign of the difference in use did no work in any statement the units' worker found.*"
+    Source, work-units.md: "1,181,952 courses, giving of slope 1". lean-check.md B9: "Where nobody multiplies it is the whole of the second sign" "holds only with more: `along` … was met only on the search's slope-1 givings."
+    Put: add "(searched, on givings of slope 1)".
+
+26. **LESSER.** Note (Corrections): "the result that rested on it stands by the refuter's other route."
+    Source, refute.md: "can be argued by another route (given below, argued by me, unread)".
+    Put: "the result that rested on it is argued by the refuter by another route (unread), and no failure was found in either search."
+
+27. **LESSER.** Note (Corrections): "The bracket the lock's worker kept is, by the refuter, `Lasting.below_orbit` used twice."
+    Source, refute.md BR row ("**argued**"). The reader against the Lean did not read `below_orbit` (finding 6).
+    Put: "…by the refuter's argument (unread; `below_orbit` was not read by the reader against the Lean), `Lasting.below_orbit` used twice."
+
+28. **LESSER (omission).** The "Corrections" leave out four corrections by the reader against the Lean that a reader would need:
+    - A1: `thresholdBack` applies on places only at `θ = ⌈n/2⌉`, and "the searches used `θ = 2` at every `n`", so the lock worker's `θ > 0` "is a reading of the same shape, not `thresholdBack`".
+    - A7: `RegimeMargin.step_mono` *is* a case, with its statement unchanged, of the worker's one-step comparison. This reverses the worker's "not unchanged".
+    - B1: U0's citation of `RegimeMargin.holds` needs `Keeps g D hi` added.
+    - B9: "the whole of the second sign" holds only with `along`.
+    Put: one line each under "To the workers".
+
+29. **LESSER (omission).** FROZEN After 2: "Which sense the direction means is Ren's to say and he has not said." The note says which sense is tested, but in "What it turns" it says "The second way has content only where what is rested on is itself kept by goings-on. That is the third sense…". That is the writer's own step (no report states it), and it is shown as a finding. The writer's own words in the frozen file call the third sense "the sense the writer holds".
+    Put: "My reading is that the second way has content only where…; that is the third sense, the one I hold. Which sense the direction means is Ren's to say."
+
+30. **LESSER.** Note (What it turns): "So I do not think the two ways can be placed on one level with its giving handed in, and I stop trying."
+    Source: one family (a return paid to the favoured alone at or above `M`), two homes, small searches, paper arguments read by no one.
+    Fault: an inference wider than what was tried, though marked as a view.
+    Put: "So, from this one family in two homes, I do not think…".
+
+31. **LESSER.** Note (What it turns): "the nearest would be the check that the family's step keeps the order where the favoured draw less, which would make this family a case of three generic laws … either would be a join of the smaller kind."
+    Source, refute.md: the generic-law reading is "mine alone and unread", and UP-MM-REST trips test 6 ("no old law a case"). lean-check.md did not find MM as one statement.
+    Fault: the first is not a join in the sense where an old proof becomes a case (AGENTS rule 4); it would make the new a case of the old. The basis is one unread argument, partly unconfirmed. "settle the scratch proof of 17 November" is unclear: U2 would have `mixed_turns_iff` as a case. Whether proving U2 is what settles the scratch is not said in the sources.
+    Put: "…which, by the refuter's unread argument (MM not found as one statement by the reader), would make this family a case of generic laws: a recognition, not a join; and U2, of which `two_units_iff` and the scratch's `mixed_turns_iff` would be cases, which is a join of the smaller kind."
+
+32. **LESSER.** Note (What it cost): "A fifth agent that the 19:36 addition planned".
+    Source, FROZEN: five agents planned at 19:17 (the checker included); the addition: "One more agent, after the four … the count of agents is then six".
+    Put: "The agent that the 19:36 addition added after the four".
+
+## Checked and found sound
+
+Head note: two workers who did not see each other; the refuter's own programs and reading; no person has read it; the search caveat. What was asked: Ren's quotation as in FROZEN; the two homes; the 19:17 freeze. "The second way" qualifier, and "nothing in either model adds to a level". How it came out: the refuter's verdict and its "none has both ends…"; "every statement that is exact trips 1, 2 or 3"; G5 "stands in its outcome… a recognition, and some kept failures". G1: necessary (argued, sign +); 773 of 191,281; smallest course checked by hand; the last clause refuted in its letter, and the favouring coming back. G2: exact only for `M ≤ Pmin` with `M` doing no work, two old arguments; no edge found. G4: 13,079 of 20,014; U1a found false in part; W2 holds in form and can come too late. G5: window course by definition; `favours_iff` gives `corrects`; `uses` over every way; "not because an old law covers it". Kept 1: `locked_turns_in_time_share_iff` (refuter and reader). Kept 2: the order kept/reversed; the 11/12 course and its hand check; `HigherStartEnds.higher_ends`. Kept 3: the three kept courses; the seven-step round checked by hand; counts not re-run. Kept 4: U2 argued, searched by both; `mixed_turns_iff` a case, checked premise by premise; the composition by `unending_iff_first_marked`; no rule and no share; 583,422 and 3,140; `Holds` lacks the upper clause; `unending_of_fixed` a case of E-if; the rule doing no work but in one searched family, moved by two steps. Kept 5: no module joining `RuleShaping` with a level; no lock drawing less; offspring only through needs; `CoupledDrawers` and gated renewals. Corrections: U1a's 10,845 of 123,838 and the hand case; HL an instance of `unending_iff_above`, not the reverse; `locked_ends_rising` only with more; `hL` reads share and level; `locked_ends_on_window`'s `un` (given `M` above the need); `mixed_turns_iff` premises; the tipping share; the G3 gloss; the replaced clause by `ways_alike`. Against the one case: the experiment's summary; `Three.share_read_goes_on`; the closing limit. What it turns: the direction's two ways, as in FROZEN; `RelationalRenewal`'s supplied contribution (C4).
+
+## Not checked
+
+These are not in the five sources: the description of the table of 20 November (What was asked); the correction "to what I told Ren at 17:40" (seven core places, three, one, the coordinator, the survey session); the quotation of the record of 17 November in "What it turns"; the list of rows in order item 1 beyond `PairFlow`, `ReadingsSpread` and `RelationalRenewal` (`Roles.Mutualism`, `Dissipation`); "the survey session's point"; "raised by both other sessions"; 1.21 million tokens and 54 minutes; the `.txt` copies under "Where it is". No count was recomputed from the result JSON files. No Lean was opened beyond the two passages named at the top.

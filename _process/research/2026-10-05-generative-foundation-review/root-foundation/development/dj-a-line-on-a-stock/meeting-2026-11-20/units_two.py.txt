@@ -1,0 +1,141 @@
+#!/usr/bin/env python3
+"""units_two.py: the second sign in the line on a stock as it stands. Two kinds on one stock, L that takes less and
+M that takes more (use h > l); nothing is added by anyone. For each way the kinds can leave offspring, and each of
+the three orders of their needs: what the fall does to who is there, whether both fates occur, and whether the
+fate is what an older statement says.
+
+AI-written scratch (worker "units", 20 November 2026). A search shows where a statement fails, not that it holds.
+
+Kinds: 0 = L, 1 = M. Shapes (kids as counts of (L, M)):
+  stay/stay     L -> L        M -> M          (WayOfUnits: each unit leaves itself)
+  M doubles     L -> L        M -> M M
+  L doubles     L -> L L      M -> M
+  both double   L -> L L      M -> M M
+  M leaves L    L -> L        M -> M L        (the kind that takes more multiplies and leaves the other)
+  L leaves M    L -> L M      M -> M          (the kind that takes less multiplies and leaves the other)
+Giving: min(z, r, c - z) (falling slope 1), so Short/Meets/Keeps hold up to hi = c at every draw that has a root.
+"""
+import json, time
+from units_core import World, mk_giving, rstep
+from units_w2 import check_u2
+
+t0 = time.time()
+SHAPES = {
+    'stay/stay':   ((1, 0), (0, 1)),
+    'M doubles':   ((1, 0), (0, 2)),
+    'L doubles':   ((2, 0), (0, 1)),
+    'both double': ((2, 0), (0, 2)),
+    'M leaves L':  ((1, 0), (1, 1)),
+    'L leaves M':  ((1, 1), (0, 1)),
+}
+
+
+def holds_form(W, course, c):
+    """The right side of unending_iff_holds: some step k, some need met at every step before, at which the way is
+    not empty, every need present is met, and level >= H + y. Also whether Regime (hi = c) held at every way seen."""
+    regime_all = True
+    for k, (w, x) in enumerate(course):
+        if not W.goes((w, x)):
+            return False, regime_all
+        H = W.taken(w)
+        ok, y = W.regime_ok(H, c)
+        regime_all = regime_all and ok
+        all_met = all(W.need[i] <= x for i in range(W.k) if w[i])
+        if sum(w) > 0 and all_met and y is not None and H + y <= x:
+            return True, regime_all
+    return False, regime_all
+
+
+def main():
+    T = {}
+    examples = {}
+
+    def keep(key, val, k=2):
+        examples.setdefault(key, [])
+        if len(examples[key]) < k:
+            examples[key].append(val)
+
+    courses = 0
+    for l in (1, 2):
+        for h in (l + 1, l + 2):
+            for nL in (1, 2, 4, 6, 8, 10):
+                for nM in (1, 2, 4, 6, 8, 10):
+                    order = 'M needs more' if nM > nL else ('M needs less' if nM < nL else 'same need')
+                    for c in (12, 16, 20, 24):
+                        for r in (None, 3, 5):
+                            g = mk_giving(c, 1, r)
+                            for shape, kids in SHAPES.items():
+                                W = World((nL, nM), (l, h), kids, g)
+                                cell = T.setdefault((shape, order), dict(courses=0, ends=0, never=0, undecided=0,
+                                                                         first_lost={'L': 0, 'M': 0, 'both at once': 0, 'none lost': 0},
+                                                                         never_with={'both kinds': 0, 'only L': 0, 'only M': 0},
+                                                                         law={}, cycles={}))
+                                for pL in (1, 2, 3):
+                                    for pM in (1, 2):
+                                        for x0 in range(0, c + 1):
+                                            st = ((pL, pM), x0)
+                                            fate, course, cyc = W.run(st)
+                                            courses += 1
+                                            cell['courses'] += 1
+                                            cell[fate] += 1
+                                            if fate == 'undecided':
+                                                continue
+                                            # who is lost first
+                                            lost = 'none lost'
+                                            for (w, x) in course[1:]:
+                                                if w[0] == 0 and w[1] == 0:
+                                                    lost = 'both at once'
+                                                    break
+                                                if w[0] == 0:
+                                                    lost = 'L'
+                                                    break
+                                                if w[1] == 0:
+                                                    lost = 'M'
+                                                    break
+                                            cell['first_lost'][lost] += 1
+                                            if fate == 'never':
+                                                cell['cycles'][cyc] = cell['cycles'].get(cyc, 0) + 1
+                                                wl = course[-1][0]
+                                                cell['never_with']['both kinds' if wl[0] and wl[1] else ('only L' if wl[0] else 'only M')] += 1
+                                            # the older statement that speaks of this cell, if any
+                                            if shape == 'stay/stay':
+                                                rhs, reg = holds_form(W, course, c)
+                                                key = ('unending_iff_holds right side', rhs, fate) if reg else ('regime fails along', rhs, fate)
+                                                cell['law'][key] = cell['law'].get(key, 0) + 1
+                                            elif shape in ('M doubles', 'M leaves L', 'L doubles', 'L leaves M'):
+                                                grower_is_M = shape.startswith('M')
+                                                (n, m, a, b) = (nL, nM, l, h) if grower_is_M else (nM, nL, h, l)
+                                                (p0, q0) = (pL, pM) if grower_is_M else (pM, pL)
+                                                ks, ka = (2, 0) if 'doubles' in shape else (1, 1)
+                                                if m >= n:
+                                                    ok, why, rhs, info = check_u2(W, n, m, a, b, ks, ka, g, c, p0, q0, x0)
+                                                    key = ('U2 right side (mixed_turns_iff where it doubles)', rhs, fate) if ok else ('premise fails: ' + why, rhs, fate)
+                                                    cell['law'][key] = cell['law'].get(key, 0) + 1
+                                                    if ok and rhs != (fate == 'never'):
+                                                        keep('FAIL U2 in ' + shape, (dict(l=l, h=h, nL=nL, nM=nM, c=c, r=r), st, info, fate, course[:8]))
+                                                else:
+                                                    key = ('the kind that multiplies needs less: always ends?', fate)
+                                                    cell['law'][key] = cell['law'].get(key, 0) + 1
+                                            else:
+                                                key = ('both multiply: always ends?', fate)
+                                                cell['law'][key] = cell['law'].get(key, 0) + 1
+    out = {'courses': courses, 'seconds': round(time.time() - t0, 1), 'cells': {}}
+    for (shape, order), cell in sorted(T.items()):
+        cell['law'] = {str(k): v for k, v in sorted(cell['law'].items(), key=lambda kv: str(kv[0]))}
+        cell['cycles'] = {str(k): v for k, v in cell['cycles'].items()}
+        out['cells'][shape + ' | ' + order] = cell
+    out['examples'] = examples
+    with open('/Users/ren/theories/tmp/r7/one-model/check/meet20/units-results-two.json', 'w') as f:
+        json.dump(out, f, indent=1, default=str)
+    print('courses', courses, 'seconds', out['seconds'])
+    for name, cell in out['cells'].items():
+        print('==', name, '| courses', cell['courses'], 'ends', cell['ends'], 'never', cell['never'], 'undecided', cell['undecided'])
+        print('     first lost:', cell['first_lost'], '| never ends with:', cell['never_with'], '| cycles:', cell['cycles'])
+        for k, v in cell['law'].items():
+            print('     ', k, v)
+    for k, v in examples.items():
+        print('EXAMPLE', k, v)
+
+
+if __name__ == '__main__':
+    main()

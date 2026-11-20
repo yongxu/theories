@@ -1,0 +1,410 @@
+#!/usr/bin/env python3
+"""refute_lock.py: an independent re-run of the lock home's statements, looking for starts on the wrong side.
+
+AI-written scratch (agent "refute", 20 November 2026). Not the workers' model code: written from the statements in
+work-lock.md. A search over small numbers shows where a statement fails, not that it holds.
+
+What differs from the workers' search on purpose: givings, share steps, uses and (for BR) readings are RANDOM
+TABLES that meet each statement's stated premises, not the tent family with a*uF + (n-a)*uO and the two share
+steps. A statement that leans on the tent or on linear use should fail here.
+
+Configuration (a, g, x): share a in 0..n, rule g (1 favours, 0 not), level x in 0..C.
+Step, in the order of TurningInTime.windowAfter with every step reading:
+  a' = fA[g][a];  g' = read(a, x);  x' = (x - use[a])+ + giving[(x - use[a])+].
+Net: a next only where need <= x.  "Never ends": need <= level at every step (finite state: a repeat decides).
+"""
+import random, sys, json, time
+
+t0 = time.time()
+rnd = random.Random(20261120)
+
+
+def rstep(g, H, x):
+    z = x - H if x > H else 0
+    return z + g[z]
+
+
+def fate(step, goes, s, memo):
+    """True = never ends. step: state -> state; goes: state -> bool. Memoised over a finite state set."""
+    path, on = [], set()
+    while True:
+        if s in memo:
+            r = memo[s]
+            break
+        if not goes(s):
+            r = False
+            break
+        if s in on:
+            r = True
+            break
+        on.add(s)
+        path.append(s)
+        s = step(s)
+    for p in path:
+        memo[p] = r
+    return r
+
+
+def rand_giving(C, monotone_sum, tentish):
+    """giving on 0..C with g[0] = 0 and z + g[z] <= C. monotone_sum: z + g[z] never falls as z rises."""
+    if tentish:
+        rho = rnd.randint(1, C)
+        g = [max(0, min(z, rho, C - z)) for z in range(C + 1)]
+        # roughen it a little, keeping the premises
+        for _ in range(rnd.randint(0, 3)):
+            z = rnd.randint(1, C)
+            g[z] = rnd.randint(0, C - z)
+    else:
+        g = [0] + [rnd.randint(0, C - z) for z in range(1, C + 1)]
+    if monotone_sum:
+        s = 0
+        for z in range(C + 1):
+            v = max(s, z + g[z])
+            v = min(v, C)
+            g[z] = v - z
+            s = v
+        g[0] = 0
+        s = 0
+        for z in range(C + 1):
+            if z + g[z] < s:
+                return None
+            s = z + g[z]
+    return g
+
+
+def rand_fA(n):
+    """fA[1][a] >= a, fA[0][a] <= a, each monotone in a."""
+    up, dn = [], []
+    lo = 0
+    for a in range(n + 1):
+        v = rnd.randint(max(a, lo), n)
+        up.append(v)
+        lo = v
+    lo = 0
+    for a in range(n + 1):
+        v = rnd.randint(lo, a)
+        dn.append(v)
+        lo = v
+    return [dn, up]
+
+
+def rand_use(n, sign, top):
+    vals = sorted(rnd.randint(0, top) for _ in range(n + 1))
+    if sign < 0:
+        vals.reverse()
+    return vals
+
+
+def least_root(g, H, C):
+    for z in range(C + 1):
+        if g[z] >= H:
+            return z
+    return None
+
+
+def regime(g, H, C):
+    """Short/Meets/Keeps at H up to hi = C. Returns (ok, y, point) with point = H + y, or (ok, None, None) where
+    no level within hi is at or above the point of no return (premises met by a y beyond hi - H)."""
+    if H == 0:
+        return False, None, None
+    for x in range(C + 1):
+        if rstep(g, H, x) > C:
+            return False, None, None          # Keeps fails
+    r = least_root(g, H, C)
+    if r is None or r + H > C:
+        return True, None, None               # Short holds up to hi, Meets is empty: every level within hi ends
+    for z in range(r, C - H + 1):
+        if g[z] < H:
+            return False, None, None          # Meets fails
+    return True, r, H + r
+
+
+out = {}
+
+
+def tally(key, ok):
+    c = out.setdefault(key, [0, 0])
+    c[0] += 1
+    if not ok:
+        c[1] += 1
+    return ok
+
+
+examples = {}
+
+
+def keep(key, val, k=2):
+    examples.setdefault(key, [])
+    if len(examples[key]) < k:
+        examples[key].append(val)
+
+
+def main(models):
+    for it in range(models):
+        n = rnd.randint(1, 4)
+        C = rnd.randint(6, 16)
+        sign = rnd.choice((1, -1))
+        tent = rnd.random() < 0.5
+        g_any = rand_giving(C, False, tent)
+        g = rand_giving(C, True, tent)
+        if g is None:
+            continue
+        fA = rand_fA(n)
+        use = rand_use(n, sign, rnd.randint(1, 6))
+        need = rnd.randint(1, 3)
+        M = rnd.randint(need, C + 1)
+        theta = rnd.choice((0, 0, 1, 2))
+        states = [(a, r, x) for a in range(n + 1) for r in (0, 1) for x in range(C + 1)]
+
+        def goes(s):
+            return need <= s[2]
+
+        # ---------- the family's reading, monotone giving
+        def step(s, g=g, use=use):
+            a, r, x = s
+            return (fA[r][a], 1 if (x >= M and a >= theta) else 0, rstep(g, use[a], x))
+        memo = {}
+        F = {s: fate(step, goes, s, memo) for s in states}
+
+        # ---------- held courses (state (a, x)), per rule, monotone giving
+        H_memo = [{}, {}]
+
+        def held_fate(r, a, x, g=g, use=use):
+            return fate(lambda s: (fA[r][s[0]], rstep(g, use[s[0]], s[1])), lambda s: need <= s[1], (a, x), H_memo[r])
+
+        worst = 1 if sign > 0 else 0          # rule under which the share moves toward more use
+        least = 1 - worst
+
+        # ---------- BR with an arbitrary reading (a random table over (a, x)), and with the family's reading
+        R = [[rnd.randint(0, 1) for _ in range(C + 1)] for _ in range(n + 1)]
+        memoR = {}
+
+        def stepR(s):
+            a, r, x = s
+            return (fA[r][a], R[a][x], rstep(g, use[a], x))
+        for s in states:
+            a, r, x = s
+            w, l = held_fate(worst, a, x), held_fate(least, a, x)
+            for name, f in (('family reading', F[s]), ('random reading', fate(stepR, goes, s, memoR))):
+                if w:
+                    if not tally('BR worst-held never ends => course never ends (%s, sign %+d)' % (name, sign), f):
+                        keep('BR fails (upper)', dict(n=n, C=C, g=g, fA=fA, use=use, need=need, M=M, theta=theta, s=s))
+                if f:
+                    if not tally('BR course never ends => least-held never ends (%s, sign %+d)' % (name, sign), l):
+                        keep('BR fails (lower)', dict(n=n, C=C, g=g, fA=fA, use=use, need=need, M=M, theta=theta, s=s))
+
+        # ---------- HL: one rule held; ANY giving (g_any), any monotone-or-not use: the statement asks neither
+        use_any = [rnd.randint(0, 6) for _ in range(n + 1)]
+        for r in (0, 1):
+            hm = {}
+            for a in range(n + 1):
+                for x in range(C + 1):
+                    # the stretch
+                    aa, xx, met = a, x, True
+                    while fA[r][aa] != aa:
+                        if xx < need:
+                            met = False
+                        aa, xx = fA[r][aa], rstep(g_any, use_any[aa], xx)
+                    Hb = use_any[aa]
+                    ok, y, point = regime(g_any, Hb, C)
+                    if not ok:
+                        continue
+                    if point is not None and need > point:
+                        continue
+                    left = fate(lambda s: (fA[r][s[0]], rstep(g_any, use_any[s[0]], s[1])), lambda s: need <= s[1],
+                                (a, x), hm)
+                    right = met and point is not None and xx >= point
+                    if not tally('HL held course never ends <=> need met before J and level at J >= H+y', left == right):
+                        keep('HL fails', dict(n=n, C=C, g=g_any, fA=fA, use=use_any, need=need, r=r, a=a, x=x,
+                                              left=left, right=right))
+
+        # ---------- LATE: asks no monotone use and no monotone giving; only fA[1][a] >= a, every use >= H,
+        #            nothing from nothing, giving short of H below y, 0 < need <= M <= H + y.
+        Hmin = min(use_any)
+        if Hmin > 0:
+            r0 = least_root(g_any, Hmin, C)
+            ybig = r0 if r0 is not None else C + 5          # any y up to the least root meets Short
+            if need <= M <= Hmin + ybig:
+                memoL = {}
+
+                def stepL(s):
+                    a, r, x = s
+                    return (fA[r][a], 1 if (x >= M and a >= theta) else 0, rstep(g_any, use_any[a], x))
+                for a in range(theta, n + 1):
+                    for x in range(C + 1):
+                        left = fate(stepL, goes, (a, 1, x), memoL)
+                        # the own course: favouring rule held; does it ever come below M?
+                        seen, aa, xx, below = set(), a, x, False
+                        while (aa, xx) not in seen:
+                            seen.add((aa, xx))
+                            if xx < M:
+                                below = True
+                                break
+                            aa, xx = fA[1][aa], rstep(g_any, use_any[aa], xx)
+                        if not tally('LATE never ends <=> own course never below M (any use, any giving)', left == (not below)):
+                            keep('LATE fails', dict(n=n, C=C, g=g_any, fA=fA, use=use_any, need=need, M=M, theta=theta,
+                                                    a=a, x=x, left=left))
+
+        # ---------- sign +: D
+        if sign > 0:
+            for a in range(theta, n + 1):
+                for x in range(C + 1):
+                    # own course's first step read T, the need met up to it
+                    aa, xx, T, okT, seen = a, x, None, True, set()
+                    t = 0
+                    while (aa, xx) not in seen:
+                        seen.add((aa, xx))
+                        if xx < need:
+                            okT = False
+                            break
+                        if xx < M:
+                            T = t
+                            break
+                        aa, xx, t = fA[1][aa], rstep(g, use[aa], xx), t + 1
+                    if T is None or not okT:
+                        continue
+                    a1, x1 = fA[1][aa], rstep(g, use[aa], xx)      # share and level at T + 1
+                    rhs = held_fate(0, a1, x1)
+                    lhs = F[(a, 1, x)]
+                    if lhs:
+                        if not tally('D-necessary (sign +)', rhs):
+                            keep('D-necessary fails', dict(n=n, C=C, g=g, fA=fA, use=use, need=need, M=M, theta=theta, a=a, x=x))
+                    if rhs:
+                        tally('D-sufficient (sign +): wrong-side starts counted as failures', lhs)
+                        if not lhs:
+                            keep('D-sufficient fails', dict(n=n, C=C, g=g, fA=fA, use=use, need=need, M=M, theta=theta, a=a, x=x))
+                    # never favours again after T? follow the real course from the configuration at T + 1
+                    s = (a1, 0, x1)
+                    seen2, again = set(), False
+                    while s not in seen2 and need <= s[2]:
+                        seen2.add(s)
+                        s = step(s)
+                        if s[1] == 1:
+                            again = True
+                            break
+                    if not again:
+                        if not tally('D-no-return: never again => (line never ends <=> not-favouring held from T+1 never ends)', lhs == rhs):
+                            keep('D-no-return fails', dict(n=n, C=C, g=g, fA=fA, use=use, need=need, M=M, theta=theta, a=a, x=x))
+                        # HL's form: the level when the share has stopped falling against H + y of the use then
+                        aa2, xx2 = a1, x1
+                        while fA[0][aa2] != aa2:
+                            aa2, xx2 = fA[0][aa2], rstep(g, use[aa2], xx2)
+                        ok, y, point = regime(g, use[aa2], C)
+                        if ok and (point is None or need <= point):
+                            right = point is not None and xx2 >= point
+                            if not tally('D-no-return, level form (HL premises met)', lhs == right):
+                                keep('D-no-return level form fails', dict(n=n, C=C, g=g, fA=fA, use=use, need=need, M=M,
+                                                                          theta=theta, a=a, x=x, lhs=lhs, right=right))
+
+            # NUP: at some share the locked starts that never end are not closed upward in the level
+            nup = False
+            for a in range(theta, n + 1):
+                for x in range(C):
+                    if F[(a, 1, x)] and any(not F[(a, 1, x2)] for x2 in range(x + 1, C + 1)):
+                        nup = True
+            tally('NUP: sign + models in which locked never-ending starts are closed upward in the level', not nup)
+
+        # ---------- sign -: UP, MM, REST
+        if sign < 0:
+            for s in states:
+                a, r, x = s
+                if F[s]:
+                    ups = []
+                    if a < n:
+                        ups.append((a + 1, r, x))
+                    if r == 0:
+                        ups.append((a, 1, x))
+                    if x < C:
+                        ups.append((a, r, x + 1))
+                    for u in ups:
+                        if not tally('UP (sign -): never-ending closed upward, covering pairs', F[u]):
+                            keep('UP fails', dict(n=n, C=C, g=g, fA=fA, use=use, need=need, M=M, theta=theta, s=s, u=u))
+                t = step(s)
+                le = lambda p, q: p[0] <= q[0] and p[1] <= q[1] and p[2] <= q[2]
+                if le(s, t):
+                    cur, okr = t, True
+                    for _ in range(3 * (C + n + 3)):
+                        nx = step(cur)
+                        if not le(cur, nx):
+                            okr = False
+                        cur = nx
+                    if not tally('REST (sign -): a step that lowers none is followed by none that lowers any', okr):
+                        keep('REST up fails', dict(n=n, C=C, g=g, fA=fA, use=use, need=need, M=M, theta=theta, s=s))
+                    if goes(s):
+                        tally('REST (sign -): ... and the line never ends (need met there)', F[s])
+                if le(t, s):
+                    cur, okr = t, True
+                    for _ in range(3 * (C + n + 3)):
+                        nx = step(cur)
+                        if not le(nx, cur):
+                            okr = False
+                        cur = nx
+                    tally('REST (sign -): a step that raises none is followed by none that raises any', okr)
+            if M > need:
+                M2 = M - 1
+                memo2 = {}
+
+                def step2(s):
+                    a, r, x = s
+                    return (fA[r][a], 1 if (x >= M2 and a >= theta) else 0, rstep(g, use[a], x))
+                for s in states:
+                    if F[s]:
+                        if not tally('MM (sign -): never ends at M => never ends at M - 1', fate(step2, goes, s, memo2)):
+                            keep('MM fails', dict(n=n, C=C, g=g, fA=fA, use=use, need=need, M=M, theta=theta, s=s))
+            # G2's dichotomy: a locked start never ends <=> own course never below M
+            Hm = min(use)
+            for a in range(theta, n + 1):
+                for x in range(C + 1):
+                    seen, aa, xx, below = set(), a, x, False
+                    while (aa, xx) not in seen:
+                        seen.add((aa, xx))
+                        if xx < M:
+                            below = True
+                            break
+                        aa, xx = fA[1][aa], rstep(g, use[aa], xx)
+                    tally('G2 dichotomy (sign -, no premise on M): never ends <=> favouring kept and never below M',
+                          F[(a, 1, x)] == (not below))
+        # the sign-reversed order does NOT make UP hold in sign + : count
+        if sign > 0:
+            bad = 0
+            for s in states:
+                a, r, x = s
+                if F[s] and x < C and not F[(a, r, x + 1)]:
+                    bad += 1
+            tally('sign +: models with no configuration that ends from one more level', bad == 0)
+
+
+def counts(models):
+    """Counts that multiply: f' = f(a0+back+p), o' = o(a0+c+p); use f*uF + o*uO, uO > 0, o >= 1; giving bounded."""
+    for _ in range(models):
+        C = rnd.randint(6, 14)
+        g = [0] + [rnd.randint(0, C - z) for z in range(1, C + 1)]
+        a0, c, p, s = rnd.randint(1, 2), rnd.randint(1, 2), rnd.randint(0, 1), rnd.randint(0, 4)
+        uF, uO = rnd.randint(0, 3), rnd.randint(1, 3)
+        need, M = rnd.randint(1, 3), rnd.randint(1, C)
+        for f0 in range(0, 3):
+            for o0 in range(1, 3):
+                for r0 in (0, 1):
+                    for x0 in range(C + 1):
+                        f, o, r, x = f0, o0, r0, x0
+                        ended = False
+                        for _ in range(4 * C + 40):
+                            if x < need:
+                                ended = True
+                                break
+                            back = s if r else 0
+                            f2, o2 = f * (a0 + back + p), o * (a0 + c + p)
+                            r2 = 1 if x >= M else 0
+                            x = rstep(g, f * uF + o * uO, x) if f * uF + o * uO <= C else 0
+                            f, o, r = min(f2, 10 ** 6), min(o2, 10 ** 6), r2
+                        tally('COUNTS: every start with another that draws ends', ended)
+
+
+if __name__ == '__main__':
+    models = int(sys.argv[1]) if len(sys.argv) > 1 else 1500
+    main(models)
+    counts(300)
+    res = {k: dict(checked=v[0], failures=v[1]) for k, v in sorted(out.items())}
+    print(json.dumps(res, indent=1))
+    print('seconds', round(time.time() - t0, 1))
+    json.dump(dict(results=res, examples=examples), open('/Users/ren/theories/tmp/r7/one-model/check/meet20/refute-results-lock.json', 'w'), indent=1, default=str)

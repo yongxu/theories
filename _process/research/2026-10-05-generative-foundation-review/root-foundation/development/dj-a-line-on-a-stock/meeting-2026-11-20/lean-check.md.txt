@@ -1,0 +1,145 @@
+# The two reports set against the Lean's statements
+
+*AI-written (Claude, reader "lean" of the workflow of 20 November 2026). I took no part in the work. I read statements and docstrings, not proofs. I wrote no Lean, built nothing and ran no program. Every negative here means "not found in what was read", and what was read is listed at the end. Standing is one of: **holds**, **does not hold**, **holds only with more** (the premises added are named).*
+
+Paths: `B/` = `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/`; `S/` = the scratch directory `…/dj-a-line-on-a-stock/second-way-2026-11-17/`.
+
+## A. The lock's report (work-lock.md)
+
+**A1. G5-step: holds only with more.** `B/TurningInTime.lean` `windowAfter` (1271), `B/PoolFromCourse.lean` `windowRead` (252: `if N ≤ p.2 ∧ p.2 < K then hL p g else hA p.1 g`). At `N := 0`, `K := M`, the family's reading is this one. `corrects` (window_corrected, 1589) follows from `B/RuleShaping.lean` `favours_iff` (160: `favours (shaped a s p c) ↔ c ≤ s`) at `s = 0 < c`. Both hold. The sentence "`hA :=` … `byBack` with `thresholdBack`" holds only with more. `byBack` (426) reads the share as a `CarrierCounts`, and `CarrierCounts` has `other_pos : 0 < other` (`B/RuleCapture.lean` 469–472). `thresholdBack` (458) has its threshold fixed at `other ≤ carrier`. On places it applies only through `a ↦ (a, n − a)` with `a < n`, at `θ = ⌈n/2⌉`. A share of all `n` places has no `CarrierCounts`. Any other `θ` (the searches used `θ = 2` at every `n`) is a reading of the same shape, not `thresholdBack`.
+
+**A2. G5-law, `uses`: holds, and the failure is wider than stated.** `locked_turns_in_time_on_window_iff` (1633) has `uses : ∀ v : A × R × Nat, kept v.2.1 → use v = H₂`, which quantifies over every way, reachable or not. So it fails once two shares have different uses (`uF ≠ uO`, `n ≥ 1`), whether or not the share moves. The report also leaves out premises: `least : ∀ v, H₂ ≤ use v`, `every`, `low : N ≤ H₂ + y₂`, `high` (on the level one step after a read step), `short₁`, `draws`, `pos`, `within`, and the regime premises.
+
+**A3. G5-law, `covers`/`safe`: holds as a necessary condition.** The premises are `covers : c ≤ K` and `safe` from `c` up to `hi`. With `K = M`, `c ≤ M`, so `safe` asks every level from `c` up to be safe, and `c` may lie below `M`. The report's "every level from `M` up is safe" follows from this but is weaker than what the Lean asks. Its "or `c > hi`" is the docstring's own case (`safe` is then vacuous).
+
+**A4. A neighbour neither report cites.** `locked_turns_in_time_share_iff` (1817) has no premise on where the window lies, so no `covers` and no `safe`. It asks `uses` only of ways with a `Low` share and a `kept` rule. Its `lowRule` (off a `Low` share the share's reading gives a `kept` rule) and `lowStays` are what keep the favouring from coming back, which is the failure the lock report found for D (⟸). The family is not its case: `sets` asks the window to set a `Low` share at every read level, and in the family the share steps by `fA` under the rule in force (`windowAfter_every_is_share`, 1747).
+
+**A5. HL: "`unending_iff_above` (958) is its case at `J = 0` with the statement unchanged" does not hold.** `unending_iff_above` holds for any `Kept` kind that every step keeps and whose ways use `H₂`. HL is stated in the lock's model. At `J = 0`, with `Kept := (· = w)` and `after w x := w`, HL is an **instance of** `unending_iff_above`, not the reverse: HL does not give `unending_iff_above` for a `Kept` with more than one way. So HL trips test 6, not "not 6". The cited premises (`nothing`, `short`, `meets`, `keeps`, `needs`, `within`, `high`) are all there. `regime_levels` (570) is private, as the report says.
+
+**A6. LATE's citations: hold.** `agrees_until_marked` (469) asks `AloneOutside`, which `window_alone_outside` (1545) gives. The only-if half of `unending_iff_above_kept_below` (920) uses `floor`, `nothing`, `short`, `needs` (its docstring says so). LATE uses these.
+
+**A7. `RegimeMargin.step_mono` (B/RegimeMargin.lean 1112): "only with its premise `grows` weakened … not unchanged" does not hold as worded.** `step_mono` asks `grows : ∀ a b, a ≤ b → g a ≤ g b`. That `g` rising makes `z + g z` rising. So a one-step comparison under "`z + g z` never falls" implies `step_mono`, and `step_mono` is a case of it with its statement unchanged. What is true: `step_mono` is not a case of BR's statement, which concludes fates, not a step. The remark that the tent's falling side does not meet `grows` holds.
+
+**A8. `locked_ends_rising` (1440).** "Not a case on places": **holds**. Its `more` fails where the share is capped, and so does `count_rises`' `rise : a < fA a g` (1473). "An instance with counts that multiply and `M ≤ need`": **holds only with more**. `un` holds because `M ≤ need`. But `more` quantifies over every rule `v.2.1` not below the start's in `R`. With `R = CarrierCounts`, a rule `⟨k, 1⟩` above the start's leaves the others' count as it is, so where the favoured draw nothing (`uF = 0`, sign −) `more` fails. The instance needs `R` restricted to the family's two rules, or `uF > 0` with the favoured present.
+
+**A9. `recoverable_iff_above` (2087): holds.** It has no share at all (`X` is any falling sequence), so "not derived" is right.
+
+**A10. `Locked` (B/RuleCapture.lean 160) is `favours p.2 ∧ M.le p.2 (h p.1 p.2)`: holds.** With the rule read as one bit, the second clause is "the reading at the share also favours", that is `a ≥ θ`, as the report has it. `Raises` (145) and `ReadsShare` (150) hold of the model as stated.
+
+**A11. PopulationCorrection: holds.** `allocated` (`experiments/market-generativity/meta-attractor/PopulationCorrection.lean` 33: `if active then min N (r + k) else r − k`) is *revise* with `k := r`. `exact_schedule_activation_boundary` (504) is a start amount plus a sum, against a fee. Its premises are `hr`, `hf`, `hk : ∀ t, 1 ≤ k t`, and what it reads is a reserve. The report's "same shape, not shown the same statement" fits.
+
+**A12. D-no-return's appeal to the docstring: holds.** The docstring of `locked_turns_in_time_on_window_iff` says: "A later first step the window reads occurs only where `c` is above `hi`."
+
+**A13. UP, MM, REST: "not 2 as far as read" does not hold for REST.** `B/BandRest.lean` `keeps_one_way` (36) is "a step that keeps a relation never turns a run that starts in it". REST's two clauses are `keeps_one_way` with `rel` set to the order on (share, rule, level) and to its converse, at the lock's step. So REST is an old law with `rel` instantiated, and it trips test 2. UP's argument is `B/Lasting.lean` `orbit_mono` (376) with a monotone reading of the need. That has the shape of `Coupled.Indexed.ends_of_below` (B/RegimeMargin.lean 2153, "Raising any level never ends what held"), on another carrier. MM, a comparison of two steps at two `M`, was not found as one statement. The names the report cites exist: `Coupled.ends_of_below` (2363), `Adjusted.falls_of_below` (1604), `Drawn.rising_on` (1967).
+
+**A14. NUP ("every law of `RegimeMargin` that was read has its going side closed upward"): holds of `RegimeMargin`, but the finding is already in the package on another carrier.** `B/LineOnAStock.lean` `HigherStartEnds.higher_ends` (1840) is a kept case with three kinds: from level six the net never ends, from seven it ends. The module's opening account (line 121) says "whether the net ends is not monotone in the start level". `S/ScratchMixedWay.lean.txt` `Example.higher_ends` (683) is another such case. The lock worker did not read `LineOnAStock`.
+
+**A15. COUNTS: holds.** `CarrierCounts.select` (B/RuleCapture.lean 497) multiplies the two counts by the rule's. `other_pos` gives the "at least one other" premise.
+
+**A16. Uses in `Three`: hold.** `drawerUse` (2930) is the share, `use` (2354) is on a two-valued kind, `lockUse` (2486) reads the rule. In every `Three` lock on a level, the favouring rule or the larger share draws more. **A lock whose favoured kind draws less: not found** (read: TurningInTime §6 and §8, RuleCapture's lock, RuleShaping, the opening accounts of DrawnShaping and ClosedCapture). The window laws themselves fix no sign: `draws`, `uses` and `least` are premises.
+
+**A17. §10, "no statement here has a lock ending in every case": holds, and the Lean agrees.** `Three.share_read_goes_on` (3044) is a `Locked` start on a level that never ends. `held_at_six` (2824) and `unlocked_goes_on` (2906) are kept courses that go on.
+
+## B. The units' report (work-units.md)
+
+**B1. U0 (1), "this is `RegimeMargin.holds` (730) at one step, contraposed; only `Meets` is used": holds only with more.** `holds` asks `meets`, `keeps : Keeps g H hi`, `low` and `high`. U0 has no `Keeps`. The direct argument (Meets at `z = x_t − D`, with `z + D = x_t ≤ hi`) is right without it, but the cited law applies only with `Keeps g D hi` added.
+
+**B2. U0 (2), `step_lowers` (B/LineOnAStock.lean 720): holds.** Its premises `short`, `nothing`, `more : H ≤ D`, `below` are there, and its docstring says it is "`TurningInTime.held_above` contraposed". U0 as one statement was **not found** (read: LineOnAStock §6–7, TurningInTime 808–1000). Its second half is the only-if half of `unending_iff_above_kept_below` (920), whose premise `floor` plays the part of "takes at least `D`".
+
+**B3. `taken_below` (1281), `course_asItWas` (951), `after_alike` (328), `gone_from` (674): hold as cited.** `gone_from`'s `closed : ∀ u v, v ∈ kids u → S v → S u` (no unit outside the growers leaves a grower) holds in W2.
+
+**B4. `KidsNeedMore` (1471): holds.** `A → [B, A, B]` and `B → [B, B]`, needs 4 and 9, uses 2 and 1: of W3's shape. `fixed` (1496) is `([B, A, B], 8)`. On `hump10 = min z (10 − z)`: `H = 4`, `y = 4`, rest 8, below 9. It stands in E's sense.
+
+**B5. `HigherStartEnds` (1780): holds.** `from_six` (1810) uses `unending_of_fixed` at `t := 2` with `([C, B, C, B], 8)`: `H = 4`, `y = 4` on `Three.giving`, below `C`'s need 12. `from_seven` (1825) reaches the same way at level 12, which meets `C`'s need.
+
+**B6. `unending_of_fixed` (1352) as a case of E-if, statement unchanged: holds.** `fixed` gives "the way is left as it is" and a constant level, so the third clause holds of itself. `goes` and `before` are E-if's other premises.
+
+**B7. `need_unmet` (1011): holds.** It does not ask `down`, so it applies where kids need more. Its docstring names `KidHigherNeed` as "a kid's greater need at a level that has not fallen". `grows` is asked of every unit of the type.
+
+**B8. `way_ends` (928): holds.** Its premises are `nothing`, `keeps 0 hi`, `grows`, `needs`, `down`, `high`, and `KidsNeedMore.all_but_down` (1505) fails only `down`. In W3, `grows` asks `ib ≥ 2` for the bud. "Can meet every premise but `down`" is right.
+
+**B9. `unending_iff_holds` (1239): "neither is a case of the other" holds.** It asks `even`, `some`, `down`, `needs`, `nothing`, `high`, `along`. "Where nobody multiplies it is the whole of the second sign" **holds only with more**: `along` (`Regime` at every way the course reaches) is a premise and was met only on the search's slope-1 givings. `Holds` (188) asks every unit's need met, so the "upper clause" is absent from it, as the report says.
+
+**B10. `WayOfUnits.two_units_iff` (580) as a case of U2: holds only with more.** Its net is `WayOfUnits.net`, not `LineOnAStock.net`, so it is reached through the bridge `WayOfUnits.unending_unit` (248), as `S/ScratchMixedWay.lean.txt` `Two.two_units_iff` (584) does. That is a lemma of the package, not a definition unfolded. U2's "the course as it was comes below `m`" is derived from `short₁`, `below`, `nothing` and `0 < n ≤ m` (`RegimeMargin.ends_below`). The equal-pairs case is the report's own caveat.
+
+**B11. `mixed_turns_iff` (S/ScratchMixedWay.lean.txt 439) as a case of U2: holds.** The mapping of `ne`, `self`, `rn`, `take`, `line`, `sm`, `closed`, `order`, `keepsUse`, `short`, `meets`, `keeps`, `needs`, `within`, `short₁`, `below`, `high` checks premise by premise. Two things the report does not say:
+- The scratch's `closed` is downward (`S u → v ∈ kids u → S v`), the converse of `LineOnAStock`'s `closed`; under U2 both hold.
+- `mixed_turns_iff_ends` (470) is also a case of U2, needing no `keepsUse` and no `short₁`: its `ends` (the course as it was below `n ≤ m`) gives U2's "comes below `m`".
+
+In the second-sign table, "where M leaves only M this is `mixed_turns_iff`" holds only with `short₁` and `below`, or in the form `mixed_turns_iff_rising` (531: `grows` strict, `keeps₀`).
+
+**B12. `kept_within_more` (S/… 65): holds.** Premises `keeps : Keeps g H hi`, `le : H ≤ d`, `high`.
+
+**B13. `line_ends` (904) for "the kind that multiplies needs less or the same: every course ends": holds** for the shape that leaves only itself. It asks `closed`, `grows`, `needs` and `down` on the line, with `keeps 0 hi`. In the shape that leaves the other kind, `grows` fails because the line's kids take nothing, and that is the report's W1 carve-out.
+
+**B14. `rising_takes_all` (TurningInTime 669) for "G2's first region is empty here": holds only with more.** It asks `nothing`, `Keeps giving 0 hi`, `x ≤ hi`, and a use rising strictly at each of the first `hi` steps of the course as it was. These are the premises under which "a way that grows at every step ends" follows.
+
+**B15. Exclusion: holds.** `Flow.level_kept` (B/Exclusion.lean 300) and `Excluding.three_courses` (497) exist as named.
+
+## C. Searches asked for (part 2)
+
+**C1. A rule that depends on a level: found.** TurningInTime's window reads it: `hL : A × Nat → R → R` reads share *and* level (`windowRead`, `windowAfter`; `windowAfterShare`, 1729, sets the share as well). **Offspring that depend on a level: found only through needs.** `LineOnAStock.after` (138) gives the fixed `kids u` exactly where `x` meets `need u` (`after_alike`, 328). An offspring number that is any other function of the level was **not found** (read: LineOnAStock whole account and §1–13 statements; TurningInTime §6).
+
+**C2. A kid whose need is higher than its parent's, with a law: no exact law found.**
+- Kept cases: `KidsNeedMore` (1471), `KidHigherNeed` (1522), `HigherStartEnds` (1780), and the scratch `Example` (S/… 639ff).
+- Laws that do not ask `down`, so apply there: `need_unmet` (1011), `taken_below` (1281), `unending_of_fixed` (1352), `gone_from` (674), `course_asItWas` (951).
+- `down` is asked by `falls_to_unmet`, `line_ends`, `way_ends` and `unending_iff_holds`.
+- The opening account (line 120) says: "No exact condition for a way whose kids take more, or less, never ending."
+
+**C3. A lock whose favoured kind draws less: not found** (A16 lists what was read).
+
+**C4. A two-region law with both ends on one level: found, and only one has a rule from a share.**
+- Edge on the level: `RegimeMargin.ends_iff_below` (741), `TurningInTime.unending_iff_above` (958), `turns_in_time_iff` (1070), `turns_in_time_iff_before` (2289).
+- With a rule from a share: `locked_turns_in_time_on_window_iff` (1633), its edge on the level one step after the first read step.
+- `CoupledDrawers.gated_threshold` (B/CoupledDrawers.lean 774): two regions by the coupling `c` against the need `m` (`drains_below` 367, `kept_above` 582). The level enters as "from a start at or above the need, the need is met at every step". The edge is on `c`, not on a level.
+- Exclusion: regions by joint taking (`full_taking_ends` 232, `level_kept` 300), not by a level.
+- RuleRebuilding: the edges of `«稳者恒持当且仅当在带»` (897), `«稳开二试»` (1368) and `«隙之律»` (1772) are on `q, s, g, f, c`. The level enters only through the end clause. Its holders keep a door that can turn away more than themselves (`«额小而不足者门必过一»`, 1022), a keeper lowering the take. That bears on sign − but has no edge on a level.
+- `ContinuingRevision.repeats_iff` (576): the edge is the yield against nine.
+- `ReadingsSpread.overdrawn_spreads_then_ends` (1222): a kept course.
+- `deeper/RelationalRenewal.lean`: the renewal is paid only where the level is at least `needG`, and the focal formation adds `contrib` (`Law.level`, about line 245). Regions are by draw against `renew + contrib` (`within_renewal_sustains` 325, `overdraw_crosses_support` 387), from a start at or above both needs. What is added is a supplied function, which bears on test 8.
+- PairFlow: opening account only.
+
+**C5. What comes back, paid only at or above a level: found, but never to the favoured alone and never with a rule read from a share.**
+- `CoupledDrawers.stepCoupling` (about line 60): `c` to each drawer at each step where what all leave meets `m`.
+- `gatedRenewal` (656), `RegimeMargin.Gated` (268), and RelationalRenewal's renewal.
+
+RuleShaping has no stock level (its "levels" are SelectionLevels). No module found joins RuleShaping's return with a level. The modules citing RuleShaping are ChoiceCountCapture, DrawnShaping, PairSelection, PoolFromCourse, ReadInTime, ReadStages, ReadingsPersist and Unread, and none of them uses `RegimeMargin` or `TurningInTime`. TurningInTime does not cite `byBack` or RuleShaping.
+
+## D. The frozen file's "What was read at the source"
+
+**D1. Item 1 (RuleShaping): holds, with one sentence saying a little more than the Lean.** `shaped` (150), `favours_iff` (160) and `favours_alike` (175) are as stated (favouring is weak, `c ≤ s`). "There is a tipping share" holds for `thresholdBack`: `threshold_rises` (570) asks `lo ≤ hi`, `c < hi`, and `threshold_falls` (603) asks `lo < c`. The share at which it tips is fixed, carriers equal to others. `byBack` alone gives `covering_locks` (443), not a tipping share; the critical mass with readers is `DrawnShaping`'s. "Nothing in it is rested on": holds.
+
+**D2. Item 2 (LineOnAStock): holds.** `after` (138), `left` (146), `ways_alike` (547): under one `need` and `kids`, any two givings, uses and starts. The step form is `after_alike` (328).
+
+**D3. Item 3 (TurningInTime): says less than the Lean in three places.**
+- `hL` reads share and level, not the level alone.
+- The window law asks more than `corrects`, `uses`, `draws`, `below`: also `every`, `least`, `low`, `covers`, `safe`, `high`, `short₁`, `pos`, `within`, and the regime premises.
+- `locked_ends_on_window` (1562) asks `un : K ≤ N ∨ K ≤ need`, a window that reads no level meeting the need. So it does not apply to the family's window `[0, M)` with `M > need`, and the file names it without that premise.
+
+**D4. Item 4 (mixed_turns_iff): says less.** It leaves out `closed` (downward), `take`, `keepsUse`, `short₁` and `below` (or `ends`, or `grows` with `keeps₀` in the other two forms), and the regime premises at `H₂` with `within`. "Decided at the first step at which the part's need is unmet and the next" holds under them.
+
+**D5. The correction (the fall reaches who comes next only through an unmet need): holds** by `after_alike`/`ways_alike`. A fall can only turn met needs unmet.
+
+**D6. "The lock on a level … lacks what comes back, whole": holds as "not found joined".** By type, `hA` could be `byBack` where `A = CarrierCounts`, but no module does it (C5).
+
+**D7. G3's gloss "`locked_ends_rising` (nothing read from the level; favoured draw more)": says more than the Lean.** `un` allows marked levels below the need. The docstring says `more` "does not ask that the use read the share or the rule". "The favoured draw more" is `count_rises`' case.
+
+**D8. G1's form, `turns_in_time_iff_before` (2289): holds.** It asks `kept` and `uses` (one standing use `H₂` of the kept kind), so G1's guess mirrors that premise. A law whose use after the turn changes for a finite stretch and then stands was **not found** in TurningInTime's turn laws (920, 958, 993, 1070, 1633, 1817, 2289); each asks `uses` at the kind turned to.
+
+## What was read
+
+- **TurningInTime.lean:** statements and docstrings at lines 326–372, 460–482, 560–606, 655–690, 800–1000, 1160–1300, 1395–1490, 1540–1700, 1800–1845, 2075–2100, 2262–2300, 2340–2500, 2925–2940, 3005–3050, and the declaration list.
+- **RuleShaping.lean:** 1–40, 140–180, 420–480, 560–612.
+- **RuleCapture.lean:** 145–175, 469–505.
+- **RegimeMargin.lean:** 240–270, 700–760, 1100–1160, and the `step_mono`/`ends_of_below`/`rising_on` lines.
+- **PoolFromCourse.lean:** 240–262.
+- **LineOnAStock.lean:** 1–200, 320–340, 540–560, 660–780, 880–1060, 1225–1300, 1340–1362, 1462–1570, 1778–1856, and the declaration list.
+- **WayOfUnits.lean:** 1–60, 180–200, 248, 385–410, 540–640.
+- **Opening accounts:** CoupledDrawers (with 774–800), Exclusion, PairFlow, RuleRebuilding, ContinuingRevision, ReadingsSpread (with 1195–1230), PairSelection (50–140), LineageRegions, LineageRegimes, LineageDrawdown, ClosedCapture 50–66, DrawnShaping 40–70.
+- **Other modules:** BandRest.lean 28–47, Lasting.lean 366–385, deeper/RelationalRenewal.lean 1–45, 225–260, 320–395.
+- **PopulationCorrection.lean:** 1–80, 480–540.
+- **S/ScratchMixedWay.lean.txt:** 1–72, 150–170, 405–640.
+- **S/ScratchCovering.lean.txt:** 1–40, 206–232.
+- **S/NOTE.md.**
+- **Package-wide greps:** for the ideas of C1–C5.
+- **Not read:** proofs, PairFlow beyond its account, ReaderRebuilding and the other rows of the 19:36 section, `regions20/`, `join19/` programs.

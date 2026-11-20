@@ -1,0 +1,59 @@
+#!/usr/bin/env python3
+"""units_w3c.py: the third writing (a core A leaves itself and jb buds B of a higher need m; a bud leaves ib buds).
+The cores never change, so the way below m is always the same and takes one amount H0 = p0 * (a + jb*b).
+Checked: the line never ends exactly where (start) if the start level is below m, it meets n and the next level is
+at or above H0 + y0, and (every bust) at every step T with level below m after a step at or above m, the level
+meets n and the level at T+1 is at or above H0 + y0. Premises asked: giving of slope 1 (Short/Meets/Keeps hold up
+to hi = c at H0 where H0 has a root), n <= H0 + y0.
+
+AI-written scratch (worker "units", 20 November 2026). A search shows where a statement fails, not that it holds.
+"""
+import json, time
+from units_core import World, mk_giving
+
+t0 = time.time()
+tab, bad, busts_hist, examples = {}, {}, {}, {}
+first_vs_fate = {}
+courses = 0
+for n in (1, 2):
+    for m in (4, 7, 10, 13, 16, 20, 25, 30):
+        for a in (1, 2):
+            for b in (0, 1, 2):
+                for jb in (1, 2):
+                    for ib in (1, 2):
+                        for c in (16, 24, 32):
+                            for r in (None, 4, 8):
+                                g = mk_giving(c, 1, r)
+                                W = World((n, m), (a, b), ((1, jb), (0, ib)), g)
+                                for p0 in (1, 2, 3):
+                                    H0 = p0 * (a + jb * b)
+                                    ok, y0 = W.regime_ok(H0, c)
+                                    for q0 in (0, jb * p0):
+                                        for x0 in range(c + 1):
+                                            fate, course, cyc = W.run(((p0, q0), x0))
+                                            courses += 1
+                                            if fate == 'undecided':
+                                                bad['undecided'] = bad.get('undecided', 0) + 1
+                                                continue
+                                            if not ok or (y0 is not None and n > H0 + y0):
+                                                bad['premise fails'] = bad.get('premise fails', 0) + 1
+                                                continue
+                                            L = len(course)
+                                            xs = [s[1] for s in course]
+                                            def lands(T):
+                                                return n <= xs[T] and T + 1 < L and y0 is not None and xs[T + 1] >= H0 + y0
+                                            busts = [T for T in range(1, L) if xs[T] < m <= xs[T - 1]]
+                                            cond = (xs[0] >= m or lands(0)) and all(lands(T) for T in busts)
+                                            tab[(cond, fate)] = tab.get((cond, fate), 0) + 1
+                                            if cond != (fate == 'never') and len(examples.setdefault('FAIL', [])) < 3:
+                                                examples['FAIL'].append((dict(n=n, m=m, a=a, b=b, jb=jb, ib=ib, c=c, r=r), ((p0, q0), x0), fate, course[:12]))
+                                            busts_hist[(fate, len(busts))] = busts_hist.get((fate, len(busts)), 0) + 1
+                                            if busts:
+                                                f = lands(busts[0])
+                                                first_vs_fate[(f, fate)] = first_vs_fate.get((f, fate), 0) + 1
+fmt = lambda d: {str(k): v for k, v in sorted(d.items(), key=lambda kv: str(kv[0]))}
+out = dict(courses=courses, seconds=round(time.time() - t0, 1), every_bust_condition_vs_fate=fmt(tab), left_out=bad,
+           first_bust_lands_vs_fate=fmt(first_vs_fate), busts_on_the_course_by_fate=fmt(busts_hist), examples=examples)
+json.dump(out, open('/Users/ren/theories/tmp/r7/one-model/check/meet20/units-results-w3c.json', 'w'), indent=1, default=str)
+for k, v in out.items():
+    print(k, ':', v)

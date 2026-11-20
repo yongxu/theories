@@ -1,0 +1,131 @@
+#!/usr/bin/env python3
+"""units_rule.py: the rule of 19 November put on top of the two writings. Does any statement need it?
+
+AI-written scratch (worker "units", 20 November 2026). A search shows where a statement fails, not that it holds.
+
+The 19 November model (join19/lock_on_units.py): two rules, 1 favours; what a unit leaves depends on the rule in
+force; the rule is set again by a threshold reading of the share of the way present BEFORE the step; the share is
+a count. A locked start: rule 1 in force and the reading of the start's share gives 1.
+Kinds: 0 = A (core / stayer, need n, use a), 1 = B (bud / grower, need m, use b).
+Families (kids as counts (A, B)); under rule 0 every unit leaves itself only:
+  W1     rule 1: A -> A + jb B,  B -> ia A + ib B   (kids with a higher need; growth is kept)      share = number of A, or of B
+  W2     rule 1: A -> A,         B -> ka A + ks B   (growers B need more, leave stayers A)         share = number of B
+  W2x    rule 1: A -> A A,       B -> ka A + ks B   (the stayers too multiply under rule 1 only)   share = number of B
+Tallied from locked starts: whether the rule in force ever changes while some need is met; whether the fate is
+the fate with the rule held at 1; and for W2x a shifted form of U2.
+"""
+import json, time
+from units_core import mk_giving, rstep, World
+
+t0 = time.time()
+
+
+def run(need, use, kids, g, theta, share_kind, st, hold=False, limit=300):
+    """st = (p, q, rule, x). Returns (fate, course)."""
+    seen, course = set(), [st]
+    while True:
+        p, q, r, x = st
+        goes = (p > 0 and need[0] <= x) or (q > 0 and need[1] <= x)
+        if not goes:
+            return 'ends', course
+        if st in seen:
+            return 'never', course
+        seen.add(st)
+        if len(course) > limit or p + q > 10 ** 6:
+            return 'undecided', course
+        kA, kB = kids[r]
+        fa = p if need[0] <= x else 0
+        fb = q if need[1] <= x else 0
+        p2 = fa * kA[0] + fb * kB[0]
+        q2 = fa * kA[1] + fb * kB[1]
+        share = p if share_kind == 'A' else q
+        r2 = 1 if hold else (1 if share >= theta else 0)
+        x2 = rstep(g, p * use[0] + q * use[1], x)
+        st = (p2, q2, r2, x2)
+        course.append(st)
+
+
+def main():
+    out, examples = {}, {}
+
+    def keep(key, val, k=2):
+        examples.setdefault(key, [])
+        if len(examples[key]) < k:
+            examples[key].append(val)
+
+    fams = []
+    for jb in (1, 2):
+        for (ia, ib) in ((1, 0), (1, 1)):
+            for sk in ('A', 'B'):
+                fams.append(('W1 share=' + sk, {1: ((1, jb), (ia, ib)), 0: ((1, 0), (0, 1))}, sk))
+    for (ka, ks) in ((1, 1), (0, 2), (2, 1), (0, 1)):
+        fams.append(('W2', {1: ((1, 0), (ka, ks)), 0: ((1, 0), (0, 1))}, 'B'))
+        fams.append(('W2x', {1: ((2, 0), (ka, ks)), 0: ((1, 0), (0, 1))}, 'B'))
+    for name, kids, sk in fams:
+        cell = out.setdefault(name, dict(locked_starts=0, rule_changes_while_going=0, fate_differs_from_rule_held=0,
+                                         fates={}, fates_rule_held={}, shifted_U2={}))
+        for n in (1, 2):
+            for m in (3, 5, 7, 9):
+                for a in (1, 2):
+                    for b in (1, 2):
+                        for c in (8, 12, 16, 20):
+                            for r in (None, 3):
+                                g = mk_giving(c, 1, r)
+                                Wg = World((n, m), (a, b), ((1, 0), (0, 1)), g)   # used for the regime only
+                                for theta in (1, 2):
+                                    for p0 in (0, 1, 2):
+                                        for q0 in (1, 2):
+                                            share0 = p0 if sk == 'A' else q0
+                                            if share0 < theta:
+                                                continue                       # not a locked start
+                                            if name.startswith('W1') and (p0 == 0 or q0 > p0 * kids[1][0][1]):
+                                                continue
+                                            for x0 in range(0, c + 1):
+                                                st = (p0, q0, 1, x0)
+                                                fate, course = run((n, m), (a, b), kids, g, theta, sk, st)
+                                                fate1, course1 = run((n, m), (a, b), kids, g, theta, sk, st, hold=True)
+                                                cell['locked_starts'] += 1
+                                                cell['fates'][fate] = cell['fates'].get(fate, 0) + 1
+                                                cell['fates_rule_held'][fate1] = cell['fates_rule_held'].get(fate1, 0) + 1
+                                                changed = any(s[2] == 0 for s in course[:-1] if True)
+                                                if changed:
+                                                    cell['rule_changes_while_going'] += 1
+                                                if fate != fate1:
+                                                    cell['fate_differs_from_rule_held'] += 1
+                                                    keep(name + ': the rule changes the fate', (dict(n=n, m=m, a=a, b=b, c=c, r=r, theta=theta, kids=kids), st, fate, fate1, course[:9]))
+                                                if name == 'W2x' and fate != 'undecided':
+                                                    # shifted U2: T the first step below m on the course under rule 1 (all kids);
+                                                    # the stayers double at T and T+1, then stay: 4 * p_T of them from T+2.
+                                                    T = next((j for j in range(len(course1)) if course1[j][3] < m), None)
+                                                    if T is None:
+                                                        key = ('never below m', fate)
+                                                    else:
+                                                        pT, qT, _, xT = course1[T]
+                                                        H = 4 * a * pT
+                                                        ok, y = Wg.regime_ok(H, c)
+                                                        if not ok or (y is not None and n > H + y and pT > 0):
+                                                            key = ('premise fails', fate)
+                                                        elif qT < theta:
+                                                            key = ('fewer growers at T than the threshold', fate)
+                                                        else:
+                                                            rhs = (pT >= 1 and n <= xT and T + 2 < len(course) and n <= course[T + 1][3]
+                                                                   and y is not None and course[T + 2][3] >= H + y)
+                                                            key = ('shifted U2 right side', rhs, fate)
+                                                            if rhs != (fate == 'never'):
+                                                                keep('FAIL shifted U2', (dict(n=n, m=m, a=a, b=b, c=c, r=r, theta=theta, kids=kids), st, T, fate, course[:9]))
+                                                    cell['shifted_U2'][str(key)] = cell['shifted_U2'].get(str(key), 0) + 1
+    out['seconds'] = round(time.time() - t0, 1)
+    out['examples'] = examples
+    with open('/Users/ren/theories/tmp/r7/one-model/check/meet20/units-results-rule.json', 'w') as f:
+        json.dump(out, f, indent=1, default=str)
+    for k, v in out.items():
+        if k != 'examples':
+            print(k, ':', v)
+    for k, v in examples.items():
+        print('==', k)
+        for e in v:
+            print('    ', e)
+
+
+if __name__ == '__main__':
+    main()

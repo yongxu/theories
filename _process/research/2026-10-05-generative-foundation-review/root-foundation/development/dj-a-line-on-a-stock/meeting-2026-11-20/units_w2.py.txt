@@ -1,0 +1,156 @@
+#!/usr/bin/env python3
+"""units_w2.py: the other writing of "growing needs more of the level than going on", in the line on a stock as it
+stands: a kind that multiplies and needs m (the growers) leaves, besides growers, units of a kind that only stays
+and needs n <= m (the stayers). Kids need no more than their parent here (`down` holds); the growers are lost at
+the first step below m, and what they left goes on or not.
+
+AI-written scratch (worker "units", 20 November 2026). A search shows where a statement fails, not that it holds.
+
+Kinds: 0 = stayer (need n, use a, kids [itself]); 1 = grower (need m, use b, kids = ks growers and ka stayers).
+The statement U2 that is checked (premises in check_u2):
+  the line never ends  exactly where  there is a step T of the course as it was (all kids at every step, the level
+  under what the whole way takes) with level >= m before T, n <= level < m at T, a stayer in the way at T, and
+  level at T+1  >=  H_T + y_T,  H_T = what the stayers in the way at T take, y_T the least z with g(z) >= H_T.
+"""
+import json, sys, time
+from units_core import World, mk_giving, rstep
+
+t0 = time.time()
+ST, GR = 0, 1
+
+
+def as_it_was(n, m, a, b, ks, ka, g, p0, q0, x0, steps=80):
+    """(p_j, q_j, X_j): all kids at every step, the level under what the whole way takes."""
+    out, p, q, x = [], p0, q0, x0
+    for _ in range(steps):
+        out.append((p, q, x))
+        p, q, x = p + q * ka, q * ks, rstep(g, a * p + b * q, x)
+    return out
+
+
+def check_u2(W, n, m, a, b, ks, ka, g, c, p0, q0, x0):
+    """Returns (premises_ok, why, rhs, info)."""
+    X = as_it_was(n, m, a, b, ks, ka, g, p0, q0, x0)
+    T = next((j for j in range(len(X)) if X[j][2] < m), None)
+    if T is None:
+        return False, 'the course as it was is not seen to come below m', None, None
+    pT, qT, xT = X[T]
+    HT = a * pT
+    ok, y = W.regime_ok(HT, c)                 # Short (leastness), Meets up to hi = c, Keeps at H_T up to c
+    info = dict(T=T, pT=pT, qT=qT, xT=xT, HT=HT, y=y, x_next=X[T + 1][2] if T + 1 < len(X) else None)
+    if not (0 < n <= m):
+        return False, 'needs', None, info
+    rhs = (n <= xT and pT >= 1 and y is not None and T + 1 < len(X) and X[T + 1][2] >= HT + y)
+    if pT == 0 or xT < n:
+        return True, '', False, info           # no stayer at T, or no need met at T: the regime is asked of nothing
+    if not ok:
+        return False, 'Meets fails at H_T up to hi = c', rhs, info
+    if y is not None and n > HT + y:
+        return False, 'within fails (n above H_T + y_T)', rhs, info
+    return True, '', rhs, info
+
+
+def main():
+    tab_ok, tab_bad, why_bad = {}, {}, {}
+    in_time = {'growers leave only growers (ka = 0)': 0, 'growers leave stayers too (ka >= 1)': 0}
+    too_late = {'stopped by the fall, stayers left, level at T+1 below H_T + y_T': 0}
+    late_by_growers_last_take = 0     # would have held had the growers present at T not taken at T
+    late_by_last_born_stayers = 0     # level at T+1 at or above the point of no return of the stayers before the last growth step
+    standing_vs_fate, cycles = {}, {}
+    nonmono, worlds, courses, undecided = 0, 0, 0, 0
+    examples = {}
+
+    def keep(key, val, k=3):
+        examples.setdefault(key, [])
+        if len(examples[key]) < k:
+            examples[key].append(val)
+
+    for n in (1, 2, 3):
+        for m in range(n, 9):
+            for a in (1, 2):
+                for b in (0, 1, 2, 3):
+                    for (ks, ka) in ((1, 1), (2, 0), (1, 2), (2, 1), (0, 2), (1, 0)):
+                        for c in (8, 12, 16, 24):
+                            for s in (1, 2):
+                                for r in (None, 3):
+                                    g = mk_giving(c, s, r)
+                                    W = World((n, m), (a, b), ((1, 0), (ka, ks)), g)
+                                    worlds += 1
+                                    desc = dict(n=n, m=m, a=a, b=b, grower_kids=dict(growers=ks, stayers=ka), c=c, s=s, r=r)
+                                    for p0 in (0, 1, 2):
+                                        for q0 in (1, 2):
+                                            fates = []
+                                            for x0 in range(0, c + 1):
+                                                st = ((p0, q0), x0)
+                                                fate, course, cyc = W.run(st)
+                                                courses += 1
+                                                if fate == 'undecided':
+                                                    undecided += 1
+                                                    continue
+                                                fates.append((x0, fate))
+                                                if fate == 'never':
+                                                    cycles[cyc] = cycles.get(cyc, 0) + 1
+                                                sd = any(W.stands_direct(course[k]) for k in range(len(course)))
+                                                standing_vs_fate[(sd, fate)] = standing_vs_fate.get((sd, fate), 0) + 1
+                                                ok, why, rhs, info = check_u2(W, n, m, a, b, ks, ka, g, c, p0, q0, x0)
+                                                if not ok:
+                                                    why_bad[why] = why_bad.get(why, 0) + 1
+                                                    if rhs is not None:
+                                                        tab_bad[(why, rhs, fate)] = tab_bad.get((why, rhs, fate), 0) + 1
+                                                        if rhs != (fate == 'never'):
+                                                            keep('right side and fate differ where a premise fails: ' + why, (desc, st, info, fate, course[:8]))
+                                                    if why.startswith('the course as it was'):
+                                                        tab_bad[('no T', fate)] = tab_bad.get(('no T', fate), 0) + 1
+                                                        if fate == 'never':
+                                                            keep('never below m, never ends (the premise that it comes below m fails)', (desc, st, course[:6]))
+                                                    continue
+                                                tab_ok[(rhs, fate)] = tab_ok.get((rhs, fate), 0) + 1
+                                                if rhs != (fate == 'never'):
+                                                    keep('FAIL U2', (desc, st, info, fate, course[:10]))
+                                                T = info['T']
+                                                if fate == 'never' and T >= 1:
+                                                    key = 'growers leave only growers (ka = 0)' if ka == 0 else 'growers leave stayers too (ka >= 1)'
+                                                    in_time[key] += 1
+                                                    if ka >= 1 and ks >= 1 and info['pT'] > p0:
+                                                        keep('in time: growers lost at T, the stayers they left go on', (desc, st, info, course[:8]))
+                                                if fate == 'ends' and T >= 1 and info['xT'] >= n and info['pT'] >= 1:
+                                                    too_late['stopped by the fall, stayers left, level at T+1 below H_T + y_T'] += 1
+                                                    y = info['y']
+                                                    if y is not None:
+                                                        if rstep(g, a * info['pT'], info['xT']) >= info['HT'] + y:
+                                                            late_by_growers_last_take += 1
+                                                            keep('too late only because the growers present at T still take at T', (desc, st, info, course[:8]))
+                                                        Xw = as_it_was(n, m, a, b, ks, ka, g, p0, q0, x0)
+                                                        Hprev = a * Xw[T - 1][0]
+                                                        okp, yp = W.regime_ok(Hprev, c)
+                                                        if okp and yp is not None and Hprev < info['HT'] and Hprev > 0 and info['x_next'] >= Hprev + yp:
+                                                            late_by_last_born_stayers += 1
+                                                            keep('too late only by the stayers born at the last step of growth', (desc, st, info, dict(H_before=Hprev, y_before=yp), course[:8]))
+                                            nm = [(x, x2) for (x, f) in fates for (x2, f2) in fates if x < x2 and f == 'never' and f2 == 'ends']
+                                            if nm:
+                                                nonmono += 1
+                                                keep('a higher start ends, a lower one never does', (desc, (p0, q0), nm[:4]))
+
+    fmt = lambda d: {str(k): v for k, v in sorted(d.items(), key=lambda kv: str(kv[0]))}
+    out = dict(worlds=worlds, courses=courses, undecided=undecided, seconds=round(time.time() - t0, 1),
+               U2_right_side_vs_fate__premises_hold=fmt(tab_ok),
+               premises_failing=why_bad, right_side_vs_fate__where_a_premise_fails=fmt(tab_bad),
+               in_time__never_ends_after_at_least_one_step_at_or_above_m=in_time,
+               too_late=too_late,
+               too_late_only_because_growers_present_at_T_still_take=late_by_growers_last_take,
+               too_late_only_by_stayers_born_at_the_last_growth_step=late_by_last_born_stayers,
+               comes_to_standing_direct_vs_fate=fmt(standing_vs_fate), cycle_lengths_of_never_ending=fmt(cycles),
+               start_triples_where_a_higher_start_ends=nonmono, examples=examples)
+    with open('/Users/ren/theories/tmp/r7/one-model/check/meet20/units-results-w2.json', 'w') as f:
+        json.dump(out, f, indent=1, default=str)
+    for k, v in out.items():
+        if k != 'examples':
+            print(k, ':', v)
+    for k, v in examples.items():
+        print('==', k)
+        for e in v[:2]:
+            print('    ', e)
+
+
+if __name__ == '__main__':
+    main()

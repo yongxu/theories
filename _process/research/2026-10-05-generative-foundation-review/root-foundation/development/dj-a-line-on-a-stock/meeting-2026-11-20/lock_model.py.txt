@@ -1,0 +1,166 @@
+#!/usr/bin/env python3
+"""lock_model.py -- the lock on a level, with what comes back paid only at or above a level M.
+
+AI-written (Claude Fable, worker "lock"), 20 November 2026.  Paper work only: no Lean, nothing built.
+A search over small numbers shows where a statement fails, not that it holds.
+
+The model, in the terms of TurningInTime.lean section 6 and RuleShaping.lean
+---------------------------------------------------------------------------
+A configuration is a way and a level: ((a, g), x).
+  a   the share: how many of n places are held by the favoured kind, 0 <= a <= n.
+  g   the rule in force: 1 "favours" (each favoured leaves a0+s+p, each other a0+c+p, c < s)
+                          0 "does not"  (nothing comes back: a0+0+p against a0+c+p, 0 < c).
+      By RuleShaping.favours_iff the rule after shaping favours exactly where c <= what comes back.
+  x   the level; the net has a next only where need <= x (TurningInTime.net).
+
+One step (the order is the Lean's, TurningInTime.windowAfter with every step reading):
+  share   a' = fA(a, g)             by the rule IN FORCE
+  rule    g' = read(a, x)           read at the share and the level BEFORE the step:
+                                    favours exactly where x >= M (what comes back is paid) and a >= theta
+                                    (theta = 0: no threshold on the share; RuleShaping.thresholdBack otherwise)
+  level   x' = (x - use(a)) + giving(x - use(a))      RegimeMargin.step giving (use w) x, truncated minus
+
+So the rule reads the level only through what comes back: windowRead with the window [0, M),
+hL the rule with s = 0, hA the rule with s paid (constant, or thresholdBack on the share).
+
+The share's step fA, two forms, both with fA(a,1) >= a, fA(a,0) <= a and fA monotone in a:
+  "revise"  r places change hands a step: min(n, a+r) under a favouring rule, max(0, a-r) otherwise.
+  "repl"    the counts multiply (a*(a0+s+p) against (n-a)*(a0+c+p)) and are cut back to n places,
+            rounded down under a favouring rule and up otherwise.  0 and n are absorbing.
+The use follows the share: use(a) = a*uF + (n-a)*uO.  Sign +: uF > uO (the favoured draw more).
+Sign -: uF < uO (the favoured draw less).  What makes the use FALL is the fixed number of places:
+a place lost to one kind is a place the other no longer draws through.  With counts that multiply and
+every unit leaving at least one (a0 > 0) the use can never fall; that case is run apart (lock_counts.py).
+
+giving(z) = max(0, min(z, rho, C - z)): nothing from nothing, rising to rho, flat, falling to nothing
+at C.  z + giving(z) = min(2z, z+rho, C) never falls as z rises, so the level's step keeps the order of
+levels, and no level passes C (hi = C).  rho >= C/2 is Three's tent min(z, C - z).
+"""
+from functools import lru_cache
+
+ENDS, GOES = 0, 1
+
+
+class Model:
+    def __init__(self, n, uF, uO, r, C, rho, need, M, theta=0, share="revise", rule=(1, 2, 0, 1)):
+        self.n, self.uF, self.uO, self.r = n, uF, uO, r
+        self.C, self.rho, self.need, self.M, self.theta = C, rho, need, M, theta
+        self.share = share
+        self.a0, self.s, self.p, self.c = rule          # a0 + s + p against a0 + c + p
+        assert self.a0 > 0 and 0 < self.c < self.s
+        self._fate = {}
+
+    # --- the parts ---------------------------------------------------------------------------
+    def giving(self, z):
+        return max(0, min(z, self.rho, self.C - z))
+
+    def use(self, a):
+        return a * self.uF + (self.n - a) * self.uO
+
+    def lstep(self, H, x):                      # RegimeMargin.step giving H x
+        z = x - H if x > H else 0
+        return z + self.giving(z)
+
+    def offspring(self, g):                     # (each favoured leaves, each other leaves)
+        back = self.s if g else 0
+        return (self.a0 + back + self.p, self.a0 + self.c + self.p)
+
+    def fA(self, a, g):
+        n = self.n
+        if self.share == "revise":
+            return min(n, a + self.r) if g else max(0, a - self.r)
+        gc, go = self.offspring(g)
+        num, den = n * a * gc, a * gc + (n - a) * go
+        if den == 0:
+            return a
+        return num // den if g else -((-num) // den)
+
+    def read(self, a, x):                       # the rule read at share a and level x
+        return 1 if (x >= self.M and a >= self.theta) else 0
+
+    def step(self, st):
+        a, g, x = st
+        return (self.fA(a, g), self.read(a, x), self.lstep(self.use(a), x))
+
+    # --- fates -------------------------------------------------------------------------------
+    def fate(self, st):
+        """(ENDS or GOES, info).  ENDS: info = rule in force at the last configuration.
+        GOES: info = 'fav' (rule favours at every configuration of the cycle), 'dis', or 'mix'."""
+        path, seen = [], {}
+        cur = st
+        while True:
+            if cur in self._fate:
+                res = self._fate[cur]
+                break
+            if cur[2] < self.need:
+                res = (ENDS, cur[1])
+                break
+            if cur in seen:
+                cyc = path[seen[cur]:]
+                gs = {c[1] for c in cyc}
+                res = (GOES, "fav" if gs == {1} else "dis" if gs == {0} else "mix")
+                break
+            seen[cur] = len(path)
+            path.append(cur)
+            cur = self.step(cur)
+        for c in path:
+            self._fate[c] = res
+        return res
+
+    def held(self, a, x, g):
+        """The course with the rule g held at every step, from share a and level x:
+        does its level meet the need at every step?  Returns (goes, least level reached)."""
+        seen, low = set(), x
+        while True:
+            if x < self.need:
+                return (False, low)
+            if (a, x) in seen:
+                return (True, low)
+            seen.add((a, x))
+            a, x = self.fA(a, g), self.lstep(self.use(a), x)
+            low = min(low, x)
+
+    def own(self, a, x):
+        """The lock's own course (the rule that favours held: windowAlone with hA favouring),
+        as a list of (share, level) up to its end or its first repeat."""
+        out, seen = [], set()
+        while (a, x) not in seen and x >= self.need:
+            seen.add((a, x))
+            out.append((a, x))
+            a, x = self.fA(a, 1), self.lstep(self.use(a), x)
+        if x < self.need:
+            out.append((a, x))
+        return out
+
+    def first_read(self, a, x):
+        """First step T of the lock's own course whose level is below M with the need met there and
+        at or above M before; None if there is none (never below M, or below the need first)."""
+        for T, (b, y) in enumerate(self.own(a, x)):
+            if y < self.need:
+                return None
+            if y < self.M:
+                return T
+        return None
+
+    def standing(self, H):
+        """Least level in [need, C] from which the level under the standing use H meets the need at
+        every step; C + 1 if there is none.  (RegimeMargin's H + y where its premises hold.)"""
+        for x in range(self.need, self.C + 1):
+            seen, y, ok = set(), x, True
+            while y not in seen:
+                if y < self.need:
+                    ok = False
+                    break
+                seen.add(y)
+                y = self.lstep(H, y)
+            if ok:
+                return x
+        return self.C + 1
+
+    def root(self, H):
+        """RegimeMargin's point of no return H + y, y the least level at which giving meets H;
+        None where giving never meets H."""
+        for y in range(0, self.C + 1):
+            if self.giving(y) >= H:
+                return H + y
+        return None

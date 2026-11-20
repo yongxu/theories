@@ -1,0 +1,143 @@
+#!/usr/bin/env python3
+"""units_core.py: the line on a stock as LineOnAStock.lean has it, on counts of kinds. Shared by units_*.py.
+
+AI-written scratch (worker "units", 20 November 2026). A search is a search, not a proof. Nothing here is the Lean's.
+The step follows LineOnAStock.after / left / Goes and RegimeMargin.step:
+  - a unit whose need the level meets leaves its kids, the others leave nothing (after);
+  - every unit present takes its use; the level becomes (x - H) + g(x - H), truncated subtraction (left, step);
+  - the net has a next while some unit present has its need met (Goes).
+A way is kept as a tuple of counts by kind. The Lean's way is a list; what is taken, who is in the next way and
+Goes depend on the counts only, so the fate (ends / never ends) is the list's fate. Where the report says "the
+step leaves the way as it is" for lists, that is argued on paper there, not here.
+"""
+
+
+def mk_giving(c, s=1, r=None):
+    """g(z) = min(z, r, (c - z) // s) on 0 < z < c, nothing elsewhere. Gives nothing from nothing;
+    z + g(z) <= c for z <= c, so the step under any draw keeps every level up to c within c."""
+    tab = []
+    for z in range(c + 1):
+        if z <= 0 or z >= c:
+            tab.append(0)
+            continue
+        v = min(z, (c - z) // s)
+        if r is not None:
+            v = min(v, r)
+        tab.append(max(v, 0))
+    return tuple(tab)
+
+
+def g_at(g, z):
+    return g[z] if 0 <= z < len(g) else 0
+
+
+def rstep(g, H, x):
+    z = x - H if x > H else 0
+    return z + g_at(g, z)
+
+
+class World:
+    """kinds 0..k-1 with need, use, kids (kids[i] = tuple of counts by kind), and a giving table."""
+
+    def __init__(self, need, use, kids, g):
+        self.need, self.use, self.kids, self.g = tuple(need), tuple(use), tuple(tuple(k) for k in kids), g
+        self.k = len(need)
+
+    def taken(self, w):
+        return sum(w[i] * self.use[i] for i in range(self.k))
+
+    def goes(self, st):
+        w, x = st
+        return any(w[i] > 0 and self.need[i] <= x for i in range(self.k))
+
+    def after(self, w, x):
+        out = [0] * self.k
+        for i in range(self.k):
+            if w[i] and self.need[i] <= x:
+                ki = self.kids[i]
+                for j in range(self.k):
+                    out[j] += w[i] * ki[j]
+        return tuple(out)
+
+    def step(self, st):
+        w, x = st
+        return (self.after(w, x), rstep(self.g, self.taken(w), x))
+
+    def run(self, st, limit=400, cap=10 ** 6):
+        """(fate, course, cycle_len). fate: 'ends' (some step has no need met), 'never' (a configuration with
+        some need met at every step comes again), 'undecided'."""
+        seen, course = {}, [st]
+        while True:
+            if not self.goes(st):
+                return 'ends', course, 0
+            if st in seen:
+                return 'never', course, len(course) - 1 - seen[st]
+            seen[st] = len(course) - 1
+            if len(course) > limit or sum(st[0]) > cap:
+                return 'undecided', course, 0
+            st = self.step(st)
+            course.append(st)
+
+    # ---- the regime at a standing use H -------------------------------------------------------------
+    def root(self, H):
+        """y = the least z with H <= g(z) (RegimeMargin.Root), or None where giving is short of H everywhere."""
+        for z in range(len(self.g)):
+            if self.g[z] >= H:
+                return z
+        return None
+
+    def regime_ok(self, H, hi):
+        """Short g H y (by leastness), Meets g H y hi and Keeps g H hi, with y = root(H). Returns (ok, y)."""
+        y = self.root(H)
+        if y is None:
+            return True, None        # Short at every y; Meets and Keeps are then asked at no level that matters
+        meets = all(self.g[z] >= H for z in range(y, len(self.g)) if z + H <= hi)
+        keeps = all(rstep(self.g, H, x) <= hi for x in range(hi + 1))
+        return meets and keeps, y
+
+    def level_orbit(self, H, x, limit=400):
+        """The levels under one standing draw H from x until one comes again."""
+        seen, out = set(), []
+        while x not in seen and len(out) < limit:
+            seen.add(x)
+            out.append(x)
+            x = rstep(self.g, H, x)
+        return out
+
+    def band(self, w, x):
+        """(lo, up): the greatest need of a kind present that x meets, the least need of a kind present it does not."""
+        met = [self.need[i] for i in range(self.k) if w[i] and self.need[i] <= x]
+        un = [self.need[i] for i in range(self.k) if w[i] and self.need[i] > x]
+        return (max(met) if met else None, min(un) if un else None)
+
+    def stands_direct(self, st):
+        """The step leaves the way as it is at x, some need is met, and along the level's course under what the
+        way takes every level meets the same needs of the way as x does."""
+        w, x = st
+        if not self.goes(st) or self.after(w, x) != w:
+            return False
+        lo, up = self.band(w, x)
+        for z in self.level_orbit(self.taken(w), x):
+            if z < lo or (up is not None and z >= up):
+                return False
+        return True
+
+    def stands_regime(self, st, hi):
+        """The same in the regime's terms: some need met, the way left as it is, the level at or above H + y,
+        and the level it rises to under H below the least unmet need. None where the regime's premises fail
+        at H or x is above hi."""
+        w, x = st
+        if not self.goes(st) or self.after(w, x) != w:
+            return False
+        H = self.taken(w)
+        ok, y = self.regime_ok(H, hi)
+        if not ok or x > hi:
+            return None
+        if y is None or x < H + y:
+            return False
+        lo, up = self.band(w, x)
+        orb = self.level_orbit(H, x)
+        rest = orb[-1]
+        if up is not None and max(orb) >= up:
+            return False
+        return True

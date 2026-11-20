@@ -1,0 +1,67 @@
+# The meeting of the two halves: what is asked, and what would count as nothing having changed
+
+*AI-written (Claude Fable, board row DJ), 20 November 2026, 19:17 WIB, before any agent ran and before any program was written. Frozen: nothing above the line "After" is changed later. Share, rule, level, unit, need, use, giving, keeper are working names. No Lean is written from this before Ren has seen the paper.*
+
+## What we are doing
+
+One map of how things come to be, go on, change and end, on which two ways of going on are placed with respect to each other: a way of selecting that uses up what it or others rest on and can no longer be turned, and a way that keeps remaking what it rests on. Placed means: where, and at which grain, a course is doing the one or the other, where it passes between them, and by what ways ([the direction page](../../../../../_process/DIRECTION.md), "Where we are heading").
+
+Ren, 20 November 19:06 WIB: "let's keep moving the roadmap, when choices are important, reflect on the direction" ([his words](../../../../../sources/15-codex-theory-conversations/2026-11-20-the-lead-keep-moving-the-roadmap.md)). Step 1 of the roadmap put to him: make the two halves that the table of 20 November found apart in the package meet in one statement, on paper first.
+
+## What was read at the source before this was frozen (by the writer, statements and opening accounts, no proof)
+
+1. `RuleShaping.lean`, opening account: shapers give something, part comes back to the shapers alone (`s`), part to every member alike (`p`), at a cost `c`; the rule after shaping gives each shaper `a + s + p` offspring and each other `a + c + p`. The rule favours the shapers exactly where `c ≤ s`, whatever comes to every member alike (`favours_iff`, `favours_alike`). Where what comes back is read from the shapers' share (`byBack`, `thresholdBack`) there is a tipping share. Nothing in it is rested on: the shared part is a number of offspring, not a level.
+2. `LineOnAStock.lean`, opening account and definitions: `kids : U → List U` is fixed for each unit; after a step at level `x` each unit leaves its kids where `x` meets its need and nothing where it does not; every unit present takes its use. `ways_alike`: along two courses from one way whose levels meet the same needs step by step, the ways are the same. So in this model the level reaches who comes next only through which needs are met.
+3. `TurningInTime.lean`, `locked_ends_on_window` and `locked_turns_in_time_on_window_iff` (statements and docstrings): the lock's model on a level already has a rule read from the share (`hA`) and, at levels in a window `[N, K)`, from the level (`hL`, `windowRead`). Given there: that the window's reading gives a `kept` rule (`corrects`), that a way whose rule is `kept` uses exactly `H₂` (`uses`), that the use is at least `H₁` where share and rule are not below the start's (`draws`), and a start already below `H₁ + y₁` (`below`).
+4. The record of 17 November ([second way](../../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/second-way-2026-11-17/NOTE.md)): units that add to the level and leave only themselves, beside units that only take, are the line's own course on a stock whose giving is renamed; what a unit adds comes from nowhere. `mixed_turns_iff` (scratch, not landed): a part that can grow, with one need, beside units that each leave only themselves with a need no greater: whether the rest goes on is decided at the first step at which the part's need is unmet and the next.
+5. The record of 19 November: units with needs, kids under each of two rules, the rule set again from a count. With one need it fits `locked_ends_rising` as it stands; with needs that differ the two main statements were the lock's law followed by the line's argument, and nothing was joined.
+
+## A correction to the test as it was put to Ren
+
+The test put to him at 17:40 had a clause: "the level's fall turns the selection before a need goes unmet". In the line on a stock that cannot happen, by `ways_alike`: there the fall reaches who comes next only when some need is unmet. So the clause is replaced, before anything runs, by: **the level's fall changes who is favoured, by something the statement derives and does not hand in, before the point of no return of what then goes on.** In the units' home the change can only come through the need of some unit going unmet (a unit lost while the rest go on); in the lock's home the rule can read the level.
+
+## The choice of where to look, set against the direction
+
+Three places could carry the meeting. The direction asks for the two ways *placed*, so the choice is by which place can state both ends and the edge between them, not by which is easiest to prove in.
+
+- **The lock on a level** (`TurningInTime` §6: a share, a rule read from it, a level the way needs, a use that follows share and rule). It has the rule from the share and the level. What it lacks, by the table: what comes back, whole. And its window on the level is handed in.
+- **Units on the line on a stock.** It has what multiplies on a level. A return that depends on the level can be written in it as it stands, with no extension: a kid with a higher need than its parent goes on only where the level is high enough, so *growing needs more of the level than going on*. No rule from a share is in it.
+- **October's population model** (`PopulationCorrection`). It has both ends of one law with the edge exact, for slots that revise, with the mechanism supplied. Ren: it is a part of the map. It is not the template here; where a statement found below turns out to be its statement in other terms, that is said, and counts under test 2.
+
+Both of the first two are tried, by different agents who do not see each other.
+
+## The family asked about
+
+What comes back to the favoured alone is tied to the level: it is paid only where the level is at or above some amount `m` (above the need). Two signs:
+
+- **The favoured draw more than the others** (the lock as the month has it: what is favoured draws more). The fall then stops the favouring.
+- **The favoured draw less than the others**, or add (keepers). The fall then stops the favouring of those who keep.
+
+## The guesses (each may be false; they are written so that they can fail)
+
+- **G1 (the first way, turned by its own fall or not).** Favoured draw more. From a locked start the level falls; at the first step below `m` nothing comes back, the rule no longer favours, and the use stops rising or falls. The line never ends exactly where a condition on that first step holds, and the condition is of the form of `turns_in_time_iff_before`: the level one step later is at or above the point of no return of what goes on from there. Guess: this is exact only where what goes on after is one standing use; where the use goes on changing after the turn there is no such single point.
+- **G2 (the second way and its edge).** Favoured draw less. There are two regions with an exact edge: from one the way goes on for ever with the favouring kept and the level never below `m`; from the other the favouring is lost, the use rises, and the line ends. The edge is not the line `level = m` at the start: a start at or above `m` with too few keepers still falls through it. Guess: the edge is a single inequality between the start's level and what the keepers' growth saves before the level reaches `m`.
+- **G3 (placed).** One statement has G1 and G2 as its two cases, by the sign of the difference in use. Its cases, with their statements unchanged: `locked_ends_rising` (nothing read from the level; favoured draw more), `recoverable_iff_above` or `unending_iff_holds` (the share does not move), `favours_iff` (one step).
+- **G4 (in units, with no extension).** On the line on a stock as it is, for a way whose growing needs more than its going on (kids with a higher need): growth stops because of the fall, at a step the statement names; the line never ends exactly where the level at that step is at or above the point of no return of the use the way has then grown to. Guess: it can come too late, because units born at the last step of growth still take.
+- **G5 (against all four).** The whole family is the window law `locked_turns_in_time_on_window_iff` with the window read as "the levels at which nothing comes back", plus `mixed_turns_iff`. Then nothing is to be stated; what is gained is a recognition and one line on the map.
+
+## What would count as nothing having changed
+
+1. **Composition.** The statement is an old law followed by another, with no premise and no conclusion that needs both (the verdict of 19 November).
+2. **Dictionary.** Every clause is a definition unfolded, or it is `PopulationCorrection`'s statement, the window law's or `mixed_turns_iff`'s in other names.
+3. **Handed in.** The level at which the favouring changes and what it changes to are premises that do the work `corrects` and `uses` do in the window law; the return adds no derivation.
+4. **Standing use.** The edge is exact only where the use after the turn is one fixed amount.
+5. **Not exact.** A search on small numbers finds starts on the wrong side of the stated edge.
+6. **No old law is a case.** No law of the package follows from the statement with its own statement unchanged, by an instantiation that can be written down.
+7. **Not placed.** One of the two ends is empty of content: the "second way" side says only that a way that never draws the level down goes on, which the regime's law says of any standing use.
+8. **The source.** What the keepers add comes from nowhere (the fault of 17 November), and the statement needs it.
+
+If tests 1, 2 or 3 trip for every statement, G5 stands, and it is said so. A search over small numbers shows where a statement fails, not that it holds.
+
+## What it will cost
+
+Five AI agents: two who work the family in the two homes by program and on paper, one set to refute, one who sets every claim about the Lean against the Lean's statements, and one who checks the note. About 1.5 million tokens. Told to Ren beforehand as "about 1 to 1.5 million".
+
+---
+
+## After

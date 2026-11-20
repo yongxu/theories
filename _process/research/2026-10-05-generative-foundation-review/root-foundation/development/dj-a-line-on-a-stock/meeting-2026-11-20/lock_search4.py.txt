@@ -1,0 +1,44 @@
+#!/usr/bin/env python3
+"""lock_search4.py -- locked starts only: where the reading of the level through what comes back
+changes the outcome, against the rule that favours held (the lock's own course).
+AI-written (Claude Fable, worker "lock"), 20 November 2026.  Counts on the grid of lock_search2.py
+(theta = 0 and 2, M from the need to C).  Also prints one example course of each kind.
+"""
+import itertools
+from collections import Counter
+from lock_model import Model, GOES
+
+tally, ex = Counter(), {}
+us = (0, 1, 2, 3)
+stocks = ((12, 6), (16, 4), (20, 5))
+for share, ns, rs in (("revise", (1, 2, 3, 4), (1, 2, 4)), ("repl", (3, 4, 6), (0,))):
+    for n, uF, uO, (C, rho), need, r, theta in itertools.product(ns, us, us, stocks, (1, 3), rs, (0, 2)):
+        if r > n or theta > n or uF == uO:
+            continue
+        sign = "+" if uF > uO else "-"
+        for M in range(need, C + 1):
+            m = Model(n, uF, uO, r, C, rho, need, M, theta, share)
+            Pmin = m.standing(min(m.use(a) for a in range(n + 1)))
+            for a0 in range(theta, n + 1):
+                for x0 in range(need, C + 1):
+                    f, info = m.fate((a0, 1, x0))
+                    own = m.held(a0, x0, 1)[0]
+                    goes = f == GOES
+                    reg = "M<=Pmin" if M <= Pmin else "M>Pmin"
+                    key = (sign, reg, "own course " + ("goes" if own else "ends"),
+                           "course " + (("goes-" + info) if goes else "ends"), "x0>=M" if x0 >= M else "x0<M")
+                    tally[key] += 1
+                    if own != goes and x0 >= M and key not in ex:
+                        ex[key] = (dict(n=n, uF=uF, uO=uO, r=r, C=C, rho=rho, need=need, M=M, theta=theta, share=share), (a0, 1, x0))
+for k, v in sorted(tally.items()):
+    print("%8d  %s" % (v, " | ".join(k)))
+for k, (kw, st) in ex.items():
+    m = Model(**kw)
+    row, cur = [], st
+    for _ in range(12):
+        row.append("(%d,%s,%d;use %d)" % (cur[0], "fav" if cur[1] else "not", cur[2], m.use(cur[0])))
+        if cur[2] < m.need:
+            break
+        cur = m.step(cur)
+    print(" | ".join(k), kw)
+    print("    " + " -> ".join(row))

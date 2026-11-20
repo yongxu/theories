@@ -1,0 +1,73 @@
+#!/usr/bin/env python3
+"""units_any.py: is "the course comes to a configuration that stands" exact beyond the families of units_g4.py and
+units_w2.py? Random small worlds of three kinds in the line on a stock as it stands.
+
+AI-written scratch (worker "units", 20 November 2026). A search shows where a statement fails, not that it holds.
+
+A configuration stands (units_core.World.stands_direct): some need met, the step leaves the way as it is, and
+along the level's course under what the way takes every level meets the same needs of the way. By the paper
+argument a course that comes to one never ends. The other direction is what is searched: courses that never end
+and never come to one (a configuration comes again only after two or more steps).
+"""
+import json, random, time
+from units_core import World, mk_giving
+
+t0 = time.time()
+random.seed(20261120)
+KIDS = [(i, j, k) for i in range(3) for j in range(3) for k in range(3) if i + j + k <= 2]
+
+
+def main():
+    tab, cycles, examples = {}, {}, {}
+    down_tab = {}
+    worlds = courses = undecided = 0
+    for _ in range(6000):
+        need = tuple(random.randint(1, 6) for _ in range(3))
+        use = tuple(random.randint(0, 2) for _ in range(3))
+        kids = tuple(random.choice(KIDS) for _ in range(3))
+        c = random.choice((8, 12))
+        W = World(need, use, kids, mk_giving(c, 1, None))
+        worlds += 1
+        down = all(need[j] <= need[i] for i in range(3) for j in range(3) if kids[i][j])
+        for w0 in ((1, 0, 0), (1, 1, 0), (1, 1, 1)):
+            for x0 in range(0, c + 1):
+                fate, course, cyc = W.run((w0, x0), limit=200)
+                courses += 1
+                if fate == 'undecided':
+                    undecided += 1
+                    continue
+                sd = any(W.stands_direct(s) for s in course)
+                tab[(sd, fate)] = tab.get((sd, fate), 0) + 1
+                down_tab[(down, sd, fate)] = down_tab.get((down, sd, fate), 0) + 1
+                if fate == 'never':
+                    cycles[cyc] = cycles.get(cyc, 0) + 1
+                    if not sd:
+                        ways = len(set(s[0] for s in course[-cyc - 1:]))
+                        key = 'never ends, never stands: the way itself changes round the cycle' if ways > 1 else 'never ends, never stands: one way, the level goes round'
+                        if down:
+                            key += ' (kids need no more than their parent)'
+                        examples.setdefault(key, [])
+                        if len(examples[key]) < 3:
+                            examples[key].append(dict(need=need, use=use, kids=kids, c=c, start=(w0, x0), cycle=cyc, course=course[:10]))
+                        examples.setdefault('count: ' + key, 0)
+                        examples['count: ' + key] += 1
+    fmt = lambda d: {str(k): v for k, v in sorted(d.items(), key=lambda kv: str(kv[0]))}
+    out = dict(worlds=worlds, courses=courses, undecided=undecided, seconds=round(time.time() - t0, 1),
+               comes_to_standing_vs_fate=fmt(tab), by_whether_kids_need_no_more__standing__fate=fmt(down_tab),
+               cycle_lengths_of_never_ending=fmt(cycles), examples=examples)
+    with open('/Users/ren/theories/tmp/r7/one-model/check/meet20/units-results-any.json', 'w') as f:
+        json.dump(out, f, indent=1, default=str)
+    for k, v in out.items():
+        if k != 'examples':
+            print(k, ':', v)
+    for k, v in examples.items():
+        print('==', k)
+        if isinstance(v, list):
+            for e in v[:2]:
+                print('    ', e)
+        else:
+            print('    ', v)
+
+
+if __name__ == '__main__':
+    main()

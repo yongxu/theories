@@ -1,0 +1,11 @@
+#!/usr/bin/env python3
+"""units_w3b.py: the third writing (buds that leave only buds) on a wider range, looking for a course that never
+ends and never stands (growth and loss coming round for ever). Uses units_g4.py's tallies.
+
+AI-written scratch (worker "units", 20 November 2026). A search shows where a statement fails, not that it holds.
+"""
+import units_g4
+
+W3B = dict(n=(1, 2), m=(4, 7, 10, 13, 16, 20, 25, 30), a=(1,), b=(1, 2), jb=(1,), kidsB=((0, 1), (0, 2)),
+           c=(16, 24, 32, 40), s=(1, 2, 3), r=(None, 4, 8), p0=(1, 2, 3), q0=(0,))
+units_g4.main(W3B, 'units-results-w3b.json')

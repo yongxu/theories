@@ -1,0 +1,343 @@
+#!/usr/bin/env python3
+"""refute_units.py: an independent re-run of the units home's statements, looking for starts on the wrong side.
+
+AI-written scratch (agent "refute", 20 November 2026). Not the workers' code: written from the statements in
+work-units.md and from LineOnAStock.lean's definitions (after, line 138; left, line 146; Goes, line 150).
+A search over small numbers shows where a statement fails, not that it holds.
+
+What differs from the worker's search on purpose: givings are random tables (not min(z, r, (c - z)//s)); U2 is
+run with two kinds of growers and two kinds of stayers, uses that differ, growers leaving growers of either kind;
+the regime premise of U2 is asked ONLY at the step T of the turn (weaker than the statement's "at each T", so a
+stronger test).
+
+A way is a tuple of counts by kind. Step at level x: a unit of kind k leaves kids[k] where need[k] <= x and
+nothing where it does not; every unit present takes; x' = (x - H)+ + g[(x - H)+] with H what the way takes.
+The net goes on while some unit present has its need met. Never ends: decided by a repeat (finite: every unit
+that multiplies takes at least 1 here, and the giving keeps levels within C).
+"""
+import random, sys, json, time
+
+t0 = time.time()
+rnd = random.Random(1120)
+out, examples = {}, {}
+
+
+def tally(key, ok):
+    c = out.setdefault(key, [0, 0])
+    c[0] += 1
+    if not ok:
+        c[1] += 1
+    return ok
+
+
+def keep(key, val, k=2):
+    examples.setdefault(key, [])
+    if len(examples[key]) < k:
+        examples[key].append(val)
+
+
+def rstep(g, H, x):
+    z = x - H if x > H else 0
+    return z + g[z]
+
+
+def rand_giving(C, kind):
+    if kind == 0:      # tent with a flat top, any slope down
+        rho, s = rnd.randint(1, C), rnd.randint(1, 3)
+        return [max(0, min(z, rho, (C - z) // s)) for z in range(C + 1)]
+    if kind == 1:      # unimodal random
+        peak = rnd.randint(1, C - 1)
+        g = [0] * (C + 1)
+        v = 0
+        for z in range(1, peak + 1):
+            v = min(v + rnd.randint(0, 2), C - z)
+            g[z] = v
+        for z in range(peak + 1, C + 1):
+            v = min(max(0, v - rnd.randint(0, 2)), C - z)
+            g[z] = v
+        return g
+    return [0] + [rnd.randint(0, C - z) for z in range(1, C + 1)]     # any table: nothing from nothing, within C
+
+
+def step(need, use, kids, g, w, x):
+    K = len(w)
+    nw = [0] * K
+    H = 0
+    for k in range(K):
+        c = w[k]
+        if not c:
+            continue
+        H += c * use[k]
+        if need[k] <= x:
+            for j in range(K):
+                if kids[k][j]:
+                    nw[j] += c * kids[k][j]
+    return tuple(nw), rstep(g, H, x), H
+
+
+def goes(need, w, x):
+    return any(w[k] and need[k] <= x for k in range(len(w)))
+
+
+def run(need, use, kids, g, w, x, limit=400, big=10 ** 5):
+    """Returns (fate, course) with fate 'ends' / 'never' / 'undecided'; course a list of (way, level, taken)."""
+    seen, course = {}, []
+    while True:
+        if not goes(need, w, x):
+            course.append((w, x, sum(c * u for c, u in zip(w, use))))
+            return 'ends', course
+        if (w, x) in seen:
+            return 'never', course
+        if len(course) > limit or sum(w) > big:
+            return 'undecided', course
+        seen[(w, x)] = len(course)
+        nw, nx, H = step(need, use, kids, g, w, x)
+        course.append((w, x, H))
+        w, x = nw, nx
+
+
+def least_root(g, H, C):
+    for z in range(C + 1):
+        if g[z] >= H:
+            return z
+    return None
+
+
+def regime_at(g, H, C):
+    """Short and Meets at H up to hi = C, with the best y. Returns (ok, point): point = H + y, or None where the
+    premises are met only by a y beyond hi - H (then every level within hi is below H + y)."""
+    if H == 0:
+        return False, None
+    r = least_root(g, H, C)
+    if r is None or r + H > C:
+        return True, None
+    for z in range(r, C - H + 1):
+        if g[z] < H:
+            return False, None
+    return True, H + r
+
+
+# ------------------------------------------------------------------ W1 / W3
+def w1(models):
+    for _ in range(models):
+        C = rnd.randint(6, 22)
+        g = rand_giving(C, rnd.randint(0, 2))
+        n = rnd.randint(1, 3)
+        m = rnd.randint(n + 1, C + 1)
+        a, b = rnd.randint(1, 3), rnd.randint(0, 2)
+        jb, ia, ib = rnd.randint(1, 2), rnd.randint(1, 2), rnd.randint(0, 3)
+        need, use = (n, m), (a, b)
+        for fam in ('W1', 'W3'):
+            kids = ((1, jb), (ia, ib)) if fam == 'W1' else ((1, jb), (0, max(ib, 1)))
+            if fam == 'W3' and b == 0:
+                continue        # buds that take nothing and multiply: undecided, left out
+            for p0 in (1, 2):
+                for q0 in range(0, jb * p0 + 1):
+                    for x0 in range(C + 1):
+                        fate, course = run(need, use, kids, g, (p0, q0), x0)
+                        if fate == 'undecided':
+                            tally(fam + ': undecided (left out)', True)
+                            continue
+                        never = fate == 'never'
+                        lv = [c[1] for c in course]
+                        tk = [c[2] for c in course]
+                        going = len(course) if never else len(course) - 1      # steps at which the net goes on
+                        if fam == 'W1':
+                            # U1a: what the way takes never falls while n is met
+                            ok = all(tk[i + 1] >= tk[i] for i in range(len(course) - 1) if lv[i] >= n)
+                            cls = 'ib <= ia*jb' if ib <= ia * jb else 'ib > ia*jb'
+                            if not tally('U1a: W1 take never falls while n is met [%s]' % cls, ok):
+                                keep('U1a fails', (need, use, kids, g, (p0, q0), x0, course[:8]))
+                            # U1b: regime at what the way takes at each step where the level falls
+                            falls = [i for i in range(len(course) - 1) if lv[i + 1] < lv[i]]
+                            if never:   # close the cycle: the step from the last listed configuration
+                                nw, nx, H = step(need, use, kids, g, course[-1][0], course[-1][1])
+                                if nx < lv[-1]:
+                                    falls.append(len(course) - 1)
+                            prem = all(regime_at(g, tk[i], C)[0] for i in falls)
+                            if prem and falls:
+                                if not tally('U1b: W1, regime at every fall, the level falls at some step => ends [%s]' % cls, not never):
+                                    keep('U1b fall fails', (need, use, kids, g, (p0, q0), x0, course[:10]))
+                            if prem and x0 >= m:
+                                if not tally('U1b: W1, regime at every fall, start at or above m => ends [%s]' % cls, not never):
+                                    keep('U1b start>=m fails', (need, use, kids, g, (p0, q0), x0, course[:10]))
+                            if x0 >= m:
+                                tally('W1 without the regime premise: start at or above m => ends', not never)
+                            # G4's first-stop form
+                            T = next((i for i in range(len(course)) if lv[i] < m), None)
+                            if T is not None and T + 1 < len(course) + (1 if never else 0) and lv[T] >= n:
+                                wT, xT = course[T][0], lv[T]
+                                w1_, x1_, _ = step(need, use, kids, g, wT, xT)
+                                H = w1_[0] * a + w1_[1] * b
+                                ok, point = regime_at(g, H, C)
+                                if ok:
+                                    rhs = point is not None and x1_ >= point
+                                    if not rhs:
+                                        tally('G4 first stop W1, necessary: condition fails => ends', not never)
+                                    else:
+                                        tally('G4 first stop W1, sufficient: condition holds => never ends (failures = wrong side)', never)
+                        # E: comes to a configuration that stands
+                        stands_at = None
+                        for i in range(going):
+                            w, x = course[i][0], lv[i]
+                            if not goes(need, w, x):
+                                break
+                            nw, _, H = step(need, use, kids, g, w, x)
+                            if nw != w:
+                                continue
+                            met = tuple(need[k] <= x for k in range(2) if w[k])
+                            xx, seen, okc = x, set(), True
+                            while xx not in seen:
+                                seen.add(xx)
+                                if tuple(need[k] <= xx for k in range(2) if w[k]) != met:
+                                    okc = False
+                                    break
+                                xx = rstep(g, H, xx)
+                            if okc:
+                                stands_at = i
+                                # the regime form, where the regime holds at H
+                                ok, point = regime_at(g, H, C)
+                                break
+                        if not tally('E (%s): never ends <=> comes to a configuration that stands%s' % (fam, (' [%s]' % cls) if fam == 'W1' else ''), never == (stands_at is not None)):
+                            keep('E fails ' + fam, (need, use, kids, g, (p0, q0), x0, fate, course[:12]))
+                        if fam == 'W3':
+                            # every bust: H0 = p (a + jb b); regime at H0; n <= H0 + y0
+                            H0 = p0 * (a + jb * b)
+                            ok, point = regime_at(g, H0, C)
+                            if ok and (point is None or n <= point):
+                                okc = True
+                                full = course + ([] if not never else [])
+                                L = len(course)
+                                # levels list incl. the level after the last listed step when never ends
+                                def nxt(i):
+                                    if i + 1 < L:
+                                        return lv[i + 1]
+                                    return step(need, use, kids, g, course[i][0], lv[i])[1]
+                                last = L if never else L - 1
+                                for i in range(last):
+                                    bust = lv[i] < m and (i == 0 or lv[i - 1] >= m)
+                                    if bust:
+                                        if not (lv[i] >= n and point is not None and nxt(i) >= point):
+                                            okc = False
+                                if not never:
+                                    # the configuration where the net stops: is it a bust that fails? it must be, or
+                                    # an earlier one failed
+                                    i = L - 1
+                                    bust = lv[i] < m and (i == 0 or lv[i - 1] >= m)
+                                    if bust and not lv[i] >= n:
+                                        okc = False
+                                    elif not bust and okc:
+                                        okc = True      # ended with no failing bust: a failure of the statement
+                                if not tally('W3 every bust: never ends <=> the condition at the start below m and at every bust', never == okc):
+                                    keep('W3 every bust fails', (need, use, kids, g, (p0, q0), x0, fate, course[:14], point))
+                            if never and stands_at is None:
+                                tally('W3: never ends and never stands (rounds), counted', True)
+
+
+# ------------------------------------------------------------------ W2 / U2, generalised
+def w2(models):
+    for _ in range(models):
+        C = rnd.randint(6, 22)
+        g = rand_giving(C, rnd.randint(0, 2))
+        n = rnd.randint(1, 4)
+        m = rnd.randint(n, C + 1)
+        # kinds: 0, 1 growers (need m); 2, 3 stayers (need n)
+        use = (rnd.randint(1, 3), rnd.randint(1, 3), rnd.randint(1, 3), rnd.randint(1, 3))
+        need = (m, m, n, n)
+        kids = (tuple(rnd.randint(0, 2) for _ in range(4)), tuple(rnd.randint(0, 2) for _ in range(4)),
+                (0, 0, 1, 0), (0, 0, 0, 1))
+        for w0 in ((1, 0, 0, 0), (0, 1, 0, 0), (1, 0, 1, 0), (1, 1, 0, 1), (2, 0, 0, 1), (0, 1, 1, 1), (1, 0, 2, 0)):
+            H0 = w0[2] * use[2] + w0[3] * use[3]
+            keepsH0 = all(rstep(g, H0, x) <= C for x in range(C + 1))
+            for x0 in range(C + 1):
+                fate, course = run(need, use, kids, g, w0, x0)
+                if fate == 'undecided':
+                    tally('U2: undecided (left out)', True)
+                    continue
+                never = fate == 'never'
+                # the course as it was: all kids at every step, the level under what the whole way takes
+                w, x, T = w0, x0, None
+                for t in range(60):
+                    if x < m:
+                        T = t
+                        break
+                    H = sum(c * u for c, u in zip(w, use))
+                    nw = [0] * 4
+                    for k in range(4):
+                        for j in range(4):
+                            nw[j] += w[k] * kids[k][j]
+                    w, x = tuple(nw), rstep(g, H, x)
+                    if sum(w) > 10 ** 5:
+                        break
+                if T is None:
+                    tally('U2: the course as it was never comes below m within 60 steps (premise not met; left out)', True)
+                    if never:
+                        tally('   ... of these, the line never ends', True)
+                    continue
+                HT = w[2] * use[2] + w[3] * use[3]
+                XT = x
+                XT1 = rstep(g, sum(c * u for c, u in zip(w, use)), x)
+                nonempty = w[2] + w[3] > 0
+                ok, point = regime_at(g, HT, C) if nonempty else (True, None)
+                prem = keepsH0 and ok and (point is None or n <= point)
+                rhs = (n <= XT) and nonempty and point is not None and XT1 >= point
+                if prem:
+                    if not tally('U2: never ends <=> right side (premises asked at the step of the turn only)', never == rhs):
+                        keep('U2 fails', dict(need=need, use=use, kids=kids, g=g, w0=w0, x0=x0, fate=fate, T=T, HT=HT,
+                                              point=point, XT=XT, XT1=XT1, course=course[:10]))
+                    if not nonempty and w0[2] + w0[3] == 0:
+                        pass
+                    # the statement's literal "at each T": is it met at T = 0?
+                    lit0 = (w0[2] + w0[3] > 0)
+                    if not lit0:
+                        tally('U2: starts with no stayer (the literal premise "at each T" fails at T = 0)', True)
+                        if never:
+                            tally('   ... of these, the line never ends (so the literal premise leaves real cases out)', True)
+                else:
+                    tally('U2: a premise fails at the turn; right side vs fate (failures = they differ)', never == rhs)
+                # too late: stopped by the fall with stayers left, and ends
+                if nonempty and n <= XT and not never:
+                    tally('U2: growth stopped by the fall, stayers left, the line ends (too late), counted', True)
+
+
+# ------------------------------------------------------------------ the second sign: two kinds
+def two(models):
+    for _ in range(models):
+        C = rnd.randint(6, 20)
+        g = rand_giving(C, rnd.randint(0, 2))
+        uL = rnd.randint(1, 2)
+        uM = rnd.randint(uL + 1, 4)
+        nL, nM = rnd.randint(1, 6), rnd.randint(1, 6)
+        need, use = (nL, nM), (uL, uM)
+        for who, kids in (('M doubles', ((1, 0), (0, 2))), ('L doubles', ((2, 0), (0, 1))), ('both double', ((2, 0), (0, 2)))):
+            for w0 in ((1, 1), (2, 1), (1, 2)):
+                for x0 in range(C + 1):
+                    fate, course = run(need, use, kids, g, w0, x0)
+                    if fate == 'undecided':
+                        continue
+                    never = fate == 'never'
+                    mult_need = nM if who == 'M doubles' else nL
+                    other_need = nL if who == 'M doubles' else nM
+                    if who == 'both double':
+                        tally('two kinds, both double: every course ends', not never)
+                    elif mult_need <= other_need:
+                        if not tally('two kinds, the one that doubles needs less or the same: every course ends', not never):
+                            keep('second sign fails', (need, use, kids, g, w0, x0, course[:10]))
+                    else:
+                        tally('two kinds, the one that doubles needs more: courses that never end (failures = never ends) [%s]' % who, not never)
+
+
+if __name__ == '__main__':
+    k = int(sys.argv[1]) if len(sys.argv) > 1 else 300
+    w1(k)
+    w2(k)
+    two(k)
+    # the kept W3 course, by program: A (need 1, use 1) -> A B; B (need 16, use 1) -> B; g = min(z, 4, 16 - z)
+    g = [max(0, min(z, 4, 16 - z)) for z in range(17)]
+    fate, course = run((1, 16), (1, 1), ((1, 1), (0, 1)), g, (1, 0), 10)
+    print('W3 kept course:', fate, [(c[0], c[1]) for c in course])
+    res = {k_: dict(checked=v[0], failures=v[1]) for k_, v in sorted(out.items())}
+    for k_, v in res.items():
+        print(v['checked'], v['failures'], k_)
+    print('seconds', round(time.time() - t0, 1))
+    json.dump(dict(results=res, examples=examples), open('/Users/ren/theories/tmp/r7/one-model/check/meet20/refute-results-units.json', 'w'), indent=1, default=str)

@@ -1,0 +1,159 @@
+# The lock on a level, with what comes back paid only at or above a level: worked on paper and by program
+
+*AI-written (Claude Fable, worker "lock"), 20 November 2026, evening. No Lean was written and nothing was built. Each claim below is marked: **argued** (on paper, step by step, by me alone, read by no one), **searched** (small numbers only; a search shows where a statement fails, not that it holds), **guess**, or **refuted**. Share, rule, level, need, use, giving, place are working names. Negatives about the Lean are "not found in what was read"; what was read is listed at the end.*
+
+## In short
+
+1. The family, written in the lock's own terms, **is a window course by definition**: the levels below `M` are the window, the rule with nothing coming back is what the window sets, and `RuleShaping.favours_iff` gives the window law's premise `corrects` in one line. So far G5.
+2. The window law itself (`locked_turns_in_time_on_window_iff`) does **not** cover the family where the use follows the share: its premise `uses` (one standing use for every way whose rule is the one the window sets) fails, and so does `safe`/`covers` wherever the level can come back up to `M`.
+3. What replaces it is **not one exact statement**. What stands, in both signs: a bracket between the two courses with a rule held (argued); an exact statement where `M` is at or below the point of no return of the least use, in which `M` does no work (argued; it is two old arguments end to end); an exact single-step statement where the level cannot come back to `M` (argued; the window law with a finite stretch added). Where the level can come back to `M` the single-step condition is refuted, in both homes of the share (places, counts).
+4. The two signs are **not mirror images**. With the favoured drawing less, the whole step keeps the order of configurations, so the starts that never end are closed upward and shrink as `M` rises (argued, searched). With the favoured drawing more, the reading of the level reverses the order: a start with *more* level can end where one with less never ends (searched, one course traced).
+5. G3 as guessed is **not found**: no one statement has G1 and G2 as its cases by the sign with a law of the package following unchanged, beyond `RegimeMargin.step_mono` (premise weakened) and `unending_iff_above` at a share that does not move, which is also the engine of the proof.
+
+## 1. The model, and why these choices
+
+Programs: `lock_model.py` (the model), `lock_search.py`, `lock_search2.py`, `lock_search3.py`, `lock_search4.py`, `lock_edge.py`, `lock_counts.py`; outputs `lock-results-1.json`, `lock-results-2.json`, `lock-results-counts.json`. Each ran under 75 seconds.
+
+A configuration is a way and a level, `((a, g), x)`, as in `TurningInTime.pair` (line 337) with the lock's way of section 6 (share, rule; the step count is dropped because every step reads).
+
+- **Share `a`**: how many of `n` places the favoured kind holds, `0 ≤ a ≤ n`, ordered by `≤`.
+- **Rule `g`**: `RuleShaping.shaped a₀ s p c` (line 150) with what comes back either `s` (the rule *favours*, `c < s`) or nothing (it does *not*, `0 < c`). By `favours_iff` (line 160) there are only these two directions, so the rule is carried as one bit.
+- **Level `x`**, the net of `TurningInTime.net` (line 352): a next only where `need ≤ x`.
+- **One step, in the Lean's order** (`windowAfter`, line 1271, every step reading): the share steps by the rule *in force*, `a' = fA(a, g)`; the rule is read at the share and level *before* the step, favouring exactly where `x ≥ M` (and `a ≥ θ`; `θ = 0` is no threshold on the share, `θ > 0` is `thresholdBack`, line 458, with `lo < c ≤ hi`); the level steps by `RegimeMargin.step giving (use a) x` (line 249). So there are two lags: the rule changes one step after the level crosses `M`, and the share begins to move one step after that.
+- **How the use follows the share**: `use(a) = a·uF + (n − a)·uO`. Sign `+`: `uF > uO` (the favoured draw more). Sign `−`: `uF < uO`. The use reads the share only, as `Three.drawerUse` (line 2930), not the rule as `Three.use`/`lockUse` (lines 2354, 2486).
+- **Places, not counts that multiply, and what makes the use fall.** With counts that multiply (`CarrierCounts.select`, `RuleCapture` line 497) every unit leaves at least `a₀ ≥ 1` and each other leaves `a₀ + c + p ≥ 2`, so no count and no use ever falls; that case is run apart (§7) and has almost nothing in it. On a fixed number of places a place lost to one kind is a place it no longer draws through: that is the only thing that lets the use fall. The cost is that the share is capped at `n`, so `count_rises`' premise `rise` fails at the cap.
+- **The share's step**, two forms, both with `fA(a, favours) ≥ a`, `fA(a, not) ≤ a`, monotone in `a`: *revise* (`r` places change hands a step; this is `PopulationCorrection.allocated`, line 33, in other names) and *repl* (the counts `a·(a₀+s+p)` and `(n−a)·(a₀+c+p)` cut back to `n` places, rounded toward the share before; 0 and `n` absorbing). Every statement below is stated for any `fA` with those three properties and searched on both.
+- **Giving**: `max(0, min(z, ρ, C − z))`. Nothing from nothing; `z + giving z` never falls as `z` rises (so the level's step keeps the order of levels: the conclusion of `RegimeMargin.step_mono`, line 1112, under a weaker premise than its `grows`, which the falling side of the tent does not meet); no level passes `C`. `ρ ≥ C/2` is `Three`'s tent.
+- **Locked start**: the rule in force favours and `a ≥ θ` (`RuleCapture.Locked`, line 160, with `hA` the reading with what comes back paid). The lock's premises `Raises`, `ReadsShare` and favouring kept upward hold trivially here. The lock does not see the level, so a locked start may lie below `M`.
+
+Words used below. *The own course*: the rule that favours held at every step (`windowAlone`). *Held*: a course with one rule held from a configuration. *Standing point* of a use `H`: the least level from which the level under `H` held meets the need for ever; where the regime's premises hold it is `H + y` (`RegimeMargin.ends_iff_below`, line 741). `Hmin`: the least use any share has; `Pmin` its standing point. *First step read* `T`: the first step of the own course whose level is below `M`, the need met up to it.
+
+## 2. G5 taken seriously: is the family the window law?
+
+**The step is the window's (a definition unfolded).** With `N := 0`, `K := M`, `hL :=` the rule with nothing coming back, `hA :=` the rule with it (constant, or `byBack` with `thresholdBack`), `PoolFromCourse.windowRead` (line 252) is this model's reading and `windowAfter` its way after a step. `corrects` (the window's reading gives a `kept` rule) holds with `kept :=` "does not favour", by `favours_iff` at `s = 0 < c`. That much of the frozen test 3 is answered: `corrects` is derived, in one line. `M` itself stays a parameter of what comes back, handed in.
+
+**The window law's statement does not cover it** (argued, by reading the premises of `locked_turns_in_time_on_window_iff`, line 1633, against the model):
+
+- `uses : kept v.2.1 → use v = H₂`. False here whenever `uF ≠ uO` and the share moves: after the turn the share goes on changing, and the use with it. It holds if the use reads the rule alone (`Three.lockUse`) or `uF = uO`.
+- `covers` with `safe`: the window must reach up to a level `c` from which every way's step stays in `[c, hi]`, or `c > hi`. Here `c ≤ M`. So either every level from `M` up is safe for the highest use (then a start at or above `M` is never read), or `M` lies above every level the stock can keep after the turn.
+- `below`: the start below the point of no return of the use it has. Not needed by what follows.
+
+So G5 stands as a *recognition* (the family is a window course) and fails as a *reduction* (the law does not decide it). What decides it is in §3 to §6.
+
+## 3. What holds in both signs
+
+**BR, the bracket (argued; searched).** Premises: `fA` as above; the use monotone in the share (either direction); `z + giving z` never falling. Call the rule under which the share moves toward less use the *least-use* rule (sign `+`: the rule that does not favour; sign `−`: the one that favours), the other the *worst-use* rule. Then from every configuration, whatever the reading of the rule:
+
+> the worst-use rule held never ends ⟹ the course never ends ⟹ the least-use rule held never ends.
+
+*Argument.* Order shares by "uses no more". `fA` keeps that order jointly in share and rule (`fA(a, not) ≤ a ≤ fA(a', favours)` for `a ≤ a'`, and monotone in `a` under one rule). The level's step keeps "no less level" when the use is no more (truncated subtraction and `z + giving z` are monotone). By induction on steps the course's share and level lie between those of the two held courses, since at every step its rule lies between the two held rules. The need is a lower bound on the level, so the fates are ordered. ∎
+*Searched*: `lock_search2.py`, 1,720,032 configurations in each sign (any rule in force, `θ` 0 and 2, both share steps), no failure either side. Between the two (least-use held goes, worst-use held ends) lie 436,442 configurations in sign `+` (the course goes on in 204,671, ends in 231,771) and 436,170 in sign `−` (199,154 and 237,016): in both signs the reading of the level decides there, both ways.
+*It does not use the family*: it holds for every reading. So the return does no work in it.
+
+**HL, the held law (argued; searched).** With one rule held from `(a, x)`, let `J` be the first step at which the share no longer moves and `H̄` its use then. With nothing from nothing, giving short of `H̄` below `ȳ`, meeting it from `ȳ` up to `hi`, the step under `H̄` keeping levels within `hi`, the level at `J` at most `hi` and `0 < need ≤ H̄ + ȳ`:
+
+> the held course never ends ⟺ the need is met before `J` and the level at `J` is at or above `H̄ + ȳ`.
+
+Where the uses before `J` are all at least `H̄` (sign `−` with the favouring rule held; sign `+` with the other), the first conjunct follows from the second. *Argument*: from `J` on the course is the regime's run under `H̄` (`RegimeMargin.ends_iff_below`). For the last sentence: a level below `need ≤ H̄ + ȳ` before `J`, under uses of at least `H̄`, never rises (the argument of `TurningInTime.regime_levels`, line 570, private), so it is below `H̄ + ȳ` at `J`. ∎
+*Searched*: 264,960 held courses, no failure (the program takes the standing point by brute force; on this family it is `H̄ + ȳ` where `need ≤ H̄ + ȳ` and the need otherwise, seen in `lock_edge.py`'s tables, not separately argued).
+*What it is*: a finite determined stretch followed by `ends_iff_below`. `TurningInTime.unending_iff_above` (line 958) is its case at `J = 0` with the statement unchanged (instantiation: `after w x := w`, `Kept := fun v => v = w`, `H₂ := use w`); it is also what proves it.
+
+**LATE (argued; searched).** Premises: a locked start; every way uses at least `H`; nothing from nothing; giving short of `H` below `y`; `0 < need ≤ M ≤ H + y`. Then:
+
+> the line never ends ⟺ the own course never comes below `M`.
+
+*Argument.* (⇐) While the level is at or above `M` the rule read favours (the share never falls under the favouring rule, so `a ≥ θ` stays), so the course is the own course, and `M ≥ need`. (⇒) Up to the first step `T` below `M` the course is the own course (`agrees_until_marked`, line 469, in this model's terms). At `T` the level is below `M ≤ H + y`; every later use is at least `H`; the level never rises again and is below the need within that many steps (the only-if half of `unending_iff_above_kept_below`, line 920, with its `floor`). ∎
+In sign `−` with HL: the line never ends ⟺ the level of the own course, at the step the favoured have taken every place they will, is at or above `H̄ + ȳ` (`H̄` the use then). **`M` drops out.** In the flat part of giving (what is left between `ρ` and `C − ρ` at every step before `J`), with *revise*: ⟺ `x₀ ≥ H̄ + ȳ + Σ_{t<J} (use at t − ρ)`: the start's level against what is overdrawn before the keepers' growth brings the use within what is given. That is G2's "single inequality", and it holds only in this regime.
+*Searched*: LATE on 216,104 locked starts in each sign (and 260,680 with `uF = uO`), the form at `J` on the sign `−` ones, the flat form on 20,024 starts with a non-zero sum (38,580 more with sum zero): no failure. `lock_search4.py`: with `M ≤ Pmin` no locked start has a fate other than its own course's (0 of 209,288 in each sign). Where the program's `Pmin` is the need itself (a least use of nothing), `M ≤ Pmin` means `M = need`, the premise `M ≤ H + y` is not met and the statement is immediate: the rule read favours wherever the need is met.
+*What it is*: two old arguments end to end. The fall changes who is favoured only at or past the point of no return of everything, so nothing changes. The frozen file's corrected clause ("before the point of no return of what then goes on") fails here by the premise `M ≤ H + y`.
+
+## 4. Sign +: the favoured draw more (G1)
+
+**D, the single-step condition.** For a locked start whose own course has a first step read `T`: let `(a₁, x₁)` be the share and level at `T + 1`.
+
+> (D) the line never ends ⟺ the course with the rule that does not favour held from `(a₁, x₁)` never ends.
+
+- **(⟹) argued**, sign `+` only: BR at the configuration at `T + 1`.
+- **(⟸) refuted in general** (searched). On the grid of `lock_search2.py`, of 65,824 sign-`+` locked starts where the right side holds and the rule favours again later, 7,511 end. Smallest course (`lock_search3.py`): `n = 1`, `uF = 3`, `uO = 1`, `r = 1`, tent on 12, need 1, `M = 4`, start share 0 at level 3. Levels 3, 4, 2, 2, 0: read at step 0; the other rule held from step 1 would hold at 2 for ever; but the level touches 4, the rule favours again, the share goes back up and takes 3 from a level of 2. Here `r = n`: under the other rule the share falls to nothing in one step and the use then stands. So what breaks the single step is **not** that the use goes on changing; it is that the favouring comes back.
+- **Exact where the rule never favours again after `T`** (argued: the course from `T + 1` is then the held course, by definition; searched: 308,267 + 15,159 starts, no failure). By HL the right side is then one level at one named step: *the level `k + 1` steps after the first step read, when the share has stopped falling, is at or above the point of no return of the least use.* So there is a single point, for each share at the turn; G1's guess "exact only where what goes on after is one standing use" is **refuted in the letter**: a use that changes for finitely many steps and then stands is enough.
+- **Where "never favours again" is derived and not handed in** (argued; searched): where every level the stock keeps is below `M` (`Keeps` at some `hi < M` for the least use, hence for every use, and the level after the turn at most `hi`). In the program: `M = C + 1`, starts above `C`: 20,035 sign-`+` starts with a first step read, D exact on all, 9,784 turn in time. This is the window law's own domain (`c` above `hi`: its docstring, "a later first step the window reads occurs only where `c` is above `hi`"), with `uses` replaced by HL's stretch. Read plainly: what comes back is paid only out of a level the stock cannot keep.
+
+**The reading reverses the order (argued), and more level can end a line (searched).** In sign `+` a higher level reads the rule under which the share rises toward more use, so the step does not keep any order of configurations in which more level is better. Found: in 504 of 5,940 sign-`+` models, at some share the locked starts that never end are not closed upward in the level. Traced: `n = 4`, `uF = 2`, `uO = 0`, `r = 1`, `C = 20`, `ρ = 5`, need 1, `M = 12`, share 2. From level 11 the line never ends (share 2, 3, 2, 3 …; level 11, 12, 11, 12 …). From 12 it ends in four steps, from 20 in seven: the share reaches 4 before the level comes below 12, and then the two lags take the rest. Every law of `RegimeMargin` that was read has its going side closed upward; this model does not.
+
+**How often the fall turns the line in time** (`lock_search4.py`, locked starts, `M > Pmin`): of 279,796 whose own course ends, 23,302 never end. Of those, 8,009 settle with the favouring lost, 2,284 with it regained for good (the stock recovers to where the full use holds), 13,009 alternate for ever.
+
+## 5. Sign −: the favoured draw less (G2)
+
+**UP, MM, REST (argued; searched).** In sign `−` the reading keeps the order: more level reads the rule under which the share moves toward less use. So the whole step is monotone on (share, rule, level) with `favours` above `not`:
+
+- **UP**: the configurations that never end are closed upward (11,340 models, no failure). So for each share there is one least level: an edge exists.
+- **MM**: a start that never ends at `M` never ends at every smaller `M` (574,560 pairs, no failure). Raising the level below which nothing comes back never saves a line.
+- **REST**: once a step lowers neither share, rule nor level, no later step lowers any, and the line never ends; once a step raises none, no later step raises any (156,907 and 257,629 configurations, no failure). `Drawn.rising_on`/`falling_on`'s shape on this carrier.
+
+*Argument*: `fA` monotone jointly, the reading monotone in share and level, the level's step monotone in level and (use falling with the share) in share; induction. ∎ None of this is in the window law, which compares no two starts.
+
+**G2's dichotomy** ("for ever with the favouring kept and never below `M` / favouring lost, use rises, ends"):
+
+- **Exact where `M ≤ Pmin`**: that is LATE, and there `M` does no work.
+- **Refuted where `M > Pmin`** (searched; 404,152 locked starts): 68,787 never end though their level comes below `M` (they lose the favouring and regain it for good), 10,397 never end with the favouring lost for good (the others' use holds below `M`), 9,625 alternate for ever. Traced (`n = 4`, `uF = 0`, `uO = 2`, `M = 14`, `ρ = 5`, `C = 20`): from share 4 at level 3 the line is saved (the level climbs to 14 while the share falls to 1, then the favouring returns); from share 4 at level 2 it ends (the level reaches 12 with the share at 1 and falls).
+- **What the fall does there**: of 279,824 locked starts with `M > Pmin` whose own course never ends, 41,822 end (`lock_search4.py`): the fall stops the favouring of those who keep and that ends a line that the favouring held would have kept. 4,161 of them start at or above `M`.
+- **The edge for `M > Pmin`: not found.** By BR and LATE it lies between the edge of the favouring rule held (HL: closed) and "the own course never below `M`"; `lock_edge.py` shows it strictly between in most rows (e.g. `M = 14`, share 2: 10, between 6 and 14). It is the outcome of a race between the level climbing to `M` and the share falling, with two lags. G2's "single inequality" is a **guess that stands only for `M ≤ Pmin`**.
+
+G2's "a start at or above `M` with too few keepers still falls through it": yes (same model, share 0: levels 14 to 16 end).
+
+## 6. G3: one statement with both as cases?
+
+**Not found.** What is common to the two signs is one comparison (the step keeps "uses no more, has no less" when the rules in force are ordered the same way) and the place where the sign enters: *the reading of the level keeps that order where the favoured draw less and reverses it where they draw more.* From the comparison: BR in both signs; UP, MM, REST in sign `−`; nothing more in sign `+`. That is the placing this home gives, and it is a statement about order, not an edge.
+
+Which laws of the package follow with their statements unchanged, with the instantiation:
+
+- `RegimeMargin.step_mono` (line 1112): the comparison at one share (`n = 0`, or `uF = uO`), **only with its premise `grows` weakened** to "`z + g z` never falls". Not unchanged.
+- `TurningInTime.unending_iff_above` (line 958): HL at `J = 0` (instantiation in §3). Unchanged, and it is the engine.
+- `locked_ends_rising` (line 1440): **not a case.** On places the share is capped, so `more` fails at the cap; with `M` at or below the need the model's locked starts whose top use is beyond giving end, but by HL, not by a rise. With counts that multiply and `M ≤ need` the model is an *instance* of it (§7), as on 19 November.
+- `recoverable_iff_above` (line 2087), `LineOnAStock.unending_iff_holds` (line 1239): not derived. The first is used through `ends_iff_below`; the second was read in statement only at its docstring's first lines and not set against HL.
+- `favours_iff` (line 160): used (it gives `corrects`), not a case.
+
+## 7. Counts that multiply
+
+`lock_counts.py`: `(f, o)` favoured and others, `f' = f·(a₀ + back + p)`, `o' = o·(a₀ + c + p)`, use `f·uF + o·uO`, the rule read favouring exactly where `x ≥ M`.
+
+- **Where the others draw anything, every start ends, in every sign** (argued: `o` at least doubles at every step, so the use passes every level the stock keeps; searched: 434,880 starts, none goes on). G2 has no content with counts that multiply: the favoured cannot draw less than others who draw nothing. With `M ≤ need` and something favoured this is `locked_ends_rising` as it stands.
+- **Where the others draw nothing and the favoured stand still when nothing comes back** (`a₀ = 1`, `p = 0`): the use never falls and stands while the level is below `M`. D's (⟹) holds (argued, same comparison); its (⟸) fails in 1,526 of 2,196 starts where its right side holds, again only because the level comes back to `M` and the count multiplies again.
+
+## 8. The frozen tests, statement by statement
+
+| statement | standing | tests tripped |
+|---|---|---|
+| BR | argued, searched | **3** (last clause: holds for every reading, the return adds nothing) and **6** (no law about ending follows). Not 1, 2, 5. |
+| HL | argued, searched | **1** (a stretch, then `ends_iff_below`); **3** (no reading in it). Not 4 in the letter (the use changes before `J`), not 6 (`unending_iff_above` at `J = 0`, which is also its engine). |
+| LATE | argued, searched | **1, 2, 3**. `M` does no work; the favouring changes only past the point of no return. |
+| D (⟹), sign + | argued | 1 (BR at one step). |
+| D (⟸) | refuted in general | **5**. Exact where the rule never favours again: then **1, 2, 3** (window law with HL's stretch; "never again" handed in, or derived only where `M` is above every level the stock keeps, the window law's own domain). Test **4** does not trip: a standing use is neither needed nor enough. |
+| UP, MM, REST (sign −) | argued, searched | **6**; 3 in part (`M` handed in; derived: that the reading keeps the order in this sign). Not 1; not 2 as far as read (same shape as `Coupled.ends_of_below`, `Adjusted.falls_of_below`, `Drawn.rising_on` on other carriers; not shown to be a case of them); not 5; not 7 (starts that draw the level down, and starts below `M`, are on the going side); not 8 (the favoured add nothing: they draw less, and `giving` is the regime's, handed in as in every law of `RegimeMargin`). |
+| G2's dichotomy, G2's inequality | exact only for `M ≤ Pmin` | **5** for `M > Pmin`; where exact it is LATE with HL: **1, 2, 3**. |
+| G3 as guessed | not found | **6**. |
+| counts that multiply | argued, searched | **1, 2** (`locked_ends_rising`'s argument); **7** (no second side at all). |
+
+**So for this home: tests 1, 2 or 3 trip for every statement that is exact, and G5 stands for them.** What does not reduce to the window law is not an edge: the bracket, the order kept in one sign and reversed in the other, and the failures. On test 2 and `PopulationCorrection`: the share's step *revise* is its `allocated` in other names, and LATE's flat form has the shape of its `exact_schedule_activation_boundary` (line 504: a start amount plus a sum over the share's course against a threshold); they were not shown to be one statement, and there the reading is of a reserve, not of the level drawn down.
+
+On the frozen file's corrected clause ("the level's fall changes who is favoured, by something the statement derives and does not hand in, before the point of no return of what then goes on"): in this home the change is derived only as far as `favours_iff` goes; the level `M` at which it happens is the family's parameter. It happens before the point of no return of what then goes on exactly for `M > Pmin`, and there no exact statement was found in either sign.
+
+## 9. What failed, kept
+
+- My first candidate for sign `−` ("never ends ⟺ the own course never below `M`", with no premise on `M`) failed on 95,820 + 7,150 + 2,704 starts of the first sweep.
+- The first form of D's check read the level at `T + 1` off a list cut at the own course's first repeat and reported 6,806 false failures of D (⟹) in sign `+` and 3,340 with `uF = uO`; mended, both are zero.
+- D in sign `−` is the wrong question: there the rule that does not favour held is the worst course, and 14,471 + 5,095 starts never end though it ends.
+- The use here reads the share only. With the use reading the rule (as `Three.use`) the family is the window law with nothing left over; that is argued from the premises, not run.
+- Not tried: a share that reads the level in its own step; a reading schedule other than every step; `θ` beyond 0 and 2; giving that does not keep the order of levels (`Notch`-like); more than two rules; `mixed_turns_iff` (read in statement at `ScratchMixedWay.lean.txt` line 439, not used: it is the units' home).
+
+## 10. Seen after the work was done
+
+When I checked the frozen file's hash at the end, the file had a section added at 19:36 under "After" (the 19:17 text is kept beside it and its hash matches). I had not seen it while working; it says the workers do not see it. Nothing above was changed for it. Three things it bears on, said so that a reader need not infer them:
+
+- *Which sense of "the second way".* Everything under sign `−` here is the first of the three senses of 17 November only: a way that stays within what is made again, because those it favours draw less. Nothing in this model adds to the level or remakes it, and no going-on rests on another. None of §5 should be told as "the second way" without that.
+- *A lock that does not end.* No statement here has a lock ending in every case. In sign `+`, 12,518 locked starts with `M ≤ Pmin` and 124,356 with `M > Pmin` have an own course that never ends, and by BR the line then never ends: a rule set again from what it favours, on a level it does not run down.
+- *Test 2 read more widely.* The statements here were not set against `PairFlow`, `Exclusion`, `CoupledDrawers`, `RuleRebuilding` or the other rows that section names; I read none of them. UP, MM and REST in particular (order kept under mutual support) are of a shape those files may already state.
+
+## 11. What was read
+
+Statements and docstrings, no proofs unless said: `RuleShaping.lean` opening account (lines 1–140), `shaped`, `favours_iff`, `disfavours_iff`, `byBack`, `byBack_reads_iff`, `covering_locks`, `thresholdBack`, `threshold_rises`, `threshold_falls`; `RuleCapture.lean` `Raises`, `ReadsShare`, `Locked`, `turn_locked` (with its proof term), `CarrierCounts`, `order`, `favours`, `select`, `raises`; `TurningInTime.lean` opening account (lines 1–325), section 6's account, `pair`, `net`, `AloneOutside`, `windowAfter`, `windowLeft`, `windowAlone`, `locked_closed`, `locked_alone`, `locked_ends_with_net_regime`, `locked_ends_rising`, `count_rises`, `locked_ends_on_window`, `window_corrected`, `locked_turns_in_time_on_window_iff`, `unending_iff_above_kept_below`, `unending_iff_above`, `turns_in_time_iff_kept_below` (docstring), `turned_meets_iff`, `recoverable_iff_above`, `turns_in_time_iff_before`, `regime_levels`, `ends_with_net_regime`; `RegimeMargin.lean` opening account to line 120, `step`, `FromNothing`, `Short`, `Meets`, `Keeps`, `ends_below`, `holds`, `ends_iff_below`, both `step_mono`; `PoolFromCourse.lean` `windowRead` only; `PopulationCorrection.lean` lines 1–80 and 496–530; `ScratchMixedWay.lean.txt` `turns_in_time_iff_ends` and `mixed_turns_iff`; the notes of 17, 19 and 20 November; the direction page's "Where we are heading". Not read: `LineOnAStock`, `WayOfUnits`, `PairFlow`, `RuleRebuilding`, `Exclusion`, `CoupledDrawers`, `ScratchCovering`, beyond names found by search.

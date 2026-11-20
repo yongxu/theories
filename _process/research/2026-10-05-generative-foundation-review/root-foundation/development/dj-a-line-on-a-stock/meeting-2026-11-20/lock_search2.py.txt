@@ -1,0 +1,189 @@
+#!/usr/bin/env python3
+"""lock_search2.py -- second sweep: the statements kept after the first, each put where it could fail.
+
+AI-written (Claude Fable, worker "lock"), 20 November 2026.  A search shows where a statement fails,
+not that it holds.  Model: lock_model.py.  Over every configuration (any rule in force, any share at
+or above theta where the start is to be locked), need met at the start.
+
+  BR   the bracket, both signs, from every configuration:
+         the worst-use rule held never ends  =>  the course never ends  =>  the least-use rule held never ends
+       (sign +: worst = favouring held, least = the other held; sign -: the other way round).
+  UP   sign -: the configurations that never end are closed upward in (share, rule, level).
+  MM   sign -: a start that never ends at M never ends at every smaller M (same model otherwise).
+  HL   the held law: with a rule held, the course never ends exactly where the need is met up to the
+       step J at which the share stops moving and the level at J is at or above the standing point of the
+       use the share has then.
+  LATE M <= Pmin, locked starts: never ends <=> own course never below M <=> (sign -) the level of the
+       own course at the step the share stops rising is at or above the standing point of the use then.
+  FLAT sign -, M <= Pmin, "revise": where what is left lies in the flat part of giving at every step
+       before J:  never ends  <=>  x0 >= Pbar + sum over t < J of (use at t - rho).
+  D    sign + (and the rest), locked starts whose own course comes below M with the need met (a first
+       read step T exists): the single-step condition "the course with the rule that does not favour
+       held from T+1 never ends", against the fate; split by whether the rule favours again later.
+  DICH M > Pmin: how the dichotomy "favouring kept for ever and never below M / favouring lost and
+       ends" fails: starts that never end though their level comes below M, by what they settle to.
+  TOP  M = C + 1 (what comes back is paid only above every level the stock can keep), starts above C:
+       D must be exact (the level cannot come back to M).  Counted, with how many turn in time.
+"""
+import itertools, json, sys, time
+from collections import Counter
+from lock_model import Model, ENDS, GOES
+
+t0 = time.time()
+tally = Counter()
+examples = {}
+
+
+def note(key, m, st, extra=""):
+    tally[key] += 1
+    if len(examples.setdefault(key, [])) < 3:
+        examples[key].append(dict(n=m.n, uF=m.uF, uO=m.uO, r=m.r, C=m.C, rho=m.rho, need=m.need,
+                                  M=m.M, theta=m.theta, share=m.share, start=st, extra=extra))
+
+
+def refavours(m, st, T):
+    """Does the rule read favour at some step after T on the course from st?"""
+    seen, cur, t = set(), st, 0
+    while cur[2] >= m.need and (cur, t > T) not in seen:
+        seen.add((cur, t > T))
+        if t > T and m.read(cur[0], cur[2]) == 1:
+            return True
+        cur, t = m.step(cur), t + 1
+    return False
+
+
+def held_law(m, a, x, g):
+    """Right side of HL for the course with the rule g held from (a, x)."""
+    while True:
+        if x < m.need:
+            return False
+        if m.fA(a, g) == a:
+            return x >= m.standing(m.use(a))
+        a, x = m.fA(a, g), m.lstep(m.use(a), x)
+
+
+def sweep(shareform, ns, us, rs, stocks, needs, thetas):
+    for n, uF, uO, (C, rho), need, theta in itertools.product(ns, us, us, stocks, needs, thetas):
+        if theta > n:
+            continue
+        sign = "+" if uF > uO else "-" if uF < uO else "0"
+        for r in (rs if shareform == "revise" else (0,)):
+            if shareform == "revise" and r > n:
+                continue
+            goes_by_M = {}
+            for M in range(need, C + 2):
+                m = Model(n, uF, uO, r, C, rho, need, M, theta, shareform)
+                uses = [m.use(a) for a in range(n + 1)]
+                Hmin = min(uses)
+                Pmin = m.standing(Hmin)
+                top = C if M <= C else C + 8
+                G = {}
+                for a0 in range(0, n + 1):
+                    for g0 in (0, 1):
+                        for x0 in range(need, top + 1):
+                            G[(a0, g0, x0)] = m.fate((a0, g0, x0))
+                goes_by_M[M] = {k: v[0] == GOES for k, v in G.items() if k[1] == 1 and k[0] >= theta and k[2] <= C}
+                for (a0, g0, x0), (f, info) in G.items():
+                    st = (a0, g0, x0)
+                    goes = f == GOES
+                    hf, hd = m.held(a0, x0, 1)[0], m.held(a0, x0, 0)[0]
+                    # HL (asked once per (a0, x0))
+                    if g0 == 1 and M == need:
+                        for g, h in ((1, hf), (0, hd)):
+                            tally[("HL asked",)] += 1
+                            if held_law(m, a0, x0, g) != h:
+                                note(("HL fails", sign, "rule%d" % g), m, st)
+                    # BR
+                    if sign != "0":
+                        worst, least = (hf, hd) if sign == "+" else (hd, hf)
+                        tally[("BR asked", sign)] += 1
+                        if worst and not goes:
+                            note(("BR fails: worst held goes, course ends", sign), m, st)
+                        if goes and not least:
+                            note(("BR fails: course goes, least held ends", sign), m, st)
+                        if least and not worst:
+                            tally[("BR between: least held goes, worst held ends", sign,
+                                   "course goes" if goes else "course ends")] += 1
+                    if not (g0 == 1 and a0 >= theta):
+                        continue
+                    # locked starts from here
+                    own = m.own(a0, x0)
+                    own_goes = own[-1][1] >= need
+                    own_above = own_goes and all(y >= M for _, y in own)
+                    T = m.first_read(a0, x0)
+                    if M <= Pmin and x0 <= C:
+                        tally[("LATE asked", sign)] += 1
+                        if goes != own_above:
+                            note(("LATE fails", sign), m, st)
+                        if sign == "-" and goes != held_law(m, a0, x0, 1):
+                            note(("LATE fails (level at J)", sign), m, st)
+                        if sign == "-" and shareform == "revise":
+                            a, x, D, flat = a0, x0, 0, True
+                            while m.fA(a, 1) != a:
+                                z = x - m.use(a)
+                                if not (rho <= z <= C - rho):
+                                    flat = False
+                                    break
+                                D += m.use(a) - rho
+                                a, x = m.fA(a, 1), m.lstep(m.use(a), x)
+                            if flat:
+                                tally[("FLAT asked", sign, "moves" if D != 0 else "D=0")] += 1
+                                if goes != (x0 >= Pmin + D):
+                                    note(("FLAT fails", sign), m, st, "D=%d Pbar=%d" % (D, Pmin))
+                    if T is not None and M <= C:
+                        aT, xT = own[T]
+                        a1, x1 = m.fA(aT, 1), m.lstep(m.use(aT), xT)
+                        rhs = m.held(a1, x1, 0)[0]
+                        again = refavours(m, st, T)
+                        tally[("D", sign, "favours again" if again else "never favours again",
+                               "right side " + ("true" if rhs else "false"),
+                               ("goes-" + info) if goes else "ends")] += 1
+                    if M > Pmin and M <= C and goes and not own_above:
+                        tally[("DICH never ends though below M at some step", sign, info)] += 1
+                    if M > Pmin and M <= C:
+                        tally[("DICH starts with M > Pmin", sign)] += 1
+                    if M == C + 1 and x0 > C:
+                        if T is None:
+                            tally[("TOP no first read", sign)] += 1
+                        else:
+                            aT, xT = own[T]
+                            a1, x1 = m.fA(aT, 1), m.lstep(m.use(aT), xT)
+                            rhs = m.held(a1, x1, 0)[0]
+                            tally[("TOP", sign, "turns in time" if goes else "ends")] += 1
+                            if rhs != goes:
+                                note(("TOP: D fails", sign), m, st)
+                # UP
+                if sign == "-" and M <= C:
+                    for (a0, g0, x0), (f, _) in G.items():
+                        if f == GOES:
+                            for a1 in range(a0, n + 1):
+                                for g1 in range(g0, 2):
+                                    for x1 in range(x0, C + 1):
+                                        if G[(a1, g1, x1)][0] != GOES:
+                                            note(("UP fails", sign), m, (a0, g0, x0), "above: %s" % ((a1, g1, x1),))
+                    tally[("UP models", sign)] += 1
+            # MM
+            if sign == "-":
+                for M in range(need + 1, C + 1):
+                    for k, gz in goes_by_M[M].items():
+                        tally[("MM asked",)] += 1
+                        if gz and not goes_by_M[M - 1][k]:
+                            tally[("MM fails",)] += 1
+
+
+us = (0, 1, 2, 3)
+stocks = ((12, 6), (16, 4), (20, 5))
+sweep("revise", (1, 2, 3, 4), us, (1, 2, 4), stocks, (1, 3), (0, 2))
+sweep("repl", (3, 4, 6), us, (0,), stocks, (1, 3), (0, 2))
+
+out = {"seconds": round(time.time() - t0, 1),
+       "tally": {" | ".join(map(str, k)): v for k, v in sorted(tally.items(), key=lambda kv: str(kv[0]))},
+       "examples": {" | ".join(map(str, k)): v for k, v in examples.items()}}
+json.dump(out, open(sys.argv[1] if len(sys.argv) > 1 else "lock-results-2.json", "w"), indent=1)
+for k, v in out["tally"].items():
+    print("%9d  %s" % (v, k))
+for k, v in out["examples"].items():
+    print(k)
+    for e in v:
+        print("    ", e)
+print("seconds", out["seconds"])

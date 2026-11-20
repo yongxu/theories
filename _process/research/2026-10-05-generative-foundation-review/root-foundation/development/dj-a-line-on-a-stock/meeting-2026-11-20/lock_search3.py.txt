@@ -1,0 +1,80 @@
+#!/usr/bin/env python3
+"""lock_search3.py -- three small things.  AI-written (Claude Fable, worker "lock"), 20 November 2026.
+A search shows where a statement fails, not that it holds.  Model: lock_model.py.
+  REST  sign -: from a configuration whose step lowers neither share, rule nor level (need met), the
+        line never ends; from one whose step raises none of them, no later step raises any.
+  NUP   sign +: in how many models are the locked starts that never end, at some share, not closed
+        upward in the level (a start that never ends below a start that ends).
+  TR    traces of three courses told in the report.
+"""
+import itertools
+from collections import Counter
+from lock_model import Model, GOES
+
+tally = Counter()
+ex = []
+us = (0, 1, 2, 3)
+stocks = ((12, 6), (16, 4), (20, 5))
+for share, ns, rs in (("revise", (1, 2, 3, 4), (1, 2, 4)), ("repl", (3, 4, 6), (0,))):
+    for n, uF, uO, (C, rho), need, r in itertools.product(ns, us, us, stocks, (1, 3), rs):
+        if r > n:
+            continue
+        for M in range(need, C + 1):
+            m = Model(n, uF, uO, r, C, rho, need, M, 0, share)
+            if uF < uO:
+                for a, g, x in itertools.product(range(n + 1), (0, 1), range(need, C + 1)):
+                    s = (a, g, x)
+                    t = m.step(s)
+                    if all(t[i] >= s[i] for i in range(3)):
+                        tally["REST asked (lowers none)"] += 1
+                        if m.fate(s)[0] != GOES:
+                            tally["REST fails (lowers none, ends)"] += 1
+                        u = m.step(t)
+                        if not all(u[i] >= t[i] for i in range(3)):
+                            tally["REST fails (a later step lowers)"] += 1
+                    if all(t[i] <= s[i] for i in range(3)):
+                        tally["REST asked (raises none)"] += 1
+                        u = m.step(t)
+                        if not all(u[i] <= t[i] for i in range(3)):
+                            tally["REST fails (a later step raises)"] += 1
+            if uF > uO:
+                tally["NUP models, sign +"] += 1
+                bad = False
+                for a in range(n + 1):
+                    gs = [m.fate((a, 1, x))[0] == GOES for x in range(need, C + 1)]
+                    if any(gs[i] and not gs[j] for i in range(len(gs)) for j in range(i + 1, len(gs))):
+                        bad = True
+                        tally["NUP (share, model) pairs not closed upward"] += 1
+                        if len(ex) < 3:
+                            ex.append((dict(n=n, uF=uF, uO=uO, r=r, C=C, rho=rho, need=need, M=M, share=share), a,
+                                       "".join("G" if z else "." for z in gs)))
+                if bad:
+                    tally["NUP models with some share not closed upward"] += 1
+for k, v in sorted(tally.items()):
+    print("%9d  %s" % (v, k))
+for e in ex:
+    print(e)
+
+def trace(title, st, steps, **kw):
+    m = Model(**kw)
+    print(title, kw)
+    row = []
+    for _ in range(steps):
+        row.append("(share %d, %s, level %d; use %d)" % (st[0], "favours" if st[1] else "not", st[2], m.use(st[0])))
+        if st[2] < m.need:
+            break
+        st = m.step(st)
+    print("   " + " -> ".join(row))
+    print("   fate:", m.fate(st))
+
+base = dict(n=4, uF=2, uO=0, r=1, C=20, rho=5, need=1, M=12, theta=0, share="revise")
+trace("sign +, start level 11:", (2, 1, 11), 14, **base)
+trace("sign +, start level 12:", (2, 1, 12), 10, **base)
+trace("sign +, start level 20:", (2, 1, 20), 10, **base)
+trace("sign +, returns to M and ends:", (0, 1, 3), 6, n=1, uF=3, uO=1, r=1, C=12, rho=6, need=1, M=4, theta=0, share="revise")
+b2 = dict(n=4, uF=0, uO=2, r=1, C=20, rho=5, need=1, M=14, theta=0, share="revise")
+trace("sign -, M above the point of no return, start (4, 3):", (4, 1, 3), 12, **b2)
+trace("sign -, same, start (4, 2):", (4, 1, 2), 10, **b2)
+trace("sign -, same, start (2, 13): favour-held would go on (edge 6); ownM edge 14", (2, 1, 9), 10, **b2)
+trace("sign -, mixed cycle:", (4, 1, 10), 14, n=4, uF=1, uO=2, r=1, C=20, rho=5, need=1, M=12, theta=0, share="revise")
+trace("sign -, favour lost and goes on:", (1, 1, 6), 8, n=2, uF=0, uO=1, r=1, C=12, rho=6, need=1, M=9, theta=0, share="revise")

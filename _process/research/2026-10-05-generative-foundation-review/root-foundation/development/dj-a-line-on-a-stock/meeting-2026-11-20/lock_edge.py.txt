@@ -1,0 +1,47 @@
+#!/usr/bin/env python3
+"""lock_edge.py -- print, for a few models, the edge of the starts that never end beside the edges of
+the two held courses.  AI-written (Claude Fable, worker "lock"), 20 November 2026.  A look, not a proof.
+Columns, for each start share a0 (locked start, rule favouring): the least start level x0 from which
+  act   the course of the model never ends               (None where the set is not closed upward)
+  fav   the course with the favouring rule held never ends   (the lock's own course)
+  dis   the course with the other rule held never ends
+  ownM  the lock's own course never comes below M
+"""
+import sys
+from lock_model import Model, GOES
+
+def least(pred, lo, hi):
+    vals = [x for x in range(lo, hi + 1) if pred(x)]
+    if not vals:
+        return hi + 1, True
+    up = all(pred(x) for x in range(vals[0], hi + 1))
+    return vals[0], up
+
+def table(**kw):
+    m = Model(**kw)
+    P = {a: (m.standing(m.use(a)), m.root(m.use(a))) for a in range(m.n + 1)}
+    print("model", kw)
+    print("  use(a)", [m.use(a) for a in range(m.n + 1)], " standing point, H+y:", P)
+    for a0 in range(m.theta, m.n + 1):
+        act, up = least(lambda x: m.fate((a0, 1, x))[0] == GOES, m.need, m.C)
+        fav, _ = least(lambda x: m.held(a0, x, 1)[0], m.need, m.C)
+        dis, _ = least(lambda x: m.held(a0, x, 0)[0], m.need, m.C)
+        ownM, _ = least(lambda x: (lambda o: o[-1][1] >= m.need and all(y >= m.M for _, y in o))(m.own(a0, x)), m.need, m.C)
+        kinds = "".join({"fav": "F", "dis": "d", "mix": "~"}[m.fate((a0, 1, x))[1]] if m.fate((a0, 1, x))[0] == GOES
+                        else "." for x in range(m.need, m.C + 1))
+        print("  a0=%d  act=%s%s fav=%d dis=%d ownM=%d   %s" % (a0, act, "" if up else "(not upward)", fav, dis, ownM, kinds))
+
+if __name__ == "__main__":
+    base = dict(n=4, r=1, C=20, rho=5, need=1, theta=0, share="revise")
+    print("== sign -: the favoured draw less (uF=0, uO=2) ==")
+    for M in (3, 5, 6, 8, 10, 12, 14):
+        table(uF=0, uO=2, M=M, **base)
+    print("== sign -: uF=1, uO=2 ==")
+    for M in (5, 9, 10, 12, 14):
+        table(uF=1, uO=2, M=M, **base)
+    print("== sign +: the favoured draw more (uF=2, uO=0) ==")
+    for M in (1, 3, 6, 9, 12, 14, 16):
+        table(uF=2, uO=0, M=M, **base)
+    print("== sign +: uF=2, uO=1 ==")
+    for M in (3, 6, 9, 10, 12, 14, 16):
+        table(uF=2, uO=1, M=M, **base)

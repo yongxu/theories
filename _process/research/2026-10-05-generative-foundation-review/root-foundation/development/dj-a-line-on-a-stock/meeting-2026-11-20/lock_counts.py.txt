@@ -1,0 +1,113 @@
+#!/usr/bin/env python3
+"""lock_counts.py -- the same family with counts that multiply (RuleCapture.CarrierCounts.select),
+no fixed number of places.  AI-written (Claude Fable, worker "lock"), 20 November 2026.
+A search shows where a statement fails, not that it holds.
+
+Configuration ((f, o, g), x): f favoured and o others (o >= 1), the rule in force g, the level x.
+One step, the Lean's order: f' = f*(a0+back+p) with back = s under a favouring rule and 0 otherwise,
+o' = o*(a0+c+p); the rule read favours exactly where x >= M; x' = RegimeMargin.step giving use x with
+use = f*uF + o*uO.  Every unit leaves at least a0 >= 1, so no count ever falls and the use never falls.
+
+Asked:
+  1  with the others drawing something (uO > 0), or a0 + p >= 2: does any start go on for ever?
+  2  with uO = 0, a0 = 1, p = 0 (the favoured stand still where nothing comes back, the others draw
+     nothing): which starts go on, and is the single-step condition exact:
+       never ends <=> the own course never comes below M, or at its first step T below M the level under
+       the standing use f(T+1)*uF from x(T+1) meets the need for ever.
+"""
+import itertools, json, sys
+from collections import Counter
+
+def giving(z, rho, C):
+    return max(0, min(z, rho, C - z))
+
+def lstep(H, x, rho, C):
+    z = x - H if x > H else 0
+    return z + giving(z, rho, C)
+
+def run(f, o, g, x, a0, s, p, c, uF, uO, rho, C, need, M):
+    """Returns ('ends', steps) or ('goes', kind)."""
+    seen, t = {}, 0
+    while True:
+        if x < need:
+            return ("ends", t)
+        key = (f, o if uO else 0, g, x)
+        if key in seen:
+            return ("goes", None)
+        seen[key] = t
+        use = f * uF + o * uO
+        f2 = f * (a0 + (s if g else 0) + p)
+        o2 = o * (a0 + c + p)
+        g2 = 1 if x >= M else 0
+        f, o, g, x, t = f2, o2, g2, lstep(use, x, rho, C), t + 1
+        if t > 500:
+            return ("long", t)
+
+def standing_goes(H, x, rho, C, need):
+    seen = set()
+    while x not in seen:
+        if x < need:
+            return False
+        seen.add(x)
+        x = lstep(H, x, rho, C)
+    return True
+
+tally = Counter()
+ex = {}
+stocks = ((12, 6), (16, 4), (20, 5))
+# 1
+for (C, rho), need, a0, s, p, c, uF, uO, f0, o0 in itertools.product(
+        stocks, (1, 3), (1, 2), (1, 2), (0, 1), (1,), (0, 1, 2), (0, 1, 2), (0, 1, 2), (1, 2)):
+    if c >= s + 1 and False:
+        continue
+    if not (uO > 0 or a0 + p >= 2):
+        continue
+    if uF == 0 and uO == 0:
+        continue
+    for M in range(need, C + 2):
+        for x0 in range(need, C + 1):
+            res = run(f0, o0, 1, x0, a0, s, p, c, uF, uO, rho, C, need, M)
+            sign = "+" if uF > uO else "-" if uF < uO else "0"
+            key = ("1", "others draw" if uO > 0 else "others draw nothing, a0+p>=2",
+                   "f0=0" if f0 == 0 else "f0>0", sign, res[0])
+            tally[key] += 1
+            if res[0] != "ends" and len(ex.setdefault(key, [])) < 3:
+                ex[key].append(dict(C=C, rho=rho, need=need, a0=a0, s=s, p=p, c=c, uF=uF, uO=uO, f0=f0, o0=o0, M=M, x0=x0))
+# 2
+for (C, rho), need, s, uF, f0 in itertools.product(stocks, (1, 3), (1, 2), (1, 2, 3), (1, 2, 3)):
+    a0, p, c, uO, o0 = 1, 0, 1, 0, 1
+    for M in range(need, C + 2):
+        for x0 in range(need, C + 1):
+            res = run(f0, o0, 1, x0, a0, s, p, c, uF, uO, rho, C, need, M)
+            goes = res[0] == "goes"
+            # own course: favouring held
+            f, x, T, seen = f0, x0, None, set()
+            t = 0
+            while x >= need and (f, x) not in seen and f * uF <= 4 * C:
+                seen.add((f, x))
+                if x < M:
+                    T = t
+                    break
+                f, x, t = f * (1 + s), lstep(f * uF, x, rho, C), t + 1
+            if T is None:
+                own_above = x >= need and f * uF <= 4 * C
+                rhs = own_above
+                kind = "no first read"
+            else:
+                f1, x1 = f * (1 + s), lstep(f * uF, x, rho, C)
+                rhs = standing_goes(f1 * uF, x1, rho, C, need)
+                kind = "first read"
+            key = ("2", kind, "right side " + ("true" if rhs else "false"), res[0])
+            tally[key] += 1
+            if rhs != goes and len(ex.setdefault(key, [])) < 3:
+                ex[key].append(dict(C=C, rho=rho, need=need, s=s, uF=uF, f0=f0, M=M, x0=x0))
+
+out = {"tally": {" | ".join(map(str, k)): v for k, v in sorted(tally.items())},
+       "examples": {" | ".join(map(str, k)): v for k, v in ex.items()}}
+json.dump(out, open("lock-results-counts.json", "w"), indent=1)
+for k, v in out["tally"].items():
+    print("%8d  %s" % (v, k))
+for k, v in out["examples"].items():
+    print(k)
+    for e in v:
+        print("    ", e)

@@ -1,0 +1,164 @@
+# Units on the line on a stock: guess G4 and the second sign, with no extension
+
+*AI-written (Claude Fable, worker "units" of the workflow of 20 November 2026). No Lean was written and nothing was built. Every claim below is marked **argued** (on paper, step by step, by this one writer; no one has read the argument), **searched** (a Python program over small numbers; a search shows where a statement fails, not that it holds) or **guess**. Unit, way, level, need, use, kids, core, bud, grower, stayer, stop, bust are working names. Nothing here is told as "the second way": where a way goes on for ever below, it does so in the first of the three senses the record of 17 November told apart (staying within what is given again), and no more.*
+
+## What was read
+
+- `FROZEN-THE-MEETING.md`, whole, at the start. At 19:51 I found it had grown an "After" section (19:36) that says the workers do not see it; I read it then, after all my programs had run. Nothing below was changed for it except the qualifier in the head note and one sentence under test 2.
+- `LineOnAStock.lean`: the opening account, sections 1 to 12 with their proofs, and the kept cases `KidsNeedMore`, `KidHigherNeed`, `EqualInPlaceOfMore`, `TwoForOne`, `HigherStartEnds`. Not read: `ShareRises` to `NothingTakenEnds` beyond their names, `LineOnAStockCases`.
+- `WayOfUnits.lean`: the list of declarations, and the statements and docstrings of `unending_iff_holds` (line 400) and `two_units_iff` (line 580).
+- `RegimeMargin.lean`: `step`, `FromNothing`, `Short`, `Root`, `Meets`, `Keeps` (lines 249 to 265), `ends_below`, `holds`, `ends_iff_below` (lines 705 to 758).
+- `TurningInTime.lean`: statements and docstrings of `held_above` (830), `rising_takes_all` (669), `asItWas_falls` (2162, private), `turns_in_time_iff_before` (2289). Not its proofs.
+- `ScratchMixedWay.lean.txt`, whole (scratch of 17 November, not landed).
+- `join19/NOTE.md`, whole, and the head of `join19/lock_on_units.py` (the model and its step).
+- The opening accounts only of `CoupledDrawers.lean` and `Exclusion.lean`.
+- Not read: `RuleShaping`, `RuleCapture`, `PairFlow`, `RuleRebuilding`, `PopulationCorrection`, `regions20/`, the direction page beyond what `AGENTS.md` and the frozen file say of it, the note of 17 November. Every "not in the Lean" below means: not found in what is listed here.
+
+## The model
+
+`LineOnAStock.lean` as it stands. Units with `need`, `use`, and `kids : U → List U` fixed. After a step at level `x` each unit leaves its kids where `x` meets its need and nothing where it does not (`after`, line 138); every unit present takes; the level becomes `(x − H) + g(x − H)` with `H` what the way takes (`left`, line 146; `RegimeMargin.step`, line 249). The net goes on while some unit present has its need met (`Goes`, line 150). The programs keep a way as counts by kind; what is taken, who is in the next way and `Goes` depend on the counts only.
+
+The point of no return of a standing use `H` is `H + y`, `y` the least `z` with `H ≤ g(z)` (`RegimeMargin.ends_iff_below`). "The regime at `H` up to `hi`" is `Short g H y`, `Meets g H y hi`, `Keeps g H hi`.
+
+Givings searched: `g(z) = min(z, r, (c − z) // s)` for `0 < z < c`, nothing elsewhere, with `c` from 8 to 40, falling slope `1/s` for `s` from 1 to 4, a flat top `r` or none. Each gives nothing from nothing and keeps every level up to `c` within `c`. With `s = 1` the regime holds up to `hi = c` at every `H` that has a root; with `s > 1` `Meets` holds only up to `c − (s − 1)·H`, and levels above that fall towards it.
+
+## Three writings of "growing needs more of the level than going on"
+
+All three are in the model as it stands. They differ in what the fall takes away when it stops the growing, and that is what decides everything below.
+
+- **W1, the frozen file's writing (kids with a higher need; what growth added is kept).** A core `A` (need `n`, use `a ≥ 1`) leaves itself and `jb ≥ 1` buds `B` (need `m > n`, use `b`). A bud leaves `ia ≥ 1` cores and `ib` buds. With `p` cores and `q` buds: below `n` nothing is left; from `n` to below `m`, `p' = p`, `q' = p·jb`; at or above `m`, `p' = p + q·ia`, `q' = p·jb + q·ib`.
+- **W2 (the kind that multiplies needs more and leaves a kind that only stays; kids need no more than their parent).** A grower (need `m`, use `b`) leaves growers and stayers; a stayer (need `n ≤ m`, use `a`) leaves itself. Below `m` the growers are lost for good.
+- **W3 (kids with a higher need; what growth added is lost).** A core leaves itself and `jb` buds; a bud leaves only buds. The cores never change in number. Below `m` every bud is lost and each core buds again. `LineOnAStock.KidsNeedMore` (line 1471: `A → B A B`, `B → B B`) is of this shape.
+
+## U0. A fall inside the regime, with a use that does not fall afterwards, ends the line
+
+**Statement.** `FromNothing g`; `Short g D y` and `Meets g D y hi`; at some step `t` the way takes `D`, the level `x_t ≤ hi`, and the level falls, `x_{t+1} < x_t`; at every later step at which some need is still met the way takes at least `D`; every unit of the course needs something. Then the net ends.
+
+**Argued.** (1) If `x_t ≥ D + y` then `z = x_t − D ≥ y` and `z + D = x_t ≤ hi`, so `Meets` gives `g(z) ≥ D` and the step leaves `z + g(z) ≥ x_t`: no fall. So `x_t < D + y`. This is `RegimeMargin.holds` (line 730) at one step, contraposed; only `Meets` is used. (2) Below `D + y`, a step under a draw of at least `D` leaves nothing or less than the level (`LineOnAStock.step_lowers`, line 720, which is `TurningInTime.held_above` contraposed). So the levels fall strictly until nothing, which meets no need.
+
+**Standing.** Each half is an old law; U0 is the two in a row. Not found as one statement in what was read; the nearest is `LineOnAStock.fall` (line 773), which asks a take above every giving in place of one fall. Its use is what follows.
+
+## U1. In W1 the fall stops growth, and inside the regime always too late
+
+**(a) The use never falls while `n` is met.** From a start with a core and `q₀ ≤ jb·p₀`. *Argued:* each core met leaves a core, so `p` does not fall; `q_{j+1} ≥ p_j·jb ≥ p_{j−1}·jb`, and at a step below `m` `q_{j+1} = p_j·jb ≥ q_j`. *Searched:* 0 of 1,198,368 courses.
+
+**(b) Too late, always.** W1; `FromNothing`; `Keeps g 0 hi`; start at most `hi` with a core and `q₀ ≤ jb·p₀`; the regime (`Short`, `Meets` up to `hi`) at what the way takes at each step where the level falls. Then: if the level falls at any step, the net ends; and from every start at or above `m` the net ends. *Argued:* the first sentence is U0 with (a). For the second: while the level is at or above `m`, every step from the first on adds a core, and a way that goes on takes less than the level (`taken_below`, line 1281), which is at most `hi`; so some step has a level below `m`, the first such step is a fall, and the first sentence applies. *Searched:* all 196,128 starts at or above `m` on givings of slope 1 end; of the 1,542 courses on which growth was stopped by the fall and the line never ends, every one had its last growing step at a level above `hi` for what the way took there (or a use with no root); none was inside the regime.
+
+So in the frozen file's own writing, G4's "never ends" side is empty inside the regime the Lean's exact laws assume: the bud's need goes unmet, the bud is lost, but each core buds again at once, so nothing that takes is lost and the fall has already passed the point of no return. A stop in time was found only from levels above the giving's upper rest, where the level is falling towards a rest and not running down.
+
+**(c) The first stop does not decide; a later one can.** Let `T` be the first step with level below `m`, and `H` what the way after that step takes (`p_T·(a + jb·b)`).
+- *Necessary at every stop, argued:* if `n ≤ x_T < m` and `x_{T+1} < H + y`, the net ends (the use stays at least `H` by (a); `step_lowers`). *Searched:* 0 failures at 1,542,452 stops.
+- *Not sufficient, searched:* on 104,662 courses the condition holds at the first stop and the line ends. In every one the level under `H` rises to `m`, growth comes, and the line ends later. In none of them had any growing step come before that first stop.
+- So G4's sentence, as worded for W1, **fails test 5**.
+
+**(d) What is exact instead (E).** Say a configuration `(w, x)` *stands* where some unit of `w` has its need met at `x`, the step leaves the way as it is (`after need kids w x = w`), and along the level's course under what `w` takes every level meets the same needs of `w` as `x` does.
+- **E-if, for any units, giving and start (argued):** a course that comes to a configuration that stands, some need met at every step before, never ends. By induction the course from there is `(w, level under taken w)`: `after_alike` (line 328) with the third clause, then the second clause; the unit met at `x` stays met.
+- **E-only-if, for W1 (argued):** `FromNothing`, `Keeps g 0 hi`, start at most `hi` with a core, `n > 0`. If the net never ends, every level meets `n`; the cores never fall in number and are fewer than `hi`; each step at or above `m` from the first on adds one; so from some step on every level is below `m`, the way is `(A B^jb)^p` at every step after, and that configuration stands.
+- **In the regime's terms (argued where the configuration is within `hi`):** with `Short` and `Meets` at `H`, `(w, x)` stands exactly where some need is met, the way is left as it is, `H + y ≤ x`, and the level it rises to under `H` is below `m`. Under `Meets` and `Keeps` the level from `x ≥ H + y` never falls and is at most `hi`, so it comes to rest within `hi − x` steps, and the last clause is a finite check.
+- *Searched:* "never ends exactly where the course comes to a configuration that stands" agreed with the fate on all 1,198,368 courses of W1, in both forms. On 12,366 never-ending courses an earlier candidate lay above `hi` and a later one within it.
+- The upper clause is what the Lean's `Holds` does not have and, with kids needing no more than their parent, does not need: here going on asks that the level not rise to a need not yet met. A higher start ends where a lower one never does in 22,618 of the (world, start way) pairs searched.
+
+**Worked, by hand.** `n = 1`, `m = 3`, `a = 1`, `b = 0`, `A → A B`, `B → A`, `g(z) = min(z, 8 − z)`. From one core and one bud at 2: the bud is unmet, the way stays, one is taken and one given: it stands (`H = 1`, `y = 1`, level 2, rest 2, below 3). From 3: ways `(1,1), (2,1), (3,2), (5,3), (5,5)` at levels `3, 4, 4, 2, 0`. Growth stops at the fourth configuration because the level fell to 2; the five cores then take all of it.
+
+## U2. In W2 the first stop decides, in G4's form
+
+**Statement.** Units as in `LineOnAStock`. A predicate `S` (the growers) every unit of which needs `m`; every unit of every generation of `w` that is not of `S` leaves itself only and needs `n`; `0 < n ≤ m`; `FromNothing g`; the start `x ≤ hi`; `Keeps g H₀ hi`, `H₀` what the stayers of `w` take. Write `X_j` for the level of the course as it was (all kids at every step from `w`, the level under what the whole way takes), `R_T` for the stayers of the `T`-th generation and `H_T` for what they take. At each `T`: `Short g H_T y_T`, `Meets g H_T y_T hi`, `n ≤ H_T + y_T`. And the course as it was comes below `m` at some step. Then the net from `(w, x)` never ends **exactly where** there is a step `T` with `m ≤ X_j` for every `j < T`, `n ≤ X_T < m`, `R_T` not empty, and `H_T + y_T ≤ X_{T+1}`.
+
+In words: growth stops at the first step the level is below `m`; the line never ends exactly where, one step later, the level is at or above the point of no return of what the stayers left by then take.
+
+**Argued.** Before `T` every need is met (`n ≤ m ≤ X_j`), so the course is the course as it was (`course_asItWas`, line 951). At `T` the growers leave nothing and each stayer leaves itself, so the way at `T + 1` is `R_T` and the level is `X_{T+1}`; no grower comes back (`gone_from`, line 674). From there the way is fixed and the level runs under the one draw `H_T`: `RegimeMargin.ends_iff_below` (line 741) with `holds` (line 730), the levels within `hi` because every way of the course takes at least `H₀` (the scratch's `kept_within_more`, line 65). If `X_T < n` or `R_T` is empty, no need is met at `T` or at `T + 1`.
+
+**Searched.** 1,548,288 courses; 39,025 undecided (growers that take nothing and multiply) left out. On the 1,228,283 that meet the premises the two sides agree, 19,096 never ending. Where `Meets` or `within` fails the right side holds on 1,890 courses that end: both are needed. Where the course as it was never comes below `m` (163,894) the line never ends and there is no `T`: that premise is needed too; it follows from `rising_takes_all` where what the way takes rises at every step.
+
+**It can come too late: yes.** On 160,504 courses growth was stopped by the fall with stayers left and the line still ended. On 10,678 of them the level one step later would have been at or above the point of no return had the growers present at the stop, born at the last growing step or before, not taken there. On 219 it was at or above the point of no return of the stayers there were before the last growing step.
+
+**In time.** 1,336 courses never end after at least one growing step; 84 of them have growers that leave stayers.
+
+**Worked, by hand.** `n = 1`, `m = 8`, stayer use 1, grower use 3, grower → grower and stayer, `g(z) = min(z, 3, 8 − z)`. From one grower and no stayer at 8: ways `(0,1), (1,1), (2,1), (2,0)` (stayers, growers) at levels `8, 8, 7, 4`, then `(2,0)` at 4 for ever. `T = 2`, `H_T = 2`, `y_T = 2`, `X_3 = 4`. What goes on was all left by the grower. From two growers at 8: `(0,2)` at 8, `(2,2)` at 4, `(2,0)` at 0. `T = 1`, the two stayers would need 4 at the next step; the two growers born at the last growing step take 6 of the 4 there is.
+
+## W3: no single condition; ways that grow, lose the growth and grow again for ever
+
+*Searched.* On a range with larger stocks (200,448 courses) 9,312 courses never end and never come to a configuration that stands: a configuration comes again after 5 to 21 steps. The first-stop condition holds on 17,526 courses that end. On the smaller range first searched (184,320 courses) no such round was found. There 52 starts at or above `m` on givings of slope 1 never end, where in W1 none does: here the use falls at the stop.
+
+*Worked, by hand.* `A` (need 1, use 1) `→ A B`; `B` (need 16, use 1) `→ B`; `g(z) = min(z, 4, 16 − z)`. From one core at 10 the levels run `10, 13, 15, 16, 16, 16, 16, 15, 13, …` with `0, 1, 1, 1, 2, 3, 4, 5, 1` buds: at 16 the buds add up, six units draw the level to 15, every bud is lost, the level lands on 13, which is above the point of no return of what one core and its bud take (4), and the round of seven steps begins again.
+
+*What there is instead (argued in outline, searched).* The cores never change, so below `m` the way always takes one amount `H₀`. With the regime at `H₀` and `n ≤ H₀ + y₀`: the line never ends exactly where, if the start is below `m`, it meets `n` and the next level is at or above `H₀ + y₀`, and at every bust (a step below `m` after a step at or above it) the level meets `n` and the next level is at or above `H₀ + y₀`. Agreed on all 417,536 decided courses of a third range (100,864 undecided left out: buds that take nothing and multiply). In that range the first bust decided every course that had one (184,968); I have no argument that it must, so that is a **guess** not to be relied on. Whether a way cut back by the fall at every round, for ever, is anything the direction means is not mine to say.
+
+## Beyond these families
+
+*Searched:* in 6,000 random worlds of three kinds (197,952 courses), 1,836 never-ending courses never stand; the way itself goes round (a kind that leaves another that leaves the first). 149 of them have kids needing no more than their parent. So "comes to a configuration that stands" is exact only where the way settles, which W1 and W2 give by argument and W3 does not.
+
+## The second sign: two kinds on one stock, one taking less (L), one taking more (M)
+
+1,181,952 courses, giving of slope 1, nothing added by anyone. **The sign of the difference in use does no work in any statement found.** What decides is which kind multiplies and which needs more. The fall always takes first the kind that needs more.
+
+| who multiplies | M needs more | M needs less | same need |
+|---|---|---|---|
+| nobody (each leaves itself) | M is lost first; 16,466 of 82,080 never end, 4,182 with only L left. `unending_iff_holds` | L, those who take less, is lost first; 14,920 never end, 2,636 with only M left. `unending_iff_holds` | nobody is lost before everybody; 5,008 of 32,832 never end, both kinds there. `unending_iff_holds` |
+| M (doubles, or leaves L) | U2: M lost at the first step below its need, L goes on or not. 2,116 and 2,180 never end. Where M leaves only M this is `mixed_turns_iff` | doubles: all 82,080 end. Leaves L: this is W1 with L as the bud; 524 stand, both kinds there | all 32,832 end, in each shape |
+| L (doubles, or leaves M) | doubles: all 82,080 end. Leaves M: W1 with M as the bud; 272 stand | U2 with the roles exchanged: those who take less are lost, those who take more go on or not. 1,436 and 1,388 never end | all end |
+| both double | all end | all end | all end |
+
+- For each order there is an exact edge wherever anything goes on for ever at all: `WayOfUnits.unending_iff_holds` word for word where nobody multiplies (its right side agreed on all 196,992 such courses), U2 where the kind that multiplies needs more (agreed where its premises hold; where `within` fails the right side holds on 468, 480, 128 and 116 courses that end), E where a kind buds the other.
+- Where the kind that multiplies itself needs less or the same, nothing goes on for ever, whichever takes less. *Argued:* a closed line that grows is gone from some step (`line_ends`, line 904), and at the step its need is unmet the other kind's is unmet too. Taking less does not keep when the taker multiplies.
+- I had written beforehand that "the kind that multiplies needs less" always ends. That was wrong for the shape in which it leaves the other kind and not itself: 272 and 524 courses stand. Kept.
+- **G2's first region is empty here** (*argued*): a way that goes on with its growing need met at every step grows at every step, and `rising_takes_all` ends it. A way in this model goes on for ever only with its growing stopped or lost.
+- `Exclusion.lean`'s opening account tells, on another model, that joint taking within what is given keeps the level (`Flow.level_kept`) and that two takers each taking two end where each taking one go on (`Excluding.three_courses`). I did not set the table against those statements.
+
+## How each stands to the named statements
+
+- **`mixed_turns_iff`** (scratch, line 439). **It is a case of U2**, by an instantiation that can be written: its `closed` (the line's kids are of the line) makes `R_T = R` and `H_T = H₂` at every `T`; its `short`, `meets`, `within` are U2's at `H₂`; its `keeps` is U2's at `H₀ = H₂`; that the course as it was comes below `m` follows from its `short₁`, `below`, `keepsUse`. The conclusion is then its sentence. Its level is the level of all kids on `c` under `H₂` and what `c` takes, U2's is that of all kids on `c ++ R`: equal by the scratch's `allKids_self` and `taken_append`, a bridge of two lemmas and not by unfolding. U2 is not a case of it: `closed` fails wherever a grower leaves a stayer.
+- **`WayOfUnits.two_units_iff`** (line 580). **A case of U2 with its statement unchanged**: `U := Nat × Nat`, `kids u := [u]`, `S u := (u = (m, h))`, `w := [(m, h), (n, H₂)]`; then `R_T = [(n, H₂)]`, `H_T = H₂`, `X_j` is the level under `h + H₂`. Where the two pairs are equal both right sides are false, and that case wants a line of its own. Its docstring's "the level one step later" is U2's step.
+- **`LineOnAStock.unending_iff_holds`** (line 1239). Neither is a case of the other: it asks kids that take what their parent takes, which fails at a grower, and kids that need no more, which fails in W1 and W3. On a W1 or W3 configuration that stands its `Holds` is false (the buds' need is unmet) and the net never ends. After U2's step `T` the stayers' course is its case `kids u = [u]`. Where nobody multiplies it is the whole of the second sign.
+- **`need_unmet`** (line 1011). Not a case of mine and mine not of it: it concludes an unmet need, not a fate. Where its premises hold in W1 from a start at or above `m`, the step it gives is G4's step, the first below `m`, within `hi + 1`, and the way until then does not depend on the stock. Its docstring's `KidHigherNeed` is the case of a bud unmet at a level that has not fallen.
+- **`way_ends`** (line 928). Neither. W1 and W3 can meet every premise but `down`; `KidsNeedMore.all_but_down` is the Lean's kept case, and its fixed configuration `([B, A, B], 8)` is one that stands in E's sense (`H = 4`, `y = 4`, rest 8, below 9). On a way of growers only that take more, `way_ends` and U2 both say the line ends; `way_ends` derives the fall, U2 is handed it.
+- **`HigherStartEnds`** (line 1780). Kept courses, not a law. `from_six` is an instance of E-if at step 2 (`[C, B, C, B]` at 8: `H = 4`, `y = 4`, rest 8, below `C`'s need 12). `from_seven` is the upper clause failing: the same way is reached at level 12, which meets `C`'s need; growth comes again and no need is met at step 5. Its three kinds are outside the family for which E's other half is argued.
+- **`LineOnAStock.unending_of_fixed`** (line 1352). **A case of E-if with its statement unchanged**: a configuration the step leaves as it is has its way left as it is and its level's course constant, so the third clause holds of itself.
+- **The record of 19 November.** U2's right side says the course comes at `T + 1` to a holding configuration with no grower. So U2 is that note's statement about the line alone (one reader, on paper, not in Lean), at one growers' need and stayers that leave themselves, with the step named. What is added to it: the step and the level in `two_units_iff`'s form, `two_units_iff` as a case word for word, and the counts of too late.
+
+## With a rule set again from a count on top
+
+The model of `join19/lock_on_units.py`: two rules, the favouring one giving the kids above, the other having every unit leave itself; the rule set again by a threshold on a count of the way before the step; locked starts only.
+
+- **W1** (count of cores, or of buds): *argued:* from a locked start the counted number never falls while `n` is met, so the rule in force is the favouring one at every step and the course is the course with no rule. *Searched:* on 161,280 locked starts the rule never changes while a need is met and the fate is the same. The line that stands does so still locked, growth stopped by the need. This is the fourth outcome the note of 19 November names.
+- **W2** (count of growers): the rule changes on 6,812 of 138,240 courses, after the growers are gone, and the fate differs on none: the stayers leave the same under both rules.
+- **Nothing in U0, U1, E or U2 needs the rule.**
+- **Where the rule does work** (*searched only*): let the stayers double under the favouring rule and stay under the other. With the rule held favouring every course that comes below `m` ends. With the rule set again, 640 of 138,240 never end, and on all 132,864 courses that come below `m` the fate is U2's right side moved by two steps: the growers unmet at `T` are still counted there, so the stayers double at `T` and `T + 1` and stay from `T + 2`; the line never ends exactly where `n` is met at `T` and `T + 1` and the level at `T + 2` is at or above the point of no return of four times what the stayers at `T` take. That is the course of 19 November as a family: the lock's law, then U2.
+
+## The frozen tests
+
+| | U0 | U1 (W1: (b) and E) | U2 (W2) | W3's condition | the second sign's table | U2 with the rule |
+|---|---|---|---|---|---|---|
+| 1 composition | trips: two old laws in a row | trips: the ways until growth stops, then the regime's law with an upper clause; inside the regime the join is never used | the one inequality needs both halves (what was left by `T`, where the fall left the level); the same join `mixed_turns_iff` makes | trips | trips | trips: lock's law, then U2 |
+| 2 dictionary | trips | E in its direct form is close to its definition unfolded; the content is that W1 settles, and the upper clause | not `mixed_turns_iff` in other names (a premise dropped, `H_T` depends on `T`); it **is** the 19 November paper statement with the step named. Not set against the fifteen rows the "After" section names | trips | trips: `unending_iff_holds`, `mixed_turns_iff` | trips |
+| 3 handed in | – | `m` is a need, given with the units; what the stop changes to is derived | `m`, `n` given as needs; who is left and what they take derived; that the course comes below `m` is handed in unless the take rises | as U1 | – | the threshold is handed in |
+| 4 standing use | – | trips: exact only at the stop after which the use is one amount | trips: after `T` the use is one amount, though one the growth made and the start decides | trips: one amount `H₀` | trips | trips |
+| 5 not exact | – | G4's first-stop form: trips (104,662). E: none found | none found in 1,228,283 | none found | none found | none found |
+| 6 no old law a case | – | E-if: `unending_of_fixed` is a case. E whole: trips | does not trip: `two_units_iff` | trips | trips | trips |
+| 7 not placed | – | trips | trips: what goes on is a standing use at or above its point of no return | trips | trips | trips |
+| 8 the source | no | no | no | no | no | no |
+
+**G4:** in the writing the guess names (W1) the form is right for a necessary condition at every stop, wrong as an exact one at the first, and inside the regime the stop by the fall never comes in time. In W2 it holds as guessed, and can come too late. In W3 there is no single step.
+
+**G5, for this home:** nearly stands. Tests 4 and 7 trip for every statement here: no way in the line on a stock as it stands goes on for ever otherwise than by a standing use the giving meets, or by rounds of growth lost and regained. What is gained beyond a recognition: U0 with U1(b), which sharpens the frozen file's correction (in this home a fall turns a way in time only where the unmet need takes some of the taking away and it is not put back at once); the upper clause, which `HigherStartEnds` shows on one course; U2, of which `two_units_iff` is a case; and the rounds of W3 as kept courses.
+
+## What failed, kept
+
+- My first forecast that W1 would give an exact first-stop edge: it gives a necessary one, and inside the regime an empty one.
+- My forecast that a multiplying kind needing less always ends: false where it leaves the other kind (272 and 524 courses stand).
+- A first range of needs (1 to 5) in the second sign's table found no course on which those who take less are lost and the others go on; the wider range found 2,636, 1,436 and 1,388. The absence was the range's.
+- One run of `units_w2.py` passed two minutes (a change let courses of numbers without bound run to 400 steps); I stopped it and undid the change.
+
+## Where it is
+
+All in `/Users/ren/theories/tmp/r7/one-model/check/meet20/`; each program run with `python3 -B`, each under two minutes as kept, load averages about 13.
+
+| program | what | results |
+|---|---|---|
+| `units_core.py` | the step, the regime, "stands" | – |
+| `units_g4.py`, `units_g4.py --wide` | W1 | `units-results-g4.json`, `units-results-g4-wide.json` |
+| `units_w2.py` | W2 and U2 | `units-results-w2.json`, `units-w2.log` |
+| `units_w3.py`, `units_w3b.py`, `units_w3c.py` | W3 | `units-results-w3.json`, `-w3b.json`, `-w3c.json` |
+| `units_two.py` | the second sign | `units-results-two.json` |
+| `units_any.py` | random worlds | `units-results-any.json` |
+| `units_rule.py` | the rule on top | `units-results-rule.json` |

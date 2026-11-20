@@ -1,0 +1,250 @@
+#!/usr/bin/env python3
+"""units_g4.py: guess G4 of FROZEN-THE-MEETING.md on the line on a stock as it stands, searched on small numbers.
+
+AI-written scratch (worker "units", 20 November 2026). A search shows where a statement fails, not that it holds.
+
+The family. Two kinds: A (need n, use a) and B (the report's A'; need m > n, use b).
+  kids A = one A and jb B   (jb in 1, 2)          A goes on where the level meets n, and buds each step
+  kids B = ia A and ib B    ((1,0), (1,1), (2,0)) a bud leaves something only where the level meets m
+So with p units A and q units B at level x:
+  x < n       nothing is left;                 n <= x < m   p' = p, q' = p*jb;
+  x >= m      p' = p + q*ia, q' = p*jb + q*ib.
+The giving: g(z) = min(z, r, (c - z)//s), nothing from nothing, every level up to c kept within c.
+
+What is tallied (the words are the report's):
+  first stop  T1 = the first step with level below m. The guess G4: the line never ends exactly where
+              n <= x_T1 and x_(T1+1) >= H + y, H what the way after step T1 takes (p_T1 * (a + jb*b)), y the least
+              z with g(z) >= H.
+  stands      a configuration the step leaves as it is in its way, some need met, level >= H + y, and the level
+              it rises to under H below m. The statement E: never ends exactly where the course comes to one.
+"""
+import itertools, json, sys, time
+from units_core import World, mk_giving, rstep
+
+t0 = time.time()
+A, B = 0, 1
+
+
+def regime_of(W, H, c, memo):
+    """(y, hi): y the least z with g(z) >= H (None if none); hi the greatest bound <= c at which Meets and Keeps hold."""
+    if H in memo:
+        return memo[H]
+    y = W.root(H)
+    hi = None
+    if y is not None:
+        for h in range(c, -1, -1):
+            ok, _ = W.regime_ok(H, h)
+            if ok:
+                hi = h
+                break
+    memo[H] = (y, hi)
+    return memo[H]
+
+
+def main(R, outname):
+    tab_first, tab_exact, tab_exact_direct = {}, {}, {}
+    first_true_ends_regrow = 0          # first-stop condition true, the line ends: was the rest at or above m?
+    first_true_ends_noregrow = 0
+    first_true_never_regrow = 0         # first-stop condition true, rest at or above m, and it never ends
+    first_true_norest_never = 0
+    necessary_fail = 0                  # a stop with x_(T+1) below H + y on a course that never ends
+    stops_seen = 0
+    high_fail = 0                       # candidate configurations above the regime's hi (premise `high` fails)
+    regime_vs_direct = {}
+    too_late = {'at once (below H+y at T1+1)': 0, 'after regrowth': 0, 'no stop (below n at T1)': 0}
+    last_born = 0                       # ends; x_(T1+1) >= point of no return of what the way took AT the stop step, < that of H
+    grown_then_stopped_never = 0
+    cycles = {}
+    nonmono_worlds, worlds, courses, undecided = 0, 0, 0, 0
+    in_time = {'within the regime (level at the growth step at most hi)': 0, 'level at the growth step above hi, or no root': 0}
+    from_above, use_falls = {}, [0]
+    examples = {}
+    regrow_rounds = {}
+
+    def keep(key, val, n=3):
+        examples.setdefault(key, [])
+        if len(examples[key]) < n:
+            examples[key].append(val)
+
+    for n in R['n']:
+        for m in [mm for mm in R['m'] if mm > n]:
+            for a in R['a']:
+                for b in R['b']:
+                    for jb in R['jb']:
+                        for (ia, ib) in R['kidsB']:
+                            for c in R['c']:
+                                for s in R['s']:
+                                    for r in R['r']:
+                                        g = mk_giving(c, s, r)
+                                        W = World((n, m), (a, b), ((1, jb), (ia, ib)), g)
+                                        worlds += 1
+                                        memo = {}
+                                        desc = dict(n=n, m=m, a=a, b=b, kidsA=(1, jb), kidsB=(ia, ib), c=c, s=s, r=r)
+                                        for p0 in R['p0']:
+                                            for q0 in R['q0']:
+                                                fates = []
+                                                for x0 in range(0, c + 1):
+                                                    st = ((p0, q0), x0)
+                                                    fate, course, cyc = W.run(st)
+                                                    courses += 1
+                                                    if fate == 'undecided':
+                                                        undecided += 1
+                                                        continue
+                                                    fates.append((x0, fate))
+                                                    if fate == 'never':
+                                                        cycles[cyc] = cycles.get(cyc, 0) + 1
+                                                    L = len(course)
+                                                    # ---- first stop
+                                                    T1 = next((j for j in range(L) if course[j][1] < m), None)
+                                                    cond_first, rest_first, H1 = False, None, None
+                                                    if T1 is not None and course[T1][1] >= n and T1 + 1 < L:
+                                                        wT, xT = course[T1]
+                                                        w1 = W.after(wT, xT)
+                                                        H1 = W.taken(w1)
+                                                        y, hi = regime_of(W, H1, c, memo)
+                                                        x1 = course[T1 + 1][1]
+                                                        if y is not None and x1 >= H1 + y:
+                                                            cond_first = True
+                                                            rest_first = max(W.level_orbit(H1, x1))
+                                                    tab_first[(cond_first, fate)] = tab_first.get((cond_first, fate), 0) + 1
+                                                    if cond_first and fate == 'ends':
+                                                        if rest_first >= m:
+                                                            first_true_ends_regrow += 1
+                                                            keep('first-stop condition holds, growth comes again, the line ends', (desc, st, course[:12]))
+                                                        else:
+                                                            first_true_ends_noregrow += 1
+                                                            keep('FAIL first true, rest below m, ends', (desc, st, course[:12]))
+                                                    if cond_first and fate == 'never':
+                                                        if rest_first >= m:
+                                                            first_true_never_regrow += 1
+                                                            keep('first-stop condition holds, growth comes again, the line never ends', (desc, st, course[:12]))
+                                                        else:
+                                                            first_true_norest_never += 1
+                                                    if (not cond_first) and fate == 'never':
+                                                        keep('FAIL first false, never ends', (desc, st, course[:12]))
+                                                    # ---- every stop: the necessary half
+                                                    nstops_regrow = 0
+                                                    for T in range(L - 1):
+                                                        wT, xT = course[T]
+                                                        if wT[A] >= 1 and n <= xT < m and all(W.goes(course[j]) for j in range(T + 1)):
+                                                            stops_seen += 1
+                                                            HT = W.taken(W.after(wT, xT))
+                                                            y, hi = regime_of(W, HT, c, memo)
+                                                            xn = course[T + 1][1]
+                                                            if (y is None or xn < HT + y) and fate == 'never':
+                                                                necessary_fail += 1
+                                                                keep('FAIL necessary', (desc, st, T, course[:12]))
+                                                            if T >= 1 and course[T - 1][1] >= m:
+                                                                nstops_regrow += 1
+                                                    regrow_rounds[(fate, nstops_regrow)] = regrow_rounds.get((fate, nstops_regrow), 0) + 1
+                                                    # ---- the exact statement: comes to a configuration that stands
+                                                    ex_dir = any(W.stands_direct(course[k]) for k in range(L))
+                                                    ex_reg, saw_none = False, False
+                                                    for k in range(L):
+                                                        wk, xk = course[k]
+                                                        if not W.goes(course[k]) or W.after(wk, xk) != wk:
+                                                            continue
+                                                        Hk = W.taken(wk)
+                                                        y, hi = regime_of(W, Hk, c, memo)
+                                                        if y is None:
+                                                            continue
+                                                        if hi is None or xk > hi:
+                                                            saw_none = True
+                                                            high_fail += 1
+                                                            continue
+                                                        if xk >= Hk + y and max(W.level_orbit(Hk, xk)) < m:
+                                                            ex_reg = True
+                                                            break
+                                                    tab_exact_direct[(ex_dir, fate)] = tab_exact_direct.get((ex_dir, fate), 0) + 1
+                                                    tab_exact[(ex_reg, fate)] = tab_exact.get((ex_reg, fate), 0) + 1
+                                                    regime_vs_direct[(ex_reg, ex_dir, saw_none)] = regime_vs_direct.get((ex_reg, ex_dir, saw_none), 0) + 1
+                                                    if ex_reg != (fate == 'never'):
+                                                        keep('regime form differs from fate', (desc, st, fate, course[:12]))
+                                                    # ---- too late
+                                                    grew = T1 is not None and T1 >= 1 and course[T1 - 1][0][B] >= 1
+                                                    if fate == 'ends' and grew:
+                                                        if course[T1][1] < n:
+                                                            too_late['no stop (below n at T1)'] += 1
+                                                            keep('too late: no stop, from at or above m to below n in one step', (desc, st, course[:10]))
+                                                        elif not cond_first:
+                                                            too_late['at once (below H+y at T1+1)'] += 1
+                                                            keep('too late: growth stopped by the fall, level at T1+1 below H+y', (desc, st, course[:10]))
+                                                            # what the way took at the stop step itself
+                                                            if T1 + 1 < L:
+                                                                Hs = W.taken(course[T1][0])
+                                                                ys, _ = regime_of(W, Hs, c, memo)
+                                                                if ys is not None and course[T1 + 1][1] >= Hs + ys and Hs < H1:
+                                                                    last_born += 1
+                                                                    keep('too late only by those born at the last step of growth', (desc, st, dict(T1=T1, taken_at_stop=Hs, y_stop=ys, H=H1, x_next=course[T1 + 1][1]), course[:10]))
+                                                        else:
+                                                            too_late['after regrowth'] += 1
+                                                    if fate == 'never' and grew:
+                                                        grown_then_stopped_never += 1
+                                                        # was the level at the last growth step within the regime of what the way took there?
+                                                        wg, xg = course[T1 - 1]
+                                                        Dg = W.taken(wg)
+                                                        yg, hig = regime_of(W, Dg, c, memo)
+                                                        if yg is not None and hig is not None and xg <= hig:
+                                                            in_time['within the regime (level at the growth step at most hi)'] += 1
+                                                            keep('FAIL in time within the regime', (desc, st, course[:10]))
+                                                        else:
+                                                            in_time['level at the growth step above hi, or no root'] += 1
+                                                    if x0 >= m:
+                                                        key = ('s=1' if s == 1 else 's>1', fate)
+                                                        from_above[key] = from_above.get(key, 0) + 1
+                                                    # the use along the course: does it ever fall while some need is met?
+                                                    if q0 <= p0 * jb:
+                                                        for j in range(L - 1):
+                                                            if W.goes(course[j]) and course[j][1] >= n and W.taken(course[j + 1][0]) < W.taken(course[j][0]):
+                                                                use_falls[0] += 1
+                                                                keep('FAIL use falls while n is met', (desc, st, j, course[:10]))
+                                                                break
+                                                        keep('grew, was stopped by the fall, never ends', (desc, st, course[:10]))
+                                                # ---- the fate is not monotone in the start level
+                                                nm = [(x, x2) for (x, f) in fates for (x2, f2) in fates if x < x2 and f == 'never' and f2 == 'ends']
+                                                if nm:
+                                                    nonmono_worlds += 1
+                                                    keep('a higher start ends, a lower one never does', (desc, (p0, q0), nm[:4]), n=4)
+
+    fmt = lambda d: {str(k): v for k, v in sorted(d.items(), key=lambda kv: str(kv[0]))}
+    out = dict(
+        ranges={k: str(v) for k, v in R.items()}, worlds=worlds, courses=courses, undecided=undecided, seconds=round(time.time() - t0, 1),
+        first_stop_condition_vs_fate=fmt(tab_first),
+        first_true_ends__rest_at_or_above_m=first_true_ends_regrow,
+        first_true_ends__rest_below_m=first_true_ends_noregrow,
+        first_true_never__rest_at_or_above_m=first_true_never_regrow,
+        first_true_never__rest_below_m=first_true_norest_never,
+        stops_seen=stops_seen, necessary_half_failures=necessary_fail,
+        comes_to_standing_regime_form_vs_fate=fmt(tab_exact),
+        comes_to_standing_direct_vs_fate=fmt(tab_exact_direct),
+        regime_form_vs_direct__and_whether_a_candidate_was_above_hi=fmt(regime_vs_direct),
+        candidates_above_hi=high_fail,
+        cycle_lengths_of_never_ending=fmt(cycles),
+        too_late=too_late, too_late_only_by_the_last_born=last_born,
+        grew_then_stopped_and_never_ends=grown_then_stopped_never,
+        grew_then_stopped_and_never_ends__where_the_growth_step_was=in_time,
+        starts_at_or_above_m_by_falling_slope_and_fate=fmt(from_above),
+        courses_whose_use_falls_while_n_is_met__starts_with_q0_at_most_jb_p0=use_falls[0],
+        stops_after_a_growth_step_by_fate=fmt(regrow_rounds),
+        start_triples_where_a_higher_start_ends=nonmono_worlds,
+        examples=examples,
+    )
+    with open('/Users/ren/theories/tmp/r7/one-model/check/meet20/' + outname, 'w') as f:
+        json.dump(out, f, indent=1, default=str)
+    for k, v in out.items():
+        if k != 'examples':
+            print(k, ':', v)
+    print('example keys:', {k: len(v) for k, v in examples.items()})
+
+
+SMALL = dict(n=(1, 2), m=range(2, 8), a=(1, 2), b=(0, 1, 2), jb=(1, 2), kidsB=((1, 0), (1, 1), (2, 0)),
+             c=(8, 10, 12, 14, 16), s=(1, 2, 3), r=(None, 3), p0=(1, 2), q0=(0, 1))
+# slower growth against a larger stock: a bud that needs much, small uses, gentler falling side of the giving
+WIDE = dict(n=(1, 3), m=(6, 9, 12, 15, 18, 21, 24), a=(1,), b=(0, 1), jb=(1,), kidsB=((1, 0), (1, 1)),
+            c=(20, 24, 28, 32), s=(1, 2, 3, 4), r=(None, 2, 4, 6), p0=(1, 2, 3), q0=(0, 1))
+
+if __name__ == '__main__':
+    if '--wide' in sys.argv:
+        main(WIDE, 'units-results-g4-wide.json')
+    else:
+        main(SMALL, 'units-results-g4.json')
