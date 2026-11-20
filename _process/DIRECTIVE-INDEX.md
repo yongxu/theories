@@ -9,7 +9,7 @@ Every record in the directive groups `15-*`, `16-*` of [sources](../sources/READ
 | Date | Record | Kind | Title | In register |
 |---|---|---|---|---|
 | 2026-11-20 | [2026-11-20-the-aim-toward-the-direction.md](../sources/15-codex-theory-conversations/2026-11-20-the-aim-toward-the-direction.md) | direction | Ren: October's aim adjusted toward the new direction and the new map; align to the session that has the latest direction | yes |
-| 2026-11-20 | [2026-11-20-read-first-a-part-of-the-map.md](../sources/15-codex-theory-conversations/2026-11-20-read-first-a-part-of-the-map.md) | record | Ren: "read it - but it is just a part of the map"; and what he pressed and wrote before it, 18 to 20 November |  |
+| 2026-11-20 | [2026-11-20-read-first-a-part-of-the-map.md](../sources/15-codex-theory-conversations/2026-11-20-read-first-a-part-of-the-map.md) | record | Ren: "read it - but it is just a part of the map"; and what he pressed and wrote before it, 18 to 20 November | yes |
 | 2026-11-18 | [2026-11-18-the-lean-before-the-words.md](../sources/15-codex-theory-conversations/2026-11-18-the-lean-before-the-words.md) | record | Ren: what can be derived and what cannot; the Lean before the words; the repository as an elegant representation; on this MacBook until the work is ready | yes |
 | 2026-11-18 | [2026-11-18-datong-future.md](../sources/15-codex-theory-conversations/2026-11-18-datong-future.md) | record | 大同未来 |  |
 | 2026-11-16 | [2026-11-16-no-corners-the-interconnected-map.md](../sources/15-codex-theory-conversations/2026-11-16-no-corners-the-interconnected-map.md) | record | Ren: far from it is fine; no corners cut; the interconnected map with its attractors, transitions and paths; no holding on to old words |  |
