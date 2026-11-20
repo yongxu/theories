@@ -43,7 +43,7 @@ At the asking of the session that leads, after the first step of its roadmap did
 
 ## What became of the picture's last section
 
-The picture ends with "What I now think", this session's view on 18 and 19 November. Its sentence that the Lean work is to join October's modules that carry the idea to November's models was tried by the leading session on 20 November for October's files on renewal, on paper, and did not come out as a join; its records are under the study `dj-a-line-on-a-stock`. The picture is kept as written.
+The picture ends with "What I now think", this session's view on 18 and 19 November. Its sentence that the Lean work is to join October's modules that carry the idea to November's models was tried by the leading session on 20 November for October's files on renewal, on paper, and did not come out as a join ([its record](../../2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/renewal-against-keeping-2026-11-20/NOTE.md)). The picture is kept as written.
 
 ## What is not here
 
