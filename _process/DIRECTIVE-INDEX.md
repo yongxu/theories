@@ -8,7 +8,7 @@ Every record in the directive groups `15-*`, `16-*` of [sources](../sources/READ
 
 | Date | Record | Kind | Title | In register |
 |---|---|---|---|---|
-| 2026-11-21 | [2026-11-21-why-is-this-a-selection.md](../sources/15-codex-theory-conversations/2026-11-21-why-is-this-a-selection.md) | decision | Ren: "why is this a selection? explain"; and "let's do it in the best way that is right for other direction" |  |
+| 2026-11-21 | [2026-11-21-why-is-this-a-selection.md](../sources/15-codex-theory-conversations/2026-11-21-why-is-this-a-selection.md) | decision | Ren: "why is this a selection? explain"; and "let's do it in the best way that is right for other direction" | yes |
 | 2026-11-20 | [2026-11-20-the-lead-keep-moving-the-roadmap.md](../sources/15-codex-theory-conversations/2026-11-20-the-lead-keep-moving-the-roadmap.md) | record | Ren: "you'll be the lead … let's keep moving the roadmap, when choices are important, reflect on the direction" | yes |
 | 2026-11-20 | [2026-11-20-the-aim-toward-the-direction.md](../sources/15-codex-theory-conversations/2026-11-20-the-aim-toward-the-direction.md) | direction | Ren: October's aim adjusted toward the new direction and the new map; align to the session that has the latest direction | yes |
 | 2026-11-20 | [2026-11-20-read-first-a-part-of-the-map.md](../sources/15-codex-theory-conversations/2026-11-20-read-first-a-part-of-the-map.md) | record | Ren: "read it - but it is just a part of the map"; and what he pressed and wrote before it, 18 to 20 November | yes |
