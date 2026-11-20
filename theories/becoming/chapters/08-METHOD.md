@@ -716,6 +716,8 @@ Design and analysis were committed before any text was written; plants made know
 <a id="open-programme"></a>
 ## 12. The open programme
 
+*From 20 November 2026 (AI-written).* The aim of the work is now told on [the direction page](../../../_process/DIRECTION.md): one map of how things come to be, go on, change and end, drawn from inside what it maps. The target below is October's, after Ren's words of 11 October 2026. On 20 November he said that October's aim should be adjusted toward the direction and its map ([his words](../../../sources/15-codex-theory-conversations/2026-11-20-the-aim-toward-the-direction.md)). The target is kept as written: what was reached under it stands, and what it lists as not reached is still not reached.
+
 **The target.** One unified, complete, enclosed theory with zero axioms, where "zero axiom" means no substantive axiom, not only no ethical one. The target does not require deriving the value of every contingent local law. It requires showing whatever universal content the theory asserts, while keeping explicit the particular content an application uses. Calling an input immanent, or moving it into a definition, does not discharge it. Finding an input in a local model does not show that it is unexplained throughout the theory. And the target does not begin from an inert space of independent things to which relation must be added.
 
 Explaining how evaluation forms is distinct from holding an appraisal, though both happen within the same unfolding. A richer description can correct the factual grounds of a judgment without establishing its standard. "Good", "harmful" or "fitting" must not silently supply the conclusion they are meant to explain.
