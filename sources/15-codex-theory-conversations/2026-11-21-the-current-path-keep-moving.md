@@ -18,7 +18,7 @@
 >
 > so, tell me how would you answer these question, i want to understand your understanding
 
-*The session's answer (AI-written, Claude Fable; written between 03:23 and 03:40 WIB and sent after this record was prepared; read by no one before it was sent; the headings and lists are as sent. Before writing it the session read the direction page's "Where we are heading" and "The idea, as we understand it now", and the passage of the record of 19 November on the course; the rest is from the records it had read that night):*
+*The session's answer (AI-written, Claude Fable; written from 03:23 WIB and sent at 03:31 WIB by the transcript's stamp, after this record was prepared; read by no one before it was sent; the headings and lists are as sent. The message as sent ended with one more section, "What I did with your words", which is not copied here: it said that this record had been made and was not yet on main, that both other sessions had his words as he wrote them, and that the session read "the current path is worth to keep moving" as keep going and not as a yes to starting a model. Before writing it the session read the direction page's "Where we are heading" and "The idea, as we understand it now", and the passage of the record of 19 November on the course; the rest is from the records it had read that night):*
 
 > My understanding, in short: the five are mostly one question, and I would not answer the first by picking. I think the direction means a way of going on whose own doing is part of what makes again what it rests on, and to which that makes a difference. The rest follows from that. This is my reading of the direction page and last night's records. I have not checked it against the Lean beyond the few statements I opened last night.
 >
