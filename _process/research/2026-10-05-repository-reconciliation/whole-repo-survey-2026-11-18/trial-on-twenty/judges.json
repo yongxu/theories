@@ -1,0 +1,289 @@
+{
+ "judges": [
+  {
+   "file": "judge-present.md",
+   "tool_calls_made": 1,
+   "results": [
+    {
+     "n": 4,
+     "conditions": [
+      "The valuer's judgment is a ranking of presentations, each a plan with its wording and order that keeps a set of items (stated as a premise, not proved)",
+      "The ranking puts a narrowing above its widening",
+      "The widening differs from the narrowing by exactly one item",
+      "A net weighting counts each item for a course admitting it and against it",
+      "For the 'exactly where it weighs below zero' part: the ranking ranks the pair as its own order ranks the kept sets (it is read right, no misreading or framing)",
+      "For the sign part: the sign measured apart is the sign of the order's increment from the narrower to the wider course in the pair's context",
+      "For carrying the sign to every context: the valuation is additive"
+     ],
+     "verdict": "does not apply",
+     "reason": "The second plan widens the first by two items (a museum and a market), and the result as told speaks only of a widening by one item."
+    },
+    {
+     "n": 5,
+     "conditions": [
+      "The thing numbered is a causal set (c)",
+      "The numbering is of its elements by a course of growth that starts from the empty set",
+      "The course's configuration at c's size is of c's kind",
+      "On the course, each element is born at its offset together with its past"
+     ],
+     "verdict": "does not apply",
+     "reason": "The result is told of a causal set, whose elements are each born with their past already there, and three elements preceding one another in a circle fail that condition (the telling names 'causal set' without defining it, so this rests on reading the name as excluding a circle)."
+    },
+    {
+     "n": 6,
+     "conditions": [
+      "A course is a sequence of values",
+      "An extrapolation maps a prefix to a proposed value or to silence",
+      "There are at least two values (for 'no prefix fixes the next value')",
+      "Values need be decidable only where an extrapolation needs them",
+      "For the diagonal part: a map that moves each value",
+      "For the bounded-misses part: the law is determined, its orbit is held by a list of length N, and extrapolation is by elimination over the lasso candidates"
+     ],
+     "verdict": "applies",
+     "reason": "Silence is an allowed answer of an extrapolation and there are two distinct values, so the ten-day prefix continues with either 20 or 25 and no proposal is right on both (here because none is made, so the part about a proposal missing holds only emptily)."
+    },
+    {
+     "n": 7,
+     "conditions": [
+      "The words are copied in turn",
+      "All copies draw on one shared pool and one shared support",
+      "Each copy starts from no previous token",
+      "Each copy that completes is released with r free",
+      "For the reordering part: the reordering is made of exchanges of adjacent words"
+     ],
+     "verdict": "applies",
+     "reason": "The situation is copying in turn from one pool and one support, and the telling states no condition that sameness of tokens be decidable by a finite check, so nothing told is failed (the start from no previous token and the release with r free are taken as part of the copying described)."
+    },
+    {
+     "n": 8,
+     "conditions": [
+      "The course is balanced",
+      "Only active formations give",
+      "Activity needs support",
+      "The formation takes from the condition at every step from T at which it is active",
+      "Nothing supported gives to the condition from T on",
+      "Alternative form: the formation requires the condition while active and everything feeding its continuation is unsupported",
+      "The condition has a level at T, which bounds the consecutive active steps"
+     ],
+     "verdict": "does not apply",
+     "reason": "A supplier that is itself supported delivers fuel into the store, which fails the condition that nothing supported gives to the condition (equally, that every feeder is unsupported)."
+    },
+    {
+     "n": 9,
+     "conditions": [
+      "Two outputs are compared and they differ",
+      "There is a time by which a route counts as timely (implied by 'timely route')"
+     ],
+     "verdict": "cannot tell",
+     "reason": "The telling states only that different outputs rule out the absence of a timely route and gives no premise about when or from what the output is read, so it cannot be told whether an answer computed several steps after the deadline is covered."
+    },
+    {
+     "n": 10,
+     "conditions": [
+      "A course is compared with and without a part",
+      "A formation requires a condition at a step",
+      "The part has not reached the formation (or what is asked about) before that step",
+      "For the 'at every step' part: the part never reaches it"
+     ],
+     "verdict": "does not apply",
+     "reason": "The supplier delivered into the store the workshop requires three steps earlier, so the part has reached the workshop before the step, failing the condition that it has not reached it before that step."
+    },
+    {
+     "n": 11,
+     "conditions": [
+      "The contexts are listed",
+      "There are readings in context, each context counting something",
+      "The world shows what each context counts",
+      "The world respects the possibilities",
+      "Gluing is asked at that world's configuration",
+      "'No selection of contexts contradicts' is the test on the other side of the equivalence"
+     ],
+     "verdict": "applies",
+     "reason": "The one condition the telling states, that the contexts are listed, holds, and the telling states nothing about a list of claims or about a claim being named twice, so no stated condition is failed."
+    },
+    {
+     "n": 12,
+     "conditions": [
+      "Only active formations give",
+      "Activity needs support",
+      "The renewal of the family of conditions is gated on the family as one (the coupled gate)",
+      "The gate has a need of at least m",
+      "For n steps from T the family's uptake exceeds its replenishment",
+      "The family's stock at T is below n + m",
+      "There are generations of descent, with later members the offspring of earlier ones",
+      "For the lineage part: every later member of the lineage depends on the family"
+     ],
+     "verdict": "does not apply",
+     "reason": "With n = 4 and m = 5 the stock would have to be below 9, and the starting stock is 20 (the renewal is also described as needing one of the nutrients, not the family as one)."
+    },
+    {
+     "n": 13,
+     "conditions": [
+      "Finite weighted alternatives",
+      "A binary target",
+      "Complete available inputs",
+      "The two World courses are balanced, or else have the same unaccounted (residual) change in both",
+      "The courses are of one law",
+      "The same formations are present in both",
+      "Initial levels alike at what couples in beyond reach",
+      "Answers come through everything that couples in up to the answer time",
+      "Reach is decided (for the bound by weight within responsive reach)",
+      "No exchange is omitted from the account"
+     ],
+     "verdict": "does not apply",
+     "reason": "The first run has an unaccounted loss of ten units that the second lacks, so the courses are neither both balanced nor carrying the same unaccounted change, the condition the telling requires for answers alike beyond reach."
+    },
+    {
+     "n": 14,
+     "conditions": [
+      "There is a run of a frame",
+      "A certificate is handed for it",
+      "The certificate carries a bound B, allowing at most B + 1 steps",
+      "Completion corresponds to realization (kept as a visible premise)"
+     ],
+     "verdict": "cannot tell",
+     "reason": "The telling does not say what the handed certificate requires when the rule is revised, so although counts set higher at each revision suggest the bound of 10 is not kept along the run, the telling names no condition by which to settle it."
+    }
+   ]
+  },
+  {
+   "file": "judge-proposed.md",
+   "tool_calls_made": 1,
+   "results": [
+    {
+     "n": 4,
+     "conditions": [
+      "There is a ranking of presentations (plans).",
+      "Two plans are compared, one narrower and one wider.",
+      "The wider plan keeps exactly one listed item more than the narrower.",
+      "Apart from that one item, the two plans keep the same.",
+      "The ranking puts the narrower plan above the wider."
+     ],
+     "verdict": "does not apply",
+     "reason": "The second plan adds two items (a museum and a market), so it fails the condition that the wider keeps exactly one listed item more and the two otherwise keep the same."
+    },
+    {
+     "n": 5,
+     "conditions": [
+      "The causal set c is ordered (its relation is an order).",
+      "A numbering (relabelling) of c's elements, pi with sigma, is given.",
+      "The growth considered is a course of the growth from the empty set.",
+      "The configuration compared is the one at c's size on that course."
+     ],
+     "verdict": "does not apply",
+     "reason": "A relation that runs in a circle (first before second, second before third, third before first) is not an order, so the condition that the causal set is ordered fails."
+    },
+    {
+     "n": 6,
+     "conditions": [
+      "There are two different values.",
+      "A course and a step t are given (any course, any step).",
+      "The two continuations keep the course before t; one holds the one value from t on, the other holds the other value.",
+      "The extrapolation proposes a value from the prefix before t (the 'not right on both' conclusion is stated only where it does)."
+     ],
+     "verdict": "does not apply",
+     "reason": "The forecaster declines to name any value for day eleven, so the condition that the extrapolation proposes a value from the prefix fails; only the first half (the two continuations share the ten-day prefix and take their own values at day eleven) still holds."
+    },
+    {
+     "n": 7,
+     "conditions": [
+      "Equality of tokens is decided.",
+      "The words are copied in turn.",
+      "All copies draw from one shared pool and one support, with 'free' free.",
+      "Each word is copied from no previous token.",
+      "Each release (of a copy that completes) takes r."
+     ],
+     "verdict": "does not apply",
+     "reason": "No finite check settles whether two of the unending digit streams are the same token, so the condition that the tokens' equality is decided fails."
+    },
+    {
+     "n": 8,
+     "conditions": [
+      "The flow is balanced.",
+      "Only active formations give.",
+      "Activity needs support.",
+      "At every step from T at which the formation is active, it is present.",
+      "At every such step it takes a positive amount from the condition.",
+      "At those steps no formation that is present and supported gives anything to the condition."
+     ],
+     "verdict": "does not apply",
+     "reason": "On some of the days a supplier that is present and supported delivers fuel to the store, so the condition that nothing present and supported gives to the condition at those steps fails."
+    },
+    {
+     "n": 9,
+     "conditions": [
+      "The two courses are alike at step 0.",
+      "Before the deadline D both courses are balanced.",
+      "Before D the two courses have the same formations present.",
+      "Before D each formation outside the time-indexed source exchanges alike where alike through its couplings so far.",
+      "The readout gives the same answer on any two level histories that are alike through g's couplings up to D.",
+      "The readout's answers on the two courses' levels differ."
+     ],
+     "verdict": "does not apply",
+     "reason": "The reader's answer is computed from levels several steps after the deadline, so it is not shown to give the same answer on histories alike through g's couplings up to D (they may differ after D), and that readout condition fails."
+    },
+    {
+     "n": 10,
+     "conditions": [
+      "The flow is balanced.",
+      "The levels without the part are the withheld levels, as the withholding prescribes them (the part withheld, the levels following the rest of the exchange).",
+      "The part does not reach the formation before the step asked about."
+     ],
+     "verdict": "does not apply",
+     "reason": "The supplier delivered into a store the workshop requires three steps earlier, which on the telling's plain sense is the part reaching the workshop before that step, so the condition that the part does not reach it before the step fails (the telling does not define reach more exactly than this)."
+    },
+    {
+     "n": 11,
+     "conditions": [
+      "Equality of claims is decided.",
+      "The system's claims are listed without repetition.",
+      "A list is given that contains every context.",
+      "The system has one configuration, at which the world respects the system's possibilities and glues."
+     ],
+     "verdict": "does not apply",
+     "reason": "The system's list of claims names one claim twice, so the condition that the claims are listed without repetition fails."
+    },
+    {
+     "n": 12,
+     "conditions": [
+      "The flow is balanced.",
+      "Only active formations give.",
+      "Activity needs support.",
+      "The generations are generations of descent in the flow.",
+      "Every present formation that gives to a condition of the family requires, at that step, some condition of the family at a need of at least m.",
+      "The family's uptake exceeds its replenishment at each of the n steps from T.",
+      "The family's stock at T is below n + m."
+     ],
+     "verdict": "does not apply",
+     "reason": "With n = 4 and m at most 5 the bound n + m is at most 9, and the starting stock of 20 is not below it, so the stock condition fails."
+    },
+    {
+     "n": 13,
+     "conditions": [
+      "Balance is not required.",
+      "The two courses have the same formations present at every step.",
+      "The two courses have the same initial levels at every condition coupled into a formation beyond the part's responsive reach.",
+      "The rest responds through its couplings.",
+      "At every step and condition the residual taking is the same in the two courses.",
+      "At every step and condition the residual giving is the same in the two courses."
+     ],
+     "verdict": "does not apply",
+     "reason": "In one run a store loses ten units at step 3 with no participant taking them and in the other it does not, so the condition that residual taking is alike at every step and condition fails."
+    },
+    {
+     "n": 14,
+     "conditions": [
+      "The process is a run of a frame.",
+      "Completion at each step is decided.",
+      "The initial certificate is at most B.",
+      "Each step that is not completed strictly lowers that step's certificate from its state to the next state.",
+      "The handoff: at each step not completed, the next step's certificate at the next state is at most the current step's certificate at that state.",
+      "Each completed step n has a novel state at step n + 1 (the correspondence premise)."
+     ],
+     "verdict": "does not apply",
+     "reason": "At each revision the new rule's count for the state is set higher than the old rule's count for that state, so the handoff condition (the next certificate at most the current one there) fails."
+    }
+   ]
+  }
+ ]
+}

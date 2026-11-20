@@ -1,0 +1,127 @@
+# Judge's task (the trial on twenty theorems)
+
+AI-written brief (Claude Fable), 21 November 2026. This file is everything you need: open no other file, run no command, start no subagent. Your whole run is this one Read and your answer.
+
+Below are short tellings of mathematical results from a theory of how things form, persist, change and end. Each telling is what a reader would meet in a document: you do not have the formal statement, and you must not guess at it from general knowledge. Read each telling as a careful reader who will rely on it.
+
+For each numbered result, answer two things from the telling alone:
+
+1. **The conditions.** List every condition that, by the telling, must hold for the result to apply. One condition per item, in plain words. List only what the telling states or plainly implies; do not add conditions you think a mathematician would want.
+2. **The case.** A situation is described under the telling. Does the result, as told, apply to that situation? Answer `applies`, `does not apply` or `cannot tell`, and give your reason in one sentence, naming the condition the situation fails if you say it does not apply.
+
+Where a result has two tellings, read them together as one account.
+
+---
+
+## Result 4
+
+**From a chapter:**
+
+Where a ranking of presentations puts the narrower of two plans above the wider, the wider keeping one listed item more and the two otherwise keeping the same, either the ranking does not rank that pair as the net weighting ranks what the two keep, or the added item's count for is at most its count against (`Weighting.narrower_above_net`).
+
+**The situation:** Two travel plans are compared. The second keeps every stop of the first and adds two more, a museum and a market. The judge ranks the first, shorter plan above the second.
+
+## Result 5
+
+**From the source file:**
+
+/-- **The orders of birth.** Where `c` is ordered, `π` with `σ` is a natural labelling of `c` exactly when some course of the growth from the empty set has, at `c`'s size, a configuration that is `c` relabelled by `π` and `σ`: on such a course `c`'s element `i` is the one born at offset `π i`. -/
+
+**From the result record:**
+
+The orders of birth. For a causal set that is ordered, a numbering of its elements is a natural labelling exactly when some course of the growth from the empty set has, at the causal set's size, a configuration that is the causal set renumbered by it (natural_iff_course).
+
+**The situation:** Take three elements with a relation that runs in a circle: the first precedes the second, the second the third, and the third the first. Someone proposes a renumbering of the three and asks whether it is an order in which a growth from nothing bears them.
+
+## Result 6
+
+**From a chapter:**
+
+With two different values, for every course and step t, the course that keeps it before t and holds the one value from t on and the course that holds the other both have its prefix before t and take their value at t; where the extrapolation proposes a value from that prefix, it is not right at t on both (`Learning.no_prefix_fixes_next`).
+
+**The situation:** A forecaster reads the first ten days of a temperature record and, from those ten days, declines to name any value for day eleven. Two continuations of the record are considered, one with 20 degrees on day eleven and one with 25.
+
+## Result 7
+
+**From the source file:**
+
+/-- **Copies from one shared pool.** For tokens whose equality is decided: copying the words in turn from one pool and one support with `free` free, each word from no previous token and each release taking `r`, every copy of the batch is released exactly when the pool supplies all the words joined together and `free` is at least the sum over the words of each word's draws plus `r`. -/
+
+**From the result record:**
+
+For tokens whose equality is decided, copying words in turn from one shared pool and support, each from no previous token, and releasing each copy that completes with r free: every copy is released exactly when the pool supplies all the words joined together and the free support is at least the sum over the words of each word's draws plus r.
+
+**The situation:** The tokens are unending streams of digits, and two streams are the same token only when they agree at every place. Words made of such tokens are to be copied in turn from one pool and one support. No finite check settles whether a token in the pool is the one a word calls for.
+
+## Result 8
+
+**From a chapter:**
+
+**Theorem** (World). Under balance, only active formations giving and activity needing support, a formation that is present and takes from a condition at every step from `T` at which it is active, while nothing present and supported gives to the condition at those steps, is active for at most as many consecutive steps from `T` as the condition's level at `T` (`Flow.Balances.unfed_consumption_ends`); [the paragraph from 'the same holds where it requires the condition while active' to its end stands as it is; it tells other declarations whose signatures are not in this brief]
+
+**From the source file:**
+
+/-- Unfed consumption ends. Under balance, with only active formations giving and activity needing support, suppose that at every step from `T` on at which `g` is active, `g` is present and takes a positive amount from `c`, and no formation that is present and supported at that step gives anything to `c`. Then for every `n`, if `g` is active at each of the `n` steps `T`, ..., `T + n - 1`, `n` is at most the level of `c` at `T`. -/
+
+**The situation:** A workshop draws fuel from a store on every day it is running, and it is listed among the participants on each of those days. The accounts balance, only running participants give, and nothing runs without support. On some of those days a supplier that is itself present and supported delivers fuel to the store.
+
+## Result 9
+
+**From the source file:**
+
+/-- Constructive necessity. For two courses alike at step 0 and, before the deadline `D`, both balanced, with the same formations present and each formation outside the time-indexed source exchanging alike where alike through its couplings so far (the section's included premises): if a readout gives the same answer on any two level histories alike through `g`'s couplings up to `D`, and its answers on the two courses' levels differ, then it is not the case that `g` is unreached from the source by `D`. The conclusion is this double negation; reach itself is not concluded. -/
+
+**The situation:** Two runs of an experiment start with the same levels, both balance before the deadline, have the same participants before it, and every participant outside the source responds only through what has coupled into it so far. The reader's answer is computed from the levels as they stand several steps after the deadline. The two answers differ.
+
+## Result 10
+
+**From the source file:**
+
+/-- In a balanced flow, let `l` be the levels with a part withheld, as `WithheldLevels` prescribes them. If the part does not reach a formation `g` before step `t`, then `g` is supported at `t` exactly when it is admitted at `t` at the withheld levels `l t`. -/
+
+**From the result record:**
+
+At each condition a formation requires at a step, the levels with and without a part agree, or the part reaches the formation before that step; in a balanced flow, with the levels without the part being the withheld levels (the part withheld and the levels following the rest of the exchange), a formation the part does not reach before a step is supported at that step exactly when it is admitted there at the levels without the part; and what it does not reach, at every step.
+
+**The situation:** A balanced exchange is compared with the same exchange with one supplier withheld, the levels without it being those the withholding prescribes. Three steps before the step asked about, that supplier delivered into the store a workshop requires. The question is whether the workshop is supported at that step with the supplier exactly when it is admitted there without it.
+
+## Result 11
+
+**From the source file:**
+
+/-- **Readings in context glue exactly where no selection of contexts contradicts.** With equality of claims decided, the system's claims listed without repetition, and a list containing every context: a world showing what each context counts, respecting the system's possibilities at its one configuration and gluing there, exists exactly where no selection of contexts contradicts. -/
+
+**The situation:** A parity system has three claims and three contexts, each context requiring a parity of two of the claims. Equality of claims can be decided, and a list is given that contains all three contexts. The system's list of claims names one of the claims twice.
+
+## Result 12
+
+**From the source file:**
+
+/-- **What outlasts the end of a family of conditions.** Under balance, where only active formations give, activity needs support, the generations are generations of descent in the flow, and every present formation that gives to a condition of the family requires at that step some condition of the family at a need of at least `m`: if the family's uptake exceeds its replenishment at each of the `n` steps from `T`, and its stock at `T` is below `n + m`, then every member of the generation at any step after `T + n` is the offspring of a member of the generation one step earlier that then requires no condition of the family at a need of at least `m`. -/
+
+**From the result record:**
+
+Under balance, with only active formations giving, activity needing support, generations of descent in the flow, and every present formation that gives to a condition of a family requiring some condition of the family at a need of at least m: where the family's uptake exceeds its replenishment at each of n steps from T, from a stock at T below n + m, every member of a generation after step T + n is the offspring of a member of the generation one step earlier that requires no condition of the family at a need of at least m, and a lineage every later member of which depends on the family has no member after its end.
+
+**The situation:** A family of three nutrients is renewed only by organisms that each need at least 5 units of one of them. The accounts balance, only active organisms give, nothing is active without support, and the generations descend one from another. For 4 steps from the start the family is taken up faster than it is replenished, from a starting stock of 20 units.
+
+## Result 13
+
+**From a chapter:**
+
+[in place of 'common residual exchange suffices for answers alike beyond reach (`FallibleInquiry.alike_with_common_imbalance`)':] without balance, for two courses with the same formations present at every step, alike initial levels of what couples in beyond reach, the rest responding through its couplings, and residual giving and taking alike at every step and condition, every formation beyond reach is alike through its couplings at every step (`FallibleInquiry.alike_with_common_imbalance`)
+
+**From the source file:**
+
+/-- Balance is not assumed. For two courses with the same formations present at every step, the same initial levels at every condition coupled into a formation beyond the part's responsive reach, the rest responding through its couplings, and, at every step and condition, the same residual taking and the same residual giving: every formation beyond the part's responsive reach is alike through its couplings in the two courses at every step. -/
+
+**The situation:** Two runs have the same participants at every step and begin with the same levels at everything that feeds a participant beyond the part's reach, and the rest responds only through what couples into it. In the first run a store loses ten units at step 3 with no participant taking them. In the second run there is no such loss.
+
+## Result 14
+
+**From the source file:**
+
+/-- **Along a run of a frame**, with completion at each step decided, the initial certificate at most `B`, each step not completed strictly lowering that step's certificate from its state to the next, the next step's certificate at that next state being at most the current step's there (the handoff, asked only at steps not completed), and each completed step `n` having a novel state at step `n + 1` (the correspondence premise): for some `n` at most `B`, the state at step `n + 1` is novel. -/
+
+**The situation:** A process revises its rule at every step. Completion can be decided at each step, the first rule's count of remaining steps is at most 10, each rule's count drops by one over the step it governs, and any completed step would bring new living content. At each revision the new rule's count for the current state is set higher than the old rule's count for that state.
+

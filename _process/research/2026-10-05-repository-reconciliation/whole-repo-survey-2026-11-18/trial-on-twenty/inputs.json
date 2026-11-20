@@ -1,0 +1,616 @@
+[
+ {
+  "n": 1,
+  "id": "losses-of-the-sum-over-histories",
+  "declaration": "Becoming.Weights.sum_append",
+  "lean_file": "becoming/Becoming/Weighted.lean",
+  "line": 113,
+  "hypotheses_fable": "0 hypotheses. For any weights W, any function f into them and any two lists l, l'",
+  "signature": "theorem sum_append {α : Type u} (f : α → R) :\n    ∀ l l' : List α, W.sum (l ++ l') f = W.add (W.sum l f) (W.sum l' f)\n  | [], _ => (W.zero_add _).symm",
+  "docstring": "",
+  "record_statement": "For every weighting a truncation misses exactly what it drops; on one configuration with two moves back to it, possibility misses a cancellation that signed counts show, a weighting remembering the last move is no step weighting there but one where configurations keep it, and the courses double.",
+  "record_law": "For every weighting, the sum over the courses kept followed by those dropped is the sum over those kept added to the sum over those dropped; where alternatives only add, as in counting, the sum over the courses kept is at most the sum over all.",
+  "chapter_file": "theories/becoming/chapters/01-ROOT.md",
+  "chapter_line": 572,
+  "chapter_paragraph": "| <a id=\"r-losses-of-the-sum-over-histories\"></a>[Losses of the sum over histories](../results/records/losses-of-the-sum-over-histories.md) | Theorem (any process; witnesses on one configuration). For every weighting a truncation misses exactly what it drops, and where alternatives only add it bounds the whole from below (`Weights.sum_append`). Witnesses: with two moves back to one configuration, one adding and one subtracting, each is possible and so is their join while the signed count balances, and possibility cannot see it (`Interference.unseen`); a weighting needing the move before is no step weighting on one configuration, and is one where that move is kept (`Memory.not_of_steps`); loops double the courses, `2^n` of `n` steps. Signed counts are pairs of natural numbers compared by balance, the pure core taking no quotient; unbounded horizons are not stated. |",
+  "flagged": [
+   "chapter"
+  ],
+  "faults": {
+   "chapter": {
+    "fable": "'and where alternatives only add it bounds the whole from below (`Weights.sum_append`)': the bound is counting_truncation_le, not cited at the home, and the Lean proves it for the counting weights on Nat only, not 'where alternatives only add'. 'misses exactly what it drops' is a looser wording of the equation.",
+    "astra": "“It bounds the whole from below” shares the sole citation `Weights.sum_append`. That theorem gives an equality in a structure with no order. The lower bound for natural-number counting has its own theorem."
+   }
+  },
+  "verdicts": {
+   "record": {
+    "fable": "exact",
+    "astra": "exact"
+   },
+   "chapter": {
+    "fable": "says-more",
+    "astra": "says-more"
+   },
+   "docstring": {
+    "fable": "absent",
+    "astra": "absent"
+   }
+  },
+  "section_context": [
+   "variable {R : Type w} (W : Weights R)",
+   "variable {W}"
+  ]
+ },
+ {
+  "n": 2,
+  "id": "whether-a-loop-closes-a-difference",
+  "declaration": "Becoming.LoopReturn.nothing_between",
+  "lean_file": "becoming/Becoming/LoopReturn.lean",
+  "line": 537,
+  "hypotheses_fable": "0 hypotheses. For any list of whole-number factors, start d and turn n",
+  "signature": "theorem nothing_between (as : List Nat) (d n : Nat) :\n    (Law.run (returnMap (scaling as)) d).state (n + 1) = 0 ∨\n      (Law.run (returnMap (scaling as)) d).state n ≤ (Law.run (returnMap (scaling as)) d).state (n + 1) :=",
+  "docstring": "/-- **No loop of multiplying links closes a difference gradually.** At every turn the course is\n`0`, or no less than at the turn before. -/",
+  "record_statement": "A loop closes a difference only through a link giving back less than it received; with whole-number factors it closes at once, keeps it or runs away. Around a cycle of exact links one turn is the return map's course plus what the cycle held, strictly more for two or more conditions.",
+  "record_law": "With links multiplying by whole-number factors, product 0 closes at the first turn, product 1 keeps the difference, product at least 2 exceeds every bound; no such loop closes gradually, while taking one off does.",
+  "chapter_file": "theories/becoming/chapters/02-MAP.md",
+  "chapter_line": 352,
+  "chapter_paragraph": "**Theorem** (any type; World for the ring read on flows). A difference around a loop is the course of a return map. Where every link gives on at least what it receives the difference never falls, so a loop closes a difference only through a link giving back less; a map below the identity off zero closes within `d` turns, exactly, and merges. With whole-number factors a loop closes at once, keeps, or exceeds every bound, never closing gradually (`LoopReturn.nothing_between`). A self-loop of strength `M` has factor `1 + M`; read on balanced flows (World; witness), on a ring of two or more conditions with one positive strength on every link and a positive starting gap, one plus the product of strengths is strictly below a turn (`LoopReturn.Ring.bound_strict`) ([record](../results/records/whether-a-loop-closes-a-difference.md)).",
+  "flagged": [
+   "chapter",
+   "record"
+  ],
+  "faults": {
+   "chapter": {
+    "fable": "'With whole-number factors a loop closes at once, keeps, or exceeds every bound, never closing gradually (`LoopReturn.nothing_between`)': the three cases are whole_factors, not cited at the home, and 'exceeds every bound' there needs a positive start (0 < d), which is dropped.",
+    "astra": "“Closes at once, keeps, or exceeds every bound” attributes a classification of the entire course to `nothing_between`. Its conclusion rules out a positive decrease at one turn. The product classification, including the positive-start condition for growth, is in `whole_factors`."
+   },
+   "record": {
+    "fable": "'no such loop closes gradually' (law 4): the slogan only, without 'zero, or no less than at the turn before'.",
+    "astra": "“No such loop closes gradually” is exact. In the same law, “product at least 2 exceeds every bound” drops the positive-start premise of the companion `whole_factors`. A start of zero stays zero."
+   }
+  },
+  "verdicts": {
+   "record": {
+    "fable": "says-less",
+    "astra": "says-more"
+   },
+   "chapter": {
+    "fable": "says-more",
+    "astra": "says-more"
+   },
+   "docstring": {
+    "fable": "exact",
+    "astra": "exact"
+   }
+  },
+  "section_context": []
+ },
+ {
+  "n": 3,
+  "id": "laws-of-one-step-complete",
+  "declaration": "Becoming.OneStep.every_iff",
+  "lean_file": "becoming/Becoming/OneStep.lean",
+  "line": 1120,
+  "hypotheses_fable": "0 hypotheses. For any passages P, taker count k and proposition e",
+  "signature": "theorem every_iff (P : List Passage) (k : Nat) (e : Prop) :\n    Realized (fun _ _ _ => True) P k e ↔ Every P k e :=",
+  "docstring": "/-- **The law of every step is all the law of one step.** A pattern is shown by some world\nacross some step on some family exactly when it satisfies the law of every step. -/",
+  "record_statement": "Under each hypothesis on the family (none, balanced on, running down, closed, or both), some world shows a pattern of one step with its givers exactly where it satisfies the hypothesis's law with its givers, and a run on a family where its passages also chain; capacity adds one law, activity none.",
+  "record_law": "A pattern is shown by some world of the spine across some step on some family, the world listing each relatum taking part once, exactly when it satisfies the law of every step; on a family balanced on across the step, exactly when each passage also balances; on a family running down across it, exactly when moreover the family's total falls by at least the number of relata taking from it.",
+  "chapter_file": "theories/becoming/chapters/01-ROOT.md",
+  "chapter_line": 565,
+  "chapter_paragraph": "| <a id=\"r-laws-of-one-step-complete\"></a>[Completeness of the laws of one step](../results/records/laws-of-one-step-complete.md) | A pattern of one step on a family (levels before and after, what is taken and given, takers, givers) is shown by some world, each relatum taking part listed once, exactly where it satisfies the law of every step (something taken has between one and that many takers; something taken or given, an exchange), the law of the givers (something given has between one and that many givers) and, on a family balanced on, running down, closed or both, that hypothesis's law, running down adding that the givers are at most the takers (`OneStep.every_iff`, `OneStep.every_givers_iff` and companions); across runs on one fixed family the passages also chain. Capacity adds one law, what is given at most capacity times givers; only active giving and taking add none. |",
+  "flagged": [
+   "chapter"
+  ],
+  "faults": {
+   "chapter": {
+    "fable": "none, as a merged telling: one sentence states the form with givers and cites `OneStep.every_iff`, `OneStep.every_givers_iff` 'and companions'. every_iff alone (no givers) is not told apart.",
+    "astra": "The single characterization specifies “takers, givers” and requires “the law of the givers.” `every_iff` has no giver-count parameter. The row also cites `every_givers_iff`, which supplies exactly that extension."
+   }
+  },
+  "verdicts": {
+   "record": {
+    "fable": "exact",
+    "astra": "exact"
+   },
+   "chapter": {
+    "fable": "exact",
+    "astra": "says-more"
+   },
+   "docstring": {
+    "fable": "says-less",
+    "astra": "says-less"
+   }
+  },
+  "section_context": []
+ },
+ {
+  "n": 4,
+  "id": "a-narrowing-above-its-widening",
+  "declaration": "Becoming.Weighting.narrower_above_net",
+  "lean_file": "becoming/Becoming/Weightings.lean",
+  "line": 807,
+  "hypotheses_fable": "2 hypotheses",
+  "signature": "theorem narrower_above_net {kept : P → X → Bool} {R : P → P → Prop} {items : List X}\n    {pos neg : X → Nat} {x : X} {n w : P} (by_ : WidensBy items x (kept w) (kept n))\n    (violates : R w n) :\n    ¬ ReadsSetsOn kept R (ranksNet items pos neg) w n ∨ pos x ≤ neg x :=",
+  "docstring": "/-- **A narrowing above its widening, under a net weighting.** Where a ranking of presentations\nputs the narrower of two plans that one item alone separates above the wider, it does not read\nthe sets on that pair as the net weighting ranks them, or the added item weighs at zero or\nbelow. -/",
+  "record_statement": "A ranking of presentations puts a narrowing above its widening by one item only where it ranks that pair otherwise than its order on the kept sets does, or the item weighs at zero or below; read right, exactly where the item weighs below zero, and zero ties.",
+  "record_law": "A ranking of presentations, plans with their wording and order, reads the sets on a pair where it ranks the two as an order on courses ranks what they keep. Read right, an order increasing at the added item never ranks the narrowing above; under a net weighting a narrowing above its widening by one item is a pair not read right or an item at zero or below, and read right it is an item below zero.",
+  "chapter_file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+  "chapter_line": 1050,
+  "chapter_paragraph": "**Theorem** (any type). Take a valuer's judgment as a ranking of presentations (plans with their wording and order, each keeping a set of items), and a net weighting as counting each item for a course admitting it and against it. Where such a ranking puts a narrowing above its widening by one item, either it does not rank the pair as its own order ranks the kept sets (a misread or a framing) or the item weighs at zero or below; read right, exactly where it weighs below zero, and at zero it ties (`Weighting.narrower_above_net`, `Weighting.reads_ranksNet`). Read right, where a sign measured apart is the sign of the order's increment from the narrower course to the wider in the pair's context, it fixes the ranking: narrower above exactly where it is a gain, wider exactly where a loss, neither where nothing (`Weighting.reads_increment`); an additive valuation carries it to every context, an interacting one need not. That a judgment is such a ranking is a premise. ([record](../results/records/a-narrowing-above-its-widening.md))",
+  "flagged": [
+   "chapter"
+  ],
+  "faults": {
+   "chapter": {
+    "fable": "none; 'its own order' likewise stands for the net weighting, and the paragraph says that a judgment is such a ranking is a premise.",
+    "astra": "“A misread or a framing” interprets the first disjunct. `¬ ReadsSetsOn` says that the two rankings disagree on the pair. It gives no cause for that disagreement."
+   }
+  },
+  "verdicts": {
+   "record": {
+    "fable": "exact",
+    "astra": "exact"
+   },
+   "chapter": {
+    "fable": "exact",
+    "astra": "says-more"
+   },
+   "docstring": {
+    "fable": "exact",
+    "astra": "exact"
+   }
+  },
+  "section_context": [
+   "variable {X : Type}",
+   "variable {P : Type}"
+  ]
+ },
+ {
+  "n": 5,
+  "id": "the-present-on-causal-set-growth",
+  "declaration": "Becoming.Presence.natural_iff_course",
+  "lean_file": "becoming/Becoming/Presence.lean",
+  "line": 440,
+  "hypotheses_fable": "1 hypothesis",
+  "signature": "theorem natural_iff_course (ordered : c.Ordered) :\n    NaturalLabelling c π σ ↔ ∃ r : Run process, r.state 0 = empty ∧\n      CausalGrowth.Kinds.Relabels c (r.state c.size) π σ :=",
+  "docstring": "/-- **The orders of birth.** The natural labellings of `c` are exactly the numberings of its\nelements by a course from the empty set whose configuration at `c`'s size is of `c`'s kind: on such\na course `c`'s element `i` is the one born at offset `π i`. -/",
+  "record_statement": "On causal-set growth the present, read as the maximal elements of what a course has born, is a choice of course between bounds defined from precedence: a condition is present at a birth on some course exactly where it is a link (precedence weakly decided), on every course exactly at the one link.",
+  "record_law": "The orders of birth. Every causal set is grown from the empty set, bearing the element t at offset t with its past (pastIn, pastIn_stem, courseOf, courseOf_grows, courseOf_isomorphic), and the natural labellings are exactly the numberings of its elements by a course from the empty set whose configuration at its size is of its kind (natural_iff_course).",
+  "chapter_file": "theories/becoming/chapters/01-ROOT.md",
+  "chapter_line": 46,
+  "chapter_paragraph": "**Theorem** (causal-set growth, and witnesses). *The present on causal-set growth.* The grammar has no relation of presence in time ([Open](#open)); causal-set growth ([07 §2](07-SIGNIFICANCE.md#r-what-can-be-born-next)) is a model in which one can be read and the question asked exactly. Its labels, the order of births, are taken to carry no physical meaning (discrete general covariance, Rideout and Sorkin 2000), a premise of the model. The renumberings of a causal set keeping precedence, its natural labellings (`Presence.NaturalLabelling`), are exactly the orders of birth of the courses from the empty set growing a configuration of its kind (`Presence.natural_iff_course`), and births of unrelated elements commute, and only they (`Presence.rearranges_iff_natural`, an instance of the core's theorem of Mazurkiewicz). What a course has born by a stage is a stem, and every stem with decided membership is what some course bears first (`Presence.born_stem`, `Presence.stem_born_first`). With precedence decided, an element is born before another on every course exactly where it precedes it (`Presence.prec_iff_every`), so what is born no later than an element on every course is its past with itself, the largest relation every course respects (`Presence.past_every_iff`, `Presence.past_largest`); with precedence weakly decided, it is born before it on some course exactly where the two differ and the other does not precede it (`Presence.before_some_iff`), so no order of birth of unrelated elements is common to all courses (`Presence.either_order`). Read the present at a stage as the maximal elements of what a course has born, where the grammar's ending holds on what is born (`Presence.MaximalBorn`, `Presence.maximalBorn_iff_ends`). It is an antichain (`Presence.maximalBorn_unrelated`), and with precedence weakly decided every antichain given by a test is one (`Presence.antichain_present`); two elements are present together on some course exactly where neither precedes the other, precedence weakly decided, and on every course exactly where they have the same future, precedence decided (`Presence.together_some_iff`, `Presence.together_every_iff`), which is not co-presence, mutual reach. A condition is present at the birth of what it conditions where nothing it precedes is born before (`Presence.PresentAt`): on some course exactly where it is a link below it, precedence weakly decided (`Presence.present_some_iff_link`), and on every course exactly where that is the one element it is linked to, with no decision (`Presence.present_every_iff_only_link`). Asked of every causal set, each calibrated decision is exactly its principle: excluded middle for the decided forms of born before, present together and the least element above on every course, weak excluded middle for the theorems on some course (`Presence.every_iff_em`, `Presence.past_every_iff_em`, `Presence.together_every_iff_em`, `Presence.present_least_iff_em`, `Presence.either_order_iff_weakly`, `Presence.present_some_iff_weakly`). On three elements, `0` below `1` and `2`, `0` is present at `2`'s birth on one course and not on another, and the present after two births is exactly `1` on one course and exactly `2` on another (`Presence.Vee.present_swap`, `Presence.Vee.not_present_identity`, `Presence.Vee.maximal_after_two_identity`, `Presence.Vee.maximal_after_two_swap`). On Wüthrich and Callender's four elements their relation, kept by every automorphism, is not what every course has born by a birth, and on those elements it is the past with the pair present together on every course (`Presence.Diamond.kept_not_agreed`, `Presence.Diamond.pastOrPair_iff_together`); elsewhere that join need not be transitive (`Presence.SameFuture.pastOrTogether_not_trans`). Each main theorem is also stated on the courses of the growth themselves, the runs of its process from the empty set (`Presence.every_course_iff`, `Presence.prec_iff_every_course`, `Presence.present_some_course`, `Presence.present_every_course_only_link`). Each theorem is near-definitional, a lemma, a witness or a calibration ([record](../results/records/the-present-on-causal-set-growth.md)).",
+  "flagged": [
+   "docstring",
+   "record"
+  ],
+  "faults": {
+   "docstring": {
+    "fable": "Minor: 'The natural labellings of `c` are exactly…' does not say c is ordered; the premise is only in the signature below it.",
+    "astra": "“The natural labellings of `c` are exactly” gives the equivalence for c without the `ordered` premise or a pointer restricting c to the orders of the growth."
+   },
+   "record": {
+    "fable": "none (law 2); the record's hypotheses say 'causal set' means Causet.Ordered.",
+    "astra": "“Every causal set is grown from the empty set” in the matching law leaves `c.Ordered` unrestricted. The hypotheses field identifies it, but the law does not direct the reader there. A raw `Causet` supplies only a size and a relation."
+   }
+  },
+  "verdicts": {
+   "record": {
+    "fable": "exact",
+    "astra": "says-more"
+   },
+   "chapter": {
+    "fable": "exact",
+    "astra": "exact"
+   },
+   "docstring": {
+    "fable": "says-more",
+    "astra": "says-more"
+   }
+  },
+  "section_context": [
+   "variable {c : Causet} {π σ : Nat → Nat}"
+  ]
+ },
+ {
+  "n": 6,
+  "id": "learning-by-refutation",
+  "declaration": "Becoming.Learning.no_prefix_fixes_next",
+  "lean_file": "becoming/Becoming/Learning.lean",
+  "line": 236,
+  "hypotheses_fable": "2 hypotheses",
+  "signature": "theorem no_prefix_fixes_next (pred : List O → Option O) (o : Nat → O) (t : Nat) {x y : O}\n    (two : x ≠ y) {w : O} (claims : pred (prefixOf o t) = some w) :\n    prefixOf (holdFrom o t x) t = prefixOf o t ∧ prefixOf (holdFrom o t y) t = prefixOf o t ∧\n      holdFrom o t x t = x ∧ holdFrom o t y t = y ∧\n      ¬ (¬ MissesAt pred (holdFrom o t x) t ∧ ¬ MissesAt pred (holdFrom o t y) t) :=",
+  "docstring": "/-- **No prefix fixes the next value.** For every course and every step `t`, given two values\nthere are two courses with the same prefix before `t`, taking the one value and the other at\n`t`; a value proposed from that prefix is not right on both. Nothing about the course is\nassumed. -/",
+  "record_statement": "Given a map moving every value, every extrapolation has an open course on which each proposal misses; no prefix fixes the next value. In a world held by a list, elimination misses boundedly often, its rest, unrefuted, occurs only there, and no prefix shows when; over classes it is the same learning.",
+  "record_law": "For every extrapolation, course and step t, and two different values: the courses that keep the course before t and hold one value or the other from t on share its prefix before t, and a value proposed from that prefix is not right on both; with equality of values decided, it misses on one of them.",
+  "chapter_file": "theories/becoming/chapters/03-KNOWING.md",
+  "chapter_line": 222,
+  "chapter_paragraph": "**Theorem** (any type; values decided only where an extrapolation needs them). A course is a sequence of values; an extrapolation maps a prefix to a proposed value or silence. With two values no prefix fixes the next value: the prefix continues with either, and a proposal is not right on both, even among courses of worlds a list holds. For every extrapolation and every map moving each value, the diagonal course makes each value proposed miss, and its history-keeping realization, the growing prefixes, is held by no list. Extrapolation by elimination never passes a candidate that accords; where a determined law's orbit is held by a list of length N, over the lasso candidates it misses fewer than `tri N` times, and that it has come to rest cannot be refuted, though no prefix shows when. Lean: `Learning.no_prefix_fixes_next`, `Learning.diagonal_misses`, `Learning.diagonal_open`, `Learning.held_byElimination_bounded`; [record](../results/records/learning-by-refutation.md). Learning over merged classes has its own diagonal; rest's step is in [§6](#r-identification-where-bounded).",
+  "flagged": [
+   "chapter"
+  ],
+  "faults": {
+   "chapter": {
+    "fable": "none. 'even among courses of worlds a list holds' is no_prefix_fixes_next_finite with lasso_realized, proved but not cited at the home.",
+    "astra": "“Even among courses of worlds a list holds” adds finite-world realization to the prefix result. That assertion is established separately by `no_prefix_fixes_next_finite`."
+   }
+  },
+  "verdicts": {
+   "record": {
+    "fable": "exact",
+    "astra": "exact"
+   },
+   "chapter": {
+    "fable": "exact",
+    "astra": "says-more"
+   },
+   "docstring": {
+    "fable": "exact",
+    "astra": "says-less"
+   }
+  },
+  "section_context": [
+   "variable {O : Type u}"
+  ]
+ },
+ {
+  "n": 7,
+  "id": "inherited-structural-copying",
+  "declaration": "Becoming.Copying.batch_all_iff",
+  "lean_file": "becoming/Becoming/Copying.lean",
+  "line": 502,
+  "hypotheses_fable": "0 hypotheses (any alphabet with decided equality, any law of draws, any release r, words, pool and support). Every copy of the batch is released if and only if the pool supplies all the words joined and the total of each word's draws plus r is at most the free support.",
+  "signature": "theorem batch_all_iff (r : Nat) : ∀ (words : List (List α)) (pool : List α) (free used : Nat),\n    Every (batch draw r words pool free used).1 ↔\n      Supplies (joinAll words) pool ∧ totalOf (fun w => use draw none w + r) words ≤ free\n  | [], pool, free, _ => ⟨fun _ => ⟨supplies_nil pool, Nat.zero_le free⟩, fun _ => trivial⟩",
+  "docstring": "/-- **Copies from one shared pool.** Every copy of the batch is released exactly when the pool\nsupplies all the words together and the support covers all their draws and releases. The\norder of the words does not matter for this. -/",
+  "record_statement": "Copies made in turn from one pool are all released exactly when it supplies the words together and the support covers their draws and releases, in any order; under local draws a word's use depends on the law only through its length and unlike adjacent pairs, so retained order changes what is drawn.",
+  "record_law": "Copying words in turn from one shared pool and support, each from no previous token, and releasing each copy that completes with r free: every copy is released exactly when the pool supplies all the words joined together and the support covers all their draws and releases. Exchanging two adjacent words, which generates every reordering, keeps whether every copy is released.",
+  "chapter_file": "theories/becoming/chapters/04-LIFE.md",
+  "chapter_line": 108,
+  "chapter_paragraph": "| <a id=\"r-inherited-structural-copying\"></a>Inherited arrangement changes further copying ([record](../results/records/inherited-structural-copying.md), [StructuralCopying.lean][structural]) | Copies drawn in turn from one pool are all released exactly when the pool supplies all the words together and the support covers all their draws and releases (`Becoming.Copying.batch_all_iff`), in any order (`Becoming.Copying.batch_all_swap`); under local draws a word's use depends on the law only through its length and its unlike adjacent pairs (`Becoming.Copying.use_word`), so retained order changes what further copying draws | a nonempty template strand whose bonds are the path on its tokens is copied and released exactly when the pool supplies its tokens and the support covers its draws plus one, for every pool | ordered access, adjacency draws, release, occurrence order |",
+  "flagged": [
+   "docstring",
+   "record"
+  ],
+  "faults": {
+   "docstring": {
+    "fable": "none; 'The order of the words does not matter' is batch_all_swap, the next theorem.",
+    "astra": "“Every copy of the batch is released exactly when” omits the decidable token equality used by the copying and supply tests."
+   },
+   "record": {
+    "fable": "none (law 2)",
+    "astra": "“Copying words in turn from one shared pool and support” gives the correct criterion but leaves the alphabet unrestricted. Decidable token equality appears in the hypotheses field without a pointer from this law."
+   }
+  },
+  "verdicts": {
+   "record": {
+    "fable": "exact",
+    "astra": "says-more"
+   },
+   "chapter": {
+    "fable": "exact",
+    "astra": "exact"
+   },
+   "docstring": {
+    "fable": "exact",
+    "astra": "says-more"
+   }
+  },
+  "section_context": [
+   "variable {α : Type u} [DecidableEq α]",
+   "variable (draw : Option α → α → Nat)"
+  ]
+ },
+ {
+  "n": 8,
+  "id": "consumption-ends-with-feeders",
+  "declaration": "Becoming.Flow.Balances.unfed_consumption_ends",
+  "lean_file": "becoming/Becoming/Interdependence.lean",
+  "line": 189,
+  "hypotheses_fable": "5 hypotheses",
+  "signature": "theorem Balances.unfed_consumption_ends (balances : L.Balances W) (acting : L.Acting W)\n    (dependent : W.Dependent) {c : C} {g : F} {T : Nat}\n    (unfed : ∀ t f, T ≤ t → W.active t g → f ∈ L.present t → W.Supported t f →\n      L.give t f c = 0)\n    (consumes : ∀ t, T ≤ t → W.active t g → g ∈ L.present t ∧ 0 < L.take t g c) :\n    ∀ n, (∀ k, k < n → W.active (T + k) g) → n ≤ W.level T c :=",
+  "docstring": "/-- Unfed consumption ends. Under balance, with only active formations giving and activity\nneeding support, let `g` take from `c` at every step from `T` at which it is active, while\nnothing supported gives to `c`. Then `g` is active for at most as many consecutive steps from\n`T` as the level of `c` at `T`. -/",
+  "record_statement": "Under balance, with only active formations giving and activity needing support, a formation taking from a condition fed by nothing supported, as where feeders are unsupported, stays active at most as many consecutive steps as that level; keeping its own support, it can still end through its feeder.",
+  "record_law": "Let the flow balance, with only active formations giving and activity needing support. If a formation g is present and takes from a condition c at every step from T at which it is active, while nothing supported gives to c at those steps, then g is active for at most as many consecutive steps from T as the level of c at T (derived from Flow.excess_bounded), so it is not active at every step from T.",
+  "chapter_file": "theories/becoming/chapters/02-MAP.md",
+  "chapter_line": 303,
+  "chapter_paragraph": "**Theorem** (World). Under balance, only active formations giving and activity needing support, a formation taking from a condition at every step from `T` at which it is active, while nothing supported gives to it, is active for at most as many consecutive steps from `T` as the condition's level at `T` (`Flow.Balances.unfed_consumption_ends`); the same holds where it requires the condition while active and everything feeding its continuation is unsupported (`Flow.Balances.consumption_ends_with_feeders`): keeping its own support, it can still end through its feeder, as in `Overshoot`. Either of two redundant feeders suffices; withholding both leaves no balancing path ([record](../results/records/consumption-ends-with-feeders.md)).",
+  "flagged": [
+   "chapter",
+   "docstring"
+  ],
+  "faults": {
+   "chapter": {
+    "fable": "Minor: 'a formation taking from a condition at every step from `T` at which it is active' drops that it is present (g ∈ L.present t).",
+    "astra": "“A formation taking from a condition at every step … at which it is active” omits that g is listed in `L.present` at those steps. A positive `L.take` entry contributes to total taking only for a listed participant."
+   },
+   "docstring": {
+    "fable": "Minor: 'let `g` take from `c` at every step from `T` at which it is active' drops that g is present.",
+    "astra": "“Let `g` take from `c` at every step … at which it is active” omits the same membership conjunct of `consumes`."
+   }
+  },
+  "verdicts": {
+   "record": {
+    "fable": "exact",
+    "astra": "exact"
+   },
+   "chapter": {
+    "fable": "says-more",
+    "astra": "says-more"
+   },
+   "docstring": {
+    "fable": "says-more",
+    "astra": "says-more"
+   }
+  },
+  "section_context": [
+   "variable (L : Flow F C) (W : Web F C)",
+   "variable {L W}"
+  ]
+ },
+ {
+  "n": 9,
+  "id": "timely-response-necessity",
+  "declaration": "Becoming.TimedResponse.different_answers_not_unreached",
+  "lean_file": "becoming/Becoming/TimedResponse.lean",
+  "line": 177,
+  "hypotheses_fable": "7 hypotheses",
+  "signature": "theorem different_answers_not_unreached {A : Type} {g : F}\n    (read : (Nat → C → Nat) → A)\n    (through : ∀ l l', W.AlikeThroughUpTo obs g l l' D → read l = read l')\n    (different : read W.level ≠ read W'.level) : ¬ ¬ ReachedBy L L' W obs source g D :=",
+  "docstring": "/-- Constructive necessity: different outputs rule out absence of a timely route. -/",
+  "record_statement": "Between two courses with alike initial levels, balance, the same formations present and the rest responding through its couplings before a deadline, an answer read through the reader's couplings is the same in both wherever the reader is unreached by then from the source.",
+  "record_law": "For two courses alike at step 0 and, before a deadline D, balanced, with the same formations present and each formation outside a time-indexed source exchanging alike where alike through its couplings so far, and a readout giving alike on histories alike through the reader's couplings up to D: different answers make its being unreached by D impossible, and with reach by D decided, give it reached.",
+  "chapter_file": "theories/becoming/chapters/03-KNOWING.md",
+  "chapter_line": 90,
+  "chapter_paragraph": "**Theorem** (World; balance before the deadline). For two courses with common initial levels, balance and the same formations present before a deadline D, every formation outside a time-indexed source responding through what coupled into it before, and a common readout through what couples in up to D, a distinction that has not entered by D what the reader couples into cannot change the answer by D. Constructively the necessity is double-negated: different answers show the distinction not unreached (`TimedResponse.different_answers_not_unreached`); with reaching decided, reached (`TimedResponse.different_answers_require_reached`). Lean: `TimedResponse.answer_alike_before`; [record](../results/records/timely-response-necessity.md). Steps have no physical duration.",
+  "flagged": [
+   "docstring"
+  ],
+  "faults": {
+   "docstring": {
+    "fable": "'Constructive necessity: different outputs rule out absence of a timely route.' states no premise; the five deadline premises are section variables brought in by `include`, and the readout premise is in the signature.",
+    "astra": "“Different outputs rule out absence of a timely route” omits the two balance assumptions, common participants and start, response through couplings and readout factorization."
+   }
+  },
+  "verdicts": {
+   "record": {
+    "fable": "exact",
+    "astra": "exact"
+   },
+   "chapter": {
+    "fable": "exact",
+    "astra": "exact"
+   },
+   "docstring": {
+    "fable": "says-more",
+    "astra": "says-more"
+   }
+  },
+  "section_context": [
+   "variable {F C : Type}",
+   "variable {L L' : Flow F C} {W W' : Web F C}\n    {obs : F → C → Prop} {source : Nat → F → Prop}",
+   "variable {D : Nat}\n    (balanced : ∀ t, t < D → ∀ c,\n      W.level (t+1) c + L.taken t c = W.level t c + L.given t c)\n    (balanced' : ∀ t, t < D → ∀ c,\n      W'.level (t+1) c + L'.taken t c = W'.level t c + L'.given t c)\n    (present : ∀ t, t < D → L.present t = L'.present t)\n    (start : ∀ c, W.level 0 c = W'.level 0 c)\n    (responds : ∀ t, t < D → ∀ h, ¬ source t h →\n      W.AlikeThroughUpTo obs h W.level W'.level t →\n      ∀ c, L.take t h c = L'.take t h c ∧ L.give t h c = L'.give t h c)",
+   "include balanced balanced' present start responds"
+  ]
+ },
+ {
+  "n": 10,
+  "id": "feedback-and-reach",
+  "declaration": "Becoming.Flow.Balances.admits_unreached_before",
+  "lean_file": "becoming/Becoming/Feedback.lean",
+  "line": 432,
+  "hypotheses_fable": "3 hypotheses",
+  "signature": "theorem Balances.admits_unreached_before (balances : L.Balances W) {l : Nat → C → Nat}\n    (without : L.WithheldLevels part W l) {t : Nat} {g : F}\n    (unreached : ¬ L.ReachesBefore W part t g) : W.Supported t g ↔ W.Admits (l t) t g :=",
+  "docstring": "/-- What a part has not reached before a step is admitted alike with and without it at that\nstep. -/",
+  "record_statement": "Feedback carries at most the influence closure, and a part shows where it reaches: in a balanced flow levels follow their exchanges, and whatever a part has not reached before a step is admitted alike with and without it there.",
+  "record_law": "At each condition a formation requires at a step, the levels with and without a part agree, or the part reaches the formation before that step; whatever the part has not reached before a step is admitted alike with and without it there, and what it does not reach, at every step.",
+  "chapter_file": "theories/becoming/chapters/03-KNOWING.md",
+  "chapter_line": 82,
+  "chapter_paragraph": "**Theorem** (World; balance; the part withheld with the rest of the exchange unchanged). Levels follow their exchanges, so whatever a part has not reached before a step is admitted alike with and without it there. Nothing beyond a formation's influence closure exchanges with a condition a member depends on, so feedback carries at most the influence closure: with every member of the part beyond it, each formation within is supported with the part exactly where it is admitted without it. Lean: `Flow.Balances.admits_unreached_before`, `Flow.Balances.uncoupled_beyond_influence`; [record](../results/records/feedback-and-reach.md). A formation need not know its closure; one act is compared only through a second flow.",
+  "flagged": [
+   "docstring",
+   "record"
+  ],
+  "faults": {
+   "docstring": {
+    "fable": "'What a part has not reached before a step is admitted alike with and without it at that step.' drops balance, which is in the theorem's name and signature only.",
+    "astra": "“What a part has not reached … is admitted alike with and without it” states the non-reach premise alone. Balance and the prescribed withheld-level comparison are also required."
+   },
+   "record": {
+    "fable": "none, taking statement and law together: law 6 does not say balance, the statement does ('in a balanced flow').",
+    "astra": "“Admitted alike with and without it” leaves the comparison open. The law requires `WithheldLevels`, which fixes the initial levels and the remaining exchanges. The record explains that restriction in `hypotheses` without directing this claim there."
+   }
+  },
+  "verdicts": {
+   "record": {
+    "fable": "exact",
+    "astra": "says-more"
+   },
+   "chapter": {
+    "fable": "exact",
+    "astra": "exact"
+   },
+   "docstring": {
+    "fable": "says-more",
+    "astra": "says-more"
+   }
+  },
+  "section_context": [
+   "variable (L : Flow F C) (W : Web F C)",
+   "variable {L W}",
+   "variable {part : F → Bool}"
+  ]
+ },
+ {
+  "n": 11,
+  "id": "gluing-under-parity",
+  "declaration": "Becoming.ParitySystem.glues_iff",
+  "lean_file": "becoming/Becoming/Gluing.lean",
+  "line": 476,
+  "hypotheses_fable": "2 hypotheses, with equality of claims decided",
+  "signature": "theorem glues_iff [DecidableEq C] (distinct : Distinct S.claims) {all : List K}\n    (every : ∀ k, k ∈ all) :\n    (∃ X : Contextual Unit K C Bool, X.within = S.within ∧ X.Respects S.support () ∧ X.Glues ()) ↔\n      ¬ ∃ ks, S.Contradicts ks :=",
+  "docstring": "/-- **Readings in context glue exactly where no selection of contexts contradicts.** With the\ncontexts listed, some world showing what each context counts, respecting the possibilities,\nglues at its configuration exactly where no selection contradicts. -/",
+  "record_statement": "Where each context requires a parity, claims listed once and compared decidedly, contexts listed, a context-free reading exists exactly where no selection of contexts contradicts; where m do, context-free mixtures meet at most m − 1 on average, a reading per context within its possibilities all m.",
+  "record_law": "The only obstruction: with equality of claims decided and the claims listed without repetition, for every list of contexts a context-free assignment meets each or a selection contradicts; so, the contexts listed, no context-free reading exists exactly where a selection contradicts, and a world showing what each context counts, respecting the possibilities and gluing, exists exactly where none does.",
+  "chapter_file": "theories/becoming/chapters/03-KNOWING.md",
+  "chapter_line": 295,
+  "chapter_paragraph": "**Theorem** (any type; claims listed without repetition and compared decidedly, contexts listed). Where each context requires a parity of its claims, a context-free reading exists exactly where no list of the contexts contradicts (claims counted evenly, parities adding to odd). Where m contexts contradict, every context-free assignment, and on average every mixture, meets at most m − 1, while reading each context by an assignment meeting it, one supplied for each, meets all m: Specker (two of three), CHSH (three of four) and Mermin–Peres (five of six) are cases. Lean: `ParitySystem.glues_iff`, `ParitySystem.mixture_le`, `ParitySystem.indexed_met`; [record](../results/records/gluing-under-parity.md). Tsirelson's bound is not stated; the [unity of readings](01-ROOT.md#r-unity-of-readings) is 01's.",
+  "flagged": [
+   "docstring"
+  ],
+  "faults": {
+   "docstring": {
+    "fable": "'With the contexts listed, some world … glues … exactly where no selection contradicts' drops 'claims listed without repetition' and decided equality; they are stated two comments up, for global_or_contradicts.",
+    "astra": "“With the contexts listed” names coverage but omits decidable claim equality and distinctness of `S.claims`."
+   }
+  },
+  "verdicts": {
+   "record": {
+    "fable": "exact",
+    "astra": "exact"
+   },
+   "chapter": {
+    "fable": "exact",
+    "astra": "says-less"
+   },
+   "docstring": {
+    "fable": "says-more",
+    "astra": "says-more"
+   }
+  },
+  "section_context": [
+   "variable {K C : Type} (S : ParitySystem K C)",
+   "variable {S}",
+   "variable (S)"
+  ]
+ },
+ {
+  "n": 12,
+  "id": "confined-rise-within-a-whole",
+  "declaration": "Becoming.Founding.Flow.survivors_independent",
+  "lean_file": "becoming/Becoming/Founding.lean",
+  "line": 106,
+  "hypotheses_fable": "8 hypotheses",
+  "signature": "theorem survivors_independent (balances : L.Balances W) (acting : L.Acting W)\n    (dependent : W.Dependent) {G : Generations X} (descended : SelectionTerm.Flow.Descended L W G)\n    {ds : List X} {m : Nat}\n    (gated : ∀ t f, f ∈ L.present t → ∀ d, d ∈ ds → 0 < L.give t f d →\n      ∃ e, e ∈ ds ∧ W.requires t f e ∧ m ≤ W.need t f e)\n    {T n : Nat} (excess : ∀ k, k < n → L.replenishment ds (T + k) < L.uptake ds (T + k))\n    (start : W.stock ds T < n + m) (k : Nat) {x : X} (mx : x ∈ G.family (T + n + k + 1)) :\n    ∃ p, p ∈ G.family (T + n + k) ∧ x ∈ G.kids (T + n + k) p ∧\n      ∀ e, e ∈ ds → W.requires (T + n + k) p e → ¬ m ≤ W.need (T + n + k) p e :=",
+  "docstring": "/-- **What outlasts the end of a family of conditions.** Where only active formations give,\nactivity needs support and the renewal of a family of conditions is gated on the family as one,\n`n` steps of the family's uptake exceeding its replenishment from `T`, from a stock below `n + m`,\nleave every member of a later generation of descent the offspring of a member that depended on no\ncondition of the family at a need of at least `m`. -/",
+  "record_statement": "A lineage confined to a whole's conditions in excess has no member once they end, whatever selection within raised; selection within a whole founded uniform needs variation arisen in it; where next founders carry their founder's value, selection among wholes decides the rise.",
+  "record_law": "Where a family of conditions ran into excess under the coupled gate, every member of a later generation of descent is the offspring of a member that depended on no condition of the family at the gate's need, and a lineage every later member of which depends on the family has no member after its end.",
+  "chapter_file": "theories/becoming/chapters/04-LIFE.md",
+  "chapter_line": 216,
+  "chapter_paragraph": "**Theorem** (World; any type for the founding theorems). *A confined rise within a whole, and what a founding carries.* Within one whole the two levels meet.",
+  "flagged": [
+   "docstring",
+   "record"
+  ],
+  "faults": {
+   "docstring": {
+    "fable": "'Where only active formations give, activity needs support and the renewal … is gated on the family as one, `n` steps … from a stock below `n + m`': balance is dropped.",
+    "astra": "“Where only active formations give, activity needs support and the renewal … is gated” omits `balances : L.Balances W`. The docstring does give the length of the excess and the strict stock bound."
+   },
+   "record": {
+    "fable": "Law 0, 'Where a family of conditions ran into excess under the coupled gate, every member of a later generation…': balance, only active giving, activity needing support, and the n steps from a stock below n + m are in `hypotheses` only, and the law does not send the reader there.",
+    "astra": "“Where a family of conditions ran into excess under the coupled gate” omits the stock bound and the balance, active-giving and support premises. An excess from an arbitrarily high starting stock gives no such conclusion. The law does not point to the record's hypotheses field."
+   }
+  },
+  "verdicts": {
+   "record": {
+    "fable": "says-more",
+    "astra": "says-more"
+   },
+   "chapter": {
+    "fable": "exact",
+    "astra": "exact"
+   },
+   "docstring": {
+    "fable": "says-more",
+    "astra": "says-more"
+   }
+  },
+  "section_context": [
+   "variable {X : Type} {L : Flow X X} {W : Web X X}"
+  ]
+ },
+ {
+  "n": 13,
+  "id": "finite-fallible-inquiry-necessity",
+  "declaration": "Becoming.FallibleInquiry.alike_with_common_imbalance",
+  "lean_file": "becoming/Becoming/FallibleInquiry.lean",
+  "line": 132,
+  "hypotheses_fable": "4 hypotheses, no balance",
+  "signature": "theorem alike_with_common_imbalance\n    (present : ∀ s, L.present s = L'.present s)\n    (start : ∀ h, ¬ L.WithinResponse L' W obs part h →\n      ∀ c, W.CoupledInto obs h c → W.level 0 c = W'.level 0 c)\n    (responds : L.RespondsThroughCoupling L' W W' obs part)\n    (residual : ∀ s c,\n      (L.withImbalance W).take s none c = (L'.withImbalance W').take s none c ∧\n      (L.withImbalance W).give s none c = (L'.withImbalance W').give s none c) :\n    ∀ s h, ¬ L.WithinResponse L' W obs part h →\n      W.AlikeThrough obs h W.level W'.level s := by",
+  "docstring": "/-- Absolute balance is stronger than needed for blindness. The same unaccounted\nchange in the two courses suffices: after P59 accounts for it, the added relatum\nresponds alike, and the original closed-region theorem applies. -/",
+  "record_statement": "Over finitely many weighted alternatives with a binary target, committed coverage is at most the two error weights plus the weight the evidence separates; for balanced courses of one law, at most the two errors plus the weight within responsive reach, equal to them entirely beyond reach.",
+  "record_law": "For two courses, not taken as balanced, with the same formations present at every step, alike initial levels on what couples in beyond the part's responsive reach, the rest responding through its couplings, and residual giving and taking alike at every step and condition: every formation beyond that reach is alike through its couplings at every step, and every readout through them up to a step answers alike.",
+  "chapter_file": "theories/becoming/chapters/03-KNOWING.md",
+  "chapter_line": 411,
+  "chapter_paragraph": "**Theorem** (periphery; finite weighted alternatives, a binary target, complete available inputs; `propext` and `Quot.sound` in some declarations, as the record reports). Committed coverage is at most the two error weights plus the weight the evidence separates. Composed with balanced World courses of one law, the same formations present, alike initial levels of what couples in beyond reach, and answers through everything that couples in up to the answer time, coverage is at most the two errors plus the weight within responsive reach, reach decided, and entirely beyond reach equals them with no decision; common residual exchange suffices for answers alike beyond reach (`FallibleInquiry.alike_with_common_imbalance`), and an omitted exchange can keep correct readouts while invalidating the bound. Lean: `ScientificInquiryNecessity.fallible_inquiry_bound`, `FallibleInquiry.coverage_le_errors_add_reach`, `FallibleInquiry.beyond_reach_coverage_eq_errors`; [record](../results/records/finite-fallible-inquiry-necessity.md). Necessary, not sufficient; structural reach is not time-ordered transmission ([§2](#r-timely-response-necessity)).",
+  "flagged": [
+   "chapter",
+   "docstring"
+  ],
+  "faults": {
+   "chapter": {
+    "fable": "'common residual exchange suffices for answers alike beyond reach (`FallibleInquiry.alike_with_common_imbalance`)': the cited theorem has no readout and gives alikeness through couplings; 'answers alike' is answer_alike_with_common_imbalance, not cited at the home.",
+    "astra": "“Common residual exchange suffices for answers alike beyond reach” cites the selected theorem for equality of answers. Its conclusion is `AlikeThrough` at every step. Equality for a readout that factors through these couplings is the separately named `answer_alike_with_common_imbalance`."
+   },
+   "docstring": {
+    "fable": "'Absolute balance is stronger than needed for blindness. The same unaccounted change in the two courses suffices': the three other premises are unnamed and the conclusion is 'blindness'. Read as a remark on the balanced theorem it widens, it is only vague.",
+    "astra": "“The same unaccounted change in the two courses suffices” leaves out common participants, relevant initial agreement and response through couplings. Lean compares residual taking and residual giving component by component."
+   }
+  },
+  "verdicts": {
+   "record": {
+    "fable": "exact",
+    "astra": "exact"
+   },
+   "chapter": {
+    "fable": "says-more",
+    "astra": "says-other"
+   },
+   "docstring": {
+    "fable": "says-more",
+    "astra": "says-more"
+   }
+  },
+  "section_context": [
+   "variable {F C : Type} {L L' : Flow F C} {W W' : Web F C}\n  {obs : F → C → Prop} {part : F → Bool} {g : F} {t : Nat}"
+  ]
+ },
+ {
+  "n": 14,
+  "id": "open-form-realization-under-revision",
+  "declaration": "Becoming.Handoff.Run.novel_by_handoff",
+  "lean_file": "becoming/Becoming/Handoff.lean",
+  "line": 156,
+  "hypotheses_fable": "4 hypotheses, with completion decided",
+  "signature": "theorem Run.novel_by_handoff {S A Q : Type} (M : Frame S A Q) (r : Run M.P) (living : Q → Prop)\n    (before : S → Q → Prop) (rank : Nat → S → Nat) (completed : Nat → Prop)\n    (decision : ∀ n, Decidable (completed n)) (bound : Nat) (initial : rank 0 (r.state 0) ≤ bound)\n    (localStep : ∀ n, ¬ completed n → rank n (r.state (n + 1)) < rank n (r.state n))\n    (handoff : ∀ n, ¬ completed n → rank (n + 1) (r.state (n + 1)) ≤ rank n (r.state (n + 1)))\n    (correspondence : ∀ n, completed n → Novel M living before (r.state (n + 1))) :\n    ∃ n, n ≤ bound ∧ Novel M living before (r.state (n + 1)) :=",
+  "docstring": "/-- **Along a run of a frame**, the handed certificate gives new realization within the bound.\nCompletion-to-realization correspondence stays a visible premise; a bound `B` allows at most\n`B + 1` steps. -/",
+  "record_statement": "Where completion is decided, unfinished steps lower the current rule's certificate, handoffs keep it from rising and completions realize new living content, a run initially certified at most B realizes such content by step B + 1; rules each finishing if kept can, revised every step, never complete.",
+  "record_law": "Along a run of a frame, with decided completion, an initial certificate at most B, each unfinished step lowering the current rule's certificate, each handoff not raising it, and each completion at step n giving living content realized at step n + 1 and absent before: for some n at most B, such content is realized at step n + 1.",
+  "chapter_file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+  "chapter_line": 193,
+  "chapter_paragraph": "**Theorem** (any process) **and Conditional** (the continuation condition). Along a run of a frame, let each unfinished step lower the current rule's remaining-step certificate, each handoff to a revised rule not raise it, completion be decided and the initial certificate be at most `B`. Then, where each completion corresponds to new living content, the run realizes by step `B + 1` living content absent before (`Handoff.Run.novel_by_handoff`), which under the condition falls under the relevance read from significance (`Handoff.Run.relevance_by_handoff_of_unrestricted`). Witnesses: the realized form is not fixed, and without the handoff hypothesis rules each finishing when kept, revised at every step, never complete (`Handoff.fails_forever`). ([record](../results/records/open-form-realization-under-revision.md))",
+  "flagged": [
+   "docstring"
+  ],
+  "faults": {
+   "docstring": {
+    "fable": "'the handed certificate gives new realization within the bound': the three certificate premises and decided completion are not named; the correspondence premise is.",
+    "astra": "“The handed certificate gives new realization within the bound” mentions completion-to-realization correspondence but does not specify or point to decidability, initial rank ≤ B, strict local descent and non-increasing handoff."
+   }
+  },
+  "verdicts": {
+   "record": {
+    "fable": "exact",
+    "astra": "exact"
+   },
+   "chapter": {
+    "fable": "exact",
+    "astra": "exact"
+   },
+   "docstring": {
+    "fable": "says-less",
+    "astra": "says-more"
+   }
+  },
+  "section_context": []
+ }
+]

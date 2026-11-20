@@ -1,0 +1,224 @@
+# Writer's task (the trial on twenty theorems)
+
+AI-written brief (Claude Fable), 21 November 2026. You are one of two writers. This file is everything you need: do not open any other file, run no command, and start no subagent. Your whole run is this one Read and your answer.
+
+What we are doing. This repository holds a theory whose core is proved in Lean 4. Each theorem is told by hand in several places: its docstring in the Lean file, a law in its result record, and a sentence in a chapter. Two readers found that for the theorems below at least one of those tellings says more than the Lean statement, most often by dropping a premise. A person who reads only the telling is then misled about when the theorem applies. Rule of the work: a telling of a proof says exactly what is proved, its premises stated.
+
+Your job, for each theorem below: for every telling marked FLAGGED, write a wording that says exactly what the signature says, no more and no less, in plain English a careful reader with no Lean can follow. Keep it as short as the truth allows; keep the telling's own register (a docstring stays a docstring: one short paragraph; a chapter sentence stays one or two sentences that could stand in the chapter; a record law stays one sentence). Do not rewrite a telling that is not flagged. Use the two readers' fault notes, but judge from the signature yourself: if a note is wrong, say so in `note`.
+
+Also, for each theorem whose signature has at least one hypothesis: list its hypotheses in plain words, one per item, in the order of the signature (`hypotheses_plain`), and write one concrete `failing_case`: two or three plain sentences describing a situation that meets every hypothesis but one, saying nothing about which one fails and using no Lean names, such that a reader who knows the hypotheses can tell the theorem does not apply. Name the failed hypothesis separately in `fails`.
+
+Do not soften: where the signature is narrower than every telling, say the narrow thing. Do not add anything the signature does not state (no reasons, no significance, no "so that").
+
+---
+
+## Theorem 1: `Becoming.Weights.sum_append` (record `losses-of-the-sum-over-histories`)
+
+**Signature** (becoming/Becoming/Weighted.lean, line 113):
+
+```lean
+theorem sum_append {α : Type u} (f : α → R) :
+    ∀ l l' : List α, W.sum (l ++ l') f = W.add (W.sum l f) (W.sum l' f)
+  | [], _ => (W.zero_add _).symm
+```
+
+**Docstring as it stands** (not flagged):
+
+(none)
+
+**Record law as it stands** (not flagged):
+
+For every weighting, the sum over the courses kept followed by those dropped is the sum over those kept added to the sum over those dropped; where alternatives only add, as in counting, the sum over the courses kept is at most the sum over all.
+
+**Chapter paragraph as it stands** (FLAGGED; theories/becoming/chapters/01-ROOT.md, line 572):
+
+| <a id="r-losses-of-the-sum-over-histories"></a>[Losses of the sum over histories](../results/records/losses-of-the-sum-over-histories.md) | Theorem (any process; witnesses on one configuration). For every weighting a truncation misses exactly what it drops, and where alternatives only add it bounds the whole from below (`Weights.sum_append`). Witnesses: with two moves back to one configuration, one adding and one subtracting, each is possible and so is their join while the signed count balances, and possibility cannot see it (`Interference.unseen`); a weighting needing the move before is no step weighting on one configuration, and is one where that move is kept (`Memory.not_of_steps`); loops double the courses, `2^n` of `n` steps. Signed counts are pairs of natural numbers compared by balance, the pure core taking no quotient; unbounded horizons are not stated. |
+
+**The two readers' fault notes on the flagged tellings:**
+
+- chapter, reader 1: 'and where alternatives only add it bounds the whole from below (`Weights.sum_append`)': the bound is counting_truncation_le, not cited at the home, and the Lean proves it for the counting weights on Nat only, not 'where alternatives only add'. 'misses exactly what it drops' is a looser wording of the equation.
+- chapter, reader 2: “It bounds the whole from below” shares the sole citation `Weights.sum_append`. That theorem gives an equality in a structure with no order. The lower bound for natural-number counting has its own theorem.
+
+## Theorem 2: `Becoming.LoopReturn.nothing_between` (record `whether-a-loop-closes-a-difference`)
+
+**Signature** (becoming/Becoming/LoopReturn.lean, line 537):
+
+```lean
+theorem nothing_between (as : List Nat) (d n : Nat) :
+    (Law.run (returnMap (scaling as)) d).state (n + 1) = 0 ∨
+      (Law.run (returnMap (scaling as)) d).state n ≤ (Law.run (returnMap (scaling as)) d).state (n + 1) :=
+```
+
+**Docstring as it stands** (not flagged):
+
+/-- **No loop of multiplying links closes a difference gradually.** At every turn the course is
+`0`, or no less than at the turn before. -/
+
+**Record law as it stands** (FLAGGED):
+
+With links multiplying by whole-number factors, product 0 closes at the first turn, product 1 keeps the difference, product at least 2 exceeds every bound; no such loop closes gradually, while taking one off does.
+
+**Chapter paragraph as it stands** (FLAGGED; theories/becoming/chapters/02-MAP.md, line 352):
+
+**Theorem** (any type; World for the ring read on flows). A difference around a loop is the course of a return map. Where every link gives on at least what it receives the difference never falls, so a loop closes a difference only through a link giving back less; a map below the identity off zero closes within `d` turns, exactly, and merges. With whole-number factors a loop closes at once, keeps, or exceeds every bound, never closing gradually (`LoopReturn.nothing_between`). A self-loop of strength `M` has factor `1 + M`; read on balanced flows (World; witness), on a ring of two or more conditions with one positive strength on every link and a positive starting gap, one plus the product of strengths is strictly below a turn (`LoopReturn.Ring.bound_strict`) ([record](../results/records/whether-a-loop-closes-a-difference.md)).
+
+**The two readers' fault notes on the flagged tellings:**
+
+- chapter, reader 1: 'With whole-number factors a loop closes at once, keeps, or exceeds every bound, never closing gradually (`LoopReturn.nothing_between`)': the three cases are whole_factors, not cited at the home, and 'exceeds every bound' there needs a positive start (0 < d), which is dropped.
+- chapter, reader 2: “Closes at once, keeps, or exceeds every bound” attributes a classification of the entire course to `nothing_between`. Its conclusion rules out a positive decrease at one turn. The product classification, including the positive-start condition for growth, is in `whole_factors`.
+- record, reader 1: 'no such loop closes gradually' (law 4): the slogan only, without 'zero, or no less than at the turn before'.
+- record, reader 2: “No such loop closes gradually” is exact. In the same law, “product at least 2 exceeds every bound” drops the positive-start premise of the companion `whole_factors`. A start of zero stays zero.
+
+## Theorem 3: `Becoming.OneStep.every_iff` (record `laws-of-one-step-complete`)
+
+**Signature** (becoming/Becoming/OneStep.lean, line 1120):
+
+```lean
+theorem every_iff (P : List Passage) (k : Nat) (e : Prop) :
+    Realized (fun _ _ _ => True) P k e ↔ Every P k e :=
+```
+
+**Docstring as it stands** (not flagged):
+
+/-- **The law of every step is all the law of one step.** A pattern is shown by some world
+across some step on some family exactly when it satisfies the law of every step. -/
+
+**Record law as it stands** (not flagged):
+
+A pattern is shown by some world of the spine across some step on some family, the world listing each relatum taking part once, exactly when it satisfies the law of every step; on a family balanced on across the step, exactly when each passage also balances; on a family running down across it, exactly when moreover the family's total falls by at least the number of relata taking from it.
+
+**Chapter paragraph as it stands** (FLAGGED; theories/becoming/chapters/01-ROOT.md, line 565):
+
+| <a id="r-laws-of-one-step-complete"></a>[Completeness of the laws of one step](../results/records/laws-of-one-step-complete.md) | A pattern of one step on a family (levels before and after, what is taken and given, takers, givers) is shown by some world, each relatum taking part listed once, exactly where it satisfies the law of every step (something taken has between one and that many takers; something taken or given, an exchange), the law of the givers (something given has between one and that many givers) and, on a family balanced on, running down, closed or both, that hypothesis's law, running down adding that the givers are at most the takers (`OneStep.every_iff`, `OneStep.every_givers_iff` and companions); across runs on one fixed family the passages also chain. Capacity adds one law, what is given at most capacity times givers; only active giving and taking add none. |
+
+**The two readers' fault notes on the flagged tellings:**
+
+- chapter, reader 1: none, as a merged telling: one sentence states the form with givers and cites `OneStep.every_iff`, `OneStep.every_givers_iff` 'and companions'. every_iff alone (no givers) is not told apart.
+- chapter, reader 2: The single characterization specifies “takers, givers” and requires “the law of the givers.” `every_iff` has no giver-count parameter. The row also cites `every_givers_iff`, which supplies exactly that extension.
+
+## Theorem 4: `Becoming.Weighting.narrower_above_net` (record `a-narrowing-above-its-widening`)
+
+**Signature** (becoming/Becoming/Weightings.lean, line 807):
+
+```lean
+theorem narrower_above_net {kept : P → X → Bool} {R : P → P → Prop} {items : List X}
+    {pos neg : X → Nat} {x : X} {n w : P} (by_ : WidensBy items x (kept w) (kept n))
+    (violates : R w n) :
+    ¬ ReadsSetsOn kept R (ranksNet items pos neg) w n ∨ pos x ≤ neg x :=
+```
+
+**Docstring as it stands** (not flagged):
+
+/-- **A narrowing above its widening, under a net weighting.** Where a ranking of presentations
+puts the narrower of two plans that one item alone separates above the wider, it does not read
+the sets on that pair as the net weighting ranks them, or the added item weighs at zero or
+below. -/
+
+**Record law as it stands** (not flagged):
+
+A ranking of presentations, plans with their wording and order, reads the sets on a pair where it ranks the two as an order on courses ranks what they keep. Read right, an order increasing at the added item never ranks the narrowing above; under a net weighting a narrowing above its widening by one item is a pair not read right or an item at zero or below, and read right it is an item below zero.
+
+**Chapter paragraph as it stands** (FLAGGED; theories/becoming/chapters/07-SIGNIFICANCE.md, line 1050):
+
+**Theorem** (any type). Take a valuer's judgment as a ranking of presentations (plans with their wording and order, each keeping a set of items), and a net weighting as counting each item for a course admitting it and against it. Where such a ranking puts a narrowing above its widening by one item, either it does not rank the pair as its own order ranks the kept sets (a misread or a framing) or the item weighs at zero or below; read right, exactly where it weighs below zero, and at zero it ties (`Weighting.narrower_above_net`, `Weighting.reads_ranksNet`). Read right, where a sign measured apart is the sign of the order's increment from the narrower course to the wider in the pair's context, it fixes the ranking: narrower above exactly where it is a gain, wider exactly where a loss, neither where nothing (`Weighting.reads_increment`); an additive valuation carries it to every context, an interacting one need not. That a judgment is such a ranking is a premise. ([record](../results/records/a-narrowing-above-its-widening.md))
+
+**The two readers' fault notes on the flagged tellings:**
+
+- chapter, reader 1: none; 'its own order' likewise stands for the net weighting, and the paragraph says that a judgment is such a ranking is a premise.
+- chapter, reader 2: “A misread or a framing” interprets the first disjunct. `¬ ReadsSetsOn` says that the two rankings disagree on the pair. It gives no cause for that disagreement.
+
+## Theorem 5: `Becoming.Presence.natural_iff_course` (record `the-present-on-causal-set-growth`)
+
+**Signature** (becoming/Becoming/Presence.lean, line 440):
+
+```lean
+theorem natural_iff_course (ordered : c.Ordered) :
+    NaturalLabelling c π σ ↔ ∃ r : Run process, r.state 0 = empty ∧
+      CausalGrowth.Kinds.Relabels c (r.state c.size) π σ :=
+```
+
+**Docstring as it stands** (FLAGGED):
+
+/-- **The orders of birth.** The natural labellings of `c` are exactly the numberings of its
+elements by a course from the empty set whose configuration at `c`'s size is of `c`'s kind: on such
+a course `c`'s element `i` is the one born at offset `π i`. -/
+
+**Record law as it stands** (FLAGGED):
+
+The orders of birth. Every causal set is grown from the empty set, bearing the element t at offset t with its past (pastIn, pastIn_stem, courseOf, courseOf_grows, courseOf_isomorphic), and the natural labellings are exactly the numberings of its elements by a course from the empty set whose configuration at its size is of its kind (natural_iff_course).
+
+**Chapter paragraph as it stands** (not flagged; theories/becoming/chapters/01-ROOT.md, line 46):
+
+**Theorem** (causal-set growth, and witnesses). *The present on causal-set growth.* The grammar has no relation of presence in time ([Open](#open)); causal-set growth ([07 §2](07-SIGNIFICANCE.md#r-what-can-be-born-next)) is a model in which one can be read and the question asked exactly. Its labels, the order of births, are taken to carry no physical meaning (discrete general covariance, Rideout and Sorkin 2000), a premise of the model. The renumberings of a causal set keeping precedence, its natural labellings (`Presence.NaturalLabelling`), are exactly the orders of birth of the courses from the empty set growing a configuration of its kind (`Presence.natural_iff_course`), and births of unrelated elements commute, and only they (`Presence.rearranges_iff_natural`, an instance of the core's theorem of Mazurkiewicz). What a course has born by a stage is a stem, and every stem with decided membership is what some course bears first (`Presence.born_stem`, `Presence.stem_born_first`). With precedence decided, an element is born before another on every course exactly where it precedes it (`Presence.prec_iff_every`), so what is born no later than an element on every course is its past with itself, the largest relation every course respects (`Presence.past_every_iff`, `Presence.past_largest`); with precedence weakly decided, it is born before it on some course exactly where the two differ and the other does not precede it (`Presence.before_some_iff`), so no order of birth of unrelated elements is common to all courses (`Presence.either_order`). Read the present at a stage as the maximal elements of what a course has born, where the grammar's ending holds on what is born (`Presence.MaximalBorn`, `Presence.maximalBorn_iff_ends`). It is an antichain (`Presence.maximalBorn_unrelated`), and with precedence weakly decided every antichain given by a test is one (`Presence.antichain_present`); two elements are present together on some course exactly where neither precedes the other, precedence weakly decided, and on every course exactly where they have the same future, precedence decided (`Presence.together_some_iff`, `Presence.together_every_iff`), which is not co-presence, mutual reach. A condition is present at the birth of what it conditions where nothing it precedes is born before (`Presence.PresentAt`): on some course exactly where it is a link below it, precedence weakly decided (`Presence.present_some_iff_link`), and on every course exactly where that is the one element it is linked to, with no decision (`Presence.present_every_iff_only_link`). Asked of every causal set, each calibrated decision is exactly its principle: excluded middle for the decided forms of born before, present together and the least element above on every course, weak excluded middle for the theorems on some course (`Presence.every_iff_em`, `Presence.past_every_iff_em`, `Presence.together_every_iff_em`, `Presence.present_least_iff_em`, `Presence.either_order_iff_weakly`, `Presence.present_some_iff_weakly`). On three elements, `0` below `1` and `2`, `0` is present at `2`'s birth on one course and not on another, and the present after two births is exactly `1` on one course and exactly `2` on another (`Presence.Vee.present_swap`, `Presence.Vee.not_present_identity`, `Presence.Vee.maximal_after_two_identity`, `Presence.Vee.maximal_after_two_swap`). On Wüthrich and Callender's four elements their relation, kept by every automorphism, is not what every course has born by a birth, and on those elements it is the past with the pair present together on every course (`Presence.Diamond.kept_not_agreed`, `Presence.Diamond.pastOrPair_iff_together`); elsewhere that join need not be transitive (`Presence.SameFuture.pastOrTogether_not_trans`). Each main theorem is also stated on the courses of the growth themselves, the runs of its process from the empty set (`Presence.every_course_iff`, `Presence.prec_iff_every_course`, `Presence.present_some_course`, `Presence.present_every_course_only_link`). Each theorem is near-definitional, a lemma, a witness or a calibration ([record](../results/records/the-present-on-causal-set-growth.md)).
+
+**The two readers' fault notes on the flagged tellings:**
+
+- docstring, reader 1: Minor: 'The natural labellings of `c` are exactly…' does not say c is ordered; the premise is only in the signature below it.
+- docstring, reader 2: “The natural labellings of `c` are exactly” gives the equivalence for c without the `ordered` premise or a pointer restricting c to the orders of the growth.
+- record, reader 1: none (law 2); the record's hypotheses say 'causal set' means Causet.Ordered.
+- record, reader 2: “Every causal set is grown from the empty set” in the matching law leaves `c.Ordered` unrestricted. The hypotheses field identifies it, but the law does not direct the reader there. A raw `Causet` supplies only a size and a relation.
+
+## Theorem 6: `Becoming.Learning.no_prefix_fixes_next` (record `learning-by-refutation`)
+
+**Signature** (becoming/Becoming/Learning.lean, line 236):
+
+```lean
+theorem no_prefix_fixes_next (pred : List O → Option O) (o : Nat → O) (t : Nat) {x y : O}
+    (two : x ≠ y) {w : O} (claims : pred (prefixOf o t) = some w) :
+    prefixOf (holdFrom o t x) t = prefixOf o t ∧ prefixOf (holdFrom o t y) t = prefixOf o t ∧
+      holdFrom o t x t = x ∧ holdFrom o t y t = y ∧
+      ¬ (¬ MissesAt pred (holdFrom o t x) t ∧ ¬ MissesAt pred (holdFrom o t y) t) :=
+```
+
+**Docstring as it stands** (not flagged):
+
+/-- **No prefix fixes the next value.** For every course and every step `t`, given two values
+there are two courses with the same prefix before `t`, taking the one value and the other at
+`t`; a value proposed from that prefix is not right on both. Nothing about the course is
+assumed. -/
+
+**Record law as it stands** (not flagged):
+
+For every extrapolation, course and step t, and two different values: the courses that keep the course before t and hold one value or the other from t on share its prefix before t, and a value proposed from that prefix is not right on both; with equality of values decided, it misses on one of them.
+
+**Chapter paragraph as it stands** (FLAGGED; theories/becoming/chapters/03-KNOWING.md, line 222):
+
+**Theorem** (any type; values decided only where an extrapolation needs them). A course is a sequence of values; an extrapolation maps a prefix to a proposed value or silence. With two values no prefix fixes the next value: the prefix continues with either, and a proposal is not right on both, even among courses of worlds a list holds. For every extrapolation and every map moving each value, the diagonal course makes each value proposed miss, and its history-keeping realization, the growing prefixes, is held by no list. Extrapolation by elimination never passes a candidate that accords; where a determined law's orbit is held by a list of length N, over the lasso candidates it misses fewer than `tri N` times, and that it has come to rest cannot be refuted, though no prefix shows when. Lean: `Learning.no_prefix_fixes_next`, `Learning.diagonal_misses`, `Learning.diagonal_open`, `Learning.held_byElimination_bounded`; [record](../results/records/learning-by-refutation.md). Learning over merged classes has its own diagonal; rest's step is in [§6](#r-identification-where-bounded).
+
+**The two readers' fault notes on the flagged tellings:**
+
+- chapter, reader 1: none. 'even among courses of worlds a list holds' is no_prefix_fixes_next_finite with lasso_realized, proved but not cited at the home.
+- chapter, reader 2: “Even among courses of worlds a list holds” adds finite-world realization to the prefix result. That assertion is established separately by `no_prefix_fixes_next_finite`.
+
+## Theorem 7: `Becoming.Copying.batch_all_iff` (record `inherited-structural-copying`)
+
+**Signature** (becoming/Becoming/Copying.lean, line 502):
+
+```lean
+theorem batch_all_iff (r : Nat) : ∀ (words : List (List α)) (pool : List α) (free used : Nat),
+    Every (batch draw r words pool free used).1 ↔
+      Supplies (joinAll words) pool ∧ totalOf (fun w => use draw none w + r) words ≤ free
+  | [], pool, free, _ => ⟨fun _ => ⟨supplies_nil pool, Nat.zero_le free⟩, fun _ => trivial⟩
+```
+
+**Docstring as it stands** (FLAGGED):
+
+/-- **Copies from one shared pool.** Every copy of the batch is released exactly when the pool
+supplies all the words together and the support covers all their draws and releases. The
+order of the words does not matter for this. -/
+
+**Record law as it stands** (FLAGGED):
+
+Copying words in turn from one shared pool and support, each from no previous token, and releasing each copy that completes with r free: every copy is released exactly when the pool supplies all the words joined together and the support covers all their draws and releases. Exchanging two adjacent words, which generates every reordering, keeps whether every copy is released.
+
+**Chapter paragraph as it stands** (not flagged; theories/becoming/chapters/04-LIFE.md, line 108):
+
+| <a id="r-inherited-structural-copying"></a>Inherited arrangement changes further copying ([record](../results/records/inherited-structural-copying.md), [StructuralCopying.lean][structural]) | Copies drawn in turn from one pool are all released exactly when the pool supplies all the words together and the support covers all their draws and releases (`Becoming.Copying.batch_all_iff`), in any order (`Becoming.Copying.batch_all_swap`); under local draws a word's use depends on the law only through its length and its unlike adjacent pairs (`Becoming.Copying.use_word`), so retained order changes what further copying draws | a nonempty template strand whose bonds are the path on its tokens is copied and released exactly when the pool supplies its tokens and the support covers its draws plus one, for every pool | ordered access, adjacency draws, release, occurrence order |
+
+**The two readers' fault notes on the flagged tellings:**
+
+- docstring, reader 1: none; 'The order of the words does not matter' is batch_all_swap, the next theorem.
+- docstring, reader 2: “Every copy of the batch is released exactly when” omits the decidable token equality used by the copying and supply tests.
+- record, reader 1: none (law 2)
+- record, reader 2: “Copying words in turn from one shared pool and support” gives the correct criterion but leaves the alphabet unrestricted. Decidable token equality appears in the hypotheses field without a pointer from this law.
+

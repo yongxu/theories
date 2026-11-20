@@ -1,0 +1,376 @@
+{
+ "wordings": [
+  {
+   "n": 1,
+   "telling": "chapter",
+   "verdict": "exact",
+   "fault": "",
+   "against_present": "closer"
+  },
+  {
+   "n": 2,
+   "telling": "record",
+   "verdict": "exact",
+   "fault": "",
+   "against_present": "closer"
+  },
+  {
+   "n": 2,
+   "telling": "chapter",
+   "verdict": "says more",
+   "fault": "“Whatever it starts from” leaves the starting difference unrestricted. The signature takes d : Nat. Only the link factors are expressly called whole numbers here.",
+   "against_present": "closer"
+  },
+  {
+   "n": 3,
+   "telling": "chapter",
+   "verdict": "other",
+   "fault": "The equivalence and unrestricted family predicate match. Checking “each relatum taking part listed once,” the omission of giver counts, and the expansion of the law requires the definitions of Realized, Passage and Every.",
+   "against_present": "closer"
+  },
+  {
+   "n": 4,
+   "telling": "chapter",
+   "verdict": "says less",
+   "fault": "“The two otherwise keeping the same” asks for agreement without limiting it to the listed items. The supplied account of WidensBy requires agreement only over those items.",
+   "against_present": "closer"
+  },
+  {
+   "n": 5,
+   "telling": "docstring",
+   "verdict": "says more",
+   "fault": "“The one born at offset π i” identifies a birth event on the run. The displayed conclusion identifies a relabelling at c.size. The brief supplies no definition or result connecting that endpoint to the birth event.",
+   "against_present": "closer"
+  },
+  {
+   "n": 5,
+   "telling": "record",
+   "verdict": "other",
+   "fault": "“A numbering ... renumbered by it” does not say how the same two given maps π and σ enter both sides. Whether one numbering captures both maps exactly depends on the omitted definitions.",
+   "against_present": "closer"
+  },
+  {
+   "n": 6,
+   "telling": "chapter",
+   "verdict": "says more",
+   "fault": "The proposal condition qualifies only “it is not right at t on both.” In the signature claims is a premise for the prefix and value equalities as well.",
+   "against_present": "closer"
+  },
+  {
+   "n": 7,
+   "telling": "docstring",
+   "verdict": "exact",
+   "fault": "",
+   "against_present": "closer"
+  },
+  {
+   "n": 7,
+   "telling": "record",
+   "verdict": "exact",
+   "fault": "",
+   "against_present": "closer"
+  },
+  {
+   "n": 8,
+   "telling": "docstring",
+   "verdict": "exact",
+   "fault": "",
+   "against_present": "closer"
+  },
+  {
+   "n": 8,
+   "telling": "chapter",
+   "verdict": "exact",
+   "fault": "",
+   "against_present": "closer"
+  },
+  {
+   "n": 9,
+   "telling": "docstring",
+   "verdict": "exact",
+   "fault": "",
+   "against_present": "closer"
+  },
+  {
+   "n": 10,
+   "telling": "docstring",
+   "verdict": "exact",
+   "fault": "",
+   "against_present": "closer"
+  },
+  {
+   "n": 10,
+   "telling": "record",
+   "verdict": "says more",
+   "fault": "The opening disjunction about each required condition and the closing claim “at every step” go beyond the displayed support equivalence at t.",
+   "against_present": "closer"
+  },
+  {
+   "n": 11,
+   "telling": "docstring",
+   "verdict": "exact",
+   "fault": "",
+   "against_present": "closer"
+  },
+  {
+   "n": 12,
+   "telling": "docstring",
+   "verdict": "exact",
+   "fault": "",
+   "against_present": "closer"
+  },
+  {
+   "n": 12,
+   "telling": "record",
+   "verdict": "says more",
+   "fault": "“A lineage every later member of which depends on the family has no member after its end” adds a lineage claim. The signature concludes the existence of a qualifying parent for x.",
+   "against_present": "closer"
+  },
+  {
+   "n": 13,
+   "telling": "docstring",
+   "verdict": "exact",
+   "fault": "",
+   "against_present": "closer"
+  },
+  {
+   "n": 13,
+   "telling": "chapter",
+   "verdict": "exact",
+   "fault": "",
+   "against_present": "closer"
+  },
+  {
+   "n": 14,
+   "telling": "docstring",
+   "verdict": "exact",
+   "fault": "",
+   "against_present": "closer"
+  }
+ ],
+ "keys": [
+  {
+   "n": 4,
+   "complete": true,
+   "missing_or_wrong": "",
+   "count": 2
+  },
+  {
+   "n": 5,
+   "complete": true,
+   "missing_or_wrong": "",
+   "count": 1
+  },
+  {
+   "n": 6,
+   "complete": true,
+   "missing_or_wrong": "",
+   "count": 2
+  },
+  {
+   "n": 7,
+   "complete": true,
+   "missing_or_wrong": "",
+   "count": 1
+  },
+  {
+   "n": 8,
+   "complete": true,
+   "missing_or_wrong": "",
+   "count": 5
+  },
+  {
+   "n": 9,
+   "complete": true,
+   "missing_or_wrong": "",
+   "count": 7
+  },
+  {
+   "n": 10,
+   "complete": true,
+   "missing_or_wrong": "",
+   "count": 3
+  },
+  {
+   "n": 11,
+   "complete": true,
+   "missing_or_wrong": "",
+   "count": 3
+  },
+  {
+   "n": 12,
+   "complete": true,
+   "missing_or_wrong": "",
+   "count": 8
+  },
+  {
+   "n": 13,
+   "complete": true,
+   "missing_or_wrong": "",
+   "count": 4
+  },
+  {
+   "n": 14,
+   "complete": true,
+   "missing_or_wrong": "",
+   "count": 5
+  }
+ ],
+ "judges": [
+  {
+   "n": 4,
+   "arm": "present",
+   "recovered": 2,
+   "right_verdict": true,
+   "right_reason": true
+  },
+  {
+   "n": 4,
+   "arm": "proposed",
+   "recovered": 2,
+   "right_verdict": true,
+   "right_reason": true
+  },
+  {
+   "n": 5,
+   "arm": "present",
+   "recovered": 0,
+   "right_verdict": true,
+   "right_reason": false
+  },
+  {
+   "n": 5,
+   "arm": "proposed",
+   "recovered": 1,
+   "right_verdict": true,
+   "right_reason": true
+  },
+  {
+   "n": 6,
+   "arm": "present",
+   "recovered": 1,
+   "right_verdict": false,
+   "right_reason": false
+  },
+  {
+   "n": 6,
+   "arm": "proposed",
+   "recovered": 2,
+   "right_verdict": true,
+   "right_reason": true
+  },
+  {
+   "n": 7,
+   "arm": "present",
+   "recovered": 0,
+   "right_verdict": false,
+   "right_reason": false
+  },
+  {
+   "n": 7,
+   "arm": "proposed",
+   "recovered": 1,
+   "right_verdict": true,
+   "right_reason": true
+  },
+  {
+   "n": 8,
+   "arm": "present",
+   "recovered": 3,
+   "right_verdict": true,
+   "right_reason": true
+  },
+  {
+   "n": 8,
+   "arm": "proposed",
+   "recovered": 5,
+   "right_verdict": true,
+   "right_reason": true
+  },
+  {
+   "n": 9,
+   "arm": "present",
+   "recovered": 1,
+   "right_verdict": false,
+   "right_reason": false
+  },
+  {
+   "n": 9,
+   "arm": "proposed",
+   "recovered": 7,
+   "right_verdict": true,
+   "right_reason": true
+  },
+  {
+   "n": 10,
+   "arm": "present",
+   "recovered": 1,
+   "right_verdict": true,
+   "right_reason": true
+  },
+  {
+   "n": 10,
+   "arm": "proposed",
+   "recovered": 3,
+   "right_verdict": true,
+   "right_reason": true
+  },
+  {
+   "n": 11,
+   "arm": "present",
+   "recovered": 1,
+   "right_verdict": false,
+   "right_reason": false
+  },
+  {
+   "n": 11,
+   "arm": "proposed",
+   "recovered": 3,
+   "right_verdict": true,
+   "right_reason": true
+  },
+  {
+   "n": 12,
+   "arm": "present",
+   "recovered": 5,
+   "right_verdict": true,
+   "right_reason": false
+  },
+  {
+   "n": 12,
+   "arm": "proposed",
+   "recovered": 7,
+   "right_verdict": true,
+   "right_reason": true
+  },
+  {
+   "n": 13,
+   "arm": "present",
+   "recovered": 2,
+   "right_verdict": true,
+   "right_reason": true
+  },
+  {
+   "n": 13,
+   "arm": "proposed",
+   "recovered": 4,
+   "right_verdict": true,
+   "right_reason": true
+  },
+  {
+   "n": 14,
+   "arm": "present",
+   "recovered": 1,
+   "right_verdict": false,
+   "right_reason": false
+  },
+  {
+   "n": 14,
+   "arm": "proposed",
+   "recovered": 5,
+   "right_verdict": true,
+   "right_reason": true
+  }
+ ],
+ "could_not_judge": "The missing definitions leave theorem 3's detailed gloss and theorem 5's treatment of a numbering as a pair of maps unresolved. Elsewhere I used the supplied glosses for named predicates. For theorem 8 I counted the five outer premises. Activity throughout the n-step interval is the antecedent of the quantified conclusion. I scored the replacement text where brackets marked its boundaries. For theorem 12 the proposed judge omitted membership of x, and the present judge gave a second, unwarranted gate objection alongside the correct stock objection. For theorem 13 the present judge identified the differing loss in the example, but its conditions did not state equality of both residual components or the response premise."
+}

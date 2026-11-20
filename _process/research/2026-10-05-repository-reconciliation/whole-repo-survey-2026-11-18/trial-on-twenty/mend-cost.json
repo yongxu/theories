@@ -1,0 +1,139 @@
+[
+ {
+  "n": 1,
+  "id": "losses-of-the-sum-over-histories",
+  "flagged": [
+   "chapter"
+  ],
+  "chapter_file": "theories/becoming/chapters/01-ROOT.md",
+  "records_bound_to_chapter_file": 12
+ },
+ {
+  "n": 2,
+  "id": "whether-a-loop-closes-a-difference",
+  "flagged": [
+   "chapter",
+   "record"
+  ],
+  "chapter_file": "theories/becoming/chapters/02-MAP.md",
+  "records_bound_to_chapter_file": 15
+ },
+ {
+  "n": 3,
+  "id": "laws-of-one-step-complete",
+  "flagged": [
+   "chapter"
+  ],
+  "chapter_file": "theories/becoming/chapters/01-ROOT.md",
+  "records_bound_to_chapter_file": 12
+ },
+ {
+  "n": 4,
+  "id": "a-narrowing-above-its-widening",
+  "flagged": [
+   "chapter"
+  ],
+  "chapter_file": "theories/becoming/chapters/07-SIGNIFICANCE.md",
+  "records_bound_to_chapter_file": 42
+ },
+ {
+  "n": 5,
+  "id": "the-present-on-causal-set-growth",
+  "flagged": [
+   "docstring",
+   "record"
+  ],
+  "docstring_file": "becoming/Becoming/Presence.lean",
+  "records_bound_to_lean_file": 2
+ },
+ {
+  "n": 6,
+  "id": "learning-by-refutation",
+  "flagged": [
+   "chapter"
+  ],
+  "chapter_file": "theories/becoming/chapters/03-KNOWING.md",
+  "records_bound_to_chapter_file": 34
+ },
+ {
+  "n": 7,
+  "id": "inherited-structural-copying",
+  "flagged": [
+   "docstring",
+   "record"
+  ],
+  "docstring_file": "becoming/Becoming/Copying.lean",
+  "records_bound_to_lean_file": 7
+ },
+ {
+  "n": 8,
+  "id": "consumption-ends-with-feeders",
+  "flagged": [
+   "chapter",
+   "docstring"
+  ],
+  "docstring_file": "becoming/Becoming/Interdependence.lean",
+  "records_bound_to_lean_file": 7,
+  "chapter_file": "theories/becoming/chapters/02-MAP.md",
+  "records_bound_to_chapter_file": 15
+ },
+ {
+  "n": 9,
+  "id": "timely-response-necessity",
+  "flagged": [
+   "docstring"
+  ],
+  "docstring_file": "becoming/Becoming/TimedResponse.lean",
+  "records_bound_to_lean_file": 4
+ },
+ {
+  "n": 10,
+  "id": "feedback-and-reach",
+  "flagged": [
+   "docstring",
+   "record"
+  ],
+  "docstring_file": "becoming/Becoming/Feedback.lean",
+  "records_bound_to_lean_file": 16
+ },
+ {
+  "n": 11,
+  "id": "gluing-under-parity",
+  "flagged": [
+   "docstring"
+  ],
+  "docstring_file": "becoming/Becoming/Gluing.lean",
+  "records_bound_to_lean_file": 1
+ },
+ {
+  "n": 12,
+  "id": "confined-rise-within-a-whole",
+  "flagged": [
+   "docstring",
+   "record"
+  ],
+  "docstring_file": "becoming/Becoming/Founding.lean",
+  "records_bound_to_lean_file": 1
+ },
+ {
+  "n": 13,
+  "id": "finite-fallible-inquiry-necessity",
+  "flagged": [
+   "chapter",
+   "docstring"
+  ],
+  "docstring_file": "becoming/Becoming/FallibleInquiry.lean",
+  "records_bound_to_lean_file": 4,
+  "chapter_file": "theories/becoming/chapters/03-KNOWING.md",
+  "records_bound_to_chapter_file": 34
+ },
+ {
+  "n": 14,
+  "id": "open-form-realization-under-revision",
+  "flagged": [
+   "docstring"
+  ],
+  "docstring_file": "becoming/Becoming/Handoff.lean",
+  "records_bound_to_lean_file": 2
+ }
+]

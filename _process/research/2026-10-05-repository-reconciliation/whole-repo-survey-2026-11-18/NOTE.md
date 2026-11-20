@@ -30,6 +30,7 @@ After the survey, the same session said, to Ren and in a landed clause of the wo
 - `first-round/`: the reports of the Claude readers, the astra readers and the checks, with the claims each check tried.
 - `second-round/`: its brief, the three samples of records with their seeds, and the reports.
 - `cold-read-2/`: a second cold read, of 20 November, told below.
+- `trial-on-twenty/`: a trial of 21 November on whether tellings that carry their premises let a reader recover them; its record is [there](trial-on-twenty/RECORD.md).
 
 ## The second cold read (20 November, added that night)
 
@@ -40,6 +41,10 @@ At the asking of the session that leads, after the first step of its roadmap did
 - **It quoted four pairs of pages that pull apart**; they were passed to the coordinator with who holds each.
 - **What it cost.** 58 minutes, 169 commands, about 18.9 million tokens by the harness's count, and about 79,000 words read by its own. The prompt asked it to read "as a careful newcomer would, for about an hour" and set no cap on files, words or commands. The session that asked for the run answers for that; no reader of this kind runs again without a cap on each.
 - **What it cannot show.** One run, one model, an agent's entry and not a person's. No landing was tried.
+
+## The trial on twenty theorems (21 November, added that night)
+
+For the 14 of the twenty headline theorems where a telling says more than the statement, two writers proposed wordings that carry the premises; a checker of another model set each against its signature; and two blind judges, one with the tellings as they stand and one with the proposed wordings, were asked what conditions the telling states and whether the result applies to a situation that fails one hypothesis. With the tellings as they stand the judge recovered 17 of 41 hypotheses and answered 6 of 11 cases rightly; with the proposed wordings, 40 of 41 and 11 of 11. Thirteen of the 21 proposed wordings were exact against the signature and eight were not yet. Nothing in the repository was edited. It cost 315,636 tokens by the harnesses' counts, under a ceiling of 500,000 said beforehand. [Its record](trial-on-twenty/RECORD.md) says how it ran and what it cannot show; the chief limit is that the situations were written by the writers of the proposed wordings.
 
 ## What became of the picture's last section
 

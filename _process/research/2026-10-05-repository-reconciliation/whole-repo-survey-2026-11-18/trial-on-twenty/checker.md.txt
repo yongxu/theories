@@ -1,0 +1,665 @@
+# Checker's task (the trial on twenty theorems)
+
+AI-written brief (Claude Fable), 21 November 2026. Everything you need is in this message. Run no command and open no file: this run is capped, and its cost is counted. If something cannot be judged from what is here, say so; do not look it up.
+
+What we are doing. A theory's core is proved in Lean 4. Each theorem is told by hand in several places. For 14 theorems, at least one telling was found to say more than the Lean statement. Two writers proposed a wording for each such telling. You did not write them. Your job is to set each proposed wording against the signature, as given below with the section's variables and included premises (extracted by script, possibly incomplete), and to score two blind judges.
+
+Three things, as JSON by the schema:
+
+A. `wordings`: one entry for each proposed wording (21). `verdict`: `exact` (says what the signature with its section premises says, no more and no less), `says more`, `says less`, or `other`. `fault`: the clause at fault, or empty. `against_present`: is the proposed wording `closer` to the signature than the present telling, `same`, or `farther`.
+
+B. `keys`: one entry for each theorem that has a hypothesis (11). The writer listed its hypotheses in plain words. Is that list complete and right against the signature and section premises? `complete`: true or false; `missing_or_wrong`: what is missing or wrong, or empty; `count`: the number of hypotheses the theorem has by your reading.
+
+C. `judges`: for each of those 11 theorems and each arm (`present`, `proposed`): a blind judge read only the telling (the present one, or the proposed one) and listed the conditions it states, then said whether the result applies to a situation that was written to fail exactly one hypothesis (named below as `fails`). `recovered`: how many of the theorem's hypotheses (your count in B) appear among the judge's conditions. `right_verdict`: true if the judge said `does not apply`. `right_reason`: true only if the judge's reason is the failed hypothesis and not something else.
+
+Be strict and literal. A wording that adds a reason, a significance or a neighbouring theorem's claim says more. A wording that drops a hypothesis claims the result under fewer conditions, so it says more. A wording that leaves out part of the conclusion, or adds a condition the signature does not ask, says less.
+
+---
+
+## Theorem 1: `Becoming.Weights.sum_append`
+
+Section variables and included premises above it:
+
+```lean
+variable {R : Type w} (W : Weights R)
+variable {W}
+```
+
+Signature:
+
+```lean
+theorem sum_append {α : Type u} (f : α → R) :
+    ∀ l l' : List α, W.sum (l ++ l') f = W.add (W.sum l f) (W.sum l' f)
+  | [], _ => (W.zero_add _).symm
+```
+
+**chapter, present:** | <a id="r-losses-of-the-sum-over-histories"></a>[Losses of the sum over histories](../results/records/losses-of-the-sum-over-histories.md) | Theorem (any process; witnesses on one configuration). For every weighting a truncation misses exactly what it drops, and where alternatives only add it bounds the whole from below (`Weights.sum_append`). Witnesses: with two moves back to one configuration, one adding and one subtracting, each is possible and so is their join while the signed count balances, and possibility cannot see it (`Interference.unseen`); a weighting needing the move before is no step weighting on one configuration, and is one where that move is kept (`Memory.not_of_steps`); loops double the courses, `2^n` of `n` steps. Signed counts are pairs of natural numbers compared by balance, the pure core taking no quotient; unbounded horizons are not stated. |
+
+**chapter, proposed:** For every weighting and every assignment of weights to single items, the sum over one list followed by another is the sum over the first added to the sum over the second: with the courses kept listed first and those dropped after, the sum over all is the sum over the kept added to the sum over the dropped (`Weights.sum_append`).
+
+## Theorem 2: `Becoming.LoopReturn.nothing_between`
+
+Signature:
+
+```lean
+theorem nothing_between (as : List Nat) (d n : Nat) :
+    (Law.run (returnMap (scaling as)) d).state (n + 1) = 0 ∨
+      (Law.run (returnMap (scaling as)) d).state n ≤ (Law.run (returnMap (scaling as)) d).state (n + 1) :=
+```
+
+**record law, present:** With links multiplying by whole-number factors, product 0 closes at the first turn, product 1 keeps the difference, product at least 2 exceeds every bound; no such loop closes gradually, while taking one off does.
+
+**record law, proposed:** With links multiplying by whole-number factors, from any whole-number starting difference, at every turn after the start the difference is zero or no less than it was at the turn before.
+
+**chapter, present:** **Theorem** (any type; World for the ring read on flows). A difference around a loop is the course of a return map. Where every link gives on at least what it receives the difference never falls, so a loop closes a difference only through a link giving back less; a map below the identity off zero closes within `d` turns, exactly, and merges. With whole-number factors a loop closes at once, keeps, or exceeds every bound, never closing gradually (`LoopReturn.nothing_between`). A self-loop of strength `M` has factor `1 + M`; read on balanced flows (World; witness), on a ring of two or more conditions with one positive strength on every link and a positive starting gap, one plus the product of strengths is strictly below a turn (`LoopReturn.Ring.bound_strict`) ([record](../results/records/whether-a-loop-closes-a-difference.md)).
+
+**chapter, proposed:** With whole-number factors on its links, a loop's difference is at every turn zero or no less than at the turn before, whatever it starts from (`LoopReturn.nothing_between`).
+
+## Theorem 3: `Becoming.OneStep.every_iff`
+
+Signature:
+
+```lean
+theorem every_iff (P : List Passage) (k : Nat) (e : Prop) :
+    Realized (fun _ _ _ => True) P k e ↔ Every P k e :=
+```
+
+**chapter, present:** | <a id="r-laws-of-one-step-complete"></a>[Completeness of the laws of one step](../results/records/laws-of-one-step-complete.md) | A pattern of one step on a family (levels before and after, what is taken and given, takers, givers) is shown by some world, each relatum taking part listed once, exactly where it satisfies the law of every step (something taken has between one and that many takers; something taken or given, an exchange), the law of the givers (something given has between one and that many givers) and, on a family balanced on, running down, closed or both, that hypothesis's law, running down adding that the givers are at most the takers (`OneStep.every_iff`, `OneStep.every_givers_iff` and companions); across runs on one fixed family the passages also chain. Capacity adds one law, what is given at most capacity times givers; only active giving and taking add none. |
+
+**chapter, proposed:** A pattern of one step on a family, without givers (levels before and after, what is taken and given, the number of takers, whether there is an exchange), is shown by some world across some step on some family, each relatum taking part listed once and nothing assumed of the family, exactly where it satisfies the law of every step (something taken has between one and that many takers; something taken or given, an exchange) (`OneStep.every_iff`).
+
+## Theorem 4: `Becoming.Weighting.narrower_above_net`
+
+Section variables and included premises above it:
+
+```lean
+variable {X : Type}
+variable {P : Type}
+```
+
+Signature:
+
+```lean
+theorem narrower_above_net {kept : P → X → Bool} {R : P → P → Prop} {items : List X}
+    {pos neg : X → Nat} {x : X} {n w : P} (by_ : WidensBy items x (kept w) (kept n))
+    (violates : R w n) :
+    ¬ ReadsSetsOn kept R (ranksNet items pos neg) w n ∨ pos x ≤ neg x :=
+```
+
+**chapter, present:** **Theorem** (any type). Take a valuer's judgment as a ranking of presentations (plans with their wording and order, each keeping a set of items), and a net weighting as counting each item for a course admitting it and against it. Where such a ranking puts a narrowing above its widening by one item, either it does not rank the pair as its own order ranks the kept sets (a misread or a framing) or the item weighs at zero or below; read right, exactly where it weighs below zero, and at zero it ties (`Weighting.narrower_above_net`, `Weighting.reads_ranksNet`). Read right, where a sign measured apart is the sign of the order's increment from the narrower course to the wider in the pair's context, it fixes the ranking: narrower above exactly where it is a gain, wider exactly where a loss, neither where nothing (`Weighting.reads_increment`); an additive valuation carries it to every context, an interacting one need not. That a judgment is such a ranking is a premise. ([record](../results/records/a-narrowing-above-its-widening.md))
+
+**chapter, proposed:** Where a ranking of presentations puts the narrower of two plans above the wider, the wider keeping one listed item more and the two otherwise keeping the same, either the ranking does not rank that pair as the net weighting ranks what the two keep, or the added item's count for is at most its count against (`Weighting.narrower_above_net`).
+
+Writer's hypotheses in plain words:
+- Over the listed items, what the wider plan keeps differs from what the narrower plan keeps by one item alone, the added item.
+- The ranking of presentations puts the narrower plan above the wider.
+
+The situation given to the judges: Two travel plans are compared. The second keeps every stop of the first and adds two more, a museum and a market. The judge ranks the first, shorter plan above the second.
+
+`fails`: The first hypothesis (`by_`): the wider plan differs from the narrower by one item alone.
+
+Judge (present arm) conditions:
+- The valuer's judgment is a ranking of presentations, each a plan with its wording and order that keeps a set of items (stated as a premise, not proved)
+- The ranking puts a narrowing above its widening
+- The widening differs from the narrowing by exactly one item
+- A net weighting counts each item for a course admitting it and against it
+- For the 'exactly where it weighs below zero' part: the ranking ranks the pair as its own order ranks the kept sets (it is read right, no misreading or framing)
+- For the sign part: the sign measured apart is the sign of the order's increment from the narrower to the wider course in the pair's context
+- For carrying the sign to every context: the valuation is additive
+Verdict: does not apply. Reason: The second plan widens the first by two items (a museum and a market), and the result as told speaks only of a widening by one item.
+
+Judge (proposed arm) conditions:
+- There is a ranking of presentations (plans).
+- Two plans are compared, one narrower and one wider.
+- The wider plan keeps exactly one listed item more than the narrower.
+- Apart from that one item, the two plans keep the same.
+- The ranking puts the narrower plan above the wider.
+Verdict: does not apply. Reason: The second plan adds two items (a museum and a market), so it fails the condition that the wider keeps exactly one listed item more and the two otherwise keep the same.
+
+## Theorem 5: `Becoming.Presence.natural_iff_course`
+
+Section variables and included premises above it:
+
+```lean
+variable {c : Causet} {π σ : Nat → Nat}
+```
+
+Signature:
+
+```lean
+theorem natural_iff_course (ordered : c.Ordered) :
+    NaturalLabelling c π σ ↔ ∃ r : Run process, r.state 0 = empty ∧
+      CausalGrowth.Kinds.Relabels c (r.state c.size) π σ :=
+```
+
+**docstring, present:** /-- **The orders of birth.** The natural labellings of `c` are exactly the numberings of its
+elements by a course from the empty set whose configuration at `c`'s size is of `c`'s kind: on such
+a course `c`'s element `i` is the one born at offset `π i`. -/
+
+**docstring, proposed:** /-- **The orders of birth.** Where `c` is ordered, `π` with `σ` is a natural labelling of `c` exactly when some course of the growth from the empty set has, at `c`'s size, a configuration that is `c` relabelled by `π` and `σ`: on such a course `c`'s element `i` is the one born at offset `π i`. -/
+
+**record law, present:** The orders of birth. Every causal set is grown from the empty set, bearing the element t at offset t with its past (pastIn, pastIn_stem, courseOf, courseOf_grows, courseOf_isomorphic), and the natural labellings are exactly the numberings of its elements by a course from the empty set whose configuration at its size is of its kind (natural_iff_course).
+
+**record law, proposed:** The orders of birth. For a causal set that is ordered, a numbering of its elements is a natural labelling exactly when some course of the growth from the empty set has, at the causal set's size, a configuration that is the causal set renumbered by it (natural_iff_course).
+
+Writer's hypotheses in plain words:
+- The causal set `c`, given as a size and a relation on its elements, is ordered: its relation meets the order condition the growth requires.
+
+The situation given to the judges: Take three elements with a relation that runs in a circle: the first precedes the second, the second the third, and the third the first. Someone proposes a renumbering of the three and asks whether it is an order in which a growth from nothing bears them.
+
+`fails`: `ordered`: the causal set `c` is ordered.
+
+Judge (present arm) conditions:
+- The thing numbered is a causal set (c)
+- The numbering is of its elements by a course of growth that starts from the empty set
+- The course's configuration at c's size is of c's kind
+- On the course, each element is born at its offset together with its past
+Verdict: does not apply. Reason: The result is told of a causal set, whose elements are each born with their past already there, and three elements preceding one another in a circle fail that condition (the telling names 'causal set' without defining it, so this rests on reading the name as excluding a circle).
+
+Judge (proposed arm) conditions:
+- The causal set c is ordered (its relation is an order).
+- A numbering (relabelling) of c's elements, pi with sigma, is given.
+- The growth considered is a course of the growth from the empty set.
+- The configuration compared is the one at c's size on that course.
+Verdict: does not apply. Reason: A relation that runs in a circle (first before second, second before third, third before first) is not an order, so the condition that the causal set is ordered fails.
+
+## Theorem 6: `Becoming.Learning.no_prefix_fixes_next`
+
+Section variables and included premises above it:
+
+```lean
+variable {O : Type u}
+```
+
+Signature:
+
+```lean
+theorem no_prefix_fixes_next (pred : List O → Option O) (o : Nat → O) (t : Nat) {x y : O}
+    (two : x ≠ y) {w : O} (claims : pred (prefixOf o t) = some w) :
+    prefixOf (holdFrom o t x) t = prefixOf o t ∧ prefixOf (holdFrom o t y) t = prefixOf o t ∧
+      holdFrom o t x t = x ∧ holdFrom o t y t = y ∧
+      ¬ (¬ MissesAt pred (holdFrom o t x) t ∧ ¬ MissesAt pred (holdFrom o t y) t) :=
+```
+
+**chapter, present:** **Theorem** (any type; values decided only where an extrapolation needs them). A course is a sequence of values; an extrapolation maps a prefix to a proposed value or silence. With two values no prefix fixes the next value: the prefix continues with either, and a proposal is not right on both, even among courses of worlds a list holds. For every extrapolation and every map moving each value, the diagonal course makes each value proposed miss, and its history-keeping realization, the growing prefixes, is held by no list. Extrapolation by elimination never passes a candidate that accords; where a determined law's orbit is held by a list of length N, over the lasso candidates it misses fewer than `tri N` times, and that it has come to rest cannot be refuted, though no prefix shows when. Lean: `Learning.no_prefix_fixes_next`, `Learning.diagonal_misses`, `Learning.diagonal_open`, `Learning.held_byElimination_bounded`; [record](../results/records/learning-by-refutation.md). Learning over merged classes has its own diagonal; rest's step is in [§6](#r-identification-where-bounded).
+
+**chapter, proposed:** With two different values, for every course and step t, the course that keeps it before t and holds the one value from t on and the course that holds the other both have its prefix before t and take their value at t; where the extrapolation proposes a value from that prefix, it is not right at t on both (`Learning.no_prefix_fixes_next`).
+
+Writer's hypotheses in plain words:
+- The two values are different.
+- From the course's prefix before step t the extrapolation proposes a value; it is not silent there.
+
+The situation given to the judges: A forecaster reads the first ten days of a temperature record and, from those ten days, declines to name any value for day eleven. Two continuations of the record are considered, one with 20 degrees on day eleven and one with 25.
+
+`fails`: `claims`: from the prefix before t the extrapolation proposes a value.
+
+Judge (present arm) conditions:
+- A course is a sequence of values
+- An extrapolation maps a prefix to a proposed value or to silence
+- There are at least two values (for 'no prefix fixes the next value')
+- Values need be decidable only where an extrapolation needs them
+- For the diagonal part: a map that moves each value
+- For the bounded-misses part: the law is determined, its orbit is held by a list of length N, and extrapolation is by elimination over the lasso candidates
+Verdict: applies. Reason: Silence is an allowed answer of an extrapolation and there are two distinct values, so the ten-day prefix continues with either 20 or 25 and no proposal is right on both (here because none is made, so the part about a proposal missing holds only emptily).
+
+Judge (proposed arm) conditions:
+- There are two different values.
+- A course and a step t are given (any course, any step).
+- The two continuations keep the course before t; one holds the one value from t on, the other holds the other value.
+- The extrapolation proposes a value from the prefix before t (the 'not right on both' conclusion is stated only where it does).
+Verdict: does not apply. Reason: The forecaster declines to name any value for day eleven, so the condition that the extrapolation proposes a value from the prefix fails; only the first half (the two continuations share the ten-day prefix and take their own values at day eleven) still holds.
+
+## Theorem 7: `Becoming.Copying.batch_all_iff`
+
+Section variables and included premises above it:
+
+```lean
+variable {α : Type u} [DecidableEq α]
+variable (draw : Option α → α → Nat)
+```
+
+Signature:
+
+```lean
+theorem batch_all_iff (r : Nat) : ∀ (words : List (List α)) (pool : List α) (free used : Nat),
+    Every (batch draw r words pool free used).1 ↔
+      Supplies (joinAll words) pool ∧ totalOf (fun w => use draw none w + r) words ≤ free
+  | [], pool, free, _ => ⟨fun _ => ⟨supplies_nil pool, Nat.zero_le free⟩, fun _ => trivial⟩
+```
+
+**docstring, present:** /-- **Copies from one shared pool.** Every copy of the batch is released exactly when the pool
+supplies all the words together and the support covers all their draws and releases. The
+order of the words does not matter for this. -/
+
+**docstring, proposed:** /-- **Copies from one shared pool.** For tokens whose equality is decided: copying the words in turn from one pool and one support with `free` free, each word from no previous token and each release taking `r`, every copy of the batch is released exactly when the pool supplies all the words joined together and `free` is at least the sum over the words of each word's draws plus `r`. -/
+
+**record law, present:** Copying words in turn from one shared pool and support, each from no previous token, and releasing each copy that completes with r free: every copy is released exactly when the pool supplies all the words joined together and the support covers all their draws and releases. Exchanging two adjacent words, which generates every reordering, keeps whether every copy is released.
+
+**record law, proposed:** For tokens whose equality is decided, copying words in turn from one shared pool and support, each from no previous token, and releasing each copy that completes with r free: every copy is released exactly when the pool supplies all the words joined together and the free support is at least the sum over the words of each word's draws plus r.
+
+Writer's hypotheses in plain words:
+- Equality of tokens is decided. This is not visible in the signature as extracted; it is taken from reader 2 and the record's hypotheses field as the readers report it.
+
+The situation given to the judges: The tokens are unending streams of digits, and two streams are the same token only when they agree at every place. Words made of such tokens are to be copied in turn from one pool and one support. No finite check settles whether a token in the pool is the one a word calls for.
+
+`fails`: Decided equality of tokens, an instance assumption not visible in the signature as extracted.
+
+Judge (present arm) conditions:
+- The words are copied in turn
+- All copies draw on one shared pool and one shared support
+- Each copy starts from no previous token
+- Each copy that completes is released with r free
+- For the reordering part: the reordering is made of exchanges of adjacent words
+Verdict: applies. Reason: The situation is copying in turn from one pool and one support, and the telling states no condition that sameness of tokens be decidable by a finite check, so nothing told is failed (the start from no previous token and the release with r free are taken as part of the copying described).
+
+Judge (proposed arm) conditions:
+- Equality of tokens is decided.
+- The words are copied in turn.
+- All copies draw from one shared pool and one support, with 'free' free.
+- Each word is copied from no previous token.
+- Each release (of a copy that completes) takes r.
+Verdict: does not apply. Reason: No finite check settles whether two of the unending digit streams are the same token, so the condition that the tokens' equality is decided fails.
+
+## Theorem 8: `Becoming.Flow.Balances.unfed_consumption_ends`
+
+Section variables and included premises above it:
+
+```lean
+variable (L : Flow F C) (W : Web F C)
+variable {L W}
+```
+
+Signature:
+
+```lean
+theorem Balances.unfed_consumption_ends (balances : L.Balances W) (acting : L.Acting W)
+    (dependent : W.Dependent) {c : C} {g : F} {T : Nat}
+    (unfed : ∀ t f, T ≤ t → W.active t g → f ∈ L.present t → W.Supported t f →
+      L.give t f c = 0)
+    (consumes : ∀ t, T ≤ t → W.active t g → g ∈ L.present t ∧ 0 < L.take t g c) :
+    ∀ n, (∀ k, k < n → W.active (T + k) g) → n ≤ W.level T c :=
+```
+
+**docstring, present:** /-- Unfed consumption ends. Under balance, with only active formations giving and activity
+needing support, let `g` take from `c` at every step from `T` at which it is active, while
+nothing supported gives to `c`. Then `g` is active for at most as many consecutive steps from
+`T` as the level of `c` at `T`. -/
+
+**docstring, proposed:** /-- Unfed consumption ends. Under balance, with only active formations giving and activity needing support, suppose that at every step from `T` on at which `g` is active, `g` is present and takes a positive amount from `c`, and no formation that is present and supported at that step gives anything to `c`. Then for every `n`, if `g` is active at each of the `n` steps `T`, ..., `T + n - 1`, `n` is at most the level of `c` at `T`. -/
+
+**chapter, present:** **Theorem** (World). Under balance, only active formations giving and activity needing support, a formation taking from a condition at every step from `T` at which it is active, while nothing supported gives to it, is active for at most as many consecutive steps from `T` as the condition's level at `T` (`Flow.Balances.unfed_consumption_ends`); the same holds where it requires the condition while active and everything feeding its continuation is unsupported (`Flow.Balances.consumption_ends_with_feeders`): keeping its own support, it can still end through its feeder, as in `Overshoot`. Either of two redundant feeders suffices; withholding both leaves no balancing path ([record](../results/records/consumption-ends-with-feeders.md)).
+
+**chapter, proposed:** **Theorem** (World). Under balance, only active formations giving and activity needing support, a formation that is present and takes from a condition at every step from `T` at which it is active, while nothing present and supported gives to the condition at those steps, is active for at most as many consecutive steps from `T` as the condition's level at `T` (`Flow.Balances.unfed_consumption_ends`); [the paragraph from 'the same holds where it requires the condition while active' to its end stands as it is; it tells other declarations whose signatures are not in this brief]
+
+Writer's hypotheses in plain words:
+- The flow balances in the world (balance).
+- Only active formations give.
+- Activity needs support.
+- At every step from T on at which g is active, every formation that is present at that step and supported at that step gives nothing to the condition c.
+- At every step from T on at which g is active, g is present at that step and takes a positive amount from c.
+
+The situation given to the judges: A workshop draws fuel from a store on every day it is running, and it is listed among the participants on each of those days. The accounts balance, only running participants give, and nothing runs without support. On some of those days a supplier that is itself present and supported delivers fuel to the store.
+
+`fails`: unfed (the fourth hypothesis: nothing present and supported gives to c at the steps from T at which g is active)
+
+Judge (present arm) conditions:
+- The course is balanced
+- Only active formations give
+- Activity needs support
+- The formation takes from the condition at every step from T at which it is active
+- Nothing supported gives to the condition from T on
+- Alternative form: the formation requires the condition while active and everything feeding its continuation is unsupported
+- The condition has a level at T, which bounds the consecutive active steps
+Verdict: does not apply. Reason: A supplier that is itself supported delivers fuel into the store, which fails the condition that nothing supported gives to the condition (equally, that every feeder is unsupported).
+
+Judge (proposed arm) conditions:
+- The flow is balanced.
+- Only active formations give.
+- Activity needs support.
+- At every step from T at which the formation is active, it is present.
+- At every such step it takes a positive amount from the condition.
+- At those steps no formation that is present and supported gives anything to the condition.
+Verdict: does not apply. Reason: On some of the days a supplier that is present and supported delivers fuel to the store, so the condition that nothing present and supported gives to the condition at those steps fails.
+
+## Theorem 9: `Becoming.TimedResponse.different_answers_not_unreached`
+
+Section variables and included premises above it:
+
+```lean
+variable {F C : Type}
+variable {L L' : Flow F C} {W W' : Web F C}
+    {obs : F → C → Prop} {source : Nat → F → Prop}
+variable {D : Nat}
+    (balanced : ∀ t, t < D → ∀ c,
+      W.level (t+1) c + L.taken t c = W.level t c + L.given t c)
+    (balanced' : ∀ t, t < D → ∀ c,
+      W'.level (t+1) c + L'.taken t c = W'.level t c + L'.given t c)
+    (present : ∀ t, t < D → L.present t = L'.present t)
+    (start : ∀ c, W.level 0 c = W'.level 0 c)
+    (responds : ∀ t, t < D → ∀ h, ¬ source t h →
+      W.AlikeThroughUpTo obs h W.level W'.level t →
+      ∀ c, L.take t h c = L'.take t h c ∧ L.give t h c = L'.give t h c)
+include balanced balanced' present start responds
+```
+
+Signature:
+
+```lean
+theorem different_answers_not_unreached {A : Type} {g : F}
+    (read : (Nat → C → Nat) → A)
+    (through : ∀ l l', W.AlikeThroughUpTo obs g l l' D → read l = read l')
+    (different : read W.level ≠ read W'.level) : ¬ ¬ ReachedBy L L' W obs source g D :=
+```
+
+**docstring, present:** /-- Constructive necessity: different outputs rule out absence of a timely route. -/
+
+**docstring, proposed:** /-- Constructive necessity. For two courses alike at step 0 and, before the deadline `D`, both balanced, with the same formations present and each formation outside the time-indexed source exchanging alike where alike through its couplings so far (the section's included premises): if a readout gives the same answer on any two level histories alike through `g`'s couplings up to `D`, and its answers on the two courses' levels differ, then it is not the case that `g` is unreached from the source by `D`. The conclusion is this double negation; reach itself is not concluded. -/
+
+Writer's hypotheses in plain words:
+- (Section premise brought in by `include`; not visible in the extracted signature, taken from the record law and reader 1.) The two courses have alike levels at step 0.
+- (Section premise, same caveat.) The first course is balanced before the deadline D.
+- (Section premise, same caveat.) The second course is balanced before the deadline D.
+- (Section premise, same caveat.) The same formations are present in the two courses before D.
+- (Section premise, same caveat.) Each formation outside the time-indexed source exchanges alike where it is alike through its couplings so far.
+- In the signature: the readout gives the same answer on any two level histories that are alike through what couples into the reader g up to D.
+- In the signature: the readout's answer on the first course's levels differs from its answer on the second course's levels.
+
+The situation given to the judges: Two runs of an experiment start with the same levels, both balance before the deadline, have the same participants before it, and every participant outside the source responds only through what has coupled into it so far. The reader's answer is computed from the levels as they stand several steps after the deadline. The two answers differ.
+
+`fails`: through (the readout must give the same answer on histories alike through the reader's couplings up to D)
+
+Judge (present arm) conditions:
+- Two outputs are compared and they differ
+- There is a time by which a route counts as timely (implied by 'timely route')
+Verdict: cannot tell. Reason: The telling states only that different outputs rule out the absence of a timely route and gives no premise about when or from what the output is read, so it cannot be told whether an answer computed several steps after the deadline is covered.
+
+Judge (proposed arm) conditions:
+- The two courses are alike at step 0.
+- Before the deadline D both courses are balanced.
+- Before D the two courses have the same formations present.
+- Before D each formation outside the time-indexed source exchanges alike where alike through its couplings so far.
+- The readout gives the same answer on any two level histories that are alike through g's couplings up to D.
+- The readout's answers on the two courses' levels differ.
+Verdict: does not apply. Reason: The reader's answer is computed from levels several steps after the deadline, so it is not shown to give the same answer on histories alike through g's couplings up to D (they may differ after D), and that readout condition fails.
+
+## Theorem 10: `Becoming.Flow.Balances.admits_unreached_before`
+
+Section variables and included premises above it:
+
+```lean
+variable (L : Flow F C) (W : Web F C)
+variable {L W}
+variable {part : F → Bool}
+```
+
+Signature:
+
+```lean
+theorem Balances.admits_unreached_before (balances : L.Balances W) {l : Nat → C → Nat}
+    (without : L.WithheldLevels part W l) {t : Nat} {g : F}
+    (unreached : ¬ L.ReachesBefore W part t g) : W.Supported t g ↔ W.Admits (l t) t g :=
+```
+
+**docstring, present:** /-- What a part has not reached before a step is admitted alike with and without it at that
+step. -/
+
+**docstring, proposed:** /-- In a balanced flow, let `l` be the levels with a part withheld, as `WithheldLevels` prescribes them. If the part does not reach a formation `g` before step `t`, then `g` is supported at `t` exactly when it is admitted at `t` at the withheld levels `l t`. -/
+
+**record law, present:** At each condition a formation requires at a step, the levels with and without a part agree, or the part reaches the formation before that step; whatever the part has not reached before a step is admitted alike with and without it there, and what it does not reach, at every step.
+
+**record law, proposed:** At each condition a formation requires at a step, the levels with and without a part agree, or the part reaches the formation before that step; in a balanced flow, with the levels without the part being the withheld levels (the part withheld and the levels following the rest of the exchange), a formation the part does not reach before a step is supported at that step exactly when it is admitted there at the levels without the part; and what it does not reach, at every step.
+
+Writer's hypotheses in plain words:
+- The flow balances in the world (balance).
+- The level course l is the withheld levels for the part: the levels the comparison prescribes for the course with the part withheld.
+- The part does not reach the formation g before step t.
+
+The situation given to the judges: A balanced exchange is compared with the same exchange with one supplier withheld, the levels without it being those the withholding prescribes. Three steps before the step asked about, that supplier delivered into the store a workshop requires. The question is whether the workshop is supported at that step with the supplier exactly when it is admitted there without it.
+
+`fails`: unreached (the part must not reach the formation before the step)
+
+Judge (present arm) conditions:
+- A course is compared with and without a part
+- A formation requires a condition at a step
+- The part has not reached the formation (or what is asked about) before that step
+- For the 'at every step' part: the part never reaches it
+Verdict: does not apply. Reason: The supplier delivered into the store the workshop requires three steps earlier, so the part has reached the workshop before the step, failing the condition that it has not reached it before that step.
+
+Judge (proposed arm) conditions:
+- The flow is balanced.
+- The levels without the part are the withheld levels, as the withholding prescribes them (the part withheld, the levels following the rest of the exchange).
+- The part does not reach the formation before the step asked about.
+Verdict: does not apply. Reason: The supplier delivered into a store the workshop requires three steps earlier, which on the telling's plain sense is the part reaching the workshop before that step, so the condition that the part does not reach it before the step fails (the telling does not define reach more exactly than this).
+
+## Theorem 11: `Becoming.ParitySystem.glues_iff`
+
+Section variables and included premises above it:
+
+```lean
+variable {K C : Type} (S : ParitySystem K C)
+variable {S}
+variable (S)
+```
+
+Signature:
+
+```lean
+theorem glues_iff [DecidableEq C] (distinct : Distinct S.claims) {all : List K}
+    (every : ∀ k, k ∈ all) :
+    (∃ X : Contextual Unit K C Bool, X.within = S.within ∧ X.Respects S.support () ∧ X.Glues ()) ↔
+      ¬ ∃ ks, S.Contradicts ks :=
+```
+
+**docstring, present:** /-- **Readings in context glue exactly where no selection of contexts contradicts.** With the
+contexts listed, some world showing what each context counts, respecting the possibilities,
+glues at its configuration exactly where no selection contradicts. -/
+
+**docstring, proposed:** /-- **Readings in context glue exactly where no selection of contexts contradicts.** With equality of claims decided, the system's claims listed without repetition, and a list containing every context: a world showing what each context counts, respecting the system's possibilities at its one configuration and gluing there, exists exactly where no selection of contexts contradicts. -/
+
+Writer's hypotheses in plain words:
+- Equality of claims is decided.
+- The system's claims are listed without repetition.
+- A list of contexts is given in which every context appears.
+
+The situation given to the judges: A parity system has three claims and three contexts, each context requiring a parity of two of the claims. Equality of claims can be decided, and a list is given that contains all three contexts. The system's list of claims names one of the claims twice.
+
+`fails`: distinct (the claims must be listed without repetition)
+
+Judge (present arm) conditions:
+- The contexts are listed
+- There are readings in context, each context counting something
+- The world shows what each context counts
+- The world respects the possibilities
+- Gluing is asked at that world's configuration
+- 'No selection of contexts contradicts' is the test on the other side of the equivalence
+Verdict: applies. Reason: The one condition the telling states, that the contexts are listed, holds, and the telling states nothing about a list of claims or about a claim being named twice, so no stated condition is failed.
+
+Judge (proposed arm) conditions:
+- Equality of claims is decided.
+- The system's claims are listed without repetition.
+- A list is given that contains every context.
+- The system has one configuration, at which the world respects the system's possibilities and glues.
+Verdict: does not apply. Reason: The system's list of claims names one claim twice, so the condition that the claims are listed without repetition fails.
+
+## Theorem 12: `Becoming.Founding.Flow.survivors_independent`
+
+Section variables and included premises above it:
+
+```lean
+variable {X : Type} {L : Flow X X} {W : Web X X}
+```
+
+Signature:
+
+```lean
+theorem survivors_independent (balances : L.Balances W) (acting : L.Acting W)
+    (dependent : W.Dependent) {G : Generations X} (descended : SelectionTerm.Flow.Descended L W G)
+    {ds : List X} {m : Nat}
+    (gated : ∀ t f, f ∈ L.present t → ∀ d, d ∈ ds → 0 < L.give t f d →
+      ∃ e, e ∈ ds ∧ W.requires t f e ∧ m ≤ W.need t f e)
+    {T n : Nat} (excess : ∀ k, k < n → L.replenishment ds (T + k) < L.uptake ds (T + k))
+    (start : W.stock ds T < n + m) (k : Nat) {x : X} (mx : x ∈ G.family (T + n + k + 1)) :
+    ∃ p, p ∈ G.family (T + n + k) ∧ x ∈ G.kids (T + n + k) p ∧
+      ∀ e, e ∈ ds → W.requires (T + n + k) p e → ¬ m ≤ W.need (T + n + k) p e :=
+```
+
+**docstring, present:** /-- **What outlasts the end of a family of conditions.** Where only active formations give,
+activity needs support and the renewal of a family of conditions is gated on the family as one,
+`n` steps of the family's uptake exceeding its replenishment from `T`, from a stock below `n + m`,
+leave every member of a later generation of descent the offspring of a member that depended on no
+condition of the family at a need of at least `m`. -/
+
+**docstring, proposed:** /-- **What outlasts the end of a family of conditions.** Under balance, where only active formations give, activity needs support, the generations are generations of descent in the flow, and every present formation that gives to a condition of the family requires at that step some condition of the family at a need of at least `m`: if the family's uptake exceeds its replenishment at each of the `n` steps from `T`, and its stock at `T` is below `n + m`, then every member of the generation at any step after `T + n` is the offspring of a member of the generation one step earlier that then requires no condition of the family at a need of at least `m`. -/
+
+**record law, present:** Where a family of conditions ran into excess under the coupled gate, every member of a later generation of descent is the offspring of a member that depended on no condition of the family at the gate's need, and a lineage every later member of which depends on the family has no member after its end.
+
+**record law, proposed:** Under balance, with only active formations giving, activity needing support, generations of descent in the flow, and every present formation that gives to a condition of a family requiring some condition of the family at a need of at least m: where the family's uptake exceeds its replenishment at each of n steps from T, from a stock at T below n + m, every member of a generation after step T + n is the offspring of a member of the generation one step earlier that requires no condition of the family at a need of at least m, and a lineage every later member of which depends on the family has no member after its end.
+
+Writer's hypotheses in plain words:
+- The flow balances in the world (balance).
+- Only active formations give.
+- Activity needs support.
+- The generations are generations of descent in the flow.
+- At every step, every present formation that gives a positive amount to some condition of the family requires at that step some condition of the family at a need of at least m (the gate).
+- At each of the n steps from T, the family's uptake is strictly more than its replenishment.
+- The family's stock at T is strictly below n + m.
+- x is a member of the generation at some step after T + n (step T + n + k + 1 for some k).
+
+The situation given to the judges: A family of three nutrients is renewed only by organisms that each need at least 5 units of one of them. The accounts balance, only active organisms give, nothing is active without support, and the generations descend one from another. For 4 steps from the start the family is taken up faster than it is replenished, from a starting stock of 20 units.
+
+`fails`: start (the stock at T must be below n + m; here 20 is not below 4 + 5)
+
+Judge (present arm) conditions:
+- Only active formations give
+- Activity needs support
+- The renewal of the family of conditions is gated on the family as one (the coupled gate)
+- The gate has a need of at least m
+- For n steps from T the family's uptake exceeds its replenishment
+- The family's stock at T is below n + m
+- There are generations of descent, with later members the offspring of earlier ones
+- For the lineage part: every later member of the lineage depends on the family
+Verdict: does not apply. Reason: With n = 4 and m = 5 the stock would have to be below 9, and the starting stock is 20 (the renewal is also described as needing one of the nutrients, not the family as one).
+
+Judge (proposed arm) conditions:
+- The flow is balanced.
+- Only active formations give.
+- Activity needs support.
+- The generations are generations of descent in the flow.
+- Every present formation that gives to a condition of the family requires, at that step, some condition of the family at a need of at least m.
+- The family's uptake exceeds its replenishment at each of the n steps from T.
+- The family's stock at T is below n + m.
+Verdict: does not apply. Reason: With n = 4 and m at most 5 the bound n + m is at most 9, and the starting stock of 20 is not below it, so the stock condition fails.
+
+## Theorem 13: `Becoming.FallibleInquiry.alike_with_common_imbalance`
+
+Section variables and included premises above it:
+
+```lean
+variable {F C : Type} {L L' : Flow F C} {W W' : Web F C}
+  {obs : F → C → Prop} {part : F → Bool} {g : F} {t : Nat}
+```
+
+Signature:
+
+```lean
+theorem alike_with_common_imbalance
+    (present : ∀ s, L.present s = L'.present s)
+    (start : ∀ h, ¬ L.WithinResponse L' W obs part h →
+      ∀ c, W.CoupledInto obs h c → W.level 0 c = W'.level 0 c)
+    (responds : L.RespondsThroughCoupling L' W W' obs part)
+    (residual : ∀ s c,
+      (L.withImbalance W).take s none c = (L'.withImbalance W').take s none c ∧
+      (L.withImbalance W).give s none c = (L'.withImbalance W').give s none c) :
+    ∀ s h, ¬ L.WithinResponse L' W obs part h →
+      W.AlikeThrough obs h W.level W'.level s := by
+```
+
+**docstring, present:** /-- Absolute balance is stronger than needed for blindness. The same unaccounted
+change in the two courses suffices: after P59 accounts for it, the added relatum
+responds alike, and the original closed-region theorem applies. -/
+
+**docstring, proposed:** /-- Balance is not assumed. For two courses with the same formations present at every step, the same initial levels at every condition coupled into a formation beyond the part's responsive reach, the rest responding through its couplings, and, at every step and condition, the same residual taking and the same residual giving: every formation beyond the part's responsive reach is alike through its couplings in the two courses at every step. -/
+
+**chapter, present:** **Theorem** (periphery; finite weighted alternatives, a binary target, complete available inputs; `propext` and `Quot.sound` in some declarations, as the record reports). Committed coverage is at most the two error weights plus the weight the evidence separates. Composed with balanced World courses of one law, the same formations present, alike initial levels of what couples in beyond reach, and answers through everything that couples in up to the answer time, coverage is at most the two errors plus the weight within responsive reach, reach decided, and entirely beyond reach equals them with no decision; common residual exchange suffices for answers alike beyond reach (`FallibleInquiry.alike_with_common_imbalance`), and an omitted exchange can keep correct readouts while invalidating the bound. Lean: `ScientificInquiryNecessity.fallible_inquiry_bound`, `FallibleInquiry.coverage_le_errors_add_reach`, `FallibleInquiry.beyond_reach_coverage_eq_errors`; [record](../results/records/finite-fallible-inquiry-necessity.md). Necessary, not sufficient; structural reach is not time-ordered transmission ([§2](#r-timely-response-necessity)).
+
+**chapter, proposed:** [in place of 'common residual exchange suffices for answers alike beyond reach (`FallibleInquiry.alike_with_common_imbalance`)':] without balance, for two courses with the same formations present at every step, alike initial levels of what couples in beyond reach, the rest responding through its couplings, and residual giving and taking alike at every step and condition, every formation beyond reach is alike through its couplings at every step (`FallibleInquiry.alike_with_common_imbalance`)
+
+Writer's hypotheses in plain words:
+- The same formations are present in the two courses at every step.
+- For every formation beyond the part's responsive reach, every condition coupled into it has the same level at step 0 in the two courses.
+- The rest responds through its couplings across the two courses.
+- At every step and every condition, the residual taking is the same in the two courses and the residual giving is the same in the two courses.
+
+The situation given to the judges: Two runs have the same participants at every step and begin with the same levels at everything that feeds a participant beyond the part's reach, and the rest responds only through what couples into it. In the first run a store loses ten units at step 3 with no participant taking them. In the second run there is no such loss.
+
+`fails`: residual (residual taking and giving must be the same in the two courses at every step and condition)
+
+Judge (present arm) conditions:
+- Finite weighted alternatives
+- A binary target
+- Complete available inputs
+- The two World courses are balanced, or else have the same unaccounted (residual) change in both
+- The courses are of one law
+- The same formations are present in both
+- Initial levels alike at what couples in beyond reach
+- Answers come through everything that couples in up to the answer time
+- Reach is decided (for the bound by weight within responsive reach)
+- No exchange is omitted from the account
+Verdict: does not apply. Reason: The first run has an unaccounted loss of ten units that the second lacks, so the courses are neither both balanced nor carrying the same unaccounted change, the condition the telling requires for answers alike beyond reach.
+
+Judge (proposed arm) conditions:
+- Balance is not required.
+- The two courses have the same formations present at every step.
+- The two courses have the same initial levels at every condition coupled into a formation beyond the part's responsive reach.
+- The rest responds through its couplings.
+- At every step and condition the residual taking is the same in the two courses.
+- At every step and condition the residual giving is the same in the two courses.
+Verdict: does not apply. Reason: In one run a store loses ten units at step 3 with no participant taking them and in the other it does not, so the condition that residual taking is alike at every step and condition fails.
+
+## Theorem 14: `Becoming.Handoff.Run.novel_by_handoff`
+
+Signature:
+
+```lean
+theorem Run.novel_by_handoff {S A Q : Type} (M : Frame S A Q) (r : Run M.P) (living : Q → Prop)
+    (before : S → Q → Prop) (rank : Nat → S → Nat) (completed : Nat → Prop)
+    (decision : ∀ n, Decidable (completed n)) (bound : Nat) (initial : rank 0 (r.state 0) ≤ bound)
+    (localStep : ∀ n, ¬ completed n → rank n (r.state (n + 1)) < rank n (r.state n))
+    (handoff : ∀ n, ¬ completed n → rank (n + 1) (r.state (n + 1)) ≤ rank n (r.state (n + 1)))
+    (correspondence : ∀ n, completed n → Novel M living before (r.state (n + 1))) :
+    ∃ n, n ≤ bound ∧ Novel M living before (r.state (n + 1)) :=
+```
+
+**docstring, present:** /-- **Along a run of a frame**, the handed certificate gives new realization within the bound.
+Completion-to-realization correspondence stays a visible premise; a bound `B` allows at most
+`B + 1` steps. -/
+
+**docstring, proposed:** /-- **Along a run of a frame**, with completion at each step decided, the initial certificate at most `B`, each step not completed strictly lowering that step's certificate from its state to the next, the next step's certificate at that next state being at most the current step's there (the handoff, asked only at steps not completed), and each completed step `n` having a novel state at step `n + 1` (the correspondence premise): for some `n` at most `B`, the state at step `n + 1` is novel. -/
+
+Writer's hypotheses in plain words:
+- For each step, whether it is completed is decided.
+- The certificate of step 0 at the run's initial state is at most the bound B.
+- At each step that is not completed, that step's certificate is strictly lower at the next state than at the current state.
+- At each step that is not completed, the next step's certificate at the next state is at most the current step's certificate at that same state (the handoff).
+- At each completed step n, the state at step n + 1 is novel: living content realized there and absent before.
+
+The situation given to the judges: A process revises its rule at every step. Completion can be decided at each step, the first rule's count of remaining steps is at most 10, each rule's count drops by one over the step it governs, and any completed step would bring new living content. At each revision the new rule's count for the current state is set higher than the old rule's count for that state.
+
+`fails`: handoff (the next step's certificate at the next state must not exceed the current step's certificate there)
+
+Judge (present arm) conditions:
+- There is a run of a frame
+- A certificate is handed for it
+- The certificate carries a bound B, allowing at most B + 1 steps
+- Completion corresponds to realization (kept as a visible premise)
+Verdict: cannot tell. Reason: The telling does not say what the handed certificate requires when the rule is revised, so although counts set higher at each revision suggest the bound of 10 is not kept along the run, the telling names no condition by which to settle it.
+
+Judge (proposed arm) conditions:
+- The process is a run of a frame.
+- Completion at each step is decided.
+- The initial certificate is at most B.
+- Each step that is not completed strictly lowers that step's certificate from its state to the next state.
+- The handoff: at each step not completed, the next step's certificate at the next state is at most the current step's certificate at that state.
+- Each completed step n has a novel state at step n + 1 (the correspondence premise).
+Verdict: does not apply. Reason: At each revision the new rule's count for the state is set higher than the old rule's count for that state, so the handoff condition (the next certificate at most the current one there) fails.
+

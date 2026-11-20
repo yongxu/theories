@@ -1,0 +1,247 @@
+# Writer's task (the trial on twenty theorems)
+
+AI-written brief (Claude Fable), 21 November 2026. You are one of two writers. This file is everything you need: do not open any other file, run no command, and start no subagent. Your whole run is this one Read and your answer.
+
+What we are doing. This repository holds a theory whose core is proved in Lean 4. Each theorem is told by hand in several places: its docstring in the Lean file, a law in its result record, and a sentence in a chapter. Two readers found that for the theorems below at least one of those tellings says more than the Lean statement, most often by dropping a premise. A person who reads only the telling is then misled about when the theorem applies. Rule of the work: a telling of a proof says exactly what is proved, its premises stated.
+
+Your job, for each theorem below: for every telling marked FLAGGED, write a wording that says exactly what the signature says, no more and no less, in plain English a careful reader with no Lean can follow. Keep it as short as the truth allows; keep the telling's own register (a docstring stays a docstring: one short paragraph; a chapter sentence stays one or two sentences that could stand in the chapter; a record law stays one sentence). Do not rewrite a telling that is not flagged. Use the two readers' fault notes, but judge from the signature yourself: if a note is wrong, say so in `note`.
+
+Also, for each theorem whose signature has at least one hypothesis: list its hypotheses in plain words, one per item, in the order of the signature (`hypotheses_plain`), and write one concrete `failing_case`: two or three plain sentences describing a situation that meets every hypothesis but one, saying nothing about which one fails and using no Lean names, such that a reader who knows the hypotheses can tell the theorem does not apply. Name the failed hypothesis separately in `fails`.
+
+Do not soften: where the signature is narrower than every telling, say the narrow thing. Do not add anything the signature does not state (no reasons, no significance, no "so that").
+
+---
+
+## Theorem 8: `Becoming.Flow.Balances.unfed_consumption_ends` (record `consumption-ends-with-feeders`)
+
+**Signature** (becoming/Becoming/Interdependence.lean, line 189):
+
+```lean
+theorem Balances.unfed_consumption_ends (balances : L.Balances W) (acting : L.Acting W)
+    (dependent : W.Dependent) {c : C} {g : F} {T : Nat}
+    (unfed : ∀ t f, T ≤ t → W.active t g → f ∈ L.present t → W.Supported t f →
+      L.give t f c = 0)
+    (consumes : ∀ t, T ≤ t → W.active t g → g ∈ L.present t ∧ 0 < L.take t g c) :
+    ∀ n, (∀ k, k < n → W.active (T + k) g) → n ≤ W.level T c :=
+```
+
+**Docstring as it stands** (FLAGGED):
+
+/-- Unfed consumption ends. Under balance, with only active formations giving and activity
+needing support, let `g` take from `c` at every step from `T` at which it is active, while
+nothing supported gives to `c`. Then `g` is active for at most as many consecutive steps from
+`T` as the level of `c` at `T`. -/
+
+**Record law as it stands** (not flagged):
+
+Let the flow balance, with only active formations giving and activity needing support. If a formation g is present and takes from a condition c at every step from T at which it is active, while nothing supported gives to c at those steps, then g is active for at most as many consecutive steps from T as the level of c at T (derived from Flow.excess_bounded), so it is not active at every step from T.
+
+**Chapter paragraph as it stands** (FLAGGED; theories/becoming/chapters/02-MAP.md, line 303):
+
+**Theorem** (World). Under balance, only active formations giving and activity needing support, a formation taking from a condition at every step from `T` at which it is active, while nothing supported gives to it, is active for at most as many consecutive steps from `T` as the condition's level at `T` (`Flow.Balances.unfed_consumption_ends`); the same holds where it requires the condition while active and everything feeding its continuation is unsupported (`Flow.Balances.consumption_ends_with_feeders`): keeping its own support, it can still end through its feeder, as in `Overshoot`. Either of two redundant feeders suffices; withholding both leaves no balancing path ([record](../results/records/consumption-ends-with-feeders.md)).
+
+**The two readers' fault notes on the flagged tellings:**
+
+- chapter, reader 1: Minor: 'a formation taking from a condition at every step from `T` at which it is active' drops that it is present (g ∈ L.present t).
+- chapter, reader 2: “A formation taking from a condition at every step … at which it is active” omits that g is listed in `L.present` at those steps. A positive `L.take` entry contributes to total taking only for a listed participant.
+- docstring, reader 1: Minor: 'let `g` take from `c` at every step from `T` at which it is active' drops that g is present.
+- docstring, reader 2: “Let `g` take from `c` at every step … at which it is active” omits the same membership conjunct of `consumes`.
+
+## Theorem 9: `Becoming.TimedResponse.different_answers_not_unreached` (record `timely-response-necessity`)
+
+**Signature** (becoming/Becoming/TimedResponse.lean, line 177):
+
+```lean
+theorem different_answers_not_unreached {A : Type} {g : F}
+    (read : (Nat → C → Nat) → A)
+    (through : ∀ l l', W.AlikeThroughUpTo obs g l l' D → read l = read l')
+    (different : read W.level ≠ read W'.level) : ¬ ¬ ReachedBy L L' W obs source g D :=
+```
+
+**Docstring as it stands** (FLAGGED):
+
+/-- Constructive necessity: different outputs rule out absence of a timely route. -/
+
+**Record law as it stands** (not flagged):
+
+For two courses alike at step 0 and, before a deadline D, balanced, with the same formations present and each formation outside a time-indexed source exchanging alike where alike through its couplings so far, and a readout giving alike on histories alike through the reader's couplings up to D: different answers make its being unreached by D impossible, and with reach by D decided, give it reached.
+
+**Chapter paragraph as it stands** (not flagged; theories/becoming/chapters/03-KNOWING.md, line 90):
+
+**Theorem** (World; balance before the deadline). For two courses with common initial levels, balance and the same formations present before a deadline D, every formation outside a time-indexed source responding through what coupled into it before, and a common readout through what couples in up to D, a distinction that has not entered by D what the reader couples into cannot change the answer by D. Constructively the necessity is double-negated: different answers show the distinction not unreached (`TimedResponse.different_answers_not_unreached`); with reaching decided, reached (`TimedResponse.different_answers_require_reached`). Lean: `TimedResponse.answer_alike_before`; [record](../results/records/timely-response-necessity.md). Steps have no physical duration.
+
+**The two readers' fault notes on the flagged tellings:**
+
+- docstring, reader 1: 'Constructive necessity: different outputs rule out absence of a timely route.' states no premise; the five deadline premises are section variables brought in by `include`, and the readout premise is in the signature.
+- docstring, reader 2: “Different outputs rule out absence of a timely route” omits the two balance assumptions, common participants and start, response through couplings and readout factorization.
+
+## Theorem 10: `Becoming.Flow.Balances.admits_unreached_before` (record `feedback-and-reach`)
+
+**Signature** (becoming/Becoming/Feedback.lean, line 432):
+
+```lean
+theorem Balances.admits_unreached_before (balances : L.Balances W) {l : Nat → C → Nat}
+    (without : L.WithheldLevels part W l) {t : Nat} {g : F}
+    (unreached : ¬ L.ReachesBefore W part t g) : W.Supported t g ↔ W.Admits (l t) t g :=
+```
+
+**Docstring as it stands** (FLAGGED):
+
+/-- What a part has not reached before a step is admitted alike with and without it at that
+step. -/
+
+**Record law as it stands** (FLAGGED):
+
+At each condition a formation requires at a step, the levels with and without a part agree, or the part reaches the formation before that step; whatever the part has not reached before a step is admitted alike with and without it there, and what it does not reach, at every step.
+
+**Chapter paragraph as it stands** (not flagged; theories/becoming/chapters/03-KNOWING.md, line 82):
+
+**Theorem** (World; balance; the part withheld with the rest of the exchange unchanged). Levels follow their exchanges, so whatever a part has not reached before a step is admitted alike with and without it there. Nothing beyond a formation's influence closure exchanges with a condition a member depends on, so feedback carries at most the influence closure: with every member of the part beyond it, each formation within is supported with the part exactly where it is admitted without it. Lean: `Flow.Balances.admits_unreached_before`, `Flow.Balances.uncoupled_beyond_influence`; [record](../results/records/feedback-and-reach.md). A formation need not know its closure; one act is compared only through a second flow.
+
+**The two readers' fault notes on the flagged tellings:**
+
+- docstring, reader 1: 'What a part has not reached before a step is admitted alike with and without it at that step.' drops balance, which is in the theorem's name and signature only.
+- docstring, reader 2: “What a part has not reached … is admitted alike with and without it” states the non-reach premise alone. Balance and the prescribed withheld-level comparison are also required.
+- record, reader 1: none, taking statement and law together: law 6 does not say balance, the statement does ('in a balanced flow').
+- record, reader 2: “Admitted alike with and without it” leaves the comparison open. The law requires `WithheldLevels`, which fixes the initial levels and the remaining exchanges. The record explains that restriction in `hypotheses` without directing this claim there.
+
+## Theorem 11: `Becoming.ParitySystem.glues_iff` (record `gluing-under-parity`)
+
+**Signature** (becoming/Becoming/Gluing.lean, line 476):
+
+```lean
+theorem glues_iff [DecidableEq C] (distinct : Distinct S.claims) {all : List K}
+    (every : ∀ k, k ∈ all) :
+    (∃ X : Contextual Unit K C Bool, X.within = S.within ∧ X.Respects S.support () ∧ X.Glues ()) ↔
+      ¬ ∃ ks, S.Contradicts ks :=
+```
+
+**Docstring as it stands** (FLAGGED):
+
+/-- **Readings in context glue exactly where no selection of contexts contradicts.** With the
+contexts listed, some world showing what each context counts, respecting the possibilities,
+glues at its configuration exactly where no selection contradicts. -/
+
+**Record law as it stands** (not flagged):
+
+The only obstruction: with equality of claims decided and the claims listed without repetition, for every list of contexts a context-free assignment meets each or a selection contradicts; so, the contexts listed, no context-free reading exists exactly where a selection contradicts, and a world showing what each context counts, respecting the possibilities and gluing, exists exactly where none does.
+
+**Chapter paragraph as it stands** (not flagged; theories/becoming/chapters/03-KNOWING.md, line 295):
+
+**Theorem** (any type; claims listed without repetition and compared decidedly, contexts listed). Where each context requires a parity of its claims, a context-free reading exists exactly where no list of the contexts contradicts (claims counted evenly, parities adding to odd). Where m contexts contradict, every context-free assignment, and on average every mixture, meets at most m − 1, while reading each context by an assignment meeting it, one supplied for each, meets all m: Specker (two of three), CHSH (three of four) and Mermin–Peres (five of six) are cases. Lean: `ParitySystem.glues_iff`, `ParitySystem.mixture_le`, `ParitySystem.indexed_met`; [record](../results/records/gluing-under-parity.md). Tsirelson's bound is not stated; the [unity of readings](01-ROOT.md#r-unity-of-readings) is 01's.
+
+**The two readers' fault notes on the flagged tellings:**
+
+- docstring, reader 1: 'With the contexts listed, some world … glues … exactly where no selection contradicts' drops 'claims listed without repetition' and decided equality; they are stated two comments up, for global_or_contradicts.
+- docstring, reader 2: “With the contexts listed” names coverage but omits decidable claim equality and distinctness of `S.claims`.
+
+## Theorem 12: `Becoming.Founding.Flow.survivors_independent` (record `confined-rise-within-a-whole`)
+
+**Signature** (becoming/Becoming/Founding.lean, line 106):
+
+```lean
+theorem survivors_independent (balances : L.Balances W) (acting : L.Acting W)
+    (dependent : W.Dependent) {G : Generations X} (descended : SelectionTerm.Flow.Descended L W G)
+    {ds : List X} {m : Nat}
+    (gated : ∀ t f, f ∈ L.present t → ∀ d, d ∈ ds → 0 < L.give t f d →
+      ∃ e, e ∈ ds ∧ W.requires t f e ∧ m ≤ W.need t f e)
+    {T n : Nat} (excess : ∀ k, k < n → L.replenishment ds (T + k) < L.uptake ds (T + k))
+    (start : W.stock ds T < n + m) (k : Nat) {x : X} (mx : x ∈ G.family (T + n + k + 1)) :
+    ∃ p, p ∈ G.family (T + n + k) ∧ x ∈ G.kids (T + n + k) p ∧
+      ∀ e, e ∈ ds → W.requires (T + n + k) p e → ¬ m ≤ W.need (T + n + k) p e :=
+```
+
+**Docstring as it stands** (FLAGGED):
+
+/-- **What outlasts the end of a family of conditions.** Where only active formations give,
+activity needs support and the renewal of a family of conditions is gated on the family as one,
+`n` steps of the family's uptake exceeding its replenishment from `T`, from a stock below `n + m`,
+leave every member of a later generation of descent the offspring of a member that depended on no
+condition of the family at a need of at least `m`. -/
+
+**Record law as it stands** (FLAGGED):
+
+Where a family of conditions ran into excess under the coupled gate, every member of a later generation of descent is the offspring of a member that depended on no condition of the family at the gate's need, and a lineage every later member of which depends on the family has no member after its end.
+
+**Chapter paragraph as it stands** (not flagged; theories/becoming/chapters/04-LIFE.md, line 216):
+
+**Theorem** (World; any type for the founding theorems). *A confined rise within a whole, and what a founding carries.* Within one whole the two levels meet.
+
+**The two readers' fault notes on the flagged tellings:**
+
+- docstring, reader 1: 'Where only active formations give, activity needs support and the renewal … is gated on the family as one, `n` steps … from a stock below `n + m`': balance is dropped.
+- docstring, reader 2: “Where only active formations give, activity needs support and the renewal … is gated” omits `balances : L.Balances W`. The docstring does give the length of the excess and the strict stock bound.
+- record, reader 1: Law 0, 'Where a family of conditions ran into excess under the coupled gate, every member of a later generation…': balance, only active giving, activity needing support, and the n steps from a stock below n + m are in `hypotheses` only, and the law does not send the reader there.
+- record, reader 2: “Where a family of conditions ran into excess under the coupled gate” omits the stock bound and the balance, active-giving and support premises. An excess from an arbitrarily high starting stock gives no such conclusion. The law does not point to the record's hypotheses field.
+
+## Theorem 13: `Becoming.FallibleInquiry.alike_with_common_imbalance` (record `finite-fallible-inquiry-necessity`)
+
+**Signature** (becoming/Becoming/FallibleInquiry.lean, line 132):
+
+```lean
+theorem alike_with_common_imbalance
+    (present : ∀ s, L.present s = L'.present s)
+    (start : ∀ h, ¬ L.WithinResponse L' W obs part h →
+      ∀ c, W.CoupledInto obs h c → W.level 0 c = W'.level 0 c)
+    (responds : L.RespondsThroughCoupling L' W W' obs part)
+    (residual : ∀ s c,
+      (L.withImbalance W).take s none c = (L'.withImbalance W').take s none c ∧
+      (L.withImbalance W).give s none c = (L'.withImbalance W').give s none c) :
+    ∀ s h, ¬ L.WithinResponse L' W obs part h →
+      W.AlikeThrough obs h W.level W'.level s := by
+```
+
+**Docstring as it stands** (FLAGGED):
+
+/-- Absolute balance is stronger than needed for blindness. The same unaccounted
+change in the two courses suffices: after P59 accounts for it, the added relatum
+responds alike, and the original closed-region theorem applies. -/
+
+**Record law as it stands** (not flagged):
+
+For two courses, not taken as balanced, with the same formations present at every step, alike initial levels on what couples in beyond the part's responsive reach, the rest responding through its couplings, and residual giving and taking alike at every step and condition: every formation beyond that reach is alike through its couplings at every step, and every readout through them up to a step answers alike.
+
+**Chapter paragraph as it stands** (FLAGGED; theories/becoming/chapters/03-KNOWING.md, line 411):
+
+**Theorem** (periphery; finite weighted alternatives, a binary target, complete available inputs; `propext` and `Quot.sound` in some declarations, as the record reports). Committed coverage is at most the two error weights plus the weight the evidence separates. Composed with balanced World courses of one law, the same formations present, alike initial levels of what couples in beyond reach, and answers through everything that couples in up to the answer time, coverage is at most the two errors plus the weight within responsive reach, reach decided, and entirely beyond reach equals them with no decision; common residual exchange suffices for answers alike beyond reach (`FallibleInquiry.alike_with_common_imbalance`), and an omitted exchange can keep correct readouts while invalidating the bound. Lean: `ScientificInquiryNecessity.fallible_inquiry_bound`, `FallibleInquiry.coverage_le_errors_add_reach`, `FallibleInquiry.beyond_reach_coverage_eq_errors`; [record](../results/records/finite-fallible-inquiry-necessity.md). Necessary, not sufficient; structural reach is not time-ordered transmission ([§2](#r-timely-response-necessity)).
+
+**The two readers' fault notes on the flagged tellings:**
+
+- chapter, reader 1: 'common residual exchange suffices for answers alike beyond reach (`FallibleInquiry.alike_with_common_imbalance`)': the cited theorem has no readout and gives alikeness through couplings; 'answers alike' is answer_alike_with_common_imbalance, not cited at the home.
+- chapter, reader 2: “Common residual exchange suffices for answers alike beyond reach” cites the selected theorem for equality of answers. Its conclusion is `AlikeThrough` at every step. Equality for a readout that factors through these couplings is the separately named `answer_alike_with_common_imbalance`.
+- docstring, reader 1: 'Absolute balance is stronger than needed for blindness. The same unaccounted change in the two courses suffices': the three other premises are unnamed and the conclusion is 'blindness'. Read as a remark on the balanced theorem it widens, it is only vague.
+- docstring, reader 2: “The same unaccounted change in the two courses suffices” leaves out common participants, relevant initial agreement and response through couplings. Lean compares residual taking and residual giving component by component.
+
+## Theorem 14: `Becoming.Handoff.Run.novel_by_handoff` (record `open-form-realization-under-revision`)
+
+**Signature** (becoming/Becoming/Handoff.lean, line 156):
+
+```lean
+theorem Run.novel_by_handoff {S A Q : Type} (M : Frame S A Q) (r : Run M.P) (living : Q → Prop)
+    (before : S → Q → Prop) (rank : Nat → S → Nat) (completed : Nat → Prop)
+    (decision : ∀ n, Decidable (completed n)) (bound : Nat) (initial : rank 0 (r.state 0) ≤ bound)
+    (localStep : ∀ n, ¬ completed n → rank n (r.state (n + 1)) < rank n (r.state n))
+    (handoff : ∀ n, ¬ completed n → rank (n + 1) (r.state (n + 1)) ≤ rank n (r.state (n + 1)))
+    (correspondence : ∀ n, completed n → Novel M living before (r.state (n + 1))) :
+    ∃ n, n ≤ bound ∧ Novel M living before (r.state (n + 1)) :=
+```
+
+**Docstring as it stands** (FLAGGED):
+
+/-- **Along a run of a frame**, the handed certificate gives new realization within the bound.
+Completion-to-realization correspondence stays a visible premise; a bound `B` allows at most
+`B + 1` steps. -/
+
+**Record law as it stands** (not flagged):
+
+Along a run of a frame, with decided completion, an initial certificate at most B, each unfinished step lowering the current rule's certificate, each handoff not raising it, and each completion at step n giving living content realized at step n + 1 and absent before: for some n at most B, such content is realized at step n + 1.
+
+**Chapter paragraph as it stands** (not flagged; theories/becoming/chapters/07-SIGNIFICANCE.md, line 193):
+
+**Theorem** (any process) **and Conditional** (the continuation condition). Along a run of a frame, let each unfinished step lower the current rule's remaining-step certificate, each handoff to a revised rule not raise it, completion be decided and the initial certificate be at most `B`. Then, where each completion corresponds to new living content, the run realizes by step `B + 1` living content absent before (`Handoff.Run.novel_by_handoff`), which under the condition falls under the relevance read from significance (`Handoff.Run.relevance_by_handoff_of_unrestricted`). Witnesses: the realized form is not fixed, and without the handoff hypothesis rules each finishing when kept, revised at every step, never complete (`Handoff.fails_forever`). ([record](../results/records/open-form-realization-under-revision.md))
+
+**The two readers' fault notes on the flagged tellings:**
+
+- docstring, reader 1: 'the handed certificate gives new realization within the bound': the three certificate premises and decided completion are not named; the correspondence premise is.
+- docstring, reader 2: “The handed certificate gives new realization within the bound” mentions completion-to-realization correspondence but does not specify or point to decidability, initial rank ≤ B, strict local descent and non-increasing handoff.
+
