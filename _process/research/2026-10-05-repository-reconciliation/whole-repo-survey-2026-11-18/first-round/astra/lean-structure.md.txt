@@ -1,0 +1,102 @@
+Model: GPT-6 Astra
+
+# lean-structure: what is there
+
+*AI-written (GPT-6 Astra), 18 November 2026. A survey; nothing was changed.*
+
+## In three sentences
+
+**Counted.** The main receipt binds 409 modules to their present bytes, including three foundations outside the package directory; one file inside it, `FallibleInquiry.lean`, has a separate checker. **Counted.** Even after removing the umbrella that imports everything, the 405 built package modules form one connected graph when import direction is ignored, but 117 have no importer among their peers. **Inferred** from the imports, proofs and receipts: the repository preserves a distinction worth keeping between a module being available to another, a proof actually using its result, and two results saying one thing about the same situation.
+
+## What is there
+
+**Counted.** `LEAN` below is `experiments/integrated-correction/general-framework/generative-basis/lean`. It holds 89,064 tracked files and 2,773,829,048 logical bytes, counting repeated blobs at each path. The table uses the repository’s eight theory-graph regions as families. Declaration counts in the first ten rows are named declarations audited in the main receipt.
+
+| Kind | Files | Lines / declarations | What it is beside the Lean | Unique? | What reads it | How far seen |
+|---|---:|---:|---|---|---|---|
+| Root region | 74 | 59,857 / 5,519 | Map | Distinct source blobs | Main checker | Counted |
+| Map region | 85 | 63,040 / 5,283 | Map | Same | Main checker | Counted |
+| Knowing | 88 | 49,390 / 4,807 | Map | Same | Main checker | Counted |
+| Life | 23 | 22,139 / 2,026 | Map | Same | Main checker | Counted |
+| Collectives | 28 | 30,321 / 2,674 | Map | Same | Main checker | Counted |
+| Classical texts | 10 | 7,893 / 967 | Map and formal readings | Same | Main checker | Counted |
+| Significance | 71 | 50,764 / 4,836 | Map | Same | Main checker | Counted |
+| Method | 26 | 16,606 / 1,662 | Map | Same | Main checker | Counted |
+| Umbrella `Becoming.lean` | 1 | 5,340 / 0 | Imports and a telling | Authored prose | Lean, graph builder | Counted |
+| Foundations | 3 | 1,303 / 120 | Map | Distinct sources | Package imports | Counted |
+| `FallibleInquiry.lean` | 1 | 516 / 37 | Formal adapter | Separate proof source | Inquiry checker, chapter 03 | Counted |
+| Other catalogue working sources and audit drivers under `LEAN` | 416 | 116,574 / 12,167 | Periphery proofs and four audit drivers | Mixed | Periphery checkers, records | Counted, textual declarations |
+| Package READMEs / Python tools / toolchain pin | 2 / 3 / 1 | 833 / 5,489 / 1 lines | Tellings / tooling / build input | Mixed | Readers, checker, scratch builder | Counted |
+| Live / retired declaration pages | 21 / 1 | 67,020 / 11 lines | Generated navigation / trace | Live pages reproducible | Declaration index, manifest | Counted |
+| Two package run directories / `LEAN/history` | 68,435 / 12,176 | 2,368,149,022 / 180,412,612 bytes | Receipts, copies, logs / retired material | Mixed | Checkers, records, move manifests | Counted |
+
+**Counted.** The 416 comprise `universal-ethics` 139, `deeper` 94, `inquiry-root` 71, top-level 31, `systems-complexity` 28, `learning` 23, `conditional` 12, `naturalism` 10, `free-energy` 4, and one each in `physics`, `regime`, `representation` and `warning`. The two foundation files in `deeper` and `inquiry-root` and the top-level `GenerativeCore` are counted separately. `connected/` is under `history/`; `ConnectedGenerativeModel.lean` still stands at top level. The Mathlib pin holds four files. These counts distinguish current source paths from old builds without assuming that every current path is still needed.
+
+## What repeats
+
+**Counted.** All 409 main-build sources have different Git blobs from one another. Every one also has an exact copy under `becoming-checks/`, totalling 1,105 matching paths. The checker’s `SCOPE` occupies lines 218–4088 and contributes 62,460 whitespace-separated words to the receipt. `Becoming.lean` has 68,551 words and the English package README 59,017. These are sizes, not an estimate of identical prose.
+
+**Sampled, two of three pairs** in `results/data/session-results.json`, chosen to distinguish a wrapper from a repeated proof. `GenerativeModel.laws_iff_endpoint_histories` calls `same_steps_iff_endpoint_traces` directly. In `inquiry-root/{GenerativeClosure,WholeTheoryDischarge}.lean`, the two soundness theorems have byte-identical 19-line statements and proofs after their names. The latter is a concrete case where saying a result twice also meant proving it twice.
+
+**Sampled, one specialization named in the November plan.** `WayOfUnits.unending_iff_holds` applies `LineOnAStock.unending_iff_holds` with each unit leaving itself. The old name still serves callers. **Counted:** the file fell from 1,182 to 1,126 lines across commit `a54163054`.
+
+## What depends on it
+
+**Read whole** (`module_index`, `closure`, `ring_direction` and the audit assertions). The Python checker starts from explicit lists, resolves imports by package path or unique external basename, skips archive directories, and compiles dependencies first under Lean 4.29.1. It checks that the closure equals the declared pure set and enforces import direction between rings. **Counted:** 388 core modules including the umbrella, 11 instances, seven applications and three foundations; the main bridge and periphery-join lists are empty.
+
+**Counted.** Among the 405 modules below the umbrella, 497 of 892 direct import edges cross a region boundary. `Witnesses` has 44 direct importers. `Grammar`, `Prelude`, `Ideals` and `Segmentation` import no package peer. The 117 modules with no peer importer include `WayOfUnits`, `ReadingsSpread` and `LineOnAStockCases`; the command below prints all their names. The umbrella imports all 405 directly.
+
+**Counted from the 16 November receipt.** All 27,894 named declarations, including 20,352 theorems, have empty axiom lists. The environment audit ranges over 59,442 constants, covering private declarations, unnamed instances and generated constants. Its 270 exceptions are generated `.injEq` lemmas using `propext`. The receipt also records a prelude-only compilation. **Inferred** from the audit code: these checks establish logical dependencies for those source bytes. Recognition that a situation meets the premises remains outside their scope.
+
+**Counted.** The separate inquiry receipt audited 37 adapter declarations, 17 using `propext` and `Quot.sound`. Its target still matches, but 28 of its 42 closure sources differ from its 4 November run. **Read whole** (`gate.py`, package-receipt check): the gate distinguishes changes to an adapter’s own source from drift in shared core imports. A current main receipt alone cannot renew that adapter evidence.
+
+**Counted.** Of 567 result JSON records, 479 name one of 292 main-build sources as canonical; 47 name one of 45 other periphery sources. **Sampled, three links selected by destination:** `MAP.md` pins the package README’s verification section, method §3 pins a dated receipt, and `results/LEAN-DECLARATIONS.md` pins module anchors in the generated parts. A move can therefore preserve a proof and still break its readers.
+
+## What a continuing session needs from here
+
+**Inferred** from the checker, package navigation and records. For a claim, the short route is its record, named declaration, premises, proof, counterexample and matching receipt. For a build change, the import closure, checker lists and source hashes matter too. An ordinary reading can bypass old run trees; rebuilding can require them because the checker demands earlier passing receipts for inherited foundation bytes. **Not looked at:** session access logs. I cannot say which files people never open.
+
+## Candidates
+
+- **Inferred — keep source and countermodels together.** In `KidHigherNeed.all_but_down`, offspring need thirteen at a level that stays twelve: an unmet need alone does not establish depletion. `NothingTakenEnds.ending_differs` gives equal stock levels with different endings. **Sampled:** two countermodels selected from `LineOnAStock` by the plan. Removing either would lose the reason for a qualification.
+- **Inferred — say package scope once and point to it.** The umbrella, checker and both READMEs describe `LineOnAStock`. A consolidation would have to preserve the bilingual entry points, import list, graph builder’s parsing of umbrella bullets, receipt scope and pinned headings.
+- **Inferred — assess periphery by module.** The checker requires all 75 `SUPERSEDED` modules to remain uniquely findable and hashes them. It checks that their named replacements belong to the pure set; it does not prove equivalence. **Counted:** 57 of the 75 names still occur in imports of catalogue working sources under `LEAN`. Removing a folder would require changing those consumers and the checker contract first.
+- **Inferred — generated pages could leave the working tree only with replacement navigation and manifest handling.** The archived 835-byte bridge page has no module rows. Historical runs need a separate decision about replay and citations. **Sampled:** one archived learning attempt selected by an `error:` sweep, `prediction-protocol-completion-development/attempt-002/output.txt`, preserves two failed `Decidable` syntheses that a successful build cannot regenerate.
+
+## Against the two views
+
+**Counted.** The two run directories and `LEAN/history` account for about 92% of this tree’s logical bytes, supporting the coordinator’s account of its mass. **Inferred** from the soundness pair and the three scope tellings: moving trace off the reading path would leave genuine repetition in the live work. Conversely, leaf status alone gives little evidence for removal. `LineOnAStockCases` is a leaf precisely where a reader can inspect two cross-model comparisons.
+
+## Not determined, and surprises
+
+**Sampled, four earlier surveys by date.** The 16 October architecture review counted eight bridge modules; the move manifest now records 62 files in the later F3 sweep. The 6 November compiled audit reported repeated-statement groups falling from 113 to 21; I checked its `unitsOn` example in `GrammarLaws`. The 9–10 November review reported changing Lean commentary about widening; the `Direction.lean` diff at `179661f54` shows the distinction being corrected. The 14 November count is reproducible from the then-current receipt at `789deaf51`: 403 modules below the umbrella, 20,120 package theorems.
+
+**Inferred.** The package README still instructs readers to restate periphery content in the core when it belongs there. The later direction asks what doing so joins or shortens. That difference matters for the next proof. **Not looked at:** a new proof-term census, a full equivalence audit of the 75 replacements, or a replay of any receipt.
+
+## The commands behind the counts
+
+**Counted.** From repository root, with `L=experiments/integrated-correction/general-framework/generative-basis/lean`, I used `git ls-files -s -- "$L"` for paths and blob identity, `git cat-file --batch-check='%(objectname) %(objectsize)'` for logical bytes, and `git show` for dated comparisons. The graph and family counts reduce to this read-only Python:
+
+```python
+import json, os, re
+from pathlib import Path
+
+L = Path(os.environ["L"])  # export L first
+r = json.loads((L / "becoming/becoming-verification.json").read_bytes())
+g = json.loads(Path("theories/becoming/results/data/theory-graph.json").read_bytes())
+region = {n["name"]: n["region"] for n in g["nodes"] if n["type"] == "module"}
+src = {k: (L / r["source_paths"][k]).read_bytes() for k in region}
+deps = {k: set(re.findall(r"^import (Becoming\.\w+)", b.decode(), re.M))
+           & region.keys() for k, b in src.items()}
+print(sorted(region.keys() - set().union(*deps.values())))
+for family in sorted(set(region.values())):
+    ms = [m for m in r["modules"] if region.get(m["module"]) == family]
+    print(family, len(ms), sum(src[m["module"]].count(b"\n") for m in ms),
+          sum(len(m["declarations"]) for m in ms))
+```
+
+**Counted.** I cross-checked the internal edges against the comment-stripped imports in `results/data/lean-index.json` and compared SHA-256 against the working files for all 409 main sources and 416 catalogue periphery files. No build, checker, test or renderer ran.
+
+── cx · ok · session 01a1edbe-f05c-75a1-a7db-9ed09af3b03e · gpt-6.2-astra/high · read-only · 607s · 2239.0k tokens · 87 cmds
+continue: cx -r 01a1edbe-f05c-75a1-a7db-9ed09af3b03e "…"
+log: /Users/ren/.cache/cx/runs/20261118-152115-6566

@@ -1,0 +1,679 @@
+{
+ "tellingsA": {
+  "model": "Claude Fable 5.2 (claude-fable-5-2)",
+  "items": [
+   {
+    "id": "what-keeping-widening-needs",
+    "declaration": "Becoming.ClosedCycle.bounded_while_opening",
+    "statement_gist": "No hypotheses; about the closed-cycle witness's flow and web. Conclusion, seven conjuncts: flow.Gainless, flow.Balances web, web.KeepsOpening Web.itself web.level 0, every formation RequiresWithin [false,true], Distinct [false,true], stock of [false,true] = 1 at every t, and at no t does the rest give the family net or the family fail to be closed.",
+    "record": "says-less",
+    "record_fault": "Law 19: \"it keeps opening by name with stock one throughout, closed and never given from beyond\". Drops four conjuncts: the first law (Gainless), balance, requirements fixed within the list, the list without repetition.",
+    "chapter": "says-less",
+    "chapter_fault": "07 line 101: \"each is needed: nothing lost (`ClosedCycle.bounded_while_opening`)\". Gives only the role; none of the conjuncts (stock one, closed, balanced, first law) is told. \"Needed\" follows from the statement only together with the gain bridge and KeepsWidening = nothing lost + KeepsOpening.",
+    "docstring": "exact",
+    "docstring_fault": "",
+    "tellings_agree": true,
+    "note": "The three differ in completeness, not in claim. The docstring's bold heading (\"Nothing lost cannot be dropped from the gain bridge\") is the same role the chapter gives; its body lists every conjunct."
+   },
+   {
+    "id": "laws-at-coarser-steps",
+    "declaration": "Becoming.Strict",
+    "statement_gist": "Definition: Strict σ := for every s, σ s < σ (s + 1).",
+    "record": "exact",
+    "record_fault": "",
+    "chapter": "exact",
+    "chapter_fault": "01 line 568 tells it only as a premise phrase, \"At strictly increasing sample times\"; the name is not cited (the row cites `Flow.BalancesOn.sample`).",
+    "docstring": "exact",
+    "docstring_fault": "Adds how the coarse step is read (\"from the fine step σ s to just before σ (s + 1)\"), marked as a reading; that is the content of `span`, not of this definition.",
+    "tellings_agree": true,
+    "note": "Second declaration opened, and said so: the first listed, Becoming.World.Counted (InAmounts.lean:332, `∃ alive, w.web.Census alive`), is a reused definition that no law of this record names; the record mentions it once by name in a dependency note and the home row not at all. Its own docstring is exact. The record's statement is plainly about Sampling.lean."
+   },
+   {
+    "id": "mutual-dependence-gives-the-condition-de-se",
+    "declaration": "Becoming.Clearing.not_unrestricted_ownClosure",
+    "statement_gist": "No hypotheses; about the Clearing witness with every formation its own center (center = identity). Conclusion: the de se own-closure significance along AffectedBy is not Unrestricted, and the one along Affects is not Unrestricted.",
+    "record": "says-more",
+    "record_fault": "Law 3: \"the dweller lies beyond the clearer's influence closure\". Not a conjunct of this statement, which says only that neither reading is unrestricted. It is the reason inside the proof (through `shares_not_mutual`, from `Clearing.levels`), true in the Lean, and the law names only this declaration.",
+    "chapter": "says-more",
+    "chapter_fault": "07 line 650: \"neither holds, the dweller lying beyond the clearer's influence closure (`Clearing.not_unrestricted_ownClosure`)\". Same added clause, cited to this declaration alone.",
+    "docstring": "exact",
+    "docstring_fault": "Has the same clause but sends the reader to `shares_not_mutual` for it.",
+    "tellings_agree": true,
+    "note": "A mild says-more: an added reason that is proved elsewhere, not a dropped premise or a stronger theorem. All three say the same thing; only the docstring points to where the extra clause comes from."
+   },
+   {
+    "id": "selection-among-groups-by-ending",
+    "declaration": "Becoming.GroupEnding.Ended",
+    "statement_gist": "Definition: Ended gs w a := for all groups g, h in gs, if total of a over h is below total of a over g, then total of w over h is 0.",
+    "record": "exact",
+    "record_fault": "",
+    "chapter": "exact",
+    "chapter_fault": "04 line 202 elides the comparand: \"every group with less of an amount leaves no offspring\" (than another group). The name `Ended` is not cited.",
+    "docstring": "exact",
+    "docstring_fault": "",
+    "tellings_agree": true,
+    "note": "Outside the judged declaration but in the same law 1: its second half tells `rises_iff_ended` without the premise that all groups have equal size (`equal`); that premise is in the record's hypotheses field and in the chapter row's premises column, and law 1 does not send the reader there."
+   },
+   {
+    "id": "orders-as-a-sum-over-histories",
+    "declaration": "Becoming.Weights.within",
+    "statement_gist": "Recursive definition of order j at horizon n: horizon 0 gives f; order 0 at horizon n+1 sums ground weight times order 0 at horizon n; order j+1 at horizon n+1 sums ground times order j+1 plus response times order j, both at horizon n.",
+    "record": "exact",
+    "record_fault": "Law 1 leaves the order-0 clause implicit (\"order j − 1 through the response part\"); the docstring states it.",
+    "chapter": "absent",
+    "chapter_fault": "02 line 341 tells `routeSum_eq_carriedWithin` and the binomial sums; the expansion by order for every weighting is not told at the home. A sweep of chapters 01 to 08 for \"ground part\", \"expands by order\", \"Weights.within\", \"within_exact\" found nothing.",
+    "docstring": "exact",
+    "docstring_fault": "",
+    "tellings_agree": true,
+    "note": "Record and docstring agree; no chapter telling."
+   },
+   {
+    "id": "groups-whose-conditions-are-coupled",
+    "declaration": "Becoming.Flow.family_excess_ends",
+    "statement_gist": "Hypotheses: flow balances; only active formations give (Acting); activity needs support (Dependent); the coupled gate at every step (whatever gives to a member of ds requires some member at a need of at least m); n consecutive steps from T with replenishment of ds below uptake; stock of ds at T below n + m. Conclusion: at every step T + n + k, any formation requiring a member of ds at a need of at least m is not active.",
+    "record": "says-more",
+    "record_fault": "Law 2: \"where whatever gives to a member depends on some member at a need of at least m ... so n steps of family excess from a stock below n + m end every such formation\". Drops balance, only active formations giving, and activity needing support. They are in the hypotheses field; the law does not point there.",
+    "chapter": "exact",
+    "chapter_fault": "",
+    "docstring": "says-more",
+    "docstring_fault": "\"leave the stock below `m` from `T + n` on, nothing gives to any member again\": two conclusions the statement does not have. The first is a sibling lemma (`family_stays_below_at`); the second appears only inside proofs.",
+    "tellings_agree": false,
+    "note": "Declaration opened by me, and said so. The three listed (Alone.all_continue, Alone.balances, Alone.dependent) are named by no law of this record and told nowhere in it or at its home; they are told in another record (own-count-misses-joint-excess, law 5). For the first listed, Alone.all_continue: record absent, chapter absent, docstring says-less (drops the conjuncts Balances and Dependent). I took instead the first declaration the chapter home cites. The chapter row (04 line 203) carries all premises in its premises column; the record law and the docstring each differ from it."
+   },
+   {
+    "id": "a-revision-that-opens-a-correction",
+    "declaration": "Becoming.OpenedCorrection.Correctable",
+    "statement_gist": "Definition: Correctable reading acceptable executable x := a uniform policy exists through reading x, that is, some policy from readings to acts such that for every situation s the act at reading x s is acceptable at s and executable at x.",
+    "record": "exact",
+    "record_fault": "",
+    "chapter": "exact",
+    "chapter_fault": "",
+    "docstring": "exact",
+    "docstring_fault": "",
+    "tellings_agree": true,
+    "note": "Record law 1 and the docstring are the same sentence. Hairline: \"whose act at each reading is ... executable there\" can be read as asking executability at readings no situation gives; the definition does not. Only the chapter (03 line 366) says so: \"a reading no situation gives imposing no such condition\"."
+   },
+   {
+    "id": "where-a-rising-take-ends",
+    "declaration": "Becoming.Alone.takes_all",
+    "statement_gist": "No hypotheses; about the Alone witness (a renewer giving two, one taker taking two, every step). Conclusion: at every t the taker takes all that is given and is active.",
+    "record": "exact",
+    "record_fault": "Law 5 adds \"without its take rising\": not a conjunct, but true by the definition of the witness's flow (`Witnesses.relay ... 2 2 0`).",
+    "chapter": "exact",
+    "chapter_fault": "02 line 310: \"A full taker whose take does not rise continues (`Alone`)\"; cites the namespace, not the declaration.",
+    "docstring": "exact",
+    "docstring_fault": "",
+    "tellings_agree": true,
+    "note": "The sample's line for the same short name in namespace Seeker (line 257) is a different declaration; the one judged is Exhaustion.lean:284."
+   },
+   {
+    "id": "re-optimizing-above-a-renewal-ends-it",
+    "declaration": "Becoming.Web.course_lost_iff",
+    "statement_gist": "Hypotheses: decidable equality; the formations present and the conditions ds ++ rest listed without repetition; rest apart from ds; ds nonempty; the order Rising on ds; a course Reoptimizes; c in rest; the rest gives c exactly r wherever its level is at least m, and at most r always; the rest's taking plus the part's capacity at c is k at every step; 0 < m; f requires c at need m at every step; level at step 0 at least m. Conclusion: W.Lost c exactly where r < k.",
+    "record": "says-more",
+    "record_fault": "Law 8: \"Where the rest renews a condition beyond by exactly r a step at a positive need and by at most r below, and takes there with the capacity k a step, a dependence at that need, met at the start, is lost exactly where r < k\". Drops the re-optimizing course, the rising order, the lists without repetition, and the dependence holding at every step. The course is in law 7 and the hypotheses field, unpointed; listing without repetition is nowhere in the record.",
+    "chapter": "exact",
+    "chapter_fault": "05 line 221 carries the course, the lists without repetition and \"at every step\" in its row; the rising order is the section's standing frame and is not repeated in the row.",
+    "docstring": "says-more",
+    "docstring_fault": "\"Over a course of re-optimizing steps ... the dependence is lost exactly where `r < k`\" drops `rising`, `distinct`, `cdistinct`; also \"while it stands at a positive need `m`\" for at or above it.",
+    "tellings_agree": false,
+    "note": "Declaration opened by me, and said so. The three listed (Flow.ActsWithin, Flow.Outcome, Flow.capacity) are reused definitions named by no law of this record; they are told in room-read-off-the-exchange, law 1. For the first listed, Flow.ActsWithin: record absent, chapter absent, docstring exact (all five conjuncts). I took the first declaration the chapter row cites. Hairline shared by all three tellings: `W.Lost c` says some formation's met dependence on c is lost; the tellings say this formation's is (the proof gives that, the statement does not)."
+   },
+   {
+    "id": "a-formations-own-course",
+    "declaration": "Becoming.IdentificationRuns.joint_agree",
+    "statement_gist": "For any two sequences o, o': if the paired sequence has StatesBelow P (every step is one of the states of the steps before P) and o n = o' n for all n < P, then o n = o' n for all n.",
+    "record": "exact",
+    "record_fault": "Law 4 tells it in the setting of a formation's own courses under two histories (\"where the two courses read together have at most P states, alike before P is enough\"); the lemma holds of any two sequences.",
+    "chapter": "absent",
+    "chapter_fault": "03 line 36 tells only the N + N′ − 1 bound; the joint bound P is not told. A sweep of chapter 03 for \"read together\", \"joint course\", \"alike_of_joint\" found nothing.",
+    "docstring": "exact",
+    "docstring_fault": "",
+    "tellings_agree": true,
+    "note": ""
+   },
+   {
+    "id": "least-footprint-where-idleness-decided",
+    "declaration": "Becoming.Footprinted.DecidesIdle",
+    "statement_gist": "Definition: DecidesIdle L W idle := for every step n and relatum x, idle n x = true exactly where x is not among those present at n and x is unmoved across n.",
+    "record": "exact",
+    "record_fault": "",
+    "chapter": "says-less",
+    "chapter_fault": "01 line 547: \"Given idleness decided at every step and relatum\" uses the notion without saying what idle is (taking no part and unmoved).",
+    "docstring": "exact",
+    "docstring_fault": "",
+    "tellings_agree": true,
+    "note": "Third listed declaration opened, and said so: the first two, Becoming.bool_cases (`∀ b : Bool, b = true ∨ b = false`) and Becoming.not_eq_false_iff, are helper lemmas with no docstring, named by no law and told nowhere in record or chapter."
+   },
+   {
+    "id": "binding-preserving-substitution",
+    "declaration": "Generative.InferentialSubstitution.extract_rename",
+    "statement_gist": "For a term in a context, a renaming r to a target context, grounds left for the context and right for the target: if right (r p) = left p at every position p, then extract (rename r term) right = extract term left.",
+    "record": "exact",
+    "record_fault": "",
+    "chapter": "absent",
+    "chapter_fault": "03 line 469 tells the substitution criterion and cites `Readout.agree_iff_parts` and `all_terms_agree_iff_positions_by_core`; renaming is not told (no \"renam\" in chapter 03).",
+    "docstring": "says-less",
+    "docstring_fault": "\"Pointwise agreement at the actual positions suffices\": does not say for what (the renamed term evaluating as the original). The rest, \"two articulations of this same evaluation, not independent worlds\", is a reading, not in the statement.",
+    "tellings_agree": true,
+    "note": ""
+   },
+   {
+    "id": "recurrent-chain-assembly",
+    "declaration": "RecurrentAssembly.prepared_repeated_generation",
+    "statement_gist": "Hypothesis: routing the canonical eight-slot recipe from pool with 8 support returns ([], 0). Conclusion: growing 8 from the empty strand on the placed tokens ++ blocks for (required n 1) ++ tail, with support free + 9·required n 1 + 8, and then running n rounds, gives 2^n mature chains and leaves pool = tail, free = free, spent = spent + 8 + 9·required n 1 (required n 1 = 2^n − 1).",
+    "record": "exact",
+    "record_fault": "Law 7 does not tell the spent count; \"forms the mature chain\" is the intermediate step (`prepared_output_rebuilds`), given by the statement at n = 0.",
+    "chapter": "absent",
+    "chapter_fault": "04 line 112 tells `doubling_iff`, `rounds_mature_iff`, `rounds_follow_doubling`; prepared material joining the rounds (the record's title) is not told at the home. No line of chapter 04 names the declaration.",
+    "docstring": "absent",
+    "docstring_fault": "No comment above the declaration (RecurrentAssembly.lean:272); the neighbouring theorems have none either.",
+    "tellings_agree": true,
+    "note": "Only one telling exists, so agreement is vacuous."
+   },
+   {
+    "id": "a-commuting-learner-drives-no-unread-choice",
+    "declaration": "Becoming.Weighted.Commutes",
+    "statement_gist": "Definition: Commutes K σ := for every x and every F, the weighted total of F over the successors of σ x equals the total over the successors of x of F read through σ on the successor.",
+    "record": "exact",
+    "record_fault": "",
+    "chapter": "exact",
+    "chapter_fault": "",
+    "docstring": "exact",
+    "docstring_fault": "",
+    "tellings_agree": true,
+    "note": "The three use nearly the same sentence."
+   },
+   {
+    "id": "errors-by-chance-in-a-pair-keeping-mutual-withholding",
+    "declaration": "Becoming.PairChance.KeepsWithheld",
+    "statement_gist": "Definition: KeepsWithheld f := f (false, false) (false, false) = false, that is, after both formations withheld at their last two steps, the law withholds.",
+    "record": "exact",
+    "record_fault": "",
+    "chapter": "exact",
+    "chapter_fault": "",
+    "docstring": "exact",
+    "docstring_fault": "",
+    "tellings_agree": true,
+    "note": "Record law 1 and chapter 05 line 140 are the same sentence, and also list which laws keep it and which do not (other declarations)."
+   },
+   {
+    "id": "joint-plans-from-a-supported-start",
+    "declaration": "SeededContinuation.mutual_history",
+    "statement_gist": "For any step relation, properties r and s, and history h: if r and s hold at h 0, every h n steps to h (n+1), and each step from a point where both hold keeps r and keeps s, then r and s hold at every h n.",
+    "record": "exact",
+    "record_fault": "Law 1 tells it as its last clause (\"along a history of such steps both hold at every step\"), in the joint-plan setting; the lemma is about any step relation.",
+    "chapter": "absent",
+    "chapter_fault": "05 line 391 tells `seeded_joint_plan` and the witnesses; the history lemma is not told (no \"along a history\" or `mutual_history` in chapter 05).",
+    "docstring": "says-less",
+    "docstring_fault": "\"Past/current conditions, not an assumed next-state conclusion, support both next-state guarantees\": a gloss; neither the start premise nor the conclusion at every step is stated.",
+    "tellings_agree": true,
+    "note": ""
+   },
+   {
+    "id": "on-whom-the-loss-falls",
+    "declaration": "Becoming.PoolFromCourse.Borne.locked_hi",
+    "statement_gist": "Hypothesis: favours x (in the counts x the others are at most the carriers). Conclusion: (x, hi) is Locked under the threshold reading: the rule in force hi favours, and hi is not above what the reading of x gives.",
+    "record": "says-less",
+    "record_fault": "Law 3 names it but tells only its instances on the witness (\"the course locked at steps 1 to 3\", \"borne by the others, the course is locked at every step\"); the lemma itself, any configuration under hi whose carriers are at least the others, is not told.",
+    "chapter": "absent",
+    "chapter_fault": "02 line 479 has the same witness sentences cited to `Borne.shapers_turned`, `Borne.shapers_left`, `Borne.others_locked`; `locked_hi` is neither named nor stated.",
+    "docstring": "exact",
+    "docstring_fault": "",
+    "tellings_agree": true,
+    "note": "A helper lemma inside a witness."
+   },
+   {
+    "id": "the-world-an-interleaving-builds",
+    "declaration": "Becoming.Interleavings.LocalLaw.exchangeAt",
+    "statement_gist": "Definition: exchangeAt L t is the t-th exchange of the list L as an Option, none where the list has none there.",
+    "record": "exact",
+    "record_fault": "Law 1 uses it as \"the exchange at t\"; the none case is left implicit.",
+    "chapter": "absent",
+    "chapter_fault": "01 line 551 tells `world_balances` and `world_renumber_reads` only.",
+    "docstring": "exact",
+    "docstring_fault": "",
+    "tellings_agree": true,
+    "note": "A small helper definition; the record's headline theorems were not judged here."
+   },
+   {
+    "id": "learning-a-rule-by-narrowing",
+    "declaration": "Becoming.Narrowing.learn",
+    "statement_gist": "Recursive definition: learn hs [] = hs; learn hs (o :: os) = learn (revise hs o) os, where revise keeps the rules whose value at the observation's question is its value.",
+    "record": "exact",
+    "record_fault": "Law 1 tells what it keeps (\"exactly the listed rules fitting every observation\", which is `mem_learn`: h ∈ learn hs e ↔ h ∈ hs ∧ Fits h e), not the recursion.",
+    "chapter": "exact",
+    "chapter_fault": "03 line 405 likewise; it cites `narrowed_iff_fits`, not `learn`.",
+    "docstring": "exact",
+    "docstring_fault": "",
+    "tellings_agree": true,
+    "note": "I read `mem_learn` to confirm the record's and chapter's characterisation."
+   },
+   {
+    "id": "reach-through-a-shared-condition",
+    "declaration": "Becoming.SharedCondition.Occ",
+    "statement_gist": "Inductive type with three constructors, each taking a natural number: a n, b n, r n.",
+    "record": "exact",
+    "record_fault": "",
+    "chapter": "exact",
+    "chapter_fault": "",
+    "docstring": "exact",
+    "docstring_fault": "",
+    "tellings_agree": true,
+    "note": "A carrier type; the tellings name its constructors as two family lines and a shared condition. The sample's first line hit (94) is Decay.Occ; the one judged is GrammarCases.lean:312. Aside, on the record's first theorem `affecting_reaches_other` (statement: a 0 reaches b 2 under the one): law 1 and the chapter add \"through the condition\", which is the proof's path, not the statement; by the definition of `affecting` no other path exists."
+   }
+  ],
+  "summary": "Of 60 tellings: 40 exact, 6 says-less, 6 says-more, 8 absent, none says-other. The first-listed declarations are alphabetical: 10 definitions or types, 5 facts about witnesses, 1 helper. For 4 records no law names the first-listed declaration at all (bound in references, told nowhere there), so I opened another and said so. Definitions and witnesses are told nearly word for word in record, chapter and docstring. The faults sit in the only two multi-premise World theorems judged (family_excess_ends, course_lost_iff): each record law drops premises kept only in the hypotheses field, and each docstring drops premises or adds conclusions; the chapter rows carry them. Chapter homes tell headline theorems only: 7 absent. The sample cannot show the rate for headline theorems (n = 2, both faulty), record statements taken whole, Chinese tellings, proofs or axioms."
+ },
+ "tellingsB": {
+  "model": "Claude Fable 5.2 (claude-fable-5-2)",
+  "items": [
+   {
+    "id": "which-links-a-closure-needs",
+    "declaration": "Becoming.Cuts.closure_unchanged_iff_bypassed (second opened, Cuts.lean:102). The first listed, Becoming.ClosedUnder (Frame.lean:86), is a reused definition that no law of this record names and the chapter home does not tell.",
+    "statement_gist": "For any relations rel and added: every closure under Joined rel added equals the closure under rel, if and only if every link of added has its second end within its first end's closure under rel. No other premise. (ClosedUnder itself: region is closed where x in region and rel x y give y in region.)",
+    "record": "exact",
+    "record_fault": "None. Law 1 says 'each removed link has its second end within its first end's closure under what remains'; the statement's 'is bypassed' is defined there.",
+    "chapter": "exact",
+    "chapter_fault": "None for this declaration.",
+    "docstring": "exact",
+    "docstring_fault": "None.",
+    "tellings_agree": true,
+    "note": "Verdicts are for the second declaration. For ClosedUnder: record absent (only in dependencies and references), chapter absent, docstring exact. All three tellings speak of a cut; the Lean states a join (rel with added joined, against rel). Reading a relation R with added removed as this needs R = rest-or-added, which is not said; a small gap, the same in all three. Sampled: laws 2 to 9 not checked."
+   },
+   {
+    "id": "a-prediction-read-by-what-it-predicts",
+    "declaration": "Becoming.ReflexivePrediction.Negating.alternates (ReflexivePrediction.lean:210)",
+    "statement_gist": "For every Boolean p and every step k, the orbit of negation from p at step k+1 differs from that at step k. No premise.",
+    "record": "exact",
+    "record_fault": "None. Law 7: 'repeated publication alternates for ever'.",
+    "chapter": "exact",
+    "chapter_fault": "None: 'Boolean negation leaves no value fixed, and publication alternates for ever'.",
+    "docstring": "exact",
+    "docstring_fault": "None: 'no step publishes again'.",
+    "tellings_agree": true,
+    "note": "On two values, consecutive publications differing is alternation, so 'alternates' adds nothing. Law.orbit's definition was not opened; taken as iteration."
+   },
+   {
+    "id": "typicality-by-counting",
+    "declaration": "Becoming.Typicality.ones (Typicality.lean:89), a definition",
+    "statement_gist": "A recursive count on List Bool: 0 on the empty list, one more for each true entry, unchanged by a false entry.",
+    "record": "exact",
+    "record_fault": "None of substance. Laws 1 and 2: 'p for each one', 'a course with a ones and b zeros'. That a one is the value true is left to the Lean.",
+    "chapter": "says-less",
+    "chapter_fault": "'x = q·(ones)' uses the count without saying what it counts. Light.",
+    "docstring": "exact",
+    "docstring_fault": "None.",
+    "tellings_agree": true,
+    "note": "Also opened from law 1: mem_courses_iff, courses_length, total_weight and spread. Record law 1 and 2 and the chapter's '2ⁿ courses of n steps weigh (p + q)ⁿ' and the exact spread match those statements. typical, typical_throughout and concentrated were not opened."
+   },
+   {
+    "id": "becoming-dependence-dynamics",
+    "declaration": "Becoming.Conditions.dependence (Dependence.lean:126), a definition",
+    "statement_gist": "From Conditions (level and activity by configuration; requires, need, draws fixed) builds a Dependence whose requires, need and draws ignore the configuration.",
+    "record": "exact",
+    "record_fault": "None. Law 1: 'with constant dependence this reading recovers the static renewing/consuming classification exactly'; Web.conditions_along is rfl and the static_* theorems are iffs, as read.",
+    "chapter": "absent",
+    "chapter_fault": "The home tells ceases_at_a_step and the three outcomes; nothing on reading fixed conditions as a dependence or on recovering the static classification.",
+    "docstring": "exact",
+    "docstring_fault": "None: 'Fixed dependences: the conditions of Becoming.Renewal'.",
+    "tellings_agree": true,
+    "note": "The sample gives Dependence.lean for Web.conditions_along's neighbours, but conditions_along and Dependence.along sit in Labelled.lean. Three declarations in the file are called dependence; line 126 is the one meant. The record's statement and the chapter's three-outcome theorems were not checked."
+   },
+   {
+    "id": "balance-from-the-first-law",
+    "declaration": "Becoming.EntropyProduction.balances_iff_unproduced (second opened, physics/EntropyProduction.lean:333). The first listed, rtotal (line 257), is a helper definition no law names.",
+    "statement_gist": "Given a local balance of a real quantity (LocalBalance L q x p), the levels read at unit u (ReadsLevels), the transfers read at unit u (ReadsTransfers) and 0 < u: the flow balances the web if and only if every condition produces nothing at every step.",
+    "record": "says-more",
+    "record_fault": "Statement and law 2 ('the levels balance exactly where no condition produces the quantity') drop 0 < u and the two readings at a unit. They are in law 1 and in hypotheses, but law 2 does not send the reader there. Mild.",
+    "chapter": "exact",
+    "chapter_fault": "None: 'read at a unit u > 0 on the levels and the exchanges'.",
+    "docstring": "says-more",
+    "docstring_fault": "'read at a unit' without saying the unit is positive; the premise 0 < u is in the signature just below. Minor.",
+    "tellings_agree": true,
+    "note": "Verdicts are for the second declaration. They differ only in whether u > 0 is said. For rtotal: record absent, chapter absent, docstring exact ('The total of a real quantity over a finite list'). Laws 3 to 7 (Teleport, store and exchange laws, Burning, Leaking) not checked."
+   },
+   {
+    "id": "place-relations-in-context",
+    "declaration": "Becoming.Hexagram.Half (HexagramPlaces.lean:142), an inductive type",
+    "statement_gist": "A type with two constructors, lower and upper. Which places belong to each is given by the separate definition place.",
+    "record": "exact",
+    "record_fault": "None. Law 1: 'three heights in each of two trigrams, each place being one height of one trigram'.",
+    "chapter": "exact",
+    "chapter_fault": "None for this type: the Chinese home speaks of 上下两卦. It does not tell law 1's other content (heights, seams, parity across seams).",
+    "docstring": "exact",
+    "docstring_fault": "None; 'lines 1-3' and 'lines 4-6' are borne out by place.",
+    "tellings_agree": true,
+    "note": "A two-constructor type leaves little to get wrong. Also opened: odd_above (parity alternates across every seam), which record law 1 and its docstring tell exactly and the chapter home does not tell. The record's statement on gluing (halves_glues_iff and the rest) was not checked. The chapter home is in Chinese only."
+   },
+   {
+    "id": "what-seeking-cannot-separate",
+    "declaration": "Becoming.LumpedSeeking.Agree.Bias (LumpedSeeking.lean:206), an inductive type",
+    "statement_gist": "A type with three constructors: heads, fair, tails.",
+    "record": "exact",
+    "record_fault": "None. Law 6: 'three coins, biased toward heads (true), fair and biased toward tails'.",
+    "chapter": "exact",
+    "chapter_fault": "None: same words.",
+    "docstring": "exact",
+    "docstring_fault": "None.",
+    "tellings_agree": true,
+    "note": "That heads is 'the true one' is a label of the witness, not in the type. Also opened: prior (5, 6, 7), ties (Tied agreeing heads tails) and totals (sixteen under each bias); law 6 matches them. seeking_keeps_order was seen in part and not judged."
+   },
+   {
+    "id": "requirement-is-the-weakest-sound-reading",
+    "declaration": "Becoming.ExchangeRelation.Local (OverExchange.lean:722), a definition",
+    "statement_gist": "A reading R of requirement is local where, for histories l and l' that agree everywhere except at step t and condition c, R l t f c n gives R l' t f c n.",
+    "record": "exact",
+    "record_fault": "None: 'does not read the current level of what is required'.",
+    "chapter": "exact",
+    "chapter_fault": "None: same words.",
+    "docstring": "exact",
+    "docstring_fault": "None: 'changing that level alone at that step does not change it'.",
+    "tellings_agree": true,
+    "note": "Also read: respondsBelow_weakest and mayRespond_not_supports; record and chapter match their statements, and the chapter rightly limits the second to the free relation. Not determined: Supports quantifies over every level history with an admitted exchange at the step, while record and docstrings gloss soundness as 'activity needs support on every run'; whether those are the same was not settled, since Runs and admits were not opened."
+   },
+   {
+    "id": "becoming-return-grades",
+    "declaration": "Becoming.Web.RestoredWithin (Restoration.lean:61), a definition",
+    "statement_gist": "RestoredWithin p t g c: some k with 0 < k ≤ p has the need of g on c as it stood at t at most the level of c at t + k.",
+    "record": "exact",
+    "record_fault": "None. Law 1: 'returns within p steps when the condition meets it at one of the next p steps'.",
+    "chapter": "says-less",
+    "chapter_fault": "'Return grades renewal: within p steps, at some later step, never' names the grade without saying what is met (the need as it stood at t, against a later level).",
+    "docstring": "exact",
+    "docstring_fault": "None.",
+    "tellings_agree": true,
+    "note": "RenewedWithin and Restored, in the same law, were read and match it. consumed_iff, Restored.not_consumed and the Slowing witness, which the record's statement is about, were not opened."
+   },
+   {
+    "id": "lifting-where-branching-is-finite",
+    "declaration": "Becoming.Lasting.Continues (Lasting.lean:934), a definition",
+    "statement_gist": "Continues P n s by recursion: true at 0; at n + 1, some step from s leads to a t with Continues P n t.",
+    "record": "exact",
+    "record_fault": "None. Law 1: 'Some course of n steps starts at s (Continues)'.",
+    "chapter": "says-less",
+    "chapter_fault": "The home defines only 'unbounded' ('courses of every length start at it') and speaks of 'the depth reached'; the single-length notion is not stated on its own. Light.",
+    "docstring": "exact",
+    "docstring_fault": "None.",
+    "tellings_agree": true,
+    "note": "Also read: Unbounded, FinitelyBranching, Continues.down and Continues.decided. Record law 1 and the chapter's 'Where branching is finite (successors listed), the depth reached is decided' match Continues.decided with its premise. step_iff_either and lifting were not opened."
+   },
+   {
+    "id": "what-finitely-many-labels-fix",
+    "declaration": "Becoming.Learnable.learnable_iff_table (second opened, Labels.lean:221). The first listed, Identification.firstFit_map (line 77), is a list lemma that law 1 names but no sentence tells.",
+    "statement_gist": "With a list l holding every configuration (and equality of the map's values decided): some extrapolation predicts the feature at every configuration if and only if some table of at most l.length entries, each name of length l.length - 1, has its table extrapolation predict it at every configuration.",
+    "record": "exact",
+    "record_fault": "None. Law 2: 'learnable exactly where the extrapolation given some table of at most N labelled names of N - 1 values learns it', within 'In a world a list of N holds'.",
+    "chapter": "exact",
+    "chapter_fault": "None; the bracket gives the list of N and the decided values.",
+    "docstring": "exact",
+    "docstring_fault": "None.",
+    "tellings_agree": true,
+    "note": "Verdicts are for the second declaration. For firstFit_map (the first fit of a mapped list is the image of the first fit through the map): record absent (listed under law 1, whose sentence describes the table construction), chapter absent, docstring exact. Predicts and PredictsFrom were not opened. Laws 3 and 4 not checked."
+   },
+   {
+    "id": "formed-goal-revision-continuation",
+    "declaration": "GoalFormationRevision.joined_revision_has_warrant_and_actual_continuation (GoalFormationRevision.lean:480)",
+    "statement_gist": "No premise; four facts of the named construction at the condition harmful: learning is Better than attendance under its protections and gains; acquisition under the attendance selector gives the attendance goal; after revision and reform, five operations run with the learning goal held and with one loss.",
+    "record": "exact",
+    "record_fault": "None for this declaration. Law 7: 'the comparison ranks learning above attendance, acquisition forms the attendance goal, and after revision and reform five operations hold the learning goal with one loss'.",
+    "chapter": "says-less",
+    "chapter_fault": "The home tells MachineInstances.cycles_iff and revision_continues ('n operations run exactly where n ≤ 5 ... the earlier loss kept'); the ranking, the acquired attendance goal and the held learning goal are not told.",
+    "docstring": "absent",
+    "docstring_fault": "No comment above the declaration.",
+    "tellings_agree": true,
+    "note": "Law 7's 'six do not run, nor three without reform' belongs to MachineInstances.harmful_bounds, not opened. harmful is ⟨true, false, false⟩ (access loss, transition kept), as the record says. Better was read in a saved copy of PracticalJudgment.lean under a checks folder; the live source was not located."
+   },
+   {
+    "id": "steps-met-again-after-a-fall",
+    "declaration": "Becoming.Optimum.Holding.burst (Optimum.lean:6318), a definition",
+    "statement_gist": "burst z is 4 at z = 1 and 0 at every other level.",
+    "record": "says-less",
+    "record_fault": "Law 6: 'a burst renewing four at one' drops 'nothing at any other level', which the witness uses (burst_above).",
+    "chapter": "absent",
+    "chapter_fault": "The table row tells the general law and, of the witness, only 'at r + e = q + c + m a fall met again can tie'; the burst is not described.",
+    "docstring": "exact",
+    "docstring_fault": "None.",
+    "tellings_agree": true,
+    "note": "Also read: burst_met. Record law 6 matches its six conjuncts (four a step keeps under the count from the start; under the count at every step met, the keeping course and the course falling once are both optima, the latter broken at 0 and met at 2; five a step keeps), dropping only the horizon of n + 2 steps. Frontier, OpenCourse, metDraw were not opened."
+   },
+   {
+    "id": "becoming-finite-horizon",
+    "declaration": "Becoming.Renewable.no_exact_finite_reading (LabelledRoles.lean:173)",
+    "statement_gist": "In the one named process Renewable.process: for every h and every reading of runs that is kept between runs agreeing up to h, it is not the case that the reading holds of a run exactly where the focal formation renews in it.",
+    "record": "exact",
+    "record_fault": "None. Law 7, headed 'Corollaries', under a statement that opens 'In the renewable process'.",
+    "chapter": "absent",
+    "chapter_fault": "The home tells the sibling Renewable.finite_reading_includes_consumption ('a reading fixed by h steps that includes every renewing run includes a consuming one'); this corollary is not stated.",
+    "docstring": "says-more",
+    "docstring_fault": "'No finite reading is exact. Where the continuation is open, ...' reads as a general condition; the statement is of the one process Renewable.process, and no predicate 'continuation is open' occurs in it.",
+    "tellings_agree": true,
+    "note": "The docstring's generality is visible as such only without the namespace. finite_reading_includes_consumption (Horizon.lean:147) was read and the chapter tells it exactly. The file the sample gives, LabelledRoles.lean, holds this corollary; the record's canonical source is Horizon.lean."
+   },
+   {
+    "id": "recurrence-without-premise",
+    "declaration": "Becoming.Revisits (Recurrence.lean:158), a definition",
+    "statement_gist": "A sequence g revisits where some i < j have g i = g j.",
+    "record": "exact",
+    "record_fault": "None. Law 1: 'some i < j ... have g i = g j'.",
+    "chapter": "absent",
+    "chapter_fault": "The home tells the determined-law equivalences and present_forgets; revisiting is not mentioned.",
+    "docstring": "exact",
+    "docstring_fault": "None: 'Two steps of a sequence at one configuration'.",
+    "tellings_agree": true,
+    "note": "Also read: revisits_of_held, revisits_from and Law.lossless_iff_returns. Record law 1, the record's statement and the chapter ('a list holding every one, a determined law merges nothing exactly where every configuration returns') match them, the list premise included. returns_iff_keeps, rise_not_lossless and present_forgets not opened."
+   },
+   {
+    "id": "joint-code-plan-lifting",
+    "declaration": "Becoming.JointPlan.realizes_code_iff (JointCorrespondence.lean:167)",
+    "statement_gist": "For a joint frame F and a code p of its joint tests with JointCompact, TestsStable, Exact, Reduced, and leaves read correctly through the code: for every plan and configuration s, the plan is realized at the code of s in the image frame if and only if it is realized at s.",
+    "record": "exact",
+    "record_fault": "None. Law 5 states all five premises and 'realized at the code of a configuration exactly where it is realized there'.",
+    "chapter": "absent",
+    "chapter_fault": "The table row tells the description form, JointPlan.realizes_image_iff; the code form with its four frame and code premises is not told.",
+    "docstring": "exact",
+    "docstring_fault": "None of weight. 'A code realizes a plan exactly where each configuration it describes does' is a little wider than the statement, which speaks only of codes some configuration has.",
+    "tellings_agree": true,
+    "note": "The glosses of JointCompact, TestsStable, Exact and Reduced were checked against their definitions and match. realizes_image_iff (Composition.lean:645) was read; the chapter's row and the record's statement tell it exactly. plans_lift_iff not opened."
+   },
+   {
+    "id": "comparison-within-reach",
+    "declaration": "Becoming.closedUnder_withinClosure (Frame.lean:139)",
+    "statement_gist": "For any relation rel and element f: the region of what lies within f's closure under rel is closed under rel. No premise.",
+    "record": "says-less",
+    "record_fault": "Law 4 tells only the instance at the affecting relation, inside 'the reach closure is the least such region holding a center'; 'least' is the definition of WithinClosure, not this declaration.",
+    "chapter": "absent",
+    "chapter_fault": "The home tells comparison_local and comparison_within_reach; closedness of a closure is not stated.",
+    "docstring": "exact",
+    "docstring_fault": "None: 'An element's closure is closed under the relation'.",
+    "tellings_agree": true,
+    "note": "A general lemma of Frame.lean reused here; its canonical telling belongs to another record. Flow.Balances.closed_comparison, Flow.WithinReach and the comparison theorems the record's statement is about were not opened."
+   },
+   {
+    "id": "two-act-worlds-carry-the-difference",
+    "declaration": "Becoming.ExchangeLaw.actWorld (CourseWorlds.lean:81), a definition",
+    "statement_gist": "actWorld law act part present start W is the course world of the law with the part's exchanges given by act, from start, on web W.",
+    "record": "exact",
+    "record_fault": "None. Law 1: 'the course world of the part acting by the act and the rest by the law'.",
+    "chapter": "says-less",
+    "chapter_fault": "'two feasible acts of the part generate two balanced worlds' under a law 'outside the part' leaves the construction (the law's course with the part acting by the act) unsaid. Light.",
+    "docstring": "exact",
+    "docstring_fault": "None.",
+    "tellings_agree": true,
+    "note": "Also read: TwoActs (eight conjuncts) and TwoActs.balanced. Record law 1 lists the conjuncts faithfully; 'both are runs of the law of exchange' in record, chapter and docstring rests on World.balanced_iff_run, since the statement gives only that both worlds are Balanced. most_difference_worlds and the polynomial theorem not opened."
+   },
+   {
+    "id": "worlds-are-runs",
+    "declaration": "Becoming.World.balanced_iff_run (second opened, Runs.lean:159). The first listed, World.Balanced (InAmounts.lean:315), is a definition no law names.",
+    "statement_gist": "For every world w: w is Balanced if and only if, at every step t, the law of exchange on webs relates w's web at t, by w's move at t, to its web at t + 1. Proved by Iff.rfl. (World.Balanced: the world's flow balances its web.)",
+    "record": "exact",
+    "record_fault": "None. Law 3: 'A world balances exactly where its run is a run of this law'.",
+    "chapter": "exact",
+    "chapter_fault": "None in what is said. The sentence states this theorem but cites World.balanced_iff_exists_run, whose statement is the existential form.",
+    "docstring": "exact",
+    "docstring_fault": "None.",
+    "tellings_agree": true,
+    "note": "Verdicts are for the second declaration. For World.Balanced: record absent as a telling (the word 'balances' is used; law 3 gives the content through the law of exchange), chapter absent, docstring exact ('The flow balances'). A second Balanced, in World.InAmounts at line 566, is not the one listed. balanced_iff_law and balanced_iff_exists_run were read and match law 3."
+   },
+   {
+    "id": "adaptive-closure-cannot-resolve",
+    "declaration": "Generative.NormativeActivity.view (NormativeActivity.lean:72), a definition",
+    "statement_gist": "view s is the tuple of the state's receipt, judgment, inspectionOpen, budget, work and repetitions; the state's specimen and reference are left out.",
+    "record": "exact",
+    "record_fault": "None. Law 1: 'their view (the record, judgment, closure and three counts)'.",
+    "chapter": "says-less",
+    "chapter_fault": "'two histories share their view' does not say what the view holds or leaves out; only 'a reference changes without entering what is retained'.",
+    "docstring": "says-less",
+    "docstring_fault": "A plain line comment, not a doc comment: it says what is excluded ('the actual uninspected reference and specimen') and that the receipt is included, not the judgment, closure and counts.",
+    "tellings_agree": true,
+    "note": "Also read: State, target, settled, changed and reachable_closed_disagreement; law 1 matches (same view, different targets, the two event lists). The periphery module uses line comments throughout the part read, so a docstring check finds less there than in the core. The policy theorem adaptive_closed_cannot_resolve was not opened."
+   }
+  ],
+  "summary": "Read whole: twenty Lean statements and their three tellings; proofs not read. No telling was about something else, and none contradicts another. Records: 17 exact, 2 say less, 1 says more (a unit's positivity left to an earlier law). Docstrings: 16 exact, 2 say more (one dropped premise; one, \"Where the continuation is open\", reads general for a theorem of one named process), 1 says less, 1 absent. Chapters: 8 exact, 6 say less, 6 absent: the home often tells a sibling theorem and not the declaration sampled.\n\nWhat this cannot show: twelve first declarations are definitions or helper lemmas, where little can go wrong; for four the record tells nothing, and I judged the theorem its statement is about. The headline theorems of most records were opened only in part. Definitions beneath statements were not all opened. One reader; twenty of 537; Chinese tellings unjudged but one."
+ },
+ "overtakenFronts": {
+  "reportPath": "/Users/ren/theories/tmp/repo-picture-2026-11-18/round2/claude/overtaken-fronts.md",
+  "headline": "The twelve fronts were last hand-written on or before 13 November, before the direction page (15 Nov) and AGENTS.md's changed idea (16 Nov); none links the direction page. They contradict it at few places, chiefly one lock sentence and \"the meta-attractor has closed and holds\", copied across pages, and are silent on nearly all it added. By words, 53–100% of each page is untouched by the direction page, which in turn is silent on the fronts' ethics, theses and optimum line. Nothing was set against the Lean.",
+  "findings": [
+   {
+    "finding": "The fronts carry AGENTS.md's centre as it stood before 16 November. The lock sentence is flat on two pages: \"where each step sets the selection again only from the share it already favours, the selection goes on the same way until what sustains it gives out, unless...\", and the one page then says \"These are theorems on stated models\". AGENTS.md added the premise \"and each such step adds to what is drawn from what sustains it, which does not grow without limit\" on 16 Nov 22:06 (commit b16aec224); 0 of 12 fronts have it. Direction page: \"the lock keeps an overdraw that stands and does not bring one about\" (line 34); \"a closed loop can go on without end where what it takes keeps being met\" (line 62). The one page concedes this only in a later parenthesis.",
+    "where": "theories/becoming/ONE-PAGE.md:7; theories/becoming/THE-THEORY-OF-BECOMING.md:3 (softer \"can go on\" at README.md:11, RESEARCH.md:8, USES.md:9, THE-THEORY:27); _process/DIRECTION.md:34, :62; AGENTS.md paragraph 3",
+    "howFarSeen": "read whole (all pages, direction page, AGENTS.md); the premise's absence and its commit counted by grep and git log -S; not checked against the Lean"
+   },
+   {
+    "finding": "\"Where both fail, the meta-attractor has closed and holds\" stands on four fronts. The direction page says \"Closing is at least three different premises... and none of them is the same as being locked\" and \"No model that was found has the taking and the closing as outcomes of one course\". The direction page never uses the word meta-attractor; four fronts define it as the capture loop (\"what a selection raises comes to set the selection\"), while the opening's first-person text has \"remakes the minds that live under it until the pursuit looks like nature\".",
+    "where": "ONE-PAGE.md:30; GOALS.md:104 (source _process/goals/generative-alignment.json); THE-THEORY-OF-BECOMING.md:161; COLLECTIVE-DIRECTION.md:22 (its own line 128 says the two asks are not shown independent); OPENING.md:31; _process/DIRECTION.md:9, :92",
+    "howFarSeen": "read whole; occurrences counted by grep"
+   },
+   {
+    "finding": "None of the twelve fronts links _process/DIRECTION.md; among live pages outside research, history and sources only AGENTS.md, the workboard and the Lean plan do. The direction page and AGENTS.md are not on the reader's site allow-list; 11 of the 12 fronts are. AGENTS.md tells a reader to start from the one page, then the direction page, so the reading path meets the pre-16-November centre first.",
+    "where": "grep over the twelve pages; _process/research-config.json site.pages; AGENTS.md closing paragraph",
+    "howFarSeen": "counted"
+   },
+   {
+    "finding": "All twelve are silent (0 hits each) on what the direction page added: the two ways and \"We are far from it\"; an account \"taken for the whole\"; draining \"in full view\" as a limit on the centre (the theorem itself is told with premises at COLLECTIVE-DIRECTION.md:54 and in the opening's notes 20-21); the map as \"the next single measure\"; \"A value fixed once... ours included\"; the line on a stock, TurningInTime's locked laws, the tries of 16-18 November; the lock drawing its readers out (the third clock).",
+    "where": "all twelve pages against _process/DIRECTION.md:7-38, :56, :58, :68, :70, :84-94, :122",
+    "howFarSeen": "counted by term sweep (terms listed in the report), and read whole; a sweep by words misses a paraphrase, but none was found in reading"
+   },
+   {
+    "finding": "The reverse silence: the direction page has 0 mentions of the continuation condition, self-concern, the theses T1-T8, an optimum or room. The fronts name self-concern 102 times, and the optimum with room is in the one page's centre and in the \"four questions\" of README, MAP and USES. The direction page does not withdraw these; it does not carry them. Judged against the direction page alone they would look unsupported only because it is silent.",
+    "where": "_process/DIRECTION.md (whole); README.md:17, MAP.md:9, USES.md:15, ONE-PAGE.md:7, ONE-ARGUMENT.md (whole)",
+    "howFarSeen": "counted by grep in DIRECTION.md and the fronts; read whole"
+   },
+   {
+    "finding": "Four generated or guide pages give as present direction \"First priority: Theory of Becoming ... Deductive necessity lies in the Theory of Becoming as a whole ... without added substantive axioms\", and GOALS adds every domain's framework \"contained as a case\". The direction page: \"Whether it is one relation, and in what way. One model that contains the rest was tried on 16 November and failed its tests\"; \"The Lean is large and mostly unjoined\". GOALS's 15 open scopes are Ren's October authorizations, each unmarked; neither page names the other. Whether they still stand as direction is his to say.",
+    "where": "README.md:173; RESEARCH.md:20-22; GOALS.md:246-258; OPEN-QUESTIONS.md:31-33; sources in _process/goals/*.json (16 files); _process/DIRECTION.md:94, :117",
+    "howFarSeen": "read whole; scope states counted"
+   },
+   {
+    "finding": "\"Each result is stated once, in its home section\" is said as present on three fronts; the direction page has it as a want (\"each thing said once\") followed by \"We are far from it\", and the first round found each theorem told by hand in several places.",
+    "where": "MAP.md:23; THE-THEORY-OF-BECOMING.md:11; README.md:168; _process/DIRECTION.md:7, :9",
+    "howFarSeen": "read whole"
+   },
+   {
+    "finding": "Shares, by words of the paragraphs that tell the aim, the centre or the two asks of alignment over page words: ONE-PAGE 21% (three sentences in it overtaken), THE-THEORY 13%, MAP 19%, GOALS 34%, RESEARCH 47% (2,332 of its 3,091 words are lines identical to GOALS), README 6% (11,536 of its 14,261 words are OPENING.md, 11,248 of 11,298 words the same), USES 5%, COLLECTIVE-DIRECTION 5%, OPEN-QUESTIONS 6%, ONE-ARGUMENT 0%, TESTS 0%; OPENING not estimated (body 2,560 words is the author's text of 22 October with ten paragraphs revised in place by AI; notes 8,508 words). The rest of each page the direction page does not touch.",
+    "where": "report table; flagged lines listed in the commands section",
+    "howFarSeen": "counted for the words; which sentences in the flagged paragraphs are overtaken is by reading; 'untouched by the direction page' is not 'right against the Lean'"
+   },
+   {
+    "finding": "The centre is written by hand in many live places, so re-saying it once means changing sources, not rendered pages: _process/navigation/README-FIRST-SCREEN.md and REPOSITORY.md, a string in tools/research/navigation.py:785, _process/goals/generative-alignment.json, and ONE-PAGE, THE-THEORY, USES, COLLECTIVE-DIRECTION, MAP. The lock sentence (either form) is in 12 live pages besides AGENTS.md, GLOSSARY, _process/BRIEF.md and three review pages among them; six of the twelve fronts have Chinese twins.",
+    "where": "git grep over tracked *.md outside history, research and sources; tools/research/navigation.py:785",
+    "howFarSeen": "counted; the Chinese twins, GLOSSARY and review pages grepped, not read"
+   },
+   {
+    "finding": "The opening's first-person body keeps the shape the direction page says was changed: \"It is the truth with much of it abstracted away. It keeps... It drops the rest\" against the direction's change from \"true of what is registered and silent on the rest\" to \"taken for the whole, it says more than the reading can know\". Its line that a reading of the loss turns the rule \"before the end\" lacks \"not outweighed\", which its own note 16 has. The opening's notes (16, 18) are more careful than the first screens: they call capture and turning convictions and tell the outweighed case.",
+    "where": "theories/becoming/OPENING.md:29, :33 (README.md:74, :78); notes 16 and 18 (README.md:142, :146); _process/DIRECTION.md:89, :90",
+    "howFarSeen": "read whole; line 29 is in a paragraph not listed as revised since version 12, line 33 in one that is (from the page's own head line)"
+   },
+   {
+    "finding": "Where the fronts and the direction page agree: the lake test's numbers, the trained judge turned by one note, position zero-sum by counting, \"no should beyond becoming\", and that whether a case meets a theorem's premises is not proved. USES, COLLECTIVE-DIRECTION, ONE-ARGUMENT and TESTS have nothing or one sentence overtaken; TESTS's data is of 10 November and no experiment folder outside the Lean package changed after 8 November except experiments/README.md.",
+    "where": "_process/DIRECTION.md:58, :68, :74; ONE-PAGE.md:9, :22; COLLECTIVE-DIRECTION.md:92; USES.md:15; TESTS.md",
+    "howFarSeen": "read whole; experiment changes counted by git log"
+   },
+   {
+    "finding": "MAP.md says the work \"has no licence, by choice\" and points to the public reader's site, beside AGENTS.md rule 7 (nothing pushed, sent out or licensed until Ren says) and OPEN-QUESTIONS.md:65, which lists the licence among what waits on him. The local remote-tracking ref origin/main is at 18 November 10:24, 12 commits behind main.",
+    "where": "MAP.md:15, :19; OPEN-QUESTIONS.md:65; AGENTS.md rule 7",
+    "howFarSeen": "read whole; ref counted locally, no fetch; the public site was not opened"
+   }
+  ],
+  "notDetermined": [
+   "Whether any sentence of a front says what its theorem states: nothing was set against the Lean, so 'untouched by the direction page' does not mean 'right'.",
+   "Whether the ethics hinge of the fronts (continuation condition, self-concern, C, the step of invariance) still stands in the present direction: the direction page is silent on it and AGENTS.md carries only its lead sentences.",
+   "Whether GOALS.md's 15 unmarked scopes, with 'deductive necessity' as first priority, are still what Ren wants; the direction page neither names nor withdraws them.",
+   "Whether the opening's first-person body is meant to follow the direction or to stay a text of its date.",
+   "The Chinese twins of six fronts, GLOSSARY.md, USES-EXAMPLES.md and the review pages were grepped, not read; README.md after line 210 (history anchors) and the 1,826-word change log in USES.md's first line were not read closely.",
+   "Whether the public site currently shows these fronts (not opened); whether the 567 registered results on README match the 537 live theorem records the round-two brief gives (not reconciled).",
+   "The report is about 1,850 words, over the brief's 1,500, because of the twelve-row table."
+  ]
+ },
+ "metaAttractor": {
+  "reportPath": "/Users/ren/theories/tmp/repo-picture-2026-11-18/round2/claude/meta-attractor.md",
+  "headline": "The three homes name three different things. The folder: a civilisation-wide process where winning buys power over the rule, through minds and institutions. Chapter 02 and ClosedCapture: a two-level loop whose rule and reading are formed from the share, nothing beyond read. Ren on 18 November: an illusion held on to, a self within it, compounding destruction. Only the middle one has theorems; they state the lock and its outliving an unread loss. No theorem has a holder, an account that can be false, or a held-to that is not handed in. The direction page tells his picture without using the word.",
+  "findings": [
+   {
+    "finding": "Chapter 02's Definition is prose only: 'a loop of selection whose rule and whose reading of the rule are both formed from the share it selects, nothing in it reading what lies beyond the share'. No Lean identifier carries the term; 'meta-attractor' appears only in the docstrings of 6 modules.",
+    "where": "/Users/ren/theories/theories/becoming/chapters/02-MAP.md line 412; Becoming/*.lean (406 files)",
+    "howFarSeen": "Chapter lines 398-465 read whole. Counted by grep: no match for MetaAttractor or 元吸引子 in the 406 files; 9 docstring lines in 6 files for 'meta-attractor'."
+   },
+   {
+    "finding": "What the ClosedCapture theorems state: courses alike in share and rule stay alike exactly where nothing beyond the share is read (courses_alike_iff_unread, no other premise); a locked start stays locked while the loss passes every bound (lock_outlives_loss; premises Raises, ReadsShare, favouring kept upward, Accrues, a Locked start); a reading that favours at no loss past a bound unlocks (turned_by_loss); a changed reading formed again from the share is absorbed (reading_absorbed). Nothing is derived to grow: the loss grows by the premise Accrues, share and rule only do not fall. favours, the selection, mind and the loss are parameters.",
+    "where": "/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean: lines 131, 202, 273, 291, 307, 425, 455",
+    "howFarSeen": "File lines 1-335 and 396-520 read whole (statements and module account, proofs skimmed); the rest (Drawn, Thinned) by declaration heads and the module account only. Raises, ReadsShare, Locked read in RuleCapture.lean lines 145-161."
+   },
+   {
+    "finding": "Ren's picture of 18 November in his own words: 'the Maya illusion that people are holding on to, and there is a self within that illusion', 'creating a compounding like destruction ... corruption', and 'in the past I called it meta attractor and other things, but I think it is the same thing'. He does not say what cannot turn; what he sets against it is 'actually seeing the situation as they are'. The survey brief's telling ('what the account leaves out is used up') is not in his messages of 14:53 or 15:03.",
+    "where": "/Users/ren/theories/sources/15-codex-theory-conversations/2026-11-18-the-lean-before-the-words.md lines 17 and 33; /Users/ren/theories/tmp/repo-picture-2026-11-18/BRIEF.md line 13",
+    "howFarSeen": "Source file read whole; brief read whole. That the brief's extra clause is the session's own wording is inferred (the record's context note says the session gave his picture back in its own words, which are not kept)."
+   },
+   {
+    "finding": "The folder and Ren's picture both have minds and a self (identity step, claim 96; SEED's 'agents ... become a part of the meta-attractor'; item 87 on the genesis of the 'I'); the Lean has none. The crosswalk's own entry says 'The formation of identity is not stated', and chapter 02 says 'That readers are minds is a reading'.",
+    "where": "/Users/ren/theories/theories/meta-attractor/README.md lines 74, 419, 971; /Users/ren/theories/theories/becoming/results/atlas/crosswalk/meta-attractor.md line 436; 02-MAP.md line 448",
+    "howFarSeen": "README sampled by heading: lines 1-100, 329-348, 414-439, 674-703, 862-1022 of 1,209 (52,536 words, counted); the rest by headings only. Crosswalk: head and 6 of 69 entries read."
+   },
+   {
+    "finding": "The Lean's sharpest results cut against the folder's telling: the lock needs no winning (below the critical mass control is unselected and the rule is still locked, the other way), drift leaves either lock, and the one frozen test on a trained judge (LA2) failed the premise: one note of the loss among nine readers turned it.",
+    "where": "02-MAP.md lines 427, 430, 446, 454 (DrawnShaping.drawn_locked_either, DrawnReplacement, LA2)",
+    "howFarSeen": "Chapter's telling read whole; the Lean statements of DrawnShaping, DrawnReplacement and ReadInTime not opened; experiment folder not opened."
+   },
+   {
+    "finding": "The term has at least five senses in live text and Lean docstrings: what a selection raises comes to set the selection; closed capture; a selection by share coming to select for control of its rule; a selection removing its own readers ('the meta-attractor's shape'); and the working definition Ren chose on 8 October (a recurrent organization whose consequences help reproduce the conditions selecting it, across carriers), which chapter 02 says is 'not shown to contain closed capture or to be contained by it'.",
+    "where": "/Users/ren/theories/GLOSSARY.md line 47; theories/becoming/ONE-PAGE.md line 7; 02-MAP.md lines 412 and 463; Becoming/ReadingsPersist.lean lines 72-73 and 552; Becoming/ChoiceCountCapture.lean line 77; theories/meta-attractor/GENERATIVE-REGIMES.md line 9",
+    "howFarSeen": "Each read at the line named; found by grep for the term, so other senses in pages not opened may exist."
+   },
+   {
+    "finding": "Two of the three homes were already set side by side: the generated crosswalk (69 entries, AI readings) reads the folder against the live account and concludes the account 'keeps two senses apart' and that agreement 'is by descent, not independent'. It only skimmed 'In Ren's own words', and predates 18 November.",
+    "where": "/Users/ren/theories/theories/becoming/results/atlas/crosswalk/meta-attractor.md (25,542 words; last commit 13 November 2026)",
+    "howFarSeen": "Counted by wc and git log; head, summary and 6 of 69 entries read; entry titles listed."
+   },
+   {
+    "finding": "There is a fourth and a fifth home. Seeking.lean opens with Ren's words of 10 October ('the seeking system got locked in, what they are pursuing is illusion') and Capture.lean reads 'the meta-attractor's selection of minds' onto a target's share; both say how a target forms is not modelled. The direction page tells the picture from his words of 16 November and says of a loop closing from inside (one value taken for what the loop is; meaning taken to end at the self) 'Neither is in a model'. The direction page and the plan never use the word; AGENTS.md uses it once.",
+    "where": "Becoming/Seeking.lean lines 1-60; Becoming/Capture.lean lines 1-50; /Users/ren/theories/_process/DIRECTION.md lines 54-68, 91, 125; sources/15-codex-theory-conversations/2026-11-16-no-corners-the-interconnected-map.md lines 33, 57, 61",
+    "howFarSeen": "Direction page read whole; the two module accounts read whole, statements not opened; 16 November source read only at the lines a grep chose. Word counts by grep -c (0, 0, 1)."
+   },
+   {
+    "finding": "What a theorem would have to state for the 18 November picture, as outcomes of one course and not premises: (1) an account, read off the registered part alone, that is false at some configuration reached (ClosedCapture's reading Q says nothing of what lies beyond); (2) a holder and its held-to generated from the account, not handed in as favours or a target; (3) the holder's own revising keeps the account though it is false; (4) acting from it draws on what it does not register no less as the holder's share rises, and what would revise it goes with what is drawn. Pieces exist apart (reading_absorbed; fixed_of_closedFrom; LumpedSeeking.seeking_keeps_order; PoolFromCourse.window_order_kept; ReadingsPersist.cleared_removes_its_readers; ReadingsSpread.Commons; ReflexivePrediction); none was found joined. That anyone is in such a course no theorem gives.",
+    "where": "Becoming/ClosedCapture.lean, ReadingLoop.lean, ReadingsPersist.lean lines 552-565 and 1313-1325, PoolFromCourse.lean, ReflexivePrediction.lean, LumpedSeeking.lean; chapters 02 §10 and 07 §4.14",
+    "howFarSeen": "My reading, stated nowhere. Sweep: grep -i of all 406 Becoming files for self-concern, held to, illusion, 无明, self-fulfilling, compound, account; declaration heads for self, own, held, account, belief, identity, mind; opening accounts of 14 candidate modules read (first 20 to 75 lines), most statements not opened; chapter tellings of 02 §10 and 07 §3.5, §4.14 read."
+   },
+   {
+    "finding": "The folder is linked from 70 tracked Markdown files outside history folders, 26 of them under theories/becoming; two of its section anchors are cited (8 and 3 times). The one page links it as the meta-attractor.",
+    "where": "/Users/ren/theories/theories/meta-attractor/ (9 tracked files, 97,736 words)",
+    "howFarSeen": "Counted by git grep and wc; the linking pages not opened beyond the one page and the glossary."
+   },
+   {
+    "finding": "A damaged quotation of the Definition ('a loop of selection se rule and whose reading of the configurule') sits in the atlas's entries and is rendered on three crosswalk pages; it looks like the trace of a word-replacement pass.",
+    "where": "/Users/ren/theories/theories/becoming/results/atlas/entries/correspondences.json lines 30474, 30686, 39734, 61058",
+    "howFarSeen": "Counted by grep (4 lines in the JSON, 3 rendered pages); cause inferred, not traced in git."
+   }
+  ],
+  "notDetermined": [
+   "Whether the older theorem and audit packages the folder's banner names (under _process/research/2026-10-05-generative-foundation-review/root-foundation/history/, outside the Becoming package) state anything of the folder's sense: not looked at.",
+   "The Lean statements of RuleCapture (beyond three definitions), DrawnShaping, DrawnReplacement, ReadInTime, PoolFromCourse, Seeking, Capture, ReadingsSpread and ReflexivePrediction: only module accounts or the chapters' tellings were read, and no proof was read through.",
+   "Whether a join of the four pieces already exists through a module not opened or in other words: the sweep was by word and by name over 406 files and by the opening accounts of 14 modules.",
+   "The other eight files of theories/meta-attractor beyond one line of GENERATIVE-REGIMES.md, and the README outside the sampled ranges (about 60 per cent of its lines seen by heading only).",
+   "What the session said back to Ren at 15:03 on 18 November in its own words: the record keeps only a one-line context note.",
+   "Whether Ren's 18 November picture is the same as the direction page's 'closing from inside'; I read them as the same from his words of 16 November, and he has not said so.",
+   "The cause and extent of the damaged quotation in correspondences.json beyond the four lines counted."
+  ]
+ }
+}

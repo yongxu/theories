@@ -1,0 +1,71 @@
+# overtaken-fronts: twelve front pages against the direction page
+
+*AI-written (Claude Fable 5.2, the Claude reader), 19 November 2026. A survey; nothing was changed. Marks: **RW** read whole, **C** counted (commands at the end), **NL** not looked at. `_process/DIRECTION.md` (D, with its line) and `AGENTS.md` were read whole; so were the twelve pages, except README after line 210 (history links) and the change log in USES.md's first line (skimmed).*
+
+## In three sentences
+
+The twelve fronts were last written by hand on or before 13 November; the direction page was first committed on 15 November and AGENTS.md's idea changed on 16 November; none of the twelve links the direction page, and all tell the aim and centre as AGENTS.md stood before 16 November (C). They contradict the direction page at few places, chiefly one sentence on the lock and one on the meta-attractor having "closed", copied across pages, and are silent on almost everything it added (RW). Most of their words (the case, the tests, the ethics, the chapter summaries, the exits) are on matters the direction page neither withdraws nor carries, so "overtaken" here mostly means "not joined to the present aim", not "false"; I set none of it against the Lean (NL).
+
+## What the pages share
+
+1. **The lock sentence, without the premise added on 16 November.** `ONE-PAGE.md:7` and `THE-THEORY-OF-BECOMING.md:3`: "where each step sets the selection again only from the share it already favours, the selection goes on the same way until what sustains it gives out, unless…"; the one page then says "These are theorems on stated models". AGENTS.md now has inside that sentence "and each such step adds to what is drawn from what sustains it, which does not grow without limit" (commit `b16aec224`; in 0 of 12 fronts, C). D34: "the lock keeps an overdraw that stands and does not bring one about"; D62: "a closed loop can go on without end where what it takes keeps being met". The one page's own parenthesis concedes it ("§9's lock is built needing nothing"). README:11, RESEARCH:8, USES:9 and THE-THEORY:27 say "can go on", which D does not contradict.
+2. **"Where both fail, the meta-attractor has closed and holds"**: `ONE-PAGE.md:30`, `GOALS.md:104`, `THE-THEORY…:161`, `COLLECTIVE-DIRECTION.md:22` (C). D92: "Closing is at least three different premises… and none of them is the same as being locked"; D9: "No model that was found has the taking and the closing as outcomes of one course". D never uses the word meta-attractor (C). Four fronts define it as "what a selection raises comes to set the selection" (README:11, ONE-PAGE:7, THE-THEORY:3, USES:9); `OPENING.md:31`, in the first-person text, has "remakes the minds that live under it until the pursuit looks like nature".
+3. **"Each result is stated once, in its home section"**, said as present: `MAP.md:23`, `THE-THEORY…:11`, README:168. D7: "We want it joined and simple… each thing said once"; D9: "We are far from it"; D94: "The Lean is large and mostly unjoined".
+4. **The first priority.** README:173, RESEARCH:20, GOALS:246, OPEN-QUESTIONS:31: "Deductive necessity lies in the Theory of Becoming as a whole… without added substantive axioms". D117: "Whether it is one relation, and in what way. One model that contains the rest was tried on 16 November and failed its tests". GOALS's 15 open scopes are Ren's authorizations of October, each `unmarked` (C); D and GOALS do not name each other.
+5. **Silent in all twelve** (C: 0 hits each): the two ways and "We are far from it" (D7–D38); an account "taken for the whole" (D58); "in full view" as a limit on the centre (D56; the theorem itself is at `COLLECTIVE-DIRECTION.md:54` and in OPENING's notes 20 and 21); "the next single measure" (D68); "A value fixed once… ours included"; the line on a stock, `TurningInTime`'s locked laws, the tries of 16 to 18 November; the lock drawing its readers out (D122's third clock).
+6. **The reverse silence.** D has 0 mentions of the continuation condition, self-concern, the theses T1–T8, an optimum or room (C). The fronts name self-concern 102 times (README's copy of the opening included), and the optimum with room is in the one page's centre and the "four questions" (README:17, MAP:9, USES:15). D does not withdraw these; it does not carry them.
+
+## Page by page
+
+Share = words of the paragraphs that tell the aim, the centre or the two asks of alignment, over the page's words (C); the rest D does not touch. Overtaken sentences inside it were found by reading.
+
+| Page (words; last hand change) | Aim and centre it gives | Overtaken at | Share | A reader of it alone would get wrong |
+|---|---|---|---|---|
+| ONE-PAGE (4,138; 13 Nov) | "A map of how anything comes to be, lasts, changes and ends within one relational unfolding"; a selection as "one dynamic among others", the optimum under room, the closed lock | :7, :30; :52–56 lists what is not done without the two ways or the unjoined Lean | 21%, three sentences | That a lock alone runs down what sustains it, proved; that what is open is mainly how orders form |
+| THE-THEORY (11,670; 13 Nov) | the same centre (:3, :27); "the whole argument in one account" | :3, :161, :11 | 13% | The same; §10 has two of D's ten unknowns (amounts on the grammar, how scope and order form) |
+| README (14,261; generated, sources 9–13 Nov) | "A map of how anything forms, lasts, changes and ends"; :17 "a selection can go on meeting its own criterion while something is being used up" | nothing flatly; :173 | 6% (11,536 words are OPENING.md) | That the first priority is deductive necessity; it points to AGENTS.md, not D |
+| OPENING (11,442: body 2,560, notes 8,508) | "a set of universal invariants"; "a foundation for AI alignment"; "Follow the truth" | :29 "the truth with much of it abstracted away. It keeps… It drops the rest", the shape D89 says was changed ("true of what is registered and silent on the rest" became "taken for the whole, it says more"); :33 a reading turns the rule "before the end", without "not outweighed" (D90), which note 16 has | not estimated: the body is his text of 22 October, ten paragraphs revised in place by AI | The register, truth held, where D3 has "held loosely"; :27 does say "this one included" |
+| USES (6,862; 1,826 of them a change log) | what a field can do today, told as readings | :9, in the "can" form | 5% | Least; :15 "that a theorem holds there waits on a correspondence" is rule 2 |
+| ONE-ARGUMENT (4,403) | one theorem, the optimum with room, to T3's tests and a mixed case | none | 0% | Nothing; a line D does not carry |
+| COLLECTIVE-DIRECTION (5,901) | "No guarantee"; exits with their windows | :22 (and :128 says the two asks are not shown independent) | 5% | Little; nearest to D's "whether it can still turn" (two of D122's three clocks at :100) |
+| GOALS (5,943; from `_process/goals/*.json`) | 16 scopes; "current first priority" | :104, :246–258 | 34% | That these scopes are the present direction |
+| RESEARCH (3,091; generated) | GOALS again (2,332 words identical, C) | :8, :20 | 47% | The same |
+| OPEN-QUESTIONS (1,405; generated) | the crux, scope and order, four targets | :31 | 6% | That these are what is not known; one of D117–D126 is near |
+| MAP (2,344; 13 Nov) | visitors' guide, four questions, layout | :23; :26 "What happens is drawn on one sheet"; :15 "has no licence, by choice" beside rule 7 and OPEN-QUESTIONS:65 | 19% | That the map is drawn and each thing said once |
+| TESTS (5,270; data of 10 Nov) | every test by outcome, failures first | none; no experiment folder changed since 8 November but `experiments/README.md` (C) | 0% | Nothing; its theses are not named in D |
+
+Where D and the fronts agree (RW): the lake test's numbers (D74; ONE-PAGE:9), the judge turned by one note (D68; ONE-PAGE:22), position zero-sum by counting (D58; OPENING note 17), "no should beyond becoming", and that whether a case meets a theorem's premises is not proved (rule 2; COLLECTIVE-DIRECTION:92).
+
+## What would need to be said again
+
+- The centre, once. It is written by hand in `_process/navigation/README-FIRST-SCREEN.md` and `REPOSITORY.md`, a string in `tools/research/navigation.py:785`, `_process/goals/generative-alignment.json`, and ONE-PAGE, THE-THEORY, USES, COLLECTIVE-DIRECTION, MAP; the lock sentence is in 12 live pages besides AGENTS.md, GLOSSARY and three review pages among them (C). Six of the twelve have Chinese twins (C; NL).
+- What is not known and what is next: ONE-PAGE:52, THE-THEORY §10 and OPEN-QUESTIONS against D96–D126.
+- A pointer. AGENTS.md says start from the one page, then D; the one page does not link D, and D is not on the reader's site list while 11 of the 12 fronts are (C).
+- Ren's to say: whether GOALS's scopes still stand as direction, and whether the opening's body follows the direction or stays a text of its date.
+
+## Against the two views
+
+- Against "much is poor or overtaken": of the eleven pages estimated, 53% to 100% is untouched by D (all but GOALS and RESEARCH at 79% or more); the overtaken sentences are few and copied.
+- Against "the mass is trace; judge prose against the Lean": the trouble here is live prose copied by hand into many pages, a tool and a JSON file, neither trace nor machine output. Judged against D alone, the ethics, the theses and the optimum line would be dropped only because D is silent on them.
+- Against both: D calls itself the later understanding, yet it is off the reading path; the fronts are the reading path and predate it.
+
+## Not determined, and surprises
+
+- Whether any front sentence says what its theorem says (NL); "untouched by D" is not "right".
+- Whether the ethics hinge (self-concern, the continuation condition) still stands in the direction: D is silent.
+- The Chinese twins, GLOSSARY, USES-EXAMPLES, the review pages: grepped, not read.
+- Whether the public site shows these fronts: `origin/main` here is at 18 November 10:24, 12 commits behind main (C); not opened.
+- Surprise: the one page concedes in a parenthesis what its lead sentence overstates.
+
+## The commands behind the counts
+
+```
+wc -w <pages>; git log -1 --format='%ad %h' -- <each page and source file>
+git log -S'adds to what is drawn from what sustains it' -- AGENTS.md; git show b16aec224^:AGENTS.md
+grep -Eo '<term>' <page> | wc -l        (findings 5 and 6, each page; the fronts' terms in DIRECTION.md)
+grep -c '_process/DIRECTION\.md\|(DIRECTION\.md' <pages>
+git grep -l 'goes on the same way until\|go on the same way until' -- '*.md'; git grep -l 'has closed and holds' -- '*.md'
+python3: words of the flagged lines over page words; README 48–170 against OPENING.md by difflib (11,248 of 11,298 words the same); RESEARCH lines identical to GOALS; site.pages in _process/research-config.json
+git log --since=2026-11-09 --name-only -- experiments ':!experiments/integrated-correction'
+git log -1 origin/main; git rev-list --count origin/main..main
+```

@@ -1,0 +1,75 @@
+# records-and-map: what is there
+*AI-written (Claude Fable 5.2), 18 November 2026. A survey; nothing was changed.*
+
+## In three sentences
+
+`theories/becoming/results/` holds 1,306 tracked files and 104.7 MB: 711 of them (69.8 MB) are pages a renderer writes and the generated-page manifest hashes, and the other 595 (34.9 MB) are AI-written stores kept by hand, chiefly 567 record files and about ten separate stores that each call themselves part of the map. A record ties sentences to Lean by naming declarations and by pinning file and receipt hashes; no tool checks that a sentence says what its theorem says, and the same theorems are told again, in different words, in the chapter, the record, the atlas entry, the map card and the sheet. The map's data is kept by hand except for premise binders and one dependency measure; by its own counts it is mostly unjoined, and none of its stores is organised by the direction page's terms.
+
+## What is there
+
+Words are `wc -w`, which is rough for JSON. "Generated" means listed in `_process/architecture/generated-manifest.json` (counted).
+
+| Kind | Files | Words | Beside the Lean | Unique? | What reads it | How far seen |
+|---|---:|---:|---|---|---|---|
+| Record files `records/*.json` | 567 | 1.42 M | telling plus coupling to proof: statement, 4,421 laws each with declaration names (en, zh), hypotheses, 2,168 `does_not_show` items, 796 counterexample pointers, 1,400 dependency edges, 11,491 references each with a sha256, 2,209 proof bindings to receipts; the `history` field alone is 396 k words of trace | yes; zero byte-identical copies elsewhere in the tree | `registry.py`, `gate.py`, `atlas.py`, `theory_graph.py`, `shared_laws.py` | fields counted over all 567; 2 read whole |
+| Record pages `records/*.md` | 589 | 1.28 M | machine output (22 are stubs for renamed ids) | no | 560 chapter links; the manifest | counted; 1 read |
+| Atlas entries `atlas/entries/*.json`, `vocabulary.json` | 8 | 0.84 M | hand-kept map data: 185 dynamics (329 exits, 105 transitions, 10 joinings, 2,223 law rows with premises), 1,715 premises, 22 test bindings, 1 situation, 1,183 correspondences in 28 groups | yes | `atlas.py`, `the_map.py`, `map_sheet.py`, `atlas_index.py` | structure counted; 1 dynamic, 1 premise read |
+| Atlas pages, `data/atlas.json`, `atlas/map.html` | 57 | 2.34 M | machine output | no | site, links | counted |
+| The web under the map: `map/web.json`, `cards.json`, `cases.json` | 3 | 0.27 M | a second telling of each dynamic's theorems in role-words (185 cards); 66 tests written as cases, with failures placed | yes | `the_map.py` | counted; 1 card read |
+| The sheet: `sheet.json`, `passages.json`, `paths.json`, `laid.json` | 4 | 0.03 M | a third telling: 14 rows, 50 boxes, 105 arrows, 5 paths, 7 tests laid | yes | `map_sheet.py` | counted; lead read |
+| Map pages (md, svg, html) | 25 | 0.38 M | machine output | no | site, links | counted |
+| `data/lean-index.json`, `LEAN-INDEX.md`, `lean-declarations/`, `LEAN-DECLARATIONS.md` | 24 | 1.29 M | machine output from the Lean text (18.7 MB for the index alone) | no | `lean_catalogue.py`, gate | counted |
+| `data/shared-laws.json` | 1 | 0.11 M | derived from Lean dependencies by `shared_laws.py` after a core run; not in the manifest | regenerable only with a passed core run | `registry.py`, `connection_map.py`, gate | head read |
+| Other curated data: `regions.json`, `tests.json`, `spine.json`, `COVERAGE.json`, `law-families.json`, `standard-boundaries.json` | 7 | 0.03 M | hand-kept indexes and the tests table | yes | gate and six tools | keys counted |
+| Registers of 8 October and the chain: `arguments-*.json`, `theory-map.json`, `session-results.json`, `generativity-chain.json`, `GENERATIVITY-CHAIN.md`, `lineage.json` | 7 | 0.16 M | trace, in October's vocabulary | yes | `reading_catalogue.py`, `session_map.py`, `generative_chain.py`, `lineage.py`, gate | heads read |
+| Root pages `RESULTS.md`, `DEPENDENCIES.md` (generated), `MAP.md` (hand-written guide) | 3 | 0.02 M | machine output; a guide | `MAP.md` only | navigation on every page | heads read |
+| Tools: the six named | 6 | 7,596 lines | tooling | yes | `research.py`, Makefile | docstrings read |
+
+Kept failures here: 1 withdrawn and 7 superseded records, 3 open targets; 796 counterexample entries in 390 records (748 point into Lean files); 9 dynamics with no record and 17 exits no law shows, each marked as a reading or open; the tests table (66 rows: 5 passed, 4 failed, 20 mixed, 2 refused, 11 not run); `crosswalk-checks.json` (two critics' findings).
+
+## What repeats
+
+- **Nothing byte for byte.** No file in the area has an identical blob anywhere else in the tree (counted over 122,777 tracked files). Earlier bytes of 543 records are held in `_process/architecture/history/` and pointed to by `text_versions`.
+- **The same theorem, told separately.** 559 of 567 records have a home paragraph in a chapter (`<a id="r-…">`). Yet only 7.4% of the 8-word runs of record statements and laws occur in the chapters, 22% of the atlas dynamics' in the records, and about 1% of the map cards' in records, chapters or atlas (counted). These are separate AI tellings, not copies: one sampled theorem (`Branching.loss_passes_juncture`) is told in a chapter, a record, an atlas entry, a map card and a passage, and named in 449 tracked files.
+- **Generated copies.** `data/atlas.json` (7.9 MB) is the entries resolved; `atlas/map.html` (5.1 MB) and `map/the-web.html` embed the same data again.
+- **Churn.** 1,898 of 7,384 commits touch the area; `lean-index.json` has been committed 555 times (counted).
+
+## What depends on it
+
+- The manifest hashes 711 files here; the gate fails on a stale page. `gate.py`, `registry.py` and about a dozen other tools have these paths fixed in code.
+- Records pin outward: 11,491 references with sha256 across 1,746 distinct paths, all present on disk; 477 distinct timestamped run folders; 139 paths under history folders; 278 under `root-foundation/development` (counted). `registry.py` exits 2 if pinned bytes change. So the receipts and study folders cannot move without rewriting records.
+- `atlas.py` reads two mapping files in a study folder (`aa-attractor-atlas/step2b/mapping.json`, `six/mapping.json`, 1.15 MB).
+- Inbound links from Markdown outside the area: 9,315 occurrences (`rg -o`), on about 6,100 lines: 3,021 lines in `theories/becoming`, 1,517 in `_process/research`, 580 in `RESULTS.md`, 534 in `DEPENDENCIES.md`.
+
+## What a continuing session needs from here
+
+It needs the record of what it touches, the atlas entry and premise rows for its declarations, `tests.json`, and `JOINS.md`, which already counts at each render what the map does not join. To land a law it must edit by hand a record (both languages), a chapter anchor, `regions.json`, `dynamics.json`, premise mapping rows and a map card, then render. It never opens the record pages in bulk, `lean-index.json`, `atlas.json`, the html pages, the October registers, or most of the crosswalk.
+
+## Candidates
+
+1. **Generated pages and data (711 files, 69.8 MB): could leave the working tree.** Evidence: each carries a "Generated by" header and a manifest hash. Risk: GitHub readers lose record pages, and about 9,300 inbound links break. First: the site build would have to render them, the manifest and strict-fresh check would have to change, and links would need a target. `lean-index.json`, `atlas.json` and the two large html files are the plainest cases, since no page links into them for reading.
+2. **Record files: stay, with two parts that could be said once or moved.** The ties (declarations, hashes, bindings, `does_not_show`, counterexamples) are found nowhere else. The telling fields repeat the chapter homes in other words; one of the two could be drawn from the other, or both from the Lean docstring. The `history` field (28% of record words) is trace. First: decide which telling is the one that is read against the Lean; `registry.py` and `shared_laws.py` read the `laws` field.
+3. **Atlas dynamics and premises: cannot tell.** They are the only place premises are objects and exits have destinations. The direction page records them wrong both ways on 16 November. Whether to repair or to derive anew from the Lean is the open question below.
+4. **Cards, web and sheet: could be said once, or cannot tell.** Two more vocabularies (12 roles and ties; 14 rows and 50 boxes) over the same theorems, last changed 13 to 17 November, before or beside the direction page; the sheet places 119 of 185 dynamics.
+5. **Crosswalk (1,183 correspondences, 0.53 M words): stays; standing thin.** 856 were read in the repository, 327 rest on AI knowledge with no text read (counted from `source.basis`).
+6. **October registers and the chain: could leave the working tree as trace.** First: four tools and the gate read them.
+
+## Against the two views
+
+- Against "much is garbage": the 595 hand-kept files are not regenerable and hold the scoping of every claim and all the kept failures of this layer. Nothing here is a byte copy.
+- Against "trace and machine output can leave without loss": two thirds of the bytes are machine output, but they are pinned by a manifest, a gate and thousands of links, so leaving is a tool change, not a move. And what remains is neither trace nor output: it is five parallel tellings and three map vocabularies. Removing mass does not make each thing said once.
+- Against "prose judged against the Lean" as already possible: the tie is by name and hash only. `registry.py` says its hashes "mark documentary review, not a proof build or semantic equivalence". The 1,289 `formal-reuse` edges are assigned by the AI-written records; `DEPENDENCIES.md` says nothing checks that the Lean uses the cited result.
+
+## Not determined, and surprises
+
+- **The 86 of 185 was found and reproduced.** It is in `tries-2026-11-16/LINKS-ON-PAPER.md` (an exit naming a dynamic, a case whose general law another dynamic lists, or a joining). On `dynamics.json` at `3b155c9ea` my script gives 86 alone, 108 pieces, largest 30; on today's tree 82 alone, 104 pieces, largest 30 (counted).
+- **Two hand-kept graphs disagree about joinedness.** By record dependencies, 511 of 567 records are one piece; by the atlas, 82 of 185 dynamics are alone. Joined by a shared premise id, the dynamics fall into 32 pieces, the largest 153 (counted); a shared premise is a weak tie.
+- **The atlas covers under half the records.** 249 of 567 records are listed by a dynamic; `JOINS.md` says 287 of 537 live theorem records are cited by none. The theory graph has no dynamic, exit, premise or test node (3,299 nodes, counted).
+- **Could the Lean's structure be the map's data?** Already derived from it: declaration lists, module imports (892 edges), premise binders read by a Lean script, and `shared-laws.json`, which finds 2,166 of 4,396 record laws reaching none of five anchors. It would lack: the unit (which declarations make one dynamic), premise identity across theorems (1,715 ids mapped by AI readers), which statement is a leaving and to where, readings with no theorem, tests and cases, correspondences, and what a law does not show. I did not compute a declaration-to-declaration graph: that needs the checker's cache.
+- **The direction is not carried here.** Families A to H, the rows and the roles do not place the two ways. `Renewable.prefix_does_not_decide` and `Flow.Balances.includes_of_renewingIn` occur in no atlas entry, card or sheet file (grep, 0 hits), only in one record each.
+- Not looked at: the git weight of this area; whether record sentences match their theorems; the review of 16 October (it predates the atlas). The survey of 9 November (`map-structures/readings/04-joint-reading.md`) found 22 of 285 exits naming a dynamic and 17 premises as data; today 71 of 329 and 1,715.
+- Record declaration names against live Lean: 23,228 of 27,771 textual declaration names in the 406 modules are named by some record; 2,287 names in records match none (older modules and periphery; the match is textual, by `lean-index.json`).
+
+## The commands behind the counts
+
+`git ls-files theories/becoming/results | wc -l`; `git ls-files -z <dir> | xargs -0 cat | wc -w` and `wc -c`; Python reads of `generated-manifest.json`, `records/*.json`, `atlas/entries/*.json`, `map/*.json` and `data/*.json` (keys, tallies, components); 8-word shingle sets of English fields against `chapters/0*.md`; `git ls-files -s` grouped by blob hash; `git rev-list --count HEAD -- <path>`; `rg -c` and `rg -o 'results/(records|atlas|map|data|lean-declarations)/' --glob '*.md'` outside the area; `git show 3b155c9ea:…/dynamics.json` through a link-counting script (in the session scratchpad, not in the repository); `grep -c` for named declarations.

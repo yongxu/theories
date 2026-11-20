@@ -1,0 +1,105 @@
+# research-development: what is there
+*AI-written (Claude Opus 5.5), 18 November 2026. A survey; nothing was changed.*
+
+## In three sentences
+`root-foundation/` is the one live study that the layout rule of 17 October makes the home of "a study step, review or landing note". It holds 9,163 tracked files, about 4.3 million Markdown words and 220 MB: a 510-section study log (`BECOMING-RENEWAL-READING.md`, which 411 of 567 records cite), 98 top-level studies of October, a generated mirror of 680 pages, and `development/`, which has 240 tracked study folders, 8,333 files and 2.67 million words. Very little of it repeats the live account word for word, and it is not inert: tools read inputs from at least ten study folders, records point their counterexamples at reader reports here, and the direction page's provenance runs through `dj-a-line-on-a-stock`. So most of it is trace, but trace that live pages and tools are still wired into.
+
+## What is there
+Development kinds come from a path-and-name classifier (`kinds.py`, below), so the boundaries between kinds are rough. All counts are **counted** unless the row says otherwise.
+
+| kind | files | words (md) / size | beside the Lean | unique? | what reads it | how far seen |
+|---|---|---|---|---|---|---|
+| Study log `BECOMING-RENEWAL-READING.md` + `.zh.md` | 2 | 507,751 + 52,689 wc-words (3.78 + 1.82 MB); 510 sections, last edit 8 Nov | trace with telling: each section has a "Result(s) / Delta" landing note | yes | 411 records; `move_pinned` in research-config | counted; head read |
+| `mirror/BECOMING-RENEWAL-READING/` | 680 | 596,956 words | machine output (`tools/research/mirror.py`) | no: 91.3% of non-empty lines are verbatim in the source pair | 36 record links and 25 account links; generated-manifest | counted |
+| Top-level studies, reviews, integrations (October) | 98 top-level files + `twentieth-review/` (39) + `twenty-first-review/` (12) | about 0.95M words at the top level | telling and argument, older than the chapters | mostly; 0.4% of long lines are in the live account | records (canonical sources, `progress`, `counterexamples`), 08-METHOD | counted; 1 of 98 sampled |
+| `INDEX.md`, `README.md`, `REVIEWS.md` | 3 | 4,178 words | generated | no | generated-manifest | counted |
+| Builders (`build_*.py`, `THEOREM-CONNECTIVITY.py/.json/-DUMP.lean`, `DECIDABILITY-INVENTORY.*`) | about 12 | n/a | tooling and machine output | the code, yes | gate.py, completion.py, shared_laws.py, boundary.py; tools/research/README calls the builders "importable command wrappers" | counted (references); code not read |
+| dev: reader rounds, briefs, reviews | 1,059 | 1,305,220 words | trace (AI readers set text against the Lean) | yes | some: e.g. the `a-way-of-units` record's 4 counterexamples point to `wu-a-way-of-units/readers/`; DIRECTION cites dj's correction readers | counted by classifier; 3 sampled |
+| dev: notes, designs, plans, frozen guesses | 150 | 503,282 words | trace and argument | yes | 113 studies are cited by some hand-kept live file | counted; 5 read in part |
+| dev: other Markdown (drafts, texts) | 258 | 757,570 words | earlier tellings and drafts | mostly | not traced | counted |
+| dev: landing kits and apply scripts | 1,217 | 108,438 words; 14 MB | tooling, spent | the code is in git anyway | not found in live tools, except one evidence path in research-config | counted; 4 sampled |
+| dev: logs and outputs (.log/.out/.err) | 1,967 | 17.4 MB | machine output | can be regenerated only by rerunning | not found | counted |
+| dev: data (json/tsv/txt) | 1,641 | 78.7 MB (zhonghua alone: 676 files) | coupling and machine output | mixed | theory_graph.py, atlas.py, gate.py read specific files (see below) | counted; largest 25 listed |
+| dev: scripts, simulations, searches | 1,316 | 9.5 MB | coupling (searches, not proofs) | yes | not found | counted; 2 studies sampled |
+| dev: Lean drafts and trees | 418 (468 `.lean`, 31 `.lean.txt`) | 16.6 MB | candidate Lean | 212 of the 468 `.lean` files are byte-identical to a file under `LEAN/`; the rest are drafts or held versions | no live tool found | counted |
+| dev: receipts and check copies | 215 | 7.3 MB | machine output | no | not found | counted |
+| Ignored and untracked on disk | n/a | 703 MB (Lake `.build/`, `__pycache__`, 11 folders whose tracked files were moved away) | build output | no | none | counted (du) |
+
+Study folders: 240 are tracked in `development/` and 395 names appear in its git log. The rest moved to `../history/root-foundation/development` (253 folders, 4,362 files there), which is the research-history area. There is no index of `development/`. A typical study holds `NOTE.md`, `DESIGN.md` with a `DESIGN-attacked.md`, `readers/`, `sim/`, `held/` and `kit/`. Of the 240: 62 have a NOTE.md, 63 a `kit/`, 154 have logs and 129 have Lean (counted by name). 191 were first committed in the second half of October. Only `dj-a-line-on-a-stock` (326 files, 16–18 Nov) and `aa-attractor-atlas` were touched after 13 November.
+
+## What repeats
+- **Mirror and study log:** 28,595 of 31,314 non-empty mirror lines are verbatim in the two source files. The mirror exists because GitHub does not render a 3.8 MB file (its own header says so). (counted)
+- **Lean:** 212 of 468 `.lean` files in `development/` are byte-identical to a tracked blob under `LEAN/`, mostly `tree/` copies of package modules. A further 373 within-area files are byte copies of other files in the area. (counted by blob id)
+- **Outside the area:** only 276 of 9,163 files are byte-identical to anything outside it: 269 under `experiments/` (the Lean), 57 in `history/root-foundation`, and 50 in `sources/28-agentdojo-evidence` (small identical files, not checked further). (counted)
+- **The account:** of the area's Markdown lines of 80 characters or more, 1.1% in `development/`, 0.4% at the top level and 0.5% in the mirror appear verbatim in `theories/becoming/**` (excluding history), `DIRECTION.md` or the Becoming Lean. (counted) The study prose is therefore not a word-for-word copy of the account. Whether it says the same things in other words was not measured.
+- **Ren's words:** 13 Markdown files are headed as his words or as verbatim. In 2 sampled (`wb-within-becoming/readings/01-…`, `tm-traditions-onto-the-map/readings/00-brief.md`) the passage is in `sources/15-codex-theory-conversations/` or points there. (sampled 2 of 13)
+
+## What depends on it
+- **Tools with fixed paths into study folders** (read as text, not run):
+  - `gate.py`: `review-packet`, `one-unfolding-root/corpus`, `review-checks`, `ou3b…/measure_grammar.py`, `ou2-candidates/outcomes.tsv`, `ou7…/data/groups.tsv`, `zhonghua/`, `y1-changes/`, `ro-relational-sources/`, `THEOREM-CONNECTIVITY*`
+  - `theory_graph.py`: `one-unfolding-root/classify` and `corpus`, `ou2` outcomes, `ou7` groups
+  - `atlas.py`: `aa-attractor-atlas/step2b/mapping.json`, `six/mapping.json`, `PLAN.md`
+  - `atlas_index.py`: `map-structures/readings/04-joint-reading.md`
+  - `spine.py`: four `u4-one-root-to-its-edge` files
+  - `completion.py`: `THEOREM-CONNECTIVITY.json`
+  - tests: `rw-spine/lineage_static.json`, `review-packet/check_dossiers.py`
+  - `indexes.py` generates INDEX, README and REVIEWS
+  - `research-config.json`: 2 evidence paths, the mirror's source, a `move_pinned` entry
+
+  (counted with rg; the whole list is in the commands)
+- **Records:** 490 of 567 record JSONs mention an area path, which is not the same as citing it as a canonical source (5 do). 411 cite the study log. 16 counterexample paths point into the area: 12 at top-level studies, 4 at `wu-a-way-of-units/readers/`. (counted)
+- **Section anchors:** there are 535 anchored links into the area from live pages: records 172, other results pages 160, generated `results/data` 111, account 77, `_process` top pages 15. (counted) A section edit or move breaks them.
+- **Hand-kept live files:** 113 of the 240 studies are cited by records, chapters, other account pages, the board, `_process` top pages, tools, the Lean or root pages. Another 91 are cited only through generated indexes or move manifests. 36 are cited by no live file at all, and 8 only by themselves (e.g. `xr-exchange-root`, `ks-says-less-than-proved`, `r52-joint-draw`). (counted; the "live" classes are mine)
+- **Entry pages:** `DIRECTION.md` and `LEAN-TOWARD-THE-DIRECTION.md` link only to `dj-a-line-on-a-stock`. `08-METHOD.md` links to 17 studies and 8 top-level files. `ONE-PAGE.md` links once, to `aj-joint-selection/PLAN.md`. (counted)
+
+## What a continuing session needs from here
+- `dj-a-line-on-a-stock/`: the direction page's provenance (the tries of 16 November, the second way of 17 November, the dig, and the corrections of 18 November with their readers).
+- The tool inputs listed above.
+- The study log, as the place records point to.
+- A study's NOTE when its record or chapter links it.
+
+It does not need to open the logs, the spent landing kits, the receipts, the check trees, the byte-copied Lean or the mirror (the mirror only stands in for GitHub rendering). This is inferred from what reads each kind. No session transcripts were read.
+
+## Candidates
+- **Mirror: say once.** It is regenerable output of a stored file. The risk is the 61 live links that point at mirror pages, which exist because the source will not render. First a renderer or a split of the source would have to change, and the links be repointed with `moves.py`.
+- **Logs, outputs, receipts, check copies, spent kits** (about 3,400 files, about 40 MB): **could leave the working tree**. Evidence: no live tool or page reference was found apart from the exceptions named above. Risk: a few kits are cited as evidence (`ou7…/kit/front-refresh/TEXTS.md` in research-config), and two exist as `kit/` files in studies records cite. First a per-file reference sweep would have to run, and the layout rule's byte-for-byte history move would have to be dropped in favour of git history. Otherwise leaving only re-copies the files into `history/` and the tree does not shrink.
+- **Byte-identical Lean copies** (212): **could leave**. They are byte copies of package modules. The risk is that a study's text refers to its `tree/` by path. First check for links to `tree/` paths.
+- **Tool inputs inside study folders** (about 10 paths): **stay, or move with the tool changed first.** They are data for live generated pages, kept inside trace folders.
+- **Study log, top-level studies, NOTEs, designs, reader rounds, frozen guesses, held Lean, searches:** **stay** as trace. They are unique (about 1% verbatim overlap), and they hold failures:
+  - `xr-exchange-root/PLAN.md`: a superseded root, because exchange presupposes two parties. That reason was not found elsewhere in a tree sweep for its phrasing.
+  - `dj…/second-way-2026-11-17`: a guess that "mostly failed", with two scratch Lean modules outside the package.
+  - `ou2-candidates/outcomes.tsv`: 3 refuted readings of the classics and 2 misclassified, read by the theory graph.
+  - 18 studies that name a countermodel.
+- **cannot tell:** whether the 127 studies with no hand-kept live citation say anything not carried by a record or the Lean. That needs a study-by-study read against the Lean.
+
+## Against the two views
+- **Against "garbage, compress":** the prose here is not a copy of the account (about 1% verbatim). It is where the failures and the readers' checks are written. Records cite it (the a-way-of-units counterexamples), and so does DIRECTION (its correction readers). Removing it would remove the evidence that the tellings were set against the Lean.
+- **Against "trace can leave the reading path without loss":** it can leave the *reading* path, but not yet the *tool* path or the link graph. There are 535 anchored links, records with 411 pins to one log file, and generators reading data stored inside trace folders. Separating kinds would have to come before any move.
+- **For both:** the layout rule itself is the growth engine. Every study step lands here, and retirement copies files byte for byte into `history/root-foundation` (4,362 files there already).
+- **Against the 16 October plan:** that review planned this top level to go from 2,208 files to about 150, with a `development/INDEX.md` and `MANIFEST.json`. The top level now has 98 files. `development/` has 8,333 files and no index; no commit of either planned file was found in git log.
+
+## Not determined, and surprises
+- Not determined: this area's share of the 3.9 GB `.git`, and whether studies say again in other words what records say. Whether all 13 files of Ren's words are in `sources/` (2 checked). Whether the 50 files identical to `sources/28-agentdojo-evidence` matter.
+- Surprises:
+  - The English study log is mostly anchors for sections 1–162, with the prose in the Chinese edition.
+  - 703 MB of ignored Lake builds sit on disk.
+  - Eleven folders exist only as ignored residue after their tracked files moved.
+  - `history/workboard/BECOMING-WORKBOARD-2026-10-11_to_2026-10-17.md` names 198 of these studies, although most began after 17 October.
+  - Work since 14 November is almost all in one study (dj), whose reader rounds of three days make up the direction page's provenance chain.
+
+## The commands behind the counts
+```
+R=_process/research/2026-10-05-generative-foundation-review/root-foundation
+git ls-files $R | wc -l;  git ls-files $R/development | awk -F/ '{print $6}' | sort -u | wc -l
+git ls-files $R/<sub> | grep '\.md$' | tr '\n' '\0' | xargs -0 cat | wc -w
+git ls-files -z $R | xargs -0 stat -f %z   (summed: 220 MB)
+git status --porcelain --ignored $R | ... | xargs du -sk   (703 MB)
+git log --format='C %ad' --date=short --name-only -- $R/development   (first/last date per study)
+rg --no-ignore-dot -o 'development/[A-Za-z0-9._-]+' . -g '!tmp/**'   then classified by citing path (cls.py)
+git ls-files -s  (blob ids: copies inside, outside, and against LEAN/)
+python: kinds.py (path/name classifier); record JSON walk (canonical_source, counterexamples, any area path)
+python: lines >= 80 chars of area md vs theories/becoming (no history), DIRECTION.md, Becoming/*.lean
+python: mirror lines vs BECOMING-RENEWAL-READING{,.zh}.md
+rg -n 'root-foundation' tools Makefile _process/research-config.json .github
+```
+Scratch scripts: `/private/tmp/claude-501/-Users-ren--claude-spares-spare-G59lZZ/964aab45-1f1b-4464-a64a-565f232b4c44/scratchpad/` (`cls.py`, `kinds.py`).

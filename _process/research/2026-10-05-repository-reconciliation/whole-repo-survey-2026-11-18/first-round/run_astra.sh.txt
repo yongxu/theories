@@ -1,0 +1,43 @@
+#!/bin/bash
+# Runs the astra readers of the survey, four at a time, read-only, each on a fresh thread.
+# AI-written (Claude Fable), 18 November 2026. Reports go to astra/<id>.md; a finished report is not rerun.
+set -u
+D=/Users/ren/theories/tmp/repo-picture-2026-11-18
+export D
+cd /Users/ren/theories || exit 1
+mkdir -p "$D/astra"
+
+run_area() {
+  id="$1"; effort="$2"
+  out="$D/astra/$id.md"
+  if [ -s "$out" ]; then echo "skip $id (already there)"; return 0; fi
+  {
+    cat "$D/BRIEF.md"; echo; echo "---"; echo
+    cat "$D/AREAS.md"; echo; echo "---"; echo
+    echo "Your area is: $id"
+    echo
+    echo "You are the astra reader. A Claude reader has the same two pages and works independently of you."
+    echo "You cannot write files. Your final answer is the report itself, in Markdown, in the format the brief gives; it will be saved for you. Begin it with one line naming the model you are."
+    echo "Stay inside /Users/ren/theories. Do not open the private folders the brief names, and do not read anything under tmp/repo-picture-2026-11-18/. Do not start subagents."
+  } | cx -m gpt-6.2-astra -e "$effort" --fresh --sandboxed > "$out.part" 2> "$D/astra/$id.err"
+  rc=$?
+  if [ $rc -eq 0 ] && [ -s "$out.part" ]; then mv "$out.part" "$out"; echo "done $id"; else echo "FAILED $id (rc=$rc)"; fi
+}
+export -f run_area
+
+run_cold() {
+  out="$D/astra/cold-start.md"
+  if [ -s "$out" ]; then echo "skip cold-start (already there)"; return 0; fi
+  cx -m gpt-6.2-astra -e high --fresh --clean --sandboxed < "$D/COLD-START-PROMPT.md" > "$out.part" 2> "$D/astra/cold-start.err"
+  rc=$?
+  if [ $rc -eq 0 ] && [ -s "$out.part" ]; then mv "$out.part" "$out"; echo "done cold-start"; else echo "FAILED cold-start (rc=$rc)"; fi
+}
+export -f run_cold
+
+{
+  echo "cold"
+  for id in lean-structure lean-direction machinery receipts research-development research-history sources earlier-tellings account records-and-map entry-and-direction outside-tree; do echo "area $id high"; done
+  echo "area whole xhigh"
+} | xargs -P 4 -L 1 bash -c 'if [ "$0" = cold ]; then run_cold; else run_area "$1" "$2"; fi'
+echo "astra batch finished"
+ls -la "$D/astra"

@@ -1,0 +1,85 @@
+AI-written by GPT-6 (Astra reader), 19 November 2026. Read-only survey.
+
+# Experiments outside the Lean core
+
+**Counted.** The specified tree contains **8,118 tracked files, 946,432,661 bytes**, across 37 folders and the experiments index. The separate `foundation-assessment` contains 105 files, 2,264,261 bytes.
+
+**Counted.** All 66 quotations in the live test register match their cited passages after whitespace normalization. Its four failed tests, twenty mixed tests and two refusals are visible in [TESTS.md](/Users/ren/theories/TESTS.md). **Sampled.** Two older studies give adverse results a reader of that page would miss. One bears directly on the account of selection shaping its own evaluator.
+
+## Folder inventory
+
+**Counted** columns give file counts as Markdown/code/structured data/other, followed by MiB. Code includes Lean. Structured data includes run receipts as well as observations. **Sampled** findings use the outcome passages for all 66 registered rows in 40 source files, plus the older reports named below. Every current folder below has a `TESTS.md` row. Its linked outcome file is the folder’s `README.md` unless specified. Chapter numbers mark additional direct citations.
+
+**Sampled.** In the freeze column, `P` means the folder’s dated `PREDICTIONS*.md`, including round files and addenda. `D` means `DESIGN.md`. `Protocol` means `PROTOCOL.md` fixed the calculation or procedure; a directional prediction is specified separately where applicable. Freeze timing follows the authors’ accounts. For the two installation rounds, git independently places the freezes before the result commits.
+
+| Folder | Files by kind · MiB | Freeze | What came back |
+|---|---:|---|---|
+| `commons-gated-renewal` | 3/5/11/4 · 5.60 | P | T1/T3 gated commons. Identity and scope checks held. Three learning predictions failed twice. Chs 2, 4, 5. |
+| `commons-outrun` | 2/6/3/3 · 1.24 | P | T3, other harvesters emptying the patch. Nine of eleven settings passed. Ch 5. |
+| `commons-outrun-own` | 5/8/15/7 · 4.29 | P, four rounds | T3, learner’s own future harvest. Each proposed boundary missed its next sharp case. Ch 5. |
+| `commons-outrun-generalizing` | 2/4/4/2 · 1.42 | P | T3, generalizing learners. Three settings failed, including the predicted link to locking. Chs 5, 7. |
+| `commons-llm-feedback` | 2/5/5/2 · 0.65 | P | T3, threshold revised from reward. Two locked settings failed. Ch 5. |
+| `commons-llm-feedback-resolved` | 2/8/6/3 · 1.03 | P | T3, feedback distinguished thresholds after assigned trials. All verdicts passed. Ch 5. |
+| `commons-llm-feedback-unaided` | 2/7/5/2 · 1.58 | P | T3, free exploration. Prediction held. Best threshold found in 29/30 locked seeds. Ch 5. |
+| `side-effect-benchmarks` | 2/2/2/1 · 0.10 | P | T3 blind draw matched established impact measures, adding no discrimination. Ch 5. |
+| `drain-beyond-the-reward` | 6/10/646/4 · 11.12 | P, stage A | T3 gradient training. Three predictions supported across both families, two unresolved. Stage B held before freeze. Ch 5. |
+| `margin-measured` | 12/27/53/19 · 3.99 | P | T1–T3, yeast, fish and simulated margins. MQ3 failed 0/4. MQ7 failed its one testable prediction. Other rounds mixed. Chs 2, 5. |
+| `need-measured-in-advance` | 5/27/17/2 · 0.77 | D | T1 walleye threshold. Refused at input header. Ch 2. |
+| `stocked-above-the-need` | 3/5/3/2 · 0.21 | D | T1 renewal after restocking. Same reader refused before a need could be imported. Ch 2. |
+| `state-named-in-advance` | 4/13/5/10 · 0.55 | D, `cells/DESIGN.md` | T2 beetles. First cultures too short. Pooled replicates then defeated the former wording: pupae and adults forecast better. Ch 2. |
+| `state-against-embedding` | 5/4/2/3 · 0.32 | D | T2 beat the fitted delay embedding in 42/65 fish stocks. Both lost to persistence in 46. Ch 2. |
+| `break-warnings` | 4/9/12/4 · 0.15 | P | T6 prey statistics and seabird failures. Three non-rejections, with limited power or overlapping data. Ch 3. |
+| `direction-installation` | 3/8/164/0 · 5.03 | P, twice | T3/T4 fishers and dependent mussels. Five of seven failed without talk. With talk one model passed four predictions, the other one. One-page case, chs 5, 7. |
+| `direction-training` | 1/6/3/0 · 0.78 | None | T4 transfer by fine-tuning. Training sets prepared, job dropped. |
+| `valuer-agreement` | 6/14/31/3 · 48.61 | P | T5 valuer rankings. VD1 failed every rule. VD2 passed three of six. Ch 7. |
+| `self-rewarding-lock` | 2/9/7/2 · 1.93 | P | T7 self-judging model. Every verdict passed, but alternating rules qualified as locked by an exact tie. Chs 2, 7, 8. |
+| `shaping-what-comes-back` | 2/8/6/2 · 0.54 | P | Evaluator shaping. Two of four contrasts failed where agents never tried shaping. Ch 7. |
+| `critical-mass-located` | 2/3/2/1 · 0.27 | D | Stag-hunt payoffs predict a threshold before choices are seen. Frozen, unrun. Outcome source is D. |
+| `reform-events` | 4/3/1/0 · 0.50 | Unfrozen D | T7 institutional response to refutation. Coding absences and bounding drift remained unresolved. `HOLD.md`, ch 2. |
+| `formations-that-read` | 33/79/32/18 · 6.29 | `FREEZE-{1…12}.md` | Small choosers and cue-trained networks reported without verdicts. Tabular compliance reading held. Registered model-call studies unrun. |
+| `learned-claim-agents` | 2/3/5/0 · 0.12 | Protocol, predictions | Q-learners serving claimants. Four of seven passed. Stopping at fulfillment was less reliable than serving. |
+| `agentdojo-evidence-boundary` | 49/39/479/360 · 35.07 | Protocol, `REPLAY-CONTRACT.md`, `correction-action/FREEZE.json` | Archived authority/effect audit and prospective maintenance. One warranted repair, three cases preserved. `correction-action/RESULTS.md`. |
+| `integrated-correction` | 120/422/364/497 · 105.39 | `selective-handoff/FREEZE.json` | Both instruction variants handled inherited corrections correctly. Reminder gained nothing (`selective-handoff/README.md`). Also includes formal and empirical correspondence studies. |
+| `shared-renewal-capability` | 210/875/448/958 · 170.77 | Protocol | Joint capability and successor turnover calculated under stipulated material-event laws. Ch 4. |
+| `market-generativity` | 11/255/61/216 · 13.99 | No thesis prediction | Executable market selection and capture under supplied economic laws. Ch 5. |
+| `valuation-development` | 2/20/0/10 · 0.18 | No thesis prediction | Formal readout-preservation results and witnesses on a supplied representation. |
+| `motor-learning-cost` | 3/5/9/3 · 0.74 | Protocol | Retrospective cost-switch contrast negative, interval includes zero. |
+| `recipient-cue-grounding` | 2/2/3/0 · 0.13 | Protocol | Public rat data, published direction known. Cooperating cue yielded 1.33 more pulls per session. |
+| `recipient-harm-valuation` | 4/4/9/0 · 1.84 | Protocol | Preferred-lever responses fell 16.69 percentage points more under contingent harm. Descriptive comparison. |
+| `recipient-value-learning` | 4/28/24/14 · 1.56 | Protocol | Later target-liked choices differed by +0.50 percentage points, interval crossed zero. |
+| `source-check` | 2/0/0/0 · 0.01 | Linked `sc1-source-check/DESIGN.md` | Registered coding rule found no author-specific detection deficit. `RESULTS.md`. |
+| `wenli-reading-transfer` | 6/0/0/0 · 0.34 | `FIDELITY.md`, linked ZE `ANALYSIS-PLAN.md` | Fewer excess referents provisionally. Controlled English erased the advantage for the primary coder. Both `*RESULTS.md` files. Human transfer design held. Ch 6. |
+| `circular-construction` | 34/154/154/140 · 208.75 | No thesis prediction | Reusable-building engineering proposal, simulation and visual demonstration. |
+| `history` | 138/151/234/73 · 266.70 | Multiple protocols | Earlier finite models, empirical tests, input snapshots and superseded interpretations. `TESTS.md` points to `INDEX.md` and expressly excludes these experiments. |
+
+## Failures outside the live register
+
+**Sampled** two retired studies selected by searching result reports for failed expectations. In `history/evaluator-succession/REPORT.md`, success-based appointment **improved** usefulness under stable demand and produced **fewer** purpose-impairing amendments. Both reversed prospective predictions. The follow-up supported three new predictions and preserved those reversals. In `history/2026-10-05-general-framework/closure-study/external-test/RESULTS.md`, repaired microbial composition features reduced squared error but worsened absolute error.
+
+**Sampled** the assessment’s `README.md`, `benchmark/PROTOCOL.md` and `MEASURED-COMPARISON.md` from 105 files. Its subsequent microbial comparison fixed the analysis before rerunning already-seen outcomes. Both competing procedures selected persistence and made **24 identical forecasts**. **Counted:** 48 Markdown, 12 Python, 43 JSON, two CSV. Five distinct records cite its market evidence. AgentDojo’s freeze pins three assessment documents.
+
+**Counted.** Searching `TESTS`, `ONE-PAGE` and chapters 1–8 for `evaluator-succession`, appointment wording, `microbial`, `OD600`, `16S` and `Shannon diversity` found neither adverse result in those live pages. **Not looked at:** every nested report or possible paraphrase. The two refusals, by comparison, are explicit live and both saved `run-refused.txt` files name the missing acreage and upper confidence bound.
+
+## What can be recovered
+
+**Counted.** The 8,118 paths have 5,441 distinct Git blob IDs. The 16 October reconciliation identified a 19-file AgentDojo integration packet and shared-renewal freeze duplication. The packet still has 19 tracked files under `continuation/history/integration`; shared renewal has 44 freeze-named JSON files.
+
+**Inferred from contents and writers.** No tracked top-level folder inspected consists solely of machine output. LA4’s `results/runs` and `results/power-runs` do contain just outputs, 480 and 160 files respectively. Outside the tracked inventory, `constructed-correction`, `evaluator-succession` and `joint-formation` contain only 3, 5 and 2 bytecode files respectively. **Not looked at:** local-only `guardian-anarchy`.
+
+**Inferred.** Some bulk could leave the reading path. Matching hashes alone do not establish that a sealed input can move. `tests_page.py` reads `tests.json` and checks quoted source text. The assessment additionally has path-relative checkers. A continuing session needs the freeze, observed responses, adverse outcomes and interpretation together. The beetle result changed what T2 could claim. The microbial result and stable-demand reversal constrain readings that checking the Lean alone cannot settle.
+
+## Commands behind the counts
+
+```sh
+git ls-files -s -- experiments \
+  ':(exclude)experiments/integrated-correction/general-framework/generative-basis/lean/**'
+git ls-files -- _process/research/2026-10-05-generative-foundation-review/foundation-assessment
+git log --oneline -- experiments/direction-installation
+rg --no-ignore-dot -in 'contradict|failed|not met|mixed after repair' experiments/history -g '*.md'
+```
+
+**Counted.** A read-only Python pass grouped the listed paths by first folder and suffix, summed `Path.stat().st_size`, counted distinct indexed blob IDs, and tested each whitespace-normalized `tests.json` quotation for inclusion in its `quote_path`.
+
+── cx · ok · session 01a1f461-134e-7ed3-9285-7785c0c04f59 · gpt-6.2-astra/high · read-only · 316s · 1290.7k tokens · 35 cmds
+continue: cx -r 01a1f461-134e-7ed3-9285-7785c0c04f59 "…"
+log: /Users/ren/.cache/cx/runs/20261119-221604-24630

@@ -1,0 +1,75 @@
+# The full picture of the repository, before any decision
+
+*AI-written (Claude Fable, the coordinating session), 18 November 2026. A working brief for every reader of this survey, kept in scratch and not tracked. Ren has not read this page.*
+
+## What the work is
+
+`AGENTS.md` at the repository root says it. Read it first, then `_process/DIRECTION.md` (its head note first). Do not take this brief's short telling in place of those pages.
+
+## What was understood today
+
+On 18 November Ren and the coordinating session talked the aim through. His words of that day are not yet in `sources/`; what follows is the AI's telling of it, and it can be wrong.
+
+1. What can be derived is patterns: a theorem holds of whatever meets its premises. Recognising that a situation meets them cannot be derived. It is a practice, and no seeing registers every difference. Ren's picture of what goes wrong: an account of the world is taken for the world, a self forms inside that account and holds to it, and acting from there compounds while what the account leaves out is used up. He has called this the meta-attractor. Alignment, as he sees it, is keeping the loop between pattern and situation open, humans and AI together, and it has no end.
+2. Words carry connotation and can mislead: his, an AI's, English, Chinese. The Lean is what words are checked against. So the order is: get the Lean right, and let the tellings follow it.
+3. The repository should become an elegant representation of this: joined, each thing said once. Ren judges that it is still far from that.
+4. Ren cannot read millions of words at each turn. Only AI readers can read at this scale. So the reading has to be done with the right understanding, and has to say how far it has seen.
+5. The repository alone, without any AI's private memory, should hold enough for the work to continue on this course.
+6. Ren will ask for the repository to be reoriented after the full picture is understood. Not now.
+
+## What is asked of you
+
+A survey of one area (see `AREAS.md` in this folder; the coordinating session tells you which is yours). Understand first. Decide nothing and change nothing.
+
+Two views are on the table and neither has been tested:
+
+- Ren's: much of the repository may be garbage that could be revised, compressed or removed.
+- The coordinating session's: most of the mass is trace (how we got here, failures included) and machine output, which could leave the reading path without loss, while prose is judged against the Lean and not against other prose.
+
+Report what you find, including what goes against either view. A reader handed a hypothesis tends to return it confirmed; do not.
+
+Commitments any later decision has to meet (from `AGENTS.md`): what the repository cannot regenerate stays (its history, Ren's words, its failures); nothing is pruned from git; counterexamples, failed candidates and failed tests are part of the map. Git history keeps whatever leaves the working tree. A layout rule of 17 October (`_process/REPOSITORY-LAYOUT.md`) says nothing is deleted and retired material moves byte for byte into history folders. Whether that rule still serves is one of the things to understand.
+
+For your area, answer:
+
+- **(a) What is there.** Kinds of material, with counts and sizes measured by a command (give the command).
+- **(b) What each kind is, beside the Lean.** One of: the map itself (Lean); a telling (says what a theorem says); coupling (a test, case, experiment, data); Ren's words; trace (how we got here); machine output that can be regenerated; tooling; or something this list misses.
+- **(c) What is unique and cannot be regenerated**, and which failures, countermodels and failed tests are kept here.
+- **(d) What repeats.** The same content held elsewhere; name where, and measure it where you can (identical hashes, near copies).
+- **(e) What depends on it.** What a checker, gate, renderer or manifest reads from here; links from live pages; citations pinned to a section.
+- **(f) What a session continuing the work needs from here**, and what it never opens.
+- **(g) Candidates.** For each kind: stays as it is; could be said once and pointed to; could leave the working tree; or you cannot tell. Give the evidence, the risk, and what would have to change first (a tool, a link, a manifest).
+- **(h) What you could not determine, what surprised you, and where the direction as told is not carried in this area or is contradicted by it.**
+
+Earlier surveys exist (for example the whole-repository review of 16 October under `_process/research/2026-10-05-repository-reconciliation/`, the review of 9 and 10 November, the count of 14 November). Look for any that cover your area, say what they found and when, and check a sample of it; do not repeat them.
+
+## How far seen
+
+Mark every statement of fact with one of: **counted** (by a command), **read whole**, **sampled** (n of N, and how the sample was chosen), **inferred** (from what), **not looked at**. Before saying something is absent, sweep for it and name what you searched; say "not found in what was read", not "does not exist". The root `.ignore` hides history folders and saved check copies from plain `rg`; use `rg --no-ignore-dot` when you mean to search them.
+
+## Rules
+
+- Read only. No edits to any tracked file, no `git add`, `commit`, `checkout`, `switch`, `stash`, `clean`, `gc`, `prune`, `worktree` changes, no moves.
+- No builds, no `lake`, no tests, no gate, no render. Never run `check_becoming.py`, not even with `--help`: it is a real run and rewrites files. Read tools as text.
+- This Mac is shared by many sessions. Use light commands (`rg`, `wc`, `find`, `git ls-files`, `git log`, small scripts that only read). Nothing that runs longer than about a minute; if a count would, sample and say so.
+- Do not start subagents.
+- Private folders are kept on this machine and not shared: `sources/12-claude-ai-chats`, `sources/13-claude-memories`, `sources/18-friend-conversations`, `drafts/2026-10-02-friend-conversation`, `tmp/friend-conversation-2026-10-02`. Count them if they are in your area; do not quote from them.
+- Measure by command and read by sample. You are not asked to read your whole area; you are asked to know what it is.
+
+## The report
+
+Markdown, at most about 1,800 words, plain sentences:
+
+```
+# <area>: what is there
+*AI-written (<model>), 18 November 2026. A survey; nothing was changed.*
+## In three sentences
+## What is there        (a table: kind | files | words or lines | what it is beside the Lean | unique? | what reads it | how far seen)
+## What repeats
+## What depends on it
+## What a continuing session needs from here
+## Candidates           (each with evidence, risk, and what would have to change first)
+## Against the two views
+## Not determined, and surprises
+## The commands behind the counts
+```

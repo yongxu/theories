@@ -1,0 +1,65 @@
+# earlier-tellings: the check
+
+*AI-written (Claude Opus 5.5, checking reader), 18 November 2026. Read-only; checked against the repository at `f1a805b5c`, not against the reports. Nothing else was changed.*
+
+## Verdict in brief
+
+Both reports are sound on the large numbers. Every count I re-ran on the IASEAI folder, the record references and the manifests came out the same. The Claude report has 7 errors of fact. Two of them are absences that a sweep refutes, and one leaves out Ren's words. The astra report has 1 small error. Astra also settled two things the Claude report left open (the edition status in `output/`, and a broken baseline path in the v7.3 audit) and saw Ren's words in `worldbuilding/`, which the Claude report did not.
+
+## Disagreements, settled
+
+| topic | Claude | astra | settled by looking |
+|---|---|---|---|
+| Files in the branch folders | 71 + 5 | 66 + 5 | **66** (`git ls-files theories \| grep -v ^theories/becoming/`; per-folder counts summed). Claude is wrong. |
+| Markdown words in the branch folders and the nav pages | ~703,000 + ~27,000 | 702,813 + 24,810 | **702,813 + 24,810** (wc -w). Claude's 27,000 is wrong. |
+| Total words in the area | "about 6.1 million" | 6,230,933 | Claude's own components add up to ~6.23M. Astra is right. |
+| Other drafts folders | 15 | 14 | **14 tracked** (`git ls-files drafts \| cut -d/ -f2 \| sort -u` gives 15 with IASEAI). The 15th directory on disk is the untracked private one. |
+| IASEAI Markdown words | 3,993,923 / history 3,512,119 | 3,993,966 / 3,512,154 | `wc -w` reproduces Claude's numbers. Astra's come from a Python split on bytes. This is a difference of method, not an error. |
+| What `worldbuilding/` is | "other: a separate project (friends' worldbook)"; a continuing session "never needs to open" it | includes Ren's words: eight verbatim Ren messages and one assistant reply | **Astra is right.** `worldbuilding/archive/001…009` are 8 Ren messages and 1 assistant reply, each held as a single blob, with hashes in `archive/manifest.json`. A sweep (`rg --no-ignore-dot -F` on a line of 001, across the whole tree, private folders included) found no other copy. These are Ren's words held only here, not in `sources/`. |
+| Edition of the review packet | "edition 5 current" vs tag 6: "not resolved" | edition 6 current, 5 archived | **Astra is right.** Board line 101 says "Edition 6 (`review-packet-6` …)". `output/pdf/history/` holds review-packet-1 to 5. `output/README.md` (last changed 9 Nov, `8a892a201`) is stale. |
+| Is anything live tied to IASEAI `history/`? | nothing live found | the v7.3 audit opens `../v7.2/src/keymap.json`, which now lives under `history/v7.2/` | **Both partly right.** `v7.3/verification/audit_v73.py:12` reads `BASE = ROOT.parent / 'v7.2'`, and `v7.2/` no longer exists. No tool under `tools/` names `audit_v73`, `checks_v73`, `xref_v73` or `V73-INTEGRATION-CHECKS` (rg). So the reference is dead, not live. |
+
+## Claims tried
+
+**Confirmed (I saw them).**
+- Records: 567 files. 312 reference `theories/becoming/history`, with 390 references to 26 files. 373 of those references have role statement, and 277 point to THE-THEORY-OF-BECOMING.md. In 292 records every statement reference is a history page. 11 records name a history page as canonical source. 8 records cite 3 meta-attractor files. 2 records cite the opening's V7 proposal. 2 records point `counterexamples` into history (the last is astra's claim). Checked with a Python pass over `results/records/*.json`.
+- `registry.py` 1015–1043 fails on a missing path and requires `canonical_source` to be among the hashed references. A hash mismatch is recorded as drift or growth rather than as an outright failure, so Claude's "checked against the file" is right in substance.
+- Manifests: **all** 970 IASEAI entries and **all** 191 becoming/history entries have `new_path` in the index with the recorded blob. That is a full check, stronger than Claude's sample of 20.
+- Blobs: IASEAI has 1,122 files, 1,004 distinct blobs, 931 files whose blob occurs at one path only, and 4 files with a copy outside the folder. Becoming/history has 4 duplicates. FORMATION-MATH.md is a copy of `_process/history/2026-10-05-revisable-concern/context/FORMATION-MATH.md`. There are 44 repeated-blob groups among the 700 IASEAI Markdown files. `output/` has 13 cross-area duplicates, and the two Chiang Mai PDFs share a blob.
+- Edition diffs v7.2→v7.3: 41, 92 and 27 changed lines. v7.3 `src/` holds 211,566 of 436,400 words. `v7.3/README.md:22` says "root Markdown files are assembled outputs". `NOTES.md:3` says "none is Ren's verbatim".
+- `ONE-PAGE.md:7` links `../meta-attractor/README.md`. `rg -i 'meta.?attractor|元吸引' _process/DIRECTION.md` finds nothing (exit 1).
+- `lineage.json` has 220 evidence paths: 45 branch, 6 becoming/history, 7 drafts. `lineage.py:181` reads a `commit` field through `git show`.
+- The root `.ignore` lists only the three paths Claude names. `rg --files` reaches 971 files in IASEAI `history/`, so plain searches do cover it.
+- Chapters hold 225 links into becoming/history (183 from `chapters/README.md`, 178 distinct targets). `gate.py:190` reads YI-ZHUAN-AND-BECOMING.md. `research-config.json:12` points `sessions` at SESSION-RESULTS-2026-10-08.md. `gate.py:62–63` lists `drafts/**`, `output/**` and `worldbuilding/**` as areas.
+- Sizes: worldbuilding plus output is 233.5 MB tracked. `drafts/2026-10-03-the-game-of-winning` is 1.4 GB on disk, of which 7.8 MB is tracked. The private draft folder has 9 files and 660 KB (counted, not opened). There are 3 draft Lean files.
+- Astra: the crosswalk labels in `theories/README.md` sum to 838 / 3 / 404 / 174 / 12 / 85 / 160. Chapter 07:359 sends the reader to §4 of the archived step of invariance. `GenerativeCore.lean:127–137` is the racing countermodel. The 17 October survey's 970 files and its S7 example check out (blob `6433a784` in v6.2, v7, v7.1, v7.2 and v7.3).
+
+**Refuted.**
+- Claude: `drafts/2026-09-04-one-work/ESSAY.md` is "the only tracked copy found" of Ren's 14 July 2024 sentence. `rg --no-ignore-dot -F '这个社会选择了某一种value'` finds it in 10 other tracked files, including `theories/meta-attractor/README.md`, `theories/alignment-selection-on-cognition/README.md`, `_process/history/2026-09-consolidation/TIMELINE.md`, the reading notes, `lineage.json`, LINEAGE.zh.md and three rw-spine JSONs.
+- Claude: the pilot's PREDICTIONS files are "the only place found that states P1 failed". It is also stated in `theories/LINEAGE.md:205` (a generated live page in this very area), in `v7.3/EVIDENCE.md:205` and its `src/reg` copy, and in `experiments/history/evaluator-succession/README.md:50`. The claims file narrows this to "not in TESTS.md or chapters", and that narrower form is confirmed.
+
+**Partly confirmed.**
+- "Only 2 live links into the IASEAI folder." Under Claude's filter it is 2, both from `_process/research`. But the generated live pages `theories/LINEAGE.md` and `LINEAGE.zh.md` also link into it (16 referrers in all, with the rest in history and sources).
+- Astra: "five navigation files counted against generated manifest". The manifest names 4 of them. `theories/README.md` is generated (by its banner and atlas.py) but is not in `generated-manifest.json`.
+
+**Not settled.** Claude's 943 generated links and 21 MAP.md links into the branch folders. Astra's 179 distinct history targets and 32 branch files over 667 pages: I got 178 from the chapters alone, so astra's figure is plausible as a lower bound.
+
+## Errors counted
+
+- **Claude: 7.** The branch file count (71 for 66). The nav words (27,000 for 24,810). The total (6.1M for 6.23M). "15 folders" for 14 tracked. "Only tracked copy" of Ren's 2024 sentence (refuted). "Only place" that states P1 failed (refuted). `worldbuilding/` classed as a separate project and never needed, when it holds Ren's words found nowhere else. **Worst:** that last one. It is the error that would let a decision move or drop Ren's words unseen. The two refuted claims err toward keeping files, which is less dangerous.
+- **astra: 1.** "Counted against generated manifest" for five files, when the manifest names four. Minor.
+
+## Also seen
+
+`experiments/history/evaluator-succession/README.md:50` links `../../drafts/…/PREDICTIONS-2.md`. From that folder the link resolves to `experiments/drafts/…`, which does not exist. It is probably a link that broke when the folder moved into history. The gate checks only live referrers, so it would not catch this.
+
+## What a decision can rest on now (≤150 words)
+
+The IASEAI `history/` (972 files, 3.5M words) is fully byte-preserved in git: all 970 manifest blobs match. No record references it and no live tool reads it. The only code pointing near it is a dead audit path. `theories/becoming/history` is load-bearing: 292 records' statement sources are there, and so are 225 chapter links, a gate test and a generator target. Moving it needs records rebound first, to a live page or to a pinned commit, which `lineage.py` already supports and `registry.py` does not. `theories/meta-attractor/README.md` is linked from the one page's definition. `worldbuilding/archive` holds eight of Ren's messages found nowhere else. The pilot's failed P1 has its original record in `drafts/…/experiment/`. Other pages restate it, and the account's chapters and TESTS.md do not. `output/README.md` is stale on the edition.
+
+## What it cannot yet rest on
+
+- How much of the IASEAI text or of becoming/history says what the present account does not. No crosswalk covers them.
+- Whether the 9–10 and 14 November surveys covered this area. Neither report checked them.
+- The branch-folder link counts (943 and 21) and astra's 179 and 32, which were not re-run.
+- Whether `registry.py` could accept a commit-pinned reference without a tool change. It was read only in one range.

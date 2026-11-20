@@ -1,0 +1,83 @@
+GPT-6 (Astra reader)
+
+# lean-direction: what is there
+
+*AI-written (GPT-6), 18 November 2026. A survey; nothing was changed.*
+
+## In three sentences
+
+**Sampled.** The Lean carries one alignment sentence whole in its model’s terms: two histories alike in everything available to a selection through specified couplings are selected alike. **Sampled.** It also proves how a selection can exhaust its support, and how a correction can arrive too late, with premises strong enough that removing just one lets a lineage persist or a timely first warning fail. **Inferred** from the theorem statements below: the largest gap in the 18 November picture is the formation of a self that takes its account for the world and holds to it while its own actions compound the omission.
+
+## What is there
+
+**Counted.** The table covers the 406 tracked `.lean` files immediately inside `becoming/Becoming/`. The first five rows use the 16 November survey’s own lists. “Unique” means distinct source content within these 406 files. Each also has an exact copy elsewhere.
+
+| Kind | Files | Lines | What it is beside the Lean | Unique? | What reads it | How far seen |
+|---|---:|---:|---|---|---|---|
+| Loops that read | 19 | 12,226 | Map, including limits on perception | Yes | Core checker | Counted; sampled `ReadingLoop` and `PartialReadout` for perception |
+| Readings carried by lineages | 8 | 10,640 | Map and built courses | Yes | Core checker | Counted; sampled the 16 November findings on `ReadingsSpread` |
+| Codes, revision and accounts | 18 | 8,724 | Map and countermodels | Yes | Core checker; separate checker for `FallibleInquiry` | Counted; sampled 3/18 for transmission, revision and prediction |
+| Coupling, selection and position | 16 | 20,992 | Map and games with specified payoffs | Yes | Core checker | Counted; sampled 3/16 for blindness, position and drain |
+| Lock, timing and stock | 15 | 18,586 | Map and failed candidates in executable mathematical form | Yes | Core checker and result records | Counted; sampled 5/15 for lock, shaping, timing and exhaustion |
+| Outside those lists | 330 | 229,360 | Also map, including general mathematics and readings of other fields | Yes | Core checker and importing modules | Counted; sampled 11/330 systematically, plus named leads below |
+
+**Counted.** The five lists cover 76/406 modules (18.7%) and 71,168/300,528 lines (23.7%). **Inferred.** This measures the reach of a particular reading. The plan’s earlier estimate of about forty modules was for the narrower question of what its proposed stages need. **Sampled, 11/330**, every thirtieth remaining filename starting at the eleventh: `Keeping` concerns acting under limited information, `Loops` measures propagation around feedback loops, `Units` concerns changes of measurement unit, `ContextualRuns` treats parity constraints, and `Hexagrams` reads six-line changes onto the formalism. A classification of the other 319 by relevance was **not looked at**.
+
+**Counted.** The 16 November receipt lists 20,278 spine theorems. Its spine includes the package root and excludes the separately checked `FallibleInquiry`. Of its theorem names, 664 have a Han character in the final name component. **Sampled.** The plan reports 710 named in classical Chinese and estimates that a quarter to a third of theorems are examples or kept failures. The counting basis for 710 and an independent census of examples were **not determined**. [Lean plan](/Users/ren/theories/_process/LEAN-TOWARD-THE-DIRECTION.md)
+
+### The two paragraphs, sentence by sentence
+
+**Read whole:** `AGENTS.md` and `DIRECTION.md`, including its head note. **Sampled** below means I opened the named statements or definitions, selected by the sentence they might carry. **Inferred** marks my judgment of fit.
+
+| Sentence in repository order | How far the Lean carries it |
+|---|---|
+| Idea 1. Whatever lasts is made again out of other goings-on. | **Partial, sampled.** `Grammar.«住»` requires a predecessor and successor under the chosen class. Neither requires replacement by other parts. |
+| 2. Support and what makes a difference can diverge, allowing unseen loss or a timely turn. | **Partial, sampled.** `LineOnAStock.falls_to_unmet` gives the unseen fall; `TurningInTime.turns_in_time_iff_before` gives the deadline under a specified corrective response that stays effective. |
+| 3. Several can drain a shared condition in full view. | **Whole as a possibility in one model, sampled.** `CoupledDrawers.drains_below` and `drain_perfect` establish both existence and what every perfect profile does. At least two draw in turn over a finite horizon. Each sees the amount offered and may leave zero. When the payoff for meeting a positive common need is smaller than the amount required, every drawer leaves zero at every step. The drain conclusion holds for any next-stock law. |
+| 4. A loop partly determines which differences it registers. | **Partial, sampled.** `ReadingLoop.sensed_alike_iff` compares two worlds with equal initial internal, sensory and active parts. Sensory histories agree exactly while the worlds answer alike along the acts taken. What the loop holds to is supplied. |
+| 5. An account taken for the whole exceeds what the reading can know. | **Partial, sampled.** `PartialReadout.SoundWithin.silent` requires two admitted states with the same reading and different target values. A sound answer must abstain there. Taking the account for the whole is an interpretation. |
+| 6. Many acting on one account can fit it, omit a loss, or fail to fit it. | **Partial, sampled.** Under exact writing and distinct representations, `SharedCodes.omitted_rest` keeps a different candidate excluded through every succeeding cohort. `ReflexivePrediction.Negating.none_right` gives a response defeating every prediction. The joint course of many actors depleting support through that account was not found in what was read. |
+| 7–9. Its status; the earlier read; the transition to selection. | **Read whole, inferred.** These are respectively a judgment, a report of a survey and a reading instruction. The earlier survey graded a different set of 21 sentences. |
+| Alignment 1–2. Alignment is the purpose; selection is a sustained dynamic. | **Read whole, inferred.** The first states the aim. The second supplies the interpretation: `TurningInTime` gives the course a need; `ClosedCapture.lock_outlives_loss` can keep a lock with no such need. |
+| 3. Courses alike in what makes a difference are selected alike. | **Whole, sampled.** `Web.selects_alike_iff` gives both directions when quantifying over every selection through the couplings. For one such selection the stated implication holds by `SelectsThrough`; one selector may ignore an available distinction. |
+| 4. Support can run down while nothing in selection yet differs. | **Partial, sampled.** In `falls_to_unmet`, through the first unmet need the family equals its stock-free genealogy. By then the level has fallen below an initially met need. Premises include a nonempty, initially supported family, positive descendant needs, no giving from zero, a ceiling preserved under zero draw, offspring taking more together, and offspring needing no more than their parent. |
+| 5. Resetting from the favoured share can continue until support fails unless corrected early. | **Partial, sampled.** `locked_ends_rising` reaches a terminal state still locked within ceiling plus one steps. It assumes an initial lock, order conditions preserving favour, increasing use, positive need, bounded stock initially within the ceiling, no giving from zero, and no marked level while the need is met. The deadline theorem adds a different response. `Three.read_at_eight_ends` keeps the failed candidate: the rule responds at eight, resets again and the line ends. |
+| 6–8. The joint design wanted; the two names; a fixed value cannot guarantee it. | **Read whole, inferred** for the design and correspondence. **Partial, sampled** for the fixed value. `Pace.never_reads_loses` proves eventual loss of reachable configurations for a finite fast law that merges states under a rule that never reads. It supplies no general verdict on fixed human or AI values. |
+
+## What repeats
+
+**Counted.** All 406 source files have different Git blob IDs. Across `LEAN`, `_process` and `theories/becoming`, their blobs occupy 1,240 additional index paths. `LineOnAStock.lean` has two identical check copies. `Selection.lean` has both a check copy and a study-tree copy.
+
+**Sampled.** Semantic repetition takes two forms. `WayOfUnits.unending_iff_holds` actually invokes `LineOnAStock.unending_iff_holds` with each unit leaving itself. By contrast, the record comparing selection through couplings with selection through a model of the options explicitly calls the common separation result a related law without a proved adapter. [Options record](/Users/ren/theories/theories/becoming/results/records/selection-through-a-model-of-the-options.md)
+
+## What depends on it
+
+**Sampled.** The checker reads named modules and their imports. The registry checks declaration bindings against source and receipt names. Chapter 3 pins the coupling theorem at `r-selection-through-couplings`. The line-on-stock record binds declarations, premises and countermodels separately from its reading of them. Moving a source therefore affects imports, checker resolution and proof links even when another path has identical bytes. [Chapter 3](/Users/ren/theories/theories/becoming/chapters/03-KNOWING.md:26) · [Line-on-stock record](/Users/ren/theories/theories/becoming/results/records/a-line-on-a-stock.md:86)
+
+## What a continuing session needs from here
+
+**Inferred.** Read the theorem beside the countermodel and the failed proposed wording. `KidHigherNeed.all_but_down` makes the distinction memorable: the stock stays at twelve; the children need thirteen. The first unmet need alone cannot establish depletion. For the 17 November failed attempt at renewal, the frozen tests and two surviving scratch proofs are in `dj-a-line-on-a-stock/second-way-2026-11-17`. **Not looked at:** session access logs. I cannot establish that a session never opens any particular file.
+
+## Candidates
+
+- **Inferred.** Keep the laws and their countermodels together across all five families. The `WayOfUnits` specialization is a candidate for saying the proof once while retaining its existing statement for callers.
+- **Inferred.** Exact check copies could leave an ordinary reading path. Leaving the working tree would first require verifying that each historical receipt still resolves its pinned source. **Not looked at:** a receipt-by-receipt removal set.
+- **Inferred.** No retirement judgment follows for the 330 remaining modules. `AcquiredPerspective`, farther away still in the Lean periphery, gives a worked course where an acquired score and command persist after their prediction becomes wrong, and a later corrected action funds the same organization. A location-based cut could hide precisely the kind of case the direction asks for.
+
+## Against the two views
+
+**Sampled.** Against treating most distance from the direction as waste, `ChoiceCountCapture.counted_outlives_loss` already joins a rule formed from past choices, continued lock and a loss growing at least one unit per step. Its starting threshold and loss growth are premises. **Inferred.** Against treating the excess chiefly as trace or output, the live source itself contains different mathematical constructions for selection, self-ascription and depletion. Removing copies would leave the question of how these constructions meet.
+
+## Not determined, and surprises
+
+**Sampled.** The October review distinguished checked connectivity from explanatory unity. The 9–10 November joint reading found proof provenance easier to recover than transitions or applicability. The 14 November count reported 403 modules. The 16 November read graded its 21 sentences as 19 partial, one built world and one docstring. The 18 November correction reported 71 theorem conclusions in 17 modules mentioning renewing or consuming. I checked `Web.renewing_not_consuming` and `Renewable.prefix_does_not_decide`: the latter gives, for every horizon, runs agreeing even in stock through that horizon, with opposite whole-course classifications. [October review](/Users/ren/theories/_process/research/2026-10-05-repository-reconciliation/whole-repo-review-2026-10-16/PROVED.md) · [November readings and corrections](/Users/ren/theories/_process/DIRECTION.md)
+
+**Sampled, inferred.** The closest warning about identifying a self from conduct is `ReadingLoop.Untested.model_or_order`: an unresolved model and a correct model with a different ranking produce the same acts and sensations forever in the built case. `GeneratedSelf` instead derives distinctions required for exact continuation summaries. Across the search below, a theorem forming a holder *inside its mistaken account* and deriving the ensuing drain was **not found in what was read**. Whether an actual situation instantiates any of these patterns remains a separate question.
+
+## The commands behind the counts
+
+**Counted.** `L` denotes `experiments/integrated-correction/general-framework/generative-basis/lean`, `B=$L/becoming/Becoming`. Counts used `Path.glob('*.lean')` and `len(path.read_text().splitlines())`, grouped by backticked module names on the five family lines of `read-2026-11-16/READ-AGAINST-THE-LEAN.md`. Blob counts grouped `git ls-files -s -- "$L" _process theories/becoming` by its second field. Theorem counts used `becoming-verification.json`’s spine rows and declaration names. The semantic sweep used `rg --no-ignore-dot -il` over Lean source for self-formation, self-models, identity with value, accounts with world or whole, meta-attractor, own future acts and goal formation, followed by named-statement reads. No proof was rerun.
+
+── cx · ok · session 01a1edbe-f05c-7f91-bb72-2c3c0df01c63 · gpt-6.2-astra/high · read-only · 383s · 1596.1k tokens · 50 cmds
+continue: cx -r 01a1edbe-f05c-7f91-bb72-2c3c0df01c63 "…"
+log: /Users/ren/.cache/cx/runs/20261118-152115-6574

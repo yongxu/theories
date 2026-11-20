@@ -1,0 +1,77 @@
+GPT-6 (Astra)
+
+# Research-development: what is there
+
+*AI-written (GPT-6 Astra), 18 November 2026. A survey; nothing was changed.*
+
+## In three sentences
+
+**Counted.** `root-foundation/` holds 9,163 tracked files, 220,434,868 bytes and 3,563,895 lines, including 8,333 files in 240 `development/` folders.  
+**Counted.** Of 567 result-record JSON files, 490 contain a path and SHA-256 binding into this area, reaching 298 distinct files, including 267 files in 87 development folders.  
+**Inferred from the bindings and the failures below.** A later reader can recover a landed theorem from the package, but recovering why an apparently stronger claim failed can require the study’s original prediction, the counterexample and the reader who spotted the missing premise.
+
+## What is there
+
+**Counted** by tracked path and newline, with disjoint rows. The last column gives the basis for interpreting the contents. “Mixed” means that the row contains materials with different answers about uniqueness.
+
+| Kind | Files | Lines | What it is beside the Lean | Unique? | What reads it | How far seen |
+|---|---:|---:|---|---|---|---|
+| Top-level Markdown | 63 | 54,837 | Study ledger, tellings, decisions, case evidence, navigation | Mixed | Records, readers, mirror renderer | Sampled 8/63 for these roles |
+| Top-level JSON | 25 | 35,993 | Checks, edit lists, connectivity and acceptance data | Mixed | Completion tooling reads connectivity | Counted names, sampled consumer |
+| Top-level Python and Lean | 10 | 1,424 | Analysis tools and compatibility entry points | Mixed | Research tools and older callers | Read whole 5/5 `build_` wrappers |
+| Numbered review folders | 51 | 20,203 | Twentieth and twenty-first reviews, briefs, scripts, independent judgments | Original reviews | Two synthesis pages | Sampled both syntheses and the twentieth review’s corpus report |
+| `reason-action-evidence/` | 1 | 49 | Transcription of 48 published experimental rows | Preserved observation | Recipient-cue analysis and checker | Sampled 1/1, header and rows against protocol |
+| Section mirror | 680 | 38,234 | Generated reading pages | Regenerable from two source editions | Section links, including tool-generated links | Sampled index and 2/680 pages, first Chinese and last English sections |
+| Development Markdown | 818 | 133,196 | Designs, tellings, frozen guesses, objections, decisions | Mixed | Chapters, records, board, later researchers | Sampled by named cases below |
+| Development JSON, JSONL, TSV | 1,737 | 2,013,882 | Reader reports, classifications, search data, receipts | Mixed | Graph, records, verifiers | Sampled by graph input and failed search |
+| Development Python, shell, JS | 2,264 | 247,424 | Searches, analysis and landing tools | Mixed | Some current tests and historical landing kits | Sampled by explicit tool references |
+| Development `.lean` | 468 | 310,445 | Working proofs and copies of package modules | Mixed | Study and landing scripts | Counted blob matches, sampled named proofs |
+| Development `.log`, `.out`, `.err` | 2,073 | 581,778 | Run evidence, including failed searches | Some results reproducible, original runs historical | Study notes and auditors | Sampled SG7 checker and DJ refutation output |
+| Other development files | 973 | 126,430 | Text inserts, patches, diffs, saved scratch proofs and other formats | Mixed | Landing scripts and study readers | Sampled two inserts and held proof text |
+
+**Sampled, 3/240 folders chosen for different outcomes.** `sg7-stepwise` holds a section to insert, working Lean, a record builder, integration scripts and logs. `ag-the-map` holds successive readings and repairs to public wording. `dj-a-line-on-a-stock` holds a landed model alongside later attempts that stayed outside the package. **Counted** by overlapping path markers, 1,234 files sit in kit or landing directories, 575 in working-copy directories and 1,391 in reader or review directories. These are lower bounds by name. The 2,073 output files cut across them.
+
+## What repeats
+
+**Counted.** The 9,163 paths have 8,790 distinct indexed Git blobs. Of the paths, 276 have identical bytes elsewhere in the permitted tracked comparison, including 32 development `.lean` files matching a file under the package’s `Becoming/`. Empty files account for 50 paths here. Whole-file hashes miss the more consequential repetition. Across 176 `study*.txt` inserts, 7,402 of 7,895 stripped lines at least 40 characters long occur verbatim in the English study ledger. SG7 matches on 47 of 50 such lines.
+
+**Sampled, one landed result followed end to end.** MA1’s `study_ma1.txt`, the `closed-capture` record and chapter 02 §9 tell `ClosedCapture.lock_outlives_loss`. The theorem takes a locked start, a selection that raises the share under favour, a monotone reading of the share, upward-closed favour and loss accruing at every step. The conclusion keeps the lock and bounds loss below by its start plus elapsed steps. The study preserves how this was read as a meta-attractor. [Lean statement](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean:307) · [Chapter telling](/Users/ren/theories/theories/becoming/chapters/02-MAP.md:415)
+
+## What depends on it
+
+**Counted.** Literal `development/<folder>` mentions reach 91 folders from tracked record pages or JSON, 58 from chapters and 13 from the board, 106 distinct together. Including other current Becoming pages and data, root and top-level process pages, and tools raises that to 201. **Sampled.** Chapter 07 pins a passage within `pw-step-forward/NOTE.md`. A result record binds `k3-reading-in-time/NOTE.md` by hash as integration evidence. `theory_graph.py` reads the classical-text classifications, `ou2-candidates/outcomes.tsv` and `ou7-conditional-laws/data/groups.tsv`. [Chapter citation](/Users/ren/theories/theories/becoming/chapters/07-SIGNIFICANCE.md:561) · [Record binding](/Users/ren/theories/theories/becoming/results/records/a-loss-read-before-its-point-of-no-return.json:332) · [Graph reader](/Users/ren/theories/tools/research/theory_graph.py:174)
+
+**Counted.** For 19 folders an outside mention of the full folder name was **not found in what was read**, even after widening the search to other studies and experiments. Their identifying prefixes are `aj8-errata`, `ap2`, `ev5b`, `if1`, `j1s`, `ks`, `nl1`, `r47`, `r49`, `r52`, `rl1`, `sg11`–`sg14`, `st1`, `vt1`, `xl1` and `zg`. **Inferred.** This establishes a navigation gap. A result can survive under its declaration, record ID or numbered ledger section even when its folder name drops out.
+
+## What a continuing session needs from here
+
+**Read whole, DJ’s 17 November second-way note.** Start with the latest correction in the relevant study, then read the frozen claim it corrects. DJ guessed that a certain ordering of needs forced the line to end. In one ordering, a giver qualified before the take even when nothing remained afterward, so takers could double indefinitely. The note explains why the ordering was dropped and why the surviving scratch proof still misses the intended renewal mechanism: what each unit gives comes from nowhere in the model. [Study note](/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/second-way-2026-11-17/NOTE.md)
+
+**Counted and sampled.** DJ’s frozen file, first-look reports, `s2_i.out` and two scratch proof texts each have a single indexed path in the comparison. TT preserves a 734-line first attempt and a 310-line cold reading explaining, among other defects, a supposed join claimed by a heading. Other countermodels *are* carried forward: `KidHigherNeed` and `NothingTakenEnds` are in package Lean, and the OU2 table’s rejected reading of two touching lines points to `«尺与尺可相尽»` in `GrammarCandidates.lean`. **Inferred.** A session checking the present theorem can go straight to Lean. A session revisiting the rejected interpretation needs the study. **Not looked at.** Session access histories, so no claim that a file is never opened.
+
+## Candidates
+
+- **Inferred — keep the evidence at its address for now.** Frozen predictions, original reports, held attempts, and the rat-data transcription carry information a theorem cannot supply. The experiment reports that the original CSV download failed and its protocol pins the transcription’s hash. Moving these requires preserving chronology, bindings and a working route from the claim. [Experiment account](/Users/ren/theories/experiments/recipient-cue-grounding/README.md:9)
+- **Inferred — say landed findings once and point back.** The insert-to-ledger line matches identify concrete candidates. A current telling could point to a theorem and its conditions while the dated insert stays recoverable. Changing the ledger first would affect the 411 record JSONs that bind its English path.
+- **Inferred — the mirror could leave the tracked tree if readers retain section URLs.** Its source editions, generation rules and historical anchors would have to survive. The English and Chinese sources contain different passages. Treating either edition as a disposable copy would lose text.
+- **Inferred — spent kits, copied trees and routine logs are candidates for history, folder by folder.** A landing script can retire once its callers and historical evidence are accounted for. The graph tables and verifier inputs still have callers. Leaving the working tree altogether would also require revisiting the 17 October byte-preservation rule. Regenerability of the remaining mixed data is undetermined.
+
+## Against the two views
+
+**Counted and inferred.** The extensive verbatim inserts support Ren’s concern about repetition. The 490 bound records limit what follows from it: retiring a folder on appearance alone can sever the evidence behind a current claim. The coordinating session’s distinction between trace and machine output also cuts through individual files. A JSON reader report can contain the only retained objection. The largest development category by lines mixes such judgments with generated data.
+
+**Sampled, three earlier surveys.** The 16 October reconciliation identified spent kits and executed plans. I found its named `WUMING-BOUNDARY-PLAN.md` in sibling history. The 9–10 November AG review found wording that made widening sound inherently better. The current Chinese glossary preserves the corrected name and dates the old one. The 14 November count reported 403 Lean modules. I counted 404 `.lean` paths under `Becoming/` at the day-end revision `287b6c85d`; the earlier count’s inclusion rule and snapshot remain unresolved here.
+
+## Not determined, and surprises
+
+**Sampled.** DJ’s handoff says the continuing session consulted private memory and earlier turns alongside the repository. That is evidence of how one handoff happened. Whether the tracked files alone would have sufficed remains open. **Inferred from DJ and OU2.** The hardest material to recover is sometimes the judgment that a situation meets a theorem’s premises, or that a proposed reading failed. Simplifying the theorem’s telling would preserve neither judgment automatically.
+
+## The commands behind the counts
+
+**Counted.** With `R=_process/research/2026-10-05-generative-foundation-review/root-foundation`, I used `git ls-files -z "$R"` and Python `Path.read_bytes()` to sum bytes and `b.count(b'\n')` by directory and suffix. I grouped `git ls-files -s -z` by object ID, excluding private paths and `tmp/`. For inserts I tested stripped line membership against `BECOMING-RENEWAL-READING.md`.
+
+**Counted.** I recursively collected JSON objects with both `path` and `sha256` in the 567 records. The citation sweep matched `development/<folder>`, excluding historical-root paths. For unresolved names I used `rg --no-ignore-dot --only-matching` on 17,679 tracked text and code files under `experiments`, `theories`, `tools`, `_process` and `.github`, excluding history, architecture manifests, saved check directories and each folder’s own mentions. Historical module counts used `git ls-tree -r --name-only 287b6c85d`.
+
+── cx · ok · session 01a1edc4-de8f-7103-a01b-c1013e3a196a · gpt-6.2-astra/high · read-only · 653s · 2370.7k tokens · 43 cmds
+continue: cx -r 01a1edc4-de8f-7103-a01b-c1013e3a196a "…"
+log: /Users/ren/.cache/cx/runs/20261118-152741-61553

@@ -1,0 +1,142 @@
+[
+ {
+  "id": "losses-of-the-sum-over-histories",
+  "record": "theories/becoming/results/records/losses-of-the-sum-over-histories.json",
+  "title": "Losses of the sum over histories",
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weighted.lean",
+  "chapter_home": "theories/becoming/chapters/01-ROOT.md:572"
+ },
+ {
+  "id": "organizational-rule-inheritance",
+  "record": "theories/becoming/results/records/organizational-rule-inheritance.json",
+  "title": "Formation and inheritance of organizational rule differences",
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleHandoff.lean",
+  "chapter_home": "theories/becoming/chapters/04-LIFE.md:252"
+ },
+ {
+  "id": "joint-decomposition-lifting",
+  "record": "theories/becoming/results/records/joint-decomposition-lifting.json",
+  "title": "Lifting a joint decomposition from a whole code",
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JointCorrespondence.lean",
+  "chapter_home": "theories/becoming/chapters/01-ROOT.md:624"
+ },
+ {
+  "id": "residual-continuation-correspondence",
+  "record": "theories/becoming/results/records/residual-continuation-correspondence.json",
+  "title": "Partial unfolding with residuals and resumption at reached positions",
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Granularity.lean",
+  "chapter_home": "theories/becoming/chapters/03-KNOWING.md:463"
+ },
+ {
+  "id": "what-giving-that-waits-draws-on",
+  "record": "theories/becoming/results/records/what-giving-that-waits-draws-on.json",
+  "title": "What giving that waits draws on",
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PairSelection.lean",
+  "chapter_home": "theories/becoming/chapters/05-COLLECTIVES.md:165"
+ },
+ {
+  "id": "whether-a-loop-closes-a-difference",
+  "record": "theories/becoming/results/records/whether-a-loop-closes-a-difference.json",
+  "title": "Whether a loop closes, keeps or widens a difference",
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LoopReturn.lean",
+  "chapter_home": "theories/becoming/chapters/02-MAP.md:352"
+ },
+ {
+  "id": "code-plan-global-support",
+  "record": "theories/becoming/results/records/code-plan-global-support.json",
+  "title": "Global support of coded joint plans",
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JointCorrespondence.lean",
+  "chapter_home": "theories/becoming/chapters/01-ROOT.md:626"
+ },
+ {
+  "id": "laws-of-one-step-complete",
+  "record": "theories/becoming/results/records/laws-of-one-step-complete.json",
+  "title": "Completeness of the laws of one step",
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OneStep.lean",
+  "chapter_home": "theories/becoming/chapters/01-ROOT.md:565"
+ },
+ {
+  "id": "what-a-total-keeps",
+  "record": "theories/becoming/results/records/what-a-total-keeps.json",
+  "title": "What a total keeps and loses across scales",
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/RelationsAcrossScales.lean",
+  "chapter_home": "theories/becoming/chapters/03-KNOWING.md:465"
+ },
+ {
+  "id": "a-narrowing-above-its-widening",
+  "record": "theories/becoming/results/records/a-narrowing-above-its-widening.json",
+  "title": "A narrowing above its widening",
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean",
+  "chapter_home": "theories/becoming/chapters/07-SIGNIFICANCE.md:1050"
+ },
+ {
+  "id": "the-present-on-causal-set-growth",
+  "record": "theories/becoming/results/records/the-present-on-causal-set-growth.json",
+  "title": "The present on causal-set growth",
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Presence.lean",
+  "chapter_home": "theories/becoming/chapters/01-ROOT.md:46"
+ },
+ {
+  "id": "learning-by-refutation",
+  "record": "theories/becoming/results/records/learning-by-refutation.json",
+  "title": "Extrapolation by elimination",
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learning.lean",
+  "chapter_home": "theories/becoming/chapters/03-KNOWING.md:222"
+ },
+ {
+  "id": "inherited-structural-copying",
+  "record": "theories/becoming/results/records/inherited-structural-copying.json",
+  "title": "Inherited arrangement changes further copying",
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/StructuralCopying.lean",
+  "chapter_home": "theories/becoming/chapters/04-LIFE.md:108"
+ },
+ {
+  "id": "consumption-ends-with-feeders",
+  "record": "theories/becoming/results/records/consumption-ends-with-feeders.json",
+  "title": "Consumption ends with its feeders",
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Interdependence.lean",
+  "chapter_home": "theories/becoming/chapters/02-MAP.md:303"
+ },
+ {
+  "id": "timely-response-necessity",
+  "record": "theories/becoming/results/records/timely-response-necessity.json",
+  "title": "Necessary relations for a timely response",
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TimedResponse.lean",
+  "chapter_home": "theories/becoming/chapters/03-KNOWING.md:90"
+ },
+ {
+  "id": "feedback-and-reach",
+  "record": "theories/becoming/results/records/feedback-and-reach.json",
+  "title": "Feedback and reach",
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Feedback.lean",
+  "chapter_home": "theories/becoming/chapters/03-KNOWING.md:82"
+ },
+ {
+  "id": "gluing-under-parity",
+  "record": "theories/becoming/results/records/gluing-under-parity.json",
+  "title": "When readings in context glue, for parity",
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Gluing.lean",
+  "chapter_home": "theories/becoming/chapters/03-KNOWING.md:295"
+ },
+ {
+  "id": "confined-rise-within-a-whole",
+  "record": "theories/becoming/results/records/confined-rise-within-a-whole.json",
+  "title": "A confined rise within a whole, and what a founding carries",
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Founding.lean",
+  "chapter_home": "theories/becoming/chapters/04-LIFE.md:216"
+ },
+ {
+  "id": "finite-fallible-inquiry-necessity",
+  "record": "theories/becoming/results/records/finite-fallible-inquiry-necessity.json",
+  "title": "Necessary information conditions for fallible scientific discrimination",
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/ScientificInquiryNecessity.lean",
+  "chapter_home": "theories/becoming/chapters/03-KNOWING.md:411"
+ },
+ {
+  "id": "open-form-realization-under-revision",
+  "record": "theories/becoming/results/records/open-form-realization-under-revision.json",
+  "title": "Rule revision and actual generation with open forms",
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Handoff.lean",
+  "chapter_home": "theories/becoming/chapters/07-SIGNIFICANCE.md:193"
+ }
+]

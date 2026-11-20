@@ -1,0 +1,21 @@
+# The cold-start test: what counts, written before it runs
+
+*AI-written (Claude Fable, the coordinating session), 18 November 2026, before the astra run was started. The test asks whether the repository alone carries the direction to a reader with no memory of it.*
+
+The reader is astra (gpt-6.2-astra) through `cx --fresh --clean`: a new thread, no Codex memories, no plugins. It gets `COLD-START-PROMPT.md` and nothing else from this folder. A Claude reader is not used, because a Claude session here is given this account's memory index at start.
+
+**It passes on a point if its answer, in its own words, says:**
+
+1. **The idea.** Whatever lasts is made again out of other goings-on; what a going-on rests on and what makes a difference to it can differ, and that gap is where things run down unseen or turn in time.
+2. **The alignment reading.** A selection is one dynamic among others, some of which sustain it; it can use up what sustains it while nothing in it differs, unless the running down makes a difference early enough.
+3. **How far seen.** That this is understood and not proved as told: the Lean proves particular statements under stated premises, and the longer telling is not stated whole by a theorem.
+4. **The next step.** That the Lean is being turned toward the direction in the order of `_process/LEAN-TOWARD-THE-DIRECTION.md`, and that new Lean is claimed on the board before it is written.
+5. **Ren's decisions.** Pushing to the public remote, the licence, who is sent what, money or machine time for runs, and changes to the direction.
+
+**It fails on a point if:** the point is missing; or an older aim is given as the present one (for example defending every claim, widening as better, the zero-axiom target as the first priority, "two loops" or "returns" as the centre, reader scores as the measure); or the next step cannot be named from a page.
+
+**Also recorded, with no pass mark:** the words it read before answering; which pages it says disagree; what it looked for and did not find. An hour's reading is roughly 15,000 to 25,000 words; if it needed far more to answer 1 to 5, that is a finding.
+
+**Point 5 dropped, 18 November, after the run was started and before any result was read.** Ren read point 5 and said: "don't think or ask about this, let's complete this project on this macbook. we don't care before work is ready". The test is scored on points 1 to 4. The prompt's question 5 had already been sent and its answer is not scored.
+
+**What would count as nothing learned:** the run fails to start, or the reader says it used earlier knowledge of this repository.

@@ -1,0 +1,98 @@
+# research-history: the check
+
+*AI-written (Claude Opus 5.5, the checking reader), 18 November 2026. Read only; nothing in the repository was changed. Every verdict below rests on a command I ran against the tree or git at about 16:00 to 16:40 WIB, not on either report.*
+
+## The scope the two readers took
+
+The two reports cover slightly different areas, and their file totals differ mainly for that reason.
+
+- The Claude reader left out the live `generative-foundation-review/foundation-assessment/` (105 files). The astra reader included it. Both left out the live `root-foundation/` (9,163 files), which AREAS.md gives to another area.
+- Measured by `git ls-files <dir> | wc -l` and `xargs -0 cat | wc -w`, the parts are:
+  - GFR `history/`: 4,365 files.
+  - `_process/history`: 892 files (891 before the 15:58 commit `35fab10eb` added `2026-11-18-instructions/`).
+  - `_process/architecture`: 674 files.
+  - repository-reconciliation: 377 files.
+  - the six small live studies: 79 files.
+  - `_process/research/README.md`: 1 file.
+- Without foundation-assessment, that is **6,388 files, 18.66 M words, 6.60 M Markdown words**. With it, it is 6,493 files, 6.69 M Markdown words and 219.8 MB.
+- The Claude reader's words (18.6 M; 6.6 M md) match its scope. **Its "6,870 tracked files" does not**: its scope holds 6,388, and its own table rows add to about 6,366. The astra reader's 6,492 files, 219.8 MB and 6.69 M md words all reproduce (6,493 now, after the added copy).
+
+## Disagreements, settled
+
+| topic | Claude | astra | settled by looking |
+|---|---|---|---|
+| Records citing GFR history | 156 record JSONs | 124 records naming 101 files | **Both are right; they measure different things.** 156 records mention a GFR-history path in some string (187 distinct paths, all existing). 124 records have a field whose whole value is an existing GFR-history path (101 files). Python walk over `results/records/*.json`. |
+| Snapshots recoverable from git | 6 of 6 sampled at the record path | 538 of 543; "five need provenance checks" | **543 of 543.** Every snapshot blob is in `git log --raw -- theories/becoming/results/records/` at the record's own path. The five astra missed occur only as pre-image blobs: `feedback-and-reach`, `living-on-and-descent`, `derived-extent-limits`, `own-count-misses-joint-excess`, `consumption-ends-with-feeders`. Astra's count is a method artefact. |
+| Unique files | GFR: 235 files ≥500 B have a copy outside (5.1 MB); 78 of 251 Lean files have no copy | GFR: 4,037 of 4,365 have a single index path | **Both reproduce** (235 / 5.1 MB; 78; 4,037). In the area as astra scoped it: 6,275 blobs, 707 with a copy outside, 5,713 sole (astra said 6,274 / 707 / 5,712 before the added file). |
+| Where the GFR copies sit | 224 under `becoming-checks/` | — | **Not reproduced.** I found 166 files with a copy under `becoming-checks`, 208 under any `*checks/` folder, and 319 copy paths. The 120 / 51 split of the Lean copies (check copies / live modules) was not reproduced either: I found 151 with a check-copy twin and 22 with an `experiments/` twin. The 78 holds. |
+| Salvage uniqueness | "per its README, what main lacked on 18 Oct" | 388 of 391 have bytes elsewhere; 3 sole | **Astra confirmed.** The copies are in `experiments/integrated-correction` (274) and `_process/research` (114). The three sole files are the README and two `uncommitted.diff`. |
+| Moves | H1 to H7 on 16 Oct UTC; H5 3,328 | H5 3,328; 967 kit files on 20 Oct | **Both confirmed.** `R35-B5-kits.json` is dated 2026-10-20T01:45Z with 967 files. The last move into either history root is 2 Nov (`moves-2026-11-02-moves-gc4`). Receipts continue elsewhere to 10 Nov. |
+
+## The claims file, tried
+
+1. **The manifests verify:** 4,363 and 473 entries, sha256 and blob both checked. *Confirmed* (0 bad, 0 missing, 0 blob mismatches). Astra's stronger claim also holds: all 4,836 blobs equal `base_commit:old_path` in each receipt, checked with `git cat-file --batch-check`.
+2. **418 files of `_process/history` are not in its manifest.** *Confirmed* for the survey time. The count is 419 now, after the 11-18 instruction copy.
+3. **The 24 instruction copies are earlier blobs.** *Not re-run* for all 24. The count of 24 (25 now) was confirmed.
+4. **Live links into GFR history** (628 files, 2,054 paths, 1,967 manifest entries, 327 under results, 156 records): *partly confirmed*.
+   - 156 records confirmed. Seven records cite with section anchors (13 entries), confirmed.
+   - An absolute-path `rg` finds 606 live referring files. Claude's resolution of relative links was not re-run.
+   - Chapters linking GFR history are 03-KNOWING, 04-LIFE and 08-METHOD. Claude named only 04 and 08.
+5. **The board log** (224,271 words, 538 commits, latest 18 Nov at `befa506ba`). *Confirmed.*
+6. **Tool readers.** `research-config.json` keys, `navigation.py:20,74` and `gate.py:216`: *confirmed but incomplete*. Neither report saw these readers of GFR history:
+   - `tools/research/session_map.py:25-30` reads four `SESSION-*.json` files in `history/root-foundation`. It runs under `make research-render`.
+   - `gate.py:203-204` (`test_indexes`) lists two of those files.
+   - `gate.py:137` and `tests/test_schema2.py:17,259` read `history/root-foundation/development/becoming-general-laws-plan/readability/drafts` (10 files).
+7. **reading-notes-inputs** (10 files, 420,724 words): *confirmed*. Its manifest reason says it "duplicates sources/12 and sources/14". `sources/12-claude-ai-chats` is ignored by `.gitignore:15` and has 0 tracked files. `research-config.json:195` notes the revoked key in `cb-03.md`. Contents not read.
+8. **78 of 251 Lean files have no other copy in the tree.** *Confirmed.* The 120 / 51 split is not reproduced (see above).
+
+Other checks:
+
+- Ceroni files tracked and on `origin/main`: confirmed. The MANIFEST says "Source rights retained".
+- README's 4,404: settled. It equals 4,365 plus 39 files in `history/` folders inside the live `root-foundation`, which bears out Claude's inference.
+- The 16 Oct `RESTRUCTURE-REPORT.md` figures (64,547 → 19,298): confirmed.
+- The 19 Oct review on private material in public history: confirmed (`whole-repo-review-2026-10-19.md:9`).
+- "26.6M not found in tracked text": true when Claude wrote it at 15:28. It is now in `sources/15-…/2026-11-18-the-lean-before-the-words.md:47`, committed at 15:58. Not counted as an error.
+
+## The astra statements a decision would rest on
+
+- **4,836 moved files are byte-identical to the old path at the recorded commit.** Confirmed in full.
+- **124 records name 101 files, `conditional-foundation-assessment` has an archived canonical source, 24 `counterexamples` entries name GFR history, and four records name files from the 967-kit batch.** All confirmed. The four are `LeastLossDeps.lean`, `deps.log`, `p130…/REPORT.md` and `rg-regulation/simulate.py`.
+- **284 records name all 543 JSON snapshots.** Confirmed: 284 record JSONs, 543 distinct snapshot paths.
+- **15 page pairs, 350,906 reading-edition words, 30 of 30 hashes match.** Confirmed against `history-manifest.json`.
+- **The root `.ignore` hides `_process/history/` and architecture snapshots but not GFR history.** Confirmed by reading `.ignore`.
+- **The sampled failures.**
+  - The bypass countermodel is at `EXPLORATION.md:59` (c=4, d=6, e=2; d raised to 12 still selects bypass). Confirmed.
+  - The +0.50 pp contrast with [−4.25, +5.24] is at `REVIEW.md:17`. Confirmed.
+  - Board line 700 holds IN1's failed frozen predictions per model. Confirmed. Astra calls it "the lake test"; the board line says fishers, and whether IN1 is set on a lake was not checked.
+- **1,081 source–target pairs reaching 897 files**: not re-run.
+
+## Errors of fact
+
+- **Claude: 2.**
+  - The file total 6,870; the scope holds 6,388.
+  - "Kits are not read by tools (not found in a tools/ grep)" and "no tool reads them" for `development/`. The gate and `test_schema2` read a `development/` drafts folder, and the render reads four packet JSONs. Of the two, this is the worse error, because it underpins the candidate "could leave the tree".
+  - Also: "224 under becoming-checks" and the 120 / 51 split were not reproduced, and the 29 failure-named files are in all of GFR history, not only the top-level packets (21 there). These are not counted as errors.
+- **astra: 1.**
+  - 538 of 543 snapshots in git; it is 543, so the five "needing provenance checks" need none.
+
+## What a decision can rest on now
+
+These are counted, not inferred:
+
+- Every moved file in both history roots is byte-identical to its recorded pre-move blob, and every record snapshot is in git at the record's own path.
+- The area is not inert:
+  - 156 records cite GFR history (seven by section anchor, one as canonical source, 24 as counterexamples).
+  - 284 records bind all 543 snapshots through `text_versions`.
+  - The board log is appended daily.
+  - The gate (`test_schema2`, `test_indexes`) and the render (`session_map.py`) read files inside GFR history, `development/` included.
+- So the bytes are in git, but the paths are load-bearing, and nothing can leave the tree before records, tools and links are repointed.
+- Tracked derived extracts of private chats, and third-party files, are on the public remote.
+
+## What it cannot yet rest on
+
+- Which `development/` folders are spent kits and which hold failed attempts the map keeps.
+- Whether the 78 tree-unique Lean files compile or matter.
+- Whether the packets that records cite state premises the live chapters dropped.
+- The exact count of live files linking into the area. The regex counts differ: 606 to 628 for GFR history, and 380 to 431 for `_process/history`.
+- The split of the in-tree copies (check copies against live modules).
+- Whether any reader opens the salvage, kits or September material: no access record exists.

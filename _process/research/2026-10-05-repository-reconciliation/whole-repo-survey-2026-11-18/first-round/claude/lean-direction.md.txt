@@ -1,0 +1,86 @@
+# lean-direction: what is there
+*AI-written (Claude Fable 5.2), 18 November 2026. A survey; nothing was changed. No build, no checker; statements and docstrings were read, almost no proofs. No person has checked it.*
+
+`B/` = `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/`; `DJ/` = `_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/`.
+
+## In three sentences
+
+The Lean that carries the two paragraphs of `AGENTS.md` is small: six modules written or reworked since 13 November (4% of the lines) and some forty October modules whose pieces were found only when readers went looking on 16 to 18 November. One sentence of the alignment paragraph is stated whole (and in October's web it holds by definition); the rest are stated in part, with what grows or what is held to handed in; the meta-attractor and instrumental convergence are named only in docstrings, as AI readings. What ties the direction's sentences to theorems is not in the Lean and not on the direction page but in five read reports in `DJ/`, and one proof it names exists only outside git.
+
+## What is there
+
+| kind | files | size | beside the Lean | unique? | what reads it | how far seen |
+|---|---|---|---|---|---|---|
+| The package, read for what it says | 406 modules | 300,526 lines; 20,359 theorems | the map | yes | checker, records, atlas | counted; 406 titles read; heads of 14 modules; about 40 statements opened |
+| of it: prose in comments and docstrings | same files | 78,091 lines (26%); about 996,000 words, 354,000 in module heads | a telling inside the Lean; 95 modules mark AI readings, 45 name Ren saying something | partly | nothing checks it; records quote it | counted by a script; 3 of 3 sampled quotes of Ren are also in `sources/` |
+| of it: November's models (`LineOnAStock`, `LineOnAStockCases`, `TurningInTime`, `WayOfUnits`, `RegimeMargin`, `RuleCapture`) | 6 | 11,219 lines (4%); 605 theorems | the map; where the alignment paragraph is carried | yes | the plan, the direction page, 6 to 8 records | counted; 8 statements read |
+| `deeper/RelationalRenewal.lean` | 1 | 606 lines | the map; the package imports it (`B/Dependence.lean:1`) | yes | `Dependence`, `Horizon`, `Substitution`, others | import line read; body not |
+| Reads of the direction against the Lean (`READ-AGAINST-THE-LEAN.md`, `truth-reader-2026-11-18.md`, `DIRECTION.changes.md`, five reports in `correction-2026-11-18/`, the dig's `NOTE.md`) | about 10 | about 45,000 words | the only sentence-to-theorem tables, with premises | yes; each cost rounds of readers | `DIRECTION.md` links to them | two read whole; the rest by heading |
+| Tries kept with what failed (`FROZEN-*.md`, the three `NOTE.md`, `PAPER.md`) | about 10 | about 20,000 words | trace and kept failures | yes | record `a-line-on-a-stock` and atlas pages link `DJ/NOTE.md` (about 100 occurrences) | one note read, headings of the rest |
+| Lean not in the package, as text (5 `Scratch*.lean.txt` with build logs) | 5 + logs | 3,337 lines | the map, unlanded (`covered`, `mixed_turns_iff`, three of 16 November) | yes | two notes | listed, not read |
+| Held snapshots of modules between passes (`held/`) | 4 | 7,426 lines | trace | intermediate states, not otherwise in git as Lean | nothing found | listed |
+| Working sets: search programs and outputs, reader reports, briefs, kit | 179 py, 23 out, 43 json, others | most of `DJ/`'s 6.2 MB | trace; evidence behind "by a search" | reader reports yes | notes cite them by name | counted only |
+| Outside git: `/Users/ren/tmp/dj/batch18/position-terms/Becoming/ScratchPositionTerms.lean` | 1 | 419 lines | the map, unlanded: position and the selection term | yes; lost with the machine | `carry-on.json` names its path | existence and length only |
+
+**The two paragraphs, sentence by sentence** (my grades; "in part" names what is handed in).
+
+*The idea.*
+1. *Whatever lasts is made again out of other goings-on.* In part: `Whole.parts_unceasing` (`Wholes:164`), `Flow.fed_from_beyond` (`Continuation:180`), `PatternPassing`. Heads read, statements not.
+2. *Rests on and makes a difference need not be the same; the gap.* In part: `ClosedCapture.unread_course` (186) with `lock_outlives_loss` (307, read); `Reading.requirement_beyond_course`; turning in time below.
+3. *Draining in full view.* Stated in one model: `CoupledDrawers.gated_threshold` (774, read), first conjunct, two or more drawers in turn on a gated renewal.
+4. *Holding to something; registering some differences.* In part: `ReadingLoop.sensed_alike_iff` (442, read), `alike_of_kept`. What is held to is a parameter.
+5. *An account, taken for the whole, says more.* In part: `PartialReadout.silent` (133), `RelativePosition.rise_needs_fall` (167, read), `change_balances`. No statement has the drawing or anyone taking it.
+6. *Many act on it; what they do can come to fit; it need not; fitting is not holding.* In part, each of one rule, one line of cohorts or one loop: `RuleCapture.favouring_locks`, `SharedCodes.omitted_rest` (1240, read), `ReadingLoop.Loop.rests_of_unrefuted` (read), `ReflexivePrediction.Negating.none_right`.
+
+*The alignment paragraph.*
+1. *A selection is one dynamic among others, some of which sustain it.* None found as a statement; nearest `PoolFromCourse`, `ReaderRebuilding` (titles).
+2. *Courses that differ in nothing that makes a difference are selected alike.* **Whole**, twice: `Web.selects_alike_iff` (`Selection:191`), whose docstring says it "states what the definition builds in"; and `LineOnAStock.ways_alike` (547, read), with needs and offspring given.
+3. *What sustains can be used up while nothing in the selection differs.* In part, close: `LineOnAStock.need_unmet` (1011), `falls_to_unmet` (1057, both read). Given: offspring together take more (`grows`), a ceiling, offspring need no more.
+4. *A rule set again from its share, drawing more, goes on until what sustains it gives out, unless read early enough.* In part, two theorems: `TurningInTime.locked_ends_rising` (1440, read) with `count_rises`; the "unless" is `locked_turns_in_time_on_window_iff` (1633). Given: the use rises with each step (`more`), the level makes no difference while the need is met.
+5. *The design we want.* Wanted; no Lean.
+6. *Instrumental convergence and the meta-attractor.* Docstrings only: "meta-attractor" in 6 modules (9 hits), "instrumental" in 3 (5 hits), each under "Readings (the AI's)". `ReadingsPersist` says its `cleared_removes_its_readers` is "the meta-attractor's shape … not the meta-attractor itself". The only declarations with "attractor" in a name are the hexagrams' (`HexagramLaws`, 10).
+7. *A value fixed once.* In part: `RuleCapture.perturbation_absorbed` (read), `Pace.never_reads_loses`.
+
+**Shares** (by module title, my judgment; bodies not read): sustaining, selection, reading, loops 116 modules, 37% of lines; general mathematics and the calculus of processes 135, 30%; other fields read in Lean (the Changes, quantum, free energy, causal sets, codes, learning) 51, 12%; significance and the ethics 31, 9%; the grammar and its statements 34, 7%; plans and assurance of an acting system 39, 5%. Theorems with a Chinese character in the name: 664 in 22 modules (the plan says 710). Named on the direction page, the plan, the 16 November read, the dig or the 18 November reader: 118 modules, 36% of lines; on none: 288, 64%. November's six import, transitively, 160 modules (49% of lines), so "not named" is not "not used".
+
+**Nearest to the picture of 18 November** (swept: 13 word patterns over all 406 files, all titles). Account: `PartialReadout.silent`, `RelativePosition` ("zero-sum is counting"). A holder: `ReadingLoop.Loop` (candidates kept, the act chosen from them; "a model its course never refutes rests"); `ChoiceCountCapture.counted_locks` (a count of its own past choices keeps a chooser to a policy against a standing score); `Seeking` (targets "more than now" and "above all others" never rest; made on Ren's 无明 of 10 October); `Boundaries` (a self as a closed region). Compounding: `ClosedCapture.lock_outlives_loss`, `locked_ends_rising`. Not found in what was read: an account drawn as a step of a course, a holder formed within it, or the three in one statement.
+
+## What repeats
+
+- November's laws are told in six places: module heads, `DJ/NOTE.md`, the plan's items 1 to 7, the direction page's "found so far", the record (6,286 words), the atlas. No chapter names `LineOnAStock` (0 of 10; counted).
+- One thing stated in two families with no statement between: what a selection cannot tell apart (`Selection` on the web; `LineOnAStock`, which has 0 tokens of `AlikeThrough`, `SelectsThrough`, `Balances`, `RenewingIn`, `ConsumingIn`); the level `H + y` (`RegimeMargin.ends_iff_below` and `TurningInTime.unending_iff_above`; the first is named in `TurningInTime` only in docstrings; `rises_by_draw` is used by no declaration); remaking and using up (`RelationalRenewal` and `Dependence`, tied by `Web.static`); position and the selection term (`RelativePosition` is imported by no module).
+- No module names both the web's classes (`RenewingIn`, `ConsumingIn`: 23 modules) and `SelectsThrough`, `ReadableInTime` or `Locked` (0 of 23; counted).
+
+## What depends on it
+
+`DIRECTION.md` and the plan cite about 75 declarations; every theorem name resolved to a file (a script; 16 unresolved tokens are namespaces or commit ids). About 25 line citations of the reads of 16 and 18 November were rechecked: all stand at the lines given. The direction page's head note links nine files of `DJ/`; the record and generated atlas pages link `DJ/NOTE.md`.
+
+## What a continuing session needs from here
+
+`DIRECTION.md`, the plan, the heads of the six November modules and of `Dependence`, `Selection`, `ClosedCapture`, `ReadingLoop`, `RelativePosition`; `READ-AGAINST-THE-LEAN.md` and `truth-reader-2026-11-18.md`. It never opens `sim/`, `search/`, the reader JSON, `held/`, `briefs/`, `kit/`.
+
+## Candidates
+
+- **Lean statements: stay.**
+- **The sentence-to-theorem tie: could be said once.** It is spread over five reports and a 900-word head note. Risk: a merged table drops premises. First: decide whether it lives beside the direction page or in the Lean as named statements.
+- **Docstring prose (about a million words): cannot tell.** It repeats records and carries readings no statement holds. Any edit changes hashes the checker binds; machinery's reader must say the cost.
+- **Working sets in `DJ/`: could leave the reading path.** Risk: notes cite searches by file. First: the links above.
+- **Unlanded Lean as text: stays** until landed or refused. **`ScratchPositionTerms.lean`: bring into git.**
+
+## Against the two views
+
+- Against "garbage": the pieces for the idea's later sentences were in October modules nobody had opened for it; half the package stands under November's six.
+- Against "prose is judged against the Lean": a quarter of the Lean is prose, with AI readings naming what no statement carries; "the Lean" must mean statements. And each judging so far cost rounds of readers and changed the direction page on each of 16, 17 and 18 November.
+- For Ren's view: what carries the alignment paragraph is about six theorems.
+
+## Not determined, and surprises
+
+- The share of built examples and kept failures (the plan says a quarter to a third): not measured.
+- `DIRECTION.md` says the web "has no selecting in it and no turning". `Web.SelectsThrough` (16 modules) and `Web.ReadableInTime` are stated over the same `Web`. Whether the page says less than the Lean there I leave to a reader of both.
+- `AGENTS.md` says no sentence of the longer telling is stated whole; of its own alignment paragraph, sentence 2 is.
+- The 288 unnamed modules were never read for the direction; my negatives rest on titles and word sweeps.
+- The reader's fixture of 18 November and two inputs to that day's correction are in scratch, not in git.
+
+## The commands behind the counts
+
+`wc -l`, `grep -cE '^\s*(private |protected )?(theorem|lemma) '` per module; a Python script over `import Becoming.*` lines for closures and paths; a script matching backticked identifiers of the pages against declaration heads; `grep -rilE` for the 13 patterns; `git ls-files DJ | awk -F. '{print $NF}' | sort | uniq -c`; `git log --since=2026-11-13 --numstat -- B/` (+4,817 −370, four modules); `rg -l LineOnAStock theories/becoming/chapters`.

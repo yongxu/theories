@@ -1,0 +1,76 @@
+GPT-6 (Codex, Astra reader)
+
+# Sources: what is there
+
+*AI-written (GPT-6, Astra reader), 18 November 2026. A survey; nothing was changed.*
+
+## In three sentences
+
+**Counted.** `sources/` holds 6,538 tracked files and 1.633 GB, with 4,925,508 whitespace-separated words in 2,258 Markdown files.  
+**Sampled** (the two records cited by the direction page). A reader can recover Ren’s typed and dictated words, the questions he was answering, and places where the session’s interpretation went beyond what he said.  
+**Inferred** from speaker-labelled exchanges, preserved datasets and exact file comparisons. Neither a folder’s title nor its volume tells us how much Ren wrote, how much can be regenerated, or what can safely leave the reading path.
+
+## What is there
+
+**Counted.** Files include all formats. Words count Markdown only. The rows partition the tracked tree by folder so that mixed authorship stays visible. “Unique” refers to the particular document or observation where specified.
+
+| Kind | Files | Words | What it is beside the Lean | Unique? | What reads it | How far seen |
+|---|---:|---:|---|---|---|---|
+| Early writings and project imports, 00–11 | 1,033 | 2,313,313 | Ren’s writings, recorded speech, AI-assisted essays, other people’s notes and earlier theories | Mixed. The original `World of Possibilities.pages` occurs once in the tracked tree | Genealogies, later essays, readers tracing an idea | **Sampled** 12/12 group descriptions, group 00’s authorship note and two contrasting texts from 01 |
+| Claude Code prompt exports, 14 | 17 | 668,012 | User-channel messages, including machine notifications | All 17 files have distinct blobs found only here | Historical readers, including September’s keyword search | **Counted** all 17, **sampled** the Ember export to check the format |
+| Codex conversations and Claude directions, 15a and 16 | 397 | 210,524 | Ren’s words, selected exchanges, AI interpretations and research notes | The 16 November record occurs once as a file | Directive index, register, direction page, chapters | **Sampled** one founding exchange and four November records chosen for decisions about the map |
+| User-supplied September and October packets, 15b and 17 | 5 | 3,929 | Imported writings with intake provenance | Includes exact and near copies | Intake manifest and directive index for 15b | **Sampled** the manifest’s entries and two comparisons it names |
+| Handoffs, session workspaces and reconciliation, 19–23, 25–26 | 2,513 | 1,632,434 | Trace, code, outputs, experiments and countermodels | Mixed, including copies nested inside snapshots | Snapshot manifests and intake verification | **Sampled** three groups for handoff, workspace and intake respectively: 19, 20, 25 |
+| Empirical and comparison materials, 24, 27–42 and remaining subject folders | 1,821 | 29,329 | Coupling through papers, raw observations, benchmark trajectories, code and retrieval records | The dated cohort and retrieval event carry information beyond a published result | Experiment-specific checkers | **Sampled** groups 28 and 31 for a usable cohort and a documented limit on available data |
+| Classical and philosophical texts, eight subject folders | 212 | 932 | Editions against which a reading can be checked | Revision, punctuation and source bytes matter | Passage and quotation verifiers | **Sampled** the `daxue` README and verifier source for two other collections |
+| `civilization-thought-v1.0` and `wenli-shengsheng-v0.4` | 538 | 31,207 | Imported interpretive works, with source material and derived representations | Mixed | Classical-text studies and gate path rules | **Sampled** the larger import’s README, 1/2 |
+| `README.md` and `SOURCES.md` | 2 | 35,828 | Generated navigation and hand-kept provenance | README regenerable. The manifest records intake judgments | Readers and indexes | **Sampled** both, checking generation, import entries and old links |
+| Private groups 12, 13, 18 | 0 tracked | — | Private material | Undetermined | Outside this survey | **Counted** from Git metadata only. The 16 October review commit held 403, 197 and 97 files respectively. **Not looked at** on disk |
+
+## What repeats
+
+**Counted.** The 6,538 paths represent 5,356 distinct Git blobs. Keeping one occurrence of each blob inside `sources/` would remove 72,079,230 logical bytes from the file total, about 4.4%. Group 20 alone has 2,402 paths and 1,337 blobs. Across the entire tracked tree, 4,454 source files occur exactly once by blob identity. These figures measure identical bytes, not intellectual novelty or Git pack savings.
+
+**Counted.** The 16 October review identified the evolving-community-swarms vision as duplicated. Its September source record and `theories/evolving-community-swarms/context/2026-09-07-updated-vision.md` still share blob `6785b86a`. The 19 October review identified a larger example: group 20 and `experiments/history/situated-discovery/results-evaluation/` still share the same 55,441,180-byte `runs.jsonl`. Two `智能向善` copies in groups 06 and 15b differ by one final newline, as the intake manifest says.
+
+## What depends on it
+
+**Counted.** Of 14 root Markdown pages, four contain direct Markdown links into `sources/`, reaching 61 distinct targets. Five of ten chapter files reach eight targets. `_process/DIRECTION.md` makes three links to two records, two pinned to sections. These counts cover ordinary inline links, excluding plain-text paths and dependencies assembled by code.
+
+**Sampled** (the index renderer, gate rules and two subject-specific verifiers). `tools/research/indexes.py` discovers groups from directories, takes descriptions from README headings and dates from filenames, and generates `sources/README.md`. It also builds the 401-file directive index from both `15-*` folders and `16-*`. Kind is assigned heuristically. The layout names `sources/GROUPS.json`; that file was **not found in what was read** after checking the directory and tracked filenames. October’s restructure plan proposed it. The implemented renderer discovers its inputs directly.
+
+**Sampled.** `experiments/agentdojo-evidence-boundary/check_analysis.py` opens group 28 at a fixed path and checks SHA-256 against the preserved inputs. The classical passage verifier `verify_ro.py` checks files against `sources/chinese-classical-texts/PROVENANCE.json`. Removing either folder would break an identifiable check even if its prose summary survived.
+
+## What a continuing session needs from here
+
+**Sampled** (2/2 records linked by the direction page). For the map’s aim, start with the evening-of-14-November section in the file dated **13 November**, then the file dated **16 November**, which includes the following day’s exchanges. The latter keeps the spoken transcript’s “lane” and labels “Lean” as the session’s interpretation. It also records the difference between the wording Ren saw and the wording eventually applied. A filename-date search alone misses both facts. [13–16 November record](sources/15-codex-theory-conversations/2026-11-13-the-map-one-model.md#the-direction-14-november-2026-evening) · [16–17 November record](sources/15-codex-theory-conversations/2026-11-16-no-corners-the-interconnected-map.md#the-direction-page-read-we-have-the-direction-so-we-can-start-working-on-it-17-november-2026-1026-wib)
+
+**Counted.** A sweep of all 2,258 tracked source Markdown files for English, numeric and Chinese forms of 18 November returned two files. One hit concerns 2025. The other is AI context about the board. Ren’s 18 November account of recognising when a situation meets a pattern was **not found in what was read**. The 16 November record does preserve his earlier account of acting from a zero-sum reading until it shapes reality.
+
+**Inferred** from those links and checkers. A direction discussion needs the relevant exchange. Checking a passage or reproducing an empirical result needs its original bytes. Neither task calls for reading entire session workspaces. **Not looked at:** session access logs, so I cannot identify files nobody ever opens.
+
+## Candidates
+
+- **Inferred — retain original writings, exchanges, editions, empirical inputs and private material in their present roles.** A theorem cannot recover what someone said, which edition was quoted, or which cases were available. The private groups’ current on-disk holdings were outside this survey.
+- **Inferred — say the navigation once and point to provenance.** The generated README can carry present-day group counts. The manifest carries dated intake decisions, including uncertain authorship and failed retrievals. A historical count presented as current misleads. The October review found 43 links from `SOURCES.md` into the old unified-theory location. **Counted:** all 43 occurrences, covering 39 distinct missing paths, still fail a filesystem existence check. A current navigation layer would first need verified successor links.
+- **Inferred — keep snapshot payloads off routine reading routes.** Exact-copy candidates exist, especially in group 20. Taking even one referenced copy out of the working tree would first require checking its manifest and path consumers, providing a way to recover the pinned bytes, and reconciling the layout rule that source originals never move. Regeneration was **not looked at** experimentally.
+
+## Against the two views
+
+**Counted and sampled.** The empirical/comparison row occupies **1.188 GB**, about 73% of all source bytes, despite contributing under 1% of its Markdown words. This cuts against calling most of the area disposable prose or regenerable machine output. Conversely, preserving bytes has preserved a substantive error in their description. `SOURCES.md` calls group 14 Ren’s own long messages. Recounting confirms the October review: **517 of 756** timestamped blocks begin with `<task-notification>`, accounting for **87.4% of block-body characters**.
+
+**Sampled** (two failures chosen from the session and directive groups). Group 20 keeps a countermodel in which two conversions balance in aggregate but neither can start from empty stocks. Its note has three byte-identical copies. The 4 October contribution-space record reports a different failure: the rubric-editing pilot’s first prediction failed over 20 seeds. The linked predictions file independently records the miss. **Inferred:** one pointer could replace repeated exposition, but the failed prediction and the record of what the session learned from it serve different purposes.
+
+## Not determined, and surprises
+
+**Counted** in one deliberately speaker-labelled export, the 5 September swarms conversation: 345 whitespace-separated words under Ren’s headings and 3,972 under the assistant’s, excluding framing. **Inferred:** extrapolating that ratio would be unsound. The 2025 writings mix notes and assisted essays. Group 00 includes a companion’s field notes with unattributed turns. Data, imported authors and machine notifications supply further categories. The corpus-wide shares written by Ren and by AI remain undetermined.
+
+**Sampled** in the September coverage ledger, October review and November review briefs. September’s readers selected turns and filtered prompts by keyword. October identified the prompt misattribution and stale links, both rechecked above. The 9 November inventory brief inspected the published account, and the plan describes the 14 November count as a Lean count. Neither supplies a source-authorship denominator.
+
+## The commands behind the counts
+
+**Counted** from the repository root. `git ls-files -z -- sources` supplied the paths. I grouped them by first directory, summed `os.stat(path).st_size`, and ran `wc -w` in batches on the `.md` paths. Chinese text without spaces makes word counts a poor proxy for reading time. `git ls-files --stage -z` supplied blob identities across the tree. `git ls-tree -r --name-only 0cfb9c567 -- sources` supplied historical private counts without opening files. Small read-only scripts counted speaker headings, timestamped blocks and normalized Markdown link targets. The date sweep used `rg --no-ignore-dot -il` on explicit tracked Markdown paths.
+
+── cx · ok · session 01a1edc9-19e5-74d0-b455-2cea67ab9954 · gpt-6.2-astra/high · read-only · 589s · 1239.4k tokens · 37 cmds
+continue: cx -r 01a1edc9-19e5-74d0-b455-2cea67ab9954 "…"
+log: /Users/ren/.cache/cx/runs/20261118-153220-95269

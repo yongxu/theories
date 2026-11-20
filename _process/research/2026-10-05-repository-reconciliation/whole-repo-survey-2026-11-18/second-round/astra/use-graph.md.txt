@@ -1,0 +1,166 @@
+AI-written by GPT-6 Codex, the astra reader, 19 November 2026. Read-only survey.
+
+# Use-graph of the Lean core
+
+**Counted.** Across the 409 modules in the receipt’s import closure, **7,068 of the 20,352 receipt-listed theorems** had no mention found in another indexed declaration’s statement or body. The source catalogue adds 36 private theorems, all mentioned. Of 27,854 indexed declarations, 98,736 distinct caller–target pairs were found, including 31,619 theorem-to-theorem pairs.
+
+**Counted.** November’s lock proofs use October’s `ClosedCapture` directly. The multiplying line reaches the web through two built examples and uses arithmetic from `Flow`. Across the four November modules and their direct imports, a separate search for `RenewingIn`, `ConsumingIn`, `includes_of_renewingIn` and `narrows_of_consumed` found **zero occurrences**, even including comments. That is the narrower missing link the evidence supports. [Direction, “What we are trying next”](/Users/ren/theories/_process/DIRECTION.md:102)
+
+## Distribution of uses
+
+**Counted.** A use is one other declaration mentioning the target, however many times it does so. Both rows cover all 20,388 source theorems.
+
+| Callers counted | 0 | 1 | 2 | 3–5 | 6–10 | 11–25 | 26–100 | 101+ |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Any indexed declaration | 7,068 | 7,534 | 2,870 | 2,137 | 508 | 208 | 55 | 8 |
+| Theorems only | 7,109 | 7,514 | 2,861 | 2,127 | 506 | 208 | 55 | 8 |
+
+**Counted.** There were 39,588 cross-module declaration pairs on **2,819 directed module pairs**. Theorems mentioning theorems accounted for 10,927 pairs on 1,794 module pairs. Of 1,305 direct import pairs, 793 had a mention and 512 had none found. The umbrella `Becoming` accounts for 405 of the latter. Conversely, 2,026 module pairs had a mention through a transitive import. Of 17,385 import-reachable ordered pairs of distinct modules, 14,566 had no mention found. The command below emits every positive module pair and its count.
+
+## Where November meets the earlier work
+
+**Counted.** Each number is a count of distinct declaration pairs, directed from the row to the named module. The middle column covers every direct import of the four requested modules. The last column selects additional targets relevant to the direction.
+
+| Caller | Direct imports and mentions | Other relevant targets |
+|---|---|---|
+| `TurningInTime` | `GuardedStep` 30, `GrammarRegularity` 7, `OwnClass` 1, `PoolFromCourse` 6, `ReadOffInTime` 16 | `RegimeMargin` 160, `RuleCapture` 40, `ClosedCapture` 14 |
+| `LineOnAStock` | `TurningInTime` 24, `SelectionTerm` 4, `ReadingsPersist` 1 | `RegimeMargin` 56, `Flow` 7, `ReadOffInTime` 1 |
+| `LineOnAStockCases` | `LineOnAStock` 27, `LineageDrawdown` 11 | `LineageRegimes` 6, `RegimeMargin` 1 |
+| `WayOfUnits` | `LineOnAStock` 26, `TurningInTime` 19 | `RegimeMargin` 81 |
+
+**Counted.** One import further back, `PoolFromCourse` mentions `ClosedCapture` 33 times by distinct pair, `RuleCapture` 53 and `RuleShaping` 9. `GrammarRegularity` adds 21 pairs to `ClosedCapture`. `LineageDrawdown` reaches `World` and `Continuation` twice each. `OwnClass`, `ReadOffInTime`, `ReadingsPersist` and `SelectionTerm` also reach `World`. `GuardedStep` reaches `GrammarRegularity`. Git addition dates put `PoolFromCourse`, `ReadOffInTime`, `ReadingsPersist` and both lineage modules in November. The older readings and pools are a different question.
+
+**Counted.** From those 12 source modules, direct mention edges were not found to `Dependence`, `Retaining`, `Reading`, `Readings`, `ReadingLoop`, `SelectionPool`, `PoolCourse`, `PoolResponse` or `PooledEnvelopes`. All seven `LineOnAStock → Flow` pairs target list-total lemmas. The balance results named on the direction page live in `Retaining`, despite their `Flow.Balances` namespace. No reverse declaration edge into the four November modules was found from outside those four.
+
+## Ten edges checked by hand
+
+**Sampled — 10 of 39,588 cross-module pairs.** I chose edges spanning the lock, window, first failure, arithmetic, descent, both web examples and the fixed-unit specialization. The numbers locate the **use** and the **target declaration** in their respective `.lean` files.
+
+| Caller and use line | Target and declaration line | What the caller takes |
+|---|---|---|
+| `TurningInTime.locked_closed` 1239 | `ClosedCapture.turn_join` 240 | Equality of the share and rule after a joined turn |
+| `TurningInTime.windowAfter` 1273 | `PoolFromCourse.windowRead` 252 | The rule update inside the reading window |
+| `LineOnAStock.need_unmet` 1020–21 | `ReadOffInTime.first_of_decided` 196 | The first failing step after an initial stretch |
+| `LineOnAStock.lineTake_append` 232 | `Flow.total_append` 179 | Additivity over concatenated lists |
+| `LineOnAStock.never_in` 667 | `ReadingsPersist`, `Generations.kept_of_descent` 293 | Exclusion inherited from the founders |
+| `LineOnAStock.taken_allKids` 1129 | `SelectionTerm`, `Generations.total_flatMap` 441 | A total over all offspring |
+| `LineOnAStockCases`, `MultiplyingTakersCase.agree` 72 | `LineageRegimes`, `MultiplyingTakers.inactive` 582 | Inactivity at step two |
+| `LineOnAStockCases`, `DrainCase.drain` 220 | `LineageDrawdown`, `Drain.familyP_eq` 457 | The example’s family size from step ten |
+| `WayOfUnits.fixed_while` 371 | `LineOnAStock.course_generation` 1140 | The general course at `kids u = [u]` |
+| `WayOfUnits.step_falls` 628 | `LineOnAStock.step_lowers` 720 | The same disjunction about the next level |
+
+**Sampled — 2 of 2 files named in the earlier finding.** The 16 November reading reported that `ReadingsPersist` and `ReadingsSpread` referred to `ReadingLoop` in commentary. Rechecking found the references in comments and zero declaration pairs to `ReadingLoop` from either. Chapter 8 measures a different relation, transitive reach from compiled central declarations to selected shared laws. [16 November reading](/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/read-2026-11-16/READ-AGAINST-THE-LEAN.md:170) · [Chapter 8](/Users/ren/theories/theories/becoming/chapters/08-METHOD.md:447)
+
+**Inferred from the checks.** A zero cannot decide retirement. Both `drain` and `multiplying_takers` have zero callers here, yet the direction cites them as evidence of agreement between models. Equally, counting every `Flow` mention as a join to the web’s balance law would credit the stock model with something its seven arithmetic references do not establish.
+
+**Sampled — one explicit miss and one false match checked.** `LineOnAStock.born_eq_length` calls `.born_eq` on a constructed value. The scan misses that edge. A preliminary pass matched `TurningInTime.count_rises` to `Flow`’s `count`; the proof uses a local hypothesis named `count`. The final pass filters simple typed binders. **Not looked at:** elaborated proof terms. Notation, anonymous constructors, inferred instances, implicit `simp` sets and type-directed field notation can hide uses. Namespace resolution, local shadowing and declaration boundaries remain approximate. Named instances are outside this catalogue, including the sixth `WayOfUnits` specialization, `goesDecidable`.
+
+## Commands behind the counts
+
+**Counted.** Run at repository root. The script checks each source hash against the 16 November receipt, strips nested comments and strings, and searches only visible modules and earlier same-file declarations. The final output enumerates the module pairs. `git log --diff-filter=A --format='%as' --name-only -- <paths>` supplied addition dates.
+
+```sh
+python3 -B - <<'PY'
+from pathlib import Path
+from collections import Counter
+from functools import cache
+import hashlib, json, re
+
+root = Path("experiments/integrated-correction/general-framework/generative-basis/lean")
+r = json.loads((root/"becoming/becoming-verification.json").read_text())
+idx = json.load(open("theories/becoming/results/data/lean-index.json"))["contents_by_sha256"]
+paths = r["source_paths"]
+names, rows, imports, sources, private = {}, {}, {}, {}, set()
+
+def clean(s):
+    patterns = [r'/-|--[^\n]*|"(?:\\.|[^"\\])*"', r'/-|-/']
+    pos = depth = 0
+    out = []
+    while h := re.compile(patterns[bool(depth)]).search(s,pos):
+        out.append("\n"*s.count("\n",pos,h.start()) if depth else s[pos:h.start()])
+        out.append(" "+"\n"*h[0].count("\n"))
+        depth += (h[0]=="/-")-(h[0]=="-/")
+        pos = h.end()
+    assert depth == 0
+    return "".join(out)+s[pos:]
+
+def norm(s): return s.replace("«","").replace("»","")
+
+for m,p in paths.items():
+    b = (root/p).read_bytes()
+    h = hashlib.sha256(b).hexdigest()
+    assert h == r["source_sha256"][m]
+    j = idx[h]
+    sources[m] = clean(b.decode()).splitlines()
+    imports[m] = set(j["imports"]) & paths.keys()
+    rows[m] = {d["line"]:d for d in j["declarations"]}
+    for i,d in rows[m].items():
+        q = norm(d["qualified_name_hint"])
+        names[q] = (m,i,d["kind"])
+        if "private " in sources[m][i-1]: private.add(q)
+
+@cache
+def visible(m): return {m}.union(*(visible(p) for p in imports[m]))
+
+def prefixes(s):
+    while s:
+        yield s+"."
+        s = s.rpartition(".")[0]
+    yield ""
+
+spaces = {p for q in names for p in prefixes(q.rpartition(".")[0])}
+atom = r"(?:«[^»\n]+»|[^\W\d][\w'₀-₉]*)"
+tokens = re.compile(r"(?<![\w'.])"+atom+r"(?:\."+atom+r")*")
+binders = re.compile(r"[(\{]\s*((?:[\w']+\s+)*[\w']+)\s*:(?!=)")
+stop = r"^(?:#|@\[|(?:namespace|section|mutual|end|open|export|universe|variable|omit|include|attribute|set_option|noncomputable|instance|example|local|notation|private|protected)\b)"
+edges = set()
+for m,lines in sources.items():
+    ns = ""; opens = once = (); stack = []; spans = []; active = False
+    @cache
+    def lookup(t,ns,opens):
+        while t:
+            for group in [*((p,) for p in prefixes(ns)), opens]:
+                hits = {p+t for p in group if p+t in names and names[p+t][0] in visible(m)
+                        and (p+t not in private or names[p+t][0]==m)}
+                if hits: return next(iter(hits)) if len(hits)==1 else None
+            t = t.rpartition(".")[0]
+    for i,line in enumerate(lines,1):
+        if d := rows[m].get(i):
+            q = norm(d["qualified_name_hint"])
+            body = [re.split(r"\b"+d["kind"]+r"\s+"+re.escape(d["name"]),line,maxsplit=1)[1]]
+            spans.append((q,ns,opens+once,body))
+            active = True; once = ()
+        elif re.match(stop,line):
+            active = False
+            w = line.split()
+            if w[0] in ("namespace","section","mutual"):
+                stack.append((ns,opens))
+                if w[0]=="namespace": ns=(ns+"."+w[1]).strip(".")
+            elif w[0]=="end" and stack: ns,opens=stack.pop()
+            elif re.fullmatch(r"open\s+[\w. ]+",line):
+                temp = w[-1]=="in"
+                ps = tuple(next((p+n+"." for p in prefixes(ns) if p+n+"." in spaces),"@")
+                           for n in w[1:len(w)-temp])
+                if temp: once+=ps
+                else: opens+=ps
+        elif active: body.append(line)
+    for q,ns,op,body in spans:
+        s = "\n".join(body)
+        local = {n for g in binders.findall(s) for n in g.split()}
+        for t in set(tokens.findall(s)):
+            if t.split(".")[0] in local: continue
+            v = lookup(norm(t).removeprefix("_root_."),ns,op)
+            if v and (names[v][0]!=m or names[v][1]<names[q][1]): edges.add((q,v))
+
+th = {q for q in names if names[q][2] in ("theorem","lemma")}
+for es in (edges, {(q,v) for q,v in edges if q in th and v in th}):
+    uses = Counter(v for q,v in es)
+    print(len(es), Counter(uses[q] for q in th))
+pairs = Counter((names[q][0],names[v][0]) for q,v in edges if names[q][0]!=names[v][0])
+for (caller,target),count in sorted(pairs.items()): print(caller,target,count)
+PY
+```
+
+── cx · ok · session 01a1f463-c312-7ef3-ac53-f05c2ed3c708 · gpt-6.2-astra/high · read-only · 468s · 2017.1k tokens · 33 cmds
+continue: cx -r 01a1f463-c312-7ef3-ac53-f05c2ed3c708 "…"
+log: /Users/ren/.cache/cx/runs/20261119-221900-34332

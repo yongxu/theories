@@ -1,0 +1,66 @@
+# The second round: what the first survey did not cover
+
+*AI-written (Claude Fable, the coordinating session), 19 November 2026. A working brief, in scratch. Ren has not read it. Read `../BRIEF.md` first: its account of the work, its marks of how far seen, and its rules (read only; no builds, tests, gate, render or lake; never run `check_becoming.py`; light commands; no subagents; private folders not opened) all hold here. Since it was written, `AGENTS.md` was replaced on main (18 November, 16:02 WIB) with seven rules; read it as it now stands.*
+
+## Where the first round left things
+
+Thirteen areas were surveyed by a Claude reader and an astra reader, and checked by a second reader. What was found, in brief (`../THE-PICTURE.md` has it whole; do not take it as settled where your task tests it):
+
+- The Lean core is 409 modules, 20,352 theorems, checked on 16 November, with no axiom. About a quarter of its lines are prose.
+- Each theorem is told by hand in several places: its docstring, a note in the root file, a README row, a record, a section of a chapter (its "home"), an atlas card. These are not copies of one another.
+- No reader, and no tool, has set those tellings against the theorem statements. Names resolve and hashes match; that is all any check does.
+- About two thirds of the files are history, receipts and generated pages. Records, tools and links are bound to them.
+- Two views are still untested in their own sense. Ren's: much of the repository may be poor or overtaken and could be compressed or removed. The coordinating session's: prose should be judged against the Lean and the rest follows.
+
+The second round takes the gaps that bear on reorienting the repository. Decide nothing and change nothing. Say what goes against either view.
+
+## The tasks
+
+Your task is named by the coordinating session. Write or return only what your task asks.
+
+### tellings-A and tellings-B
+
+`sample-A.json` and `sample-B.json` in this folder each list 20 theorem records, drawn at random with a fixed seed from the 537 live theorem records. You did not choose them and may not swap any. For each record:
+
+1. Open the record. Take the first declaration listed for it in the sample file (open a second only if the record's statement is plainly about another one, and say so). Read that declaration's statement in the Lean file: its hypotheses and its conclusion. Do not rely on its name or docstring for what it says. You need not read the proof.
+2. Judge three tellings of it against that statement, each on its own:
+   - **record**: the record's `statement` and the law in `laws` that names this declaration (English);
+   - **chapter**: the sentences of the chapter home (the sample gives file and line of the anchor `r-<id>`) that tell this declaration;
+   - **docstring**: the comment directly above the declaration in the Lean file.
+3. For each telling give one verdict: `exact` (says what the statement says, premises included or plainly pointed to); `says-less` (true of the statement but drops a conclusion or is vaguer); `says-more` (claims something the statement does not give: a dropped premise, a stronger conclusion, a reading told as proved); `says-other` (about something else); `absent` (no telling of this declaration there).
+4. Quote the words at fault, briefly, and name the premise or conclusion involved.
+5. Say whether the three tellings agree with one another.
+
+Be exact about `says-more`: a premise that is stated one sentence earlier, or in the record's `hypotheses`, counts as pointed to only if the telling sends the reader there.
+
+### overtaken-fronts
+
+Read `_process/DIRECTION.md` whole and `AGENTS.md`. Then read these against them: `README.md`, `GOALS.md`, `RESEARCH.md`, `OPEN-QUESTIONS.md`, `MAP.md`, `TESTS.md`, `theories/becoming/ONE-PAGE.md`, `THE-THEORY-OF-BECOMING.md`, `OPENING.md`, `USES.md`, `ONE-ARGUMENT.md`, `COLLECTIVE-DIRECTION.md`. For each page: what it gives as the aim and the centre; each place where it states as present something the direction page has withdrawn, corrected or says is not proved; each place where it is silent on something the direction now holds. Give file and line, the page's words, and the direction page's words. Then: of each page, what share (roughly, with how you estimated it) still stands, what would need to be said again, and what a reader of that page alone would now get wrong.
+
+### overtaken-chapters
+
+The same question for `theories/becoming/chapters/01-ROOT.md` to `08-METHOD.md` (about 217,000 words; read the direction page whole, then each chapter's headings and openings, and read through the sections that tell the alignment argument, the lock and closing, selection, "self-concern", widening and the ethics). For each chapter: what it carries that the direction page relies on; what in it the direction has withdrawn or corrected (the direction page's head note, "What we have found so far" and its closing note list changes); what it tells as proved that the direction page tells as argued or as a reading; and which sections you did not read.
+
+### meta-attractor
+
+The term has three homes that nobody has set side by side: `theories/meta-attractor/README.md` (the one page links it as the definition); chapter 02's Definition and the `ClosedCapture` laws in the Lean (find them); and Ren's picture of 18 November (`sources/15-codex-theory-conversations/2026-11-18-the-lean-before-the-words.md`, his messages of 14:53 and 15:03 WIB). Set out what each says the thing is, in its own terms: what has to hold, what compounds, what cannot turn. Where do they agree; where does one say something the others do not; which parts are stated by a theorem (give declaration and premises), which are argued, which are a picture. What would a theorem have to state for his picture of 18 November to be carried: a holder formed within an account, holding to it, and the compounding. Sweep the Lean before saying something is not there, and say what you swept.
+
+### experiments
+
+`experiments/` outside `experiments/integrated-correction/general-framework/generative-basis/lean/` was in no area of the first round: about 8,100 tracked files in some 37 folders. For each folder: what it tests or builds; which statement of the account it bears on; whether a prediction was frozen before a run, and where the frozen file is; what came back (held, failed, mixed, refused, never run), with the file that says so; which record, chapter or page cites it; its size by kind of file. Then: which failed or refused tests are told on a live page (`TESTS.md`, the one page, a chapter) and which are told nowhere live; which folders hold only machine output; and `_process/research/2026-10-05-generative-foundation-review/foundation-assessment/` (105 files), which also fell between areas.
+
+### chinese-only
+
+Word counts undercount Chinese and the first round's sweeps were in English. Find what exists only in Chinese: pages or sections with no English counterpart (for example the study log `BECOMING-RENEWAL-READING.zh.md` against its English edition, `ONE-PAGE.zh.md` against `ONE-PAGE.md`, the `.zh.md` fronts, Chinese-named theorems and their docstrings, Ren's Chinese messages in `sources/`). For each: where it is, how much (characters), what it says that the English does not, and whether it is his words, an AI's writing, or a translation. Also the reverse where it is marked: Chinese editions that lag their English page.
+
+### in-flight
+
+What is claimed, half done or held right now, so that a reorientation does not collide with it. Read the whole of `_process/BECOMING-WORKBOARD.md` (the first round read only its top third), `git worktree list`, the branch heads not merged into main and their last commit dates, uncommitted changes in the shared checkout (`git status`; read, do not touch), and `_process/DIRECTION.md` "What we are trying next". List: each open claim with its owner, its state and the last date anything moved; each held run or test design with the words that hold it; each branch or worktree with unlanded work and whether a board row names it; decisions the board lists as waiting for Ren. Mark which of these a change to the repository's layout would break.
+
+### use-graph
+
+Imports join the 409 core modules into one piece, but imports are coarse. Compute, by a small read-only script, an approximation of which theorem uses which: for each declaration name in the core (take names from the generated declaration lists under `theories/becoming/results/lean-declarations` or from the Lean files), find the other declarations whose statement or proof text mentions it. Report: how many theorems no other declaration mentions; the distribution of uses; between which modules there are mention edges and no such edges; and in particular the edges, or their absence, between November's modules (`LineOnAStock`, `LineOnAStockCases`, `TurningInTime`, `WayOfUnits` and what they import) and the October modules that carry the idea's later sentences (the web, `ClosedCapture`, readings, pools: find them from `_process/DIRECTION.md`). Say exactly what the script counts and what it cannot see (notation, anonymous constructors, `simp` sets, names shadowed across namespaces), and check ten edges by hand.
+
+## The report
+
+For tellings-A and tellings-B the answer is the structured table the schema asks for. For every other task: Markdown, at most about 1,500 words, beginning with one line naming the model you are, every statement of fact marked as the brief says, and ending with the commands behind the counts.

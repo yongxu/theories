@@ -1,0 +1,5 @@
+### tellings-H (added after the first forty came back)
+
+The first forty were judged on the first declaration listed for each record. Those lists are alphabetical, so most of what was judged was a definition or a helper, where little can go wrong; the few theorems with several premises were where the faults sat. This sample asks the same question of headline theorems.
+
+`sample-H.json` lists 20 more theorem records, drawn at random with a fixed seed from those not in the first forty. For each record, the declaration to judge is its headline theorem, chosen by this rule and not by your judgment: the first declaration cited at the record's chapter home (the anchor `r-<id>`, file and line given) that is a `theorem` in the Lean and not a definition; if the home cites none, the first theorem named in the record's `laws`. Say which rule gave it. Then do exactly as in "tellings-A and tellings-B": read the Lean statement itself (count its hypotheses and put the count at the start of `statement_gist`), judge the record, the chapter and the docstring each against it, quote the words at fault, and say whether the three agree.

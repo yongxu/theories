@@ -1,0 +1,66 @@
+# earlier-tellings: what is there
+*AI-written (Claude Opus 5.5), 18 November 2026. A survey; nothing was changed.*
+
+## In three sentences
+The area holds about 6.1 million words of earlier tellings: one AI-drafted conference paper kept in twelve near-identical editions (4.0M words, 1,122 files), the sixteen September theory folders (0.73M), the account's own retired chapters in `theories/becoming/history` (1.05M), and media-heavy `worldbuilding/` and `output/` (234 MB tracked between them). Almost none of it is read on the reading path, but two parts are load-bearing in a way the "trace that can leave" view does not expect: 292 of 567 records have their only hashed *statement* source in `theories/becoming/history`, and the one page defines the meta-attractor by linking `theories/meta-attractor/README.md`. The IASEAI folder, by contrast, has 2 live Markdown links in and no record reference, and its bulk is successive editions plus pages assembled mechanically from `src/`.
+
+## What is there
+
+| kind | files | words (md) | beside the Lean | unique? | what reads it | how far seen |
+|---|---|---|---|---|---|---|
+| IASEAI paper `drafts/2026-10-02-iaseai-selecting-the-selectors` | 1,122 (1,004 distinct blobs) | 3,993,923 | telling (AI-drafted; "none is Ren's verbatim", NOTES.md) + trace; one pilot experiment (coupling) | v7.3 `src/` (212k words) is the latest text; one failed pre-specified prediction (P1 of the pilot) | lineage.json (4 paths, existence and quote checked each render); V73-INTEGRATION-CHECKS.json pins 109 sha256 (no tool found reading it); 2 links from `_process/research` | counted; README, NOTES, START-HERE, PREDICTIONS-2 read in part |
+| of which `history/` (v1–v7.2, 11 editions) | 972 | 3,512,119 | trace, byte-for-byte moved (receipt RB) | no: each file's blob is recorded in MANIFEST.json and is in git (20 of 970 sampled: bytes = blob, blob in store) | nothing live found | counted; sampled 20 |
+| of which `history/v6.2/planning` | 282 | 967,512 | trace (edit units U02–U12, snapshot draftA) | not determined | nothing found | counted |
+| other `drafts/` (15 folders) | 235 | 360,185 | mixed: Ren's mission doc drafted with AI (`2026-09-26-*`), one essay quoting Ren (`2026-09-04-one-work`), opening versions V2–V13, AI editions, a video's frames | partly: see Ren's words below | 2 records cite `drafts/2026-10-10-opening/history/OPENING-V7-PROPOSAL.md`; publishers `build_xiaokang_datong.py`, `build_shengsheng_en.py` read two folders | counted; banners sampled 16 of 16 |
+| September theory folders `theories/<16>` + LINEAGE, README | 71 + 5 | 703,000 + 27,000 | telling: AI syntheses of `sources/`, some with October additions (meta-attractor COMMON-ORGANIZATION, GENERATIVE-REGIMES) | the syntheses are AI readings; originals are in `sources/` | 8 records (3 meta-attractor files, hashed); 943 links from generated results, 21 from MAP.md, 20 from chapters, 5 README; 45 lineage.json paths | counted; README and one synthesis head read |
+| `theories/becoming/history` | 214 (200 md) | 1,045,970 | trace: retired chapters (batch H4, 17 Oct), round logs, 8-October snapshots, 13 verification scripts/JSON | no (moved byte-for-byte; MANIFEST 191 entries, 20 sampled = blob) | **390 hashed record references (373 role `statement`) to 26 files**; 225 links from chapters (183 from chapters/README catalogue); gate's `test_classical_verifiers` reads YI-ZHUAN-AND-BECOMING.md; research-config `sessions` points at SESSION-RESULTS-2026-10-08.md | counted; INDEX head read |
+| `worldbuilding/` | 164 | 99,691 | other: a separate project (friends' worldbook, 117 files; png, pdf, zip) | yes as far as seen (4 internal duplicates only) | 6 links from `experiments/circular-construction` | counted; README head read |
+| `output/` | 114 (105 pdf) | 3,497 | machine output: built PDFs; review-packet editions 1–5 frozen in `output/pdf/history` (45 MB), tags `review-packet-1`…`6` exist | regenerable in principle from tagged commits; PDFs as sent are a record of what readers received | 3 publishing scripts write here | counted; README read |
+
+Untracked on disk in the area: about 1.4 GB of ignored media under `drafts/2026-10-03-the-game-of-winning` (out/, v2, v3 assets, soundtrack) and the private `drafts/2026-10-02-friend-conversation` (9 files, 660 KB; counted, not opened).
+
+## What repeats
+- **Exact copies are few.** Of 1,122 IASEAI files, 191 share a blob with another tracked file, only 4 outside the folder (e.g. `history/v3/No-Viable-Race-v3.1.pdf` = `output/pdf/No-Viable-Race-IASEAI27-v3.1-draft.pdf`); `output/` has 13 cross-area duplicates, branches 4 (e.g. `evolving-community-swarms/context/2026-09-05-conversation.md` = a file in `sources/15-…`), becoming/history 4. Counted by blob over `git ls-files -s`.
+- **Near copies are the bulk.** Successive IASEAI editions differ little: v7.2→v7.3 THEORY.md changed 41 of 1,406 lines, SUPPLEMENT 92 of 1,599, DISCUSSION 27 of 670; v7.1→v7.2 similar (diff counted). Within each edition from v6.1 the root THEORY/SUPPLEMENT/DISCUSSION/TESTS are assembled outputs of `src/` ("root Markdown files are assembled outputs", v7.3 README), so each edition holds its text about twice. Inferred: the distinct prose of the 4.0M words is of the order of a few hundred thousand words; not measured.
+- **Everything moved into a `history/` folder is also in git** at its old path (MANIFEST blob fields, 40 of 40 sampled across two manifests). The working-tree copy exists because of the 17 October layout rule, not because git lacks it.
+- The branch folders retell `sources/`; the crosswalk (`results/atlas/CROSSWALK.md`) retells the branch folders against the account (838 entries).
+
+## What depends on it
+- `tools/research/registry.py` (lines ~1015–1043): every record reference must exist and carry a sha256 checked against the file; `canonical_source` must be one of them. 312 records reference `theories/becoming/history`, 292 of them with *only* history pages as statement sources (277 references to the old `THE-THEORY-OF-BECOMING.md`); 11 records name a history page as canonical source. Moving these files breaks the registry check unless the references are rebound.
+- `tools/research/lineage.py` (line ~133 and `evidence_errors`) checks at every render that 220 lineage paths exist and their quotes are present; 45 are branch-folder paths, 6 becoming/history, 7 drafts. It already accepts a `commit` field and reads the file at that commit, so a path could leave the tree if pinned.
+- `paths.py` classes everything outside a `history` component as `live`: v7.3, all of `drafts/*` top levels, the branch folders, worldbuilding, output. Their links are checked by the gate's `links` check (`moves.py check_links`, referrers live and generated).
+- `gate.py` lists `drafts/**`, `output/**`, `worldbuilding/**` as areas; `test_classical_verifiers` reads `theories/becoming/history/YI-ZHUAN-AND-BECOMING.md`; `lean_catalogue.py` classes `drafts/` Lean (3 files) as `historical-draft`.
+- Generated pages in the area: `theories/README.md`, `LINEAGE.md`, `LINEAGE.zh.md` (atlas.py, lineage.py), 6 in becoming/history (INDEX, the 8-October ARGUMENTS, SESSION-RESULTS, THEORY-MAP snapshots; last changed 20 October), 4 in drafts, 1 in output.
+
+## What a continuing session needs from here
+It needs `theories/meta-attractor/README.md` (the one page's definition of the meta-attractor links it), the 26 becoming/history pages that records cite as statement sources until those records are rebound, the IASEAI pilot's PREDICTIONS and PREDICTIONS-2 (the only place found that states P1 failed; `TESTS.md` and the chapters do not mention the pilot, rg for "rubric-editing", "pilot", "P1 failed"), and `drafts/2026-09-04-one-work/ESSAY.md`, the only tracked copy found of Ren's 14 July 2024 sentence on a society choosing one value as the token of power (its original is in the untracked private `sources/12-claude-ai-chats`; also quoted in the generated LINEAGE.zh.md). It never needs to open the eleven retired IASEAI editions, v6.2 planning, worldbuilding, or output's PDFs to continue the Lean-first work.
+
+## Candidates
+- **IASEAI `history/` (3.5M words, 972 files): could leave the working tree.** Evidence: byte-for-byte in git, nothing live found linking in, no record reference, lineage cites only top-level and v7.3 paths. Risk: low; plain `rg` from the root currently searches it (the root `.ignore` hides only `_process/history`, `_process/architecture/history` and `becoming-checks`), so leaving would also shorten every search. First: check `_process/research` links into it (313 links from that tree go to becoming/history, 4 to the opening; IASEAI history itself not found linked) and the 17 October layout rule.
+- **IASEAI v7.3 assembled root pages: could be said once** (src or assembled, not both). Risk: its `checks_v73.py`/`xref_v73.py` and V73-INTEGRATION-CHECKS.json pin the assembled files' hashes. Cannot tell whether anything still runs them.
+- **becoming/history: stays for now.** It cannot leave until 292 records' statement references are rebound to live chapters or to a pinned commit; the registry requires the file to exist with a matching hash. This is a tool change plus a record pass, not a move.
+- **Branch folders: stay.** Live definitions point into them; 45 lineage paths and 8 records check them. Could be shortened to their READMEs only if the crosswalk is accepted as their reading; cannot tell.
+- **worldbuilding/, output/: could leave the tree or stay; cannot tell.** They are a separate project and machine output; output's review-packet PDFs are what readers received (tagged commits exist, so regenerable, but who is sent what is Ren's).
+- **The 1.4 GB of ignored media: outside git;** would be lost with the machine (outside-tree reader's question).
+
+## Against the two views
+- Against "garbage to remove": the largest mass (IASEAI) is not wrong text but kept editions; and the smaller becoming/history is not dead: about half the records' statement sources are there, so the records point at retired tellings as what they state. That is a joining problem, not garbage.
+- Against "trace can leave without loss": becoming/history and the meta-attractor folder are trace by label but load-bearing by tool and by link. And the one place found holding the IASEAI pilot's failed prediction is the draft folder, so "keep failures" is met here only by keeping a draft.
+- For the coordinating session's view: at least 3.5M of the area's 6.1M words are byte-for-byte history already in git, and the IASEAI paper's text is AI-drafted, held twice per edition, twelve times over.
+
+## Not determined, and surprises
+- Not determined: how much of the IASEAI text says something the present account does not. The crosswalk covers the 16 branch folders (85 not-carried, 160 fresh-reading of 838; AI readings) but not drafts or becoming/history (0 mentions of `drafts/` in CROSSWALK.md). `META-ATTRACTOR-RECONCILIATION.md` (8–17 October) reconciles v7.3 §§2.1–2.3 with the August 2025 meta-attractor formulation; not read beyond its head.
+- Surprise: `_process/DIRECTION.md` does not use the word meta-attractor (rg, case-insensitive), while AGENTS.md and the one page do, and Ren used it on 18 November. The meta-attractor folder's synthesis ("carves a basin… until 'optimize, accumulate, compete, control' reads as natural law") is nearer Ren's 18-November picture (an account taken for the world) than the one page's gloss ("what a selection raises comes to set the selection"); a reading. The crosswalk marks "the attractor of attractors is believed survival pressure" as not carried.
+- Surprise: `output/README.md` (8 November) calls edition 5 the current review packet; tag `review-packet-6` and an ED6 commit of 10 November exist. Sampled, not resolved.
+- Surprise: a generator (`session_map.py`, research-config `sessions`) still targets a file inside `theories/becoming/history`.
+- Earlier survey checked: the 16 October whole-repository review found 970 superseded IASEAI files (~35 MB) and proposed moving them to `history/` (RB); MANIFEST.json holds 970 entries, so that was done. The 9–10 November and 14 November reviews were not checked for this area.
+
+## The commands behind the counts
+- Files and words: `git ls-files <d> | wc -l`; `git ls-files -z <d> | grep -z '\.md$' | xargs -0 cat | wc -w`, per folder and per IASEAI edition.
+- Tracked bytes: `git ls-files -z <d> | xargs -0 stat -f %z`; disk: `du -sh`; ignored: `git status --short --ignored`.
+- Distinct blobs and duplicates: `git ls-files -s` grouped by blob (python, scratch).
+- Edition diffs: `diff a b | grep -c '^[<>]'`.
+- Record references: python over `theories/becoming/results/records/*.json`, fields `references[].path/role/sha256`, `canonical_source`.
+- Inbound links: python over `git ls-files '*.md'`, relative `](…)` targets resolved, referrers outside history/development/sources.
+- Manifests: `git hash-object` on 20 sampled `new_path`s per manifest vs recorded `blob`; `git cat-file -e`.
+- Tools read as text: `registry.py` 1012–1050, `lineage.py` 125–140 and `evidence_errors`, `paths.py` 26–110, `moves.py check_links`, `gate.py` 55–75, 180–200, 250; `.ignore` whole.

@@ -1,0 +1,75 @@
+# research-history: what is there
+*AI-written (Claude Opus 5.5), 18 November 2026. A survey; nothing was changed.*
+
+## In three sentences
+
+This area is about 18.6 million words in 6,870 tracked files (6.6 million of them in Markdown). Almost all of it is trace: the October packets, spent landing kits, retired studies, old record texts and instruction copies, plus machine output (check logs, move receipts). Every moved file I checked is byte-identical to what its manifest names, and nothing here is the only copy in git. It cannot simply leave the tree, though: about 1,970 of the 4,363 files in the generative-foundation history are still linked from live pages and record JSON, the tools read the manifests and the record snapshots, and two parts of the area are not retired at all.
+
+## What is there
+
+Words are `wc -w` over every tracked file, JSON and logs included, unless marked md.
+
+| kind | files | words | beside the Lean | unique? | what reads it | how far seen |
+|---|---:|---:|---|---|---|---|
+| GFR history, top-level packets (`…/generative-foundation-review/history/root-foundation/*`, batch H5): MATH, REVIEW, COUNTERREVIEW, INTEGRATION, CHECK.py/json of the 5 to 9 Oct pre-spine programme | 2,143 | 5.64 M | trace (old tellings and reviews), with checks as coupling | Not in git terms (blob = manifest). Holds the October counterreviews: 29 file names contain counter, fail or refut | 156 record JSONs (7 of them as `progress[].source` with a section anchor); 04-LIFE and 08-METHOD link here | counted; 2 files read in part |
+| GFR history, `development/` (253 working folders: spent kits, plans, readings, applied edits, batch R35-B5 and H5) | 2,203 | 4.60 M | trace and spent tooling ("applied, do not rerun") | 78 `.lean` files in GFR history have no identical copy anywhere else in the working tree | records' references; kits are not read by tools (not found in a `tools/` grep) | counted; 2 folders sampled |
+| `_process/history/` retired studies (eight 4/5 Oct studies, specialist dossier, unified-theory, direction-frontier; batch H3) | ~440 | ~0.93 M | trace, including failures (e.g. `2026-10-05-generative-health/COUNTEREXAMPLES.md`) | not in git terms | 380 live files link into `_process/history/`, 276 of them in GFR root-foundation | counted |
+| `_process/history/2026-09-consolidation` (old MAP, GLOSSARY, TIMELINE, BOOKS; 09-03 reading-pass method; `reading-notes-inputs/`) | 31 | 625 k | trace; the reading-notes inputs are derived extracts of Ren's turns | not unique (the manifest says the extracts duplicate `sources/12` and `sources/14`) | GLOSSARY.md and MAP.md are kept live at their old paths as new short pages | counted |
+| `_process/history/worktree-salvage-2026-10-18` (two removed worktrees' check runs) | 391 | 926 k (123 words md) | machine output (Lean check logs and copies) | per its README, what main lacked on 18 Oct | not found | README read whole; counted |
+| `_process/history/workboard/BECOMING-WORKBOARD-2026-10-11_to_2026-10-17.md` | 1 | 224 k | trace: the board's landed log | written now, not retired: 538 commits, the latest on 18 Nov | `_process/BECOMING-WORKBOARD.md`; board kit scripts in GFR `development/` | counted |
+| `_process/history/*-instructions/` (earlier AGENTS.md and RESULT-WORKFLOW) | 24 | ~38 k | trace | none: each matches a blob in the git log of `AGENTS.md` or `_process/RESULT-WORKFLOW.md` | AGENTS.md links the latest one | counted, 24 of 24 |
+| `_process/architecture/history/<hash>/` record snapshots | 573 (543 json, 30 md) in 558 dirs | 3.18 M | trace: old record texts | not in git terms (6 of 6 sampled blobs appear at the record's own path in the git log) | records' `text_versions`; `navigation.py`; the gate's `test_schema2` input list | counted; sample of 6 |
+| `_process/architecture/` manifests and receipts (`moves/` 87 receipts, `generated-manifest.json`, `history-manifest.json`, rename/compaction files, `check_rename.py`) | ~100 | ~0.8 M | tooling / machine output | `generated-manifest.json` is live state, not history | `research-config.json`, `navigation.py`, `indexes.py`, `moves.py`, `gate.py`, `reading_catalogue.py`, `lean_catalogue.py` | grep counted; README read in part |
+| `research/2026-10-05-repository-reconciliation/` (whole-repo reviews of 16 and 19 Oct; `architecture/df`, `mv`, `gt`, `dossiers` kits and plans) | 377 | 1.21 M | trace (earlier surveys); spent tooling | the reviews are AI readings, regenerable only by re-reading | `research-config.json` `move_mentions_exclude`; 169 live md files mention the folder, 136 of them result pages | counted; review README sampled |
+| Small 5 Oct studies left live (concern-theory 48, support-and-shared-generativity 24, revisable-concern 3, integrated-evolution 2, causal 1, health 1) | 79 | ~212 k | tellings and coupling (checks, evidence PDFs) | the Ceroni 2018 copies are third-party files | experiments link them (e.g. 22 files in `experiments/shared-renewal-capability`) | counted; CLAIMS.md sampled. Last change to all six: 17 Oct |
+| `MANIFEST.json` and `INDEX.md` per history root | 4 | — | tooling; INDEX is generated by `moves.py` | no | `moves.py`, `indexes.py`, the gate's `test_moves` | read in part |
+
+## What repeats
+
+- **Byte-for-byte with git.** All 4,363 GFR-history manifest entries and all 473 `_process/history` manifest entries hash to the manifest's sha256. Their git blob equals the manifest's `blob` (counted). The 24 instruction copies are earlier blobs of `AGENTS.md`/`RESULT-WORKFLOW.md`. Two of them, `2026-11-09-instructions/AGENTS-before-landing-wording.md` and `…-before-readers-corrections.md`, are the same blob as each other.
+- **In the working tree.** 235 GFR-history files (≥500 B, 5.1 MB) and 329 `_process/history` files (11.4 MB) have an identical copy outside their folder. Most of those copies are Lean saved copies under `becoming-checks/` (224 and 275 files). 34 `_process/history` files are also in `sources/22-research-reconciliation-2026-10-05/files`, and 16 are in `sources/20-…/root-of-wisdom/…/source-snapshots`. Of 251 Lean files in GFR history, 120 are also saved check copies, 51 are identical to a live module and 78 have no other copy in the tree.
+- **Record snapshots.** `architecture/history` holds 3.18 M words of earlier record JSON. The git log already holds the same bytes at the record path (6 of 6 sampled).
+- **Earlier surveys.** The review of 16 and 17 Oct (`whole-repo-review-2026-10-16/`) planned the moves that made this area. `RESTRUCTURE-REPORT.md` says they ran as batches H1 to H7 and cut the live files from 64,547 to 19,298. The receipts confirm it: H1 to H7 are timestamped 16 Oct 19:39 to 19:54 UTC, and H5 alone moved 3,328 files and H7 12,772. The 19 Oct review reported public history holding private material. I did not find a 9 to 10 Nov or 14 Nov survey that treats this area: `ag-the-map/` mentions `_process/history/` only as the home of old instructions, and the "26.6M words" count was not found in tracked text except this survey's AREAS.md.
+
+## What depends on it
+
+- Tools: `research-config.json` names `history_manifest`, `generated_manifest`, `record_snapshots` (`_process/architecture/history`) and `move_receipts`. `navigation.py` resolves snapshots by hash. `moves.py` writes and checks MANIFEST/INDEX and receipts. `indexes.py` lists `_process/history` on the research index. The gate's `test_schema2` reads `_process/architecture/history/**` and `moves/*.json`.
+- Links: 628 live files reference 2,054 distinct GFR-history paths, 1,967 of them manifest entries (about 45%). 327 of the 628 are under `theories/becoming/results`. 721 live files reference 582 snapshot paths. The record JSONs cite GFR-history sections by anchor (e.g. `ALIGNMENT-DIRECTION-INTEGRATION.md#3-exact-mathematical-scope`), which is citation pinned to a section. The canonical chapters 04-LIFE and 08-METHOD link into GFR history. (A script over live md/json/py/tsv, excluding history, sources and tmp; relative links resolved; a reader should treat ±5% as the regex's margin.)
+
+## What a continuing session needs from here
+
+It needs the latest instruction copy (linked from AGENTS.md), the board log only when trimming the Queue line, the manifests and receipts through the tools, and the snapshots only through records. Following a record's `progress` source lands in a GFR packet. It never needs `worktree-salvage`, the spent kits in `development/`, `repository-reconciliation/architecture/df|mv|gt`, the September consolidation, or the 5 Oct retired studies. That is inferred from the kinds and from the link counts above: the salvage and kits have no live readers that I found.
+
+## Candidates
+
+- **worktree-salvage, spent kits (`development/`, `repository-reconciliation/architecture/df|mv`):** these could leave the tree. Evidence: no tool reads them, they are git blobs, and they are machine output or applied scripts. Risk: the 78 Lean files with no other tree copy are attempts someone may want to diff, and some development folders hold failed attempts. A salvage ref and an index line would have to name them first, and the live links into `development/` (part of the 2,054) would need repointing.
+- **GFR top-level packets:** cannot tell yet. They are trace, but records cite them by section as the provenance of results. Moving them needs `repoint.py` or a record rebind, and a decision whether a record may cite a commit-pinned URL instead of a path.
+- **architecture/history snapshots:** these could be said once (git already holds them). That needs `navigation.py`, `text_versions` and `test_schema2` changed first. Risk: the gate goes red.
+- **Instruction copies:** stay (small, linked, AGENTS.md promises them). Their identity with git means they could equally be pointers to commits.
+- **Board log:** stays. Its name and folder should say it is live. Risk now: a reader takes it for retired.
+- **Small 5 Oct live studies:** cannot tell. They are dormant since 17 Oct and linked from experiments. Whether their CLAIMS are carried by Lean was not checked.
+- **reading-notes-inputs and the Ceroni files:** these are not a shape decision. They are Ren's (see below).
+
+## Against the two views
+
+- Against "garbage to remove": nearly nothing here is garbage in the sense of unread. About 45% of GFR history is cited from live results and records, and the counterreviews and COUNTEREXAMPLES are failures AGENTS.md keeps. Removal without rewriting would break records, not just clutter.
+- Against "trace can leave without loss": the area is not all retired. The board log is appended daily, `generated-manifest.json` is live render state, and the snapshot store is read by the gate. The rule "retired material moves byte for byte" has also been followed exactly (0 mismatches in 4,836 entries). So the layout rule works as a ledger, but it keeps every byte twice, once in the tree and once in git, and the reading path still runs into it through record citations.
+- Against both: prose here is not judged against the Lean either way. The packets are October tellings that the chapters say were superseded, yet records still name them as where a result's scope is stated.
+
+## Not determined, and surprises
+
+- Not determined: whether any record's `progress` source in GFR history states a premise the live chapter dropped. I did not read packets against the Lean. I also did not check how many development folders hold failed Lean attempts rather than kits, or whether the 78 tree-unique Lean files compile.
+- Surprise: `_process/history/2026-09-consolidation/reading-notes-inputs/` (10 files, 420,724 words) is tracked. Its manifest calls it derived extracts of Ren's turns duplicating `sources/12` and `sources/14`. `sources/12-claude-ai-chats` is untracked and git-ignored as private. `research-config.json` also records that a revoked API key sits in `cb-03.md`. Not quoted; for Ren.
+- Surprise: third-party Ceroni 2018 supplementary PDFs, an xlsx and an accepted-manuscript docx are tracked and on `origin/main`. Their MANIFEST says "source rights retained". The 19 Oct untracking of third-party material did not reach them.
+- Surprise: the board log's file name says 11 to 17 October, but it runs to 18 November.
+- Surprise: `_process/research/README.md` counts GFR "history files 4404" against 4,363 manifest entries. The difference is presumably other `history/` folders inside the study (inferred, not checked).
+- Surprise: no move into these two history roots after 2 Nov. Retirement since then has gone into the board log and `output/pdf/history` instead.
+
+## The commands behind the counts
+
+- `git ls-files <dir> | wc -l`; `git ls-files -z <dir> | xargs -0 cat | wc -w` (and the same filtered to `\.md$`).
+- A Python read of each `MANIFEST.json`: it checks sha256 of each `new_path`, compares `blob` with `git ls-files -s`, and lists tracked files not in the manifest.
+- A Python duplicate scan over `git ls-files -s` blob ids (files ≥500 B, copies outside the folder).
+- `git log --find-object=<blob> -- AGENTS.md _process/RESULT-WORKFLOW.md` for each instruction copy, and the same against `theories/becoming/results/records/<name>` for 6 random snapshots (seed 1).
+- `rg -l --no-ignore-dot` for path mentions; `grep -n` in `tools/research/*.py` and `_process/research-config.json`; a Python link scan over live files.
+- `git log --format=%h -- _process/history/workboard | wc -l`; `git check-ignore sources/12-claude-ai-chats`; `git branch -r --contains fceb4f2bb`.

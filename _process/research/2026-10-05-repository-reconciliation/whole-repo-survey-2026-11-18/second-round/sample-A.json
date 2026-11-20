@@ -1,0 +1,462 @@
+[
+ {
+  "id": "what-keeping-widening-needs",
+  "record": "theories/becoming/results/records/what-keeping-widening-needs.json",
+  "family": "F07",
+  "title": "What keeping widening needs, and what carries it",
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeepingWidening.lean",
+  "chapter_home": "theories/becoming/chapters/07-SIGNIFICANCE.md:100",
+  "declarations": [
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeepingWidening.lean",
+    "declaration": "Becoming.ClosedCycle.bounded_while_opening"
+   },
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeepingWidening.lean",
+    "declaration": "Becoming.ClosedCycle.brief"
+   },
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeepingWidening.lean",
+    "declaration": "Becoming.ClosedCycle.capacity"
+   }
+  ],
+  "laws": 23
+ },
+ {
+  "id": "laws-at-coarser-steps",
+  "record": "theories/becoming/results/records/laws-at-coarser-steps.json",
+  "family": "F01",
+  "title": "Laws of one step at coarser steps",
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sampling.lean",
+  "chapter_home": "theories/becoming/chapters/01-ROOT.md:568",
+  "declarations": [
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/InAmounts.lean",
+    "declaration": "Becoming.World.Counted"
+   },
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sampling.lean",
+    "declaration": "Becoming.Strict"
+   },
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sampling.lean",
+    "declaration": "Becoming.Strict.le_self"
+   }
+  ],
+  "laws": 15
+ },
+ {
+  "id": "mutual-dependence-gives-the-condition-de-se",
+  "record": "theories/becoming/results/records/mutual-dependence-gives-the-condition-de-se.json",
+  "family": "F07",
+  "title": "Mutual dependence gives the condition held de se",
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FlowCenters.lean",
+  "chapter_home": "theories/becoming/chapters/07-SIGNIFICANCE.md:649",
+  "declarations": [
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FlowCenters.lean",
+    "declaration": "Becoming.Clearing.not_unrestricted_ownClosure"
+   },
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FlowCenters.lean",
+    "declaration": "Becoming.Flow.mutuallyDependent_iff_unrestricted"
+   },
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FlowCenters.lean",
+    "declaration": "Becoming.Flow.unrestricted_of_mutuallyDependent"
+   }
+  ],
+  "laws": 3
+ },
+ {
+  "id": "selection-among-groups-by-ending",
+  "record": "theories/becoming/results/records/selection-among-groups-by-ending.json",
+  "family": "F01",
+  "title": "Selection among groups by ending",
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GroupEnding.lean",
+  "chapter_home": "theories/becoming/chapters/04-LIFE.md:202",
+  "declarations": [
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GroupEnding.lean",
+    "declaration": "Becoming.GroupEnding.Ended"
+   },
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GroupEnding.lean",
+    "declaration": "Becoming.GroupEnding.Flow.all_end"
+   },
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GroupEnding.lean",
+    "declaration": "Becoming.GroupEnding.Flow.ended_of_inactive"
+   }
+  ],
+  "laws": 7
+ },
+ {
+  "id": "orders-as-a-sum-over-histories",
+  "record": "theories/becoming/results/records/orders-as-a-sum-over-histories.json",
+  "family": "F01",
+  "title": "The orders of a carried difference as a sum over histories",
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Routes.lean",
+  "chapter_home": "theories/becoming/chapters/02-MAP.md:340",
+  "declarations": [
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Routes.lean",
+    "declaration": "Becoming.Weights.within"
+   },
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Routes.lean",
+    "declaration": "Becoming.Weights.within_exact"
+   },
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Routes.lean",
+    "declaration": "Becoming.Weights.Hom.within"
+   }
+  ],
+  "laws": 5
+ },
+ {
+  "id": "groups-whose-conditions-are-coupled",
+  "record": "theories/becoming/results/records/groups-whose-conditions-are-coupled.json",
+  "family": "F01",
+  "title": "Groups whose conditions are coupled",
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean",
+  "chapter_home": "theories/becoming/chapters/04-LIFE.md:203",
+  "declarations": [
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean",
+    "declaration": "Becoming.Alone.all_continue"
+   },
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean",
+    "declaration": "Becoming.Alone.balances"
+   },
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean",
+    "declaration": "Becoming.Alone.dependent"
+   }
+  ],
+  "laws": 6
+ },
+ {
+  "id": "a-revision-that-opens-a-correction",
+  "record": "theories/becoming/results/records/a-revision-that-opens-a-correction.json",
+  "family": "F04",
+  "title": "A revision of a reading that opens a correction, along one process",
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OpenedCorrection.lean",
+  "chapter_home": "theories/becoming/chapters/03-KNOWING.md:365",
+  "declarations": [
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OpenedCorrection.lean",
+    "declaration": "Becoming.OpenedCorrection.Correctable"
+   },
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OpenedCorrection.lean",
+    "declaration": "Becoming.OpenedCorrection.Linked.acceptable"
+   },
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OpenedCorrection.lean",
+    "declaration": "Becoming.OpenedCorrection.Linked.executable"
+   }
+  ],
+  "laws": 7
+ },
+ {
+  "id": "where-a-rising-take-ends",
+  "record": "theories/becoming/results/records/where-a-rising-take-ends.json",
+  "family": "F01",
+  "title": "Where a rising take ends",
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Exhaustion.lean",
+  "chapter_home": "theories/becoming/chapters/02-MAP.md:309",
+  "declarations": [
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Exhaustion.lean",
+    "declaration": "Becoming.Alone.takes_all"
+   },
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Exhaustion.lean",
+    "declaration": "Becoming.Flow.beyond_given_bounded"
+   },
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Exhaustion.lean",
+    "declaration": "Becoming.Flow.exceeds_of_more"
+   }
+  ],
+  "laws": 5
+ },
+ {
+  "id": "re-optimizing-above-a-renewal-ends-it",
+  "record": "theories/becoming/results/records/re-optimizing-above-a-renewal-ends-it.json",
+  "family": "F04",
+  "title": "Re-optimizing above a renewal ends it",
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+  "chapter_home": "theories/becoming/chapters/05-COLLECTIVES.md:221",
+  "declarations": [
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+    "declaration": "Becoming.Flow.ActsWithin"
+   },
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+    "declaration": "Becoming.Flow.Outcome"
+   },
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean",
+    "declaration": "Becoming.Flow.capacity"
+   }
+  ],
+  "laws": 11
+ },
+ {
+  "id": "a-formations-own-course",
+  "record": "theories/becoming/results/records/a-formations-own-course.json",
+  "family": "F04",
+  "title": "A formation's own course",
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/IdentificationRuns.lean",
+  "chapter_home": "theories/becoming/chapters/03-KNOWING.md:35",
+  "declarations": [
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/IdentificationRuns.lean",
+    "declaration": "Becoming.IdentificationRuns.joint_agree"
+   },
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/IdentificationRuns.lean",
+    "declaration": "Becoming.Web.ValuesThrough"
+   },
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/IdentificationRuns.lean",
+    "declaration": "Becoming.Web.alikeThroughUpTo_iff_prefix"
+   }
+  ],
+  "laws": 5
+ },
+ {
+  "id": "least-footprint-where-idleness-decided",
+  "record": "theories/becoming/results/records/least-footprint-where-idleness-decided.json",
+  "family": "F01",
+  "title": "The least footprint and least order where idleness is decided",
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OrderNormal.lean",
+  "chapter_home": "theories/becoming/chapters/01-ROOT.md:547",
+  "declarations": [
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OrderNormal.lean",
+    "declaration": "Becoming.bool_cases"
+   },
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OrderNormal.lean",
+    "declaration": "Becoming.not_eq_false_iff"
+   },
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OrderNormal.lean",
+    "declaration": "Becoming.Footprinted.DecidesIdle"
+   }
+  ],
+  "laws": 6
+ },
+ {
+  "id": "binding-preserving-substitution",
+  "record": "theories/becoming/results/records/binding-preserving-substitution.json",
+  "family": "F11",
+  "title": "Binding-preserving substitution and its exact position criterion",
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/InferentialSubstitution.lean",
+  "chapter_home": "theories/becoming/chapters/03-KNOWING.md:468",
+  "declarations": [
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/InferentialSubstitution.lean",
+    "declaration": "Generative.InferentialSubstitution.extract_rename"
+   },
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/InferentialSubstitution.lean",
+    "declaration": "Generative.InferentialSubstitution.extract_substitute"
+   },
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/InferentialSubstitution.lean",
+    "declaration": "Generative.InferentialSubstitution.all_terms_agree_iff_positions"
+   }
+  ],
+  "laws": 7
+ },
+ {
+  "id": "recurrent-chain-assembly",
+  "record": "theories/becoming/results/records/recurrent-chain-assembly.json",
+  "family": "F10",
+  "title": "Prepared material joins recurrent chain formation",
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/RecurrentAssembly.lean",
+  "chapter_home": "theories/becoming/chapters/04-LIFE.md:112",
+  "declarations": [
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/RecurrentAssembly.lean",
+    "declaration": "RecurrentAssembly.prepared_repeated_generation"
+   },
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/RecurrentAssembly.lean",
+    "declaration": "RecurrentAssembly.supported_rounds"
+   },
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/RecurrentAssembly.lean",
+    "declaration": "RecurrentAssembly.required_as_growth"
+   }
+  ],
+  "laws": 9
+ },
+ {
+  "id": "a-commuting-learner-drives-no-unread-choice",
+  "record": "theories/becoming/results/records/a-commuting-learner-drives-no-unread-choice.json",
+  "family": "F01",
+  "title": "A commuting learner drives no choice whose values nothing it reads tells apart",
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WeightedCommuting.lean",
+  "chapter_home": "theories/becoming/chapters/05-COLLECTIVES.md:232",
+  "declarations": [
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WeightedCommuting.lean",
+    "declaration": "Becoming.Weighted.Commutes"
+   },
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WeightedCommuting.lean",
+    "declaration": "Becoming.Weighted.Commutes.carried"
+   },
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WeightedCommuting.lean",
+    "declaration": "Becoming.Weighted.Commutes.fixed_expect"
+   }
+  ],
+  "laws": 5
+ },
+ {
+  "id": "errors-by-chance-in-a-pair-keeping-mutual-withholding",
+  "record": "theories/becoming/results/records/errors-by-chance-in-a-pair-keeping-mutual-withholding.json",
+  "family": "F01",
+  "title": "Errors by chance in a pair keeping mutual withholding",
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PairChance.lean",
+  "chapter_home": "theories/becoming/chapters/05-COLLECTIVES.md:139",
+  "declarations": [
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PairChance.lean",
+    "declaration": "Becoming.PairChance.KeepsWithheld"
+   },
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PairChance.lean",
+    "declaration": "Becoming.PairChance.absorbed_share"
+   },
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PairChance.lean",
+    "declaration": "Becoming.PairChance.block_lt"
+   }
+  ],
+  "laws": 4
+ },
+ {
+  "id": "joint-plans-from-a-supported-start",
+  "record": "theories/becoming/results/records/joint-plans-from-a-supported-start.json",
+  "family": "F02",
+  "title": "Joint plans from a supported start",
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/SeededContinuation.lean",
+  "chapter_home": "theories/becoming/chapters/05-COLLECTIVES.md:390",
+  "declarations": [
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/SeededContinuation.lean",
+    "declaration": "SeededContinuation.mutual_history"
+   },
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/SeededContinuation.lean",
+    "declaration": "SeededContinuation.compatible_from_seed"
+   },
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/SeededContinuation.lean",
+    "declaration": "SeededContinuation.seeded_joint_plan"
+   }
+  ],
+  "laws": 3
+ },
+ {
+  "id": "on-whom-the-loss-falls",
+  "record": "theories/becoming/results/records/on-whom-the-loss-falls.json",
+  "family": "F01",
+  "title": "On whom the loss falls",
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolFromCourse.lean",
+  "chapter_home": "theories/becoming/chapters/02-MAP.md:478",
+  "declarations": [
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolFromCourse.lean",
+    "declaration": "Becoming.PoolFromCourse.Borne.locked_hi"
+   },
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolFromCourse.lean",
+    "declaration": "Becoming.PoolFromCourse.Borne.onOthers"
+   },
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolFromCourse.lean",
+    "declaration": "Becoming.PoolFromCourse.Borne.onShapers"
+   }
+  ],
+  "laws": 3
+ },
+ {
+  "id": "the-world-an-interleaving-builds",
+  "record": "theories/becoming/results/records/the-world-an-interleaving-builds.json",
+  "family": "F01",
+  "title": "The world an interleaving builds",
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Interleavings.lean",
+  "chapter_home": "theories/becoming/chapters/01-ROOT.md:551",
+  "declarations": [
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Interleavings.lean",
+    "declaration": "Becoming.Interleavings.LocalLaw.exchangeAt"
+   },
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Interleavings.lean",
+    "declaration": "Becoming.Interleavings.LocalLaw.runUpTo"
+   },
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Interleavings.lean",
+    "declaration": "Becoming.Interleavings.LocalLaw.runUpTo_succ"
+   }
+  ],
+  "laws": 12
+ },
+ {
+  "id": "learning-a-rule-by-narrowing",
+  "record": "theories/becoming/results/records/learning-a-rule-by-narrowing.json",
+  "family": "F11",
+  "title": "Learning a rule by narrowing: safe and greatest answers",
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Narrowing.lean",
+  "chapter_home": "theories/becoming/chapters/03-KNOWING.md:404",
+  "declarations": [
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Narrowing.lean",
+    "declaration": "Becoming.Narrowing.learn"
+   },
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Narrowing.lean",
+    "declaration": "Becoming.Narrowing.mem_learn"
+   },
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Narrowing.lean",
+    "declaration": "Becoming.Narrowing.narrowed_iff_fits"
+   }
+  ],
+  "laws": 5
+ },
+ {
+  "id": "reach-through-a-shared-condition",
+  "record": "theories/becoming/results/records/reach-through-a-shared-condition.json",
+  "family": "F01",
+  "title": "One line reaching another through a shared condition",
+  "canonical_source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean",
+  "chapter_home": "theories/becoming/chapters/07-SIGNIFICANCE.md:473",
+  "declarations": [
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean",
+    "declaration": "Becoming.SharedCondition.Occ"
+   },
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean",
+    "declaration": "Becoming.SharedCondition.affecting"
+   },
+   {
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCases.lean",
+    "declaration": "Becoming.SharedCondition.affecting_member_outside"
+   }
+  ],
+  "laws": 3
+ }
+]

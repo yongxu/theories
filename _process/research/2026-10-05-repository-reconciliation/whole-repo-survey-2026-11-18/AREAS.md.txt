@@ -1,0 +1,60 @@
+# The areas
+
+*AI-written (Claude Fable, the coordinating session), 18 November 2026. Counts are from `git ls-files` and `wc -w` on 18 November; they are tracked files and whitespace-separated words. The whole: about 122,000 tracked files, about 26.6 million words of Markdown, 3.9 GB in `.git`. `LEAN` below stands for `experiments/integrated-correction/general-framework/generative-basis/lean`.*
+
+Each area has the general questions of `BRIEF.md` and a few of its own. Where your area meets another, say what you saw and leave the rest to that area's reader.
+
+## lean-structure
+`LEAN/` as a built thing: `becoming/Becoming/` (406 modules, about 300,000 lines), the package files, `check_becoming.py` (read it, never run it), the periphery (`deeper`, `inquiry-root`, `universal-ethics`, `systems-complexity`, `free-energy`, `learning`, `connected` and the rest), and the generated declaration lists under `theories/becoming/results/lean-declarations` and `theories/becoming/history/lean-declarations`.
+Own questions: which modules are in the build, and how that is decided. The import graph (compute it from `import` lines with a small script): families, modules that no other module imports, modules that import nothing of the package, how far the graph is joined. Lines and declarations per family. Which periphery folders are live and which are retired copies. Adapters and statements proved twice. What the checker's axiom report covers.
+
+## lean-direction
+The same Lean, read for what it says. Take the two paragraphs of `AGENTS.md` that begin "The idea, as now understood" and "It is first a map for alignment", sentence by sentence: which theorems carry a sentence whole, which in part, and for which none was found in what you read. Earlier reads of this exist (14 to 18 November; the study folders `dj-a-line-on-a-stock` and the dig under `_process/research/2026-10-05-generative-foundation-review/root-foundation/development/`; `_process/LEAN-TOWARD-THE-DIRECTION.md`): find them, say what they found, check a sample.
+Own questions: what share of the Lean bears on the direction, and what the rest is (general mathematics, other fields read in Lean, the theorems named in classical Chinese, built examples and kept failures). Where two families state one thing and are not joined. What the Lean has nearest to Ren's picture of 18 November: an account taken for the whole, a holder formed within it that holds to it, and the compounding. Sweep before saying it is absent.
+
+## machinery
+`tools/research`, `tools/publishing`, `Makefile`, `.github`, `_process/research-config.json`, the generated-page manifest, the gate (`gate.py`), the board's queue and landing rules (`_process/BECOMING-WORKBOARD.md`, `_process/RESULT-WORKFLOW.md`), freeze pins, `moves.py` and `_process/architecture/` manifests, the root `.ignore`.
+Own questions: what each check reads and which paths are fixed in code. Which pages are generated, and how many words that is. What would break if a given folder left the working tree. Which rules and tools make the repository grow at each landing (copies per check run, byte-for-byte history, hash-addressed snapshots, generated pages). What a landing costs a session in steps and in time, from the pages and logs, not by running it.
+
+## receipts
+Machine output: `LEAN/becoming/becoming-checks` (about 68,000 files), `LEAN/becoming/fallible-inquiry-checks`, `LEAN/history` (about 12,000 files), receipts under other `experiments/` folders, `_process/architecture/history`.
+Own questions: what a run folder holds and how the content-addressed store works. Which runs a record, the board, the gate or a checker refers to, and which nothing refers to. How many distinct contents there are against how many files. What share of `.git` this is, as far as light commands can tell. What the smallest kept set would be for every live reference to resolve.
+
+## research-development
+`_process/research/2026-10-05-generative-foundation-review/root-foundation/` (the `development` folder has about 8,300 files; also `mirror`, the numbered reviews, the builders there).
+Own questions: what a study folder is and how many there are. Which are cited by a record, a chapter or the board, and which by nothing live. Which hold a failed candidate, a countermodel or a failed test that is not held anywhere else. How much is working sets, landing kits, reader rounds and logs. Whether a study's finding is also said in the account or the Lean, and where the study says more.
+
+## research-history
+`_process/research/2026-10-05-generative-foundation-review/history`, the other folders of `_process/research`, `_process/history` (about 1.6 million words), `_process/architecture` (about 0.7 million words).
+Own questions: what was retired, when, and by which rule. How much is byte-for-byte copies of something that also lives elsewhere or in git history. What here is cited from a live page. What here is the only copy of something.
+
+## sources
+`sources/` (about 4.9 million words in 2,258 tracked Markdown files; about 6,500 tracked files).
+Own questions: the kinds, with sizes: Ren's own words (written, dictated, verbatim records of what he said to a session); transcripts of AI sessions; imported texts; private folders (count only). Where his words of November on the direction are, and whether a reader looking for "what Ren said about X" can find them. How live pages cite sources. How the index works (`SOURCES.md`, `GROUPS.json`). What share of the words here are his and what share are an AI's.
+
+## earlier-tellings
+`drafts/` (about 4.35 million words; one folder, `2026-10-02-iaseai-selecting-the-selectors`, is about 4.0 million words in 700 files), the September branch folders under `theories/` (everything there except `becoming`), `theories/becoming/history` (about 1.0 million words), `worldbuilding/`, `output/`.
+Own questions: what the large draft folder is. Which of these the live account still links to or draws on. What is said here that the present account does not say. What is superseded and by what.
+
+## account
+`theories/becoming/`: `ONE-PAGE`, `THE-THEORY-OF-BECOMING`, `OPENING`, `USES`, `USES-EXAMPLES`, `ONE-ARGUMENT`, `COLLECTIVE-DIRECTION`, `FREE-ENERGY-PRINCIPLE`, the ten files of `chapters/` (about 217,000 words), `review/` (about 99,000 words), and the Chinese editions.
+Own questions: how the layers repeat one another. How a sentence is tied to a theorem (the form of a citation), and what share of chapter paragraphs carry a Lean reference (measure it). Which pages are generated. Where the account says something the direction page no longer holds, or holds in other words. The reading time of each layer. What here a reader needs that the Lean cannot give.
+
+## records-and-map
+`theories/becoming/results/` (1,156 records, about 2.6 million words; `atlas`, `map`, `data`, `lean-declarations`, the standings), the root pages `RESULTS.md`, `DEPENDENCIES.md`, `MAP.md`, and the tools that build them (`atlas.py`, `the_map.py`, `map_sheet.py`, `registry.py`, `connection_map.py`, `theory_graph.py`).
+Own questions: what a record is, and how it is tied to Lean declarations. How much record text repeats a chapter. What data structure the map has now (atlas entries, regions, dynamics, exits, links), how much of it is kept by hand and how much is derived from the Lean. An earlier measure said 86 of 185 dynamics are linked to no other: find it and check it. Whether the Lean's own structure (what rests on what, which premises) could be the map's data, and what it would lack.
+
+## entry-and-direction
+What a new session reads: `AGENTS.md`; the root pages (`README.md`, about 14,000 words, and `README.zh.md`, `GOALS.md`, `OPEN-QUESTIONS.md`, `RESEARCH.md`, `MAP.md`, `GLOSSARY.md`, `TESTS.md`, `COMMONS.md`, `DEPENDENCIES.md`, `RESULTS.md`); the top pages of `_process/` (`DIRECTION.md`, `LEAN-TOWARD-THE-DIRECTION.md`, `BECOMING-WORKBOARD.md`, `RESULT-WORKFLOW.md`, `RESEARCH-DIRECTIVES.md`, `DIRECTIVE-INDEX.md`, `BRIEF.md`, `OPEN-QUESTIONS-KEPT.md`, `LOST-ARTIFACTS.md`, `A-CASE-FROM-OUTSIDE.md`, `goals/`, `navigation/`); `_process/history/2026-11-17-instructions`.
+Own questions: the path a new session follows from `AGENTS.md`, and the words on it. Where a live page gives a direction that differs from `DIRECTION.md`, or presents an older aim as current. What is said on several of these pages. Where the state of the work is written (what is proved, what is assumed, what failed, what is next), and whether one place holds it. What the board costs a session to read and to use. What the repository would need for the work to continue with no AI's memory.
+
+## memory
+(Claude reader only.) `/Users/ren/.claude/projects/-Users-ren-theories/memory/`: 452 files, about 366,000 words, not in git. It is one AI account's private memory of this work.
+Own questions: the kinds, with counts: Ren's direction and his words; how to work with him; craft lessons; machine and git operations; logs of landed items; other projects. Which notes quote Ren, and for each quoted passage whether it is in `sources/` (search a distinctive phrase with `rg --no-ignore-dot`); list those that are not. Which notes repeat a repository page. What here the repository needs and does not hold. What a memory a tenth of this size would keep. Do not change any file there.
+
+## outside-tree
+What is not in the tracked working tree. Git: 157 branch heads, 403 `refs/salvage`, 60 `refs/codex`, a stash, 7 worktrees, and what makes `.git` 3.9 GB (`git count-objects -v`, pack sizes; never `gc` or `prune`). Scratch: the repository's ignored `tmp/` (about 5,300 files) and, for the Claude reader only, `/Users/ren/tmp/` and `~/.cache/cx/worktrees` (names and sizes).
+Own questions: which branches hold commits that main does not. What the salvage refs keep. Which scratch folders a repository page or a memory note points to (for example `/Users/ren/tmp/za-how-far`). What exists only outside git and would be lost with the machine.
+
+## whole
+(astra only.) Read across the repository for its shape; use this page as the list of parts and do not inventory one area. In about 1,500 words: what this repository is as a whole; the five to ten things in it that carry the work, and where each is; what in its own rules and tools makes it grow; if the Lean is the reference and each thing is to be said once, the main obstacles, in order; what you wanted to know that no page told you; and where you think Ren's view or the coordinating session's is wrong. The same rules and marks of how far seen apply.

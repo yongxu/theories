@@ -1,0 +1,61 @@
+{
+ "area": "outside-tree",
+ "headline": "Outside the tree: a 3.9 GB git store (1.45 GB of it unreachable loose blobs, kept only because nothing prunes), local-only refs holding 890 commits not in main (salvage, branches, stashes; none on the remote), and about 47 GB of scratch. The decision most needs to know that scratch is not only scratch. Live pages, the direction page among them, cite scratch files found in no git object, and all of it, private folders included, exists on this one machine with no working backup found.",
+ "loadBearingClaims": [
+  {
+   "claim": "The 403 refs/salvage refs reach 890 commits that are not ancestors of main, and the remote holds no refs/salvage (10 heads, 12 tags, 2 pull refs only), so those commits exist only on this machine.",
+   "evidence": "git rev-list --count $(git for-each-ref --format='%(refname)' refs/salvage) --not main = 890; git ls-remote origin namespaces counted",
+   "howFarSeen": "counted"
+  },
+  {
+   "name": "",
+   "claim": "tools/research/gate.py reads refs/salvage: a record pin to a commit not in HEAD's history passes only if refs/salvage contains it, so moving or removing salvage refs can break the gate.",
+   "evidence": "gate.py lines 739-741 (salvaged) and 870-878",
+   "howFarSeen": "read in part; the number of pins that depend on it not counted"
+  },
+  {
+   "claim": "About 1.45 GB of .git's 3.9 GB is 15,025 blobs reachable from no ref (433 of them over 1 MB, 811 MB); the largest six are MATLAB MAT-file data; gc.pruneexpire is set to never.",
+   "evidence": "git cat-file --batch-all-objects --batch-check minus git rev-list --objects --all; git config --get-regexp gc.",
+   "howFarSeen": "counted; content sampled 6 of 15,025"
+  },
+  {
+   "claim": "Live pages cite scratch files that are in no git object: _process/BECOMING-WORKBOARD.md cites tmp/r7/one-model/check/round8/STEP-2-ON-PAPER.md (exists, hash not in git) and tmp/r7/words/scan/; _process/DIRECTION.md's head note says two of the three findings behind its 18 November correction are in scratch, not in the repository.",
+   "evidence": "rg on the board and direction page; git hash-object of the file then git cat-file -e",
+   "howFarSeen": "counted for the board; the direction sentence read; the files behind it not identified"
+  },
+  {
+   "claim": "Of 1,555 .lean files under tmp/r7, 248 are distinct, 214 are byte-identical to a file on main's index, and 34 are in no git object.",
+   "evidence": "find tmp/r7 -name '*.lean' | xargs git hash-object, compared with git ls-files -s and the all-blobs list",
+   "howFarSeen": "counted"
+  },
+  {
+   "claim": "147 of 157 local branch heads are ancestors of main; 8 branches carry patches not in main by git cherry, the largest ue31-design (8 commits, 10 files, 4,091 inserted lines, last 3 November).",
+   "evidence": "git rev-list --count main..$b per head; git cherry main $b; git diff --stat main...ue31-design",
+   "howFarSeen": "counted"
+  },
+  {
+   "claim": "The six registered worktrees under /Users/ren/tmp have no modified tracked files (ed6/gate has one untracked file), and the orphaned .claude/worktrees/agents-board (874 MB, gitdir gone) holds no file outside git.",
+   "evidence": "git -C <wt> status --porcelain; hash-object of agents-board's 6,941 non-build files against all blobs",
+   "howFarSeen": "counted"
+  },
+  {
+   "claim": "Private folders (sources/12, 13, 18, the two friend-conversation folders) and experiments/guardian-anarchy (own .git, 2 commits, no remote) are kept only on this machine; tmutil latestbackup failed to mount its destination.",
+   "evidence": ".gitignore; find/du counts; git -C experiments/guardian-anarchy remote -v empty; tmutil output",
+   "howFarSeen": "counted; backup elsewhere not checked"
+  }
+ ],
+ "againstTheViews": [
+  "Against 'much is garbage': almost nothing here is prose to compress; the bulk is unreachable blobs and worktrees, which cost disk and not reading, so removing them would not make the map more joined.",
+  "Against 'trace can leave the reading path without loss': true of git on this machine, but the salvage refs, the only copy of 890 commits, are not on the remote, and live pages including the direction page already rest on scratch files outside any git object.",
+  "The layout rule's 'nothing is deleted' is kept in git (pruneexpire never, salvage before removal) but not in scratch: /private/tmp drops unread files after about three days, and /Users/ren/tmp is tracked nowhere."
+ ],
+ "notDetermined": [
+  "Whether the remote LFS holds the 4 LFS objects.",
+  "How many record pins name salvage-only commits.",
+  "The contents of 206 of 219 /Users/ren/tmp entries.",
+  "Whether any of the 15,025 unreachable blobs hold content found nowhere else.",
+  "Whether any backup of this machine exists.",
+  "Which sessions still use the six worktrees and refs/codex.",
+  "Whether the 16 October cruft-gc plan was run in the form it proposed."
+ ]
+}

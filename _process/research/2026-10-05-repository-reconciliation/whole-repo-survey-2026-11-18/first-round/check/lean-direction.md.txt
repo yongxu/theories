@@ -1,0 +1,82 @@
+# lean-direction: the check
+
+*AI-written (Claude Fable 5.2, the checking reader), 18 November 2026. Nothing was changed, built or run; every count below is from a read-only command or a small read-only script, given with it. Statements and docstrings were opened; proofs only where printed with a statement. No person has checked this.*
+
+`B/` = `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/`; `L/` = its grandparent `.../generative-basis/lean/`; `DJ/` = `_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/`.
+
+## In short
+
+Both reports are sound on almost everything I could open. The astra report had no error of fact in the twenty-odd statements I checked; it is narrower (it saw neither the proof kept outside git, nor the import isolation, nor the prose share). The Claude report is wider and its counts reproduce, with five errors of fact, the worst being its headline set "six modules written or reworked since 13 November": two of the six are October modules untouched since, and two modules that were changed since are left out.
+
+Three things neither report says, which a decision would want:
+
+1. **Chapter 02 defines the meta-attractor in the Lean's terms.** `theories/becoming/chapters/02-MAP.md:412` has a **Definition** of 元吸引子 (a loop of selection whose rule and whose reading of the rule are both formed from the share it selects, nothing in it reading what lies beyond the share), followed at once by the closed-capture theorem (`ClosedCapture.courses_alike_iff_unread`, `lock_outlives_loss`, `turned_by_loss`), and `B/ChoiceCountCapture.lean:77` speaks of "the meta-attractor of 02, whose reading too is formed from the share (`ClosedCapture.both_reads`)". So "named only in docstrings" is true of declaration names and understates what the Lean states under the name closed capture.
+2. **The web's classes do meet a reading, in a built process.** `Renewable.prefix_does_not_decide` (`B/Horizon.lean:108`) and `Renewable.no_exact_finite_reading` (`B/LabelledRoles.lean:171`): for every horizon two runs agree through it and one renews, the other consumes; so no reading decided by a finite prefix is the whole-course classification. `B/LabelledRoles.lean` also names `AlikeThroughUpTo` and `ClassThrough` beside `RenewingIn`. The Claude token count (0 of 23) is right as counted and does not show this; astra cites the first theorem.
+3. **"The Lean" is more than the 406 modules.** `git ls-files L/ | grep '\.lean$'` gives 34,327 tracked Lean files; outside `B/`, outside `history/` and outside time-stamped check folders there are 974, of which 420 are not run or source copies (`universal-ethics` 309, `inquiry-root` 291, `deeper` 95, `systems-complexity` 89 before that last filter). Among them are `L/GeneratedSelf.lean` (namespace `Generative.SelfFormation`, marked as an earlier version of a spine law) and `L/AcquiredPerspective.lean` (last changed 7 October). The Claude report's sweep for the picture of 18 November covered the 406 only, as it says; astra named these two.
+
+## Where the reports differ, settled by looking
+
+| topic | Claude | astra | what the repository shows |
+|---|---|---|---|
+| lines in the 406 modules | 300,526 | 300,528 | Both. `cat B/*.lean \| wc -l` = 300,526; Python `splitlines` = 300,528; `Retaining.lean` and `Significance.lean` end without a newline. |
+| theorems | 20,359 | 20,278 | Both, on different bases. A Python regex over the source (attributes and modifiers allowed) gives 20,359 in 406 files. `becoming-verification.json` (run `20261116T014928`) sums 20,278 over its 406 spine rows, which include the root file and exclude `FallibleInquiry` (31 theorems). |
+| reach of the reads | 118 modules, 36% of lines, named on six pages | 76 modules, 23.7% of lines, on the five family lines of the 16 November read | Both reproduce (my script: 118 / 35.9%; family lines 19, 8, 18, 16, 15 = 76 modules, 71,168 lines). Different questions. |
+| what repeats | tellings in six places; families not joined | byte copies: 1,240 further index paths hold the 406 blobs | Both. `git ls-files -s -- L _process theories/becoming` grouped by blob: 406 distinct blobs, 1,240 further paths; every module has at least one copy. Astra did not look at unjoined families beyond one pair; Claude did not count copies. |
+| idea, sentence 1 | `Whole.parts_unceasing`, `Flow.fed_from_beyond` | `Grammar.«住»` only | Claude's are nearer (`B/Wholes.lean:164`: a whole arising without end has parts arising without end; `B/Continuation.lean:180`). Astra's "neither requires replacement by other parts" is true of what it sampled. |
+| idea, sentence 3 | `gated_threshold`, first conjunct | `drains_below`, `drain_perfect` | The same law. `gated_threshold` (`:774`) is proved from `drains_below` (`:367`) and `drain_perfect` (`:386`); astra is right that `drains_below` holds for any next-stock law `G`. |
+| nearest to a holder | `ReadingLoop.Loop`, `ChoiceCountCapture.counted_locks`, `Seeking`, `Boundaries` | adds `ReadingLoop.Untested.model_or_order` (`:974`), `ChoiceCountCapture.counted_outlives_loss` (`:414`), `GeneratedSelf`, `AcquiredPerspective` | All exist as described. Both say the three (account, holder formed within it, compounding) were not found in one statement; my sweep of declaration names for self, account, holder over the package and the 420 non-copy periphery files found none either. Not found in what was swept; the 288 modules named on no direction page were not read by anyone for this. |
+| what a session never opens | lists `sim/`, `search/`, reader JSON, `held/`, `briefs/`, `kit/` | "cannot establish that a session never opens any particular file" | Astra is right about what can be established. Claude's list is a judgment, not a finding. |
+
+## The Claude report's load-bearing claims
+
+1. **Sentence 2 of the alignment paragraph stated whole, twice; the next two in part.** Confirmed. `B/Selection.lean:137` (`SelectsThrough` is defined as respecting likeness through the couplings) and `:188-195` (`selects_alike_iff`, docstring: "The law states what the definition builds in"); `B/LineOnAStock.lean:547` (`ways_alike`: the conclusion is that the two ways are the same, with needs and offspring given), `:1011`, `:1057`; `B/TurningInTime.lean:1440`, `:1633`. `grows` and `more` are premises as said.
+2. **No declaration named for the meta-attractor or instrumental convergence.** Confirmed for names, in the package and in the 974 periphery files: 6 modules and 9 lines for "meta-attractor", 3 modules and 5 occurrences for "instrumental"; the only declarations with "attractor" in the name are 10 in `HexagramLaws.lean`. Two corrections: 5 of the 9 hits are not under a "Readings (the AI's)" heading (`ReadingsPersist.lean:72-73, 552, 1313`, two of them theorem docstrings; `ChoiceCountCapture.lean:77`); and see point 1 above for what the map's chapter does with the name.
+3. **The line model shares no token with the web's statements; 0 of 23.** Confirmed as counted (`grep -c` per token; the loop printed nothing; 23 files). Partly as to what it is taken to show: see point 2 above. `LineOnAStock` does import `Selection` and `Dependence` transitively (both are in its closure) and uses neither by name.
+4. **No import path between the six and the modules cited for the idea's later sentences.** Confirmed by my own closure script: none of `ReadingLoop`, `RelativePosition`, `SharedCodes`, `ReflexivePrediction`, `PartialReadout`, `CoupledDrawers` is upstream or downstream of the six; the three named have no importer but the root file. One nuance: `ModelStatements` imports `SharedCodes` and is downstream of the six, so they meet in one importer.
+5. **`rises_by_draw` is used by nothing; `ends_iff_below` is named in `TurningInTime` only in docstrings.** Confirmed, and beyond the package: `rg --no-ignore-dot -g '*.lean'` over the whole repository finds `rises_by_draw` only in copies of `RegimeMargin.lean` and the generated signature and audit files. `ends_iff_below` at `TurningInTime.lean:36` and `:1917` only; `unending_iff_above` (`:958`) is proved from `regime_levels`, `held_above` and `Optimum.ends_within`. The two do share `RegimeMargin.Short`, `Meets`, `Keeps`, `FromNothing` and `step`, so the level `H + y` is one definition used twice with no theorem between; this pair is nearer to joined than the others listed.
+6. **118 of 406 named; the six are 11,219 lines and stand on 160 modules, 49% of lines.** Confirmed (my regex differed and gave 118 and 35.9%). Precisely: the six import 154 other modules (45.1% of lines); 160 and 48.9% count the six themselves.
+7. **26% of lines are comments; about 996,000 words; 95 modules mark AI readings; 45 name Ren saying something.** The first three confirmed (78,091 lines; 996,411 words; 354,330 in first module heads; 95). The fourth not: the stated pattern gives 28 modules; 82 name Ren at all. The root file `Becoming.lean` (5,340 lines, 405 imports) is prose too and is not in the count.
+8. **The proof joining `RelativePosition` to `SelectionTerm` is not in git.** Confirmed. `git grep -l keeps_iff_same_terms` gives three files, all in `DJ/read-2026-11-16/`, none a proof; `git ls-files | grep -c ScratchPositionTerms` = 0; the file exists at `/Users/ren/tmp/dj/batch18/position-terms/Becoming/ScratchPositionTerms.lean` (419 lines, `theorem keeps_iff_same_terms` at line 176, a `build.log` beside it). `CARRY-ON.md:40` names the path too. Whether it still builds was not checked.
+
+Other statements of the Claude report I checked: all eighteen cited theorem lines stand; 605 theorems in the six; 664 Han-named theorems in 22 modules; `DJ/` holds 179 py, 43 json, 23 out; five scratch files of 3,337 lines; four held snapshots of 7,426 lines, none byte-equal to any committed version of its module (`git hash-object` against every version on the path); no chapter names `LineOnAStock`; the record is 6,286 words; 101 lines in 9 tracked files outside `DJ/` link `DJ/NOTE.md`; the direction page and the plan cite 99 backticked identifiers of which all theorem names resolve (the rest are namespaces, files, commit ids and one removed helper); `DIRECTION.md:9` does say the web "has no selecting in it and no turning" while `Web.SelectsThrough` and `Web.ReadableInTime` are defined over `Web`.
+
+## The astra statements a decision would most rest on
+
+- **One alignment sentence whole, for every selection through the couplings; one selector may ignore an available distinction.** Confirmed (`Selection.lean:188-195`).
+- **`falls_to_unmet` and `locked_ends_rising` with the premises it lists.** Confirmed against the statements (`LineOnAStock.lean:1057`, `TurningInTime.lean:1440`); `Three.read_at_eight_ends` is at `:2638` with the course it describes.
+- **The five lists cover 76 modules, 23.7% of lines; 330 remain, of which it sampled 11.** Confirmed by count. Its conclusion that no judgment about the 330 follows is the right size for that sample.
+- **Every module has an exact copy; 1,240 further paths.** Confirmed.
+- **`WayOfUnits.unending_iff_holds` invokes `LineOnAStock.unending_iff_holds`; the options record calls the coupling law "related, not a proved adapter".** Confirmed (`WayOfUnits.lean:400-410`; `theories/becoming/results/records/selection-through-a-model-of-the-options.md:68`).
+- **The gap: no theorem forms a holder inside its mistaken account and derives the drain.** Not settled as an absence; agreed by both reports and by my name sweep, none of which read the bodies of the unnamed modules.
+
+## Errors of fact
+
+**Claude report: 5.**
+1. (worst) "six modules written or reworked since 13 November". `RegimeMargin.lean` was added 20 October and last changed 10 November; `RuleCapture.lean` was added 19 October and last changed 28 October. Since 13 November 00:00 +07 the package's changed modules are `TurningInTime`, `LineOnAStock`, `WayOfUnits`, `LineOnAStockCases`, `GuardedStep`, `GrammarPath`. The four that are both in its list and new or changed are 6,635 lines, 2.2%.
+2. "`git log --since=2026-11-13 --numstat` (+4,817 −370, four modules)". A bare date in `--since` takes the time of day of the run; with `--since='2026-11-13 00:00:00 +0700'` it is +7,567 −633 over six modules.
+3. "45 name Ren saying something": 28 by its own pattern.
+4. "each under 'Readings (the AI's)'": 5 of the 9 meta-attractor hits are not.
+5. "a 900-word head note": 679 words (`DIRECTION.md` before its first `##`).
+
+Not counted as errors: the head note's "nine files" (it links three files and a folder of six); "remaking and using up" listed under "no statement between" although six `static_*` iff theorems (`Dependence.lean:188-212`) join the two, which the same line says.
+
+**astra report: 0** in what was checked. Its limits are of coverage: it does not report the unlanded proof, the import graph, or the prose share, and its sentence 1 misses nearer theorems.
+
+## What a decision can rest on
+
+The Lean statements cited for the two paragraphs exist at the lines given, with the premises both reports name. One alignment sentence is stated whole and holds by definition on the web; the two after it are stated in part with growth handed in. October's modules that carry the idea's later sentences have no import path to the line and turning models. A quarter of the package's lines are prose. The only sentence-by-sentence ties to theorems are the reads under `DJ/`, which `DIRECTION.md` links; they are not trace that can leave unnoticed. One proof that the reads name is outside git. Every module has byte copies elsewhere in the tree.
+
+## What it cannot yet rest on
+
+- That the Lean has nothing for the meta-attractor: chapter 02 defines it and `ClosedCapture` states laws of that definition.
+- That the web's classes and reading are unjoined: `Horizon` and `LabelledRoles` join them in a built process.
+- Any share of the Lean "bearing on the direction": the 37 / 30 / 12 / 9 / 7 / 5 split is a judgment from titles; 288 modules were never read for the direction; the periphery was not surveyed by either reader.
+- "Six modules, 4%, hold this month's work": the set is mislabelled; see error 1.
+- The absence of a holder formed within its account: swept by words and names only.
+- The share of built examples and kept failures (the plan's "a quarter to a third"), and the plan's "710" (the receipt has 664 by last name component, 682 by full name): not reproduced.
+- Whether the five scratch files and the proof outside git still build.
+- What an edit to a docstring costs in the checker: not read by me; left to the machinery area.
+
+## Commands
+
+`cat B/*.lean | wc -l`; Python over `B/*.lean` for theorem heads, `/- … -/` blocks, `import Becoming.X` closures and importer sets; `sed -n` at each cited line; `grep -ciE` for the meta-attractor and instrumental patterns over `B/` and over the periphery list from `git ls-files L/`; `git log --since='2026-11-13 00:00:00 +0700' --numstat --format= -- B/`; `git log --diff-filter=A` per module; `git ls-files -s` grouped by blob; `git grep -l keeps_iff_same_terms`; `git grep -c 'dj-a-line-on-a-stock/NOTE.md' -- theories _process/…`; `rg --no-ignore-dot -l rises_by_draw -g '*.lean'`; Python over `becoming-verification.json` for spine theorem sums and Han names; `git hash-object` on `DJ/held/*` against `git rev-parse <commit>:<path>` for every version. One command (`git log --all -S…`) ran past two minutes and was stopped; its question was answered by `git grep` instead. BSD `grep -cE '^\s*…'` under-counts here (79 against 113 theorem heads in `TurningInTime.lean`); the counts above use Python.

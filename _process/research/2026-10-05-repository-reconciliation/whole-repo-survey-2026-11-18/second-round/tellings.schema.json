@@ -1,0 +1,30 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["model", "items", "summary"],
+  "properties": {
+    "model": { "type": "string" },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "declaration", "statement_gist", "record", "record_fault", "chapter", "chapter_fault", "docstring", "docstring_fault", "tellings_agree", "note"],
+        "properties": {
+          "id": { "type": "string" },
+          "declaration": { "type": "string" },
+          "statement_gist": { "type": "string", "description": "the hypotheses and conclusion of the Lean statement, in a sentence or two" },
+          "record": { "type": "string", "enum": ["exact", "says-less", "says-more", "says-other", "absent"] },
+          "record_fault": { "type": "string", "description": "the words at fault and the premise or conclusion involved, or empty" },
+          "chapter": { "type": "string", "enum": ["exact", "says-less", "says-more", "says-other", "absent"] },
+          "chapter_fault": { "type": "string" },
+          "docstring": { "type": "string", "enum": ["exact", "says-less", "says-more", "says-other", "absent"] },
+          "docstring_fault": { "type": "string" },
+          "tellings_agree": { "type": "boolean" },
+          "note": { "type": "string" }
+        }
+      }
+    },
+    "summary": { "type": "string", "description": "at most 150 words: what the twenty show, and what they cannot show" }
+  }
+}

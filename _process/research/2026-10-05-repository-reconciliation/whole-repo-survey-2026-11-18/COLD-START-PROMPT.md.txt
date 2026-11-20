@@ -1,0 +1,14 @@
+You have just been given this repository and no other context. Do not use any memory of earlier sessions here.
+
+Begin as the repository's own instructions tell a newcomer to begin, and read for as long as a careful newcomer would in about an hour. Change nothing. Do not build, test, render or run any checker. Do not start subagents. Do not open these private folders: sources/12-claude-ai-chats, sources/13-claude-memories, sources/18-friend-conversations, drafts/2026-10-02-friend-conversation, tmp/. Do not read anything under tmp/.
+
+Then answer in Markdown, plainly, starting with one line that names the model you are:
+
+1. In your own words: what is this work, and what is wanted?
+2. The idea as it is now understood, in about five sentences.
+3. How far has it been seen: what is proved, what is argued, what failed? Name the page where you read each.
+4. What is being worked on now, and what would you do next? Name the page that told you.
+5. Which decisions are kept for Ren?
+6. Where did the pages you read disagree with each other, or send you to something older as if it were current?
+7. What did you look for and not find?
+8. The files you read, in the order you read them, with rough word counts, and the total.

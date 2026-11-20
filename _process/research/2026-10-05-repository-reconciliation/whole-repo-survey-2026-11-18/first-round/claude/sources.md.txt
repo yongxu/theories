@@ -1,0 +1,86 @@
+# sources: what is there
+*AI-written (Claude Opus 5.5), 18 November 2026. A survey; nothing was changed.*
+
+## In three sentences
+`sources/` is 6,538 tracked files (1,557 MiB, about a quarter of the repository's tracked bytes) and 4.88 million Markdown words, but Ren's own words are a small part of it. The words are mostly AI-written: Codex session workspaces of 4 to 5 October (1.57M), Ren's earlier projects that he built with AI agents (2.28M), and agent reports inside the "prompts" export (0.57M). The bytes are mostly imported data that experiments read. What a continuing session needs from here is narrow: the directive records of group 15 (Ren's words, timestamped and verbatim, with AI context labelled), the data the experiments and verifiers read, and the classical texts. The protection "never edited, never moved" covers all of it equally, Ren's words and AI snapshots alike.
+
+## What is there
+
+Counts come from `git ls-files` with a short Python script (see the last section). Words are whitespace-split words in `.md` files only.
+
+| kind | files | md words / size | beside the Lean | unique? | what reads it | how far seen |
+|---|---:|---|---|---|---|---|
+| A. Ren's writings and earlier projects, groups 00–11 (06 智善, 07 生生不息 incl. an earlier Lean repo, 08, 09, 10 …) | 1,033 | 2,275,646 / 24 MB | earlier tellings, plus some of Ren's own words (01 is in his hand) | yes; no byte copies outside `sources/` | 74 live links to 07, 16 to 06; no checker | counted; sampled 4 groups |
+| B. Claude Code "user prompts" export, group 14 | 17 | 664,774 / 6 MB | Ren's prompts **and** subagent reports: 572,028 words (86%) lie inside `<task-notification>` blocks | the prompts, yes; the reports are AI output | 24 live links | counted; sampled 2 files |
+| C. Directive records, groups 15–17 | 402 | 212,619 / 2 MB | Ren's words verbatim, with AI context; blockquoted lines are 28,570 words (14%) of group 15 | yes | 2,319 live links; the generated DIRECTIVE-INDEX; the gate | counted; read the two November records in part |
+| D. AI session snapshots and handoffs, groups 19–21, 25, 26 (group 20 alone: 2,402 files, 1,467,346 words) | 2,429 | 1,568,943 / 327 MB | trace: Codex workspaces of 5 October, with runs, outputs, countermodels | partly: 1,081 of group 20's files are extra byte copies of other `sources/` files | 22 non-history files cite group 20 (atlas crosswalk greek-roman, selective-handoff experiment) | counted; sampled names in 3 sessions |
+| E. Imported evidence, groups 22–24, 27–42 | 1,143 | 76,162 / 189 MB | coupling: primary data, papers, provenance | yes (originals with hashes) | experiment scripts (28-agentdojo 27 refs, 24, 29, 30, 32 …) | counted |
+| F. Ren's projects built with Codex, named (中华思想脉络 v1.0, 文理生生 v0.4) | 538 | 27,505 / 55 MB | earlier tellings and data | yes | gate test `test_classical_verifiers` watches civilization-thought | counted |
+| G. Classical and philosophical texts (周易, Zhou books, 王陽明, 大學 …) | 212 | 924 / 7 MB | imported originals with revision ids and SHA-256 | regenerable from Wikisource in principle, but pinned | verifiers, crosswalk records, gate | counted |
+| H. Imported scientific evidence, named (situated-recovery 594 MB, evolutionary-selection 339 MB …) | 762 | 14,601 / 947 MB | coupling: data | yes | experiment scripts (evolutionary-selection 21 refs, tclab 13, …) | counted |
+| Index pages: README.md (generated), SOURCES.md (hand-kept) | 2 | 35,686 | finding aids | SOURCES.md's dated import notes, yes | README by `indexes.py`; SOURCES.md by no tool found | read README whole, SOURCES.md headings |
+| Private, untracked: 12-claude-ai-chats, 13-claude-memories, 18-friend-conversations | 403 / 197 / 108 | 13 MB / 0.9 MB / 204 MB on disk | Ren's chats, AI memories, recordings | yes | nothing tracked | counted only |
+
+Ren's words, by share: what can be measured as his is at most about 0.2–0.3M of the 4.88M words. That is the blockquotes of group 15 (≤28.6k, and some of these are text he pasted), the non-notification part of group 14 (≤93k, with prompts repeated across sessions), group 01 (87k), and parts of 00–05. This is inferred from those counts and from samples. Groups 03–10 are his projects, but the files do not show which sentences he wrote and which an agent wrote (sampled 07's README and 06's README, both agent-style). Group 03 holds GPT reviews.
+
+Where his November words on the direction are: all of 13–17 November is in two files (counted by `git show --name-only` on the filing commits). They are `15-codex-theory-conversations/2026-11-13-the-map-one-model.md` (13 to 15 November, under a section headed "The direction, 14 November 2026, evening", which runs on into 15 November) and `2026-11-16-no-corners-the-interconnected-map.md` (16 and 17 November, including 17:04–17:08 and "Yes, resume"). Each message has its own time stamp, says whether it was typed or spoken, and is kept verbatim, with the AI's context labelled. His words of 18 November are not yet here, as the brief says.
+
+## What repeats
+
+- Inside `sources/`, 1,181 non-empty files are extra byte-identical copies of another `sources/` file (same git blob): 68 MB and 848,540 Markdown words, 17% of the area's words. Of them, 1,081 are in group 20, whose sessions saved `snapshots/` of one another (287 files under `snapshots/` or `source-snapshots/` hold 571,240 words), and 43 are in civilization-thought. Counted.
+- Outside `sources/`, 137 non-empty files have byte-identical copies, almost all under `experiments/history/` and `_process/history/` (from groups 20 and 22). Four group-15 records are copied in `theories/evolving-community-swarms/context/`. Counted.
+- Older versions of `SOURCES.md` are saved as "before" copies in `_process/` (four files of 220–315 KB). Counted by name; not compared.
+- Near copies (the same text re-saved with edits) were not measured.
+- What `00-early-2021-2022/README.md` itself states: its wamotopia file is a duplicate of the manifesto in group 02.
+
+## What depends on it
+
+- **Links.** Markdown outside `sources/` holds 6,844 links into it. 3,999 are from history, frozen or `-BEFORE-` paths. The other 2,845 come from 809 files (`_process` 1,630, `theories` 946, `GOALS.md` 60, `README.md` 4), 2,319 of them to group 15. 276 carry a `#anchor`, so headings inside the records are pinned by citations. Counted by regex; a few links may be missed.
+- **Tools.** `tools/research/paths.py` classes everything under `sources/` as "source: never edited, never moved". `moves.py` excludes it from rewrites. `indexes.py` writes `sources/README.md` and `_process/DIRECTIVE-INDEX.md` from the directories, and those directories are all it reads; it does not read `SOURCES.md`. `gate.py` warns when a directory has no tracked files, and `test_classical_verifiers` watches `sources/zhouyi-yizhuan/**`, `chinese-classical-texts/**` and `civilization-thought-v1.0/**`. `build_site.py` refuses any `sources/` path, so the public site carries none of it. Read.
+- **Experiments.** 112 non-history `.py` files under `experiments/` name `sources/` paths. Counted.
+- **Manifests.** JSON files outside `sources/` that name `sources/` paths: `_process` 1,329, `theories` 267, `experiments` 217. Counted by file, not by line; most are under history folders (inferred from the link split above).
+- **GROUPS.json** is named in `_process/REPOSITORY-LAYOUT.md` (line 49) and was planned by the 16 October review, together with `MANIFEST.tsv`. Neither exists in the tree, and `git log --all` finds neither in history.
+
+## What a continuing session needs from here
+
+It needs the group-15 records, above all the two November files, reached through `_process/DIRECTIVE-INDEX.md`. It needs the evidence groups that experiments read, the classical texts the verifiers and crosswalk read, and `SOURCES.md`'s dated import notes for provenance. Inferred from what links and tools read: it should never need group 20's `work/` trees, group 14's agent reports, or the `snapshots/` copies.
+
+Finding "what Ren said about X" is the weak point (read). The index lists each record by file and by the title of its first message. Later messages are appended to an existing file under a time stamp, sometimes inside a section whose heading names an earlier day. The hand-kept register `RESEARCH-DIRECTIVES.md` stops at 13 November and mentions neither November direction file (0 matches). `SOURCES.md` has 3 lines dated November and was last changed on 11 November. Today a reader finds his words of 14–17 November through the private AI memory or by reading those two long files. That goes against item 5 of the brief (the repository alone should be enough).
+
+## Candidates
+
+- **Group 15–17 (directive records): stays.** These are Ren's words, with 2,319 live links and 276 pinned anchors. What would help is a finding aid, not a move: index entries per dated message, or a register brought up to date. Risk of changing the records: broken anchors. First: the index generator in `indexes.py`.
+- **Groups E, G, H, and F's data: stays.** Experiments and verifiers read them by path, and freeze manifests hash them. Before anything moved, every script path and manifest would have to change. Leaving them in place costs nothing on the reading path, because they are data.
+- **Group 20 (and 19, 21, 25, 26): could leave the working tree.** Evidence: 1.57M words, 1,081 internal copies, 22 non-history citers, and the site already refuses it. Risk: the 22 citers (the atlas crosswalk, the selective-handoff experiment and its fixtures) and the history receipts that hash these paths would break. First: repoint or freeze those 22, and relax `paths.py`'s "never moved" rule for this group. Countermodels and failed runs are kept here (307 group-20 `.md` files mention countermodels, counterexamples or failed tests). Git keeps them either way, but how they are reached would change.
+- **Group 14: cannot tell.** Splitting Ren's prompts from the 86% that is agent reports would be a new reading edition, which the layout rule allows only labelled and registered, with the original kept. The 16 October review recorded an OpenRouter key here. The credential check allowlists it as revoked, and the pattern still matches 4 lines in 3 files (counted; key not printed).
+- **Groups 00–11 and F's prose: could be said once and pointed to**, as earlier tellings, if a page said what each project was and where it stands beside the Lean. They are not repeated byte for byte elsewhere, so they stay as originals.
+- **`SOURCES.md`: cannot tell.** It is a hand-kept manifest that no tool reads and that has stopped growing. It is unique as provenance prose, and partly superseded by the generated README and the per-group PROVENANCE files.
+- **The layout rule's GROUPS.json: should be said as it is.** The line names a file that was never made.
+
+## Against the two views
+
+Against "much is garbage": the bytes are mostly data that experiments read and that manifests hash, and the group-15 records are carefully made (time stamps, typed or spoken, AI context labelled). Neither is garbage. Against "most is trace and machine output that can leave without loss": the 2.28M words of groups 00–11 are neither. They are Ren's earlier work, the only copy, and an earlier Lean repo (07's `ssbx-repo`, whose README admits about 150 `sorry`s, a failure kept). Group 14 is mostly agent output but holds Ren's prompts inside it. Supporting the second view: group 20 is AI trace, about a third of it repeated. One finding fits neither view: the area's own protection treats AI snapshots and Ren's words alike ("source", never moved). That is why 1.5M AI words sit beside his words, outside the history convention.
+
+## Not determined, and surprises
+
+- I could not tell which sentences in groups 03–10 are Ren's own hand.
+- The 16 October review gave "about 67k receipt references" binding `sources/` paths of groups 20–25 as the reason to keep them in place. At HEAD, 617 lines in 119 files outside `sources/` match `sources/2[0-5]-`. The basis has shrunk, or was counted another way. Not reproduced.
+- The private groups 12, 13 and 18 were tracked from 25 September to 19 October (commit `cbe909fe9` stopped tracking them), and that history is on `origin/main`. A memory note says Ren accepted already-pushed history. Counted; not judged.
+- The group name `15-codex-theory-conversations` now holds mostly Claude Code records (12 of 13 November files name Claude Code first).
+- Since 17 October, changes inside `sources/` touched 48 group-15 records and only provenance or README files of imported groups. The originals were not edited. The only deletions were the 697 private files.
+- The direction on this page: AGENTS.md's "his words are kept verbatim in `sources/`" holds for the records (read in part). But the area's mass says the opposite of its name: it is mostly AI text.
+
+## The commands behind the counts
+
+- `git -c core.quotepath=off ls-files -z sources`, summed per group and per kind with `os.path.getsize` and `len(text.split())` for `.md` (a scratch script).
+- `git ls-files -s -z`, grouping paths by blob hash, for the copies inside and outside `sources/`.
+- `re.finditer(r'<task-notification>.*?</task-notification>', re.S)` over group 14, for the 86%.
+- Lines starting with `>`, over groups 15 to 17, for the blockquote shares.
+- `rg -o --no-ignore-dot --with-filename -g '*.md' -g '!sources/**' -g '!tmp/**' -g '!work/**' 'sources/[^)#\s]+(#[^)\s]*)?\)' .`, split by `/history/`, `/frozen/` and `-BEFORE-`, for the links.
+- `rg -l --no-ignore-dot 'sources/' -g '*.py' experiments`, for the experiment scripts.
+- `rg -c --no-ignore-dot 'sources/2[0-5]-' -g '!sources/**' -g '!tmp/**' .`, for the 617 lines.
+- `git log --since=2026-10-17 --diff-filter=M|D --name-only -- sources`, for the changes since 17 October.
+- `git log --all -- sources/GROUPS.json`, empty.
+- `git ls-tree -r origin/main -- sources/14-claude-code-prompts` and `git log origin/main -- sources/12-claude-ai-chats`, for what is on the remote.
+- `find <private dir> -type f | wc -l` and `du -sh`, for the private folders.
+- `git ls-files -z | xargs -0 stat -f%z`, for the repository total (5,922 MB).

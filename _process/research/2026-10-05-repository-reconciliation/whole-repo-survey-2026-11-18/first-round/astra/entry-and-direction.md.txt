@@ -1,0 +1,73 @@
+GPT-6 (Astra)
+
+# Entry and direction: what is there
+
+*AI-written (GPT-6, Astra), 18 November 2026. A survey; nothing was changed.*
+
+## In three sentences
+
+**Read whole —** `AGENTS.md` and `DIRECTION.md` give a new session a way to choose work, distinguish the understanding from the proofs, and find the failures that changed it.  
+**Counted —** The 44 named files contain 129,528 words, of which 57,030 are in 11 generated pages and 19,659 are on the live workboard alone.  
+**Inferred from the entry routes —** A session can recover the direction without private memory if it enters through the instructions, but one entering through “Ongoing research and current progress” is told that establishing deductive necessity without added substantive axioms is the first priority. [Instructions](/Users/ren/theories/AGENTS.md) · [Direction](/Users/ren/theories/_process/DIRECTION.md) · [Research entry](/Users/ren/theories/RESEARCH.md:16)
+
+## What is there
+
+**Counted —** The table covers the paths explicitly named in the brief, totalling 1,353,456 bytes at `befa506ba`. The adjacent `GLOSSARY.zh.md` and `TESTS.zh.md` add 1,282 and 1,179 whitespace-separated words respectively. This count understates Chinese reading load.
+
+| Kind | Files | Words | What it is beside the Lean | Unique? | What reads it | How far seen |
+|---|---:|---:|---|---|---|---|
+| AGENTS, direction, Lean plan | 3 | 11,962 | Aim, interpretation, premises, failed candidates and proposed order | Judgments and reasons cannot be regenerated from proofs | Sessions, board, wording tests | Read whole first two. Sampled 1/1 plan at stages, failures and proof table |
+| Board and result workflow | 2 | 25,648 | Coordination, claim identity, evidence and landing rules | Current ownership and decisions are maintained here | Contributors, gate, registry conventions | Sampled 2/2 at rules, claims, queue and evidence bindings |
+| Generated entry pages | 11 | 57,030 | Public tellings and indexes of results, tests, goals, dependencies, directives and history | Outputs reproducible from maintained inputs | Readers, links, renderer, generated manifest | Counted 11/11 hashes. Sampled openings and headings across all 11 |
+| MAP, GLOSSARY, COMMONS | 3 | 8,044 | Visitor route, terms tied to chapter sections, publication terms | Authored choices | Public fronts, site navigation, contributors | Read whole COMMONS. Sampled 2/2 others at entry and definition |
+| Directive register | 1 | 9,855 | Dated readings of Ren’s words and authorizations | Quotations have sources. Selection and interpretation are editorial | Directive index, board, contributors | Sampled 1/1 at newest entries and historical queue reference |
+| Goal JSON | 16 | 6,601 | Scoped authorizations and editorial summaries | Source data for views | GOALS, RESEARCH, configured navigation | Counted 16/16 states. Sampled 2/16 chosen for foundation and alignment |
+| Navigation inputs | 5 | 6,319 | English and Chinese prose, templates and edition mapping | Authored inputs | English and Chinese renderers | Sampled 5/5 at template heads or mapping keys |
+| Outside-case questions | 1 | 2,133 | An instrument for coupling a theorem to someone’s situation | The questions are editorial work | Direction, plan, board | Sampled 1/1 at the nine questions and their limits |
+| Lost-artifact guide | 1 | 672 | Recovery trace | Retrieval clues. Recovery unverified | A reader seeking the earlier writings | Sampled 1/1 at inventory and recovery instructions |
+| Pre-17-November instructions | 1 | 1,264 | Trace | Exact bytes recoverable from git | Historical link in AGENTS | Counted whole-file identity against parent commit |
+
+## What repeats
+
+**Counted —** The same 34-word alignment aim occurs once in each of eight scoped files, including AGENTS, README, GOALS, RESEARCH, MAP, a goal JSON, the first-screen template and the former instructions. Eight of the nine nonblank lines of the repository navigation template occur consecutively in `_process/BRIEF.md` after normalizing link destinations. These are different kinds of repetition. One crosses independently edited sources, while the other is one source rendered for another reader.
+
+**Counted —** None of the 44 index blobs had a second tracked pathname at this head. The archived AGENTS is nevertheless byte-identical to `a36170df4^:AGENTS.md`. It shares 22 of 24 nonblank lines with today’s version after link normalization. Here the October preservation rule buys an ordinary clickable path to bytes already kept in git.
+
+## What depends on it
+
+**Counted —** Across 39 Markdown files comprising the scoped pages, the one page, overview and chapter directory, direct local links reached `DIRECTION.md` from three files: AGENTS, the board and the Lean plan. Fifteen linked to GOALS. Both READMEs send readers to `GOALS.md#generative-alignment`. OPEN-QUESTIONS links to `#decisions-pending-ren` on the board, and the directive register still uses the board’s preserved bilingual queue anchor.
+
+**Sampled —** Three tool paths explain why changing prose or moving a page has consequences. The navigation test extracts the aim from AGENTS with a regular expression and requires that wording exactly once in generated RESEARCH. The renderer rejects a missing configured goal. The board gate expects five named headings and one `Queue` line, checks which clauses disappeared, and flags shrinkage exceeding 20% unless a reasoned rewrite is declared. A sweep of all 567 result JSONs found no string value equal to a scoped path, with or without a fragment. That narrower check does not cover paths embedded in prose. [Wording test](/Users/ren/theories/tools/research/tests/test_navigation_pages.py:13) · [Goal reader](/Users/ren/theories/tools/research/navigation.py:138) · [Board check](/Users/ren/theories/tools/research/gate.py:641)
+
+## What a continuing session needs from here
+
+**Read whole and counted —** AGENTS directs a session to the one page and the home of what it touches. AGENTS plus the one page costs 5,454 words. Following the direction link adds 6,560. For formal work the method chapter adds 31,896 if read whole, although its linked opening section is 966. These are branching routes. The 14,268-word README is a separate visitor entrance.
+
+**Sampled and counted —** Before new Lean or a result, the board requires reading the page and claiming a row. Its rules occupy 735 words, its nine open rows sit in a 6,930-word section, and the queue is one 2,748-word line. The session must reread the queue immediately before merging and record the landing. Three board commits on 18 November separately recorded the landing, the push and trimming the queue, over eight minutes. That measures the commit interval only. [Board rules](/Users/ren/theories/_process/BECOMING-WORKBOARD.md:13)
+
+**Inferred from the workflow and direction —** To resume a scientific question, use the direction for what matters, the plan for the premises and candidate failures, the declaration and result record for a particular claim, TESTS for empirical outcomes, and the board for ownership. A session looking up authority needs the source behind the directive. The generated index covers 401 records, only 74 marked as in the curated register. Recovery notes and former instructions serve particular inquiries. Which files sessions *never* open was **not looked at** through access logs.
+
+## Candidates
+
+- **Inferred from the differing jobs of the three pages —** AGENTS, direction and plan each have reason to stay. The direction records what changed the understanding and which wording Ren actually saw. The plan’s counterexamples protect against losing a premise in retelling. Its last paragraph points to `KidsNeedMore`. **Sampled**, the Lean example holds the configuration fixed indefinitely when offspring can need more than their parent. [Plan](/Users/ren/theories/_process/LEAN-TOWARD-THE-DIRECTION.md:78) · [Counterexample](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineOnAStock.lean:1506)
+- **Inferred from render inputs and links —** The common aim could be authored once and displayed on both fronts. Changing the templates, goal summary and wording tests comes first. The generated pages could leave the working tree only with a replacement for checkout navigation, section links, publication and manifest verification. MAP, GLOSSARY and COMMONS each answer a distinct reader question.
+- **Inferred from board history and gate code —** Landed narratives could be pointed to once from a shorter live board. Current owners, queue order, pending decisions and historical anchors would have to survive the change. The workflow’s account of evidence drift serves a separate purpose.
+- **Inferred from the source trail —** Keep the goal records and directive register distinguishable as dated authorizations. Changing the public priority label requires reconciling its source and renderer. The unsent case questions and recovery guide have uses the Lean cannot supply. The old AGENTS could leave the tree if its live link had a durable replacement and the October layout rule changed.
+
+## Against the two views
+
+**Sampled —** The 16–17 October review found a bulky board, and the restructure report said it had been trimmed to open claims. The 10 November shortening commit held 13,913 board words. Today it holds 19,659. The 9–10 November review moved the alignment aim onto the fronts and corrected the treatment of widening. Today’s glossary still distinguishes widening as a relation between courses from how they are ranked. The 14 November count reported about 20,000 theorems in 403 modules. A late-14-November tree has 404 `.lean` paths under `Becoming/`. I did not establish the original cutoff or counting convention. [October report](/Users/ren/theories/_process/research/2026-10-05-repository-reconciliation/whole-repo-review-2026-10-16/RESTRUCTURE-REPORT.md) · [November review](/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/FOR-REN.md)
+
+**Inferred —** Against a broad verdict of garbage, the failed fish-stock predictions, the plan’s failed first-reading criterion and the record of Ren’s partial assent each prevent a specific false conclusion. Against moving trace and output off the reading path as a sufficient remedy, the older “current first priority” originates in a maintained goal and reappears under current progress. Fifteen of sixteen goals have `unmarked` state. Regenerating the pages faithfully preserves the ambiguity.
+
+## Not determined, and surprises
+
+**Read whole —** The direction already says that the situation decides whether a case meets a theorem’s conditions. Its head note also locates two inputs to the 18 November correction in scratch and distinguishes the earlier file Ren saw from later repairs. **Sampled**, the glossary defines the meta-attractor through selection reshaping its own rule, while the README opening also describes it remaking minds. A verbatim source for the brief’s fuller 18 November account of a self forming inside its account was **not found in what was read** after date and phrase sweeps of the public directive-source groups and entry texts. **Inferred —** A memory-independent handoff would need that source or a dated, explicitly provisional account of the conversation, alongside the distinction the direction already makes about what Ren read.
+
+## The commands behind the counts
+
+**Counted —** `git ls-files -s` supplied tracked paths and blob IDs. `wc -lw` on the named files and `Path.stat().st_size` gave words, lines and bytes. Read-only Python grouped the paths, compared SHA-256 with `_process/architecture/generated-manifest.json`, resolved relative Markdown links, and compared nonblank lines with `difflib.SequenceMatcher`. `git show 66ec577fc:_process/BECOMING-WORKBOARD.md | wc -w` checked the earlier board. `git ls-tree -r --name-only 287b6c85d` supplied the dated module paths. Historical and source searches used `rg --no-ignore-dot` within the permitted directories.
+
+── cx · ok · session 01a1edd3-86de-7b43-80fd-7df41f00f0dc · gpt-6.2-astra/high · read-only · 489s · 1134.6k tokens · 41 cmds
+continue: cx -r 01a1edd3-86de-7b43-80fd-7df41f00f0dc "…"
+log: /Users/ren/.cache/cx/runs/20261118-154344-44350

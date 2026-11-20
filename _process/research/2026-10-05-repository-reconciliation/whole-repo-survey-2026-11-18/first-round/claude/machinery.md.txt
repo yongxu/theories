@@ -1,0 +1,117 @@
+# machinery: what is there
+*AI-written (Claude Opus 5.5), 18 November 2026. A survey; nothing was changed.*
+
+## In three sentences
+
+The machinery is about 26,000 lines of Python in `tools/research` and `tools/publishing` (plus 15,000 lines of tests), one 36 KB configuration, a gate with 46 checks, the work board and its rules, and the `_process/architecture` manifests and receipts. Most of what it does is guard form and identity: links, hashes, frozen bytes, generated pages and the board's Queue line. It does not check whether a telling says what a theorem says. It writes 1,416 generated files (3.26 million words of Markdown, 77 MB), and it pins many fixed paths into study and history folders. So no folder can leave the working tree without a change to tools, records or manifests first. The landing procedure it imposes is the main way the repository grows in commits, and it is the main cost a session pays. Part of that procedure lives only outside git.
+
+## What is there
+
+| kind | files | size | beside the Lean | unique? | what reads it | how far seen |
+|---|---|---|---|---|---|---|
+| research tools `tools/research/*.py`, `.html`, `.lean` | 37 | about 24,800 lines | tooling | yes, the code; regenerable only by rewriting | Makefile, gate, CI | counted; gate.py, paths.py, research.py links part, moves.check_links, evidence_store and repoint headers read |
+| research tests `tools/research/tests` | 39 | 14,972 lines | tooling | yes | gate (one check per file), CI | counted |
+| publishing `tools/publishing` | 6 | about 2,800 lines | tooling (reader's site plus three one-off builders) | yes | `pages.yml` (build_site only) | counted; config `site.pages` read (69 pages) |
+| `Makefile`, `.github/workflows` (3), `.ignore` | 5 | 42 + 177 + 8 lines | tooling | no | developers, CI | read whole |
+| `_process/research-config.json` | 1 | 687 lines | tooling (path roles, pins, site, mirrors, adopted-page hashes) | yes | paths.py and every tool | keys read |
+| board `_process/BECOMING-WORKBOARD.md` | 1 | 19,659 words, 125 KB; three lines are 12,000 to 15,600 characters | coordination: part rules, part trace | rules yes; queue clauses repeat commits | gate `board` check | headings, rules, Now read |
+| board history `_process/history/workboard/…2026-10-11_to_2026-10-17.md` | 1 | 224,271 words, 1.6 MB | trace | yes, landed rows and receipts | no tool found | counted, not read |
+| `RESULT-WORKFLOW.md`, `REPOSITORY-LAYOUT.md` | 2 | 5,988 and 1,708 words | rules for sessions | yes | sessions | headings; integration section and layout head read |
+| generated manifest | 1 | 1,416 entries, 231 KB | machine output (sha256 of each page) | no | strict check, render | counted |
+| generated pages (listed in the manifest) | 1,414 on disk | 3,263,131 words of Markdown; 77 MB in all | machine output; tellings rendered from records and data | no, a render rewrites them | strict check; links | counted |
+| record snapshots `_process/architecture/history/<16 hex>/` | 573 | 40 MB | trace (exact earlier bytes of records) | yes | test_schema2; 284 records cite them | counted; last written 3 Nov |
+| move receipts `_process/architecture/moves` | 87 | 18.6 MB (H7.json alone 12 MB) | trace that tools read | yes | moves.py `former_paths`, `current_path` | counted |
+| `rebinds.jsonl` | 1 | 599 lines, 932 KB | trace, one line per landing | yes | repoint.py, history_notes.py | head read |
+| one-off October files: `rename-2026-10-09.json`, `start-state.json`, `validation.json`, `check_rename.py` | 4 | 0.86 MB | trace | yes | no tool found; cited from study and architecture prose | swept |
+| freeze manifests and pins in `experiments/` | 15 `.sha256` with 218 lines, 20 `FROZEN-AT`, 64 `*freeze*.json` | — | coupling (frozen-before-run proof) | yes | gate `frozen` check | counted |
+| gate state `.git/gate` (untracked) | 7,833 pass records, 7,951 logs | 72 MB | machine output | no | gate.py | counted |
+
+## What repeats
+
+- **The mirror.** 680 pages under `root-foundation/mirror/BECOMING-RENEWAL-READING/` hold 596,956 words. The two study files they split hold 560,440 words. They are near copies with only the link targets changed, written so that GitHub can render a 3.8 MB file (counted). This is the largest single repeat the machinery makes.
+- **Record pages.** 567 record JSON files (1.42 million words) are rendered into 589 Markdown pages (1.28 million words). 22 of the pages are rename stubs (counted).
+- **The Lean catalogue.** `lean-index.json` (18.6 MB) catalogues 2,332 `.lean` files anywhere in the tree. 1,305 of them are classed as development attempts. It reports 143 byte-identical groups, and the file has been rewritten in 555 commits (counted).
+- **The Queue line.** Its clauses repeat commit messages and the history file's rows. The rule itself says "every landing is also a commit on main and a row in the history file" (read).
+- **Landing kits.** 410 tracked scripts are named for the board, landing or the queue. 397 of them are in the generative-foundation-review study folders, written per item (counted by filename; not opened beyond a sample of names).
+
+## What depends on it
+
+- **A missing path stops the gate.** `gate.py` fails "a rule naming a path the tree lacks" (lines 414–428, read). Its literal reads include study and history paths: `development/one-unfolding-root/corpus` and `review-checks`, `development/review-packet/check_dossiers.py` (the dossier check's own command), `ou3b-…`, `ou2-candidates/outcomes.tsv`, `ou7-…/groups.tsv`, `y1-changes`, `ro-relational-sources`, `zhonghua`, `history/root-foundation/SESSION-OUTCOME-SNAPSHOT.json` and `SESSION-PROOF-OVERLAP.json`, the `history/…/readability/drafts` folder, and `theories/becoming/history/YI-ZHUAN-AND-BECOMING.md` (read).
+- **Tools read study files by fixed path.** `atlas.py`, `atlas_index.py`, `spine.py` and `theory_graph.py` read files in `aa-attractor-atlas`, `u4-one-root-to-its-edge`, `map-structures` and `one-unfolding-root` (rg of path literals).
+- **Links.** The links check covers every live and generated Markdown file: 3,231 files under the repository's own classifier, including `development/` and `drafts/`, which classify as live. From those files, 13,096 relative links land in paths classed as history or evidence (6,585 of them into run folders under the Lean root, 2,591 into the study history folder, 304 into the retired canonical chapter). Counted by a script using `paths.Classifier`.
+- **Records.** Records hold 11,491 path references, every one carrying a sha256, and none is missing. 6,411 point into checker run folders, 665 into history and 482 into `development/` (counted). 411 of the 567 records hash-bind the 3.8 MB study log `BECOMING-RENEWAL-READING.md`, and 277 bind the retired chapter `theories/becoming/history/THE-THEORY-OF-BECOMING.md` (counted). On 16 October the figure for the study log was 158. The coupling the October review called "the root cause of much of the bloat" has grown, though `repoint.py` now logs a rebind as one line per landing instead of a note in every record.
+- **Move tool.** It rewrites links when a file moves. It refuses pinned paths: chapters, `Becoming/**`, `sources/**`, `_process/architecture/history/**`, and freeze or prereg manifests (config read).
+
+## What a continuing session needs from here
+
+A session needs the `Makefile` targets, `gate.py plan` and `run`, board rules 1–9, the integration paragraph of `RESULT-WORKFLOW.md`, and the configuration's path roles. It never opens the board history file (no code reads it), the October rename and start-state files, the move receipts (tools read them), the record snapshots, or `.git/gate`.
+
+Trimming the Queue line is a recurring step: the rule says the line holds the five latest landings. The current tool for it, `trim_queue_1117.py`, exists only in `/Users/ren/tmp/rw/words14/`, and its use is described only in one AI's memory note (`reference_queue_trim_kit.md`). A tracked file named `trim_queue` was not found by `git ls-files`. This goes against point 5 of the brief.
+
+**Landing cost**, from the gate's pass records (4 to 18 November; counted, not run):
+
+- A gated commit ran a median of 15 checks, about 6.3 minutes of summed check time (90th percentile 15 minutes), across 387 commits. All 46 checks sum to about 12.6 minutes at their medians and 1.9 hours at their maxima.
+- The slowest checks are `test_registry` (median 186 s), `strict` (103 s) and `test_gate` (85 s).
+- Before the gate come the core run and the render. GATE.md of 4 November measured a core run with low Lean changes at 3.6 to 4.7 minutes, the render at 2 to 9 minutes, and main held by a landing for a median of 24 minutes (read, not re-measured).
+- In steps: head clause, merge, core run, shared laws, render, commit, landed clause, gate, re-read, fast-forward.
+- The last landing (18 November) put 5 commits on main for one page correction: content, render, board, push record, queue trim. Each was gated.
+- Since 11 November there were 292 commits on main. 102 touched the board, 70 have subjects beginning "Board:", and 46 are renders (counted). Over all history, 2,590 of 7,384 commits touch the board.
+
+## Candidates
+
+- **Tools, tests, Makefile, CI, config: stays.**
+  - Change first: the fixed study paths above would have to move into the configuration or into records before any study folder moves.
+- **Generated pages: stay as files the render writes; could leave the reading path.**
+  - The mirror (0.6 million words) could be said once by linking the source's sections. The risk is that GitHub does not render the 3.8 MB source; that is why the mirror exists.
+  - Change first: `mirrors` in the config, `repoint-mirrored`, and the links that point into the mirror.
+- **`lean-index.json`: could be said once.**
+  - Its 1,305 development-attempt entries come from cataloguing every `.lean` file wherever it lies.
+  - Change first: `lean_catalogue.py`'s scope and the `test_lean_catalogue_links` test.
+- **Board history file: could leave the working tree, but the risk is real.**
+  - No code reads it. Markdown links to it (2 files found) and its rows are cited as landing receipts.
+  - Change first: those links. It is 224,000 words, larger than the whole account's chapters.
+- **October one-off files in `_process/architecture`: could leave the working tree.**
+  - No tool reads them (swept tools, CI, Makefile and config). Study prose cites them.
+  - Change first: those citations, or rely on git history.
+- **Record snapshots, move receipts, `rebinds.jsonl`: stay.** Tools and tests read them.
+- **Freeze manifests: stay.** They are what makes a test "frozen before it runs".
+- **Landing kits (410 scripts): cannot tell.** They are trace. Whether any is still run was not checked.
+- **The 17 October layout rule** ("nothing is deleted", moved byte for byte): cannot tell whether it still serves.
+  - It is the source of history folders that live pages still link 13,096 times.
+  - The evidence store already reads the rule as "nothing lost", since it deletes working copies after storing them once.
+
+## Against the two views
+
+- **Against "garbage".** Much that looks like bulk is read by machinery: run folders bound by 6,411 record references, snapshots, move receipts, and study files named in gate rules. Removing it breaks the gate before it loses any meaning.
+- **Against "trace and machine output can leave the reading path without loss".** The machinery does not separate them that way:
+  - `development/` classes as live, so its pages are link-checked and catalogued.
+  - Live and generated pages link into history 13,096 times.
+  - The gate's own dossier check runs from a study folder.
+  - Hash binding couples 411 records to the bytes of one study log, so editing that log is not a reading-path question at all.
+- **Partly for the coordinator's view.** Generated pages alone are 3.26 million words, about an eighth of the Markdown, and all of it can be rewritten from records and data.
+- **Against the direction.** The gate checks form and freshness. As GATE.md says, "whether a restatement still says what its home says is tested by a reader". Nothing here judges prose against the Lean, which the brief's point 2 asks for. The board's "Why this page exists" still states the October target ("0 axiom full theory", K1–K7), framed as history.
+
+## Not determined, and surprises
+
+- **Surprises:**
+  - The root `README.md` (14,261 words) is generated.
+  - The manifest lists two record pages that no longer exist (`selection-by-the-record-alone.md` and `errors-by-chance-end-a-pair-keeping-mutual-withholding.md`).
+  - The evidence store was last committed to on 17 October: 171 run folders are packed and 379 later ones are not (counted).
+  - `.github` CI runs the strict check and tests on every push, but the October review found CI dead. Whether it runs now was not determined.
+- **Not determined:**
+  - The `.git` share of regenerated large files (`lean-index.json` × 555 commits).
+  - Whether the three other publishing builders are still used.
+  - Which landing kits are live.
+- **Earlier surveys.** The 16 October review (`whole-repo-review-2026-10-16/ARCHITECTURE.md` §1.6) found the rebind cascade, 71% of files in run folders, and 124 scripts using `parents[N]`. Checked by sample: the rebind coupling holds and has grown (158 to 411 records binding the study log), and `tools/` grew from 17 to 82 files. GATE.md (4 November) measured check costs; its ratio of board-only commits (41 of 150) matches this week's (70 of 292).
+
+## The commands behind the counts
+
+- `git ls-files <dir> | wc -l`, then `xargs wc -l` and `wc -w`.
+- A Python script over `generated-manifest.json` (existence, sizes, words of `.md`).
+- A Python script using `tools/research/paths.Classifier` over `git ls-files` (roles), and over live and generated Markdown links (target roles).
+- A Python script over `theories/becoming/results/records/*.json` `references` and `proof_bindings`.
+- A Python script over `.git/gate/passes/*/*.json` (`seconds`, `commit`).
+- `git log --oneline [--since=2026-11-11] -- <path> | wc -l`, `git rev-list --count HEAD`.
+- `rg -o` of path literals in `tools/research/*.py`.
+- `git ls-files '*.py' '*.sh' | rg -i '(board|land|queue)[^/]*\.(py|sh)$'`.
+- `find /Users/ren/tmp -name 'trim_queue*'`.

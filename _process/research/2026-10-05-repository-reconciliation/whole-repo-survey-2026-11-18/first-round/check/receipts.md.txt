@@ -1,0 +1,68 @@
+# receipts: the check of two surveys
+*AI-written (Claude Opus 5.5, the checking reader), 18 November 2026. Checked against the repository at f1a805b5c; nothing was changed. Light read-only commands only; no checker, build, test or restore was run.*
+
+`LEAN` = `experiments/integrated-correction/general-framework/generative-basis/lean`. `BC` = `LEAN/becoming/becoming-checks`.
+
+## What both reports got right, seen myself
+
+- `BC`: 68,267 tracked files, 10,753 distinct blobs, 2,357,539,302 bytes; 550 runs, 550 `verification.json` = 1,680,213,516 bytes; 541 passed, 9 failed. (`git ls-files -s` + `git cat-file --batch-check='%(objectsize)'`; status read from the head of each receipt.)
+- Non-json copies in run folders: 64,812 files, 7,923 distinct; 625 of those blobs are in `_objects`; 86 runs hold more than 100 files. `.lean` 25,471 paths / 4,832 distinct; `.log` 39,039 / 2,816 (both reports' figures).
+- The store: 2,734 objects, 171 `RUN-INDEX.json` (20261008T195935 to 20261016T112106); every `_objects` path added in one commit, e55caf52f (17 Oct), never touched again (`git log -- BC/_objects`). Index entries: 23,319 object, 8,046 empty, 174 run-kept; no object missing (astra's figures, recounted).
+- The 16 October plan, `RESTRUCTURE-PLAN.md` line 148: 31,786 files, 446 MB, ~3,650 after packing. Growth to 2,357 MB is 5.3 times.
+- `LEAN/becoming/fallible-inquiry-checks` 168/84; `LEAN/history` 12,176/2,161; `_process/architecture/history` 573/573.
+- Records: 567 JSON (plus 589 `.md`; Claude's "1,156 files" is both). `proof_bindings` name 193 distinct receipts, 154 in checks or history folders. Record references and bindings into check folders or `LEAN/history`: 491 paths, all present, 1,346,969,671 bytes (Claude's figure exactly). 370 core stamps occur in record JSON.
+- Four superseded records' `canonical_source` is `BC/20261022T040548.209667Z/Becoming.Optimum.lean`; two more in `LEAN/history/becoming/Becoming/`.
+- `registry.py` 1016–1070 read: every reference is hashed (`read.digest`), declarations are looked up in it, and each binding's receipt is opened for the sha256 pointer, the success value and the elaborated names.
+- Top-level `becoming-verification.json` and `fallible-inquiry-verification.json` are byte-identical to the run they name; the current core receipt mentions 150 `history/` files; the last two receipts agree on 408 of 409 module hashes; the current receipt ran 7 steps and reused 1,629 (astra).
+- `.ignore` hides `/_process/history/`, `/_process/architecture/history/`, `becoming-checks/` (Claude).
+- `architecture/history`: 3,009 links in 820 files, 568 of them records (plain `rg`; 3,438 in 1,080 with `--no-ignore-dot`).
+- Current-tree blobs of the four main roots take 38.8 MB on disk in `.git`; first-path attribution over `rev-list --objects --all` gives `BC` 29.8 MB, `architecture/history` 6.6 MB, `LEAN/history` 3.2 MB.
+
+## Disagreements settled
+
+1. **Runs named by nothing.** Claude: 6. Astra: 2 (`20261022T044435.181667Z`, `20261106T025121.503688Z`). I reproduced Claude's 6 with the full-stamp regex outside `becoming-checks/`. Searching the 15-character prefix and other runs' receipts as well: 3 of the 6 are named in `_process/research/2026-10-05-repository-reconciliation/whole-repo-review-2026-10-16/review-data.json`, 1 (`20261105T122309`) in the next core receipt `20261105T122637.488502Z/verification.json`. Astra's 2 are right; Claude's 6 is true only for its narrower regex.
+2. **What reads the run copies.** Claude: nothing except the 4 Optimum records and about 30 links. Refuted in part: `wisdom-root.json` has two `role: proof` references and two `proof_bindings` whose *source* is a run copy, `BC/20261013T125626.097616Z/Becoming.RegroupingSelection.lean` and `BC/20261013T132140.261612Z/Becoming.RegroupingSelection.lean`. The registry hashes them and reads declarations from them. A third, `LEAN/universal-ethics/generative-capacity/open-future-revision-checks/20261008T131727.086965Z/Controls.lean`, is a proof source of `open-form-realization-under-revision.json`. So 6 records, not 4, rest on copies inside run folders. Astra saw the wisdom-root case.
+3. **Is every copied source held elsewhere?** Claude sampled 40 of the 10 November runs and found all 40 in history. Astra found a counterexample, and it holds: blob 2b793e71 (the 13:21 copy) is at one path in the index, and `git log --all --find-object` restricted to the module's own path finds nothing. It is kept in git only at its run path.
+4. **Can a kept set resolve every recorded artifact?** Only astra asked this. Confirmed: passed run `20261019T090457.012800Z` (13 files present) lists 740 entries in `artifact_sha256`, 728 missing at their paths, 483 distinct hashes. `BecomingHexagramsAxiomAudit.lean` and `.log` match none of the 29 same-name files in `BC` and are not in `_objects`. Commit 5d32f69f9 says the run "keeps only what main lacks". Not looked at: git history for those bytes.
+5. **When run folders became small.** Claude: "since about 11 November". Refuted: `held_in_main` came into `check_becoming.py` in 1a44c1c51 on 12 October, and runs of 5 to 23 files appear from 19 October on. The fat runs after that (up to 1,766 files on 10 November) are runs whose sources were not yet in main. The last fat run is 20261110T144413.
+6. **The `.git` share.** Both say about 1–2%. Confirmed. But Claude's "3.9 GB `.git` is mostly `sources/situated-recovery` (about 800 MB)" is refuted. I get 419.1 MB, both by first path and from the current tree, and 419 MB of 3.9 GB is not "mostly". Also seen: objects reachable from all refs and the reflog take 1,748 MB on disk. `git count-objects` reports 1.98 GiB of packs plus 1.53 GiB of loose objects. So about half the object storage is reachable from nothing (inferred from those two counts; the loose objects were not examined).
+7. **Counts of `passed_receipts()`.** Claude: 36 scripts. I count 31 live definitions outside history and run folders, and 35 tracked `.py` files outside run folders that call it. Not settled; the scope of "36" is not said.
+8. **Smaller astra counts.** Astra: core references 347 files / 344 runs and bindings 105 / 103. I get 348 / 345 and 104 receipts / 104 runs (106 with sources). No record changed between befa506ba and HEAD. These are off by one and unexplained. I count them as not reproduced, not as errors.
+
+Also checked from astra: the AgentDojo correction note gives 47 proxy comparisons (`replay-verification.json` line 69). The 29 October review's 1,349 of 1,360 reused steps is at line 159, not 158. In `LEAN/history`, 310 receipt files hold 110 negative outcomes (65 "failed", 45 false). One fallible-inquiry run failed.
+
+## The 9 failed core receipts
+
+Read: two are axiom-audit mismatches, two import clashes, one "Source changed", one namespace check and one unused-variable lint. Two are Lean elaboration errors (an already-declared name with a type mismatch; an invalid field). So Claude's "not failed mathematical candidates" is mostly right. The two elaboration failures are failed proof attempts, though not countermodels.
+
+## Error counts
+
+- **Claude: 4.** The absence in point 2, the date in point 5, the 799 MB and "mostly" in point 6, and "6 named by nothing" in point 1, which had a stated caveat but carried into "as far as read nothing does". Worst: point 2. Candidates 2–3 name only the Optimum copies as needing to stay by path. Packing or removing copies on that basis would break `wisdom-root`'s registry binding unless the tool keeps every referenced path.
+- **Astra: 0 found.** Two off-by-one counts were not reproduced, and its 13,714-file lower bound was not checked. Worst: that bound is unchecked, but the case for it, built on the 728 missing artifacts, holds.
+
+## What a decision can rest on now
+
+The receipts (1.68 GB, 550 distinct files) are bound by records and opened by the registry. They cannot move without repointing records. The 64,812 copies beside them are 7,923 contents. The store packed them once, on 17 October, and nothing has packed them since. In `.git` the area is about 2% of reachable storage, so leaving the tree changes checkout size and file count, not repository size. At least 6 records bind or cite copies inside run folders by path, and one bound source exists in the tree at that path only. A record-referenced set is computable (491 paths). Not every recorded artifact can be resolved from today's tree.
+
+## What it cannot yet rest on
+
+- Whether `evidence_store.py` keeps every record-referenced path (wisdom-root, Controls.lean) and whether it still works on today's tree.
+- Whether the 728 missing artifacts of `20261019T090457` survive in git history.
+- Astra's 13,714-file lower bound for the kept set.
+- References into the other ~8,000 checks/runs files outside `BC`, and whether the empirical `runs/` folders are unique.
+- Why half of `.git` object storage is unreachable, and what that does to any space argument.
+- The reach of "36" checkers globbing receipts.
+
+## Commands
+
+```
+git ls-files -s <dir> | awk '{print $2}' | sort -u | git cat-file --batch-check='%(objectsize)' / '%(objectsize:disk)'
+python3 -I tallies over BC/*/verification.json, */RUN-INDEX.json, theories/becoming/results/records/*.json (references[].path, proof_bindings[].receipt/source, canonical_source)
+rg -o --no-ignore-dot -g '!**/becoming-checks/**' '2026[0-9]{4}T[0-9]{6}\.[0-9]{6}Z' . | sort -u ; comm -23 runs stamps
+rg -l --no-ignore-dot -F <15-char prefix> (outside and inside BC)
+python3 -I: artifact_sha256 of 20261019T090457 vs os.path.exists; sha256 of same-name files in BC and _objects
+git log -S held_in_main -- LEAN/becoming/check_becoming.py ; git log -- BC/_objects
+git rev-list --objects --all [--reflog] | git cat-file --batch-check='%(objectsize:disk) %(rest)' summed by prefix ; git count-objects -vH ; du -sh .git
+git log --all --find-object=2b793e71996acf6e63294d1ee2ca583b76fc941b -- LEAN/becoming/Becoming/RegroupingSelection.lean
+sed -n 1015,1070p tools/research/registry.py ; cat .ignore
+```

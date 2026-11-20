@@ -1,0 +1,85 @@
+# lean-structure: the check
+
+*AI-written (Claude Opus 5.5, the checking reader), 18 November 2026. Each claim below was tested against the repository itself, not against the two reports. Nothing was changed. No build, lake, test, gate, render or checker ran; `check_becoming.py` was read as text and its lists were parsed with `ast`. The machine's load average was 96 to 125 throughout, so every command was a light read. `LEAN` = `experiments/integrated-correction/general-framework/generative-basis/lean`.*
+
+## How the check was done
+
+- I parsed `FOUNDATION`, `CORE`, `INSTANCES`, `APPLICATIONS`, `BRIDGE`, `PERIPHERY_JOINS`, `SUPERSEDED` and `SCOPE` out of `LEAN/becoming/check_becoming.py` with `ast.literal_eval`. I rebuilt `module_index` and `closure` by the checker's own rules: the `ARCHIVE` regex, lookup by file name outside `becoming/`, and import lines with comments stripped. From that I computed the import graph. The script is in my scratchpad and only reads.
+- I hashed every `source_paths` entry of `LEAN/becoming/becoming-verification.json` and compared it with `source_sha256`. I did the same for every live `*verification*.json` that has `source_paths`.
+- I read `git ls-files -s -- LEAN` (89,064 rows) for blob ids, and `git cat-file --batch-check='%(objectsize)'` for logical bytes.
+- I read code in these places: `gate.py` `receipt_check` (lines 897–924), the gate's `STEPS` and test-input map (lines 170–290), and the checker's assertions (lines 4970–5005) and `passed_receipts` (line 4617).
+- I counted links with `rg -l` over `theories/becoming`, the root `*.md` and `theories/becoming/results`.
+- I took 5 `LEAN/history` files, one every 2,400 rows, and compared each with its blob at the old path (`git rev-list -1 HEAD -- old`, then `git rev-parse c^:old`).
+
+## Where the reports disagreed, settled
+
+| topic | Claude | astra | settled |
+|---|---|---|---|
+| Theorems in the core | 20,404 | 20,352 | **20,352** is the receipt's audited count (the sum of `modules[].theorems`, and the number of `kind: theorem` among 27,894 declarations). Claude's 20,404 is the regex `^\s*(private \|protected )?theorem\b`, and it also matches prose lines. Three of those lines are in the root's docstring (lines 454, 1270 and 2128). |
+| Root `Becoming.lean` | "405 imports, 3 theorems" | "5,340 / 0" | **0 declarations** (receipt: `theorems 0, declarations 0`). The three "theorems" are docstring words. The 405 imports, 5,340 lines and 68,551 words are confirmed. |
+| Core lines | 305,868 | 306,653 (family sum + root + foundation) | **306,653** by `count(b"\n")` over the 409 closure files. Claude's other line-level figures are exact: 184,388 non-blank code lines, 1,065,182 comment words and 467,129 module-note words. |
+| Periphery modules | 417, 117,090 lines | 416, 116,574 lines | Both are right. 826 live `.lean` files minus 409 gives 417, and 417 includes `Becoming.FallibleInquiry` (516 lines). astra counts it apart, so 416. Astra's folder split is exact. |
+| Most-imported | `Witnesses` 45 | 44 | 44 importers among the modules, plus the root. Claude counted the root. Not an error, but it is inconsistent with Claude's own "imported by no module except the root". |
+| Modules importing nothing of the package | 6 | 4 | Both are right. Six counting the foundation (`GenerativeCore`, `RelationalRenewal`); four among the `Becoming.*` modules. |
+| The gate and the fallible-inquiry receipt | listed as "rerun", not an error | fails if the landing touches its own source, otherwise rerun | **astra is exact.** `gate.py:913–921`: a stale entry is an error when `path in touched and rel not in core_sources`. |
+| Do periphery receipts matter to the gate? | "Periphery receipts outside `becoming/` are read by no gate check" | "checker demands earlier passing receipts for inherited foundation bytes" | **astra is right; Claude's sentence is refuted.** The gate's first step, `core run` (`gate.py:281`), runs `check_becoming.py`. That checker scans every passed `*.json` under `LEAN` (`passed_receipts`, line 4617; `becoming-checks` excluded) and asserts that each of the three foundation modules has a passed receipt for its current bytes (line 4992). The present receipt names 208, 469 and 194 such receipts. 349 of them are in `LEAN/history`, 20 in `verification-history`, 1 in `verification-runs` and 2 in `legacy-replays`. Live periphery receipts exist for all three foundation modules, so the run trees alone are not needed, but the periphery folders' receipts are. The narrower claim in the claims file ("receipt_check reads only becoming/*-verification.json") is true. |
+
+## The claims file, claim by claim
+
+1. **The receipt binds all 409, and the checker hash matches.** Confirmed: 409 checked, 0 differ, 0 missing. `checker_sha256["check_becoming.py"]` = `a644a300…`, equal to the file now. The receipt is dated 20261116T014928Z, status passed.
+2. **Membership is Python lists plus import closure; no tracked lakefile; 409 = listed; FallibleInquiry left out.** Confirmed. FOUNDATION 3, CORE 388 (this includes the root `Becoming`), INSTANCES 11, APPLICATIONS 7, BRIDGE and PERIPHERY_JOINS empty. My closure is 409, equal to `PURE`. Tracked lakefiles outside run folders: only `periphery-mathlib-pin/sources/` (all 22 others sit in `*-checks/<stamp>/` or `history/`).
+3. **The graph is joined.** Confirmed. Without the root there is one component of 408. With the 11 hubs removed, 396 of 398 stay joined; the two left alone are `RuleRebuilding` and `ReaderRebuilding`. 117 modules are leaves, and the longest chain is 46 nodes counting the root. This is the import level only.
+4. **No axiom declared.** Confirmed. There are 13 line-start `axiom` hits, and 0 remain once comments are stripped. All 27,894 named declarations have empty `axiom_dependencies`. The 270 `generated_axiom_dependencies` are all `.injEq` lemmas, and each uses only `propext`.
+5. **21 periphery receipts bind older core bytes, while their own files are unchanged.** Confirmed. In 21 receipts (warning and fallible-inquiry aside), between 1 and 181 core sources differ, and 0 of their own files differ. The fallible-inquiry receipt has 28 of 40 core sources differing and 0 of 2 own files. The gate's half of the claim is confirmed only in the narrow sense above.
+6. **The core checker depends on the periphery.** Confirmed: `check_becoming.py:90–91` puts `universal-ethics/generative-capacity` on `sys.path` and imports `check as audit_support`. The receipt hashes `check.py` too. The foundation paths are `GenerativeCore.lean`, `inquiry-root/sufficiency/InquirySufficiency.lean` and `deeper/RelationalRenewal.lean`. Missing from the claim: the dependency on periphery receipts (above).
+7. **33,501 saved copies, 6,468 distinct, 753 identical to a live file; 826 live.** Confirmed exactly.
+8. **Prose inside the Lean: 1.07M words, 467k module notes; SCOPE 62,460; README 59,017; lean-declarations 264,676.** Confirmed exactly. Root notes: 430 bullets for 404 distinct modules, with 23 modules noted twice or more (not only `Stock`). The README has 407 module rows.
+
+## astra's statements a decision would rest on
+
+- **Logical bytes: 2,773,829,048 in total; the two run folders plus `LEAN/history` are 91.9 percent.** Confirmed (`cat-file` sums: 2,368,149,022 and 180,412,612).
+- **409 distinct blobs, each with a copy in `becoming-checks`, 1,105 matching paths.** Confirmed.
+- **Families: eight regions from `theory-graph.json`; 497 of 892 edges cross a region.** Confirmed, with every row of the table: lines and declarations per region, foundations 1,303/120, root 5,340/0.
+- **Records: 567 JSON records have `canonical_source`; 479 name 292 core sources; 47 name 45 live periphery sources.** Confirmed. Not in either report: 6 records name a file in `LEAN/history` as canonical, 10 name Lean outside `LEAN` (for example `experiments/market-generativity/...`), and 25 name a Markdown page.
+- **SUPERSEDED is checked only for being found once and named by pure modules, then hashed; equivalence is not proved.** Confirmed (`check_becoming.py:4976–4984`). 57 of the 75 are still imported by live periphery modules.
+- **The soundness pair in `inquiry-root`.** Confirmed: `GenerativeClosure.derivation_sound` and `WholeTheoryDischarge.derivation_sound_constructively` are identical for 19 lines after the name.
+- Also confirmed: `WayOfUnits.unending_iff_holds` goes through `LineOnAStock.unending_iff_holds`, and the file went from 1,182 to 1,126 lines at `a54163054`. The `KidHigherNeed` countermodel holds (need 13 against level 12). `attempt-002/output.txt` keeps two failed `Decidable` errors. At `789deaf51` the receipt had 403 `Becoming.*` modules and 20,120 theorems. The F3 manifest lists 62 files. The README tells a writer to state core content in the core and register the module as superseded (line 474). The inquiry receipt has 37 declarations, 17 of them using `propext` and `Quot.sound`.
+- **Not settled:** the 16 October count of eight bridge modules, the 6 November drop from 113 to 21, and the "four audit drivers" among the 416.
+
+## Seen by neither
+
+- `README.md:467`: the periphery checkers that use Mathlib need a project outside the repository (`SYSTEMS_MATHLIB_PROJECT`, by default `~/repos/生生不息`, Lean 4.30.0-rc2). Only its lakefile and manifest are pinned here. The 22 modules that import `Becoming` therefore cannot be rechecked from the repository alone.
+- 1,970 tracked `.lean` files sit outside `LEAN`: `experiments/shared-renewal-capability` (605+), the root-foundation `development` (468) and `history` (251), `mathematical-abstraction` (131), `noninstrumental-concern` (52), and `market-generativity`. The gate's `test_classical_verifiers` reads `noninstrumental-concern/SituatedPractice.lean`. These are outside the area as drawn, but a picture of "the Lean" has to know about them.
+- Chapter 08 pins the run folder `becoming-checks/20261103T211917.845905Z/verification.json`.
+
+## Errors of fact counted
+
+**Claude: 6.**
+1. Says no gate check reads periphery receipts. The gate's core run asserts on them. This is the worst error, because it hides a dependency of the core run on the periphery folders.
+2. Says the root has 3 theorems. It has 0; the three hits are docstring prose.
+3. Gives 20,404 theorems. The receipt counts 20,352.
+4. Gives 305,868 lines. The count is 306,653.
+5. Says the other periphery has "about 320 modules … 164 imported by no live module". Of those 320, 125 are imported by no live module; 164 is the figure for all 417.
+6. Says "about 200" periphery receipts. 250 live `*verification*.json` files were found.
+
+Softer points, not counted:
+- `Witnesses` 45 includes the root.
+- "54 times in 15 files" for countermodel and counterexample: 54 to 60 depending on scope.
+- "a stale fallible-inquiry receipt is rerun, not an error" is true only when the landing does not touch its own source.
+- "never needs … `LEAN/history`, `verification-history`, `legacy-replays`" is marked inferred. The core receipt cites 372 inherited receipts there, and 6 records name a history file as canonical.
+
+**astra: 0** found among about 30 statements checked. Its inference that a rebuild "can require" the old run trees is weaker than it reads: live periphery receipts suffice for the present foundation bytes. Its omissions: the `check.py` import, the stale receipts on the 21 periphery modules that import the core, and the million words of prose inside the `.lean` files.
+
+## What a decision can rest on now
+
+The core is 409 modules, fixed by Python lists and their import closure. The 16 November receipt binds every byte of it: 27,894 declarations, 20,352 theorems, no axioms. Its imports form one component. The core run depends on the periphery in three ways: a periphery `check.py`, three foundation files in periphery folders, and passed periphery receipts for those files. 92 percent of `LEAN`'s bytes are run folders and history; 33,501 saved `.lean` copies hold 6,468 contents; `LEAN/history` repeats git (5 of 5 sampled). 75 superseded modules are kept, and the checker hashes them but does not prove their equivalence. 21 periphery receipts and the fallible-inquiry receipt are stale on the core, and the Mathlib periphery needs a project outside the repository.
+
+## What it cannot yet rest on
+
+- Whether the periphery still compiles.
+- Whether the core states every superseded theorem.
+- Connectivity at the level of constants today (last measured on 15 October).
+- Whether the docstrings say what their theorems say.
+- What the 125 un-imported, non-superseded periphery modules hold.
+- The share of `.git` taken by `LEAN`.
+- What the 1,970 `.lean` files outside `LEAN` are.

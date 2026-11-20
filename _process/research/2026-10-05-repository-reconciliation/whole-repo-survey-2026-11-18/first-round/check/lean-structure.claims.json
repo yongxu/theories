@@ -1,0 +1,60 @@
+{
+ "area": "lean-structure",
+ "headline": "The core is 409 modules: about 306k lines and 20,404 theorems. It is checked, current and joined: every byte is bound by the passed receipt of 16 November, there are no axioms, and the imports form one component. It is ringed by 417 periphery modules whose receipts predate it, and by 33,501 saved Lean copies with 6,468 distinct contents. About 1.07M words of telling live inside the .lean files, and each module is told up to six times. Prose here is not apart from the Lean.",
+ "loadBearingClaims": [
+  {
+   "claim": "The core receipt LEAN/becoming/becoming-verification.json (utc 20261116T014928Z, status passed) binds the current bytes of all 409 modules it lists, and the current check_becoming.py has the sha256 the receipt records.",
+   "evidence": "A script hashed each source_paths entry and compared it with source_sha256: 409 checked, 0 differ, 0 missing. The checker's sha256 is a644a300… both now and in the receipt.",
+   "howFarSeen": "counted"
+  },
+  {
+   "claim": "Build membership is decided by Python lists in check_becoming.py (FOUNDATION 3, CORE 388, INSTANCES 11, APPLICATIONS 7) and their import closure; the package has no tracked lakefile. The closure is 409 modules, equal to the listed ones, and leaves out Becoming.FallibleInquiry (406th file in Becoming/).",
+   "evidence": "The lists were parsed with ast and module_index/closure rebuilt by its own rules. git ls-files LEAN finds lakefile and lake-manifest only under periphery-mathlib-pin/sources and inside run folders.",
+   "howFarSeen": "counted; checker read in part"
+  },
+  {
+   "name": "",
+   "claim": "The core import graph is joined: without the root it is one weak component of 408, and with 11 hub modules removed 396 of the remaining 398 stay in one component. 117 modules are imported by no module except the root, and the longest chain is 46.",
+   "evidence": "Script over import lines of the 409 closure modules (comments stripped roughly).",
+   "howFarSeen": "counted (import level only; constant-level connectivity not measured)"
+  },
+  {
+   "claim": "No core module declares an axiom: the 13 line-start 'axiom' matches in the 409 sources are all docstring prose.",
+   "evidence": "A regex count of declaration keywords, then grep -nE '^\\s*axiom\\b' over Becoming/*.lean and the foundation; every hit was read and is inside a comment. The receipt's audit also claims empty reports.",
+   "howFarSeen": "counted and read"
+  },
+  {
+   "claim": "Every periphery receipt that lists core modules (21 with source_paths, outside the core receipt and warning/) binds older bytes of the core: 1 to 181 core modules differ in each, while the periphery's own files are unchanged. The gate's receipt_check reads only becoming/*-verification.json.",
+   "evidence": "Script comparing source_sha256 with current bytes, split into core and own files. tools/research/gate.py receipt_check globs ROOT/BECOMING '*-verification.json'.",
+   "howFarSeen": "counted; gate function read"
+  },
+  {
+   "claim": "The core checker depends on the periphery: check_becoming.py imports LEAN/universal-ethics/generative-capacity/check.py, and the three foundation modules sit in LEAN/, LEAN/inquiry-root/sufficiency/ and LEAN/deeper/.",
+   "evidence": "check_becoming.py lines 89-95 (sys.path insert, import check as audit_support, FOUNDATION) and the module_index file-name lookup.",
+   "howFarSeen": "read"
+  },
+  {
+   "claim": "Of 33,501 tracked .lean files in saved-copy folders under LEAN there are 6,468 distinct contents, 753 of them byte-identical to a live file. Live .lean files number 826.",
+   "evidence": "git ls-files -s LEAN, blob ids grouped by a path rule for archive folders.",
+   "howFarSeen": "counted"
+  },
+  {
+   "claim": "Prose inside the core Lean comes to about 1.07M words in comment blocks (467k in /-! module notes). The checker's SCOPE string is 62,460 words, the package README 59,017 words and the generated lean-declarations 264,676 words: the same modules told several times.",
+   "evidence": "Regex over the 409 sources; ast.literal_eval of SCOPE; wc -w. Becoming.Stock compared across module note, root (two notes) and README row.",
+   "howFarSeen": "counted; repetition compared for one module, inferred for the rest"
+  }
+ ],
+ "againstTheViews": [
+  "Against 'much is garbage': the core is current under its receipt, axiom-free and import-joined. The mass in LEAN is saved copies (33,501 .lean files, 6,468 distinct), not the map.",
+  "Against 'prose is judged against the Lean, apart from it': about 1.07M words of telling are inside the .lean files and 62k inside the checker's SCOPE, which no checker reads for truth.",
+  "Against 'trace and machine output can simply leave': a periphery check.py is a live dependency of the core checker, and the foundation files sit in periphery folders. The Mathlib-coupled periphery has no receipt on the present core, and no gate notices this."
+ ],
+ "notDetermined": [
+  "Whether the 22 Becoming-importing periphery modules still compile against the present core",
+  "Connectivity at the level of constants today (last measured 15 Oct on 113 modules: 946 of 6,089 theorems apart)",
+  "What the 164 un-imported periphery modules hold that the core does not",
+  "Whether module docstrings say what their theorems say",
+  "The share of .git taken by LEAN",
+  "What verification-history, verification-runs and legacy-replays are still referenced by"
+ ]
+}

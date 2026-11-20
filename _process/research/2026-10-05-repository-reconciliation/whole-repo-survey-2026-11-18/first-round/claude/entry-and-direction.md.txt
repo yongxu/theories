@@ -1,0 +1,91 @@
+# entry-and-direction: what is there
+*AI-written (Claude Fable 5.2), 18 November 2026. A survey; nothing was changed.*
+
+## In three sentences
+
+The area is small (48 files, about 133,000 words, 0.5% of the repository's Markdown) and it is of two dates that do not point at each other: four hand-kept pages carry the direction as understood from 14 to 18 November (`AGENTS.md`, `_process/DIRECTION.md`, the plan, the board), and every other entry page was last changed in content on or before 13 November and tells an earlier aim, some of it as "current first priority". The state of the work (proved, assumed, failed, next) is written in at least eight places and no one of them holds it. The trouble here is currency and interleaving, not mass: trace is written inside the live pages a session must read, and the only machinery that holds the fronts to anything holds them to one sentence of `AGENTS.md`, not to the Lean.
+
+## What is there
+
+Words are whitespace words, counted by script.
+
+| Kind | Files | Words | Beside the Lean | Unique? | What reads it | How far seen |
+|---|---:|---:|---|---|---|---|
+| `AGENTS.md` | 1 | 1,316 | instructions; a short telling of the direction | hand; 59 past versions in git | every session; two tests read its aim sentence | read whole |
+| `DIRECTION.md`, the plan, `A-CASE-FROM-OUTSIDE.md` | 3 | 12,779 | a telling set against the Lean by AI readers, its trace inline | hand; no other copy | `AGENTS.md`, the board, the `dj` study; no tool names them | two read whole; third, head |
+| `BECOMING-WORKBOARD.md` | 1 | 19,659 | coordination, trace, what waits for Ren | hand | `gate.py` parses its Queue line | sampled, about a third |
+| `RESULT-WORKFLOW.md`, `REPOSITORY-LAYOUT.md` | 2 | 7,696 | tooling rules | hand | sessions | headings, heads |
+| `RESEARCH-DIRECTIVES.md`, `.zh` | 2 | 10,392 | Ren's words quoted, an AI reading beside each | curation unique; quotes in `sources/` | `indexes.py` | head |
+| `MAP.md`, `GLOSSARY.md`, `.zh`, `COMMONS.md` | 4 | 9,088 | navigation, vocabulary, the no-licence position | hand | navigation, spine, site build | sampled |
+| Generated root pages (`README`, `README.zh`, `GOALS`, `OPEN-QUESTIONS`, `RESEARCH`, `TESTS`, `TESTS.zh`, `DEPENDENCIES`, `RESULTS`) | 9 | 49,514 | machine output | regenerable | manifest hash check; reader's site | `README` 1–60; heads |
+| Generated `_process` pages (`BRIEF`, `DIRECTIVE-INDEX`, `OPEN-QUESTIONS-KEPT`) | 3 | 8,507 | machine output | regenerable | manifest | heads |
+| `_process/goals/*.json` | 16 | 6,415 | scopes: AI readings of Ren's directives | hand | registry, navigation | listed; two read |
+| `_process/navigation/*` | 5 | 6,095 | the README's first screen (a telling) | hand | config, gate, tests | one head |
+| `LOST-ARTIFACTS.md` | 1 | 672 | trace of September | unique | no entry page links it | head |
+| `history/2026-11-17-instructions` | 1 | 1,264 | trace | no: identical to a git blob | `AGENTS.md` links it | counted |
+
+Twelve of the 48 files are in the generated manifest and hold 58,021 words, 43% (counted).
+
+## What repeats
+
+- **The README is mostly the opening.** 255 of its 346 sentences, about 9,600 of 13,700 words, are also in `theories/becoming/OPENING.md` once link targets are dropped (counted by script).
+- **The aim sentence** ("…shaping how they select does not become what they select for") is on 16 live pages (counted). `navigation.py` lines 785–790 hold it as a Python string, and `test_uses_pages.py` and `test_featured_results.py` read it out of `AGENTS.md` and hold the fronts to its words.
+- **The idea itself repeats nowhere.** "made again and again" and "run down unseen" occur in `AGENTS.md`, `DIRECTION.md` and the `dj` study only (counted).
+- **Kept instruction copies.** All 22 `AGENTS-before-*` files in the fourteen `*-instructions` folders, and both kept `RESULT-WORKFLOW` copies, are byte-identical to a past committed version (blob hashes compared; 24 files, 38,483 words; thirteen folders belong to research-history).
+
+## What depends on it
+
+- `gate.py` (lines 50, 612–668) requires one Queue line on the board that loses no clause but the head. 102 of 292 commits on main since 11 November touch the board (counted).
+- The render reads `_process/goals`, `_process/navigation` and `RESEARCH-DIRECTIVES.md`.
+- Two tests take `AGENTS.md`'s sentence "we want to design an alignment in which…" by regex; changing it turns them red until every front is re-said. No test reads the idea paragraph (not found in `tools/`).
+- No tool, workflow file or Makefile names `DIRECTION.md` or the plan (`rg` over `tools/`, `.github`, `Makefile`).
+- Live links to `DIRECTION.md`: `AGENTS.md`, the board, the plan, the `dj` study, two source records, two kept copies. No root page links it (counted).
+
+## What a continuing session needs from here
+
+**The path.** `AGENTS.md` links seven pages; read whole they are 73,627 words (`AGENTS` 1,316; `DIRECTION` 6,560; plan 4,086; board 19,659; `RESULT-WORKFLOW` 5,988; one page 4,138; `08-METHOD` 31,880). The first three, 11,962 words, carry the direction and the order of work. `AGENTS.md` ends "Start from the one page": a page last changed on 13 November, with none of the idea's sentences, and with a sentence the board lists as saying more of a lock than is proved.
+
+**Where the state is written.** Proved: `RESULTS.md`, the plan's table, `DIRECTION` "What we have found so far", the board's DJ row. Assumed: the plan's "What is missing" column, `08-METHOD`. Failed: `TESTS.md`, the plan's "What trying on paper found", study notes. Next: `DIRECTION`, the plan's order, the board, `RESEARCH.md`, `OPEN-QUESTIONS.md`, `08-METHOD`. What was found from 14 to 18 November is only in the direction page, the plan and the board.
+
+**What the board costs.** Three single lines hold 7,144 of its words (Queue 2,748; "Runs that wait" 2,399; the DJ row 1,997). "The way now" is one 1,044-word bullet of five dated clauses, each saying under which later words to read the rest, over four numbered lines of 10 November. The page opens with the target of 11 to 20 October (zero axiom, K1–K7). Its history file is 224,271 words.
+
+**Never opened by a session doing the work** (inferred from links): `LOST-ARTIFACTS.md`, `OPEN-QUESTIONS-KEPT.md`, `DIRECTIVE-INDEX.md`, `DEPENDENCIES.md`, the kept copies.
+
+**Without an AI's memory the repository lacks** (not found in what was searched):
+- Ren's words of 18 November; the latest source record's last words of his are of 17 November, 17:08.
+- What `DIRECTION.md` itself says is outside: two inputs of the 18 November correction "in scratch, not in the repository", a first wording "kept only in the session's transcript". The board points at four `tmp/r7/…` paths.
+- Operating traps. That `check_becoming.py` runs for real whatever argument it is given is on none of `AGENTS.md`, `RESULT-WORKFLOW.md`, the board, the layout page or the package README; the script has no `argparse` or `sys.argv` (grep). `GATE_BOARD_REWRITE` is in `gate.py` and the gate's design note, not on the workflow page or the board.
+- The size count of 14 November (26.6 million words): not found by `26.6` in `_process/*.md` or the November source records.
+
+## Candidates
+
+- **`AGENTS.md`, `DIRECTION.md`, the plan: stay.** The present understanding is nowhere else. Risk as they are: `DIRECTION.md` opens with a 676-word head note of provenance, and two of its paragraphs are 866 and 768 words; a reader meets trace before the idea. The provenance could be said once in a record the page points to. No tool blocks that.
+- **The board: could be said once and pointed to.** The clauses of "The way now" repeat `DIRECTION.md`'s closing note and `AGENTS.md`; the October target is history. Risk: the gate refuses a board that loses Queue clauses or shrinks by a fifth unless `GATE_BOARD_REWRITE` is set, and landings are in flight. First: a decision on what the board is for.
+- **Goals and the pages rendered from them: cannot tell without Ren.** 15 of 16 scopes are `unmarked`, none changed after 13 November, and "Theory of Becoming — current first priority" is still the title the 10 November review asked him about (`ag-the-map/FOR-REN.md`, II.5, which says "first" was an AI's addition). Until scopes are marked, `GOALS`, `RESEARCH` and the README give October's target in the present tense.
+- **Generated pages: stay as outputs.** The question is their sources. If prose is to follow the Lean, the hand-kept first screen and the two tests that pin it to `AGENTS.md` change first.
+- **Kept instruction copies: could leave the working tree** (22 of 22 are in git). First: links from `AGENTS.md` and `RESEARCH-DIRECTIVES.md` and about 100 mentions in live files would need to name a commit. The gain is 38,000 words.
+- **`RESEARCH-DIRECTIVES.md`: cannot tell.** Newest entry 13 November; its own index calls it incomplete. An AI reading stands beside each quote, which `AGENTS.md` now warns against, yet it is the only curated list of what he asked for.
+- **`LOST-ARTIFACTS.md`: stays.** It is the only inventory of texts that exist outside the repository.
+
+## Against the two views
+
+- Against "much is garbage": nothing here is unused. Every file is generated, feeds a generator, is parsed by the gate, or is linked from a page a session reads. What is wrong is that the pages are of two dates.
+- Against "trace and machine output could leave the reading path": here trace cannot leave by moving folders, because it is written inside the live pages (the direction page's head note, the board's clauses, the register's readings). And the 43% that is machine output is the public reading path itself.
+- Against "prose is judged against the Lean, not against other prose": on the fronts the machinery does the opposite. Tests hold pages to `AGENTS.md`'s sentence and a render string copies it. Only `DIRECTION.md` and the plan were set against the Lean, by AI readers; by their own head notes no person has checked either. Twenty Lean names sampled from the two pages all resolve to declarations in the live tree (by name; statements not read).
+- For Ren's view in part: about 9,600 words of the README and all 38,000 words of kept copies are exact repeats.
+
+## Not determined, and surprises
+
+- Not determined: how a Claude session comes to load `AGENTS.md` (no tracked `CLAUDE.md`); what the reader's site now shows; the board's lower two thirds; how the glossary would meet the direction page's vocabulary ("going-on" and "stock" are absent from it; "widening" is there 17 times and on `DIRECTION.md` not once).
+- Surprise: the README changed once since 13 November, in a count (535 of 566 became 536 of 567).
+- Surprise: earlier reviews found the same kind of thing and it came back. The 16 October review listed "GOALS has no lifecycle" and a 276 KB board with a target of 15 KB; the board is 124,574 bytes today. The 9–10 November review re-said these pages toward the `AGENTS.md` of 9 November, and that wording is now the older aim on them.
+- Not carried: `DIRECTION.md` says the chapters do not yet tell what was proved on 15 and 16 November; the same holds of every root page (zero mentions of 14 to 18 November on eleven of them). `OPEN-QUESTIONS.md` lists four earlier targets, one withdrawn, and nothing found of "What we do not know" (four phrases searched).
+
+## The commands behind the counts
+
+- Sizes and dates: `wc -w -l -c`; a Python script over the files and the `files` keys of `_process/architecture/generated-manifest.json`; `git log -1 --format='%ad %h' -- <file>`; `grep -c '1[4-8] November' <file>`; `awk` word counts per line of the board; `git log --since=2026-11-11 --format=%h [-- board] | wc -l`.
+- Links: `rg -n --no-ignore-dot '(_process/|\.\./|\()DIRECTION\.md' --glob '!tmp/**'`.
+- Repeats: `rg -l -F '<phrase>' --glob '!tmp/**' --glob '*.md' | wc -l`; README against `OPENING.md` by a script that splits sentences after dropping link targets and note markers.
+- Kept copies: in bash, `git rev-parse HEAD:<copy>` against `git rev-parse <commit>:AGENTS.md` over `git log --format=%H -- AGENTS.md`.
+- Readers: `rg -n` for each page name over `tools/`, `.github`, `Makefile`, `_process/research-config.json`.
+- Lean names: `rg -l -w '(theorem|def|lemma|abbrev|structure|namespace|inductive) +…<name>'` over the Lean root, check copies and history excluded.

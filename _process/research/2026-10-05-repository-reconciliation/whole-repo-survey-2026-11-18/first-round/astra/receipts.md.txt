@@ -1,0 +1,70 @@
+Model: GPT-6 (Codex, Astra reader)
+
+# Receipts: what is there
+
+*AI-written (GPT-6), 18 November 2026. A survey; nothing was changed.*
+
+## In three sentences
+
+**Counted.** The receipt area identified below holds 89,283 tracked files and 14,851 distinct Git blobs, including 550 core runs whose verification files alone occupy 1.68 GB before Git compression.  
+**Counted.** Current result records name 370 of those runs, and one record binds a Lean source whose exact bytes occur at only one path in the entire Git index, inside a saved run.  
+**Inferred from the receipts and their readers.** Much of this material can sit outside a session’s reading path, but moving it out of the working tree is a different proposition: some old files are still proof inputs, and one passed run already lacks 728 paths listed in its own receipt.
+
+## What is there
+
+**Counted** at `befa506ba` from indexed paths and blob IDs. MB means decimal megabytes of file content. “Blobs” counts distinct contents within a row. **Inferred** classifications and readers come from the file formats and code described below.
+
+| Kind | Files | Lines / MB | What it is beside the Lean | Unique? | What reads it | How far seen |
+|---|---:|---:|---|---|---|---|
+| `becoming/becoming-checks` | 68,267 | 57,199,008 / 2,357.54 | Check results, source copies, drivers, logs and restore indexes | 10,753 blobs | Records, other checkers, evidence-store reader | Counted all 550 receipts and 171 indexes |
+| `becoming/fallible-inquiry-checks` | 168 | 147,844 / 10.61 | Area-check evidence | 84 blobs | Core checker and records | Counted all 16 receipt statuses |
+| `lean/history` | 12,176 | 3,274,646 / 180.41 | Earlier checks, unfinished runs, retired Lean and move evidence | 2,161 blobs | Inherited-receipt discovery, records, move checker | Counted all 12,174 manifest entries |
+| Other named receipt files and bundles under `lean` | 6,600 | 2,622,074 / 147.97 | Periphery checks, source copies and current receipts | 2,078 blobs | Core and area checkers, records | Counted by path |
+| Other named receipts and bundles in `experiments` | 1,499 | 520,147 / 30.84 | Formal checks and evidence from actual experiments | 644 blobs | Experiment checkers and records | Counted by path; sampled the initial and corrected AgentDojo pair |
+| `_process/architecture/history` | 573 | 334,986 / 40.19 | Earlier record text, original pages and link-adapted reading editions | 573 blobs | Registry and navigation | Counted 543 JSON and 30 Markdown files |
+| **Total** | **89,283** | **64,098,705 / 2,767.56** | | **14,851 blobs across rows** | | **Counted** |
+
+**Counted.** The two “other” rows use the filename rule below. Generic experiment `results/` and `runs/` directories were outside that rule unless a path also matched it. These rows measure identifiable receipts and their accompanying files, not all experimental data.
+
+## What repeats
+
+**Counted.** The core archive contains 25,471 `.lean` paths with 4,832 distinct contents, and 39,039 `.log` paths with 2,816. Yet all 550 timestamped `verification.json` files differ. The latest two agree on 408 of 409 module hashes. Each current top-level receipt, core and fallible-inquiry, is byte-identical to the dated receipt it names.
+
+**Sampled** the 16 October plan’s storage row and the 17 October restructure report. They found 31,786 core files before packing and reported that old runs could be restored. **Counted** across all surviving run indexes: 23,319 file entries point to 2,734 SHA-256 objects, 8,046 describe empty files, and 174 retain the file in place. Every named object path is tracked. **Sampled** the first object entry in the earliest indexed run and recomputed its hash successfully. The other 379 runs have no index. [October plan](/Users/ren/theories/_process/research/2026-10-05-repository-reconciliation/whole-repo-review-2026-10-16/RESTRUCTURE-PLAN.md) · [Store format and restore code](/Users/ren/theories/tools/research/evidence_store.py)
+
+**Counted.** Git reports 43.20 MB of on-disk representation for these 14,851 current blobs, about 1.1% of its reported loose-object and pack storage. Of that, 38.51 MB belongs to blobs with no current indexed path outside the measured area. **Not looked at:** historical versions and their delta bases as a group. Neither figure measures space recoverable by removing paths.
+
+## What depends on it
+
+**Counted.** Across all 567 current record JSON files, `references` names 347 distinct core-run files from 344 runs. `proof_bindings` names 105 files from 103 runs. All record fields together mention 370 core stamps. The live board mentions seven. The current fallible-inquiry receipt names **494 core runs** among its inherited receipts. Conversely, the current core receipt names 150 distinct files under Lean history. **Sampled** the two checkers’ discovery functions: each searches JSON under the Lean root, excluding its own outputs, for passed receipts that bind inherited source bytes. The gate’s current-source check reads the top-level receipts. The registry follows a record’s exact receipt path and JSON pointers for the source hash and success value. [Gate](/Users/ren/theories/tools/research/gate.py:898) · [Registry](/Users/ren/theories/tools/research/registry.py:1050)
+
+**Counted.** A lower bound for preserving direct references at today’s paths is **13,714 files**. Taking the union of record references, proof bindings, text versions, the two current receipts’ inherited files and retained artifacts, and the two history manifests gives 12,174 Lean-history files, all 573 architecture snapshots, 548 core files, 24 fallible-inquiry files, 357 other Lean files and 38 other experiment files. This count precedes following the receipts’ own artifact lists.
+
+**Counted.** Records, board and the two current receipts together mention 528 of 550 core stamps. I swept the other 22 by their 15-character timestamp prefixes across 120,043 permitted tracked paths, excluding each run’s own path and the object store. Twenty had an outside mention, sometimes only in the old survey or a rebind ledger. An outside mention was **not found in what was read** for `20261022T044435.181667Z` (failed) or `20261106T025121.503688Z` (passed). A checker can still discover a receipt without spelling its stamp.
+
+## What a continuing session needs from here
+
+**Inferred from the gate, records and checker.** For ordinary proof work, start with the record’s binding, its named Lean source and the current receipt. Open a dated driver or log when the question concerns what actually ran. The 29 October review gives a reason: it found 1,349 of 1,360 steps reused from a machine-local cache. **Sampled** that receipt and its designated 31 October fresh successor, two of 550 chosen by the review: the first records exactly that reuse; the successor ran all 1,455 keyed steps plus the version query. The 16 November current receipt records seven steps run and 1,629 reused. **Not looked at:** session access logs; I cannot say which file nobody ever opens. [29 October review](/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-TWENTY-FIRST-REVIEW.md:158)
+
+## Candidates
+
+- **Inferred — keep dated bindings and unique checked sources at their paths.** `wisdom-root` binds two distinct `Becoming.RegroupingSelection.lean` copies from 13 October. **Counted:** the earlier bytes occur at three indexed paths; the later bytes occur only in the `132140.261612Z` run. Moving that file would require a resolver that returns the exact reviewed bytes and preserves the record’s binding.
+- **Inferred — repeated drivers, logs and source copies could be held once.** The 171 indexed runs demonstrate the representation. Extending it would require preserving direct file citations, failure artifacts, file modes and empty files, and accounting for the missing paths below before promising restoration.
+- **Inferred — retain the fallible-inquiry, periphery and experiment evidence by outcome.** **Counted:** nine core runs and one fallible-inquiry run failed. The latter records that `Becoming.TimedResponse` lacked a passed receipt for its then-current bytes. Lean history has 110 negative outcomes among 310 files named `receipt.json` or `verification.json`; 54 timestamped folders have neither name. **Sampled** the initial and corrected AgentDojo replay verifications: the passing report pins the earlier discrepancy, including 47 comparisons affected by its proxy. A fresh success cannot recreate that observation. [Initial replay report](/Users/ren/theories/experiments/agentdojo-evidence-boundary/replay-verification-initial.json) · [Corrected report](/Users/ren/theories/experiments/agentdojo-evidence-boundary/replay-verification.json)
+- **Inferred — architecture snapshots and retired Lean could leave the ordinary reading route.** Removing their working paths would require changes to record-version lookup, navigation, move manifests and inherited-receipt lookup. **Counted:** all 12,174 Lean-history manifest blob IDs match their indexed destinations. **Sampled** the retired `CompositionBridge.lean`, selected by searching for counterexamples: it points to the shared-support and lease counterexamples to designated-part substitution, and its complete bytes also survive in the core object store.
+
+## Against the two views
+
+**Inferred.** Ren’s suspicion fits the repeated physical copies. It fits poorly as a judgment of the unique run-bound source, the failed replay, or the dated receipt showing what was actually checked. The coordinator’s view fits ordinary reading, but moving evidence off the reading route does little to reduce the largest component: the 550 distinct core receipts themselves. **Sampled** the November 9–10 AG review’s `process.json`: it caught prose extending theorem warrant to every registered result. That distinction matters here too. A receipt can establish which Lean bytes passed; deciding that a situation meets the theorem’s premises still requires another kind of evidence.
+
+## Not determined, and surprises
+
+**Counted.** Following every core receipt’s artifact names and every run index accounts for **68,122 existing paths**. Another 145 tracked paths fall outside that union, including files from failed runs and the fresh-run README. One passed run, `20261019T090457.012800Z`, lists **728 artifacts missing at their recorded paths**. Of their 483 distinct SHA-256 values, 481 occur elsewhere among core sources, logs or stored objects. Matching bytes for `BecomingHexagramsAxiomAudit.lean` and its log were **not found in what was read**, including a same-filename sweep elsewhere in the permitted index. The landing commit `5d32f69f9` says it kept only what `main` lacked. **Not looked at:** recovery from historical objects or replay. A working-tree subset that resolves every recorded artifact at its original path therefore cannot be specified from today’s files alone.
+
+## The commands behind the counts
+
+**Counted** with `git ls-files -sz`, `git cat-file --batch-check='%(objectname) %(objectsize) %(objectsize:disk)'` and `git count-objects -v`. Small read-only Python scripts grouped indexed paths, counted LF bytes once per distinct blob and multiplied by path frequency. After the four named roots, the rule selected experiment paths with a directory matching `(?:^|[-_])(checks|receipts|verification)(?:[-_](?:history|runs))?$` or a JSON filename containing `receipt` or `verification`. Reference counts used parsed JSON fields, Python set unions and `rg --no-ignore-dot --only-matching -F` on permitted tracked paths. No checker, restore, build or test was run.
+
+── cx · ok · session 01a1edc3-d0ed-7210-a113-ed75c0ad8021 · gpt-6.2-astra/high · read-only · 1028s · 2268.5k tokens · 49 cmds
+continue: cx -r 01a1edc3-d0ed-7210-a113-ed75c0ad8021 "…"
+log: /Users/ren/.cache/cx/runs/20261118-152634-54532

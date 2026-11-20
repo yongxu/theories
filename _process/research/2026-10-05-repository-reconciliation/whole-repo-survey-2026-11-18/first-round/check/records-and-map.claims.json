@@ -1,0 +1,62 @@
+{
+ "area": "records-and-map",
+ "headline": "theories/becoming/results is 1,306 tracked files, 104.7 MB: 711 (69.8 MB) are renderer output hashed in the generated manifest; 595 are AI-written stores kept by hand (567 records, about ten separate \"map\" stores). Records tie sentences to Lean only by declaration name and file hash. The same theorems are told separately, in different words, in chapter, record, atlas, card and sheet, so removing mass would not make anything said once.",
+ "loadBearingClaims": [
+  {
+   "claim": "Of the 1,306 tracked files under theories/becoming/results, exactly 711 are listed in _process/architecture/generated-manifest.json (69.8 MB of 104.7 MB); the 595 not listed include all 567 records/*.json, the 6 atlas/entries files, 7 map/*.json files and 13 data/*.json files.",
+   "evidence": "Python: keys of generated-manifest.json['files'] intersected with `git ls-files theories/becoming/results`; byte sizes by os.path.getsize and `git ls-files -z | xargs -0 cat | wc -c`.",
+   "howFarSeen": "counted"
+  },
+  {
+   "claim": "No tracked file under theories/becoming/results has a byte-identical copy anywhere else in the tracked tree, nor within the area.",
+   "evidence": "`git ls-files -s` over all 122,777 tracked paths grouped by blob hash (42,259 distinct blobs); 0 area blobs shared with a path outside, 0 shared inside.",
+   "howFarSeen": "counted"
+  },
+  {
+   "claim": "A record is tied to the Lean by declaration names and hashes only: 4,421 laws each list declarations; 11,491 references each carry a sha256 over 1,746 distinct paths, all present on disk; 2,209 proof_bindings point at receipts in 173 run folders. No tool checks that a law's sentence says what its declaration proves, and the 1,289 formal-reuse edges are assigned by the records, not derived from the Lean.",
+   "evidence": "Python tallies over records/*.json; registry.py docstring: source hashes 'mark documentary review, not a proof build or semantic equivalence'; registry.py lines 262-325 and 491-499 check names in source text and receipt lists; DEPENDENCIES.md lead: 'nothing checks that the Lean there uses the cited result'.",
+   "howFarSeen": "counted for the tallies; registry.py read in part (docstring and grep of declaration checks), not whole"
+  },
+  {
+   "claim": "Record text retells the chapters rather than copying them: 559 of 567 records have a home anchor <a id=\"r-<id>\"> in chapters 01 to 08, yet 7.4% of the 8-word runs of record statement and laws (English) occur in those chapters; atlas dynamics share 22.1% with records and map cards about 1% with records, chapters or atlas.",
+   "evidence": "Python: regex over chapters/0*.md for r- anchors; lowercase token 8-shingle sets of English fields (18,826 of 254,705 for records against chapters).",
+   "howFarSeen": "counted (a lexical measure; paraphrase is inferred from low overlap plus one pair read side by side: 02-MAP.md r-every-loss-passes-a-juncture against its record)"
+  },
+  {
+   "claim": "The measure '86 of 185 dynamics linked to no other' reproduces on atlas/entries/dynamics.json at commit 3b155c9ea (86 alone, 108 pieces, largest 30) under the rule in LINKS-ON-PAPER.md line 65; on today's tree the same rule gives 82 alone, 104 pieces, largest 30.",
+   "evidence": "Script counting an exit whose `to` is a dynamic id, a premises[].case_of law that another dynamic lists in declarations, and compose from/to; run on `git show 3b155c9ea:...dynamics.json` and on the working tree.",
+   "howFarSeen": "counted; the refuter's original script was not found or read, the rule was taken from its one-sentence description"
+  },
+  {
+   "claim": "The atlas covers under half the records: 249 of 567 record ids are listed by some dynamic; the generated JOINS.md states 287 of 537 live theorem records are cited by no dynamic and that 0 of 3,299 theory-graph nodes is a dynamic, exit, transition, test, premise or correspondence.",
+   "evidence": "Python over dynamics.json `records` against record ids; JOINS.md counts table; theory-graph.json node kinds tallied (text, result, section, module, concept, dossier).",
+   "howFarSeen": "counted"
+  },
+  {
+   "claim": "The map's data is hand-kept except two derivations from the Lean: premise binders (read by a Lean script, then mapped to 1,715 premise ids by AI readers in step2b/mapping.json and six/mapping.json, which atlas.py reads) and shared-laws.json (a walk of constants from the checker's cache, finding 2,166 of 4,396 record laws reaching none of five anchors and 1,057 reaching the grammar).",
+   "evidence": "atlas.py constants STEP2B and SIX; aa-attractor-atlas/PLAN.md lines 497-516; premises.json seeded_from tally (1,681 'Lean'); shared_laws.py docstring; shared-laws.json counts.",
+   "howFarSeen": "read in part (docstrings, plan lines, JSON keys); the mapping files themselves were not opened"
+  },
+  {
+   "claim": "Two declarations the direction page names as nearest the two ways, Renewable.prefix_does_not_decide and Flow.Balances.includes_of_renewingIn, occur in no atlas entry, map card or sheet file, and in one record each.",
+   "evidence": "`grep -c` / `grep -o | wc -l` for 'prefix_does_not_decide' and 'includes_of_renewingIn' over atlas/entries/dynamics.json, premises.json, map/cards.json, sheet.json, passages.json, paths.json (0 each) and `grep -l` over records/*.json (1 each).",
+   "howFarSeen": "counted by grep on the short names; cases.json, laid.json, web.json and correspondences.json were not searched"
+  }
+ ],
+ "againstTheViews": [
+  "Against 'much is garbage': the 595 hand-kept files are not regenerable and hold the scoping of every claim (2,168 does_not_show items, 796 counterexample pointers) and this layer's kept failures (1 withdrawn, 7 superseded records, the 66-row tests table with 4 failed and 20 mixed, 17 exits no law shows). Nothing here is a byte copy of anything else.",
+  "Against 'trace and machine output can leave without loss': two thirds of the bytes are machine output, but 711 files are hashed in a manifest the gate checks and about 9,300 link occurrences in Markdown outside the area point in, so leaving is a tool and site change, not a move.",
+  "Against the same view: what remains after output leaves is neither trace nor output but five parallel tellings of the same theorems (chapter, record, atlas entry, card, sheet) in three map vocabularies (families A to H; 12 roles and ties; 14 rows and 50 boxes). Reducing mass does not make each thing said once.",
+  "Against 'prose judged against the Lean' as something the tooling already supports: the tie is by declaration name and file hash; sentence-to-theorem agreement is a reader's judgment everywhere in this area, and record dependency edges are hand-assigned.",
+  "For the coordinating view in part: the record `history` field is 396 k of 1.42 M record words and is trace embedded in a live store; the October registers are trace that four tools still read."
+ ],
+ "notDetermined": [
+  "The git weight of this area (pack share); only commit counts were taken: 1,898 of 7,384 commits touch it, lean-index.json 555 times.",
+  "Whether record, atlas or card sentences say what their theorems prove: 2 records, 1 dynamic and 1 card were read; none was set against the Lean.",
+  "Whether a declaration-to-declaration dependency graph from the Lean would join the dynamics: it needs the checker's cache, which was not run or read.",
+  "Whether the site build could render the generated pages instead of the tree holding them; the site builder was not read.",
+  "The whole-repository review of 16 October and the count of 14 November were not checked for this area; the 16 October review predates the atlas (planned 4 November).",
+  "The match of record declaration names to live Lean (23,228 of 27,771 named; 2,287 record names matching none) is textual, by lean-index.json's regex hints, and approximate.",
+  "The report is about 2,040 words including its table, over the brief's 1,800."
+ ]
+}

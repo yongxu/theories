@@ -1,0 +1,55 @@
+# outside-tree: the check
+
+*AI-written (Claude Opus 5.5, checking reader), 18 November 2026, 16:14 to 16:35 WIB. Read only; nothing in the repository was changed. Every count below was rerun by me against the repository and the disk, not against the reports. Load average was 57 to 83 throughout; all commands were light (the slowest, `du` of six worktree folders, 42 s).*
+
+## The area moves while it is read
+
+The Claude report was written at 15:42, the astra report at 15:56, this check from 16:14. In between, AGENTS.md landed (16:02), a worktree registration changed (`.git/worktrees` mtime 16:04:46), a branch `coord-rule7-1118` was created (reflog: 16:08:23), and three small packs were written. Several "disagreements" are this, not error:
+
+- Branch heads: Claude 157, astra 158, now 159 (`git for-each-ref refs/heads`). Not an error in either.
+- Worktrees: Claude 7 (main + 6), astra 8. Now 7 (`git worktree list`), and the registrations directory changed after astra wrote. Not settled; probably both right at their time.
+- `refs/codex`: Claude 60 (59 trees, 1 commit), astra 2. Now 2 (1 commit, 1 tree). 60 is also the number in AREAS.md and in the 16 October plan. Whether Claude saw 60 or carried the number cannot be settled from here; no reflog is kept for `refs/codex`. Either way these refs are transient harness output.
+- Unreachable objects: Claude 15,025 blobs, 1.45 GB; I count 16,532 blobs, 1.83 GB by `objectsize:disk` (406 over 1 MB, 1.18 GB), from `git cat-file --batch-all-objects` minus `git rev-list --objects --all`. If 58 `refs/codex` trees were deleted between the two counts, their blobs became unreachable, which would explain the rise. The kind is confirmed: 47,309 of 47,311 loose objects are unreachable; `gc.pruneexpire never` is set.
+
+## Claims, tried
+
+| claim | verdict | evidence |
+|---|---|---|
+| 403 salvage refs reach 890 commits not in main; remote has no salvage | confirmed | `git rev-list --count $(salvage refs) --not main` = 890; `git ls-remote origin`: 10 heads, 2 pull, 12 tags |
+| astra: salvage holds 876 commits outside all branches; 379 salvage refs point outside main | confirmed | `--glob='refs/salvage/*' --not --branches` = 876; per-ref `merge-base --is-ancestor` gives 379; 390 distinct tips |
+| gate.py reads `refs/salvage` for pins | confirmed | `salvaged()` lines 739-741; lines 870-873: every pinned commit outside HEAD's history must be under `refs/salvage/` |
+| astra: 20 FROZEN-AT pins name 32 commits; 6 outside main, all salvaged; mq2/mq3 have one salvage ref each | confirmed | my loop over `git ls-files 'experiments/*FROZEN-AT'`; `experiments/margin-measured/results/FROZEN-AT` names `13af39133 (rebased onto main as 9e2e8ec2a)`. This answers Claude's "pins that depend on salvage: not counted" |
+| 1.45 GB of `.git` is 15,025 unreachable blobs; largest are MAT files | partly | now 16,532 / 1.83 GB (see above). Largest 8 unreachable: 7 MAT-file, 1 a 67 MB JSON hash list. Of the first 400 over 1 MB, most are earlier states of generated pages and records (`<a id=` 131, JSON 140+), MAT only 13: "machine output, largest MAT" holds, "data dumps" does not describe the bulk by count |
+| board cites `STEP-2-ON-PAPER.md`, `THE-MAP-AS-DATA.md`, `tmp/r7/words/scan/`; neither file in git; DIRECTION head note says two things are in scratch | confirmed | `rg` board lines 55-56; `git hash-object` vs all blobs: both absent; DIRECTION line 3: "(the second and third of these are in scratch, not in the repository)" |
+| astra: all 12 files of `tmp/r7/one-model/check/join18` have no blob in git | confirmed | hash loop, 12 of 12 absent; FROZEN-JOIN.md lines 58-79 record J2 failed and J5 not as expected |
+| `tmp/r7`: 1,555 `.lean`, 248 distinct, 214 in main's index, 34 in no git object | confirmed | `find ... \| git hash-object`, `comm` with `git ls-files -s` and all blobs; astra's 1,516 of 1,555 paths in index also confirmed |
+| astra: 1,481 `.olean` = 1.30 GB of 1.59 GB under r7; md 101 in index, 175 anywhere | confirmed | `stat -f %z` sum 1.296 / 1.589 GB; md now 866 (was 862), 101 and 175 match |
+| Claude: 205 tracked files cite `tmp/r7`; astra: 48 | both right | 205 files of any kind (72 json, 48 md, 41 py, 22 txt, 19 js, 3 log), 187 under `development/`; 48 are Markdown |
+| 82 tracked md cite `/Users/ren/tmp/`; astra: 15 folders | confirmed | `rg -o`; cw 39, el7 30, ag 30, za-how-far 23 mentions in 14 files |
+| 147 of 157 heads merged; 8 branches carry patches; ue31-design "8 commits", 10 files, 4,091 lines | partly | ancestry and cherry confirmed (now 11 branches incl. the new coord-rule7-1118); ue31-design is 10 commits ahead with 8 patches not in main; `git diff --shortstat main...ue31-design` 10 files, 4,091 insertions. The claims file's "8 commits" is wrong; the report's "by git cherry ... 8" is right |
+| six worktrees no modified tracked file; agents-board 874 MB orphan, no file outside git | confirmed (now) | `status --porcelain`: none modified except `dj/wt` 1 M now (it moved since); agents-board `.git` names a missing gitdir; 6,940 non-build files, 0 not in git; 895,424 KB |
+| private folders and `experiments/guardian-anarchy` only on this machine; backup failed to mount | confirmed | counts 403/197/108/9/67 files; none tracked; guardian-anarchy own git, 2 commits, no remote; `tmutil latestbackup`: "Failed to mount backup destination" (a configured but unreachable destination, so a backup may exist off-line) |
+| `.git/lfs` holds 4 LFS files, 177 MB | refuted in part | `find .git/lfs/objects -type f` = 1 payload (185,284,643 bytes = 177 MiB); `git lfs ls-files` lists 4 entries, 3 of them marked `-` (not present locally). astra's "one LFS payload" is the right count |
+| ZA readings in `/Users/ren/tmp/za-how-far` not in git | confirmed | 95 distinct (115 paths) of 1,611 files absent; `za-opus/fable/astra/check.md` all absent; a phrase sweep of tracked md finds no copy; memory note `project_za_how_far.md` points there. `ag` 68/68, `runs` 34/34 absent, as Claude said |
+| astra: two Guardian exports match tracked paths at `eb36b95ae^`; TurningInTime first attempt held byte for byte | confirmed | `git ls-tree -r eb36b95ae^ \| grep <hash>` 1 each; tracked `held/TurningInTime-first-attempt.lean.txt` hash found in 3 scratch copies |
+| six worktree sizes (rw 8.1 ... coordinator 6.0 GB) | confirmed | `du -sk`; the 44.9 GB total of `/Users/ren/tmp` not rerun (220 entries now) |
+
+Not checked: the 2,745 gate passes beyond a folder count (2,746 now), stash file uniqueness (11 and 4), `ren-words/record.md`, astra's 3,673-file sample totals, the 16 October plan beyond its lines 239-290 (Claude's reading of them confirmed: 88 worktrees, 228 GB, 142 branches, 60 codex, cruft gc with never-expire).
+
+## Errors of fact
+
+- Claude: 2. Worst: `.git/lfs` "4 LFS files" where one payload is held and three are absent locally, which matters because it hides that three LFS payloads may exist only on a remote LFS store or nowhere. Second: "ue31-design (8 commits" in the claims file (10 commits, 8 patches). The `refs/codex` 60 and the unreachable-blob figures are not counted as errors (the store moved; not settled).
+- astra: 0 errors of fact found in what I checked (9 statements). Its worst is an omission it marked as not looked at: it did not see the 1.4-1.8 GB of unreachable objects in its own count of `.git`, nor that no salvage ref is on the remote, so its "salvage stays" says nothing about salvage being single-machine.
+
+## What a decision can rest on now
+
+Salvage refs and 11 unmerged branches hold about 890 commits that are on no remote; the gate reads salvage for six standing experiment pins (mq1 to mq3, se1), so salvage cannot move without changing the gate. `.git` is about 4 GB, with roughly 1.5 to 1.8 GB unreachable, kept only by `gc.pruneexpire never`. `tmp/r7` is about 82% compiled Lean; its Lean sources are almost all on main. Live pages (the board, the direction page) and today's failed join attempt rest on scratch files that are in no git object. The private folders, `experiments/guardian-anarchy`, `/Users/ren/tmp` and those scratch files exist on this machine only; the configured backup did not mount.
+
+## What it cannot yet rest on
+
+- Exact counts of refs, worktrees, unreachable objects: they changed within the hour.
+- Whether the three absent LFS payloads are on the remote LFS store.
+- The content of about 206 of the 220 `/Users/ren/tmp` entries.
+- Whether any unreachable blob holds content found nowhere else.
+- Whether an off-line backup exists.
+- Which sessions still use the six worktrees and `refs/codex`.

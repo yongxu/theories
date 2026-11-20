@@ -1,0 +1,76 @@
+*Reader: Claude Fable 5.2 (claude-fable-5-2). AI-written, 19 November 2026. A survey for the second round; nothing was changed. Marks: **counted**, **read whole**, **sampled**, **inferred**, **not looked at**.*
+
+# meta-attractor: the three homes set side by side
+
+## In three sentences
+
+The three homes name three different things: the folder a civilisation-wide process in which winning buys power over the rule that selects, through minds, institutions and infrastructure; chapter 02 a two-level loop whose rule and reading are formed from the share with nothing beyond read; Ren on 18 November an illusion held on to, a self within it, and a compounding destruction. Only the middle one has theorems, and they state the lock and its outliving an unread loss; no theorem has a holder, an account that can be false, or a held-to that is not handed in. Two of the three were already set side by side, by the generated crosswalk of 13 November; what nobody had added is his picture, and the nearest live telling of it (the direction page, lines 54 to 68) never uses the word.
+
+## What each says the thing is
+
+| | What has to hold | What compounds | What cannot turn |
+|---|---|---|---|
+| **Folder** `theories/meta-attractor/README.md` (52,536 words, **counted**; **sampled**: lines 1-100, 329-348, 414-439, 674-703, 862-1022, chosen by heading) | A region in state × rule space with convergence, persistence, positive reflexive coupling `(∂F/∂σ)(∂G/∂x) > 0`, proxy dominance (claim 24); four ingredients "jointly necessary" (claim 27). Also an eight-element "complete object" the folder says must not be shrunk to "the winner changes the next test" (claim 32) | Advantage ("winning creates more winning"), and the loss of "independent capacity to sense, refuse, correct, exit" | Partial reform is re-absorbed; "the metric survives its own refutation"; alternatives stop being intelligible. Not fated: "a hurricane, not a black hole" |
+| **Chapter 02** Definition (`02-MAP.md` line 412, **read whole** lines 398-465) and `ClosedCapture.lean` (995 lines; **read whole** 1-335, 396-520; the rest by declaration heads) | "a loop of selection whose rule and whose reading of the rule are both formed from the share it selects, nothing in it reading what lies beyond the share" | Nothing is derived to grow. The loss grows by premise (`Accrues`); share and rule only do not fall | Any change of share, rule value or reading that the share forms again (absorbed at the next reading step). A reading of the loss does turn it |
+| **Ren, 18 November** (source file **read whole**; 15:03) | "the Maya illusion that people are holding on to, and there is a self within that illusion"; "holding a model of reality and force the reality into it" | "a compounding like destruction or whatever word, corruption or anything" | Not said as such. What he sets against it (14:53): "actually seeing the situation as they are", which he says no map gives |
+
+He adds at 15:03: "in the past I called it meta attractor and other things, but I think it is the same thing."
+
+## Stated by a theorem, argued, or a picture
+
+**Theorems** (statements **read whole** in `ClosedCapture.lean`):
+
+- `ClosedCapture.courses_alike_iff_unread`: for any `f`, `h`, courses from starts alike in share and rule stay alike in both along every schedule, exactly where `Unread f h`. No other premise.
+- `ClosedCapture.lock_outlives_loss`: premises `Raises P favours fA`, `ReadsShare P M hA`, favouring kept upward, `Accrues fB`, a `Locked` start, on the joined law (unread by construction). Then at every step the loss is at least `t` above its start, the course is locked, share and rule not below the start.
+- `ClosedCapture.turned_by_loss`: `Accrues`, a reading favouring at no loss from `N` up, a reading step past `N`; then the rule in force does not favour at the next step.
+- `ClosedCapture.reading_absorbed`, `both_reads`: with the reading `Q` formed monotonically from the share (`mind`) and the rule read monotonically through it, a changed reading is back at least where it was after the next reading step.
+- `Drawn.pool_reads_iff`, `Thinned.kept_iff`, `Thinned.turned_iff`: heads and module account read, statements not opened.
+
+`favours`, the selection, `mind` and the loss are parameters. The module's own account lists as not derived that readers are minds, that what lies beyond is a loss to anyone, and that any actual rule is so formed.
+
+**Argued** (AI readings in chapter 02, lines 448-463): that the closed loop is "one part of the corpus's meta-attractor"; that the folder's working definition "is another, not shown to contain closed capture or to be contained by it".
+
+**Tested and failed, kept**: LA2 (02 line 446, **read whole**): one note of the loss among nine readers turned a trained judge, so the timing law did not apply to it.
+
+**Picture**: all of the folder as far as the Becoming package goes (the banner names older theorem and audit packages under `_process/research/…/root-foundation/history/`; **not looked at**), and all of the 18 November messages.
+
+## Where they agree, and where one says what the others do not
+
+- **All three**: something set again from what it already favours, which what lies beyond it does not reach.
+- **Folder and Ren, not the Lean**: minds. The folder has the identity step (claim 96), "agents … become a part of the meta-attractor" (SEED), and a line an AI quoted back to him, "'我'的生成本身，可能就是人机对立的源头" (item 87). The crosswalk says of this entry "The formation of identity is not stated."
+- **Lean only**: the lock needs no winning. Below the critical mass control is unselected and the rule is still locked, the other way (`DrawnShaping.drawn_locked_either`, chapter's telling). Drift leaves either lock; a reading of the loss leaves it only before a deadline.
+- **Folder only**: four layers, CAOC, AI as hinge, the exit order, carriers, a direction-neutral sense.
+- **Ren only**: a self inside the account, and that what answers it is recognition, not a map.
+- **The word has at least five senses in live text and Lean docstrings** (**read**, each at the line named): what a selection raises comes to set the selection (`GLOSSARY.md` line 47, the one page line 7); closed capture (02 line 412); "a selection by share coming to select for control of its rule" (`ReadingsPersist.lean` 72-73); a selection removing its own readers ("the meta-attractor's shape", same file 552; chapter 07 §3.5); the working definition Ren chose on 8 October (`GENERATIVE-REGIMES.md` line 9). `ChoiceCountCapture.lean` 77 says of its own lock "it is not the meta-attractor of 02". No Lean identifier carries the term (**counted**: no match for `元吸引子|MetaAttractor` in 406 files; "meta-attractor" in the docstrings of 6).
+
+## A fourth and a fifth home
+
+- **The 无明 line.** `Seeking.lean` opens with Ren's words of 10 October, "the seeking system got locked in, what they are pursuing is illusion", and states where seeking can rest; `Capture.lean` reads "the meta-attractor's selection of minds" onto a target's share rising. Both accounts (**read whole**, statements not opened) say how a target forms is not modelled. This is the Lean nearest to "illusion … holding on to".
+- **The direction page** (**read whole**) tells his picture from his words of 16 November (source lines 33, 57, 61: a false boundary held on to "creates illusion"; "one value which reflects what they are"; "when one thinks that the meaning goes back to only the self, they go crazy"), and says of the closing from inside: "Neither is in a model." It does not use the word meta-attractor (**counted**: 0; the plan 0; `AGENTS.md` 1).
+
+## What a theorem would have to state for the 18 November picture
+
+My reading, not found stated anywhere. Four things, as outcomes of one course and not as premises:
+
+1. **An account that can be false.** In `ClosedCapture` the reading `Q` says nothing of what lies beyond, so nothing is "taken for the whole". The model needs a claim, read off the registered part alone, that is false at some configuration the course reaches. `ReadingLoop` has readings as sets of admitted worlds, with the remark that being kept is not being informative.
+2. **A holder formed within it.** What stands, and what it holds to, must be generated from the account, not handed in as `favours` or a target. Every held-to in the modules I opened is a parameter (`Seeking`, `Capture`, `ClosedCapture`; the direction page says the same of about seventy modules).
+3. **Holding.** The holder's own revising keeps the account: the region is closed under its update though false of the world. Pieces exist apart: `reading_absorbed`; `fixed_of_closedFrom` (07 §4.14, chapter's telling); `LumpedSeeking.seeking_keeps_order`.
+4. **Compounding.** Acting from the account draws on what it does not register, no less as the holder's share rises, and what would revise it goes with what is drawn. Pieces: `PoolFromCourse.window_order_kept` and the removal of readers (02 §10); `ReadingsPersist.cleared_removes_its_readers` (a built course, which lines read supplied); `ReadingsSpread.Commons` (built, acts assigned by design).
+
+The conclusion would be: the registered never differs from a course in which nothing is drawn, the unregistered falls past its bound, and nothing within the holder's reach turns it. That anyone is in such a course no theorem gives (his 14:53; `AGENTS.md` rule 2).
+
+## Against the two views
+
+- Against "garbage": the folder is the only place holding the sense he says he means (minds, identity, the self), and 70 tracked pages outside history link it (**counted**), 26 under `theories/becoming`.
+- Against "judge prose against the Lean and the rest follows": the Lean has no object to judge this term against. Its sharpest result (a lock without winning) and its failed test cut against the folder's telling, and the picture's centre is in no model.
+
+## Not determined, and surprises
+
+- The survey brief's telling of his picture ("what the account leaves out is used up") is not in his messages of 14:53 or 15:03; **inferred** to be the session's wording.
+- The crosswalk (25,542 words, 69 entries, generated) already reads folder against account; it only skimmed "In Ren's own words". Six entries **sampled**.
+- `correspondences.json` carries a damaged quotation of the Definition, "a loop of selection se rule and whose reading of the configurule", at 4 lines, rendered on 3 crosswalk pages (**counted**).
+- Not looked at: the other eight folder files beyond one line; `RuleCapture`, `DrawnShaping`, `ReadInTime`, `PoolFromCourse` statements; proofs; the older Lean packages the banner names.
+
+## The commands behind the counts
+
+`wc -l -w theories/meta-attractor/*.md`; `git grep -l 'meta-attractor/README.md' -- '*.md' | grep -v /history/ | wc -l`; `grep -n '^theorem\|^def' ClosedCapture.lean`; `grep -l -i 'meta-attractor' Becoming/*.lean`; `grep -c 'MetaAttractor\|元吸引子' Becoming/*.lean`; `grep -c -i 'meta-attractor' _process/DIRECTION.md _process/LEAN-TOWARD-THE-DIRECTION.md AGENTS.md`; `grep -c configurule …/atlas/entries/correspondences.json`; `git log -1 --format=%ad -- …/crosswalk/meta-attractor.md`; `grep -i` sweeps of `Becoming/*.lean` for self-concern, held to, illusion, 无明, self-fulfilling, compound, account, and of declaration heads for self, own, held, account, belief, identity, mind.

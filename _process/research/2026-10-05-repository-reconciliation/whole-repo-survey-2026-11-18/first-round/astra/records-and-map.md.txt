@@ -1,0 +1,80 @@
+GPT-6 Astra
+
+# Records and map: what is there
+
+*AI-written (GPT-6 Astra), 18 November 2026. A survey; nothing was changed.*
+
+## In three sentences
+
+**Counted.** The 1,156 files in `records/` hold 567 editable records, 567 generated pages and 22 redirects preserving former names.  
+**Counted.** I reproduced the 16 November finding that 86 of 185 dynamics had no recorded link to another. After the 17 November repairs, the same count gives 82.  
+**Inferred** from the records, map data and checked examples. Lean can supply much of the map of formal dependence. The judgment that a fish stock, a reward model or a passage of philosophy meets a theorem’s premises has a different source, and this area preserves both that judgment and occasions when it failed.
+
+## What is there
+
+**Counted.** `theories/becoming/results/` contains 1,306 tracked files, 8,320,909 whitespace-separated words across all formats, of which 2,609,638 are in Markdown. JSON, SVG and HTML counts measure stored text, not reading time. Including the three root pages and six assigned tools gives 1,315 files and 105,632,553 bytes. In the table, **unique** means a generator would need the judgment or evidence supplied again. Exact-file uniqueness is measured separately below.
+
+| Kind | Files | Words | What it is beside the Lean | Unique? | What reads it | How far seen |
+|---|---:|---:|---|---|---|---|
+| Record JSON | 567 | 1,423,014 | Claims, premises, limits, counterexamples, reviews and proof receipts | Reviewed selections and wording | Registry, graph, atlas, gate | Counted all. Sampled 3/567 for a recent theorem, a central theorem and the withdrawn target |
+| Record pages and redirects | 589 | 1,284,898 | Generated tellings and old addresses | Regenerable | Chapters, register, atlas, incoming links | Counted all. Read whole one redirect |
+| Atlas inputs | 8 | 836,376 | Vocabulary, dynamics, premises, correspondences, test bindings, situations and crosswalk checks | Authored identifications | `atlas.py`, map builders | Counted all. Sampled the six entry schemas |
+| Atlas pages and pictures | 56 | 1,448,615 | Family, premise, terrain and crosswalk views | Regenerable | One page, chapters, connection map, readers | Counted all. Sampled `JOINS.md` and rendering code |
+| Map inputs | 7 | 303,143 | Roles, theorem cards, cases, boxes, passages, paths and tests placed on the sheet | Authored readings | `the_map.py`, `map_sheet.py` | Counted all seven schemas. Sampled theorem and case entries |
+| Map pages and pictures | 25 | 378,153 | Bilingual sheet, paths, ledger and interactive views | Regenerable | Root guide and readers | Counted all. Sampled ledger and cases pages |
+| `data/` | 17 | 2,286,848 | Reading registers, regions, tests, lineage, shared-law measurement and generated indexes | Mixed | Registry, catalogue, graph, atlas and standings renderers | Counted all 17 schemas and sizes |
+| Declaration lists | 21 | 264,676 | Generated name lookup | Regenerable | Lean index and declaration links | Counted all. Sampled catalogue code |
+| Results-level files and `completion/` | 16 | 95,186 | Reading catalogue, chain, graph, standings, coverage criteria and views | `COVERAGE.json` supplies judgments. The chain has editable data elsewhere | Completion, chain and navigation tools, readers | Counted all. Sampled coverage, chain and catalogue |
+| `RESULTS.md`, `DEPENDENCIES.md`, `MAP.md` | 3 | 20,497 | Generated register and edges, visitor’s guide | Guide carries editorial choices | Navigation and anchored links | Counted all. Sampled openings of all three |
+| Six assigned Python tools | 6 | 60,694 | Validation, assembly and rendering | Implementation | Research command and gate | Counted all. Sampled inputs, checks or output construction in 6/6 |
+
+**Counted.** The registry has 536 results with a recorded Lean receipt, 20 reviewed at their stated scope, three open, seven superseded and one withdrawn. Its 548 records with law rows contain 4,421 such rows. The atlas has eight families, 185 dynamics, 1,715 premises, 329 exits, 105 transitions, 1,183 correspondences in 28 groups, 22 test bindings and one situation. The sheet recasts this material into 50 boxes, 105 passages and five paths. Its underlying ledger has 185 cards and 66 cases. Seven tests are placed on the sheet.
+
+## What repeats
+
+**Counted.** All 1,306 result files had distinct SHA-256 hashes. Comparing Git index blob IDs also found no whole-file twin elsewhere in the tracked tree. Yet 709 existing results files, containing 5,462,467 words, are listed in the generated manifest. A record rendered into a different format can repeat nearly all its substance without sharing a file hash.
+
+**Counted.** Across all records, 51,031 of 398,735 English tokens in six claim-bearing fields occur in matching runs of at least eight tokens in the eight numbered chapters, **12.8%**. The overlap reaches 516 records. It covers 6,373 of 26,517 short-statement tokens and 36,087 of 239,780 law tokens. This measures repeated wording. Paraphrase, Chinese and the rest of the record are outside the measurement.
+
+**Sampled, 1/1 October reconciliation survey and its named register page.** The 16 October survey identified `RESULT-REGISTER.md` as a second register. Its present version preserves the old anchors and points to `RESULTS.md`. This is a working example of saying something once while keeping earlier citations usable. [October survey](/Users/ren/theories/_process/research/2026-10-05-repository-reconciliation/whole-repo-review-2026-10-16/RECONCILIATION-SURVEY.md:52) · [Present register page](/Users/ren/theories/theories/becoming/results/RESULT-REGISTER.md)
+
+## What depends on it
+
+**Counted.** The theory graph has 3,299 nodes and 7,244 edges. These include 892 module imports, 559 chapter-section-to-record edges and 1,289 edges that records classify as formal reuse. `regions.json` assigns regions and bases to 567 records and 406 modules. All eight numbered chapters contain links into `results/records/`.
+
+**Sampled, 6/6 assigned tools at their input or assembly code.** The registry binds a proof source’s reviewed hash to a success field in a receipt and checks declaration names against elaborated names where available. For Markdown, a cited section or a line linking the record can delimit what changed since review. The atlas resolves hypothesis numbers into record wording. The theory graph reads chapter anchors of the form `r-<record-id>`. The connection map combines atlas readings, graph edges and measured shared laws. The gate checks generated views and relative links. The `consumer--producer` anchors in `DEPENDENCIES.md` preserve addresses for particular uses. Its formal-reuse label is assigned in the record. [Registry](/Users/ren/theories/tools/research/registry.py:1050) · [Dependencies](/Users/ren/theories/DEPENDENCIES.md)
+
+**Counted and sampled, 1/536 receipt-backed records, chosen for the current direction.** Both proof bindings in `a-line-on-a-stock.json` matched the current source bytes, the recorded hashes and the receipt’s `passed` field. One countermodel makes the qualification memorable. The level stays at 12, but the offspring need 13. An unmet need can therefore appear without any fall in the level. The record identifies the failed inference and the Lean supplies the witness. [Record](/Users/ren/theories/theories/becoming/results/records/a-line-on-a-stock.md) · [Witness](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineOnAStock.lean:1551)
+
+## What a continuing session needs from here
+
+**Inferred** from those links and checks. For a proof claim, follow the chapter anchor to the record, read its hypotheses and counterexamples, then open the named Lean declaration. For a proposed connection, consult `atlas/JOINS.md` and the two entries it connects. For a claim about an actual case, follow `map/CASES.md` through to the freeze and outcome. A session working on one result can take these routes without reading the complete declaration lists or resolved JSON indexes. **Not looked at.** Session-access logs. I cannot establish that a file is never opened.
+
+## Candidates
+
+| Candidate | Evidence, risk and what would have to change first |
+|---|---|
+| Keep the editable records, premise ledger, case readings and failure histories | **Counted.** 390 records contain 796 counterexample entries. **Sampled, 1/66 cases**, chosen for a failed field test. MQ3 records zero of four predictions passing on 113 fish stocks, corroborated at the experiment home. A Lean-only reconstruction would lose what was identified with what and why the test changed the reading. Any replacement needs to retain those identifications, verdicts and source paths. [MQ3 outcome](/Users/ren/theories/experiments/margin-measured/README.md:171) |
+| Say reviewed theorem wording once where the same wording serves | **Inferred** from the chapter overlap. A shared passage could supply a record and a chapter. First preserve the chapter’s argument, bilingual wording, exceptions and section anchors. Two passages can share eight words while making different claims. |
+| Generated record pages, map views and indexes could leave the working tree conditionally | **Inferred** from their builders and incoming links. Serving or materializing the same paths and fragments would have to precede removal, together with changes to freshness checks, the manifest and offline navigation. The October redirect shows a lower-risk option for duplicated indexes. |
+| Keep the measured formal dependencies and the authored map distinguishable | **Inferred** from `shared-laws.json`, graph edges and case cards. Lean dependencies and proposition binders could supply a formal base for the map. They cannot determine which assumption fails in a fishery, which two roles correspond, or why a failed candidate mattered. Whether the atlas and sheet could share more data without losing these distinctions remains open. |
+
+## Against the two views
+
+**Counted.** The 10 November atlas inventory reported 22 of 286 exits naming destinations and 56 of 177 dynamics without exits. Both reproduce at `c076ce68f`. The 16 November survey counted exits to another dynamic, cases of laws listed by another dynamic, and explicit joinings. I found 108 connected components, 86 singletons and a largest component of 30 at `3b155c9ea`. Today the figures are **104, 82 and 30**. An exit to a state described in words can be informative while adding no link between entries. [Earlier connectivity finding](/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/tries-2026-11-16/LINKS-ON-PAPER.md:65)
+
+**Inferred** from those counts and the 17 November repair. Against wholesale retirement, the evidence behind a boundary can be more valuable than a shorter statement of the result. Against treating the bulk as removable trace, some repetition lives in separately maintained accounts of what a theorem means. One correction touched 20 files. The atlas had presented inheritance as an exit into revision. The cited theorem identifies inheritance with revision under an update that keeps the reading. Its proof gives the equivalence directly and supplies no transition. **Read whole**, that theorem and proof. [Lean statement](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsSpread.lean:195)
+
+## Not determined, and surprises
+
+**Counted.** Six dynamics list no declaration, including `self-reproducing-selection-across-carriers`. The sole situation, a reward-model pipeline, labels itself a reading. **Inferred.** These entries preserve a question central to the direction without claiming that the formal work has answered it. **Not looked at.** Independent semantic verification of all 1,289 formal-reuse edges, all case identifications, or recovery from a clean checkout.
+
+## The commands behind the counts
+
+**Counted.** I used `git ls-files` for membership, `len(Path(p).read_bytes().split())` for words, `stat().st_size` for bytes, `hashlib.sha256` for working files and `git ls-files -s` for tracked blob comparisons. I counted JSON arrays directly with `python3 -B -c`, without importing repository tools. For overlap I stripped Markdown link destinations and HTML tags, lowercased, tokenized with `[a-z0-9]+`, and counted each record-token position covered by any matching eight-token chapter window once per field occurrence. The fields were `statement`, `claim`, `laws`, `hypotheses`, `does_not_show` and `counterexamples.detail`.
+
+**Counted.** For the historical graphs I read `git show <revision>:theories/becoming/results/atlas/entries/dynamics.json`. I joined distinct IDs by string-valued `exits[].to`, by `premises[].case_of[].law` to every dynamic listing that declaration, and by the two `compose` endpoints, then counted undirected components. I located earlier findings with `rg --no-ignore-dot` under `_process`. No build, test, gate or renderer was run.
+
+── cx · ok · session 01a1edd2-d0b1-7832-9fa7-926e5df02451 · gpt-6.2-astra/high · read-only · 543s · 1606.4k tokens · 79 cmds
+continue: cx -r 01a1edd2-d0b1-7832-9fa7-926e5df02451 "…"
+log: /Users/ren/.cache/cx/runs/20261118-154257-37675

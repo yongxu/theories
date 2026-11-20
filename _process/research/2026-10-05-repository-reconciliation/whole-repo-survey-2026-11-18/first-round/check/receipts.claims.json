@@ -1,0 +1,58 @@
+{
+ "area": "receipts",
+ "headline": "Receipts are about 72% of tracked files and about 47% of tracked bytes, but only about 2% of .git, because git stores the near-copies as deltas. The bulk is 550 core receipts (verification.json, 1.68 GB). Records bind these receipts, and registry.py checks them by JSON pointer, so they stay. The 64,812 run copies beside them hold 7,923 distinct contents, and nothing found reads them. The 17 Oct content-addressed store packed 171 runs once and was never run again, so the folder grew from 31,786 to 68,267 files.",
+ "loadBearingClaims": [
+  {
+   "claim": "LEAN/becoming/becoming-checks has 68,267 tracked files with 10,753 distinct blob contents. Its 550 verification.json files total 1,680,213,516 bytes, 71% of the folder's 2,357,539,302 bytes.",
+   "evidence": "git ls-files -s | sort -u; per-file-name sums via git cat-file --batch-check",
+   "howFarSeen": "counted"
+  },
+  {
+   "name": "",
+   "claim": "Records' proof_bindings name 193 receipts, 154 of them in checks or history folders. registry.py opens each one and checks the sha256 pointer, the success field and the elaborated declarations, so removing or editing a bound receipt fails the registry test.",
+   "evidence": "python tally over theories/becoming/results/records/*.json; registry.py lines about 1046-1065 read",
+   "howFarSeen": "counted; code read"
+  },
+  {
+   "claim": "Records reference 491 paths in checks or history folders, all present on disk, together 1,346,969,671 bytes. Nearly all are verification.json. Four superseded records have canonical_source becoming-checks/20261022T040548.209667Z/Becoming.Optimum.lean.",
+   "evidence": "python tally of references/proof_bindings/canonical_source with os.path.exists",
+   "howFarSeen": "counted"
+  },
+  {
+   "claim": "Of 550 becoming runs, a record names 370; 106 more are named by a live page, study or process file; 42 only by other receipts' enumerations; 26 only by enumerations and history folders; 6 by nothing.",
+   "evidence": "rg -o --no-ignore-dot of the stamp regex outside becoming-checks, intersected with the run names",
+   "howFarSeen": "counted (regex on stamps; a run named some other way would be missed)"
+  },
+  {
+   "claim": "The evidence store packed 171 runs (stamps 20261008T195935 to 20261016T112106) once, in commit e55caf52f on 17 Oct, and was not run again. 86 runs now hold more than 100 files each, and their 64,812 non-json copies hold 7,923 distinct contents, of which only 625 are in _objects.",
+   "evidence": "git ls-files | grep RUN-INDEX; git log --diff-filter=A on RUN-INDEX.json; comm of blob lists",
+   "howFarSeen": "counted"
+  },
+  {
+   "claim": "By first path in git rev-list --objects --all, becoming-checks accounts for about 29.9 MB of on-disk pack size and _process/architecture/history for about 6.6 MB, against packs of 1.98 GB. The largest .git mass is sources/situated-recovery (about 799 MB).",
+   "evidence": "git rev-list --objects --all | git cat-file --batch-check objectsize:disk summed by path prefix",
+   "howFarSeen": "counted, with the caveat that blobs are attributed to their first path seen"
+  },
+  {
+   "claim": "passed_receipts() in 36 checker scripts reads every *.json containing \"passed\" under LEAN and asserts each imported module has some passed receipt containing its current sha256. A next run needs only current receipts, not all old ones.",
+   "evidence": "check_regime_reals.py lines 74-82 and 128-137 read; rg count of scripts",
+   "howFarSeen": "one script read, 36 counted by name"
+  },
+  {
+   "claim": "The 9 failed core receipts record checker or build failures (duplicate declarations, import clashes, a lint warning, 'Source changed'), not failed mathematical candidates or countermodels.",
+   "evidence": "error field of each failed verification.json printed",
+   "howFarSeen": "read whole (the 9 error fields)"
+  }
+ ],
+ "againstTheViews": [
+  "Against 'garbage to remove': the largest part, the receipts (1.68 GB), is load-bearing. Records bind them and a registry test reads them. A record or a live page names 476 of 550 runs.",
+  "Against 'trace and machine output leave without loss': leaving the tree saves almost nothing in .git (about 2% of the pack). The gain is checkout size and file count. The area also mixes in non-machine material: retired Lean modules, record prior versions, and empirical runs.",
+  "The 17 Oct 'nothing deleted, byte for byte' rule relied on a store that was applied once. Its failure mode was not running the store again, and the rule itself was not the problem."
+ ],
+ "notDetermined": [
+  "Whether evidence_store.py still works on today's tree, and what --bare receipt would keep",
+  "References into the 7,954 other checks/runs files, and whether the empirical runs folders are held elsewhere",
+  "Exact .git share, because first-path attribution can undercount",
+  "Whether the remaining architecture/history files are all in git at their original paths (2 of 3 sampled were)"
+ ]
+}

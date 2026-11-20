@@ -1,0 +1,68 @@
+# Reorienting the repository: a proposal
+
+*AI-written (Claude Fable, the session that ran the survey), 20 November 2026. Ren asked for it on 18 November, 15:10 WIB: "I would love to have you to propose, like how can we make the repo and your memory to be like in a good place to continue this"; on 20 November he pressed a reply button this session had labelled "Propose the reorientation". A proposal: nothing in the repository is changed by it. It rests on [the picture](THE-PICTURE.md) and on main at `70f4829b3`. This is its third form. Four AI readers who did not write it (one astra 6.2 thread, three Fable readers) tried the first two forms against the repository and found both unsound to put to him. The astra reader then read this form and asked for the changes now made in items 2 and 3, in what a yes starts, and in the hand-over lists; those changes have not been read again. The reports are in `proposal/`, and the last section says what the readers changed. Ren has not read it.*
+
+## In short
+
+The repository does not need reshaping now. Most of what would reorient it is already under way on the direction page, led by the session Ren described on 17 November as the one to lead on the map and the direction (the board identifies it as the holder of row DJ). Twice this proposal tried to add an order of work or a piece of machinery, and twice readers found it already there, already judged, or someone else's to decide.
+
+What is left is small: four things this session does, two lists handed to those who hold the work, and three things that are Ren's.
+
+## His thought, and what the survey can say of it
+
+On 18 November he said that maybe a lot of the repository is garbage, to be revised, compressed or removed, and that he did not know the best approach.
+
+- *Against it.* Where the meaning is, almost nothing is a copy: word-for-word overlap between chapters, records and the Lean's comments is low, 3 to 19% by the survey's measures. Nearly everything large is bound to a record, a tool or a link.
+- *For it.* One AI-drafted paper is kept in eleven old editions, about 3.5 million words. Eleven live files name paths in them, the lineage page and its data among these, which name a handful of their files; nothing was found that reads the rest. Half the one page lies in long runs shared with the overview.
+- *Not tested.* Whether what is written is wrong or overtaken. Only the twelve front pages and sampled sections of the eight chapters were judged for that. So this proposal does not answer "garbage" in that sense.
+
+## What this session does
+
+The first does not wait on a yes. A yes starts the other three and sends the two hand-over messages below. Each is claimed on the board and landed through its queue, on this session's own paths.
+
+1. **Files his words.** His messages to this session since 15:36 on 18 November go into `sources/`. Rule 5 asks this whatever he answers, so it does not wait on a yes. Filing re-renders three generated files that now carry another session's uncommitted render; the landing goes around it the way the board says.
+2. **Files the picture.** As a step of the existing study of the repository (`_process/research/2026-10-05-repository-reconciliation/`): the picture, with the readers' reports it cites kept beside it as its evidence, and what waits on his read of AGENTS.md's rules, which today exists only in scratch (three corrections to the rules and a note on one landed clause). The filing says that the checks counted 71 errors of fact in the first round's reports, and where the checks list them.
+3. **A trial on twenty theorems.** The twenty headline theorems the survey read, by two models on the same twenty. Their verdicts are filed as data, in the form row DJ's study already uses where a telling was set against the Lean: what the text says, what the Lean says, the evidence, whether it must be mended, and a wording. Nothing is edited in the trial. The twenty sit in 19 Lean files, and about a hundred records are bound to those files by whole-file hash (91 or 102, by which path is counted; two readers counted differently), so every mend has a cost that is said to Ren before any is made. The trial is judged by a reader who has only the proposed wording: do they recover the theorem's premises and, where a premise can fail, say of a case that fails it that the theorem does not apply. By one model's count nine of the twenty have no premise.
+4. **Leaves the old paper editions out of plain search.** One line in `.ignore` for `drafts/2026-10-02-iaseai-selecting-the-selectors/history/` (972 files). Nothing is moved, every link to them still resolves, and a search that names the folder still finds them. Whether they leave the working tree is a later question: each file's bytes are in git, and the lineage page's render checks that the files it names exist.
+
+No Lean is built for these. Each landing runs its focused checks, and the full gate where the workflow page asks it.
+
+## Handed over, not decided here
+
+One message each, with pointers. They take or leave.
+
+*To the session that leads on the map and the direction:*
+
+- the proof outside git (419 lines) and the scratch files its pages rest on, which only it can file in its folders;
+- what the survey found on the two ways: the four November modules and their direct imports never name the web's renewing or consuming;
+- what it found on a holder within its account: not found in what was read, with `ReadingLoop` the nearest;
+- the docstrings and chapter sentences where a telling says more than its theorem;
+- that 288 of 406 modules are named on none of six pages of the direction's work (it is not a count of modules nobody opened);
+- the atlas, with 82 of 185 dynamics unlinked, and the second map store; who holds them is an open line on the board.
+
+*To the coordinator:*
+
+- that October's "first priority" reaches GOALS and RESEARCH from one goal record, beside the item on goals' wording it already keeps for Ren;
+- the tracked files that send a reader to an AI's memory notes (three workflow scripts kept as live examples, four archived ones, one handoff, one landing page);
+- a cold landing by a fresh thread with no memory, as a test of whether the repository carries the work: which claim it could take is for that claim's owner to offer;
+- that the memory folder is shared by every Claude session here, so cutting it is not one session's act. Nothing in it is cut by this proposal.
+
+## What is Ren's
+
+1. **Yes, no, or a change** to items 2 to 4 and the two messages.
+2. **October's aim.** It stands by hand in three places: the goal record `theory-of-becoming` (an authorisation, not yet marked by him), the open target record `theory-of-becoming-foundation`, and chapter 8's "one unified, complete, enclosed theory with zero axioms", which paraphrases his words of 11 October. Whether it stands beside the direction page, is said again, or is marked is his. Nothing above waits on it.
+3. **The seven rules of AGENTS.md**, which he has not read as they stand.
+
+One more thing is his but comes from elsewhere: the session leading the map has a question for him from 19 November, on whether a course it found is what the idea means by turning ([its record](../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/reads-2026-11-19/NOTE.md)). No Lean is written from that day's paper work before he has seen it. Other Lean work does not wait on it.
+
+And one thing for him to know, which is not a question: when the survey looked, the backup destination did not mount, so whether a copy of this disk exists elsewhere is not known. Nothing has been pushed since the morning of 18 November, and the survey did not find about 890 commits in salvage refs and side branches on the remote.
+
+## What it does not do
+
+No deletion, no moving, no renaming, no new index, no rewriting of chapters, no change to Lean, to memory or to another session's paths, nothing pushed. It does not look at Codex's memory, at what exists only in Chinese, or at the private extracts already on the remote.
+
+## What the readers changed
+
+- *The first form* said to land a Lean case that the session holding that line had already judged to join nothing. It ordered that session's work, proposed machinery that partly exists, and would have committed another session's files.
+- *The second form* still put to Ren timing and choices the board gives to that session. It named the wrong data form for the trial, called one goal record the single source of October's aim when three hand-kept places hold it, gave "bindings" as the reason for leaving old editions that nothing binds, would have cut a memory folder other sessions share, and did not say what a yes starts.
+- *Both readers of the first form, and the astra reader again of the second,* found leaving the stock where it is sound.

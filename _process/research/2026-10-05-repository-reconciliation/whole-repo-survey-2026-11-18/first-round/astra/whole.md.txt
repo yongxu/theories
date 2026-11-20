@@ -1,0 +1,71 @@
+OpenAI GPT-6 Astra (Codex)
+
+# Whole: what is there
+
+*AI-written (GPT-6 Astra), 18 November 2026. A survey; nothing was changed.*
+
+## In three sentences
+
+**Inferred** from following a stock theorem and two experiments: the repository carries a way to ask what keeps something going, what it can register, and whether it can turn in time, together with evidence that can change the answer. **Counted:** all 406 modules under `Becoming/` connect if imports are followed in either direction, while 82 of 185 atlas dynamics have no recorded link to another under the November survey’s rule. **Inferred** from checking one proof and one corrected atlas link: the hard part of saying each thing once is deciding whether two accounts describe the same law, a transition between two conditions, or an analogy worth testing.
+
+## What is there
+
+**Counted** at `befa506ba`: 122,777 tracked paths. Four places alone hold 81,571 paths with 12,842 distinct Git blob IDs: `becoming-checks`, `fallible-inquiry-checks`, the Lean `history/`, and `_process/architecture/history/`. Across tracked Markdown, 14.70 million of 26.76 million whitespace-separated words fall under a `history` path component or appear on the generated-file manifest, counting the overlap once. That establishes a majority by words as well as by file count under the respective measures.
+
+**Counted** sizes below cover the named selections. **Inferred** roles and uses come from the indicated samples. A word count across languages measures stored text poorly, so lines are used for code, JSON, and the chapter selection.
+
+| Kind and location | Files | Words or lines | What it is beside the Lean | What is unique? | What reads it | How far seen |
+|---|---:|---:|---|---|---|---|
+| `AGENTS.md`, direction, Lean plan | 3 | 11,962 words | Aim, interpretation, order of work | What the work seeks and why its course changed | Incoming sessions | **Read whole** instructions and direction; **sampled** plan by its stages and failed candidates |
+| November 13 and 16 source records in `sources/15-codex-theory-conversations/` | 2 | 9,980 words | Ren’s words with separately labelled AI context | Wording, sequence, corrections | Direction and plan | **Sampled** both records at the passages cited by direction |
+| `lean/becoming/Becoming/*.lean` | 406 | 300,526 lines | Formal map, including constructed examples | Premises, proofs, countermodels | Checker and later proofs | **Counted** all imports; **sampled** passages in 9/406 modules selected by the direction, reviews, and proof links |
+| `results/records/*.json` and `results/atlas/entries/*.json` | 567 + 6 | 286,499 + 163,143 lines | Claims tied to evidence, plus readings of how they meet | Scope, proposed connections, test interpretations | Registry, atlas, public pages | **Sampled** 1/567 records end to end through its proof bindings; **counted** all dynamics |
+| November 17 “second way” study, frozen file, note, and two saved Lean texts | 4 | 1,351 lines | Failed candidate and work outside the package | What was guessed beforehand and why a proof missed the aim | Direction and subsequent review | **Sampled** 2/4, the prediction chronology and outcome |
+| Lake experiment, two prediction files and two verdict files | 4 | 427 lines | Coupling to observed model behaviour | Predictions and outcomes of those runs | Tests page, one page, direction | **Sampled** the round-two pair against the public telling |
+| One page, overview, eight numbered chapters | 10 | 5,514 lines | Telling, method, ethics, readings across traditions | What a reader can recognize or contest in a case | Readers, citations, bilingual fronts | **Sampled** the opening case and passages in 3/8 chapters chosen for method, ethics, and classical sources |
+| Board, result workflow, layout, core checker, gate, evidence store | 6 | 7,448 lines | Coordination, checking, preservation | Who holds work and which bytes were checked | Landers and release tooling | **Read whole** layout; **sampled** the other 5/6 at claims, bindings, and retention |
+
+## What repeats
+
+**Sampled** one of October’s duplication findings. The 16–17 October review found the same 229-row register in five places. Today the old `RESULT-REGISTER.md` is 120 words, points to the 567-record register, and retains old anchors. A reader with yesterday’s address can reach today’s claim. The 1,156 files now in `results/records/` are 567 JSON records and 589 Markdown pages. Counting them as 1,156 results would nearly double the apparent work. [October survey](/Users/ren/theories/_process/research/2026-10-05-repository-reconciliation/whole-repo-review-2026-10-16/RECONCILIATION-SURVEY.md) · [Old register address](/Users/ren/theories/theories/becoming/results/RESULT-REGISTER.md)
+
+**Sampled** one proof shortened on 16 November. `WayOfUnits.unending_iff_holds` calls the general `LineOnAStock.unending_iff_holds` with each unit leaving itself as its sole offspring. A change to the general proof now reaches that special case. **Counted:** in the same commit `WayOfUnits.lean` shrank by 56 lines and the four affected module files grew by 2,947 lines net. Both measurements are true of the same piece of unification. [Special-case proof](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean:400)
+
+## What depends on it
+
+**Counted** both proof bindings in `a-line-on-a-stock.json`. Each current source file hashes to the value in the cited 16 November receipt, which records `passed`. The record also lists seven counterexamples. **Sampled** one: a parent needs one unit, its offspring need thirteen, and the stock stays at twelve. A need goes unmet without the stock falling. That example tells a later writer exactly where “a need goes unmet” became a stronger claim in prose. [Record](/Users/ren/theories/theories/becoming/results/records/a-line-on-a-stock.json) · [Countermodel](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineOnAStock.lean:1522)
+
+**Sampled** the checker’s retention code and the landing workflow. A run creates a dated receipt and saves logs. The checker can cite a commit for source bytes already held on main and copies the others. The evidence store can represent repeated bytes once while retaining their run paths in an index. A landing can also change record bindings, regenerate reading pages, and retire earlier material byte for byte under the October layout rule. **Inferred:** some growth buys an audit trail; counting every retained path as a fresh scientific obligation overstates what the next reader faces. [Checker](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/check_becoming.py:4932) · [Result workflow](/Users/ren/theories/_process/RESULT-WORKFLOW.md)
+
+## What a continuing session needs from here
+
+**Inferred** from tracing the stock claim: a session can recover the aim from the direction’s dated head note, the exact statement from the record’s Lean binding, the reason for a premise from its countermodel, and the last unsuccessful extension from the linked study. The November 17 attempt is worth opening: its renewal proof lets units add enough to sustain their successors, while the model supplies what they add without explaining where it comes from. That is how a proof can succeed and the proposed explanation fail. [Direction](/Users/ren/theories/_process/DIRECTION.md) · [Study outcome](/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/second-way-2026-11-17/NOTE.md)
+
+**Counted:** the board alone is 19,659 words. **Inferred** from its rules: ownership and the queue matter before formal work begins. Historical receipts matter when a binding is disputed. Neither task requires reading every run. **Not looked at:** session access logs, so I cannot identify files that nobody ever opens.
+
+## Candidates
+
+**Inferred**, in descending order of obstacle to a joined account:
+
+1. **The holder forming inside its account.** In `ClosedCapture.lock_outlives_loss`, the theorem takes an initially locked configuration, order conditions, and accruing loss as premises. It shows how the lock can persist as loss grows. The further step in the brief, how a self comes to hold to the account that formed it, was **not found in what was read** in the nine-module sample or the November 16 review of 21 sentences. Combining the tellings would risk presenting that further step as proved. [Lock theorem](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean:307)
+2. **A situation meeting a theorem’s premises.** Preserve the original observation and frozen prediction wherever a summary points to them. In the lake’s talk condition, the added instruction moved mussel-bed survival from 3/10 to 8/10 seasons for one model and from 0/10 to 1/10 for the other. In a separate test, learners that generalized kept the patch in three of six settings predicted to deplete it, while the recorded course-by-course checks passed. Replacing either experiment by its theorem would lose what changed the reading. [Lake verdicts](/Users/ren/theories/experiments/direction-installation/results/verdicts-round2.json) · [Learner test](/Users/ren/theories/experiments/commons-outrun-generalizing/README.md)
+3. **A proof link mistaken for a transition.** Proof dependencies can be extracted once. What the connection means still needs a reading. One atlas exit was repaired on November 17: `inheritsReading_iff` identifies inheritance with an update that returns the existing reading. Its two proof directions return the given premise. It supplies no step in which a population passes from inheritance to revision. The atlas now labels that exit a reading. [Proof](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsSpread.lean:195)
+4. **Addresses that carry evidence.** Generated repetitions are candidates for a single maintained source and stable pointers. For saved copies to leave the working tree, each cited path, section, freeze pin, and receipt would first need a working resolution or verified restoration route. Ren’s words, failed predictions, rejected candidates, and dated judgements have independent value. The bilingual fronts serve readers who cannot use Lean. **Not looked at:** a replay establishing the smallest recoverable set.
+
+## Against the two views
+
+**Inferred** from the counts: the coordinating session is right about much of the volume. Its stronger suggestion misses where the substance lives. A failed forecast can overturn an application while every formal check passes. The offer to count what a course costs others, and a classical reader’s grounds for disagreeing with an interpretation, also require evidence and argument outside Lean.
+
+**Inferred** from the earlier reviews: Ren is right that substantive compression remains possible. The November 9–10 review reopened what “widening is better” had implied; chapter 7 now distinguishes continuing to live from having an order over courses. The November 14 readers reported that 24 of 36 sampled proof-use pairs omitted by the atlas expressed a real relation, nine a partial one, and three none. **Counted:** I reproduced November 16’s 86 isolated atlas entries and find 82 today under the same rule. Neither file mass nor missing atlas links identifies work fit to discard. [November review](/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/FOR-REN.md) · [November 14 account](/Users/ren/theories/sources/15-codex-theory-conversations/2026-11-13-the-map-one-model.md:73)
+
+## Not determined, and surprises
+
+**Read whole:** the direction’s head note distinguishes the version Ren accepted from later AI corrections and says two supporting checks were in scratch. **Inferred:** a new session can recover the present wording more readily than the evidence for every change. What I wanted most was one worked example of someone outside the project using these questions, rejecting a proposed identification, and thereby changing the map. The direction and its linked case questionnaire say that exercise awaits a reader. **Not looked at:** private folders, survey scratch, or independent reproduction of any run. [Questions for an outside case](/Users/ren/theories/_process/A-CASE-FROM-OUTSIDE.md)
+
+## The commands behind the counts
+
+**Counted** with `git ls-files -sz` for paths and distinct blob IDs. Read-only `python3 -B -c` scripts summed `len(path.read_bytes().split())` or newline counts over the named selections, excluding the private prefixes before opening files. The history/generated union used path components and `_process/architecture/generated-manifest.json`. For module connectivity I extracted `^import Becoming\.(\w+)\s*$` and followed edges both ways. For the atlas I counted named exits, cross-entry `case_of` laws, and `compose` pairs on `git show 3b155c9ea:theories/becoming/results/atlas/entries/dynamics.json` and the current file. The proof-size comparison used `git show --numstat a54163054 -- '*/Becoming/*.lean'`.
+
+── cx · ok · session 01a1edda-ee5a-7f73-aa8d-3c150b51a9f7 · gpt-6.2-astra/xhigh · read-only · 713s · 2359.6k tokens · 81 cmds
+continue: cx -r 01a1edda-ee5a-7f73-aa8d-3c150b51a9f7 "…"
+log: /Users/ren/.cache/cx/runs/20261118-155148-10826

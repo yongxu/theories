@@ -1,0 +1,75 @@
+# lean-structure: what is there
+*AI-written (Claude Opus 5.5), 18 November 2026. A survey; nothing was changed. `LEAN` = `experiments/integrated-correction/general-framework/generative-basis/lean`.*
+
+## In three sentences
+The map itself is small and sound by its own checks: 409 modules (405 under `becoming/Becoming/`, the root `Becoming.lean`, and three foundation files that sit in three different periphery folders), about 306,000 lines, 20,404 theorems, every source byte bound by the passed core receipt of 16 November, no `axiom` declaration, and one import component that stays joined even with the eleven most-imported modules taken out. Around it sit 417 periphery modules (about 117,000 lines) whose receipts mostly predate the present core, and 33,501 saved Lean copies with only 6,468 distinct contents, almost all of the 89,064 tracked files in `LEAN`. Inside the Lean itself about 1.07 million words are prose (docstrings and module notes). The same modules are told again in the root's notes, a 59,000-word README, a 62,000-word `SCOPE` string in the checker and 265,000 words of generated declaration lists. Prose in this area is therefore not apart from the map: it lives inside it.
+
+## What is there
+
+| kind | files | words or lines | beside the Lean | unique? | what reads it | how far seen |
+|---|---|---|---|---|---|---|
+| Core sources `becoming/Becoming/*.lean` + root + 3 foundation | 409 in the run (+1 `Becoming.FallibleInquiry` outside it) | 305,868 lines; 184,388 non-blank code lines; 1,065,182 words in comment blocks | the map | yes | `check_becoming.py`, gate `receipt_check`, CI `lean.yml`, `lean_catalogue.py`, records | counted |
+| Root `Becoming.lean` | 1 | 5,340 lines: 405 imports, 3 theorems, then one docstring of 430 module notes (`Becoming.Stock` is noted twice) | telling, inside the map | no (repeats module notes) | Lean (as the import root) | counted; 1 module compared |
+| Checker `check_becoming.py` | 1 | 5,156 lines; `SCOPE` string 62,460 words; 825-word docstring | tooling, carrying a telling | the tool is | gate, CI, `scratch_build.py` | read in part (lists, index, closure) |
+| `check_fallible_inquiry.py`, `scratch_build.py`, `lean-toolchain` | 3 | 193 + 140 lines | tooling | yes | sessions | headers read |
+| Package README (en, zh) | 2 | 59,017 + 4,540 words | telling (one table row per module) | no | linked from the account | headings and 2 sections read |
+| Core receipt `becoming-verification.json` | 1 | 5.6 MB | machine output | regenerable by a run | gate, registry, completion, CI | fields read; all 409 hashes checked |
+| Periphery modules (live paths, outside the run) | 417 | 117,090 lines | other: older models, adapters, Mathlib leaves | in part (see below) | their own checkers; 22 import `Becoming` | counted; 1 module read |
+| of which `SUPERSEDED` (the core states each theorem) | 75 | 15,867 lines, 1,208 theorems | proved twice | no, by the checker's own claim | 57 are imported by other periphery modules | counted |
+| Periphery receipts and checkers (`*-verification.json`, `check*.py`) | about 200 receipts; dozens of checkers, most last changed 6–7 Oct | not measured | machine output, tooling | regenerable if the old toolchains run | gate reads none outside `becoming/` | sampled by script |
+| `LEAN/history` | 12,176 | 195 MB on disk; 5,455 `.lean` (1,147 distinct); `INDEX.md` 16,367 words, generated | trace (retired bytes, moved by `moves.py`) | no: git holds each at its old path (8 of 8 sampled, plus 2 chosen) | 54 record pages link into it | counted; sampled |
+| `verification-history`, `verification-runs`, `legacy-replays` | 330 | 14 MB | machine output from 6–7 Oct | not determined | not determined | counted only |
+| `becoming/becoming-checks`, `fallible-inquiry-checks` | 68,267 + 168 | 2.4 GB on disk; 551 run folders | machine output (the receipts area's) | no | receipts area | counted only |
+| `theories/becoming/results/lean-declarations` | 21 | 264,676 words | machine output (`lean_catalogue.py`, "do not edit") | no | 28 Markdown files link it | counted; head read |
+| `theories/becoming/history/lean-declarations` | 1 | 94 words | trace: an empty bridge stub moved on 20 Oct | no | move plans only | read whole |
+
+**How the build is decided** (read in the checker). The package has no `lakefile`; no `lakefile` or `lake-manifest` is tracked in `LEAN` outside run folders except a Mathlib pin under `periphery-mathlib-pin/`. Membership is the Python lists `FOUNDATION` (3), `CORE` (388, hand-listed), `INSTANCES` (11) and `APPLICATIONS` (7) in `check_becoming.py`. The run then compiles their import closure. A module is found by path under `becoming/`, and anywhere else by file name across `LEAN`, with folders named like `-checks`, `runs`, `sources` or `history` skipped (`module_index`, `ARCHIVE`). My recomputation gives a 409-module closure, equal to the listed modules with nothing extra. The gate fails any `Becoming/*.lean` that no receipt lists. 75 `SUPERSEDED` periphery modules are asserted to stay out of the run.
+
+**The import graph** (my script, from `import` lines). It has 6 modules that import nothing of the package (`Grammar`, `Prelude`, `Ideals`, `Segmentation`, `GenerativeCore`, `RelationalRenewal`). Only the root is imported by no module. 117 modules are imported by no module except the root, so they are leaves. The longest chain is 46. Without the root the graph is one component. With eleven hubs removed (root, `Prelude`, `Grammar`, `GrammarLaws`, `GrammarMap`, `Frame`, `Witnesses`, `World`, `Recurrence`, `Labelled`, `GenerativeCore`), 396 of the remaining 398 stay in one component, and only `ReaderRebuilding` and `RuleRebuilding` stand alone. The most-imported modules are `Witnesses` (45), `Frame` (24) and `Recurrence` (19). By the root's own layer tags, L0 has 6 modules, L1 330, L2 about 40, instance 11 and application 7. L1 holds 81 percent, so the layers sort little. Names give no families either: 405 modules have 300 distinct first words.
+
+**Kept failures here.** The core states its countermodels as theorems: `Witnesses`, `PremiseWitnesses`, `ListingRefutations`, and the "neither" courses the direction page cites. "countermodel" or "counterexample" occurs 54 times in 15 core files. No failed Lean try was found among the live sources. Failed tries live in run folders, `history` and the research studies (other areas).
+
+## What repeats
+- One module is told up to six times: in its `/-!` note (module notes total 467,129 words); in a long root note and in a one-line root note; in a README table row; in the checker's `SCOPE`, which is copied into each receipt; and in a lean-declarations entry. Compared for `Becoming.Stock` only; the pattern is inferred for the rest from the counts above.
+- 75 periphery modules (1,208 theorems) whose content the checker says the core states. That is two proofs of the same statements, kept on purpose so that old receipts can be checked again.
+- Of 33,501 saved `.lean` copies there are 6,468 distinct contents, and 753 of those are byte-identical to a live file (counted by git blob id).
+- `LEAN/history` is byte-for-byte what git already holds at the old paths. I sampled 10 files and found all 10 there.
+- An earlier measure (`THEOREM-CONNECTIVITY.md`, 15 Oct, on 113 spine modules) found 946 of 6,089 theorems "apart" from the base families. It is not redone on today's 409 modules. The 19 October review counted 230 runs (482 MB) in `becoming-checks`; today there are 551 folders and 2.4 GB on disk.
+
+## What depends on it
+- `check_becoming.py` imports `universal-ethics/generative-capacity/check.py` (`audit_support`), so the core checker depends on a periphery folder.
+- The foundation is `LEAN/GenerativeCore.lean`, `inquiry-root/sufficiency/InquirySufficiency.lean` and `deeper/RelationalRenewal.lean`. Moving those periphery folders whole would break the core run.
+- The gate checks only `becoming/*-verification.json`. The core receipt must match; a stale `fallible-inquiry` receipt is listed as "rerun", not as an error. Periphery receipts outside `becoming/` are read by no gate check.
+- `registry.py`, `completion.py`, `lean_catalogue.py`, `shared_laws.py`, `theory_graph.py` and `map_sheet.py` hard-code `LEAN` paths.
+- Record pages link into the periphery. Counted by `rg -l`: 536 into `becoming/Becoming`, 64 `universal-ethics`, 54 `history`, 50 `deeper`, 17 `inquiry-root`. 68 link a `SUPERSEDED` module file, and so do chapters 04, 05 and 08. `research.py` reports broken links (read at its flags only).
+
+## What a continuing session needs from here
+It needs `Becoming/`, the root's import list, the three foundation files, the checker with `check.py`, `scratch_build.py`, the toolchain, the receipt, and the README's guide to verification. It never needs `LEAN/history`, `verification-history`, `verification-runs`, `legacy-replays`, the nested `inquiry-root/sufficiency/*-runs/…/native-evidence/experiments/…` copies, or old run folders, unless it is re-checking an old receipt. This is inferred from what the gate and tools read.
+
+## Candidates
+- **Core sources and checker: stay.** Evidence: fresh receipt, no axioms, joined imports.
+- **Tellings of each module: could be said once and pointed to.** The module's own note is the one place. The root's notes, the README table, `SCOPE` and lean-declarations could be derived from it or dropped. Risk: `SCOPE` is what receipts record as the run's scope; the account links README anchors; the root notes carry the computed layer tags. What has to change first: the checker's `SCOPE` (which changes the checker's hash and calls for a core run), `lean_catalogue.py`, the generated-page manifest, and links.
+- **lean-declarations (265,000 words): could leave the reading path.** It is regenerable, and only 28 pages link it. Risk: the records-and-map tools render it; the history stub (94 words) is trace only.
+- **The 75 `SUPERSEDED` modules: cannot tell.** They could leave the tree together with the 57 periphery importers, but 68 records and three chapters link them. Their proofs are the provenance of the port. A lean-direction read would have to confirm the core states each one.
+- **The 22 periphery modules that import `Becoming`** (Mathlib reals, free energy, physics, correspondences): **stay, but unverified.** Every one of their receipts (21 with `source_paths`) binds older bytes of core modules; their own files are unchanged (counted). Whether they still compile is not known. They are the coupling to Mathlib and outside fields. Re-running them is Ren's machine time.
+- **The other periphery (about 320 modules, most last changed 6–17 Oct; 164 imported by no live module): cannot tell.** It needs the lean-direction reader to say what is not in the core. The foundation files and `check.py` must be moved out of these folders first.
+- **`LEAN/history`, `verification-history`, `verification-runs`, `legacy-replays`: could leave the tree.** Git holds the bytes (sampled). Risk: 54 record pages and the generated `INDEX.md` link them, and the move rule of 17 October puts retired bytes here by design. What has to change first: `moves.py` and the layout rule, then the link re-pointing.
+
+## Against the two views
+- Against "much is garbage": the core is checked, current and joined at the import level. Most of the mass in `LEAN` is saved copies, not the map.
+- Against "prose is apart from the Lean": a million words of telling are inside the `.lean` files, and 62,000 more are inside the checker. Judging prose against the Lean here means judging the Lean's own docstrings, which no checker reads for truth.
+- Against "machine output and trace can simply leave": a periphery `check.py` is a live dependency of the core checker, and the three foundation files sit in periphery folders. The periphery that couples to Mathlib has no receipt on the present core, and no gate notices this.
+
+## Not determined, and surprises
+- **Not determined:** whether the periphery still compiles; connectivity at the level of constants today; whether the docstrings say what their theorems say (lean-direction's work); what the 164 un-imported periphery modules hold that the core does not; the share of `.git` taken by `LEAN`.
+- **Surprises:** the build is not a Lean package but Python lists plus a filename search across the whole tree; a 466 KB root file that is almost all docstring; `Becoming.FallibleInquiry` sits in `Becoming/` outside the core run, with a stale receipt; the receipt's `scope` field repeats the 62,000-word `SCOPE`.
+- **The direction as told:** it asks that each thing be said once, and this area says each module up to six times. Its claim of a joined map holds for imports here; whether it holds for meaning is the atlas's question, not answered by imports.
+
+## The commands behind the counts
+- `git ls-files LEAN | wc -l` (89,064); `git ls-files -s LEAN` (blob ids, for distinct counts).
+- Script parsing the checker's lists with `ast` (not running it), rebuilding `module_index` and `closure`, then the components, leaves, depth and layer tags from `Becoming.lean`.
+- `rg -c` on `^\s*(theorem|def…)` per module for declarations; regex over `/- … -/` for prose words.
+- Receipt check: `sha256` of each `source_paths` entry against `source_sha256`, for the core receipt and for 23 periphery receipts.
+- `rg -l 'generative-basis/lean/<folder>'` over `theories/becoming`, the root pages and `results`.
+- `git log --find-object` on 10 `LEAN/history` files at their old paths.
+- `du -sk`, `wc -w`, `wc -l` for sizes.

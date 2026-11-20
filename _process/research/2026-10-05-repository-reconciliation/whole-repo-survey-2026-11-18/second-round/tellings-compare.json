@@ -1,0 +1,62 @@
+{
+ "same_decl": [
+  "what-keeping-widening-needs",
+  "mutual-dependence-gives-the-condition-de-se",
+  "selection-among-groups-by-ending",
+  "orders-as-a-sum-over-histories",
+  "groups-whose-conditions-are-coupled",
+  "a-revision-that-opens-a-correction",
+  "where-a-rising-take-ends",
+  "re-optimizing-above-a-renewal-ends-it",
+  "a-formations-own-course",
+  "binding-preserving-substitution",
+  "recurrent-chain-assembly",
+  "a-commuting-learner-drives-no-unread-choice",
+  "errors-by-chance-in-a-pair-keeping-mutual-withholding",
+  "joint-plans-from-a-supported-start",
+  "on-whom-the-loss-falls",
+  "the-world-an-interleaving-builds",
+  "learning-a-rule-by-narrowing",
+  "reach-through-a-shared-condition"
+ ],
+ "dis": [
+  [
+   "mutual-dependence-gives-the-condition-de-se",
+   "record"
+  ],
+  [
+   "mutual-dependence-gives-the-condition-de-se",
+   "chapter"
+  ],
+  [
+   "groups-whose-conditions-are-coupled",
+   "chapter"
+  ],
+  [
+   "re-optimizing-above-a-renewal-ends-it",
+   "chapter"
+  ],
+  [
+   "binding-preserving-substitution",
+   "docstring"
+  ]
+ ],
+ "both_more": [
+  [
+   "groups-whose-conditions-are-coupled",
+   "record"
+  ],
+  [
+   "groups-whose-conditions-are-coupled",
+   "docstring"
+  ],
+  [
+   "re-optimizing-above-a-renewal-ends-it",
+   "record"
+  ],
+  [
+   "re-optimizing-above-a-renewal-ends-it",
+   "docstring"
+  ]
+ ]
+}

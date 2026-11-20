@@ -1,0 +1,57 @@
+AI-written by Codex (GPT-6), the astra reader, 19 November 2026. Read-only survey.
+
+# Overtaken chapters
+
+**Inferred from the comparison below.** The clearest change of direction is in chapter 8’s target of a “complete, enclosed theory.” Chapters 2, 5 and 7 already contain results that made the direction page more exact, including a lock left without a reader of the loss, a stock drained by people who count its survival, and a widening that a persisting life need never prefer. The recurring risk for a reader is taking a chapter’s opening sentence at full strength when its theorem, counterexample or qualification comes later.
+
+**Read whole:** `AGENTS.md`, the one page and `_process/DIRECTION.md` (abbreviated **D** below). **Counted:** the eight chapter files contain 5,247 lines and 214,304 whitespace-delimited words by `wc`, which substantially undercounts Chinese prose. **Sampled:** all eight chapters’ headings and openings, then passages chosen for the questions in the brief. Fractions below count numbered sections sampled beyond their openings. Unlisted numbered sections were not read beyond that level. “Stands” estimates agreement among the cited passages, not a percentage of the chapter’s words.
+
+### 01 · Root
+
+**Sampled, 4/10 sections (§§2, 6–8), plus the limits and open questions.** “The grammar does not choose” the respect in which two moments of a fire are alike (56–67). A short-lived pattern can renew and still end (153). Even the chapter’s “tower of rules with no top” uses a fixed scheme (670). **Inferred:** all three distinctions stand. They explain why D can ask whether selection, supply and descent are one relation, and call the absence of a last loop “a guess” (D50, 66, 117–119). A reader of the thesis alone could mistake one relational vocabulary for one demonstrated mechanism. The chapter itself calls faithful representation open and its explanatory reading argued (5, 654–659). [01-ROOT.md](/Users/ren/theories/theories/becoming/chapters/01-ROOT.md:654)
+
+### 02 · Map
+
+**Sampled, 6/11 (§§1, 3, 5, 9–11).** One definition needs saying again. A condition that “meets, at every step, every dependence on it” (113) can sound as though tomorrow’s level need only meet tomorrow’s requirement. `Kept` requires today’s need to be met both today and tomorrow, even if the requirement changes. D19 gives both times. Neither definition establishes that the drawer remade the condition. [02-MAP.md](/Users/ren/theories/theories/becoming/chapters/02-MAP.md:113) · [Dependence.lean](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean:142)
+
+**Sampled:** the lock theorem assumes a favouring rule preserves share, rereading is monotone in share, favouring persists upward, and loss grows (415). In a different built course, loss borne by the shapers lowers their share and they leave the lock with no reader of the loss (479). The trained judge supplies a further boundary: one note among nine turned it, defeating the proposed reader-count explanation for that judge (446). **Inferred:** most local qualifications stand. The definition of meta-attractor at 412 covers share-only capture. D62–64 also asks about readers removed or outweighed. The “centre” at 525 is explicitly a reading. Its turning theorem leaves the need and response to a marked level supplied (508–523). D34–36 adds later results and D122 distinguishes three clocks: loss becoming irreversible, readers losing weight, and readers being removed. [02-MAP.md](/Users/ren/theories/theories/becoming/chapters/02-MAP.md:479)
+
+### 03 · Knowing
+
+**Sampled, 3/12 (§§1, 8, 12).** “Two histories that look the same … are kept or dropped together” (20) holds for selections *through* the stated couplings (24–33). “Consequences change what a formation tells apart” (359) heads a comparison of old and new readings and a constructed example where rebuilding a link opens a correction. A supplied controller chooses on its run (363–366). **Inferred:** the qualified results stand. The heading suggests an origin for revision that D101 still asks for. Likewise a prediction answered by what it predicts may become correct, or Boolean negation may defeat every prediction (545–547). This supports D60’s “nor need what they do come to fit it.” The chapter calls its example “not a model of coordination”; it does not establish many acting on one account. [03-KNOWING.md](/Users/ren/theories/theories/becoming/chapters/03-KNOWING.md:359)
+
+### 04 · Life
+
+**Sampled, 6/9 (§§1, 3, 5, 7–9).** “Life is continuation that renews its own conditions” is labelled a reading (24). A lineage growing inside a body ends with it under confinement, gated renewal and sufficient excess. The chapter keeps a counterexample whose descendant depends on a condition outside the body (217–224). A reader rebuilt from stock survives a supply cut longer in a specified four-model comparison (260–269). **Inferred:** these passages stand. They give D42–50 examples of renewal, selection and dependence at different grains. D91’s missing connection is between confined growth and capture. Reading chapter 4 alone could make the body example seem to supply that connection; its premises concern descent and dependence, with no rule reset from the lineage’s share. [04-LIFE.md](/Users/ren/theories/theories/becoming/chapters/04-LIFE.md:217)
+
+### 05 · Collectives
+
+**Sampled, 5/12 (§§1, 3, 7, 8, 12).** Position compares each amount with the total. Equal gains can leave everyone’s position unchanged (66–76; D58, 90). With at least two drawers acting in turn, no minimum left, a finite horizon and a perfect profile, everyone leaves zero if the credit for meeting a positive need is smaller than what must be left. The regrowth gate enters the keeping result (209; D92). **Inferred:** the chapter’s distinctions stand and correct a reading of drain as necessarily unseen. Two near cases delimit D91 and D125. Members copying earlier acts can reproduce behaviour without sharing an account of the world (288–291). An entry rule can be rebuilt by replacement members, but one count merges recognition, compliance and implementation, and revision authority is supplied or omitted (407–425). Neither passage establishes the larger claim. [05-COLLECTIVES.md](/Users/ren/theories/theories/becoming/chapters/05-COLLECTIVES.md:209)
+
+### 06 · Classical texts
+
+**Sampled, 3/11 (§§1, 10, 11), plus 未示 and 未决.** “这里只映射结构” means “only the structure is mapped here” (588). The entry for 元闭, freezing the source of the rule, points to capture under stated conditions (595). The chapter also preserves a rival reading: the *Madhyamaka* passage on continuity voices an opponent whom the text then answers (621). **Inferred:** both passages stand. They carry the wisdom aim and show why agreement cannot be judged from a matching phrase. Treating 元闭 as a complete definition would lose D92’s several ways of closing. “今无未决” at 648 refers to adopted theoretical readings; the same passage leaves textual questions and human review open. [06-CLASSICAL-TEXTS.md](/Users/ren/theories/theories/becoming/chapters/06-CLASSICAL-TEXTS.md:617)
+
+### 07 · Significance
+
+**Sampled, 8/9 (§§1–8), especially §§3.5–3.6, 4.9, 4.12 and 4.14.** The chapter explicitly withdrew “widening what can form is better” as a second ethical foundation (298). Self-concern is a premise about an order. Its finite-list theorem cannot rank the actual course of an indefinitely persisting line under the stated descent and support assumptions (293, 662). Counting a one-way dependent’s loss remains an offered step (1058; D70). The alignment theorem uses J1/J2 to compare moves; the offered direction adds further commitments and correspondence (992–1001). **Inferred:** these central distinctions stand. One reading needs qualification: “its share is kept where the loss does not return” (827). In the same commons, with nothing returning from the dweller, a narrow line that also overdraws its own source disappears (821). The chapter explicitly says its readers inherit their readings and “its lock is not shown there” (825). This is exactly why D125 leaves narrowing joined to taking open beyond the built case. [07-SIGNIFICANCE.md](/Users/ren/theories/theories/becoming/chapters/07-SIGNIFICANCE.md:821)
+
+### 08 · Method
+
+**Sampled, 3/12 (§§1, 9, 12).** The method asks what would defeat a claim and distinguishes model proof from correspondence (26–45). One unfolding is marked philosophical and argued (625–642). Both stand. **Inferred:** the programme is mixed. “One unified, complete, enclosed theory” and “every central theorem over every law of exchange” (719–724) are stated as targets, never as achievements. They give a continuing reader a different priority from D117, 128, which records the failed one-model test and supersedes the old order of work. Chapter 8 itself explains why a clean internal check cannot show that the work serves its readers (741–751). [08-METHOD.md](/Users/ren/theories/theories/becoming/chapters/08-METHOD.md:719)
+
+**Sampled prior finding:** the 12 November review said lock and stock were joined “by words, not by a lemma.” Chapter 2 now names `locked_ends_with_net` and specifies that the fall is supplied (510). **Inferred against the two views:** removing apparently repetitive passages could lose the very counterexamples that corrected D. Comparing prose with Lean catches the missing time condition in chapter 2; it cannot decide the reading of an opponent’s words in chapter 6 or which research aim to pursue in chapter 8. [12 November review](/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tt-turning-in-time/where-we-are/FULL-PICTURE.md:23)
+
+### Commands behind the counts
+
+```sh
+wc -lw theories/becoming/chapters/0[1-8]-*.md
+rg -n '^#' theories/becoming/chapters/0[1-8]-*.md
+rg -n --no-ignore-dot 'LineOnAStock|locked_ends_with_net_regime|locked_turns_in_time_on_window_iff|line on a stock|line on one stock' theories/becoming/chapters/0[1-8]-*.md
+```
+
+**Counted:** the last sweep returned no matches in the eight files. **Not looked at:** every theorem’s proof and whether every later result is told under different names.
+
+── cx · ok · session 01a1f45b-9419-7892-be3b-0fe444308296 · gpt-6.2-astra/high · read-only · 359s · 4175.0k tokens · 66 cmds
+continue: cx -r 01a1f45b-9419-7892-be3b-0fe444308296 "…"
+log: /Users/ren/.cache/cx/runs/20261119-221004-93074

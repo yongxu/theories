@@ -1,0 +1,90 @@
+# entry-and-direction: the check
+
+*AI-written (Claude Fable 5.2, checking reader), 18 November 2026. Read-only. Checked against the repository, not against the reports: counts at `befa506ba` (the commit both reports read) and, where it matters, again at `f1a805b5c` (main after the `AGENTS.md` change of 16:02 WIB). Nothing but this file was written. No build, test, gate or render was run; the load average was 67 to 85 throughout, so every sweep was a single `rg` of a few seconds.*
+
+## Verdict in brief
+
+Both reports hold on what a decision would rest on. Every count in the Claude claims file reproduced exactly; every astra figure I tried reproduced, the word counts under astra's own convention. The Claude report has 3 errors of fact, none of which turns its picture; the astra report has none that I found. The two reports do not contradict each other on any fact: where their numbers differ they measured different sets or used a different word count. Three things changed on main after both reports were written, and two of their "not found" statements are now overtaken.
+
+## What changed after the reports (main `befa506ba` to `f1a805b5c`)
+
+`git diff --stat befa506ba f1a805b5c`: 8 files.
+
+- `AGENTS.md`: the rules said again as seven; "What we are doing" unchanged. The aim sentence the tests read is byte for byte the same (the regex gives the same group on both versions), so the pin is untouched. The last paragraph now says "Start from the one page, then the direction page, which is the later understanding where the plan differs".
+- `sources/15-codex-theory-conversations/2026-11-18-the-lean-before-the-words.md` now exists (1,982 words, 14:49 to 15:36 WIB). So Claude's "Ren's words of 18 November: not found" and astra's "a verbatim source ... not found in what was read" were true when written and are no longer true. `rg -l '26\.6 ?(M|million)'` now finds the 14 November size count in that record and nowhere else in Markdown.
+- A fifteenth instructions folder: `_process/history/2026-11-18-instructions/AGENTS-before-18-november.md`, identical to `befa506ba:AGENTS.md` (`git rev-parse` of both). The board is now 19,892 words and its Queue line 2,981.
+
+## Disagreements, settled
+
+| topic | Claude | astra | settled by looking |
+|---|---|---|---|
+| Files and words in the area | 48 files, 133,397 words, 12 generated holding 58,021 | 44 files, 129,528 words, 11 generated holding 57,030; 1,353,456 bytes | **Both right, different sets and counts.** The 44 are the paths `AREAS.md` names; Claude adds `GLOSSARY.zh.md`, `TESTS.zh.md`, `REPOSITORY-LAYOUT.md`, `RESEARCH-DIRECTIVES.zh.md`. A Python split over `git show befa506ba:<path>` gives 48 / 133,397 / 12 / 58,021 exactly, and 44 files / 1,353,456 bytes / 128,970 words / 11 generated. astra's 129,528 is `wc -w` under a UTF-8 locale (`LC_ALL=en_US.UTF-8 wc -w README.md` gives 14,268, `GLOSSARY.zh.md` 1,282; the C locale and Python give 14,261 and 1,061). A difference of method, 0.4%. |
+| Tests that read the aim sentence out of `AGENTS.md` | "two tests" (`test_uses_pages.py`, `test_featured_results.py`) | names `test_navigation_pages.py:13` as one sampled path | **Three.** `rg -n 'AGENTS\.md' tools -g '*.py'`: the same `agents_aim()` regex is in `test_uses_pages.py:19–22`, `test_featured_results.py:16–20` and `test_navigation_pages.py:13–17` (used at 64, 66, 564). Claude undercounts; astra's one is a sample and is right. |
+| How many pages carry the aim sentence | 16 live pages | once in each of eight scoped files | **Both right.** `rg -l -F 'shaping how they select does not become what they select for' -g '*.md'` gives 16 (21 with `.py` and `.json`, 25 with history). Within the 44 scoped files: `AGENTS`, `README`, `GOALS`, `RESEARCH`, `MAP`, `generative-alignment.json`, `README-FIRST-SCREEN.md` and the 17 November copy, eight. |
+| Links to `_process/DIRECTION.md` | `AGENTS.md`, the board, the plan, the `dj` study, two source records, two kept copies | three of 39 Markdown files (`AGENTS`, board, plan) | **Both right.** A `--no-ignore-dot` sweep of `.md`, `.py`, `.json`, `.yml`, `Makefile` gives 30 files: those three, 22 under `dj-a-line-on-a-stock`, two source records, kept `AGENTS` copies (two at `befa506ba`, three now), and the workboard history file. astra's 39-file set reproduces: 3 link the direction page, 15 link `GOALS.md`. |
+| Were the root pages changed after 13 November | "every other entry page was last changed in content on or before 13 November" | not said | **Claude overstates.** `git show ae526ad80 --numstat`: `RESULTS.md` (+3 −2) and `DEPENDENCIES.md` (+4 −2) gained the record `a-line-on-a-stock` on 16 November; `A-CASE-FROM-OUTSIDE.md` was changed on 16 November (`0de514c1d`). What holds: no root page links the direction page or names a date from 14 to 18 November, and the README's only change is the count. |
+| The board over time | 276 KB on 16 October, target 15 KB, 124,574 bytes today | 13,913 words at the shortening of 10 November (`66ec577fc`), 19,659 today | **Both right.** `whole-repo-review-2026-10-16/README.md:129,155` and `CHANGES.md:613` ("276,352 B"); `git show 66ec577fc:…WORKBOARD.md \| wc -w` gives 13,913. |
+| The count of 14 November | the 26.6-million-word count: not found | "about 20,000 theorems in 403 modules" found; 404 `.lean` paths in a tree of that day | **Two different counts, both right as said.** The Lean count is at `_process/LEAN-TOWARD-THE-DIRECTION.md:7`; `git ls-tree -r 287b6c85d` has 404 `.lean` under `Becoming/` (check copies excluded). The Markdown count was nowhere in Markdown until today's source record. |
+| Can a session recover the direction without private memory | lists what the repository lacks | "can ... if it enters through the instructions" | **Not a disagreement of fact.** Both say the direction is on `AGENTS.md` and `DIRECTION.md` and that the fronts tell October's target. What is lacking is narrower than Claude's heading says (see claim 8). |
+
+## The Claude claims, tried
+
+1. **No root page links the direction page or names 14 to 18 November; README changed once, in a count.** Confirmed. `grep -c 'DIRECTION\.md'` is 0 on eight of the eleven and the three hits (`MAP`, `GOALS`, `RESULTS`) are `COLLECTIVE-DIRECTION.md` and `ALIGNMENT-DIRECTION.md`; `LEAN-TOWARD` 0 on all; a wider date pattern (also `2026-11-1[4-8]`, `November 1[4-8]`) 0 on all thirteen root pages. `git log --since=2026-11-12 -- README.md` ends at `ae526ad80`, whose README diff is the one line 535/566 to 536/567.
+2. **The idea's opening sentences are only in `AGENTS.md`, `DIRECTION.md` and one or two `dj` files.** Confirmed as scoped (plain `rg`, Markdown): 1 and 2 `dj` files. With history and JSON included: also the kept `AGENTS` copies (three now) and 6 and 9 `dj` files. `rg -l` over `theories/` and `README.md` finds neither phrase, so "on no front, chapter or record" holds.
+3. **"First priority: Theory of Becoming" in the present tense; 15 of 16 goals `unmarked`, none committed after 13 November.** Confirmed. `GOALS.md:242,244,254`, `RESEARCH.md:18–22`, `README.md:173`, `theory-of-becoming.json:5,11,58`; a loop over the 16 files gives 15 `unmarked`, 1 `completed`, newest commit 13 November (`generative-alignment.json`, `b0f018465`). `ag-the-map/FOR-REN.md:37` raises the title and says "first" was an AI's addition.
+4. **All 22 kept `AGENTS*` files and both kept `RESULT-WORKFLOW` copies are identical to a committed blob; 24 files, 38,483 words.** Confirmed exactly at `befa506ba`: 24 files in 14 folders, 59 commits of `AGENTS.md`, 22 of 22 and 2 of 2 match, 38,483 words.
+5. **No tool names the direction page or the plan; the gate parses the board; tests read the aim sentence.** Confirmed, with the count of tests corrected to three. `rg` over `tools`, `.github`, `Makefile` (all file types) returns nothing after dropping `COLLECTIVE-` and `ALIGNMENT-`; neither page is in the generated manifest. `gate.py:50` and `641–673`: five required headings, exactly one Queue line, no clause lost but the head, no shrink below 0.8, `GATE_BOARD_REWRITE`. `navigation.py:785–788` holds the aim as a string.
+6. **12 of 48 files generated, 58,021 words; 255 of 346 README sentences are in `OPENING.md`.** First part confirmed exactly, and all 12 hashes match the manifest. Second part partly: my own split gives 264 of 365 sentences over 60 characters, 9,956 of 13,227 words, the same share (72% against 74%). The repetition is by construction: `_process/research-config.json:14` sets `"readme_opening": "theories/becoming/OPENING.md"`, so the README is a render that embeds the opening, not a second hand-kept copy.
+7. **The board's sizes; 102 of 292 commits; the path of 73,627 words.** Confirmed exactly: 19,659 words in 111 lines; lines 40, 98, 56 hold 2,748 + 2,399 + 1,997 = 7,144; line 31 is 1,044; `git log --since=2026-11-11 befa506ba` 292, on the board 102; the seven pages 73,627, the first three 11,962.
+8. **The `check_becoming.py` warning is on none of five pages; the script has no argument handling.** Confirmed as worded: `--help` 0 on each (and on the new `AGENTS.md`); `grep -n -- '--help\|argparse\|sys\.argv\|getopt'` on the 5,156-line script returns nothing. But the report files this under "the repository lacks", and a sweep refutes that: the warning is written at `tt-turning-in-time/map/landing.md:528`, `tt-turning-in-time/kit/README.md:18` and `wu-a-way-of-units/kit/README.md:18`. It is in the repository, in study kits no entry page points to.
+
+Other statements of the Claude report I tried: the direction page's head note is 676 words and its two longest paragraphs 866 and 768 (`awk`); the board names four `tmp/r7/…` paths (and `tmp/rw`, `tmp/tm/wt`); `GLOSSARY.md` has "going-on" 0, "stock" 0, "widening" 17, the direction page 5, 17, 0; no tracked `CLAUDE.md` (`git ls-files`); `OPEN-QUESTIONS.md` has four targets, one `withdrawn`; the register's newest entry is of 13 November; `LOST-ARTIFACTS.md` is linked from no entry page (it is linked from `theories/memories-and-working-style/README.md`, a draft, a moves README and history); "about 100 mentions" of the kept copies is 96 lines in 44 live files; six Lean names sampled from the two pages resolve. All confirmed.
+
+Two things the Claude report did not see:
+
+- `tools/research/lineage.py:128–134` checks that every evidence path in `theories/becoming/results/data/lineage.json` exists, and that file cites kept `AGENTS` copies eight times with quotes. So the kept copies have a tool reading them; moving them out of the tree fails the lineage check until its paths are changed.
+- Its "not determined" on how a session loads `AGENTS.md`: in this session the harness delivered the file as project instructions, and delivered the version from before 16:02 although the disk now holds the new one. A session already running keeps the older text.
+
+## The astra statements a decision would most rest on, tried
+
+1. **The older "current first priority" comes from a maintained goal and reappears under current progress; regenerating keeps it.** Confirmed (claim 3 above; `RESEARCH.md:15–18`).
+2. **Three tool paths bind the prose: the wording test, the goal reader, the board gate.** Confirmed: `test_navigation_pages.py:13,64,66` (aim exactly once in rendered `RESEARCH.md`); `navigation.py:136–147` raises on a missing configured goal; `gate.py:641–673`.
+3. **None of the 44 blobs has a second tracked path; the kept copy equals `a36170df4^:AGENTS.md` and shares 22 of 24 nonblank lines with the version of that day.** Confirmed: `git ls-tree -r befa506ba` (122,777 entries) has no duplicate of any scoped blob; 24 and 24 lines, 22 shared.
+4. **No result record has a string value equal to a scoped path.** Confirmed: 567 record JSONs, 0 hits for the quoted paths with or without a fragment. astra itself says prose inside records was not covered.
+5. **The directive index covers 401 records, 74 in the curated register.** Confirmed at `befa506ba` (402 now).
+6. **Board: 735 words of rules, nine open rows in a 6,930-word section, three commits in eight minutes on 18 November.** Confirmed (`awk` per section; rows at lines 48–56; commits at 10:24, 10:27, 10:32).
+7. **`KidsNeedMore` at `LineOnAStock.lean:1506`.** Confirmed: namespace 1471–1520, `theorem all_but_down` at 1506, with `¬ (∀ u v, v ∈ kids u → need v ≤ need u)` among its conjuncts. The statement was read, not built.
+8. **Eight of nine template lines of `navigation/REPOSITORY.md` are in `_process/BRIEF.md`.** Confirmed.
+
+Not settled: astra's inferred sentence that a session "can recover the direction without private memory if it enters through the instructions". The cold-start read (reported in `STATE.md`) supports it; I did not test it, and it does not cover operating knowledge.
+
+## Errors of fact
+
+**Claude report: 3.**
+1. "Two tests" pin the fronts to `AGENTS.md`'s sentence. Three test files do.
+2. "Every other entry page was last changed in content on or before 13 November." `RESULTS.md` and `DEPENDENCIES.md` gained the result of 16 November; `A-CASE-FROM-OUTSIDE.md` changed that day.
+3. The `check_becoming.py` warning listed among what "the repository lacks". It is in three study files. (The claims-file wording, scoped to five pages, is right.)
+
+The worst is the first: anyone changing the aim sentence, or the tests that pin it, would plan for two files and meet a third.
+
+**astra report: 0 found.** Its weakest point is not an error: word counts taken with a locale-dependent `wc`, which no one else will reproduce without knowing the locale, and "which files sessions never open" left unlooked-at.
+
+## What a decision can rest on
+
+The area is 48 files and about 133,000 words; 12 files (58,000 words) are renders. The direction of 14 to 18 November is on four hand-kept pages only; no root page links the direction page, and `GOALS`, `RESEARCH` and the README still give October's target as first priority because the goal file says so and 15 of 16 goals are unmarked. No tool reads the direction page or the plan. Three tests and one render string hold the fronts to one sentence of `AGENTS.md`. The gate parses the board and refuses a shrunken one. All kept instruction copies are in git byte for byte, but `lineage.json` and 96 live lines point at their paths. The board is 19,900 words, a third of it in three lines.
+
+## What it cannot yet rest on
+
+- That the tests still pass after today's `AGENTS.md` change: the regex matches the same sentence, but no test was run.
+- What Ren wants the goal states and the "first priority" title to be; nothing in the repository settles it.
+- That a session can continue from the repository alone. The words of 18 November are now filed, but the direction page still names two inputs kept only in scratch and a first wording kept only in a transcript, and the operating traps are in study kits, not on any entry page.
+- The lower two thirds of the board, and whether its `tmp/` paths still exist; neither reader read them and I did not.
+- Whether any record's prose, or a page outside the entry set, cites a section of these pages by anchor; only exact path values in record JSON were swept.
+- That the direction page and the plan say what the Lean says. Names resolve; no statement was compared by either reader or by me, beyond one theorem.
+- The share "0.5% of the repository's Markdown": it rests on the 26.6-million count, which I did not recount.
+- That `LOST-ARTIFACTS.md` is the only inventory of texts outside the repository: not swept.
+- What the reader's site now shows.
+
+## The commands behind this check
+
+`git show befa506ba:<path>` piped to a Python split and to SHA-256 against the manifest; `git ls-tree -r befa506ba` for duplicate blobs; `git rev-parse <rev>:<path>` over `git log --format=%H -- AGENTS.md` for the kept copies; `awk '{print NF, NR}'` per line and per section of the board; `git log --since=2026-11-11 --format=%h [-- board] | wc -l`; `rg -l [--no-ignore-dot] -F '<phrase>' -g '!tmp/**'` with globs for `.md`, `.py`, `.json`; `rg -n 'AGENTS\.md' tools -g '*.py'`; `sed -n` on `gate.py`, `navigation.py`, `lineage.py` and the three test files; `grep -c` on each root page; `git show ae526ad80 --numstat`; `git diff --stat befa506ba f1a805b5c`. One `git grep` over the whole tree did not finish in two minutes and was stopped; `rg` was used instead.

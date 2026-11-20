@@ -1,0 +1,71 @@
+GPT-6 Astra
+
+# Account: what is there
+
+*AI-written (GPT-6 Astra), 18 November 2026. A survey; nothing was changed.*
+
+## In three sentences
+
+**Counted.** The account occupies 38 tracked files and 3,371,971 bytes, with three whole pages listed in the generated-page manifest.  
+**Counted.** Half the English one-page account’s word positions occur in passages of at least twelve consecutive words also found in the overview.  
+**Inferred** from tracing a theorem, a countermodel and the lake experiment to their sources: what most deserves to be said once is the exact claim with its premises, while what a reader needs at the point of use is how to recognise those premises and where the recognition fails.
+
+## What is there
+
+**Counted.** Sizes use `wc -w` on text, including markup. Chinese whitespace counts substantially understate reading length. The inventory includes the generated directory landing page and excludes `history/` and `results/`, which have their own readers.
+
+| Kind | Files | Words or size | What it is beside the Lean | Unique? | What reads it | How far seen |
+|---|---:|---:|---|---|---|---|
+| English one page, overview, uses, worked examples | 4 | 31,893 words | Tellings, case interpretations, test verdicts | Substantial shared wording, different routes through it | Readers, site, Chinese edition checks | **Sampled** 4/4, introductions and lake passages |
+| English opening | 1 | 11,446 words | Ren’s first-person argument, revised with AI, with AI notes | Distinct authored versions | Root README renderer, records | **Sampled** 1/1, provenance, ethics paragraph and notes |
+| One argument, collective direction, free-energy principle | 3 | 16,212 words | Arguments across theorem homes for particular questions | The choice and order of evidence | Field readers, records for the free-energy page | **Sampled** 3/3, openings and routes |
+| Chinese editions of the five general and opening pages | 5 | 4,812 words, 78,533 Han characters | Translations and some original exposition | Yes, including a worked distinction below | Chinese readers, site, translation digest checks | **Sampled** 5/5, openings and edition notes |
+| Eight numbered chapters | 8 | 214,304 words | Theorem homes, readings, evidence, objections and open questions | The exposition is authored. Many laws also have records | Records, graph, site, dossiers, other chapters | **Counted** all eight. **Sampled** openings throughout, theorem passages in 02 and agenda in 08 |
+| Account README, chapter index, claims stub | 3 | 3,927 words | Generated navigation and historical anchors | All three SHA-256 digests match the manifest | Existing links, chapter readers | **Counted** 3/3, **sampled** headers and index |
+| Two review covers and six field dossiers | 8 | 99,010 words | Tellings, quotations, objections and questions for specialists | Questions and response forms are authored | Dossier checker, packet builder, reviewers | **Sampled** 8/8, openings, audience and review instructions |
+| Blind recoding kit | 6 | 4,733 text words plus 33,835-byte XLSX | Test design, data and tooling | Frozen choices matter. The sheets are reproducible | Coders, agreement script, packet builder | **Read whole** `FREEZE.md`. **Sampled** 3/5 others by function |
+
+**Sampled** from the time notices on the fronts, chapter index and review cover. The English one page advertises 31–41 minutes, or 14–18 on its short route. The overview takes 86–112 minutes, the opening body 22–28 before notes, uses 38–49 and examples 62–81. One argument takes 34–44 minutes, collective direction 45–58 and free energy about 50. The eight chapter estimates sum to 29.6–38.4 hours. Individual dossiers range from about 1½ hours to 4 hours 20 minutes, before answering. The Chinese one page gives 34–44 minutes and the Chinese overview 79–103. These are the repository’s estimates. [Chapter index](theories/becoming/chapters/README.md) · [Review cover](theories/becoming/review/README.md)
+
+## What repeats
+
+**Counted.** After removing navigation, headings, comments and link destinations and lowercasing English word tokens, 1,980 of the one page’s 3,959 positions belong to a twelve-word run also in the overview. Across the overview, uses, examples, review cover, root README and opening together, the count rises to 2,325 distinct positions (59%). This measures wording. It misses paraphrase and includes premises worth repeating.
+
+**Counted.** Only two of the 38 working files had an identical blob at another tracked path in the Git index. `SHEET.tsv` and `SHEET.xlsx` each match six copies under `output/pdf/`, one in the current packet and five in earlier editions. **Read whole:** the freeze records the corpus, random seed, strata, scoring interpretation and hashes. Recreating a sheet depends on retaining those choices. [Freeze](theories/becoming/review/recoding/FREEZE.md)
+
+**Sampled** one finding each from the October and November surveys. On 16 October the architecture review found three tellings within one 962,442-byte chapter. I checked that byte count and both named restatement headings in commit `0cfb9c567`. Today’s repetition crosses separate pages. The 9–10 November AG review recorded restoring first-person wording and moving qualifications into notes. The opening still illustrates the consequence: its body offers a second reading under which keeping everything and adding more is better. Its ethics note explains which order is assumed and leaves open how a life acquires it. The 14 November count reported in the Lean plan concerns modules and theorems. [October review]( _process/research/2026-10-05-repository-reconciliation/whole-repo-review-2026-10-16/ARCHITECTURE.md) · [AG review](./_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ag-the-map/FOR-REN.md) · [Opening](theories/becoming/OPENING.md)
+
+## What depends on it
+
+**Counted.** Of 1,384 prose blocks in the eight chapters, 742 (53.6%) contain a Lean source link or a backticked declaration name matched against the repository catalogue. Exactly 100 contain a source link under that rule. Including links to result records raises the total to 786 (56.8%). Tables are excluded from this denominator. A citation can govern a whole table or a following paragraph, so the figures measure visible references, not the share proved.
+
+**Sampled** one theorem-to-source chain. Chapter 02 §1 gives a stable `r-generation-and-degeneration-at-two-grains` anchor, the base, a record link and a theorem table. Its generation/degeneration exclusion names `«生成退化不并»`; the Lean quantifies over the relations and occurrence. The same section retains the countermodel to the first three-way classification: a line renews once and then stays still. I found its three exclusions and its eventual keeping in `MapRegions.lean`. **Counted.** Across 567 record JSON files, 137 contain 151 hashed references to files in this area, 144 with role `statement`. These pins name files. The registry also examines cited headings and lines linking the record when judging drift. [Chapter 02](theories/becoming/chapters/02-MAP.md#r-generation-and-degeneration-at-two-grains) · [Record](theories/becoming/results/records/generation-and-degeneration-at-two-grains.json)
+
+**Sampled** the account-facing paths in the renderer, gate and publishing tools. `readme_opening` supplies the English opening to the root README. The site has a page allow-list. The Chinese edition ledger pairs English and Chinese digests. The dossier checker compares quotations, names and Lean blocks with their sources. The packet builder expects the named dossiers and both sheets. **Counted:** the four English dossiers alone contain 56 fenced Lean blocks. [Configuration](./_process/research-config.json) · [Packet builder](tools/publishing/build_review_packet.py)
+
+## What a continuing session needs from here
+
+**Inferred** from `AGENTS.md`, the chapter links and the sampled chains. A session needs the one page for orientation, the relevant chapter for the precise claim, its Lean declaration for the premises, and the experiment or textual source for the proposed application. The lake illustrates the last distinction. With talk, one model kept the bed in 8/10 seasons under the added instruction against 3/10 with the community goal alone. Three of four frozen predictions failed for the other model. The account keeps that failure visible and the experiment keeps its evidence. A routine proof change has no evident need for six complete dossiers or a blind coding sheet. **Not looked at:** session access logs. I cannot say a file is never opened. [Lake experiment](experiments/direction-installation/README.md)
+
+## Candidates
+
+- **Inferred — chapter homes and fronts.** The overlap supports keeping the full premises at one anchored home and using shorter statements elsewhere. The risk is dropping the premise that makes the conclusion true. Section links, record references, both languages and dossier quotations would need checking together.
+- **Inferred — opening, Chinese editions and topical essays.** Keep the provenance and audience-specific reasoning available. The Chinese one page works through why a 50-ton catch beats 30 on catch but loses on visible stock, and why the lake itself supplies no example of rule lock. A translation rebuilt from English alone would lose that teaching example. The opening requires its revision notice wherever its first person is reproduced. [Chinese one page](theories/becoming/ONE-PAGE.zh.md)
+- **Inferred — review packet and recoding.** These could sit outside an ordinary session’s reading route. Moving them out of the working tree would first require resolving the PDF builder’s inputs, checker paths, frozen quotations and blind-sheet distribution. A pointer to Lean cannot recover the specialist questions.
+- **Inferred — generated navigation.** Rebuilding these three pages on demand is technically plausible. Existing links use their paths and historical anchors, and the manifest expects their bytes. The 17 October byte-for-byte history rule currently gives old headings a readable destination. Git alone would require a replacement link scheme. [Layout rule](./_process/REPOSITORY-LAYOUT.md)
+
+## Against the two views
+
+**Inferred.** Ren’s compression hypothesis holds most clearly for the English fronts. It holds less well for the distinction between a theorem, a failed prediction and a proposed reading of a case. The coordinating session’s trace-and-output explanation fits little of this area’s bulk. The chapters and dossiers alone contain 313,314 words of live exposition and review material. Lean can settle whether a premise was used. It cannot settle whether catch alone represents what a fisher responds to.
+
+## Not determined, and surprises
+
+**Sampled** the one-page lead against two theorem homes. It says rebuilding selection from the favoured share can continue until support gives out. A lock can persist with its needs met. The later `locked_ends_rising` result explicitly assumes rising use, a positive need and a bounded level, among other premises. **Counted:** a sweep of the account Markdown found no `locked_ends_rising`, `falls_to_unmet` or `LineOnAStock`. This supports the direction page’s warning that the chapters lag the 15–16 November work. Chapter 08 also still ranks “one base” first under an earlier AI review. **Not looked at:** every proof or paraphrase of those results. [Direction](./_process/DIRECTION.md) · [Lean statement](experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean#L1440)
+
+## The commands behind the counts
+
+**Counted** with `git ls-files`, `git ls-files -s -z`, `wc -wc`, `git show 0cfb9c567:theories/becoming/chapters/THE-THEORY-OF-BECOMING.md`, and read-only `python3 -B -c` scripts. The file selection was `theories/becoming/*.md` at directory depth one, `chapters/*.md` and `review/**`. For citation counts I split `chapters/0*.md` on blank lines, removed fences, anchors, comments, headings, tables, navigation and reference definitions, and counted each surviving block once. Names matched catalogue link labels or dotted suffixes, allowing bare names containing `_` or `«`. For overlap I slid a twelve-token window across each text and counted covered positions once. No build, checker, test or renderer ran.
+
+── cx · ok · session 01a1edd2-1ad4-73b1-8e4e-478d671a1905 · gpt-6.2-astra/high · read-only · 573s · 1692.7k tokens · 44 cmds
+continue: cx -r 01a1edd2-1ad4-73b1-8e4e-478d671a1905 "…"
+log: /Users/ren/.cache/cx/runs/20261118-154211-34354

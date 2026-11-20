@@ -1,0 +1,94 @@
+GPT-6 Astra
+
+# Outside-tree: what is there
+
+*AI-written (GPT-6 Astra), 18 November 2026. A survey; nothing was changed.*
+
+## In three sentences
+
+**Counted.** At main `befa506ba`, ten local branches held 27 distinct commits outside main, and the salvage refs held another 876 commits unreachable from any local branch.  
+**Counted.** Compiled Lean files account for 1.30 GB of the 1.59 GB under `tmp/r7`, yet two documents named by the live workboard and all twelve files of today’s attempt to join renewal to amounts had no exact blob in this repository’s Git object store.  
+**Inferred** from the freeze pins and that attempt: a session starting from main can read the findings already landed, but a checkout alone cannot recover all the evidence for earlier tests or the latest correction to the direction.
+
+## What is there
+
+**Counted.** Sizes below are logical bytes for scratch and allocated space for `.git`. Scratch totals cover five permitted entries under `tmp/`. The two excluded folders were never entered.
+
+| Kind | Files or refs | Words, lines or size | What it is beside the Lean | Unique? | What reads it | How far seen |
+|---|---:|---:|---|---|---|---|
+| Local branches and salvage | 158 heads, 403 salvage refs | 155 and 390 distinct tips respectively | Development history, drafts, experiment freezes, landing kits | Some commits reachable only outside branches | Git, maintainers, freeze gate | **Counted** all refs and ancestry |
+| Other refs | 12 remote-tracking refs, 6 tags, 2 Codex refs, 1 stash ref | 2 stash entries | Release and session history | Stash contains working changes | Git and session tools | **Counted** refs and stash summaries |
+| Registered worktrees | 8 including this checkout | 5 on branches, 3 detached | Work in progress and landing environments | Uncommitted state unknown | Owners and gate | **Counted** registrations; external contents **not looked at** |
+| Git storage | 47,327 loose objects, 224,667 packed entries, 2 packs | `.git` 3.97 GiB | History, evidence, data, operating state | Mixed | Git, LFS, gate | **Counted** |
+| `tmp/r7` | 5,173 files | 862 Markdown files, 3,297,534 words; 1,555 Lean files, 1,363,069 lines | Draft proofs, frozen questions, reader disagreements, copies and build output | Mixed, measured below | Workboard, study briefs, continuing researchers | **Counted** all regular files |
+| `tmp/pdfs` and two Guardian exports | 19 and 2 files | 6.73 MB and 9.60 MB | Reading copies and site exports | Both Guardian files recoverable from history | Publishing and human readers | **Counted** names, sizes and selected hashes |
+| `tmp/soi-si-lom-5-2` | 32 files | 45.87 MB, including 25 audio chunks | Source-processing intermediates, scripts and logs | Master and reproducibility unverified | Local processing script | **Counted** metadata; audio **not looked at** |
+
+**Counted.** Git reported 1,614,928 KiB loose and 2,084,330 KiB packed including indexes. The `.pack` files themselves were 2,126,934,556 and 1,126,883 bytes. Worktree administration accounted for 180,480 KiB, LFS for 180,972 KiB and `.git/gate` for 73,396 KiB. One LFS payload’s filename matches the SHA-256 in the tracked pointer for a 185,284,643-byte participant data file. **Not looked at:** payload contents and remote availability.
+
+**Counted.** These are all the branches with commits outside main. Parentheses give commits ahead. Ancestry measures commit identity; equivalent edits landed under another hash remain possible.
+
+| Branch | Branch |
+|---|---|
+| `aa-atlas-v1` (2) | `t2-life-cycle` (2) |
+| `claude/epic-mirzakhani-e296ee` (1) | `t2-statement` (2) |
+| `fv` (2) | `tt-records-theorem` (1) |
+| `rae-salvage-claim` (1) | `ue31-design` (10) |
+| `t1-premises-follow` (1) | `wu-kit` (5) |
+
+## What repeats
+
+**Counted.** Of 3,673 sampled `r7` files, 2,345 matched a blob in the current index, another 95 matched a blob elsewhere in the local object store, and 1,233 had no exact blob there. The sample included regular files up to 1 MiB except `.olean`, `.pyc`, `.mp3` and `.pickle`. It covered every Markdown and Lean file. Of 1,555 Lean files, 1,516 matched the index. Of 862 Markdown files, only 101 matched the index and 175 matched anywhere in Git. These are file-path counts; the 3,673 paths held 2,044 distinct byte sequences.
+
+**Counted.** A failed first `TurningInTime.lean` survives byte for byte in the tracked study as `held/TurningInTime-first-attempt.lean.txt`. The two ignored Guardian exports match their former tracked paths at `eb36b95ae^`. These are examples where someone can recover the exact file after its scratch path disappears. [Held first attempt](/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/tt-turning-in-time/held/TurningInTime-first-attempt.lean.txt)
+
+## What depends on it
+
+**Counted; sampled** the freeze-handling section of `gate.py`. Twenty experiment files ending in `FROZEN-AT` name 32 distinct resolvable commits. Six are outside main; each is reachable through salvage. Two have exactly one containing salvage ref apiece, `mq2-freeze` and `mq3-freeze`. For MQ3 the pin names both the original `13af39133` and the rebased `9e2e8ec2a`. The gate tests both relationships: a pin needs a commit in the checked history, and each original outside that history needs a containing salvage ref. Keeping only the rebased result would lose evidence the gate actually checks. [Experiment pin](/Users/ren/theories/experiments/margin-measured/results/FROZEN-AT) · [Gate check](/Users/ren/theories/tools/research/gate.py:862)
+
+**Counted.** A literal-path sweep of 8,654 permitted tracked Markdown files, including history, found `tmp/r7` in 48 files and `/Users/ren/tmp/<folder>` in 82 files naming 15 external folders. Fourteen name `za-how-far`; the K2 study identifies the round brief there. The live workboard points to `r7/words/scan`, `STEP-2-ON-PAPER.md` and `THE-MAP-AS-DATA.md`. Both named documents resolved on disk; neither had an exact Git blob. A historical mention and a current handoff carry different dependencies. [Workboard](/Users/ren/theories/_process/BECOMING-WORKBOARD.md:55) · [K2 study](/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/zk2-pool-with-course/NOTE.md:3)
+
+## What a continuing session needs from here
+
+**Sampled** the opening and corrections of `FROZEN-JOIN.md`, chosen because it tests the current direction; **read whole** its build log. The 18 November attempt asked whether amounts taken and given explain passage between renewal and consumption. The log reports nine theorems with empty axiom lists. The appended correction records that frozen test J2 went against the attempt and J5 failed to give the promised passage. A reader supplied a paper counterexample in which a formation stays within renewal at every step where it acts and still counts as consuming over the course. The distinction between that reader’s argument and the checked statements is part of what would be lost. [Frozen attempt and corrections](/Users/ren/theories/tmp/r7/one-model/check/join18/FROZEN-JOIN.md) · [Build log](/Users/ren/theories/tmp/r7/one-model/check/join18/ScratchStepInAmounts.build.log.txt)
+
+**Inferred** from those records: a session taking up that question needs the frozen question, module, outcome and objections together. Someone reading the landed account can start from its chapter and records without opening the compiled files, stash or gate logs. **Not looked at:** actual session access histories, so “never opened” cannot be established.
+
+## Candidates
+
+- **Salvage and unmerged branches — stay as they are. Counted:** 379 salvage refs point outside main. **Inferred:** any later consolidation needs a commit-containment and freeze-pin check first. The 876 commits outside all branches include history whose value a tip count cannot settle.
+- **Exact copies and build products — could stay outside the reading path. Counted:** 1,481 `.olean` files occupy 81.6% of `r7` by bytes. **Inferred:** a tracked pointer can replace an exact scratch copy once its callers use the tracked path. Rebuilding a particular compiled artifact still depends on its source and toolchain.
+- **Current experiments and handoffs — candidates for one durable study home. Counted:** none of the twelve `join18` files matched a Git blob. **Inferred:** the result, including the failed tests, would need a durable home before the board or direction could rely on it after machine loss. Archiving every intermediate binary would not repair that dependency.
+- **Worktrees, stashes, local projects and media — cannot tell as a group. Counted:** the ignored Guardian project has its own two-commit Git repository and no configured remote. **Inferred:** an export establishes recoverability of those exported bytes alone. An owner’s working changes, source recording or local commit history need separate evidence.
+
+## Against the two views
+
+**Inferred** from the size and hash counts: Ren’s suspicion fits much of the disk volume. It fits the unmerged research poorly. The coordinating session’s account of the volume also fits, but some apparent trace is the only exact record found of a failed prediction, and some salvage is a present input to verification. The October byte-for-byte retirement rule preserved a once-endangered run. The same protection does not reach a study still under ignored `tmp/`.
+
+## Not determined, and surprises
+
+**Sampled** the worktree findings of the 16 and 19 October reviews; **read whole** the 18 October salvage note. The first review reported 88 registrations and a cited run stranded in one checkout. **Counted:** all 385 files of that run are now tracked under its salvage directory. The later review reported 19 worktrees under `.claude/worktrees`; today Git lists eight registrations overall. One additional directory, `.claude/worktrees/agents-board`, still points to a missing administrative directory. Registration alone misses such remnants. [October review](/Users/ren/theories/_process/research/2026-10-05-repository-reconciliation/whole-repo-review-2026-10-16/CHANGES.md:718) · [Salvage note](/Users/ren/theories/_process/history/worktree-salvage-2026-10-18/README.md)
+
+**Not looked at:** private folders, the survey scratch folder, external worktrees, Claude memory, external caches, remote servers and backups. An exact blob missing locally identifies what this Git store cannot restore verbatim. Whether another machine, archive or differently worded record preserves it remains undetermined.
+
+## The commands behind the counts
+
+```sh
+git count-objects -v
+du -sk .git .git/objects .git/lfs .git/worktrees .git/gate
+ls -l .git/objects/pack
+git worktree list --porcelain
+git stash list
+git for-each-ref --format='%(refname) %(objectname) %(objecttype)'
+git for-each-ref --no-merged=main --format='%(refname:short)' refs/heads
+git rev-list --count --branches --not main
+git rev-list --count --glob='refs/salvage/*' --not --branches
+git ls-files 'experiments/*FROZEN-AT'
+git for-each-ref --contains=13af39133 refs/salvage
+```
+
+**Counted.** For scratch, a read-only Python `os.walk` over the five named entries counted regular files with `lstat`, bytes with `st_size`, and lines with `bytes.count(b'\n')`. For duplicates it computed `SHA1(b'blob ' + decimal_length + b'\0' + contents)` and compared with `git ls-files -sz` and `git cat-file --batch-check`. The citation sweep passed permitted paths from `git ls-files -z '*.md'` to `rg --no-ignore-dot` in batches.
+
+── cx · ok · session 01a1edd4-8867-72a2-813b-925fbd0dc653 · gpt-6.2-astra/high · read-only · 701s · 827.3k tokens · 114 cmds
+continue: cx -r 01a1edd4-8867-72a2-813b-925fbd0dc653 "…"
+log: /Users/ren/.cache/cx/runs/20261118-154450-53734

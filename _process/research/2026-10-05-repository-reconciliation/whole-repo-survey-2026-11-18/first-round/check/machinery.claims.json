@@ -1,0 +1,58 @@
+{
+ "area": "machinery",
+ "headline": "The machinery is tooling: about 26k lines of Python plus 15k of tests, a 46-check gate, the board, and architecture manifests. It guards form, hashes and freshness, not whether prose matches the Lean. It generates 1,416 files (3.26M words). Gate rules, tools and hash-bound records pin many fixed paths into study and history folders, so nothing can leave the tree before those change. The landing procedure is the main way commits grow. One recurring step, the Queue trim, lives only outside git.",
+ "loadBearingClaims": [
+  {
+   "claim": "gate.py fails the whole gate when a check rule names a literal path or glob the tree lacks. Its rules name study and history paths, including development/one-unfolding-root/corpus and review-checks, development/review-packet/check_dossiers.py (the command of the dossier check), ou2-candidates/outcomes.tsv, ou7-conditional-laws/data/groups.tsv, y1-changes, ro-relational-sources, zhonghua, history/root-foundation/SESSION-OUTCOME-SNAPSHOT.json and the history/.../readability/drafts folder. So none of these folders can leave the tree without editing gate.py.",
+   "evidence": "tools/research/gate.py lines 8, 49-62, 145-226, 258-262 and 414-428 (stale_rules: 'does not exist' fails)",
+   "howFarSeen": "read"
+  },
+  {
+   "claim": "The generated manifest lists 1,416 files; 1,414 exist, totalling 77 MB and 3,263,131 words of Markdown. 680 of them are the mirror of BECOMING-RENEWAL-READING (596,956 words, against 560,440 in the two source files), and 589 are record pages (22 of them rename stubs).",
+   "evidence": "python over _process/architecture/generated-manifest.json with os.path.exists, getsize and split; wc -w on the two source files; ls of records",
+   "howFarSeen": "counted"
+  },
+  {
+   "claim": "Live and generated Markdown (3,231 files by tools/research/paths.Classifier, development/ and drafts/ included as live) holds 13,096 relative links whose targets are classed history or evidence. 6,585 go into the Lean root's run folders, 2,591 into the generative-foundation-review history folder and 304 into theories/becoming/history/THE-THEORY-OF-BECOMING.md. The links check covers these files.",
+   "evidence": "script using paths.Classifier over git ls-files '*.md' and the regex \\]\\((...)\\); moves.check_links docstring and roles_ok {'live','generated'}",
+   "howFarSeen": "counted (regex links; code spans not masked, so a small overcount is possible)"
+  },
+  {
+   "claim": "All 11,491 path references in the 567 record JSON files carry a sha256 and none is missing on disk. 411 records hash-bind the study log BECOMING-RENEWAL-READING.md (158 on 16 October per the whole-repo review), and 277 bind the retired chapter theories/becoming/history/THE-THEORY-OF-BECOMING.md.",
+   "evidence": "python over theories/becoming/results/records/*.json references and proof_bindings; whole-repo-review-2026-10-16/ARCHITECTURE.md §1.6 item 3",
+   "howFarSeen": "counted"
+  },
+  {
+   "claim": "No code in tools/, .github, the Makefile or the config reads the board history file (224,271 words). No code there reads rename-2026-10-09.json, start-state.json or validation.json either.",
+   "evidence": "rg 'workboard' and the file names over tools, .github, Makefile and _process/research-config.json (exit 1); a wider rg finds only old per-item kits in history folders and study prose",
+   "howFarSeen": "swept (tracked code and config only)"
+  },
+  {
+   "claim": "The Queue-trim step the board's rule implies (the line holds the five latest landings) is done with trim_queue_1117.py. That script exists only in /Users/ren/tmp/rw/words14/, outside git, and its use is described only in the AI memory note reference_queue_trim_kit.md. No tracked file named trim_queue was found.",
+   "evidence": "git ls-files | rg trim_queue (empty); find /Users/ren/tmp -name 'trim_queue*'; the memory note at line 10",
+   "howFarSeen": "swept by filename"
+  },
+  {
+   "claim": "From 4 to 18 November the gate recorded passes for 387 commits: a median of 15 checks and about 379 s of summed check time per commit (90th percentile 910 s). All 46 checks sum to about 755 s at their medians. Since 11 November main had 292 commits: 102 touched the board, 70 begin 'Board:' and 46 are renders. The landing of 18 November put 5 commits on main for one page correction.",
+   "evidence": "python over .git/gate/passes/*/*.json; git log --since=2026-11-11; git log -5 --oneline",
+   "howFarSeen": "counted"
+  },
+  {
+   "claim": "The Lean catalogue lean-index.json (18.6 MB) indexes every .lean file wherever it lies: 2,332 paths, of which 1,305 are development attempts and 143 are byte-identical groups. It has been rewritten in 555 commits.",
+   "evidence": "its 'statistics' key; lean_catalogue.py EXCLUDED; git log --oneline -- that file | wc -l",
+   "howFarSeen": "counted"
+  }
+ ],
+ "againstTheViews": [
+  "Against 'much is garbage': run folders, record snapshots, move receipts and study files are read by the gate, tests and hash-bound records (6,411 record references into run folders). Removing them breaks checks before it loses any meaning.",
+  "Against 'trace and machine output can leave the reading path without loss': the classifier makes development/ live, so it is link-checked and catalogued. Live pages link into history 13,096 times. The gate's dossier check runs from a study folder. 411 records are coupled by hash to the bytes of one study log.",
+  "Partly for the coordinator: generated pages are 3.26M words that a render rewrites from records and data, and the mirror alone is a 0.6M-word near copy.",
+  "Against the direction: the gate checks form and freshness only. GATE.md says whether a restatement matches its home 'is tested by a reader'. Nothing here judges prose against the Lean."
+ ],
+ "notDetermined": [
+  "The share of .git taken by repeatedly regenerated large files (lean-index.json across 555 commits, atlas.json, map.html)",
+  "Whether CI runs today (the October review found it dead)",
+  "Whether the three one-off publishing builders and any of the 410 landing kits are still used",
+  "Core-run and render times beyond GATE.md's 4 November figures (not re-measured)"
+ ]
+}

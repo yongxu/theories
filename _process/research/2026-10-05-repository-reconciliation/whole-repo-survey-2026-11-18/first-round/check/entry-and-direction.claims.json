@@ -1,0 +1,63 @@
+{
+ "area": "entry-and-direction",
+ "headline": "What a new session reads: 48 files, about 133,000 words, 43% of it generated. It is of two dates that do not point at each other. Only AGENTS.md, DIRECTION.md, the plan and the board carry the direction of 14 to 18 November; every root page predates it, and GOALS, RESEARCH and the README still give October's zero-axiom target as \"first priority\". No single place holds the state of the work, and tests hold the fronts to a sentence of AGENTS.md, not to the Lean.",
+ "loadBearingClaims": [
+  {
+   "claim": "None of the eleven root pages README.md, README.zh.md, GOALS.md, OPEN-QUESTIONS.md, RESEARCH.md, MAP.md, GLOSSARY.md, TESTS.md, COMMONS.md, DEPENDENCIES.md, RESULTS.md links to _process/DIRECTION.md or mentions any date from 14 to 18 November 2026; the only change to README.md since 13 November is a count (535 of 566 became 536 of 567, commit ae526ad80).",
+   "evidence": "grep -c '_process/DIRECTION\\.md\\|(DIRECTION\\.md' and grep -c '1[4-8] November\\|11 月 1[4-8] 日' give 0 on each; rg for '(_process/|\\.\\./|\\()DIRECTION\\.md' lists only AGENTS.md, the board, the plan, the dj study, two source records and kept copies; git show ae526ad80 -- README.md shows one changed line.",
+   "howFarSeen": "counted"
+  },
+  {
+   "claim": "The opening sentences of the idea as now understood ('made again and again', 'run down unseen') occur, among Markdown that plain rg searches outside tmp/, only in AGENTS.md, _process/DIRECTION.md and one or two files under development/dj-a-line-on-a-stock; they are on no front, chapter or record.",
+   "evidence": "rg -l -F '<phrase>' --glob '!tmp/**' --glob '*.md' gives AGENTS.md and _process/DIRECTION.md outside the study folders and sources; 1 and 2 files under _process/research; 0 under sources. Plain rg respects the root .ignore, so history folders were not searched.",
+   "howFarSeen": "counted (history folders not searched)"
+  },
+  {
+   "claim": "GOALS.md, RESEARCH.md and README.md present 'First priority: Theory of Becoming' (GOALS: 'Theory of Becoming — current first priority') in the present tense, with the aim 'deductive necessity ... without added substantive axioms' and a Next naming K1; they are rendered from _process/goals/theory-of-becoming.json. 15 of the 16 goal files have state 'unmarked' and none has a commit after 13 November 2026.",
+   "evidence": "GOALS.md lines 242-254; RESEARCH.md lines 18-22; README.md line 173; _process/goals/theory-of-becoming.json lines 5, 11, 58; a script printing state and git log -1 date for each goal file; ag-the-map/FOR-REN.md item II.5 (10 November) raised the same title and it is unchanged.",
+   "howFarSeen": "read (the cited lines) and counted (states and dates)"
+  },
+  {
+   "claim": "All 22 files named AGENTS* under _process/history/*-instructions/ (fourteen folders) are byte-identical to AGENTS.md at some commit in git log -- AGENTS.md, and the two kept RESULT-WORKFLOW copies are byte-identical to a past committed RESULT-WORKFLOW.md; together 24 files, 38,483 words.",
+   "evidence": "In bash: git rev-parse HEAD:<copy> compared against the set of git rev-parse <commit>:AGENTS.md over the 59 commits of git log --format=%H -- AGENTS.md: 22 of 22 match; same method for the two workflow copies; diff of git show a36170df4^:AGENTS.md against the 17 November copy is empty.",
+   "howFarSeen": "counted"
+  },
+  {
+   "claim": "No file under tools/, .github/ or the Makefile names _process/DIRECTION.md or LEAN-TOWARD-THE-DIRECTION; by contrast gate.py parses _process/BECOMING-WORKBOARD.md (BOARD at line 50, the Queue-line check near lines 642-668 with GATE_BOARD_REWRITE), and test_uses_pages.py (line 22) and test_featured_results.py (near line 19) read AGENTS.md's sentence 'we want to design an alignment in which ...' by regex and hold other pages to its words.",
+   "evidence": "rg -n 'DIRECTION\\.md|LEAN-TOWARD' tools/ .github Makefile, filtered of COLLECTIVE-DIRECTION and ALIGNMENT-DIRECTION, returns nothing; rg and sed on gate.py and the two test files show the cited lines.",
+   "howFarSeen": "counted for the absence (within tools/, .github, Makefile); the cited lines read"
+  },
+  {
+   "claim": "12 of the area's 48 files are listed in _process/architecture/generated-manifest.json and hold 58,021 of the area's 133,397 whitespace words; in README.md, 255 of 346 sentences longer than 60 characters (about 9,600 of 13,700 words) also occur in theories/becoming/OPENING.md once link targets and note markers are dropped.",
+   "evidence": "A Python script over the listed files and the manifest's 'files' keys; a second script splitting both files into sentences after normalising links.",
+   "howFarSeen": "counted"
+  },
+  {
+   "claim": "The board is 19,659 words in 111 lines; three single lines hold 7,144 of them (the Queue line 2,748, 'Runs that wait on Ren's yes' 2,399, the DJ row 1,997); 'The way now' is one bullet of 1,044 words; 102 of the 292 commits on main since 11 November 2026 touch the board. Read whole, the seven pages AGENTS.md links (itself included: DIRECTION, the plan, the board, RESULT-WORKFLOW, ONE-PAGE, 08-METHOD) come to 73,627 words, of which AGENTS, DIRECTION and the plan are 11,962.",
+   "evidence": "wc -w; awk word counts per line (lines 40, 98, 56, 31) and per section; git log --since='2026-11-11' --format=%h [-- _process/BECOMING-WORKBOARD.md] | wc -l.",
+   "howFarSeen": "counted"
+  },
+  {
+   "claim": "The warning that check_becoming.py does a real run whatever argument it is given is on none of AGENTS.md, _process/RESULT-WORKFLOW.md, _process/BECOMING-WORKBOARD.md, _process/REPOSITORY-LAYOUT.md or the Lean package README, and the script itself contains no 'argparse', 'sys.argv' or '--help'.",
+   "evidence": "grep -c -- '--help' on each page gives 0; grep -n -- '--help\\|argparse\\|sys.argv' on check_becoming.py returns nothing. The script was not read beyond this grep and never run.",
+   "howFarSeen": "counted by grep; the script's behaviour is inferred, not observed"
+  }
+ ],
+ "againstTheViews": [
+  "Against 'much is garbage': nothing in this area is unused. Every file is generated, feeds a generator, is parsed by the gate, or is linked from a page a session reads. What is wrong is that the pages are of two dates, not that they are waste.",
+  "Against 'trace and machine output could leave the reading path without loss': here the trace is written inside the live pages (a 676-word head note before the direction page's first sentence, five dated clauses in the board's 'way now', an AI reading beside each quote in the directive register), so moving folders does not remove it; and the 43% that is machine output is the public reading path itself (the README).",
+  "Against 'prose is judged against the Lean and not against other prose': on the fronts the machinery does the opposite. Two tests hold pages to one sentence of AGENTS.md and a render string copies it. Only DIRECTION.md and the plan were set against the Lean, by AI readers, and by their own head notes no person has checked either.",
+  "For Ren's view in part: about 9,600 words of the README repeat OPENING.md, and all 38,483 words of kept instruction copies are exact repeats of git history.",
+  "For the coordinating session's view in part: the 12 generated pages (58,021 words) can be regenerated, and the kept instruction copies are pure trace recoverable from git."
+ ],
+ "notDetermined": [
+  "How a Claude session comes to load AGENTS.md: there is no tracked CLAUDE.md, and .claude/ holds only launch.json and local settings.",
+  "What the reader's site currently shows (not opened).",
+  "The lower two thirds of the board (the open-claims rows other than DJ, the batched precision pass, most of Decisions pending Ren) were not read.",
+  "Whether goal text is repeated verbatim in GOALS.md and RESEARCH.md (inferred from render markers and headings; not diffed).",
+  "Whether any record cites a page of this area by a relative path (only quoted repository-root paths were searched).",
+  "Whether Ren's words of 18 November are anywhere in the repository: none found in sources/15 by file name or date, as the brief also says.",
+  "Whether the 14 November size count (26.6 million words) is recorded in the repository: not found by '26.6' in _process/*.md or the November source records; a wider sweep was not made.",
+  "How the glossary's vocabulary (13 November) would meet the direction page's: 'going-on' and 'stock' are absent from GLOSSARY.md; 'widening' occurs 17 times there and not once on DIRECTION.md."
+ ]
+}

@@ -1,0 +1,62 @@
+{
+ "area": "lean-direction",
+ "headline": "The Lean read for what it says of AGENTS.md's two paragraphs. Six November modules (4% of lines) and some forty October modules carry them. One sentence is stated whole; the rest in part, with what grows or what is held to handed in; the meta-attractor is named only in docstrings. The sentence-to-theorem tie lives in five read reports in one study folder, not in the Lean or on the direction page, and one proof it names exists only outside git.",
+ "loadBearingClaims": [
+  {
+   "claim": "Of the alignment paragraph of AGENTS.md, the sentence 'Two courses that differ in nothing that makes a difference to the selection are selected alike' is stated whole by a theorem in two places: Web.selects_alike_iff (Becoming/Selection.lean:191), whose own docstring says it 'states what the definition builds in', and LineOnAStock.ways_alike (Becoming/LineOnAStock.lean:547), with needs and offspring given. The next two sentences are stated in part by LineOnAStock.need_unmet (1011) and falls_to_unmet (1057) and by TurningInTime.locked_ends_rising (1440) with locked_turns_in_time_on_window_iff (1633); in each the growth of what is drawn is a premise (grows; more).",
+   "evidence": "Statements printed with sed at those lines and read; Selection.lean lines 134-195 read (SelectsThrough is defined as respecting likeness through the couplings).",
+   "howFarSeen": "read whole for the six statements named; proofs not read; nothing built"
+  },
+  {
+   "claim": "No declaration in the package is named for the meta-attractor or instrumental convergence. 'meta-attractor' occurs in 6 modules (Attraction, Capture, ChoiceCountCapture, DrawnShaping, ReadingsPersist, RuleShaping; 9 hits) and 'instrumental' in 3 (FromTheDynamics, PersistingChoices, ReadStages; 5 hits), all in docstrings, under headings such as 'Readings (the AI's)'. ReadingsPersist's head says of its own witness: 'the meta-attractor's shape ... not the meta-attractor itself'. The only declarations with 'attractor' in the name are 10 in HexagramLaws.lean (the nuclear attractor of hexagrams).",
+   "evidence": "grep -rilE and grep -nHiE over Becoming/*.lean for meta-attractor|meta attractor|MetaAttractor|instrumental; grep of declaration heads for attractor|instrumental|convergen; passages read at ReadingsPersist 66-76, 552-566, 1313-1326, Capture 30-42, RuleShaping 92-102, DrawnShaping 70-78, FromTheDynamics 82-90, PersistingChoices 98-104, Attraction 78-84.",
+   "howFarSeen": "counted over all 406 files; the nine passages read whole"
+  },
+  {
+   "claim": "November's line model shares no definition with October's web statements of the same things: LineOnAStock.lean, LineOnAStockCases.lean, WayOfUnits.lean and RegimeMargin.lean contain 0 occurrences of AlikeThrough, SelectsThrough, Balances, RenewingIn and ConsumingIn (TurningInTime.lean also 0 of these; it has Locked, 104 times). And of the 23 modules that name Web.RenewingIn or ConsumingIn, none also names SelectsThrough, ReadableInTime or Locked.",
+   "evidence": "grep -cE per file for each token; a shell loop over grep -lE 'SelectsThrough|ReadableInTime|Locked\\b' intersected with grep -qE 'RenewingIn|ConsumingIn' printed nothing; grep -lE 'RenewingIn|ConsumingIn' gives 23 files.",
+   "howFarSeen": "counted by token; a join stated through other names would not be seen by this count"
+  },
+  {
+   "claim": "The modules that the 16 November read cites for the idea's later sentences (ReadingLoop, RelativePosition, SharedCodes, ReflexivePrediction, PartialReadout, CoupledDrawers) have no import path to or from November's six modules in either direction; RelativePosition, ReflexivePrediction and CoupledDrawers are imported by no module of the package other than the root file.",
+   "evidence": "Python script over 'import Becoming.X' lines of the 406 modules: transitive upstream and downstream closures of {LineOnAStock, LineOnAStockCases, TurningInTime, WayOfUnits, RegimeMargin, RuleCapture}; direct importer counts 0 for the three named.",
+   "howFarSeen": "counted; the root file Becoming.lean (which imports 405) is excluded from 'other module'"
+  },
+  {
+   "claim": "RegimeMargin.rises_by_draw (Becoming/RegimeMargin.lean:793) is used by no other declaration in the package, and RegimeMargin.ends_iff_below is named in TurningInTime.lean only in two docstrings (lines 36 and 1917), in no proof; no statement was found that the level of TurningInTime.unending_iff_above is the level of RegimeMargin.ends_iff_below.",
+   "evidence": "grep -n 'rises_by_draw' Becoming/*.lean gives two lines, both in RegimeMargin.lean (a docstring mention at 210 and the declaration at 793); grep -n 'ends_iff_below' in TurningInTime.lean, LineOnAStock.lean, WayOfUnits.lean gives only the two docstring lines.",
+   "howFarSeen": "counted by name across Becoming/ for the first; across three files for the second; the periphery folders were not searched"
+  },
+  {
+   "claim": "By lines, 118 of the 406 modules (36%) are named on DIRECTION.md, the plan, READ-AGAINST-THE-LEAN.md, the dig's note, the second-way note or the 18 November reader's report; 288 (64%) are named on none of them. November's six modules are 11,219 lines (4%) and import, transitively, 160 modules holding 49% of the package's lines.",
+   "evidence": "Python script: a module counts as named where its file name appears as `Name`, Name.lean or Name.decl in those pages (a namespace of the same name also counts); closures from import lines.",
+   "howFarSeen": "counted; the naming test over-counts modules whose name is also a namespace (Flow, Web-like names) and misses modules named only in the reader JSON reports"
+  },
+  {
+   "claim": "26% of the package's lines (78,091 of 300,526) are comments and docstrings, about 996,000 whitespace-separated words, of which about 354,000 are module head accounts; 95 modules mark AI readings and 45 name Ren saying something.",
+   "evidence": "Python regex over /-...-/ blocks (non-greedy, all three opener forms) in the 406 files; patterns 'Ren (wrote|said|called|gave|took|asked|read|chose|answered)' and \"Readings? \\(the AI's|\\[AI reading\\]|the AI's\".",
+   "howFarSeen": "counted; nested comments and Lean code quoted inside docstrings are counted as words"
+  },
+  {
+   "claim": "The only proof joining RelativePosition to SelectionTerm (keeps_iff_same_terms and its forms, 17 November) is not in git: it is at /Users/ren/tmp/dj/batch18/position-terms/Becoming/ScratchPositionTerms.lean (419 lines); the repository holds the statement only, in read-2026-11-16/carry-on.json and READ-AGAINST-THE-LEAN.md.",
+   "evidence": "rg -l --no-ignore-dot keeps_iff_same_terms over the repository gives three files, all in DJ/read-2026-11-16/ (carry-on.json, READ-AGAINST-THE-LEAN.md, readings-read.json); grep for 'concord' in the five tracked Scratch*.lean.txt files gives nothing; ls and wc on the path named in carry-on.json.",
+   "howFarSeen": "counted and located; the proof file was not read, and whether it builds was not checked"
+  }
+ ],
+ "againstTheViews": [
+  "Against 'much is garbage': the pieces that carry the idea's later sentences (draining in full view, position, an account given back for ever, a model its course never refutes) were in October modules that no session had opened for the direction until 16 November; and November's six modules stand on 160 others (49% of lines). Not being named on a direction page does not show a module is unused.",
+  "Against 'prose is judged against the Lean': a quarter of the Lean's own lines are prose (about a million words), including AI readings that name what no statement carries (the meta-attractor, instrumental convergence). The reference has to be the statements, not the files.",
+  "Against 'trace can leave the reading path without loss': in this area the direction page's claims of how far it was seen are pinned to files in the study folder (its head note links nine of them), and the sentence-to-theorem tie exists only there.",
+  "Against 'the tellings follow the Lean': each judging of the telling against the Lean so far took rounds of AI readers and changed the direction page on 16, 17 and 18 November; and the reads covered at most 118 modules by name.",
+  "For Ren's view: what carries the alignment paragraph is about six theorems in two modules; six modules, 4% of lines, hold this month's work on the direction."
+ ],
+ "notDetermined": [
+  "The share of theorems that are built examples and kept failures (the plan says a quarter to a third): not measured; no light command separates them.",
+  "The split of the 406 modules into families (dynamics 37%, general mathematics 30%, other fields 12%, ethics 9%, grammar 7%, plans and assurance 5% of lines) is my judgment from titles only; bodies were not read.",
+  "Whether DIRECTION.md's sentence that October's web 'has no selecting in it and no turning' says less than the Lean: Web.SelectsThrough (16 modules) and Web.ReadableInTime (ReadOffInTime.lean:647) are stated over the same Web type, but the Web structure itself has neither as a field.",
+  "What editing a docstring costs (whether the checker's receipt binds file hashes so that any prose change needs a core run): taken from a memory note, not read in the tool.",
+  "The 288 modules named on no direction page were not read for the two paragraphs; every 'not found' here rests on titles, 13 word patterns and token counts.",
+  "Whether the five Scratch*.lean.txt files and the proof outside git still build against the package as it stands.",
+  "The count of 14 November's program output (71 theorems in 17 modules naming a class in the conclusion) was checked only as a file of 71 lines and 17 modules, not against the Lean."
+ ]
+}

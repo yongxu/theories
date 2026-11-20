@@ -1,0 +1,58 @@
+{
+ "area": "earlier-tellings",
+ "headline": "About 6.1M words of earlier tellings. 4.0M of them are one AI-drafted IASEAI paper kept in twelve near-identical editions, 3.5M of which are byte-for-byte history already in git and linked by almost nothing live. The rest is not dead trace. 292 of 567 records have their only hashed statement source in theories/becoming/history, and the one page defines the meta-attractor by linking theories/meta-attractor/README.md. That is a joining problem to solve before anything moves.",
+ "loadBearingClaims": [
+  {
+   "claim": "292 of the 567 record JSON files in theories/becoming/results/records have statement references (role 'statement') that point only into theories/becoming/history. In all, 312 records carry 390 references into it, 26 distinct files, 277 of them to the retired THE-THEORY-OF-BECOMING.md. 11 records name a history page as canonical_source.",
+   "evidence": "A python pass over records/*.json, fields references[].path/role and canonical_source. registry.py lines ~1015-1043 fail on a missing path, check each reference's sha256 against the file, and require canonical_source to be among the references.",
+   "howFarSeen": "counted (all records); registry.py read in that range"
+  },
+  {
+   "claim": "The 970 files in drafts/2026-10-02-iaseai-selecting-the-selectors/history/ and the 191 in theories/becoming/history/ were moved byte-for-byte, and their content is already in git.",
+   "evidence": "MANIFEST.json entries carry old_path, new_path, sha256 and blob. For 20 random entries of each manifest, git hash-object(new_path) equals the recorded blob and git cat-file -e on that blob succeeds.",
+   "howFarSeen": "sampled, 20 of 970 and 20 of 191 (random.seed(1))"
+  },
+  {
+   "claim": "The IASEAI folder holds 3,993,923 Markdown words in 1,122 tracked files (1,004 distinct blobs). 3,512,119 of those words are in history/, and 967,512 of those in history/v6.2/planning.",
+   "evidence": "git ls-files | grep .md | xargs cat | wc -w, per subfolder; git ls-files -s grouped by blob",
+   "howFarSeen": "counted"
+  },
+  {
+   "claim": "No record references any file in the IASEAI folder, and only 2 relative Markdown links from outside it reach it. Both come from _process/research, counting referrers that are not under history, development or sources and are not generated record pages.",
+   "evidence": "The record scan found drafts references only to drafts/2026-10-10-opening (2 records). A link-resolving python pass over git ls-files '*.md' found 2 links into the IASEAI folder. JSON data does name it: lineage.json (28 mentions, 4 checked paths), session-results.json, source-index.json, atlas.json, and V73-INTEGRATION-CHECKS.json (144 mentions).",
+   "howFarSeen": "counted; JSON mentions counted by rg -c"
+  },
+  {
+   "claim": "Successive IASEAI editions are near copies. From v7.2 to v7.3, 41 of 1,406 lines changed in THEORY.md, 92 of 1,599 in SUPPLEMENT.md and 27 of 670 in DISCUSSION.md. Within v7.3 the root pages are assembled from src/ (211,566 words).",
+   "evidence": "diff | grep -c '^[<>]'; v7.3/README.md line 22: 'root Markdown files are assembled outputs'",
+   "howFarSeen": "counted for the v7.1, v7.2 and v7.3 pairs; the assembly claim was read in one README"
+  },
+  {
+   "claim": "The one page defines the meta-attractor by linking ../meta-attractor/README.md, an earlier-theory folder. _process/DIRECTION.md does not contain the word meta-attractor.",
+   "evidence": "rg on theories/becoming/ONE-PAGE.md line 7; rg -i meta-attractor on _process/DIRECTION.md returned nothing",
+   "howFarSeen": "counted by rg"
+  },
+  {
+   "claim": "The failure of prediction P1 in the IASEAI pilot is stated in drafts/.../experiment/PREDICTIONS-2.md. It was not found in TESTS.md or in theories/becoming/chapters.",
+   "evidence": "PREDICTIONS-2.md line 7 'P1 failed'; rg -i 'rubric-editing|P1 failed|pilot' on TESTS.md and the chapters found only an unrelated LA4 pilot. The generated LINEAGE pages and lineage.json mention the predictions.",
+   "howFarSeen": "rg sweep of TESTS.md and chapters; the rest of the repository not swept for this"
+  },
+  {
+   "claim": "lineage.py checks at every render that its 220 evidence paths exist and contain their quotes (45 in branch folders, 6 in becoming/history, 7 in drafts). It already accepts a 'commit' field and reads the file at that commit.",
+   "evidence": "tools/research/lineage.py around line 133 and evidence_errors(), read; paths counted in lineage.json by regex",
+   "howFarSeen": "read in part; counted"
+  }
+ ],
+ "againstTheViews": [
+  "Against 'much is garbage': the largest mass is kept paper editions, not wrong text. theories/becoming/history is still the hashed statement source of 292 records, so the records state what retired pages say. That is a joining problem.",
+  "Against 'trace can leave without loss': becoming/history and theories/meta-attractor are trace by label but load-bearing by registry hash, lineage checks and the one page's link. The IASEAI pilot's failed prediction was found kept only in a draft folder.",
+  "For the coordinating view: at least 3.5M of the area's 6.1M words are byte-for-byte history already in git. The IASEAI text is AI-drafted, held twice in each edition (src and assembled) across twelve editions."
+ ],
+ "notDetermined": [
+  "How much of the IASEAI text says what the present account does not. The crosswalk covers only the 16 branch folders and not drafts or becoming/history. META-ATTRACTOR-RECONCILIATION.md was read only at its head.",
+  "Whether anything still runs checks_v73.py, xref_v73.py or reads V73-INTEGRATION-CHECKS.json (no tool reference found by rg).",
+  "The distinct prose in the IASEAI folder (estimated at a few hundred thousand words; not measured).",
+  "Whether output/README's 'edition 5 current' is stale, given tag review-packet-6 and the ED6 commit of 10 November.",
+  "Whether the 9-10 November and 14 November surveys covered this area."
+ ]
+}

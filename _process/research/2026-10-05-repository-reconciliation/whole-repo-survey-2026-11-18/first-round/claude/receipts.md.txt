@@ -1,0 +1,86 @@
+# receipts: what is there
+*AI-written (Claude Opus 5.5), 18 November 2026. A survey; nothing was changed.*
+
+## In three sentences
+
+The receipts area is the largest mass of tracked files in the repository (about 88,600 of 122,777 files, about 2.9 GB of 6.0 GB of tracked bytes, counted) but a small share of `.git` (about 45 MB of a 1.98 GB pack attributed to it, counted with caveats), because its files are near-copies that git stores as deltas. Its weight is mostly Lean checker receipts (`verification.json`, 1.69 GB in 550 files), which records bind by JSON pointer and a registry test reads, so the receipts themselves cannot leave without changing records; the copies beside them (64,812 files with 7,923 distinct contents) are read by nothing found except a handful of links. A content-addressed store built on 17 October to pack those copies was applied once and never again, so the folder has grown from 31,786 files (16 October) to 68,267.
+
+## What is there
+
+`LEAN` = `experiments/integrated-correction/general-framework/generative-basis/lean`.
+
+| kind | files | size | beside the Lean | unique? | what reads it | how far seen |
+|---|---|---|---|---|---|---|
+| `LEAN/becoming/becoming-checks/<stamp>/verification.json`: one receipt per core checker run (550 runs; 541 passed, 9 failed) | 550 | 1,680 MB | machine output: binds each module's sha256, toolchain, axiom audit, declaration lists, the checker's scope prose (357 KB per receipt), module records (3.1 MB) | each is distinct; regenerable only for the sources of its day, by checking out that commit and rerunning | `tools/research/registry.py` (proof bindings), `gate.py`, 36 correspondence checkers' `passed_receipts()` (every `*.json` under LEAN with `"passed"`), records, docs | counted; latest receipt's keys read; 9 failure messages read |
+| copies in run folders: sources, generated drivers, logs, the checker itself | 64,812 | 619 MB | machine output | 7,923 distinct contents; module sources sampled are in git history elsewhere; generated drivers (`EnvironmentAudit.lean`, `*Signatures.lean`) are only here, but the checker writes them | nothing found, except 4 records' `canonical_source`/`provenance` and about 30 links (see below) | counted; 40 copies from the 10 Nov runs traced in git history |
+| `becoming-checks/_objects/<sha[0:2]>/<sha256>` and `RUN-INDEX.json` (171 runs packed, 8 Oct to 16 Oct) | 2,734 + 171 | 53 MB + 5 MB | the store (tooling's output) | holds the only working-tree copy of those 171 runs' files; bytes also in git history | `evidence_store.py restore` | counted; docstring read whole |
+| `LEAN/becoming/fallible-inquiry-checks` (16 runs) | 168 | 10.6 MB | machine output | 84 distinct | 9 record references; other receipts' enumerations | counted |
+| `LEAN/history`: retired run folders of other checkers (H7 batch) and retired Lean modules (F3, R31–R33, EL6, HE) | 12,176 | 180 MB | 11,579 run files (machine output) + 270 retired `.lean` modules (trace: superseded and folded modules) + 43 learning-package attempts | 2,161 distinct contents; the retired modules are trace of folds, failed or superseded forms | `MANIFEST.json`, generated `INDEX.md`; `passed_receipts()` (that is why the H7 batch kept them under LEAN); 11 record references | counted; manifest reasons tallied |
+| other `*-checks/`, `checks/`, `runs/` folders outside these | 7,954 | 270 MB | mostly Lean correspondence receipts (machine output); but `experiments/drain-beyond-the-reward/results/runs` (480 json), `experiments/direction-installation/results/runs`, `sources/28-agentdojo-evidence-2026-10-06/original/runs` are empirical runs | 3,370 distinct; the empirical runs are coupling, likely unique (paid or held runs) | not traced | counted; 3 folders sampled by name only |
+| `_process/architecture/history/<digest16>/` | 573 | 40 MB | trace: prior bytes of edited records (543 json) and of earlier pages (30 md, AGENTS.md, RESEARCH.md, with `.reading.md` link-adapted editions) | all 573 distinct; 2 of 3 sampled are the same blob as an earlier commit at the original path | `tools/research/navigation.py` via `history-manifest.json`; 3,009 links from 820 files, 568 of them record pages | counted; 3 sampled |
+
+Not machine output in the narrow sense: the empirical `runs/` folders, the retired Lean modules in `LEAN/history`, and `_process/architecture/history`, which is record history, not receipts. The area as drawn mixes them.
+
+## What repeats
+
+- Inside `becoming-checks`: 68,267 files, 10,753 distinct blobs (counted). Among run copies, 64,812 files hold 7,923 contents; only 625 of those contents are already in `_objects`.
+- `LEAN/history`: 12,176 files, 2,161 distinct (counted).
+- Module sources copied into runs repeat the Lean tree as it was: 40 of 40 module copies sampled from the 10 November runs are found in git history outside the checks folders. `EnvironmentAudit.lean` and the `*Signatures.lean` drivers were found in no other path (sampled), but the checker writes them from the sources.
+- `_process/architecture/history` repeats git history: 2 of 3 sampled files are the same blob as an earlier commit of the record or page at its own path.
+- The receipts repeat each other's large fields (scope prose, module records); each file is still distinct.
+- The 16 October review (`_process/research/2026-10-05-repository-reconciliation/whole-repo-review-2026-10-16/RESTRUCTURE-PLAN.md` §4.3) counted becoming-checks at 31,786 files, 446 MB, with 1,694 distinct of 13,817 `.lean` copies and planned a store bringing it to about 3,650 files. That pack ran once (commit e55caf52f, 17 October; 171 run indexes, the newest 20261016T112106). Since then 379 runs were added; 86 runs now have more than 100 files each, kept whole.
+
+## What depends on it
+
+- **Records.** 1,156 files in `theories/becoming/results/records/`. Their `proof_bindings` name 193 receipts, 154 in run folders. Their `references` name 491 paths in run or history folders, all present on disk, together 1,347 MB (counted). `registry.py` opens each bound receipt and checks that the JSON pointer gives the source's sha256, that a success field is `passed`, and that the named declarations were elaborated (read). Removing or editing a bound receipt fails the registry test.
+- **Four superseded records** (`drawers-in-turn-draw-everything`, `drawers-in-turn-within-capacities`, `any-number-of-drawers-in-turn`, `revision-comes-to-drawing-everything`) have as `canonical_source` the frozen copy `becoming-checks/20261022T040548.209667Z/Becoming.Optimum.lean`. Two more have theirs in `LEAN/history/becoming/Becoming/` (counted).
+- **Run stamps.** 544 of 550 becoming runs are named somewhere outside the folder (counted by regex over the tree). Strongest referrer: a record for 370; a live page, study or process file for 106; only other checkers' receipt enumerations for 42; only enumerations and history for 26; nothing for 6.
+- **Other checkers.** `passed_receipts()` in 36 checker scripts reads every `*.json` containing `"passed"` under LEAN. It asserts that each imported module has some passed receipt containing its current sha256, and writes the list as `inherited_receipts` (read in `check_regime_reals.py`). So the next run needs at least one current receipt per module, not all of them. Older receipts list nearly every becoming run (up to 494 each) for this reason.
+- **Navigation** reads `_process/architecture/history` through `history-manifest.json`. `gate.py` excludes it from link checks. `.ignore` hides `becoming-checks/` and `_process/architecture/history/` from plain `rg` (not `LEAN/history` or other checks folders).
+- `check_becoming.py` writes each run; since about 11 November it copies only files not held in main (read: `held_in_main`), so new runs have about 20 files.
+
+## What a continuing session needs from here
+
+It needs the latest passed core receipt (20261116T014928.328589Z) and the receipts records bind. Only tools open them, not people. It needs the latest receipt of each periphery checker, so `passed_receipts()` finds current hashes. It needs the run copies a record names as source (Optimum at 20261022T040548). A session never opens the 64,812 run copies, the 171 packed indexes, or the logs, almost all empty. It also never opens the 42 + 26 + 6 runs that nothing but receipt enumerations, history or nothing names, and as far as read nothing does.
+
+## Candidates
+
+1. **Receipts that records bind or reference (491 paths, about 1.35 GB): stays.** Evidence: registry test and records. Risk of moving: every record changes, and the proof claim loses its recheckable anchor. What would have to change first: a repoint tool (`tools/research/repoint.py` exists), and new hashes through the result workflow.
+2. **Copies in the 86 fat runs (about 54,000 files, 619 MB of which about 300 MB are distinct): could be said once.** Re-running the existing pack would move them into `_objects` (about 7,900 objects). Running it with `--bare receipt` keeps whole only runs a record binds. Evidence: nothing found reads them; the 17 October docstring's reader audit; the move is byte-identical. Risk: the 4 Optimum citations and about 30 doc links into copies must be kept by path, which the tool's retention does. First: `evidence_store.py plan` as a dry run and its own tests, outside this survey.
+3. **Run copies could leave the working tree**, kept only in git with `RUN-INDEX.json` naming blobs. Evidence: git keeps them, and sampled sources are in history at their own paths. Risk: `restore` would have to read from git objects, and the layout rule of 17 October says "never deleted, byte for byte into history folders"; that rule would have to change first.
+4. **The 74 becoming runs named only by enumerations, history or nothing: could leave the tree** (an H7-style batch did this for other checkers). Risk: `passed_receipts()` still globs them, and a next run's `inherited_receipts` shrinks, which is regenerable. Six include failed runs, which are build failures, not countermodels.
+5. **`LEAN/history` run folders (11,579 files, 2,161 distinct): could be said once** (the same pack). The 270 retired modules **stay** as trace: they are the old forms of folded laws, cited by two superseded records.
+6. **`_process/architecture/history`: cannot tell.** Its bytes are in git (2 of 3 sampled), but 3,009 links resolve through it and navigation reads it. It is record history, a different kind from receipts.
+7. **Empirical `runs/` folders: stays** (coupling, not regenerable, under RUNHOLD for further runs). They belong with the experiments' readers, not with receipts.
+8. **Receipt size:** the `scope` and `modules` fields repeat across receipts. Slimming new receipts is a checker change, outside this survey. Old receipts are frozen evidence and cannot be edited.
+
+## Against the two views
+
+- Against "garbage that could be removed": the heaviest part, the receipts, is load-bearing for records through a test, and most runs (476 of 550) are named by a record or a live page. Removing them is not free.
+- Against "trace and machine output could leave without loss": true for the copies, but leaving the tree buys almost nothing in `.git`. The area is about 2% of the pack, counted by first path, and the 3.9 GB `.git` is mostly `sources/situated-recovery` (.mat data, about 800 MB attributed). What it would buy is checkout size (2.3 GB on disk) and file count. And the area is not all machine output: retired modules, record history and empirical runs sit inside it.
+- The 17 October rule's "nothing deleted, moved byte for byte" was meant with a store. The store was applied once; since then no session repacked it, and the folder doubled in files and grew fivefold in bytes.
+
+## Not determined, and surprises
+
+- The share of `.git` is by first path in `rev-list --objects`. A blob first seen at a source path is counted there, so the area's share may be understated, though not by gigabytes: the packs total 1.98 GB and `sources` dominates.
+- Not checked: whether `evidence_store.py` still passes its tests against today's tree, or what `--bare receipt` would keep.
+- Not traced: references into the 7,954 other checks files, and the uniqueness of `sources/28-agentdojo…/runs`.
+- Surprise: a superseded record's canonical source is a frozen copy inside a run folder, not a history folder.
+- Surprise: the 9 failed receipts are checker or build failures (already declared, import clash, unused-variable warning, "Source changed"), not failed mathematical candidates. The area keeps engineering failures, not the map's countermodels, which live in records and Lean.
+- Direction: this area serves "a proof claim says exactly what the Lean proves, so anyone can recheck it". A receipt binds source hashes to a toolchain. But a reader can recheck only by rerunning Lean on the bound commit. The receipts are a convenience record of a check, not the check, and 1.7 GB of them is more than recheckability needs. Nothing in the area tells a reader that.
+
+## The commands behind the counts
+
+```
+git ls-files <dir> | wc -l ; git ls-files -z <dir> | xargs -0 cat | wc -c
+git ls-files -s <dir> | awk '{print $2}' | sort -u | wc -l
+… | git cat-file --batch-check='%(objectsize) %(objectsize:disk)'
+git ls-files -s -- LEAN/becoming/becoming-checks  → per-file-name sums (verification.json 550 files 1,680,213,516 bytes)
+git rev-list --objects --all | git cat-file --batch-check=… (224,486 objects; summed objectsize:disk by first path)
+rg -o --no-ignore-dot -g '!**/becoming-checks/**' '20261[01][0-9]{2}T[0-9]{6}\.[0-9]{6}Z' .  → 1,091,407 hits, intersected with 550 run names
+python3 -I: records' proof_bindings / references / canonical_source tallied over theories/becoming/results/records/*.json
+python3 -I: LEAN/history/MANIFEST.json reasons and batches tallied (12,174 entries; H7 12,075)
+head -c 200 of each verification.json for status (541 passed, 9 failed)
+git log --all --find-object=<blob> on 40 run copies of 10 November and 3 architecture/history files
+rg -c 'architecture/history/[0-9a-f]{16}' (820 files, 3,009 links)
+```

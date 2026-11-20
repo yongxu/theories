@@ -1,0 +1,37 @@
+#!/bin/bash
+# Second round: the astra readers, four at a time, read-only, each on a fresh thread.
+# AI-written (Claude Fable), 19 November 2026. A finished report is not rerun.
+set -u
+D=/Users/ren/theories/tmp/repo-picture-2026-11-18
+R=$D/round2
+export D R
+cd /Users/ren/theories || exit 1
+mkdir -p "$R/astra"
+
+run_task() {
+  id="$1"; effort="$2"
+  case "$id" in tellings-*) ext=json; schema=(--schema "$R/tellings.schema.json");; *) ext=md; schema=();; esac
+  out="$R/astra/$id.$ext"
+  if [ -s "$out" ]; then echo "skip $id"; return 0; fi
+  {
+    cat "$D/BRIEF.md"; echo; echo "---"; echo
+    cat "$R/ROUND2.md"; echo; echo "---"; echo
+    echo "Your task is: $id"
+    case "$id" in
+      tellings-A) echo; echo "The sample (sample-A.json):"; cat "$R/sample-A.json";;
+      tellings-B) echo; echo "The sample (sample-B.json):"; cat "$R/sample-B.json";;
+    esac
+    echo
+    echo "You are the astra reader. Where a Claude reader has the same task it works independently of you."
+    echo "You cannot write files. Your final answer is the report itself; it will be saved for you."
+    echo "Stay inside /Users/ren/theories. Do not read anything under tmp/repo-picture-2026-11-18/ (the brief and your task are given above in full). Do not open the private folders the brief names. Do not start subagents."
+  } | cx -m gpt-6.2-astra -e "$effort" --fresh --sandboxed "${schema[@]}" > "$out.part" 2> "$R/astra/$id.err"
+  rc=$?
+  if [ $rc -eq 0 ] && [ -s "$out.part" ]; then mv "$out.part" "$out"; echo "done $id"; else echo "FAILED $id (rc=$rc)"; fi
+}
+export -f run_task
+
+for id in tellings-A tellings-B overtaken-fronts overtaken-chapters meta-attractor experiments chinese-only in-flight use-graph; do echo "$id high"; done \
+  | xargs -P 4 -L 1 bash -c 'run_task "$0" "$1"'
+echo "astra round 2 finished"
+ls -la "$R/astra"

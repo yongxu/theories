@@ -1,0 +1,83 @@
+GPT-6 Astra
+
+# Machinery: what is there
+
+*AI-written (GPT-6 Astra), 18 November 2026. A survey; nothing was changed.*
+
+## In three sentences
+
+**Counted.** At `befa506ba`, 1,385 Markdown pages listed in the generated manifest contain 3,263,131 words, nearly two fifths of them in result-record pages.  
+**Counted.** All 543 JSON snapshots in `_process/architecture/history/` are named by current records, and all 30 Markdown files there are raw or reading editions of preserved pages.  
+**Inferred from the gate, renderer and workflow.** A session can leave most of those files unopened, but removing them from the checkout would break checks and reader links that currently resolve through ordinary files.
+
+## What is there
+
+Counts use tracked files and working-tree bytes. Generated outputs and experiment pins are counted separately from the machinery that reads them. “Unique” distinguishes an authored choice or past event from a view the machinery can produce again.
+
+| Kind | Files | Words or lines | What it is beside the Lean | Unique? | What reads it | How far seen |
+|---|---:|---:|---|---|---|---|
+| `tools/research/`, excluding tests | 37 | 23,884 lines | Tooling for records, navigation, evidence, moves and landing | Implementations and editorial choices | Make, gate, CI, older command wrappers | Counted; sampled at gate and render entry points and their callees |
+| Research test suites | 39 | 14,972 lines | Executable examples of what the tools must accept or reject | Includes regressions from actual failures | Gate and research CI | Counted; sampled 3/39 for queue loss, migration drafts and failed-test reporting |
+| `tools/publishing/` | 6 | 2,990 lines | Five builders and a stylesheet for the site and PDFs | Templates and edition choices | Pages workflow and edition builders | Counted; sampled the headers of all five builders |
+| `.github/`, Makefile, `.ignore`, research config | 6 | 914 lines | CI, command entry points, discovery and publishing policy | Includes hand-selected pages, paths and exceptions | GitHub Actions, Make, ripgrep, research and site tools | Counted; read whole Makefile and `.ignore`, sampled configuration and all three workflows |
+| Board, result workflow, repository layout | 3 | 27,355 words | Coordination, review and preservation rules | Decisions, ownership and queue order | Landers, board guard, links from `AGENTS.md`, README and MAP | Counted; sampled landing, history and move sections of all three |
+| Architecture move receipts and plans | 64 + 23 | 173,837 + 3,671 lines | Trace of moves, with old paths, hashes, reasons and rewritten references | Historical decisions and path correspondence | Move verifier, drift lookup, catalogues and navigation | Counted; sampled plan instructions, one receipt and the reader code |
+| Other architecture files outside `history/` | 14 | 10,169 lines | Manifests, rebind ledger, rename and compaction records, documentation and checker | Mixed authored trace and computed hashes | Registry, guarded renderer, rename checker | Counted; sampled by manifest function |
+| Architecture history | 573 | 334,986 lines | Earlier records and preserved prose | Earlier wording; some recoverable from Git | Record `text_versions` and navigation history validation | Counted across all 567 current JSON records and the history manifest |
+| Experiment freeze filenames matching the gate’s naming patterns | 99 | 2,930 lines | Coupling and provenance | What was fixed before observation | Frozen check, move restrictions, experiment readers | Counted before path-role exclusions; sampled one cross-folder freeze |
+| Present generated-manifest outputs | 1,385 Markdown + 29 other | 3,263,131 Markdown words; 869,042 other lines | Derived tellings, indexes, diagrams and structured data | Reproducibility depends on inputs, including curated ones | Strict check, site, links, people | Counted and hashed throughout; regeneration not run |
+
+## What repeats
+
+**Counted.** The managed Markdown comprises 589 record pages (567 current records and 22 redirects), 680 renewal-study mirror pages, 52 atlas pages, 21 declaration pages, ten map pages, one completion report and 32 other pages. Their SHA-256 digests are all distinct. Whole-file identity misses the largest obvious prose copy: **28,595 of 31,314 nonblank mirror lines** occur verbatim in the corresponding English or Chinese `BECOMING-RENEWAL-READING` source. The mirrors supply section-sized destinations and repair links. [Mirror builder](/Users/ren/theories/tools/research/mirror.py)
+
+**Counted.** The manifest lists 1,416 names. Every one of the 1,414 present files matches its digest. Two record-page names are missing from the checkout, `errors-by-chance-end-a-pair-keeping-mutual-withholding.md` and `selection-by-the-record-alone.md`. Outside the manifest, 37 tracked history indexes bearing `moves.py`’s generation mark add 91,015 words. **Inferred from `navigation.write_views`.** The manifest remembers earlier output hashes and updates entries for pages written. Its length alone gives neither the present page count nor the full extent of generation.
+
+**Counted.** Only two of the 573 architecture-history files share a Git blob with another current tracked path, both schema-migration drafts. **Sampled, 5/543.** Taking every 110th JSON snapshot in sorted path order, all five blobs appeared in the Git history of the corresponding live record. A single working-tree copy and a recoverable earlier version are different findings.
+
+## What depends on it
+
+**Counted from the gate definitions.** The gate has seven named checks plus 39 discovered test suites. Thirty-two suites have explicit input rules. The other seven, including the mirror, site and map-sheet suites, are selected on any changed path. The complete per-suite path list is in [`gate.py`, `TESTS`](/Users/ren/theories/tools/research/gate.py:165).
+
+| Check | Inputs and consequence of removal |
+|---|---|
+| Secrets | **Read whole, `secrets`.** Scans tracked text for credential patterns against the config’s hash allowlist. |
+| Strict freshness | **Read whole, `check_or_render`.** Loads records, sources, receipts, goals and preserved versions; recomputes navigation, maps, catalogues and indexes for comparison. A deleted snapshot fails its hash binding. Removing a generated page still expected by the renderer fails freshness. |
+| Links | **Sampled, link checker and workflow.** Resolves relative links and heading anchors in live and generated Markdown. Moving a section can break a citation while its file still exists. |
+| Board | **Read whole, `board_check`.** Reads the fixed board path at base and tip, its five required headings and single Queue line. Lost clauses and shrinkage over one fifth need a recorded explanation. |
+| Frozen | **Read whole, `frozen_check`.** Reads live experiment manifests, named hashes, `FROZEN-AT` commits and Git ancestry. The sampled AgentDojo freeze names three `foundation-assessment/ACTION-CORRECTION-*.md` files outside its experiment. The 16 November saved check listed seven link-only differences and 22 unverified entries with zero errors. |
+| Receipt | **Read whole, `receipt_check`.** Reads the fixed Lean root, `becoming/*-verification.json`, named sources and `Becoming/*.lean`. A changed core source needs a matching passed receipt. |
+| Dossiers | **Sampled, gate rule.** Uses a checker at `development/review-packet/check_dossiers.py`, the review pages, `one-unfolding-root/corpus`, review checks, quoted paths and named Lean families. Moving the study folder disables a live check. |
+
+**Sampled, all three CI workflows.** Research CI runs the suite and strict check on pushes and pull requests. Lean CI separately compiles and audits the core on path triggers and a weekly fresh schedule. The manually dispatched Pages build reads a 69-entry allowlist. **Counted.** `.ignore` hides just `_process/history/`, `_process/architecture/history/` and `becoming-checks/` from ordinary ripgrep discovery. The research path classifier recognises additional history and evidence.
+
+## What a continuing session needs from here
+
+**Sampled, board rules and workflow landing section.** For new Lean or a result, claim first, take the queue head, merge main into the owned worktree, run the applicable writers in shared slots, commit their outputs and the landed board clause, run the gate and outstanding area checks, reread the queue, then fast-forward. Full verification is due at phase end and before a push. The board alone is **19,659 words**, including **2,748** on its Queue line. Routine landing instructions require no manual read-through of snapshot bodies. Actual session opening histories were **not looked at**. [Landing order](/Users/ren/theories/_process/RESULT-WORKFLOW.md:158)
+
+**Sampled, two documented landings and the latest correction.** The 4 November gate study reports 8:45 and 15:10 for two documentation check sequences before the new gate, and a median queue-head tenure of 24 minutes over ten landings. On 18 November, Git timestamps put 10:50 between the direction correction and its landed board commit. The intermediate render commit changed three files. Its tree has ten saved check times totalling 183.4 seconds, including 103.9 seconds for strict freshness. Commit elapsed time includes work outside checks. [November measurements](/Users/ren/theories/_process/research/2026-10-05-repository-reconciliation/architecture/gt/measurements/map-landing-practice.md)
+
+## Candidates
+
+- **Inferred from the render and link checks.** Generated pages could be published from one set of inputs outside the working tree. First provide destinations for record redirects, mirror anchors and historical links, and a fresh-build comparison for CI. Otherwise a reader loses citations even where every word is recoverable.
+- **Inferred from the 543 bindings and five historical blob matches.** Record snapshots could resolve through Git after verifying every binding and supplying a historical-blob reader. Preserve raw prose and link-adapted editions until their exact bytes and anchors resolve independently. Move receipts still serve as the directory of former paths.
+- **Inferred from the board guard and saved log.** Landing instructions could be said once in the workflow, with current ownership and order on the board. The 18 November trim itself needed a reason recorded by the guard. Any shorter representation must still detect another owner’s dropped clause.
+- **Inferred from checker source; sampled the latest run.** Packing old runs is already supported. The core checker now omits sources already held byte-for-byte on main; its latest timestamped folder held 18 files, including a receipt identical to the current receipt. Preserve the event, failed runs and cited artifacts. Check their consumers before changing storage. Keep freeze pins, test regressions, builders and release rules with their inputs while those consumers remain.
+
+## Against the two views
+
+**Sampled, October architecture review and current workflow.** The 16 October review found 5,365 of 7,564 record-history notes were unchanged-claim rebindings. Current Markdown drift is scoped to reviewed lines and cited sections, and the shared rebind ledger now has 599 lines. Applying October’s diagnosis unchanged would miss a repair. The 9–10 November review also found that repeating every qualification on every front obscured the claim; its fifth amendment is present in `WHAT-REMAINS.md`.
+
+**Inferred from these checks.** Against wholesale removal, even a historical migration draft is a live schema-test input. Against treating the excess as inert trace, a prose correction still incurs rendering and verification, and a gate pass establishes file and receipt relationships while the fit between prose, theorem and situation still needs a reader.
+
+## Not determined, and surprises
+
+**Sampled, gate design and regression tests.** A real loss of 380 queue clauses prompted a guard. The suite also keeps a regression for deleting the freeze pin that selected its own check. These are failures worth preserving independently of scientific countermodels. **Not looked at:** every historical blob, actual regeneration, every publication build and the Lean-wide count of 14 November. This survey establishes neither a minimum safe checkout nor a present full-gate runtime.
+
+## The commands behind the counts
+
+**Counted, read-only.** Inventory used `git ls-files -z`. Group sizes used `Path(p).read_bytes().count(b'\n')` and `len(Path(p).read_bytes().split())`; words are whitespace tokens in both languages. Generated totals used the `files` keys of `_process/architecture/generated-manifest.json`, filtered by existence and suffix, then `hashlib.sha256`. Duplicate comparisons grouped `git ls-files -sz` by blob ID. Snapshot references came from `records/*.json` → `text_versions[].path`. Historical samples compared `git hash-object` with `git log --format= --raw --no-abbrev -- <record>`. Timings used `git log --first-parent` and saved `.git/gate/passes` entries for the measured trees. Source searches included `rg --no-ignore-dot` on named study, workflow and history paths.
+
+── cx · ok · session 01a1edbe-f05b-71a0-b2f0-8632b4638fcd · gpt-6.2-astra/high · read-only · 664s · 2051.5k tokens · 61 cmds
+continue: cx -r 01a1edbe-f05b-71a0-b2f0-8632b4638fcd "…"
+log: /Users/ren/.cache/cx/runs/20261118-152115-6577

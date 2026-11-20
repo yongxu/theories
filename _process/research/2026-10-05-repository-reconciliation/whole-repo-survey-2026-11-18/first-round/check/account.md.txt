@@ -1,0 +1,74 @@
+# account: the check
+
+*AI-written (Claude Fable 5.2, the checking reader), 18 November 2026, 16:05 to 16:20 WIB. Read only; nothing was built, run or changed but this file. Every figure below is from a command I ran against the repository, not from either report. Load on the machine was 60 to 113 throughout; every command ran under 20 seconds.*
+
+## In short
+
+Both reports can be used. The Claude report holds the structure a decision turns on (the account has not moved since 13 November; hash pins, quote pins and anchors tie it to records and dossiers; the chapter and the record each tell a result by hand), and those claims reproduce, most of them to the digit. It has seven errors of fact, two of them material: it calls the Chinese editions "translation only", and it says little here is copied word for word. The astra report is thinner on dependencies but I found no error of fact in the 24 statements of it I checked, and it saw three things the Claude report missed or got wrong.
+
+## Where the two disagree, settled by looking
+
+| Topic | Claude | astra | What the repository shows |
+|---|---|---|---|
+| Chapter words | 210,359 + 3,031 (ch. 06) = 213,390 | 214,304 | Both right. `wc -w` gives 213,390 with no locale set (this shell; Python `split` agrees) and 214,304 under `LC_ALL=en_US.UTF-8`. Same for the Chinese fronts (3,398 against 4,812) and the review folder (97,881 against 99,010). A locale artefact, 0.4% on English. |
+| Share of chapter paragraphs with a Lean reference | 756 of 1,629, 46%; 74% of words | 742 of 1,384, 53.6%; 100 with a source link | My split: 1,636 blocks, 784 to 814 with a Lean name or path (48 to 50%), holding 74 to 76% of words; 1,551 blocks without tables, 100 of them with a link to a `.lean` file. Claude's figures reproduce; astra's 100 reproduces exactly, its denominator of 1,384 I could not reproduce. The share is about half of paragraphs and three quarters of words. |
+| One page against overview | "15% of the one page's words appear in the overview"; "little is copied word for word" | half the one page's word positions lie in runs of twelve or more words also in the overview | astra is right: 2,035 of 4,090 positions (49.8%); 2,386 (58%) across overview, uses, examples, review cover, root README and opening. Whole identical sentences are few (16 of 94 by my split), which is what Claude measured. The wording is shared in long runs, not paraphrased. |
+| Chinese editions | "Translation only" | "translations and some original exposition" | astra is right. `ONE-PAGE.zh.md` line 21 opens "用这个湖来说表中的四个词（与表中的“例”一样，只在中文版里）", and line 5 says the same of that paragraph. The English one page has no such passage. |
+| Re-coding sheets | unique, frozen | two files with identical blobs elsewhere | astra is right: `git ls-files -s` shows `SHEET.tsv` and `SHEET.xlsx` each at six other tracked paths, `output/pdf/review-packet/` and `output/pdf/history/review-packet-1` to `-5`. No other of the 38 files has a twin blob. The sheet is written by `sample.py` (seed 20261024) in the `review-packet` study folder. |
+| Where the English digest of a Chinese edition is kept | "Chinese editions carry a digest" | "the Chinese edition ledger pairs digests" | astra is right: `_process/navigation/zh-editions.json` (`zh_fronts.py` line 111). No 64-hex string is in any `.zh.md` page. |
+
+## The Claude claims file, claim by claim
+
+1. **No commit since 13 November 23:15 +0700.** Confirmed. `git log -1 -- theories/becoming ':!…/results' ':!…/history'` gives `bbfb995ae 2026-11-13 23:15:51 +0700`; nothing after; `git status` clean there. `_process/DIRECTION.md` line 3: "First written 15 November 2026".
+2. **Phrase counts and the two new modules.** Confirmed. Zero lines for `LineOnAStock`, "line on a stock", "taken for the whole", "account of the world", "made again and again", `rises_by_draw` over the fronts, chapters and review; 126 lines "continuation condition", 189 lines "self-concern", both zero on the direction page. `git log --since=2026-11-14 --diff-filter=A` on `Becoming/` lists only `LineOnAStock.lean` and `LineOnAStockCases.lean` (a54163054, 16 November). What the claim leaves out: `TurningInTime.lean`, which 02 §11 tells, was extended on 15 and 16 November in three commits; `locked_ends_rising` (line 1440) and others are named in no chapter. The lag is not confined to two new modules.
+3. **Three generated pages, 35 by hand.** Partly. The manifest (1,416 entries) lists exactly the three, and their sha256 match. But of the 35, `SHEET.tsv` and `SHEET.xlsx` are script output, and the render writes into the hand-kept Chinese pages (`zh_fronts.write_banners` puts and removes the 本版落后于英文版 line). No banner stands now.
+4. **137 records, 151 hashed references, 85 stale; registry reads git history.** Confirmed to the digit, per file too (01: 12 of 12; 03: 32 of 34; 05: 13 of 13; 07: 0 of 42). `registry.py` lines 52 to 96: `git log --raw HEAD -- path` then `git cat-file`, matching by sha256; lines 166 to 187 scope the drift to cited anchors and lines linking the record. If the reviewed bytes are not in HEAD's history the answer is "(reviewed version not in history)".
+5. **564 anchors, 559 of 567 ids; 8 without.** Confirmed. The one of the eight that is not superseded is `a-line-on-a-stock`: the direction's own model is the only live record with no chapter home. **Chapter against record.** Confirmed in shape: with my section rule 559 matched, 156,047 section words against 305,647 record words, median five-word-run share 19.0% (quartiles 10.5% and 28.0%). Claude's 142,421 and 302,121 differ by the boundary rule; the median reproduces.
+6. **Dossier quote pins.** Partly. With the gate's own pattern (`gate.py` line 58) the four English dossiers hold 798 `Quote` pins, 788 found as a raw substring, 559 citing a chapter, 16,809 words. Claude's 788, 778, 553 are each about 1% low. `check_dossiers.py` is not in `tools/`; it is in `_process/research/…/development/review-packet/`.
+7. **Identifier tokens resolve.** Confirmed in shape: my scan (2,673 `.lean` files outside history and check copies) gives 3,994 tokens, 3,959 with a declared last segment, 33 module names, 2 unresolved (`Classical.em`, `Becoming.Generation`). This shows names exist, as the claim says, and nothing about statements.
+8. **README holds OPENING.** Confirmed and understated. By twelve-word runs 11,503 of OPENING's 11,557 tokens (99.5%) are in root `README.md`, body and notes; 76% of README is OPENING. The 79% is a floor set by link rewriting. The one-page figure is settled in the table above.
+
+Other statements checked: 144 of 406 modules not named in a chapter (confirmed, exact); label shares 38% theorem or definition, 9% reading, 12% tables (confirmed); 50 atlas files and 1,046 research files name a chapter file (confirmed; also 260 records, 19 tool files, 10 root pages); reading-time rule and the chapter sum of 29.6 to 38.4 hours (confirmed); "no Lean file names a chapter file" (true of file names; at least 22 `Becoming/` modules cite chapter sections by number in docstrings, such as "03 §6", "06 §四", "08 §7"); "912 assertions" (not reproduced: 260, 272, 135, 355 `self.assert` calls, 1,022); "one test reads the aim from AGENTS.md" (three files do: `test_navigation_pages`, `test_uses_pages`, `test_featured_results`; the sentence they read is still in `AGENTS.md` after today's change).
+
+## The astra statements a decision would most rest on
+
+- Half the one page is in twelve-word runs shared with the overview: confirmed (above).
+- Only `SHEET.tsv` and `SHEET.xlsx` have identical blobs elsewhere: confirmed.
+- 137 records, 151 references, 144 of role `statement`: confirmed (144, 4 `integration`, 3 `provenance`).
+- The account has no `locked_ends_rising`, `falls_to_unmet` or `LineOnAStock`, and the one page's lead omits a premise the later theorem takes: confirmed. `ONE-PAGE.md` line 7 says "where each step sets the selection again only from the share it already favours, the selection goes on the same way until what sustains it gives out"; `AGENTS.md` now adds "and each such step adds to what is drawn from what sustains it, which does not grow without limit"; `TurningInTime.locked_ends_rising` takes `more`, `needs`, `keeps`, `high`.
+- The Chinese one page holds a worked passage not in the English: confirmed.
+- Also confirmed: 962,442 bytes at `0cfb9c567` and the October review's "three times"; 56 fenced Lean blocks in the English dossiers; the once-renewing countermodel in `MapRegions.lean` lines 248 to 278; 8 of 10 against 3 of 10 and "three of the four failed"; chapter 08 ranks "One base" first by an AI ranking; the AG review's item 6; the site allow-list.
+- Not settled: the denominator 1,384; "a lock can persist with its needs met" (not checked against a proof).
+
+## Errors of fact
+
+**Claude report: 7.** (1) Chinese editions "translation only". (2) "Little of it is copied word for word", with 15% for the one page in the overview. (3) Re-coding sample unique, when the sheets have six tracked copies each. (4) 912 assertions. (5) One test reads `AGENTS.md`. (6) Quote-pin counts about 1% low. (7) The digest said to be in the Chinese pages. Worst: (1), because a decision to rebuild the Chinese from the English would lose text the page itself marks as only there; (2) next, because it changes what "said once" would take at the front layer.
+
+**astra report: 0 found** in 24 statements checked. Its weakness is what it did not look at: it does not say the account has stood still since 13 November, does not report the 85 stale hash pins or that a check reads git history, and did not measure chapter against record.
+
+## What neither saw
+
+- The only live record with no chapter home is `a-line-on-a-stock`.
+- `TurningInTime.lean` grew on 15 and 16 November under a home section last touched on 13 November.
+- Lean docstrings cite chapter sections by number, so renumbering a chapter leaves stale prose in the Lean.
+- `check_dossiers.py` and `sample.py`, which read and write this area, live in a study folder under `_process/research`.
+- Edition 6 of the packet is `output/pdf/review-packet/` (MANIFEST: commit `f0c8f7e69`, 10 November), with editions 1 to 5 in `output/pdf/history/`. The Claude report lists this as not determined.
+- The figure "the account itself 250k" of 14 November was not found in `sources/` or `_process/` by `rg --no-ignore-dot` for "250,000", "250k"; it may be held only in an AI's memory.
+
+## What a decision can rest on, and what not
+
+Can: 38 tracked files, 3,371,971 bytes, three generated. No commit since 13 November; the direction's model and its later theorems are told nowhere here, and the one page's centre lacks a premise `AGENTS.md` now states. About half of chapter paragraphs, three quarters of chapter words, name Lean; the names exist. Each result is told by hand in a chapter and in a record (median 19% shared five-word runs). The one page shares half its wording with the overview; README holds OPENING whole. 151 hash pins (85 stale, resolved through git history), about 800 dossier quotes, 564 anchors and four test files hold the tellings to one another. The Chinese one page has text of its own.
+
+Cannot yet:
+- Whether any chapter sentence says what its theorem proves. Neither reader compared a statement with a proof.
+- Whether chapter 07 (56,456 words) contradicts the direction or is a part it does not tell.
+- That the 85 stale pins are all growth and none is drift: the registry was not run.
+- Which tests and checks fail if a front or chapter sentence changes: read as text only.
+- How much of the other Chinese pages and the two Chinese dossiers is original: only one phrase was swept.
+- Whether the packet was sent and whether anyone replied or coded the sheet (the cover says of coding "not yet tried by anyone").
+- The exact share of paragraphs with a Lean reference: 46 to 54% by rule.
+- How many theorems of 15 and 16 November are untold: my 46 of 78 in `TurningInTime` matches by last name segment and is rough.
+
+## Commands
+
+`git ls-files`, `git ls-files -s`, `git log -1`, `git log --since`, `git cat-file -s`, `wc -w` (with and without `LC_ALL`), `rg -c`, `rg -l`, `rg --no-ignore-dot`, `sed -n` on `registry.py`, `gate.py`, `zh_fronts.py`, `navigation.py`, and read-only `python3 -B` scripts (kept in the session scratchpad, not in the repository) for: manifest and sha256; record references; anchors; quote pins with the gate's pattern; paragraph split; declaration scan; twelve-word-run and five-word-run overlap. astra's run log (`~/.cache/cx/runs/20261118-154211-34354/events.jsonl`) was read to see which command gave its word totals.

@@ -1,0 +1,79 @@
+GPT-6 (astra)
+
+# Earlier tellings: what is there
+
+*AI-written (GPT-6, astra), 18 November 2026. A survey; nothing was changed.*
+
+## In three sentences
+
+**Counted.** This area holds 1,920 tracked files and 6,230,933 Markdown words. The IASEAI paper project alone accounts for 3,993,966 words, of which 3,512,154 are already under `history/`.  
+**Counted.** Of 567 current result JSONs, 312 cite 26 files in `theories/becoming/history/` by path and SHA-256.  
+**Inferred** from those citations, the failed rubric-editing pilot and Ren’s archived messages. A session can skip millions of words on its way into the theory, yet still need an exact earlier passage to establish what was predicted, what failed or whose words it is reading.
+
+## What is there
+
+**Counted.** Files include all formats. Words count whitespace-separated fields in Markdown only, which understates continuous Chinese text. MB are decimal working-tree bytes across all formats. “Unique” counts files whose Git blob occurs at one path across the nonprivate index. It measures exact copies only.
+
+| Kind | Files | Markdown words / MB | What it is beside the Lean | Unique? | What reads it | How far seen |
+|---|---:|---:|---|---:|---|---|
+| IASEAI paper project | 1,122 | 3,993,966 / 40.0 | Conditional working paper, source sections, assembled editions, reviews, simulation, predictions and logs | 931 | Edition assembler, preservation audit, lineage | **Counted** throughout. **Read whole** project README, both prediction files and pilot log |
+| Other tracked drafts, 14 folders | 235 | 360,186 / 13.1 | Essays, translations, proposals, opening revisions and three Lean files | 231 | Opening, result records, publishing scripts | **Counted** throughout. **Sampled** 2 of 14 folders, chosen for authorship and formal countermodels |
+| Private conversation draft | 0 tracked | Unmeasured | Private material | Undetermined | Undetermined | **Counted** by index name only. Contents **not looked at** |
+| Sixteen September theory branches | 66 | 702,813 / 5.3 | Earlier syntheses, design programmes, source excerpts and proposed mechanisms | 62 | Crosswalk, chapters, records | **Counted** throughout. **Sampled** 2 of 16 branch READMEs, meta-attractor and Zhishan, for alignment and ethics |
+| Navigation beside the branches | 5 | 24,810 / 0.35 | Generated index, English and Chinese lineage pages and diagrams | 5 | Current front pages | **Counted** against generated manifest. **Read whole** branch index |
+| `theories/becoming/history/` | 214 | 1,045,970 / 12.4 | Earlier statements and arguments, before-revision copies, lineage, verification scripts and receipts | 210 | Records, chapter citations, reading catalogue | **Counted** throughout. **Sampled** historical statements through named citations |
+| `worldbuilding/` | 164 | 99,691 / 158.9 | Ren’s words, speculative designs, evidence notes, illustrated editions and their sources | 160 | Project validator, graph and book builders | **Counted** throughout. **Read whole** archive index and message manifest |
+| `output/` | 114 | 3,497 / 74.6 | Frozen reader editions, other exports, prompts and an editable fiction source | 99 | Release workflow and canvas builder | **Counted** throughout. **Read whole** output README. PDFs **not looked at** |
+
+## What repeats
+
+**Counted.** The 16 October review folder’s reconciliation survey, dated **17 October**, identified 970 IASEAI files for retirement. All 970 entries in the resulting move manifest still match their indexed Git blobs. Its example `src/supp/07_S7.md` is still byte-identical across v6.2, v7, v7.1, v7.2 and v7.3. Its figure of 72 groups of identical Markdown was not reproduced. I found 44 repeated-blob groups among today’s 700 project Markdown files. [Earlier survey](/Users/ren/theories/_process/research/2026-10-05-repository-reconciliation/whole-repo-review-2026-10-16/RECONCILIATION-SURVEY.md)
+
+**Sampled, 2 of 68 v7.3 Markdown files**, choosing its two largest. Exact lines already present in v7.2 account for 70,371 of 72,751 words in `SUPPLEMENT.md` and 65,649 of 68,063 in `THEORY.md`, counting repeated lines only as often as both editions contain them. **Counted.** Within v7.3 itself, 211,566 of 436,408 Markdown words sit under `src/`. The assembler reads those sections to write the paper and registers. This is repetition both *between editions* and *between editable source and reader copy*.
+
+**Counted.** Four conversation files in `theories/evolving-community-swarms/context/` exactly match files in `sources/15-codex-theory-conversations/`. The two Chiang Mai English PDFs match each other. In becoming history, `FORMATION-MATH.md` matches the revisable-concern study copy, while 210 of 214 files have no second exact blob in the searched index.
+
+## What depends on it
+
+**Counted.** In addition to the 312 records citing becoming history, eight cite three branch files and two cite the opening’s v7 proposal. A sweep of inline links in 667 Markdown pages found 179 distinct becoming-history targets and 32 branch files. The one page links directly to the meta-attractor branch. Chapter 07 sends the reader to §4 of the archived *Step of Invariance* for the strongest argument against extending concern beyond one’s own line. The reading catalogue checks source hashes, and the lineage renderer checks quoted evidence. [Chapter citation](/Users/ren/theories/theories/becoming/chapters/07-SIGNIFICANCE.md:359) · [Catalogue checker](/Users/ren/theories/tools/research/reading_catalogue.py:316)
+
+**Read whole** for both prediction files and the log. In the 20-seed rubric-editing pilot, mean capacity rose in two comparison arms predicted to fall. P1 failed and P2–P4 held. **Counted.** Each of those three files has one exact indexed copy. V7.3’s evidence register summarizes the outcome, but lineage point 25 cites the original prediction, the log’s verdict line and the revised design separately. [Pilot verdict](/Users/ren/theories/drafts/2026-10-02-iaseai-selecting-the-selectors/experiment/pilot.log:16) · [Lineage](/Users/ren/theories/theories/LINEAGE.md:116)
+
+**Sampled, 1 of 3 draft Lean files**, selected by searching for “countermodel”. `GenerativeCore.lean` gives a two-player payoff table where racing strictly dominates restraint for each player and mutual racing pays both less. **Counted.** Two current records also point their `counterexamples` fields into retired chapters. One preserves the objection that equal recovery endpoints can conceal an unrepeatable loss. [Draft Lean](/Users/ren/theories/drafts/2026-09-05-generative-foundations/formal/GenerativeCore.lean:127) · [Record](/Users/ren/theories/theories/becoming/results/records/finite-aggregation-within-restorable-basic-losses.json)
+
+## What a continuing session needs from here
+
+**Inferred** from the one page, lineage and crosswalk. Start with the current account. Open an earlier folder when the question turns on what its author claimed, what changed, or whether a later summary preserved the conditions of a result. **Counted.** The branch index assigns 838 AI readings across the sixteen folders. Only three are labelled fully carried, 404 carried in part, 174 changed, 85 not carried, 12 history-only and 160 fresh readings. These labels describe the readers’ judgments. [Branch index](/Users/ren/theories/theories/README.md)
+
+**Sampled, 1 of 16 branches** for a disagreement. Zhishan asks for an argument that intelligence *must* be good. The crosswalk records the divergence from the present ethics offered for life. **Read whole** for the worldbuilding archive manifest. It identifies eight verbatim Ren messages and one assistant response, each a single indexed blob. The worldbook gives a concrete use of the idea: a quest guild changes a reward rule after seeing how it excludes newcomers from authoring stories. **Inferred.** That imagined episode can help someone recognize a pattern. It supplies no observed outcome. [Zhishan reading](/Users/ren/theories/theories/becoming/results/atlas/crosswalk/zhishan-intelligence-must-be-good.md:265) · [Worldbook](/Users/ren/theories/worldbuilding/artifacts/friends-worldbook/README.md)
+
+## Candidates
+
+| Kind | Candidate, evidence, risk and prerequisite |
+|---|---|
+| IASEAI | **Inferred.** Earlier assembled editions could leave the working tree if their exact bytes remain retrievable and citations resolve. Preserve predictions, pilot, reviews and source changes. The v7.3 audit still opens `../v7.2/src/keymap.json`; the baseline now lives under `../history/v7.2/`. A usable baseline resolver is already needed. [Audit](/Users/ren/theories/drafts/2026-10-02-iaseai-selecting-the-selectors/v7.3/verification/audit_v73.py:12) |
+| Other drafts and private material | **Inferred.** Keep the opening lineage and formal countermodels accessible. V12 is identified as the last opening its author chose. The 9–10 November review moved the long revision account off the opening, and the draft README preserves it. This is a working example of saying it once. Private contents **not looked at**. [Opening history](/Users/ren/theories/drafts/2026-10-10-opening/README.md:29) |
+| Branches and navigation | **Inferred.** The four exact conversation copies could point to `sources/` once their links and citations follow. Keep branch passages addressable for checking crosswalk judgments. The five generated navigation files have identified inputs and serve current readers. |
+| Becoming history | **Inferred.** Keep cited chapters and anchors resolvable. For the rest I cannot tell. All 191 manifest entries retain their recorded blob, but file identity alone does not preserve section links or the catalogue’s access to source bytes. |
+| Worldbuilding | **Inferred.** Keep the attributed messages, their manifest and the distinct design project. I cannot tell which illustrated editions could leave. Retaining editable inputs, exact released images and a way to resolve the validator’s paths would come first. |
+| Output | **Inferred.** The identical canvas PDFs could share one target after checking consumers. Keep the canvas Markdown where its builder can read it. Frozen packet editions need exact retrieval by manifest. Edition status could be said once on the board. |
+
+## Against the two views
+
+**Inferred.** Ren’s compression hypothesis fits the two largest paper files. It fits poorly as a judgment on the surrounding folder, which also preserves the prediction its own model failed. The coordinating session’s view fits the millions of words already off the normal reading path. It understates how much of that history the live account still asks readers and tools to consult. A Lean statement can settle what follows from premises. It cannot recover the wording recorded before a run or establish who chose an earlier passage.
+
+## Not determined, and surprises
+
+**Read whole** for `output/README.md`. It calls edition 5 current. **Counted** against the board, packet manifest and history directory: edition 6 is current and edition 5 is archived. **Inferred.** The October byte-preservation rule succeeded for the measured manifests while allowing both an obsolete release instruction and a stale audit path. [Output index](/Users/ren/theories/output/README.md) · [Board](/Users/ren/theories/_process/BECOMING-WORKBOARD.md:101)
+
+**Not looked at.** Actual session access logs, private contents, every Git revision and byte-for-byte rebuilds. I cannot say what a session *never* opens. **Counted.** A phrase sweep of the one page, overview and ten chapter files found neither “worked procurement transition” nor “House of Worlds”. That bounds the wording search. Equivalent arguments elsewhere remain undetermined.
+
+## The commands behind the counts
+
+**Counted** at `befa506ba`. `git ls-files -sz` supplied paths and blob IDs, including history. A read-only `python3 -B -c` pass grouped the assigned paths, summed `Path(p).stat().st_size`, and counted Markdown with `len(Path(p).read_bytes().split())`. Private paths were excluded before opening files. Duplicate counts grouped index rows by blob. Near-copy counts used `Counter(old.splitlines()) & Counter(new.splitlines())`.
+
+**Counted.** The citation pass read `references[].path` and `counterexamples[].path` in `theories/becoming/results/records/*.json`. The Markdown pass resolved simple relative `](target)` links from root pages, the board and direction page, becoming front pages, chapters, review pages, records and crosswalk pages. Its figures are lower bounds. `rg --no-ignore-dot -n` located named passages in the designated public folders. No checker, build, gate, test or renderer ran.
+
+── cx · ok · session 01a1edce-d6bb-75d1-a9cb-501fd5e953b9 · gpt-6.2-astra/high · read-only · 371s · 1053.5k tokens · 37 cmds
+continue: cx -r 01a1edce-d6bb-75d1-a9cb-501fd5e953b9 "…"
+log: /Users/ren/.cache/cx/runs/20261118-153836-21700

@@ -1,0 +1,8 @@
+#!/bin/bash
+D=/Users/ren/theories/tmp/repo-picture-2026-11-18; R=$D/round2
+cd /Users/ren/theories || exit 1
+out=$R/astra/tellings-H.json
+{ cat "$D/BRIEF.md"; echo; echo "---"; echo; cat "$R/ROUND2.md"; echo; cat "$R/HEADLINE.md"; echo; echo "---"; echo "Your task is: tellings-H"; echo; echo "The sample (sample-H.json):"; cat "$R/sample-H.json"; echo
+  echo "You are the astra reader. A Claude reader has the same task and works independently of you. You cannot write files; your final answer is the structured table. Stay inside /Users/ren/theories. Do not read anything under tmp/repo-picture-2026-11-18/. Do not open the private folders the brief names. Do not start subagents."
+} | cx -m gpt-6.2-astra -e high --fresh --sandboxed --schema "$R/tellings.schema.json" > "$out.part" 2> "$R/astra/tellings-H.err"
+rc=$?; if [ $rc -eq 0 ] && [ -s "$out.part" ]; then mv "$out.part" "$out"; echo "done tellings-H"; else echo "FAILED tellings-H rc=$rc"; fi

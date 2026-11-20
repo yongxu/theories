@@ -1,0 +1,90 @@
+# outside-tree: what is there
+*AI-written (Claude Opus 5.5), 18 November 2026. A survey; nothing was changed.*
+
+## In three sentences
+
+Outside the tracked tree there are three things: the git store (3.9 GB, of which about 1.45 GB is unreachable loose blobs kept only because nothing prunes), local-only refs that hold about 890 commits main does not (403 salvage refs, 157 branch heads, 2 stashes, none of them on the remote), and scratch (the repository's ignored `tmp/` at 1.7 GB and `/Users/ren/tmp/` at about 45 GB, mostly six landing worktrees). Most of the bulk is machine output or copies, but scratch is not only scratch: live pages, the direction page among them, cite scratch files that are in no git object, and several folders hold readings, Lean drafts and kits found nowhere in git. All of it, and the private folders the `.gitignore` keeps off the remote, exists on this one machine only; I found no working backup.
+
+## What is there
+
+| kind | files / count | size | what it is beside the Lean | unique? | what reads it | how far seen |
+|---|---|---|---|---|---|---|
+| main's history | 7,384 commits, 199,833 objects | in the 1.98 GB pack | trace | yes, and on the remote | everything | counted |
+| unreachable blobs | 15,025 | 1.45 GB on disk (433 blobs over 1 MB = 811 MB) | machine output; the largest are third-party MAT-file dumps (`MATLAB 5.0 MAT-file ... 2021` headers) | the six largest sampled are data dumps; the 14,592 small ones not looked at | nothing found | counted; content sampled 6 of 15,025 (largest) |
+| `refs/salvage/*` | 403 refs (117 `branches/`, 41 `worktrees/`, 13 `dry-runs/`, 12 `freeze/`, ...), 379 not ancestors of main | 890 commits not in main; 13,489 blobs reachable only from them, 32 MB on disk | trace: pre-rebase originals, kits, worktree snapshots before removal | partly: their blobs are not in main's history, but most are earlier states of later-landed work (sample of 10 subjects: "pre-landing", "kit (draft)", "Scratch snapshot ... before its removal"); by path 9,934 of 22,296 objects under `theories/becoming`, 8,093 of those `results/records` | `tools/research/gate.py` `salvaged()` (line 739) accepts a pin to a commit kept under `refs/salvage/`; AGENTS.md and RESULT-WORKFLOW require salvage before any removal | counted; content sampled |
+| branch heads | 157; 147 ancestors of main | 27 commits not in main on 10 branches | trace | 8 branches carry patches not in main by `git cherry` (ue31-design 8, ten files, 4,091 lines; wu-kit, t2-statement, t2-life-cycle, fv, aa-atlas-v1 2 each; t1-premises-follow, rae-salvage-claim 1) | the board names some | counted |
+| stashes | 2 (13 Nov on dw-centre, 31 Oct on el-claim) | 22 and 6 files | trace (work in progress) | 11 and 4 of the stashed file versions are not in main's history | nothing found | counted |
+| `refs/codex/*` | 60 (59 trees, 1 commit) | in the pack | machine output of the Codex harness (turn-diff checkpoints) | no | the Codex tool | counted; not opened |
+| tags | 6 `review-packet-1..6` | | trace | on the remote (12 tags there) | not looked at | counted |
+| `.git/lfs` | 4 LFS files | 177 MB | coupling (data) | whether pushed to remote LFS not checked | `.gitattributes` | counted |
+| `.git/gate` | 2,745 passes, logs | 72 MB | machine output (the gate's reused passes) | regenerable by a gate run | `gate.py` (`common_dir()/'gate'`, line 313) | counted |
+| `.git/worktrees` metadata | 6 | 151 MB (indexes) | tooling | no | git | counted |
+| repo `tmp/` (ignored) | 5,318 files | 1.7 GB | scratch | see below | 205 tracked files cite `tmp/r7` | counted |
+| ・`tmp/r7` | 5,165 files: 2,993 build outputs (`.lake`, `.build`, olean), 2,172 others | 1.56 GB | trace (briefs, reader reports, drafts, kits) and machine output | 1,034 distinct non-build files are in no git object; of its 1,555 `.lean` files, 248 distinct, 214 identical to a file on main, 34 in no git object (before-copies, generated signature files, reader drafts) | live: `_process/BECOMING-WORKBOARD.md` (3 citations); `_process/DIRECTION.md` names scratch | counted |
+| ・private: `tmp/friend-conversation-2026-10-02` | 67 files | 171 MB | Ren's words / private | private, not in git by design | | counted; not opened |
+| ・`tmp/soi-si-lom-5-2`, `tmp/pdfs`, `guardian-anarchy-site.tar.gz` | 32, 19, 1 | 44 MB, 6.6 MB, 9.6 MB | other (older site and source copies) | 32 of 32 and 14 of 19 not in git | not looked at | counted |
+| `/Users/ren/tmp/` | 219 entries | about 44.9 GB | scratch; six registered worktrees (rw 8.1 GB, dj 6.9, wu 6.2, tt 6.2, ed6 6.2, coordinator 6.0 = about 39.6 GB) and kits, logs, readings | in 13 folders checked, many files are in no git object (e.g. `ag` 68 of 68, `aa-six` 390 of 818, `el7` 293 of 491, `za-how-far` 95 of 1,611, `theories-leftovers-2026-11-02` 205 of 838, `runs` 34 of 34) | 82 tracked `.md` files and many receipts cite it | sizes counted; uniqueness for 13 of 219 |
+| six worktrees | heads 7 to 18 Nov | | tooling | none has a modified tracked file; `ed6/gate` has 1 untracked | sessions | counted |
+| `.claude/worktrees/agents-board` | 6,941 non-build files | 874 MB | an orphaned worktree (its gitdir `.git/worktrees/agents-board` is gone) | 0 files not in git | nothing | counted |
+| private and local-only in the checkout | `sources/12` 403 files 13 MB, `sources/13` 197 files 940 KB, `sources/18` 108 files 204 MB, `drafts/2026-10-02-friend-conversation` 9 files, `experiments/guardian-anarchy` 39 files 40 MB with its own `.git` of 2 commits and no remote | | Ren's words and a local project | yes, by design never in this git | `.gitignore` | counted; not opened |
+| `~/.cache/cx` | `worktrees/` empty; `runs/` 338 entries 147 MB; `sessions/` 248 entries | | machine output of Codex runs | not looked at | the cx tool | counted |
+
+## What repeats
+
+- `tmp/r7`: of 1,555 `.lean` files only 248 are distinct, and 214 of those are byte-identical to a file on main (counted by `git hash-object` against the index). The rest of r7 repeats itself across round folders (one-model, tt, wu, wu2 and nr each hold a Lean copy; `wu2` and `nr` have no `.md` that is not in git).
+- The six landing worktrees in `/Users/ren/tmp` are checkouts of commits in git; none has a modified tracked file. The orphaned `agents-board` has no file outside git.
+- `/Users/ren/tmp/ren-words/record.md` (3 November) has its landed form in `sources/15-codex-theory-conversations/2026-11-03-not-my-decision-word-for-word.md` (not byte-identical; 4 of 5 files in that folder are in no git object, the others being scripts).
+- Salvage commits repeat work that later landed in rebased form; their 13,489 salvage-only blobs cost 32 MB on disk, because they delta against main.
+- The 16 October restructure plan (`_process/research/2026-10-05-repository-reconciliation/whole-repo-review-2026-10-16/RESTRUCTURE-PLAN.md`, lines 239 to 290) counted 88 worktrees (about 228 GB), 142 local branches (131 merged) and 60 `refs/codex` with a 185 MB non-LFS blob, and proposed a cruft-pack gc with never-expire. Now: 7 worktrees, 157 branches (147 merged), 60 codex refs, `gc.pruneexpire never` set, two packs (the large one rewritten 17 Nov 16:03), 47,324 loose objects (1.54 GiB) still there. Its worktree numbers no longer hold; its object-store reading does in kind. I did not check whether its gc was run in the form it proposed.
+
+## What depends on it
+
+- `gate.py` reads `refs/salvage/` to accept record pins to pre-rebase commits (lines 739 to 741, 870 to 878). Removing or moving salvage refs could turn standing pins into gate errors. How many pins name a salvage-only commit: not counted.
+- `gate.py` keeps passes in `.git/gate` (line 313); losing them costs a re-run, not content.
+- Verification receipts under `experiments/integrated-correction/.../becoming-checks/*/verification.json` record absolute paths in `/Users/ren/tmp/ag`, `ed5`, `lm` (over 1,000 each per file). These are paths of where checks ran, not reads.
+- Prose: 82 tracked `.md` files cite `/Users/ren/tmp/...` (most cited: `cw` 39, `el7` 30, `ag` 30, `za-how-far` 23) and 205 tracked files cite `tmp/r7` (most `tmp/r7/one-model` 412 mentions, `sheet` 157, `tt` 139), almost all in `_process/research/.../development/` (dj, rw-one-map, tt). Live pages: the board cites `tmp/r7/words/scan/` and `tmp/r7/one-model/check/round8/STEP-2-ON-PAPER.md` (that file exists and is in no git object); `_process/DIRECTION.md`'s head note says two of the three things behind its 18 November correction "are in scratch, not in the repository".
+- Memory: the project note on ZA points to `/Users/ren/tmp/za-how-far/`; its readings `za-opus.md`, `za-fable.md`, `za-astra.md` are not found by file name in any tracked file.
+
+## What a continuing session needs from here
+
+It needs the landing worktrees while they are live, the salvage refs while the gate reads them, and `.git/gate` for reuse. It needs the scratch files that live pages lean on, which today it can only reach on this machine: the board's and the direction page's scratch citations, the `tmp/r7/one-model` round files (153 `.md` in no git object) for the one-model line, and the ZA readings. It never opens the unreachable blobs, `refs/codex`, the build outputs in `tmp/r7`, the orphaned `agents-board`, or the gate logs of earlier sessions (`/Users/ren/tmp/*-gate.log`, `*-render.log`, many dozens).
+
+## Candidates
+
+- **Unreachable blobs (1.45 GB):** could leave, but only by a prune, which AGENTS.md forbids; sampled ones are data dumps whose files are likely held elsewhere (not checked). Stays as is unless Ren changes the rule; risk is nil while kept.
+- **Salvage refs and unmerged branches:** stay. They are the only copy of 890 commits, are on no remote, and the gate reads them. Before any change: count pins that name salvage-only commits; decide whether to push them to a private ref namespace on the remote.
+- **Stashes:** stay, or salvage to `refs/salvage/` (they are the only refs that a `git stash drop` could lose; 15 stashed file versions are not in main's history).
+- **`refs/codex`, `.git/gate`, `tmp/r7` build outputs, `agents-board`:** machine output, regenerable or fully in git; could go without loss, `agents-board` by name after `git worktree` metadata is checked. Whose sessions use them: not determined.
+- **Scratch cited by live pages:** cannot stay as it is if the repository alone must carry the work (brief item 5). Either the cited files enter the tree (a study folder) or the citations change. What would change first: a sweep of tracked citations into scratch, then per file a decision.
+- **Scratch kits, logs and readings in `/Users/ren/tmp`:** cannot tell from 13 of 219. Many hold files in no git object; most look like kits and logs (trace whose result landed), some like readings (ZA, AG). Needs a per-folder pass before anything moves.
+- **Private folders and `experiments/guardian-anarchy`:** stay off the remote by Ren's rule; they need a backup that is not this machine.
+
+## Against the two views
+
+- Against "much is garbage": almost nothing here is a telling to compress; most is trace or machine output, and the bulk (unreachable blobs, worktrees) costs disk, not reading. Removing it would not make the map more joined.
+- Against "trace and machine output can leave the reading path without loss": that is mostly so for git, but not for scratch. Live pages and the direction page already rest on files outside the tree, so the reading path itself leaks out of the repository. And the salvage refs, the only copy of 890 commits, are not on the remote, so "git history keeps whatever leaves the working tree" holds only on this machine.
+- The layout rule's "nothing is deleted" is kept in git (pruneexpire never, salvage before removal), but not in scratch: `/private/tmp` loses unread files after about three days (RESULT-WORKFLOW), and `/Users/ren/tmp` is not tracked anywhere.
+
+## Not determined, and surprises
+
+- Not determined: whether the remote LFS holds the 4 LFS objects; how many record pins depend on salvage; the content of 206 of 219 `/Users/ren/tmp` folders; whether the 15,025 unreachable blobs include anything not elsewhere; whether a backup exists (`tmutil latestbackup` reported that it failed to mount the destination); who still uses the six worktrees.
+- Surprises: the direction page's own head note leans on scratch; an orphaned 874 MB worktree; 1.45 GB of unreachable loose objects despite the 16 October gc plan; `ue31-design` carries 4,091 lines not on main, from 3 November; `ren-words` in scratch is a kit, not Ren's words.
+- Direction: the AGENTS.md line "what the repository cannot regenerate stays" is carried by the git practice, and contradicted in effect by where the latest readings and corrections are kept.
+
+## The commands behind the counts
+
+```
+git count-objects -vH; du -sh .git .git/*; ls -la .git/objects/pack
+git for-each-ref --format='%(refname)' | awk -F/ '{print $1"/"$2}' | sort | uniq -c
+for b in heads: git rev-list --count main..$b; git cherry main $b
+git rev-list --count $(salvage refs) --not main          # 890
+git rev-list --objects $(salvage refs) --not main         # 22,296 objects, 13,489 blobs
+git cat-file --batch-all-objects --batch-check='%(objecttype) %(objectsize) %(objectsize:disk) %(objectname)'
+git rev-list --objects --all   # reachable set; unreachable = all blobs minus it
+git ls-remote origin           # 10 heads, 12 tags, no salvage
+git stash list; git stash show --stat; git worktree list; git -C <wt> status --porcelain
+find tmp -type f | wc -l; du -sk /Users/ren/tmp/*
+find <dir> -type f ... | xargs -0 git --git-dir=.git hash-object | sort -u | comm -23 - <all blobs>
+rg -l --no-ignore-dot 'tmp/r7' --glob '!tmp/**'; rg -o --no-ignore-dot '/Users/ren/tmp/[A-Za-z0-9._-]+'
+git status --porcelain --ignored; cat .gitignore .gitattributes
+```

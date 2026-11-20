@@ -1,0 +1,57 @@
+{
+ "area": "research-history",
+ "headline": "This area holds about 18.6 M words in 6,870 files, nearly all trace and machine output. Every moved file matches its manifest byte for byte, and git already holds the same bytes. It cannot simply leave the tree: about 45% of the generative-foundation history is still cited from live records and result pages, the tools and the gate read the manifests and record snapshots, and the board log in `_process/history` is appended daily. It also holds tracked derived extracts of private chats and third-party PDFs.",
+ "loadBearingClaims": [
+  {
+   "claim": "All 4,363 entries of the GFR-history MANIFEST.json and all 473 of _process/history/MANIFEST.json hash to their recorded sha256, and each one's git blob in the index equals the manifest's blob field.",
+   "evidence": "A Python script over both manifests: 0 mismatches, 0 missing; blob==index blob 4363/4363 and 473/473.",
+   "howFarSeen": "counted, all entries"
+  },
+  {
+   "claim": "Of the 891 tracked files in _process/history, 418 are not in its manifest: 391 worktree-salvage files, 24 instruction copies, the workboard log, INDEX.md and MANIFEST.json.",
+   "evidence": "git ls-files minus the manifest's new_path set.",
+   "howFarSeen": "counted"
+  },
+  {
+   "claim": "Each of the 24 files in _process/history/*-instructions/ is byte-identical to a blob in the git log of AGENTS.md or _process/RESULT-WORKFLOW.md. The two 11-09 copies AGENTS-before-landing-wording.md and AGENTS-before-readers-corrections.md are the same blob, 09de645a.",
+   "evidence": "git hash-object plus git log --find-object for each.",
+   "howFarSeen": "counted 24 of 24"
+  },
+  {
+   "claim": "628 live files (outside history, sources and tmp) reference 2,054 distinct GFR-history paths, 1,967 of them manifest entries (about 45% of 4,363). 327 of the referencing files are under theories/becoming/results, and 156 record JSONs cite GFR-history paths, some with section anchors.",
+   "evidence": "A Python regex link scan over live md/json/py/tsv with relative paths resolved; rg -c over results/records/*.json.",
+   "howFarSeen": "counted by regex; margin of a few percent"
+  },
+  {
+   "claim": "_process/history/workboard/BECOMING-WORKBOARD-2026-10-11_to_2026-10-17.md (224,271 words) is a live append log: 538 commits touch it, the latest on 18 November 2026.",
+   "evidence": "git log --format=%h -- _process/history/workboard | wc -l; git show --stat befa506ba.",
+   "howFarSeen": "counted"
+  },
+  {
+   "claim": "The tools read this area. research-config.json names _process/architecture/history, history-manifest.json, generated-manifest.json and moves/. navigation.py resolves snapshots by hash. The gate's test_schema2 input list includes _process/architecture/history/** and moves/*.json.",
+   "evidence": "grep in tools/research/*.py and _process/research-config.json (gate.py line ~216, navigation.py lines 20 and 74).",
+   "howFarSeen": "grep counted; tool code read in part"
+  },
+  {
+   "claim": "_process/history/2026-09-consolidation/reading-notes-inputs/ (10 files, 420,724 words) is tracked. Its manifest reason calls it derived extracts of Ren's turns duplicating sources/12 and sources/14, while sources/12-claude-ai-chats is git-ignored and has 0 tracked files.",
+   "evidence": "git ls-files | wc; MANIFEST reason text; git check-ignore sources/12-claude-ai-chats.",
+   "howFarSeen": "counted; contents not read"
+  },
+  {
+   "claim": "Of 251 .lean files in GFR history, 78 have no byte-identical copy anywhere else in the working tree. 120 are also saved check copies and 51 are identical to a live module.",
+   "evidence": "A blob-id grouping over git ls-files -s.",
+   "howFarSeen": "counted"
+  }
+ ],
+ "againstTheViews": [
+  "Against 'garbage to remove': about 45% of GFR history is cited from live records and results, and its counterreviews and COUNTEREXAMPLES are kept failures. Removing it without repointing breaks records.",
+  "Against 'trace can leave without loss': parts of the area are live. The board log is appended daily, generated-manifest.json is render state, and the gate reads the snapshot store.",
+  "Against both: the records still name the October packets as where a result's scope is stated, so the reading path runs into old prose through citations rather than against the Lean."
+ ],
+ "notDetermined": [
+  "Whether any record's progress source in GFR history carries a premise the live chapter dropped; packets were not read against the Lean.",
+  "How many development folders hold failed Lean attempts rather than spent kits, and whether the 78 tree-unique Lean files compile.",
+  "Whether the small 5 Oct live studies' claims are carried by Lean.",
+  "Why the research README counts 4,404 GFR history files against 4,363 manifest entries (presumably other history folders inside the study)."
+ ]
+}

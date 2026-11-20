@@ -1,0 +1,68 @@
+# account: what is there
+*AI-written (Claude Fable 5.2), 18 November 2026. A survey; nothing was changed.*
+
+## In three sentences
+
+`theories/becoming/` outside `results/` and `history/` is 38 tracked files, 3.4 MB: about 370,000 English words and 190,000 Chinese characters of prose kept by hand, of which three small pages are generated (counted). It is a telling of the Lean as the work understood it on 13 November: no commit has touched it since 13 November 23:15 WIB, two days before the direction page was first written, and the direction's own model (a line on a stock) is named nowhere in it (counted). Little of it is copied word for word from elsewhere; what repeats is the same result said again in other words, in up to five places, and tools pin those sayings to one another.
+
+## What is there
+
+| Kind | Files | Size | Beside the Lean | Unique? | What reads it | How far seen |
+|---|---|---|---|---|---|---|
+| Chapters 01–05, 07, 08 (English) | 7 | 210,359 words | Telling, with readings and tests told. By label: Theorem/Definition 38% of words, unlabelled prose 38%, tables 11%, Reading 9%, Conditional/Open 2% | Yes: readings, calibrations, correspondences to literature, how far each result is seen | `registry.py` (hashes), `check_dossiers.py` (quotes), `spine.py`, `atlas.py`, tests | counted; heads of 02 read, one section of 02 read whole |
+| Chapter 06 (Chinese) | 1 | 32,061 characters, 3,031 words | Readings of classical texts against the grammar; no English edition | Yes | as above | head read |
+| Front pages (English): ONE-PAGE, THE-THEORY, OPENING, ONE-ARGUMENT, USES, USES-EXAMPLES, COLLECTIVE-DIRECTION, FREE-ENERGY-PRINCIPLE | 8 | 59,540 words | Telling of the telling: each says it "adds no result"; OPENING is Ren's text of 10 October revised in place by AI | OPENING's present wording; the rest re-say chapters | `navigation.py` (README, reading times), 4 test files (912 assertions), `zh_fronts.py` | heads read |
+| Chinese editions of five fronts | 5 | 78,532 characters | Translation of the telling | Translation only | `zh_fronts.py` (digest of the English), `test_chinese_fronts.py` | head of one read |
+| Review dossiers: ALIGNMENT, SCIENCES, PHILOSOPHY, LOGIC (English); BUDDHIST-THOUGHT, CLASSICAL-TEXTS (Chinese); two covers | 8 | 92,981 words; 38,079 characters; covers 1,881 words | Telling arranged for outside reviewers by field, each item quoting its home | Arrangement and questions; statements are quoted | `gate.py`, `check_dossiers.py`, `build_review_packet.py` | cover read, heads of two |
+| Re-coding sample (`review/recoding/`) | 6 | 237 units, one script | Coupling: a sample frozen 24 October before any person coded it, hashes stated | Yes (frozen) | `agreement.py` | FREEZE.md read whole |
+| Generated: `README.md`, `chapters/README.md`, `chapters/CLAIMS.md` | 3 | 3,920 words | Machine output | No | manifest | counted from `generated-manifest.json` |
+
+**How a sentence is tied to a theorem** (read in 02, counted across chapters). A home section has an anchor `<a id="r-<record id>">`, a paragraph opening `**Theorem** (base and premises).`, the statement in prose with Lean names in code spans, and a link to the record; the record holds the declarations, the source hash and the receipt. 564 such anchors; 559 of the 567 record ids have one. 756 of 1,629 chapter paragraphs (46%) carry a Lean name or path; they hold 74% of chapter words. Per chapter: 01 47%, 02 68%, 03 52%, 04 44%, 05 54%, 06 20%, 07 52%, 08 27%. Of 3,979 identifier tokens (distinct per chapter), 3,923 have a last segment declared somewhere in the Lean; most of the rest are module names. That shows the names exist. It does not show the sentence says what the theorem says: I checked no statement against a proof.
+
+**Reading time**, by the repository's own rule (`navigation.reading_time`: 100–130 English words a minute, 200–260 characters): one page 31–41 minutes (stated); overview 86–112 minutes (stated); the eight fronts together about 7 to 9 hours; the eight chapters about 30 to 39 hours; the dossiers about 15 to 20 hours; the Chinese fronts about 5 to 6.5 hours (computed from raw counts).
+
+## What repeats
+
+- **A result is said by hand in two places.** The chapter home sections matched to a record total 142,421 words; those 553 records' English statement, laws and hypotheses total 302,121 words. Half the chapter sections share under 19% of their five-word runs with their record (counted). They are two separate tellings, each reviewed against the Lean separately.
+- **Fronts re-say chapters in other words.** Under 2% of any front's sentences appear verbatim in a chapter; 15% of the one page's words appear in the overview (counted).
+- **One verbatim copy:** root `README.md` holds 242 of `OPENING.md`'s 304 sentences (79% of its words), placed by render (counted; the comment at the top of OPENING says so).
+- **Dossiers quote.** 788 `Quote [path]: "…"` pins in the four English dossiers; 778 found verbatim in the file cited (16,648 words); 553 cite chapters (counted).
+- **The alignment paragraph** of `AGENTS.md` stands, as of 13 November, at the top of the one page, the overview, USES and the review cover (read). Two sentences are verbatim in the first two.
+
+## What depends on it
+
+- **Records pin chapter bytes.** 137 records hold 151 references to these files with a whole-file sha256. 85 no longer match the current file. `registry.py` (read, lines 38–135 and 1015–1040; not run) then finds the reviewed version in HEAD's git history by hash and reports drift where a cited section changed. So the git history of the chapters is read by a check.
+- **Dossier quotes** are checked word for word (`gate.py` line 58, `check_dossiers.py`): changing a chapter sentence can break a dossier.
+- **Tests pin front-page wording**: `test_uses_pages.py` (240 assertions), `test_navigation_pages.py` (239), `test_chinese_fronts.py` (126), `test_site.py` (307). One reads the aim sentence from `AGENTS.md` and requires the fronts to carry it.
+- **Chinese editions** carry a digest of the English they follow; a changed English page gets a banner until the Chinese is revised. No banner stands now (counted).
+- **Links in**: 50 atlas files and about 1,046 files under `_process/research` name a chapter file; no Lean file does (counted, default ignore rules).
+
+## What a continuing session needs from here
+
+`AGENTS.md` sends a session to the one page and to the home section of what it touches, and to 08's opening. It needs the home section because a record cites it. It needs 08's standings and bases to read a label. It does not need the dossiers, the re-coding folder, the Chinese editions, the free-energy page or the collective-direction page unless its item is one of them. A session working from the direction page will find the one page says the centre as of 13 November, not the idea as `AGENTS.md` now has it.
+
+## Candidates
+
+- **Chapters: cannot tell which telling stays.** Evidence: chapter and record both state each result, in different words. Risk: 151 hash pins, 553 quotes, 564 anchors. Before either could be pointed to the other, `registry.py`'s reference model and the dossier check would have to change.
+- **Fronts: stay, and are behind.** The direction page says the chapters do not yet tell 15 and 16 November; the brief says tellings follow the Lean. Re-saying them now would be done twice. Risk of leaving them: they are what a newcomer reads.
+- **OPENING in README: could be said once and pointed to.** Needs the render's `readme_opening` rule changed. Risk: the first screen changes for outside readers.
+- **Dossiers: could leave the reading path; cannot tell about the tree.** 99,000 words for reviewers not yet recorded as having replied. Every page's navigation line links them, and the gate reads them.
+- **Re-coding sample: stays.** Frozen before its run.
+- **Generated three: regenerable.**
+- **Chinese editions: stay** (`AGENTS.md` keeps the fronts in both languages).
+
+## Against the two views
+
+Against "much is garbage": nothing here is machine output but three pages, its Lean names resolve, and it is the only place where readings, calibrations and the classical texts are held as prose. Against "most of the mass is trace or machine output": that is not true of this area. It is 370,000 words of live prose on the reading path, 50 to 70 hours of reading, and removing trace elsewhere shortens none of it. Against "judge prose against the Lean": 38% of chapter words are unlabelled prose and 9% are readings, which no theorem can pass or fail; and the doubling here is prose against prose (chapter against record), which the Lean does not settle. For Ren's sense that it is far from joined and said once: counted, it is not.
+
+## Not determined, and surprises
+
+- **The account and the direction use different words.** "Continuation condition" 126 times, "self-concern" 189, `Comparison`/widening 427 here; none on the direction page. "Line on a stock", "taken for the whole", "account of the world", the idea paragraph's sentences: none here. Chapter 07 (56,456 words, a quarter of the chapters) is where the first group lives. Whether that chapter contradicts the direction or is a part the direction does not tell, I did not read far enough to say.
+- 144 of 406 modules have neither file name nor module name in any chapter; by a looser test (any declared name of four letters or more in a code span) 26 modules, 5,815 lines, have none. Both are rough.
+- The registry's reliance on git history for stale hashes surprised me.
+- Not determined: whether the review packet was sent (`QUOTED.txt`, said to be frozen at sending, was committed 3 November); whether any person coded the sheet; where "edition 6" is kept; whether any chapter statement says more than its theorem.
+- Earlier surveys: the reviews of 16 and 19 October cover the chapter set before the eight chapters of 23 October, now in `history/`; the review of 9 and 10 November (`ag-the-map/FOR-REN.md`, head read) changed front-page wording over nine passes; the 14 November count's figure for the account was not found in `sources/` in what I searched.
+
+## The commands behind the counts
+
+`git ls-files theories/becoming`; a Python reader over those files for words, CJK characters, last commit (`git log -1`); `git log --since=2026-11-14 -- theories/becoming ':!…/results' ':!…/history'`; paragraph split on blank lines with a regex for code spans holding `«`, `.lean` or `Name.name`; a declaration scan of 1,491 `.lean` files (history and check copies left out); `json.load` over `results/records/*.json` with `hashlib.sha256` of each cited file; five-word-run overlap between each `r-` section and its record; sentence containment after stripping links and footnote marks; `rg -c` for each phrase; `rg -l` for inbound links. All read-only, each under a minute.

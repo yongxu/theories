@@ -1,0 +1,80 @@
+AI-written by Codex, the astra reader, 19 November 2026. Read-only survey.
+
+# In-flight work at main `25aed652f`
+
+**Counted.** The board has nine open rows. Git has seven registered worktrees, ten local branch tips outside main’s ancestry, and five changed paths in the shared checkout. **Read whole — workboard.** The latest recorded landing was DJ’s at 17:07 WIB on 18 November. A waiting lander was **not found in what was read** on the queue line. **Inferred from the board and Git.** The immediate layout collisions are the untracked source, the unresolved ownership of the map’s two stores, and frozen experiments whose paths and inputs are already bound.
+
+## Open claims
+
+**Read whole — board lines 48–56. Counted — row dates by `git blame`.** Dates below are in November. A row date establishes the last edit to the claim. Later movement found elsewhere is identified separately. The board allows a claim to lapse after three days of owner inactivity. A commit date alone cannot establish that inactivity. [Open claims](/Users/ren/theories/_process/BECOMING-WORKBOARD.md:42)
+
+| Claim and owner | Last movement found and present state | What a layout change would affect, inferred from the row |
+|---|---|---|
+| **AJ** — Unification and coherence progress, fork 2. Fork 3 took AJ2/AJ4. | Row 3rd. Alignment readings, dossier and trained-system tests landed. The plan was revised on the 10th. Its proposed wording on capture and accountable revision awaits Ren’s read. | Plan, chapter 7, dossier and test citations. |
+| **LA4** — The theory’s use in alignment | Row and Stage A result on the 3rd. Stage B design and freeze held on the 6th. Its two-model download and pilot need separate release. | Frozen predictions, season code and chapter 5’s account of the result. |
+| **AA** — The atlas plan | 11th. C/D premise lists, first world-contact slice, six-family pass and name check landed. The board explicitly calls AA lapsed and reclaimable. DJ repaired entries on the 17th. Ownership remains undecided. | Atlas entries, premise ledger, renderer and proposed wisdom matrix. |
+| **T2O** — Names and identity discussion | 6th. Grassland or forest test held before freeze. Draft stays with its owner. Branch `t2o` is merged by ancestry. | Owner’s draft, proposed experiment path and chapter 2’s open item. |
+| **T1B** — Names and identity discussion | 6th. Successor to the two refused lake tests remains named and held. The board records 54 reports and local `refs/salvage/t1b/kit`. Its disclosure file contains values withheld before freeze. | Salvaged draft, reports and the boundary around unseen values. |
+| **RW** — Coordinator | Paused 13th, row updated 18th. The design was sent on the 14th and its one-model proposal withdrawn. Further sheet, store and view work waits on DJ’s decision about the second store. | `results/map/`, its JSON inputs, `map_sheet.py`, atlas bindings and site navigation. |
+| **TM** — Traditions onto the map | 11th. 《大學》 and the prototype ledger landed. Next is joining the 易传 reading to CY. AA owns the atlas schema. Any proposed test design is held. | Source texts, correction ledger, crosswalk and CY references. |
+| **DW** — Nature and authority of laws | 13th. Centre wording and glossary landed. The queue also records WM2’s completion of the delegated front-page work that day. Reading “reads” by sense across the chapters remains, its scale to Ren first. | Bilingual fronts, glossary, chapter passages and the Lean terminology table. |
+| **DJ** — The map and the direction: carrying on (from 17 Nov) | 18th. The second-way join remains open after the first try mostly failed as new. The chapter read and failed step-class join were filed. Chapter tellings, atlas links, docstring corrections and a fresh build at the next change to the four modules remain owed. | Four Lean modules, chapter homes, atlas/cards, direction page and retained scratch proofs. |
+
+**Read whole — “What we are trying next.”** The direction also names how a loop acquires a new distinction, who bears a loss that never returns, and a case from outside. The nine questions are prepared and unsent. Three atlas repairs were held and one link was unprepared. A separate owner for each question was **not found in what was read** across the nine claims. [Direction](/Users/ren/theories/_process/DIRECTION.md:96)
+
+## Held runs and decisions
+
+**Read whole — hold source and board.** Asked “Hold paid runs and new test designs until your first readers report?”, Ren answered “Yes, hold them”, then “Yes, hold T1B”. The board retains the human-reader or Ren release condition. Rule 7 now also requires his word before sending anything or paying for a run, without prompting him. [Ren’s words](/Users/ren/theories/sources/15-codex-theory-conversations/2026-11-06-hold-paid-runs-and-new-test-designs.md:11) · [Board’s interpretation](/Users/ren/theories/_process/BECOMING-WORKBOARD.md:34)
+
+| Held work — read whole, board line 98 | What is held |
+|---|---|
+| Frozen model runs | TR-RR, TR1, TR1’s informing variant, TR3, TR4, TR5, TR6, TR7, TR8, TR9 and SCL, including their smoke runs. The board records a refused credential. TR9 also depends on TR8’s verdicts. |
+| Frozen work beyond model calls | TR2 Stage B needs checkpoint downloads and machine time. CMT holds its archive search, downloads and coding by independent people or models. TR1, TR2 and TR7 Stage A already ran. |
+| New designs | T2O, smaller T7 after T7F failed to freeze, hysteresis, LA4 Stage B and T1B. T1N/T1R already ran and refused at the agency header. |
+
+**Inferred from the freeze references.** Moving an experiment directory can break a recorded command, shared client path or link. Editing a pinned input can invalidate its hash. These risks apply while execution is held. [Run register](/Users/ren/theories/_process/BECOMING-WORKBOARD.md:98)
+
+**Read whole — decisions section.** Ren’s outstanding reads cover seven opening sentences and the October normative-grounding goal. Two AGENTS sentences, the seven rules and revised direction passages are already applied and remain his to change. Edition 6’s recipients, timing, letter, coders and payment, sending the outside-case questions, site redeployment, push, licensing and run release stay with him. The fronts’ scoring question and both named AA agent counts were answered. The board assigns DJ three decisions to say to him first: the one-page lock sentence’s missing premise, whether to land any of six outside-package proofs, and atlas ownership and the second store. Whole-repository reshaping waits for this survey and Ren’s word. [Decisions](/Users/ren/theories/_process/BECOMING-WORKBOARD.md:80) · [Layout hold](/Users/ren/theories/AGENTS.md:25)
+
+## Branches, worktrees and loose files
+
+**Counted.** Of 160 local branches, these ten tips are outside main’s ancestry. “Matches” counts changed tip files whose exact blob appeared at the same path on main since 1 November. **Inferred from commit subjects and board/history rows.** The named work has landing evidence even where the branch preserves a different version. An exact branch-name reference in a live claim row was **not found in what was read** for these ten.
+
+| Branch | Tip date | Matches | Board or main evidence |
+|---|---:|---:|---|
+| `ue31-design` | 3 | 9/10 | UE31 history row, design `f287c54e8` |
+| `t2-life-cycle` | 3 | 4/4 | Life-cycle wording `10c89f41d` |
+| `t2-statement` | 4 | 9/9 | T2S history row |
+| `fv` | 4 | 9/9 | FV history row |
+| `t1-premises-follow` | 4 | 0/3 | History names branch. ED5 incorporated TS3 at `012a12fff`. |
+| `rae-salvage-claim` | 4 | 0/1 | Alternative board row. RAE landed from `rae-verifiers`. |
+| `aa-atlas-v1` | 4 | 4/10 | Live AA row records pilot `4697b34b9`. |
+| `claude/epic-mirzakhani-e296ee` | 9 | 2/2 | WX history row names branch. |
+| `tt-records-theorem` | 13 | 2/2 | TT wording `3a79b47ab` |
+| `wu-kit` | 13 | 15/21 | WU page and TT follow-up `9f28e55a6`, `198551946` |
+
+**Counted.** All seven worktree HEADs are on main’s ancestry. Main and `dj/wt` share the tip. Under `~/tmp/`, `coordinator/wt-check`, `ed6/gate` and `rw/wm2/wt` are detached, `tt/wt` holds `tt2-no-return`, and `wu/wt` holds `tt-for-ren`. Their six saved indexes show no staged difference from their HEADs. **Not looked at — external working directories.** Unstaged and untracked work there remains unknown.
+
+**Counted.** Shared main is 12 commits ahead of local `origin/main`. Nothing is staged. `.claude/launch.json`, `_process/DIRECTIVE-INDEX.md`, `_process/architecture/generated-manifest.json` and `sources/README.md` are modified. `sources/15-codex-theory-conversations/2026-11-18-datong-future.md` is untracked and contains a section dated the 19th. **Inferred from the diffs.** The two indexes and manifest reflect that source. Moving or regenerating them during this filing could split Ren’s words from their index entries.
+
+**Sampled — one October finding chosen for its named receipt.** The 16 October review reported 88 worktrees and an untracked 385-file receipt. **Counted.** All 385 files are now tracked under October’s salvage history. **Inferred.** That history preserves evidence once held only in a worktree. Conversely, an “open” heading can preserve superseded instructions, as AA’s and RW’s rows show. Neither file count nor Lean comparison settles ownership or recoverability. [October review](/Users/ren/theories/_process/research/2026-10-05-repository-reconciliation/whole-repo-review-2026-10-16/CHANGES.md:718)
+
+## Commands behind the counts
+
+```sh
+wc -lw _process/BECOMING-WORKBOARD.md
+git blame --date=short -L48,56 -- _process/BECOMING-WORKBOARD.md
+git for-each-ref --no-merged=main --format='%(refname:short) %(committerdate:short)' refs/heads
+git worktree list --porcelain
+git --no-optional-locks status --short --branch
+git rev-list --count main..HEAD
+git diff --name-only main...BRANCH
+git log --since=2026-11-01 --no-renames --raw --no-abbrev --format= main -- PATHS
+git ls-files -- ':(glob)**/becoming-checks/20261011T170859.998618Z/*'
+```
+
+**Counted.** I substituted each listed HEAD for `HEAD`, each branch for `BRANCH`, and its changed paths for `PATHS`. I compared branch blobs with the log’s destination blobs and read linked indexes through `.git/worktrees/*/index`.
+
+── cx · ok · session 01a1f462-eaa6-7a63-97b7-57518c3f1e5b · gpt-6.2-astra/high · read-only · 270s · 1311.8k tokens · 41 cmds
+continue: cx -r 01a1f462-eaa6-7a63-97b7-57518c3f1e5b "…"
+log: /Users/ren/.cache/cx/runs/20261119-221804-31256

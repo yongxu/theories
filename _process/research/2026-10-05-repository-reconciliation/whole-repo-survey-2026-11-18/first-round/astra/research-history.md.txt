@@ -1,0 +1,84 @@
+Model: GPT-6 Astra
+
+# research-history: what is there
+
+*AI-written (GPT-6 Astra), 18 November 2026. A survey; nothing was changed.*
+
+## In three sentences
+
+**Counted.** This area holds 6,492 tracked files, 219.8 MB and 6.69 million Markdown words.  
+**Counted.** For all 4,836 files listed in the two main move manifests, the current file is byte-identical to the file at its former path in the recorded Git commit.  
+**Counted.** History is also part of the current argument: 124 result records name 101 files in the retired foundation study, one as its canonical source, and 284 records name all 543 JSON snapshots in architecture history.
+
+## What is there
+
+**Counted.** Words count Markdown only. “Sole” counts files whose exact bytes occur at only one path in the current Git index, across the whole repository. The reader column names an observed reader or reference.
+
+| Kind | Files | Markdown words | What it is beside the Lean | Sole | What reads it | How far seen |
+|---|---:|---:|---|---:|---|---|
+| Foundation-review `history/` | 4,365 | 3,889,810 | Former arguments, countermodels, review reports, checkers, saved Lean and landing kits | 4,037 | Records, directives, study index | Counted; sampled by move batch and record citation |
+| `foundation-assessment/` | 105 | 88,456 | Market and alignment assessments, checks and frozen evidence | 105 | Five market records, chapter 05, experiment freeze | Counted; sampled via its README and named pins |
+| Repository reconciliation | 377 | 265,040 | Surveys, defect reports, implementation plans and tooling | 371 | Board, records, maintainers of the gate | Counted; sampled by review date and board link |
+| Other research and its index | 80 | 125,537 | Six study remnants, including empirical work, imported data and arguments | 80 | Study index, experiment protocols and reviews | Counted; sampled at the concern study’s empirical review |
+| Process history, excluding next two rows | 475 | 1,357,642 | September reading material, extracts of Ren’s turns, October studies, handoffs and manifest | 421 | Glossary, history index, move machinery | Counted; sampled by manifest reason |
+| Former instructions and board | 25 | 262,754 | Earlier direction and decisions, closed work, failures | 23 | Current instructions and board | Counted; sampled at the latest instruction and a failed-test row |
+| Worktree salvage | 391 | 123 | Two recovered runs, patches and provenance | 3 | Salvage README identifies the two origins | Counted; README read whole |
+| Architecture `history/` | 573 | 701,587 | Exact prior records and pages, plus link-adapted reading editions | 571 | Record validator, navigation validator, historical links | Counted across all files and record JSON |
+| Other architecture | 101 | 3,179 | Move plans and receipts, rename evidence, rebind log, manifests and checker | 101 | Move resolver, renderer, gate and maintainers | Counted; sampled at the consumers named below |
+
+## What repeats
+
+**Counted.** The area has 6,274 distinct Git blobs. Of its files, 707 have an exact copy outside the area and 5,712 are the sole tracked path for their bytes. These counts answer a different question from recoverability at an earlier commit. For example, the direction-frontier counterexample has one current path and an exact pre-move Git copy.
+
+**Counted.** The 17 October restructure moved 3,328 foundation files in batch H5 and 426 process-study files in H3. On 20 October another 967 foundation kit files moved in one batch. The foundation manifest covers all 4,363 payload files through 2 November. The process manifest covers 473 files. Its 391 salvage files, 24 instructions and one board archive sit outside that manifest. [Foundation manifest](/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/history/MANIFEST.json) · [Process manifest](/Users/ren/theories/_process/history/MANIFEST.json)
+
+**Counted.** Architecture keeps 15 pairs of original and link-adapted pages. The reading editions alone contain 350,906 words. All 30 files match their manifest hashes. Of the 543 JSON snapshots, 538 also match an earlier Git blob under the same record filename. **Counted.** The 16 October review reported 85 JSON snapshots and 14 page pairs. Its cited tree, `0cfb9c567`, contains exactly 85 JSON and 28 Markdown files there. Its separate near-copy survey excluded history, so its overlap findings cannot be applied to these archives. [October architecture review](/Users/ren/theories/_process/research/2026-10-05-repository-reconciliation/whole-repo-review-2026-10-16/ARCHITECTURE.md) · [Survey method](/Users/ren/theories/_process/research/2026-10-05-repository-reconciliation/whole-repo-review-2026-10-16/RECONCILIATION-SURVEY.md)
+
+## What depends on it
+
+**Counted.** Across 567 tracked result JSON files, 24 entries in `counterexamples` name foundation-history files. Even the 967-file retired-kit batch has four targets named directly, including the least-loss dependency log and a regulation simulation. `conditional-foundation-assessment` names the archived `FIXED-FINISH-LINE-AUDIT.md` as its canonical source. [Result record](/Users/ren/theories/theories/becoming/results/records/conditional-foundation-assessment.json)
+
+**Counted.** A bounded sweep of 649 current-facing Markdown files found 1,081 distinct source–target pairs reaching 897 files here. Chapter 05 links to the *interface-control-and-corrective-change* section of the market assessment. The board links to the gate study’s section on landing several items together. Historical anchors in `CLAIMS.md` lead into the link-adapted reading edition. A restored blob alone would leave these links unresolved in an ordinary checkout. [Chapter 05](/Users/ren/theories/theories/becoming/chapters/05-COLLECTIVES.md) · [Gate study](/Users/ren/theories/_process/research/2026-10-05-repository-reconciliation/architecture/gt/GATE.md)
+
+**Sampled** at three consumers chosen for different dependencies. `registry.py` checks a prior record’s path, digest and identity. `navigation.py` checks both editions against the preservation manifest. The agentdojo experiment’s freeze names three assessment documents, while the recipient-value experiment freezes its identification note in the concern study. [Registry](/Users/ren/theories/tools/research/registry.py:522) · [Navigation](/Users/ren/theories/tools/research/navigation.py:1002) · [Agentdojo freeze](/Users/ren/theories/experiments/agentdojo-evidence-boundary/correction-action/FREEZE.json) · [Recipient-value freeze](/Users/ren/theories/experiments/recipient-value-learning/protocol-freeze.json)
+
+## What a continuing session needs from here
+
+**Inferred from the entry instructions, board and citations.** Start with the current direction and the record for the question at hand. Follow its archival link when the premise, failed attempt or earlier wording matters. A session repairing an old path needs the move receipt. One revisiting a landing needs the closed board row. Routine theory reading has no demonstrated need to traverse every kit. **Not looked at:** session access logs. I cannot identify files that nobody opens.
+
+**Sampled** at three deliberately different failures. The retired direction-frontier study gives an actor the option to protect at cost 4, ignore harm at cost 6, or bypass its consequences at cost 2. Doubling the cost of ignoring harm still selects bypass. The concern study reports an actual retrospective contrast of +0.50 percentage points, with a 95% interval from −4.25 to +5.24, and explains why choice alone cannot distinguish learned concern from changed private expectations. The archived board preserves a correction about the lake test, including which frozen predictions failed for which model. These preserve a rejected implication, inconclusive evidence and failed predictions respectively. [Bypass countermodel](/Users/ren/theories/_process/history/2026-10-05-direction-frontier/EXPLORATION.md:42) · [Empirical review](/Users/ren/theories/_process/research/2026-10-05-concern-theory/reward-association/REVIEW.md) · [Board correction](/Users/ren/theories/_process/history/workboard/BECOMING-WORKBOARD-2026-10-11_to_2026-10-17.md:700)
+
+## Candidates
+
+- **Inferred from the manifests and citations.** Applied kits and superseded packets could leave the working tree where their old bytes and paths are recoverable. The risk is losing a cited counterexample or executable example among the paperwork. The 17 October layout rule, move resolver, indexes and affected links would need a way to retrieve the exact historical file first.
+- **Inferred from the validators.** Prior versions could be stored once and pointed to. A replacement would have to preserve the 543 record bindings, both overview hashes and section-level navigation. Same-name Git history accounted for 538 snapshots in this survey. The other five need individual provenance checks.
+- **Inferred from the freezes and empirical review.** The pinned assessments, identification notes, original data and test histories have reasons to stay addressable as they are. The uncertainty interval and the rival explanation are information a theorem cannot regenerate. Other study remnants need individual inspection before assigning them the same status.
+- **Inferred from the board, salvage README and blob counts.** Former instructions and closed rows can be reached by pointers from current pages. In salvage, 388 of 391 files match bytes outside this area. A path-to-blob inventory could represent those copies. The two uncommitted diffs and the README are the three sole-path files and preserve what was recovered from each worktree.
+- **Inferred from the tool readers.** Current manifests and receipts have operational uses. Generated indexes could be recreated from their inputs. Moving the reconciliation collection as one unit would also move the board’s gate instructions and evidence of defects found during chapter revision.
+
+## Against the two views
+
+**Inferred from the counts.** Ren’s suspicion fits the paired editions and much of the salvage. It explains less of the foundation archive, where 4,037 files have only one current copy. The coordinator’s account fits the bulk as historical trace, but 124 records still use that trace. The bypass example also gives a reader a concrete way to challenge the claim that stronger feedback protects others. Its value survives the retirement of its programme.
+
+## Not determined, and surprises
+
+**Counted.** The board archive named for 11–17 October was still being updated on 18 November. The root `.ignore` hides process history and architecture snapshots from ordinary `rg`, but its exclusions leave the 3.89-million-word foundation history searchable. **Inferred from the October audit and current direction.** An old fixed finish line can therefore surface in an ordinary search and carry a current canonical citation. Its date matters to anyone trying to recover today’s aim.
+
+**Not looked at.** I did not establish semantic uniqueness across the archive, reconstruct the five unmatched snapshots, or repeat the November Lean surveys. Searched tracked filenames, November source pointers and process prose for the 9–10 and 14 November reviews. The pointers found concern the theory and its joins. A November inventory of this archive was not found in what was read.
+
+## The commands behind the counts
+
+**Counted.** The scope was `_process/{architecture,history,research}`, excluding the foundation review’s live `root-foundation/`. The index and file bytes agreed throughout the area. Commands included:
+
+```sh
+git ls-files -sz
+git ls-tree -r --name-only 0cfb9c567 -- _process/architecture/history
+git cat-file --batch-check='%(objectname)'
+git log --no-renames --no-abbrev --format= --raw -- theories/becoming/results/records/
+```
+
+**Counted.** Read-only Python grouped indexed paths by directory and blob, summed `len(bytes)` and, for `.md`, `len(bytes.split())`. Batch queries used each receipt’s `base_commit:old_path`. The link sweep resolved inline Markdown targets in root and top-level process pages, Becoming’s top pages, chapters, reviews and record pages. Record-field counts used exact repository paths separately. `rg --no-ignore-dot` searches included the archives. No build, checker, gate or renderer ran.
+
+── cx · ok · session 01a1edc8-407b-7133-958d-3b60b9c73292 · gpt-6.2-astra/high · read-only · 691s · 1963.8k tokens · 57 cmds
+continue: cx -r 01a1edc8-407b-7133-958d-3b60b9c73292 "…"
+log: /Users/ren/.cache/cx/runs/20261118-153125-88749

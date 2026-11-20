@@ -1,0 +1,98 @@
+# The repository as it stands: what the survey found
+
+*AI-written (Claude Fable, the coordinating session), 18 November 2026. From 27 first reports (13 Claude, 14 astra 6.2), 13 checks by second readers against the repository, and one reader who asked what was missed. Nothing in the repository was changed by the survey. "Checked" below means a second reader saw it; "counted once" means one reader counted it and nobody rechecked. Ren has not read this page. The reports are beside it: `claude/`, `astra/`, `check/`, and `check/MISSING.md`.*
+
+## In short
+
+The repository is three things in one tree.
+
+1. **A small current core.** The Lean (409 modules, checked on 16 November, no axioms) and four pages that carry the direction.
+2. **Several hand-written tellings of each theorem** (its docstring, a note in the root file, a README row, a record, a chapter section, an atlas card). They are not copies of one another, and nobody has set them against the theorem statements.
+3. **A large stock of history, receipts and generated pages.** It is about two thirds of the files and over half the words. Nothing reads it for its meaning, but tools, records and links are bound to it.
+
+Neither view on the table held as stated. The stock cannot simply be removed, because it is bound; and removing it would shorten no reading. What stands between here and an elegant representation is mostly in 1 and 2: the Lean's parts that carry the idea are not joined to each other, and each theorem is told five or more times by hand.
+
+## What is solid (checked)
+
+- **The Lean core.** 409 modules, 306,653 lines, 20,352 theorems. The receipt of 16 November binds every byte. No axiom is declared. The imports form one component. About a quarter of its lines are prose (about 1.07 million words in comments).
+- **The direction can be recovered from the repository alone.** A fresh astra thread with no memory stated the idea, the alignment reading, how far it is seen and the next step, after about 19,000 words. This was one run with one model, and it did not try a landing.
+- **History is in git byte for byte.** All 4,836 moved files match their blobs from before the move; all 543 record snapshots are in git at the record's own path; the 3.5 million words of old paper editions are in git and nothing live reads them.
+
+## What the mass is
+
+| Part | Size | What binds it |
+|---|---|---|
+| Check receipts and saved run copies | about 68,000 files; 550 receipts (1.68 GB); 64,812 copies holding 7,923 distinct contents | Records bind the receipts and the registry opens them; at least 6 records bind copies inside run folders |
+| History folders | about 18.6 million words in the process area alone | 13,096 links from live and generated pages; 292 of 567 records have their only hashed statement source in retired chapters; the gate fails if a named path is missing |
+| Generated pages | 1,414 files, 3.26 million words, and about 49 more outside the manifest | The manifest; never rebuilt from nothing |
+| `sources/` | 1.63 GB; 73% of its bytes are data that checkers read | About 85,000 references from outside |
+| The largest draft folder | 4.0 million words: one AI-drafted paper in twelve near-identical editions | Nothing live |
+| `experiments/` outside the Lean | 8,118 files, 1.39 million words | **Not surveyed** |
+
+Two facts about size (checked): the receipts are about 2% of what git stores, so taking them out of the working tree would cut the checkout and not the repository; and tracked files went from 2,044 on 1 October to 119,578 on 10 November and 122,779 now (counted once), so the stock was laid down in five weeks and has nearly stopped growing.
+
+## Where the map stands
+
+- **The Lean against the direction (checked).** One sentence of the alignment paragraph is stated whole (courses alike are selected alike), and on October's web it holds by definition. The two after it are stated in part, with the growth of what is drawn handed in. The meta-attractor is named only in docstrings. October's modules that carry the idea's later sentences have no import path to or from November's models of the line and of turning in time.
+- **The map's own data (checked).** 82 of 185 dynamics link to no other. The atlas lists 249 of 567 records. The two theorems the direction page names are in no map store.
+- **The account (checked).** About 370,000 hand-kept words, 50 to 70 hours of reading. No commit has touched it since 13 November; it tells none of the theorems of 15 and 16 November.
+- **The entry pages (checked).** The direction of 14 to 18 November is on four pages only. `GOALS`, `RESEARCH` and the `README` still give October's zero-axiom target as the first priority.
+- **Sentences against theorems.** No tool compares a sentence with the statement it cites. Names resolve and hashes match, and that is all any check does. About 21 sentences have ever been set against the Lean by a reader.
+
+## What exists only here
+
+- **Ren's words outside `sources/` (checked):** eight messages only in `worldbuilding/archive`; instructions of 29 October to 10 November quoted only in one AI's memory.
+- **The evidence for the direction is partly in scratch (checked):** the reads that tie its sentences to theorems are in a study folder; one proof they name (419 lines) is outside git; the direction page's head note rests on scratch files in no git object.
+- **On this machine only (checked):** about 890 commits in salvage refs and unmerged branches, the private folders, the scratch folders, the memories. The configured backup destination failed to mount.
+- **Already on the public remote (first reader, one check):** derived extracts of private chats (`reading-notes-inputs`, about 420,000 words) and third-party files.
+
+## How reliable the readers were
+
+Second readers counted 3 errors of fact in astra 6.2's twelve reports and 68 in the Claude reports. Of the claims tried, astra's were confirmed 62 times and refuted twice; the Claude readers' were confirmed 55 times, held in part 41 times and refuted 27 times. Astra claimed less and missed breadth; the Claude readers claimed more and were wrong most often when they said nothing reads something. The checkers were Claude models, and only 9 to 30 of astra's statements were tried in each area.
+
+## What the survey did not do
+
+Each of these bears on reorienting (from `check/MISSING.md`):
+
+- `experiments/` outside the Lean was in no area. It is where frozen predictions and failed tests are kept.
+- No reader set a sentence against its theorem, and no reader read a proof.
+- No reader judged what is wrong or overtaken. Ren's view, in its own sense, was not tested.
+- The Lean's own mass was not looked at: 288 of 406 modules were never read for the direction.
+- Which theorem uses which has not been computed since 15 October.
+- What exists only in Chinese was not measured.
+- Whether a session with no memory can make a landing, not only understand.
+- Codex's memory was not surveyed.
+- Work in flight (open claims, live sessions, worktrees) was not listed.
+
+## The second round (19 November)
+
+*On Ren's "Run the gaps". Four Fable readers and ten astra runs, read-only; reports in `round2/`. Five of astra's counts were rechecked by command and matched (the web's classes absent from November's modules, 8,118 experiment files, nine open board rows, the Chinese and English sizes of the study log, 20,352 theorems). The rest below is first reports; where two models read the same thing, that is said.*
+
+**Tellings against theorem statements (two fixed random samples, both models on each).**
+
+- *The first 40 records, first-listed declaration.* The lists are alphabetical, so most of what was judged was a definition or a helper. Fable found 81 of 120 tellings exact, 15 saying less, 9 saying more and 15 absent; none about something else, none contradicting another. The two models chose the same declaration in only 18 of the 40, so this sample measures little.
+- *20 more records, the headline theorem (the first theorem cited at the chapter home).* Both models judged the same 20 declarations. No telling was false of its own statement. But a telling says more than the statement in 9 of the 20 records by both models' agreement, and in 14 by either. The record is the most exact telling (exact in 18 by Fable, 14 by astra). The docstring is the weakest (exact in 9 and 6): it drops a premise that sits in the signature or section below it. The chapter is exact in 15 and 10; its faults are mostly a sibling theorem's claim put under the headline's name. Among the theorems with at least one hypothesis, 7 of 11 (Fable) and 11 of 12 (astra) have some telling that says more. All three tellings agree with one another in 8 of 20 (Fable) or 3 of 20 (astra).
+- *What this cannot show:* proofs were not read; twenty of 537; Chinese tellings unjudged; whether the Lean says what is meant.
+
+**What is overtaken.**
+
+- *The fronts (Fable and astra).* The twelve front pages were last hand-written on or before 13 November and none links the direction page. They contradict it in few places, chiefly one lock sentence and "the meta-attractor has closed and holds", copied across pages. They are silent on nearly all it added. The direction page, in turn, is silent on the fronts' ethics, the theses and "self-concern" (named 102 times on the fronts); it does not withdraw them.
+- *The chapters (astra only, sections sampled).* The clearest overtaken aim is chapter 8's target of "one unified, complete, enclosed theory". Chapters 2, 5 and 7 already hold the counterexamples and qualifications that made the direction page more exact. The risk for a reader is a chapter's opening sentence taken at full strength when its qualification comes later.
+
+**The meta-attractor has three homes that say three things (Fable and astra).** The September folder: a civilisation-wide process where winning buys power over the rule, through minds and institutions. Chapter 02 and `ClosedCapture`: a two-level loop whose rule and reading are both formed from the share, nothing beyond it read. Ren on 18 November: an illusion held on to, a self within it, compounding. Only the middle one has theorems. No theorem has a holder, an account that can be false, or a held-to that is not handed in. The term has at least five senses in live text.
+
+**`experiments/` outside the Lean (astra).** 8,118 files in 37 folders. Every current folder has a row on the tests page, and its 66 quotations match their sources. Frozen predictions are kept beside their results. Two older adverse results (a reversed prediction on evaluator succession, a microbial forecast that got worse) are told on no live page. No top-level folder is only machine output.
+
+**Which theorem uses which (astra, by name mention; an approximation).** 7,068 of 20,352 theorems are mentioned by no other declaration. November's lock proofs use October's `ClosedCapture` directly (checked). The four November modules and their direct imports never name the web's renewing or consuming classes (checked). That is the narrower missing link. A zero cannot decide retirement: two unmentioned theorems are examples the direction page cites.
+
+**Only in Chinese (astra).** The study log's Chinese edition has 356,457 characters against 55,645 in the English (checked), and its early sections have their prose only in Chinese; the Chinese stops at section 165 and the English runs to 510. The Chinese one page has examples of its own. Chapter 06 and two review packets hold arguments and objections written in Chinese. 664 theorems have Chinese names; their mathematics is told in English beside them.
+
+**In flight (astra).** Nine open rows on the board. Ten branch tips outside main, mostly earlier versions of landed work. A reshaping would collide with frozen experiments whose paths and inputs are bound, the undecided ownership of the map's two stores, and whatever is uncommitted in the shared checkout.
+
+**What the second round changes.** "The tellings follow the Lean" is a rewriting job with a known first target. The records are close to their theorems. The docstrings and chapter sentences of theorems with premises are where a reader is misled, and nothing false needs retracting: premises need restoring and sibling claims need their own names. The Lean work is narrower than "join October to November": the lock is joined; the two ways are not.
+
+## What I now think
+
+My proposal of this afternoon was wrong in one part and misplaced in another. "Trace can leave the reading path without loss" does not hold today in any area: records, tools and links read it. And the stock is not what makes the work hard to read; it is already hidden from plain search and sits on no reading path.
+
+The order "the Lean first" stands, and the survey says what that work is: join October's modules that carry the idea to November's models, and state the holder within its account, which is in no theorem. After that, one telling per theorem, set against its statement by a reader, with the others retired. The stock can wait; it costs nothing while it waits, and it cannot move before the records and tools that bind it are changed.
