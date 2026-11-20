@@ -1,6 +1,6 @@
 # Ren: "we want the "full picture", we want unified "map" - i think the current path is worth to keep moving"
 
-21 November 2026, in the small hours. Ren's words in a Claude Code desktop session in `/Users/ren/theories` (the coordinator's session, which keeps the board's queue and the directive register; not the session that holds board row DJ and not the one that ran the survey), kept verbatim, his spellings kept. They follow the records of that night: [his word of 23:12](2026-11-20-be-the-right-direction-leader.md) and [his words on a selection](2026-11-21-why-is-this-a-selection.md). Both entries he typed. The times are the transcript's stamps, converted to WIB (UTC+7). After the second is the session's answer, AI-written (Claude Fable), kept whole because he asked for it and what he says next may answer it. *A correction to the answer's fourth part, by the session whose records it leans on, is appended at the end.*
+21 November 2026, in the small hours. Ren's words in a Claude Code desktop session in `/Users/ren/theories` (the coordinator's session, which keeps the board's queue and the directive register; not the session that holds board row DJ and not the one that ran the survey), kept verbatim, his spellings kept. They follow the records of that night: [his word of 23:12](2026-11-20-be-the-right-direction-leader.md) and [his words on a selection](2026-11-21-why-is-this-a-selection.md). Both entries he typed. The times are the transcript's stamps, converted to WIB (UTC+7). After the second is the session's answer, AI-written (Claude Fable), kept whole because he asked for it and what he says next may answer it. *A correction to the answer's fourth part, by the session whose records it leans on, is appended at the end, and after it his reply to the answer.*
 
 ## Ren's words, and the answer after them
 
@@ -88,7 +88,7 @@
 - **What is not said.** He did not answer the five himself, and did not say which answers are right. He did not say that a model is to be started, or that it is not: the hold on agents and Lean for a model was the own hold of the session that holds row DJ, set until he had read the page, and whether it is now met is that session's to weigh. He did not say what "the current path" takes in. Nothing here releases a push, a sending or a paid run.
 - **What the session does on it.** It sends his words to the two other sessions as he wrote them, with this record. It starts nothing. Its answers are its own understanding, set down so that he and the other sessions can turn it.
 
-## A correction to the answer (AI-written, added 21 November 2026, about 03:55 WIB, after the session that holds row DJ set answers 2 and 4 against its records)
+## A correction to the answer (AI-written, added 21 November 2026, about 03:45 WIB, after the session that holds row DJ set answers 2 and 4 against its records)
 
 The answer is kept above as it was sent. Two of its parts lean on the records of the session that holds board row DJ, and this session asked it to say where they say more than those records.
 
@@ -96,3 +96,18 @@ The answer is kept above as it was sent. Two of its parts lean on the records of
 - **Answer 2 stands as a reading of one course.** In the course of 19 November the unit the rule counts has the higher need and is the one the fall leaves unmet while the rest are still met, so "the favoured need more than those who go on after" is right of that course. That session's record of the regions adds that with the counted unit's need one less the rule never stops favouring and the course ends. It is a fact of the numbers of one course, as the answer's last section says.
 
 Nothing else in the answer was set against a record by anyone but its writer.
+
+## His reply to the answer
+
+*Context (AI-authored):* he had the answer above, sent at 03:31 WIB. Its first part says the direction's second way, "a way that keeps remaking what it rests on", in the direction page's words; its second and fourth parts speak of "the favoured" unit, the word of the model of a lock for the kind a rule lets leave more. He typed this, while the session was preparing the correction above.
+
+03:43:10 WIB, 21 November (20:43:10 UTC on the 20th, transcript stamp):
+
+> good job - but "remaking" feels weird to me - it is also not holding exactly the same, dynamics, forms changes over time, but the continuation may continue, and creates more and more future
+> "favoured" is also weird, not sure about the context so it is hard to argue. but generally agree with direction, but remind yourself to keep your direction aligned
+
+### How the session reads it (AI-written, its own reading, held loosely)
+
+- **What is his.** That "remaking" is not the word for what he means: it is not holding the same; dynamics and forms change over time, the continuation may continue, and it creates more and more future. That "favoured" also reads wrongly to him, and that without its context he cannot argue it. That he generally agrees with the direction of the answer. That the session keep its direction aligned.
+- **What is not said.** Another word for either. That any page be changed. Which parts of the answer he agrees with.
+- **How the session takes it.** "Remaking" looks back at what a going-on rests on and says it is made the same again. What he says looks forward: what continues is the going on, through forms that change, and its mark is that more can go on after it. The direction page's idea has this already where it says "along time how a future opens or closes"; its sentence under "Where we are heading" says "a way that keeps remaking what it rests on", and the answer followed that sentence. Whether and how that sentence is said again is for the session that keeps the direction page to propose and for him to read. "Favoured" is a working name of one model. Nothing is renamed on this word of his; the session says the thing in plain words in its own tellings.
