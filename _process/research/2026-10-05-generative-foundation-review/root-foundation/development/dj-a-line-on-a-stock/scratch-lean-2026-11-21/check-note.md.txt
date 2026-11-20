@@ -1,0 +1,113 @@
+# Check of the note on the two scratch Lean modules
+
+*AI-written (Claude Opus, a checker who took no part), 21 November 2026; its findings as returned, set down by the session that ran it with nothing changed.*
+
+1. **MUST: the build counts for `ScratchUnitsTurn` and its check module are wrong.**
+   - Note, line 14: "`ScratchUnitsTurn` (1,367 lines; 87 declarations, 75 of them theorems; 9 builds) and a check module `ScratchUnitsTurnCheck` (2 theorems; 1 build)."
+   - Source, REPORT-units.md.txt, Builds table: "Ten builds". Builds 1–7 and 9 are of ScratchUnitsTurn; builds 8 and 10 are of ScratchUnitsTurnCheck. The logs read "exit 0 build 9" and "exit 0 build 10". These are numbers from one shared counter, not per-module counts.
+   - Fault: the module was built 8 times, not 9. The check module was built twice, not once.
+   - Replace with: "(…; 8 builds, the last numbered 9) and a check module `ScratchUnitsTurnCheck` (2 theorems; 2 builds, numbered 8 and 10; ten builds in all for the two)".
+
+2. **MUST: the reader's verdict is quoted, but not word for word.**
+   - Note, line 18: "Neither module has a MUST finding. Each statement says what was asked, or something more general that contains it, and none is empty."
+   - Source, READ-two-statements.md.txt line 17: "Neither module has a MUST finding. Every statement says what was asked, or something more general that still contains it. No premise is unsatisfiable."
+   - Fault: "Each" and "Every" differ, "still" is dropped, and "none is empty" is not the reader's sentence.
+   - Replace with the source's three sentences verbatim, or drop the quotation marks and paraphrase.
+
+3. **MUST: "What it is" undercounts the cases and says they are cases of one statement.**
+   - Note, line 52: "one existing theorem and two scratch proofs become cases of one statement with their statements unchanged … It is 1,367 lines to make one theorem a case".
+   - Sources:
+     - Reader line 142: "`first_marked_same` checks the case's statement against `TurningInTime.unending_iff_first_marked` by `rfl`."
+     - Reader line 152: `two_units_same … := rfl` builds.
+     - REPORT-units.md.txt lines 16–19: the cases go through different statements. `unending_carrier` gives `unending_grown_case` and `unending_iff_carrier_case`. `unending_iff_first_marked_wide` gives `unending_iff_first_marked_case`. `units_turn_iff_first` gives `two_units_iff_case`, and gives `mixed_turns_iff_case` only where n < m; the rest goes by `one_need_ends`.
+   - Fault: two package theorems are cases with an `rfl` check, not one: `WayOfUnits.two_units_iff` and `TurningInTime.unending_iff_first_marked`. A third, `WayOfUnits.unending_iff_carrier`, matches by eye only. And they are cases of three statements, not one.
+   - Replace with: "two theorems of the package (`two_units_iff`, `unending_iff_first_marked`) and two scratch theorems of 17 November become cases, each with an `rfl` check, of three statements (`units_turn_iff_first`, with `one_need_ends` where no stayer is left; `unending_carrier`; `unending_iff_first_marked_wide`); a third package theorem, `unending_iff_carrier`, matches by the reader's eye … It is 1,367 lines for these cases".
+
+4. **MUST: the list of `rfl`-checked cases leaves one out.**
+   - Note, line 30: "Cases with the old statements exactly, each checked by `rfl` …: `WayOfUnits.two_units_iff` …, the scratch's `mixed_turns_iff` …, and the scratch's `unending_grown`."
+   - Source, REPORT-units.md.txt line 15: "the package's law is then a case, statement unchanged (`unending_iff_first_marked_case`, checked by `rfl` in `first_marked_same`)". Also reader finding 12.
+   - Fault: the case of `TurningInTime.unending_iff_first_marked` is missing. Line 47 relies on it.
+   - Add: "and `TurningInTime.unending_iff_first_marked` (`unending_iff_first_marked_case`, checked by `first_marked_same`), through `unending_iff_first_marked_wide`, which weakens its premise `asItWasEnds`".
+
+5. **MUST: "with the step found" hides a premise that matters.**
+   - Note, line 28: "`units_turn_iff`, with the step given, and `units_turn_iff_first`, with the step found: the statement in units of 20 November as corrected."
+   - Sources:
+     - Signature, ScratchUnitsTurn.lean.txt line 904: `(comes : ∃ N, wasLevel kids use giving w x N < m)`.
+     - REPORT-units.md.txt: "'The course as it was comes below `m` at some step' is then `belowT`; it is a premise and is not derived."
+   - Fault: "found" reads as if the turn were derived. Its existence is a premise. No premise of either theorem is named, so a reader cannot see that every unit not of S, in every generation of the course as it was, must leave only itself and need n (`Stays`). Nor can they see the other premises: 0 < n ≤ m, `Keeps` at the start's stayers' take, and the regime at T.
+   - Replace with: "`units_turn_iff`, with the turn T given (`before`, `belowT`), and `units_turn_iff_first`, with only its existence assumed (`comes : ∃ N, X N < m`) and the regime asked at the first such step. Premises of both: the growers S are decided and each needs m; every other unit of every generation leaves only itself and needs n, with 0 < n ≤ m (`Stays`); nothing is given from nothing; the start is within hi and `Keeps` at the start's stayers' take."
+
+6. **LESSER: the reader's partial read is not told.**
+   - Note, line 3: "then read by an AI reader who took no part"; line 16: "as the reader read them".
+   - Source, reader line 7: "`Becoming/ScratchUnitsTurn.lean`, lines 1-470, 474-512, 700-1366, and the declaration list."
+   - Fault: lines 471–473 and 513–699 of the units module were not read.
+   - Add: "(the reader read the units module except lines 471–473 and 513–699)".
+
+7. **LESSER: the reason for not following the lemma is not the source's, and the attribution is dropped.**
+   - Note, line 39: "The paper argument's use of one lemma was not followed (its premise is of every unit, not of the way)".
+   - Source, REPORT-units.md.txt: "Not used, against the paper argument: `gone_from` (its `closed` is global, as the reader warned)."
+   - Fault: "of every unit, not of the way" is not in the source. The source says the premise is global, and that the reader of 20 November warned of it.
+   - Replace with: "The paper argument's use of `gone_from` was not followed (its premise `closed` is global, as the reader of 20 November warned)".
+
+8. **LESSER: the carrier sentence says more than the source.**
+   - Note, line 40: "The carrier of the transfer is the list of units itself".
+   - Source, REPORT-units.md.txt: "The carrier is `List U` itself, not the reader's `Nat ⊕ Unit`." That sentence is about `unending_turned`; `unending_carrier` takes any carrier W.
+   - Replace with: "For growers and stayers (`unending_turned`) the carrier is the list of units itself, not the `Nat ⊕ Unit` the capped reader had sketched; the general transfer takes any carrier."
+
+9. **LESSER: "with the reader agreeing where it read" claims more agreement than the report shows.**
+   - Note, line 35.
+   - Source: the reader agrees explicitly only on `mixed_turns_iff` (line 167: "The writer's finding is right") and on `two_units_iff` needing the separate line (finding 13). It says nothing of `gone_from` or of the carrier.
+   - Replace with: "By the units' implementer; the reader agreed on the first two; the last three it did not address."
+
+10. **LESSER: the witness of "not the least" is not on a process of the package.**
+    - Note, line 24: "on a process of the package … ; and on another the premise fails while the conclusion holds (`Successor.…`)".
+    - Source, REPORT-keepable.md.txt line 75: `def process : Process Nat Unit := Law.process Nat.succ` is defined in the scratch.
+    - Replace with: "and on the successor law of the numbers, a process defined in the scratch, the premise fails while the conclusion holds".
+
+11. **LESSER: the run form leaves out its premise on the run's start.**
+    - Note, line 23: "and so along any run."
+    - Signature: `(lost : ¬ Keepable P g (r.state 0))`.
+    - Replace with: "and so along any run that starts from such a configuration."
+
+12. **LESSER: findings the note's reader would need are left out.**
+    - Reader line 218: if `_wide` lands, the remark at TurningInTime 283 must name the weaker premise.
+    - REPORT-keepable.md.txt line 17: the positive form needs a decision of the guard; it was not written and is expected unprovable without one (argued).
+    - REPORT-units.md.txt: `mixed_turns_iff`'s premise `ne : R ≠ []` is unused and is carried unnamed. This is the only change to the signature.
+    - Reader line 178: suggests `carrier_same` as an `rfl` check.
+    - Add one line each under the reader's and the implementers' findings.
+
+13. **LESSER: two claims of fact in the note are not in the sources.**
+    - Line 53: "Entering the package needs the core run, which is heavy on this machine". It is likely true by the repository's practice, but none of the sources say it.
+    - Line 7: "claimed on the board's row DJ as a join and not a new result". The board is not among the sources. REPORT-units.md.txt does say "Nothing here is a new result of the theory".
+    - Mark both as the writer's, or cite the board.
+
+**What I checked and found sound:**
+- **Logs:** every module has exit 0, `unclean: []` and empty `with_axioms`, and the declaration and theorem counts match (11/8, 87/75, 2/2).
+- **Line counts:** 167 and 1,367 match.
+- **`keepable_step_iff`:** it has no premise, so the telling is exact.
+- **`not_keepable_step`:** the premise is told correctly and no decision of the guard is used.
+- **The keepable witnesses:** `ChoicePoint.keepable_gained` is on a package process. `not_keepable_invariant_iff` states the exact premise.
+- **`units_turn_iff`'s dropped premise:** "R_T is not empty" is dropped and derived (`draw_pos`), so the theorem concludes nothing where no stayer is left.
+- **The two transfers:** `unending_turned` is proved by `unending_carrier` (line 730), so "stated once" holds.
+- **`rfl` checks:** the three named in line 30 exist. `unending_iff_carrier` has none and is by eye.
+- **The worked example:** its numbers and its two verdicts (from the computed course and from the law) are as told, and the reader checked them by hand.
+- **Line 37 (`mixed_turns_iff` only where n < m):** sound, and so is the "equal pairs, as predicted" sentence.
+- **"No premise missing, no conclusion false":** this is the implementer's sentence and is told as such.
+- **`one_need_ends`:** the lesser finding is told fairly.
+- **The keepable step form's local premise:** told as argued, as in the report.
+- **Shorter proofs (line 47):** the counts (about 18 lines to 3; longer; only if helpers are retired; none) match the reader.
+- **The landing items (line 48):** they match the keepable report, line 21 verbatim in substance.
+- **Line 52, the October step law:** "a general step law that October's files had only for their own process" is supported, on paper, by REPORT-keepable.md.txt line 38.
+- **Attributions:** the reader is Claude Opus and ran no build; there were two implementers.
+- **"One after the other":** consistent with the build times. Keepable builds ended at 04:01:31 and units builds started at 04:19:33.
+- **Line 60:** the keepable report's file was refused, as told.
+
+**Not checked:**
+- The token count (0.70 million), the 57 minutes and the ceiling of about 1.5 million told to Ren. They are not in the sources.
+- The quotation of Ren and its link.
+- The board claim.
+- "Neither places the two ways".
+- Whether the writer read none of the Lean.
+- The module bodies beyond the signatures grepped.
+
+Tool calls: 6.
