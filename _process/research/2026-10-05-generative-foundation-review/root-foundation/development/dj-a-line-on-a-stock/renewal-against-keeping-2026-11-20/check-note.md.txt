@@ -1,0 +1,122 @@
+# Check of NOTE.md (place20) against FROZEN-THE-PLACING.md, read-placing.md, refute-placing.md
+
+*AI-written (Claude, checker who took no part), 20 November 2026. All three sources and the note were read whole. Nothing was built or run; no file changed but this one.*
+
+MUST = false, or says more than its source. LESSER = imprecise, unattributed, or an omission.
+
+## Findings
+
+1. **MUST.** Note (Where each thing stands over): "The package does have choices of a process's move from a reading, for any process (the reader names two; the refuter adds three more), all for keeping a guard on every successor."
+   Source (refute-placing.md, table, row "A policy on births"): "The construction exists for any process: `closedBy` ... Also `GuardHorizon.UniformPolicy` ..., `Keeping.Plan` ..., `ReadingLoop.keeping_policy_iff` .... The last three choose for keeping a guard on *every* successor". And section 0: "`closedBy (P : Process S A) (policy : S → A)` ... the process with its move formed from the configuration by a policy, for any process."
+   Fault: "all" is false. `closedBy` (and `MoveFormation`'s `policyUpto`) takes any policy and is the refuter's main correction of the reader here. Only `UniformPolicy`-at-`Admissible`, `Plan` and `keeping_policy_iff` choose for keeping on every successor. The count is also loose: the refuter's three additions are `closedBy`, two theorems about it (`closedBy_determined`, `closedBy_runs_agree`), and `MoveFormation` together with `keeping_policy_iff`.
+   In its place: "The package does have choices of a process's move from a reading, for any process. The reader names two (`UniformPolicy` at `Admissible`, `Plan`), both for keeping a guard on every successor. The refuter adds `closedBy`, which forms a process's move from any policy (so a policy on births needs no new definition), and `ReadingLoop.keeping_policy_iff`, which is again for keeping on every successor."
+
+2. **MUST.** Note (What it turns): "Nothing found joins them, and by the refuter nothing can without a new model."
+   Source (refute-placing.md, section 6): "The pieces lie on opposite sides. ... Putting them in one law changes `channelProcess` or the lock's step. That is a new model, not a bridge." Plain answer, marked "on paper": "After this read, is there any statement, writable without a new model, that says where a course passes ... ? No."
+   Fault: the refuter says that *one law containing both* changes a step and so is a new model, and that it found no statement, writable without one, that *says where a course passes*. It does not say that nothing *can join* the two sides (in this repository a join is an old proof becoming a case of another, which needs no single law with both). The note also applies "them" to the pieces of all three tries; the refuter spoke only of the renewal files and the package's pieces. And it was argued on paper.
+   In its place: "Nothing found joins them. By the refuter, on paper and of this read's pieces, putting them in one law changes the channel process or the lock's step, which is a new model, not a bridge."
+
+3. **MUST.** Note (What is kept, item 3): "\"One law with both changes the channel process or the lock's step, which is a new model.\""
+   Source (refute-placing.md, section 6): "Putting them in one law changes `channelProcess` or the lock's step. That is a new model, not a bridge."
+   Fault: in quotation marks but not word for word, and "not a bridge" is dropped.
+   In its place: "\"Putting them in one law changes `channelProcess` or the lock's step. That is a new model, not a bridge.\""
+
+4. **MUST.** Note (How it came out, first bullet): "Through a second bridge the reader found (a run of the files' own guarded process), three renewal proofs are instances of general constructions of the package; ... and one of them was already recorded as the same statement on 16 October."
+   Source (refute-placing.md, section 1): of `short_kinds_cannot_renew_forever`: "already a case in October, by the file's own proof from `L/Depletion.lean`, and recorded as the same statement on 16 October (section 0). Neither bridge is used: the statement is about bare sequences." Also read-placing.md, P5: "through `renewingProcess`, four renewal proofs become cases".
+   Fault: by the refuter, only two of the three (`renewable_of_step`, `steady_endless`) go through the second bridge. The third uses neither bridge, and it was proved from `lean/Depletion.lean`, which is outside the package; what was recorded on 16 October is that the package's `no_execution_of_depletion` is the same statement as Depletion's. The note also does not say that the reader counted four and the refuter corrected it to three.
+   In its place: "The reader counted four renewal proofs as cases of general laws of the package, through a second bridge it found (a run of the files' own guarded process). The refuter finds three things that are instances, all on paper: two through that bridge (`renewable_of_step`, `steady_endless`); and one (`short_kinds_cannot_renew_forever`) through neither bridge, which was proved in October from `lean/Depletion.lean`, a law recorded on 16 October as the same statement as the package's `no_execution_of_depletion`. None gets shorter; what they say is: prepend a step, stay at a configuration that steps to itself, a strictly falling number allows no run. None is a law about renewal."
+
+5. **MUST.** Note (How it came out, third bullet): "and whether a configuration is renewable is not decided anywhere (the files' README lists it as not yet characterised)."
+   Source (refute-placing.md, table): "A decision of renewability at a configuration ... Not proved (`R/README.md` 94) | For one level: section 7 of `TurningInTime`". Section 3: "`R/README.md` line 94 lists \"an exact characterization of renewable configurations\" under what is not yet proved." read-placing.md, Q5: "Whether `Renewable law c` is decided at a configuration: not found."
+   Fault: "not decided anywhere" is wider than "not proved in the renewal files / not found in what was read", and it contradicts the note's own item 3 ("the package has it for one level"). A decision of each case and an exact characterization are also not the same thing; the README names the second.
+   In its place: "and that a configuration is renewable or not is not found decided in the renewal files (their README lists an exact characterization of renewable configurations as not yet proved)."
+
+6. **MUST.** Note (What was asked): "the reader did not see it and the refuter did."
+   Source (read-placing.md, "The frozen file"): "After this report was written, a read-only hash check showed that its writer had added a section below that line at 21:00 ... I saw that addition in a diff only then; nothing in this report was written or changed for it".
+   Fault: false as worded. The reader did see the addition, after writing.
+   In its place: "the reader saw it only after its report was written, and changed nothing for it; the refuter saw it before writing, and said so."
+
+7. **MUST.** Note (What it turns): "So the next step in the order, the meeting where the level is itself kept, is not a join of what exists. It is a model."
+   Source: neither report speaks of the meeting inside a kept level. The frozen file names it only as the order to return to.
+   Fault: introduced by "So", this is told as following from the reports, but it is the writer's own step, built on finding 2's overstatement and on the three-tries reading that the note itself calls "my reading".
+   In its place: "From that reading, and this is my step, not the reports': the next step in the order, the meeting where the level is itself kept, looks to need a model rather than a join of what exists."
+
+8. **LESSER.** Note (What it turns): "Each time the pieces were found on opposite sides: on one side a level that can run down, use, units that multiply, a lock; on the other, kinds that re-form each other from a source with no limit, at no cost, with nothing selecting."
+   Source: for this try only, refute-placing.md section 6: "The package has a level that can run down, a use that draws it, units that multiply and a lock ... The renewal files have kinds that re-form one another, with the source unlimited, support free and nothing that selects."
+   Fault: "each time" is a claim about the two earlier tries, which these sources do not contain (I did not check those records). It is unclear whether "kinds that re-form each other" was a side in the first try, which came before the renewal files were found. The paragraph is labelled as the writer's reading, which softens this.
+   In its place: "In this read the refuter found the pieces on opposite sides: ...; I read the two earlier tries the same way."
+
+9. **LESSER.** Note (How it came out, first bullet): "By it no named law of either side becomes a case of a law of the other or gets shorter."
+   Source (refute-placing.md, section 1): "So by the named bridge: **no law becomes a case, and none gets shorter.**" read-placing.md, 2a: it counts `renewable_live_step` as "half a case" (first conjunct by `Keepable.start`).
+   Fault: this is the refuter's verdict, given without attribution, and the reader's "half a case" is left out. The refuter answers it ("Not a named law, and not shorter").
+   In its place: "By it, the refuter finds, no named law of either side becomes a case of a law of the other or gets shorter (the reader counted half of `renewable_live_step` as a case by `Keepable.start`; the refuter: that half is not a named law, and is not shorter)."
+
+10. **LESSER.** Note: "the refuter calls them run plumbing (prepend a step; stay at a fixed point; a falling number allows no run)".
+    Source (refute-placing.md, section 1): "What these three are: prepend a step to a run; stay at a configuration that steps to itself; a strictly falling number allows no run. ... None is a law about renewal."
+    Fault: the refuter does not use the word "plumbing", and "strictly" is dropped (a number that falls only weakly allows a run). Covered by the replacement in finding 4.
+
+11. **LESSER.** Note: "The reader's case against the drift test was that the renewal model has a reserve, supporters and re-forming in it."
+    Source (read-placing.md, P5): "They are stated on a law that does have a reserve, supporters and re-formation, so 'what is rested on' and 'remaking' are in the model ...: that last sentence is my reading, not a statement of the Lean." refute-placing.md, section 4: "The reader's last sentence under P5 is that ...".
+    Fault: the reader did not take up the tests at all. The refuter made this sentence the case against test 4, and the reader marked it as its own reading.
+    In its place: "The one case against the drift test, which the refuter took from a sentence the reader wrote under P5 and marked as its reading, was that the renewal model has a reserve, supporters and re-forming in it."
+
+12. **LESSER.** Note (third bullet): "no deadline follows the loss in a law that has a population"; and the bullet is headed "by the files' own theorems".
+    Source (refute-placing.md, test 3, point 4): "For a non-renewable configuration of a law that has one, the files give only the negation of \"some history stays live\" [not found in the declaration lists of the eight files]." Point 3 is a word search.
+    Fault: the "not found" qualifier is dropped, and two of the five points come from a search and the README, not from theorems.
+    In its place: "no deadline after the loss was found, in the declaration lists of the eight files, for a law that has a population"; and head the bullet "by the files' own theorems, searches and README, as the refuter assembled them".
+
+13. **LESSER.** Note, item 3: "a rule and a share for a policy on which kinds are formed (the construction of a policy exists for any process; the rule, the share and three premises do not)".
+    Source (refute-placing.md, table): "What is not there for this law: a rule type and its order, a share on configurations, `f` and `h` as functions (the reserve clause is an inequality, so a function needs the reserve fixed too), and proofs of `Raises`, `ReadsShare`, `upper`".
+    Fault: "for this law" and `f`, `h` as functions are dropped. "Do not [exist]" reads as if the package lacks the notions, when what is missing are their instances and proofs for the channel law.
+    In its place: "(the construction of a policy exists for any process; for this law there is no rule and its order, no share, no `f` and `h` as functions, and no proofs of the lock's three premises)".
+
+14. **LESSER.** Note, item 4: "the source is unlimited, and it is what is rested on, while only the tokens are remade".
+    Source (refute-placing.md, section 7, item 3): "So \"keeps remaking what it rests on\" is true of the supporters and not of the source [P: my reading of the step]."
+    Fault: the refuter marks this as its reading of the step, and the note tells it as read off. The list also leaves out refuter items 4 (growth uses nothing up: the first way cannot occur in this law by multiplying), 6 (the reserve clause is an inequality) and 9 ("cannot be created from within" holds only within the law's own steps), with nothing to show that the list is a selection.
+    In its place: add "(the last, the refuter's reading of the step)", and "among them" after "(the refuter)"; and add "growth uses nothing up: a kind that opens more than it takes is a net source, so the first way cannot occur in this law by multiplying".
+
+15. **LESSER.** Note, item 5: "The refuter read two hashes and an assertion and ran nothing".
+    Source (refute-placing.md): "The only commands were reads, `grep`, `shasum` ...". Section 0: "[S for the hashes, P for what follows] ... The present `L/Depletion.lean` hashes to `3bf4becd…` ... the declarations I looked at (60–75) are as before. ... I ran nothing."
+    Fault: one hash was read in `check.py`; the other the refuter computed with `shasum`. "Ran nothing" means it did not run the checker. Also left out: that the declarations the refuter looked at are unchanged. The rest of the item ("pins the hash", "a comment of 16 October", "on paper it would stop at its own assertion", "receipt of 7 October") matches the refuter's words.
+    In its place: "The refuter read the pinned hash in `check.py`, computed the present file's hash with `shasum`, and did not run the checker; the declarations it looked at (lines 60–75) are as before. I have not run it either."
+
+16. **LESSER.** Note (What it turns): "By the fourth of the conditions I wrote at 21:00, the drift test tripping means the work does not go on with these files."
+    Source (FROZEN, After, item 4): "Test 4 above (drift) trips and the work goes on with these files all the same." Then: "If any of the four is seen ...: the work goes back to the order ...".
+    Fault: the condition says that going on would count as the find pulling the order. That the work therefore stops is the writer's decision, sound, but it does not follow from the condition alone.
+    In its place: "By the fourth of the conditions I wrote at 21:00, going on with these files after the drift test tripped would be the find pulling the order; so the work does not go on with them."
+
+17. **LESSER (omission).** The note never says that the refuter flagged its own position. refute-placing.md, "One thing to know first": "I saw that addition before writing. Its item 4 hangs on test 4. I say so here so that my verdict on test 4 can be weighed with that in mind". The note's whole "What it turns" rests on that verdict, so a reader needs to know this.
+    In its place, after "and the refuter did": "and the refuter said so, asking that its verdict on test 4, on which the fourth condition hangs, be weighed with that in mind."
+
+18. **LESSER (omission).** The note gives the verdict of P5 only. The reader's verdicts on P1 to P4 are not told, and one says the frozen guess was too wide. read-placing.md, P2: "\"nothing in the package decides keepability from a property of the law\" is too wide as written"; the package decides run existence in four ways and, for determined laws, has exact thresholds (`RegimeMargin.ends_iff_below`). P1 is half right (refuter, test 2), P3 is qualified, P4 holds.
+    In its place: one line, "Of the other guesses: P1 half right (the step law is general and missing; the not-generated law is not general); P2 too wide as written (the package decides run existence in four ways, and exactly for determined laws; nothing found does it for a branching law at the grain of its parameters); P3 and P4 hold with qualifications (reader)."
+
+19. **LESSER (omission).** The third bullet says why the renewable stretch's end is not the first way, but not what the end does give. refute-placing.md, test 3: "What A and B do give is the third clause alone, \"can no longer be turned\", for the guard `Live`, within the law's own steps (from outside it can be: `renewable_of_more`, 196)."
+    In its place: add "Its end does give the third clause alone, that it can no longer be turned, for the guard `Live` and within the law's own steps."
+
+20. **LESSER.** Note (What was asked): "with an exact law of what a supplied law admits", and "my guess does not hold".
+    Source (FROZEN): "with finitely many kinds, a supplied law admits ..."; the guess was "that this possibility is of the kind the package calls keepable and recoverable, and that the two ways might be placed by one relation".
+    Fault: the note states only the second half of the guess. Its first half (keepable) holds by the bridge, and "recoverable" fails as it stands (`NoReturnAt` does not apply). "My guess does not hold" is true of the part the note states.
+    In its place: "my guess does not hold: the possibility is of the kind the package calls keepable, but not recoverable as it stands, and nothing is placed by the relation."
+
+21. **LESSER (cannot check from the sources).** "0.73 million tokens by the run's own count, 30 minutes"; "One model that contains the rest was tried on 16 November and failed its tests, and I have proposed a model three times since and withdrawn it"; "whether work on this row goes on by models at all was listed as his to say". None of these is in the three sources. The frozen file estimated "About 0.8 million tokens". The times in the reports (20:53 freeze, reader's file at 21:09, refuter at 21:19) are consistent with 30 minutes. Their sources should be linked or checked before landing.
+
+## Checked and sound
+
+- The opening's account of method and marks.
+- The verdict list for tests 1 to 4 and P5.
+- The plain answer, word for word in substance.
+- The three-field structure of the bridge, attributed to both agents.
+- "keepable against not keepable ... says nothing of selecting (both)", and the refuter's reply on what `Keepable` names and on the closure theorem being of a law.
+- Item 1's gap: `Keepable.start`, `kernel_step_iff`, the two lemmas not found, the ChoicePoint counterexample, "short", "not a meeting".
+- The lock over its own determined step (both); `NoReturnAt` over level courses (both).
+- Item 3's other rows (cost of supporting, finite source, selection among histories, decision for one level).
+- Item 5's hash and receipt facts, apart from finding 15.
+- The withdrawal of the guess, and the frozen-file and 21:00 timeline.
+
+## Not checked
+
+- The Lean files themselves: no declaration, line or hash was opened or recomputed by me.
+- The earlier records (the read of things kept by goings-on, the 16 November model, the three proposals).
+- The run's token count and time.
+- Whether the `.md.txt` copies named under "Where it is" exist (they do not yet in `place20/`; `FROZEN.sha256` does).

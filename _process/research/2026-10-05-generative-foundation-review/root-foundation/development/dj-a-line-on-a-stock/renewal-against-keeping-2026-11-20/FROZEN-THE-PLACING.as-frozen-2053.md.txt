@@ -1,0 +1,51 @@
+# October's renewal files set against the package's keeping and no return: what is asked, and what would count as nothing
+
+*AI-written (Claude Fable, board row DJ), 20 November 2026, 20:53 WIB, before any agent ran. Frozen: nothing above the line "After" is changed later. This is a read on paper. No Lean is written or built. Renewable, keepable, live, way of selecting are working names or the files' own.*
+
+## What we are doing
+
+One map of how things come to be, go on, change and end, on which two ways of going on are placed with respect to each other: a way of selecting that uses up what it or others rest on and can no longer be turned, and a way that keeps remaking what it rests on. Placed means: where, and at which grain, a course is doing the one or the other, where it passes between them, and by what ways ([the direction page](../../../../../_process/DIRECTION.md), "Where we are heading").
+
+A read of 20 November ([its record](../rest20/NOTE.md)) found, outside the package, eight files of 6 and 7 October (`lean/conditional/renewal/`) with an exact law: with finitely many kinds, a supplied law admits a history that stays live for ever exactly where it has a self-renewing population of kinds. The writer wrote a guess beside it and marked it unchecked: that this possibility is of the kind the package calls keepable and recoverable, and that the two ways might be placed by one relation between a law's self-renewing population and a way of selecting among the histories the law admits. Ren said of another of October's studies that it is a part of the map and is not to turn the direction; these files are held the same way.
+
+## What the writer read at the source before freezing (definitions only, no proof)
+
+1. `Renewable law c` (`RenewalConfigurations.lean` 43): `∃ H : History law, H.states 0 = c ∧ ∀ n, Live (H.states n)`.
+2. `Keepable P g s` (`Becoming/JointKeeping.lean` 91): `∃ r : Run P, r.state 0 = s ∧ ∀ n, g (r.state n)`. `Viability.Kernel` is in `Becoming/Viability.lean` 55.
+3. Both files `open Generative`, and `Process` is one structure, in `GenerativeCore.lean` 23, which the renewal files import; the renewal files write `(channelProcess law).step c births c'`. `History law` is the renewal files' own structure (`RenewalLink.lean` 72); `Run P` is the package's (`Becoming/Frame.lean` 64).
+4. `renewable_iff_step` (a configuration is renewable exactly where it is live and some step leads to a renewable one) and `renewability_not_generated` (along any history, if the start is not renewable no later configuration is).
+5. `Recoverable feasible keeps l N` (`Becoming/ReadOffInTime.lean` 591): some feasible course agreeing with `l` up to `N` keeps; `NoReturnAt`: the first step at which a course is not recoverable. These are over courses of levels `Nat → C → Nat`, not over a `Process`.
+
+So at the level of definitions `Renewable law c` has the form of `Keepable (channelProcess law) Live c`, over the same `Process`, with two different structures for a run. That is read off five definitions and is not a checked bridge.
+
+## The questions
+
+1. **The bridge.** Is `Renewable law c` the same as `Keepable (channelProcess law) Live c`, and what lemma would carry `History` to `Run` and back? Does anything in the fields of the two structures make them differ (a settling time, a start, a premise on steps)?
+2. **Which renewal laws are cases of general laws the package already has** about `Kernel`, `Keepable`, `KeptFor`, `GuardHorizon`, `Lasting` or `ReadOffInTime`, with the statement unchanged, and by what instantiation? In particular `renewable_iff_step`, `renewability_not_generated`, `renewable_of_more`, `renewal_keeping_theorem`. Is "not keepable at the start, so not keepable later along any run" a law of the package for every process, or is it only in the renewal files?
+3. **Which renewal laws say what no general law of the package says?** The closure theorem and its deadline: a static property of the law that decides keepability. Is there anything of that kind in the package (a property of a process's law, not of a course, that decides whether some run keeps a guard)?
+4. **Where is a way of selecting?** In the package, what stands over a `Process` as a choice of action from a reading (`GuardHorizon.UniformPolicy`, `Keeping.KeptFor`'s plans, the readers of `ReadOffInTime`), and is the lock (`RuleCapture`, `TurningInTime` section 6) stated over a `Process` at all, or over its own step? Could "a rule set again from a share" be a policy on `births` without a new model, and what would have to be supplied?
+5. **The point of no return, on both sides.** For the channel process, is "the first step of a history at which the configuration is not renewable" stated anywhere in the renewal files (their deadline is for laws with no self-renewing population at all)? And does `ReadOffInTime`'s `NoReturnAt` apply to a history of configurations, or only to courses of levels?
+6. **What each side hands in** that the other derives, if anything.
+
+## The guesses (each may be false)
+
+- **P1.** The bridge holds by a short lemma each way, and `renewable_iff_step` and `renewability_not_generated` are then facts of every process, not of renewal. If the package has them as general laws, two October theorems become cases; if it does not, they are the general laws and the package lacks them.
+- **P2.** Nothing in the package decides keepability from a property of the law. The closure theorem is of a kind the package does not have.
+- **P3.** The lock is not stated over a `Process`; its step is its own. To say "a way of selecting among the histories a law admits" for the lock, a policy on births would have to be written, which is new modelling and belongs to a later step.
+- **P4.** `NoReturnAt` does not apply to configurations as it stands; the renewal files have no point of no return of a single history.
+- **P5 (against the guess written in the read's record).** Even with the bridge, nothing is placed: "some history stays live" and "the course that occurs" are joined only by a definition, and the two ways are no nearer than `Keepable` and its negation already were in October.
+
+## What would count as nothing having changed
+
+1. **A renaming.** The bridge is a definition unfolded and no law on either side becomes a case of a law on the other or gets shorter by it.
+2. **Already said.** The package's `Viability` and `JointKeeping` already state, for every process, everything the renewal files state of `Renewable` other than the closure theorem, and the closure theorem needs nothing from the package. Then the two stand side by side as before.
+3. **Not placed.** After the bridge, no statement that could be written without a new model says where a course passes from one way to the other. (P5.)
+4. **Drift.** The relation holds, and what it places is `Keepable` against not, which says nothing of selecting, of what is rested on, or of remaking. Then it is a part of the map and not the direction's two ways.
+
+## How it is read, and what it costs
+
+Two AI agents: one who answers the six questions at the statements, and one set to refute, who takes the four tests and P5 and tries to show nothing has changed. Then the writer's note and one checker. About 0.8 million tokens.
+
+---
+
+## After

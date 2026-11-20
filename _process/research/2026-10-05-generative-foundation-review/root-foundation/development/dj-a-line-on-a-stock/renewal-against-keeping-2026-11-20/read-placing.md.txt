@@ -1,0 +1,235 @@
+# Read: October's renewal files set against the package's keeping and no return
+
+*AI-written (Claude Fable, the reader for board row DJ's frozen step `FROZEN-THE-PLACING.md`), 20 November 2026, about 21:20 WIB. A read on paper: no Lean file written, nothing built, no test run, no git command that changes anything. The Lean-like statements below are text, **not written and not checked**.*
+
+**Marks.** **[S]** read off a statement at the file and line given. **[P]** argued by me on paper; unread by anyone, unchecked by Lean. **[G]** a guess. A negative is worded "not found in what was read"; what was read is listed at the end.
+
+Paths: `R/` = `lean/conditional/renewal/`, `B/` = `lean/becoming/Becoming/`, both under `experiments/integrated-correction/general-framework/generative-basis/`.
+
+---
+
+## Question 1. The bridge
+
+**The two structures, field by field [S].**
+
+| | `History law` (`R/RenewalLink.lean` 72–75) | `Run P` (`B/Frame.lean` 64–67) |
+|---|---|---|
+| configurations | `states : Nat → Config Kind` | `state : Nat → S` |
+| moves | `ticks : Nat → List Kind` | `act : Nat → A` |
+| steps | `steps : ∀ n, (channelProcess law).step (states n) (ticks n) (states (n + 1))` | `step : ∀ n, P.step (state n) (act n) (state (n + 1))` |
+
+`channelProcess law : Process (Config Kind) (List Kind)` (`R/RenewalAccounting.lean` 141–145), and `Process` is `Generative.Process` of `lean/GenerativeCore.lean` 23–24 on both sides: the renewal files import `GenerativeCore` (`RenewalAccounting.lean` 1), `Frame.lean` imports it (line 3). `R/check.py` 37 pins its hash `e3daca1b…69e8`; `shasum` of the present `lean/GenerativeCore.lean` gives the same [S, a read-only command]. Both toolchains are `leanprover/lean4:v4.29.1` [S].
+
+`History` has three fields and no other: no settling time, no condition on the start, no premise on steps. The settling time is a definition (`History.settle`, `RenewalLink.lean` 139), and the start condition belongs to `Execution` (83–84, field `initialWithinSpan`), which `Renewable` does not use.
+
+**The two definitions [S].**
+- `Renewable law c := ∃ H : History law, H.states 0 = c ∧ ∀ n, Live (H.states n)` (`R/RenewalConfigurations.lean` 43–44).
+- `Keepable P g s := ∃ r : Run P, r.state 0 = s ∧ ∀ n, g (r.state n)` (`B/JointKeeping.lean` 91–92), `{S : Type u} {A : Type v}`.
+- `Live c := 1 ≤ opened (fun _ => 1) c.tokens` (`RenewalAccounting.lean` 148).
+
+**The bridge, each way [P] (not written, not checked).**
+
+```
+def History.toRun (H : History law) : Run (channelProcess law) := ⟨H.states, H.ticks, H.steps⟩
+def historyOfRun (r : Run (channelProcess law)) : History law := ⟨r.state, r.act, r.step⟩
+
+theorem renewable_iff_keepable {law : ChannelLaw Kind} {c : Config Kind} :
+    Renewable law c ↔ Becoming.Viability.Keepable (channelProcess law) Live c :=
+  ⟨fun ⟨H, start, alive⟩ => ⟨⟨H.states, H.ticks, H.steps⟩, start, alive⟩,
+   fun ⟨r, start, held⟩ => ⟨⟨r.state, r.act, r.step⟩, start, held⟩⟩
+
+-- the law-level forms
+RenewsForever law ↔ ∃ c, Keepable (channelProcess law) Live c          -- RenewalCharacterization 70
+KeepsForever law K ↔ ∃ c, Keepable (channelProcess law) (Keeps K) c     -- RenewalCharacterization 382, 386
+```
+
+Each direction re-packs three fields. It is a definition unfolded; no lemma about tokens, aging or reserve enters.
+
+**A second bridge, found in the reading [P].** The renewal files have their own guarded process, `renewingProcess law`, with `step c births c' := Live c ∧ (channelProcess law).step c births c'` (`RenewalAccounting.lean` 151–152). Then
+
+```
+Renewable law c ↔ ∃ r : Run (renewingProcess law), r.state 0 = c
+  -- → : ⟨⟨H.states, H.ticks, fun n => ⟨alive n, H.steps n⟩⟩, start⟩
+  -- ← : ⟨⟨r.state, r.act, fun n => (r.step n).2⟩, start, fun n => (r.step n).1⟩
+```
+
+The forward term is already in the renewal files, unbundled, at `RenewalLink.lean` 364 [S]. This form matters for Question 2: `B/Onward.lean`'s laws are stated for `∃ r : Run P, r.state 0 = s` with no guard.
+
+**What a bridge needs that is not in the statements.**
+1. *One build that sees both.* The renewal files are compiled by `R/check.py` from frozen source bytes (lines 22–35), not by the package. A bridge file would import `RenewalConfigurations` and `Becoming.JointKeeping` together. That is build work; I did not try it (rule: build nothing). [S for the facts, G that nothing else blocks]
+2. *Universes.* `Kind : Type u` on the renewal side; `Viability`, `JointKeeping`, `Keeping`, `Onward`, `Lasting` are universe-polymorphic, so no restriction. `GuardHorizon` has `variable {S A : Type}` (line 65) and `ReadOffInTime` `{F C : Type}` (127): their laws reach the channel process only for `Kind : Type`. [S]
+3. *Names.* The package has a namespace `Becoming.Renewable` (`B/Renewal.lean` 66, `B/Labelled.lean` 549, `B/JointKeeping.lean` 383) with its own `process : Process Nat Nat`; the renewal files have a definition `Renewable`. Several package modules define a `Keeps` (e.g. `B/Junctures.lean` 357); `B/Histories.lean` 150 defines `live`. With both sides opened these need care; none is the same declaration. [S]
+4. *A general lemma the package lacks* [P; not found in what was read]: `Keepable P g s ↔ ∃ r : Run (guarded P g), r.state 0 = s`, where `guarded P g` has `step s a t := g s ∧ P.step s a t`. The package has `Onward.within P K` with `K` asked at both ends of a step (`B/Onward.lean` 210–211) and the direction from its runs to runs of `P` inside `K` (`ofWithin`, `ofWithin_within`, 214–219); the other direction was not found.
+
+---
+
+## Question 2. Which renewal laws are cases of general laws of the package
+
+### 2a. Every theorem of `R/RenewalConfigurations.lean`
+
+"Case" means: the statement follows from the named general law by the instantiation given, after one of the two bridges of Question 1. All entries in the third column are [P] unless marked.
+
+| Declaration (line), with its premises [S] | General law of the package | Standing |
+|---|---|---|
+| `opened_one_pos` (46), `alive_token_live` (59): a token with `1 ≤ remaining` in `c.tokens` makes `Live c` | none found; about `opened` on lists | channel-specific |
+| `dead_stays_dead` (64): `¬ Live c`, `(channelProcess law).step c births c'` ⊢ `¬ Live c'` | It *is* the statement `Invariant (channelProcess law) (fun c => ¬ Live c)` (`Invariant`, `B/Frame.lean` 265). No general law gives it: it holds because a formation needs a supporter alive after aging (`RenewalAccounting.lean` 145) | an instance of a notion, not a case of a law |
+| `renewable_live_step` (102): `Renewable law c` ⊢ `Live c ∧ ∃ births c', step c births c' ∧ Renewable law c'` | first conjunct: `Keepable.start` (`B/JointKeeping.lean` 95, no premise), at `P := channelProcess law`, `g := Live`. Second conjunct (the run read from step 1): **not found stated** for `Keepable` or for bare runs; the construction exists (`Run.onward`, `B/Recurrence.lean` 334) | half a case |
+| `renewable_of_step` (109): `Live c`, `step c births c'`, `Renewable law c'` ⊢ `Renewable law c` | `Onward.run_of_trace` (`B/Onward.lean` 98–104: `Trace P s as t → (∃ r : Run P, r.state 0 = t) → ∃ r : Run P, r.state 0 = s`, no premise), at `P := renewingProcess law`, the trace of one step `⟨live, step⟩`, through the second bridge. For `Keepable P g` with a guard on `P` itself: not found; the construction is `Run.cons` (`B/Horizon.lean` 93) | a case, through `renewingProcess` |
+| `renewable_iff_step` (121): `Renewable law c ↔ Live c ∧ ∃ births c', step c births c' ∧ Renewable law c'` | For `Keepable`: **not found stated**. Its every-course twin is `Viability.kernel_step_iff` (`B/Viability.lean` 98: `Kernel P guard s ↔ guard s ∧ ∀ a t, P.step s a t → Kernel P guard t`). Its finite-horizon form is the defining clause of `Lasting.Continues` (`B/Lasting.lean` 934–936). The statement itself holds of every process and guard [P]: `Keepable P g s ↔ g s ∧ ∃ a t, P.step s a t ∧ Keepable P g t`, by `Run.cons` and `Run.onward` | general, and the package lacks it in this form |
+| `renewability_not_generated` (129): `H : History law`, `¬ Renewable law (H.states 0)` ⊢ `∀ n, ¬ Renewable law (H.states n)` | The induction is `Invariant.run` (`B/Frame.lean` 286: `Invariant P I`, `r : Run P`, `I (r.state 0)` ⊢ `∀ n, I (r.state n)`) at `I := fun c => ¬ Renewable law c`. The one-step content (lines 134–140) is **not** a fact of every process: it uses `dead_stays_dead`. See 2c | the induction is a case; the content is the channel law's |
+| `mem_agedN` (149), `configurations_enlarge_balance` (162) | none; helpers | channel-specific |
+| `renewable_of_more` (196): `Renewable law ⟨R, T⟩`, `R ≤ R'` ⊢ `Renewable law ⟨R', extra ++ T⟩` | none found. It is a simulation argument (`History.enlarge`, 171). `trace_map` (`GenerativeCore.lean` 188) and `Reach.map` (`Frame.lean` 227) carry finite courses along a map of configurations; the enlargement is not such a map (the added tokens age with the step index, line 173), and no law carrying `Keepable` along a simulation was found | none found |
+| `mem_aged_of_kept` (217), `agedN_empty` (234), `configurations_build_balance` (249), `build_step` (260), `build_live` (292), `le_longer_left/right` (309, 317), `configurations_sub_succ_*` (331, 335), `seeded_positivePart` (341), `formation_le_mul` (345) | none; they compute the course `build` | channel-specific |
+| `seeded_renewable` (355): `SelfRenewing law B`, `Seeded law c B`, `(buildLength law B c + 1) * formation law B ≤ c.reserve` ⊢ `Renewable law c` | Its shape is `Enough.trace_then_stay` (`B/Enough.lean` 82–94: `P.step u a u`, `Trace P s as u` ⊢ `∃ r : Run P, r.state 0 = s ∧ ∀ n, as.length ≤ n → r.state n = u`) at `P := renewingProcess law`: a course of live ticks (`build_step`, `build_live`) into a configuration that steps to itself (`steady_renews`, `R/RenewalSufficiency.lean` 226, whose conclusion is literally a `renewingProcess` step from `⟨R, steady law B N⟩` to itself). The file instead walks back with `renewable_of_step` (389–400) and uses `renewable_of_more` | the last step is a case; the course is channel-specific |
+| `balanced_population` (411), `young_token_renewable` (415), `last_tick_not_renewable` (421), `young_token_without_reserve_not_renewable` (444) | none; examples on `closedOpenBalanced` | witnesses |
+| `renewability_not_function_of_reserve_and_kinds` (474), `renewability_not_function_of_tokens` (483) | none found as a case. Nearest in spirit: `feasible_difference_implies_projection_difference` (`GenerativeCore.lean` 298), for finite action words, not for keeping without end | witnesses |
+| `keeping_and_losing_renewal` (494): at `⟨15, [⟨(), 2⟩]⟩`, renewable; one step keeps it; another step leads to a non-renewable configuration with more reserve | not a case of a law. Same shape as the package's own witnesses of "keepable, and not kept on every course": `ChoicePoint.each_not_joint` (`JointKeeping.lean` 218) and the last two conjuncts of `Renewable.kept_part_not_renewal` (396–403) | a witness of a shape the package also has |
+
+### 2b. The keeping theorem
+
+`renewal_keeping_theorem` (`R/RenewalCharacterization.lean` 703–716) [S]. Premises: `law : ChannelLaw Kind`; `U : List Kind` with `complete : ∀ k, k ∈ U`; `K : Kind → Prop`, any (no decidability). Statement: `KeepsForever law K ↔ ∃ B, SelfRenewing law B ∧ ∃ k, k ∈ B ∧ K k ∧ 0 < law.span k`, with `SelfRenewing law B := B ≠ [] ∧ SupportClosed law B ∧ formation law B ≤ spanOpening law B` (66–67) and `SupportClosed law B := ∀ k, k ∈ B → ∃ j, j ∈ B ∧ law.edge j k ∧ 2 ≤ law.span j` (61–62).
+
+Through the bridge its left side is `∃ c, Keepable (channelProcess law) (Keeps K) c`. **A case of no general law found.**
+- Right to left: the run is a constant one at the steady configuration (`steadyExecution`, 96–103). In package terms that configuration `Stays` (`B/Enough.lean` 58) and the run is `Enough.stayAt` (61). That the steady configuration steps to itself is the content (`steady_fixed`, `RenewalSufficiency.lean` 126). [P]
+- Left to right: `kept_through_window_has_population` (486; I read its statement, not its proof body 496–609). No package law was found that concludes a property of a law's parameters from the existence of a run.
+- What the package does give [P]: `Keepable.mono` (`JointKeeping.lean` 99; premise `∀ x, g x → g' x`) with `Keeps K c → Live c` (from `alive_token_live`, `RenewalConfigurations.lean` 59) says a configuration from which `K` is keepable is renewable; with `live_keeps_everything` (`RenewalCharacterization.lean` 395) `Live` is `Keeps (fun _ => True)` pointwise, so `renewal_closure_theorem` (682) is the keeping theorem's statement at `K := fun _ => True` (the file proves it separately, 669–686).
+
+### 2c. Said plainly: is "not keepable at the start stays not keepable along any run" a law of the package for every process?
+
+**No, in two ways.**
+
+1. **Not found stated** for `Keepable`. "Keepable" occurs in one module of the package, `JointKeeping.lean` [S: search over all 406 files of `B/`], which I read whole: it has `start`, `mono`, `left`, `right`, `each`, the two `keepable_and_iff_of_kernel_*`, and witnesses; no law along a step or a run.
+
+2. **As worded it is false of some process and guard [P].** Take the package's own `ChoicePoint.process` (`JointKeeping.lean` 174) and the guard `fun s => s = .left` (my guard, not in the file). `restRun .left rfl` (239) keeps it, so it is keepable at `left`. At `split` it fails, so by `Keepable.start` it is not keepable there. `leftRun` (204) starts at `split` and is at `left` from step 1. So a run's later configuration is keepable and its start is not. What holds of every process is [P]:
+
+```
+-- not written, not checked
+theorem not_keepable_invariant (dead : Invariant P (fun s => ¬ g s)) :
+    Invariant P (fun s => ¬ Keepable P g s)
+-- proof idea: a step s → t with Keepable P g t; if g s then Run.cons gives Keepable P g s;
+-- so ¬ g s, so ¬ g t by `dead`, against Keepable.start at t. No decision of g is used.
+```
+
+and then `Invariant.run` (`Frame.lean` 286) gives the renewal statement. The premise `dead` is, for the channel process, exactly `dead_stays_dead` (`RenewalConfigurations.lean` 64). The file's own proof decides `Live` (`Nat.decLe`, line 137); the general form does not need the decision.
+
+3. **What the package does state for every process** [S]: for runs with no guard, `Onward.run_of_trace` (98) and `run_of_reach` (106): a run from where a course leads gives a run from the course's start; with `Onward.reach_of_run` (94), along any run `r`, a run from `r.state n` gives one from `r.state 0`. At `renewingProcess law` this is `renewability_not_generated` restricted to histories that are live up to step `n` [P]. Also `Run.possible_of_next` (`B/ReachableRanges.lean` 590, no premise): what is possible from the next configuration is possible from the present one, where `Reaching.Possible P adm s x := ∃ t, Reach P s t ∧ adm t x` (289); at `adm := fun c _ => Renewable law c` it says "can reach a renewable configuration" is not gained along a course, and the channel law turns that into "renewable" by `dead_stays_dead` [P].
+
+So `renewable_iff_step` is a fact of every process and guard; `renewability_not_generated` is a fact of every process **whose guard, once lost, stays lost**.
+
+### 2d. The other way: general laws that would apply to the channel process at guard `Live`
+
+All hold of every `P : Process S A` and guard [S]; what they say at `channelProcess law`, `Live` is [P].
+
+- `Viability.lean`: `Kernel` (55), `Certificate` (59), `kernel_iff_held` (65), `Certificate.kernel` (72), `kernel_certificate` (78), `kernel_iff_certificate` (85), `kernel_largest` (91), `kernel_step_iff` (98), `Kernel.mono` (110), `Kernel.run` (115). **At guard `Live` the kernel is empty** [P]: forming nothing is a step from every configuration (`History.idle`, `R/RenewalPremises.lean` 40–44) and after more ticks than the longest remaining span no token is left (`agedN_empty`, `RenewalConfigurations.lean` 234), so a course from every `c` leaves `Live`. These laws then hold vacuously there. They bite at two other guards: `dead_stays_dead` says `fun c => ¬ Live c` is a certificate for itself, and 2c says `fun c => ¬ Renewable law c` is: from a non-renewable configuration no course reaches a renewable one (`Certificate.kernel` 72; `Invariant.locks_out`, `B/Attraction.lean` 437).
+- The rest of `Viability.lean` (`disturbed` 137 on) and `Lasting.lean`'s `Lasts`, `Ladder`, `Drains`, `Reaches` are for laws `f : S → A → S` under disturbances. The channel step does not fix the successor: its reserve clause is an inequality (`RenewalAccounting.lean` 144). They do not apply as stated. [S for the forms]
+- `JointKeeping.lean`: `kernel_and_iff` (64), `kernel_allOf_iff` (75), `Keepable.start` (95), `.mono` (99), `.left` (104), `.right` (109), `.each` (115), `keepable_and_iff_of_kernel_left/right` (121, 127), `KeptFor.guard_mono` (136), `KeptFor.each` (146). `Keepable.each` applies to two designated kinds; its converse fails in general (`ChoicePoint.each_not_joint`), and the keeping theorem's guard `Keeps K` is one existential over tokens, so "a `K₁` token and a `K₂` token alive at every time" is not of its form [P].
+- `Keeping.lean` (`KeptFor` 90, `Plan` 100, `keptFor_of_closed` 311, `Certificate.keptFor` 322, `Kernel.keptFor` 333, and the order laws 271–305) and `GuardHorizon.lean` (`Viable` 71, `Admissible` 76, `Closed` 108, `closed_viable` 112, `kernel_viable` 134, `uniform_viable` 406; `S A : Type`) apply once a `sense`, an `allowed` or a reading is supplied. They ask that **every** successor of the chosen move keep the guard. On the channel process the successors of one `births` differ only in reserve, down to none, so `Viable (channelProcess law) Live n c` is keeping live against any loss of reserve; it is not `Renewable` and not `LiveFor` (`RenewalPremises.lean` 47) [P]. One non-vacuous instance [P]: for `B` non-empty, of positive spans at most `N`, support-closed and balanced, `K c := c.tokens = steady law B N` is `GuardHorizon.Closed (channelProcess law) Live K` (by `steady_renews` at every reserve `R` and `steady_fixed`), so `closed_viable` (112) keeps `Live` at every horizon from it, with no reserve. `GuardHorizon`'s header says "nothing here says that a closed set, a certificate or a uniform choice exists" (53); the renewal files supply one.
+- `Lasting.lean`, section "Lasting some course" (914–1053), is over any `Process`: `Continues` (934), `Unbounded` (939), `FinitelyBranching` (943), `runOf` (1028), `lifting` (1047; premises `EitherThroughout`, `FinitelyBranching P`, a choice of an unbounded successor). `Onward.lean`: `run_iff_continues` (164), `run_iff_unbounded` (172), `run_iff_returning` (179), `run_decided` (187), `KeepsMoving.run` (231) all take `all : List S` with `∀ x, x ∈ all`; `Config Kind` holds a `Nat` reserve, so they do not apply. `RenewalPremises.zero_demand_defeats_initial_deadline` (331) is a witness of the same shape as `Onward.fan_no_run` (196): live courses of every length from one start and no live run without end [P].
+- `B/Labelled.lean` 522, `no_execution_of_depletion` (premise: `reserve : S → Nat`, every step lowers it): `short_kinds_cannot_renew_forever` (`RenewalAccounting.lean` 260; premises `spanBound : ∀ k, law.span k ≤ D`, `short : ∀ k, law.rate k * law.span k + 1 ≤ law.demand k`) is a case of it at `P := renewingProcess law`, `reserve := renewalPotential law D` [P]; the file proves it from `lean/Depletion.lean` 68, the same statement outside the package [S].
+- `ReadOffInTime.lean`: not applicable as stated (Question 5).
+
+---
+
+## Question 3. Which renewal laws say what no general law of the package says
+
+`renewal_closure_theorem` (`RenewalCharacterization.lean` 682) [S]: premises `law`, `U : List Kind`, `complete : ∀ k, k ∈ U`; `RenewsForever law ↔ ∃ B, SelfRenewing law B`. The deadlines: `no_self_renewing_population_deadline` (741; premises `U`, `complete`, `absent : ¬ ∃ B, SelfRenewing law B`, `H : History law`; some `t ≤ H.settle + (openingPotential law (H.states (H.settle + renewalWindow law U)) + 2) * renewalWindow law U` with `¬ Live (H.states t)`) and `no_self_renewing_population_explicit_deadline` (853; adds `demandPositive : ∀ k, 1 ≤ law.demand k`; bound `H.settle + (renewalGrowth law U ^ (H.settle + renewalWindow law U) * openingPotential law (H.states 0) + 2) * renewalWindow law U`). Finiteness of kinds is needed (`infinitely_many_kinds_break_the_equivalence`, `RenewalPremises.lean` 139).
+
+**What was found in the package that decides, from the process and not from a given course, whether some run goes on** [S for each statement]:
+1. `Labelled.no_execution_of_depletion` (522): a reserve every step lowers ⊢ no run. One way only (no run).
+2. `Enough.possibly_rests_iff` (`B/Enough.lean` 96, no premise): some run from `s` comes to rest with a target met ↔ `s` reaches a configuration that steps to itself and meets the target.
+3. `Onward.run_iff_returning` (179), `run_iff_continues` (164), `run_decided` (187; it adds `FinitelyBranching P`): **within a list of all configurations**, a run starts at `s` ↔ a course leads from `s` to a configuration that returns; with successors listed it is decided. With a guard: `Onward.KeepsMoving.run` (231). Asked of every process without the list it is exactly dependent choice (`runs_iff_dependentChoice`, 397).
+4. `Viability.kernel_iff_certificate` (85): for *every* course, a set closed under the steps. `GuardHorizon.closed_viable` (112): a closed set under some enabled move.
+5. For **determined** laws (one course from each configuration): `RegimeMargin.ends_iff_below` (`B/RegimeMargin.lean` 741; premises `0 < H + y`, `Short g H y`, `FromNothing g`, `Meets g H y hi`, `Keeps g H hi`, `x ≤ hi`): the level's course ends exactly where it starts below `H + y`; three further forms at 676, 2687, 3306. These decide from properties of the giving law and the start. They are where the package's "point of no return, a level" lives.
+
+**Not found in what was read:** a law that, for a process whose courses branch, makes "some run keeps a guard from some configuration" equivalent to a condition on the law's parameters at a grain coarser than configurations (here: a list of kinds), with the direction from the run to the condition. Items 2–4 are conditions on sets of configurations and work in the direction from the set to the run; item 1 is one-way; item 5 has no branching. The header lines of the package say as much of themselves: "nothing here says that some certificate exists" (`Viability.lean` 38), "nothing here says that some ladder, drained family, closed set or funnel exists" (`Lasting.lean` 86–87), and `Branching.lean` 131–132 lists "that every run is drawn in within a bound" as not derived.
+
+One thing the renewal deadline says in the package's words [P]: where no self-renewing population exists, every live configuration is `Branching.NecessarilyDrawnInto (channelProcess law) (fun c => ¬ Live c)` (`B/Branching.lean` 365), into a region the process never leaves (`dead_stays_dead`), and with a bound.
+
+---
+
+## Question 4. Where is a way of selecting?
+
+Over what each is stated [S]:
+
+| | Stated over | A choice of a `Process`'s action from a reading of its state? |
+|---|---|---|
+| `GuardHorizon.UniformPolicy` (`B/GuardHorizon.lean` 326): `∃ policy : O → A, ∀ s, good s (policy (obs s))` | a reading `obs : S → O` and a relation `good : S → A → Prop`; `S A O : Type`. No `Process` in the definition | **Yes, where it is used**: `uniform_viable` (406) and `uniform_iff` (414) take `good := Admissible P guard n` (76: `Enabled P s a ∧ ∀ t, P.step s a t → Viable P guard n t`). `policy` then picks the process's move from the reading. One step at a time; no process "under the policy" and no run of it is defined |
+| `Keeping.KeptFor` (`B/Keeping.lean` 90) and `Plan` (100), `Plan.Keeps` (123) | `P : Process S A`, `sense : S → A → S → O`, `guard`, `allowed : S → A → Prop`, a horizon, a class `B : S → Prop` | **Yes, of a kind**: a move usable from the whole class, then a plan for each value the step keeps. The reading is of the step (`sense s a t`), the horizon finite, every successor counted |
+| `ReadOffInTime`'s readers: `Web.FirstApart` (137), `Web.TellsApartAt` (143), `Web.ReadableInTime` (647), `Web.ReadsInTime` (653); `Web.SelectsThroughAll` (`B/Selection.lean` 149) | `W : Web F C` (`Dependence Nat F C`, `B/World.lean` 57) and level courses `l l' : Nat → C → Nat`; a selection is `select : (Nat → C → Nat) → Prop`, alike on courses alike through the group's couplings | **No.** A predicate on whole level courses; no process, no action |
+| `RuleCapture.Locked` (`B/RuleCapture.lean` 160): `favours p.2 ∧ M.le p.2 (h p.1 p.2)` | a pair `p : S × R` (share, rule), `M : Ideals.Preorder R`, `favours : R → Prop`, `h : S → R → R` | **No** |
+| `RuleCapture.turn_locked` (169); premises `Raises P favours f` (145: `∀ x g, favours g → P.le x (f x g)`), `ReadsShare P M h` (150: `∀ x y g g', P.le x y → M.le (h x g) (h y g')`), `upper : M.le g g' → favours g → favours g'`; here `P` is a preorder on shares, not a process | `Pace.turn f h : Bool → S × R → S × R` (`B/Pace.lean` 101), from functions `f : S → R → S`, `h : S → R → R` | **No.** Its own determined step. The courses (`locked_stays` 182 and after) are `Pace.paced` (`Pace.lean` 112), read off `Law.run (Pace.step f h reads)`, a `Run` of `Law.process next : Process S Unit := ⟨fun s _ t => t = next s⟩` (`B/Recurrence.lean` 143, 322). So formally a process of the spine, with one move and nothing to choose; the rule is part of the configuration |
+| `TurningInTime` section 6 (`B/TurningInTime.lean` 1167–1912; I read 1167–1316): `locked_closed` (1232), `locked_at_class` (1250), `locked_alone` (1301) | the relation `Law.step (Pace.step (join fA fB) (joinRead hA) reads)` and orbits of `windowAlone`; the pair `pair after left : W × Nat → W × Nat` (337) | **No.** Its own step. Header 305–306: "that a lock's own models need nothing is how they are built. They have a total step" |
+
+**Could "a rule set again from a share" be a policy on births without a new model?** [P] No definition on either side would have to change: `Pace.turn f h` type-checks at `S := Config Kind`. But everything the lock's laws speak of would have to be supplied, and none of it is on either side:
+1. a share: a preorder `P` on `Config Kind` (which tokens count as the carriers);
+2. a rule type `R`, its preorder `M`, and `favours`;
+3. `f : Config Kind → R → Config Kind`. The channel step is a relation, so this needs a map from a rule to `births`, a choice of the successor's reserve (the clause at `RenewalAccounting.lean` 144 is an inequality), and either a proof that the chosen `births` meet the support and balance clauses (143–145) at every configuration or a fall-back to `[]` (always a step: `History.idle`);
+4. the reading `h : Config Kind → R → R`;
+5. proofs of `Raises P favours f`, `ReadsShare P M h` and `upper`.
+
+Items 1 to 4 are modelling choices and item 5 would be new theorems. What exists with no new object but a reading is the guard-keeping choice (`UniformPolicy read (Admissible (channelProcess law) Live n)`, for `Kind : Type`), which chooses for keeping `Live` on every successor (2d) and says nothing of a rule read off a share.
+
+---
+
+## Question 5. The point of no return, on both sides
+
+**Renewal side.** "The first step of a history at which the configuration is not renewable" is **not found** in the eight files or `R/README.md` (search for "first step", "no return", "point of", "earliest", "irrevers", "for good": only "for good" at `RenewalConfigurations.lean` 27 and 492 and `README.md` 87). What is there [S]:
+- `renewability_not_generated` (129), from step 0; with `History.shift` (`RenewalLink.lean` 133) it holds from any step [P]. This is the counterpart of `Recoverable.earlier` (`B/ReadOffInTime.lean` 601): the steps at which the configuration is renewable form an initial stretch.
+- `keeping_and_losing_renewal` (494): one configuration with a step that keeps renewability and a step that loses it. One configuration and two steps, not a step of a history.
+- The deadlines (726, 741, 834, 853) and `renewal_dichotomy` (648): a time by which a history is not `Live`, for laws with no population. They bound the loss of `Live`, not of `Renewable`, and name no first step.
+- Whether `Renewable law c` is decided at a configuration: not found. The files prove it is not a function of the reserve and the kinds present (474) nor of the tokens alone (483); `seeded_renewable` (355) is one sufficient condition.
+
+**Package side** [S]. `Recoverable (feasible keeps : (Nat → C → Nat) → Prop) (l : Nat → C → Nat) (N : Nat) := ∃ l', feasible l' ∧ AgreeUpTo l' l N ∧ keeps l'` (`ReadOffInTime.lean` 591–592), `NoReturnAt … l N := ¬ Recoverable … l N ∧ ∀ n, n < N → Recoverable … l n` (595–596), `{C : Type}` (587); `AgreeUpTo l l' t := ∀ s, s ≤ t → ∀ c, l s c = l' s c` (`B/Counterfactual.lean` 132). They are over courses of levels, a `Nat` for each condition at each step. The two uses found: `FourReaders` with `C := Place` (967–1019) and `TurningInTime` section 7 with `C := Unit` (`Turned` 1945, `MeetsNeed` 1949). "Recoverable" and "NoReturnAt" occur in no other module [S: search].
+
+A history's `states : Nat → Config Kind` is not of the type `Nat → C → Nat`. **`NoReturnAt` does not apply to it as it stands.** What it would take [P]:
+- either the two definitions restated over courses `Nat → X` for any `X` (a change to a package module; the five laws at 601–637 use, of the course type, only that agreement up to `N` gives agreement up to `n ≤ N`, by my reading of their proofs), or an encoding of a configuration as levels;
+- then, with `feasible :=` "the configurations of some `History law`" and `keeps :=` "`Live` at every step", recoverable at `N` would be `Renewable law (H.states N)` [P: by `History.shift`, a splice of the first `N` ticks in front of a renewing history, which the files have for one tick only (`History.cons`, `RenewalConfigurations.lean` 89), and `dead_stays_dead` with `Live` decided];
+- for a point to exist, `noReturnAt_of_past` (632) asks `∀ n, Recoverable … n ∨ ¬ Recoverable … n`: renewability decided at each configuration of the history, which was not found.
+
+The package's process-level notion is another thing: `Branching.Juncture P s x` (`B/Junctures.lean` 92) is a configuration with a step after which **the configuration `s` can be had again** and one after which it cannot. Its header lists "junctures for sets of configurations" as not derived (line 60). A juncture for keeping a guard was not found.
+
+---
+
+## Question 6. What each side hands in
+
+**The renewal files hand in** [S]: the kinds; `ChannelLaw` (`edge`, `span`, `demand`, `rate`; `RenewalAccounting.lean` 41–45); the step itself (aging by one tick, formation only with a supporter alive after aging, reserve by an inequality; 141–145); `Live` (148), and `K` for `Keeps K`; for necessity and the deadlines the list `U` with `complete`; for the explicit deadline `demandPositive`; for the keeping deadlines `DecidablePred K` (726, 834). "Kinds, edges, spans, demands and rates are supplied" (`RenewalConfigurations.lean` 30), "The law itself … is the remaining supplied input" (`RenewalPremises.lean` 26–27). They hand in **no** course, reading, rule or selection: "Nothing here says which history occurs" (`RenewalCharacterization.lean` 48–49), "Nothing here ranks histories or says which should be kept" (`RenewalConfigurations.lean` 30–31).
+
+**The package hands in** [S]: in `Viability`, `JointKeeping`, `Keeping`, `GuardHorizon`, `Lasting`, the process, the guard, what a step keeps, the allowed moves, readings, scores and values, and whether a certificate, closed set or uniform choice exists; in `Onward`, a list of all configurations, or a search, or dependent choice; in `ReadOffInTime`, "the courses, the feasible ones and what is kept are supplied" (line 115), and recoverability decided at each step for a point to exist (632); in `RuleCapture`, `f`, `h`, the orders, `favours`, and `Raises`, `ReadsShare`, `upper` ("What is not derived: that any actual rule reads the share it selects", 90); in `TurningInTime`, `AloneOutside`, the marks, `kept`, `turns`, `uses` (235–239), and for the lock a total step that needs nothing (305–306).
+
+**What one derives that the other hands in** [P]:
+1. The package hands in "a keepable configuration / a closed set exists". For its one law the renewal side derives when: exactly where a self-renewing population exists (682), with a configuration that steps to itself (`steady_fixed`) and, on paper, a `GuardHorizon.Closed` set (2d).
+2. `ReadOffInTime` hands in the feasible courses and what is kept. The channel law would generate both (its histories; `Live`). It does not give the decision `noReturnAt_of_past` asks for.
+3. The renewal files re-derive by hand what general laws of the package give at `renewingProcess law`: `renewable_of_step` (`Onward.run_of_trace`), the walk back in `seeded_renewable` (`Enough.trace_then_stay`), `steady_endless` (`Enough.stayAt`), the induction of `renewability_not_generated` (`Invariant.run`), `short_kinds_cannot_renew_forever` (`no_execution_of_depletion`).
+4. The renewal side hands in the guard's permanence only implicitly; it proves it (`dead_stays_dead`). The package's `Keepable` laws have no such premise and no law along a run.
+5. Nothing found on either side derives what the other hands in about selecting: the renewal files have no rule or share; the lock's modules have no law of several kinds supporting and provisioning one another, and their own models need nothing by construction.
+
+---
+
+## The guesses
+
+**P1.** *For:* the bridge is a three-field re-packing each way (Question 1) [P]. `renewable_iff_step` is a fact of every process and guard [P], and the package does not state it for `Keepable` (its every-course twin `kernel_step_iff` is there). *Against:* `renewability_not_generated` is **not** a fact of every process: it fails on the package's own `ChoicePoint.process` with a guard lost and regained (2c) [P]; it needs the guard's complement kept by every step, which is `dead_stays_dead`, a fact of the channel law. And the "either the package has them or it lacks them" does not split cleanly: for runs with no guard the package has the backward half for every process (`Onward.run_of_trace`), and at the renewal files' own `renewingProcess` that makes `renewable_of_step` a case; for `Keepable` with a guard it has neither half.
+
+**P2.** *For:* no law found that makes "some run keeps a guard" equivalent to a condition on a branching law's parameters; the package's keeping modules say in their headers that existence is not claimed. *Against, as qualifications:* the package does decide run existence from the process in four ways (Question 3, items 1–4), and for determined laws it has exact thresholds from the law's regime and the start (`RegimeMargin.ends_iff_below`). So "nothing in the package decides keepability from a property of the law" is too wide as written; "nothing found does it for a branching law at the grain of its parameters, in both directions" is what the read supports.
+
+**P3.** *For:* `Locked` is on pairs `S × R`; `turn_locked` is over `Pace.turn f h`; section 6 is over `Law.step (Pace.step …)` and orbits. A policy on births needs five supplied objects and three proved premises (Question 4). *Against, as qualifications:* the lock's courses are runs of `Law.process`, a `Process` with one move, so "not stated over a `Process`" is true of the theorems' form and not of the course's type; and the package does have a choice of a process's move from a reading over any process (`UniformPolicy` at `Admissible`, `Plan`), which type-checks at the channel process with only a reading supplied. That choice is for keeping a guard on every successor, not a rule read off a share.
+
+**P4.** *For:* both halves hold in what was read: `NoReturnAt` is typed over `Nat → C → Nat`; the renewal files state no first step. *Against:* nothing against the statement. To be added: the pieces of such a point are there on paper (the initial-stretch law, and what "recoverable" would be), and the missing piece is a decision of renewability at a configuration.
+
+**P5.** *For:* the bridge is a definition unfolded; `Keepable` and `Renewable` both say "some run", and the renewal files say twice that nothing in them says which history occurs. No statement found joins "some history stays live" to a course that occurs or to a selection. The package's choices from readings, put on the channel process, speak of keeping against any loss of reserve, a different question. The kernel at `Live` is empty, so the every-course side of the package says nothing there. *Against:* (i) the bridge is more than a renaming in one respect: through `renewingProcess`, four renewal proofs become cases of general laws and one package law (`closed_viable`) gets a first non-vacuous instance from a law (2a, 2d) [P]; (ii) statements that could be written with no new model and that say where along a history the possibility is lost do exist on paper: the non-renewable region is one the process never leaves (so `Invariant.locks_out` applies), and `keeping_and_losing_renewal` is a configuration with a keeping step and a losing step. *What these place* is keepable against not keepable along a history. They say nothing of selecting. They are stated on a law that does have a reserve, supporters and re-formation, so "what is rested on" and "remaking" are in the model and "selecting" is not: that last sentence is my reading, not a statement of the Lean.
+
+---
+
+## What was read
+
+**Whole:** `FROZEN-THE-PLACING.md`; `lean/GenerativeCore.lean`; `R/RenewalBasics.lean`, `R/RenewalAccounting.lean`, `R/RenewalLink.lean`, `R/RenewalConfigurations.lean`; `B/Frame.lean`, `B/Viability.lean`, `B/JointKeeping.lean`, `B/Keeping.lean`, `B/GuardHorizon.lean`, `B/Onward.lean` (lines 1–420 of 423).
+
+**In part:**
+- `R/RenewalCharacterization.lean` 1–200, 376–495, 610–1053 (not read: 200–375, and the proof body 496–609 of `kept_through_window_has_population`); `R/RenewalPremises.lean` 1–60, 86–361; `R/RenewalClosure.lean` 1–48, 330–345; `R/RenewalSufficiency.lean` 1–50, 120–131, 220–266; the declaration lists of all four; `R/check.py` 1–80; `R/README.md` by search only.
+- `B/Lasting.lean` 1–140, 914–1058, declaration list; `B/ReadOffInTime.lean` 1–228, 583–762, 960–1020, declaration list; `B/RuleCapture.lean` 1–220, declaration list; `B/TurningInTime.lean` 1–376, 1167–1316, 1914–2033, section list; `B/Pace.lean` 90–145.
+- Smaller stretches: `B/Recurrence.lean` 116–134, 143, 322–336, 352–355; `B/Branching.lean` 1–140, 326–334, 361–374, 408–413, 432–438; `B/Junctures.lean` 1–130; `B/HeldPossible.lean` 1–110 and declaration list; `B/LastingRuns.lean` 1–80 and declaration list; `B/Enough.lean` 45–100; `B/Horizon.lean` 85–105; `B/Attraction.lean` 433–445; `B/ReachableRanges.lean` 286–301, 481–490, 584–602; `B/Histories.lean` 66–100, 146–155; `B/World.lean` 55–120; `B/Selection.lean` 140–156; `B/Testing.lean` 150–160, 218–232; `B/Admission.lean` 372–382; `B/Counterfactual.lean` 128–136; `B/RegimeMargin.lean` 1–60 and the four statements named `ends_iff_below`; `B/Labelled.lean` 488–535, 549–574; `B/Renewal.lean` 66–78; `lean/Depletion.lean` 60–75; the statements of `WayOfUnits.unending_iff_carrier`, `LineOnAStock.unending_iff_holds`, `GuardedStep.stepWhile_unending_iff`.
+
+**Searches over `B/*.lean` (406 files), hits read at the statement line unless listed above:** "Keepable" (one file); "Kernel" (seven files; `ModelStatements.lean` seen at one line only); "∃ r : Run", "∃ run : Run"; "def Run.", ": Run "; "Juncture"; "Recoverable", "NoReturnAt" (two files); "UniformPolicy", "KeptFor", "Plan.Keeps" (four files; `OpenedCorrection.lean` at one line); "OccurrenceSupport", "DependenceClosed", "realized_closure", "SelfRenewing", "SupportClosed", "no_infinite_execution_under_depletion", "trace_length_bound"; "sustains", "forever", "unending", "endless" in theorem names; "simulat" (ten files matched, none opened); the renewal theorems' names (no hit: the package does not refer to the renewal files).
+
+**The frozen file.** I read it whole at the start, when it ended at "## After". After this report was written, a read-only hash check showed that its writer had added a section below that line at 21:00 (the copy `FROZEN-THE-PLACING.as-frozen-2053.md` matches `FROZEN.sha256`). I saw that addition in a diff only then; nothing in this report was written or changed for it, and I edited neither file.
+
+**Not read:** the other modules of the package, the proofs of most theorems cited (statements and premises were read), `lean/conditional/SupportNecessity.lean`, `R/verification/`.
