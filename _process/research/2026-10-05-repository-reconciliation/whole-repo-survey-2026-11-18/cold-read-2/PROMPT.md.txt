@@ -1,0 +1,13 @@
+You have just been given this repository and no other context. Do not use any memory of earlier sessions here, and say so if you have any.
+
+Read as a careful newcomer would, for about an hour. Start wherever the repository itself tells a newcomer to start. Change nothing. Do not build, test, render or run any checker. Do not start subagents. Do not open these folders: sources/12-claude-ai-chats, sources/13-claude-memories, sources/18-friend-conversations, drafts/2026-10-02-friend-conversation, and anything under tmp/.
+
+Then answer in Markdown, plainly, starting with one line that names the model you are:
+
+1. Where is this work heading? In your own words, in about five sentences.
+2. How far is it from that, by its own account? What is proved, what is only argued or read, and what was tried and failed? Name the page where you read each.
+3. What is the next step, and who holds it? Name the page and the line that told you. If two pages name different next steps, say which and which you take as current, and why. If the order of work was changed recently, say what changed it and where you read that.
+4. What would count as that step having failed? Say where you read it, or that you could not find it.
+5. Where did pages you read disagree with each other, or give an older aim as if it were the present one? Quote each.
+6. What did you look for and could not find?
+7. The files you read, in the order you read them, with rough word counts and the total. For the first three, say what sent you there.

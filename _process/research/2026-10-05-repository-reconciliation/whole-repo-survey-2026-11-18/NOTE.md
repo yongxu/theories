@@ -29,6 +29,21 @@ After the survey, the same session said, to Ren and in a landed clause of the wo
 - `COLD-START-PROMPT.md.txt`, `COLD-START-EXPECT.md.txt`: a test of whether a reader with no memory can state the direction from the repository alone, with its pass marks written before it ran. The answer is `first-round/astra/cold-start.md.txt`; it met the four points scored.
 - `first-round/`: the reports of the Claude readers, the astra readers and the checks, with the claims each check tried.
 - `second-round/`: its brief, the three samples of records with their seeds, and the reports.
+- `cold-read-2/`: a second cold read, of 20 November, told below.
+
+## The second cold read (20 November, added that night)
+
+At the asking of the session that leads, after the first step of its roadmap did not come out and it turned the order. One astra 6.2 reader on a fresh thread with no memory, read-only, was given `cold-read-2/PROMPT.md.txt` and nothing else, and asked where the work is heading, how far it is, what the next step is and why the order changed. The marks (`EXPECT.md.txt`) were frozen before it ran, against the direction page at `5ffce3f39`; their hashes are in `FROZEN.sha256.txt`. The answer is `answer.md.txt`, unedited, and the scoring is `SCORE.md.txt`, by the session that wrote the marks.
+
+- **It met the four marks**, and no fail condition fired. Nine commits landed on main while it read, one of them changing the next step; it saw that and answered from the last commit it saw, so the marks for the next step describe a page that stood for 21 of its 58 minutes.
+- **It missed** a sentence on GOALS that the direction page contradicts ("the meta-attractor has closed and holds"); it did not report that the work calls itself far from its aim, or that Ren has not said the roadmap is right; and it could not reach what would count as failing for the step then running, which was in scratch.
+- **It quoted four pairs of pages that pull apart**; they were passed to the coordinator with who holds each.
+- **What it cost.** 58 minutes, 169 commands, about 18.9 million tokens by the harness's count, and about 79,000 words read by its own. The prompt asked it to read "as a careful newcomer would, for about an hour" and set no cap on files, words or commands. The session that asked for the run answers for that; no reader of this kind runs again without a cap on each.
+- **What it cannot show.** One run, one model, an agent's entry and not a person's. No landing was tried.
+
+## What became of the picture's last section
+
+The picture ends with "What I now think", this session's view on 18 and 19 November. Its sentence that the Lean work is to join October's modules that carry the idea to November's models was tried by the leading session on 20 November for October's files on renewal, on paper, and did not come out as a join; its records are under the study `dj-a-line-on-a-stock`. The picture is kept as written.
 
 ## What is not here
 

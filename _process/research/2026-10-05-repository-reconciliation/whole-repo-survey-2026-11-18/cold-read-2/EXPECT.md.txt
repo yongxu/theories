@@ -1,0 +1,24 @@
+# The second cold read: what counts, written before it runs
+
+*AI-written (Claude Fable, the survey session), 20 November 2026, at the asking of the session that leads on the map and the direction. **Frozen again on 20 November at 20:30 WIB, before the run, against the direction page at `5ffce3f39`:** the leading session's first step did not come out and it turned the order, so points 3 and 4 below are rewritten, one clause is added to the prompt's question 3, and three things that session asked about are added to what is recorded without a mark. The first freeze is in this file's earlier copy under `refs/salvage/survey/repo-picture-1120`. What follows this sentence in the paragraph is as first written, before the run was asked for. NOT RUN. It is to be run once, by one reader, when that session says, after the note of its roadmap's first step lands. If the direction page's "What we are trying next" changes before the run, points 3 and 4 below are frozen again against the page as it then stands, and the change is noted here with its time.*
+
+**The reader.** astra (`cx -m gpt-6.2-astra -e high --fresh --clean --sandboxed`): a new thread, no Codex memories, no plugins, read-only. It gets `PROMPT.md` and nothing else. A Claude reader is not used: a Claude session here is given this account's memory index at start. One thing the test cannot remove: the harness gives an agent `AGENTS.md`, so what is tested is an agent's entry, not that of a person who lands on the README. The person's path is the subject of `for-the-lead/ENTRY-PATH.md`.
+
+**It passes on a point if its answer, in its own words, says:**
+
+1. **Heading.** One map of how things come to be, go on, change and end, on which a person, a society or an AI can find its own course; on it, two ways of going on placed with respect to each other (one that uses up what it or others rest on and can no longer be turned, one that keeps remaking what it rests on); first a map for alignment.
+2. **How far.** That the work says of itself it is far from this; that pieces are proved, each under its own conditions, and that the idea as told is stated whole by no theorem; that several tries failed and are kept.
+3. **The next step.** As the direction page stands at `5ffce3f39` ("What we are trying next", the paragraphs "The order from 20 November" and "What the first step found, the same evening"): the second way where what is rested on is itself kept by goings-on, beginning with a read at the source of what the Lean already states there; then the meeting of the two ways inside that; then how a loop comes to register what it did not register; then the tellings. Held by the session of board row DJ, which leads.
+4. **Why the order changed, and what counts as failing.** That the first step of the earlier order (the two ways placed with respect to each other, on paper, where the table of 20 November found the pieces apart) was tried that evening and did not come out: no statement was found that places the two ways, by tests written down first; and that the order was turned for that reason, a step that fails turning the order. Credit is given for saying that this turning is the leading session's reading and that Ren has not said the roadmap is right.
+
+**It fails on a point if:** the point is missing; or an older aim is given as the present one (the zero-axiom target or "first priority" as the aim; widening as better; how orders form as the work's one open target; reader scores as the measure; a new model of the second way as the next step); or the next step is named from the plan page of 16 November or from a front page and not from the direction page; or the reader cannot name a page and line for point 3.
+
+**Also recorded, with no pass mark:** whether it found, and how it took, three things the leading session named: the fronts' sentence that how orders form, spread and lock is "the work's open target"; GOALS' "the meta-attractor has closed and holds"; and October's aim where it still stands; what sent it to its first three files; every pair of pages it says disagree, with its quotations (each is a candidate for a pointer or a mend); what it looked for and did not find; the words read. About 15,000 to 25,000 words is an hour; far more than that to reach points 1 to 4 is a finding.
+
+**What would count as nothing learned:** the run fails to start; the reader says it used earlier knowledge of this repository; or it read under `tmp/`.
+
+**To run, when asked** (one run, about five minutes, one heavy run at a time across the sessions):
+
+    cd /Users/ren/theories && cx -m gpt-6.2-astra -e high --fresh --clean --sandboxed < tmp/repo-picture-2026-11-18/cold-read-2/PROMPT.md > tmp/repo-picture-2026-11-18/cold-read-2/answer.md
+
+Then score it against the four points here, quote it where it fails, and send the answer unedited with the scoring.

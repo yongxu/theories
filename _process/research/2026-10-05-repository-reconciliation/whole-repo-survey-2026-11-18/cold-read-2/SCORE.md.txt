@@ -1,0 +1,53 @@
+# The second cold read, scored
+
+*AI-written (Claude Fable, the survey session), 20 November 2026, about 21:40 WIB. The answer is `answer.md`, unedited. The marks are `EXPECT.md`, frozen at 20:30 against the direction page at `5ffce3f39` (hashes in `FROZEN.sha256`). I checked five of the answer's citations by command, at the lines it gives; the rest I did not open. No person has read this.*
+
+## The run
+
+- One reader: astra 6.2, high effort, a fresh thread with no memories and no plugins, read-only. Its first line names itself "Codex (GPT-6)"; the harness's footer says `gpt-6.2-astra/high`.
+- It ran 58 minutes (20:28 to 21:27 WIB), 169 commands, about 18.9 million tokens. It says it read about 79,000 words in 36 files.
+- **The repository changed under it.** Nine commits landed on main during the run (`5ffce3f39` to `59b29dd15`), among them a new paragraph on the direction page at 20:49 that changes the next step. The marks were frozen before that. The reader saw the change, said so in its third sentence, and answered from the last commit it saw. So points 3 and 4 are scored twice: against the marks as frozen, and against the page as it stood when the run ended.
+
+## Against the four points
+
+1. **Heading: met.** One map on which a person, a society or an AI can trace what lets it form, keep going, change and end; a way that remakes what it depends on and a way that uses it up, and how a course crosses between them; first for alignment. It adds the ethical offer and the map of wisdom, from AGENTS.md.
+2. **How far: met, with one gap.** Proofs told with their premises on both sides (a lock; running down; an October theorem on renewal); none of the 21 sentences of the idea stated whole by a theorem; two formal tries that failed and the tests that failed, each kept. It does not say in so many words that the work calls itself far from the aim. Its own summary is "What is missing is an account of the passage between them."
+3. **The next step.**
+   - *As frozen:* **met.** It gives the frozen order as the second of three it met and says "This was current when I entered": the read at the source on renewal first, then the meeting inside it, then how registering changes, then the tellings and the outside case; held by the session named "The map and the direction: carrying on (from 17 Nov)", from `DIRECTION.md:104`.
+   - *As the page stood at the end:* it goes past the marks. The read landed at 20:49 during its run, and it names the step after it from `DIRECTION.md:106`, quoted exactly (checked): a comparison of the eight October renewal files' statements with the package's statements of a point of no return, on paper, with what would count against a relation written first, no Lean. It says why it takes that as current: the direction page and the owner's row on the board both record it.
+4. **Why the order changed, and what counts as failing: met.** The first step failed: every exact statement put older laws in a row, unfolded a definition, or assumed the level at which the favouring changes; it gives the kept course in which the favouring comes back with the level. It says the roadmap is the lead session's judgment and what stays Ren's (which sense of the second way; a case put to someone outside). It does not say that Ren has not said the roadmap is right. It gives a failure condition for the step current at entry, quoted from the meeting record, and for the comparison ("is there, is a renaming, or is not there").
+
+**No fail condition fired.** No older aim is given as the present one. The next step is named from the direction page with page and line, not from the plan of 16 November or a front page.
+
+## Where it missed, unsoftened
+
+- **GOALS' "the meta-attractor has closed and holds": not found.** The sentence is still on GOALS.md (one hit, checked). The reader read "selected scopes" of GOALS and does not mention it.
+- **"We are far from it" is not reported** as the work's own word.
+- **That Ren has not said the roadmap is right** is not reported, though it read the record that says so.
+- **It could not read what would count as failing for the step now running.** It says the board locates those frozen questions under `tmp/`, which it was told not to open. From the repository's pages alone, the current step's test is not reachable.
+- **It needed far more than an hour's reading by a person.** About 79,000 words. By its own log the first seven files (AGENTS.md, the one page, the direction page, the plan, the board, Ren's word on the lead, the meeting's record) are about 31,000 words, and the direction page alone is 11,800 (checked: 11,839). `EXPECT.md` set 15,000 to 25,000 as an hour and called far more a finding.
+- **The model line is wrong:** it calls itself GPT-6.
+
+## What it found that the leading session asked about
+
+- **The fronts' "open target" sentence: found, and taken as an older aim.** It quotes the one page and the direction page side by side, says the first "makes one part sound like the present aim of the whole", and cites the survey note's correction for the date. It found that correction only because the note was filed three hours earlier.
+- **October's aim: found, and not counted as a contradiction.** Of chapter 8's "One unified, complete, enclosed theory with zero axioms" it says "I would not count this as an unmarked contradiction", because two lines above the chapter now says the target is October's. That is the paragraph landed today.
+- **It found other pairs instead**, each quoted:
+  - GOALS' "Retain the 7 October priority" on normative grounding (line 212, checked) beside OPEN-QUESTIONS' "Set aside as one the map does not need" (line 39, checked); the board holds that goal's wording as unresolved.
+  - The one page's sentence at line 30 on turning in time beside the plan's counterexample at line 17; the board holds it at line 96.
+  - The roadmap as put to Ren ("the places with units on a level … have no return and no rule from a share") beside the meeting record's correction (three have what comes back whole and one has a rule set again from a count; what is missing is the two together).
+  - The plan calling itself "the order of work on the Lean as it looks now" beside the direction page calling it the order of 16 November.
+
+## What it looked for and did not find
+
+- Ren choosing among three meanings of renewal (staying within what is replenished; contributing to what one relies on; becoming something others can rely on).
+- One answer to "early enough": the page says no statement comparing all three clocks was found.
+- An outside reader finding their own case on the map; and a criterion of completion for the revised aim, which the goal record says it does not give.
+
+## What sent it to its first three files
+
+AGENTS.md, given by the harness; the one page, from AGENTS.md's line 37; the direction page, from AGENTS.md and from the one page's closing pointer. It notes that the README gives the same route (line 15). Both pointers were landed today.
+
+## What this run cannot show
+
+One run, one model. An agent's entry, not a person's. The repository moved during it, so the frozen marks for points 3 and 4 describe a page that stood for 21 minutes of the 58. Nothing was landed by the reader, so whether a session with no memory can make a landing is still untested.
