@@ -62,14 +62,14 @@ Beside this note, as text: the three modules, their last build logs, the units i
 
 ## Added later on 21 November: two smaller pieces, each standing by itself
 
-*AI-written (Claude Fable). Two more scratch modules, written by two AI implementers one after the other and read by an AI reader who took no part (Claude Opus, capped; 11 tool calls by its own count), who ran no build. The writer of this section read the two build logs himself and none of the Lean. The implementers' and the reader's returns are beside this note as one file, as the run's journal has them. No one has checked this section against them. Nothing in the package or in the renewal folder was changed.*
+*AI-written (Claude Fable). Two more scratch modules, written by two AI implementers one after the other and read by an AI reader who took no part (Claude Opus, capped; 11 tool calls by its own count), who ran no build. The writer of this section read the two build logs himself and none of the Lean. The implementers' and the reader's returns are beside this note as one file, as the run's journal has them. The coordinating session then set this section against them and found it equal but for two lesser points, mended here in its words. Nothing in the package or in the renewal folder was changed. One side effect, by the bridge's implementer: the build stored nine renewal-side compile steps in the cache the scratch build shares with the checker, compiled against today's `Depletion.lean`.*
 
 Both were suggested by the coordinating session: to see whether the transfer stands without the rest of the units module, and to give the step law for `Keepable` a case.
 
 **What built**, by the two logs, each with exit 0, no module unclean and no declaration with an axiom, each on its first build:
 
 - `ScratchUnitsCarrier` (168 lines; 4 declarations, all theorems).
-- `ScratchRenewalBridge` (132 lines; 9 declarations, 7 of them theorems). Its build compiled nine files of October's renewal side from the checkout as they stand today (`Depletion`, `SupportNecessity` and seven `Renewal` files); no renewal file was copied into the scratch tree, because the checker's index finds them by file name. The one file copied was the night's `ScratchKeepableStep`, byte for byte.
+- `ScratchRenewalBridge` (132 lines; 9 declarations, 7 of them theorems). Its build compiled nine files of October's renewal side from the checkout as they stand today (`Depletion`, `SupportNecessity` and seven `Renewal` files); none was copied into the scratch tree's source, because the checker's index finds them by file name; the build staged copies under the tree's `.build`, which the reader compared with the originals and found identical. The one file copied was the night's `ScratchKeepableStep`, byte for byte.
 
 **The reader's verdict:** "I found no MUST-level problem in either piece. Every claimed case has the old statement character for character, each has an `rfl` check, and each is proved from the general theorem without calling the old one." It found four lesser points, two of them in docstrings.
 
