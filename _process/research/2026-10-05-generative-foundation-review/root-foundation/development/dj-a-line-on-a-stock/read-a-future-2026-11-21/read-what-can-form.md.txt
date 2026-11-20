@@ -1,0 +1,165 @@
+# Read: what can form, widening and narrowing (reader "what-can-form")
+
+*AI-written (Claude, a reader with no part in the frozen note), 21 November 2026. A read only: no statement, model, wording or next step is proposed. Answers come from Lean statements and docstrings; where only a chapter was read, it is said. Every negative means "not found in what was read". Package root: `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/`.*
+
+## What was read
+
+- `FROZEN-THE-FUTURE.md`, whole.
+- Chapter 07 §2 (lines 49-138) and §4.4 (395-460, lines cut at about 900 characters); chapter 02 §1 (17-63, cut at 1200 characters). Used to find names only.
+- `Space.lean` 1-175 (module docstring, rest lemmas), 1085-1112 (`rests_needs`); declaration list.
+- `Branching.lean` 1-186, 408-492; declaration list. `Recurrence.lean`: the line of `lost_stays` (353) only, by grep; `Reachable` at 118 not opened.
+- `BranchingCorrespondence.lean` 1-45.
+- `Retaining.lean` 1-57, 265-430, 470-545, 596-606, 668-680.
+- `OwnWidening.lean` 1-227.
+- `EventualWidening.lean` 1-130, 278-384.
+- `KeepingWidening.lean` 1-350, 351-400, 578-592, 698-725, 790-835, 915-930, 950-972, 1008-1027, 1118-1132, 1160-1200, 2255-2275; declaration list for the rest.
+- `WideningOnTheMap.lean` 1-240.
+- `Weightings.lean` 1105-1150 (`widens_iff_every_positive`) only.
+- Definitions by grep: `Admission.lean` 370-400 (`Admits`, `Includes`, `Exceeds`), 505-509 (`WithheldLevels`); `Regions.lean` 150-170 (`Widens`, `Keeps`, `Mixed`); `Dependence.lean` 150-170 (`Renewed`, `RenewingIn`, `ConsumingIn`); `Flow.lean` 278, 296 (`Balances`, `Taking`); `Entropy.lean` 146-157 (`GainlessOn`, `Gainless`); `Gain.lean` 179 (`RequiresWithin`); `GrammarMap.lean` 60-80, 223-283, 292-357 (`«传»`, `«全生成»`, `«延»`, `«生成»`, `«守»`, `«退化»`, `«生成退化不并»`, `«阶生成则上不退化»`).
+
+**Not read:** proofs (none opened beyond statement lines); `InAmounts.lean` (where `World.rests_unrefuted` is now stated); `Regions.lean` beyond 150-170 (so `«四比之周»`, `Widens.not_reverse`, `Restoring.Inflow.widens`, `Clearing.narrows`, `Transfer.mixed` only through chapter 07); `Admission.lean` laws (`supported_of_net_give`, `admits_of_net_draw`, `unsupported_stays`, `nothing_supported_stays`, `closes_nothing`); `MapRegions`, `MapInstances`; `Web.widens_iff_every_weighting`, `Weighting.widens_iff_every_of_class`; the witnesses' bodies in `KeepingWidening` (Ladder, ClosedCycle, OpeningChain, Loosening, Source, Saturated, KindRelay) beyond the module docstring and the lines named; `EventualWideningInstances`; `ComparingCourses`.
+
+## Definitions the answers rest on
+
+- `Web.Admits l t f` (Admission 378): `∀ c, W.requires t f c → W.need t f c ≤ l c`.
+- `Web.Includes l l'` (Admission 388): at every step `l` admits every formation `l'` admits. `Web.Exceeds l l'` (392): at some step `l` admits one `l'` does not.
+- `Web.Widens l l'` (Regions 157) = `Includes l l' ∧ Exceeds l l'`; `Keeps` (161) inclusion both ways; `Mixed` (166) exceeding both ways. Its docstring: "a formation or requirement of a kind not in `F` widens nothing, so growth by new kinds (as along `Flow.GrownBy`) is not compared here."
+- `Flow.WithheldLevels part W l` (Admission 507): `l` changes by what the flow with the part withheld takes and gives, starting at `W.level 0`.
+- `Web.IncludesAcrossFrom R l T`, `Web.KeepsOpening R l T`, `Web.KeepsWidening R l T` (EventualWidening 282, 287, 292): along continuation `R`, from `T` on nothing admitted is lost across any stretch; after every step something is admitted that "continues nothing admitted at that step"; both together.
+- `Web.EventuallyWidens` (EventualWidening 99): from some step on, `l` widens `l'` on every tail.
+- `Steps.KeepsWideningFrom Q N` (WideningOnTheMap 100): from `N` nothing held is lost across any stretch and after every step something not held there is held later.
+- Grammar: `«生成» R L E x` (GrammarMap 274): along some branch the pattern `L` goes on and a carrying renewal `«传»` lies ahead of every point; `«传» R L E x y` (62): `L` continues from `x` to `y` while a fine line under `E` begins at `y`; `«全生成»` (80): the coarse line never ends and a carrying renewal lies ahead of every point; `«守»` (279): goes on along some branch with no carrying renewal; `«退化»` (283): ends on every branch.
+- `Branching.Reachable P n s` (Recurrence 118, not opened): per `Branching.lean`'s docstring, "some course of `n` moves leads to it".
+
+---
+
+## Place 1. `Space.lean` (opening account on generative and degenerative)
+
+1. **What stands for "what can go on after".** The module docstring (lines 14-16) says: "Ren's "generative" and "degenerative" read as widening and narrowing what can form, and at the level of formations as renewing and consuming (DELEGATED-CHOICES D2)". The module itself states the other reading, activity: `World.ArisingRecurs` (191), `World.CeasingRecurs` (195), and rest (`World.RestsFrom`). So here "what goes on after" is whether arising recurs in a world: of one world, not a comparison.
+2. **Opening laws.** None concluding widening. Arising recurring is shown by built examples only, each failing one premise of rest (`rests_needs`, 1092): `throughput` (balanced, dissipative, embodied, arising recurs, not finite), `shuttle` (finite, balanced, embodied, arising recurs, not dissipative), `leaking` (finite, dissipative, embodied, arising recurs, not balanced), `flicker` (finite, balanced, dissipative, arising recurs, not embodied). `World.separate` (1043, statement not opened): with infinitely many relata either recurs without the other (built examples `accretion`, `attrition`).
+3. **Closing laws.** `falls_stop_unrefuted` (154), a general law: for any `q : Nat → Nat` with `still : ∀ n, T ≤ n → q (n+1) ≤ q n`, `¬ ∀ M, T ≤ M → ¬¬ ∃ t, M ≤ t ∧ q (t+1) < q t`. `amount_still_unrefuted` (161): same premise, `¬¬ ∃ M, T ≤ M ∧ ∀ t, M ≤ t → q (t+1) = q t`. `Web.embodiedArising_stops_unrefuted` (172), general: for `W : Web X X`, `L`, a list `ds`, with `balances : ∀ t, T ≤ t → L.BalancesOn W ds t` and `dissipates : ∀ t, T ≤ t → L.DissipatesOn ds t`, it is not the case that after every step a later arising of an embodied member of `ds` stays unrefuted. The docstring (lines 61-75) reports `World.rests_unrefuted` (finite, balanced, dissipative, arising embodied: that the world rests from some step cannot be refuted), now stated in `InAmounts` (not read). `World.not_recurring_of_rests_unrefuted` (263, statement not opened).
+4. **Forms changing.** Not found in what was read.
+5. **From where, at what cost.** By the rest laws: under balance and dissipation (with finiteness and embodiment) arising cannot be refuted to stop; recurring arising needs one of those premises to fail (built examples above).
+6. **Way of going on related to widening.** Only in the docstring's account of D2 (renewing and consuming as the formation-level reading, `Web.renewing_not_consuming`, not in this file). No statement in this file.
+
+## Place 2. `Branching.lean` (with `Recurrence.lost_stays`)
+
+1. **What stands for it.** `Reachable P n`: the configurations that can be had `n` steps on, over a process `P` (all its courses, from any configuration). Also `Ahead P s` (152): what lies ahead of `s`. Of a process, not a comparison of courses.
+2. **Opening laws.** None found: nothing in what was read lets what can be had grow. `keeps_iff_fed` (180): `KeepsPossibilities P ↔ ∀ s, ∃ x a, P.step x a s`, every configuration can be had at every step exactly where each can be had at the next step: the most is "kept", never "more". `keeps_of_returns` (159): where every configuration returns, every possibility is kept.
+3. **Closing laws, general and with no premise.** The docstring's words: "The future narrows under every process". `reachable_invariant` (448): for every `P` and `n`, `Invariant P (Reachable P n)`. `Recurrence.lost_stays` (353): `¬ Reachable P n s → ∀ k, ¬ Reachable P (n + k) s` (statement line read only). `lost_necessarily_drawn` (475): `¬ Reachable P n s → NecessarilyDrawnInto P (Reachable P n) s`. `necessarilyDrawn_of_lost` (482). `necessarilyDrawn_iff_not_returns` (432), exact and with no premise: `NecessarilyDrawn P s ↔ ¬ Returns P s`. `NecessarilyDrawn.not_lossless` (488): with a list holding every configuration and a run starting at `s`, a necessarily drawn `s` means `P` is not lossless. Capture's laws (`Law.rule_absorbing` 1167 etc.) not opened.
+4. **Forms changing.** Not found.
+5. **From where.** Not applicable: no opening.
+6. **Way of going on/selecting related to widening.** Not found. `Captured.*` (P62) says a perturbed state or rule is drawn into what the rule holds (docstring); not related to what can form.
+
+## Place 3. `BranchingCorrespondence.lean`
+
+All six: not found. The module (docstring 1-45) matches configurations of two frames by branching tests (`SameBranchingTests.correspondence_of_em`, 103, with excluded middle as a named hypothesis). It says nothing of widening, narrowing or what can go on after.
+
+## Place 4. `Retaining.lean` (with `Regions` definitions)
+
+1. **What stands for it.** What a level path admits at each step: the levels with a part (`W.level`) against the levels without it (`l`, `WithheldLevels`). A **comparison** of two level paths at the same steps (counterfactual, with and without the part), not "after" in time.
+2. **Opening laws.** The exact two-sided law, in full. `Flow.widens_iff_within_margin_at` (273), docstring "The exact boundary of the generative space, with no axiom": premises `without : L.WithheldLevels part W l` and `balances : ∀ t f c, W.requires t f c → ∀ s, s < t → L.BalancesOn W [c] s`; conclusion
+   `W.Widens W.level l ↔ (∀ t f, W.Admits (l t) t f → ∀ c, W.requires t f c → W.need t f c + Σ_{s<t} partTaken part s c ≤ l t c + Σ_{s<t} partGiven part s c) ∧ ∃ t f, (∀ c, W.requires t f c → [the same inequality]) ∧ ¬ W.Admits (l t) t f`.
+   `Flow.Balances.widens_iff_within_margin` (292): the same with `balances : L.Balances W` in place of the stepwise premise. Also `adds_iff_within_margin_at` (224) and balanced form (261) for significance, not opened in full. Built example: `ArisingGiver.arises_widens` (675): balance, `Taking`, `Acting`, the giver not active at 0, arising across step 0, and `web.Widens web.level l`.
+3. **Closing laws.** `Flow.Balances.narrows_of_consumed` (368), general: premises `balances : L.Balances W`; `without : L.WithheldLevels part W l`; `keeps : ∀ t c, L.partGiven part t c ≤ L.partTaken part t c`; `below : ∀ t, T < t → W.level t c < W.need T g c`; `later : T < t`; `holds : W.requires t g c ∧ W.need T g c ≤ W.need t g c`; `admits : W.Admits (l t) t g`; conclusion `W.Widens l W.level` (the levels without the part widen those with it). `loses_iff_beyond_margin_at` (205) and its balanced form (251), exact, for a continuation with significance (not opened in full). `Web.Includes.not_undermining` (148) and `UnderminingOn.exceeded` (135), docstring only. Built examples: `Preemption.renewingAt_consuming_narrows` (494), `ArisingDrawer.arises_narrows` (602). No law of no return in this file.
+4. **Forms changing.** Not found. `Regions.Widens`'s docstring excludes it: new kinds "widen nothing".
+5. **From where, at what cost.** By 273: widening is exactly net draw within the margin for everything the levels without the part admit, plus, at some step, net exchange bringing one more formation within it. Chapter 07 §2 adds (from `Admission`, not read) "closing needs a net draw and opening a net give".
+6. **Way of going on related to widening.** Yes, for run classes of a part. `Flow.Balances.includes_of_renewed` (321): premises `balances : L.Balances W`, `taking : L.Taking W`, `without`, `renewed : ∀ t f c, part f = true → W.draws t f c → W.Renewed c`; conclusion `W.Includes W.level l`. `Balances.not_narrows_of_renewed` (349), same premises, `¬ W.Widens l W.level`. `Balances.includes_of_renewingIn` (357): `balances`, `taking`, `without`, `renewing : ∀ f, part f = true → W.RenewingIn f`; conclusion `W.Includes W.level l`. The docstring is plain that renewing gives inclusion, not widening ("keeping is not widening", chapter 07's table). `Balances.keeps_of_not_arising` (416): a part never active at the start and never arising keeps what can form the same. `Untaken.consuming_keeps` (538), a built example: consuming over the run and keeping the same. So a way of going on (renewing) is tied to *not narrowing*; consuming narrows only under the extra premises of 368. These compare with and without a part; none says what can go on *after* widens.
+
+## Place 5. `OwnWidening.lean`
+
+1. **What stands for it.** As in Retaining, plus `Web.WidensWithin region l l'` (74): widening restricted to a decided region (a part's own options). Comparison, with and without the part.
+2. **Opening laws.** Exact, in full. `Flow.Balances.widens_iff_others_within` (146): premises `balances : L.Balances W`; `without : L.WithheldLevels part W l`; `ownWidens : W.WidensWithin own W.level l`; conclusion `W.Widens W.level l ↔ ∀ t f, own f = false → W.Admits (l t) t f → ∀ c, W.requires t f c → W.need t f c + Σ_{s<t} partTaken part s c ≤ l t c + Σ_{s<t} partGiven part s c`. Its pair `Balances.mixed_iff_other_beyond` (160), same premises: `W.Mixed W.level l ↔ ∃ t f, own f = false ∧ W.Admits (l t) t f ∧ ¬ ∀ c, W.requires t f c → [the inequality]`. One way: `Balances.widens_of_untaken_beyond` (196): the same three premises and `net : ∀ t f c, own f = false → W.Admits (l t) t f → W.requires t f c → Σ partTaken ≤ Σ partGiven`, conclusion `W.Widens W.level l`. `Balances.includes_iff_beyond_within` (128), exact for inclusion. Built example `OwnDrawing.ample_widens` (324).
+3. **Closing laws.** `Balances.mixed_of_tight` (179): with the three premises, `other : own g = false`, `admitted : W.Admits (l t) t g`, `requires : W.requires t g c`, `tight : W.need t g c = l t c`, `draw : Σ partGiven < Σ partTaken` up to `t`; conclusion `W.Mixed W.level l`. Built example `OwnDrawing.tight_mixed` (339). The docstring: "Own widening is never keeping or narrowing; it is widening or mixed, and the margin of the others says which."
+4. **Forms changing.** Not found. `Balances.widens_yet_own_changed` (211) says the levels without the part admit less within the own region at some step: a change in what the own region admits, not in kinds.
+5. **From where.** Opening the own region widens the whole exactly when the part's net draw stays within the others' margins; with zero slack any net draw on a needed condition makes it mixed.
+6. **Way of going on related to widening.** A part's own widening (the docstring's reading: "keeping options open, or gaining reach", an AI reading) is related exactly to the whole's widening. The docstring says these "say where gaining reach closes what another can form, not that it is worse". Not a way of selecting.
+
+## Place 6. `Weightings.lean`, `Weighting.widens_iff_every_positive` (1129) only
+
+1. **What stands for it.** A finite list `items` and two Boolean admissions `a b : X → Bool` (courses on a listing). Comparison of two courses.
+2. **Opening law, exact, in full.** `widens_iff_every_positive {items : List X} {a b : X → Bool} : WidensOn items a b ↔ ∀ w, Positive items w → weighed items w b < weighed items w a`. Docstring: "Widening is what every positive weighting ranks higher." `mixed_either_way` (above it): a mixed pair is ranked each way by some positive weighting. No premise beyond the representation (finite listing, two-valued admission, natural weights).
+3. **Closing laws.** Not in what was read (chapter 07 names `Web.not_widens_of_closes`, not read).
+4. **Forms changing.** Not found.
+5. **From where.** Not applicable.
+6. **Related to selecting?** It relates orders (rankings, additive positive weightings) to widening: what every such order shares. It is not a statement that a selection's going on widens or narrows what can go on after it.
+
+## Place 7. `EventualWidening.lean`
+
+1. **What stands for it.** Two forms: the tail comparison `EventuallyWidens` (of two level paths) and `KeepsWidening R l T` (of one course along a continuation `R` handed in). The docstring says eventual widening "is not the second-order comparison the account leaves open".
+2. **Opening laws.** `KeepsWidening.eventually_widens_of_within` (372): premises `keeps : W.KeepsWidening itself l T`, `alike : W.AdmitsAlikeFrom l' T₂`, `from_ : T ≤ S`, `within : ∀ f, W.Admits (l' T₂) T₂ f → W.Admits (l S) S f`; conclusion `W.EventuallyWidens l l'`. Keeping widening is a premise. `KeepsOpening.eventually_widens` (350): the inclusion is handed in. `WidensWithoutEnd.eventually` (230); `eventually_of_vanishing` (266): a course admitting something at arbitrarily late steps eventually widens one admitting nothing from some step (docstring). `KeepsWidening.gathers` (323): keeping widening by name gathers `n` distinct formations admitted together, for every `n`.
+3. **Closing laws.** `KeepsWidening.not_listed` (339), general: `(every : ∀ f, f ∈ fs) → ¬ W.KeepsWidening itself l T`: over a listed type of formations, no course keeps widening by name. `EventuallyWidens.not_reverse`, `Includes.not_exceedsLate` (180), `Widens.not_eventually_reversed` (190): one-way laws. Docstring: by a supplied continuation it can hold "of a course admitting the same at every step, where a formation re-formed at each step continues nothing (`MergedWitness`)": "keeping widening counts re-formation as opening".
+4. **Forms changing.** Only that remark: along a continuation `R`, re-formation counts as opening.
+5. **From where.** The docstring: the gain or renewal keeping widening needs is "not derived" here.
+6. **Related to a way of going on?** No. Readings (the AI's, not adopted): ranking by keeping widening "runs against widening wholesale" (`OwnCondition.not_monotone`, not read).
+
+## Place 8. `KeepingWidening.lean`
+
+1. **What stands for it.** `Web.KeepsWidening R l T` of one course along a continuation; the map's lines of the admitted pattern (`W.admitting l`) along a continuation step (不穷, 全生成). The docstring: "Each law is a property of one course or one flow. None compares two courses."
+2. **Opening laws.**
+   - `Flow.generation_of_brief` (707): premises `brief : ∀ t g, ¬ ∀ i, i ≤ K → W.Supported (t + i) g`, `start : W.Supported x.1 x.2`, `endless : «不穷» (continuationStep (passingContinuation (L.PassesSupport W))) (W.admitting W.level).activityClass x`; conclusion `«全生成»` there at (activity, carrier). The endless line is handed in.
+   - `Flow.generation_of_includes_brief` (720): `brief`, `includes : W.IncludesAcrossFrom (passingContinuation (L.PassesSupport W)) W.level T`, `from_ : T ≤ S`, `supported : W.Supported S f`; conclusion `«全生成»` at `(S, f)`. Nothing lost is handed in.
+   - `Web.endless_of_successor` (806): `within : ∀ x y, L x y → activityClass x y`, `next : ∀ y, W.Supported y.1 y.2 → «有后» (continuationStep R) L y`, `start`; conclusion `«不穷» (continuationStep R) L x`. Having a successor everywhere is handed in.
+   - `Web.generation_of_one_step_supports` (818): `within`, `brief : ∀ t g, W.Supported t g → ¬ W.Supported (t+1) g`, `start`, `endless`; conclusion `«全生成» … carrierClass x`.
+   - Exact: `Web.includesAcrossFrom_iff_endless` (585): `W.IncludesAcrossFrom R l T ↔ ∀ S f, T ≤ S → W.Admits (l S) S f → «不穷» (continuationStep R) (W.admitting l).activityClass (S, f)`, no premise.
+   - Built examples: `KindRelay.keeps_widening` (2486), `KindRelay.generation`, `Growing` (in WideningOnTheMap), `Ladder`.
+3. **Closing laws (general).**
+   - `Flow.whole_not_keepsWidening` (339): `every : ∀ c, c ∈ all`, `distinct : Distinct all`, `gainless : L.Gainless`, `balances : ∀ t, T₀ ≤ t → L.BalancesOn W all t`, `req : ∀ t f, T ≤ t → W.Supported t f → W.RequiresWithin all f`; conclusion `¬ W.KeepsWidening Web.itself W.level T`.
+   - `Flow.not_keepsWidening_along_passings` (1125): `balances : L.Balances W`, `acting : L.Acting W`, `dependent : W.Dependent`, `unloosened : ∀ t f, W.Unloosened t f`, `contains : ∀ t g f, passingContinuation (L.PassesSupport W) t g f → R t g f`; conclusion `∀ T, ¬ W.KeepsWidening R W.level T`. Also `not_keepsOpening_along_passings` (1117), `not_exceedsAcross_along_passings` (1108), and the supportedPassing forms (1076-1097).
+   - `Flow.not_keepsWidening_of_dissipated_requirements` (1170): `balances`, `acting`, `dependent`, `unloosened`, `required : ∀ t f c, W.requires t f c → c ∈ all`, `dissipates : ∀ t, T₀ ≤ t → L.DissipatesOn all t`, `carries : ∀ t f, W.Supported t f → R t f f`; conclusion `∀ T, ¬ W.KeepsWidening R W.level T`.
+   - `Flow.not_generation_of_dissipated_requirements` (1187): `required`, `balances : ∀ t, T₀ ≤ t → L.BalancesOn W all t`, `dissipates`, `within : ∀ t g f, R t g f → passingContinuation (L.PassesSupport W) t g f`, `start`; conclusion `¬ «全生成» (continuationStep R) activityClass carrierClass x`.
+   - `Web.kind_every_branch_ends_of_gone` (772), docstring only: where a uniform horizon is known, the line ends on every branch under the kind class.
+   - No law of no return was found here.
+4. **Forms changing.** `Flow.BeginsAlong.carries_kind_iff` (921), general: premises `refl : ∀ f, Q f f`, `supported : W.Supported t g`; `L.BeginsAlong W (W.withinKind Q (L.PassesSupport W)) t g h ↔ «传» (continuationStep (passingContinuation (L.PassesSupport W))) activityClass (kindClass Q) (t, g) (t+1, h)`. Docstring: "the whole lineage goes on while a line of a kind begins, a renewal one grain up". `Flow.begins_late_of_keepsOpening` (1015): `balances`, `acting`, `dependent`, `unloosened`, `carries : ∀ t f, W.Supported t f → R t f f`, `opens : W.KeepsOpening R W.level T`; conclusion `∀ S, T ≤ S → ¬¬ ∃ j g h, S ≤ j ∧ L.BeginsAlong W R j g h`: keeping opening needs a beginning after every step. That is a law in which opening *needs* change (beginnings), one way. The docstring: "renewal is necessary for keeping widening along a reading and not sufficient for what can form, by name, to grow". Built examples: `ClosedCycle.generation_without_widening` (1629, 全生成 while keeping widening from no step); `KindRelay` (both, at the kind grain; by name it does not keep widening and returns with period two). "What is not derived" includes "growth by kinds not given in advance; requirements that tighten".
+5. **From where, at what cost (the gain bridge).**
+   - `Web.KeepsWidening.passes_every_bound` (287): `keeps : W.KeepsWidening itself W.level T`, `req : ∀ t f, T ≤ t → W.Supported t f → W.RequiresWithin cs f`; conclusion `∀ K M, ∃ t, M ≤ t ∧ K < W.stock cs t`. `rises_late` (299): same premises, the stock rises at arbitrarily late steps.
+   - `Web.KeepsWidening.from_rest_or_open` (310): `keeps`, `req`, `gainless : L.Gainless`, `distinct : Distinct cs`; conclusion `∀ M, ∃ t, M ≤ t ∧ ((L.withImbalance W).NetGiver cs t none ∨ ¬ L.ClosedAt cs t)`. Docstring: "The flow need not balance: the rest is counted."
+   - `Web.KeepsWidening.open_late` (320): the same and `balances : ∀ t, T₀ ≤ t → L.BalancesOn W cs t`; conclusion `∃ t, M ≤ t ∧ ¬ L.ClosedAt cs t`.
+   - Under upkeep: `KeepsWidening.more` (365): `keeps`, `takes : L.TakesWhileSupported W cs T`; `L.More cs`. `replenishment_unbounded` (376): plus `balances` on `cs` from `T₀`; `¬ ∀ t, T₀ ≤ t → L.replenishment cs t ≤ R`. `renewers_unbounded` (387): plus `capacity : L.Capacity cs g`; `¬ ∀ t, T₀ ≤ t → L.renewers cs t ≤ M`.
+   - The docstring lists witnesses that each premise is needed: nothing lost (`ClosedCycle.bounded_while_opening`), a finite family (`OpeningChain.fixed_but_unbounded`), fixed needs (`Loosening.bounded_while_widening`), the first law (`Source.from_nothing`). Not opened.
+6. **Way of going on related to widening.** The module relates readings of continuation (by name, along passings, within a kind) to whether keeping widening can hold; not a way of selecting. Its Readings (the AI's, not adopted): "a course keeps widening by name only because names leave lineage out".
+
+## Place 9. `WideningOnTheMap.lean`
+
+1. **What stands for it.** A chain of predicates `Q : Nat → X → Prop` on a course's moments, "such as what levels admit along a course"; of one course.
+2. **Opening laws, exact, in full.**
+   - `Steps.generation_iff_keepsWidening` (220): premises `wdec : ∀ n x, ¬ Q n x ∨ ¬¬ Q n x` and `found : ∀ n, ¬ includes Q (n+1) n → ∃ x, Q (n+1) x ∧ ¬ Q n x`; `«全生成» next (includes Q) (same Q) N ↔ KeepsWideningFrom Q N`.
+   - `Steps.keepsWidening_iff_generation_losing_nothing` (228): the same premises; `KeepsWideningFrom Q N ↔ (∀ n, N ≤ n → includes Q n (n+1)) ∧ «全生成» next «一» (same Q) N`. Docstring: "Nothing lost is what widening adds to the map's generation."
+   - `Steps.generation_includes_iff` (157), no premise: `«全生成» next (includes Q) (same Q) N ↔ «不穷» next (includes Q) N ∧ «全生成» next «一» (same Q) N`.
+   - One way: `generation_of_keepsWidening` (184, `wdec`), `keepsWidening_of_generation` (208, `found`), `includes_not_back_of_generation` (197, none). Calibrations (docstring): forward is weak excluded middle (`forward_iff_wem`), back is excluded middle (`back_iff_em`). On the World by name: `Web.keepsWidening_itself_iff` (482), `Web.keepsWidening_byName_iff_generation` (499), not opened.
+3. **Closing laws.** None of no return. Built example `Steps.Moving` (308-321): 全生成 under the one at every moment and keeps widening from none.
+4. **Forms changing.** Generation under (the one, the same possible) is "what is held changes after every moment" (docstring); 228 says that change is keeping widening exactly where nothing is lost, under `wdec` and `found`. The change is in what is held, not in kinds or carriers.
+5. **From where.** Not stated here.
+6. **Way of going on related to widening.** It relates the map's generation (a way of going on) to keeping widening: exactly, under two premises of deciding, with loss as what parts them. Not a way of selecting.
+
+## Place met, not on the list: `GrammarMap.lean`
+
+`«传»` (62), `«生成»` (274), `«守»` (279), `«退化»` (283) are the definitions behind chapter 02 §1. `«生成退化不并»` (296), no premise: `¬ («生成» R L E x ∧ «退化» R L x)`. `«阶生成则上不退化»` (355): `«阶生成» R Es k x → ¬ «退化» R (Es (k+1)) x`. Here `«阶生成» R Es k x` is by definition `«生成» R (Es (k+1)) (Es k) x` (351): the pattern at a coarser order goes on through renewals at a finer one. That is a general form of "forms change (fine lines begin) while the going on (coarse pattern) continues". It is defined, not concluded, and it is not tied to widening in this file.
+
+## Where a chapter says more or less than the Lean
+
+- Chapter 07 §2's run-class table matches `Retaining`'s statements in what was read. Its "closing needs a net draw and opening a net give" rests on `Admission` laws not read.
+- Chapter 02 §1's Reading ("keeping widening, read on a course's moments, is generation under the one that loses nothing, under premises of deciding") matches `WideningOnTheMap` 228 and leaves out what the Lean names: the premises are `wdec` and `found`.
+- Chapter 02 §1 does not say what `Regions.Widens`'s docstring says, that new kinds widen nothing.
+- `Space`'s docstring says the module states the activity reading (arising and ceasing), not widening. So the "generative and degenerative" account there is not a widening law.
+
+---
+
+## The guesses
+
+**F1.** *For:* every widening notion read is stated of a web, flow, listing or chain that is handed in. `KeepsWidening` is of one course along a continuation `R` that is handed in. 全生成/生成 is of a relation and classes that are handed in. Chapter 07's widening compares the levels with and without a part. Nothing read states a way of selecting as what widens. *Against or qualifying:* other statements bring in a way of going on or of ranking. `Retaining` 357 ties a way of going on (renewing parts) to not narrowing. `OwnWidening` 146 ties a part's own widening to the whole's, exactly. `Weightings` 1129 ties orders (rankings) to widening, exactly. That last is about rankings, not about a selection's dynamics.
+
+**F2.** *For:* the general laws that conclude where keeping widening comes from (`from_rest_or_open` 310, `open_late` 320, `whole_not_keepsWidening` 339) conclude it is fed from the rest or across the boundary, or that it cannot hold for a whole. `not_keepsWidening_of_dissipated_requirements` (1170) rules it out where everything required is dissipated on. `not_keepsWidening_along_passings` (1125) rules it out along lineage altogether under balance, `Acting`, `Dependent` and `Unloosened`. *Against:* each of these laws carries premises a "closed finite family" sentence would drop: by name (`itself`), requirements fixed (`RequiresWithin`), `Gainless`, `Distinct`. The docstring names witnesses that these are needed, among them `Loosening.bounded_while_widening` for fixed needs (not opened). Along a reading other than by name, the built example `KindRelay` balances, conserves, lists its conditions and keeps widening within kinds from step 0 (`KindRelay.keeps_widening` 2486, `.conserving`, `.requiresWithin`, per the docstring). By name it does not, and it returns with period two. So "never from within a closed finite family" holds only of keeping widening by name with fixed requirements. It is not a law of every reading.
+
+**F3.** *For:* `BeginsAlong.carries_kind_iff` (921) is a general law: the lineage goes on while a line of a kind begins. `begins_late_of_keepsOpening` (1015) is general: keeping opening needs beginnings after every step. The grammar's `«传»`/`«阶生成»` define going on through change. *Against the second half:* `WideningOnTheMap.keepsWidening_iff_generation_losing_nothing` (228) is a general law saying exactly when going on through change (generation under the one: what is held changes after every moment) is keeping widening: where nothing is lost, under `wdec` and `found`. The change there is in what is held, not in kinds. For kinds, `Regions.Widens`'s docstring rules out counting them ("widens nothing"), and `KeepingWidening` lists "growth by kinds not given in advance" as not derived. "After a loss, what still goes on has changed what it needs" was not in this group's files.
+
+**F4.** *For:* this group alone has at least five: what a level path admits at each step (`Admits`, compared with and without a part); keeping widening along a continuation (one course); `Branching.Reachable P n` (a process); the map's lines (不穷, 生成, 全生成); a chain `Q` on moments; and items on a listing. Branching's reachable set is joined to none of the others in what was read. *Against "no law joins them":* several exact joins exist. `includesAcrossFrom_iff_endless` (585) joins nothing lost along `R` to the admitted pattern's lines never ending. `generation_iff_keepsWidening` (220) and `keepsWidening_byName_iff_generation` (499) join keeping widening to 全生成 on moments. `KeepsWidening.eventually_widens_of_within` (372) joins keeping widening to the comparison of two level paths (one way). `widens_iff_every_positive` (1129) joins widening on a listing to rankings, and chapter 07 names `Web.widens_iff_every_weighting` (not read) for level paths. The join not found is between `Branching.Reachable` and admission or widening.
+
+**F5.** *For:* in `Branching`, what can be had only narrows, under every process and with no premise (`reachable_invariant` 448, `lost_stays`, `lost_necessarily_drawn` 475, `necessarilyDrawn_iff_not_returns` 432). Nothing there widens. Closing laws for keeping widening are general and need only World premises (1125, 1170, 1187, 339, `not_listed` 339 in EventualWidening). Every law read that concludes keeping widening or 全生成 *in time* has a going-on among its premises: an endless line, nothing lost, own widening, keeping widening, or generation (707, 720, 806, 818, 372, 208). *Against:* the comparison (with against without a part) has exact two-sided laws whose right side is net exchange against margin. They do not contain widening: `widens_iff_within_margin_at` (Retaining 273), `widens_iff_others_within` (OwnWidening 146), `widens_iff_every_positive` (1129). These are general and exact for opening as a comparison, but they are not "after": they compare two level paths over the same steps. Of opening *after* (keeping widening in time), the Lean's laws found are all exclusions or needs (fed from beyond, beginnings needed, renewers unbounded), and no law found concludes it from premises not already a going-on.
+
+## Places met, on no list, that bear on the questions
+
+- `GrammarMap.lean` (`«传»`, `«生成»`, `«阶生成»`, `«阶生成则上不退化»`), above.
+- `Recurrence.lean` `lost_stays` (353, 577), the no-return law behind Branching's "the future narrows".
+- `Regions.lean` 157, `Widens`'s docstring on new kinds.
+- Not read but named by what was read: `Admission`'s `unsupported_stays` and `nothing_supported_stays` (a no-return law for support, per chapter 07 §2); `ComparingCourses` (`WidensWithLag`, `IncludesLater`), which may bear on comparing a course with one that keeps the same forms later.

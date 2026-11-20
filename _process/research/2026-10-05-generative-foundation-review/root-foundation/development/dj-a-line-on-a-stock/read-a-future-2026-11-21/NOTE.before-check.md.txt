@@ -1,0 +1,68 @@
+# What the Lean already states of a future opening or closing: a read of 21 November
+
+*AI-written (Claude Fable, board row DJ), 21 November 2026. A read: nothing was proposed by the readers, no Lean was written and nothing was built. Three AI readers (Claude Opus), one group of places each and each alone, capped at 45 tool calls (they used 25, 30 and 25), answered six questions fixed beforehand, from statements and docstrings; several sections were read only through their docstrings or a module's opening account, and each report says which. The writer read no Lean for this note. No person has read any of it. Negatives are "not found in what was read". Future, opening, closing, widening are working words; the Lean's names are given.*
+
+## What was asked
+
+On 21 November Ren said that "remaking" is not his word for the second of the two ways: "it is also not holding exactly the same, dynamics, forms changes over time, but the continuation may continue, and creates more and more future" ([his words](../../../../../../../sources/15-codex-theory-conversations/2026-11-21-the-current-path-keep-moving.md)). The session put a re-saying of the direction's sentence to him, which he has not yet read: "…and a way of going on that opens it: forms change, the going on may continue, and more can go on after it than before."
+
+Before that sentence is said again, this read asked what the Lean already states of what can go on after a going-on: its opening or widening, its narrowing or closing, and forms changing while the going on continues. Six questions, five guesses (F1 to F5) and what would count as the re-saying being not needed or not bearable were frozen at 04:50, before any reader ran ([the frozen file](FROZEN-THE-FUTURE.md.txt)); two additions were written under its line "After" before any report was read: that an opening is to be told as what a course does and not as what makes it better (his word of 10 November, "i think "widening is better" is not the way to go"), and one more place, the scratch step law of the same night.
+
+## How the frozen file's two ends came out
+
+- **"Already there"** (a general law that says of a way of going on, exactly, when what can go on after it widens): not found by any of the three.
+- **"Cannot be borne"** (F4 and F5 both): the fifth guess is supported by all three readers. The fourth holds in part: "what can go on after" is many things in the Lean, and they are joined only in part.
+
+## Closing is general and exact
+
+By all three readers, each of its own group:
+
+- **Within one process the possible never grows.** `Branching.reachable_invariant` and `Recurrence.lost_stays` hold of every process with no premise; the module's docstring says "The future narrows under every process". `Run.possible_of_next`: nothing is added to the whole possible along any course; `Run.not_possible_returns`: a lost possibility has no way back.
+- **No return.** Recoverability is down-closed (`Recoverable.earlier`); the point of no return splits a course exactly (`NoReturnAt.recoverable_iff`); the kernel is closed forward (`kernel_step_iff`).
+- **Under named premises:** a lock with no reader of what lies beyond the share stays closed (`closed_stays_closed`), outlives a loss nothing in the loop reads (`lock_outlives_loss`), and a rewarded rise breaks a dependence beyond (`breaks_beyond`, `favours_breaking_beyond`).
+- **Of arising and descent:** arising that depletes or is dissipated on does not recur; a whole generation degenerates exactly where a later generation is empty, under two premises on the census (`generation_degenerates_iff`); a line degenerates exactly where it ends (`degenerates_iff_line_ends`).
+- **Keeping widening is excluded** for a finite balanced gainless whole with fixed requirements read by name, under dissipation of everything required, and along lineage under the world's premises.
+
+## Opening, in three kinds
+
+1. **In time, along a course: only from a premise that is itself a going-on.** Every law the readers found that concludes an opening in time takes one: an endless line, nothing lost, a successor for every supported occurrence, every member reproducing, exact transmission, generations that are never empty, arising without end. The one exact law of widening along a course, `Reaching.widens_next_iff_rising`, is of determined processes only, and its right side is the course's own admissions rising.
+2. **By comparison, with a part and without it: exact, and the right sides do not contain widening.** Three two-sided laws: what the levels admit with a part widens over what they admit without it exactly where the part's net draw stays within the margin of every formation admitted without it and its net exchange brings one more formation within it (`Flow.widens_iff_within_margin_at`); the same told of others when a part's own options widen (`Balances.widens_iff_others_within`); and a law of rankings (`Weighting.widens_iff_every_positive`). The first reader: this is "counterfactual over the same steps, not 'after'".
+3. **In built examples.** A relay that keeps widening within kinds while balanced and conserving (`KindRelay`); a climb that keeps widening on numbers no list holds (`Climb`); closed cycles with more takers where dissipation is dropped (`Cycle.closed_more`, `Recycle.closed_unceasing`).
+
+## Forms changing while the going on continues
+
+- **The grammar's generation is the nearest thing to his sentence.** `«生成»` is defined as a continuing in which, ahead of every point, the kind goes on while a new carrier begins (`«传»`); `«阶生成»` is by definition a coarser order going on through renewals at a finer one. The first reader: this "is defined, not concluded, and not tied to widening". Laws on it: the lineage goes on while a line of a kind begins (`BeginsAlong.carries_kind_iff`); keeping opening needs beginnings; generation is keeping widening exactly where nothing is lost, under premises of deciding (`keepsWidening_iff_generation_losing_nothing`).
+- **After a loss, what is still active needs less, or no longer needs the condition** (`consumed_continues_transformed`), a general law; and changing what one rests on within a finite family nothing renews does not escape the end (`substitution_defers`).
+- **A way that turns:** the way changes to another kind and the line never ends exactly where the turn comes before the point of no return (`turns_in_time_iff_before`). It concludes continuation, not widening.
+- **The held possible.** The third reader names chapter 7's telling of it as "the nearest place to 'creates more and more future'": the possible under what is held grows only where what is held changes. It read two statements of that module only.
+- **New kinds were not found.** Births are within the kind; `ways_alike` has no new kind arrive without a difference already made; the docstring of the widening of what can form says a formation of a kind not listed "widen[s] nothing".
+- **No law was found that says continuing through change widens what can go on after.**
+
+## From where an opening comes
+
+Under the premise that nothing gives from nothing, `Gain` says where every rise, novelty and new support comes from: the rest, or across the boundary. The first and second readers qualify the second guess: those laws need requirements that are fixed and read by name; and where dissipation is dropped, built closed cycles bear arising without end and more takers, which under that premise are returns and not novelty. Where a list holds the whole possible, nothing keeps widening (`not_keepsWidening_of_listed`).
+
+## A way of going on, or of selecting, and what can go on after
+
+- **Of a way of going on:** a part all of whose members are renewing does not narrow what the levels admit (`includes_of_renewingIn`; it gives inclusion, not widening), and a consuming part narrows under further premises (`narrows_of_consumed`). Both compare with and without the part.
+- **Of a way of selecting:** related to going on and ending (`generation_of_positive_term`; the same selection terms with two fates), and to keeping or closing (the lock's laws; a selection read off continuation reading before the point of no return). None of the three readers found a statement relating a way of selecting to the widening of what can go on after it.
+- **The scratch step law of the same night** (not in the package; taken from its record, not from these readers): for every process and guard, not being keepable is kept by every step exactly where no step from outside the guard leads to a configuration the guard is keepable from (`not_keepable_invariant_iff`), with a built case where a step gains keepability. In the package's terms that is when a closed future stays closed, and a case of one opening.
+
+## What it says of the re-saying
+
+This is my reading, held loosely; no report states it.
+
+- **"More can go on after it than before" cannot be borne as it stands.** Within one process the Lean has, with no premise, that the possible never grows along a course. In time, what it concludes is that a going on continues, from a premise that is a going-on; it does not conclude that more becomes possible than was.
+- **Two things can be borne, and they are different.** One is the grammar's generation: the going on continues while carriers begin anew. That is his "forms changes over time, but the continuation may continue", and it is a definition with laws beside it. The other is the comparison: with a part, more can form than without it, exactly where its net draw stays within the others' margins and brings one more within. That is the nearest exact sense of "creates" a future, and it is of a part beside others, not of a course against its own past.
+- **"More and more"** is keeping widening, which the Lean excludes for a closed finite whole under its premises and has otherwise only from the rest, across a boundary, or where what is held changes.
+- **It is a description.** Nothing here ranks a way by how much it opens, and by his word of 10 November nothing should.
+
+So the re-saying wants one change before he reads it as a proposal: not "than before", but "than could without it", with the going on continuing through forms that change. And the sentence would then name two things the Lean keeps apart, generation and widening by comparison, joined by one law under premises (`keepsWidening_iff_generation_losing_nothing`).
+
+## What it cost
+
+Three AI readers, 0.58 million tokens by the run's own count, 8 minutes; the ceiling was 0.8 million with the checker.
+
+## Where it is
+
+Beside this note, as text: the frozen file as it stands and as it was at 04:50, with its hash, and the three reports (`read-what-can-form.md.txt`, `read-arising-gain-descent.md.txt`, `read-courses-still-open.md.txt`).

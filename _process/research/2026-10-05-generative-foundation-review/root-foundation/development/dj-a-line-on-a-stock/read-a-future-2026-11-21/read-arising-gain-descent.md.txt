@@ -1,0 +1,221 @@
+# Read: arising, gain and descent (reader arising-gain-descent)
+
+*AI-written (Claude Opus 5.5, a reader with no part in the frozen note), 21 November 2026. A read against [FROZEN-THE-FUTURE.md](FROZEN-THE-FUTURE.md). Nothing is proposed. No Lean was written or built, no test or git command run. Package: `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/`. Lines are of the files as read today. "A general law" means it holds of every model meeting the stated premises; "a built example" means one constructed course. Every negative means "not found in what was read".*
+
+## What was read
+
+| File | Lines |
+|---|---|
+| Arising.lean | 1–761 (whole) |
+| Gain.lean | 1–381 (whole) |
+| Flow.lean | 1–140; 270–335; 726–770; 785–860, 878–920, 980–1030 (proof lines filtered out) |
+| Roles.lean | 1–110 (account); 495–512; 636–731 |
+| Dissipation.lean | 230–252 (ClosedAt, DissipatesOn, Dissipative) |
+| Entropy.lean | 1–160; 1143–1157; 1175–1240; 1326–1337; 1651–1686 |
+| Evolution.lean | 1–120; declaration list; 150–203, 255–345 (statements and docstrings); 543–556 |
+| LineageRegions.lean | 1–175 (account); 201–215; 292–303; 399–471; 474–580; 656–720 |
+| Dependence.lean | 1–326 (proof lines partly filtered); 706–735 |
+| LineOnAStock.lean | 1–110 (account); 530–600 |
+| GrammarMap.lean | 58–65; 223–289 (定义 of 传, 延, 尽, 生成, 守, 退化, 新而尽) |
+| Recurrence.lean 155–161; SelectionTerm.lean 642–647; InAmounts 320–326 | definitions only |
+| chapters 02-MAP.md 150–165, 239; 07-SIGNIFICANCE.md 70–84 | to find declarations |
+
+Not read: the bodies of Flow's Population link (`Flow.More.unceasing`), Reproduction, SelectionShift, Novelty, Space, Brood, Shuttle, Throughput, SprayShuttle in Roles; LineOnAStock's laws after line 600 (`rise`, `never_in`, `line_ends`, `unending_iff_holds`), which are reported below from its account only and are marked so; Dependence's Crossing witness body; Entropy's `Passing`, `Gathering`, `Settling` bodies. No proof was opened to answer a question except where said.
+
+---
+
+## 1. Arising.lean
+
+**Q1. What stands for "what can go on after".** Not a set of what can form. `Web.Arises t f` (93): `¬ W.active t f ∧ W.active (t + 1) f`; `Web.Unceasing` (97): `∀ N, ∃ t f, N ≤ t ∧ W.Arises t f`. Stated of one web (one course). The account (16–19) says "what does not cease is arising, not any particular form" and "`Arises` asks nothing more of the formation: not that it is new, that it renews, or that it lives". On the grammar: arising is an active beginning 生 (`Web.arises_iff_sheng`, 725), and "arising whose line goes on is renewal (复生)" (`Web.renews_iff`, 748). The header (10–13) says arising carries "one reading of the second 生 of 生生", while on the delegation of 15 October "the second 生 ranges over what can form, active or not". So the module itself says it does not state "what can form".
+
+**Q2. Laws concluding an opening or widening.** No general law concludes `Unceasing`. Built examples: `Oscillation.unceasing` (565), `Recycle.closed_unceasing` (484), `Tide.unrelated_depletion` (261). Exact two-sided statements, which restate rather than open:
+- `Web.unceasing_iff_late_beginnings` (734): `W.Unceasing ↔ ∀ N, ∃ y : Nat × F, N < y.1 ∧ W.active y.1 y.2 ∧ «生» Steps.along W.activityClass y`. No premise.
+- `Web.renews_iff` (748): `«复生» Steps.along W.activityClass (t, f) ∧ W.active (t + 1) f ↔ W.Arises t f ∧ W.active (t + 1 + 1) f`. No premise.
+
+**Q3. Laws concluding a closing.** All general, all of the form "not at arbitrarily late steps":
+- `Web.depletion_not_recurring` (170): for `cs : List C`, `T`, `event : Nat → Prop`, with `still : ∀ t, T ≤ t → W.Still cs t` (no member of `cs` rises from `T` on) and `depletes : W.Depletes cs event` (at each event step at which no member rises, some member falls), concludes `¬ ∀ N, ∃ t, N ≤ t ∧ event t`.
+- `Web.Unceasing.rises` (182): from `depletes : W.Depletes cs (fun t => ∃ f, W.Arises t f)` and `unceasing : W.Unceasing`, for every `T`, `¬ ∀ t, T ≤ t → W.Still cs t`.
+- `Web.Unceasing.activeRenewer_recurs` (190): adds `made : W.RenewedBy renews` (every rise is made by some active formation renewing it); concludes `¬ ∀ t, T ≤ t → ∀ f, ¬ W.ActiveRenewer renews cs t f`.
+- `Web.substitution_defers` (201): `still` from `T` and `draws_down : W.Depletes cs (fun t => W.active t f)` give `¬ ∀ N, ∃ t, N ≤ t ∧ W.active t f`.
+- `Web.dissipation_arising_not_recurring` (208): `q : Nat → Nat`, `unrestored : ∀ t, q (t + 1) ≤ q t`, `dissipates : ∀ t f, W.Arises t f → q (t + 1) < q t` give `¬ W.Unceasing`. The account (53–54): "the premise is physical; it is not a consequence of the theorem".
+- Built example `Growth.ceases` (323): arising on a consumed condition ceases.
+No law of a closing that stays closed in the sense of "no course from here keeps it" was found; these are of one course.
+
+**Q4. Forms changing while going on continues.** `Relay.defers` (387), a built example: the consumer's dependence `Dissolves 0 () .first` and `Forms 0 () .second` (it changes what it rests on) and it is inactive from step 2 on. The general law behind it, `substitution_defers` (201), says the docstring's "Substitution defers the end and does not escape it": changing which members of a finite unrenewed family a formation draws on does not keep it active without end. So in this module a change of form while going on is stated, and the law concludes a narrowing, not a widening.
+
+**Q5. From where, at what cost.** Under its premises, unceasing arising needs a member of the depleted family to rise at arbitrarily late steps (`Unceasing.rises`); with `RenewedBy`, renewing activity recurs (`activeRenewer_recurs`). Renewal is read as a net rise only (account 42–43; `Expansion.undepleted` in Flow). `Recycle.closed_unceasing` (484), a built example: a closed family of two pools with total held at one (`total_one`, 462) sustains unceasing arising with no dissipation. This is unceasing arising from within a closed finite family; it is return (the consumer arises again and again), not new formation.
+
+**Q6. A way of going on or selecting related to widening.** Not found. The account (77–78): "More takers without end (`Becoming.Flow`), diversity and complexity are not stated here."
+
+## 2. Gain.lean
+
+**Q1.** Two things, each of one course. (a) Novelty of a family's configuration: new at every step (`∀ i j, i < j → W.config cs (T + i) ≠ W.config cs (T + j)`), or first visits `Web.NewAt W cs T t` (133): `∀ s, T ≤ s → s < t → W.config cs s ≠ W.config cs t`. (b) What can newly form: `Web.FirstSupported W T t f` (192): `W.Supported t f ∧ ∀ s, T ≤ s → s < t → ¬ W.Supported s f`, docstring "it can first form there". `Supported` (Dependence 134) is `∀ c, W.requires t f c → W.need t f c ≤ W.level t c`. This is the nearest notion in my group to "what can form at a step" growing: a formation that could not form before and can now.
+
+**Q2. Laws concluding an opening.** None concludes that more can form. Every law here takes newness or new support as premise and concludes a rise. The nearest, in full:
+- `Web.supported_of_config` (185): from `req : W.RequiresWithin cs f` and `same : W.config cs s = W.config cs t`, `W.Supported t f → W.Supported s f`. Docstring: "What can form depends on the configuration." `RequiresWithin` (179): `∀ s t c, W.requires s f c → W.requires t f c ∧ W.need s f c = W.need t f c ∧ c ∈ cs`.
+- `Web.newAt_of_first` (198): `req`, `first : W.FirstSupported T t f` give `W.NewAt cs T t`.
+- `Web.rises_late_of_newly_supported` (205): premises `increasing : ∀ i j, i < j → at_ i < at_ j`, `from_ : ∀ n, T ≤ at_ n`, `req : ∀ n, W.RequiresWithin cs (f n)`, `first : ∀ n, W.FirstSupported T (at_ n) (f n)`, any `M`; conclusion `∃ t, M ≤ t ∧ W.stock cs t < W.stock cs (t + 1)`. Docstring: "What newly forms without end needs the family to rise without end."
+
+**Q3. Closing.** General laws, all with `every : ∀ c, c ∈ all`, `distinct : Distinct all`, `gainless : L.Gainless`, `idle : ∀ t, T ≤ t → ¬ (L.withImbalance W).NetGiver all t none`:
+- `Flow.whole_bounded_of_rest_idle` (299): `∀ t, T ≤ t → W.stock all t ≤ W.stock all T`.
+- `Flow.whole_recurs_of_rest_idle` (312): from every `M` some `i < j`, `M ≤ i`, with `W.config all (T + i) = W.config all (T + j)`; and with exchange at arbitrarily late steps, `¬ L.CarriesHistory W all T`.
+- `Flow.whole_not_new_of_rest_idle` (322): `¬ ∀ i j, i < j → W.config all (T + i) ≠ W.config all (T + j)`. Account (48–49): "unceasing arising within a bounded whole is return, not novelty without end."
+That such a whole cannot have formations first supported without end (each requiring, fixed, within it) follows by joining `whole_bounded_of_rest_idle` with `rises_late_of_newly_supported`; that join is mine, not a stated theorem.
+
+**Q4.** Not found. `newAt_of_first` says a newly formable formation shows a new configuration; nothing says that what forms is of another kind, or that something continues through the change.
+
+**Q5. From where.** The general laws, with `Gainless` (Entropy 156: `∀ cs t, Distinct cs → L.ClosedAt cs t → L.GainlessOn cs t`, nothing from nothing on a closed family without repetition; `ClosedAt`, Dissipation 237: no formation taking part takes from or gives to a condition outside `cs`):
+- `Flow.rise_netGiver` (229), no premise: from `rise : W.stock cs t < W.stock cs (t + 1)`, `∃ f, (L.withImbalance W).NetGiver cs t f`.
+- `Flow.rise_given` (262): the giver is the rest (`none`) or a formation `g` with `L.NetGiver cs t g`.
+- `Flow.rise_from_rest_or_open` (279): `gainless`, `distinct : Distinct cs`, `rise` give `(L.withImbalance W).NetGiver cs t none ∨ ¬ L.ClosedAt cs t`.
+- `Flow.whole_rise_from_rest` (290): `every`, `distinct`, `gainless`, `rise` give `(L.withImbalance W).NetGiver all t none`.
+- `Flow.newly_supported_from_rest_or_open` (351): the premises of `rises_late_of_newly_supported` with `gainless` and `distinct` give `∃ t, M ≤ t ∧ (rest gives net ∨ ¬ L.ClosedAt cs t)`.
+- `Flow.new_beyond_every` (341): for every `ds` without repetition holding `cs`, the same at arbitrarily late steps.
+The premise is the first law, not dissipation. No cost is stated: the laws name the source (the rest, or across the boundary), not what it draws down. The account (57–58): "What is not derived: whether an actual part is open, which relatum the rest is in an actual unfolding, and whether its exchange is without end." Built example `Flow.counting_given_by_rest` (372).
+
+**Q6.** Not found.
+
+## 3. Flow.lean (More, replenishment_unbounded, Expansion, Steady, Cycle)
+
+**Q1.** `Flow.More cs` (323): `∀ K, ∃ T, ∀ t, T ≤ t → K ≤ L.takers cs t`, "more without end": the number of formations taking from a family grows past every bound. One flow. It counts takers, not what can form.
+
+**Q2.** No general law concludes `More`. Built examples: `Expansion.more` (845: balance, `Acting`, `Capacity [()] 1`, `Dependent`, a renewer arising at every step, `Unceasing`, `More [()]`), `Cycle.closed_more` (1016). Chapter 2 (157) cites `Flow.More.unceasing` (in Population, not read) for the converse direction, from `More` to unceasing arising under a census.
+
+**Q3.** Not found in Flow; the account (75–79) sends this to `Becoming.Dissipation`.
+
+**Q4.** Not found. In `Expansion` new formations arise at every step, of the same two kinds.
+
+**Q5.** General laws:
+- `Flow.More.replenishment_unbounded` (748): `balances : L.Balances W` (`∀ t c, W.level (t + 1) c + L.taken t c = W.level t c + L.given t c`, 278), `more : L.More cs`, any `R T₀` give `¬ ∀ t, T₀ ≤ t → L.replenishment cs t ≤ R`. The `_from` form (733) asks balance on `cs` only from `T₀`. The proof (opened) goes through `Amounts.replenishment_unbounded` with a least take of one; the account says the whole-number least take is needed.
+- `Flow.More.renewers_unbounded` (763): adds `capacity : L.Capacity cs g`; no bound from `T₀` on the number of givers.
+- `Flow.uptake_needs_replenishment` (589); `Steady.steady` (912), a built example: uptake at every step with nothing arising needs replenishment at arbitrarily late steps.
+- `Cycle.closed_more` (1016), a built example: each taker gives back what it takes, the family's total never changes, `More [()]` holds, renewers equal takers. Under balance without dissipation, more takers without end are borne within a closed one-condition family (the formations are new, indexed by `Nat`). The account (73–77): "That recurring taking must be carried beyond every finite part of the unfolding needs dissipation."
+
+**Q6.** Not found.
+
+## 4. Roles.lean (Embodied.arises_given, arising_lowers, the opening account)
+
+**Q1.** Arising of embodied relata: `Embodied x` (414): `∀ t, W.active t x ↔ 0 < W.level t x`. "Opening" in this module means a family's boundary not closed (`¬ L.ClosedAt ds t`), not more able to form.
+
+**Q2. Opening, in the boundary sense.**
+- `embodiedArising_opens` (695): `balances : L.Balances W`, `dissipative : L.Dissipative` (Dissipation 248: every closed family without repetition is dissipated on, `DissipatesOn`: each formation taking part gives the family no more than it takes, and less when it takes), `distinct : Distinct ds`, `arising : ∀ N, ∃ t x, N ≤ t ∧ x ∈ ds ∧ W.Embodied x ∧ W.Arises t x`, any `T`; conclusion `¬ ∀ t, T ≤ t → L.ClosedAt ds t`. The opening is concluded from a premise of arising without end.
+- `embodiedArising_draws_in` (717): adds `around : ∀ t, T₀ ≤ t → L.Around ds t`; concludes `¬ ∀ t, N ≤ t → L.Inward ds t`.
+
+**Q3. Closing.**
+- `Embodied.arising_lowers` (657): `balances`, `dissipative`, `distinct : Distinct ds`, `closed : L.ClosedAt ds t`, `embodied : W.Embodied x`, `mem : x ∈ ds`, `arises : W.Arises t x` give `W.stock ds (t + 1) < W.stock ds t`. `arising_lowers_on` (650) takes `DissipatesOn ds t` in place of `dissipative, distinct, closed`.
+- `embodiedArising_not_recurring_on` (end of 680s): `balances`, `dissipates : ∀ t, T ≤ t → L.DissipatesOn ds t` give `¬ ∀ N, ∃ t x, N ≤ t ∧ x ∈ ds ∧ W.Embodied x ∧ W.Arises t x`.
+- `embodiedArising_not_recurring` (725): `balances`, `dissipative`, `distinct : Distinct all`, `every : ∀ x, x ∈ all` give `¬ ∀ N, ∃ t x, N ≤ t ∧ W.Embodied x ∧ W.Arises t x`.
+
+**Q4.** `Embodied.arises_given` (505): `balances`, `acting : L.Acting W` (only active formations give), `embodied`, `arises : W.Arises t x` give `∃ f, W.active t f ∧ f ∈ L.present t ∧ 0 < L.give t f x ∧ f ≠ x`. What arises is given by another, active one: a new carrier from an old. The account (93–97) lists `Brood` as a built example, "generation after generation arises, each given by the one before" (not read). No statement says the carriers differ in kind or that this widens.
+
+**Q5.** Under balance and dissipation the cost is stated: an embodied arising in a family closed across the step lowers that family's stock (`arising_lowers`), with another member falling at the same step (`arising_with_fall`, 680s). Without dissipation, `Shuttle` (account 99–100, not read) bears unceasing arising in a closed world of two.
+
+**Q6.** Not found.
+
+## 5. Evolution.lean
+
+**Q1.** Descent: `Flow.DescendsAt t x g` (154): `g ∈ L.present t ∧ 0 < L.give t g x ∧ W.ComesToStand t x`; `Descends` (159). A lineage is a sequence `xs` with descents at steps `ts` (315). Of one flow.
+
+**Q2.** Not found.
+
+**Q3.** General: `Flow.unsupported_childless` (195): `acting`, `dependent : W.Dependent` (`∀ t f, W.active t f → W.Supported t f`), `¬ W.Supported t g` give `¬ L.DescendsAt W t x g` for every `x`; `never_supported_childless` (200): with `∀ t, ¬ W.Supported t g`, `¬ L.Descends W x g`. Built example `Drawdown.drawdown` (546): the descendant inheriting its parent's need is unsupported from step 1 on.
+
+**Q4.** Variation is stated, as a premise of bounded drift in a need on one condition: `Flow.TransmitsWithin L W c δ` (256): `∀ t x g, L.DescendsAt W t x g → W.requires (t + 1) x c → W.requires t g c ∧ W.need (t + 1) x c ≤ W.need t g c + δ`. `Flow.transmitted_along` (315), a general law: with `transmits`, descents `∀ i < n, L.DescendsAt W (ts i) (xs (i + 1)) (xs i)`, `depends : ∀ i < n, W.requires (ts i + 1) (xs (i + 1)) c` and `steady` (each member's need not rising until it gives), `∀ i < n, W.need (ts i + 1) (xs (i + 1)) c ≤ W.need (ts 0) (xs 0) c + (i + 1) * δ`. `Drawdown` (built example): of two descendants, the one needing less is supported, active and takes in turn, the other is not. Variation is of a need's amount only; other kinds are not stated. No law says variation widens what can go on after.
+
+**Q5.** `Flow.transmitted_within` (301): `balances`, `acting`, `dependent`, `transmits`, `descends : L.DescendsAt W (S + n) x g`, `depends : W.requires (S + n + 1) x c` give `W.need (S + n + 1) x c + total (steps S n) (L.uptake [c]) ≤ W.level S c + total (steps S n) (L.replenishment [c]) + δ`. Docstring: "Activity sets later selection." What is taken between enters what can be transmitted.
+
+**Q6.** Selection here is selection through support (`selected_le` 231, `selection_within` 242: offspring's weighted needs bounded by the condition's level counted per offspring). `transmitted_within` relates what formations take (a way of going on) to the needs later descendants can carry. That is a bound on what can be transmitted, not a widening. The account (61–62): "Fitness is not defined." Nothing relates a way of selecting to a widening.
+
+## 6. LineageRegions.lean
+
+**Q1.** The grammar's regions, at a point (an occurrence `(t, p)`) on the lineage continuation `lineStep L W Q` (descent within a kind `Q`, or carrying on while supported, 210), under the coarse class (kind) and fine class (carrier), over a listed census `G : SelectionTerm.Generations X` handed in. From GrammarMap: `«延»` (225) going on along some branch; `«尽»` (229) ending on every branch; `«生成»` (274) "along some branch the pattern goes on and a carrying renewal lies ahead of every point of it"; `«传» R L E x y` (62) `«续» R L x y ∧ «生» R E y` (the coarse pattern continues while a fine line begins); `«守»` (279) going on with no carrying renewal; `«退化»` (283) = `«尽»`; `«新而尽»` (286). The account (59): "Regions are properties of points."
+
+**Q2. Opening.** General laws, each handing in a going-on:
+- `generation_of_reproducing` (405): `acting : L.Acting W`, `descended : SelectionTerm.Flow.Descended L W G` (every listed offspring descends from its parent, SelectionTerm 642), `within : WithinKind G Q` (every listed offspring is of its parent's kind, 295), `embodied : EmbodiedOffspring W G` (300), `reproduces : ∀ s q, t ≤ s → q ∈ G.family s → ∃ k, k ∈ G.kids s q`, `mp : p ∈ G.family t`; conclusion `«生成» (lineStep L W Q) (W.kindClass Q) W.carrierClass (t, p)`.
+- `generation_of_positive_term` (461): `acting`, `descended`, `within`, `embodied`, `number : Reproduction.Generations.ByNumber G`, `exact : ∀ s, t ≤ s → SelectionTerm.Exact (G.family s) (G.kids s) (G.amount s) (G.amount (s + 1))`, `pos : 0 < G.concordAt t`; conclusion `∃ p, p ∈ G.family t ∧ «生成» … (t, p)`. Docstring of `generation_of_exact` (438–440): "Exactness from `t` is assumed, not derived."
+- `not_all_degenerate_of_nonempty` (709): `kc : KidsContinue R Lc G` (573: each listed offspring's occurrence one step on continues its parent's), `nonempty : ∀ N, t ≤ N → 0 < G.size N`; conclusion `¬ ∀ p, p ∈ G.family t → «退化» R Lc (t, p)`. "Which member goes on is not chosen."
+
+**Q3. Closing; exact two-sided laws.**
+- `generation_degenerates_iff` (673), exact, in full: for `R : Nat → X → X → Prop`, `Lc`, with `kc : KidsContinue (Web.continuationStep R) Lc G` and `listed : ContinuationsListed (Web.continuationStep R) Lc G` (476: every continuation of a member's occurrence is a member's occurrence), `(∀ p, p ∈ G.family t → «退化» (Web.continuationStep R) Lc (t, p)) ↔ ∃ N, t ≤ N ∧ G.size N = 0`. Docstring: the census is needed for the converse (`Lasting.lasting`), births within the kind for the direct way.
+- `degenerates_iff_line_ends` (691), exact: `kc : KidsContinue R Lc G`, `only : ContinuationsAreKids R Lc G` (518), `mp : p ∈ G.family t`; `«退化» R Lc (t, p) ↔ ∃ D, ∀ j, ¬ ListedDescendant G t p D j`.
+- `degeneration_of_dissipation` (557): `descended`, `within : ∀ t p k, p ∈ G.family t → k ∈ G.kids t p → k ∈ ds`, `balances : ∀ t, t < W.stock ds 0 + 1 → L.BalancesOn W ds t`, `dissipates : ∀ t, t < W.stock ds 0 + 1 → L.DissipatesOn ds t`, `listed : ContinuationsListed (lineStep L W Q) Lc G`, `mp`, `le : t ≤ W.stock ds 0 + 1`; conclusion `«退化» (lineStep L W Q) Lc (t, p)`.
+These are of degeneration against an empty generation, not of widening against narrowing. No exact law of generation against degeneration was found: the account (159–161) says that every generation nonempty putting some member in generation is "Not shown" (a König-type choice).
+
+**Q4.** This is the nearest place in my group to the person's sentence. Generation `«生成»` is by definition a continuation in which, ahead of every point, the coarse pattern (the kind) continues while a fine line (a carrier) begins (`«传»`). So "forms change while the going on continues" is stated as a definition, at the grain of carriers within a kind, and `generation_of_reproducing` concludes it where every member reproduces. New kinds are not stated: offspring are born within the kind (`WithinKind`), and at the grain where each formation is its own kind the impossibility law fails (`Chain.kinds_apart`, `Courses.positive_and_degenerate_at_own_kind`, account 120–129). `«新而尽»` (renews and still ends) is met by `OneBirth.one_birth` (built example), so renewal of carriers does not by itself go on. No law says that continuing through change widens what can go on after.
+
+**Q5.** Under balance and dissipation within a family, with the census, the lineage degenerates from every member of a generation up to the stock + 1 (`degeneration_of_dissipation`). The account (162): "Not shown: … a witness of going on that meets balance and dissipation too".
+
+**Q6.** The nearest in my group to the placing asked for, and it concerns going on and ending, not widening. A selection term proper (concordance of offspring number) positive at `t`, with exact transmission from `t`, puts some member in generation (`generation_of_positive_term`). `Courses.same_terms_two_fates` (account 143–151, built examples, one course of terms for each horizon): two courses with the same families through `H + 1` and the same selection terms through `H`; in one the marked line generates, in the other the lineage degenerates. "So the terms through a horizon need not decide the region." `Courses.positive_but_last` (account 134–141): evolutionary suicide, positive at every generation but the last nonempty one, every member degenerating.
+
+## 7. Dependence.lean
+
+**Q1.** Not a set of what can form. A formation still active after a loss. The classes of a single step: `Kept` (139), `Broken` (143), with `kept_or_broken` (231: `requires`, met at `t` give `Kept ∨ Broken`) and `kept_not_broken`; `RenewingAt` (294), `BreakingOn`/`BreakingAt` (300, 304), `UnderminingOn`/`UnderminingAt` (318, 323), with `BreakingOn.undermining` (333), `RenewingAt.not_undermining` (338), `RenewingAt.not_breaking` (343). Whole-run: `Renewed`, `Consumed` (152), `Lost` (157: a met dependence broken and never met again), `RenewingIn`, `ConsumingIn`.
+
+**Q2.** Not found.
+
+**Q3.** `consumed_ends_when_fixed` (284): `dependent : W.Dependent`, `fixed : ∀ t, T < t → W.requires t g c ∧ W.need T g c ≤ W.need t g c`, `below : ∀ t, T < t → W.level t c < W.need T g c` give `∀ t, T < t → ¬ W.active t g`. `renewed_not_consumed`, `renewing_not_consuming`. `Lost` is a definition of no return.
+
+**Q4.** The general law the brief names, in full: `consumed_continues_transformed` (269): `dependent : W.Dependent`, `below : ∀ t, T < t → W.level t c < W.need T g c`, `later : T < t`, `active : W.active t g`; conclusion `¬ (W.requires t g c ∧ W.need T g c ≤ W.need t g c)`. Docstring: "after a loss without return, a formation that is still active has weakened or dissolved its dependence on the condition." The `_at` form (261) needs only `W.Supported t g` at that step. The account (43–48): ending, transformation and restoration "are neither exhaustive nor exclusive", and "whether one formation transforms or one ends as another forms depends on the identity stipulated by `F`"; the `Crossing` witness (708, body not read) has all three from one configuration. What it concludes is a change in what is needed (weaker or none), not a widening.
+
+**Q5.** Not found.
+
+**Q6.** Not found.
+
+## 8. LineOnAStock.lean (ways_alike, born_alike, new kinds)
+
+**Q1.** The course of ways: a way is a list of units, `course need kids g use (w, x) j` gives the way and level at step `j`; the net "has a next while some unit's need is met" (account 16).
+
+**Q2.** Not read in the Lean. The account names `rise` (39–40) and the exact middle case `unending_iff_holds` (85–91: under `even`, `some`, `down`, `needs`, `nothing`, `high` and `Regime` along the course, the net never ends exactly where the course comes to a configuration that holds). This is an exact two-sided law of never ending against reaching a holding configuration, read from the account only.
+
+**Q3.** From the account only (not read in the Lean): `never_in`, `gone_from` ("What is lost of a line does not come back", 41–42), `line_ends`, `way_ends`, `fall`, `need_unmet`.
+
+**Q4.** `ways_alike` (547), a general law, in full: for two givings `g g'`, two uses `use use'`, start levels `x x'`, one way `w`, one `need` and `kids`, from `alike : ∀ j, j < n → ∀ u, u ∈ (course need kids g use (w, x) j).1 → (need u ≤ (course … g use (w, x) j).2 ↔ need u ≤ (course … g' use' (w, x') j).2)`, conclude `∀ j, j ≤ n → (course need kids g use (w, x) j).1 = (course need kids g' use' (w, x') j).1`. Docstring: "So a difference in the ways, new kinds included, arrives only after a step at which the levels met different needs of the way. Nothing is asked of the givings, the uses or the stock." `born_alike` (587): under the same premise, for `j < n`, the numbers born in the two `generations` are equal. The account (102–103): "The kinds, needs, uses and offspring are given with the carrier; nothing here makes a new kind or changes `kids`." So new kinds arriving are stated only as being bounded by a difference already made; none arrive that `kids` does not already hold.
+
+**Q5.** Not read in the Lean; the giving's bounds are premises (account 103–104).
+
+**Q6.** `ways_alike` relates a selection (which needs the level meets) to what goes on after (the ways): two courses that meet the same needs are the same way. It says what cannot differ; it does not say what widens.
+
+## 9. Entropy.lean (never_revisits, rests_of_never_revisits, unending_change_revisits, changes_persist)
+
+**Q1.** The family's configuration (`Web.config`, the level of each member) and whether it changes (`W.Changes cs t`) or comes back (`W.Revisits cs T`; Recurrence 158 gives the sequence form `∃ i j, i < j ∧ g i = g j`). One course.
+
+**Q2.** `Web.changes_persist` (1334), a general law: `determined : W.Determined cs T next`, `apart : ¬ W.Merges cs T next`, `from_ : T ≤ v`, `changes : W.Changes cs v`; conclusion `∀ n, W.Changes cs (v + n)`. Docstring: "Merging nothing, change goes on." Going on of change is concluded from a change already made and a law handed in that merges nothing. `Gathering.gathers` (account 128–132, not read), a built example: an arrow without end under exact conservation, drawing on new relata beyond, in a world that is not finite.
+
+**Q3.** General:
+- `Flow.Balances.never_revisits` (1181): `balances : L.Balances W`, `dissipates : ∀ t, T ≤ t → L.DissipatesOn cs t`; `¬ W.Revisits cs T`.
+- `Flow.Balances.rests_of_never_revisits` (1225): `balances`, `gainless : ∀ t, T ≤ t → L.GainlessOn cs t`, `never : ¬ W.Revisits cs T`; `¬ ∀ N, ∃ t, N ≤ t ∧ W.Changes cs t`. `Web.rests_of_never_revisits` (1151) asks a list `E` holding every configuration from `T` on.
+- `Flow.Balances.unending_change_revisits` (1235): `balances`, `gainless` from `T`, `changing : ∀ N, ∃ t, N ≤ t ∧ W.Changes cs t`; `¬¬ W.Revisits cs T`.
+- `World.never_revisits` (1681): `distinct`, `every`, `balanced`, `dissipative`; `¬ w.web.Revisits all T`. `World.rests_of_never_revisits` (1659): `distinct`, `every`, `embodied : w.Embodied`, `balanced`, `gainless : w.flow.Gainless`, `never`; `¬ w.ArisingRecurs ∧ ¬ w.CeasingRecurs`.
+That under dissipation a family therefore comes to rest is my joining of `never_revisits` with `rests_of_never_revisits` (with dissipation giving gainless, account 21: `Flow.Dissipative.gainless`, not read); the account says it as "Under dissipation a family never revisits".
+
+**Q4.** Not found. The configuration changes and comes back; nothing here is of other kinds.
+
+**Q5.** Under the first law, change without end is return (`unending_change_revisits`), and "what rises with no premise is the history, not a quantity of the levels of a finite enclosure" (account 81–82). An arrow without end "draws on what lies beyond the family" (account 140–141).
+
+**Q6.** Not found.
+
+---
+
+## The guesses
+
+**F1.** *For.* In Arising, Gain, Flow, Roles, Dependence and Entropy nothing is stated of a way of selecting. Generation (`«生成»`) in LineageRegions is stated of a census handed in (`G`, with `KidsContinue`, `ContinuationsListed`). Gain's `FirstSupported` ("it can first form there") is near "widening of what can form", stated of one web. *Against.* In my group generation is related to a way of selecting: `generation_of_positive_term` (461) concludes generation from a positive selection term proper (with exact transmission handed in), and `Courses.same_terms_two_fates` shows the terms do not decide it. `ways_alike` (LineOnAStock 547) relates a selection (needs met) to what goes on after. So "none is stated of a way of selecting" fails in my group for going on and ending; it holds for widening.
+
+**F2.** *For.* Every general law in my group that concludes from novelty, new support, unceasing embodied arising or more without end concludes a source from the rest or across a boundary, or no closure: `rise_from_rest_or_open` (279), `whole_rise_from_rest` (290), `newly_supported_from_rest_or_open` (351), `new_beyond_every` (341), `embodiedArising_opens` (695), `embodiedArising_not_recurring` (725), `More.replenishment_unbounded` (748), `degeneration_of_dissipation` (557), `never_revisits` (1181). *Qualify.* Gain's laws need only the first law (`Gainless`), not dissipation. Without dissipation, built examples bear unceasing arising (`Recycle.closed_unceasing`) and more takers without end (`Cycle.closed_more`) within a closed finite family of conditions; under the first law these are return (`whole_not_new_of_rest_idle`, `unending_change_revisits`), and `Cycle`'s takers are new formations indexed by `Nat`. So F2 holds as worded if "more future" is read as novelty or new formation; if it is read as more takers, `Cycle` is a counter-case without dissipation.
+
+**F3.** *For.* `consumed_continues_transformed` (Dependence 269) is a general law of a changed need after a loss. `substitution_defers` (Arising 201) is a general law that changing dependence within an unrenewed finite family does not escape the end, a narrowing. Generation is by definition a continuing in which carriers begin (`«传»`, GrammarMap 62, 274). Variation is a premise bounded by `δ` (`TransmitsWithin`, `transmitted_along`). No law found says that continuing through change widens what can go on after. *Against.* "Descent with new kinds" was not found: births are within the kind (`WithinKind`); LineOnAStock says nothing makes a new kind (account 102), and `ways_alike` keeps new kinds to differences already made; Evolution's variation is of a need's amount only.
+
+**F4.** *For.* My group adds senses to the four: unceasing arising (Arising 97), a novel configuration or first support (Gain 133, 192), more takers (Flow 323), an open boundary (`embodiedArising_opens`, Roles 695, where "opens" means not closed), generation and degeneration at a point (LineageRegions), change going on (Entropy 1334), the ways of a course (LineOnAStock). *Joins found:* `unceasing_iff_late_beginnings` and `renews_iff` (Arising 734, 748) join arising to the grammar's beginnings; LineageRegions joins descent to generation on the map; `newAt_of_first` (Gain 198) joins first support to novelty; `Embodied.comesToStand` (Roles) joins embodied arising to replenishment. *No join found* between first support (what can form at a step) and a lineage's going on, or between either and the courses still open.
+
+**F5.** *For.* The closing laws are general and many: `depletion_not_recurring`, `dissipation_arising_not_recurring`, `substitution_defers`, `embodiedArising_not_recurring`, `never_revisits`, `degeneration_of_dissipation`, `consumed_ends_when_fixed`, `never_supported_childless`, with two exact laws of degeneration (`generation_degenerates_iff`, `degenerates_iff_line_ends`). The opening laws hand in a going-on: `generation_of_reproducing` (every member reproduces from `t` on), `generation_of_positive_term` (exact transmission from `t` on), `not_all_degenerate_of_nonempty` (every generation nonempty), `changes_persist` (a change made and a law merging nothing), `embodiedArising_opens` (arising without end). Gain's laws take newness as a premise and conclude its source, not an opening. LineageRegions says "a witness of going on that meets balance and dissipation too" is not shown. *Against.* Not found in my group.
+
+On the frozen note's two outcomes: no law in my group says of a way of going on, exactly, when what can go on after it widens ("Already there" not met here). The nearest is generation `«生成»`: a continuing in which carriers keep beginning, concluded only where reproduction or exact transmission is handed in, with no witness under balance and dissipation.
+
+## Places met that are on no list and bear on the questions
+
+- Chapter 7, 74–82 (`r-the-run-classes-and-widening`): `Flow.Balances.not_narrows_of_renewed`, `narrows_of_consumed`, `keeps_of_not_arising`, and the witnesses `ArisingDrawer` (an arisen member narrows) and `ArisingGiver` (widens). This relates arising to widening and narrowing of what can form; it is in the first group's modules. Not read in the Lean.
+- `Flow.More.unceasing` (Population; chapter 2 157), more takers to unceasing arising under a census.
+- `Reproduction.Flow.lineage_ends`, `SelectionShift.Horizon.two_fates_of_nonempty`, `SelectionShift.Generations.never_empties_while` (named by LineageRegions' account).
+- `Flow.Dissipative.opens`, `Flow.fed_from_beyond` (chapter 2, `r-no-finite-part-bears-taking`, `r-continuing-self-fed-from-beyond`).
+- `Becoming.MoveFormation` (Gain account 54–55): moves formed by a whole, rest or part that a list holds repeat within the list's length.
+- GrammarMap's `«守»` (279) and `«新而尽»` (286), the grammar's keeping and renewing-still-ending, next to `«生成»`.
+- Chapter 2 (150): "Arising is activity starting, not §1's generation". This agrees with the Lean, where `Arises` and `«生成»` are different notions joined only through `arises_iff_sheng`.

@@ -1,0 +1,162 @@
+# Check of the note on a future opening or closing
+
+*AI-written (Claude Opus, a checker who took no part, capped at 20 tool calls), 21 November 2026; its findings as returned, set down by the session that ran it with nothing changed.*
+
+1. **MUST.** In "Forms changing", the note says: "No law was found that says continuing through change widens what can go on after."
+   - Source, read-what-can-form.md, F3: "*Against the second half:* `WideningOnTheMap.keepsWidening_iff_generation_losing_nothing` (228) is a general law saying exactly when going on through change (generation under the one: what is held changes after every moment) is keeping widening: where nothing is lost, under `wdec` and `found`. The change there is in what is held, not in kinds."
+   - Fault: the first reader found such a law and set it against the guess. Only the second and third readers did not find one. The note even cites law 228 two bullets earlier.
+   - Replace with: "The second and third readers found no law that says continuing through change widens what can go on after. The first found one exact law of when it does (`keepsWidening_iff_generation_losing_nothing`, under two premises of deciding): where nothing is lost. The change there is in what is held at each moment, not in kinds or carriers."
+
+2. **MUST.** In "Forms changing", law 228 is filed under "Laws on it" (on «生成», kind and carrier) as "generation is keeping widening exactly where nothing is lost, under premises of deciding".
+   - Source, read-what-can-form.md, place 9: law 228 is about `«全生成» next «一» (same Q) N` on "a chain of predicates `Q : Nat → X → Prop` on a course's moments". At Q4: "The change is in what is held, not in kinds or carriers."
+   - Fault: this is a different generation from the grammar's «生成» of lineage (kind going on while a carrier begins). Telling law 228 as a law on that generation makes it say more than it does.
+   - Replace with: "On a course's moments, generation under the one (what is held changes after every moment) is keeping widening exactly where nothing is lost, under two premises of deciding (`wdec`, `found`)."
+
+3. **MUST.** In "What it says of the re-saying", the note says: "the sentence would then name two things the Lean keeps apart, generation and widening by comparison, joined by one law under premises (`keepsWidening_iff_generation_losing_nothing`)."
+   - Source: as in finding 2. Law 228 joins keeping widening along one course's moments to generation under the one on moments. It does not join the comparison with and without a part (`Flow.widens_iff_within_margin_at`), nor the grammar's kind and carrier generation.
+   - The first reader lists the joins it found (F4). The only one that reaches a comparison is `KeepsWidening.eventually_widens_of_within`. It goes one way, to the tail comparison of two level paths, with keeping widening as a premise.
+   - Fault: the clause is false as stated.
+   - Replace with: "…two things the Lean keeps apart, generation and widening by comparison. No law read joins them. Law 228 joins keeping widening in time to generation on a course's moments, which is a third thing."
+
+4. **MUST.** In "Opening", kind 1, the note says: "The one exact law of widening along a course, `Reaching.widens_next_iff_rising`, is of determined processes only…"
+   - Source, read-courses-still-open.md: "The only 'grows along a course' found is same-offset widening (`widens_next_iff_rising`…)". The first reader also gives exact laws of keeping widening along a course: `generation_iff_keepsWidening` (220), `keepsWidening_iff_generation_losing_nothing` (228) and `includesAcrossFrom_iff_endless` (585).
+   - Fault: one reader's "only ... found in my group" is told as "the one" for the whole Lean.
+   - Replace with: "The third reader's one exact law of widening along a course is `widens_next_iff_rising`: determined processes only, with the course's own admissions rising on its right side. The first reader's exact laws of keeping widening in time (220, 228, 585) each have a going-on or nothing lost on the other side."
+
+5. **MUST.** In "Opening", kind 2, and again in the re-saying section, the comparison law is told with no premise of balance: "…exactly where the part's net draw stays within the margin…"
+   - Source, read-what-can-form.md: premises are `without : L.WithheldLevels part W l` and `balances : ∀ t f c, W.requires t f c → ∀ s, s < t → L.BalancesOn W [c] s`. `widens_iff_others_within` takes `balances : L.Balances W`.
+   - Fault: a premise is dropped, so the telling is wider than the law.
+   - Replace with: "In a flow balanced on what is required (stepwise), what the levels admit with a part widens over what they admit with the part withheld exactly where…". In the re-saying, add "in a balanced flow".
+
+6. **MUST.** In "Opening", kind 2, the note says: "The first reader: this is 'counterfactual over the same steps, not "after"'."
+   - Source, read-what-can-form.md: "A **comparison** of two level paths at the same steps (counterfactual, with and without the part), not "after" in time." Also: "they are not "after": they compare two level paths over the same steps."
+   - Fault: the quotation is not word for word.
+   - Replace with either exact sentence.
+
+7. **MUST.** In "Forms changing", the note says: "The first reader: this 'is defined, not concluded, and not tied to widening'."
+   - Source, read-what-can-form.md: "It is defined, not concluded, and it is not tied to widening in this file." The reader said this of «阶生成» in GrammarMap.lean.
+   - Fault: the quotation is not word for word, and it drops the scope "in this file". That scope matters, because law 228 ties a generation to widening elsewhere.
+   - Replace with the exact sentence, and say it is of «阶生成» in GrammarMap.lean.
+
+8. **MUST.** In "Forms changing", the note says: "The third reader names chapter 7's telling of it as 'the nearest place to "creates more and more future"'."
+   - Source, read-courses-still-open.md: "This is the nearest Lean to "creates more and more future", and it ties widening to change in what is held. I read only these two statements."
+   - Fault: the quotation is not word for word.
+   - Replace with: "…as 'the nearest Lean to "creates more and more future"'."
+
+9. **MUST.** In the re-saying section, the note says: "Within one process the Lean has, with no premise, that the possible never grows along a course."
+   - Source, read-courses-still-open.md: "Within one fixed process the whole possible never grows". The head docstring: "the adjacent possible that cannot be prestated … is outside". The modelling note: "compared by name over one type fixed across steps; one fixed process". `Rise`: what each configuration admits rises along a course while the whole possible stays the same. The same reader cites chapter 7's held possible, which grows where what is held changes.
+   - Fault: "the possible" is told of the Lean as a whole. The laws are of the whole possible of one fixed process, read in a prestated space and by name. The same reports name other readings that do grow along a course.
+   - Replace with: "Of one fixed process, read in a prestated space and by name, the Lean has with no further premise that the whole possible never grows along a course (`Run.possible_of_next`; `Branching.reachable_invariant`). What a configuration admits can still rise (`widens_next_iff_rising`, `Rise`). The possible under what is held grows where what is held changes (chapter 7; two statements read)."
+
+10. **MUST.** In the re-saying section, the note says: "In time, what it concludes is that a going on continues, from a premise that is a going-on; it does not conclude that more becomes possible than was."
+    - Source: the readers' negatives are "not found in what was read". `widens_next_iff_rising` concludes widening along a course from admissions rising. `keepsWidening_of_generation` (WideningOnTheMap 208, under `found`) concludes keeping widening from generation.
+    - Fault: "not found" is told as "does not conclude". It is also false of the two exact laws.
+    - Replace with: "No law read concludes it in time from premises that are not already a going-on or a rise."
+
+11. **MUST.** In the re-saying section, the note says: "'More and more' is keeping widening, which the Lean excludes for a closed finite whole under its premises and has otherwise only from the rest, across a boundary, or where what is held changes."
+    - Source, read-what-can-form.md, F2: "each of these laws carries premises a 'closed finite family' sentence would drop: by name (`itself`), requirements fixed (`RequiresWithin`), `Gainless`, `Distinct` … `KindRelay` balances, conserves, lists its conditions and keeps widening within kinds from step 0 … So 'never from within a closed finite family' holds only of keeping widening by name with fixed requirements."
+    - Source, read-arising-gain-descent.md: "if it is read as more takers, `Cycle` is a counter-case without dissipation."
+    - Fault: two premises that decide the exclusion are hidden in "under its premises", and "only" ignores the counter-cases the readers named. Also, `from_rest_or_open` and `open_late` state a need, a source keeping widening requires. They do not show that the Lean has keeping widening from those sources.
+    - Replace with: "Keeping widening by name, with fixed requirements, is excluded for a finite, balanced, gainless whole (`whole_not_keepsWidening`). Where it holds, it needs the rest or an open boundary at arbitrarily late steps. Read within kinds, a built case (`KindRelay`) keeps widening while balanced, conserving and listed. Without dissipation, `Cycle` has more takers without end."
+
+12. **MUST.** In "Closing", the note says: "arising that depletes or is dissipated on does not recur".
+    - Source, read-arising-gain-descent.md: `depletion_not_recurring` needs `still : ∀ t, T ≤ t → W.Still cs t` ("no member of `cs` rises from `T` on") as well as `depletes`. `dissipation_arising_not_recurring` needs `unrestored : ∀ t, q (t+1) ≤ q t`.
+    - Fault: the premise that nothing is restored is dropped. Without it, the telling is false.
+    - Replace with: "arising that draws down a family no member of which rises again, or that is dissipated on an amount never restored, does not recur at arbitrarily late steps".
+
+13. **MUST.** In "Closing", the note says: "a line degenerates exactly where it ends (`degenerates_iff_line_ends`)".
+    - Source: premises `kc : KidsContinue R Lc G`, `only : ContinuationsAreKids R Lc G` and `mp`. "Ends" means some depth `D` with no listed descendant.
+    - Fault: the census premises are dropped, which the note keeps for the law just before it.
+    - Replace with: "…exactly where its listed descendants give out at some depth, under two premises on the census".
+
+14. **MUST.** In "Forms changing", the note says: "the way changes to another kind and the line never ends exactly where the turn comes before the point of no return (`turns_in_time_iff_before`)".
+    - Source, read-courses-still-open.md: about a dozen premises (`AloneOutside`, `turns`, `kept`, `uses`, `nothing`, `short`, `meets`, `keeps`, `0 < need`, `short₁`, `uses₁`, `below`, `high`). The condition is a first marked step `T`, with the need met at and before it, and `T + 1 < N`.
+    - Fault: told as an unconditional exact law.
+    - Replace with: "Under named premises on the giving, the need and the marks, …exactly where the first turn comes, with the need met up to it, more than one step before the point of no return."
+
+15. **MUST.** In "From where", the note says: "where dissipation is dropped, built closed cycles bear arising without end and more takers, which under that premise are returns and not novelty."
+    - Source, read-arising-gain-descent.md: "`Cycle`'s takers are new formations indexed by `Nat`. So F2 holds as worded if 'more future' is read as novelty or new formation; if it is read as more takers, `Cycle` is a counter-case without dissipation."
+    - Fault: the reader's counter-case is dropped. It bears directly on "more and more".
+    - Replace with: "…under that premise their configurations return. `Cycle`'s takers are new formations, so if 'more' is read as more takers, `Cycle` is a counter-case without dissipation."
+
+16. **MUST.** In "From where", the note says: "The first and second readers qualify the second guess: those laws need requirements that are fixed and read by name".
+    - Source: "fixed and read by name" is the first reader's qualification. The second reader's is: "Gain's laws need only the first law (`Gainless`), not dissipation", plus the built cycles.
+    - Fault: one reader's sentence is told as two readers'.
+    - Replace with: "The first reader qualifies it: those laws need requirements fixed and read by name, and `KindRelay` keeps widening within kinds. The second: they need only the first law, not dissipation, and without dissipation built cycles bear arising without end and more takers."
+
+17. **MUST (omission).** The re-saying section says generation "can be borne". It leaves out three things the second reader reported against that:
+    - "concluded only where reproduction or exact transmission is handed in, with no witness under balance and dissipation"
+    - LineageRegions' account: "Not shown: … a witness of going on that meets balance and dissipation too"
+    - «新而尽» is met by `OneBirth`, "so renewal of carriers does not by itself go on"
+
+    The grammar's generation is also carriers within one kind (`WithinKind` is a premise). His "forms changes" is therefore matched only at the grain of carriers, not of kinds.
+
+    Add: "Generation is concluded only where reproduction or exact transmission is handed in. No witness of it under balance and dissipation was found. What changes in it is the carrier within a kind, not the kind."
+
+18. **LESSER.** In "Closing", the note says: "a rewarded rise breaks a dependence beyond (`breaks_beyond`, `favours_breaking_beyond`)".
+    - Source: `breaks_beyond` has no reward. Its premises are balance, `GainlessOn`, `MetOn`, and a rise above stock, slack and loss. The reward is only in `favours_breaking_beyond`.
+    - Replace with: "in a balanced, gainless flow a rise beyond the slack and the loss breaks a dependence beyond (`breaks_beyond`); a selection rewarded only by such a rise holds only where one outside what the group couples into is broken (`favours_breaking_beyond`)".
+
+19. **LESSER.** In "Closing", the note says: "Keeping widening is excluded … under dissipation of everything required, and along lineage under the world's premises."
+    - Source: both laws (1170 and 1125) need `balances`, `acting`, `dependent` and `unloosened`. 1170 also needs `carries`.
+    - Fault: "under dissipation" hides fixed needs (`Unloosened`), which is a premise that decides the result.
+    - Replace with: "…under balance, only active formations giving, dependence and needs that never loosen: where everything required is dissipated on, or along lineage".
+
+20. **LESSER.** In "Opening", kind 3, the note says: "A relay that keeps widening within kinds while balanced and conserving (`KindRelay`)".
+    - Source, read-what-can-form.md: "per the docstring … By name it does not, and it returns with period two." The witness bodies were not read.
+    - Add: "(read through its docstring; by name it does not keep widening, and it returns with period two)".
+
+21. **LESSER.** In "Opening", kind 3, the note says: "closed cycles with more takers where dissipation is dropped (`Cycle.closed_more`, `Recycle.closed_unceasing`)".
+    - Source: `Recycle.closed_unceasing` is unceasing arising, not more takers.
+    - Replace with: "a closed cycle with more takers (`Cycle.closed_more`) and one with arising without end (`Recycle.closed_unceasing`), both without dissipation".
+
+22. **LESSER.** In "Opening", kind 2, `Weighting.widens_iff_every_positive` is placed under "By comparison, with a part and without it".
+    - Source: it compares "two Boolean admissions on a listing", not with and without a part.
+    - Replace with: "two comparisons with and without a part, and one law of two admissions on a listing (rankings)".
+
+23. **LESSER.** In "Forms changing", the note says: "`«生成»` is defined as a continuing in which … the kind goes on while a new carrier begins".
+    - Source: in GrammarMap, «生成» is of a pattern `L` and a fine class `E`. Kind and carrier are the LineageRegions instance.
+    - Replace with: "…the coarse pattern goes on while a fine line begins (in descent: the kind, and a new carrier)".
+
+24. **LESSER.** In "Forms changing", the note says: "the lineage goes on while a line of a kind begins (`BeginsAlong.carries_kind_iff`)".
+    - Source: an exact equivalence, under `refl` and `supported`, between beginning along within a kind and «传».
+    - Fault: told as if it concluded that the lineage goes on.
+    - Replace with: "beginning along within a kind is exactly a carrying renewal: the lineage going on while a line of a kind begins".
+
+25. **LESSER.** In "Forms changing", "keeping opening needs beginnings" drops the premises of `begins_late_of_keepsOpening`: `balances`, `acting`, `dependent`, `unloosened`, `carries`. Add "under the world's premises".
+
+26. **LESSER.** In "Forms changing", the note says: "Births are within the kind".
+    - Source: `WithinKind` is a premise of `generation_of_reproducing`, not a law.
+    - Replace with: "Births are taken within the kind (a premise)".
+
+27. **LESSER.** In "How the frozen file's two ends came out", the note says: "the fifth guess is supported by all three readers".
+    - Source: two readers name a law against it. The first: the comparison laws are "general and exact for opening as a comparison". The third: `widens_next_iff_rising` "is exact and two-sided, so an opening along a course has an exact condition there".
+    - Replace with: "…supported by all three, the first and third each naming an exact law of opening that qualifies it".
+    - Also, "Already there … not found by any of the three": only the second reader says so in those words. The other two say it only through their answers to Q6.
+
+28. **LESSER.** Header and "Where it is":
+    - "Three AI readers (Claude Opus)": read-what-can-form.md says only "Claude".
+    - "they used 25, 30 and 25", "0.58 million tokens" and "8 minutes" are in none of the four sources.
+    - The links name `FROZEN-THE-FUTURE.md.txt` and `read-*.md.txt`. The directory holds `.md` files.
+
+**Checked and found sound:**
+- The frozen file's time, its six questions and five guesses, and the two "After" additions.
+- Ren's quotations of 10 and 21 November, which match the frozen file.
+- `reachable_invariant`, `lost_stays` and the docstring quotation "The future narrows under every process".
+- `Run.possible_of_next` and `Run.not_possible_returns`.
+- `Recoverable.earlier`, `NoReturnAt.recoverable_iff` and `kernel_step_iff`.
+- `closed_stays_closed` and `lock_outlives_loss`.
+- `generation_degenerates_iff`, told with "two premises on the census".
+- `whole_not_keepsWidening`'s premises in the Closing bullet: by name, fixed requirements, gainless, balanced, finite.
+- `consumed_continues_transformed` (the `Dependent` premise is dropped, a minor fault) and `substitution_defers`.
+- `includes_of_renewingIn` (inclusion, not widening) and `narrows_of_consumed`.
+- "None of the three readers found a statement relating a way of selecting to the widening".
+- `not_keepsWidening_of_listed`.
+- The `Regions.Widens` docstring quotation "widen[s] nothing".
+- `ways_alike`.
+- The third reader reading only two statements of HeldPossible.
+- F4 "holds in part": all three found partial joins.
+
+**Not checked:** the scratch step law paragraph. Its wording of `not_keepable_invariant_iff` ("no step from outside the guard leads to…") is not in the four sources, which give only "exactly when". Nor were the run's cost, the time or the tool-call counts, or anything in the Lean itself.
+
+Tool calls: 6.

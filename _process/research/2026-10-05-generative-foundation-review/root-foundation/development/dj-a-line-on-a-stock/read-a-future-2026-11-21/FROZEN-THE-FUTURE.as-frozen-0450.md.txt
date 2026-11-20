@@ -1,0 +1,50 @@
+# What the Lean already states of a future opening or closing: the questions, fixed before any reader ran
+
+*AI-written (Claude Fable, board row DJ), 21 November 2026, 04:50 WIB, before any reader ran. Frozen: nothing above the line "After" is changed later. This is a read. No statement is proposed by it and no Lean is written. Future, opening, closing, widening are working words; the Lean's own names are given where a reader finds them.*
+
+## What we are doing
+
+One map of how things come to be, go on, change and end, on which two ways of going on are placed with respect to each other ([the direction page](../../../../../_process/DIRECTION.md), "Where we are heading"). The page's sentence for the second of the two is "a way that keeps remaking what it rests on". On 21 November Ren said of an answer that followed it: ""remaking" feels weird to me - it is also not holding exactly the same, dynamics, forms changes over time, but the continuation may continue, and creates more and more future" ([his words](../../../../../sources/15-codex-theory-conversations/2026-11-21-the-current-path-keep-moving.md)). He said in the same message that he generally agrees with the direction.
+
+The session's reading, which he has not confirmed: he looks forward. The second way is a going-on through which more can go on after it, through forms that change; the first is a going-on that closes what can go on after it. A re-saying of the sentence was put to him and waits for his read. The direction page itself says that taking the two ways for "renewing" and "consuming" was the page's step, and that his "generative" and "degenerative" of October were read as widening and narrowing what can form.
+
+Before anything is said again or proposed, this read asks what the Lean already states of that: of what can go on after a going-on, of its widening or opening, of its narrowing or closing, and of forms changing while the going on continues.
+
+## What the writer holds from earlier records, not from a fresh read
+
+- The dig of 17 November: under balance and the premise that nothing gives from nothing, where formations first supported at ever later steps each require only members of a finite family, the family's stock rises at arbitrarily late steps, and each such rise is from what the flow does not count or across the family's boundary (`Gain`); and "that more can then go on without more being taken is no law".
+- The read of 20 November: where going on is concluded in general, the going-on itself or the giving is handed in; `KeepingWidening` has general laws that conclude a going-on from a premise that is itself a going-on.
+- The direction page's "Which two": the account has several pairs and keeps them apart (generates, keeps, degenerates on the grammar; what can form widening or narrowing; renewing and consuming; a lock against a turn in time).
+
+## The questions, the same for every place
+
+For each place, from statements and docstrings (a proof only where a statement leaves a question open), with the declaration's name and line for every answer and every premise of every law written out:
+
+1. **What stands for "what can go on after"?** A set of formations that can form at a step, a set of courses still open, a line of descent, a number of steps a guard can still be kept, or something else. Over what is it stated, and is it of one course or of a comparison of courses?
+2. **Laws that conclude an opening or widening**: that more can form or go on after than before, or that it keeps widening. Exact ones in full. What is handed in.
+3. **Laws that conclude a narrowing or closing**, and laws of no return: that what closed stays closed, or that no course from here keeps it.
+4. **Forms changing while the going on continues.** Does any statement say that what goes on after is other than what went on before (other kinds, other needs, other carriers) while something continues? Does any say the continuing widens or narrows by that change?
+5. **From where a widening comes, and what it costs.** In particular under balance and dissipation.
+6. **Does any statement relate a way of going on, or a way of selecting, to the widening or narrowing of what can go on after it?** That is the placing the direction asks for.
+
+## The guesses (each may be false)
+
+- **F1.** The Lean's nearest notions to his word are "keeps widening" and "generation" on the grammar, and widening of what can form in chapter 7; each is stated of a web or a census handed in, and none is stated of a way of selecting.
+- **F2.** Under balance and dissipation every general law of widening without end concludes that it is fed from the rest or across a boundary. So in the Lean "more and more future" never comes from within a closed finite family.
+- **F3.** "Forms change while the going on continues" is stated in at least one general law (after a loss, what still goes on has changed what it needs; descent with new kinds), and no law says that continuing through change widens what can go on after.
+- **F4.** "What can go on after" is at least four different things in the Lean (what can form at a step; the courses still open; a line of descent; the steps a guard can be kept), and no law joins them. If so, a sentence about "more future" names four things, and saying it once needs a join that is not there.
+- **F5 (against the session's reading).** The Lean has more on closing than on opening: laws of no return and of what stays closed are general and exact, while opening is concluded only from premises that already contain it. If that is so, the re-saying put to Ren says something the Lean cannot yet bear on its second half.
+
+## What would count as the read having found that the re-saying is not needed, or cannot be borne
+
+- **Already there.** A general law that says of a way of going on, exactly, when what can go on after it widens. Then the sentence should be said in that law's terms.
+- **Cannot be borne.** F4 and F5 both hold: the word "future" names several things with no join, and nothing general concludes an opening.
+- Between the two, the read says what is nearest and what each hands in.
+
+## How it is read, and what it costs
+
+Three AI readers, each capped at 45 tool calls, each with one group of places and these questions, who propose nothing: widening and narrowing of what can form (chapter 7 §2 and §4.4, chapter 2 §1, with `Space`, `Branching`, `KeepingWidening`, `EventualWidening`, `OwnWidening`, `WideningOnTheMap`, `Retaining`); arising, gain and descent (`Arising`, `Gain`, `Flow`'s More, `Evolution`, `LineageRegions`, `Dependence`'s law of what continues transformed, `Entropy`); and courses still open (`ReadOffInTime`, `Viability`, `JointKeeping`, `GuardHorizon`, `Keeping`, `Onward`, `Enough`, `ReachableRanges`, with the lock's laws of closing in `PoolFromCourse`, `ClosedCapture` and `DrawnBeyond`). Then one checker of the note. The ceiling is 0.8 million tokens.
+
+---
+
+## After

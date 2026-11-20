@@ -1,0 +1,427 @@
+# Read: courses still open, and closing
+
+*AI-written (Claude Opus 5.5, a reader labelled courses-still-open), 21 November 2026, against the frozen questions in `FROZEN-THE-FUTURE.md`. A read only: no statement, model, wording or next step is proposed. Every answer is from the Lean's statements and docstrings. Proofs were opened only where named below. "Built example" means a result about one constructed process or supplied numbers. "General law" means a result for every model that meets the stated premises. Negatives mean "not found in what was read".*
+
+Package: `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/` (below, file names are relative to it).
+
+## What was read, and what was not
+
+- `Viability.lean`: every declaration and docstring (1–325), by a script that prints docstrings and declaration headers. I also read the body of `Kernel` (55–56).
+- `Enough.lean`: every declaration and docstring (1–234).
+- `ReadOffInTime.lean`: every declaration and docstring (1–1372). I read the bodies of `Recoverable`, `NoReturnAt`, `ReadableInTime`, `ReadsInTime`, `FourReaders.Feasible` and `DwellerKept` (583–600, 645–660, 966–973).
+- `JointKeeping.lean`: every declaration and docstring (1–412), plus the body of `Keepable` (91–92).
+- `GuardHorizon.lean`: every declaration and docstring (1–465), plus the body of `Closed` (108–109).
+- `Keeping.lean`: every declaration and docstring (1–509). Pattern-match arms were skipped.
+- `Onward.lean`: the head docstring (4–71), the declarations up to line 125, and the declaration names and docstring first lines from 131 to 397. I read in full the statements of `run_iff_continues`, `run_iff_returning`, `fan_no_run`, `KeepsMoving`, `KeepsMoving.run`, `KeepsMoving.returns`, `lossless_no_rise`, `rise_needs_merge` and `lossless_unlisted`.
+- `ReachableRanges.lean`: the head docstring (12–180), the definitions of `Covers`, `Widens`, `KeepsWidening`, `Possible` and `PossibleWithin` (272–301, 286–296), the section on the possible (463–500, 585–700), `widens_next_iff_rising` (430–446), `Run.not_widensWithLag_next` (812–818), and the `Rise` and `Climb` witnesses (994–1100, statements only). The rest of 180–1885 was not read: the lexical, lagged-order and `KeptAlternative`, `DeferredBranching` and `KeptTogether` sections, beyond what the head docstring says of them.
+- `TurningInTime.lean`: the head docstring at 98–111, 171–190 and 286–305, and section 7 (1914–2345: every declaration and docstring). Sections 1–6 and 8 were not read beyond the head docstring.
+- `PoolFromCourse.lean`: the head (1–60), `ReadsThroughPresent`, `NotReadmitted` and `liftShare` (117–130), `locked_along` and `closed_stays_closed` (195–240), and `Borne.shapers_left` (725–770). The `Window`, `Loop` and `Drained` sections were not read beyond the head.
+- `RuleCapture.lean`: only the definitions `Raises`, `ReadsShare` and `Locked` (145–161).
+- `ClosedCapture.lean`: `Accrues`, `loss_grows`, `turned_by_loss` and `lock_outlives_loss` (270–335), `Unread` (131–132), and `join` and `joinRead` (220–223). The rest was not read.
+- `DrawnBeyond.lean`: the head docstring (4–80) and the laws from 195 to 320 (`breaks_beyond`, `rise_breaks_beyond`, `breaks_beyond_past_free`, `breaks_beyond_unsettles`, `breaks_beyond_ends`, `favours_breaking_beyond`, `favours_breaking_beyond_inflow`, `stock_not_rises_over`). `rise_bounded_by_beyond` and `open_of_rise_above` were read only as the head names them.
+- `HeldPossible.lean` (not on my list): only `Run.departs_of_keepsWidening` (176–180) and `Run.not_keepsWidening_of_returns` (193–198), plus chapter 07's telling of the module (07-SIGNIFICANCE.md, lines 115–118).
+- Chapters: grep hits only, in 02-MAP.md (lines 439–444 and 508) and 07-SIGNIFICANCE.md (111–123 and 261). They were not read whole.
+
+**Proofs opened.** One: `kernel_step_iff`'s statement left nothing open, so no proof there. For `closed_stays_closed` I read the proof, to see that "none present again" is carried step by step by `NotReadmitted`. That was the only proof I read for its content.
+
+---
+
+## 1. ReadOffInTime.lean: Recoverable, NoReturnAt, ReadableInTime, FourReaders
+
+**Q1. What stands for "what can go on after".** The feasible courses that agree with a course so far and keep what is asked. `Recoverable feasible keeps l N := ∃ l', feasible l' ∧ AgreeUpTo l' l N ∧ keeps l'` (591–592). This is a set of courses, of one course `l` at a step `N`, and it is relative to two supplied predicates: `feasible`, which the docstring reads as "the courses the part can still take" (73–74), and `keeps`. `NoReturnAt … N := ¬ Recoverable … N ∧ ∀ n < N, Recoverable … n` (595–596).
+
+**Q2. Opening or widening.** None found in what was read. No law concludes that a course becomes recoverable at a later step.
+
+**Q3. Narrowing and closing (general laws).**
+- `Recoverable.earlier` (601): from `Recoverable feasible keeps l N` and `n ≤ N`, conclude `Recoverable … n`. No other premise. Contrapositively, once a course is not recoverable it is not recoverable at any later step. This is the general law of no return.
+- `NoReturnAt.recoverable_iff` (607), an exact two-sided law. Given `NoReturnAt feasible keeps l N`, for every `n`, `Recoverable … n ↔ n < N`.
+- `NoReturnAt.unique` (615): the point of no return is one step.
+- `NoReturnAt.parts` (625). From `NoReturnAt … (N+1)`: some feasible `l'` agreeing with `l` up to `N` keeps, and every feasible `l'` agreeing up to `N+1` does not.
+- `noReturnAt_of_past` (632). Premises: `decided : ∀ n, Recoverable … n ∨ ¬ Recoverable … n`, and `past : ¬ Recoverable … n`. Conclusion: `∃ N ≤ n, NoReturnAt … N`.
+- `readableInTime_iff` (661), exact. Given `W.FirstApart group l l' T` and `NoReturnAt feasible keeps l N`: `ReadableInTime … ↔ T < N`.
+- The too-late laws `too_late_of_alike` (678), `too_late_of_unreached` (699), `too_late_within_margin` (719) and `too_late_of_own` (743). Each concludes "not readable in time, and no family read off the group's continuations reads in time". The premises of each:
+  - alike: every member is admitted alike at every step up to `D`, and `¬ Recoverable … l D`.
+  - unreached: balance of both courses before `D`, the same formations present, a common start, `responds` (every non-source exchanges alike wherever it is alike through `obs`), no member reached in time by `D`, and `¬ Recoverable … W.level D`.
+  - within margin: `l'` admits every member and every gap is within the margin up to `D`, and the course is past return at `D`.
+  - own: every kept course admits every member at every step, and `l'` admits every member at every step.
+
+**Built example.** `FourReaders.recoverable_iff` (977): `Recoverable Feasible DwellerKept (levels .never) N ↔ N ≤ 2`. Also `FourReaders.noReturn` (1011): the point is 3, the dweller is admitted at 3 and not at 4. And `recoverable_iff_regime` (1097). The feasible courses are the clearer's four stopping courses, "supplied as flows, not generated by a stated law of exchange" (115–117).
+
+**Q4. Forms changing.** Not found in what was read. The feasible courses are fixed, and the formations and their needs are fixed in the witness.
+
+**Q5. Where a widening comes from.** Not applicable: no widening is stated. In the witness the renewer gives one unit while the habitat stands at 2 or more. That is a regime (`regime_point`, 1034, a built example), not a widening.
+
+**Q6. Relates a way of selecting to narrowing.** Yes, for closing, in time. A selection read off a group's continuations can tell two courses apart no earlier than their first step apart (`TellsApartAt.not_before`, 184). It is in time exactly where that step comes before the losing course's point of no return (`readableInTime_iff`). The too-late laws give sufficient conditions for every such selection to be late. The docstring: "Which way a reading turns a course is not stated: a selection that tells the courses apart in time can select for the loss as well as against it" (117–119). Nothing relates a selection to an opening.
+
+## 2. Viability.lean: Kernel, kernel_step_iff, kernel_certificate
+
+**Q1.** `Kernel P guard s := ∀ t, Reach P s t → guard t` (55–56): "the configurations from which no course leaves it". It is a set of configurations on one process, read over every course from `s`, not one course.
+
+**Q2. Opening or widening.** `Kernel.mono` (110): `(∀ s, guard s → guard' s) → Kernel P guard s → Kernel P guard' s`, "A wider guard has a wider kernel". This compares two guards. It is not a widening along a course. No law along a course was found that concludes a configuration enters the kernel.
+
+**Q3. Closing, and staying.**
+- `kernel_step_iff` (98), exact: `Kernel P guard s ↔ guard s ∧ ∀ a t, P.step s a t → Kernel P guard t`. So the kernel is closed forward: from inside it every step stays inside.
+- `kernel_certificate` (78): `Certificate P guard (Kernel P guard)`.
+- `kernel_iff_certificate` (85): `Kernel … s ↔ ∃ K, K s ∧ Certificate P guard K`.
+- `kernel_largest` (91).
+- `Kernel.run` (115): along every run starting in the kernel, every configuration is within the guard.
+- `never_leaves_iff_kernel` (215) and `never_leaves_iff_certificate` (230). Premise: one admissible disturbance `h₀ : adm a₀`. `needs_admissible` (249) shows that premise is needed.
+- Built example: `Leaves.within_not_kernel` (127), where the guard holds and a course still leaves it.
+
+From the definition and `Reach.trans`, a configuration reached from one outside the kernel can be inside it. That inference is mine. No stated law says it.
+
+**Q4.** Not found in what was read. **Q5.** Not applicable.
+
+**Q6.** Not found in what was read. The docstring says: "nothing here says that some certificate exists" (37–38).
+
+## 3. JointKeeping.lean: Keepable and its laws
+
+**Q1.** `Keepable P g s := ∃ r : Run P, r.state 0 = s ∧ ∀ n, g (r.state n)` (91–92): some course from `s` stays within the guard. This is existential over the courses from one configuration.
+
+**Q2.** `Keepable.mono` (99) concludes keepability of a wider guard. That compares guards, not steps along a course. Keepable is stated to follow from a family that keeps moving within finitely many configurations (docstring 15–17, via `Onward.KeepsMoving.run`). No law found concludes that keepability arises along a course.
+
+**Q3.**
+- `Keepable.each` (115): keepable together gives keepable each. The docstring: "where either guard is not keepable, the two together are not".
+- The converse fails: `ChoicePoint.each_not_joint` (218) is a built example.
+- `kernel_and_iff` (64) and `kernel_allOf_iff` (75) are exact: conditions decompose under every course.
+- `keepable_and_iff_of_kernel_left` (121) and `keepable_and_iff_of_kernel_right` (127): where one guard lies in the kernel, keeping both is keeping the other.
+- `no_rule_decides_joint` (291) and `no_respecting_rule_decides_joint` (314) are built-example impossibility laws on `ChoicePoint`.
+- `KeptFor.each` (146).
+- Built example `keptFor_each_not_joint` (366): kept for each guard at every horizon, and for the two together not even for one step. The docstring: "the gap opens only where both conditions go through choices of the course" (22–23).
+
+**Q4.** Built example `kept_part_not_renewal` (396). From one configuration, one run renews and another consumes the sustaining formation's condition, and that formation ends from step 1. The focal guard is in the kernel. The sustaining formation's guard is keepable and not in the kernel. This is a difference of courses, not forms changing while something goes on.
+
+**Q5.** Not applicable.
+
+**Q6.** Not found in what was read, beyond the docstring that "renewing is a fact of the run" (39–40, 393).
+
+## 4. GuardHorizon.lean: Viable, dViable_iff, UniformPolicy, Closed, kernel_viable
+
+**Q1.** `Viable P guard : Nat → S → Prop` (71–73), the number of steps a guard can still be kept by a choice of enabled moves:
+- `Viable 0 s := guard s`
+- `Viable (n+1) s := guard s ∧ ∃ a, Enabled P s a ∧ ∀ t, P.step s a t → Viable n t`
+
+`Closed K := ∀ s, K s → guard s ∧ ∃ a, Enabled P s a ∧ ∀ t, P.step s a t → K t` (108–109).
+
+**Q2. Every horizon.**
+- `closed_viable` (112): `Closed P guard K → ∀ n s, K s → Viable P guard n s`.
+- `certificate_viable` (128). Premises: `Viability.Certificate P guard K` and `live : ∀ s, K s → ∃ a, Enabled P s a`.
+- `kernel_viable` (134). Premises: `Viability.Kernel P guard s` and `live : ∀ t, Reach P s t → ∃ a, Enabled P t a`. Conclusion: `∀ n, Viable P guard n s`.
+- `uniform_viable` (406): `UniformPolicy read (Admissible P guard n)` and `guard s` give `Viable P guard (n+1) s`, "keeps the guard one step further".
+
+These conclude that a horizon is kept from a closed set handed in. No law found says the horizon grows along a course.
+
+**Q3.**
+- `viable_guard` (86).
+- `not_enabled_not_admissible` (91): "a move the process does not enable keeps nothing".
+- `dViable_iff` (230), exact. For a law `next` with free moves, `DViable guard next n s ↔ Viable (Viability.disturbed next fun _ => True) guard n s`.
+- `empty_requirement_hides_loss` (426), a built example.
+- `endpoint_access_hides_gap` (444), a built example.
+- A law that `Viable (n+1)` implies `Viable n` was not found in this module. Its counterpart `KeptFor.shorter` is in `Keeping`.
+
+**Q4. Built examples on lists of pairs.**
+- `overlapping_handoff_keeps_access` (452) and `route_retirement_allowed` (460). The docstring at 460: "The old route may be retired: keeping access is not freezing a route." Access goes on while its carrier, the route, is replaced.
+- `coverage_transports` (432), a general law: coverage carries over along a translation that retains the old requirements.
+
+This is the nearest thing in my group to "forms change while the going on continues", and the Lean names it only as access through a replaced route. No widening is stated with it.
+
+**Q5.** Not applicable.
+
+**Q6. A choice, as a way of selecting, keeping the horizon open.**
+- `shielded_choice` (97). Premises: `0 < lift`, and `x` is best by `AcceptScore q lift` among the admissible moves. Conclusion: it accepts, is enabled, keeps the guard `n` steps, and is best among the admissible moves.
+- `recomputed_composition` (193) and `recomputed_kept` (297). Premises: `Bellman`, `0 < lift`, and a choice best among the `DAllowed` moves. Conclusion: the choice stays within the guard and returns exactly the value.
+- `uniform_policy_iff_fiber_feasible` (341), given `ChoiceOver`, and `statewise_not_uniform` (382, a built example): a choice made from readings needs one move good across each reading.
+
+Each relates a selection to keeping a guard. None relates a selection to the horizon widening.
+
+## 5. Keeping.lean: KeptFor, Plan
+
+**Q1.** `KeptFor P sense guard allowed n B` (90–94). A class `B` of configurations is kept for `n` steps through moves that are usable throughout it, and the class narrows by what each step keeps (`Seen`, 73). It is a horizon of a class, under what is registered.
+
+**Q2.**
+- `keptFor_of_closed` (311). Premises: a family within the guard, and each class in it has a usable move leading into the family whatever value is kept. Conclusion: every class in it is kept at every horizon.
+- `Certificate.keptFor` (322) and `Kernel.keptFor` (333). Premise: a move allowed and enabled throughout.
+- `KeptFor.finer` (288): a finer map of the steps keeps what a coarser one keeps. Registering more keeps at least as much, with the moves unchanged.
+
+**Q3.**
+- `KeptFor.shorter` (280): a longer horizon keeps every shorter one.
+- `KeptFor.mono` (271): a narrower class is kept wherever a wider one is.
+- Built example `Matching.keeping_matters` (435): where the step keeps the bit, the starts are kept for two steps. Where it keeps nothing, they are not.
+- `plans_iff_choice` (247): kept classes have plans in every process exactly where every relation total on the values has a choice function.
+
+**Q4.** Not found in what was read.
+
+**Q5.** Not applicable.
+
+**Q6.** `keeping_matters` (a built example) and `KeptFor.finer` (a general law) relate what a step registers to how long a class can be kept. This is the nearest link to "what makes a difference to it is in part its own doing". It concerns keeping, not widening.
+
+## 6. Onward.lean: KeepsMoving, run_of_trace, run_iff_returning
+
+**Q1.** `KeepsMoving P K := ∀ s, K s → ∃ a t, P.step s a t ∧ K t` (206–207). Separately, whether a run starts at `s` at all.
+
+**Q2.**
+- `run_of_trace` (98): `Trace P s as t → (∃ r, r.state 0 = t) → ∃ r, r.state 0 = s`.
+- `run_of_returning` (113): a course into a return gives a run, with no selection.
+- `KeepsMoving.run` (231). Premise: a list holding every configuration, `every : ∀ x, x ∈ all`. Conclusion: from each member, a run stays in the family.
+- `run_iff_returning` (179), exact. Given `every`: `(∃ r, r.state 0 = s) ↔ ∃ t, Reach P s t ∧ Branching.Returns P t`.
+- `run_iff_continues` (164) and `run_iff_unbounded` (172): equivalences under the same premise.
+- `runs_iff_dependentChoice` (397): runs from every family that keeps moving, in every process, is exactly dependent choice.
+
+**Q3.**
+- `fan_no_run` (196, a built example): where branching is infinite, courses of every length give no run.
+- `rise_needs_merge` (282). Premises: `every`, `KeepsMoving P K`, `q` never falls across a step within `K`, and `q x < q y` across a step within `K`. Conclusion: `¬ Branching.Lossless P`.
+- `lossless_no_rise` (264). Premises: `Lossless`, `every`, `KeepsMoving`, and `never_falls`. Conclusion: `q y = q x` across every step within `K`.
+- `lossless_unlisted` (291). Premises: `Lossless`, `Unbounded P s`, and `¬ Returns P s`. Conclusion: no list holds every configuration.
+
+**Q4.** Not found in what was read.
+
+**Q5.** Within finitely many configurations, going on without end is coming round: "the course itself shows where it returns" (49–51). A rise within a family that keeps moving needs a merge (`rise_needs_merge`). A course that never returns needs openness, meaning unlisted configurations (`lossless_unlisted`).
+
+**Q6.** Not found in what was read.
+
+## 7. Enough.lean
+
+**Q1.** Whether some or every run from `s` comes to rest with a target met (`Rests`, 55), on any process.
+
+**Q2.** `possibly_rests_iff` (96), exact and with no premise: `(∃ r, r.state 0 = s ∧ Rests target r) ↔ ∃ u, Reach P s u ∧ Stays P u ∧ target u`.
+
+**Q3.** `assured_iff` (138), exact: `(∀ r, r.state 0 = s → Rests target r) ↔ (∀ u, Reach P s u → Stays P u → target u) ∧ ∀ r, r.state 0 = s → Settles r`. Also `assured_stays_meet` (114), and the built example `Free.stays_meet_not_assured` (180).
+
+**Q4, Q5, Q6.** Not found in what was read. This place is about coming to rest. It neither opens nor closes what can go on. The docstring: "When the runs of a process settle is not stated here" (34).
+
+## 8. ReachableRanges.lean: possible_of_next, and what "possible" is
+
+**Q1.**
+- `Possible P adm s x := ∃ t, Reach P s t ∧ adm t x` (289): the whole possible, what some configuration reachable from `s` admits.
+- `PossibleWithin P adm k s x` (295): the same within `k` steps. Its docstring: "With `k = 1` it is the adjacent possible with the present, read in a prestated space: one fixed process and one reading."
+- `Covers` (272) and `Widens` (277): every course from `s'` is included, offset for offset, by a course from `s`, and for widening some course from `s` is included by none from `s'`. This is a comparison of two configurations' families of courses.
+
+**Q2. Opening or widening.**
+- `Reaching.widens_next_iff_rising` (438), an exact two-sided law of widening along a course. Premise: `unique : ∀ q q' : Run P, q.state 0 = q'.state 0 → ∀ t, q.state t = q'.state t` (a determined process). For any run `r`: `Widens P adm (r.state 1) (r.state 0) ↔ (∀ t x, adm (r.state t) x → adm (r.state (t+1)) x) ∧ ¬ ∀ t x, adm (r.state (t+1)) x → adm (r.state t) x`. The docstring: "the course compared with itself one step late". What it hands in is the course's own admissions rising offset by offset.
+- `Rise.rises` (built example, determined): same-offset widening rises along a course, while `possible_same` and `possibleWithin_same` hold. The docstring: "only what each admits now rises", and "the witness says nothing about alternatives".
+- `Climb.keeps` (built example, the successor law on `Nat`, `adm n x := x ≤ n`): the possible within every horizon keeps widening, and no list holds the whole possible.
+- `KeepsWidening Q := (∀ n d x, Q n x → Q (n+d) x) ∧ ∀ n, ∃ d x, Q (n+d) x ∧ ¬ Q n x` (300).
+
+**Q3. Narrowing and closing (general laws, no premise beyond a run).**
+- `Run.possible_of_next` (589): `Possible P adm (r.state (n+1)) x → Possible P adm (r.state n) x`. "Nothing is added to the whole possible along a course."
+- `Run.possible_of_later` and `Run.possible_from_start`.
+- `Run.not_possible_returns`. Premises: `Possible … (r.state n) x` and `¬ Possible … (r.state (n+1)) x`. Conclusion: `¬ Reach P (r.state (n+1)) (r.state n)`. "A step losing a possibility has no way back."
+- `Run.possibleWithin_moves`: the possible within `k` of the next configuration is within `k+1` of the present one ("moves with the actual").
+- `Run.coversLater_next`: with a lag of one, every configuration of a course covers its successor.
+- `Run.not_widensWithLag_next` (812).
+- `Run.possible_same_of_covers_next` (670), exact. Premises: `Covers P adm (r.state (n+1)) (r.state n)`, and every configuration reachable from `r.state n` starts a course. Conclusion: `Possible … (r.state (n+1)) x ↔ Possible … (r.state n) x`.
+- `Reaching.not_keepsWidening_of_listed_along` and `Reaching.not_keepsWidening_of_listed`: given a list holding the whole possible from a course's start, the possible within `k` does not keep widening along the course.
+- `KeepsWidening.not_listed`: no list holds a chain that keeps widening.
+
+**Q4.** Not found in what was read. The modelling note says formations are "compared by name over one type fixed across steps; one fixed process" (175–180).
+
+**Q5.** Within one fixed process the whole possible never grows. A chain that keeps widening needs an unlisted range. The head says: "the whole possible never grows; the adjacent possible that cannot be prestated (Longo, Montévil and Kauffman 2012) is outside" (167–170). It also says that "nothing is added to the whole possible" restates the irreversibility premise of quasi-option value (171–172).
+
+**Q6.** The ordering is related to comparison C (`Reaching.comparison_widens`), not to a way of selecting. Not read beyond the head docstring.
+
+## 9. TurningInTime.lean section 7: recoverable_iff_above, noReturnAt_iff_first_below, turns_in_time_iff_before
+
+**Q1.** The `Recoverable` of `ReadOffInTime`, with:
+- feasible courses: `Turned X giving H`, which is `X` turned to the standing use `H` at some step, the start included (1945);
+- what is kept: `MeetsNeed need l := ∀ t c, need ≤ l t c` (1949);
+- courses over one condition.
+
+**Q3. Closing (general laws under named premises).** `recoverable_iff_above` (2087) and `noReturnAt_iff_first_below` (2100) share these premises:
+- `fall : ∀ t, X (t+1) ≤ X t`
+- `top : X 0 ≤ hi`
+- `nothing : RegimeMargin.FromNothing giving`
+- `short : RegimeMargin.Short giving H y`
+- `meets : RegimeMargin.Meets giving H y hi`
+- `keeps : RegimeMargin.Keeps giving H hi`
+- `needs : 0 < need`
+- `within : need ≤ H + y`
+
+Under them:
+- `recoverable_iff_above`: `Recoverable (Turned X giving H) (MeetsNeed need) (fun t _ => X t) N ↔ H + y ≤ X N`.
+- `noReturnAt_iff_first_below`: `NoReturnAt … N ↔ X N < H + y ∧ ∀ n < N, H + y ≤ X n`.
+- `noReturnAt_of_below` (2148), under the same premises plus `X n < H + y`, gives `∃ N ≤ n, NoReturnAt … N`.
+- `noReturn_exists` (2252): the course as it was has a point of no return within `x` steps, under the premises listed at 2240–2251.
+
+**Q2 and Q4. A going-on continuing through a change of its way.** `turns_in_time_iff_before` (2289) is a general law and exact.
+
+Premises:
+- `AloneOutside marked alone after`, and `[DecidablePred marked]`;
+- `turns : ∀ w x, marked x → Kept (after w x)`;
+- `kept : ∀ w x, Kept w → Kept (after w x)`;
+- `uses : ∀ w, Kept w → use w = H₂`;
+- `nothing`; and, at `H₂, y₂`: `short`, `meets` and `keeps`, with `hi`;
+- `0 < need` and `need ≤ H₂ + y₂`;
+- `short₁ : Short giving H₁ y₁`, `uses₁ : ∀ j, H₁ ≤ use (Law.orbit alone w j)`, `below : x < H₁ + y₁`, and `high : x ≤ hi`.
+
+Conclusion: the line from `(w, x)` never ends (`«不穷» (net need after …) «一» (w, x)`) exactly where there is a first marked step `T` of the course as it was, with the need met at and before it, and a point of no return `N` with `T + 1 < N`.
+
+`course_turned` (2190) has no premise on the need or on `giving`. Under `AloneOutside`, `turns`, `kept` and `uses`, the pair's level course is the course as it was, turned at `T + 1`.
+
+So this law states that the way changes, from `alone`'s ways to the `Kept` kind using `H₂`, while the line continues. Its conclusion is continuation without end, not widening.
+
+**Q5.** Not applicable: the level is kept, not raised. `H + y` is the regime's point.
+
+**Q6.** A turn to a standing use, which is a change of the way the course is drawn, is related to closing: in time exactly where it comes before the point of no return. The docstring: "The feasible courses are turns to one standing use; other continuations are not considered, and the marks stay given" (1933–1934). Nothing about widening.
+
+**Chapter against Lean.** 07 line 261 tells `Recoverable`, `NoReturnAt` and `NoReturnAt.parts` as the Lean states them. I found no difference there.
+
+## 10. The lock's laws of closing
+
+**PoolFromCourse.closed_stays_closed** (222), a general law.
+
+Premises:
+- `raises : Raises (liftShare P) favours f`, that is, `∀ x g, favours g → P.le x.1 (f x g).1`;
+- `monotone : ReadsShare P M hA`;
+- `upper : M.le g g' → favours g → favours g'`;
+- `through : ReadsThroughPresent present hA h`, that is, `∀ p g, ¬ present p → h p g = hA p.1 g`;
+- `kept : NotReadmitted present f`, that is, `∀ p g, ¬ present p → ¬ present (f p g)`;
+- `absent : ¬ present (paced f h reads c r).1`;
+- `lock : Locked M favours hA (…r…)`, where `Locked M favours h p := favours p.2 ∧ M.le p.2 (h p.1 p.2)`.
+
+Conclusion: `∀ k`, no reader of the beyond is present at `r + k`, the course is locked there, and neither share nor rule is below where they were at `r`.
+
+Readers of what lies beyond, once gone, stay gone. That is carried by the premise `NotReadmitted`.
+
+**PoolFromCourse.Borne.shapers_left** (753), a built example. The rule stays `hi` at steps 2 and 3, the share falls across 2→3 and 3→4, the course is locked at 1, 2 and 3, and it is not locked at 4. A lock can be left while the share falls (head docstring, 31–32).
+
+**ClosedCapture.lock_outlives_loss** (307), a general law.
+
+Premises:
+- `raises : Raises P favours fA`;
+- `monotone : ReadsShare P M hA`;
+- `upper`;
+- `accrues : ∀ p g, p.2 + 1 ≤ fB p g`;
+- `locked : Locked M favours hA (a, g)`.
+
+The loss is read by neither the selection nor the reading: the course is `paced (join fA fB) (joinRead hA) reads`. Conclusion: for every `t`, `b + t ≤` the loss, the course is locked, and neither share nor rule is below its start.
+
+**ClosedCapture.turned_by_loss** (291), a general law.
+
+Premises:
+- `accrues`;
+- `turns : ∀ p g, N ≤ p.2 → ¬ favours (h p g)`;
+- `at_r : reads r = true`;
+- `past : N ≤ b + r`.
+
+Conclusion: `¬ favours` of the rule at `r + 1`.
+
+**DrawnBeyond.Flow.Balances.breaks_beyond** (205), a general law.
+
+Premises:
+- `L.Balances W`;
+- `L.GainlessOn (ds ++ rest) t`;
+- `W.MetOn dep rest t`;
+- `W.stock ds t + W.slack dep rest t < W.stock ds (t+1) + L.lost (ds ++ rest) t`.
+
+Conclusion: `∃ c ∈ rest, W.Broken t (dep c) c`.
+
+`breaks_beyond_unsettles` (271) adds `W.Dependent`. The formation then "ends, or its dependence weakens or dissolves". `breaks_beyond_ends` (287) adds that the dependence is fixed, and the formation ends.
+
+**DrawnBeyond.Flow.favours_breaking_beyond** (293), a general law.
+
+Premises:
+- `Balances`, `GainlessOn (ds ++ rest) t` and `MetOn dep rest t`;
+- `apart : ∀ c ∈ rest, c ∉ ds`;
+- `listed : ∀ h c, members h → W.CoupledInto obs h c → c ∈ ds`;
+- `rewards : select W.level → W.stock ds t + W.slack dep rest t < W.stock ds (t+1)`;
+- `holds : select W.level`.
+
+Conclusion: `∃ c ∈ rest, W.Broken t (dep c) c ∧ ¬ members (dep c) ∧ ∀ h, members h → ¬ W.CoupledInto obs h c`.
+
+The `_inflow` form (272) drops `GainlessOn` and adds `L.inflow (ds ++ rest) t` to the left side.
+
+**Q1 for the lock.** Being locked, and whether readers of the beyond are present: of one course. In DrawnBeyond: a dependence beyond that is met or broken, at one step.
+
+**Q2.** Not found in what was read. A rise of the family is handed in as `rewards` or `exceeds`.
+
+**Q3.** All of the above.
+
+**Q4.** `breaks_beyond_unsettles`: the formation does not go on as it was. It ends, or its dependence changes. This is a change of a formation beyond. It is not stated as something that continues while it changes.
+
+**Q5.** In a balanced flow, a rise is drawn from beyond, and under gainlessness by the rise plus the loss. The head says: "a rise above all the whole held needs a step at which it is open, gaining from outside it (`Flow.Balances.open_of_rise_above`)", and "only the part of a rise the inflow covers need not be drawn from beyond" (51–62). I read these two laws only as the head names them.
+
+**Q6.** Yes, for closing:
+- `favours_breaking_beyond`: a selection that holds only where the family rises above the slack holds only where a dependence outside what the group couples into is broken.
+- `lock_outlives_loss` and `closed_stays_closed`: a selection read off its share stays locked while what it does not read grows, or while the readers of the beyond stay gone.
+
+Nothing in what was read relates a selection to an opening.
+
+---
+
+## Does anything state that the set of courses still open GROWS along a course?
+
+Not found in what was read. Every law along a course that I read says the set shrinks or stays:
+- recoverability is down-closed (`Recoverable.earlier`, `NoReturnAt.recoverable_iff`);
+- the kernel is closed forward (`kernel_step_iff`);
+- the whole possible never grows (`Run.possible_of_next`), and a lost possibility has no way back (`Run.not_possible_returns`);
+- each configuration covers its successor with a lag of one (`Run.coversLater_next`), and no successor widens with a lag over its predecessor (`Run.not_widensWithLag_next`);
+- the possible stays the same where the successor covers the predecessor (`Run.possible_same_of_covers_next`);
+- a longer horizon keeps every shorter one (`KeptFor.shorter`);
+- once closed, the lock stays closed (`closed_stays_closed`).
+
+The only "grows along a course" found is same-offset widening (`widens_next_iff_rising`, on determined processes), with the built examples `Rise` and `Climb`. That is what each configuration admits rising, read against the course's own delay, while the whole possible stays the same (`Rise.possible_same`). It is not a growth of the courses still open. Things grow wider only by comparison across guards or classes (`Kernel.mono`, `Keepable.mono`, `KeptFor.finer`), not across steps.
+
+## The guesses
+
+- **F1. For:**
+  - In my group no widening is stated of a way of selecting. The selections in `ReadOffInTime`, `GuardHorizon` and `DrawnBeyond` are related only to keeping or to closing.
+
+  **Against:**
+  - `ReachableRanges` states widening of what can be reached (`Widens`) and `KeepsWidening` on any process and any chain, not only of a web or census handed in.
+  - It also has an exact law of widening along a course, `widens_next_iff_rising`, under determinacy.
+- **F2. For:**
+  - The whole possible never grows within one fixed process (`Run.possible_of_next`).
+  - Nothing keeps widening where a list holds the whole possible (`not_keepsWidening_of_listed`).
+  - Within finitely many configurations a rise needs a merge (`rise_needs_merge`), and a course that never returns needs unlisted configurations (`lossless_unlisted`).
+  - In a balanced flow a rise is drawn from beyond (`breaks_beyond`), and a rise above all the whole held needs openness (`open_of_rise_above`, from the head docstring only).
+
+  **Against:** nothing in my group. `Climb.keeps` widens without end, but on an unlisted `Nat`. That is the very exemption F2 names (no finite family), and it is a determined built example.
+- **F3. For:**
+  - `turns_in_time_iff_before` and `course_turned` (a general law under premises): the way changes to the kept kind while the line goes on without end. The conclusion is continuation, not widening.
+  - The built examples `route_retirement_allowed` and `overlapping_handoff_keeps_access`: access goes on while its route, its carrier, is replaced. No widening is stated.
+  - `breaks_beyond_unsettles`: a formation ends or its dependence changes. That is change, not continuation.
+  - No law in my group says that continuing through change widens what can go on after.
+
+  **Against:** nothing found.
+- **F4. For:** my group alone has more than four readings of "what can go on after", each with its own premises:
+  - `Kernel`, all courses;
+  - `Keepable`, some run;
+  - `Viable n` and `KeptFor n`, horizons, the second under what is registered;
+  - `Recoverable`, feasible courses handed in, agreeing so far;
+  - `Possible` and `PossibleWithin`, what reachable configurations admit;
+  - `Covers` and `Widens`, families of courses;
+  - whether a run starts at all (`run_iff_returning`).
+
+  **Against (partial joins):**
+  - `kernel_viable` and `certificate_viable` (Kernel to Viable, with `live`);
+  - `Kernel.keptFor` and `Certificate.keptFor`;
+  - `keepable_and_iff_of_kernel_*`;
+  - `dViable_iff`;
+  - `Reaching.Covers.possible` (covering to possible, where reachable configurations start courses);
+  - `turns_in_time_iff_before` and `recoverable_iff_above` (`Recoverable` to a level, and to a line never ending);
+  - `JointKeeping` gets `Keepable` from `KeepsMoving`.
+
+  Not found in what was read: a law joining `Recoverable` (courses as level functions with a supplied `feasible`) to `Kernel` or `Keepable` on a `Process`, or joining either to `Possible`. The head of `TurningInTime` (294–297) says `FourReaders.recoverable_iff_regime` is not derived from `recoverable_iff_above` and that "the two say the same of their models is a reading".
+- **F5. For:**
+  - Closing is general and exact, with few premises. `Recoverable.earlier`, `NoReturnAt.recoverable_iff`, `readableInTime_iff`, `kernel_step_iff`, `Run.possible_of_next` and `Run.not_possible_returns` need no premise beyond a run.
+  - `closed_stays_closed`, `lock_outlives_loss`, `breaks_beyond` and `favours_breaking_beyond` hold under named premises.
+  - Opening is concluded only from a premise that already contains it:
+    - `widens_next_iff_rising`: its right side is the course's admissions rising;
+    - `closed_viable`, `keptFor_of_closed` and `kernel_viable`: a closed family handed in;
+    - `KeepsMoving.run`: a family that keeps moving;
+    - `Rise` and `Climb`: built examples.
+
+  **Against:**
+  - `widens_next_iff_rising` is exact and two-sided, so an opening along a course has an exact condition there, on determined processes.
+  - `possibly_rests_iff` and `run_iff_returning` exactly say when going on, or rest, is possible from a configuration. Within finitely many configurations, going on is decided by a return. Neither is a widening.
+
+## Places on no list that bear on the questions
+
+- `HeldPossible.lean` (07 §2, "Where the possible grows"):
+  - `Run.departs_of_keepsWidening` (176): where the possible under a process `Q` keeps widening along a run, from every step some bounded stretch is not made of `Q`'s moves throughout.
+  - `Run.not_keepsWidening_of_returns` (193): along a course that comes back to one configuration at arbitrarily late steps, nothing read off its configurations keeps widening.
+  - Chapter 07 (118) tells the held possible as growing "only where what is held changes". This is the nearest Lean to "creates more and more future", and it ties widening to change in what is held. I read only these two statements.
+- `RegimeMargin.ends_iff_below` gives the level form of no return used by section 7. I did not read it.
+- `Branching.Juncture`. 07 (261) says `NoReturnAt.parts` is "not `Branching.Juncture`, which is stated on a process". I did not read it.
+- `ReadingsPersist.RemovesItsReaders` is named in `PoolFromCourse`'s head as a selection that removes its own readers. I did not read it.
+- `Lasting` (`EitherThroughout`, `Lasting.lifting`) gives runs along unbounded configurations. `Onward`'s head names it. I did not read it.
