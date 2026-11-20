@@ -52,7 +52,7 @@ Canonical source: [BECOMING-FOUNDATION.md](../../history/BECOMING-FOUNDATION.md)
 <a id="next--下一步"></a>
 ## Next
 
-Formal part: every central law of the spine (K1) stated over every law of exchange, as premises-read-off-the-exchange and premises-that-are-states-of-the-law do for the World premises, the families joined by definition (worlds-are-runs). Philosophical part: the whole relationally constituted, not only consistently stated.
+October's next step; from 20 November 2026 the aim is on the direction page. Formal part: every central law of the spine (K1) stated over every law of exchange, as premises-read-off-the-exchange and premises-that-are-states-of-the-law do for the World premises, the families joined by definition (worlds-are-runs). Philosophical part: the whole relationally constituted, not only consistently stated.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -114,6 +114,7 @@ Aliases: —
 - 20 October 2026, R35: target 1's formal part restated, as proposed in R25 (study section 218) and approved by Ren on 20 October 2026 (2026-10-20-fix-all-twentieth-review): the statement now names the formal part (every central law over every law of exchange) and the philosophical part (the whole's determinations as moments of one unfolding); a progress item states the formal part in full (each World premise a reading of the exchange or a state of the law, the families joined by definition); next_delta restated accordingly; one does_not_show item added (the formal part does not settle the philosophical part, and reaches becoming only as far as it has a law of exchange). The target, its status and the deductive necessity it asks for are unchanged; completeness is checked by K1-K7, adopted the same day.
 - 20 October 2026, R35 (twentieth review, E8): conditional-foundation-assessment, which this record supersedes, moves from dependencies to related.
 - 25 October 2026, board item DF (study section 418): the retired label G0 in a related detail reads living significance, and 'the theory without axiom' (the retired Part I) in a progress line reads 'the theory without the condition'; the target is unchanged.
+- 20 November 2026: the goal record this target belongs to (`theory-of-becoming`) was adjusted toward the direction page (`_process/DIRECTION.md`) after Ren's words of that day; this target is October's and is kept as worded, its status unchanged. A short sentence saying so stands at the head of the next step. AI-written.
 - 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](theory-of-becoming-foundation.json).
 
 <a id="earlier-text--早期文本"></a>

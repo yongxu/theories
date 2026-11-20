@@ -30,7 +30,7 @@ Target: test whether the full proposed core is indispensable across the stated s
 
 Target: the deductive necessity of Becoming as a whole, with no added substantive axiom: formally, every central law over every law of exchange; philosophically, its determinations as moments of one unfolding; generation, persistence, degeneration, dissolution, life, evolution, evaluation within it.
 
-**Next:** Formal part: every central law of the spine (K1) stated over every law of exchange, as premises-read-off-the-exchange and premises-that-are-states-of-the-law do for the World premises, the families joined by definition (worlds-are-runs). Philosophical part: the whole relationally constituted, not only consistently stated.
+**Next:** October's next step; from 20 November 2026 the aim is on the direction page. Formal part: every central law of the spine (K1) stated over every law of exchange, as premises-read-off-the-exchange and premises-that-are-states-of-the-law do for the World premises, the families joined by definition (worlds-are-runs). Philosophical part: the whole relationally constituted, not only consistently stated.
 
 `open` · [record](theories/becoming/results/records/theory-of-becoming-foundation.md) · [canonical source](theories/becoming/history/BECOMING-FOUNDATION.md)
 
