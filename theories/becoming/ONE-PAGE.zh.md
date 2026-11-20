@@ -63,4 +63,6 @@
 - 范围与次序如何在动力学之中形成，即作为与地图其余部分相连的动力学（[08 §12](chapters/08-METHOD.md#open-items-ranked)，第 12 项）：其中有一个生命是否、如何形成自我关切的次序，以及各个立场在自身所续者之外，把多大范围的损失算在内（不变之步），连同上面那个未决的问题与它所依的对应（[07 §4.6](chapters/07-SIGNIFICANCE.md#future-path)）。尚未相连、尚未画出的：关于世界模型与过程的定理，尚未提升到文法上（[08 §12](chapters/08-METHOD.md#open-items-ranked)，第 1 项）；学习与预测在读取之环以外的部分——在这个环里，一个形成的感知、预测、选择、行动与修订是同一条律，这个环的定理说到一个形成自己的更新保住什么、经由其模型所选的进程检验不到什么、被其所预测者读到的预测何时正确（[03 §12](chapters/03-KNOWING.md#the-reading-loop)），而概率性的学习、隐性偏置，以及带噪声的读取与连续的信念，都还不在其上（[03](chapters/03-KNOWING.md#open)）；以及图集里大多数动态通向何处：目前只画出了八族中的两族，族与族之间只有一条路线（[图集](results/atlas/ATLAS.md)，英文）。
 - 一个有机体与一种制度各有一个最小模型（[04 §8](chapters/04-LIFE.md#r-the-stock-buys-time-where-the-rebuild-draws-on-it)、[05 §12](chapters/05-COLLECTIVES.md#r-a-rule-rebuilt-from-the-members-it-limits)），若干论题的检验还待进行。
 
+这项工作从这里往哪里去、还不知道什么，见[方向页](../../_process/DIRECTION.md)（英文）。
+
 *它借助 AI 做成，证明也在内。本页的读法，即一条定理对一个情形、一个词或一个实际系统意味着什么，连同表中的“例”与上面用湖说明四个词的那一段，除非其所属之处另有说明，都出自 AI；证明由机器检验，其余经 AI 读者复审；主持这项工作的人读过其中重要的部分；这项工作与本页的中文译文，都尚无独立的人工审查记录（[审查包](review/README.zh.md)）。*
