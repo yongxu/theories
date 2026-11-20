@@ -56,3 +56,7 @@
 - **What is his.** That the understanding as answered is good, and that the work keeps moving.
 - **What is not said.** "Good understanding" is of an answer in five parts and an order of three steps; he did not say which sentence of it is right, and the answer itself says no proof states its first part. It is not a proof and not his own answer to the five. Nothing here releases a push, a sending or a paid run.
 - **What the session does on it.** It takes the order as given: the two small Lean statements first, claimed on the board, in scratch, with a reader who took no part before anything enters the package; then how a loop comes to register what it did not.
+
+## A correction to the answer's fifth part (AI-written, added 21 November 2026 after the coordinating session read this record)
+
+The answer says "a reader given today's tellings recovered 17 of 41 hypotheses". That is of the survey session's trial, which was on eleven theorems chosen because a telling of theirs had already been found wanting, with one reader for each arm and one run. How often tellings say more than their theorems across the repository's records is not measured. And four minutes after the word above he said, to the coordinating session, that "remaking" is not the word ([its record](2026-11-21-the-current-path-keep-moving.md)); the answer's first part uses it.
