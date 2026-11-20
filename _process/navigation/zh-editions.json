@@ -8,17 +8,16 @@
    "english_commit": "99bf0acc4"
   },
   "_process/navigation/README-ZH.md": {
-   "revised": "2026-11-13",
-   "english": "6367d7b75ffe8f305abad4e376d795873e8e30f14f831399759b08104e9f543c",
-   "chinese": "dfee1176724322d4c5b0cb9df469e31d8963aa1a755f6e512de10780e97abddf",
-   "english_commit": "49df4b1a5"
+   "revised": "2026-11-20",
+   "english": "dc740aeaac543508ba2b79b985ee73917ce352e61626fb50ae0e4a489ad7b317",
+   "chinese": "8ff42aa51f9704c316661f51eaf911cd2ad835b2b3fe9d9524cb88be804ba293",
+   "english_commit": "e5eb2ef31"
   },
   "theories/becoming/ONE-PAGE.zh.md": {
-   "revised": "2026-11-13",
-   "english": "99bc2755afde164d4c1f1eb132fdeea930c42dd232bf29852e9c2083986309a6",
-   "chinese": "2f039795fd6319cf1f9807a65650c5534b7ec96ce141031c02744fa208e39099",
-   "english_commit": "bbfb995ae",
-   "unchanged": "the English named two pronouns outright (it, that one); the Chinese already names both ends (对它不造成差别者, 前者)"
+   "revised": "2026-11-20",
+   "english": "f50af4ddb870a6dd7916e499fa68e72ed69bfb53242d60508ffe3477f517edb1",
+   "chinese": "15684d4743a758b8e2c5e0099251a67e0709b0f5c6a99ad1584ab1736c6b7c39",
+   "english_commit": "e5eb2ef31"
   },
   "theories/becoming/OPENING.zh.md": {
    "revised": "2026-11-13",
