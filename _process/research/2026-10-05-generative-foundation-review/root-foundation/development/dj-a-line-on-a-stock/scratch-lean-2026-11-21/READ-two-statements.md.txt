@@ -1,0 +1,221 @@
+# A reader's check of the two scratch statements of batch 22
+
+*AI-written (Claude Opus 5.5, a reader who took no part), 21 November 2026. I only read. I wrote no Lean, ran no build and ran no git command that changes anything. Every "argued" below is my own and has not been checked by anyone else.*
+
+What was read:
+- `Becoming/ScratchKeepableStep.lean`, all of it.
+- `Becoming/ScratchUnitsTurn.lean`, lines 1-470, 474-512, 700-1366, and the declaration list.
+- `Becoming/ScratchUnitsTurnCheck.lean`.
+- The build logs, the built copies in `.build/` and the file times.
+- `work-units.md.txt` (the model, and section U2) and `u2-against-rows.md.txt`.
+- In the package: `JointKeeping.lean` 85-290, `Frame.lean` 260-292, `Horizon.lean` 90-97, `Viability.lean` 95-100, `WayOfUnits.lean` 510-600 and `Enough.lean` 63-78.
+- `ScratchMixedWay.lean` (the batch22 copy, which matched the `.txt` byte for byte), for `mixed_turns_iff`, `unending_grown`, `grown` and `levelAsItWas`.
+- `conditional/renewal/RenewalConfigurations.lean` 43, 64, 121-140, and `RenewalLink.lean` 72-75.
+
+## Summary verdict
+
+Neither module has a MUST finding. Every statement says what was asked, or something more general that still contains it. No premise is unsatisfiable. The worked example of U2 (m = 8, n = 1) is built and meets the premises of `units_turn_iff`. Every claimed case has the old statement exactly: in three of them a `rfl` check builds, and in the fourth I compared the statements by eye. None of the cases is proved by calling the old theorem. The builds passed on the file versions that are on disk now. All axiom reports are empty. The findings below are LESSER.
+
+---
+
+## Module 1: ScratchKeepableStep.lean
+
+### 1. `keepable_step_iff`: as asked (no finding)
+
+`theorem keepable_step_iff {P : Process S A} {g : S → Prop} {s : S} : Keepable P g s ↔ g s ∧ ∃ a t, P.step s a t ∧ Keepable P g t`
+
+- **In plain words:** for every process, guard and configuration, with no premise: some run from `s` stays within `g` exactly when `g` holds at `s` and some step from `s` leads to a configuration from which some run stays within `g`.
+- `Keepable` (JointKeeping 91) is `∃ r : Run P, r.state 0 = s ∧ ∀ n, g (r.state n)`.
+- **Against what was asked:** it is the same statement. The forward proof uses `r.onward 1` with `held (1 + n)`. The backward proof uses `Run.cons` (Horizon 93). The docstring is right, including "the twin of `kernel_step_iff`" (Viability 98).
+
+### 2. `not_keepable_step` / `not_keepable_run`: as asked; the premise could be local (LESSER)
+
+`theorem not_keepable_step {P} {g} (closed : ∀ s a t, P.step s a t → ¬ g s → ¬ g t) {s a t} (lost : ¬ Keepable P g s) (step : P.step s a t) : ¬ Keepable P g t`
+
+`theorem not_keepable_run {P} {g} (closed : …) (r : Run P) (lost : ¬ Keepable P g (r.state 0)) : ∀ n, ¬ Keepable P g (r.state n)`
+
+- **In plain words:** if every step from outside `g` stays outside `g`, then a step from a configuration that `g` is not keepable from leads to one it is not keepable from. Along a run whose start is not keepable, no configuration is keepable. These are the statements as asked, with no decision of `g` used.
+- **LESSER:**
+  - The step form uses `closed` only at the one step it is given. Argued, not built: if `t` is keepable, then `g t` holds, so `¬ g s` is false by the local premise, so `g s` holds, and `keepable_step_iff` makes `s` keepable.
+  - A step form with the local premise `(closed : ¬ g s → ¬ g t)` is strictly stronger. It would put the October `dead_stays_dead` (which is itself local) straight in as the premise.
+  - Suggested: `theorem not_keepable_step {P g s a t} (step : P.step s a t) (closed : ¬ g s → ¬ g t) (lost : ¬ Keepable P g s) : ¬ Keepable P g t`, with the run form keeping the global `closed`.
+  - This is optional. The worded premise is what was asked.
+
+### 3. `not_keepable_invariant_iff`: correct; the docstrings could tie it in (LESSER)
+
+`Invariant P (fun s => ¬ Keepable P g s) ↔ ∀ s a t, P.step s a t → ¬ g s → ¬ Keepable P g t`
+
+- It holds as stated and its docstring is exact. `Invariant` (Frame 265) is `∀ s a t, P.step s a t → I s → I t`.
+- **LESSER, in the docstrings:**
+  - The docstring of `not_keepable_run` could say that the premise it actually uses is the right side of `not_keepable_invariant_iff`, and that `closed` is one way to get it.
+  - The module header says that `not_keepable_step` "holds" where `closed` holds. That is right.
+
+### 4. The witnesses: correct (no finding)
+
+- **`ChoicePoint.keepable_gained`:** under `next`, the step `split, true ↦ left` holds by `rfl`; the guard is false at `split` (so `keepable.start` refutes keepability there); `restRun .left rfl` keeps it from `left`. Its docstring is exact.
+- **`Successor.nowhere_keepable`:** the arithmetic is correct.
+- **`not_keepable_kept_complement_not`:** a run from every number by `Law.run Nat.succ n`; the step `0 → 1` breaks `closed`.
+- Every docstring says "No premise", which is right.
+- The writer's own caveat stands: the guard of the first witness is "not held, then held" and not "lost and regained".
+
+### 5. The build: passed, on the current file (no finding)
+
+- Build 2 ran from 04:01:25 to 04:01:31, with exit 0, `"unclean": []`, 8 theorems, 11 declarations and `"with_axioms": {}`.
+- The file was last changed at 03:48:48, before build 2 and after build 1 (which ended at 03:47:06, with 9 declarations).
+- `.build/Becoming/ScratchKeepableStep.lean` (04:01:28) is byte-identical to the file on disk.
+- The file has 11 declarations, of which 8 are theorems, so the counts match.
+- The file has no `sorry`, `native_decide`, `Classical` or `axiom`.
+
+### 6. Would existing proofs get shorter? None in the package (LESSER)
+
+- Nothing in the package outside `JointKeeping.lean` uses `Keepable`.
+- The October `renewable_iff_step` and `renewability_not_generated` are in `conditional/renewal/`. That is a separate tree whose files import `RenewalClosure` and `RenewalAccounting`, not `Becoming`.
+  - Their becoming cases needs that tree to import the package, or a copy of the bridge from `History` to `Run`. Neither is written.
+  - `renewability_not_generated` (RenewalConfigurations 129-140) does split on `Nat.decLe`, as the writer said. Through `not_keepable_run` with `closed := fun … step dead => dead_stays_dead dead step` it would be a few lines, argued and not compiled.
+- **To do when landing:**
+  - `Enough.prepend` (Enough 75, with `prependState` and `prependAct`) is the same construction as `Run.cons` (Horizon 93). One of them should go.
+  - Moving `Run.cons` beside `Run.onward` in `Recurrence` would also remove the extra import of `Horizon` into `JointKeeping`.
+
+---
+
+## Module 2: ScratchUnitsTurn.lean
+
+### 7. `units_turn_iff`: U2 as corrected, with `T` given (no finding)
+
+`theorem units_turn_iff {m n hi y T : Nat} {w : List U} {x : Nat} (sm : ∀ u, S u → need u = m) (stay : Stays S need kids n w) (needs : 0 < n) (order : n ≤ m) (nothing : FromNothing giving) (high : x ≤ hi) (keeps : Keeps giving (taken use (strip S w)) hi) (before : ∀ j < T, m ≤ X j) (belowT : X T < m) (short : Short giving H_T y) (meets : Meets giving H_T y hi) (within : n ≤ H_T + y) : «不穷» (net need kids giving use) «一» (w, x) ↔ n ≤ X T ∧ H_T + y ≤ X (T+1)`
+
+Here `X := wasLevel kids use giving w x`, `H_T := taken use (strip S (generation kids T w))`, and `{S} [DecidablePred S]` comes from the section.
+
+**Premise by premise:**
+- The growers `S` are decided, and each needs `m`.
+- Every unit not of `S` in every generation of `w` (the course as it was: all kids at every step) has `kids u = [u]` and needs `n` (`Stays`, line 489).
+- `0 < n ≤ m`, nothing is given from nothing, and the start is at most `hi`.
+- The step under what `w`'s stayers take keeps the level within `hi`.
+- `T` is the first step at which the course as it was is below `m`.
+- At that `T`: `Short`, `Meets`, and `n ≤ H_T + y`.
+
+**Conclusion:** the net never ends exactly where `n ≤ X_T` and `H_T + y ≤ X_{T+1}`.
+
+**Against U2 as corrected** (u2-against-rows: `S` decidable; `T` the first `j` with `X_j < m`; the premises at `T` only; `R_T ≠ []` redundant; the right side `n ≤ X_T ∧ H_T + y_T ≤ X_{T+1}`), the Lean says the same:
+- **`T`:** it is fixed by `before` and `belowT`, not by `Nat.find`.
+- **`R_T ≠ []`:** it is dropped and derived in the proof (`draw_pos`, from `short` and `0 < n ≤ H_T + y`).
+- **Growers:** the Lean asks nothing of what a grower leaves, so it is more general than W2's "grower leaves growers and stayers". Every kid that is not of `S` is held to `Stays` because it is in some generation.
+
+There is nothing less and nothing other.
+
+### 8. `units_turn_iff_first`: the "∃ T" form of U2 (no finding)
+
+The same premises with `comes : ∃ N, X N < m`, and with the regime asked at every first step below `m` (`regime`). The conclusion is `∃ T, (∀ j < T, m ≤ X j) ∧ n ≤ X T ∧ X T < m ∧ H_T + y T ≤ X (T+1)`. This is the U2 statement of `work-units.md` line 19, minus the redundant `R_T` not empty, and with "at each `T`" read as "at the first `T`" (the correction). `first_unique` makes the reading exact. `y : Nat → Nat` is a function of the step, which is harmless.
+
+### 9. Are the premises satisfiable? Yes, on the worked example (no finding)
+
+- `Example.one_by_law` builds `units_turn_iff` at `m = 8`, `n = 1`, `hi = 8`, `T = 2`, `y = 2`, from `[g]` at 8, with `Keeps giving 0 8` (no stayer at the start, so `H₀ = 0`).
+- I checked by hand:
+  - The course as it was runs 8, 8, 7, 4.
+  - The second generation is `[g, r, r]`, so `H_2 = 2`.
+  - `X_3 = 2 + g(2) = 4`, which is at least 2 + 2.
+- `two_by_law` (from `[g, g]`, `T = 1`, `X_2 = 0`) agrees with the paper and with the computed `from_two`.
+- So the theorem is not empty. `units_turn_iff_first` is exercised through `two_units_iff_case` and `mixed_turns_iff_case`.
+
+### 10. `unending_turned` and `unending_carrier`: correct and not vacuous (no finding)
+
+- **`unending_carrier`:** its signature and docstring agree, including "`goes` asked whether or not `n` is met" and "nothing concluded where `goes` fails".
+- **`unending_turned`:**
+  - It asks `stayer : strip S (generation kids T w) ≠ []`, and nothing of the level at `T`. That is what its docstring says.
+  - Its "the two sides can differ without `stayer`" is marked argued. I agree with the argument: a way of growers only, at a level in `[n, m)`.
+- **`Inv`:** "on the course as it was before `T`, or has a stayer" is kept by the step, as shown at lines 734-745.
+
+### 11. `one_need_ends`: narrower than its docstring says (LESSER)
+
+`theorem one_need_ends {m} {w} {x} (one : ∀ k u, u ∈ generation kids k w → need u = m) (comes : ∃ N, X N < m) : ¬ «不穷» (net …) «一» (w, x)`
+
+- **What its docstring says:** "This is the case `units_turn_iff` does not reach: a turn that leaves no unit not of `S`." The module header (line 34) says the same.
+- **Why that is too broad:** `one` asks every unit of every generation, including those after the turn, to need `m`. A turn that leaves no stayer at `T` can still have growers whose kids in generation `T + 1` of the course as it was are stayers. There the net also ends: at `T`, no grower's need is met and there is no other unit. But `one` fails.
+- **What the theorem does cover:** the two uses (equal pairs, and `n = m`). It is not the whole of the case the turn law does not reach.
+- **Suggested words:** "the case where every unit of every generation needs the same `m`; it covers the cases below where the turn law does not reach."
+- **Or, as a statement covering the whole complement** (argued, not built): `theorem no_stayer_ends (sm) (stay) (order) (before : ∀ j < T, m ≤ X j) (belowT : X T < m) (none : strip S (generation kids T w) = []) : ¬ «不穷» (net …) «一» (w, x)`. The proof is `met_before` up to `T` with need at most `m` (from `sm` and `stay`; `Stays` gives `need u = n ≤ m` for the units not of `S`), and then no unit is met at `T`.
+
+### 12. `unending_iff_marked_at`, `unending_iff_first_marked_wide`, `_case`: correct (no finding)
+
+- The signatures match their docstrings.
+- `stops` is implied by `asItWasEnds`, by `.1` at the step below the need. So `_wide` is the widening the reader argued for.
+- `first_marked_same` checks the case's statement against `TurningInTime.unending_iff_first_marked` by `rfl`. The case is proved through `_wide`, not by calling the package's law.
+
+---
+
+## The claimed cases (task item 3)
+
+### 13. `Two.two_units_iff_case`: same statement, proved from the new law (no finding)
+
+- **Same statement:**
+  - I compared it with WayOfUnits 580-591 premise by premise: `order`, `nothing`, `short`, `meets`, `keeps`, `needs`, `within`, `short₁`, `below`, `high`, and the four-conjunct `∃ T` under `Law.orbit (RegimeMargin.step giving (h + H₂)) x`.
+  - The text is the same within `open WayOfUnits`, and `two_units_same : @two_units_iff_case = @WayOfUnits.two_units_iff := rfl` builds.
+- **Proved from the new law:**
+  - It is proved through `unending_unit` and `units_turn_iff_first`, with `S u := u = (m, h)`.
+  - Equal pairs go through `one_need_ends`. There `one` holds because both units need `m`, which uses `need (m, h) = need (n, H₂)` from `eq`.
+  - It does not call `two_units_iff`.
+
+### 14. `mixed_turns_iff_case`: same statement, proved from the new law (no finding)
+
+- **Same statement:**
+  - It matches `ScratchMixedWay.mixed_turns_iff` (the old one is at the line found by grep in the copy) character for character, except `(ne : R ≠ [])` becomes `(_ : R ≠ [])`.
+  - `levelAsItWas` is copied verbatim.
+  - `ScratchUnitsTurnCheck.mixed_same` (an `rfl` check) builds.
+- **Proved from the new law:**
+  - `ScratchUnitsTurn` does not import `ScratchMixedWay`, so it cannot call the old theorem.
+  - When `n < m` it goes through `units_turn_iff_first`, with growers `need u = m`. When `n = m` it goes through `one_need_ends`.
+- **The writer's finding is right:** the turn law reaches it only where `n < m`.
+
+### 15. `unending_grown_case`: same statement, proved from the transfer (no finding)
+
+The statement and `grown` are identical to `ScratchMixedWay.unending_grown` and `grown`. `grown_same` (an `rfl` check) builds. It is proved by `unending_carrier`.
+
+### 16. `unending_iff_carrier_case`: same statement, but no `rfl` check (LESSER)
+
+- The statement is the same as `WayOfUnits.unending_iff_carrier` (WayOfUnits 517-520): only the names are fully qualified.
+- It is proved by `unending_carrier` with `Inv := True`. It does not call the old theorem.
+- **But:** unlike the other three cases, it has no `rfl` check, so the claim "its statement unchanged" rests on my reading by eye.
+- **Suggested addition:** `theorem carrier_same : @unending_iff_carrier_case = @WayOfUnits.unending_iff_carrier := rfl`.
+
+---
+
+## Docstrings against signatures (task item 4)
+
+### 17. Every docstring read names its premises (LESSER, apart from finding 11)
+
+Every docstring I read names each premise of its signature and claims nothing the signature does not give. This covers:
+- `keepable_step_iff`, `not_keepable_invariant_iff`, `not_keepable_step`, `not_keepable_run`, the four witnesses;
+- `unending_from`, `unending_iff_marked_at`, `_wide`, `_case`, `course_carrier`, `unending_carrier`, `unending_grown_case`;
+- `unending_turned`, `units_turn_iff`, `units_turn_iff_first`, `one_need_ends`, `two_units_iff_case`, `mixed_turns_iff_case`, and the `Example` theorems.
+
+The one exception is finding 11. A small point: `two_units_iff_case`'s docstring says "short with within cannot hold of a use of nothing". That is right because `Short g 0 y` forces `y = 0`, and then `0 < n ≤ 0 + 0` fails. It could cite `draw_pos`, as `units_turn_iff` does.
+
+---
+
+## The builds (task item 5)
+
+### 18. Both units builds passed, on the current files (no finding)
+
+- **Build 9** of `ScratchUnitsTurn`:
+  - It ran from 04:32:23 to 04:32:31, with exit 0, `"unclean": []`, 75 theorems, 87 declarations and `"with_axioms": {}`.
+  - The file's time is 04:32:23, the same second as the build started. But `.build/Becoming/ScratchUnitsTurn.lean` (04:32:26) is byte-identical to the file on disk, so the build is of the current version.
+  - A grep of the file counts 87 declarations, 75 of them theorems.
+  - No warning appears in the log. Build 1's log shows that warnings would be printed there.
+- **Build 10** of `ScratchUnitsTurnCheck`:
+  - It ran from 04:32:31 to 04:32:35, with exit 0, 2 theorems and `"with_axioms": {}`.
+  - The check file (04:30:15) is identical to its built copy.
+  - The batch22 `ScratchMixedWay.lean` is byte-identical to the `.txt` of 17 November.
+- **Escape hatches:** there is no `sorry`, `native_decide`, `Classical`, `axiom` or `set_option` in any of the three files.
+- **What the audit reports:** it counts per module. "with_axioms": {} over all the declarations it counts is an empty report for every declaration.
+
+---
+
+## Shorter proofs (task item 6)
+
+### 19. One package proof would get shorter; the rest would not (LESSER)
+
+- **`TurningInTime.unending_iff_first_marked`** (TurningInTime 739, about an 18-line term) would become three lines as a case of `unending_iff_first_marked_wide`, as `_case` shows.
+  - If `_wide` lands, the remark at TurningInTime 283 (that the law "needs the course as it was to come below the need") should then name the weaker premise.
+- **`WayOfUnits.unending_iff_carrier`** would be a case of `unending_carrier`. But the case proof (about 12 lines) is longer than the present one (about 5 lines). It shortens only if `course_twoWay`, `goes_iff_carrier` and `carrierCourse` are retired, which I did not count.
+- **`WayOfUnits.two_units_iff`:** through the new law the proof is about twice as long, so it is not shorter. The reader of 20 November predicted this.
+- **The keepable module:** see finding 6. Nothing in the package gets shorter; the October renewal pair would, in its own tree, once a bridge is written.

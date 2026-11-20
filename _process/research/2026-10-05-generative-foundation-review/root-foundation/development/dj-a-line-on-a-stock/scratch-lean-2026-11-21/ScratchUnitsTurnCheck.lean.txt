@@ -1,0 +1,27 @@
+import Becoming.ScratchUnitsTurn
+import Becoming.ScratchMixedWay
+
+/-!
+# Scratch: two statements of `ScratchUnitsTurn` set against the scratch of 17 November
+
+AI-written (Claude, board row DJ, batch 22, label units), 21 November 2026. SCRATCH, not landed.
+`Becoming/ScratchMixedWay.lean` beside this file is a copy, unchanged, of
+`second-way-2026-11-17/ScratchMixedWay.lean.txt`. The two theorems here check by `rfl` that two cases
+proved in `ScratchUnitsTurn` have the statements of that scratch's theorems (proofs of one proposition
+being equal, the equation type-checks only where the two statements are the same up to unfolding the
+copied abbreviations `grown` and `levelAsItWas`).
+-/
+
+namespace Becoming
+namespace ScratchUnitsTurnCheck
+
+/-- The statement of `ScratchUnitsTurn.mixed_turns_iff_case` is `ScratchMixedWay.mixed_turns_iff`'s. -/
+theorem mixed_same :
+    @ScratchUnitsTurn.mixed_turns_iff_case = @ScratchMixedWay.mixed_turns_iff := rfl
+
+/-- The statement of `ScratchUnitsTurn.unending_grown_case` is `ScratchMixedWay.unending_grown`'s. -/
+theorem grown_same :
+    @ScratchUnitsTurn.unending_grown_case = @ScratchMixedWay.unending_grown := rfl
+
+end ScratchUnitsTurnCheck
+end Becoming

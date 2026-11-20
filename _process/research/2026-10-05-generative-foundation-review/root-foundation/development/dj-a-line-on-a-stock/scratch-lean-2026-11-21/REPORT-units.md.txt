@@ -1,0 +1,546 @@
+# Report: the transfer from the net of units, and the turn in units (label: units)
+
+*AI-written (Claude Fable 5.2, implementer, board row DJ, batch 22), 21 November 2026. Scratch only: nothing under `/Users/ren/theories` was edited, no git command was run, no `make`, `lake`, gate or test suite was run. What is said here of the Lean is read from the build log; every "argued" is mine and unread by anyone else. The module has not been read by anyone who did not write it.*
+
+## What was built
+
+Module `Becoming.ScratchUnitsTurn`, at `/Users/ren/tmp/dj/batch22/Becoming/ScratchUnitsTurn.lean` (1367 lines, imports `Becoming.WayOfUnits`). Last build (build 9): exit 0, no error, no warning, 75 theorems, 87 declarations, `"with_axioms": {}`: every declaration's axiom report is empty. A second small module, `Becoming.ScratchUnitsTurnCheck` (last build 10, exit 0, 2 theorems, `"with_axioms": {}`), checks two statements against the scratch of 17 November by `rfl`.
+
+Nothing here is a new result of the theory. In one sentence each:
+
+- **(A) `unending_carrier`**: the net of units (`LineOnAStock.net`, a need per unit) from `(way c, x)` never ends exactly where `TurningInTime.net n` of a carrier never ends from `(c, x)`, for any carrier with a reading `way : W → List U`, where a property `Inv` of the carrier's configurations is kept while `n` is met and on it the two steps, the two takes and the two "can go on" agree.
+- **(A), growers and stayers, `unending_turned`**: the same for a way whose growers all need `m` and whose other units leave themselves and need `n ≤ m`, on the carrier `List U` with the step `turned` (all kids at or above `m`, the way without its growers below it), given a step `T` before which the course as it was is at or above `m` and at which a stayer is there.
+- **`unending_iff_marked_at`, `unending_iff_first_marked_wide`**: `TurningInTime.unending_iff_first_marked` with the step given, and with its premise `asItWasEnds` weakened; the package's law is then a case, statement unchanged (`unending_iff_first_marked_case`, checked by `rfl` in `first_marked_same`).
+- **(B) `units_turn_iff`** (U2, the step `T` given) and **`units_turn_iff_first`** (the step found).
+- **(C) `Two.two_units_iff_case`**: `WayOfUnits.two_units_iff`, statement unchanged (`Two.two_units_same : @two_units_iff_case = @WayOfUnits.two_units_iff := rfl`), from (B) through `WayOfUnits.unending_unit`, not by calling `two_units_iff`; equal pairs by a separate line. **`mixed_turns_iff_case`**: the scratch's `mixed_turns_iff`, from (B) where `n < m`, by the same separate line where `n = m`.
+- **`one_need_ends`**: the separate line, stated once and used in both cases.
+- **`Example`**: the worker's worked example (a grower that leaves itself and a stayer, from a start with no stayer); each verdict had twice, from the computed course and from `units_turn_iff`.
+
+## (A) The form chosen, and why
+
+**The general statement is a simulation with an invariant on configurations** (`unending_carrier`). Its premises are asked only at configurations with `Inv`, and `Inv` is of the pair (way and level), not of the way alone. Why this form:
+
+1. *The two transfers that exist are its cases with nothing left over.* `WayOfUnits.unending_iff_carrier` is the case `W := Bool`, `way := twoWay`, `Inv` true everywhere; its three ingredients (`after_twoWay`, `taken_twoWay`, `goes_twoWay`) are exactly the three premises `ways`, `takes`, `goes`. The scratch's `unending_grown` is the case `W := List U`, `way c := c ++ R`, `Inv` "every unit of the part is of the line". Both are built with their statements unchanged (`unending_iff_carrier_case`; `unending_grown_case`, checked against the scratch by `rfl` in the check module). So this was a claim that could fail, and it did not.
+2. *A way that turns needs the level in the invariant.* For growers and stayers the agreement "some unit's need is met exactly where `n` is" fails at a way with no stayer at a level in `[n, m)`. Before the turn such a way is harmless (the level is at or above `m`); whether it is still harmless at the turn depends on the step. An invariant of the way alone cannot say this; one of the configuration can ("the configuration is the course as it was at a step before `T`, or the way has a stayer").
+3. *The reader's three missing things.* (i) No transfer for ways that turn: `unending_turned`. (ii) The turn laws ask one take of the kept kind for every way: on the carrier `List U` with `turned`, the kept kind is "the way is the stayers of the `T`-th generation", one way, so `uses` holds by construction and `kept` because stayers leave themselves (`turned_stayers`). (iii) A premise weaker than `asItWasEnds`: `unending_iff_marked_at` asks only a step `T` with no marked level before it.
+
+**The carrier is `List U` itself, not the reader's `Nat ⊕ Unit`.** With the step `turned m S kids`, `alone := allKids kids` and `marked := (· < m)`: `AloneOutside` holds by definition (`turned_outside`), and the carrier's course as it was is literally U2's `X_j` (`wasLevel`), so no bridge between two courses is needed. `turned` at a way all of whose units are growers is the scratch's `grown` (argued, by `LineOnAStock.strip_all`; not stated as a theorem).
+
+**What `unending_turned` is not.** `unending_iff_carrier` and `unending_grown` are cases of `unending_carrier`, not of `unending_turned`: in both, a unit beside the line may itself be of the line (equal pairs; a unit of `R` that is of `S`), and then there is no stayer in the sense "not of `S`".
+
+**Argued, not built:** that without the premise `stayer` the two sides of `unending_turned` can differ (a grower alone at a level in `[n, m)`: no unit's need is met, the carrier's need is, and under no take the carrier's level does not fall).
+
+## (B) Where the statement given had to change
+
+The statement built as `units_turn_iff` is the brief's, with the step `T` explicit:
+
+- *"R_T is not empty": dropped, as the reader said.* It is derived inside the proof from `short`, `needs`, `within` (`RegimeMargin.Adjusted.draw_pos`). Consequence, said in the docstring: where the turn leaves no stayer the premises do not hold and `units_turn_iff` concludes nothing.
+- *"`T` the first step below `m`": stated with an explicit `T`*, premises `before : ∀ j < T, m ≤ X_j` and `belowT : X_T < m`. "The course as it was comes below `m` at some step" is then `belowT`; it is a premise and is not derived. `units_turn_iff_first` is the form with the step found: premise `comes : ∃ N, X_N < m`, the regime asked at every first step below `m` (there is one such step, `first_unique`), `y` a function of the step, and the right side `∃ T, (∀ j < T, m ≤ X_j) ∧ n ≤ X_T ∧ X_T < m ∧ H_T + y T ≤ X_{T+1}`, which is `two_units_iff`'s form.
+- *No premise was missing and no conclusion was false.* `Keeps` is asked at the start's stayers' take, as given; `Keeps` at `H_T` and the level at `T + 1` within `hi` come from `kept_within_more`, `asItWas_within` (copied from the scratch of 17 November) and a new lemma `stayers_take` (the stayers of every generation take at least what the start's take).
+- *Not used, against the paper argument:* `gone_from` (its `closed` is global, as the reader warned). The proof uses that the stayers' way is fixed (`turned_stayers`).
+- *Spelled as a definition:* "every unit of every generation of `w` not of `S` leaves only itself and needs `n`" is `Stays S need kids n w`. `R_T` is `strip S (generation kids T w)` (`LineOnAStock.strip`), `H_T` is `taken use` of it.
+
+## (C) The cases, and the findings
+
+**`two_units_iff`: a case of (B) except where the two pairs are equal, as predicted.** At `S u := (u = (m, h))` every generation is the way, the stayers are `[(n, H₂)]` and take `H₂`, and "comes below `m`" is `RegimeMargin.ends_below` from `short₁`, `below`, `nothing`. Where `(m, h) = (n, H₂)` both units are growers, no stayer is left, and (B)'s `short` and `within` cannot hold of a take of nothing: the premise that does not match is the regime at `H_T = 0`. There both sides are false; the left side needs the separate line `one_need_ends`. The statement is `WayOfUnits.two_units_iff`'s, checked by `rfl`. The proof is longer than the package's (about 60 lines against about 30), as the reader expected.
+
+**`mixed_turns_iff`: a case of (B) only where `n < m`. This is wider than "equal pairs" and was not in the reader's or the worker's account.** Three mismatches:
+
+1. *The line `S` of `mixed_turns_iff` is not decidable and (B) asks a decidable `S`.* The growers used are `fun u => need u = m`, which is decided.
+2. *Where `n = m` no decided predicate here separates the line from `R`* (a unit of `R` may be of the line, and `mixed_turns_iff` does not ask otherwise). With `need u = m` as the growers every unit is a grower, no stayer is left, and (B) does not reach. Both sides are false there; the left by `one_need_ends`. So the worker's sentence "`mixed_turns_iff` is a case of U2, by an instantiation that can be written" holds for `n < m` and not for `n = m`.
+3. *Its premise `ne : R ≠ []` is not used* (it follows from `take`, `short`, `needs`, `within`). To keep the statement and have no unused-variable warning, the premise is carried without a name: `(_ : R ≠ [])`. This is the only difference from the scratch's signature, and `ScratchUnitsTurnCheck.mixed_same : @ScratchUnitsTurn.mixed_turns_iff_case = @ScratchMixedWay.mixed_turns_iff := rfl` builds, so the two statements are the same proposition.
+
+"Comes below `m`" for `mixed_turns_iff` is derived from `short₁`, `below`, `keepsUse` by a new generic lemma `comes_to_nothing` (from `LineOnAStock.step_lowers`); the levels of the whole way and of the part are joined by `was_beside`.
+
+**The separate line, `one_need_ends`:** where every unit of every generation needs `m` and the course as it was comes below `m`, the net ends. It is what (B) is silent about (a turn that leaves no stayer). A form of (B) that asked the regime only where a stayer is left, with "a stayer is left" in the right side, would have equal pairs as a case with no separate line; I did not build it. Argued, not built: `mixed_turns_iff` at `n = m` would still not be its case, since its `keeps` is at `H₂`, and with no stayer counted that form would ask `Keeps` at a take of nothing, which is stronger.
+
+**The kept example.** `Example.from_one`, `Example.from_two` compute the courses (`[g]` at 8: ways `[g]`, `[g, r]`, `[g, r, r]`, `[r, r]` at levels 8, 8, 7, 4, then fixed; `[g, g]` at 8: `[g, r, g, r]` at 4, `[r, r]` at 0). `Example.one_by_law` and `Example.two_by_law` get the same two verdicts from `units_turn_iff` at `T = 2` and `T = 1`. This start has no stayer, the case the refuter found excluded by the first paper wording, and a grower leaves a stayer, the case `mixed_turns_iff` does not reach.
+
+## What I could not prove, and what is not done
+
+- Nothing that was asked failed to build. No statement was weakened to make it compile.
+- Not built: the two "argued" items above; any derivation of "comes below `m`" in general (it is false in general, per the reader); (B) on a carrier with a rule or a share.
+- Not checked by anyone else: whether the docstrings say exactly what the theorems say. I re-read each against its signature; that is the writer's read, not an independent one.
+- Verification scale: only the scratch builds of these two modules ran. The gate, the checker and every test suite were deliberately not run.
+
+## Builds
+
+Ten builds, each with `scratch_build.py` after checking `uptime` (load 3.8 to 9.9) and that no build or gate process was alive; none timed out.
+
+| build | module | result |
+|---|---|---|
+| 1 | ScratchUnitsTurn (A) | failed: a `nomatch` parsed with two discriminants, a hypothesis named `none`, two unused section instances |
+| 2 | ScratchUnitsTurn (A) | exit 0, clean, 43 theorems, no axioms |
+| 3 | ScratchUnitsTurn (A, B) | exit 0, one warning (unused variable), 50 theorems, no axioms |
+| 4 | ScratchUnitsTurn (A, B, C) | failed: two elaboration faults in (C) (implicit arguments of `strip_pos`; a `congrArg Prod.snd` unified against the wrong side) |
+| 5 | ScratchUnitsTurn (A, B, C) | exit 0, clean, 64 theorems, no axioms |
+| 6 | ScratchUnitsTurn (+ example) | exit 0, clean, 72 theorems, no axioms |
+| 7 | ScratchUnitsTurn (+ widened first-marked law and its case) | exit 0, clean, 75 theorems, 87 declarations, no axioms |
+| 8 | ScratchUnitsTurnCheck | exit 0, clean, 2 theorems, no axioms |
+| 9 | ScratchUnitsTurn (one docstring made to say a claim is not built) | exit 0, clean, 75 theorems, 87 declarations, no axioms |
+| 10 | ScratchUnitsTurnCheck, against build 9's module | exit 0, clean, 2 theorems, no axioms |
+
+Last build of the module, `/Users/ren/tmp/dj/batch22/build-ScratchUnitsTurn.log`:
+
+```
+start 04:32:23
+{
+  "tree": "/Users/ren/tmp/dj/batch22",
+  "modules": 153,
+  "ran": [
+    "Becoming.ScratchUnitsTurn",
+    "BecomingScratchUnitsTurnAxiomAudit"
+  ],
+  "reused": 152,
+  "unclean": [],
+  "audits": {
+    "Becoming.ScratchUnitsTurn": {
+      "theorems": 75,
+      "declarations": 87,
+      "with_axioms": {}
+    }
+  },
+  "seconds": {
+    "Becoming.ScratchUnitsTurn": 3.641,
+    "BecomingScratchUnitsTurnAxiomAudit": 0.485
+  }
+}
+exit 0 build 9
+end 04:32:31
+```
+
+The check module, `/Users/ren/tmp/dj/batch22/build-ScratchUnitsTurnCheck.log`:
+
+```
+start 04:32:31
+{
+  "tree": "/Users/ren/tmp/dj/batch22",
+  "modules": 155,
+  "ran": [
+    "Becoming.ScratchUnitsTurnCheck",
+    "BecomingScratchUnitsTurnCheckAxiomAudit"
+  ],
+  "reused": 154,
+  "unclean": [],
+  "audits": {
+    "Becoming.ScratchUnitsTurnCheck": {
+      "theorems": 2,
+      "declarations": 2,
+      "with_axioms": {}
+    }
+  },
+  "seconds": {
+    "Becoming.ScratchUnitsTurnCheck": 0.36,
+    "BecomingScratchUnitsTurnCheckAxiomAudit": 0.364
+  }
+}
+exit 0 build 10
+end 04:32:35
+```
+
+**Axiom report.** `scratch_build.py` prints a declaration under `with_axioms` unless Lean printed "does not depend on any axioms" for it. `with_axioms` is `{}` in both logs, so each of the following 87 declarations of `Becoming.ScratchUnitsTurn` was reported as depending on no axioms (names as in the audit file `/Users/ren/tmp/dj/batch22/.build/BecomingScratchUnitsTurnAxiomAudit.lean`):
+
+`unending_from`, `unending_iff_marked_at`, `unending_iff_first_marked_wide`, `unending_iff_first_marked_case`, `first_marked_same`, `step_more`, `kept_within_more`, `asItWas_within`, `comes_to_nothing`, `right_side_same`, `course_carrier`, `unending_carrier`, `unending_iff_carrier_case`, `taken_append`, `allKids_self`, `after_self`, `after_none`, `goes_append`, `allKids_append`, `ne_nil_of_mem`, `grown`, `after_line`, `line_allKids`, `line_grown`, `unending_grown_case`, `turned`, `Stays`, `wasCourse`, `wasLevel`, `wasCourse_way`, `turned_of_le`, `turned_of_lt`, `turned_outside`, `mem_strip_iff`, `strip_none`, `taken_strip_le`, `generation_add`, `generation_shift`, `generation_self`, `generation_parent`, `member_before`, `stays_generation`, `stays_allKids`, `stays_strip`, `stayer_allKids`, `stays_turned`, `need_le`, `le_need`, `after_stayers`, `after_turned`, `goes_stayer`, `turned_was`, `unending_turned`, `stayers_take_step`, `stayers_take`, `turned_stayers`, `first_below`, `first_unique`, `units_turn_iff`, `units_turn_iff_first`, `met_before`, `one_need_ends`, `Two.was_two`, `Two.two_units_iff_case`, `Two.two_units_same`, `partCourse`, `levelAsItWas`, `line_generation`, `taken_le_allKids_line`, `line_orbit`, `taken_orbit`, `generation_beside`, `was_beside`, `mixed_turns_iff_case`, `Example.Kind`, `Example.need`, `Example.use`, `Example.kids`, `Example.giving`, `Example.from_one`, `Example.from_two`, `Example.stays`, `Example.keeps`, `Example.short`, `Example.meets`, `Example.one_by_law`, `Example.two_by_law`.
+
+And of `Becoming.ScratchUnitsTurnCheck`: `mixed_same`, `grown_same`.
+
+## Files written (all under `/Users/ren/tmp/dj/batch22/`)
+
+- `Becoming/ScratchUnitsTurn.lean`: the module.
+- `Becoming/ScratchUnitsTurnCheck.lean`: the two `rfl` checks against the scratch of 17 November.
+- `Becoming/ScratchMixedWay.lean`: a copy, unchanged, of `second-way-2026-11-17/ScratchMixedWay.lean.txt`, so the check can import it. It is in the tree the other implementer of this batch builds from; it is in no import closure but the check's.
+- `run-units.sh`, `run-units-check.sh`: wait for other builds, then build once. `build-ScratchUnitsTurn.build1.log` … `build7.log`, `build9.log`, `build-ScratchUnitsTurn.log`, `build-ScratchUnitsTurnCheck.log`.
+- This report.
+
+## Every declaration's signature as built
+
+In the sections of the module the variables `{U : Type} {need use : U → Nat} {kids : U → List U} {giving : Nat → Nat}` are implicit arguments of every declaration that mentions them, and from `turned_of_le` to `units_turn_iff_first` so are `{S : U → Prop} [DecidablePred S]` (omitted from `stays_generation`, `stays_allKids`, `first_below`, `first_unique`). `open LineOnAStock` is in force except in `Two`, where `open WayOfUnits` is. Lemmas marked "Copied" in their docstrings are from `ScratchMixedWay`.
+
+```lean
+theorem unending_from {X : Type u} {can : X → Prop} {next : X → X} {s : X} (T : Nat) :
+    «不穷» (Law.stepWhile can next) «一» s ↔
+      (∀ j, j < T → can (Law.orbit next s j)) ∧
+        «不穷» (Law.stepWhile can next) «一» (Law.orbit next s T)
+
+theorem unending_iff_marked_at {W : Type u} {marked : Nat → Prop} {alone : W → W}
+    {after : W → Nat → W} {left : W → Nat → Nat}
+    (outside : TurningInTime.AloneOutside marked alone after) {need : Nat} {s : W × Nat} {T : Nat}
+    (before : ∀ j, j < T → ¬ marked (Law.orbit (TurningInTime.asItWas alone left) s j).2) :
+    «不穷» (TurningInTime.net need after left) «一» s ↔
+      (∀ j, j ≤ T → need ≤ (Law.orbit (TurningInTime.asItWas alone left) s j).2) ∧
+        «不穷» (TurningInTime.net need after left) «一»
+          (TurningInTime.pair after left (Law.orbit (TurningInTime.asItWas alone left) s T))
+
+theorem unending_iff_first_marked_wide {W : Type u} {marked : Nat → Prop} [DecidablePred marked]
+    {alone : W → W} {after : W → Nat → W} {left : W → Nat → Nat}
+    (outside : TurningInTime.AloneOutside marked alone after) {need : Nat} {s : W × Nat}
+    (stops : ∃ n, ¬ (need ≤ (Law.orbit (TurningInTime.asItWas alone left) s n).2 ∧
+      ¬ marked (Law.orbit (TurningInTime.asItWas alone left) s n).2)) :
+    «不穷» (TurningInTime.net need after left) «一» s ↔
+      ∃ T, (∀ j, j < T → need ≤ (Law.orbit (TurningInTime.asItWas alone left) s j).2 ∧
+              ¬ marked (Law.orbit (TurningInTime.asItWas alone left) s j).2) ∧
+        need ≤ (Law.orbit (TurningInTime.asItWas alone left) s T).2 ∧
+        marked (Law.orbit (TurningInTime.asItWas alone left) s T).2 ∧
+        «不穷» (TurningInTime.net need after left) «一»
+          (TurningInTime.pair after left (Law.orbit (TurningInTime.asItWas alone left) s T))
+
+theorem unending_iff_first_marked_case {W : Type u} {marked : Nat → Prop} [DecidablePred marked]
+    {alone : W → W} {after : W → Nat → W} {left : W → Nat → Nat}
+    (outside : TurningInTime.AloneOutside marked alone after) {need : Nat} {s : W × Nat}
+    (asItWasEnds : ∃ n, (Law.orbit (TurningInTime.asItWas alone left) s n).2 < need) :
+    «不穷» (TurningInTime.net need after left) «一» s ↔
+      ∃ T, (∀ j, j < T → need ≤ (Law.orbit (TurningInTime.asItWas alone left) s j).2 ∧
+              ¬ marked (Law.orbit (TurningInTime.asItWas alone left) s j).2) ∧
+        need ≤ (Law.orbit (TurningInTime.asItWas alone left) s T).2 ∧
+        marked (Law.orbit (TurningInTime.asItWas alone left) s T).2 ∧
+        «不穷» (TurningInTime.net need after left) «一»
+          (TurningInTime.pair after left (Law.orbit (TurningInTime.asItWas alone left) s T))
+
+theorem first_marked_same :
+    @unending_iff_first_marked_case = @TurningInTime.unending_iff_first_marked
+
+theorem step_more {giving : Nat → Nat} {H d : Nat} (le : H ≤ d) (z : Nat) :
+    RegimeMargin.step giving d z = RegimeMargin.step giving H (z - (d - H))
+
+theorem kept_within_more {giving : Nat → Nat} {H hi d z : Nat}
+    (keeps : RegimeMargin.Keeps giving H hi) (le : H ≤ d) (high : z ≤ hi) :
+    RegimeMargin.step giving d z ≤ hi
+
+theorem asItWas_within {W : Type u} {alone : W → W} {giving : Nat → Nat} {use : W → Nat} {H hi : Nat}
+    (keeps : RegimeMargin.Keeps giving H hi) {w : W} {x : Nat}
+    (floor : ∀ j, H ≤ use (Law.orbit alone w j)) (high : x ≤ hi) :
+    ∀ j, (Law.orbit (TurningInTime.asItWas alone
+      (fun w x => RegimeMargin.step giving (use w) x)) (w, x) j).2 ≤ hi
+
+theorem comes_to_nothing {giving : Nat → Nat} {H y : Nat} {X D : Nat → Nat}
+    (short : RegimeMargin.Short giving H y) (nothing : RegimeMargin.FromNothing giving)
+    (more : ∀ t, H ≤ D t) (step : ∀ t, X (t + 1) = RegimeMargin.step giving (D t) (X t)) :
+    ∀ b t, X t ≤ b → X t < H + y → ∃ N, X N = 0
+
+theorem right_side_same {X X' Hs : Nat → Nat} {m n a y : Nat} (same : ∀ j, X j = X' j)
+    (take : ∀ T, a = Hs T) :
+    (∃ T, (∀ j, j < T → m ≤ X j) ∧ n ≤ X T ∧ X T < m ∧ Hs T + y ≤ X (T + 1)) ↔
+      ∃ T, (∀ j, j < T → m ≤ X' j) ∧ n ≤ X' T ∧ X' T < m ∧ a + y ≤ X' (T + 1)
+
+theorem course_carrier {W : Type} {way : W → List U} {aft : W → Nat → W} {cuse : W → Nat} {n : Nat}
+    {Inv : W × Nat → Prop}
+    (keepsInv : ∀ s, Inv s → n ≤ s.2 →
+      Inv (TurningInTime.pair aft (fun c z => RegimeMargin.step giving (cuse c) z) s))
+    (ways : ∀ s, Inv s → n ≤ s.2 → after need kids (way s.1) s.2 = way (aft s.1 s.2))
+    (takes : ∀ s, Inv s → n ≤ s.2 → taken use (way s.1) = cuse s.1)
+    {c : W} {x : Nat} (start : Inv (c, x)) :
+    ∀ k, (∀ j, j < k → n ≤ (Law.orbit (TurningInTime.pair aft
+        (fun c z => RegimeMargin.step giving (cuse c) z)) (c, x) j).2) →
+      Inv (Law.orbit (TurningInTime.pair aft
+        (fun c z => RegimeMargin.step giving (cuse c) z)) (c, x) k) ∧
+      course need kids giving use (way c, x) k =
+        (way (Law.orbit (TurningInTime.pair aft
+            (fun c z => RegimeMargin.step giving (cuse c) z)) (c, x) k).1,
+          (Law.orbit (TurningInTime.pair aft
+            (fun c z => RegimeMargin.step giving (cuse c) z)) (c, x) k).2)
+
+theorem unending_carrier {W : Type} {way : W → List U} {aft : W → Nat → W} {cuse : W → Nat}
+    {n : Nat} {Inv : W × Nat → Prop}
+    (keepsInv : ∀ s, Inv s → n ≤ s.2 →
+      Inv (TurningInTime.pair aft (fun c z => RegimeMargin.step giving (cuse c) z) s))
+    (ways : ∀ s, Inv s → n ≤ s.2 → after need kids (way s.1) s.2 = way (aft s.1 s.2))
+    (takes : ∀ s, Inv s → n ≤ s.2 → taken use (way s.1) = cuse s.1)
+    (goes : ∀ s, Inv s → (Goes need (way s.1, s.2) ↔ n ≤ s.2))
+    {c : W} {x : Nat} (start : Inv (c, x)) :
+    «不穷» (net need kids giving use) «一» (way c, x) ↔
+      «不穷» (TurningInTime.net n aft (fun c z => RegimeMargin.step giving (cuse c) z)) «一»
+        (c, x)
+
+theorem unending_iff_carrier_case {giving : Nat → Nat} {m h n H₂ x : Nat} (order : n ≤ m) :
+    «不穷» (WayOfUnits.net giving) «一» ([(m, h), (n, H₂)], x) ↔
+      «不穷» (TurningInTime.net n (WayOfUnits.firstAfter m)
+        (fun b z => RegimeMargin.step giving (WayOfUnits.firstUse h H₂ b) z)) «一» (true, x)
+
+theorem taken_append (use : U → Nat) (a b : List U) :
+    taken use (a ++ b) = taken use a + taken use b
+
+theorem allKids_self : ∀ {R : List U}, (∀ u, u ∈ R → kids u = [u]) → allKids kids R = R
+
+theorem after_self {R : List U} (self : ∀ u, u ∈ R → kids u = [u]) {z : Nat}
+    (met : ∀ u, u ∈ R → need u ≤ z) : after need kids R z = R
+
+theorem after_none {z : Nat} :
+    ∀ {w : List U}, (∀ u, u ∈ w → z < need u) → after need kids w z = []
+
+theorem goes_append {R c : List U} {n z : Nat} (ne : R ≠ []) (rn : ∀ u, u ∈ R → need u = n)
+    (up : ∀ u, u ∈ c → n ≤ need u) : Goes need (c ++ R, z) ↔ n ≤ z
+
+theorem allKids_append : ∀ a b : List U, allKids kids (a ++ b) = allKids kids a ++ allKids kids b
+
+theorem ne_nil_of_mem {v : U} {l : List U} (mv : v ∈ l) : l ≠ []
+
+def grown (m : Nat) (kids : U → List U) (c : List U) (z : Nat) : List U
+
+theorem after_line {S : U → Prop} {m : Nat} (sm : ∀ u, S u → need u = m) {c : List U}
+    (line : ∀ u, u ∈ c → S u) (z : Nat) : after need kids c z = grown m kids c z
+
+theorem line_allKids {S : U → Prop} (closed : ∀ u v, S u → v ∈ kids u → S v) {c : List U}
+    (line : ∀ u, u ∈ c → S u) : ∀ v, v ∈ allKids kids c → S v
+
+theorem line_grown {S : U → Prop} (closed : ∀ u v, S u → v ∈ kids u → S v) {m : Nat} {c : List U}
+    (line : ∀ u, u ∈ c → S u) (z : Nat) : ∀ v, v ∈ grown m kids c z → S v
+
+theorem unending_grown_case {S : U → Prop} {R c : List U} {m n H x : Nat} (ne : R ≠ [])
+    (self : ∀ u, u ∈ R → kids u = [u]) (rn : ∀ u, u ∈ R → need u = n) (take : taken use R = H)
+    (line : ∀ u, u ∈ c → S u) (sm : ∀ u, S u → need u = m)
+    (closed : ∀ u v, S u → v ∈ kids u → S v) (order : n ≤ m) :
+    «不穷» (net need kids giving use) «一» (c ++ R, x) ↔
+      «不穷» (TurningInTime.net n (grown m kids)
+        (fun c z => RegimeMargin.step giving (H + taken use c) z)) «一» (c, x)
+
+def turned (m : Nat) (S : U → Prop) [DecidablePred S] (kids : U → List U) (c : List U) (z : Nat) :
+    List U
+
+def Stays (S : U → Prop) (need : U → Nat) (kids : U → List U) (n : Nat) (w : List U) : Prop
+
+abbrev wasCourse (kids : U → List U) (use : U → Nat) (giving : Nat → Nat) (w : List U) (x : Nat)
+    (j : Nat) : List U × Nat
+
+abbrev wasLevel (kids : U → List U) (use : U → Nat) (giving : Nat → Nat) (w : List U) (x : Nat)
+    (j : Nat) : Nat
+
+theorem wasCourse_way (w : List U) (x : Nat) (j : Nat) :
+    (wasCourse kids use giving w x j).1 = generation kids j w
+
+theorem turned_of_le {m z : Nat} (ge : m ≤ z) (c : List U) :
+    turned m S kids c z = allKids kids c
+
+theorem turned_of_lt {m z : Nat} (lt : z < m) (c : List U) :
+    turned m S kids c z = strip S c
+
+theorem turned_outside (m : Nat) :
+    TurningInTime.AloneOutside (fun z => z < m) (allKids kids) (turned m S kids)
+
+theorem mem_strip_iff {v : U} : ∀ {w : List U}, v ∈ strip S w ↔ v ∈ w ∧ ¬ S v
+
+theorem strip_none : ∀ {l : List U}, (∀ v, v ∈ l → ¬ S v) → strip S l = l
+
+theorem taken_strip_le : ∀ c : List U, taken use (strip S c) ≤ taken use c
+
+theorem generation_add (w : List U) (T : Nat) :
+    ∀ i, generation kids (T + i) w = generation kids i (generation kids T w)
+
+theorem generation_shift (c : List U) :
+    ∀ i, generation kids i (allKids kids c) = generation kids (i + 1) c
+
+theorem generation_self {R : List U} (self : ∀ u, u ∈ R → kids u = [u]) :
+    ∀ k, generation kids k R = R
+
+theorem generation_parent (w : List U) (k : Nat) :
+    ∀ i u, u ∈ generation kids (k + i) w → ∃ p, p ∈ generation kids k w
+
+theorem member_before {T k : Nat} {w : List U} (le : k ≤ T)
+    (stayer : strip S (generation kids T w) ≠ []) : ∃ p, p ∈ generation kids k w
+
+theorem stays_generation {n : Nat} {w : List U} (stay : Stays S need kids n w) (k : Nat) :
+    Stays S need kids n (generation kids k w)
+
+theorem stays_allKids {n : Nat} {c : List U} (stay : Stays S need kids n c) :
+    Stays S need kids n (allKids kids c)
+
+theorem stays_strip {n : Nat} {c : List U} (stay : Stays S need kids n c) :
+    Stays S need kids n (strip S c)
+
+theorem stayer_allKids {n : Nat} {c : List U} (stay : Stays S need kids n c)
+    (stayer : strip S c ≠ []) : strip S (allKids kids c) ≠ []
+
+theorem stays_turned {m n : Nat} {c : List U} (z : Nat) (stay : Stays S need kids n c)
+    (stayer : strip S c ≠ []) :
+    Stays S need kids n (turned m S kids c z) ∧ strip S (turned m S kids c z) ≠ []
+
+theorem need_le {m n : Nat} (sm : ∀ u, S u → need u = m) (order : n ≤ m) {c : List U}
+    (stay : Stays S need kids n c) (k : Nat) {u : U} (mu : u ∈ generation kids k c) : need u ≤ m
+
+theorem le_need {m n : Nat} (sm : ∀ u, S u → need u = m) (order : n ≤ m) {c : List U}
+    (stay : Stays S need kids n c) (k : Nat) {u : U} (mu : u ∈ generation kids k c) : n ≤ need u
+
+theorem after_stayers {m n z : Nat} (sm : ∀ u, S u → need u = m) (lt : z < m) (ge : n ≤ z) :
+    ∀ {c : List U}, (∀ u, u ∈ c → ¬ S u → kids u = [u] ∧ need u = n) →
+      after need kids c z = strip S c
+
+theorem after_turned {m n z : Nat} (sm : ∀ u, S u → need u = m) (order : n ≤ m) {c : List U}
+    (stay : Stays S need kids n c) (ge : n ≤ z) : after need kids c z = turned m S kids c z
+
+theorem goes_stayer {m n : Nat} (sm : ∀ u, S u → need u = m) (order : n ≤ m) {c : List U}
+    (stay : Stays S need kids n c) (stayer : strip S c ≠ []) (z : Nat) :
+    Goes need (c, z) ↔ n ≤ z
+
+theorem turned_was {m : Nat} {w : List U} {x k : Nat} (ge : m ≤ wasLevel kids use giving w x k) :
+    TurningInTime.pair (turned m S kids) (fun c z => RegimeMargin.step giving (taken use c) z)
+        (wasCourse kids use giving w x k) = wasCourse kids use giving w x (k + 1)
+
+theorem unending_turned {m n T : Nat} {w : List U} {x : Nat}
+    (sm : ∀ u, S u → need u = m) (stay : Stays S need kids n w) (order : n ≤ m)
+    (before : ∀ j, j < T → m ≤ wasLevel kids use giving w x j)
+    (stayer : strip S (generation kids T w) ≠ []) :
+    «不穷» (net need kids giving use) «一» (w, x) ↔
+      «不穷» (TurningInTime.net n (turned m S kids)
+        (fun c z => RegimeMargin.step giving (taken use c) z)) «一» (w, x)
+
+theorem stayers_take_step : ∀ {c : List U}, (∀ u, u ∈ c → ¬ S u → kids u = [u]) →
+    taken use (strip S c) ≤ taken use (strip S (allKids kids c))
+
+theorem stayers_take {n : Nat} {w : List U} (stay : Stays S need kids n w) :
+    ∀ T, taken use (strip S w) ≤ taken use (strip S (generation kids T w))
+
+theorem turned_stayers {m : Nat} {R : List U} (out : ∀ u, u ∈ R → ¬ S u)
+    (self : ∀ u, u ∈ R → kids u = [u]) (z : Nat) : turned m S kids R z = R
+
+theorem first_below {X : Nat → Nat} {m : Nat} (comes : ∃ N, X N < m) :
+    ∃ T, (∀ j, j < T → m ≤ X j) ∧ X T < m
+
+theorem first_unique {X : Nat → Nat} {m T T' : Nat} (before : ∀ j, j < T → m ≤ X j)
+    (below : X T < m) (before' : ∀ j, j < T' → m ≤ X j) (below' : X T' < m) : T' = T
+
+theorem units_turn_iff {m n hi y T : Nat} {w : List U} {x : Nat}
+    (sm : ∀ u, S u → need u = m) (stay : Stays S need kids n w) (needs : 0 < n) (order : n ≤ m)
+    (nothing : RegimeMargin.FromNothing giving) (high : x ≤ hi)
+    (keeps : RegimeMargin.Keeps giving (taken use (strip S w)) hi)
+    (before : ∀ j, j < T → m ≤ wasLevel kids use giving w x j)
+    (belowT : wasLevel kids use giving w x T < m)
+    (short : RegimeMargin.Short giving (taken use (strip S (generation kids T w))) y)
+    (meets : RegimeMargin.Meets giving (taken use (strip S (generation kids T w))) y hi)
+    (within : n ≤ taken use (strip S (generation kids T w)) + y) :
+    «不穷» (net need kids giving use) «一» (w, x) ↔
+      n ≤ wasLevel kids use giving w x T ∧
+        taken use (strip S (generation kids T w)) + y ≤ wasLevel kids use giving w x (T + 1)
+
+theorem units_turn_iff_first {m n hi : Nat} {y : Nat → Nat} {w : List U} {x : Nat}
+    (sm : ∀ u, S u → need u = m) (stay : Stays S need kids n w) (needs : 0 < n) (order : n ≤ m)
+    (nothing : RegimeMargin.FromNothing giving) (high : x ≤ hi)
+    (keeps : RegimeMargin.Keeps giving (taken use (strip S w)) hi)
+    (comes : ∃ N, wasLevel kids use giving w x N < m)
+    (regime : ∀ T, (∀ j, j < T → m ≤ wasLevel kids use giving w x j) →
+      wasLevel kids use giving w x T < m →
+        RegimeMargin.Short giving (taken use (strip S (generation kids T w))) (y T) ∧
+          RegimeMargin.Meets giving (taken use (strip S (generation kids T w))) (y T) hi ∧
+          n ≤ taken use (strip S (generation kids T w)) + y T) :
+    «不穷» (net need kids giving use) «一» (w, x) ↔
+      ∃ T, (∀ j, j < T → m ≤ wasLevel kids use giving w x j) ∧
+        n ≤ wasLevel kids use giving w x T ∧ wasLevel kids use giving w x T < m ∧
+        taken use (strip S (generation kids T w)) + y T ≤ wasLevel kids use giving w x (T + 1)
+
+theorem met_before {m : Nat} {w : List U} {x : Nat}
+    (le : ∀ k u, u ∈ generation kids k w → need u ≤ m) :
+    ∀ T, (∀ j, j < T → m ≤ wasLevel kids use giving w x j) → ∀ j, j < T →
+      ∀ u, u ∈ (course need kids giving use (w, x) j).1 →
+        need u ≤ (course need kids giving use (w, x) j).2
+
+theorem one_need_ends {m : Nat} {w : List U} {x : Nat}
+    (one : ∀ k u, u ∈ generation kids k w → need u = m)
+    (comes : ∃ N, wasLevel kids use giving w x N < m) :
+    ¬ «不穷» (net need kids giving use) «一» (w, x)
+
+-- in namespace Two
+theorem was_two {giving : Nat → Nat} (m h n H₂ x : Nat) : ∀ j,
+    wasCourse (fun u : Nat × Nat => [u]) use giving [(m, h), (n, H₂)] x j =
+      ([(m, h), (n, H₂)], Law.orbit (RegimeMargin.step giving (h + H₂)) x j)
+
+-- in namespace Two
+theorem two_units_iff_case {giving : Nat → Nat} {m h n H₂ y₁ y₂ hi x : Nat}
+    (order : n ≤ m) (nothing : RegimeMargin.FromNothing giving)
+    (short : RegimeMargin.Short giving H₂ y₂) (meets : RegimeMargin.Meets giving H₂ y₂ hi)
+    (keeps : RegimeMargin.Keeps giving H₂ hi) (needs : 0 < n) (within : n ≤ H₂ + y₂)
+    (short₁ : RegimeMargin.Short giving (h + H₂) y₁) (below : x < h + H₂ + y₁) (high : x ≤ hi) :
+    «不穷» (net giving) «一» ([(m, h), (n, H₂)], x) ↔
+      ∃ T, (∀ j, j < T → m ≤ Law.orbit (RegimeMargin.step giving (h + H₂)) x j) ∧
+        n ≤ Law.orbit (RegimeMargin.step giving (h + H₂)) x T ∧
+        Law.orbit (RegimeMargin.step giving (h + H₂)) x T < m ∧
+        H₂ + y₂ ≤ Law.orbit (RegimeMargin.step giving (h + H₂)) x (T + 1)
+
+-- in namespace Two
+theorem two_units_same : @two_units_iff_case = @WayOfUnits.two_units_iff
+
+abbrev partCourse (kids : U → List U) (use : U → Nat) (giving : Nat → Nat) (H : Nat) (c : List U)
+    (x : Nat) (j : Nat) : List U × Nat
+
+abbrev levelAsItWas (kids : U → List U) (use : U → Nat) (giving : Nat → Nat) (H : Nat) (c : List U)
+    (x : Nat) (j : Nat) : Nat
+
+theorem line_generation {S : U → Prop} (closed : ∀ u v, S u → v ∈ kids u → S v) {c : List U}
+    (line : ∀ u, u ∈ c → S u) : ∀ k u, u ∈ generation kids k c → S u
+
+theorem taken_le_allKids_line {S : U → Prop} (keepsUse : ∀ u, S u → use u ≤ taken use (kids u)) :
+    ∀ w : List U, (∀ u, u ∈ w → S u) → taken use w ≤ taken use (allKids kids w)
+
+theorem line_orbit {S : U → Prop} (closed : ∀ u v, S u → v ∈ kids u → S v) {c : List U}
+    (line : ∀ u, u ∈ c → S u) : ∀ j u, u ∈ Law.orbit (allKids kids) c j → S u
+
+theorem taken_orbit {S : U → Prop} (closed : ∀ u v, S u → v ∈ kids u → S v)
+    (keepsUse : ∀ u, S u → use u ≤ taken use (kids u)) {c : List U} (line : ∀ u, u ∈ c → S u) :
+    ∀ j, taken use c ≤ taken use (Law.orbit (allKids kids) c j)
+
+theorem generation_beside {R : List U} (self : ∀ u, u ∈ R → kids u = [u]) (c : List U) :
+    ∀ k, generation kids k (c ++ R) = generation kids k c ++ R
+
+theorem was_beside {R : List U} {H : Nat} (self : ∀ u, u ∈ R → kids u = [u])
+    (take : taken use R = H) (c : List U) (x : Nat) :
+    ∀ j, wasCourse kids use giving (c ++ R) x j =
+      ((partCourse kids use giving H c x j).1 ++ R, (partCourse kids use giving H c x j).2)
+
+theorem mixed_turns_iff_case {S : U → Prop} {R c : List U} {m n H₂ y₁ y₂ hi x : Nat}
+    (_ : R ≠ []) (self : ∀ u, u ∈ R → kids u = [u]) (rn : ∀ u, u ∈ R → need u = n)
+    (take : taken use R = H₂) (line : ∀ u, u ∈ c → S u) (sm : ∀ u, S u → need u = m)
+    (closed : ∀ u v, S u → v ∈ kids u → S v) (order : n ≤ m)
+    (keepsUse : ∀ u, S u → use u ≤ taken use (kids u))
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H₂ y₂)
+    (meets : RegimeMargin.Meets giving H₂ y₂ hi) (keeps : RegimeMargin.Keeps giving H₂ hi)
+    (needs : 0 < n) (within : n ≤ H₂ + y₂)
+    (short₁ : RegimeMargin.Short giving (H₂ + taken use c) y₁)
+    (below : x < H₂ + taken use c + y₁) (high : x ≤ hi) :
+    «不穷» (net need kids giving use) «一» (c ++ R, x) ↔
+      ∃ T, (∀ j, j < T → m ≤ levelAsItWas kids use giving H₂ c x j) ∧
+        n ≤ levelAsItWas kids use giving H₂ c x T ∧ levelAsItWas kids use giving H₂ c x T < m ∧
+        H₂ + y₂ ≤ levelAsItWas kids use giving H₂ c x (T + 1)
+
+-- in namespace Example
+inductive Kind
+
+-- in namespace Example
+def need : Kind → Nat
+
+-- in namespace Example
+def use : Kind → Nat
+
+-- in namespace Example
+def kids : Kind → List Kind
+
+-- in namespace Example
+def giving (z : Nat) : Nat
+
+-- in namespace Example
+theorem from_one :
+    course need kids giving use ([g], 8) 1 = ([g, r], 8) ∧
+    course need kids giving use ([g], 8) 2 = ([g, r, r], 7) ∧
+    course need kids giving use ([g], 8) 3 = ([r, r], 4) ∧
+    «不穷» (net need kids giving use) «一» ([g], 8)
+
+-- in namespace Example
+theorem from_two :
+    course need kids giving use ([g, g], 8) 1 = ([g, r, g, r], 4) ∧
+    course need kids giving use ([g, g], 8) 2 = ([r, r], 0) ∧
+    ¬ «不穷» (net need kids giving use) «一» ([g, g], 8)
+
+-- in namespace Example
+theorem stays (w : List Kind) : Stays (fun k => need k = 8) need kids 1 w
+
+-- in namespace Example
+theorem keeps : RegimeMargin.Keeps giving 0 8
+
+-- in namespace Example
+theorem short : RegimeMargin.Short giving 2 2
+
+-- in namespace Example
+theorem meets : RegimeMargin.Meets giving 2 2 8
+
+-- in namespace Example
+theorem one_by_law : «不穷» (net need kids giving use) «一» ([g], 8)
+
+-- in namespace Example
+theorem two_by_law : ¬ «不穷» (net need kids giving use) «一» ([g, g], 8)
+```

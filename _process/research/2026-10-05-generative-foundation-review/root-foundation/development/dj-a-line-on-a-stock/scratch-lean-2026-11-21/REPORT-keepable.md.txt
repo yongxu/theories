@@ -1,0 +1,89 @@
+# The step law for Keepable in scratch: the implementer's return
+
+*AI-written (Claude Fable, implementer "keepable" of the workflow of 21 November 2026). The implementer's Write tool refused a report file, so this is its structured return as the run's journal has it, set down by the session that ran it with nothing changed.*
+
+**Module:** /Users/ren/tmp/dj/batch22/Becoming/ScratchKeepableStep.lean
+
+**Built (by its writer):** True, builds: 2
+
+## Summary
+
+Both statements built in scratch as worded, on the first attempt, with empty axiom reports (build 2: exit 0, "unclean": [], 8 theorems, 11 declarations, "with_axioms": {}; the script prints this one summary per module, not a line per declaration). Nothing under /Users/ren/theories was touched; no make, lake, gate or suite was run; each build waited for the coordinator's gate to end.
+
+(1) keepable_step_iff holds for every process and guard with no premise: left to right by Run.onward r 1 (Recurrence), right to left by Run.cons (Horizon). Named after its twin kernel_step_iff.
+
+(2) not_keepable_step and not_keepable_run hold under the worded premise (every step keeps the guard's complement); the run form is Invariant.run at the step form. No decision of the guard is used (October's proof split on Nat.decLe). The premise is needed: ChoicePoint.keepable_gained shows a step gaining keepability on ChoicePoint.process. It is not the least: not_keepable_invariant_iff gives the exact premise (no step from outside the guard leads to a configuration the guard is keepable from), and Successor.not_keepable_kept_complement_not shows the worded premise failing while the conclusion holds, on a process with runs from everywhere.
+
+Not written: the positive form (keepable after a step gives keepable before) needs g s from not-not g s, so a decision of the guard; I expect it unprovable without one (argued, not proved).
+
+The REPORT file was not written: the Write tool refuses report files from subagents, and I did not bypass it. Its content is here.
+
+For landing: JointKeeping does not import Horizon, where Run.cons lives. Seen on the way, untouched: Enough.prepend duplicates Run.cons.
+
+The October instantiations are on paper only; the History-to-Run bridge was read, not compiled. Docstrings were read by no one but their writer.
+
+## Changed from the statement as given
+
+STATEMENT 1: no change to the statement; no premise needed (Run.cons takes any admissible step into a run's start). Only the name: keepable_step_iff, not Keepable.step_iff, after the package's twin kernel_step_iff and JointKeeping's keepable_and_iff_of_kernel_left.
+
+STATEMENT 2: built as worded (not_keepable_step, not_keepable_run; a Keepable.-prefixed name would not serve dot notation on a negation). Findings on its premise:
+(a) Needed. ChoicePoint.keepable_gained: on ChoicePoint.process with a guard false at split and true at left, split is not keepable, one step leads to left, left is keepable. The guard is 'not held, then held'; I could not make one that is 'lost and regained' along a single run there, since those runs change configuration at most once. If the reader meant another guard, it was not found.
+(b) Not the least. The exact premise is ∀ s a t, P.step s a t → ¬ g s → ¬ Keepable P g t (not_keepable_invariant_iff, added). The worded premise implies it (keepable from t gives g t); the converse fails (Successor.not_keepable_kept_complement_not, added). The worded premise is the checkable one; the exact one speaks of keepability and is stated only to say how far the worded one is from necessary.
+(c) No decidability of the guard is used; October's renewability_not_generated uses Nat.decLe.
+
+BETWEEN BUILDS: build 1's 'not the least' witness was on Viability.Leaves.process, which has no run at all, so nothing was keepable for the empty reason. It built clean but says little; I replaced it with the successor law, where a run starts from every number. Nothing was weakened to compile and nothing failed to build.
+
+NOT PROVED / NOT TRIED: the positive form Keepable P g t → P.step s a t → Keepable P g s under the same premise needs g s from ¬¬ g s (a Decidable (g s) passed explicitly would give it in two lines); not written. No kernel-to-keepable law added.
+
+OCTOBER'S THEOREMS AS CASES (paper only; files not imported, bridge not compiled). History law (RenewalLink.lean line 72) has fields states, ticks, steps over channelProcess law, the same three as Run (channelProcess law) under other names; both use Generative.Process from GenerativeCore. Bridge: Renewable law c ↔ Keepable (channelProcess law) Live c by ⟨H, start, alive⟩ ↦ ⟨⟨H.states, H.ticks, H.steps⟩, start, alive⟩ and back. Then renewable_iff_step is keepable_step_iff at P := channelProcess law, g := Live, s := c (History.next and History.cons are Run.onward · 1 and Run.cons). renewability_not_generated is not_keepable_run at the same P and g, closed := fun _ _ _ step dead => dead_stays_dead dead step, r := ⟨H.states, H.ticks, H.steps⟩. What stays particular to the channel law is dead_stays_dead, which is the premise closed. Against this reading would count: the bridge failing to compile because History and Run differ in more than field names.
+
+FOR LANDING: Run.cons is in Becoming.Horizon, which JointKeeping does not import (scratch module imports both; 24-module closure, no cycle). Either JointKeeping imports Horizon or Run.cons moves beside Run.onward in Recurrence. Duplicate seen, untouched: Enough.prepend (Enough.lean line 75, with prependState and prependAct) is the same construction as Run.cons (Horizon.lean line 93); the package was not swept for a third.
+
+CHECKS: two scratch builds of this one module (compile plus axiom audit; 23 imports restored from cache). The full checker was deliberately not run: a working build, not a receipt.
+
+## Declarations
+
+- `Becoming.Viability.keepable_step_iff`
+  - signature: `theorem keepable_step_iff {P : Process S A} {g : S → Prop} {s : S} : Keepable P g s ↔ g s ∧ ∃ a t, P.step s a t ∧ Keepable P g t`
+  - axioms: none (log: "with_axioms": {})
+  - note: Statement 1 exactly as given; every process and guard, no further premise. Forward: Run.onward r 1; back: Run.cons. Twin of kernel_step_iff.
+- `Becoming.Viability.not_keepable_invariant_iff`
+  - signature: `theorem not_keepable_invariant_iff {P : Process S A} {g : S → Prop} : Invariant P (fun s => ¬ Keepable P g s) ↔ ∀ s a t, P.step s a t → ¬ g s → ¬ Keepable P g t`
+  - axioms: none (log: "with_axioms": {})
+  - note: Not asked for. The exact premise for 'every step keeps not being keepable'; no premise of its own, no decision of g. not_keepable_step is proved from its right-to-left direction.
+- `Becoming.Viability.not_keepable_step`
+  - signature: `theorem not_keepable_step {P : Process S A} {g : S → Prop} (closed : ∀ s a t, P.step s a t → ¬ g s → ¬ g t) {s : S} {a : A} {t : S} (lost : ¬ Keepable P g s) (step : P.step s a t) : ¬ Keepable P g t`
+  - axioms: none (log: "with_axioms": {})
+  - note: Statement 2, step form, as worded. Premises: closed, lost, step. No decision of g.
+- `Becoming.Viability.not_keepable_run`
+  - signature: `theorem not_keepable_run {P : Process S A} {g : S → Prop} (closed : ∀ s a t, P.step s a t → ¬ g s → ¬ g t) (r : Run P) (lost : ¬ Keepable P g (r.state 0)) : ∀ n, ¬ Keepable P g (r.state n)`
+  - axioms: none (log: "with_axioms": {})
+  - note: Statement 2, run form, as worded. It is Invariant.run (Becoming.Frame) at not_keepable_step.
+- `Becoming.Viability.ChoicePoint.afterSplit`
+  - signature: `def afterSplit : Config → Prop | .split => False | .left => True | .right => True | .joint => True`
+  - axioms: none (log: "with_axioms": {})
+  - note: The counterexample's guard: not held at split, held at the other three. Not 'lost and regained' along one run: runs of ChoicePoint.process change configuration at most once.
+- `Becoming.Viability.ChoicePoint.keepable_gained`
+  - signature: `theorem keepable_gained : ¬ Keepable process afterSplit .split ∧ process.step .split true .left ∧ Keepable process afterSplit .left ∧ ¬ ∀ s a t, process.step s a t → ¬ afterSplit s → ¬ afterSplit t`
+  - axioms: none (log: "with_axioms": {})
+  - note: The premise of statement 2 is needed: on a process of the package a step gains keepability, and the premise fails there. No premise.
+- `Becoming.Viability.ChoicePoint.keepable_gained_along_run`
+  - signature: `theorem keepable_gained_along_run : ¬ Keepable process afterSplit (leftRun.state 0) ∧ Keepable process afterSplit (leftRun.state 1)`
+  - axioms: none (log: "with_axioms": {})
+  - note: The same counterexample against the run form, along the package's leftRun.
+- `Becoming.Viability.Successor.process`
+  - signature: `def process : Process Nat Unit := Law.process Nat.succ`
+  - axioms: none (log: "with_axioms": {})
+  - note: Witness process: each number steps to its successor.
+- `Becoming.Viability.Successor.atOne`
+  - signature: `def atOne (n : Nat) : Prop := n = 1`
+  - axioms: none (log: "with_axioms": {})
+  - note: Witness guard: holds at 1 only.
+- `Becoming.Viability.Successor.nowhere_keepable`
+  - signature: `theorem nowhere_keepable (n : Nat) : ¬ Keepable process atOne n`
+  - axioms: none (log: "with_axioms": {})
+  - note: Under the successor law the guard 'is 1' is keepable from no number. No premise.
+- `Becoming.Viability.Successor.not_keepable_kept_complement_not`
+  - signature: `theorem not_keepable_kept_complement_not : (∀ n, ∃ r : Run process, r.state 0 = n) ∧ (∀ s a t, process.step s a t → ¬ Keepable process atOne s → ¬ Keepable process atOne t) ∧ ¬ ∀ s a t, process.step s a t → ¬ atOne s → ¬ atOne t`
+  - axioms: none (log: "with_axioms": {})
+  - note: Not asked for. The worded premise of statement 2 is sufficient, not necessary: runs exist from every number, every step keeps not being keepable, yet the step 0 to 1 enters the guard from outside.

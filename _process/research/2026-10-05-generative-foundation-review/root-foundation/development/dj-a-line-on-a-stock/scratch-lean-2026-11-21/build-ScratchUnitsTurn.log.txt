@@ -1,0 +1,24 @@
+start 04:32:23
+{
+  "tree": "/Users/ren/tmp/dj/batch22",
+  "modules": 153,
+  "ran": [
+    "Becoming.ScratchUnitsTurn",
+    "BecomingScratchUnitsTurnAxiomAudit"
+  ],
+  "reused": 152,
+  "unclean": [],
+  "audits": {
+    "Becoming.ScratchUnitsTurn": {
+      "theorems": 75,
+      "declarations": 87,
+      "with_axioms": {}
+    }
+  },
+  "seconds": {
+    "Becoming.ScratchUnitsTurn": 3.641,
+    "BecomingScratchUnitsTurnAxiomAudit": 0.485
+  }
+}
+exit 0 build 9
+end 04:32:31

@@ -1,0 +1,24 @@
+start 04:01:25
+{
+  "tree": "/Users/ren/tmp/dj/batch22",
+  "modules": 24,
+  "ran": [
+    "Becoming.ScratchKeepableStep",
+    "BecomingScratchKeepableStepAxiomAudit"
+  ],
+  "reused": 23,
+  "unclean": [],
+  "audits": {
+    "Becoming.ScratchKeepableStep": {
+      "theorems": 8,
+      "declarations": 11,
+      "with_axioms": {}
+    }
+  },
+  "seconds": {
+    "Becoming.ScratchKeepableStep": 3.127,
+    "BecomingScratchKeepableStepAxiomAudit": 0.304
+  }
+}
+exit 0 build 2
+end 04:01:31
