@@ -1,0 +1,211 @@
+*An AI reader's report (run as Claude Opus), word for word from the run's journal (wf_4a1d0db3-df7); readers could not write files, so the returned report is the report.*
+
+READER: keeping a guard through what is registered. This is a read only: nothing was edited, built or run. Line numbers are from the files as read on 21 November 2026.
+
+WHAT WAS READ
+- Read whole, statements and docstrings: Keeping.lean (510 lines), GuardHorizon.lean (466 lines), OpenedCorrection.lean (lines 20 to 203), JointKeeping.lean (413 lines).
+- Read in part: Viability.lean, lines 1 to 110 (the module account, Kernel 55, Certificate 59, kernel_iff_held 65, Certificate.kernel 72, kernel_certificate 78, kernel_iff_certificate 85, kernel_largest 91, kernel_step_iff 98).
+- Proofs were opened only where named below.
+- The PLACES.md entries for GuardHorizon, JointKeeping, Keeping, OpenedCorrection and Viability. They are unchecked returns. I found no contradiction with them in what I read, but they were not written for these six questions.
+- Records, the statement, laws, hypotheses and does_not_show fields only: finite-continuation-plans, joint-plan-composition, conditions-kept-together, what-holding-for-a-reading-is-worth.
+- Chapter tellings:
+  - 03-KNOWING.md: line 366 (§8, a-revision-that-opens-a-correction), line 426 (when-to-inquire), line 429 (finite-continuation-plans).
+  - 05-COLLECTIVES.md: line 89 (conditions-kept-together), line 387 (joint-plan-composition).
+  - 08-METHOD.md: lines 494 to 510 (the table "What a response takes in").
+- To answer question 6, a grep of the import and name lines of the seven lock modules, plus three small statements: RuleCapture.lean 280 to 330 (uniform_locks 294, favouring_locks 320), RuleCapture.Locked 160, Pace.turn 101 and Pace.paced 112.
+- Outside the group, one statement: HeldForReading.finer_least_le 1057.
+
+=== Keeping.lean (namespace Becoming.Viability) ===
+
+Q1. What is read, of what, and what chooses.
+- The reading is a map of STEPS, `sense : S → A → S → O` (Seen 73, KeptFor 90). It reads a step (where it began, the move, where it ended), not a state.
+- A class of starts `B : S → Prop` is handed in.
+- `Seen P sense B a o t` (73, statement read) is `∃ s, B s ∧ P.step s a t ∧ sense s a t = o`: what can stand after move a from the class, where the step kept the value o.
+- `Usable P allowed B a` (84, statement read): a is allowed and enabled at every configuration of B.
+- What chooses is a `Plan A O n` (100, statement read). It gives a first move and, for each value kept, a plan of n−1 moves. So it is a tree that branches on the whole sequence of values kept: it has recall.
+- Handed in are the process, sense, guard, allowed and the class B. The docstring says no premise is added.
+
+Q2. The exact laws.
+- KeptFor (90), definition, statement read.
+  - KeptFor 0 B is `∀ s, B s → guard s`.
+  - KeptFor (n+1) B is that and `∃ a, Usable P allowed B a ∧ ∀ o, KeptFor … n (Seen P sense B a o)`.
+  - Kind: for n steps; recall (the class narrows along the history of values); every successor counted. Seen gathers every t reached by a from any s in B with that value, and ∀ o includes values no step gives (then the class is empty).
+- Plan.Keeps (123), definition: the guard throughout B, the first move usable from B, and each continuation keeping the guard from the class Seen.
+- Plan.Keeps.keptFor (149), statement read. A plan that keeps the guard from B gives KeptFor n B. No premise. Sufficient, plan ⇒ kept.
+- KeptFor.plan_of_choice (164) and keptFor_iff_plan_of_choice (176), statements read. Given `∀ n, ChoiceOver O (Plan A O n)`: KeptFor n B ↔ ∃ p : Plan A O n, p.Keeps … B. Exact, for n steps, with recall.
+- keptFor_iff_plan (182), statement read. For `listed : S → A → S → Fin k`: KeptFor n B ↔ ∃ plan keeping B. Exact, no premise (choiceOver_fin 160).
+- plans_iff_choice (247), statement read. Every kept class having a keeping plan, in every process of universe u, holds ↔ `∀ α : Type u, ChoiceOver O α`. The witness is the built process Answering (194 to 242).
+- keptFor_of_closed (311), statement read.
+  - Premises: a family of classes; `within: ∀ B, family B → ∀ s, B s → guard s`; `closed: ∀ B, family B → ∃ a, Usable P allowed B a ∧ ∀ o, family (Seen P sense B a o)`.
+  - Conclusion: ∀ n, family B → KeptFor n B.
+  - Kind: every horizon, meaning for each finite n, not one infinite plan. Sufficient only. The move depends on the class, so on the history. Every successor counted.
+- Certificate.keptFor (322), statement read.
+  - Premises: `cert : Certificate P guard K` and one move a with `Usable P allowed K a`.
+  - Conclusion: every B ⊆ K is KeptFor n for every n, "whatever the steps keep".
+  - Kind: sufficient; one fixed move, so no reading is used; every successor counted.
+- Kernel.keptFor (333), statement read. The same with K the kernel, given one move usable throughout the kernel.
+- The record finite-continuation-plans, does_not_show: "Keeping a class for every finite horizon does not give one infinite plan."
+- Not found in what was read:
+  - a converse of keptFor_of_closed (kept for every n ⇒ some closed family);
+  - any law for a rule made from the present reading alone, without recall, over several steps.
+
+Q3. Within one reading.
+- The definition itself asks for one move usable from the whole class B (KeptFor 90).
+- The built case Matching (339 to 440, statements read): with `keepsNothing` the two starts are not kept for 2 steps (keepsNothing_not_kept 425). The proof (opened) shows that whatever the second move, the need with the other bit is lost.
+- That each start alone is kept under keepsNothing is NOT stated (not found in what was read). So "each kept, none jointly, within one reading" is not stated here, neither as a law nor as a built case.
+
+Q4. Two readings of one process.
+- KeptFor.finer (288), statement read, in full: for `{F : Type z} {fine : S → A → S → F} (forget : F → O) (consistent : ∀ s a t, forget (fine s a t) = sense s a t)`, then `∀ {n} {B}, KeptFor P sense guard allowed n B → KeptFor P fine guard allowed n B`.
+  - Direction: what the coarser keeps, the finer keeps, the moves, guard, allowed and class unchanged.
+- What a finer reading keeps MORE is shown only in the built case Matching.keeping_matters (435): `KeptFor process keepsBit safe (fun _ _ => True) 2 starts ∧ ¬ KeptFor process keepsNothing safe (fun _ _ => True) 2 starts`. The case does not cite finer, and that keepsNothing is read off keepsBit (forget to Unit) is not stated.
+- Not found in what was read: an exact law of what a finer reading keeps that a coarser cannot.
+
+Q5. Time.
+- In Matching the bit is kept at the first step (keepsBit reads the bit of the stage reached, 385) and needed by the second move. No statement relates the step at which a reading tells starts apart to what can still be kept after it.
+- Not found in what was read.
+
+Q6. The lock. Not stated or cited in Keeping (not found in what was read).
+
+=== GuardHorizon.lean (namespace Becoming.GuardHorizon; S A : Type) ===
+
+Q1. What is read, and what chooses.
+- Viable (71) and Admissible (76), statements read, are from a KNOWN configuration s. There is no reading, and the move is existential at each configuration.
+- `UniformPolicy obs good` (326), statement read: `∃ policy : O → A, ∀ s, good s (policy (obs s))`.
+  - A reading of STATES `obs : S → O`.
+  - One rule from the present reading, no recall.
+  - Asked at every configuration of the whole type S, not of a class.
+- FiberFeasible (330): `∀ o, ∃ a, ∀ s, obs s = o → good s a`.
+- Between dViable_iff (230) and UniformPolicy (326) stand:
+  - Kept (247), a trace kept within the guard; Kept.trace (254); Kept.start (260);
+  - moves (265) and last (270) of a policy `Nat → S → A`;
+  - pathSafe_iff (276), exact: PathSafe ↔ Kept in `Viability.disturbed next (fun _ => True)`;
+  - kept_return_le (287), recomputed_kept (297), recomputed_accepts (313): Bellman values;
+  - all on deterministic laws with policies from the full configuration and the steps left (`policy : Nat → S → A`, PathSafe 160): no reading, no recall beyond the state.
+
+Q2. The exact laws.
+- Viable (71): `Viable 0 s = guard s`; `Viable (n+1) s = guard s ∧ ∃ a, Enabled P s a ∧ ∀ t, P.step s a t → Viable n t`.
+  - Kind: n steps; from a known state; every successor of the chosen move counted.
+- viable_succ_iff (82): exact, by definition.
+- closed_viable (112): `Closed P guard K` gives Viable at every n for every s in K. Every horizon, sufficient, no reading.
+- certificate_viable (128): Certificate plus an enabled move at each configuration of K.
+- kernel_viable (134): kernel plus an enabled move at every configuration reached.
+- dViable_iff (230), statement read. For `next : S → A → S`: `∀ n s, DViable guard next n s ↔ Viable (Viability.disturbed next fun _ => True) guard n s`.
+  - Kind: exact, n steps, deterministic law with free moves.
+- uniform_policy_iff_fiber_feasible (341): `(choice : Viability.ChoiceOver O A)` gives UniformPolicy obs good ↔ FiberFeasible obs good.
+  - Kind: exact for ONE requirement at one step. One rule from the present reading. Every configuration of S.
+- uniform_policy_iff_common (351): adds `given : ∀ o, ∃ s, obs s = o`. UniformPolicy ↔ `∃ J, «共应» (fun s s' => obs s = obs s') (fun a s => good s a) J`. In plain English: a response common over the sameness "read alike" exists within the requirement.
+- uniform_viable (406), statement read.
+  - Premises: `UniformPolicy read (Admissible P guard n)` (one rule from `read : S → O` whose move is admissible for n more steps at EVERY configuration of S) and `within : guard s`.
+  - Conclusion: `Viable P guard (n+1) s`.
+  - Kind: sufficient; one step further. Only the first move comes from the reading; the later moves are existential state by state inside Viable n. Every successor counted.
+- uniform_iff (414): given ChoiceOver O A, the premise ↔ `∀ o, ∃ a, ∀ s, read s = o → Admissible P guard n s a`.
+- No law in GuardHorizon keeps a guard for ever, or for n steps, by a rule from a reading (not found in what was read).
+
+Q3. Within one reading.
+- General law, one step: the negation of FiberFeasible, through uniform_policy_iff_fiber_feasible (341, given choice).
+- Built case: statewise_not_uniform (382) states `(∀ s : Bool, ∃ a : Bool, a = s) ∧ ¬ UniformPolicy (fun _ : Bool => ()) (fun s a : Bool => a = s)`. Each state has a good move, and no rule from the constant reading meets both. One step, requirement `a = s`, not a guard over a horizon.
+- Built case: ungiven_reading_not_uniform (369), on Empty.
+
+Q4. Two readings.
+- uniform_finer (395): `(forget : R → O) (compatible : ∀ s, forget (fine s) = coarse s)`, then UniformPolicy coarse good → UniformPolicy fine good. Coarse ⇒ fine, one step.
+- What the finer gives more is only the built case discriminating_reading_uniform (391) `UniformPolicy (fun s : Bool => s) (fun s a : Bool => a = s)`, set beside statewise_not_uniform.
+- Not found in what was read: an exact law of what more.
+
+Q5. Not found in what was read.
+
+Q6. GuardHorizon does not cite the lock (not found).
+- dViable_iff (230) with `Viability.disturbed` is the Lean's way to make a law with moves `next : S → A → S` into a process.
+
+=== OpenedCorrection.lean (only what uses UniformPolicy or a reading) ===
+
+Q1.
+- `reading : X → S → O` is the reading in force at configuration x, of situations S.
+- `Correctable reading acceptable executable x` (74), statement read: `GuardHorizon.UniformPolicy (reading x) (fun s a => acceptable s a ∧ executable x a)`.
+- One rule from the present reading. One step. No horizon, no guard.
+
+Q2.
+- correctable_iff (80): given `Viability.ChoiceOver O A`, Correctable ↔ `∀ o, ∃ a, ∀ s, reading x s = o → acceptable s a ∧ executable x a`. Exact, one step.
+- OpensAlong (89): `(∃ w, Trace P x w x') ∧ ¬ Correctable … x ∧ Correctable … x'`.
+
+Q3. Built: Linked.unlinked_uncorrectable (138). With the link off, both situations are read alike and need different acts, so no configuration is correctable. That each situation alone has an act is not stated (not found).
+
+Q4.
+- finer_keeps (95): with `forget : O → O` (the readings in one type), `refines : ∀ s, forget (reading x' s) = reading x s`, and `kept : ∀ a, executable x a → executable x' a`, Correctable at x gives Correctable at x'. Coarse ⇒ fine.
+- coarser_opens_nothing (107): with `forget (reading x s) = reading x' s` and no gain in executability, ¬ OpensAlong.
+- What more: only the built Linked.opens (168), where rebuilding the link opens the correction. Not an exact law.
+
+Q5.
+- Nearest: Linked.rebuilt_starved (175, built). From one unit, the rebuild that revises the reading reaches (0,true,v), which is uncorrectable.
+- Linked.opens_after_replenishing (182, built): rebuilding then replenishing opens it.
+- This is a built case of a reading revised where executability is gone, for one-step correctability. No law relates the step of revision to what can be kept after it (not found in what was read).
+- The module account says (line 56 onward): "Uniform-policy existence is not what a formation chooses".
+
+Q6. Not found in what was read.
+
+=== JointKeeping.lean ===
+
+Q1. Keepable (91): `∃ r : Run P, r.state 0 = s ∧ ∀ n, g (r.state n)`. There is no reading: some single run, for ever. The KeptFor laws carry Keeping's sense.
+
+Q2.
+- KeptFor.guard_mono (136), statement read. For `wider : ∀ x, g x → g' x`, KeptFor P sense g allowed n B → KeptFor P sense g' allowed n B. n steps; recall and every successor as in KeptFor.
+- KeptFor.each (146): kept for `fun x => g₁ x ∧ g₂ x` gives kept for each.
+- Keepable.each (115): sufficient direction only; the converse fails (ChoicePoint.each_not_joint 218, built).
+- keepable_and_iff_of_kernel_left/right (121, 127): exact where one guard is in the kernel.
+  - No KeptFor analogue of these was found in what was read. The record conditions-kept-together says "likewise for n steps" and lists only KeptFor.each and keptFor_each_not_joint.
+
+Q3.
+- keptFor_each_not_joint (366), built, statement read. For every `sense : Config → Bool → Config → O`: the class (· = .split) is KeptFor for `first` at every n and for `second` at every n, and `∀ allowed, ¬ KeptFor process sense both allowed 1 (· = .split)`.
+- This is one class kept for each of two guards and not for both, for whatever reading. It is about two guards, not about several states alike in a reading.
+- no_rule_decides_joint (291), built, statement read. For every `F : Bool → Bool → Bool` and decisions k₁, k₂, kj of the three keepabilities, `¬ ∀ s, kj s = F (k₁ s) (k₂ s)`.
+- no_respecting_rule_decides_joint (314): for every `F : Prop → Prop → Prop` respecting ↔, `¬ ∀ s, Keepable both s ↔ F (Keepable first s) (Keepable second s)`.
+- These "rules" read the separate answers, not states. They say that the pair of separate answers is a reading too coarse to decide the joint one, on a built carrier.
+
+Q4, Q5, Q6. Not found in what was read.
+
+=== Viability.lean kernel_iff_held (65), statement read ===
+- `Kernel P guard s ↔ «承» («逆» («所闭» (Steps P))) guard s`.
+- In plain English, from the definition of Kernel (55) and the proof: no course from s leaves the guard exactly where the guard holds at every configuration that the closure («所闭») of the step relation reaches from s, read through its converse («逆») and "holds throughout" («承»).
+- Every course, for ever. No reading, no choice. Kernel.keptFor (Keeping 333) carries it into KeptFor, given one move usable throughout the kernel.
+
+=== Records and chapters ===
+- finite-continuation-plans: statement and laws match Keeping. The chapter-3 telling at 429 says "being viable for n steps is having an n-step plan branching on observations that works", citing `Viability.keptFor_iff_plan`, with the calibration through plans_iff_choice. That matches the statements. The record's does_not_show says no infinite plan follows from every finite horizon.
+- joint-plan-composition: canonical source is Keeping.lean (Plan.zip_keeps, compatible_of_zip_keeps). Chapter 5 line 387 tells it.
+- conditions-kept-together: told in chapter 5 line 89 (kernel decomposition, each_not_joint, no_rule_decides_joint, kept_part_not_renewal). keptFor_each_not_joint is not named in the chapter-5 sentence read.
+- what-holding-for-a-reading-is-worth: its canonical source is HeldForReading.lean, not Keeping. It names Keeping.lean only through its use of Viability.ChoiceOver and choiceOver_fin (dependencies field).
+  - Its law lists HeldForReading.finer_least_le (statement read, 1057): "Through a reading telling apart all a coarser one tells apart, the least shortfall never increases". Weighted, one decision, not keeping.
+- Chapter 8 (lines 499 to 506): its table puts GuardHorizon.uniform_policy_iff_common under "Choice over the readings (a rule fixed in advance)", and OpenedCorrection.finer_keeps under "Revision of the reading". In the last column (the edge record's rows), "Timing of the reading" is marked "connected (`Pace.rule_until_reading`, `RuleCapture.uniform_locks`)" and "Revision of the reading" "connected (`RuleCapture.favouring_locks`)".
+  - These are tellings. In RuleCapture.uniform_locks (294, statement read), `uniform` is the premise `∀ x g, favours (h x g)` (every rule read favours). It is not GuardHorizon.UniformPolicy, and RuleCapture does not import GuardHorizon or Keeping.
+
+=== Users of these notions ===
+- Grep over the package's .lean files for UniformPolicy, KeptFor, uniform_viable, `GuardHorizon.`, Viability.Plan, Plan.Keeps and FiberFeasible. Within Becoming/ it finds only CommonResponse, GuardHorizon, HeldForReading, JointKeeping, Keeping and OpenedCorrection; the other hits are dated check files.
+- A grep of the seven lock modules (LineOnAStock, TurningInTime, RuleShaping, RuleCapture, PoolFromCourse, ClosedCapture, ReadOffInTime) for Viability, Keeping, GuardHorizon, KeptFor and Kernel finds none, and their imports do not include these modules.
+- The lock's step `Pace.turn (f) (h) : Bool → S × R → S × R` (Pace.lean 101: true reads, `(f p.1 p.2, h p.1 p.2)`; false keeps the rule) runs on a supplied schedule `reads : Nat → Bool` in `paced` (112). The Boolean argument is fixed in advance, not chosen.
+- `Locked M favours h p` (RuleCapture 160) is `favours p.2 ∧ M.le p.2 (h p.1 p.2)`.
+
+=== On the guesses ===
+- C1. Supported for GuardHorizon.uniform_policy_iff_fiber_feasible (341) and OpenedCorrection.correctable_iff (80): exact for one requirement at one step, one rule from the present reading, every configuration of the type, given ChoiceOver O A (free for Fin k). Nothing in my group states it for keeping a guard for ever. Chapter 3's own law (InquiryChoice) was not read by me beyond its telling at 03:426, which cites uniform_policy_iff_fiber_feasible.
+- C2. Partly false as worded.
+  - GuardHorizon's uniform policy is not stated over a closed set and not for ever. uniform_viable (406) gives only one step further (Viable (n+1) from UniformPolicy read (Admissible P guard n) over all of S, plus guard s), the later moves chosen state by state. GuardHorizon's every-horizon law, closed_viable (112), uses no reading.
+  - The sufficient every-horizon law WITH a reading is Keeping.keptFor_of_closed (311), with its cases Certificate.keptFor (322) and Kernel.keptFor (333). The last two need one move usable throughout, whatever is kept, so no reading does work there. All three are for every finite n, not one infinite plan.
+  - The second half holds: KeptFor is exact for plans with recall at each n (keptFor_iff_plan 182 for Fin k; keptFor_iff_plan_of_choice 176 given choice; plans_iff_choice 247 the boundary).
+  - Not found in what was read: any law for a memoryless rule from the present reading over more than one step.
+- C3. Supported. KeptFor.finer (288) is a coarse ⇒ fine law; so are GuardHorizon.uniform_finer (395) and OpenedCorrection.finer_keeps (95) on their own carriers. What more a finer reading keeps is shown only in built cases: Matching.keeping_matters (435), statewise_not_uniform with discriminating_reading_uniform (382, 391), Linked.opens (168). Outside the group, HeldForReading.finer_least_le is a weighted monotonicity, not an exact "what more".
+- C4. Consistent with what I read: in my group no statement relates the step at which a reading tells starts apart to what can still be kept. The nearest is the built OpenedCorrection.Linked.rebuilt_starved (175). I did not read ReadOffInTime.
+- C5. Supported within my reach: no lock module imports or names these notions.
+  - The lock's law has a Boolean argument (Pace.turn 101), but it is a supplied schedule.
+  - The Lean has `Viability.disturbed` with GuardHorizon.dViable_iff (230) to make a law with moves into a process, and Keeping supplies a class of starts and a reading of steps. No statement applies either to Pace.turn or to the lock's models (not found in what was read).
+  - Chapter 8's "connected" marks to RuleCapture.uniform_locks and favouring_locks are tellings, and that "uniform" is a different premise.
+- C6. Not quite.
+  - These places are not three islands. GuardHorizon imports Keeping and uses its ChoiceOver; OpenedCorrection.Correctable is defined as GuardHorizon.UniformPolicy; JointKeeping proves on KeptFor; Kernel.keptFor joins Viability's kernel to KeptFor.
+  - But no theorem joins KeptFor to GuardHorizon.Viable or to UniformPolicy (not found in what was read), and none joins any of them to the lock.
+  - What is beyond the note of 20 November as quoted in the frozen file: Keeping does state, of a process with moves and a class of starts B with a reading of steps, exactly when B is kept for n steps by plans with recall. It does not state when B is kept for ever by a choice from the reading; there is only a sufficient every-horizon condition. So the "already there" criterion of the frozen file is not met. KeptFor is nearest; it hands in the process, sense, guard, allowed and the class.
+
+NOT READ
+- Viability.lean after line 110.
+- The proofs, except Matching.keepsNothing_not_kept and the opening lines of the RuleCapture proofs.
+- CommonResponse, InquiryChoice, InquirySufficiency, HeldForReading beyond finer_least_le, ContinuationAdequacy, JointContinuation, and Revising.
+- The lock modules beyond their imports and the RuleCapture and Pace lines named.
+- The record files beyond the fields named.
+- Chapters beyond the lines named.
+
+TOOL CALLS: 20 (StructuredOutput included).

@@ -1,4 +1,4 @@
-# Places: what one table and three reads say of each, in the readers' words
+# Places: what one table and the place-by-place reads say of each, in the readers' words
 
 *Made by `build_places.py` beside it; never edited by hand. AI-written (Claude Fable for the script). Each field under *read of …* is a reader's return, unchecked; what the note mended is in the note. The table's fields are from the table of 20 November; the file, the records, the dynamics and the *same statement* lines are computed by the script, as the note says. The page proves nothing, ranks nothing and holds no link. A place with no read under it was not in that read; that says nothing of the Lean. [The note](NOTE.md) says what this is and is not.*
 
@@ -8,6 +8,7 @@ A place is keyed by a Lean file's base name. Where several tracked files carry t
 
 | place | file | in the table | read in | check in scratch |
 |---|---|---|---|---|
+| 03-KNOWING.md: r-when-to-inquire-and-when-to-respond (line 4 | no Lean file of this name |  | choice |  |
 | AcquiredCorrection | `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/AcquiredCorrection.lean` |  | register |  |
 | ActiveReading | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ActiveReading.lean` |  | register |  |
 | Admission | several Lean files of this name: `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean`; `experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/constitution/admission/formal/Admission.lean` | NYPPPNYY |  |  |
@@ -21,12 +22,13 @@ A place is keyed by a Lean file's base name. Where several tracked files carry t
 | CarrierDiagnosis | `experiments/market-generativity/meta-attractor/CarrierDiagnosis.lean` | PYYYYNPY | kept |  |
 | ChoiceCountCapture | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ChoiceCountCapture.lean` | YPNNNYYY |  |  |
 | Clearing | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Clearing.lean` | NYPYPNPP | kept |  |
-| ClosedCapture | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean` | YPNNNYYY | register |  |
+| ClosedCapture | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean` | YPNNNYYY | choice, register |  |
 | CodeAcquisition | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CodeAcquisition.lean` |  | register |  |
 | COLLECTIVE-DESTRUCTIVE-ATTRACTORS | no Lean file of this name |  | register |  |
 | CollectiveDestruction | `experiments/market-generativity/meta-attractor/CollectiveDestruction.lean` | NYPNYPPY |  |  |
 | CommonCauseDiscovery | `experiments/market-generativity/meta-attractor/CommonCauseDiscovery.lean` | NYPYPPPP | register |  |
 | CommonOrganization | `experiments/market-generativity/meta-attractor/CommonOrganization.lean` | NYPYPPPP |  |  |
+| CommonResponse | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CommonResponse.lean` |  | choice |  |
 | CommonTaskRevision | `experiments/market-generativity/meta-attractor/CommonTaskRevision.lean` | NYPYPPPP |  |  |
 | conditional/renewal | no Lean file of this name | PYPPYNYY | kept |  |
 | Continuation | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean` | PYPPYNPY | kept |  |
@@ -57,22 +59,25 @@ A place is keyed by a Lean file's base name. Where several tracked files carry t
 | FormativeCapacity | several Lean files of this name: `experiments/integrated-correction/general-framework/generative-basis/lean/history/universal-ethics/generative-capacity/checks/20261007T130945.936650Z/FormativeCapacity.lean`; `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/FormativeCapacity.lean`; `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/checks/20261007T130838.854157Z/FormativeCapacity.lean`; `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/checks/20261007T131010.300022Z/FormativeCapacity.lean` |  | register |  |
 | FormedGrounds | `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/FormedGrounds.lean` |  | register |  |
 | Founding | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Founding.lean` | PYPPPNYY |  |  |
+| Frontier | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Frontier.lean` |  | choice |  |
 | Gain | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Gain.lean` |  | future, kept |  |
 | GoalFormationRevision | `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/GoalFormationRevision.lean` |  | register |  |
 | GoalRevision | `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/GoalRevision.lean` |  | register |  |
 | GrammarReadings | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean` |  | register |  |
 | GroupEnding | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GroupEnding.lean` | PYPPPNYY |  |  |
-| GuardHorizon | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean` | NNNNYPPP | future |  |
+| GuardHorizon | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean` | NNNNYPPP | choice, future |  |
 | Handoff | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Handoff.lean` |  | register |  |
 | HeldForReading | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HeldForReading.lean` |  | register |  |
 | HeldPossible | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HeldPossible.lean` |  | register |  |
 | HorizonWebs | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HorizonWebs.lean` | NYPPPPPP |  |  |
-| Inquiry | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Inquiry.lean` |  | register |  |
+| Inquiry | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Inquiry.lean` |  | choice, register |  |
+| InquirySufficiency | `experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/sufficiency/InquirySufficiency.lean` |  | choice |  |
 | Interdependence | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Interdependence.lean` | NYPPPNPP | kept |  |
 | JoiningCodes | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JoiningCodes.lean` |  | register |  |
-| JointKeeping | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JointKeeping.lean` |  | future |  |
-| Keeping | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Keeping.lean` |  | future |  |
+| JointKeeping | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JointKeeping.lean` |  | choice, future |  |
+| Keeping | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Keeping.lean` |  | choice, future |  |
 | KeepingWidening | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeepingWidening.lean` |  | future |  |
+| LabelledRoles | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LabelledRoles.lean` |  | choice |  |
 | Learnable | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learnable.lean` |  | register |  |
 | LearnableRuns | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearnableRuns.lean` |  | register |  |
 | LearnedGrouping | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearnedGrouping.lean` |  | register |  |
@@ -82,24 +87,25 @@ A place is keyed by a Lean file's base name. Where several tracked files carry t
 | LineageDrawdown | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageDrawdown.lean` | PYPPYNPY | kept |  |
 | LineageRegimes | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageRegimes.lean` | PYPYPNPY | kept |  |
 | LineageRegions | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageRegions.lean` |  | future |  |
-| LineOnAStock | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineOnAStock.lean` | YYNPPNYY | future, register |  |
+| LineOnAStock | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineOnAStock.lean` | YYNPPNYY | choice, future, register |  |
 | Lock | no Lean file of this name |  | future |  |
 | MarketDiagnosis | `experiments/market-generativity/meta-attractor/MarketDiagnosis.lean` | PPPPYPPN |  |  |
 | MarketGenerativity | `experiments/market-generativity/formal/MarketGenerativity.lean` | YYYYYYPP |  |  |
 | MarketInstances | `experiments/market-generativity/formal/MarketInstances.lean` | YYPPYYYY |  |  |
 | MoveFormation | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MoveFormation.lean` |  | register |  |
+| MoveOutcomeProcesses | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MoveOutcomeProcesses.lean` |  | choice |  |
 | MutualActivation | no Lean file of this name | NYPPPNPP |  |  |
 | ObservationChange | `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ObservationChange.lean` |  | register |  |
 | ObservationRepair | `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ObservationRepair.lean` |  | register |  |
 | Onward | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Onward.lean` |  | future |  |
-| OpenedCorrection | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OpenedCorrection.lean` |  | register |  |
+| OpenedCorrection | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OpenedCorrection.lean` |  | choice, register |  |
 | OpenFutureRevision | `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/OpenFutureRevision.lean` |  | register |  |
 | Optimum | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean` | NYPPYPPY / PYPPYPYY |  |  |
 | OwnWidening | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OwnWidening.lean` |  | future |  |
 | PairFlow | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PairFlow.lean` | YYPYYNPY | kept |  |
 | PairSelection | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PairSelection.lean` | PYPYYNYP | kept |  |
 | PendingTaskApplicability | `experiments/market-generativity/meta-attractor/PendingTaskApplicability.lean` | NYPYPPPP |  |  |
-| PoolFromCourse | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolFromCourse.lean` | YPPNYYPY | register |  |
+| PoolFromCourse | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolFromCourse.lean` | YPPNYYPY | choice, register |  |
 | PopulationCorrection | `experiments/market-generativity/meta-attractor/PopulationCorrection.lean` | YYYYYYYY | kept |  |
 | PopulationRealization | `experiments/market-generativity/meta-attractor/PopulationRealization.lean` | PYPPPPPY |  |  |
 | Ranking | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Ranking.lean` | NYPPYNPP |  |  |
@@ -112,7 +118,7 @@ A place is keyed by a Lean file's base name. Where several tracked files carry t
 | ReadingsPersist | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsPersist.lean` | YYPPYPPP | register |  |
 | ReadingsSpread | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsSpread.lean` | YYPPYPPY | kept, register |  |
 | ReadInTime | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadInTime.lean` | YPPNYYYY | register |  |
-| ReadOffInTime | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadOffInTime.lean` | PYPPPPYY | future, register |  |
+| ReadOffInTime | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadOffInTime.lean` | PYPPPPYY | choice, future, register |  |
 | Readout | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Readout.lean` |  | register |  |
 | ReadStages | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean` |  | register |  |
 | RecursiveSelection | `experiments/market-generativity/meta-attractor/RecursiveSelection.lean` | PYPPYPPY |  |  |
@@ -135,9 +141,9 @@ A place is keyed by a Lean file's base name. Where several tracked files carry t
 | RevisionRoutes | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean` |  | register |  |
 | Roles | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Roles.lean` | PYPYPNPP | future, kept |  |
 | RouteFormation | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RouteFormation.lean` |  | register |  |
-| RuleCapture | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleCapture.lean` | YNNNNYPY |  |  |
+| RuleCapture | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleCapture.lean` | YNNNNYPY | choice |  |
 | RuleRebuilding | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean` | YYPPPYYY | kept |  |
-| RuleShaping | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean` | YNPNYYYY |  |  |
+| RuleShaping | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean` | YNPNYYYY | choice |  |
 | ScratchMixedWay | no Lean file of this name |  |  | `mixed_same`, `grown_same` |
 | SelectionLevels | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean` | PNPNYNYN |  |  |
 | Sensitivity | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean` |  | register |  |
@@ -152,11 +158,11 @@ A place is keyed by a Lean file's base name. Where several tracked files carry t
 | The scratch Lean of 17 November (ScratchCovering, ScratchMix | no Lean file of this name | YYPPYNYY |  |  |
 | The units of 19 November with a rule set again (lock_on_unit | no Lean file of this name | YYNPPYPP |  |  |
 | TimedResponse | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TimedResponse.lean` |  | register |  |
-| TurningInTime | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean` | PYPPPYYY / PYPPPYYY | future, register | `recoverable_iff_above_same`, `noReturnAt_iff_first_below_same`, `first_marked_same` |
+| TurningInTime | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean` | PYPPPYYY / PYPPPYYY | choice, future, register | `recoverable_iff_above_same`, `noReturnAt_iff_first_below_same`, `first_marked_same` |
 | Unread | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unread.lean` |  | register |  |
 | UnreadStandings | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/UnreadStandings.lean` |  | register |  |
 | VersionedTaskInstances | `experiments/market-generativity/meta-attractor/VersionedTaskInstances.lean` | NYPPYPYY |  |  |
-| Viability | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Viability.lean` | NPNNNNYY | future |  |
+| Viability | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Viability.lean` | NPNNNNYY | choice, future |  |
 | WayOfUnits | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean` | NYNPPNYY |  | `carrier_same`, `two_units_same`, `same_statement` |
 | Weightings | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean` | PYPYNNPP / PYPPPNPP | future, kept |  |
 | WideningOnTheMap | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean` |  | future |  |
@@ -178,9 +184,18 @@ Read off the scratch modules filed as text in this row's study, by pattern. Each
 | `Becoming.ScratchUnitsTurn.unending_grown_case`, line 450 of `_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchUnitsTurn.lean.txt` | `Becoming.ScratchMixedWay.unending_grown`, line 325 of `_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/second-way-2026-11-17/ScratchMixedWay.lean.txt` | `grown_same`, line 23 of [`ScratchUnitsTurnCheck.lean.txt`](../scratch-lean-2026-11-21/ScratchUnitsTurnCheck.lean.txt) ([note](../scratch-lean-2026-11-21/NOTE.md)) | [`build-ScratchUnitsTurnCheck.log.txt`](../scratch-lean-2026-11-21/build-ScratchUnitsTurnCheck.log.txt): exit 0; axiom report empty (2 theorems audited) | no theorem named `unending_grown_case` found under the package at this run |
 | `Becoming.ScratchMixedWay.Two.two_units_iff`, line 584 of `_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/second-way-2026-11-17/ScratchMixedWay.lean.txt` | `Becoming.WayOfUnits.two_units_iff`, line 580 of `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean` | `same_statement`, line 624 of [`ScratchMixedWay.lean.txt`](../second-way-2026-11-17/ScratchMixedWay.lean.txt) ([note](../second-way-2026-11-17/NOTE.md)) | [`ScratchMixedWay.build.log.txt`](../second-way-2026-11-17/ScratchMixedWay.build.log.txt): no exit line found; axiom report empty (40 theorems audited) | a theorem named `two_units_iff` is declared under the package at this run: `Becoming.WayOfUnits.two_units_iff`, line 580 of `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean` (this is the check's other side) |
 
-The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-by-goings-on-2026-11-20/NOTE.md)); **future** 21 November, a future opening or closing ([note](../read-a-future-2026-11-21/NOTE.md)); **register** 21 November, how a registering comes to be ([note](../read-registering-2026-11-21/NOTE.md)).
+The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-by-goings-on-2026-11-20/NOTE.md)); **future** 21 November, a future opening or closing ([note](../read-a-future-2026-11-21/NOTE.md)); **register** 21 November, how a registering comes to be ([note](../read-registering-2026-11-21/NOTE.md)); **choice** 21 November, a choice made from a reading ([note](../read-a-choice-from-a-reading-2026-11-21/NOTE.md)).
 
 ## Each place, in the readers' words
+
+### 03-KNOWING.md: r-when-to-inquire-and-when-to-respond (line 4 (readers' returns of 21 November; not checked)
+- *read of 21 November, a choice made from a reading, reader response-common-over-a-reading, as "03-KNOWING.md: r-when-to-inquire-and-when-to-respond (line 426), r-a-response-common-over-a-reading (line 560); records when-to-inquire-and-when-to-respond.json, a-response-common-over-a-reading.json"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-a-choice-from-a-reading-2026-11-21/NOTE.md), [report](../read-a-choice-from-a-reading-2026-11-21/read-response-common-over-a-reading.md.txt)):
+  - what is read, and what chooses from it: Line 426 tells a policy that reads an observation class, citing the periphery's InquiryChoice.observed_class_policy_iff (InquiryChoice.lean 65, Classical.choice) and the core's GuardHorizon.uniform_policy_iff_fiber_feasible, given choice. Line 560 tells «共应» as in the module.
+  - the exact law: Both tellings match the Lean as stated. The record when-to-inquire-and-when-to-respond.json gives laws 0-6 with ChoiceOver named in hypotheses[0]. The record a-response-common-over-a-reading.json gives laws 0-6, the seventh being GuardHorizon.uniform_policy_iff_common. Line 560's "judgment is viability indexed by acts" is a reading: the Lean states one grammar law at two relations.
+  - within one reading: Line 426 and record law 4 tell a built dosing case on the reals: no immediate dose is admissible for both losses (two_losses_have_no_common_immediate_dose, InquiryChoice 142).
+  - two readings of one process: Line 562 (an AI reading) says "a finer reading keeps every common response". That matches «共应之细» as one direction.
+  - when a reading tells apart, and what can still be kept: Line 426 and record law 4 tell a built case, inquiry_can_cross_floor_before_response (InquiryChoice 186): the reading step takes the level from 2 to −1 before any response. It is not stated as a law.
+  - the lock as a case: Neither anchor nor either record names the lock. The "judgment through the couplings" that line 560 cites to §3 rests in the Lean on the ASCII CommonResponse (LabelledRoles 111), not on «共应»; no theorem joining the two was found in what was read.
 
 ### AcquiredCorrection (readers' returns of 21 November; not checked)
 - *result records that name this place's file as a source* (computed; not a link): `certificates-sound-and-available`
@@ -286,6 +301,13 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - cost and keeping: Not stated as a cost of the reading.
   - a registering lost: unread_course (186), courses_alike_iff_unread (202). lock_outlives_loss (307): Raises, ReadsShare, upward favouring, Accrues, Locked at the start. At every t the loss is ≥ b+t, the course is locked, and share and rule are never below. 'A measure the loss refutes is kept, because nothing in the loop reads the refutation.'
   - tied to what it rests on: By its absence: what lies beyond is unread and accrues while the lock holds. 'What leaves is a change of the law (of read, mind or the selection), such as a level that reads beyond the share.'
+- *read of 21 November, a choice made from a reading, reader the-lock-side, as "ClosedCapture.lean: opening account 1-112, Unread 135, loopPart, identifiesAlike_iff_unread 170, unread_course 190, courses_alike_iff_unread 206, reads_beyond_of_apart 216, join 220, joinRead 223, Accrues 273, turned_by_loss 295, lock_outlives_loss 311"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-a-choice-from-a-reading-2026-11-21/NOTE.md), [report](../read-a-choice-from-a-reading-2026-11-21/read-the-lock-side.md.txt)):
+  - what is read, and what chooses from it: The fast configuration is (share, beyond). Unread (135) says neither the next share nor the rule read depends on the beyond. loopPart (share, rule, step count) is 'what the loop reads'. The course is determined with no moves.
+  - the exact law: lock_outlives_loss (311), premises raises, monotone, upper, accrues, locked: the loss is at least b+t at every step, the course stays Locked, and share and rule are not below the start's. turned_by_loss (295), premises accrues, turns (no favouring rule read at loss ≥ N), reads r, N ≤ b+r: the rule at r+1 does not favour.
+  - within one reading: courses_alike_iff_unread (206), exact: courses from every pair of starts alike in share and rule, along every schedule, have equal share and rule at every step ↔ Unread f h. This is a stated law over a class of starts alike in what the loop reads, for a determined law, not about choices keeping something.
+  - two readings of one process: Not found in what was read.
+  - when a reading tells apart, and what can still be kept: From the account only: Thinned's read-late and read-in-time laws.
+  - the lock as a case: No named notion is used. It joins the identification law (Law.part_identifiesAlike_iff_step, through IdentifiesAlike/frameBy) to the lock, not «共应» or KeptFor.
 
 ### CodeAcquisition (readers' returns of 21 November; not checked)
 - *result records that name this place's file as a source* (computed; not a link): `composition-route`
@@ -315,6 +337,17 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - cost and keeping: Material per event; work_finances_probe (l.196) and survey_preserves_response_capacity (l.249) seen by name only.
   - a registering lost: change_invalidates_records (l.84), every s; no_gate_after_change (l.157). Built: local_probe_coverage_misses_upstream_failure (l.420); no_classifier_of_local_effects_can_identify_parent (l.426), any classifier.
   - tied to what it rests on: Built by name: discovered_coupling_changes_actual_response (l.324), unaccounted_majority_would_lose_support (l.332). No loss-triggered probing found.
+
+### CommonResponse (readers' returns of 21 November; not checked)
+- *result records that name this place's file as a source* (computed; not a link): `a-response-common-over-a-reading`
+- *dynamics in the atlas that name one of those records* (computed; not a link): `a-reading-kept-by-its-update`
+- *read of 21 November, a choice made from a reading, reader response-common-over-a-reading, as "CommonResponse.lean: «共应», «所闭之承最大», «共应当且仅当所闭之承遍», «自反传递则共应当且仅当承遍», «共应之细», «静之共应当且仅当遍», «一之共应当且仅当一应遍», «依读而应则共应», «遍定应共应当且仅当同读同应», «遍定应共应当且仅当像定后», «映应共应当且仅当同读同应», «共应之例»"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-a-choice-from-a-reading-2026-11-21/NOTE.md), [report](../read-a-choice-from-a-reading-2026-11-21/read-response-common-over-a-reading.md.txt)):
+  - what is read, and what chooses from it: What is read is a supplied relation E on situations (or a map's sameness), and a requirement G a is given for each act. «共应» (line 88) is a family of regions J a: each inside G a, each closed under E, and together covering every situation. It is relational and may overlap, so it is not a rule. A rule appears only as rule : O → A in «依读而应则共应» (205). All statements read.
+  - the exact law: «共应当且仅当所闭之承遍» (153): a common response exists ↔ every situation s has an act a with G a holding throughout the E-closure of s. It is exact for every carrier, reading and requirement, with no choice. «自反传递则共应当且仅当承遍» (164) gives the same along E itself, with premises that E is reflexive and transitive. «依读而应则共应» (205), given meets : ∀ s, G (rule (read s)) s, yields a common response, in one direction only. There are no steps: these are laws of one act, not of keeping over steps.
+  - within one reading: Stated as laws: «一之共应当且仅当一应遍» (194; under the reading that tells nothing apart, on an inhabited carrier, a common response exists ↔ one act meets G everywhere), and «遍定应共应当且仅当同读同应» (248; given covering and exactly one act per situation, a common response exists ↔ situations read alike have the same act). Shown as built cases: «共应之例».EachNotCommon (408) and PairsNotCommon (422).
+  - two readings of one process: «共应之细» (178): a common response over E is one over every E' inside E, with the same J. It runs in one direction. That a finer reading has strictly more is seen only from the extremes «静之共应当且仅当遍» (184) and «一之共应当且仅当一应遍» (194) and from the built cases. No exact statement of what a finer reading keeps more was found in what was read.
+  - when a reading tells apart, and what can still be kept: Not found in what was read; the module has no time or steps.
+  - the lock as a case: The module does not name the lock, a share, a stock, a line or a level that runs down. To read the lock through it, three things would have to be supplied: situations (a class of starts), a reading E, and an act-indexed requirement G. The law would still be about one act, not a course.
 
 ### conditional/renewal (readers' returns of 20 November; not checked)
 - *table:* conditional/renewal (RenewalCharacterization and the files beside it), letters `PYPPYNYY`, standing outside
@@ -588,6 +621,17 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: Built: same_formed_interpretation_can_be_false (l.224), new_record_without_review_does_not_correct (l.230), closed_review_cannot_claim_confirmation (l.252), later_change_retains_review_but_defeats_current_accuracy (l.271). reward_alone_cannot_repair_interpretation (l.260).
   - tied to what it rests on: Not found in what was read.
 
+### Frontier (readers' returns of 21 November; not checked)
+- *result records that name this place's file as a source* (computed; not a link): `a-step-coupling-keeps-at-every-horizon`, `a-weighting-faster-than-renewal-ends-the-base`, `alignment-direction-under-widening`, `classification-robust-generative-comparison`, `horizon-optima-hold-the-greatest-renewal`, `keeping-forgoes-the-renewal-at-the-need`, `optima-rebuild-a-depleted-base`, `organizational-formation-from-generative-comparison`, `others-drawing-first-end-the-base`, `practical-judgment-under-living-significance`, `re-optimizing-above-a-renewal-ends-it`, `room-read-off-the-exchange`, `several-optimizers-drain-by-their-joint-capacity`, `what-an-optimum-does-beyond-what-couples-in`, `where-a-run-of-a-regime-comes-to-rest`
+- *dynamics in the atlas that name one of those records* (computed; not a link): `a-step-coupling-keeps-at-every-horizon`, `a-weighting-faster-than-renewal-ends-the-base`, `horizon-optima-hold-the-greatest-renewal`, `keeping-forgoes-the-renewal-at-the-need`, `optima-rebuild-a-depleted-base`, `others-drawing-first-end-the-base`, `overcompensating-giving-cycles`, `re-optimizing-above-a-renewal-ends-it`, `several-optimizers-drain-by-their-joint-capacity`, `threshold-in-the-state-plane`, `what-an-optimum-does-beyond-what-couples-in`, `where-a-run-of-a-regime-comes-to-rest`
+- *read of 21 November, a choice made from a reading, reader response-common-over-a-reading, as "Frontier.lean: opening account; Formation.report, same_report_different_basis, no_report_judge, amountJudge, amount_recovers_basis; Collective.no_common_plan; Routes.none_robust"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-a-choice-from-a-reading-2026-11-21/NOTE.md), [report](../read-a-choice-from-a-reading-2026-11-21/read-response-common-over-a-reading.md.txt)):
+  - what is read, and what chooses from it: No declaration uses either common response. The opening account (lines 16-17) says PracticalJudgment.Robust is the core's CommonResponse and is not restated. The nearest reading is the built Formation.report (473), which says whether a connection was built.
+  - the exact law: No law over a reading was found. no_report_judge (484) is a built example: no judge reading only report judges basis f := 2 ≤ remaining f, where remaining f := 6 − drawn f.
+  - within one reading: Built cases: same_report_different_basis (about 479) gives one report with two different bases. Collective.no_common_plan (593): each world has a plan, and no plan is common to every world.
+  - two readings of one process: Built case: amount_recovers_basis (491), where reading the retained amount recovers the basis while the report cannot. Routes.none_robust (728): no route is on the frontier under every classification.
+  - when a reading tells apart, and what can still be kept: Not found in what was read. Lines 493-496 say the continuations are moves of a process on the shared amount (DrawnAmountProcesses, not read).
+  - the lock as a case: It does not name the lock. It has a built shared amount (6) that continuations draw, with a basis threshold of 2, and a report that does not register it. This is the nearest thing in the group to a stock and a reading that misses it, but it is a one-shot built example with no running down over steps.
+
 ### Gain (readers' returns of 20 November, 21 November; not checked)
 - *result records that name this place's file as a source* (computed; not a link): `what-keeping-widening-needs`, `where-novelty-gain-comes-from`
 - *dynamics in the atlas that name one of those records* (computed; not a link): `closed-cycle-without-dissipation`, `kind-relay-keeps-widening-within-kinds`, `returning-novelty-forgetting-on-levels`, `what-keeping-widening-needs`
@@ -647,6 +691,20 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - forms changing while it continues: Built examples overlapping_handoff_keeps_access (452) and route_retirement_allowed (460): 'keeping access is not freezing a route'. General law coverage_transports (432), along a retaining translation. No widening is stated.
   - from where an opening comes: Not applicable.
   - a way related to widening: A choice keeps the guard; nothing relates a choice to widening. - shielded_choice (97). Premises: 0<lift and best by AcceptScore among admissible moves. Conclusion: it accepts and keeps the guard n steps. - recomputed_composition (193) and recomputed_kept (297), with Bellman values. - uniform_policy_iff_fiber_feasible (341), with ChoiceOver.
+- *read of 21 November, a choice made from a reading, reader keeping-through-what-is-registered, as "GuardHorizon.lean: Viable, Admissible, closed_viable, dViable_iff, Kept, pathSafe_iff, UniformPolicy, FiberFeasible, uniform_policy_iff_fiber_feasible, uniform_policy_iff_common, statewise_not_uniform, discriminating_reading_uniform, uniform_finer, uniform_viable, uniform_iff"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-a-choice-from-a-reading-2026-11-21/NOTE.md), [report](../read-a-choice-from-a-reading-2026-11-21/read-keeping-through-what-is-registered.md.txt)):
+  - what is read, and what chooses from it: Statements read. Viable (71) and Admissible (76) are from a known configuration: there is no reading, and the move is existential at each state. UniformPolicy (326) is `∃ policy : O → A, ∀ s, good s (policy (obs s))`: one rule from a reading of states, with no recall, asked at every configuration of the whole type S. The deterministic part between them (PathSafe 160, pathSafe_iff 276, recomputed_kept 297) uses policies Nat → S → A from the full state.
+  - the exact law: uniform_policy_iff_fiber_feasible (341): given ChoiceOver O A, a rule from the reading exists ↔ each reading has one move good at every configuration giving it; exact, one requirement, one step. uniform_viable (406): from UniformPolicy read (Admissible P guard n) over all of S, and guard s, follows Viable P guard (n+1) s. It is sufficient and one step further: only the first move comes from the reading, the later moves are existential state by state, and every successor is counted. dViable_iff (230) is exact for n steps: DViable under next : S → A → S ↔ Viable in Viability.disturbed next (fun _ => True). closed_viable (112) covers every n with no reading. No law keeps a guard for n steps or for ever by a rule from a reading (not found).
+  - within one reading: General one-step law: the failure of FiberFeasible, through 341 (given choice). Built case statewise_not_uniform (382): on Bool each state has a good move (a = s), and no rule from the constant reading meets both. This is one step and not a guard over a horizon.
+  - two readings of one process: uniform_finer (395): given forget : R → O with forget (fine s) = coarse s, a rule from the coarse reading gives one from the fine. Coarse implies fine. What the finer reading gives more appears only in the built discriminating_reading_uniform (391) beside statewise_not_uniform (382). No exact law of what more was found.
+  - when a reading tells apart, and what can still be kept: Not found in what was read.
+  - the lock as a case: Not cited (not found in what was read). dViable_iff (230) with Viability.disturbed is the Lean's means of making a law with moves into a process. No statement applies it to the lock's law Pace.turn (Pace.lean 101). Chapter 8's table marks RuleCapture.uniform_locks as connected, but there 'uniform' is the premise ∀ x g, favours (h x g), not UniformPolicy.
+- *read of 21 November, a choice made from a reading, reader response-common-over-a-reading, as "GuardHorizon.lean (lines 325-420 only, as the one user of «共应»): UniformPolicy, FiberFeasible, uniform_policy_iff_fiber_feasible, uniform_policy_iff_common, statewise_not_uniform, uniform_finer, uniform_viable, uniform_iff; Keeping.lean ChoiceOver (156)"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-a-choice-from-a-reading-2026-11-21/NOTE.md), [report](../read-a-choice-from-a-reading-2026-11-21/read-response-common-over-a-reading.md.txt)):
+  - what is read, and what chooses from it: What is read is obs : S → O. What chooses is policy : O → A (UniformPolicy, 326). "Given a choice over the readings" is the hypothesis Viability.ChoiceOver O A (Keeping 156): every total relation from O to A has a choice function. It is named as a premise, not an axiom, and it holds with no premise for Fin k.
+  - the exact law: uniform_policy_iff_fiber_feasible (341): given ChoiceOver O A, UniformPolicy ↔ each reading has one move good at every configuration giving it. uniform_policy_iff_common (about 352) adds given : ∀ o, ∃ s, obs s = o, and then the condition ↔ ∃ J, «共应». uniform_iff (414) is the same with good = Admissible P guard n, so it is exact for the first move. uniform_viable (about 405) is sufficient only: that move keeps the guard n+1 steps, while the later moves come from Viable (71), chosen per configuration.
+  - within one reading: Built case: statewise_not_uniform (382), proved from «共应之例».EachNotCommon.
+  - two readings of one process: uniform_finer (about 394): a choice from a coarser reading gives one from every compatible finer reading, in one direction only. That the finer reading keeps strictly more is shown only by the built discriminating_reading_uniform (about 391).
+  - when a reading tells apart, and what can still be kept: Not found in what was read.
+  - the lock as a case: Not named in the lines read.
 
 ### Handoff (readers' returns of 21 November; not checked)
 - *result records that name this place's file as a source* (computed; not a link): `open-form-realization-under-revision`, `wisdom-root`
@@ -689,6 +747,23 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - cost and keeping: Not found.
   - a registering lost: Not found.
   - tied to what it rests on: Scope.secures (l.41) concerns the goal, not what the inquirer rests on. Not found.
+- *read of 21 November, a choice made from a reading, reader response-common-over-a-reading, as "Inquiry.lean: Scope, Scope.secures, Scope.antitone, commonResponse_antitone, judgeProcess, sees, commonResponse_judge_iff"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-a-choice-from-a-reading-2026-11-21/NOTE.md), [report](../read-a-choice-from-a-reading-2026-11-21/read-response-common-over-a-reading.md.txt)):
+  - what is read, and what chooses from it: What is read is a supplied belief B. What chooses is one act a, or a sound Policy whose Scope (34) is what its actual executions reach. It uses the ASCII CommonResponse, not «共应». Whole file read.
+  - the exact law: commonResponse_judge_iff (85): CommonResponse (judgeProcess admissible) … (sees B) a ↔ ∀ w, B w → admissible w a. It is exact, and it is a one-step judgment. commonResponse_antitone (67) has premise narrower : ∀ s, B' s → B s, so a common response for B is one for B'. Scope.secures (41): a sound policy meets its goal on its whole scope.
+  - within one reading: Not found in what was read.
+  - two readings of one process: Only narrowing of belief: commonResponse_antitone (67) and Scope.antitone (61), each in one direction.
+  - when a reading tells apart, and what can still be kept: Not found in what was read.
+  - the lock as a case: Not named, and not found in what was read.
+
+### InquirySufficiency (readers' returns of 21 November; not checked)
+- *result records that name this place's file as a source* (computed; not a link): `becoming-spine-instances`, `metaethical-core-characterization`
+- *read of 21 November, a choice made from a reading, reader response-common-over-a-reading, as "InquirySufficiency.lean (inquiry-root/sufficiency): CommonResponse, Policy, Sound, Sufficient, sufficiency_iff_bounded_policy"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-a-choice-from-a-reading-2026-11-21/NOTE.md), [report](../read-a-choice-from-a-reading-2026-11-21/read-response-common-over-a-reading.md.txt)):
+  - what is read, and what chooses from it: The ASCII CommonResponse (line 102) says that one finite word response r completes the goal safely from every configuration in a belief set B. It is not «共应»: it has no reading relation and no closure. Policy (109) is a tree that branches on observations in Fin k, so it chooses with recall of what it observed along the run. Statements read.
+  - the exact law: sufficiency_iff_bounded_policy (200): Sufficient n B ↔ InhabitedBelief B ∧ ∃ policy, Within n policy ∧ Sound policy B. It is exact, with finitely many observation values and constructive finite_choice (148). It is a law over at most n inquiry steps ending in a common response, with safety at every prefix; it is not a law of keeping for ever.
+  - within one reading: Not found in what was read as a law about states alike in an observation; the conflict within a class appears in the periphery's InquiryChoice instead.
+  - two readings of one process: Not found in what was read.
+  - when a reading tells apart, and what can still be kept: After (94) carries belief forward through actual steps and filters it by the observation. No statement relates the step at which two states are told apart to what can still be kept, in what was read.
+  - the lock as a case: Not named, and not found in what was read.
 
 ### Interdependence (readers' returns of 20 November; not checked)
 - *table:* Interdependence, letters `NYPPPNPP`, standing core, told in chapter 2 §6 Closures within the map (beyond_gives_nothing, consumption_ends_with_feeders, unfed consumption); chapter 7 §4.3 (WithinFeeding); chapter 8 §7 (beyond_gives_nothing)
@@ -722,6 +797,13 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - forms changing while it continues: Built example kept_part_not_renewal (396): from one configuration one run renews and another consumes, and the sustaining formation ends. This is a difference of courses, not change while continuing.
   - from where an opening comes: Not applicable.
   - a way related to widening: Not found in what was read.
+- *read of 21 November, a choice made from a reading, reader keeping-through-what-is-registered, as "JointKeeping.lean: Keepable, Keepable.each, keepable_and_iff_of_kernel_left/right, KeptFor.guard_mono, KeptFor.each, ChoicePoint.no_rule_decides_joint, no_respecting_rule_decides_joint, keptFor_each_not_joint"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-a-choice-from-a-reading-2026-11-21/NOTE.md), [report](../read-a-choice-from-a-reading-2026-11-21/read-keeping-through-what-is-registered.md.txt)):
+  - what is read, and what chooses from it: Statements read. Keepable (91) means some single run from s stays within the guard for ever; there is no reading. The KeptFor laws carry Keeping's reading of steps. The 'rules' F in no_rule_decides_joint read the separate keepability answers, not states.
+  - the exact law: KeptFor.guard_mono (136): a wider guard is kept wherever a narrower one is, for n steps. KeptFor.each (146): kept for both guards gives kept for each. Keepable.each (115) holds in that direction only. keepable_and_iff_of_kernel_left/right (121, 127) are exact where one guard lies in the kernel; no KeptFor analogue of them was found in what was read.
+  - within one reading: Built case keptFor_each_not_joint (366): for every sense, the class {split} is kept for each guard at every n, and for both together not for 1 step, whatever moves are allowed. It concerns two guards, not states alike in a reading. Built cases no_rule_decides_joint (291) and no_respecting_rule_decides_joint (314): no F of the separate answers decides the joint one.
+  - two readings of one process: Not found in what was read.
+  - when a reading tells apart, and what can still be kept: Not found in what was read.
+  - the lock as a case: Not found in what was read.
 
 ### Keeping (readers' returns of 21 November; not checked)
 - *result records that name this place's file as a source* (computed; not a link): `finite-continuation-plans`, `joint-plan-composition`, `what-holding-for-a-reading-is-worth`, `when-to-inquire-and-when-to-respond`
@@ -733,6 +815,13 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - forms changing while it continues: Not found in what was read.
   - from where an opening comes: Not applicable.
   - a way related to widening: What a step registers decides how long a class is kept: keeping_matters (a built example) and KeptFor.finer (general). This concerns keeping, not widening.
+- *read of 21 November, a choice made from a reading, reader keeping-through-what-is-registered, as "Keeping.lean: Seen, Usable, KeptFor, Plan, Plan.Keeps, keptFor_iff_plan, plans_iff_choice, KeptFor.mono/shorter/finer, keptFor_of_closed, Certificate.keptFor, Kernel.keptFor, Matching.keeping_matters"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-a-choice-from-a-reading-2026-11-21/NOTE.md), [report](../read-a-choice-from-a-reading-2026-11-21/read-keeping-through-what-is-registered.md.txt)):
+  - what is read, and what chooses from it: Statements read. The reading is `sense : S → A → S → O`, a map of steps (where it began, the move, where it ended), not of states. A class of starts B is handed in, and Seen (73) is what can stand after move a from B where the step kept value o. What chooses is a Plan (100): a first move and, for each value kept, a further plan, so a tree with recall of every value kept so far. The first move must be usable from all of B (Usable 84).
+  - the exact law: KeptFor (90) is for n steps, with recall, and counts every successor (∀ o, Seen gathers all t). keptFor_iff_plan (182): for Fin k values, KeptFor n B ↔ some plan keeps B, exact. keptFor_iff_plan_of_choice (176) gives the same given ∀ n, ChoiceOver O (Plan A O n), and plans_iff_choice (247) shows that choice is exactly what is needed, over every process. keptFor_of_closed (311), from a family within the guard and closed under a usable move whatever is kept, gives KeptFor at every n; it is sufficient only, and is not one infinite plan (record does_not_show). Certificate.keptFor (322) and Kernel.keptFor (333) need one move usable throughout, so no reading does work there.
+  - within one reading: The definition asks for one move usable from the whole class. The built case Matching.keepsNothing_not_kept (425): with the step keeping nothing, the two starts are not kept for 2 steps. That each start alone is kept is not stated (not found in what was read).
+  - two readings of one process: KeptFor.finer (288): given forget : F → O with ∀ s a t, forget (fine s a t) = sense s a t, KeptFor P sense guard allowed n B → KeptFor P fine guard allowed n B, the moves unchanged. Direction: coarse kept implies fine kept. What a finer reading keeps more is shown only in the built case Matching.keeping_matters (435), keepsBit kept for 2 steps and keepsNothing not. That case does not cite finer. No exact law of what more was found in what was read.
+  - when a reading tells apart, and what can still be kept: Not found in what was read. In Matching the bit is kept at the first step (keepsBit 385) and needed by the second move, but no statement relates that step to what can be kept after it.
+  - the lock as a case: Not found in what was read. No lock module imports or names KeptFor (grep of the seven lock modules). Keeping supplies a process with moves, a reading of steps and a class of starts; no statement puts the lock's models (Pace.turn on a supplied schedule) into that form.
 
 ### KeepingWidening (readers' returns of 21 November; not checked)
 - *result records that name this place's file as a source* (computed; not a link): `degeneration-from-a-horizon`, `what-keeping-widening-needs`
@@ -744,6 +833,17 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - forms changing while it continues: BeginsAlong.carries_kind_iff 921 (refl Q, supported giver): a beginning within a kind <-> carrying renewal at (activity, kind); 'the whole lineage goes on while a line of a kind begins'. begins_late_of_keepsOpening 1015 (Balances, Acting, Dependent, Unloosened, carries, opens: KeepsOpening R W.level T; conclusion notnot a beginning after every step). Built examples: ClosedCycle.generation_without_widening 1629; KindRelay (both at the kind grain; by name it does not, and returns with period two). Not derived: growth by kinds not given in advance; requirements that tighten.
   - from where an opening comes: passes_every_bound 287 and rises_late 299 (keeps by name, RequiresWithin cs). from_rest_or_open 310 (plus Gainless, Distinct cs): net giver from the rest or family not closed, at arbitrarily late steps. open_late 320 (plus BalancesOn cs from T0): not closed at arbitrarily late steps. Under upkeep: more 365, replenishment_unbounded 376, renewers_unbounded 387 (TakesWhileSupported, BalancesOn, Capacity). Premises shown needed by witnesses named in the docstring (Loosening, OpeningChain, ClosedCycle, Source; not opened).
   - a way related to widening: Relates readings of continuation (by name, along passings, within kind) to whether keeping widening can hold; not a way of selecting.
+
+### LabelledRoles (readers' returns of 21 November; not checked)
+- *result records that name this place's file as a source* (computed; not a link): `becoming-finite-horizon`, `life-as-condition-of-life`, `reserve-defers-ending`, `testing-within-couplings`, `wisdom-root-without-axiom`
+- *dynamics in the atlas that name one of those records* (computed; not a link): `co-ending-along-dependence`, `reserve-defers-ending`
+- *read of 21 November, a choice made from a reading, reader response-common-over-a-reading, as "LabelledRoles.lean: Web.class_judge_iff, class_judge_later, class_judge_widen, Flow.class_judge_beyond, Renewable.finite_reading_withholds_renewal, no_exact_finite_reading"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-a-choice-from-a-reading-2026-11-21/NOTE.md), [report](../read-a-choice-from-a-reading-2026-11-21/read-response-common-over-a-reading.md.txt)):
+  - what is read, and what chooses from it: What is read is the class of histories alike with the actual one through the formation's couplings up to step t (sees (W.ClassThrough obs g l t)). What chooses is one act a, judged by the ASCII CommonResponse. ClassThrough itself was not opened.
+  - the exact law: class_judge_iff (111): a common response for the class ↔ ∀ l', W.AlikeThroughUpTo obs g l l' t → admissible l' a; exact, one judgment. Flow.class_judge_beyond (143): given WithheldLevels part W l₀, balance on coupled conditions, the part beyond the coupling closure, g within it, and a common response, the act is admissible under both W.level and l₀.
+  - within one reading: Not found in what was read.
+  - two readings of one process: class_judge_widen (125): with larger : obs ⊆ obs', a common response is kept. This is one direction only.
+  - when a reading tells apart, and what can still be kept: class_judge_later (117): from t ≤ t', a common response at t stays one at t' (monotone in time). Renewable.no_exact_finite_reading (173), on the named model, says no reading decided by the first h steps is exactly the renewing classification. This is a reading, not a chosen rule. The step at which a reading tells two apart, related to what can be kept: not found in what was read.
+  - the lock as a case: It names W.level, a web's levels, as the levels a judgment is admissible under, not as a running-down. It does not name the lock or a share.
 
 ### Learnable (readers' returns of 21 November; not checked)
 - *result records that name this place's file as a source* (computed; not a link): `learnable-through-a-map`
@@ -850,6 +950,13 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - cost and keeping: Not read beyond this.
   - a registering lost: Not read.
   - tied to what it rests on: The level is the stock, read only through needs met. A running down that crosses no need makes no difference to the way (ways_alike): the gap the idea names, stated as an absence of registering.
+- *read of 21 November, a choice made from a reading, reader the-lock-side, as "LineOnAStock.lean: opening account 1-127, after 138, taken 143, left 146, Goes 150, step 153, net 158, Holds 188, Alike 418, alike_iff 493, ways_alike 547, born_alike 587, falls_to_unmet (around 1057), unending_iff_holds 1239"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-a-choice-from-a-reading-2026-11-21/NOTE.md), [report](../read-a-choice-from-a-reading-2026-11-21/read-the-lock-side.md.txt)):
+  - what is read, and what chooses from it: The way responds to the level only through which needs it meets (`after` 138; `Alike` 418). The level responds to the way only through what it takes (`left` 146). Nothing chooses: `step` (153) is a function, `net` (158) is Law.stepWhile of it (a relation with at most one successor), and need, use, kids and giving are handed in. Statements read.
+  - the exact law: unending_iff_holds (1239), premises even, some, down, needs, nothing, high, along: «不穷» (net …) «一» (w,x) ↔ ∃ k, (∀ j<k, Goes at j) ∧ Holds at k. It is of one start on a determined net. No law of keeping by a choice was found in what was read.
+  - within one reading: ways_alike (547) holds in one direction: if for all j<n the two levels meet the same needs of the first course's way, then the ways are equal for all j≤n. It is of two courses from one way, with two givings, uses and start levels. HigherStartEnds is a built example, known from the account only. A class kept member by member but by no one choice: not found in what was read.
+  - two readings of one process: alike_iff (493) is exact under `leaves`: Alike ↔ the same needs met in w. AlikeFiner (account only, a built example): levels alike that meet different needs. What a finer reading keeps: not found in what was read.
+  - when a reading tells apart, and what can still be kept: ways_alike dates when a difference in the ways can arrive: only after a step at which the levels met different needs. falls_to_unmet gives an unmet-need step n ≤ hi+1, and its docstring calls this a going-on that draws down what it rests on 'while nothing in it yet differs (a reading)'. No relation to what can still be kept: not found in what was read.
+  - the lock as a case: Not a case of 2 to 5. The account says 'a lock on these units are not here', and no CommonResponse, Keeping, GuardHorizon, Viability or JointKeeping name occurs. A state type exists (List U × Nat) and so do guards (Goes, Holds). Missing: moves, a sense or reading as a «际» on states, allowed, and a class of starts B.
 
 ### Lock (readers' returns of 21 November; not checked)
 - *read of 21 November, a future opening or closing, reader courses-still-open, as "Lock's laws of closing: PoolFromCourse.closed_stays_closed, Borne.shapers_left; ClosedCapture.lock_outlives_loss, turned_by_loss; DrawnBeyond.breaks_beyond, favours_breaking_beyond"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-a-future-2026-11-21/NOTE.md), [report](../read-a-future-2026-11-21/read-courses-still-open.md.txt)):
@@ -870,6 +977,16 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - cost and keeping: From the account: Run.whole_unheld_of_never_cycles (l453). Moves that never cycle need a whole no list holds; 'Novelty in what is done needs openness or growth.'
   - a registering lost: lumped_const_iff (l217): through the reading that tells nothing apart, only a constant move is formed. No course of losing a reading found.
   - tied to what it rests on: None found.
+
+### MoveOutcomeProcesses (readers' returns of 21 November; not checked)
+- *result records that name this place's file as a source* (computed; not a link): `one-move-covering`
+- *read of 21 November, a choice made from a reading, reader response-common-over-a-reading, as "MoveOutcomeProcesses.lean: common_completes, Ensures, summary_ensures_iff"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-a-choice-from-a-reading-2026-11-21/NOTE.md), [report](../read-a-choice-from-a-reading-2026-11-21/read-response-common-over-a-reading.md.txt)):
+  - what is read, and what chooses from it: common_completes (184) uses the ASCII CommonResponse for a belief. The rest of what was read is about one move from a known configuration s; nothing in it is read off a reading of the start. Lines 1-230 read.
+  - the exact law: common_completes (184): CommonResponse … belief r together with belief s gives Completes P safe goal s (response r); it only unfolds the definition. summary_ensures_iff (176): a goal on a summary f of the outcomes is ensured ↔ its pullback is; a one-move law.
+  - within one reading: Not found in what was read.
+  - two readings of one process: Not found in what was read; covers_iff (95) compares two processes' moves, not two readings.
+  - when a reading tells apart, and what can still be kept: Not found in what was read.
+  - the lock as a case: Not named. The docstring says summary_hides_loss exists; I did not read it.
 
 ### ObservationChange (readers' returns of 21 November; not checked)
 - *result records that name this place's file as a source* (computed; not a link): `becoming-spine-instances`
@@ -911,6 +1028,13 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - cost and keeping: rebuilt_starved (l175): from one unit, rebuilding leaves (0,true,v) uncorrectable. opens_after_replenishing (l182). opens_by_support (l189): the reading unchanged, the gain is in executability.
   - a registering lost: unlinked_uncorrectable (l138): link off, no configuration correctable. starved_uncorrectable (l157): link on and no stock, none is.
   - tied to what it rests on: Only through executability: opening needs a stock unit (linked_correctable l146 at n+1). No statement makes the stock's fall the cause of the revision.
+- *read of 21 November, a choice made from a reading, reader keeping-through-what-is-registered, as "OpenedCorrection.lean: Correctable, correctable_iff, OpensAlong, finer_keeps, coarser_opens_nothing, widened_correctable, Linked.unlinked_uncorrectable, Linked.opens, Linked.rebuilt_starved, Linked.opens_after_replenishing, Linked.opens_by_support"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-a-choice-from-a-reading-2026-11-21/NOTE.md), [report](../read-a-choice-from-a-reading-2026-11-21/read-keeping-through-what-is-registered.md.txt)):
+  - what is read, and what chooses from it: Statements read. A reading in force at each configuration, reading : X → S → O, of situations. Correctable (74) is GuardHorizon.UniformPolicy (reading x) (acceptable s a ∧ executable x a): one rule from the present reading, at one configuration, with no horizon or guard. The module account says uniform-policy existence is not what a formation chooses.
+  - the exact law: correctable_iff (80): given ChoiceOver O A, Correctable ↔ ∀ o, ∃ a, ∀ s, reading x s = o → acceptable s a ∧ executable x a. Exact, one step. OpensAlong (89): a trace from x to x', not correctable at x and correctable at x', with one acceptability.
+  - within one reading: Built case Linked.unlinked_uncorrectable (138): with the link off, the two situations are read alike, need different acts, and no configuration is correctable. That each situation alone has an act is not stated.
+  - two readings of one process: finer_keeps (95): with forget : O → O, forget (reading x' s) = reading x s, and executability kept, correctability at x carries to x'; coarse implies fine. coarser_opens_nothing (107) is the converse form. What more a finer reading gives appears only in the built Linked.opens (168).
+  - when a reading tells apart, and what can still be kept: Nearest is the built case Linked.rebuilt_starved (175): the rebuild that revises the reading consumes the last unit, and the configuration reached is uncorrectable; opens_after_replenishing (182) opens it after one more step. No law relates the step of revision to what can be kept after it (not found in what was read).
+  - the lock as a case: Not found in what was read. Chapter 8's table marks 'Revision of the reading' (finer_keeps) as connected to RuleCapture.favouring_locks. That is a telling, not a theorem.
 
 ### OpenFutureRevision (readers' returns of 21 November; not checked)
 - *result records that name this place's file as a source* (computed; not a link): `open-form-realization-under-revision`
@@ -967,6 +1091,13 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - cost and keeping: borne_by_others_raises (536): borne by the others, the lock is not left (others_locked 782). window_order_kept (465, monotonicity premises in the report): a share not lower draws no less on what lies beyond, and its readers are gone no later. Built example Drained.strong_undone (660).
   - a registering lost: stands_not_readmitted (271), premise Accrues. closed_stays_closed (222), premises Raises (liftShare P), ReadsShare, upward favouring, ReadsThroughPresent, NotReadmitted, none present and locked at r. Then none present again and locked at every later step. window_removed_unregistered (332): Accrues and K ≤ loss; the removed readers' reading changes nothing. window_never_read (295): K ≤ N. Not being readmitted is a premise or follows from Accrues.
   - tied to what it rests on: The readers' standing hangs on the loss. Not derived: 'that readers of what lies beyond a share are removed by what they read, or that any drain grows with a share'.
+- *read of 21 November, a choice made from a reading, reader the-lock-side, as "PoolFromCourse.lean: opening account 1-109, ReadsThroughPresent 119, NotReadmitted 123, closed_stays_closed 222, windowRead 252, Stands"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-a-choice-from-a-reading-2026-11-21/NOTE.md), [report](../read-a-choice-from-a-reading-2026-11-21/read-the-lock-side.md.txt)):
+  - what is read, and what chooses from it: Where no reader of the beyond is present, the rule read is the share-readers' (ReadsThroughPresent 119). windowRead (252) reads the loss by hL inside [N,K) and the share by hA elsewhere. Who reads is a predicate `present`. The course is determined. The account lists 'an optimizer choosing to remove them' as not derived.
+  - the exact law: closed_stays_closed (222), premises raises (on liftShare P), monotone, upper, through, kept (NotReadmitted), absent at r, Locked at r: for every k, absent and Locked at r+k, and share and rule not below those at r.
+  - within one reading: Not found in what was read.
+  - two readings of one process: Not found in what was read.
+  - when a reading tells apart, and what can still be kept: From the account only: window_never_read where K ≤ N, and window_order_kept. Not read as statements.
+  - the lock as a case: No named notion is used. The window reading windowRead is what TurningInTime's window law takes over.
 
 ### PopulationCorrection (readers' returns of 20 November; not checked)
 - *table:* PopulationCorrection, letters `YYYYYYYY`, standing outside
@@ -1105,6 +1236,13 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - cost and keeping: Not stated as a cost. Built example FourReaders: near_inTime (1180), mid_atThePoint (1188), dweller_late (1197), listener_late (1362).
   - a registering lost: too_late_of_own (743), premises: what is kept includes every member's admission at every step, and l' admits every member at every step. Then the courses are not readable in time and no family read off the group reads them in time: the loss is read only past its point of no return. NoReturnAt.recoverable_iff (607).
   - tied to what it rests on: readableInTime_iff (661), premises FirstApart T and NoReturnAt N: readable in time ↔ T < N. Also too_late_of_unreached (699), too_late_within_margin (719), too_late_of_alike (678).
+- *read of 21 November, a choice made from a reading, reader the-lock-side, as "ReadOffInTime.lean: opening account 1-130, FirstApart 137, TellsApartAt 143, TellsApartAt.not_before 184, Recoverable 591, NoReturnAt 595, ReadableInTime 647, ReadsInTime 653, readableInTime_iff 661, ReadsInTime.readable 669, too_late_of_alike 678, too_late_of_unreached 699, too_late_within_margin 719, too_late_of_own 743"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-a-choice-from-a-reading-2026-11-21/NOTE.md), [report](../read-a-choice-from-a-reading-2026-11-21/read-the-lock-side.md.txt)):
+  - what is read, and what chooses from it: Members' admission W.Admits (l t) t g on two given level courses is what selections read off continuations register (SelectsThroughAll thresholdOnly). feasible is a supplied predicate on courses. Recoverable (591) asks for some feasible course agreeing so far that keeps: a whole course exists, not a choice made from a reading. No process and no moves.
+  - the exact law: readableInTime_iff (661), premises FirstApart group l l' T and NoReturnAt feasible keeps l N: ReadableInTime ↔ T < N. too_late_of_alike (678), premises admission alike up to D and ¬Recoverable at D: not readable in time, and no family read off continuations reads in time. too_late_of_unreached (699), too_late_within_margin (719) and too_late_of_own (743) have the same conclusion under their own premises.
+  - within one reading: Not found in what was read. The laws are of two courses and families of selections, not of a class of starts.
+  - two readings of one process: Not found in what was read.
+  - when a reading tells apart, and what can still be kept: This is the place for it. FirstApart and TellsApartAt date when a reading can first tell two courses apart (not_before 184), and readableInTime_iff relates that step exactly to the point of no return under its two premises.
+  - the lock as a case: No named notion is used. Its Recoverable and NoReturnAt are used by TurningInTime's section 7, but its selection side is not instantiated there. Consistent with the note: the general laws take any feasible courses and any keeps.
 
 ### Readout (readers' returns of 21 November; not checked)
 - *result records that name this place's file as a source* (computed; not a link): `binding-preserving-substitution`, `control-coherence-loss`, `derived-history-law-exactness`, `fallible-witness-diagnosability`, `joint-correlation-reduced-dynamics`, `risk-certificate-outcome-distinction`, `where-a-move-is-formed`
@@ -1280,6 +1418,18 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: verdict_not_program (l488) and develop_course_removed (l695): removing the program keeps the verdicts and loses the answer.
   - tied to what it rests on: Only as cost (stock and parts); what is learned is not tied to it.
 
+### RuleCapture (readers' returns of 21 November; not checked)
+- *table:* RuleCapture, letters `YNNNNYPY`, standing core, told in chapter 2 §9 (named also in §10 and §11); chapter 7 §6; chapter 8 §7
+- *result records that name this place's file as a source* (computed; not a link): `a-reading-against-the-share-does-not-ratchet`, `capture-by-counted-choices`, `capture-through-the-rule`, `closed-capture`, `loss-read-in-time-by-the-others`, `readers-drawn-from-the-selected`, `shaping-read-by-readers-drawn-from-the-selected`, `shaping-the-rule-selected-by-what-comes-back`, `two-rules-lock-together`
+- *dynamics in the atlas that name one of those records* (computed; not a link): `a-reading-against-the-share-does-not-ratchet`, `capture-by-counted-choices`, `capture-through-the-rule`, `closed-capture`, `loss-read-in-time-by-the-others`, `readers-drawn-from-the-selected`, `shaping-read-by-readers-drawn-from-the-selected`, `shaping-the-rule-selected-by-what-comes-back`, `threshold-reading-read-late-alternates`
+- *read of 21 November, a choice made from a reading, reader the-lock-side, as "RuleCapture.lean: opening account 1-102, Raises 145, ReadsShare 150, Locked 160, turn_locked 169, locked_stays 182"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-a-choice-from-a-reading-2026-11-21/NOTE.md), [report](../read-a-choice-from-a-reading-2026-11-21/read-the-lock-side.md.txt)):
+  - what is read, and what chooses from it: The rule read is h : S → R → R at reading steps of a fixed schedule, on the determined course Pace.paced f h reads c. ReadsShare (150) makes the rule read monotone in the share alone. No moves. The account says 'every reading step sets the value again from the share'.
+  - the exact law: turn_locked (169), premises raises, monotone, upper: every turn keeps Locked and lowers neither share nor rule. locked_stays (182): Locked at t gives Locked at t+k for every k. uniform_locks (account only) is over all starts of a determined course.
+  - within one reading: Not found in what was read. Alternating and Reversed are built examples (account).
+  - two readings of one process: Not found in what was read.
+  - when a reading tells apart, and what can still be kept: Not found in what was read.
+  - the lock as a case: This is the lock's own definition (Locked 160) on a two-level course with no moves. It uses none of the named notions, though CommonResponse and Viability are in its transitive import closure through Pace → IdentificationRuns → Courses → Lasting → Viability.
+
 ### RuleRebuilding (readers' returns of 20 November; not checked)
 - *table:* RuleRebuilding, letters `YYPPPYYY`, standing core, told in chapter 5 §12 (One kind of institution)
 - *result records that name this place's file as a source* (computed; not a link): `a-rule-rebuilt-from-the-members-it-limits`
@@ -1291,6 +1441,18 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - general laws concluding going on: «恒取不逾生则存» 493 (hc : Closed r c F; ht : ∀ y, F y → take y = A; hA : A ≤ r.renewal; hx : F x; hL : 1 ≤ x.level). «稳者恒持当且仅当在带» 897 and «隙之律» 1772 (exact). «外授之稳同带» 922 (ho : r.source = .outside; hl : r.teachingAge < r.tenure; hL : 1 ≤ L). «域闭» 1197 with «域中储不减» 1203, within_run 1573, «域中任满皆新» 1582 (hf : Fits r P Q = source members ∧ teachingAge < tenure ∧ 1 ≤ P ∧ P ≤ Q ∧ (Q + leak r P) * tenure ≤ renewal; hon : entrants on offer at every step; hrev : every revision in [P, Q]; hx : Within r P Q x). «无持而门开不逾生则存» 1255 (hs : source members ∨ none; hon; hA : untaught * tenure ≤ renewal; hx : NoHolder x; hlen; he; hL). «稳开二试» 1368 (hm; hl; hq : 1 ≤ q; hL : 1 ≤ L): Goes (steady) ↔ (q + leak r q) * tenure ≤ renewal, Goes (nobody) ↔ untaught * tenure ≤ renewal, and each otherwise EndsUp.
   - exact two-sided law: abbrev Band (r : Rule) (q : Nat) : Prop := r.teachingAge < r.tenure ∧ 1 ≤ q ∧ (q + leak r q) * r.tenure ≤ r.renewal (259). theorem «稳者恒持当且仅当在带» {r : Rule} (hm : r.source = .members) {q L : Nat} (hL : 1 ≤ L) : (∀ k, Held (run r always k (steady r q L))) ↔ Band r q (897). theorem «隙之律» {r : Rule} (hm : r.source = .members) (hs : r.tenure = r.teachingAge + 1) {q L : Nat} (hq : 1 ≤ q) (hL : 1 ≤ L) {b : List Bool} (hb : b.length = r.tenure) (hk : 1 ≤ heldCount b) : (∀ n, Held (run r always n (strands r q b L))) ↔ heldCount b * (q + (r.untaught - r.strength * q)) + emptyCount b * r.untaught ≤ r.renewal (1772). leak r q := r.untaught - r.strength * q * (r.tenure - r.teachingAge) (246); always 234 = entrants on offer at every step, no revision. The other side of each is general too: steady_ends 872, «隙过生持至尽» 1792. The opening account: 'This is the steady state's law and not the rule's.'
   - what is handed in: The renewal g (a number, nothing gives it); the count f who would come; entrants on offer at every step; the door's strength c; the teaching as a formula (a full quota wherever any teacher stands); the ending clause ('a modelling choice'); for the exact laws the starting state (steady, strands) and the course with no revision. Q5: the take exceeding level and renewal ends everything, closed under the net («尽而不复» 457); holders and others leave alike; the rule can be held to the last state («隙过生持至尽» 1792; built «改而成隙则尽» 1885); passing fails where teaching does not fit a tenure («不及任则持尽» 658) or the quota is nothing («额零则持尽» 677); no holder stays no holder («无持者不复» 698). Loss on one that did not cause it: not found in what was read. Q6: not found; a cohort enters at the quota, there is no share.
+
+### RuleShaping (readers' returns of 21 November; not checked)
+- *table:* RuleShaping, letters `YNPNYYYY`, standing core, told in chapter 2 §9; chapter 7 §6; named once in chapter 4 §5
+- *result records that name this place's file as a source* (computed; not a link): `capture-by-counted-choices`, `loss-read-in-time-by-the-others`, `shaping-read-by-readers-drawn-from-the-selected`, `shaping-selected-among-groups`, `shaping-the-rule-selected-by-what-comes-back`
+- *dynamics in the atlas that name one of those records* (computed; not a link): `capture-by-counted-choices`, `loss-read-in-time-by-the-others`, `shaping-read-by-readers-drawn-from-the-selected`, `shaping-the-rule-selected-by-what-comes-back`
+- *read of 21 November, a choice made from a reading, reader the-lock-side, as "RuleShaping.lean: opening account 1-120, shaped 150, favours_iff 160, byBack 426, byBack_reads_iff, covering_locks, thresholdBack 458, threshold_from_above"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-a-choice-from-a-reading-2026-11-21/NOTE.md), [report](../read-a-choice-from-a-reading-2026-11-21/read-the-lock-side.md.txt)):
+  - what is read, and what chooses from it: shaped a s p c (150) is the counts ⟨a+s+p, a+c+p⟩. byBack (426) reads the rule from the share alone, through σ x, ignoring the rule in force. thresholdBack (458) is hi where the shapers are at least as many as the others, else lo. The course is a determined paced course.
+  - the exact law: favours_iff (160): favours (shaped a s p c pos) ↔ c ≤ s. byBack_reads_iff: ReadsShare ↔ σ monotone. covering_locks: under mono, covers (c ≤ σ x for all x) and start (c ≤ s), the share falls at no step and the course is Locked after each reading step. threshold_from_above: under lo ≤ hi, c ≤ hi and favours x, the share is never below x's under every schedule.
+  - within one reading: Not found in what was read.
+  - two readings of one process: Not found in what was read.
+  - when a reading tells apart, and what can still be kept: Not found in what was read, beyond the stretch laws in the account (stretch_iff, timing witnesses), whose statements were not read.
+  - the lock as a case: No named notion is used. The selection is set from the share through σ, and there is no process with moves.
 
 ### ScratchMixedWay (no read; a check in scratch)
 - *same statement as, up to unfolding:* `Becoming.ScratchMixedWay.mixed_turns_iff`, line 439 of `_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/second-way-2026-11-17/ScratchMixedWay.lean.txt` has the same statement as `Becoming.ScratchUnitsTurn.mixed_turns_iff_case`, line 1174 of `_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchUnitsTurn.lean.txt`, by the check `mixed_same` (line 19 of [`ScratchUnitsTurnCheck.lean.txt`](../scratch-lean-2026-11-21/ScratchUnitsTurnCheck.lean.txt); [note](../scratch-lean-2026-11-21/NOTE.md)). Filed build log of the check's module: [`build-ScratchUnitsTurnCheck.log.txt`](../scratch-lean-2026-11-21/build-ScratchUnitsTurnCheck.log.txt): exit 0; axiom report empty (2 theorems audited). In the package: no theorem named `mixed_turns_iff_case` found under the package at this run. (a check filed as scratch text, outside the package, written to close by rfl: where Lean accepted it (see the filed log on this line), the two statements are the same up to unfolding, that is, definitionally equal. The script read the text and the filed log and ran no Lean; nothing here checks that the text filed, or the file named for the other side, is the text that was built.)
@@ -1371,6 +1533,13 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - cost and keeping: The use H2 of the kept kind against the regime's giving; 'the overdraw of the course as it was stays given'. The correction is kept by the premises lowStays and lowRule.
   - a registering lost: Not in these laws (the lock belongs to the readings group).
   - tied to what it rests on: Yes: the stock's level entering [N,K) sets the rule or share, and whether the line goes on depends on where that first read falls relative to H2+y2. Which levels are read is handed in.
+- *read of 21 November, a choice made from a reading, reader the-lock-side, as "TurningInTime.lean: opening account 1-330, windowRegroup 1265, windowAfter 1271, windowAlone 1279, locked_ends_rising 1440, count_rises 1473, window_corrected 1589, locked_turns_in_time_on_window_iff 1633, locked_at_class (around 1248), section 7 account 1914-1935"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-a-choice-from-a-reading-2026-11-21/NOTE.md), [report](../read-a-choice-from-a-reading-2026-11-21/read-the-lock-side.md.txt)):
+  - what is read, and what chooses from it: Marks on levels and AloneOutside are given. On the window the rule is read by hL from (share, level) in [N,K) and by hA from the share elsewhere (windowAfter 1271 with PoolFromCourse.windowRead 252). hL, hA, fA, giving, use and reads are handed in. There are no moves: the step is pair cut by stepWhile.
+  - the exact law: locked_turns_in_time_on_window_iff (1633), premises raises, monotone, upper, every, corrects, uses, least, nothing, short, meets, keeps, needs, within, pos, low, covers, safe, short₁, locked, draws, below, high: the net never ends from (w,x) ↔ ∃ T, the first step of the course as it was at a level in [N,K) with the need met before and at T, has its level at T+1 ≥ H₂+y₂. It holds for every hL meeting corrects; hL is absent from the right side. locked_ends_rising (1440), premises raises, monotone, upper, outside, needs, un, nothing, keeps, high, locked, more: the line ends within hi+1 steps, still Locked.
+  - within one reading: lockedAlike (GrammarRegularity 287) is a «际» of being Locked or not, and locked_at_class gives the root's «本类至终有常» at a Locked member. That is constancy at a class, not keeping by a choice. The Three.* courses are built examples. A class kept by no one choice: not found in what was read.
+  - two readings of one process: Not found in what was read.
+  - when a reading tells apart, and what can still be kept: Section 7 (account 1914-1935) joins RegimeMargin's level H+y to ReadOffInTime's NoReturnAt for any non-rising level course. turns_in_time_iff_before (account only): the line never ends ↔ T+1 < N. The feasible courses are 'turns to one standing use; other continuations are not considered'. The account (290-293) says the selection side of ReadOffInTime is 'not instantiated: the pair has no web.'
+  - the lock as a case: None of CommonResponse, KeptFor, Plan, UniformPolicy, Kernel or Keepable is imported or used here. The state type (A × R × Nat) × Nat exists. The closest thing to a choice is the handed-in hL, which is a parameter and not a move. Missing: a Process with moves (for example in R), a sense or reading as a «际» on these states, allowed, and a class of starts (only Locked plus `below`, pointwise, exists).
 
 ### Unread (readers' returns of 21 November; not checked)
 - *result records that name this place's file as a source* (computed; not a link): `what-readings-fix-of-the-unread`, `when-complying-when-read-is-best`
@@ -1403,6 +1572,20 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - forms changing while it continues: Not found in what was read.
   - from where an opening comes: Not applicable.
   - a way related to widening: Not found in what was read. The docstring: 'nothing here says that some certificate exists'.
+- *read of 21 November, a choice made from a reading, reader keeping-through-what-is-registered, as "Viability.lean: Kernel, kernel_iff_held, kernel_iff_certificate, kernel_step_iff"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-a-choice-from-a-reading-2026-11-21/NOTE.md), [report](../read-a-choice-from-a-reading-2026-11-21/read-keeping-through-what-is-registered.md.txt)):
+  - what is read, and what chooses from it: Statements read (lines 1 to 110). Nothing is read and nothing chooses: Kernel (55) counts every course from s.
+  - the exact law: kernel_iff_held (65): Kernel P guard s ↔ «承» («逆» («所闭» (Steps P))) guard s. In plain English: no course from s leaves the guard exactly where the guard holds throughout what the closure of the steps reaches from s. Every course, for ever, exact. kernel_iff_certificate (85) and kernel_step_iff (98) are also exact. Kernel.keptFor (Keeping 333) carries the kernel into KeptFor, given one move usable throughout it.
+  - within one reading: Not applicable: no reading. Not found in what was read.
+  - two readings of one process: Not found in what was read.
+  - when a reading tells apart, and what can still be kept: Not found in what was read.
+  - the lock as a case: Not found in what was read. The seven lock modules do not name Viability or Kernel (grep).
+- *read of 21 November, a choice made from a reading, reader response-common-over-a-reading, as "Viability.lean: Kernel, kernel_iff_held, Certificate.kernel, kernel_certificate, kernel_step_iff"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-a-choice-from-a-reading-2026-11-21/NOTE.md), [report](../read-a-choice-from-a-reading-2026-11-21/read-response-common-over-a-reading.md.txt)):
+  - what is read, and what chooses from it: Nothing is read and no move is chosen. Kernel (55) is ∀ t, Reach P s t → guard t, over every course. It uses only «共应»'s grammar laws. Lines 1-110 read.
+  - the exact law: kernel_iff_held (65): Kernel P guard s ↔ «承»(«逆»(«所闭»(Steps P))) guard s. Certificate.kernel (72) and kernel_certificate (78) are proved from «闭在内则在所闭之承», «所闭之承在内» and «所闭之承闭». kernel_step_iff (98) is exact for one step, and the kernel holds for every course. This is the same grammar law as «共应», with the steps standing where the reading stands.
+  - within one reading: Not found in what was read.
+  - two readings of one process: Not found in what was read; Kernel.mono (110) compares guards, not readings.
+  - when a reading tells apart, and what can still be kept: Not found in what was read.
+  - the lock as a case: Not named. No share, stock or level was found.
 
 ### WayOfUnits (no read; in the table; a check in scratch)
 - *table:* WayOfUnits, letters `NYNPPNYY`, standing core, told in chapter 2 §11 (Turning in time): the theorem 'A way of units' and the witness With / Against

@@ -1,0 +1,60 @@
+# What the Lean already states of a choice made from a reading, set against the lock: the questions, fixed before any reader ran
+
+*AI-written (Claude Fable, board row DJ), 21 November 2026, 19:01 WIB, before any reader ran. Frozen: nothing above the line "After" is changed later. This is a read. No statement is proposed by it and no Lean is written. Reading, class, rule, choice are working words; the Lean's own names are given where a reader finds them.*
+
+## What we are doing
+
+One map of how things come to be, go on, change and end, on which two ways of going on are placed with respect to each other ([the direction page](../../../../../_process/DIRECTION.md), "Where we are heading"). The session's understanding, which Ren called good and which no proof states: the two ways differ in what makes a difference to each. In the one, what it rests on does not reach how it selects until something is lost. In the other it does, early enough.
+
+Two scratch modules of this afternoon ended as dictionaries, and left one thing in view (the study `no-return-2026-11-21`): the lock's point of no return, as the package states it, is about one turn made from a known course; a way that chooses at every step from what it registers is not what it is about. A note of 20 November (`reads-2026-11-20`) had already found, on paper, that on the courses then built "no statement is over a choice among readings, or over a class of starts", and one of its readers drew that the direction's question needs a class of starts: from one known start on a determined process a reading does no work.
+
+The Lean has laws of exactly that kind elsewhere, which no read of this week set against the direction: chapter 3 tells "a response common over a reading" and "when to inquire and when to respond"; `Keeping` has a class kept for a number of steps through what the steps keep, with plans; `GuardHorizon` has a policy uniform over a reading. `CommonResponse` is in no row of the table of 20 November and in none of the three reads of the listing of places.
+
+## The choice, set against the direction
+
+A new statement now would be a fourth island. If the direction's sentence is "what it rests on makes a difference to how it selects, early enough", then the Lean's laws of when a choice made from a reading meets what is asked are where the second half of that sentence is already stated, and the lock's laws are where the first half is. Before anything is proposed, this read asks what those laws state exactly, on what carriers, and whether the lock is, or could be with nothing new, a case of them. This is the writer's reading of the direction, not Ren's word.
+
+## What the writer holds from earlier records, not from a fresh read
+
+- The record `when-to-inquire-and-when-to-respond`: "Given a choice over the readings, good moves chosen from readings exist exactly where each reading has one move good at every configuration giving it."
+- `Keeping.KeptFor` (line 90): a class kept for `n` steps where the guard holds throughout it and some move usable from the whole class leaves, whatever value the step keeps, a class kept for one step fewer; `keptFor_iff_plan`; `KeptFor.finer`; the built case `Matching.keeping_matters` (a reader's return of 21 November, unchecked).
+- `ReadOffInTime.readableInTime_iff`: a selection read off continuation reads a loss in time exactly where the first step apart comes before the point of no return.
+- `LineOnAStock.ways_alike`: two courses that differ in nothing that makes a difference to the selection are selected alike; the window law of the turn (`locked_turns_in_time_on_window_iff`) with the reading handed in.
+- The read of this afternoon on how a registering comes to be: no reading changes itself with nothing handed in.
+
+## The questions, the same for every place
+
+For each place, from statements and docstrings (a proof only where a statement leaves a question open), with the declaration's name and line for every answer and every premise of every law written out:
+
+1. **What is read, of what, and what chooses from it?** A reading of a state, of a step, of a history; a rule, a plan with recall, a response. What is handed in.
+2. **The exact law.** When does a choice made from the reading meet or keep what is asked: at one step, for a number of steps, for ever? In full, with premises.
+3. **Within one reading.** Is it stated that each of several states alike in what is read can be kept, and no one choice keeps them all? As a law, or as a built case?
+4. **Two readings of one process.** Does any statement say what a finer reading keeps that a coarser one cannot, exactly?
+5. **Time.** Does any statement say at which step a reading comes to tell two states or courses apart, and relate that step to what can still be kept after it?
+6. **The lock.** Is the lock, the turn in time, or any law of the line on a stock stated or cited as a case of 2 to 5? If not: what would have to be supplied for it to be read as one (a process with moves, the reading, the class of starts), and does the Lean have those for the lock's own models?
+
+## The guesses (each may be false)
+
+- **C1.** Chapter 3's law is exact and general for one step: a choice from a reading meets a requirement at every state exactly where each class of the reading has one move good throughout it. It is not stated for keeping a guard for ever.
+- **C2.** Keeping for ever by a rule from a reading is stated only as a sufficient condition (`GuardHorizon`'s uniform policy over a closed set); `KeptFor` is exact for plans with recall, for each number of steps.
+- **C3.** That a finer reading keeps at least what a coarser one keeps is a law (`KeptFor.finer`); what it keeps more is shown only in a built case.
+- **C4.** The step at which a reading tells two courses apart is related to what can still be kept only in `ReadOffInTime`, on its own carrier, and no statement joins it to `KeptFor` or to chapter 3's law.
+- **C5.** None of the lock's modules uses any of these notions. The lock's models are a way as it runs, without moves; to read the lock as "no choice made from the share keeps the level", a process with moves and a class of starts have to be supplied, as the note of 20 November found on paper.
+- **C6 (against the step).** The three places are three carriers once more, with no theorem joining any two, and nothing is found beyond what the notes of 20 and 21 November already say. Then what the read draws is one more seam, in one paragraph.
+
+## What would count as the read having found that the step is not needed, or adds nothing
+
+- **Already there.** A law that says, of a process with moves and a class of starts alike in a reading, exactly when the class is kept for ever by a choice made from the reading; or a module in which the lock or the turn is a case of chapter 3's law or of `KeptFor`.
+- **Nothing new.** C6 holds.
+- Between the two, the read says what is nearest and what each hands in.
+
+Whatever is found is told as what a course does and not as what makes a course better.
+
+## How it is read, and what it costs
+
+Three AI readers, each capped at 45 tool calls, each alone with one group of places and these questions, who propose nothing: chapter 3's two results with `CommonResponse` and the modules that use it (`Inquiry`, `Frontier`, `LabelledRoles`, `MoveOutcomeProcesses`); keeping through what is registered (`Keeping`, `GuardHorizon`, `OpenedCorrection`, `JointKeeping`'s laws on rules, `Viability.kernel_iff_held`) with their records and where the chapters tell them; and the lock's side (`LineOnAStock`, `TurningInTime`'s windows, `RuleShaping`, `RuleCapture`, `PoolFromCourse`, `ClosedCapture`, `ReadOffInTime`) for the sixth question. Then one checker of the note. The ceiling is 0.8 million tokens. The readers' returns go into the listing of places.
+
+---
+
+## After
+

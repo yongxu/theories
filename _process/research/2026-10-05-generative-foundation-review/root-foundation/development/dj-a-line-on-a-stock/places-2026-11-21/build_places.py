@@ -37,6 +37,8 @@ READS = [
      ['what_stands_for_after', 'opening_laws', 'closing_laws', 'forms_change', 'from_where', 'way_related_to_widening']),
     ('register', '21 November, how a registering comes to be', 'returns/register.json', '../read-registering-2026-11-21/',
      ['what_registers_what', 'changes_by', 'comes_to_register', 'cost_and_keeping', 'lost', 'tied_to_what_it_rests_on']),
+    ('choice', '21 November, a choice made from a reading', 'returns/choice.json', '../read-a-choice-from-a-reading-2026-11-21/',
+     ['what_is_read_and_what_chooses', 'exact_law', 'within_one_reading', 'two_readings', 'time', 'the_lock']),
 ]
 HEAD = {'kept_by': 'what is rested on, and whose doing', 'source_and_cost': 'from where, at what cost', 'loop': 'is there a loop',
         'going_on_laws': 'general laws concluding going on', 'exact': 'exact two-sided law', 'handed_in': 'what is handed in',
@@ -44,7 +46,9 @@ HEAD = {'kept_by': 'what is rested on, and whose doing', 'source_and_cost': 'fro
         'closing_laws': 'laws concluding a closing', 'forms_change': 'forms changing while it continues', 'from_where': 'from where an opening comes',
         'way_related_to_widening': 'a way related to widening', 'what_registers_what': 'what registers what', 'changes_by': 'what changes it',
         'comes_to_register': 'laws where something comes to be registered', 'cost_and_keeping': 'cost and keeping', 'lost': 'a registering lost',
-        'tied_to_what_it_rests_on': 'tied to what it rests on'}
+        'tied_to_what_it_rests_on': 'tied to what it rests on', 'what_is_read_and_what_chooses': 'what is read, and what chooses from it',
+        'exact_law': 'the exact law', 'within_one_reading': 'within one reading', 'two_readings': 'two readings of one process',
+        'time': 'when a reading tells apart, and what can still be kept', 'the_lock': 'the lock as a case'}
 
 
 def key(name):
@@ -276,7 +280,7 @@ if __name__ == '__main__':
     json.dump({'made_by': 'build_places.py; never edited by hand', 'caution': CAUTION,
                'reads': [{'tag': t, 'title': ti, 'note': fo + 'NOTE.md', 'fields': f} for t, ti, _, fo, f in READS], 'same_statements': same, 'places': places},
               open('places.json', 'w'), indent=1, ensure_ascii=False)
-    L = ['# Places: what one table and three reads say of each, in the readers\' words', '',
+    L = ['# Places: what one table and the place-by-place reads say of each, in the readers\' words', '',
          '*Made by `build_places.py` beside it; never edited by hand. AI-written (Claude Fable for the script). Each field under *read of …* is ' + CAUTION + '. The table\'s fields are from the table of 20 November; the file, the records, the dynamics and the *same statement* lines are computed by the script, as the note says. The page proves nothing, ranks nothing and holds no link. A place with no read under it was not in that read; that says nothing of the Lean. [The note](NOTE.md) says what this is and is not.*', '',
          'The table\'s letters (20 November, [its note](../two-ways-table-2026-11-20/NOTE.md)): **a** multiplies; **b** a level that can run down; **c** gives at a cost; **d** the source is said; **e** what comes back; **f** a rule set again from a share; **g** both outcomes, boundary exact; **h** no return, or a turn. Y yes, P in part, N no.', '',
          'A place is keyed by a Lean file\'s base name. Where several tracked files carry that name, or none does (a namespace inside a file, a program, a scratch module, a folder, a page), the row says so, since two places can then share a row; the readers\' own names for the place are kept under it.', '',

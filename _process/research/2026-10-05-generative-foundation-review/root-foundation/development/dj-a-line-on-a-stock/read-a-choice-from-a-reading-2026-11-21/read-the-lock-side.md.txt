@@ -1,0 +1,245 @@
+*An AI reader's report (run as Claude Opus), word for word from the run's journal (wf_4a1d0db3-df7); readers could not write files, so the returned report is the report.*
+
+Reader of the lock's side (group 3), board row DJ, 21 November 2026. AI-written (Claude Opus). Read-only; no Lean built or run. About 40 tool calls.
+
+WHAT WAS READ
+- The frozen file /Users/ren/theories/tmp/r7/one-model/check/choice21/FROZEN-A-CHOICE-FROM-A-READING.md, whole.
+- The PLACES.md entries for LineOnAStock (835-852), Lock (854-861) and the start of PoolFromCourse (959-964). These are other readers' returns and were used only to find places.
+- Directory /Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/:
+  - LineOnAStock.lean: the opening account 1-127; definitions 136-200; statements and docstrings 414-598 (Alike, alike_iff, needs_after_iff, ways_alike, generations, born_alike); the docstring and statement of falls_to_unmet (around 1042-1065); the docstring and statement of unending_iff_holds (1227-1247).
+  - TurningInTime.lean: the opening account 1-330; windowRegroup/windowAfter/windowLeft/windowAlone 1262-1281; locked_ends_rising 1423-1454 and count_rises 1463-1479 (statements and docstrings); window_corrected 1583-1593; locked_turns_in_time_on_window_iff 1599-1674 (statement and docstring, plus the first lines of the proof); the section-7 account 1914-1935; locked_at_class (statement, around 1245-1256).
+  - RuleCapture.lean: the opening account 1-102; reverse, Raises 145, ReadsShare 150, Locked 160, turn_locked 169, locked_stays 182 (statements).
+  - RuleShaping.lean: the opening account 1-120 (cut off inside "What is not derived"); shaped 150, favours_iff 160, byBack 426, byBack_reads_iff, covering_locks, thresholdBack 458, threshold_from_above (statements).
+  - PoolFromCourse.lean: the opening account 1-109; ReadsThroughPresent 119, NotReadmitted 123, closed_stays_closed 222, windowRead 252, Stands, window_through (statements).
+  - ClosedCapture.lean: the opening account 1-112; Unread 135, turn_unread, loopPart, identifiesAlike_iff_unread 170, unread_course 190, courses_alike_iff_unread 206, reads_beyond_of_apart 216, join 220, joinRead 223, Accrues 273, turned_by_loss 295, lock_outlives_loss 311 (statements; line numbers from grep, each about 4 lines after the docstring start).
+  - ReadOffInTime.lean: the opening account 1-130; FirstApart 137, TellsApartAt 143, alikeThroughAll_thresholdOnly_iff 151, FirstApart.alike_before 159, separates 166, unique 173, TellsApartAt.not_before 184; Recoverable 591 through noReturnAt_of_past 632; ReadableInTime 647, ReadsInTime 653, readableInTime_iff 661, ReadsInTime.readable 669; too_late_of_alike 678, too_late_of_unreached 699, too_late_within_margin 719, too_late_of_own 743. Statements and proofs were read for all of these.
+- For question 6: the import lines of the seven modules, and an import closure computed from the import lines with a small script. I also read the definitions «共应» (CommonResponse.lean 88) and «依读而应则共应» (205); KeptFor (Keeping.lean 90) with Seen (73), Usable (84) and Plan (around 100); GuardHorizon.UniformPolicy (326); and the names of Viability.Kernel (55) and JointKeeping.Keepable (91), whose bodies I did not read.
+- Grammar.lean «际» 47, «一» 69, «不穷» 243; GuardedStep.lean stepWhile 69; GrammarRegularity.lean lockedAlike 287.
+- The NOTE.md of no-return-2026-11-21, lines 25 to 91, including its last section, "Added the same evening".
+
+ANSWERS BY PLACE
+
+1. LineOnAStock.lean
+
+Q1, what is read and what chooses. The way responds to the level only through which needs the level meets. `after` (138): each unit leaves `kids u` where `need u ≤ x`, and nothing otherwise. `Alike` (418) says two levels are alike to a way where the way after a step at each is the same.
+- `alike_iff` (493, statement read) is exact. Premise: `leaves : ∀ u, u ∈ w → kids u ≠ []`. Conclusion: Alike need kids w x x' ↔ ∀ u ∈ w, (need u ≤ x ↔ need u ≤ x').
+- `alike_of_met` (426) gives the right-to-left direction with no premise.
+- The level responds to the way only through what it takes: `left` (146), and `left_of_taken` (349), whose name I read only in the account.
+- Nothing chooses. `step` (153) is the function `TurningInTime.pair (after need kids) (left giving use)`. `net` (158) is `Law.stepWhile (Goes need) step`, and stepWhile (GuardedStep 69) is `fun s t => can s ∧ t = next s`, a relation with at most one successor. `course` (163) is the orbit. need, use, kids and giving are handed in. The account (102) says: "nothing here makes a new kind or changes `kids`", and "The giving and its bounds … are premises".
+
+Q2, the exact law. `unending_iff_holds` (1239, statement and docstring read). Premises:
+- even: ∀ u, taken use (kids u) = use u
+- some: ∀ u, kids u ≠ []
+- down: ∀ u v, v ∈ kids u → need v ≤ need u
+- needs: Needing need kids w
+- nothing: RegimeMargin.FromNothing giving
+- high: x ≤ hi
+- along: ∀ k, (∀ j ≤ k, Goes need (course … (w,x) j)) → Regime giving use y hi (course … (w,x) k).1
+
+Conclusion: «不穷» (net need kids giving use) «一» (w, x) ↔ ∃ k, (∀ j < k, Goes need (course … j)) ∧ Holds need use y (course … k).
+
+It is of one start (w, x) on a determined net. «一» (Grammar 69) is the relation that relates everything. «不穷» R E x (Grammar 243) says every occurrence reached from x has a successor. No law of keeping by a choice was found in what was read.
+
+Q3, within one reading. `ways_alike` (547, statement read). Premises: one need and one kids; any g, g', use, use', w, x, x', n; and alike: ∀ j < n, ∀ u ∈ (course need kids g use (w,x) j).1, (need u ≤ (course … g use (w,x) j).2 ↔ need u ≤ (course … g' use' (w,x') j).2). Conclusion: ∀ j ≤ n, the two ways at j are equal.
+- It holds in one direction only (a sufficient condition). It is of two courses from one way, not of a class of starts.
+- `born_alike` (587) is the same with counts born.
+- Built example from the account only: `HigherStartEnds`, a higher start that ends while the lower one never does, the ways equal at steps 0 to 2.
+- That each state of a class alike in the reading can be kept while no one choice keeps them all: not found in what was read.
+
+Q4, two readings. `alike_iff` relates `Alike` to meeting the same needs. The account names `AlikeFiner` (a built example): levels alike that meet different needs, so meeting the same needs is finer than being Alike. No statement of what a finer reading keeps was found in what was read.
+
+Q5, time. `ways_alike` dates when a difference in the ways can arrive: only after a step at which the levels met different needs. `falls_to_unmet` (docstring read) gives a step n with 0 < n ≤ hi + 1 at which some need is unmet. Its docstring calls this "the model's form of a going-on that draws down what it rests on while nothing in it yet differs (a reading)". No relation to what can still be kept after that step was found in what was read.
+
+Q6. Not stated or cited as a case of 2 to 5. The account (122-123) says "a lock on these units are not here". The details of what would have to be supplied are below.
+
+2. TurningInTime.lean
+
+Q1, what is read. Marks on levels (`marked : Nat → Prop`) and `AloneOutside marked alone after`: at an unmarked level, the way after a step is `alone` of the way. On the window:
+- `windowAfter` (1271): the share steps by fA; at a reading step the rule is `windowRead hA hL N K (share, level)`, and otherwise it is kept; the step count goes up by one.
+- `windowRead` (PoolFromCourse 252): `hL` reads (share, level) where the level is in [N, K), and `hA` reads the share otherwise.
+
+Nothing chooses at a step. hL, hA, fA, giving, use and the schedule `reads` are handed in; the step is `pair`, cut by `Law.stepWhile`. The account (235-236) says: "`AloneOutside` and the marks are given, not derived".
+
+Q2, the window law: `locked_turns_in_time_on_window_iff` (1633, statement and docstring read). Premises:
+- raises: Raises P favours fA
+- monotone: ReadsShare P M hA
+- upper: ∀ g g', M.le g g' → favours g → favours g'
+- every: ∀ n, reads n = true
+- corrects: ∀ p g, N ≤ p.2 → p.2 < K → kept (hL p g)
+- uses: ∀ v, kept v.2.1 → use v = H₂
+- least: ∀ v, H₂ ≤ use v
+- nothing: FromNothing giving
+- short: Short giving H₂ y₂
+- meets: Meets giving H₂ y₂ hi
+- keeps: Keeps giving H₂ hi
+- needs: 0 < need
+- within: need ≤ H₂ + y₂
+- pos: 0 < c
+- low: N ≤ H₂ + y₂
+- covers: c ≤ K
+- safe: ∀ v x, c ≤ x → x ≤ hi → c ≤ step giving (use v) x ∧ step giving (use v) x ≤ hi
+- short₁: Short giving H₁ y₁
+- locked: Locked M favours hA (w.1, w.2.1)
+- draws: ∀ v, P.le w.1 v.1 → M.le w.2.1 v.2.1 → H₁ ≤ use v
+- below: x < H₁ + y₁
+- high: for every T at which the orbit of asItWas (windowAlone fA hA reads) under the regime from (w, x) has a level in [N, K), the level at T+1 is ≤ hi
+
+Conclusion: «不穷» (net need (windowAfter fA hA hL N K reads) (regime step)) «一» (w, x) ↔ ∃ T such that, on the orbit of the course as it was:
+- for every j < T, the need is met and the level is not in [N, K);
+- at T, the need is met and the level is in [N, K);
+- H₂ + y₂ ≤ the level at T+1.
+
+Two remarks on its form, from the statement:
+- hL is any function meeting `corrects`, and the right side does not mention hL. So every hL that gives a `kept` rule throughout [N, K) gets the same answer.
+- It is of one start (w, x) for one hL. The docstring says "From a start that is not `Locked` the statement can fail … (argued in its docstring, not a Lean statement)" and "Nothing is concluded about whether the way that goes on is `Locked`".
+
+`locked_ends_rising` (1440, statement read). Premises:
+- raises, monotone, upper (as above)
+- outside: AloneOutside marked (windowAlone fA hA reads) after
+- needs: 0 < need
+- un: ∀ x, need ≤ x → ¬ marked x
+- nothing: FromNothing giving
+- keeps: Keeps giving 0 hi
+- high: x ≤ hi
+- locked: Locked M favours hA (w.1, w.2.1)
+- more: ∀ v, P.le w.1 v.1 → M.le w.2.1 v.2.1 → use v < use (windowAlone fA hA reads v)
+
+Conclusion: ∃ n t with n ≤ hi + 1, the line of n steps from (w, x) reaches t, t has no successor, t.1 = orbit (windowAlone…) w n, and t is still Locked. It holds for every `after` meeting `outside`, but under `un` the marked levels all lie below the need, where the net does not step anyway. Its docstring says: "What is concluded is the ending; no step past a point of no return is stated."
+
+Q3, within one reading. The class `ClosedCapture.lockedAlike` (GrammarRegularity 287) is a «际» on joined configurations: alike in whether share and rule are Locked. `locked_at_class` (statement read) gives «本类至终有常» and «所缘同于» for it at a Locked member. That is the root's constancy at a class, not keeping by a choice. That several alike states can each be kept while no one choice keeps all: not found in what was read. The `Three.*` courses are built examples (account 191-231).
+
+Q4, two readings. Not found in what was read.
+
+Q5, time. Section 7 (account 1914-1935, and 171-190): `turned_meets_iff`, `recoverable_iff_above` and `noReturnAt_iff_first_below` (named in the account, statements not read) join RegimeMargin's level H + y to ReadOffInTime's NoReturnAt. `turns_in_time_iff_before` (account only) says the line never ends exactly where T + 1 < N, with T the first marked step. The account says: "The feasible courses are turns to one standing use; other continuations are not considered, and the marks stay given." Lines 290-293 say ReadOffInTime's "selection side (`FirstApart`, `TellsApartAt`, `ReadableInTime`, `ReadsInTime`) is not instantiated: the pair has no web."
+
+Q6. No use of the notions was found (see below).
+
+3. RuleCapture.lean
+
+Q1. The rule read `h : S → R → R` at reading steps of a fixed schedule `reads`, on `Pace.paced f h reads c` (Pace 112). The course is determined by f, h, reads and the start c.
+- `ReadsShare` (150): ∀ x y g g', P.le x y → M.le (h x g) (h y g'), so the rule read is monotone in the share alone.
+- `Raises` (145): ∀ x g, favours g → P.le x (f x g).
+- `Locked` (160): favours p.2 ∧ M.le p.2 (h p.1 p.2).
+- No moves. The account (72-73) says: "every reading step sets the value again from the share".
+
+Q2. `turn_locked` (169). Premises: raises, monotone, upper. Conclusion: ∀ b p, Locked p → Locked (turn f h b p), and neither share nor rule is lower.
+- `locked_stays` (182): from Locked at t, Locked at t + k for every k.
+- `uniform_locks` (account only): "every course, whatever its start, is locked from the step after its second reading step" where the reading favours at every share. That is a statement over all starts of a determined course, not over choices.
+
+Q3, Q4, Q5: not found in what was read. `Alternating` and `Reversed` are built examples (account).
+
+4. RuleShaping.lean
+
+Q1. Counts. `shaped a s p c pos` (150) is the CarrierCounts ⟨a + s + p, a + c + p⟩. `byBack a p c pos σ x _` (426) is `shaped a (σ x) p c pos`: the rule read from the share x alone, the rule in force ignored. `thresholdBack hi lo x` (458) is `if x.other ≤ x.carrier then hi else lo`. Run on `paced CarrierCounts.select (byBack …) reads`, determined.
+
+Q2. `favours_iff` (160), exact, premise pos : 0 < a: CarrierCounts.favours (shaped a s p c pos) ↔ c ≤ s.
+- `byBack_reads_iff` (statement read): ReadsShare order order (byBack a p c pos σ) ↔ ∀ x y, order.le x y → σ x ≤ σ y.
+- `covering_locks`. Premises: mono, covers (∀ x, c ≤ σ x), start (c ≤ s). Conclusion: the share falls at no step, and Locked at r + 1 for every reading step r.
+- `threshold_from_above`. Premises: lo ≤ hi, c ≤ hi, favours x. Conclusion: the share at every step k is not below x's, from (x, shaped a hi p c pos), under every schedule.
+
+Q3, Q4, Q5: not found in what was read.
+
+5. ClosedCapture.lean
+
+Q1. The fast configuration is (share, beyond).
+- `Unread f h` (135): neither the next share nor the rule read depends on the beyond.
+- `loopPart` gives (share, rule, step count), "what the loop reads".
+- `join`/`joinRead` (220, 223): the share steps by fA and is read by hA, and the beyond steps by fB.
+- Determined; no moves.
+
+Q2.
+- `lock_outlives_loss` (311). Premises: raises, monotone, upper, accrues (Accrues fB: ∀ p g, p.2 + 1 ≤ fB p g), locked (a, g). Conclusion: for every t, b + t ≤ the loss at t, the course is Locked at t, and share and rule are not below the start's.
+- `turned_by_loss` (295). Premises: accrues; turns (∀ p g, N ≤ p.2 → ¬ favours (h p g)); reads r = true; N ≤ b + r. Conclusion: ¬ favours (the rule at r + 1).
+
+Q3. `courses_alike_iff_unread` (206, statement read) is exact: (∀ reads c c', c.1.1 = c'.1.1 → c.2 = c'.2 → ∀ t, the shares and the rules of the two courses at t are equal) ↔ Unread f h. `identifiesAlike_iff_unread` (170) is its form through `IdentifiesAlike (Law.frameBy … loopPart) loopPart`. This is a stated law over a class of starts alike in what the loop reads, along every schedule. It is about the courses of a determined law staying alike, not about any choice keeping something.
+
+Q4, Q5: not found in what was read, beyond `Thinned`'s timing laws (account only).
+
+6. PoolFromCourse.lean
+
+Q1.
+- `ReadsThroughPresent present hA h` (119): ∀ p g, ¬ present p → h p g = hA p.1 g.
+- `NotReadmitted` (123): ∀ p g, ¬ present p → ¬ present (f p g).
+- `windowRead` (252) and `Stands K p := p.2 < K` are the readers of the loss.
+- Determined.
+
+Q2. `closed_stays_closed` (222). Premises: raises (Raises (liftShare P) favours f), monotone, upper, through (ReadsThroughPresent), kept (NotReadmitted), absent (¬ present at step r), lock (Locked at r). Conclusion: for every k, absent at r + k, Locked at r + k, and share and rule not below those at r.
+
+The account lists "an optimizer choosing to remove them" under "What is not derived".
+
+Q3, Q4, Q5: not found in what was read.
+
+7. ReadOffInTime.lean
+
+Q1. What is read: `W.Admits (l t) t g` for members g of a group, on two given level courses l, l' : Nat → C → Nat. Selections are read off continuations up to a step (`W.SelectsThroughAll thresholdOnly group s select`). No process and no moves. `feasible` is a predicate on courses, supplied. The account says: "the feasible courses are a premise, read as the courses the part can still take".
+
+Definitions:
+- `FirstApart group l l' T` (137): some member's admission differs at T, and every member is admitted alike at every t < T.
+- `TellsApartAt sel l l' T` (143): ¬ (sel T l ↔ sel T l') ∧ ∀ s < T, (sel s l ↔ sel s l').
+- `Recoverable feasible keeps l N` (591): ∃ l', feasible l' ∧ AgreeUpTo l' l N ∧ keeps l'. This is the existence of a whole feasible course, not a choice made from a reading.
+- `NoReturnAt` (595): ¬ Recoverable at N ∧ ∀ n < N, Recoverable at n.
+- `ReadableInTime` (647): ∃ T, FirstApart group l l' T ∧ Recoverable feasible keeps l T.
+- `ReadsInTime sel` (653): the same with TellsApartAt.
+
+Q2 and Q5 (both are here).
+- `readableInTime_iff` (661). Premises: first : FirstApart group l l' T; point : NoReturnAt feasible keeps l N. Conclusion: ReadableInTime ↔ T < N.
+- `ReadsInTime.readable` (669). Premises: ∀ s, SelectsThroughAll thresholdOnly group s (sel s); first; inTime. Conclusion: ReadableInTime.
+- `too_late_of_alike` (678). Premises: alike (∀ g ∈ group, ∀ t ≤ D, admits alike); past (¬ Recoverable at D). Conclusion: ¬ ReadableInTime ∧ ∀ sel read off continuations, ¬ ReadsInTime sel.
+- `too_late_of_unreached` (699). Premises: balanced, balanced', present, start, responds (each for t < D), far (no member reached in time by D), past (¬ Recoverable W.level at D). Same conclusion, for W.level and W'.level.
+- `too_late_within_margin` (719). Premises: within (∀ g ∈ group, ∀ t ≤ D, Admits (l' t) t g and every gap ≤ the margin); past. Same conclusion.
+- `too_late_of_own` (743). Premises: within (∀ m, keeps m → every member admitted under m at every step); kept' (l' admits every member at every step). Same conclusion, with no premise on D.
+
+Q3: of two courses and of families of selections, not of a class of starts. Q4: not found in what was read.
+
+QUESTION 6, THE LOCK
+- Import lines. LineOnAStock imports TurningInTime, SelectionTerm, ReadingsPersist. TurningInTime imports GuardedStep, GrammarRegularity, OwnClass, PoolFromCourse, ReadOffInTime. RuleShaping imports RuleCapture, Recurrence, SelectionTerm, SelectionLevels. RuleCapture imports Pace, Ideals, Witnesses. PoolFromCourse imports ClosedCapture, RuleShaping. ClosedCapture imports RuleCapture. ReadOffInTime imports BeyondCoupling, ConditionInTime, Propagation, RegimeMargin. None of these is CommonResponse, Keeping, GuardHorizon, Viability or JointKeeping.
+- Transitive closure (computed from the import lines by a script, not by Lean). CommonResponse, Viability and Inquiry are inside the closure of LineOnAStock, ReadOffInTime and RuleShaping, for example RuleCapture → Pace → IdentificationRuns → Courses → Lasting → Viability → CommonResponse, and ReadOffInTime → RegimeMargin → Lasting → Viability → CommonResponse. Keeping, GuardHorizon and JointKeeping are not in the closure of any of the three.
+- Names. A grep of the seven files found no occurrence of 共应, CommonResponse, KeptFor, Plan (as a word), UniformPolicy, Viability, Kernel, JointKeeping, Keepable or Keeping. It also found none of Process, Enabled, policy/Policy or ChoiceOver. So the notions are imported in part but used nowhere in these seven modules.
+
+What would have to be supplied. This lists what exists and what is missing, and proposes no statement. Targets as read:
+- «共应» E G J (CommonResponse 88) needs a reading E : «际» α on situations, a requirement G : A → α → Prop on acts, and regions J. Its conditions: J inside G, every situation covered, each J a closed under E.
+- KeptFor P sense guard allowed n B (Keeping 90) needs a Process S A (with a step relation `P.step s a t`, as used by Seen, Keeping 73-75; the structure's own declaration was not found in what was read), a reading of a step sense : S → A → S → O, a guard, allowed : S → A → Prop, and a class of starts B : S → Prop.
+
+(a) The line on a stock.
+- State: exists. It is List U × Nat (step 153, net 158, course 163), with predicates Goes (150) and Holds (188) on states.
+- Moves: missing. The step is a function of the state given need, kids, giving and use. No action type and no step relation indexed by a move exists in the module.
+- Reading: present only in part. Alike need kids w x x' (418) is a relation on levels relative to one way, and "meets the same needs" appears as the premise of alike_of_met and ways_alike. Neither is a «际» on states, and no sense : S → A → S → O exists.
+- Requirement or guard: candidates exist (Goes 150; Holds 188; need met). "Keeps the level" is not a named predicate; Regime (193) is of a way and the giving, not of a state.
+- allowed: missing. Class of starts: missing as a definition; ways_alike quantifies over two starts with one way.
+
+(b) The turn's window law.
+- State: exists. It is (A × R × Nat) × Nat: share, rule and step count as the way, the loss/level as the level (windowRegroup 1265, windowAfter 1271, windowLeft 1276, pair).
+- Moves: missing as moves. The closest is the handed-in rule function hL : A × Nat → R → R, used at reading steps inside [N, K). It is a fixed parameter, not a move of a process, and the law is stated for every hL meeting `corrects`. The type R of rules exists and would be the natural move type at a reading step; no Process with moves in R exists in what was read.
+- Reading: present in pieces, none as a «际» on these states. windowRead (PoolFromCourse 252) reads (share, level) in [N, K) and the share alone outside it. ReadsThroughPresent (119) says what is registered where no reader is present. ClosedCapture.loopPart is "what the loop reads", with `Unread` and the IdentifiesAlike frame. lockedAlike (GrammarRegularity 287) is a «际», but of being Locked or not, not of what the selection registers. No sense : S → A → S → O exists.
+- Guard: need ≤ level, implicit in the net's cut. "Level at or above H₂ + y₂" appears inside the right side of the law but is not a named predicate.
+- Class of starts: missing as a definition. The candidates are Locked (RuleCapture 160) on (share, rule) together with `below` on the level. The law is stated pointwise for each such start and one hL.
+- allowed: missing.
+
+AGREEMENT WITH THE NOTE (no-return-2026-11-21, last section)
+- The note says the package's feasible courses leave out the course that never turns, and quotes the package's own sentence. That sentence is in TurningInTime's section-7 account (1933-1934) word for word: "The feasible courses are turns to one standing use; other continuations are not considered, and the marks stay given."
+- The note puts a process with two moves (stay or turn) only in a scratch module outside the package. In the seven modules I found no process with moves and no use of Process, Plan, policy or Keepable. That agrees.
+- The note says the package's general laws of recoverable (ReadOffInTime 595 to 760) take any feasible courses and anything asked. That agrees with the statements read: Recoverable (591) takes feasible and keeps as arbitrary predicates on courses.
+- The note's reading "the lock asks whether a turn from here would keep the need, not whether the need can be kept" is about what section 7 states. I read section 7 only as its account, and found nothing in that account against it.
+- The scratch modules themselves were not read.
+
+THE GUESSES THIS GROUP BEARS ON
+- C4: consistent with what was read. ReadOffInTime alone relates the first step apart to the point of no return (readableInTime_iff 661), on its own carrier: Web, level courses, a supplied set of feasible courses. TurningInTime uses only its Recoverable, NoReturnAt and first_of_decided, and says its selection side is not instantiated (290-293). No statement joining it to KeptFor or «共应» was found in what was read.
+- C5: holds in what was read, with three refinements:
+  - CommonResponse and Viability are in the transitive import closure, though unused by name.
+  - The lock's laws are universally quantified over handed-in functions: hL in the window law through `corrects`, `after` in locked_ends_rising through `outside` and `un`, h in RuleCapture through ReadsShare. This is the nearest the lock comes to "any rule from this reading". It is not a choice at each step.
+  - ClosedCapture.courses_alike_iff_unread (206) is an exact law over starts alike in what the loop reads, along every schedule, for a determined law.
+- C6: for this group, nothing beyond the notes of 20 and 21 November was found that joins the lock to «共应», KeptFor or UniformPolicy. What the read adds is the closure fact, the universality in hL, and the observation that «际» is used both as the reading in «共应» and as the step relation of the lock's nets (a shared type, not a theorem joining them).
+- C1 to C3: not this group's.
+
+NOT READ
+- Proofs, except where noted above.
+- The rest of LineOnAStock: need_unmet, line_ends, way_ends and taken_below (statements), and the built examples.
+- TurningInTime outside the ranges above: toEnd_iff, turns_in_time_iff, turns_in_time_iff_kept_below, and section 7's statements 1936 onward (turned_meets_iff, recoverable_iff_above, noReturnAt_iff_first_below, turns_in_time_iff_before are known from the account only), and the Three examples.
+- RuleCapture's laws after 185 (uniform_locks, perturbation_absorbed, order_kept, from the account only).
+- RuleShaping after 120, apart from the named declarations.
+- PoolFromCourse's window laws and the Drained/Borne examples.
+- ClosedCapture's Drawn, Thinned and Proportional.
+- ReadOffInTime 196-585 and the FourReaders/Clearing examples.
+- The bodies of Viability.Kernel and JointKeeping.Keepable, the declaration of Process, the scratch modules, and the chapters and records.
+
+Tool calls: about 40.

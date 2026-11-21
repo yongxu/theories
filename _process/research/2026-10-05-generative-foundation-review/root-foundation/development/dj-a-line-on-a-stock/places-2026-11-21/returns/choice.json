@@ -1,0 +1,214 @@
+{
+ "returns": [
+  {
+   "reader": "read:keeping-through-what-is-registered",
+   "return": {
+    "places": [
+     {
+      "place": "Keeping.lean: Seen, Usable, KeptFor, Plan, Plan.Keeps, keptFor_iff_plan, plans_iff_choice, KeptFor.mono/shorter/finer, keptFor_of_closed, Certificate.keptFor, Kernel.keptFor, Matching.keeping_matters",
+      "what_is_read_and_what_chooses": "Statements read. The reading is `sense : S → A → S → O`, a map of steps (where it began, the move, where it ended), not of states. A class of starts B is handed in, and Seen (73) is what can stand after move a from B where the step kept value o. What chooses is a Plan (100): a first move and, for each value kept, a further plan, so a tree with recall of every value kept so far. The first move must be usable from all of B (Usable 84).",
+      "exact_law": "KeptFor (90) is for n steps, with recall, and counts every successor (∀ o, Seen gathers all t). keptFor_iff_plan (182): for Fin k values, KeptFor n B ↔ some plan keeps B, exact. keptFor_iff_plan_of_choice (176) gives the same given ∀ n, ChoiceOver O (Plan A O n), and plans_iff_choice (247) shows that choice is exactly what is needed, over every process. keptFor_of_closed (311), from a family within the guard and closed under a usable move whatever is kept, gives KeptFor at every n; it is sufficient only, and is not one infinite plan (record does_not_show). Certificate.keptFor (322) and Kernel.keptFor (333) need one move usable throughout, so no reading does work there.",
+      "within_one_reading": "The definition asks for one move usable from the whole class. The built case Matching.keepsNothing_not_kept (425): with the step keeping nothing, the two starts are not kept for 2 steps. That each start alone is kept is not stated (not found in what was read).",
+      "two_readings": "KeptFor.finer (288): given forget : F → O with ∀ s a t, forget (fine s a t) = sense s a t, KeptFor P sense guard allowed n B → KeptFor P fine guard allowed n B, the moves unchanged. Direction: coarse kept implies fine kept. What a finer reading keeps more is shown only in the built case Matching.keeping_matters (435), keepsBit kept for 2 steps and keepsNothing not. That case does not cite finer. No exact law of what more was found in what was read.",
+      "time": "Not found in what was read. In Matching the bit is kept at the first step (keepsBit 385) and needed by the second move, but no statement relates that step to what can be kept after it.",
+      "the_lock": "Not found in what was read. No lock module imports or names KeptFor (grep of the seven lock modules). Keeping supplies a process with moves, a reading of steps and a class of starts; no statement puts the lock's models (Pace.turn on a supplied schedule) into that form."
+     },
+     {
+      "place": "GuardHorizon.lean: Viable, Admissible, closed_viable, dViable_iff, Kept, pathSafe_iff, UniformPolicy, FiberFeasible, uniform_policy_iff_fiber_feasible, uniform_policy_iff_common, statewise_not_uniform, discriminating_reading_uniform, uniform_finer, uniform_viable, uniform_iff",
+      "what_is_read_and_what_chooses": "Statements read. Viable (71) and Admissible (76) are from a known configuration: there is no reading, and the move is existential at each state. UniformPolicy (326) is `∃ policy : O → A, ∀ s, good s (policy (obs s))`: one rule from a reading of states, with no recall, asked at every configuration of the whole type S. The deterministic part between them (PathSafe 160, pathSafe_iff 276, recomputed_kept 297) uses policies Nat → S → A from the full state.",
+      "exact_law": "uniform_policy_iff_fiber_feasible (341): given ChoiceOver O A, a rule from the reading exists ↔ each reading has one move good at every configuration giving it; exact, one requirement, one step. uniform_viable (406): from UniformPolicy read (Admissible P guard n) over all of S, and guard s, follows Viable P guard (n+1) s. It is sufficient and one step further: only the first move comes from the reading, the later moves are existential state by state, and every successor is counted. dViable_iff (230) is exact for n steps: DViable under next : S → A → S ↔ Viable in Viability.disturbed next (fun _ => True). closed_viable (112) covers every n with no reading. No law keeps a guard for n steps or for ever by a rule from a reading (not found).",
+      "within_one_reading": "General one-step law: the failure of FiberFeasible, through 341 (given choice). Built case statewise_not_uniform (382): on Bool each state has a good move (a = s), and no rule from the constant reading meets both. This is one step and not a guard over a horizon.",
+      "two_readings": "uniform_finer (395): given forget : R → O with forget (fine s) = coarse s, a rule from the coarse reading gives one from the fine. Coarse implies fine. What the finer reading gives more appears only in the built discriminating_reading_uniform (391) beside statewise_not_uniform (382). No exact law of what more was found.",
+      "time": "Not found in what was read.",
+      "the_lock": "Not cited (not found in what was read). dViable_iff (230) with Viability.disturbed is the Lean's means of making a law with moves into a process. No statement applies it to the lock's law Pace.turn (Pace.lean 101). Chapter 8's table marks RuleCapture.uniform_locks as connected, but there 'uniform' is the premise ∀ x g, favours (h x g), not UniformPolicy."
+     },
+     {
+      "place": "OpenedCorrection.lean: Correctable, correctable_iff, OpensAlong, finer_keeps, coarser_opens_nothing, widened_correctable, Linked.unlinked_uncorrectable, Linked.opens, Linked.rebuilt_starved, Linked.opens_after_replenishing, Linked.opens_by_support",
+      "what_is_read_and_what_chooses": "Statements read. A reading in force at each configuration, reading : X → S → O, of situations. Correctable (74) is GuardHorizon.UniformPolicy (reading x) (acceptable s a ∧ executable x a): one rule from the present reading, at one configuration, with no horizon or guard. The module account says uniform-policy existence is not what a formation chooses.",
+      "exact_law": "correctable_iff (80): given ChoiceOver O A, Correctable ↔ ∀ o, ∃ a, ∀ s, reading x s = o → acceptable s a ∧ executable x a. Exact, one step. OpensAlong (89): a trace from x to x', not correctable at x and correctable at x', with one acceptability.",
+      "within_one_reading": "Built case Linked.unlinked_uncorrectable (138): with the link off, the two situations are read alike, need different acts, and no configuration is correctable. That each situation alone has an act is not stated.",
+      "two_readings": "finer_keeps (95): with forget : O → O, forget (reading x' s) = reading x s, and executability kept, correctability at x carries to x'; coarse implies fine. coarser_opens_nothing (107) is the converse form. What more a finer reading gives appears only in the built Linked.opens (168).",
+      "time": "Nearest is the built case Linked.rebuilt_starved (175): the rebuild that revises the reading consumes the last unit, and the configuration reached is uncorrectable; opens_after_replenishing (182) opens it after one more step. No law relates the step of revision to what can be kept after it (not found in what was read).",
+      "the_lock": "Not found in what was read. Chapter 8's table marks 'Revision of the reading' (finer_keeps) as connected to RuleCapture.favouring_locks. That is a telling, not a theorem."
+     },
+     {
+      "place": "JointKeeping.lean: Keepable, Keepable.each, keepable_and_iff_of_kernel_left/right, KeptFor.guard_mono, KeptFor.each, ChoicePoint.no_rule_decides_joint, no_respecting_rule_decides_joint, keptFor_each_not_joint",
+      "what_is_read_and_what_chooses": "Statements read. Keepable (91) means some single run from s stays within the guard for ever; there is no reading. The KeptFor laws carry Keeping's reading of steps. The 'rules' F in no_rule_decides_joint read the separate keepability answers, not states.",
+      "exact_law": "KeptFor.guard_mono (136): a wider guard is kept wherever a narrower one is, for n steps. KeptFor.each (146): kept for both guards gives kept for each. Keepable.each (115) holds in that direction only. keepable_and_iff_of_kernel_left/right (121, 127) are exact where one guard lies in the kernel; no KeptFor analogue of them was found in what was read.",
+      "within_one_reading": "Built case keptFor_each_not_joint (366): for every sense, the class {split} is kept for each guard at every n, and for both together not for 1 step, whatever moves are allowed. It concerns two guards, not states alike in a reading. Built cases no_rule_decides_joint (291) and no_respecting_rule_decides_joint (314): no F of the separate answers decides the joint one.",
+      "two_readings": "Not found in what was read.",
+      "time": "Not found in what was read.",
+      "the_lock": "Not found in what was read."
+     },
+     {
+      "place": "Viability.lean: Kernel, kernel_iff_held, kernel_iff_certificate, kernel_step_iff",
+      "what_is_read_and_what_chooses": "Statements read (lines 1 to 110). Nothing is read and nothing chooses: Kernel (55) counts every course from s.",
+      "exact_law": "kernel_iff_held (65): Kernel P guard s ↔ «承» («逆» («所闭» (Steps P))) guard s. In plain English: no course from s leaves the guard exactly where the guard holds throughout what the closure of the steps reaches from s. Every course, for ever, exact. kernel_iff_certificate (85) and kernel_step_iff (98) are also exact. Kernel.keptFor (Keeping 333) carries the kernel into KeptFor, given one move usable throughout it.",
+      "within_one_reading": "Not applicable: no reading. Not found in what was read.",
+      "two_readings": "Not found in what was read.",
+      "time": "Not found in what was read.",
+      "the_lock": "Not found in what was read. The seven lock modules do not name Viability or Kernel (grep)."
+     }
+    ]
+   }
+  },
+  {
+   "reader": "read:response-common-over-a-reading",
+   "return": {
+    "places": [
+     {
+      "place": "CommonResponse.lean: «共应», «所闭之承最大», «共应当且仅当所闭之承遍», «自反传递则共应当且仅当承遍», «共应之细», «静之共应当且仅当遍», «一之共应当且仅当一应遍», «依读而应则共应», «遍定应共应当且仅当同读同应», «遍定应共应当且仅当像定后», «映应共应当且仅当同读同应», «共应之例»",
+      "what_is_read_and_what_chooses": "What is read is a supplied relation E on situations (or a map's sameness), and a requirement G a is given for each act. «共应» (line 88) is a family of regions J a: each inside G a, each closed under E, and together covering every situation. It is relational and may overlap, so it is not a rule. A rule appears only as rule : O → A in «依读而应则共应» (205). All statements read.",
+      "exact_law": "«共应当且仅当所闭之承遍» (153): a common response exists ↔ every situation s has an act a with G a holding throughout the E-closure of s. It is exact for every carrier, reading and requirement, with no choice. «自反传递则共应当且仅当承遍» (164) gives the same along E itself, with premises that E is reflexive and transitive. «依读而应则共应» (205), given meets : ∀ s, G (rule (read s)) s, yields a common response, in one direction only. There are no steps: these are laws of one act, not of keeping over steps.",
+      "within_one_reading": "Stated as laws: «一之共应当且仅当一应遍» (194; under the reading that tells nothing apart, on an inhabited carrier, a common response exists ↔ one act meets G everywhere), and «遍定应共应当且仅当同读同应» (248; given covering and exactly one act per situation, a common response exists ↔ situations read alike have the same act). Shown as built cases: «共应之例».EachNotCommon (408) and PairsNotCommon (422).",
+      "two_readings": "«共应之细» (178): a common response over E is one over every E' inside E, with the same J. It runs in one direction. That a finer reading has strictly more is seen only from the extremes «静之共应当且仅当遍» (184) and «一之共应当且仅当一应遍» (194) and from the built cases. No exact statement of what a finer reading keeps more was found in what was read.",
+      "time": "Not found in what was read; the module has no time or steps.",
+      "the_lock": "The module does not name the lock, a share, a stock, a line or a level that runs down. To read the lock through it, three things would have to be supplied: situations (a class of starts), a reading E, and an act-indexed requirement G. The law would still be about one act, not a course."
+     },
+     {
+      "place": "InquirySufficiency.lean (inquiry-root/sufficiency): CommonResponse, Policy, Sound, Sufficient, sufficiency_iff_bounded_policy",
+      "what_is_read_and_what_chooses": "The ASCII CommonResponse (line 102) says that one finite word response r completes the goal safely from every configuration in a belief set B. It is not «共应»: it has no reading relation and no closure. Policy (109) is a tree that branches on observations in Fin k, so it chooses with recall of what it observed along the run. Statements read.",
+      "exact_law": "sufficiency_iff_bounded_policy (200): Sufficient n B ↔ InhabitedBelief B ∧ ∃ policy, Within n policy ∧ Sound policy B. It is exact, with finitely many observation values and constructive finite_choice (148). It is a law over at most n inquiry steps ending in a common response, with safety at every prefix; it is not a law of keeping for ever.",
+      "within_one_reading": "Not found in what was read as a law about states alike in an observation; the conflict within a class appears in the periphery's InquiryChoice instead.",
+      "two_readings": "Not found in what was read.",
+      "time": "After (94) carries belief forward through actual steps and filters it by the observation. No statement relates the step at which two states are told apart to what can still be kept, in what was read.",
+      "the_lock": "Not named, and not found in what was read."
+     },
+     {
+      "place": "Inquiry.lean: Scope, Scope.secures, Scope.antitone, commonResponse_antitone, judgeProcess, sees, commonResponse_judge_iff",
+      "what_is_read_and_what_chooses": "What is read is a supplied belief B. What chooses is one act a, or a sound Policy whose Scope (34) is what its actual executions reach. It uses the ASCII CommonResponse, not «共应». Whole file read.",
+      "exact_law": "commonResponse_judge_iff (85): CommonResponse (judgeProcess admissible) … (sees B) a ↔ ∀ w, B w → admissible w a. It is exact, and it is a one-step judgment. commonResponse_antitone (67) has premise narrower : ∀ s, B' s → B s, so a common response for B is one for B'. Scope.secures (41): a sound policy meets its goal on its whole scope.",
+      "within_one_reading": "Not found in what was read.",
+      "two_readings": "Only narrowing of belief: commonResponse_antitone (67) and Scope.antitone (61), each in one direction.",
+      "time": "Not found in what was read.",
+      "the_lock": "Not named, and not found in what was read."
+     },
+     {
+      "place": "LabelledRoles.lean: Web.class_judge_iff, class_judge_later, class_judge_widen, Flow.class_judge_beyond, Renewable.finite_reading_withholds_renewal, no_exact_finite_reading",
+      "what_is_read_and_what_chooses": "What is read is the class of histories alike with the actual one through the formation's couplings up to step t (sees (W.ClassThrough obs g l t)). What chooses is one act a, judged by the ASCII CommonResponse. ClassThrough itself was not opened.",
+      "exact_law": "class_judge_iff (111): a common response for the class ↔ ∀ l', W.AlikeThroughUpTo obs g l l' t → admissible l' a; exact, one judgment. Flow.class_judge_beyond (143): given WithheldLevels part W l₀, balance on coupled conditions, the part beyond the coupling closure, g within it, and a common response, the act is admissible under both W.level and l₀.",
+      "within_one_reading": "Not found in what was read.",
+      "two_readings": "class_judge_widen (125): with larger : obs ⊆ obs', a common response is kept. This is one direction only.",
+      "time": "class_judge_later (117): from t ≤ t', a common response at t stays one at t' (monotone in time). Renewable.no_exact_finite_reading (173), on the named model, says no reading decided by the first h steps is exactly the renewing classification. This is a reading, not a chosen rule. The step at which a reading tells two apart, related to what can be kept: not found in what was read.",
+      "the_lock": "It names W.level, a web's levels, as the levels a judgment is admissible under, not as a running-down. It does not name the lock or a share."
+     },
+     {
+      "place": "MoveOutcomeProcesses.lean: common_completes, Ensures, summary_ensures_iff",
+      "what_is_read_and_what_chooses": "common_completes (184) uses the ASCII CommonResponse for a belief. The rest of what was read is about one move from a known configuration s; nothing in it is read off a reading of the start. Lines 1-230 read.",
+      "exact_law": "common_completes (184): CommonResponse … belief r together with belief s gives Completes P safe goal s (response r); it only unfolds the definition. summary_ensures_iff (176): a goal on a summary f of the outcomes is ensured ↔ its pullback is; a one-move law.",
+      "within_one_reading": "Not found in what was read.",
+      "two_readings": "Not found in what was read; covers_iff (95) compares two processes' moves, not two readings.",
+      "time": "Not found in what was read.",
+      "the_lock": "Not named. The docstring says summary_hides_loss exists; I did not read it."
+     },
+     {
+      "place": "Frontier.lean: opening account; Formation.report, same_report_different_basis, no_report_judge, amountJudge, amount_recovers_basis; Collective.no_common_plan; Routes.none_robust",
+      "what_is_read_and_what_chooses": "No declaration uses either common response. The opening account (lines 16-17) says PracticalJudgment.Robust is the core's CommonResponse and is not restated. The nearest reading is the built Formation.report (473), which says whether a connection was built.",
+      "exact_law": "No law over a reading was found. no_report_judge (484) is a built example: no judge reading only report judges basis f := 2 ≤ remaining f, where remaining f := 6 − drawn f.",
+      "within_one_reading": "Built cases: same_report_different_basis (about 479) gives one report with two different bases. Collective.no_common_plan (593): each world has a plan, and no plan is common to every world.",
+      "two_readings": "Built case: amount_recovers_basis (491), where reading the retained amount recovers the basis while the report cannot. Routes.none_robust (728): no route is on the frontier under every classification.",
+      "time": "Not found in what was read. Lines 493-496 say the continuations are moves of a process on the shared amount (DrawnAmountProcesses, not read).",
+      "the_lock": "It does not name the lock. It has a built shared amount (6) that continuations draw, with a basis threshold of 2, and a report that does not register it. This is the nearest thing in the group to a stock and a reading that misses it, but it is a one-shot built example with no running down over steps."
+     },
+     {
+      "place": "Viability.lean: Kernel, kernel_iff_held, Certificate.kernel, kernel_certificate, kernel_step_iff",
+      "what_is_read_and_what_chooses": "Nothing is read and no move is chosen. Kernel (55) is ∀ t, Reach P s t → guard t, over every course. It uses only «共应»'s grammar laws. Lines 1-110 read.",
+      "exact_law": "kernel_iff_held (65): Kernel P guard s ↔ «承»(«逆»(«所闭»(Steps P))) guard s. Certificate.kernel (72) and kernel_certificate (78) are proved from «闭在内则在所闭之承», «所闭之承在内» and «所闭之承闭». kernel_step_iff (98) is exact for one step, and the kernel holds for every course. This is the same grammar law as «共应», with the steps standing where the reading stands.",
+      "within_one_reading": "Not found in what was read.",
+      "two_readings": "Not found in what was read; Kernel.mono (110) compares guards, not readings.",
+      "time": "Not found in what was read.",
+      "the_lock": "Not named. No share, stock or level was found."
+     },
+     {
+      "place": "GuardHorizon.lean (lines 325-420 only, as the one user of «共应»): UniformPolicy, FiberFeasible, uniform_policy_iff_fiber_feasible, uniform_policy_iff_common, statewise_not_uniform, uniform_finer, uniform_viable, uniform_iff; Keeping.lean ChoiceOver (156)",
+      "what_is_read_and_what_chooses": "What is read is obs : S → O. What chooses is policy : O → A (UniformPolicy, 326). \"Given a choice over the readings\" is the hypothesis Viability.ChoiceOver O A (Keeping 156): every total relation from O to A has a choice function. It is named as a premise, not an axiom, and it holds with no premise for Fin k.",
+      "exact_law": "uniform_policy_iff_fiber_feasible (341): given ChoiceOver O A, UniformPolicy ↔ each reading has one move good at every configuration giving it. uniform_policy_iff_common (about 352) adds given : ∀ o, ∃ s, obs s = o, and then the condition ↔ ∃ J, «共应». uniform_iff (414) is the same with good = Admissible P guard n, so it is exact for the first move. uniform_viable (about 405) is sufficient only: that move keeps the guard n+1 steps, while the later moves come from Viable (71), chosen per configuration.",
+      "within_one_reading": "Built case: statewise_not_uniform (382), proved from «共应之例».EachNotCommon.",
+      "two_readings": "uniform_finer (about 394): a choice from a coarser reading gives one from every compatible finer reading, in one direction only. That the finer reading keeps strictly more is shown only by the built discriminating_reading_uniform (about 391).",
+      "time": "Not found in what was read.",
+      "the_lock": "Not named in the lines read."
+     },
+     {
+      "place": "03-KNOWING.md: r-when-to-inquire-and-when-to-respond (line 426), r-a-response-common-over-a-reading (line 560); records when-to-inquire-and-when-to-respond.json, a-response-common-over-a-reading.json",
+      "what_is_read_and_what_chooses": "Line 426 tells a policy that reads an observation class, citing the periphery's InquiryChoice.observed_class_policy_iff (InquiryChoice.lean 65, Classical.choice) and the core's GuardHorizon.uniform_policy_iff_fiber_feasible, given choice. Line 560 tells «共应» as in the module.",
+      "exact_law": "Both tellings match the Lean as stated. The record when-to-inquire-and-when-to-respond.json gives laws 0-6 with ChoiceOver named in hypotheses[0]. The record a-response-common-over-a-reading.json gives laws 0-6, the seventh being GuardHorizon.uniform_policy_iff_common. Line 560's \"judgment is viability indexed by acts\" is a reading: the Lean states one grammar law at two relations.",
+      "within_one_reading": "Line 426 and record law 4 tell a built dosing case on the reals: no immediate dose is admissible for both losses (two_losses_have_no_common_immediate_dose, InquiryChoice 142).",
+      "two_readings": "Line 562 (an AI reading) says \"a finer reading keeps every common response\". That matches «共应之细» as one direction.",
+      "time": "Line 426 and record law 4 tell a built case, inquiry_can_cross_floor_before_response (InquiryChoice 186): the reading step takes the level from 2 to −1 before any response. It is not stated as a law.",
+      "the_lock": "Neither anchor nor either record names the lock. The \"judgment through the couplings\" that line 560 cites to §3 rests in the Lean on the ASCII CommonResponse (LabelledRoles 111), not on «共应»; no theorem joining the two was found in what was read."
+     }
+    ]
+   }
+  },
+  {
+   "reader": "read:the-lock-side",
+   "return": {
+    "places": [
+     {
+      "place": "LineOnAStock.lean: opening account 1-127, after 138, taken 143, left 146, Goes 150, step 153, net 158, Holds 188, Alike 418, alike_iff 493, ways_alike 547, born_alike 587, falls_to_unmet (around 1057), unending_iff_holds 1239",
+      "what_is_read_and_what_chooses": "The way responds to the level only through which needs it meets (`after` 138; `Alike` 418). The level responds to the way only through what it takes (`left` 146). Nothing chooses: `step` (153) is a function, `net` (158) is Law.stepWhile of it (a relation with at most one successor), and need, use, kids and giving are handed in. Statements read.",
+      "exact_law": "unending_iff_holds (1239), premises even, some, down, needs, nothing, high, along: «不穷» (net …) «一» (w,x) ↔ ∃ k, (∀ j<k, Goes at j) ∧ Holds at k. It is of one start on a determined net. No law of keeping by a choice was found in what was read.",
+      "within_one_reading": "ways_alike (547) holds in one direction: if for all j<n the two levels meet the same needs of the first course's way, then the ways are equal for all j≤n. It is of two courses from one way, with two givings, uses and start levels. HigherStartEnds is a built example, known from the account only. A class kept member by member but by no one choice: not found in what was read.",
+      "two_readings": "alike_iff (493) is exact under `leaves`: Alike ↔ the same needs met in w. AlikeFiner (account only, a built example): levels alike that meet different needs. What a finer reading keeps: not found in what was read.",
+      "time": "ways_alike dates when a difference in the ways can arrive: only after a step at which the levels met different needs. falls_to_unmet gives an unmet-need step n ≤ hi+1, and its docstring calls this a going-on that draws down what it rests on 'while nothing in it yet differs (a reading)'. No relation to what can still be kept: not found in what was read.",
+      "the_lock": "Not a case of 2 to 5. The account says 'a lock on these units are not here', and no CommonResponse, Keeping, GuardHorizon, Viability or JointKeeping name occurs. A state type exists (List U × Nat) and so do guards (Goes, Holds). Missing: moves, a sense or reading as a «际» on states, allowed, and a class of starts B."
+     },
+     {
+      "place": "TurningInTime.lean: opening account 1-330, windowRegroup 1265, windowAfter 1271, windowAlone 1279, locked_ends_rising 1440, count_rises 1473, window_corrected 1589, locked_turns_in_time_on_window_iff 1633, locked_at_class (around 1248), section 7 account 1914-1935",
+      "what_is_read_and_what_chooses": "Marks on levels and AloneOutside are given. On the window the rule is read by hL from (share, level) in [N,K) and by hA from the share elsewhere (windowAfter 1271 with PoolFromCourse.windowRead 252). hL, hA, fA, giving, use and reads are handed in. There are no moves: the step is pair cut by stepWhile.",
+      "exact_law": "locked_turns_in_time_on_window_iff (1633), premises raises, monotone, upper, every, corrects, uses, least, nothing, short, meets, keeps, needs, within, pos, low, covers, safe, short₁, locked, draws, below, high: the net never ends from (w,x) ↔ ∃ T, the first step of the course as it was at a level in [N,K) with the need met before and at T, has its level at T+1 ≥ H₂+y₂. It holds for every hL meeting corrects; hL is absent from the right side. locked_ends_rising (1440), premises raises, monotone, upper, outside, needs, un, nothing, keeps, high, locked, more: the line ends within hi+1 steps, still Locked.",
+      "within_one_reading": "lockedAlike (GrammarRegularity 287) is a «际» of being Locked or not, and locked_at_class gives the root's «本类至终有常» at a Locked member. That is constancy at a class, not keeping by a choice. The Three.* courses are built examples. A class kept by no one choice: not found in what was read.",
+      "two_readings": "Not found in what was read.",
+      "time": "Section 7 (account 1914-1935) joins RegimeMargin's level H+y to ReadOffInTime's NoReturnAt for any non-rising level course. turns_in_time_iff_before (account only): the line never ends ↔ T+1 < N. The feasible courses are 'turns to one standing use; other continuations are not considered'. The account (290-293) says the selection side of ReadOffInTime is 'not instantiated: the pair has no web.'",
+      "the_lock": "None of CommonResponse, KeptFor, Plan, UniformPolicy, Kernel or Keepable is imported or used here. The state type (A × R × Nat) × Nat exists. The closest thing to a choice is the handed-in hL, which is a parameter and not a move. Missing: a Process with moves (for example in R), a sense or reading as a «际» on these states, allowed, and a class of starts (only Locked plus `below`, pointwise, exists)."
+     },
+     {
+      "place": "RuleCapture.lean: opening account 1-102, Raises 145, ReadsShare 150, Locked 160, turn_locked 169, locked_stays 182",
+      "what_is_read_and_what_chooses": "The rule read is h : S → R → R at reading steps of a fixed schedule, on the determined course Pace.paced f h reads c. ReadsShare (150) makes the rule read monotone in the share alone. No moves. The account says 'every reading step sets the value again from the share'.",
+      "exact_law": "turn_locked (169), premises raises, monotone, upper: every turn keeps Locked and lowers neither share nor rule. locked_stays (182): Locked at t gives Locked at t+k for every k. uniform_locks (account only) is over all starts of a determined course.",
+      "within_one_reading": "Not found in what was read. Alternating and Reversed are built examples (account).",
+      "two_readings": "Not found in what was read.",
+      "time": "Not found in what was read.",
+      "the_lock": "This is the lock's own definition (Locked 160) on a two-level course with no moves. It uses none of the named notions, though CommonResponse and Viability are in its transitive import closure through Pace → IdentificationRuns → Courses → Lasting → Viability."
+     },
+     {
+      "place": "RuleShaping.lean: opening account 1-120, shaped 150, favours_iff 160, byBack 426, byBack_reads_iff, covering_locks, thresholdBack 458, threshold_from_above",
+      "what_is_read_and_what_chooses": "shaped a s p c (150) is the counts ⟨a+s+p, a+c+p⟩. byBack (426) reads the rule from the share alone, through σ x, ignoring the rule in force. thresholdBack (458) is hi where the shapers are at least as many as the others, else lo. The course is a determined paced course.",
+      "exact_law": "favours_iff (160): favours (shaped a s p c pos) ↔ c ≤ s. byBack_reads_iff: ReadsShare ↔ σ monotone. covering_locks: under mono, covers (c ≤ σ x for all x) and start (c ≤ s), the share falls at no step and the course is Locked after each reading step. threshold_from_above: under lo ≤ hi, c ≤ hi and favours x, the share is never below x's under every schedule.",
+      "within_one_reading": "Not found in what was read.",
+      "two_readings": "Not found in what was read.",
+      "time": "Not found in what was read, beyond the stretch laws in the account (stretch_iff, timing witnesses), whose statements were not read.",
+      "the_lock": "No named notion is used. The selection is set from the share through σ, and there is no process with moves."
+     },
+     {
+      "place": "PoolFromCourse.lean: opening account 1-109, ReadsThroughPresent 119, NotReadmitted 123, closed_stays_closed 222, windowRead 252, Stands",
+      "what_is_read_and_what_chooses": "Where no reader of the beyond is present, the rule read is the share-readers' (ReadsThroughPresent 119). windowRead (252) reads the loss by hL inside [N,K) and the share by hA elsewhere. Who reads is a predicate `present`. The course is determined. The account lists 'an optimizer choosing to remove them' as not derived.",
+      "exact_law": "closed_stays_closed (222), premises raises (on liftShare P), monotone, upper, through, kept (NotReadmitted), absent at r, Locked at r: for every k, absent and Locked at r+k, and share and rule not below those at r.",
+      "within_one_reading": "Not found in what was read.",
+      "two_readings": "Not found in what was read.",
+      "time": "From the account only: window_never_read where K ≤ N, and window_order_kept. Not read as statements.",
+      "the_lock": "No named notion is used. The window reading windowRead is what TurningInTime's window law takes over."
+     },
+     {
+      "place": "ClosedCapture.lean: opening account 1-112, Unread 135, loopPart, identifiesAlike_iff_unread 170, unread_course 190, courses_alike_iff_unread 206, reads_beyond_of_apart 216, join 220, joinRead 223, Accrues 273, turned_by_loss 295, lock_outlives_loss 311",
+      "what_is_read_and_what_chooses": "The fast configuration is (share, beyond). Unread (135) says neither the next share nor the rule read depends on the beyond. loopPart (share, rule, step count) is 'what the loop reads'. The course is determined with no moves.",
+      "exact_law": "lock_outlives_loss (311), premises raises, monotone, upper, accrues, locked: the loss is at least b+t at every step, the course stays Locked, and share and rule are not below the start's. turned_by_loss (295), premises accrues, turns (no favouring rule read at loss ≥ N), reads r, N ≤ b+r: the rule at r+1 does not favour.",
+      "within_one_reading": "courses_alike_iff_unread (206), exact: courses from every pair of starts alike in share and rule, along every schedule, have equal share and rule at every step ↔ Unread f h. This is a stated law over a class of starts alike in what the loop reads, for a determined law, not about choices keeping something.",
+      "two_readings": "Not found in what was read.",
+      "time": "From the account only: Thinned's read-late and read-in-time laws.",
+      "the_lock": "No named notion is used. It joins the identification law (Law.part_identifiesAlike_iff_step, through IdentifiesAlike/frameBy) to the lock, not «共应» or KeptFor."
+     },
+     {
+      "place": "ReadOffInTime.lean: opening account 1-130, FirstApart 137, TellsApartAt 143, TellsApartAt.not_before 184, Recoverable 591, NoReturnAt 595, ReadableInTime 647, ReadsInTime 653, readableInTime_iff 661, ReadsInTime.readable 669, too_late_of_alike 678, too_late_of_unreached 699, too_late_within_margin 719, too_late_of_own 743",
+      "what_is_read_and_what_chooses": "Members' admission W.Admits (l t) t g on two given level courses is what selections read off continuations register (SelectsThroughAll thresholdOnly). feasible is a supplied predicate on courses. Recoverable (591) asks for some feasible course agreeing so far that keeps: a whole course exists, not a choice made from a reading. No process and no moves.",
+      "exact_law": "readableInTime_iff (661), premises FirstApart group l l' T and NoReturnAt feasible keeps l N: ReadableInTime ↔ T < N. too_late_of_alike (678), premises admission alike up to D and ¬Recoverable at D: not readable in time, and no family read off continuations reads in time. too_late_of_unreached (699), too_late_within_margin (719) and too_late_of_own (743) have the same conclusion under their own premises.",
+      "within_one_reading": "Not found in what was read. The laws are of two courses and families of selections, not of a class of starts.",
+      "two_readings": "Not found in what was read.",
+      "time": "This is the place for it. FirstApart and TellsApartAt date when a reading can first tell two courses apart (not_before 184), and readableInTime_iff relates that step exactly to the point of no return under its two premises.",
+      "the_lock": "No named notion is used. Its Recoverable and NoReturnAt are used by TurningInTime's section 7, but its selection side is not instantiated there. Consistent with the note: the general laws take any feasible courses and any keeps."
+     }
+    ]
+   }
+  }
+ ]
+}

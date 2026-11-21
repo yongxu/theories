@@ -14,6 +14,8 @@ Ren, 21 November: "i am drawing the map not saying the map" ([his words](../../.
 
 152 places: 85 with a row in the table, 108 in at least one read, and 4 that carry a check from scratch, two of them made places by that alone. The three reads are of 20 November (things kept by goings-on) and 21 November (a future opening or closing; how a registering comes to be). The read of 20 November that set the renewal files against the package's keeping did not answer place by place and is not in it. Apart from the table's row for the scratch of 17 November, the scratch modules are in it only through the checks told in the section on them below.
 
+*Added 21 November, evening.* A fourth read is in it: what the Lean already states of a choice made from a reading, set against the lock ([its note](../read-a-choice-from-a-reading-2026-11-21/NOTE.md)). At that run the listing has 158 places, 116 of them in at least one read; `CommonResponse`, which had been in no row and no read, is one of the six new places. The figures in the paragraphs above are of the runs they landed with; the page and the data carry the present run.
+
 ## What it is not
 
 - **Not checked.** Every field is one AI reader's return, read by no second reader. The notes of the three reads were each checked against the readers' full reports and mended; these returns are the readers' short structured answers, the least checked text of each read, and a checker found the writer misquoting from them. So every return carries the path of its read's note and of the reader's report. Where a return and the report differ, the report stands; where the note mended something, the note stands.

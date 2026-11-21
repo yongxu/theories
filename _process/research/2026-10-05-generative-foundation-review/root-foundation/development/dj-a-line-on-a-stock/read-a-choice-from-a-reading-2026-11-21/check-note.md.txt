@@ -1,0 +1,107 @@
+*An AI checker's findings (run as Claude Opus; 23 tool calls and 151,965 tokens by the run's count), word for word from the run's journal (wf_c7e0e5da-92a), on the note as it was before the check (NOTE.before-check.md.txt).*
+
+1. **MUST.** The note says: "`CommonResponse` and `Viability` are among what three of them import at some remove (computed from the import lines by a script, not by Lean)". The third report (read-the-lock-side.md.txt line 196) does name three modules: LineOnAStock, ReadOffInTime and RuleShaping. But its own example chain, "RuleCapture → Pace → … → Viability → CommonResponse", already puts RuleCapture in that closure, and with it ClosedCapture, PoolFromCourse and TurningInTime, which import it. I worked out the closure from the import lines of Becoming/*.lean, read-only. All seven modules reach CommonResponse and Viability, and none reaches Keeping or GuardHorizon. Exact: "`CommonResponse` and `Viability` are in what all seven import at some remove (from the import lines, not by Lean; the third report says three, but its own chain implies all seven); `Keeping` and `GuardHorizon` are in none." The same goes for C5's "the import at some remove".
+
+2. **MUST.** "What it draws" says: "The first kind has no level that runs down." What was read says otherwise.
+   - The note's own item 7 cites `OpenedCorrection.Linked.rebuilt_starved` (175), where rebuilding the link uses up the last unit of stock (OpenedCorrection.lean 172–175).
+   - The first report (lines 114–115) names Frontier.Formation, "an amount of 6 drawn by continuations", and InquiryChoice's dosing level, which falls below a floor.
+   - Chapter 3, line 366, tells OpenedCorrection on "Revising's stock-and-link process": "with it on and no stock none is" correctable.
+   
+   Exact: "No law of the first kind was found with a level that runs down; built cases have one (OpenedCorrection's stock and link, Frontier.Formation's drawn amount, InquiryChoice's dosing level)."
+
+3. **MUST.** "`KeptFor` is the one notion read here that has both relations at once." Two others read here also have a process's steps and a reading together:
+   - InquirySufficiency's `Policy`, `Sound` and `sufficiency_iff_bounded_policy` (200): a tree branching on observations along the run, with "at most n inquiry steps". First report, lines 55–57 and 90.
+   - OpenedCorrection: a reading at each configuration, with `Trace P x w x'` in `OpensAlong` (89).
+   
+   Keeping's `Seen` is by definition `InquirySufficiency.After` where the values are listed (`Keeping.seen_eq_after`, Keeping.lean 77–79). Also, KeptFor's reading is a map of steps (`sense`), not a relation, so "both relations" in the sense of «所闭之承最大» at two relations is not what KeptFor has. Exact: "`KeptFor` is one notion read here with both a process's steps and a reading of them (InquirySufficiency's policies and OpenedCorrection's `OpensAlong` are others); of it the exact law is for each number of steps, with recall."
+
+4. **MUST** (as most readers will take it). "One law of the grammar already stands under both." This follows a bullet whose "both" means the two kinds of model, the choice side and the lock side. No lock module uses the kernel or «共应» (third report, line 197). The sentence is right only if "both" means the kernel and the common response. Exact: "One law of the grammar already stands under the kernel and the common response: …"
+
+5. **MUST** (a premise dropped in a quotation's frame). On chapter 3 the note says: "where it draws on what stands, 'its losses beyond its coupling closure do not return through its own feedback'". The source, 03-KNOWING.md line 353, reads: "where such seeking draws on what stands, with the rest of the exchange fixed and balance on what couples in, its losses beyond its coupling closure do not return through its own feedback". The quoted words are exact, but the two premises before them are gone. `Law.rests_iff` is also under a determined law ("a determined law for rest", line 348), and the note leaves that out too. Exact: add "with the rest of the exchange fixed and balance on what couples in", and "(under a determined law)" after the first clause.
+
+6. **MUST.** Item 1 says: "The other direction needs a choice over the readings as a named premise … and every reading given by some situation: `GuardHorizon.uniform_policy_iff_fiber_feasible` (341) and `uniform_policy_iff_common` (about 351)."
+   - 341 has only `choice : Viability.ChoiceOver O A`, with no `given`.
+   - 341 relates UniformPolicy to FiberFeasible, not to «共应».
+   - Only 351 (`choice`, `given : ∀ o, ∃ s, obs s = o`) is the converse of «依读而应则共应» (GuardHorizon.lean 341–351).
+   
+   Exact: "The other direction needs a choice over the readings as a named premise … and every reading given by some situation (`uniform_policy_iff_common`, 351); with choice alone, a rule from the reading exists exactly where each reading has one act good at every situation giving it (`uniform_policy_iff_fiber_feasible`, 341)."
+
+7. **MUST** (told too widely). "no theorem states the lock as a case of the response's law." What was read bears less:
+   - the third reader's grep of seven files, "not found in what was read";
+   - the second reader's grep of the same seven;
+   - the coordinating session's "search of names, not a read".
+   
+   Exact: "no theorem stating the lock as a case of the response's law was found in the seven modules or by the coordinating session's search of names."
+
+8. **LESSER.** Item 4: "`uniform_viable` (406) gives one step further from a rule whose move is admissible for `n` more steps at every configuration". The premise `within : guard s` is dropped (GuardHorizon.lean 403–406). The rest is exact: only the first move comes from the reading, and the later ones come from `Viable n`, chosen configuration by configuration. Exact: "…at every configuration, at a configuration within the guard."
+
+9. **LESSER.** "`ClosedCapture.courses_alike_iff_unread` (206) … their shares and rules stay equal at every step exactly where neither the next share nor the rule read depends on what lies beyond." The two sides of the equivalence are over every schedule and every pair of starts alike in share and rule, against `Unread f h` (ClosedCapture.lean 202–206). It is not a criterion for one given pair, which "their" suggests. The account of `Unread` itself is right (131–132). Exact: "the courses from every two starts alike in share and rule stay alike in both at every step, along every schedule, exactly where neither the next share nor the rule read depends on what lies beyond the share."
+
+10. **LESSER.** "`Kernel.keptFor` (333) and `Certificate.keptFor` (322) carry the kernel into `KeptFor`". `Certificate.keptFor` carries a certificate, of which the kernel is one case (Keeping.lean 319–335). Exact: "carry a certificate, and so the kernel, into `KeptFor`, given one move usable throughout."
+
+11. **LESSER.** "`Viability.kernel_iff_held` (65) states the kernel through the same law of the grammar that gives the common response (`«所闭之承最大»`, 142…)". What 65 states is `Kernel P guard s ↔ «承» («逆» («所闭» (Steps P))) guard s`: the same construction that 153 uses, not the law at 142. The kernel theorems are proved from 142's parts, and chapter 3 line 560 says so. Exact: "states the kernel as the same region the law of the common response uses, what holds throughout the closure (`«承»` along the converse of `«所闭»`), at the process's steps; `«所闭之承最大»` (142) says this region is the largest closed one inside the requirement."
+
+12. **LESSER** (attribution). C1 is said to hold "in what was read (first and second readers): chapter 3's law is exact…; the relational form is exact with no choice". The second reader writes "Chapter 3's own law (InquiryChoice) was not read by me beyond its telling" (line 186). What it supports is GuardHorizon 341 and `OpenedCorrection.correctable_iff`. The relational form is the first reader's alone. C3 "holds (both)" has the same problem: the first reader says "holds in this group" of «共应之细», `uniform_finer` and `class_judge_widen`, and did not read `KeptFor.finer` or `Matching`, which C3 names. Exact: "C1 holds in what was read (first reader; the second supports it for GuardHorizon 341 and correctable_iff) …; C3 holds (second reader; the first, for its own group's analogues)."
+
+13. **LESSER.** On C6 the note omits that the third reader, for its group, found "nothing beyond the notes of 20 and 21 November … that joins the lock" (line 231). That is C6's side.
+
+14. **LESSER.** On C5, "holds in what was read". C5's second sentence says only "a process with moves and a class of starts have to be supplied". The third reader's list is longer: a reading present only in part, no `allowed`, and only candidate guards (lines 203–216). The note's own "What would have to be supplied" shows this, but the guess is not told as partly short. The note also drops the guard row from its copy of that list (lines 207 and 214). Exact: "C5 holds in what was read, except that what must be supplied also includes a reading of states or steps and the allowed moves; three things added …"
+
+15. **LESSER.** Item 7: "related … only in `ReadOffInTime`". The third reader names TurningInTime's section 7 from its account only: `turns_in_time_iff_before` ("the line never ends exactly where T + 1 < N, with T the first marked step"), and `noReturnAt_iff_first_below` (line 113). Those statements were not read. Also, "No statement joins it to `KeptFor` or to the common response" is told outright, where the report says "not found in what was read". Exact: "…only in `ReadOffInTime` among the statements read (TurningInTime's section-7 laws, known from its account only, relate a first marked step to the line's ending)…; no statement joining it … was found."
+
+16. **LESSER.** The section head "The first and second readers, each of its own group" covers items 1 to 7, but item 7's `readableInTime_iff` is the third reader's.
+
+17. **LESSER.** Item 2 says "given choice in general, 176". The premise is `∀ n, ChoiceOver O (Plan A O n)`, a choice over the values kept into plans of every length (Keeping.lean 174–176), not choice over readings. Exact: "given choice over the values kept into plans, 176".
+
+18. **LESSER.** Items 5 and 6 drop premises:
+   - «一之共应当且仅当一应遍» (194) needs `s₀ : α`, an inhabited carrier.
+   - `OpenedCorrection.finer_keeps` (95) needs `kept`: every act executable at x stays executable at x' (OpenedCorrection.lean 92–95).
+
+19. **LESSER.** On chapter 8 the note says the table "sets the theorem on a common response beside each thing it takes in". Line 494 says "This table sets that theorem, and what it takes in, beside the edge", and the last column reads the edge record's rows. The two quoted cells are word for word, and so is "No place in the last column is a premise." (lines 502, 506, 494). "Two of its rows end in the lock's module": `Pace.rule_until_reading` is in Pace, which is not one of the seven lock modules. Exact: "…which sets that theorem and what it takes in beside the edge; in its last column, the edge record's rows, two rows name the lock's laws."
+
+20. **LESSER.** On chapter 3 the note says "its lines 347 to 357". Lines 359 to 366, which the brief's range and the frozen file's After ("about 353 to 363") include, carry two things:
+   - the lumping theorem, which After item 3 names: "Every selection through an old lumping stays expressible…";
+   - the OpenedCorrection theorem, a uniform policy from a reading on a stock-and-link process, with "no stock none is" correctable.
+   
+   That second one bears on finding 2. Saying the writer did not find a sentence setting the lock against chapter 2's lock or the common response is a fair account of 347–357. The note should say the read stopped at 357 and name what 359–366 hold.
+
+21. **LESSER** (figures).
+   - "capped at 45 tool calls (31, 20 and about 40 by their own counts)". The counts are right as the readers give them. The journal records 35, 20 and 46 (`workflowProgress[1..3].toolCalls`), so the third reader went past the cap of 45. Total 101, tokens 497,111: both match the journal's `totalTokens` and `totalToolCalls`.
+   - The journal is not filed in the folder. It is at /Users/ren/.claude/projects/-Users-ren-theories/a5a43704-f723-406f-926c-7c46463ba40a/workflows/wf_4a1d0db3-df7.json, and the note gives only its id.
+   - The note should give the journal's per-reader counts beside the readers' own.
+
+22. **LESSER.** The hash file records the name `FROZEN-A-CHOICE-FROM-A-READING.as-frozen.md`, but the filed copy is `…as-frozen-1901.md.txt`. The hash itself, d129e28b…, matches the filed copy (shasum -a 256), but `shasum -c` would fail. The note should say so. The frozen file as it stands differs from the as-frozen copy only by the appended "After" section (diff).
+
+23. **LESSER.** The head note says "Six questions, six guesses (C1 to C6) and what would count as nothing new were frozen". The frozen file's section is "What would count as the read having found that the step is not needed, or adds nothing", with two ends, "Already there" and "Nothing new". Exact: "…and what would count as already there or as nothing new…"
+
+24. **LESSER.** "The second has no moves." The third reader wrote "no process with moves" found "in the seven modules", and named the handed-in `hL` as the nearest thing to a move. Exact: "In the seven modules read, the second has no moves."
+
+25. **LESSER** (omission). Keeping imports InquirySufficiency, and `Seen` equals `InquirySufficiency.After` where the values are listed (`seen_eq_after`, 79). That is a join between Keeping and the ASCII side's carrier, though not with its `CommonResponse`. No reader reported it, and it bears on the seam and on finding 3.
+
+**Confirmed**
+- «共应» (88) is three things: regions inside where each act is acceptable, covering every situation, each closed under the reading. The plain-words account is right.
+- The law at 153, "throughout what the reading's closure reaches from it", is right. I checked it against `«承» R P a := ∀ b, R b a → P b` and `«逆»`. It holds for every carrier, reading and requirement, with no premise and no choice.
+- 205 is one direction.
+- KeptFor (90) is as told, including "Every successor of the chosen move is counted", which follows from `Seen` with `∀ o`.
+- `keptFor_iff_plan` (182) is exact for `Fin k`. `keptFor_of_closed` (311) is a sufficient condition at every n. `KeptFor.finer` (288) is one direction, given `consistent`. `keeping_matters` (435) is as told.
+- `readableInTime_iff` (661) is as told, given `first` and `point`.
+- InquirySufficiency's `CommonResponse` (102) and `class_judge_iff` (111) are as told.
+- `rule_until_reading`, `uniform_locks` and `favouring_locks` are as told. `uniform` is `∀ x g, favours (h x g)`.
+- The record's does_not_show sentence is word for word.
+- All quotations attributed to the readers are word for word, and the ellipsis marks a cut.
+- The "two ends" section matches the reports.
+- The three reports match the journal text word for word.
+- Every link target exists. The chapter link resolves to /Users/ren/tmp/dj/wt/theories/becoming/chapters/08-METHOD.md, which is identical to main's and has the anchor.
+- "19:01" matches the frozen file. The 0.8 million ceiling matches the frozen file.
+- Nothing in the note is told as what makes a course better or ranks ways of going on (item 8 of the brief).
+
+**Not read**
+- The proofs.
+- `InquiryChoice`, `Frontier`, `MoveOutcomeProcesses` and `JointKeeping` directly.
+- TurningInTime's section-7 statements.
+- The no-return and 20 November notes, and PLACES.md: links checked only, so the "table of 20 November" and listing claims were not verified.
+- The record's other fields.
+
+The import closure in finding 1 is my own script over import lines, not Lean.
+
+Tool calls: 25.

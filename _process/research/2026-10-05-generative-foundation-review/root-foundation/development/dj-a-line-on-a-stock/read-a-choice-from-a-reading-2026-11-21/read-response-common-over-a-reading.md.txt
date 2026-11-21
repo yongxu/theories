@@ -1,0 +1,141 @@
+*An AI reader's report (run as Claude Opus), word for word from the run's journal (wf_4a1d0db3-df7); readers could not write files, so the returned report is the report.*
+
+READER'S REPORT: a response common over a reading (group 1 of the read frozen in tmp/r7/one-model/check/choice21/FROZEN-A-CHOICE-FROM-A-READING.md). AI-written (a reader working alone). It is read-only: nothing was built, run or edited. Base path for the Lean: B = /Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/.
+
+0. A FINDING ABOUT THE GROUP ITSELF (it changes how the other answers read)
+The brief says Inquiry, Frontier, LabelledRoles and MoveOutcomeProcesses "use" the common response. They do not use «共应». They use a different definition with an ASCII name, `CommonResponse`, in namespace Generative.InquirySufficiency. It is defined at /Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/inquiry-root/sufficiency/InquirySufficiency.lean line 102 (statement read): `CommonResponse P safe goal response B r := ∀ s, B s → Completes P safe goal s (response r)`. In words: one response r, which is a finite list of actions, completes the goal safely from every configuration the belief set B holds. It has no reading relation, no closure under a reading, and no family of regions for each act. A grep of B for «共应» and its laws found only two files that use it, CommonResponse.lean and GuardHorizon.lean, plus the grammar laws that Viability.lean imports. No theorem relating the ASCII `CommonResponse` to «共应» was found in what was read (the files of this group, and grep over B). Chapter 3 line 560 and the CommonResponse.lean docstring (line 6) say "a judgment through the couplings is a common response over the class alike through them". The Lean bridge for that sentence, LabelledRoles.Web.class_judge_iff (line 111), is stated with the ASCII `CommonResponse`, not with «共应». That is a seam between two carriers.
+
+1. CommonResponse.lean (whole file, 506 lines, every statement read)
+Definition, «共应» (line 88; statement and docstring read). The arguments are E : «际» α (a relation on situations: the reading, saying which situations it does not tell apart), G : A → α → Prop (the requirement: for each act a, the situations where a is acceptable and can be done), and J : A → α → Prop. «共应» E G J holds when three things hold: every J a lies inside G a; every situation lies in some J a; and every J a is closed under E («闭» E (J a)). The regions may overlap, so this is an admissible relation from situations to acts, not a rule. The opening account (lines 1-74) says so and says that one act fixed for each class "is a rule, which needs choice". The reading is supplied (line 71), and the requirement is supplied and fixed before the outcome (line 11). There is no process, no step and no time in the definition.
+Laws (all statements read):
+- «诸承在内当且仅当自反» (line 100): (∀ P s, «承»(«逆» E) P s → P s) ↔ ∀ s, E s s. An exact law with no premise.
+- «诸承闭当且仅当传递» (line 112): (∀ P, «闭» E («承»(«逆» E) P)) ↔ E is transitive. Exact, no premise.
+- «闭在内则在承» (line 120): if Q ⊆ P and Q is closed under E, then Q s → «承»(«逆» E) P s. No hypothesis on E. One direction only.
+- «所闭之承在内» (125), «所闭之承闭» (130), «闭在内则在所闭之承» (135), and their conjunction «所闭之承最大» (line 142): along the closure «所闭» E, the region where P holds throughout the closure lies inside P, is closed under E, and contains every Q ⊆ P closed under E. It is the largest closed region inside P, for every relation, with no premise.
+- «共应当且仅当所闭之承遍» (line 153): (∃ J, «共应» E G J) ↔ ∀ s, ∃ a, «承»(«逆»(«所闭» E)) (G a) s. It is exact, holds for every carrier, reading and requirement, and uses no choice.
+- «自反传递则共应当且仅当承遍» (line 164): premises refl : ∀ s, E s s, and trans; then (∃ J, «共应» E G J) ↔ ∀ s, ∃ a, «承»(«逆» E)(G a) s.
+- «共应之细» (line 178): premises finer : «则» E' E (E' inside E) and common : «共应» E G J; conclusion «共应» E' G J, with the same J. One direction only: a common response over a coarser reading is one over every finer reading.
+- «静之共应当且仅当遍» (184): under «静» (staying the same), a common response exists ↔ ∀ s, ∃ a, G a s.
+- «一之共应当且仅当一应遍» (194): premise s₀ : α (an inhabited carrier); under «一» (the reading that tells nothing apart), a common response exists ↔ ∃ a, ∀ s, G a s.
+- «依读而应则共应» (205): premises read : α → O, rule : O → A, meets : ∀ s, G (rule (read s)) s; conclusion «共应» (read s = read s') G (fun a s => rule (read s) = a). One direction only (a rule gives a common response), with no choice. The converse is not proved here: the docstring at lines 48-53 sends it to GuardHorizon, with choice as a hypothesis.
+- The one-act section uses «应际» (line 222: the response relation on S ⊕ A) and «读应» (line 226: the reading on situations, with acts kept as they are). «应际同行当且仅当同读同应» (231) is exact with no premise on G. «遍定应共应当且仅当同读同应» (248) has premises covers : ∀ s, ∃ a, G a s and one : ∀ s a a', G a s → G a' s → a = a'; then (∃ J, «共应» (read s = read s') G J) ↔ ∀ s s' a a', read s = read s' → G a s → G a' s' → a = a'. «遍定应共应当且仅当像定后» (265), with the same two premises, says the same thing ↔ «定后»(«像»(«读应» read)(«应际» G)). «映应共应当且仅当同读同应» (274): with an act map act : S → A, a common response exists ↔ ∀ s s', read s = read s' → act s = act s'.
+Built cases («共应之例», lines 286-504), each a built example and not a law:
+- NotReflexive (290): a transitive, not reflexive reading; held_each holds while none holds.
+- NotTransitive (311): a path of four points, reflexive and symmetric but not transitive; held_each holds while none holds.
+- EachNotCommon (408): Bool under «一» with G a s := a = s; every situation has an act, and there is no common response.
+- PairsNotCommon (422): three points with G a s := a ≠ s; every two share an act, and no common response exists under «一».
+- NotCovering (450), NotOne (469) and OneCarrier (484) show that covering, one act, and the sum carrier each do work.
+
+2. Its users, and the "rule chosen from a reading"
+GuardHorizon.lean (another group's place; I read only lines 325-420, since it is the only module outside the grammar where «共应» is used):
+- UniformPolicy (line 326): ∃ policy : O → A, ∀ s, good s (policy (obs s)).
+- FiberFeasible (330): ∀ o, ∃ a, ∀ s, obs s = o → good s a.
+- fiber_of_uniform (334): UniformPolicy → FiberFeasible, with no premise.
+- uniform_policy_iff_fiber_feasible (341): premise choice : Viability.ChoiceOver O A; then UniformPolicy obs good ↔ FiberFeasible obs good.
+- uniform_policy_iff_common (about line 352): premises choice : ChoiceOver O A and given : ∀ o, ∃ s, obs s = o; then UniformPolicy obs good ↔ ∃ J, «共应» (obs s = obs s') (fun a s => good s a) J. This is a real join between GuardHorizon and «共应», proved through «自反传递则共应当且仅当承遍».
+- ungiven_reading_not_uniform (about 369): a built case with no situation and no move.
+- statewise_not_uniform (382): a built case, proved from «共应之例».EachNotCommon, «共应之细» and «依读而应则共应».
+- discriminating_reading_uniform (about 391): a built case.
+- uniform_finer (about 394): premises coarse, fine, forget with forget (fine s) = coarse s; UniformPolicy coarse good → UniformPolicy fine good. One direction only.
+- uniform_viable (about 405): premises UniformPolicy read (Admissible P guard n) and guard s; conclusion Viable P guard (n+1) s.
+- uniform_iff (414): premise ChoiceOver O A; then UniformPolicy read (Admissible P guard n) ↔ ∀ o, ∃ a, ∀ s, read s = o → Admissible P guard n s a.
+- Definitions: Viable (line 71): Viable 0 s = guard s; Viable (n+1) s = guard s ∧ ∃ a, Enabled P s a ∧ ∀ t, step s a t → Viable n t. Admissible (line 76): Enabled P s a ∧ ∀ t, step s a t → Viable n t.
+What "given a choice over the readings" is, as a premise: the hypothesis Viability.ChoiceOver O A, defined at Keeping.lean line 156 (statement read): ∀ R : O → A → Prop, (∀ o, ∃ x, R o x) → ∃ f : O → A, ∀ o, R o (f o). It is a choice principle for the index type O of readings into the type A of acts, taken as a named hypothesis and not as an axiom. It holds with no premise when O = Fin k (choiceOver_fin, Keeping line 160, name only). Keeping.lean line 247, Viability.plans_iff_choice (statement read): asked of every process, kept classes have plans exactly where ChoiceOver O α holds for every α. In the periphery, InquiryChoice.observed_class_policy_iff (/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/systems-complexity/analysis/InquiryChoice.lean line 65; statement and proof read) has the same equivalence, with premise [Nonempty U], proved by `classical; choose` (Classical.choice).
+
+Inquiry.lean (whole file read, 95 lines):
+- Scope (34): the configurations that actual executions of the policy reach from believed ones.
+- Scope.secures (41): a sound policy meets its goal on its whole scope.
+- Scope.reached (48), Scope.nonempty (53), and Scope.antitone (61, premise narrower : ∀ s, B' s → B s).
+- commonResponse_antitone (67): the same premise narrower, and common : CommonResponse P safe goal response B r, give CommonResponse … B' r.
+- judgeProcess (76): a process on Option W that steps from some w to none by an admissible act.
+- sees (80): the belief lifted to Option W.
+- commonResponse_judge_iff (85): CommonResponse (judgeProcess admissible) (fun _ _ _ => True) (fun _ => True) (fun a => [a]) (sees B) a ↔ ∀ w, B w → admissible w a. The opening account says that a judgment is a one-step inquiry. What is read is a belief set B, supplied. What chooses is one act a.
+
+InquirySufficiency.lean (the source of the ASCII definition; lines 1-324 read):
+- Policy (109): abort, respond r, or inquire a next, where next branches on an observation in Fin k.
+- Sound (120) and Sufficient (128).
+- sufficiency_iff_bounded_policy (200): Sufficient P safe goal sense response n B ↔ InhabitedBelief B ∧ ∃ policy, Within n policy ∧ Sound … policy B. It is exact, with finitely many observations (Fin k) and constructive finite choice (finite_choice, line 148). It is a law over at most n inquiry steps that end in a common response (a finite word), with safety at every prefix. It is not a law of keeping for ever.
+
+LabelledRoles.lean (lines 87-182 read):
+- Web.class_judge_iff (111): CommonResponse (judgeProcess admissible) … (sees (W.ClassThrough obs g l t)) a ↔ ∀ l', W.AlikeThroughUpTo obs g l l' t → admissible l' a. This is the bridge chapter 3 §3 tells. I did not open the definitions of ClassThrough and AlikeThroughUpTo (they are in Testing).
+- class_judge_later (117): premise le : t ≤ t'; a common response for the class at t stays one at t'.
+- class_judge_widen (125): premise larger : ∀ g c, obs g c → obs' g c; a common response is kept when coupling widens.
+- Flow.class_judge_beyond (143): premises without : L.WithheldLevels part W l₀; balanced : ∀ t g c, L.WithinCoupling W obs f g → W.CoupledInto obs g c → L.BalancesOn W [c] t; beyond : ∀ h, part h = true → ¬ L.WithinCoupling W obs f h; within : L.WithinCoupling W obs f g; common : CommonResponse … (sees (W.ClassThrough obs g W.level t)) a. Conclusion: admissible W.level a ∧ admissible l₀ a. A judgment made from within the coupling closure holds with and without the withheld part.
+- Adjacent, and not a chosen rule: Renewable.finite_reading_withholds_renewal (162) and no_exact_finite_reading (173). Premise decided : ∀ r r', r.AgreeUpTo h r' → reading r → reading r'. Conclusion: no reading decided by the first h steps is exactly the whole-run renewing classification. These are stated on the named model `process` and `conditions`, so they are a built case's laws.
+
+MoveOutcomeProcesses.lean (lines 1-230 read):
+- common_completes (184): common : CommonResponse P safe goal response belief r, held : belief s ⊢ Completes P safe goal s (response r). It only unfolds the definition.
+- Adjacent: summary_ensures_iff (176), a goal on a summary f of the outcomes is ensured ↔ its pullback is; Ensures (56); covers_iff (95). These are one-move laws; none chooses from a reading of the start.
+
+Frontier.lean (the opening account, lines 1-60, and lines 300-560 read):
+- No declaration uses either common response. The opening account, lines 16-17, says that PracticalJudgment.Robust "is the core's CommonResponse of a judgment … and is not restated".
+- The places nearest a reading are built examples:
+  - Formation.report (473) and same_report_different_basis (about 479).
+  - Formation.no_report_judge (484): ¬ ∃ judge : Bool → Prop, ∀ f, judge (report f) ↔ basis f. No judgment that reads only whether a connection was built tells which continuations keep the basis.
+  - amountJudge (489) and amount_recovers_basis (491): read faithfully, the retained amount recovers the basis.
+  - Collective.no_common_plan (593): each world has a plan, and no plan is common to every world.
+  - Routes.none_robust (728): no route is on the frontier under every classification.
+
+Viability.lean (lines 1-110 read):
+- kernel_iff_held (65): Kernel P guard s ↔ «承»(«逆»(«所闭»(Steps P))) guard s.
+- Certificate.kernel (72) is proved from «闭在内则在所闭之承»; kernel_certificate (78) is proved from «所闭之承在内» and «所闭之承闭».
+- kernel_iff_certificate (85), kernel_largest (91), kernel_step_iff (98).
+- The kernel is over every course: Kernel s := ∀ t, Reach P s t → guard t (line 55). No move is chosen and nothing is read. «共应» and the kernel are the same grammar law, «所闭之承最大», at two relations: a reading in one and the process's steps in the other. No module in this group puts the reading and the steps in one statement.
+
+3. THE SIX QUESTIONS, across the group
+Q1, what is read and what chooses.
+- In «共应» (CommonResponse.lean 88): a relation E on situations (or a map's sameness), supplied. The response is a family of regions J; it is relational, not a rule.
+- A rule is rule : O → A in «依读而应则共应» (205) and policy : O → A in GuardHorizon.UniformPolicy (326).
+- In the ASCII CommonResponse (InquirySufficiency 102): a belief set B, with one finite word.
+- In Policy and Sound (InquirySufficiency 109 and 120): a tree branching on observations sense s a t : Fin k, which is a plan with recall of the observations along the run.
+Q2, the exact law.
+- «共应当且仅当所闭之承遍» (153) is exact, with no premise and no choice, and it has no steps at all: it is about one act at one situation.
+- GuardHorizon.uniform_policy_iff_fiber_feasible (341) is exact given ChoiceOver O A, and it too has no steps.
+- Applied to keeping, uniform_iff (414) is exact given ChoiceOver, for the first move only. uniform_viable (about 405) is sufficient only: a first move chosen from the reading keeps the guard n+1 steps, and the later moves are those of Viable, chosen at each configuration and not from the reading.
+- InquirySufficiency.sufficiency_iff_bounded_policy (200) is exact for at most n inquiry steps ending in a goal.
+- Keeping a guard for ever by a rule chosen from a reading: not found in what was read.
+Q3, within one reading.
+- Stated as laws: «一之共应当且仅当一应遍» (194); «遍定应共应当且仅当同读同应» (248) under covering and one act; «映应共应当且仅当同读同应» (274). Each says that situations read alike that need different acts admit no common response.
+- Shown as built cases: «共应之例».EachNotCommon (408), PairsNotCommon (422), GuardHorizon.statewise_not_uniform (382), Frontier.Collective.no_common_plan (593).
+- These are of one act and not of keeping over steps.
+Q4, two readings of one process.
+- «共应之细» (178), GuardHorizon.uniform_finer, and LabelledRoles.class_judge_widen (125) and class_judge_later (117) say that a finer reading keeps what a coarser one keeps. Each is one direction only.
+- That a finer reading keeps strictly more is shown only in built cases: discriminating_reading_uniform against statewise_not_uniform, and the «静» and «一» extremes (184, 194).
+- An exact statement of what a finer reading keeps more: not found in what was read.
+Q5, time.
+- LabelledRoles.class_judge_later (117) says that a later reading keeps every common response; it is monotone in t.
+- The step at which a reading comes to tell two states apart, related to what can still be kept after it: not found in what was read.
+- The nearest is a built case on the reals in the periphery, InquiryChoice.inquiry_can_cross_floor_before_response (InquiryChoice.lean 186): from level 2 with loss 3, the reading step takes the level to −1 before any response. Inquiry can cross a floor before its response arrives.
+- Renewable.no_exact_finite_reading (LabelledRoles 173): no reading fixed by a finite prefix is exact. It concerns a reading, not a choice.
+Q6, the lock.
+- None of the files read names the lock, the turn in time, LineOnAStock, TurningInTime, ReadOffInTime, RuleShaping or RuleCapture. A grep for lock, stock, share, line and level over these files found none in that sense.
+- What does occur:
+  - LabelledRoles uses W.level (a web's levels) in class_judge_beyond (143). These are levels the judgment is admissible under, not a running-down.
+  - Frontier.Formation is a built example with an amount of 6 drawn by continuations: remaining f := 6 − drawn f, and basis f := 2 ≤ remaining f (line 331). no_report_judge (484) shows a report that does not register the amount. Lines 493-496 say the continuations are moves of a process on the shared amount (from DrawnAmountProcesses, not read).
+  - InquiryChoice's dosing case has a level that falls below a floor (a built case).
+- For the lock to be read as a case of «共应», three things would have to be supplied: a carrier of situations (a class of starts or of shares), a reading relation E on them, and an act-indexed requirement G (for example, which acts keep the level). The «共应» law would then still be about one act, not a course. To be a case of uniform_iff it would need a Process with moves and the guard, with only the first move chosen from the reading. Whether the lock's own models have moves, I did not read; that is the third group's question.
+
+4. THE GUESSES C1 TO C6
+- C1 holds in what was read. Chapter 3's law is exact and general, given ChoiceOver, for one choice of act. The relational form «共应当且仅当所闭之承遍» is exact without choice. For keeping, only the first move is from the reading (uniform_iff, uniform_viable). Keeping for ever was not found.
+- C2: I bear on it only partly. In what I read of GuardHorizon (325-420), keeping by a rule from a reading is uniform_viable, which is sufficient and for n+1 steps. I did not read GuardHorizon's closed-set policy or KeptFor; those are group 2's.
+- C3 holds in this group. «共应之细» (178), uniform_finer and class_judge_widen are one-direction laws, and "more" is shown only in built cases.
+- C4: in this group, no statement joins the step at which a reading tells two things apart to what can be kept. class_judge_later is monotone in t only. InquiryChoice's crossing of the floor is a built case in the periphery.
+- C5: this group bears on it negatively. None of these files uses the lock or names it.
+- C6 is partly false. There are joins: GuardHorizon.uniform_policy_iff_common joins the rule chosen from a reading to «共应», and Viability's kernel laws are proved from «共应»'s grammar kernel. There are also unjoined seams: the ASCII CommonResponse (InquirySufficiency 102), used by Inquiry, LabelledRoles and MoveOutcomeProcesses, has no theorem relating it to «共应» in what was read, and no join to the lock was found. Neither "already there" condition of the frozen note is met.
+
+5. CHAPTER 3 AND THE RECORDS AGAINST THE LEAN
+- Chapter 3 line 426 (r-when-to-inquire-and-when-to-respond) matches InquiryChoice.observed_class_policy_iff and GuardHorizon.uniform_policy_iff_fiber_feasible as stated.
+- Chapter 3 line 560 (r-a-response-common-over-a-reading) matches the Lean's laws. Two notes:
+  - Its "so judgment is viability indexed by acts" is a reading. The Lean states that one grammar law holds at a reading and at steps; it has no steps in «共应».
+  - Its §3 bridge sentence rests on the ASCII CommonResponse, not on «共应» (see section 0).
+- Record when-to-inquire-and-when-to-respond.json: its statement and laws 0-6 match what was read. Its hypotheses[0] names ChoiceOver.
+- Record a-response-common-over-a-reading.json: laws 0-6 match. It lists GuardHorizon.uniform_policy_iff_common as the seventh law. Its does_not_show[1] says that the need for choice is shown for plans, not for this rule.
+- A small point of reference: CommonResponse.lean's docstring (line 53) cites Viability.plans_iff_choice. That declaration is in Keeping.lean line 247, in namespace Becoming.Viability. The name is right and the file is Keeping.
+
+6. WHAT WAS READ AND WHAT WAS NOT
+- Read whole: the frozen note; CommonResponse.lean; Inquiry.lean.
+- Read in part: InquirySufficiency.lean 1-324; LabelledRoles 1-182 (whole); MoveOutcomeProcesses 1-230; Frontier 1-60 and 300-560; Viability 1-110; GuardHorizon 325-420 and the definitions at 71-77; Keeping 156-160 and 235-262; InquiryChoice 1-90, 140-150 and 184-195.
+- Also read: chapter 3 lines 420-439 and 559-562; both records (all fields of the first, the main fields of the second); the PLACES.md entries for Inquiry and Viability.
+- Not read: Frontier 60-300 and 560-575; MoveOutcomeProcesses 230-288; Viability 110-325; Testing's ClassThrough and AlikeThroughUpTo; DrawnAmountProcesses; GuardHorizon outside 325-420; all of the lock's modules.
+- Statements were read, and proofs only where noted (InquiryChoice 65, and the GuardHorizon proofs in passing).
+- Tool calls: 31.
