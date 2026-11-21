@@ -1,0 +1,451 @@
+import Becoming.Keeping
+import Becoming.ScratchKeptForViable
+
+/-!
+# ScratchDrainOnTheLaw: the built case `Drain` set on the package's law `Viability.coded_kept_iff_closed`
+
+Scratch, outside the package (AI-written, Claude, 22 November 2026, board row DJ). Not landed.
+It tries the guesses D1 to D5 of `tmp/r7/one-model/check/drainedge22/FROZEN-DRAIN-ON-THE-EDGE.md`
+on `ScratchKeptForViable.Drain` and the package's `Viability.coded_kept_iff_closed` (`Keeping.lean`, in the
+package since 22 November), both unchanged. This is
+`ScratchDrainEdge` of the same day with three changes and no other: the law is the package's, whose
+two premises ask a code on the list, and a code for what is seen, only of codes whose class is within
+the guard; the two calls of the law hand it this module's stronger premises (`everyNone`, `updatesNone`,
+`everyLevel`, `updatesLevel`, each of every code) with that hypothesis ignored; and the namespace is new.
+Each declaration's docstring says what it states, with its premises, and which older theorems
+it calls.
+-/
+
+namespace Becoming
+
+namespace ScratchDrainOnTheLaw
+
+open Generative Viability ScratchKeptForViable
+
+/-! ## Levels and codes under the reading that keeps nothing -/
+
+/-- Three levels: 0, 1, 2. -/
+inductive Lv where
+  | l0
+  | l1
+  | l2
+
+namespace Lv
+
+/-- The number a level stands for. -/
+def val : Lv → Nat
+  | l0 => 0
+  | l1 => 1
+  | l2 => 2
+
+/-- One level lower, stopping at zero. -/
+def lower : Lv → Lv
+  | l0 => l0
+  | l1 => l0
+  | l2 => l1
+
+/-- `lower` is subtraction of one, stopping at zero, on the numbers. No premise. -/
+theorem val_lower : ∀ i : Lv, i.lower.val = i.val - 1
+  | l0 => rfl
+  | l1 => rfl
+  | l2 => rfl
+
+end Lv
+
+open Lv
+
+/-- A code under `noneRead`: a level for the lane `true` and a level for the lane `false`. -/
+abbrev Code := Lv × Lv
+
+/-- The class a code stands for: lane `true` at the first level, and lane `false` at the
+second; two configurations. -/
+abbrev decode (c : Code) (s : Bool × Nat) : Prop :=
+  s = (true, c.1.val) ∨ s = (false, c.2.val)
+
+/-- The code after a move: the move `true` lowers the lane `false`, the move `false` lowers the
+lane `true`. -/
+abbrev move : Code → Bool → Code
+  | c, true => (c.1, c.2.lower)
+  | c, false => (c.1.lower, c.2)
+
+/-- Every code, the nine pairs of levels. -/
+def allNone : List Code :=
+  [(l0, l0), (l0, l1), (l0, l2), (l1, l0), (l1, l1), (l1, l2), (l2, l0), (l2, l1), (l2, l2)]
+
+/-- **D1, `every`.** Every code is in `allNone`. No premise. -/
+theorem everyNone : ∀ c : Code, c ∈ allNone
+  | (l0, l0) => List.Mem.head _
+  | (l0, l1) => List.Mem.tail _ (List.Mem.head _)
+  | (l0, l2) => List.Mem.tail _ (List.Mem.tail _ (List.Mem.head _))
+  | (l1, l0) => List.Mem.tail _ (List.Mem.tail _ (List.Mem.tail _ (List.Mem.head _)))
+  | (l1, l1) => List.Mem.tail _ (List.Mem.tail _ (List.Mem.tail _ (List.Mem.tail _
+      (List.Mem.head _))))
+  | (l1, l2) => List.Mem.tail _ (List.Mem.tail _ (List.Mem.tail _ (List.Mem.tail _
+      (List.Mem.tail _ (List.Mem.head _)))))
+  | (l2, l0) => List.Mem.tail _ (List.Mem.tail _ (List.Mem.tail _ (List.Mem.tail _
+      (List.Mem.tail _ (List.Mem.tail _ (List.Mem.head _))))))
+  | (l2, l1) => List.Mem.tail _ (List.Mem.tail _ (List.Mem.tail _ (List.Mem.tail _
+      (List.Mem.tail _ (List.Mem.tail _ (List.Mem.tail _ (List.Mem.head _)))))))
+  | (l2, l2) => List.Mem.tail _ (List.Mem.tail _ (List.Mem.tail _ (List.Mem.tail _
+      (List.Mem.tail _ (List.Mem.tail _ (List.Mem.tail _ (List.Mem.tail _ (List.Mem.head _))))))))
+
+/-- **D4, the count.** There are nine codes. No premise. -/
+theorem allNone_length : allNone.length = 9 := rfl
+
+/-- A configuration of a code's class goes by a move into the class of the moved code. For every
+code `c`, move `a` and configuration `s` of `decode c`, `Drain.next s a` is in
+`decode (move c a)`. Calls `Lv.val_lower`. -/
+theorem decode_next : ∀ (c : Code) (a : Bool) (s : Bool × Nat), decode c s →
+    decode (move c a) (Drain.next s a)
+  | _, true, _, .inl rfl => Or.inl rfl
+  | c, true, _, .inr rfl => Or.inr (congrArg (Prod.mk false) (Lv.val_lower c.2).symm)
+  | c, false, _, .inl rfl => Or.inl (congrArg (Prod.mk true) (Lv.val_lower c.1).symm)
+  | _, false, _, .inr rfl => Or.inr rfl
+
+/-- Each configuration of the moved code's class is reached by the move from the code's class.
+For every code `c`, move `a` and `t` in `decode (move c a)`, some `s` in `decode c` has
+`t = Drain.next s a`. Calls `Lv.val_lower`. -/
+theorem decode_move : ∀ (c : Code) (a : Bool) (t : Bool × Nat), decode (move c a) t →
+    ∃ s, decode c s ∧ t = Drain.next s a
+  | c, true, _, .inl rfl => ⟨(true, c.1.val), Or.inl rfl, rfl⟩
+  | c, true, _, .inr rfl =>
+      ⟨(false, c.2.val), Or.inr rfl, congrArg (Prod.mk false) (Lv.val_lower c.2)⟩
+  | c, false, _, .inl rfl =>
+      ⟨(true, c.1.val), Or.inl rfl, congrArg (Prod.mk true) (Lv.val_lower c.1)⟩
+  | c, false, _, .inr rfl => ⟨(false, c.2.val), Or.inr rfl, rfl⟩
+
+/-- Under any reading, what is seen after the move `a` from `decode c` lies in
+`decode (move c a)`. For every reading `sense`, code `c`, move `a`, value `o` and `t`. Calls
+`decode_next`. -/
+theorem seen_in {O : Type} {sense : Bool × Nat → Bool → Bool × Nat → O} {c : Code} {a : Bool}
+    {o : O} {t : Bool × Nat} :
+    Seen Drain.process sense (decode c) a o t → decode (move c a) t
+  | ⟨s, held, step, _⟩ =>
+    Eq.subst (motive := fun z => decode (move c a) z) (Eq.symm (step : t = Drain.next s a))
+      (decode_next c a s held)
+
+/-- **D1, `updates`, in the form `ScratchViableEdge` stated it, for every code (stronger than the package's law asks).** For every code `c` and move `a`
+usable from `decode c` with every move allowed, and every value `o` of `noneRead` (the unit),
+the code `move c a` decodes, configuration by configuration, to what is seen after `a` from
+`decode c` under `noneRead`. The usability premise is not used. No premise. Calls `decode_move`
+and `seen_in`. -/
+theorem updatesNone : ∀ c a, Usable Drain.process everyMove (decode c) a → ∀ o,
+    ∃ d, ∀ s, decode d s ↔ Seen Drain.process noneRead (decode c) a o s :=
+  fun c a _ ⟨⟩ => ⟨move c a, fun t =>
+    ⟨fun h => match decode_move c a t h with
+      | ⟨s, held, step⟩ => ⟨s, held, step, rfl⟩,
+     seen_in⟩⟩
+
+/-- The two starts together are the class of the code `(l2, l2)`, configuration by
+configuration. No premise. -/
+theorem starts_code : ∀ s, Drain.starts s ↔ decode (l2, l2) s := fun _ => Iff.rfl
+
+/-- **D1 with the law.** Under `noneRead` with every move allowed and the guard `Drain.above`,
+the class of any code is kept for `allNone.length` (nine) steps exactly where it lies in a
+closed family. No premise. Calls `coded_kept_iff_closed` with `everyNone` and `updatesNone`. -/
+theorem none_kept_iff_closed (c : Code) :
+    KeptFor Drain.process noneRead Drain.above everyMove allNone.length (decode c) ↔
+      InClosedFamily Drain.process noneRead Drain.above everyMove (decode c) :=
+  coded_kept_iff_closed (decode := decode) (fun c _ => everyNone c) (fun c _ => updatesNone c)
+
+/-- Kept for nine steps gives kept for three, for any class, under `noneRead` with every move
+allowed and the guard `Drain.above`. Calls `KeptFor.shorter` six times. -/
+theorem down_nine_three {B : Bool × Nat → Prop}
+    (kept : KeptFor Drain.process noneRead Drain.above everyMove 9 B) :
+    KeptFor Drain.process noneRead Drain.above everyMove 3 B :=
+  KeptFor.shorter (KeptFor.shorter (KeptFor.shorter
+    (KeptFor.shorter (KeptFor.shorter (KeptFor.shorter kept)))))
+
+/-- **D3, first half, through the law.** Under `noneRead` with every move allowed and the guard
+`Drain.above`, the two starts together lie in no closed family. No premise. Calls
+`none_kept_iff_closed` at the code `(l2, l2)` (its direction from closed to kept), whose class is
+`Drain.starts` by definition (`starts_code`), then `down_nine_three` and the filed
+`Drain.together_not_kept_none`. -/
+theorem starts_in_no_closed_family_none :
+    ¬ InClosedFamily Drain.process noneRead Drain.above everyMove Drain.starts :=
+  fun closed => Drain.together_not_kept_none
+    (down_nine_three ((none_kept_iff_closed (l2, l2)).mpr closed))
+
+/-- **D3, first half, without the codes.** The same statement as
+`starts_in_no_closed_family_none`, got from `keptFor_of_closed` at three steps and the filed
+`Drain.together_not_kept_none`; neither `every` nor `updates` is used. No premise. -/
+theorem starts_in_no_closed_family_none_direct :
+    ¬ InClosedFamily Drain.process noneRead Drain.above everyMove Drain.starts :=
+  fun ⟨F, held, within, closed⟩ =>
+    Drain.together_not_kept_none (keptFor_of_closed F within closed 3 held)
+
+/-! ## D4: the edge of the case and the count of the law -/
+
+/-- The guard holds throughout the class of a code whose two levels are not zero. -/
+theorem code_within : ∀ c : Code, c.1.val ≠ 0 → c.2.val ≠ 0 → ∀ s, decode c s → Drain.above s
+  | _, first, _, _, .inl rfl => first
+  | _, _, second, _, .inr rfl => second
+
+/-- Every move is usable from every class of `Drain.process` with every move allowed. -/
+theorem usable_all (B : Bool × Nat → Prop) (a : Bool) : Usable Drain.process everyMove B a :=
+  fun s _ => ⟨trivial, ⟨Drain.next s a, rfl⟩⟩
+
+/-- **D4, kept for two.** Under `noneRead` with every move allowed and the guard `Drain.above`,
+the two starts together are kept for two steps (the move `true`, then the move `false`). No
+premise. Calls `code_within`, `usable_all`, `seen_in`, `KeptFor.mono`, `succ_not_zero`. -/
+theorem together_kept_two_none :
+    KeptFor Drain.process noneRead Drain.above everyMove 2 Drain.starts :=
+  ⟨code_within (l2, l2) (succ_not_zero 1) (succ_not_zero 1), true, usable_all _ true, fun _ =>
+    KeptFor.mono (n := 1) (C := decode (l2, l1)) (fun _ seen => seen_in (c := (l2, l2)) seen)
+      ⟨code_within (l2, l1) (succ_not_zero 1) (succ_not_zero 0), false, usable_all _ false,
+        fun _ => KeptFor.mono (n := 0) (C := decode (l1, l1))
+          (fun _ seen => seen_in (c := (l2, l1)) seen)
+          (code_within (l1, l1) (succ_not_zero 0) (succ_not_zero 0))⟩⟩
+
+/-- **D4.** Under `noneRead` with every move allowed and the guard `Drain.above`, the two starts
+together are kept for two steps and not for three, while the codes are nine. No premise. Calls
+`together_kept_two_none`, the filed `Drain.together_not_kept_none`, `allNone_length`. -/
+theorem edge_two_codes_nine :
+    KeptFor Drain.process noneRead Drain.above everyMove 2 Drain.starts ∧
+      ¬ KeptFor Drain.process noneRead Drain.above everyMove 3 Drain.starts ∧
+      allNone.length = 9 :=
+  ⟨together_kept_two_none, Drain.together_not_kept_none, allNone_length⟩
+
+/-! ## Codes under the reading that keeps the level -/
+
+/-- A code under `Drain.keepsLevel`: the two starts together, the empty class, or one lane at
+one level of three. -/
+inductive LCode where
+  | both
+  | empty
+  | single (b : Bool) (k : Lv)
+
+/-- The class a code under `Drain.keepsLevel` stands for. -/
+def decodeL : LCode → Bool × Nat → Prop
+  | .both, s => Drain.starts s
+  | .empty, _ => False
+  | .single b k, s => s = (b, k.val)
+
+/-- Every code under `Drain.keepsLevel`, eight. -/
+def allLevel : List LCode :=
+  [.both, .empty, .single true l0, .single true l1, .single true l2,
+   .single false l0, .single false l1, .single false l2]
+
+/-- **D2, `every`.** Every code is in `allLevel`. No premise. -/
+theorem everyLevel : ∀ c : LCode, c ∈ allLevel
+  | .both => List.Mem.head _
+  | .empty => List.Mem.tail _ (List.Mem.head _)
+  | .single true l0 => List.Mem.tail _ (List.Mem.tail _ (List.Mem.head _))
+  | .single true l1 => List.Mem.tail _ (List.Mem.tail _ (List.Mem.tail _ (List.Mem.head _)))
+  | .single true l2 => List.Mem.tail _ (List.Mem.tail _ (List.Mem.tail _ (List.Mem.tail _
+      (List.Mem.head _))))
+  | .single false l0 => List.Mem.tail _ (List.Mem.tail _ (List.Mem.tail _ (List.Mem.tail _
+      (List.Mem.tail _ (List.Mem.head _)))))
+  | .single false l1 => List.Mem.tail _ (List.Mem.tail _ (List.Mem.tail _ (List.Mem.tail _
+      (List.Mem.tail _ (List.Mem.tail _ (List.Mem.head _))))))
+  | .single false l2 => List.Mem.tail _ (List.Mem.tail _ (List.Mem.tail _ (List.Mem.tail _
+      (List.Mem.tail _ (List.Mem.tail _ (List.Mem.tail _ (List.Mem.head _)))))))
+
+/-- **D2, the count.** There are eight codes. No premise. -/
+theorem allLevel_length : allLevel.length = 8 := rfl
+
+/-- The level in lane `b` after the move `a`: kept where the move matches the lane, lowered
+otherwise. -/
+def after : Bool → Lv → Bool → Lv
+  | true, k, true => k
+  | false, k, false => k
+  | true, k, false => k.lower
+  | false, k, true => k.lower
+
+/-- From lane `b` at level `k`, the move `a` leads to lane `b` at `after b k a`. No premise.
+Calls `Lv.val_lower`. -/
+theorem next_single : ∀ (b : Bool) (k : Lv) (a : Bool),
+    Drain.next (b, k.val) a = (b, (after b k a).val)
+  | true, _, true => rfl
+  | false, _, false => rfl
+  | true, k, false => congrArg (Prod.mk true) (Lv.val_lower k).symm
+  | false, k, true => congrArg (Prod.mk false) (Lv.val_lower k).symm
+
+/-- Whether a number is the number of a level, written out case by case. -/
+def eqv : Lv → Nat → Bool
+  | l0, 0 => true
+  | l0, _ + 1 => false
+  | l1, 0 => false
+  | l1, 1 => true
+  | l1, _ + 2 => false
+  | l2, 0 => false
+  | l2, 1 => false
+  | l2, 2 => true
+  | l2, _ + 3 => false
+
+/-- Where `eqv k o` is `true`, `o` is the number of `k`. No premise. -/
+theorem eqv_true : ∀ (k : Lv) (o : Nat), eqv k o = true → k.val = o
+  | l0, 0, _ => rfl
+  | l0, _ + 1, h => nomatch h
+  | l1, 0, h => nomatch h
+  | l1, 1, _ => rfl
+  | l1, _ + 2, h => nomatch h
+  | l2, 0, h => nomatch h
+  | l2, 1, h => nomatch h
+  | l2, 2, _ => rfl
+  | l2, _ + 3, h => nomatch h
+
+/-- Where `eqv k o` is `false`, `o` is not the number of `k`. No premise. Calls `succ_not_zero`
+(written with `Nat.noConfusion`; `nomatch` on equations of numbers brought `propext`). -/
+theorem eqv_false : ∀ (k : Lv) (o : Nat), eqv k o = false → k.val ≠ o
+  | l0, 0, h => nomatch h
+  | l0, n + 1, _ => fun e => succ_not_zero n e.symm
+  | l1, 0, _ => fun e => succ_not_zero 0 e
+  | l1, 1, h => nomatch h
+  | l1, n + 2, _ => fun e => succ_not_zero n (congrArg Nat.pred e).symm
+  | l2, 0, _ => fun e => succ_not_zero 1 e
+  | l2, 1, _ => fun e => succ_not_zero 0 (congrArg Nat.pred e)
+  | l2, 2, h => nomatch h
+  | l2, n + 3, _ => fun e => succ_not_zero n (congrArg Nat.pred (congrArg Nat.pred e)).symm
+
+/-- The code of one lane at one level, or the empty code, by a Boolean. -/
+def pickB (b : Bool) (j : Lv) : Bool → LCode
+  | true => .single b j
+  | false => .empty
+
+/-- For every Boolean `x` that is `true` only where `j.val = o` and `false` only where not, the
+class of `pickB b j x` holds exactly lane `b` at `j` where `j.val = o`. No premise. -/
+theorem decode_pickB (b : Bool) (j : Lv) (o : Nat) : ∀ x : Bool, (x = true → j.val = o) →
+    (x = false → j.val ≠ o) → ∀ s, decodeL (pickB b j x) s ↔ (s = (b, j.val) ∧ j.val = o)
+  | true, yes, _, _ => ⟨fun h => ⟨h, yes rfl⟩, fun h => h.1⟩
+  | false, _, no, _ => ⟨fun h => False.elim h, fun h => absurd h.2 (no rfl)⟩
+
+/-- What is seen after the move `a` from lane `b` at level `k`, the value kept being `o`, is
+lane `b` at `after b k a`, where its number is `o`. No premise. Calls `next_single`. -/
+theorem seen_single (b : Bool) (k : Lv) (a : Bool) (o : Nat) (t : Bool × Nat) :
+    Seen Drain.process Drain.keepsLevel (decodeL (.single b k)) a o t ↔
+      (t = (b, (after b k a).val) ∧ (after b k a).val = o) := by
+  constructor
+  · intro seen
+    obtain ⟨s, held, step, lvl⟩ := seen
+    have at_s : s = (b, k.val) := held
+    subst at_s
+    have reached : t = (b, (after b k a).val) := Eq.trans step (next_single b k a)
+    exact ⟨reached, Eq.trans (congrArg Prod.snd reached).symm lvl⟩
+  · intro h
+    exact ⟨(b, k.val), rfl, Eq.trans h.1 (next_single b k a).symm,
+      Eq.trans (congrArg Prod.snd h.1) h.2⟩
+
+/-- What is seen after the move `a` from the two starts, the value kept being `o`: lane `a` at
+level 2 where `o` is 2, and the other lane at level 1 where `o` is 1. No premise. -/
+theorem seen_starts (a : Bool) (o : Nat) (t : Bool × Nat) :
+    Seen Drain.process Drain.keepsLevel Drain.starts a o t ↔
+      (t = (a, 2) ∧ 2 = o) ∨ (t = (!a, 1) ∧ 1 = o) := by
+  cases a with
+  | true =>
+    constructor
+    · intro seen
+      obtain ⟨s, held, step, lvl⟩ := seen
+      have reached : t = Drain.next s true := step
+      have level : t.2 = o := lvl
+      have held' : s = (true, 2) ∨ s = (false, 2) := held
+      cases held' with
+      | inl e =>
+        subst e
+        exact Or.inl ⟨reached, Eq.trans (congrArg Prod.snd reached).symm level⟩
+      | inr e =>
+        subst e
+        exact Or.inr ⟨reached, Eq.trans (congrArg Prod.snd reached).symm level⟩
+    · intro h
+      cases h with
+      | inl h => exact ⟨(true, 2), Or.inl rfl, h.1, Eq.trans (congrArg Prod.snd h.1) h.2⟩
+      | inr h => exact ⟨(false, 2), Or.inr rfl, h.1, Eq.trans (congrArg Prod.snd h.1) h.2⟩
+  | false =>
+    constructor
+    · intro seen
+      obtain ⟨s, held, step, lvl⟩ := seen
+      have reached : t = Drain.next s false := step
+      have level : t.2 = o := lvl
+      have held' : s = (true, 2) ∨ s = (false, 2) := held
+      cases held' with
+      | inl e =>
+        subst e
+        exact Or.inr ⟨reached, Eq.trans (congrArg Prod.snd reached).symm level⟩
+      | inr e =>
+        subst e
+        exact Or.inl ⟨reached, Eq.trans (congrArg Prod.snd reached).symm level⟩
+    · intro h
+      cases h with
+      | inl h => exact ⟨(false, 2), Or.inr rfl, h.1, Eq.trans (congrArg Prod.snd h.1) h.2⟩
+      | inr h => exact ⟨(true, 2), Or.inl rfl, h.1, Eq.trans (congrArg Prod.snd h.1) h.2⟩
+
+/-- The code after the move `a` from the two starts, by a Boolean saying whether `o` is 2. -/
+def pickB2 (a : Bool) (o : Nat) : Bool → LCode
+  | true => .single a l2
+  | false => pickB (!a) l1 (eqv l1 o)
+
+/-- For every Boolean `x` that is `true` only where `o` is 2 and `false` only where not, the
+class of `pickB2 a o x` is what `seen_starts` says is seen. No premise. Calls `decode_pickB`,
+`eqv_true`, `eqv_false`. -/
+theorem decode_pickB2 (a : Bool) (o : Nat) : ∀ x : Bool, (x = true → 2 = o) →
+    (x = false → 2 ≠ o) → ∀ t, decodeL (pickB2 a o x) t ↔
+      ((t = (a, 2) ∧ 2 = o) ∨ (t = (!a, 1) ∧ 1 = o))
+  | true, yes, _, _ => ⟨fun h => Or.inl ⟨h, yes rfl⟩, fun h => match h with
+      | .inl h => h.1
+      | .inr h => (succ_not_zero 0 (congrArg Nat.pred (Eq.trans (yes rfl) h.2.symm))).elim⟩
+  | false, _, no, t =>
+    (decode_pickB (!a) l1 o (eqv l1 o) (eqv_true l1 o) (eqv_false l1 o) t).trans
+      ⟨fun h => Or.inr h, fun h => match h with
+        | .inl h => absurd h.2 (no rfl)
+        | .inr h => h⟩
+
+/-- **D2, `updates`, in the form `ScratchViableEdge` stated it, for every code (stronger than the package's law asks).** For every code `c` and move `a`
+usable from `decodeL c` with every move allowed, and every value `o : Nat` of
+`Drain.keepsLevel`, the ones no configuration reaches included, some code decodes,
+configuration by configuration, to what is seen after `a` from `decodeL c`. The usability premise
+is not used. No premise. Calls `seen_starts`, `decode_pickB2`, `seen_single`, `decode_pickB`,
+`eqv_true`, `eqv_false`. -/
+theorem updatesLevel : ∀ c a, Usable Drain.process everyMove (decodeL c) a → ∀ o,
+    ∃ d, ∀ s, decodeL d s ↔ Seen Drain.process Drain.keepsLevel (decodeL c) a o s
+  | .both, a, _, o => ⟨pickB2 a o (eqv l2 o), fun t =>
+      (decode_pickB2 a o (eqv l2 o) (eqv_true l2 o) (eqv_false l2 o) t).trans
+        (seen_starts a o t).symm⟩
+  | .empty, _, _, _ => ⟨.empty, fun _ => ⟨fun h => False.elim h,
+      fun seen => match seen with | ⟨_, h, _⟩ => h⟩⟩
+  | .single b k, a, _, o => ⟨pickB b (after b k a) (eqv (after b k a) o), fun t =>
+      (decode_pickB b (after b k a) o (eqv (after b k a) o) (eqv_true _ o) (eqv_false _ o)
+        t).trans (seen_single b k a o t).symm⟩
+
+/-- **D2 with the law.** Under `Drain.keepsLevel` with every move allowed and the guard
+`Drain.above`, the class of any code is kept for `allLevel.length` (eight) steps exactly where it
+lies in a closed family. No premise. Calls `coded_kept_iff_closed` with `everyLevel` and
+`updatesLevel`. -/
+theorem level_kept_iff_closed (c : LCode) :
+    KeptFor Drain.process Drain.keepsLevel Drain.above everyMove allLevel.length (decodeL c) ↔
+      InClosedFamily Drain.process Drain.keepsLevel Drain.above everyMove (decodeL c) :=
+  coded_kept_iff_closed (decode := decodeL) (fun c _ => everyLevel c) (fun c _ => updatesLevel c)
+
+/-- **D3, second half, through the law.** Under `Drain.keepsLevel` with every move allowed and
+the guard `Drain.above`, the two starts together lie in a closed family. No premise. Calls
+`level_kept_iff_closed` at the code `both`, whose class is `Drain.starts` by definition (its
+direction from kept to closed), and the filed `Drain.together_kept_level` at eight steps. -/
+theorem starts_in_closed_family_level :
+    InClosedFamily Drain.process Drain.keepsLevel Drain.above everyMove Drain.starts :=
+  (level_kept_iff_closed .both).mp (Drain.together_kept_level allLevel.length)
+
+/-- **D3, second half, without the codes.** The same statement as
+`starts_in_closed_family_level`, with the family written out: the classes within the two starts
+and the classes in one lane above zero. Neither `every` nor `updates` is used. No premise. Calls
+the filed `Drain.starts_within`, `Drain.level_lane`, `Drain.next_own`, and `Seen.mono`,
+`usable_all`. -/
+theorem starts_in_closed_family_level_direct :
+    InClosedFamily Drain.process Drain.keepsLevel Drain.above everyMove Drain.starts :=
+  ⟨fun C => (∀ s, C s → Drain.starts s) ∨ ∃ b, Drain.Lane b C,
+   Or.inl (fun _ h => h),
+   fun _ held s hs => match held with
+     | .inl sub => Drain.starts_within s (sub s hs)
+     | .inr ⟨_, lane⟩ => (lane s hs).2,
+   fun _ held => match held with
+     | .inl sub => ⟨true, usable_all _ true, fun o => Or.inr ⟨Drain.laneOf o,
+         fun x seen => Drain.level_lane o x (Seen.mono sub seen)⟩⟩
+     | .inr ⟨b, lane⟩ => ⟨b, usable_all _ b, fun _ => Or.inr ⟨b, fun t seen => match seen with
+         | ⟨s, hs, step, _⟩ =>
+           have stays : Drain.next s b = s :=
+             Eq.subst (motive := fun z => Drain.next s z = s) (lane s hs).1 (Drain.next_own s)
+           have same : t = s := Eq.trans step stays
+           ⟨Eq.subst (motive := fun z => z.1 = b) (Eq.symm same) (lane s hs).1,
+            Eq.subst (motive := fun z => z.2 ≠ 0) (Eq.symm same) (lane s hs).2⟩⟩⟩⟩
+
+end ScratchDrainOnTheLaw
+
+end Becoming

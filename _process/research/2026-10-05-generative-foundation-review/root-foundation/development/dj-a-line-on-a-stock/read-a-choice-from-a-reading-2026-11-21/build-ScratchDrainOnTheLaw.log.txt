@@ -1,0 +1,26 @@
+start 04:49:20
+{
+  "tree": "/Users/ren/tmp/dj/batch27",
+  "modules": 19,
+  "ran": [
+    "Becoming.ScratchKeptForViable",
+    "Becoming.ScratchDrainOnTheLaw",
+    "BecomingScratchDrainOnTheLawAxiomAudit"
+  ],
+  "reused": 17,
+  "unclean": [],
+  "audits": {
+    "Becoming.ScratchDrainOnTheLaw": {
+      "theorems": 29,
+      "declarations": 43,
+      "with_axioms": {}
+    }
+  },
+  "seconds": {
+    "Becoming.ScratchKeptForViable": 2.867,
+    "Becoming.ScratchDrainOnTheLaw": 0.484,
+    "BecomingScratchDrainOnTheLawAxiomAudit": 0.315
+  }
+}
+exit 0 build 1
+end 04:49:26
