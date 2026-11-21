@@ -18,3 +18,7 @@ About 22:50 WIB:
 - **What the session takes from it.** For the direction of that evening (a full map with formal link proof and its centre), work is no longer sized to one writer and one reader. Each kind of model goes where it is strong: Fable for what is frozen beforehand, the decisions and the reading together of what comes back; Astra 6.2 for implementing Lean, searching by program and refuting bounded claims; Opus for reading against the Lean and for second designs; and a design is refuted by another kind of model than wrote it. Where a route fails, the kind of route changes, and what failed is said first.
 - **What is not said.** He named no task, no number of agents and no ceiling. He did not say the other sessions change how they work. Nothing here releases a push, a sending or a paid run; machine time is still weighed, and heavy Lean runs still go one at a time.
 - **What it was used for first.** That night: eight independent designs of a model of the centre, on paper and by small programs, by three kinds of model on one frozen brief, each then set on by refuters of another kind.
+
+## A correction of the time (appended 22 November 2026, AI-written)
+
+The record above says his words came "About 22:50 WIB". The session did not read the clock at the message. The readings on either side are 22:50:07, when the landing gate it speaks of was started, before his message, and 23:02:17, the first command after it. So: between 22:50 and 23:02 WIB. The Queue clause of that record's landing says "about 22:50" too and stays as it is.
