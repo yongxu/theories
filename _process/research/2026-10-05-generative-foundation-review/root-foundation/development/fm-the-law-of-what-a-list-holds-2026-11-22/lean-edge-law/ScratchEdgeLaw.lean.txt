@@ -1,0 +1,547 @@
+import Becoming.Prelude
+import Becoming.CommonResponse
+import Becoming.Lasting
+import Becoming.Parting
+import Becoming.GuardHorizon
+import Becoming.Keeping
+import Becoming.Decidedness
+
+/-! AI-written by Codex. Finite bounds on iteration of predicates. -/
+
+namespace Becoming.ScratchEdgeLaw
+
+universe u v w q
+
+-- home: PredicateIteration
+section Falling
+
+variable {S : Type u}
+
+/-- Start with the given predicate and apply the step once for each count. -/
+def iter (Φ : (S → Prop) → S → Prop) (V₀ : S → Prop) : Nat → S → Prop
+  | 0 => V₀
+  | n + 1 => Φ (iter Φ V₀ n)
+
+/-- A step is monotone if enlarging its input preserves every state in its output. -/
+abbrev MonotoneStep (Φ : (S → Prop) → S → Prop) :=
+  ∀ {X Y : S → Prop}, (∀ z, X z → Y z) → ∀ y, Φ X y → Φ Y y
+
+/-- Given a listed state, one occurrence can be removed while every other state stays listed. -/
+theorem remove_place {y : S} : ∀ {l : List S}, y ∈ l →
+    ∃ rest : List S, l.length = rest.length + 1 ∧ ∀ z, z ∈ l → z = y ∨ z ∈ rest
+  | _ :: l, .head _ => ⟨l, rfl, fun _ mem => mem_cons_cases mem⟩
+  | x :: _, .tail _ mem =>
+    match remove_place mem with
+    | ⟨rest, len, covers⟩ => ⟨x :: rest, congrArg Nat.succ len, fun z inside =>
+      match mem_cons_cases inside with
+      | .inl rfl => .inr (.head _)
+      | .inr tail => (covers z tail).imp id (.tail x)⟩
+
+variable {Φ : (S → Prop) → S → Prop} {V₀ : S → Prop}
+  (mono : MonotoneStep Φ) (start : ∀ y, Φ V₀ y → V₀ y)
+
+include mono start
+
+/-- If a monotone step takes the start into itself, each iterate lies in the preceding one. -/
+theorem iter_pred : ∀ n y, iter Φ V₀ (n + 1) y → iter Φ V₀ n y
+  | 0 => start
+  | n + 1 => mono (iter_pred n)
+
+/-- If a monotone step takes the start into itself, every iterate lies in the start. -/
+theorem iter_within : ∀ n y, iter Φ V₀ n y → V₀ y
+  | 0, _, h => h
+  | n + 1, y, h => iter_within n y (iter_pred mono start n y h)
+
+/-- Suppose a monotone step takes the start into itself. If each starting state is among
+the remaining places or survives one step past their count, every survivor at the count does too. -/
+theorem extend_at_places : ∀ (n : Nat) (left : List S), left.length = n →
+    (∀ z, V₀ z → z ∈ left ∨ iter Φ V₀ (n + 1) z) → ∀ y, iter Φ V₀ n y → iter Φ V₀ (n + 1) y
+  | 0, _, len, cover, y, kept =>
+    (cover y kept).elim (fun mem => nomatch (nil_of_length_zero len ▸ mem : y ∈ ([] : List S))) id
+  | n + 1, _, len, cover, y, kept =>
+    match cover y (iter_within mono start _ y kept) with
+    | .inr enough => enough
+    | .inl mem => match remove_place mem with
+      | ⟨rest, size, place⟩ =>
+        have shorter := Nat.succ.inj (size.symm.trans len)
+        have nextCover (z : S) (inside : V₀ z) : z ∈ rest ∨ iter Φ V₀ (n + 1) z :=
+          match cover z inside with
+          | .inr earlier => .inr (iter_pred mono start _ z earlier)
+          | .inl listed => match place z listed with
+            | .inl same => .inr (same.symm ▸ kept)
+            | .inr unused => .inl unused
+        mono (extend_at_places n rest shorter nextCover) y kept
+
+/-- If a monotone step takes the start into itself and all starting states are listed,
+a state kept for the length of the list is kept one step longer. -/
+theorem iter_persists {all : List S} (within : ∀ x, V₀ x → x ∈ all) {y : S} :
+    iter Φ V₀ all.length y → iter Φ V₀ (all.length + 1) y :=
+  extend_at_places mono start all.length all rfl (fun z h => .inl (within z h)) y
+
+/-- If a monotone step takes the start into itself and all starting states are listed,
+applying the step to the iterate at the list length keeps every state in that iterate. -/
+theorem iter_postfixed {all : List S} (within : ∀ x, V₀ x → x ∈ all) :
+    ∀ y, iter Φ V₀ all.length y → Φ (iter Φ V₀ all.length) y :=
+  fun _ => iter_persists mono start within
+
+omit start in
+/-- For a monotone step, a class inside the start that the step preserves lies in every iterate. -/
+theorem postfixed_in_iter {K : S → Prop} (within : ∀ y, K y → V₀ y)
+    (post : ∀ y, K y → Φ K y) : ∀ n y, K y → iter Φ V₀ n y
+  | 0 => within
+  | n + 1 => fun y h => mono (postfixed_in_iter within post n) y (post y h)
+
+/-- If a monotone step takes the start into itself and all starting states are listed,
+being kept at the list length is equivalent to being kept at every length. -/
+theorem iter_iff_all {all : List S} (within : ∀ x, V₀ x → x ∈ all) {y : S} :
+    iter Φ V₀ all.length y ↔ ∀ n, iter Φ V₀ n y :=
+  ⟨fun h n => postfixed_in_iter mono (iter_within mono start _) (iter_postfixed mono start within) n y h,
+   fun h => h all.length⟩
+
+/-- If a monotone step takes the start into itself and all starting states are listed,
+the iterate at the list length is the largest class inside the start that the step preserves. -/
+theorem iter_largest {all : List S} (within : ∀ x, V₀ x → x ∈ all) :
+    let L := iter Φ V₀ all.length
+    (∀ y, L y → V₀ y) ∧ (∀ y, L y → Φ L y) ∧
+      ∀ K : S → Prop, (∀ y, K y → V₀ y) → (∀ y, K y → Φ K y) → ∀ y, K y → L y :=
+  ⟨iter_within mono start _, iter_postfixed mono start within,
+   fun _ inside post => postfixed_in_iter mono inside post _⟩
+
+end Falling
+
+-- home: CommonResponse
+section Regions
+
+variable {S : Type u} (R : «际» S) (Q : S → Prop)
+
+/-- A state lies in the region and all its successors lie in the given class. -/
+def regionStep (X : S → Prop) (s : S) : Prop := Q s ∧ ∀ t, R s t → X t
+
+/-- Enlarging the class allowed for successors preserves every state kept by the region step. -/
+theorem region_mono : MonotoneStep (regionStep R Q) :=
+  fun sub _ ⟨within, later⟩ => ⟨within, fun t rel => sub t (later t rel)⟩
+
+/-- If every state in the region is listed, the region holds throughout the reachable states
+exactly when the starting state survives the region step for the length of the list. -/
+theorem held_iff_iter {all : List S} (within : ∀ x, Q x → x ∈ all) {s : S} :
+    «承» («逆» («所闭» R)) Q s ↔ iter (regionStep R Q) Q all.length s :=
+  match «所闭之承最大» R Q, iter_largest (region_mono R Q) (fun _ h => h.1) within with
+  | ⟨inside, closed, largest⟩, ⟨bounded, post, greatest⟩ =>
+    ⟨greatest _ inside (fun x h => ⟨inside x h, fun t => closed x t h⟩) s,
+     largest _ bounded (fun x t h => (post x h).2 t) s⟩
+
+end Regions
+
+-- home: Viability
+section Kernels
+
+open Generative
+variable {S : Type u} {A : Type v} {P : Process S A} {guard : S → Prop}
+
+/-- If all guarded states are listed, the kernel of any process is exactly what its region
+step keeps for the length of the list. -/
+theorem kernel_iff_iter {all : List S} (within : ∀ x, guard x → x ∈ all) {s : S} :
+    Viability.Kernel P guard s ↔ iter (regionStep (Steps P) guard) guard all.length s :=
+  Viability.kernel_iff_held.trans (held_iff_iter (Steps P) guard within)
+
+end Kernels
+
+-- home: Lasting
+section Disturbances
+
+open Generative Lasting Viability
+variable {S : Type u} {A : Type v} {f : S → A → S} {adm : A → Prop} {guard : S → Prop}
+
+/-- Iterating the region step for a disturbed process agrees at each length with keeping
+the guard under every admissible disturbance for that many steps. -/
+theorem iter_region_iff_lasts : ∀ n s,
+    iter (regionStep (Steps (disturbed f adm)) guard) guard n s ↔ Lasts f adm guard n s
+  | 0, _ => Iff.rfl
+  | n + 1, s =>
+    ⟨fun ⟨inside, later⟩ => ⟨inside, fun a ha => (iter_region_iff_lasts n (f s a)).mp
+       (later (f s a) ⟨a, ha, rfl⟩)⟩,
+     fun ⟨inside, later⟩ => ⟨inside, fun _ ⟨a, ha, same⟩ =>
+       same.symm ▸ (iter_region_iff_lasts n (f s a)).mpr (later a ha)⟩⟩
+
+/-- If all guarded states are listed, the kernel of a disturbed process consists exactly
+of states that keep the guard under every admissible disturbance for the list length. -/
+theorem kernel_iff_lasts_length {all : List S} (within : ∀ x, guard x → x ∈ all) {s : S} :
+    Kernel (disturbed f adm) guard s ↔ Lasts f adm guard all.length s :=
+  (kernel_iff_iter within).trans (iter_region_iff_lasts _ s)
+
+/- The direct calculation for the same disturbance bound. -/
+
+/-- The guard holds and every admissible disturbance takes the state into the given class. -/
+def disturbanceStep (f : S → A → S) (adm : A → Prop) (guard X : S → Prop) (s : S) : Prop :=
+  guard s ∧ ∀ a, adm a → X (f s a)
+
+/-- Enlarging the class allowed after each disturbance preserves every state kept by this step. -/
+theorem disturbance_mono (f : S → A → S) (adm : A → Prop) (guard : S → Prop) :
+    MonotoneStep (disturbanceStep f adm guard) :=
+  fun sub s ⟨within, later⟩ => ⟨within, fun a ha => sub (f s a) (later a ha)⟩
+
+/-- Iterating the disturbance step from the guard keeps exactly the states that last that long. -/
+theorem iter_iff_lasts : ∀ n s, iter (disturbanceStep f adm guard) guard n s ↔ Lasts f adm guard n s
+  | 0, _ => Iff.rfl
+  | n + 1, s => ⟨disturbance_mono f adm guard (fun t => (iter_iff_lasts n t).mp) s,
+                  disturbance_mono f adm guard (fun t => (iter_iff_lasts n t).mpr) s⟩
+
+/-- If all guarded states are listed, lasting for the list length under admissible
+disturbances is equivalent to belonging to the kernel of the disturbed process. -/
+theorem kernel_iff_lasts_length_direct {all : List S} (within : ∀ x, guard x → x ∈ all) {s : S} :
+    Kernel (disturbed f adm) guard s ↔ Lasts f adm guard all.length s :=
+  kernel_iff_lasts.trans ⟨fun h => h all.length, fun h n => (iter_iff_lasts n s).mp
+    ((iter_iff_all (disturbance_mono f adm guard) (fun _ k => k.1) within).mp
+      ((iter_iff_lasts _ s).mpr h) n)⟩
+
+end Disturbances
+
+-- home: Parting
+section Courses
+
+open Generative
+variable {S : Type u} {A : Type v} (P : Process S A)
+
+/-- Some move has a successor in the given class. -/
+def courseStep (X : S → Prop) (s : S) : Prop := ∃ a t, P.step s a t ∧ X t
+
+/-- Enlarging the target class preserves each move and successor that witnessed a course step. -/
+theorem course_mono : MonotoneStep (courseStep P) :=
+  fun sub _ ⟨a, t, st, rest⟩ => ⟨a, t, st, sub t rest⟩
+
+variable {P}
+
+/-- Iterating the course step from all states keeps exactly the starts of courses of that length. -/
+theorem iter_iff_continues : ∀ n s, iter (courseStep P) (fun _ => True) n s ↔ Lasting.Continues P n s
+  | 0, _ => Iff.rfl
+  | n + 1, s => ⟨course_mono P (fun t => (iter_iff_continues n t).mp) s,
+                  course_mono P (fun t => (iter_iff_continues n t).mpr) s⟩
+
+/-- If every state is listed, a course as long as the list gives a move to a state from which
+another course as long as the list starts. -/
+theorem continues_persists_case {all : List S} (every : ∀ x, x ∈ all) {y : S}
+    (continues : Lasting.Continues P all.length y) :
+    ∃ a z, P.step y a z ∧ Lasting.Continues P all.length z :=
+  (iter_iff_continues (all.length + 1) y).mp (iter_persists (course_mono P)
+    (fun _ _ => trivial) (fun x _ => every x) ((iter_iff_continues _ y).mpr continues))
+
+/-- The course persistence proof has the same statement as the one in Parting, at all universes. -/
+theorem continues_same : @continues_persists_case.{u,v} = @Parting.continues_persists.{u,v} := rfl
+
+end Courses
+
+-- home: GuardHorizon
+section Choices
+
+open Generative GuardHorizon
+variable {S : Type u} {A : Type v} (P : Process S A) (guard : S → Prop)
+
+/-- The guard holds and some enabled move takes every outcome into the given class. -/
+def choiceStep (X : S → Prop) (s : S) : Prop :=
+  guard s ∧ ∃ a, Enabled P s a ∧ ∀ t, P.step s a t → X t
+
+/-- Enlarging the class allowed for outcomes preserves each state kept by the choice step. -/
+theorem choice_mono : MonotoneStep (choiceStep P guard) :=
+  fun sub _ ⟨within, a, live, later⟩ => ⟨within, a, live, fun t st => sub t (later t st)⟩
+
+variable {S A : Type} {P : Process S A} {guard : S → Prop}
+
+/-- Iterating the choice step from the guard keeps exactly the states viable for that many steps. -/
+theorem iter_iff_viable : ∀ n s, iter (choiceStep P guard) guard n s ↔ Viable P guard n s
+  | 0, _ => Iff.rfl
+  | n + 1, s => ⟨choice_mono P guard (fun t => (iter_iff_viable n t).mp) s,
+                  choice_mono P guard (fun t => (iter_iff_viable n t).mpr) s⟩
+
+/-- If all guarded states are listed, a state viable for the list length has an enabled
+move whose every outcome is viable for the same length. -/
+theorem viable_persists {all : List S} (within : ∀ x, guard x → x ∈ all) {y : S}
+    (kept : Viable P guard all.length y) :
+    ∃ a, Enabled P y a ∧ ∀ z, P.step y a z → Viable P guard all.length z :=
+  ((iter_iff_viable (all.length + 1) y).mp (iter_persists (choice_mono P guard)
+    (fun _ h => h.1) within ((iter_iff_viable _ y).mpr kept))).2
+
+variable {all : List S} {s : S}
+
+/-- If all guarded states are listed, the states viable for the list length form a closed set. -/
+theorem viable_closed (within : ∀ x, guard x → x ∈ all) : Closed P guard (Viable P guard all.length) :=
+  fun _ kept => ⟨viable_guard P guard kept, viable_persists within kept⟩
+
+/-- If all guarded states are listed, viability for the list length is viability at every horizon. -/
+theorem viable_iff_every_horizon (within : ∀ x, guard x → x ∈ all) :
+    Viable P guard all.length s ↔ ∀ n, Viable P guard n s :=
+  ⟨fun kept n => closed_viable P guard (viable_closed within) n s kept, fun h => h all.length⟩
+
+/-- If all guarded states are listed, a state is viable for the list length exactly when a
+closed set contains it. -/
+theorem viable_iff_closed (within : ∀ x, guard x → x ∈ all) :
+    Viable P guard all.length s ↔ ∃ K, Closed P guard K ∧ K s :=
+  ⟨fun kept => ⟨_, viable_closed within, kept⟩,
+   fun ⟨_, closed, held⟩ => closed_viable P guard closed all.length s held⟩
+
+/-- If a state fails viability for the length of a list, every closed set excludes that state. -/
+theorem no_closed_of_not_viable (fails : ¬ Viable P guard all.length s) :
+    ∀ K, Closed P guard K → ¬ K s :=
+  fun _ closed held => fails (closed_viable P guard closed all.length s held)
+
+end Choices
+
+-- home: Keeping
+section Readings
+
+open Generative Viability
+
+variable {S : Type u} {A : Type v} {O : Type w} {C : Type q}
+  {P : Process S A} {sense : S → A → S → O} {guard : S → Prop} {allowed : S → A → Prop}
+  {decode : C → S → Prop}
+
+/-- A class belongs to a family of guarded classes in which each class has a usable move
+whose every observation leads to another member of the family. -/
+def InClosedFamily (P : Process S A) (sense : S → A → S → O) (guard : S → Prop)
+    (allowed : S → A → Prop) (B : S → Prop) : Prop :=
+  ∃ F : (S → Prop) → Prop, F B ∧ (∀ D, F D → ∀ s, D s → guard s) ∧
+    ∀ D, F D → ∃ a, Usable P allowed D a ∧ ∀ o, F (Seen P sense D a o)
+
+/-- A class lies inside the class named by some code in the given set. -/
+def coveredBy (decode : C → S → Prop) (X : C → Prop) (B : S → Prop) : Prop :=
+  ∃ d, X d ∧ ∀ s, B s → decode d s
+
+/-- Every state named by the code satisfies the guard. -/
+abbrev codeGuard (decode : C → S → Prop) (guard : S → Prop) (c : C) := ∀ s, decode c s → guard s
+
+local notation "safe" => codeGuard decode guard
+
+/-- The coded class is guarded and has a usable move such that each observed successor
+class lies inside a class named by a code in the given set. -/
+def readingStep (P : Process S A) (sense : S → A → S → O) (guard : S → Prop)
+    (allowed : S → A → Prop) (decode : C → S → Prop) (X : C → Prop) (c : C) : Prop :=
+  codeGuard decode guard c ∧ ∃ a, Usable P allowed (decode c) a ∧
+    ∀ o, coveredBy decode X (Seen P sense (decode c) a o)
+
+local notation "Φ" => readingStep P sense guard allowed decode
+
+/-- Enlarging the set of codes that may cover successors preserves every code kept by the reading step. -/
+theorem reading_mono : MonotoneStep Φ :=
+  fun sub _ ⟨h, a, usable, next⟩ => ⟨h, a, usable, fun o =>
+    match next o with | ⟨d, hd, covers⟩ => ⟨d, sub d hd, covers⟩⟩
+
+variable {all : List C} (within : ∀ c, (∀ s, decode c s → guard s) → c ∈ all)
+  (updates : ∀ c a, Usable P allowed (decode c) a → ∀ o,
+  ∃ d, ∀ s, decode d s ↔ Seen P sense (decode c) a o s)
+
+include updates in
+/-- If every observation after a usable move has a code for its exact successor class,
+iteration from the guarded codes agrees at each length with keeping the decoded class. -/
+theorem iter_iff_kept : ∀ n c, iter Φ safe n c ↔ KeptFor P sense guard allowed n (decode c)
+  | 0, _ => Iff.rfl
+  | n + 1, c =>
+    ⟨fun ⟨h, a, usable, next⟩ => ⟨h, a, usable, fun o =>
+       match next o with
+       | ⟨d, hd, sub⟩ => KeptFor.mono sub ((iter_iff_kept n d).mp hd)⟩,
+     fun ⟨h, a, usable, next⟩ => ⟨h, a, usable, fun o =>
+       match updates c a usable o with
+       | ⟨d, eqv⟩ => ⟨d, (iter_iff_kept n d).mpr (KeptFor.mono (fun s => (eqv s).mp) (next o)),
+                       fun s => (eqv s).mpr⟩⟩⟩
+
+include within updates in
+/-- If every guarded code is listed and each observation after a usable move has an exact
+code, a class is kept for the list length exactly when it belongs to a closed family. -/
+theorem coded_kept_iff_closed {c : C} :
+    KeptFor P sense guard allowed all.length (decode c) ↔
+      InClosedFamily P sense guard allowed (decode c) :=
+  let K := iter Φ safe all.length
+  have post : ∀ d, K d → Φ K d := iter_postfixed reading_mono (fun _ h => h.1) within
+  ⟨fun h => ⟨coveredBy decode K, ⟨c, (iter_iff_kept updates _ c).mpr h, fun _ b => b⟩,
+     fun _ ⟨d, hd, sub⟩ s b => (post d hd).1 s (sub s b),
+     fun _ ⟨d, hd, sub⟩ => match (post d hd).2 with
+       | ⟨a, usable, next⟩ => ⟨a, fun s b => usable s (sub s b), fun o =>
+         match next o with | ⟨e, he, covers⟩ => ⟨e, he, fun s b => covers s (Seen.mono sub b)⟩⟩⟩,
+   fun ⟨F, held, within, closed⟩ => keptFor_of_closed F within closed all.length held⟩
+
+end Readings
+
+-- home: RisingIteration
+section Rising
+
+variable {S : Type u}
+
+/-- Iterate the given step from the proposed rising start. -/
+abbrev rise (Ψ : (S → Prop) → S → Prop) (W₀ : S → Prop) := iter Ψ W₀
+
+/-- If every monotone step on one state takes level two back to level one from the empty
+start, every proposition is decided. -/
+theorem singleton_rise_needs_em
+    (edge : ∀ Ψ : (Unit → Prop) → Unit → Prop, MonotoneStep Ψ →
+      rise Ψ (fun _ => False) 2 () → rise Ψ (fun _ => False) 1 ()) (p : Prop) : Decided p :=
+  edge (fun X _ => p ∨ (p → X ()))
+    (fun sub _ h => h.imp id (fun next hp => sub () (next hp))) (.inr fun hp => .inl hp)
+
+/-- The dual step excludes a state when the original step cannot take it from the
+complement of the given class. -/
+def dual (Ψ : (S → Prop) → S → Prop) (X : S → Prop) (y : S) : Prop :=
+  ¬ Ψ (fun z => ¬ X z) y
+
+variable {Ψ : (S → Prop) → S → Prop} {W₀ : S → Prop}
+  (mono : MonotoneStep Ψ) (start : ∀ y, W₀ y → Ψ W₀ y)
+  {all : List S} (every : ∀ x, x ∈ all)
+
+include mono in
+/-- The dual of a monotone step is monotone. -/
+theorem dual_mono : MonotoneStep (dual Ψ) :=
+  fun sub y excluded h => excluded (mono (fun z no x => no (sub z x)) y h)
+
+include mono every in
+/-- For a monotone step on an exhaustively listed type, each iterate from the complement
+under the dual is the complement of the corresponding original iterate. -/
+theorem iter_dual_iff : ∀ n y, iter (dual Ψ) (fun z => ¬ W₀ z) n y ↔ ¬ rise Ψ W₀ n y
+  | 0, _ => Iff.rfl
+  | n + 1, y =>
+    ⟨fun excluded h => excluded (mono (fun z w d => (iter_dual_iff n z).mp d w) y h),
+     fun absent h => not_not_all (E := all) (fun z _ => not_not_decided (rise Ψ W₀ n z))
+       fun table => absent (mono (fun z possible => (table z (every z)).of_not_not
+         (fun no => possible ((iter_dual_iff n z).mpr no))) y h)⟩
+
+include mono start every in
+/-- If a monotone step preserves the start and every state is listed, reaching one step
+past the list length implies double negation of reaching at the list length. -/
+theorem rise_not_not {y : S} (reached : rise Ψ W₀ (all.length + 1) y) : ¬ ¬ rise Ψ W₀ all.length y :=
+  have begins (z : S) (d : dual Ψ (fun t => ¬ W₀ t) z) (w : W₀ z) : False :=
+    d (mono (fun _ h no => no h) z (start z w))
+  fun no => (iter_dual_iff mono every _ y).mp
+    (iter_persists (dual_mono mono) begins (fun x _ => every x) ((iter_dual_iff mono every _ y).mpr no)) reached
+
+include mono start every in
+/-- If a monotone step preserves the start, every state is listed, and reaching at the
+list length follows from its double negation here, reaching one step later implies reaching here at the bound. -/
+theorem rise_of_stable {y : S} (stable : (¬ ¬ rise Ψ W₀ all.length y) → rise Ψ W₀ all.length y) :
+    rise Ψ W₀ (all.length + 1) y → rise Ψ W₀ all.length y :=
+  fun reached => stable (rise_not_not mono start every reached)
+
+/-- A state is in the target already or has a related successor in the given class. -/
+def reachStep (R : S → S → Prop) (W₀ X : S → Prop) (y : S) : Prop :=
+  W₀ y ∨ ∃ t, R y t ∧ X t
+
+variable {R : S → S → Prop}
+local notation "reaches" => rise (reachStep R W₀) W₀
+
+/-- A witness of reaching the target within a given number of steps also fits the next bound. -/
+theorem reach_pad : ∀ n y, reaches n y → reaches (n + 1) y
+  | 0, _, atTarget => .inl atTarget
+  | _ + 1, _, .inl atTarget => .inl atTarget
+  | n + 1, _, .inr ⟨t, step, later⟩ => .inr ⟨t, step, reach_pad n t later⟩
+
+/-- Suppose each state is on a list of length n or has a proof that reaching within n+1
+steps suffices for a conclusion. Wherever reaching within n steps suffices, reaching within n+1 does too. -/
+theorem reach_shorten_at_places {G : Prop} : ∀ (n : Nat) (left : List S), left.length = n →
+    (∀ z, z ∈ left ∨ (reaches (n + 1) z → G)) →
+    ∀ y, (reaches n y → G) → reaches (n + 1) y → G
+  | 0, _, len, cover, y, _, path =>
+    (cover y).elim (fun mem => nomatch (nil_of_length_zero len ▸ mem : y ∈ ([] : List S))) (fun done => done path)
+  | n + 1, _, len, cover, y, finish, path =>
+    match cover y with
+    | .inr done => done path
+    | .inl mem => match path with
+      | .inl atTarget => finish (.inl atTarget)
+      | .inr ⟨t, step, later⟩ => match remove_place mem with
+        | ⟨rest, size, place⟩ =>
+          have nextCover (z : S) : z ∈ rest ∨ (reaches (n + 1) z → G) :=
+            match cover z with
+            | .inr done => .inr (fun h => done (reach_pad _ z h))
+            | .inl listed => match place z listed with
+              | .inl rfl => .inr finish
+              | .inr unused => .inl unused
+          reach_shorten_at_places n rest (Nat.succ.inj (size.symm.trans len)) nextCover t
+            (fun tail => finish (.inr ⟨t, step, tail⟩)) later
+
+/-- If every state is listed, any course reaching the target within one step past the
+length of the list can reach it within the list length. -/
+theorem reach_rise_shortens (every : ∀ x, x ∈ all) {y : S} :
+    reaches (all.length + 1) y → reaches all.length y :=
+  reach_shorten_at_places all.length all rfl (fun z => .inl (every z)) y id
+
+/-- If a monotone step takes the start into itself and all starting states are listed,
+failure one step past the list length implies failure at the list length. -/
+theorem not_iter_of_not_succ {Φ : (S → Prop) → S → Prop} {V₀ : S → Prop}
+    (mono : MonotoneStep Φ) (start : ∀ y, Φ V₀ y → V₀ y) (within : ∀ x, V₀ x → x ∈ all) {y : S} :
+    ¬ iter Φ V₀ (all.length + 1) y → ¬ iter Φ V₀ all.length y :=
+  fun fails kept => fails (iter_persists mono start within kept)
+
+open Generative GuardHorizon
+
+/-- If every state is listed and no course lasts one step past the list length from a state,
+no course lasts the list length from it. -/
+theorem not_continues_of_not_succ {A : Type v} {P : Process S A} (every : ∀ x, x ∈ all) {y : S} :
+    ¬ Lasting.Continues P (all.length + 1) y → ¬ Lasting.Continues P all.length y :=
+  fun fails kept => fails (continues_persists_case every kept)
+
+/-- If all guarded states are listed, failure of viability one step past the list length
+implies failure of viability at the list length. -/
+theorem not_viable_of_not_succ {S A : Type} {P : Process S A} {guard : S → Prop} {all : List S}
+    (within : ∀ x, guard x → x ∈ all) {y : S} :
+    ¬ Viable P guard (all.length + 1) y → ¬ Viable P guard all.length y :=
+  fun fails kept => fails ⟨viable_guard P guard kept, viable_persists within kept⟩
+
+/-- The guard fails or every enabled move has an outcome in the given class. -/
+def loseStep {A : Type v} (P : Process S A) (guard X : S → Prop) (s : S) : Prop :=
+  ¬ guard s ∨ ∀ a, Enabled P s a → ∃ t, P.step s a t ∧ X t
+
+/-- If positive loss at level three always gives loss at level two from false on a
+two-state process with one move, then every negation is decided. -/
+theorem lose_edge_decides_negations
+    (edge : ∀ (P : Process Bool Unit) (guard : Bool → Prop),
+      rise (loseStep P guard) (fun s => ¬ guard s) 3 false →
+      rise (loseStep P guard) (fun s => ¬ guard s) 2 false) (q : Prop) : ¬ q ∨ ¬ ¬ q :=
+  let P : Process Bool Unit := ⟨fun s _ t => match s with
+    | false => t = true
+    | true => q ∧ t = false⟩
+  let guard : Bool → Prop := fun | false => True | true => ¬ q
+  let L := rise (loseStep P guard) (fun s => ¬ guard s)
+  have one (hq : q) : L 1 false :=
+    .inr fun _ _ => ⟨true, rfl, fun no => no hq⟩
+  have two : L 2 true :=
+    .inr fun _ ⟨_, step⟩ => ⟨false, ⟨step.1, rfl⟩, one step.1⟩
+  have three : L 3 false := .inr fun _ _ => ⟨true, rfl, two⟩
+  match edge P guard three with
+  | .inl outside => False.elim (outside trivial)
+  | .inr next => match next () ⟨true, rfl⟩ with
+    | ⟨t, moved, lost⟩ =>
+      have atTrue : L 1 true := (show t = true from moved) ▸ lost
+      match atTrue with
+      | .inl nnq => .inr nnq
+      | .inr replies => .inl fun hq =>
+        match replies () ⟨false, hq, rfl⟩ with
+        | ⟨z, step, outside⟩ => ((show z = false from step.2) ▸ outside : ¬ guard false) trivial
+
+/-- If positive loss at level four always gives loss at level three from the first of
+three states with one move and an everywhere true guard, every proposition is decided. -/
+theorem lose_edge_decides
+    (edge : ∀ P : Process (Option Bool) Unit,
+      rise (loseStep P (fun _ => True)) (fun _ => ¬ True) 4 none →
+      rise (loseStep P (fun _ => True)) (fun _ => ¬ True) 3 none) (q : Prop) : q ∨ ¬ q :=
+  let P : Process (Option Bool) Unit := ⟨fun s _ t => match s with
+    | none => t = some false ∨ (q ∧ t = some true)
+    | some false => q ∧ t = none
+    | some true => False⟩
+  let L := rise (loseStep P (fun _ => True)) (fun _ => ¬ True)
+  have enabled : Enabled P none () := ⟨some false, .inl rfl⟩
+  have dead : L 1 (some true) := .inr fun _ ⟨_, st⟩ => False.elim st
+  have two (hq : q) : L 2 none := .inr fun _ _ => ⟨some true, .inr ⟨hq, rfl⟩, dead⟩
+  have three : L 3 (some false) :=
+    .inr fun _ ⟨_, step⟩ => ⟨none, ⟨step.1, rfl⟩, two step.1⟩
+  have four : L 4 none := .inr fun _ _ => ⟨some false, .inl rfl, three⟩
+  have noOne (one : L 1 none) : False :=
+    one.elim (fun no => no trivial) (fun replies =>
+      match replies () enabled with | ⟨_, _, no⟩ => no trivial)
+  match edge P four with
+  | .inl no => False.elim (no trivial)
+  | .inr replies => match replies () enabled with
+    | ⟨t, step, lost⟩ => match step with
+      | .inr ⟨hq, _⟩ => .inl hq
+      | .inl moved =>
+        have middle : L 2 (some false) := (show t = some false from moved) ▸ lost
+        .inr fun hq => middle.elim (fun no => no trivial) (fun next =>
+          match next () ⟨none, hq, rfl⟩ with
+          | ⟨z, back, one⟩ => noOne ((show z = none from back.2) ▸ one))
+
+end Rising
+
+end Becoming.ScratchEdgeLaw

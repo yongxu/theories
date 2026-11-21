@@ -1,0 +1,117 @@
+# AI-written (Claude Fable), 22 November 2026. The Lean definitions, one Python function each,
+# written from the sources (no shortcuts, memoised recursion on the horizon as in Lean).
+#   GenerativeCore.lean l. 23-29: Process, Enabled
+#   GuardHorizon.lean l. 70-110: Viable, Closed
+#   Lasting.lean l. 934: Continues
+#   Keeping.lean l. 73-94: Seen, Usable, KeptFor ; l. 311: keptFor_of_closed's two premises
+#   ScratchViableEdge.lean.txt l. 96: pairProcess
+from functools import lru_cache
+from itertools import combinations
+
+class Process:
+    def __init__(self, states, moves, step):
+        self.states = list(states); self.moves = list(moves)
+        self.step = set(step)                        # triples (s, a, t)
+        self.out = {(s, a): frozenset(t for t in self.states if (s, a, t) in self.step)
+                    for s in self.states for a in self.moves}
+    def enabled(self, s, a):                         # exists t, step s a t
+        return len(self.out[s, a]) > 0
+
+def viable_fn(P, guard):
+    guard = frozenset(guard)
+    @lru_cache(maxsize=None)
+    def viable(n, s):
+        if n == 0:
+            return s in guard
+        return s in guard and any(P.enabled(s, a) and all(viable(n - 1, t) for t in P.out[s, a])
+                                  for a in P.moves)
+    return viable
+
+def closed(P, guard, K):
+    return all(s in guard and any(P.enabled(s, a) and all(t in K for t in P.out[s, a]) for a in P.moves)
+               for s in K)
+
+def largest_closed(P, guard):
+    """union of every closed subset, by brute force over all subsets"""
+    big = set()
+    for r in range(len(P.states) + 1):
+        for K in combinations(P.states, r):
+            if closed(P, guard, set(K)):
+                big |= set(K)
+    return big
+
+def continues_fn(P):
+    @lru_cache(maxsize=None)
+    def continues(n, s):
+        if n == 0:
+            return True
+        return any(continues(n - 1, t) for a in P.moves for t in P.out[s, a])
+    return continues
+
+def pair_process(P):
+    moves = [(a, z) for a in P.moves for z in P.states]
+    step = {(y, (a, z), t) for (y, a, t) in P.step for z in P.states if t == z}
+    return Process(P.states, moves, step)
+
+# ---- through a reading -------------------------------------------------------------------
+def seen(P, sense, B, a, o):                         # Seen P sense B a o
+    return frozenset(t for s in B for t in P.out[s, a] if sense[s, a, t] == o)
+
+def usable(P, allowed, B, a):                        # Usable P allowed B a (vacuous on the empty class)
+    return all(allowed[s, a] and P.enabled(s, a) for s in B)
+
+def kept_fn(P, sense, O, guard, allowed):
+    guard = frozenset(guard)
+    @lru_cache(maxsize=None)
+    def kept(n, B):
+        if n == 0:
+            return B <= guard
+        return B <= guard and any(usable(P, allowed, B, a) and all(kept(n - 1, seen(P, sense, B, a, o)) for o in O)
+                                  for a in P.moves)
+    return kept
+
+def family_closed(P, sense, O, guard, allowed, F):
+    """the two premises of keptFor_of_closed for the family F (a set of frozensets)"""
+    guard = frozenset(guard)
+    return all(B <= guard and any(usable(P, allowed, B, a) and all(seen(P, sense, B, a, o) in F for o in O)
+                                  for a in P.moves) for B in F)
+
+def all_classes(states):
+    states = list(states)
+    return [frozenset(c) for r in range(len(states) + 1) for c in combinations(states, r)]
+
+def largest_closed_family_gfp(P, sense, O, guard, allowed):
+    """greatest fixed point from the family of ALL classes (closed families are closed under union,
+    so the largest exists; the operator is monotone on a finite lattice)"""
+    guard = frozenset(guard)
+    F = set(all_classes(P.states))
+    while True:
+        G = {B for B in F if B <= guard and any(usable(P, allowed, B, a) and
+                                                 all(seen(P, sense, B, a, o) in F for o in O) for a in P.moves)}
+        if G == F:
+            return F
+        F = G
+
+def largest_closed_family_brute(P, sense, O, guard, allowed):
+    """union of every closed family, by brute force over all families of classes (2^(2^N) of them)"""
+    cls = all_classes(P.states)
+    big = set()
+    for mask in range(1 << len(cls)):
+        F = {cls[i] for i in range(len(cls)) if mask >> i & 1}
+        if family_closed(P, sense, O, guard, allowed, F):
+            big |= F
+    return big
+
+def update_closure(P, sense, O, allowed, start):
+    """the least set of classes holding `start` and, with a class and a move usable from it and a value,
+    the class seen: a code set meeting the premise `updates` of coded_kept_iff_closed"""
+    codes = {frozenset(start)}; todo = [frozenset(start)]
+    while todo:
+        B = todo.pop()
+        for a in P.moves:
+            if usable(P, allowed, B, a):
+                for o in O:
+                    D = seen(P, sense, B, a, o)
+                    if D not in codes:
+                        codes.add(D); todo.append(D)
+    return codes

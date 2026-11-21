@@ -1,0 +1,62 @@
+== 2x2, every step relation: 2 configurations, 2 moves, 3 readings; contexts (step, reading, guard) 3072
+  updates all , codes outside the guard 0: code sets 5165, codes compared 10158, KeptFor N != InClosedFamily at N = guarded codes: 0; with N-1 (one guarded code left off): fails in 265 of 5165 code sets
+  updates all , codes outside the guard 1: code sets 3189, codes compared 7151, KeptFor N != InClosedFamily at N = guarded codes: 0; with N-1 (one guarded code left off): fails in 90 of 2672 code sets
+  updates all , codes outside the guard 2: code sets 3046, codes compared 10547, KeptFor N != InClosedFamily at N = guarded codes: 0; with N-1 (one guarded code left off): fails in 29 of 2919 code sets
+  updates all , codes outside the guard 3+: code sets 783, codes compared 3117, KeptFor N != InClosedFamily at N = guarded codes: 0; with N-1 (one guarded code left off): fails in 0 of 768 code sets
+  updates min , codes outside the guard 0: code sets 6245, codes compared 12250, KeptFor N != InClosedFamily at N = guarded codes: 0; with N-1 (one guarded code left off): fails in 333 of 6245 code sets
+  updates min , codes outside the guard 1: code sets 9716, codes compared 17688, KeptFor N != InClosedFamily at N = guarded codes: 0; with N-1 (one guarded code left off): fails in 294 of 5566 code sets
+  updates min , codes outside the guard 2: code sets 5344, codes compared 15161, KeptFor N != InClosedFamily at N = guarded codes: 0; with N-1 (one guarded code left off): fails in 63 of 2937 code sets
+  updates min , codes outside the guard 3+: code sets 1042, codes compared 3894, KeptFor N != InClosedFamily at N = guarded codes: 0; with N-1 (one guarded code left off): fails in 0 of 768 code sets
+  updates safe, codes outside the guard 0: code sets 5165, codes compared 10158, KeptFor N != InClosedFamily at N = guarded codes: 0; with N-1 (one guarded code left off): fails in 265 of 5165 code sets
+  updates safe, codes outside the guard 1: code sets 8807, codes compared 15009, KeptFor N != InClosedFamily at N = guarded codes: 0; with N-1 (one guarded code left off): fails in 246 of 4657 code sets
+  updates safe, codes outside the guard 2: code sets 5371, codes compared 15242, KeptFor N != InClosedFamily at N = guarded codes: 0; with N-1 (one guarded code left off): fails in 90 of 2964 code sets
+  updates safe, codes outside the guard 3+: code sets 1042, codes compared 3894, KeptFor N != InClosedFamily at N = guarded codes: 0; with N-1 (one guarded code left off): fails in 0 of 768 code sets
+  smallest found failing at N-1 (updates all, outside 0): steps {}, reading 'nothing', guard {0}, codes ['{0}'], guarded codes 1; KeptFor 0 differs from the closed family at ['{0}']
+  smallest found failing at N-1 (updates all, outside 1): steps {}, reading 'nothing', guard {0}, codes ['{0}', '{1}'], guarded codes 1; KeptFor 0 differs from the closed family at ['{0}']
+  smallest found failing at N-1 (updates all, outside 2): steps {}, reading 'nothing', guard {0}, codes ['{0}', '{1}', '{0,1}'], guarded codes 1; KeptFor 0 differs from the closed family at ['{0}']
+  smallest found failing at N-1 (updates min, outside 2): steps {}, reading 'nothing', guard {0}, codes ['{0}', '{1}', '{0,1}'], guarded codes 1; KeptFor 0 differs from the closed family at ['{0}']
+  smallest found failing at N-1 (updates safe, outside 2): steps {}, reading 'nothing', guard {0}, codes ['{0}', '{1}', '{0,1}'], guarded codes 1; KeptFor 0 differs from the closed family at ['{0}']
+== 3x1, every step relation: 3 configurations, 1 moves, 3 readings; contexts (step, reading, guard) 12288
+  updates all , codes outside the guard 0: code sets 19355, codes compared 81713, KeptFor N != InClosedFamily at N = guarded codes: 0; with N-1 (one guarded code left off): fails in 855 of 19355 code sets
+  updates all , codes outside the guard 1: code sets 13696, codes compared 39653, KeptFor N != InClosedFamily at N = guarded codes: 0; with N-1 (one guarded code left off): fails in 859 of 11669 code sets
+  updates all , codes outside the guard 2: code sets 25406, codes compared 102489, KeptFor N != InClosedFamily at N = guarded codes: 0; with N-1 (one guarded code left off): fails in 949 of 23547 code sets
+  updates all , codes outside the guard 3+: code sets 64046, codes compared 374424, KeptFor N != InClosedFamily at N = guarded codes: 0; with N-1 (one guarded code left off): fails in 1116 of 62229 code sets
+  updates min , codes outside the guard 0: code sets 23887, codes compared 92912, KeptFor N != InClosedFamily at N = guarded codes: 0; with N-1 (one guarded code left off): fails in 1133 of 23887 code sets
+  updates min , codes outside the guard 1: code sets 34930, codes compared 91488, KeptFor N != InClosedFamily at N = guarded codes: 0; with N-1 (one guarded code left off): fails in 1975 of 25545 code sets
+  updates min , codes outside the guard 2: code sets 38610, codes compared 128083, KeptFor N != InClosedFamily at N = guarded codes: 0; with N-1 (one guarded code left off): fails in 3006 of 26699 code sets
+  updates min , codes outside the guard 3+: code sets 41986, codes compared 219628, KeptFor N != InClosedFamily at N = guarded codes: 0; with N-1 (one guarded code left off): fails in 1411 of 27881 code sets
+  updates safe, codes outside the guard 0: code sets 19355, codes compared 81713, KeptFor N != InClosedFamily at N = guarded codes: 0; with N-1 (one guarded code left off): fails in 855 of 19355 code sets
+  updates safe, codes outside the guard 1: code sets 27105, codes compared 62958, KeptFor N != InClosedFamily at N = guarded codes: 0; with N-1 (one guarded code left off): fails in 1486 of 17720 code sets
+  updates safe, codes outside the guard 2: code sets 39535, codes compared 134762, KeptFor N != InClosedFamily at N = guarded codes: 0; with N-1 (one guarded code left off): fails in 2815 of 27624 code sets
+  updates safe, codes outside the guard 3+: code sets 50758, codes compared 268869, KeptFor N != InClosedFamily at N = guarded codes: 0; with N-1 (one guarded code left off): fails in 2175 of 36653 code sets
+  smallest found failing at N-1 (updates all, outside 0): steps {}, reading 'nothing', guard {0,1}, codes ['{0,1}'], guarded codes 1; KeptFor 0 differs from the closed family at ['{0,1}']
+  smallest found failing at N-1 (updates all, outside 1): steps {}, reading 'nothing', guard {0}, codes ['{0}', '{1,2}'], guarded codes 1; KeptFor 0 differs from the closed family at ['{0}']
+  smallest found failing at N-1 (updates all, outside 2): steps {}, reading 'nothing', guard {0}, codes ['{0}', '{1}', '{2}'], guarded codes 1; KeptFor 0 differs from the closed family at ['{0}']
+  smallest found failing at N-1 (updates all, outside 3): steps {}, reading 'nothing', guard {0}, codes ['{0}', '{0,1}', '{2}', '{0,2}'], guarded codes 1; KeptFor 0 differs from the closed family at ['{0}']
+  smallest found failing at N-1 (updates min, outside 2): steps {}, reading 'nothing', guard {0}, codes ['{0}', '{1}', '{2}'], guarded codes 1; KeptFor 0 differs from the closed family at ['{0}']
+  smallest found failing at N-1 (updates min, outside 3): steps {}, reading 'nothing', guard {0}, codes ['{0}', '{0,1}', '{2}', '{0,2}'], guarded codes 1; KeptFor 0 differs from the closed family at ['{0}']
+  smallest found failing at N-1 (updates safe, outside 2): steps {}, reading 'nothing', guard {0}, codes ['{0}', '{1}', '{2}'], guarded codes 1; KeptFor 0 differs from the closed family at ['{0}']
+  smallest found failing at N-1 (updates safe, outside 3): steps {}, reading 'nothing', guard {0}, codes ['{0}', '{0,1}', '{2}', '{0,2}'], guarded codes 1; KeptFor 0 differs from the closed family at ['{0}']
+== 3x2, 1200 random step relations: 3 configurations, 2 moves, 3 readings; contexts (step, reading, guard) 28800
+  updates all , codes outside the guard 0: code sets 24506, codes compared 125714, KeptFor N != InClosedFamily at N = guarded codes: 0; with N-1 (one guarded code left off): fails in 242 of 24506 code sets
+  updates all , codes outside the guard 1: code sets 9054, codes compared 30379, KeptFor N != InClosedFamily at N = guarded codes: 0; with N-1 (one guarded code left off): fails in 163 of 8404 code sets
+  updates all , codes outside the guard 2: code sets 24073, codes compared 108358, KeptFor N != InClosedFamily at N = guarded codes: 0; with N-1 (one guarded code left off): fails in 208 of 23618 code sets
+  updates all , codes outside the guard 3+: code sets 111110, codes compared 705062, KeptFor N != InClosedFamily at N = guarded codes: 0; with N-1 (one guarded code left off): fails in 354 of 110712 code sets
+  updates min , codes outside the guard 0: code sets 33080, codes compared 148978, KeptFor N != InClosedFamily at N = guarded codes: 0; with N-1 (one guarded code left off): fails in 483 of 33080 code sets
+  updates min , codes outside the guard 1: code sets 53301, codes compared 153351, KeptFor N != InClosedFamily at N = guarded codes: 0; with N-1 (one guarded code left off): fails in 981 of 39899 code sets
+  updates min , codes outside the guard 2: code sets 58710, codes compared 203528, KeptFor N != InClosedFamily at N = guarded codes: 0; with N-1 (one guarded code left off): fails in 1857 of 41947 code sets
+  updates min , codes outside the guard 3+: code sets 70001, codes compared 393306, KeptFor N != InClosedFamily at N = guarded codes: 0; with N-1 (one guarded code left off): fails in 643 of 48642 code sets
+  updates safe, codes outside the guard 0: code sets 24506, codes compared 125714, KeptFor N != InClosedFamily at N = guarded codes: 0; with N-1 (one guarded code left off): fails in 242 of 24506 code sets
+  updates safe, codes outside the guard 1: code sets 31649, codes compared 69020, KeptFor N != InClosedFamily at N = guarded codes: 0; with N-1 (one guarded code left off): fails in 447 of 18247 code sets
+  updates safe, codes outside the guard 2: code sets 54905, codes compared 194130, KeptFor N != InClosedFamily at N = guarded codes: 0; with N-1 (one guarded code left off): fails in 1431 of 38142 code sets
+  updates safe, codes outside the guard 3+: code sets 96124, codes compared 545381, KeptFor N != InClosedFamily at N = guarded codes: 0; with N-1 (one guarded code left off): fails in 1660 of 74765 code sets
+  smallest found failing at N-1 (updates all, outside 0): steps {(0, 0): [0, 2], (0, 1): [2], (1, 0): [0, 2]}, reading 'nothing', guard {1,2}, codes ['{1,2}'], guarded codes 1; KeptFor 0 differs from the closed family at ['{1,2}']
+  smallest found failing at N-1 (updates all, outside 1): steps {(0, 0): [0, 2], (0, 1): [2], (1, 0): [0, 2]}, reading 'whether it started at 0', guard {0,2}, codes ['{0,1}', '{0,2}'], guarded codes 1; KeptFor 0 differs from the closed family at ['{0,2}']
+  smallest found failing at N-1 (updates all, outside 2): steps {(0, 0): [0, 2], (0, 1): [2], (1, 0): [0, 2]}, reading 'whether it started at 0', guard {0,1}, codes ['{0,1}', '{0,2}', '{0,1,2}'], guarded codes 1; KeptFor 0 differs from the closed family at ['{0,1}']
+  smallest found failing at N-1 (updates all, outside 3): steps {(0, 0): [0, 2], (0, 1): [2], (1, 0): [0, 2]}, reading 'whether it started at 0', guard {2}, codes ['{0,1}', '{2}', '{0,2}', '{0,1,2}'], guarded codes 1; KeptFor 0 differs from the closed family at ['{2}']
+  smallest found failing at N-1 (updates min, outside 2): steps {(0, 0): [1, 2], (0, 1): [1, 2], (1, 1): [0, 2], (2, 1): [1, 2]}, reading 'whether it ended at 0', guard {1}, codes ['{0}', '{1}', '{2}'], guarded codes 1; KeptFor 0 differs from the closed family at ['{1}']
+  smallest found failing at N-1 (updates min, outside 3): steps {(0, 0): [1, 2], (0, 1): [1, 2], (1, 1): [0, 2], (2, 1): [1, 2]}, reading 'whether it ended at 0', guard {1}, codes ['{1}', '{0,1}', '{2}', '{0,2}'], guarded codes 1; KeptFor 0 differs from the closed family at ['{1}']
+  smallest found failing at N-1 (updates safe, outside 2): steps {(0, 0): [1, 2], (0, 1): [1, 2], (1, 1): [0, 2], (2, 1): [1, 2]}, reading 'whether it ended at 0', guard {1}, codes ['{0}', '{1}', '{2}'], guarded codes 1; KeptFor 0 differs from the closed family at ['{1}']
+  smallest found failing at N-1 (updates safe, outside 3): steps {(0, 0): [1, 2], (0, 1): [1, 2], (1, 1): [0, 2], (2, 1): [1, 2]}, reading 'whether it started at 0', guard {0,2}, codes ['{1}', '{0,1}', '{0,2}', '{1,2}'], guarded codes 1; KeptFor 0 differs from the closed family at ['{0,2}']
+seconds 6.9
+python3 coded.py  6.59s user 0.09s system 95% cpu 7.030 total

@@ -1,0 +1,190 @@
+**AI-written (Claude Fable 5.2), a reader who took no part. 22 November 2026. No Lean was run; the builder's log is the evidence that it compiles.**
+
+## 1. Verdict in five lines
+
+1. This is a real join, not a sixth letter-only one. Each of the five final theorems calls the one finite law once, none calls an older finite-edge proof, and no statement broke by program.
+2. The general law held on every monotone step for 1, 2 and 3 points and on a sample for 4. The bound |S| is right, `start` is needed (the report's two-point counterexample is confirmed), and monotonicity is needed.
+3. Two cases are true but not stated at their edge. For "whatever happens" and the grammar's region, |S|−1 already suffices on every instance tried and |S|−2 does not. The task expected |S|−1 to fail there; it does not.
+4. Two things are said more strongly or more often than needed. `every` can be asked of the start's members only (argued on paper and by enumeration, not built). Case 3 is case 5 at the steps of the disturbed law, so it is said twice.
+5. The rising chain is classically true (0 failures). The Lean argument stands, but it proves "would decide every proposition", so a telling must not say the rising law "does not hold".
+
+## 2. Each check, with counts
+
+**What I read is what was built.**
+- `ScratchKeptEdge.lean.txt` is byte-identical to `/Users/ren/tmp/fm/build4/Becoming/ScratchKeptEdge.lean` and to the `clean-11` snapshot.
+- Both imports are byte-identical to the `lean-edge` texts, and the brief's hash matches `FROZEN-LEAN-KEPT-EDGE.sha256.txt`.
+- `build-11.log` shows exit 0, 30 theorems, 41 declarations, `"with_axioms": {}`. My own count of the module is 30 theorems and 11 definitions.
+
+### 2.1 The general law (`law.py`, `nonmono.py`)
+
+All monotone steps were enumerated: 3 on 1 point, 36 on 2, 8,000 on 3. On 4 points I sampled 12,000 of 796,594,176.
+
+| Points | Falling (step, start) pairs | (a) law at N = \|S\| to 2\|S\|+1: checked / failed | (b) fails at \|S\|−1 | (c) differs from largest post-fixed set | (d) fails with no `start`, of all (step, start) pairs |
+|---|---:|---:|---:|---:|---:|
+| 1 | 5 | 15 / 0 | 1 | 0 | 0 of 6 |
+| 2 | 97 | 388 / 0 | 4 | 0 | 2 of 144 |
+| 3 | 33,819 | 169,095 / 0 | 240 | 0 | 1,938 of 64,000 |
+| 4 (sample) | 80,351 | 482,106 / 0 | 22 | 0 | 5,149 of 192,000 |
+
+- **(a)** Lengths above |S| stand for a list that repeats a member. The two levels were also equal as sets everywhere.
+- **`extend_at_places` as stated** (every horizon k up to |S|+1, every member set of at most k): 15, 873, 811,656 and 4,740,709 cases; 0 failures.
+- **(b)** The chain first becomes steady exactly at |S| in the same 1, 4, 240 and 22 pairs. The failing instance with the fewest pairs in the step, at each size:
+  - 1 point: the step sending everything to {}, V0 = {0}; chain {0}, {}.
+  - 2 points: {0,1}→{1}, all else →{}; V0 = {0,1}; chain {0,1}, {1}, {}.
+  - 3 points: {0,1,2}→{1,2}, {1,2}→{2}, all else →{}; V0 = {0,1,2}; chain {0,1,2}, {1,2}, {2}, {}.
+- **(c)** The largest post-fixed set was the union of every post-fixed subset of V0, by brute force.
+- **(d)** The report's counterexample is confirmed: points false and true, V0 = {false}, step X b := X(!b), which is monotone. The chain is {false}, {true}, {false}, {true}, so iterate 2 holds at false and iterate 3 fails. Both failures on 2 points are this swap, from {0} and from {1}. The first on 3 points: {1}→{2}, {2}→{1}, {0,1}→{2}, {0,2}→{1}, {1,2}→{1,2}, {0,1,2}→{1,2}, all else →{}; V0 = {1}.
+- **(e) Dropping monotonicity, keeping `start`:** it fails.
+  - 1 point: 0 failures at N = 1, but 1 at N = 2 (a list naming the point twice): {}→{0}, {0}→{}, V0 = {0}; chain {0}, {}, {0}, {}.
+  - 2 points, all 256 maps: 152 of 576 falling pairs fail at N = 2. Fewest pairs: {}→{0}, all else →{}; V0 = {0}; chain {0}, {}, {0}, {}.
+  - 3 points, 400,000 random maps: 392,323 of 1,350,299 fail at N = 3.
+  - No failing map was monotone.
+
+### 2.2 The five cases, from the Lean definitions (`cases.py`, `sharper.py`, `same.py`)
+
+Each predicate was coded by literal recursion from its package definition. Each step was coded from the module and iterated separately.
+
+**(i) Viable** (every step relation, every guard):
+
+| Space | Instances | iter = Viable, levels 0 to 2\|S\|+1 | `viable_persists` at N = \|S\| to 2\|S\| | at \|S\|−1 |
+|---|---:|---:|---:|---:|
+| 1x1 | 4 | 0 differ | 0 of 2 fail | 1 of 2 fail |
+| 2x1 | 64 | 0 differ | 0 of 84 | 4 of 32 |
+| 2x2 | 1,024 | 0 differ | 0 of 2,064 | 16 of 704 |
+| 3x1 | 4,096 | 0 differ | 0 of 7,896 | 48 of 2,022 |
+
+Fewest-step failures at |S|−1: no step with guard {0}; the single step 0→1 with guard everything, at 0; steps 1→0 and 0→2 with guard everything, at 1.
+
+**(ii) Continues:** on the same four spaces (2, 16, 256, 512 instances), iter = Continues with 0 differences. `continues_persists` had 0 failures of 2, 66, 1,422 and 5,124. At |S|−1 it failed 1, 2, 6 and 12 times, on the same smallest instances as (i).
+
+**(iii) Lasts against Kernel of the disturbed process** (every f, adm, guard; reach by closure of the steps):
+
+| Space | Instances | Kernel ≠ Lasts at \|S\| to 2\|S\| | at \|S\|−1 | at \|S\|−2 |
+|---|---:|---:|---:|---:|
+| 2x1 | 32 | 0 | **0** | 4 |
+| 2x2 | 256 | 0 | **0** | 56 |
+| 3x1 | 432 | 0 | **0** | 18 |
+| 3x2 | 23,328 | 0 | **0** | 1,782 |
+| 4x1 | 8,192 | not run | **0** | 96 |
+| 4x2 (random f) | 96,000 | not run | **0** | 1,877 |
+| 5x2 (random f) | 76,800 | not run | **0** | 376 |
+
+- iter = Lasts at levels 0 to 2|S|+1 (2x1 to 3x2): 0 differences.
+- A failure at |S|−2 on 3 configurations: f(2)=1, f(1)=0, f(0)=0, guard {1,2}. The kernel is empty, yet Lasts 1 holds at 2.
+- **Why |S|−1 suffices:** for this step the start is the step of everything (Φ(True) = guard). So the chain from the guard is the chain from everything one level later; this held in every instance, 0 differences. The module's own `iter_persists` with V₀ := `fun _ => True`, whose `start` premise is trivial, therefore gives the level one earlier.
+- `kernel_iff_lasts_length` is true as stated. A telling should not call |S| the edge of this case.
+
+**(iv) The grammar's region.** The direction, from the source: `«承» R P a := ∀ b, R b a → P b`, `«逆» R x y := R y x`, `«所闭» R x y := ∀ P, «闭» R P → P x → P y`. So `«承» («逆» («所闭» R)) Q s` says Q holds at every b the closure reaches forward from s. The module's step (Q s and every R-successor in X) has the right direction.
+
+| Points | Instances (R, Q) | literal definition ≠ "Q throughout what R reaches" | held ≠ iter at \|S\| to 2\|S\| | at \|S\|−1 | at \|S\|−2 | step turned the other way |
+|---|---:|---:|---:|---:|---:|---:|
+| 1 | 4 | 0 | 0 | 0 | none | 0 |
+| 2 | 64 | 0 | 0 | **0** | 16 | 16 differ |
+| 3 | 4,096 | 0 | 0 | **0** | 384 | 1,536 differ |
+| 4 | 1,048,576 | not run (by paths only) | not run | **0** | 24,576 | not run |
+
+- The literal definition quantifies over every subset closed under R.
+- Same reason as (iii): Φ(True) = Q.
+- A failure at |S|−2 on 3 points: R = {(1,0), (0,2)}, Q = {0,1}. Held is empty; iter 1 is {1}.
+
+**Case 3 is case 5.** The chain of `disturbanceStep` equals the chain of `regionStep` at R = Steps (disturbed f adm) at every level in every instance: 192, 1,536, 3,456 and 186,624 comparisons, 0 differences. With `Viability.kernel_iff_held`, `kernel_iff_lasts_length` is `held_iff_iter` at a disturbed law's steps. `held_iff_iter` at `Steps P` gives the kernel at a list's length for every process, which is more than case 3 states. Under rule 4 this is one thing said twice.
+
+**(v) Coded classes.** The section binders and the `all`, `every`, `updates` binders are identical as text to the earlier module. The statement line is identical up to the trailing `by` of the old tactic proof. `InClosedFamily` is the earlier module's own, opened by name. I did not redo the 118 million comparisons.
+
+I did check the new bridge `iter_iff_kept` on 2x2 (every step relation and guard, three readings, `allowed` true):
+- With all four classes as codes (`updates` holds): 73,728 comparisons, 0 differences.
+- With fewer codes where `updates` fails: iter implied KeptFor always; KeptFor without iter occurred 824 and 616 times. So `updates` does work in the bridge, in one direction only.
+
+**H4 (case 3 already in the package):** not found in what I read.
+- Greps over `Becoming/*.lean`: `Lasts`, which occurs in `Lasting.lean`, `Courses.lean` and `LastingRuns.lean` only; `Kernel`, `Lasts`, `«承»` or `Invariant` on a line with `length`, whose only hit is `Lasting.lean` l. 239, a trace's length; and every `all.length` line outside Parting.
+- The nearest is `Junctures.reach_within_listed` (l. 328), which needs decided steps and a returning configuration.
+
+**Lines.**
+- The report's per-case counts are right where I recounted: case 1 is 13, case 2 is 12, case 4 is 31 against 35; `continues_cycle` 12 plus `continues_persists` 9.
+- The law itself is 29 lines (`iter`, `MonotoneStep`, `iter_pred`, `extend_at_places`, `iter_persists`), not charged to any case. For the two old kinds alone that makes 29 + 13 + 12 = 54 against 32 + 21 = 53. The saving begins with the third case. H2 passes by its letter.
+- For the note in `AFTER-LEAN-KEPT-EDGE.md`: step, monotonicity and bridge against the call are 8 to 5 (case 1), 7 to 5 (case 2), 8 to 5 (case 3), 20 to 11 (case 4), 3 to 6 (case 5). The identifications are the larger part of cases 1 to 4.
+
+**H3 and H6 by reading.**
+- `viable_persists` (l. 107) and `continues_persists_case` (l. 133) each call `iter_persists` once. Case 3 calls `iter_iff_all`, case 4 `iter_postfixed`, case 5 `iter_largest`.
+- None of the excluded theorems occurs, nor `pairProcess`, nor `codeProcess`. `Parting.continues_persists` occurs only in the `rfl` comparison.
+- The `rfl` checks certify that the types agree, nothing more.
+
+**`every` is stronger than needed (paper and enumeration, not built).**
+- `extend_at_places` asks its cover of every z, but only uses it at points known to be inside V₀. With the cover asked only inside V₀, and one use of `iter_within` at the queried y, the same induction goes through from `every : ∀ x, V₀ x → x ∈ all`.
+- By program (`weaker.py`), the law at N = |V0| and above had 0 failures (5, 97 and 33,819 pairs exhaustively; 40,025 sampled). The place induction with the restricted cover had 0 failures in 811,656 cases on 3 points.
+- |V0|−1 fails in 1 of 3, 22 of 72 and 10,200 of 26,960, so |V0| is tight.
+- Consequence: the configurations need not be listable, only those within the guard (for example a bounded level on the naturals). The course case (V₀ = True) is unchanged.
+- H1 as frozen is not touched by this; the brief's "weakest premises you can" is.
+
+## 3. The rising chain
+
+**Classically it holds.** With W0 inside step(W0), rise N+1 was inside rise N for every N from |S| to 2|S|+1: 15, 388, 169,095 and 482,514 (sampled) checks, 0 failures. With |S|−1 it fails 1, 4, 240 and 27 times. The dual chain equals the complement of the chain at every level (0 differences in 6, 144, 64,000 and 192,000 pairs). So the obstruction is about decisions, not truth.
+
+**`singleton_rise_needs_em` in plain words.**
+- Take any proposition p. On the one-point type, let the step say: "p holds, or p would give X". More X gives more of this, so the step is monotone.
+- Start from nothing. Nothing is in the start, so "the start rises" holds vacuously, and any general rising law would apply here.
+- Level 1 is "p, or p gives False", which is "p or not p".
+- Level 2 is "p, or p gives level 1". Its second half holds outright: given p, level 1 holds by its left side. So level 2 is proved with no decision.
+- The one-point list has length 1. An edge there carries level 2 down to level 1, and so hands over "p or not p" for an arbitrary p.
+
+I found no fault. The term matches this line for line: the monotonicity proof maps the right alternative through the inclusion, and the witness is `.inr fun hp => .inl hp`.
+
+**In models where propositions need not be decided** (`weaker.py`: open sets of a two-world line and of a fork):
+- The module's step at "p true later only" gives level 1 = later only and level 2 = now and later. The edge fails.
+- On the line it is the only failure among the 20 (monotone step, rising start) pairs; on the fork 10 of 95 fail.
+- The doubly negated edge (`rise_not_not`) fails in none. The falling law on one point fails in none (17 and 64 falling starts).
+- With two unrelated worlds, where everything is decided, the positive edge fails in none.
+
+**What the theorem does and does not say.**
+- It says: a positive rising edge for every monotone step on one point would decide every proposition.
+- It does not say the rising law is false. With no axiom, the core can neither prove nor refute that.
+- It says nothing against rising steps whose levels are decided. For those, `rise_of_stable` gives the positive edge from stability at the one queried point and level.
+- The report's "stability is necessary" is the triviality that a proposition which holds is stable. What is actually shown is that the gap is exactly one double negation at that point.
+
+**Why falling needs no decision and rising does.** Falling, the evidence in hand ("y is kept n+1 steps") is what gets recorded when y's place is spent. Rising, the evidence in hand is one level too high. The only thing to record is the negative "y is not yet reached", so the split comes out under a negation. `iter_dual_iff` and `rise_not_not` do exactly this, calling `iter_persists` once on the dual step, so the two sides are one law up to a double negation. I read both proofs term by term and found no fault.
+
+## 4. The two inductions compared
+
+They are the same argument. `extend_at_places` for `iter` (l. 33 to 50) against the one for `Horizon` (ScratchViableEdge l. 34 to 52):
+
+| Part | For `Horizon` | For `iter` |
+|---|---|---|
+| Statement | cover and conclusion on `Horizon P guard` | the same shape on `iter Φ V₀` |
+| Base | empty list, cover gives the level outright | identical text |
+| Split on the cover at y | `rcases` | `match`, alternatives in the other order |
+| Spending the place | `remove_place`, `shorter` | the same lemma, imported from the old module |
+| New cover | y by `rfl`-substitution of `kept`; others keep their place; earlier ones by `horizon_pred` | y by `same.symm ▸ kept`; the same; `iter_pred` |
+| Last step | open `kept` into guard, move, liveness, outcomes; recurse at each outcome; rebuild | `mono (recursive call) y kept` |
+
+What else is needed: one thing, `start`.
+- `horizon_pred`'s base case was `kept.1`, the guard conjunct built into the choice step's shape. `iter_pred`'s base case is the premise Φ V₀ ⊆ V₀.
+- `iter_pred`'s successor case is `mono` again.
+- So `mono` is used at two shapes only, between a level and its neighbour, in each direction.
+- Nothing about moves, enabledness, the guard or equality remains.
+- The new module still depends on the old one for `remove_place` (9 lines). On landing, that lemma has to move with it.
+
+## 5. What I did not check
+
+- Any Lean run, the audit's method, or universe levels beyond reading.
+- The proposed weaker `every` (start's members only) in Lean.
+- 4 points exhaustively.
+- (i) and (ii) on 3x2 or larger; the earlier breaker covered Viable there.
+- (iii) at |S| or above beyond 3x2. The 4x1, 4x2 and 5x2 runs checked |S|−1 and |S|−2 only.
+- (iv) on 4 points by the literal closure definition (paths only), or at |S| and above.
+- The statement of case 4 again. Its bridge only on 2x2 with three readings and `allowed` true.
+- The report's estimated direct counts for cases 3 and 5.
+- H4 beyond the greps named. `Courses.lean` and `LastingRuns.lean` were not read whole.
+- Empty types except trivially. Lists with repeats only as N above |S|.
+- Builds 1 to 10.
+- Whether cases 3 and 5 at |S|−1 have a short Lean statement (a list `x :: rest` and `rest.length`).
+
+Files are in `/Users/ren/theories/tmp/fm/whole/lean-kept-edge/break/`:
+- `law.py`
+- `nonmono.py`
+- `cases.py`
+- `sharper.py`
+- `weaker.py`
+- `same.py`
+- the matching `out_*.txt` outputs (`out_law.txt`, `out_nonmono.txt`, `out_choice.txt`, `out_course.txt`, `out_dist.txt`, `out_region.txt`, `out_reading.txt`, `out_sharper.txt`, `out_weaker.txt`, `out_same.txt`)
+
+The folder is under the ignored `tmp/`. Nothing else in the repository or in git was changed.

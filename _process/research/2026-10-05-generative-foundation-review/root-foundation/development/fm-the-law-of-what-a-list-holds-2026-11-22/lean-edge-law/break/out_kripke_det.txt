@@ -1,0 +1,16 @@
+[lose] line of two: 2 configurations, 1 move(s), guard true, deterministic, every of 25 step families: instances 25; level 3 -> level 2 fails in 0; (level 2 -> 1 fails in 4; any of 4->3, 5->4 fails in 0)
+[lose] line of two: 3 configurations, 1 move(s), guard true, deterministic, every of 343 step families: instances 343; level 4 -> level 3 fails in 0; (level 3 -> 2 fails in 24; any of 5->4, 6->5 fails in 0)
+[lose] line of two: 2 configurations, 1 move(s), guard any, deterministic, every of 25 step families: instances 225; level 3 -> level 2 fails in 0; (level 2 -> 1 fails in 16; any of 4->3, 5->4 fails in 0)
+[lose] fork: 2 configurations, 1 move(s), guard true, deterministic, every of 121 step families: instances 121; level 3 -> level 2 fails in 0; (level 2 -> 1 fails in 42; any of 4->3, 5->4 fails in 0)
+[lose] fork: 3 configurations, 1 move(s), guard true, deterministic, every of 6859 step families: instances 6859; level 4 -> level 3 fails in 0; (level 3 -> 2 fails in 1134; any of 5->4, 6->5 fails in 0)
+[lose] fork: 2 configurations, 1 move(s), guard any, deterministic, every of 121 step families: instances 3025; level 3 -> level 2 fails in 16; (level 2 -> 1 fails in 504; any of 4->3, 5->4 fails in 0)
+    failing instances by (deterministic, every enabledness decided, guard decided): (True, False, False): 16
+    a failing instance with fewest step cells: steps [0-0->1: at worlds 1; 1-0->0: always] ; guard 0: at worlds 2; guard 1: at worlds 1
+      fails at (world, configuration) [(0, 1)]; levels by world: L0={0: [], 1: [0], 2: [1]}; L1={0: [], 1: [0, 1], 2: [0, 1]}; L2={0: [0], 1: [0, 1], 2: [0, 1]}; L3={0: [0, 1], 1: [0, 1], 2: [0, 1]}
+[lose] line of three: 2 configurations, 1 move(s), guard true, deterministic, every of 49 step families: instances 49; level 3 -> level 2 fails in 0; (level 2 -> 1 fails in 6; any of 4->3, 5->4 fails in 0)
+[lose] line of three: 3 configurations, 1 move(s), guard true, deterministic, every of 1000 step families: instances 1000; level 4 -> level 3 fails in 0; (level 3 -> 2 fails in 54; any of 5->4, 6->5 fails in 0)
+[lose] line of three: 2 configurations, 1 move(s), guard any, deterministic, every of 49 step families: instances 784; level 3 -> level 2 fails in 0; (level 2 -> 1 fails in 54; any of 4->3, 5->4 fails in 0)
+[lose] line of two: 2 configurations, 2 move(s), guard true, deterministic, every of 625 step families: instances 625; level 3 -> level 2 fails in 0; (level 2 -> 1 fails in 16; any of 4->3, 5->4 fails in 0)
+[lose] fork: 2 configurations, 2 move(s), guard true, deterministic, every of 14641 step families: instances 14641; level 3 -> level 2 fails in 0; (level 2 -> 1 fails in 1386; any of 4->3, 5->4 fails in 0)
+seconds 1.0
+python3 kripke.py det  1.03s user 0.02s system 91% cpu 1.147 total

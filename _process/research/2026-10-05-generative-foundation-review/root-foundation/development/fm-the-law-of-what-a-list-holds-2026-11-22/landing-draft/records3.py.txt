@@ -1,0 +1,155 @@
+# AI-written (Claude Fable, row FM), 22 November 2026. The records of landing 3, written AFTER the core run:
+# a new record for the law, and three records re-told. Usage: records3.py <STAMP> [--dry]
+# Hash-only re-points of the other records are made afterwards by tools/research/repoint.py.
+import json, hashlib, datetime, pathlib, sys, re
+sys.path.insert(0, '/Users/ren/tmp/fm/land3')
+import record_text as T
+
+STAMP = sys.argv[1]; DRY = '--dry' in sys.argv
+wt = pathlib.Path('/Users/ren/tmp/fm/wt')
+R = wt/'theories/becoming/results/records'
+LB = 'experiments/integrated-correction/general-framework/generative-basis/lean/becoming/'
+receipt = LB + 'becoming-checks/' + STAMP + '/verification.json'
+def sha(p): return hashlib.sha256((wt/p).read_bytes()).hexdigest()
+now = datetime.datetime.now(datetime.timezone.utc).replace(microsecond=0).isoformat()
+def load(i): return json.loads((R/(i+'.json')).read_text())
+def indent_of(i):
+    line = (R/(i+'.json')).read_text().split('\n')[1]; return len(line) - len(line.lstrip())
+def save(i, d, ind, new=False):
+    p = R/(i+'.json'); nl = True if new else p.read_text().endswith('\n')
+    if not DRY: p.write_text(json.dumps(d, ensure_ascii=False, indent=ind) + ('\n' if nl else ''))
+def src(m): return LB + 'Becoming/' + m + '.lean'
+def binding(m): return {"source": src(m), "receipt": receipt, "sha256_pointer": "/source_sha256/Becoming." + m,
+                        "success_pointer": "/status", "success_value": "passed"}
+def declared(m, full):
+    """Is the declaration's last name declared in the module's source? (a presence check before the checker's)"""
+    short = full.split('.')[-1]
+    return re.search(r'^\s*(?:theorem|def|abbrev)\s+(?:[\w«».]*\.)?' + re.escape(short) + r'\b', (wt/src(m)).read_text(), re.M) is not None
+WORDS = ("AI-written (Claude Fable, board row FM). ")
+
+# ------------------------------------------------------------------ which file declares each name of the new record
+RISING = {'commutes_false', 'rise_not_not', 'rise_of_stable', 'singleton_rise_needs_em'}
+def home(full):
+    n = full.split('.')
+    if full in ('Becoming.remove_mem', 'Becoming.gather_listed'): return 'PredicateIteration'
+    if n[1] == 'Iteration': return 'RisingIteration' if n[-1] in RISING else 'PredicateIteration'
+    if n[1] == 'Viability':
+        if n[-1].startswith('kernel_'): return 'Viability'
+        if n[-1] in ('keepStep', 'keep_mono', 'keepable_iff_count'): return 'KeepableStep'
+        return 'Keeping'
+    if n[1] == 'Lasting': return 'Lasting'
+    if n[1] == 'Parting': return 'Parting'
+    if n[1] == 'GuardHorizon': return 'GuardHorizon'
+    if n[1] == 'Reaching': return 'ReachableRanges'
+    if n[1] in ('Branching', 'Law'): return 'Attraction'
+    if n[-1] in ('inquiryStep', 'inquiry_mono', 'iter_iff_inquiry', 'inquiry_iff_all', 'core_iff_inquiry'): return 'GrammarCandidates'
+    return 'CommonResponse'
+
+# ------------------------------------------------------------------ 1. the new record
+NEW = 'kept-at-the-length-of-a-list'
+assert not (R/(NEW+'.json')).exists()
+by_mod = {}
+for law in T.laws:
+    for d in law['declarations']:
+        m = home(d); assert declared(m, d), (m, d)
+        by_mod.setdefault(m, []).append(d)
+ORDER = ['PredicateIteration', 'RisingIteration', 'CommonResponse', 'Viability', 'Lasting', 'Parting', 'GuardHorizon',
+         'Keeping', 'GrammarCandidates', 'Attraction', 'KeepableStep', 'ReachableRanges']
+assert sorted(by_mod) == sorted(ORDER), sorted(by_mod)
+refs = [{"path": src(m), "role": "proof", "declarations": sorted(set(by_mod[m])), "sha256": sha(src(m))} for m in ORDER]
+refs.append({"path": receipt, "role": "receipt", "declarations": [], "sha256": sha(receipt)})
+vs = {"en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt " + STAMP + "): the declarations cited, in two new modules and in sections added to ten others, have empty axiom reports; the checker verifies core purity. Written by an Astra 6.2 implementer from briefs frozen before each build, with what would count against each; read by readers who took no part (Opus, Fable, Astra), by program on small cases, and by two other sessions; not reviewed by a person.",
+      "zh": "由统一的 Lean 4.29.1 检查器机器检验（回执 " + STAMP + "）：所引声明（在两个新模块与另外十个模块新增的小节中）公理报告皆空；检查器核验核心纯净。由 Astra 6.2 实现者按各次构建前冻结的说明书写成，说明书预先写明何者算作反证；经未参与的读者（Opus、Fable、Astra）审读，以小例程序核对，并经另两个会话审读；未经人审。"}
+assert len(vs['en']) <= 600 and len(vs['zh']) <= 260, (len(vs['en']), len(vs['zh']))
+hist = {"en": "22 November 2026: added, on board row FM (one law of what a list holds, and its cases), in the direction Ren gave on 21 November 2026 (sources/15-codex-theory-conversations/2026-11-21-a-full-map-with-its-centre.md: a full map with formal link proof, done elegantly, with its centre). " + WORDS + "The law began as an exact bound for a choice against every outcome, was said once for a monotone step after a reader saw that only monotonicity was used, and the ending side was said once after three inductions on places had been written and each was found by a reader to be the law's own. Parting.continues_persists, continues_any, GuardHorizon.closed_viable and Tolerance.kept_set keep their statements and became calls; AlikeTo.steady_within and alike_iff_alikeTo_pairs lost four premises (record tests-fix-likeness-where-determined). Briefs, builds, readers' returns and what was expected before each run: study folder fm-the-law-of-what-a-list-holds-2026-11-22. Bound to core run " + STAMP + ".",
+        "zh": "2026年11月22日：新增，属工作板条目 FM（一条关于列表所容者之律及其诸例），循 Ren 于2026年11月21日所给方向（sources/15-codex-theory-conversations/2026-11-21-a-full-map-with-its-centre.md：一张带有形式化联结证明、做得优雅、有其中心的完整地图）。AI 撰写（Claude Fable，工作板条目 FM）。此律起初是“针对每个结果的选择”的精确界；一位读者看出只用到单调性后，改为对单调之步只说一次；终结一侧在写了三次对位置的归纳、每次都被读者指出即是此律自身之后，也只说一次。Parting.continues_persists、continues_any、GuardHorizon.closed_viable 与 Tolerance.kept_set 陈述不变而成为调用；AlikeTo.steady_within 与 alike_iff_alikeTo_pairs 去掉四个前提（见记录 tests-fix-likeness-where-determined）。说明书、构建、读者的返回与每次运行之前的预期：研究夹 fm-the-law-of-what-a-list-holds-2026-11-22。绑定于核心运行 " + STAMP + "。"}
+rec = {
+ "schema_version": 2, "id": NEW, "title": T.title, "kind": "theorem", "status": "recorded-checked", "family": "F01",
+ "reviewed_at_utc": now, "statement": T.statement, "laws": T.laws, "hypotheses": T.hypotheses,
+ "does_not_show": T.does_not_show, "counterexamples": [],
+ "standard_boundaries": ["no-ethical-premise", "no-evaluation", "discrete-steps", "formal-not-empirical", "names-provisional", "omission-not-refutation", "conditional-not-universal"],
+ "validation_scope": vs, "next_delta": T.next_delta,
+ "canonical_source": src('PredicateIteration'),
+ "aliases": ["kept at the length of a list", "what a list holds", "列表所容", "Becoming.Iteration.iter_persists", "Becoming.Iteration.iter_largest", "Becoming.Iteration.iter_gives_persists"],
+ "dependencies": [],
+ "related": [
+   {"id": "where-a-run-goes-on", "detail": {"en": "Within finitely many configurations a run is a course into a return; here a course as long as the list goes on, as a case of the law.", "zh": "有限多个构形之内，运行即通向复返的进程；此处与列表等长的进程延续，作为此律之一例。"}},
+   {"id": "conditions-kept-together", "detail": {"en": "The step of keeping along some course, with no list; here keepable at a list's length.", "zh": "沿某条进程保持的一步，无需列表；此处是在列表长度处的可保持。"}},
+   {"id": "tests-fix-likeness-where-determined", "detail": {"en": "Likeness to depth at the number of pairs is a case of the law.", "zh": "在配置对数目处的深度相同，是此律之一例。"}},
+   {"id": "identification-where-runs-part", "detail": {"en": "Its ninth law, a course as long as the list, is now a call of the law.", "zh": "其第九条规律（与列表等长的进程）现为此律的一次调用。"}}],
+ "references": refs, "proof_bindings": [binding(m) for m in ORDER], "history": [hist],
+}
+save(NEW, rec, indent_of('conditions-kept-together'), new=True)
+
+# regions.json: the record's entry
+reg = wt/'theories/becoming/results/data/regions.json'
+raw = reg.read_text(); d = json.loads(raw)
+def dump(x): return json.dumps(x, ensure_ascii=False, indent=1) + ('\n' if raw.endswith('\n') else '')
+assert dump(d) == raw
+assert NEW not in d['records']
+d['records'][NEW] = {"region": "map", "base": "general", "note": "PredicateIteration FM: a monotone step on predicates where a list holds the start; kept at the list's length is kept for good; keeping under every course, along some course, by choice and through a reading as cases; the ending side where a step commutes with what a level would give"}
+if not DRY: reg.write_text(dump(d))
+
+# ------------------------------------------------------------------ 2. identification-where-runs-part: law 9
+i = 'identification-where-runs-part'; ind = indent_of(i); a = load(i)
+law = a['laws'][8]
+assert 'the course repeats a configuration and can go round' in law['en'] and 'Becoming.Parting.continues_cycle' in law['declarations']
+law['en'] = "Where a list of N holds every configuration, from where a course of N steps starts some step leads to where another such course starts; so courses of every length start there, with no decision and no selection. With decided steps and listed moves, a run goes on from there, built by taking at each step the first successor from which one can."
+law['zh'] = "N 个配置的列表持有每个配置时，由之有 N 步历程的配置，有一步通向另一个由之有 N 步历程的配置；所以由之有任意长的历程，不用判定也不用选取。步可判定、动作列出时，由之有无尽的运行，每步取第一个仍可走下去的后继造出。"
+assert len(law['en']) <= 420 and len(law['zh']) <= 190
+P3 = ['Becoming.Parting.courseStep', 'Becoming.Parting.course_mono', 'Becoming.Parting.iter_iff_continues']
+for x in P3: assert declared('Parting', x), x
+law['declarations'] = [x for x in law['declarations'] if x != 'Becoming.Parting.continues_cycle'] + P3 + ['Becoming.Iteration.iter_persists', 'Becoming.Iteration.iter_iff_all']
+r0 = a['references'][0]; assert r0['path'] == src('Parting') and 'Becoming.Parting.continues_cycle' in r0['declarations']
+r0['declarations'] = [x for x in r0['declarations'] if x != 'Becoming.Parting.continues_cycle'] + P3
+r0['sha256'] = sha(src('Parting'))
+a['references'].append({"path": src('PredicateIteration'), "role": "proof", "declarations": ['Becoming.Iteration.iter_iff_all', 'Becoming.Iteration.iter_persists'], "sha256": sha(src('PredicateIteration'))})
+a['references'].append({"path": receipt, "role": "receipt", "declarations": [], "sha256": sha(receipt)})
+pb = [b for b in a['proof_bindings'] if b['source'] == src('Parting')]; assert len(pb) == 1; pb[0]['receipt'] = receipt
+a['proof_bindings'].append(binding('PredicateIteration'))
+a['history'].append({
+ "en": "22 November 2026, board row FM (one law of what a list holds, and its cases): the ninth law re-told. Parting.continues_persists and continues_any keep their statements; their proofs are now calls of the law of a monotone step applied as many times as a list is long (Becoming.Iteration.iter_persists and iter_iff_all, in the new module Becoming.PredicateIteration), through Parting.courseStep, course_mono and iter_iff_continues, which join the law's declarations. Parting.continues_cycle is deleted and leaves the lists. The law no longer says that the course repeats a configuration and can go round, which told the former proof. The other laws, the statement and the hypotheses are unchanged. Bound to core run " + STAMP + ".",
+ "zh": "2026年11月22日，工作板条目 FM（一条关于列表所持者的律及其诸例）：第九条规律重述。Parting.continues_persists 与 continues_any 陈述不变，其证明改为调用“单调的一步施行列表长度那么多次”之律（Becoming.Iteration.iter_persists 与 iter_iff_all，在新模块 Becoming.PredicateIteration），经 Parting.courseStep、course_mono 与 iter_iff_continues，三者加入该律的声明。Parting.continues_cycle 删去，从各列表除去。该律不再说长 N 的历程重复一个配置而可以绕行，那是旧证明。其余诸律、陈述与前提不变。绑定于核心运行 " + STAMP + "。"})
+a['reviewed_at_utc'] = now
+save(i, a, ind)
+
+# ------------------------------------------------------------------ 3. tests-fix-likeness-where-determined: laws 5 and 6
+i = 'tests-fix-likeness-where-determined'; ind = indent_of(i); b = load(i)
+l5, l6 = b['laws'][4], b['laws'][5]
+assert 'Each step of the proof is built from the decisions' in l5['en'] and 'Becoming.alike_iff_alikeTo_pairs' in l6['declarations']
+l5['en'] = "Two steps of the proof are built from the decisions: likeness to depth k is decided, and where it fails a branching test holding at one configuration and failing at the other is built. The third needs none: where a list holds the configurations of each frame, configurations alike to the depth of the product of the lists' lengths are alike to the next depth, and there likeness to depth is a bisimulation."
+l5['zh'] = "证明有两步由判定构造：深度 k 的相同已判定；它不成立处，构造一个在一方成立、在另一方不成立的分支检验。第三步不用判定：两个框架的配置各被一个列表持有时，在两列表长度之积这一深度相同的配置，在下一深度仍相同，在那里深度的相同是互模拟。"
+l6['en'] = "So likeness of finite decided frames is decided. Where a list holds the configurations of each frame, with nothing decided and neither moves nor claims listed, likeness is likeness to every depth and to the depth of the product of the lists' lengths. Asked of every pair of frames with one configuration, one move and no claims, deciding likeness is excluded middle."
+l6['zh'] = "所以有限、已定的框架的相同已判定。两个框架的配置各被一个列表持有时，不用判定，动作与主张也不必列出，相同就是每个深度的相同，也是两列表长度之积这一深度的相同。对每一对只有一个配置、一个动作而没有主张的框架，判定相同就是排中律。"
+for l in (l5, l6): assert len(l['en']) <= 420 and len(l['zh']) <= 190, (len(l['en']), len(l['zh']))
+N5 = ['Becoming.alikeStep', 'Becoming.alike_mono', 'Becoming.iter_iff_alikeTo', 'Becoming.alike_at_cover', 'Becoming.alike_at_pairs']
+N6 = ['Becoming.alike_iff_at_cover']
+for x in N5 + N6: assert declared('Likeness', x), x
+l5['declarations'] = [x for x in l5['declarations'] if x != 'Becoming.stops_decreasing'] + N5
+l6['declarations'] = l6['declarations'] + N6
+rl = [r for r in b['references'] if r['path'] == src('Likeness')]; assert len(rl) == 1
+assert 'Becoming.stops_decreasing' in rl[0]['declarations']
+rl[0]['declarations'] = rl[0]['declarations'] + N5 + N6; rl[0]['sha256'] = sha(src('Likeness'))
+b['references'].append({"path": receipt, "role": "receipt", "declarations": [], "sha256": sha(receipt)})
+pb = [x for x in b['proof_bindings'] if x['source'] == src('Likeness')]; assert len(pb) == 1; pb[0]['receipt'] = receipt
+b['history'].append({
+ "en": "22 November 2026, board row FM (one law of what a list holds, and its cases): the fifth and sixth laws re-told. AlikeTo.steady_within and alike_iff_alikeTo_pairs keep their names and lose four premises (the list of every move, the list of every claim, FiniteDecided of each frame): they ask only a list holding the configurations of each frame, and the depth is the product of the lists' lengths itself (alike_at_pairs). AlikeTo.steady and alike_iff_alikeTo lose the same four and ask that such lists exist. Their proofs are calls of Becoming.Iteration.iter_persists (new module Becoming.PredicateIteration) through alikeStep, alike_mono and iter_iff_alikeTo; alike_at_cover and alike_iff_at_cover state the same at a list of only the pairs that agree on claims. These join the declarations. stops_decreasing is called by no other proof now and leaves the fifth law's list, staying in the references. Alike.decided and alike_iff_sameBranchingTests keep their statements. Former wording of the fifth law's last clause: \"likeness to depth stops refining at a depth no greater than the number of pairs of configurations, and there it is a bisimulation\", under \"Each step of the proof is built from the decisions\"; of the sixth law's first: \"likeness of finite decided frames is decided and is likeness to every depth and to the depth of the number of pairs\". Bound to core run " + STAMP + ".",
+ "zh": "2026年11月22日，工作板条目 FM（一条关于列表所持者的律及其诸例）：第五、第六条规律重述。AlikeTo.steady_within 与 alike_iff_alikeTo_pairs 名称不变，去掉四个前提（动作列出、主张列出、两个框架各自的 FiniteDecided），只要两个框架的配置各被一个列表持有，深度即两列表长度之积（alike_at_pairs）。AlikeTo.steady 与 alike_iff_alikeTo 同样去掉这四个，只要这样的列表存在。其证明改为调用 Becoming.Iteration.iter_persists（新模块 Becoming.PredicateIteration），经 alikeStep、alike_mono 与 iter_iff_alikeTo；alike_at_cover 与 alike_iff_at_cover 在只列出主张一致之配置对的列表上陈述同一事。以上加入声明。stops_decreasing 不再为其他证明所用，从第五条规律的列表除去，留在引用中。Alike.decided 与 alike_iff_sameBranchingTests 陈述不变。第五条规律末句原文：“深度的相同在不超过配置对数目的某个深度停止细分，在那里它是互模拟”，在“证明的每一步由判定构造”之下；第六条规律首句原文：“有限、已定的框架的相同已判定，就是每个深度的相同，也是配置对数目之深度的相同”。绑定于核心运行 " + STAMP + "。"})
+b['reviewed_at_utc'] = now
+save(i, b, ind)
+
+# ------------------------------------------------------------------ 4. identification-where-bounded: remove_mem's file
+i = 'identification-where-bounded'; ind = indent_of(i); c = load(i)
+rr = [r for r in c['references'] if r['path'] == src('Refinement')]; assert len(rr) == 1 and 'Becoming.remove_mem' in rr[0]['declarations']
+rr[0]['declarations'] = [x for x in rr[0]['declarations'] if x != 'Becoming.remove_mem']; rr[0]['sha256'] = sha(src('Refinement'))
+assert declared('PredicateIteration', 'Becoming.remove_mem')
+c['references'].append({"path": src('PredicateIteration'), "role": "proof", "declarations": ["Becoming.remove_mem"], "sha256": sha(src('PredicateIteration'))})
+c['references'].append({"path": receipt, "role": "receipt", "declarations": [], "sha256": sha(receipt)})
+pb = [x for x in c['proof_bindings'] if x['source'] == src('Refinement')]; assert len(pb) == 1; pb[0]['receipt'] = receipt
+c['proof_bindings'].append(binding('PredicateIteration'))
+c['history'].append({
+ "en": "22 November 2026, board row FM (one law of what a list holds, and its cases): remove_mem moved with its full name and statement from Refinement.lean to the new module Becoming.PredicateIteration, which Refinement now imports; the record's references follow it (a reference to PredicateIteration.lean added, the name dropped from Refinement.lean's list), and no law changed. Refinement.lean re-pointed after reading the change: one import added, the lemma removed, nothing else. Bound to core run " + STAMP + ".",
+ "zh": "2026年11月22日，工作板条目 FM（一条关于列表所持者的律及其诸例）：remove_mem 连同完整名称与陈述从 Refinement.lean 移到新模块 Becoming.PredicateIteration，Refinement 导入之；此记录的引用从之（加入对 PredicateIteration.lean 的引用，从 Refinement.lean 的列表除去该名），诸律不变。读过改动后重新指向 Refinement.lean：加一行导入，删去该引理，别无改动。绑定于核心运行 " + STAMP + "。"})
+c['reviewed_at_utc'] = now
+save(i, c, ind)
+print('records', 'checked (dry)' if DRY else 'written', now)

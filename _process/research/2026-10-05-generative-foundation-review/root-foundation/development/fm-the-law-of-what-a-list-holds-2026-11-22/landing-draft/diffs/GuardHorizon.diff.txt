@@ -1,0 +1,293 @@
+--- /Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean	2026-11-02 14:15:35
++++ /Users/ren/tmp/fm/build10/Becoming/GuardHorizon.lean	2026-11-22 03:38:07
+@@ -21,6 +21,23 @@
+   `Viability` with an enabled move at each configuration (`certificate_closed`,
+   `certificate_viable`), and the kernel where every configuration reached has one
+   (`kernel_viable`).
++* **Viability at the list length.** Applying `choiceStep` n times from the guard gives viability
++  for n steps (`iter_iff_viable`). If a list covers the guard, the states viable for its length
++  form a closed set (`viable_closed`). Viability at that length is equivalent to viability at
++  every horizon and to membership in some closed set (`viable_iff_every_horizon`,
++  `viable_iff_closed`).
++* **Loss.** From guard failure, n applications of `loseStep` or `lostStep` exclude viability at
++  n (`not_viable_of_loss`, `lost_not_viable`). The steps agree if enabling is decided at each
++  state and move (`lost_iff_lose`). If all states and moves are listed, disjunctive loss one
++  step past the state-list length implies loss at that length (`lost_shortens`). For `loseStep`,
++  shortening from three steps to two at `false` for every two-state process with one move and
++  every guard decides each negation (`lose_shortening_decides_negations`). Shortening from four
++  steps to three at `none` for every process on `Option Bool` with one move and the guard true
++  everywhere decides each proposition (`lose_shortening_decides`). For `lostStep`, suppose
++  shortening by one at `none` holds at the length of every exhaustive list for every process on
++  `Option Bool` with natural-number moves and the guard true everywhere. Then a common disjunct
++  distributes over all natural numbers (`lost_shortening_distributes`), which implies the
++  limited principle of omniscience for Boolean sequences (`lpo_of_distributes`).
+ * **Deterministic laws and values.** For a law with free moves, keeping the guard (`DViable`) is
+   keeping it in the law's process `Viability.disturbed` (`dViable_iff`); a choice of moves staying
+   within the guard (`PathSafe`) shows its start keeps it (`pathSafe_dViable`, `safe_path_viable`)
+@@ -108,14 +125,71 @@
+ def Closed (K : S → Prop) : Prop :=
+   ∀ s, K s → guard s ∧ ∃ a, Enabled P s a ∧ ∀ t, P.step s a t → K t
+ 
++section Choices
++
++open Iteration
++
++universe u v
++
++variable {S : Type u} {A : Type v} (P : Process S A) (guard : S → Prop)
++
++/-- The guard holds and some enabled move takes every outcome into the given class. -/
++def choiceStep (X : S → Prop) (s : S) : Prop :=
++  guard s ∧ ∃ a, Enabled P s a ∧ ∀ t, P.step s a t → X t
++
++/-- The choice step is monotone in the predicate allowed for outcomes. -/
++theorem choice_mono : MonotoneStep (choiceStep P guard) :=
++  fun sub _ ⟨inside, a, live, later⟩ => ⟨inside, a, live, fun t st => sub t (later t st)⟩
++
++variable {S A : Type} {P : Process S A} {guard : S → Prop}
++
++/-- The n-th iterate of the choice step from the guard consists of the states viable for n steps. -/
++theorem iter_iff_viable : ∀ n s, iter (choiceStep P guard) guard n s ↔ Viable P guard n s :=
++  iter_iff_stages (choice_mono P guard) (fun _ => Iff.rfl) (fun _ _ => Iff.rfl)
++
++end Choices
++
+ /-- **Every configuration of a closed set keeps the guard at every horizon.** -/
+ theorem closed_viable {K : S → Prop} (closed : Closed P guard K) :
+-    ∀ n s, K s → Viable P guard n s
+-  | 0, s, held => (closed s held).1
+-  | n + 1, s, held => match closed s held with
+-    | ⟨within, a, enabled, stays⟩ =>
+-      ⟨within, a, enabled, fun t st => closed_viable closed n t (stays t st)⟩
++    ∀ n s, K s → Viable P guard n s :=
++  fun n s h => (iter_iff_viable n s).mp (Iteration.postfixed_in_iter (choice_mono P guard)
++    (fun z k => (closed z k).1) closed n s h)
+ 
++section ListedChoices
++
++open Iteration
++
++variable {P guard}
++
++/-- If all guarded states are listed, a state viable for the list length has an enabled
++move whose every outcome is viable for the same length. -/
++theorem viable_persists {all : List S} (within : ∀ x, guard x → x ∈ all) {y : S}
++    (kept : Viable P guard all.length y) :
++    ∃ a, Enabled P y a ∧ ∀ z, P.step y a z → Viable P guard all.length z :=
++  ((iter_iff_viable (all.length + 1) y).mp (iter_persists (choice_mono P guard)
++    (fun _ h => h.1) within ((iter_iff_viable _ y).mpr kept))).2
++
++variable {all : List S} {s : S}
++
++/-- If all guarded states are listed, the states viable for the list length form a closed set. -/
++theorem viable_closed (within : ∀ x, guard x → x ∈ all) :
++    Closed P guard (Viable P guard all.length) :=
++  fun _ kept => ⟨viable_guard P guard kept, viable_persists within kept⟩
++
++/-- If all guarded states are listed, viability for the list length is viability at every horizon.
++-/
++theorem viable_iff_every_horizon (within : ∀ x, guard x → x ∈ all) :
++    Viable P guard all.length s ↔ ∀ n, Viable P guard n s :=
++  ⟨fun kept n => closed_viable P guard (viable_closed within) n s kept, fun h => h all.length⟩
++
++/-- If all guarded states are listed, a state is viable for the list length exactly when a
++closed set contains it. -/
++theorem viable_iff_closed (within : ∀ x, guard x → x ∈ all) :
++    Viable P guard all.length s ↔ ∃ K, Closed P guard K ∧ K s :=
++  ⟨fun kept => ⟨_, viable_closed within, kept⟩,
++   fun ⟨_, closed, held⟩ => closed_viable P guard closed all.length s held⟩
++end ListedChoices
++
+ /-- **A certificate of the core's viability law with an enabled move at each configuration is
+ closed.** -/
+ theorem certificate_closed {K : S → Prop} (cert : Viability.Certificate P guard K)
+@@ -139,6 +213,189 @@
+       | ⟨a, enabled⟩ => ⟨a, enabled, fun _ st => reach.trans (Reach.of_step st)⟩⟩)
+     n s (Reach.refl P s)
+ 
++/-! ## Loss over a horizon -/
++
++section Loss
++open Iteration
++
++universe u v
++
++variable {S : Type u} {A : Type v}
++
++/-- The guard fails or every enabled move has an outcome in the given class. -/
++def loseStep {A : Type v} (P : Process S A) (guard X : S → Prop) (s : S) : Prop :=
++  ¬ guard s ∨ ∀ a, Enabled P s a → ∃ t, P.step s a t ∧ X t
++
++/-- For every n, a state in the n-th iterate of the losing step from the states where the guard
++fails is not viable for n steps. -/
++theorem not_viable_of_loss {S A : Type} {P : Process S A} {guard : S → Prop} :
++    ∀ n s, iter (loseStep P guard) (fun y => ¬ guard y) n s → ¬ Viable P guard n s
++  | 0, _, outside, inside => outside inside
++  | _ + 1, _, .inl outside, kept => outside kept.1
++  | n + 1, _, .inr replies, ⟨_, a, live, stays⟩ =>
++    match replies a live with
++    | ⟨t, step, lost⟩ => not_viable_of_loss n t lost (stays t step)
++
++/-- If for every process on two states with one move and every guard, membership of false in
++iterate 3 of the losing step from guard failure implies membership in iterate 2, every negation is
++decided. -/
++theorem lose_shortening_decides_negations
++    (shortens : ∀ (P : Process Bool Unit) (guard : Bool → Prop),
++      iter (loseStep P guard) (fun s => ¬ guard s) 3 false →
++      iter (loseStep P guard) (fun s => ¬ guard s) 2 false) (q : Prop) : ¬ q ∨ ¬ ¬ q :=
++  let P : Process Bool Unit := ⟨fun s _ t => match s with
++    | false => t = true
++    | true => q ∧ t = false⟩
++  let guard : Bool → Prop := fun | false => True | true => ¬ q
++  let L := iter (loseStep P guard) (fun s => ¬ guard s)
++  have one (hq : q) : L 1 false :=
++    .inr fun _ _ => ⟨true, rfl, fun no => no hq⟩
++  have two : L 2 true :=
++    .inr fun _ ⟨_, step⟩ => ⟨false, ⟨step.1, rfl⟩, one step.1⟩
++  match shortens P guard (.inr fun _ _ => ⟨true, rfl, two⟩) with
++  | .inl outside => False.elim (outside trivial)
++  | .inr next => match next () ⟨true, rfl⟩ with
++    | ⟨_, rfl, .inl nnq⟩ => .inr nnq
++    | ⟨_, rfl, .inr replies⟩ => .inl fun hq =>
++      match replies () ⟨false, hq, rfl⟩ with
++      | ⟨_, ⟨_, rfl⟩, outside⟩ => outside trivial
++
++/-- If for every process on three states with one move and the guard true everywhere, membership of
++none in iterate 4 of the losing step from guard failure implies membership in iterate 3, every
++proposition is decided. -/
++theorem lose_shortening_decides
++    (shortens : ∀ P : Process (Option Bool) Unit,
++      iter (loseStep P (fun _ => True)) (fun _ => ¬ True) 4 none →
++      iter (loseStep P (fun _ => True)) (fun _ => ¬ True) 3 none) (q : Prop) : q ∨ ¬ q :=
++  let P : Process (Option Bool) Unit := ⟨fun s _ t => match s with
++    | none => t = some false ∨ (q ∧ t = some true)
++    | some false => q ∧ t = none
++    | some true => False⟩
++  let L := iter (loseStep P (fun _ => True)) (fun _ => ¬ True)
++  have enabled : Enabled P none () := ⟨some false, .inl rfl⟩
++  have dead : L 1 (some true) := .inr fun _ ⟨_, st⟩ => False.elim st
++  have two (hq : q) : L 2 none := .inr fun _ _ => ⟨some true, .inr ⟨hq, rfl⟩, dead⟩
++  have three : L 3 (some false) :=
++    .inr fun _ ⟨_, step⟩ => ⟨none, ⟨step.1, rfl⟩, two step.1⟩
++  have noOne (one : L 1 none) : False :=
++    not_viable_of_loss 1 none one ⟨trivial, (), enabled, fun _ _ => trivial⟩
++  match shortens P (.inr fun _ _ => ⟨some false, .inl rfl, three⟩) with
++  | .inl no => False.elim (no trivial)
++  | .inr replies => match replies () enabled with
++    | ⟨_, .inr ⟨hq, _⟩, _⟩ => .inl hq
++    | ⟨_, .inl rfl, middle⟩ => .inr fun hq =>
++      middle.elim (fun no => no trivial) fun next =>
++        match next () ⟨none, hq, rfl⟩ with
++        | ⟨_, ⟨_, rfl⟩, one⟩ => noOne one
++
++variable {P : Process S A} {guard X : S → Prop}
++
++/-- The guard fails, or each move is disabled or has an outcome in the given class. -/
++def lostStep (P : Process S A) (guard X : S → Prop) (s : S) : Prop :=
++  ¬ guard s ∨ ∀ a, ¬ Enabled P s a ∨ ∃ t, P.step s a t ∧ X t
++
++/-- The disjunctive loss step is monotone in the predicate allowed for losing outcomes. -/
++theorem lost_mono : MonotoneStep (lostStep P guard) :=
++  fun sub _ h => h.imp id fun each a => (each a).imp id fun ⟨t, st, lost⟩ => ⟨t, st, sub t lost⟩
++
++/-- Failure of the guard suffices for a loss step from the failed guard. -/
++theorem lost_start (s : S) : ¬ guard s → lostStep P guard (fun t => ¬ guard t) s := Or.inl
++
++/-- A disjunctive loss step implies a loss step for the same process, guard and input predicate. -/
++theorem lost_implies_lose {s : S} : lostStep P guard X s → loseStep P guard X s :=
++  fun h => h.imp id fun each a live => (each a).elim (fun no => False.elim (no live)) id
++
++/-- When enabling is decided at each state and move, the two loss steps agree. -/
++theorem lost_iff_lose (decided : ∀ s a, Enabled P s a ∨ ¬ Enabled P s a) {s : S} :
++    lostStep P guard X s ↔ loseStep P guard X s :=
++  ⟨lost_implies_lose, fun h => h.imp id fun each a => (decided s a).elim
++    (fun live => .inr (each a live)) Or.inl⟩
++
++local notation "L" => iter (lostStep P guard) (fun s => ¬ guard s)
++
++/-- For every n, membership in iterate n of the disjunctive loss step from guard failure excludes
++viability for n steps. -/
++theorem lost_not_viable {S A : Type} {P : Process S A} {guard : S → Prop} : ∀ n s,
++    iter (lostStep P guard) (fun t => ¬ guard t) n s → ¬ Viable P guard n s
++  | 0, _, no => no
++  | n + 1, _, lost => fun ⟨safe, a, live, keeps⟩ => (lost_implies_lose lost).elim
++    (fun no => no safe) fun each => match each a live with
++    | ⟨t, st, bad⟩ => lost_not_viable n t bad (keeps t st)
++
++/-- If `(D a → G) → G` holds for every listed move a, and having D at every listed move
++implies G, then G holds. -/
++theorem gather_moves {D : A → Prop} {G : Prop} : ∀ (moves : List A),
++    (∀ a, a ∈ moves → (D a → G) → G) → ((∀ a, a ∈ moves → D a) → G) → G
++  | [], _, finish => finish fun _ mem => nomatch mem
++  | a :: rest, each, finish => each a (.head _) fun head =>
++    gather_moves rest (fun b mem => each b (.tail a mem)) fun tail =>
++      finish fun b mem => match mem_cons_cases mem with
++        | .inl rfl => head
++        | .inr later => tail b later
++
++/-- If every move is listed, the disjunctive loss step commutes with every proposition. -/
++theorem lost_commutes {moves : List A} (everyMove : ∀ a, a ∈ moves) (G : Prop) :
++    CommutesWithImplication (lostStep P guard) G :=
++  fun W s h finish => h.elim (fun no => finish (.inl no)) fun each =>
++    gather_moves (D := fun a => ¬ Enabled P s a ∨ ∃ t, P.step s a t ∧ W t) moves
++      (fun a _ give => (each a).elim (fun no => give (.inl no))
++        fun ⟨t, st, k⟩ => k fun w => give (.inr ⟨t, st, w⟩))
++      (fun answers => finish (.inr fun a => answers a (everyMove a)))
++
++/-- If every state and move is listed, disjunctive loss from guard failure one step past the
++state-list length implies loss at that length. -/
++theorem lost_shortens {all : List S} (every : ∀ s, s ∈ all) {moves : List A}
++    (everyMove : ∀ a, a ∈ moves) {y : S} : L (all.length + 1) y → L all.length y :=
++  iter_shortens lost_mono lost_start (lost_commutes everyMove _) (fun z _ => every z)
++
++/-- Suppose disjunctive loss from guard failure shortens at none at the length of every exhaustive
++list, for every three-state process with natural-number moves and an everywhere-true guard. If each
++p a or q holds, then all p a hold or q holds. -/
++theorem lost_shortening_distributes
++    (shortens : ∀ (P : Process (Option Bool) Nat) (all : List (Option Bool)), (∀ z, z ∈ all) →
++      let levels := iter (lostStep P (fun _ => True)) (fun _ => ¬ True)
++      levels (all.length + 1) none → levels all.length none)
++    (p : Nat → Prop) (q : Prop) (each : ∀ a, p a ∨ q) : (∀ a, p a) ∨ q :=
++  let P : Process (Option Bool) Nat := ⟨fun s a t => match s with
++    | none => t = some false ∨ (q ∧ t = some true)
++    | some false => (p a ∧ t = some true) ∨ (q ∧ t = none)
++    | some true => False⟩
++  let loss := iter (lostStep P (fun _ => True)) (fun _ => ¬ True)
++  have rootLive (a : Nat) : Enabled P none a := ⟨some false, .inl rfl⟩
++  have midLive (a : Nat) : Enabled P (some false) a := (each a).elim
++    (fun hp => ⟨some true, .inl ⟨hp, rfl⟩⟩) (fun hq => ⟨none, .inr ⟨hq, rfl⟩⟩)
++  have dead : loss 1 (some true) := .inr fun _ => .inl fun ⟨_, st⟩ => st
++  have viaQ (hq : q) : loss 2 none := .inr fun _ => .inr ⟨some true, .inr ⟨hq, rfl⟩, dead⟩
++  have middle : loss 3 (some false) := .inr fun a => .inr ((each a).elim
++    (fun hp => ⟨some true, .inl ⟨hp, rfl⟩, iter_succ lost_mono lost_start 1 _ dead⟩)
++    (fun hq => ⟨none, .inr ⟨hq, rfl⟩, viaQ hq⟩))
++  have four : loss 4 none := .inr fun _ => .inr ⟨some false, .inl rfl, middle⟩
++  have cover : ∀ z, z ∈ [none, some false, some true]
++    | none => .head _
++    | some false => .tail _ (.head _)
++    | some true => .tail _ (.tail _ (.head _))
++  have noOne (h : loss 1 none) : False :=
++    lost_not_viable 1 none h ⟨trivial, 0, rootLive 0, fun _ _ => trivial⟩
++  match (lost_implies_lose (shortens P _ cover four)).elim (fun no => False.elim (no trivial))
++      (fun replies => replies 0 (rootLive 0)) with
++  | ⟨_, .inr ⟨hq, _⟩, _⟩ => .inr hq
++  | ⟨_, .inl rfl, two⟩ => .inl fun a =>
++    (lost_implies_lose two).elim (fun no => False.elim (no trivial)) fun replies =>
++      match replies a (midLive a) with
++      | ⟨_, .inl ⟨hp, _⟩, _⟩ => hp
++      | ⟨_, .inr ⟨_, rfl⟩, one⟩ => False.elim (noOne one)
++
++/-- Distribution of a common disjunct over all natural numbers implies the limited
++principle of omniscience for Boolean sequences. -/
++theorem lpo_of_distributes
++    (distribute : ∀ (p : Nat → Prop) (q : Prop), (∀ n, p n ∨ q) → (∀ n, p n) ∨ q) :
++    ∀ f : Nat → Bool, (∃ n, f n = true) ∨ ∀ n, f n = false :=
++  fun f => (distribute (fun n => f n = false) (∃ n, f n = true) (fun n =>
++    match eq : f n with
++    | false => .inl eq
++    | true => .inr ⟨n, eq⟩)).elim Or.inr Or.inl
++end Loss
++
+ /-! ## Deterministic laws and values -/
+ 
+ /-- The guard kept for `n` steps under a law with free moves. -/

@@ -1,0 +1,285 @@
+AI-written (Claude Opus 5.5, as the reader), 22 November 2026. I ran no Lean, build, test or gate, and changed nothing in the repository, in git or in the draft tree.
+
+## (1) Verdict
+
+1. **Not as it stands.** Four passages of docstring text must be corrected first. None of them changes a statement. Three decisions should also be taken before the core run fixes names and statements in place.
+2. **It builds, and the statements match.** By the builder's log (build 23: exit 0, `"unclean": []`, `with_axioms` `{}` for all 15 modules), it compiles with no axiom. 1,154 declarations and 857 theorems; the per-module counts add up. Every added statement equals its scratch statement, apart from namespace and section variables and the two ordered likeness changes. D1 to D4 hold in what I read.
+3. **Strongest thing against: the Parting module docstring.** At draft ll. 44–48 it says "These statements require no decision or selection" right after `live_iff_continues`, which takes `[∀ x a y, Decidable (P.step x a y)]`. It also tells `continues_persists` so that it reads as the converse. The board claim names this as counting against a landing: "a docstring or record that tells more than its statement".
+4. **Next against:**
+   - `AlikeTo.steady` now takes `moves` and `claims` without using them; `let _ := And.intro moves claims` silences the unused-variable lint. `alike_iff_alikeTo` carries the same idle premises.
+   - `lost_shortens` rests on `gather_moves`, an induction on a list inside the case. The claim names "a case that carries its own induction on a list" as counting against. `gather_moves` repeats Prelude's `not_not_all`, which is its case at G = False.
+5. **Names:** `reach_within_length` and `reach_within_count` have the bound n where the list has length n + 1. The draft's own convention is `_pred_length` (`iter_within_pred_length`, of which `reach_within_length` is a call). `rise_iff_trace` sits in the module that defines `Rise` and speaks of "the rise".
+
+## (2) MUST before the core run
+
+**M1. `PredicateIteration.lean` ll. 6–18 (module docstring).**
+- "takes the start inside itself" does not say the direction. The first section's premise is `Φ V₀ ⊆ V₀`; the second's is the opposite, `W₀ ⊆ Ψ W₀`.
+- "at each successor" can be read as a successor state.
+- "bounds the descent" is undefined.
+- The `remove_mem` sentence says less than its statement.
+
+Replace the two paragraphs with:
+```
+`Iteration.iter Φ V₀ n` is the predicate `V₀` after the step `Φ` has been applied `n` times.
+For a step that preserves inclusion (`Iteration.MonotoneStep`) and whose value at the start lies
+inside the start, each iterate lies inside the one before (`Iteration.iter_pred`). If a list
+holds every state of the start, the iterate at the list's length lies inside the next
+(`Iteration.iter_persists`), and it is the largest class inside the start that lies inside its
+own step (`Iteration.iter_largest`). If the start is the step applied to the predicate true
+everywhere and a list of length n + 1 holds every state, iterate n lies inside iterate n + 1
+(`Iteration.iter_persists_from_all`). Given a member x of a list, `remove_mem` gives a list one
+shorter such that each member of the original equals x or is on the shorter list.
+
+For a monotone step whose start lies inside its own first step, each iterate lies inside the
+next (`Iteration.iter_succ`). Let G be that y is in the iterate at a list's length. If the step
+commutes with implication to G (`Iteration.CommutesWithImplication`) and the list holds every
+state at which membership in the start implies G, then y in any iterate is in the iterate at the
+list's length (`Iteration.iter_within_length`). Without the commuting premise this cannot be had
+with nothing decided: asked of every monotone step on a one-state type from the empty start, it
+decides every proposition (`Iteration.singleton_rise_needs_em`, in `Becoming.RisingIteration`).
+```
+
+**M2. `Parting.lean` ll. 44–48.** The sentence on `continues_persists` reads as the converse. "These statements" takes in `live_iff_continues`, which assumes decided steps. Replace with:
+```
+  `live` decides `Lasting.Continues` (`live_iff_continues`). Starting from all configurations,
+  applying `courseStep` n times gives the starts of courses of length n (`iter_iff_continues`).
+  If a list of N holds every configuration, from where a course of N steps starts some move
+  leads to where another course of N steps starts (`continues_persists`), and courses of every
+  length start there (`continues_any`, `unbounded_of_continues`). These three assume no decided
+  step and no selection, where `Lasting`'s lifting for finite branching holds up to double
+  negation.
+```
+This also restores the join to `Lasting` that the draft dropped from the module docstring. It is still in the docstring of `unbounded_of_continues`.
+
+**M3. `Keeping.lean` ll. 45–46.** "covers" is used for two different things in one module. Here a list covers codes (holds them). Beside it, `coveredBy` and the docstring of `reading_mono` mean that a class lies inside a coded class. Replace from "If a list also covers" with:
+```
+  are kept for n steps (`iter_iff_kept`). If a list also holds every guarded code, a code's class
+  is kept for the list length exactly when some such family contains it (`InClosedFamily`,
+  `coded_kept_iff_closed`).
+```
+
+**M4. `Likeness.lean` l. 1100 and l. 1178.** "the pair count" and "its count" can be read as l'.length * l.length, the number the section's heading is about. The statement's depth is `pairs.length`: a list that may hold more than the agreeing pairs, and repeats.
+- l. 1100:
+  ```
+  /-- If a list holds every pair agreeing on claims, likeness to the depth of the list's length
+  persists one step. -/
+  ```
+- l. 1178:
+  ```
+  /-- If a list holds every pair agreeing on claims, configurations are alike exactly when they are
+  alike to the depth of the list's length. -/
+  ```
+
+**M5 (decision). `Likeness.lean` ll. 1125–1134 and 1164–1171: idle premises.** Under the brief as written, the draft is allowed. Honestly it is not: `AlikeTo.steady` uses `finite.listed` and `finite'.listed` only, and `alike_iff_alikeTo` uses nothing beyond what it passes on.
+
+The smallest honest change alters two statements. I have not built it.
+```
+/-- **Likeness to depth stops refining where lists hold the configurations of both frames**: at
+some depth, configurations alike to it are alike to the next. -/
+theorem AlikeTo.steady (listed : ∃ l : List S, ∀ s, s ∈ l)
+    (listed' : ∃ l : List S', ∀ s', s' ∈ l') :
+    ∃ N, ∀ s s', AlikeTo F G N s s' → AlikeTo F G (N + 1) s s' :=
+  match listed, listed' with
+  | ⟨_, all⟩, ⟨_, all'⟩ =>
+    match AlikeTo.steady_within (F := F) (G := G) all all' with
+    | ⟨N, _, steady⟩ => ⟨N, steady⟩
+```
+```
+/-- **Where lists hold the configurations of both frames, configurations are alike exactly where
+they are alike to every depth.** -/
+theorem alike_iff_alikeTo (listed : ∃ l : List S, ∀ s, s ∈ l)
+    (listed' : ∃ l : List S', ∀ s', s' ∈ l') {s : S} {s' : S'} :
+    Alike F G s s' ↔ ∀ k, AlikeTo F G k s s' :=
+  ⟨fun alike k => alike.alikeTo k, fun alike =>
+    match AlikeTo.steady (F := F) (G := G) listed listed' with
+    | ⟨N, steady⟩ => ⟨AlikeTo F G N, AlikeTo.bisimulation steady, alike N⟩⟩
+```
+- At l. 1149 and l. 1159, the call becomes `AlikeTo.steady (F := F) (G := G) finite.listed finite'.listed`.
+- In the module docstring (ll. 60–63), move `alike_iff_alikeTo` out of "Under these hypotheses" into the new bullet.
+- The record `tests-fix-likeness-where-determined` must be re-told anyway, for `steady_within`, `alike_iff_alikeTo_pairs` and `stops_decreasing`. These two names are cited in the same laws 5 and 6, so re-telling them costs nothing more.
+- If this is not done, at least say in that record that `AlikeTo.steady` no longer uses `moves` or `claims`.
+
+**M6 (decision). `GuardHorizon.lean` ll. 325–327, `gather_moves`.** Choose one:
+- Minimal: replace its docstring with
+  ```
+  /-- If `(D a → G) → G` holds for every listed move a, and having D at every listed move
+  implies G, then G holds. `not_not_all` of `Becoming.Prelude` is this at `G = False`. -/
+  ```
+  and tell in the record that the commuting premise of `lost_shortens` rests on an induction over the list of moves, not of states.
+- Or move it to `PredicateIteration` beside `remove_mem`, with the same statement over any type. The caller is l. 340.
+
+**M7 (decision). Names.** The brief and the claim name `reach_within_count`, so the claim holder decides. None of these names is false; each says less than its statement, or collides in sense.
+
+| Line | Now | Proposed |
+|---|---|---|
+| `CommonResponse.lean` l. 212 (call at l. 228) | `reach_within_length` | `reach_within_pred_length` |
+| `ReachableRanges.lean` l. 532 (call l. 543, module l. 110) | `Reaching.reach_within_count` | `Reaching.trace_within_pred_length` (a distinct name, so it is not shadowed inside `Reaching`) |
+| `ReachableRanges.lean` l. 549 (module l. 112) | `Reaching.possible_iff_within_count` | `Reaching.possible_iff_within_of_pred_le` |
+| `ReachableRanges.lean` l. 511 (call l. 534, module l. 108) | `Reaching.rise_iff_trace` | `Reaching.iter_reach_iff_trace` |
+
+**LESSER**
+- **`CommonResponse.lean` ll. 13–15.** The draft drops "and changes no definition of an earlier module", which is still true. It also changes "the lumping law's encoding" to "lumping statement", although the module says "the lumping law" at ll. 63, 67, 82 and 298. Proposed:
+  ```
+  outcome. It adds five definitions: `«共应»`; for the lumping law's encoding, `«应际»` and
+  `«读应»`; and for closure at a finite depth, `regionStep` and `reachStep`. It changes no
+  definition of an earlier module.
+  ```
+  The table below that sentence still lists three definitions.
+- **`Lasting.lean` ll. 27–30.** The bullet leaves out which process the region step is for. Its heading mentions a list, but its first sentence has none. Proposed:
+  ```
+  * **Lasting as repeated steps.** Applying `regionStep` of the steps of `disturbed f adm` to the
+    guard n times gives exactly the starts that last n steps (`iter_region_iff_lasts`). If a list
+    holds every configuration within the guard, a start lasts for the list's length exactly when
+    it is in the kernel of `disturbed f adm` (`kernel_iff_lasts_length`).
+  ```
+- **`Tolerance.lean` ll. 20–22.** The new paragraph stands outside the bullets. Its place is the `KeepsInclusion` bullet (l. 32).
+- **`RisingIteration.lean` l. 7.** "rising" is never said. Add: "Where the start lies inside its first step, each iterate lies inside the next (`Iteration.iter_succ`): the iterates rise."
+- **`GuardHorizon.lean` l. 31.** "disjunctive loss" is undefined in the module docstring. Say "loss by `lostStep`".
+- **`Parting.lean` l. ~428, `continues_any`.** Its new docstring says "the list" and "state" where the module says configuration. Proposed: "If a list holds every configuration, from where a course as long as the list starts, courses of every length start."
+- **`PredicateIteration.lean` ll. 26–27, `remove_mem`.** "satisfies this condition" points forward to a condition not yet stated. Use either Refinement's old docstring or "If x is on a list, some list is one shorter and each member of the original equals x or is on it."
+- **`Likeness.lean` l. 1092, `iter_iff_alikeTo`.** "Iteration from agreement…" does not say what is iterated. Use "Applying `alikeStep` n times from agreement on claims gives likeness to depth n."
+- **`Likeness.lean` ll. 71–73.** "Likeness at that depth is a bisimulation (`AlikeTo.bisimulation`)" joins two theorems: `AlikeTo.bisimulation` needs likeness to persist at that depth. Say "Likeness to a depth at which it persists is a bisimulation (`AlikeTo.bisimulation`)."
+- **`Keeping.lean` ll. 365–367, `iter_iff_kept`.** Grammar. Use "Iterate n of `readingStep` from the guarded codes holds exactly the codes whose classes are kept for n steps."
+- **A `-/` alone on its line:** `CommonResponse` ll. 180–181, `Parting` ll. 416–417, `GuardHorizon` ll. 179–180. Rewrap.
+- **"iterate" is not pointed to `Iteration.iter`** in `CommonResponse` `held_iff_iter`, in `Viability`, or in `Keeping`'s first use.
+- **The iterate is defined twice.** `Iteration.iter` is `Law.orbit` (Recurrence l. 239) at the type of predicates: same recursion, and `Tolerance.iter_eq_orbit` proves them equal. The brief's "imports `Prelude` only" forces the second definition. `iter_eq_orbit` is a general fact placed in `Tolerance`.
+- **`stops_decreasing` now has no caller in the package.** It stays by the brief, and a record cites it.
+- **A sentence that will go stale.** The second sentence of `reach_within_count`'s docstring becomes false at the owed landing that drops `reach_within_listed`'s two premises. Change both in that landing.
+- **`GuardHorizon.lean` l. 226.** `loseStep {A : Type v}` re-binds the section's `A`. Harmless, as in the scratch.
+- **For the step after this one:**
+  - Records:
+    - `identification-where-runs-part` cites `Parting.continues_cycle`, now deleted, and its law 9 tells the old proof.
+    - `identification-where-bounded` points `remove_mem` to `Refinement.lean`.
+    - `tests-fix-likeness-where-determined` laws 5 and 6 (see M5).
+  - The checker's lists and the root: `PredicateIteration` is in the core closure through `CommonResponse`.
+  - Chapter `02-MAP.md` l. 93 tells `reach_within_listed`.
+
+## (3) D1 to D4, and question 3
+
+**D1 passes by the log.** Two caveats:
+- Build 23 compiled only the import closure of the 15 modules (85 modules). Packages modules that import a changed module from outside that closure were not compiled; the core run will compile them.
+- I scanned the 407 package modules and the draft. Each of the 109 new names is declared exactly once, and no module outside `Parting` uses `continues_cycle`. So I found nothing that would break them.
+
+**D2 passes.** I compared all added statements against the scratch text by a script, normalizing whitespace.
+- Every difference is a namespace qualification (`Viability.Kernel` against `Kernel`, `Branching.Reachable` against `Reachable`, `Reaching.Possible`, `Law.*`) or a section variable (`closed_viable`'s `P guard`, `kept_set`'s `tol ups`, `α` for `S`).
+- The exceptions are the two ordered statements, `AlikeTo.steady_within` and `alike_iff_alikeTo_pairs`.
+- No other package statement changed in the diffs. The `variable (P …)` / `variable {P}` lines in Parting's `section Continuing` leave `unbounded_of_continues` with an implicit `P`, as before.
+- The 13 diffs match the current package files, which have no uncommitted changes.
+
+**D3 passes.** Besides the insertions, the ordered changes, the import lines and the module docstrings, I found only:
+- the added `let _ := And.intro moves claims` in `AlikeTo.steady` (a caller the brief names);
+- a new docstring on `continues_any`, which is an insertion.
+
+My counts agree with the report's, except Parting: I count +33/−31 where the report says +34/−32.
+
+**D4 passes.**
+- I computed the import closures over the package with the draft overlaid: no cycle.
+- `ring_direction` checks only the direct imports of core modules. The new imports are `PredicateIteration`, `Decidedness` and `Onward`, all core. `GuardHorizon`, an application, keeps its imports, and nothing new imports it.
+- `Onward`'s closure of 60 modules does not contain `KeepableStep`.
+
+**Question 3: what each added or re-proved theorem rests on.**
+
+| Kind | Theorems |
+|---|---|
+| The law's own list induction | `extend_at_places`, `remove_mem` |
+| Another list induction | `GuardHorizon.gather_moves`, on the list of moves (M6) |
+| Bridges | `iter_iff_stages` itself; `iter_iff_continues`, `iter_iff_viable`, `iter_region_iff_lasts`, `iter_iff_kept`, `iter_iff_alikeTo`, `iter_iff_inquiry`, `iter_iff_reachable` (longer, with trace append and split), `rise_iff_trace`, `imp_iff_iter_gives`, `iter_shift`; `iter_eq_orbit` (its own two-case induction on n) |
+| Inductions on the number of steps, part of the law | `iter_pred`, `iter_within`, `postfixed_in_iter`, `iter_succ` |
+| Inductions on the number of steps, beside the law | `closure_of_reach`, `not_viable_of_loss`, `lost_not_viable` (each its own induction, not through `iter_iff_stages`) |
+
+Calls:
+- **`Parting.continues_persists`:** a call of `Iteration.iter_persists` through `iter_iff_continues`.
+- **`continues_any`:** a call of `Iteration.iter_iff_all`, the same way.
+- **`GuardHorizon.closed_viable`:** a call of `Iteration.postfixed_in_iter` through `iter_iff_viable`. That lemma is an induction on the number of steps and uses no list.
+- **`Tolerance.kept_set`:** the same, a call of `postfixed_in_iter` through `monotone_iff_keepsInclusion` and `iter_eq_orbit`. Its new proof is longer than the old two-line induction.
+- **`AlikeTo.steady_within`:** a call of `alike_at_pairs`, which calls `alike_at_cover`, which calls `iter_persists`.
+- **`alike_iff_alikeTo_pairs`:** a call of `alike_iff_at_cover`, which calls `alike_at_cover` and `AlikeTo.bisimulation`.
+- **List-length calls:**
+  - `held_iff_iter`, `keepable_iff_count` (→): call `iter_largest`.
+  - `viable_persists`: calls `iter_persists`.
+  - `inquiry_iff_all`, `reachable_iff_all`: call `iter_iff_all`.
+  - `reach_within_length`: calls `iter_within_pred_length`.
+  - `lost_shortens`: calls `iter_shortens`.
+  - `rise_not_not`: calls `iter_gives_persists`.
+- **`keepable_iff_count` (←):** a call of `Onward.KeepsMoving.run`. That rests on `returning_of_continues`, which uses `path_of_continues` and `revisits_within`: the pigeonhole cycle argument that Parting has just left.
+- **`commutes_false`:** uses Prelude's `not_not_all`.
+- **Other:**
+  - `guarded_not_keepsWidening`: a call of the older `Reaching.not_keepsWidening_of_listed`, using nothing of `Iteration`.
+  - The counterexamples (`singleton_rise_needs_em`, `lose_shortening_*`, `lost_shortening_distributes`, `lpo_of_distributes`): built directly.
+
+## (4) Docstrings not EXACT
+
+Everything not listed here I read as EXACT: every declaration docstring in both new modules apart from `remove_mem`'s, and every sentence added in CommonResponse, Viability, GuardHorizon, Attraction, GrammarCandidates, ReachableRanges and Tolerance.
+
+| Where | Mark | Correction |
+|---|---|---|
+| PredicateIteration module ¶1: "takes the start inside itself", "at each successor", "bounds the descent" | ambiguous direction | M1 |
+| PredicateIteration module ¶1, `remove_mem` sentence | SAYS LESS (the statement's disjunction) | M1 |
+| PredicateIteration module ¶2, "This module gives no unconditional shortening…" | a negative about the module, with no pointer | M1, last sentence |
+| `remove_mem` docstring | forward reference | LESSER |
+| Parting module, `continues_persists` sentence | WRONG (reads as the converse) | M2 |
+| Parting module, "These statements require no decision" | WRONG (`live_iff_continues` takes a `Decidable` instance) | M2 |
+| `continues_any` | "the list", "state" | LESSER |
+| Keeping module, "covers every guarded code" | "covers" used for two things | M3 |
+| Keeping module, "a closed family" | `InClosedFamily` not named | M3 |
+| `alike_at_cover`, `alike_iff_at_cover` | "pair count", "its count" | M4 |
+| Likeness module, "Likeness at that depth is a bisimulation" | a combination; leaves out persistence | LESSER |
+| `iter_iff_alikeTo` | does not say what is iterated | LESSER |
+| `AlikeTo.steady` (unchanged text) | SAYS LESS (no premises told) | M5 |
+| `alike_iff_alikeTo` (unchanged text) | tells premises its proof no longer uses | M5 |
+| Lasting bullet | SAYS LESS (the steps of `disturbed f adm`) | LESSER |
+| CommonResponse "five main definitions … lumping statement" | drops a true clause; "statement" against the module's "law" | LESSER |
+| KeepableStep "The run comes from `Onward.KeepsMoving.run`…" | SPEAKS OF THE PROOF (ordered by the brief) | keep |
+| GuardHorizon "disjunctive loss" | undefined at that point | LESSER |
+| RisingIteration title, "rising" | undefined | LESSER |
+| `iter_iff_kept` | grammar | LESSER |
+| `reach_within_count`, second sentence | EXACT now; false after the owed landing | change it then |
+
+## (5) Questions 5 to 8
+
+**Q5. Who uses the four premises, and who cites the names.**
+
+| Theorem | What it uses of `moves`, `claims`, `finite`, `finite'` |
+|---|---|
+| `AlikeTo.steady_within`, `alike_iff_alikeTo_pairs` | nothing: the premises are gone |
+| `AlikeTo.steady` | `finite.listed` and `finite'.listed` only; `moves`, `claims` and the decision fields are idle |
+| `alike_iff_alikeTo` | the same as `AlikeTo.steady`: it only passes them on, so no lint flags it |
+| `alike_iff_sameBranchingTests` | all four, through `SameBranchingTests.alikeTo`, `AlikeTo.decided` and `apart_of_not_alikeTo` |
+| `Alike.decided` | all four, through `AlikeTo.decided` |
+
+- `alike_iff_sameBranchingTests` is called at ll. ~2360 and ~2374 with concrete lists; those calls are unaffected.
+- I found no other Lean caller of `AlikeTo.steady`, `alike_iff_alikeTo`, `Alike.decided` or `alike_iff_alikeTo_pairs`.
+- **Cited by name:**
+  - the record `tests-fix-likeness-where-determined` (.md laws 5 and 6; .json declaration lists): `stops_decreasing`, `AlikeTo.steady_within`, `AlikeTo.steady`, `alike_iff_alikeTo`, `alike_iff_alikeTo_pairs`, `Alike.decided`, `alike_iff_sameBranchingTests`;
+  - the generated `lean-declarations/becoming-core-part-4.md`;
+  - `alike_iff_sameBranchingTests` also in `03-KNOWING.md` l. 163 and `Histories.lean` l. 44 (its statement is unchanged).
+- I found none of these names in atlas entries or READMEs.
+- The smallest honest change and the statements it would change are in M5.
+
+**Q6. The join sentence of `reach_within_count`: EXACT.**
+- `Branching.reach_within_listed` (Junctures l. 328) takes: `every`; `decides : ∀ x y, edge x y = true ↔ ∃ a, P.step x a y`, with `edge : S → S → Bool` an implicit section variable; `returns : Returns P s`; and `reach`.
+- It concludes `as.length ≤ all.length`.
+- The new theorem takes `every` and `len : all.length = n + 1`, and concludes `as.length ≤ n`. That is one fewer than the older bound, without either premise.
+
+**Q7. Imports.**
+- Added: `PredicateIteration` in CommonResponse, Refinement, Attraction, GrammarCandidates and Tolerance; `Onward` in KeepableStep.
+- The new modules: `PredicateIteration` imports Prelude; `RisingIteration` imports PredicateIteration and Decidedness.
+- D4 as in (3).
+
+**Q8. Names.**
+- No new name is taken anywhere in the package. No `Iteration` namespace or `iter` exists elsewhere.
+- Names that say less than their statement, or collide in sense: see M7.
+- "covers" in two senses: list cover in `alike_at_cover` against class cover in `coveredBy` (LESSER).
+- `iter_within` (every iterate lies in the start) against `iter_within_length` (any iterate implies the iterate at the length): "within" in two senses (LESSER).
+- `returns_iff_reachable_count`, `drawn_iff_not_reachable_count` and `keepable_iff_count` have their bound equal to the count: honest.
+
+## (6) What I did not read
+
+- Of the 13 existing modules I read the diffs whole, plus the regions around each insertion. I did not read the rest of each file (for example all of Likeness).
+- Not read:
+  - `cx-output.txt`, `PROMPT.txt`, and the frozen brief's hash;
+  - `check_becoming.py` beyond its ring lists and `ring_direction`;
+  - `scratch_build.py` beyond its header;
+  - `Becoming.lean` and the READMEs, which the draft does not change.
+- Records, chapters and atlas entries I searched by name only.
+- The replacement code in M5 is not built.

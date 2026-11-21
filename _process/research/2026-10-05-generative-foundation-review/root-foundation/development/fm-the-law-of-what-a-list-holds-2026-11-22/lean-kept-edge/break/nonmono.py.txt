@@ -1,0 +1,46 @@
+# AI-written (Claude Fable 5.2), a reader's program.
+# (e) Drop monotonicity, keep `start` (step(V0) inside V0): does iter n inside iter (n+1) fail?
+# Every map from subsets to subsets for 1 and 2 points; a random sample of 400,000 on 3 points.
+# Also: with the start premise kept and monotonicity required only between the chain's own
+# neighbouring levels (what the proof uses), no check is made here; see the reading.
+import itertools, random, time
+
+def sub(a, b): return a & ~b == 0
+def show(mask, n): return "{" + ",".join(str(i) for i in range(n) if mask >> i & 1) + "}"
+def is_monotone(F, n):
+    m = 1 << n
+    return all(sub(F[x], F[y]) for x in range(m) for y in range(m) if sub(x, y))
+
+def run(n, maps, label):
+    m = 1 << n
+    tot = fall = fail = nonmono = fail_any = 0
+    first = None
+    for F in maps:
+        mono = is_monotone(F, n)
+        for V0 in range(m):
+            if not sub(F[V0], V0): continue
+            fall += 1
+            if not mono: nonmono += 1
+            ch = [V0]
+            for _ in range(2 * n + 3): ch.append(F[ch[-1]])
+            bad = not sub(ch[n], ch[n + 1])
+            if bad:
+                assert not mono
+                fail += 1
+                w = sum(bin(x).count("1") for x in F)
+                if first is None or w < first[0]: first = (w, F, V0, ch[:n + 2])
+            if any(not sub(ch[N], ch[N + 1]) for N in range(n, 2 * n + 2)): fail_any += 1
+        tot += 1
+    print(f"== {label}: |S|={n}, maps {tot}; (map, start) with step(V0) inside V0: {fall}, of them not monotone: {nonmono}")
+    print(f"   law fails at N=n: {fail}; at some N in n..2n+1: {fail_any}")
+    if first:
+        w, F, V0, ch = first
+        print("   a failing instance with fewest pairs: step [" + "; ".join(f"{show(x,n)}->{show(F[x],n)}" for x in range(m)) + f"], V0={show(V0,n)}, chain {[show(x,n) for x in ch]}")
+
+if __name__ == "__main__":
+    t = time.time(); random.seed(20261122)
+    for n in (1, 2):
+        m = 1 << n
+        run(n, (list(F) for F in itertools.product(range(m), repeat=m)), "every map")
+    run(3, ([random.randrange(8) for _ in range(8)] for _ in range(400000)), "random maps")
+    print(f"seconds {time.time()-t:.1f}")

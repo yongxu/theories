@@ -1,0 +1,96 @@
+# Brief: one scratch Lean module, more old results as cases of the edge law, and the losing side worded by a disjunction
+
+*AI-written (Claude Fable, board row FM), 22 November 2026, frozen before the implementer ran (hash in `FROZEN-LEAN-EDGE-CASES.sha256.txt`). Scratch only: outside the package, in no git object. You are the implementer. A clean failure, told with what blocked it, is a result.*
+
+## What we are doing
+
+`/Users/ren/theories` draws a map of how anything forms, persists, changes and ends, with its core proved in Lean 4 with **no axioms** (every declaration has an empty axiom report). Read `AGENTS.md` at the repository root (one page). Its fourth rule: each thing said once, and joined; prefer the proof that makes an old result a case of another. A join counts when an OLD result becomes a case, most of all when it comes out with fewer premises than it had.
+
+The package is `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/`. An hour ago a scratch module, `/Users/ren/tmp/fm/build6/Becoming/ScratchEdgeLaw.lean` (**read it whole first**; 547 lines, built clean, no axiom; you built it, in another session), said one law: for a monotone step `Φ` on predicates that takes its start `V₀` into itself, where a list holds every member of the start, `iter Φ V₀ all.length y → iter Φ V₀ (all.length + 1) y` (`iter_persists`), with `iter_iff_all` and `iter_largest`. Six kinds of keeping are its cases. Its Section G has, for the rising chain, `reach_rise_shortens` (reach of a target along a relation comes down to the list's length from `every` alone), `rise_of_stable`, `not_iter_of_not_succ`, and two theorems that the losing side of a choice, worded with an implication from `Enabled`, comes down to the bound only if propositions are decided.
+
+A read-only sweep of all 407 modules then found that the law is not in the package, and named older results that look like further cases. The sweep's report is `/Users/ren/theories/tmp/fm/whole/lean-edge-law/sweep/REPORT.md` (**read its Section 3, "Task 2 — candidates, ranked"**: it gives for each candidate the step, the start and the bridge it expects; none was compiled). This build tries the best of them, and one new question.
+
+## The module
+
+Write `/Users/ren/tmp/fm/build6/Becoming/ScratchEdgeCases.lean`, module `Becoming.ScratchEdgeCases`, importing `Becoming.ScratchEdgeLaw` (a copy is in that tree; **do not edit it**) and whatever modules of the package each part needs.
+
+**Build only with** `/Users/ren/tmp/fm/run-build6.sh <n>` (n = 1, 2, 3, …). It waits until no other Lean run is alive on this shared machine, builds your module through the checker's scratch builder, audits the axioms of every declaration, and prints the end of the log. Clean means `exit 0`, `"unclean": []` and `"with_axioms": {}`. Run nothing else of Lean: no `lake`, no `check_becoming.py` (never with `--help`: it is a real run), no gate, no tests. Up to about 60 builds. Save the module after each clean build as `/Users/ren/tmp/fm/build6/ScratchEdgeCases.clean-<n>.lean.txt`.
+
+**Proofs as terms**, in the package's style; a plain docstring of one or two sentences on every declaration, saying exactly what is proved with its premises. Head each part with a comment `-- home: <Module>` naming the package module its text would be moved into.
+
+Work the parts **in this order**, each built clean before the next. If a part does not come out in about ten builds, write down exactly what blocks it and go on.
+
+### Part H. The losing side of a choice, worded by a disjunction (new; home to be said)
+
+`ScratchEdgeLaw.loseStep P guard X s := ¬ guard s ∨ ∀ a, Enabled P s a → ∃ t, P.step s a t ∧ X t`. The two theorems about it put the undecided proposition into `Enabled`. A reader observed that with a disjunction in place of the implication,
+
+```lean
+def lostStep (P : Process S A) (guard X : S → Prop) (s : S) : Prop :=
+  ¬ guard s ∨ ∀ a, ¬ Enabled P s a ∨ ∃ t, P.step s a t ∧ X t
+```
+
+(each move cannot be taken, or has an outcome that loses sooner), the three-configuration process of `lose_edge_decides` no longer gives a decision: both levels become `¬ q ∨ q`. So:
+
+1. `lostStep` is monotone, takes its start `fun s => ¬ guard s` into itself in the rising sense, and implies `loseStep`; where `Enabled` is decided (`∀ s a, Enabled P s a ∨ ¬ Enabled P s a`) they agree. A level of `lostStep` refutes the same level of `Viable` (`rise (lostStep P guard) (fun s => ¬ guard s) n s → ¬ Viable P guard n s`; mind `Viable`'s universes and check the levels are not off by one: a configuration with no enabled move fails `Viable … 1`).
+2. **The question.** With every configuration listed and **every move listed** (`moves : List A`, `everyMove : ∀ a, a ∈ moves`):
+   `rise (lostStep P guard) (fun s => ¬ guard s) (all.length + 1) y → rise (lostStep P guard) (fun s => ¬ guard s) all.length y`.
+   On paper I expect it to hold with nothing decided, by the argument of `reach_shorten_at_places` (the conclusion as a parameter `G`; a later arrival at a spent place finishes at once), with one difference: the level at `y` is a statement of every move, so its proof needs a shorter witness for every move together, which with the conclusion as a parameter is one continuation inside another, move after move down the list of moves. Try it honestly. If it holds, prove it. If it does not go through, say exactly where.
+3. **Without a list of the moves.** Either prove the same from `every` alone, or derive from that edge, for a family of propositions over the moves, a principle the core cannot prove (I expect something of the shape: from `∀ n, p n ∨ q` to `(∀ n, p n) ∨ q`, with moves `Nat`). Either answer is a result; if neither comes in about eight builds, say what you tried.
+
+### Part J. Reach within the count, with two premises fewer (home: `Junctures`)
+
+`Branching.reach_within_listed` (Junctures.lean l. 328) says, with `every`, `decides : ∀ x y, edge x y = true ↔ ∃ a, P.step x a y` and `returns : Returns P s`: `Reach P y s → ∃ as, as.length ≤ all.length ∧ Trace P y as s`. Prove it **from `every` alone**, for every process and every `s`, through `reach_rise_shortens` at `R := Steps P`:
+
+1. the bridge, once, for an arbitrary target `B`: `rise (reachStep (Steps P) B) B k y ↔ ∃ t as, as.length ≤ k ∧ Trace P y as t ∧ B t`;
+2. that a level at any `k` comes down to `all.length` (not only from `all.length + 1`);
+3. the statement of `reach_within_listed` with `decides` and `returns` dropped; and the old theorem with its statement **unchanged** as a one-line call of it (state it under another name and compare by `rfl` against `@Branching.reach_within_listed` only if the universes and implicit arguments allow; otherwise say why not);
+4. if two or three lines: `Reaching.Possible P adm y x ↔ Reaching.PossibleWithin P adm all.length y x` (ReachableRanges.lean l. 289 to 296) from `every`.
+
+### Part I. Likeness to depth, with four premises fewer (home: `Likeness`)
+
+`AlikeTo.steady_within` (Likeness.lean l. 1073) needs lists of moves and of claims and `FiniteDecided` of both frames, and gives a depth **somewhere** below the number of pairs. As a case of the law on `S × S'` (start: the same claims; step: both matching clauses of `AlikeTo`, l. 882; the list `pairsOf l l'` with `mem_pairsOf` l. 467 and `length_pairsOf` l. 479):
+
+1. from the two lists of configurations **alone**: `AlikeTo F G (l'.length * l.length) s s' → AlikeTo F G (l'.length * l.length + 1) s s'` (the depth is the number of pairs itself);
+2. the old theorem with its statement unchanged as a call of 1 (its four extra premises unused);
+3. `alike_iff_alikeTo_pairs` (l. 1134) with `moves`, `claims`, `finite`, `finite'` dropped, by `AlikeTo.bisimulation` (l. 1095) or as the sweep suggests.
+
+Can the list be weakened to hold only the pairs that realize the same claims (the start)? Say; do it if it is free.
+
+### Part L. Being had at every step (homes: `Recurrence`, `Attraction`)
+
+`Branching.Reachable P n s` (Recurrence.lean l. 118) is a trace of exactly `n` moves ending at `s`. With `every`: `Reachable P all.length s ↔ ∀ n, Reachable P n s`, for every process (step: some predecessor in `X`; start: everything). Then for a law `next`, from `Law.returns_iff_always_reachable` and `Law.drawn_iff_lost` (Attraction.lean l. 309, l. 316): `Returns next s ↔ Reachable next all.length s` (if `Law.returns_of_reachable`, Recurrence l. 622, already is one direction, say so and state the iff in a line) and `Drawn next s ↔ ¬ Reachable next all.length s`.
+
+### Part K. The grammar's stages of telling apart (home: `GrammarCandidates`)
+
+`«诘» R E` (GrammarCandidates.lean l. 522) is the same recursion as `AlikeTo` with no labels. With a list of pairs holding every pair that `E` relates: `«诘» R E all.length x y ↔ ∀ k, «诘» R E k x y`. Then, with `E` symmetric, the core criterion **without the premise `«有常»`**: `«核» R E x y ↔ «诘» R E all.length x y` (see `«每层不分而有常则核当且仅当每层不分»` l. 596, `«层即诘»` l. 567, `«核则不可致诘»` l. 539, `«诘之对称»` l. 544). If the constancy needed for `«核»` does not follow from the post-fixed clause of `iter_largest`, say exactly what is missing.
+
+### Part M. Keepable, if short (home: `KeepableStep`)
+
+`Viability.Keepable P g s` (JointKeeping.lean l. 91) and `keepable_step_iff` (KeepableStep.lean l. 50). With `every`: `Keepable P g s ↔ iter Φ g all.length s` for `Φ X s := g s ∧ ∃ a t, P.step s a t ∧ X t`, using `Onward.KeepsMoving.run` (Onward.lean l. 231) for the run. Only if it comes in a few builds.
+
+## What counts as nothing gained (frozen)
+
+- **M1.** A part carries its own induction on the places of a list, under any name, where a call of `iter_persists`, `iter_iff_all`, `iter_largest` or `reach_rise_shortens` was to do it. (Part H item 2 is exempt: it is a new induction, and whether it is one is the question.)
+- **M2.** In Part J the premises `decides` or `returns` are still needed; in Part I any of `moves`, `claims`, `finite`, `finite'`; in Part K `«有常»`. A part that only re-proves the old statement from the old premises through the law is a re-packing: say so.
+- **M3.** An old theorem's statement had to be changed for it to follow.
+- **M4.** Any declaration with an axiom.
+- **M5.** Part H comes out neither way in both items 2 and 3.
+- **M6.** A bridge (the lemma that identifies `iter` of the named step with the package's predicate) is longer than the old proof it would let the package drop. Count both for each part.
+
+## Traps
+
+- A core lemma can bring in `propext` (`Nat.succ_ne_zero` did; `nomatch` on an equation between numbers did, on 22 November, in five declarations: use `Nat.noConfusion`, or a succ-is-not-zero lemma of `Prelude`). `simp`, `omega` and `decide` on propositions with free variables often bring axioms.
+- `GuardHorizon.Viable` lives at `Type` for states and moves; most else is universe-polymorphic.
+- `Refinement.remove_mem` (Refinement.lean l. 63) is `ScratchEdgeLaw.remove_place` with one equation turned; use either.
+- The package's names are partly Chinese with guillemets: copy them from the source.
+- Write only under `/Users/ren/tmp/fm/build6/` and `/Users/ren/theories/tmp/fm/whole/lean-edge-cases/` (your report). Change nothing in the repository or in git. Start no further agents.
+
+## What to return
+
+Your whole report as your final answer, also saved as `/Users/ren/theories/tmp/fm/whole/lean-edge-cases/REPORT.md`:
+
+1. **In six lines**: what built clean, what did not, and your own verdict on M1 to M6.
+2. **Each part**: every theorem's statement as it stands in the module, whether it built clean, what it calls; the premises of the old theorem against the premises of the new; the lines of the bridge against the lines of the old proof.
+3. **Part H**: proved, or exactly what blocks it; and the answer for moves not listed.
+4. **What blocked** anything that did not come out.
+5. **The last build's log** (its JSON), the number of builds, and **what you did not do**.

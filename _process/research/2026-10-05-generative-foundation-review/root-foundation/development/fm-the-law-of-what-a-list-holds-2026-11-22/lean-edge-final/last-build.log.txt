@@ -1,0 +1,29 @@
+start 03:19:13
+{
+  "tree": "/Users/ren/tmp/fm/build9",
+  "modules": 89,
+  "ran": [
+    "Becoming.ScratchEdgeCases",
+    "BecomingScratchEdgeCasesAxiomAudit"
+  ],
+  "reused": 89,
+  "unclean": [],
+  "audits": {
+    "Becoming.ScratchEdgeLaw": {
+      "theorems": 68,
+      "declarations": 82,
+      "with_axioms": {}
+    },
+    "Becoming.ScratchEdgeCases": {
+      "theorems": 30,
+      "declarations": 34,
+      "with_axioms": {}
+    }
+  },
+  "seconds": {
+    "Becoming.ScratchEdgeCases": 0.588,
+    "BecomingScratchEdgeCasesAxiomAudit": 0.344
+  }
+}
+exit 0 build 11
+end 03:19:17

@@ -1,0 +1,30 @@
+# AI-written (Claude Fable 5.2), a reader's program: is the statement of coded_kept_iff_closed in
+# ScratchKeptEdge letter for letter the one in ScratchViableEdge? (binders in scope and statement)
+import re, itertools
+new = open('../ScratchKeptEdge.lean.txt').read().split('\n')
+old = open('../../lean-edge/ScratchViableEdge.lean.txt').read().split('\n')
+def norm(lines): return re.sub(r'\s+', ' ', ' '.join(lines)).strip()
+# line numbers are 1-based in the files
+o_vars = norm(old[127:130]); n_vars = norm(new[171:174])
+o_prem = norm(old[154:157]); n_prem = norm(new[194:197])
+o_stmt = norm(old[160:163]); n_stmt = norm(new[212:215])
+for name, a, b in (("section binders", o_vars, n_vars), ("all, every, updates", o_prem, n_prem), ("statement", o_stmt, n_stmt)):
+    print(name, "| same:", a == b)
+    if a != b: print("  old:", a); print("  new:", b)
+print("old include line:", old[158].strip(), "| new include line:", new[211].strip())
+print("old statement:", o_stmt)
+# the Heyting check of the FALLING law on one point (it is proved in Lean; a check of the model)
+from weaker import opens
+for name, points, below in (("line", ["now", "later"], {"now": {"now", "later"}, "later": {"later"}}),
+                            ("fork", ["now", "l", "r"], {"now": {"now", "l", "r"}, "l": {"l"}, "r": {"r"}})):
+    H = opens(points, below)
+    imp = lambda a, b: frozenset(x for x in points if all((y not in a) or (y in b) for y in below[x]))
+    starts = fails = 0
+    for vals in itertools.product(H, repeat=len(H)):
+        F = dict(zip(H, vals))
+        if not all(imp(X, Y) <= imp(F[X], F[Y]) for X in H for Y in H): continue
+        for V0 in H:
+            if F[V0] <= V0:
+                starts += 1
+                if not F[V0] <= F[F[V0]]: fails += 1
+    print(f"falling law on one point in the undecided model '{name}': falling starts {starts}, failures {fails}")

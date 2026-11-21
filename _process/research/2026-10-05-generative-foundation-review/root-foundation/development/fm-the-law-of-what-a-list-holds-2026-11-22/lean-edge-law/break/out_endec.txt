@@ -1,0 +1,5 @@
+[lose, enabledness decided] line of two: 3 configurations, 1 move, guard true: instances 8000; level 4 -> level 3 fails in 0
+[lose, enabledness decided] fork: 3 configurations, 1 move, guard true: instances 238328; level 4 -> level 3 fails in 0
+[lose, enabledness decided] line of three: 3 configurations, 1 move, guard true: instances 54872; level 4 -> level 3 fails in 0
+seconds 10.9
+python3 endec.py  9.82s user 0.15s system 90% cpu 10.972 total

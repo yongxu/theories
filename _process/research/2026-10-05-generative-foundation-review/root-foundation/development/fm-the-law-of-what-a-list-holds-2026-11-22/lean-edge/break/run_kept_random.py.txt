@@ -1,0 +1,81 @@
+# AI-written (Claude Fable), 22 November 2026. Check (d) by the literal definitions on random processes
+# of 4 to 6 configurations with up to 3 moves, random guards, random `allowed`, several readings.
+# Two code sets: all 2^N classes; and, for each start class, the least set closed under the updates
+# (the smallest list the premise `updates` of coded_kept_iff_closed admits for that start).
+import random, json, time, sys
+from literal import *
+
+def instance(rng):
+    N = rng.choice([4, 4, 5, 5, 6]); A = rng.choice([1, 2, 3])
+    states = list(range(N)); moves = list(range(A))
+    d = rng.choice([0.15, 0.25, 0.4, 0.6])
+    step = {(s, a, t) for s in states for a in moves for t in states if rng.random() < d}
+    if rng.random() < 0.5:   # every move has an outcome everywhere, so only the guard and the reading matter
+        for s in states:
+            for a in moves:
+                if not any((s, a, t) in step for t in states):
+                    step.add((s, a, rng.choice(states)))
+    P = Process(states, moves, step)
+    kind = rng.choice(['nothing', 'ended', 'started', 'table2', 'table3', 'table2+unused'])
+    if kind == 'nothing': O = [0]; f = lambda s, a, t: 0
+    elif kind == 'ended': O = states; f = lambda s, a, t: t
+    elif kind == 'started': O = states; f = lambda s, a, t: s
+    else:
+        k = 3 if kind == 'table3' else 2
+        tab = {(s, a, t): rng.randrange(k) for s in states for a in moves for t in states}
+        O = list(range(k)) + ([99] if kind.endswith('unused') else []); f = lambda s, a, t: tab[s, a, t]
+    sense = {(s, a, t): f(s, a, t) for s in states for a in moves for t in states}
+    pg = rng.choice([0.6, 0.85, 1.0]); guard = {s for s in states if rng.random() < pg}
+    pa = rng.choice([1.0, 1.0, 0.85]); allowed = {(s, a): rng.random() < pa for s in states for a in moves}
+    return P, sense, O, guard, allowed, kind
+
+def main(seed, budget):
+    rng = random.Random(seed); t0 = time.time()
+    T = dict(instances=0, classes=0, kept_at_codes=0, kept_nontrivial=0, fail_closed=0, fail_longer=0,
+             closure_cases=0, closure_fail=0, closure_bound_met_exactly=0, fails=[], by_N={}, by_kind={})
+    most = {}     # N -> (least steps that suffice, kind)
+    while time.time() - t0 < budget:
+        P, sense, O, guard, allowed, kind = instance(rng)
+        N = len(P.states); C = 1 << N
+        k = kept_fn(P, sense, O, guard, allowed)
+        gfp = largest_closed_family_gfp(P, sense, O, guard, allowed)
+        if not family_closed(P, sense, O, guard, allowed, gfp):
+            T['fails'].append('gfp not closed')
+        cls = all_classes(P.states)
+        longer = [C + 1, C + 2] + ([2 * C] if N <= 5 else [])
+        worst = 0
+        for B in cls:
+            T['classes'] += 1
+            kc = k(C, B)
+            T['kept_at_codes'] += kc; T['kept_nontrivial'] += (kc and len(B) >= 2)
+            if kc != (B in gfp):
+                T['fail_closed'] += 1
+                T['fails'].append(('closed', sorted(P.step), sorted(guard), kind, sorted(B)))
+            if any(k(n, B) != kc for n in longer):
+                T['fail_longer'] += 1
+            # first horizon at which B fails, if it does
+            f = None
+            if not kc:
+                f = 0
+                while k(f, B):
+                    f += 1
+                worst = max(worst, f)
+            codes = update_closure(P, sense, O, allowed, B)
+            n = len(codes)
+            T['closure_cases'] += 1
+            if k(n, B) != (B in gfp):
+                T['closure_fail'] += 1
+                T['fails'].append(('closure', sorted(P.step), sorted(guard), kind, sorted(B), n))
+            if f is not None and f == n:
+                T['closure_bound_met_exactly'] += 1
+        T['instances'] += 1
+        T['by_N'][N] = T['by_N'].get(N, 0) + 1; T['by_kind'][kind] = T['by_kind'].get(kind, 0) + 1
+        if worst > most.get(N, (0,))[0]:
+            most[N] = (worst, kind, len(P.moves))
+    T['least_steps_that_suffice_max_found'] = {N: dict(steps=v[0], reading=v[1], moves=v[2], codes=1 << N)
+                                               for N, v in sorted(most.items())}
+    T['seconds'] = round(time.time() - t0, 1)
+    print(json.dumps(T))
+
+if __name__ == '__main__':
+    main(int(sys.argv[1]), float(sys.argv[2]))

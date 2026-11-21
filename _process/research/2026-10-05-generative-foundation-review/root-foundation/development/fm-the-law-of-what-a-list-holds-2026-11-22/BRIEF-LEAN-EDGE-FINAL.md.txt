@@ -1,0 +1,38 @@
+# Brief: the two scratch modules brought to the form that lands
+
+*AI-written (Claude Fable, board row FM), 22 November 2026, frozen before the implementer ran (hash in `FROZEN-LEAN-EDGE-FINAL.sha256.txt`). Scratch only. You wrote `ScratchEdgeCases.lean` (tree `build6`) on the first form of the law. The law's module has since been repaired twice, in another session of yours, and stands at `/Users/ren/tmp/fm/build8/Becoming/ScratchEdgeLaw.lean` (707 lines, built clean, no axiom; **read it whole first**, and its report `/Users/ren/theories/tmp/fm/whole/lean-edge-law-repair-2/REPORT.md`). This pass brings both modules to the form whose text is moved into the package. A clean failure, told with what blocked it, is a result.*
+
+## Where
+
+New tree `/Users/ren/tmp/fm/build9/Becoming/`: copy `ScratchEdgeLaw.lean` from `build8` and `ScratchEdgeCases.lean` from `build6` into it, and change both there. **Build only with** `/Users/ren/tmp/fm/run-build9.sh <n>` (it builds `Becoming.ScratchEdgeCases`, which imports the law's module, and audits both); clean means `exit 0`, `"unclean": []`, `"with_axioms": {}` for both modules. Nothing else of Lean. Save after each clean build `/Users/ren/tmp/fm/build9/ScratchEdgeLaw.clean-<n>.lean.txt` and `ScratchEdgeCases.clean-<n>.lean.txt`. Write only under `/Users/ren/tmp/fm/build9/` and `/Users/ren/theories/tmp/fm/whole/lean-edge-final/` (your report). Do not touch `build5` to `build8`. Proofs as terms. Every docstring says exactly its statement with its premises in plain words, never how the proof goes, never "edge" or "law"; no declaration or premise is named with "edge". Each section keeps its `-- home:` comment. The cases module may import the law's scratch module and nothing else of scratch.
+
+## In the law's module (`ScratchEdgeLaw.lean`)
+
+**F1. The bridge, said once.** Move `iter_iff_stages` (in `ScratchEdgeCases`, section `Matching`) into the falling section of the law's module. Then every lemma that identifies an iterate with a notion of the package and whose two clauses are definitional or one line is **a call of it**: `iter_iff_continues`, `iter_iff_viable`, and whichever of `iter_region_iff_lasts`, `iter_iff_kept`, `imp_iff_iter_gives` come out shorter that way (do not force one that gets longer; say which you left and why).
+
+**F2. The list lemma lives with the falling section.** Its `-- home:` becomes the new module of the falling section, not `Prelude` (moving it into `Prelude` would rebuild every module of the package; `Refinement` will import the new module instead). Only the comment changes.
+
+**F3. Docstrings of the new section.** `givesStep`, `CommutesWithImplication`, `imp_iff_iter_gives`, `iter_gives_persists`, `iter_shortens`, `iter_within_length`, `iter_within_pred_length` are hard to read. Rewrite each so that a reader who has not seen the proof can say what is assumed and what is concluded: name the three premises the same way each time (the step is monotone; the start lies inside its own step; the step commutes with G, saying once in `CommutesWithImplication`'s docstring what that is), and say "iterate n from W₀" for the levels.
+
+## In the cases module (`ScratchEdgeCases.lean`)
+
+**C1. Part H goes** (it is in the law's module now). Delete the whole `Loss` section.
+
+**C2. Part J through the law as it now stands.** The law's module has `reach_within_length` (from any height down to `n` where `all.length = n + 1`) and `closure_iff_reach_within` (the grammar's closure meets the target exactly when the target is reached within `n` steps). So: delete `reach_at_count` (an induction on the height that the law now does). Get `reach_within_count` with the sharper bound, a trace of at most `n` moves where `all.length = n + 1`, by the shortest honest route: through `rise_iff_trace` and `reach_within_length`, or through `closure_iff_reach_within` if the package already identifies `Reach P` with the closure of `Steps P` (look: `Viability.kernel_iff_held` uses such a fact; GrammarLaws and Labelled have bridges between traces and `«迭内»`). Keep the old statement of `Branching.reach_within_listed` as a one-line `_case` with its `rfl` comparison (its bound `all.length` follows from `n`), and `possible_iff_within_count` (state it at `n` too if that is one line).
+
+**C3. Parts I, L, K, M re-pointed**: same statements, their bridges by the law's `iter_iff_stages`, everything else as it is. In I, L, K, M check each `within`/`every` premise against the law's weaker cover and say where a list of the start alone would do (I already has it for the pairs that agree on claims).
+
+**C4. Two more that the readers named, each only if it is a few lines** (say what blocked it otherwise):
+- **W, widening** (home: `ReachableRanges`). `Reaching.not_keepsWidening_of_listed` (ReachableRanges.lean l. 693) asks a list of what is possible from the run's start. A reader argues that with `X := S` and `adm t x := x = t ∧ guard t` its premise follows from `within : ∀ x, guard x → x ∈ all` alone, for every run: so where a list holds every configuration within the guard, along no run does the part of the guard reached within `k` steps keep widening. State and prove exactly that, as a call of the package's theorem.
+- **T, the vocabulary already in the package** (home: `Tolerance`). `Tolerance.KeepsInclusion` (Tolerance.lean l. 220) is `MonotoneStep` with explicit arguments: state the equivalence in one line. `Law.orbit` (Recurrence.lean l. 240) at a step on predicates has the equations of `iter`: state `iter Φ V₀ n = Law.orbit Φ V₀ n` if it is `rfl` or a two-line induction with no axiom (no function extensionality: if it needs it, state it pointwise as an iff, or leave it and say so). Then `Tolerance.kept_set` (l. 355) as a call of `postfixed_in_iter`, with its statement unchanged and an `rfl` comparison.
+
+## What counts as nothing gained (frozen)
+
+- **Q1.** Any statement of `build8`'s law module or of `build6`'s Parts J, I, L, K, M no longer follows in one line (deleted helper lemmas aside).
+- **Q2.** A new induction on a list of states anywhere; or an induction on the number of steps where `iter_iff_stages` or `iter_iff_all` was to do it (bridges whose clauses are not short aside: name them).
+- **Q3.** Any declaration with an axiom in either module.
+- **Q4.** The two modules together are longer than before this pass (count `build8`'s law plus `build6`'s cases without Part H, against the two after; W and T counted apart).
+
+## What to return
+
+Your whole report as your final answer, also saved as `/Users/ren/theories/tmp/fm/whole/lean-edge-final/REPORT.md`: (1) in five lines what built clean and what did not, Q1 to Q4; (2) F1 to F3 and C1 to C4, each: done or what blocked it, with the statements that changed; (3) both modules' sections with homes and line counts, and for each home what it must import; (4) the last build's log (its JSON), the number of builds, what you did not do.

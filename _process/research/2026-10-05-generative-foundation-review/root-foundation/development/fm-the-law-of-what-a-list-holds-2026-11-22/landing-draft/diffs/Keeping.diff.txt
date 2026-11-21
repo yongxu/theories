@@ -1,0 +1,89 @@
+--- /Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Keeping.lean	2026-11-01 18:42:54
++++ /Users/ren/tmp/fm/build10/Becoming/Keeping.lean	2026-11-22 03:30:12
+@@ -40,6 +40,10 @@
+   horizon (`keptFor_of_closed`). A certificate of `Viability` with a move allowed and enabled
+   throughout it is such a family: every class within it is kept for every horizon
+   (`Certificate.keptFor`), the invariance kernel among them (`Kernel.keptFor`).
++  Suppose each class seen after a usable move from a guarded coded class has an exact code.
++  Applying `readingStep` n times from the guarded codes gives exactly the codes whose classes
++  are kept for n steps (`iter_iff_kept`). If a list also covers every guarded code, a code's class
++  is kept for the list length exactly when it belongs to a closed family (`coded_kept_iff_closed`).
+ * **What a step keeps matters.** In `Matching`, a hidden bit must be matched by the second
+   move. Where the step keeps the bit, the starts are kept for two steps; where it keeps nothing,
+   they are not (`Matching.keeping_matters`).
+@@ -316,7 +320,75 @@
+   | n + 1, B, held => match closed B held with
+     | ⟨a, usable, next⟩ =>
+       ⟨within B held, a, usable, fun o => keptFor_of_closed family within closed n (next o)⟩
++
++section Readings
++
++open Iteration
++
++variable {C : Type z} {decode : C → S → Prop}
++
++/-- Some family of guarded classes contains this class, and each member has a usable move
++after which the class seen at every observation belongs to the family. -/
++def InClosedFamily (P : Process S A) (sense : S → A → S → O) (guard : S → Prop)
++    (allowed : S → A → Prop) (B : S → Prop) : Prop :=
++  ∃ F : (S → Prop) → Prop, F B ∧ (∀ D, F D → ∀ s, D s → guard s) ∧
++    ∀ D, F D → ∃ a, Usable P allowed D a ∧ ∀ o, F (Seen P sense D a o)
++
++/-- A class lies inside the class named by some code in the given set. -/
++def coveredBy (decode : C → S → Prop) (X : C → Prop) (B : S → Prop) : Prop :=
++  ∃ d, X d ∧ ∀ s, B s → decode d s
++
++/-- Every state named by the code satisfies the guard. -/
++abbrev codeGuard (decode : C → S → Prop) (guard : S → Prop) (c : C) := ∀ s, decode c s → guard s
++
++local notation "safe" => codeGuard decode guard
++
++/-- The coded class is guarded and has a usable move such that each observed successor
++class lies inside a class named by a code in the given set. -/
++def readingStep (P : Process S A) (sense : S → A → S → O) (guard : S → Prop)
++    (allowed : S → A → Prop) (decode : C → S → Prop) (X : C → Prop) (c : C) : Prop :=
++  codeGuard decode guard c ∧ ∃ a, Usable P allowed (decode c) a ∧
++    ∀ o, coveredBy decode X (Seen P sense (decode c) a o)
++
++local notation "Φ" => readingStep P sense guard allowed decode
++
++/-- The reading step is monotone in the set of codes allowed to cover successor classes. -/
++theorem reading_mono : MonotoneStep Φ :=
++  fun sub _ ⟨h, a, usable, next⟩ => ⟨h, a, usable, fun o =>
++    match next o with | ⟨d, hd, covers⟩ => ⟨d, sub d hd, covers⟩⟩
+ 
++variable {all : List C} (within : ∀ c, (∀ s, decode c s → guard s) → c ∈ all)
++  (updates : ∀ c, (∀ s, decode c s → guard s) → ∀ a, Usable P allowed (decode c) a → ∀ o,
++    ∃ d, ∀ s, decode d s ↔ Seen P sense (decode c) a o s)
++
++include updates in
++/-- Suppose each observation after a usable move from a guarded code's class has a code naming
++exactly the class seen. In iterate n of the reading step from the guarded codes are exactly the
++codes whose classes are kept for n steps. -/
++theorem iter_iff_kept : ∀ n c, iter Φ safe n c ↔ KeptFor P sense guard allowed n (decode c) :=
++  iter_iff_stages (stage := fun n c => KeptFor P sense guard allowed n (decode c)) reading_mono
++    (fun _ => Iff.rfl) fun _ c => ⟨fun ⟨h, a, usable, next⟩ => ⟨h, a, usable, fun o =>
++      match next o with | ⟨_, hd, sub⟩ => KeptFor.mono sub hd⟩,
++    fun ⟨h, a, usable, next⟩ => ⟨h, a, usable, fun o => match updates c h a usable o with
++      | ⟨d, eqv⟩ => ⟨d, KeptFor.mono (fun s => (eqv s).mp) (next o), fun s => (eqv s).mpr⟩⟩⟩
++
++include within updates in
++/-- Suppose every code for a guarded class is listed, and after each usable move from a
++guarded coded class every class seen has an exact code. A code's class is kept for the list length
++exactly when a closed family contains it. -/
++theorem coded_kept_iff_closed {c : C} :
++    KeptFor P sense guard allowed all.length (decode c) ↔
++      InClosedFamily P sense guard allowed (decode c) :=
++  let K := iter Φ safe all.length
++  have post : ∀ d, K d → Φ K d := iter_postfixed reading_mono (fun _ h => h.1) within
++  ⟨fun h => ⟨coveredBy decode K, ⟨c, (iter_iff_kept updates _ c).mpr h, fun _ b => b⟩,
++     fun _ ⟨d, hd, sub⟩ s b => (post d hd).1 s (sub s b),
++     fun _ ⟨d, hd, sub⟩ => match (post d hd).2 with
++       | ⟨a, usable, next⟩ => ⟨a, fun s b => usable s (sub s b), fun o =>
++         match next o with | ⟨e, he, covers⟩ => ⟨e, he, fun s b => covers s (Seen.mono sub b)⟩⟩⟩,
++   fun ⟨F, held, guarded, closed⟩ => keptFor_of_closed F guarded closed all.length held⟩
++end Readings
++
+ /-- **A certificate with a move allowed and enabled throughout keeps every class within it for
+ every horizon**, whatever the steps keep. -/
+ theorem Certificate.keptFor {K : S → Prop} (cert : Certificate P guard K) {a : A}

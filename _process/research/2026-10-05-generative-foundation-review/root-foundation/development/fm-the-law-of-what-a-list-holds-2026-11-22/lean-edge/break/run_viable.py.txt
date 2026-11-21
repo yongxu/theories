@@ -1,0 +1,165 @@
+# AI-written (Claude Fable), 22 November 2026. Checks (a), (b), (c) and the statement of
+# extend_at_places on ALL processes with N configurations and A moves, every guard.
+# Definitions modelled (GuardHorizon.lean l. 70-110, GenerativeCore.lean l. 27, Lasting.lean l. 934):
+#   Enabled P s a      := exists t, step s a t
+#   Viable 0 s         := guard s
+#   Viable (n+1) s     := guard s and exists a, Enabled s a and forall t, step s a t -> Viable n t
+#   Closed K           := forall s in K, guard s and exists a, Enabled s a and forall t, step s a t -> K t
+#   Continues 0 s      := True ;  Continues (n+1) s := exists a t, step s a t and Continues n t
+#   pairProcess P      : moves (a, z); step y (a,z) t := step y a t and t = z
+import sys, json, time
+from bv import space, popcount, lowest, members
+
+def decode(p, N, A):
+    return sorted((s, a, t) for s in range(N) for a in range(A) for t in range(N)
+                  if p >> ((s * A + a) * N + t) & 1)
+
+def persist(N, moves, st, en, M, Vm):
+    """for each y: exists a, Enabled y a and forall t, step y a t -> Vm t"""
+    out = []
+    for y in range(N):
+        acc = 0
+        for m in moves:
+            x = en[y, m]
+            for t in range(N):
+                x &= (M ^ st[y][m][t]) | Vm[t]
+            acc |= x
+        out.append(acc)
+    return out
+
+def chain(N, moves, st, en, M, g, nmax):
+    V = [[M if g >> s & 1 else 0 for s in range(N)]]
+    for _ in range(nmax):
+        c = persist(N, moves, st, en, M, V[-1])
+        V.append([c[s] & V[0][s] for s in range(N)])
+    return V
+
+def run(N, A):
+    nbits = N * A * N
+    M, var = space(nbits)
+    moves = list(range(A))
+    st = [{a: [var((s * A + a) * N + t) for t in range(N)] for a in moves} for s in range(N)]
+    en = {(s, a): 0 for s in range(N) for a in moves}
+    for s in range(N):
+        for a in moves:
+            for t in range(N):
+                en[s, a] |= st[s][a][t]
+    # pair process
+    pmoves = [(a, z) for a in moves for z in range(N)]
+    pst = [{(a, z): [st[s][a][t] if t == z else 0 for t in range(N)] for (a, z) in pmoves} for s in range(N)]
+    pen = {(s, m): 0 for s in range(N) for m in pmoves}
+    for s in range(N):
+        for m in pmoves:
+            for t in range(N):
+                pen[s, m] |= pst[s][m][t]
+    H = 3 * N
+    res = dict(N=N, A=A, processes=1 << nbits, guards=1 << N, instances=(1 << nbits) << N)
+    a_prem = {m: 0 for m in range(N, H + 1)}; a_fail = {m: 0 for m in range(N, H + 1)}
+    low_prem = 0; low_fail = 0; low_first = None
+    b_cmp = 0; b_diff_closed = 0; b_diff_n = 0
+    stab = {}
+    ext_cases = 0; ext_prem = 0; ext_fail = 0
+    for g in range(1 << N):
+        V = chain(N, moves, st, en, M, g, H + 2)
+        # (a) at every list length m >= N (a list longer than the set, or with duplicates)
+        for m in range(N, H + 1):
+            c = persist(N, moves, st, en, M, V[m])
+            for y in range(N):
+                a_prem[m] += popcount(V[m][y])
+                a_fail[m] += popcount(V[m][y] & (M ^ c[y]))
+        # (a') with N-1 in place of N
+        c = persist(N, moves, st, en, M, V[N - 1])
+        for y in range(N):
+            low_prem += popcount(V[N - 1][y])
+            f = V[N - 1][y] & (M ^ c[y])
+            low_fail += popcount(f)
+            if f:
+                p = lowest(f)
+                cand = (len(decode(p, N, A)), bin(g).count('1'), p, g, y)
+                if low_first is None or cand < low_first:
+                    low_first = cand
+        # (b) largest closed set, by brute force over all subsets K
+        largest = [0] * N
+        for K in range(1 << N):
+            ck = M
+            for s in members(K, N):
+                if not g >> s & 1:
+                    ck = 0; break
+                acc = 0
+                for a in moves:
+                    x = en[s, a]
+                    for t in range(N):
+                        if not K >> t & 1:
+                            x &= M ^ st[s][a][t]
+                    acc |= x
+                ck &= acc
+            for s in members(K, N):
+                largest[s] |= ck
+        for s in range(N):
+            b_cmp += 1 << nbits
+            b_diff_closed += popcount(V[N][s] ^ largest[s])
+            for n in range(N, H + 1):
+                b_diff_n += popcount(V[n][s] ^ V[N][s])
+        # stabilisation index: least n with V_n = V_{n+1}
+        seen_stable = 0
+        for n in range(0, H + 1):
+            eq = M
+            for s in range(N):
+                eq &= M ^ (V[n][s] ^ V[n + 1][s])
+            first = eq & (M ^ seen_stable)
+            stab[n] = stab.get(n, 0) + popcount(first)
+            seen_stable |= eq
+        # extend_at_places as stated: any list `left` of length n (only its set L, |L| <= n, matters)
+        for n in range(0, N + 2):
+            for L in range(1 << N):
+                if bin(L).count('1') > n:
+                    continue
+                cover = M
+                for z in range(N):
+                    if not L >> z & 1:
+                        cover &= V[n + 1][z]
+                bad = 0
+                for y in range(N):
+                    bad |= V[n][y] & (M ^ V[n + 1][y])
+                ext_cases += 1 << nbits
+                ext_prem += popcount(cover)
+                ext_fail += popcount(cover & bad)
+    res['a_by_length'] = {m: dict(premise_holds=a_prem[m], fails=a_fail[m]) for m in a_prem}
+    res['a_with_N_minus_1'] = dict(premise_holds=low_prem, fails=low_fail)
+    if low_first:
+        nsteps, gsize, p, g, y = low_first
+        res['a_with_N_minus_1']['smallest_failing'] = dict(steps=decode(p, N, A), guard=members(g, N), at=y)
+    res['b'] = dict(compared=b_cmp, differs_from_largest_closed=b_diff_closed, differs_from_V_n_for_n_up_to_3N=b_diff_n)
+    res['stabilisation_index_histogram'] = {k: v for k, v in sorted(stab.items()) if v}
+    res['extend_at_places'] = dict(cases=ext_cases, cover_holds=ext_prem, fails=ext_fail)
+    # (c) Continues n = Viable n on the pair process with a true guard
+    C = [[M] * N]
+    for _ in range(H):
+        prev = C[-1]; cur = []
+        for s in range(N):
+            acc = 0
+            for a in moves:
+                for t in range(N):
+                    acc |= st[s][a][t] & prev[t]
+            cur.append(acc)
+        C.append(cur)
+    VP = chain(N, pmoves, pst, pen, M, (1 << N) - 1, H)
+    cdiff = 0; ccmp = 0; ctrue = 0
+    for n in range(H + 1):
+        for s in range(N):
+            ccmp += 1 << nbits
+            ctrue += popcount(C[n][s])
+            cdiff += popcount(C[n][s] ^ VP[n][s])
+    res['c'] = dict(compared=ccmp, continues_true=ctrue, differs=cdiff)
+    return res
+
+if __name__ == '__main__':
+    t0 = time.time()
+    pairs = [(1, 1), (1, 2), (2, 1), (2, 2), (3, 1), (3, 2)]
+    if len(sys.argv) > 1:
+        pairs = [tuple(int(x) for x in arg.split('x')) for arg in sys.argv[1:]]
+    for N, A in pairs:
+        r = run(N, A)
+        r['seconds'] = round(time.time() - t0, 1)
+        print(json.dumps(r))
+        sys.stdout.flush()

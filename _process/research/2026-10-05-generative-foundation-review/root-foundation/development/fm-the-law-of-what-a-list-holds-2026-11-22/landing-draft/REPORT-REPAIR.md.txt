@@ -1,0 +1,116 @@
+## 1. Verdict
+
+1. All eight repairs are in the [draft tree](/Users/ren/tmp/fm/build10/Becoming). All fifteen modules built together in build 26. AI-written by Codex, 22 November 2026. [Saved report](/Users/ren/theories/tmp/fm/whole/landing-draft/REPORT-REPAIR.md)
+2. **E1 passed.** Build 26 exited 0 with `"unclean": []`. All 1,154 declarations, including 857 theorems, have empty axiom reports.
+3. **E2 passed.** Against build 23, the only statement edits are the two likeness theorems, the moved list lemma and the four renames. The two callers retain their statements.
+4. **E3 passed.** The docstrings give the relevant premises. The rising sentence explicitly requires monotonicity, and the finite-branching and double-negation references agree with their package sources.
+
+## 2. The eight changes
+
+1. **Predicate iteration.** Replaced both opening paragraphs with M1. The next two sentences state the pointwise start and successor premises for `iter_iff_stages` and the equality with `Law.orbit` at each step. They explain why modules can use iteration without importing `Recurrence`. [Opening paragraphs, lines 6–22](/Users/ren/tmp/fm/build10/Becoming/PredicateIteration.lean:6) · [The two joins, lines 24–29](/Users/ren/tmp/fm/build10/Becoming/PredicateIteration.lean:24)
+2. **Courses.** Applied M2. A course of the listed length gives a move to another start of such a course. “These three” refers to `continues_persists`, `continues_any` and `unbounded_of_continues`. I verified “where `Lasting`'s lifting for finite branching holds up to double negation” in both the original module opening and the original theorem docstring. [Draft, lines 44–50](/Users/ren/tmp/fm/build10/Becoming/Parting.lean:44) · [Package opening](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Parting.lean:44) · [Package theorem docstring](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Parting.lean:435)
+3. **Guarded codes and agreeing pairs.** Applied M3 and both M4 replacements. A list *holds* the guarded codes, and `InClosedFamily` names the family condition. Both likeness docstrings use the length of the list that holds every agreeing pair, which may contain other pairs or repetitions. [Keeping, lines 43–47](/Users/ren/tmp/fm/build10/Becoming/Keeping.lean:43) · [Persistence, lines 1101–1102](/Users/ren/tmp/fm/build10/Becoming/Likeness.lean:1101) · [Equivalence, lines 1179–1180](/Users/ren/tmp/fm/build10/Becoming/Likeness.lean:1179)
+4. **The remaining docstrings.** Applied every LESSER text edit in scope.
+
+   - `CommonResponse` names the five definitions and gives both new steps rows in the table. `Lasting` identifies the steps of `disturbed f adm`. The orbit paragraph in `Tolerance` is now inside the inclusion bullet. [CommonResponse, lines 13–23](/Users/ren/tmp/fm/build10/Becoming/CommonResponse.lean:13) · [Lasting, lines 27–30](/Users/ren/tmp/fm/build10/Becoming/Lasting.lean:27) · [Tolerance, lines 28–32](/Users/ren/tmp/fm/build10/Becoming/Tolerance.lean:28)
+   - I qualified the reader's rising sentence because `iter_succ` requires a monotone step. The text is “For a monotone step, where the start lies inside its first step, each iterate lies inside the next (`Iteration.iter_succ`): the iterates rise.” `GuardHorizon` now says “loss by `lostStep`”. [RisingIteration, lines 7–9](/Users/ren/tmp/fm/build10/Becoming/RisingIteration.lean:7) · [GuardHorizon, lines 30–32](/Users/ren/tmp/fm/build10/Becoming/GuardHorizon.lean:31)
+   - `continues_any` says where courses of every length start. `remove_mem` uses the reader's wording about each original member. `iter_iff_alikeTo` names `alikeStep`, and the module opening states the persistence premise of `AlikeTo.bisimulation`. `iter_iff_kept` uses the reader's sentence following the exact-code premise. [Parting, lines 432–433](/Users/ren/tmp/fm/build10/Becoming/Parting.lean:432) · [PredicateIteration, lines 40–41](/Users/ren/tmp/fm/build10/Becoming/PredicateIteration.lean:40) · [Likeness, line 1093](/Users/ren/tmp/fm/build10/Becoming/Likeness.lean:1093) · [Likeness, lines 70–72](/Users/ren/tmp/fm/build10/Becoming/Likeness.lean:70) · [Keeping, lines 366–368](/Users/ren/tmp/fm/build10/Becoming/Keeping.lean:366)
+   - The first use of “iterate” in each requested home points to `Iteration.iter`. Rewrapped all three standalone declaration-docstring closers identified by the reader. [CommonResponse line 174](/Users/ren/tmp/fm/build10/Becoming/CommonResponse.lean:174) · [Viability line 85](/Users/ren/tmp/fm/build10/Becoming/Viability.lean:85) · [Keeping line 44](/Users/ren/tmp/fm/build10/Becoming/Keeping.lean:44) · [CommonResponse, lines 182–183](/Users/ren/tmp/fm/build10/Becoming/CommonResponse.lean:182) · [Parting, lines 418–419](/Users/ren/tmp/fm/build10/Becoming/Parting.lean:418) · [GuardHorizon, lines 179–180](/Users/ren/tmp/fm/build10/Becoming/GuardHorizon.lean:179)
+5. **Bound on moves.** Applied the sweeper's sentence with `Reaching.trace_within_pred_length` and the brief's word “bound”. The original sentence continued after “witness”, so its remaining clause now begins “The laws are stated for every process or on small witnesses”. [ReachableRanges, lines 174–177](/Users/ren/tmp/fm/build10/Becoming/ReachableRanges.lean:174)
+6. **Likeness premises and callers.** Both theorems now take only the two configuration listings. I corrected the reader's second binder in both places to `(listed' : ∃ l' : List S', ∀ s', s' ∈ l')`. The supplied version bound `l` and referred to `l'`, so Lean could not infer the list for membership. Both supplied proof terms and docstrings build with this correction. The two decided-frame callers pass `finite.listed finite'.listed`. The idle conjunction is gone. Package-wide grep found no caller of either theorem outside `Likeness`. The module opening places the every-depth equivalence under the listings premise. [Module opening, lines 60–74](/Users/ren/tmp/fm/build10/Becoming/Likeness.lean:66) · [Steady depth, lines 1127–1135](/Users/ren/tmp/fm/build10/Becoming/Likeness.lean:1129) · [First caller](/Users/ren/tmp/fm/build10/Becoming/Likeness.lean:1150) · [Second caller](/Users/ren/tmp/fm/build10/Becoming/Likeness.lean:1160) · [Every-depth equivalence, lines 1165–1172](/Users/ren/tmp/fm/build10/Becoming/Likeness.lean:1167)
+7. **List lemma.** Moved `gather_moves` beside `remove_mem` as `Becoming.gather_listed` over `A : Type u`. Its recursive proof is preserved. At `G = False`, the pointwise premise is double negation for each listed member and the conclusion is double negation of the joint assertion, exactly as in `not_not_all`. The module opening names both list lemmas and the induction in `Iteration.extend_at_places`. `lost_commutes` calls the moved lemma. [Overview, lines 31–32](/Users/ren/tmp/fm/build10/Becoming/PredicateIteration.lean:31) · [List lemma, lines 57–67](/Users/ren/tmp/fm/build10/Becoming/PredicateIteration.lean:57) · [Caller, line 329](/Users/ren/tmp/fm/build10/Becoming/GuardHorizon.lean:329) · [Prelude, line 718](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean:718)
+8. **Names of bounds.** Applied all four renames to declarations, calls and documentation. The shorter trace theorem takes `all.length = n + 1` and gives a trace of at most `n` moves. `Reaching.reach_within_of_pred_le` keeps its name and calls it. A source search found no old name in the draft. [Relation bound, line 214](/Users/ren/tmp/fm/build10/Becoming/CommonResponse.lean:214) · [Closure call, line 230](/Users/ren/tmp/fm/build10/Becoming/CommonResponse.lean:230) · [Overview, lines 107–112](/Users/ren/tmp/fm/build10/Becoming/ReachableRanges.lean:107) · [Trace equivalence, line 513](/Users/ren/tmp/fm/build10/Becoming/ReachableRanges.lean:513) · [Trace bound and call, lines 534–537](/Users/ren/tmp/fm/build10/Becoming/ReachableRanges.lean:534) · [Budget call, line 545](/Users/ren/tmp/fm/build10/Becoming/ReachableRanges.lean:545) · [Possible-within equivalence, line 551](/Users/ren/tmp/fm/build10/Becoming/ReachableRanges.lean:551)
+
+## 3. File and declaration changes against the package
+
+The line counts use `git diff --no-index --numstat` against each package file, with an empty baseline for the two new modules. Total **+1,184 / −106**. “Changed” includes proof-only edits. A category omitted for a file has no entries. `Becoming.remove_mem` is counted at both ends of its move.
+
+**PredicateIteration.lean (+276/−0).** Added `Becoming.remove_mem`, `Becoming.gather_listed`, `Becoming.Iteration.iter`, `Becoming.Iteration.MonotoneStep`, `Becoming.Iteration.iter_iff_stages`, `Becoming.Iteration.iter_pred`, `Becoming.Iteration.iter_within`, `Becoming.Iteration.extend_at_places`, `Becoming.Iteration.iter_persists`, `Becoming.Iteration.iter_postfixed`, `Becoming.Iteration.postfixed_in_iter`, `Becoming.Iteration.iter_iff_all`, `Becoming.Iteration.iter_largest`, `Becoming.Iteration.iter_shift`, `Becoming.Iteration.iter_persists_from_all`, `Becoming.Iteration.not_iter_of_not_succ`, `Becoming.Iteration.givesStep`, `Becoming.Iteration.gives_mono`, `Becoming.Iteration.CommutesWithImplication`, `Becoming.Iteration.imp_iff_iter_gives`, `Becoming.Iteration.iter_succ`, `Becoming.Iteration.gives_start`, `Becoming.Iteration.iter_gives_persists`, `Becoming.Iteration.iter_shortens`, `Becoming.Iteration.iter_within_length`, `Becoming.Iteration.iter_within_pred_length`.
+
+**CommonResponse.lean (+88/−2).** Added `Becoming.regionStep`, `Becoming.region_mono`, `Becoming.held_iff_iter`, `Becoming.region_first`, `Becoming.held_iff_iter_pred_length`, `Becoming.reachStep`, `Becoming.reach_mono`, `Becoming.reach_commutes`, `Becoming.reach_within_pred_length`, `Becoming.closure_of_reach`, `Becoming.closure_iff_reach_within`.
+
+**Viability.lean (+22/−0).** Added `Becoming.Viability.kernel_iff_iter`, `Becoming.Viability.kernel_iff_iter_pred_length`.
+
+**Keeping.lean (+73/−0).** Added `Becoming.Viability.InClosedFamily`, `Becoming.Viability.coveredBy`, `Becoming.Viability.codeGuard`, `Becoming.Viability.readingStep`, `Becoming.Viability.reading_mono`, `Becoming.Viability.iter_iff_kept`, `Becoming.Viability.coded_kept_iff_closed`.
+
+**Refinement.lean (+1/−16).** Deleted `Becoming.remove_mem`.
+
+**Likeness.lean (+98/−45).** Added `Becoming.alikeStep`, `Becoming.alike_mono`, `Becoming.iter_iff_alikeTo`, `Becoming.alike_at_cover`, `Becoming.alike_at_pairs`, `Becoming.alike_iff_at_cover`. Changed `Becoming.AlikeTo.steady_within`, `Becoming.AlikeTo.steady`, `Becoming.alike_iff_sameBranchingTests`, `Becoming.Alike.decided`, `Becoming.alike_iff_alikeTo`, `Becoming.alike_iff_alikeTo_pairs`.
+
+**Lasting.lean (+23/−0).** Added `Becoming.Lasting.iter_region_iff_lasts`, `Becoming.Lasting.kernel_iff_lasts_length`.
+
+**Parting.lean (+36/−32).** Added `Becoming.Parting.courseStep`, `Becoming.Parting.course_mono`, `Becoming.Parting.iter_iff_continues`. Changed `Becoming.Parting.continues_persists`, `Becoming.Parting.continues_any`. Deleted `Becoming.Parting.continues_cycle`.
+
+**RisingIteration.lean (+62/−0).** Added `Becoming.Iteration.singleton_rise_needs_em`, `Becoming.Iteration.commutes_false`, `Becoming.Iteration.rise_not_not`, `Becoming.Iteration.rise_of_stable`.
+
+**GuardHorizon.lean (+251/−5).** Added `Becoming.GuardHorizon.choiceStep`, `Becoming.GuardHorizon.choice_mono`, `Becoming.GuardHorizon.iter_iff_viable`, `Becoming.GuardHorizon.viable_persists`, `Becoming.GuardHorizon.viable_closed`, `Becoming.GuardHorizon.viable_iff_every_horizon`, `Becoming.GuardHorizon.viable_iff_closed`, `Becoming.GuardHorizon.loseStep`, `Becoming.GuardHorizon.not_viable_of_loss`, `Becoming.GuardHorizon.lose_shortening_decides_negations`, `Becoming.GuardHorizon.lose_shortening_decides`, `Becoming.GuardHorizon.lostStep`, `Becoming.GuardHorizon.lost_mono`, `Becoming.GuardHorizon.lost_start`, `Becoming.GuardHorizon.lost_implies_lose`, `Becoming.GuardHorizon.lost_iff_lose`, `Becoming.GuardHorizon.lost_not_viable`, `Becoming.GuardHorizon.lost_commutes`, `Becoming.GuardHorizon.lost_shortens`, `Becoming.GuardHorizon.lost_shortening_distributes`, `Becoming.GuardHorizon.lpo_of_distributes`. Changed `Becoming.GuardHorizon.closed_viable`.
+
+**Attraction.lean (+69/−0).** Added `Becoming.Branching.predStep`, `Becoming.Branching.pred_mono`, `Becoming.Branching.iter_iff_reachable`, `Becoming.Branching.reachable_iff_all`, `Becoming.Law.returns_iff_reachable_count`, `Becoming.Law.drawn_iff_not_reachable_count`.
+
+**GrammarCandidates.lean (+49/−0).** Added `Becoming.inquiryStep`, `Becoming.inquiry_mono`, `Becoming.iter_iff_inquiry`, `Becoming.inquiry_iff_all`, `Becoming.core_iff_inquiry`.
+
+**KeepableStep.lean (+30/−0).** Added `Becoming.Viability.keepStep`, `Becoming.Viability.keep_mono`, `Becoming.Viability.keepable_iff_count`.
+
+**ReachableRanges.lean (+78/−1).** Added `Becoming.Reaching.iter_reach_iff_trace`, `Becoming.Reaching.trace_within_pred_length`, `Becoming.Reaching.reach_within_of_pred_le`, `Becoming.Reaching.possible_iff_within_of_pred_le`, `Becoming.Reaching.guarded_not_keepsWidening`.
+
+**Tolerance.lean (+28/−5).** Added `Becoming.Tolerance.monotone_iff_keepsInclusion`, `Becoming.Tolerance.iter_eq_orbit`. Changed `Becoming.Tolerance.kept_set`.
+
+## 4. Builds
+
+**Three repair builds, 24–26.** Build 24 exposed the unbound list name in M5. Build 25 passed for all eleven edited modules. Build 26 named all fifteen draft modules in one call and exited 0. I used only the prescribed wrapper for Lean, started no agents, and made no package or git changes. [Final build log](/Users/ren/tmp/fm/build10/build-26.log)
+
+```json
+{
+  "tree": "/Users/ren/tmp/fm/build10",
+  "modules": 85,
+  "ran": [
+    "BecomingRefinementAxiomAudit",
+    "BecomingRefinementSignatures",
+    "BecomingAttractionAxiomAudit",
+    "BecomingAttractionSignatures",
+    "Becoming.GrammarCandidates",
+    "BecomingGrammarCandidatesAxiomAudit",
+    "BecomingGrammarCandidatesSignatures",
+    "Becoming.JointKeeping",
+    "Becoming.KeepableStep",
+    "BecomingKeepableStepAxiomAudit",
+    "BecomingKeepableStepSignatures",
+    "Becoming.JointKeeping.PreludeOnly",
+    "Becoming.KeepableStep.PreludeOnly"
+  ],
+  "reused": 184,
+  "unclean": [],
+  "audits": {
+    "Becoming.PredicateIteration": {"theorems": 22, "declarations": 26, "with_axioms": {}},
+    "Becoming.CommonResponse": {"theorems": 45, "declarations": 61, "with_axioms": {}},
+    "Becoming.Viability": {"theorems": 27, "declarations": 35, "with_axioms": {}},
+    "Becoming.Keeping": {"theorems": 33, "declarations": 62, "with_axioms": {}},
+    "Becoming.Refinement": {"theorems": 9, "declarations": 11, "with_axioms": {}},
+    "Becoming.Likeness": {"theorems": 181, "declarations": 235, "with_axioms": {}},
+    "Becoming.Lasting": {"theorems": 92, "declarations": 114, "with_axioms": {}},
+    "Becoming.Parting": {"theorems": 43, "declarations": 63, "with_axioms": {}},
+    "Becoming.RisingIteration": {"theorems": 4, "declarations": 4, "with_axioms": {}},
+    "Becoming.GuardHorizon": {"theorems": 52, "declarations": 71, "with_axioms": {}},
+    "Becoming.Attraction": {"theorems": 61, "declarations": 77, "with_axioms": {}},
+    "Becoming.GrammarCandidates": {"theorems": 73, "declarations": 98, "with_axioms": {}},
+    "Becoming.KeepableStep": {"theorems": 10, "declarations": 14, "with_axioms": {}},
+    "Becoming.ReachableRanges": {"theorems": 140, "declarations": 201, "with_axioms": {}},
+    "Becoming.Tolerance": {"theorems": 65, "declarations": 82, "with_axioms": {}}
+  },
+  "seconds": {
+    "BecomingRefinementAxiomAudit": 0.48,
+    "BecomingRefinementSignatures": 0.481,
+    "BecomingAttractionAxiomAudit": 0.56,
+    "BecomingAttractionSignatures": 0.349,
+    "Becoming.GrammarCandidates": 0.535,
+    "BecomingGrammarCandidatesAxiomAudit": 0.25,
+    "BecomingGrammarCandidatesSignatures": 0.257,
+    "Becoming.JointKeeping": 0.671,
+    "Becoming.KeepableStep": 0.347,
+    "BecomingKeepableStepAxiomAudit": 0.325,
+    "BecomingKeepableStepSignatures": 0.321,
+    "Becoming.JointKeeping.PreludeOnly": 0.424,
+    "Becoming.KeepableStep.PreludeOnly": 0.283
+  }
+}
+```

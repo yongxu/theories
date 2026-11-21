@@ -1,0 +1,9 @@
+section binders | same: True
+all, every, updates | same: True
+statement | same: False
+  old: theorem coded_kept_iff_closed {c : C} : KeptFor P sense guard allowed all.length (decode c) ↔ InClosedFamily P sense guard allowed (decode c) := by
+  new: theorem coded_kept_iff_closed {c : C} : KeptFor P sense guard allowed all.length (decode c) ↔ InClosedFamily P sense guard allowed (decode c) :=
+old include line: include every updates | new include line: include every updates in
+old statement: theorem coded_kept_iff_closed {c : C} : KeptFor P sense guard allowed all.length (decode c) ↔ InClosedFamily P sense guard allowed (decode c) := by
+falling law on one point in the undecided model 'line': falling starts 17, failures 0
+falling law on one point in the undecided model 'fork': falling starts 64, failures 0

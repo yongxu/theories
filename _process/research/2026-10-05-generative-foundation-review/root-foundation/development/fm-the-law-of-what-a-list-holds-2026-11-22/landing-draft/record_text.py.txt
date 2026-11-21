@@ -1,0 +1,64 @@
+# AI-written (Claude Fable, row FM). The text of the new record; lengths asserted against the schema's caps.
+I='Becoming.Iteration.'; V='Becoming.Viability.'; G='Becoming.GuardHorizon.'; Pt='Becoming.Parting.'; L='Becoming.Lasting.'; R='Becoming.Reaching.'
+title={"en":"What a list holds: kept at its length, kept for good","zh":"列表所容：至其长而存，则恒存"}
+statement={"en":"Where a list holds every member of a start that a monotone step takes into itself, what is in the iterate at the list's length is in every iterate, and is the largest class in the start the step preserves. Keeping under every course, along some course, by choice and through a reading are cases.",
+"zh":"单调之步把起始类带入其自身，且一列表容纳起始类的每个成员时：在列表长度处之迭代中的，就在每一迭代中，且它是起始类之内该步所保持的最大类。每条进程下的保持、沿某条进程的保持、凭选择的保持与经由读取的保持，皆为其例。"}
+laws=[
+{"en":"For a monotone step on classes that takes its start into itself, where a list holds every member of the start: a state in the iterate at the list's length is in the next iterate, so in every iterate, and that iterate is the largest class inside the start that the step preserves. With no list, a class inside the start that the step preserves lies in every iterate.",
+ "zh":"单调之步把起始类带入其自身，且一列表容纳起始类的每个成员时：在列表长度处之迭代中的状态也在下一迭代中，故在每一迭代中；该迭代是起始类之内该步所保持的最大类。无需列表：起始类之内为该步所保持的类，在每一迭代之中。",
+ "declarations":[I+'iter',I+'MonotoneStep',I+'iter_persists',I+'iter_iff_all',I+'iter_largest',I+'postfixed_in_iter',I+'iter_pred',I+'iter_within',I+'iter_postfixed',I+'extend_at_places',I+'not_iter_of_not_succ',I+'iter_iff_stages','Becoming.remove_mem']},
+{"en":"For a monotone step whose start is the step applied to the class of everything, where a list of length n + 1 holds every state, a state in iterate n is in iterate n + 1.",
+ "zh":"单调之步的起始类即该步作用于全体之类，且长为 n + 1 的列表容纳每个状态时：在第 n 迭代中的状态也在第 n + 1 迭代中。",
+ "declarations":[I+'iter_shift',I+'iter_persists_from_all']},
+{"en":"Where a list holds every state at which a requirement holds: it holds throughout a relation's closure from a state exactly where that state is in the iterate at the list's length, from the requirement, of the step asking it here and every successor in the class. So for the kernel of every process and for lasting under every admissible disturbance; one step sooner where a list of length n + 1 holds every state.",
+ "zh":"一列表容纳要求成立之处的每个状态时：该要求在一关系之闭包中自某状态起处处成立，恰当该状态在自该要求起、于列表长度处的迭代之中，其步要求此处满足且每个后继皆在类中。每个过程之核如此；在每一可容许扰动下持续与列表等长的步数亦如此；长为 n + 1 的列表容纳每个状态时，早一步即然。",
+ "declarations":['Becoming.regionStep','Becoming.held_iff_iter','Becoming.held_iff_iter_pred_length',V+'kernel_iff_iter',V+'kernel_iff_iter_pred_length',L+'iter_region_iff_lasts',L+'kernel_iff_lasts_length']},
+{"en":"Where a list holds every configuration: from where a course of as many steps as the list is long starts, some step leads to where another such course starts, and courses of every length start there.",
+ "zh":"一列表容纳每个构形时：自与列表等长之进程的起点，有一步通向另一条这样的进程的起点，且每一长度的进程皆自此起。",
+ "declarations":[Pt+'courseStep',Pt+'iter_iff_continues',Pt+'continues_persists',Pt+'continues_any']},
+{"en":"Where a list holds every configuration within a guard: a configuration viable for as many steps as the list is long has an enabled move all of whose outcomes are viable for as many; such configurations form a closed set; and being viable for that many steps is being viable for every number of steps, and is lying in some closed set.",
+ "zh":"一列表容纳守卫之内的每个构形时：可存续与列表等长步数的构形，有一可行之动，其每个结果皆可存续同样步数；这样的构形成一闭集；可存续该步数，即可存续任意步数，亦即在某一闭集之中。",
+ "declarations":[G+'choiceStep',G+'iter_iff_viable',G+'viable_persists',G+'viable_closed',G+'viable_iff_every_horizon',G+'viable_iff_closed',G+'closed_viable']},
+{"en":"Through a reading: where a list holds every code whose class lies within the guard, and after each usable move from the class of such a code every class seen is exactly the class of some code, the class of a code is kept for as many steps as the list is long exactly where it lies in a family of classes within the guard, each with a usable move after which every class seen is in the family.",
+ "zh":"经由读取：一列表容纳其类在守卫之内的每个码，且自这样的码之类作任一可用之动后，所见的每个类恰是某个码之类时：一个码之类被保持与列表等长的步数，恰当它在一族守卫之内的类中，族中每个类都有一可用之动，其后所见的每个类仍在族中。",
+ "declarations":[V+'InClosedFamily',V+'readingStep',V+'iter_iff_kept',V+'coded_kept_iff_closed']},
+{"en":"For a monotone step whose start lies inside its own step, and a proposition G: the step commutes with G when, for every class W, if it holds of the states where G follows from 'W gives G', then G follows from 'the step of W gives G'. Where it does and a list holds every state, if the iterate at the list's length gives G so does the next; and where G is that a state y is in that iterate, y in any iterate is in it.",
+ "zh":"对单调之步（起始类在其自身之步内）与命题 G：若对每一类 W，该步对“由‘W 给出 G’可得 G”之处成立时，由“W 之步给出 G”可得 G，称该步与 G 可交换。可交换且一列表容纳每个状态时：列表长度处之迭代给出 G，则下一迭代亦然；G 为“y 在该迭代中”时，在任一迭代中的 y 即在该迭代中。",
+ "declarations":[I+'givesStep',I+'CommutesWithImplication',I+'imp_iff_iter_gives',I+'iter_gives_persists',I+'iter_shortens',I+'iter_within_length',I+'iter_within_pred_length',I+'iter_succ']},
+{"en":"Reaching a target along a relation commutes with every proposition. So where a list of length n + 1 holds every state, a state that reaches the target within any number of steps reaches it within n, and the relation's closure from a state meets the target exactly where the state reaches it within n steps; for a process, what can be reached is reached by at most n moves.",
+ "zh":"沿一关系到达目标，与每个命题可交换。故长为 n + 1 的列表容纳每个状态时：在任意步数内到达目标的状态，在 n 步内到达；该关系自某状态起的闭包与目标相遇，恰当该状态在 n 步内到达目标；对过程而言，可达者至多 n 动即达。",
+ "declarations":['Becoming.reachStep','Becoming.reach_commutes','Becoming.reach_within_pred_length','Becoming.closure_iff_reach_within',R+'iter_reach_iff_trace',R+'trace_within_pred_length',R+'possible_iff_within_of_pred_le']},
+{"en":"Where a list holds every state, every monotone step commutes with falsity: a state in the iterate one past the list's length of a rising chain cannot be refuted to be in the iterate at its length, and is in it where that follows from its double negation. That this held outright for every monotone step on a one-state type, from the empty start, would decide every proposition.",
+ "zh":"一列表容纳每个状态时，每个单调之步与假可交换：上升之链中，在超过列表长度一步之迭代中的状态，说它不在列表长度处之迭代中则矛盾；凡此可由其双重否定推出之处，它即在其中。若此对单状态类型上自空起始的每个单调之步径直成立，则每个命题皆可判定。",
+ "declarations":[I+'commutes_false',I+'rise_not_not',I+'rise_of_stable',I+'singleton_rise_needs_em']},
+{"en":"A level of the losing step (the guard fails, or every enabled move has an outcome one level lower), from where the guard fails, refutes viability for that many steps. Worded with a disjunction (each move cannot be taken or has such an outcome), with the configurations and the moves each on a list, a level one above the number of listed configurations comes down to it.",
+ "zh":"失之步（守卫不成立，或每个可行之动皆有低一层的结果）自守卫不成立处起的某一层，否证该步数的可存续。以析取表述（每个动或不可行，或有这样的结果），且构形与动各在一列表上时：高于所列构形数一层者，落回该数之层。",
+ "declarations":[G+'loseStep',G+'not_viable_of_loss',G+'lostStep',G+'lost_implies_lose',G+'lost_iff_lose',G+'lost_not_viable','Becoming.gather_listed',G+'lost_commutes',G+'lost_shortens']},
+{"en":"That such a level comes down for every process on three configurations with one move, worded with the implication, would decide every proposition; on two configurations with every guard, every negation. Worded with the disjunction and moves not on a list, it would give the limited principle of omniscience. These are implications from a supposed shortening; they refute nothing.",
+ "zh":"若以蕴涵表述的这样一层，对三个构形、一个动的每个过程皆落回，则每个命题皆可判定；对两个构形与每个守卫，则每个否定皆可判定。若以析取表述而动不在列表上，则得有限全知原理。这些都是自所设之“落回”出发的蕴涵，并不否证什么。",
+ "declarations":[G+'lose_shortening_decides',G+'lose_shortening_decides_negations',G+'lost_shortening_distributes',G+'lpo_of_distributes']},
+{"en":"Stages of telling apart along a relation: where a list holds every pair a class relates, a pair that passes inquiry at the list's length passes it at every stage; and where the class is also symmetric, that is lying in the core.",
+ "zh":"沿一关系的诘问之层：一列表容纳一类所关联的每一对时，在列表长度之层通过诘问的一对，在每一层皆通过；该类又对称时，此即在核之中。",
+ "declarations":['Becoming.inquiryStep','Becoming.iter_iff_inquiry','Becoming.inquiry_iff_all','Becoming.core_iff_inquiry']},
+{"en":"Where a list holds every configuration: a configuration had after exactly as many steps as the list is long is had after exactly n steps for every n, and for a determined law this is returning and its failure is being drawn; and some run stays within a guard from a configuration exactly where it is in the iterate, at the list's length from the guard, of the step asking the guard here and some successor in the class.",
+ "zh":"一列表容纳每个构形时：恰在与列表等长的步数后可得的构形，对每个 n 皆恰在 n 步后可得；对确定之律，此即复返，其不成立即被引走。又：自某构形有一运行留在守卫之内，恰当该构形在自守卫起、于列表长度处的迭代之中，其步要求此处守卫成立且有某个后继在类中。",
+ "declarations":['Becoming.Branching.predStep','Becoming.Branching.iter_iff_reachable','Becoming.Branching.reachable_iff_all','Becoming.Law.returns_iff_reachable_count','Becoming.Law.drawn_iff_not_reachable_count',V+'keepStep',V+'keepable_iff_count']},
+{"en":"Where a list holds every configuration within a guard, along no run does what is possible within a fixed number of steps, read as the configurations within the guard, keep widening.",
+ "zh":"一列表容纳守卫之内的每个构形时：沿任何运行，在固定步数内可能者（读作守卫之内的构形）皆不持续变宽。",
+ "declarations":[R+'guarded_not_keepsWidening']},
+]
+hypotheses=[{"en":"No axiom. Each statement names its list: the members of the start, the configurations within the guard, the codes of classes within it, the pairs a class relates, every configuration, or the configurations and the moves. That an actual situation has such a list is supplied with each application.",
+ "zh":"不加公理。每条陈述指明其列表：起始类的成员、守卫之内的构形、其类在守卫之内的码、一类所关联的对、每个构形，或构形与动。实际情形有这样的列表，随每个应用给定。"}]
+does_not_show=[
+{"en":"A quantity drawn down, a share, a lock, or the time at which a reading comes: none is in these statements.","zh":"被汲取的量、份额、锁定，或读取到来的时刻：这些陈述中皆无。","kind":"scope"},
+{"en":"One statement with both outcomes of a course that has a choice, a reading and a bound on the ending side.","zh":"一条兼具两种结局的陈述：其进程有选择、有读取，且终结一侧有界。","kind":"scope"},
+{"en":"That one way of selecting is placed against another; the statement on widening is of the configurations within a guard reachable within a fixed number of moves from each configuration of a run.","zh":"把一种选择方式与另一种相互安放；关于变宽的陈述说的是自一次运行的每个构形起、在固定步数内可达的守卫之内的构形。","kind":"non-implication"},
+{"en":"That the codes of a reading are the classes actually reached, or that every class seen has a code: both are supplied with each application, and no instance of the reading law is built in the package.","zh":"读取之码即实际所达之类，或所见每类皆有码：二者皆随每个应用给定，包内未构造读取之律的实例。","kind":"correspondence"},
+{"en":"That a level of the losing step fails to come down: the theorems of deciding are implications from a supposed coming down, and refute nothing.","zh":"失之步的某一层不落回：关于可判定的诸定理都是自所设之“落回”出发的蕴涵，并不否证什么。","kind":"converse"},
+]
+next_delta={"en":"Branching.reach_within_listed to lose in place the two premises it does not need; a case with a level that runs down and a reading in one statement; the run from a family that keeps moving as a call.",
+ "zh":"Branching.reach_within_listed 就地去掉它不需要的两个前提；一个在同一陈述中兼有下降之量与读取的例；自持续移动之族得出运行，作为一次调用。"}
+for name,cap_en,cap_zh,items in [('laws',420,190,laws),('hyp',420,190,hypotheses),('dns',240,110,does_not_show)]:
+    for k,x in enumerate(items):
+        if len(x['en'])>cap_en or len(x['zh'])>cap_zh: print(name,k,'en',len(x['en']),'/',cap_en,'zh',len(x['zh']),'/',cap_zh)
+print('title',len(title['en']),len(title['zh']),'(100/40)'); print('statement',len(statement['en']),len(statement['zh']),'(300/150)'); print('next',len(next_delta['en']),len(next_delta['zh']),'(400/180)')

@@ -1,0 +1,7 @@
+(reading bridge) 2x2, codes all four classes, updates holds: instances 3072, (n, code) compared 73728; iter without KeptFor 0; KeptFor without iter 0; chain not steady at the number of codes 0
+(reading bridge) 2x2, codes empty and singletons, updates fails: instances 1400, (n, code) compared 21000; iter without KeptFor 0; KeptFor without iter 824; chain not steady at the number of codes 0
+(reading bridge) 2x2, codes empty and singletons, updates holds: instances 1672, (n, code) compared 25080; iter without KeptFor 0; KeptFor without iter 0; chain not steady at the number of codes 0
+(reading bridge) 2x2, codes singletons only, updates fails: instances 3000, (n, code) compared 24000; iter without KeptFor 0; KeptFor without iter 616; chain not steady at the number of codes 0
+(reading bridge) 2x2, codes singletons only, updates holds: instances 72, (n, code) compared 576; iter without KeptFor 0; KeptFor without iter 0; chain not steady at the number of codes 0
+seconds 0.5
+python3 cases.py reading  0.54s user 0.01s system 88% cpu 0.622 total

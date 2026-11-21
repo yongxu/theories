@@ -1,0 +1,114 @@
+## 1. Verdict in five lines
+
+- **All seven stages built clean** in order, including both W and T. AI-written by Codex, 22 November 2026. [Final law module](/Users/ren/tmp/fm/build9/Becoming/ScratchEdgeLaw.lean) · [Final cases module](/Users/ren/tmp/fm/build9/Becoming/ScratchEdgeCases.lean) · [Saved report](/Users/ren/theories/tmp/fm/whole/lean-edge-final/REPORT.md)
+- **Q1 passed.** All 81 build8 declarations retain their statements. Every retained build6 result has the same statement or follows in one line from the sharper reach bound.
+- **Q2 passed.** No new induction on a state list. All stage-identification bridges use the shared theorem. Predicate equality with the orbit uses the permitted two-case induction.
+- **Q3 passed.** Both axiom reports are empty, covering 82 declarations in the law module and 34 in the cases module.
+- **Q4 passed.** The comparable total fell from 975 to 971 physical lines. W, T, their import and separators add 38 lines, giving 1,009 in the two delivered files.
+
+## 2. F1–F3 and C1–C4
+
+**F1 · Shared bridge.** Moved `iter_iff_stages` into Falling, with its original hypotheses of monotonicity and pointwise equivalence at zero and at each successor. All five named bridges became shorter calls to it. These are `iter_iff_continues`, `iter_iff_viable`, `iter_region_iff_lasts`, `iter_iff_kept`, and `imp_iff_iter_gives`. The shift theorem `iter_shift` also uses it. The coded-reading bridge still needs the exact-update premise to supply a code for each successor class. To audit both modules at F1, I updated the copied cases’ references to the retired `rise`, `remove_place`, and `reach_rise_shortens` before deleting their old callers in C1 and C2. [Shared bridge](/Users/ren/tmp/fm/build9/Becoming/ScratchEdgeLaw.lean:50)
+
+**F2 · List lemma.** Changed only the home marker on `remove_mem` to `PredicateIteration`. On landing, move the existing declaration there from `Refinement` and have `Refinement` import it. [List lemma](/Users/ren/tmp/fm/build9/Becoming/ScratchEdgeLaw.lean:16)
+
+**F3 · Implication docstrings.** Rewrote all seven. `CommutesWithImplication` explains what it means for the step to commute with G. The four finite-bound docstrings identify the cover and the conclusion at the named iterate. The docstring for `imp_iff_iter_gives` requires only monotonicity and commutation. The four bounds also require that the start lies inside its own step. The statements are unchanged. [Implication section](/Users/ren/tmp/fm/build9/Becoming/ScratchEdgeLaw.lean:152)
+
+**C1 · Loss.** Removed the entire cases-module `Loss` section. Disjunctive loss now has a single shortening proof through `lost_commutes` and `iter_shortens`. [Surviving proof](/Users/ren/tmp/fm/build9/Becoming/ScratchEdgeLaw.lean:580)
+
+**C2 · Sharp trace bound.** Deleted `reach_at_count`. With `every : ∀ x, x ∈ all` and `len : all.length = n + 1`, `reach_within_count every len` proves
+
+```lean
+Reach P y s → ∃ as, as.length ≤ n ∧ Trace P y as s
+```
+
+The proof uses `reach_iff_withinClosure` from `Frame`, the general `closure_iff_reach_within` at target equality with `s`, and `rise_iff_trace`. The trace bridge now uses `iter_iff_stages` for its empty-trace and first-move clauses. [Trace proof](/Users/ren/tmp/fm/build9/Becoming/ScratchEdgeCases.lean:41)
+
+`reach_within_of_pred_le` allows any budget `k` satisfying `all.length.pred ≤ k`. An actual starting state belongs to the list, so its length is positive. The original build6 trace bound is `reach_within_of_pred_le every (Nat.pred_le _) reach`. The old package statement is a one-line `_case` with a passing `rfl` comparison. Its Boolean relation binder is named `rel` in scratch. [Compatibility proof](/Users/ren/tmp/fm/build9/Becoming/ScratchEdgeCases.lean:50)
+
+`possible_iff_within_count every enough` proves `Reaching.Possible P adm y x ↔ Reaching.PossibleWithin P adm k y x` under the same budget inequality. Take `enough := Nat.le_of_eq (congrArg Nat.pred len)` for the sharp horizon `n`, or `Nat.pred_le _` for the original list-length statement. The corollary’s home is `ReachableRanges`, where both predicates are defined. [Possible-within proof](/Users/ren/tmp/fm/build9/Becoming/ScratchEdgeCases.lean:69)
+
+**C3 · Likeness, exact reachability, inquiry and keepability.** All four parts retain their statements. I, L and K use the relocated `iter_iff_stages`. M uses `iter_largest` directly. L’s old bridge called `trace_iff_steps` from `Labelled`, which already imports `Recurrence`. To keep L movable into `Recurrence`, its successor clause now appends or splits off the last move using `trace_append_iff` and `trace_singleton_iff`. Exact length is preserved in both directions. The longer trace and coded-reading clauses still use the shared stage induction. [Exact-length bridge](/Users/ren/tmp/fm/build9/Becoming/ScratchEdgeCases.lean:157)
+
+| Part | What the list must cover |
+|---|---|
+| I | The start consists of pairs agreeing on claims. Both the persistence theorem and the likeness criterion accept exactly that cover. The two exhaustive configuration lists supply its product-list specialization. |
+| L | The predecessor iteration starts at `True`. Covering its start already means listing every state. The return and attraction corollaries use that same cover. |
+| K | The start consists of the pairs related by `E`. That cover suffices for both conclusions. The core criterion also requires symmetry of `E`. |
+| M | Covering the guard suffices for `iter_largest` and the post-fixed family. The compiled run construction calls `Onward.KeepsMoving.run`, whose premise lists every state. A guard-only version would need a further argument, for example constructing the run on listed states and projecting it. The delivered iff retains `every`. |
+
+**C4 · W and T.** W takes `S : Type`, as required when the admitted item type is the state type. For every run `r` and fixed horizon `k`, a list covering the guard excludes `Reaching.KeepsWidening (fun n => Reaching.PossibleWithin P (fun t x => x = t ∧ guard t) k (r.state n))`. The proof is one call to `Reaching.not_keepsWidening_of_listed`. Every possible item equals a guarded state, so the same list covers it. [W](/Users/ren/tmp/fm/build9/Becoming/ScratchEdgeCases.lean:268)
+
+T proves `MonotoneStep Φ ↔ Tolerance.KeepsInclusion Φ` in one line. It proves the full predicate equality `iter Φ V₀ n = Law.orbit Φ V₀ n` by `rfl` at zero and `congrArg Φ` at the successor. Transporting `postfixed_in_iter` along this equality gives `Tolerance.kept_set` with its original statement. The comparison `@kept_set_case.{u} = @Tolerance.kept_set.{u}` is `rfl`. [T](/Users/ren/tmp/fm/build9/Becoming/ScratchEdgeCases.lean:279)
+
+## 3. Sections, homes and imports
+
+Each count runs from the home marker through the last nonblank line of its block. File totals also include headers, separators and namespace endings. The import column gives the change needed on landing or the existing import that supplies the dependency.
+
+| Law module section | Home | Lines | Count | Imports on landing |
+|---|---|---:|---:|---|
+| List lemma | `PredicateIteration` | 16–33 | 18 | `Prelude`. Move `remove_mem` once. |
+| Falling | `PredicateIteration` | 35–150 | 116 | `Prelude`. |
+| Implications | `PredicateIteration` | 152–230 | 79 | Same module as Falling. |
+| Rising | `Decidedness` | 232–264 | 33 | Add `PredicateIteration` alongside `Space`. |
+| Regions and reach | `CommonResponse` | 266–334 | 69 | Add `PredicateIteration` alongside `GrammarLaws`. |
+| Kernels | `Viability` | 336–353 | 18 | Existing `Frame` and `CommonResponse` suffice. |
+| Disturbances | `Lasting` | 355–373 | 19 | Existing `Viability` supplies the kernel and region results. |
+| Courses | `Parting` | 375–406 | 32 | Existing `Lasting` supplies courses and reaches the iteration module. |
+| Choices | `GuardHorizon` | 408–458 | 51 | Existing `CommonResponse` supplies iteration. |
+| Loss | `GuardHorizon` | 460–629 | 170 | Same imports as Choices. |
+| Readings | `Keeping` | 631–698 | 68 | Existing `Viability` and `InquirySufficiency` suffice. |
+| Three statement comparisons | Scratch only | 700–708 | 9 | `Parting` and `GuardHorizon` in scratch. Omit the comparisons on landing. |
+
+| Cases module section | Home | Lines | Count | Imports on landing |
+|---|---|---:|---:|---|
+| J · Trace bounds | `Junctures` | 18–63 | 46 | Add `CommonResponse` for the sharp closure bound. Existing `Branching` reaches `Frame`. |
+| J · Possible within a horizon | `ReachableRanges` | 65–74 | 10 | Add `Junctures` for `reach_within_of_pred_le`. |
+| I · Matching | `Likeness` | 76–141 | 66 | Existing `Refinement` supplies `PredicateIteration` after F2. |
+| L · Predecessors | `Recurrence` | 143–176 | 34 | Add `PredicateIteration`. Existing `Frame` supplies the trace operations. |
+| L · Return and attraction | `Attraction` | 178–192 | 15 | Existing `Recurrence` supplies the bounded reachability criterion. |
+| K · Inquiry | `GrammarCandidates` | 194–235 | 42 | Add `PredicateIteration` to the existing grammar imports. |
+| M · Keepability | `KeepableStep` | 237–260 | 24 | Add `Onward` for the run theorem. It imports `Parting` for `courseStep`. |
+| W · Widening | `ReachableRanges` | 262–271 | 10 | Its existing listed-widening theorem suffices. |
+| T · Tolerating | `Tolerance` | 273–297 | 25 | Existing `Withholding` imports `Recurrence`, which supplies orbits and reaches `PredicateIteration`. |
+
+The source import graph among `Becoming` modules has no cycle with these additions. On landing, the cases module’s three `_same` comparisons also stay in scratch. The stronger likeness iff shares its short name with the old four-extra-premise theorem in `Likeness`. Giving the stronger declaration a distinct name there lets the old public statement call it in one line.
+
+For Q4, the baseline is `707 + (402 − 134) = 975`, subtracting build6 from the H home marker through `end Loss`. The final files have 710 and 299 lines. The clean cases snapshot immediately before W and T has 261 lines, so their total increment is 38. The comparable final count is `710 + 261 = 971`. [Pre-W/T snapshot](/Users/ren/tmp/fm/build9/ScratchEdgeCases.clean-8.lean.txt)
+
+## 4. Final build and scope
+
+**11 wrapper builds.** Both snapshots were saved after each clean build, numbered 1, 2, 3, 4, 6, 8, 9 and 11. Build 5 had an unused horizon binder. Build 7’s first last-move decomposition introduced `propext`. Build 10 showed that predicate-orbit equality at a variable horizon does not close by `rfl`. Each was corrected before the next stage. Both delivered sources match their build-11 snapshots byte for byte. [Law snapshot](/Users/ren/tmp/fm/build9/ScratchEdgeLaw.clean-11.lean.txt) · [Cases snapshot](/Users/ren/tmp/fm/build9/ScratchEdgeCases.clean-11.lean.txt)
+
+Build 11 recorded `exit 0 build 11`. Its log includes both audits. [Final build log](/Users/ren/tmp/fm/build9/build-11.log)
+
+```json
+{
+  "tree": "/Users/ren/tmp/fm/build9",
+  "modules": 89,
+  "ran": [
+    "Becoming.ScratchEdgeCases",
+    "BecomingScratchEdgeCasesAxiomAudit"
+  ],
+  "reused": 89,
+  "unclean": [],
+  "audits": {
+    "Becoming.ScratchEdgeLaw": {
+      "theorems": 68,
+      "declarations": 82,
+      "with_axioms": {}
+    },
+    "Becoming.ScratchEdgeCases": {
+      "theorems": 30,
+      "declarations": 34,
+      "with_axioms": {}
+    }
+  },
+  "seconds": {
+    "Becoming.ScratchEdgeCases": 0.588,
+    "BecomingScratchEdgeCasesAxiomAudit": 0.344
+  }
+}
+```
+
+I ran only the prescribed wrapper for Lean. I ran no separate Lean command, Lake, checker, gate or tests, and started no agents. I made no package or git changes and wrote nothing to builds 5–8. The proposed package imports were checked from source. The compiled and audited artifacts are the two build9 scratch modules.

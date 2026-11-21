@@ -1,0 +1,9 @@
+== every map: |S|=1, maps 4; (map, start) with step(V0) inside V0: 6, of them not monotone: 1
+   law fails at N=n: 0; at some N in n..2n+1: 1
+== every map: |S|=2, maps 256; (map, start) with step(V0) inside V0: 576, of them not monotone: 479
+   law fails at N=n: 152; at some N in n..2n+1: 196
+   a failing instance with fewest pairs: step [{}->{0}; {0}->{}; {1}->{}; {0,1}->{}], V0={0}, chain ['{0}', '{}', '{0}', '{}']
+== random maps: |S|=3, maps 400000; (map, start) with step(V0) inside V0: 1350299, of them not monotone: 1349515
+   law fails at N=n: 392323; at some N in n..2n+1: 678024
+   a failing instance with fewest pairs: step [{}->{2}; {0}->{0}; {1}->{}; {0,1}->{}; {2}->{}; {0,2}->{}; {1,2}->{2}; {0,1,2}->{}], V0={1,2}, chain ['{1,2}', '{2}', '{}', '{2}', '{}']
+seconds 3.1

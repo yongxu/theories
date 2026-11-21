@@ -1,0 +1,254 @@
+# AI-written (Claude Fable 5.2), a reader's program. Nothing here touches Lean.
+# ScratchEdgeLaw, section Rising, in models where propositions need not be decided:
+# Kripke models over a finite order of worlds. A proposition is an up-set of worlds; a relation or a
+# predicate over the (fixed, finite, with decided equality) configurations is a family that only grows
+# along the order. Forcing:  A or B, A and B, exists: at the world itself;
+#   A -> B, not A, forall: at every later world (the world itself included).
+#
+#   reachStep R W0 X y := W0 y  or  exists t, R y t and X t                       (module l. 420)
+#   loseStep P guard X s := not guard s  or  forall a, Enabled P s a -> exists t, P.step s a t and X t   (l. 484)
+#   Enabled P s a := exists t, P.step s a t                                        (GenerativeCore l. 27)
+#   rise = iter ; level 0 is the start (W0, resp. fun s => not guard s).
+import itertools, random, sys, time
+
+FRAMES = {
+    "one world (everything decided)": ([0], {0: [0]}),
+    "line of two": ([0, 1], {0: [0, 1], 1: [1]}),
+    "fork": ([0, 1, 2], {0: [0, 1, 2], 1: [1], 2: [2]}),
+    "line of three": ([0, 1, 2], {0: [0, 1, 2], 1: [1, 2], 2: [2]}),
+}
+
+def upsets(frame):
+    W, up = frame
+    out = []
+    for bits in range(1 << len(W)):
+        U = frozenset(w for w in W if bits >> w & 1)
+        if all(set(up[w]) <= U for w in U): out.append(U)
+    return out
+
+# ---------- formulas in one proposition q, for the hand tables ----------
+def f_not(frame, X): W, up = frame; return frozenset(w for w in W if all(v not in X for v in up[w]))
+def f_or(X, Y): return X | Y
+def f_imp(frame, X, Y): W, up = frame; return frozenset(w for w in W if all((v not in X) or (v in Y) for v in up[w]))
+
+# ---------- loss levels ----------
+def lose_levels(frame, nS, nA, step, guard, k):
+    """step[(s,a,t)] and guard[s] are up-sets. Returns L[n][w] = set of s (as bitmask), n = 0..k."""
+    W, up = frame
+    succ = {w: {(s, a): [t for t in range(nS) if w in step[(s, a, t)]] for s in range(nS) for a in range(nA)} for w in W}
+    notg = {w: sum(1 << s for s in range(nS) if all(v not in guard[s] for v in up[w])) for w in W}
+    L = [dict(notg)]
+    for _ in range(k):
+        prev = L[-1]; cur = {}
+        for w in W:
+            m = notg[w]
+            for s in range(nS):
+                if m >> s & 1: continue
+                ok = True
+                for v in up[w]:
+                    pv = prev[v]; sv = succ[v]
+                    for a in range(nA):
+                        ts = sv[(s, a)]
+                        if ts and not any(pv >> t & 1 for t in ts): ok = False; break
+                    if not ok: break
+                if ok: m |= 1 << s
+            cur[w] = m
+        L.append(cur)
+    return L
+
+def edge_fails(frame, L, n):
+    """places (world, s) where level n+1 holds and level n fails"""
+    W, _ = frame
+    return [(w, s) for w in W for s in range(8) if (L[n + 1][w] >> s & 1) and not (L[n][w] >> s & 1)]
+
+def show_proc(frame, nS, nA, step, guard):
+    W, _ = frame
+    names = lambda U: "always" if len(U) == len(W) else ("never" if not U else "at worlds " + ",".join(map(str, sorted(U))))
+    st = "; ".join(f"{s}-{a}->{t}: {names(U)}" for (s, a, t), U in sorted(step.items()) if U)
+    gd = "; ".join(f"guard {s}: {names(guard[s])}" for s in range(nS))
+    return f"steps [{st}] ; {gd}"
+
+def search_lose(fname, nS, nA, guard_mode, sample=None, det=False, label=""):
+    frame = FRAMES[fname]; W, up = frame; U = upsets(frame); full = frozenset(W)
+    cells = [(s, a, t) for s in range(nS) for a in range(nA) for t in range(nS)]
+    N = nS
+    if det:
+        # at each world at most one outcome per (s, a): choose per (s,a) a growing family of <=1 outcomes
+        def fams():
+            out = []
+            for combo in itertools.product(U, repeat=nS):
+                if all(sum(w in combo[t] for t in range(nS)) <= 1 for w in W): out.append(combo)
+            return out
+        per = fams()
+        step_iter = (dict(((s, a, t), c[i][t]) for i, (s, a) in enumerate((s, a) for s in range(nS) for a in range(nA)) for t in range(nS))
+                     for c in itertools.product(per, repeat=nS * nA))
+        total = len(per) ** (nS * nA)
+    else:
+        total = len(U) ** len(cells)
+        if sample is None:
+            step_iter = (dict(zip(cells, c)) for c in itertools.product(U, repeat=len(cells)))
+        else:
+            step_iter = (dict(zip(cells, [random.choice(U) for _ in cells])) for _ in range(sample))
+    guards = [tuple(full for _ in range(nS))] if guard_mode == "true" else list(itertools.product(U, repeat=nS))
+    inst = fail = fail_low = 0; first = None; cats = {}; later_fail = 0
+    for step in step_iter:
+        for guard in guards:
+            inst += 1
+            L = lose_levels(frame, nS, nA, step, guard, N + 3)
+            bad = edge_fails(frame, L, N)                 # level N+1 -> level N
+            if any(edge_fails(frame, L, n) for n in (N + 1, N + 2)): later_fail += 1
+            if N >= 1 and edge_fails(frame, L, N - 1): fail_low += 1
+            if bad:
+                fail += 1
+                succ0 = lambda w, s, a: [t for t in range(nS) if w in step[(s, a, t)]]
+                is_det = all(len(succ0(w, s, a)) <= 1 for w in W for s in range(nS) for a in range(nA))
+                en_dec = all(len({bool(succ0(w, s, a)) for w in W}) == 1 for s in range(nS) for a in range(nA))
+                g_dec = all(len(g) in (0, len(W)) for g in guard)
+                key = (is_det, en_dec, g_dec); cats[key] = cats.get(key, 0) + 1
+                size = sum(1 for u in step.values() if u)
+                if first is None or size < first[0]:
+                    first = (size, dict(step), guard, bad, [dict(l) for l in L])
+    tag = "every" if (sample is None or det) else f"{sample} random"
+    print(f"[lose] {label or fname}: {nS} configurations, {nA} move(s), guard {guard_mode}, {'deterministic, ' if det else ''}{tag} of {total} step families: "
+          f"instances {inst}; level {N+1} -> level {N} fails in {fail}; (level {N} -> {N-1} fails in {fail_low}; any of {N+2}->{N+1}, {N+3}->{N+2} fails in {later_fail})")
+    if cats:
+        print("    failing instances by (deterministic, every enabledness decided, guard decided): " +
+              ", ".join(f"{k}: {v}" for k, v in sorted(cats.items())))
+    if first:
+        size, step, guard, bad, L = first
+        print(f"    a failing instance with fewest step cells: {show_proc(frame, nS, nA, step, guard)}")
+        print(f"      fails at (world, configuration) {bad}; levels by world: " +
+              "; ".join(f"L{n}=" + str({w: [s for s in range(nS) if L[n][w] >> s & 1] for w in W}) for n in range(N + 2)))
+    return fail
+
+# ---------- (a) the module's two processes, and the hand tables ----------
+def module_processes():
+    for fname in ("line of two", "fork", "line of three"):
+        frame = FRAMES[fname]; W, up = frame; full = frozenset(W); none_ = frozenset()
+        for q in upsets(frame):
+            nq = f_not(frame, q); nnq = f_not(frame, nq); em = f_or(q, nq); wem = f_or(nq, nnq)
+            # Bool process (l. 493): false=0, true=1.  0 -> 1 always ; 1 -> 0 when q ; guard 0 True, guard 1 = not q
+            step = {(0, 0, 0): none_, (0, 0, 1): full, (1, 0, 0): q, (1, 0, 1): none_}
+            guard = (full, nq)
+            L = lose_levels(frame, 2, 1, step, guard, 4)
+            hand = [(none_, nnq), (nnq, wem), (wem, full), (full, full), (full, full)]
+            ok = all(frozenset(w for w in W if L[n][w] >> s & 1) == hand[n][s] for n in range(5) for s in range(2))
+            fails = [w for w in W if (L[3][w] & 1) and not (L[2][w] & 1)]
+            print(f"[module, two configurations] {fname}, q at {sorted(q)}: levels 0..4 equal the hand table: {ok}; "
+                  f"level 3 at `false` holds at worlds {[w for w in W if L[3][w] & 1]}, level 2 at {[w for w in W if L[2][w] & 1]}; the edge 3->2 fails at worlds {fails}; (not q or not not q) holds at {sorted(wem)}")
+            # Option Bool process (l. 520): none=0 (r), some false=1 (m), some true=2 (d)
+            # r -> m always ; r -> d when q ; m -> r when q ; d: no step ; guard True
+            step = {(s, 0, t): none_ for s in range(3) for t in range(3)}
+            step[(0, 0, 1)] = full; step[(0, 0, 2)] = q; step[(1, 0, 0)] = q
+            guard = (full, full, full)
+            L = lose_levels(frame, 3, 1, step, guard, 5)
+            hand = [(none_, none_, none_), (none_, nq, full), (em, nq, full), (em, full, full), (full, full, full), (full, full, full)]
+            ok = all(frozenset(w for w in W if L[n][w] >> s & 1) == hand[n][s] for n in range(6) for s in range(3))
+            fails = [w for w in W if (L[4][w] & 1) and not (L[3][w] & 1)]
+            print(f"[module, three configurations] {fname}, q at {sorted(q)}: levels 0..5 equal the hand table: {ok}; "
+                  f"level 4 at `none` holds at worlds {[w for w in W if L[4][w] & 1]}, level 3 at {[w for w in W if L[3][w] & 1]}; the edge 4->3 fails at worlds {fails}; (q or not q) holds at {sorted(em)}")
+
+# ---------- reach ----------
+def search_reach(fname, nS, sample=None):
+    frame = FRAMES[fname]; W, up = frame; U = upsets(frame)
+    pairs = [(y, t) for y in range(nS) for t in range(nS)]
+    total = len(U) ** (len(pairs) + nS)
+    def gen():
+        if sample is None:
+            for c in itertools.product(U, repeat=len(pairs) + nS): yield c
+        else:
+            for _ in range(sample): yield [random.choice(U) for _ in range(len(pairs) + nS)]
+    inst = f_edge = f_low = f_low2 = 0; first = None
+    for c in gen():
+        inst += 1
+        R = dict(zip(pairs, c[:len(pairs)])); W0 = c[len(pairs):]
+        lev = []
+        cur = {w: sum(1 << y for y in range(nS) if w in W0[y]) for w in W}
+        lev.append(cur)
+        for _ in range(nS + 1):
+            prev = lev[-1]
+            lev.append({w: lev[0][w] | sum(1 << y for y in range(nS) if any(w in R[(y, t)] and prev[w] >> t & 1 for t in range(nS))) for w in W})
+        N = nS
+        if any(lev[N + 1][w] & ~lev[N][w] for w in W):
+            f_edge += 1
+            if first is None: first = (R, W0)
+        if any(lev[N][w] & ~lev[N - 1][w] for w in W): f_low += 1
+        if N >= 2 and any(lev[N - 1][w] & ~lev[N - 2][w] for w in W): f_low2 += 1
+    tag = "every" if sample is None else f"{sample} random"
+    print(f"[reach] {fname}, {nS} points, {tag} of {total} (R, W0) families: instances {inst}; reaches N+1 -> reaches N fails in {f_edge}; "
+          f"reaches N -> N-1 fails in {f_low}; reaches N-1 -> N-2 fails in {f_low2}   (N = {nS})")
+    if first: print(f"    FAILURE: R {first[0]}, W0 {first[1]}")
+
+# ---------- check 4: loseStep against Viable, classically ----------
+def lose_vs_viable(nS, nA, sample=None):
+    from functools import lru_cache
+    frame = FRAMES["one world (everything decided)"]; full = frozenset([0]); none_ = frozenset()
+    cells = [(s, a, t) for s in range(nS) for a in range(nA) for t in range(nS)]
+    total = 1 << len(cells)
+    it = range(total) if sample is None else [random.randrange(total) for _ in range(sample)]
+    inst = cmp_ = diff = shift_up = shift_dn = e_fail = e_low = e_low_inst = 0; first_low = None
+    for bits in it:
+        step = {c: (full if bits >> i & 1 else none_) for i, c in enumerate(cells)}
+        st = {(s, a): [t for t in range(nS) if bits >> cells.index((s, a, t)) & 1] for s in range(nS) for a in range(nA)}
+        for gb in range(1 << nS):
+            inst += 1
+            guard = tuple(full if gb >> s & 1 else none_ for s in range(nS))
+            K = 2 * nS + 3
+            L = lose_levels(frame, nS, nA, step, guard, K)
+            @lru_cache(None)
+            def viable(n, s):
+                if n == 0: return bool(gb >> s & 1)
+                return bool(gb >> s & 1) and any(len(st[s, a]) > 0 and all(viable(n - 1, t) for t in st[s, a]) for a in range(nA))
+            V = [sum(1 << s for s in range(nS) if viable(n, s)) for n in range(K + 1)]
+            allm = (1 << nS) - 1
+            for n in range(K):
+                cmp_ += 1
+                if L[n][0] != allm & ~V[n]: diff += 1
+                if L[n][0] != allm & ~V[n + 1]: shift_up += 1
+                if L[n + 1][0] != allm & ~V[n]: shift_dn += 1
+            N = bin(gb).count("1")
+            if L[N + 1][0] & ~L[N][0]: e_fail += 1
+            if N >= 1:
+                e_low_inst += 1
+                if L[N][0] & ~L[N - 1][0]:
+                    e_low += 1
+                    if first_low is None: first_low = ({k: v for k, v in st.items() if v}, [s for s in range(nS) if gb >> s & 1])
+    tag = "every" if sample is None else f"{sample} random"
+    print(f"[lose vs Viable, decided] {nS}x{nA}, {tag} step relation, every guard: instances {inst}; level n of loseStep from (not guard) = complement of Viable n, n=0..{2*nS+2}: "
+          f"compared {cmp_}, differ {diff}  (against Viable (n+1): differ {shift_up}; level n+1 against Viable n: differ {shift_dn})")
+    print(f"    level N+1 -> level N with N=|guard|: fails in {e_fail}; level N -> N-1: fails in {e_low} of {e_low_inst}" + (f"; e.g. steps {first_low[0]}, guard {first_low[1]}" if first_low else ""))
+
+if __name__ == "__main__":
+    t = time.time(); random.seed(20261122)
+    which = sys.argv[1] if len(sys.argv) > 1 else "all"
+    if which in ("all", "module"):
+        module_processes()
+    if which in ("all", "reach"):
+        search_reach("one world (everything decided)", 2); search_reach("one world (everything decided)", 3)
+        search_reach("one world (everything decided)", 4, sample=40000)
+        search_reach("line of two", 2); search_reach("fork", 2); search_reach("line of three", 2)
+        search_reach("line of two", 3, sample=40000); search_reach("fork", 3, sample=40000)
+    if which in ("all", "viable"):
+        lose_vs_viable(1, 1); lose_vs_viable(2, 1); lose_vs_viable(2, 2); lose_vs_viable(3, 1); lose_vs_viable(3, 2, sample=1500)
+    if which in ("all", "one"):
+        for f in ("line of two", "fork", "line of three"):
+            search_lose(f, 1, 1, "true"); search_lose(f, 1, 1, "any"); search_lose(f, 1, 2, "any")
+    if which in ("all", "two"):
+        for f in ("line of two", "fork", "line of three"):
+            search_lose(f, 2, 1, "true")
+        search_lose("line of two", 2, 2, "true")
+        search_lose("fork", 2, 2, "true", sample=60000)
+        for f in ("line of two", "fork", "line of three"):
+            search_lose(f, 2, 1, "any")
+    if which in ("all", "three"):
+        search_lose("line of two", 3, 1, "true")
+        search_lose("fork", 3, 1, "true", sample=60000)
+        search_lose("line of three", 3, 1, "true", sample=40000)
+    if which in ("all", "det"):
+        for f in ("line of two", "fork", "line of three"):
+            search_lose(f, 2, 1, "true", det=True)
+            search_lose(f, 3, 1, "true", det=True)
+            search_lose(f, 2, 1, "any", det=True)
+        search_lose("line of two", 2, 2, "true", det=True)
+        search_lose("fork", 2, 2, "true", det=True)
+    print(f"seconds {time.time()-t:.1f}")

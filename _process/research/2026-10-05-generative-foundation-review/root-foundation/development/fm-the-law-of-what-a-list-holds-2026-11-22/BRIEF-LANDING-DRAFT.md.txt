@@ -1,0 +1,54 @@
+# Brief: the landing draft, the two scratch modules moved into their homes
+
+*AI-written (Claude Fable, board row FM), 22 November 2026, frozen before the implementer ran (hash in `FROZEN-LANDING-DRAFT.sha256.txt`). You are the implementer. You change NOTHING in the repository: you make a draft tree of whole module files outside it, which builds over the package. A clean failure, told with what blocked it, is a result.*
+
+## What we are doing
+
+`/Users/ren/theories` draws a map of how anything forms, persists, changes and ends, with its core proved in Lean 4 with **no axioms**. Read `AGENTS.md` at the repository root (one page): each thing said once, and joined; a telling says exactly what is proved, with its premises.
+
+The package is `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/` (call it `PKG`). Two scratch modules, final, built clean with no axiom, are at `/Users/ren/tmp/fm/build9/Becoming/ScratchEdgeLaw.lean` (710 lines) and `ScratchEdgeCases.lean` (299 lines): **read both whole first**, and their report `/Users/ren/theories/tmp/fm/whole/lean-edge-final/REPORT.md`. Each section has a `-- home:` comment. Your task is to move each section's text into its home, as a draft.
+
+## The draft tree
+
+`/Users/ren/tmp/fm/build10/Becoming/`: for each module you change, a **whole copy** of the package's file with your changes, under the same file name; and the two new modules. **Build only with** `/Users/ren/tmp/fm/run-build10.sh <n> <Module> [<Module> …]` (module names without `Becoming.`): it waits until no other Lean run is alive, builds those modules of the draft tree over the package through the checker's scratch builder, audits every declaration's axioms, and prints the end of the log. Clean means `exit 0`, `"unclean": []` and `"with_axioms": {}` for every module named. Build low homes first; at the end build **every** module of the draft in one call. Run nothing else of Lean (no `lake`, no `check_becoming.py`, never `--help`, no gate, no tests). Write only under `/Users/ren/tmp/fm/build10/` and `/Users/ren/theories/tmp/fm/whole/landing-draft/` (your report). Change nothing in the repository or in git. Start no further agents.
+
+## The homes (decided; where a home below differs from a `-- home:` comment, this list wins)
+
+**New modules**
+1. `PredicateIteration.lean`, importing `Becoming.Prelude` only: the list lemma `remove_mem` (moved from `Refinement`: see 9), the falling section, the implications section. Open it with a module docstring in the package's form (look at `KeepableStep.lean` ll. 1–32, `Viability.lean` ll. 1–41): a title line, what the module holds in plain sentences with the declaration names in backticks, its premises, what it is not. Namespace: inside `namespace Becoming`, a namespace of its own for these names (I suggest `Iteration`: `Iteration.iter`, `Iteration.MonotoneStep`, `Iteration.iter_persists`, …; check that nothing in the package already has the names you choose: `Becoming.rise` and `Becoming.Commutes` exist, which is why the scratch avoided them). `remove_mem` keeps its full name `Becoming.remove_mem`.
+2. `RisingIteration.lean`, importing `Becoming.PredicateIteration` and `Becoming.Decidedness`: the four declarations that need `Decided` (`singleton_rise_needs_em`, `commutes_false`, `rise_not_not`, `rise_of_stable`). Module docstring likewise. (NOT in `Decidedness`: 143 modules import it.)
+
+**Existing modules** (insert each section where its notions are defined and before any use; adapt `variable`, `universe`, `open` and namespace lines to the home; put each theorem in the home's own namespace, for example `Viability.kernel_iff_iter`, `Lasting.kernel_iff_lasts_length`, `GuardHorizon.viable_persists`; **add to the home's module docstring** the sentences that tell what was added, in that docstring's own manner and place)
+3. `CommonResponse`: regions and reach (`regionStep` … `closure_iff_reach_within`). Add `import Becoming.PredicateIteration`. Its module docstring says "It adds three definitions … and changes no definition of an earlier module": correct the count and the sentence.
+4. `Viability`: the kernel of every process.
+5. `Lasting`: lasting whatever happens at a list's length.
+6. `Parting`: the course section. **`Parting.continues_persists` keeps its name and statement and gets the new proof; `continues_cycle` is deleted; `continues_any` (l. 429) becomes the one-line call (`continues_any_case`'s proof).** The docstring of `continues_persists` describes the old proof ("the course repeats a configuration and can go round"): rewrite it to say the statement, for example "**Where a list holds every configuration, a course as long as the list goes on.** From where a course of as many steps as the list is long starts, some step leads to where another such course starts. No decision is assumed." Keep `path_of_continues` (Onward uses it). Mend the module docstring where it tells the old proof.
+7. `GuardHorizon`: the choice section and the loss section. `closed_viable` (l. 112) keeps its name and statement and becomes the one-line call (`closed_viable_case`'s proof) only if the declarations it needs can stand before it; otherwise leave its proof and say so. The levels of both losing steps are written with `iter`, so this module needs nothing of `RisingIteration`.
+8. `Keeping`: the reading section (`InClosedFamily` … `coded_kept_iff_closed`).
+9. `Refinement`: add `import Becoming.PredicateIteration`; delete its own `remove_mem` (the same declaration now comes from the new module, with the same full name). Nothing else.
+10. `Likeness`: the matching section. **`AlikeTo.steady_within` (l. 1073) and `alike_iff_alikeTo_pairs` (l. 1134) keep their names and are strengthened in place: the four premises `moves`, `claims`, `finite`, `finite'` are dropped from their statements** (for `steady_within` keep the conclusion's form, an `N` at most the number of pairs, now with `N` the number of pairs; and state beside it the exact form at the number of pairs, and the forms at a list of only the pairs that agree on claims). Adapt every caller inside `Likeness` (for example `AlikeTo.steady`, `alike_iff_alikeTo`): where a caller only passed those premises on, it may lose them too **only if it is not cited elsewhere with them** — do not change any other theorem's statement; if a caller still has the premises, it simply does not pass them. Correct both docstrings and the module docstring where they tell the four premises as needed. `stops_decreasing` stays.
+11. `Attraction`: being had at every step (ALL of Part L: `predStep`, `pred_mono`, `iter_iff_reachable`, `reachable_iff_all`, `returns_iff_reachable_count`, `drawn_iff_not_reachable_count`), not `Recurrence`. Add `import Becoming.PredicateIteration`.
+12. `GrammarCandidates`: the inquiry section (Part K). Add `import Becoming.PredicateIteration`.
+13. `KeepableStep`: Part M. Add `import Becoming.Onward`. Its docstring must say that the run comes from `Onward.KeepsMoving.run`, which asks a list of every configuration.
+14. `ReachableRanges`: Part J's trace bound and Part W. That is: `rise_iff_trace`, `reach_within_count` (from `every` and `len : all.length = n + 1`, a trace of at most `n` moves), `reach_within_of_pred_le`, `possible_iff_within_count`, and the widening theorem. **`Junctures` is NOT changed**: `Branching.reach_within_listed` stays exactly as it is, and the scratch `reach_within_listed_case` with its comparison does not land. The docstring of `reach_within_count` ends with one sentence telling the join: that `Branching.reach_within_listed` (`Junctures`) concludes a trace of at most as many moves as the list is long, under the two further premises `decides` and `returns`, which this theorem does not need, and that this theorem's bound is one fewer. Open `Junctures.lean` l. 328 and check that sentence against the signature.
+15. `Tolerance`: Part T (`KeepsInclusion` is `MonotoneStep`; the iterates are the orbit; `kept_set` keeps its name and statement and becomes the call only if what it needs can stand before it, otherwise the case is stated beside it under another name and its docstring says `kept_set` is it). Add `import Becoming.PredicateIteration`.
+
+**Not landing**: every `…_same` comparison and every `_case` theorem that exists only for a comparison; the scratch namespaces; `AI-written by Codex` header lines (the package's files carry no such line; the landing's record says who wrote it).
+
+## Rules for the text
+
+- Proofs as they are in the scratch (terms). No new mathematics. If a section needs a small change to stand in its home (a name qualified, a variable made explicit), make it and list it.
+- Every docstring: exactly the statement with its premises, in plain words; never how the proof goes; never "edge" or "law" for these results; ASCII apostrophes. Where a docstring in the scratch uses "iterate", "the region step", "level", say at first use in each module what it is, or point to the definition by its name in backticks.
+- Follow each home's manner: look at how its theorems are headed (many have a bold first sentence), how sections are named, line length (100).
+- Do not touch `Becoming.lean`, the READMEs, `check_becoming.py`, records or any other file: another step does those.
+
+## What counts as a failed draft (frozen)
+
+- **D1.** Any module of the draft does not build clean, or any declaration has an axiom.
+- **D2.** A statement in the draft differs from its statement in the scratch (namespace and the changes this brief orders aside), or a theorem of the package not named here has its statement changed.
+- **D3.** A home's file differs from the package's file in anything but the insertions, the ordered changes, its import line and its module docstring (give `diff --stat`-like counts per file: lines added, removed).
+- **D4.** An import cycle, or a core module importing `GuardHorizon`.
+
+## What to return
+
+Your whole report as your final answer, also saved as `/Users/ren/theories/tmp/fm/whole/landing-draft/REPORT.md`: (1) in five lines: what built clean, what did not, D1 to D4; (2) per file: lines added and removed, the declarations added with their full names, the declarations changed or deleted, the import lines changed, what you wrote into the module docstring (quote it); (3) every place you departed from the scratch text and why; (4) the callers you adapted in `Likeness` and anything outside the draft that names a changed or deleted declaration (grep the whole repository's tracked `.lean` files under `PKG` for `continues_cycle`, `remove_mem`, `steady_within`, `alike_iff_alikeTo_pairs`); (5) the last build's log (its JSON), the number of builds, what you did not do.

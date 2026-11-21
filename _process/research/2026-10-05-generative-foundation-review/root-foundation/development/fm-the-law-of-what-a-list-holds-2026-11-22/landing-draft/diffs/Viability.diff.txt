@@ -1,0 +1,38 @@
+--- /Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Viability.lean	2026-11-01 18:42:54
++++ /Users/ren/tmp/fm/build10/Becoming/Viability.lean	2026-11-22 03:27:52
+@@ -19,6 +19,9 @@
+   region inside a region (`«所闭之承最大»`) at a process's steps, and are proved from it. One step: a
+   configuration is in the kernel exactly when it is within the guard and every successor is in the
+   kernel (`kernel_step_iff`).
++  If a list covers the guard, the kernel is `regionStep` applied to the guard as many times as
++  the list is long (`kernel_iff_iter`). If a list of length n + 1 covers every configuration,
++  n applications suffice (`kernel_iff_iter_pred_length`).
+   The guard alone need not be a certificate (`Leaves.within_not_kernel`).
+ * **Laws of change under disturbances.** A law `f : S → A → S` with an admissibility condition
+   `adm` on disturbances is a process (`disturbed`): its traces are the admissible courses,
+@@ -66,6 +69,25 @@
+     Kernel P guard s ↔ «承» («逆» («所闭» (Steps P))) guard s :=
+   ⟨fun kept t within => kept t (reach_iff_withinClosure.mpr within),
+    fun held t reach => held t (reach_iff_withinClosure.mp reach)⟩
++
++section Kernels
++
++open Iteration
++variable {P : Process S A} {guard : S → Prop}
++
++/-- If all guarded states are listed, the kernel is the guard after `regionStep` has been
++applied to it as many times as the list is long. -/
++theorem kernel_iff_iter {all : List S} (within : ∀ x, guard x → x ∈ all) {s : S} :
++    Kernel P guard s ↔ iter (regionStep (Steps P) guard) guard all.length s :=
++  kernel_iff_held.trans (held_iff_iter (Steps P) guard within)
++
++/-- If a list of length n + 1 holds every state, the kernel consists of the states in
++iterate n of the process's region step from the guard. -/
++theorem kernel_iff_iter_pred_length {all : List S} (every : ∀ x, x ∈ all)
++    {n : Nat} (len : all.length = n + 1) {s : S} :
++    Kernel P guard s ↔ iter (regionStep (Steps P) guard) guard n s :=
++  kernel_iff_held.trans (held_iff_iter_pred_length (Steps P) guard every len)
++end Kernels
+ 
+ /-- **Every certificate lies within the kernel**: a region inside the guard and closed under the
+ steps lies within what holds throughout their closure (`«闭在内则在所闭之承»`). -/

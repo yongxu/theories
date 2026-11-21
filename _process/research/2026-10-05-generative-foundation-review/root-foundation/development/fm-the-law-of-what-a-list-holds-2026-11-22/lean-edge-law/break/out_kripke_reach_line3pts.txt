@@ -1,0 +1,2 @@
+[reach] line of two, 3 points, every of 531441 (R, W0) families: instances 531441; reaches N+1 -> reaches N fails in 0; reaches N -> N-1 fails in 0; reaches N-1 -> N-2 fails in 65610   (N = 3)
+python3 -u -c " import kripke kripke.search_reach('line of two', 3) "  9.47s user 0.11s system 97% cpu 9.817 total

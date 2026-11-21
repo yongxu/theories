@@ -1,0 +1,2 @@
+{"a_prem": 49960, "a_fail": 0, "low_prem": 10015, "low_fail": 23, "b_cmp": 6006, "b_fail": 0, "c_cmp": 495104, "c_true": 391386, "c_fail": 0, "stab": {"0": 1681, "1": 1775, "2": 1780, "3": 611, "4": 145, "5": 10, "6": 4}, "nonempty_proper": 2169, "fails": [], "instances": 6006, "per_size": {"4x1": 686, "4x2": 642, "4x3": 654, "5x1": 641, "5x2": 675, "5x3": 640, "6x1": 686, "6x2": 701, "6x3": 675}, "seconds": 2.1}
+python3 run_random.py  2.15s user 0.01s system 96% cpu 2.251 total

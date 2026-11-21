@@ -1,0 +1,149 @@
+# Scratch edge cases
+
+AI-written by Codex, 22 November 2026. [Lean module](/Users/ren/tmp/fm/build6/Becoming/ScratchEdgeCases.lean) · [Saved report](/Users/ren/theories/tmp/fm/whole/lean-edge-cases/REPORT.md)
+
+## 1. Verdict in six lines
+
+- **M1.** H, J, I, L, K and M all built clean in order. Only H2 introduced induction on remaining places, as permitted.
+- **M2.** J drops the Boolean step test and return premise. I drops all four move, claim and frame premises. K derives constancy from the pair cover.
+- **M3.** Both requested old statements were recovered. Lean accepted the fully explicit, universe-polymorphic comparisons by `rfl`.
+- **M4.** The final audit found an empty axiom report for every declaration, including the reductions in H.
+- **M5.** H2 proves shortening with listed moves. H3 shows that shortening from listed states alone would imply the limited principle of omniscience (`LPO`).
+- **M6.** J triggers the line-cost criterion, with an 11-line bridge against a two-line old proof. I shares its bridge across two results. L, K and M add finite criteria and retire zero old proof lines.
+
+## 2. Statements, calls and proof lengths
+
+Every theorem below built clean. The statements use `N = all.length` and `every = ∀ x, x ∈ all` unless a different list is named. Free state, move, predicate and frame parameters are those of the corresponding section. Counts are physical proof-body lines, excluding signatures, docstrings and blank lines.
+
+### H · GuardHorizon
+
+`lostStep P guard X s` is `¬ guard s ∨ ∀ a, ¬ Enabled P s a ∨ ∃ t, P.step s a t ∧ X t`. Write `L = rise (lostStep P guard) (fun s => ¬ guard s)`, `everyMove = ∀ a, a ∈ moves`, and `Dist = ∀ (p : Nat → Prop) (q : Prop), (∀ n, p n ∨ q) → (∀ n, p n) ∨ q`. In `Edge₃`, the guard is everywhere true. Its precise premise is `∀ (P : Process (Option Bool) Nat) (all : List (Option Bool)), (∀ z, z ∈ all) → L (all.length + 1) none → L all.length none`. [H source](/Users/ren/tmp/fm/build6/Becoming/ScratchEdgeCases.lean:24)
+
+| Theorem | Statement | Proof uses |
+|---|---|---|
+| `lost_mono` | `MonotoneStep (lostStep P guard)` | Transports the losing outcome along inclusion. |
+| `lost_start` | `∀ s, ¬ guard s → lostStep P guard (fun t => ¬ guard t) s` | Left disjunct. |
+| `lost_implies_lose` | `lostStep P guard X s → loseStep P guard X s` | An enabled move refutes the disabled disjunct. |
+| `lost_iff_lose` | `(∀ s a, Enabled P s a ∨ ¬ Enabled P s a) → (lostStep P guard X s ↔ loseStep P guard X s)` | `lost_implies_lose` and the enabling decision. |
+| `lost_not_viable` | For `S A : Type`, `∀ n s, L n s → ¬ Viable P guard n s` | Horizon induction and `lost_implies_lose` on the viable move. |
+| `lost_pad` | `∀ n s, L n s → L (n + 1) s` | Horizon induction, `lost_start`, `lost_mono`. |
+| `gather_moves` | For `D : A → Prop`, `G : Prop`, `∀ moves : List A, (∀ a, a ∈ moves → (D a → G) → G) → ((∀ a, a ∈ moves → D a) → G) → G` | Move-list induction and `mem_cons_cases`. |
+| `lost_shorten_at_places` | For `G : Prop`, `everyMove → ∀ n (left : List S), left.length = n → (∀ z, z ∈ left ∨ (L (n + 1) z → G)) → ∀ y, (L n y → G) → L (n + 1) y → G` | Place induction, `nil_of_length_zero`, `remove_place`, `lost_pad`, `gather_moves`. |
+| `lost_shortens` | `every → everyMove → L (N + 1) y → L N y` | `lost_shorten_at_places` with the desired conclusion as `G`. |
+| `lost_edge_distributes` | `Edge₃ → Dist` | Explicit three-state process, `lost_pad`, `lost_implies_lose`. |
+| `lpo_of_distributes` | `Dist → LPO` | Inspects one Boolean at each index. |
+
+H changes the loss operator. The older `lose_edge_decides` assumes shortening for implication-based loss with one move. Its 24-line proof still applies to that operator. H has zero iteration-identification bridge lines and replaces zero old lines. [Earlier loss theorem](/Users/ren/tmp/fm/build6/Becoming/ScratchEdgeLaw.lean:516)
+
+### J · Junctures
+
+Write `W = rise (reachStep (Steps P) B) B` for an arbitrary target predicate `B`, and `Short y s = ∃ as, as.length ≤ N ∧ Trace P y as s`. [J source](/Users/ren/tmp/fm/build6/Becoming/ScratchEdgeCases.lean:159)
+
+| Theorem | Statement | Proof uses |
+|---|---|---|
+| `rise_iff_trace` | `∀ k y, W k y ↔ ∃ t as, as.length ≤ k ∧ Trace P y as t ∧ B t` | Horizon induction, empty trace, first move and tail. |
+| `reach_at_count` | `every → ∀ k y, W k y → W N y` | Horizon induction and `reach_rise_shortens` at `Steps P`. |
+| `reach_within_count` | `every → Reach P y s → Short y s` | `rise_iff_trace` in both directions, `reach_at_count`, target equality with `s`. |
+| `reach_within_listed_case` | `every → (∀ x y, edge x y = true ↔ ∃ a, P.step x a y) → Branching.Returns P s → ∀ {y}, Reach P y s → Short y s` | One call to `reach_within_count`. |
+| `reach_within_same` | `@reach_within_listed_case.{u,v} = @Branching.reach_within_listed.{u,v}` | `rfl`. |
+| `possible_iff_within_count` | For `X : Type`, `adm : S → X → Prop`, `every → (Reaching.Possible P adm y x ↔ Reaching.PossibleWithin P adm N y x)` | `reach_within_count` and `Reaching.PossibleWithin.possible`. |
+
+The old proof used a decided step relation and a returning target to obtain a positive-length witness. The stated conclusion permits an empty trace. The new theorem uses only `every` and the given reach, including reflexive reach. The bridge is 11 lines, the old body 2, and the new arbitrary-horizon reduction 3. J gains generality and incurs the M6 cost. [Old reach proof](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Junctures.lean:328)
+
+### I · Likeness
+
+Here `T k s s' = AlikeTo F G k s s'`, `agree p = T 0 p.1 p.2`, `m = pairs.length`, and `N = l'.length * l.length`. Write `within = ∀ p, agree p → p ∈ pairs`, `all = ∀ s, s ∈ l`, and `all' = ∀ s', s' ∈ l'`. The step `alikeStep F G` requires agreement on claims and a matching step with the same move in each direction, with resulting pairs in its input class. [I source](/Users/ren/tmp/fm/build6/Becoming/ScratchEdgeCases.lean:215)
+
+| Theorem | Statement | Proof uses |
+|---|---|---|
+| `iter_iff_stages` | `MonotoneStep Φ → (∀ z, start z ↔ stage 0 z) → (∀ n z, Φ (stage n) z ↔ stage (n + 1) z) → ∀ n z, iter Φ start n z ↔ stage n z` | Horizon induction and monotonicity in both directions. |
+| `alike_mono` | `MonotoneStep (alikeStep F G)` | Transports both matched outcome pairs. |
+| `iter_iff_alikeTo` | `∀ n (p : S × S'), iter (alikeStep F G) agree n p ↔ T n p.1 p.2` | `iter_iff_stages`, `alike_mono`, definitional start and successor clauses. |
+| `alike_at_cover` | `within → ∀ s s', T m s s' → T (m + 1) s s'` | `iter_persists` and `iter_iff_alikeTo`. |
+| `alike_iff_at_cover` | `within → (Alike F G s s' ↔ T m s s')` | `Alike.alikeTo`, `AlikeTo.bisimulation`, `alike_at_cover`. |
+| `alike_at_pairs` | `all → all' → ∀ s s', T N s s' → T (N + 1) s s'` | `alike_at_cover`, `mem_pairsOf`, `length_pairsOf`. |
+| `steady_within_case` | `(∃ l : List A, ∀ a, a ∈ l) → (∃ l : List C, ∀ c, c ∈ l) → FiniteDecided F → FiniteDecided G → all → all' → ∃ k, k ≤ N ∧ ∀ s s', T k s s' → T (k + 1) s s'` | `alike_at_pairs` at `k = N` and `Nat.le_refl`. |
+| `steady_within_same` | `@steady_within_case.{u,v,w,i} = @AlikeTo.steady_within.{u,v,w,i}` | `rfl`. |
+| `alike_iff_alikeTo_pairs` | `all → all' → (Alike F G s s' ↔ AlikeTo F G N s s')` | `alike_iff_at_cover`, `mem_pairsOf`, `length_pairsOf`. |
+
+Both product-bound results drop the move list, claim list and both `FiniteDecided` premises. Both also hold at the length of any list covering just the pairs agreeing on claims. The local bridge is 2 lines, plus a shared 4-line induction also used in L and K. The two old bodies were 6 and 4 lines. Charging all shared lines to I gives 6 against 10 across both bodies, or 6 against 4 if considering the likeness iff alone. The old route to a steady depth also called `stops_decreasing`, a separate 38-line proof body for arbitrary decided decreasing families. [Old steady-depth proof](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Likeness.lean:1073) · [Old likeness iff](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Likeness.lean:1134)
+
+### L · Recurrence and Attraction
+
+`predStep P X s = ∃ t, Steps P t s ∧ X t`. Reachability here concerns the endpoint of a trace of **exactly** the specified length. Its start may depend on the length. [L source](/Users/ren/tmp/fm/build6/Becoming/ScratchEdgeCases.lean:294)
+
+| Theorem | Statement | Proof uses |
+|---|---|---|
+| `pred_mono` | `MonotoneStep (predStep P)` | Preserves the predecessor and step witness. |
+| `iter_iff_reachable` | `∀ n s, iter (predStep P) (fun _ => True) n s ↔ Branching.Reachable P n s` | `iter_iff_stages`, `pred_mono`, `trace_iff_steps`, `«迭之末步»` for the last move. |
+| `reachable_iff_all` | `every → (Branching.Reachable P N s ↔ ∀ n, Branching.Reachable P n s)` | `iter_iff_all` and `iter_iff_reachable`. |
+| `returns_iff_reachable_count` | `every → (Law.Returns next s ↔ Law.Reachable next N s)` | `Law.returns_iff_always_reachable` and `reachable_iff_all`. |
+| `drawn_iff_not_reachable_count` | `every → (Law.Drawn next s ↔ ¬ Law.Reachable next N s)` | `Law.drawn_iff_lost` and `reachable_iff_all`. |
+
+The finite/all-depth equivalence applies to every branching process on listed states. The return and attraction equivalences specialize to a determined law with the same listing premise as the old results. `Law.returns_of_reachable` already proves the bounded-reach-to-return direction in 5 lines. The local bridge is 5 lines plus the shared 4. The old all-depth return and attraction bodies are 1 and 2 lines and are used here. Zero old lines are superseded. [Return direction](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean:622) · [Attraction equivalences](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Attraction.lean:309)
+
+### K · GrammarCandidates
+
+Here `within = ∀ p : S × S, E p.1 p.2 → p ∈ all`. The step `inquiryStep R E` retains `E` and requires a matching successor pair in both directions. [K source](/Users/ren/tmp/fm/build6/Becoming/ScratchEdgeCases.lean:341)
+
+| Theorem | Statement | Proof uses |
+|---|---|---|
+| `inquiry_mono` | `MonotoneStep (inquiryStep R E)` | Transports the two matches along inclusion. |
+| `iter_iff_inquiry` | `∀ n (p : S × S), iter (inquiryStep R E) (fun z => E z.1 z.2) n p ↔ «诘» R E n p.1 p.2` | `iter_iff_stages`, `inquiry_mono`, definitional start and successor clauses. |
+| `inquiry_iff_all` | `within → («诘» R E N x y ↔ ∀ k, «诘» R E k x y)` | `iter_iff_all` and `iter_iff_inquiry`. |
+| `core_iff_inquiry` | `within → «则» E («逆» E) → («核» R E x y ↔ «诘» R E N x y)` | `«核则不可致诘»`, `inquiry_iff_all`, `«诘之对称»`, `«有常之逐点»`. |
+
+The old all-depth criterion assumes symmetry and constancy of the all-depth relation. The new finite criterion assumes symmetry and the pair cover. For the core witness take the relation at depth `N`. Its depth-zero consequence gives containment in `E`, symmetry comes from `«诘之对称»`, and the forward matching clause at `N + 1` supplies constancy at `N`. The local bridge is 2 lines plus the shared 4. The old unrestricted conditional has a 3-line body and still covers its original domain. Zero old lines are superseded. [Old grammar criterion](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean:596)
+
+### M · KeepableStep
+
+`keepStep P g X s = g s ∧ ∃ a t, P.step s a t ∧ X t`, using `courseStep` from the scratch law. [M source](/Users/ren/tmp/fm/build6/Becoming/ScratchEdgeCases.lean:384)
+
+| Theorem | Statement | Proof uses |
+|---|---|---|
+| `keep_mono` | `MonotoneStep (keepStep P g)` | `course_mono`. |
+| `keepable_iff_count` | `every → (Viability.Keepable P g s ↔ iter (keepStep P g) g N s)` | `iter_largest`, `Keepable.start`, `keepable_step_iff`, `Onward.KeepsMoving.run`. |
+
+The old one-step equivalence has no listing premise. The new bounded criterion uses exhaustive states. The largest-class property gives its forward direction. In reverse, the bound-stage family can keep moving, and the run theorem supplies one run staying in that family. The direct equivalence costs 5 lines, with zero separate bridge lines. It uses the old 8-line one-step proof and the 2-line run proof. Zero old lines are superseded. [One-step theorem](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeepableStep.lean:50) · [Run theorem](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Onward.lean:231)
+
+## 3. Why H needs the move distinction
+
+**Listed moves.** Removing a state gives two ways to finish. Revisiting that state applies its saved continuation immediately. At a fresh state the proof needs a shorter answer for every move. A disabled move supplies its answer directly. For a move with a losing outcome, the proof shortens that outcome with the remaining state places. `gather_moves` processes the move list with the same final conclusion `G`, so that either an earlier continuation finishes the proof or all the shorter answers reach the caller together. Neither state equality nor enabling needs a decision. The horizon agrees with viability even at a dead end. If every move is disabled, loss holds at level one, where viability would require an enabled move.
+
+**Unlisted moves.** Use three states, root `none`, middle `some false`, and terminal `some true`. The guard is true everywhere. For each natural-number move `a`, the root can go to the middle and can go to the terminal given `q`. The middle can go to the terminal given `p a` and can go back to the root given `q`. The terminal has no moves.
+
+Given `∀ a, p a ∨ q`, the root loses at level four. A level-three witness at the root, inspected at move zero, either takes the terminal edge and supplies `q`, or yields level-two loss at the middle. At the middle every move is enabled by its given disjunction. Its losing response must use the terminal edge and supply `p a`, since the root cannot lose at level one. Thus shortening yields `(∀ a, p a) ∨ q`. Taking `p a := f a = false` and `q := ∃ a, f a = true` gives `LPO` for every Boolean sequence. The checked result is the implication from the proposed edge to this constructive obstruction. [Three-state reduction](/Users/ren/tmp/fm/build6/Becoming/ScratchEdgeCases.lean:104) · [Boolean specialization](/Users/ren/tmp/fm/build6/Becoming/ScratchEdgeCases.lean:143)
+
+## 4. Blockers and corrections
+
+Every requested result was settled. Build 1 resolved `rise` to a different package declaration and the local notation `L` conflicted with a binder. Build 4 exposed a listing proof missing from three elaborated theorem contexts. Builds 5–7 compiled but reported unused-binder warnings on the exact old J statement. The final compatibility wrappers keep the original named arguments and discard the extra evidence locally. Build 9 exposed a notation precheck error on product projections. Each correction preserved the intended statement.
+
+## 5. Last build and scope
+
+**13 builds.** The clean snapshots are 2, 3, 8, 10, 11, 12 and 13. The final snapshot matches the module byte for byte. Only the numbered wrapper was invoked for Lean. I made no package, law, board or git edits, ran no separate Lean command, lake, checker, gate or tests, and started no agents. The requested report is the only repository-tree file I wrote. [Final snapshot](/Users/ren/tmp/fm/build6/ScratchEdgeCases.clean-13.lean.txt) · [Build 13 log](/Users/ren/tmp/fm/build6/build-13.log)
+
+Build 13 recorded `exit 0` and emitted this JSON.
+
+```json
+{
+  "tree": "/Users/ren/tmp/fm/build6",
+  "modules": 86,
+  "ran": [
+    "Becoming.ScratchEdgeCases",
+    "BecomingScratchEdgeCasesAxiomAudit"
+  ],
+  "reused": 85,
+  "unclean": [],
+  "audits": {
+    "Becoming.ScratchEdgeCases": {
+      "theorems": 37,
+      "declarations": 42,
+      "with_axioms": {}
+    }
+  },
+  "seconds": {
+    "Becoming.ScratchEdgeCases": 2.876,
+    "BecomingScratchEdgeCasesAxiomAudit": 0.4
+  }
+}
+```

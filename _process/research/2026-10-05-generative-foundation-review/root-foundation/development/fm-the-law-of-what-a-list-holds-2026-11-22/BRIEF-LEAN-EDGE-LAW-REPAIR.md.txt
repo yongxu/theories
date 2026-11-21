@@ -1,0 +1,72 @@
+# Repair brief: the edge law's module after its three readers
+
+*AI-written (Claude Fable, board row FM), 22 November 2026, frozen before the implementer ran (hash in `FROZEN-LEAN-EDGE-LAW-REPAIR.sha256.txt`). Scratch only. You wrote `ScratchEdgeLaw.lean` an hour ago; three readers who took no part have read it. It stands: no statement broke, by program or by reading. They found things to change before it can be moved into the package. This is that one repair. A clean failure, told with what blocked it, is a result.*
+
+## Where
+
+Copy `/Users/ren/tmp/fm/build5/Becoming/ScratchEdgeLaw.lean` to `/Users/ren/tmp/fm/build7/Becoming/ScratchEdgeLaw.lean` and change it there (module name unchanged). **Build only with** `/Users/ren/tmp/fm/run-build7.sh <n>`; clean means `exit 0`, `"unclean": []`, `"with_axioms": {}`. Nothing else of Lean. Save each clean build as `/Users/ren/tmp/fm/build7/ScratchEdgeLaw.clean-<n>.lean.txt`. Write only under `/Users/ren/tmp/fm/build7/` and `/Users/ren/theories/tmp/fm/whole/lean-edge-law-repair/` (your report). Do not touch `build5` or `build6` (another session is building in `build6`). Proofs as terms. Import no scratch module.
+
+The readers' returns, to read first: `/Users/ren/theories/tmp/fm/whole/lean-edge-law/RETURN-edge-law-reader-opus.md.txt` (its part (2) marks every docstring, its Q4 has a sketch, its Q6 a table of homes) and `RETURN-edge-law-breaker-fable.md.txt`; the sweep: `lean-edge-law/sweep/REPORT.md`, the three "FOUND" items at the end of its Section 2.
+
+## The changes, in order (build clean after each numbered item)
+
+**R1. Reach is a case of the law, not a second induction.** The reader's finding: `F n z := (reaches n z → G)` is the `n`-th iterate of `regionStep R (fun x => W₀ x → G)` from `fun x => W₀ x → G`, because `(A ∨ B → G) ↔ (A → G) ∧ (B → G)` and `((∃ t, R z t ∧ X t) → G) ↔ ∀ t, R z t → X t → G` hold with nothing decided. Its sketch (not built):
+
+```lean
+theorem reach_imp_iff_iter (G : Prop) : ∀ n z,
+    (reaches n z → G) ↔ iter (regionStep R (fun x => W₀ x → G)) (fun x => W₀ x → G) n z
+  | 0, _ => Iff.rfl
+  | n + 1, z =>
+    ⟨fun h => ⟨fun w => h (.inl w),
+       fun t r => (reach_imp_iff_iter G n t).mp fun p => h (.inr ⟨t, r, p⟩)⟩,
+     fun ⟨here, later⟩ path => path.elim here
+       fun ⟨t, r, p⟩ => (reach_imp_iff_iter G n t).mpr (later t r) p⟩
+
+theorem reach_rise_shortens (every : ∀ x, x ∈ all) {y : S} :
+    reaches (all.length + 1) y → reaches all.length y :=
+  (reach_imp_iff_iter (reaches all.length y) _ y).mpr
+    (iter_persists (region_mono R _) (fun _ h => h.1) (fun x _ => every x)
+      ((reach_imp_iff_iter (reaches all.length y) _ y).mp id))
+```
+
+Build it; **delete `reach_shorten_at_places`** (and `reach_pad` if nothing needs it). Then, from `iter_iff_all` through the same bridge: `∀ n, reaches n y → reaches all.length y` (a level at any height comes down). Can the list be weakened here below `every` (the start is `fun x => W₀ x → G`)? Say; do not force it.
+
+**R2. One step sooner where the start is the step of everything.** For `regionStep R Q`, the step of `fun _ => True` is `Q` (up to `∧ True`). The breaker found by program that with every configuration listed the region, the kernel and reach all settle one step sooner than the module states, and at no step sooner than that. Prove, in Section A, the general form with the weakest honest premises, for example:
+
+```lean
+theorem iter_persists_from_all (mono : MonotoneStep Φ) {all : List S} (every : ∀ x, x ∈ all)
+    (first : ∀ y, V₀ y ↔ Φ (fun _ => True) y) {n : Nat} (len : all.length = n + 1) {y : S} :
+    iter Φ V₀ n y → iter Φ V₀ (n + 1) y
+```
+
+(by `iter_persists` at the start `fun _ => True`, whose `start` premise is trivial, and a shift lemma `iter Φ (Φ V) n ↔ iter Φ V (n + 1)` pointwise; choose the statement that is cleanest, and say what you chose). Then its instances in one or two lines each: `held_iff_iter` and `kernel_iff_iter` at `n` where `all.length = n + 1` with `every`; and **reach one step sooner**: `reaches (n + 1) y → reaches n y` where `all.length = n + 1`. If the shift does not go through without function extensionality in a few builds, say what blocks it and leave R2 out.
+
+**R3. Section C keeps one route**: `kernel_iff_iter`, `iter_region_iff_lasts`, `kernel_iff_lasts_length`. Delete `disturbanceStep`, `disturbance_mono`, `iter_iff_lasts`, `kernel_iff_lasts_length_direct`.
+
+**R4. The reading's second premise asks more than its proof uses.** `updates` is applied only with `codeGuard decode guard c` in hand. Weaken it to the guarded codes: `updates : ∀ c, (∀ s, decode c s → guard s) → ∀ a, Usable P allowed (decode c) a → ∀ o, ∃ d, ∀ s, decode d s ↔ Seen P sense (decode c) a o s`. If `iter_iff_kept` then needs its statement restricted (it may: at level 0 nothing is asked, at `n + 1` the guard is in hand), restrict it honestly and say how.
+
+**R5. Take out what is not a case.** Delete `no_closed_of_not_viable` (it uses neither the list nor the law: it is `closed_viable` read backwards at one horizon). Of the three `not_*_of_not_succ` keep only the general `not_iter_of_not_succ`, in Section A. Mark `continues_same` with a comment that it is a check of the scratch module and does not land.
+
+**R6. The losing step is tied to `Viable` by a theorem**, in Section E's home with `loseStep`: `rise (loseStep P guard) (fun s => ¬ guard s) n s → ¬ Viable P guard n s`, for every `n` (constructive, a short induction; a configuration with no enabled move is lost at level 1 and fails `Viable … 1`). If the converse needs a decision, do not attempt it.
+
+**R7. Homes.** The checker refuses a core module that imports `GuardHorizon` (an application). So lay Section G out again:
+- `not_iter_of_not_succ`: Section A (`-- home: PredicateIteration`).
+- `reachStep`, the bridge, `reach_rise_shortens` and what follows from them: with `regionStep` (`-- home: CommonResponse`).
+- `rise`, `dual`, `dual_mono`, `iter_dual_iff`, `rise_not_not`, `rise_of_stable`, `singleton_rise_needs_em`: one section `-- home: RisingIteration (a new core module importing PredicateIteration and Decidedness)`.
+- `loseStep`, R6's theorem, `lose_edge_decides_negations`, `lose_edge_decides`: `-- home: GuardHorizon`, after the choice section.
+Check for each section that it uses nothing its home could not import, and say so.
+
+**R8. The list lemma is the package's.** `Refinement.remove_mem` (Refinement.lean l. 63) is `remove_place` with one equation turned: `l'.length + 1 = l.length`. State the local lemma with **exactly that statement and that name** (`remove_mem`, in your namespace), and adapt `extend_at_places`, so that on landing the package's own lemma, moved down to `Prelude`, replaces it and no second list lemma lands.
+
+**R9. Names and docstrings.** The premise name `within` is used for three things: keep it for the list's cover only; call the inclusion in `postfixed_in_iter` `inside`; rename the pattern variable at the end of `coded_kept_iff_closed`. Then **every docstring the Opus reader marked** (its part (2): SAYS MORE, speaks of the proof, or a plainer wording offered) takes the reader's corrected sentence, or a better one that says exactly the statement with its premises. No docstring may speak of how the proof goes, and none may use "edge" or "law".
+
+## What counts as nothing gained (frozen)
+
+- **N1.** R1 does not build as a call of `iter_persists` through the bridge (then say exactly where the sketch fails, and keep the old induction).
+- **N2.** Any statement of the build-5 module that should survive (everything not deleted by R3 or R5) no longer follows in one line.
+- **N3.** Any declaration with an axiom.
+- **N4.** A section that uses something its home cannot import.
+
+## What to return
+
+Your whole report as your final answer, also saved as `/Users/ren/theories/tmp/fm/whole/lean-edge-law-repair/REPORT.md`: (1) in five lines what built clean and what did not, N1 to N4; (2) R1 to R9 each: done, or what blocked it, with the statements as they now stand; (3) the module's sections with their homes and line counts, and for each home the imports it would need; (4) the last build's log (its JSON), the number of builds, and what you did not do.

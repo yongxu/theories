@@ -1,0 +1,26 @@
+(iii) every f 1x1: instances 4; Kernel differs from Lasts at |S|-1 in 0; at |S|-2 in 0; chain from guard differs from chain from everything one level later in 0
+(iii) every f 2x1: instances 32; Kernel differs from Lasts at |S|-1 in 0; at |S|-2 in 4; chain from guard differs from chain from everything one level later in 0
+      a failure at |S|-2: f on admitted {(0, 0): 0, (1, 0): 0}, adm [0], guard [1]: kernel [], Lasts 0 [1]
+(iii) every f 2x2: instances 256; Kernel differs from Lasts at |S|-1 in 0; at |S|-2 in 56; chain from guard differs from chain from everything one level later in 0
+      a failure at |S|-2: f on admitted {(0, 0): 0, (1, 0): 0}, adm [0], guard [1]: kernel [], Lasts 0 [1]
+(iii) every f 3x1: instances 432; Kernel differs from Lasts at |S|-1 in 0; at |S|-2 in 18; chain from guard differs from chain from everything one level later in 0
+      a failure at |S|-2: f on admitted {(0, 0): 0, (1, 0): 0, (2, 0): 1}, adm [0], guard [1, 2]: kernel [], Lasts 1 [2]
+(iii) every f 3x2: instances 23328; Kernel differs from Lasts at |S|-1 in 0; at |S|-2 in 1782; chain from guard differs from chain from everything one level later in 0
+      a failure at |S|-2: f on admitted {(0, 1): 0, (1, 1): 0, (2, 1): 1}, adm [1], guard [1, 2]: kernel [], Lasts 1 [2]
+(iii) every f 4x1: instances 8192; Kernel differs from Lasts at |S|-1 in 0; at |S|-2 in 96; chain from guard differs from chain from everything one level later in 0
+      a failure at |S|-2: f on admitted {(0, 0): 0, (1, 0): 0, (2, 0): 1, (3, 0): 2}, adm [0], guard [1, 2, 3]: kernel [], Lasts 2 [3]
+(iii) random f 4x2: instances 96000; Kernel differs from Lasts at |S|-1 in 0; at |S|-2 in 1877; chain from guard differs from chain from everything one level later in 0
+      a failure at |S|-2: f on admitted {(0, 0): 1, (1, 0): 0, (2, 0): 3, (3, 0): 1}, adm [0], guard [1, 2, 3]: kernel [], Lasts 2 [2]
+(iii) random f 5x2: instances 76800; Kernel differs from Lasts at |S|-1 in 0; at |S|-2 in 376; chain from guard differs from chain from everything one level later in 0
+      a failure at |S|-2: f on admitted {(0, 1): 4, (1, 1): 4, (2, 1): 0, (3, 1): 1, (4, 1): 3}, adm [1], guard [0, 2, 3, 4]: kernel [], Lasts 3 [2]
+(iv) region 1 points: instances 4; held differs from iter at |S|-1 in 0; at |S|-2 in 0; chain from Q differs from chain from everything one level later in 0
+(iv) region 2 points: instances 64; held differs from iter at |S|-1 in 0; at |S|-2 in 16; chain from Q differs from chain from everything one level later in 0
+      a failure at |S|-2: R [(0, 1)], Q [0]: held [], iter 0 [0]
+(iv) region 3 points: instances 4096; held differs from iter at |S|-1 in 0; at |S|-2 in 384; chain from Q differs from chain from everything one level later in 0
+      a failure at |S|-2: R [(0, 2), (1, 0)], Q [0, 1]: held [], iter 1 [1]
+(iv) region 4 points: instances 1048576; held differs from iter at |S|-1 in 0; at |S|-2 in 24576; chain from Q differs from chain from everything one level later in 0
+      a failure at |S|-2: R [(0, 3), (1, 2), (2, 0)], Q [0, 1, 2]: held [], iter 2 [1]
+(i) choice 2x2: instances 1024; start (guard) = choiceStep of everything in 961 (elsewhere the level |S| is needed: see cases.py, failures at |S|-1)
+(i) choice 3x1: instances 4096; start (guard) = choiceStep of everything in 3375 (elsewhere the level |S| is needed: see cases.py, failures at |S|-1)
+seconds 10.0
+python3 sharper.py  9.94s user 0.02s system 98% cpu 10.092 total

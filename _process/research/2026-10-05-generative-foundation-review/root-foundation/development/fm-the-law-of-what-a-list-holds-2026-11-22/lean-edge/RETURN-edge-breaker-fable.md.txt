@@ -1,0 +1,145 @@
+**AI-written (Claude Fable 5.2), a reader who took no part. 22 November 2026. No Lean was run; the builder's log is the evidence that it compiles.**
+
+## 1. Verdict in five lines
+
+1. This is not the sixth. `horizon_persists` does the work in Part 3 and Part 4, and neither proof would stand without it. Its own proof (`extend_at_places`) is a direct induction that I read line by line and found no fault in.
+2. No program broke any statement: Parts 1 to 3 held on all 3,167,308 (process, guard) pairs tried exhaustively and on 6,006 random ones. Part 4 held on 118,636,544 (instance, class) comparisons exhaustively and 365,376 random ones. The only failures are the intended ones, with N−1 in place of N.
+3. E2: Part 1 needs only `every`, with no decided equality and nothing about moves, guard or step. E4: `updates` names no guard, horizon or move, and both sides of the equivalence occur in bulk with it true. E3 passes at 17 lines against 21 on the stricter count, or 20 against 21 if the `Horizon` definition the case needs is charged.
+4. What is thinner than the claim: Part 2's fourth line is `closed_viable` read backwards. Part 4's edge is at the number of codes, not configurations, and no instance of Part 4 exists in Lean. The law is proved for `Horizon`, a scratch copy of `Viable`.
+5. A telling must not say "kept for as many steps as there are configurations" of the form through a reading. That sentence is false there: the smallest counter-instance has 2 configurations.
+
+## 2. Each check, with counts
+
+Programs and outputs are in `/Users/ren/theories/tmp/fm/whole/lean-edge/break/`. `literal.py` has the definitions one function each from the Lean sources. `bv.py` and the `run_*.py` files evaluate them on whole instance spaces at once. `xcheck.py` compares the two models and found 0 disagreements (whole 2x2 and 3x1 spaces by totals; 300 sampled 3x2 instances one by one, with closed families by brute force over all 256).
+
+The text I read is the built source: `ScratchViableEdge.lean.txt` is byte-identical to `/Users/ren/tmp/fm/build3/Becoming/ScratchViableEdge.lean` and to the `clean-8` snapshot. `ScratchComparison` is unchanged from build2. The brief's hash matches `FROZEN-LEAN-EDGE.sha256.txt`. `build-8.log.txt` shows exit 0, 19 declarations, `with_axioms: {}`; my count of the module is also 16 theorems and 3 definitions.
+
+**Exhaustive spaces for (a) to (c):** configurations x moves = 1x1, 1x2, 2x1, 2x2, 2x3, 3x1, 3x2, 4x1, every step relation, every guard. Random: 6,006 processes of 4 to 6 configurations with 1 to 3 moves.
+
+**(a) Part 1.**
+- At list length N: the premise held at 2,109,738 (instance, configuration) pairs exhaustively and the conclusion failed at 0.
+- At every length from N+1 to 3N (a list with duplicates or longer than the set): 0 failures.
+- Random, at lengths N, N+1, N+2, N+3 and 2N: premise held 49,960 times, 0 failures.
+- `extend_at_places` as stated, for every horizon n up to N+1 and every set of at most n listed configurations: 126,153,532 cases, cover held in 21,173,558, 0 failures.
+- With N−1 in place of N it fails: 5,114 failures exhaustively out of 2,114,852 premise-holding pairs, and 23 of 10,015 random. The fewest-step failing instance at each size:
+  - 1 configuration: no step, guard true. `Viable 0` holds at 0 and no move is enabled.
+  - 2 configurations: the single step 0 –a→ 1, guard {0,1}, at 0. `Viable 1` holds at 0; its outcome 1 has no enabled move.
+  - 3 configurations: steps 1 –a→ 0 and 0 –a→ 2, guard everything, at 1.
+  - 4 configurations: steps 1 → 2 → 0 → 3, guard everything, at 1.
+- The bound N is the right one. The least n with Viable(n) = Viable(n+1) never exceeded N and equalled N in 1, 1, 4, 16, 52, 48, 3,456 and 1,536 instances of the eight spaces.
+
+**(b) Part 2.** Viable(N) against the largest closed set (the union of every closed subset, by brute force over all subsets): 10,533,004 comparisons, 0 differences. Viable(n) = Viable(N) for every n from N to 3N: 0 differences. Random: 6,006 instances, 0 differences; 2,169 of them had a viable region neither empty nor everything.
+
+**(c) Part 3.** Continues(n) against Viable(n) with a true guard on the pair process, for n up to 3N: 11,348,728 comparisons exhaustively, 0 differences. Random: 495,104 comparisons, 0 differences.
+
+**(d) Part 4.** Codes are all 2^N classes, so `updates` holds. `allowed` was true in the exhaustive runs, since a disallowed move at s is, for KeptFor, a move with no outcome at s and every step relation is enumerated. It was random in the random runs.
+
+| Space | Reading | Instances | (instance, class) pairs | Differs from largest closed family | Differs for n up to 2x codes |
+|---|---|---:|---:|---:|---:|
+| 2x1 | every table into two values | 1,024 | 4,096 | 0 | 0 |
+| 2x2 | every table into two values | 262,144 | 1,048,576 | 0 | 0 |
+| 3x1 | every table into two values | 2,097,152 | 16,777,216 | 0 | 0 |
+| 2x2 | three fixed readings | 1,024 each | 4,096 each | 0 | 0 |
+| 3x2 | six fixed readings | 2,097,152 each | 16,777,216 each | 0 | 0 |
+| 2x3 | nothing; where it ended | 16,384 each | 65,536 each | 0 | 0 |
+
+- The six fixed readings are: nothing; nothing with an unused value; where it ended; where it started; ended in 0 or not; a parity table. An unused value changed no count, as the definition predicts (the empty class is kept once a move exists).
+- The largest closed family was the union of every closed family, by brute force over all 2^(2^N) families.
+- Both sides occur: under "nothing" on 3x2, 4,815,947 of 16,777,216 pairs are kept, 1,150,671 of them classes of two or more.
+- Random (11,433 instances of 4 to 6 configurations, six kinds of reading, random guard and `allowed`): 365,376 classes, 0 differences from the largest closed family (here by greatest fixed point), 0 differences at codes+1, codes+2 and 2x codes (the last for N ≤ 5).
+- The theorem with the smallest code set it admits for each start class (the closure under usable updates): 365,376 cases, 0 failures.
+
+**How far the bound is from tight** (the least number of steps after which KeptFor stops changing):
+
+| Configurations | Codes (2^N) | Most steps needed | How found |
+|---:|---:|---:|---|
+| 2 | 4 | 3 | exhaustive, reading nothing |
+| 3, 2 moves | 8 | 6 | exhaustive, reading nothing |
+| 3, 3 moves | 8 | 7 | hill-climb, checked by the literal model |
+| 4, 3 moves | 16 | 13 | hill-climb only |
+| 5, 2 moves | 32 | 15 | hill-climb only |
+
+- Under "where it ended" the most was N in every exhaustive space (2 and 3).
+- Random search found 7, 9 and 12 for 4, 5 and 6 configurations.
+- With the closure as the code list, the bound is met exactly. In the 3x3 instance, class {0} has 7 codes, is kept for 6 steps and not for 7. The step list is in `out_e_climb.txt`.
+
+**Reading of E2 and E4 (task item 3).**
+- **E2.** `horizon_persists` and `viable_persists` take `every : ∀ x, x ∈ all` and nothing else. There is no `DecidableEq`, no list or decision of moves, guard or step, and no classical principle. `extend_at_places` asks less than a list of every configuration: only a cover. Nothing goes beyond E2's allowance.
+- **E4.** The premises of `coded_kept_iff_closed` are `every` (a list of every code) and `updates` (each class seen from a coded class after a usable move and a value is, pointwise, the class of some code). `updates` gives no family, guard or move. The forward proof builds the family (subclasses of codes at the full horizon) and takes its move from `horizon_persists`. It does not hand in the closed family.
+- **Other points from reading.**
+  - `no_closed_of_not_viable` takes no `every`. It is `closed_viable` backwards, as the implementer's report says. The bound on every choice (not kept for some n implies not kept for the list's length) is only inside `viable_iff_every_horizon`, not stated on its own.
+  - Part 3 calls `horizon_persists`, not `viable_persists`, because `Viable` is at `Type` and the old theorem is universe-polymorphic. `continues_same := rfl` certifies only that the statements agree (proof irrelevance). By reading, the case calls none of the five excluded theorems.
+  - Line counts confirmed: new case 2 + 10 + 5 = 17; old `continues_cycle` 12 + `continues_persists` 9 = 21, or 28 with `path_of_continues`, which stays for `Onward.lean` l. 136. The 17 omits the 3-line `Horizon` definition in `ScratchComparison` that the case needs. Part 1 is 36 lines.
+  - E1: not found in what I read (declaration list of `GuardHorizon.lean`, greps for `Viable`, `KeptFor`, `all.length` across `Becoming/*.lean`, `Parting.lean` l. 385 to 493). Not a full sweep.
+
+## 3. The proof of `extend_at_places`, in my words
+
+**Statement.** Given a list `left` of length n and a cover, every configuration kept for n steps is kept for n+1.
+
+**What the cover says.** Every configuration either still has a place in `left`, or is already known to be kept for n+1 steps, which is one more than the horizon now in hand. At the start the list is `all` and `every` puts each configuration in the first alternative.
+
+**Base, n = 0.** The list is empty, so the cover's first alternative is impossible and it gives "kept for 1 step" outright.
+
+**Step.** Take y kept for n+1 and ask the cover about y.
+- If it answers "kept for n+2", that is the goal.
+- If it answers "y has a place in `left`", `remove_place` takes out that one occurrence and leaves `rest` of length n. Every member of `left` is either y (the removed occurrence) or in `rest`.
+- The cover is rebuilt one level down: a configuration in `rest` keeps its place; y itself is covered by the hypothesis in hand (kept for n+1); a configuration covered as "kept for n+2" is kept for n+1 by `horizon_pred`.
+- y's own witness gives the guard, an enabled move, and each outcome kept for n steps. The induction at n, with `rest` and the new cover, lifts each outcome to n+1. The same move then shows y kept for n+2.
+
+**Why a place may be spent once.** When y's place is spent, y is recorded at horizon n+1. Every later question about y is at a smaller horizon, which `horizon_pred` answers from the record. So y never needs a place again. The list's length equals the remaining depth, and each descent spends at most one place, so places cannot run out before depth does. A duplicate of y left in `rest` is harmless: it only keeps the weaker alternative true.
+
+**Why no decision of equality.** Nothing is ever compared.
+- The case split is on the cover's own disjunction, a proof eliminated into a proposition.
+- The place removed is the one the membership proof points at, by recursion on that proof.
+- "z = y" arises only from the head case of membership, as data.
+- The proof never asks for a first repeat on a branch, which was the difficulty point 2 of `AFTER-LEAN-EDGE.md` foresaw. It proves "kept for N implies kept for N+1" by the invariant, not the brief's set of fresh nodes.
+
+`horizon_persists` then reads the move off the extra step. I found no fault. The recursion is structural on n and the log reports no axioms.
+
+## 4. What the instance in (e) shows
+
+**The smallest instances.**
+- **Any guard:** 2 configurations, 2 moves, 3 steps: 0 –a→ {0, 1}, 1 –b→ 0, guard true, class {0}. Under "where it ended" it is kept for every horizon. Under "nothing" it fails at 2: after a the class is {0,1} and no move is enabled at both. Counts: 16 separated (instance, class) pairs in 2x2, 129,108 in 3x2, and 0 with one move.
+- **Only the guard separating** (every move has an outcome everywhere, guard = level above 0, level 0 absorbing): none with 2 configurations; 768 with 3. The fewest-step one: 0 –a→ {0,1}, 0 –b→ 2, 1 –a→ 2, 1 –b→ 0, 2 stays; guard {0,1}; class {0}. It needs a move with two outcomes.
+- **Deterministic, only the guard separating:** none among the 675 instances with 3 configurations; first with 4 (1,344 separated classes). The first: next(0)=(0,0), next(1)=(0,1), next(2)=(0,3), next(3)=(1,0); guard {1,2,3}; class {1,2}.
+- **A level that runs down twice** (two lanes, levels 2 → 1 → 0, matching move keeps the level; 5 configurations; start {L2, R2}):
+
+| Reading | Codes by closure | In largest closed family | First horizon not kept |
+|---|---:|---|---|
+| nothing | 9 | no | 3 |
+| where it ended | 7 | yes | none |
+| level reached | 7 | yes | none |
+
+  This agrees with the implementer's reading of the filed Drain case, which I did not open.
+
+**What it shows.**
+- The law through a reading is not empty where a reading does work: with process, guard and class the same, the class is on one side under one reading and the other side under the other.
+- The module proves the edge for each reading separately. It says nothing between readings; that is the package's `KeptFor.finer`, one direction. My runs found 0 classes kept under "nothing" and not under "where it ended".
+- The edge through a reading is not at the number of configurations. In the 2-configuration process 0 –b→ {0,1}, 1 –a→ 0, guard true, reading "nothing", class {1} is kept for 2 steps and not for 3. It has 3 codes by closure and fails exactly at 3.
+- No Lean declaration instantiates Part 4. Whether `every` and `updates` can be met for a concrete process with no axioms is untested; Part 5 was not built.
+
+## 5. What I did not check
+
+- Any Lean run, the axiom audit's method, or that the log's audit covers auxiliary declarations beyond the 19 named.
+- Parts 1 to 3 exhaustively beyond the eight spaces listed. 3 configurations with 3 moves was not exhaustive: the bit-vectors would need over a gigabyte on a shared machine.
+- Part 4 with every reading on 3x2 (six fixed readings only), readings into more than two values exhaustively, or `allowed` exhaustively.
+- Code sets other than all classes and the closure: several codes for one class, or lists with duplicates.
+- Empty types for configurations, moves or codes, except by reading.
+- The true worst case for steps needed under a reading at 4 or more configurations (hill-climb only).
+- `ScratchComparison` beyond `Horizon`, `horizon_iff_viable` and the lines Part 4's report cites; the filed Drain file; `Onward.lean` beyond the grep line.
+- E5 beyond the log, and E1 beyond the greps named above.
+- Whether `Viable` can be made universe-polymorphic in the package so that the scratch `Horizon` and `horizon_iff_viable` are not a second definition on landing.
+
+Files are in `/Users/ren/theories/tmp/fm/whole/lean-edge/break/`:
+- `bv.py`
+- `literal.py`
+- `run_viable.py`
+- `run_random.py`
+- `run_kept.py`
+- `run_kept_random.py`
+- `xcheck.py`
+- `e_search.py`
+- `verify_long.py`
+- the `out_*.txt` outputs
+
+Nothing in the repository or git was changed.

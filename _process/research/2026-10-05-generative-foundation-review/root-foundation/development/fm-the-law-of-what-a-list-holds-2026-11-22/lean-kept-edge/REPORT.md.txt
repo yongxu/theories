@@ -1,0 +1,148 @@
+## 1. Result in five lines
+
+1. The falling law and all five cases built clean. The final audit found 30 theorems and 41 declarations with empty axiom reports. [ScratchKeptEdge.lean](/Users/ren/tmp/fm/build4/Becoming/ScratchKeptEdge.lean)
+2. H1 and H3 did not occur. One proof from monotonicity, a falling start and an exhaustive list supplies both old finite edges.
+3. H2 did not occur in the comparisons below. Both old statements passed `rfl`. Two of the five direct-proof counts are estimates.
+4. H4 and H5 did not occur. The package search found the every-horizon kernel theorem, and the scratch module proves the single-horizon version. My verdict on H6 is no for each case.
+5. The unrestricted positive rising law would imply excluded middle. Its double-negated conclusion and its repair by stability at the queried state both built clean.
+
+## 2. Theorem statements and dependencies
+
+All 30 theorems below built clean. The tables use the module’s section parameters and local notation.
+
+**Falling chain.** Here `S : Type u`, `mono : MonotoneStep Φ` and `start : ∀ y, Φ V₀ y → V₀ y`. Only `postfixed_in_iter` omits `start`. In all sections, `MonotoneStep Φ` expands to `∀ {X Y : S → Prop}, (∀ z, X z → Y z) → ∀ y, Φ X y → Φ Y y`.
+
+| Declaration and statement | Proof uses |
+|---|---|
+| `iter_pred : ∀ n y, iter Φ V₀ (n + 1) y → iter Φ V₀ n y` | Induction using start and mono. |
+| `extend_at_places : ∀ (n : Nat) (left : List S), left.length = n → (∀ z, z ∈ left ∨ iter Φ V₀ (n + 1) z) → ∀ y, iter Φ V₀ n y → iter Φ V₀ (n + 1) y` | Induction using nil_of_length_zero, ScratchViableEdge.remove_place, Nat.succ.inj, iter_pred and mono. |
+| `iter_persists {all : List S} (every : ∀ x, x ∈ all) {y : S} : iter Φ V₀ all.length y → iter Φ V₀ (all.length + 1) y` | extend_at_places on the whole list. |
+| `iter_within : ∀ n y, iter Φ V₀ n y → V₀ y` | Induction using iter_pred. |
+| `iter_postfixed {all : List S} (every : ∀ x, x ∈ all) : ∀ y, iter Φ V₀ all.length y → Φ (iter Φ V₀ all.length) y` | iter_persists. |
+| `postfixed_in_iter {K : S → Prop} (within : ∀ y, K y → V₀ y) (post : ∀ y, K y → Φ K y) : ∀ n y, K y → iter Φ V₀ n y` | Induction using within, post and mono. Omits start. |
+| `iter_iff_all {all : List S} (every : ∀ x, x ∈ all) {y : S} : iter Φ V₀ all.length y ↔ ∀ n, iter Φ V₀ n y` | postfixed_in_iter, iter_within and iter_postfixed. |
+| `iter_largest {all : List S} (every : ∀ x, x ∈ all) : let L := iter Φ V₀ all.length; (∀ y, L y → V₀ y) ∧ (∀ y, L y → Φ L y) ∧ ∀ K : S → Prop, (∀ y, K y → V₀ y) → (∀ y, K y → Φ K y) → ∀ y, K y → L y` | iter_within, iter_postfixed and postfixed_in_iter. |
+
+**Choice.** The start is `guard`. The step at `s` is `guard s ∧ ∃ a, Enabled P s a ∧ ∀ t, P.step s a t → X t`. The step and its monotonicity proof are universe-polymorphic. The three theorems using `Viable` have `S A : Type`.
+
+| Declaration and statement | Proof uses |
+|---|---|
+| `choice_mono : MonotoneStep (choiceStep P guard)` | Transports each enabled move’s outcomes along the inclusion. |
+| `iter_iff_viable : ∀ n s, iter (choiceStep P guard) guard n s ↔ Viable P guard n s` | Iff.rfl at zero and choice_mono in both directions at a successor. |
+| `viable_persists {all : List S} (every : ∀ x, x ∈ all) {y : S} (kept : Viable P guard all.length y) : ∃ a, Enabled P y a ∧ ∀ z, P.step y a z → Viable P guard all.length z` | One iter_persists, with choice_mono and iter_iff_viable. |
+| `viable_same : @viable_persists = @ScratchViableEdge.viable_persists` | rfl. |
+
+**Some course.** Here `S : Type u`, `A : Type v`. The start is `fun _ => True`, and the step is `∃ a t, P.step s a t ∧ X t`.
+
+| Declaration and statement | Proof uses |
+|---|---|
+| `course_mono : MonotoneStep (courseStep P)` | Preserves the move, outcome and step witness. |
+| `iter_iff_continues : ∀ n s, iter (courseStep P) (fun _ => True) n s ↔ Lasting.Continues P n s` | Iff.rfl at zero and course_mono in both directions at a successor. |
+| `continues_persists_case {all : List S} (every : ∀ x, x ∈ all) {y : S} (continues : Lasting.Continues P all.length y) : ∃ a z, P.step y a z ∧ Lasting.Continues P all.length z` | One iter_persists, with course_mono and iter_iff_continues. |
+| `continues_same : @continues_persists_case.{u,v} = @Parting.continues_persists.{u,v}` | rfl. |
+
+**Every disturbance.** The start is `guard`, and the step is `guard s ∧ ∀ a, adm a → X (f s a)`. State and disturbance universes are independent.
+
+| Declaration and statement | Proof uses |
+|---|---|
+| `disturbance_mono : MonotoneStep (disturbanceStep f adm guard)` | Transports the conclusion for each admitted disturbance. |
+| `iter_iff_lasts : ∀ n s, iter (disturbanceStep f adm guard) guard n s ↔ Lasts f adm guard n s` | Iff.rfl at zero and disturbance_mono in both directions at a successor. |
+| `kernel_iff_lasts_length {all : List S} (every : ∀ x, x ∈ all) {s : S} : Kernel (disturbed f adm) guard s ↔ Lasts f adm guard all.length s` | Lasting.kernel_iff_lasts, one iter_iff_all, disturbance_mono and iter_iff_lasts. |
+
+**Through a reading.** Here `Φ = readingStep P sense guard allowed decode` and `safe = codeGuard decode guard`. The bridge takes `updates : ∀ c a, Usable P allowed (decode c) a → ∀ o, ∃ d, ∀ s, decode d s ↔ Seen P sense (decode c) a o s`. The case takes `every : ∀ c, c ∈ all` and then `updates`.
+
+| Declaration and statement | Proof uses |
+|---|---|
+| `reading_mono : MonotoneStep Φ` | Preserves the usable move and each covering code. |
+| `iter_iff_kept : ∀ n c, iter Φ safe n c ↔ KeptFor P sense guard allowed n (decode c)` | Induction using updates and KeptFor.mono in both directions. |
+| `coded_kept_iff_closed {c : C} : KeptFor P sense guard allowed all.length (decode c) ↔ InClosedFamily P sense guard allowed (decode c)` | One iter_postfixed, reading_mono, iter_iff_kept, Seen.mono and keptFor_of_closed. |
+| `coded_same : @coded_kept_iff_closed.{u,v,w,q} = @ScratchViableEdge.coded_kept_iff_closed.{u,v,w,q}` | rfl. |
+
+**The grammar’s region.** The explicit parameters are `R : «际» S` and `Q : S → Prop`. The start is `Q`, and the step is `Q s ∧ ∀ t, R s t → X t`.
+
+| Declaration and statement | Proof uses |
+|---|---|
+| `region_mono : MonotoneStep (regionStep R Q)` | Transports each related state along the inclusion. |
+| `held_iff_iter {all : List S} (every : ∀ x, x ∈ all) {s : S} : «承» («逆» («所闭» R)) Q s ↔ iter (regionStep R Q) Q all.length s` | «所闭之承最大», region_mono and one iter_largest. |
+
+**Rising chain.** Here `rise` abbreviates `iter`, `mono : MonotoneStep Ψ`, `start : ∀ y, W₀ y → Ψ W₀ y`, and `every : ∀ x, x ∈ all`. The singleton theorem has its own explicit premises. `dual_mono` takes only `mono`, `iter_dual_iff` takes `mono, every`, and the two remaining theorems take all three.
+
+| Declaration and statement | Proof uses |
+|---|---|
+| `singleton_rise_needs_em (edge : ∀ Ψ : (Unit → Prop) → Unit → Prop, MonotoneStep Ψ → rise Ψ (fun _ => False) 2 () → rise Ψ (fun _ => False) 1 ()) (p : Prop) : Decided p` | Instantiates edge with the singleton step. Monotonicity uses Or.imp. |
+| `dual_mono : MonotoneStep (dual Ψ)` | Uses mono under two negations. |
+| `iter_dual_iff : ∀ n y, iter (dual Ψ) (fun z => ¬ W₀ z) n y ↔ ¬ rise Ψ W₀ n y` | Induction using mono, not_not_all, not_not_decided and Decided.of_not_not. |
+| `rise_not_not {y : S} (reached : rise Ψ W₀ (all.length + 1) y) : ¬ ¬ rise Ψ W₀ all.length y` | iter_dual_iff, dual_mono and one iter_persists. The dual start uses mono and start. |
+| `rise_of_stable {y : S} (stable : (¬ ¬ rise Ψ W₀ all.length y) → rise Ψ W₀ all.length y) : rise Ψ W₀ (all.length + 1) y → rise Ψ W₀ all.length y` | rise_not_not followed by stable. |
+
+## 3. H1 to H6
+
+**H1.** `iter_persists` uses `mono`, `start` and `every` at arbitrary state universe. The proof removes the occurrence supplied by membership. The remaining list may contain duplicates. It needs neither an equality decision nor a list of moves, outcomes, predicates or proofs. The start premise cannot simply be deleted. On `[false, true]`, take `V₀ b := b = false` and `Φ X b := X (!b)`. This monotone step swaps the two singleton predicates. At `false`, iterate 2 holds and iterate 3 fails. This counterexample is given here as an argument.
+
+The chain falls and stays inside `V₀` without a list. Every post-fixed `K` inside `V₀` lies in every iterate by `postfixed_in_iter`, using monotonicity alone beyond the two premises on `K`. The exhaustive list supplies the converse inclusion at its length, making that iterate post-fixed and hence the largest such region. This also gives the equivalence with every horizon.
+
+**H2.** The bridge and final theorem columns count nonblank source lines, including statements and proofs. The total also charges the case’s definitions and monotonicity proof. Shared package lemmas, section setup, local notation and separate `rfl` checks are excluded. The three checks cost one line each. Cases 3 and 5 have no pre-existing direct proof that I found, so their direct counts refer to same-layout specializations of the list induction on paper.
+
+| Case | Bridge + final theorem | Case total | Direct comparison |
+|---|---:|---:|---|
+| 1. Choice | 4 + 5 | 13 | 32 lines in the old implementation, or 37 charging its imported 5-line horizon bridge |
+| 2. Some course | 4 + 5 | 12 | 21 measured lines |
+| 3. Every disturbance | 4 + 5 | 13 | About 27 lines by direct induction |
+| 4. Through a reading | 10 + 11 | 31 | 35 measured lines |
+| 5. Grammar’s region | 0 + 6 | 9 | About 31 lines by direct induction. Charging the shared `iter_largest` packaging to this case raises 9 to 15 |
+
+For case 1 the measured 32 are `horizon_pred` (4), `extend_at_places` (19), `horizon_persists` (4) and `viable_persists` (5). Both routes reuse the same 9-line `remove_place`. For case 2 the 21 are `continues_cycle` (12) and `continues_persists` (9), with the independently used `path_of_continues` excluded as specified. For case 4 the 35 are `codeProcess` (4), `code_horizon_of_kept` (9) and `coded_kept_iff_closed` (22). The new code uses two local notation lines if those are charged as well. [Old choice proof](/Users/ren/tmp/fm/build3/Becoming/ScratchViableEdge.lean:27) · [Old course proof](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Parting.lean:403) · [Old reading proof](/Users/ren/tmp/fm/build3/Becoming/ScratchViableEdge.lean:134)
+
+For case 3, specializing the 18-line place induction to `Lasts` takes a three-line predecessor lemma. Its last line retains the guard and recurses at `f y a` for each admitted `a`. A six-line conclusion makes the stabilized level a constant `Lasting.Ladder` and applies `Ladder.lasts` and `kernel_iff_lasts`. For case 5, the analogous count is one line for the step, three for its predecessor, 18 for places, four for inclusion of the grammar’s region by horizon induction, and five for the final equivalence using `«闭在内则在所闭之承»`. These two estimates describe independent proofs without the general finite edge. [List induction used for the estimates](/Users/ren/tmp/fm/build4/Becoming/ScratchKeptEdge.lean:33)
+
+**H3.** Lines 107 and 133 each call the same `iter_persists` once. The only occurrence of `Parting.continues_persists` in the new source is its statement comparison. Neither old proof supplies the new finite edge. Lean accepted `viable_same`, `continues_same.{u,v}` and `coded_same.{u,v,w,q}` by `rfl`. Proof irrelevance makes these checks evidence that the theorem types agree. The call sites establish the proof dependencies. [Choice](/Users/ren/tmp/fm/build4/Becoming/ScratchKeptEdge.lean:104) · [Course](/Users/ren/tmp/fm/build4/Becoming/ScratchKeptEdge.lean:130) · [Reading](/Users/ren/tmp/fm/build4/Becoming/ScratchKeptEdge.lean:213)
+
+**H4.** Before writing case 3, I searched all package `.lean` files for the word `Lasts`, for `Lasts` or `Kernel` near `length` in either order, and across multiline declaration signatures for `Lasts` with `List`, `length` or `Kernel`. The files mentioning `Lasts` were `Lasting.lean`, `Courses.lean` and `LastingRuns.lean`. The bound in `Lasts.trace` is the length of an individual trace. `kernel_iff_lasts` quantifies over every horizon. The course theorems concern individual courses. I found no kernel equivalence at the length of a configuration list. [Lasts.trace and the kernel theorem](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lasting.lean:218) · [New equivalence](/Users/ren/tmp/fm/build4/Becoming/ScratchKeptEdge.lean:159)
+
+**H5.** The final audit reported `"with_axioms": {}` across all 41 declarations, including definitions and statement comparisons.
+
+**H6.** In case 1, monotonicity carries the extra step through every outcome of an enabled move. In case 2, it carries the extra step through one witnessed successor, replacing the cycle proof. In case 3, the general law is what passes from one horizon to every horizon in the existing kernel theorem. In case 4, the proof works directly on codes. A usable move must give, for each observation, a class contained in a kept decoded class. The `updates` hypothesis supplies the representative in the reverse direction of the bridge. The ten-line bridge identifies each individual horizon, and the finite edge supplies a single closed family at the bound. In case 5, each largest-region law gives one inclusion. The finite law supplies closure of the bounded iterate, which the grammar’s unbounded law alone does not give.
+
+## 4. The rising chain
+
+Write `N = all.length` and `W n y = rise Ψ W₀ n y`. In the falling proof, spending the current place uses the positive evidence already in hand at the shorter depth. Reversing the desired arrow gives `W (n + 2) y` where that move would need `W (n + 1) y`. Monotonicity and the rising start carry evidence in the opposite direction.
+
+On the exhaustive list `[()]`, start at `False` and take `Ψ X () := p ∨ (p → X ())` for an arbitrary proposition `p`. This step is monotone and the empty start rises vacuously. Level 1 is `p ∨ ¬p`. Level 2 always holds by the right branch, since a proof of `p` gives the left branch of level 1. Consequently a uniform positive edge even for this singleton decides every proposition. [Checked singleton implication](/Users/ren/tmp/fm/build4/Becoming/ScratchKeptEdge.lean:255)
+
+What follows from the given premises is **`W (N + 1) y → ¬¬ W N y`**. Apply the falling law to `dual Ψ X y := ¬ Ψ (fun z => ¬ X z) y`. Its iterates from the complement of the start are exactly the negations of the rising iterates, pointwise. In the induction proving this, `not_not_all` combines doubly negated decisions across the finite list inside a negation. [Duality and finite edge](/Users/ren/tmp/fm/build4/Becoming/ScratchKeptEdge.lean:275)
+
+**Stability of membership at the queried state and horizon suffices**, namely `¬¬ W N y → W N y`. A decision of `W N y` supplies it. Even `W₀` and state equality can remain undecided. More precisely, under the premise `W (N + 1) y`, stability there is necessary and sufficient for the positive result. Sufficiency is the checked double-negation theorem. Necessity follows because a proof of `W N y` makes that proposition stable. Uniformly over all instances, excluded middle suffices by stability and is required by the singleton. [Repaired law](/Users/ren/tmp/fm/build4/Becoming/ScratchKeptEdge.lean:291)
+
+## 5. Other blockers
+
+All five cases came out. Build 1 exposed missing Lean section inclusions. Build 3 showed that the `Viable` bridge at a variable depth did not close by reflexivity. A four-line induction proved it. Build 7 caught reading-section notation and the order of the `every` and `updates` binders. Restoring their original order allowed the unchanged statement to pass `rfl`. The substantive limitation is the rising-law obstruction in section 4.
+
+## 6. Build record and scope
+
+Eleven builds ran through `/Users/ren/tmp/fm/run-build4.sh <n>`. Builds 2, 4, 5, 6, 8, 9, 10 and 11 were clean, and each has its numbered `ScratchKeptEdge.clean-<n>.lean.txt`. The final module matches the build 11 snapshot. [Final snapshot](/Users/ren/tmp/fm/build4/ScratchKeptEdge.clean-11.lean.txt) · [Raw build log](/Users/ren/tmp/fm/build4/build-11.log)
+
+```json
+{
+  "tree": "/Users/ren/tmp/fm/build4",
+  "modules": 156,
+  "ran": [
+    "Becoming.ScratchKeptEdge",
+    "BecomingScratchKeptEdgeAxiomAudit"
+  ],
+  "reused": 155,
+  "unclean": [],
+  "audits": {
+    "Becoming.ScratchKeptEdge": {
+      "theorems": 30,
+      "declarations": 41,
+      "with_axioms": {}
+    }
+  },
+  "seconds": {
+    "Becoming.ScratchKeptEdge": 2.688,
+    "BecomingScratchKeptEdgeAxiomAudit": 0.348
+  }
+}
+```
+
+The log records `exit 0 build 11`. I ran no other Lean command, Lake, checker, gate or test. I started no agents, invoked no git command and edited neither copied scratch module. The only repository-tree file I wrote was this requested report. AI-written by Codex. [Saved report](/Users/ren/theories/tmp/fm/whole/lean-kept-edge/REPORT.md)

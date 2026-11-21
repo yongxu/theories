@@ -1,0 +1,24 @@
+start 02:05:16
+{
+  "tree": "/Users/ren/tmp/fm/build5",
+  "modules": 64,
+  "ran": [
+    "Becoming.ScratchEdgeLaw",
+    "BecomingScratchEdgeLawAxiomAudit"
+  ],
+  "reused": 63,
+  "unclean": [],
+  "audits": {
+    "Becoming.ScratchEdgeLaw": {
+      "theorems": 44,
+      "declarations": 58,
+      "with_axioms": {}
+    }
+  },
+  "seconds": {
+    "Becoming.ScratchEdgeLaw": 1.781,
+    "BecomingScratchEdgeLawAxiomAudit": 0.381
+  }
+}
+exit 0 build 13
+end 02:05:21

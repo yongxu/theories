@@ -1,0 +1,114 @@
+# AI-written (Claude Fable 5.2), a reader's program. Nothing here touches Lean.
+# cases.py found NO failure of cases (iii) and (iv) with |S|-1 in place of |S|. This program asks
+# where the edge of those two cases really is, and why:
+#   - Kernel (disturbed f adm) guard = Lasts f adm guard N for N = |S|-1 ? for N = |S|-2 ?
+#   - held = iter (regionStep R Q) Q N                    for N = |S|-1 ? for N = |S|-2 ?
+#   - the reason: for these two steps the start is the step of the whole type,
+#     V0 = step(everything), so iter step V0 n = iter step everything (n+1), and the module's own
+#     law with V0 := everything (start premise trivially met) gives the level |S|-1.
+#     For the choice step and the course step this is checked NOT to be so.
+import itertools, random, time
+
+def subsets(xs):
+    xs = list(xs)
+    return [frozenset(x for i, x in enumerate(xs) if m >> i & 1) for m in range(1 << len(xs))]
+
+def chain(step, V0, k):
+    ch = [frozenset(V0)]
+    for _ in range(k): ch.append(step(ch[-1]))
+    return ch
+
+def disturbance(nS, nA, fs, label):
+    S = range(nS); A = range(nA); full = frozenset(S)
+    inst = d1 = d2 = shift = 0; first2 = None
+    for fvals in fs:
+        f = {(s, a): fvals[s * nA + a] for s in S for a in A}
+        for adm in subsets(A):
+            reach = {s: {s} for s in S}
+            ch_ = True
+            while ch_:
+                ch_ = False
+                for s in S:
+                    for t in list(reach[s]):
+                        for a in adm:
+                            if f[t, a] not in reach[s]: reach[s].add(f[t, a]); ch_ = True
+            for guard in subsets(S):
+                inst += 1
+                kernel = frozenset(s for s in S if all(t in guard for t in reach[s]))
+                def lasts(n, s):                      # Lasting.lean l. 107-109, literally
+                    if n == 0: return s in guard
+                    return s in guard and all(lasts(n - 1, f[s, a]) for a in adm)
+                L1 = frozenset(s for s in S if lasts(nS - 1, s))
+                if L1 != kernel: d1 += 1
+                if nS >= 2:
+                    L2 = frozenset(s for s in S if lasts(nS - 2, s))
+                    if L2 != kernel:
+                        d2 += 1
+                        w = len(adm) + nS - len(guard)
+                        if first2 is None or w < first2[0]:
+                            first2 = (w, {k: v for k, v in f.items() if k[1] in adm}, sorted(adm), sorted(guard), sorted(kernel), sorted(L2))
+                def dstep(X): return frozenset(s for s in S if s in guard and all(f[s, a] in X for a in adm))
+                a_ = chain(dstep, guard, nS + 1); b_ = chain(dstep, full, nS + 2)
+                if any(a_[n] != b_[n + 1] for n in range(nS + 2)): shift += 1
+    print(f"(iii) {label} {nS}x{nA}: instances {inst}; Kernel differs from Lasts at |S|-1 in {d1}; at |S|-2 in {d2}; chain from guard differs from chain from everything one level later in {shift}")
+    if first2:
+        print(f"      a failure at |S|-2: f on admitted {first2[1]}, adm {first2[2]}, guard {first2[3]}: kernel {first2[4]}, Lasts {nS-2} {first2[5]}")
+
+def region(nS):
+    S = list(range(nS)); pairs = [(x, y) for x in S for y in S]; full = (1 << nS) - 1
+    inst = d1 = d2 = shift = 0; first2 = None
+    for bits in range(1 << len(pairs)):
+        succ = [0] * nS
+        for i, (x, y) in enumerate(pairs):
+            if bits >> i & 1: succ[x] |= 1 << y
+        reach = [1 << s for s in S]
+        ch_ = True
+        while ch_:
+            ch_ = False
+            for s in S:
+                r = reach[s]
+                for t in S:
+                    if r >> t & 1: r |= succ[t]
+                if r != reach[s]: reach[s] = r; ch_ = True
+        for Q in range(1 << nS):
+            inst += 1
+            held = sum(1 << s for s in S if reach[s] & ~Q == 0)        # Q throughout what R reaches from s
+            def rstep(X): return sum(1 << s for s in S if Q >> s & 1 and succ[s] & ~X == 0)
+            c = [Q]
+            for _ in range(nS + 1): c.append(rstep(c[-1]))
+            e = [full]
+            for _ in range(nS + 2): e.append(rstep(e[-1]))
+            if c[nS - 1] != held: d1 += 1
+            if nS >= 2 and c[nS - 2] != held:
+                d2 += 1
+                w = bin(bits).count("1")
+                if first2 is None or w < first2[0]:
+                    first2 = (w, [p for i, p in enumerate(pairs) if bits >> i & 1], Q, held, c[nS - 2])
+            if any(c[n] != e[n + 1] for n in range(nS + 2)): shift += 1
+    print(f"(iv) region {nS} points: instances {inst}; held differs from iter at |S|-1 in {d1}; at |S|-2 in {d2}; chain from Q differs from chain from everything one level later in {shift}")
+    if first2:
+        sh = lambda m: [i for i in S if m >> i & 1]
+        print(f"      a failure at |S|-2: R {first2[1]}, Q {sh(first2[2])}: held {sh(first2[3])}, iter {nS-2} {sh(first2[4])}")
+
+def others(nS, nA):
+    """For the choice and course steps: is the start the step of everything? (It should not be.)"""
+    S = range(nS); A = range(nA); full = frozenset(S)
+    cells = [(s, a, t) for s in S for a in A for t in S]
+    inst = choice_same = 0
+    for bits in range(1 << len(cells)):
+        st = {(s, a): frozenset(t for t in S if bits >> cells.index((s, a, t)) & 1) for s in S for a in A}
+        for guard in subsets(S):
+            inst += 1
+            top = frozenset(s for s in S if s in guard and any(len(st[s, a]) > 0 for a in A))   # choiceStep everything
+            if top == guard: choice_same += 1
+    print(f"(i) choice {nS}x{nA}: instances {inst}; start (guard) = choiceStep of everything in {choice_same} (elsewhere the level |S| is needed: see cases.py, failures at |S|-1)")
+
+if __name__ == "__main__":
+    t = time.time(); random.seed(20261122)
+    for nS, nA in ((1, 1), (2, 1), (2, 2), (3, 1), (3, 2), (4, 1)):
+        disturbance(nS, nA, itertools.product(range(nS), repeat=nS * nA), "every f")
+    disturbance(4, 2, [tuple(random.randrange(4) for _ in range(8)) for _ in range(1500)], "random f")
+    disturbance(5, 2, [tuple(random.randrange(5) for _ in range(10)) for _ in range(600)], "random f")
+    for nS in (1, 2, 3, 4): region(nS)
+    others(2, 2); others(3, 1)
+    print(f"seconds {time.time()-t:.1f}")

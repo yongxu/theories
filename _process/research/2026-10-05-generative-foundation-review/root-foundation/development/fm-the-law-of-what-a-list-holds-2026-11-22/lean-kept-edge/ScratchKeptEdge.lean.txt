@@ -1,0 +1,297 @@
+import Becoming.ScratchViableEdge
+
+/-! AI-written by Codex. A finite bound for iteration of a monotone step on predicates. -/
+
+namespace Becoming.ScratchKeptEdge
+
+open Generative
+
+universe u v w q
+
+section Law
+
+variable {S : Type u}
+
+def iter (Φ : (S → Prop) → S → Prop) (V₀ : S → Prop) : Nat → S → Prop
+  | 0 => V₀
+  | n + 1 => Φ (iter Φ V₀ n)
+
+abbrev MonotoneStep (Φ : (S → Prop) → S → Prop) :=
+  ∀ {X Y : S → Prop}, (∀ z, X z → Y z) → ∀ y, Φ X y → Φ Y y
+
+variable {Φ : (S → Prop) → S → Prop} {V₀ : S → Prop}
+  (mono : MonotoneStep Φ) (start : ∀ y, Φ V₀ y → V₀ y)
+
+include mono start
+
+theorem iter_pred : ∀ n y, iter Φ V₀ (n + 1) y → iter Φ V₀ n y
+  | 0 => start
+  | n + 1 => mono (iter_pred n)
+
+/-- Outside the remaining places the extra step is already available. Spending the
+current place leaves a cover one step shorter, which monotonicity lifts through Φ. -/
+theorem extend_at_places : ∀ (n : Nat) (left : List S), left.length = n →
+    (∀ z, z ∈ left ∨ iter Φ V₀ (n + 1) z) → ∀ y, iter Φ V₀ n y → iter Φ V₀ (n + 1) y
+  | 0, left, len, cover, y, _ => by
+    cases nil_of_length_zero len
+    exact (cover y).elim (fun mem => nomatch mem) id
+  | n + 1, left, len, cover, y, kept =>
+    match cover y with
+    | .inr enough => enough
+    | .inl mem => match ScratchViableEdge.remove_place mem with
+      | ⟨rest, size, place⟩ =>
+        have shorter := Nat.succ.inj (size.symm.trans len)
+        have nextCover (z : S) : z ∈ rest ∨ iter Φ V₀ (n + 1) z :=
+          match cover z with
+          | .inr earlier => .inr (iter_pred mono start _ z earlier)
+          | .inl listed => match place z listed with
+            | .inl same => .inr (same.symm ▸ kept)
+            | .inr unused => .inl unused
+        mono (extend_at_places n rest shorter nextCover) y kept
+
+theorem iter_persists {all : List S} (every : ∀ x, x ∈ all) {y : S} :
+    iter Φ V₀ all.length y → iter Φ V₀ (all.length + 1) y :=
+  extend_at_places mono start all.length all rfl (fun z => .inl (every z)) y
+
+theorem iter_within : ∀ n y, iter Φ V₀ n y → V₀ y
+  | 0, _, h => h
+  | n + 1, y, h => iter_within n y (iter_pred mono start n y h)
+
+theorem iter_postfixed {all : List S} (every : ∀ x, x ∈ all) :
+    ∀ y, iter Φ V₀ all.length y → Φ (iter Φ V₀ all.length) y :=
+  fun _ => iter_persists mono start every
+
+omit start in
+theorem postfixed_in_iter {K : S → Prop} (within : ∀ y, K y → V₀ y)
+    (post : ∀ y, K y → Φ K y) : ∀ n y, K y → iter Φ V₀ n y
+  | 0 => within
+  | n + 1 => fun y h => mono (postfixed_in_iter within post n) y (post y h)
+
+theorem iter_iff_all {all : List S} (every : ∀ x, x ∈ all) {y : S} :
+    iter Φ V₀ all.length y ↔ ∀ n, iter Φ V₀ n y :=
+  ⟨fun h n => postfixed_in_iter mono (iter_within mono start _) (iter_postfixed mono start every) n y h,
+   fun h => h all.length⟩
+
+/-- The three clauses of the largest-region law, together for comparison with other regions. -/
+theorem iter_largest {all : List S} (every : ∀ x, x ∈ all) :
+    let L := iter Φ V₀ all.length
+    (∀ y, L y → V₀ y) ∧ (∀ y, L y → Φ L y) ∧
+      ∀ K : S → Prop, (∀ y, K y → V₀ y) → (∀ y, K y → Φ K y) → ∀ y, K y → L y :=
+  ⟨iter_within mono start _, iter_postfixed mono start every,
+   fun _ inside post => postfixed_in_iter mono inside post _⟩
+
+end Law
+
+section Choices
+
+open GuardHorizon
+
+variable {S : Type u} {A : Type v} (P : Process S A) (guard : S → Prop)
+
+def choiceStep (X : S → Prop) (s : S) : Prop :=
+  guard s ∧ ∃ a, Enabled P s a ∧ ∀ t, P.step s a t → X t
+
+theorem choice_mono : MonotoneStep (choiceStep P guard) :=
+  fun sub _ ⟨within, a, live, later⟩ => ⟨within, a, live, fun t st => sub t (later t st)⟩
+
+variable {S A : Type} {P : Process S A} {guard : S → Prop}
+
+theorem iter_iff_viable : ∀ n s, iter (choiceStep P guard) guard n s ↔ Viable P guard n s
+  | 0, _ => Iff.rfl
+  | n + 1, s => ⟨choice_mono P guard (fun t => (iter_iff_viable n t).mp) s,
+                  choice_mono P guard (fun t => (iter_iff_viable n t).mpr) s⟩
+
+theorem viable_persists {all : List S} (every : ∀ x, x ∈ all) {y : S}
+    (kept : Viable P guard all.length y) :
+    ∃ a, Enabled P y a ∧ ∀ z, P.step y a z → Viable P guard all.length z :=
+  ((iter_iff_viable (all.length + 1) y).mp (iter_persists (choice_mono P guard)
+    (fun _ h => h.1) every ((iter_iff_viable _ y).mpr kept))).2
+
+theorem viable_same : @viable_persists = @ScratchViableEdge.viable_persists := rfl
+
+end Choices
+
+section Courses
+
+variable {S : Type u} {A : Type v} (P : Process S A)
+
+def courseStep (X : S → Prop) (s : S) : Prop := ∃ a t, P.step s a t ∧ X t
+
+theorem course_mono : MonotoneStep (courseStep P) :=
+  fun sub _ ⟨a, t, st, rest⟩ => ⟨a, t, st, sub t rest⟩
+
+variable {P}
+
+theorem iter_iff_continues : ∀ n s, iter (courseStep P) (fun _ => True) n s ↔ Lasting.Continues P n s
+  | 0, _ => Iff.rfl
+  | n + 1, s => ⟨course_mono P (fun t => (iter_iff_continues n t).mp) s,
+                  course_mono P (fun t => (iter_iff_continues n t).mpr) s⟩
+
+theorem continues_persists_case {all : List S} (every : ∀ x, x ∈ all) {y : S}
+    (continues : Lasting.Continues P all.length y) :
+    ∃ a z, P.step y a z ∧ Lasting.Continues P all.length z :=
+  (iter_iff_continues (all.length + 1) y).mp (iter_persists (course_mono P)
+    (fun _ _ => trivial) every ((iter_iff_continues _ y).mpr continues))
+
+theorem continues_same : @continues_persists_case.{u,v} = @Parting.continues_persists.{u,v} := rfl
+
+end Courses
+
+section Disturbances
+
+open Lasting Viability
+
+variable {S : Type u} {A : Type v} (f : S → A → S) (adm : A → Prop) (guard : S → Prop)
+
+def disturbanceStep (X : S → Prop) (s : S) : Prop :=
+  guard s ∧ ∀ a, adm a → X (f s a)
+
+theorem disturbance_mono : MonotoneStep (disturbanceStep f adm guard) :=
+  fun sub s ⟨within, later⟩ => ⟨within, fun a ha => sub (f s a) (later a ha)⟩
+
+variable {f adm guard}
+
+theorem iter_iff_lasts : ∀ n s, iter (disturbanceStep f adm guard) guard n s ↔ Lasts f adm guard n s
+  | 0, _ => Iff.rfl
+  | n + 1, s => ⟨disturbance_mono f adm guard (fun t => (iter_iff_lasts n t).mp) s,
+                  disturbance_mono f adm guard (fun t => (iter_iff_lasts n t).mpr) s⟩
+
+theorem kernel_iff_lasts_length {all : List S} (every : ∀ x, x ∈ all) {s : S} :
+    Kernel (disturbed f adm) guard s ↔ Lasts f adm guard all.length s :=
+  kernel_iff_lasts.trans ⟨fun h => h all.length, fun h n => (iter_iff_lasts n s).mp
+    ((iter_iff_all (disturbance_mono f adm guard) (fun _ k => k.1) every).mp
+      ((iter_iff_lasts _ s).mpr h) n)⟩
+
+end Disturbances
+
+section Readings
+
+open Viability
+open ScratchViableEdge (InClosedFamily)
+
+variable {S : Type u} {A : Type v} {O : Type w} {C : Type q}
+  {P : Process S A} {sense : S → A → S → O} {guard : S → Prop} {allowed : S → A → Prop}
+  {decode : C → S → Prop}
+
+/-- A class lies inside a class named by a code in X. -/
+def coveredBy (decode : C → S → Prop) (X : C → Prop) (B : S → Prop) : Prop :=
+  ∃ d, X d ∧ ∀ s, B s → decode d s
+
+abbrev codeGuard (decode : C → S → Prop) (guard : S → Prop) (c : C) := ∀ s, decode c s → guard s
+
+local notation "safe" => codeGuard decode guard
+
+def readingStep (P : Process S A) (sense : S → A → S → O) (guard : S → Prop)
+    (allowed : S → A → Prop) (decode : C → S → Prop) (X : C → Prop) (c : C) : Prop :=
+  codeGuard decode guard c ∧ ∃ a, Usable P allowed (decode c) a ∧
+    ∀ o, coveredBy decode X (Seen P sense (decode c) a o)
+
+local notation "Φ" => readingStep P sense guard allowed decode
+
+theorem reading_mono : MonotoneStep Φ :=
+  fun sub _ ⟨h, a, usable, next⟩ => ⟨h, a, usable, fun o =>
+    match next o with | ⟨d, hd, covers⟩ => ⟨d, sub d hd, covers⟩⟩
+
+variable {all : List C} (every : ∀ c, c ∈ all)
+  (updates : ∀ c a, Usable P allowed (decode c) a → ∀ o,
+  ∃ d, ∀ s, decode d s ↔ Seen P sense (decode c) a o s)
+
+include updates in
+theorem iter_iff_kept : ∀ n c, iter Φ safe n c ↔ KeptFor P sense guard allowed n (decode c)
+  | 0, _ => Iff.rfl
+  | n + 1, c =>
+    ⟨fun ⟨h, a, usable, next⟩ => ⟨h, a, usable, fun o =>
+       match next o with
+       | ⟨d, hd, sub⟩ => KeptFor.mono sub ((iter_iff_kept n d).mp hd)⟩,
+     fun ⟨h, a, usable, next⟩ => ⟨h, a, usable, fun o =>
+       match updates c a usable o with
+       | ⟨d, eqv⟩ => ⟨d, (iter_iff_kept n d).mpr (KeptFor.mono (fun s => (eqv s).mp) (next o)),
+                       fun s => (eqv s).mpr⟩⟩⟩
+
+
+include every updates in
+theorem coded_kept_iff_closed {c : C} :
+    KeptFor P sense guard allowed all.length (decode c) ↔
+      InClosedFamily P sense guard allowed (decode c) :=
+  let K := iter Φ safe all.length
+  have post : ∀ d, K d → Φ K d := iter_postfixed reading_mono (fun _ h => h.1) every
+  ⟨fun h => ⟨coveredBy decode K, ⟨c, (iter_iff_kept updates _ c).mpr h, fun _ b => b⟩,
+     fun _ ⟨d, hd, sub⟩ s b => (post d hd).1 s (sub s b),
+     fun _ ⟨d, hd, sub⟩ => match (post d hd).2 with
+       | ⟨a, usable, next⟩ => ⟨a, fun s b => usable s (sub s b), fun o =>
+         match next o with | ⟨e, he, covers⟩ => ⟨e, he, fun s b => covers s (Seen.mono sub b)⟩⟩⟩,
+   fun ⟨F, held, within, closed⟩ => keptFor_of_closed F within closed all.length held⟩
+
+theorem coded_same : @coded_kept_iff_closed.{u,v,w,q} = @ScratchViableEdge.coded_kept_iff_closed.{u,v,w,q} := rfl
+
+end Readings
+
+section Regions
+
+variable {S : Type u} (R : «际» S) (Q : S → Prop)
+
+def regionStep (X : S → Prop) (s : S) : Prop := Q s ∧ ∀ t, R s t → X t
+
+theorem region_mono : MonotoneStep (regionStep R Q) :=
+  fun sub _ ⟨within, later⟩ => ⟨within, fun t rel => sub t (later t rel)⟩
+
+theorem held_iff_iter {all : List S} (every : ∀ x, x ∈ all) {s : S} :
+    «承» («逆» («所闭» R)) Q s ↔ iter (regionStep R Q) Q all.length s :=
+  match «所闭之承最大» R Q, iter_largest (region_mono R Q) (fun _ h => h.1) every with
+  | ⟨inside, closed, largest⟩, ⟨within, post, greatest⟩ =>
+    ⟨greatest _ inside (fun x h => ⟨inside x h, fun t => closed x t h⟩) s,
+     largest _ within (fun x t h => (post x h).2 t) s⟩
+
+end Regions
+
+section Rising
+
+variable {S : Type u}
+
+abbrev rise (Ψ : (S → Prop) → S → Prop) (W₀ : S → Prop) := iter Ψ W₀
+
+/-- On one state and an empty start the unrestricted rising law already decides every proposition.
+The step is monotone, the start rises vacuously, and the one-element list is exhaustive. -/
+theorem singleton_rise_needs_em
+    (edge : ∀ Ψ : (Unit → Prop) → Unit → Prop, MonotoneStep Ψ →
+      rise Ψ (fun _ => False) 2 () → rise Ψ (fun _ => False) 1 ()) (p : Prop) : Decided p :=
+  edge (fun X _ => p ∨ (p → X ()))
+    (fun sub _ h => h.imp id (fun next hp => sub () (next hp))) (.inr fun hp => .inl hp)
+
+/-- The step on exclusions. A state is excluded if the rising step cannot reach it
+from the states still possible. -/
+def dual (Ψ : (S → Prop) → S → Prop) (X : S → Prop) (y : S) : Prop :=
+  ¬ Ψ (fun z => ¬ X z) y
+
+variable {Ψ : (S → Prop) → S → Prop} {W₀ : S → Prop}
+  (mono : MonotoneStep Ψ) (start : ∀ y, W₀ y → Ψ W₀ y)
+  {all : List S} (every : ∀ x, x ∈ all)
+
+include mono in
+theorem dual_mono : MonotoneStep (dual Ψ) :=
+  fun sub y excluded h => excluded (mono (fun z no x => no (sub z x)) y h)
+
+include mono every in
+theorem iter_dual_iff : ∀ n y, iter (dual Ψ) (fun z => ¬ W₀ z) n y ↔ ¬ rise Ψ W₀ n y
+  | 0, _ => Iff.rfl
+  | n + 1, y =>
+    ⟨fun excluded h => excluded (mono (fun z w d => (iter_dual_iff n z).mp d w) y h),
+     fun absent h => not_not_all (E := all) (fun z _ => not_not_decided (rise Ψ W₀ n z))
+       fun table => absent (mono (fun z possible => (table z (every z)).of_not_not
+         (fun no => possible ((iter_dual_iff n z).mpr no))) y h)⟩
+
+include mono start every in
+theorem rise_not_not {y : S} (reached : rise Ψ W₀ (all.length + 1) y) : ¬ ¬ rise Ψ W₀ all.length y :=
+  have begins (z : S) (d : dual Ψ (fun t => ¬ W₀ t) z) (w : W₀ z) : False :=
+    d (mono (fun _ h no => no h) z (start z w))
+  fun no => (iter_dual_iff mono every _ y).mp
+    (iter_persists (dual_mono mono) begins every ((iter_dual_iff mono every _ y).mpr no)) reached
+
+include mono start every in
+theorem rise_of_stable {y : S} (stable : (¬ ¬ rise Ψ W₀ all.length y) → rise Ψ W₀ all.length y) :
+    rise Ψ W₀ (all.length + 1) y → rise Ψ W₀ all.length y :=
+  fun reached => stable (rise_not_not mono start every reached)
+
+end Rising
+
+end Becoming.ScratchKeptEdge

@@ -1,0 +1,41 @@
+# Repair brief: the landing draft after its two readers
+
+*AI-written (Claude Fable, board row FM), 22 November 2026, frozen before the implementer ran (hash in `FROZEN-LANDING-DRAFT-REPAIR.sha256.txt`). You wrote the landing draft in `/Users/ren/tmp/fm/build10/Becoming/`. Two readers who took no part have read it: every added statement equals its scratch statement, it built clean, D1 to D4 hold. It may not land as it stands: four passages of docstring text are wrong or ambiguous, and three decisions were left to me. This is the one repair before the core run. Work in the same tree, in place.*
+
+## Read first
+
+- The reader of the files: `/Users/ren/theories/tmp/fm/whole/landing-draft/RETURN-draft-reader-opus.md.txt` (its part (2) has M1 to M7 and LESSER, **with exact replacement texts**; its part (4) a table of docstrings).
+- The reader of the rest of the repository: `/Users/ren/theories/tmp/fm/whole/landing-draft/RETURN-draft-sweeper-fable.md.txt` (its section 3, the `ReachableRanges` sentence).
+
+## The changes
+
+**Build only with** `/Users/ren/tmp/fm/run-build10.sh <n> <Module> …` (continue the numbering from 24). Change nothing in the repository or in git. Write only under `/Users/ren/tmp/fm/build10/` and `/Users/ren/theories/tmp/fm/whole/landing-draft/` (your report: `REPORT-REPAIR.md`). No new mathematics.
+
+**Docstring text (take the reader's replacement text as given, wrapped at 100 columns, unless it is wrong against the statement, in which case say so and write the exact one):**
+
+1. **M1**: the module docstring of `PredicateIteration.lean`, both paragraphs, replaced by the reader's text. Add after it two sentences: that a family with the same start and the same step at each successor agrees with the iterates (`Iteration.iter_iff_stages`), which is how a notion defined by its own recursion on the number of steps is shown to be an iterate; and that `Iteration.iter` has the equations of `Law.orbit` (`Becoming.Recurrence`) at the type of predicates and is equal to it (`Tolerance.iter_eq_orbit`), being defined here so that modules which do not import `Becoming.Recurrence` can use it.
+2. **M2**: the module docstring of `Parting.lean`, the reader's replacement. Before using its last clause ("where `Lasting`'s lifting for finite branching holds up to double negation"), check it against the package's own `Parting.lean` module docstring and `unbounded_of_continues`'s docstring: keep it only in the words the package already uses.
+3. **M3** (`Keeping`), **M4** (`Likeness`, two docstrings).
+4. Every **LESSER** docstring item of the reader: `CommonResponse` ll. 13–15 (the reader's text; and the table below that sentence, if it lists the module's definitions, gains the two new ones); the `Lasting` bullet; the `Tolerance` paragraph moved into the `KeepsInclusion` bullet; `RisingIteration`'s added sentence saying what "rising" is; "loss by `lostStep`" in `GuardHorizon`; `continues_any`'s docstring; `remove_mem`'s docstring; `iter_iff_alikeTo`; the `Likeness` module sentence on `AlikeTo.bisimulation`; `iter_iff_kept`; every `-/` standing alone on a line rewrapped; and at the first use of "iterate" in `CommonResponse`, `Viability` and `Keeping`, a pointer to `Iteration.iter`.
+5. **`ReachableRanges.lean`**: its module docstring says "Each law is near-definitional or a witness." (draft l. 174). The bound on moves is neither. Replace with the sweeper's sentence, adapted to the final name (below): "Each law is near-definitional or a witness, but for the bound on moves (`Reaching.trace_within_pred_length`), a case of `Becoming.PredicateIteration`'s bound through `Becoming.CommonResponse`."
+
+**Statements and names (my decisions):**
+
+6. **M5, no idle premise.** `AlikeTo.steady` and `alike_iff_alikeTo` take, in place of the four premises, `(listed : ∃ l : List S, ∀ s, s ∈ l) (listed' : ∃ l : List S', ∀ s', s' ∈ l')`, with the reader's two proofs and docstrings (not built: build them). Their callers (draft ll. 1149 and 1159) pass `finite.listed finite'.listed`. Delete the `let _ := And.intro moves claims`. In the module docstring move `alike_iff_alikeTo` out of "Under these hypotheses" into the bullet on likeness at the number of pairs, saying what it now asks. No other statement of `Likeness` changes: `Alike.decided` and `alike_iff_sameBranchingTests` use all four and keep them. Confirm by grep over the package that nothing else calls the two.
+7. **M6, the list lemma on moves.** `GuardHorizon.gather_moves` moves to `PredicateIteration.lean`, beside `remove_mem`, in `namespace Becoming` (not `Iteration`), over any type, under the name `gather_listed`, with the reader's docstring (which says that `not_not_all` of `Becoming.Prelude` is it at `G = False`; check that sentence against `Prelude.lean` l. 718 before keeping it). `lost_commutes` calls it. `PredicateIteration`'s module docstring says the module holds two lemmas on lists (`remove_mem`, `gather_listed`) and one induction on a list (`Iteration.extend_at_places`).
+8. **M7, names that say their bound.** Rename, with every call and every mention in docstrings and module docstrings:
+   - `reach_within_length` (`CommonResponse`) → `reach_within_pred_length`;
+   - `Reaching.reach_within_count` → `Reaching.trace_within_pred_length`;
+   - `Reaching.possible_iff_within_count` → `Reaching.possible_iff_within_of_pred_le`;
+   - `Reaching.rise_iff_trace` → `Reaching.iter_reach_iff_trace`.
+   `Reaching.reach_within_of_pred_le` keeps its name. The names `returns_iff_reachable_count`, `drawn_iff_not_reachable_count`, `keepable_iff_count` keep theirs (their bound is the count).
+
+## What counts as a failed repair (frozen)
+
+- **E1.** Any module of the draft does not build clean in one final call naming all fifteen, or any declaration has an axiom.
+- **E2.** A statement changed other than `AlikeTo.steady`, `alike_iff_alikeTo`, the moved and renamed `gather_listed`, and the four renames.
+- **E3.** A replacement docstring that the statement does not carry (say which you rewrote and why).
+
+## What to return
+
+Your whole report as your final answer, also saved as `/Users/ren/theories/tmp/fm/whole/landing-draft/REPORT-REPAIR.md`: (1) in four lines what built clean, E1 to E3; (2) each numbered change: done, with file and lines, or what blocked it; every replacement text you departed from, with your text and the reason; (3) per file, lines added and removed against the PACKAGE's file (not against the earlier draft), and the full list of declarations added, changed, deleted, by full name; (4) the last build's log (its JSON) and the number of builds.

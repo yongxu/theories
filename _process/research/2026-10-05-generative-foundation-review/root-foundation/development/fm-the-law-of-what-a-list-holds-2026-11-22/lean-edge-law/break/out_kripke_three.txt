@@ -1,0 +1,14 @@
+[lose] line of two: 3 configurations, 1 move(s), guard true, every of 19683 step families: instances 19683; level 4 -> level 3 fails in 36; (level 3 -> 2 fails in 882; any of 5->4, 6->5 fails in 0)
+    failing instances by (deterministic, every enabledness decided, guard decided): (False, False, True): 36
+    a failing instance with fewest step cells: steps [1-0->2: at worlds 1; 2-0->0: at worlds 1; 2-0->1: always] ; guard 0: always; guard 1: always; guard 2: always
+      fails at (world, configuration) [(0, 2)]; levels by world: L0={0: [], 1: []}; L1={0: [0], 1: [0]}; L2={0: [0], 1: [0, 2]}; L3={0: [0, 1], 1: [0, 1, 2]}; L4={0: [0, 1, 2], 1: [0, 1, 2]}
+[lose] fork: 3 configurations, 1 move(s), guard true, 60000 random of 1953125 step families: instances 60000; level 4 -> level 3 fails in 96; (level 3 -> 2 fails in 6568; any of 5->4, 6->5 fails in 0)
+    failing instances by (deterministic, every enabledness decided, guard decided): (False, False, True): 96
+    a failing instance with fewest step cells: steps [0-0->1: at worlds 1,2; 0-0->2: always; 2-0->0: at worlds 1; 2-0->1: at worlds 2] ; guard 0: always; guard 1: always; guard 2: always
+      fails at (world, configuration) [(0, 0)]; levels by world: L0={0: [], 1: [], 2: []}; L1={0: [1], 1: [1], 2: [1]}; L2={0: [1], 1: [0, 1], 2: [0, 1, 2]}; L3={0: [1, 2], 1: [0, 1, 2], 2: [0, 1, 2]}; L4={0: [0, 1, 2], 1: [0, 1, 2], 2: [0, 1, 2]}
+[lose] line of three: 3 configurations, 1 move(s), guard true, 40000 random of 262144 step families: instances 40000; level 4 -> level 3 fails in 47; (level 3 -> 2 fails in 874; any of 5->4, 6->5 fails in 0)
+    failing instances by (deterministic, every enabledness decided, guard decided): (False, False, True): 47
+    a failing instance with fewest step cells: steps [0-0->1: at worlds 1,2; 0-0->2: at worlds 2; 1-0->0: at worlds 2] ; guard 0: always; guard 1: always; guard 2: always
+      fails at (world, configuration) [(0, 0), (1, 0)]; levels by world: L0={0: [], 1: [], 2: []}; L1={0: [2], 1: [2], 2: [2]}; L2={0: [2], 1: [2], 2: [0, 2]}; L3={0: [1, 2], 1: [1, 2], 2: [0, 1, 2]}; L4={0: [0, 1, 2], 1: [0, 1, 2], 2: [0, 1, 2]}
+seconds 5.7
+python3 kripke.py three  5.54s user 0.05s system 95% cpu 5.831 total

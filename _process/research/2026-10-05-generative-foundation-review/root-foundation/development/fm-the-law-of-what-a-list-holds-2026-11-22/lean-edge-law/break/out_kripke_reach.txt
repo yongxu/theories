@@ -1,0 +1,10 @@
+[reach] one world (everything decided), 2 points, every of 64 (R, W0) families: instances 64; reaches N+1 -> reaches N fails in 0; reaches N -> N-1 fails in 0; reaches N-1 -> N-2 fails in 16   (N = 2)
+[reach] one world (everything decided), 3 points, every of 4096 (R, W0) families: instances 4096; reaches N+1 -> reaches N fails in 0; reaches N -> N-1 fails in 0; reaches N-1 -> N-2 fails in 384   (N = 3)
+[reach] one world (everything decided), 4 points, 40000 random of 1048576 (R, W0) families: instances 40000; reaches N+1 -> reaches N fails in 0; reaches N -> N-1 fails in 0; reaches N-1 -> N-2 fails in 906   (N = 4)
+[reach] line of two, 2 points, every of 729 (R, W0) families: instances 729; reaches N+1 -> reaches N fails in 0; reaches N -> N-1 fails in 0; reaches N-1 -> N-2 fails in 270   (N = 2)
+[reach] fork, 2 points, every of 15625 (R, W0) families: instances 15625; reaches N+1 -> reaches N fails in 0; reaches N -> N-1 fails in 0; reaches N-1 -> N-2 fails in 7800   (N = 2)
+[reach] line of three, 2 points, every of 4096 (R, W0) families: instances 4096; reaches N+1 -> reaches N fails in 0; reaches N -> N-1 fails in 0; reaches N-1 -> N-2 fails in 1792   (N = 2)
+[reach] line of two, 3 points, 40000 random of 531441 (R, W0) families: instances 40000; reaches N+1 -> reaches N fails in 0; reaches N -> N-1 fails in 0; reaches N-1 -> N-2 fails in 5068   (N = 3)
+[reach] fork, 3 points, 40000 random of 244140625 (R, W0) families: instances 40000; reaches N+1 -> reaches N fails in 0; reaches N -> N-1 fails in 0; reaches N-1 -> N-2 fails in 7011   (N = 3)
+seconds 3.1
+python3 kripke.py reach  3.06s user 0.03s system 96% cpu 3.190 total

@@ -1,0 +1,83 @@
+# Brief: one scratch Lean module, the edge for a choice against every outcome
+
+*AI-written (Claude Fable, board row FM), 22 November 2026, frozen before the implementer ran (hash in `FROZEN-LEAN-EDGE.sha256.txt`). Scratch only: outside the package, in no git object. You are the implementer. Do not dress anything up: a clean failure, told with what blocked it, is a result.*
+
+## What we are doing
+
+`/Users/ren/theories` draws a map of how anything forms, persists, changes and ends, with its core proved in Lean 4 with **no axioms** (every declaration has an empty axiom report: no `propext`, no `Classical.choice`, no `Quot.sound`). Read `AGENTS.md` at the repository root (one page).
+
+The package is `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/`. In it a guard is kept in three ways:
+
+- **whatever happens** (`Viability.Kernel`: every reachable configuration is within the guard);
+- **along some course** (`Lasting.Continues P n s`: some course of `n` steps starts at `s`; `JointKeeping.Keepable`);
+- **by a choice against every outcome** (`GuardHorizon.Viable P guard n s`: the guard holds, and for `n` more steps some enabled move leads only to configurations that keep it for one step fewer; and `Keeping.KeptFor`, the same through what a reading keeps of each step).
+
+For the second the package has an exact edge on finitely many configurations. `Parting.continues_persists` (Parting.lean, l. 419): where a list holds every configuration, from where a course as long as the list starts, a step leads to where one starts. So a course as long as the list is a course of every length (`continues_any`, `unbounded_of_continues`). Its proof is a pigeonhole with no decidability (`Prelude.revisits_within`, Prelude.lean l. 1111).
+
+For the third, a choice against every outcome, two sweeps of the package's statements found **only** the direction from a closed set to each horizon (`GuardHorizon.closed_viable`, l. 112, with `Closed` at l. 108; `Keeping.keptFor_of_closed`). The direction from a horizon to a closed set was not found. That direction is your task. It matters because it would be an exact edge with moves in it: on one side a region closed under some move against every outcome; on the other, no choice of moves keeps the guard for as many steps as there are configurations.
+
+## The argument on paper (found no hole by two readers; not checked in Lean)
+
+Let `all` list every configuration and `N = all.length`. A witness of `Viable P guard N s` is a tree: at each node the guard holds, a move is chosen, and every outcome of that move is a child, down to depth `N`. Call a node *fresh* when the configurations on the path from the root down to it are at pairwise different places of the list (or, with equality decided, are pairwise different). A fresh path has at most `N` nodes, so at a fresh node at least one step is left: the guard holds there and the tree gives an enabled move. Each outcome of that move either extends the path freshly, and is the configuration of a fresh node; or stands at a place already on the path, and is then the configuration of an earlier fresh node. So the configurations of fresh nodes form a set closed in `GuardHorizon`'s sense, holding `s`. One way to say it without trees: `K t` holds when some path of configurations at pairwise different places of the list ends at `t`, each configuration on it viable for `N` less the number before it.
+
+## The module
+
+Write `/Users/ren/tmp/fm/build3/Becoming/ScratchViableEdge.lean`, module `Becoming.ScratchViableEdge`, importing what it needs from the package. You may also import `Becoming.ScratchComparison` if you copy `/Users/ren/tmp/fm/build2/Becoming/ScratchComparison.lean` into `/Users/ren/tmp/fm/build3/Becoming/` unchanged (it has `keptFor_iff_viable`, needed in Part 4).
+
+**Build only with** `/Users/ren/tmp/fm/run-build3.sh <n>` (n = 1, 2, 3, … one per build). It waits until no other Lean run is alive on this shared machine, builds your module through the checker's scratch builder (seconds, cached), audits the axioms of every declaration, and prints the end of the log. Clean means `exit 0`, `"unclean": []` and `"with_axioms": {}`. Run nothing else of Lean: no `lake`, no `check_becoming.py` (never with `--help`: it is a real run), no gate, no tests. Up to about 40 builds.
+
+### Part 1. The law
+
+```lean
+theorem viable_persists {all : List S} (every : ∀ x, x ∈ all) {y : S}
+    (kept : Viable P guard all.length y) :
+    ∃ a, Enabled P y a ∧ ∀ z, P.step y a z → Viable P guard all.length z
+```
+
+Prove it with the **weakest** premises you can: first try `every` alone, with the pigeonhole on places as `Parting.continues_persists` does it; if that does not go through, with equality of configurations decided (`DecidableEq S`, or a decision handed in as a hypothesis); say exactly which you needed and why the weaker one failed. Nothing about the moves, the guard or the step may be assumed decided or listed.
+
+### Part 2. What follows
+
+- `Closed P guard (Viable P guard all.length)` (with `viable_guard`).
+- `Viable P guard all.length s ↔ ∀ n, Viable P guard n s`.
+- `Viable P guard all.length s ↔ ∃ K, Closed P guard K ∧ K s`.
+- The other side, stated so that it reads as a bound on every choice: where `¬ Viable P guard all.length s`, no closed set holds `s`.
+
+### Part 3. The old law as a case
+
+`Parting.continues_persists` with its statement unchanged, proved by calling Part 1 on a process built from `P` in which a move is a pair of a move and its outcome (so that each move has one outcome) and the guard always holds, through an equivalence between `Lasting.Continues P n s` and `Viable` on that process. It must **not** call `continues_persists`, `continues_any`, `unbounded_of_continues`, `continues_cycle` or `path_of_continues`. Then `theorem continues_same : @continues_persists_case = @Parting.continues_persists := rfl` (mind the universes). Count lines: the old chain (`path_of_continues`, `continues_cycle`, `continues_persists` in Parting.lean) against your new chain for the case (the pair process, the equivalence, the case), not counting Part 1 itself, and then counting it.
+
+### Part 4. Through a reading
+
+`Keeping.KeptFor P sense guard allowed n B` is keeping by a choice from what a reading keeps of each step, for a class of starts `B : S → Prop`. `ScratchComparison.keptFor_iff_viable` says it is `Viable` on a process of classes. The classes are predicates, and the package has no extensionality, so "a list of every class" cannot be asked of predicates as such. Find the cleanest honest form of the edge for classes: for example a type of **codes** for classes with a list of every code, a map from codes to classes, and the premise that what is seen from a coded class after a usable move and a value kept is, configuration by configuration, the class of some code. Then: a coded class kept for as many steps as there are codes is kept for every number of steps, and lies in a family of classes closed in `Keeping.keptFor_of_closed`'s sense. Say exactly what premises your form needs, and which of them are structural (they say what a finite reading is) and which, if any, assume what is to be concluded. If no honest form comes out, say what blocks it.
+
+### Part 5. One built case, if Parts 1 to 4 are clean
+
+A small process with a level and two lanes is filed as text at `_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/read-a-choice-from-a-reading-2026-11-21/ScratchKeptForViable.lean.txt` (namespace `Drain`: the move that matches the lane keeps the level, the other lowers it; two starts kept together under a reading that keeps the level reached and not under one that keeps nothing). If it can be done in a few lines, state for it what Part 4 gives under each of the two readings: on which side of the edge the class of the two starts lies. Do not spend builds on this if it is not short.
+
+## What counts as nothing gained (frozen)
+
+- **E1.** The law of Part 1 is already in the package under another name (say where).
+- **E2.** Part 1 needs more than `every` and decided equality of configurations: anything decided or listed about moves, the guard or the step, or a classical principle.
+- **E3.** `Parting.continues_persists` does not come out as a case with its statement unchanged by a call of Part 1; or it does, and its new chain without Part 1 is longer than the old chain it replaces.
+- **E4.** Part 4 does not come out, or only with a premise that hands in the closed family.
+- **E5.** Any declaration with an axiom.
+- **E6.** A part whose proof puts the new law in and takes it out, where writing the induction directly would be as short. Say for each part which it is; a reader after you will check.
+
+## Traps
+
+- A core lemma can bring in `propext` (`Nat.succ_ne_zero` did, twice on 21 November): prove such facts by `Nat.noConfusion`, by cases, or with the package's own lemmas in `Becoming/Prelude.lean`. `simp`, `omega` and `decide` on propositions with free variables often bring axioms; the package's proofs are mostly terms. Read how `Parting.lean` proves `continues_persists` and `continues_cycle`, and how `Prelude.lean` proves `revisits_within`, and write in that style.
+- `GuardHorizon.Viable` lives at `Type` universes for states and moves; `Keeping`'s definitions are universe-polymorphic. `ScratchComparison` has a universe-polymorphic `Horizon` with `horizon_iff_viable` for exactly this.
+- The package's names are partly Chinese with guillemets: copy them from the source.
+- Write only under `/Users/ren/tmp/fm/build3/` and `/Users/ren/theories/tmp/fm/whole/lean-edge/` (your report). Change nothing in the repository or in git. Start no further agents.
+
+## What to return
+
+Your whole report as your final answer, also saved as `/Users/ren/theories/tmp/fm/whole/lean-edge/REPORT.md`:
+
+1. **In five lines**: what built clean, what did not, and your own verdict on E1 to E6.
+2. **Each theorem**: its statement as it stands in the module, whether it built clean, what it calls.
+3. **E1 to E6**, each answered with the evidence (the premises Part 1 needed and why; the `rfl` check; the line counts old and new; the premises of Part 4, each marked structural or not).
+4. **What blocked** anything that did not come out, exactly.
+5. **The last build's log** (its JSON), and the number of builds.
+6. **What you did not do.**

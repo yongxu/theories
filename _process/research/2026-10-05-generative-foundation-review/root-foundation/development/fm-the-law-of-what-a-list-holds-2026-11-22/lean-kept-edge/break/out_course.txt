@@ -1,0 +1,14 @@
+(ii) course 1x1: instances 2; iter = Continues at n=0..3: 8 compared, 0 differ
+    continues_persists at N=1..2: premise held 2, failures 0; at N=0: premise held 2, failures 1
+    fewest-step failure at N=0: steps {}, at 0
+(ii) course 2x1: instances 16; iter = Continues at n=0..5: 96 compared, 0 differ
+    continues_persists at N=2..4: premise held 66, failures 0; at N=1: premise held 24, failures 2
+    fewest-step failure at N=1: steps {(0, 0): [1]}, at 0
+(ii) course 2x2: instances 256; iter = Continues at n=0..5: 1536 compared, 0 differ
+    continues_persists at N=2..4: premise held 1422, failures 0; at N=1: premise held 480, failures 6
+    fewest-step failure at N=1: steps {(0, 0): [1]}, at 0
+(ii) course 3x1: instances 512; iter = Continues at n=0..7: 4096 compared, 0 differ
+    continues_persists at N=3..6: premise held 5124, failures 0; at N=2: premise held 1293, failures 12
+    fewest-step failure at N=2: steps {(0, 0): [2], (1, 0): [0]}, at 1
+seconds 0.0
+python3 cases.py course  0.04s user 0.01s system 39% cpu 0.133 total

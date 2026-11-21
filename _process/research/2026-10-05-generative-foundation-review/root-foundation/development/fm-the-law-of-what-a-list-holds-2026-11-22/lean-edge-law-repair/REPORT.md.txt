@@ -1,0 +1,127 @@
+## 1. Verdict in five lines
+
+AI-written by Codex. R1–R9 all built clean in order. Build 2 failed on a pattern in R2, corrected in build 3. [Repaired module](/Users/ren/tmp/fm/build7/Becoming/ScratchEdgeLaw.lean) · [Saved report](/Users/ren/theories/tmp/fm/whole/lean-edge-law-repair/REPORT.md)  
+**N1 did not occur.** Relational reach now calls `iter_persists` through the region step. It also comes down from every finite horizon.  
+**N2 did not occur.** The surviving build5 statements follow with their original premises, including the course comparison by `rfl`.  
+**N3 did not occur.** The final audit found empty axiom reports for all 58 declarations, including 45 theorems.  
+**N4 did not occur.** The proposed core homes use only core dependencies. The loss theorems live in the application `GuardHorizon`.
+
+## 2. Repairs R1–R9
+
+Below, `N` means `all.length`, `reaches` abbreviates `iter (reachStep R W₀) W₀`, and `every` means `∀ x, x ∈ all`.
+
+**R1. Reach as a case of falling iteration — clean build 1.** For any proposition `G`, write `Q x := W₀ x → G`. The bridge gives two bounds.
+
+| Theorem | Statement |
+|---|---|
+| `reach_imp_iff_iter` | `∀ n z, (reaches n z → G) ↔ iter (regionStep R Q) Q n z` |
+| `reach_rise_shortens` | Given `every`, `reaches (N + 1) y → reaches N y`. |
+| `reach_within_length` | Given `∀ x, (W₀ x → reaches N y) → x ∈ all`, `∀ n, reaches n y → reaches N y`. |
+
+Taking `G := reaches N y` makes the implication at level `N` the identity. The bridge carries it through `iter_persists` for one more step, or through `iter_iff_all` for every horizon. The latter needs only the displayed cover of the implication predicate. An exhaustive list supplies it by `fun x _ => every x`. Covering just the target would fail, for example on a two-step path to a single target with only the target listed.
+
+I removed `reach_shorten_at_places` and `reach_pad`. Their statements remain consequences. Through the bridge, the former is `extend_at_places` with the old cover’s right alternative translated into the region iterate. For padding from `n` to `n + 1`, take `G := reaches (n + 1) y` and apply `iter_pred` to the image of the identity under the bridge.
+
+**R2. One step sooner — clean build 3.** I used pointwise equivalence of predicates. `iter_shift` works from any preceding predicate `U`. The persistence theorem specializes it to all states. Both take `MonotoneStep Φ` and neither needs a separate falling-start premise.
+
+| Theorem | Premises and conclusion |
+|---|---|
+| `iter_shift` | From `∀ y, V₀ y ↔ Φ U y`, obtain `∀ n y, iter Φ V₀ n y ↔ iter Φ U (n + 1) y`. |
+| `iter_persists_from_all` | From `every`, `∀ y, V₀ y ↔ Φ (fun _ => True) y`, and `N = n + 1`, obtain `iter Φ V₀ n y → iter Φ V₀ (n + 1) y`. |
+| `region_first` | `Q y ↔ regionStep R Q (fun _ => True) y`. |
+| `held_iff_iter_pred_length` | From `every` and `N = n + 1`, obtain `«承» («逆» («所闭» R)) Q s ↔ iter (regionStep R Q) Q n s`. |
+| `kernel_iff_iter_pred_length` | Under the same premises, `Viability.Kernel P guard s ↔ iter (regionStep (Steps P) guard) guard n s`. |
+| `reach_rise_shortens_pred_length` | Under the same premises, `reaches (n + 1) y → reaches n y`. |
+
+Build 2 gave the base and successor clauses of `iter_shift` different numbers of patterns. Writing the base clause as `| 0, y => first y` fixed it. Monotonicity transports each direction of the equivalence, without function extensionality. The original bounds with a list covering only the guard remain available.
+
+**R3. One route for disturbances — clean build 4.** These three theorems give the disturbance bound.
+
+| Theorem | Statement |
+|---|---|
+| `kernel_iff_iter` | Given `∀ x, guard x → x ∈ all`, `Viability.Kernel P guard s ↔ iter (regionStep (Steps P) guard) guard N s`. |
+| `iter_region_iff_lasts` | `∀ n s, iter (regionStep (Steps (disturbed f adm)) guard) guard n s ↔ Lasts f adm guard n s`. |
+| `kernel_iff_lasts_length` | Given the guard cover, `Kernel (disturbed f adm) guard s ↔ Lasts f adm guard N s`. |
+
+The last proof is `(kernel_iff_iter within).trans (iter_region_iff_lasts _ s)`. I removed `disturbanceStep`, `disturbance_mono`, `iter_iff_lasts`, and `kernel_iff_lasts_length_direct`.
+
+**R4. Updates only from guarded codes — clean build 5.** The two reading theorems now use the following premise.
+
+```lean
+updates : ∀ c, (∀ s, decode c s → guard s) → ∀ a, Usable P allowed (decode c) a → ∀ o,
+  ∃ d, ∀ s, decode d s ↔ Seen P sense (decode c) a o s
+```
+
+`iter_iff_kept` still gives `∀ n c, iter Φ safe n c ↔ KeptFor P sense guard allowed n (decode c)` for **every** code. At level zero both sides say the class is guarded. The successor clause already has the guard proof when it calls `updates c h a usable o`. With the list covering every guarded code, `coded_kept_iff_closed` still gives `KeptFor P sense guard allowed N (decode c) ↔ InClosedFamily P sense guard allowed (decode c)`. The former unrestricted premise supplies the new one by `fun c _ => oldUpdates c`.
+
+**R5. Keep the general contrapositive — clean build 6.** In `PredicateIteration`, `not_iter_of_not_succ` takes monotonicity, `∀ y, Φ V₀ y → V₀ y`, and the cover of `V₀`. It concludes `¬ iter Φ V₀ (N + 1) y → ¬ iter Φ V₀ N y`. I removed `no_closed_of_not_viable`, `not_continues_of_not_succ`, and `not_viable_of_not_succ`. The scratch-only comparison is marked beside its declaration and still builds as `@continues_persists_case.{u,v} = @Parting.continues_persists.{u,v} := rfl`.
+
+**R6. Positive loss excludes viability at the same horizon — clean build 7.** For `S A : Type`, the new theorem `not_viable_of_loss` holds at every horizon.
+
+```lean
+∀ n s, rise (loseStep P guard) (fun y => ¬ guard y) n s → ¬ Viable P guard n s
+```
+
+At a successor horizon, viability supplies an enabled move whose every outcome remains viable. Positive loss either contradicts the current guard or supplies a losing outcome of that very move. The induction hypothesis rules out the latter. The theorem needs no list or decisions.
+
+**R7. Homes — clean build 8.** The general contrapositive stays in `PredicateIteration`. The reach statements sit beside `regionStep` in `CommonResponse` and use `iter` directly. The abbreviation `rise`, the dual, and the general rising results occupy `RisingIteration`. The loss definition, its implication to nonviability, and the two decision results occupy `GuardHorizon` immediately after the choice section. The two decision statements retain their hypotheses over every process of the indicated type. Shortening loss from 3 to 2 at `false` on `Bool` with one move and arbitrary guard gives `¬ q ∨ ¬ ¬ q`. Shortening from 4 to 3 at `none` on `Option Bool` with one move and an everywhere-true guard gives `q ∨ ¬ q`.
+
+**R8. Reuse the package list lemma — clean build 9.** The scratch declaration uses the package’s name, binders, and equation direction.
+
+```lean
+theorem remove_mem : ∀ {l : List X} {x : X}, x ∈ l →
+    ∃ l' : List X, l'.length + 1 = l.length ∧ ∀ y, y ∈ l → y = x ∨ y ∈ l'
+```
+
+Its statement and body match the declaration in `Refinement.lean` byte for byte. `extend_at_places` now uses `Nat.succ.inj (size.trans len)`. The former `remove_place` conclusion follows by reversing the length equation. On landing, the existing package declaration moves to `Prelude`.
+
+**R9. Premise names and docstrings — clean build 10.** The inclusion in `postfixed_in_iter` is now `inside : ∀ y, K y → V₀ y`. The closed-family guard proof is `guarded`. I also renamed the two local guard patterns in the monotonicity proofs, leaving `within` as a binder name only for list covers. The surviving marked docstrings now state their premises and conclusions. In particular, `remove_mem` asserts existence of a shorter covering list, `reach_rise_shortens` states reachability at the shorter bound, and the reading equivalence refers to the class of a code. All 58 declarations have docstrings. None uses “edge” or “law” or describes the proof.
+
+## 3. Sections, line counts, and imports
+
+Counts run from each `-- home:` comment through its closing `end`, inclusive. The full module is 573 lines. Package names below carry the `Becoming.` prefix except for the top-level `InquirySufficiency`.
+
+| Scratch section | Proposed home | Lines | Imports needed on landing |
+|---|---|---:|---|
+| `ListMembership` | `Prelude` | 15–38 · 24 | No new import. The existing list lemma uses core and `mem_cons_cases` in `Prelude`. |
+| `Falling` | new `PredicateIteration` | 40–149 · 110 | `Prelude` only. |
+| `Rising` | new `RisingIteration` | 151–208 · 58 | `PredicateIteration` and `Decidedness`. |
+| `Regions` | `CommonResponse` | 210–284 · 75 | Add `PredicateIteration` to the existing `GrammarLaws` import. |
+| `Kernels` | `Viability` | 286–305 · 20 | Existing `Frame`, `Witnesses`, and `CommonResponse` suffice. |
+| `Disturbances` | `Lasting` | 307–330 · 24 | Existing `Viability` supplies the repaired kernel results. Other current imports are `Recurrence` and `Likeness`. |
+| `Courses` | `Parting` | 332–366 · 35 | Existing `Distinguishing` and `Lasting` suffice. The count includes the scratch comparison. |
+| `Choices` | `GuardHorizon` | 368–416 · 49 | Existing `Acceptance`, `Viability`, `Keeping`, and `CommonResponse` suffice for choice. |
+| `Loss` | `GuardHorizon` | 418–496 · 79 | Add `RisingIteration` for `rise`. `Viable` is local. |
+| `Readings` | `Keeping` | 498–571 · 74 | Existing `Viability` and `InquirySufficiency` suffice. `PredicateIteration` arrives through `Viability` and `CommonResponse`. |
+
+I checked the homes against the package import lines and read the checker’s `APPLICATIONS` and `ring_direction` definitions. The new dependency runs from the application `GuardHorizon` to core `RisingIteration`. No core section requires an application, and moving `remove_mem` to `Prelude` avoids a dependency on `Refinement`. This placement was checked from source. The compiled artifact is the single scratch module.
+
+## 4. Final build and scope
+
+Ten wrapper invocations produced nine clean snapshots. R1–R9 correspond respectively to builds **1, 3, 4, 5, 6, 7, 8, 9, 10**. The final snapshot matches the module. Build 10 recorded `exit 0 build 10` and the following JSON. [Final snapshot](/Users/ren/tmp/fm/build7/ScratchEdgeLaw.clean-10.lean.txt) · [Build log](/Users/ren/tmp/fm/build7/build-10.log)
+
+```json
+{
+  "tree": "/Users/ren/tmp/fm/build7",
+  "modules": 64,
+  "ran": [
+    "Becoming.ScratchEdgeLaw",
+    "BecomingScratchEdgeLawAxiomAudit"
+  ],
+  "reused": 63,
+  "unclean": [],
+  "audits": {
+    "Becoming.ScratchEdgeLaw": {
+      "theorems": 45,
+      "declarations": 58,
+      "with_axioms": {}
+    }
+  },
+  "seconds": {
+    "Becoming.ScratchEdgeLaw": 0.719,
+    "BecomingScratchEdgeLawAxiomAudit": 0.357
+  }
+}
+```
+
+I used only the build7 wrapper for Lean. I ran no Lake, separate checker, gate, or tests, and started no agents. I did not attempt the converse from nonviability to positive loss. I made no package or git changes and wrote nothing to build5 or build6. My writes were confined to build7 and the requested report.

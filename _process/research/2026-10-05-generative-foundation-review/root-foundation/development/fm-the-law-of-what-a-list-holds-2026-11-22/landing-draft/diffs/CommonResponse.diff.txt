@@ -1,0 +1,117 @@
+--- /Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CommonResponse.lean	2026-11-01 18:42:54
++++ /Users/ren/tmp/fm/build10/Becoming/CommonResponse.lean	2026-11-22 03:27:40
+@@ -1,4 +1,5 @@
+ import Becoming.GrammarLaws
++import Becoming.PredicateIteration
+ 
+ /-!
+ # A response common over a reading (共应), on the root
+@@ -9,8 +10,9 @@
+ is a relation `E` on them, which situations it does not tell apart; the requirement is a region
+ `G a` for each act `a`, the situations where `a` is acceptable and can be done. The act is an index
+ outside `«际»`. Nothing here says which requirement is right: it is supplied, and fixed before the
+-outcome. It adds three definitions, `«共应»` and, for the lumping law's encoding, `«应际»` and
+-`«读应»`, and changes no definition of an earlier module.
++outcome.
++Its five main definitions are `«共应»` for a common response, `«应际»` and `«读应»` for the
++lumping statement, and `regionStep` and `reachStep` for closure.
+ 
+ | name | reading |
+ |---|---|
+@@ -30,6 +32,13 @@
+   (`«诸承在内当且仅当自反»`), is closed for every region exactly where it is transitive
+   (`«诸承闭当且仅当传递»`), and holds every region inside `P` closed under the reading with no
+   hypothesis (`«闭在内则在承»`).
++* **Closure at a finite depth.** Starting at Q, `regionStep` keeps states in Q whose successors
++  lie in the preceding predicate. If a list covers Q, applying this step as many times as the list
++  is long gives exactly the states from which Q holds throughout the closure (`held_iff_iter`).
++  If a list of length n + 1 covers every state, n steps suffice (`held_iff_iter_pred_length`).
++  From a target, `reachStep` adds states with a successor in the preceding predicate. Under the
++  same exhaustive listing, n steps give exactly the states whose closure meets the target
++  (`closure_iff_reach_within`).
+ * **When a common response exists.** For every reading, a response common over it within the
+   requirement exists exactly where the acts' kernels cover the situations: every situation has an act
+   whose region holds at every situation within its closure under the reading
+@@ -144,7 +153,82 @@
+       ∀ Q : α → Prop, (∀ s, Q s → P s) → «闭» E Q → ∀ s, Q s → «承» («逆» («所闭» E)) P s :=
+   ⟨fun _ held => «所闭之承在内» E held, «所闭之承闭» E P,
+    fun _ inside closed _ holds => «闭在内则在所闭之承» inside closed holds⟩
++
++/-! ## The region and its reachable targets -/
++
++section Regions
++
++open Iteration
++variable {S : Type u} (R : «际» S) (Q : S → Prop)
++
++/-- The region step holds where Q holds and every R-successor lies in the input predicate. -/
++def regionStep (X : S → Prop) (s : S) : Prop := Q s ∧ ∀ t, R s t → X t
++
++/-- The region step is monotone in the predicate allowed for successors. -/
++theorem region_mono : MonotoneStep (regionStep R Q) :=
++  fun sub _ ⟨inside, later⟩ => ⟨inside, fun t rel => sub t (later t rel)⟩
++
++/-- If all states in Q are listed, Q holds throughout the closure of R from s exactly when s
++lies in the region step's iterate from Q at the list length. -/
++theorem held_iff_iter {all : List S} (within : ∀ x, Q x → x ∈ all) {s : S} :
++    «承» («逆» («所闭» R)) Q s ↔ iter (regionStep R Q) Q all.length s :=
++  match «所闭之承最大» R Q, iter_largest (region_mono R Q) (fun _ h => h.1) within with
++  | ⟨inside, closed, largest⟩, ⟨bounded, post, greatest⟩ =>
++    ⟨greatest _ inside (fun x h => ⟨inside x h, fun t => closed x t h⟩) s,
++     largest _ bounded (fun x t h => (post x h).2 t) s⟩
++
++/-- Q holds at a state exactly when its region step holds there from the predicate true everywhere.
++-/
++theorem region_first (y : S) : Q y ↔ regionStep R Q (fun _ => True) y :=
++  ⟨fun h => ⟨h, fun _ _ => trivial⟩, fun h => h.1⟩
++
++/-- If a list of length n + 1 holds every state, Q holds throughout the closure of R from s
++exactly when s lies in iterate n of the region step from Q. -/
++theorem held_iff_iter_pred_length {all : List S} (every : ∀ x, x ∈ all)
++    {n : Nat} (len : all.length = n + 1) {s : S} :
++    «承» («逆» («所闭» R)) Q s ↔ iter (regionStep R Q) Q n s :=
++  (len ▸ held_iff_iter R Q (fun x _ => every x) (s := s)).trans
++    ⟨iter_pred (region_mono R Q) (fun _ h => h.1) n s,
++     iter_persists_from_all (region_mono R Q) every (region_first R Q) len⟩
+ 
++/-- A state is in the target already or has a related successor in the given class. -/
++def reachStep (R : S → S → Prop) (W₀ X : S → Prop) (y : S) : Prop :=
++  W₀ y ∨ ∃ t, R y t ∧ X t
++
++variable {R} {W₀ : S → Prop} {all : List S}
++local notation "reaches" => iter (reachStep R W₀) W₀
++
++/-- Enlarging the class of possible successors preserves membership in the reach step. -/
++theorem reach_mono : MonotoneStep (reachStep R W₀) :=
++  fun sub _ h => h.imp id fun ⟨t, r, p⟩ => ⟨t, r, sub t p⟩
++
++/-- The reach step commutes with every proposition. -/
++theorem reach_commutes (G : Prop) : CommutesWithImplication (reachStep R W₀) G :=
++  fun _ _ h finish => h.elim (fun w => finish (.inl w))
++    fun ⟨t, r, k⟩ => k fun w => finish (.inr ⟨t, r, w⟩)
++
++/-- If a list of length n + 1 holds every state, reaching the target from y at any finite
++horizon implies reaching it from y within n steps. -/
++theorem reach_within_length (every : ∀ x, x ∈ all) {n : Nat} (len : all.length = n + 1) {y : S} :
++    ∀ m, reaches m y → reaches n y :=
++  iter_within_pred_length reach_mono (fun _ => Or.inl) every len (reach_commutes _)
++    (fun _ => ⟨fun here h => h.elim here (fun ⟨_, _, k⟩ => k trivial), fun k w => k (.inl w)⟩)
++
++/-- If z reaches the target within m steps, the closure of R from z contains a target. -/
++theorem closure_of_reach : ∀ m z, reaches m z → ∃ t, «所闭» R z t ∧ W₀ t
++  | 0, z, hit | _ + 1, z, .inl hit => ⟨z, «所闭之自反» R z, hit⟩
++  | m + 1, _, .inr ⟨v, r, later⟩ => match closure_of_reach m v later with
++    | ⟨t, tail, hit⟩ => ⟨t, «所闭之传递» («缘在所闭» r) tail, hit⟩
++
++/-- If a list of length n + 1 holds every state, the closure of R from y meets the target
++exactly when y reaches the target within n steps. -/
++theorem closure_iff_reach_within (every : ∀ x, x ∈ all) {n : Nat} (len : all.length = n + 1)
++    {y : S} : (∃ t, «所闭» R y t ∧ W₀ t) ↔ reaches n y :=
++  ⟨fun ⟨_, path, hit⟩ => path (fun z => ∀ m, reaches m z → reaches n y)
++     (fun _ v h r m p => h (m + 1) (.inr ⟨v, r, p⟩)) (reach_within_length every len) 0 hit,
++   closure_of_reach n y⟩
++end Regions
++
+ /-! ## When a common response exists -/
+ 
+ /-- **A common response exists exactly where the acts' kernels cover the situations**: every

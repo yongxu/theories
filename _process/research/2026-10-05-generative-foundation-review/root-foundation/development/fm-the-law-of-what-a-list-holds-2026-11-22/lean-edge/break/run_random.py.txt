@@ -1,0 +1,81 @@
+# AI-written (Claude Fable), 22 November 2026. (a), (b), (c) by the literal definitions on random
+# processes of 4 to 6 configurations with up to 3 moves; and a cross-check of the literal model on a
+# random sample of the exhaustive 3-configuration space.
+import random, json, time, sys
+from literal import *
+
+def rand_process(rng, N, A, density):
+    states = list(range(N)); moves = list(range(A))
+    step = {(s, a, t) for s in states for a in moves for t in states if rng.random() < density}
+    return Process(states, moves, step)
+
+def check(P, guard, tally):
+    N = len(P.states)
+    v = viable_fn(P, guard)
+    # (a) at list lengths N .. N+3 and 2N (a list with duplicates or longer than the set)
+    for m in [N, N + 1, N + 2, N + 3, 2 * N]:
+        for y in P.states:
+            if v(m, y):
+                tally['a_prem'] += 1
+                if not any(P.enabled(y, a) and all(v(m, z) for z in P.out[y, a]) for a in P.moves):
+                    tally['a_fail'] += 1; tally['fails'].append(('a', m, y, sorted(P.step), sorted(guard)))
+    # with N-1
+    for y in P.states:
+        if v(N - 1, y):
+            tally['low_prem'] += 1
+            if not any(P.enabled(y, a) and all(v(N - 1, z) for z in P.out[y, a]) for a in P.moves):
+                tally['low_fail'] += 1
+    # (b)
+    big = largest_closed(P, guard)
+    VN = {s for s in P.states if v(N, s)}
+    tally['b_cmp'] += 1
+    if VN != big:
+        tally['b_fail'] += 1; tally['fails'].append(('b-closed', sorted(P.step), sorted(guard)))
+    for n in range(N, 3 * N + 1):
+        if {s for s in P.states if v(n, s)} != VN:
+            tally['b_fail'] += 1; tally['fails'].append(('b-n', n, sorted(P.step), sorted(guard)))
+    # least n with V_n = V_{n+1}
+    n = 0
+    while {s for s in P.states if v(n, s)} != {s for s in P.states if v(n + 1, s)}:
+        n += 1
+    tally['stab'][n] = tally['stab'].get(n, 0) + 1
+    tally['nonempty_proper'] += (0 < len(VN) < N)
+
+def check_c(P, tally):
+    N = len(P.states)
+    c = continues_fn(P)
+    vp = viable_fn(pair_process(P), P.states)
+    for n in range(0, 3 * N + 1):
+        for s in P.states:
+            tally['c_cmp'] += 1
+            tally['c_true'] += c(n, s)
+            if c(n, s) != vp(n, s):
+                tally['c_fail'] += 1; tally['fails'].append(('c', n, s, sorted(P.step)))
+
+def main():
+    rng = random.Random(20261122)
+    t0 = time.time()
+    tally = dict(a_prem=0, a_fail=0, low_prem=0, low_fail=0, b_cmp=0, b_fail=0, c_cmp=0, c_true=0, c_fail=0,
+                 stab={}, nonempty_proper=0, fails=[], instances=0)
+    per = {}
+    for i in range(6000):
+        N = rng.choice([4, 5, 6]); A = rng.choice([1, 2, 3])
+        density = rng.choice([0.08, 0.15, 0.25, 0.4, 0.6])
+        P = rand_process(rng, N, A, density)
+        guard = {s for s in P.states if rng.random() < rng.choice([0.5, 0.8, 1.0])}
+        check(P, guard, tally); check_c(P, tally)
+        tally['instances'] += 1
+        per[(N, A)] = per.get((N, A), 0) + 1
+    # structured: a chain with a dead end (the bound is met), a cycle with exits, a list twice as long
+    for N in [4, 5, 6]:
+        P = Process(range(N), [0], {(i, 0, i + 1) for i in range(N - 1)})
+        check(P, set(range(N)), tally); check_c(P, tally); tally['instances'] += 1
+        P = Process(range(N), [0, 1], {(i, 0, (i + 1) % N) for i in range(N)} | {(i, 1, 0) for i in range(N)})
+        check(P, set(range(N - 1)), tally); check_c(P, tally); tally['instances'] += 1
+    tally['per_size'] = {f'{k[0]}x{k[1]}': v for k, v in sorted(per.items())}
+    tally['seconds'] = round(time.time() - t0, 1)
+    tally['stab'] = dict(sorted(tally['stab'].items()))
+    print(json.dumps(tally))
+
+if __name__ == '__main__':
+    main()

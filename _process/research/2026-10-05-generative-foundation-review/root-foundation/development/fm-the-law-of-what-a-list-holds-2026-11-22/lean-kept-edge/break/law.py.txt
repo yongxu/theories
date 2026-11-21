@@ -1,0 +1,189 @@
+# AI-written (Claude Fable 5.2), a reader's program. Read only; nothing here touches Lean.
+# The general law of ScratchKeptEdge (section Law) and the rising chain (section Rising),
+# by enumeration of every monotone step on subsets of a set of 1, 2, 3 points; sampled on 4.
+#
+# A subset of S = {0..n-1} is an int bitmask. A step F is a list of 2^n masks.
+# iter F V0 0 = V0 ; iter F V0 (k+1) = F[iter F V0 k]        (ScratchKeptEdge l. 15-17)
+# MonotoneStep F : X inside Y  ->  F[X] inside F[Y]            (l. 19-20)
+# start          : F[V0] inside V0                             (l. 23)
+# law iter_persists, pointwise: iter N inside iter (N+1), N = length of a list holding every
+# member, so N may be any number >= n (a list may repeat).
+import itertools, random, sys, time
+
+def sub(a, b): return a & ~b == 0
+
+def monotone_bool_fns(n):
+    """All monotone f : subsets -> {0,1}, each as a tuple of 2^n bits."""
+    m = 1 << n
+    pairs = [(x, y) for x in range(m) for y in range(m) if sub(x, y)]
+    out = []
+    for bits in itertools.product((0, 1), repeat=m):
+        if all(bits[x] <= bits[y] for x, y in pairs):
+            out.append(bits)
+    return out
+
+def monotone_bool_fns_4():
+    n, m = 4, 16
+    covers = [(x, x | (1 << i)) for x in range(m) for i in range(n) if not x >> i & 1]
+    out = []
+    for code in range(1 << m):
+        if all((code >> x & 1) <= (code >> y & 1) for x, y in covers):
+            out.append(tuple(code >> x & 1 for x in range(m)))
+    return out
+
+def step_from(fns, n):
+    m = 1 << n
+    return [sum(fns[i][x] << i for i in range(n)) for x in range(m)]
+
+def is_monotone(F, n):
+    m = 1 << n
+    return all(sub(F[x], F[y]) for x in range(m) for y in range(m) if sub(x, y))
+
+def chain(F, V0, k):
+    c = [V0]
+    for _ in range(k):
+        c.append(F[c[-1]])
+    return c
+
+def largest_postfixed(F, V0, n):
+    u = 0
+    for K in range(1 << n):
+        if sub(K, V0) and sub(K, F[K]):
+            u |= K
+    return u
+
+def show(mask, n): return "{" + ",".join(str(i) for i in range(n) if mask >> i & 1) + "}"
+def show_step(F, n): return "; ".join(f"{show(x,n)}->{show(F[x],n)}" for x in range(1 << n))
+
+def run(n, steps, label, exhaustive=True):
+    m = 1 << n
+    c = dict(steps=0, falling=0, a_fail=0, a_checked=0, a_eq_fail=0, b_fail=0, b_checked=0,
+             c_fail=0, c_checked=0, d_starts=0, d_fail_N=0, d_fail_any=0, tight=0,
+             places=0, places_cover=0, places_fail=0,
+             rising=0, r_fail=0, r_checked=0, r_low_fail=0, r_tight=0, dual_fail=0, dual_checked=0)
+    first_b = None; first_d = None; first_r = None
+    full = m - 1
+    for F in steps:
+        c['steps'] += 1
+        Fdual = [full & ~F[full & ~x] for x in range(m)]
+        for V0 in range(m):
+            ch = chain(F, V0, 2 * n + 3)
+            # (d) no start premise: every start
+            c['d_starts'] += 1
+            if not sub(ch[n], ch[n + 1]):
+                c['d_fail_N'] += 1
+                if first_d is None: first_d = (F, V0, ch[:n + 2])
+            if any(not sub(ch[N], ch[N + 1]) for N in range(n, 2 * n + 2)):
+                c['d_fail_any'] += 1
+            # duality of ScratchKeptEdge l. 263-281, classically: iter dual (not W0) k = not rise k
+            dch = chain(Fdual, full & ~V0, 2 * n + 3)
+            c['dual_checked'] += 1
+            if any(dch[k] != full & ~ch[k] for k in range(2 * n + 3)): c['dual_fail'] += 1
+            if sub(F[V0], V0):
+                c['falling'] += 1
+                # (a) the law at every list length N from n to 2n+1
+                for N in range(n, 2 * n + 2):
+                    c['a_checked'] += 1
+                    if not sub(ch[N], ch[N + 1]): c['a_fail'] += 1
+                    if ch[N] != ch[N + 1]: c['a_eq_fail'] += 1
+                # (b) with n-1 in place of n
+                if n >= 1:
+                    c['b_checked'] += 1
+                    if not sub(ch[n - 1], ch[n]):
+                        c['b_fail'] += 1
+                        if first_b is None: first_b = (F, V0, ch[:n + 1])
+                    least = next(k for k in range(2 * n + 3) if ch[k] == ch[k + 1])
+                    if least == n: c['tight'] += 1
+                    assert least <= n, (F, V0)
+                # (c) largest post-fixed set inside V0
+                c['c_checked'] += 1
+                if ch[n] != largest_postfixed(F, V0, n): c['c_fail'] += 1
+                # extend_at_places as stated (l. 33-34): a list of length k, members L;
+                # cover: every z in L or in iter (k+1); conclusion iter k inside iter (k+1)
+                for k in range(0, n + 2):
+                    for L in range(m):
+                        size = bin(L).count("1")
+                        if size > k or (k > 0 and size == 0 and False): continue
+                        if k == 0 and L != 0: continue
+                        if k > 0 and L == 0 and n > 0:
+                            pass  # a list of length k>0 has a member; skip the impossible case
+                        if k > 0 and L == 0: continue
+                        c['places'] += 1
+                        if (L | ch[k + 1]) == full:
+                            c['places_cover'] += 1
+                            if not sub(ch[k], ch[k + 1]): c['places_fail'] += 1
+            if sub(V0, F[V0]):
+                # rising chain: W0 inside F[W0]; classically rise (N+1) inside rise N
+                c['rising'] += 1
+                for N in range(n, 2 * n + 2):
+                    c['r_checked'] += 1
+                    if not sub(ch[N + 1], ch[N]):
+                        c['r_fail'] += 1
+                        if first_r is None: first_r = (F, V0, ch[:N + 2])
+                if n >= 1:
+                    if not sub(ch[n], ch[n - 1]): c['r_low_fail'] += 1
+                    least = next(k for k in range(2 * n + 3) if ch[k] == ch[k + 1])
+                    if least == n: c['r_tight'] += 1
+    print(f"== {label}: |S|={n}, monotone steps {'(all)' if exhaustive else '(sample)'} = {c['steps']}")
+    print(f"  starts with step(V0) inside V0: {c['falling']}")
+    print(f"  (a) iter N inside iter N+1, N = n..2n+1: checked {c['a_checked']}, failures {c['a_fail']}; not equal {c['a_eq_fail']}")
+    print(f"  (b) n-1 in place of n: checked {c['b_checked']}, failures {c['b_fail']}; chain first steady exactly at n in {c['tight']}")
+    if first_b:
+        F, V0, ch = first_b
+        print(f"      first failing: step [{show_step(F,n)}], V0={show(V0,n)}, chain {[show(x,n) for x in ch]}")
+    print(f"  (c) iter n = union of post-fixed sets inside V0: checked {c['c_checked']}, differences {c['c_fail']}")
+    print(f"  extend_at_places as stated: (k, member set) cases {c['places']}, cover held {c['places_cover']}, failures {c['places_fail']}")
+    print(f"  (d) no start premise, every V0: {c['d_starts']} (step, start) pairs; law fails at N=n in {c['d_fail_N']}; fails at some N in n..2n+1 in {c['d_fail_any']}")
+    if first_d:
+        F, V0, ch = first_d
+        print(f"      first failing: step [{show_step(F,n)}], V0={show(V0,n)}, chain {[show(x,n) for x in ch]}")
+    print(f"  rising starts (W0 inside step(W0)): {c['rising']}; rise N+1 inside rise N, N=n..2n+1: checked {c['r_checked']}, failures {c['r_fail']}")
+    print(f"      with n-1 in place of n: failures {c['r_low_fail']}; first steady exactly at n in {c['r_tight']}")
+    print(f"  dual chain = complement of chain at every level 0..2n+2: checked {c['dual_checked']}, differences {c['dual_fail']}")
+    return c
+
+def smallest_b(n, fns):
+    """Among failures of (b), one with the fewest points in the graph of the step."""
+    best = None
+    for combo in itertools.product(fns, repeat=n):
+        F = step_from(combo, n)
+        for V0 in range(1 << n):
+            if sub(F[V0], V0):
+                ch = chain(F, V0, n)
+                if not sub(ch[n - 1], ch[n]):
+                    w = sum(bin(x).count("1") for x in F)
+                    if best is None or w < best[0]: best = (w, F, V0, ch)
+    return best
+
+if __name__ == "__main__":
+    t = time.time()
+    random.seed(20261122)
+    # the report's two-point counterexample to dropping `start` (REPORT H1):
+    # points false=0, true=1; V0 = {false}; step X b := X (not b)
+    F = [0, 2, 1, 3]   # {}->{}, {0}->{1}, {1}->{0}, {0,1}->{0,1}
+    assert is_monotone(F, 2)
+    ch = chain(F, 1, 3)
+    print("report's counterexample: monotone", is_monotone(F, 2), "chain", [show(x, 2) for x in ch],
+          "| start premise holds:", sub(F[1], 1), "| iter 2 at false:", bool(ch[2] & 1), "iter 3 at false:", bool(ch[3] & 1))
+    # zero points
+    print("== |S|=0: one step, one start; iter 0 = iter 1 = {} trivially")
+    for n in (1, 2, 3):
+        fns = monotone_bool_fns(n)
+        steps = [step_from(combo, n) for combo in itertools.product(fns, repeat=n)]
+        assert all(is_monotone(F, n) for F in steps) and len(set(map(tuple, steps))) == len(steps)
+        # every monotone step is of this form: count monotone steps by brute force for n <= 2
+        if n <= 2:
+            m = 1 << n
+            brute = sum(1 for F in itertools.product(range(m), repeat=m) if is_monotone(list(F), n))
+            assert brute == len(steps), (brute, len(steps))
+        print(f"monotone Boolean functions on {n} points: {len(fns)}")
+        run(n, steps, "exhaustive")
+        b = smallest_b(n, fns)
+        if b:
+            w, F, V0, ch = b
+            print(f"  (b) a failing instance with the fewest pairs in the step ({w}): step [{show_step(F,n)}], V0={show(V0,n)}, chain {[show(x,n) for x in ch]}")
+    fns4 = monotone_bool_fns_4()
+    print(f"monotone Boolean functions on 4 points: {len(fns4)} (steps: {len(fns4)**4})")
+    sample = [step_from([random.choice(fns4) for _ in range(4)], 4) for _ in range(12000)]
+    run(4, sample, "random sample", exhaustive=False)
+    print(f"seconds {time.time()-t:.1f}")

@@ -1,0 +1,402 @@
+import Becoming.ScratchEdgeLaw
+import Becoming.KeepableStep
+import Becoming.Onward
+import Becoming.GrammarCandidates
+import Becoming.Attraction
+import Becoming.Likeness
+import Becoming.Junctures
+import Becoming.ReachableRanges
+
+/-! AI-written by Codex. Finite bounds for loss, reach and keeping. -/
+
+namespace Becoming.ScratchEdgeCases
+
+open Generative ScratchEdgeLaw
+universe u v w i j
+
+-- home: GuardHorizon
+section Loss
+
+open GuardHorizon
+variable {S : Type u} {A : Type v} {P : Process S A} {guard X : S → Prop}
+
+/-- The guard fails, or each move is disabled or has an outcome in the given class. -/
+def lostStep (P : Process S A) (guard X : S → Prop) (s : S) : Prop :=
+  ¬ guard s ∨ ∀ a, ¬ Enabled P s a ∨ ∃ t, P.step s a t ∧ X t
+
+/-- Enlarging the class of losing outcomes preserves each loss step. -/
+theorem lost_mono : MonotoneStep (lostStep P guard) :=
+  fun sub _ h => h.imp id fun each a => (each a).imp id fun ⟨t, st, lost⟩ => ⟨t, st, sub t lost⟩
+
+/-- Failure of the guard suffices for a loss step from the failed guard. -/
+theorem lost_start (s : S) : ¬ guard s → lostStep P guard (fun t => ¬ guard t) s := Or.inl
+
+/-- Disjunctive loss supplies a losing outcome for each enabled move when the guard holds. -/
+theorem lost_implies_lose {s : S} : lostStep P guard X s → loseStep P guard X s :=
+  fun h => h.imp id fun each a live => (each a).elim (fun no => False.elim (no live)) id
+
+/-- When enabling is decided at each state and move, the two loss steps agree. -/
+theorem lost_iff_lose (decided : ∀ s a, Enabled P s a ∨ ¬ Enabled P s a) {s : S} :
+    lostStep P guard X s ↔ loseStep P guard X s :=
+  ⟨lost_implies_lose, fun h => h.imp id fun each a => (decided s a).elim
+    (fun live => .inr (each a live)) Or.inl⟩
+
+local notation "L" => ScratchEdgeLaw.rise (lostStep P guard) (fun s => ¬ guard s)
+
+/-- A loss at any level refutes viability at that same horizon. -/
+theorem lost_not_viable {S A : Type} {P : Process S A} {guard : S → Prop} : ∀ n s,
+    ScratchEdgeLaw.rise (lostStep P guard) (fun t => ¬ guard t) n s → ¬ Viable P guard n s
+  | 0, _, no => no
+  | n + 1, _, lost => fun ⟨safe, a, live, keeps⟩ => (lost_implies_lose lost).elim
+    (fun no => no safe) fun each => match each a live with
+    | ⟨t, st, bad⟩ => lost_not_viable n t bad (keeps t st)
+
+/-- Every loss level is included in the next. -/
+theorem lost_pad : ∀ n s, L n s → L (n + 1) s
+  | 0 => lost_start
+  | n + 1 => lost_mono (lost_pad n)
+
+/-- If each listed assertion suffices under any continuation to a fixed conclusion,
+the assertions on the entire list suffice together under such a continuation. -/
+theorem gather_moves {D : A → Prop} {G : Prop} : ∀ (moves : List A),
+    (∀ a, a ∈ moves → (D a → G) → G) → ((∀ a, a ∈ moves → D a) → G) → G
+  | [], _, finish => finish fun _ mem => nomatch mem
+  | a :: rest, each, finish => each a (.head _) fun head =>
+    gather_moves rest (fun b mem => each b (.tail a mem)) fun tail =>
+      finish fun b mem => match mem_cons_cases mem with
+        | .inl rfl => head
+        | .inr later => tail b later
+
+/-- With every move listed, suppose each state is among n places or its loss at n+1
+suffices for a conclusion. Wherever loss at n suffices, loss at n+1 then suffices. -/
+theorem lost_shorten_at_places {moves : List A} (everyMove : ∀ a, a ∈ moves) {G : Prop} :
+    ∀ (n : Nat) (left : List S), left.length = n →
+    (∀ z, z ∈ left ∨ (L (n + 1) z → G)) → ∀ y, (L n y → G) → L (n + 1) y → G
+  | 0, _, len, cover, y, _, h => (cover y).elim
+    (fun mem => nomatch (nil_of_length_zero len ▸ mem : y ∈ ([] : List S))) (fun done => done h)
+  | n + 1, _, len, cover, y, finish, h => match cover y with
+    | .inr done => done h
+    | .inl mem => match h with
+      | .inl no => finish (.inl no)
+      | .inr replies => match remove_place mem with
+        | ⟨rest, size, place⟩ =>
+          have nextCover (z : S) : z ∈ rest ∨ (L (n + 1) z → G) := match cover z with
+            | .inr done => .inr fun bad => done (lost_pad _ z bad)
+            | .inl listed => match place z listed with
+              | .inl rfl => .inr finish
+              | .inr unused => .inl unused
+          let D (a : A) := ¬ Enabled P y a ∨ ∃ t, P.step y a t ∧ L n t
+          gather_moves (D := D) moves (fun a _ give => match replies a with
+            | .inl no => give (.inl no)
+            | .inr ⟨t, st, bad⟩ => lost_shorten_at_places everyMove n rest
+              (Nat.succ.inj (size.symm.trans len)) nextCover t
+              (fun short => give (.inr ⟨t, st, short⟩)) bad)
+            (fun answers => finish (.inr fun a => answers a (everyMove a)))
+
+/-- With every state and every move listed, loss one step past the state count gives
+loss at that count. -/
+theorem lost_shortens {all : List S} (every : ∀ s, s ∈ all) {moves : List A}
+    (everyMove : ∀ a, a ∈ moves) {y : S} : L (all.length + 1) y → L all.length y :=
+  lost_shorten_at_places everyMove all.length all rfl (fun z => .inl (every z)) y id
+
+/-- Shortening disjunctive loss on listed three-state processes with natural-number moves
+would distribute a common disjunct over a universal quantifier on the moves. -/
+theorem lost_edge_distributes
+    (edge : ∀ (P : Process (Option Bool) Nat) (all : List (Option Bool)), (∀ z, z ∈ all) →
+      let levels := ScratchEdgeLaw.rise (lostStep P (fun _ => True)) (fun _ => ¬ True)
+      levels (all.length + 1) none → levels all.length none)
+    (p : Nat → Prop) (q : Prop) (each : ∀ a, p a ∨ q) : (∀ a, p a) ∨ q :=
+  let P : Process (Option Bool) Nat := ⟨fun s a t => match s with
+    | none => t = some false ∨ (q ∧ t = some true)
+    | some false => (p a ∧ t = some true) ∨ (q ∧ t = none)
+    | some true => False⟩
+  let loss := ScratchEdgeLaw.rise (lostStep P (fun _ => True)) (fun _ => ¬ True)
+  have rootLive (a : Nat) : Enabled P none a := ⟨some false, .inl rfl⟩
+  have midLive (a : Nat) : Enabled P (some false) a := (each a).elim
+    (fun hp => ⟨some true, .inl ⟨hp, rfl⟩⟩) (fun hq => ⟨none, .inr ⟨hq, rfl⟩⟩)
+  have dead : loss 1 (some true) := .inr fun _ => .inl fun ⟨_, st⟩ => st
+  have viaQ (hq : q) : loss 2 none := .inr fun _ => .inr ⟨some true, .inr ⟨hq, rfl⟩, dead⟩
+  have middle : loss 3 (some false) := .inr fun a => .inr ((each a).elim
+    (fun hp => ⟨some true, .inl ⟨hp, rfl⟩, lost_pad 1 _ dead⟩)
+    (fun hq => ⟨none, .inr ⟨hq, rfl⟩, viaQ hq⟩))
+  have four : loss 4 none := .inr fun _ => .inr ⟨some false, .inl rfl, middle⟩
+  have cover : ∀ z, z ∈ [none, some false, some true]
+    | none => .head _
+    | some false => .tail _ (.head _)
+    | some true => .tail _ (.tail _ (.head _))
+  have noOne (h : loss 1 none) : False := (lost_implies_lose h).elim (fun no => no trivial)
+    fun replies => match replies 0 (rootLive 0) with | ⟨_, _, no⟩ => no trivial
+  match (lost_implies_lose (edge P _ cover four)).elim (fun no => False.elim (no trivial))
+      (fun replies => replies 0 (rootLive 0)) with
+  | ⟨t, st, bad⟩ => match st with
+    | .inr ⟨hq, _⟩ => .inr hq
+    | .inl eq =>
+      have two : loss 2 (some false) := (show t = some false from eq) ▸ bad
+      .inl fun a => (lost_implies_lose two).elim (fun no => False.elim (no trivial)) fun replies =>
+        match replies a (midLive a) with
+        | ⟨z, step, one⟩ => match step with
+          | .inl ⟨hp, _⟩ => hp
+          | .inr ⟨_, back⟩ => False.elim (noOne ((show z = none from back) ▸ one))
+
+/-- Distribution of a common disjunct over all natural numbers implies the limited
+principle of omniscience for Boolean sequences. -/
+theorem lpo_of_distributes
+    (distribute : ∀ (p : Nat → Prop) (q : Prop), (∀ n, p n ∨ q) → (∀ n, p n) ∨ q) : LPO :=
+  fun f => (distribute (fun n => f n = false) (∃ n, f n = true) (fun n =>
+    match eq : f n with
+    | false => .inl eq
+    | true => .inr ⟨n, eq⟩)).elim Or.inr Or.inl
+
+end Loss
+
+-- home: Junctures
+section BoundedReach
+
+variable {S : Type u} {A : Type v} {P : Process S A} {B : S → Prop}
+local notation "W" => ScratchEdgeLaw.rise (reachStep (Steps P) B) B
+
+/-- Reaching a target by level k is exactly having a trace of at most k moves into it. -/
+theorem rise_iff_trace : ∀ k y, W k y ↔ ∃ t as, as.length ≤ k ∧ Trace P y as t ∧ B t
+  | 0, y => ⟨fun hit => ⟨y, [], Nat.le_refl _, .nil y, hit⟩, fun
+      | ⟨_, [], _, .nil _, hit⟩ => hit
+      | ⟨_, _ :: _, le, _, _⟩ => absurd le (Nat.not_succ_le_zero _)⟩
+  | k + 1, y => ⟨fun
+      | .inl hit => ⟨y, [], Nat.zero_le _, .nil y, hit⟩
+      | .inr ⟨z, ⟨a, st⟩, rest⟩ => match (rise_iff_trace k z).mp rest with
+        | ⟨t, as, le, path, hit⟩ => ⟨t, a :: as, Nat.succ_le_succ le, .cons st path, hit⟩,
+    fun
+      | ⟨_, [], _, .nil _, hit⟩ => .inl hit
+      | ⟨t, a :: as, le, .cons st path, hit⟩ => .inr ⟨_, ⟨a, st⟩,
+        (rise_iff_trace k _).mpr ⟨t, as, Nat.le_of_succ_le_succ le, path, hit⟩⟩⟩
+
+variable {all : List S} (every : ∀ x, x ∈ all)
+
+include every in
+/-- If every state is listed, reach at any level implies reach at the list length. -/
+theorem reach_at_count : ∀ k y, W k y → W all.length y
+  | 0, _, hit => reach_rise_shortens every (.inl hit)
+  | _ + 1, _, .inl hit => reach_rise_shortens every (.inl hit)
+  | k + 1, _, .inr ⟨t, st, rest⟩ => reach_rise_shortens every (.inr ⟨t, st, reach_at_count k t rest⟩)
+
+include every in
+/-- If every state is listed, any reachable target has a trace to it within the list length. -/
+theorem reach_within_count {s y : S} (reach : Reach P y s) :
+    ∃ as, as.length ≤ all.length ∧ Trace P y as s :=
+  match reach with
+  | ⟨as, path⟩ =>
+    have hit := (rise_iff_trace (B := fun z => z = s) as.length y).mpr ⟨s, as, Nat.le_refl _, path, rfl⟩
+    match (rise_iff_trace _ y).mp (reach_at_count every _ y hit) with
+    | ⟨_, short, le, trace, rfl⟩ => ⟨short, le, trace⟩
+
+/-- With the listed states, Boolean step test and returning target of the old theorem,
+reach gives a trace within the count. -/
+theorem reach_within_listed_case {s : S} {all : List S} {edge : S → S → Bool} (every : ∀ x, x ∈ all)
+    (decides : ∀ x y, edge x y = true ↔ ∃ a, P.step x a y) (returns : Branching.Returns P s) {y : S}
+    (reach : Reach P y s) : ∃ as, as.length ≤ all.length ∧ Trace P y as s :=
+  let _ := And.intro decides returns; reach_within_count every reach
+
+/-- The replacement for listed reach has exactly the package statement at all universes. -/
+theorem reach_within_same : @reach_within_listed_case.{u,v} = @Branching.reach_within_listed.{u,v} := rfl
+
+include every in
+/-- With every state listed, possible items are exactly the items possible within the count. -/
+theorem possible_iff_within_count {X : Type} {adm : S → X → Prop} {y : S} {x : X} :
+    Reaching.Possible P adm y x ↔ Reaching.PossibleWithin P adm all.length y x :=
+  ⟨fun ⟨t, reach, hit⟩ => match reach_within_count every reach with
+    | ⟨as, le, path⟩ => ⟨t, as, le, path, hit⟩, Reaching.PossibleWithin.possible⟩
+
+end BoundedReach
+
+-- home: Likeness
+section Matching
+
+/-- For a monotone step, any family with the same start and successor clauses as iteration
+agrees with the iterates at every level. -/
+theorem iter_iff_stages {T : Type u} {Φ : (T → Prop) → T → Prop} {start : T → Prop}
+    {stage : Nat → T → Prop} (mono : MonotoneStep Φ) (zero : ∀ z, start z ↔ stage 0 z)
+    (next : ∀ n z, Φ (stage n) z ↔ stage (n + 1) z) :
+    ∀ n z, iter Φ start n z ↔ stage n z
+  | 0 => zero
+  | n + 1 => fun z => Iff.trans
+    ⟨mono (fun t => (iter_iff_stages mono zero next n t).mp) z,
+     mono (fun t => (iter_iff_stages mono zero next n t).mpr) z⟩ (next n z)
+
+variable {S : Type u} {S' : Type i} {A : Type v} {C : Type w} {F : Frame S A C} {G : Frame S' A C}
+
+/-- The pair agrees on claims and each step on either side has a same-move match
+whose pair of outcomes lies in the given class. -/
+def alikeStep (F : Frame S A C) (G : Frame S' A C) (X : S × S' → Prop) (p : S × S') : Prop :=
+  AlikeTo F G 0 p.1 p.2 ∧
+    (∀ a t, F.P.step p.1 a t → ∃ t', G.P.step p.2 a t' ∧ X (t, t')) ∧
+    (∀ a t', G.P.step p.2 a t' → ∃ t, F.P.step p.1 a t ∧ X (t, t'))
+
+/-- Enlarging the class of outcome pairs preserves each match in both directions. -/
+theorem alike_mono : MonotoneStep (alikeStep F G) :=
+  fun sub _ ⟨agree, forth, back⟩ => ⟨agree,
+    fun a t st => match forth a t st with | ⟨t', st', h⟩ => ⟨t', st', sub _ h⟩,
+    fun a t' st' => match back a t' st' with | ⟨t, st, h⟩ => ⟨t, st, sub _ h⟩⟩
+
+local notation "agree" => (fun p : S × S' => AlikeTo F G 0 (Prod.fst p) (Prod.snd p))
+
+/-- Iteration from agreement on claims is likeness to the same depth. -/
+theorem iter_iff_alikeTo : ∀ n (p : S × S'), iter (alikeStep F G) agree n p ↔ AlikeTo F G n p.1 p.2 :=
+  iter_iff_stages (stage := fun n p => AlikeTo F G n p.1 p.2) alike_mono
+    (fun _ => Iff.rfl) (fun _ _ => Iff.rfl)
+
+variable {pairs : List (S × S')}
+
+/-- If every pair agreeing on claims is listed, likeness at the pair count persists one step. -/
+theorem alike_at_cover (within : ∀ p, agree p → p ∈ pairs) (s : S) (s' : S') :
+    AlikeTo F G pairs.length s s' → AlikeTo F G (pairs.length + 1) s s' :=
+  fun h => (iter_iff_alikeTo _ (s, s')).mp (iter_persists alike_mono (fun _ m => m.1) within
+    ((iter_iff_alikeTo _ (s, s')).mpr h))
+
+/-- If every pair agreeing on claims is listed, likeness is equivalent to likeness at its count. -/
+theorem alike_iff_at_cover (within : ∀ p, agree p → p ∈ pairs) {s : S} {s' : S'} :
+    Alike F G s s' ↔ AlikeTo F G pairs.length s s' :=
+  ⟨fun h => h.alikeTo _, fun h => ⟨_, AlikeTo.bisimulation (alike_at_cover within), h⟩⟩
+
+variable {l : List S} {l' : List S'} (all : ∀ s, s ∈ l) (all' : ∀ s', s' ∈ l')
+local notation "N" => l'.length * l.length
+
+include all all' in
+/-- With both configuration spaces listed, likeness persists at the product of the lengths. -/
+theorem alike_at_pairs (s : S) (s' : S') : AlikeTo F G N s s' → AlikeTo F G (N + 1) s s' :=
+  length_pairsOf l' l ▸ alike_at_cover (F := F) (G := G)
+    (fun p _ => mem_pairsOf (all p.1) (all' p.2)) s s'
+
+/-- With the move, claim, frame and configuration premises of the old theorem,
+likeness persists at some depth at most the number of pairs. -/
+theorem steady_within_case (moves : ∃ l : List A, ∀ a, a ∈ l) (claims : ∃ l : List C, ∀ c, c ∈ l)
+    (finite : FiniteDecided F) (finite' : FiniteDecided G) {l : List S} {l' : List S'}
+    (all : ∀ s, s ∈ l) (all' : ∀ s', s' ∈ l') :
+    ∃ k, k ≤ l'.length * l.length ∧ ∀ s s', AlikeTo F G k s s' → AlikeTo F G (k + 1) s s' :=
+  let _ := And.intro moves (And.intro claims (And.intro finite finite'))
+  ⟨_, Nat.le_refl _, alike_at_pairs all all'⟩
+
+/-- The replacement for the existential depth bound has the package statement at all universes. -/
+theorem steady_within_same : @steady_within_case.{u,v,w,i} = @AlikeTo.steady_within.{u,v,w,i} := rfl
+
+include all all' in
+/-- With both configuration spaces listed, likeness is equivalent to likeness at the product bound. -/
+theorem alike_iff_alikeTo_pairs {s : S} {s' : S'} : Alike F G s s' ↔ AlikeTo F G N s s' :=
+  length_pairsOf l' l ▸ alike_iff_at_cover (F := F) (G := G) (s := s) (s' := s')
+    (fun p _ => mem_pairsOf (all p.1) (all' p.2))
+
+end Matching
+
+-- home: Recurrence
+section Predecessors
+
+variable {S : Type u} {A : Type v} {P : Process S A}
+
+/-- A state has a predecessor in the given class by some move of the process. -/
+def predStep (P : Process S A) (X : S → Prop) (s : S) : Prop := ∃ t, Steps P t s ∧ X t
+
+/-- Enlarging the predecessor class preserves a witnessed step from it. -/
+theorem pred_mono : MonotoneStep (predStep P) :=
+  fun sub _ ⟨t, st, h⟩ => ⟨t, st, sub t h⟩
+
+/-- Iterating the predecessor step from all states gives exactly the endpoints of
+traces of that length, with freely chosen starts. -/
+theorem iter_iff_reachable : ∀ n s, iter (predStep P) (fun _ => True) n s ↔ Branching.Reachable P n s :=
+  iter_iff_stages pred_mono (fun s => ⟨fun _ => ⟨s, [], rfl, .nil s⟩, fun _ => trivial⟩)
+    (fun n _ => ⟨fun ⟨t, st, x, path⟩ => ⟨x, trace_iff_steps.mpr
+        ((«迭之末步» n).mpr ⟨t, trace_iff_steps.mp path, st⟩)⟩,
+      fun ⟨x, path⟩ => match («迭之末步» n).mp (trace_iff_steps.mp path) with
+        | ⟨t, earlier, st⟩ => ⟨t, st, x, trace_iff_steps.mpr earlier⟩⟩)
+
+variable {all : List S} (every : ∀ x, x ∈ all) {s : S}
+
+include every in
+/-- With all states listed, an endpoint is reachable at the list length exactly when
+it is reachable at every exact length. -/
+theorem reachable_iff_all : Branching.Reachable P all.length s ↔ ∀ n, Branching.Reachable P n s :=
+  ⟨fun h n => (iter_iff_reachable n s).mp ((iter_iff_all pred_mono (fun _ _ => trivial)
+      (fun x _ => every x)).mp ((iter_iff_reachable _ s).mpr h) n), fun h => h all.length⟩
+
+-- home: Attraction
+variable {next : S → S}
+
+include every in
+/-- For a law on listed states, a state returns exactly when it is reachable at the count. -/
+theorem returns_iff_reachable_count : Law.Returns next s ↔ Law.Reachable next all.length s :=
+  (Law.returns_iff_always_reachable every).trans (reachable_iff_all every).symm
+
+include every in
+/-- For a law on listed states, a state is drawn exactly when it fails reachability at the count. -/
+theorem drawn_iff_not_reachable_count : Law.Drawn next s ↔ ¬ Law.Reachable next all.length s :=
+  (Law.drawn_iff_lost every).trans ⟨fun no h => no ((reachable_iff_all every).mp h),
+    fun no h => no (h all.length)⟩
+
+end Predecessors
+
+-- home: GrammarCandidates
+section Inquiry
+
+variable {S : Type u} {R E : «际» S}
+
+/-- The pair lies in E and each step on either side has a match whose pair of outcomes
+lies in the given class. -/
+def inquiryStep (R E : «际» S) (X : S × S → Prop) (p : S × S) : Prop :=
+  E p.1 p.2 ∧ (∀ v, R p.1 v → ∃ v', R p.2 v' ∧ X (v, v')) ∧
+    (∀ v', R p.2 v' → ∃ v, R p.1 v ∧ X (v, v'))
+
+/-- Enlarging the class of outcome pairs preserves both matches of the inquiry step. -/
+theorem inquiry_mono : MonotoneStep (inquiryStep R E) :=
+  fun sub _ ⟨e, forth, back⟩ => ⟨e,
+    fun v st => match forth v st with | ⟨v', st', h⟩ => ⟨v', st', sub _ h⟩,
+    fun v' st' => match back v' st' with | ⟨v, st, h⟩ => ⟨v, st, sub _ h⟩⟩
+
+/-- Iterating the inquiry step from E agrees with every grammar stage of inquiry. -/
+theorem iter_iff_inquiry : ∀ n (p : S × S),
+    iter (inquiryStep R E) (fun z => E z.1 z.2) n p ↔ «诘» R E n p.1 p.2 :=
+  iter_iff_stages (stage := fun n p => «诘» R E n p.1 p.2) inquiry_mono
+    (fun _ => Iff.rfl) (fun _ _ => Iff.rfl)
+
+variable {all : List (S × S)} (within : ∀ p : S × S, E p.1 p.2 → p ∈ all) {x y : S}
+
+include within in
+/-- If every E-related pair is listed, a pair passes inquiry at the list length exactly
+when it passes at every stage. -/
+theorem inquiry_iff_all : «诘» R E all.length x y ↔ ∀ k, «诘» R E k x y :=
+  ⟨fun h k => (iter_iff_inquiry k (x, y)).mp ((iter_iff_all inquiry_mono (fun _ m => m.1) within).mp
+      ((iter_iff_inquiry _ (x, y)).mpr h) k), fun h => h all.length⟩
+
+include within in
+/-- If E is symmetric and every E-related pair is listed, the core is inquiry at the list length. -/
+theorem core_iff_inquiry (sym : «则» E («逆» E)) : «核» R E x y ↔ «诘» R E all.length x y :=
+  let D := «诘» R E all.length
+  have levels (a b : S) (h : D a b) := (inquiry_iff_all within).mp h
+  ⟨fun h => «核则不可致诘» h _, fun h =>
+    ⟨D, fun a b ab => levels a b ab 0, «诘之对称» sym all.length,
+     («有常之逐点» R D).mpr (fun a b ab => (levels a b ab (all.length + 1)).2.1), h⟩⟩
+
+end Inquiry
+
+-- home: KeepableStep
+section Keepable
+
+open Viability
+variable {S : Type u} {A : Type v} {P : Process S A} {g : S → Prop}
+
+/-- The guard holds and some move has an outcome in the given class. -/
+def keepStep (P : Process S A) (g X : S → Prop) (s : S) : Prop := g s ∧ courseStep P X s
+
+/-- Enlarging the class of possible outcomes preserves the guarded course step. -/
+theorem keep_mono : MonotoneStep (keepStep P g) :=
+  fun sub s h => ⟨h.1, course_mono P sub s h.2⟩
+
+/-- With every state listed, a run can stay in the guard from s exactly when s survives
+the guarded course step for the list length. -/
+theorem keepable_iff_count {all : List S} (every : ∀ x, x ∈ all) {s : S} :
+    Keepable P g s ↔ iter (keepStep P g) g all.length s :=
+  match iter_largest (keep_mono (P := P) (g := g)) (fun _ h => h.1) (fun x _ => every x) with
+  | ⟨inside, post, largest⟩ =>
+    ⟨largest (Keepable P g) (fun _ => Keepable.start) (fun _ => keepable_step_iff.mp) s,
+     fun h => match Onward.KeepsMoving.run (P := P) every (fun t ht => (post t ht).2) h with
+       | ⟨r, start, held⟩ => ⟨r, start, fun n => inside _ (held n)⟩⟩
+
+end Keepable
+
+end Becoming.ScratchEdgeCases

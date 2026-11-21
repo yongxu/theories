@@ -1,0 +1,81 @@
+# AI-written (Claude Fable), 22 November 2026. The bit-vector runs against the literal model:
+# whole small spaces by their totals, and a random sample of the 3x2 space instance by instance.
+import json, random, time
+from literal import *
+import run_viable, run_kept
+from bv import members
+
+def proc(p, N, A):
+    return Process(range(N), range(A), {(s, a, t) for s in range(N) for a in range(A) for t in range(N)
+                                        if p >> ((s * A + a) * N + t) & 1})
+t0 = time.time()
+out = {}
+# Parts 1-3, whole spaces 2x2 and 3x1 by totals
+for N, A in [(2, 2), (3, 1)]:
+    prem = 0; stab = {}; ctrue = 0
+    for p in range(1 << (N * A * N)):
+        P = proc(p, N, A)
+        c = continues_fn(P)
+        ctrue += sum(c(n, s) for n in range(3 * N + 1) for s in P.states)
+        for g in range(1 << N):
+            v = viable_fn(P, members(g, N))
+            prem += sum(v(N, y) for y in P.states)
+            n = 0
+            while any(v(n, s) != v(n + 1, s) for s in P.states):
+                n += 1
+            stab[str(n)] = stab.get(str(n), 0) + 1
+    r = run_viable.run(N, A)
+    out[f'viable {N}x{A}'] = dict(
+        premise_same=(prem == r['a_by_length'][N]['premise_holds']),
+        stab_same=(dict(sorted(stab.items())) == {str(k): v for k, v in r['stabilisation_index_histogram'].items()}),
+        continues_same=(ctrue == r['c']['continues_true']), literal=[prem, stab, ctrue])
+# Part 4, whole space 2x2 under two fixed readings by totals
+for name in ['nothing+unused-value', 'where-it-ended']:
+    N, A = 2, 2
+    O, table = run_kept.READINGS[name](N)
+    kept_total = 0; stab = {}
+    for p in range(1 << (N * A * N)):
+        P = proc(p, N, A)
+        sense = {(s, a, t): table(s, a, t) for s in P.states for a in P.moves for t in P.states}
+        allowed = {(s, a): True for s in P.states for a in P.moves}
+        for g in range(1 << N):
+            k = kept_fn(P, sense, O, members(g, N), allowed)
+            cl = all_classes(P.states)
+            kept_total += sum(k(4, B) for B in cl)
+            n = 0
+            while any(k(n, B) != k(n + 1, B) for B in cl):
+                n += 1
+            stab[str(n)] = stab.get(str(n), 0) + 1
+    r = run_kept.run(N, A, (O, table), name)
+    out[f'kept 2x2 {name}'] = dict(kept_same=(kept_total == r['kept_at_codes']),
+        stab_same=(dict(sorted(stab.items())) == {str(k): v for k, v in r['least_steps_that_suffice_histogram'].items()}),
+        literal=[kept_total, stab])
+# Part 4, 3x2 under 'nothing' and 'where-it-ended': a sample, instance by instance, families by brute force
+rng = random.Random(7)
+N, A = 3, 2
+for name in ['nothing', 'where-it-ended']:
+    O, table = run_kept.READINGS[name](N)
+    probe = {}
+    picks = [(rng.randrange(1 << 18), rng.randrange(8)) for _ in range(150)]
+    for p, g in picks:
+        probe.setdefault(g, []).append(p)
+    r = run_kept.run(N, A, (O, table), name, probe=probe)
+    bad = 0
+    for p, g in picks:
+        P = proc(p, N, A)
+        sense = {(s, a, t): table(s, a, t) for s in P.states for a in P.moves for t in P.states}
+        allowed = {(s, a): True for s in P.states for a in P.moves}
+        k = kept_fn(P, sense, O, members(g, N), allowed)
+        big = largest_closed_family_brute(P, sense, O, members(g, N), allowed)
+        gfp = largest_closed_family_gfp(P, sense, O, members(g, N), allowed)
+        cls = [frozenset(members(B, N)) for B in range(8)]
+        lit_k = [int(k(8, B)) for B in cls]; lit_big = [int(B in big) for B in cls]
+        n = 0
+        while any(k(n, B) != k(n + 1, B) for B in cls):
+            n += 1
+        vk, vbig, vn = r['probe'][p, g]
+        if lit_k != vk or lit_big != vbig or n != vn or big != gfp or lit_k != lit_big:
+            bad += 1
+    out[f'kept 3x2 {name} sample'] = dict(sampled=len(picks), disagreements=bad)
+out['seconds'] = round(time.time() - t0, 1)
+print(json.dumps(out, indent=1))

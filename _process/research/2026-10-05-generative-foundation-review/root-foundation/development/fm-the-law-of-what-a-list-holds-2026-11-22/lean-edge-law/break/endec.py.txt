@@ -1,0 +1,19 @@
+# AI-written (Claude Fable 5.2), a reader's program. Nothing here touches Lean.
+# Three configurations, one move, a guard that always holds, EVERY ENABLEDNESS DECIDED (a configuration
+# either never has a step, or has one at the first world already); outcomes may still be undecided.
+# Does level 4 -> level 3 of loseStep ever fail?  Exhaustive on the fork, the line of two, the line of three.
+import itertools, time
+from kripke import FRAMES, upsets, lose_levels, edge_fails
+t0 = time.time()
+for fname in ("line of two", "fork", "line of three"):
+    frame = FRAMES[fname]; W, up = frame; U = upsets(frame); full = frozenset(W); none_ = frozenset()
+    per = [(none_, none_, none_)] + [c for c in itertools.product(U, repeat=3) if any(u == full for u in c)]
+    inst = fail = nondet = 0
+    guard = (full, full, full)
+    for combo in itertools.product(per, repeat=3):
+        step = {(s, 0, t): combo[s][t] for s in range(3) for t in range(3)}
+        inst += 1
+        L = lose_levels(frame, 3, 1, step, guard, 4)
+        if edge_fails(frame, L, 3): fail += 1
+    print(f"[lose, enabledness decided] {fname}: 3 configurations, 1 move, guard true: instances {inst}; level 4 -> level 3 fails in {fail}")
+print(f"seconds {time.time()-t0:.1f}")

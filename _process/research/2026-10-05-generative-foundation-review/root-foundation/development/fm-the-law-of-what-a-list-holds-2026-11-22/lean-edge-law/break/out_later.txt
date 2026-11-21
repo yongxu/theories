@@ -1,0 +1,24 @@
+[lose] line of three: 3 configurations, 1 move(s), guard true, every of 262144 step families: instances 262144; level 4 -> level 3 fails in 288; (level 3 -> 2 fails in 5880; any of 5->4, 6->5 fails in 0)
+    failing instances by (deterministic, every enabledness decided, guard decided): (False, False, True): 288
+    a failing instance with fewest step cells: steps [1-0->2: at worlds 2; 2-0->0: at worlds 2; 2-0->1: at worlds 1,2] ; guard 0: always; guard 1: always; guard 2: always
+      fails at (world, configuration) [(0, 2), (1, 2)]; levels by world: L0={0: [], 1: [], 2: []}; L1={0: [0], 1: [0], 2: [0]}; L2={0: [0], 1: [0], 2: [0, 2]}; L3={0: [0, 1], 1: [0, 1], 2: [0, 1, 2]}; L4={0: [0, 1, 2], 1: [0, 1, 2], 2: [0, 1, 2]}
+[lose] line of four: 3 configurations, 1 move(s), guard true, 30000 random of 1953125 step families: instances 30000; level 4 -> level 3 fails in 19; (level 3 -> 2 fails in 371; any of 5->4, 6->5 fails in 0)
+    failing instances by (deterministic, every enabledness decided, guard decided): (False, False, True): 19
+    a failing instance with fewest step cells: steps [0-0->1: at worlds 2,3; 1-0->0: at worlds 1,2,3; 1-0->1: always; 1-0->2: at worlds 2,3] ; guard 0: always; guard 1: always; guard 2: always
+      fails at (world, configuration) [(1, 1)]; levels by world: L0={0: [], 1: [], 2: [], 3: []}; L1={0: [2], 1: [2], 2: [2], 3: [2]}; L2={0: [2], 1: [2], 2: [1, 2], 3: [1, 2]}; L3={0: [0, 2], 1: [0, 2], 2: [0, 1, 2], 3: [0, 1, 2]}; L4={0: [0, 2], 1: [0, 1, 2], 2: [0, 1, 2], 3: [0, 1, 2]}
+[lose] fork then line: 3 configurations, 1 move(s), guard true, 30000 random of 40353607 step families: instances 30000; level 4 -> level 3 fails in 35; (level 3 -> 2 fails in 2861; any of 5->4, 6->5 fails in 0)
+    failing instances by (deterministic, every enabledness decided, guard decided): (False, False, True): 35
+    a failing instance with fewest step cells: steps [1-0->2: at worlds 2,3; 2-0->0: at worlds 3; 2-0->1: always; 2-0->2: at worlds 3] ; guard 0: always; guard 1: always; guard 2: always
+      fails at (world, configuration) [(1, 2)]; levels by world: L0={0: [], 1: [], 2: [], 3: []}; L1={0: [0], 1: [0], 2: [0], 3: [0]}; L2={0: [0], 1: [0], 2: [0], 3: [0, 2]}; L3={0: [0], 1: [0, 1], 2: [0], 3: [0, 1, 2]}; L4={0: [0], 1: [0, 1, 2], 2: [0], 3: [0, 1, 2]}
+[lose] line of two: 3 configurations, 1 move(s), guard any, 2000 random of 19683 step families: instances 54000; level 4 -> level 3 fails in 56; (level 3 -> 2 fails in 1076; any of 5->4, 6->5 fails in 0)
+    failing instances by (deterministic, every enabledness decided, guard decided): (False, False, False): 49, (False, False, True): 7
+    a failing instance with fewest step cells: steps [1-0->0: at worlds 1; 1-0->2: always; 2-0->1: at worlds 1] ; guard 0: at worlds 1; guard 1: at worlds 1; guard 2: at worlds 1
+      fails at (world, configuration) [(0, 1)]; levels by world: L0={0: [], 1: []}; L1={0: [0], 1: [0]}; L2={0: [0], 1: [0, 1]}; L3={0: [0, 2], 1: [0, 1, 2]}; L4={0: [0, 1, 2], 1: [0, 1, 2]}
+[lose] fork: 3 configurations, 1 move(s), guard any, 500 random of 1953125 step families: instances 62500; level 4 -> level 3 fails in 527; (level 3 -> 2 fails in 4713; any of 5->4, 6->5 fails in 29)
+    failing instances by (deterministic, every enabledness decided, guard decided): (False, False, False): 527
+    a failing instance with fewest step cells: steps [0-0->1: at worlds 1; 0-0->2: at worlds 2; 1-0->0: always; 1-0->2: at worlds 1,2; 2-0->0: at worlds 2] ; guard 0: at worlds 1; guard 1: at worlds 1; guard 2: at worlds 1
+      fails at (world, configuration) [(0, 1)]; levels by world: L0={0: [], 1: [], 2: [0, 1, 2]}; L1={0: [2], 1: [2], 2: [0, 1, 2]}; L2={0: [2], 1: [1, 2], 2: [0, 1, 2]}; L3={0: [0, 2], 1: [0, 1, 2], 2: [0, 1, 2]}; L4={0: [0, 1, 2], 1: [0, 1, 2], 2: [0, 1, 2]}
+[lose] line of four: 2 configurations, 1 move(s), guard any, every of 625 step families: instances 15625; level 3 -> level 2 fails in 0; (level 2 -> 1 fails in 640; any of 4->3, 5->4 fails in 0)
+[lose] fork then line: 2 configurations, 1 move(s), guard true, every of 2401 step families: instances 2401; level 3 -> level 2 fails in 0; (level 2 -> 1 fails in 718; any of 4->3, 5->4 fails in 0)
+seconds 22.2
+python3 -u later.py  21.33s user 0.21s system 96% cpu 22.323 total

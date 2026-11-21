@@ -1,0 +1,24 @@
+start 01:11:11
+{
+  "tree": "/Users/ren/tmp/fm/build3",
+  "modules": 155,
+  "ran": [
+    "Becoming.ScratchViableEdge",
+    "BecomingScratchViableEdgeAxiomAudit"
+  ],
+  "reused": 154,
+  "unclean": [],
+  "audits": {
+    "Becoming.ScratchViableEdge": {
+      "theorems": 16,
+      "declarations": 19,
+      "with_axioms": {}
+    }
+  },
+  "seconds": {
+    "Becoming.ScratchViableEdge": 2.629,
+    "BecomingScratchViableEdgeAxiomAudit": 0.357
+  }
+}
+exit 0 build 8
+end 01:11:17

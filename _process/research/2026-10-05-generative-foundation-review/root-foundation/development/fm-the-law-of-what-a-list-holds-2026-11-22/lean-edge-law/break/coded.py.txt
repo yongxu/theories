@@ -1,0 +1,123 @@
+# AI-written (Claude Fable 5.2), a reader's program. Nothing here touches Lean.
+# ScratchEdgeLaw l. 348, coded_kept_iff_closed, with the list holding ONLY the codes whose class
+# is within the guard:   KeptFor N (decode c)  <->  InClosedFamily (decode c),  N = number of guarded codes.
+# From the package (Keeping.lean l. 73-94):
+#   Seen B a o t   := exists s, B s and step s a t and sense s a t = o
+#   Usable B a     := forall s, B s -> allowed s a and Enabled s a          (allowed := True here)
+#   KeptFor 0 B    := forall s, B s -> guard s
+#   KeptFor (n+1) B:= (forall s, B s -> guard s) and exists a, Usable B a and forall o, KeptFor n (Seen B a o)
+# From the module (l. 299):  InClosedFamily B := exists F, F B and (every member within the guard) and
+#   every member D has a usable a with F (Seen D a o) for every o.   Classically: B is in the LARGEST such
+#   family, computed here by removing classes until nothing changes (over all subsets of S).
+# A code is a class (a bitmask) here, decode the identity; codes are distinct.
+# Premise `updates` (l. 328): for EVERY code c (guarded or not), usable a, and o: Seen (decode c) a o has a code.
+# Two weaker forms are also tried, which the proof term seems to need at most (l. 341 is reached only
+# with `h : safe c` and `next o : KeptFor n (Seen ...)` in hand):
+#   updates_safe : asked only of guarded codes c;
+#   updates_min  : asked only of guarded c and only where Seen (decode c) a o is itself within the guard.
+import itertools, random, sys, time
+from functools import lru_cache
+
+def run(nS, nA, senses, seeds_per_ctx, step_sample=None, label=""):
+    S = range(nS); A = range(nA); O = (0, 1); m = 1 << nS
+    cells = [(s, a, t) for s in S for a in A for t in S]
+    idx = {c: i for i, c in enumerate(cells)}
+    total = 1 << len(cells)
+    it = range(total) if step_sample is None else [random.randrange(total) for _ in range(step_sample)]
+    stats = {}
+    first_low = {}; first_fail = {}
+    ctx = 0
+    for bits in it:
+        st = {(s, a): [t for t in S if bits >> idx[(s, a, t)] & 1] for s in S for a in A}
+        for sname, sense in senses.items():
+            seen_tab = {}
+            for B in range(m):
+                for a in A:
+                    for o in O:
+                        r = 0
+                        for s in S:
+                            if B >> s & 1:
+                                for t in st[s, a]:
+                                    if sense(s, a, t) == o: r |= 1 << t
+                        seen_tab[B, a, o] = r
+            usable = {(B, a): all(len(st[s, a]) > 0 for s in S if B >> s & 1) for B in range(m) for a in A}
+            for g in range(m):
+                ctx += 1
+                safe = lambda B: B & ~g == 0
+                @lru_cache(None)
+                def kept(n, B):
+                    if not safe(B): return False
+                    if n == 0: return True
+                    return any(usable[B, a] and all(kept(n - 1, seen_tab[B, a, o]) for o in O) for a in A)
+                # largest closed family over all classes
+                fam = set(B for B in range(m) if safe(B))
+                ch = True
+                while ch:
+                    ch = False
+                    for D in list(fam):
+                        if not any(usable[D, a] and all(seen_tab[D, a, o] in fam for o in O) for a in A):
+                            fam.discard(D); ch = True
+                # cross-check: the largest family is what is kept at every horizon
+                assert all((B in fam) == kept(m + 2, B) for B in range(m))
+                def close(seed, mode):
+                    codes = set(seed); work = list(seed)
+                    while work:
+                        c = work.pop()
+                        if mode != "all" and not safe(c): continue
+                        for a in A:
+                            if not usable[c, a]: continue
+                            for o in O:
+                                d = seen_tab[c, a, o]
+                                if mode == "min" and not safe(d): continue
+                                if d not in codes: codes.add(d); work.append(d)
+                    return frozenset(codes)
+                seeds = set()
+                seeds.add(frozenset(range(m)))
+                seeds.add(frozenset(1 << s for s in S))
+                while len(seeds) < seeds_per_ctx + 2:
+                    seeds.add(frozenset(B for B in range(m) if random.random() < 0.35))
+                done = set()
+                for seed in seeds:
+                    if not seed: continue
+                    for mode in ("all", "safe", "min"):
+                        codes = close(seed, mode)
+                        if (mode, codes) in done: continue
+                        done.add((mode, codes))
+                        safes = [c for c in codes if safe(c)]
+                        N = len(safes); unsafe = len(codes) - N
+                        key = (mode, min(unsafe, 3))
+                        r = stats.setdefault(key, [0, 0, 0, 0, 0])
+                        r[0] += 1
+                        bad = [c for c in codes if kept(N, c) != (c in fam)]
+                        r[1] += len(codes); r[2] += len(bad)
+                        if bad and key not in first_fail:
+                            first_fail[key] = (dict((k, v) for k, v in st.items() if v), sname, g, sorted(codes), N, bad)
+                        if N >= 1:
+                            r[3] += 1
+                            low = [c for c in codes if kept(N - 1, c) != (c in fam)]
+                            if low:
+                                r[4] += 1
+                                if key not in first_low or len(codes) < len(first_low[key][3]):
+                                    first_low[key] = (dict((k, v) for k, v in st.items() if v), sname, g, sorted(codes), N, low)
+    def cls(B): return "{" + ",".join(str(s) for s in S if B >> s & 1) + "}"
+    print(f"== {label}: {nS} configurations, {nA} moves, {len(senses)} readings; contexts (step, reading, guard) {ctx}")
+    for key in sorted(stats):
+        mode, unsafe = key; r = stats[key]
+        print(f"  updates {mode:4s}, codes outside the guard {'3+' if unsafe == 3 else unsafe}: code sets {r[0]}, codes compared {r[1]}, "
+              f"KeptFor N != InClosedFamily at N = guarded codes: {r[2]}; with N-1 (one guarded code left off): fails in {r[4]} of {r[3]} code sets")
+    for key, v in first_fail.items():
+        stp, sname, g, codes, N, bad = v
+        print(f"  FAILURE at N, updates {key[0]}: steps {stp}, reading {sname}, guard {cls(g)}, codes {[cls(c) for c in codes]}, N {N}, at {[cls(c) for c in bad]}")
+    for key in sorted(first_low):
+        if key[1] < 2 and key[0] != "all": continue
+        stp, sname, g, codes, N, low = first_low[key]
+        print(f"  smallest found failing at N-1 (updates {key[0]}, outside {key[1]}): steps {stp}, reading '{sname}', guard {cls(g)}, codes {[cls(c) for c in codes]}, guarded codes {N}; KeptFor {N-1} differs from the closed family at {[cls(c) for c in low]}")
+
+if __name__ == "__main__":
+    t = time.time(); random.seed(20261122)
+    senses = {"nothing": lambda s, a, t: 0, "whether it ended at 0": lambda s, a, t: int(t == 0),
+              "whether it started at 0": lambda s, a, t: int(s == 0)}
+    run(2, 2, senses, 8, label="2x2, every step relation")
+    run(3, 1, senses, 10, label="3x1, every step relation")
+    run(3, 2, senses, 6, step_sample=1200, label="3x2, 1200 random step relations")
+    print(f"seconds {time.time()-t:.1f}")

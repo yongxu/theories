@@ -1,0 +1,91 @@
+# AI-written (Claude Fable 5.2), a reader's program. Nothing here touches Lean.
+# Two questions the reading raised.
+# (A) Is a list of the START's members enough (N = |V0| in place of |S|)?  Law: iter N inside
+#     iter (N+1) for every N >= |V0|.  And the place induction with the cover asked only inside V0:
+#     list of length k with members L; cover: every z in V0 is in L or in iter (k+1);
+#     conclusion iter k inside iter (k+1).
+# (B) One point, in models where propositions need not be decided: the open sets of a small order
+#     (a Heyting algebra). A step is a map H -> H that is monotone in the sense of the module,
+#     (X -> Y) <= (step X -> step Y) for all X, Y. Start W0 <= step W0. One point, list of length 1:
+#     the positive rising edge is step(step W0) <= step W0; the module's rise_not_not says
+#     step(step W0) <= not not step W0.
+import itertools, random, time
+from law import monotone_bool_fns, monotone_bool_fns_4, step_from, sub, show, show_step
+
+def partA(n, steps, label):
+    m = 1 << n; full = m - 1
+    fall = fail = low = lowfail = places = cover = pfail = 0; first = None
+    for F in steps:
+        for V0 in range(m):
+            if not sub(F[V0], V0): continue
+            fall += 1
+            k0 = bin(V0).count("1")
+            ch = [V0]
+            for _ in range(2 * n + 3): ch.append(F[ch[-1]])
+            for N in range(k0, k0 + n + 2):
+                if not sub(ch[N], ch[N + 1]): fail += 1
+            if k0 >= 1:
+                low += 1
+                if not sub(ch[k0 - 1], ch[k0]):
+                    lowfail += 1
+                    if first is None: first = (F, V0, ch[:k0 + 1])
+            for k in range(0, n + 2):
+                for L in range(m):
+                    size = bin(L).count("1")
+                    if size > k or (k == 0 and L) or (k > 0 and L == 0): continue
+                    places += 1
+                    if sub(V0, L | ch[k + 1]):
+                        cover += 1
+                        if not sub(ch[k], ch[k + 1]): pfail += 1
+    print(f"(A) {label} |S|={n}: falling (step, start) pairs {fall}; law at N=|V0|..|V0|+n+1 failures {fail}; at |V0|-1: checked {low}, failures {lowfail}")
+    if first:
+        F, V0, ch = first
+        print(f"    first failure at |V0|-1: step [{show_step(F,n)}], V0={show(V0,n)}, chain {[show(x,n) for x in ch]}")
+    print(f"    place induction with the cover asked only inside V0: cases {places}, cover held {cover}, failures {pfail}")
+
+def opens(points, below):
+    """Up-sets of a finite order; below[x] = set of y with y >= x (what x forces forward)."""
+    out = []
+    for bits in range(1 << len(points)):
+        U = frozenset(p for i, p in enumerate(points) if bits >> i & 1)
+        if all(below[x] <= U for x in U): out.append(U)
+    return out
+
+def partB(name, points, below):
+    H = opens(points, below); top = frozenset(points); bot = frozenset()
+    def imp(a, b): return frozenset(x for x in points if all((y not in a) or (y in b) for y in below[x]))
+    def neg(a): return imp(a, bot)
+    maps = mono = starts = edge_fail = nn_fail = 0; ex = None
+    for vals in itertools.product(H, repeat=len(H)):
+        maps += 1
+        F = dict(zip(H, vals))
+        if not all(imp(X, Y) <= imp(F[X], F[Y]) for X in H for Y in H): continue
+        mono += 1
+        for W0 in H:
+            if not W0 <= F[W0]: continue
+            starts += 1
+            l1 = F[W0]; l2 = F[l1]
+            if not l2 <= l1:
+                edge_fail += 1
+                if ex is None: ex = (sorted(W0), sorted(l1), sorted(l2))
+            if not l2 <= neg(neg(l1)): nn_fail += 1
+    print(f"(B) {name}: values {len(H)}, maps {maps}, monotone in the module's sense {mono}; rising starts {starts}; positive edge fails in {edge_fail}; doubly negated edge fails in {nn_fail}")
+    if ex: print(f"    first failing: W0 {ex[0]}, level 1 {ex[1]}, level 2 {ex[2]}")
+    # the module's own step, l. 258: step X := p or (p -> X), start False
+    for p in H:
+        step = lambda X: p | imp(p, X)
+        l1 = step(bot); l2 = step(l1)
+        monoval = all(imp(X, Y) <= imp(step(X), step(Y)) for X in H for Y in H)
+        print(f"    the module's step at p={sorted(p)}: monotone {monoval}; level 1 (p or not p) = {sorted(l1)}; level 2 = {sorted(l2)}; edge holds {l2 <= l1}; not-not level 1 = {sorted(neg(neg(l1)))}")
+
+if __name__ == "__main__":
+    t = time.time(); random.seed(20261122)
+    for n in (1, 2, 3):
+        fns = monotone_bool_fns(n)
+        partA(n, [step_from(c, n) for c in itertools.product(fns, repeat=n)], "every monotone step")
+    fns4 = monotone_bool_fns_4()
+    partA(4, [step_from([random.choice(fns4) for _ in range(4)], 4) for _ in range(6000)], "random monotone steps")
+    partB("two worlds in a line (now, later)", ["now", "later"], {"now": {"now", "later"}, "later": {"later"}})
+    partB("a fork (now; left or right later)", ["now", "l", "r"], {"now": {"now", "l", "r"}, "l": {"l"}, "r": {"r"}})
+    partB("two unrelated worlds (every proposition decided)", ["a", "b"], {"a": {"a"}, "b": {"b"}})
+    print(f"seconds {time.time()-t:.1f}")

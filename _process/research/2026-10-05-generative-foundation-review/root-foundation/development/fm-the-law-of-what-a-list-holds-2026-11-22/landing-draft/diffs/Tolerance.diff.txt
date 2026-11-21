@@ -1,0 +1,60 @@
+--- /Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tolerance.lean	2026-11-07 01:31:19
++++ /Users/ren/tmp/fm/build10/Becoming/Tolerance.lean	2026-11-22 03:36:10
+@@ -1,6 +1,7 @@
+ import Becoming.Withholding
+ import Becoming.FaultEnvelopes
+ import Becoming.Labelled
++import Becoming.PredicateIteration
+ 
+ /-!
+ # Tolerance: thresholds of waiting and the laws that restore giving
+@@ -17,6 +18,10 @@
+ the next step where all but at most `tol a` of what it waits on gave (`AllBut`). A formation that
+ waits on `m` and spares `m - k` gives where at least `k` of what it waits on gave.
+ 
++For any step on predicates, keeping inclusion is `Iteration.MonotoneStep`
++(`monotone_iff_keepsInclusion`). Applying the step n times from a starting predicate gives the
++predicate at time n of its orbit (`iter_eq_orbit`).
++
+ * **All but `f`.** `AllBut s f l` holds where at most `f` members of `l` fail `s`. With `f = 0` it
+   is "every member" (`AllBut.zero_iff`), with `f` at least the length of `l` it always holds
+   (`AllBut.of_length_le`), it grows with `s` and with `f` (`AllBut.mono_set`,
+@@ -219,6 +224,24 @@
+ giving at the next step. -/
+ def KeepsInclusion (next : (α → Prop) → α → Prop) : Prop :=
+   ∀ s s' : α → Prop, (∀ a, s a → s' a) → ∀ a, next s a → next s' a
++
++section PredicateSteps
++
++open Iteration
++
++/-- A step is monotone exactly when it keeps inclusion of predicates. -/
++theorem monotone_iff_keepsInclusion (Φ : (α → Prop) → α → Prop) :
++    MonotoneStep Φ ↔ KeepsInclusion Φ :=
++  ⟨fun h X Y => @h X Y, fun h {X Y} => h X Y⟩
++
++/-- For any step on predicates and any start, applying the step n times gives the predicate at
++time n of its orbit. -/
++theorem iter_eq_orbit (Φ : (α → Prop) → α → Prop) (V₀ : α → Prop) :
++    ∀ n, iter Φ V₀ n = Law.orbit Φ V₀ n
++  | 0 => rfl
++  | n + 1 => congrArg Φ (iter_eq_orbit Φ V₀ n)
++
++end PredicateSteps
+ 
+ section Keeps
+ 
+@@ -354,9 +377,10 @@
+ other formations do. -/
+ theorem kept_set {G s : α → Prop} (start : ∀ a, G a → s a)
+     (inside : ∀ a, G a → AllBut G (tol a) (ups a)) :
+-    ∀ n a, G a → (Law.run (tolerating tol ups) s).state n a
+-  | 0 => start
+-  | n + 1 => fun a member => AllBut.mono_set (kept_set start inside n) (inside a member)
++    ∀ n a, G a → (Law.run (tolerating tol ups) s).state n a :=
++  fun n => Eq.subst (motive := fun X => ∀ a, G a → X a) (iter_eq_orbit _ s n)
++    (Iteration.postfixed_in_iter ((monotone_iff_keepsInclusion _).mpr (tolerating_keeps tol ups))
++      start inside n)
+ 
+ /-- **A thin withholding passes out in one step.** Where the start gives outside a set `W` and
+ every formation waits on at most its tolerance inside `W`, every formation gives at every step from

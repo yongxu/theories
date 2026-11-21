@@ -1,0 +1,14 @@
+(iii) disturbance 2x1: instances (f, adm, guard) 32; iter = Lasts at n=0..5: 192 compared, 0 differ
+    Kernel(disturbed) = Lasts at N=2..4: 192 compared, 0 differ; at N=1: 64 compared, 0 differ in 0 instances
+    disturbanceStep chain = regionStep chain at R = Steps (disturbed f adm): 192 compared, 0 differ
+(iii) disturbance 2x2: instances (f, adm, guard) 256; iter = Lasts at n=0..5: 1536 compared, 0 differ
+    Kernel(disturbed) = Lasts at N=2..4: 1536 compared, 0 differ; at N=1: 512 compared, 0 differ in 0 instances
+    disturbanceStep chain = regionStep chain at R = Steps (disturbed f adm): 1536 compared, 0 differ
+(iii) disturbance 3x1: instances (f, adm, guard) 432; iter = Lasts at n=0..7: 3456 compared, 0 differ
+    Kernel(disturbed) = Lasts at N=3..6: 5184 compared, 0 differ; at N=2: 1296 compared, 0 differ in 0 instances
+    disturbanceStep chain = regionStep chain at R = Steps (disturbed f adm): 3456 compared, 0 differ
+(iii) disturbance 3x2: instances (f, adm, guard) 23328; iter = Lasts at n=0..7: 186624 compared, 0 differ
+    Kernel(disturbed) = Lasts at N=3..6: 279936 compared, 0 differ; at N=2: 69984 compared, 0 differ in 0 instances
+    disturbanceStep chain = regionStep chain at R = Steps (disturbed f adm): 186624 compared, 0 differ
+seconds 0.8
+python3 cases.py dist  0.78s user 0.01s system 91% cpu 0.862 total

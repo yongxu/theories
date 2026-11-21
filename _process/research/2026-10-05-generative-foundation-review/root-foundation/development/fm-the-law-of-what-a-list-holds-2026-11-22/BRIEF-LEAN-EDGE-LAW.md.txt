@@ -1,0 +1,111 @@
+# Brief: one scratch Lean module, the edge law in the form it would land
+
+*AI-written (Claude Fable, board row FM), 22 November 2026, frozen before the implementer ran (hash in `FROZEN-LEAN-EDGE-LAW.sha256.txt`). Scratch only: outside the package, in no git object. You are the implementer. A clean failure, told with what blocked it, is a result.*
+
+## What we are doing
+
+`/Users/ren/theories` draws a map of how anything forms, persists, changes and ends, with its core proved in Lean 4 with **no axioms** (every declaration has an empty axiom report). Read `AGENTS.md` at the repository root (one page). Its fourth rule: each thing said once, and joined; prefer the proof that makes an old result a case of another.
+
+The package is `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/`. An hour ago a scratch module, `/Users/ren/tmp/fm/build4/Becoming/ScratchKeptEdge.lean` (**read it whole first**; 297 lines, built clean, no axiom), said one law for a monotone step `Φ` on predicates over a listed type, `iter_persists`: what `Φ` keeps for as many steps as the list is long it keeps one step more. Five kinds of keeping came out as cases, each by naming its step and one call. Two readers who took no part then read it; one ran programs over every monotone step on up to three points. It stands. They found four things to change, and this build makes them. It is also the build whose text would be moved into the package, so it must stand alone.
+
+## The module
+
+Write `/Users/ren/tmp/fm/build5/Becoming/ScratchEdgeLaw.lean`, module `Becoming.ScratchEdgeLaw`. **It imports only modules of the package**, no scratch module: what it needs from `ScratchViableEdge` (`remove_place`, `InClosedFamily`) it states itself.
+
+**Build only with** `/Users/ren/tmp/fm/run-build5.sh <n>` (n = 1, 2, 3, …). It waits until no other Lean run is alive on this shared machine, builds your module through the checker's scratch builder (seconds, cached), audits the axioms of every declaration, and prints the end of the log. Clean means `exit 0`, `"unclean": []` and `"with_axioms": {}`. Run nothing else of Lean: no `lake`, no `check_becoming.py` (never with `--help`: it is a real run), no gate, no tests. Up to about 40 builds.
+
+**Proofs as terms**, in the package's style (`match`, anonymous constructors, `fun`, `Eq.subst`, `▸`); a tactic block only where a term would be unreadable (`remove_place` in the old module uses `obtain` and `rcases`: write it as a term). Every declaration gets a docstring of one or two plain sentences that says exactly what is proved, with its premises, in ordinary words: no "edge", "law", "fundamental" or other word that claims more than the statement. Lay the module out in sections, one for each place its text would live, in this order, and head each section with a comment `-- home: <Module>`:
+
+### Section A. The law (home: a new module that imports `Becoming.Prelude` only)
+
+Nothing in this section may use anything outside `Becoming/Prelude.lean` and Lean's core.
+
+1. `iter`, `MonotoneStep`, `iter_pred`, `iter_within` as they stand in the old module.
+2. **The weaker premise.** A reader observed that `extend_at_places` uses its cover only at points already known to be in the start. So prove the law from a list that holds only what is within the start:
+
+```lean
+theorem iter_persists (mono : MonotoneStep Φ) (start : ∀ y, Φ V₀ y → V₀ y)
+    {all : List S} (within : ∀ x, V₀ x → x ∈ all) {y : S} :
+    iter Φ V₀ all.length y → iter Φ V₀ (all.length + 1) y
+```
+
+(the cover in `extend_at_places` becoming `∀ z, V₀ z → z ∈ left ∨ iter Φ V₀ (n + 1) z`, or whatever form goes through). By program this holds on every monotone step on up to three points, and one step fewer than the number of points in the start fails. It has not been built. Then `iter_postfixed`, `postfixed_in_iter`, `iter_iff_all`, `iter_largest` from `within`. The form with `every : ∀ x, x ∈ all` is then the call `(fun x _ => every x)`; do not state it separately unless a case needs it more than once.
+
+### Section B. The grammar's region (home: `CommonResponse`)
+
+`regionStep`, `region_mono`, and `held_iff_iter` from `within : ∀ x, Q x → x ∈ all`:
+`«承» («逆» («所闭» R)) Q s ↔ iter (regionStep R Q) Q all.length s`.
+
+### Section C. Whatever happens (homes: `Viability`, then `Lasting`)
+
+The reader found that the old case 3 (`kernel_iff_lasts_length`) is the old case 5 (`held_iff_iter`) at the steps of a disturbed law: one thing said twice. So:
+
+1. For **every** process `P`: `Viability.Kernel P guard s ↔ iter (regionStep (Steps P) guard) guard all.length s`, from `within : ∀ x, guard x → x ∈ all`, by `Viability.kernel_iff_held` (Viability.lean l. 65) and Section B. One or two lines.
+2. `Viability.Kernel (Viability.disturbed f adm) guard s ↔ Lasting.Lasts f adm guard all.length s`, from the same `within`, **obtained from 1** (identify the iterate of `regionStep` at the disturbed law's steps with `Lasts`). Count its lines against the old module's direct route (`disturbanceStep`, `disturbance_mono`, `iter_iff_lasts`, `kernel_iff_lasts_length`: 24 lines). If the route through 1 is longer by more than five lines, keep both in the module and say so: that is a result, not a failure.
+
+### Section D. Some course (home: `Parting`)
+
+`courseStep`, `course_mono`, `iter_iff_continues`, and `continues_persists_case` with **the statement of `Parting.continues_persists` unchanged** (its premise is `every`; the start here is everything, so `within` is `fun x _ => every x`); `theorem continues_same : @continues_persists_case.{u,v} = @Parting.continues_persists.{u,v} := rfl`. It must not call `continues_persists`, `continues_any`, `unbounded_of_continues`, `continues_cycle` or `path_of_continues`.
+
+### Section E. A choice against every outcome (home: `GuardHorizon`)
+
+`choiceStep`, `choice_mono`, `iter_iff_viable`, and, each from `within : ∀ x, guard x → x ∈ all` (so the list holds only the configurations within the guard, and the type may hold more):
+
+```lean
+theorem viable_persists (within : ∀ x, guard x → x ∈ all) {y : S}
+    (kept : Viable P guard all.length y) :
+    ∃ a, Enabled P y a ∧ ∀ z, P.step y a z → Viable P guard all.length z
+```
+
+then `Closed P guard (Viable P guard all.length)`; `Viable P guard all.length s ↔ ∀ n, Viable P guard n s`; `Viable P guard all.length s ↔ ∃ K, Closed P guard K ∧ K s`; and the other side as its own theorem, stated so that it reads as a bound on every choice: where `¬ Viable P guard all.length s`, no closed set holds `s`. (The old statements are in `/Users/ren/tmp/fm/build4/Becoming/ScratchViableEdge.lean`, ll. 74 to 88, with `every`.)
+
+### Section F. Through a reading (home: `Keeping`)
+
+`InClosedFamily` (its definition copied from `ScratchViableEdge`, l. 150), `coveredBy`, `codeGuard`, `readingStep`, `reading_mono`, `iter_iff_kept`, and `coded_kept_iff_closed`. Its list of codes: try `within : ∀ c, (∀ s, decode c s → guard s) → c ∈ all` (only the codes of classes within the guard); if that costs more than a few lines over `every`, keep `every` and say what it cost.
+
+### Section G. The other chain (home: to be said in your report: which module, given what it imports)
+
+The falling chain needs no decision. Of the rising chain the old module proved three things, which stay: `singleton_rise_needs_em`, `rise_not_not`, `rise_of_stable` (with `dual`, `dual_mono`, `iter_dual_iff`). Add three, each of which says something about a particular step, which the old three do not:
+
+1. **Reach along a relation settles with nothing decided.** For `R : S → S → Prop` and a start `W₀`, with `reachStep R W₀ X y := W₀ y ∨ ∃ t, R y t ∧ X t`: from `every : ∀ x, x ∈ all` alone,
+   `rise (reachStep R W₀) W₀ (all.length + 1) y → rise (reachStep R W₀) W₀ all.length y`.
+   On paper: a witness is a path of at most `all.length + 1` steps from `y` into `W₀`; a path of `all.length + 1` steps has `all.length + 2` configurations, two of which are equal by `Prelude.revisits_within` (Prelude.lean l. 1111, no decision); cut the loop. `Onward.returning_of_continues` (Onward.lean l. 133) does such a cut. You may prove it by that surgery or by an induction on places like `extend_at_places`, whichever is shorter. This is the ending side of keeping whatever happens (some course leaves the guard within the bound) when `W₀ := fun s => ¬ guard s`: state that corollary against `Lasting.Lasts` or `Viability.Kernel` only if it is two or three lines.
+2. **Where the rising chain is the negation of a falling one, it is the contrapositive.** One line from `iter_persists`: for a monotone `Φ` with `start` and `within`, `¬ iter Φ V₀ (all.length + 1) y → ¬ iter Φ V₀ all.length y` (what is not kept one step beyond the list's length is not kept for the list's length). State it. For `Lasting.Continues` and for `Viable` give the instance if it is one line each.
+3. **The losing side of a choice, said positively, does not settle with nothing decided.** For a process `P` and a guard, `loseStep P guard X s := ¬ guard s ∨ ∀ a, Enabled P s a → ∃ t, P.step s a t ∧ X t` (the guard fails, or every enabled move has an outcome that loses), from the start `fun s => ¬ guard s`. On paper, on `Bool` with one move: let `false` have a guard that always holds and its move always lead to `true`; let `true` have guard `¬ q` and its move lead to `false`, enabled exactly when `q` holds. Then level 3 at `false` is `¬¬q ∨ (q → ¬¬q)`, which holds; level 2 at `false` is `¬¬q ∨ ¬q`. So the statement
+
+   ```lean
+   theorem lose_edge_decides_negations
+       (edge : ∀ (P : Process Bool Unit) (guard : Bool → Prop),
+         rise (loseStep P guard) (fun s => ¬ guard s) 3 false →
+         rise (loseStep P guard) (fun s => ¬ guard s) 2 false) (q : Prop) : ¬ q ∨ ¬ ¬ q
+   ```
+
+   should be provable (adjust to the real shape of `Process` and `Enabled`; check my arithmetic, the levels may be off by one; the list `[false, true]` has length 2). If it is, prove it. If instead the positive edge for `loseStep` turns out provable from `every` alone, prove that: it would be the larger result. Say also whether a variant gives full excluded middle (`q ∨ ¬ q`) or only this weaker form, if you can see it in a few builds.
+
+## What counts as nothing gained (frozen)
+
+- **L1.** Section A does not go through from `within`, `mono` and `start`: it needs `every` or more. (Then keep `every`, and say exactly where the weaker cover fails.)
+- **L2.** Section A uses anything outside `Prelude` and core; or the module imports a scratch module.
+- **L3.** `continues_same` is not `rfl`; or a case of the old module is lost (a statement of the old module that no longer follows from the new one in one line).
+- **L4.** Any declaration with an axiom.
+- **L5.** In Section G, item 1 needs a decision (say of what); or item 3 comes out neither way.
+- **L6.** A section's text could not be moved into its home module without an import cycle. Check by reading each home's `import` lines and those of what your section uses; say for each section what the home would have to import, and whether the new module of Section A (which imports only `Prelude`) can be imported there.
+
+## Traps
+
+- A core lemma can bring in `propext` (`Nat.succ_ne_zero` did, twice on 21 November): prove such facts by `Nat.noConfusion`, by cases, or with the package's own lemmas in `Becoming/Prelude.lean`. `simp`, `omega` and `decide` on propositions with free variables often bring axioms.
+- `GuardHorizon.Viable` lives at `Type` for states and moves; `Lasting` and `Keeping` are universe-polymorphic. State Section A at an arbitrary universe.
+- `Decided`, `not_not_decided` are in `Becoming/Decidedness.lean` (l. 100); `not_not_all`, `nil_of_length_zero`, `mem_cons_cases`, `revisits_within` in `Becoming/Prelude.lean`.
+- The package's names are partly Chinese with guillemets: copy them from the source.
+- Write only under `/Users/ren/tmp/fm/build5/` and `/Users/ren/theories/tmp/fm/whole/lean-edge-law/` (your report). Change nothing in the repository or in git. Start no further agents.
+
+## What to return
+
+Your whole report as your final answer, also saved as `/Users/ren/theories/tmp/fm/whole/lean-edge-law/REPORT.md`:
+
+1. **In five lines**: what built clean, what did not, and your own verdict on L1 to L6.
+2. **Each theorem**, section by section: its statement as it stands in the module, whether it built clean, what it calls.
+3. **L1 to L6**, each answered with the evidence (for L6: the import lines read).
+4. **Lines**: each section's lines; Section C's two routes.
+5. **What blocked** anything that did not come out, exactly.
+6. **The last build's log** (its JSON), the number of builds, and **what you did not do**.

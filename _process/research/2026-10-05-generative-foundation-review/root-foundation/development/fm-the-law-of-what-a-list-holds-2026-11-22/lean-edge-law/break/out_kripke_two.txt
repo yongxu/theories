@@ -1,0 +1,13 @@
+[lose] line of two: 2 configurations, 1 move(s), guard true, every of 81 step families: instances 81; level 3 -> level 2 fails in 0; (level 2 -> 1 fails in 12; any of 4->3, 5->4 fails in 0)
+[lose] fork: 2 configurations, 1 move(s), guard true, every of 625 step families: instances 625; level 3 -> level 2 fails in 0; (level 2 -> 1 fails in 212; any of 4->3, 5->4 fails in 0)
+[lose] line of three: 2 configurations, 1 move(s), guard true, every of 256 step families: instances 256; level 3 -> level 2 fails in 0; (level 2 -> 1 fails in 24; any of 4->3, 5->4 fails in 0)
+[lose] line of two: 2 configurations, 2 move(s), guard true, every of 6561 step families: instances 6561; level 3 -> level 2 fails in 0; (level 2 -> 1 fails in 96; any of 4->3, 5->4 fails in 0)
+[lose] fork: 2 configurations, 2 move(s), guard true, 60000 random of 390625 step families: instances 60000; level 3 -> level 2 fails in 0; (level 2 -> 1 fails in 3300; any of 4->3, 5->4 fails in 0)
+[lose] line of two: 2 configurations, 1 move(s), guard any, every of 81 step families: instances 729; level 3 -> level 2 fails in 0; (level 2 -> 1 fails in 48; any of 4->3, 5->4 fails in 0)
+[lose] fork: 2 configurations, 1 move(s), guard any, every of 625 step families: instances 15625; level 3 -> level 2 fails in 100; (level 2 -> 1 fails in 2494; any of 4->3, 5->4 fails in 0)
+    failing instances by (deterministic, every enabledness decided, guard decided): (False, False, False): 84, (True, False, False): 16
+    a failing instance with fewest step cells: steps [0-0->1: at worlds 1; 1-0->0: always] ; guard 0: at worlds 2; guard 1: at worlds 1
+      fails at (world, configuration) [(0, 1)]; levels by world: L0={0: [], 1: [0], 2: [1]}; L1={0: [], 1: [0, 1], 2: [0, 1]}; L2={0: [0], 1: [0, 1], 2: [0, 1]}; L3={0: [0, 1], 1: [0, 1], 2: [0, 1]}
+[lose] line of three: 2 configurations, 1 move(s), guard any, every of 256 step families: instances 4096; level 3 -> level 2 fails in 0; (level 2 -> 1 fails in 216; any of 4->3, 5->4 fails in 0)
+seconds 3.0
+python3 kripke.py two  2.90s user 0.04s system 94% cpu 3.119 total

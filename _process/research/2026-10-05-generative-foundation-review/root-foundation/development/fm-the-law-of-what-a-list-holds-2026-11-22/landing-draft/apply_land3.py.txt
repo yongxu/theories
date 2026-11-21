@@ -1,0 +1,136 @@
+# AI-written (Claude Fable, row FM), 22 November 2026. Applies the landing draft to the worktree and
+# makes the edits beside it: the root, the README, the checker's lists and scope, regions.json.
+# Run once, in a clean worktree at main. Records are written after the core run (records3.py).
+import pathlib, shutil, sys
+
+wt = pathlib.Path('/Users/ren/tmp/fm/wt')
+main = pathlib.Path('/Users/ren/theories')
+REL = 'experiments/integrated-correction/general-framework/generative-basis/lean/becoming'
+L, LM = wt/REL, main/REL
+draft = pathlib.Path('/Users/ren/tmp/fm/build10/Becoming')
+NEW = ['PredicateIteration', 'RisingIteration']
+CHANGED = ['CommonResponse', 'Viability', 'Lasting', 'Parting', 'GuardHorizon', 'Keeping', 'Refinement',
+           'Likeness', 'Attraction', 'GrammarCandidates', 'KeepableStep', 'ReachableRanges', 'Tolerance']
+assert sorted(p.stem for p in draft.glob('*.lean')) == sorted(NEW + CHANGED), sorted(p.stem for p in draft.glob('*.lean'))
+for m in CHANGED:
+    assert (L/'Becoming'/(m+'.lean')).read_bytes() == (LM/'Becoming'/(m+'.lean')).read_bytes(), m
+for m in NEW:
+    assert not (L/'Becoming'/(m+'.lean')).exists(), m
+for m in NEW + CHANGED:
+    shutil.copyfile(draft/(m+'.lean'), L/'Becoming'/(m+'.lean'))
+
+def edit(path, old, new, count=1):
+    s = path.read_text()
+    assert s.count(old) == count, (str(path), old[:70], s.count(old))
+    path.write_text(s.replace(old, new))
+
+# ---------------------------------------------------------------- the root
+root = L/'Becoming.lean'
+edit(root, "import Becoming.Refinement\n",
+     "import Becoming.Refinement\nimport Becoming.PredicateIteration\nimport Becoming.RisingIteration\n")
+B1 = (
+"* `Becoming.PredicateIteration` (L1): a step on predicates applied as many times as a list is long,\n"
+"  with no premise beyond what each statement names. `Iteration.iter Φ V₀ n` is the predicate `V₀`\n"
+"  after the step `Φ` has been applied `n` times. For a step that preserves inclusion and whose\n"
+"  value at the start lies inside the start, where a list holds every state of the start, the\n"
+"  iterate at the list's length lies inside the next (`Iteration.iter_persists`), is the iterate at\n"
+"  every length (`Iteration.iter_iff_all`), and is the largest class inside the start that lies\n"
+"  inside its own step (`Iteration.iter_largest`). For a step whose start lies inside its own first\n"
+"  step, let G be that a state y is in the iterate at a list's length: if the step commutes with\n"
+"  implication to G (`Iteration.CommutesWithImplication`) and the list holds every state at which\n"
+"  membership in the start implies G, then y in any iterate is in the iterate at the list's length\n"
+"  (`Iteration.iter_within_length`). It imports only `Becoming.Prelude` and holds two lemmas on\n"
+"  lists (`remove_mem`, `gather_listed`). The kinds of keeping, likeness to depth and reach along a\n"
+"  relation are stated as cases in the modules of those notions.\n"
+"* `Becoming.RisingIteration` (L1): what follows for every monotone step where every state is\n"
+"  listed, and what a bound for every step would decide. Where a list holds every state, every\n"
+"  monotone step commutes with implication to falsity (`Iteration.commutes_false`); so for a step\n"
+"  whose start lies inside its own first step, a state in the iterate one past the list's length\n"
+"  cannot be refuted to be in the iterate at its length (`Iteration.rise_not_not`), and is in it\n"
+"  where that follows from its double negation (`Iteration.rise_of_stable`). If, for every monotone\n"
+"  step on a one-state type, being in iterate 2 from the empty predicate implied being in iterate\n"
+"  1, every proposition would be decided (`Iteration.singleton_rise_needs_em`).\n")
+edit(root, "* `Becoming.Refinement` (L1): a chain of equivalences stops within its classes (P83c), with no\n",
+     B1 + "* `Becoming.Refinement` (L1): a chain of equivalences stops within its classes (P83c), with no\n")
+edit(root,
+     "  (`KeptTogether.no_comparison_through_bundles`). Each law is near-definitional or a witness. A\n"
+     "  leaf: alternative comparisons and their witnesses, which no module uses (board item UE10).\n",
+     "  (`KeptTogether.no_comparison_through_bundles`). Each law is near-definitional or a witness, but\n"
+     "  for the bound on moves (`Reaching.trace_within_pred_length`), a case of\n"
+     "  `Becoming.PredicateIteration`'s bound through `Becoming.CommonResponse`. A leaf: alternative\n"
+     "  comparisons and their witnesses, which no module uses (board item UE10).\n")
+edit(root,
+     "  the move. On finite frames whose steps and claims are decided, configurations are alike exactly\n"
+     "  where they pass the same branching tests, by a constructive proof in which refinement stops\n"
+     "  within the number of pairs of configurations and, counting classes, within `N - 1` for one\n"
+     "  frame of `N` configurations, exactly, and `N + N' - 1` across two; deciding likeness for every\n"
+     "  finite frame is excluded middle.\n",
+     "  the move. On finite frames whose steps and claims are decided, configurations are alike exactly\n"
+     "  where they pass the same branching tests, by a constructive proof; where a list holds the\n"
+     "  configurations of each frame, with nothing decided, configurations alike to the depth of the\n"
+     "  product of the lists' lengths are alike to the next and are alike; counting classes on finite\n"
+     "  decided frames, refinement stops within `N - 1` for one frame of `N` configurations, exactly,\n"
+     "  and `N + N' - 1` across two; deciding likeness for every finite frame is excluded middle.\n")
+
+# ---------------------------------------------------------------- README.md
+readme = L/'README.md'
+s = readme.read_text(); lines = s.split('\n')
+def row_index(mod):
+    hits = [k for k, l in enumerate(lines) if l.startswith('| L1 | [`Becoming.%s`]' % mod) or l.startswith('| L0 | [`Becoming.%s`]' % mod)]
+    assert len(hits) == 1, (mod, hits); return hits[0]
+R1 = ("| L1 | [`Becoming.PredicateIteration`](Becoming/PredicateIteration.lean) | a step on predicates applied as many times as a list is long (imports only `Becoming.Prelude`; no premise beyond what each statement names): for a step that preserves inclusion and whose value at the start lies inside the start, where a list holds every state of the start, the iterate at the list's length lies inside the next, is the iterate at every length, and is the largest class inside the start that lies inside its own step (`Iteration.iter_persists`, `Iteration.iter_iff_all`, `Iteration.iter_largest`); for a step whose start lies inside its own first step, with G the proposition that a state y is in the iterate at a list's length: if the step commutes with implication to G (`Iteration.CommutesWithImplication`) and the list holds every state at which membership in the start implies G, then y in any iterate is in the iterate at the list's length (`Iteration.iter_within_length`); two lemmas on lists (`remove_mem`, `gather_listed`) |")
+R2 = ("| L1 | [`Becoming.RisingIteration`](Becoming/RisingIteration.lean) | rising iteration where every state is listed (through `Becoming.PredicateIteration` and `Becoming.Decidedness`): every monotone step then commutes with implication to falsity (`Iteration.commutes_false`), so for a step whose start lies inside its own first step a state in the iterate one past the list's length cannot be refuted to be in the iterate at its length, and is in it where that follows from its double negation (`Iteration.rise_not_not`, `Iteration.rise_of_stable`); if, for every monotone step on a one-state type, being in iterate 2 from the empty predicate implied being in iterate 1, every proposition would be decided (`Iteration.singleton_rise_needs_em`) |")
+k = row_index('GrammarReadings'); lines.insert(k, R1)
+k = row_index('Refinement'); lines.insert(k + 1, R2)
+k = row_index('KeepableStep')
+old = "(through `Becoming.JointKeeping` and `Becoming.Horizon`; no premise beyond what each statement names)"
+assert lines[k].count(old) == 1
+lines[k] = lines[k].replace(old, "(through `Becoming.JointKeeping`, `Becoming.Horizon` and, for keeping at a list's length, `Becoming.Onward`; no premise beyond what each statement names)")
+k = row_index('ReachableRanges')
+assert lines[k].endswith("; near-definitional |")
+lines[k] = lines[k][:-len("; near-definitional |")] + "; near-definitional, but for the bound on moves (`Reaching.trace_within_pred_length`) |"
+readme.write_text('\n'.join(lines))
+
+# ---------------------------------------------------------------- README.zh.md: one sentence that would be false
+zh = L/'README.zh.md'
+zl = zh.read_text().split('\n')
+hits = [k for k, l in enumerate(zl) if l.startswith('| L1 | [`Becoming.ReachableRanges`]')]
+assert len(hits) == 1 and zl[hits[0]].endswith("；近乎定义 |")
+zl[hits[0]] = zl[hits[0]][:-len("；近乎定义 |")] + "；除步数之界（`Reaching.trace_within_pred_length`）外近乎定义 |"
+zh.write_text('\n'.join(zl))
+
+# ---------------------------------------------------------------- the checker: lists and scope
+chk = L/'check_becoming.py'
+edit(chk, '"Becoming.Refinement", ', '"Becoming.Refinement", "Becoming.PredicateIteration", "Becoming.RisingIteration", ')
+edit(chk,
+     '    "k + c <= N, and the decisions of finitely many propositions are together refuted by nothing. "\n',
+     '    "k + c <= N, and the decisions of finitely many propositions are together refuted by nothing. "\n'
+     '    "PredicateIteration: for a step on predicates that preserves inclusion and whose value at the start "\n'
+     '    "lies inside the start, where a list holds every state of the start, the iterate at the list\'s length "\n'
+     '    "lies inside the next, is the iterate at every length, and is the largest class inside the start that "\n'
+     '    "lies inside its own step; for a step whose start lies inside its own first step, with G the "\n'
+     '    "proposition that a state y is in the iterate at a list\'s length: if the step commutes with "\n'
+     '    "implication to G and the list holds every state at which membership in the start implies G, then y "\n'
+     '    "in any iterate is in the iterate at the list\'s length. "\n'
+     '    "RisingIteration: where a list holds every state, every monotone step commutes with implication to "\n'
+     '    "falsity, so for a step whose start lies inside its own first step a state in the iterate one past the "\n'
+     '    "list\'s length cannot be refuted to be in the iterate at its length, and is in it where that follows "\n'
+     '    "from its double negation; if for every monotone step on a one-state type being in iterate 2 from the "\n'
+     '    "empty predicate implied being in iterate 1, every proposition would be decided. "\n')
+
+# ---------------------------------------------------------------- regions.json
+import json
+reg = wt/'theories/becoming/results/data/regions.json'
+raw = reg.read_text()
+d = json.loads(raw)
+def dump(x): return json.dumps(x, ensure_ascii=False, indent=1) + ('\n' if raw.endswith('\n') else '')
+assert dump(d) == raw, 'regions.json does not round-trip; edit it by text'
+mods = d['modules']
+was_sorted = list(mods) == sorted(mods)
+mods['Becoming.PredicateIteration'] = {"region": "method", "base": "general",
+    "note": "a monotone step on predicates applied as many times as a list is long: the iterate at the list's length is every iterate; rising steps that commute with implication"}
+mods['Becoming.RisingIteration'] = {"region": "method", "base": "general",
+    "note": "rising iteration where every state is listed: up to a double negation; what a bound for every step would decide"}
+if was_sorted: d['modules'] = {k: mods[k] for k in sorted(mods)}
+reg.write_text(dump(d))
+print('applied')

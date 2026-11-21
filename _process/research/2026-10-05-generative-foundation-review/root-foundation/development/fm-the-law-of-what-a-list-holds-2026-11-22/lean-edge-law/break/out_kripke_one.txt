@@ -1,0 +1,11 @@
+[lose] line of two: 1 configurations, 1 move(s), guard true, every of 3 step families: instances 3; level 2 -> level 1 fails in 0; (level 1 -> 0 fails in 1; any of 3->2, 4->3 fails in 0)
+[lose] line of two: 1 configurations, 1 move(s), guard any, every of 3 step families: instances 9; level 2 -> level 1 fails in 0; (level 1 -> 0 fails in 2; any of 3->2, 4->3 fails in 0)
+[lose] line of two: 1 configurations, 2 move(s), guard any, every of 9 step families: instances 27; level 2 -> level 1 fails in 0; (level 1 -> 0 fails in 2; any of 3->2, 4->3 fails in 0)
+[lose] fork: 1 configurations, 1 move(s), guard true, every of 5 step families: instances 5; level 2 -> level 1 fails in 0; (level 1 -> 0 fails in 3; any of 3->2, 4->3 fails in 0)
+[lose] fork: 1 configurations, 1 move(s), guard any, every of 5 step families: instances 25; level 2 -> level 1 fails in 0; (level 1 -> 0 fails in 10; any of 3->2, 4->3 fails in 0)
+[lose] fork: 1 configurations, 2 move(s), guard any, every of 25 step families: instances 125; level 2 -> level 1 fails in 0; (level 1 -> 0 fails in 22; any of 3->2, 4->3 fails in 0)
+[lose] line of three: 1 configurations, 1 move(s), guard true, every of 4 step families: instances 4; level 2 -> level 1 fails in 0; (level 1 -> 0 fails in 1; any of 3->2, 4->3 fails in 0)
+[lose] line of three: 1 configurations, 1 move(s), guard any, every of 4 step families: instances 16; level 2 -> level 1 fails in 0; (level 1 -> 0 fails in 3; any of 3->2, 4->3 fails in 0)
+[lose] line of three: 1 configurations, 2 move(s), guard any, every of 16 step families: instances 64; level 2 -> level 1 fails in 0; (level 1 -> 0 fails in 3; any of 3->2, 4->3 fails in 0)
+seconds 0.0
+python3 kripke.py one  0.02s user 0.01s system 29% cpu 0.127 total

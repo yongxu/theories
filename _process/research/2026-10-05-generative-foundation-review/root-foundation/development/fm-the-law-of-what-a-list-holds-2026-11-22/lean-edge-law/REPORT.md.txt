@@ -1,0 +1,192 @@
+## 1. Verdict in five lines
+
+AI-written by Codex. All seven sections built clean, including all three new rising-chain results. [Lean module](/Users/ren/tmp/fm/build5/Becoming/ScratchEdgeLaw.lean) · [Saved report](/Users/ren/theories/tmp/fm/whole/lean-edge-law/REPORT.md)  
+L1 and L2 did not occur. The falling bound needs a list covering the start, and Section A built with `Becoming.Prelude` alone.  
+L3 and L4 did not occur. All five old cases survive, `continues_same` is `rfl`, and the audit found no axioms in 58 declarations.  
+L5 did not occur. Relational reach shortens constructively. Shortening positive loss implies weak excluded middle on two states and full excluded middle in a three-state variant.  
+L6 did not occur. The proposed homes admit an acyclic import order. The only unclean build had two unused-variable warnings.
+
+## 2. Theorems and their proofs
+
+Every theorem below built clean with an empty axiom report. The statements retain the module’s section variables and local notation. `S : Type u` and `A : Type v` are arbitrary where the package permits them.
+
+### A. Falling iteration
+
+`iter Φ V₀` starts at `V₀` and applies `Φ` at each successor. `mono : MonotoneStep Φ` means `∀ {X Y}, (∀ z, X z → Y z) → ∀ y, Φ X y → Φ Y y`. From `iter_pred` onward the shared premises are `mono` and `start : ∀ y, Φ V₀ y → V₀ y`, except that `postfixed_in_iter` needs only `mono`.
+
+| Theorem | Statement | Proof uses |
+|---|---|---|
+| `remove_place` | `{y : S} : ∀ {l : List S}, y ∈ l → ∃ rest : List S, l.length = rest.length + 1 ∧ ∀ z, z ∈ l → z = y ∨ z ∈ rest` | Membership induction, `mem_cons_cases`, recursion, `congrArg Nat.succ`. |
+| `iter_pred` | `∀ n y, iter Φ V₀ (n + 1) y → iter Φ V₀ n y` | `start`, then `mono` on the induction hypothesis. |
+| `iter_within` | `∀ n y, iter Φ V₀ n y → V₀ y` | Recursion and `iter_pred`. |
+| `extend_at_places` | `∀ (n : Nat) (left : List S), left.length = n → (∀ z, V₀ z → z ∈ left ∨ iter Φ V₀ (n + 1) z) → ∀ y, iter Φ V₀ n y → iter Φ V₀ (n + 1) y` | `nil_of_length_zero`, `iter_within`, `remove_place`, `Nat.succ.inj`, `iter_pred`, recursion, `mono`. |
+| `iter_persists` | `{all : List S} (within : ∀ x, V₀ x → x ∈ all) {y : S} : iter Φ V₀ all.length y → iter Φ V₀ (all.length + 1) y` | `extend_at_places` with `left = all`. |
+| `iter_postfixed` | `{all : List S} (within : ∀ x, V₀ x → x ∈ all) : ∀ y, iter Φ V₀ all.length y → Φ (iter Φ V₀ all.length) y` | `iter_persists`. |
+| `postfixed_in_iter` | `{K : S → Prop} (within : ∀ y, K y → V₀ y) (post : ∀ y, K y → Φ K y) : ∀ n y, K y → iter Φ V₀ n y` | `within`, then `mono` on the induction hypothesis and `post`. |
+| `iter_iff_all` | `{all : List S} (within : ∀ x, V₀ x → x ∈ all) {y : S} : iter Φ V₀ all.length y ↔ ∀ n, iter Φ V₀ n y` | `postfixed_in_iter`, `iter_within`, `iter_postfixed`, evaluation at the list length. |
+| `iter_largest` | `{all : List S} (within : ∀ x, V₀ x → x ∈ all) : let L := iter Φ V₀ all.length; (∀ y, L y → V₀ y) ∧ (∀ y, L y → Φ L y) ∧ ∀ K : S → Prop, (∀ y, K y → V₀ y) → (∀ y, K y → Φ K y) → ∀ y, K y → L y` | `iter_within`, `iter_postfixed`, `postfixed_in_iter`. |
+
+### B. The grammar’s region
+
+`regionStep R Q X s` is `Q s ∧ ∀ t, R s t → X t`.
+
+| Theorem | Statement | Proof uses |
+|---|---|---|
+| `region_mono` | `MonotoneStep (regionStep R Q)` | Apply the inclusion at each successor. |
+| `held_iff_iter` | `{all : List S} (within : ∀ x, Q x → x ∈ all) {s : S} : «承» («逆» («所闭» R)) Q s ↔ iter (regionStep R Q) Q all.length s` | `«所闭之承最大»` and `iter_largest` with `region_mono`. Each largest class contains the other. |
+
+### C. Whatever happens
+
+`Steps P s t` means some move of `P` takes `s` to `t`. The retained direct route uses `disturbanceStep f adm guard X s := guard s ∧ ∀ a, adm a → X (f s a)`.
+
+| Theorem | Statement | Proof uses |
+|---|---|---|
+| `kernel_iff_iter` | `{all : List S} (within : ∀ x, guard x → x ∈ all) {s : S} : Viability.Kernel P guard s ↔ iter (regionStep (Steps P) guard) guard all.length s` | `Viability.kernel_iff_held`, `held_iff_iter`. |
+| `iter_region_iff_lasts` | `∀ n s, iter (regionStep (Steps (disturbed f adm)) guard) guard n s ↔ Lasts f adm guard n s` | Induction using `Steps` and `disturbed`. An admissible `a` witnesses the successor `f s a`. The reverse direction substitutes the witnessed successor equality. |
+| `kernel_iff_lasts_length` | `{all : List S} (within : ∀ x, guard x → x ∈ all) {s : S} : Kernel (disturbed f adm) guard s ↔ Lasts f adm guard all.length s` | `kernel_iff_iter`, `iter_region_iff_lasts`. |
+| `disturbance_mono` | `(f : S → A → S) (adm : A → Prop) (guard : S → Prop) : MonotoneStep (disturbanceStep f adm guard)` | Apply the inclusion at `f s a`. |
+| `iter_iff_lasts` | `∀ n s, iter (disturbanceStep f adm guard) guard n s ↔ Lasts f adm guard n s` | Induction using `disturbance_mono` in both directions. |
+| `kernel_iff_lasts_length_direct` | `{all : List S} (within : ∀ x, guard x → x ∈ all) {s : S} : Kernel (disturbed f adm) guard s ↔ Lasts f adm guard all.length s` | `Lasting.kernel_iff_lasts`, `iter_iff_lasts`, `iter_iff_all`, `disturbance_mono`. |
+
+### D. Some course
+
+`courseStep P X s` is `∃ a t, P.step s a t ∧ X t`.
+
+| Theorem | Statement | Proof uses |
+|---|---|---|
+| `course_mono` | `MonotoneStep (courseStep P)` | Keep the same move and successor and apply the inclusion there. |
+| `iter_iff_continues` | `∀ n s, iter (courseStep P) (fun _ => True) n s ↔ Lasting.Continues P n s` | Induction using `course_mono` in both directions. |
+| `continues_persists_case` | `{all : List S} (every : ∀ x, x ∈ all) {y : S} (continues : Lasting.Continues P all.length y) : ∃ a z, P.step y a z ∧ Lasting.Continues P all.length z` | `iter_iff_continues`, `iter_persists`, `course_mono`. |
+| `continues_same` | `@continues_persists_case.{u,v} = @Parting.continues_persists.{u,v}` | `rfl`. |
+
+### E. A choice against every outcome
+
+`choiceStep P guard X s` is `guard s ∧ ∃ a, Enabled P s a ∧ ∀ t, P.step s a t → X t`. The step and its monotonicity are universe-polymorphic. The statements using the package’s `Viable` have `S A : Type`.
+
+| Theorem | Statement | Proof uses |
+|---|---|---|
+| `choice_mono` | `MonotoneStep (choiceStep P guard)` | Keep the enabled move and apply the inclusion at each outcome. |
+| `iter_iff_viable` | `∀ n s, iter (choiceStep P guard) guard n s ↔ Viable P guard n s` | Induction using `choice_mono` in both directions. |
+| `viable_persists` | `{all : List S} (within : ∀ x, guard x → x ∈ all) {y : S} (kept : Viable P guard all.length y) : ∃ a, Enabled P y a ∧ ∀ z, P.step y a z → Viable P guard all.length z` | `iter_iff_viable`, `iter_persists`, `choice_mono`. |
+| `viable_closed` | `(within : ∀ x, guard x → x ∈ all) : Closed P guard (Viable P guard all.length)` | `GuardHorizon.viable_guard`, `viable_persists`. |
+| `viable_iff_every_horizon` | `(within : ∀ x, guard x → x ∈ all) : Viable P guard all.length s ↔ ∀ n, Viable P guard n s` | `viable_closed`, `GuardHorizon.closed_viable`, evaluation at the list length. |
+| `viable_iff_closed` | `(within : ∀ x, guard x → x ∈ all) : Viable P guard all.length s ↔ ∃ K, Closed P guard K ∧ K s` | `viable_closed` supplies the set, `GuardHorizon.closed_viable` gives the converse. |
+| `no_closed_of_not_viable` | `(fails : ¬ Viable P guard all.length s) : ∀ K, Closed P guard K → ¬ K s` | `GuardHorizon.closed_viable` at the list length. |
+
+### F. Through a reading
+
+Here `safe := codeGuard decode guard`, where `safe c` means `∀ s, decode c s → guard s`. The step `Φ := readingStep P sense guard allowed decode` requires a guarded code and a usable move for which each observed successor class is `coveredBy` a code in the input set. `InClosedFamily` requires a family containing the class, all its members guarded, and a usable move at each member keeping every observation in the family.
+
+`iter_iff_kept` takes `updates : ∀ c a, Usable P allowed (decode c) a → ∀ o, ∃ d, ∀ s, decode d s ↔ Seen P sense (decode c) a o s`. `coded_kept_iff_closed` takes both `within : ∀ c, (∀ s, decode c s → guard s) → c ∈ all` and `updates`. The weaker code cover costs zero additional proof lines.
+
+| Theorem | Statement | Proof uses |
+|---|---|---|
+| `reading_mono` | `MonotoneStep Φ` | Keep each covering code and apply the inclusion to its membership. |
+| `iter_iff_kept` | `∀ n c, iter Φ safe n c ↔ KeptFor P sense guard allowed n (decode c)` | Induction using `Viability.KeptFor.mono` and `updates`. |
+| `coded_kept_iff_closed` | `{c : C} : KeptFor P sense guard allowed all.length (decode c) ↔ InClosedFamily P sense guard allowed (decode c)` | `iter_postfixed`, `reading_mono`, `iter_iff_kept`, `coveredBy`, `Viability.Seen.mono`, `Viability.keptFor_of_closed`. |
+
+### G. The rising chain
+
+`rise` abbreviates `iter`. For the inherited theorems, `mono : MonotoneStep Ψ`, `start : ∀ y, W₀ y → Ψ W₀ y`, and `every : ∀ x, x ∈ all`. `dual_mono` takes `mono`, `iter_dual_iff` takes `mono` and `every`, and the two final inherited theorems take all three. `dual Ψ X y` means `¬ Ψ (fun z => ¬ X z) y`.
+
+`reaches := rise (reachStep R W₀) W₀`, where `reachStep R W₀ X y := W₀ y ∨ ∃ t, R y t ∧ X t`. The losing step is `loseStep P guard X s := ¬ guard s ∨ ∀ a, Enabled P s a → ∃ t, P.step s a t ∧ X t`.
+
+| Theorem | Statement | Proof uses |
+|---|---|---|
+| `singleton_rise_needs_em` | `(edge : ∀ Ψ : (Unit → Prop) → Unit → Prop, MonotoneStep Ψ → rise Ψ (fun _ => False) 2 () → rise Ψ (fun _ => False) 1 ()) (p : Prop) : Decided p` | Apply `edge` to the step `p ∨ (p → X ())`. |
+| `dual_mono` | `MonotoneStep (dual Ψ)` | `mono` applied to the inclusion between complements. |
+| `iter_dual_iff` | `∀ n y, iter (dual Ψ) (fun z => ¬ W₀ z) n y ↔ ¬ rise Ψ W₀ n y` | Induction using `mono`, `not_not_all`, `not_not_decided`, `Decided.of_not_not`, `every`. |
+| `rise_not_not` | `{y : S} (reached : rise Ψ W₀ (all.length + 1) y) : ¬ ¬ rise Ψ W₀ all.length y` | `iter_dual_iff`, `iter_persists`, `dual_mono`, `mono`, `start`. |
+| `rise_of_stable` | `{y : S} (stable : (¬ ¬ rise Ψ W₀ all.length y) → rise Ψ W₀ all.length y) : rise Ψ W₀ (all.length + 1) y → rise Ψ W₀ all.length y` | `rise_not_not`, then `stable`. |
+| `reach_pad` | `∀ n y, reaches n y → reaches (n + 1) y` | Induction on the bound, retaining each witnessed successor. |
+| `reach_shorten_at_places` | `{G : Prop} : ∀ (n : Nat) (left : List S), left.length = n → (∀ z, z ∈ left ∨ (reaches (n + 1) z → G)) → ∀ y, (reaches n y → G) → reaches (n + 1) y → G` | `nil_of_length_zero`, `remove_place`, `reach_pad`, `Nat.succ.inj`, recursion. |
+| `reach_rise_shortens` | `(every : ∀ x, x ∈ all) {y : S} : reaches (all.length + 1) y → reaches all.length y` | `reach_shorten_at_places` with the exhaustive list and `id`. |
+| `not_iter_of_not_succ` | `{Φ : (S → Prop) → S → Prop} {V₀ : S → Prop} (mono : MonotoneStep Φ) (start : ∀ y, Φ V₀ y → V₀ y) (within : ∀ x, V₀ x → x ∈ all) {y : S} : ¬ iter Φ V₀ (all.length + 1) y → ¬ iter Φ V₀ all.length y` | Apply the failure proof to `iter_persists`. |
+| `not_continues_of_not_succ` | `{A : Type v} {P : Process S A} (every : ∀ x, x ∈ all) {y : S} : ¬ Lasting.Continues P (all.length + 1) y → ¬ Lasting.Continues P all.length y` | Apply the failure proof to `continues_persists_case`. |
+| `not_viable_of_not_succ` | `{S A : Type} {P : Process S A} {guard : S → Prop} {all : List S} (within : ∀ x, guard x → x ∈ all) {y : S} : ¬ Viable P guard (all.length + 1) y → ¬ Viable P guard all.length y` | `GuardHorizon.viable_guard`, `viable_persists`. |
+| `lose_edge_decides_negations` | `(edge : ∀ (P : Process Bool Unit) (guard : Bool → Prop), rise (loseStep P guard) (fun s => ¬ guard s) 3 false → rise (loseStep P guard) (fun s => ¬ guard s) 2 false) (q : Prop) : ¬ q ∨ ¬ ¬ q` | Instantiate `edge` at the two-state process and inspect its losing witness. |
+| `lose_edge_decides` | `(edge : ∀ P : Process (Option Bool) Unit, rise (loseStep P (fun _ => True)) (fun _ => ¬ True) 4 none → rise (loseStep P (fun _ => True)) (fun _ => ¬ True) 3 none) (q : Prop) : q ∨ ¬ q` | Instantiate `edge` at the three-state process and inspect which successor witnesses loss. |
+
+## 3. Evidence against L1–L6
+
+| Criterion | Evidence |
+|---|---|
+| L1 | The recursive cover is `∀ z, V₀ z → z ∈ left ∨ iter Φ V₀ (n + 1) z`. At a surviving state, `iter_within` supplies the starting-membership proof. After removing its place, that state already has the required shorter witness. |
+| L2 | Clean build 2 contained only A and imported only `Becoming.Prelude`. The final module imports seven package modules. It defines `remove_place` and `InClosedFamily` locally. |
+| L3 | Region, disturbance, course, choice, and reading all follow. At every weakened list premise the old call is recovered with `fun x _ => every x`. The old unconditional recursive cover is recovered with `fun z _ => cover z`. The direct disturbance bridge survives. The course proof uses the shared iteration theorem and its statement comparison is literally `rfl`. |
+| L4 | Build 13 audited 44 theorems and 14 definitions or abbreviations. Its `with_axioms` object is empty. |
+| L5 | `reach_rise_shortens` has just `every` as its premise. For positive loss, `lose_edge_decides_negations` proves the proposed Bool result at exactly 3 and 2. `lose_edge_decides` proves full excluded middle from 4-to-3 shortening on three states. |
+| L6 | Each proposed import goes from a consuming module to an earlier dependency. The import declarations and the placement of each section are given below. |
+
+The old `viable_same` and `coded_same` compared proofs across scratch modules. Their exhaustive-list statements are recovered in one line by the cover adapter above. For the reading case the local `InClosedFamily` has the same definition. In a context containing the older proof, proof irrelevance gives the comparison by `rfl`. The compiled cross-proof comparison in this module is the requested one against `Parting.continues_persists`.
+
+For the three-state result, call the states `r`, `m`, and `d`. The move from `r` always has `m` as an outcome and can also reach `d` given `q`. The move from `m` reaches `r` given `q`. At `d` there is no move. The guard is true everywhere. Level 4 at `r` has an unconditional witness. At level 3 the losing successor chosen from `r` either gives `q` on the step to `d`, or gives level 2 at `m`. The latter refutes `q`, since a return from `m` would then require loss at level 1 at `r`, where a move is enabled and every outcome satisfies the guard.
+
+**Import declarations read.** Each name in the middle column is the argument of an `import` line, in source order. Unqualified package names in the table carry the `Becoming.` prefix, except for the explicitly top-level `InquirySufficiency` and `GenerativeCore`.
+
+| Section and proposed home | Existing imports | What the section needs on landing |
+|---|---|---|
+| A · new `PredicateIteration` | `Prelude` itself has no explicit imports | Import only `Becoming.Prelude`. |
+| B · `CommonResponse` | `GrammarLaws` | Add A. The largest-region theorem is already local. |
+| C1 · `Viability` | `Frame`, `Witnesses`, `CommonResponse` | B arrives through `CommonResponse`, including A. `Steps` comes from `Frame`. |
+| C2 · `Lasting` | `Viability`, `Recurrence`, `Likeness` | C1 arrives through `Viability`, along with B and A. |
+| D · `Parting` | `Distinguishing`, `Lasting` | `Lasting` supplies `Continues` and transitively A. The comparison can follow the existing `continues_persists`. |
+| E · `GuardHorizon` | `Acceptance`, `Viability`, `Keeping`, `CommonResponse` | A arrives through B. `Viable`, `Closed`, and their existing lemmas are local. |
+| F · `Keeping` | `Viability`, `InquirySufficiency` | A arrives through `Viability`. The reading and closed-family lemmas are local. |
+| G · new `RisingIteration` | New module | Import `PredicateIteration`, `Decidedness`, `Parting`, and `GuardHorizon`. D and E supply the two one-line instances. |
+
+`GrammarLaws` imports `Grammar`, `GrammarMap`, and `Prelude`. `Frame` imports `Prelude`, `GrammarLaws`, and top-level `GenerativeCore`. `Decidedness` imports `Space`. Since A depends only on `Prelude`, every proposed home can also import A directly. G can sit downstream of all the existing homes. This is a source import check. The build verified the single scratch module.
+
+## 4. Lines
+
+Counts include the home comment, docstrings, internal blank lines, and closing `end`. The complete module is 547 lines.
+
+| Section | Source lines | Count |
+|---|---:|---:|
+| A | 15–110 | 96 |
+| B | 112–133 | 22 |
+| C, both routes | 135–197 | 63 |
+| D | 199–231 | 33 |
+| E | 233–286 | 54 |
+| F | 288–360 | 73 |
+| G | 362–545 | 184 |
+
+**Section C.** The original direct route occupies the brief’s 24 lines, from the old section opener through its last proof line (140–163). The new route through the arbitrary-process theorem takes 36 physical lines from the first home marker through its last proof line (135–170). That is 12 more, so both routes are present. The direct calculation alongside it occupies 24 lines (172–195), sharing the disturbance section’s variables. Counting declaration signatures and bodies alone gives 14 lines for the new route and 13 for the original. Each composition in the new route has a one-line proof.
+
+## 5. What blocked or was omitted
+
+Build 1 proved A with empty axiom reports. Two unused pattern variables named `left` made the warning audit unclean. Replacing those bindings with `_` produced clean build 2 with the same statements. All mandatory statements subsequently built.
+
+For explicit escape, `reach_rise_shortens (R := Steps P) (W₀ := fun s => ¬ guard s) every` directly shortens a witnessed route out of the guard. I left the optional separate `Lasts` or `Kernel` formulation out under the brief’s two-or-three-line condition. Identifying the positive bounded witness with a package course takes a further bridge. The report makes no inference from a bare negation of kernel membership to a witnessed exit.
+
+## 6. Last build and scope
+
+I ran the prescribed wrapper 13 times. Builds 2–13 were clean, and each has its numbered source snapshot. The clean checkpoints were A at 2, B at 3, C at 4 and 5, D at 6, E at 7, F at 8, the inherited G statements at 9, relational reach at 10, contraposition and its instances at 11, two-state loss at 12, and three-state loss at 13. [Final snapshot](/Users/ren/tmp/fm/build5/ScratchEdgeLaw.clean-13.lean.txt) · [Build 13 log](/Users/ren/tmp/fm/build5/build-13.log)
+
+The wrapper recorded `exit 0 build 13`. Its JSON follows.
+
+```json
+{
+  "tree": "/Users/ren/tmp/fm/build5",
+  "modules": 64,
+  "ran": [
+    "Becoming.ScratchEdgeLaw",
+    "BecomingScratchEdgeLawAxiomAudit"
+  ],
+  "reused": 63,
+  "unclean": [],
+  "audits": {
+    "Becoming.ScratchEdgeLaw": {
+      "theorems": 44,
+      "declarations": 58,
+      "with_axioms": {}
+    }
+  },
+  "seconds": {
+    "Becoming.ScratchEdgeLaw": 1.781,
+    "BecomingScratchEdgeLawAxiomAudit": 0.381
+  }
+}
+```
+
+I ran no other Lean command, no Lake, no separate checker, no gate, and no tests. I started no agents, used no scratch imports, and made no package or git changes. The only repository-side write I made was this requested report.

@@ -1,0 +1,209 @@
+**(1) Verdict**
+
+1. It may be claimed. I read every proof term and every statement holds as stated. Every result that is a case calls the law (`iter_persists`, `iter_postfixed`, `iter_iff_all`, `iter_largest`, `iter_persists_from_all`) once, through a bridge. The only inductions on a list are `extend_at_places` and `remove_mem`. No proof repeats the law's induction under another name.
+2. The strongest thing against: `rise` cannot land under that name. `Becoming.rise` already exists (Change.lean l. 159, namespace `Becoming`, a core module). Landed in `Becoming`, it would collide wherever both are imported, and the root imports both. Write `iter` instead. That also spares GuardHorizon any import of the rising module.
+3. Next: `reaches` is the module's own iterate and is joined to no package notion of reaching (`Reach`, `«所闭»`, `«迭内»`). So "reaches … at all" in a telling is not carried. The weaker list of `reach_within_length` is in effect `every`.
+4. Docstrings: `dual`'s verb is wrong ("excludes"). `iter_iff_kept` says less than its statement and `lose_edge_decides_negations` more. About ten use words they never define (iterate, kept, level, horizon, positive loss).
+5. Landing also needs:
+   - `CORE` and the root `Becoming.lean` import for the new module;
+   - CommonResponse's "It adds three definitions" corrected;
+   - `Parting.continues_persists`'s docstring rewritten;
+   - two records re-pointed.
+
+Evidence: `cmp` shows the text, the built file and `clean-10` are identical. build-10.log: exit 0, `"unclean": []`, 58 declarations, 45 theorems, `"with_axioms": {}`. My own count is 58 and 45 too. I ran no Lean.
+
+**(2) Every declaration**
+
+Section variables:
+- **Falling:** `{S : Type u} {Φ} {V₀} (mono) (start : ∀ y, Φ V₀ y → V₀ y)`, with `include mono start`.
+- **Rising:** `{Ψ} {W₀} (mono) (start : ∀ y, W₀ y → Ψ W₀ y) {all} (every)`, from l. 172.
+- **Regions:** `(R : «际» S) (Q)`; from l. 247, `{R} {W₀} {all}`.
+
+"H" means HOLDS AS STATED (from reading the term).
+
+| # | Declaration | Premises | Mark | Kind | Docstring |
+|---|---|---|---|---|---|
+| 1 | remove_mem | `{X : Type u}`, `x ∈ l` | H | OWN (list) | EXACT, but "state" for a member of any type |
+| 2 | iter | def | – | – | unclear: "for each count"; never says "iterate" |
+| 3 | MonotoneStep | abbrev | – | – | EXACT, unclear |
+| 4 | iter_pred | mono, start | H | OTHER (induction on n: the chain falls) | EXACT |
+| 5 | iter_within | mono, start | H | OTHER (induction on n) | EXACT |
+| 6 | extend_at_places | mono, start, n, left, len, cover | H | OWN (list; the law) | EXACT |
+| 7 | iter_persists | mono, start, within | H | CALL extend_at_places | EXACT ("kept" = in the iterate) |
+| 8 | iter_postfixed | mono, start, within | H | CALL iter_persists | EXACT |
+| 9 | postfixed_in_iter | mono (omit start), inside, post | H | OTHER (induction on n) | EXACT |
+| 10 | iter_iff_all | mono, start, within | H | CALL iter_postfixed, postfixed_in_iter | EXACT |
+| 11 | iter_largest | mono, start, within | H | CALL same | EXACT |
+| 12 | iter_shift | mono (omit start), `first : V₀ ↔ Φ U` | H | OTHER (induction on n: shifts the start) | EXACT, wordy |
+| 13 | iter_persists_from_all | mono (omit start), every, first, `len : all.length = n+1` | H | CALL iter_persists at start True, via iter_shift twice | EXACT; "one monotone step from all states" unclear |
+| 14 | not_iter_of_not_succ | mono, start, within | H | CALL iter_persists (contrapositive) | EXACT |
+| 15 | rise | abbrev, = iter | – | – | unclear ("read upward"); second name; name clash |
+| 16 | singleton_rise_needs_em | edge (every monotone Ψ on Unit), p | H | OTHER (a construction) | EXACT; "level" unclear |
+| 17 | dual | def | – | – | **WRONG** ("excludes") |
+| 18 | dual_mono | mono | H | OTHER | EXACT |
+| 19 | iter_dual_iff | mono, every | H | BRIDGE (dual iterate ↔ complement of the rising iterate; `not_not_all` at each step) | EXACT |
+| 20 | rise_not_not | mono, start, every | H | CALL iter_persists at `dual Ψ` via iter_dual_iff | SAYS MORE ("reaching" for a general step) |
+| 21 | rise_of_stable | mono, start, every, stable | H | CALL rise_not_not | EXACT |
+| 22 | regionStep | def (R, Q) | – | – | EXACT; never names itself "region step" |
+| 23 | region_mono | R, Q | H | OTHER | EXACT |
+| 24 | held_iff_iter | R, Q, `within : Q x → x ∈ all` | H | CALL iter_largest, joined to «所闭之承最大» | EXACT (start Q not named) |
+| 25 | region_first | R, Q | H | OTHER (unfolding) | EXACT |
+| 26 | held_iff_iter_pred_length | R, Q, every, len | H | CALL held_iff_iter, iter_pred, iter_persists_from_all | EXACT |
+| 27 | reachStep | def | – | – | EXACT |
+| 28 | reach_imp_iff_iter | {R} {W₀} (G) | H | BRIDGE (to the module's own reach iterate, not a package notion) | EXACT |
+| 29 | reach_rise_shortens | every | H | CALL iter_persists via the bridge | EXACT |
+| 30 | reach_within_length | `within : (W₀ x → reaches N y) → x ∈ all` | H | CALL iter_iff_all via the bridge | EXACT; hard to read; "horizon" |
+| 31 | reach_rise_shortens_pred_length | every, len | H | CALL iter_persists_from_all via the bridge | EXACT |
+| 32 | kernel_iff_iter | {P} {guard}, guard cover | H | CALL held_iff_iter with kernel_iff_held | EXACT (start not named) |
+| 33 | kernel_iff_iter_pred_length | every, len | H | CALL held_iff_iter_pred_length | EXACT |
+| 34 | iter_region_iff_lasts | {f} {adm} {guard} | H | BRIDGE (to `Lasts`) | SAYS LESS: start (the guard) not named |
+| 35 | kernel_iff_lasts_length | guard cover | H | CALL kernel_iff_iter + bridge | EXACT |
+| 36 | courseStep | def (P) | – | – | EXACT |
+| 37 | course_mono | P | H | OTHER | EXACT |
+| 38 | iter_iff_continues | {P} | H | BRIDGE (to `Continues`) | EXACT |
+| 39 | continues_persists_case | every, continues | H | CALL iter_persists via the bridge | EXACT |
+| 40 | continues_same | – | H (rfl: the two statements are definitionally equal) | OTHER, scratch check | not to land |
+| 41 | choiceStep | def, any universes | – | – | EXACT |
+| 42 | choice_mono | P, guard | H | OTHER | EXACT |
+| 43 | iter_iff_viable | `{S A : Type}` | H | BRIDGE (to `Viable`) | EXACT |
+| 44 | viable_persists | guard cover, kept | H | CALL iter_persists via the bridge | EXACT |
+| 45 | viable_closed | guard cover | H | CALL viable_persists | EXACT |
+| 46 | viable_iff_every_horizon | guard cover | H | CALL viable_closed + package closed_viable | EXACT |
+| 47 | viable_iff_closed | guard cover | H | same | EXACT |
+| 48 | loseStep | def | – | – | EXACT |
+| 49 | not_viable_of_loss | `{S A : Type}` | H | OTHER (induction on n, loss → ¬Viable) | EXACT; "losing iterate from guard failure" unclear |
+| 50 | lose_edge_decides_negations | edge (∀ P on Bool/Unit, ∀ guard), q | H | OTHER (a construction) | SAYS MORE: omits "for every guard" |
+| 51 | lose_edge_decides | edge (∀ P on Option Bool/Unit, guard True), q | H | OTHER | EXACT; "positive loss", "level" unclear |
+| 52–55 | InClosedFamily, coveredBy, codeGuard, readingStep | defs | – | – | EXACT |
+| 56 | reading_mono | implicit | H | OTHER | EXACT |
+| 57 | iter_iff_kept | updates | H | BRIDGE (to `KeptFor`) | SAYS LESS: "the iterate" of which step, from what |
+| 58 | coded_kept_iff_closed | within, updates | H | CALL iter_postfixed via iter_iff_kept; backward direction is keptFor_of_closed | EXACT |
+
+Corrected sentences:
+- **iter:** "The iterates of a step from a start: iterate 0 is the start, and iterate n + 1 is the step applied to iterate n."
+- **MonotoneStep:** "A step on predicates is monotone: where one predicate lies inside another, the step of the first lies inside the step of the second."
+- **remove_mem:** "If a member is on a list, some list one shorter holds the rest: each member of the first list is that member or is on the shorter list."
+- **iter_persists:** "…a state in the iterate at the list's length is in the next iterate." Say the same in place of "kept" in iter_iff_all, iter_persists_from_all and not_iter_of_not_succ.
+- **iter_persists_from_all:** "For a monotone step whose start agrees at each state with the step applied to the predicate true everywhere, where a list of length n + 1 holds every state, a state in iterate n is in iterate n + 1."
+- **singleton_rise_needs_em:** "If, for every monotone step on a one-state type, the state's being in iterate 2 from the empty predicate implies its being in iterate 1, every proposition is decided."
+- **dual:** "The dual of a step holds at a state exactly where the step, applied to the complement of the given predicate, does not."
+- **rise_not_not:** "If the start of a monotone step lies inside the step of the start and a list holds every state, a state in the iterate one past the list's length cannot be refuted to be in the iterate at the list's length."
+- **regionStep:** "The region step for R and Q: a state is kept where Q holds there and every R-successor is in the given predicate."
+- **held_iff_iter, kernel_iff_iter:** add "the iterate from Q" and "the iterate from the guard".
+- **iter_region_iff_lasts:** "The n-th iterate, from the guard, of the region step at a disturbed law's steps holds exactly at the states that keep the guard for n steps under every admissible disturbance."
+- **not_viable_of_loss:** "For every n, a state in the n-th iterate of the losing step, from the states where the guard fails, is not viable for n steps."
+- **lose_edge_decides_negations:** "If, for every process on two states with one move and every guard, the state false's being in iterate 3 of the losing step from guard failure implies its being in iterate 2, every negation is decided."
+- **lose_edge_decides:** "If, for every process on three states with one move and the guard true everywhere, the state none's being in iterate 4 of the losing step from the empty predicate implies its being in iterate 3, every proposition is decided."
+- **iter_iff_kept:** "Suppose that after each usable move from the class of a guarded code, the class seen at each observation is named exactly by some code. Then for every n, a code is in the n-th iterate of the reading step from the guarded codes exactly when its class is kept for n steps."
+- **reach_within_length:** see Q4.
+
+**(3) MUST before landing**
+
+1. **The name `rise`.** `Becoming.rise : (Nat → Nat) → Nat → Nat` is at Change.lean l. 159 (namespace opened at l. 74, no inner namespace before it). Drop the abbrev and write `iter` in Rising and Loss. Not built; it is only an abbrev, so the proofs should stand.
+2. **`dual`'s docstring** is wrong; the corrected sentence is above.
+3. **`iter_iff_kept` and `lose_edge_decides_negations` docstrings**, corrected as above. They land as written.
+4. **`reach_within_length` should land with `every`** (Q4).
+5. **CommonResponse's module docstring** says "It adds three definitions … and changes no definition of an earlier module". With `regionStep` and `reachStep` that becomes false.
+6. **The new core module must go into the checker and the root.**
+   - Add `Becoming.PredicateIteration` to `CORE` in check_becoming.py. Otherwise `assert sorted(core_closure) == sorted(PURE)` fails.
+   - Add it to the root `Becoming.lean` imports and to the README.md and README.zh.md tables.
+7. **`Parting.continues_persists`.**
+   - Its docstring ("the course repeats a configuration and can go round") would describe a proof it no longer has.
+   - Retire `continues_cycle`.
+   - In record identification-where-runs-part.json, remove `Becoming.Parting.continues_cycle` from its two declaration lists (ll. 101 and 440).
+   - The record's claim sentence (l. 88: "the course repeats a configuration and can go round") then rests on `Onward.returning_of_continues`, not on Parting.
+8. **Record identification-where-bounded.json l. 708** binds `Becoming.remove_mem` to Refinement.lean. Move it to the Prelude.lean binding (its entry at l. 562).
+
+**LESSER**
+
+- **Three reach theorems where one would do.** With `every`, `reach_rise_shortens` is `reach_within_length` at n := N+1. One theorem would carry the whole of (b): `every`, `len : all.length = n+1` ⊢ `∀ m, reaches m y → reaches n y`, as `reach_rise_shortens_pred_length every len (len ▸ reach_within_length (fun x _ => every x) m r)` (not built).
+- **Reach is joined to no package notion.** This form, two lines from what is here, would join it to the closure (not built): `(held_iff_iter_pred_length R _ every len).mpr ((reach_imp_iff_iter (reaches n y) n y).mp id)`, which says `∀ t, «所闭» R y t → W₀ t → reaches n y`. The earlier reader's join to `Junctures.reach_within_listed` (l. 328) is not made.
+- **Joins the package could take now.**
+  - `Parting.continues_any` (l. 429) is its own induction on n; `iter_iff_all` through `iter_iff_continues` gives it in one line.
+  - `GuardHorizon.closed_viable` is `postfixed_in_iter` at `choiceStep` through `iter_iff_viable`.
+- **Said twice.** `not_iter_of_not_succ` is a one-line contrapositive of `iter_persists`.
+- **Names.** "edge" is in declaration names and the premise `edge` (`lose_edge_decides*`), though no docstring uses it.
+- **Apostrophes.** Curly apostrophes at ll. 223 and 557; the package uses ASCII.
+- **Variable lines on landing.**
+  - Parting's section Continuing has `{P}` implicit, but `courseStep` and `course_mono` need P explicit, so land Courses as its own section before l. 419.
+  - GuardHorizon declares no `universe u v` and has explicit `(P) (guard)` at l. 79, so Choices also needs its own section.
+- **Lists in Prelude.**
+  - Prelude will hold both `mem_remove` and `remove_mem`; its docstring line should tell them apart.
+  - Refinement's own docstring for `remove_mem` ("Taking one occurrence…") says more than its statement. That is the earlier reader's mark on `remove_place`.
+- **Module docstrings.** PredicateIteration needs a module docstring listing its contents; l. 9 is one line.
+
+**(4) The nine repairs**
+
+- **R1 done** (ll. 252–267). `reach_rise_shortens` is one call of `iter_persists` through `reach_imp_iff_iter`. The bridge is right both ways with nothing decided: forward uses only `.inl` and `.inr`; backward eliminates the disjunction in hand. `reach_shorten_at_places` and `reach_pad` are gone, and the "any height" form is `reach_within_length`.
+- **R2 done** (ll. 127–141, 232–241, 279–282, 300–303).
+  - `first` is needed in both directions (argued, not built). Without V₀ ⊆ Φ⊤: S = Unit, Φ = `regionStep R False`, V₀ = ⊤ fails at n = 0. Without Φ⊤ ⊆ V₀: Bool with false ↔ true, Q = ⊤, V₀ = {true}, n = 1, fails at false.
+  - `len` is used rightly: `len ▸` turns `all.length` into `n + 1` on the result of `iter_persists` at start ⊤.
+  - The three instances (region, kernel, reach) are at n where N = n + 1, and true. That none is right sooner is the breaker's program result, not Lean.
+- **R3 done.** The four declarations are gone (ll. 307–330).
+- **R4 done** (ll. 538–553). `updates` is applied only at l. 551, with h in hand. `iter_iff_kept` holds for every code: at level 0 both sides are `∀ s, decode c s → guard s` (`Iff.rfl`); at the successor step either side supplies h.
+- **R5 done.** `no_closed_of_not_viable` and the two instances are gone, `not_iter_of_not_succ` is at l. 143, and the comment at l. 362 marks `continues_same`.
+- **R6 done** (ll. 428–436). The levels match `GuardHorizon.Viable`: level 0 is ¬guard against guard. A configuration with no enabled move satisfies the `∀ a` clause vacuously, so it is lost at level 1, and `Viable 1` asks for an enabled move.
+- **R7 done as the brief laid it out**, but Loss needs `rise` (MUST 1).
+- **R8 done.** Statement and body are identical to Refinement ll. 63–76 (diffed); only the docstring differs.
+- **R9 done for names.** `within` now names only list covers. Docstrings: no "edge" or "law" in any docstring, and none speaks of the proof; the unclear ones are in (2).
+
+**(5) Questions 4 to 7**
+
+**Q4.** Write G := `reaches N y`. The premise gives two things: every state outside the target is listed, and if G holds then every state is listed. The conclusion `∀ n, reaches n y → G` says nothing when G holds. So a user who does not already know whether G holds, the only case where the theorem says anything, can meet the premise only with `fun x _ => every x`, or by also listing the target. In effect it is `every`. Its one honest weaker use is when ¬G is already known: then a list of the states outside the target suffices. That is better stated as itself (not built): `(outside : ∀ x, ¬ W₀ x → x ∈ all) (short : ¬ reaches N y) : ∀ n, ¬ reaches n y := fun n r => short (reach_within_length (fun x h => outside x (fun w => short (h w))) n r)`. Land the theorem with `every`, and add this corollary if wanted.
+
+**Q5. Homes.**
+- **No cycles, no core module importing an application.**
+  - Prelude (`mem_cons_cases` l. 509): ok.
+  - PredicateIteration needs Prelude only (`remove_mem` after the move, `nil_of_length_zero` l. 1026).
+  - CommonResponse adds PredicateIteration; its closure is four modules, so no cycle. Regions must come after «所闭之承最大» (l. 142).
+  - Viability: after l. 65.
+  - Lasting: after `Lasts`.
+  - Parting: before l. 419.
+  - GuardHorizon (the one application): after l. 112.
+  - Keeping: after l. 311.
+- **The rising module.**
+  - GuardHorizon's import closure (15 modules) has no Decidedness. Using `rise` would make it import RisingIteration and so Decidedness's 25 modules. That is allowed, but writing `iter` avoids it and the name clash.
+  - No new module is needed: the six rising declarations fit in Decidedness with one added `import Becoming.PredicateIteration`. Decidedness's closure contains neither CommonResponse nor anything importing PredicateIteration, so there is no cycle, and its theme is decidedness stated where it is needed.
+  - They cannot go in PredicateIteration while that module imports only Prelude, since they need `Decided`. Making PredicateIteration import Decidedness closes no cycle either, but would make CommonResponse pull in Decidedness's 25 modules.
+
+**Q6. What else changes in the package.**
+- **`Parting.continues_persists`.**
+  - Keep its statement and name: `continues_any`, l. 485 and the record cite it.
+  - Replace the body with the term at ll. 359–360.
+  - New docstring: "**Where a list holds every configuration, a course as long as the list goes on.** From where a course of N steps starts, some move leads to where another course of N steps starts. No decision is assumed."
+- **Retiring `continues_cycle`.**
+  - Its only use is l. 426.
+  - Keep `path_of_continues`: Onward.lean l. 136 uses it.
+  - Generated files to regenerate: the record .md, lean-index.json, shared-laws.json, lean-declarations part 5, the verification JSON.
+  - Study files that cite it (BECOMING-RENEWAL-READING.zh.md l. 9412, mirror/150.zh.md, THEOREM-CONNECTIVITY.json) are frozen history.
+  - No record cites Parting line numbers (grepped).
+- **`remove_mem`.** Its only uses are inside Refinement (ll. 70, 83). Its full name `Becoming.remove_mem` does not change.
+- **Module docstrings.** Every home's docstring lists its contents, so each needs a line: Prelude, CommonResponse (plus the count, MUST 5), Viability, Lasting, Parting, GuardHorizon, Keeping, and Decidedness if the rising part goes there.
+
+**Q7. The three tellings.**
+
+**(a) EXACT.**
+- "Kept for every number of steps" is `iter_iff_all`; "the largest class inside the start that the step preserves" is `iter_largest`.
+- Premises: `mono`, `start`, `within`.
+
+**(b) Partly carried.**
+- "A case, read through what reaching would give" is carried by `reach_imp_iff_iter` and the three calls.
+- "Holds every configuration" is `every`.
+- "At all" is **not carried**. The Lean has "within any number n of steps" (`reach_within_length`), where "reaching within n steps" is the module's own iterate. Nothing ties it to reaching along R's closure; the closure form in LESSER would.
+- "One step fewer than the list is long" needs two declarations chained: `reach_within_length` with `fun x _ => every x`, then `reach_rise_shortens_pred_length` with `len : all.length = n + 1`. The list must be non-empty. No one declaration states it; the combined theorem in LESSER would.
+
+**(c) First two sentences carried; the last over-reads.**
+- Sentence one is `loseStep` and `not_viable_of_loss`, for processes at `Type`.
+- Sentence two is `lose_edge_decides`. Its hypothesis is needed only on three configurations with one move, the guard true everywhere, at `none`. "Refutes nothing" is right: it is an implication. That the bound holds classically is the breaker's program result.
+- "For the losing side worded otherwise it is not known" over-reads. Worded as failing viability, it comes down with nothing decided: `not_iter_of_not_succ` at `choiceStep` through `iter_iff_viable`, or the contrapositive of `viable_iff_every_horizon`. On two configurations with every guard, `lose_edge_decides_negations` decides negations.
+- Plainer: "Worded as failing viability, it comes down with nothing decided; on two configurations with any guard, the same proof would decide every negation."
+
+**(6) What I did not read**
+- Builds 1–9 and their logs.
+- The frozen hash, cx-output, and the `sweep/` and `break/` folders.
+- The audit's method.
+- The package beyond: Prelude ll. 1–60, 680–727, 1020–1030; Refinement ll. 1–80; CommonResponse ll. 1–170; GrammarLaws ll. 100–135 and 1195–1235; Viability ll. 1–75; Lasting ll. 1–110 and 934; Parting ll. 1–60 and 380–445; Onward ll. 1–70 and 120–175; GuardHorizon ll. 1–125; Keeping ll. 60–100 and 260–330; Decidedness ll. 1–60 and 95–120; Junctures ll. 300–335; Change l. 159; and greps.
+- check_becoming.py beyond ll. 95–135, 214, 4150–4200 and 4940–5000.
+- DIRECTION.md and ONE-PAGE.md.
+
+All sketches above are unbuilt. "Not found" means not found in what I read.

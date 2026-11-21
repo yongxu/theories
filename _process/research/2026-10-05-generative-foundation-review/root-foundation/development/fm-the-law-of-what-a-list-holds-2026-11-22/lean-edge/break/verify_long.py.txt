@@ -1,0 +1,15 @@
+# AI-written (Claude Fable), 22 November 2026. The hill-climb's 3-configuration, 3-move instance by the literal model.
+import json
+from literal import *
+steps = [[0, 0, 2], [0, 1, 0], [0, 1, 1], [1, 1, 0], [1, 1, 2], [1, 2, 0], [1, 2, 1], [2, 0, 1], [2, 2, 0], [2, 2, 1]]
+P = Process(range(3), range(3), {tuple(x) for x in steps})
+sense = {(s, a, t): 0 for s in range(3) for a in range(3) for t in range(3)}
+allowed = {(s, a): True for s in range(3) for a in range(3)}
+k = kept_fn(P, sense, [0], {0, 1, 2}, allowed)
+rows = []
+for B in all_classes(range(3)):
+    f = next((n for n in range(20) if not k(n, B)), None)
+    codes = update_closure(P, sense, [0], allowed, B)
+    rows.append(dict(cls=sorted(B), first_horizon_not_kept=f, codes_by_closure=len(codes),
+                     kept_for_3_steps=k(3, B), kept_for_8=k(8, B)))
+print(json.dumps(rows, indent=0))

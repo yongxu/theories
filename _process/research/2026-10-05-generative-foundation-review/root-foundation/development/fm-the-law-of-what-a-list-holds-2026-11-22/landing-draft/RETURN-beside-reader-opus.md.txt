@@ -1,0 +1,110 @@
+**(1) Verdict**
+
+The core run may start only after the two replacements in (2) are made in `Becoming.lean` and `check_becoming.py`. As they stand, they should not be bound.
+
+The strongest thing against them: the PredicateIteration text says the iterate at the list's length "is the iterate at every length". That is WRONG. `Iteration.iter_iff_all` says a state is in it exactly where it is in every iterate, and iterate 0, the start, is in general larger. The same phrase is in the README row and in regions.json.
+
+Second: the bullet's last law drops the premise that the step is monotone (`iter_within_length` takes `mono`). The RisingIteration bullet leaves the same premise implicit.
+
+Everything else beside the Lean is EXACT or says less. The `CORE` change and the scope literals are in form, and `check_becoming.py` parses.
+
+**(2) MUST before the core run**
+
+A. `Becoming.lean`, the PredicateIteration and RisingIteration bullets (lines 1139–1157). Replace from "after the step `Φ`…" to the end of the RisingIteration bullet with the text below. Every line is at most 99 characters, measured in characters.
+```
+  after the step `Φ` has been applied `n` times. For a step that preserves inclusion and whose
+  value at the start lies inside the start, where a list holds every state of the start, the
+  iterate at the list's length lies inside the next (`Iteration.iter_persists`), holds exactly
+  what is in every iterate (`Iteration.iter_iff_all`), and is the largest class inside the start
+  that lies inside its own step (`Iteration.iter_largest`). For a step that preserves inclusion
+  and whose start lies inside its own first step, let G be that a state y is in the iterate at a
+  list's length: if the step commutes with implication to G (`Iteration.CommutesWithImplication`)
+  and the list holds every state at which membership in the start implies G, then y in any
+  iterate is in the iterate at the list's length (`Iteration.iter_within_length`). It imports only
+  `Becoming.Prelude` and holds two lemmas on lists (`remove_mem`, `gather_listed`). The kinds of
+  keeping, likeness to depth and reach along a relation are stated as cases in the modules of
+  those notions.
+* `Becoming.RisingIteration` (L1): what follows for every monotone step where every state is
+  listed, and what a bound for every step would decide. Where a list holds every state, every
+  monotone step commutes with implication to falsity (`Iteration.commutes_false`); so for a
+  monotone step whose start lies inside its own first step, a state in the iterate one past the
+  list's length cannot be refuted to be in the iterate at its length (`Iteration.rise_not_not`),
+  and is in it where that follows from its double negation (`Iteration.rise_of_stable`). If, for
+  every monotone step on a one-state type, being in iterate 2 from the empty predicate implied
+  being in iterate 1, every proposition would be decided (`Iteration.singleton_rise_needs_em`).
+```
+
+B. `check_becoming.py`, the two scope segments. Replace them with:
+```
+    "PredicateIteration: for a step on predicates that preserves inclusion and whose value at the start "
+    "lies inside the start, where a list holds every state of the start, the iterate at the list's length "
+    "lies inside the next, holds exactly what is in every iterate, and is the largest class inside the start "
+    "that lies inside its own step; for a step that preserves inclusion and whose start lies inside its own "
+    "first step, with G the proposition that a state y is in the iterate at a list's length: if the step "
+    "commutes with implication to G and the list holds every state at which membership in the start "
+    "implies G, then y in any iterate is in the iterate at the list's length. "
+    "RisingIteration: where a list holds every state, every monotone step commutes with implication to "
+    "falsity, so for a monotone step whose start lies inside its own first step a state in the iterate one "
+    "past the list's length cannot be refuted to be in the iterate at its length, and is in it where that "
+    "follows from its double negation; if for every monotone step on a one-state type being in iterate 2 "
+    "from the empty predicate implied being in iterate 1, every proposition would be decided. "
+```
+
+Checked and EXACT in the root:
+- The ReachableRanges sentence: `trace_within_pred_length` goes through `closure_iff_reach_within` (CommonResponse) to `iter_within_pred_length`.
+- The Likeness sentence: `alike_at_pairs` and `alike_iff_alikeTo_pairs`, with no decision premise.
+- "imports only `Becoming.Prelude`".
+- "cases in the modules of those notions": Viability, Lasting, KeepableStep, Keeping, Likeness, CommonResponse and ReachableRanges all use `iter`.
+- Every backticked name exists in full; the bullets are in their neighbours' form.
+
+In `check_becoming.py`, the two names are only in `CORE`, the literals end with a space, and `ast.parse` passes.
+
+**(3) MUST before the records are written** (and the beside files that are not bound)
+
+- **README.md, PredicateIteration row.** "lies inside the next, is the iterate at every length," becomes "lies inside the next, holds exactly what is in every iterate,". "for a step whose start lies inside its own first step" becomes "for a step that preserves inclusion and whose start lies inside its own first step".
+- **README.md, RisingIteration row.** "so for a step whose start" becomes "so for a monotone step whose start".
+- **regions.json, the PredicateIteration note.** "the iterate at the list's length is every iterate" becomes "the iterate at the list's length holds what every iterate holds".
+- **Law 2, SAYS LESS: no monotone premise.**
+  - EN: "For a monotone step whose start is the step applied to the class of everything, where a list of length n + 1 holds every state, a state in iterate n is in iterate n + 1."
+  - ZH: "单调之步的起始类即该步作用于全体之类，且长为 n + 1 的列表容纳每个状态时：在第 n 迭代中的状态也在第 n + 1 迭代中。"
+- **Law 7, SAYS MORE.** "a state in any iterate is in the iterate at the list's length" is claimed for any G that commutes. `iter_within_length` holds only where G is that y is in the iterate at the list's length.
+  - EN (415 characters): "For a monotone step whose start lies inside its own step and a proposition G: the step commutes with G when, for every class W, a state in the step of the states at which 'in W gives G' gives G has G wherever being in the step of W gives G. Where it does and a list holds every state, if the iterate at the list's length gives G so does the next; and where G is that y is in that iterate, y in any iterate is in it."
+  - ZH: "对上升之链（单调之步，起始类在其自身之步内）与命题 G：若对每一类 W，凡在"在 W 中则 G"可推出 G 的那些状态之步中的状态，只要其在 W 之步中可推出 G，便有 G，称该步与 G 可交换。可交换且一列表容纳每个状态时：列表长度处之迭代给出 G，则下一迭代亦然；G 为 y 在该迭代中时，y 在任一迭代中即在该迭代中。"
+- **Law 9, ZH WRONG.** "不可被否证不在…中" reads as the opposite of ¬¬. Replace with: "一列表容纳每个状态时，每个单调之步与假可交换：上升之链中，在超过列表长度一步之迭代中的状态，说它不在列表长度处之迭代中则矛盾；凡此可由其双重否定推出之处，它即在其中。若此对单状态类型上自空起始的每个单调之步径直成立，则每个命题皆可判定。" Add "from the empty start" to the English: "…on a one-state type, from the empty start, would decide every proposition."
+- **Hypotheses, SAYS LESS.** The list of law 12, the pairs a class relates, is missing.
+  - EN: "No axiom. Each statement names its list: the members of the start, the configurations within the guard, the codes of classes within it, the pairs a class relates, every configuration, or the configurations and the moves. That an actual situation has such a list is supplied with each application."
+  - ZH: "不加公理。每条陈述指明其列表：起始类的成员、守卫之内的构形、其类在守卫之内的码、一类所关联的对、每个构形，或构形与动。实际情形有这样的列表，随每个应用给定。"
+- **does_not_show 3, WRONG.** "reached along a run": `guarded_not_keepsWidening` is about what is reachable within k moves from each configuration of a run.
+  - EN: "That one way of selecting is placed against another; the statement on widening is of the configurations within a guard reachable within a fixed number of moves from each configuration of a run."
+  - ZH: "把一种选择方式与另一种相互安放；关于变宽的陈述说的是自一次运行的每个构形起、在固定步数内可达的守卫之内的构形。"
+- **does_not_show 4, WRONG for this landing.** I found no built instance of `readingStep`, `iter_iff_kept` or `coded_kept_iff_closed` in what I read: those names occur only in Keeping.lean and outside their own definitions they are not used. An earlier reader of the draft found the same.
+  - EN: "That the codes of a reading are the classes actually reached, or that every class seen has a code: both are supplied with each application, and no instance of the reading law is built here."
+  - ZH: "读取之码即实际所达之类，或所见每类皆有码：二者皆随每个应用给定，此处未构造读取之律的实例。"
+
+EXACT against their declarations: laws 1, 3 (it carries "the kernel of every process"), 4, 5, 6 (with the premise that every class seen has a code), 8, 10 ("one above" the number of listed configurations, at `all.length + 1`), 11, 13 and 14, and the statement field (it says no more than the laws). Their Chinese says the same.
+
+In records3, all EXACT against the Lean as applied:
+- Law 9: `continues_persists` and `continues_any`.
+- l5: `AlikeTo.decided`, `apart_of_not_alikeTo`, `alike_at_pairs`, `bisimulation`.
+- l6: `Alike.decided`, `alike_iff_alikeTo` now taking only `∃ l, ∀ s, s ∈ l` for each frame, and `alike_iff_alikeTo_pairs` taking only `all` and `all'`.
+- The three history notes: the four premises dropped, `continues_cycle` deleted, `remove_mem` moved unchanged into PredicateIteration and imported by Refinement, and the statements of `closed_viable` and `kept_set` unchanged.
+
+**(4) LESSER**
+
+- **Law 12.** "told apart at no stage": `inquiry_iff_all` gives passing at every stage, which is stronger constructively than "told apart at no stage". Better: "a pair that passes inquiry at the list's length passes it at every stage".
+- **Law 3.** It lists `held_iff_iter_pred_length` and `kernel_iff_iter_pred_length` but does not tell them (says less).
+- **does_not_show 5.** "by enumeration on small cases" is not in the Lean, and I did not check it. That the levels come down classically on finitely many listed configurations is a reading.
+- **tests-fix-likeness history.** "stops_decreasing is called by no proof now": it still calls itself. "by no other proof" is exact.
+- **The new record's history and validation_scope.** The narrative of the process, "Astra 6.2 implementer", "by program on small cases" and "two other sessions" were not checked.
+- **"the largest class … that the step preserves".** "Preserves" means K ⊆ Φ K, as the Lean docstrings use it. It is readable the other way.
+
+**(5) What I did not read**
+
+- The unchanged parts of the thirteen changed modules, beyond the sections named.
+- The Lean of Tolerance, beyond its diff.
+- The rest of `check_becoming.py`, beyond `CORE`, how `CORE` is used, and the scope segment. In particular, whether the checker asserts anything about the scope text or the order of `CORE`.
+- The module docstrings' own tellings, except where needed.
+- The other records that the script re-points by hash only.
+- `cx-output*.txt`, `REPORT*.md` and the build logs.
+
+I ran no Lean and changed nothing.

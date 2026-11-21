@@ -1,0 +1,95 @@
+# Brief: one scratch Lean module, the edge said once for every kind of keeping
+
+*AI-written (Claude Fable, board row FM), 22 November 2026, frozen before the implementer ran (hash in `FROZEN-LEAN-KEPT-EDGE.sha256.txt`). Scratch only: outside the package, in no git object. You are the implementer. A clean failure, told with what blocked it, is a result.*
+
+## What we are doing
+
+`/Users/ren/theories` draws a map of how anything forms, persists, changes and ends, with its core proved in Lean 4 with **no axioms** (every declaration has an empty axiom report). Read `AGENTS.md` at the repository root (one page). Its fourth rule: each thing said once, and joined; prefer the proof that makes an old result a case of another.
+
+The package is `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/`. It keeps a guard in three ways, each defined by recursion on the number of steps:
+
+- `GuardHorizon.Viable P guard n s` — by a choice against every outcome: the guard, and some enabled move all of whose outcomes are kept one step fewer.
+- `Lasting.Continues P n s` — along some course: some move and outcome from which a course one step shorter starts (no guard).
+- `Lasting.Lasts f adm guard n s` — whatever happens: the guard, and every admissible disturbance leads to a configuration that lasts one step fewer.
+
+An hour ago a scratch module, `/Users/ren/tmp/fm/build3/Becoming/ScratchViableEdge.lean` (read it whole first; it built clean with no axiom), proved for the first of these: where a list holds every configuration, what is kept for as many steps as the list is long is kept one step more, from `every` alone, by a short induction on the places of the list not yet spent (`extend_at_places`). It then got `Parting.continues_persists` (Parting.lean l. 419, the same law for some course) as a case, by building a process whose moves are pairs, and a form through a reading for finitely coded classes (`coded_kept_iff_closed`).
+
+A reader of that module observed that `extend_at_places` uses of `Horizon` one thing only: **that being kept one step more is a monotone function of what is kept so far.** If so, the law is not about processes at all. It is about a monotone step on predicates over a listed type, and each kind of keeping is a case by naming its step, with no process built for it. That is your task: say the law once, and get every kind of keeping as a case.
+
+## The module
+
+Write `/Users/ren/tmp/fm/build4/Becoming/ScratchKeptEdge.lean`, module `Becoming.ScratchKeptEdge`. The tree `/Users/ren/tmp/fm/build4/Becoming/` already holds copies of `ScratchComparison.lean` and `ScratchViableEdge.lean`, unchanged, which you may import (for `Horizon`, `horizon_iff_viable`, `codeProcess`, `code_horizon_of_kept`, `InClosedFamily`, and to compare statements).
+
+**Build only with** `/Users/ren/tmp/fm/run-build4.sh <n>` (n = 1, 2, 3, …). It waits until no other Lean run is alive on this shared machine, builds your module through the checker's scratch builder (seconds, cached), audits the axioms of every declaration, and prints the end of the log. Clean means `exit 0`, `"unclean": []` and `"with_axioms": {}`. Run nothing else of Lean: no `lake`, no `check_becoming.py` (never with `--help`: it is a real run), no gate, no tests. Up to about 40 builds.
+
+**Write the proofs as terms where you can**, in the package's style (look at `Parting.lean`, `GuardHorizon.lean`, `Lasting.lean`): `match`, anonymous constructors, `fun`, `Eq.subst`; tactic blocks only where a term would be unreadable. This module may be moved into the package.
+
+### Part 1. The law
+
+For a type `S`, an operator `Φ : (S → Prop) → S → Prop`, a start `V₀ : S → Prop`, and
+
+```lean
+def iter (Φ : (S → Prop) → S → Prop) (V₀ : S → Prop) : Nat → S → Prop
+  | 0 => V₀
+  | n + 1 => Φ (iter Φ V₀ n)
+```
+
+prove, with the **weakest** premises you can:
+
+```lean
+theorem iter_persists
+    (mono : ∀ {X Y : S → Prop}, (∀ z, X z → Y z) → ∀ y, Φ X y → Φ Y y)
+    (start : ∀ y, Φ V₀ y → V₀ y)
+    {all : List S} (every : ∀ x, x ∈ all) {y : S} :
+    iter Φ V₀ all.length y → iter Φ V₀ (all.length + 1) y
+```
+
+Say whether `start` is needed, and whether anything beyond `mono`, `start` and `every` is. No decision of equality, nothing listed but the configurations.
+
+Then what follows, each in a line or two:
+- the chain falls: `iter Φ V₀ (n + 1) y → iter Φ V₀ n y`;
+- `iter Φ V₀ all.length y ↔ ∀ n, iter Φ V₀ n y`;
+- `iter Φ V₀ all.length` is a post-fixed point inside `V₀` (`∀ y, iter … all.length y → Φ (iter … all.length) y`), and it is the largest: every `K` with `∀ y, K y → V₀ y` and `∀ y, K y → Φ K y` lies inside it (say which of these need the list and which do not).
+
+### Part 2. Every kind of keeping as a case
+
+Each by naming `Φ` and `V₀`, proving `iter Φ V₀ n` is the package's own predicate (by `rfl` if it is, by a short induction if not), and **one call** of Part 1. No process built for the purpose.
+
+1. **A choice against every outcome.** `Φ X s := guard s ∧ ∃ a, Enabled P s a ∧ ∀ t, P.step s a t → X t`, `V₀ := guard`. Conclude `viable_persists` with the statement it has in `ScratchViableEdge` (check the two statements are the same by `rfl` against that scratch theorem).
+2. **Some course.** `Φ X s := ∃ a t, P.step s a t ∧ X t`, `V₀ := fun _ => True`. Conclude `Parting.continues_persists` with its statement unchanged; `theorem continues_same : @continues_persists_case = @Parting.continues_persists := rfl` (mind the universes). It must not call `continues_persists`, `continues_any`, `unbounded_of_continues`, `continues_cycle`, `path_of_continues`, nor `ScratchViableEdge.pairProcess`.
+3. **Whatever happens.** `Φ X s := guard s ∧ ∀ a, adm a → X (f s a)`, `V₀ := guard`. Conclude a statement the package does not have: with every configuration listed, `Viability.Kernel (Viability.disturbed f adm) guard s ↔ Lasting.Lasts f adm guard all.length s`, through `Lasting.kernel_iff_lasts` (Lasting.lean l. 236). First search the package for it under another name (a `Lasts` at a list's length); say what you searched.
+4. **Through a reading.** `ScratchViableEdge.coded_kept_iff_closed`, with the statement it has there, obtained from Part 1 (directly on classes or codes if a clean `Φ` exists; otherwise through `codeProcess` as it is, and say which).
+5. **The grammar's own region, if it comes out in a few lines.** `Viability.kernel_iff_held` (Viability.lean l. 65) states the kernel as `«承» («逆» («所闭» (Steps P))) guard`: what holds throughout the closure of a relation. For a relation `R : «际» S` and a requirement `Q`, with `Φ X s := Q s ∧ ∀ t, R s t → X t`: on a listed type, is `«承» («逆» («所闭» R)) Q s ↔ iter Φ Q all.length s`? That would put a bound on the grammar's law of the largest closed region (`CommonResponse.lean`, `«所闭之承最大»`, l. 142). Do not spend more than a few builds on it.
+
+For each case report: the lines of the case (statement and proof, with the lemma that identifies `iter` with the package's predicate), and the lines of the most direct proof of the same statement that you know of (for 1, `ScratchViableEdge`'s Part 1; for 2, `continues_cycle` with the body of `continues_persists` in Parting.lean, 21 lines by an earlier count, `path_of_continues` not counted since another module uses it).
+
+### Part 3. The other chain
+
+The law above is of a falling chain: what is kept for more steps. The package's laws of ending within a bound are of a rising chain: what has been reached, or lost, within so many steps (`Junctures.leads_settles`, Junctures.lean l. 256, settles within the number of listed configurations, on a relation that is decided). For a monotone `Ψ` and a start `W₀` with `∀ y, W₀ y → Ψ W₀ y`, with `rise Ψ W₀ 0 = W₀` and `rise Ψ W₀ (n + 1) = Ψ (rise Ψ W₀ n)`: is `rise Ψ W₀ (all.length + 1) y → rise Ψ W₀ all.length y` provable from `every` alone? Try it honestly for a few builds. If it is, prove it. If it is not, say exactly where the argument of Part 1 fails for it, and what least premise repairs it (a decision of what?). Either answer is a result: it says whether the two sides of an edge are one law or two.
+
+## What counts as nothing gained (frozen)
+
+- **H1.** Part 1 needs more than `mono`, `start` and `every`.
+- **H2.** Fewer than two of the old kinds of keeping (cases 1 and 2) come out by one call each with statements unchanged; or a case costs more lines than its direct proof.
+- **H3.** The general law is only the three definitions said again: nothing is proved once that was proved separately before. (The test: cases 1 and 2 both by one call of the same theorem.)
+- **H4.** Case 3's statement is already in the package.
+- **H5.** Any declaration with an axiom.
+- **H6.** A case that puts the law in and takes it out, where the direct induction would be as short. Say for each case which it is; a reader after you will check.
+
+## Traps
+
+- A core lemma can bring in `propext` (`Nat.succ_ne_zero` did, twice on 21 November): prove such facts by `Nat.noConfusion`, by cases, or with the package's own lemmas in `Becoming/Prelude.lean`. `simp`, `omega` and `decide` on propositions with free variables often bring axioms.
+- `GuardHorizon.Viable` lives at `Type` for states and moves; `Lasting` and `Keeping` are universe-polymorphic. State Part 1 at an arbitrary universe.
+- The package's names are partly Chinese with guillemets: copy them from the source.
+- Write only under `/Users/ren/tmp/fm/build4/` and `/Users/ren/theories/tmp/fm/whole/lean-kept-edge/` (your report). Change nothing in the repository or in git. Start no further agents.
+
+## What to return
+
+Your whole report as your final answer, also saved as `/Users/ren/theories/tmp/fm/whole/lean-kept-edge/REPORT.md`:
+
+1. **In five lines**: what built clean, what did not, and your own verdict on H1 to H6.
+2. **Each theorem**: its statement as it stands in the module, whether it built clean, what it calls.
+3. **H1 to H6**, each answered with the evidence (premises; the `rfl` checks; the line counts, case against direct proof; what you searched for case 3).
+4. **Part 3**: proved, or exactly what blocks it and what repairs it.
+5. **What blocked** anything else that did not come out.
+6. **The last build's log** (its JSON), the number of builds, and **what you did not do**.

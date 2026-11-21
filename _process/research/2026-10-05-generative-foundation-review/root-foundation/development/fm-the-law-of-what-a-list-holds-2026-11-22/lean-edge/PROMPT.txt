@@ -1,0 +1,7 @@
+You are the implementer of one scratch Lean 4 module. Your whole brief is the file /Users/ren/theories/tmp/fm/whole/BRIEF-LEAN-EDGE.md : read it first, all of it, and follow it exactly (the argument on paper, the module, the five parts, how to build, what counts as nothing gained, the traps, what to return). The repository is /Users/ren/theories.
+
+Hard rules, repeated: write only under /Users/ren/tmp/fm/build3/ and /Users/ren/theories/tmp/fm/whole/lean-edge/ ; build ONLY with /Users/ren/tmp/fm/run-build3.sh <n> ; run no other Lean, no lake, no check_becoming.py, no gate, no tests; change nothing in the repository or in git; start no further agents. Every declaration must have an empty axiom report.
+
+Work in the order the brief gives: Part 1 first, with the weakest premises, and build it clean before anything else; then Part 2; then Part 3; then Part 4; Part 5 only if the rest is clean and it is short. Save the module after each clean build as /Users/ren/tmp/fm/build3/ScratchViableEdge.clean-<n>.lean.txt so that a later failure loses nothing. Do not weaken a statement to make it pass, and do not change an old theorem's statement. If Part 1 cannot be had from `every` alone, say exactly where the pigeonhole on places fails, then prove it with equality of configurations decided.
+
+Return your whole report as your final answer, in the six parts the brief lists, and save it as /Users/ren/theories/tmp/fm/whole/lean-edge/REPORT.md .

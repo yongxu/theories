@@ -1,0 +1,21 @@
+# After the brief for the law said once was frozen (appended, never overwriting)
+
+*AI-written. `BRIEF-LEAN-KEPT-EDGE.md` is as frozen at 01:20:07 WIB on 22 November 2026; the implementer started at about 01:20 and does not see this file. For reading its report.*
+
+## 22 November, 01:23:55 WIB (clock, read by the command that wrote this): a form with no new definition, from the coordinating session
+
+With no function extensionality in the core, `iter Φ V₀ n` is the package's own predicate only pointwise, so each case needs its small induction to identify the two before the one call. **If those identifications turn out to be most of each case**, the law can be said of any family, with no `iter` and no `Φ` to define:
+
+for `H : Nat → S → Prop` with `lift : ∀ n m, (∀ z, H n z → H m z) → ∀ y, H (n + 1) y → H (m + 1) y`, `down : ∀ y, H 1 y → H 0 y`, and `every`: `H all.length y → H (all.length + 1) y`.
+
+On paper the proof is the same: the chain falls by `down` and `lift`, and the last line of `extend_at_places` is `lift n (n + 1)` applied to the recursion. Then `Viable P guard`, `Lasting.Continues P` and `Lasting.Lasts f adm guard` are each a case by proving `lift` for it (three or four lines) and nothing else, their own recursion being the family; `iter Φ V₀` is one more case, by `mono`. It would put no new definition in the package. Untested. If the `iter` form's cases are already short, it adds nothing and is dropped.
+
+**How I will use it:** when the report is in, count for each case the lines that identify `iter` with the package's predicate against the lines of the call. If the identifications are the larger part, one repair step asks for the family form, with the same cases and the same conditions H1 to H6.
+
+## 22 November, 01:37:02 WIB (clock, read by the command that wrote this): the module built, every case; and the rising chain
+
+*The implementer's account (Astra 6.2, 892 s, 4,369.2k tokens, eleven builds, eight clean), in `lean-kept-edge/REPORT.md`; the module as text beside it (297 lines, 30 theorems, 41 declarations, no axiom by build 11's log). Two readers who took no part were set on it at once (run `wf_b5f0f3a9-226`). I read the report, not the proofs.*
+
+- **The law**: `iter_persists` from `mono`, `start : ∀ y, Φ V₀ y → V₀ y` and `every`; the start premise is needed (a two-point step that swaps two singletons). With it: the chain falls; every post-fixed region inside the start lies in every iterate; with the list, the iterate at its length is the largest such region and is the iterate at every n.
+- **Five cases**, each a named step and one call: `viable_persists` (13 lines against 32); `Parting.continues_persists`, unchanged by `rfl`, with no `pairProcess` (12 against 21); new, `kernel_iff_lasts_length` (13; its direct proof an estimate); `coded_kept_iff_closed`, the earlier statement by `rfl`, proved on codes with no `codeProcess` (31 against 35); new, `held_iff_iter`, a bound on the grammar's largest closed region on a listed carrier (9; its direct proof an estimate). The bridges between `iter` and the package's own predicates are four lines each (ten for the reading), so the family form above is likely not needed; the reader is asked.
+- **The rising chain does not go the same way.** `singleton_rise_needs_em`: a positive rising edge for every monotone step on a one-point type would decide every proposition. What holds: `rise (N+1) y → ¬¬ rise N y` (by the falling law at the dual step), and the positive form exactly where the queried membership is stable. **What is kept settles at the list's length with nothing decided; what has been reached or lost settles there only up to a double negation, or with a decision.**

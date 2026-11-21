@@ -1,0 +1,5 @@
+A follow-up to your landing draft in /Users/ren/tmp/fm/build10/Becoming/ . Two readers who took no part have read it: it built clean, every added statement equals its scratch statement, D1 to D4 hold; and it may not land as it stands. Your whole brief for the one repair is the file /Users/ren/theories/tmp/fm/whole/BRIEF-LANDING-DRAFT-REPAIR.md : read it first, all of it, then the two readers' returns it names, and follow it exactly: eight numbered changes, in the same tree, in place.
+
+Hard rules, repeated: change NOTHING in the repository or in git. Write only under /Users/ren/tmp/fm/build10/ and /Users/ren/theories/tmp/fm/whole/landing-draft/ . Build ONLY with /Users/ren/tmp/fm/run-build10.sh <n> <Module> [<Module> ...] , continuing the numbering from 24; run no other Lean, no lake, no check_becoming.py, no gate, no tests; start no further agents. Every declaration of every module of the draft must have an empty axiom report. End with ONE build call that names all fifteen modules.
+
+Return your whole report as your final answer, in the four parts the brief lists, and save it as /Users/ren/theories/tmp/fm/whole/landing-draft/REPORT-REPAIR.md .

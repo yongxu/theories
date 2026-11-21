@@ -1,0 +1,22 @@
+# AI-written (Claude Fable, reader who took no part), 22 November 2026. Bit-vectors over a whole
+# space of instances: a Python int with one bit per instance, so one bitwise operation evaluates
+# a clause of a Lean definition on every instance at once.
+def space(nbits):
+    size = 1 << nbits
+    M = (1 << size) - 1
+    def var(j):
+        # instances whose index has bit j set
+        return M ^ (M // ((1 << (1 << j)) + 1))
+    return M, var
+
+def popcount(x):
+    return x.bit_count()
+
+def lowest(x):
+    return (x & -x).bit_length() - 1
+
+def subsets(N):
+    return range(1 << N)
+
+def members(mask, N):
+    return [i for i in range(N) if mask >> i & 1]

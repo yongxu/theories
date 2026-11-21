@@ -1,0 +1,11 @@
+(iv) region 1 points: instances (R, Q) 4; «承»(«逆»(«所闭» R)) Q from the definitions = Q throughout what R reaches: 0 differ
+    = iter (regionStep R Q) Q N, N=1..2: 8 compared, 0 differ; at N=0: differ in 0 instances
+    with the step turned the other way (every t with R t s): differ in 0 instances
+(iv) region 2 points: instances (R, Q) 64; «承»(«逆»(«所闭» R)) Q from the definitions = Q throughout what R reaches: 0 differ
+    = iter (regionStep R Q) Q N, N=2..4: 192 compared, 0 differ; at N=1: differ in 0 instances
+    with the step turned the other way (every t with R t s): differ in 16 instances
+(iv) region 3 points: instances (R, Q) 4096; «承»(«逆»(«所闭» R)) Q from the definitions = Q throughout what R reaches: 0 differ
+    = iter (regionStep R Q) Q N, N=3..6: 16384 compared, 0 differ; at N=2: differ in 0 instances
+    with the step turned the other way (every t with R t s): differ in 1536 instances
+seconds 0.1
+python3 cases.py region  0.08s user 0.01s system 55% cpu 0.167 total

@@ -1,0 +1,202 @@
+## 1. Result in five lines
+
+1. Part 1 proves the finite edge from `every` alone, with arbitrary moves, guard and step relation.
+2. Part 2 identifies the viable region at the list length with membership in a closed set and with viability at every horizon.
+3. Part 3 recovers the old course theorem at its original universes. The case takes 17 lines against 28, and the statement check is `rfl`.
+4. Part 4 proves the edge for finitely coded classes. The optional Part 5 is classified below from the filed case, without a new Lean declaration.
+5. E1 was not found. E2–E5 did not trigger. I find no E6 round trip in Parts 1–4. Build 8 audited all 19 declarations with empty axiom reports.
+
+## 2. Theorems and calls
+
+AI-written by Codex. All 16 theorems and three definitions below built clean. The signatures use the module’s section variables. `Horizon` is the universe-polymorphic form of `GuardHorizon.Viable` from `ScratchComparison`. The package declares the reading predicates in namespace `Viability`. [Scratch module](/Users/ren/tmp/fm/build3/Becoming/ScratchViableEdge.lean) · [Saved report](/Users/ren/theories/tmp/fm/whole/lean-edge/REPORT.md)
+
+**Part 1 · The finite law.** The first four theorems allow `S : Type u` and `A : Type v`. The fifth has the package’s `S A : Type`.
+
+```lean
+theorem remove_place {y : S} : ∀ {l : List S}, y ∈ l →
+    ∃ rest : List S, l.length = rest.length + 1 ∧ ∀ z, z ∈ l → z = y ∨ z ∈ rest
+
+theorem horizon_pred : ∀ {n s}, Horizon P guard (n + 1) s → Horizon P guard n s
+
+theorem extend_at_places : ∀ (n : Nat) (left : List S), left.length = n →
+    (∀ z, z ∈ left ∨ Horizon P guard (n + 1) z) →
+    ∀ y, Horizon P guard n y → Horizon P guard (n + 1) y
+
+theorem horizon_persists {all : List S} (every : ∀ x, x ∈ all) {y : S}
+    (kept : Horizon P guard all.length y) :
+    ∃ a, Enabled P y a ∧ ∀ z, P.step y a z → Horizon P guard all.length z
+
+theorem viable_persists {all : List S} (every : ∀ x, x ∈ all) {y : S}
+    (kept : Viable P guard all.length y) :
+    ∃ a, Enabled P y a ∧ ∀ z, P.step y a z → Viable P guard all.length z
+```
+
+| Theorem | What it calls |
+|---|---|
+| `remove_place` | Recursion on membership and `mem_cons_cases` |
+| `horizon_pred` | Recursion on the horizon, keeping the same move |
+| `extend_at_places` | `remove_place`, `horizon_pred`, `nil_of_length_zero`, successor injectivity and recursion on `n` |
+| `horizon_persists` | `extend_at_places` with the full list, then the move from the extra step |
+| `viable_persists` | `horizon_persists` and `horizon_iff_viable` at the start and each outcome |
+
+**Part 2 · Consequences.** Here `{all : List S} {s : S}`.
+
+```lean
+theorem viable_closed (every : ∀ x, x ∈ all) : Closed P guard (Viable P guard all.length)
+
+theorem viable_iff_every_horizon (every : ∀ x, x ∈ all) :
+    Viable P guard all.length s ↔ ∀ n, Viable P guard n s
+
+theorem viable_iff_closed (every : ∀ x, x ∈ all) :
+    Viable P guard all.length s ↔ ∃ K, Closed P guard K ∧ K s
+
+theorem no_closed_of_not_viable (fails : ¬ Viable P guard all.length s) :
+    ∀ K, Closed P guard K → ¬ K s
+```
+
+| Theorem | What it calls |
+|---|---|
+| `viable_closed` | `viable_guard` and `viable_persists` |
+| `viable_iff_every_horizon` | `viable_closed` and `closed_viable` forward, evaluation at `all.length` backward |
+| `viable_iff_closed` | `viable_closed` supplies the witness forward, `closed_viable` applies to the witness backward |
+| `no_closed_of_not_viable` | `closed_viable` at the failed horizon. This direction works for any list. |
+
+**Part 3 · The course theorem as a case.** An enabled pair `(a, z)` has exactly the outcome `z`.
+
+```lean
+def pairProcess (P : Process S A) : Process S (A × S) :=
+  ⟨fun y p z => P.step y p.1 z ∧ z = p.2⟩
+
+theorem continues_iff_horizon : ∀ n s, Lasting.Continues P n s ↔
+    Horizon (pairProcess P) (fun _ => True) n s
+
+theorem continues_iff_viable {S A : Type} {P : Process S A} (n : Nat) (s : S) :
+    Lasting.Continues P n s ↔ Viable (pairProcess P) (fun _ => True) n s
+
+theorem continues_persists_case {all : List S} (every : ∀ x, x ∈ all) {y : S}
+    (continues : Lasting.Continues P all.length y) :
+    ∃ a z, P.step y a z ∧ Lasting.Continues P all.length z
+
+theorem continues_same : @continues_persists_case.{u,v} = @Parting.continues_persists.{u,v} := rfl
+```
+
+| Theorem | What it calls |
+|---|---|
+| `continues_iff_horizon` | Recursion on `n` using `pairProcess`. Forward, pair the move with the witnessed outcome. Backward, take the outcome witnessing enabledness. |
+| `continues_iff_viable` | `continues_iff_horizon` composed with `horizon_iff_viable` |
+| `continues_persists_case` | Part 1’s `horizon_persists` through `continues_iff_horizon` in both directions |
+| `continues_same` | `rfl` at independent universes `u,v` |
+
+**Part 4 · Through a reading.** States, moves, observations and codes have independent universes. These are the auxiliary process, the transfer theorem and the exact closed-family condition.
+
+```lean
+def codeProcess (P : Process S A) (sense : S → A → S → O) (allowed : S → A → Prop)
+    (decode : C → S → Prop) : Process C A :=
+  ⟨fun c a d => Usable P allowed (decode c) a ∧
+    (d = c ∨ ∃ o, ∀ s, decode d s ↔ Seen P sense (decode c) a o s)⟩
+
+theorem code_horizon_of_kept : ∀ {n c}, KeptFor P sense guard allowed n (decode c) →
+    Horizon (codeProcess P sense allowed decode) (fun d => ∀ s, decode d s → guard s) n c
+
+def InClosedFamily (P : Process S A) (sense : S → A → S → O) (guard : S → Prop)
+    (allowed : S → A → Prop) (B : S → Prop) : Prop :=
+  ∃ F : (S → Prop) → Prop, F B ∧ (∀ D, F D → ∀ s, D s → guard s) ∧
+    ∀ D, F D → ∃ a, Usable P allowed D a ∧ ∀ o, F (Seen P sense D a o)
+
+variable {all : List C} (every : ∀ c, c ∈ all)
+  (updates : ∀ c a, Usable P allowed (decode c) a → ∀ o,
+    ∃ d, ∀ s, decode d s ↔ Seen P sense (decode c) a o s)
+
+include every updates
+
+theorem coded_kept_iff_closed {c : C} :
+    KeptFor P sense guard allowed all.length (decode c) ↔
+      InClosedFamily P sense guard allowed (decode c)
+
+theorem coded_kept_iff_every_horizon {c : C} :
+    KeptFor P sense guard allowed all.length (decode c) ↔
+      ∀ n, KeptFor P sense guard allowed n (decode c)
+```
+
+| Theorem | What it calls |
+|---|---|
+| `code_horizon_of_kept` | Recursion on `n`. The same-code successor witnesses enabledness even for an empty observation type. `KeptFor.shorter` handles this successor and `KeptFor.mono` handles a represented observation. |
+| `coded_kept_iff_closed` | `code_horizon_of_kept`, `horizon_persists`, `updates` and `Seen.mono` forward, `keptFor_of_closed` backward |
+| `coded_kept_iff_every_horizon` | `coded_kept_iff_closed` and `keptFor_of_closed` forward, evaluation at `all.length` backward |
+
+## 3. E1 to E6
+
+**E1 — No earlier statement found.** A source search for the finite horizon, closure and persistence found the existing closed-set-to-horizon direction for choices and the finite persistence law for a single course. This is a source-search finding. [GuardHorizon.closed_viable](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean:112) · [Viability.keptFor_of_closed](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Keeping.lean:311) · [Parting.continues_persists](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Parting.lean:419)
+
+**E2 — The pigeonhole on places succeeds.** At remaining depth `n`, a list of length `n` covers each configuration by either an available place or a proof that it is viable for `n + 1` steps. Initially `every` supplies the first alternative everywhere. On using a place, the current node’s known horizon supplies the second alternative for that place at the next depth. Earlier horizons shorten by one. Each outcome of the chosen move inherits this cover. At depth zero the remaining list is empty, so the cover supplies the extra step. Duplicate entries are allowed. The proof eliminates membership into a proposition throughout. It requires no decision on equality, moves, guards or steps.
+
+**E3 — The old statement is recovered with a shorter case.** The only reference to the old theorem is the separate `rfl` check. The case proof calls none of the five excluded theorems. The check verifies agreement of the propositions at the original universes. Proof irrelevance allows the proof terms themselves to differ.
+
+| Physical declaration lines counted | Lines |
+|---|---:|
+| Old chain · `path_of_continues` 7 + `continues_cycle` 12 + `continues_persists` 9 | 28 |
+| New case chain · `pairProcess` 2 + `continues_iff_horizon` 10 + `continues_persists_case` 5 | 17 |
+| New case chain with the 36 Part 1 lines it calls | 53 |
+| New case chain with all 41 lines of Part 1, including the `Viable` specialization | 58 |
+
+Counts include statements and proofs. They exclude comments, blank lines, section setup, imported dependencies and the separate one-line `rfl` check on both sides of the comparison. Charging the additional three-line `continues_iff_viable` specialization gives **20** for the case and **61** with all of Part 1. [Old chain](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Parting.lean:393) · [New chain](/Users/ren/tmp/fm/build3/Becoming/ScratchViableEdge.lean:96)
+
+**E4 — The finite presentation is structural.**
+
+| Datum or premise | Role |
+|---|---|
+| `P`, `sense`, `guard`, `allowed` | Problem data. They specify the process and the keeping question. |
+| `C`, `decode`, `all`, `every` | Structural. Every code occurs in the list. Several codes can describe the same class. |
+| `updates` | Structural. For every usable move and every observation, some code represents the resulting class pointwise. This premise mentions neither the guard nor a horizon and supplies no usable move. |
+| `KeptFor … all.length (decode c)` | The finite keeping hypothesis on the forward side. |
+
+The proof constructs the family of all subclasses of decoded codes viable at the list length. Part 1 supplies a move at each such code. Usability passes to a subclass, and `Seen.mono` puts its successor inside the represented successor. This constructs the closed family from the finite hypothesis, using each successor code locally, without choosing a function of observations or equating predicates.
+
+**E5 — Empty axiom reports.** The final audit counted every named theorem and definition in the scratch module. Its `with_axioms` map is empty.
+
+**E6 — By part.** Part 1 does the induction on remaining places. Part 2 uses the resulting move to prove closure and reuses the package’s induction from closure to each horizon. Its negative result already follows from that older direction alone. Part 3’s short induction identifies the two course predicates at a fixed horizon. Finite persistence enters exactly once. Part 4’s transfer induction also preserves the input horizon. The call to Part 1 supplies the move that preserves the full horizon at every outcome. Neither transfer induction proves persistence by itself. Part 5 has no new proof to assess.
+
+## 4. What blocked
+
+Parts 1–4 have no outstanding blocker. Build 3 flagged an unused binder. Build 6 exposed two elaboration issues in Part 4. The proof now includes the section hypotheses explicitly and extracts the guard by matching on a general horizon.
+
+For optional Part 5, the filed `Drain` case gives the following classification.
+
+- **Reading the level puts the two starts in a closed family.** Take subclasses of the starts together with classes confined to one lane above zero. From the starts, move `true` leaves the true lane at level 2 and the false lane at level 1. Each observed successor is therefore confined to one positive lane. Matching that lane preserves its level thereafter. [Filed level-reading proof](/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/read-a-choice-from-a-reading-2026-11-21/ScratchKeptForViable.lean.txt:406)
+- **Reading nothing puts the two starts outside every closed family.** Any three blind moves lower one lane to zero. A closed family containing the starts would keep them for three steps by `keptFor_of_closed`, contradicting `together_not_kept_none`. [Filed three-step obstruction](/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/read-a-choice-from-a-reading-2026-11-21/ScratchKeptForViable.lean.txt:347)
+
+This is a reading of the filed proofs. A direct Part 4 instantiation also needs a finite code list for the reachable classes and pointwise representation of every usable update, including losing moves and empty observed classes where they arise. The filed case supplies the successful policy and the three-step obstruction. Building that finite presentation would exceed the few-line allowance, so I spent no build on Part 5.
+
+## 5. Final build log and build count
+
+**Eight builds** through `run-build3.sh`. Builds 1, 2, 4, 5, 7 and 8 met all three clean criteria and each has its numbered source snapshot. Build 1’s audit listed only the two public theorems. From build 2 onward the helpers were public and individually audited. The final source matches its saved snapshot byte for byte. [Build 8 log](/Users/ren/tmp/fm/build3/build-8.log) · [Final snapshot](/Users/ren/tmp/fm/build3/ScratchViableEdge.clean-8.lean.txt)
+
+```json
+{
+  "tree": "/Users/ren/tmp/fm/build3",
+  "modules": 155,
+  "ran": [
+    "Becoming.ScratchViableEdge",
+    "BecomingScratchViableEdgeAxiomAudit"
+  ],
+  "reused": 154,
+  "unclean": [],
+  "audits": {
+    "Becoming.ScratchViableEdge": {
+      "theorems": 16,
+      "declarations": 19,
+      "with_axioms": {}
+    }
+  },
+  "seconds": {
+    "Becoming.ScratchViableEdge": 2.629,
+    "BecomingScratchViableEdgeAxiomAudit": 0.357
+  }
+}
+```
+
+The wrapper recorded `exit 0 build 8`.
+
+## 6. What I did not do
+
+I left the optional `Drain` instantiation unbuilt. All Lean runs used the prescribed wrapper. I ran no separate Lean command, Lake command, checker, gate or tests, started no agents and performed no Git operations. The new module and its snapshots are in the scratch tree. The only repository-side file I wrote is the requested report.

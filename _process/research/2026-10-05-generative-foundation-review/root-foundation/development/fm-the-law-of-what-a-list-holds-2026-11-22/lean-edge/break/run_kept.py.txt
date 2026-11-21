@@ -1,0 +1,161 @@
+# AI-written (Claude Fable), 22 November 2026. Check (d): KeptFor through a reading, on ALL processes
+# with N configurations and A moves, every guard, with codes = all 2^N classes (so `updates` holds).
+# Keeping.lean l. 73-94:
+#   Seen B a o t   := exists s, B s and step s a t and sense s a t = o
+#   Usable B a     := forall s, B s -> allowed s a and Enabled s a          (vacuous on the empty class)
+#   KeptFor 0 B    := forall s, B s -> guard s
+#   KeptFor (n+1) B := (forall s, B s -> guard s) and exists a, Usable B a and forall o, KeptFor n (Seen B a o)
+# `allowed` is taken true everywhere: a move not allowed at s is, for KeptFor, a move with no outcome at s
+# (Seen B a o is only consulted where a is usable from B), and every step relation is enumerated.
+# Reading: either a fixed table, or EVERY table into two values (then the reading is part of the instance).
+import sys, json, time
+from bv import space, popcount, lowest, members
+
+def run(N, A, reading, label, probe=None, keep=False):
+    pb = N * A * N
+    variable = reading == 'every-binary'
+    nbits = pb * (2 if variable else 1)
+    M, var = space(nbits)
+    idx = lambda s, a, t: (s * A + a) * N + t
+    st = {(s, a, t): var(idx(s, a, t)) for s in range(N) for a in range(A) for t in range(N)}
+    en = {(s, a): 0 for s in range(N) for a in range(A)}
+    for (s, a, t), x in st.items():
+        en[s, a] |= x
+    if variable:
+        O = [0, 1]
+        def match(s, a, t, o):
+            r = var(pb + idx(s, a, t))
+            return r if o == 1 else M ^ r
+    else:
+        O, table = reading
+        def match(s, a, t, o):
+            return M if table(s, a, t) == o else 0
+    C = 1 << N
+    cls = list(range(C))
+    usable = {(B, a): M for B in cls for a in range(A)}
+    for B in cls:
+        for a in range(A):
+            for s in members(B, N):
+                usable[B, a] &= en[s, a]
+    seen_is = {}
+    for B in cls:
+        for a in range(A):
+            for o in O:
+                sv = []
+                for t in range(N):
+                    x = 0
+                    for s in members(B, N):
+                        x |= st[s, a, t] & match(s, a, t, o)
+                    sv.append(x)
+                row = []
+                for D in cls:
+                    y = M
+                    for t in range(N):
+                        y &= sv[t] if D >> t & 1 else M ^ sv[t]
+                    row.append(y)
+                seen_is[B, a, o] = row
+    H = 2 * C
+    res = dict(label=label, N=N, A=A, codes=C, instances=(1 << nbits) << N, classes_compared=0,
+               kept_at_codes=0, differs_for_n_up_to_2x_codes=0, differs_from_largest_closed_family=0,
+               nontrivial_kept=0)
+    stab = {}; worst = None
+    for g in range(1 << N):
+        K0 = [M if B & ~g == 0 else 0 for B in cls]
+        K = [K0]
+        for _ in range(H + 1):
+            prev = K[-1]; cur = []
+            for B in cls:
+                if not K0[B]:
+                    cur.append(0); continue
+                acc = 0
+                for a in range(A):
+                    x = usable[B, a]
+                    for o in O:
+                        row = seen_is[B, a, o]; y = 0
+                        for D in cls:
+                            if prev[D]:
+                                y |= row[D] & prev[D]
+                        x &= y
+                    acc |= x
+                cur.append(acc)
+            K.append(cur)
+        for B in cls:
+            res['classes_compared'] += 1 << nbits
+            res['kept_at_codes'] += popcount(K[C][B])
+            if B and bin(B).count('1') >= 2:
+                res['nontrivial_kept'] += popcount(K[C][B])
+            for n in range(C, H + 1):
+                res['differs_for_n_up_to_2x_codes'] += popcount(K[n][B] ^ K[C][B])
+        # largest closed family: union of ALL closed families, by brute force over the 2^(2^N) families
+        largest = [0] * C
+        for F in range(1 << C):
+            mem = [B for B in cls if F >> B & 1]
+            if any(not K0[B] for B in mem):
+                continue
+            cf = M
+            for B in mem:
+                acc = 0
+                for a in range(A):
+                    x = usable[B, a]
+                    for o in O:
+                        row = seen_is[B, a, o]; y = 0
+                        for D in mem:
+                            y |= row[D]
+                        x &= y
+                    acc |= x
+                cf &= acc
+                if not cf:
+                    break
+            if cf:
+                for B in mem:
+                    largest[B] |= cf
+        for B in cls:
+            res['differs_from_largest_closed_family'] += popcount(K[C][B] ^ largest[B])
+        if keep:
+            res.setdefault('KC', {})[g] = list(K[C]); res['ctx'] = (M, st, en)
+        if probe:
+            for p in probe.get(g, []):
+                n = 0
+                while any((K[n][B] ^ K[n + 1][B]) >> p & 1 for B in cls):
+                    n += 1
+                res.setdefault('probe', {})[p, g] = ([K[C][B] >> p & 1 for B in cls],
+                                                    [largest[B] >> p & 1 for B in cls], n)
+        seen_stable = 0
+        for n in range(0, H + 1):
+            eq = M
+            for B in cls:
+                eq &= M ^ (K[n][B] ^ K[n + 1][B])
+            first = eq & (M ^ seen_stable)
+            if first:
+                stab[n] = stab.get(n, 0) + popcount(first)
+                if worst is None or n > worst[0]:
+                    worst = (n, lowest(first), g)
+            seen_stable |= eq
+    res['least_steps_that_suffice_histogram'] = dict(sorted(stab.items()))
+    n, p, g = worst
+    steps = sorted((s, a, t) for s in range(N) for a in range(A) for t in range(N) if p >> idx(s, a, t) & 1)
+    w = dict(least_steps=n, steps=steps, guard=members(g, N))
+    if variable:
+        w['sense'] = {f'{s},{a},{t}': p >> (pb + idx(s, a, t)) & 1 for (s, a, t) in steps}
+    res['one_instance_needing_most_steps'] = w
+    return res
+
+READINGS = {
+    'nothing': lambda N: ([0], lambda s, a, t: 0),
+    'nothing+unused-value': lambda N: ([0, 9], lambda s, a, t: 0),
+    'where-it-ended': lambda N: (list(range(N)), lambda s, a, t: t),
+    'where-it-started': lambda N: (list(range(N)), lambda s, a, t: s),
+    'ended-in-0-or-not': lambda N: ([0, 1], lambda s, a, t: int(t == 0)),
+    'parity-of-s+a+t': lambda N: ([0, 1], lambda s, a, t: (s + a + t) % 2),
+}
+
+if __name__ == '__main__':
+    t0 = time.time()
+    jobs = sys.argv[1:]
+    for job in jobs:
+        size, name = job.split(':')
+        N, A = (int(x) for x in size.split('x'))
+        reading = 'every-binary' if name == 'every-binary' else READINGS[name](N)
+        r = run(N, A, reading, name)
+        r['seconds'] = round(time.time() - t0, 1)
+        print(json.dumps(r)); sys.stdout.flush()

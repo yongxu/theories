@@ -1,0 +1,206 @@
+# AI-written (Claude Fable), 22 November 2026. (e): the same class on opposite sides of the edge under
+# the reading that keeps nothing and the reading that keeps where the step ended. Not claimed by the module.
+import json, sys, time, itertools, random
+from bv import popcount, lowest, members
+import run_kept
+from literal import *
+
+def bits(x, cap=300000):
+    n = 0
+    while x and n < cap:
+        low = x & -x
+        yield low.bit_length() - 1
+        x ^= low; n += 1
+
+def vector_part(N, A):
+    rn = run_kept.run(N, A, run_kept.READINGS['nothing'](N), 'nothing', keep=True)
+    re_ = run_kept.run(N, A, run_kept.READINGS['where-it-ended'](N), 'ended', keep=True)
+    M, st, en = rn['ctx']
+    idx = lambda s, a, t: (s * A + a) * N + t
+    all_enabled = M
+    for v in en.values():
+        all_enabled &= v
+    det = M
+    for s in range(N):
+        for a in range(A):
+            one = 0
+            for t in range(N):
+                x = st[s, a, t]
+                for u in range(N):
+                    if u != t:
+                        x &= M ^ st[s, a, u]
+                one |= x
+            det &= one
+    out = dict(N=N, A=A)
+    tot = rev = 0
+    best = {'any': None, 'guard-only': None, 'guard-only-deterministic': None}
+    cnt = {k: 0 for k in best}
+    for g in range(1 << N):
+        absorbing = M
+        for s in range(N):
+            if not g >> s & 1:
+                for a in range(A):
+                    for t in members(g, N):
+                        absorbing &= M ^ st[s, a, t]
+        proper = 0 < g < (1 << N) - 1
+        for B in range(1 << N):
+            d = re_['KC'][g][B] & (M ^ rn['KC'][g][B])
+            rev += popcount(rn['KC'][g][B] & (M ^ re_['KC'][g][B]))
+            tot += popcount(d)
+            sets = {'any': d,
+                    'guard-only': d & all_enabled & absorbing if proper else 0,
+                    'guard-only-deterministic': d & all_enabled & absorbing & det if proper else 0}
+            for k, x in sets.items():
+                cnt[k] += popcount(x)
+                for p in bits(x):
+                    steps = sorted((s, a, t) for s in range(N) for a in range(A) for t in range(N) if p >> idx(s, a, t) & 1)
+                    cand = (len(steps), steps, members(g, N), members(B, N))
+                    if best[k] is None or cand < best[k]:
+                        best[k] = cand
+    out['kept_under_ended_not_under_nothing'] = tot
+    out['kept_under_nothing_not_under_ended'] = rev
+    for k in best:
+        out[k] = dict(count=cnt[k], fewest_steps=None if best[k] is None else
+                      dict(steps=best[k][1], guard=best[k][2], cls=best[k][3]))
+    return out
+
+def blind_and_ended(N, A, nxt, g):
+    """deterministic process nxt[s][a]; returns (K_inf under nothing, K_inf under ended) as sets of class masks"""
+    C = 1 << N
+    img = [[0] * A for _ in range(C)]
+    for B in range(C):
+        for a in range(A):
+            m = 0
+            for s in range(N):
+                if B >> s & 1:
+                    m |= 1 << nxt[s][a]
+            img[B][a] = m
+    K = [B & ~g == 0 for B in range(C)]
+    while True:
+        K2 = [K[B] and (B & ~g == 0) and any(K[img[B][a]] for a in range(A)) for B in range(C)]
+        if K2 == K: break
+        K = K2
+    # ended: singletons after one step; W = configurations viable for ever
+    W = g
+    while True:
+        W2 = 0
+        for s in range(N):
+            if W >> s & 1 and any(W >> nxt[s][a] & 1 for a in range(A)):
+                W2 |= 1 << s
+        if W2 == W: break
+        W = W2
+    E = [(B & ~g == 0) and any(img[B][a] & ~W == 0 for a in range(A)) for B in range(C)]
+    return K, E
+
+def det_part(N, A):
+    found = 0; first = None; n = 0
+    for code in itertools.product(range(N), repeat=N * A):
+        nxt = [[code[s * A + a] for a in range(A)] for s in range(N)]
+        for g in range(1, (1 << N) - 1):
+            if any(g >> nxt[s][a] & 1 for s in range(N) if not g >> s & 1 for a in range(A)):
+                continue            # the complement of the guard is not absorbing
+            n += 1
+            K, E = blind_and_ended(N, A, nxt, g)
+            for B in range(1 << N):
+                if E[B] and not K[B]:
+                    found += 1
+                    if first is None:
+                        first = dict(next=nxt, guard=members(g, N), cls=members(B, N))
+    return dict(N=N, A=A, deterministic_guard_only_instances=n, separated_classes=found, first=first)
+
+def edge_report(name, P, sense_by, guard, start):
+    """where the start class lies under each reading: codes by closure and all classes, KeptFor at the count"""
+    allowed = {(s, a): True for s in P.states for a in P.moves}
+    rep = dict(name=name, configurations=len(P.states), moves=len(P.moves), start=sorted(map(str, start)))
+    for rname, (O, f) in sense_by.items():
+        sense = {(s, a, t): f(s, a, t) for s in P.states for a in P.moves for t in P.states}
+        k = kept_fn(P, sense, O, guard, allowed)
+        codes = update_closure(P, sense, O, allowed, start)
+        gfp = largest_closed_family_gfp(P, sense, O, guard, allowed)
+        Call = 1 << len(P.states)
+        fail = None
+        for n in range(Call + 2):
+            if not k(n, frozenset(start)):
+                fail = n; break
+        rep[rname] = dict(codes_by_closure=len(codes), kept_at_closure_count=k(len(codes), frozenset(start)),
+                          all_classes=Call, kept_at_all_classes=k(Call, frozenset(start)),
+                          in_largest_closed_family=frozenset(start) in gfp,
+                          first_horizon_not_kept=fail,
+                          kept_for_as_many_steps_as_configurations=k(len(P.states), frozenset(start)))
+    return rep
+
+def named_cases():
+    out = []
+    # two configurations, no guard at all: a move with no outcome does the work
+    P = Process([0, 1], ['a', 'b'], {(0, 'b', 0), (0, 'b', 1), (1, 'a', 0)})
+    rd = {'nothing': ([0], lambda s, a, t: 0), 'ended': ([0, 1], lambda s, a, t: t)}
+    out.append(edge_report('2 configurations, guard true, moves without outcome', P, rd, {0, 1}, {0}))
+    out.append(edge_report('same, start {1}', P, rd, {0, 1}, {1}))
+    # three configurations, a level 1 -> 0, every move has an outcome everywhere
+    L, R, Z = 'L1', 'R1', 'Z0'
+    P = Process([L, R, Z], ['l', 'r'], {(L, 'l', L), (L, 'l', R), (L, 'r', Z), (R, 'r', L), (R, 'r', R), (R, 'l', Z),
+                                        (Z, 'l', Z), (Z, 'r', Z)})
+    rd = {'nothing': ([0], lambda s, a, t: 0), 'ended': ([L, R, Z], lambda s, a, t: t)}
+    out.append(edge_report('3 configurations, level 1 then 0, lane may switch', P, rd, {L, R}, {L}))
+    # five configurations: two lanes, levels 2 and 1, and level 0; the matching move keeps the level, the other lowers it
+    S = ['L2', 'R2', 'L1', 'R1', 'Z0']
+    def nx(s, a):
+        if s == 'Z0': return 'Z0'
+        lane, lev = s[0], int(s[1])
+        if a == lane.lower(): return s
+        return lane + '1' if lev == 2 else 'Z0'
+    P = Process(S, ['l', 'r'], {(s, a, nx(s, a)) for s in S for a in ['l', 'r']})
+    rd = {'nothing': ([0], lambda s, a, t: 0), 'ended': (S, lambda s, a, t: t),
+          'level reached': ([0, 1, 2], lambda s, a, t: int(t[1]))}
+    out.append(edge_report('5 configurations, two lanes, level 2 -> 1 -> 0, deterministic', P, rd,
+                           {'L2', 'R2', 'L1', 'R1'}, {'L2', 'R2'}))
+    return out
+
+def climb(N, A, seconds, seed):
+    """how many steps can be needed under the reading that keeps nothing (every guard true)? hill-climb"""
+    rng = random.Random(seed); C = 1 << N; t0 = time.time()
+    def score(out):
+        img = {}
+        K = [True] * C; n = 0
+        use = [[all(out[s][a] for s in range(N) if B >> s & 1) for a in range(A)] for B in range(C)]
+        im = [[0] * A for _ in range(C)]
+        for B in range(C):
+            for a in range(A):
+                m = 0
+                for s in range(N):
+                    if B >> s & 1: m |= out[s][a]
+                im[B][a] = m
+        while True:
+            K2 = [any(use[B][a] and K[im[B][a]] for a in range(A)) for B in range(C)]
+            if K2 == K: return n
+            K = K2; n += 1
+    best = 0; bestout = None
+    while time.time() - t0 < seconds:
+        out = [[rng.randrange(C) if rng.random() < 0.8 else 0 for a in range(A)] for s in range(N)]
+        cur = score(out)
+        for _ in range(400):
+            s, a = rng.randrange(N), rng.randrange(A)
+            old = out[s][a]
+            out[s][a] = old ^ (1 << rng.randrange(N))
+            new = score(out)
+            if new >= cur: cur = new
+            else: out[s][a] = old
+        if cur > best:
+            best, bestout = cur, [row[:] for row in out]
+    return dict(N=N, A=A, codes=C, most_steps_found=best,
+                steps=sorted((s, a, t) for s in range(N) for a in range(A) for t in range(N) if bestout[s][a] >> t & 1))
+
+if __name__ == '__main__':
+    t0 = time.time()
+    what = sys.argv[1]
+    if what == 'search':
+        for N, A in [(2, 2), (3, 1), (3, 2)]:
+            print(json.dumps(vector_part(N, A))); sys.stdout.flush()
+        print(json.dumps(det_part(3, 2))); print(json.dumps(det_part(4, 2))); sys.stdout.flush()
+    elif what == 'named':
+        for r in named_cases():
+            print(json.dumps(r))
+    elif what == 'climb':
+        for N, A, sec in [(3, 3, 6), (4, 2, 12), (4, 3, 12), (5, 2, 12)]:
+            print(json.dumps(climb(N, A, sec, 5))); sys.stdout.flush()
+    print('seconds', round(time.time() - t0, 1))

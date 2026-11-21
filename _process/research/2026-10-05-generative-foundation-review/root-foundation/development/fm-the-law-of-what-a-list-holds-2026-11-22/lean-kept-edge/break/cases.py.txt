@@ -1,0 +1,249 @@
+# AI-written (Claude Fable 5.2), a reader's program. Nothing here touches Lean.
+# The five cases of ScratchKeptEdge on small instances, each from the Lean definitions:
+#   GenerativeCore.lean l. 23-29   Process, Enabled P s a := exists t, P.step s a t
+#   GuardHorizon.lean l. 71-73     Viable
+#   Lasting.lean l. 934-936        Continues ; l. 107-109 Lasts
+#   Viability.lean l. 55-56        Kernel P guard s := forall t, Reach P s t -> guard t
+#   Viability.lean l. 137-138      disturbed f adm := <fun s a t => adm a /\ t = f s a>
+#   Grammar.lean l. 57             «逆» R x y := R y x
+#   GrammarLaws.lean l. 235        «闭» R P := forall x y, P x -> R x y -> P y
+#   GrammarLaws.lean l. 238        «所闭» R x y := forall P, «闭» R P -> P x -> P y
+#   GrammarLaws.lean l. 1205       «承» R P a := forall b, R b a -> P b
+#   Keeping.lean l. 73-94          Seen, Usable, KeptFor
+# and the steps of ScratchKeptEdge: choiceStep l. 91, courseStep l. 118, disturbanceStep l. 146,
+# readingStep l. 184, regionStep l. 233; iter l. 15.
+import itertools, random, sys, time
+from functools import lru_cache
+
+def subsets(xs):
+    xs = list(xs)
+    return [frozenset(x for i, x in enumerate(xs) if m >> i & 1) for m in range(1 << len(xs))]
+
+def iter_chain(step, V0, k):
+    """iter step V0 0..k ; a predicate is the frozenset where it holds."""
+    ch = [frozenset(V0)]
+    for _ in range(k): ch.append(step(ch[-1]))
+    return ch
+
+# ---------- (i) a choice against every outcome ----------
+def case_choice(nS, nA):
+    S = range(nS); A = range(nA)
+    cells = [(s, a, t) for s in S for a in A for t in S]
+    inst = prem = fail = low_prem = low_fail = bridge = bridge_fail = 0
+    first_low = None
+    for bits in range(1 << len(cells)):
+        st = {(s, a): frozenset(t for t in S if bits >> cells.index((s, a, t)) & 1) for s in S for a in A}
+        for guard in subsets(S):
+            inst += 1
+            @lru_cache(None)
+            def viable(n, s):
+                if n == 0: return s in guard
+                return s in guard and any(len(st[s, a]) > 0 and all(viable(n - 1, t) for t in st[s, a]) for a in A)
+            def choice(X):
+                return frozenset(s for s in S if s in guard and any(len(st[s, a]) > 0 and all(t in X for t in st[s, a]) for a in A))
+            ch = iter_chain(choice, guard, 2 * nS + 1)
+            for n in range(2 * nS + 2):
+                bridge += 1
+                if ch[n] != frozenset(s for s in S if viable(n, s)): bridge_fail += 1
+            # viable_persists as stated, at list lengths N = nS .. 2 nS
+            for N in range(nS, 2 * nS + 1):
+                for y in S:
+                    if viable(N, y):
+                        prem += 1
+                        if not any(len(st[y, a]) > 0 and all(viable(N, z) for z in st[y, a]) for a in A): fail += 1
+            N = nS - 1
+            for y in S:
+                if viable(N, y):
+                    low_prem += 1
+                    if not any(len(st[y, a]) > 0 and all(viable(N, z) for z in st[y, a]) for a in A):
+                        low_fail += 1
+                        w = sum(len(v) for v in st.values())
+                        if first_low is None or w < first_low[0]:
+                            first_low = (w, {k: sorted(v) for k, v in st.items() if v}, sorted(guard), y)
+    print(f"(i) choice {nS}x{nA}: instances {inst}; iter = Viable at n=0..{2*nS+1}: {bridge} compared, {bridge_fail} differ")
+    print(f"    viable_persists at N={nS}..{2*nS}: premise held {prem}, failures {fail}; at N={nS-1}: premise held {low_prem}, failures {low_fail}")
+    if first_low: print(f"    fewest-step failure at N={nS-1}: steps {first_low[1]}, guard {first_low[2]}, at {first_low[3]}")
+
+# ---------- (ii) some course ----------
+def case_course(nS, nA):
+    S = range(nS); A = range(nA)
+    cells = [(s, a, t) for s in S for a in A for t in S]
+    inst = prem = fail = low_prem = low_fail = bridge = bridge_fail = 0
+    first_low = None
+    for bits in range(1 << len(cells)):
+        st = {(s, a): frozenset(t for t in S if bits >> cells.index((s, a, t)) & 1) for s in S for a in A}
+        inst += 1
+        @lru_cache(None)
+        def cont(n, s):
+            if n == 0: return True
+            return any(cont(n - 1, t) for a in A for t in st[s, a])
+        def course(X):
+            return frozenset(s for s in S if any(t in X for a in A for t in st[s, a]))
+        ch = iter_chain(course, S, 2 * nS + 1)
+        for n in range(2 * nS + 2):
+            bridge += 1
+            if ch[n] != frozenset(s for s in S if cont(n, s)): bridge_fail += 1
+        for N in list(range(nS, 2 * nS + 1)) + [nS - 1]:
+            for y in S:
+                if cont(N, y):
+                    ok = any(cont(N, z) for a in A for z in st[y, a])
+                    if N >= nS:
+                        prem += 1; fail += (not ok)
+                    else:
+                        low_prem += 1
+                        if not ok:
+                            low_fail += 1
+                            w = sum(len(v) for v in st.values())
+                            if first_low is None or w < first_low[0]:
+                                first_low = (w, {k: sorted(v) for k, v in st.items() if v}, y)
+    print(f"(ii) course {nS}x{nA}: instances {inst}; iter = Continues at n=0..{2*nS+1}: {bridge} compared, {bridge_fail} differ")
+    print(f"    continues_persists at N={nS}..{2*nS}: premise held {prem}, failures {fail}; at N={nS-1}: premise held {low_prem}, failures {low_fail}")
+    if first_low: print(f"    fewest-step failure at N={nS-1}: steps {first_low[1]}, at {first_low[2]}")
+
+# ---------- (iii) whatever happens; and (iii as a case of v) ----------
+def case_disturbance(nS, nA):
+    S = range(nS); A = range(nA)
+    inst = cmp = diff = low_cmp = low_diff = bridge = bridge_fail = join = join_fail = 0
+    low_inst = 0; first_low = None
+    for fvals in itertools.product(S, repeat=nS * nA):
+        f = {(s, a): fvals[s * nA + a] for s in S for a in A}
+        for adm in subsets(A):
+            # Reach of the process `disturbed f adm`: traces of steps (adm a and t = f s a)
+            reach = {s: {s} for s in S}
+            changed = True
+            while changed:
+                changed = False
+                for s in S:
+                    for t in list(reach[s]):
+                        for a in adm:
+                            u = f[t, a]
+                            if u not in reach[s]: reach[s].add(u); changed = True
+            R = lambda x, y: any(y == f[x, a] for a in adm)      # Frame.lean l. 241: Steps P s t := exists a, P.step s a t
+            for guard in subsets(S):
+                inst += 1
+                kernel = frozenset(s for s in S if all(t in guard for t in reach[s]))
+                @lru_cache(None)
+                def lasts(n, s):
+                    if n == 0: return s in guard
+                    return s in guard and all(lasts(n - 1, f[s, a]) for a in adm)
+                def dstep(X): return frozenset(s for s in S if s in guard and all(f[s, a] in X for a in adm))
+                def rstep(X): return frozenset(s for s in S if s in guard and all(t in X for t in S if R(s, t)))
+                ch = iter_chain(dstep, guard, 2 * nS + 1)
+                rch = iter_chain(rstep, guard, 2 * nS + 1)
+                for n in range(2 * nS + 2):
+                    L = frozenset(s for s in S if lasts(n, s))
+                    bridge += 1; bridge_fail += (ch[n] != L)
+                    join += 1; join_fail += (rch[n] != ch[n])
+                for N in range(nS, 2 * nS + 1):
+                    for s in S:
+                        cmp += 1; diff += ((s in kernel) != lasts(N, s))
+                bad = [s for s in S if (s in kernel) != lasts(nS - 1, s)]
+                low_cmp += nS; low_diff += len(bad)
+                if bad:
+                    low_inst += 1
+                    w = len(adm) + (nS - len(guard))
+                    if first_low is None or w < first_low[0]:
+                        first_low = (w, {k: v for k, v in f.items() if k[1] in adm}, sorted(adm), sorted(guard), bad,
+                                     sorted(kernel), sorted(s for s in S if lasts(nS - 1, s)))
+    print(f"(iii) disturbance {nS}x{nA}: instances (f, adm, guard) {inst}; iter = Lasts at n=0..{2*nS+1}: {bridge} compared, {bridge_fail} differ")
+    print(f"    Kernel(disturbed) = Lasts at N={nS}..{2*nS}: {cmp} compared, {diff} differ; at N={nS-1}: {low_cmp} compared, {low_diff} differ in {low_inst} instances")
+    if first_low:
+        w, ff, adm, guard, bad, ker, las = first_low
+        print(f"    a failure at N={nS-1}: f on admitted {ff}, adm {adm}, guard {guard}: kernel {ker}, Lasts {nS-1} {las}, differ at {bad}")
+    print(f"    disturbanceStep chain = regionStep chain at R = Steps (disturbed f adm): {join} compared, {join_fail} differ")
+
+# ---------- (v in the brief; iv here) the grammar's largest closed region ----------
+def case_region(nS):
+    S = list(range(nS)); subs = subsets(S)
+    pairs = [(x, y) for x in S for y in S]
+    inst = cmp = diff = low_diff = low_inst = wrong_diff = wrong_inst = reach_diff = 0
+    first_low = None
+    for bits in range(1 << len(pairs)):
+        Rset = frozenset(p for i, p in enumerate(pairs) if bits >> i & 1)
+        R = lambda x, y: (x, y) in Rset
+        closed = [P for P in subs if all((x not in P) or (not R(x, y)) or (y in P) for x in S for y in S)]   # «闭» R P
+        suobi = lambda x, y: all((x not in P) or (y in P) for P in closed)                                   # «所闭» R x y
+        ni = lambda Rel: (lambda x, y: Rel(y, x))                                                           # «逆»
+        cheng = lambda Rel, P: frozenset(a for a in S if all((not Rel(b, a)) or (b in P) for b in S))       # «承» Rel P
+        # independent: reflexive transitive closure by paths
+        reach = {s: {s} for s in S}
+        ch_ = True
+        while ch_:
+            ch_ = False
+            for s in S:
+                for t in list(reach[s]):
+                    for u in S:
+                        if R(t, u) and u not in reach[s]: reach[s].add(u); ch_ = True
+        for Q in subs:
+            inst += 1
+            held = cheng(ni(suobi), Q)
+            if held != frozenset(s for s in S if all(t in Q for t in reach[s])): reach_diff += 1
+            def rstep(X): return frozenset(s for s in S if s in Q and all(t in X for t in S if R(s, t)))
+            def wstep(X): return frozenset(s for s in S if s in Q and all(t in X for t in S if R(t, s)))   # the other direction
+            ch = iter_chain(rstep, Q, 2 * nS + 1)
+            for N in range(nS, 2 * nS + 1):
+                cmp += 1; diff += (held != ch[N])
+            if held != ch[nS - 1]:
+                low_inst += 1
+                w = len(Rset)
+                if first_low is None or w < first_low[0]:
+                    first_low = (w, sorted(Rset), sorted(Q), sorted(held), sorted(ch[nS - 1]))
+            if held != iter_chain(wstep, Q, nS)[nS]: wrong_inst += 1
+    print(f"(iv) region {nS} points: instances (R, Q) {inst}; «承»(«逆»(«所闭» R)) Q from the definitions = Q throughout what R reaches: {reach_diff} differ")
+    print(f"    = iter (regionStep R Q) Q N, N={nS}..{2*nS}: {cmp} compared, {diff} differ; at N={nS-1}: differ in {low_inst} instances")
+    if first_low: print(f"    fewest-pair failure at N={nS-1}: R {first_low[1]}, Q {first_low[2]}: held {first_low[3]}, iter {nS-1} {first_low[4]}")
+    print(f"    with the step turned the other way (every t with R t s): differ in {wrong_inst} instances")
+
+# ---------- the bridge of the reading case (iter_iff_kept), not the statement ----------
+def case_reading(nS, nA, senses, code_sets, label):
+    S = range(nS); A = range(nA); O = (0, 1)
+    cells = [(s, a, t) for s in S for a in A for t in S]
+    stats = {}
+    for bits in range(1 << len(cells)):
+        st = {(s, a): frozenset(t for t in S if bits >> cells.index((s, a, t)) & 1) for s in S for a in A}
+        for sname, sense in senses.items():
+            def seen(B, a, o): return frozenset(t for t in S if any(t in st[s, a] and sense(s, a, t) == o for s in B))
+            def usable(B, a): return all(len(st[s, a]) > 0 for s in B)          # allowed := True
+            for guard in subsets(S):
+                @lru_cache(None)
+                def kept(n, B):
+                    if n == 0: return all(s in guard for s in B)
+                    return all(s in guard for s in B) and any(usable(B, a) and all(kept(n - 1, seen(B, a, o)) for o in O) for a in A)
+                for cname, codes in code_sets.items():
+                    upd = all(seen(c, a, o) in codes for c in codes for a in A if usable(c, a) for o in O)
+                    def rstep(X):
+                        return frozenset(c for c in codes if all(s in guard for s in c) and any(
+                            usable(c, a) and all(any(seen(c, a, o) <= d for d in X) for o in O) for a in A))
+                    safe = frozenset(c for c in codes if all(s in guard for s in c))
+                    ch = iter_chain(rstep, safe, len(codes) + 1)
+                    key = (cname, upd)
+                    r = stats.setdefault(key, [0, 0, 0, 0, 0])
+                    r[0] += 1
+                    for n in range(len(codes) + 2):
+                        for c in codes:
+                            r[1] += 1
+                            a_, b_ = (c in ch[n]), kept(n, c)
+                            if a_ and not b_: r[2] += 1      # iter -> KeptFor fails
+                            if b_ and not a_: r[3] += 1      # KeptFor -> iter fails
+                    # the statement's edge on these codes: iter at len(codes) is steady
+                    if ch[len(codes)] != ch[len(codes) + 1]: r[4] += 1
+    for (cname, upd), r in sorted(stats.items()):
+        print(f"(reading bridge) {label}, codes {cname}, updates {'holds' if upd else 'fails'}: instances {r[0]}, (n, code) compared {r[1]}; iter without KeptFor {r[2]}; KeptFor without iter {r[3]}; chain not steady at the number of codes {r[4]}")
+
+if __name__ == "__main__":
+    t = time.time()
+    which = sys.argv[1] if len(sys.argv) > 1 else "all"
+    if which in ("all", "choice"):
+        for nS, nA in ((1, 1), (2, 1), (2, 2), (3, 1)): case_choice(nS, nA)
+    if which in ("all", "course"):
+        for nS, nA in ((1, 1), (2, 1), (2, 2), (3, 1)): case_course(nS, nA)
+    if which in ("all", "dist"):
+        for nS, nA in ((2, 1), (2, 2), (3, 1), (3, 2)): case_disturbance(nS, nA)
+    if which in ("all", "region"):
+        for nS in (1, 2, 3): case_region(nS)
+    if which in ("all", "reading"):
+        senses = {"nothing": lambda s, a, t: 0, "where it ended is 0": lambda s, a, t: int(t == 0), "where it started is 0": lambda s, a, t: int(s == 0)}
+        S2 = subsets(range(2))
+        case_reading(2, 2, senses, {"all four classes": tuple(S2), "empty and singletons": tuple(c for c in S2 if len(c) <= 1),
+                                    "singletons only": tuple(c for c in S2 if len(c) == 1)}, "2x2")
+    print(f"seconds {time.time()-t:.1f}")

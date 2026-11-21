@@ -1,0 +1,232 @@
+**Reader's report on the landing draft, lens: what else in the repository tells or binds what the landing changes.** AI-written (Claude Fable), 22 November 2026. Read only; no Lean, build, test or gate run; no agent started.
+
+Abbreviations: `PKG` = `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming`; `REC` = `/Users/ren/theories/theories/becoming/results/records`; `RF` = `/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation`; `DRAFT` = `/Users/ren/tmp/fm/build10/Becoming`.
+
+## 1. Verdict
+
+1. Nothing outside the package blocks the landing. Three record laws tell an old proof or unneeded premises: law 9 of `identification-where-runs-part`, laws 5 and 6 of `tests-fix-likeness-where-determined`. Three declaration lists must change. 52 records re-point for the changed files, and the 10 that cite the live receipt after the core run.
+2. Every other live telling of (a) to (d) that I found is at the level of the statement and stays exactly true: the READMEs, the root bullets, the checker's scope, chapters 02 and 05, the atlas entries, the mapping rows, the map cards.
+3. The new modules need a line in four places, and a fifth by choice. `regions.json` and the checker's `SCOPE` text are needed and the claim names neither. `README.zh.md` does not have a row for each module (235 rows against 407; `KeepableStep` has none).
+4. Existing sentences about the thirteen that must change: the `KeepableStep` row's "(through …)" in `README.md`; "near-definitional" of `ReachableRanges` in three places and in the draft's own docstring; the root's `Likeness` bullet, which is true but tells more premises than needed.
+5. The claim is carried, with six differences listed in section 5. Separately, build 23 did not compile `Becoming.RisingIteration` from the prelude or print its statements, because the checker's lists do not name it yet.
+
+## 2. Hits for (a) to (d)
+
+Classes: (i) still exactly true; (ii) true but tells more premises than needed; (iii) false or tells a proof that is no longer the proof; (iv) bound by a hash or a declaration list.
+
+### (a) `Parting.continues_cycle` deleted; `continues_persists` and `continues_any` re-proved
+
+| File and place | What it says | Class |
+|---|---|---|
+| `REC/identification-where-runs-part.json` ll. 97–98, `/laws/8` (law 9) | "…a step leads to where one starts: the course repeats a configuration and can go round; so courses of every length start there…"; zh "长 N 的历程重复一个配置，绕着重复可以走任意长" | (iii); re-told in section 4 |
+| same, l. 101 `/laws/8/declarations/1` and l. 440 `/references/0/declarations/29` | `Becoming.Parting.continues_cycle` | (iv): remove; the declaration-presence check fails otherwise |
+| same, `/references/0` (`Parting.lean`, sha `1fd0951b045f…`) and its proof binding (receipt `20261106T132906.779148Z`) | hash and binding | (iv) |
+| same, reference to `Lasting.lean` (sha `0ed6725238…`) | hash | (iv), hash only |
+| same, dependency `recurrence-without-premise`: "Reuses revisits_within … a run held by a list revisits a configuration within the list's length" | | (i): `course_statesBelow` still calls `revisits_within` (`DRAFT/Parting.lean` l. 207) |
+| same, `validation_scope`: "the 62 declarations of Becoming.Parting, 43 of them theorems (receipt 20261015T193101.075446Z)" | | (i) as a sentence of that receipt. The live receipt has 42 and 61; the draft 43 and 63 |
+| `REC/where-a-run-goes-on.json`, reference to `Parting.lean` (lists only `path_of_continues`, which stays) | hash | (iv), hash only |
+| `REC/typicality-by-counting.json`, reference to `Parting.lean` | hash | (iv), hash only |
+| `PKG/README.md` l. 303 | "where a list of N holds every configuration, a course of N steps from a configuration gives courses of every length, with no decidability and no selection (`continues_persists`, `unbounded_of_continues`, on `Lasting.Continues`)" | (i) |
+| `PKG/README.zh.md` l. 176 | "N 个配置的列表持有每个配置时，由之有 N 步历程的配置由之有任意长的历程，不用判定也不用选取" | (i) |
+| `PKG/Becoming.lean` ll. 4114–4116 | "Where a list of N holds every configuration, a course of N steps … gives courses of every length, with no decidability" | (i) |
+| `PKG/check_becoming.py` ll. 3929–3930 (`SCOPE`) | the same sentence | (i) |
+| `PKG/Becoming/Onward.lean` ll. 15, 132 | "a course as long as the list repeats a configuration, which returns" | (i): this is Onward's own `returning_of_continues`, which calls only `Parting.path_of_continues` (l. 136) |
+| `theories/becoming/results/data/shared-laws.json` | lists `continues_cycle` under the law | computed; regenerate after the core run |
+
+### (b) `Becoming.remove_mem` moves to `PredicateIteration.lean`
+
+| File and place | What it says | Class |
+|---|---|---|
+| `REC/identification-where-bounded.json` l. 708, `/references/14/declarations/2` (the `Refinement.lean` reference) | `Becoming.remove_mem` | (iv): drop it there; add a reference to `PredicateIteration.lean` (role `proof`, its sha256, `["Becoming.remove_mem"]`) and a proof binding |
+| same, `Refinement.lean` reference (sha `67f79907afaf…`) and binding | | (iv) |
+| `REC/tests-fix-likeness-where-determined.json`, `Refinement.lean` reference (no `remove_mem` in its list) | | (iv), hash only |
+| `PKG/README.md` l. 115, `PKG/README.zh.md` l. 95, `PKG/Becoming.lean` ll. 1135–1143, `PKG/check_becoming.py` ll. 1733–1736 | "members pairwise apart are no more than the list holding them" | (i); none names `remove_mem` |
+
+No law or prose sentence in a live file tells `remove_mem` (not found in the records, chapters, atlas entries, READMEs, root or checker).
+
+### (c) `AlikeTo.steady_within` and `alike_iff_alikeTo_pairs` lose four premises
+
+| File and place | What it says | Class |
+|---|---|---|
+| `REC/tests-fix-likeness-where-determined.json` ll. 55–56, `/laws/4` (law 5) | "Each step of the proof is built from the decisions: … likeness to depth stops refining at a depth no greater than the number of pairs of configurations, and there it is a bisimulation." | (iii) for the third step: it now uses no decision, and `stops_decreasing`, in this law's list, is called by no proof. Re-told in section 4 |
+| same, ll. 69–70, `/laws/5` (law 6) | "So likeness of finite decided frames is decided and is likeness to every depth and to the depth of the number of pairs…" | (ii); re-told in section 4 |
+| same, ll. 146–147, `/laws/12` (law 13) | "This sharpens the depth bounded by the number of pairs, N·N′, which is kept." | (i) |
+| same, `hypotheses[2]` and `statement` (on `alike_iff_sameBranchingTests`) | | (i) |
+| same, `Likeness.lean` reference (sha `a96c46f67bdb…`, 144 names) and binding | | (iv); the list gains the six new names if the laws cite them |
+| `PKG/Becoming.lean` ll. 3872–3876 | "…by a constructive proof in which refinement stops within the number of pairs of configurations and, counting classes, within `N - 1`…" | (ii); corrected in section 3 |
+| `PKG/README.md` l. 290 | "the laws stated with equality, completed up to likeness" | (i) |
+| `theories/becoming/chapters/03-KNOWING.md` ll. 162, 165 | no telling of the pairs depth | (i) |
+| 14 further records with a `Likeness.lean` reference (listed below) | hash | (iv), hash only |
+
+In the draft `AlikeTo.steady` keeps all four premises; `moves` and `claims` are unused there (bound by `let _ := And.intro moves claims`). No live sentence outside the package tells `AlikeTo.steady`'s premises: the record lists the name only. So it could lose those two without any outside telling changing.
+
+### (d) `GuardHorizon.closed_viable` and `Tolerance.kept_set` re-proved
+
+| File and place | What it says | Class |
+|---|---|---|
+| `REC/thresholds-of-waiting.json` `/laws/3`, `/aliases/3`, `/references/0` | "A set giving at the start, each member waiting on at most its tolerance outside it, gives at every step whatever the rest does" | (i); the `Tolerance.lean` hash (`3522f18262e3…`) is (iv) |
+| `REC/restoring-giving-from-the-worst-start.json`, `REC/tolerance-monotone-across-laws.json` | `Tolerance.lean` references | (iv), hash only |
+| `theories/becoming/chapters/05-COLLECTIVES.md` l. 127; `PKG/README.md` l. 190; `PKG/Becoming.lean` ll. 2805–2807; `PKG/check_becoming.py` ll. 3716–3717 | the statement of `kept_set` | (i) |
+| `theories/becoming/results/atlas/entries/dynamics.json` ll. 22397, 22546; `premises.json` ll. 30418, 30535, 30554; `correspondences.json` l. 75494; `RF/development/aa-attractor-atlas/six/mapping.json` l. 24424 | name, binders, a reading | (i); the binders are unchanged |
+| `theories/becoming/results/map/cards.json` l. 15257 | quotes the signature of `kept_set` | (i); the signature text is unchanged up to the colon |
+| `closed_viable` | named by no record, chapter, README row, root bullet or checker text | none; four records carry the `GuardHorizon.lean` hash (`d1da445a4870…`): (iv) |
+
+### (f) `Branching.reach_within_listed`, not changed
+
+All (i) for this landing: `REC/reaching-before-and-after-a-juncture.json` `/laws/0`; `theories/becoming/chapters/02-MAP.md` l. 93; `premises.json` ll. 8316, 8336 (`branching-decides`, `branching-every`); `dynamics.json` ll. 478, 665; `mapping.json` l. 594; `PKG/README.md` l. 189; `PKG/Becoming/Junctures.lean` l. 65. This matches what the claim says is owed. The draft's docstring of `Reaching.reach_within_count` agrees with the signature at `Junctures.lean` l. 328.
+
+### Records carrying a hash of a changed file (52 in all, 44 with a proof binding)
+
+- `CommonResponse`: a-response-common-over-a-reading
+- `Viability`: a-response-common-over-a-reading, conditions-kept-together, market-protected-continuation
+- `Keeping`: finite-continuation-plans, joint-plan-composition, what-holding-for-a-reading-is-worth, when-to-inquire-and-when-to-respond
+- `Refinement`: identification-where-bounded, tests-fix-likeness-where-determined
+- `Likeness`: a-law-through-a-projection-along-one-run, a-law-through-changing-coupling-along-one-run, a-law-through-coupling-along-one-run, branching-target-uniqueness, branching-tests-bisimulation, determinacy-up-to-likeness, joint-code-plan-lifting, joint-decomposition-lifting, joint-target-uniqueness, lifting-where-branching-is-finite, merge-of-a-part-kept-by-the-rest, processes-represented-both-ways, tests-fix-likeness-where-determined, the-present-on-causal-set-growth, unanchored-incidence-collapse
+- `Lasting`: coupled-regimes, coupled-webs, identification-where-runs-part, lifting-where-branching-is-finite, market-finite-support-obstruction, market-partial-correction-boundary, market-supported-finite-transition, regime-in-any-amounts, threshold-in-the-state-plane, where-a-run-goes-on, where-a-run-of-a-regime-comes-to-rest, whether-a-loop-closes-a-difference
+- `Parting`: identification-where-runs-part, typicality-by-counting, where-a-run-goes-on
+- `GuardHorizon`: a-reading-kept-by-its-update, a-response-common-over-a-reading, a-revision-that-opens-a-correction, when-to-inquire-and-when-to-respond
+- `Attraction`: attraction-is-not-returning, basins-of-a-determined-law, hexagram-world-laws, hexagrams-on-the-spine, necessarily-drawn-is-not-returning, shared-laws-on-the-grammar
+- `GrammarCandidates`: candidate-theorems-of-the-corpus, processes-represented-both-ways, testing-within-the-net
+- `KeepableStep`: conditions-kept-together
+- `ReachableRanges`: shared-laws-on-the-grammar, tasks-and-what-performs-them, what-a-course-keeps-reachable, what-can-be-born-next, where-the-possible-grows
+- `Tolerance`: restoring-giving-from-the-worst-start, thresholds-of-waiting, tolerance-monotone-across-laws
+
+The ten records citing the live receipt `PKG/becoming-verification.json`, which the core run rewrites: confined-rise-within-a-whole, drift-offspring-sampled, fixation-by-drift, fixation-with-selection, groups-formed-by-descent, selection-with-returns-to-groupmates, selection-within-and-among-groups-of-any-sizes, selection-within-and-among-groups, shaping-read-by-readers-drawn-from-the-selected, shaping-the-rule-selected-by-what-comes-back. The last FM landing (`ef416ac36`) handled these with `tools/research/repoint.py`, one line in `_process/architecture/rebinds.jsonl`, and a regenerated `shared-laws.json`.
+
+One further sentence to look at: `REC/conditions-kept-together.json`, `does_not_show[2]`: "No law here relates the kernel to keepability". It stays literally true (no statement holds both). After the landing both are, at a list's length, iterates under one law (`Viability.kernel_iff_iter`, `Viability.keepable_iff_count`). If `keepable_iff_count` is recorded, law 6 of that record is its home, and the sentence would then say: "No law here states the kernel through keepability or the reverse; where a list holds every configuration each is what a step applied as many times as the list is long leaves of the guard, every successor for the kernel, some successor for keepability." Zh: "此处无律以可保持性陈述核，或反之；列表持有每个配置时，二者各是把一步施行列表长度那么多次后守卫所余：核取每个后继，可保持性取某个后继。"
+
+### Left out
+
+- **Generated** (each is a key of `_process/architecture/generated-manifest.json`): `REC/*.md` pages; `theories/becoming/results/data/lean-index.json` and `atlas.json`; `results/lean-declarations/*.md`; `atlas/families/*.md`, `atlas/premises/*.md`, `atlas/crosswalk/*.md`, `atlas/map.html`; `results/map/interactive.html`, `the-web.html`; `RF/mirror/BECOMING-RENEWAL-READING/*`.
+- **Computed, not in the manifest, re-made by their scripts**: `shared-laws.json` (`tools/research/shared_laws.py`, by RESULT-WORKFLOW); `PKG/becoming-verification.json` (the core run); `RF/THEOREM-CONNECTIVITY.json` (dump of 7 November); `RF/DECIDABILITY-INVENTORY.md`, `.zh.md`, `.py` (generated on the receipt of 16 October; they name only `Refining.steady_within`, which is unchanged).
+- **Frozen history**:
+  - `PKG/becoming-checks/` (559 receipt files and more), `_process/history/`, `_process/architecture/history/`, `RF/history/`.
+  - The study log's sections of their day. English `RF/BECOMING-RENEWAL-READING.md` ll. 3659, 3670, 5875, 5934, 8122, 8130, 9525, 15312, 15330. Chinese `.zh.md` ll. 7682, 7692 (§118), 8144 (§126), 8204–8245 (§128), 8331 (§130), 9412 (§150). Lines 5875 (en) and 7682, 7692, 9412 (zh) tell the four premises and the old proofs as they were.
+  - Study folders under `RF/development/`: `dj-a-line-on-a-stock/` (the listing of places is made by `build_places.py` and holds readers' returns with line numbers of 21–22 November; rerun it after the landing), `fm-designs-of-the-centre-2026-11-21/`, `fm-whole-read-2026-11-22/`, `gc-chain-review/`, `r30-names/`, `zhonghua/`, `rw-one-map/`, `ro-relational-sources/`, `cx-crosswalk/reads/`, `aa-attractor-atlas/` (phase1, readers, extracts), `ze-controlled-english/`, `zg-gaps/`, `ou3c-anchors-on-the-grammar/tree/`, `sj-edge-and-judgement/scratch/`, `el-evolution-on-the-root/`, `ig-integration-gaps/`, `tm-traditions-onto-the-map/`, `r36-chapter/`, `rf-formations-that-read/`.
+  - `_process/research/2026-10-05-repository-reconciliation/` (two files); the history notes inside the records.
+- **Namesakes, another theorem**: `steady_within` in `experiments/.../lean/conditional/renewal/RenewalCharacterization.lean` and `experiments/valuation-development/lean/ValuationRenewal.lean`; `Refining.steady_within` wherever named (`PKG/Becoming/Identification.lean` ll. 87, 1644, 1667).
+- `_process/BECOMING-WORKBOARD.md` (ll. 57, 87): the claim itself and the line beside it.
+
+## 3. The five places, and the sentences that must change
+
+### What each place needs for `Becoming.PredicateIteration` and `Becoming.RisingIteration`
+
+1. **`PKG/README.md`**: one row each, `| L1 | [`Becoming.X`](Becoming/X.lean) | what it states |`.
+   - This is the form `RF/development/r31-support/layers.py` reads (its `ROW` pattern).
+   - Both are L1 by the computed rule. Neither is in the import closure of `Becoming.World`; neither source names `Unrestricted` or `Valuation`; `Decidedness` is L1.
+   - "Within a layer the rows follow an import order" (l. 434). `PredicateIteration` must stand above its first importer, `GrammarCandidates` at l. 34, so between ll. 31 and 34. `RisingIteration` goes below `Decidedness` (l. 114), for instance after `Refinement` (l. 115).
+   - The description says what the module states, with names in backticks and its premises, as the `KeepableStep` row does (l. 313).
+2. **`PKG/README.zh.md`**: no row is required by precedent. Its head note says it is not kept in step with the English, and the commit that added `KeepableStep` (`2adf24fd5`) gave it no row. If rows are added, the same form with a Chinese description, `PredicateIteration` above l. 34.
+3. **`PKG/Becoming.lean`**:
+   - A line `import Becoming.X` each. The root's order is free: `Prelude` is at l. 210.
+   - A bullet each in the docstring: `* `Becoming.X` (L1): …`, continuation lines indented two spaces. `tools/research/theory_graph.py` l. 119 reads the layer from `^\* `Becoming.X` \(L1…\)`.
+   - Precedent places a bullet beside its neighbour; before the `Refinement` bullet (l. 1135) serves.
+4. **`PKG/check_becoming.py`**:
+   - Both names in `CORE` (ll. 100–119); position is free ("Compile order comes from the imports"), neither in `INSTANCES` nor `APPLICATIONS`.
+   - One string segment each in `SCOPE`, `"X: sentence. "` with the trailing space, as `KeepableStep`'s (ll. 3707–3711); after `Refinement`'s (ll. 1733–1736) serves.
+   - Until `CORE` names them: `PKG/scratch_build.py` ll. 77–80 compiles from the prelude only the named modules inside `closure(CORE)`, and prints statements only for modules in `CHECKED`. `RisingIteration` is imported by nothing, so build 23 ran only its compile and its axiom audit: no `Signatures`, no `PreludeOnly` (the log's `ran` list). `PredicateIteration` had no `Signatures` step either. The core run will be the first prelude-only compile of `RisingIteration`.
+5. **`theories/becoming/results/data/regions.json`**: under `"modules"`, `"Becoming.X": {"region": …, "base": …, "note": …}`.
+   - `tools/research/tests/test_theory_graph.py` (`test_every_result_and_module_is_assigned`) fails for any module the root imports that has no entry here.
+   - `region` is one of root, map, knowing, life, collective, classical, significance, method. `base` is one of old-base, frame, general, grammar, periphery.
+   - The neighbours `Prelude` and `Refinement` are `method` / `general`; that is my reading, and the choice is the curator's.
+
+The claim names "the root, both READMEs, the checker's lists". It does not name `regions.json`, the `SCOPE` text, `shared-laws.json` or the line in `rebinds.jsonl`.
+
+### Existing sentences about the thirteen that become false or misleading
+
+- **`KeepableStep`, `PKG/README.md` l. 313**: "(through `Becoming.JointKeeping` and `Becoming.Horizon`; no premise beyond what each statement names)". The draft adds `import Becoming.Onward`. Corrected: "(through `Becoming.JointKeeping`, `Becoming.Horizon` and, for keeping at a list's length, `Becoming.Onward`; no premise beyond what each statement names)". There is no zh row; the root bullet (ll. 2791–2799) has nothing false.
+- **`ReachableRanges`**. This is a judgment: the module already holds one pigeonhole law under the same sentence (`KeepsWidening.not_listed`), so the owner may read it otherwise. I read `Reaching.reach_within_count` as neither near-definitional nor a witness.
+  - `PKG/Becoming.lean` ll. 1581–1582: "Each law is near-definitional or a witness." Corrected: "Each law is near-definitional or a witness, but for the bound on moves (`Reaching.reach_within_count`), a case of `Becoming.PredicateIteration`'s law through `Becoming.CommonResponse`."
+  - `PKG/README.md` l. 306, last words "; near-definitional". Corrected: "; near-definitional, but for the bound on moves (`Reaching.reach_within_count`)".
+  - `PKG/README.zh.md` l. 186, last words "；近乎定义". Corrected: "；除步数之界（`Reaching.reach_within_count`）外近乎定义".
+  - `DRAFT/ReachableRanges.lean` l. 174 keeps the same sentence unchanged.
+- **`Likeness`, `PKG/Becoming.lean` ll. 3872–3876**, class (ii). Corrected: "On finite frames whose steps and claims are decided, configurations are alike exactly where they pass the same branching tests, by a constructive proof; where a list holds the configurations of each frame, with nothing decided, configurations alike to the depth of the product of the lists' lengths are alike to the next and are alike; counting classes on finite decided frames, refinement stops within `N - 1` for one frame of `N` configurations, exactly, and `N + N' - 1` across two; deciding likeness for every finite frame is excluded middle."
+- **The other ten** (`CommonResponse`, `Viability`, `Keeping`, `Refinement`, `Lasting`, `Parting`, `GuardHorizon`, `Attraction`, `GrammarCandidates`, `Tolerance`): I found no sentence in a README row, a zh row or a root bullet that becomes false; they become incomplete only. The zh table has rows for six of the thirteen: `CommonResponse` (l. 37), `GrammarCandidates` (l. 34), `Attraction` (l. 58), `Refinement` (l. 95), `Parting` (l. 176), `ReachableRanges` (l. 186).
+
+## 4. The three records, re-told
+
+Limits: a law is 420 characters English, 190 Chinese. `<RUN>` is the core run's id, which the landing fills in.
+
+### `identification-where-runs-part`, law 9 (`/laws/8`), now 380 / 122
+
+Quoted above in 2(a).
+
+- **Re-told, en (342)**: "Where a list of N holds every configuration, from where a course of N steps starts some step leads to where another such course starts; so courses of every length start there, with no decision and no selection. With decided steps and listed moves, a run goes on from there, built by taking at each step the first successor from which one can."
+- **Re-told, zh (109)**: "N 个配置的列表持有每个配置时，由之有 N 步历程的配置，有一步通向另一个由之有 N 步历程的配置；所以由之有任意长的历程，不用判定也不用选取。步可判定、动作列出时，由之有无尽的运行，每步取第一个仍可走下去的后继造出。"
+- **Declarations**: remove `Becoming.Parting.continues_cycle` from `/laws/8` and from `/references/0`. Add `Becoming.Parting.courseStep`, `Becoming.Parting.course_mono`, `Becoming.Parting.iter_iff_continues`. If the call is cited, add `Becoming.Iteration.iter_persists` and `Becoming.Iteration.iter_iff_all` with a reference and a binding for `PredicateIteration.lean`. `path_of_continues` stays: `where-a-run-goes-on` depends on it through this record.
+- **History, en**: "22 November 2026, board row FM (one law of what a list holds, and its cases): the ninth law re-told. Parting.continues_persists and continues_any keep their statements; their proofs are now calls of the law of a monotone step applied as many times as a list is long (Becoming.Iteration.iter_persists and iter_iff_all, in the new module Becoming.PredicateIteration), through Parting.courseStep, course_mono and iter_iff_continues, which join the law's declarations. Parting.continues_cycle is deleted and leaves the lists. The law no longer says that the course repeats a configuration and can go round, which told the former proof. The other laws, the statement and the hypotheses are unchanged. Bound to core run <RUN>."
+- **History, zh**: "2026年11月22日，工作板条目 FM（一条关于列表所持者的律及其诸例）：第九条规律重述。Parting.continues_persists 与 continues_any 陈述不变，其证明改为调用“单调的一步施行列表长度那么多次”之律（Becoming.Iteration.iter_persists 与 iter_iff_all，在新模块 Becoming.PredicateIteration），经 Parting.courseStep、course_mono 与 iter_iff_continues，三者加入该律的声明。Parting.continues_cycle 删去，从各列表除去。该律不再说长 N 的历程重复一个配置而可以绕行，那是旧证明。其余诸律、陈述与前提不变。绑定于核心运行 <RUN>。"
+
+### `tests-fix-likeness-where-determined`, laws 5 and 6 (`/laws/4`, `/laws/5`), now 311 / 86 and 235 / 75
+
+Quoted above in 2(c).
+
+- **Law 5, en (406)**: "Two steps of the proof are built from the decisions: likeness to depth k is decided, and where it fails a branching test holding at one configuration and failing at the other is built. The third needs none: where a list holds the configurations of each frame, configurations alike to the depth of the product of the lists' lengths are alike to the next depth, and there likeness to depth is a bisimulation."
+- **Law 5, zh (117)**: "证明有两步由判定构造：深度 k 的相同已判定；它不成立处，构造一个在一方成立、在另一方不成立的分支检验。第三步不用判定：两个框架的配置各被一个列表持有时，在两列表长度之积这一深度相同的配置，在下一深度仍相同，在那里深度的相同是互模拟。"
+- **Law 6, en (378)**: "So likeness of finite decided frames is decided and is likeness to every depth. Where a list holds the configurations of each frame, with nothing decided and neither moves nor claims listed, likeness is likeness to the depth of the product of the lists' lengths. Asked of every pair of frames with one configuration, one move and no claims, deciding likeness is excluded middle."
+- **Law 6, zh (113)**: "所以有限、已定的框架的相同已判定，就是每个深度的相同。两个框架的配置各被一个列表持有时，不用判定，动作与主张也不必列出，相同就是两列表长度之积这一深度的相同。对每一对只有一个配置、一个动作而没有主张的框架，判定相同就是排中律。"
+- **Declarations**: law 5 gains `Becoming.alikeStep`, `Becoming.alike_mono`, `Becoming.iter_iff_alikeTo`, `Becoming.alike_at_cover`, `Becoming.alike_at_pairs` (and `Becoming.Iteration.iter_persists` with a `PredicateIteration.lean` reference if cited). Law 6 gains `Becoming.alike_iff_at_cover`.
+- **`Becoming.stops_decreasing`**: after the landing no proof calls it (in `PKG/Becoming/*.lean` its only use outside its own recursion is the old `steady_within`, l. 1077), and the draft's `Likeness` docstring no longer names it. Either it leaves law 5's list and stays in the reference, or the owner decides whether it stays in the package at all. The history note below assumes the first.
+- **History, en**: "22 November 2026, board row FM (one law of what a list holds, and its cases): the fifth and sixth laws re-told. AlikeTo.steady_within and alike_iff_alikeTo_pairs keep their names and lose four premises (the list of every move, the list of every claim, FiniteDecided of each frame): they ask only a list holding the configurations of each frame, and the depth is the product of the lists' lengths itself (alike_at_pairs). Their proofs are calls of Becoming.Iteration.iter_persists (new module Becoming.PredicateIteration) through alikeStep, alike_mono and iter_iff_alikeTo; alike_at_cover and alike_iff_at_cover state the same at a list of only the pairs that agree on claims. These join the declarations. stops_decreasing is called by no proof now and leaves the fifth law's list, staying in the references. AlikeTo.steady, alike_iff_alikeTo, Alike.decided and alike_iff_sameBranchingTests keep their statements. Former wording of the fifth law's last clause: “likeness to depth stops refining at a depth no greater than the number of pairs of configurations, and there it is a bisimulation”, under “Each step of the proof is built from the decisions”. Bound to core run <RUN>."
+- **History, zh**: "2026年11月22日，工作板条目 FM（一条关于列表所持者的律及其诸例）：第五、第六条规律重述。AlikeTo.steady_within 与 alike_iff_alikeTo_pairs 名称不变，去掉四个前提（动作列出、主张列出、两个框架各自的 FiniteDecided），只要两个框架的配置各被一个列表持有，深度即两列表长度之积（alike_at_pairs）。其证明改为调用 Becoming.Iteration.iter_persists（新模块 Becoming.PredicateIteration），经 alikeStep、alike_mono 与 iter_iff_alikeTo；alike_at_cover 与 alike_iff_at_cover 在只列出主张一致之配置对的列表上陈述同一事。以上加入声明。stops_decreasing 不再为任何证明所用，从第五条规律的列表除去，留在引用中。AlikeTo.steady、alike_iff_alikeTo、Alike.decided 与 alike_iff_sameBranchingTests 陈述不变。第五条规律末句原文：“深度的相同在不超过配置对数目的某个深度停止细分，在那里它是互模拟”，在“证明的每一步由判定构造”之下。绑定于核心运行 <RUN>。"
+
+### `identification-where-bounded`
+
+No law or sentence tells `remove_mem`. Law 13 (`/laws/12`) says "members pairwise apart are no more than the list", which is `DistinctUnder.length_le`, unchanged. Only `/references/14` changes, as in 2(b).
+
+- **History, en**: "22 November 2026, board row FM (one law of what a list holds, and its cases): remove_mem moved with its full name and statement from Refinement.lean to the new module Becoming.PredicateIteration, which Refinement now imports; the record's references follow it (a reference to PredicateIteration.lean added, the name dropped from Refinement.lean's list), and no law changed. Refinement.lean re-pointed after reading the change: one import added, the lemma removed, nothing else."
+- **History, zh**: "2026年11月22日，工作板条目 FM（一条关于列表所持者的律及其诸例）：remove_mem 连同完整名称与陈述从 Refinement.lean 移到新模块 Becoming.PredicateIteration，Refinement 导入之；此记录的引用从之（加入对 PredicateIteration.lean 的引用，从 Refinement.lean 的列表除去该名），诸律不变。读过改动后重新指向 Refinement.lean：加一行导入，删去该引理，别无改动。"
+
+By RESULT-WORKFLOW ("Update and verify"), the first two records change content and so refresh `reviewed_at_utc`. The changed declaration lists take the history notes above. The 49 hash-only re-points take none and go through `repoint.py`.
+
+## 5. The claim (row FM, third cell) against the draft
+
+**Carried as worded:**
+- The law: `Iteration.iter_iff_all`, `iter_largest` (a monotone step, the start taken into itself, a list holding the start).
+- A relation's closure: `held_iff_iter`.
+- The kernel and lasting: `Viability.kernel_iff_iter`, `Lasting.kernel_iff_lasts_length`.
+- A course: `Parting.continues_persists` and `continues_any` are calls; `continues_cycle` is gone.
+- A choice: `GuardHorizon.closed_viable` is a call; `viable_closed` is new.
+- Likeness: the two names kept, four premises gone; `alike_at_cover` on the pairs the start relates.
+- The grammar's stages: `inquiry_iff_all`, `core_iff_inquiry` with symmetry and no constancy.
+- `Branching.reachable_iff_all`; `Viability.keepable_iff_count` through `Onward.KeepsMoving.run`; `Tolerance.kept_set` a call.
+- The lists asked: the guard only, the related pairs only, every configuration, guarded codes. `closed_viable` and `kept_set` ask none.
+- The ending side: `iter_within_length`; reach with nothing asked (`reach_commutes`); one step fewer (`closure_iff_reach_within`, `Reaching.reach_within_count`), with `reach_within_listed` untouched.
+- The widening call: `Reaching.guarded_not_keepsWidening`.
+- The module list: fifteen, as named.
+
+**Differences:**
+1. **Through a reading.** `Viability.coded_kept_iff_closed` and `iter_iff_kept` take a further premise the clause does not say: `updates`, that each class seen after a usable move from a guarded coded class has a code naming exactly it. The claim says only that the list is of the codes of classes within the guard.
+2. **Up to a double negation.** The clause reads as "a level above the list's length comes down to it". `Iteration.rise_not_not` and `rise_of_stable` are stated only for the level one above (`all.length + 1`). Only the commuting form (`iter_within_length`) is for every level. The scratch has the same forms.
+3. **The losing side by a disjunction.** `GuardHorizon.lost_shortens` is likewise one level above only, with every state and every move listed.
+4. **"Three implications".** The draft has four, and a fifth joining the fourth to a named principle: `Iteration.singleton_rise_needs_em`, `GuardHorizon.lose_shortening_decides_negations`, `lose_shortening_decides`, `lost_shortening_distributes`, and `lpo_of_distributes`.
+5. **"A case that carries its own induction on a list"**, which the claim names as counting against it. `GuardHorizon.gather_moves` is a recursion on the list of moves inside the losing case. It is not the count on the list of configurations, which stays in `extend_at_places`, so it meets the letter of the criterion and, as I read it, not its sense. The owner should say which.
+6. **"A docstring or record that tells more than its statement"**, also named.
+   - `DRAFT/ReachableRanges.lean` l. 174, as in section 3.
+   - `AlikeTo.steady` keeps two premises its proof no longer uses.
+   - `alike_iff_alikeTo` keeps four where the lists of configurations alone would give it (by `alike_iff_alikeTo_pairs` and `Alike.alikeTo`). Its statement is not changed, by the brief, so law 6 above still says "finite decided frames" of it.
+
+**Carried by the draft, not said in the claim:**
+- `Law.returns_iff_reachable_count` and `Law.drawn_iff_not_reachable_count` (`Attraction`).
+- `Reaching.reach_within_of_pred_le`, `possible_iff_within_count`.
+- `held_iff_iter_pred_length`, `kernel_iff_iter_pred_length`, `iter_persists_from_all` (one fewer where a list of n + 1 holds every state).
+- `Tolerance.monotone_iff_keepsInclusion`, `iter_eq_orbit`.
+
+**Said in the claim, outside the draft or absent from it:**
+- "In the one built instance written by hand" (under "Not in it"): the draft holds no instance of the reading case; not found in `DRAFT/Keeping.lean` or its diff.
+- "Their record re-told" and "records re-pointed for `continues_cycle` and `remove_mem`": section 4 gives the text.
+- No record is named for the law itself, so `PredicateIteration` and `RisingIteration` would be cited by no record unless the two cite the call as above.
+- No atlas entry is named.
+
+## 6. What I did not read
+
+- The Lean of the draft, beyond what my lens needed. Read whole: `PredicateIteration`, `RisingIteration`, and all diffs except `Keeping`'s first-read details of proofs. Not read: the unchanged parts of the thirteen files; the two scratch modules, except a grep of `ScratchEdgeLaw` for the ending-side statements; the scratch report; `cx-output.txt`; `PROMPT.txt`.
+- The build log beyond its `ran` list and audits, as quoted in the report.
+- The 49 hash-only records' texts. I read their reference paths and hashes by script, and the laws only of the records named in sections 2 and 4.
+- The atlas entries and mapping rows beyond the lines that name `kept_set` and `reach_within_listed`. `law-families.json`, `COVERAGE.json`, the chain data: no hit by name, not opened.
+- The chapters beyond the hits and the anchors of the three records (02 l. 93; 03 ll. 161–165, 247–250; 05 l. 127; 08 ll. 372–378).
+- The frozen and generated files listed in section 2, beyond the lines shown by the search.
+- The periphery checkers that read the core's receipt, and whether their records need re-pointing after the core run.
+- `README.zh.md` rows other than the six of the thirteen it has.
+- `layers.py` past its first 140 lines; `tools/research/repoint.py`; `shared_laws.py`.
+- A negative in this report is "not found in what I read": a `git grep` over tracked files for the ten names (`continues_cycle`, `continues_persists`, `continues_any`, `remove_mem`, `steady_within`, `alike_iff_alikeTo_pairs`, `AlikeTo.steady`, `closed_viable`, `kept_set`, `reach_within_listed`) and for the phrases "repeats a configuration", "go round", "number of pairs", "pairs of configurations", "near-definitional" and their Chinese forms, then the files opened as cited.

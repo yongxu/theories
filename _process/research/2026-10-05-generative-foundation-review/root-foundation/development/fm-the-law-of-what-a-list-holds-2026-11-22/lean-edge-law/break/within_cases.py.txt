@@ -1,0 +1,204 @@
+# AI-written (Claude Fable 5.2), a reader's program. Nothing here touches Lean.
+# ScratchEdgeLaw, the cases with the WEAKER premise: the list holds only what is within the
+# guard, so N = number of guarded configurations (the type may hold more).
+# Each predicate by literal recursion from its package definition:
+#   GenerativeCore.lean l. 23-29   Process ; Enabled P s a := exists t, P.step s a t
+#   GuardHorizon.lean l. 71-73     Viable 0 s = guard s ; Viable (n+1) s = guard s and
+#                                  exists a, Enabled s a and forall t, step s a t -> Viable n t
+#   Viability.lean l. 55           Kernel P guard s := forall t, Reach P s t -> guard t
+#   Viability.lean l. 137          disturbed f adm := <fun s a t => adm a and t = f s a>
+#   Lasting.lean l. 107            Lasts 0 = guard ; Lasts (n+1) s = guard s and forall a, adm a -> Lasts n (f s a)
+#   Frame.lean l. 241              Steps P s t := exists a, P.step s a t
+#   Grammar.lean l. 57             «逆» R x y := R y x
+#   GrammarLaws.lean l. 235, 238   «闭» R P := forall x y, P x -> R x y -> P y ; «所闭» R x y := forall P, «闭» R P -> P x -> P y
+#   GrammarLaws.lean l. 1205       «承» R P a := forall b, R b a -> P b
+#   ScratchEdgeLaw l. 118          regionStep R Q X s := Q s and forall t, R s t -> X t
+import itertools, random, sys, time
+from functools import lru_cache
+
+def subsets(xs):
+    xs = list(xs)
+    return [frozenset(x for i, x in enumerate(xs) if m >> i & 1) for m in range(1 << len(xs))]
+
+def chain(step, V0, k):
+    ch = [frozenset(V0)]
+    for _ in range(k): ch.append(step(ch[-1]))
+    return ch
+
+# ---------------- (i) Viable, list = the guarded configurations ----------------
+def case_viable(nS, nA, sample=None):
+    S = range(nS); A = range(nA)
+    cells = [(s, a, t) for s in S for a in A for t in S]
+    idx = {c: i for i, c in enumerate(cells)}
+    total = 1 << len(cells)
+    it = range(total) if sample is None else (random.randrange(total) for _ in range(sample))
+    r = dict(inst=0, strict=0, pers_prem=0, pers_fail=0, hor_cmp=0, hor_fail=0,
+             low_inst=0, low_fail_inst=0, low_prem=0, low_fail=0)
+    first = None; first_pers = None
+    for bits in it:
+        st = {(s, a): frozenset(t for t in S if bits >> idx[(s, a, t)] & 1) for s in S for a in A}
+        for guard in subsets(S):
+            r["inst"] += 1
+            strict = len(guard) < nS
+            r["strict"] += strict
+            @lru_cache(None)
+            def viable(n, s):
+                if n == 0: return s in guard
+                return s in guard and any(len(st[s, a]) > 0 and all(viable(n - 1, t) for t in st[s, a]) for a in A)
+            def persists(N, y):
+                return any(len(st[y, a]) > 0 and all(viable(N, z) for z in st[y, a]) for a in A)
+            k0 = len(guard)
+            # viable_persists and viable_iff_every_horizon at list lengths N = |guard| .. |guard|+2
+            for N in range(k0, k0 + 3):
+                for y in S:
+                    if viable(N, y):
+                        r["pers_prem"] += 1
+                        if not persists(N, y):
+                            r["pers_fail"] += 1
+                            if first_pers is None: first_pers = (dict(st), sorted(guard), N, y)
+                    r["hor_cmp"] += 1
+                    every = all(viable(n, y) for n in range(2 * nS + 4))
+                    if viable(N, y) != every: r["hor_fail"] += 1
+            if strict and k0 >= 1:
+                r["low_inst"] += 1
+                N = k0 - 1; bad = False
+                for y in S:
+                    if viable(N, y):
+                        r["low_prem"] += 1
+                        if not persists(N, y):
+                            r["low_fail"] += 1; bad = True
+                            w = sum(len(v) for v in st.values())
+                            if first is None or w < first[0]:
+                                first = (w, {k: sorted(v) for k, v in st.items() if v}, sorted(guard), N, y)
+                r["low_fail_inst"] += bad
+    tag = "every step relation" if sample is None else f"{sample} random step relations"
+    print(f"(i) Viable {nS}x{nA}, {tag}: instances (step, guard) {r['inst']}, of which guard a strict subset {r['strict']}")
+    print(f"    viable_persists at N=|guard|..|guard|+2: premise held {r['pers_prem']}, failures {r['pers_fail']}")
+    print(f"    viable_iff_every_horizon (Viable N s = Viable n s for all n<={2*nS+3}) at the same N: compared {r['hor_cmp']}, differ {r['hor_fail']}")
+    print(f"    strict nonempty guard, N=|guard|-1: instances {r['low_inst']}, persists fails in {r['low_fail_inst']} instances ({r['low_fail']} of {r['low_prem']} points)")
+    if first_pers: print(f"    FAILURE of viable_persists: {first_pers}")
+    if first: print(f"    fewest-step failure at |guard|-1: steps {first[1]}, guard {first[2]}, N {first[3]}, at {first[4]}")
+
+# ---------------- (ii) Kernel of every process = iter regionStep at |guard| ----------------
+def case_kernel(nS):
+    S = list(range(nS)); pairs = [(x, y) for x in S for y in S]
+    r = dict(inst=0, strict=0, cmp=0, diff=0, low_strict=0, low_strict_fail=0, low_full=0, low_full_fail=0)
+    first = None
+    for bits in range(1 << len(pairs)):
+        Rset = frozenset(p for i, p in enumerate(pairs) if bits >> i & 1)    # R = Steps P for some process P
+        succ = {s: [t for t in S if (s, t) in Rset] for s in S}
+        reach = {s: {s} for s in S}
+        ch_ = True
+        while ch_:
+            ch_ = False
+            for s in S:
+                for t in list(reach[s]):
+                    for u in succ[t]:
+                        if u not in reach[s]: reach[s].add(u); ch_ = True
+        for guard in subsets(S):
+            r["inst"] += 1; strict = len(guard) < nS; r["strict"] += strict
+            kernel = frozenset(s for s in S if all(t in guard for t in reach[s]))
+            def rstep(X): return frozenset(s for s in S if s in guard and all(t in X for t in succ[s]))
+            k0 = len(guard)
+            c = chain(rstep, guard, k0 + 3)
+            for N in range(k0, k0 + 3):
+                r["cmp"] += 1; r["diff"] += (c[N] != kernel)
+            if k0 >= 1:
+                bad = c[k0 - 1] != kernel
+                if strict:
+                    r["low_strict"] += 1; r["low_strict_fail"] += bad
+                    if bad and (first is None or len(Rset) < first[0]):
+                        first = (len(Rset), sorted(Rset), sorted(guard), sorted(kernel), sorted(c[k0 - 1]))
+                else:
+                    r["low_full"] += 1; r["low_full_fail"] += bad
+    print(f"(ii) Kernel {nS} points, every relation as Steps P: instances {r['inst']} (strict guard {r['strict']})")
+    print(f"    Kernel = iter (regionStep (Steps P) guard) guard N, N=|guard|..|guard|+2: compared {r['cmp']}, differ {r['diff']}")
+    print(f"    at |guard|-1: strict guard, differ in {r['low_strict_fail']} of {r['low_strict']}; guard everything, differ in {r['low_full_fail']} of {r['low_full']}")
+    if first: print(f"    fewest-pair failure at |guard|-1, strict guard: R {first[1]}, guard {first[2]}, kernel {first[3]}, iter {first[4]}")
+
+def case_lasts(nS, nA):
+    S = range(nS); A = range(nA)
+    r = dict(inst=0, cmp=0, diff=0, low_strict=0, low_strict_fail=0, low_full=0, low_full_fail=0)
+    first = None
+    for fvals in itertools.product(S, repeat=nS * nA):
+        f = {(s, a): fvals[s * nA + a] for s in S for a in A}
+        for adm in subsets(A):
+            reach = {s: {s} for s in S}
+            ch_ = True
+            while ch_:
+                ch_ = False
+                for s in S:
+                    for t in list(reach[s]):
+                        for a in adm:
+                            u = f[t, a]
+                            if u not in reach[s]: reach[s].add(u); ch_ = True
+            for guard in subsets(S):
+                r["inst"] += 1; strict = len(guard) < nS
+                kernel = frozenset(s for s in S if all(t in guard for t in reach[s]))
+                @lru_cache(None)
+                def lasts(n, s):
+                    if n == 0: return s in guard
+                    return s in guard and all(lasts(n - 1, f[s, a]) for a in adm)
+                k0 = len(guard)
+                for N in range(k0, k0 + 3):
+                    for s in S:
+                        r["cmp"] += 1; r["diff"] += ((s in kernel) != lasts(N, s))
+                if k0 >= 1:
+                    bad = any((s in kernel) != lasts(k0 - 1, s) for s in S)
+                    if strict:
+                        r["low_strict"] += 1; r["low_strict_fail"] += bad
+                        if bad and first is None:
+                            first = ({k: v for k, v in f.items() if k[1] in adm}, sorted(adm), sorted(guard), sorted(kernel),
+                                     sorted(s for s in S if lasts(k0 - 1, s)))
+                    else:
+                        r["low_full"] += 1; r["low_full_fail"] += bad
+    print(f"(ii') Lasts {nS}x{nA}, every f, adm, guard: instances {r['inst']}; Kernel(disturbed f adm) = Lasts N at N=|guard|..|guard|+2: compared {r['cmp']}, differ {r['diff']}")
+    print(f"    at |guard|-1: strict guard, differ in {r['low_strict_fail']} of {r['low_strict']} instances; guard everything, differ in {r['low_full_fail']} of {r['low_full']}")
+    if first: print(f"    a failure at |guard|-1, strict guard: f on admitted {first[0]}, adm {first[1]}, guard {first[2]}, kernel {first[3]}, Lasts {first[4]}")
+
+# ---------------- (iii) the grammar's region, from the literal definitions, list = Q ----------------
+def case_region(nS):
+    S = list(range(nS)); subs = subsets(S)
+    pairs = [(x, y) for x in S for y in S]
+    r = dict(inst=0, cmp=0, diff=0, low_strict=0, low_strict_fail=0, wrong=0, lit=0)
+    first = None
+    for bits in range(1 << len(pairs)):
+        Rset = frozenset(p for i, p in enumerate(pairs) if bits >> i & 1)
+        R = lambda x, y: (x, y) in Rset
+        closed = [P for P in subs if all((x not in P) or (not R(x, y)) or (y in P) for x in S for y in S)]     # «闭» R P
+        suobi = lambda x, y: all((x not in P) or (y in P) for P in closed)                                     # «所闭» R x y
+        ni = lambda Rel: (lambda x, y: Rel(y, x))                                                             # «逆»
+        cheng = lambda Rel, P: frozenset(a for a in S if all((not Rel(b, a)) or (b in P) for b in S))         # «承» Rel P a := forall b, Rel b a -> P b
+        for Q in subs:
+            r["inst"] += 1
+            held = cheng(ni(suobi), Q)        # «承» («逆» («所闭» R)) Q s : forall b, «所闭» R s b -> Q b
+            def rstep(X): return frozenset(s for s in S if s in Q and all(t in X for t in S if R(s, t)))
+            def wstep(X): return frozenset(s for s in S if s in Q and all(t in X for t in S if R(t, s)))
+            k0 = len(Q)
+            c = chain(rstep, Q, k0 + 3)
+            for N in range(k0, k0 + 3):
+                r["cmp"] += 1; r["diff"] += (held != c[N])
+            if chain(wstep, Q, k0)[k0] != held: r["wrong"] += 1
+            if 1 <= k0 < nS:
+                r["low_strict"] += 1
+                if c[k0 - 1] != held:
+                    r["low_strict_fail"] += 1
+                    if first is None or len(Rset) < first[0]:
+                        first = (len(Rset), sorted(Rset), sorted(Q), sorted(held), sorted(c[k0 - 1]))
+    print(f"(iii) region {nS} points, literal «承»(«逆»(«所闭» R)) Q: instances (R, Q) {r['inst']}; = iter (regionStep R Q) Q N at N=|Q|..|Q|+2: compared {r['cmp']}, differ {r['diff']}")
+    print(f"    at |Q|-1, Q a strict nonempty subset: differ in {r['low_strict_fail']} of {r['low_strict']}; step turned the other way at |Q|: differ in {r['wrong']}")
+    if first: print(f"    fewest-pair failure at |Q|-1: R {first[1]}, Q {first[2]}, held {first[3]}, iter {first[4]}")
+
+if __name__ == "__main__":
+    t = time.time(); random.seed(20261122)
+    which = sys.argv[1] if len(sys.argv) > 1 else "all"
+    if which in ("all", "viable"):
+        for nS, nA in ((2, 1), (2, 2), (3, 1)): case_viable(nS, nA)
+        case_viable(3, 2, sample=4000)
+        case_viable(4, 1, sample=3000)
+    if which in ("all", "kernel"):
+        for nS in (2, 3, 4): case_kernel(nS)
+        for nS, nA in ((2, 2), (3, 1), (3, 2)): case_lasts(nS, nA)
+    if which in ("all", "region"):
+        for nS in (1, 2, 3): case_region(nS)
+    print(f"seconds {time.time()-t:.1f}")

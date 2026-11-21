@@ -1,0 +1,56 @@
+(i) Viable 2x1, every step relation: instances (step, guard) 64, of which guard a strict subset 48
+    viable_persists at N=|guard|..|guard|+2: premise held 84, failures 0
+    viable_iff_every_horizon (Viable N s = Viable n s for all n<=7) at the same N: compared 384, differ 0
+    strict nonempty guard, N=|guard|-1: instances 32, persists fails in 24 instances (24 of 32 points)
+    fewest-step failure at |guard|-1: steps {}, guard [0], N 0, at 0
+(i) Viable 2x2, every step relation: instances (step, guard) 1024, of which guard a strict subset 768
+    viable_persists at N=|guard|..|guard|+2: premise held 2064, failures 0
+    viable_iff_every_horizon (Viable N s = Viable n s for all n<=7) at the same N: compared 6144, differ 0
+    strict nonempty guard, N=|guard|-1: instances 512, persists fails in 288 instances (288 of 512 points)
+    fewest-step failure at |guard|-1: steps {}, guard [0], N 0, at 0
+(i) Viable 3x1, every step relation: instances (step, guard) 4096, of which guard a strict subset 3584
+    viable_persists at N=|guard|..|guard|+2: premise held 5922, failures 0
+    viable_iff_every_horizon (Viable N s = Viable n s for all n<=9) at the same N: compared 36864, differ 0
+    strict nonempty guard, N=|guard|-1: instances 3072, persists fails in 1824 instances (1824 of 2688 points)
+    fewest-step failure at |guard|-1: steps {}, guard [0], N 0, at 0
+(i) Viable 3x2, 4000 random step relations: instances (step, guard) 32000, of which guard a strict subset 28000
+    viable_persists at N=|guard|..|guard|+2: premise held 76311, failures 0
+    viable_iff_every_horizon (Viable N s = Viable n s for all n<=9) at the same N: compared 288000, differ 0
+    strict nonempty guard, N=|guard|-1: instances 24000, persists fails in 12818 instances (12818 of 26602 points)
+    fewest-step failure at |guard|-1: steps {(2, 1): [0]}, guard [0], N 0, at 0
+(i) Viable 4x1, 3000 random step relations: instances (step, guard) 48000, of which guard a strict subset 45000
+    viable_persists at N=|guard|..|guard|+2: premise held 56679, failures 0
+    viable_iff_every_horizon (Viable N s = Viable n s for all n<=11) at the same N: compared 576000, differ 0
+    strict nonempty guard, N=|guard|-1: instances 42000, persists fails in 16202 instances (16202 of 25632 points)
+    fewest-step failure at |guard|-1: steps {(1, 0): [0], (3, 0): [1]}, guard [0], N 0, at 0
+(ii) Kernel 2 points, every relation as Steps P: instances 64 (strict guard 48)
+    Kernel = iter (regionStep (Steps P) guard) guard N, N=|guard|..|guard|+2: compared 192, differ 0
+    at |guard|-1: strict guard, differ in 16 of 32; guard everything, differ in 0 of 16
+    fewest-pair failure at |guard|-1, strict guard: R [(0, 1)], guard [0], kernel [], iter [0]
+(ii) Kernel 3 points, every relation as Steps P: instances 4096 (strict guard 3584)
+    Kernel = iter (regionStep (Steps P) guard) guard N, N=|guard|..|guard|+2: compared 12288, differ 0
+    at |guard|-1: strict guard, differ in 1536 of 3072; guard everything, differ in 0 of 512
+    fewest-pair failure at |guard|-1, strict guard: R [(0, 1)], guard [0], kernel [], iter [0]
+(ii) Kernel 4 points, every relation as Steps P: instances 1048576 (strict guard 983040)
+    Kernel = iter (regionStep (Steps P) guard) guard N, N=|guard|..|guard|+2: compared 3145728, differ 0
+    at |guard|-1: strict guard, differ in 327680 of 917504; guard everything, differ in 0 of 65536
+    fewest-pair failure at |guard|-1, strict guard: R [(0, 1)], guard [0], kernel [], iter [0]
+(ii') Lasts 2x2, every f, adm, guard: instances 256; Kernel(disturbed f adm) = Lasts N at N=|guard|..|guard|+2: compared 1536, differ 0
+    at |guard|-1: strict guard, differ in 56 of 128 instances; guard everything, differ in 0 of 64
+    a failure at |guard|-1, strict guard: f on admitted {(0, 0): 0, (1, 0): 0}, adm [0], guard [1], kernel [], Lasts [1]
+(ii') Lasts 3x1, every f, adm, guard: instances 432; Kernel(disturbed f adm) = Lasts N at N=|guard|..|guard|+2: compared 3888, differ 0
+    at |guard|-1: strict guard, differ in 72 of 324 instances; guard everything, differ in 0 of 54
+    a failure at |guard|-1, strict guard: f on admitted {(0, 0): 0, (1, 0): 0, (2, 0): 0}, adm [0], guard [1], kernel [], Lasts [1]
+(ii') Lasts 3x2, every f, adm, guard: instances 23328; Kernel(disturbed f adm) = Lasts N at N=|guard|..|guard|+2: compared 209952, differ 0
+    at |guard|-1: strict guard, differ in 6642 of 17496 instances; guard everything, differ in 0 of 2916
+    a failure at |guard|-1, strict guard: f on admitted {(0, 0): 0, (1, 0): 0, (2, 0): 0}, adm [0], guard [1], kernel [], Lasts [1]
+(iii) region 1 points, literal «承»(«逆»(«所闭» R)) Q: instances (R, Q) 4; = iter (regionStep R Q) Q N at N=|Q|..|Q|+2: compared 12, differ 0
+    at |Q|-1, Q a strict nonempty subset: differ in 0 of 0; step turned the other way at |Q|: differ in 0
+(iii) region 2 points, literal «承»(«逆»(«所闭» R)) Q: instances (R, Q) 64; = iter (regionStep R Q) Q N at N=|Q|..|Q|+2: compared 192, differ 0
+    at |Q|-1, Q a strict nonempty subset: differ in 16 of 32; step turned the other way at |Q|: differ in 16
+    fewest-pair failure at |Q|-1: R [(0, 1)], Q [0], held [], iter [0]
+(iii) region 3 points, literal «承»(«逆»(«所闭» R)) Q: instances (R, Q) 4096; = iter (regionStep R Q) Q N at N=|Q|..|Q|+2: compared 12288, differ 0
+    at |Q|-1, Q a strict nonempty subset: differ in 1536 of 3072; step turned the other way at |Q|: differ in 1536
+    fewest-pair failure at |Q|-1: R [(0, 1)], Q [0], held [], iter [0]
+seconds 10.4
+python3 within_cases.py all  10.29s user 0.08s system 98% cpu 10.517 total

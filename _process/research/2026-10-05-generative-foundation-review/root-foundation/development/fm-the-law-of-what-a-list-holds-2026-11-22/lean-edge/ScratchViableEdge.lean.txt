@@ -1,0 +1,194 @@
+import Becoming.Parting
+import Becoming.ScratchComparison
+
+/-! AI-written by Codex. A finite edge for an enabled choice against every outcome. -/
+
+namespace Becoming.ScratchViableEdge
+
+open Generative GuardHorizon ScratchComparison
+
+universe u v w q
+
+section Law
+
+variable {S : Type u} {A : Type v} {P : Process S A} {guard : S → Prop}
+
+/-- Remove the place witnessing membership. Other places still name their configurations. -/
+theorem remove_place {y : S} : ∀ {l : List S}, y ∈ l →
+    ∃ rest : List S, l.length = rest.length + 1 ∧ ∀ z, z ∈ l → z = y ∨ z ∈ rest
+  | _ :: l, .head _ => ⟨l, rfl, fun _ mem => mem_cons_cases mem⟩
+  | x :: _, .tail _ mem => by
+    obtain ⟨rest, len, covers⟩ := remove_place mem
+    refine ⟨x :: rest, congrArg Nat.succ len, fun z inside => ?_⟩
+    rcases mem_cons_cases inside with rfl | tail
+    · exact Or.inr (.head _)
+    · exact (covers z tail).imp id (.tail x)
+
+theorem horizon_pred : ∀ {n s}, Horizon P guard (n + 1) s → Horizon P guard n s
+  | 0, _, kept => kept.1
+  | _ + 1, _, ⟨within, a, live, later⟩ =>
+    ⟨within, a, live, fun z st => horizon_pred (later z st)⟩
+
+/-- A place still available can be spent. A place spent earlier already supplies
+the extra step required at the current depth. Each outcome inherits the same cover. -/
+theorem extend_at_places : ∀ (n : Nat) (left : List S), left.length = n →
+    (∀ z, z ∈ left ∨ Horizon P guard (n + 1) z) →
+    ∀ y, Horizon P guard n y → Horizon P guard (n + 1) y
+  | 0, left, len, cover, y, _ => by
+    cases nil_of_length_zero len
+    exact (cover y).elim (fun mem => nomatch mem) id
+  | n + 1, left, len, cover, y, kept => by
+    rcases cover y with mem | enough
+    · obtain ⟨rest, size, place⟩ := remove_place mem
+      have shorter : rest.length = n := Nat.succ.inj (size.symm.trans len)
+      have nextCover (z : S) : z ∈ rest ∨ Horizon P guard (n + 1) z := by
+        rcases cover z with listed | earlier
+        · rcases place z listed with rfl | unused
+          · exact Or.inr kept
+          · exact Or.inl unused
+        · exact Or.inr (horizon_pred earlier)
+      obtain ⟨within, a, live, later⟩ := kept
+      exact ⟨within, a, live, fun z st => extend_at_places n rest shorter nextCover z (later z st)⟩
+    · exact enough
+
+/-- The finite edge, at arbitrary state and move universes. -/
+theorem horizon_persists {all : List S} (every : ∀ x, x ∈ all) {y : S}
+    (kept : Horizon P guard all.length y) :
+    ∃ a, Enabled P y a ∧ ∀ z, P.step y a z → Horizon P guard all.length z :=
+  (extend_at_places all.length all rfl (fun z => Or.inl (every z)) y kept).2
+
+end Law
+
+variable {S A : Type} {P : Process S A} {guard : S → Prop}
+
+theorem viable_persists {all : List S} (every : ∀ x, x ∈ all) {y : S}
+    (kept : Viable P guard all.length y) :
+    ∃ a, Enabled P y a ∧ ∀ z, P.step y a z → Viable P guard all.length z := by
+  obtain ⟨a, live, later⟩ := horizon_persists every ((horizon_iff_viable _ y).mpr kept)
+  exact ⟨a, live, fun z st => (horizon_iff_viable _ z).mp (later z st)⟩
+
+section Consequences
+
+variable {all : List S} {s : S}
+
+theorem viable_closed (every : ∀ x, x ∈ all) : Closed P guard (Viable P guard all.length) :=
+  fun _ kept => ⟨viable_guard P guard kept, viable_persists every kept⟩
+
+theorem viable_iff_every_horizon (every : ∀ x, x ∈ all) :
+    Viable P guard all.length s ↔ ∀ n, Viable P guard n s :=
+  ⟨fun kept n => closed_viable P guard (viable_closed every) n s kept, fun h => h all.length⟩
+
+theorem viable_iff_closed (every : ∀ x, x ∈ all) :
+    Viable P guard all.length s ↔ ∃ K, Closed P guard K ∧ K s :=
+  ⟨fun kept => ⟨_, viable_closed every, kept⟩,
+   fun ⟨_, closed, held⟩ => closed_viable P guard closed all.length s held⟩
+
+theorem no_closed_of_not_viable (fails : ¬ Viable P guard all.length s) :
+    ∀ K, Closed P guard K → ¬ K s :=
+  fun _ closed held => fails (closed_viable P guard closed all.length s held)
+
+end Consequences
+
+section Courses
+
+variable {S : Type u} {A : Type v} {P : Process S A}
+
+def pairProcess (P : Process S A) : Process S (A × S) :=
+  ⟨fun y p z => P.step y p.1 z ∧ z = p.2⟩
+
+theorem continues_iff_horizon : ∀ n s, Lasting.Continues P n s ↔
+    Horizon (pairProcess P) (fun _ => True) n s
+  | 0, _ => Iff.rfl
+  | n + 1, _ => by
+    constructor
+    · rintro ⟨a, z, st, rest⟩
+      exact ⟨trivial, (a, z), ⟨z, st, rfl⟩, fun t hit =>
+        hit.2.symm ▸ (continues_iff_horizon n z).mp rest⟩
+    · rintro ⟨_, p, ⟨z, st⟩, later⟩
+      exact ⟨p.1, z, st.1, (continues_iff_horizon n z).mpr (later z st)⟩
+
+theorem continues_iff_viable {S A : Type} {P : Process S A} (n : Nat) (s : S) :
+    Lasting.Continues P n s ↔ Viable (pairProcess P) (fun _ => True) n s :=
+  (continues_iff_horizon n s).trans (horizon_iff_viable n s)
+
+theorem continues_persists_case {all : List S} (every : ∀ x, x ∈ all) {y : S}
+    (continues : Lasting.Continues P all.length y) :
+    ∃ a z, P.step y a z ∧ Lasting.Continues P all.length z := by
+  obtain ⟨p, ⟨z, st⟩, later⟩ := horizon_persists every ((continues_iff_horizon _ y).mp continues)
+  exact ⟨p.1, z, st.1, (continues_iff_horizon _ z).mpr (later z st)⟩
+
+theorem continues_same : @continues_persists_case.{u,v} = @Parting.continues_persists.{u,v} := rfl
+
+end Courses
+
+section Readings
+
+open Viability
+
+variable {S : Type u} {A : Type v} {O : Type w} {C : Type q}
+  {P : Process S A} {sense : S → A → S → O} {guard : S → Prop} {allowed : S → A → Prop}
+  {decode : C → S → Prop}
+
+/-- Staying at the current code witnesses enabledness even when the observation type is empty.
+It costs no horizon: keeping for one step longer entails keeping for one step fewer. -/
+def codeProcess (P : Process S A) (sense : S → A → S → O) (allowed : S → A → Prop)
+    (decode : C → S → Prop) : Process C A :=
+  ⟨fun c a d => Usable P allowed (decode c) a ∧
+    (d = c ∨ ∃ o, ∀ s, decode d s ↔ Seen P sense (decode c) a o s)⟩
+
+theorem code_horizon_of_kept : ∀ {n c}, KeptFor P sense guard allowed n (decode c) →
+    Horizon (codeProcess P sense allowed decode) (fun d => ∀ s, decode d s → guard s) n c
+  | 0, _, kept => kept
+  | n + 1, c, kept => by
+    obtain ⟨a, usable, later⟩ := kept.2
+    refine ⟨kept.1, a, ⟨c, usable, Or.inl rfl⟩, fun d step => ?_⟩
+    rcases step.2 with rfl | ⟨o, represents⟩
+    · exact code_horizon_of_kept (n := n) (KeptFor.shorter kept)
+    · exact code_horizon_of_kept (n := n) (KeptFor.mono (fun s => (represents s).mp) (later o))
+
+/-- Some family containing the given class meets the two premises of `keptFor_of_closed`. -/
+def InClosedFamily (P : Process S A) (sense : S → A → S → O) (guard : S → Prop)
+    (allowed : S → A → Prop) (B : S → Prop) : Prop :=
+  ∃ F : (S → Prop) → Prop, F B ∧ (∀ D, F D → ∀ s, D s → guard s) ∧
+    ∀ D, F D → ∃ a, Usable P allowed D a ∧ ∀ o, F (Seen P sense D a o)
+
+variable {all : List C} (every : ∀ c, c ∈ all)
+  (updates : ∀ c a, Usable P allowed (decode c) a → ∀ o,
+    ∃ d, ∀ s, decode d s ↔ Seen P sense (decode c) a o s)
+
+include every updates
+
+theorem coded_kept_iff_closed {c : C} :
+    KeptFor P sense guard allowed all.length (decode c) ↔
+      InClosedFamily P sense guard allowed (decode c) := by
+  constructor
+  · intro kept
+    let Q := codeProcess P sense allowed decode
+    let g (d : C) := ∀ s, decode d s → guard s
+    let K := Horizon Q g all.length
+    let F (B : S → Prop) := ∃ d, K d ∧ ∀ s, B s → decode d s
+    refine ⟨F, ⟨c, code_horizon_of_kept kept, fun _ h => h⟩, ?_, ?_⟩
+    · rintro _ ⟨d, hd, sub⟩ s hs
+      have within : ∀ n, Horizon Q g n d → g d
+        | 0, h => h
+        | _ + 1, h => h.1
+      exact within all.length hd s (sub s hs)
+    · rintro B ⟨d, hd, sub⟩
+      obtain ⟨a, ⟨_, usable, _⟩, later⟩ := horizon_persists every hd
+      refine ⟨a, fun s hs => usable s (sub s hs), fun o => ?_⟩
+      obtain ⟨e, same⟩ := updates d a usable o
+      exact ⟨e, later e ⟨usable, Or.inr ⟨o, same⟩⟩, fun s seen => (same s).mpr (Seen.mono sub seen)⟩
+  · rintro ⟨F, held, within, closed⟩
+    exact keptFor_of_closed F within closed all.length held
+
+theorem coded_kept_iff_every_horizon {c : C} :
+    KeptFor P sense guard allowed all.length (decode c) ↔
+      ∀ n, KeptFor P sense guard allowed n (decode c) := by
+  refine ⟨fun kept => ?_, fun each => each all.length⟩
+  obtain ⟨F, held, within, closed⟩ := (coded_kept_iff_closed every updates).mp kept
+  exact fun n => keptFor_of_closed F within closed n held
+
+end Readings
+
+end Becoming.ScratchViableEdge
+

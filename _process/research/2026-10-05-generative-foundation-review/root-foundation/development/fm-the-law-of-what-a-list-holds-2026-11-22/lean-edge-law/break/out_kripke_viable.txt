@@ -1,0 +1,12 @@
+[lose vs Viable, decided] 1x1, every step relation, every guard: instances 4; level n of loseStep from (not guard) = complement of Viable n, n=0..4: compared 20, differ 0  (against Viable (n+1): differ 1; level n+1 against Viable n: differ 1)
+    level N+1 -> level N with N=|guard|: fails in 0; level N -> N-1: fails in 1 of 2; e.g. steps {}, guard [0]
+[lose vs Viable, decided] 2x1, every step relation, every guard: instances 64; level n of loseStep from (not guard) = complement of Viable n, n=0..6: compared 448, differ 0  (against Viable (n+1): differ 35; level n+1 against Viable n: differ 35)
+    level N+1 -> level N with N=|guard|: fails in 0; level N -> N-1: fails in 28 of 48; e.g. steps {}, guard [0]
+[lose vs Viable, decided] 2x2, every step relation, every guard: instances 1024; level n of loseStep from (not guard) = complement of Viable n, n=0..6: compared 7168, differ 0  (against Viable (n+1): differ 335; level n+1 against Viable n: differ 335)
+    level N+1 -> level N with N=|guard|: fails in 0; level N -> N-1: fails in 304 of 768; e.g. steps {}, guard [0]
+[lose vs Viable, decided] 3x1, every step relation, every guard: instances 4096; level n of loseStep from (not guard) = complement of Viable n, n=0..8: compared 36864, differ 0  (against Viable (n+1): differ 3499; level n+1 against Viable n: differ 3499)
+    level N+1 -> level N with N=|guard|: fails in 0; level N -> N-1: fails in 1872 of 3584; e.g. steps {}, guard [0]
+[lose vs Viable, decided] 3x2, 1500 random step relation, every guard: instances 12000; level n of loseStep from (not guard) = complement of Viable n, n=0..8: compared 108000, differ 0  (against Viable (n+1): differ 7806; level n+1 against Viable n: differ 7806)
+    level N+1 -> level N with N=|guard|: fails in 0; level N -> N-1: fails in 4871 of 10500; e.g. steps {(0, 0): [0, 2], (0, 1): [1], (1, 0): [0, 2], (1, 1): [0, 1], (2, 0): [1, 2], (2, 1): [0, 1]}, guard [0]
+seconds 0.7
+python3 kripke.py viable  0.69s user 0.02s system 88% cpu 0.793 total

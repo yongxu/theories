@@ -1,0 +1,401 @@
+**AI-written (Claude Opus 5.5). I am a reader who took no part in this work. 22 November 2026. I ran no Lean, build, test or gate. The builder's log is the evidence that it compiles. Two small programs of my own are in /private/tmp/claude-501/-Users-ren-theories/21947b1b-65d1-45e4-bdb9-d3582a76bb12/scratchpad/ (closure.py and prog/region.py).**
+
+## (1) Verdict in five lines
+
+1. Sections A to F are a real join, not a sixth letter-only one. Each case names its step and calls the one law once. The weaker premise does work there: `iter_within` at l. 62 supplies the queried state's membership in the start. `Parting.continues_persists` comes out with its statement unchanged, and its proof uses none of `path_of_continues`, `revisits_within` or `continues_cycle`.
+2. The strongest reason against is in Section G. `reach_shorten_at_places` (ll. 432–453) does not call the law. It is the law's induction on places said a second time. In fact it is the falling law at the region step of Section B, with region `fun x => W₀ x → G` (sketch in Q4, not built).
+3. That same case would make `Junctures.reach_within_listed` (Junctures.lean l. 328) a case with its `decides` and `returns` premises dropped (argued, not built). That is the old result the reach statement should be joined to.
+4. Further against:
+   - Section C keeps two routes on a count that is not like for like. By signatures and bodies the routes are 14 against 14 lines, and 11 against 14 if `kernel_iff_iter` is not charged to this case.
+   - `no_closed_of_not_viable` uses neither the law nor the list.
+   - The three `not_*_of_not_succ` are one-line contrapositives of the persists theorems.
+   - G's proposed home would import `GuardHorizon`, which check_becoming.py's `ring_direction` rule refuses for a core module.
+5. Where it stands: A, B, C (through `kernel_iff_iter` only), D, E and F can land after the docstring fixes. G should be split and its reach part rewritten as a case. Telling (a) is exact; (b), (c) and (d) need the corrections in Q7.
+
+## (2) Each declaration: premises, mark, docstring
+
+I checked that the built file is the text I read:
+- `cmp` of ScratchEdgeLaw.lean.txt against /Users/ren/tmp/fm/build5/Becoming/ScratchEdgeLaw.lean: identical. clean-13 is also identical.
+- build-13.log: exit 0, `"unclean": []`, 44 theorems, 58 declarations, `"with_axioms": {}`.
+- My own count is 44 theorems and 14 definitions.
+
+N stands for `all.length`. I read every statement and proof. Every statement HOLDS AS STATED, and none needs NOT CHECKED. The marks that matter are on the docstrings.
+
+**Section A** (`{S : Type u}`; from l. 40 `{Φ} {V₀} (mono : MonotoneStep Φ) (start : ∀ y, Φ V₀ y → V₀ y)`, with `include mono start` at l. 43)
+
+- `iter` (def).
+  - Doc: EXACT.
+- `MonotoneStep` (abbrev): `∀ {X Y}, (∀ z, X z → Y z) → ∀ y, Φ X y → Φ Y y`.
+  - Doc: EXACT.
+- `remove_place {y} {l} (y ∈ l)` → `∃ rest, l.length = rest.length + 1 ∧ ∀ z ∈ l, z = y ∨ z ∈ rest`. Declared before mono and start, so it takes neither.
+  - Doc: SAYS MORE ("removed": nothing says rest is l with y taken out).
+  - Corrected: "If a state is on a list, some list one shorter holds every other member: each member of the first is that state or on the shorter list."
+- `iter_pred` (mono, start): `iter (n+1) ⊆ iter n`.
+  - Doc: EXACT.
+- `iter_within` (mono, start): `iter n ⊆ V₀`.
+  - Doc: EXACT.
+- `extend_at_places` (mono, start): `∀ n left, left.length = n → (∀ z, V₀ z → z ∈ left ∨ iter (n+1) z) → iter n ⊆ iter (n+1)`.
+  - Doc: EXACT, but "places" and "survivor" are not plain words.
+  - Plainer: "For a monotone step taking the start into itself and a list of length n: if every state of the start is on the list or in iterate n + 1, every state of iterate n is in iterate n + 1."
+- `iter_persists` (mono, start, `{all}`, `within : ∀ x, V₀ x → x ∈ all`, `{y}`): `iter N y → iter (N+1) y`.
+  - Doc: EXACT.
+- `iter_postfixed` (mono, start, `{all}`, within): `iter N ⊆ Φ (iter N)`.
+  - Doc: EXACT.
+- `postfixed_in_iter` (`omit start`; mono, `{K}`, `within : K ⊆ V₀`, `post : K ⊆ Φ K`): `K ⊆ iter n` for every n.
+  - Doc: EXACT.
+- `iter_iff_all` (mono, start, within, `{y}`): `iter N y ↔ ∀ n, iter n y`.
+  - Doc: EXACT.
+- `iter_largest` (mono, start, within): L := iter N; `L ⊆ V₀ ∧ L ⊆ Φ L ∧ ∀ K ⊆ V₀, K ⊆ Φ K → K ⊆ L`.
+  - Doc: EXACT.
+
+**Section B** (`{S : Type u} (R : «际» S) (Q : S → Prop)`)
+
+- `regionStep R Q X s := Q s ∧ ∀ t, R s t → X t`.
+  - Doc: EXACT.
+- `region_mono (R) (Q)`.
+  - Doc: EXACT.
+- `held_iff_iter (R) (Q) {all} (within : ∀ x, Q x → x ∈ all) {s}`: `«承» («逆» («所闭» R)) Q s ↔ iter (regionStep R Q) Q N s`. The backward direction needs the law (`post`). The forward direction uses only `postfixed_in_iter`.
+  - Doc: EXACT in content, but "the starting state" clashes with "the start" (= Q).
+  - Corrected: "If every state where Q holds is on the list, Q holds at every state the closure of R reaches from s exactly when s is in the region step's iterate at the list's length."
+
+**Section C1** (`{S : Type u} {A : Type v} {P : Process S A} {guard}`)
+
+- `kernel_iff_iter {all} (within : ∀ x, guard x → x ∈ all) {s}`: `Kernel P guard s ↔ iter (regionStep (Steps P) guard) guard N s`.
+  - Doc: EXACT.
+
+**Section C2** (`{S : Type u} {A : Type v} {f} {adm} {guard}`)
+
+- `iter_region_iff_lasts`: `∀ n s, iter (regionStep (Steps (disturbed f adm)) guard) guard n s ↔ Lasts f adm guard n s`. No list.
+  - Doc: EXACT.
+- `kernel_iff_lasts_length {all} (within) {s}`: `Kernel (disturbed f adm) guard s ↔ Lasts … N s`.
+  - Doc: EXACT.
+- `disturbanceStep (f) (adm) (guard X) (s)`. Its own binders shadow the section's.
+  - Doc: EXACT.
+- `disturbance_mono (f) (adm) (guard)`.
+  - Doc: EXACT.
+- `iter_iff_lasts`: section f, adm, guard implicit.
+  - Doc: EXACT.
+- `kernel_iff_lasts_length_direct {all} (within) {s}`: the same statement as `kernel_iff_lasts_length`.
+  - Doc: EXACT.
+  - The plain comment at l. 172 speaks of the proof.
+
+**Section D** (`{S : Type u} {A : Type v} (P)`, then `variable {P}` at l. 212)
+
+- `courseStep P X s`.
+  - Doc: EXACT.
+- `course_mono (P)`.
+  - Doc: speaks of the proof ("each move and successor that witnessed").
+  - Corrected: "The course step is monotone: a larger class keeps every state that has a move into the smaller one."
+- `iter_iff_continues {P}`.
+  - Doc: EXACT.
+- `continues_persists_case {S : Type u} {A : Type v} {P} {all} (every : ∀ x, x ∈ all) {y} (continues : Continues P N y)`: `∃ a z, P.step y a z ∧ Continues P N z`.
+  - Its text is identical to Parting.lean ll. 419–421, with the same binder order and kinds.
+  - Doc: EXACT.
+- `continues_same : @continues_persists_case.{u,v} = @Parting.continues_persists.{u,v} := rfl`. By proof irrelevance this checks only that the two statements are the same proposition (definitionally, binder kinds aside). The reading above is what shows the binders are the same too.
+  - Doc: speaks of "proof".
+  - Corrected: "The statement proved here is the statement of `Parting.continues_persists`, in every pair of universes (two proofs are equal exactly when their statements agree)."
+  - It should not land: after the re-proof it would compare a theorem with itself.
+
+**Section E** (`{S : Type u} {A : Type v} (P) (guard)`; l. 247 **re-binds** `{S A : Type} {P} {guard}`, implicit at Type; l. 263 adds `{all : List S} {s : S}`)
+
+- `choiceStep P guard X s` (any universes).
+  - Doc: EXACT.
+- `choice_mono (P) (guard)` (any universes).
+  - Doc: EXACT.
+- `iter_iff_viable {S A : Type} {P} {guard}`.
+  - Doc: EXACT.
+- `viable_persists {all} (within : ∀ x, guard x → x ∈ all) {y} (kept : Viable P guard N y)`: `∃ a, Enabled P y a ∧ ∀ z, P.step y a z → Viable P guard N z`.
+  - Doc: EXACT.
+- `viable_closed {all} (within)`: `Closed P guard (Viable P guard N)`.
+  - Doc: EXACT.
+- `viable_iff_every_horizon {all} {s} (within)`.
+  - Doc: EXACT.
+- `viable_iff_closed {all} {s} (within)`.
+  - Doc: EXACT.
+- `no_closed_of_not_viable {all} {s} (fails : ¬ Viable P guard N s)`: `∀ K, Closed P guard K → ¬ K s`. It has **no `within`**: `all` is any list and the law is not used. It is `closed_viable` contraposed at one horizon.
+  - Doc: EXACT in letter, but misleading ("the length of a list").
+  - Corrected: "If a state is not viable for some horizon, no closed set holds it."
+
+**Section F** (`{S : Type u} {A : Type v} {O : Type w} {C : Type q} {P} {sense} {guard} {allowed} {decode}`; l. 327 adds `{all : List C} (within : ∀ c, (∀ s, decode c s → guard s) → c ∈ all) (updates : ∀ c a, Usable P allowed (decode c) a → ∀ o, ∃ d, ∀ s, decode d s ↔ Seen P sense (decode c) a o s)`)
+
+- `InClosedFamily (P) (sense) (guard) (allowed) (B)`. Same definition as ScratchViableEdge l. 150.
+  - Doc: SAYS MORE ("another member").
+  - Corrected: "Some family of classes, each within the guard, contains the class, and each class of the family has a usable move after which, for every value seen, the class seen is in the family."
+- `coveredBy`.
+  - Doc: EXACT.
+- `codeGuard`.
+  - Doc: EXACT.
+- `readingStep`.
+  - Doc: EXACT.
+- `reading_mono` (implicit section variables).
+  - Doc: EXACT.
+- `iter_iff_kept` (`include updates in`; within and all are not included).
+  - Doc: EXACT. Better: "after a usable move *from a coded class*".
+- `coded_kept_iff_closed {c}` (`include within updates in`; all implicit).
+  - Doc: SAYS MORE ("a class": only the class of a code).
+  - Corrected: "If every code whose class lies within the guard is on the list, and after each usable move from a coded class every class seen has a code naming exactly it, the class of a code is kept for the list's length exactly when a closed family contains it."
+  - The backward direction is `keptFor_of_closed` and does not need the list.
+
+**Section G** (`{S : Type u}`; l. 383 `{Ψ} {W₀} (mono : MonotoneStep Ψ) (start : ∀ y, W₀ y → Ψ W₀ y) {all} (every : ∀ x, x ∈ all)`; l. 423 `{R}`)
+
+- `rise := iter`.
+  - Doc: SAYS MORE ("rising start": there is no such premise).
+  - Corrected: "The iterates of a step from a start, under the name used where the chain is read upward."
+- `singleton_rise_needs_em (edge : ∀ Ψ on Unit, MonotoneStep Ψ → rise Ψ ⊥ 2 () → rise Ψ ⊥ 1 ()) (p)`: `Decided p`.
+  - Doc: EXACT.
+- `dual Ψ X y := ¬ Ψ (¬X) y`.
+  - Doc: EXACT.
+- `dual_mono` (`include mono in`).
+  - Doc: EXACT.
+- `iter_dual_iff` (mono, every).
+  - Doc: EXACT.
+- `rise_not_not` (mono, start, every, `(reached : rise (N+1) y)`): `¬¬ rise N y`.
+  - Doc: EXACT.
+- `rise_of_stable` (mono, start, every, stable).
+  - Doc: EXACT.
+- `reachStep (R) (W₀ X) (y)`.
+  - Doc: EXACT.
+- `reach_pad {R} {W₀}`.
+  - Doc: speaks of the proof ("witness").
+  - Corrected: "What reaches the target within n steps reaches it within n + 1."
+- `reach_shorten_at_places {R} {W₀} {G}`: `∀ n left, left.length = n → (∀ z, z ∈ left ∨ (reaches (n+1) z → G)) → ∀ y, (reaches n y → G) → reaches (n+1) y → G`.
+  - Doc: speaks of the proof ("has a proof that").
+  - Corrected: "For a proposition G and a list of length n: if every state is on the list or is one from which reaching the target within n + 1 steps gives G, then wherever reaching within n steps gives G, so does reaching within n + 1."
+- `reach_rise_shortens {R} {W₀} {all} (every) {y}`. Its own `every` shadows the section's.
+  - Doc: SAYS MORE ("any course … can reach it": the same path is not shortened, and the theorem is about a relation, not a course).
+  - Corrected: "If every state is on the list, a state from which the target is reached within one step more than the list's length is one from which it is reached within the list's length."
+- `not_iter_of_not_succ {Φ} {V₀} (mono) (start) {all} (within) {y}`.
+  - Doc: EXACT.
+- `not_continues_of_not_succ {A : Type v} {P} {all} (every) {y}`.
+  - Doc: EXACT, but "lasts" clashes with `Lasts`.
+  - Better: "no course of one step more than the list's length starts at a state, then no course as long as the list starts there".
+- `not_viable_of_not_succ {S A : Type} {P} {guard} {all} (within) {y}`.
+  - Doc: EXACT.
+- `loseStep`.
+  - Doc: EXACT.
+- `lose_edge_decides_negations`.
+  - Doc: EXACT ("every negation is decided" is `Decided (¬q)`).
+- `lose_edge_decides`.
+  - Doc: EXACT.
+
+## (3) Findings
+
+**MUST**
+
+1. **The reach result re-proves the law instead of calling it.**
+   - The second induction on places repeats `extend_at_places` line for line: base case on the empty list, `remove_place`, a new cover, and the recursive call.
+   - Read through the bridge in Q4, its cover is the old unrestricted one, and `reach_pad` plays the part of `iter_pred`.
+   - Landed as it is, this is the rule-4 fault the five earlier joins had.
+   - As a case (Q4) it is about 12 lines against 27 (`reach_pad`, `reach_shorten_at_places`, `reach_rise_shortens`). Through `iter_iff_all` it also gives `∀ n, reaches n y → reaches N y` at once, which is what makes `Junctures.reach_within_listed` a case without `decides` or `returns` (argued). That theorem is cited by the record reaching-before-and-after-a-juncture.json, so dropping its premises changes a cited statement.
+2. **Section C must land one route only:** `kernel_iff_iter`, `iter_region_iff_lasts`, `kernel_iff_lasts_length`.
+   - The direct route says the region step at a disturbed law's steps a second time, under the name `disturbanceStep`.
+   - The report's "36 against 24" counts the Kernels section and the Disturbances section scaffolding (ll. 135–140, 147–153) for one route and none for the other.
+   - Recounted from the source in Q5. By the brief's own five-line rule, one route should land.
+3. **G's proposed home is refused by the checker.**
+   - check_becoming.py lists `Becoming.GuardHorizon` in `APPLICATIONS` (l. 121).
+   - `ring_direction` (l. 4160, asserted at l. 4980) refuses any core module but the root that imports a ring module.
+   - So a core `RisingIteration` importing GuardHorizon fails. Split G as in Q6, or make the new module an application, which nothing in the core may then import.
+4. **Docstrings that say more or speak of the proof:** those marked in (2).
+   - Also the existing docstring of `Parting.continues_persists` (ll. 416–418: "the course repeats a configuration and can go round") describes the old proof. It becomes wrong once the proof is the law's.
+5. **`no_closed_of_not_viable` is not a case of the law.**
+   - It must not be told as "the bound on every choice" from the list.
+   - The half that needs the law is `(∀ K, Closed P guard K → ¬ K s) → ¬ Viable P guard N s`, with `within`. That is `viable_closed` read backwards, and it is already inside `viable_iff_closed`.
+6. Tellings (b), (c) and (d) as written say more than the Lean: see Q7.
+
+**LESSER**
+
+- **The three `not_*_of_not_succ`** are contrapositives of `iter_persists`, `continues_persists_case` and `viable_persists`, one line each. Land at most the general one (in A).
+- **The name `within`** is used for three different things: the list cover; `K ⊆ V₀` in `postfixed_in_iter`; and a pattern variable at l. 358.
+- **No instance yet uses the weaker premise** where the type holds more than the guard. DJ's Drain instance lists codes with `every`.
+  - My program (prog/region.py) checks the region case with the list being exactly Q, against the closure definition. At |Q| there are 0 failures (4, 64 and 4,096 instances on 1 to 3 points). At |Q|−1, 16 of 64 and 1,536 of 4,096 fail.
+  - So |Q| is tight there. This explains the earlier reader's finding that |S|−1 suffices for the region and kernel cases: |S|−1 is enough whenever some state lies outside Q.
+- **Nothing relates `loseStep` to `Viable`**, so "the losing side of a choice" is a reading. `rise (loseStep P guard) (¬guard) n s → ¬ Viable P guard n s` is constructive and short (argued) and would make the reading a statement.
+- **`remove_place`** is a list lemma. Its home could be Prelude next to `mem_remove` (l. 685), which needs `¬ b = a`; `remove_place` does not.
+- **The report's "13 for the original"** is the old module's direct route. In this module the direct route is 14 code lines.
+- **Landing also needs:**
+  - each home's module docstring extended;
+  - the root Becoming.lean and `CORE` in check_becoming.py updated for any new module;
+  - the record identification-where-runs-part.json re-pointed: it cites `Becoming.Parting.continues_cycle` (ll. 101, 440).
+
+## (4) L1 to L6
+
+- **L1, not met.**
+  - `extend_at_places` takes the cover `∀ z, V₀ z → z ∈ left ∨ iter (n+1) z` and uses it at y through `iter_within` (l. 62).
+  - `iter_persists` takes `within` (ll. 77–79).
+- **L2, not met.**
+  - Section A uses `mem_cons_cases` (Prelude l. 509), `nil_of_length_zero` (l. 1026), and the core `Nat.succ.inj` and `congrArg`.
+  - Section A of clean-2 is byte-identical to Section A of the final module (diff of the `section Falling … end Falling` text). clean-2 imports only `Becoming.Prelude`, and build-2.log shows 2 modules, exit 0, no axioms.
+  - Imports in the final module (ll. 1–7) are package modules only.
+- **L3, not met.**
+  - `continues_same` is `rfl` and built.
+  - Each old statement follows in one line: `fun x _ => every x` for each `within`, and `fun z _ => cover z` for the old cover.
+  - `viable_same` and `coded_same` compared against the scratch module ScratchViableEdge. By the brief's own rule this module may not import a scratch module, so those comparisons are not lost cases.
+- **L4, not met.** build-13.log: `"with_axioms": {}`, 58 declarations. The audit method was not read.
+- **L5, not met.**
+  - `reach_rise_shortens` has only `every` and no `Decided`.
+  - Item 3 came out both ways: ¬q ∨ ¬¬q on two configurations, and q ∨ ¬q on three.
+- **L6, not met by its letter** (no cycle), **but by its purpose for G** (MUST 3). Import lines read:
+
+  | Module | Imports |
+  |---|---|
+  | Prelude | none |
+  | GrammarLaws | Grammar, GrammarMap, Prelude |
+  | CommonResponse | GrammarLaws |
+  | Frame | Prelude, GrammarLaws, GenerativeCore |
+  | Viability | Frame, Witnesses, CommonResponse |
+  | Keeping | Viability, InquirySufficiency |
+  | Lasting | Viability, Recurrence, Likeness |
+  | Likeness | Branching, Histories, Decidedness, Refinement |
+  | Parting | Distinguishing, Lasting |
+  | GuardHorizon | Acceptance, Viability, Keeping, CommonResponse |
+  | Decidedness | Space |
+  | Space | Evolution, Reserve, Witnesses, InAmounts |
+
+  - From closure.py: CommonResponse's whole closure is {GrammarLaws, Grammar, GrammarMap, Prelude}. So a module importing only Prelude can be imported by CommonResponse, and B to F reach it with no cycle:
+    - B imports it directly;
+    - Viability reaches it through CommonResponse;
+    - Lasting through Viability;
+    - Parting through Lasting;
+    - GuardHorizon through CommonResponse;
+    - Keeping through Viability.
+  - Decidedness's closure (26 modules) contains none of Parting, GuardHorizon, Lasting, Keeping, CommonResponse or Viability. Parting and GuardHorizon do not import each other. So a new module importing A, Decidedness, Parting and GuardHorizon closes no cycle; it is refused only by `ring_direction`.
+
+## (5) Questions 4 to 8
+
+**Q4. Each case calls the law once, except the reach result.**
+- `held_iff_iter` calls `iter_largest`.
+- `kernel_iff_iter` and `kernel_iff_lasts_length` go through `held_iff_iter`.
+- `continues_persists_case` and `viable_persists` call `iter_persists`.
+- `coded_kept_iff_closed` calls `iter_postfixed`.
+- `rise_not_not` calls `iter_persists` at the dual step.
+- The bridges (`iter_iff_*`, `iter_region_iff_lasts`) are inductions on n, not on places.
+
+`reach_shorten_at_places` alone is an induction on places. It is a case, at a step on predicates built from G, not at the dual. Write F_n z := (reaches n z → G). Two constructive facts give F_{n+1} z ↔ (W₀ z → G) ∧ ∀ t, R z t → F_n t:
+- (A ∨ B → G) ↔ (A → G) ∧ (B → G);
+- ((∃ t, R z t ∧ X t) → G) ↔ ∀ t, R z t → X t → G.
+
+So F_n is the n-th iterate of `regionStep R (fun x => W₀ x → G)` from `fun x => W₀ x → G`. Sketch, not built:
+
+```lean
+theorem reach_imp_iff_iter (G : Prop) : ∀ n z,
+    (reaches n z → G) ↔ iter (regionStep R (fun x => W₀ x → G)) (fun x => W₀ x → G) n z
+  | 0, _ => Iff.rfl
+  | n + 1, z =>
+    ⟨fun h => ⟨fun w => h (.inl w),
+       fun t r => (reach_imp_iff_iter G n t).mp fun p => h (.inr ⟨t, r, p⟩)⟩,
+     fun ⟨here, later⟩ path => path.elim here
+       fun ⟨t, r, p⟩ => (reach_imp_iff_iter G n t).mpr (later t r) p⟩
+
+theorem reach_rise_shortens (every : ∀ x, x ∈ all) {y : S} :
+    reaches (all.length + 1) y → reaches all.length y :=
+  (reach_imp_iff_iter (reaches all.length y) _ y).mpr
+    (iter_persists (region_mono R _) (fun _ h => h.1) (fun x _ => every x)
+      ((reach_imp_iff_iter (reaches all.length y) _ y).mp id))
+```
+
+- `reach_shorten_at_places` is `extend_at_places` at that step, read through the bridge, with the old cover. Its cover is stronger than the new law needs.
+- It does not come at the dual step. The dual of `reachStep` matches `¬ reaches` only up to the double negation that `iter_dual_iff` pays for with `every`, and it gives only ¬¬.
+- The bridge is exact because `reachStep` is built from ∨ and ∃ only. For `loseStep`, `(… ∀ a, Enabled → ∃ t, …) → G` is not a function of `X → G` without a decision. That is consistent with `lose_edge_decides` (argued), and it is the reason the kinds differ in (c).
+
+**Q5. Section C.** Recounted from the source.
+
+| | Lines | Total | Code (signature and body) |
+|---|---|---|---|
+| Through `kernel_iff_iter` | ll. 141–145 (2 doc + 3), 155–164 (2 + 8), 166–170 (2 + 3) | 20 | 14 |
+| Same, without `kernel_iff_iter` (it lands in Viability anyway) | | 15 | 11 |
+| Direct | ll. 174–176 (1 + 2), 178–181 (1 + 3), 183–187 (1 + 4), 189–195 (2 + 5) | 19 | 14 |
+
+By rule 4 the route through `kernel_iff_iter` should land: lasting whatever happens is then the kernel of every process at a disturbed law's steps, said once.
+
+**Q6. What changes on landing.**
+
+`continues_cycle`: by grep over the tracked .lean files (check snapshots aside), its only use is `Parting.continues_persists` (l. 426). Retire it. Keep `path_of_continues`, which Onward.lean l. 136 uses, and `revisits_within`, which has many uses. No other old proof in the homes becomes a case, except `Junctures.reach_within_listed` (MUST 1). If that one is re-proved, `leadsWithin_trace` (whose only use is l. 331) goes too.
+
+Smallest set of package files:
+
+| File | What is added or changed |
+|---|---|
+| new PredicateIteration.lean (imports Prelude) | A, with `not_iter_of_not_succ` if it is kept |
+| CommonResponse | `regionStep`, `region_mono`, `held_iff_iter`; and, by MUST 1, `reachStep`, the reach bridge and `reach_rise_shortens` |
+| Viability | `kernel_iff_iter` |
+| Lasting | `iter_region_iff_lasts`, `kernel_iff_lasts_length` |
+| Parting | `courseStep`, `course_mono`, `iter_iff_continues`; `continues_persists` re-proved with its statement and name kept and a new docstring; `continues_cycle` removed; optionally `not_continues_of_not_succ` |
+| GuardHorizon | `choiceStep` … `viable_iff_closed`, `not_viable_of_not_succ`, `loseStep`, `lose_edge_decides_negations`, `lose_edge_decides` |
+| Keeping | `InClosedFamily` … `coded_kept_iff_closed` |
+| one core module importing A and Decidedness | `dual`, `dual_mono`, `iter_dual_iff`, `rise_not_not`, `rise_of_stable`, `singleton_rise_needs_em` |
+| Becoming.lean | import of the new module(s) |
+| check_becoming.py | add to `CORE` |
+
+Outside the package:
+- the record identification-where-runs-part.json (re-point `continues_cycle`);
+- regenerated pages: record .md, lean-index.json, shared-laws.json, lean-declarations part 5.
+
+**Q7. The telling.**
+
+**(a)** EXACT.
+- "kept for every number of steps" is `iter_iff_all`.
+- "the largest region inside the start that the step preserves" is `iter_largest`.
+- Premises: `mono`, `start`, `within`.
+- ("preserves" means K ⊆ Φ K; you may say so.)
+
+**(b)** Says more in three places:
+- "In each the list holds only what is within the guard" should be "need hold only". The premise is that the list holds every such member, not that it holds nothing else. For the reading, the list holds codes, not configurations.
+- "each by naming its step" leaves out the short induction that the package's notion is the step's iterate (`iter_iff_viable`, `iter_iff_continues`, `iter_region_iff_lasts`, `iter_iff_kept`).
+- "every class seen has a code" should be "after each usable move from a coded class, every class seen has a code naming exactly it" (`updates`).
+
+The other clauses hold:
+- the grammar's region: `held_iff_iter`;
+- the kernel of every process: `kernel_iff_iter`;
+- lasting whatever happens: `kernel_iff_lasts_length`;
+- a choice against every outcome: `viable_persists`, `viable_closed`, `viable_iff_every_horizon`, `viable_iff_closed`;
+- the reading: `coded_kept_iff_closed`;
+- some course: `continues_persists_case`, with `continues_same` and identical text.
+
+Corrected (b): "Its cases, each by naming its step and calling the law once (where the package defines the notion on its own, after a short induction that the notion is the step's iterate): what holds throughout a relation's closure; the kernel of every process, and with it lasting under every admissible disturbance; a choice against every outcome; and, through a reading, the class of a code, where after each usable move from a coded class every class seen has a code naming exactly it. In each the list need hold only what is within the guard (for the reading, the codes whose classes lie within it), so the type may hold more. For some course, which has no guard, the list holds every configuration, and the package's own theorem comes out with its statement unchanged."
+
+**(c)**
+- First clause: `reach_rise_shortens`. Exact, once "a course … reaches" is read as "from a configuration the target is reached".
+- Second clause: `not_iter_of_not_succ`. It needs only that the list holds the start, and its premises (monotone, start taken into itself) are not stated in the sentence.
+- Third clause: `lose_edge_decides`.
+  - Its `edge` quantifies over every `P : Process (Option Bool) Unit`, that is, every step relation on the three configurations with the one move.
+  - Everything else is fixed: the guard (always true), the start (`¬ True`), the configuration (`none`) and the levels (4 to 3).
+  - The proposition q is quantified after the edge, and the process built depends on q.
+  - It is an implication from a universally quantified edge to excluded middle. It refutes nothing.
+  - "does not come down … unless every proposition is decided" is the exact reading only as "only if". In English it reads as a refutation, and it drops "for every process": the edge for one process, or for processes whose levels are decided, is untouched.
+
+  Corrected third clause: "But a proof, with nothing decided, that what loses within one step more than the list is long loses within its length, for every process, would decide every proposition: on three configurations with one move and a guard that always holds, that edge at one configuration for every such process gives q or not q for every q."
+
+  The earlier reader's programs found that the edge holds classically. That is tested, not proved here.
+
+**(d)** Not carried by any declaration, and two parts say more:
+- "No level that runs down": the module's own docstrings call the falling iterates "levels". Say "no quantity drawn down".
+- "Its plan may recall every step": under `KeptFor`'s definition (Keeping.lean l. 90), later moves may depend on every *value seen*, not on every step or configuration. No plan occurs in this module.
+- "The bound is the number of codes" should be "the length of a list holding every code whose class lies within the guard". Other codes need not be listed, and the list may repeat.
+- "A law of what a list holds" is vague. Plainer: "a law of a monotone step on classes where a list holds every member of the start".
+
+**Q8.** Not as said: neither clause is an outcome of this law. Each is a separate theorem whose list premise `within` can meet, with more needed for the first.
+
+- **The first clause** ("inside what is kept for ever, going on with change is going round"):
+  - `Settling.keeps_changing_iff` (l. 302) needs `world : ∀ x, x ∈ l`, which `within` does not give.
+  - The lemma under it, `Settling.loop_of_recurs` (l. 205), needs only `held : ∀ n, r.state n ∈ l`. That follows from `within` for a run whose configurations all lie within the guard.
+  - For the kernel, and so for lasting whatever happens, `Viability.Kernel.run` (l. 115) gives that for every run from a kernel configuration. `undoable_of_loop` (l. 220, no list) then gives the reachable-undoable form.
+  - For a choice against every outcome, a run from a viable configuration need not stay inside. One more premise is needed: that the run stays within the closed set, or within the guard.
+- **The second clause** ("a widening of what is within the guard"):
+  - `Reaching.not_keepsWidening_of_listed` (l. 693), with X := S and `adm t x := x = t ∧ guard t`, has its premise from `within` alone, for every course: `⟨all, fun x ⟨t, _, same, g⟩ => within x (same ▸ g)⟩`.
+  - `Seeking.more_needs_open` (l. 102) needs a sequence that stays within the guard.
+- Corrected: "Where a list holds every configuration within the guard, along no course does the part of the guard reached within k steps keep widening; and a run that stays within the guard and keeps changing changes within a loop, which every run from the kernel does."
+
+## (6) What I did not read
+
+- Builds 1 and 3–12 and their snapshots (only clean-2 and clean-13).
+- cx-output.txt.
+- The sweep/ and break/ folders of this module's other readers.
+- The earlier reader's programs (I read only its return).
+- ScratchViableEdge beyond ll. 17–25 and 140–160.
+- The audit's method.
+- The package beyond the places cited.
+- check_becoming.py beyond ll. 105–130, 655–690 and 4160–4190.
+- Junctures, Undecided, Settling, ReachableRanges and Seeking beyond the theorems quoted.
+- DIRECTION.md and ONE-PAGE.md.
+
+My Q4 and Q8 sketches are not built. "Not found" above means not found in what I read.

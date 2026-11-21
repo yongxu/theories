@@ -1,0 +1,14 @@
+(i) choice 1x1: instances 4; iter = Viable at n=0..3: 16 compared, 0 differ
+    viable_persists at N=1..2: premise held 2, failures 0; at N=0: premise held 2, failures 1
+    fewest-step failure at N=0: steps {}, guard [0], at 0
+(i) choice 2x1: instances 64; iter = Viable at n=0..5: 384 compared, 0 differ
+    viable_persists at N=2..4: premise held 84, failures 0; at N=1: premise held 32, failures 4
+    fewest-step failure at N=1: steps {(0, 0): [1]}, guard [0, 1], at 0
+(i) choice 2x2: instances 1024; iter = Viable at n=0..5: 6144 compared, 0 differ
+    viable_persists at N=2..4: premise held 2064, failures 0; at N=1: premise held 704, failures 16
+    fewest-step failure at N=1: steps {(0, 0): [1]}, guard [0, 1], at 0
+(i) choice 3x1: instances 4096; iter = Viable at n=0..7: 32768 compared, 0 differ
+    viable_persists at N=3..6: premise held 7896, failures 0; at N=2: premise held 2022, failures 48
+    fewest-step failure at N=2: steps {(0, 0): [2], (1, 0): [0]}, guard [0, 1, 2], at 1
+seconds 0.1
+python3 cases.py choice  0.14s user 0.02s system 60% cpu 0.255 total

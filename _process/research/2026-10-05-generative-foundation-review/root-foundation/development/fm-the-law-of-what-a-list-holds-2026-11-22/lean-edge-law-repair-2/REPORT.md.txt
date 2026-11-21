@@ -1,0 +1,126 @@
+## 1. Verdict in five lines
+
+AI-written by Codex. **P1 did not occur.** The bridge and the general theorem built with the weaker list cover. [Repaired module](/Users/ren/tmp/fm/build8/Becoming/ScratchEdgeLaw.lean) · [Saved report](/Users/ren/theories/tmp/fm/whole/lean-edge-law-repair-2/REPORT.md)  
+**P2 did not occur.** Reach, double negation, and disjunctive loss each use one commutation lemma and one call to a general bound. Only the disjunctive loss case gathers over moves.  
+**P3 did not occur.** The surviving statements retain their consequences, including build7's implication-cover form of reach. Both new package comparisons built by `rfl`.  
+**P4 did not occur.** The final audit found empty axiom reports for all 81 declarations, including 67 theorems.  
+**P5 did not occur.** The repaired module is 707 physical lines, equal to build7's 573 plus Part H's 134. All requested results built. One intermediate closure proof needed correction.
+
+## 2. The general theorem, its cases, and the package joins
+
+Write `I := iter Ψ W₀`, `N := all.length`, and `B x := W₀ x → G`. The implication step and its commutation condition have the following definitions.
+
+```lean
+givesStep Ψ G X z := Ψ (fun t => X t → G) z → G
+
+CommutesWithImplication Ψ G :=
+  ∀ (W : S → Prop) z, Ψ (fun t => (W t → G) → G) z → (Ψ W z → G) → G
+```
+
+I used `CommutesWithImplication` because the package already defines `Becoming.Commutes` for a different property.
+
+| Theorem | Statement and proof dependencies |
+|---|---|
+| `gives_mono` | From `MonotoneStep Ψ`, obtain `MonotoneStep (givesStep Ψ G)`. |
+| `imp_iff_iter_gives` | With monotonicity and commutation at `G`, `∀ n z, (I n z → G) ↔ iter (givesStep Ψ G) B n z`. The successor clause uses commutation in the forward direction. Its reverse direction uses monotonicity and the preceding reverse implication. |
+| `gives_start` | With monotonicity and `start : ∀ z, W₀ z → Ψ W₀ z`, `∀ z, givesStep Ψ G B z → B z`. |
+| `iter_gives_persists` | With monotonicity, `start`, commutation at `G`, and `∀ x, B x → x ∈ all`, obtain `(I N y → G) → I (N + 1) y → G`. The proof transports one call of `iter_persists` through `imp_iff_iter_gives`, using `gives_mono` and `gives_start`. |
+| `iter_shortens` | Taking `G := I N y` under the same premises gives `I (N + 1) y → I N y`. It calls `iter_gives_persists` with the identity implication. |
+| `iter_within_length` | Under those same premises at `G := I N y`, `∀ m, I m y → I N y`. It transports `iter_iff_all` through the bridge. |
+| `iter_within_pred_length` | Suppose `N = n + 1`, every state is listed, and `G := I n y`. With monotonicity, `start`, commutation at `G`, and `∀ z, B z ↔ givesStep Ψ G (fun _ => True) z`, obtain `∀ m, I m y → I n y`. It uses `iter_persists_from_all` at the implication step, then `postfixed_in_iter`, `iter_within`, and the bridge. |
+
+### (i) Relational reach
+
+`reach_commutes G : CommutesWithImplication (reachStep R W₀) G` holds for every relation, target, and proposition. If the target holds here, the conclusion follows immediately from the supplied implication. A related successor supplies the other alternative. Neither case needs a decision.
+
+Write `reaches := iter (reachStep R W₀) W₀`. Under `every : ∀ x, x ∈ all` and `len : all.length = n + 1`, the following two statements hold.
+
+```lean
+reach_within_length     : ∀ m, reaches m y → reaches n y
+closure_iff_reach_within : (∃ t, «所闭» R y t ∧ W₀ t) ↔ reaches n y
+```
+
+The first calls `iter_within_pred_length` once, with `reach_mono`, `reach_commutes`, and the first-step equivalence obtained by opening the reach disjunction. This accounts for the earlier bound without the special reach bridge.
+
+The closure is **forward**, from `y` to `t`. The grammar composes relations in that order. Its closure contains each related pair, is reflexive and transitive, and agrees with taking some finite number of steps. For the forward implication above, the closure carries the predicate `fun z => ∀ m, reaches m z → reaches n y` from `y` to the target. The converse calls `closure_of_reach`, which uses reflexivity, inclusion of a single step, and transitivity. [Grammar.lean](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Grammar.lean:54) · [GrammarLaws.lean](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarLaws.lean:1301)
+
+The three old reach bounds were consolidated. The old `reach_imp_iff_iter` was deleted. Build7's any-height conclusion under its original implication cover is still one specialization, `iter_within_length reach_mono (fun _ => Or.inl) (reach_commutes _) within`.
+
+### (ii) Double negation
+
+With `MonotoneStep Ψ` and an exhaustive state list, `commutes_false : CommutesWithImplication Ψ False` follows from `not_not_all`, `not_not_decided`, and monotonicity. With the rising-start premise, `rise_not_not` gives `I (N + 1) y → ¬ ¬ I N y` by one call to `iter_gives_persists` at `False`. Given local stability `(¬ ¬ I N y) → I N y`, `rise_of_stable` gives `I (N + 1) y → I N y`.
+
+I removed `dual`, `dual_mono`, and `iter_dual_iff`. The former dual step unfolds to `givesStep Ψ False`. The former bridge is the symmetric direction of `imp_iff_iter_gives` at `commutes_false`.
+
+### (iii) Disjunctive loss
+
+```lean
+lostStep P guard X s :=
+  ¬ guard s ∨ ∀ a, ¬ Enabled P s a ∨ ∃ t, P.step s a t ∧ X t
+```
+
+Given `everyMove : ∀ a, a ∈ moves`, `lost_commutes everyMove G` proves `CommutesWithImplication (lostStep P guard) G` for every `G`. It uses `gather_moves` to assemble the alternatives for all listed moves. Write `L := iter (lostStep P guard) (fun s => ¬ guard s)`. With exhaustive state and move lists, `lost_shortens : L (N + 1) y → L N y` is one call to `iter_shortens`, using `lost_mono`, `lost_start`, and `lost_commutes`.
+
+I removed `lost_shorten_at_places` and `lost_pad`. The distribution example now uses `iter_succ : ∀ n z, I n z → I (n + 1) z`, valid for every monotone step with a rising start. Part H's remaining implications survive.
+
+- `lost_implies_lose` gives `lostStep P guard X s → loseStep P guard X s`. With enabledness decided at every state and move, `lost_iff_lose` gives the equivalence. `lost_not_viable` gives `L n s → ¬ Viable P guard n s` at every horizon.
+- `lost_shortening_distributes` assumes shortening at `none` for every three-state process with natural-number moves, an everywhere-true guard, and every exhaustive state list. It gives `(∀ a, p a ∨ q) → (∀ a, p a) ∨ q`. From that distribution principle, `lpo_of_distributes` gives `∀ f : Nat → Bool, (∃ n, f n = true) ∨ ∀ n, f n = false`. I wrote out the definition of `LPO` so the application does not need an import of `Change`.
+
+### S1–S6
+
+S1 removed the `rise` abbreviation. S2 revised the docstrings, added the falling module's opening description, and replaced curly apostrophes. S3 produced the single sharp reach bound and the closure equivalence above.
+
+For S4, `continues_any_case` takes an exhaustive list and gives `∀ n y, Lasting.Continues P N y → Lasting.Continues P n y` by `iter_iff_all` through `iter_iff_continues`. Given `Closed P guard K`, `closed_viable_case` gives `∀ n s, K s → Viable P guard n s` by `postfixed_in_iter` through `iter_iff_viable`. Both comparisons with the package theorems are literally `rfl`. They sit with `continues_same` in the scratch-only comparison block.
+
+S5 renamed the deciding results to `lose_shortening_decides_negations` and `lose_shortening_decides`, and the distribution result to `lost_shortening_distributes`. Their hypotheses are named `shortens`. S6 places the general theorem in `PredicateIteration` and the results requiring decidedness in `Decidedness`. All loss statements use `iter`.
+
+## 3. Sections, homes, and line counts
+
+Counts include each home marker through the last line of its block. The input comparison uses the whole build7 file and lines 17–150 of build6, from Part H's home marker through `end Loss`. Both totals are **707 physical lines**. Counting nonblank lines instead gives 589 before and 599 after.
+
+| Section | Proposed home | Source lines | Count | Imports on landing |
+|---|---|---:|---:|---|
+| List lemma | `Prelude` | 16–33 | 18 | Move the existing `remove_mem` here from `Refinement`. Core and `mem_cons_cases` suffice. |
+| Falling | `PredicateIteration` | 35–141 | 107 | `Prelude` only. |
+| Implications | `PredicateIteration` | 143–216 | 74 | Same module and import as Falling. |
+| Decidedness cases | `Decidedness` | 218–250 | 33 | Add `PredicateIteration` to the existing `Space` import. |
+| Regions and reach | `CommonResponse` | 252–320 | 69 | Add `PredicateIteration` to `GrammarLaws`. |
+| Kernels | `Viability` | 322–339 | 18 | Existing `Frame`, `Witnesses`, and `CommonResponse` suffice. |
+| Disturbances | `Lasting` | 341–362 | 22 | Existing `Viability`, `Recurrence`, and `Likeness` suffice. |
+| Courses | `Parting` | 364–397 | 34 | Existing `Distinguishing` and `Lasting` suffice. |
+| Choices | `GuardHorizon` | 399–451 | 53 | Existing `Acceptance`, `Viability`, `Keeping`, and `CommonResponse` suffice. |
+| Loss | `GuardHorizon` | 453–622 | 170 | Same imports as Choices. General iteration arrives through `CommonResponse`. |
+| Readings | `Keeping` | 624–695 | 72 | Existing `Viability` and `InquirySufficiency` suffice. |
+| Statement comparisons | Scratch only | 697–705 | 9 | Omit on landing. |
+
+The proposed imports introduce no cycle or core dependency on an application. A separate rising module is unnecessary. I checked the homes from source. The compiled artifact is the single scratch module.
+
+## 4. Final build and scope
+
+I ran the prescribed wrapper **14 times** and saved all **13 clean snapshots**. The general theorem built at 1, reach at 2, double negation at 3, and disjunctive loss at 4. Build 8 failed because a local `have sound` could not refer recursively to itself. Giving the horizon induction its own declaration, `closure_of_reach`, fixed it in build 9. Both package comparisons passed at 10. Build 14 recorded `exit 0 build 14`, and its snapshot matches the delivered source. [Final snapshot](/Users/ren/tmp/fm/build8/ScratchEdgeLaw.clean-14.lean.txt) · [Final log](/Users/ren/tmp/fm/build8/build-14.log)
+
+```json
+{
+  "tree": "/Users/ren/tmp/fm/build8",
+  "modules": 64,
+  "ran": [
+    "Becoming.ScratchEdgeLaw",
+    "BecomingScratchEdgeLawAxiomAudit"
+  ],
+  "reused": 63,
+  "unclean": [],
+  "audits": {
+    "Becoming.ScratchEdgeLaw": {
+      "theorems": 67,
+      "declarations": 81,
+      "with_axioms": {}
+    }
+  },
+  "seconds": {
+    "Becoming.ScratchEdgeLaw": 2.826,
+    "BecomingScratchEdgeLawAxiomAudit": 0.352
+  }
+}
+```
+
+I ran no other Lean command, Lake, separate checker, gate, or tests. I started no agents and imported no scratch module. I made no package or git changes and wrote nothing to builds 5, 6, or 7. My writes were confined to build8 and the requested report.

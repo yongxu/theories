@@ -1,0 +1,61 @@
+# Second repair brief: the ending side as one theorem
+
+*AI-written (Claude Fable, board row FM), 22 November 2026, frozen before the implementer ran (hash in `FROZEN-LEAN-EDGE-LAW-REPAIR-2.sha256.txt`). Scratch only. You repaired `ScratchEdgeLaw.lean` an hour ago (tree `build7`), and in another session built `ScratchEdgeCases.lean` (tree `build6`). Both built clean. This is one more repair of the law's module, for one reason: its ending side is still said three times. A clean failure, told with what blocked it, is a result.*
+
+## Where
+
+Copy `/Users/ren/tmp/fm/build7/Becoming/ScratchEdgeLaw.lean` to `/Users/ren/tmp/fm/build8/Becoming/ScratchEdgeLaw.lean` and change it there (module name unchanged). **Build only with** `/Users/ren/tmp/fm/run-build8.sh <n>`; clean means `exit 0`, `"unclean": []`, `"with_axioms": {}`. Nothing else of Lean. Save each clean build as `/Users/ren/tmp/fm/build8/ScratchEdgeLaw.clean-<n>.lean.txt`. Write only under `/Users/ren/tmp/fm/build8/` and `/Users/ren/theories/tmp/fm/whole/lean-edge-law-repair-2/` (your report). Do not touch `build5`, `build6`, `build7`. Proofs as terms; a plain docstring on every declaration that says exactly its statement with its premises, never how the proof goes, never "edge" or "law". Import no scratch module.
+
+## What is wrong
+
+In `build7` the rising side of reach is a call of `iter_persists` through `reach_imp_iff_iter`. In `build6` Part H, `lost_shorten_at_places` is the induction on places written again (for the losing step worded by a disjunction, with the moves listed). And `rise_not_not` reaches `iter_persists` by its own route (`dual`, `iter_dual_iff`). These are three tellings of one thing.
+
+## The one theorem (worked on paper; not built)
+
+Section variables: `{S : Type u}`, a step `Ψ : (S → Prop) → S → Prop`, a start `W₀ : S → Prop`, `mono : MonotoneStep Ψ`, `start : ∀ y, W₀ y → Ψ W₀ y`. Fix a proposition `G`.
+
+```lean
+/-- The step on "would give G": a state is kept when the rising step, applied to what gives G
+    wherever the given class does, gives G. -/
+def givesStep (Ψ : (S → Prop) → S → Prop) (G : Prop) (X : S → Prop) (z : S) : Prop :=
+  Ψ (fun t => X t → G) z → G
+```
+
+1. `givesStep Ψ G` is monotone (from `mono`).
+2. Call `Ψ` **commuting with G** when `∀ W z, Ψ (fun t => (W t → G) → G) z → (Ψ W z → G) → G` (name it, for example `Commutes Ψ G`).
+3. **The bridge**: with `mono` and commuting, `∀ n z, (rise Ψ W₀ n z → G) ↔ iter (givesStep Ψ G) (fun x => W₀ x → G) n z`. One direction needs only `mono` (a class is inside what gives G twice); the other is the commuting.
+4. `givesStep Ψ G` takes `fun x => W₀ x → G` into itself (from `start` and `mono`).
+5. **The theorem**: with `mono`, `start`, commuting at `G`, and a list `all` with `every : ∀ x, x ∈ all` (or the weaker `∀ x, (W₀ x → G) → x ∈ all` if it costs nothing):
+   `(rise Ψ W₀ all.length y → G) → rise Ψ W₀ (all.length + 1) y → G`, by one call of `iter_persists` through the bridge.
+   And its positive form: commuting at `G := rise Ψ W₀ all.length y` gives `rise Ψ W₀ (all.length + 1) y → rise Ψ W₀ all.length y`. Also, by `iter_iff_all`, from any height: `∀ n, rise Ψ W₀ n y → rise Ψ W₀ all.length y`.
+
+Then **three cases, each a commuting lemma of a few lines and ONE call**:
+
+- **(i) Reach.** `reachStep R W₀` commutes with every `G`, with nothing asked. `reach_rise_shortens` and the from-any-height form by the call. Keep `reach_imp_iff_iter` (the reading of reach through the grammar's region step) **only if** something still needs it, for example the one-step-sooner form `reach_rise_shortens_pred_length`; if that form also comes from the general theorem with a premise like `∀ z, (W₀ z → G) ↔ (Ψ (fun _ => G) z → G)` and `iter_persists_from_all`, do it that way and delete the special bridge. Say which you did and why. State `reach_within_length` with `every` (its odd premise in `build7` is `every` in effect).
+- **(ii) Double negation.** With `G := False` and `every`, every monotone step commutes (this is the content of `iter_dual_iff`, by `not_not_all` and `not_not_decided`). `rise_not_not` by the call; `rise_of_stable` from it. If `dual`, `dual_mono` and `iter_dual_iff` are then unused, delete them (`givesStep Ψ False` is `dual Ψ` up to unfolding).
+- **(iii) The losing side worded by a disjunction.** Move from `build6`'s `ScratchEdgeCases.lean` (Part H, read it there) into this module's `Loss` section: `lostStep`, `lost_mono`, `lost_implies_lose`, `lost_iff_lose`, `lost_not_viable`, `gather_moves`, `lost_edge_distributes`, `lpo_of_distributes`. Then: with the moves on a list (`everyMove : ∀ a, a ∈ moves`), `lostStep P guard` commutes with every `G` (by `gather_moves`); `lost_shortens` by the call. **Delete `lost_shorten_at_places` and `lost_pad`** (if `lost_edge_distributes` uses `lost_pad`, get what it needs from `iter_pred`'s rising counterpart or state the one padding lemma once for every rising chain: `rise Ψ W₀ n z → rise Ψ W₀ (n + 1) z` from `mono` and `start`).
+
+Also in the `Loss` section: write the levels with `iter`, not `rise`, if that lets `GuardHorizon` need only the module of the falling section. Say what each home must import after this repair, and whether a separate module for the rising side is still needed or the general theorem can live with the falling section (it needs nothing of `Decidedness`; case (ii) and `singleton_rise_needs_em` do).
+
+## From the reader of the `build7` text, to take in the same pass
+
+The return is `/Users/ren/theories/tmp/fm/whole/lean-edge-law-repair/RETURN-repaired-law-reader-opus.md.txt`: read it whole first. It says the module may be claimed, every statement holds, and nothing but `extend_at_places` and `remove_mem` is an induction on a list. Its findings to make here, after the general theorem above is in:
+
+- **S1. No `rise`.** `Becoming.rise` already exists in the package (Change.lean l. 159). Delete the abbreviation and write `iter` everywhere.
+- **S2. Docstrings.** Take every corrected sentence of its part (2) (for `iter`, `MonotoneStep`, `remove_mem`, `iter_persists` and the others that say "kept", `iter_persists_from_all`, `singleton_rise_needs_em`, `dual` if it survives, `rise_not_not`, `regionStep`, `held_iff_iter`, `kernel_iff_iter`, `iter_region_iff_lasts`, `not_viable_of_loss`, both theorems of deciding, `iter_iff_kept`), or a better sentence that says exactly the statement. Say "in the iterate" where a docstring now says "kept" without saying of what. ASCII apostrophes only. Give the falling section a module-style opening comment that lists what it holds.
+- **S3. Reach, said once and joined to the package.** One theorem in place of three: with `every` and `len : all.length = n + 1`, `∀ m, reaches m y → reaches n y`. And the join the reader sketches (its LESSER, not built): reaching within `n` steps against the grammar's closure, in both directions if both are short: `(∃ t, «所闭» R y t ∧ W₀ t) ↔ reaches n y` under `every` and `len` (the reader gives the direction from the closure through `held_iff_iter_pred_length`; the other is an induction on the number of steps). If `«所闭»` is reflexive-transitive in the direction needed, this is what carries "reaches the target at all"; check the direction in Grammar.lean and say.
+- **S4. Two joins the package could take now.** As the course case does for `Parting.continues_persists`: `Parting.continues_any` (Parting.lean l. 429) as one line from `iter_iff_all` through `iter_iff_continues`; and `GuardHorizon.closed_viable` (GuardHorizon.lean l. 112) as `postfixed_in_iter` at `choiceStep` through `iter_iff_viable`. State each under a `_case` name with the old statement unchanged and compare by `rfl` against the package's theorem (scratch checks, marked as not landing), or say exactly why a comparison cannot be stated.
+- **S5. Names.** No "edge" in a declaration's name or a premise's name: for the two theorems of deciding and for `lost_edge_distributes` choose names that say what is assumed (for example `…_shortening_decides…`, premise `shortens`).
+- **S6. Homes.** The reader finds that no new module is needed for the rising side: its declarations that need `Decided` fit in `Decidedness` with one added import of the falling section's module, and there is no cycle. Lay the sections out so: the general theorem of this brief and its reach case need nothing of `Decidedness`; say where each should live (the falling section's module; `CommonResponse` for reach), and head each section with its `-- home:`.
+
+## What counts as nothing gained (frozen)
+
+- **P1.** The bridge (3) does not build from `mono` and commuting alone, or the theorem (5) needs more than `mono`, `start`, commuting and the list.
+- **P2.** A case needs more than its commuting lemma and one call (a second induction on a list of states, under any name). `gather_moves`, an induction on the list of MOVES, is allowed in case (iii) and nowhere else.
+- **P3.** Any theorem of `build7` or of `build6` Part H that should survive no longer follows in one line (the deleted ones aside).
+- **P4.** Any declaration with an axiom.
+- **P5.** The module is longer after the repair than `build7`'s module plus `build6`'s Part H together (count both before and after).
+
+## What to return
+
+Your whole report as your final answer, also saved as `/Users/ren/theories/tmp/fm/whole/lean-edge-law-repair-2/REPORT.md`: (1) in five lines what built clean and what did not, P1 to P5; (2) the general theorem and each case, statements as they stand, what each calls; what was deleted; (3) the sections with their homes, line counts, and each home's imports; (4) the last build's log (its JSON), the number of builds, what you did not do.

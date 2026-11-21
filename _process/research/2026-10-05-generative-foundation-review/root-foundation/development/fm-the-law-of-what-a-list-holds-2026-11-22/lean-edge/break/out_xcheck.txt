@@ -1,0 +1,66 @@
+{
+ "viable 2x2": {
+  "premise_same": true,
+  "stab_same": true,
+  "continues_same": true,
+  "literal": [
+   688,
+   {
+    "0": 705,
+    "1": 303,
+    "2": 16
+   },
+   3362
+  ]
+ },
+ "viable 3x1": {
+  "premise_same": true,
+  "stab_same": true,
+  "continues_same": true,
+  "literal": [
+   1974,
+   {
+    "0": 1263,
+    "1": 2215,
+    "2": 570,
+    "3": 48
+   },
+   13140
+  ]
+ },
+ "kept 2x2 nothing+unused-value": {
+  "kept_same": true,
+  "stab_same": true,
+  "literal": [
+   1903,
+   {
+    "0": 687,
+    "1": 311,
+    "2": 22,
+    "3": 4
+   }
+  ]
+ },
+ "kept 2x2 where-it-ended": {
+  "kept_same": true,
+  "stab_same": true,
+  "literal": [
+   1919,
+   {
+    "0": 687,
+    "1": 321,
+    "2": 16
+   }
+  ]
+ },
+ "kept 3x2 nothing sample": {
+  "sampled": 150,
+  "disagreements": 0
+ },
+ "kept 3x2 where-it-ended sample": {
+  "sampled": 150,
+  "disagreements": 0
+ },
+ "seconds": 0.7
+}
+python3 xcheck.py  0.72s user 0.02s system 89% cpu 0.817 total

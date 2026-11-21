@@ -1,0 +1,31 @@
+(A) every monotone step |S|=1: falling (step, start) pairs 5; law at N=|V0|..|V0|+n+1 failures 0; at |V0|-1: checked 3, failures 1
+    first failure at |V0|-1: step [{}->{}; {0}->{}], V0={0}, chain ['{0}', '{}']
+    place induction with the cover asked only inside V0: cases 15, cover held 14, failures 0
+(A) every monotone step |S|=2: falling (step, start) pairs 97; law at N=|V0|..|V0|+n+1 failures 0; at |V0|-1: checked 72, failures 22
+    first failure at |V0|-1: step [{}->{}; {0}->{}; {1}->{}; {0,1}->{}], V0={0}, chain ['{0}', '{}']
+    place induction with the cover asked only inside V0: cases 873, cover held 742, failures 0
+(A) every monotone step |S|=3: falling (step, start) pairs 33819; law at N=|V0|..|V0|+n+1 failures 0; at |V0|-1: checked 26960, failures 10200
+    first failure at |V0|-1: step [{}->{}; {0}->{}; {1}->{}; {0,1}->{}; {2}->{}; {0,2}->{}; {1,2}->{}; {0,1,2}->{}], V0={0}, chain ['{0}', '{}']
+    place induction with the cover asked only inside V0: cases 811656, cover held 633548, failures 0
+(A) random monotone steps |S|=4: falling (step, start) pairs 40025; law at N=|V0|..|V0|+n+1 failures 0; at |V0|-1: checked 34172, failures 18066
+    first failure at |V0|-1: step [{}->{}; {0}->{}; {1}->{}; {0,1}->{0}; {2}->{}; {0,2}->{0,1}; {1,2}->{0,1}; {0,1,2}->{0,1,3}; {3}->{1}; {0,3}->{1,3}; {1,3}->{1}; {0,1,3}->{0,1,2,3}; {2,3}->{0,1}; {0,2,3}->{0,1,2,3}; {1,2,3}->{0,1}; {0,1,2,3}->{0,1,2,3}], V0={0}, chain ['{0}', '{}']
+    place induction with the cover asked only inside V0: cases 2361475, cover held 1571686, failures 0
+(B) two worlds in a line (now, later): values 3, maps 27, monotone in the module's sense 8; rising starts 20; positive edge fails in 1; doubly negated edge fails in 0
+    first failing: W0 [], level 1 ['later'], level 2 ['later', 'now']
+    the module's step at p=[]: monotone True; level 1 (p or not p) = ['later', 'now']; level 2 = ['later', 'now']; edge holds True; not-not level 1 = ['later', 'now']
+    the module's step at p=['later']: monotone True; level 1 (p or not p) = ['later']; level 2 = ['later', 'now']; edge holds False; not-not level 1 = ['later', 'now']
+    the module's step at p=['later', 'now']: monotone True; level 1 (p or not p) = ['later', 'now']; level 2 = ['later', 'now']; edge holds True; not-not level 1 = ['later', 'now']
+(B) a fork (now; left or right later): values 5, maps 3125, monotone in the module's sense 23; rising starts 95; positive edge fails in 10; doubly negated edge fails in 0
+    first failing: W0 ['r'], level 1 ['l', 'r'], level 2 ['l', 'now', 'r']
+    the module's step at p=[]: monotone True; level 1 (p or not p) = ['l', 'now', 'r']; level 2 = ['l', 'now', 'r']; edge holds True; not-not level 1 = ['l', 'now', 'r']
+    the module's step at p=['l']: monotone True; level 1 (p or not p) = ['l', 'r']; level 2 = ['l', 'now', 'r']; edge holds False; not-not level 1 = ['l', 'now', 'r']
+    the module's step at p=['r']: monotone True; level 1 (p or not p) = ['l', 'r']; level 2 = ['l', 'now', 'r']; edge holds False; not-not level 1 = ['l', 'now', 'r']
+    the module's step at p=['l', 'r']: monotone True; level 1 (p or not p) = ['l', 'r']; level 2 = ['l', 'now', 'r']; edge holds False; not-not level 1 = ['l', 'now', 'r']
+    the module's step at p=['l', 'now', 'r']: monotone True; level 1 (p or not p) = ['l', 'now', 'r']; level 2 = ['l', 'now', 'r']; edge holds True; not-not level 1 = ['l', 'now', 'r']
+(B) two unrelated worlds (every proposition decided): values 4, maps 256, monotone in the module's sense 9; rising starts 25; positive edge fails in 0; doubly negated edge fails in 0
+    the module's step at p=[]: monotone True; level 1 (p or not p) = ['a', 'b']; level 2 = ['a', 'b']; edge holds True; not-not level 1 = ['a', 'b']
+    the module's step at p=['a']: monotone True; level 1 (p or not p) = ['a', 'b']; level 2 = ['a', 'b']; edge holds True; not-not level 1 = ['a', 'b']
+    the module's step at p=['b']: monotone True; level 1 (p or not p) = ['a', 'b']; level 2 = ['a', 'b']; edge holds True; not-not level 1 = ['a', 'b']
+    the module's step at p=['a', 'b']: monotone True; level 1 (p or not p) = ['a', 'b']; level 2 = ['a', 'b']; edge holds True; not-not level 1 = ['a', 'b']
+seconds 1.3
+python3 weaker.py  1.27s user 0.01s system 94% cpu 1.365 total

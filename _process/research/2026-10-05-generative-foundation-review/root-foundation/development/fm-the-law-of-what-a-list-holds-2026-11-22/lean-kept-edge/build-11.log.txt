@@ -1,0 +1,24 @@
+start 01:31:07
+{
+  "tree": "/Users/ren/tmp/fm/build4",
+  "modules": 156,
+  "ran": [
+    "Becoming.ScratchKeptEdge",
+    "BecomingScratchKeptEdgeAxiomAudit"
+  ],
+  "reused": 155,
+  "unclean": [],
+  "audits": {
+    "Becoming.ScratchKeptEdge": {
+      "theorems": 30,
+      "declarations": 41,
+      "with_axioms": {}
+    }
+  },
+  "seconds": {
+    "Becoming.ScratchKeptEdge": 2.688,
+    "BecomingScratchKeptEdgeAxiomAudit": 0.348
+  }
+}
+exit 0 build 11
+end 01:31:14

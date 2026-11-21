@@ -1,0 +1,105 @@
+--- /Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReachableRanges.lean	2026-11-07 01:31:19
++++ /Users/ren/tmp/fm/build10/Becoming/ReachableRanges.lean	2026-11-22 03:35:43
+@@ -104,6 +104,12 @@
+   ranks a configuration of a course above its predecessor (`Run.not_widensWithLag_next`), so along
+   a course the lagged order ranks a successor above its predecessor exactly where same-offset
+   widening does (`Run.widensOrLater_next_iff`): the lag adds nothing there.
++* **How many moves suffice.** Applying `reachStep` k times from a target gives the starts of
++  traces into it of at most k moves (`Reaching.rise_iff_trace`). If a list of length n + 1 covers
++  every configuration, any reachable configuration can be reached in at most n moves
++  (`Reaching.reach_within_count`). For any exhaustive list, a budget at least the predecessor of
++  its length suffices for every reachable configuration (`Reaching.reach_within_of_pred_le`) and
++  every possible item (`Reaching.possible_iff_within_count`).
+ * **Keeping widening needs an unlisted range.** Keeping widening is 07's form for a chain of
+   predicates: nothing held is lost from a step to any later one, and after every step something
+   not held there is held later (`Reaching.KeepsWidening`). A chain keeping widening gathers, for
+@@ -122,6 +128,9 @@
+   (`AllAtOnce.converse_fails`). `Rise` and `Climb` are determined laws (`Rise.process_eq_law`,
+   `Climb.process_eq_law`; `Law.runs_agree`, the two-run form of Branching's `law_run_state`), so
+   they witness nothing about alternatives.
++  If a list covers every guarded configuration, the guarded configurations reachable within a
++  fixed number of moves from successive states of any run cannot keep widening
++  (`Reaching.guarded_not_keepsWidening`).
+ * **What can be reached and realized courses rank a pair oppositely, on this witness.** With a
+   course read as realized from each configuration, one configuration's realized course widens
+   another's while the other widens what can be reached over it through a course not realized
+@@ -490,6 +499,60 @@
+   match within with
+   | ⟨t, as, _, trace, admitted⟩ => ⟨t, ⟨as, trace⟩, admitted⟩
+ 
++section BoundedReach
++
++open Iteration
++
++variable {B : S → Prop}
++local notation "W" => iter (reachStep (Steps P) B) B
++
++/-- Applying `reachStep` k times from the target gives exactly the starts of traces of at most
++k moves into it. -/
++theorem rise_iff_trace : ∀ k y, W k y ↔ ∃ t as, as.length ≤ k ∧ Trace P y as t ∧ B t :=
++  iter_iff_stages (stage := fun k y => ∃ t as, as.length ≤ k ∧ Trace P y as t ∧ B t) reach_mono
++    (fun y => ⟨fun hit => ⟨y, [], Nat.le_refl _, .nil y, hit⟩, fun
++      | ⟨_, [], _, .nil _, hit⟩ => hit
++      | ⟨_, _ :: _, le, _, _⟩ => absurd le (Nat.not_succ_le_zero _)⟩)
++    (fun _ y => ⟨fun
++      | .inl hit => ⟨y, [], Nat.zero_le _, .nil y, hit⟩
++      | .inr ⟨_, ⟨a, st⟩, t, as, le, path, hit⟩ =>
++        ⟨t, a :: as, Nat.succ_le_succ le, .cons st path, hit⟩,
++      fun
++      | ⟨_, [], _, .nil _, hit⟩ => .inl hit
++      | ⟨t, a :: as, le, .cons st path, hit⟩ =>
++        .inr ⟨_, ⟨a, st⟩, t, as, Nat.le_of_succ_le_succ le, path, hit⟩⟩)
++
++variable {all : List S} (every : ∀ x, x ∈ all)
++
++include every in
++/-- **If a list of length n + 1 holds every state, each reachable target has a trace to it of at
++most n moves.** `Branching.reach_within_listed` in `Junctures` bounds the trace by the list length
++with two further premises, `decides` for single steps and `returns` for the target, while this
++bound is one move fewer and needs neither premise. -/
++theorem reach_within_count {n : Nat} (len : all.length = n + 1) {s y : S} (reach : Reach P y s) :
++    ∃ as, as.length ≤ n ∧ Trace P y as s :=
++  match (rise_iff_trace (B := fun t => t = s) n y).mp
++      ((closure_iff_reach_within every len).mp ⟨s, reach_iff_withinClosure.mp reach, rfl⟩) with
++  | ⟨_, as, le, path, rfl⟩ => ⟨as, le, path⟩
++
++include every in
++/-- If every state is listed and k is at least the predecessor of the list length,
++each reachable target has a trace to it of at most k moves. -/
++theorem reach_within_of_pred_le {k : Nat} (enough : all.length.pred ≤ k) {s y : S}
++    (reach : Reach P y s) : ∃ as, as.length ≤ k ∧ Trace P y as s :=
++  (reach_within_count every (Nat.succ_pred_eq_of_pos (length_pos_of_mem (every y))).symm reach).imp
++    fun _ h => ⟨Nat.le_trans h.1 enough, h.2⟩
++
++include every in
++/-- If every state is listed and k is at least the predecessor of the list length,
++an item is possible exactly when it is possible within k moves. -/
++theorem possible_iff_within_count {X : Type} {adm : S → X → Prop} {y : S} {x : X} {k : Nat}
++    (enough : all.length.pred ≤ k) : Possible P adm y x ↔ PossibleWithin P adm k y x :=
++  ⟨fun ⟨t, reach, hit⟩ => match reach_within_of_pred_le every enough reach with
++    | ⟨as, le, path⟩ => ⟨t, as, le, path, hit⟩, PossibleWithin.possible⟩
++
++end BoundedReach
++
+ theorem PossibleWithin.mono {k k' : Nat} (le : k ≤ k') {x : X}
+     (within : PossibleWithin P adm k s x) : PossibleWithin P adm k' s x :=
+   match within with
+@@ -694,6 +757,18 @@
+     (listed : ∃ ys : List X, ∀ x, Reaching.Possible P adm (r.state 0) x → x ∈ ys) :
+     ¬ Reaching.KeepsWidening (fun n => Reaching.PossibleWithin P adm k (r.state n)) :=
+   Reaching.not_keepsWidening_of_listed_along (Reaching.listed_along_of_listed listed)
++
++section Widening
++variable {S : Type} {A : Type v} {P : Process S A} {guard : S → Prop}
++
++/-- If every guarded state is listed, the guarded states reachable within k moves
++from successive states of any run do not keep widening. -/
++theorem Reaching.guarded_not_keepsWidening {all : List S} (within : ∀ x, guard x → x ∈ all)
++    (k : Nat) (r : Run P) :
++    ¬ Reaching.KeepsWidening (fun n =>
++      Reaching.PossibleWithin P (fun t x => x = t ∧ guard t) k (r.state n)) :=
++  Reaching.not_keepsWidening_of_listed ⟨all, fun _ ⟨_, _, rfl, held⟩ => within _ held⟩
++end Widening
+ 
+ end Along
+ 

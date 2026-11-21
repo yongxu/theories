@@ -1,0 +1,7 @@
+{"N": 2, "A": 2, "kept_under_ended_not_under_nothing": 16, "kept_under_nothing_not_under_ended": 0, "any": {"count": 16, "fewest_steps": {"steps": [[0, 0, 0], [0, 0, 1], [1, 1, 0]], "guard": [0, 1], "cls": [0]}}, "guard-only": {"count": 0, "fewest_steps": null}, "guard-only-deterministic": {"count": 0, "fewest_steps": null}}
+{"N": 3, "A": 1, "kept_under_ended_not_under_nothing": 0, "kept_under_nothing_not_under_ended": 0, "any": {"count": 0, "fewest_steps": null}, "guard-only": {"count": 0, "fewest_steps": null}, "guard-only-deterministic": {"count": 0, "fewest_steps": null}}
+{"N": 3, "A": 2, "kept_under_ended_not_under_nothing": 129108, "kept_under_nothing_not_under_ended": 0, "any": {"count": 129108, "fewest_steps": {"steps": [[0, 0, 0], [0, 0, 1], [1, 1, 0]], "guard": [0, 1], "cls": [0]}}, "guard-only": {"count": 768, "fewest_steps": {"steps": [[0, 0, 0], [0, 0, 1], [0, 1, 2], [1, 0, 2], [1, 1, 0], [2, 0, 2], [2, 1, 2]], "guard": [0, 1], "cls": [0]}}, "guard-only-deterministic": {"count": 0, "fewest_steps": null}}
+{"N": 3, "A": 2, "deterministic_guard_only_instances": 675, "separated_classes": 0, "first": null}
+{"N": 4, "A": 2, "deterministic_guard_only_instances": 87616, "separated_classes": 1344, "first": {"next": [[0, 0], [0, 1], [0, 3], [1, 0]], "guard": [1, 2, 3], "cls": [1, 2]}}
+seconds 5.0
+python3 e_search.py search  5.00s user 0.02s system 97% cpu 5.134 total

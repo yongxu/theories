@@ -1,0 +1,33 @@
+# AI-written (the coordinator's session, 22 November 2026). A check of one hand computation, not a proof.
+# Truth values: up-sets of a two-world line w0 <= w1 (a Kripke model where q holds later only).
+# Encoded as 0 = {} (false), 1 = {w1}, 2 = {w0,w1} (true). q = 1, so q or not q = 1, not true.
+F, Q, T = 0, 1, 2
+def AND(a, b): return min(a, b)
+def OR(a, b): return max(a, b)
+def IMP(a, b): return T if a <= b else b          # Heyting implication on a chain
+def NOT(a): return IMP(a, F)
+S = ['none', 'sf', 'st']                           # none, some false, some true
+def step(s, t, q):                                 # the process of lose_edge_decides, one move
+    if s == 'none': return OR(T if t == 'sf' else F, AND(q, T if t == 'st' else F))
+    if s == 'sf':   return AND(q, T if t == 'none' else F)
+    return F
+def enabled(s, q):
+    v = F
+    for t in S: v = OR(v, step(s, t, q))
+    return v
+def some(s, X, q):
+    v = F
+    for t in S: v = OR(v, AND(step(s, t, q), X[t]))
+    return v
+def lose_imp(X, q):  return {s: OR(NOT(T), IMP(enabled(s, q), some(s, X, q))) for s in S}   # the module's loseStep, guard true
+def lose_or(X, q):   return {s: OR(NOT(T), OR(NOT(enabled(s, q)), some(s, X, q))) for s in S} # the disjunctive wording
+name = {0: 'false', 1: 'q-like (not true)', 2: 'true'}
+for label, f in [('implication form (as built)', lose_imp), ('disjunctive form', lose_or)]:
+    X = {s: NOT(T) for s in S}; levels = [X]
+    for n in range(5):
+        X = f(X, Q); levels.append(X)
+    print(label)
+    for n in range(1, 5): print('   level', n, {s: name[levels[n][s]] for s in S})
+    print('   level 4 at none:', name[levels[4]['none']], '| level 3 at none:', name[levels[3]['none']],
+          '| edge 4 -> 3 at none holds in this model:', levels[4]['none'] <= levels[3]['none'])
+print('q or not q in this model:', name[OR(Q, NOT(Q))])

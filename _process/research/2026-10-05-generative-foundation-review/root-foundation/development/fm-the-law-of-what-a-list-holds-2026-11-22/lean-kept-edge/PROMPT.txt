@@ -1,0 +1,7 @@
+You are the implementer of one scratch Lean 4 module. Your whole brief is the file /Users/ren/theories/tmp/fm/whole/BRIEF-LEAN-KEPT-EDGE.md : read it first, all of it, and follow it exactly (the module, the three parts, how to build, what counts as nothing gained, the traps, what to return). The repository is /Users/ren/theories. Read /Users/ren/tmp/fm/build3/Becoming/ScratchViableEdge.lean whole before you write anything: its `extend_at_places` is the argument you are to say once, for a monotone step on predicates.
+
+Hard rules, repeated: write only under /Users/ren/tmp/fm/build4/ and /Users/ren/theories/tmp/fm/whole/lean-kept-edge/ ; build ONLY with /Users/ren/tmp/fm/run-build4.sh <n> ; run no other Lean, no lake, no check_becoming.py, no gate, no tests; change nothing in the repository or in git; start no further agents. Every declaration must have an empty axiom report. Do not edit the two copied scratch modules in build4.
+
+Work in the order the brief gives: Part 1 first, with the weakest premises, built clean before anything else; then the cases of Part 2 one at a time, each built clean; then Part 3. Save the module after each clean build as /Users/ren/tmp/fm/build4/ScratchKeptEdge.clean-<n>.lean.txt . Write proofs as terms where you can, in the package's style. Do not weaken a statement to make it pass, and do not change an old theorem's statement.
+
+Return your whole report as your final answer, in the six parts the brief lists, and save it as /Users/ren/theories/tmp/fm/whole/lean-kept-edge/REPORT.md .

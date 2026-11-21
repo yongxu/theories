@@ -1,0 +1,63 @@
+--- /dev/null	2026-11-22 03:43:31
++++ /Users/ren/tmp/fm/build10/Becoming/RisingIteration.lean	2026-11-22 03:31:58
+@@ -0,0 +1,60 @@
++import Becoming.PredicateIteration
++import Becoming.Decidedness
++
++/-!
++# RisingIteration: when a rising predicate can be bounded
++
++`Iteration.iter` applies a step repeatedly from a starting predicate. If all states are listed,
++every monotone step commutes with implication to False (`Iteration.commutes_false`). Suppose
++also that the start lies inside its first step. At any state reached one step past the list
++length, membership at the list length holds under double negation (`Iteration.rise_not_not`).
++Where that membership follows from its double negation, it holds (`Iteration.rise_of_stable`).
++
++An unconditional shortening would decide every proposition, even if required only from the empty
++start at the second step on a one-state type (`Iteration.singleton_rise_needs_em`).
++-/
++
++namespace Becoming
++namespace Iteration
++
++universe u
++
++variable {S : Type u}
++
++/-- If every monotone step on a one-state type takes membership in iterate 2 from the empty
++predicate back to membership in iterate 1, every proposition is decided. -/
++theorem singleton_rise_needs_em
++    (shortens : ∀ Ψ : (Unit → Prop) → Unit → Prop, MonotoneStep Ψ →
++      iter Ψ (fun _ => False) 2 () → iter Ψ (fun _ => False) 1 ()) (p : Prop) : Decided p :=
++  shortens (fun X _ => p ∨ (p → X ()))
++    (fun sub _ h => h.imp id (fun next hp => sub () (next hp))) (.inr fun hp => .inl hp)
++
++variable {Ψ : (S → Prop) → S → Prop} {W₀ : S → Prop}
++  (mono : MonotoneStep Ψ) (start : ∀ y, W₀ y → Ψ W₀ y)
++  {all : List S} (every : ∀ x, x ∈ all)
++
++include mono every in
++/-- On an exhaustively listed type every monotone step commutes with False. -/
++theorem commutes_false : CommutesWithImplication Ψ False :=
++  fun W z h absent => not_not_all (E := all) (fun t _ => not_not_decided (W t))
++    fun table => absent (mono (fun t nn => (table t (every t)).of_not_not nn) z h)
++
++include mono start every in
++/-- Suppose a monotone step takes its start to a predicate containing the start, and every state is
++listed. Membership one step past the list length implies double negation of membership at the list
++length. -/
++theorem rise_not_not {y : S} (reached : iter Ψ W₀ (all.length + 1) y) :
++    ¬ ¬ iter Ψ W₀ all.length y :=
++  fun no => iter_gives_persists mono start (commutes_false mono every)
++    (fun x _ => every x) no reached
++
++include mono start every in
++/-- Suppose the start lies inside its first step, the step is monotone and every state is listed.
++At a state where membership at the list length follows from its double negation, membership one
++step later implies it too. -/
++theorem rise_of_stable {y : S} (stable : (¬ ¬ iter Ψ W₀ all.length y) → iter Ψ W₀ all.length y) :
++    iter Ψ W₀ (all.length + 1) y → iter Ψ W₀ all.length y :=
++  fun reached => stable (rise_not_not mono start every reached)
++
++end Iteration
++end Becoming

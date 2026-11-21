@@ -1,0 +1,204 @@
+start 03:38:25
+{
+  "tree": "/Users/ren/tmp/fm/build10",
+  "modules": 85,
+  "ran": [
+    "BecomingCommonResponseAxiomAudit",
+    "BecomingCommonResponseSignatures",
+    "BecomingViabilityAxiomAudit",
+    "BecomingViabilitySignatures",
+    "BecomingKeepingAxiomAudit",
+    "BecomingKeepingSignatures",
+    "Becoming.Refinement",
+    "BecomingRefinementAxiomAudit",
+    "BecomingRefinementSignatures",
+    "Becoming.Attraction",
+    "BecomingAttractionAxiomAudit",
+    "BecomingAttractionSignatures",
+    "Becoming.Branching",
+    "Becoming.Likeness",
+    "BecomingLikenessAxiomAudit",
+    "BecomingLikenessSignatures",
+    "Becoming.Lasting",
+    "BecomingLastingAxiomAudit",
+    "BecomingLastingSignatures",
+    "Becoming.Diagonal",
+    "Becoming.Description",
+    "Becoming.Identification",
+    "Becoming.Distinguishing",
+    "Becoming.Parting",
+    "BecomingPartingAxiomAudit",
+    "BecomingPartingSignatures",
+    "Becoming.RisingIteration",
+    "BecomingRisingIterationAxiomAudit",
+    "Becoming.GrammarCandidates",
+    "BecomingGrammarCandidatesAxiomAudit",
+    "BecomingGrammarCandidatesSignatures",
+    "Becoming.JointKeeping",
+    "Becoming.Onward",
+    "Becoming.KeepableStep",
+    "BecomingKeepableStepAxiomAudit",
+    "BecomingKeepableStepSignatures",
+    "Becoming.ReachableRanges",
+    "BecomingReachableRangesAxiomAudit",
+    "BecomingReachableRangesSignatures",
+    "Becoming.Tolerance",
+    "BecomingToleranceAxiomAudit",
+    "BecomingToleranceSignatures",
+    "Becoming.Refinement.PreludeOnly",
+    "Becoming.Attraction.PreludeOnly",
+    "Becoming.Branching.PreludeOnly",
+    "Becoming.Likeness.PreludeOnly",
+    "Becoming.Lasting.PreludeOnly",
+    "Becoming.Diagonal.PreludeOnly",
+    "Becoming.Description.PreludeOnly",
+    "Becoming.Identification.PreludeOnly",
+    "Becoming.Distinguishing.PreludeOnly",
+    "Becoming.Parting.PreludeOnly",
+    "Becoming.JointKeeping.PreludeOnly",
+    "Becoming.Onward.PreludeOnly",
+    "Becoming.KeepableStep.PreludeOnly",
+    "Becoming.ReachableRanges.PreludeOnly",
+    "Becoming.Tolerance.PreludeOnly"
+  ],
+  "reused": 140,
+  "unclean": [],
+  "audits": {
+    "Becoming.PredicateIteration": {
+      "theorems": 21,
+      "declarations": 25,
+      "with_axioms": {}
+    },
+    "Becoming.CommonResponse": {
+      "theorems": 45,
+      "declarations": 61,
+      "with_axioms": {}
+    },
+    "Becoming.Viability": {
+      "theorems": 27,
+      "declarations": 35,
+      "with_axioms": {}
+    },
+    "Becoming.Keeping": {
+      "theorems": 33,
+      "declarations": 62,
+      "with_axioms": {}
+    },
+    "Becoming.Refinement": {
+      "theorems": 9,
+      "declarations": 11,
+      "with_axioms": {}
+    },
+    "Becoming.Likeness": {
+      "theorems": 181,
+      "declarations": 235,
+      "with_axioms": {}
+    },
+    "Becoming.Lasting": {
+      "theorems": 92,
+      "declarations": 114,
+      "with_axioms": {}
+    },
+    "Becoming.Parting": {
+      "theorems": 43,
+      "declarations": 63,
+      "with_axioms": {}
+    },
+    "Becoming.RisingIteration": {
+      "theorems": 4,
+      "declarations": 4,
+      "with_axioms": {}
+    },
+    "Becoming.GuardHorizon": {
+      "theorems": 53,
+      "declarations": 72,
+      "with_axioms": {}
+    },
+    "Becoming.Attraction": {
+      "theorems": 61,
+      "declarations": 77,
+      "with_axioms": {}
+    },
+    "Becoming.GrammarCandidates": {
+      "theorems": 73,
+      "declarations": 98,
+      "with_axioms": {}
+    },
+    "Becoming.KeepableStep": {
+      "theorems": 10,
+      "declarations": 14,
+      "with_axioms": {}
+    },
+    "Becoming.ReachableRanges": {
+      "theorems": 140,
+      "declarations": 201,
+      "with_axioms": {}
+    },
+    "Becoming.Tolerance": {
+      "theorems": 65,
+      "declarations": 82,
+      "with_axioms": {}
+    }
+  },
+  "seconds": {
+    "BecomingCommonResponseAxiomAudit": 0.312,
+    "BecomingCommonResponseSignatures": 0.234,
+    "BecomingViabilityAxiomAudit": 0.36,
+    "BecomingViabilitySignatures": 0.378,
+    "BecomingKeepingAxiomAudit": 0.33,
+    "BecomingKeepingSignatures": 0.385,
+    "Becoming.Refinement": 0.57,
+    "BecomingRefinementAxiomAudit": 0.354,
+    "BecomingRefinementSignatures": 0.357,
+    "Becoming.Attraction": 0.638,
+    "BecomingAttractionAxiomAudit": 0.659,
+    "BecomingAttractionSignatures": 0.595,
+    "Becoming.Branching": 0.848,
+    "Becoming.Likeness": 2.587,
+    "BecomingLikenessAxiomAudit": 0.544,
+    "BecomingLikenessSignatures": 0.436,
+    "Becoming.Lasting": 0.734,
+    "BecomingLastingAxiomAudit": 0.401,
+    "BecomingLastingSignatures": 0.421,
+    "Becoming.Diagonal": 0.565,
+    "Becoming.Description": 0.685,
+    "Becoming.Identification": 7.363,
+    "Becoming.Distinguishing": 0.413,
+    "Becoming.Parting": 0.618,
+    "BecomingPartingAxiomAudit": 0.488,
+    "BecomingPartingSignatures": 0.463,
+    "Becoming.RisingIteration": 0.445,
+    "BecomingRisingIterationAxiomAudit": 0.562,
+    "Becoming.GrammarCandidates": 0.606,
+    "BecomingGrammarCandidatesAxiomAudit": 0.436,
+    "BecomingGrammarCandidatesSignatures": 0.31,
+    "Becoming.JointKeeping": 0.612,
+    "Becoming.Onward": 0.559,
+    "Becoming.KeepableStep": 0.417,
+    "BecomingKeepableStepAxiomAudit": 0.368,
+    "BecomingKeepableStepSignatures": 0.368,
+    "Becoming.ReachableRanges": 1.039,
+    "BecomingReachableRangesAxiomAudit": 0.433,
+    "BecomingReachableRangesSignatures": 0.424,
+    "Becoming.Tolerance": 0.772,
+    "BecomingToleranceAxiomAudit": 0.44,
+    "BecomingToleranceSignatures": 0.453,
+    "Becoming.Refinement.PreludeOnly": 0.396,
+    "Becoming.Attraction.PreludeOnly": 0.44,
+    "Becoming.Branching.PreludeOnly": 0.713,
+    "Becoming.Likeness.PreludeOnly": 2.194,
+    "Becoming.Lasting.PreludeOnly": 0.852,
+    "Becoming.Diagonal.PreludeOnly": 0.372,
+    "Becoming.Description.PreludeOnly": 0.462,
+    "Becoming.Identification.PreludeOnly": 7.549,
+    "Becoming.Distinguishing.PreludeOnly": 0.31,
+    "Becoming.Parting.PreludeOnly": 0.508,
+    "Becoming.JointKeeping.PreludeOnly": 0.48,
+    "Becoming.Onward.PreludeOnly": 0.333,
+    "Becoming.KeepableStep.PreludeOnly": 0.273,
+    "Becoming.ReachableRanges.PreludeOnly": 0.94,
+    "Becoming.Tolerance.PreludeOnly": 0.623
+  }
+}
+exit 0 build 23
+end 03:38:42

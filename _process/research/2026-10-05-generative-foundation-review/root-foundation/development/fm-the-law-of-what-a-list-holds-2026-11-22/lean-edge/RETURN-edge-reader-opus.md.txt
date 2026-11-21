@@ -1,0 +1,132 @@
+(1) Verdict
+
+1. It survives. It is not the sixth: it gives a new finite law for keeping a guard by a choice against every outcome, and it makes two real joins.
+2. Part 1's `extend_at_places` is a real induction from `every` alone. Each level spends one place of the list. It is not `revisits_within` under another name, and I did not find the law elsewhere in the package.
+3. Part 3 proves `Parting.continues_persists` with one call of `horizon_persists`, passing the old premise `every` straight through. The bridge `continues_iff_horizon` works at a fixed horizon, so persistence comes only from Part 1.
+4. Part 4 is the converse of `Viability.keptFor_of_closed` under a finite coding. `every` and `updates` describe the coding only; neither hands in the closed family. The self-loop in `codeProcess` does not weaken the stated theorem.
+5. Strongest reason: in Parts 3 and 4 the persistence step does not come from the old laws. The old proof works on one path and cannot handle every outcome of a move. Without `horizon_persists` both proofs break. Weak spots: Part 2's fourth theorem is `closed_viable` read backwards; the saving in Part 3 is 4 lines, not 11; and as built the module stands beside `Parting`, not below it.
+
+(2) Each theorem, premises in full
+
+Read from /Users/ren/theories/tmp/fm/whole/lean-edge/ScratchViableEdge.lean.txt. `cmp` shows it is byte-identical to /Users/ren/tmp/fm/build3/Becoming/ScratchViableEdge.lean and to the clean-8 snapshot, so build-8's log is a log of this text. I ran no Lean. "HOLDS" below means I read the statement and the proof and found no gap; that it compiles rests on the builder's log. N means `all.length` throughout.
+
+Part 1. `{S : Type u} {A : Type v} {P : Process S A} {guard : S → Prop}` are implicit throughout. There are no hidden hypotheses and no `include`.
+- `remove_place {S} {y} {l : List S} : y ∈ l → ∃ rest, l.length = rest.length + 1 ∧ ∀ z, z ∈ l → z = y ∨ z ∈ rest`. P and guard are not included. HOLDS AS STATED.
+- `horizon_pred {S A P guard} {n s} : Horizon P guard (n+1) s → Horizon P guard n s`. HOLDS.
+- `extend_at_places {S A P guard} (n) (left : List S) (len : left.length = n) (cover : ∀ z, z ∈ left ∨ Horizon P guard (n+1) z) (y) (Horizon P guard n y) : Horizon P guard (n+1) y`. HOLDS.
+  - Proof: if the cover gives H(n+1) y, it is done. Otherwise y's place is spent: `rest` has length n, and the new cover uses `kept` for y and `horizon_pred` for the rest.
+  - The move is the one in `kept`, and the recursion runs on each outcome. At 0 the list is empty, so the cover alone gives the extra step.
+  - The argument is sound.
+- `horizon_persists {S A P guard} {all : List S} (every : ∀ x, x ∈ all) {y} (kept : Horizon P guard N y) : ∃ a, Enabled P y a ∧ ∀ z, P.step y a z → Horizon P guard N z`. HOLDS.
+- `viable_persists {S A : Type} {P guard all} (every) {y} (Viable P guard N y) : ∃ a, Enabled P y a ∧ ∀ z, step → Viable P guard N z`. HOLDS. Its universes are `Type` only.
+
+Part 2. `{S A : Type} {P} {guard} {all : List S} {s : S}`.
+- `viable_closed (every) : Closed P guard (Viable P guard N)`. HOLDS.
+- `viable_iff_every_horizon (every) : Viable N s ↔ ∀ n, Viable n s`. HOLDS. The forward direction is new law plus `closed_viable`.
+- `viable_iff_closed (every) : Viable N s ↔ ∃ K, Closed P guard K ∧ K s`. HOLDS. The backward direction is the old `closed_viable`.
+- `no_closed_of_not_viable (fails : ¬ Viable P guard N s) : ∀ K, Closed P guard K → ¬ K s`. HOLDS AS STATED. It has no `every`, and `all` is any list: it is `closed_viable` at n := N, contraposed. It does no new work and is not the bound on every choice.
+
+Part 3. `{S : Type u} {A : Type v} {P : Process S A}`.
+- `pairProcess` (def): `step y p z := P.step y p.1 z ∧ z = p.2`.
+- `continues_iff_horizon : ∀ n s, Lasting.Continues P n s ↔ Horizon (pairProcess P) (fun _ => True) n s`. HOLDS. Level-by-level, with no persistence in it.
+- `continues_iff_viable {S A : Type} {P} (n s)`: the same with `Viable`. HOLDS. Nothing uses it.
+- `continues_persists_case {all : List S} (every) {y} (Continues P N y) : ∃ a z, P.step y a z ∧ Continues P N z`. HOLDS. It calls only `continues_iff_horizon` and `horizon_persists`.
+- `continues_same : @continues_persists_case.{u,v} = @Parting.continues_persists.{u,v} := rfl`. HOLDS. It checks that the two statements are the same type; by proof irrelevance it says nothing about the proofs. The package's `continues_persists` still has its old proof.
+
+Part 4. `{S : Type u} {A : Type v} {O : Type w} {C : Type q} {P} {sense : S → A → S → O} {guard} {allowed : S → A → Prop} {decode : C → S → Prop}`.
+- `codeProcess` (def): `step c a d := Usable P allowed (decode c) a ∧ (d = c ∨ ∃ o, ∀ s, decode d s ↔ Seen P sense (decode c) a o s)`.
+- `code_horizon_of_kept {n c} : KeptFor P sense guard allowed n (decode c) → Horizon (codeProcess …) (fun d => ∀ s, decode d s → guard s) n c`. It is declared before the `include`, so it has no `every` and no `updates`. HOLDS. It goes one way only.
+- `InClosedFamily` (def): `∃ F, F B ∧ (∀ D, F D → ∀ s, D s → guard s) ∧ ∀ D, F D → ∃ a, Usable P allowed D a ∧ ∀ o, F (Seen P sense D a o)`. This is exactly `keptFor_of_closed`'s `family`, `within`, `closed` and `held` (Keeping.lean l. 311–314).
+- `coded_kept_iff_closed {all : List C} (every : ∀ c, c ∈ all) (updates : ∀ c a, Usable P allowed (decode c) a → ∀ o, ∃ d, ∀ s, decode d s ↔ Seen P sense (decode c) a o s) {c} : KeptFor P sense guard allowed N (decode c) ↔ InClosedFamily P sense guard allowed (decode c)`. HOLDS. `every` and `updates` are explicit through `include`; the report shows them only in the `variable`/`include` lines.
+- `coded_kept_iff_every_horizon (every) (updates) {c} : KeptFor N (decode c) ↔ ∀ n, KeptFor n (decode c)`. HOLDS.
+
+The report's descriptions match these statements, except the line count (M1 below).
+
+(3) Findings
+
+MUST:
+- **M1. The line count overstates the saving.** The report says "17 lines against 28". But `path_of_continues` stays whatever happens, because Onward.lean l. 136 (`returning_of_continues`) calls it. Without it the old chain is 21 lines: `continues_cycle` 12 (Parting l. 403–414) plus `continues_persists` 9 (l. 419–427). So the saving is 21 → 17, 4 lines. `continues_cycle` has no user outside `continues_persists` and could be retired.
+- **M2. The fourth line of Part 2 is old, and the bound on every choice is not stated.** `no_closed_of_not_viable` is `GuardHorizon.closed_viable` contraposed and holds for any list. It should not be landed or told as new; by rule 4 it repeats `closed_viable`. The bound on every choice is not stated as its own theorem: `every → (∃ n, ¬ Viable n s) → ¬ Viable N s`, or `every → ¬(∃ K, Closed K ∧ K s) → ¬ Viable N s`. Each is one line from `viable_iff_every_horizon` or `viable_iff_closed`, and constructive.
+- **M3. As built, the module stands beside the old law, not below it.** `Horizon` is in ScratchComparison, which imports `Becoming.TurningInTime`, and TurningInTime's import closure contains `Parting` and `Lasting` (I computed this with a script). So `Parting` cannot import it: `continues_same` checks a twin and does not replace the old proof. There are also two definitions of one horizon (`Horizon` beside `GuardHorizon.Viable`); rule 4 wants one.
+
+LESSER:
+- **L1.** `continues_iff_viable` is unused.
+- **L2. No built instance of Part 4.** Part 5 was not built, so Lean nowhere shows the premises of Part 4 met. They can be met on paper:
+  - A trivial `Unit` process with a guard that is always false meets `every` and `updates`, but no closed family exists.
+  - `Keeping.Matching` read through `keepsNothing` is coded by three classes: the starts, the needs, and done-or-lost.
+- **L3. `updates` asks more than the proof uses.** It is needed only at codes with Horizon N. It asks for codes even for empty observed classes. Getting codes from a finite S would in general mean deciding membership in `Seen`; this is not shown.
+- **L4. N is not shown to be tight.** On paper it is: take a chain 0→1→…→N−1 that ends with no enabled move. `Viable (N−1) 0` holds and `Viable N 0` does not.
+- **L5.** Part 2 lives at `Type` only.
+- **L6.** The `include` makes the backward direction of `coded_kept_iff_closed` carry two premises it does not use. Cosmetic.
+- **L7.** The converse of `code_horizon_of_kept` is false without `updates`: a code whose observed classes have no code can keep Horizon by staying in place. A telling must not say that Horizon on `codeProcess` is the same as `KeptFor`.
+
+(4) E1 to E6
+
+- **E1. Not found in what I read.** What I searched:
+  - A script over Becoming/*.lean for statements that have a `∀ x, x ∈ l` premise together with Viable, KeptFor, Closed, Plan, Admissible, Keepable, Kernel, Horizon, Kept, Certificate, Safe or Invariant. It found only `Actuation.chosen_completes` and `none_chosen`, `ContingentPlans.valid_iff` and its kin, and `JointKeeping.kernel_allOf_iff`. None is a finite edge.
+  - The declaration lists of every module that uses Viable, KeptFor, Admissible or Keepable: Bundles, CommonResponse, GuardHorizon, HeldForReading, JointKeeping, KeepableStep, OpenedCorrection, Keeping, and Reserve, whose `Viable` is another notion (a decaying reserve).
+  - Greps for `∀ n, Viable`, `∀ n, KeptFor`, and length-bounded keeping. These found `kernel_viable`, `keptFor_empty`, JointKeeping l. 367, Optimum l. 4477, Countdown and Courses, all different.
+  - The `every` lines in 11 of the 21 files that have `every` premises together with keeping words.
+  - The places listing (PLACES.md) for GuardHorizon and Keeping, and the record finite-continuation-plans.md: both list only the direction from a closed set to each horizon.
+- **E2. Not triggered.** Part 1 uses only `every`. There is no DecidableEq, no decision on moves, guard or step, and nothing classical: only Or- and membership-elimination into Prop, Eq substitution, `Nat.succ.inj` and `nomatch`. The repair with places carried as data (AFTER point 2) was not needed: carrying the cover as a disjunction removes the need to pick a first repeat.
+- **E3. Not triggered, narrowly.** The statement is unchanged (`rfl` at u,v) and proved by a call of Part 1. Without Part 1 the new chain is 17 lines against 21 replaced. Counting Part 1's 36 lines it is 53, which E3's frozen wording excludes from this test.
+- **E4. Not triggered.** `every` and `updates` are structural: neither mentions the guard or a horizon, and neither supplies a move. A closed family can fail to exist while both hold (L2).
+- **E5. Not checked by me.** The evidence: build-8's `"with_axioms": {}` over 19 declarations (16 theorems, 3 definitions), plus the `cmp` above. The proofs I read use no simp, omega or decide.
+- **E6.**
+  - Part 1: real work.
+  - Part 2: lines 1 to 3 use the new law; line 4 does no new work (M2).
+  - Part 3: not a round trip of the law. It re-encodes at a fixed n. Writing the induction directly for `Continues` would repeat `extend_at_places`, about 19 lines plus `remove_place`, and would not be shorter than the 17-line case.
+  - Part 4: `horizon_persists` supplies the move at every code in K. Without it the closure step fails, and a direct proof would redo Part 1.
+
+(5) The seven questions
+
+1. Done in (2). The only `include` is Part 4's `include every updates` (l. 159). It applies to the two theorems after it and not to `code_horizon_of_kept` or `InClosedFamily`. The `variable` lines in Parts 1 to 3 carry only implicit data.
+2. **Part 1:** a real argument.
+   - Each recursive call spends one place, and an outcome whose place was already spent is covered by the H(n+1) handed down from its earlier node: this is the fresh-node argument without trees or paths.
+   - **Part 3, old against new:** the old chain is a path from `Continues`, then `revisits_within` on positions of a sequence (l. 423), then `continues_cycle` going round the cycle. The new chain is `continues_iff_horizon` in, `extend_at_places` through `horizon_persists`, and `continues_iff_horizon` out, giving `Continues (N+1) y` in Horizon form.
+   - Both pass from N steps to N+1, but the new chain contains none of the old machinery: no path, no `revisits_within`, no `skipAt`, no cycle.
+   - Without `path_of_continues` the old chain is 21 lines, so the saving is 4 lines (M1).
+3. **Part 4.**
+   - `every` and `updates`: neither is the conclusion handed in (E4), and `updates` does not depend on a closed family existing.
+   - **Why the self-loop `d = c` is there:** `KeptFor (n+1)` asks only for a usable move. For `O` empty, or for a code whose observed classes have no code (`code_horizon_of_kept` has no `updates`), there may be no other successor. The self-loop makes `Enabled (codeProcess) c a` the same as `Usable (decode c) a`.
+   - **Its cost:** at level n+1 it also asks Horizon n at c, which follows from n+1 anyway.
+   - **When it would weaken anything:** only together with a missing code (L7). `coded_kept_iff_closed` uses `updates` to reach a code for each observation, and its statement mentions neither `codeProcess` nor `Horizon`. So it proves what it states.
+   - `InClosedFamily` is exactly `keptFor_of_closed`'s hypothesis, and the backward direction is that theorem verbatim. The theorem is its converse at N, under finite coding.
+4. It is `closed_viable` read backwards. No statement of the module is the bound on every choice; it is only implicit in `viable_iff_every_horizon` (M2).
+5. See E1.
+6. **What the module shows:** an arbitrary process given as a relation; at each node one enabled move against every outcome; a guard; finitely many configurations (Part 1); and in Part 4, the moves an `allowed` relation permits, a reading of each step, and classes narrowed by what is read.
+   - The choice in Part 4 has recall: a class carries every reading so far. It is a choice per class, given only as an existential: no rule function and no `Plan` is built.
+
+   **What it does not show:**
+   - No level that runs down (the Drain case was not built).
+   - No share and no lock (`TurningInTime.Locked` is not used).
+   - No rule made from the present reading only (that would be `UniformPolicy`).
+   - No infinite plan; no probabilities or costs.
+   - No codes obtained from a finite S, and no tightness of N.
+7. **Where each part would stand.**
+   - Lasting (and so Parting) and Keeping (and so GuardHorizon) all import `Becoming.Viability`. Viability is universe-polymorphic and its import closure reaches neither Parting nor Lasting.
+   - So `Horizon`, `horizon_pred`, `extend_at_places` and `horizon_persists` would stand in Viability.lean, which adds no new import edge, or in a new module importing only Viability. `remove_place` could go into Prelude next to `mem_cons_cases`.
+   - `GuardHorizon.Viable` would become this one universe-polymorphic definition. If two definitions are kept, `horizon_iff_viable` comes too, and Parting still cannot use `Viable` at u,v.
+   - Part 2 goes into GuardHorizon after `closed_viable`.
+   - Part 3 goes into Parting: `pairProcess`, `continues_iff_horizon`, and `continues_persists` proved through them. `continues_cycle` is retired and `path_of_continues` stays.
+   - Part 4 goes into Keeping after `keptFor_of_closed`.
+
+   **What has to come with it:**
+   - A core run.
+   - Head-note changes. GuardHorizon's sentence "nothing here says that a closed set … exists" becomes false for finite S once `viable_closed` lands. Parting's account of `continues_persists` (l. 44–47) changes.
+   - The records finite-continuation-plans and becoming-finite-horizon.
+   - Regenerating the places listing.
+
+(6) What I did not read
+
+- Parting outside l. 370–469 and its head note l. 40–50.
+- Lasting outside l. 930–950.
+- Prelude outside `revisits_within`, `mem_cons_cases` and `nil_of_length_zero`.
+- Onward outside l. 120–150.
+- Population (`length_le_of_sub`).
+- The filed Drain file.
+- The builder's logs 1–7, cx-output.txt, AFTER-WHOLE-READ.md, the chapters.
+- The periphery's ContinuationAdequacy and ContinuationCorrespondence.
+- The 10 remaining files with `every` premises, which I saw by name only: ChoiceCountCapture, DrawnBeyond, Dissipation, Entropy, FlowCenters, GrammarLaws, Gain, OverExchange, SelectionPool, TurningInTime.
+
+I ran no Lean, no build and no test. I checked that the brief's hash matches FROZEN-LEAN-EDGE.sha256.txt. My two scripts are in /private/tmp/claude-501/-Users-ren-theories/21947b1b-65d1-45e4-bdb9-d3582a76bb12/scratchpad/reader/: scan.py and closure.py.
