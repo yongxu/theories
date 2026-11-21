@@ -1,0 +1,118 @@
+# AI-written (Claude Fable, row FM), 22 November 2026. The owed landing applied to the worktree: the Lean draft with
+# my docstring wording, and the hand-written places beside it. Records are written after the core run (records_owed.py).
+import pathlib, shutil, json
+wt = pathlib.Path('/Users/ren/tmp/fm/wt'); main = pathlib.Path('/Users/ren/theories')
+REL = 'experiments/integrated-correction/general-framework/generative-basis/lean/becoming'
+draft = pathlib.Path('/Users/ren/tmp/fm/build11/Becoming')
+def edit(p, old, new, count=1):
+    s = p.read_text(); assert s.count(old) == count, (str(p), old[:70], s.count(old)); p.write_text(s.replace(old, new))
+for m in ('Junctures', 'ReachableRanges'):
+    assert (wt/REL/'Becoming'/(m+'.lean')).read_bytes() == (main/REL/'Becoming'/(m+'.lean')).read_bytes(), m
+    shutil.copyfile(draft/(m+'.lean'), wt/REL/'Becoming'/(m+'.lean'))
+J = wt/REL/'Becoming/Junctures.lean'
+edit(J,
+"""* **Within the count, and before a juncture.** With every configuration listed, what can be had
+  again is had within as many steps as there are configurations (`reach_within_listed`), so after
+  a keeping step at a juncture, `s` can be reached within that count. Where a configuration has a
+  keeping step and is not a juncture, no step can be refuted to keep `s`
+  (`keeps_before_juncture`): choosing is needed only at a juncture.
+""",
+"""* **Within the count, and before a juncture.** With every configuration listed, what can be had
+  again is had within as many steps as there are configurations (`reach_within_listed`;
+  `Reaching.trace_within_pred_length` in `Becoming.ReachableRanges` has one step fewer), so a
+  keeping step at a juncture reaches `s` within that count; at a configuration with a step keeping
+  `s` that is not a juncture, no step can be refuted to keep `s` (`keeps_before_juncture`):
+  choosing is needed only at a juncture.
+""")
+edit(J,
+"""/-- **With every configuration listed, a configuration from which `s` can be reached reaches it
+along a course of at most as many steps as there are configurations.**
+`Reaching.trace_within_pred_length` gives a bound of one fewer step. -/
+""",
+"""/-- **What can be had is had within the count.** With every configuration listed, a configuration
+that can have `s` has it along a course of at most as many steps as there are configurations:
+after a keeping step at a juncture, `s` is had within that many steps, and no keeping needs more.
+`Reaching.trace_within_pred_length` gives one step fewer. -/
+""")
+Rr = wt/REL/'Becoming/ReachableRanges.lean'
+edit(Rr,
+"""most n moves.** `Branching.reach_within_listed` in `Junctures` specializes this result to a budget
+of the list's own length by calling `Reaching.reach_within_of_pred_le`. -/
+""",
+"""most n moves.** `Branching.reach_within_listed` in `Junctures` states the bound at the list's
+length, one move more, from the same list. -/
+""")
+for p in (J, Rr):
+    assert max(len(l) for l in p.read_text().split('\n') if l not in (main/REL/'Becoming'/p.name).read_text().split('\n')) <= 100
+# README row
+edit(wt/REL/'README.md', "reaching within the count (`leadsWithin_trace`, `reach_within_listed`);",
+     "reaching within the count, from the list alone (`reach_within_listed`);")
+# chapter 2
+edit(wt/'theories/becoming/chapters/02-MAP.md',
+     "With every configuration listed, steps decided and `s` returning, what can have `s` has it within the count of configurations (`Branching.reach_within_listed`)",
+     "With every configuration listed, what can have `s` has it within the count of configurations (`Branching.reach_within_listed`)")
+# atlas: mapping row
+SIX = wt/'_process/research/2026-10-05-generative-foundation-review/root-foundation/development/aa-attractor-atlas/six'
+mp = SIX/'mapping.json'; raw = mp.read_text(); d = json.loads(raw)
+assert json.dumps(d, ensure_ascii=False, indent=1) + '\n' == raw, 'mapping.json does not round-trip'
+row = d['Becoming.Branching.reach_within_listed']
+assert [(b['position'], b['name']) for b in row['binders']] == [(7, 'every'), (8, 'decides'), (9, 'returns'), (11, 'reach')], row['binders']
+keep = {b['name']: b for b in row['binders']}
+keep['every']['position'] = 6; keep['reach']['position'] = 8
+row['binders'] = [keep['every'], keep['reach']]
+assert row['takes_unbound'] == {}
+mp.write_text(json.dumps(d, ensure_ascii=False, indent=1) + '\n')
+# atlas: dynamics entry
+dy = wt/'theories/becoming/results/atlas/entries/dynamics.json'
+edit(dy, '''   {
+    "law": "Becoming.Branching.reach_within_listed",
+    "takes": [
+     "branching-every",
+     "branching-decides",
+     "branching-returns",
+     "reach"
+    ]
+   },''', '''   {
+    "law": "Becoming.Branching.reach_within_listed",
+    "takes": [
+     "branching-every",
+     "reach"
+    ]
+   },''')
+edit(dy, "Where a list holds the configurations and steps are decided, the juncture is found by search and, s returning, what can have s has it within the count of configurations; ",
+     "Where a list holds the configurations, steps are decided and s returns, the juncture is found by search; with the list alone, what can have s has it within the count of configurations; ")
+# atlas: premises entry
+pr = wt/'theories/becoming/results/atlas/entries/premises.json'
+edit(pr, '''  "id": "branching-decides",
+  "name": {
+   "en": "steps decided"
+  },
+  "statement": {
+   "en": "the process's steps are decided by a Boolean test on pairs: edge x y = true exactly where some move steps from x to y"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Branching.loss_passes_juncture_listed",
+   "Becoming.Branching.reach_within_listed"
+  ],''', '''  "id": "branching-decides",
+  "name": {
+   "en": "steps decided"
+  },
+  "statement": {
+   "en": "the process's steps are decided by a Boolean test on pairs: edge x y = true exactly where some move steps from x to y"
+  },
+  "kind": "hypothesis of a law",
+  "lean": [
+   "Becoming.Branching.loss_passes_juncture_listed"
+  ],''')
+s = pr.read_text(); i = s.index('"id": "branching-decides"'); j = s.index('"id": "branching-every"')
+seg = s[i:j]; old = '"home": "theories/becoming/results/records/reaching-before-and-after-a-juncture.md#conditions--条件"'
+assert seg.count(old) == 1
+pr.write_text(s[:i] + seg.replace(old, '"home": "theories/becoming/results/records/every-loss-passes-a-juncture.md#conditions--条件"') + s[j:])
+# the atlas study's note of rows changed after the pass
+rd = SIX/'README.md'; s = rd.read_text()
+assert s.count('## Rows added after the pass') == 1
+bullet = ("- **22 November 2026, FM: one row replaced for `Becoming.Branching.reach_within_listed`**, restated in place without `decides` and `returns` (board row FM, the landing owed after the law of what a list holds). The rows of the two binders are gone; `every` is at position 6 and `reach` at 8, by the lister's rule (every binder of the elaborated type is counted) applied to the signature the scratch build printed (`S`, `A`, `P`, `s`, `all`, `every`, `y`, `reach`). AI-written; edited by hand, not by `add_rows.py`, since the lister was not run; the entry's `takes` in `dynamics.json` and the premise `branching-decides` were changed with it. No checker set to refute read this row.\n")
+if not s.endswith('\n'): s += '\n'
+rd.write_text(s + bullet)
+print('owed landing applied')

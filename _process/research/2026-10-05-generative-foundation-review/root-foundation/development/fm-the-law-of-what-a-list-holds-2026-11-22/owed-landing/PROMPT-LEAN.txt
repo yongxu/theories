@@ -1,0 +1,5 @@
+You are the implementer of a small draft for a Lean 4 package: one older theorem loses, in place, two premises it does not need, as a call of a theorem that entered the package two hours ago. Your whole brief is the file /Users/ren/theories/tmp/fm/owed/BRIEF-OWED-LEAN.md : read it first, all of it, and follow it exactly (the draft tree, how to build, six numbered steps, what counts as a failed draft, what to return). The repository is /Users/ren/theories; read AGENTS.md at its root (one page).
+
+Hard rules, repeated: change NOTHING in the repository or in git. Write only under /Users/ren/tmp/fm/build11/ (whole copies of the module files you change) and /Users/ren/theories/tmp/fm/owed/ (your report). Build ONLY with /Users/ren/tmp/fm/run-build11.sh <n> <Module> [<Module> ...] ; run no other Lean, no lake, no check_becoming.py, no gate, no tests; start no further agents. Every declaration of every module you build must have an empty axiom report. No statement of the package changes except the one the brief names.
+
+Return your whole report as your final answer, in the four parts the brief lists, and save it as /Users/ren/theories/tmp/fm/owed/REPORT-LEAN.md .

@@ -1,0 +1,33 @@
+# The owed landing: every place, and what replaces it
+
+*AI-written (Claude Fable, board row FM), 22 November 2026, 05:32:53 WIB. For the coordinating session to set against the files before the core run. The present texts and replacements are in two readers' returns beside this file; this page says which I take, and where I depart.*
+
+Returns: `RETURN-owed-tellings-fable.md.txt` (its section 3, items 3.1 to 3.7) and `RETURN-owed-atlas-opus.md.txt` (its section 3, E1 to E5). The Lean draft: `REPORT-LEAN.md`, tree `/Users/ren/tmp/fm/build11/Becoming/` (Junctures.lean, ReachableRanges.lean), built clean with the two modules that import `Junctures` directly; 403 declarations audited, no axiom.
+
+## The Lean (two files)
+
+1. **`Junctures.lean`**: `import Becoming.ReachableRanges` added. `Branching.reach_within_listed (every : ∀ x, x ∈ all) {y : S} (reach : Reach P y s) : ∃ as, as.length ≤ all.length ∧ Trace P y as s := Reaching.reach_within_of_pred_le every (Nat.pred_le _) reach`. Elaborated: `∀ {S} {A} {P} {s} {all}, (every) → ∀ {y}, Reach P y s → …` (no `edge`). `leadsWithin_trace` deleted (no other use in the package). No other statement changes.
+   - Its docstring, mine from the two proposals: "**What can be had is had within the count.** With every configuration listed, a configuration that can have `s` has it along a course of at most as many steps as there are configurations: after a keeping step at a juncture, `s` is had within that many steps, and no keeping needs more. `Reaching.trace_within_pred_length` gives one step fewer."
+   - The module docstring's bullet: "**Within the count, and before a juncture.** With every configuration listed, what can be had again is had within as many steps as there are configurations (`reach_within_listed`; `Reaching.trace_within_pred_length` in `Becoming.ReachableRanges` has one step fewer), so a keeping step at a juncture reaches `s` within that count; at a configuration with a step keeping `s` that is not a juncture, no step can be refuted to keep `s` (`keeps_before_juncture`): choosing is needed only at a juncture." (The words "with a step keeping `s`" mend an omission that was there before: `keeps_before_juncture` has that premise.)
+2. **`ReachableRanges.lean`**, the docstring of `Reaching.trace_within_pred_length`, last sentence: "`Branching.reach_within_listed` in `Junctures` states the bound at the list's length, one move more, from the same list." (no word of how either is proved).
+
+## Beside the Lean, before the core run (none of it is read by the run; done first so that one reader sees it whole)
+
+3. **The package `README.md`, the row of `Junctures`** (3.7): "reaching within the count, from the list alone (`reach_within_listed`);".
+4. **`theories/becoming/chapters/02-MAP.md` l. 93** (3.6): only "With every configuration listed, steps decided and `s` returning, what can have" becomes "With every configuration listed, what can have". Three records hash the chapter and cite no anchor (`a-way-of-units`, `going-alike-up-to-the-nets-end`, `turning-in-time`): re-pointed after reading the one-line diff.
+5. **The atlas, hand-written data** (E1 to E5, each exactly as the reader quotes):
+   - `six/mapping.json`, the row of `reach_within_listed`: the rows of `decides` and `returns` go; `every` is at position 6 and `reach` at 8 (the lister counts every binder of the elaborated type; the draft's printed signature agrees: S, A, P, s, all, every, y, reach). Edited by hand exactly as quoted, since running the lister is a Lean run; a bullet in `six/README.md` says so.
+   - `entries/dynamics.json`, entry `every-loss-passes-a-juncture`: the law's `takes` becomes `branching-every`, `reach`; and in the mechanism's English, "Where a list holds the configurations and steps are decided, the juncture is found by search and, s returning, what can have s has it within the count of configurations; " becomes "Where a list holds the configurations, steps are decided and s returns, the juncture is found by search; with the list alone, what can have s has it within the count of configurations; ".
+   - `entries/premises.json`, `branching-decides`: the theorem leaves its `lean` list; its `home` moves to `every-loss-passes-a-juncture.md#conditions--条件`, because the reaching record's conditions no longer state decided steps.
+   - `test_atlas` run by hand after these (the gate does not select it for data files).
+
+## After the core run (they need the receipt)
+
+6. **The record `reaching-before-and-after-a-juncture`** (3.4 a to g): statement (with the same mend, "at a configuration with a step keeping it that is not a juncture"), law 1 re-told without the helper's clause and without the two premises, hypotheses without "decided steps", validation scope on the new receipt with the count 2, the alias `leadsWithin_trace` replaced by `reach_within_listed`, the reference's list without the helper, the binding on the new receipt, one history note with the former law quoted. I add it to the record's `related` list beside `kept-at-the-length-of-a-list` rather than as a dependency.
+7. **The record `kept-at-the-length-of-a-list`**: `next_delta` loses its first clause (3.5).
+8. Re-points, from a bash script: 5 records for `Junctures.lean`, 5 for `ReachableRanges.lean`, 10 for the live receipt, 3 for the chapter; bindings rebound. Shared laws; render; the listing's script; my study note's line "still carries two premises" gets an appended sentence.
+9. **The board**: one Queue clause, which says as a known choice that `Junctures` now imports `ReachableRanges` and so depends on 26 more modules; and a sentence appended in row FM.
+
+## Left as they are
+
+The root's bullet and the checker's scope for `Junctures` (they tell no premise); `06-CLASSICAL-TEXTS.md` l. 490; the history pages; `zhonghua/passages.json` (39 records hash it); the atlas correspondence `cx-jianwen-ji-early-detection`, whose `says` puts the bound's three premises on `keeps_before_juncture` and was already loose before this change: a correction there goes through its read file and importer, and is not in this landing.

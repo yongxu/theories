@@ -1,0 +1,34 @@
+#!/bin/bash
+# After the owed landing's core run has PASSED and its receipt is committed: records, re-points, shared laws,
+# the study note's appended line, render, the listing's script, check. Stops at the first failure.
+set -euo pipefail
+S="$1"
+cd /Users/ren/tmp/fm/wt
+LB=experiments/integrated-correction/general-framework/generative-basis/lean/becoming
+python3 /Users/ren/tmp/fm/land3/records_owed.py "$S"
+python3 -B tools/research/research.py check > /Users/ren/tmp/fm/land3/owed-check-1.json 2>/Users/ren/tmp/fm/land3/owed-check-1.err || true
+python3 - <<'PY'
+import json,collections
+d=json.loads(open('/Users/ren/tmp/fm/land3/owed-check-1.json').read())
+sd=d.get('source_drift',[]); print(len(sd),'drift pairs in',len({x['id'] for x in sd}),'records:',dict(collections.Counter(x['path'].split('/')[-1] for x in sd)))
+print('errors that are not render:', [e for e in d.get('errors',[]) if 'generated view differs' not in e and 'missing link' not in e])
+PY
+python3 -B tools/research/repoint.py --reason "FM, the landing owed after the law of what a list holds: Branching.reach_within_listed lost two premises in place and leadsWithin_trace was deleted (Junctures.lean); one docstring sentence changed in ReachableRanges.lean; one sentence of chapter 2 lost the two premises; each change read in the diff; core run $S" --drift-json /Users/ren/tmp/fm/land3/owed-check-1.json --receipt $LB/becoming-checks/$S/verification.json --lean $LB/Becoming/Junctures.lean $LB/Becoming/ReachableRanges.lean --apply > /Users/ren/tmp/fm/land3/owed-repoint.json
+python3 - <<'PY'
+import json
+d=json.loads(open('/Users/ren/tmp/fm/land3/owed-repoint.json').read()); r=d['by_record']
+print(len(r),'records re-pointed;',sum(len(v['rebound']) for v in r.values()),'bindings rebound in',sum(1 for v in r.values() if v['rebound']),'records')
+PY
+python3 -B tools/research/shared_laws.py > /Users/ren/tmp/fm/land3/owed-shared-laws.log 2>&1
+N=_process/research/2026-10-05-generative-foundation-review/root-foundation/development/fm-the-law-of-what-a-list-holds-2026-11-22/NOTE.md
+T=$(date '+%H:%M')
+printf '\n## After: the owed landing (added 22 November, %s WIB by the clock)\n\n`Branching.reach_within_listed` lost its two unneeded premises in place the same morning, as a call of `Reaching.reach_within_of_pred_le`; `leadsWithin_trace` is deleted. What told or bound the two premises was changed with it: the record `reaching-before-and-after-a-juncture`, one sentence of chapter 2, the atlas entry'"'"'s `takes` and one sentence of its mechanism, the premise `branching-decides`, the mapping row, the README row. `Junctures` now imports `ReachableRanges`. The sentence above that says it "still carries two premises" was true when written.\n' "$T" >> "$N"
+make research-render > /Users/ren/tmp/fm/render-owed-1.log 2>&1
+( cd _process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/places-2026-11-21 && python3 -B build_places.py > /Users/ren/tmp/fm/land3/owed-build_places.log 2>&1 )
+python3 -B tools/research/research.py check > /Users/ren/tmp/fm/land3/owed-check-2.json 2>&1 && echo "check exit 0" || echo "check exit nonzero"
+python3 - <<'PY'
+import json
+s=open('/Users/ren/tmp/fm/land3/owed-check-2.json').read()
+d=json.loads(s[s.index('{'):s.rindex('}')+1]); print('errors',d.get('errors')); print('drift',len(d.get('source_drift',[])))
+PY
+git status --short | awk '{print $1}' | sort | uniq -c

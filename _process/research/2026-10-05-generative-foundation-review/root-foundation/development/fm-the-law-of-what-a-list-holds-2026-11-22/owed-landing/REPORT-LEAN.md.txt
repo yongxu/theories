@@ -1,0 +1,153 @@
+## 1. Draft result
+
+- **O1 passed.** `Junctures`, `ReachableRanges`, `Commuting` and `HeldPossible` built cleanly. All 403 audited declarations have empty axiom reports.
+- **O2 passed.** Only `Branching.reach_within_listed` changed statement. Its obsolete helper, `Branching.leadsWithin_trace`, was deleted.
+- **O3 passed.** The only explicit arguments are `every` and `reach`. The printed signature has no `edge` parameter.
+- **O4 passed.** Adding `import Becoming.ReachableRanges` to `Junctures` creates no import cycle.
+
+## 2. Signature, proof and docstring
+
+Lean printed the following signatures in the retained package build and the draft build, respectively.
+
+**Before**
+
+```lean
+@Becoming.Branching.reach_within_listed : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s : S}
+  {all : List S} {edge : S → S → Bool},
+  (∀ (x : S), x ∈ all) →
+    (∀ (x y : S), edge x y = true ↔ ∃ a, P.step x a y) →
+      Becoming.Branching.Returns P s →
+        ∀ {y : S}, Becoming.Reach P y s → ∃ as, as.length ≤ all.length ∧ Generative.Trace P y as s
+```
+
+**After**
+
+```lean
+@Becoming.Branching.reach_within_listed : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {s : S}
+  {all : List S},
+  (∀ (x : S), x ∈ all) → ∀ {y : S}, Becoming.Reach P y s → ∃ as, as.length ≤ all.length ∧ Generative.Trace P y as s
+```
+
+**Draft declaration**
+
+```lean
+/-- **With every configuration listed, a configuration from which `s` can be reached reaches it
+along a course of at most as many steps as there are configurations.**
+`Reaching.trace_within_pred_length` gives a bound of one fewer step. -/
+theorem reach_within_listed (every : ∀ x, x ∈ all) {y : S}
+    (reach : Reach P y s) : ∃ as, as.length ≤ all.length ∧ Trace P y as s :=
+  Reaching.reach_within_of_pred_le every (Nat.pred_le _) reach
+```
+
+## 3. Files, callers and imports
+
+- [Junctures.lean](/Users/ren/tmp/fm/build11/Becoming/Junctures.lean) — 10 lines added, 27 removed against the package. The diff adds one import, revises one module-docstring bullet, deletes the helper and its docstring, and replaces the target theorem in place. `reach_iff_leads`, `reach_decided_listed` and `loss_passes_juncture_listed` each retain `decides` and `returns`.
+- [ReachableRanges.lean](/Users/ren/tmp/fm/build11/Becoming/ReachableRanges.lean:530) — 2 lines added, 3 removed, all in the docstring of `Reaching.trace_within_pred_length`. The module docstring’s “How many moves suffice” bullet already states the predecessor bound and the sufficient-budget premise accurately.
+
+**Callers adapted: zero.** A search of the whole `Becoming/` package found `reach_within_listed` only in its declaration and the two modules’ documentation. The only proof references to `leadsWithin_trace` were its own recursive call and the replaced proof.
+
+**Import lines.** The draft adds `import Becoming.ReachableRanges` at `Junctures.lean:2`. I followed these imports from `ReachableRanges.lean:1–10` through their dependencies.
+
+```lean
+import Becoming.Horizon
+import Becoming.Labelled
+import Becoming.Onward
+import Becoming.Population
+import Becoming.Admission
+import Becoming.LawAlongRun
+import Becoming.Extension
+import Becoming.Lexical
+import Becoming.Bundles
+import Becoming.EventualWidening
+```
+
+The package-wide search for `import Becoming.Junctures` found exactly `Commuting.lean:1` and `HeldPossible.lean:4`. The transitive import walk from `ReachableRanges` reaches neither module, so there is no path back to `Junctures`.
+
+**Junctures module docstring, before**
+
+> **Within the count, and before a juncture.** With every configuration listed and steps decided, what can be had again is had within as many steps as there are configurations (`reach_within_listed`, `leadsWithin_trace`), so a keeping step at a juncture reaches `s` within that count; at a configuration that is not a juncture, no step can be refuted to keep `s` (`keeps_before_juncture`): choosing is needed only at a juncture.
+
+**Junctures module docstring, after**
+
+> **Within the count, and before a juncture.** With every configuration listed, what can be had again is had within as many steps as there are configurations (`reach_within_listed`), so after a keeping step at a juncture, `s` can be reached within that count. Where a configuration has a keeping step and is not a juncture, no step can be refuted to keep `s` (`keeps_before_juncture`): choosing is needed only at a juncture.
+
+**ReachableRanges theorem docstring, former closing sentence**
+
+> `Branching.reach_within_listed` in `Junctures` bounds the trace by the list length with two further premises, `decides` for single steps and `returns` for the target, while this bound is one move fewer and needs neither premise.
+
+**Replacement sentence**
+
+> `Branching.reach_within_listed` in `Junctures` specializes this result to a budget of the list's own length by calling `Reaching.reach_within_of_pred_le`.
+
+## 4. Build log
+
+**One build, exit 0.** The prescribed wrapper built all four targets together, using a draft-local cache seeded from existing compile entries. [Build log](/Users/ren/tmp/fm/build11/build-1.log)
+
+```json
+{
+  "tree": "/Users/ren/tmp/fm/build11",
+  "modules": 87,
+  "ran": [
+    "Becoming.ReachableRanges",
+    "BecomingReachableRangesAxiomAudit",
+    "BecomingReachableRangesSignatures",
+    "Becoming.Junctures",
+    "BecomingJuncturesAxiomAudit",
+    "BecomingJuncturesSignatures",
+    "Becoming.Commuting",
+    "BecomingCommutingAxiomAudit",
+    "BecomingCommutingSignatures",
+    "Becoming.HeldPossible",
+    "BecomingHeldPossibleAxiomAudit",
+    "BecomingHeldPossibleSignatures",
+    "Becoming.ReachableRanges.PreludeOnly",
+    "Becoming.Junctures.PreludeOnly",
+    "Becoming.Commuting.PreludeOnly",
+    "Becoming.HeldPossible.PreludeOnly"
+  ],
+  "reused": 166,
+  "unclean": [],
+  "audits": {
+    "Becoming.Junctures": {
+      "theorems": 50,
+      "declarations": 64,
+      "with_axioms": {}
+    },
+    "Becoming.ReachableRanges": {
+      "theorems": 140,
+      "declarations": 201,
+      "with_axioms": {}
+    },
+    "Becoming.Commuting": {
+      "theorems": 17,
+      "declarations": 20,
+      "with_axioms": {}
+    },
+    "Becoming.HeldPossible": {
+      "theorems": 89,
+      "declarations": 118,
+      "with_axioms": {}
+    }
+  },
+  "seconds": {
+    "Becoming.ReachableRanges": 3.006,
+    "BecomingReachableRangesAxiomAudit": 0.537,
+    "BecomingReachableRangesSignatures": 0.514,
+    "Becoming.Junctures": 0.654,
+    "BecomingJuncturesAxiomAudit": 0.451,
+    "BecomingJuncturesSignatures": 0.432,
+    "Becoming.Commuting": 0.458,
+    "BecomingCommutingAxiomAudit": 0.366,
+    "BecomingCommutingSignatures": 0.369,
+    "Becoming.HeldPossible": 0.758,
+    "BecomingHeldPossibleAxiomAudit": 0.449,
+    "BecomingHeldPossibleSignatures": 0.395,
+    "Becoming.ReachableRanges.PreludeOnly": 2.576,
+    "Becoming.Junctures.PreludeOnly": 0.461,
+    "Becoming.Commuting.PreludeOnly": 0.326,
+    "Becoming.HeldPossible.PreludeOnly": 0.681
+  }
+}
+```
+
+*AI-written by Codex, 22 November 2026.*

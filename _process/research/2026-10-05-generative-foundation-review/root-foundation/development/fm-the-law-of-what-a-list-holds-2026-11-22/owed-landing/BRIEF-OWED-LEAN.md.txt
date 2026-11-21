@@ -1,0 +1,41 @@
+# Brief: the owed landing's Lean, as a draft outside the repository
+
+*AI-written (Claude Fable, board row FM), 22 November 2026, frozen before the implementer ran (hash in `FROZEN-OWED-LEAN.sha256.txt`). You change NOTHING in the repository. A clean failure, told with what blocked it, is a result.*
+
+## What we are doing
+
+`/Users/ren/theories` draws a map of how anything forms, persists, changes and ends, with its core proved in Lean 4 with no axioms. Read `AGENTS.md` at the repository root (one page): each thing said once, and joined; a telling says exactly what is proved, with its premises.
+
+The package is `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/`. Two hours ago a law entered it (`Becoming.PredicateIteration`, namespace `Becoming.Iteration`) with cases in thirteen modules. One of them, in `ReachableRanges.lean`, is `Reaching.trace_within_pred_length` with `Reaching.reach_within_of_pred_le`: where a list holds every configuration, what can be reached is reached by a trace of at most one move fewer than the list is long, from the list alone. An older theorem says a weaker thing under two more premises:
+
+```lean
+-- Junctures.lean, l. 328, in `section Listed` (namespace Branching)
+theorem reach_within_listed (every : ∀ x, x ∈ all)
+    (decides : ∀ x y, edge x y = true ↔ ∃ a, P.step x a y) (returns : Returns P s) {y : S}
+    (reach : Reach P y s) : ∃ as, as.length ≤ all.length ∧ Trace P y as s
+```
+
+It does not need `decides` or `returns`. This landing drops them **in place**: the name and the conclusion stay.
+
+## The draft
+
+Tree `/Users/ren/tmp/fm/build11/Becoming/`: whole copies of the package files you change, under the same names. **Build only with** `/Users/ren/tmp/fm/run-build11.sh <n> <Module> [<Module> …]` (module names without `Becoming.`); clean means `exit 0`, `"unclean": []`, `"with_axioms": {}`. Nothing else of Lean (no `lake`, no `check_becoming.py`, never `--help`, no gate, no tests). Write only under `/Users/ren/tmp/fm/build11/` and `/Users/ren/theories/tmp/fm/owed/` (your report). Change nothing in the repository or in git. Start no further agents. Proofs as terms; no new mathematics.
+
+1. **`Junctures.lean`**: `Branching.reach_within_listed` keeps its name and its conclusion and takes only `every` and `reach` (and whatever implicit arguments the conclusion needs), proved by one call of `Reaching.reach_within_of_pred_le` (read it in `ReachableRanges.lean`; its budget premise is met by `Nat.pred_le _`). For that `Junctures` imports `Becoming.ReachableRanges`: check by the import lines that this closes no cycle (does anything `ReachableRanges` imports, directly or not, import `Junctures`?) and say what you read. If the theorem's section variables (`edge`, the list `all`) force arguments it no longer uses, restate it so that it carries none it does not use, and say exactly how its signature now reads. Its docstring says the statement: with every configuration listed, a configuration from which `s` can be reached reaches it along a course of at most as many steps as there are configurations (and, in a second sentence, that `Reaching.trace_within_pred_length` gives one fewer). Keep the bold first sentence in the home's manner.
+2. **`leadsWithin_trace`** (Junctures l. 311): its only use was the old proof. Grep the whole package. If nothing else uses it, delete it; if something does, leave it and say what.
+3. **Callers**: grep the whole package for `reach_within_listed`; adapt every caller to the new signature (pass fewer arguments), changing no other statement. List them.
+4. **`Junctures`' module docstring** (near ll. 60–68): it says "With every configuration listed and steps decided, what can be had again is had within as many steps as there are configurations (`reach_within_listed`, `leadsWithin_trace`), so a keeping step at a juncture reaches `s` within that count". Rewrite only what becomes false: the premise "and steps decided" belongs to the other theorems of that bullet, not to this one; `leadsWithin_trace` goes if deleted. Read the whole bullet and the theorems it names before rewriting, so that each clause keeps the premises its theorem has.
+5. **`ReachableRanges.lean`**: the docstring of `Reaching.trace_within_pred_length` ends with a sentence telling that `Branching.reach_within_listed` concludes its bound "under the two further premises `decides` and `returns`, which this theorem does not need". After this landing that is false. Replace it with one that is true: that `Branching.reach_within_listed` (`Junctures`) is this at the list's own length, by a call. Check the module docstring of `ReachableRanges` for the same telling.
+   NOTE the import direction: `Junctures` will import `ReachableRanges`, so `ReachableRanges` only NAMES the other theorem in a docstring; it must not use it.
+6. At the end build, in ONE call, `Junctures`, `ReachableRanges` and every module of the package that imports `Junctures` directly (find them by grep of `import Becoming.Junctures`), so that every caller is compiled.
+
+## What counts as a failed draft (frozen)
+
+- **O1.** Any module named in step 6 does not build clean, or any declaration has an axiom.
+- **O2.** Any statement of the package changes other than `Branching.reach_within_listed` (and `leadsWithin_trace`, deleted). In particular `reach_iff_leads`, `reach_decided_listed`, `loss_passes_juncture_listed` keep `decides` and `returns`: they use them.
+- **O3.** `reach_within_listed` still carries an argument its proof does not use (a section variable pulled in, a `let _ :=`).
+- **O4.** An import cycle.
+
+## What to return
+
+Your whole report as your final answer, also saved as `/Users/ren/theories/tmp/fm/owed/REPORT-LEAN.md`: (1) in four lines what built clean, O1 to O4; (2) the theorem's signature before and after, exactly as Lean elaborates it if you can tell (which implicit arguments it has), its new proof and docstring; (3) every file changed with lines added and removed against the package, every caller adapted, what was deleted; the import lines read for the cycle check; the module docstring sentences before and after; (4) the last build's log (its JSON) and the number of builds.

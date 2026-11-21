@@ -1,0 +1,298 @@
+**LB** = `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming`, **RF** = `/Users/ren/theories/_process/research/2026-10-05-generative-foundation-review/root-foundation`, **REC** = `/Users/ren/theories/theories/becoming/results/records`. Read at main `7a962d54a`. I ran no Lean, build, gate, render or test, only greps and read-only Python; nothing was changed.
+
+## 1. Verdict
+
+1. Six hand-written files must change, in about fourteen texts: `Junctures.lean` (header bullet, docstring), `ReachableRanges.lean` (one docstring), the record `reaching-before-and-after-a-juncture.json` (eight fields), the record `kept-at-the-length-of-a-list.json` (`next_delta`), `02-MAP.md` l. 93, and the package `README.md` l. 191. The board and the FM note are their holders' to update.
+2. "Nothing else in the Lean changes" cannot hold: the docstring of `Reaching.trace_within_pred_length` becomes false, so `ReachableRanges.lean`'s bytes move, with 6 records to re-point and 3 bindings to rebind.
+3. Riskiest is the record. Its alias `Becoming.Branching.leadsWithin_trace` and its reference's declaration list fail `research.py check` once the theorem is deleted. Taking "decided steps" out of its conditions strands the atlas premise `branching-decides`, whose `home` is this record's Conditions section (the other reader's file).
+4. The `02-MAP.md` edit will show as source drift on three records that hash the chapter without citing an anchor. The root bullet, the checker's scope text, the 06 row and the history pages stay exactly true.
+
+## 2. Hits, with class
+
+Classes: (i) stays true; (ii) true but tells premises no longer needed; (iii) becomes false; (iv) bound by a hash or declaration list; (g) generated; (h) frozen history or a study record of its day.
+
+**Hand-written, live**
+
+| File : line | What it says | Class |
+|---|---|---|
+| LB/Becoming/Junctures.lean : 63–67 | header bullet "With every configuration listed and steps decided … (`reach_within_listed`, `leadsWithin_trace`)" | (ii), and names a deleted declaration |
+| LB/Becoming/Junctures.lean : 324–327 | docstring "With every configuration listed, steps decided and `s` returning …" | (ii) |
+| LB/Becoming/Junctures.lean : 25–27, 181, 276–307 | found forms, `reach_iff_leads`, `reach_decided_listed`, `loss_passes_juncture_listed` | (i) |
+| LB/Becoming/ReachableRanges.lean : 530–533 | docstring "… bounds the trace by the list length with two further premises, `decides` … and `returns` …" | (iii) |
+| LB/Becoming/ReachableRanges.lean : 107–112, 174–176 | header "How many moves suffice"; does not name Junctures | (i) |
+| LB/Becoming.lean : 2948–2958 | bullet "What can be had is had within the count of configurations, and before a juncture no step needs choosing." | (i) |
+| LB/check_becoming.py : 3805–3811 | scope text, same sentence | (i) |
+| LB/README.md : 191 | "reaching within the count (`leadsWithin_trace`, `reach_within_listed`)" | (iii), names a deleted declaration |
+| LB/README.zh.md | no Junctures row found (grep `junctur`, `loss_passes`, `keeps_before`) | — |
+| theories/becoming/chapters/02-MAP.md : 93 | "With every configuration listed, steps decided and `s` returning, what can have `s` has it within the count …" | (ii) |
+| theories/becoming/chapters/06-CLASSICAL-TEXTS.md : 490 | pointer row to the anchor | (i) |
+| REC/reaching-before-and-after-a-juncture.json : 13–14 | statement, en and zh | (ii) |
+| same : 18–19 | law 1, en and zh | (iii) first clause tells the deleted helper; (ii) second clause |
+| same : 21, 71, 106 | `leadsWithin_trace` in law declarations, aliases, reference declarations | (iv), each fails the check after deletion |
+| same : 35–36 | hypotheses "… and decided steps for the bound" | (ii) |
+| same : 56–57 | validation_scope "the 3 declarations cited here … (receipt 20261022T060905…)" | (iii) |
+| same : reference hash l. 109, proof binding l. 154 | Junctures hash `4e225858…`, receipt `20261028T061626.538602Z` | (iv) |
+| same : law 2, does_not_show, correspondence, both dependency details | | (i) |
+| REC/kept-at-the-length-of-a-list.json : 231–232 | next_delta "Branching.reach_within_listed to lose in place the two premises …" | (iii) once landed |
+| same : law 8 | "for a process, what can be reached is reached by at most n moves" | (i); its ReachableRanges hash is (iv) |
+| /Users/ren/theories/_process/BECOMING-WORKBOARD.md : 40, 57, 87 | the owed landing; quoted in §3.9 | the holders' |
+| RF/development/fm-the-law-of-what-a-list-holds-2026-11-22/NOTE.md : 35 | "still carries two premises it does not need; dropping them in place is owed" | (iii) once landed; the row's own note |
+
+**Atlas (the other reader's part; noted only where it touches mine)**
+
+- `theories/becoming/results/atlas/entries/premises.json`: `branching-decides` and `branching-every` list the theorem under `lean`, and both have `home` = `reaching-before-and-after-a-juncture.md#conditions--条件`.
+- `entries/dynamics.json` l. 478, 490, 665 names the law and this record's "hypothesis 1", which `families/a.md` l. 160 quotes.
+- `entries/correspondences.json` l. 20909 (`cx-jianwen-ji-early-detection`, `says`) reads "(any process; every configuration listed, steps decided, `s` returning). At a configuration with a step keeping `s` that is no juncture …". It puts the bound's three premises on `keeps_before_juncture`, which has none of them: (ii), and so before this change. `says` is checked only for being non-empty (`atlas.py` l. 744). A correction goes to the cx read file and the importer.
+- `RF/development/aa-attractor-atlas/six/mapping.json` l. 594.
+
+**Generated (g)**
+
+- By `make research-render`: `REC/reaching-before-and-after-a-juncture.md` (l. 13, 61, 71), `REC/kept-at-the-length-of-a-list.md` l. 68, `RESULTS.md`, `DEPENDENCIES.md`, `results/THEORY-GRAPH.md`, `results/data/theory-graph.json`, `results/atlas/families/a.md` (l. 157, 160, 171), `results/atlas/premises/a.md` (l. 21–22), `results/data/atlas.json`, `results/atlas/crosswalk/jian-and-wenyan-as-formal-language.md` l. 355, `results/atlas/map.html`, `results/data/lean-index.json`, `results/lean-declarations/becoming-core-part-3.md` (l. 3450–3451), `RF/mirror/BECOMING-RENEWAL-READING/342.md`. All but `shared-laws.json` and the places listing are in `generated-manifest.json`.
+- By `tools/research/shared_laws.py` after the core run: `results/data/shared-laws.json` l. 39341 (law 1 with both declarations; now "finite runs; anchor, not reached").
+- By the core run: `LB/becoming-verification.json`.
+- By `build_places.py`: `RF/development/dj-a-line-on-a-stock/places-2026-11-21/place/Junctures.md` and `places.json`. The readers' returns in them (l. 47, 48, 65: "under `every`, `decides`, `returns`") are of their day.
+
+**History or study records of their day (h); leave**
+
+- `theories/becoming/history/CIVILIZATION-THOUGHT-AND-BECOMING.md` l. 321 ("可得者在构形数之内得之", no premise told): (i), and hashed by the record.
+- `theories/becoming/history/THE-THEORY-OF-BECOMING.md` l. 1001 and `.zh.md` l. 705 ("every configuration listed for the bound"): (i).
+- `RF/BECOMING-RENEWAL-READING.md` §342 (l. 15311–15312, 15330) and `RF/BECOMING-SIGNIFICANCE-REVIEW.md` l. 1554.
+- `RF/development/zhonghua/passages.json` l. 22352, 22660 ("构形列尽、步可判定而 s 复返时…"): (ii), true as written; 39 records hash this file, so do not edit it.
+- `RF/development/tm-traditions-onto-the-map/prototype/corrections.json` l. 774, 805; `RF/development/zg-gaps/*`; `RF/THEOREM-CONNECTIVITY.json` l. 12495–12496 (a dump of 7 November that does not hold the 21 November names).
+- `RF/development/aa-attractor-atlas/phase1/*`, `six/extracts/extract-A.jsonl`, `readers-2026-11-04/dynamics-map-knowing.md`.
+- `RF/development/fm-the-law-of-what-a-list-holds-2026-11-22/*` except NOTE.md; `RF/development/fm-whole-read-2026-11-22/*`; `RF/development/ou3c-anchors-on-the-grammar/tree/Becoming/Junctures.lean`.
+- `_process/research/2026-10-05-repository-reconciliation/architecture/records-index.tsv` l. 263.
+- Every `LB/becoming-checks/*` receipt and `gs1-regularity/superseded-receipt`.
+
+The other phrase hits ("within the count", "steps decided", 步可判定, 构形数之内) tell other theorems: `Law.enters_returning_within`, `Parting.world_right_iff`, `loss_passes_juncture_listed`, the regime laws. None tells this one.
+
+## 3. Present text and replacement
+
+`<RUN>` is the new core run's id.
+
+### 3.1 LB/Becoming/Junctures.lean, header l. 63–67
+
+PRESENT
+```
+* **Within the count, and before a juncture.** With every configuration listed and steps decided,
+  what can be had again is had within as many steps as there are configurations
+  (`reach_within_listed`, `leadsWithin_trace`), so a keeping step at a juncture reaches `s` within
+  that count; at a configuration that is not a juncture, no step can be refuted to keep `s`
+  (`keeps_before_juncture`): choosing is needed only at a juncture.
+```
+REPLACEMENT
+```
+* **Within the count, and before a juncture.** With every configuration listed, what can be had
+  again is had within as many steps as there are configurations (`reach_within_listed`, from
+  `Reaching.reach_within_of_pred_le` in `Becoming.ReachableRanges`, whose bound is one step
+  fewer), so a keeping step at a juncture reaches `s` within that count; at a configuration that
+  is not a juncture, no step can be refuted to keep `s` (`keeps_before_juncture`): choosing is
+  needed only at a juncture.
+```
+The second clause omits `keeps_before_juncture`'s premise that the configuration has a step keeping `s`; without it the clause is false. That was so before this change. To mend it here, write "at a configuration with a step keeping `s` that is not a juncture". The same omission is in the record's `statement` (3.4a).
+
+### 3.2 LB/Becoming/Junctures.lean, docstring l. 324–327
+
+PRESENT
+```
+/-- **What can be had is had within the count.** With every configuration listed, steps decided and
+`s` returning, a configuration that can have `s` again has it along a course of at most as many
+steps as there are configurations: after a keeping step at a juncture, `s` is had within that many
+steps, and no keeping needs more. -/
+```
+REPLACEMENT
+```
+/-- **What can be had is had within the count.** With every configuration listed, a configuration
+that can have `s` has it along a course of at most as many steps as there are configurations:
+after a keeping step at a juncture, `s` is had within that many steps, and no keeping needs more.
+From `Reaching.reach_within_of_pred_le`, whose bound is one step fewer. -/
+```
+"again" is dropped because `s` need not return. The theorem stays inside `section Listed` under "## Listed configurations with decided steps" while using no decided step; `edge` leaves its signature, since it is no longer mentioned.
+
+### 3.3 LB/Becoming/ReachableRanges.lean, docstring l. 530–533
+
+PRESENT
+```
+/-- **If a list of length n + 1 holds every state, each reachable target has a trace to it of at
+most n moves.** `Branching.reach_within_listed` in `Junctures` bounds the trace by the list length
+with two further premises, `decides` for single steps and `returns` for the target, while this
+bound is one move fewer and needs neither premise. -/
+```
+REPLACEMENT
+```
+/-- **If a list of length n + 1 holds every state, each reachable target has a trace to it of at
+most n moves.** `Branching.reach_within_listed` in `Junctures` states the bound at the list's
+length, one move more, from the same list; it follows from this through
+`reach_within_of_pred_le`. -/
+```
+If the new proof calls `trace_within_pred_length` directly, end at "it follows from this."
+
+### 3.4 REC/reaching-before-and-after-a-juncture.json
+
+**(a) statement, l. 13–14**
+
+PRESENT en: `With every configuration listed and steps decided, what can be had again is had within as many steps as there are configurations; at a configuration that is not a juncture, no step can be refuted to keep it.`
+REPLACEMENT en: `With every configuration listed, what can be had again is had within as many steps as there are configurations; at a configuration that is not a juncture, no step can be refuted to keep it.`
+
+PRESENT zh: `构形列尽、步可判定时，仍可再得者在不多于构形数之步内得之；不是机之处，无一步可被驳为不保之。`
+REPLACEMENT zh: `构形列尽时，仍可再得者在不多于构形数之步内得之；不是机之处，无一步可被驳为不保之。`
+
+To mend the earlier omission as well: en "…; at a configuration with a step keeping it that is not a juncture, no step can be refuted to keep it." and zh "…；有保之之一步而不是机之处，无一步可被驳为不保之。" Both stay within 300 / 150.
+
+**(b) law 1, l. 18–23**
+
+PRESENT en: `A configuration leading into s within k steps has a step and a course of fewer than k steps into s; with every configuration listed, steps decided and s returning, a configuration from which s can be had has it within the count of configurations.`
+REPLACEMENT en: `With every configuration listed, a configuration from which s can be had has it within the count of configurations.`
+
+PRESENT zh: `在 k 步内通向 s 之构形有一步及其后少于 k 步之行程入 s；构形列尽、步可判定、s 复返时，可得 s 之构形在构形数之内得之。`
+REPLACEMENT zh: `构形列尽时，可得 s 之构形在构形数之内得之。`
+
+PRESENT declarations: `["Becoming.Branching.leadsWithin_trace", "Becoming.Branching.reach_within_listed"]`
+REPLACEMENT: `["Becoming.Branching.reach_within_listed"]`
+
+Law 2 stays as it is; it states both of `keeps_before_juncture`'s premises.
+
+**(c) hypotheses, l. 35–36**
+
+PRESENT en: `No axiom; a finite list of every configuration and decided steps for the bound; none for the juncture law.`
+REPLACEMENT en: `No axiom; a finite list of every configuration for the bound; none for the juncture law.`
+PRESENT zh: `不加公理；界须构形之有限全列与可判定之步；机之律无前提。`
+REPLACEMENT zh: `不加公理；界须构形之有限全列；机之律无前提。`
+
+- The field scopes its premises to "the bound", so decided steps were never told as a premise of the whole record. It never listed a returning configuration; only the law did. After the change it is right for both laws.
+- Once this lands, the atlas premise `branching-decides` (still a premise of `loss_passes_juncture_listed`) has a home that no longer states it. `every-loss-passes-a-juncture.md#conditions--条件` states it ("listed configurations with decided steps of the found forms"). `branching-every`'s home still fits.
+
+**(d) validation_scope, l. 56–57**
+
+PRESENT en: `Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T060905.150236Z): the 3 declarations cited here that the modules gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 342; not independently reviewed by a person.`
+REPLACEMENT en: `Machine-checked by the consolidated Lean 4.29.1 checker (receipt <RUN>): the 2 declarations cited here have empty axiom reports; the checker verifies core purity. First built and reviewed in one session (study section 342; receipt 20261022T060905.150236Z, the bound then under two further premises); the bound from the list alone was read before landing by readers who took no part; not independently reviewed by a person.`
+
+PRESENT zh: `Lean 4.29.1 合并检查器实查（回执 20261022T060905.150236Z）：本记录所引之新增 3 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 342 节；未经人的独立审查。`
+REPLACEMENT zh: `Lean 4.29.1 合并检查器实查（回执 <RUN>）：本记录所引 2 项声明公理报告为空；检查器并核对核心纯净。初在一个会话中构建并审查（研究第 342 节；回执 20261022T060905.150236Z，其时界另带两个前提）；只凭列表之界在落地前经未参与的读者审读；未经人的独立审查。`
+
+"Empty axiom reports" is to be confirmed from the run. The FM landing left re-told records' scopes on their old receipts, but here the count "3" would be wrong.
+
+**(e) aliases, l. 68–72**
+
+PRESENT third alias: `"Becoming.Branching.leadsWithin_trace"`
+REPLACEMENT: `"Becoming.Branching.reach_within_listed"`
+
+Leaving it fails with "alias not elaborated in the bound receipts" (`registry.py` l. 1071–1077). No other record carries the new alias.
+
+**(f) references and proof binding**
+
+- Reference 1 (Junctures.lean), declarations PRESENT `[…keeps_before_juncture, …leadsWithin_trace, …reach_within_listed]`; REPLACEMENT `["Becoming.Branching.keeps_before_juncture", "Becoming.Branching.reach_within_listed"]`. Its sha256 becomes the new bytes.
+- Add one `receipt` reference for `becoming-checks/<RUN>/verification.json`, and point `proof_bindings[0].receipt` at it (`repoint.py --receipt … --lean …`). Keep the three old receipts.
+- No reference to `ReachableRanges.lean` and no second binding is needed. The check asks only that a law's declarations be among the declarations of some reference (`registry.py` l. 489–499), and `reach_within_listed` stays in Junctures.lean. The checker does not audit transitive imports (RESULT-WORKFLOW, "Exit codes and scope of the checker"). Adding the reference would tie this record to every later byte of ReachableRanges for nothing the check reads.
+- The join can be carried by a third dependency, which is my proposal and is not required. It makes no cycle, since `kept-at-the-length-of-a-list` has no dependencies:
+```json
+{
+  "id": "kept-at-the-length-of-a-list",
+  "relation": "formal-reuse",
+  "detail": {
+    "en": "Its bound on reach where a list holds every state, one move fewer; the bound here follows from it.",
+    "zh": "其一列表容纳每个状态时之可达之界，少一步；此处之界由之而得。"
+  }
+}
+```
+
+**(g) history, appended; and `reviewed_at_utc` refreshed from the clock**
+
+```json
+{
+  "en": "22 November 2026, board row FM: the first law re-told. Branching.reach_within_listed keeps its name and conclusion and loses two premises (steps decided, s returning); it asks only a list holding every configuration, and follows from Reaching.reach_within_of_pred_le (record kept-at-the-length-of-a-list). Branching.leadsWithin_trace, used by no other proof, is deleted and leaves the law, the references and the aliases. Statement and hypotheses no longer name decided steps; the second law is unchanged. Former first law: \"A configuration leading into s within k steps has a step and a course of fewer than k steps into s; with every configuration listed, steps decided and s returning, a configuration from which s can be had has it within the count of configurations.\" Bound to core run <RUN>.",
+  "zh": "2026年11月22日，工作板条目 FM：第一条规律重述。Branching.reach_within_listed 名称与结论不变，去掉两个前提（步可判定、s 复返），只须一列表容纳每个构形，由 Reaching.reach_within_of_pred_le 而得（见记录 kept-at-the-length-of-a-list）。Branching.leadsWithin_trace 不为其他证明所用，删去，从该律、引用与别名除去。陈述与前提不再提可判定之步；第二条规律不变。第一条规律原文：“在 k 步内通向 s 之构形有一步及其后少于 k 步之行程入 s；构形列尽、步可判定、s 复返时，可得 s 之构形在构形数之内得之。” 绑定于核心运行 <RUN>。"
+}
+```
+Take the date from the clock at landing.
+
+### 3.5 REC/kept-at-the-length-of-a-list.json, next_delta l. 231–232
+
+PRESENT en: `Branching.reach_within_listed to lose in place the two premises it does not need; a case with a level that runs down and a reading in one statement; the run from a family that keeps moving as a call.`
+REPLACEMENT en: `A case with a level that runs down and a reading in one statement; the run from a family that keeps moving as a call.`
+PRESENT zh: `Branching.reach_within_listed 就地去掉它不需要的两个前提；一个在同一陈述中兼有下降之量与读取的例；自持续移动之族得出运行，作为一次调用。`
+REPLACEMENT zh: `一个在同一陈述中兼有下降之量与读取的例；自持续移动之族得出运行，作为一次调用。`
+
+- Refresh `reviewed_at_utc` (the next step is content). No history note is required for this field alone.
+- Law 8 stays true. Its `ReachableRanges.lean` hash and binding move with 3.3.
+- If the dependency in 3.4f is taken, the connecting declaration `Becoming.Reaching.reach_within_of_pred_le` is not among this record's declarations. Adding it to law 8 and to the ReachableRanges reference would be a declaration-list change and take a history note there.
+
+### 3.6 theories/becoming/chapters/02-MAP.md, anchor `r-reaching-before-and-after-a-juncture`, l. 92–93
+
+WHOLE PARAGRAPH, PRESENT
+```
+<a id="r-reaching-before-and-after-a-juncture"></a>
+**Theorem** (any process). With every configuration listed, steps decided and `s` returning, what can have `s` has it within the count of configurations (`Branching.reach_within_listed`); at a configuration with a step keeping `s` that is no juncture, no step can be refuted to keep it: a choice matters only at a juncture (`Branching.keeps_before_juncture`; [record](../results/records/reaching-before-and-after-a-juncture.md)).
+```
+REPLACE ONLY
+`With every configuration listed, steps decided and `s` returning, what can have` → `With every configuration listed, what can have`
+
+What binds it:
+- The record itself does not reference `02-MAP.md`; its `statement` references are the two history pages. So the edit drifts nothing for this record.
+- 15 records reference `02-MAP.md`. Twelve are at an older reviewed hash (`269cd7fdc8…`) and cite anchors of the chapter; none cites `#2-return-and-attraction`, the `##` section over l. 93, and l. 93 links none of their pages. The edit is `changed_outside_cited` for them and needs no action.
+- Three are at the current hash `ce9b7396…`, cite no anchor, and are not linked from the chapter: `a-way-of-units`, `going-alike-up-to-the-nets-end`, `turning-in-time`. By `scoped_drift` any rewritten line counts for such a record, so all three will show source drift. After reading the diff: `repoint.py --paths theories/becoming/chapters/02-MAP.md --ids a-way-of-units going-alike-up-to-the-nets-end turning-in-time --reason … --apply`, one line in `rebinds.jsonl`, no history note.
+- The gate's `restated` list will name the live lines linking the anchor or the record page, for a reader other than the author: `06-CLASSICAL-TEXTS.md:490` and the generated atlas, crosswalk and register pages. I read the 06 row; it stays true.
+- No other hash of `02-MAP.md` was found in tracked files; the atlas and crosswalk cite the anchor only, and it stays.
+
+### 3.7 LB/README.md, l. 191
+
+PRESENT: `reaching within the count (`leadsWithin_trace`, `reach_within_listed`);`
+REPLACEMENT: `reaching within the count, from the list alone (`reach_within_listed`);`
+
+The rest of the row stays. `README.zh.md` has no row to change.
+
+### 3.8 Stay as they are
+
+LB/Becoming.lean l. 2956–2957 and LB/check_becoming.py l. 3810 tell no premise and stay true. Editing the checker would move `checker_sha256` for nothing.
+
+### 3.9 Board, quoted only
+
+- Queue line (l. 40): "`Branching.reach_within_listed` unchanged, the stronger `Reaching.trace_within_pred_length` beside it; … owed: `Branching.reach_within_listed` to lose its two unneeded premises in place".
+- Row FM (l. 57): "Owed after it, as a landing of its own: `Branching.reach_within_listed` to lose its two unneeded premises in place, with its record, chapter 2's sentence, two atlas premise entries and the mapping rows. … Of the owed landing: one atlas premise entry has to change, `branching-decides`, not two".
+- Line 0 (l. 87): "*Owed by row FM, as a landing of its own with its own reader, not started:* `Branching.reach_within_listed` to lose in place the two premises it does not need (`decides`, `returns`), with what tells or binds them: its record `reaching-before-and-after-a-juncture` in English and Chinese, chapter 2's sentence at that record's anchor, the atlas premise entry `branching-decides`, which lists it, the mapping rows that bind its `decides` and `returns` and give its binders' positions, and the package README's row; `leadsWithin_trace` weighed with it, and with it `gather_listed` beside `Prelude.not_not_all`".
+
+The board's list omits four things found here: the `ReachableRanges` docstring, the `kept-at-the-length-of-a-list` next_delta, the Junctures header and docstring, and the home of `branching-decides`.
+
+## 4. What the landing needs beside the edits
+
+**Imports and the core run**
+- No import cycle: `ReachableRanges`'s import closure does not contain `Junctures`, `Commuting` or `HeldPossible`. `Junctures` gains about 26 modules in its closure. Both are in `CORE` and both L1; compile order is computed from imports.
+- Direct importers of `Becoming.Junctures`: `Becoming.Commuting`, `Becoming.HeldPossible`, and the root `Becoming`.
+- Transitive importers (16), all rebuilt: CausalGrowth, Commuting, CountedCodes, FreeEnergyGuarantees, HeldPossible, HexagramCommuting, HexagramLaws, HexagramSequences, ModelStatements, Presence, ReorderingGrowth, RoomRuns, SharedCodes, Tasks, WeightedCommuting, WideningOnTheMap.
+- With 3.3, `ReachableRanges` itself rebuilds too; its 7 transitive importers are among those 16.
+- The signature audit will show `reach_within_listed` changed and `leadsWithin_trace` gone; any other difference counts against the landing.
+- Nothing else in the live package or tracked scratch `.lean` uses `leadsWithin_trace`. The untracked scratch hit is `tmp/fm/whole/landing-draft/before-repair-Becoming/ReachableRanges.lean`, the docstring only.
+
+**Records carrying a hash of Junctures.lean (6, all at the current `4e225858…`)**
+- `reaching-before-and-after-a-juncture` (re-told, 3.4).
+- Re-point only: `a-source-before-a-juncture`, `every-loss-passes-a-juncture`, `shared-laws-on-the-grammar`, `what-a-commuting-law-keeps-apart`, `where-the-possible-grows`.
+- Proof bindings on Junctures (4, all to `20261028T061626.538602Z`): the first four above; rebind to `<RUN>`.
+- None of the five re-point-only records names either declaration; `every-loss-passes-a-juncture`'s list has `reach_iff_leads`, `reach_decided_listed`, `loss_passes_juncture_listed` and `leadsWithin` but not `leadsWithin_trace`.
+
+**Records carrying a hash of ReachableRanges.lean (6, all at the current `c87de9b0…`)**
+- `kept-at-the-length-of-a-list`, `shared-laws-on-the-grammar`, `tasks-and-what-performs-them`, `what-a-course-keeps-reachable`, `what-can-be-born-next`, `where-the-possible-grows`.
+- Proof bindings (3, to `20261121T212524.793950Z`): the first, second and fourth; rebind.
+
+**Records citing the live receipt `LB/becoming-verification.json` (10, all at its current bytes; the core run rewrites it)**
+- confined-rise-within-a-whole, drift-offspring-sampled, fixation-by-drift, fixation-with-selection, groups-formed-by-descent, selection-with-returns-to-groupmates, selection-within-and-among-groups-of-any-sizes, selection-within-and-among-groups, shaping-read-by-readers-drawn-from-the-selected, shaping-the-rule-selected-by-what-comes-back.
+
+**Other**
+- Three records drift on `02-MAP.md` (3.6).
+- No record hashes `Becoming.lean`, `check_becoming.py` or the package `README.md`.
+- Run `shared_laws.py` after the core run passes (law 1's declarations change, so the data no longer matches), then render. The law's line will be measured anew, since its statement no longer names `Returns` and its proof now goes through the closure.
+- Run `build_places.py` again; Junctures line numbers move.
+- The FM `NOTE.md` l. 35 and the three board places are the row's and the coordinator's to update.
+
+## 5. Not read, or not checked
+
+- The atlas entries and mapping rows beyond the lines quoted (the other reader's): `dynamics.json`, `premises.json`, `mapping.json`, `extract-A.jsonl`, `map/cards.json`.
+- Whether the new proof elaborates, or whether the wider import closure causes any ambiguity under an `open` in the 9 modules that newly see `ReachableRanges`' closure.
+- The proof term the change will use. The replacements assume a call of `reach_within_of_pred_le`.
+- The receipts under `becoming-checks/`, opened only for the latest one's keys and the two hashes.
+- Two other packages' live receipts of 31 October (`lean/free-energy/cells-under-noise-verification.json`, `lean/universal-ethics/generative-capacity/correction-inquiry-verification.json`) list `Becoming.Junctures` by its present hash. I found no record binding Junctures through them and did not check whether any check compares them with current bytes.
+- `tools/research/tests`: none run. `atlas.py` and `gate.py` read only at the functions named (`restated`, the `says` check).
+- `research.py` itself; I read `registry.py`, where the checks live (`scoped_drift`, law declarations, bindings, aliases).
+- The untracked `tmp/` tree beyond one grep of `.lean` files; `.claude/worktrees`.
+- The Chinese of the study section's `.zh.md` beyond a phrase grep. That grep found no telling of this theorem there.
+- `_process/DIRECTION.md` and `theories/becoming/ONE-PAGE.md` were not opened. A names-and-phrases grep over all tracked files returned no hit in either.
+- A negative above is "not found in what I read": `git grep` over tracked files for the two names and for "within the count", "within as many steps as there are configurations", "steps decided", "count of configurations", 构形数之内, 不多于构形数, 步可判定, 得之之界, then the files opened as cited.
