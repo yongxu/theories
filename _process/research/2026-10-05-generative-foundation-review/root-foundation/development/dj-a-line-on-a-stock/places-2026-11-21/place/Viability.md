@@ -4,7 +4,7 @@
 
 - *file:* `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Viability.lean`
 - *table of 20 November:* Viability with Lasting, letters `NPNNNNYY`, standing core, told in chapter 5 §10 (never leaving, reaching, lasting, draining); chapter 3 §12 (Viability.kernel_iff_held); chapter 8 §2 and §5 (Lasting.lifting, step_iff_either). Chapter 5 §4 cites the kernel through JointKeeping (kernel_and_iff), not these two files.
-- *result records that name this place's file as a source* (computed; not a link): `a-response-common-over-a-reading`, `conditions-kept-together`, `market-protected-continuation`
+- *result records that name this place's file as a source* (computed; not a link): `a-response-common-over-a-reading`, `conditions-kept-together`, `kept-at-the-length-of-a-list`, `market-protected-continuation`
 - *dynamics in the atlas that name one of those records* (computed; not a link): `a-reading-kept-by-its-update`, `never-leaving-a-guard`
 
 ## 21 November, a future opening or closing: reader courses-still-open

@@ -4642,6 +4642,7 @@
    "records": [
     "a-response-common-over-a-reading",
     "conditions-kept-together",
+    "kept-at-the-length-of-a-list",
     "market-protected-continuation"
    ],
    "dynamics": [
@@ -4748,6 +4749,7 @@
     "a-reading-kept-by-its-update",
     "a-response-common-over-a-reading",
     "a-revision-that-opens-a-correction",
+    "kept-at-the-length-of-a-list",
     "when-to-inquire-and-when-to-respond"
    ],
    "dynamics": [
@@ -7107,6 +7109,7 @@
    "records": [
     "finite-continuation-plans",
     "joint-plan-composition",
+    "kept-at-the-length-of-a-list",
     "what-holding-for-a-reading-is-worth",
     "when-to-inquire-and-when-to-respond"
    ],
@@ -7301,6 +7304,7 @@
    ],
    "kind": "one Lean file",
    "records": [
+    "kept-at-the-length-of-a-list",
     "shared-laws-on-the-grammar",
     "tasks-and-what-performs-them",
     "what-a-course-keeps-reachable",
@@ -10174,7 +10178,8 @@
    ],
    "kind": "one Lean file",
    "records": [
-    "a-response-common-over-a-reading"
+    "a-response-common-over-a-reading",
+    "kept-at-the-length-of-a-list"
    ],
    "dynamics": [
     "a-reading-kept-by-its-update"
@@ -10918,6 +10923,7 @@
     "basins-of-a-determined-law",
     "hexagram-world-laws",
     "hexagrams-on-the-spine",
+    "kept-at-the-length-of-a-list",
     "necessarily-drawn-is-not-returning",
     "shared-laws-on-the-grammar"
    ],
@@ -15454,6 +15460,7 @@
    "kind": "one Lean file",
    "records": [
     "candidate-theorems-of-the-corpus",
+    "kept-at-the-length-of-a-list",
     "processes-represented-both-ways",
     "testing-within-the-net"
    ],
@@ -18049,7 +18056,8 @@
    ],
    "kind": "one Lean file",
    "records": [
-    "conditions-kept-together"
+    "conditions-kept-together",
+    "kept-at-the-length-of-a-list"
    ],
    "dynamics": [
     "never-leaving-a-guard"
@@ -18339,6 +18347,7 @@
     "coupled-regimes",
     "coupled-webs",
     "identification-where-runs-part",
+    "kept-at-the-length-of-a-list",
     "lifting-where-branching-is-finite",
     "market-finite-support-obstruction",
     "market-partial-correction-boundary",
@@ -20815,6 +20824,7 @@
    "kind": "one Lean file",
    "records": [
     "identification-where-runs-part",
+    "kept-at-the-length-of-a-list",
     "typicality-by-counting",
     "where-a-run-goes-on"
    ],
