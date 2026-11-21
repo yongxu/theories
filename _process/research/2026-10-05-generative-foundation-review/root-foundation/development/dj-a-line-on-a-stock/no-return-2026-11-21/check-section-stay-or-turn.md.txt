@@ -1,0 +1,109 @@
+*An AI checker's findings (run as Claude Opus; 13 tool calls and 124,798 tokens by the run's count), word for word from the run's journal (wf_66d8d62d-368), on the added section as it was before the check (NOTE.before-check-of-the-section.md.txt).*
+
+1. **MUST.** In "What is kept from it", the section says *"The first two are the reader's"*. The first bullet's bold sentence is not the reader's: *"The package's lock asks whether a turn from here would keep the need, not whether the need can be kept."* Neither is its last sentence (*"What the module adds is what the nearest other continuation changes: nothing, exactly where … and otherwise a course can be past the package's point of no return at every step while it meets its need at every step"*).
+   - The reader keeps only two results (RETURN-refuter lines 107–109): "the package's feasible courses leave out the course that never turns (`runs_recoverable_turned_not`)", and "K1's only-if direction carries an LPO-strength cost".
+   - The reading "no single turn made from here on would save it" is the coordinating session's. The frozen file marks it as that session's reading, "which the writer shares and no proof states" (FROZEN-STAY-OR-TURN.md.txt line 52).
+   - Exact: "The reader's: the package's feasible courses leave out the course that never turns (`runs_recoverable_turned_not`). The coordinating session's reading, which I share and no proof states: the lock asks whether a turn from here would keep the need."
+
+2. **MUST.** Same bullet: *"a course can be past the package's point of no return at every step while it meets its need at every step, as in 5"*.
+   - The package's point of no return of a course is a step, the first step at which it is not recoverable (`NoReturnAt`, TurningInTime.lean lines 1917–1918). In the built case that would be step 0, so the course is at that step, not past it at every step.
+   - No theorem states `NoReturnAt` for the built case. `noReturnAt_iff_first_below` needs the eight premises (lines 2100–2106), and no theorem shows the built case meets them.
+   - What is stated is only that the course is not `Recoverable` with `Turned` as feasible at every `N` (`kept_not_recoverable`, ScratchStayOrTurn lines 525–528).
+   - Exact: "a course can fail to be recoverable, with the turned courses as feasible, at every step while the need is met and keepable at every step (5)".
+
+3. **MUST.** Same bullet: *"what the nearest other continuation changes: nothing, exactly where X keeping the need for ever would give H + y ≤ X N"*.
+   - `recoverable_iff_kept_iff` (lines 503–510) is an equivalence between `Recoverable (Turned …)` and met-so-far together with keepable on `sot`. It does not compare that with `Recoverable` on the runs of `sot`.
+   - For the runs as feasible, only one direction is proved (`runs_recoverable_of_kept`, line 542).
+   - Exact: "under the eight premises, recoverable with the turned courses as feasible is the need met so far and keepable on this process exactly where `stayGives` holds (`recoverable_iff_kept_iff`)".
+
+4. **MUST.** Third bullet: *"It is the regime's threshold said on this carrier … and by the test above keepable adds nothing to it."* This is said of statement 3 (`keepable_not_turned_iff`).
+   - Both returns say that 3's second disjunct is exactly what the threshold does not give.
+     - The worker lists "the second disjunct in K4" under "What is not the lock's law said again" (RETURN-worker lines 147–148).
+     - The reader: "staying for ever, in which keepable on Q says something that the threshold does not" (RETURN-refuter line 82).
+   - The stricter test was answered about the proof of the statement on `Recoverable` (4), not about 3.
+   - Exact: "Its first disjunct is the regime's threshold on this carrier; its second, staying for ever, is what keepable on this process adds, and 4's further premise removes it."
+
+5. **MUST.** "How the stricter test came out": *"So the frozen file's K6 holds"*.
+   - Frozen K6 says "Everything above is the lock's first law … said again" (FROZEN line 24).
+   - The worker limits it: "K6 holds for the statement about the package's own `Recoverable`" (RETURN-worker lines 5 and 143). It names three things that are not the lock's law said again: the second disjunct in K4, the cases where the two differ, and the decision K1 needs (lines 147–150).
+   - The reader also ties its verdict to "the statement about the package's `Recoverable` with `Turned`" (RETURN-refuter line 107).
+   - Exact: "K6 holds for the statement about the package's `Recoverable` (4); both returns name what is not the lock's law said again: K4's second disjunct, the built case where they differ, and the decision K1 needs."
+
+6. **MUST.** Second bullet of "What is kept": *"Saying of every run of this process that it turns at some step or never is a deciding that the module needs as a premise for 6"*, attributed to the reader.
+   - The reader says the premise "in one instance, is itself LPO" and that K1 "as frozen … is neither proved nor refuted" (RETURN-refuter line 36).
+   - That the axiom-free logic cannot give LPO is not proved (module docstring lines 303–304; RETURN-worker line 38). So the module carries the premise; it is not shown that the module needs it.
+   - That `decided` is a deciding for every `X` is not stated by any theorem. `levels_runs_only_if_decides` is about the only-if direction, in one instance.
+   - Exact: "K1's only-if direction, in one built case, would decide of every sequence of yes and no whether it has a yes (`levels_runs_only_if_decides`); the module carries `decided` as a premise; that the package's logic cannot give this is not proved."
+
+7. **LESSER.** Item 1: *"Under six premises"*.
+   - `keepable_turned_iff_above` takes seven hypotheses: `top`, `nothing`, `short`, `meets`, `keeps`, `needs` and `within` (lines 364–367). The section counts `needs` and `within` as one, but counts them as two in "the lock's eight premises".
+   - Exact: "Under seven premises (… a positive need; the need at most `H + y`)".
+
+8. **LESSER.** Item 4 leaves out what is asked.
+   - The statement is `Recoverable (Turned X giving H) (MeetsNeed need) (fun t _ => X t) N` (line 488).
+   - Exact: "X is recoverable at N, with the turned courses as feasible and the need met at every step as what is asked".
+
+9. **LESSER.** Item 4: *'The reader adds that "the need met up to N" follows there from keepable and X never rising'*.
+   - The words in quotation marks are not the reader's. The reader wrote "the met-so-far conjunct is implied by keepable and `fall`; it is carried for the frozen wording only" (RETURN-refuter line 24).
+   - They are also not the section's own earlier words, which were "the need was met up to `N`".
+   - The substance is right: the backward proof ignores the conjunct (line 496).
+   - Exact: quote the reader's words, or drop the quotation marks.
+
+10. **LESSER.** Item 6: *"argued in the module's docstring and not proved"*.
+    - The docstring gives no argument. It says only "that the package's logic, with no axiom, does not give it is not proved here" (lines 303–304).
+    - Exact: "is not proved; the module's docstring says so".
+
+11. **LESSER.** Head note: *"21 tool calls and 4 builds by its own count"*.
+    - The worker wrote "21 tool calls in all, including 4 builds" (RETURN-worker line 178). The section's wording reads as 25.
+    - Exact: "21 tool calls, 4 of them builds, by its own count".
+
+12. **LESSER.** Head note, the hash file.
+    - The hash matches the as-frozen file: shasum gives d880856a…aebad for FROZEN-STAY-OR-TURN.as-frozen-1754.md.txt.
+    - But FROZEN-STAY-OR-TURN.sha256.txt names `FROZEN-STAY-OR-TURN.as-frozen.md`, not the linked file name. Worth one clause.
+
+13. **LESSER.** Head note: *"The writer read the module's header, its process and its main statements, not its proofs."*
+    - The section still says what proofs use. Examples: item 1 "both halves from…", item 4 "it calls", item 6 "does not use it", and the stricter test's account of the induction.
+    - These match the module, but come from docstrings and the returns. The section should say so.
+
+14. **LESSER.** Stricter test, first part: *"Its first part is met"*.
+    - The worker's words are "Part (1) is met by the letter" (RETURN-worker line 154).
+    - Exact: "met by the letter (the worker)".
+
+15. **LESSER.** Stricter test, second part. The section never says whether part (2) is met, and leaves out two things.
+    - The worker: `recoverable_iff_kept_of` "use[s] no general law of keepable directly" (RETURN-worker line 159).
+    - The route named under "After" (FROZEN line 51), the package's `recoverable_iff_above` coming out of the step law, did not happen: it is called, not derived (RETURN-worker line 110; module line 490).
+
+16. **LESSER.** *"The worker says the same of its own module."* Mostly borne out, with two limits:
+    - The worker wrote "about as easy" (RETURN-worker line 162).
+    - It added that the module "adds content the lock lacks".
+
+17. **LESSER.** Omissions a reader needs:
+    - **The propext side finding.** Build 2 reported `propext` for `levels_runs_only_if_decides`, with 38 theorems (build-ScratchStayOrTurn.build2.log.txt). It was removed with `one_ne_zero'` (line 80). The reader could not check it (RETURN-refuter line 39); the build 2 log in the folder bears it out.
+    - **Where `stayGives` is used.** It is used only in the direction from keepable to recoverable (RETURN-refuter line 31; module line 496).
+    - **`stayGives` in the built case.** That it fails there is also only checked by hand (RETURN-refuter line 17).
+    - **The 18:11 correction under "After".** It amends the 17:55 entry's "the worker does not see it". The head note is consistent with it but does not say the entry was corrected.
+
+Confirmed:
+- **Head-note figures and file copies.**
+  - The build log reads exit 0, build 4, empty `with_axioms`, 39 theorems.
+  - The filed module and build log are byte-identical to the ones in batch24.
+  - The as-frozen file's hash matches.
+  - The only difference between the as-frozen and current frozen files is the material under "After".
+  - The worker's return says it read "After" in a later call.
+  - The reader marked no MUST and six LESSER.
+  - Every link target exists, and "item 10 above" exists.
+- **"The process"** matches `sotStep`, `sot` and `NeedMet` (lines 37–46).
+- **Items 1 to 6.**
+  - Items 1 and 2 state their theorems exactly, apart from 7. Both halves of item 1 come from the public `turned_meets_of_above` and `above_of_turned_meets` (TurningInTime lines 2011 and 2028).
+  - Item 3 matches `keepable_not_turned_iff`, and its eight premises match `recoverable_iff_above` (lines 2087–2092).
+  - In item 4, "it calls" and "exactly what is needed" match `recoverable_iff_kept_of` and `recoverable_iff_kept_iff`.
+  - In item 5, the built case's numbers are right, and the hand check holds against the RegimeMargin definitions: `Meets` is vacuous and `Keeps` gives (x−1) ≤ 1.
+  - In item 6, the direction that does not use `decided` is the if direction, as said, and the reader's quotation is word for word.
+- **Quotations.**
+  - The stricter test's quotation is word for word (RETURN-refuter line 83).
+  - The package quotation is word for word across the line break (TurningInTime lines 1933–1934).
+- **Ranking.** Nothing is told as what makes a course better or ranks ways of going on.
+
+Not read: ScratchStayOrTurn lines 130–265 (the path and flag lemmas), ScratchNoReturn, ReadOffInTime (`Recoverable`, `NoReturnAt`), JointKeeping (`Keepable`), the run's journal, the brief, and the note's sections above this one.
+
+Tool calls: 12.

@@ -1,0 +1,577 @@
+import Becoming.ScratchNoReturn
+
+/-!
+# ScratchStayOrTurn: the lock on a process that chooses at each step to stay or to turn
+
+Scratch, outside the package (AI-written, Claude Opus, 21 November 2026). It takes up the frozen
+guesses K1 to K6 of `FROZEN-STAY-OR-TURN.md`. The process `sot X giving H` has as state a step, a
+level and whether the way has turned (`SotState`); its actions are `false` (stay) and `true`
+(turn). From a state not turned, staying goes to `X (t + 1)` not turned and turning goes to the
+regime's step under `H` from the present level, turned; from a turned state every action goes to
+the regime's step, turned (`sotStep`). The guard is the need met at the level (`NeedMet`).
+
+What each theorem states, with its premises and what it calls, is in its docstring. The guesses
+are named in the docstrings of the theorems that state them (K1: `levels_runs_iff`,
+`levels_runs_only_if_decides`; K2: `keepable_turned_iff`, `keepable_turned_iff_above`; K3:
+`keepable_stay_or_turn_iff`; K4: `keepable_not_turned_iff`; K5: `recoverable_iff_kept_of`,
+`recoverable_iff_kept_iff`, `kept_not_recoverable`, `runs_recoverable_turned_not`).
+-/
+
+namespace Becoming
+namespace ScratchStayOrTurn
+
+open Generative Viability ScratchNoReturn TurningInTime
+
+/-! ## The process -/
+
+/-- A state of the process that stays or turns: the step `time`, the level `lv`, and whether the
+way has turned (`isTurned`). -/
+structure SotState where
+  time : Nat
+  lv : Nat
+  isTurned : Bool
+
+/-- One step from `s` by `a` (`false` stay, `true` turn): the step goes up by one; the way is
+turned after the step exactly where it was turned or `a` turns it; the level is then the regime's
+step under `H` from the present level where it is turned, and `X` at the next step where not. -/
+def sotStep (X giving : Nat → Nat) (H : Nat) (s : SotState) (a : Bool) : SotState :=
+  ⟨s.time + 1, cond (s.isTurned || a) (RegimeMargin.step giving H s.lv) (X (s.time + 1)),
+    s.isTurned || a⟩
+
+/-- The process that stays or turns: a step from `s` by `a` goes to `sotStep X giving H s a`. -/
+def sot (X giving : Nat → Nat) (H : Nat) : Process SotState Bool :=
+  ⟨fun s a s' => s' = sotStep X giving H s a⟩
+
+/-- The guard: the need met at the level. -/
+def NeedMet (need : Nat) (s : SotState) : Prop := need ≤ s.lv
+
+/-- The start: step 0, the level `X 0`, not turned. -/
+def sotStart (X : Nat → Nat) : SotState := ⟨0, X 0, false⟩
+
+/-- The states from `s` under the actions `p`. -/
+def sotPath (X giving : Nat → Nat) (H : Nat) (s : SotState) (p : Nat → Bool) : Nat → SotState
+  | 0 => s
+  | n + 1 => sotStep X giving H (sotPath X giving H s p n) (p n)
+
+/-- The run from `s` under the actions `p`. -/
+def sotRun (X giving : Nat → Nat) (H : Nat) (s : SotState) (p : Nat → Bool) :
+    Run (sot X giving H) :=
+  ⟨sotPath X giving H s p, p, fun _ => rfl⟩
+
+/-! ## Small facts on Booleans and on the turned course -/
+
+/-- Every Boolean is `false` or `true`. No premise. -/
+theorem bool_cases : ∀ b : Bool, b = false ∨ b = true
+  | false => .inl rfl
+  | true => .inr rfl
+
+/-- Where `a || b` is `false`, `a` is `false`. No premise. -/
+theorem or_false_left : ∀ {a b : Bool}, (a || b) = false → a = false
+  | false, _, _ => rfl
+  | true, _, h => h
+
+/-- Where `a || b` is `true`, `a` is `true` or `b` is. No premise. -/
+theorem or_true_cases : ∀ {a b : Bool}, (a || b) = true → a = true ∨ b = true
+  | true, _, _ => .inl rfl
+  | false, _, h => .inr h
+
+/-- `1` is not `0`. No premise; by `Nat.noConfusion`. Used in place of the core `Nat.succ_ne_zero`: a build
+with that lemma in `levels_runs_only_if_decides` reported `propext` for it, and one without, none. -/
+theorem one_ne_zero' (h : Nat.succ 0 = 0) : False := Nat.noConfusion h
+
+/-- `a || true` is `true`. No premise. -/
+theorem or_true' : ∀ a : Bool, (a || true) = true
+  | false => rfl
+  | true => rfl
+
+/-- **From the turn on, the turned course is the regime's course.** For every `X`, `giving`, `H`
+and `T ≤ t`: the course turned at `T` is at `t + 1` the regime's step under `H` from where it is at
+`t`. No other premise. Calls `ScratchNoReturn.turned_after'` and `le_dest`. -/
+theorem turned_succ_of_le {X giving : Nat → Nat} {H T t : Nat} (le : T ≤ t) :
+    turned X giving H T (t + 1) = RegimeMargin.step giving H (turned X giving H T t) :=
+  match le_dest le with
+  | ⟨j, e⟩ =>
+    Eq.subst (motive := fun i =>
+        turned X giving H T (i + 1) = RegimeMargin.step giving H (turned X giving H T i)) e.symm
+      ((turned_after' X giving H T (j + 1)).trans
+        (congrArg (RegimeMargin.step giving H) (turned_after' X giving H T j).symm))
+
+/-- **The course of a constant level turned at 0 is the regime's course from that level.** For
+every level `l`, `giving`, `H` and step `k`: `turned (fun _ => l) giving H 0 k` is the `k`-th step
+of the regime under `H` from `l`. No premise; by the definition of `turned`. -/
+theorem turned_const_zero {giving : Nat → Nat} {H l : Nat} :
+    ∀ k, turned (fun _ => l) giving H 0 k = Law.orbit (RegimeMargin.step giving H) l k
+  | 0 => if_pos (Nat.le_refl 0)
+  | k + 1 => if_neg (Nat.not_succ_le_zero k)
+
+/-- **The regime's course from `z` meets the need at every step where `H + y ≤ z`** (the if half
+of R1 at a constant course). Premises: `z ≤ hi`, giving meeting `H` from `y` up to `hi`
+(`meets`), the step under `H` keeping the level within `hi` (`keeps`), the need at most `H + y`
+(`within`), and `H + y ≤ z`. Calls `TurningInTime.turned_meets_of_above` at the course constant at
+`z`, turned at 0, and `turned_const_zero`. -/
+theorem orbit_meets_of_above {giving : Nat → Nat} {H y hi need z : Nat} (top : z ≤ hi)
+    (meets : RegimeMargin.Meets giving H y hi) (keeps : RegimeMargin.Keeps giving H hi)
+    (within : need ≤ H + y) (low : H + y ≤ z) :
+    ∀ k, need ≤ Law.orbit (RegimeMargin.step giving H) z k :=
+  fun k => Eq.subst (motive := fun w => need ≤ w) (turned_const_zero (giving := giving) (H := H) k)
+    (TurningInTime.turned_meets_of_above (X := fun _ => z) (T := 0) (fun _ => Nat.le_refl z) top
+      meets keeps within low k)
+
+/-- **Where the regime's course from `z` meets a positive need at every step, `H + y ≤ z`** (the
+only-if half of R1 at a constant course). Premises: nothing given from nothing (`nothing`),
+giving short of `H` below `y` (`short`), a positive need (`needs`). Calls
+`TurningInTime.above_of_turned_meets` at the course constant at `z`, turned at 0, and
+`turned_const_zero`. -/
+theorem above_of_orbit_meets {giving : Nat → Nat} {H y need z : Nat}
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H y)
+    (needs : 0 < need) (h : ∀ k, need ≤ Law.orbit (RegimeMargin.step giving H) z k) :
+    H + y ≤ z :=
+  TurningInTime.above_of_turned_meets (X := fun _ => z) (T := 0) nothing short needs (fun t =>
+    Eq.subst (motive := fun w => need ≤ w) (turned_const_zero (giving := giving) (H := H) t).symm
+      (h t))
+
+/-! ## Facts along a run of the process -/
+
+section Along
+
+variable {X giving : Nat → Nat} {H : Nat}
+
+/-- Each step of a run of `sot X giving H` is `sotStep`. No premise; by the definition of `sot`. -/
+theorem sot_eq (r : Run (sot X giving H)) (t : Nat) :
+    r.state (t + 1) = sotStep X giving H (r.state t) (r.act t) := r.step t
+
+/-- Along a run, the way is turned at `t + 1` exactly where it was at `t` or the action at `t`
+turns. No premise. -/
+theorem sot_flag_succ (r : Run (sot X giving H)) (t : Nat) :
+    (r.state (t + 1)).isTurned = ((r.state t).isTurned || r.act t) :=
+  congrArg SotState.isTurned (sot_eq r t)
+
+/-- Along a run from the start, the state at `t` is at step `t`. Premise: the run starts at
+`sotStart X`. -/
+theorem sot_time (r : Run (sot X giving H)) (h0 : r.state 0 = sotStart X) :
+    ∀ t, (r.state t).time = t
+  | 0 => congrArg SotState.time h0
+  | t + 1 => (congrArg SotState.time (sot_eq r t)).trans (congrArg (· + 1) (sot_time r h0 t))
+
+/-- Once turned, turned: where the way is turned at `t` along a run, it is turned at `t + k`. No
+other premise. -/
+theorem sot_flag_keep (r : Run (sot X giving H)) {t : Nat} (h : (r.state t).isTurned = true) :
+    ∀ k, (r.state (t + k)).isTurned = true
+  | 0 => h
+  | k + 1 => (sot_flag_succ r (t + k)).trans (congrArg (· || r.act (t + k)) (sot_flag_keep r h k))
+
+/-- Where the way is not turned at `m + k` along a run, it is not turned at `m`. No other
+premise. -/
+theorem sot_flag_false_before (r : Run (sot X giving H)) (m : Nat) :
+    ∀ k, (r.state (m + k)).isTurned = false → (r.state m).isTurned = false
+  | 0, h => h
+  | k + 1, h => sot_flag_false_before r m k (or_false_left ((sot_flag_succ r (m + k)).symm.trans h))
+
+/-- Where the way is not turned at `n` along a run and `m ≤ n`, it is not turned at `m`. Calls
+`sot_flag_false_before`, `le_dest`. -/
+theorem sot_flag_false_of_le (r : Run (sot X giving H)) {m n : Nat} (le : m ≤ n)
+    (h : (r.state n).isTurned = false) : (r.state m).isTurned = false :=
+  match le_dest le with
+  | ⟨k, e⟩ => sot_flag_false_before r m k
+      (Eq.subst (motive := fun i => (r.state i).isTurned = false) e h)
+
+/-- Where the way is turned at `T + 1` along a run and `T + 1 ≤ m`, it is turned at `m`. Calls
+`sot_flag_keep`, `le_dest`. -/
+theorem sot_flag_after (r : Run (sot X giving H)) {T m : Nat}
+    (after : (r.state (T + 1)).isTurned = true) (le : T + 1 ≤ m) : (r.state m).isTurned = true :=
+  match le_dest le with
+  | ⟨k, e⟩ => Eq.subst (motive := fun i => (r.state i).isTurned = true) e.symm
+      (sot_flag_keep r after k)
+
+/-- **Where not turned, the level is `X`.** Along a run from `sotStart X`, at every step `t` where
+the way is not turned, the level is `X t`. Calls `sot_flag_succ`, `sot_time`, `or_false_left`. -/
+theorem sot_lv_stay (r : Run (sot X giving H)) (h0 : r.state 0 = sotStart X) :
+    ∀ t, (r.state t).isTurned = false → (r.state t).lv = X t
+  | 0, _ => congrArg SotState.lv h0
+  | t + 1, h => (congrArg SotState.lv (sot_eq r t)).trans
+      ((congrArg (fun b => cond b (RegimeMargin.step giving H (r.state t).lv)
+          (X ((r.state t).time + 1))) ((sot_flag_succ r t).symm.trans h)).trans
+        (congrArg (fun i => X (i + 1)) (sot_time r h0 t)))
+
+/-- **Where turned, the level is the regime's step from the last.** Along any run, where the way is
+turned at `t + 1`, the level at `t + 1` is the regime's step under `H` from the level at `t`. No
+other premise. -/
+theorem sot_lv_turn (r : Run (sot X giving H)) (t : Nat)
+    (h : (r.state (t + 1)).isTurned = true) :
+    (r.state (t + 1)).lv = RegimeMargin.step giving H (r.state t).lv :=
+  (congrArg SotState.lv (sot_eq r t)).trans
+    (congrArg (fun b => cond b (RegimeMargin.step giving H (r.state t).lv)
+      (X ((r.state t).time + 1))) ((sot_flag_succ r t).symm.trans h))
+
+/-- **A run that turns between `T` and `T + 1` has the turned course at `T` as its levels.** Along
+a run from `sotStart X` not turned at `T` and turned at `T + 1`, the level at every step `t` is
+`turned X giving H T t`. Calls `sot_lv_stay`, `sot_lv_turn`, `sot_flag_false_of_le`,
+`sot_flag_after`, `turned_succ_of_le`. -/
+theorem sot_levels_turned (r : Run (sot X giving H)) (h0 : r.state 0 = sotStart X) {T : Nat}
+    (before : (r.state T).isTurned = false) (after : (r.state (T + 1)).isTurned = true) :
+    ∀ t, (r.state t).lv = turned X giving H T t
+  | 0 => (congrArg SotState.lv h0).trans
+      (show turned X giving H T 0 = X 0 from if_pos (Nat.zero_le T)).symm
+  | t + 1 => (Nat.lt_or_ge t T).elim
+      (fun lt => (sot_lv_stay r h0 (t + 1) (sot_flag_false_of_le r (Nat.succ_le_of_lt lt) before)).trans
+        (show turned X giving H T (t + 1) = X (t + 1) from if_pos (Nat.succ_le_of_lt lt)).symm)
+      (fun ge => (sot_lv_turn r t (sot_flag_after r after (Nat.succ_le_succ ge))).trans
+        ((congrArg (RegimeMargin.step giving H) (sot_levels_turned r h0 before after t)).trans
+          (turned_succ_of_le ge).symm))
+
+/-- **Each run from the start has not turned by `n`, or turned first between some `T < n` and
+`T + 1`.** For every run from `sotStart X` and every `n`. Constructive: it looks only at the
+states up to `n`. Calls `bool_cases`. -/
+theorem sot_stayed_or_turned (r : Run (sot X giving H)) (h0 : r.state 0 = sotStart X) :
+    ∀ n, (r.state n).isTurned = false ∨
+      ∃ T, T < n ∧ (r.state T).isTurned = false ∧ (r.state (T + 1)).isTurned = true
+  | 0 => .inl (congrArg SotState.isTurned h0)
+  | n + 1 => (sot_stayed_or_turned r h0 n).elim
+      (fun hn => (bool_cases (r.state (n + 1)).isTurned).elim .inl
+        (fun h => .inr ⟨n, Nat.lt_succ_self n, hn, h⟩))
+      (fun ⟨T, lt, b, a⟩ => .inr ⟨T, Nat.lt_succ_of_lt lt, b, a⟩)
+
+/-- Along a run from the start, where the way is turned at `n`, some action turned. Calls
+`sot_flag_succ`, `or_true_cases`. -/
+theorem sot_act_of_flag (r : Run (sot X giving H)) (h0 : r.state 0 = sotStart X) :
+    ∀ n, (r.state n).isTurned = true → ∃ m, r.act m = true
+  | 0, h => Bool.noConfusion ((congrArg SotState.isTurned h0).symm.trans h)
+  | n + 1, h => (or_true_cases ((sot_flag_succ r n).symm.trans h)).elim
+      (sot_act_of_flag r h0 n) (fun ha => ⟨n, ha⟩)
+
+/-- The run that turns at `T` (`Nat.ble T n` as action at `n`) is not turned up to `T`. Calls
+`Nat.le_of_ble_eq_true`, `bool_cases`. -/
+theorem sot_path_turn_flags (T : Nat) :
+    ∀ n, n ≤ T → (sotPath X giving H (sotStart X) (fun n => Nat.ble T n) n).isTurned = false
+  | 0, _ => rfl
+  | n + 1, le =>
+    have hb : Nat.ble T n = false := (bool_cases (Nat.ble T n)).elim id
+      (fun h => absurd (Nat.le_of_ble_eq_true h) (Nat.not_le_of_gt le))
+    (congrArg (· || Nat.ble T n) (sot_path_turn_flags T n (Nat.le_of_succ_le le))).trans
+      (congrArg (false || ·) hb)
+
+/-- The run that turns at `T` is turned at `T + 1`. Calls `Nat.ble_eq_true_of_le`. -/
+theorem sot_path_turn_after (T : Nat) :
+    (sotPath X giving H (sotStart X) (fun n => Nat.ble T n) (T + 1)).isTurned = true :=
+  (congrArg (fun b => (sotPath X giving H (sotStart X) (fun n => Nat.ble T n) T).isTurned || b)
+    (Nat.ble_eq_true_of_le (Nat.le_refl T))).trans (or_true' _)
+
+/-- The run that always stays is never turned. No premise. -/
+theorem sot_path_stay_flags :
+    ∀ n, (sotPath X giving H (sotStart X) (fun _ => false) n).isTurned = false
+  | 0 => rfl
+  | n + 1 => congrArg (· || false) (sot_path_stay_flags n)
+
+end Along
+
+/-! ## K1: the level courses of the runs -/
+
+section K1
+
+variable {X giving : Nat → Nat} {H : Nat}
+
+/-- **K1, with whether a run ever turns decided.** For every `X`, `giving`, `H` and course `l`,
+under the premise `decided` that every run of `sot X giving H` is turned at some step or at none:
+`l` is the level course of a run of `sot X giving H` from `sotStart X` (`ScratchNoReturn.RunLevels`)
+exactly where `l` is among the package's `Turned X giving H` or is `X` at every step. Calls
+`sot_stayed_or_turned`, `sot_levels_turned`, `sot_lv_stay`, `sot_path_turn_flags`,
+`sot_path_turn_after`, `sot_path_stay_flags`. The if direction does not use `decided`. -/
+theorem levels_runs_iff
+    (decided : ∀ r : Run (sot X giving H),
+      (∃ n, (r.state n).isTurned = true) ∨ ∀ n, (r.state n).isTurned = false)
+    (l : Nat → Unit → Nat) :
+    RunLevels (sot X giving H) (fun s => s = sotStart X) (fun s _ => s.lv) l ↔
+      Turned X giving H l ∨ ∀ t c, l t c = X t :=
+  ⟨fun ⟨r, h0, e⟩ => (decided r).elim
+    (fun ⟨n, hn⟩ => (sot_stayed_or_turned r h0 n).elim
+      (fun hf => Bool.noConfusion (hn.symm.trans hf))
+      (fun ⟨T, _, b, a⟩ => .inl ⟨T, fun t c => (e t c).symm.trans (sot_levels_turned r h0 b a t)⟩))
+    (fun never => .inr fun t c => (e t c).symm.trans (sot_lv_stay r h0 t (never t))),
+   fun h => h.elim
+    (fun ⟨T, eq⟩ => ⟨sotRun X giving H (sotStart X) (fun n => Nat.ble T n), rfl, fun t c =>
+      (sot_levels_turned (sotRun X giving H (sotStart X) (fun n => Nat.ble T n)) rfl
+        (sot_path_turn_flags T T (Nat.le_refl T)) (sot_path_turn_after T) t).trans (eq t c).symm⟩)
+    (fun same => ⟨sotRun X giving H (sotStart X) (fun _ => false), rfl, fun t c =>
+      (sot_lv_stay (sotRun X giving H (sotStart X) (fun _ => false)) rfl t
+        (sot_path_stay_flags t)).trans (same t c).symm⟩)⟩
+
+/-- **K1's only-if direction, in one case, decides whether any Boolean sequence is ever `true`.**
+On `sot (fun _ => 1) (fun _ => 0) 1` (the course constant at 1, nothing given, the use 1): if
+every level course of a run from the start is among `Turned` or is the course constant at 1
+(`onlyIf`), then every Boolean sequence `b` is `true` somewhere or `false` everywhere. So K1's
+only-if direction, for every `X`, `giving` and `H`, would give that decision for every Boolean
+sequence (a form of the limited principle of omniscience; that the package's logic, with no axiom,
+does not give it is not proved here); this is why `levels_runs_iff` carries `decided`. Calls `sot_lv_stay`, `sot_lv_turn`,
+`sot_act_of_flag`, `sot_flag_succ`, `ScratchNoReturn.turned_after'`, `bool_cases`. -/
+theorem levels_runs_only_if_decides
+    (onlyIf : ∀ l, RunLevels (sot (fun _ => 1) (fun _ => 0) 1)
+      (fun s => s = sotStart (fun _ => 1)) (fun s _ => s.lv) l →
+      Turned (fun _ => 1) (fun _ => 0) 1 l ∨ ∀ t c, l t c = (fun _ => 1) t)
+    (b : Nat → Bool) : (∃ n, b n = true) ∨ ∀ n, b n = false :=
+  (onlyIf (fun t _ => ((sotRun (fun _ => 1) (fun _ => 0) 1 (sotStart (fun _ => 1)) b).state t).lv)
+      ⟨sotRun (fun _ => 1) (fun _ => 0) 1 (sotStart (fun _ => 1)) b, rfl, fun _ _ => rfl⟩).elim
+    (fun ⟨T, eq⟩ =>
+      have zero : ((sotRun (fun _ => 1) (fun _ => 0) 1 (sotStart (fun _ => 1)) b).state
+          (T + 1)).lv = 0 :=
+        (eq (T + 1) ()).trans (turned_after' (fun _ => 1) (fun _ => 0) 1 T 1)
+      (bool_cases ((sotRun (fun _ => 1) (fun _ => 0) 1 (sotStart (fun _ => 1)) b).state
+          (T + 1)).isTurned).elim
+        (fun h => absurd ((sot_lv_stay _ rfl (T + 1) h).symm.trans zero) one_ne_zero')
+        (fun h => .inl (sot_act_of_flag _ rfl (T + 1) h)))
+    (fun all => .inr fun n => (bool_cases (b n)).elim id (fun h =>
+      absurd ((all (n + 1) ()).symm.trans
+          ((sot_lv_turn _ n ((sot_flag_succ
+              (sotRun (fun _ => 1) (fun _ => 0) 1 (sotStart (fun _ => 1)) b) n).trans
+            ((congrArg (fun x => ((sotRun (fun _ => 1) (fun _ => 0) 1 (sotStart (fun _ => 1)) b).state
+                n).isTurned || x) h).trans (or_true' _)))).trans
+            (congrArg (RegimeMargin.step (fun _ => 0) 1) (all n ()))))
+        one_ne_zero'))
+
+end K1
+
+/-! ## K2 and K3: keepable from a turned state, and one step from a state not turned -/
+
+section K23
+
+variable {X giving : Nat → Nat} {H : Nat}
+
+/-- From a turned state every run goes along the regime: along a run starting at
+`⟨t, l, true⟩`, the state at `k` is `⟨t + k, (the regime's course from l) k, true⟩`. No other
+premise. -/
+theorem turned_states (r : Run (sot X giving H)) {t l : Nat} (h0 : r.state 0 = ⟨t, l, true⟩) :
+    ∀ k, r.state k = ⟨t + k, Law.orbit (RegimeMargin.step giving H) l k, true⟩
+  | 0 => h0
+  | k + 1 => (sot_eq r k).trans
+      (congrArg (fun s => sotStep X giving H s (r.act k)) (turned_states r h0 k))
+
+/-- **K2, first half.** For every `X`, `giving`, `H`, need, step `t` and level `l`, with no other
+premise: the need is keepable on `sot X giving H` from the turned state `⟨t, l, true⟩` exactly
+where it is met at every step of the regime's course under `H` from `l`. Calls `turned_states`. -/
+theorem keepable_turned_iff {need t l : Nat} :
+    Keepable (sot X giving H) (NeedMet need) ⟨t, l, true⟩ ↔
+      ∀ k, need ≤ Law.orbit (RegimeMargin.step giving H) l k :=
+  ⟨fun ⟨r, h0, held⟩ k => Eq.subst (motive := NeedMet need) (turned_states r h0 k) (held k),
+   fun h => ⟨sotRun X giving H ⟨t, l, true⟩ (fun _ => true), rfl, fun k =>
+     Eq.subst (motive := NeedMet need)
+       (turned_states (sotRun X giving H ⟨t, l, true⟩ (fun _ => true)) rfl k).symm (h k)⟩⟩
+
+/-- **K2, second half: from a turned state, keepable is the level at or above `H + y`.** Premises:
+`l ≤ hi`, nothing given from nothing, giving short of `H` below `y`, meeting it from `y` up to
+`hi`, the step under `H` keeping the level within `hi`, a positive need at most `H + y`. Then the
+need is keepable from `⟨t, l, true⟩` exactly where `H + y ≤ l`. Calls `keepable_turned_iff`,
+`orbit_meets_of_above` and `above_of_orbit_meets` (the two halves of the package's
+`turned_meets_iff`, at the course constant at `l`). -/
+theorem keepable_turned_iff_above {y hi need t l : Nat} (top : l ≤ hi)
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H y)
+    (meets : RegimeMargin.Meets giving H y hi) (keeps : RegimeMargin.Keeps giving H hi)
+    (needs : 0 < need) (within : need ≤ H + y) :
+    Keepable (sot X giving H) (NeedMet need) ⟨t, l, true⟩ ↔ H + y ≤ l :=
+  keepable_turned_iff.trans
+    ⟨above_of_orbit_meets nothing short needs, orbit_meets_of_above top meets keeps within⟩
+
+/-- **K3: one step from a state not turned.** For every `X`, `giving`, `H`, need, step `t` and
+level `l`, with no other premise: the need is keepable from `⟨t, l, false⟩` exactly where it is
+met there (`need ≤ l`) and it is keepable after staying (from `⟨t + 1, X (t + 1), false⟩`) or after
+turning (from `⟨t + 1, step under H from l, true⟩`). It is the scratch `keepable_step_iff` at
+`sot X giving H`, with its "some step" read as the two actions. -/
+theorem keepable_stay_or_turn_iff {need t l : Nat} :
+    Keepable (sot X giving H) (NeedMet need) ⟨t, l, false⟩ ↔
+      need ≤ l ∧ (Keepable (sot X giving H) (NeedMet need) ⟨t + 1, X (t + 1), false⟩ ∨
+        Keepable (sot X giving H) (NeedMet need) ⟨t + 1, RegimeMargin.step giving H l, true⟩) :=
+  keepable_step_iff.trans
+    ⟨fun ⟨here, a, s', e, kept⟩ => ⟨here, match a, e with
+      | false, e => .inl (Eq.subst (motive := Keepable (sot X giving H) (NeedMet need))
+          (show s' = sotStep X giving H ⟨t, l, false⟩ false from e) kept)
+      | true, e => .inr (Eq.subst (motive := Keepable (sot X giving H) (NeedMet need))
+          (show s' = sotStep X giving H ⟨t, l, false⟩ true from e) kept)⟩,
+     fun ⟨here, h⟩ => ⟨here, h.elim
+      (fun k => ⟨false, ⟨t + 1, X (t + 1), false⟩, rfl, k⟩)
+      (fun k => ⟨true, ⟨t + 1, RegimeMargin.step giving H l, true⟩, rfl, k⟩)⟩⟩
+
+end K23
+
+/-! ## K4: keepable from the state on `X` at `N`, not turned -/
+
+section K4
+
+variable {X giving : Nat → Nat} {H : Nat}
+
+/-- The run that always stays from `⟨N, X N, false⟩` is at `⟨N + k, X (N + k), false⟩` at `k`. No
+premise. -/
+theorem sot_stay_states (N : Nat) :
+    ∀ k, sotPath X giving H ⟨N, X N, false⟩ (fun _ => false) k = ⟨N + k, X (N + k), false⟩
+  | 0 => rfl
+  | k + 1 => congrArg (fun s => sotStep X giving H s false) (sot_stay_states N k)
+
+/-- **Staying keeps where `X` keeps.** For every `X`, `giving`, `H`, need and `N`: where the need
+is at most `X t` at every `t ≥ N`, it is keepable from `⟨N, X N, false⟩`, by the run that always
+stays. No other premise. Calls `sot_stay_states`. -/
+theorem keepable_of_stays {need N : Nat} (stays : ∀ t, N ≤ t → need ≤ X t) :
+    Keepable (sot X giving H) (NeedMet need) ⟨N, X N, false⟩ :=
+  ⟨sotRun X giving H ⟨N, X N, false⟩ (fun _ => false), rfl, fun k =>
+    Eq.subst (motive := NeedMet need) (sot_stay_states (giving := giving) (H := H) N k).symm
+      (stays (N + k) (Nat.le_add_right N k))⟩
+
+/-- **Below `H + y`, keeping from a state not turned is keeping by staying.** Premises: `X` never
+rising (`fall`), nothing given from nothing, giving short of `H` below `y`, a positive need,
+`X N < H + y`, and the need keepable from `⟨N, X N, false⟩`. Then it is keepable from
+`⟨N + k, X (N + k), false⟩` for every `k`. Proof by induction on `k`, each step by K3
+(`keepable_stay_or_turn_iff`): the stay branch is carried on; the turn branch is shut, since
+keeping after the turn at `N + k` gives `H + y ≤ X (N + k)` (`keepable_turned_iff`,
+`above_of_orbit_meets`), against `X (N + k) ≤ X N < H + y` (`later_le'`). -/
+theorem sot_stay_kept {y need N : Nat} (fall : ∀ t, X (t + 1) ≤ X t)
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H y)
+    (needs : 0 < need) (below : X N < H + y)
+    (kept : Keepable (sot X giving H) (NeedMet need) ⟨N, X N, false⟩) :
+    ∀ k, Keepable (sot X giving H) (NeedMet need) ⟨N + k, X (N + k), false⟩
+  | 0 => kept
+  | k + 1 =>
+    match keepable_stay_or_turn_iff.mp (sot_stay_kept fall nothing short needs below kept k) with
+    | ⟨_, .inl stay⟩ => stay
+    | ⟨here, .inr turn⟩ =>
+      absurd (above_of_orbit_meets nothing short needs (fun j => match j with
+          | 0 => here
+          | j + 1 => Eq.subst (motive := fun w => need ≤ w)
+              (Law.orbit_shift (RegimeMargin.step giving H) (X (N + k)) j).symm
+              (keepable_turned_iff.mp turn j)))
+        (Nat.not_le_of_gt (Nat.lt_of_le_of_lt (later_le' fall (Nat.le_add_right N k)) below))
+
+/-- **K4.** Under the eight premises of the package's `recoverable_iff_above`: `X` never rising
+(`fall`) and starting at most `hi` (`top`), nothing given from nothing, giving short of `H` below
+`y`, meeting it from `y` up to `hi`, the step under `H` keeping the level within `hi`, and a
+positive need at most `H + y`. Then the need is keepable on `sot X giving H` from `⟨N, X N, false⟩`
+exactly where `H + y ≤ X N` or the need is at most `X t` at every `t ≥ N`. Only if: by
+`sot_stay_kept` where `X N < H + y`. If: where `H + y ≤ X N`, by K3 with the turn now
+(`keepable_stay_or_turn_iff`, `keepable_turned_iff`, `orbit_meets_of_above`); where `X` keeps, by
+`keepable_of_stays`. -/
+theorem keepable_not_turned_iff {y hi need N : Nat}
+    (fall : ∀ t, X (t + 1) ≤ X t) (top : X 0 ≤ hi)
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H y)
+    (meets : RegimeMargin.Meets giving H y hi) (keeps : RegimeMargin.Keeps giving H hi)
+    (needs : 0 < need) (within : need ≤ H + y) :
+    Keepable (sot X giving H) (NeedMet need) ⟨N, X N, false⟩ ↔
+      H + y ≤ X N ∨ ∀ t, N ≤ t → need ≤ X t :=
+  ⟨fun kept => (Nat.lt_or_ge (X N) (H + y)).elim
+      (fun below => Or.inr fun _ le => match le_dest le with
+        | ⟨k, e⟩ => Eq.subst (motive := fun i => need ≤ X i) e.symm
+            (sot_stay_kept fall nothing short needs below kept k).start)
+      Or.inl,
+   fun h => h.elim
+    (fun low => keepable_stay_or_turn_iff.mpr ⟨Nat.le_trans within low,
+      .inr (keepable_turned_iff.mpr fun j =>
+        Eq.subst (motive := fun w => need ≤ w)
+          (Law.orbit_shift (RegimeMargin.step giving H) (X N) j)
+          (orbit_meets_of_above (Nat.le_trans (later_le' fall (Nat.zero_le N)) top) meets keeps
+            within low (j + 1)))⟩)
+    keepable_of_stays⟩
+
+end K4
+
+/-! ## K5: the package's recoverable and keepable on `sot` -/
+
+section K5
+
+variable {X giving : Nat → Nat} {H : Nat}
+
+/-- **K5, with its further premise.** Under the eight premises of `recoverable_iff_above` and the
+further premise `stayGives`, that `X` meeting the need at every step from `N` on gives
+`H + y ≤ X N`: the package's `Recoverable (Turned X giving H) (MeetsNeed need) (fun t _ => X t) N`
+holds exactly where the need is at most `X n` at every `n ≤ N` and is keepable on `sot X giving H`
+from `⟨N, X N, false⟩`. Calls `TurningInTime.recoverable_iff_above`, `keepable_not_turned_iff`,
+`later_le'`. -/
+theorem recoverable_iff_kept_of {y hi need N : Nat}
+    (fall : ∀ t, X (t + 1) ≤ X t) (top : X 0 ≤ hi)
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H y)
+    (meets : RegimeMargin.Meets giving H y hi) (keeps : RegimeMargin.Keeps giving H hi)
+    (needs : 0 < need) (within : need ≤ H + y)
+    (stayGives : (∀ t, N ≤ t → need ≤ X t) → H + y ≤ X N) :
+    Recoverable (Turned X giving H) (MeetsNeed need) (fun t _ => X t) N ↔
+      (∀ n, n ≤ N → need ≤ X n) ∧ Keepable (sot X giving H) (NeedMet need) ⟨N, X N, false⟩ :=
+  have r2 := TurningInTime.recoverable_iff_above (X := X) (N := N) fall top nothing short meets
+    keeps needs within
+  have k4 := keepable_not_turned_iff (N := N) fall top nothing short meets keeps needs within
+  ⟨fun rec =>
+    have low := r2.mp rec
+    ⟨fun _ le => Nat.le_trans within (Nat.le_trans low (later_le' fall le)), k4.mpr (Or.inl low)⟩,
+   fun ⟨_, kept⟩ => r2.mpr ((k4.mp kept).elim id stayGives)⟩
+
+/-- **K5: the further premise is exactly what is needed.** Under the eight premises of
+`recoverable_iff_above`: the equivalence of `recoverable_iff_kept_of` holds at `N` exactly where
+`stayGives` does (`X` meeting the need at every step from `N` on gives `H + y ≤ X N`). Calls
+`TurningInTime.recoverable_iff_above`, `keepable_not_turned_iff`, `recoverable_iff_kept_of`,
+`later_le'`. -/
+theorem recoverable_iff_kept_iff {y hi need N : Nat}
+    (fall : ∀ t, X (t + 1) ≤ X t) (top : X 0 ≤ hi)
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H y)
+    (meets : RegimeMargin.Meets giving H y hi) (keeps : RegimeMargin.Keeps giving H hi)
+    (needs : 0 < need) (within : need ≤ H + y) :
+    (Recoverable (Turned X giving H) (MeetsNeed need) (fun t _ => X t) N ↔
+      (∀ n, n ≤ N → need ≤ X n) ∧ Keepable (sot X giving H) (NeedMet need) ⟨N, X N, false⟩) ↔
+      ((∀ t, N ≤ t → need ≤ X t) → H + y ≤ X N) :=
+  ⟨fun eqv stays =>
+    (TurningInTime.recoverable_iff_above (X := X) (N := N) fall top nothing short meets keeps needs
+      within).mp
+      (eqv.mpr ⟨fun _ le => Nat.le_trans (stays N (Nat.le_refl N)) (later_le' fall le),
+        (keepable_not_turned_iff fall top nothing short meets keeps needs within).mpr
+          (Or.inr stays)⟩),
+   recoverable_iff_kept_of fall top nothing short meets keeps needs within⟩
+
+/-- **K5, without the premise: keepable at every step, recoverable at none.** On the course
+constant at 1, nothing given (`giving = fun _ => 0`), the use 1 and the need 1, at every step
+`N`: the need is met up to `N`, it is keepable on `sot` from `⟨N, 1, false⟩` (by staying), and the
+course is not `Recoverable` with the package's `Turned` as feasible. No premise. Calls
+`keepable_of_stays` and `TurningInTime.above_of_recoverable` (with `y = 1`: nothing from nothing
+and giving short of 1 below 1 hold, so recoverable would give `2 ≤ 1`). -/
+theorem kept_not_recoverable (N : Nat) :
+    (∀ n, n ≤ N → 1 ≤ (fun _ : Nat => 1) n) ∧
+      Keepable (sot (fun _ => 1) (fun _ => 0) 1) (NeedMet 1) ⟨N, 1, false⟩ ∧
+      ¬ Recoverable (Turned (fun _ => 1) (fun _ => 0) 1) (MeetsNeed 1) (fun _ _ => 1) N :=
+  ⟨fun _ _ => Nat.le_refl 1,
+   keepable_of_stays (X := fun _ => 1) (fun _ _ => Nat.le_refl 1),
+   fun rec => Nat.not_le_of_gt (Nat.lt_succ_self 1)
+     (TurningInTime.above_of_recoverable (X := fun _ => 1) (giving := fun _ => 0) (H := 1)
+       (y := 1) (fun _ => Nat.le_refl 1) (show RegimeMargin.FromNothing (fun _ => 0) from rfl)
+       (fun _ _ => Nat.zero_lt_one) Nat.zero_lt_one rec)⟩
+
+/-- **With the runs of `sot` as feasible, met-so-far and keepable not turned give recoverable.**
+For every `X`, `giving`, `H`, need and `N`, with no other premise: where the need is at most `X n`
+at every `n ≤ N` and keepable from `⟨N, X N, false⟩`, `X` is `Recoverable` at `N` with the level
+courses of the runs of `sot X giving H` from the start (`RunLevels`) as feasible and the need met
+at every step as what is asked. Calls `ScratchNoReturn.recoverable_runLevels_iff` (with the run
+that stays up to `N`), `sot_stay_states`, `Keepable.mono`. -/
+theorem runs_recoverable_of_kept {need N : Nat} (before : ∀ n, n ≤ N → need ≤ X n)
+    (kept : Keepable (sot X giving H) (NeedMet need) ⟨N, X N, false⟩) :
+    Recoverable (RunLevels (sot X giving H) (fun s => s = sotStart X) (fun s _ => s.lv))
+      (MeetsNeed need) (fun t _ => X t) N :=
+  have same : ∀ n, (sotPath X giving H (sotStart X) (fun _ => false) n).lv = X n := fun n =>
+    (congrArg SotState.lv (sot_stay_states (giving := giving) (H := H) 0 n)).trans
+      (congrArg X (Nat.zero_add n))
+  have atN : sotPath X giving H (sotStart X) (fun _ => false) N = ⟨N, X N, false⟩ :=
+    (sot_stay_states (giving := giving) (H := H) 0 N).trans
+      (congrArg (fun i => (⟨i, X i, false⟩ : SotState)) (Nat.zero_add N))
+  (recoverable_runLevels_iff (P := sot X giving H) (start := fun s => s = sotStart X)
+      (π := fun s _ => s.lv) (gl := fun v => ∀ c, need ≤ v c) (keeps := MeetsNeed need)
+      (fun _ => Iff.rfl) (fun _ _ e h c => Eq.subst (motive := fun z => need ≤ z) (e c) (h c))
+      (fun t _ => X t) N).mpr
+    ⟨sotRun X giving H (sotStart X) (fun _ => false), rfl, fun s _ _ => same s,
+     fun n le _ => Eq.subst (motive := fun z => need ≤ z) (same n).symm (before n le),
+     Eq.subst (motive := Keepable (sot X giving H) (fun s => ∀ _ : Unit, need ≤ s.lv)) atN.symm
+       (Keepable.mono (fun _ h _ => h) kept)⟩
+
+/-- **The two feasible families differ at the course that never turns.** On the course constant at
+1, nothing given, the use 1 and the need 1, at every step `N`: the course is `Recoverable` with the
+level courses of the runs of `sot` from the start as feasible, and is not `Recoverable` with the
+package's `Turned` as feasible. No premise. Calls `runs_recoverable_of_kept`, `keepable_of_stays`,
+`kept_not_recoverable`. -/
+theorem runs_recoverable_turned_not (N : Nat) :
+    Recoverable (RunLevels (sot (fun _ => 1) (fun _ => 0) 1) (fun s => s = sotStart (fun _ => 1))
+        (fun s _ => s.lv)) (MeetsNeed 1) (fun _ _ => 1) N ∧
+      ¬ Recoverable (Turned (fun _ => 1) (fun _ => 0) 1) (MeetsNeed 1) (fun _ _ => 1) N :=
+  ⟨runs_recoverable_of_kept (X := fun _ => 1) (fun _ _ => Nat.le_refl 1)
+     (keepable_of_stays (X := fun _ => 1) (fun _ _ => Nat.le_refl 1)),
+   (kept_not_recoverable N).2.2⟩
+
+end K5
+
+end ScratchStayOrTurn
+end Becoming

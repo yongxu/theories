@@ -1,0 +1,45 @@
+# The lock on a process that chooses at each step to stay or to turn: the guesses, fixed before any Lean is written
+
+*AI-written (Claude Fable, board row DJ), 21 November 2026, 17:54 WIB, before any agent ran and before any Lean was written for it. Frozen: nothing above the line "After" is changed later. It takes up one guess that the study of the same day left argued and not proved (`no-return-2026-11-21`, J3). Recoverable, keepable, turned are the Lean's names; stay and turn are working words.*
+
+## What we are doing
+
+One map of how things come to be, go on, change and end, on which two ways of going on are placed with respect to each other. The study of this afternoon found that the package's `Recoverable` and `Keepable` are one for the course of a run, and that the lock's feasible courses (`Turned X giving H`: the course `X` turned to the regime under `H` at some step) were made runs of a process only by a state that carries the step of the turn from the start, where keepable has no choice in it. It was filed as a dictionary with one bridge, against the letter of its tests, because the tests could be met without keepable doing any work.
+
+What was left open is the carrier a reader would expect: a process whose state is where the course is (the step, the level, whether the way has turned), and whose steps are to stay as it was or to turn. On it the choice is made along the way. This file fixes what is guessed of it and a stricter test.
+
+## The choice, set against the direction
+
+On this process the way left as it was and the way turned stand in one model as its two moves, and the guard's keepable set says from where the need can still be kept, by staying or by turning now or later. That is a placing of two ways with respect to each other in the smallest model the package has, on the carrier where keeping together and October's renewal already stand. It is still a level whose giving is handed in, and the package already has the turn in time on its own carrier (`turns_in_time_iff_before`), so it may add no more than a second dictionary. The writer's own working, on paper and unchecked, says the two differ by one thing: the package's feasible courses leave out not turning.
+
+## The guesses (each may be false)
+
+Write `Q` for the process: a state is a step `t`, a level and whether the way has turned; from a state not turned, one step goes to `X (t + 1)` not turned, another to the regime's step under `H` from the present level, turned; from a turned state the only step is the regime's step under `H`. The guard is that the need is met at the level.
+
+- **K1.** The level courses of the runs of `Q` from step 0, the level `X 0`, not turned, are the turned courses and `X` itself, and nothing else.
+- **K2.** From a turned state, the need is keepable exactly where it is met at every later step of the regime under `H`; under the lock's premises on the regime that is the level being at least `H + y` (the package's `turned_meets_iff` at that level).
+- **K3.** From a state not turned, the need is keepable exactly where it is met now and is keepable after staying or after turning. This is the scratch step law `keepable_step_iff` at `Q`, and it is where a choice is made.
+- **K4.** Under the lock's eight premises (`recoverable_iff_above`'s), the need is keepable from the state on `X` at step `N`, not turned, exactly where `H + y ≤ X N` or `X` itself meets the need at every step from `N` on.
+- **K5.** So the package's recoverable at `N` (`Turned` as feasible) is: the need met up to `N`, and keepable on `Q` from the state at `N` not turned, exactly under one further premise: that `X` meeting the need at every step from `N` on gives `H + y ≤ X N`. Without it they differ, and there is a case (or a statement with its premises) where the need is keepable on `Q` at every step and `X` is recoverable at none.
+- **K6 (against the step).** Everything above is the lock's first law (`turned_meets_iff`) said again: the step law is used once, formally, and what does the work is the regime's threshold. If so it is a second dictionary.
+
+## What would count as nothing having changed
+
+- K1 fails: the runs of `Q` are not those courses. Then the carrier is wrong and that is said.
+- K4 or K5 needs a premise beyond those named. Then it is said with that premise, and whether the lock's own theorems have it.
+- K6 holds.
+
+## What would count as a join, stricter than this afternoon's
+
+All three: (1) a statement about the package's own `Recoverable` with `Turned` as feasible, on `Q`, a carrier not made so that keepable has one run from a state; (2) its proof uses a general law of keepable (`keepable_step_iff`, `not_keepable_run`, or this afternoon's `recoverableBy_run_iff` or `recoverable_runLevels_iff`) at a point where the two moves differ, and does not only unfold definitions; (3) a reader who took no part, asked "does keepable do any work in this proof, and would the statement be as easy to prove without it?", answers that it does. If (3) fails it is a dictionary whatever the letter says.
+
+Whatever is found is told as what the Lean states, with every premise, and not as what makes a course better.
+
+## How it is done, and what it costs
+
+One AI worker (capped at 50 tool calls) writes one scratch module outside the package, built one module at a time with no axioms. One AI reader who took no part (capped at 30) tries to refute the telling and answers the question in (3). The writer adds a section to the study's note, and one checker (capped at 30) sets it against the module. The ceiling is 0.5 million tokens. The claim is on the board's row DJ before the worker starts. Nothing enters the package.
+
+---
+
+## After
+

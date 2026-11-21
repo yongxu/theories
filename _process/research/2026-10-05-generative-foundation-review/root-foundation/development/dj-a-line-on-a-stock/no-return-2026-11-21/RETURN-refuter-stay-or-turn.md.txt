@@ -1,0 +1,121 @@
+*An AI reader who took no part's return (run as Claude Opus), word for word from the run's journal (wf_da97957a-583); agents could not write report files, so this return is its report.*
+
+**Reader's report on `/Users/ren/tmp/dj/batch24/Becoming/ScratchStayOrTurn.lean`**
+
+I worked read-only. I did not build, run Lean or touch git.
+
+**Findings**
+
+1. **LESSER. The K5 counter-case is not shown to meet the eight premises.** File: ScratchStayOrTurn.lean, lines 519–534 (`kept_not_recoverable`) and 561–572 (`runs_recoverable_turned_not`).
+   - The worker says "without it there is a case where the two differ". The theorems prove only this: with X ≡ 1, giving ≡ 0, H = 1 and need = 1, keepable holds and the package's `Recoverable` with `Turned` fails, at every N.
+   - No theorem says this case meets the eight premises of `recoverable_iff_above` while `stayGives` fails.
+   - I checked by hand, unchecked by Lean, that it does with y = 1 and hi = 1:
+     - `Meets` holds vacuously: it asks z ≥ 1 and z + 1 ≤ 1.
+     - `Keeps` holds: (x − 1) + 0 ≤ 1 for x ≤ 1.
+     - `Short` holds: 0 < 1.
+     - `within` holds: 1 ≤ 2.
+     - `stayGives` fails: it would give 2 ≤ 1.
+   - Exact words: "a case, shown to differ; that it meets the eight premises with y = 1, hi = 1 is checked by hand, not stated in the module".
+   - The other half is proved by a theorem: `recoverable_iff_kept_iff` (line 503) says that under the eight premises, the equivalence holds exactly where `stayGives` does.
+
+2. **LESSER. One conjunct of K5 does no work.** File: line 489, used at line 496.
+   - The conjunct `(∀ n, n ≤ N → need ≤ X n)` on the right side is ignored in the backward proof (`fun ⟨_, kept⟩ => …`).
+   - It follows from `kept.start` together with `fall`. So the statement is the same without it.
+   - Exact words: "the met-so-far conjunct is implied by keepable and `fall`; it is carried for the frozen wording only".
+
+3. **LESSER. `stayGives` removes exactly the case where Q's extra choice matters.** File: line 487.
+   - Under the eight premises, K4 makes keepable on a state not turned equal to `H + y ≤ X N ∨ (X keeps the need from N on)`.
+   - `stayGives` makes the second disjunct imply the first. So under it, keepable from ⟨N, X N, false⟩ is just `H + y ≤ X N`, which is R2's right side.
+   - The theorem is then R2 composed with K4, on the premise that the staying-for-ever case adds nothing.
+   - The worker's telling is exact here. Calling the premise "exactly what is needed" is backed by `recoverable_iff_kept_iff`.
+   - It is used only in the keepable-to-recoverable direction (line 496), and that is the only direction that needs it.
+
+4. **LESSER. K1's `decided` premise is as strong as LPO in the worker's own instance.** File: lines 280–281 and 306.
+   - `decided` quantifies over every run. For `sot (fun _ => 1) (fun _ => 0) 1`, any Boolean sequence b gives the run `sotRun … b`, so `decided` itself already yields the LPO conclusion of `levels_runs_only_if_decides`.
+   - The telling says this ("a form of the limited principle of omniscience"). It also says correctly that it is not proved that the axiom-free logic lacks LPO.
+   - The statement is not empty: `decided` holds classically. But it is not K1 as frozen. Exact words: "K1 is proved under a premise that, in one instance, is itself LPO; as frozen it is neither proved nor refuted".
+
+5. **LESSER. The `propext` side finding cannot be checked from the current log.** File: lines 78–80 (`one_ne_zero'` docstring).
+   - The claim that build 2 reported `propext` for `Nat.succ_ne_zero` cannot be checked from the log as it now stands (build 4). I did not read build 2's log.
+
+6. **LESSER. Two docstrings leave out lemmas they use.** File: lines 439–446 and 536–541.
+   - Line 439–446: the K4 docstring's "If" branch also uses `Law.orbit_shift` and `later_le'`, not only the lemmas it lists. The worker's report does list them.
+   - Line 536–541: `runs_recoverable_of_kept` says "with the run that stays up to N". The run passed is the run that always stays (`fun _ => false`). It is still accurate, since it stays up to N.
+
+7. **No MUST finding.** I found no statement whose telling says more than its Lean.
+
+**Theorem by theorem (item 1)**
+
+- **`levels_runs_iff`** (line 279). Under `decided` (every run of `sot X giving H` is turned at some step, or at none), l is the level course of a run from ⟨0, X 0, false⟩ exactly where l is in the package's `Turned X giving H` or l t c = X t for all t. The if direction does not use `decided` (lines 290–296). The worker's sentence is exact.
+- **`levels_runs_only_if_decides`** (line 306). If the only-if direction holds for the instance (X ≡ 1, giving ≡ 0, H = 1), then every b : ℕ → Bool is true somewhere or false everywhere. Exact.
+- **`keepable_turned_iff`** (line 350). It has no premise. From ⟨t, l, true⟩, keepable is the same as `need ≤ orbit l k` for every k, k = 0 included. Proved by `turned_states`, which follows from the definition of `sotStep` with `true || a`. Exact. One point of wording: the frozen K2 says "every later step", but the theorem includes the present step, which is harmless.
+- **`keepable_turned_iff_above`** (line 364). Under the six premises listed, keepable from a turned state is the same as `H + y ≤ l`. Both halves come from the package's `turned_meets_of_above` and `above_of_turned_meets` at the constant course turned at 0. Exact.
+- **`keepable_stay_or_turn_iff`** (line 377). It has no premise. It is `keepable_step_iff` at `sot`, with the existential over actions split on Bool. Exact.
+- **`sot_stay_kept`** (line 422). Premises: `fall`, `nothing`, `short`, `needs`, `X N < H + y`, and keepable at ⟨N, X N, false⟩. Conclusion: keepable at ⟨N + k, X (N + k), false⟩ for every k. Exact.
+- **`keepable_not_turned_iff`** (line 447). Under the eight premises, keepable at ⟨N, X N, false⟩ is the same as `H + y ≤ X N ∨ ∀ t ≥ N, need ≤ X t`. Exact.
+- **`recoverable_iff_kept_of`, `recoverable_iff_kept_iff`, `kept_not_recoverable`, `runs_recoverable_turned_not`.** As above, and as the worker gives them, apart from findings 1 to 3.
+- **Definitions.** None is built so that keepable is the old condition by definition. `Keepable` (JointKeeping.lean, line 91) is "some run from s stays in g", and the module uses it unchanged.
+
+**Q and Turned (item 2)**
+
+- From ⟨t, l, false⟩, staying gives ⟨t+1, X(t+1), false⟩ and turning gives ⟨t+1, step l, true⟩. These always differ, at least in the flag, so a state not turned really has two moves.
+- From a turned state, both actions give the same state. That is the frozen "only step", written as two actions with one result.
+- Staying ignores the present level, as frozen. From the start, a state not turned always has level X t (`sot_lv_stay`).
+- The package's `Turned`, `turned` and `MeetsNeed` are used unchanged. They come from `TurningInTime` through `open`, and I compared the definitions at lines 1940–1949.
+- K1's level courses are as stated, under `decided`.
+
+**Answer to 3: does keepable do work?**
+
+The proved statement about the package's `Recoverable` with `Turned` is `recoverable_iff_kept_of` (line 482), together with `recoverable_iff_kept_iff`.
+
+- **Where the step law is used:**
+  - Its forward direction is used inside `sot_stay_kept` (line 429), reached from K4's only-if and so from K5's if direction. This is the point where the two moves differ. The stay branch is carried into the induction, and the turn branch is shut by `above_of_orbit_meets`, which is the package's `above_of_turned_meets`, plus `later_le'`.
+  - Its backward direction is used in K4's if direction (line 460) to build the turn-now run. That is `Run.cons`, a construction.
+  - `not_keepable_run`, `recoverableBy_run_iff`, `kept_before` and `extend` are not used in the `Turned` statements. `recoverable_runLevels_iff`, and through it `extend`, appear only in `runs_recoverable_of_kept`, which is about `RunLevels` and not the package's `Turned`.
+- **Strongest case that keepable works.** The theorem's right side is a keepable statement on a process with a real choice. The only route from it to R2 in the module is the step law, applied inductively, reading off the first action of an arbitrary run at each step. That is a general law used where staying and turning differ, not an unfolding.
+- **Strongest case that it does not.** `keepable_step_iff`'s forward direction is itself only "take the run's first action and its tail" (ScratchKeepableStep.lean, lines 50–54).
+  - A direct proof from the witness run is about as long, using facts already in the module:
+    - for each k, a split on whether the run has turned by k, like `sot_stayed_or_turned` (line 225) offset to start at N;
+    - where it has not turned, the level is X(N+k), as in `sot_lv_stay`;
+    - where it first turned at some T, the run follows the regime from X(N+T), as in `sot_levels_turned` and `turned_states`;
+    - then `above_of_orbit_meets` contradicts `X(N+T) < H+y`.
+  - The mathematical content in every path is the regime's threshold, `turned_meets_of_above` and `above_of_turned_meets`. And `stayGives` premises away the one case, staying for ever, in which keepable on Q says something that the threshold does not.
+- **My answer: no, in the sense of part (3).** Keepable does structural bookkeeping at the branch point, but the statement would be as easy to prove without it, and the threshold does the work. That agrees with the worker's own K6 verdict.
+
+**K5's premise (item 4)**
+
+- It is exactly what is needed. That is a theorem: `recoverable_iff_kept_iff`, under the eight premises.
+- It is needed in one direction only, keepable to recoverable, and it is used there only, which is right.
+- The difference without it is shown by a built case, `kept_not_recoverable`. That the case meets the eight premises is not shown (finding 1).
+
+**Build (item 5)**
+
+- The log reads "start 18:06:52" and "exit 0 build 4", with "unclean": [] and `"with_axioms": {}` for Becoming.ScratchStayOrTurn, 39 theorems and 46 declarations.
+- My own count agrees: 39 theorems, plus 7 definitions and the structure (`SotState`, `sotStep`, `sot`, `NeedMet`, `sotStart`, `sotPath`, `sotRun`), makes 46.
+- The log is of the module as it now stands:
+  - the source was last modified at 1795259212.63 (18:06:52.6);
+  - the .olean at `/Users/ren/tmp/dj/batch24/.build/Becoming/ScratchStayOrTurn.olean` was written at 1795259218.51, after that;
+  - the log ended at 1795259219.05.
+- There is no sorry, axiom, native_decide, unsafe, implemented_by or extern. The only grep hit is the word "axiom" in a docstring at line 303.
+
+**Header and docstrings (item 6)**
+
+I found nothing beyond findings 5 and 6. The header's list of which theorems state which guess (lines 13–17) matches the file.
+
+**Answer to 7: join, dictionary or failure?**
+
+By the frozen file's own words, K6 holds: what proves the statement about the package's `Recoverable` with `Turned` is R2, `turned_meets_iff`'s threshold, composed with K4. The step law is used once in an induction that a direct run analysis does as easily, and `stayGives` premises away the one case where Q's choice adds anything. Part (3) of the join test therefore fails, and this is a second dictionary, not a join and not a failure. Two results are kept from it:
+- the package's feasible courses leave out the course that never turns (`runs_recoverable_turned_not`);
+- K1's only-if direction carries an LPO-strength cost (`levels_runs_only_if_decides`).
+
+**What I did not read**
+
+- Most of ScratchNoReturn.lean; I read only `RunLevels` and `recoverable_runLevels_iff`, at lines 298–330.
+- ScratchKeepableStep.lean beyond lines 40–75.
+- The study's NOTE.md.
+- `recoverable_of_above`, `turned_meets_of_above` and `above_of_turned_meets` (I read only `above_of_recoverable` and R2).
+- Frame.lean, GenerativeCore and Horizon (`Run`, `Run.cons`, `onward`).
+- The build-2 log and the `.build4.log` copy.
+- The full build log; I read its head and tail only.
+
+**Tool calls: 5.**

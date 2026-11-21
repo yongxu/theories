@@ -1,0 +1,178 @@
+*An AI worker's return (run as Claude Opus), word for word from the run's journal (wf_da97957a-583); agents could not write report files, so this return is its report.*
+
+Path: `/Users/ren/tmp/dj/batch24/Becoming/ScratchStayOrTurn.lean` (module `Becoming.ScratchStayOrTurn`, imports `Becoming.ScratchNoReturn`, outside the package). The last build's exit line is `exit 0 build 4`, with `"unclean": []`, 39 theorems and `"with_axioms": {}`. There were no warnings in builds 2 to 4. Log: `/Users/ren/tmp/dj/batch24/build-ScratchStayOrTurn.log` (copy at `/Users/ren/tmp/dj/batch24/build-ScratchStayOrTurn.build4.log`).
+
+Short answer: none of K1 to K5 fails outright. K1 holds only with an added premise. K2, K3 and K4 hold as worded. K5 holds with its named premise, which is exactly what is needed, and without it there is a case where the two differ. K6 holds for the statement about the package's own `Recoverable`: the regime's threshold does the work there.
+
+**Shape of Q.** Q is as frozen, with nothing changed:
+- A state is `SotState` (`time`, `lv`, `isTurned : Bool`); actions are `Bool` (`false` = stay, `true` = turn).
+- `sotStep X giving H s a := ⟨s.time + 1, cond (s.isTurned || a) (RegimeMargin.step giving H s.lv) (X (s.time + 1)), s.isTurned || a⟩` (line 37).
+- `sot X giving H : Process SotState Bool := ⟨fun s a s' => s' = sotStep X giving H s a⟩` (line 42).
+- The guard is `NeedMet need s := need ≤ s.lv` (line 46). The start is `sotStart X := ⟨0, X 0, false⟩` (line 49).
+- Staying sets the level to `X (t+1)` whatever the present level, as the frozen file says. From a turned state, either action takes the regime's step.
+
+## K1: holds with one added premise; as frozen (no premise) it is not proved, and a theorem says why
+
+`levels_runs_iff` (line 279):
+```
+theorem levels_runs_iff
+    (decided : ∀ r : Run (sot X giving H),
+      (∃ n, (r.state n).isTurned = true) ∨ ∀ n, (r.state n).isTurned = false)
+    (l : Nat → Unit → Nat) :
+    RunLevels (sot X giving H) (fun s => s = sotStart X) (fun s _ => s.lv) l ↔
+      Turned X giving H l ∨ ∀ t c, l t c = X t
+```
+- **Premise:** every run of Q is turned at some step or at none (`decided`). The if direction does not use it.
+- **Form:** the package's `Turned` appears unchanged; `RunLevels` is the one from `ScratchNoReturn`.
+- **Proved from:** `sot_stayed_or_turned` (225), `sot_levels_turned` (210), `sot_lv_stay` (188), `sot_path_turn_flags` (244), `sot_path_turn_after` (254), `sot_path_stay_flags` (260). These in turn use `turned_succ_of_le` (90, through `ScratchNoReturn.turned_after'`), `le_dest`, `Nat.le_of_ble_eq_true` and `Nat.ble_eq_true_of_le`.
+
+**Why the premise is there.** The only-if direction as frozen would decide, for an arbitrary run, whether it ever turns. `levels_runs_only_if_decides` (line 306) shows this is a real cost:
+```
+theorem levels_runs_only_if_decides
+    (onlyIf : ∀ l, RunLevels (sot (fun _ => 1) (fun _ => 0) 1)
+      (fun s => s = sotStart (fun _ => 1)) (fun s _ => s.lv) l →
+      Turned (fun _ => 1) (fun _ => 0) 1 l ∨ ∀ t c, l t c = (fun _ => 1) t)
+    (b : Nat → Bool) : (∃ n, b n = true) ∨ ∀ n, b n = false
+```
+- **What it says:** in this one case (X constant at 1, nothing given, the use 1), K1's only-if direction decides, for every Boolean sequence, whether it is ever `true`. That is a form of the limited principle of omniscience.
+- **Not proved:** that the package's axiom-free logic cannot give that principle is argued, not proved. The docstring says so.
+- **Proved from:** `sot_lv_stay`, `sot_lv_turn`, `sot_act_of_flag`, `sot_flag_succ`, `turned_after'`, `bool_cases`, `or_true'`, `one_ne_zero'`.
+- **Constructive part with no premise:** `sot_stayed_or_turned` says every run from the start has not turned by `n`, or turned first between some `T < n` and `T+1`. `sot_levels_turned` says a run not turned at `T` and turned at `T+1` has levels `turned X giving H T t` at every `t`. `sot_lv_stay` says that wherever a run is not turned, its level is `X t`.
+
+**Side finding.** Build 2 reported `propext` for `levels_runs_only_if_decides` while it used the core `Nat.succ_ne_zero`. With that lemma swapped for a local `one_ne_zero'` (line 80, by `Nat.noConfusion`), the report is empty.
+
+## K2: holds
+
+`keepable_turned_iff` (line 350), with no premise:
+```
+theorem keepable_turned_iff {need t l : Nat} :
+    Keepable (sot X giving H) (NeedMet need) ⟨t, l, true⟩ ↔
+      ∀ k, need ≤ Law.orbit (RegimeMargin.step giving H) l k
+```
+- **Proved from:** `turned_states` (341): from a turned state every run follows the regime.
+
+`keepable_turned_iff_above` (line 364):
+```
+theorem keepable_turned_iff_above {y hi need t l : Nat} (top : l ≤ hi)
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H y)
+    (meets : RegimeMargin.Meets giving H y hi) (keeps : RegimeMargin.Keeps giving H hi)
+    (needs : 0 < need) (within : need ≤ H + y) :
+    Keepable (sot X giving H) (NeedMet need) ⟨t, l, true⟩ ↔ H + y ≤ l
+```
+- **Premises:** `l ≤ hi`; nothing given from nothing; giving short of `H` below `y`; giving meeting `H` from `y` up to `hi`; the step under `H` keeping the level within `hi`; a positive need at most `H + y`.
+- **Proved from:** `keepable_turned_iff`, plus the two halves of the package's `turned_meets_iff` at the course constant at `l`, turned at 0:
+  - `orbit_meets_of_above` (112) calls `TurningInTime.turned_meets_of_above`.
+  - `above_of_orbit_meets` (125) calls `TurningInTime.above_of_turned_meets`.
+  - Both use `turned_const_zero` (102).
+
+## K3: holds, as an instance of `keepable_step_iff`
+
+`keepable_stay_or_turn_iff` (line 377), with no premise:
+```
+theorem keepable_stay_or_turn_iff {need t l : Nat} :
+    Keepable (sot X giving H) (NeedMet need) ⟨t, l, false⟩ ↔
+      need ≤ l ∧ (Keepable (sot X giving H) (NeedMet need) ⟨t + 1, X (t + 1), false⟩ ∨
+        Keepable (sot X giving H) (NeedMet need) ⟨t + 1, RegimeMargin.step giving H l, true⟩)
+```
+- **Proof:** `keepable_step_iff.trans ⟨…⟩`. The scratch step law is applied at `sot`, and its "some action and some state" is read as the two actions `false` and `true`. It is not a fresh proof.
+
+## K4: holds as worded, under the eight premises
+
+`keepable_not_turned_iff` (line 447):
+```
+theorem keepable_not_turned_iff {y hi need N : Nat}
+    (fall : ∀ t, X (t + 1) ≤ X t) (top : X 0 ≤ hi)
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H y)
+    (meets : RegimeMargin.Meets giving H y hi) (keeps : RegimeMargin.Keeps giving H hi)
+    (needs : 0 < need) (within : need ≤ H + y) :
+    Keepable (sot X giving H) (NeedMet need) ⟨N, X N, false⟩ ↔
+      H + y ≤ X N ∨ ∀ t, N ≤ t → need ≤ X t
+```
+- **Premises:** the eight of `recoverable_iff_above`: X never rising, X 0 ≤ hi, nothing from nothing, giving short below y, giving meets from y up to hi, the step keeps within hi, a positive need, need ≤ H + y.
+- **Only if:** by `sot_stay_kept` (422). Its premises are `fall`, `nothing`, `short`, `needs`, `X N < H + y` and the need keepable from `⟨N, X N, false⟩`; it concludes the need is keepable from `⟨N+k, X (N+k), false⟩` for every k.
+  - It is an induction on k, and each step applies K3.
+  - The stay branch is carried on.
+  - The turn branch is closed: `keepable_turned_iff` and `Law.orbit_shift` give a course meeting the need, `above_of_orbit_meets` turns that into `H + y ≤ X (N+k)`, and this contradicts `X (N+k) ≤ X N < H + y` (`later_le'`).
+- **If:** where `H + y ≤ X N`, by K3 with the turn taken now (`keepable_stay_or_turn_iff.mpr`, `keepable_turned_iff`, `orbit_meets_of_above`, `Law.orbit_shift`, `later_le'`). Where X itself keeps, by `keepable_of_stays` (409, no premise; uses `sot_stay_states`, 401).
+
+## K5: holds with exactly the frozen further premise, and without it the two differ
+
+`recoverable_iff_kept_of` (line 482):
+```
+theorem recoverable_iff_kept_of {y hi need N : Nat}
+    (fall …) (top …) (nothing …) (short …) (meets …) (keeps …) (needs …) (within …)
+    (stayGives : (∀ t, N ≤ t → need ≤ X t) → H + y ≤ X N) :
+    Recoverable (Turned X giving H) (MeetsNeed need) (fun t _ => X t) N ↔
+      (∀ n, n ≤ N → need ≤ X n) ∧ Keepable (sot X giving H) (NeedMet need) ⟨N, X N, false⟩
+```
+- The eight premises are typed exactly as in K4.
+- **Premises:** the eight, plus `stayGives`: X meeting the need at every step from N on gives `H + y ≤ X N`.
+- **Proved from:** `TurningInTime.recoverable_iff_above` (the package's R2, called, not re-proved), `keepable_not_turned_iff` and `later_le'`.
+
+`recoverable_iff_kept_iff` (line 503) shows the premise is exactly what is needed:
+```
+    (Recoverable (Turned X giving H) (MeetsNeed need) (fun t _ => X t) N ↔
+      (∀ n, n ≤ N → need ≤ X n) ∧ Keepable (sot X giving H) (NeedMet need) ⟨N, X N, false⟩) ↔
+      ((∀ t, N ≤ t → need ≤ X t) → H + y ≤ X N)
+```
+- **Premises:** the eight.
+- **Proved from:** `recoverable_iff_above`, `keepable_not_turned_iff`, `recoverable_iff_kept_of`, `later_le'`.
+
+`kept_not_recoverable` (line 525), no premise, is the case where they differ:
+```
+theorem kept_not_recoverable (N : Nat) :
+    (∀ n, n ≤ N → 1 ≤ (fun _ : Nat => 1) n) ∧
+      Keepable (sot (fun _ => 1) (fun _ => 0) 1) (NeedMet 1) ⟨N, 1, false⟩ ∧
+      ¬ Recoverable (Turned (fun _ => 1) (fun _ => 0) 1) (MeetsNeed 1) (fun _ _ => 1) N
+```
+- **Proved from:** `keepable_of_stays`, and `TurningInTime.above_of_recoverable` with y = 1, which would give 2 ≤ 1.
+- **Not proved:** that this case also meets `top`, `meets`, `keeps` and `within` (with hi = 1 it does: `Meets` holds vacuously and `Keeps` holds since x − 1 ≤ 1). The theorem uses only `fall`, `nothing`, `short` and `needs`.
+- **So:** the lock's own theorems do not carry `stayGives`, and the eight premises do not give it (argued from this case, not proved). The lock does not need it because `Turned` leaves out the course that never turns.
+
+`runs_recoverable_of_kept` (line 542), no further premise:
+```
+theorem runs_recoverable_of_kept {need N : Nat} (before : ∀ n, n ≤ N → need ≤ X n)
+    (kept : Keepable (sot X giving H) (NeedMet need) ⟨N, X N, false⟩) :
+    Recoverable (RunLevels (sot X giving H) (fun s => s = sotStart X) (fun s _ => s.lv))
+      (MeetsNeed need) (fun t _ => X t) N
+```
+- **Proved from:** `ScratchNoReturn.recoverable_runLevels_iff` (with the run that always stays), `sot_stay_states` and `Keepable.mono`.
+
+`runs_recoverable_turned_not` (line 566), no premise: in the same case, at every N, X is `Recoverable` with Q's runs as the feasible courses and is not `Recoverable` with `Turned` as the feasible courses.
+
+## K6: holds for the statement about the package's `Recoverable`
+
+The proof of `recoverable_iff_kept_of` goes through the package's `recoverable_iff_above`, which rests on the threshold (`turned_meets_iff`'s halves). Keepable comes in only through K4, and the further premise `stayGives` exists only to remove the one thing keepable adds (staying for ever).
+
+What is not the lock's law said again:
+- the second disjunct in K4;
+- the cases where the two differ (`kept_not_recoverable`, `runs_recoverable_turned_not`);
+- the decision K1 needs.
+
+## The stricter test for a join
+
+1. **Part (1) is met by the letter.** `recoverable_iff_kept_of` and `recoverable_iff_kept_iff` are statements about the package's own `Recoverable` with `Turned` as the feasible courses, on Q. From a state not turned, Q has two moves and many runs.
+2. **Part (2), theorem by theorem:**
+   - `keepable_not_turned_iff` and `sot_stay_kept` use `keepable_step_iff` (through K3) at the point where the moves differ. In the only-if direction, the stay branch carries the induction and the turn branch is closed. In the if direction, the turn is taken now.
+   - Honestly, the substance of the turn branch is the threshold: R1's only-if half, `above_of_turned_meets` at a constant course, plus X never rising. The stay branch is trivial.
+   - An equally short proof without keepable is visible: look at the run's flag at each t (`sot_stayed_or_turned`, `sot_lv_stay`, `sot_levels_turned`). Either it has not turned and its level is `X t`, or it turned at some `T ≥ N` and the threshold gives `H + y ≤ X T ≤ X N`. So the step law organises the proof and does no work of its own.
+   - `recoverable_iff_kept_of` and `recoverable_iff_kept_iff` use no general law of keepable directly; `recoverable_iff_above` and the threshold do the work.
+   - `runs_recoverable_of_kept` uses `recoverable_runLevels_iff`, but only on the run that always stays, so the moves do not differ there.
+   - `keepable_turned_iff_above` is the threshold with keepable unfolded.
+3. **Part (3), my answer as a participant (not the independent reader's):** keepable does no work that the threshold and the flags do not. The statement would be about as easy to prove without it. Under the frozen rule this is a second dictionary, though one that adds content the lock lacks: the never-turning course, the exact further premise, and K1's need for a decision.
+
+## What I did not read, and counts
+
+**Not read:**
+- `GenerativeCore` beyond `Process`;
+- `Horizon` beyond `Run.cons`;
+- `ReadOffInTime` beyond lines 580 to 606;
+- `JointKeeping` beyond lines 85 to 100;
+- most of `ScratchNoReturn` (I read lines 60 to 200, 296 to 340 and 515 to 680);
+- the bodies in `RegimeMargin` beyond its definitions and the statements of `holds` and `ends_below`;
+- the as-frozen copy of the frozen file;
+- the four older files.
+
+The frozen file changed on disk after my first read. I read its "After" section, which was new, in a later call.
+
+**Counts:** 21 tool calls in all, including 4 builds. Build 1 failed: one elaboration error and three unused-variable warnings. Build 2 had `propext`. Builds 3 and 4 were clean; build 4 only reworded two docstrings.

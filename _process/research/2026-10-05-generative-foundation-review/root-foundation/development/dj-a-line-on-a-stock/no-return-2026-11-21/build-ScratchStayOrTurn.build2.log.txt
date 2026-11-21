@@ -1,0 +1,28 @@
+start 18:06:06
+{
+  "tree": "/Users/ren/tmp/dj/batch24",
+  "modules": 154,
+  "ran": [
+    "Becoming.ScratchStayOrTurn",
+    "BecomingScratchStayOrTurnAxiomAudit"
+  ],
+  "reused": 153,
+  "unclean": [],
+  "audits": {
+    "Becoming.ScratchStayOrTurn": {
+      "theorems": 38,
+      "declarations": 45,
+      "with_axioms": {
+        "Becoming.ScratchStayOrTurn.levels_runs_only_if_decides": [
+          "propext"
+        ]
+      }
+    }
+  },
+  "seconds": {
+    "Becoming.ScratchStayOrTurn": 3.43,
+    "BecomingScratchStayOrTurnAxiomAudit": 0.504
+  }
+}
+exit 0 build 2
+end 18:06:15
