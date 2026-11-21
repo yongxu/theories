@@ -93,7 +93,13 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineOnAStock.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "a-line-on-a-stock"
+   ],
+   "dynamics": [
+    "a-line-on-a-stock"
+   ]
   },
   {
    "key": "WayOfUnits",
@@ -110,7 +116,13 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "a-way-of-units"
+   ],
+   "dynamics": [
+    "turning-in-time"
+   ]
   },
   {
    "key": "TurningInTime",
@@ -169,7 +181,13 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "turning-in-time"
+   ],
+   "dynamics": [
+    "turning-in-time"
+   ]
   },
   {
    "key": "RegimeMargin",
@@ -211,7 +229,30 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "coupled-regimes",
+    "coupled-webs",
+    "margin-of-a-regime",
+    "regime-in-any-amounts",
+    "regime-point-under-adjusting-giving",
+    "rest-by-balance",
+    "rest-on-coupled-webs",
+    "threshold-in-the-state-plane",
+    "thresholds-beyond-a-band",
+    "webs-with-a-recent-giving",
+    "where-a-run-of-a-regime-comes-to-rest"
+   ],
+   "dynamics": [
+    "a-cascade-along-total-dependence",
+    "least-loss-rest",
+    "margin-of-a-regime",
+    "overcompensating-giving-cycles",
+    "regime-in-any-amounts",
+    "support-beyond-a-band-can-cycle",
+    "threshold-in-the-state-plane",
+    "where-a-run-of-a-regime-comes-to-rest"
+   ]
   },
   {
    "key": "ReadOffInTime",
@@ -263,7 +304,15 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadOffInTime.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "a-loss-read-before-its-point-of-no-return",
+    "the-route-is-the-relation-in-time",
+    "when-a-selection-read-off-continuation-reads"
+   ],
+   "dynamics": [
+    "reading-a-loss-in-time"
+   ]
   },
   {
    "key": "Capture",
@@ -280,7 +329,23 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Capture.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "capture-through-the-rule",
+    "mutual-dependence-and-its-pace",
+    "selection-through-couplings",
+    "target-capture",
+    "typicality-by-counting",
+    "weights-count-situations"
+   ],
+   "dynamics": [
+    "capture-through-the-rule",
+    "mutual-dependence-and-its-pace",
+    "seeking-boundary",
+    "target-capture",
+    "threshold-reading-read-late-alternates",
+    "unselected-beyond-the-coupling-closure"
+   ]
   },
   {
    "key": "RuleCapture",
@@ -297,7 +362,29 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleCapture.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "a-reading-against-the-share-does-not-ratchet",
+    "capture-by-counted-choices",
+    "capture-through-the-rule",
+    "closed-capture",
+    "loss-read-in-time-by-the-others",
+    "readers-drawn-from-the-selected",
+    "shaping-read-by-readers-drawn-from-the-selected",
+    "shaping-the-rule-selected-by-what-comes-back",
+    "two-rules-lock-together"
+   ],
+   "dynamics": [
+    "a-reading-against-the-share-does-not-ratchet",
+    "capture-by-counted-choices",
+    "capture-through-the-rule",
+    "closed-capture",
+    "loss-read-in-time-by-the-others",
+    "readers-drawn-from-the-selected",
+    "shaping-read-by-readers-drawn-from-the-selected",
+    "shaping-the-rule-selected-by-what-comes-back",
+    "threshold-reading-read-late-alternates"
+   ]
   },
   {
    "key": "ClosedCapture",
@@ -332,7 +419,21 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "capture-by-counted-choices",
+    "closed-capture",
+    "loss-read-in-time-by-the-others",
+    "readers-drawn-from-the-selected",
+    "shaping-read-by-readers-drawn-from-the-selected"
+   ],
+   "dynamics": [
+    "capture-by-counted-choices",
+    "closed-capture",
+    "loss-read-in-time-by-the-others",
+    "readers-drawn-from-the-selected",
+    "shaping-read-by-readers-drawn-from-the-selected"
+   ]
   },
   {
    "key": "RuleShaping",
@@ -349,7 +450,20 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "capture-by-counted-choices",
+    "loss-read-in-time-by-the-others",
+    "shaping-read-by-readers-drawn-from-the-selected",
+    "shaping-selected-among-groups",
+    "shaping-the-rule-selected-by-what-comes-back"
+   ],
+   "dynamics": [
+    "capture-by-counted-choices",
+    "loss-read-in-time-by-the-others",
+    "shaping-read-by-readers-drawn-from-the-selected",
+    "shaping-the-rule-selected-by-what-comes-back"
+   ]
   },
   {
    "key": "DrawnShaping",
@@ -384,7 +498,16 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnShaping.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "drawn-shaping-drawn-one-at-a-time",
+    "loss-read-in-time-by-the-others",
+    "shaping-read-by-readers-drawn-from-the-selected"
+   ],
+   "dynamics": [
+    "loss-read-in-time-by-the-others",
+    "shaping-read-by-readers-drawn-from-the-selected"
+   ]
   },
   {
    "key": "ReadInTime",
@@ -419,7 +542,13 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadInTime.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "loss-read-in-time-by-the-others"
+   ],
+   "dynamics": [
+    "loss-read-in-time-by-the-others"
+   ]
   },
   {
    "key": "ChoiceCountCapture",
@@ -436,7 +565,15 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ChoiceCountCapture.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "capture-by-counted-choices",
+    "shaping-read-by-readers-drawn-from-the-selected"
+   ],
+   "dynamics": [
+    "capture-by-counted-choices",
+    "shaping-read-by-readers-drawn-from-the-selected"
+   ]
   },
   {
    "key": "PoolFromCourse",
@@ -471,7 +608,15 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolFromCourse.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "a-pool-read-off-the-course",
+    "on-whom-the-loss-falls",
+    "the-lock-draws-its-readers-out"
+   ],
+   "dynamics": [
+    "the-lock-draws-its-readers-out"
+   ]
   },
   {
    "key": "Dependence",
@@ -506,7 +651,92 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "a-law-through-a-projection-along-one-run",
+    "a-law-through-changing-coupling-along-one-run",
+    "a-law-through-coupling-along-one-run",
+    "a-step-coupling-keeps-at-every-horizon",
+    "a-weighting-faster-than-renewal-ends-the-base",
+    "becoming-dependence-dynamics",
+    "becoming-finite-horizon",
+    "becoming-return-grades",
+    "becoming-stepwise-reading",
+    "bounded-census-keeps-pace",
+    "ceasing-needs-arising",
+    "census-balance",
+    "closing-needs-net-draw",
+    "coming-and-ceasing-keep-pace",
+    "condition-correspondence-discipline",
+    "consumption-ends-with-feeders",
+    "continuation-condition-yields-living-significance",
+    "counting-under-enclosure",
+    "derived-extent-limits",
+    "evolution-on-descent",
+    "exchanges-commute-unless-joined",
+    "feeding-closure",
+    "generation-is-replenishment",
+    "horizon-optima-hold-the-greatest-renewal",
+    "identity-across-steps",
+    "joint-difference-making",
+    "keeping-forgoes-the-renewal-at-the-need",
+    "life-as-condition-of-life",
+    "loops-within-what-a-law-reads",
+    "more-needs-renewers",
+    "no-finite-part-bears-taking",
+    "others-drawing-first-end-the-base",
+    "pace-of-selection-within-what-flows-in",
+    "premises-read-off-the-exchange",
+    "process-and-frame-as-readings",
+    "re-optimizing-above-a-renewal-ends-it",
+    "represented-boundary-against-dependence",
+    "reserve-defers-ending",
+    "room-read-off-the-exchange",
+    "runaway-distance-uncoupled",
+    "several-optimizers-drain-by-their-joint-capacity",
+    "significance-retained-within-margin",
+    "space-and-its-parts",
+    "substitution-preserves-consumption",
+    "support-from-the-supported",
+    "thresholds-of-waiting",
+    "unceasing-generation-needs-renewal",
+    "what-a-rise-draws-from-beyond",
+    "where-novelty-gain-comes-from",
+    "whole-law-of-counting",
+    "wisdom-root"
+   ],
+   "dynamics": [
+    "a-break-read-only-by-threshold",
+    "a-step-coupling-keeps-at-every-horizon",
+    "a-weighting-faster-than-renewal-ends-the-base",
+    "becoming-return-grades",
+    "ceasing-needs-arising",
+    "closed-cycle-without-dissipation",
+    "closing-needs-net-draw",
+    "co-ending-along-dependence",
+    "consumption-ends-with-feeders",
+    "continued-change-needs-openness",
+    "continuing-self-fed-from-beyond",
+    "horizon-optima-hold-the-greatest-renewal",
+    "how-loops-form",
+    "joint-difference-making",
+    "keeping-forgoes-the-renewal-at-the-need",
+    "more-needs-renewers",
+    "no-finite-part-bears-taking",
+    "others-drawing-first-end-the-base",
+    "re-optimizing-above-a-renewal-ends-it",
+    "reserve-defers-ending",
+    "restraint-within-the-joint-slack",
+    "returning-novelty-forgetting-on-levels",
+    "several-optimizers-drain-by-their-joint-capacity",
+    "substitution-preserves-consumption",
+    "support-passed-on",
+    "three-outcomes-of-a-loss",
+    "thresholds-of-waiting",
+    "unceasing-generation-needs-renewal",
+    "what-a-rise-draws-from-beyond",
+    "what-an-optimum-does-beyond-what-couples-in"
+   ]
   },
   {
    "key": "RelationalRenewal",
@@ -541,7 +771,25 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/RelationalRenewal.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "becoming-dependence-dynamics",
+    "becoming-finite-horizon",
+    "becoming-renewal-reading",
+    "becoming-return-grades",
+    "ranking-under-readings",
+    "relational-renewal-classification",
+    "substitution-preserves-consumption",
+    "supported-renewal-recovery"
+   ],
+   "dynamics": [
+    "becoming-renewal-reading",
+    "becoming-return-grades",
+    "loss-of-renewal-for-good",
+    "substitution-preserves-consumption",
+    "supported-renewal-recovery",
+    "three-outcomes-of-a-loss"
+   ]
   },
   {
    "key": "Renewable",
@@ -556,7 +804,9 @@
    ],
    "reads": [],
    "files": [],
-   "kind": "no Lean file of this name"
+   "kind": "no Lean file of this name",
+   "records": [],
+   "dynamics": []
   },
   {
    "key": "Flow",
@@ -608,7 +858,128 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "a-reading-informed-and-revalued",
+    "a-step-coupling-keeps-at-every-horizon",
+    "balance-from-conservation-along-a-relation",
+    "balance-from-the-first-law",
+    "bounded-census-keeps-pace",
+    "ceasing-needs-arising",
+    "census-balance",
+    "census-balance-under-continuation",
+    "closing-needs-net-draw",
+    "coming-and-ceasing-keep-pace",
+    "comparison-where-the-rest-responds",
+    "consumption-ends-with-feeders",
+    "continued-change-needs-openness",
+    "continuing-self-fed-from-beyond",
+    "counterfactual-is-the-course",
+    "counting-under-enclosure",
+    "differences-below-threshold",
+    "entropy-history-and-record",
+    "evolution-on-descent",
+    "exchanges-commute-unless-joined",
+    "feedback-and-reach",
+    "generation-is-replenishment",
+    "gluing-under-parity",
+    "hexagram-arrangements-and-laws",
+    "horizon-optima-hold-the-greatest-renewal",
+    "how-a-carried-difference-grows",
+    "how-loops-form",
+    "how-much-difference-arrives",
+    "how-often-couplings-act",
+    "identity-across-steps",
+    "imbalance-as-relatum",
+    "keeping-forgoes-the-renewal-at-the-need",
+    "laws-of-one-step",
+    "laws-of-one-step-complete",
+    "least-loss-rest",
+    "life-as-condition-of-life",
+    "living-on-and-descent",
+    "loops-within-what-a-law-reads",
+    "more-needs-renewers",
+    "mutation-and-the-balance-it-sets",
+    "no-finite-part-bears-taking",
+    "observation-is-a-route",
+    "offspring-read-from-giving-that-waits",
+    "orders-as-a-sum-over-histories",
+    "own-count-misses-joint-excess",
+    "pace-of-selection-within-what-flows-in",
+    "premises-read-off-the-exchange",
+    "process-and-frame-as-readings",
+    "re-optimizing-above-a-renewal-ends-it",
+    "regulation-from-one-side-and-locally",
+    "relative-position-is-zero-sum",
+    "represented-boundary-against-dependence",
+    "reserve-defers-ending",
+    "rest-at-every-resolution",
+    "rest-with-refinement-counted",
+    "rising-and-falling-in-one-exchange",
+    "room-read-off-the-exchange",
+    "runaway-distance-uncoupled",
+    "selection-term-over-generations",
+    "several-optimizers-drain-by-their-joint-capacity",
+    "shared-laws-on-the-grammar",
+    "space-and-its-parts",
+    "standings-not-read-off-the-occurrence-model",
+    "support-from-the-supported",
+    "target-capture",
+    "testing-within-couplings",
+    "the-breeding-value",
+    "unceasing-generation-needs-renewal",
+    "what-a-cut-loses",
+    "what-a-rise-draws-from-beyond",
+    "what-dependence-alone-carries-of-a-level",
+    "what-holding-for-a-reading-is-worth",
+    "where-novelty-gain-comes-from",
+    "where-two-courses-rejoin",
+    "whole-law-of-counting",
+    "whole-persists-through-generation"
+   ],
+   "dynamics": [
+    "a-break-read-only-by-threshold",
+    "a-reading-informed-and-revalued",
+    "a-step-coupling-keeps-at-every-horizon",
+    "a-stop-passed-by-a-listing-that-fixes-the-sign",
+    "an-arrow-leaves-change-not-recurring",
+    "ceasing-needs-arising",
+    "closed-cycle-without-dissipation",
+    "closing-needs-net-draw",
+    "co-ending-along-dependence",
+    "consumption-ends-with-feeders",
+    "continued-change-needs-openness",
+    "continuing-self-fed-from-beyond",
+    "falls-that-end-do-not-recur",
+    "horizon-optima-hold-the-greatest-renewal",
+    "how-loops-form",
+    "keeping-forgoes-the-renewal-at-the-need",
+    "least-loss-rest",
+    "loss-of-renewal-for-good",
+    "lossless-exchange-continues-and-returns",
+    "more-needs-renewers",
+    "mutation-and-the-balance-it-sets",
+    "no-finite-part-bears-taking",
+    "offspring-read-from-giving-that-waits",
+    "overshoot-beyond-the-gap",
+    "own-count-misses-joint-excess",
+    "position-does-not-protect",
+    "re-optimizing-above-a-renewal-ends-it",
+    "reserve-defers-ending",
+    "rest-at-every-resolution",
+    "restraint-within-the-joint-slack",
+    "returning-novelty-forgetting-on-levels",
+    "several-optimizers-drain-by-their-joint-capacity",
+    "support-passed-on",
+    "target-capture",
+    "two-sided-regulation-and-late-reading",
+    "unceasing-generation-needs-renewal",
+    "unselected-beyond-the-coupling-closure",
+    "waxing-and-waning-returns",
+    "what-a-rise-draws-from-beyond",
+    "what-an-optimum-does-beyond-what-couples-in",
+    "whole-persists-through-generation"
+   ]
   },
   {
    "key": "Dissipation",
@@ -643,7 +1014,53 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "a-reading-informed-and-revalued",
+    "balance-from-the-first-law",
+    "continued-change-needs-openness",
+    "continuing-self-fed-from-beyond",
+    "counting-standing-and-dependence",
+    "counting-under-enclosure",
+    "entropy-history-and-record",
+    "exchanges-commute-unless-joined",
+    "generation-is-replenishment",
+    "how-a-carried-difference-grows",
+    "laws-of-one-step",
+    "least-loss-from-entropy-production",
+    "least-loss-rest",
+    "listing-once-is-decided-identity",
+    "map-of-premises",
+    "no-finite-part-bears-taking",
+    "orders-as-a-sum-over-histories",
+    "place-transition-nets-on-the-spine",
+    "rest-at-every-resolution",
+    "rest-with-refinement-counted",
+    "rising-and-falling-in-one-exchange",
+    "what-bounds-offspring-numbers",
+    "what-holding-for-a-reading-is-worth",
+    "what-keeping-widening-needs",
+    "where-novelty-gain-comes-from",
+    "whole-law-of-counting"
+   ],
+   "dynamics": [
+    "a-reading-informed-and-revalued",
+    "a-stop-passed-by-a-listing-that-fixes-the-sign",
+    "a-token-moved-back-and-forth-on-a-net",
+    "an-arrow-leaves-change-not-recurring",
+    "closed-cycle-without-dissipation",
+    "continued-change-needs-openness",
+    "continuing-self-fed-from-beyond",
+    "ending-laws-as-regimes-on-a-lineage",
+    "how-loops-form",
+    "kind-relay-keeps-widening-within-kinds",
+    "least-loss-rest",
+    "lossless-exchange-continues-and-returns",
+    "no-finite-part-bears-taking",
+    "rest-at-every-resolution",
+    "returning-novelty-forgetting-on-levels",
+    "what-keeping-widening-needs"
+   ]
   },
   {
    "key": "Continuation",
@@ -678,7 +1095,56 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "confined-rise-within-a-whole",
+    "consumption-ends-with-feeders",
+    "continuing-self-fed-from-beyond",
+    "conveyance-crosses-the-boundary",
+    "derived-extent-limits",
+    "ending-laws-as-regimes-on-a-lineage",
+    "far-conveying-runs-the-family-down",
+    "feedback-and-reach",
+    "feeding-closure",
+    "four-cases-of-a-part",
+    "groups-whose-conditions-are-coupled",
+    "levels-of-closure",
+    "loss-beyond-a-region",
+    "own-count-misses-joint-excess",
+    "place-transition-nets-on-the-spine",
+    "regulation-from-one-side-and-locally",
+    "relational-renewal-classification",
+    "relative-position-is-zero-sum",
+    "represented-boundary-against-dependence",
+    "risk-minimization-on-a-shared-renewal",
+    "selection-among-groups-by-ending",
+    "supported-renewal-recovery",
+    "the-rest-outruns-the-renewal",
+    "what-a-set-point-optimum-does-beyond",
+    "whole-and-regions-and-bounded-centers",
+    "whole-drawing-beyond-renewal-ends"
+   ],
+   "dynamics": [
+    "a-token-moved-back-and-forth-on-a-net",
+    "closing-needs-net-draw",
+    "confined-rise-within-a-whole",
+    "consumption-ends-with-feeders",
+    "continuing-self-fed-from-beyond",
+    "ending-laws-as-regimes-on-a-lineage",
+    "loss-beyond-a-region",
+    "loss-of-renewal-for-good",
+    "no-finite-part-bears-taking",
+    "overshoot-beyond-the-gap",
+    "own-count-misses-joint-excess",
+    "position-does-not-protect",
+    "risk-minimization-on-a-shared-renewal",
+    "selection-among-groups-by-ending",
+    "supported-renewal-recovery",
+    "the-rest-outruns-the-renewal",
+    "two-sided-regulation-and-late-reading",
+    "what-a-set-point-optimum-does-beyond",
+    "whole-drawing-beyond-renewal-ends"
+   ]
   },
   {
    "key": "Interdependence",
@@ -713,7 +1179,20 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Interdependence.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "closure-verdict-meets-continuation-condition",
+    "consumption-ends-with-feeders",
+    "continuation-condition-decomposition",
+    "feeding-closure",
+    "levels-of-closure",
+    "mutual-dependence-and-its-pace",
+    "presupposition-scopes"
+   ],
+   "dynamics": [
+    "consumption-ends-with-feeders",
+    "mutual-dependence-and-its-pace"
+   ]
   },
   {
    "key": "Roles",
@@ -765,7 +1244,41 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Roles.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "continued-change-needs-openness",
+    "continuing-self-fed-from-beyond",
+    "conveyance-crosses-the-boundary",
+    "differences-below-threshold",
+    "exchanges-commute-unless-joined",
+    "generation-is-replenishment",
+    "identity-across-steps",
+    "laws-of-one-step",
+    "life-as-condition-of-life",
+    "living-on-and-descent",
+    "map-of-premises",
+    "no-finite-part-bears-taking",
+    "place-transition-nets-on-the-spine",
+    "reserve-defers-ending",
+    "rest-at-every-resolution",
+    "rising-and-falling-in-one-exchange",
+    "space-and-its-parts",
+    "testing-within-couplings",
+    "whole-law-of-counting",
+    "wisdom-root",
+    "worlds-are-runs"
+   ],
+   "dynamics": [
+    "a-token-moved-back-and-forth-on-a-net",
+    "ceasing-needs-arising",
+    "closed-cycle-without-dissipation",
+    "co-ending-along-dependence",
+    "continued-change-needs-openness",
+    "continuing-self-fed-from-beyond",
+    "no-finite-part-bears-taking",
+    "reserve-defers-ending",
+    "rest-at-every-resolution"
+   ]
   },
   {
    "key": "MutualActivation",
@@ -780,7 +1293,9 @@
    ],
    "reads": [],
    "files": [],
-   "kind": "no Lean file of this name"
+   "kind": "no Lean file of this name",
+   "records": [],
+   "dynamics": []
   },
   {
    "key": "Weightings",
@@ -839,7 +1354,29 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "a-narrowing-above-its-widening",
+    "alignment-approaches-under-the-selection-laws",
+    "eventual-widening",
+    "graded-significance-and-priority",
+    "need-and-feeding-read-with-time",
+    "route-b-joined",
+    "self-concern-through-dependence",
+    "shared-laws-on-the-grammar",
+    "weights-within-a-ratio-agree-past-it",
+    "what-persisting-shows-of-an-order",
+    "what-self-concern-alone-ranks",
+    "what-the-step-across-standpoints-reaches",
+    "widening-as-what-every-positive-weighting-ranks"
+   ],
+   "dynamics": [
+    "closed-cycle-without-dissipation",
+    "falls-that-end-do-not-recur",
+    "mutual-dependence-and-its-pace",
+    "persisting-filters-what-was-chosen",
+    "unselected-beyond-the-coupling-closure"
+   ]
   },
   {
    "key": "Entropy",
@@ -891,7 +1428,25 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Entropy.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "a-rise-past-the-inflow-is-drawn-from-beyond",
+    "balance-from-the-first-law",
+    "entropy-history-and-record",
+    "least-loss-from-entropy-production",
+    "pace-of-selection-within-what-flows-in",
+    "raising-what-couples-in-draws-from-beyond",
+    "returning-novelty-forgetting-on-levels",
+    "what-a-rise-draws-from-beyond",
+    "where-novelty-gain-comes-from"
+   ],
+   "dynamics": [
+    "an-arrow-leaves-change-not-recurring",
+    "lossless-exchange-continues-and-returns",
+    "restraint-within-the-joint-slack",
+    "returning-novelty-forgetting-on-levels",
+    "what-a-rise-draws-from-beyond"
+   ]
   },
   {
    "key": "SelectionLevels",
@@ -908,7 +1463,22 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "confined-rise-within-a-whole",
+    "groups-formed-by-descent",
+    "selection-among-groups-by-ending",
+    "selection-with-returns-to-groupmates",
+    "selection-within-and-among-groups",
+    "selection-within-and-among-groups-of-any-sizes",
+    "shaping-selected-among-groups",
+    "unequal-groups-not-decided-by-the-spread-among-groups"
+   ],
+   "dynamics": [
+    "confined-rise-within-a-whole",
+    "selection-among-groups-by-ending",
+    "shaping-the-rule-selected-by-what-comes-back"
+   ]
   },
   {
    "key": "PairSelection",
@@ -943,7 +1513,15 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PairSelection.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "offspring-read-from-giving-that-waits",
+    "what-giving-that-waits-draws-on"
+   ],
+   "dynamics": [
+    "offspring-read-from-giving-that-waits",
+    "what-giving-that-waits-draws-on"
+   ]
   },
   {
    "key": "PairFlow",
@@ -978,7 +1556,13 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PairFlow.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "what-decides-giving-against-keeping-on-a-flow"
+   ],
+   "dynamics": [
+    "what-decides-giving-against-keeping-on-a-flow"
+   ]
   },
   {
    "key": "GroupEnding",
@@ -995,7 +1579,24 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GroupEnding.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "confined-rise-within-a-whole",
+    "drift-offspring-sampled",
+    "groups-formed-by-descent",
+    "groups-whose-conditions-are-coupled",
+    "route-b-joined",
+    "selection-among-groups-by-ending",
+    "selection-within-and-among-groups-of-any-sizes"
+   ],
+   "dynamics": [
+    "confined-rise-within-a-whole",
+    "fixation-by-drift",
+    "mutual-dependence-and-its-pace",
+    "persisting-filters-what-was-chosen",
+    "selection-among-groups-by-ending",
+    "unselected-beyond-the-coupling-closure"
+   ]
   },
   {
    "key": "Founding",
@@ -1012,7 +1613,13 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Founding.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "confined-rise-within-a-whole"
+   ],
+   "dynamics": [
+    "confined-rise-within-a-whole"
+   ]
   },
   {
    "key": "DrawnBeyond",
@@ -1029,7 +1636,24 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnBeyond.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "a-rise-past-the-inflow-is-drawn-from-beyond",
+    "re-optimizing-above-a-renewal-ends-it",
+    "room-read-off-the-exchange",
+    "several-optimizers-drain-by-their-joint-capacity",
+    "what-a-rise-draws-from-beyond",
+    "what-a-set-point-optimum-does-beyond",
+    "what-an-optimum-does-beyond-what-couples-in"
+   ],
+   "dynamics": [
+    "re-optimizing-above-a-renewal-ends-it",
+    "restraint-within-the-joint-slack",
+    "several-optimizers-drain-by-their-joint-capacity",
+    "what-a-rise-draws-from-beyond",
+    "what-a-set-point-optimum-does-beyond",
+    "what-an-optimum-does-beyond-what-couples-in"
+   ]
   },
   {
    "key": "Admission",
@@ -1047,7 +1671,49 @@
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
     "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/constitution/admission/formal/Admission.lean"
    ],
-   "kind": "several Lean files of this name"
+   "kind": "several Lean files of this name",
+   "records": [
+    "a-law-through-a-projection-along-one-run",
+    "a-law-through-changing-coupling-along-one-run",
+    "a-need-with-a-cap",
+    "arising-needs-change",
+    "closing-needs-net-draw",
+    "closure-verdict-meets-continuation-condition",
+    "comparing-two-courses-on-what-they-admit",
+    "comparison-by-widening",
+    "comparison-content-under-regrouping",
+    "comparison-within-reach",
+    "continuation-condition-yields-living-significance",
+    "differences-below-threshold",
+    "eventual-widening",
+    "feedback-and-reach",
+    "four-cases-of-a-part",
+    "loops-within-what-a-law-reads",
+    "loss-beyond-a-region",
+    "own-widening-within-the-margin",
+    "ranking-under-readings",
+    "represented-boundary-against-dependence",
+    "shared-laws-on-the-grammar",
+    "significance-retained-within-margin",
+    "support-from-the-supported",
+    "support-passed-on",
+    "testing-within-couplings",
+    "the-markov-blanket-as-a-coupling-structure",
+    "what-dependence-alone-carries-of-a-level",
+    "what-keeping-widening-needs"
+   ],
+   "dynamics": [
+    "a-break-read-only-by-threshold",
+    "closed-cycle-without-dissipation",
+    "closing-needs-net-draw",
+    "falls-that-end-do-not-recur",
+    "how-loops-form",
+    "kind-relay-keeps-widening-within-kinds",
+    "loss-beyond-a-region",
+    "support-passed-on",
+    "unceasing-generation-needs-renewal",
+    "what-keeping-widening-needs"
+   ]
   },
   {
    "key": "Optimum",
@@ -1071,7 +1737,45 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "a-race-for-position-draws-everything",
+    "a-step-coupling-keeps-at-every-horizon",
+    "a-weighting-faster-than-renewal-ends-the-base",
+    "drawers-in-turn",
+    "horizon-optima-hold-the-greatest-renewal",
+    "keeping-forgoes-the-renewal-at-the-need",
+    "optima-rebuild-a-depleted-base",
+    "others-drawing-first-end-the-base",
+    "re-optimizing-above-a-renewal-ends-it",
+    "rest-by-balance",
+    "room-read-off-the-exchange",
+    "several-optimizers-drain-by-their-joint-capacity",
+    "steps-met-again-after-a-fall",
+    "valuing-what-is-left-at-any-worth",
+    "valuing-what-is-left-at-the-horizon",
+    "what-a-set-point-optimum-does-beyond",
+    "what-an-optimum-does-beyond-what-couples-in",
+    "where-a-run-of-a-regime-comes-to-rest"
+   ],
+   "dynamics": [
+    "a-race-for-position-draws-everything",
+    "a-step-coupling-keeps-at-every-horizon",
+    "a-weighting-faster-than-renewal-ends-the-base",
+    "drawers-in-turn",
+    "horizon-optima-hold-the-greatest-renewal",
+    "keeping-forgoes-the-renewal-at-the-need",
+    "least-loss-rest",
+    "optima-rebuild-a-depleted-base",
+    "others-drawing-first-end-the-base",
+    "overcompensating-giving-cycles",
+    "re-optimizing-above-a-renewal-ends-it",
+    "several-optimizers-drain-by-their-joint-capacity",
+    "threshold-in-the-state-plane",
+    "what-a-set-point-optimum-does-beyond",
+    "what-an-optimum-does-beyond-what-couples-in",
+    "where-a-run-of-a-regime-comes-to-rest"
+   ]
   },
   {
    "key": "CoupledDrawers",
@@ -1106,7 +1810,13 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CoupledDrawers.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it"
+   ],
+   "dynamics": [
+    "coupled-drawers-keep-a-need-only-where-the-coupling-reaches-it"
+   ]
   },
   {
    "key": "Copying",
@@ -1123,7 +1833,19 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Copying.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "copying-b-fold",
+    "formed-contacts-change-copying-fidelity",
+    "formed-copying-correction",
+    "inherited-structural-copying",
+    "learned-procedure-transmission",
+    "material-preparation-output",
+    "recurrent-chain-assembly"
+   ],
+   "dynamics": [
+    "copying-from-a-stock"
+   ]
   },
   {
    "key": "ContinuingRevision",
@@ -1175,7 +1897,14 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuingRevision.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "recurring-reference-revision",
+    "wisdom-root"
+   ],
+   "dynamics": [
+    "recurring-reference-revision"
+   ]
   },
   {
    "key": "RuleRebuilding",
@@ -1210,7 +1939,14 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "a-rule-rebuilt-from-the-members-it-limits"
+   ],
+   "dynamics": [
+    "a-rule-rebuilt-from-the-members-it-limits",
+    "a-rule-with-no-holder-does-not-return"
+   ]
   },
   {
    "key": "ReaderRebuilding",
@@ -1245,7 +1981,14 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "the-stock-buys-time-where-the-rebuild-draws-on-it"
+   ],
+   "dynamics": [
+    "a-reader-rebuilt-from-its-stock-ends-with-it",
+    "the-stock-buys-time-where-the-rebuild-draws-on-it"
+   ]
   },
   {
    "key": "LineageDrawdown",
@@ -1280,7 +2023,13 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageDrawdown.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "ending-laws-as-regimes-on-a-lineage"
+   ],
+   "dynamics": [
+    "ending-laws-as-regimes-on-a-lineage"
+   ]
   },
   {
    "key": "LineageRegimes",
@@ -1315,7 +2064,13 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageRegimes.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "ending-laws-as-regimes-on-a-lineage"
+   ],
+   "dynamics": [
+    "ending-laws-as-regimes-on-a-lineage"
+   ]
   },
   {
    "key": "ReadingsSpread",
@@ -1367,7 +2122,15 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsSpread.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "a-narrow-reading-in-a-commons",
+    "readings-revised-at-descent",
+    "where-a-reading-locks"
+   ],
+   "dynamics": [
+    "readings-revised-spread-and-locked"
+   ]
   },
   {
    "key": "Viability",
@@ -1402,7 +2165,16 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Viability.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "a-response-common-over-a-reading",
+    "conditions-kept-together",
+    "market-protected-continuation"
+   ],
+   "dynamics": [
+    "a-reading-kept-by-its-update",
+    "never-leaving-a-guard"
+   ]
   },
   {
    "key": "GuardHorizon",
@@ -1437,7 +2209,17 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "a-reading-kept-by-its-update",
+    "a-response-common-over-a-reading",
+    "a-revision-that-opens-a-correction",
+    "when-to-inquire-and-when-to-respond"
+   ],
+   "dynamics": [
+    "a-reading-kept-by-its-update",
+    "a-revision-that-opens-a-correction"
+   ]
   },
   {
    "key": "Ranking",
@@ -1454,7 +2236,18 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Ranking.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "basic-priority-step-by-step",
+    "becoming-renewal-reading",
+    "ranking-under-readings",
+    "relation-level-law-of-easing",
+    "relational-reading-comparison",
+    "stepwise-law-of-easing"
+   ],
+   "dynamics": [
+    "becoming-renewal-reading"
+   ]
   },
   {
    "key": "Reproduction",
@@ -1471,7 +2264,25 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reproduction.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "additive-part-of-offspring-variance",
+    "confined-rise-within-a-whole",
+    "drift-offspring-sampled",
+    "fixation-by-drift",
+    "fixation-with-selection",
+    "mutation-and-the-balance-it-sets",
+    "pace-of-selection-within-what-flows-in",
+    "selection-with-returns-to-groupmates",
+    "the-breeding-value",
+    "what-bounds-offspring-numbers"
+   ],
+   "dynamics": [
+    "confined-rise-within-a-whole",
+    "ending-laws-as-regimes-on-a-lineage",
+    "fixation-by-drift",
+    "mutation-and-the-balance-it-sets"
+   ]
   },
   {
    "key": "Evolution",
@@ -1506,7 +2317,30 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Evolution.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "a-goal-along-a-lineage",
+    "evolution-on-descent",
+    "exchanges-commute-unless-joined",
+    "learned-procedure-transmission",
+    "living-on-and-descent",
+    "map-of-premises",
+    "need-drift-along-a-lineage",
+    "pace-of-selection-within-what-flows-in",
+    "relative-position-is-zero-sum",
+    "selection-term-over-generations",
+    "space-and-its-parts",
+    "target-capture",
+    "transmission-is-inheritance-and-need",
+    "what-bounds-offspring-numbers"
+   ],
+   "dynamics": [
+    "ceasing-needs-arising",
+    "ending-laws-as-regimes-on-a-lineage",
+    "position-does-not-protect",
+    "target-capture",
+    "what-a-lineage-carries"
+   ]
   },
   {
    "key": "ReadingsPersist",
@@ -1541,7 +2375,18 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsPersist.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "a-selection-removing-its-readers",
+    "readings-carried-on-their-course",
+    "where-a-reading-locks",
+    "which-readings-persist"
+   ],
+   "dynamics": [
+    "readings-carried-and-filtered",
+    "readings-revised-spread-and-locked",
+    "selection-read-off-its-own-survivors"
+   ]
   },
   {
    "key": "DrawnReplacement",
@@ -1558,7 +2403,13 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnReplacement.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "drawn-shaping-drawn-one-at-a-time"
+   ],
+   "dynamics": [
+    "shaping-read-by-readers-drawn-from-the-selected"
+   ]
   },
   {
    "key": "Clearing",
@@ -1593,7 +2444,29 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Clearing.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "closure-verdict-meets-continuation-condition",
+    "comparison-within-reach",
+    "derived-extent-limits",
+    "feedback-and-reach",
+    "feeding-closure",
+    "four-cases-of-a-part",
+    "levels-of-closure",
+    "loss-beyond-a-region",
+    "presupposition-scopes",
+    "represented-boundary-against-dependence",
+    "testing-within-couplings",
+    "what-a-pools-acts-respond-to",
+    "what-pooled-coupling-reaches",
+    "what-the-step-across-standpoints-reaches",
+    "whole-and-regions-and-bounded-centers"
+   ],
+   "dynamics": [
+    "closing-needs-net-draw",
+    "loss-beyond-a-region",
+    "unselected-beyond-the-coupling-closure"
+   ]
   },
   {
    "key": "Stock",
@@ -1610,7 +2483,20 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Stock.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "consequence-revised-reference-plan",
+    "learned-procedure-transmission",
+    "pending-task-context-applicability",
+    "recurring-reference-revision",
+    "renewing-consuming-formation",
+    "selection-when-the-lumping-changes"
+   ],
+   "dynamics": [
+    "recurring-reference-revision",
+    "renewing-consuming-formation",
+    "selection-when-the-lumping-changes"
+   ]
   },
   {
    "key": "SetPointOptimum",
@@ -1627,7 +2513,15 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SetPointOptimum.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "risk-minimization-on-a-shared-renewal",
+    "what-a-set-point-optimum-does-beyond"
+   ],
+   "dynamics": [
+    "risk-minimization-on-a-shared-renewal",
+    "what-a-set-point-optimum-does-beyond"
+   ]
   },
   {
    "key": "DrawHistory",
@@ -1644,7 +2538,11 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawHistory.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "the-draws-before"
+   ],
+   "dynamics": []
   },
   {
    "key": "HorizonWebs",
@@ -1661,7 +2559,11 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HorizonWebs.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "becoming-finite-horizon"
+   ],
+   "dynamics": []
   },
   {
    "key": "The market program (experiments/market-generativity/model.py",
@@ -1676,7 +2578,9 @@
    ],
    "reads": [],
    "files": [],
-   "kind": "no Lean file of this name"
+   "kind": "no Lean file of this name",
+   "records": [],
+   "dynamics": []
   },
   {
    "key": "MarketGenerativity",
@@ -1693,7 +2597,15 @@
    "files": [
     "experiments/market-generativity/formal/MarketGenerativity.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "market-model-share-margin-and-ends",
+    "market-protected-continuation"
+   ],
+   "dynamics": [
+    "market-model-share-margin-and-ends",
+    "never-leaving-a-guard"
+   ]
   },
   {
    "key": "RegimeBoundary",
@@ -1710,7 +2622,13 @@
    "files": [
     "experiments/market-generativity/formal/RegimeBoundary.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "market-model-share-margin-and-ends"
+   ],
+   "dynamics": [
+    "market-model-share-margin-and-ends"
+   ]
   },
   {
    "key": "RegimeAttraction",
@@ -1727,7 +2645,13 @@
    "files": [
     "experiments/market-generativity/formal/RegimeAttraction.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "market-model-share-margin-and-ends"
+   ],
+   "dynamics": [
+    "market-model-share-margin-and-ends"
+   ]
   },
   {
    "key": "RegimeTransition",
@@ -1744,7 +2668,16 @@
    "files": [
     "experiments/market-generativity/formal/RegimeTransition.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "market-finite-support-obstruction",
+    "market-partial-correction-boundary",
+    "market-supported-finite-transition"
+   ],
+   "dynamics": [
+    "market-finite-support-obstruction",
+    "never-leaving-a-guard"
+   ]
   },
   {
    "key": "FiniteSupportObstruction",
@@ -1761,7 +2694,13 @@
    "files": [
     "experiments/market-generativity/formal/FiniteSupportObstruction.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "market-finite-support-obstruction"
+   ],
+   "dynamics": [
+    "market-finite-support-obstruction"
+   ]
   },
   {
    "key": "MarketInstances",
@@ -1778,7 +2717,17 @@
    "files": [
     "experiments/market-generativity/formal/MarketInstances.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "market-finite-support-obstruction",
+    "market-partial-correction-boundary",
+    "market-protected-continuation",
+    "market-supported-finite-transition"
+   ],
+   "dynamics": [
+    "market-finite-support-obstruction",
+    "never-leaving-a-guard"
+   ]
   },
   {
    "key": "AdmissionRevision",
@@ -1813,7 +2762,9 @@
    "files": [
     "experiments/market-generativity/meta-attractor/AdmissionRevision.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [],
+   "dynamics": []
   },
   {
    "key": "AlignmentSuccession",
@@ -1830,7 +2781,13 @@
    "files": [
     "experiments/market-generativity/meta-attractor/AlignmentSuccession.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "succession-on-a-funded-carrier"
+   ],
+   "dynamics": [
+    "succession-on-a-funded-carrier"
+   ]
   },
   {
    "key": "CarrierDiagnosis",
@@ -1865,7 +2822,9 @@
    "files": [
     "experiments/market-generativity/meta-attractor/CarrierDiagnosis.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [],
+   "dynamics": []
   },
   {
    "key": "CollectiveDestruction",
@@ -1882,7 +2841,9 @@
    "files": [
     "experiments/market-generativity/meta-attractor/CollectiveDestruction.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [],
+   "dynamics": []
   },
   {
    "key": "CommonCauseDiscovery",
@@ -1917,7 +2878,9 @@
    "files": [
     "experiments/market-generativity/meta-attractor/CommonCauseDiscovery.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [],
+   "dynamics": []
   },
   {
    "key": "CommonOrganization",
@@ -1934,7 +2897,9 @@
    "files": [
     "experiments/market-generativity/meta-attractor/CommonOrganization.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [],
+   "dynamics": []
   },
   {
    "key": "CommonTaskRevision",
@@ -1951,7 +2916,11 @@
    "files": [
     "experiments/market-generativity/meta-attractor/CommonTaskRevision.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "acquired-revision-of-pending-task"
+   ],
+   "dynamics": []
   },
   {
    "key": "CorrectionCommitment",
@@ -1986,7 +2955,9 @@
    "files": [
     "experiments/market-generativity/meta-attractor/CorrectionCommitment.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [],
+   "dynamics": []
   },
   {
    "key": "CorrectionDependence",
@@ -2021,7 +2992,11 @@
    "files": [
     "experiments/market-generativity/meta-attractor/CorrectionDependence.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "draws-on-a-shared-stock"
+   ],
+   "dynamics": []
   },
   {
    "key": "ExpandingInquiry",
@@ -2056,7 +3031,9 @@
    "files": [
     "experiments/market-generativity/meta-attractor/ExpandingInquiry.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [],
+   "dynamics": []
   },
   {
    "key": "LegacyReconciliation",
@@ -2073,7 +3050,9 @@
    "files": [
     "experiments/market-generativity/meta-attractor/LegacyReconciliation.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [],
+   "dynamics": []
   },
   {
    "key": "MarketDiagnosis",
@@ -2090,7 +3069,9 @@
    "files": [
     "experiments/market-generativity/meta-attractor/MarketDiagnosis.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [],
+   "dynamics": []
   },
   {
    "key": "PendingTaskApplicability",
@@ -2107,7 +3088,11 @@
    "files": [
     "experiments/market-generativity/meta-attractor/PendingTaskApplicability.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "pending-task-context-applicability"
+   ],
+   "dynamics": []
   },
   {
    "key": "PopulationCorrection",
@@ -2142,7 +3127,9 @@
    "files": [
     "experiments/market-generativity/meta-attractor/PopulationCorrection.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [],
+   "dynamics": []
   },
   {
    "key": "PopulationRealization",
@@ -2159,7 +3146,9 @@
    "files": [
     "experiments/market-generativity/meta-attractor/PopulationRealization.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [],
+   "dynamics": []
   },
   {
    "key": "RecursiveSelection",
@@ -2176,7 +3165,9 @@
    "files": [
     "experiments/market-generativity/meta-attractor/RecursiveSelection.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [],
+   "dynamics": []
   },
   {
    "key": "ReproductionNetwork",
@@ -2211,7 +3202,9 @@
    "files": [
     "experiments/market-generativity/meta-attractor/ReproductionNetwork.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [],
+   "dynamics": []
   },
   {
    "key": "ResponseCapacity",
@@ -2246,7 +3239,9 @@
    "files": [
     "experiments/market-generativity/meta-attractor/ResponseCapacity.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [],
+   "dynamics": []
   },
   {
    "key": "SharedStockInstances",
@@ -2263,7 +3258,11 @@
    "files": [
     "experiments/market-generativity/meta-attractor/SharedStockInstances.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "draws-on-a-shared-stock"
+   ],
+   "dynamics": []
   },
   {
    "key": "TestingReorganization",
@@ -2298,7 +3297,9 @@
    "files": [
     "experiments/market-generativity/meta-attractor/TestingReorganization.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [],
+   "dynamics": []
   },
   {
    "key": "VersionedTaskInstances",
@@ -2315,7 +3316,13 @@
    "files": [
     "experiments/market-generativity/meta-attractor/VersionedTaskInstances.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "acquired-revision-of-pending-task",
+    "pending-task-context-applicability",
+    "versioned-request-completion"
+   ],
+   "dynamics": []
   },
   {
    "key": "RenewingFormation",
@@ -2350,7 +3357,15 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RenewingFormation.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "own-count-misses-joint-excess",
+    "renewing-consuming-formation"
+   ],
+   "dynamics": [
+    "own-count-misses-joint-excess",
+    "renewing-consuming-formation"
+   ]
   },
   {
    "key": "conditional/renewal",
@@ -2383,7 +3398,9 @@
     }
    ],
    "files": [],
-   "kind": "no Lean file of this name"
+   "kind": "no Lean file of this name",
+   "records": [],
+   "dynamics": []
   },
   {
    "key": "The program of 17 November (d6_model.py)",
@@ -2398,7 +3415,9 @@
    ],
    "reads": [],
    "files": [],
-   "kind": "no Lean file of this name"
+   "kind": "no Lean file of this name",
+   "records": [],
+   "dynamics": []
   },
   {
    "key": "The scratch Lean of 17 November (ScratchCovering, ScratchMix",
@@ -2413,7 +3432,9 @@
    ],
    "reads": [],
    "files": [],
-   "kind": "no Lean file of this name"
+   "kind": "no Lean file of this name",
+   "records": [],
+   "dynamics": []
   },
   {
    "key": "The units of 19 November with a rule set again (lock_on_unit",
@@ -2428,7 +3449,9 @@
    ],
    "reads": [],
    "files": [],
-   "kind": "no Lean file of this name"
+   "kind": "no Lean file of this name",
+   "records": [],
+   "dynamics": []
   },
   {
    "key": "Gain",
@@ -2472,7 +3495,17 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Gain.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "what-keeping-widening-needs",
+    "where-novelty-gain-comes-from"
+   ],
+   "dynamics": [
+    "closed-cycle-without-dissipation",
+    "kind-relay-keeps-widening-within-kinds",
+    "returning-novelty-forgetting-on-levels",
+    "what-keeping-widening-needs"
+   ]
   },
   {
    "key": "Space",
@@ -2499,7 +3532,45 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "bounded-census-keeps-pace",
+    "ceasing-needs-arising",
+    "continuation-relative-to-a-class",
+    "continued-change-needs-openness",
+    "counting-under-enclosure",
+    "counts-exist-where-decided",
+    "entropy-history-and-record",
+    "laws-of-one-step-complete",
+    "least-loss-rest",
+    "listing-once-is-decided-identity",
+    "map-of-premises",
+    "premises-that-are-states-of-the-law",
+    "recurrence-without-decidedness",
+    "rest-at-every-resolution",
+    "rest-exactly-where-falls-stop",
+    "rest-theorem-in-any-amounts",
+    "rest-with-refinement-counted",
+    "space-and-its-parts",
+    "support-from-the-supported",
+    "the-world-represented-both-ways",
+    "transmission-independent-where-it-binds",
+    "whole-law-of-counting",
+    "wisdom-root",
+    "worlds-are-runs"
+   ],
+   "dynamics": [
+    "an-arrow-leaves-change-not-recurring",
+    "ceasing-needs-arising",
+    "closed-cycle-without-dissipation",
+    "continued-change-needs-openness",
+    "least-loss-rest",
+    "lossless-exchange-continues-and-returns",
+    "recurrence-without-decidedness",
+    "rest-at-every-resolution",
+    "rest-exactly-where-falls-stop",
+    "support-passed-on"
+   ]
   },
   {
    "key": "Branching",
@@ -2526,7 +3597,32 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Branching.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "determinacy-up-to-likeness",
+    "every-loss-passes-a-juncture",
+    "hexagram-world-laws",
+    "hexagrams-on-the-spine",
+    "least-loss-rest",
+    "necessarily-drawn-is-not-returning",
+    "returning-where-the-course-branches",
+    "what-a-commuting-law-keeps-apart",
+    "what-a-course-keeps-reachable",
+    "when-the-runs-of-a-process-settle",
+    "where-a-run-goes-on",
+    "worlds-are-runs"
+   ],
+   "dynamics": [
+    "a-map-moving-every-value-never-rests",
+    "a-run-round-a-loop-keeps-changing",
+    "every-loss-passes-a-juncture",
+    "least-loss-rest",
+    "necessarily-drawn-is-not-returning",
+    "returning-where-the-course-branches",
+    "waxing-and-waning-returns",
+    "what-a-commuting-law-keeps-apart",
+    "when-the-runs-of-a-process-settle"
+   ]
   },
   {
    "key": "BranchingCorrespondence",
@@ -2553,7 +3649,13 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BranchingCorrespondence.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "incidence-common-refinement",
+    "multivalued-joining-common-structure",
+    "retained-reference-joining-recovery"
+   ],
+   "dynamics": []
   },
   {
    "key": "Retaining",
@@ -2580,7 +3682,28 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "closure-verdict-meets-continuation-condition",
+    "comparison-within-reach",
+    "continuation-condition-decomposition",
+    "continuation-condition-yields-living-significance",
+    "four-cases-of-a-part",
+    "levels-of-closure",
+    "one-reader-several-conditions",
+    "own-widening-within-the-margin",
+    "presupposition-scopes",
+    "ranking-under-readings",
+    "shared-laws-on-the-grammar",
+    "significance-retained-within-margin",
+    "the-run-classes-and-widening",
+    "unity-of-readings",
+    "whole-and-regions-and-bounded-centers"
+   ],
+   "dynamics": [
+    "closing-needs-net-draw",
+    "falls-that-end-do-not-recur"
+   ]
   },
   {
    "key": "OwnWidening",
@@ -2607,7 +3730,11 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OwnWidening.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "own-widening-within-the-margin"
+   ],
+   "dynamics": []
   },
   {
    "key": "EventualWidening",
@@ -2634,7 +3761,18 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EventualWidening.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "comparing-two-courses-on-what-they-admit",
+    "eventual-widening",
+    "what-a-course-keeps-reachable",
+    "what-keeping-widening-needs"
+   ],
+   "dynamics": [
+    "closed-cycle-without-dissipation",
+    "kind-relay-keeps-widening-within-kinds",
+    "what-keeping-widening-needs"
+   ]
   },
   {
    "key": "KeepingWidening",
@@ -2661,7 +3799,17 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeepingWidening.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "degeneration-from-a-horizon",
+    "what-keeping-widening-needs"
+   ],
+   "dynamics": [
+    "closed-cycle-without-dissipation",
+    "degeneration-from-a-horizon",
+    "kind-relay-keeps-widening-within-kinds",
+    "what-keeping-widening-needs"
+   ]
   },
   {
    "key": "WideningOnTheMap",
@@ -2688,7 +3836,11 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "keeping-widening-is-generation-losing-nothing"
+   ],
+   "dynamics": []
   },
   {
    "key": "JointKeeping",
@@ -2715,7 +3867,13 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JointKeeping.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "conditions-kept-together"
+   ],
+   "dynamics": [
+    "never-leaving-a-guard"
+   ]
   },
   {
    "key": "Keeping",
@@ -2742,7 +3900,16 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Keeping.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "finite-continuation-plans",
+    "joint-plan-composition",
+    "what-holding-for-a-reading-is-worth",
+    "when-to-inquire-and-when-to-respond"
+   ],
+   "dynamics": [
+    "a-stop-passed-by-a-listing-that-fixes-the-sign"
+   ]
   },
   {
    "key": "Onward",
@@ -2769,7 +3936,21 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Onward.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "conditions-kept-together",
+    "processes-represented-both-ways",
+    "what-a-course-keeps-reachable",
+    "where-a-run-goes-on",
+    "where-the-possible-grows"
+   ],
+   "dynamics": [
+    "a-course-that-only-returns",
+    "never-leaving-a-guard",
+    "rule-raised-every-other-step",
+    "when-the-runs-of-a-process-settle",
+    "where-the-possible-grows"
+   ]
   },
   {
    "key": "Enough",
@@ -2796,7 +3977,15 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Enough.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "the-boundary-of-enough-under-undetermined-laws",
+    "what-a-method-comes-to-say-in-the-limit"
+   ],
+   "dynamics": [
+    "a-run-round-a-loop-keeps-changing",
+    "seeking-boundary"
+   ]
   },
   {
    "key": "ReachableRanges",
@@ -2823,7 +4012,20 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReachableRanges.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "shared-laws-on-the-grammar",
+    "tasks-and-what-performs-them",
+    "what-a-course-keeps-reachable",
+    "what-can-be-born-next",
+    "where-the-possible-grows"
+   ],
+   "dynamics": [
+    "a-course-that-only-returns",
+    "falls-that-end-do-not-recur",
+    "rule-raised-every-other-step",
+    "where-the-possible-grows"
+   ]
   },
   {
    "key": "Lock",
@@ -2848,7 +4050,9 @@
     }
    ],
    "files": [],
-   "kind": "no Lean file of this name"
+   "kind": "no Lean file of this name",
+   "records": [],
+   "dynamics": []
   },
   {
    "key": "Arising",
@@ -2875,7 +4079,47 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Arising.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "bounded-census-keeps-pace",
+    "ceasing-needs-arising",
+    "census-balance",
+    "coming-and-ceasing-keep-pace",
+    "continuation-relative-to-a-class",
+    "generation-is-replenishment",
+    "hexagram-arrangements-and-laws",
+    "identity-across-steps",
+    "life-as-condition-of-life",
+    "more-needs-renewers",
+    "no-finite-part-bears-taking",
+    "process-and-frame-as-readings",
+    "processes-represented-both-ways",
+    "reserve-defers-ending",
+    "rising-and-falling-in-one-exchange",
+    "support-from-the-supported",
+    "the-world-represented-both-ways",
+    "unceasing-generation-needs-renewal",
+    "where-novelty-gain-comes-from",
+    "where-the-possible-grows",
+    "whole-persists-through-generation"
+   ],
+   "dynamics": [
+    "a-course-that-only-returns",
+    "ceasing-needs-arising",
+    "closed-cycle-without-dissipation",
+    "co-ending-along-dependence",
+    "continuing-self-fed-from-beyond",
+    "more-needs-renewers",
+    "no-finite-part-bears-taking",
+    "reserve-defers-ending",
+    "returning-novelty-forgetting-on-levels",
+    "rule-raised-every-other-step",
+    "support-passed-on",
+    "unceasing-generation-needs-renewal",
+    "waxing-and-waning-returns",
+    "where-the-possible-grows",
+    "whole-persists-through-generation"
+   ]
   },
   {
    "key": "LineageRegions",
@@ -2902,7 +4146,13 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageRegions.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "the-selection-term-and-a-lineages-fate"
+   ],
+   "dynamics": [
+    "the-selection-term-and-a-lineages-fate"
+   ]
   },
   {
    "key": "Learning",
@@ -2929,7 +4179,46 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learning.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "a-prediction-read-by-what-it-predicts",
+    "a-reading-informed-and-revalued",
+    "fixed-places-and-sole-lines",
+    "generalization-through-lumping",
+    "hexagram-arrangements-and-laws",
+    "hexagram-world-laws",
+    "hexagrams-on-the-spine",
+    "identification-where-bounded",
+    "identification-where-runs-part",
+    "learnable-through-a-map",
+    "learning-by-refutation",
+    "place-relations-in-context",
+    "proposition-identity",
+    "readers-reading-readers",
+    "selection-right-exactly-where-read",
+    "selection-through-a-model-of-the-options",
+    "shared-laws-on-the-grammar",
+    "the-markov-blanket-as-a-coupling-structure",
+    "the-split-that-makes-sense",
+    "what-a-commuting-law-keeps-apart",
+    "what-readings-fix-of-the-unread",
+    "when-complying-when-read-is-best",
+    "where-a-move-is-formed",
+    "wisdom-root-without-axiom"
+   ],
+   "dynamics": [
+    "a-break-read-only-by-threshold",
+    "a-cascade-at-the-histories-reached",
+    "a-map-moving-every-value-never-rests",
+    "a-prediction-read-by-what-it-predicts",
+    "a-reading-informed-and-revalued",
+    "falls-that-end-do-not-recur",
+    "learning-by-refutation",
+    "publication-under-negation-alternates",
+    "recurrence-without-premise",
+    "waxing-and-waning-returns",
+    "what-a-commuting-law-keeps-apart"
+   ]
   },
   {
    "key": "Learnable",
@@ -2956,7 +4245,11 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learnable.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "learnable-through-a-map"
+   ],
+   "dynamics": []
   },
   {
    "key": "LearnableRuns",
@@ -2983,7 +4276,12 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearnableRuns.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "learnable-through-a-map",
+    "learning-through-a-map-is-tracking-in-the-limit"
+   ],
+   "dynamics": []
   },
   {
    "key": "LearningRuns",
@@ -3010,7 +4308,22 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearningRuns.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "fixed-places-and-sole-lines",
+    "generalization-through-lumping",
+    "hexagram-arrangements-and-laws",
+    "hexagram-world-laws",
+    "hexagrams-on-the-spine",
+    "place-relations-in-context",
+    "shared-laws-on-the-grammar",
+    "the-split-that-makes-sense",
+    "wisdom-root-without-axiom"
+   ],
+   "dynamics": [
+    "falls-that-end-do-not-recur",
+    "waxing-and-waning-returns"
+   ]
   },
   {
    "key": "LearnedGrouping",
@@ -3037,7 +4350,11 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearnedGrouping.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "transition-grouping-word-partition"
+   ],
+   "dynamics": []
   },
   {
    "key": "ResponseLearning",
@@ -3064,7 +4381,9 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ResponseLearning.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [],
+   "dynamics": []
   },
   {
    "key": "CodeAcquisition",
@@ -3091,7 +4410,11 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CodeAcquisition.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "composition-route"
+   ],
+   "dynamics": []
   },
   {
    "key": "SharedCodes",
@@ -3118,7 +4441,17 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SharedCodes.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "a-code-formed-between-formations",
+    "imposing-a-code-breaks-the-symmetry",
+    "synonyms-and-coined-forms",
+    "taking-what-most-hold"
+   ],
+   "dynamics": [
+    "a-code-formed-between-formations",
+    "merged-distinctions-stay-merged"
+   ]
   },
   {
    "key": "CountedCodes",
@@ -3145,7 +4478,13 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CountedCodes.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "a-code-held-as-counts"
+   ],
+   "dynamics": [
+    "a-code-held-as-counts"
+   ]
   },
   {
    "key": "JoiningCodes",
@@ -3172,7 +4511,14 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JoiningCodes.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "finite-joining-tree-lifting",
+    "joining-questions-survive-encoding",
+    "multivalued-joining-common-structure",
+    "wisdom-root"
+   ],
+   "dynamics": []
   },
   {
    "key": "Inquiry",
@@ -3199,7 +4545,17 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Inquiry.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "becoming-spine-instances",
+    "classification-robust-generative-comparison",
+    "metaethical-core-characterization",
+    "positive-ground-open-futures",
+    "practical-judgment-under-living-significance",
+    "testing-within-couplings",
+    "wisdom-root-without-axiom"
+   ],
+   "dynamics": []
   },
   {
    "key": "FallibleInquiry",
@@ -3226,7 +4582,14 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FallibleInquiry.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "finite-fallible-inquiry-necessity",
+    "scientific-inquiry-foundation",
+    "timely-response-necessity",
+    "wisdom-root"
+   ],
+   "dynamics": []
   },
   {
    "key": "Feedback",
@@ -3253,7 +4616,32 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Feedback.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "comparison-where-the-rest-responds",
+    "comparison-within-reach",
+    "continuation-condition-decomposition",
+    "differences-below-threshold",
+    "feedback-and-reach",
+    "growth-constrained-fragmentation",
+    "levels-of-closure",
+    "loops-within-what-a-law-reads",
+    "mutual-dependence-and-its-pace",
+    "presupposition-scopes",
+    "selection-through-couplings",
+    "testing-within-couplings",
+    "what-a-pools-acts-respond-to",
+    "what-dependence-alone-carries-of-a-level",
+    "what-pooled-coupling-reaches",
+    "which-links-a-closure-needs"
+   ],
+   "dynamics": [
+    "growth-constrained-fragmentation",
+    "how-loops-form",
+    "mutual-dependence-and-its-pace",
+    "seeking-boundary",
+    "unselected-beyond-the-coupling-closure"
+   ]
   },
   {
    "key": "Sensitivity",
@@ -3280,7 +4668,12 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "sensitivity-is-the-least-coupling",
+    "what-a-law-of-the-whole-and-no-part-takes"
+   ],
+   "dynamics": []
   },
   {
    "key": "Readout",
@@ -3307,7 +4700,19 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Readout.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "binding-preserving-substitution",
+    "control-coherence-loss",
+    "derived-history-law-exactness",
+    "fallible-witness-diagnosability",
+    "joint-correlation-reduced-dynamics",
+    "risk-certificate-outcome-distinction",
+    "where-a-move-is-formed"
+   ],
+   "dynamics": [
+    "recurrence-without-premise"
+   ]
   },
   {
    "key": "Reading",
@@ -3334,7 +4739,19 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reading.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "census-read-off-the-exchange",
+    "premises-read-off-the-exchange",
+    "premises-that-are-states-of-the-law",
+    "requirement-over-open-exchanges",
+    "unity-of-readings",
+    "where-a-move-is-formed",
+    "worlds-are-runs"
+   ],
+   "dynamics": [
+    "recurrence-without-premise"
+   ]
   },
   {
    "key": "Readings",
@@ -3361,7 +4778,15 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Readings.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "unity-of-readings",
+    "where-a-move-is-formed",
+    "worlds-are-runs"
+   ],
+   "dynamics": [
+    "recurrence-without-premise"
+   ]
   },
   {
    "key": "ReadingLoop",
@@ -3388,7 +4813,18 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingLoop.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "a-reading-kept-by-its-update",
+    "acts-alike-from-a-model-or-from-an-order",
+    "what-a-course-chosen-through-its-model-does-not-test",
+    "what-holding-for-a-reading-is-worth"
+   ],
+   "dynamics": [
+    "a-reading-kept-by-its-update",
+    "a-stop-passed-by-a-listing-that-fixes-the-sign",
+    "what-a-course-chosen-through-its-model-does-not-test"
+   ]
   },
   {
    "key": "ReadingSchedule",
@@ -3415,7 +4851,11 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingSchedule.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "one-reader-several-conditions"
+   ],
+   "dynamics": []
   },
   {
    "key": "ReadStages",
@@ -3442,7 +4882,11 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "when-complying-when-read-is-best"
+   ],
+   "dynamics": []
   },
   {
    "key": "Unread",
@@ -3469,7 +4913,12 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unread.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "what-readings-fix-of-the-unread",
+    "when-complying-when-read-is-best"
+   ],
+   "dynamics": []
   },
   {
    "key": "UnreadStandings",
@@ -3496,7 +4945,11 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/UnreadStandings.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "standings-not-read-off-the-occurrence-model"
+   ],
+   "dynamics": []
   },
   {
    "key": "ActiveReading",
@@ -3523,7 +4976,11 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ActiveReading.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "relational-reading-comparison"
+   ],
+   "dynamics": []
   },
   {
    "key": "HeldForReading",
@@ -3550,7 +5007,16 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HeldForReading.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "a-reading-informed-and-revalued",
+    "what-holding-for-a-reading-is-worth",
+    "when-holding-for-a-reading-stands-above-a-route"
+   ],
+   "dynamics": [
+    "a-reading-informed-and-revalued",
+    "a-stop-passed-by-a-listing-that-fixes-the-sign"
+   ]
   },
   {
    "key": "AcquiredCorrection",
@@ -3577,7 +5043,11 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/AcquiredCorrection.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "certificates-sound-and-available"
+   ],
+   "dynamics": []
   },
   {
    "key": "ObservationRepair",
@@ -3604,7 +5074,9 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ObservationRepair.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [],
+   "dynamics": []
   },
   {
    "key": "ObservationChange",
@@ -3631,7 +5103,11 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ObservationChange.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "becoming-spine-instances"
+   ],
+   "dynamics": []
   },
   {
    "key": "GoalFormationRevision",
@@ -3658,7 +5134,13 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/GoalFormationRevision.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "formed-goal-revision-continuation"
+   ],
+   "dynamics": [
+    "formed-goal-revision-continuation"
+   ]
   },
   {
    "key": "GoalRevision",
@@ -3685,7 +5167,9 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/GoalRevision.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [],
+   "dynamics": []
   },
   {
    "key": "FormedGrounds",
@@ -3712,7 +5196,9 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/FormedGrounds.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [],
+   "dynamics": []
   },
   {
    "key": "FormativeCapacity",
@@ -3742,7 +5228,9 @@
     "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/checks/20261007T130838.854157Z/FormativeCapacity.lean",
     "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/checks/20261007T131010.300022Z/FormativeCapacity.lean"
    ],
-   "kind": "several Lean files of this name"
+   "kind": "several Lean files of this name",
+   "records": [],
+   "dynamics": []
   },
   {
    "key": "CorrectionReconfiguration",
@@ -3769,7 +5257,11 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CorrectionReconfiguration.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "reviewers-count-by-independent-causes"
+   ],
+   "dynamics": []
   },
   {
    "key": "CorrectionInquiry",
@@ -3796,7 +5288,11 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CorrectionInquiry.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "becoming-spine-instances"
+   ],
+   "dynamics": []
   },
   {
    "key": "AlignmentInquiry",
@@ -3823,7 +5319,9 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/AlignmentInquiry.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [],
+   "dynamics": []
   },
   {
    "key": "OpenFutureRevision",
@@ -3850,7 +5348,11 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/OpenFutureRevision.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "open-form-realization-under-revision"
+   ],
+   "dynamics": []
   },
   {
    "key": "EvaluatorGrounding",
@@ -3877,7 +5379,12 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/EvaluatorGrounding.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "becoming-spine-instances",
+    "own-good-to-reachable-living-significance"
+   ],
+   "dynamics": []
   },
   {
    "key": "COLLECTIVE-DESTRUCTIVE-ATTRACTORS",
@@ -3902,7 +5409,9 @@
     }
    ],
    "files": [],
-   "kind": "no Lean file of this name"
+   "kind": "no Lean file of this name",
+   "records": [],
+   "dynamics": []
   },
   {
    "key": "Revision",
@@ -3929,7 +5438,17 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Revision.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "a-revision-that-opens-a-correction",
+    "consequence-revised-reference-plan",
+    "selection-when-the-lumping-changes",
+    "wisdom-root"
+   ],
+   "dynamics": [
+    "a-revision-that-opens-a-correction",
+    "selection-when-the-lumping-changes"
+   ]
   },
   {
    "key": "RevisionPlans",
@@ -3956,7 +5475,14 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionPlans.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "what-holding-for-a-reading-is-worth",
+    "when-holding-for-a-reading-stands-above-a-route"
+   ],
+   "dynamics": [
+    "a-stop-passed-by-a-listing-that-fixes-the-sign"
+   ]
   },
   {
    "key": "RevisionRoutes",
@@ -3983,7 +5509,12 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "when-complying-when-read-is-best",
+    "when-no-route-stands-above-a-revision"
+   ],
+   "dynamics": []
   },
   {
    "key": "OpenedCorrection",
@@ -4010,7 +5541,13 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OpenedCorrection.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "a-revision-that-opens-a-correction"
+   ],
+   "dynamics": [
+    "a-revision-that-opens-a-correction"
+   ]
   },
   {
    "key": "MoveFormation",
@@ -4037,7 +5574,13 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MoveFormation.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "where-a-move-is-formed"
+   ],
+   "dynamics": [
+    "recurrence-without-premise"
+   ]
   },
   {
    "key": "RouteFormation",
@@ -4064,7 +5607,11 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RouteFormation.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "composition-route"
+   ],
+   "dynamics": []
   },
   {
    "key": "ReflexivePrediction",
@@ -4091,7 +5638,14 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReflexivePrediction.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "a-prediction-read-by-what-it-predicts"
+   ],
+   "dynamics": [
+    "a-prediction-read-by-what-it-predicts",
+    "publication-under-negation-alternates"
+   ]
   },
   {
    "key": "HeldPossible",
@@ -4118,7 +5672,17 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HeldPossible.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "tasks-and-what-performs-them",
+    "what-can-be-born-next",
+    "where-the-possible-grows"
+   ],
+   "dynamics": [
+    "a-course-that-only-returns",
+    "rule-raised-every-other-step",
+    "where-the-possible-grows"
+   ]
   },
   {
    "key": "GrammarReadings",
@@ -4145,7 +5709,11 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "classical-definitions-in-the-grammar"
+   ],
+   "dynamics": []
   },
   {
    "key": "TimedResponse",
@@ -4172,7 +5740,16 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TimedResponse.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "how-much-difference-arrives",
+    "timely-response-necessity",
+    "what-a-pools-acts-respond-to",
+    "wisdom-root"
+   ],
+   "dynamics": [
+    "unselected-beyond-the-coupling-closure"
+   ]
   },
   {
    "key": "Handoff",
@@ -4199,7 +5776,12 @@
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Handoff.lean"
    ],
-   "kind": "one Lean file"
+   "kind": "one Lean file",
+   "records": [
+    "open-form-realization-under-revision",
+    "wisdom-root"
+   ],
+   "dynamics": []
   }
  ]
 }

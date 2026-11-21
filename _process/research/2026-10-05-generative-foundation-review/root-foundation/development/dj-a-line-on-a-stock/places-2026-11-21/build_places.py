@@ -57,6 +57,25 @@ def lean_files():
     return out
 
 
+def joins():
+    """For each tracked file, the ids of the result records whose references name it; and for each record id, the ids of the
+    atlas's dynamics that name it. Computed from the records and the atlas's entries as they stand; nothing is read in the Lean.
+    Added on 21 November by the session that ran the survey of the repository. A record names a file as a source of its
+    statement or proof; a dynamic names records. Neither says that the file states the dynamic, and nothing here is a link."""
+    import glob, os
+    root = subprocess.run(['git', 'rev-parse', '--show-toplevel'], capture_output=True, text=True).stdout.strip()
+    by_file, by_record = {}, {}
+    for path in sorted(glob.glob(os.path.join(root, 'theories/becoming/results/records/*.json'))):
+        record = json.load(open(path))
+        for ref in record.get('references', []):
+            if ref.get('path'):
+                by_file.setdefault(ref['path'], set()).add(record['id'])
+    for dynamic in json.load(open(os.path.join(root, 'theories/becoming/results/atlas/entries/dynamics.json'))):
+        for rid in dynamic.get('records', []):
+            by_record.setdefault(rid, set()).add(dynamic['id'])
+    return by_file, by_record
+
+
 def build():
     places = OrderedDict()
     table = json.load(open(TABLE))
@@ -77,6 +96,10 @@ def build():
     for p in places.values():
         p['files'] = sorted(files.get(p['key'], []))
         p['kind'] = 'one Lean file' if len(p['files']) == 1 else ('several Lean files of this name' if p['files'] else 'no Lean file of this name')
+    by_file, by_record = joins()
+    for p in places.values():
+        p['records'] = sorted(set().union(*[by_file.get(f, set()) for f in p['files']])) if p['files'] else []
+        p['dynamics'] = sorted(set().union(*[by_record.get(r, set()) for r in p['records']])) if p['records'] else []
     return list(places.values())
 
 
@@ -101,6 +124,10 @@ if __name__ == '__main__':
         L.append('### %s (readers\' returns of %s; not checked)' % (p['key'], ', '.join(sorted({r['title'].split(',')[0] for r in p['reads']}))))
         for t in p['table']:
             L.append('- *table:* %s, letters `%s`, standing %s%s' % (t['row'], t['letters'], t['standing'], (', told in ' + t['told_in']) if t['told_in'] else ''))
+        if p['records']:
+            L.append('- *result records that name this place\'s file as a source* (computed; not a link): ' + ', '.join('`%s`' % r for r in p['records']))
+        if p['dynamics']:
+            L.append('- *dynamics in the atlas that name one of those records* (computed; not a link): ' + ', '.join('`%s`' % d for d in p['dynamics']))
         for r in p['reads']:
             L.append('- *read of %s, reader %s, as "%s"* (%s: [note](%s), [report](%s)):' % (r['title'], r['reader'], r['place'].replace('\n', ' '), CAUTION, r['note'], r['report']))
             for f, v in r['fields'].items():
