@@ -87,6 +87,7 @@ Choosing from observation classes is an observation-based (memoryless) policy fo
 | integration | [DEFECTS-FOUND.md](../../../../_process/research/2026-10-05-repository-reconciliation/architecture/DEFECTS-FOUND.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T112708.430596Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261102T051236.940686Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T212524.793950Z/verification.json) | — |
 
 Aliases: `when to inquire and when to respond`, `何时探究，何时回应`, `Becoming.GuardHorizon.uniform_policy_iff_fiber_feasible`, `InquiryChoice.observed_class_policy_iff`
 

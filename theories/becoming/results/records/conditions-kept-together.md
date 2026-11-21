@@ -96,6 +96,7 @@ An account of social viability Ren brought on 19 October 2026 lists eight constr
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json) | — |
 | proof | [KeepableStep.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeepableStep.lean) | `Becoming.Viability.ChoicePoint.afterSplit`, `Becoming.Viability.ChoicePoint.keepable_gained`, `Becoming.Viability.ChoicePoint.keepable_gained_along_run`, `Becoming.Viability.Successor.atOne`, `Becoming.Viability.Successor.not_keepable_kept_complement_not`, `Becoming.Viability.Successor.nowhere_keepable`, `Becoming.Viability.Successor.process`, `Becoming.Viability.keepable_step_iff`, `Becoming.Viability.not_keepable_invariant_iff`, `Becoming.Viability.not_keepable_run`, `Becoming.Viability.not_keepable_step` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T133506.986317Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T212524.793950Z/verification.json) | — |
 
 Aliases: `conditions kept together`, `共同保持的条件`, `keeping a part is not renewal`, `Becoming.Viability.ChoicePoint.no_rule_decides_joint`, `Becoming.Renewable.kept_part_not_renewal`, `viability is not a product (reading)`
 

@@ -2418,6 +2418,26 @@ Definitions and types:
 
 </details>
 
+<a id="module-8f6a71236df6"></a>
+
+<details>
+<summary>RisingIteration.lean — 4 explicit declarations</summary>
+
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RisingIteration.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+
+`experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RisingIteration.lean`
+
+Imports: `Becoming.PredicateIteration`, `Becoming.Decidedness`
+
+| Theorem or lemma | Line |
+|---|---:|
+| [Becoming.Iteration.singleton_rise_needs_em](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RisingIteration.lean#L28) | 28 |
+| [Becoming.Iteration.commutes_false](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RisingIteration.lean#L40) | 40 |
+| [Becoming.Iteration.rise_not_not](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RisingIteration.lean#L48) | 48 |
+| [Becoming.Iteration.rise_of_stable](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RisingIteration.lean#L57) | 57 |
+
+</details>
+
 <a id="module-33c3f51ffbf2"></a>
 
 <details>

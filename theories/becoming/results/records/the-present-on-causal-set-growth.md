@@ -148,6 +148,7 @@ Causal set theory: natural labellings as linear extensions, links, partial stems
 | proof | [Prelude.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Prelude.lean) | `Becoming.ListTests.beq_false_of_ne`, `Becoming.ListTests.bool_absurd`, `Becoming.ListTests.not_false_of_true` |
 | proof | [Likeness.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Likeness.lean) | `Becoming.LLPO.decided_true` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T212524.793950Z/verification.json) | — |
 
 Aliases: `The present on causal-set growth`, `因果集生长上之现在`, `presence in time on causal-set growth`, `natural labellings as orders of birth`, `the past as the largest relation every course respects`, `Becoming.Presence.natural_iff_course`, `Becoming.Presence.present_some_iff_link`, `Becoming.Presence.present_every_iff_only_link`, `Becoming.Presence.prec_iff_every`, `Becoming.Presence.past_every_iff`, `Becoming.Presence.present_every_course_only_link`
 

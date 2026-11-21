@@ -3225,6 +3225,18 @@
    "page": "theories/becoming/results/records/keeping-widening-is-generation-losing-nothing.md"
   },
   {
+   "id": "record:kept-at-the-length-of-a-list",
+   "type": "result",
+   "record": "kept-at-the-length-of-a-list",
+   "title": "What a list holds: kept at its length, kept for good",
+   "title_zh": "列表所容：至其长而存，则恒存",
+   "status": "recorded-checked",
+   "kind": "theorem",
+   "region": "map",
+   "base": "general",
+   "page": "theories/becoming/results/records/kept-at-the-length-of-a-list.md"
+  },
+  {
    "id": "record:laws-at-coarser-steps",
    "type": "result",
    "record": "laws-at-coarser-steps",
@@ -7197,7 +7209,7 @@
    "type": "module",
    "name": "Becoming.GrammarCandidates",
    "level": "L1",
-   "theorems": 69,
+   "theorems": 73,
    "region": "classical",
    "base": "grammar",
    "on_grammar": true,
@@ -7252,7 +7264,7 @@
    "type": "module",
    "name": "Becoming.CommonResponse",
    "level": "L1",
-   "theorems": 36,
+   "theorems": 45,
    "region": "knowing",
    "base": "grammar",
    "on_grammar": true,
@@ -7670,7 +7682,7 @@
    "type": "module",
    "name": "Becoming.Attraction",
    "level": "L1",
-   "theorems": 56,
+   "theorems": 61,
    "region": "map",
    "base": "frame",
    "on_grammar": true,
@@ -8033,7 +8045,29 @@
    "type": "module",
    "name": "Becoming.Refinement",
    "level": "L1",
-   "theorems": 10,
+   "theorems": 9,
+   "region": "method",
+   "base": "general",
+   "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
+   "id": "module:Becoming.PredicateIteration",
+   "type": "module",
+   "name": "Becoming.PredicateIteration",
+   "level": "L1",
+   "theorems": 22,
+   "region": "method",
+   "base": "general",
+   "on_grammar": false,
+   "reaches_grammar": false
+  },
+  {
+   "id": "module:Becoming.RisingIteration",
+   "type": "module",
+   "name": "Becoming.RisingIteration",
+   "level": "L1",
+   "theorems": 4,
    "region": "method",
    "base": "general",
    "on_grammar": false,
@@ -8286,7 +8320,7 @@
    "type": "module",
    "name": "Becoming.ReachableRanges",
    "level": "L1",
-   "theorems": 135,
+   "theorems": 140,
    "region": "significance",
    "base": "old-base",
    "on_grammar": true,
@@ -9144,7 +9178,7 @@
    "type": "module",
    "name": "Becoming.KeepableStep",
    "level": "L1",
-   "theorems": 8,
+   "theorems": 10,
    "region": "map",
    "base": "frame",
    "on_grammar": false,
@@ -9210,7 +9244,7 @@
    "type": "module",
    "name": "Becoming.Tolerance",
    "level": "L1",
-   "theorems": 63,
+   "theorems": 65,
    "region": "collective",
    "base": "general",
    "on_grammar": false,
@@ -9419,7 +9453,7 @@
    "type": "module",
    "name": "Becoming.Viability",
    "level": "L1",
-   "theorems": 25,
+   "theorems": 27,
    "region": "map",
    "base": "frame",
    "on_grammar": true,
@@ -9430,7 +9464,7 @@
    "type": "module",
    "name": "Becoming.Keeping",
    "level": "L1",
-   "theorems": 30,
+   "theorems": 33,
    "region": "map",
    "base": "frame",
    "on_grammar": false,
@@ -9617,7 +9651,7 @@
    "type": "module",
    "name": "Becoming.GuardHorizon",
    "level": "",
-   "theorems": 34,
+   "theorems": 52,
    "region": "map",
    "base": "frame",
    "on_grammar": true,
@@ -9650,7 +9684,7 @@
    "type": "module",
    "name": "Becoming.Lasting",
    "level": "L1",
-   "theorems": 90,
+   "theorems": 92,
    "region": "map",
    "base": "frame",
    "on_grammar": false,
@@ -9694,7 +9728,7 @@
    "type": "module",
    "name": "Becoming.Likeness",
    "level": "L1",
-   "theorems": 177,
+   "theorems": 182,
    "region": "root",
    "base": "general",
    "on_grammar": false,
@@ -10068,7 +10102,7 @@
    "type": "module",
    "name": "Becoming.Parting",
    "level": "L1",
-   "theorems": 42,
+   "theorems": 43,
    "region": "knowing",
    "base": "old-base",
    "on_grammar": false,
@@ -32565,6 +32599,11 @@
   },
   {
    "from": "module:Becoming.Attraction",
+   "to": "module:Becoming.PredicateIteration",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.Attraction",
    "to": "module:Becoming.Recurrence",
    "type": "imports"
   },
@@ -32871,6 +32910,11 @@
   {
    "from": "module:Becoming.CommonResponse",
    "to": "module:Becoming.GrammarLaws",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.CommonResponse",
+   "to": "module:Becoming.PredicateIteration",
    "type": "imports"
   },
   {
@@ -33764,6 +33808,11 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.GrammarCandidates",
+   "to": "module:Becoming.PredicateIteration",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.GrammarCases",
    "to": "module:Becoming.GrammarPath",
    "type": "imports"
@@ -34356,6 +34405,11 @@
   {
    "from": "module:Becoming.KeepableStep",
    "to": "module:Becoming.JointKeeping",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.KeepableStep",
+   "to": "module:Becoming.Onward",
    "type": "imports"
   },
   {
@@ -35349,6 +35403,11 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.PredicateIteration",
+   "to": "module:Becoming.Prelude",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.PremiseWitnesses",
    "to": "module:Becoming.EventualWideningInstances",
    "type": "imports"
@@ -35744,6 +35803,11 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.Refinement",
+   "to": "module:Becoming.PredicateIteration",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.ReflexivePrediction",
    "to": "module:Becoming.Keeping",
    "type": "imports"
@@ -35996,6 +36060,16 @@
   {
    "from": "module:Becoming.RevisionRoutes",
    "to": "module:Becoming.Prelude",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.RisingIteration",
+   "to": "module:Becoming.Decidedness",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.RisingIteration",
+   "to": "module:Becoming.PredicateIteration",
    "type": "imports"
   },
   {
@@ -36586,6 +36660,11 @@
   {
    "from": "module:Becoming.Tolerance",
    "to": "module:Becoming.Labelled",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.Tolerance",
+   "to": "module:Becoming.PredicateIteration",
    "type": "imports"
   },
   {
@@ -46878,6 +46957,11 @@
   },
   {
    "from": "record:identification-where-bounded",
+   "to": "module:Becoming.PredicateIteration",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:identification-where-bounded",
    "to": "module:Becoming.Prelude",
    "type": "proved-in"
   },
@@ -46988,6 +47072,11 @@
   {
    "from": "record:identification-where-runs-part",
    "to": "module:Becoming.Parting",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:identification-where-runs-part",
+   "to": "module:Becoming.PredicateIteration",
    "type": "proved-in"
   },
   {
@@ -47679,6 +47768,86 @@
   {
    "from": "record:keeping-widening-is-generation-losing-nothing",
    "to": "record:where-the-possible-grows",
+   "type": "related"
+  },
+  {
+   "from": "record:kept-at-the-length-of-a-list",
+   "to": "module:Becoming.Attraction",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:kept-at-the-length-of-a-list",
+   "to": "module:Becoming.CommonResponse",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:kept-at-the-length-of-a-list",
+   "to": "module:Becoming.GrammarCandidates",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:kept-at-the-length-of-a-list",
+   "to": "module:Becoming.GuardHorizon",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:kept-at-the-length-of-a-list",
+   "to": "module:Becoming.KeepableStep",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:kept-at-the-length-of-a-list",
+   "to": "module:Becoming.Keeping",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:kept-at-the-length-of-a-list",
+   "to": "module:Becoming.Lasting",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:kept-at-the-length-of-a-list",
+   "to": "module:Becoming.Parting",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:kept-at-the-length-of-a-list",
+   "to": "module:Becoming.PredicateIteration",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:kept-at-the-length-of-a-list",
+   "to": "module:Becoming.ReachableRanges",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:kept-at-the-length-of-a-list",
+   "to": "module:Becoming.RisingIteration",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:kept-at-the-length-of-a-list",
+   "to": "module:Becoming.Viability",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:kept-at-the-length-of-a-list",
+   "to": "record:conditions-kept-together",
+   "type": "related"
+  },
+  {
+   "from": "record:kept-at-the-length-of-a-list",
+   "to": "record:identification-where-runs-part",
+   "type": "related"
+  },
+  {
+   "from": "record:kept-at-the-length-of-a-list",
+   "to": "record:tests-fix-likeness-where-determined",
+   "type": "related"
+  },
+  {
+   "from": "record:kept-at-the-length-of-a-list",
+   "to": "record:where-a-run-goes-on",
    "type": "related"
   },
   {

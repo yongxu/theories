@@ -4310,112 +4310,117 @@ Definitions and types:
 <a id="module-6e15a912d51f"></a>
 
 <details>
-<summary>GrammarCandidates.lean — 93 explicit declarations</summary>
+<summary>GrammarCandidates.lean — 98 explicit declarations</summary>
 
 [Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean) · [Theory](../../chapters/06-CLASSICAL-TEXTS.md) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
 
 `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean`
 
-Imports: `Becoming.GrammarReadings`, `Becoming.GrammarTesting`
+Imports: `Becoming.GrammarReadings`, `Becoming.GrammarTesting`, `Becoming.PredicateIteration`
 
 | Theorem or lemma | Line |
 |---|---:|
-| [Becoming.«能所相待»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L59) | 59 |
-| [Becoming.«因果互即»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L65) | 65 |
-| [Becoming.«二际可偏举»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L72) | 72 |
-| [Becoming.«同根则不可偏举»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L77) | 77 |
-| [Becoming.«前后相随»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L83) | 83 |
-| [Becoming.«互之对称»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L90) | 90 |
-| [Becoming.«生亡对偶»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L95) | 95 |
-| [Becoming.«有生不必有亡»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L100) | 100 |
-| [Becoming.«三法相因待»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L117) | 117 |
-| [Becoming.«无果则缘非缘皆无»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L128) | 128 |
-| [Becoming.«无果则皆非能»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L134) | 134 |
-| [Becoming.«及之两端»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L139) | 139 |
-| [Becoming.«住因于续»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L147) | 147 |
-| [Becoming.«知相则有其非»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L164) | 164 |
-| [Becoming.«离非无相»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L168) | 168 |
-| [Becoming.«无色则无虚空之相»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L172) | 172 |
-| [Becoming.«有相则非亦有相»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L176) | 176 |
-| [Becoming.«非真则假»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L181) | 181 |
-| [Becoming.«非假则真»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L187) | 187 |
-| [Becoming.«二值之相待»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L194) | 194 |
-| [Becoming.«相待之还当且仅当双非可还»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L206) | 206 |
-| [Becoming.«遍而无相»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L217) | 217 |
-| [Becoming.«离方无迷»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L223) | 223 |
-| [Becoming.«离觉则皆不觉»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L228) | 228 |
-| [Becoming.«始觉依不觉»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L235) | 235 |
-| [Becoming.«静之为类»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L246) | 246 |
-| [Becoming.«定性之判»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L256) | 256 |
-| [Becoming.«缘生而不自生则无定性»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L269) | 269 |
-| [Becoming.«自缘则常»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L275) | 275 |
-| [Becoming.«念念灭当且仅当无自缘»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L281) | 281 |
-| [Becoming.«有成坏当且仅当不自缘»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L286) | 286 |
-| [Becoming.«无为无别相»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L295) | 295 |
-| [Becoming.«从缘生非文法之律»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L302) | 302 |
-| [Becoming.«断则无相续»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L307) | 307 |
-| [Becoming.«缘先果后当且仅当无环»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L320) | 320 |
-| [Becoming.«相由则俱有»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L334) | 334 |
-| [Becoming.«俱有为一念»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L340) | 340 |
-| [Becoming.«自他随位»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L356) | 356 |
-| [Becoming.«他依于自»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L362) | 362 |
-| [Becoming.«有自不必有他»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L367) | 367 |
-| [Becoming.«同异交得»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L378) | 378 |
-| [Becoming.«至于无共然后止»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L383) | 383 |
-| [Becoming.«至于无别然后至»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L389) | 389 |
-| [Becoming.«状所可别»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L396) | 396 |
-| [Becoming.«门摄一切»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L403) | 403 |
-| [Becoming.«平等无异»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L407) | 407 |
-| [Becoming.«薪尽火传»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L415) | 415 |
-| [Becoming.«端与端俱尽»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L438) | 438 |
-| [Becoming.«尺与端或尽或不尽»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L447) | 447 |
-| [Becoming.«尺与尺可相尽»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L459) | 459 |
-| [Becoming.«相尽则不相外»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L479) | 479 |
-| [Becoming.«不相外则相尽当且仅当双非可还»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L487) | 487 |
-| [Becoming.«是不俱当»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L505) | 505 |
-| [Becoming.«必或不当当且仅当弱排中»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L510) | 510 |
-| [Becoming.«对称有常则不可诘»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L528) | 528 |
-| [Becoming.«核则不可致诘»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L539) | 539 |
-| [Becoming.«诘之对称»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L544) | 544 |
-| [Becoming.«诘之降»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L552) | 552 |
-| [Becoming.«层在类内»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L559) | 559 |
-| [Becoming.«层即诘»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L567) | 567 |
-| [Becoming.«层之对称»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L578) | 578 |
-| [Becoming.«不可致诘而有常则混而为一»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L585) | 585 |
-| [Becoming.«每层不分而有常则核当且仅当每层不分»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L596) | 596 |
-| [Becoming.«歧网之自反»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L619) | 619 |
-| [Becoming.«链与无尽不可诘»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L624) | 624 |
-| [Becoming.«甲乙不可诘»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L637) | 637 |
-| [Becoming.«无尽与链不同核»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L650) | 650 |
-| [Becoming.«甲乙不同核»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L663) | 663 |
-| [Becoming.«致诘不尽»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L673) | 673 |
+| [Becoming.«能所相待»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L64) | 64 |
+| [Becoming.«因果互即»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L70) | 70 |
+| [Becoming.«二际可偏举»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L77) | 77 |
+| [Becoming.«同根则不可偏举»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L82) | 82 |
+| [Becoming.«前后相随»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L88) | 88 |
+| [Becoming.«互之对称»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L95) | 95 |
+| [Becoming.«生亡对偶»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L100) | 100 |
+| [Becoming.«有生不必有亡»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L105) | 105 |
+| [Becoming.«三法相因待»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L122) | 122 |
+| [Becoming.«无果则缘非缘皆无»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L133) | 133 |
+| [Becoming.«无果则皆非能»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L139) | 139 |
+| [Becoming.«及之两端»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L144) | 144 |
+| [Becoming.«住因于续»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L152) | 152 |
+| [Becoming.«知相则有其非»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L169) | 169 |
+| [Becoming.«离非无相»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L173) | 173 |
+| [Becoming.«无色则无虚空之相»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L177) | 177 |
+| [Becoming.«有相则非亦有相»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L181) | 181 |
+| [Becoming.«非真则假»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L186) | 186 |
+| [Becoming.«非假则真»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L192) | 192 |
+| [Becoming.«二值之相待»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L199) | 199 |
+| [Becoming.«相待之还当且仅当双非可还»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L211) | 211 |
+| [Becoming.«遍而无相»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L222) | 222 |
+| [Becoming.«离方无迷»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L228) | 228 |
+| [Becoming.«离觉则皆不觉»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L233) | 233 |
+| [Becoming.«始觉依不觉»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L240) | 240 |
+| [Becoming.«静之为类»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L251) | 251 |
+| [Becoming.«定性之判»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L261) | 261 |
+| [Becoming.«缘生而不自生则无定性»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L274) | 274 |
+| [Becoming.«自缘则常»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L280) | 280 |
+| [Becoming.«念念灭当且仅当无自缘»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L286) | 286 |
+| [Becoming.«有成坏当且仅当不自缘»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L291) | 291 |
+| [Becoming.«无为无别相»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L300) | 300 |
+| [Becoming.«从缘生非文法之律»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L307) | 307 |
+| [Becoming.«断则无相续»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L312) | 312 |
+| [Becoming.«缘先果后当且仅当无环»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L325) | 325 |
+| [Becoming.«相由则俱有»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L339) | 339 |
+| [Becoming.«俱有为一念»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L345) | 345 |
+| [Becoming.«自他随位»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L361) | 361 |
+| [Becoming.«他依于自»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L367) | 367 |
+| [Becoming.«有自不必有他»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L372) | 372 |
+| [Becoming.«同异交得»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L383) | 383 |
+| [Becoming.«至于无共然后止»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L388) | 388 |
+| [Becoming.«至于无别然后至»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L394) | 394 |
+| [Becoming.«状所可别»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L401) | 401 |
+| [Becoming.«门摄一切»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L408) | 408 |
+| [Becoming.«平等无异»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L412) | 412 |
+| [Becoming.«薪尽火传»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L420) | 420 |
+| [Becoming.«端与端俱尽»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L443) | 443 |
+| [Becoming.«尺与端或尽或不尽»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L452) | 452 |
+| [Becoming.«尺与尺可相尽»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L464) | 464 |
+| [Becoming.«相尽则不相外»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L484) | 484 |
+| [Becoming.«不相外则相尽当且仅当双非可还»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L492) | 492 |
+| [Becoming.«是不俱当»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L510) | 510 |
+| [Becoming.«必或不当当且仅当弱排中»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L515) | 515 |
+| [Becoming.«对称有常则不可诘»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L533) | 533 |
+| [Becoming.«核则不可致诘»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L544) | 544 |
+| [Becoming.«诘之对称»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L549) | 549 |
+| [Becoming.inquiry_mono](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L569) | 569 |
+| [Becoming.iter_iff_inquiry](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L575) | 575 |
+| [Becoming.inquiry_iff_all](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L585) | 585 |
+| [Becoming.core_iff_inquiry](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L591) | 591 |
+| [Becoming.«诘之降»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L601) | 601 |
+| [Becoming.«层在类内»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L608) | 608 |
+| [Becoming.«层即诘»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L616) | 616 |
+| [Becoming.«层之对称»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L627) | 627 |
+| [Becoming.«不可致诘而有常则混而为一»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L634) | 634 |
+| [Becoming.«每层不分而有常则核当且仅当每层不分»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L645) | 645 |
+| [Becoming.«歧网之自反»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L668) | 668 |
+| [Becoming.«链与无尽不可诘»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L673) | 673 |
+| [Becoming.«甲乙不可诘»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L686) | 686 |
+| [Becoming.«无尽与链不同核»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L699) | 699 |
+| [Becoming.«甲乙不同核»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L712) | 712 |
+| [Becoming.«致诘不尽»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L722) | 722 |
 
 Definitions and types:
 
-- `def` [Becoming.«能»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L49) (L49)
-- `def` [Becoming.«所»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L52) (L52)
-- `def` [Becoming.«互»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L87) (L87)
-- `def` [Becoming.«作者»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L107) (L107)
-- `def` [Becoming.«作业»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L110) (L110)
-- `def` [Becoming.«处所»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L113) (L113)
-- `def` [Becoming.«非缘»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L124) (L124)
-- `def` [Becoming.«有相»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L160) (L160)
-- `def` [Becoming.«二点»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L199) (L199)
-- `def` [Becoming.«始觉»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L232) (L232)
-- `def` [Becoming.«无定性»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L249) (L249)
-- `def` [Becoming.«俱有»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L330) (L330)
-- `def` [Becoming.«薪火»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L411) (L411)
-- `def` [Becoming.«攖»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L426) (L426)
-- `def` [Becoming.«遍于»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L429) (L429)
-- `def` [Becoming.«端»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L432) (L432)
-- `def` [Becoming.«有厚»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L435) (L435)
-- `def` [Becoming.«相外»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L470) (L470)
-- `def` [Becoming.«不相外»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L473) (L473)
-- `def` [Becoming.«相尽»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L476) (L476)
-- `def` [Becoming.«坚白之体»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L483) (L483)
-- `def` [Becoming.«诘»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L522) (L522)
-- `inductive` [Becoming.«歧网»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L605) (L605)
-- `def` [Becoming.«歧网之步»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L612) (L612)
+- `def` [Becoming.«能»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L54) (L54)
+- `def` [Becoming.«所»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L57) (L57)
+- `def` [Becoming.«互»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L92) (L92)
+- `def` [Becoming.«作者»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L112) (L112)
+- `def` [Becoming.«作业»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L115) (L115)
+- `def` [Becoming.«处所»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L118) (L118)
+- `def` [Becoming.«非缘»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L129) (L129)
+- `def` [Becoming.«有相»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L165) (L165)
+- `def` [Becoming.«二点»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L204) (L204)
+- `def` [Becoming.«始觉»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L237) (L237)
+- `def` [Becoming.«无定性»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L254) (L254)
+- `def` [Becoming.«俱有»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L335) (L335)
+- `def` [Becoming.«薪火»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L416) (L416)
+- `def` [Becoming.«攖»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L431) (L431)
+- `def` [Becoming.«遍于»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L434) (L434)
+- `def` [Becoming.«端»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L437) (L437)
+- `def` [Becoming.«有厚»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L440) (L440)
+- `def` [Becoming.«相外»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L475) (L475)
+- `def` [Becoming.«不相外»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L478) (L478)
+- `def` [Becoming.«相尽»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L481) (L481)
+- `def` [Becoming.«坚白之体»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L488) (L488)
+- `def` [Becoming.«诘»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L527) (L527)
+- `def` [Becoming.inquiryStep](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L564) (L564)
+- `inductive` [Becoming.«歧网»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L654) (L654)
+- `def` [Becoming.«歧网之步»](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean#L661) (L661)
 
 </details>
 

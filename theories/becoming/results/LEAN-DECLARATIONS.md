@@ -12,8 +12,8 @@ Theorems and lemmas are individually listed; definitions and type declarations s
 
 | Topic | Entries | theorem/lemma occurrences |
 |---|---:|---:|
-| [Becoming pure core](lean-declarations/becoming-core.md) | 392 | 19,345 |
-| [Becoming instances and applications](lean-declarations/becoming-ring.md) | 18 | 1,054 |
+| [Becoming pure core](lean-declarations/becoming-core.md) | 394 | 19,410 |
+| [Becoming instances and applications](lean-declarations/becoming-ring.md) | 18 | 1,072 |
 | [The ethics and the generative direction](lean-declarations/ethics.md) | 139 | 2,533 |
 | [Valuation development and liangzhi](lean-declarations/valuation.md) | 19 | 202 |
 | [Attainable inquiry, contact and process laws](lean-declarations/inquiry.md) | 71 | 1,864 |
@@ -699,6 +699,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [PracticalJudgment.lean](lean-declarations/ethics-part-2.md#module-dd511a3279d9) | The ethics and the generative direction |
 | [PracticalPriorityIdentification.lean](lean-declarations/ethics-part-2.md#module-414ae701c60c) | The ethics and the generative direction |
 | [PracticalReach.lean](lean-declarations/ethics-part-2.md#module-6930dfab71b1) | The ethics and the generative direction |
+| [PredicateIteration.lean](lean-declarations/becoming-core-part-5.md#module-742e7db5f595) | Becoming pure core |
 | [PredictionAction.lean](lean-declarations/shared.md#module-ed1c7c0f33b2) | Organizational formation through revisable evaluation |
 | [PredictionOverlap.lean](lean-declarations/learning.md#module-3c954998b7e7) | Learning, prediction and dynamics |
 | [PredictionProtocolBridge.lean](lean-declarations/learning.md#module-63ccd209dc68) | Learning, prediction and dynamics |
@@ -865,6 +866,7 @@ rg -n 'theorem_name' theories/becoming/results/lean-declarations/
 | [RevisionRoutes.lean](lean-declarations/becoming-core-part-6.md#module-6052ceac7a14) | Becoming pure core |
 | [RevisionSuccession.lean](lean-declarations/shared.md#module-737754c24400) | Organizational formation through revisable evaluation |
 | [RevisionWitness.lean](lean-declarations/shared.md#module-d03c440ac0b4) | Organizational formation through revisable evaluation |
+| [RisingIteration.lean](lean-declarations/becoming-core-part-6.md#module-8f6a71236df6) | Becoming pure core |
 | [RiskConditioning.lean](lean-declarations/ethics-part-2.md#module-bb2d76a79061) | The ethics and the generative direction |
 | [RiskPriority.lean](lean-declarations/ethics-part-2.md#module-40a0f60d9f91) | The ethics and the generative direction |
 | [Roles.lean](lean-declarations/becoming-core-part-6.md#module-33c3f51ffbf2) | Becoming pure core |

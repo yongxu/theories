@@ -158,6 +158,7 @@ Covering is the lower (Hoare) preorder of the families of course ranges, exactly
 | statement | [07-SIGNIFICANCE.md](../../chapters/07-SIGNIFICANCE.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T061626.538602Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T212524.793950Z/verification.json) | — |
 
 Aliases: `What a course keeps reachable`, `进程保持可达者`, `covering`, `widening what can be reached`, `the whole possible`, `Becoming.Reaching.Widens`, `Becoming.Reaching.not_above_wider_now`
 
