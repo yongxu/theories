@@ -24,6 +24,10 @@ law never reaches a target, and, dually, when a law reaches a target within `n` 
   lasts every horizon (`kernel_iff_lasts`). From within the guard, a guarded history agrees with
   the history at `n` exactly when the history stays within the guard up to `n`
   (`guarded_upto_iff`), and stops exactly when it does not (`guarded_none_iff`).
+* **Lasting as repeated steps.** Applying `regionStep` of the steps of `disturbed f adm` to the
+  guard n times gives exactly the starts that last n steps (`iter_region_iff_lasts`). If a list
+  holds every configuration within the guard, a start lasts for the list's length exactly when
+  it is in the kernel of `disturbed f adm` (`kernel_iff_lasts_length`).
 * **Exhaustion.** A family is **drained** when the guard gives level `0` and a configuration
   within the guard that one admissible step takes to level `k` was at level `k + 1` (`Drains`).
   Along every admissible history that stays within the guard for its first `n` steps, the start
@@ -237,6 +241,25 @@ theorem kernel_iff_lasts {s : S} :
     Kernel (disturbed f adm) guard s ↔ ∀ n, Lasts f adm guard n s :=
   ⟨fun kept n => lasts_of_kernel n kept,
    fun every _ ⟨plan, path⟩ => Lasts.trace (every plan.length) path (Nat.le_refl _)⟩
+
+section Disturbances
+
+open Iteration
+
+/-- Applying `regionStep` to the guard n times in the disturbed process gives exactly the states
+that keep the guard for n steps under every admissible disturbance. -/
+theorem iter_region_iff_lasts : ∀ n s,
+    iter (regionStep (Steps (disturbed f adm)) guard) guard n s ↔ Lasts f adm guard n s :=
+  iter_iff_stages (stage := Lasts f adm guard) (region_mono _ _) (fun _ => Iff.rfl) fun _ s =>
+    ⟨fun ⟨h, later⟩ => ⟨h, fun a ha => later (f s a) ⟨a, ha, rfl⟩⟩,
+     fun ⟨h, later⟩ => ⟨h, fun _ ⟨a, ha, same⟩ => same.symm ▸ later a ha⟩⟩
+
+/-- If all guarded states are listed, the kernel of a disturbed process consists exactly
+of states that keep the guard under every admissible disturbance for the list length. -/
+theorem kernel_iff_lasts_length {all : List S} (within : ∀ x, guard x → x ∈ all) {s : S} :
+    Kernel (disturbed f adm) guard s ↔ Lasts f adm guard all.length s :=
+  (kernel_iff_iter within).trans (iter_region_iff_lasts _ s)
+end Disturbances
 
 /-! ### Guarded histories up to a horizon -/
 

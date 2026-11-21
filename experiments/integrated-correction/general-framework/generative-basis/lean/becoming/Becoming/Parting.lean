@@ -41,10 +41,13 @@ with no premise beyond what each law names, what a prefix fixes along the runs o
   (`fromProcess`) reads off the prefix the configurations a run from `s` can be at
   (`candidates`). It keeps the first from which a path as long as the list of configurations is
   open (`live`, `firstLive`), and such a path goes on without end (`live_persists`, `liveRun`):
-  `live` is `Lasting.Continues` decided (`live_iff_continues`), and where a list of `N` holds
-  every configuration a course of `N` steps makes its start unbounded, with no decidability and
-  no selection (`continues_persists`, `unbounded_of_continues`), where `Lasting`'s lifting for
-  finite branching holds up to double negation.
+  `live` decides `Lasting.Continues` (`live_iff_continues`). Starting from all configurations,
+  applying `courseStep` n times gives the starts of courses of length n (`iter_iff_continues`).
+  If a list of N holds every configuration, from where a course of N steps starts some move
+  leads to where another course of N steps starts (`continues_persists`), and courses of every
+  length start there (`continues_any`, `unbounded_of_continues`). These three assume no decided
+  step and no selection, where `Lasting`'s lifting for finite branching holds up to double
+  negation.
   It proposes that configuration's value through the map. It is right at step `t` on every run
   from `s` exactly where no two runs from `s` part at `t` (`world_right_iff`). So some
   extrapolation is right there exactly where none part (`some_right_iff`): with
@@ -398,39 +401,40 @@ theorem path_of_continues : ∀ (m : Nat) (y : S), Lasting.Continues P m y →
         | 0, _ => ⟨a, Eq.subst (motive := fun x => P.step y a x) start.symm step⟩
         | k + 1, lt => steps k (Nat.lt_of_succ_lt_succ lt)⟩
 
-/-- Along a path that returns to an earlier configuration, courses of every length start at each
-configuration before the return. -/
-theorem continues_cycle {g : Nat → S} {i j : Nat}
-    (steps : ∀ k, k < j → ∃ a, P.step (g k) a (g (k + 1))) (lt : i < j) (same : g i = g j) :
-    ∀ m k, k < j → Lasting.Continues P m (g k)
-  | 0, _, _ => trivial
-  | m + 1, k, below => match steps k below with
-    | ⟨a, step⟩ => ⟨a, g (k + 1), step,
-        match Nat.lt_or_ge (k + 1) j with
-        | .inl below' => continues_cycle steps lt same m (k + 1) below'
-        | .inr ge =>
-          Eq.subst (motive := fun x => Lasting.Continues P m x)
-            (same.trans (congrArg g (Nat.le_antisymm below ge)).symm)
-            (continues_cycle steps lt same m i lt)⟩
+open Iteration
 
-/-- **Where a list holds every configuration, a course as long as the list goes on.** From where
-a course of `N` steps starts, `N` configurations listed, a step leads to where one starts: the
-course repeats a configuration and can go round. No decidability is used. -/
+variable (P : Process S A)
+
+/-- Some move has a successor in the given class. -/
+def courseStep (X : S → Prop) (s : S) : Prop := ∃ a t, P.step s a t ∧ X t
+
+/-- If one class contains another, every state with a move into the smaller class has a
+move into the larger class. -/
+theorem course_mono : MonotoneStep (courseStep P) :=
+  fun sub _ ⟨a, t, st, rest⟩ => ⟨a, t, st, sub t rest⟩
+
+variable {P}
+
+/-- Applying `courseStep` n times from all configurations gives the starts of courses
+of length n. -/
+theorem iter_iff_continues : ∀ n s,
+    iter (courseStep P) (fun _ => True) n s ↔ Lasting.Continues P n s :=
+  iter_iff_stages (course_mono P) (fun _ => Iff.rfl) (fun _ _ => Iff.rfl)
+
+/-- **Where a list holds every configuration, a course as long as the list goes on.** From the
+start of such a course, some move leads to the start of another course of that length. -/
 theorem continues_persists {all : List S} (every : ∀ x, x ∈ all) {y : S}
     (continues : Lasting.Continues P all.length y) :
     ∃ a z, P.step y a z ∧ Lasting.Continues P all.length z :=
-  match path_of_continues all.length y continues with
-  | ⟨g, start, steps⟩ => match revisits_within all g (fun n _ => every (g n)) with
-    | ⟨i, _, lt, within, same⟩ =>
-      Eq.subst (motive := fun x => Lasting.Continues P (all.length + 1) x) start
-        (continues_cycle (fun k below => steps k (Nat.lt_of_lt_of_le below within)) lt same
-          (all.length + 1) 0 (Nat.lt_of_le_of_lt (Nat.zero_le i) lt))
+  (iter_iff_continues (all.length + 1) y).mp (iter_persists (course_mono P)
+    (fun _ _ => trivial) (fun x _ => every x) ((iter_iff_continues _ y).mpr continues))
 
+/-- If a list holds every configuration, from where a course as long as the list starts, courses
+of every length start. -/
 theorem continues_any {all : List S} (every : ∀ x, x ∈ all) :
-    ∀ (n : Nat) (y : S), Lasting.Continues P all.length y → Lasting.Continues P n y
-  | 0, _, _ => trivial
-  | n + 1, _, continues => match continues_persists every continues with
-    | ⟨a, z, step, rest⟩ => ⟨a, z, step, continues_any every n z rest⟩
+    ∀ (n : Nat) (y : S), Lasting.Continues P all.length y → Lasting.Continues P n y :=
+  fun n y h => (iter_iff_continues n y).mp ((iter_iff_all (course_mono P) (fun _ _ => trivial)
+    (fun x _ => every x)).mp ((iter_iff_continues _ y).mpr h) n)
 
 /-- **Where a list of `N` holds every configuration, a course of `N` steps from `s` makes `s`
 unbounded**: courses of every length start there. With no decidability and no selection, where
