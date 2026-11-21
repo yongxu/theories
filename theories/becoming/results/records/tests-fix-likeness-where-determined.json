@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-25T15:09:23+00:00",
+  "reviewed_at_utc": "2026-11-21T21:27:36+00:00",
   "statement": {
     "zh": "两个框架都在相同之下确定时，线性检验固定相同；两个框架都有限、步与主张已定时，分支检验固定相同，证明是构造性的。线性检验所见恰是每个分岔推迟到显现时的相同。",
     "en": "Linear tests fix likeness where both frames are determined up to likeness, and branching tests fix it where both frames are finite with decided steps and claims, by a constructive proof. Linear tests see exactly likeness with every branching postponed."
@@ -52,28 +52,33 @@
       ]
     },
     {
-      "zh": "证明的每一步由判定构造：深度 k 的相同已判定；它不成立处，构造一个在一方成立、在另一方不成立的分支检验；深度的相同在不超过配置对数目的某个深度停止细分，在那里它是互模拟。",
-      "en": "Each step of the proof is built from the decisions: likeness to depth k is decided; where it fails, a branching test holding at one configuration and failing at the other is built; likeness to depth stops refining at a depth no greater than the number of pairs of configurations, and there it is a bisimulation.",
+      "zh": "证明有两步由判定构造：深度 k 的相同已判定；它不成立处，构造一个在一方成立、在另一方不成立的分支检验。第三步不用判定：两个框架的配置各被一个列表持有时，在两列表长度之积这一深度相同的配置，在下一深度仍相同，在那里深度的相同是互模拟。",
+      "en": "Two steps of the proof are built from the decisions: likeness to depth k is decided, and where it fails a branching test holding at one configuration and failing at the other is built. The third needs none: where a list holds the configurations of each frame, configurations alike to the depth of the product of the lists' lengths are alike to the next depth, and there likeness to depth is a bisimulation.",
       "declarations": [
         "Becoming.AlikeTo",
         "Becoming.AlikeTo.decided",
         "Becoming.apart_of_not_alikeTo",
-        "Becoming.stops_decreasing",
         "Becoming.AlikeTo.steady_within",
         "Becoming.AlikeTo.steady",
         "Becoming.AlikeTo.bisimulation",
-        "Becoming.SameBranchingTests.alikeTo"
+        "Becoming.SameBranchingTests.alikeTo",
+        "Becoming.alikeStep",
+        "Becoming.alike_mono",
+        "Becoming.iter_iff_alikeTo",
+        "Becoming.alike_at_cover",
+        "Becoming.alike_at_pairs"
       ]
     },
     {
-      "zh": "所以有限、已定的框架的相同已判定，就是每个深度的相同，也是配置对数目之深度的相同；对每一对只有一个配置、一个动作而没有主张的框架，判定相同就是排中律。",
-      "en": "So likeness of finite decided frames is decided and is likeness to every depth and to the depth of the number of pairs; asked of every pair of frames with one configuration, one move and no claims, deciding likeness is excluded middle.",
+      "zh": "所以有限、已定的框架的相同已判定。两个框架的配置各被一个列表持有时，不用判定，动作与主张也不必列出，相同就是每个深度的相同，也是两列表长度之积这一深度的相同。对每一对只有一个配置、一个动作而没有主张的框架，判定相同就是排中律。",
+      "en": "So likeness of finite decided frames is decided. Where a list holds the configurations of each frame, with nothing decided and neither moves nor claims listed, likeness is likeness to every depth and to the depth of the product of the lists' lengths. Asked of every pair of frames with one configuration, one move and no claims, deciding likeness is excluded middle.",
       "declarations": [
         "Becoming.Alike.decided",
         "Becoming.alike_iff_alikeTo",
         "Becoming.alike_iff_alikeTo_pairs",
         "Becoming.alike_decided_iff_em",
-        "Becoming.OneLoop.alike_iff"
+        "Becoming.OneLoop.alike_iff",
+        "Becoming.alike_iff_at_cover"
       ]
     },
     {
@@ -387,7 +392,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Likeness.lean",
       "role": "proof",
-      "sha256": "a96c46f67bdb2588153b738a8f8b3a8fe0eae069a68a2dbb476652b30e021020",
+      "sha256": "c09f09936ba686d570f06afc43a2c2b746a15e43a3320d8ce94c0793c4a7c8e0",
       "declarations": [
         "Becoming.Decided.exists_of_listed",
         "Becoming.Decided.forall_of_listed",
@@ -532,7 +537,13 @@
         "Becoming.EndOfPath.second",
         "Becoming.EndOfPath.classes_exact",
         "Becoming.alike_of_sameBranchingTests_of_em",
-        "Becoming.alike_iff_sameBranchingTests_of_em"
+        "Becoming.alike_iff_sameBranchingTests_of_em",
+        "Becoming.alikeStep",
+        "Becoming.alike_mono",
+        "Becoming.iter_iff_alikeTo",
+        "Becoming.alike_at_cover",
+        "Becoming.alike_at_pairs",
+        "Becoming.alike_iff_at_cover"
       ]
     },
     {
@@ -678,7 +689,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Refinement.lean",
       "role": "proof",
-      "sha256": "67f79907afaf94833a6b3631e943c9a53ca9a5ba5229c45b24b562362087bbc6",
+      "sha256": "cc15760fc147391c8c88f959e4574ca351b0b4daacabb857e7fa252d56540340",
       "declarations": [
         "Becoming.DistinctUnder.single",
         "Becoming.Refining",
@@ -877,6 +888,12 @@
       "role": "receipt",
       "sha256": "b2a4a06d538e8e7d391c8947e4c85eb6183fa84004a1f4fd8eb13d765d628a14",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T212524.793950Z/verification.json",
+      "role": "receipt",
+      "declarations": [],
+      "sha256": "5b402e2d75febfc0354f8353b38774ba24c6295c48ea38caa8b0e48248856232"
     }
   ],
   "proof_bindings": [
@@ -910,7 +927,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Likeness.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T212524.793950Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Likeness",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -924,7 +941,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Refinement.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T212524.793950Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Refinement",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -1059,6 +1076,10 @@
     {
       "en": "6 November 2026, board item LM: declarations this record lists moved with the helpers stated once; its references follow them, and no law changed.",
       "zh": "2026年11月6日，工作板条目 LM：此记录所列之声明随只陈述一次之辅助引理而移；其引用从之，诸律不变。"
+    },
+    {
+      "en": "22 November 2026, board row FM (one law of what a list holds, and its cases): the fifth and sixth laws re-told. AlikeTo.steady_within and alike_iff_alikeTo_pairs keep their names and lose four premises (the list of every move, the list of every claim, FiniteDecided of each frame): they ask only a list holding the configurations of each frame, and the depth is the product of the lists' lengths itself (alike_at_pairs). AlikeTo.steady and alike_iff_alikeTo lose the same four and ask that such lists exist. Their proofs are calls of Becoming.Iteration.iter_persists (new module Becoming.PredicateIteration) through alikeStep, alike_mono and iter_iff_alikeTo; alike_at_cover and alike_iff_at_cover state the same at a list of only the pairs that agree on claims. These join the declarations. stops_decreasing is called by no other proof now and leaves the fifth law's list, staying in the references. Alike.decided and alike_iff_sameBranchingTests keep their statements. Former wording of the fifth law's last clause: \"likeness to depth stops refining at a depth no greater than the number of pairs of configurations, and there it is a bisimulation\", under \"Each step of the proof is built from the decisions\"; of the sixth law's first: \"likeness of finite decided frames is decided and is likeness to every depth and to the depth of the number of pairs\". Bound to core run 20261121T212524.793950Z.",
+      "zh": "2026年11月22日，工作板条目 FM（一条关于列表所持者的律及其诸例）：第五、第六条规律重述。AlikeTo.steady_within 与 alike_iff_alikeTo_pairs 名称不变，去掉四个前提（动作列出、主张列出、两个框架各自的 FiniteDecided），只要两个框架的配置各被一个列表持有，深度即两列表长度之积（alike_at_pairs）。AlikeTo.steady 与 alike_iff_alikeTo 同样去掉这四个，只要这样的列表存在。其证明改为调用 Becoming.Iteration.iter_persists（新模块 Becoming.PredicateIteration），经 alikeStep、alike_mono 与 iter_iff_alikeTo；alike_at_cover 与 alike_iff_at_cover 在只列出主张一致之配置对的列表上陈述同一事。以上加入声明。stops_decreasing 不再为其他证明所用，从第五条规律的列表除去，留在引用中。Alike.decided 与 alike_iff_sameBranchingTests 陈述不变。第五条规律末句原文：“深度的相同在不超过配置对数目的某个深度停止细分，在那里它是互模拟”，在“证明的每一步由判定构造”之下；第六条规律首句原文：“有限、已定的框架的相同已判定，就是每个深度的相同，也是配置对数目之深度的相同”。绑定于核心运行 20261121T212524.793950Z。"
     }
   ],
   "text_versions": [

@@ -250,7 +250,7 @@
         "Becoming.Viability.Kernel.mono",
         "Becoming.Viability.Kernel.run"
       ],
-      "sha256": "ca83c0ad2fdf750d673a39ead5025f609429423b80e3605b6f2f296764ce9c69"
+      "sha256": "1487ee72b7f744f8f803c73497dbac7dded69c6de76767575326ed0d3a6679e2"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
@@ -358,13 +358,19 @@
         "Becoming.Viability.not_keepable_run",
         "Becoming.Viability.not_keepable_step"
       ],
-      "sha256": "6a82967972a32f84b5656777091176d791912788bee5ffc704b4f8a767e5fe0c"
+      "sha256": "dd55a5e62f9c4e89eaabb3393e19e8cd268f1068d80ccab0ca8d32e9a92b32bc"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T133506.986317Z/verification.json",
       "role": "receipt",
       "declarations": [],
       "sha256": "50d10e324f666ae1d2af11aaf3bf1ec048150581d39711a57563811df353d11c"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T212524.793950Z/verification.json",
+      "role": "receipt",
+      "sha256": "5b402e2d75febfc0354f8353b38774ba24c6295c48ea38caa8b0e48248856232",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -398,14 +404,14 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Viability.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T212524.793950Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Viability",
       "success_pointer": "/status",
       "success_value": "passed"
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeepableStep.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T133506.986317Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T212524.793950Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.KeepableStep",
       "success_pointer": "/status",
       "success_value": "passed"

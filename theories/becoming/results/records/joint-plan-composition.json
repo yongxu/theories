@@ -179,7 +179,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Keeping.lean",
       "role": "proof",
-      "sha256": "5a237a74ffab31f61d1fcb07875ce1499e970d0a3b80cc26dcbd235ddb788044",
+      "sha256": "c3ac97db19df01d93bfcb8c136b0c0565ef177c4c7b99f2ff0517ca99c77d064",
       "declarations": [
         "Becoming.Viability.Plan",
         "Becoming.Viability.Plan.Keeps",
@@ -249,6 +249,12 @@
       "role": "receipt",
       "sha256": "451087b19146e2f51b519d02d896420fbdeb59b1621222344f56e772f39235f6",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T212524.793950Z/verification.json",
+      "role": "receipt",
+      "sha256": "5b402e2d75febfc0354f8353b38774ba24c6295c48ea38caa8b0e48248856232",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -261,7 +267,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Keeping.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T112708.430596Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T212524.793950Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Keeping",
       "success_pointer": "/status",
       "success_value": "passed"

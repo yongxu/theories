@@ -280,7 +280,7 @@
         "Becoming.Tolerance.giftWeb",
         "Becoming.Tolerance.giftWeb_tolerating"
       ],
-      "sha256": "3522f18262e3290c57d201abd7abb1141ce77acb7b35176a98a017f840f8ae44"
+      "sha256": "0396f461645750097b19c6dd4703b87a1bda35c2bf3aaaa140e8c66e9f310c2c"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FaultEnvelopes.lean",
@@ -365,12 +365,18 @@
       "role": "receipt",
       "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T212524.793950Z/verification.json",
+      "role": "receipt",
+      "sha256": "5b402e2d75febfc0354f8353b38774ba24c6295c48ea38caa8b0e48248856232",
+      "declarations": []
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Tolerance.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T212524.793950Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Tolerance",
       "success_pointer": "/status",
       "success_value": "passed"

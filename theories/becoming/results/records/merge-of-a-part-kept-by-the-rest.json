@@ -166,7 +166,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Likeness.lean",
       "role": "proof",
-      "sha256": "a96c46f67bdb2588153b738a8f8b3a8fe0eae069a68a2dbb476652b30e021020"
+      "sha256": "c09f09936ba686d570f06afc43a2c2b746a15e43a3320d8ce94c0793c4a7c8e0"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Recurrence.lean",

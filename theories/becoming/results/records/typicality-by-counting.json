@@ -457,7 +457,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Parting.lean",
       "role": "proof",
-      "sha256": "1fd0951b045f575e818ca680d2c5d5973786accf0846c4438057855d99370c95",
+      "sha256": "b92c85e8d58fbd18680a098c0bb7877d06effa6f95d18438090d740cae719c4b",
       "declarations": [
         "Becoming.Parting.freeRun",
         "Becoming.Parting.free_parts_after"
@@ -634,6 +634,12 @@
       "role": "receipt",
       "sha256": "dac80f65775ddd4cadc4f15f5eb5a29a9f0d246bf62cb7617bf0082401271366",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T212524.793950Z/verification.json",
+      "role": "receipt",
+      "sha256": "5b402e2d75febfc0354f8353b38774ba24c6295c48ea38caa8b0e48248856232",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -653,7 +659,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Parting.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T212524.793950Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Parting",
       "success_pointer": "/status",
       "success_value": "passed"

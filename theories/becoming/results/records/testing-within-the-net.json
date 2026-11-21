@@ -171,7 +171,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean",
       "role": "proof",
-      "sha256": "aece661df0a0ca8a46ccba17fb4d8fcfdf79cd3d82b43a4e3a8530847cafdb1a",
+      "sha256": "2fa88ad3ec028830037114cd43671ccbff0f1e0b6d0c78bce11b9ac8ee1b6d28",
       "declarations": [
         "Becoming.«层即诘»",
         "Becoming.«诘之降»",
@@ -198,6 +198,12 @@
       "role": "receipt",
       "sha256": "b2a4a06d538e8e7d391c8947e4c85eb6183fa84004a1f4fd8eb13d765d628a14",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T212524.793950Z/verification.json",
+      "role": "receipt",
+      "sha256": "5b402e2d75febfc0354f8353b38774ba24c6295c48ea38caa8b0e48248856232",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -210,7 +216,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarCandidates.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261109T164551.067705Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T212524.793950Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.GrammarCandidates",
       "success_pointer": "/status",
       "success_value": "passed"

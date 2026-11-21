@@ -1,7 +1,7 @@
 {
  "about": "MV: the shared laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/shared_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261121T133506.986317Z",
- "core_sources_sha256": "53a531fc5f575197645cbaed7f7e2c6149f3d2af83ba2fceb4655f3373b6c819",
+ "core_receipt": "20261121T212524.793950Z",
+ "core_sources_sha256": "84d9fcb944cc07dfa8c49abebf71e02704dd87cda168ac73dfaf99144ab10cfe",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "438b65fe8bc281ab9796cfbff00af7db8441123a5aba8f3779f7c08586b443c7",
@@ -58,17 +58,17 @@
   ]
  },
  "counts": {
-  "laws": 4397,
+  "laws": 4411,
   "no_declarations": 9,
   "outside": 391,
-  "grammar": 1057,
+  "grammar": 1062,
   "balance, represented": 636,
-  "anchor, not reached": 137,
-  "no shared law": 2167,
+  "anchor, not reached": 135,
+  "no shared law": 2178,
   "vocabulary_only": 105,
-  "closure": 583,
+  "closure": 586,
   "balance": 895,
-  "return": 256,
+  "return": 255,
   "lumping": 92,
   "order": 105
  },
@@ -26132,7 +26132,6 @@
     "law": 9,
     "declarations": [
      "Becoming.Parting.path_of_continues",
-     "Becoming.Parting.continues_cycle",
      "Becoming.Parting.continues_persists",
      "Becoming.Parting.continues_any",
      "Becoming.Parting.unbounded_of_continues",
@@ -26151,13 +26150,16 @@
      "Becoming.Parting.advanced",
      "Becoming.Parting.liveRun",
      "Becoming.Lasting.Continues",
-     "Becoming.Lasting.Unbounded"
+     "Becoming.Lasting.Unbounded",
+     "Becoming.Parting.courseStep",
+     "Becoming.Parting.course_mono",
+     "Becoming.Parting.iter_iff_continues",
+     "Becoming.Iteration.iter_persists",
+     "Becoming.Iteration.iter_iff_all"
     ],
-    "shared_laws": [
-     "return"
-    ],
+    "shared_laws": [],
     "grammar": false,
-    "dependence": "anchor, not reached"
+    "dependence": "no shared law"
    },
    {
     "law": 10,
@@ -26175,11 +26177,9 @@
      "Becoming.Parting.world_right_iff",
      "Becoming.Parting.some_right_iff"
     ],
-    "shared_laws": [
-     "return"
-    ],
+    "shared_laws": [],
     "grammar": false,
-    "dependence": "anchor, not reached"
+    "dependence": "no shared law"
    }
   ],
   "identity-across-steps": [
@@ -28026,6 +28026,208 @@
      "Becoming.Web.generation_of_keepsWidening_byName",
      "Becoming.Web.keepsWidening_byName_iff_generation",
      "Becoming.Web.kept_by_name_and_generation_on_moments"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   }
+  ],
+  "kept-at-the-length-of-a-list": [
+   {
+    "law": 1,
+    "declarations": [
+     "Becoming.Iteration.iter",
+     "Becoming.Iteration.MonotoneStep",
+     "Becoming.Iteration.iter_persists",
+     "Becoming.Iteration.iter_iff_all",
+     "Becoming.Iteration.iter_largest",
+     "Becoming.Iteration.postfixed_in_iter",
+     "Becoming.Iteration.iter_pred",
+     "Becoming.Iteration.iter_within",
+     "Becoming.Iteration.iter_postfixed",
+     "Becoming.Iteration.extend_at_places",
+     "Becoming.Iteration.not_iter_of_not_succ",
+     "Becoming.Iteration.iter_iff_stages",
+     "Becoming.remove_mem"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 2,
+    "declarations": [
+     "Becoming.Iteration.iter_shift",
+     "Becoming.Iteration.iter_persists_from_all"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 3,
+    "declarations": [
+     "Becoming.regionStep",
+     "Becoming.held_iff_iter",
+     "Becoming.held_iff_iter_pred_length",
+     "Becoming.Viability.kernel_iff_iter",
+     "Becoming.Viability.kernel_iff_iter_pred_length",
+     "Becoming.Lasting.iter_region_iff_lasts",
+     "Becoming.Lasting.kernel_iff_lasts_length"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 4,
+    "declarations": [
+     "Becoming.Parting.courseStep",
+     "Becoming.Parting.iter_iff_continues",
+     "Becoming.Parting.continues_persists",
+     "Becoming.Parting.continues_any"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 5,
+    "declarations": [
+     "Becoming.GuardHorizon.choiceStep",
+     "Becoming.GuardHorizon.iter_iff_viable",
+     "Becoming.GuardHorizon.viable_persists",
+     "Becoming.GuardHorizon.viable_closed",
+     "Becoming.GuardHorizon.viable_iff_every_horizon",
+     "Becoming.GuardHorizon.viable_iff_closed",
+     "Becoming.GuardHorizon.closed_viable"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.Viability.InClosedFamily",
+     "Becoming.Viability.readingStep",
+     "Becoming.Viability.iter_iff_kept",
+     "Becoming.Viability.coded_kept_iff_closed"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 7,
+    "declarations": [
+     "Becoming.Iteration.givesStep",
+     "Becoming.Iteration.CommutesWithImplication",
+     "Becoming.Iteration.imp_iff_iter_gives",
+     "Becoming.Iteration.iter_gives_persists",
+     "Becoming.Iteration.iter_shortens",
+     "Becoming.Iteration.iter_within_length",
+     "Becoming.Iteration.iter_within_pred_length",
+     "Becoming.Iteration.iter_succ"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 8,
+    "declarations": [
+     "Becoming.reachStep",
+     "Becoming.reach_commutes",
+     "Becoming.reach_within_pred_length",
+     "Becoming.closure_iff_reach_within",
+     "Becoming.Reaching.iter_reach_iff_trace",
+     "Becoming.Reaching.trace_within_pred_length",
+     "Becoming.Reaching.possible_iff_within_of_pred_le"
+    ],
+    "shared_laws": [
+     "closure"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 9,
+    "declarations": [
+     "Becoming.Iteration.commutes_false",
+     "Becoming.Iteration.rise_not_not",
+     "Becoming.Iteration.rise_of_stable",
+     "Becoming.Iteration.singleton_rise_needs_em"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 10,
+    "declarations": [
+     "Becoming.GuardHorizon.loseStep",
+     "Becoming.GuardHorizon.not_viable_of_loss",
+     "Becoming.GuardHorizon.lostStep",
+     "Becoming.GuardHorizon.lost_implies_lose",
+     "Becoming.GuardHorizon.lost_iff_lose",
+     "Becoming.GuardHorizon.lost_not_viable",
+     "Becoming.gather_listed",
+     "Becoming.GuardHorizon.lost_commutes",
+     "Becoming.GuardHorizon.lost_shortens"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 11,
+    "declarations": [
+     "Becoming.GuardHorizon.lose_shortening_decides",
+     "Becoming.GuardHorizon.lose_shortening_decides_negations",
+     "Becoming.GuardHorizon.lost_shortening_distributes",
+     "Becoming.GuardHorizon.lpo_of_distributes"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
+   },
+   {
+    "law": 12,
+    "declarations": [
+     "Becoming.inquiryStep",
+     "Becoming.iter_iff_inquiry",
+     "Becoming.inquiry_iff_all",
+     "Becoming.core_iff_inquiry"
+    ],
+    "shared_laws": [],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 13,
+    "declarations": [
+     "Becoming.Branching.predStep",
+     "Becoming.Branching.iter_iff_reachable",
+     "Becoming.Branching.reachable_iff_all",
+     "Becoming.Law.returns_iff_reachable_count",
+     "Becoming.Law.drawn_iff_not_reachable_count",
+     "Becoming.Viability.keepStep",
+     "Becoming.Viability.keepable_iff_count"
+    ],
+    "shared_laws": [
+     "closure",
+     "return"
+    ],
+    "grammar": true,
+    "dependence": "grammar"
+   },
+   {
+    "law": 14,
+    "declarations": [
+     "Becoming.Reaching.guarded_not_keepsWidening"
     ],
     "shared_laws": [],
     "grammar": true,
@@ -50547,11 +50749,15 @@
      "Becoming.AlikeTo",
      "Becoming.AlikeTo.decided",
      "Becoming.apart_of_not_alikeTo",
-     "Becoming.stops_decreasing",
      "Becoming.AlikeTo.steady_within",
      "Becoming.AlikeTo.steady",
      "Becoming.AlikeTo.bisimulation",
-     "Becoming.SameBranchingTests.alikeTo"
+     "Becoming.SameBranchingTests.alikeTo",
+     "Becoming.alikeStep",
+     "Becoming.alike_mono",
+     "Becoming.iter_iff_alikeTo",
+     "Becoming.alike_at_cover",
+     "Becoming.alike_at_pairs"
     ],
     "shared_laws": [],
     "grammar": false,
@@ -50564,7 +50770,8 @@
      "Becoming.alike_iff_alikeTo",
      "Becoming.alike_iff_alikeTo_pairs",
      "Becoming.alike_decided_iff_em",
-     "Becoming.OneLoop.alike_iff"
+     "Becoming.OneLoop.alike_iff",
+     "Becoming.alike_iff_at_cover"
     ],
     "shared_laws": [],
     "grammar": false,
@@ -67533,7 +67740,7 @@
   ],
   "lean_check": {
    "toolchain": "leanprover/lean4:v4.29.1",
-   "modules_sha256": "6c4ee585c1549bb19e86358954ebd190a02e5ad9e8354b0f652ba53436521188",
+   "modules_sha256": "f5e43919900b65f2649c0d0798202ab71c060d4f94e10becb6fe049db45686d0",
    "check_sha256": "e5ef1c274e3e3f81aa13dbe78732d1f6883a207a5685f736102ee4a2d5b1fc34",
    "ran": true
   },

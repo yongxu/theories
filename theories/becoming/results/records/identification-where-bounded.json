@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-15T12:00:00+00:00",
+  "reviewed_at_utc": "2026-11-21T21:27:36+00:00",
   "statement": {
     "zh": "有界的前段确定历程，前段长度恰好。界给定时归纳即演绎；不给定界时，按最小的界的外推从 2N − 1 起每步都对，与任何外推能做到的一样早：界给出沉默，不给出更早的停息。有限的名命名有意义的切分，不用商。",
     "en": "A bounded prefix fixes the course at an exact length. With the bound given, induction is deduction; not given, extrapolation by the least bound is right from 2N − 1 on, as early as any can be: the bound buys silence, not speed. Finite names name the split that makes sense, with no quotient."
@@ -701,11 +701,10 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Refinement.lean",
       "role": "proof",
-      "sha256": "67f79907afaf94833a6b3631e943c9a53ca9a5ba5229c45b24b562362087bbc6",
+      "sha256": "cc15760fc147391c8c88f959e4574ca351b0b4daacabb857e7fa252d56540340",
       "declarations": [
         "Becoming.DistinctUnder.mono",
         "Becoming.DistinctUnder.unique",
-        "Becoming.remove_mem",
         "Becoming.DistinctUnder.length_le",
         "Becoming.not_not_within",
         "Becoming.Refining",
@@ -879,6 +878,20 @@
       "role": "receipt",
       "sha256": "8f1d2bed589ebd558ab122d2b21ff3e27c19916c91a47d94b4b0829f76d45192",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PredicateIteration.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.remove_mem"
+      ],
+      "sha256": "dec3a2642a66a57b712935df84e5adac529e08a1ecd14823536b2a95be27a817"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T212524.793950Z/verification.json",
+      "role": "receipt",
+      "declarations": [],
+      "sha256": "5b402e2d75febfc0354f8353b38774ba24c6295c48ea38caa8b0e48248856232"
     }
   ],
   "proof_bindings": [
@@ -919,7 +932,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Refinement.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T212524.793950Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Refinement",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -949,6 +962,13 @@
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Decidedness.lean",
       "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Decidedness",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PredicateIteration.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T212524.793950Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.PredicateIteration",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -1055,6 +1075,10 @@
     {
       "en": "6 November 2026, board item LM: declarations this record lists moved with the helpers stated once; its references follow them, and no law changed.",
       "zh": "2026年11月6日，工作板条目 LM：此记录所列之声明随只陈述一次之辅助引理而移；其引用从之，诸律不变。"
+    },
+    {
+      "en": "22 November 2026, board row FM (one law of what a list holds, and its cases): remove_mem moved with its full name and statement from Refinement.lean to the new module Becoming.PredicateIteration, which Refinement now imports; the record's references follow it (a reference to PredicateIteration.lean added, the name dropped from Refinement.lean's list), and no law changed. Refinement.lean re-pointed after reading the change: one import added, the lemma removed, nothing else. Bound to core run 20261121T212524.793950Z.",
+      "zh": "2026年11月22日，工作板条目 FM（一条关于列表所持者的律及其诸例）：remove_mem 连同完整名称与陈述从 Refinement.lean 移到新模块 Becoming.PredicateIteration，Refinement 导入之；此记录的引用从之（加入对 PredicateIteration.lean 的引用，从 Refinement.lean 的列表除去该名），诸律不变。读过改动后重新指向 Refinement.lean：加一行导入，删去该引理，别无改动。绑定于核心运行 20261121T212524.793950Z。"
     }
   ],
   "text_versions": [

@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-25T14:49:05+00:00",
+  "reviewed_at_utc": "2026-11-21T21:27:36+00:00",
   "statement": {
     "zh": "凡一个过程的运行经映射是同一历程之处，配置数为 N 时，前段从 2N − 1 起确定它，与确定的律一样。在分开之处，没有外推，无论被给予什么（过程在内），在两个运行上都对；列出、可判定的过程中，依过程所建的外推恰在不分开之处都对。",
     "en": "Wherever a process's runs have one course through the map, a prefix fixes it from 2N − 1 on with N configurations. At a parting no extrapolation, whatever it is given, is right on both runs; for listed, decided processes the one built from the process is right exactly where none part."
@@ -94,11 +94,10 @@
       ]
     },
     {
-      "zh": "N 个配置的列表持有每个配置时，由之有 N 步历程的配置，一步之后仍然如此：长 N 的历程重复一个配置，绕着重复可以走任意长；所以由之有任意长的历程，不用判定也不用选取。步可判定、动作列出时，由之有无尽的运行，每步取第一个仍可走下去的后继造出。",
-      "en": "Where a list of N holds every configuration, from where a course of N steps starts a step leads to where one starts: the course repeats a configuration and can go round; so courses of every length start there, with no decidability and no selection. With decided steps and listed moves, a run goes on from there, built by taking at each step the first successor from which one can.",
+      "zh": "N 个配置的列表持有每个配置时，由之有 N 步历程的配置，有一步通向另一个由之有 N 步历程的配置；所以由之有任意长的历程，不用判定也不用选取。步可判定、动作列出时，由之有无尽的运行，每步取第一个仍可走下去的后继造出。",
+      "en": "Where a list of N holds every configuration, from where a course of N steps starts some step leads to where another such course starts; so courses of every length start there, with no decision and no selection. With decided steps and listed moves, a run goes on from there, built by taking at each step the first successor from which one can.",
       "declarations": [
         "Becoming.Parting.path_of_continues",
-        "Becoming.Parting.continues_cycle",
         "Becoming.Parting.continues_persists",
         "Becoming.Parting.continues_any",
         "Becoming.Parting.unbounded_of_continues",
@@ -117,7 +116,12 @@
         "Becoming.Parting.advanced",
         "Becoming.Parting.liveRun",
         "Becoming.Lasting.Continues",
-        "Becoming.Lasting.Unbounded"
+        "Becoming.Lasting.Unbounded",
+        "Becoming.Parting.courseStep",
+        "Becoming.Parting.course_mono",
+        "Becoming.Parting.iter_iff_continues",
+        "Becoming.Iteration.iter_persists",
+        "Becoming.Iteration.iter_iff_all"
       ]
     },
     {
@@ -406,7 +410,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Parting.lean",
       "role": "proof",
-      "sha256": "1fd0951b045f575e818ca680d2c5d5973786accf0846c4438057855d99370c95",
+      "sha256": "b92c85e8d58fbd18680a098c0bb7877d06effa6f95d18438090d740cae719c4b",
       "declarations": [
         "Becoming.Parting.after",
         "Becoming.Parting.before",
@@ -437,7 +441,6 @@
         "Becoming.Parting.mem_keepIf",
         "Becoming.Parting.choose",
         "Becoming.Parting.path_of_continues",
-        "Becoming.Parting.continues_cycle",
         "Becoming.Parting.continues_persists",
         "Becoming.Parting.continues_any",
         "Becoming.Parting.unbounded_of_continues",
@@ -467,7 +470,10 @@
         "Becoming.Parting.free_open",
         "Becoming.Parting.free_never_right",
         "Becoming.Parting.free_held",
-        "Becoming.Parting.free_unbounded"
+        "Becoming.Parting.free_unbounded",
+        "Becoming.Parting.courseStep",
+        "Becoming.Parting.course_mono",
+        "Becoming.Parting.iter_iff_continues"
       ]
     },
     {
@@ -613,7 +619,7 @@
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lasting.lean",
       "role": "proof",
-      "sha256": "0ed67252387622abeb11bbbdf77cd11af2ee14a0b480113f2a907e6cf5b125dc",
+      "sha256": "4c9174a15c4b2d231adfaaca47a503c73b363a87711950c1ec5ee0db24ba9cb5",
       "declarations": [
         "Becoming.Lasting.Continues",
         "Becoming.Lasting.Unbounded"
@@ -778,12 +784,27 @@
       "role": "receipt",
       "sha256": "b2a4a06d538e8e7d391c8947e4c85eb6183fa84004a1f4fd8eb13d765d628a14",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PredicateIteration.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Iteration.iter_iff_all",
+        "Becoming.Iteration.iter_persists"
+      ],
+      "sha256": "dec3a2642a66a57b712935df84e5adac529e08a1ecd14823536b2a95be27a817"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T212524.793950Z/verification.json",
+      "role": "receipt",
+      "declarations": [],
+      "sha256": "5b402e2d75febfc0354f8353b38774ba24c6295c48ea38caa8b0e48248856232"
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Parting.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T212524.793950Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Parting",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -832,7 +853,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Lasting.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T212524.793950Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Lasting",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -862,6 +883,13 @@
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
       "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Labelled",
+      "success_pointer": "/status",
+      "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PredicateIteration.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T212524.793950Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.PredicateIteration",
       "success_pointer": "/status",
       "success_value": "passed"
     }
@@ -916,6 +944,10 @@
     {
       "en": "6 November 2026, board item LM: the helper lemmas this record lists are stated once now, in Prelude, Flow, Change or Laws, or are Lean's own and dropped from the lists; the names changed and no law did.",
       "zh": "2026年11月6日，工作板条目 LM：此记录所列辅助引理现只陈述一次，在 Prelude、Flow、Change 或 Laws，或即 Lean 自有者而从列表除去；改其名，诸律不变。"
+    },
+    {
+      "en": "22 November 2026, board row FM (one law of what a list holds, and its cases): the ninth law re-told. Parting.continues_persists and continues_any keep their statements; their proofs are now calls of the law of a monotone step applied as many times as a list is long (Becoming.Iteration.iter_persists and iter_iff_all, in the new module Becoming.PredicateIteration), through Parting.courseStep, course_mono and iter_iff_continues, which join the law's declarations. Parting.continues_cycle is deleted and leaves the lists. The law no longer says that the course repeats a configuration and can go round, which told the former proof. The other laws, the statement and the hypotheses are unchanged. Bound to core run 20261121T212524.793950Z.",
+      "zh": "2026年11月22日，工作板条目 FM（一条关于列表所持者的律及其诸例）：第九条规律重述。Parting.continues_persists 与 continues_any 陈述不变，其证明改为调用“单调的一步施行列表长度那么多次”之律（Becoming.Iteration.iter_persists 与 iter_iff_all，在新模块 Becoming.PredicateIteration），经 Parting.courseStep、course_mono 与 iter_iff_continues，三者加入该律的声明。Parting.continues_cycle 删去，从各列表除去。该律不再说长 N 的历程重复一个配置而可以绕行，那是旧证明。其余诸律、陈述与前提不变。绑定于核心运行 20261121T212524.793950Z。"
     }
   ],
   "text_versions": [

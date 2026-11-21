@@ -2835,6 +2835,11 @@
    "region": "map",
    "base": "general",
    "note": "LineOnAStock DJ: a way of units, each with a need, a use and the kids it leaves, on a level; the way reads the level only by needs met; with kids taking more the net, or a closed line, is gone from some step on, under stated premises (study NOTE, r-a-line-on-a-stock)"
+  },
+  "kept-at-the-length-of-a-list": {
+   "region": "map",
+   "base": "general",
+   "note": "PredicateIteration FM: a monotone step on predicates where a list holds the start; kept at the list's length is kept for good; keeping under every course, along some course, by choice and through a reading as cases; the ending side where a step commutes with what a level would give"
   }
  },
  "modules": {
