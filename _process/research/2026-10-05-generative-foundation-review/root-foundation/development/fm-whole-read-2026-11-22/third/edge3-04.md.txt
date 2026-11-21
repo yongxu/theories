@@ -1,0 +1,344 @@
+# Task file: EDGE, third batch, reader whole-c-edge3-04
+
+Your 4 modules. No EDGE reader has read them. They were left out because the two batches before were chosen by the FIRST letter of each answer, and in each of these some answer of pass b begins `N` and goes on with a part marked `S`, `B` or `D`. Counted by any part, each of them belongs to one of the two batches (all four found by both passes; or both outcomes by both and a rank by neither). For orientation only, what the passes said (where to look, not evidence).
+
+## PoolFromCourse.lean  (797 lines)  [all four by any part]
+
+### `both_outcomes`
+- pass a: B: `Drained.strong_undone` (l. 660) gives permanent carrier lock from step three at 8:1. `weak_turned` (l. 685) gives permanent reverse lock from step four at 2:1 under the same drain. Both are continuing selection courses.
+- pass b: B: in the one Drained model with the drain, from eight to one the course is locked for good in the carriers' favour (`Drained.strong_undone`, l. 660), and from two to one it is turned for good from step 4 (`Drained.weak_turned`, l. 685). In Borne, the loss borne by the shapers leaves the lock at step 4 (`Borne.shapers_left`, l. 753), and borne by the others it is locked at every step (`Borne.others_locked`, l. 782). S: `borne_by_shapers_favours_iff` (l. 524) is a general exactly-where of favouring.
+
+### `no_return`
+- pass a: S: `closed_stays_closed` (l. 222) assumes non-readmission. `stands_not_readmitted` (l. 271) derives it for a threshold on accruing loss. `window_locked_after_removal` (l. 342) concludes lasting lock once removal and lock coincide under its order premises.
+- pass b: S: `window_locked_after_removal` (l. 342): from a step at which the loss is at least `K` and the configuration is locked, the readers never stand again and the course is locked at every later step. This is concluded from `Accrues` and `Raises`, at the loss of what reads the loss. `closed_stays_closed` (l. 222) concludes the same from the premise `NotReadmitted`. B: `Drained.strong_undone` (l. 660): with the shapers' drain, the readers are gone at step 2 and the course is locked in the carriers' favour for good from step 3.
+
+### `rank`
+- pass a: S: `window_never_read` (l. 295) bounds loss below by initial loss plus elapsed steps when K≤N under accruing loss and its lock/order premises. Thus every finite removal threshold is reached.
+- pass b: N: no general law of ending within a bound, nor a falling variant. B: `Borne.shapers_left` (l. 753): the share falls across each of three steps and the lock is left at step 4. `Drained.drain` (l. 563) is a drain growing with the share.
+
+### `closed_region`
+- pass a: S: `closed_stays_closed` (l. 222) propagates the conjunction of absent outside readers and lock from a given step under the non-readmission, reading and order premises.
+- pass b: S: `closed_stays_closed` (l. 222): absence of readers together with the lock is a region every later step keeps. `locked_along` (l. 201). `window_never_read` (l. 295): where `K ≤ N`, a locked start stays locked.
+
+### `moves`
+- pass a: S: `turn_locked_at` (l. 153) preserves a lock through either reading or holding the rule, given nondecreasing share, monotone share reading and upward-closed favouring.
+- pass b: N: the selection `f` and reading `h` are functions, and `paced f h reads` is a deterministic course. No choice among steps.
+
+### `reading`
+- pass a: S: `read_absent` (l. 141) makes the next reading equal from the same share and rule at any two configurations lacking outside readers, under `ReadsThroughPresent`.
+- pass b: S: `ReadsThroughPresent` (l. 119): where no reader of the beyond is present, the rule read is the share-readers' rule read off the share alone. `read_absent` (l. 141): two configurations with no reader present, alike in share, give one rule whatever lies beyond. `window_removed_unregistered` (l. 332): from a configuration whose loss is at least `K`, two readings `hL`, `hL'` of the loss give one course. `windowRead` (l. 252) reads the loss as `hL` only while it lies in `[N, K)`.
+
+### declarations of PoolFromCourse.lean (by script)
+  l.119 def ReadsThroughPresent
+  l.123 def NotReadmitted
+  l.127 def liftShare
+  l.134 def twoShares
+  l.141 theorem read_absent
+  l.153 theorem turn_locked_at
+  l.173 theorem rule_after
+  l.185 theorem locked_step
+  l.201 theorem locked_along
+  l.222 theorem closed_stays_closed
+  l.252 def windowRead
+  l.256 def Stands
+  l.259 theorem window_through
+  l.265 theorem window_unread
+  l.271 theorem stands_not_readmitted
+  l.278 theorem joint_raises
+  l.284 theorem window_past
+  l.295 theorem window_never_read
+  l.314 theorem window_past_course
+  l.332 theorem window_removed_unregistered
+  l.342 theorem window_locked_after_removal
+  l.366 theorem window_standing_thinned
+  l.397 def withBound
+  l.403 def boundRead
+  l.407 def boundOrder
+  l.416 theorem bound_course
+  l.431 theorem boundRead_reads
+  l.465 theorem window_order_kept
+  l.498 def bear
+  l.504 def borneStep
+  l.509 theorem bear_shaped_shapers
+  l.516 theorem bear_shaped_others
+  l.524 theorem borne_by_shapers_favours_iff
+  l.530 theorem borne_by_others_favours_iff
+  l.536 theorem borne_by_others_raises
+  l.543 theorem borne_falls
+  l.559 def eightToOne
+  l.563 def drain
+  l.567 def readLoss
+  l.571 def window
+  l.575 def clock
+  l.579 def drained
+  l.582 theorem drain_accrues
+  l.584 theorem clock_accrues
+  l.587 theorem outnumber_mono
+  l.596 theorem drawn_mono
+  l.607 theorem drain_mono
+  l.612 theorem lo_below
+  l.622 theorem premises
+  l.636 theorem clock_turned
+  l.660 theorem strong_undone
+  l.685 theorem weak_turned
+  l.707 theorem strong_not_below
+  l.724 def toll
+  l.727 def onShapers
+  l.731 def onOthers
+  l.736 theorem shapers_turned
+  l.742 theorem locked_hi
+  l.753 theorem shapers_left
+  l.782 theorem others_locked
+
+## Postponement.lean  (203 lines)  [both outcomes, no rank, by any part]
+
+### `both_outcomes`
+- pass a: S: `Frame.postponed_trace_iff` (l. 110) equates availability of the specified finite course from an inhabited family with its availability from some member. It concerns continuation through a specified finite list.
+- pass b: N (S: `alike_postponed_iff_determined` (l. 179) is an iff between likeness to the postponement and being determined, not of going on and ending).
+
+### `no_return`
+- pass a: N: Not found in the statements read.
+- pass b: N
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N
+
+### `closed_region`
+- pass a: S: `Frame.postponed_trace_inhabited` (l. 89) shows that every executable trace from an inhabited family ends in an inhabited family.
+- pass b: S: `Frame.postponed_members` (l. 51) gives a `Bisimulation` (a relation closed under steps both ways) on the postponed frame; `Frame.postponed_determinedAt` (l. 68). No invariant or largest closed region of states.
+
+### `moves`
+- pass a: S: `Frame.postponed_trace_iff` (l. 110) gives executability of any move list from an inhabited family exactly when some member executes it in the original frame.
+- pass b: S: `Frame.postponed_trace_iff` (l. 110): from an inhabited family, the postponed frame takes a course `as` exactly where some member takes it in `F.P`; `Frame.postponed_trace_members` (l. 75): the reached family is everything reached from the start's members. The moves are `F.P.step s a t` of an arbitrary frame.
+
+### `reading`
+- pass a: S: `Frame.postponed_tests_iff` (l. 119) characterizes a claim realizable after a move list by an original member reaching a state realizing that claim.
+- pass b: S: `sameTests_iff_postponed_alike` (l. 163): for any frames `F`, `G`, `SameTests F G s s'` exactly when `Alike F.postponed G.postponed (Eq s) (Eq s')`: what linear tests register decides likeness only after postponing branchings. S: `sameTests_postponed` (l. 143). B: `Choosing.postponed_alike` (l. 191), `Choosing.early_not_alike_postponed` (l. 196).
+
+### declarations of Postponement.lean (by script)
+  l.46 def Frame.postponed
+  l.51 theorem Frame.postponed_members
+  l.68 theorem Frame.postponed_determinedAt
+  l.75 theorem Frame.postponed_trace_members
+  l.89 theorem Frame.postponed_trace_inhabited
+  l.98 theorem Frame.postponed_trace_of
+  l.110 theorem Frame.postponed_trace_iff
+  l.119 theorem Frame.postponed_tests_iff
+  l.128 theorem Frame.postponed_trace_one
+  l.135 theorem Frame.postponed_tests_one
+  l.143 theorem sameTests_postponed
+  l.148 theorem sameTests_postponed_iff
+  l.163 theorem sameTests_iff_postponed_alike
+  l.170 theorem DeterminedAt.of_alike_postponed
+  l.179 theorem alike_postponed_iff_determined
+  l.191 theorem postponed_alike
+  l.196 theorem early_not_alike_postponed
+
+## ReadingsSpread.lean  (1279 lines)  [all four by any part]
+
+### `both_outcomes`
+- pass a: B: `Commons.keep_persists` (l. 1167) and `clearedBack_ends` (l. 1180), on the generated courses of `generated` (l. 970), give all lines standing late under whole and all removed under source when the dweller renews. These are computed courses.
+- pass b: B: the same Commons world gives persistence (`keep_persists`, l. 1167: every line stands late) and ending (`clearedBack_ends`, `overdrawnBack_ends`), by the reading and by `back`. These are separate built cases, not an exactly-when. S, partly: `fixed_of_closedFrom` (l. 150) and `revised_out` (l. 158) are the two directions, keeping where closed and a non-carrier put in where the update leaves, but not an iff. N: no general dichotomy of going on and ending.
+
+### `no_return`
+- pass a: S: `fixed_of_present` (l. 169) concludes permanent fixation from fixation at T, revision using a cohort member as source, and an update preserving the region on pairs in it. B: `Commons.overdrawnBack_ends` (l. 1252) concludes all cohorts from step 3 are empty.
+- pass b: S: `fixed_of_closedFrom` (l. 150): fixed at T and closed under revision from T, then fixed at every later step. The irreversibility is concluded, with closure as a premise. `fixed_of_present` (l. 169): fixation is a lock under variation drawn from what is present (concluded). `absent_step` (l. 330): an absent region re-enters only by revisions in. B: `RemovesLine` in `clearedBack_ends` (l. 1180) and `overdrawnBack_ends` (l. 1252), with the population empty from steps 6 and 3 on. This loss follows the loss of the giver (the dweller line) in the `back = true` cases. `Contact.removed_locked` (l. 575).
+
+### `rank`
+- pass a: B: `Commons.overdrawnBack_ends` (l. 1252) and `clearedBack_ends` (l. 1180) give complete population loss from steps 3 and 6 respectively.
+- pass b: N: no falling rank or variant in a general law. `carriers_drawn_down` uses a ledger over n steps, not a decreasing rank. B: built deadlines. `overdrawnBack_ends` (l. 1252): the population is empty from step 3. `clearedBack_ends`: empty from step 6.
+
+### `closed_region`
+- pass a: S: `fixed_of_closedFrom` (l. 150) propagates fixation under revision closed along the course from T. `Flow.closedFrom_of_standing` (l. 210) derives such closure when sources stand, all standing sources carry the region, and updating two readings in it keeps it.
+- pass b: S: `Generations.ClosedFrom` (l. 141) and `fixed_of_closedFrom` (l. 150): a region closed under revision on the course from T keeps every member. `Flow.closedFrom_of_standing` (l. 210): where revision copies the reading of a relatum standing, the update keeps the region, and every standing relatum carries it from T, the region is closed from T. `fixed_of_present` (l. 169).
+
+### `moves`
+- pass a: B: `Commons.world_byReading` (l. 739) identifies the assigned exchanges with those given by each relatum’s reading. `Commons.generated` (l. 970) gives the courses of the resulting acts, including the whole-reading course on which all three lines stand late (`keep_persists`, l. 1167).
+- pass b: S: `standingCount_unselected` (l. 455): for any two acts `act`, `act'` of the part (both nonanticipating, `act` reading through coupling, both courses feasible) that agree on everything coupled into the coupling closure of `group`, the counts of listed standing slots carrying any region are equal at every step. B: `Commons.world` (l. 736) with the three choices `Reading.own/source/whole`: `keep_unmoved`/`keep_persists` (whole), `cleared_spreads` (source), `overdrawn_spreads_then_ends` (own) give different outcomes. No `Process S A` occurs.
+
+### `reading`
+- pass a: S: `Generations.RevisesBy` (l. 135) makes each child’s reading the update of its parent’s reading and sensed value. `revised_out` (l. 158) concludes that a parent with a kid whose update leaves P puts a noncarrier into the next cohort.
+- pass b: S: `Generations.RevisesBy` (l. 135): each kid's reading is `upd (read p) (sense t p)`. `fixed_of_present` (l. 169): where what is sensed is the reading of a member of the cohort and `upd` keeps the region, a region fixed at `T` stays fixed. `standingCount_unselected` (l. 455): what the act reads through the coupling closure decides the standing count, whatever the acts do beyond it. `inheritsReading_iff` (l. 195): inheritance is revision by the update that keeps the reading.
+
+### declarations of ReadingsSpread.lean (by script)
+  l.135 def RevisesBy
+  l.141 def ClosedFrom
+  l.150 theorem fixed_of_closedFrom
+  l.158 theorem revised_out
+  l.169 theorem fixed_of_present
+  l.191 def RevisesBy
+  l.195 theorem inheritsReading_iff
+  l.201 theorem RevisesBy.lineOf
+  l.210 theorem closedFrom_of_standing
+  l.227 def withAmount
+  l.229 theorem withAmount_family
+  l.237 def carrying
+  l.242 def revisedIn
+  l.247 def revisedOut
+  l.252 theorem excess_indicator
+  l.256 theorem carrying_family
+  l.259 theorem carrying_size
+  l.263 theorem carrying_raisedAt
+  l.269 theorem carrying_loweredAt
+  l.278 theorem share_step
+  l.288 theorem total_congr_mem
+  l.297 theorem fixed_step
+  l.330 theorem absent_step
+  l.348 theorem revised_none_of_inherits
+  l.368 theorem indicator_le_one
+  l.378 theorem supported_carriers_not_against
+  l.399 theorem carriers_inactive_step
+  l.421 theorem carriers_drawn_down
+  l.438 def standingCount
+  l.455 theorem standingCount_unselected
+  l.484 def read
+  l.492 def generations
+  l.505 theorem rises_then_revised
+  l.520 def copy
+  l.523 def read
+  l.529 def removed
+  l.539 def senseSelf
+  l.541 theorem removed_family
+  l.545 theorem removed_revises
+  l.575 theorem removed_locked
+  l.588 def met
+  l.596 def senseOther
+  l.601 def readMet
+  l.606 theorem met_revises
+  l.631 theorem met_replaced
+  l.643 inductive Rel
+  l.648 inductive Reading
+  l.654 def drawS
+  l.660 def clears
+  l.666 def stands
+  l.670 def fed
+  l.683 def conduct
+  l.712 def act
+  l.717 def isFocal
+  l.730 def readOf
+  l.733 def restLaw
+  l.736 def world
+  l.739 theorem world_byReading
+  l.744 def members
+  l.748 def requires
+  l.764 def need
+  l.767 def webOf
+  l.772 def flowOf
+  l.776 theorem flowOf_follows
+  l.782 theorem fed_of_agree
+  l.789 theorem act_nonanticipating
+  l.800 theorem world_nonanticipating
+  l.809 def evenLate
+  l.816 def keep
+  l.832 def cleared
+  l.846 def overSource
+  l.854 def overdrawn
+  l.869 def clearedBack
+  l.883 def overdrawnBack
+  l.895 def start
+  l.897 def present
+  l.899 theorem keep_balances
+  l.909 theorem cleared_balances_late
+  l.916 theorem cleared_balances
+  l.922 theorem overdrawn_taken_late
+  l.927 theorem overdrawn_balances_late
+  l.947 theorem overdrawn_balances
+  l.953 theorem clearedBack_balances
+  l.962 theorem overdrawnBack_balances
+  l.970 theorem generated
+  l.994 def pop
+  l.998 def isNarrow
+  l.1004 def narrow
+  l.1008 theorem narrow_sum
+  l.1015 theorem inherits
+  l.1021 theorem flatMap_congr
+  l.1026 theorem keep_shift
+  l.1033 theorem cleared_shift
+  l.1039 theorem overdrawn_kids_shift
+  l.1044 theorem overdrawn_shift
+  l.1052 theorem keep_unmoved
+  l.1065 inductive Line
+  l.1068 def isWide
+  l.1080 def isDweller
+  l.1093 def slotsOf
+  l.1098 theorem profile_late
+  l.1104 theorem removes_of_gone
+  l.1111 theorem standsLate_alt
+  l.1119 theorem cleared_family_late
+  l.1133 theorem cleared_spreads
+  l.1167 theorem keep_persists
+  l.1180 theorem clearedBack_ends
+  l.1209 theorem overdrawn_family_late
+  l.1222 theorem overdrawn_spreads_then_ends
+  l.1252 theorem overdrawnBack_ends
+
+## Relevance.lean  (598 lines)  [both outcomes, no rank, by any part]
+
+### `both_outcomes`
+- pass a: S: `Ranking.possible_tie` (l. 465) gives universal admission on both courses under initial support of both and draw always within renewal plus contribution. `possible_extends` (l. 356) gives strict extension by absence under eventual strict overdraw, 0<needG and needF≤needG≤start. These are sufficient regimes in the same family.
+- pass b: N: no 'exactly when' of going on versus ending. The iff statements (`livingSignificance_relevance_iff` l. 127, `unrestricted_iff_livingSignificance` l. 137, `possible_extends_iff` l. 385) are of significance and extension. B: the family is split by separate theorems into overdrawing laws (`possible_extends`) and laws drawing within renewal (`possible_tie`), with no single dichotomy statement.
+
+### `no_return`
+- pass a: N: Not found in the statements read.
+- pass b: S: `possible_extends` (l. 356) concludes, from the overdraw premise, that the sustaining formation is not admitted at some step T in the overdrawing course. The proof body uses overdraw_consuming's `lost`, which holds for every t >= T, but the statement records only the one step. The loss is concluded, at the loss of what renews the condition.
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N
+
+### `closed_region`
+- pass a: S: `Ranking.possible_tie` (l. 465) concludes every formation-step is possible on both courses under its initial-need and within-renewal premises.
+- pass b: N
+
+### `moves`
+- pass a: S: `universal_reason_of_unrestricted` (l. 255) takes a sensing policy sound for safety and novel living content as a premise. Given unrestricted significance, the claim-to-formation reading and living articulation, every position with access has a reason for that policy.
+- pass b: S: `universal_reason_living` (l. 238) and `universal_reason_of_unrestricted` (l. 255): for a policy : Policy A R k that is Sound for an inquiry whose goal is new living content, together with A read on living content (Neutral articulatesLiving), every position with access to the policy has a Reason; this is a law about what a policy yields, not about what it keeps. The courses compared (.occurs/.absent, .wins/.shares, .stops/.overdraws) are fixed alternatives, not choices within a process. N: no law about what some or every choice of steps keeps.
+
+### `reading`
+- pass a: S: `Ranking.possible_ranks` (l. 368) requires a comparison respecting extension of admissions. It then ranks absence above occurrence for the law family when 0<needG, needF≤needG≤start and draw eventually always exceeds renewal plus contribution.
+- pass b: S: `possible` (l. 338) is a reading of a course (a formation at a step is included where the course's levels admit it). `possible_ranks` (l. 368): every comparison Better satisfying C under the possibility reading (ComparisonUnder) ranks .absent above .occurs, given 0 < needG, needF <= needG, needG <= start and renew + contrib t < draw t from T0. `possible_tie` (l. 465) and `readings_rank_presence` (l. 479): for a formation drawing within renewal, neither course extends the other under the possibility reading, while under wholeRun and stepwise the course with it extends the course without it, so which reading is used decides the ranking. `possibleFirst_presence` (l. 548) and `Pause.pause_ranked_below` (l. 575, built): possibilities first ranks the rest below uninterrupted activity. `articulates_total` (l. 205): with bare significance A forces a reason for any new content; read on living content, only for new living content.
+
+### declarations of Relevance.lean (by script)
+  l.101 def Frame.relevance
+  l.108 theorem livingSignificance_of_unrestricted
+  l.115 theorem relevance_least
+  l.127 theorem livingSignificance_relevance_iff
+  l.137 theorem unrestricted_iff_livingSignificance
+  l.152 theorem Web.paths_somewhere
+  l.156 theorem Web.unrestricted_iff_paths_livingSignificance
+  l.168 theorem Web.paths_one_object
+  l.186 theorem securesNewContent_total
+  l.196 def articulatesLiving
+  l.205 theorem articulates_total
+  l.226 theorem positioned_articulation_of_articulatesLiving
+  l.238 theorem universal_reason_living
+  l.255 theorem universal_reason_of_unrestricted
+  l.277 def valuation
+  l.280 def admitted
+  l.282 def before
+  l.287 theorem bare_forces_reason
+  l.307 theorem Includes.of_le
+  l.312 theorem not_added_of_le
+  l.327 theorem stepwise_iff
+  l.332 theorem relational_iff
+  l.338 def possible
+  l.343 theorem possible_of_active
+  l.348 theorem absent_admits_all
+  l.356 theorem possible_extends
+  l.368 theorem possible_ranks
+  l.377 theorem possible_course_iff
+  l.385 theorem possible_extends_iff
+  l.404 theorem malignant_possible
+  l.420 theorem possible_contest
+  l.433 theorem possible_restraint
+  l.452 theorem possible_extends
+  l.465 theorem possible_tie
+  l.479 theorem readings_rank_presence
+  l.494 theorem sharing_presence
+  l.510 def possibleFirst
+  l.515 theorem possibleFirst_order
+  l.540 theorem possibleFirst_overdraw
+  l.548 theorem possibleFirst_presence
+  l.565 def courses
+  l.575 theorem pause_ranked_below

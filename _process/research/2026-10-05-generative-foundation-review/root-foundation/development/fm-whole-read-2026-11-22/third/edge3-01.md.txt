@@ -1,0 +1,445 @@
+# Task file: EDGE, third batch, reader whole-c-edge3-01
+
+Your 4 modules. No EDGE reader has read them. They were left out because the two batches before were chosen by the FIRST letter of each answer, and in each of these some answer of pass b begins `N` and goes on with a part marked `S`, `B` or `D`. Counted by any part, each of them belongs to one of the two batches (all four found by both passes; or both outcomes by both and a rank by neither). For orientation only, what the passes said (where to look, not evidence).
+
+## Admission.lean  (1001 lines)  [all four by any part]
+
+### `both_outcomes`
+- pass a: S: `supported_iff_within_margin_at` (l. 596) characterizes support at t by need plus cumulative part taking ≤ withheld level plus cumulative part giving for each requirement, given withheld levels and local balance.
+- pass b: S (support kept or lost, general): `Balances.supported_iff_within_margin` (l.633) and `supported_iff_within_margin_at` (l.596): supported at t exactly when the part's net draw stays within the margin. `fitsBand_iff_within_margins_at` (l.670). Not of going on and ending of the whole.
+
+### `no_return`
+- pass a: S: `unsupported_stays` (l. 330) concludes irreversibility from absence of supported members, internal giving to required conditions, unloosened requirements, balance, acting and dependence.
+- pass b: S (concluded, at the loss of the givers): `Flow.unsupported_stays` (l.330) and `unsupported_stays_at` (l.308): once no member is supported, none is supported at any later step, under Balances, Acting, Dependent, unloosened and closure ('within'). `nothing_supported_stays` (l.360): once nothing is supported, nothing is supported or active again. B: the Restoring witnesses show each premise is needed.
+
+### `rank`
+- pass a: S: `gain_given_by_recent_gainer` (l. 265) assumes a bound on support spells: no formation is supported at every time of any K+1-step window. The conclusion locates a recent gain by a giver under double negation; the bound is supplied.
+- pass b: N: no rank or bound in this module's statements. D: the account points to `Flow.excess_bounded` and `Flow.joint_excess_ends` in Becoming.Continuation.
+
+### `closed_region`
+- pass a: S: `nothing_supported_stays` (l. 360) makes total absence of support absorbing under balance, acting, dependence and unloosened requirements.
+- pass b: S: `unsupported_stays` (l.330): the set 'no member supported' is closed under steps, given the premises (an absorbing region). `nothing_supported_stays` (l.360) for the whole.
+
+### `moves`
+- pass a: N: Not found in the statements read.
+- pass b: N: no Process or choice of steps. The part withheld (`part : F → Bool`) is compared, not chosen.
+
+### `reading`
+- pass a: S: `Web.not_arises_of_unchanged` (l. 424) rules out arising when activity equals support at both times, old requirements persist, and needs and levels stay equal.
+- pass b: S in part (no observation class): `Web.Admits` (l.378), and `supported_iff_admits` (l.435): support is admission by the standing levels. `not_arises_of_unchanged` (l.424): a formation active exactly where supported, whose requirements, needs and levels stay across a step, does not arise across it.
+
+### declarations of Admission.lean (by script)
+  l.111 def unitStep
+  l.113 theorem unitStep_pos
+  l.117 def unitDrop
+  l.126 def GainsSupport
+  l.130 def LosesSupport
+  l.135 def Unloosened
+  l.140 def Untightened
+  l.147 theorem GainsSupport.rises
+  l.155 theorem LosesSupport.falls
+  l.171 theorem rise_given_by_supported_at
+  l.178 theorem rise_given_by_supported
+  l.188 theorem gain_given_by_supported_at
+  l.203 theorem gains_from_supported_at
+  l.214 theorem gains_from_supported
+  l.223 theorem comes_within_not_not
+  l.246 theorem gain_given_by_recent_gainer_at
+  l.265 theorem gain_given_by_recent_gainer
+  l.282 theorem support_passes_on
+  l.308 theorem unsupported_stays_at
+  l.330 theorem unsupported_stays
+  l.345 theorem nothing_supported_stays_at
+  l.360 theorem nothing_supported_stays
+  l.378 def Admits
+  l.384 def FitsBand
+  l.388 def Includes
+  l.392 def Exceeds
+  l.399 def admitted
+  l.406 theorem includes_iff
+  l.411 theorem exceeds_iff
+  l.416 theorem FitsBand.admits
+  l.424 theorem not_arises_of_unchanged
+  l.435 theorem supported_iff_admits
+  l.439 theorem Admits.mono
+  l.444 theorem Includes.refl
+  l.448 theorem Includes.trans
+  l.453 theorem Includes.not_exceeded
+  l.464 theorem rebalance
+  l.493 def withhold
+  l.498 def partTaken
+  l.502 def partGiven
+  l.507 def WithheldLevels
+  l.511 theorem split_at
+  l.518 theorem taken_withhold
+  l.524 theorem given_withhold
+  l.532 theorem WithheldLevels.unique
+  l.542 theorem withheld_at
+  l.562 theorem Balances.withheld
+  l.570 theorem supported_of_net_give_at
+  l.582 theorem admits_of_net_draw_at
+  l.596 theorem supported_iff_within_margin_at
+  l.612 theorem Balances.supported_of_net_give
+  l.622 theorem Balances.admits_of_net_draw
+  l.633 theorem Balances.supported_iff_within_margin
+  l.642 theorem Balances.closes_nothing
+  l.650 theorem Balances.opens_nothing
+  l.658 theorem Balances.changes_nothing
+  l.670 theorem fitsBand_iff_within_margins_at
+  l.699 def flow
+  l.709 theorem balances_unitStep
+  l.717 def need
+  l.726 def web
+  l.733 theorem restores
+  l.751 def web
+  l.757 theorem restores
+  l.772 def giverPart
+  l.777 theorem withheld
+  l.786 theorem widens
+  l.804 def web
+  l.808 theorem restores
+  l.828 def web
+  l.834 theorem restores
+  l.855 def web
+  l.859 theorem restores
+  l.884 inductive Formation
+  l.891 def flow
+  l.906 def web
+  l.927 theorem balances
+  l.933 theorem acting
+  l.941 theorem taking
+  l.950 theorem dependent
+  l.959 def conveyorPart
+  l.966 def withheldLevel
+  l.970 theorem withheld
+  l.983 theorem mixed
+
+## Continuation.lean  (1135 lines)  [all four by any part]
+
+### `both_outcomes`
+- pass a: B: `Mortal.after_its_end` (l. 1064) gives the successor still active at two, then all inactive from three; `Mortal.without_continues` (l. 1101) keeps successor and renewer active in the paired flow. The general restoration and ending theorems have separate sufficient premises.
+- pass b: N: no general exactly-when of going on and ending. S, a dichotomy of other things: `inward_iff_not_fed` (l. 145). B: `Exceeding.all_end` (l. 726) against `Alone.all_continue` (l. 896): the same renewer with two takers ends, with one taker all continue. `Mortal.after_its_end` (l. 1064) against `Mortal.without_continues` (l. 1101).
+
+### `no_return`
+- pass a: S: `Flow.stays_below` (l. 468) concludes permanent low stock under balance, active giving, dependence and the need gate for each present giver. `joint_excess_ends` (l. 553) derives subsequent inactivity for any continuing high-need dependence after the drawdown.
+- pass b: S, concluded: `stays_below` (l. 468): under Balances, Acting, Dependent and a gate on givers at need m, a level below m at T is below m at every T + n. `ends_below` (l. 495): then every formation depending on it at need ≥ m is inactive. `joint_excess_ends` (l. 553): n steps of joint excess from below n + m bring this about. It is at the loss of what gives, since the givers are among those ended. `never_returns_below` (l. 450) and `held_below` (l. 435): with balance, an exchange giving no more than it takes below m never returns the level to m.
+
+### `rank`
+- pass a: S: `Flow.family_excess_bounded_at` (l. 278) bounds the final stock plus n by starting stock after n balanced excess steps; `conveyed_loses` (l. 208) gives the same drain under balance, dissipation and conveyance from a member at each step.
+- pass b: S: `excess_bounded` (l. 319) and `family_excess_bounded` (l. 293): joint excess lasts at most as many steps as the level or stock at the start. `conveyed_loses` (l. 208): under balance and dissipation, N steps each conveying from a member of the family lower its stock by at least N, so at most S₀ stages are conveyed from a stock of S₀. `restores` (l. 364): restoration within m − level steps. B: `Pair.no_web` (l. 657): no web balances a flow in joint excess at every step.
+
+### `closed_region`
+- pass a: S: `Flow.family_stays_below_at` (l. 395) preserves stock <m for n steps under per-step family balance, coupled giver gates and supported givers.
+- pass b: S: `stays_below` (l. 468) and `family_stays_below_at` (l. 395): under the gate, 'level (or stock) below m' is closed under the steps. `never_returns_below` (l. 450) gives the same where the exchange gives no more than it takes below m. `joint_keeps` (l. 248): taking jointly within what is given keeps the level from falling.
+
+### `moves`
+- pass a: N: Not found in the statements read.
+- pass b: N: a Flow fixes the present formations and what each takes and gives at each step (World.lean l. 61). There is no choice among steps and no law about what a choice keeps.
+
+### `reading`
+- pass a: N: Not found in the statements read.
+- pass b: N: no reading in the sense asked. B: `Coupled.alone_within` (l. 831) and `Coupled.alone_ungated` (l. 837): taken as a family of its own, the patch shows no joint excess and is not gated. `Coupled.gated` (l. 843), `Coupled.excess` (l. 851) and `Coupled.all_end` (l. 861): taken as one with its neighbour, the family is gated and in excess and both formations end. Which conditions are grouped decides whether the law of one condition or the family law applies.
+
+### declarations of Continuation.lean (by script)
+  l.117 def Conveys
+  l.122 def FedFromBeyond
+  l.128 theorem not_inward_of_fed
+  l.136 theorem inward_of_not_fed
+  l.145 theorem inward_iff_not_fed
+  l.150 theorem fed_of_not_inward
+  l.160 theorem fed_from_beyond_from
+  l.168 theorem rising_fed_from_beyond_from
+  l.180 theorem fed_from_beyond
+  l.188 theorem rising_fed_from_beyond
+  l.198 theorem takers_pos_of_conveys
+  l.208 theorem conveyed_loses
+  l.229 def WithinOwn
+  l.234 def WithinJoint
+  l.241 theorem joint_keeps_at
+  l.248 theorem joint_keeps
+  l.255 theorem family_excess_lowers_at
+  l.267 theorem excess_lowers_at
+  l.272 theorem excess_lowers
+  l.278 theorem family_excess_bounded_at
+  l.293 theorem family_excess_bounded
+  l.300 theorem below_of_excess
+  l.311 theorem excess_bounded_at
+  l.319 theorem excess_bounded
+  l.326 theorem net_give_raises_at
+  l.339 theorem net_give_bounded_at
+  l.354 theorem restores_at
+  l.364 theorem restores
+  l.379 theorem of_single
+  l.385 theorem gate_single
+  l.395 theorem family_stays_below_at
+  l.422 theorem stays_below_at
+  l.435 theorem held_below
+  l.450 theorem never_returns_below
+  l.457 theorem given_zero_below
+  l.468 theorem stays_below
+  l.480 theorem family_ends_below_at
+  l.488 theorem ends_below_at
+  l.495 theorem ends_below
+  l.506 theorem family_excess_ends_at
+  l.536 theorem joint_excess_ends_at
+  l.553 theorem joint_excess_ends
+  l.573 theorem family_excess_ends
+  l.598 theorem embodiedArising_fed_from_beyond
+  l.614 theorem fed
+  l.622 theorem each_fuel_once
+  l.633 theorem fed_not_recurring
+  l.647 def flow
+  l.653 theorem own_not_joint
+  l.657 theorem no_web
+  l.668 abbrev Member
+  l.670 def level
+  l.672 def live
+  l.674 def present
+  l.680 def flow
+  l.683 def web
+  l.685 theorem balances
+  l.690 theorem live_of_present
+  l.695 theorem acting
+  l.698 theorem dependent
+  l.704 theorem gated
+  l.710 theorem own_not_joint
+  l.726 theorem all_end
+  l.736 inductive Condition
+  l.741 inductive Formation
+  l.748 def pair
+  l.752 def present
+  l.760 def flow
+  l.776 def web
+  l.795 theorem balances
+  l.805 theorem acting
+  l.814 theorem dependent
+  l.831 theorem alone_within
+  l.837 theorem alone_ungated
+  l.843 theorem gated
+  l.851 theorem excess
+  l.861 theorem all_end
+  l.874 def flow
+  l.876 def web
+  l.889 theorem balances
+  l.891 theorem dependent
+  l.896 theorem all_continue
+  l.905 inductive Formation
+  l.909 inductive Condition
+  l.913 def outputLevel
+  l.915 def downLive
+  l.919 def present
+  l.926 def flow
+  l.938 def web
+  l.956 theorem balances
+  l.968 theorem dependent
+  l.981 theorem one_way
+  l.995 inductive Member
+  l.1000 def level
+  l.1002 def present
+  l.1009 def flow
+  l.1020 def live
+  l.1030 def web
+  l.1043 theorem balances
+  l.1049 theorem dependent
+  l.1064 theorem after_its_end
+  l.1074 def without
+  l.1085 def kept
+  l.1101 theorem without_continues
+  l.1128 def FedBy
+
+## Continuity.lean  (762 lines)  [both outcomes, no rank, by any part]
+
+### `both_outcomes`
+- pass a: S: `balancing_iff` (l. 649) gives both outcomes for existence of balancing transfers for a prescribed step between two configurations on a distinct list with decidable equality. This is a feasibility criterion for a step, rather than a survival criterion for a formation.
+- pass b: N for going on and ending. S: `balancing_iff` (l.649) is an exactly-when, between balance and conservation on closed families.
+
+### `no_return`
+- pass a: N: Not found in the statements read.
+- pass b: N
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N
+
+### `closed_region`
+- pass a: S: `conservedOn_of_law` (l. 197) preserves the total on each adjacency-closed family under a law reading adjacent levels and conserving the global total at every configuration. Thus configurations with a given such total stay at that total.
+- pass b: S: `Closes` (l.88) is a family closed under the relation (adjacent listed relata both in or both out). `conserved_of_balancing` (l.159) and `conservedOn_of_law` (l.197): the total is conserved on every such family. `kept_alone` (l.586): a relatum adjacent to none keeps its level. The closure is under the relation, not under steps in time.
+
+### `moves`
+- pass a: N: Not found in the statements read.
+- pass b: N: no Process with moves. The `law` is a function from configurations to next levels.
+
+### `reading`
+- pass a: S: `ReadsAdjacent` (l. 185) requires agreement here and at listed neighbours to determine the same next level here. `conservedOn_of_law` (l. 197) uses this and total conservation from every start to give conservation on each closed family.
+- pass b: S: `ReadsAdjacent` (l.185) and `conservedOn_of_law` (l.197): what a law reads (only adjacent relata) decides that its global conservation is conservation on every closed family. B: `Teleport.no_transfers_apart` (l.749) and `Teleport.balanced_together` (l.754): the same swap law, which reads both relata, balances along the full relation and not along the empty one. This is a law's dependence, not an observation.
+
+### declarations of Continuity.lean (by script)
+  l.63 def adj
+  l.65 theorem adj_symm
+  l.70 def within
+  l.75 theorem within_true
+  l.78 theorem within_false
+  l.81 theorem within_add
+  l.88 def Closes
+  l.92 def ConservedOn
+  l.98 def Balancing
+  l.106 def inside
+  l.109 theorem inside_of_true
+  l.113 theorem inside_of_false
+  l.117 theorem within_sent
+  l.136 theorem within_received
+  l.159 theorem conserved_of_balancing
+  l.185 def ReadsAdjacent
+  l.189 def Conserves
+  l.197 theorem conservedOn_of_law
+  l.220 def joined
+  l.224 def direct
+  l.230 def via
+  l.235 theorem direct_add_via
+  l.242 theorem joined_of_adj
+  l.249 theorem joined_of_both
+  l.258 theorem joined_apart
+  l.268 theorem not_eq_of_mem_rest
+  l.272 theorem via_through
+  l.290 def edge
+  l.297 def expand
+  l.307 def route
+  l.316 theorem route_cons
+  l.324 theorem edge_pos
+  l.336 theorem total_edge
+  l.353 theorem within_edge_off
+  l.361 theorem total_within_edge
+  l.379 theorem rearrange
+  l.383 theorem expand_sent
+  l.401 theorem expand_received
+  l.422 theorem expand_sent_x
+  l.434 theorem expand_received_x
+  l.447 theorem expand_along
+  l.506 theorem shift
+  l.517 theorem conservedOn_rest
+  l.586 theorem kept_alone
+  l.610 theorem mid
+  l.613 theorem mid2
+  l.620 theorem route_balancing
+  l.649 theorem balancing_iff
+  l.659 def flow
+  l.665 def routed
+  l.672 theorem balancesOn_iff_conserved
+  l.690 theorem balances_of_conserved
+  l.700 theorem balancesOn_of_law
+  l.717 def all
+  l.719 theorem distinct
+  l.723 def swap
+  l.726 def apart
+  l.729 def together
+  l.732 theorem conserves
+  l.737 theorem reads
+  l.744 def unit
+  l.749 theorem no_transfers_apart
+  l.754 theorem balanced_together
+
+## ExchangePremises.lean  (730 lines)  [both outcomes, no rank, by any part]
+
+### `both_outcomes`
+- pass a: S: `World.withRest_embodied_iff` (l. 300) characterizes embodiment with the rest counted exactly by balance and each relatum exchanging iff its level is positive at each time.
+- pass b: N for going on and ending. The iff statements (`withRest_embodied_iff` l. 300, `listed_iff_lpo` l. 223) are about premises, not continuation. B: `ExchangeLaw.contingent` (l. 559) collects three worlds, each meeting the tying premises: one meets dissipation and transmission and fails embodiment, one meets embodiment and transmission and fails dissipation, one fails transmission.
+
+### `no_return`
+- pass a: N: Not found in the statements read.
+- pass b: N.
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N.
+
+### `closed_region`
+- pass a: B: `ExchangeLaw.still_levels` (l. 329) keeps every level at one from the all-one start under the still law.
+- pass b: N for a region closed under steps. `Flow.ClosedAt` families close a step's exchange (`exchanging_iff_within` l. 155, `listed_at_of_enclosed` l. 175). `still_closed`, `responsive_closed` and `sprouting_closed` (l. 350, 354, 467) state that the rest is idle at every step, which is closure as feasibility.
+
+### `moves`
+- pass a: S: `ExchangeRelation.readWeb_dependent` (l. 623) concludes dependent activity for every admitted run and any need when requirement is read as necessary response.
+- pass b: S: `ExchangeRelation` (l. 584) leaves open any number of exchanges across a step under a level history, and `ExchangeRelation.Runs` (l. 610) is a run taking an open exchange at every step. `ExchangeRelation.readWeb_dependent` (l. 623): on every run, for every history and need, the web read with requirement as necessary response is Dependent. `reading_glue` (l. 637): on every run the four tying premises hold with the rest counted. B: `free_unsupported` (l. 656): under the free relation a formation takes a unit each step while some open exchange leaves it idle (possible response).
+
+### `reading`
+- pass a: S: `Flow.exchanging_iff_within` (l. 155) decides exchange by presence and exchange within the closing list. `ExchangeRelation.free_unsupported` (l. 656) exhibits possible response at a level below need even while the formation exchanges.
+- pass b: S: `Flow.readOff_census_of_closed` (l. 183): the web read off the exchange has a census where formations are listed once and a family closes each step. `ExchangeRelation.readWeb` (l. 616) and `RespondsBelow` (l. 598): requirement is read as necessary response to a condition falling below a need. `ExchangeLaw.relation_readWeb_requires` (l. 715): read off the course as a run, the web's requirement is the law's. `Flow.listed_iff_lpo` (l. 223): listing the exchanging formations of every flow over Nat is equivalent to LPO.
+
+### declarations of ExchangePremises.lean (by script)
+  l.87 theorem of_not_not
+  l.94 theorem listed_of_em
+  l.116 theorem not_not_listed
+  l.143 def ExchangesWithin
+  l.147 instance exchangesWithin_decided
+  l.155 theorem exchanging_iff_within
+  l.167 theorem listed_at_of_closed
+  l.175 theorem listed_at_of_enclosed
+  l.183 theorem readOff_census_of_closed
+  l.191 theorem not_not_listed_at
+  l.196 def marking
+  l.199 theorem cond_pos
+  l.204 theorem marking_exchanging
+  l.213 def memDecided
+  l.223 theorem listed_iff_lpo
+  l.264 theorem withRest_counted
+  l.273 theorem Finite.withRest_counted
+  l.282 theorem restFlow_give_zero
+  l.292 theorem withRest_dissipative_of_gives_nothing
+  l.300 theorem withRest_embodied_iff
+  l.311 theorem withRest_embodied_balanced
+  l.315 theorem transmitting_of_nothing_comes
+  l.325 def still
+  l.329 theorem still_levels
+  l.335 def stillWorld
+  l.339 def responsiveWorld
+  l.342 theorem still_balanced
+  l.345 theorem responsive_balanced
+  l.350 theorem still_closed
+  l.354 theorem responsive_closed
+  l.358 theorem still_dissipative
+  l.364 theorem responsive_not_dissipative
+  l.374 theorem still_not_embodied
+  l.380 theorem responsive_embodied
+  l.388 theorem nothing_comes
+  l.393 theorem still_transmitting
+  l.396 theorem responsive_transmitting
+  l.402 inductive Sprouting
+  l.409 def sprouting
+  l.428 def sprouts
+  l.431 def groundOne
+  l.437 def needOneOf
+  l.440 def sproutingWorld
+  l.444 theorem sprouting_nonanticipating
+  l.460 theorem sprouting_feasible
+  l.467 theorem sprouting_closed
+  l.472 theorem sprout_descends
+  l.478 theorem sprout_requires
+  l.490 theorem source_unrequired
+  l.506 theorem sprouting_not_transmitting
+  l.513 def spreading
+  l.518 def spreadingWorld
+  l.522 theorem spreading_closed
+  l.527 def origin
+  l.530 def optionIndex
+  l.536 theorem spreading_not_enclosed
+  l.545 theorem spreading_counted
+  l.559 theorem contingent
+  l.584 structure ExchangeRelation
+  l.592 def Exchanges
+  l.598 def RespondsBelow
+  l.604 def MayRespondBelow
+  l.610 def Runs
+  l.616 def readWeb
+  l.623 theorem readWeb_dependent
+  l.630 def world
+  l.637 theorem reading_glue
+  l.645 def free
+  l.649 def takingOne
+  l.656 theorem free_unsupported
+  l.673 def relation
+  l.677 theorem course_runs
+  l.682 theorem relation_exchanges
+  l.693 theorem relation_admits
+  l.698 theorem relation_responds_iff
+  l.706 theorem relation_may_iff
+  l.715 theorem relation_readWeb_requires
+  l.722 theorem relation_readWeb_may

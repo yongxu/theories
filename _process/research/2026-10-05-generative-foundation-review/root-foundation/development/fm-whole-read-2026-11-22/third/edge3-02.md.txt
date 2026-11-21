@@ -1,0 +1,583 @@
+# Task file: EDGE, third batch, reader whole-c-edge3-02
+
+Your 4 modules. No EDGE reader has read them. They were left out because the two batches before were chosen by the FIRST letter of each answer, and in each of these some answer of pass b begins `N` and goes on with a part marked `S`, `B` or `D`. Counted by any part, each of them belongs to one of the two batches (all four found by both passes; or both outcomes by both and a rank by neither). For orientation only, what the passes said (where to look, not evidence).
+
+## GrammarPath.lean  (1554 lines)  [all four by any part]
+
+### `both_outcomes`
+- pass a: S: `«后皆续当且仅当后皆同类»` (l. 188) gives an iff for keeping all downstream occurrences on the class line. `«至终有常则可决»` (l. 263) gives a successor or no outgoing step at a related start when its mate has an effect and E is constant up to the end.
+- pass b: S, general exactly-whens. `后皆续当且仅当后皆同类` (l. 188): everything downstream lies on the line exactly where it is all alike. `后皆续当且仅当自与线皆闭` (l. 205): exactly where the class holds the effects of the member and of each line stage; its failure is `亡而网续则后不皆续` (l. 227), a line that ends while the net goes on. Also `本类常则闭当且仅当后皆同类` (l. 487), `局定后则至终有常当且仅当同行可决` (l. 271), `有常当且仅当至终有常可续` (l. 288), `本类常当且仅当与己相随` (l. 546) and `二分本类常当且仅当内外皆随` (l. 636). B: in FiniteFamilies, `family_takes_in_all` (l. 869) and `member_no_reach` (l. 855) give both outcomes under two classes on one net.
+
+### `no_return`
+- pass a: B: `FiniteFamilies.step` (l. 806) advances the stage only from stages below 3 and fixes the family. `other_family_outside` (l. 875) concludes that the other family is unreachable under any continuation criterion.
+- pass b: S: `所经不同则不及` (l. 162) concludes that nothing outside the region is reached under the class where the class holds no member of C alike to the start. `亡而网续则不至终有常` (l. 326) and `亡而网续则本类不至终有常` (l. 337) take a line that ends (亡) while its last stage still conditions something as a premise, and conclude that the class is not constant up to the net's end. `亡而网续则后不皆续` (l. 227) concludes that such a line does not take in all downstream. No statement that something lost is not regained.
+
+### `rank`
+- pass a: B: `FiniteFamilies.step` (l. 806) and `FiniteSharedCondition.step` (l. 924) increment stage and require stage<3, bounding steps from a first birth by three.
+- pass b: N: no bound, variant or deadline. B: FiniteFamilies.one_not_constant (l. 820) is a finite net in which every line ends, with no rank stated.
+
+### `closed_region`
+- pass a: S: `«本类常闭则所缘同类»` (l. 346) keeps successors of every mate in a member's class if the member has a successor, its effects lie in the class and the class is locally constant up to the end.
+- pass b: S: `本类常闭则所缘同类` (l. 346), and in the global form `至终常闭则所缘同类` (l. 355) and `常闭则所缘同类` (l. 385): under constancy at m's class, where m conditions something and its effects are held, whatever is alike to m conditions only what is alike to m, so m's block is closed under steps. `本类常闭则后皆续` (l. 364) extends this to everything downstream. 所经必同 (l. 140) uses a region P with exits only into C.
+
+### `moves`
+- pass a: S: `«内外皆缘则二分本类常»` (l. 663) derives local constancy up to the end if each class mate has both an in-block and an out-of-block successor or has no successor. The alternatives are relation edges.
+- pass b: N: there is no Process with moves, policy or allowed set; only relations R and classes E. Branching appears (in «后不定则至终有常可不同行», l. 296, 0 conditions both 1 and 2), but no law about a choice.
+
+### `reading`
+- pass a: S: `«本类之常至二分»` (l. 621) transfers constancy up to the end at m's class to the Boolean split if P decides membership there. B: `FinerWake.finer_not_constant_at` (l. 1341) and `split_constant_at` (l. 1337) distinguish two readings with the same block at m.
+- pass b: S: the class E (an equivalence of occurrences read alike) decides what is reached. `所经必同` (l. 140): where every step out of region P under E lands in C, a line from inside to outside holds a member of C alike to its start. `所经不同则不及` (l. 162): if no member of C is alike to the start, nothing outside is reached. `外分唯系出类之同` (l. 523) and `外分唯系己出之同` (l. 567): how what lies outside the member's class is divided bears on the condition only through alikeness to effects that leave the class. `二分` (l. 604) is the split by a decided predicate. D: the account (l. 71) reads a class drawn by what a member intends as a reading only.
+
+### declarations of GrammarPath.lean (by script)
+  l.26 class holds
+  l.50 class leads
+  l.113 class hold
+  l.140 theorem «所经必同»
+  l.162 theorem «所经不同则不及»
+  l.172 def «所缘同于»
+  l.176 class from
+  l.177 theorem «后皆同类则后皆续»
+  l.188 theorem «后皆续当且仅当后皆同类»
+  l.197 theorem «后皆续则所缘同于»
+  l.205 theorem «后皆续当且仅当自与线皆闭»
+  l.227 theorem «亡而网续则后不皆续»
+  l.235 def «至终有常»
+  l.239 theorem «有常则至终有常»
+  l.244 theorem «至终有常局定后则同行»
+  l.256 theorem «同行可决则至终有常»
+  l.263 theorem «至终有常则可决»
+  l.271 theorem «局定后则至终有常当且仅当同行可决»
+  l.279 theorem «至终有常可续则有常»
+  l.288 theorem «有常当且仅当至终有常可续»
+  l.296 theorem «后不定则至终有常可不同行»
+  l.308 def «本类至终有常»
+  l.312 theorem «至终有常则本类至终有常»
+  l.319 theorem «至终有常之逐类»
+  l.326 theorem «亡而网续则不至终有常»
+  l.337 theorem «亡而网续则本类不至终有常»
+  l.345 class holds
+  l.346 theorem «本类常闭则所缘同类»
+  l.355 theorem «至终常闭则所缘同类»
+  l.364 theorem «本类常闭则后皆续»
+  l.378 theorem «至终常闭则后皆续»
+  l.385 theorem «常闭则所缘同类»
+  l.393 theorem «常闭则后皆续»
+  l.404 theorem «本类常闭则所及皆及»
+  l.411 theorem «至终常闭则所及皆及»
+  l.419 theorem «常闭则所及皆及»
+  l.425 class constant
+  l.428 theorem «本类出类随行»
+  l.440 theorem «出类随行»
+  l.449 theorem «本类出类随线»
+  l.460 theorem «出类随线»
+  l.469 theorem «出类不随则本类不至终有常»
+  l.479 theorem «出类不随则不至终有常»
+  l.487 theorem «本类常则闭当且仅当后皆同类»
+  l.499 theorem «至终常类之闭当且仅当后皆同类»
+  l.505 theorem «常类之闭当且仅当后皆同类»
+  l.513 theorem «外合不失本类之常»
+  l.523 theorem «外分唯系出类之同»
+  l.546 theorem «本类常当且仅当与己相随»
+  l.562 class only
+  l.567 theorem «外分唯系己出之同»
+  l.596 theorem «闭则外分无关»
+  l.604 def «二分»
+  l.607 theorem «二分为类»
+  l.610 theorem «异三则同»
+  l.621 theorem «本类之常至二分»
+  l.636 theorem «二分本类常当且仅当内外皆随»
+  l.663 theorem «内外皆缘则二分本类常»
+  l.683 inductive Occ
+  l.685 def step
+  l.704 def upper
+  l.710 def same
+  l.712 theorem same_class
+  l.714 theorem constant
+  l.733 theorem not_taken_in
+  l.750 inductive Occ
+  l.752 def step
+  l.763 def upper
+  l.768 def same
+  l.770 theorem same_class
+  l.775 theorem not_constant_at
+  l.782 theorem not_all_follow
+  l.803 abbrev Occ
+  l.806 def step
+  l.809 def family
+  l.812 def member
+  l.814 theorem family_class
+  l.817 theorem family_narrower
+  l.820 theorem one_not_constant
+  l.827 theorem family_constant_to_end
+  l.834 theorem member_class
+  l.839 theorem member_not_constant_at
+  l.849 theorem member_not_constant_to_end
+  l.855 theorem member_no_reach
+  l.865 theorem first_birth_held
+  l.869 theorem family_takes_in_all
+  l.875 theorem other_family_outside
+  l.900 inductive Kind
+  l.902 abbrev Occ
+  l.905 def link
+  l.924 def step
+  l.927 def joined
+  l.934 def held
+  l.937 def member
+  l.939 theorem held_class
+  l.941 theorem link_joined
+  l.959 theorem link_self
+  l.966 theorem held_narrower
+  l.969 theorem one_not_constant
+  l.975 theorem held_constant_to_end
+  l.986 theorem first_birth_held
+  l.989 theorem member_class
+  l.994 theorem member_not_constant_at
+  l.1004 theorem member_not_constant_to_end
+  l.1010 theorem reaches_other_past_end
+  l.1017 theorem fourth_outside
+  l.1032 inductive Occ
+  l.1034 def step
+  l.1053 def intended
+  l.1059 def own
+  l.1061 theorem own_class
+  l.1065 theorem not_constant_at
+  l.1071 class fail
+  l.1072 theorem not_constant_to_end
+  l.1078 theorem ends_where_net_ends
+  l.1096 inductive Occ
+  l.1098 def step
+  l.1125 def line
+  l.1132 def own
+  l.1134 theorem own_class
+  l.1137 theorem constant_to_end
+  l.1150 theorem not_constant
+  l.1155 theorem not_held
+  l.1158 theorem wake_follows
+  l.1172 inductive Occ
+  l.1174 def step
+  l.1193 def inClass
+  l.1200 def kind
+  l.1206 def finer
+  l.1208 theorem finer_class
+  l.1211 theorem same_class
+  l.1218 theorem split_constant_at
+  l.1230 theorem not_held
+  l.1234 theorem finer_not_constant_at
+  l.1247 class is
+  l.1252 inductive Occ
+  l.1254 def step
+  l.1293 def inClass
+  l.1302 def kind
+  l.1310 def finer
+  l.1313 theorem finer_class
+  l.1316 theorem same_class
+  l.1326 theorem both
+  l.1337 theorem split_constant_at
+  l.1341 theorem finer_not_constant_at
+  l.1353 class is
+  l.1358 inductive Occ
+  l.1360 def step
+  l.1388 def inClass
+  l.1396 def kind
+  l.1403 def finer
+  l.1405 theorem finer_class
+  l.1408 theorem same_class
+  l.1416 theorem split_constant_at
+  l.1427 theorem held
+  l.1432 theorem split_not_constant_to_end
+  l.1439 theorem finer_constant_to_end
+  l.1464 inductive Occ
+  l.1466 def step
+  l.1494 def inClass
+  l.1502 def reached
+  l.1510 theorem reached_step
+  l.1514 theorem reached_after
+  l.1520 theorem all_alike
+  l.1530 theorem not_constant_at
+  l.1537 theorem other_not_held
+  l.1541 theorem other_off_line
+  l.1545 theorem reach_without_condition
+
+## GrammarScope.lean  (481 lines)  [all four by any part]
+
+### `both_outcomes`
+- pass a: S: `«核有续当且仅当有不穷»` (l. 210) is an existential iff for any net and core. `«无不穷则核无续»` (l. 217) excludes every core continuation when all core lines fail endlessness.
+- pass b: S: `核有续当且仅当有不穷` (l. 210): the core continues something exactly where some line under it goes on without end. General. B: Endless (`descent_unending`, l. 354, the core goes on for good) against Last (`core_no_continuation`, l. 461), two built models.
+
+### `no_return`
+- pass a: S: `«过亡而续»` (l. 200) rules out a fine line from m to the next coarse successor when m ends under the fine relation. B: `LineOfDescent.Last.last_ends` (l. 408) makes the last state terminal for all criteria.
+- pass b: S: `无不穷则核无续` (l. 217): where no line under the core goes on without end, the core continues nothing (concluded from the premise). B: `Last.never_unending` (l. 417): from every occurrence no line under any relation goes on without end (concluded in the model). `Endless.member_ends` (l. 333): the member's line ends at old age. No once-lost-not-regained statement.
+
+### `rank`
+- pass a: B: `LineOfDescent.Last.step` (l. 403) gives a maximum of three steps from the first birth, and `never_unending` (l. 417) rules out endlessness from every start under every criterion.
+- pass b: N in general. B: `Last.never_unending` (l. 417); its docstring says every line ends within three steps, but the statement says only ¬不穷.
+
+### `closed_region`
+- pass a: S: `«缘在族中»` (l. 139) puts both ends of every R-step in one connected family. `withinClosure_iff_reached` (l. 275) identifies the closure from a start with its line's reach under the full relation.
+- pass b: S: `遍有后则族有常` (l. 174): where every occurrence conditions something, the class of being joined is constant. `遍有后则缘在族核` (l. 182): then its core holds both ends of every condition. `withinClosure_iff_reached` (l. 275): lying within a closure is being reached on a line under the one.
+
+### `moves`
+- pass a: N: Not found in the statements read.
+- pass b: N.
+
+### `reading`
+- pass a: S: `premises_of_noOutside` (l. 297) derives significance, self-significance, two neutralities and a conditional seed if every center reaches everything and the supplied reading maps own-closure claims to significance.
+- pass b: S: `ownClosure_unrestricted_iff_noOutside` (l. 283): the condition held de se along a relation is exactly 续无外 rel 一 center. `premises_of_noOutside` (l. 297): under 续无外, on any reading `reads` where significance is lying within the center's closure, living significance, S0, both neutralities and a seed follow. The significance is supplied by `reads` as a premise. D: the account (l. 27) says the class and the centers are supplied, not read off the net.
+
+### declarations of GrammarScope.lean (by script)
+  l.77 class whose
+  l.94 def «续无外»
+  l.98 def «族无外»
+  l.101 theorem «相续则同族»
+  l.107 theorem «所及则同族»
+  l.113 theorem «续无外则族无外»
+  l.118 theorem «同族之粗化»
+  l.127 theorem «续无外之粗化»
+  l.134 theorem «族无外之粗化»
+  l.139 theorem «缘在族中»
+  l.144 theorem «族之续即缘»
+  l.150 theorem «族之所及即一之所及»
+  l.159 class has
+  l.161 theorem «续即缘当且仅当含族»
+  l.174 theorem «遍有后则族有常»
+  l.182 theorem «遍有后则缘在族核»
+  l.187 theorem «遍有后则核之所及即一之所及»
+  l.200 theorem «过亡而续»
+  l.210 theorem «核有续当且仅当有不穷»
+  l.217 theorem «无不穷则核无续»
+  l.225 theorem «各续无外则同一中心»
+  l.239 theorem «续无外则同一中心»
+  l.245 theorem «续无外则中心无缘»
+  l.259 theorem withinClosure_of_line
+  l.264 theorem eq_or_reach_iff_reached
+  l.275 theorem withinClosure_iff_reached
+  l.283 theorem ownClosure_unrestricted_iff_noOutside
+  l.297 theorem premises_of_noOutside
+  l.315 abbrev Occ
+  l.318 def step
+  l.322 def member
+  l.324 theorem member_class
+  l.327 theorem total
+  l.333 theorem member_ends
+  l.341 theorem descent_constant
+  l.347 theorem core_through_birth
+  l.354 theorem descent_unending
+  l.358 theorem descent_reaches_both
+  l.371 theorem descent_reaches
+  l.377 theorem descent_no_outside
+  l.381 theorem member_line
+  l.385 theorem member_outside
+  l.399 abbrev Occ
+  l.403 def step
+  l.408 theorem last_ends
+  l.417 theorem never_unending
+  l.461 theorem core_no_continuation
+  l.467 theorem descent_past_end
+
+## HeldForReading.lean  (1504 lines)  [all four by any part]
+
+### `both_outcomes`
+- pass a: B: `SignLoop.both_off` (l. 1375) and `SignLoop.both_on` (l. 1382) give the two branches for one loop starting plain and holding with both signs listed. From step two the act is always off for loses and always go for gains.
+- pass b: S: decision dichotomies, general: `held_gains_iff` (l. 541): holding for the reading gains over both moves exactly where the model gives positive weight to both strict signs; `held_eq_go_iff` (l. 799), `held_eq_off_iff` (l. 809); `rule_not_below_go_iff` (l. 625), `rule_not_below_off_iff` (l. 634). B: of going on and switching off along one built loop: `SignLoop.both_off` (l. 1375) off from step 2 where going on loses, `SignLoop.both_on` (l. 1382) on from step 2 where it gains, same listing and start.
+
+### `no_return`
+- pass a: B: `SignLoop.refuted_goes_on` (l. 1332) concludes that, starting with only gains and holding in the losing world, the list stays empty and the act stays go from step three. `SignLoop.both_off` (l. 1375) concludes permanent off from step two for a held start listing both signs in the losing world.
+- pass b: B: `SignLoop.refuted_drops` (l. 1324) and `SignLoop.refuted_goes_on` (l. 1332): holding first with only [gains] listed where going on loses, the stop refutes the only candidate at step 2 and from step 3 the configuration is ([], go, plain) at every step, the candidate never regained; `SignLoop.both_turns_off` (l. 1359): with both signs listed and going on losing, the configuration rests off from step 4. Concluded in the built loop, at the loss of a candidate (a model), not of a level; no general law of no return.
+
+### `rank`
+- pass a: B: `SignLoop.both_stopped` (l. 1340) puts the act at off by step two on the specified held start with both signs and true sign loses. `SignLoop.both_turns_off` (l. 1359) fixes the whole configuration from step four.
+- pass b: N: no rank, variant or bound of ending in a general law. B: the built courses rest by fixed steps (`SignLoop.refuted_goes_on` from step 3, l. 1332; `SignLoop.both_turns_off` and `both_goes_on` from step 4, l. 1359, l. 1367).
+
+### `closed_region`
+- pass a: B: `SignLoop.rests_unread` (l. 1301) gives the identical configuration at every positive step from plain and go when all listed signs predict gain, for either true sign.
+- pass b: B: `SignLoop.rests_unread` (l. 1301): the course is one fixed configuration from step 1, a case of `ReadingLoop.Loop.rests_of_unrefuted` (in ReadingLoop, not this module); `SignLoop.refuted_goes_on` (l. 1332), `both_turns_off` (l. 1359), `both_goes_on` (l. 1367): rest configurations. No general invariant stated here.
+
+### `moves`
+- pass a: S: `bestOf_best` (l. 294) supplies a best open act at every candidate for any nonempty list, and `after_le_after` (l. 326) bounds every policy choosing open acts there by a policy best at all listed candidates.
+- pass b: S: `Model.after` (l. 266) values a policy p : C → A and `BestAt` (l. 276) names a best choice among open acts; `after_le_after` (l. 326): given p best at every listed candidate, every q choosing open acts there stands at most as high; `after_add_gap` (l. 333) gives the exact gap; `bestOf_best` (l. 294): a best policy exists for every nonempty list of acts. The laws are about the value each choice makes, not about what a choice keeps along a course. B: `SignLoop.choose` (l. 1287) chooses go, hold or off from the kept candidates.
+
+### `reading`
+- pass a: S: `cell_policy_iff` (l. 421), given choice over cells and a pointwise best policy on the listing, characterizes attaining its total through a map by existence in each cell of one open act attaining best value at every positive-weight listed member.
+- pass b: S: `reading_gains_iff` (l. 397): the policy after the reading gains over every open act exactly where no open act is valued as the best at every listed candidate of positive weight; `cell_policy_iff` (l. 421): a policy reading only the cell π c stands as high as the best exactly where each cell has one open act valued as the best at its positive-weight candidates (given choice over cells); `least_through` (l. 1020), `least_zero_iff` (l. 1044), `finer_least_le` (l. 1057): the least shortfall through a map is at most that of any rule through a coarser map factoring through it. B: `SignLoop.rests_unread` (l. 1301) and `SignLoop.never_senses_stop` (l. 1309): listing only candidates predicting gain and going on from the start, the formation senses plainly at every step, none of its candidates refuted, and never senses the stop, whatever the true sign.
+
+### declarations of HeldForReading.lean (by script)
+  l.251 structure Model
+  l.262 def committed
+  l.266 def after
+  l.276 def BestAt
+  l.280 theorem forall_pair
+  l.288 def bestOf
+  l.294 theorem bestOf_best
+  l.326 theorem after_le_after
+  l.333 theorem after_add_gap
+  l.343 theorem after_lt_after_iff
+  l.369 theorem after_eq_after_iff
+  l.382 theorem committed_le_after
+  l.388 theorem committed_eq_after_iff
+  l.397 theorem reading_gains_iff
+  l.410 theorem below_iff
+  l.421 theorem cell_policy_iff
+  l.436 theorem after_offset
+  l.442 theorem after_offset_le_iff
+  l.452 inductive Move
+  l.466 def shifted
+  l.471 def byRule
+  l.476 def byReading
+  l.478 theorem byRule_of_true
+  l.481 theorem byRule_of_false
+  l.484 theorem byReading_of_lt
+  l.488 theorem byReading_of_not_lt
+  l.493 theorem go_open
+  l.495 theorem off_open
+  l.498 theorem byReading_best
+  l.512 theorem go_below_iff
+  l.522 theorem off_below_iff
+  l.532 theorem committed_le_held
+  l.541 theorem held_gains_iff
+  l.557 def offPart
+  l.561 def onPart
+  l.564 theorem cond_split
+  l.569 theorem offPart_add_onPart
+  l.575 theorem after_rule
+  l.588 theorem after_rule_add_onLoss
+  l.599 theorem after_rule_le_iff
+  l.625 theorem rule_not_below_go_iff
+  l.634 theorem rule_not_below_off_iff
+  l.645 def goExcess
+  l.650 def offExcess
+  l.656 def shortfall
+  l.660 theorem held_term
+  l.669 theorem gainOf_goOn
+  l.676 theorem gainOf_off
+  l.683 theorem gainOf_held
+  l.690 theorem excess_goOn
+  l.696 theorem excess_off
+  l.702 theorem excess_held
+  l.710 theorem moves_not_below_iff
+  l.731 theorem held_above_moves_iff
+  l.750 theorem held_above_held_iff
+  l.760 theorem after_add_shortfall_go
+  l.770 theorem after_add_shortfall_off
+  l.779 theorem shortfall_byReading
+  l.786 theorem after_byReading
+  l.799 theorem held_eq_go_iff
+  l.809 theorem held_eq_off_iff
+  l.819 theorem after_add_shortfall
+  l.826 theorem across_le_iff
+  l.832 theorem across_lt_iff
+  l.840 theorem threshold_go_iff
+  l.862 theorem threshold_off_iff
+  l.883 theorem forgone_within_excess_iff
+  l.902 theorem forgone_below_excess_iff
+  l.921 theorem excess_pos_iff
+  l.940 theorem total_single
+  l.954 theorem total_by_cells
+  l.962 def goExcessWithin
+  l.966 def offExcessWithin
+  l.969 theorem cell_term
+  l.977 theorem total_cond_both
+  l.984 theorem shortfall_through
+  l.1000 def leastThrough
+  l.1003 theorem cond_least_le
+  l.1020 theorem least_through
+  l.1029 theorem cond_least_eq_zero_iff
+  l.1044 theorem least_zero_iff
+  l.1057 theorem finer_least_le
+  l.1067 theorem through_threshold_iff
+  l.1087 inductive Pick
+  l.1099 def pairValue
+  l.1105 def pairPolicy
+  l.1107 theorem first_open
+  l.1109 theorem second_open
+  l.1112 theorem pairPolicy_best
+  l.1142 theorem reach_fixes
+  l.1161 theorem first_below_iff
+  l.1175 theorem second_below_iff
+  l.1196 theorem pair_gains_iff
+  l.1215 theorem pair_gains_unreached
+  l.1240 inductive Sign
+  l.1245 inductive Act
+  l.1251 inductive Seen
+  l.1270 def answer
+  l.1279 def predictsGain
+  l.1287 def choose
+  l.1292 def loop
+  l.1301 theorem rests_unread
+  l.1309 theorem never_senses_stop
+  l.1317 theorem refuted_senses_stop
+  l.1324 theorem refuted_drops
+  l.1332 theorem refuted_goes_on
+  l.1340 theorem both_stopped
+  l.1349 theorem both_released
+  l.1359 theorem both_turns_off
+  l.1367 theorem both_goes_on
+  l.1375 theorem both_off
+  l.1382 theorem both_on
+  l.1391 def model
+  l.1394 def gainOf
+  l.1399 def lossOf
+  l.1403 theorem loses_of_all_false
+  l.1408 theorem not_loses_of_all_true
+  l.1412 theorem gains_of_all_false
+  l.1417 theorem not_gains_of_all_true
+  l.1422 theorem choose_hold_iff_mem
+  l.1432 theorem loses_of_lt
+  l.1436 theorem gains_of_lt
+  l.1445 theorem choose_hold_iff
+  l.1458 theorem offExcess_of_all_true
+  l.1466 theorem goExcess_of_all_not
+  l.1474 theorem choose_go_ties
+  l.1488 theorem choose_off_ties
+
+## InAmounts.lean  (1269 lines)  [all four by any part]
+
+### `both_outcomes`
+- pass a: S: InAmounts.change_stops_iff (l. 692) gives the exact family-level stopping condition under eventual balance and dissipation. Amounts.worldsRest_of_noEndlessFall and not_endlessFall_of_worldsRest (ll. 1247, 1256) give separate sufficient and necessary amount conditions for rest over all qualifying worlds.
+- pass b: S: `InAmounts.change_stops_iff` (l. 692), general: under balance and dissipation from T on, members stop changing, unrefuted, exactly where the total's falls stop. `World.rests_unrefuted_iff` (l. 343): rest unrefuted iff arising and ceasing each stop recurring. S/B: general rest under NoEndlessFall (`Amounts.worldsRest_of_noEndlessFall` l. 1247) against built never-rest under an endless fall (`Pass.endless_keeps_from_rest` l. 1206); `not_endlessFall_of_worldsRest` (l. 1256) gives the bracket, not an exactly-when.
+
+### `no_return`
+- pass a: S: InAmounts.stock_still and change_lowers (ll. 636, 679) conclude non-rise of total stock on each balanced, dissipated step and a strict drop on a member change. If those premises continue, the earlier strictly higher total cannot be recovered.
+- pass b: N: no statement that a loss is not regained or that no course keeps something from a point on. D: `Amounts.falls_within_reading` (l. 207) docstring: a strict fall leaves a configuration the amount never reads again (used inside the proof, not stated). The rest it concludes (`World.RestsFrom`, l. 311: no arising or ceasing from N on) is a stopping of change, concluded unrefuted, not an irreversible loss.
+
+### `rank`
+- pass a: S: Amounts.falls_within_reading (l. 207) bounds the number of strict falls by the length of a list holding the observed configurations from T if non-rise is unrefuted each step. The bound counts falls, with arbitrary waiting between them.
+- pass b: S: `InAmounts.change_lowers` (l. 679): the family total falls strictly at every change. `Amounts.falls_within_reading` (l. 207): at most l.length strict falls of an amount read off a list. `Amounts.noEndlessFall_of_fallsAtLeast` (l. 162): in Archimedean amounts with a least fall ε above zero, no amount falls without end; `whole_noEndlessFall` (l. 173). FallsStop (l. 113) is the one premise of rest. No explicit step bound on when rest arrives.
+
+### `closed_region`
+- pass a: B: Pass.closed (l. 1183) makes the same pair closed to exchange at every step.
+- pass b: S: `InAmounts.ClosedAt` (l. 580): no relatum taking part takes from or gives to one outside the family; `Enclosed` (l. 792); `Enclosed.around_not_not` (l. 803) and `Enclosed.around_census` (l. 837): an enclosing family is, unrefuted, widened to hold what is active before and after the step, balanced and dissipated on. `World.RestsFrom` (l. 311): from N on nothing arises or ceases, concluded unrefuted by the rest theorems.
+
+### `moves`
+- pass a: N: Not found in the statements read.
+- pass b: N: no choice among steps; a World has one flow and one web per step, and no Process, policy or allowed set occurs in the statements.
+
+### `reading`
+- pass a: S: InAmounts.stops_of_reading (l. 706) concludes FallsStop when the balanced and dissipated family's stock is read from configurations in a finite list from T onward.
+- pass b: S: `Amounts.rests_unrefuted_of_finite_reading` (l. 269): where an amount q is read off configurations g t that a list l holds from T on, and is not refuted to rise across any step from T on, its strict falls stop (FallsStop); `Amounts.falls_within_reading` (l. 207): of any l.length + 1 rising steps from T on, not every one is a strict fall. `InAmounts.stops_of_reading` (l. 706), `rests_unrefuted_reading` (l. 762): a family's levels read off listed configurations give rest, unrefuted. Here the reading is an amount read off configurations, not an observation class. S: `Pass.levels_unlisted` (l. 1217): no list holds the levels of an endless fall.
+
+### declarations of InAmounts.lean (by script)
+  l.113 def FallsStop
+  l.118 def NoEndlessFall
+  l.122 def EndlessFall
+  l.127 def FallsAtLeast
+  l.133 theorem fallsStop_congr
+  l.145 theorem fallsStop_iff
+  l.153 theorem fallsStop_of_ends
+  l.162 theorem noEndlessFall_of_fallsAtLeast
+  l.169 theorem whole_fallsAtLeast
+  l.173 theorem whole_noEndlessFall
+  l.187 theorem rising_apart
+  l.194 theorem from_start
+  l.207 theorem falls_within_reading
+  l.230 theorem extend_falls
+  l.269 theorem rests_unrefuted_of_finite_reading
+  l.290 theorem rests_of_finite_reading
+  l.305 def Finite
+  l.311 def RestsFrom
+  l.315 def Balanced
+  l.319 def Dissipative
+  l.323 def Embodied
+  l.327 def ArisingEmbodied
+  l.332 def Counted
+  l.337 theorem Embodied.arising
+  l.343 theorem rests_unrefuted_iff
+  l.358 theorem arising_unrefuted_covering
+  l.374 def totalOf
+  l.378 theorem add_add_add_comm
+  l.384 theorem totalOf_le
+  l.391 theorem totalOf_congr
+  l.398 theorem totalOf_add
+  l.405 theorem totalOf_zero
+  l.410 theorem totalOf_swap
+  l.417 theorem le_totalOf
+  l.422 theorem totalOf_le_zero
+  l.429 theorem le_of_totalOf_le
+  l.443 theorem totalOf_whole
+  l.447 theorem add_left_comm
+  l.451 theorem totalOf_insert
+  l.457 theorem mem_insert_cases
+  l.468 theorem totalOf_support
+  l.508 theorem not_not_totalOf_le
+  l.517 theorem totalOf_single
+  l.539 structure InAmounts
+  l.549 def taken
+  l.553 def given
+  l.557 def stock
+  l.562 def BalancesOn
+  l.566 def Balanced
+  l.572 def DissipatesOn
+  l.580 def ClosedAt
+  l.585 def Dissipative
+  l.590 def Rises
+  l.595 def Falls
+  l.600 def ArisingEmbodied
+  l.606 theorem rises_of_arises
+  l.612 theorem taken_total
+  l.618 theorem given_total
+  l.625 theorem balance_total
+  l.636 theorem stock_still
+  l.651 theorem steady_of_stock_le
+  l.679 theorem change_lowers
+  l.692 theorem change_stops_iff
+  l.706 theorem stops_of_reading
+  l.720 theorem change_stops_unrefuted
+  l.733 theorem rests_unrefuted_of_stops
+  l.751 theorem rests_unrefuted_covering
+  l.762 theorem rests_unrefuted_reading
+  l.774 theorem rests_unrefuted
+  l.788 def Embodied
+  l.792 def Enclosed
+  l.796 def censusStock
+  l.803 theorem Enclosed.around_not_not
+  l.820 theorem falls_of_ceases
+  l.827 theorem stock_census
+  l.837 theorem Enclosed.around_census
+  l.847 theorem census_still
+  l.859 theorem census_falls
+  l.882 theorem rests_unrefuted_enclosed_of_stops
+  l.900 theorem rests_unrefuted_enclosed
+  l.917 theorem rests_unrefuted_enclosed_of_noEndlessFall
+  l.929 def wholeAmounts
+  l.935 theorem balanced_whole
+  l.941 theorem nothing_of_sign
+  l.947 theorem balancesOn_whole
+  l.954 theorem dissipatesOn_whole
+  l.968 theorem dissipative_whole
+  l.975 theorem arisingEmbodied_whole
+  l.980 theorem embodied_whole
+  l.984 theorem enclosed_whole
+  l.994 theorem rests_unrefuted
+  l.1011 theorem rests_unrefuted_enclosed
+  l.1027 def even
+  l.1032 def web
+  l.1036 def flow
+  l.1040 def world
+  l.1044 def alive
+  l.1050 def at_
+  l.1058 def amounts
+  l.1065 theorem at_self
+  l.1068 theorem at_other
+  l.1074 theorem not_self
+  l.1078 theorem decide_eq
+  l.1088 theorem decide_mem
+  l.1099 theorem pair_distinct
+  l.1105 theorem positive
+  l.1108 theorem stands_iff
+  l.1117 theorem present_holder
+  l.1122 theorem take_of_present
+  l.1127 theorem give_of_present
+  l.1133 theorem census
+  l.1141 theorem embodied
+  l.1145 theorem balanced
+  l.1155 theorem dissipative
+  l.1183 theorem closed
+  l.1187 theorem enclosed
+  l.1191 theorem arises
+  l.1194 theorem ceases
+  l.1198 theorem never_rests
+  l.1206 theorem endless_keeps_from_rest
+  l.1217 theorem levels_unlisted
+  l.1238 def WorldsRest
+  l.1247 theorem worldsRest_of_noEndlessFall
+  l.1256 theorem not_endlessFall_of_worldsRest
+  l.1264 theorem whole_worldsRest

@@ -1,0 +1,18 @@
+Reader whole-c-edge3-02, part EDGE, 4 modules: GrammarPath.lean, GrammarScope.lean, HeldForReading.lean, InAmounts.lean. All four were read whole, to the last line: the opening account, every statement, and each section's variable lines. No Lean, build, test or gate was run; nothing was written or changed. Other modules were opened only for definitions of names (Grammar.lean, GrammarMap.lean, GrammarLaws.lean, ReadingLoop.lean, Keeping.lean).
+
+Result on the claim under test: it is not broken by any of the four. No module has one statement (or two plain halves) with a course with a choice in it, a reading in it, and a bound or falling quantity on the ending side.
+- GrammarPath: exact statement of both outcomes with (ii) only. `«后皆续当且仅当自与线皆闭»` (l. 205) and `«后皆续当且仅当后皆同类»` (l. 188) condition on the class E. No move, plan, policy or allowed set; no bound or falling quantity anywhere in the module.
+- GrammarScope: exact statement with (ii) only, and weakly. `«核有续当且仅当有不穷»` (l. 210): E enters only through its core, and is supplied. No moves; no bound (the docstring of `Last.never_unending` says "within three steps", its statement says only not-endless).
+- HeldForReading: the only course is the built `SignLoop`, deterministic, so the edge is B (`both_off` l. 1375, `both_on` l. 1382), with no quantified choice and no rank. The general exactly-whens (`cell_policy_iff` l. 421, `through_threshold_iff` l. 1067, `held_gains_iff` l. 541) do have a quantified policy or rule and a reading (a map of the candidates) in one statement, but of ONE decision (account l. 231: "one decision, not a sequence"), comparing weighted values, with no going on or ending and no bound. This is the nearest thing in the batch to (i)+(ii) together; it lacks the course and (iii).
+- InAmounts: exact statement with (iii) only. `InAmounts.change_stops_iff` (l. 692): the falling quantity is the family total, and its falls stopping is the condition itself. No moves (one world, one flow). The reading is absent from that statement; it stands in separate one-way statements, of which `Amounts.falls_within_reading` (l. 207) has a reading and a bound (at most l.length strict falls) together, for the resting outcome only.
+
+Two things the fields may miss.
+1. InAmounts does not fit the pattern "closed region on the going-on side, rank on the ending side". The falling total is on both sides (rest exactly where its falls stop; endless change is an endless fall, `Pass.endless_keeps_from_rest` l. 1206), and the standing state `World.RestsFrom` is on the resting side.
+2. In GrammarPath the universal `∀ t, «及» R m t` runs over everything downstream on a branching relation. I answered moves N because nothing is a move, plan or policy; a reader who counts every branch of a relation as every move would have (i)+(ii) there, still without (iii).
+
+Convention used: every field begins with one letter. On edge, region_side, rank_side, moves_in_it and reading_in_it it is the brief's S/B/N. On carrier, handed_in and links, S means "from the statements". On standing, N means none seen and S means a statement takes a principle as a hypothesis. On note, the letter answers the tested claim: N = no statement with all three.
+
+Judgement calls a later reader may want to settle differently:
+- GrammarPath edge S: the losing side is only the negation of the reach; ending («亡») appears only as a sufficient premise in `«亡而网续则后不皆续»` (l. 227).
+- GrammarScope edge S and reading S: both sides of the iff are existence statements over the whole net, and E is an arbitrary relation with no «类» hypothesis.
+- HeldForReading reading B: the two halves condition on the true sign e, not on the sensed value; the sensed value is in the neighbouring statements.

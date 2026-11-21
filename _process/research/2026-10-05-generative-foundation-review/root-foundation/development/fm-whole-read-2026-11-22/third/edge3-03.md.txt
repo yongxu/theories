@@ -1,0 +1,509 @@
+# Task file: EDGE, third batch, reader whole-c-edge3-03
+
+Your 4 modules. No EDGE reader has read them. They were left out because the two batches before were chosen by the FIRST letter of each answer, and in each of these some answer of pass b begins `N` and goes on with a part marked `S`, `B` or `D`. Counted by any part, each of them belongs to one of the two batches (all four found by both passes; or both outcomes by both and a rank by neither). For orientation only, what the passes said (where to look, not evidence).
+
+## LearnedGrouping.lean  (485 lines)  [all four by any part]
+
+### `both_outcomes`
+- pass a: B: `two_word_iff` (l. 92) exactly characterizes preservation of all word boundaries in this encoding. `reception_changes_parse` (l. 386) and `parse_without_support` (l. 417) exhibit answered and unanswered parses for the same context.
+- pass b: N: no single exactly-when of going on and ending, or of keeping and losing. `two_word_iff` (l. 92) is an exactly-when for recovering words, general over relations. B: answered with 28 units (`reception_changes_parse`, l. 386) and unanswered with 27 (`parse_without_support`, l. 417) are two built cases, not one dichotomy.
+
+### `no_return`
+- pass a: B: `still_without_support` (l. 357) concludes every reception trace from zero stock ends at its initial state for every sequence of slots.
+- pass b: S: once the stock is zero, reception changes nothing along every trace (`still_without_support`, l. 357; `receive_short`, l. 196). This is concluded, of the built process, at a low level (no stock). No statement was found that the stock is regained, and nothing gives to it. B: with one unit less the answer is lost (`parsed_short`, l. 270). This is not the loss of something that gives.
+
+### `rank`
+- pass a: B: `receive` (l. 159) lowers positive stock by exactly one per slot and fixes the state at zero. `support_used` (l. 409) counts the fall from 14 to 4 on the context trace.
+- pass b: N: no law of ending within a bound and no falling variant. B: stock falls 14 to 4 along the context (`support_used`, l. 409).
+
+### `closed_region`
+- pass a: B: `total_kept` (l. 351) makes each fixed stock-plus-drawn total invariant along reception, and `still_without_support` (l. 357) fixes each zero-stock state.
+- pass b: S: `total_kept` (l. 351): stock plus drawn is invariant along every trace. `still_without_support` (l. 357): states with zero stock are fixed by every trace. Both are of the built process.
+
+### `moves`
+- pass a: B: `reception` (l. 328) admits each slot as a move, and `total_kept` (l. 351) preserves stock plus drawn along every trace of this process.
+- pass b: S: `reception` (l. 328) is a `Process State (Option Sound)` built by `Assurance.ofMap`; each slot is a move and its step is determined (`step_iff`, l. 331). Laws over every trace: `total_kept` (l. 351), every trace keeps stock plus drawn; `still_without_support` (l. 357), with stock zero every trace ends where it began; `trace_end` (l. 335). `broadenAfterFailure` (l. 176) is a supplied policy: receive more slots exactly where the utterance does not parse; `broadening_trace` (l. 366) says it reaches its state by a trace that keeps stock plus drawn. All of this is of the built model.
+
+### `reading`
+- pass a: B: `parse` (l. 153) uses bonds computed from the log to group the utterance. `order_not_frequency` (l. 423) exhibits two traces with identical sound counts whose ends parse the same utterance differently.
+- pass b: S/B: what is registered (the log) decides the grouping: `parse` (l. 153) groups by `bond s.log`, the log's majority bonds (defined in Segmentation). B: `context_forms_bond` (l. 231), after the context the bonds are `idealBond`; `order_changes_grouping` (l. 289) and `order_not_frequency` (l. 423): a reordered course with every sound counted alike (`counts_agree`, l. 284) forms a different bond, and the utterance is left unparsed along every trace of it; `gap_breaks_edge` (l. 275), a slot with no sound breaks a transition; `repetition_joins_words` (l. 321). S, general over relations: `two_word_iff` (l. 92).
+
+### declarations of LearnedGrouping.lean (by script)
+  l.61 inductive Sound
+  l.66 structure State
+  l.72 def word
+  l.77 def wordFirst
+  l.82 def wordRest
+  l.86 theorem spelled
+  l.92 theorem two_word_iff
+  l.113 def idealBond
+  l.126 theorem ideal_two_word
+  l.130 def decodePair
+  l.134 def decodeChunk
+  l.141 theorem decodes_words
+  l.148 def assembleMessage
+  l.153 def parse
+  l.159 def receive
+  l.165 def expose
+  l.170 def act
+  l.176 def broadenAfterFailure
+  l.180 theorem receive_stock
+  l.189 theorem expose_stock
+  l.196 theorem receive_short
+  l.202 theorem broaden_stock
+  l.213 def context
+  l.215 def additional
+  l.217 def utterance
+  l.219 def intended
+  l.222 def ready
+  l.224 def experienced
+  l.226 def narrow
+  l.228 def broadened
+  l.231 theorem context_forms_bond
+  l.235 theorem context_groups_words
+  l.242 theorem context_assembles
+  l.249 theorem unexposed_unparsed
+  l.254 theorem grouping_reaches_program
+  l.260 theorem response_keeps_log
+  l.265 theorem history_account
+  l.270 theorem parsed_short
+  l.275 theorem gap_breaks_edge
+  l.281 def reordered
+  l.284 theorem counts_agree
+  l.289 theorem order_changes_grouping
+  l.294 theorem broaden_reaches_context
+  l.301 theorem parsed_keeps
+  l.305 theorem broaden_prefix
+  l.311 theorem broaden_one_form
+  l.318 def learnerFavored
+  l.321 theorem repetition_joins_words
+  l.328 abbrev reception
+  l.331 theorem step_iff
+  l.335 theorem trace_end
+  l.341 theorem expose_trace
+  l.346 theorem along
+  l.351 theorem total_kept
+  l.357 theorem still_without_support
+  l.366 theorem broadening_trace
+  l.379 theorem grouping_assembles
+  l.386 theorem reception_changes_parse
+  l.400 theorem response_keeps_history
+  l.409 theorem support_used
+  l.417 theorem parse_without_support
+  l.423 theorem order_not_frequency
+  l.433 abbrev narrowCourse
+  l.436 theorem broadening_after_failure
+  l.451 theorem parsed_not_broadened
+  l.457 theorem broadening_keeps_prefix
+  l.469 theorem broadening_parses_one_form
+
+## Likeness.lean  (2734 lines)  [all four by any part]
+
+### `both_outcomes`
+- pass a: S: `Dependence.dichotomy_of_same_level` (l. 2626) starts with a breaking move. If after withholding a part the move is available, the dependence still required and met, and all its outcomes have equal level, either the part makes the difference or the move still breaks the dependence. B: `Likeness.Parting.Step` (l. 292) sends the same start by `true` to either a looping or a stopped state.
+- pass b: S: `Dependence.dichotomy_of_same_level` (l. 2626), general: under the premises given in `level`, `K.MakesDifference P withhold f s a g c ∨ K.BreaksBy P (withhold f s) a g c`. Either, with f's part withheld, every step keeps the dependence, or the same move still breaks it. This is a dichotomy of keeping and losing a dependence. B: `Likeness.Parting.image_not_determinedAt` (l. 316): from `start` one move leads both to `going` (which can go on) and to `stopped` (which cannot). B: `Chains.Step` (l. 2344): a chain goes on from n exactly where its family holds at n.
+
+### `no_return`
+- pass a: S: `holds_below` (l. 485) concludes that a decreasing family holding later held earlier, so failure persists. B: `Likeness.Parting.Step` (l. 292) admits no move from `stopped`. `Run.not_fixesAlike_other_of_new` (l. 342) separately assumes the run never returns to an alike state. Its conclusion concerns what the record fixes.
+- pass b: N: No irreversibility law and no point of no return. `Run.not_fixesAlike_other_of_new` (l. 342) takes never returning to an alike configuration as a premise, and the premise concerns the run's novelty, not loss. B: some built configurations have no move: `Likeness.Parting.Step` (l. 292, `stopped` has no move), `EndOfPath.frame` (l. 1393, the last place steps nowhere), and `Unbounded` (`rest 0` steps nowhere). No statement says these are reached irreversibly.
+
+### `rank`
+- pass a: S: `AlikeTo.steady_within_classes` (l. 1279) bounds the depth of a stationary refinement in a finite decided frame with listed moves and claims by the covering list length less the length of a list pairwise apart at depth zero. This bounds refinement.
+- pass b: S: `stops_decreasing` (l. 524): a decreasing family decided at each step stops decreasing on a list at some step no later than the list's length. `AlikeTo.steady_within` (l. 1073): likeness to depth stops refining at a depth no greater than the number of pairs. `AlikeTo.steady_within_classes` (l. 1279): within one frame of N listed configurations with c pairwise claim-distinct ones, it stops at k with k + c ≤ N. `AlikeTo.steady_within_across` (l. 1301) gives k + c ≤ N + N'. B: `EndOfPath.classes_exact` (l. 1447) shows the depth N - 1 is exact. These bound refinement, not the ending of a course.
+
+### `closed_region`
+- pass a: S: `AlikeTo.bisimulation` (l. 1095) makes depth-N likeness a bisimulation if every pair alike to depth N is alike to depth N+1, giving closure under matched steps.
+- pass b: S: `AlikeTo.bisimulation` (l. 1095): where likeness to depth N does not refine further, it is a bisimulation, a relation closed under matched steps. `imageUnder_bisimulation` (l. 186) and `imageUnder_determinedAt` (l. 198): an equivalence respecting the claims and going alike makes the image determined up to likeness everywhere. `OutcomesListed.alikeTo_bisimulation` (l. 1936): given `EitherThroughout`, likeness to every depth is a bisimulation on frames with listed outcomes. These are closed relations on pairs, not closed regions of one course.
+
+### `moves`
+- pass a: S: `AlikeWith.step` (l. 703) matches any step from one of two related starts by the same move from the other, preserving likeness with the relations.
+- pass b: S: Frames carry `Process S A` with moves. `Run.not_fixesAlike_other_of_new` (l. 342): in a frame determined up to likeness everywhere, a run none of whose configurations is alike to an earlier one fixes up to likeness no outcome of any move b other than the one taken at n, given two configurations that differ in a claim. `Run.not_fixesThroughAlike_of_untaken` (l. 370): read through π into a process Q determined up to likeness that admits the run's steps, a move not yet taken at a description alike to k has no outcome fixed up to likeness. `Dependence.dichotomy_of_same_level` (l. 2626) is about one move `a` from the withheld configuration. B: `Choosing.branching_apart` (l. 607): the test `bothOpen` holds at the start of `late` and fails at the start of `early`, so a test sees when a choice is made.
+
+### `reading`
+- pass a: S: `Run.not_fixesThroughAlike_of_untaken` (l. 370) says that if a determined-up-to-likeness carrier admits the projected recorded steps, a move untaken at any alike description has no outcome fixed by the record, provided two descriptions differ on a claim.
+- pass b: S: `carries_law_alike_iff` (l. 219): some process on descriptions K, determined up to likeness under `claims`, admits every step of P read through π exactly when some equivalence E is `RespectsClaims` (l. 171) and `GoAlikeUnder P π E`. `carries_law_named_iff` (l. 240): where each description is its own claim this is `GoAlike P π`. `image_determinedAt_iff` (l. 262): the image is determined up to likeness exactly where configurations whose descriptions are alike in it go alike. `alike_iff_sameBranchingTests` (l. 1103): on finite decided frames with listed moves and claims, what branching tests register decides likeness. B: `Unbounded.sameBranchingTests` (l. 2548) and `Unbounded.not_alike` (l. 2575): where a move has infinitely many outcomes, `bounded` and `unbounded` pass every branching test and are not alike. S: `Dependence.dichotomy_of_determinedAt` (l. 2642): where claims that agree force the same level of the condition (`registers`), determinacy up to likeness gives the dichotomy.
+
+### declarations of Likeness.lean (by script)
+  l.15 theorem stated
+  l.171 def RespectsClaims
+  l.177 def imageUnder
+  l.181 theorem factors_imageUnder
+  l.186 theorem imageUnder_bisimulation
+  l.198 theorem imageUnder_determinedAt
+  l.207 theorem alike_equivalence
+  l.211 theorem alike_respectsClaims
+  l.219 theorem carries_law_alike_iff
+  l.233 theorem eq_equivalence
+  l.240 theorem carries_law_named_iff
+  l.262 theorem image_determinedAt_iff
+  l.285 inductive Pos
+  l.292 inductive Step
+  l.298 def process
+  l.301 def claims
+  l.305 theorem going_not_stopped
+  l.316 theorem image_not_determinedAt
+  l.324 theorem carries
+  l.342 theorem Run.not_fixesAlike_other_of_new
+  l.353 theorem Run.new_of_newAlike
+  l.361 def Run.TakesThroughAlike
+  l.370 theorem Run.not_fixesThroughAlike_of_untaken
+  l.391 theorem Run.not_fixesThroughAlike_of_goAlikeUnder
+  l.409 theorem Decided.exists_of_listed
+  l.417 theorem Decided.forall_of_listed
+  l.425 theorem Decided.exists_not_of_listed
+  l.432 theorem Decided.imp
+  l.440 theorem Decided.iff
+  l.448 def pairedWith
+  l.453 def pairsOf
+  l.457 theorem mem_pairedWith_left
+  l.462 theorem mem_pairedWith_right
+  l.467 theorem mem_pairsOf
+  l.473 theorem length_pairedWith
+  l.479 theorem length_pairsOf
+  l.485 theorem holds_below
+  l.494 theorem drops_somewhere
+  l.503 theorem skip_side
+  l.511 theorem skip_succ
+  l.524 theorem stops_decreasing
+  l.568 inductive BranchingTest
+  l.576 def BranchingTest.Holds
+  l.584 def SameBranchingTests
+  l.605 def MatchesParts
+  l.609 theorem MatchesParts.transport
+  l.618 theorem MatchesParts.comp
+  l.630 def BisimulationWith
+  l.635 theorem BisimulationWith.eq
+  l.644 theorem BisimulationWith.converse
+  l.650 theorem BisimulationWith.comp
+  l.663 def AlikeWith
+  l.668 theorem AlikeWith.refl
+  l.673 theorem AlikeWith.symm
+  l.678 theorem AlikeWith.trans
+  l.686 theorem AlikeWith.alike
+  l.691 theorem alikeWith_empty_iff
+  l.696 theorem AlikeWith.realized
+  l.703 theorem AlikeWith.step
+  l.712 theorem AlikeWith.parts
+  l.721 theorem AlikeWith.matchesParts
+  l.727 theorem AlikeWith.functional
+  l.735 inductive TestWith
+  l.744 def TestWith.Holds
+  l.753 def SameTestsWith
+  l.758 theorem SameTestsWith.refl
+  l.763 theorem SameTestsWith.symm
+  l.769 theorem SameTestsWith.trans
+  l.777 theorem SameTestsWith.functional
+  l.783 theorem AlikeWith.holds_iff
+  l.813 theorem AlikeWith.sameTestsWith
+  l.819 def BranchingTest.toWith
+  l.828 theorem BranchingTest.holds_toWith
+  l.843 theorem SameTestsWith.sameBranchingTests
+  l.853 theorem Alike.holds_iff
+  l.862 theorem Alike.sameBranchingTests
+  l.868 theorem Alike.functional
+  l.875 theorem SameBranchingTests.functional
+  l.882 def AlikeTo
+  l.889 theorem AlikeTo.realized
+  l.895 theorem AlikeTo.of_succ
+  l.906 theorem AlikeTo.down_to
+  l.912 theorem Alike.alikeTo
+  l.924 structure FiniteDecided
+  l.933 theorem sameClaims_decided
+  l.942 theorem forth_decided
+  l.953 theorem unmatched_of_not_forth
+  l.972 theorem AlikeTo.decided
+  l.984 theorem BranchingTest.apart_from_listed
+  l.1005 theorem apart_of_claims
+  l.1023 theorem apart_of_not_alikeTo
+  l.1063 theorem SameBranchingTests.alikeTo
+  l.1073 theorem AlikeTo.steady_within
+  l.1086 theorem AlikeTo.steady
+  l.1095 theorem AlikeTo.bisimulation
+  l.1103 theorem alike_iff_sameBranchingTests
+  l.1114 theorem Alike.decided
+  l.1124 theorem alike_iff_alikeTo
+  l.1134 theorem alike_iff_alikeTo_pairs
+  l.1152 theorem AlikeTo.self
+  l.1159 theorem AlikeTo.symm
+  l.1170 theorem AlikeTo.trans
+  l.1185 theorem AlikeTo.refining
+  l.1190 def AlikeAcross
+  l.1198 theorem AlikeAcross.refining
+  l.1223 def rightsOf
+  l.1228 def bothOf
+  l.1232 theorem length_rightsOf
+  l.1237 theorem length_bothOf
+  l.1242 theorem mem_rightsOf
+  l.1250 theorem mem_bothOf_right
+  l.1255 theorem mem_bothOf_left
+  l.1266 theorem AlikeAcross.decided
+  l.1279 theorem AlikeTo.steady_within_classes
+  l.1289 theorem alike_iff_alikeTo_classes
+  l.1301 theorem AlikeTo.steady_within_across
+  l.1319 theorem alike_iff_alikeTo_across
+  l.1331 theorem alikeTo_frameBy_iff
+  l.1369 def finBelow
+  l.1373 theorem length_finBelow
+  l.1377 theorem mem_finBelow
+  l.1386 theorem room_after
+  l.1393 def frame
+  l.1397 theorem finite
+  l.1405 theorem alikeTo_room
+  l.1422 theorem not_alikeTo_past
+  l.1439 def first
+  l.1442 def second
+  l.1447 theorem classes_exact
+  l.1466 def frame
+  l.1471 theorem alike_iff
+  l.1484 theorem alike_decided_iff_em
+  l.1500 def EitherThroughout
+  l.1508 theorem EitherThroughout.of_em
+  l.1519 def EitherNever
+  l.1525 def NowhereDecided
+  l.1533 theorem eitherThroughout_iff_eitherNever
+  l.1561 theorem EitherNever.of_nowhereDecided
+  l.1567 theorem NowhereDecided.of_em
+  l.1571 theorem EitherThroughout.of_nowhereDecided
+  l.1584 def LLPO
+  l.1590 def LLPOForDecided
+  l.1597 theorem succ_inj
+  l.1601 theorem two_mul_ne_succ
+  l.1607 theorem two_mul_inj
+  l.1615 theorem decided_true
+  l.1621 theorem eq_false_of_not
+  l.1627 theorem of_lpo
+  l.1634 theorem of_forDecided
+  l.1641 theorem decidable
+  l.1652 def FirstAt
+  l.1655 theorem FirstAt.decided
+  l.1660 theorem FirstAt.unique
+  l.1669 theorem FirstAt.of_holds
+  l.1679 def Interleave
+  l.1682 theorem Interleave.even
+  l.1688 theorem Interleave.odd
+  l.1695 theorem Interleave.decided
+  l.1714 theorem eitherNever_iff_llpoForDecided
+  l.1739 theorem eitherThroughout_iff_llpoForDecided
+  l.1743 theorem LLPO.of_eitherThroughout
+  l.1751 theorem Decided.forall_in
+  l.1760 theorem EitherThroughout.list
+  l.1778 structure OutcomesListed
+  l.1786 theorem OutcomesListed.sameClaims_decided
+  l.1795 theorem OutcomesListed.matched_decided
+  l.1806 theorem OutcomesListed.forth_decided
+  l.1819 theorem OutcomesListed.unmatched
+  l.1840 theorem OutcomesListed.alikeTo_decided
+  l.1853 theorem BranchingTest.apart_from_list
+  l.1870 theorem OutcomesListed.apart_of_claims
+  l.1886 theorem OutcomesListed.apart_of_not_alikeTo
+  l.1926 theorem OutcomesListed.alikeTo_of_same
+  l.1936 theorem OutcomesListed.alikeTo_bisimulation
+  l.1963 theorem OutcomesListed.alike_iff_sameBranchingTests
+  l.1975 theorem apart_of_not_sameBranchingTests
+  l.1991 theorem alike_of_sameBranchingTests_of_em
+  l.2018 theorem alike_iff_sameBranchingTests_of_em
+  l.2032 inductive Pos
+  l.2041 inductive Step
+  l.2051 def frame
+  l.2055 theorem listed
+  l.2066 theorem settled_decided
+  l.2086 theorem either_holds_of
+  l.2102 theorem either_holds_of_not
+  l.2118 theorem either_settles
+  l.2130 theorem sameBranchingTests
+  l.2151 theorem decided_of_alike
+  l.2166 inductive Pos
+  l.2174 inductive Step
+  l.2182 def Marked
+  l.2190 def frame
+  l.2194 theorem listed
+  l.2202 theorem step_decided
+  l.2220 theorem settled_decided
+  l.2232 theorem either_holds_of
+  l.2245 theorem either_holds_of_not
+  l.2258 theorem either_settles
+  l.2270 theorem sameBranchingTests
+  l.2291 theorem decided_of_alike
+  l.2303 theorem alike_of_sameBranchingTests_iff_em
+  l.2315 theorem alike_of_sameBranchingTests_decided_steps_iff_em
+  l.2331 inductive Pos
+  l.2338 def Side
+  l.2344 inductive Step
+  l.2352 def frame
+  l.2356 def depth
+  l.2366 theorem outcomes
+  l.2411 theorem outcomesListed
+  l.2417 theorem on_holds_iff
+  l.2452 theorem sameBranchingTests
+  l.2476 theorem endless_alike_on
+  l.2484 theorem side_throughout
+  l.2491 theorem throughout_of_alike
+  l.2503 inductive Pos
+  l.2510 inductive Step
+  l.2519 def frame
+  l.2524 theorem rest_holds_iff
+  l.2548 theorem sameBranchingTests
+  l.2565 theorem endless_not_alike_rest
+  l.2575 theorem not_alike
+  l.2586 theorem alike_of_sameBranchingTests_outcomes_iff
+  l.2602 def bothOpen
+  l.2607 theorem branching_apart
+  l.2626 theorem dichotomy_of_same_level
+  l.2642 theorem dichotomy_of_determinedAt
+  l.2655 theorem level_registers
+  l.2700 theorem sameBranchingTests_fix_iff_llpoForDecided
+  l.2707 theorem llpo_of_sameBranchingTests_fix
+  l.2721 theorem alike_iff_sameBranchingTests_of_nowhereDecided
+
+## MapInstances.lean  (709 lines)  [all four by any part]
+
+### `both_outcomes`
+- pass a: S: `Web.ends_or_reaches` (l. 157) gives, for every finite offset, a reachable end or a reached occurrence at that offset, assuming next-step existence decided at every reached point.
+- pass b: N: no general exactly-when of going on and ending for one model. B: `renewal_undecided` (l. 536): in the relay every carrier renews and the line still ends (`relay_renews_and_ends` l. 515), while in the shifts every carrier renews and the line generates; these are two models. Also `Map.Depleted.continues` (l. 585) with `Map.Depleted.degenerates` (l. 590): the line takes a step and then degenerates.
+
+### `no_return`
+- pass a: S: `Web.consumed_held_degenerates` (l. 376) concludes all-branch ending from active dependence, a level permanently below the former need, and retention of that dependence at no lesser need at the horizon. Permanent low level is a premise.
+- pass b: S: `every_branch_ends_of_gone` (l. 328) and `ends_of_ends_at` (l. 305): degeneration is concluded from a uniform horizon N at which nothing reached is active. In the regimes the running down is a premise: `below : ∀ s, T < s → level s c < need T g c` (l. 376) and n steps of excess (l. 414). So the irreversibility of the low level is assumed and the end of the line is concluded. It is at a low level, not at the loss of a giver. `end_of_gone_iff_excluded_middle` (l. 695): that every such line reaches an end (有终) is exactly excluded middle.
+
+### `rank`
+- pass a: S: `Web.stopped_gone` (l. 439) gives inactivity at T+d if the web continues by passing, every carrier is brief for d, and no passing occurs from T on.
+- pass b: S: `ends_before` (l. 295) and `ends_of_ends_at` (l. 305): ending on every branch by induction on the steps left d to a horizon N. The regimes give deadlines: T + n in `family_excess_not_endless` (l. 428), T + d in `stopped_not_endless` (l. 457), any N > T in `consumed_held_not_endless` (l. 389).
+
+### `closed_region`
+- pass a: S: `Web.active_along_finer` (l. 321) preserves activity from an active start at every reached occurrence under a class within activity.
+- pass b: S: `active_along_line` (l. 140): what the pattern's line reaches from an active occurrence is active. `keeping_of_carried_on` (l. 236): an endless line from an active x along which, from step S on, every active formation was active before and carried on as itself keeps (no carrying renewal ahead).
+
+### `moves`
+- pass a: N: Not found in the statements read.
+- pass b: S: the continuation R : Nat → F → F → Prop may branch, and «退化» asks every branch to end. `every_branch_ends_of_gone` (l. 328): for a class E finer than activity, from an active x, if nothing the line reaches at step N ≥ x.1 is active, then every branch ends. There is no Process S A, policy or allowed set here; the 'choice' is a branch of the relation.
+
+### `reading`
+- pass a: S: `Web.itself_keeps` (l. 273) gives keeping for an endless activity line read by self-continuation, and `Web.itself_not_generation` (l. 268) excludes generation on that reading.
+- pass b: S: activityClass (pattern) and carrierClass (parts) read occurrences alike. `carries_iff` (l. 175): from an active x, a carrying renewal is a continuation step into an active y whose formation was not active and carrying on as itself before. `itself_not_generation` (l. 268) and `not_generation_of_within_itself` (l. 256): along any continuation contained in `itself` (names alone), nothing generates. What is registered as continuing decides generation.
+
+### declarations of MapInstances.lean (by script)
+  l.118 theorem outside_of_not_endless
+  l.133 theorem reached_later
+  l.140 theorem active_along_line
+  l.149 theorem reaches_onward
+  l.157 theorem ends_or_reaches
+  l.175 theorem carries_iff
+  l.190 theorem passing_carries_iff
+  l.208 theorem generation_renews_late
+  l.220 theorem generation_arises_late
+  l.236 theorem keeping_of_carried_on
+  l.251 theorem not_carries_of_within_itself
+  l.256 theorem not_generation_of_within_itself
+  l.263 theorem itself_carries_nothing
+  l.268 theorem itself_not_generation
+  l.273 theorem itself_keeps
+  l.279 theorem always_keeps
+  l.295 theorem ends_before
+  l.305 theorem ends_of_ends_at
+  l.314 theorem reached_coarser
+  l.321 theorem active_along_finer
+  l.328 theorem every_branch_ends_of_gone
+  l.335 theorem activity_every_branch_ends_of_gone
+  l.345 theorem not_endless_of_gone
+  l.353 theorem end_of_gone
+  l.366 theorem consumed_held_gone
+  l.376 theorem consumed_held_degenerates
+  l.389 theorem consumed_held_not_endless
+  l.400 theorem family_excess_gone
+  l.414 theorem family_excess_degenerates
+  l.428 theorem family_excess_not_endless
+  l.439 theorem stopped_gone
+  l.446 theorem stopped_degenerates
+  l.457 theorem stopped_not_endless
+  l.473 theorem shifted_carry
+  l.480 theorem shifted_pass
+  l.489 theorem shifted_generates
+  l.506 theorem relay_after_two
+  l.515 theorem relay_renews_and_ends
+  l.536 theorem renewal_undecided
+  l.558 def web
+  l.569 theorem dependent
+  l.576 theorem below
+  l.582 def every
+  l.585 theorem continues
+  l.590 theorem degenerates
+  l.598 theorem coupled_degenerates
+  l.609 theorem coupled_continues
+  l.616 theorem stopped_relay_degenerates
+  l.625 theorem stopped_relay_continues
+  l.635 def web
+  l.643 def continuation
+  l.646 theorem inactive_two
+  l.652 theorem last_ends
+  l.659 theorem first_continues
+  l.664 theorem first_has_next_iff
+  l.670 theorem degenerates
+  l.680 theorem end_decides
+  l.695 theorem end_of_gone_iff_excluded_middle
+
+## Metaethics.lean  (443 lines)  [both outcomes, no rank, by any part]
+
+### `both_outcomes`
+- pass a: B: `Mixed.one_event_two_relations` (l. 356) concludes that one drawing event has a living relation to the kept source and a nonliving one to the lost source, while the event itself is nonliving.
+- pass b: N for going on and ending. B: `Mixed.one_event_two_relations` (l. 356): one event (drawer at 0) is not living while its relation to the kept condition is living and its relation to the lost condition is not.
+
+### `no_return`
+- pass a: B: `Mixed.web` (l. 329) prescribes zero level at the lost source and inactivity of the dependent at every positive time; this permanence is built into the example.
+- pass b: N. B: in `Mixed.web` (l. 329) the lost condition's level is 0 after step 0 and the dependent formation is inactive after 0. This is the model's definition, not a concluded law.
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N
+
+### `closed_region`
+- pass a: B: `Separate.stays` (l. 235) preserves the false formation label across any co-participation edge in the two-condition example.
+- pass b: N
+
+### `moves`
+- pass a: N: Not found in the statements read.
+- pass b: N: responses r with admitted outcomes occur in `SecuresNewContent` (l. 186), `PositionedArticulation` (l. 191) and `articulates` (l. 198), but there is no process of steps and no law about what a choice keeps.
+
+### `reading`
+- pass a: S: `Web.valuation` (l. 256) reads formation events by activity and absence of undermining. `Web.living_iff_relations` (l. 307) compares that reading with the one for individual relations.
+- pass b: S: `Web.valuation` (l. 256) reads events of a web: living iff W.active and ¬ W.UnderminingAt; related iff both participate in a common condition. `Web.living_iff_relations` (l. 307): an event is living iff it is active and each relation to a condition it participates in is living under `Web.relations` (l. 296). `positioned_articulation_of_articulates` (l. 205): under Neutral articulates, D holds with significance read from every standpoint.
+
+### declarations of Metaethics.lean (by script)
+  l.119 def Within
+  l.123 def Neutral
+  l.126 theorem Neutral.within
+  l.137 structure Valuation
+  l.148 def SelfSignificance
+  l.152 def Seed
+  l.157 def transmits
+  l.162 def shares
+  l.166 def Grounds
+  l.170 def Significant
+  l.175 theorem seed_of_selfSignificance
+  l.186 def SecuresNewContent
+  l.191 def PositionedArticulation
+  l.198 def articulates
+  l.205 theorem positioned_articulation_of_articulates
+  l.226 def same
+  l.232 def conditions
+  l.235 theorem stays
+  l.256 def Web.valuation
+  l.270 theorem breaking_relates
+  l.282 theorem valuing_breaking_reaches
+  l.296 def Web.relations
+  l.307 theorem Web.living_iff_relations
+  l.319 inductive Formation
+  l.323 inductive Source
+  l.329 def web
+  l.348 theorem dependent
+  l.356 theorem one_event_two_relations
+  l.376 inductive Who
+  l.379 inductive Life
+  l.383 def related
+  l.392 def own
+  l.399 def linked
+  l.404 def valuation
+  l.408 def ownRegion
+  l.414 def ownStandpoint
+  l.418 theorem no_relation_into_beyond
+  l.424 def endorses
+  l.431 theorem articulation_neutrality_is_needed

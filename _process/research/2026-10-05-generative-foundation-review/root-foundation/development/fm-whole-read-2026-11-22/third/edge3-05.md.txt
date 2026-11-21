@@ -1,0 +1,739 @@
+# Task file: EDGE, third batch, reader whole-c-edge3-05
+
+Your 4 modules. No EDGE reader has read them. They were left out because the two batches before were chosen by the FIRST letter of each answer, and in each of these some answer of pass b begins `N` and goes on with a part marked `S`, `B` or `D`. Counted by any part, each of them belongs to one of the two batches (all four found by both passes; or both outcomes by both and a rank by neither). For orientation only, what the passes said (where to look, not evidence).
+
+## ReorderingGrowth.lean  (980 lines)  [both outcomes, no rank, by any part]
+
+### `both_outcomes`
+- pass a: B: `VeeWorld.presence_varies` (l. 933) exhibits absence of exchange 0 when 2 is taken in the original order and its presence at that event after one allowed swap.
+- pass b: N for going on or ending, or keeping or losing. S of exact characterisations of presence: `present_some_reordering` (l. 505): present on some reordering iff a link below. `present_every_reordering` (l. 517): present on every reordering iff a link below j and below no other exchange of the stretch. B: `VeeWorld.presence_varies` (l. 933): present on reordering [1], not on [].
+
+### `no_return`
+- pass a: N: Not found in the statements read.
+- pass b: N
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N
+
+### `closed_region`
+- pass a: N: Not found in the statements read.
+- pass b: N. S only that `present_unrelated` (l. 443) makes the present (MaximalBorn) of any numbering at a stage an antichain of Precedes, and `exchanges_ordered` (l. 110) makes the stretch a causal set.
+
+### `moves`
+- pass a: S: `present_every_reordering` (l. 517) says that for a containing footprint and j in the stretch, i is present when j is taken under every permitted reordering exactly when j is its unique upper link in the stretch.
+- pass b: S: `Reordering r m ts` (l. 121): a list of commutations within the stretch, each of two exchanges that are not joined. Laws over every or some choice: `every_reordering_iff` / `some_reordering_iff` (ll. 167, 176) carry any stretch-read property between natural labellings and reorderings. `precedes_iff_every_reordering` (l. 404): with Precedes i j decided, i precedes j iff every reordering places i first. `either_order_reordering` (l. 433): two different unrelated exchanges are taken in either order on some reordering. `reordering_nil` (l. 186): if every consecutive pair is joined, the only reordering is []. Also `Run process` of CausalGrowth, in `reordering_iff_course` (l. 198).
+
+### `reading`
+- pass a: S: `presentAt_stretch` (l. 383) transfers presence between any numberings agreeing throughout the stretch. `present_identity_iff` (l. 550) characterizes presence in original order by precedence within the stretch and no intervening exchange joined to i.
+- pass b: S: the footprint registers what each step touches. `present_identity_iff` (l. 550): i is present when j is taken on the world as it is iff i precedes j within the stretch and no exchange between is joined to i. `persists_of_present` (l. 565): with Contains, that presence implies every relatum i touches is shown at j as right after i's step. `precedes_decided` (l. 297): joining decided on the stretch decides precedence. `every_reordering_iff` (l. 167) takes as premise a property read on the stretch (agreeing numberings).
+
+### declarations of ReorderingGrowth.lean (by script)
+  l.105 def exchanges
+  l.110 theorem exchanges_ordered
+  l.121 def Reordering
+  l.132 theorem keeps_precedes
+  l.141 theorem natural_iff
+  l.151 theorem reordering_natural
+  l.158 theorem natural_reordering
+  l.167 theorem every_reordering_iff
+  l.176 theorem some_reordering_iff
+  l.186 theorem reordering_nil
+  l.198 theorem reordering_iff_course
+  l.224 theorem course_converse
+  l.253 theorem last_of_precedes
+  l.263 theorem precedes_iff_last
+  l.271 theorem precedes_decided_below
+  l.297 theorem precedes_decided
+  l.303 theorem precedes_weakly_below
+  l.331 theorem precedes_weakly
+  l.336 theorem exchanges_weakly
+  l.350 theorem links_exchanges
+  l.369 theorem before_stretch
+  l.375 theorem maximalBorn_stretch
+  l.383 theorem presentAt_stretch
+  l.392 theorem every_reordering_not_not
+  l.404 theorem precedes_iff_every_reordering
+  l.412 theorem precedes_iff_every_reordering_of_joined
+  l.420 theorem before_some_reordering
+  l.433 theorem either_order_reordering
+  l.443 theorem present_unrelated
+  l.450 theorem antichain_present_reordering
+  l.466 theorem together_some_reordering
+  l.486 theorem together_every_reordering_not_not
+  l.505 theorem present_some_reordering
+  l.517 theorem present_every_reordering
+  l.533 theorem sameAt_of_unmoved
+  l.542 theorem first_of_precedes
+  l.550 theorem present_identity_iff
+  l.565 theorem persists_of_present
+  l.584 theorem persists_of_present_reordering
+  l.617 def standing
+  l.630 def web
+  l.639 theorem dependent
+  l.646 def touch
+  l.654 def world
+  l.657 theorem contains
+  l.672 theorem joined_first_middle
+  l.676 theorem joined_first_last
+  l.680 theorem joined_middle_last
+  l.690 theorem persists_not_present
+  l.710 theorem only_reordering
+  l.723 def standing
+  l.735 def web
+  l.743 def touch
+  l.751 def world
+  l.754 theorem contains
+  l.768 theorem touches_moved
+  l.780 theorem joined
+  l.798 theorem persists_not_present
+  l.814 theorem only_reordering
+  l.823 def standing
+  l.836 def web
+  l.844 def touch
+  l.853 def world
+  l.856 theorem contains
+  l.870 theorem joined_first_second
+  l.873 theorem joined_first_third
+  l.878 theorem apart
+  l.890 theorem not_second_third
+  l.897 theorem vee_of_precedes
+  l.910 theorem prec_iff_vee
+  l.920 theorem natural_iff_vee
+  l.927 theorem reordering
+  l.933 theorem presence_varies
+  l.944 theorem swap_below
+  l.948 theorem vee_swap
+  l.958 theorem one_course_two_numberings
+
+## Resolution.lean  (2532 lines)  [all four by any part]
+
+### `both_outcomes`
+- pass a: B: `Asymptote.exchange_recurs_iff` (l. 1537) gives recurring exchange exactly when splitting occurs arbitrarily late in this family parameterized by the split schedule. Failure of recurrence here is a negation, without a last-exchange witness.
+- pass b: B: `Asymptote.exchange_recurs_iff` (l. 1537): the built flow exchanges at arbitrarily late steps exactly when the unit splits at arbitrarily late steps. S (one direction only): `World.arising_needs_refinement` (l. 711): in a counted, embodied, balanced-at-refinement, dissipative world where arising recurs, no step begins a stretch that is enclosed and in which the refinement gives nothing. `Flow.withRefinement_dissipatesOn_iff` (l. 522) is an exactly-when for dissipation, not for going on and ending.
+
+### `no_return`
+- pass a: S: `Flow.BalancesAt.nonrisingBy` (l. 764) bounds next stock by the refinement factor times current stock under balance and proportional dissipation on the family. In particular zero stock stays zero across each such step.
+- pass b: N: no statement that something once lost is not regained, and no point from which no course keeps it. Nearest, concluded at the level of a closed family's stock or a world's relata: S: `Flow.quantum_not_recurring` (l. 397), `Flow.taking_not_recurring` (l. 416, the unit fixed from T on), `Flow.exchange_not_recurring` (l. 963), `World.growth_not_recurring` (l. 1212), `World.ceasing_not_recurring` (l. 1289). Under their premises, the change named does not happen at arbitrarily late steps (an eventual rest, concluded). `Web.CarriesAt.lasts` (l. 1358) bounds how long an unsupported formation stays active; its end follows from the bound but is not stated as a point of no return.
+
+### `rank`
+- pass a: S: `Web.CarriesAt.lasts` (l. 1358) bounds the count of decidable active steps after permanent support loss by p times initial reserve under consistent positive refinement and minimum loss 1/p of the reference unit per active step. B: `reserve_needs_quantum` (l. 2424) gives perpetual unsupported activity with smaller losses.
+- pass b: S: `losses_invariant` (l. 214) and `losses_bound` (l. 242): an invariant in which the stock counted in the unit of step T falls by each quantum lost, so the total count is within q·s T. `bounded_not_recurring` (l. 266): a count whose totals stay within a bound is positive at only finitely many steps. `Flow.exchange_bound` (l. 951), `Flow.exchange_bound_of_least_loss` (l. 1046), `World.growth_bound` (l. 1198) and `World.fall_bound` (l. 1252) bound counts by multiples of the stock or standing at T. `Web.CarriesAt.lasts` (l. 1358): at most p·a T f active steps while unsupported.
+
+### `closed_region`
+- pass a: S: `losses_invariant` (l. 214) keeps q times the remainder plus the accumulated quanta (all converted to the endpoint unit) within q times initial stock in that unit, under the stated unit recursion and one-step budget inequality.
+- pass b: S: `losses_invariant` (l. 214) and `refinedSum_invariant` (l. 313) are inequalities kept across every step from T on. Closed families (Flow.ClosedAt) and enclosed steps (Flow.Enclosed) appear only as premises at every step from T on, never concluded. No largest closed region, kernel or fixed point is stated.
+
+### `moves`
+- pass a: N: Not found in the statements read.
+- pass b: N: a Flow lists the formations present and their take and give at each step as given functions. No process with a choice among steps, no policy and no allowed set occurs in the module.
+
+### `reading`
+- pass a: S: `Web.Gains` (l. 791) measures a change against a chosen reference quantum. `World.not_recurring_at_resolution` (l. 1306) excludes recurring arising and ceasing at that size given a census, embodiment, balance, proportional dissipation, eventual enclosure and consistent positive refinement.
+- pass b: N: no observation, class read alike, or rule made from what is registered occurs. Web.Census (a list of the active relata) is a premise of the World laws, not a reading that decides anything.
+
+### declarations of Resolution.lean (by script)
+  l.149 def BalancesAt
+  l.155 theorem balancesAt_one
+  l.161 theorem BalancesAt.over
+  l.177 theorem BalancesAt.lowers
+  l.193 def LosesQuantum
+  l.200 theorem units_pos
+  l.214 theorem losses_invariant
+  l.242 theorem losses_bound
+  l.252 theorem unbounded_of_recurring
+  l.266 theorem bounded_not_recurring
+  l.273 theorem quantum_step
+  l.284 theorem quantum_bound
+  l.291 theorem quantum_not_recurring
+  l.304 def refinedSum
+  l.313 theorem refinedSum_invariant
+  l.335 theorem refinedSum_mono
+  l.342 theorem refinedSum_mul
+  l.350 theorem refinedSum_marks
+  l.363 theorem counts_of_amounts
+  l.387 theorem quantum_bound
+  l.397 theorem quantum_not_recurring
+  l.408 theorem takes_loses
+  l.416 theorem taking_not_recurring
+  l.434 theorem total_map_some
+  l.439 theorem mem_map_some
+  l.443 theorem of_mem_map_some
+  l.450 theorem refine_eq
+  l.461 def withRefinement
+  l.474 def Web.withRefinement
+  l.494 theorem withRefinement_taken
+  l.500 theorem withRefinement_given
+  l.506 theorem balancesAt_iff_withRefinement
+  l.522 theorem withRefinement_dissipatesOn_iff
+  l.539 theorem ClosedAt.of_withRefinement
+  l.545 theorem ClosedAt.withRefinement
+  l.555 theorem Enclosed.of_withRefinement
+  l.563 theorem refinement_gives_nothing
+  l.584 theorem taking_needs_refinement
+  l.606 def after
+  l.613 theorem after_counted
+  l.617 theorem after_embodied
+  l.621 theorem after_balanced
+  l.629 theorem after_dissipative
+  l.634 theorem after_enclosed
+  l.640 theorem after_recurs
+  l.649 theorem restsFrom_of_after
+  l.656 theorem rests_unrefuted_of_after
+  l.664 theorem rests_unrefuted_without_refinement
+  l.681 theorem rests_unrefuted_refinement_counted
+  l.699 theorem arising_opens_refinement_counted
+  l.711 theorem arising_needs_refinement
+  l.733 def DissipatesBy
+  l.738 def DissipativeBy
+  l.743 theorem DissipatesBy.of_each
+  l.757 theorem DissipatesBy.replenishment_le
+  l.764 theorem BalancesAt.nonrisingBy
+  l.773 theorem BalancesAt.lowersBy
+  l.791 def Web.Gains
+  l.798 def Web.gainers
+  l.803 def Web.Loses
+  l.810 def Web.losers
+  l.818 theorem BalancesAt.gain_given
+  l.826 theorem total_mul_right
+  l.835 theorem BalancesAt.gainers_lose
+  l.859 theorem BalancesAt.gainers_le
+  l.871 theorem BalancesAt.lowersTaking
+  l.889 theorem uptake_bound
+  l.899 theorem replenishment_bound
+  l.909 def takersAbove
+  l.914 theorem takersAbove_le
+  l.926 theorem BalancesAt.takers_lose
+  l.951 theorem exchange_bound
+  l.963 theorem exchange_not_recurring
+  l.979 def LosesAtSize
+  l.985 def LosesAtEverySize
+  l.989 theorem DissipatesOn.give_le
+  l.997 theorem LosesAtSize.over
+  l.1026 theorem BalancesAt.takers_lose_least
+  l.1046 theorem exchange_bound_of_least_loss
+  l.1059 theorem exchange_not_recurring_of_least_loss
+  l.1076 theorem losesAtSize_of_each
+  l.1091 theorem BalancesAt.loss_taken
+  l.1101 theorem BalancesAt.losers_lose
+  l.1125 theorem BalancesAt.losers_le
+  l.1144 theorem taken_bound
+  l.1169 theorem given_bound
+  l.1198 theorem growth_bound
+  l.1212 theorem growth_not_recurring
+  l.1234 theorem arising_not_recurring
+  l.1252 theorem fall_bound
+  l.1266 theorem fall_not_recurring
+  l.1289 theorem ceasing_not_recurring
+  l.1306 theorem not_recurring_at_resolution
+  l.1323 def Web.CarriesAt
+  l.1330 def Web.CarriesIn
+  l.1335 theorem Web.Carries.carriesAt
+  l.1344 theorem Web.carriesIn_one
+  l.1358 theorem Web.CarriesAt.lasts
+  l.1376 theorem Web.CarriesIn.lasts_unrefined
+  l.1395 def halving
+  l.1400 def quarter
+  l.1404 theorem quarter_eq
+  l.1410 theorem halving_pos
+  l.1414 theorem quarter_pos
+  l.1421 def powers
+  l.1425 theorem powers_pos
+  l.1430 theorem bernoulli_powers
+  l.1446 theorem powers_outgrow
+  l.1467 def refinement
+  l.1471 def units
+  l.1476 def flow
+  l.1480 def web
+  l.1485 theorem balances
+  l.1495 theorem closed
+  l.1498 theorem distinct
+  l.1502 theorem dissipative
+  l.1508 theorem dissipativeBy
+  l.1514 theorem dependent
+  l.1518 theorem above_need
+  l.1522 theorem taking
+  l.1525 theorem acting
+  l.1529 theorem falls
+  l.1537 theorem exchange_recurs_iff
+  l.1547 theorem taking_recurs
+  l.1558 theorem not_balanced
+  l.1574 def flow
+  l.1577 def web
+  l.1581 theorem balances
+  l.1586 theorem closed
+  l.1590 theorem dissipativeBy
+  l.1603 theorem uptake
+  l.1608 theorem exact
+  l.1636 def spare
+  l.1641 def units
+  l.1646 def flow
+  l.1650 def web
+  l.1654 theorem balances
+  l.1661 theorem closed
+  l.1665 theorem dissipative
+  l.1671 theorem dependent
+  l.1675 theorem takes_a_unit
+  l.1679 theorem loses_one
+  l.1683 theorem units_eq
+  l.1688 theorem takes_whole
+  l.1693 theorem not_dissipativeBy
+  l.1700 theorem standing
+  l.1705 theorem around
+  l.1709 theorem exchange_recurs
+  l.1720 def bud
+  l.1725 def drawn
+  l.1730 def emitted
+  l.1736 def level
+  l.1740 def flow
+  l.1744 def web
+  l.1748 def world
+  l.1751 theorem bud_before
+  l.1758 theorem bud_after
+  l.1762 theorem bud_pos
+  l.1768 theorem active_bud
+  l.1775 theorem none_not_mem
+  l.1781 def alive
+  l.1785 theorem census
+  l.1794 theorem counted
+  l.1797 theorem embodied
+  l.1801 theorem balances
+  l.1807 theorem emitted_absent
+  l.1816 theorem emitted_le_one
+  l.1827 def decideNone
+  l.1833 theorem pool_mem
+  l.1842 theorem dissipative
+  l.1848 theorem enclosed
+  l.1857 theorem arises
+  l.1862 theorem arising_recurs
+  l.1866 theorem acting
+  l.1870 theorem taking
+  l.1877 theorem dissipativeBy
+  l.1884 theorem arises_small
+  l.1889 theorem not_balanced
+  l.1903 def level
+  l.1908 def flow
+  l.1913 def web
+  l.1916 def world
+  l.1920 theorem balances
+  l.1928 theorem stands_sum
+  l.1933 theorem stands_one
+  l.1937 theorem active_iff
+  l.1945 theorem census
+  l.1953 theorem counted
+  l.1956 theorem embodied
+  l.1960 theorem enclosed
+  l.1964 theorem holder_takes
+  l.1968 theorem holder_mem
+  l.1977 theorem given_total
+  l.1984 theorem dissipative
+  l.1991 theorem arising_whole
+  l.2000 theorem arising_recurs
+  l.2006 theorem not_dissipativeBy
+  l.2013 theorem not_balanced
+  l.2027 def web
+  l.2030 def reserve
+  l.2033 theorem unsupported
+  l.2036 theorem carriesIn
+  l.2046 theorem not_carriesAt
+  l.2063 abbrev Relatum
+  l.2066 def conduits
+  l.2070 theorem conduits_length
+  l.2076 def side
+  l.2082 def level
+  l.2089 def flow
+  l.2094 def web
+  l.2097 def world
+  l.2100 theorem taken
+  l.2104 theorem given
+  l.2109 theorem parts_taken
+  l.2115 theorem parts_given
+  l.2123 theorem balances
+  l.2137 theorem active_iff
+  l.2146 theorem side_pos_iff
+  l.2152 theorem census
+  l.2160 theorem counted
+  l.2163 theorem embodied
+  l.2167 def sides
+  l.2169 theorem sides_distinct
+  l.2174 theorem side_mem
+  l.2179 theorem off_sides
+  l.2182 theorem sides_total
+  l.2188 theorem holder_takes
+  l.2192 theorem conduit_mem
+  l.2196 theorem first_conduit
+  l.2200 def isHolder
+  l.2207 theorem holder_mem
+  l.2219 theorem given_total
+  l.2228 theorem taken_le
+  l.2237 theorem taken_total
+  l.2243 theorem part_loss
+  l.2250 theorem loses_two
+  l.2257 theorem dissipative
+  l.2262 theorem double
+  l.2266 theorem large_early
+  l.2280 theorem losesAtEverySize
+  l.2293 theorem sides_closed
+  l.2299 theorem enclosed
+  l.2304 theorem exchange_not_recurring
+  l.2312 theorem arising_whole
+  l.2323 theorem not_dissipativeBy
+  l.2330 theorem uptake
+  l.2336 theorem throughput_unbounded
+  l.2361 theorem arising_needs_quantum
+  l.2376 theorem arising_needs_proportion
+  l.2391 theorem exchange_needs_quantum
+  l.2407 theorem rest_needs_quantum
+  l.2424 theorem reserve_needs_quantum
+  l.2439 theorem growth_needs_proportion
+  l.2457 theorem amount_sharp
+  l.2490 theorem throughput_needs_proportion
+  l.2506 theorem refinement_feeds_witnesses
+
+## SetPointOptimum.lean  (1528 lines)  [all four by any part]
+
+### `both_outcomes`
+- pass a: S: `Flow.Balances.atSetPoint_broken_iff` (l. 562) characterizes breaking one initially met outside dependence on a balanced gainless step reaching the set point exactly by joint shortfall and loss exceeding slack. B: `Optimum.Topped.nearing_either` (l. 966) exhibits keeping and breaking optima of the very same distance order.
+- pass b: S: `Flow.Balances.atSetPoint_broken_iff` (l. 562): with one condition beyond depended on at a need it meets, across a balanced gainless step to the set point the dependence is broken exactly where `W.stock ds t + (level - need) < total ds s + lost`. This is general, of one step. `atSetPoint_iff` (l. 300) and `counted_after_keeps_iff` (l. 409) are further exactly-when statements, general, about optima. B: `Drain.kept_iff` (l. 836): the dweller's need is met exactly where `k ≤ 1`. `Topped.nearing_either` (l. 966): the order by distance has both a keeping optimum and a draining one.
+
+### `no_return`
+- pass a: S: `Flow.held_excess_ends` (l. 759) concludes inactivity at every T+n+k for dependents at need ≥m. It assumes all positive givers require that level, active giving and dependent activity, balanced exchange, n steps of held stocks, isolated families, joint losses above outside gifts and start below n+m; coverage and separation yield blindness.
+- pass b: S: `Flow.held_excess_ends` (l. 759) concludes `∀ k g, W.requires (T+n+k) g c → m ≤ W.need (T+n+k) g c → ¬ W.active (T+n+k) g`: inactive at every step from `T + n` on. This is concluded from premises over `n` steps (via `Flow.joint_excess_ends`, in another module) and is at the loss of what gives (the gated givers). `atSetPoint_breaks` / `atSetPoint_broken_iff` conclude a break at one step only, not that it stays broken. B: `HeldPair.held_end` (l. 1513).
+
+### `rank`
+- pass a: S: `Flow.held_excess_ends` (l. 759) gives deadline T+n from an initial shared level below n+m and n steps of joint excess, with the balance, gate, holder and coupling premises stated above.
+- pass b: S: `Flow.held_excess_ends` (l. 759) is a deadline: where the level of `c` at `T` is below `n + m` and joint losses exceed what is given at each of `n` steps, the dependents are inactive from `T + n` on. No falling variant is stated in this module; the bound comes from `Flow.joint_excess_ends`.
+
+### `closed_region`
+- pass a: B: `Optimum.HeldPair.held` (l. 1443) places each holder’s store at its set point for every time in the supplied course; the general optimum theorem is about eligible outcomes at one step.
+- pass b: N: no region closed under steps, invariant or largest closed set is stated. `Optimum.stock_eq_of_atSetPoint` (l. 715) states only that a family at its set point at two steps has equal stock at them. D: the account (l. 91-93) says a nearing chooser holds its family at the set point wherever an eligible outcome reaches it at each step, and that the course of choices is not formalized.
+
+### `moves`
+- pass a: S: `Optimum.counted_after_keeps_iff` (l. 409) says every optimum ranking distance first and one outside level second keeps its need exactly when some eligible way of reaching the attainable set point keeps it.
+- pass b: S: The choice is an optimum (`Frontier eligible better o`) among eligible outcomes, or among the outcomes `Flow.Outcome` opens to a part in an exchange. It is not a `Process S A`. `atSetPoint_of_reach` (l. 315): every optimum of every nearing order stands at the set point wherever some eligible outcome does. `optima_iff` (l. 340): an outcome is an optimum of some nearing order exactly where it is eligible and at the set point. `nearing_beyond` (l. 669): every nearing optimum standing below its set point at a condition of the family stands beyond at the level before plus what the rest gives, less what the rest takes, less the part's whole capacity. D: the opening account says the course of choices is not formalized (l. 92-93).
+
+### `reading`
+- pass a: B: `Optimum.HeldPair.held_end` (l. 1513) gives loss of renewal while neither holder couples to the pool; `Optimum.HeldPair.held` (l. 1443) keeps both stores at their set points.
+- pass b: S: A nearing order reads only the family `ds`; `byGap` (l. 209) ranks by the family's total gap, and an outcome at the set point is beaten by none whatever it holds beyond (`byGap_unbeaten_at`, l. 256). `least_at_iff` (l. 353): every optimum of every nearing order stands at the least level beyond exactly where all eligible outcomes at the set point stand alike beyond, so the class leaves the beyond undecided. `Flow.held_excess_ends` (l. 759) concludes `¬ W.CoupledInto obs h c` for every holder whose couplings lie in its family apart from `c`: those that end the condition do not couple into it. B: `HeldPair.held_end` (l. 1513): the renewal ends and neither holder couples into the pool. `Topped.counted_after_keeps` (l. 991): a term on the beyond counted after the set point keeps the need.
+
+### declarations of SetPointOptimum.lean (by script)
+  l.182 class asks
+  l.185 def gapTo
+  l.190 def Nearer
+  l.196 def Nearing
+  l.200 def AtSetPoint
+  l.204 def UpToSetPoint
+  l.209 def byGap
+  l.216 theorem setPoint_between
+  l.220 theorem Nearer.gaps
+  l.227 theorem nearing_of_gaps
+  l.232 theorem byGap_nearing
+  l.236 theorem Nearing.mono
+  l.241 theorem gapTo_eq_zero
+  l.246 theorem total_gapTo_eq_zero
+  l.250 theorem atSetPoint_single
+  l.256 theorem byGap_unbeaten_at
+  l.262 theorem atSetPoint_frontier
+  l.268 theorem not_rising_of_unbeaten
+  l.274 theorem byGap_not_rising
+  l.279 theorem nearer_of_atSetPoint
+  l.289 theorem Nearing.not_rising
+  l.300 theorem atSetPoint_iff
+  l.315 theorem atSetPoint_of_reach
+  l.326 theorem mutual_atSetPoint
+  l.340 theorem optima_iff
+  l.353 theorem least_at_iff
+  l.370 def byGapThen
+  l.375 theorem byGapThen_nearing
+  l.380 theorem byGapThen_asymm
+  l.391 theorem byGapThen_not_rising
+  l.400 theorem counted_after_most
+  l.409 theorem counted_after_keeps_iff
+  l.419 def byGapLess
+  l.424 theorem byGapLess_nearing
+  l.433 theorem sub_le_sub_iff
+  l.440 theorem sub_lt_sub_iff
+  l.445 theorem gapTo_of_upTo
+  l.451 theorem nearer_iff_exceeds
+  l.468 theorem Nearing.rises_below
+  l.477 theorem least_below_iff
+  l.502 theorem least_below
+  l.526 theorem Balances.atSetPoint_draws
+  l.537 theorem Balances.held_draws_lost
+  l.549 theorem Balances.atSetPoint_breaks
+  l.562 theorem Balances.atSetPoint_broken_iff
+  l.586 theorem nearing_optimum_draws
+  l.598 theorem Balances.mutual_atSetPoint_draws
+  l.612 theorem Balances.mutual_atSetPoint_breaks
+  l.643 theorem transfer_nearer
+  l.669 theorem nearing_beyond
+  l.682 theorem nearing_as_rising
+  l.702 theorem Optimum.total_le_of_only
+  l.715 theorem Optimum.stock_eq_of_atSetPoint
+  l.729 theorem held_draws
+  l.759 theorem held_excess_ends
+  l.813 def storedAt
+  l.818 theorem storedAt_split
+  l.824 theorem atSetPoint_source
+  l.836 theorem kept_iff
+  l.854 theorem nearing_keeps
+  l.871 theorem nearing_breaks
+  l.880 def satisficingThen
+  l.888 theorem satisficingThen_keeps
+  l.914 def start
+  l.919 def one
+  l.922 def discarding
+  l.931 def drawnOne
+  l.937 abbrev Open
+  l.941 theorem idle_open
+  l.946 theorem discarding_open
+  l.966 theorem nearing_either
+  l.982 theorem rising_drains
+  l.991 theorem counted_after_keeps
+  l.1001 theorem counted_less_drains
+  l.1013 def weighted
+  l.1020 theorem weighted_keeps
+  l.1034 theorem store_le_two
+  l.1058 theorem out_of_reach
+  l.1069 inductive Spot
+  l.1075 def one
+  l.1078 def lopsided
+  l.1084 def even
+  l.1090 def Eligible
+  l.1095 theorem counted_after_empties
+  l.1113 def cost
+  l.1116 def order
+  l.1119 def two
+  l.1122 theorem nearing
+  l.1151 theorem not_by_gaps
+  l.1163 inductive Place
+  l.1169 def flow
+  l.1186 def level
+  l.1194 def web
+  l.1207 def one
+  l.1210 def family
+  l.1214 def Eligible
+  l.1217 theorem balances
+  l.1224 theorem gainless
+  l.1231 theorem best
+  l.1239 theorem jointly_broken
+  l.1267 abbrev Member
+  l.1282 inductive Spot
+  l.1288 def holders
+  l.1294 def store
+  l.1300 def present
+  l.1307 def flow
+  l.1329 def poolLevel
+  l.1332 def level
+  l.1339 def web
+  l.1362 def observes
+  l.1372 def one
+  l.1374 theorem balances
+  l.1385 theorem acting
+  l.1394 theorem dependent
+  l.1402 theorem gated
+  l.1409 theorem members_distinct
+  l.1424 theorem distinct
+  l.1430 theorem alone
+  l.1443 theorem held
+  l.1452 theorem loses
+  l.1460 theorem exceeds
+  l.1467 theorem listed
+  l.1485 theorem apart
+  l.1494 theorem within
+  l.1513 theorem held_end
+
+## Tasks.lean  (1801 lines)  [all four by any part]
+
+### `both_outcomes`
+- pass a: S: `delivers_iff_possible` (l. 240) characterizes delivery by possibility of a legitimate output with performer restored at every eligible input. B: `Unmade.possible_not_possibleFrom` (l. 1678) distinguishes performance with an available enzyme from accessibility of a performer from enzyme-free starts.
+- pass b: N: no exactly-when or dichotomy between going on and ending, or between keeping and losing. The iff statements read are `delivers_iff_possible` (l. 240), `tower_delivers_iff_held` (l. 745) and `Reaching.widensOrLater_iff_of_reach` (l. 177), and none is of that kind. B: `Catalysis.no_course` (l. 961): no run of the cycle exists, so it ends, but no going-on counterpart is stated with it.
+
+### `no_return`
+- pass a: B: `Catalysis.product_stays` (l. 918) concludes product invariance, `transpose_not_possible` (l. 926) excludes the reverse task for any performer reading, and `stuck` (l. 954) excludes every move from free enzyme with product.
+- pass b: S: `Delivers.adds_nothing` (l. 849), general and concluded: nothing becomes possible from a delivery's output that was not possible from its input. B: `Catalysis.product_stays` (l. 918) and `transpose_not_possible` (l. 926): the product is never turned back, and the transpose is possible under no reading (concluded in the build). B: at the loss of something that gives, `Resetting.not_two` (l. 1038) and `not_possible` (l. 1045): once the first delivery resets the second part, no course from substrate 0 reaches 2. `Unmade.absent_stays` (l. 1672) builds in that an absent performer is never made (a premise of the build).
+
+### `rank`
+- pass a: B: `Catalysis.no_course` (l. 961) excludes an infinite run in the built two-transition process (`Catalysis.process`, l. 871).
+- pass b: N: no variant that falls and no general law of ending within a bound. S: `tower_reach_held` (l. 730) gives only some level n from which the performers are held within a reach, with no bound on n. B: `Catalysis.no_course` (l. 961): every course of the catalytic cycle would stop by its third step, so none starts.
+
+### `closed_region`
+- pass a: B: `Conserved.holdsOne_kept` (l. 1547) preserves the joint one-unit reading on every move. By contrast `Catalysis.performs` (l. 888) and `not_held` (l. 897) restore free enzyme at delivery while requiring a departure from free along the trace.
+- pass b: B: invariants of built processes: `Catalysis.product_stays` (l. 918), `Resetting.stays` (l. 1029), `Unregular.stays` (l. 1183), `ResettingInterleaved.stays` (l. 1241), `Conserved.empty_stays`/`full_stays`/`unit_stays` (l. 1306–1318), `Unmade.absent_stays` (l. 1672). `Conserved.holdsOne_kept` (l. 1547): an invariant read as the performer, so every region of it is restored by every course. N: no general law of a largest closed region, kernel or certificate. The performer region K of `Performs` (l. 211) is returned to at a delivery's end, not closed under steps.
+
+### `moves`
+- pass a: S: `Delivers.invariably` (l. 272) upgrades existential delivery to a common output reached on every run from a presented input if successors are fixed on what it reaches.
+- pass b: S: the laws are stated for every `Process S A` with existential delivery (some trace reaches). `Delivers.of_heldMoves` (l. 303): what is delivered by the moves restricted to those holding a relation `Same` (`Reaching.heldMoves`) is delivered by the process. `Delivers.heldMoves_mono` (l. 315): delivery by moves holding `Same` gives delivery by moves holding any weaker `Same'`. `Delivers.invariably` (l. 272): where the successor is fixed at what s reaches (`«定后于»`), the delivered configuration lies on every run from s, so it holds for every course. B: `Catalysis.not_held` (l. 897), `Resetting.not_holding` (l. 1057): restricted to moves holding the part, the task is not delivered.
+
+### `reading`
+- pass a: B: `Conserved.not_raise` (l. 1372) excludes raising the first substrate under any performer reading of the second alone. `Conserved.performs_with_one` (l. 1565) performs it when the part reads whether both together hold one unit.
+- pass b: S: the performing part and the substrate are readings `part : S → C` and `sub : S → X`, and `Possible` (l. 217) ranges over regions K of the part reading. Which reading is taken decides whether a task is possible. B: `Conserved.whole_of_impossible_parts` (l. 1474): raising the first substrate is performed by no region of any reading `f s.2` of the second, while `Conserved.performs_with_one` (l. 1565): read as `holdsOne` (their xor, kept by every move, `holdsOne_kept` l. 1547), the part performs raising. `Conserved.additive_pattern` (l. 1514) gives the four impossible single tasks under readings of the other substrate. `Resetting.listed_not_regular` (l. 1090): listed with the reset part, the pair is no longer regular.
+
+### declarations of Tasks.lean (by script)
+  l.160 theorem coversLater_of_trace
+  l.171 theorem not_widensWithLag_of_reach
+  l.177 theorem widensOrLater_iff_of_reach
+  l.195 def Input
+  l.199 def Presented
+  l.205 def Delivers
+  l.211 def Performs
+  l.217 def Possible
+  l.225 def PossibleFrom
+  l.232 theorem PossibleFrom.possible
+  l.240 theorem delivers_iff_possible
+  l.251 theorem on_every_run
+  l.272 theorem Delivers.invariably
+  l.283 theorem performs_identity
+  l.292 theorem possible_of_no_input
+  l.303 theorem Delivers.of_heldMoves
+  l.309 theorem Performs.of_heldMoves
+  l.315 theorem Delivers.heldMoves_mono
+  l.335 def Regular
+  l.338 def parallel
+  l.342 theorem sameReading_class
+  l.347 theorem Delivers.serial
+  l.356 theorem Performs.serial
+  l.363 theorem Delivers.pair_left
+  l.373 theorem Delivers.pair_right
+  l.387 theorem Delivers.serial_holding
+  l.397 theorem Delivers.parallel_inTurn
+  l.413 theorem Delivers.pair_left_held
+  l.427 theorem Delivers.pair_right_held
+  l.444 theorem Delivers.parallel_holding
+  l.456 theorem Performs.unitPart
+  l.469 theorem Possible.serial_of_unitPart
+  l.487 def interleave
+  l.494 theorem reach_interleave_left
+  l.505 theorem reach_interleave_right
+  l.515 theorem reach_fst_of_interleave
+  l.524 theorem reach_snd_of_interleave
+  l.534 theorem Delivers.interleave_left
+  l.543 theorem Delivers.interleave_right
+  l.551 theorem Presented.interleave
+  l.568 theorem Performs.parallel_interleave
+  l.582 theorem Possible.parallel_interleave
+  l.592 theorem Possible.of_interleave_left
+  l.604 theorem Possible.of_interleave_right
+  l.616 theorem Possible.interleave_left
+  l.627 theorem Possible.interleave_right
+  l.642 theorem Possible.parallel_within
+  l.654 def interleaveOn
+  l.662 theorem reach_interleaveOn_left
+  l.674 theorem reach_interleaveOn_right
+  l.688 theorem Performs.serial_interleaveOn
+  l.711 theorem Possible.serial_interleaveOn
+  l.730 theorem tower_reach_held
+  l.745 theorem tower_delivers_iff_held
+  l.764 theorem tower_made_held
+  l.788 def PossibleWithPartHeld
+  l.793 theorem Delivers.possibleWithPartHeld
+  l.802 theorem changes_of_partHeldGrows
+  l.810 theorem possibleWithPartHeld_of_stays
+  l.820 theorem changes_of_partHeldKeepsWidening
+  l.828 theorem not_partHeldKeepsWidening_of_listed
+  l.849 theorem Delivers.adds_nothing
+  l.871 def process
+  l.875 def Free
+  l.878 def task
+  l.882 theorem reach_product
+  l.888 theorem performs
+  l.897 theorem not_held
+  l.908 theorem not_held_unchanged
+  l.918 theorem product_stays
+  l.926 theorem transpose_not_possible
+  l.938 theorem narrows
+  l.947 theorem into
+  l.954 theorem stuck
+  l.961 theorem no_course
+  l.977 theorem coversLater_all
+  l.983 theorem not_widensOrLater
+  l.998 def process
+  l.1002 def first
+  l.1005 def second
+  l.1008 def On
+  l.1011 theorem performs_first
+  l.1018 theorem performs_second
+  l.1025 theorem regular
+  l.1029 theorem stays
+  l.1038 theorem not_two
+  l.1045 theorem not_possible
+  l.1057 theorem not_holding
+  l.1076 theorem composition_fails
+  l.1083 def firstListed
+  l.1086 def secondListed
+  l.1090 theorem listed_not_regular
+  l.1095 theorem performs_first_by_part
+  l.1104 theorem one_part_two_regions
+  l.1119 def process
+  l.1125 theorem not_holding
+  l.1139 theorem performs_pair
+  l.1160 def process
+  l.1163 def first
+  l.1166 def second
+  l.1169 theorem performs_first
+  l.1176 theorem performs_second
+  l.1183 theorem stays
+  l.1190 theorem not_regular
+  l.1196 theorem composite_not_possible
+  l.1216 def idle
+  l.1219 def process
+  l.1223 theorem first_possible
+  l.1231 theorem second_possible
+  l.1241 theorem stays
+  l.1252 theorem not_two
+  l.1260 theorem not_possible
+  l.1275 theorem composition_fails_within
+  l.1291 def process
+  l.1295 def raise
+  l.1298 def lower
+  l.1301 def holdsOne
+  l.1306 theorem empty_stays
+  l.1312 theorem full_stays
+  l.1318 theorem unit_stays
+  l.1324 theorem second_empty_of_raised
+  l.1333 theorem first_full_of_lowered
+  l.1343 theorem second_full_of_emptied
+  l.1353 theorem first_empty_of_raised_second
+  l.1363 theorem performs_both
+  l.1372 theorem not_raise
+  l.1388 theorem not_lower
+  l.1404 theorem not_raise_second
+  l.1420 theorem not_raise_alone
+  l.1433 theorem not_lower_alone
+  l.1446 theorem not_lower_first_alone
+  l.1459 theorem not_raise_second_alone
+  l.1474 theorem whole_of_impossible_parts
+  l.1483 theorem not_lower_first
+  l.1500 theorem performs_lower_raise
+  l.1514 theorem additive_pattern
+  l.1525 theorem holdsOne_eq_xor
+  l.1533 theorem holdsOne_recodes
+  l.1547 theorem holdsOne_kept
+  l.1565 theorem performs_with_one
+  l.1575 theorem performs_lower_first_with_one
+  l.1586 theorem performs_raise_second_with_one
+  l.1597 theorem performs_lower_second_with_one
+  l.1614 theorem fixed
+  l.1619 theorem performs
+  l.1627 theorem invariably
+  l.1634 theorem performs_function
+  l.1639 theorem moves_change
+  l.1644 theorem performs_identity
+  l.1657 def process
+  l.1660 def task
+  l.1663 theorem performs
+  l.1672 theorem absent_stays
+  l.1678 theorem possible_not_possibleFrom
+  l.1695 def process
+  l.1699 def Alike
+  l.1702 def task
+  l.1705 theorem performs
+  l.1717 theorem not_held
+  l.1731 def task
+  l.1738 theorem widens
+  l.1758 def process
+  l.1761 def task
+  l.1764 def fallen
+  l.1767 theorem stays
+  l.1772 theorem admits_zero
+  l.1780 theorem widens_back
