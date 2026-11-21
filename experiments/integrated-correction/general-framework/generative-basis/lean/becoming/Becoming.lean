@@ -179,6 +179,7 @@ import Becoming.ReadInTime
 import Becoming.PoolFromCourse
 import Becoming.PatternPassing
 import Becoming.JointKeeping
+import Becoming.KeepableStep
 import Becoming.Undecided
 import Becoming.Junctures
 import Becoming.Commuting
@@ -2787,6 +2788,15 @@ tagged instance or application.
   configuration, while from one configuration one run renews and another consumes the
   sustaining formation's condition: keeping a part decides neither renewal nor what the run
   does to others.
+* `Becoming.KeepableStep` (L1): one step of keeping along some course. A guard is keepable from a
+  configuration exactly where it holds there and some step leads to a configuration it is keepable
+  from (`Viability.keepable_step_iff`), the twin of the kernel's step with some step for every
+  step. Every step keeps not being keepable exactly where no step from outside the guard leads to
+  a configuration the guard is keepable from (`Viability.not_keepable_invariant_iff`); where every
+  step keeps the guard's complement this holds, and then along every run whose start is not
+  keepable no configuration is (`Viability.not_keepable_step`, `Viability.not_keepable_run`). In
+  `ChoicePoint` a step gains keepability where that premise fails; on the successor law of the
+  numbers every step keeps not being keepable while the guard's complement is not kept.
 * `Becoming.Tolerance` (L1): thresholds of waiting and the laws that restore giving. Under
   the tolerating law a formation gives where all but its tolerance of what it waits on gave;
   tolerance zero is waiting on all. For every law keeping inclusion of configurations, giving
@@ -5050,7 +5060,9 @@ tagged instance or application.
   With decided marks and the
   course as it was coming below the need, the line never ends exactly where at a step `T` of the course
   as it was, the need met and no level marked before it, the need met and the level marked at it, the
-  line from the next configuration never ends (`TurningInTime.unending_iff_first_marked`); from a way of
+  line from the next configuration never ends (`TurningInTime.unending_iff_first_marked`), a case of
+  the same split under the weaker premise that at some step of the course as it was the need is
+  unmet or the level is marked (`TurningInTime.unending_iff_first_marked_wide`); from a way of
   a kind every step keeps that uses `H₂`, under `RegimeMargin`'s premises for `H₂` up to `hi`, a
   positive need at most `H₂ + y₂` and the level at most `hi`, the line never ends exactly where the
   level is at or above `H₂ + y₂` (`TurningInTime.unending_iff_above`), the case `c := hi + 1` of a law

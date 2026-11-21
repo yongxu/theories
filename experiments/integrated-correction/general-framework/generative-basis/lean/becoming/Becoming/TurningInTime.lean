@@ -82,7 +82,11 @@ configurations and step, not terms of the root.
 * **The split at the first marked level.** With `AloneOutside` and decided marks, where the course as
   it was comes to a level below the need, the line never ends exactly where there is a step `T` of
   the course as it was, the need met and no level marked before it, the need met and the level marked
-  at it, from whose next configuration the line never ends (`unending_iff_first_marked`). From a way
+  at it, from whose next configuration the line never ends (`unending_iff_first_marked`). That law
+  is a case of the same split under a weaker premise, that at some step of the course as it was the
+  need is unmet or the level is marked (`unending_iff_first_marked_wide`); it rests on the split at
+  any step with no marked level before it (`unending_iff_marked_at`), and that on a line under a
+  step while it can go on, split at a step (`unending_from`). From a way
   of a kind every step keeps, that uses `H₂`, with giving short of `H₂` below `y₂`, meeting it from
   `y₂` up to `hi` and the step keeping the level within `hi`, a positive need at most `H₂ + y₂` and
   the level at most `hi`, the line never ends exactly where the level is at or above `H₂ + y₂`
@@ -282,7 +286,8 @@ to meet `H₂` from `y₂` up to `hi` (`RegimeMargin.Meets`), the step under `H�
 in the others the start's).
 `unending_iff_first_marked` needs the course as it was to come below the need (`asItWasEnds`): without
 it, a course never marked whose level never falls below the need is a line that never ends with no
-such step `T` (argued here, not a Lean statement). `turns_in_time_iff` and
+such step `T` (argued here, not a Lean statement); `unending_iff_first_marked_wide` asks less, that at
+some step of the course as it was the need is unmet or the level is marked. `turns_in_time_iff` and
 `turns_in_time_iff_kept_below` need the decidability of the marks (`[DecidablePred marked]`) and the
 course as it was below `H₁ + y₁` with uses of at least `H₁` along `alone`'s orbit.
 `constant_iff_needs_nothing` needs a given way `w₀`. The closed form of the step `T` by
@@ -731,11 +736,112 @@ theorem ends_with_net_rising {marked : Nat → Prop} {alone : W → W} {after : 
 
 /-! ## 5. Turning in time, exactly -/
 
+/-- **A line under a step while it can go on, split at a step.** For any state type, any `can`, `next`
+and start `s`, and any step `T`: the line from `s` under `Law.stepWhile can next` never ends exactly
+where it can go on at every step of the orbit before `T` and the line from the orbit at `T` never
+ends. No premise. By `Law.stepWhile_unending_iff` and `Law.orbit_add`. -/
+theorem unending_from {X : Type u} {can : X → Prop} {next : X → X} {s : X} (T : Nat) :
+    «不穷» (Law.stepWhile can next) «一» s ↔
+      (∀ j, j < T → can (Law.orbit next s j)) ∧
+        «不穷» (Law.stepWhile can next) «一» (Law.orbit next s T) :=
+  ⟨fun never =>
+    have all := Law.stepWhile_unending_iff.mp never
+    ⟨fun j _ => all j, Law.stepWhile_unending_iff.mpr fun k =>
+      Eq.subst (motive := can) (Law.orbit_add next s T k) (all (T + k))⟩,
+   fun ⟨before, onward⟩ =>
+    have rest := Law.stepWhile_unending_iff.mp onward
+    Law.stepWhile_unending_iff.mpr fun i => (Nat.lt_or_ge i T).elim (before i) fun ge =>
+      match le_dest ge with
+      | ⟨k, e⟩ => Eq.subst (motive := fun i => can (Law.orbit next s i)) e.symm
+          (Eq.subst (motive := can) (Law.orbit_add next s T k).symm (rest k))⟩
+
+/-- **Split at a step with no marked level before it.** For this module's net at any need, with
+`AloneOutside` (`outside`: outside the marked levels the way after a step is `alone` of the way) and a
+step `T` of the course as it was from `s` with no marked level at any step before `T` (`before`): the
+line from `s` never ends exactly where the need is met at every step up to and including `T` of the
+course as it was, and the line never ends from the configuration the pair's step gives after the
+course as it was at `T`. Nothing is asked of the level at `T`, of where the course as it was ends, or
+of whether marks are decided. `unending_iff_first_marked_wide` below is this at the first marked step,
+found by a search. By `unending_from` at `T + 1` and `agrees_until_marked`. -/
+theorem unending_iff_marked_at {W : Type u} {marked : Nat → Prop} {alone : W → W}
+    {after : W → Nat → W} {left : W → Nat → Nat}
+    (outside : AloneOutside marked alone after) {need : Nat} {s : W × Nat} {T : Nat}
+    (before : ∀ j, j < T → ¬ marked (Law.orbit (asItWas alone left) s j).2) :
+    «不穷» (net need after left) «一» s ↔
+      (∀ j, j ≤ T → need ≤ (Law.orbit (asItWas alone left) s j).2) ∧
+        «不穷» (net need after left) «一»
+          (pair after left (Law.orbit (asItWas alone left) s T)) :=
+  have agree : ∀ j, j ≤ T → Law.orbit (pair after left) s j =
+      Law.orbit (asItWas alone left) s j :=
+    fun j le => agrees_until_marked outside left s j
+      fun i lt => before i (Nat.lt_of_lt_of_le lt le)
+  (unending_from (can := fun s : W × Nat => need ≤ s.2) (next := pair after left)
+      (s := s) (T + 1)).trans
+    ⟨fun ⟨upto, onward⟩ =>
+      ⟨fun j le => Eq.subst (motive := fun c : W × Nat => need ≤ c.2) (agree j le)
+          (upto j (Nat.lt_succ_of_le le)),
+        Eq.subst (motive := fun c : W × Nat =>
+            «不穷» (net need after left) «一» (pair after left c))
+          (agree T (Nat.le_refl T)) onward⟩,
+     fun ⟨upto, onward⟩ =>
+      ⟨fun j lt => Eq.subst (motive := fun c : W × Nat => need ≤ c.2)
+          (agree j (Nat.le_of_lt_succ lt)).symm (upto j (Nat.le_of_lt_succ lt)),
+        Eq.subst (motive := fun c : W × Nat =>
+            «不穷» (net need after left) «一» (pair after left c))
+          (agree T (Nat.le_refl T)).symm onward⟩⟩
+
+/-- **Split at the first marked level, under a weaker premise.** The law
+`unending_iff_first_marked` below, with its premise `asItWasEnds` (the course as it was comes
+below the need)
+replaced by `stops`: at some step of the course as it was the need is unmet or the level is marked.
+The other premises are the same: `AloneOutside` (`outside`) and decided marks. The same conclusion:
+the line from `s` never ends exactly where there is a step `T` of the course as it was, the need met
+and no level marked before it, the need met and the level marked at it, from whose next configuration
+the line never ends. A course as it was that reaches a marked level and never comes below the need
+meets `stops` and not `asItWasEnds`. By `first_of_decided` and `unending_iff_marked_at`. -/
+theorem unending_iff_first_marked_wide {W : Type u} {marked : Nat → Prop} [DecidablePred marked]
+    {alone : W → W} {after : W → Nat → W} {left : W → Nat → Nat}
+    (outside : AloneOutside marked alone after) {need : Nat} {s : W × Nat}
+    (stops : ∃ n, ¬ (need ≤ (Law.orbit (asItWas alone left) s n).2 ∧
+      ¬ marked (Law.orbit (asItWas alone left) s n).2)) :
+    «不穷» (net need after left) «一» s ↔
+      ∃ T, (∀ j, j < T → need ≤ (Law.orbit (asItWas alone left) s j).2 ∧
+              ¬ marked (Law.orbit (asItWas alone left) s j).2) ∧
+        need ≤ (Law.orbit (asItWas alone left) s T).2 ∧
+        marked (Law.orbit (asItWas alone left) s T).2 ∧
+        «不穷» (net need after left) «一»
+          (pair after left (Law.orbit (asItWas alone left) s T)) :=
+  ⟨fun never => match stops with
+    | ⟨n, stop⟩ =>
+      match first_of_decided
+          (P := fun t => need ≤ (Law.orbit (asItWas alone left) s t).2 ∧
+            ¬ marked (Law.orbit (asItWas alone left) s t).2)
+          (Q := fun t => ¬ (need ≤ (Law.orbit (asItWas alone left) s t).2 ∧
+            ¬ marked (Law.orbit (asItWas alone left) s t).2))
+          (fun t => if h : need ≤ (Law.orbit (asItWas alone left) s t).2 ∧
+              ¬ marked (Law.orbit (asItWas alone left) s t).2 then .inl h else .inr h)
+          n with
+      | .inl allP => absurd (allP n (Nat.le_refl n)) stop
+      | .inr ⟨T, _, notP, before⟩ =>
+        match (unending_iff_marked_at outside (T := T) fun j lt => (before j lt).2).mp never with
+        | ⟨upto, onward⟩ =>
+          ⟨T, before, upto T (Nat.le_refl T),
+            (if h : marked (Law.orbit (asItWas alone left) s T).2 then h
+              else absurd ⟨upto T (Nat.le_refl T), h⟩ notP), onward⟩,
+   fun ⟨T, before, atT, _, onward⟩ =>
+    (unending_iff_marked_at outside (T := T) fun j lt => (before j lt).2).mpr
+      ⟨fun j le => (Nat.lt_or_eq_of_le le).elim (fun lt => (before j lt).1)
+        (fun e => Eq.subst
+          (motive := fun i => need ≤ (Law.orbit (asItWas alone left) s i).2)
+          e.symm atT), onward⟩⟩
+
 /-- **Split at the first marked level.** With `AloneOutside`, where the course as it was comes to a
 level below the need (`asItWasEnds`), the line never ends exactly where there is a step `T` of the
 course as it was, the need met and no level marked before it, the need met and the level marked at it,
 from whose next configuration the line never ends. Whether a level is marked is decided
-(`[DecidablePred marked]`). -/
+(`[DecidablePred marked]`). It is
+`unending_iff_first_marked_wide` where the premise `asItWasEnds` gives that law's weaker premise: a
+level below the need is a step at which the need is unmet. -/
 theorem unending_iff_first_marked {marked : Nat → Prop} [DecidablePred marked] {alone : W → W}
     {after : W → Nat → W} {left : W → Nat → Nat} (outside : AloneOutside marked alone after)
     {need : Nat} {s : W × Nat}
@@ -747,59 +853,9 @@ theorem unending_iff_first_marked {marked : Nat → Prop} [DecidablePred marked]
         marked (Law.orbit (asItWas alone left) s T).2 ∧
         «不穷» (net need after left) «一»
           (pair after left (Law.orbit (asItWas alone left) s T)) :=
-  Law.stepWhile_unending_iff.trans
-    ⟨fun all => match asItWasEnds with
-      | ⟨n, ended⟩ =>
-        match first_of_decided
-            (P := fun t => need ≤ (Law.orbit (asItWas alone left) s t).2 ∧
-              ¬ marked (Law.orbit (asItWas alone left) s t).2)
-            (Q := fun t => ¬ (need ≤ (Law.orbit (asItWas alone left) s t).2 ∧
-              ¬ marked (Law.orbit (asItWas alone left) s t).2))
-            (fun t => if h : need ≤ (Law.orbit (asItWas alone left) s t).2 ∧
-                ¬ marked (Law.orbit (asItWas alone left) s t).2 then .inl h else .inr h)
-            n with
-        | .inl allP => absurd (allP n (Nat.le_refl n)).1 (Nat.not_le_of_gt ended)
-        | .inr ⟨T, _, notP, before⟩ =>
-          have agree : ∀ j, j ≤ T →
-              Law.orbit (pair after left) s j = Law.orbit (asItWas alone left) s j :=
-            fun j le => agrees_until_marked outside left s j
-              (fun i lt => (before i (Nat.lt_of_lt_of_le lt le)).2)
-          have atT : need ≤ (Law.orbit (asItWas alone left) s T).2 :=
-            Eq.subst (motive := fun z : W × Nat => need ≤ z.2) (agree T (Nat.le_refl T)) (all T)
-          have markedT : marked (Law.orbit (asItWas alone left) s T).2 :=
-            if h : marked (Law.orbit (asItWas alone left) s T).2 then h
-            else absurd ⟨atT, h⟩ notP
-          ⟨T, before, atT, markedT, Law.stepWhile_unending_iff.mpr fun k =>
-            Eq.subst (motive := fun z : W × Nat => need ≤ z.2)
-              ((Law.orbit_add (pair after left) s T (k + 1)).trans
-                ((Law.orbit_shift (pair after left) _ k).trans
-                  (congrArg (fun z => Law.orbit (pair after left) (pair after left z) k)
-                    (agree T (Nat.le_refl T)))))
-              (all (T + (k + 1)))⟩,
-     fun ⟨T, before, atT, _, onward⟩ =>
-      have agree : ∀ j, j ≤ T →
-          Law.orbit (pair after left) s j = Law.orbit (asItWas alone left) s j :=
-        fun j le => agrees_until_marked outside left s j
-          (fun i lt => (before i (Nat.lt_of_lt_of_le lt le)).2)
-      have later := Law.stepWhile_unending_iff.mp onward
-      fun n => match Nat.lt_or_ge n (T + 1) with
-        | .inl lt =>
-          have le : n ≤ T := Nat.le_of_lt_succ lt
-          have val : need ≤ (Law.orbit (asItWas alone left) s n).2 :=
-            match Nat.lt_or_eq_of_le le with
-            | .inl lt' => (before n lt').1
-            | .inr e => Eq.subst
-                (motive := fun i => need ≤ (Law.orbit (asItWas alone left) s i).2)
-                e.symm atT
-          Eq.subst (motive := fun z : W × Nat => need ≤ z.2) (agree n le).symm val
-        | .inr ge => match le_dest ge with
-          | ⟨k, e⟩ =>
-            Eq.subst (motive := fun z : W × Nat => need ≤ z.2)
-              ((congrArg (Law.orbit (pair after left) s) e).trans
-                ((Law.orbit_add (pair after left) s (T + 1) k).trans
-                  (congrArg (fun z => Law.orbit (pair after left) (pair after left z) k)
-                    (agree T (Nat.le_refl T))))).symm
-              (later k)⟩
+  unending_iff_first_marked_wide outside
+    (match asItWasEnds with
+      | ⟨n, ended⟩ => ⟨n, fun h => Nat.not_le_of_gt ended h.1⟩)
 
 /-- **From a way of the kept kind the pair's level is the level's course under `H₂`.** From a way `w`
 of a kind every step keeps (`kept`) whose ways use `H₂` (`uses`), at every step the pair's way is of
