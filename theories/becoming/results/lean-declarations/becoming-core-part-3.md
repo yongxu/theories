@@ -3497,6 +3497,36 @@ Definitions and types:
 
 </details>
 
+<a id="module-5903ce8e2fd7"></a>
+
+<details>
+<summary>KeepableStep.lean — 11 explicit declarations</summary>
+
+[Source](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeepableStep.lean) · [Package notes](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/README.md) · Core receipt: core layer, bytes as checked
+
+`experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeepableStep.lean`
+
+Imports: `Becoming.JointKeeping`, `Becoming.Horizon`
+
+| Theorem or lemma | Line |
+|---|---:|
+| [Becoming.Viability.keepable_step_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeepableStep.lean#L50) | 50 |
+| [Becoming.Viability.not_keepable_invariant_iff](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeepableStep.lean#L68) | 68 |
+| [Becoming.Viability.not_keepable_step](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeepableStep.lean#L83) | 83 |
+| [Becoming.Viability.not_keepable_run](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeepableStep.lean#L94) | 94 |
+| [Becoming.Viability.ChoicePoint.keepable_gained](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeepableStep.lean#L115) | 115 |
+| [Becoming.Viability.ChoicePoint.keepable_gained_along_run](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeepableStep.lean#L125) | 125 |
+| [Becoming.Viability.Successor.nowhere_keepable](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeepableStep.lean#L144) | 144 |
+| [Becoming.Viability.Successor.not_keepable_kept_complement_not](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeepableStep.lean#L156) | 156 |
+
+Definitions and types:
+
+- `def` [Becoming.Viability.ChoicePoint.afterSplit](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeepableStep.lean#L105) (L105)
+- `def` [Becoming.Viability.Successor.process](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeepableStep.lean#L137) (L137)
+- `def` [Becoming.Viability.Successor.atOne](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeepableStep.lean#L140) (L140)
+
+</details>
+
 <a id="module-67adbe44fe92"></a>
 
 <details>

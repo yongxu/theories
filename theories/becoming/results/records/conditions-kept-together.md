@@ -23,6 +23,8 @@
 5. At a process's model, a kernel is the closure of the steps from a configuration lying within the guard; it lies within a meet of guards exactly where it lies within each, a law of logic for any relation. (`Becoming.ModelStatements.kernel_and_reading`, `Becoming.ModelStatements.kernel_iff`)
    - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
    - *At a model (declared; reviewed in [RECHECK-U2.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md)):* `Becoming.ModelStatements.kernel_and_reading` states `Becoming.Viability.kernel_and_iff` at a process's model. Computed: its proof reaches the row; its statement names, directly or through its module's definitions, `Becoming.«所闭»`; it keeps `Generative.Process` in other terms. The row taken alone: on no shared law's anchor.
+6. A guard is keepable from a configuration exactly when it holds there and some step leads to a configuration it is keepable from. Every step keeps not being keepable exactly when no step from outside the guard leads to a configuration it is keepable from, as where every step keeps the guard's complement; in ChoicePoint a step gains keepability, and on the successor law the complement is not kept. (`Becoming.Viability.keepable_step_iff`, `Becoming.Viability.not_keepable_invariant_iff`, `Becoming.Viability.not_keepable_step`, `Becoming.Viability.not_keepable_run`, `Becoming.Viability.ChoicePoint.keepable_gained`, `Becoming.Viability.Successor.not_keepable_kept_complement_not`)
+   - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions
@@ -34,13 +36,14 @@
 
 - Which choices an actual collective's continuation goes through, or a measure of joint keeping.
 - That a kept collective is better than another, or that renewing is better than consuming.
+- That one way of selecting is placed against another: the step law is of some run keeping a guard. No law here relates the kernel to keepability, and the link to the renewal laws outside the package is not in this record.
 
 **Standard boundaries:** No ethical premise and no Lean axiom is used. · Contains no ethical predicate and evaluates neither arising nor ceasing. · Stated for discrete steps. · A law of the formal model; its correspondence to actual systems is a separate obligation. · Names follow the structural naming criteria and are adopted only where the statement has their exact meaning; readings are interpretations, open to revision. · The model omits relations; what it omits it neither shows nor rules out.
 
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261019T064004.300228Z): the 40 declarations of Becoming.JointKeeping, 23 of them theorems, have empty axiom reports; the checker verifies core purity. Built in scratch by an Opus prover, reviewed by a separate Opus reviewer against the brief, fixed; author review in study section 193; not independently reviewed by a person.
+Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261019T064004.300228Z): the 40 declarations of Becoming.JointKeeping, 23 of them theorems, have empty axiom reports; the checker verifies core purity. Built in scratch by an Opus prover, reviewed by a separate Opus reviewer against the brief, fixed; author review in study section 193; not independently reviewed by a person. Becoming.KeepableStep's 11 declarations, 8 of them theorems, have empty axiom reports by receipt 20261121T133506.986317Z; written by an AI worker, read by AI readers who took no part.
 
 Canonical source: [JointKeeping.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JointKeeping.lean)
 
@@ -91,6 +94,8 @@ An account of social viability Ren brought on 19 October 2026 lists eight constr
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261101T094230.205342Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T132906.779148Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261106T215831.788727Z/verification.json) | — |
+| proof | [KeepableStep.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeepableStep.lean) | `Becoming.Viability.ChoicePoint.afterSplit`, `Becoming.Viability.ChoicePoint.keepable_gained`, `Becoming.Viability.ChoicePoint.keepable_gained_along_run`, `Becoming.Viability.Successor.atOne`, `Becoming.Viability.Successor.not_keepable_kept_complement_not`, `Becoming.Viability.Successor.nowhere_keepable`, `Becoming.Viability.Successor.process`, `Becoming.Viability.keepable_step_iff`, `Becoming.Viability.not_keepable_invariant_iff`, `Becoming.Viability.not_keepable_run`, `Becoming.Viability.not_keepable_step` |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T133506.986317Z/verification.json) | — |
 
 Aliases: `conditions kept together`, `共同保持的条件`, `keeping a part is not renewal`, `Becoming.Viability.ChoicePoint.no_rule_decides_joint`, `Becoming.Renewable.kept_part_not_renewal`, `viability is not a product (reading)`
 
@@ -104,6 +109,7 @@ Aliases: `conditions kept together`, `共同保持的条件`, `keeping a part is
 - 20 October 2026, R32 (forwarders, copies and reading modules: pure forwarders removed, statements stated once, reading modules folded into the module they read): Removed as pure forwarders (each applied one law to its own binders), the law named instead: Viability.Keepable.of_keepsMoving (now Onward.KeepsMoving.run). Proof bindings (JointKeeping.lean) rebound to core receipt 20261019T231053.882924Z. Re-pointed after reading the change: BECOMING-RENEWAL-READING.md, section 223 added; JointKeeping.lean, pure forwarders and copies removed (B10, B9), uses pointed at the law they restate; imports follow the folds; kept statements unchanged; THE-THEORY-OF-BECOMING.md, §9 (receipt, counts, connectivity under the measure that no longer counts restatement) follows R32. The claim is unchanged.
 - 30 October 2026 (U2, study section 461): a law at the model added, stating `Becoming.Viability.kernel_and_iff` where its terms are the grammar's, through the row (F5's statements_at_model, reviewed in RECHECK-U2); the row's statement, proof and every other law unchanged.
 - 9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim and its Lean unchanged.
+- 21 November 2026, board row FM (Ren's words of that day, sources/15-codex-theory-conversations/2026-11-21-a-full-map-with-its-centre.md): one law added, the step of keeping along some course with what a step does to not being keepable and its two built cases, from the new module Becoming.KeepableStep (a scratch module of that day by an AI worker under the session holding row DJ, read there by a reader who took no part; its tellings read again before the core run by another, eleven lesser places mended), bound to core run 20261121T133506.986317Z. One item added to what it does not show. The five earlier laws, the statement and their Lean are unchanged. The step law has the same form as the kernel's step; no theorem relates the two.
 - 1 rebinding entry (2026-10-20): receipts re-pointed or sources rehashed after reading their changes, with the claim unchanged. Each is kept in the [record](conditions-kept-together.json).
 
 <a id="earlier-text--早期文本"></a>
@@ -113,4 +119,4 @@ Aliases: `conditions kept together`, `共同保持的条件`, `keeping a part is
 
 </details>
 
-Documentary review UTC: `2026-11-09T04:32:28+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-21T15:22:57+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

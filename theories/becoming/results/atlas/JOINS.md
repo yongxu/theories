@@ -29,7 +29,7 @@ The map lives in five stores built apart. `tools/research/atlas_index.py` reads 
 | Crosswalk entries none of whose targets resolves to a record (or with no target) | 277 of 1,183 |
 | Crosswalk entries that reach a dynamic through a record | 693 of 1,183 |
 | Live theorem records the atlas's dynamics do not cite | 287 of 537 |
-| Nodes of the theory graph that are a dynamic, exit, transition, test, premise or correspondence | 0 of 3,299 |
+| Nodes of the theory graph that are a dynamic, exit, transition, test, premise or correspondence | 0 of 3,300 |
 | Live hypotheses, and their distinct wordings | 1,324, 1,296 |
 
 ## Exits and transitions
@@ -486,11 +486,11 @@ Where a folder holds several tests, a join through it cannot tell which: 9 folde
 
 ## The atlas and the theory graph
 
-The theory graph has 3,299 nodes (1,724 text, 567 result, 559 section, 405 module, 41 concept, 3 dossier), and none of them is a dynamic, exit, transition, test, premise or correspondence: the atlas and the graph share no node. They meet only through records: 178 of 185 dynamics cite a record that is a result node of the graph, and 7 cite no record ([four-routes-of-transition](families/a.md#four-routes-of-transition), reading; [capture-reaching-the-routes-of-correction](families/c.md#capture-reaching-the-routes-of-correction), reading; [selection-for-narrowing-what-couples-in](families/c.md#selection-for-narrowing-what-couples-in), reading; [self-reproducing-selection-across-carriers](families/c.md#self-reproducing-selection-across-carriers), open; [locked-seeking](families/d.md#locked-seeking), reading; [obscuration-and-reopening](families/d.md#obscuration-and-reopening), reading; [cooperation-read-as-giving-that-waits](families/e.md#cooperation-read-as-giving-that-waits), reading).
+The theory graph has 3,300 nodes (1,724 text, 567 result, 559 section, 406 module, 41 concept, 3 dossier), and none of them is a dynamic, exit, transition, test, premise or correspondence: the atlas and the graph share no node. They meet only through records: 178 of 185 dynamics cite a record that is a result node of the graph, and 7 cite no record ([four-routes-of-transition](families/a.md#four-routes-of-transition), reading; [capture-reaching-the-routes-of-correction](families/c.md#capture-reaching-the-routes-of-correction), reading; [selection-for-narrowing-what-couples-in](families/c.md#selection-for-narrowing-what-couples-in), reading; [self-reproducing-selection-across-carriers](families/c.md#self-reproducing-selection-across-carriers), open; [locked-seeking](families/d.md#locked-seeking), reading; [obscuration-and-reopening](families/d.md#obscuration-and-reopening), reading; [cooperation-read-as-giving-that-waits](families/e.md#cooperation-read-as-giving-that-waits), reading).
 
 ## Declarations
 
-The core run lists 27,894 declarations. The atlas's dynamics name 2,648, of which 2,464 are in the core run's list and the rest in the periphery (the atlas render checks that each is declared in a live Lean file). Of the 2,757 times a dynamic names a declaration, 8 name one that none of the dynamic's own records lists, so the declaration joins the dynamic to no record; 376 of the declarations named are listed by more than one record. The records list 25,515 declarations, 23,262 of them by the core run's name. The Lean catalogue (`lean-index.json`) is loaded in the index the command writes and not read here: the same render writes it later, so a page reading it would lag a render.
+The core run lists 27,908 declarations. The atlas's dynamics name 2,648, of which 2,464 are in the core run's list and the rest in the periphery (the atlas render checks that each is declared in a live Lean file). Of the 2,757 times a dynamic names a declaration, 8 name one that none of the dynamic's own records lists, so the declaration joins the dynamic to no record; 376 of the declarations named are listed by more than one record. The records list 25,529 declarations, 23,276 of them by the core run's name. The Lean catalogue (`lean-index.json`) is loaded in the index the command writes and not read here: the same render writes it later, so a page reading it would lag a render.
 
 ## Ambiguous joins
 

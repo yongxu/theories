@@ -9140,6 +9140,17 @@
    "reaches_grammar": true
   },
   {
+   "id": "module:Becoming.KeepableStep",
+   "type": "module",
+   "name": "Becoming.KeepableStep",
+   "level": "L1",
+   "theorems": 8,
+   "region": "map",
+   "base": "frame",
+   "on_grammar": false,
+   "reaches_grammar": true
+  },
+  {
    "id": "module:Becoming.Undecided",
    "type": "module",
    "name": "Becoming.Undecided",
@@ -11542,7 +11553,7 @@
    "type": "module",
    "name": "Becoming.TurningInTime",
    "level": "L2",
-   "theorems": 78,
+   "theorems": 81,
    "region": "map",
    "base": "general",
    "on_grammar": true,
@@ -34338,6 +34349,16 @@
    "type": "imports"
   },
   {
+   "from": "module:Becoming.KeepableStep",
+   "to": "module:Becoming.Horizon",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.KeepableStep",
+   "to": "module:Becoming.JointKeeping",
+   "type": "imports"
+  },
+  {
    "from": "module:Becoming.Keeping",
    "to": "module:Becoming.Viability",
    "type": "imports"
@@ -41593,6 +41614,11 @@
   {
    "from": "record:conditions-kept-together",
    "to": "module:Becoming.JointKeeping",
+   "type": "proved-in"
+  },
+  {
+   "from": "record:conditions-kept-together",
+   "to": "module:Becoming.KeepableStep",
    "type": "proved-in"
   },
   {

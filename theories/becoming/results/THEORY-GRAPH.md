@@ -6,7 +6,7 @@
 
 [中文（各章一览）](THEORY-GRAPH.zh.md) · 81–106 minutes to read in full; the terrain and the chapters at a glance, what the chapters' picture shows and the edge kinds, with their tables, in 36–46 minutes.
 
-One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts, the chapter sections that state results and the review dossiers, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3299 nodes, 7244 edges. An edge records a dependence, a citation or a registered reading, not an agreement in meaning.
+One graph of the theory: the grammar's concepts, the results, the Lean modules, the corpus texts, the chapter sections that state results and the review dossiers, with the edges between them ([data](data/theory-graph.json); regions curated in [regions.json](data/regions.json)). 3300 nodes, 7247 edges. An edge records a dependence, a citation or a registered reading, not an agreement in meaning.
 
 Two pictures, the dynamics first: [the terrain](atlas/TERRAIN.md) shows the dynamics of [the atlas](atlas/ATLAS.md) and the exits recorded between their families, drawn by `tools/research/atlas.py` from the atlas's entries alone, an arrow a count of exits, not a route; the picture under [the chapters at a glance](#the-spine) shows the chapters and their recorded uses of one another.
 
@@ -92,7 +92,7 @@ A region's results are the records whose home section is in its chapter, so the 
 | Region | Concepts | Results | Modules | Texts |
 |---|---:|---:|---:|---:|
 | The root: relation, condition, class, continuation, core | 31 | 86 | 74 | 0 |
-| The map: generation, keeping, degeneration, orders, capture and the lock | 5 | 103 | 85 | 0 |
+| The map: generation, keeping, degeneration, orders, capture and the lock | 5 | 103 | 86 | 0 |
 | Knowing and testing | 0 | 110 | 88 | 0 |
 | Life and evolution | 0 | 46 | 23 | 0 |
 | Collectives and selection | 0 | 74 | 28 | 0 |
@@ -494,7 +494,7 @@ Results (103):
 - [Where two courses rejoin](records/where-two-courses-rejoin.md) (recorded-checked)
 - [Whether a loop closes, keeps or widens a difference](records/whether-a-loop-closes-a-difference.md) (recorded-checked)
 
-Modules (85, 19 stated on the grammar): `Admission`, `Amounts`, `Arising`, `Attraction`, `AttractionRuns`, `BandRest`, `Branching`, `Capture`, `ChoiceCountCapture`, `ClosedCapture`, `Closing`, `Commuting`, `Continuation`, `Continuity`, `Countdown`, `CouplingTraces`, `CourseWorlds`, `Cuts`, `Dissipation`, `DrawHistory`, `DrawnBeyond`, `DrawnReplacement`, `DrawnShaping`, `Enough`, `Entropy`, `Exhaustion`, `Feeding`, `Flow`, `FormedLoops`, `Frequency`, `Gain`, `Gated`, `GrammarMap`, `GuardHorizon`, `GuardedStep`, `HistorySums`, `HorizonWebs`, `InAmounts`, `Irreversibility`, `JointKeeping`, `Junctures`, `Keeping`, `LastChange`, `Lasting`, `LastingRuns`, `LeastLoss`, `LevelCoupling`, `LineOnAStock`, `LineOnAStockCases`, `LoopReturn`, `Loops`, `MapInstances`, `MapRegions`, `Novelty`, `Onward`, `Openness`, `Pace`, `PoolFromCourse`, `Propagation`, `ReadInTime`, `Recurrence`, `RegimeMargin`, `Regulation`, `Remainder`, `RenewalBound`, `RenewalFlow`, `Reserve`, `Restoration`, `RouteTraces`, `Routes`, `RuleCapture`, `RuleShaping`, `RunTurns`, `Runaway`, `SeekingRuns`, `Settling`, `Stock`, `StrengthFlows`, `Substitution`, `Succession`, `Thresholds`, `TurningInTime`, `Viability`, `WayOfUnits`, `Wholes`
+Modules (86, 19 stated on the grammar): `Admission`, `Amounts`, `Arising`, `Attraction`, `AttractionRuns`, `BandRest`, `Branching`, `Capture`, `ChoiceCountCapture`, `ClosedCapture`, `Closing`, `Commuting`, `Continuation`, `Continuity`, `Countdown`, `CouplingTraces`, `CourseWorlds`, `Cuts`, `Dissipation`, `DrawHistory`, `DrawnBeyond`, `DrawnReplacement`, `DrawnShaping`, `Enough`, `Entropy`, `Exhaustion`, `Feeding`, `Flow`, `FormedLoops`, `Frequency`, `Gain`, `Gated`, `GrammarMap`, `GuardHorizon`, `GuardedStep`, `HistorySums`, `HorizonWebs`, `InAmounts`, `Irreversibility`, `JointKeeping`, `Junctures`, `KeepableStep`, `Keeping`, `LastChange`, `Lasting`, `LastingRuns`, `LeastLoss`, `LevelCoupling`, `LineOnAStock`, `LineOnAStockCases`, `LoopReturn`, `Loops`, `MapInstances`, `MapRegions`, `Novelty`, `Onward`, `Openness`, `Pace`, `PoolFromCourse`, `Propagation`, `ReadInTime`, `Recurrence`, `RegimeMargin`, `Regulation`, `Remainder`, `RenewalBound`, `RenewalFlow`, `Reserve`, `Restoration`, `RouteTraces`, `Routes`, `RuleCapture`, `RuleShaping`, `RunTurns`, `Runaway`, `SeekingRuns`, `Settling`, `Stock`, `StrengthFlows`, `Substitution`, `Succession`, `Thresholds`, `TurningInTime`, `Viability`, `WayOfUnits`, `Wholes`
 
 
 ## Knowing and testing
@@ -931,4 +931,4 @@ Results (7):
 
 ## Not yet on the root
 
-312 of 405 core modules do not yet state their theorems on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.
+313 of 406 core modules do not yet state their theorems on the grammar (they neither are a grammar module nor import one); lifting them, as the continuation family was lifted, is the restructure's remaining formal work. A result marked · is not yet stated by a section of a live chapter.

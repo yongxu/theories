@@ -3142,6 +3142,7 @@
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JointPhase.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JointPlans.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Junctures.lean",
+        "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeepableStep.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Keeping.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeepingWidening.lean",
         "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Labelled.lean",
