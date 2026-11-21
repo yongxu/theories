@@ -79,6 +79,8 @@ import Becoming.Tower
 import Becoming.Openness
 import Becoming.Decidedness
 import Becoming.Refinement
+import Becoming.PredicateIteration
+import Becoming.RisingIteration
 import Becoming.CensusTable
 import Becoming.Counting
 import Becoming.Standing
@@ -1132,6 +1134,28 @@ tagged instance or application.
   AI's, adopted on Ren's delegation of 15 October 2026.
   A conclusion following from a proposition and from its failure holds wherever it is stable, with
   the proposition undecided.
+* `Becoming.PredicateIteration` (L1): a step on predicates applied as many times as a list is long,
+  with no premise beyond what each statement names. `Iteration.iter Φ V₀ n` is the predicate `V₀`
+  after the step `Φ` has been applied `n` times. For a step that preserves inclusion and whose
+  value at the start lies inside the start, where a list holds every state of the start, the
+  iterate at the list's length lies inside the next (`Iteration.iter_persists`), holds exactly
+  what is in every iterate (`Iteration.iter_iff_all`), and is the largest class inside the start
+  that lies inside its own step (`Iteration.iter_largest`). For a step that preserves inclusion
+  and whose start lies inside its own first step, let G be that a state y is in the iterate at a
+  list's length: if the step commutes with implication to G (`Iteration.CommutesWithImplication`)
+  and the list holds every state at which membership in the start implies G, then y in any
+  iterate is in the iterate at the list's length (`Iteration.iter_within_length`). It imports only
+  `Becoming.Prelude` and holds two lemmas on lists (`remove_mem`, `gather_listed`). The kinds of
+  keeping, likeness to depth and reach along a relation are stated as cases in the modules of
+  those notions.
+* `Becoming.RisingIteration` (L1): what follows for every monotone step where every state is
+  listed, and what a bound for every step would decide. Where a list holds every state, every
+  monotone step commutes with implication to falsity (`Iteration.commutes_false`); so for a
+  monotone step whose start lies inside its own first step, a state in the iterate one past the
+  list's length cannot be refuted to be in the iterate at its length (`Iteration.rise_not_not`),
+  and is in it where that follows from its double negation (`Iteration.rise_of_stable`). If, for
+  every monotone step on a one-state type, being in iterate 2 from the empty predicate implied
+  being in iterate 1, every proposition would be decided (`Iteration.singleton_rise_needs_em`).
 * `Becoming.Refinement` (L1): a chain of equivalences stops within its classes (P83c), with no
   premise beyond the decisions it counts. Members a list holds that a relation keeps pairwise
   apart are no more than the list; where two members joined at one step are apart at the next, a
@@ -1578,8 +1602,10 @@ tagged instance or application.
   reachable ranges (`Reaching.widens_iff_extension`); covering cannot see when a commitment is made
   (`DeferredBranching.cover_both`, `DeferredBranching.early_not_simulating_late`), and on a witness
   the bundles realizable within every bound do not determine what can be reached together
-  (`KeptTogether.no_comparison_through_bundles`). Each law is near-definitional or a witness. A
-  leaf: alternative comparisons and their witnesses, which no module uses (board item UE10).
+  (`KeptTogether.no_comparison_through_bundles`). Each law is near-definitional or a witness, but
+  for the bound on moves (`Reaching.trace_within_pred_length`), a case of
+  `Becoming.PredicateIteration`'s bound through `Becoming.CommonResponse`. A leaf: alternative
+  comparisons and their witnesses, which no module uses (board item UE10).
 * `Becoming.HeldPossible` (L1): where the possible grows, read on any process through what each
   configuration admits. A move adds nothing to the possible under its process
   (`Reaching.not_reach_of_grows`, `Reaching.not_step_of_grows`), so where it keeps widening along a
@@ -3870,10 +3896,11 @@ tagged instance or application.
   a run never returning up to likeness fixes no other move, and read through a projection a move
   not taken is not fixed up to likeness; the dichotomy of difference-making needs one level after
   the move. On finite frames whose steps and claims are decided, configurations are alike exactly
-  where they pass the same branching tests, by a constructive proof in which refinement stops
-  within the number of pairs of configurations and, counting classes, within `N - 1` for one
-  frame of `N` configurations, exactly, and `N + N' - 1` across two; deciding likeness for every
-  finite frame is excluded middle.
+  where they pass the same branching tests, by a constructive proof; where a list holds the
+  configurations of each frame, with nothing decided, configurations alike to the depth of the
+  product of the lists' lengths are alike to the next and are alike; counting classes on finite
+  decided frames, refinement stops within `N - 1` for one frame of `N` configurations, exactly,
+  and `N + N' - 1` across two; deciding likeness for every finite frame is excluded middle.
 * `Becoming.Distinguishing` (L1): what tells configurations apart, and how deep, with no
   premise. Under a determined law read through a registration, in a world a list of `N`
   configurations holds, two configurations pass the same tests exactly where their registered

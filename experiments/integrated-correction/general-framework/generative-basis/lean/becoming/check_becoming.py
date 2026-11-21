@@ -105,7 +105,7 @@ CORE = ["Becoming.Grammar", "Becoming.GrammarReadings", "Becoming.GrammarMap", "
         "Becoming.Seeking", "Becoming.Roles", "Becoming.LabelledRoles",
         "Becoming.Reserve", "Becoming.Evolution", "Becoming.Capture", "Becoming.SelectionTerm", "Becoming.Reproduction", "Becoming.SelectionLevels", "Becoming.GroupEnding", "Becoming.RootForms", "Becoming.Founding", "Becoming.Drift", "Becoming.Space",
         "Becoming.Premises", "Becoming.Sampling", "Becoming.Tower",
-        "Becoming.Openness", "Becoming.Decidedness", "Becoming.Refinement", "Becoming.CensusTable", "Becoming.Counting", "Becoming.Standing", "Becoming.Resolution", "Becoming.Amounts", "Becoming.LeastLoss", "Becoming.WholeAmounts", "Becoming.InAmounts", "Becoming.Entropy", "Becoming.SelectionPace", "Becoming.Units", "Becoming.Imbalance", "Becoming.Continuity",
+        "Becoming.Openness", "Becoming.Decidedness", "Becoming.Refinement", "Becoming.PredicateIteration", "Becoming.RisingIteration", "Becoming.CensusTable", "Becoming.Counting", "Becoming.Standing", "Becoming.Resolution", "Becoming.Amounts", "Becoming.LeastLoss", "Becoming.WholeAmounts", "Becoming.InAmounts", "Becoming.Entropy", "Becoming.SelectionPace", "Becoming.Units", "Becoming.Imbalance", "Becoming.Continuity",
         "Becoming.Continuation", "Becoming.RenewalFlow", "Becoming.Admission", "Becoming.Exclusion", "Becoming.Exhaustion",
         "Becoming.Regions", "Becoming.EventualWidening", "Becoming.EventualWideningInstances", "Becoming.ComparingCourses", "Becoming.ReachableRanges", "Becoming.HeldPossible", "Becoming.Tasks", "Becoming.CausalGrowth", "Becoming.Presence", "Becoming.ReorderingGrowth", "Becoming.FreeEnergyGuarantees", "Becoming.Blanket", "Becoming.BlanketWeights", "Becoming.BlanketCouplings", "Becoming.LumpedSeeking", "Becoming.FreeEnergyCounting", "Becoming.ModelStatements", "Becoming.Growth", "Becoming.Retaining", "Becoming.OwnWidening", "Becoming.Clearing", "Becoming.Extension",
         "Becoming.Metaethics", "Becoming.Lifting", "Becoming.Ranking", "Becoming.ActiveReading", "Becoming.LossMatching", "Becoming.StrictTransport", "Becoming.MatchedCourses",
@@ -1734,6 +1734,18 @@ SCOPE = (
     "are no more than the list; a chain of equivalences, each finer than the one before and decided "
     "among N listed members, with c of them apart at the first step, stops refining at some k with "
     "k + c <= N, and the decisions of finitely many propositions are together refuted by nothing. "
+    "PredicateIteration: for a step on predicates that preserves inclusion and whose value at the start "
+    "lies inside the start, where a list holds every state of the start, the iterate at the list's length "
+    "lies inside the next, holds exactly what is in every iterate, and is the largest class inside the start "
+    "that lies inside its own step; for a step that preserves inclusion and whose start lies inside its own "
+    "first step, with G the proposition that a state y is in the iterate at a list's length: if the step "
+    "commutes with implication to G and the list holds every state at which membership in the start "
+    "implies G, then y in any iterate is in the iterate at the list's length. "
+    "RisingIteration: where a list holds every state, every monotone step commutes with implication to "
+    "falsity, so for a monotone step whose start lies inside its own first step a state in the iterate one "
+    "past the list's length cannot be refuted to be in the iterate at its length, and is in it where that "
+    "follows from its double negation; if for every monotone step on a one-state type being in iterate 2 "
+    "from the empty predicate implied being in iterate 1, every proposition would be decided. "
     "Counting: what the premises add to the laws of counting, the tally being the whole law "
     "of counting with no premise: "
     "relata queuing with nothing flowing meet every premise but "

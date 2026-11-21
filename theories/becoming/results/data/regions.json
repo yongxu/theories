@@ -4872,6 +4872,16 @@
    "region": "map",
    "base": "general",
    "note": "DJ the two built examples of LineageRegimes and LineageDrawdown as courses of LineOnAStock's model"
+  },
+  "Becoming.PredicateIteration": {
+   "region": "method",
+   "base": "general",
+   "note": "a monotone step on predicates applied as many times as a list is long: the iterate at the list's length holds what every iterate holds; rising steps that commute with implication"
+  },
+  "Becoming.RisingIteration": {
+   "region": "method",
+   "base": "general",
+   "note": "rising iteration where every state is listed: up to a double negation; what a bound for every step would decide"
   }
  }
 }
