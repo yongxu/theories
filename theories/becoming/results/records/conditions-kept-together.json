@@ -73,8 +73,8 @@
       ]
     },
     {
-      "en": "A guard is keepable from a configuration exactly when it holds there and some step leads to a configuration it is keepable from. Every step keeps not being keepable exactly when no step from outside the guard leads to a configuration it is keepable from, as where every step keeps the guard's complement; in ChoicePoint a step gains keepability, and on the successor law the complement is not kept.",
-      "zh": "守卫自一构形可保持，当且仅当它在该处成立，且有一步通向它可保持的构形。每一步都保持“不可保持”，当且仅当没有自守卫之外出发的一步通向它可保持的构形；每一步都保持守卫之补时即如此。在 ChoicePoint 中一步之后变为可保持；在后继律上守卫之补不被保持。",
+      "en": "A guard is keepable from a configuration exactly when it holds there and some step leads to one it is keepable from. Every step keeps not being keepable exactly when no step from outside the guard leads to such a one, as where every step keeps the guard's complement. In ChoicePoint a step gains keepability; on the successor law the complement is not kept while not being keepable is: the premise is not needed.",
+      "zh": "守卫自一构形可保持，当且仅当它在该处成立，且有一步通向它可保持的构形。每一步都保持“不可保持”，当且仅当没有自守卫之外出发的一步通向它可保持的构形；每一步都保持守卫之补时即如此。在 ChoicePoint 中一步之后变为可保持；在后继律上守卫之补不被保持而“不可保持”仍被保持，故此前提并非必需。",
       "declarations": [
         "Becoming.Viability.keepable_step_iff",
         "Becoming.Viability.not_keepable_invariant_iff",
