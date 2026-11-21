@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-21T21:27:36+00:00",
+  "reviewed_at_utc": "2026-11-21T22:37:13+00:00",
   "statement": {
     "en": "Where a list holds every member of a start that a monotone step takes into itself, what is in the iterate at the list's length is in every iterate, and is the largest class in the start the step preserves. Keeping under every course, along some course, by choice and through a reading are cases.",
     "zh": "单调之步把起始类带入其自身，且一列表容纳起始类的每个成员时：在列表长度处之迭代中的，就在每一迭代中，且它是起始类之内该步所保持的最大类。每条进程下的保持、沿某条进程的保持、凭选择的保持与经由读取的保持，皆为其例。"
@@ -228,8 +228,8 @@
     "zh": "由统一的 Lean 4.29.1 检查器机器检验（回执 20261121T212524.793950Z）：所引声明（在两个新模块与另外十个模块新增的小节中）公理报告皆空；检查器核验核心纯净。由 Astra 6.2 实现者按各次构建前冻结的说明书写成，说明书预先写明何者算作反证；经未参与的读者（Opus、Fable、Astra）审读，以小例程序核对，并经另两个会话审读；未经人审。"
   },
   "next_delta": {
-    "en": "Branching.reach_within_listed to lose in place the two premises it does not need; a case with a level that runs down and a reading in one statement; the run from a family that keeps moving as a call.",
-    "zh": "Branching.reach_within_listed 就地去掉它不需要的两个前提；一个在同一陈述中兼有下降之量与读取的例；自持续移动之族得出运行，作为一次调用。"
+    "en": "A case with a level that runs down and a reading in one statement; the run from a family that keeps moving as a call.",
+    "zh": "一个在同一陈述中兼有下降之量与读取的例；自持续移动之族得出运行，作为一次调用。"
   },
   "correspondence": {
     "en": "A law of the formal model. Reading it onto an actual situation asks two recognitions that the theorems do not give: that what lies within the guard is finitely many configurations that a list can hold, and that the keeping at hand is the iterate of a monotone step from the guard. The reading of the steps as keeping under every course, along some course, by a choice and through a reading is the package's own; the reading onto selections that use up what sustains them is the AI's and is not made here.",
@@ -439,13 +439,19 @@
         "Becoming.Reaching.possible_iff_within_of_pred_le",
         "Becoming.Reaching.trace_within_pred_length"
       ],
-      "sha256": "c87de9b08a75f3f2299d1fe67d6a79289fcfb0d3623c07955f147bee2cc7f817"
+      "sha256": "31b6bd683dcc9158c977a0cd7741c30f09e93691e50b60535be09d92958bac71"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T212524.793950Z/verification.json",
       "role": "receipt",
       "declarations": [],
       "sha256": "5b402e2d75febfc0354f8353b38774ba24c6295c48ea38caa8b0e48248856232"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T223556.393134Z/verification.json",
+      "role": "receipt",
+      "sha256": "ce37b84c890f04894cdb95afffd1849b1ed8ea472171eea70b4f6a7819ee29b7",
+      "declarations": []
     }
   ],
   "proof_bindings": [
@@ -528,7 +534,7 @@
     },
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReachableRanges.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T212524.793950Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T223556.393134Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.ReachableRanges",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -538,6 +544,10 @@
     {
       "en": "22 November 2026: added, on board row FM (one law of what a list holds, and its cases), in the direction Ren gave on 21 November 2026 (sources/15-codex-theory-conversations/2026-11-21-a-full-map-with-its-centre.md: a full map with formal link proof, done elegantly, with its centre). AI-written (Claude Fable, board row FM). The law began as an exact bound for a choice against every outcome, was said once for a monotone step after a reader saw that only monotonicity was used, and the ending side was said once after three inductions on places had been written and each was found by a reader to be the law's own. Parting.continues_persists, continues_any, GuardHorizon.closed_viable and Tolerance.kept_set keep their statements and became calls; AlikeTo.steady_within and alike_iff_alikeTo_pairs lost four premises (record tests-fix-likeness-where-determined). Briefs, builds, readers' returns and what was expected before each run: study folder fm-the-law-of-what-a-list-holds-2026-11-22. Bound to core run 20261121T212524.793950Z.",
       "zh": "2026年11月22日：新增，属工作板条目 FM（一条关于列表所容者之律及其诸例），循 Ren 于2026年11月21日所给方向（sources/15-codex-theory-conversations/2026-11-21-a-full-map-with-its-centre.md：一张带有形式化联结证明、做得优雅、有其中心的完整地图）。AI 撰写（Claude Fable，工作板条目 FM）。此律起初是“针对每个结果的选择”的精确界；一位读者看出只用到单调性后，改为对单调之步只说一次；终结一侧在写了三次对位置的归纳、每次都被读者指出即是此律自身之后，也只说一次。Parting.continues_persists、continues_any、GuardHorizon.closed_viable 与 Tolerance.kept_set 陈述不变而成为调用；AlikeTo.steady_within 与 alike_iff_alikeTo_pairs 去掉四个前提（见记录 tests-fix-likeness-where-determined）。说明书、构建、读者的返回与每次运行之前的预期：研究夹 fm-the-law-of-what-a-list-holds-2026-11-22。绑定于核心运行 20261121T212524.793950Z。"
+    },
+    {
+      "en": "22 November 2026, board row FM: the next step no longer names Branching.reach_within_listed, which lost its two unneeded premises in place in the landing that followed this one (record reaching-before-and-after-a-juncture). No law changed. Bound to core run 20261121T223556.393134Z for ReachableRanges.lean, where one docstring sentence about that theorem changed.",
+      "zh": "2026年11月22日，工作板条目 FM：下一步不再提 Branching.reach_within_listed，它已在随后的落地中就地去掉两个不需要的前提（见记录 reaching-before-and-after-a-juncture）。诸律不变。ReachableRanges.lean 中关于该定理的一句文档已改，绑定于核心运行 20261121T223556.393134Z。"
     }
   ]
 }

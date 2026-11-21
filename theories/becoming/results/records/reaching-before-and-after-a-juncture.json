@@ -8,17 +8,16 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-10-22T06:14:34+00:00",
+  "reviewed_at_utc": "2026-11-21T22:37:13+00:00",
   "statement": {
-    "en": "With every configuration listed and steps decided, what can be had again is had within as many steps as there are configurations; at a configuration that is not a juncture, no step can be refuted to keep it.",
-    "zh": "构形列尽、步可判定时，仍可再得者在不多于构形数之步内得之；不是机之处，无一步可被驳为不保之。"
+    "en": "With every configuration listed, what can be had is had within as many steps as there are configurations; at a configuration with a step keeping it that is not a juncture, no step can be refuted to keep it.",
+    "zh": "构形列尽时，可得者在不多于构形数之步内得之；有保之之一步而不是机之处，无一步可被驳为不保之。"
   },
   "laws": [
     {
-      "en": "A configuration leading into s within k steps has a step and a course of fewer than k steps into s; with every configuration listed, steps decided and s returning, a configuration from which s can be had has it within the count of configurations.",
-      "zh": "在 k 步内通向 s 之构形有一步及其后少于 k 步之行程入 s；构形列尽、步可判定、s 复返时，可得 s 之构形在构形数之内得之。",
+      "en": "With every configuration listed, a configuration from which s can be had has it within the count of configurations.",
+      "zh": "构形列尽时，可得 s 之构形在构形数之内得之。",
       "declarations": [
-        "Becoming.Branching.leadsWithin_trace",
         "Becoming.Branching.reach_within_listed"
       ]
     },
@@ -32,8 +31,8 @@
   ],
   "hypotheses": [
     {
-      "en": "No axiom; a finite list of every configuration and decided steps for the bound; none for the juncture law.",
-      "zh": "不加公理；界须构形之有限全列与可判定之步；机之律无前提。"
+      "en": "No axiom; a finite list of every configuration for the bound; none for the juncture law.",
+      "zh": "不加公理；界须构形之有限全列；机之律无前提。"
     }
   ],
   "does_not_show": [
@@ -53,8 +52,8 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T060905.150236Z): the 3 declarations cited here that the modules gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 342; not independently reviewed by a person.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261022T060905.150236Z）：本记录所引之新增 3 项声明公理报告为空；检查器并核对核心纯净。在一个会话中构建并审查；作者审查见研究第 342 节；未经人的独立审查。"
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261121T223556.393134Z): the 2 declarations cited here have empty axiom reports; the checker verifies core purity. First built and reviewed in one session (study section 342; receipt 20261022T060905.150236Z, the bound then under two further premises); the bound from the list alone was read before landing by readers who took no part; not independently reviewed by a person.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261121T223556.393134Z）：本记录所引 2 项声明公理报告为空；检查器并核对核心纯净。初在一个会话中构建并审查（研究第 342 节；回执 20261022T060905.150236Z，其时界另带两个前提）；只凭列表之界在落地前经未参与的读者审读；未经人的独立审查。"
   },
   "next_delta": {
     "en": "An independent review.",
@@ -68,7 +67,7 @@
   "aliases": [
     "Reaching before and after a juncture",
     "机前与机后之可得",
-    "Becoming.Branching.leadsWithin_trace"
+    "Becoming.Branching.reach_within_listed"
   ],
   "dependencies": [
     {
@@ -95,6 +94,13 @@
         "en": "States a gap its map found (entries xici-zhi-ji-qi-shen, sunzi-bing-shi, hanfei-yulao-bian-que).",
         "zh": "陈述其对应所发现之缺口（条目 xici-zhi-ji-qi-shen、sunzi-bing-shi、hanfei-yulao-bian-que）。"
       }
+    },
+    {
+      "id": "kept-at-the-length-of-a-list",
+      "detail": {
+        "en": "Its bound on reach where a list holds every configuration has one move fewer; the bound here follows from it.",
+        "zh": "其一列表容纳每个构形时之可达之界少一步；此处之界由之而得。"
+      }
     }
   ],
   "references": [
@@ -103,10 +109,9 @@
       "role": "proof",
       "declarations": [
         "Becoming.Branching.keeps_before_juncture",
-        "Becoming.Branching.leadsWithin_trace",
         "Becoming.Branching.reach_within_listed"
       ],
-      "sha256": "4e2258585165575d20e66d1b8fde6b648e5acbf93bdc17f053a6a0070c9dcfd5"
+      "sha256": "9610626b21f2599f0cafcbf772806cd58c5dfe73e8c0ff09176485b7b39c1a37"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json",
@@ -149,12 +154,18 @@
       "role": "receipt",
       "sha256": "3ab06c01fa4f143b64d67ef44d50d6e47ea19b78b384a03815df8e64ade0f020",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T223556.393134Z/verification.json",
+      "role": "receipt",
+      "declarations": [],
+      "sha256": "ce37b84c890f04894cdb95afffd1849b1ed8ea472171eea70b4f6a7819ee29b7"
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Junctures.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T061626.538602Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T223556.393134Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.Junctures",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -164,6 +175,10 @@
     {
       "en": "22 October 2026: added (ZG), for the gap the ZH reading raised; study section 342.",
       "zh": "2026年10月22日：新增（ZG），补中华思想脉络之读所提出的缺口；研究第 342 节。"
+    },
+    {
+      "en": "22 November 2026, board row FM (the landing owed after the law of what a list holds): the first law re-told. Branching.reach_within_listed keeps its name and conclusion and loses two premises (steps decided, s returning); it asks only a list holding every configuration, and follows from Reaching.reach_within_of_pred_le (record kept-at-the-length-of-a-list). Branching.leadsWithin_trace, used by no other proof, is deleted and leaves the law, the references and the aliases. Statement and hypotheses no longer name decided steps; the statement no longer says \"again\" of what can be had, since s need not return, and now says that the configuration of its second clause has a step keeping it, as the second law does; the second law is unchanged. AI-written. Former first law: \"A configuration leading into s within k steps has a step and a course of fewer than k steps into s; with every configuration listed, steps decided and s returning, a configuration from which s can be had has it within the count of configurations.\" Bound to core run 20261121T223556.393134Z.",
+      "zh": "2026年11月22日，工作板条目 FM（“列表所容者之律”之后所欠的落地）：第一条规律重述。Branching.reach_within_listed 名称与结论不变，去掉两个前提（步可判定、s 复返），只须一列表容纳每个构形，由 Reaching.reach_within_of_pred_le 而得（见记录 kept-at-the-length-of-a-list）。Branching.leadsWithin_trace 不为其他证明所用，删去，从该律、引用与别名除去。陈述与前提不再提可判定之步；陈述不再说“再”得（s 不必复返），第二句现在写明该构形有保之之一步，与第二条规律一致；第二条规律不变。AI 撰写。第一条规律原文：“在 k 步内通向 s 之构形有一步及其后少于 k 步之行程入 s；构形列尽、步可判定、s 复返时，可得 s 之构形在构形数之内得之。” 绑定于核心运行 20261121T223556.393134Z。"
     }
   ]
 }
