@@ -4,7 +4,7 @@
 
 ## Why
 
-On the night of 21 November eight designs of a model of the map's centre were each refuted, and the refuters found that seven had proposed as new what the package states in general, in modules the listing of places (158 of 407) does not cover. A design made before the whole Lean is known repeats what is there. So every module was read once, by the questions that night raised.
+On the night of 21 November eight designs of a model of the map's centre were each refuted, and the refuters found that seven had proposed as new what the package states in general, in modules the listing of places did not cover (it held 158 places, 104 of them modules of the package and 54 outside it). A design made before the whole Lean is known repeats what is there. So every module was read once, by the questions that night raised.
 
 ## What was asked, and of whom
 
@@ -16,11 +16,15 @@ What came in after each brief was frozen, from the two other sessions and the se
 
 ## What came back, by count
 
-- Both passes returned all 407 modules, every answer with a valid letter, none `U`; every `how_read` says all statements were read. (Recounted by the coordinating session's own script.)
+- Both passes returned all 407 modules, every answer to the thirteen questions with a valid letter, none `U`; every `how_read` says all statements were read. (Recounted by the coordinating session's own script.)
 - On the thirteen yes-or-no fields the passes agree in 4,633 of 5,291 cells: 2,310 both yes, 2,323 both not found. They differ in 658 cells, in 330 modules: 503 where pass a has a declaration and pass b says not found, 155 the other way.
 - **By script** (`check_citations.py`): of the declaration names in answers marked `S` or `B`, pass a has 5,143, 99.4% declared in the module they are said of; pass b has 10,158, 88.5% in the module, 6.7% in another module and 4.8% found nowhere (the pattern does not know namespaces or local names, so that last figure is too high). Of 25,999 declared names in the 407 modules, 8,151 are named by one pass or the other; the rest are listed in `not-named.json`. So a "not found" here is of a module whose statements a reader says it read, and of a named set of declarations it named.
 - **SETTLE.** Of the 503 cells where pass b said not found and pass a did not, the third reader found the thing there in 312 and not there in 191. Of the 155 the other way, there in 85 and not in 70. Asked which pass was right, it said "both in part" 331 times (the thing is there in a weaker or other form than the yes side said), pass b 201 times, pass a 125 times, neither once. **Neither pass's "not found" stands by itself**: 312 of pass b's and 85 of pass a's were withdrawn at the statements.
 - **An `S` says where a statement is and what it concludes; it is not a premise list.** On fourteen theorems for which a complete hypothesis list exists (the survey's trial on twenty), pass a names 7 and pass b 9; no sentence was against a signature, and neither carried all the premises (the coordinating session's check).
+
+## Two corrections, and how a letter reads (added 22 November, 01:34:19 WIB by the clock)
+
+Found by the reader who checked the listing of places against these returns, for the session that holds row DJ. This note first said "the listing of places (158 of 407)": 158 is the number of places the listing held, 104 of them modules of the package; the frozen brief of the two passes and the note of the night's designs carry the same wrong figure and are left as they were written. It first said "every answer with a valid letter": that is so of the thirteen yes-or-no fields and of the edge read's `edge`, `moves_in_it` and `reading_in_it`, and not of `states` and `how_read`, which are sentences, nor of the edge read's other fields. And two things that change how a letter reads: 1,568 of the 11,627 lettered answers carry a second lettered part (`S: … B: …`; 236 begin with `N` and go on with another letter), so an answer that begins with `N` is not always an absence; and eight answers of pass b begin with two letters joined by a slash. The counts of cells above take the first letter only.
 
 ## What the EDGE readers found
 
