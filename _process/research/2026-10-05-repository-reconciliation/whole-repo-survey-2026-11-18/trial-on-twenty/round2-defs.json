@@ -1,0 +1,139 @@
+{
+ "open": [
+  {
+   "n": 2,
+   "telling": "chapter",
+   "verdict": "says more",
+   "fault": "“Whatever it starts from” leaves the starting difference unrestricted. The signature takes d : Nat. Only the link factors are expressly called whole numbers here."
+  },
+  {
+   "n": 3,
+   "telling": "chapter",
+   "verdict": "other",
+   "fault": "The equivalence and unrestricted family predicate match. Checking “each relatum taking part listed once,” the omission of giver counts, and the expansion of the law requires the definitions of Realized, Passage and Every."
+  },
+  {
+   "n": 4,
+   "telling": "chapter",
+   "verdict": "says less",
+   "fault": "“The two otherwise keeping the same” asks for agreement without limiting it to the listed items. The supplied account of WidensBy requires agreement only over those items."
+  },
+  {
+   "n": 5,
+   "telling": "docstring",
+   "verdict": "says more",
+   "fault": "“The one born at offset π i” identifies a birth event on the run. The displayed conclusion identifies a relabelling at c.size. The brief supplies no definition or result connecting that endpoint to the birth event."
+  },
+  {
+   "n": 5,
+   "telling": "record",
+   "verdict": "other",
+   "fault": "“A numbering ... renumbered by it” does not say how the same two given maps π and σ enter both sides. Whether one numbering captures both maps exactly depends on the omitted definitions."
+  },
+  {
+   "n": 6,
+   "telling": "chapter",
+   "verdict": "says more",
+   "fault": "The proposal condition qualifies only “it is not right at t on both.” In the signature claims is a premise for the prefix and value equalities as well."
+  },
+  {
+   "n": 10,
+   "telling": "record",
+   "verdict": "says more",
+   "fault": "The opening disjunction about each required condition and the closing claim “at every step” go beyond the displayed support equivalence at t."
+  },
+  {
+   "n": 12,
+   "telling": "record",
+   "verdict": "says more",
+   "fault": "“A lineage every later member of which depends on the family has no member after its end” adds a lineage claim. The signature concludes the existence of a qualifying parent for x."
+  }
+ ],
+ "defs": {
+  "2": {
+   "declaration": "Becoming.LoopReturn.nothing_between",
+   "definitions": {
+    "returnMap": "/-- The return map of a loop of links: the difference that comes back after one turn for the\ndifference sent, the first link applied first. -/\ndef returnMap : List (Nat → Nat) → Nat → Nat\n  | [], x => x\n  | g :: gs, x => returnMap gs (g x)"
+   },
+   "not_found": []
+  },
+  "3": {
+   "declaration": "Becoming.OneStep.every_iff",
+   "definitions": {
+    "Every": "/-- The law of every step, read on a pattern: the relata taking from the family are at least\none where anything is taken from it and at most what is taken; something exchanges where\nanything is taken from or given to it. -/\ndef Every (P : List Passage) (k : Nat) (e : Prop) : Prop :=\n  sign (total P Passage.taken) ≤ k ∧ k ≤ total P Passage.taken ∧\n    (0 < total P Passage.taken ∨ 0 < total P Passage.given → e)",
+    "Passage": "/-- What one step shows of one condition: its level before and after the step, and what the\nrelata taking part take from it and give to it across the step. -/\nstructure Passage where\n  before : Nat\n  after : Nat\n  taken : Nat\n  given : Nat",
+    "Realized": "/-- Some world shows the pattern across some step on some family where the condition holds,\nlisting each relatum taking part once. -/\ndef Realized (cond : (w : World) → Nat → List w.Relatum → Prop) (P : List Passage) (k : Nat)\n    (e : Prop) : Prop :=\n  ∃ (w : World) (t : Nat) (es : List w.Relatum), cond w t es ∧ Distinct (w.flow.present t) ∧\n    w.flow.Realizes w.web t es P k e"
+   },
+   "not_found": []
+  },
+  "4": {
+   "declaration": "Becoming.Weighting.narrower_above_net",
+   "definitions": {
+    "ReadsSetsOn": "/-- A ranking of presentations reads the sets on the pair `a`, `b`: it ranks them, each way, as\nthe order `O` ranks the courses they keep. A presentation is a plan with its wording and the\norder in which it is told; `kept` gives the course it keeps; `R b a` reads \"`a` is ranked above\n`b`\". -/\ndef ReadsSetsOn (kept : P → X → Bool) (R : P → P → Prop) (O : (X → Bool) → (X → Bool) → Prop)\n    (a b : P) : Prop :=\n  (R b a ↔ O (kept b) (kept a)) ∧ (R a b ↔ O (kept a) (kept b))",
+    "WidensBy": "/-- On the listed items `a` widens `b` by `x` alone: it admits every item `b` admits and `x`,\nwhich is listed and which `b` does not admit, and nothing else beyond `b`. -/\ndef WidensBy (items : List X) (x : X) (a b : X → Bool) : Prop :=\n  IncludesOn items a b ∧ x ∈ items ∧ a x = true ∧ b x = false ∧\n    ∀ y, y ∈ items → a y = true → b y = false → y = x",
+    "ranksNet": "/-- The order of a net weighting: each listed item counts `pos` for a course that admits it and\n`neg` against it, so it weighs above zero where `neg x < pos x`, at zero where they are equal and\nbelow zero where `pos x < neg x`. `a` is ranked above `b` where what `a` gains less what it loses\nexceeds `b`'s, compared without subtraction. A weighting is the net weighting with nothing\nagainst. -/\ndef ranksNet (items : List X) (pos neg : X → Nat) : (X → Bool) → (X → Bool) → Prop :=\n  fun b a => weighed items pos b + weighed items neg a < weighed items pos a + weighed items neg b"
+   },
+   "not_found": []
+  },
+  "5": {
+   "declaration": "Becoming.Presence.natural_iff_course",
+   "definitions": {
+    "NaturalLabelling": "/-- A **natural labelling** of `c`: a renumbering of its elements keeping precedence, the order of\nbirths of a course growing a configuration of its kind (`natural_iff_course`). -/\ndef NaturalLabelling (c : Causet) (π σ : Nat → Nat) : Prop :=\n  Reindexes 0 c.size π σ ∧ KeepsOrder c.prec 0 c.size π",
+    "Causet": "/-- A labelled finite causal set: `size` elements, `0` to `size - 1`, and their precedence. -/\nstructure Causet where\n  size : Nat\n  prec : Nat → Nat → Prop",
+    "Ordered": "/-- A causal set of the growth: precedence transitive, each element preceded only by smaller labels,\nand on the elements. -/\nstructure Causet.Ordered (c : Causet) : Prop where\n  trans : ∀ {i j k}, c.prec i j → c.prec j k → c.prec i k\n  labelled : ∀ {i j}, c.prec i j → i < j\n  within : ∀ {i j}, c.prec i j → j < c.size",
+    "Relabels": "/-- A relabelling carrying `c` onto `c'`: `σ` and `τ` inverse between their elements, with the\nprecedence read through `σ`. -/\ndef Relabels (c c' : Causet) (σ τ : Nat → Nat) : Prop :=\n  (∀ i, i < c.size → σ i < c'.size ∧ τ (σ i) = i) ∧\n    (∀ j, j < c'.size → τ j < c.size ∧ σ (τ j) = j) ∧\n    ∀ i j, i < c.size → j < c.size → (c.prec i j ↔ c'.prec (σ i) (σ j))"
+   },
+   "not_found": [
+    "CausalGrowth",
+    "size",
+    "state"
+   ]
+  },
+  "6": {
+   "declaration": "Becoming.Learning.no_prefix_fixes_next",
+   "definitions": {
+    "MissesAt": "/-- The value `pred` proposes at step `t`, from the prefix before `t`, misses on `o`. -/\ndef MissesAt (pred : List O → Option O) (o : Nat → O) (t : Nat) : Prop :=\n  Misses (pred (prefixOf o t)) (o t)",
+    "holdFrom": "/-- The course `o` before `t`, and `x` from `t` on. -/\ndef holdFrom (o : Nat → O) (t : Nat) (x : O) (n : Nat) : O := if n < t then o n else x",
+    "prefixOf": "/-- The prefix of a course before step `t`, latest first. -/\ndef prefixOf (o : Nat → O) : Nat → List O\n  | 0 => []\n  | t + 1 => o t :: prefixOf o t"
+   },
+   "not_found": []
+  },
+  "10": {
+   "declaration": "Becoming.Flow.Balances.admits_unreached_before",
+   "definitions": {
+    "ReachesBefore": "/-- The part reaches `g` before `t`: at a step before `t` a member exchanged with a condition `g`\nrequires at `t`. -/\ndef ReachesBefore (part : F → Bool) (t : Nat) (g : F) : Prop :=\n  ∃ h c s, part h = true ∧ W.requires t g c ∧ s < t ∧ h ∈ L.present s ∧\n    (0 < L.take s h c ∨ 0 < L.give s h c)"
+   },
+   "not_found": [
+    "Admits",
+    "Balances",
+    "Flow",
+    "Supported",
+    "WithheldLevels",
+    "admits_unreached_before"
+   ]
+  },
+  "12": {
+   "declaration": "Becoming.Founding.Flow.survivors_independent",
+   "definitions": {
+    "kids": "def kids : Nat → Relatum → List Relatum\n  | 0 => kids₀\n  | 1 => kids₁\n  | _ + 2 => fun _ => []",
+    "need": "/-- The body's parts need two of the body; the spreading lineage's descendants need one of the\ncondition outside it; nothing else is needed. -/\ndef need (f c : Relatum) : Nat := ofBody f * 2 * atBody c + beyond f * atOutside c",
+    "present": "/-- The cell and both founders take part across the first step, each founder taking one unit of\nthe body; the spreading lineage's descendant alone across the second; then nothing. -/\ndef present : Nat → List Relatum\n  | 0 => [cell, confined, spread]\n  | 1 => [spread₁]\n  | _ + 2 => []",
+    "family": "/-- The pool and the two offspring. -/\ndef family : List Relatum := [pool, left, right]",
+    "give": "def give : Nat → Relatum → Relatum → Nat\n  | 0 => giveFirst\n  | _ + 1 => fun _ _ => 0"
+   },
+   "not_found": [
+    "Acting",
+    "Balances",
+    "Dependent",
+    "Descended",
+    "Flow",
+    "Generations",
+    "SelectionTerm",
+    "replenishment",
+    "requires",
+    "stock",
+    "uptake"
+   ]
+  }
+ }
+}

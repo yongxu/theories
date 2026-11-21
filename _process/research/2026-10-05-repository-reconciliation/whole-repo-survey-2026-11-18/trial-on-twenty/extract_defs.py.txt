@@ -1,0 +1,45 @@
+# For the eight wordings the checker did not pass: extracts the definitions named in each signature. AI-written (Claude Fable).
+import json, re, glob, os
+D='/Users/ren/theories/tmp/repo-picture-2026-11-18/trial/'
+LEAN='/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/'
+X={x['n']:x for x in json.load(open(D+'inputs.json'))}
+C=json.load(open(D+'checker.json'))
+open_w=[(w['n'],w['telling'],w['verdict'],w['fault']) for w in C['wordings'] if w['verdict']!='exact']
+need=sorted({n for n,_,_,_ in open_w})
+KW=re.compile(r'^\s*(?:@\[[^\]]*\]\s*)?(?:noncomputable\s+|private\s+|protected\s+)*(def|structure|abbrev|inductive|class)\s+([A-Za-z_«»一-鿿][\w.«»一-鿿\']*)')
+def defs_in(path):
+    L=open(path).read().split('\n'); out={}
+    for i,l in enumerate(L):
+        m=KW.match(l)
+        if m:
+            j=i; blk=[]
+            while j<len(L) and j<i+22 and (j==i or L[j].strip()!=''):
+                blk.append(L[j]); j+=1
+            d=[]; q=i-1
+            while q>=0 and L[q].strip()=='': q-=1
+            if q>=0 and L[q].rstrip().endswith('-/'):
+                e=q
+                while q>=0 and '/-' not in L[q]: q-=1
+                d=L[q:e+1]
+            out.setdefault(m.group(2).split('.')[-1],('\n'.join(d+blk),path))
+    return out
+res={}
+for n in need:
+    x=X[n]; f=LEAN+x['lean_file']; local=defs_in(f)
+    imports=[m.group(1) for m in re.finditer(r'^import\s+(\S+)',open(f).read(),re.M)]
+    sig=x['signature']+'\n'+'\n'.join(x.get('section_context',[]))
+    names=sorted(set(re.findall(r'(?<![\w.])([A-Z][A-Za-z0-9_]*|[a-z][A-Za-z0-9_]*[A-Z][A-Za-z0-9_]*)',sig)) | set(s.split('.')[-1] for s in re.findall(r'[\w]+\.[\w.]+',sig)))
+    found={}
+    for nm in names:
+        if nm in local: found[nm]=local[nm][0]
+    missing=[nm for nm in names if nm not in found and len(nm)>3 and nm not in ('Nat','Prop','Type','List','Bool','True','False','Option','Finset')]
+    # look in imported Becoming modules for the rest
+    for imp in imports:
+        p=LEAN+'becoming/'+imp.replace('.','/')+'.lean'
+        if os.path.exists(p) and missing:
+            dd=defs_in(p)
+            for nm in list(missing):
+                if nm in dd: found[nm]=dd[nm][0]; missing.remove(nm)
+    res[n]={'declaration':x['declaration'],'definitions':found,'not_found':missing}
+    print(n,x['declaration'].split('.')[-1],'| found:',sorted(found),'| not found:',missing[:12],'| words:',sum(len(v.split()) for v in found.values()))
+json.dump({'open':[{'n':n,'telling':t,'verdict':v,'fault':f} for n,t,v,f in open_w],'defs':res},open(D+'round2-defs.json','w'),ensure_ascii=False,indent=1)

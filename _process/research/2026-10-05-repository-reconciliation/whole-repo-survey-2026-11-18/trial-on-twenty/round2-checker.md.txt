@@ -1,0 +1,382 @@
+# Checker's task (the trial on twenty theorems, round two)
+
+AI-written brief (Claude Fable), 21 November 2026. Everything you need is in this message. Run no command and open no file: this run is capped, and its cost is counted. If something cannot be judged from what is here, say so; do not look it up.
+
+A theory's core is proved in Lean 4 and each theorem is told by hand in several places. A telling of a proof says exactly what is proved, its premises stated. In a first round a checker did not pass eight proposed wordings. A second writer, who did not write the first, has rewritten each, this time with the definitions named in the signature (extracted by script, each cut at 22 lines; some are not given and are named as such). You wrote neither. Set each second wording against the signature with its section premises and the definitions given.
+
+For each of the eight, as JSON by the schema: `verdict`: `exact` (says what the signature says, no more and no less, as far as the definitions given allow you to judge), `says more`, `says less`, or `other`. `fault`: the clause at fault, or empty. `against_first`: is the second wording `closer` to the signature than the first proposed wording, `same`, or `farther`. `rests_on_ungiven`: the names of definitions not given on which your verdict depends, or empty.
+
+Be strict and literal. A wording that drops a hypothesis claims the result under fewer conditions, so it says more. A wording that leaves out part of the conclusion, or adds a condition the signature does not ask, says less. A reason, a significance or a neighbouring theorem's claim added says more.
+
+---
+
+## Theorem 2, chapter sentence: `Becoming.LoopReturn.nothing_between`
+
+Signature:
+
+```lean
+theorem nothing_between (as : List Nat) (d n : Nat) :
+    (Law.run (returnMap (scaling as)) d).state (n + 1) = 0 ∨
+      (Law.run (returnMap (scaling as)) d).state n ≤ (Law.run (returnMap (scaling as)) d).state (n + 1) :=
+```
+
+Definitions given:
+
+```lean
+/-- The return map of a loop of links: the difference that comes back after one turn for the
+difference sent, the first link applied first. -/
+def returnMap : List (Nat → Nat) → Nat → Nat
+  | [], x => x
+  | g :: gs, x => returnMap gs (g x)
+```
+
+**First proposed wording (not passed: says more; “Whatever it starts from” leaves the starting difference unrestricted. The signature takes d : Nat. Only the link factors are expressly called whole numbers here.)**
+
+With whole-number factors on its links, a loop's difference is at every turn zero or no less than at the turn before, whatever it starts from (`LoopReturn.nothing_between`).
+
+**Second wording:** For a loop whose links are the scalings by a list of whole numbers (`scaling as`), and a whole-number starting difference, the difference along the course of the loop's return map is, at each turn after the start, zero or no less than it was at the turn before (`LoopReturn.nothing_between`).
+
+**The second writer's note:** `scaling` and `Law.run` are not given. I read `scaling as` as one link for each listed whole number, and `Law.run f d` as the course that starts at `d` and applies `f` once a turn, with `state n` the difference at turn n. If `scaling` is not multiplication by the listed number, "scalings" should be replaced by whatever it is. The statement holds for the empty list too, where the return map is the identity.
+
+## Theorem 3, chapter sentence: `Becoming.OneStep.every_iff`
+
+Signature:
+
+```lean
+theorem every_iff (P : List Passage) (k : Nat) (e : Prop) :
+    Realized (fun _ _ _ => True) P k e ↔ Every P k e :=
+```
+
+Definitions given:
+
+```lean
+/-- The law of every step, read on a pattern: the relata taking from the family are at least
+one where anything is taken from it and at most what is taken; something exchanges where
+anything is taken from or given to it. -/
+def Every (P : List Passage) (k : Nat) (e : Prop) : Prop :=
+  sign (total P Passage.taken) ≤ k ∧ k ≤ total P Passage.taken ∧
+    (0 < total P Passage.taken ∨ 0 < total P Passage.given → e)
+
+/-- What one step shows of one condition: its level before and after the step, and what the
+relata taking part take from it and give to it across the step. -/
+structure Passage where
+  before : Nat
+  after : Nat
+  taken : Nat
+  given : Nat
+
+/-- Some world shows the pattern across some step on some family where the condition holds,
+listing each relatum taking part once. -/
+def Realized (cond : (w : World) → Nat → List w.Relatum → Prop) (P : List Passage) (k : Nat)
+    (e : Prop) : Prop :=
+  ∃ (w : World) (t : Nat) (es : List w.Relatum), cond w t es ∧ Distinct (w.flow.present t) ∧
+    w.flow.Realizes w.web t es P k e
+```
+
+**First proposed wording (not passed: other; The equivalence and unrestricted family predicate match. Checking “each relatum taking part listed once,” the omission of giver counts, and the expansion of the law requires the definitions of Realized, Passage and Every.)**
+
+A pattern of one step on a family, without givers (levels before and after, what is taken and given, the number of takers, whether there is an exchange), is shown by some world across some step on some family, each relatum taking part listed once and nothing assumed of the family, exactly where it satisfies the law of every step (something taken has between one and that many takers; something taken or given, an exchange) (`OneStep.every_iff`).
+
+**Second wording:** A pattern of one step (a list of passages, each giving one condition's level before and after the step and what is taken from it and given to it; a number of takers; and a claim that something exchanges) is shown by some world across some step on some family, a list of that world's relata, the world listing each relatum taking part at that step once and nothing else asked of the world, the step or the family, exactly where the pattern satisfies the law of every step: the number of takers is at most the total taken across the passages and at least one where anything is taken, and the claim of exchange holds where anything is taken or given (`OneStep.every_iff`).
+
+**The second writer's note:** `Realizes`, `Distinct`, `total`, `sign` and `World` are not given. "Shown" stands for `Realizes` unexamined. "Listed once" follows the docstring of `Realized` for `Distinct (w.flow.present t)`. "At least one where anything is taken" follows the docstring of `Every` for `sign (total ...) ≤ k`. That `k` counts takers and `e` says something exchanges is the docstring's reading, not something the signature shows. This telling is a table row of a record, though it is keyed as a chapter sentence.
+
+## Theorem 4, chapter sentence: `Becoming.Weighting.narrower_above_net`
+
+Section variables and included premises:
+
+```lean
+variable {X : Type}
+variable {P : Type}
+```
+
+Signature:
+
+```lean
+theorem narrower_above_net {kept : P → X → Bool} {R : P → P → Prop} {items : List X}
+    {pos neg : X → Nat} {x : X} {n w : P} (by_ : WidensBy items x (kept w) (kept n))
+    (violates : R w n) :
+    ¬ ReadsSetsOn kept R (ranksNet items pos neg) w n ∨ pos x ≤ neg x :=
+```
+
+Definitions given:
+
+```lean
+/-- A ranking of presentations reads the sets on the pair `a`, `b`: it ranks them, each way, as
+the order `O` ranks the courses they keep. A presentation is a plan with its wording and the
+order in which it is told; `kept` gives the course it keeps; `R b a` reads "`a` is ranked above
+`b`". -/
+def ReadsSetsOn (kept : P → X → Bool) (R : P → P → Prop) (O : (X → Bool) → (X → Bool) → Prop)
+    (a b : P) : Prop :=
+  (R b a ↔ O (kept b) (kept a)) ∧ (R a b ↔ O (kept a) (kept b))
+
+/-- On the listed items `a` widens `b` by `x` alone: it admits every item `b` admits and `x`,
+which is listed and which `b` does not admit, and nothing else beyond `b`. -/
+def WidensBy (items : List X) (x : X) (a b : X → Bool) : Prop :=
+  IncludesOn items a b ∧ x ∈ items ∧ a x = true ∧ b x = false ∧
+    ∀ y, y ∈ items → a y = true → b y = false → y = x
+
+/-- The order of a net weighting: each listed item counts `pos` for a course that admits it and
+`neg` against it, so it weighs above zero where `neg x < pos x`, at zero where they are equal and
+below zero where `pos x < neg x`. `a` is ranked above `b` where what `a` gains less what it loses
+exceeds `b`'s, compared without subtraction. A weighting is the net weighting with nothing
+against. -/
+def ranksNet (items : List X) (pos neg : X → Nat) : (X → Bool) → (X → Bool) → Prop :=
+  fun b a => weighed items pos b + weighed items neg a < weighed items pos a + weighed items neg b
+```
+
+**First proposed wording (not passed: says less; “The two otherwise keeping the same” asks for agreement without limiting it to the listed items. The supplied account of WidensBy requires agreement only over those items.)**
+
+Where a ranking of presentations puts the narrower of two plans above the wider, the wider keeping one listed item more and the two otherwise keeping the same, either the ranking does not rank that pair as the net weighting ranks what the two keep, or the added item's count for is at most its count against (`Weighting.narrower_above_net`).
+
+**Second wording:** Where a ranking of presentations puts one presentation above another, and on the listed items the course the lower one keeps admits every item the upper one's course admits and exactly one listed item besides, either the ranking does not rank that pair, each way, as the net weighting of the listed items by their counts for and against ranks the courses the two keep, or that one item's count for is at most its count against (`Weighting.narrower_above_net`).
+
+**The second writer's note:** `IncludesOn` and `weighed` are not given; I relied on the docstrings of `WidensBy` and `ranksNet`. "Above" follows the stated reading that `R b a` means `a` is ranked above `b`, so `R w n` puts `n` above `w`. `R` itself is an arbitrary relation with no order properties assumed, and the wording assumes none.
+
+## Theorem 5, docstring: `Becoming.Presence.natural_iff_course`
+
+Section variables and included premises:
+
+```lean
+variable {c : Causet} {π σ : Nat → Nat}
+```
+
+Signature:
+
+```lean
+theorem natural_iff_course (ordered : c.Ordered) :
+    NaturalLabelling c π σ ↔ ∃ r : Run process, r.state 0 = empty ∧
+      CausalGrowth.Kinds.Relabels c (r.state c.size) π σ :=
+```
+
+Definitions given:
+
+```lean
+/-- A labelled finite causal set: `size` elements, `0` to `size - 1`, and their precedence. -/
+structure Causet where
+  size : Nat
+  prec : Nat → Nat → Prop
+
+/-- A **natural labelling** of `c`: a renumbering of its elements keeping precedence, the order of
+births of a course growing a configuration of its kind (`natural_iff_course`). -/
+def NaturalLabelling (c : Causet) (π σ : Nat → Nat) : Prop :=
+  Reindexes 0 c.size π σ ∧ KeepsOrder c.prec 0 c.size π
+
+/-- A causal set of the growth: precedence transitive, each element preceded only by smaller labels,
+and on the elements. -/
+structure Causet.Ordered (c : Causet) : Prop where
+  trans : ∀ {i j k}, c.prec i j → c.prec j k → c.prec i k
+  labelled : ∀ {i j}, c.prec i j → i < j
+  within : ∀ {i j}, c.prec i j → j < c.size
+
+/-- A relabelling carrying `c` onto `c'`: `σ` and `τ` inverse between their elements, with the
+precedence read through `σ`. -/
+def Relabels (c c' : Causet) (σ τ : Nat → Nat) : Prop :=
+  (∀ i, i < c.size → σ i < c'.size ∧ τ (σ i) = i) ∧
+    (∀ j, j < c'.size → τ j < c.size ∧ σ (τ j) = j) ∧
+    ∀ i j, i < c.size → j < c.size → (c.prec i j ↔ c'.prec (σ i) (σ j))
+```
+
+Not given: `CausalGrowth`, `size`, `state`.
+
+**First proposed wording (not passed: says more; “The one born at offset π i” identifies a birth event on the run. The displayed conclusion identifies a relabelling at c.size. The brief supplies no definition or result connecting that endpoint to the birth event.)**
+
+/-- **The orders of birth.** Where `c` is ordered, `π` with `σ` is a natural labelling of `c` exactly when some course of the growth from the empty set has, at `c`'s size, a configuration that is `c` relabelled by `π` and `σ`: on such a course `c`'s element `i` is the one born at offset `π i`. -/
+
+**Second wording:** /-- **The orders of birth.** Let `c` be ordered: its precedence is transitive, runs only from a smaller label to a larger, and reaches only elements of `c`. Then `π` with `σ` is a natural labelling of `c` exactly when some course of the growth that starts at the empty set has, at step `c.size`, a configuration that `π` carries `c` onto with `σ` carrying it back: each sends the elements of the one to elements of the other, each undoes the other there, and two elements of `c` stand in `c`'s precedence exactly when their images under `π` stand in the configuration's. -/
+
+**The second writer's note:** `Run`, `process`, `empty`, `state`, `Reindexes` and `KeepsOrder` are not given. "Course of the growth" stands for `Run process` and "the empty set" for `empty`, both unexamined. "Natural labelling" is kept as a name, with its two defining conditions not unfolded. Doubt: the heading "The orders of birth" itself suggests the birth reading the checker refused; I kept it as the telling's name, but if a heading counts as a claim, this signature alone does not support it.
+
+## Theorem 5, record law: `Becoming.Presence.natural_iff_course`
+
+Section variables and included premises:
+
+```lean
+variable {c : Causet} {π σ : Nat → Nat}
+```
+
+Signature:
+
+```lean
+theorem natural_iff_course (ordered : c.Ordered) :
+    NaturalLabelling c π σ ↔ ∃ r : Run process, r.state 0 = empty ∧
+      CausalGrowth.Kinds.Relabels c (r.state c.size) π σ :=
+```
+
+Definitions given:
+
+```lean
+/-- A labelled finite causal set: `size` elements, `0` to `size - 1`, and their precedence. -/
+structure Causet where
+  size : Nat
+  prec : Nat → Nat → Prop
+
+/-- A **natural labelling** of `c`: a renumbering of its elements keeping precedence, the order of
+births of a course growing a configuration of its kind (`natural_iff_course`). -/
+def NaturalLabelling (c : Causet) (π σ : Nat → Nat) : Prop :=
+  Reindexes 0 c.size π σ ∧ KeepsOrder c.prec 0 c.size π
+
+/-- A causal set of the growth: precedence transitive, each element preceded only by smaller labels,
+and on the elements. -/
+structure Causet.Ordered (c : Causet) : Prop where
+  trans : ∀ {i j k}, c.prec i j → c.prec j k → c.prec i k
+  labelled : ∀ {i j}, c.prec i j → i < j
+  within : ∀ {i j}, c.prec i j → j < c.size
+
+/-- A relabelling carrying `c` onto `c'`: `σ` and `τ` inverse between their elements, with the
+precedence read through `σ`. -/
+def Relabels (c c' : Causet) (σ τ : Nat → Nat) : Prop :=
+  (∀ i, i < c.size → σ i < c'.size ∧ τ (σ i) = i) ∧
+    (∀ j, j < c'.size → τ j < c.size ∧ σ (τ j) = j) ∧
+    ∀ i j, i < c.size → j < c.size → (c.prec i j ↔ c'.prec (σ i) (σ j))
+```
+
+Not given: `CausalGrowth`, `size`, `state`.
+
+**First proposed wording (not passed: other; “A numbering ... renumbered by it” does not say how the same two given maps π and σ enter both sides. Whether one numbering captures both maps exactly depends on the omitted definitions.)**
+
+The orders of birth. For a causal set that is ordered, a numbering of its elements is a natural labelling exactly when some course of the growth from the empty set has, at the causal set's size, a configuration that is the causal set renumbered by it (natural_iff_course).
+
+**Second wording:** The orders of birth. For an ordered causal set (its precedence transitive, running from a smaller label to a larger, and among its elements) and two maps on labels, the first with the second is a natural labelling of it exactly when some course of the growth starting at the empty set has, at the step equal to the causal set's size, a configuration onto which the first map carries the causal set and from which the second carries it back, each undoing the other on their elements and the causal set's precedence between two of its elements holding exactly when the configuration's holds between their images under the first map (natural_iff_course).
+
+**The second writer's note:** The gaps are the same as for the docstring: `Run`, `process`, `empty`, `state`, `Reindexes` and `KeepsOrder` are not given, and "natural labelling" is kept as a name. The same doubt about the heading "The orders of birth" applies. This wording tells only `natural_iff_course`; the record's other clause (every causal set grown from the empty set, `courseOf` and companions) is another theorem's and is not restated or checked here.
+
+## Theorem 6, chapter sentence: `Becoming.Learning.no_prefix_fixes_next`
+
+Section variables and included premises:
+
+```lean
+variable {O : Type u}
+```
+
+Signature:
+
+```lean
+theorem no_prefix_fixes_next (pred : List O → Option O) (o : Nat → O) (t : Nat) {x y : O}
+    (two : x ≠ y) {w : O} (claims : pred (prefixOf o t) = some w) :
+    prefixOf (holdFrom o t x) t = prefixOf o t ∧ prefixOf (holdFrom o t y) t = prefixOf o t ∧
+      holdFrom o t x t = x ∧ holdFrom o t y t = y ∧
+      ¬ (¬ MissesAt pred (holdFrom o t x) t ∧ ¬ MissesAt pred (holdFrom o t y) t) :=
+```
+
+Definitions given:
+
+```lean
+/-- The value `pred` proposes at step `t`, from the prefix before `t`, misses on `o`. -/
+def MissesAt (pred : List O → Option O) (o : Nat → O) (t : Nat) : Prop :=
+  Misses (pred (prefixOf o t)) (o t)
+
+/-- The course `o` before `t`, and `x` from `t` on. -/
+def holdFrom (o : Nat → O) (t : Nat) (x : O) (n : Nat) : O := if n < t then o n else x
+
+/-- The prefix of a course before step `t`, latest first. -/
+def prefixOf (o : Nat → O) : Nat → List O
+  | 0 => []
+  | t + 1 => o t :: prefixOf o t
+```
+
+**First proposed wording (not passed: says more; The proposal condition qualifies only “it is not right at t on both.” In the signature claims is a premise for the prefix and value equalities as well.)**
+
+With two different values, for every course and step t, the course that keeps it before t and holds the one value from t on and the course that holds the other both have its prefix before t and take their value at t; where the extrapolation proposes a value from that prefix, it is not right at t on both (`Learning.no_prefix_fixes_next`).
+
+**Second wording:** Take an extrapolation, a course and a step t at which the extrapolation proposes a value from the course's prefix before t, and two different values: the course that keeps the given one before t and holds the first value from t on, and the course that does the same with the second, both have that same prefix before t, each takes its own value at t, and it is not so that the proposal at t misses on neither of them (`Learning.no_prefix_fixes_next`).
+
+**The second writer's note:** `Misses` is not given, so I kept the word "misses" and did not render "does not miss" as "is right". The signature states the last conjunct as a negated conjunction, ¬(¬misses ∧ ¬misses), so I did not strengthen it to "misses on at least one". The two halves are the same only classically.
+
+## Theorem 10, record law: `Becoming.Flow.Balances.admits_unreached_before`
+
+Section variables and included premises:
+
+```lean
+variable (L : Flow F C) (W : Web F C)
+variable {L W}
+variable {part : F → Bool}
+```
+
+Signature:
+
+```lean
+theorem Balances.admits_unreached_before (balances : L.Balances W) {l : Nat → C → Nat}
+    (without : L.WithheldLevels part W l) {t : Nat} {g : F}
+    (unreached : ¬ L.ReachesBefore W part t g) : W.Supported t g ↔ W.Admits (l t) t g :=
+```
+
+Definitions given:
+
+```lean
+/-- The part reaches `g` before `t`: at a step before `t` a member exchanged with a condition `g`
+requires at `t`. -/
+def ReachesBefore (part : F → Bool) (t : Nat) (g : F) : Prop :=
+  ∃ h c s, part h = true ∧ W.requires t g c ∧ s < t ∧ h ∈ L.present s ∧
+    (0 < L.take s h c ∨ 0 < L.give s h c)
+```
+
+Not given: `Admits`, `Balances`, `Flow`, `Supported`, `WithheldLevels`, `admits_unreached_before`.
+
+**First proposed wording (not passed: says more; The opening disjunction about each required condition and the closing claim “at every step” go beyond the displayed support equivalence at t.)**
+
+At each condition a formation requires at a step, the levels with and without a part agree, or the part reaches the formation before that step; in a balanced flow, with the levels without the part being the withheld levels (the part withheld and the levels following the rest of the exchange), a formation the part does not reach before a step is supported at that step exactly when it is admitted there at the levels without the part; and what it does not reach, at every step.
+
+**Second wording:** In a flow that balances on its web, with levels that are withheld levels for a part, a formation the part does not reach before a step t (no member of the part, present at a step before t, takes from or gives to there a condition the formation requires at t) is supported at t exactly when it is admitted at t at those levels as they stand at t.
+
+**The second writer's note:** `Balances`, `WithheldLevels`, `Supported`, `Admits` and `Flow` are not given, so "balances", "withheld levels for a part", "supported" and "admitted at those levels" are carried as names and not checked. "Formation" for `g : F` comes from the standing telling, not from a given definition. If the record keeps its other two clauses, each needs its own theorem named beside it; this theorem covers neither.
+
+## Theorem 12, record law: `Becoming.Founding.Flow.survivors_independent`
+
+Section variables and included premises:
+
+```lean
+variable {X : Type} {L : Flow X X} {W : Web X X}
+```
+
+Signature:
+
+```lean
+theorem survivors_independent (balances : L.Balances W) (acting : L.Acting W)
+    (dependent : W.Dependent) {G : Generations X} (descended : SelectionTerm.Flow.Descended L W G)
+    {ds : List X} {m : Nat}
+    (gated : ∀ t f, f ∈ L.present t → ∀ d, d ∈ ds → 0 < L.give t f d →
+      ∃ e, e ∈ ds ∧ W.requires t f e ∧ m ≤ W.need t f e)
+    {T n : Nat} (excess : ∀ k, k < n → L.replenishment ds (T + k) < L.uptake ds (T + k))
+    (start : W.stock ds T < n + m) (k : Nat) {x : X} (mx : x ∈ G.family (T + n + k + 1)) :
+    ∃ p, p ∈ G.family (T + n + k) ∧ x ∈ G.kids (T + n + k) p ∧
+      ∀ e, e ∈ ds → W.requires (T + n + k) p e → ¬ m ≤ W.need (T + n + k) p e :=
+```
+
+Definitions given:
+
+```lean
+/-- The pool and the two offspring. -/
+def family : List Relatum := [pool, left, right]
+
+def give : Nat → Relatum → Relatum → Nat
+  | 0 => giveFirst
+  | _ + 1 => fun _ _ => 0
+
+def kids : Nat → Relatum → List Relatum
+  | 0 => kids₀
+  | 1 => kids₁
+  | _ + 2 => fun _ => []
+
+/-- The body's parts need two of the body; the spreading lineage's descendants need one of the
+condition outside it; nothing else is needed. -/
+def need (f c : Relatum) : Nat := ofBody f * 2 * atBody c + beyond f * atOutside c
+
+/-- The cell and both founders take part across the first step, each founder taking one unit of
+the body; the spreading lineage's descendant alone across the second; then nothing. -/
+def present : Nat → List Relatum
+  | 0 => [cell, confined, spread]
+  | 1 => [spread₁]
+  | _ + 2 => []
+```
+
+Not given: `Acting`, `Balances`, `Dependent`, `Descended`, `Flow`, `Generations`, `SelectionTerm`, `replenishment`, `requires`, `stock`, `uptake`.
+
+**First proposed wording (not passed: says more; “A lineage every later member of which depends on the family has no member after its end” adds a lineage claim. The signature concludes the existence of a qualifying parent for x.)**
+
+Under balance, with only active formations giving, activity needing support, generations of descent in the flow, and every present formation that gives to a condition of a family requiring some condition of the family at a need of at least m: where the family's uptake exceeds its replenishment at each of n steps from T, from a stock at T below n + m, every member of a generation after step T + n is the offspring of a member of the generation one step earlier that requires no condition of the family at a need of at least m, and a lineage every later member of which depends on the family has no member after its end.
+
+**Second wording:** For a flow that balances and is acting on a dependent web, with generations descended in it, a list of conditions and a number m such that whatever is present at a step and gives to a listed condition requires at that step some listed condition at a need of at least m: where at each of the n steps from T the list's uptake exceeds its replenishment and its stock at T is below n + m, every member of a generation at a step after T + n is among the offspring, at the step before, of a member of that earlier step's generation that requires then no listed condition at a need of at least m.
+
+**The second writer's note:** The definitions extracted for this theorem (`family`, `give`, `kids`, `need`, `present`) are those of a concrete example (pool, left, right; cell, confined, spread), not the `Flow`, `Web` and `Generations` fields the signature uses, so they support nothing here. `Balances`, `Acting`, `Dependent`, `Descended`, `Generations`, `uptake`, `replenishment`, `stock`, `requires` and the web's `need` are all not given and are carried as names. "Offspring" stands for `x ∈ G.kids (T + n + k) p`. "After T + n" is step T + n + k + 1 for any k, and the parent is in the generation at T + n + k. "Requires no listed condition at a need of at least m" is the signature's "for every listed condition it requires, the need is not at least m".
+

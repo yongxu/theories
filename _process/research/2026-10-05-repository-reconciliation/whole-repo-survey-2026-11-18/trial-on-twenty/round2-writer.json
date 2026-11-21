@@ -1,0 +1,63 @@
+{
+ "writer": {
+  "tool_calls_made": 1,
+  "wordings": [
+   {
+    "n": 2,
+    "telling": "chapter",
+    "wording": "For a loop whose links are the scalings by a list of whole numbers (`scaling as`), and a whole-number starting difference, the difference along the course of the loop's return map is, at each turn after the start, zero or no less than it was at the turn before (`LoopReturn.nothing_between`).",
+    "what_changed": "Replaced \"whatever it starts from\" with a whole-number starting difference, because the signature takes `d : Nat`, and said \"the scalings by a list of whole numbers\" instead of \"factors\", because `scaling` is not among the definitions given.",
+    "note": "`scaling` and `Law.run` are not given. I read `scaling as` as one link for each listed whole number, and `Law.run f d` as the course that starts at `d` and applies `f` once a turn, with `state n` the difference at turn n. If `scaling` is not multiplication by the listed number, \"scalings\" should be replaced by whatever it is. The statement holds for the empty list too, where the return map is the identity."
+   },
+   {
+    "n": 3,
+    "telling": "chapter",
+    "wording": "A pattern of one step (a list of passages, each giving one condition's level before and after the step and what is taken from it and given to it; a number of takers; and a claim that something exchanges) is shown by some world across some step on some family, a list of that world's relata, the world listing each relatum taking part at that step once and nothing else asked of the world, the step or the family, exactly where the pattern satisfies the law of every step: the number of takers is at most the total taken across the passages and at least one where anything is taken, and the claim of exchange holds where anything is taken or given (`OneStep.every_iff`).",
+    "what_changed": "Stated the bound on takers as \"at most the total taken, and at least one where anything is taken\", because the first wording's \"something taken has between one and that many takers\" left out that `k ≤ total taken` also forces no takers where nothing is taken; I also spelled out the pattern from `Passage` and dropped \"without givers\", a contrast with a theorem not shown here.",
+    "note": "`Realizes`, `Distinct`, `total`, `sign` and `World` are not given. \"Shown\" stands for `Realizes` unexamined. \"Listed once\" follows the docstring of `Realized` for `Distinct (w.flow.present t)`. \"At least one where anything is taken\" follows the docstring of `Every` for `sign (total ...) ≤ k`. That `k` counts takers and `e` says something exchanges is the docstring's reading, not something the signature shows. This telling is a table row of a record, though it is keyed as a chapter sentence."
+   },
+   {
+    "n": 4,
+    "telling": "chapter",
+    "wording": "Where a ranking of presentations puts one presentation above another, and on the listed items the course the lower one keeps admits every item the upper one's course admits and exactly one listed item besides, either the ranking does not rank that pair, each way, as the net weighting of the listed items by their counts for and against ranks the courses the two keep, or that one item's count for is at most its count against (`Weighting.narrower_above_net`).",
+    "what_changed": "Limited the comparison of the two kept courses to the listed items, because `WidensBy` asks for inclusion and \"nothing else beyond\" only over `items` while the first wording's \"otherwise keeping the same\" had no such limit; I also said presentations and the courses they keep instead of plans, and added \"each way\" for the two halves of `ReadsSetsOn`.",
+    "note": "`IncludesOn` and `weighed` are not given; I relied on the docstrings of `WidensBy` and `ranksNet`. \"Above\" follows the stated reading that `R b a` means `a` is ranked above `b`, so `R w n` puts `n` above `w`. `R` itself is an arbitrary relation with no order properties assumed, and the wording assumes none."
+   },
+   {
+    "n": 5,
+    "telling": "docstring",
+    "wording": "/-- **The orders of birth.** Let `c` be ordered: its precedence is transitive, runs only from a smaller label to a larger, and reaches only elements of `c`. Then `π` with `σ` is a natural labelling of `c` exactly when some course of the growth that starts at the empty set has, at step `c.size`, a configuration that `π` carries `c` onto with `σ` carrying it back: each sends the elements of the one to elements of the other, each undoes the other there, and two elements of `c` stand in `c`'s precedence exactly when their images under `π` stand in the configuration's. -/",
+    "what_changed": "Dropped \"on such a course `c`'s element `i` is the one born at offset `π i`\", because the signature gives only a relabelling onto the configuration at step `c.size` and nothing given connects that to when an element is born; in its place I unfolded `Relabels` and the three clauses of `Ordered`.",
+    "note": "`Run`, `process`, `empty`, `state`, `Reindexes` and `KeepsOrder` are not given. \"Course of the growth\" stands for `Run process` and \"the empty set\" for `empty`, both unexamined. \"Natural labelling\" is kept as a name, with its two defining conditions not unfolded. Doubt: the heading \"The orders of birth\" itself suggests the birth reading the checker refused; I kept it as the telling's name, but if a heading counts as a claim, this signature alone does not support it."
+   },
+   {
+    "n": 5,
+    "telling": "record",
+    "wording": "The orders of birth. For an ordered causal set (its precedence transitive, running from a smaller label to a larger, and among its elements) and two maps on labels, the first with the second is a natural labelling of it exactly when some course of the growth starting at the empty set has, at the step equal to the causal set's size, a configuration onto which the first map carries the causal set and from which the second carries it back, each undoing the other on their elements and the causal set's precedence between two of its elements holding exactly when the configuration's holds between their images under the first map (natural_iff_course).",
+    "what_changed": "Named the two maps separately and said how each enters both sides (the first carries the causal set onto the configuration, the second carries it back, and precedence is read through the first), because the first wording's single \"numbering ... renumbered by it\" did not say how `π` and `σ` both appear.",
+    "note": "The gaps are the same as for the docstring: `Run`, `process`, `empty`, `state`, `Reindexes` and `KeepsOrder` are not given, and \"natural labelling\" is kept as a name. The same doubt about the heading \"The orders of birth\" applies. This wording tells only `natural_iff_course`; the record's other clause (every causal set grown from the empty set, `courseOf` and companions) is another theorem's and is not restated or checked here."
+   },
+   {
+    "n": 6,
+    "telling": "chapter",
+    "wording": "Take an extrapolation, a course and a step t at which the extrapolation proposes a value from the course's prefix before t, and two different values: the course that keeps the given one before t and holds the first value from t on, and the course that does the same with the second, both have that same prefix before t, each takes its own value at t, and it is not so that the proposal at t misses on neither of them (`Learning.no_prefix_fixes_next`).",
+    "what_changed": "Moved the condition that the extrapolation proposes a value from the prefix to the front, as a premise of the whole statement, because in the signature `claims` stands before all five conjuncts while the first wording attached it only to the last; I also wrote \"misses on neither\" under a negation instead of \"not right on both\".",
+    "note": "`Misses` is not given, so I kept the word \"misses\" and did not render \"does not miss\" as \"is right\". The signature states the last conjunct as a negated conjunction, ¬(¬misses ∧ ¬misses), so I did not strengthen it to \"misses on at least one\". The two halves are the same only classically."
+   },
+   {
+    "n": 10,
+    "telling": "record",
+    "wording": "In a flow that balances on its web, with levels that are withheld levels for a part, a formation the part does not reach before a step t (no member of the part, present at a step before t, takes from or gives to there a condition the formation requires at t) is supported at t exactly when it is admitted at t at those levels as they stand at t.",
+    "what_changed": "Dropped the opening disjunction about each required condition and the closing \"and what it does not reach, at every step\", because the signature concludes only the one equivalence at t; I also dropped the gloss of the withheld levels, whose definition is not given, and unfolded `ReachesBefore` instead.",
+    "note": "`Balances`, `WithheldLevels`, `Supported`, `Admits` and `Flow` are not given, so \"balances\", \"withheld levels for a part\", \"supported\" and \"admitted at those levels\" are carried as names and not checked. \"Formation\" for `g : F` comes from the standing telling, not from a given definition. If the record keeps its other two clauses, each needs its own theorem named beside it; this theorem covers neither."
+   },
+   {
+    "n": 12,
+    "telling": "record",
+    "wording": "For a flow that balances and is acting on a dependent web, with generations descended in it, a list of conditions and a number m such that whatever is present at a step and gives to a listed condition requires at that step some listed condition at a need of at least m: where at each of the n steps from T the list's uptake exceeds its replenishment and its stock at T is below n + m, every member of a generation at a step after T + n is among the offspring, at the step before, of a member of that earlier step's generation that requires then no listed condition at a need of at least m.",
+    "what_changed": "Dropped the closing lineage clause, because the signature concludes only that each such member has a qualifying parent; I also replaced the glosses of `Acting` and `Dependent` with their bare names, since neither is defined in the brief, and called `ds` a list of conditions so that it is not confused with `G.family`.",
+    "note": "The definitions extracted for this theorem (`family`, `give`, `kids`, `need`, `present`) are those of a concrete example (pool, left, right; cell, confined, spread), not the `Flow`, `Web` and `Generations` fields the signature uses, so they support nothing here. `Balances`, `Acting`, `Dependent`, `Descended`, `Generations`, `uptake`, `replenishment`, `stock`, `requires` and the web's `need` are all not given and are carried as names. \"Offspring\" stands for `x ∈ G.kids (T + n + k) p`. \"After T + n\" is step T + n + k + 1 for any k, and the parent is in the generation at T + n + k. \"Requires no listed condition at a need of at least m\" is the signature's \"for every listed condition it requires, the need is not at least m\"."
+   }
+  ]
+ }
+}

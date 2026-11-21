@@ -1,0 +1,69 @@
+{
+ "wordings": [
+  {
+   "n": 2,
+   "telling": "chapter",
+   "verdict": "exact",
+   "fault": "",
+   "against_first": "closer",
+   "rests_on_ungiven": "scaling, Law.run. The readings of the list as link scalings and of successive states as turns from the given starting difference depend on these definitions."
+  },
+  {
+   "n": 3,
+   "telling": "chapter",
+   "verdict": "exact",
+   "fault": "",
+   "against_first": "closer",
+   "rests_on_ungiven": "Realizes, Distinct, total, sign. The supplied docstrings support the readings of realization, listing each participant once, the totals, and the lower bound on takers. “Nothing else asked” describes the True predicate alongside the stated realization and listing requirements."
+  },
+  {
+   "n": 4,
+   "telling": "chapter",
+   "verdict": "exact",
+   "fault": "",
+   "against_first": "closer",
+   "rests_on_ungiven": "IncludesOn, weighed. Their relevant readings are supplied by the docstrings of WidensBy and ranksNet."
+  },
+  {
+   "n": 5,
+   "telling": "docstring",
+   "verdict": "exact",
+   "fault": "",
+   "against_first": "closer",
+   "rests_on_ungiven": "Run, process, state, empty supply the vocabulary for a course of growth starting empty. I read “The orders of birth” as a heading. The sentence itself identifies the configuration at c.size."
+  },
+  {
+   "n": 5,
+   "telling": "record",
+   "verdict": "exact",
+   "fault": "",
+   "against_first": "closer",
+   "rests_on_ungiven": "Run, process, state, empty supply the vocabulary for a course of growth starting empty. I read “The orders of birth” as a heading. The same two maps occur on both sides of the equivalence."
+  },
+  {
+   "n": 6,
+   "telling": "chapter",
+   "verdict": "exact",
+   "fault": "",
+   "against_first": "closer",
+   "rests_on_ungiven": ""
+  },
+  {
+   "n": 10,
+   "telling": "record",
+   "verdict": "exact",
+   "fault": "",
+   "against_first": "closer",
+   "rests_on_ungiven": ""
+  },
+  {
+   "n": 12,
+   "telling": "record",
+   "verdict": "exact",
+   "fault": "",
+   "against_first": "closer",
+   "rests_on_ungiven": "G.family and G.kids supply the readings “generation” and “offspring.” The example definitions with those short names do not define the fields in the signature."
+  }
+ ],
+ "could_not_judge": "The internal meanings of predicates carried over by name cannot be checked here. Their arguments, the scope of the premises, and the conclusions can be checked from the signatures."
+}

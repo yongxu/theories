@@ -51,6 +51,17 @@ One round of writing is not enough. The checker's eight, by theorem number in `i
 - 12, record: a claim about a lineage is added; the signature concludes that a parent exists.
 - 3, chapter, and 5, record: not judged, for want of definitions.
 
+## Round two (21 November, afternoon)
+
+The eight wordings the checker did not pass went to a second writer, who had not written the first, with one thing more: the definitions named in each signature, extracted by script (each cut at 22 lines; some were not found and are named in the input). A second astra check, which wrote neither round, set each against its signature and the definitions given.
+
+- **All eight came back exact, and each closer to the signature than the first wording.**
+- **Six of the eight verdicts rest on definitions the checker was not given**, by its own account (for instance `scaling`, `Realizes`, `IncludesOn`, `Run`); there it judged the arguments, the scope of the premises and the conclusion, and took the named predicates' meanings from their docstrings. Two (theorem 6's chapter sentence, theorem 10's record law) rest on nothing ungiven.
+- The second writer's own doubt, kept: for theorem 5 the heading "The orders of birth" suggests the reading the first checker refused, and the signature alone does not support it.
+- One writer (one file read, 74,731 tokens) and one check (no commands, 22 seconds, 27,600 tokens): 102,331 tokens.
+
+So of the 21 tellings, each now has a wording that a checker of another model found exact against its signature: 13 from the first round, 8 from the second. None is applied.
+
 ## What it cannot show
 
 - **The situations were written by the writers of the proposed wordings**, from their own hypothesis lists. A wording and a case made by the same hand fit each other. A fairer test has the cases written by someone who sees only the signature.
@@ -67,12 +78,12 @@ By script (`mend-cost.json`), if the 21 were mended as proposed:
 - 7 chapter sentences in 4 chapters (01, 02, 03, 07). A rewritten line in a section a record cites counts as drift for that record.
 - 5 record laws.
 
-None of this is done. The eight wordings above want a second writer and a second check first.
+None of this is done. The eight wordings above had a second writer and a second check in round two, below.
 
 ## What it cost
 
-315,636 tokens by the harnesses' counts (145,445 + 135,391 + 34,800), under the ceiling of 500,000, and about 25 minutes of wall time with the extraction. This session's own tokens, for the scripts and this record, are not in that count.
+The first round: 315,636 tokens by the harnesses' counts (145,445 + 135,391 + 34,800), and about 25 minutes of wall time with the extraction. Round two: 102,331. Together 417,967, under the ceiling of 500,000. This session's own tokens, for the scripts and this record, are not in that count.
 
 ## Files
 
-`extract.py.txt` and `inputs.json` (the 14 theorems with their texts and section premises); `writer-A.md.txt`, `writer-B.md.txt`, `writers.json`; `judge-present.md.txt`, `judge-proposed.md.txt`, `judges.json`; `checker.md.txt`, `checker.schema.json`, `checker.json`; `mend-cost.json`.
+`extract.py.txt` and `inputs.json` (the 14 theorems with their texts and section premises); `writer-A.md.txt`, `writer-B.md.txt`, `writers.json`; `judge-present.md.txt`, `judge-proposed.md.txt`, `judges.json`; `checker.md.txt`, `checker.schema.json`, `checker.json`; `mend-cost.json`. Round two: `extract_defs.py.txt`, `round2-defs.json`, `round2-writer.md.txt`, `round2-writer.json`, `round2-checker.md.txt`, `round2-checker.schema.json`, `round2-checker.json`.
