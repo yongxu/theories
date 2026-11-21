@@ -6,23 +6,23 @@ import Becoming.Horizon
 
 `Becoming.Viability` states one step
 of keeping under every course: a configuration is in the kernel exactly when it is within the
-guard and every successor is in the kernel (`kernel_step_iff`). This module states the twin for
-keeping along some course (`Keepable`, `Becoming.JointKeeping`), and what a step does to not
+guard and every successor is in the kernel (`kernel_step_iff`). This module states the same form
+for keeping along some course (`Keepable`, `Becoming.JointKeeping`), and what a step does to not
 being keepable.
 
 * **One step.** A guard is keepable from a configuration exactly when it holds there and some
-  step leads to a configuration it is keepable from (`keepable_step_iff`). For every process and
-  guard, with no further premise: a run read from its step 1 on is a run (`Run.onward`), and a
-  step into a run's start followed by the run is a run (`Run.cons`).
-* **Whether a step can gain keepability.** Every step keeps not being keepable exactly where no
+  step leads to a configuration it is keepable from (`keepable_step_iff`), for every process and
+  guard, with no further premise. Its proof reads a run from step 1 on (`Run.onward`,
+  `Becoming.Recurrence`) and puts one step before a run (`Run.cons`, `Becoming.Horizon`).
+* **Whether a step can gain keepability.** Every step keeps not being keepable exactly when no
   step from outside the guard leads to a configuration the guard is keepable from
   (`not_keepable_invariant_iff`). Where every step keeps the guard's complement this holds
   (`not_keepable_step`), and then along every run whose start is not keepable no configuration is
   (`not_keepable_run`). No decision of the guard is used.
-* **The premise is needed, and is not the least.** On `ChoicePoint.process`, a guard that does
-  not hold at `split` and holds at `left` is not keepable from `split` and keepable from `left`,
-  one step on (`ChoicePoint.keepable_gained`, along the run `ChoicePoint.leftRun`
-  `ChoicePoint.keepable_gained_along_run`). On the successor law of the numbers, where a run
+* **The premise is needed, and is not the least.** On `ChoicePoint.process`, the guard
+  `afterSplit` (false at `split` only) is not keepable from `split` and is keepable from `left`,
+  one step on, and not every step keeps its complement (`ChoicePoint.keepable_gained`; along the
+  run `ChoicePoint.leftRun`, `ChoicePoint.keepable_gained_along_run`). On the successor law of the numbers, where a run
   starts from every number, the guard "is `1`" is keepable from no number
   (`Successor.nowhere_keepable`), so every step keeps not being keepable, while the step from
   `0` leads from outside the guard into it (`Successor.not_keepable_kept_complement_not`).
@@ -45,7 +45,8 @@ variable {S : Type u} {A : Type v}
 /-- **One step, along some course.** For every process `P`, guard `g` and configuration `s`,
 with no further premise: `g` is keepable from `s` (some run of `P` from `s` stays within `g`)
 exactly when `g` holds at `s` and some step of `P` from `s` leads to a configuration `g` is
-keepable from. The twin of `kernel_step_iff`, with "some step" for "every step". -/
+keepable from. The same form as `kernel_step_iff`, with "some step leads to" for "every step leads
+to"; no theorem here relates the kernel to keepability. -/
 theorem keepable_step_iff {P : Process S A} {g : S → Prop} {s : S} :
     Keepable P g s ↔ g s ∧ ∃ a t, P.step s a t ∧ Keepable P g t :=
   ⟨fun ⟨r, start, held⟩ =>
@@ -59,7 +60,7 @@ theorem keepable_step_iff {P : Process S A} {g : S → Prop} {s : S} :
 
 /-! ## Whether a step can gain keepability -/
 
-/-- **Every step keeps not being keepable exactly where no step from outside the guard leads to
+/-- **Every step keeps not being keepable exactly when no step from outside the guard leads to
 a configuration the guard is keepable from.** For every process `P` and guard `g`, with no
 further premise: "not keepable" is kept by every step of `P` (`Invariant`) exactly when, for
 every step of `P` from `s` to `t`, if `g` does not hold at `s` then `g` is not keepable from `t`.

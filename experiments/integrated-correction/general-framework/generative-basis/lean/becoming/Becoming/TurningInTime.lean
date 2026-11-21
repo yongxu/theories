@@ -84,9 +84,9 @@ configurations and step, not terms of the root.
   the course as it was, the need met and no level marked before it, the need met and the level marked
   at it, from whose next configuration the line never ends (`unending_iff_first_marked`). That law
   is a case of the same split under a weaker premise, that at some step of the course as it was the
-  need is unmet or the level is marked (`unending_iff_first_marked_wide`); it rests on the split at
-  any step with no marked level before it (`unending_iff_marked_at`), and that on a line under a
-  step while it can go on, split at a step (`unending_from`). From a way
+  need is unmet or the level is marked (`unending_iff_first_marked_wide`). The weaker law rests on
+  the split at any step with no marked level before it (`unending_iff_marked_at`), which rests on
+  the split, at a step, of a line under a step taken while it can go on (`unending_from`). From a way
   of a kind every step keeps, that uses `H₂`, with giving short of `H₂` below `y₂`, meeting it from
   `y₂` up to `hi` and the step keeping the level within `hi`, a positive need at most `H₂ + y₂` and
   the level at most `hi`, the line never ends exactly where the level is at or above `H₂ + y₂`
@@ -284,10 +284,11 @@ to meet `H₂` from `y₂` up to `hi` (`RegimeMargin.Meets`), the step under `H�
 `hi` (`RegimeMargin.Keeps`), the need at most `H₂ + y₂` (`within`) and a level at most `hi` (`high`: in
 `turns_in_time_iff_kept_below` and `locked_turns_in_time_on_window_iff` the level after a marked step,
 in the others the start's).
-`unending_iff_first_marked` needs the course as it was to come below the need (`asItWasEnds`): without
-it, a course never marked whose level never falls below the need is a line that never ends with no
-such step `T` (argued here, not a Lean statement); `unending_iff_first_marked_wide` asks less, that at
-some step of the course as it was the need is unmet or the level is marked. `turns_in_time_iff` and
+`unending_iff_first_marked` has the premise that the course as it was comes below the need
+(`asItWasEnds`); `unending_iff_first_marked_wide` asks less, that at some step of the course as it was
+the need is unmet or the level is marked (the marks decided); a course never marked whose level never
+falls below the need meets neither, and is a line that never ends with no such step `T` (argued here,
+not a Lean statement). `turns_in_time_iff` and
 `turns_in_time_iff_kept_below` need the decidability of the marks (`[DecidablePred marked]`) and the
 course as it was below `H₁ + y₁` with uses of at least `H₁` along `alone`'s orbit.
 `constant_iff_needs_nothing` needs a given way `w₀`. The closed form of the step `T` by
@@ -737,7 +738,7 @@ theorem ends_with_net_rising {marked : Nat → Prop} {alone : W → W} {after : 
 /-! ## 5. Turning in time, exactly -/
 
 /-- **A line under a step while it can go on, split at a step.** For any state type, any `can`, `next`
-and start `s`, and any step `T`: the line from `s` under `Law.stepWhile can next` never ends exactly
+and start `s`, and any step `T`: the line from `s` under `Law.stepWhile can next` and the one (`«一»`) never ends exactly
 where it can go on at every step of the orbit before `T` and the line from the orbit at `T` never
 ends. No premise. By `Law.stepWhile_unending_iff` and `Law.orbit_add`. -/
 theorem unending_from {X : Type u} {can : X → Prop} {next : X → X} {s : X} (T : Nat) :
@@ -761,8 +762,9 @@ step `T` of the course as it was from `s` with no marked level at any step befor
 line from `s` never ends exactly where the need is met at every step up to and including `T` of the
 course as it was, and the line never ends from the configuration the pair's step gives after the
 course as it was at `T`. Nothing is asked of the level at `T`, of where the course as it was ends, or
-of whether marks are decided. `unending_iff_first_marked_wide` below is this at the first marked step,
-found by a search. By `unending_from` at `T + 1` and `agrees_until_marked`. -/
+of whether marks are decided. `unending_iff_first_marked_wide` below is this at the first step where the
+need is unmet or the level marked, found by a search; where the line never ends, that step is the first
+marked one. By `unending_from` at `T + 1` and `agrees_until_marked`. -/
 theorem unending_iff_marked_at {W : Type u} {marked : Nat → Prop} {alone : W → W}
     {after : W → Nat → W} {left : W → Nat → Nat}
     (outside : AloneOutside marked alone after) {need : Nat} {s : W × Nat} {T : Nat}
@@ -793,7 +795,8 @@ theorem unending_iff_marked_at {W : Type u} {marked : Nat → Prop} {alone : W �
 /-- **Split at the first marked level, under a weaker premise.** The law
 `unending_iff_first_marked` below, with its premise `asItWasEnds` (the course as it was comes
 below the need)
-replaced by `stops`: at some step of the course as it was the need is unmet or the level is marked.
+replaced by `stops`: at some step of the course as it was it is not so that the need is met and the
+level unmarked (with the marks decided, as here: the need is unmet or the level is marked).
 The other premises are the same: `AloneOutside` (`outside`) and decided marks. The same conclusion:
 the line from `s` never ends exactly where there is a step `T` of the course as it was, the need met
 and no level marked before it, the need met and the level marked at it, from whose next configuration
