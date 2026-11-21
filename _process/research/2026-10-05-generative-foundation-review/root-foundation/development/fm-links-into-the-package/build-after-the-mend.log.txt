@@ -1,0 +1,37 @@
+start 20:34:11
+{
+  "tree": "/Users/ren/tmp/fm/build1",
+  "modules": 152,
+  "ran": [
+    "Becoming.KeepableStep",
+    "BecomingKeepableStepAxiomAudit",
+    "Becoming.TurningInTime",
+    "BecomingTurningInTimeAxiomAudit",
+    "BecomingTurningInTimeSignatures",
+    "Becoming.TurningInTime.PreludeOnly"
+  ],
+  "reused": 298,
+  "unclean": [],
+  "audits": {
+    "Becoming.KeepableStep": {
+      "theorems": 8,
+      "declarations": 11,
+      "with_axioms": {}
+    },
+    "Becoming.TurningInTime": {
+      "theorems": 81,
+      "declarations": 108,
+      "with_axioms": {}
+    }
+  },
+  "seconds": {
+    "Becoming.KeepableStep": 2.893,
+    "BecomingKeepableStepAxiomAudit": 0.424,
+    "Becoming.TurningInTime": 3.85,
+    "BecomingTurningInTimeAxiomAudit": 0.7,
+    "BecomingTurningInTimeSignatures": 0.758,
+    "Becoming.TurningInTime.PreludeOnly": 3.368
+  }
+}
+exit 0
+end 20:34:20

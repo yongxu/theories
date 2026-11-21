@@ -1,0 +1,4 @@
+start 20:35:06
+{"status": "passed", "lean_steps_run": 21, "lean_steps_reused": 1619, "lean_wall_seconds": 49.468, "spine_declaration_audits": 27788}
+exit 0
+end 20:36:12

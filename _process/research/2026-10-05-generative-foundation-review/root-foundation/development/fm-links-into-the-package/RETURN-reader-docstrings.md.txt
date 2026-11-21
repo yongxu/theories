@@ -1,0 +1,100 @@
+**Review of e87d626dd: the KeepableStep and TurningInTime tellings set against their Lean statements**
+
+**Summary.** I found no MUST finding. Every new or changed telling I read says what its statement says and keeps its premises. There are 11 LESSER findings below. Three of them repeat across files: "exactly where" used for a global equivalence (L1), the premise `stops` told as "unmet or marked" where the Lean says something weaker without decidability (L5), and the wording of the TurningInTime clause in the root, the READMEs and the checker (L7, L10, L11). I ran no build or test.
+
+Paths are relative to `/Users/ren/tmp/fm/wt/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/`.
+
+## Checks that passed
+- **Names exist:**
+  - `Keepable` (JointKeeping.lean:91), `Keepable.start`, `ChoicePoint.process`, `ChoicePoint.leftRun` and `ChoicePoint.restRun` in JointKeeping.lean.
+  - `Run.cons` (Horizon.lean:93).
+  - `Run.onward` is `Becoming.Run.onward` in Recurrence.lean:334, not in Horizon.
+  - `Invariant` and `Invariant.run` (Frame.lean:265 and 286).
+  - `kernel_step_iff` (Viability.lean:98).
+  - `agrees_until_marked` (TurningInTime.lean:474).
+- **Statement unchanged:** `unending_iff_first_marked` has the same statement as in the parent commit. Only its docstring and proof changed.
+- **"Weaker premise" is true:**
+  - `asItWasEnds : ∃ n, (orbit asItWas s n).2 < need` gives `stops : ∃ n, ¬(need ≤ … ∧ ¬ marked …)`. This is exactly the new proof's `fun h => Nat.not_le_of_gt ended h.1`.
+  - The reverse fails. The docstring's example is right: a course as it was that reaches a marked level and never falls below the need meets `stops` and not `asItWasEnds`.
+- **Proof claims checked against the proofs:**
+  - "No decision of the guard is used": no statement in KeepableStep has a `Decidable` premise, and the proofs are constructive.
+  - `not_keepable_run` is `Invariant.run` at `not_keepable_step`, as its docstring says.
+  - `unending_from` is built from `Law.stepWhile_unending_iff` and `Law.orbit_add`.
+  - `unending_iff_marked_at` is built from `unending_from` at `T + 1` and `agrees_until_marked`.
+  - `unending_iff_first_marked_wide` is built from `first_of_decided` and `unending_iff_marked_at`.
+- **"The premise is needed, and is not the least":** true as stated.
+  - `keepable_gained` gives `closed` failing together with a step from not-keepable to keepable.
+  - `Successor.not_keepable_kept_complement_not` gives the invariant holding while `closed` fails, with runs from every number, so the witness is not empty.
+  - `not_keepable_invariant_iff` gives the exact condition.
+- **Layer mark:** both imports are L1 in the root: `Becoming.Horizon` (L1) at Becoming.lean:507 and `Becoming.JointKeeping` (L1) at line 2783. By the rule at lines 418–423, `(L1)` for KeepableStep is consistent.
+- **Chinese clause** (README.zh.md:245): it says what the English clause says, "其中" included. It has the same faults as L5 and L10.
+
+## LESSER findings
+
+**L1. "exactly where" for a global equivalence** (five places)
+- **Where:** KeepableStep.lean lines 17–18 and 62–63, the root bullet (Becoming.lean:2794–2795), the README row, and the checker SCOPE.
+- **Words:** "Every step keeps not being keepable exactly where no step from outside the guard leads to a configuration the guard is keepable from".
+- **Against:** `not_keepable_invariant_iff : Invariant P (¬Keepable P g ·) ↔ ∀ s a t, P.step s a t → ¬ g s → ¬ Keepable P g t`. Both sides are closed, global statements. "exactly where" reads as a set of points.
+- **Instead:** "Every step keeps not being keepable exactly when no step from outside the guard leads to a configuration the guard is keepable from."
+
+**L2. KeepableStep.lean lines 14–16: definitions told as results**
+- **Words:** "For every process and guard, with no further premise: a run read from its step 1 on is a run (`Run.onward`), and a step into a run's start followed by the run is a run (`Run.cons`)."
+- **Against:** these are definitions, not theorems. The guard plays no part in them, and `Run.onward` is in `Becoming.Recurrence`, not this module's imports.
+- **Instead:** "Its proof reads a run from step 1 on (`Run.onward`, `Becoming.Recurrence`) and puts one step before a run (`Run.cons`, `Becoming.Horizon`)."
+
+**L3. KeepableStep.lean lines 22–25: the witness is unnamed, the key conjunct is left out, and the punctuation is broken**
+- **Words:** "a guard that does not hold at `split` and holds at `left` … (`ChoicePoint.keepable_gained`, along the run `ChoicePoint.leftRun` `ChoicePoint.keepable_gained_along_run`)".
+- **Against:** `keepable_gained` is stated for `afterSplit` only. Its fourth conjunct, that `closed` fails, is what makes it show the premise is needed, and the header omits it.
+- **Instead:** "On `ChoicePoint.process`, the guard `afterSplit` (false at `split` only) is not keepable from `split` and is keepable from `left`, one step on, and not every step keeps its complement (`ChoicePoint.keepable_gained`; along the run `ChoicePoint.leftRun`, `ChoicePoint.keepable_gained_along_run`)."
+
+**L4. "The twin of `kernel_step_iff`" (KeepableStep.lean lines 9 and 48; root bullet "the twin of the kernel's step")**
+- **The issue:** the two statements share a shape, with ∃…∧ in place of ∀…→. But `Kernel` is over finite reaches and `Keepable` over infinite runs. At a configuration with no step, the kernel holds where the guard holds, while keepability fails. No theorem relates the two, so "twin" says a little more than shape.
+- **Instead:** "the same form as `kernel_step_iff`, with 'some step leads to' for 'every step leads to'".
+
+**L5. The telling of `stops` (wide docstring, TurningInTime header lines 86 and 289, root, README, README.zh, checker)**
+- **Words:** "at some step of the course as it was the need is unmet or the level is marked".
+- **Against:** the Lean premise is `∃ n, ¬ (need ≤ x ∧ ¬ marked x)`, that is, not both the need met and the level unmarked. Under `[DecidablePred marked]` this equals the "or" form, so nothing is false. But the module takes care about which decisions are used, and the "or" form is the stronger reading without decidability.
+- **Instead:** "at some step of the course as it was it is not so that the need is met and the level unmarked", or keep "unmet or marked" and add "(the marks decided)".
+
+**L6. Docstring of `unending_iff_marked_at` (around TurningInTime.lean:765)**
+- **Words:** "`unending_iff_first_marked_wide` below is this at the first marked step, found by a search."
+- **Against:** the search in `first_of_decided` finds the first step where "need met and unmarked" fails. That step is the first marked step only once the line is known never to end.
+- **Instead:** "is this at the first step where the need is unmet or the level marked, found by a search; where the line never ends, that step is the first marked one".
+
+**L7. TurningInTime header lines 85–89: the referent is unclear and one clause is garbled**
+- **Words:** "it rests on the split at any step with no marked level before it (`unending_iff_marked_at`), and that on a line under a step while it can go on, split at a step (`unending_from`)".
+- **The issue:** "it" could be either law, and "and that on a line…" does not parse.
+- **Instead:** "The weaker law rests on the split at any step with no marked level before it (`unending_iff_marked_at`), which rests on the split, at a step, of a line under a step taken while it can go on (`unending_from`)."
+
+**L8. TurningInTime header lines 287–290: "needs" next to a law that asks less**
+- **Words:** "`unending_iff_first_marked` needs the course as it was to come below the need (`asItWasEnds`): without it, a course never marked … (argued here, not a Lean statement); `unending_iff_first_marked_wide` asks less".
+- **The issue:** with the wide law in place, "needs `asItWasEnds`" now says more than is shown. The example shows only that some such premise is needed, and the example fails `stops` too.
+- **Instead:** "`unending_iff_first_marked` has the premise that the course as it was comes below the need (`asItWasEnds`); `unending_iff_first_marked_wide` asks less, that at some step … ; a course never marked whose level never falls below the need meets neither, and is a line that never ends with no such step `T` (argued here, not a Lean statement)."
+
+**L9. Docstring of `unending_from`: the class of the line is not named**
+- **Words:** "the line from `s` under `Law.stepWhile can next` never ends".
+- **Against:** the statement is `«不穷» (Law.stepWhile can next) «一» s`.
+- **Instead:** "under `Law.stepWhile can next` and the one (`«一»`)", as GuardedStep.lean:27 tells it. Optional.
+
+**L10. README.md TurningInTime row (and README.zh.md:245): the premise being replaced is never named**
+- **Words:** "the split at the first marked step is a case of the same split under the weaker premise…".
+- **The issue:** the preceding sentence bundles three theorems under premises that do not include `asItWasEnds`. "The split at the first marked step" and "weaker" therefore have no stated referent.
+- **Instead:** "`unending_iff_first_marked`, whose premise is that the course as it was comes below the need, is a case of the same split under the weaker premise that … (`unending_iff_first_marked_wide`)". The Chinese should follow suit.
+
+**L11. check_becoming.py lines 452–453 (and Becoming.lean around 5063): the clause attaches to the wrong noun**
+- **Words:** "…the line from the next configuration never ends, a case of the same split under the weaker premise…".
+- **The issue:** grammatically, "a case of" attaches to "never ends", not to the law.
+- **Instead:** "…never ends; this split is a case of the same split under the weaker premise…".
+
+## Answers
+**(i) Does the general law do the work?** It does. The new proof of `unending_iff_first_marked` only derives `stops` from `asItWasEnds`, in one lambda, and calls `unending_iff_first_marked_wide`. All the search, agreement and transfer happens in the wide law and the two lemmas under it. The derived premise is strictly weaker (the marked, never-below example), so nothing is put in and taken out. One qualification: the wide law's proof is the old 53-line proof, generalised and split into `unending_from` and `unending_iff_marked_at`. It is a re-factoring within the module. It does not make the law a case of a result proved elsewhere before, and the only outside laws it uses were already used by the old proof.
+
+**(ii) Any claim beyond these statements?** I found none about the world: no "placed", "explained" or "shown". Two sentences go a little past the Lean. "The twin of `kernel_step_iff`" relates two statements by their shape, which no theorem does (L4). The counter-case for dropping `asItWasEnds` is argued, not proved, and is labelled as such ("argued here, not a Lean statement"). The headings "one step of keeping along some course" and "whether a step can gain keepability" name what the theorems state.
+
+## Not read
+- The full module headers of TurningInTime, JointKeeping and Horizon, beyond the changed passages and the definitions named above.
+- The rest of the root bullets and README rows, beyond the changed clauses and the layer marks.
+- The proofs of `first_of_decided`, `Law.stepWhile_unending_iff`, `Law.orbit_add`, `Law.process` and `Law.run`.
+- Whether `Becoming.Recurrence` reaches KeepableStep by import. I inferred it from the writer's reported build.
+- The commit message's last sentence, the board, records and hashes.
+- The pre-existing clauses next to the inserted ones in Becoming.lean around 5060 and in the checker, for example whether `AloneOutside` is named earlier in those sentences.
