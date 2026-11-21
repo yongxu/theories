@@ -1,0 +1,263 @@
+# Read: learning, codes and inquiry, against the six questions of FROZEN-THE-REGISTERING.md
+
+*AI-written (Claude Opus 5.5, a READER of board row DJ's read), 21 November 2026. This report proposes nothing: no statement, model, wording or next step. Answers come from Lean statements and docstrings. No proof was opened. Four definitions were read in full because their statements leave the question open: `LearnedGrouping.receive` and `broadenAfterFailure` (LearnedGrouping.lean 159-177), `RouteFormation.reconsider` (RouteFormation.lean 398-403) and `Contacts.Answers` (Contacts.lean 147-148). "A general law" means it holds of every model meeting the premises written out. "A built example" means it is about one constructed course or numbers supplied. Every negative is "not found in what was read".*
+
+Package: `/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/`.
+
+## What was read, and what was not
+
+- **All 17 files of the group were scanned by a script.** For every `theorem/def/structure/inductive/abbrev/instance` it printed the line, the start of the statement (cut at about 330 to 520 characters) and the docstring just above (cut at about 480 to 520 characters). It also printed the first 2200 characters of each module's opening account.
+- **Module accounts read in full:** Learning.lean 3-135; SharedCodes.lean 6-158; Feedback.lean 4-150; LearnedGrouping.lean 4-48.
+- **Definitions:** LearnedGrouping.lean 150-178; RouteFormation.lean 385-404 (outside the group; `reconsider` is used by ResponseLearning); Contacts.lean 135-184 (outside the group; cited by chapter 3 §8).
+- **Chapter:** 03-KNOWING.md lines 320-489 (§8 and §9) and 565-585 ("What this chapter does not show", "Open"). §6 and §7 (lines 228-319) were not read; their declarations are in Learning.lean, whose account was read whole.
+- **Not read:**
+  - every proof;
+  - the opening accounts past 2200 characters of Learnable, LearnableRuns, LearningRuns, ResponseLearning, CodeAcquisition, CountedCodes, Sensitivity, Readout and PartialReadout;
+  - the full text of long statements the script cut. Among these are the premises after the cut of `SharedCodes.outside_returns` (l.1088), `run_from_imposition` (l.1106) and `homonym` (l.1518).
+
+  Premises bound by `variable` lines (for example `H`, `o` and `[DecidableEq O]` in Learning's elimination section) do not show in a statement's own text. They are written out below where the docstring or the module account names them.
+
+---
+
+## 1. Learning.lean
+
+1. **What registers what.** A course `o : Nat → O` is read only through its prefix `prefixOf o t` (l.150). An extrapolation is a function handed in, `pred : List O → Option O` (l.203). In extrapolation by elimination, what reaches the next step is a state: the index of the current candidate, `indexOn H` (l.351), over an enumeration `H : Nat → List O → Option O` that is handed in. In the training section the selection goes through the data (`Training.Through (AgreeOn D)`, l.931, 947). In the section on maps, a selection through a map `r` is a selection through its lumping (`selects_through_lumping`, l.993).
+2. **Does it change, and by what.** The index changes exactly where the current candidate misses: `index_missed` (l.364), `(refuted : MissesAt (byElimination H) o t) → index H o (t+1) = index H o t + 1`, and `index_kept` (l.368). So the cause of the change is the miss, a difference between what was proposed and the value the course took. The enumeration `H`, and with it every candidate that can be held, is handed in and never changes; in the induction laws it is `lassos` (l.674). The map through which the course is read does not change. Nothing changing it was found in what was read.
+3. **A law in which something not registered comes to be registered.** The nearest are laws in which a proposal comes to be right, not laws in which a new difference comes to be registered:
+   - `index_le_of_accords` (l.393), a general law. Premises: `H` and `o` (variables), `[DecidableEq O]`, `(holds : Accords (H j) o)`. Conclusion: `∀ t, index H o t ≤ j`. "The extrapolation by elimination never passes a candidate that accords."
+   - `held_byElimination_bounded` (l.759), a general law. Premises: `{next : S → S} {s} {l : List S} (held : ∀ n, Law.orbit next s n ∈ l) (reg : S → O)`, with values decided. It misses fewer than `tri l.length` times and proposes at every step from `l.length` on. "given neither the configurations nor their number".
+   - `held_rest_unrefuted` (l.778). Coming to rest is only `¬¬∃ T`; the docstring says the step "is not stated here".
+   - What is handed in: the enumeration `lassos`, the map `reg`, decided values, and a world held by a list. The cause is the miss. That is something the course does to the proposal, not a teacher, though only candidates the enumeration already holds can be reached. `diagonal_misses` (l.298) and `merged_unrested` (l.816) are general laws: on its diagonal course no extrapolation rests, over every merging of classes. The docstring reads this as "no top level: learning at the next level up is again learning, and again incomplete."
+4. **Cost, who bears it, what keeps it.** No stock or draw occurs in this module (not found in what was read). The rest is kept only while the course stays a lasso: `lasso_of_rest` (l.730), where it rests the course repeats.
+5. **A registering lost.** Two laws:
+   - `selects_not_right_of_parted` (l.1013), a general law. Premises: `(equivariant : Equivariant select) (tie : r j = r k) (holds : p j) (fails : ¬ p k)`. Conclusion: `¬ ∀ i, select r i ↔ p i`. "What a map lumps, no selection through it can separate ... that takes a finer map."
+   - `every_determines_nothing` (l.913): data alone fix no untried value.
+
+   Where a finer map comes from is not stated (not found).
+6. **Tied to what it rests on.** Not found in what was read. The account's "What is not derived" (l.124-127) names "which candidates, classes or lumpings an actual formation goes through or can reach".
+
+## 2. Learnable.lean
+
+1. **What registers what.** A map `reg : S → R` of configurations is handed in. So are a feature `val : S → V` and an extrapolation `pred : List R → Option V` from the prefix of `course next reg s` (l.74-83).
+2. **Change.** The map is fixed along the orbit. Only the extrapolation's proposals move.
+3. **A law of coming to be registered.** None found. The exact laws state what can be learned through a fixed map:
+   - `learnable_iff` (l.242). Premises: `(world : ∀ s, s ∈ l)` (a list holds every configuration), with decided values as the module requires. Conclusion: `(∃ pred, ∀ s, Predicts next reg val pred s) ↔ ∀ s s', Law.SameFuture next reg s s' → ∃ T, ∀ t, T ≤ t → val (orbit s t) = val (orbit s' t)`. The second direction's extrapolation is "built from the law, the map, the feature and the list (`fromLaw`)".
+   - `predicts_through` (l.193). Premises: `(held : ∀ n, orbit next s n ∈ l)` and `(factors : ∀ s, val s = g (reg s))`. Elimination predicts "given nothing" from step `l.length + (2·l.length − 1)·tri l.length`.
+4. **Cost.** No cost occurs (not found).
+5. **Lost.** `still_not_predicts_on_both` (l.156). Premises: `(still : next s = s) (still' : next s' = s') (alike : reg s = reg s') (differ : val s ≠ val s')`. Conclusion: no `pred` predicts at both.
+6. **Tied to what it rests on.** Not found.
+
+## 3. LearnableRuns.lean
+
+1. **What registers what.** The same as in Learnable, on runs of `Law.process next`, read through `reg` (l.64-73).
+2. **Change.** None of the map. `guess` (l.212) is fixed by the record through the map (`guess_fixedThrough`, l.222).
+3. **A law of coming to be registered.** None found. These are exact laws through a fixed map:
+   - `learnable_iff` (l.170), premise `(world : ∀ s, s ∈ l)`;
+   - `learnable_iff_tracks` (l.280), same premise;
+   - `learnable_iff_identifies` (l.292), premises `world` and `(invariant : ∀ s, val (next s) = val s)`.
+
+   `learnable_not_identifies` (l.350) is a built example: learnable through a map that tells nothing apart, with the start not identified.
+4. **Cost.** Not found.
+5. **Lost.** `not_identifies` (l.337), a built example: the runs from 0 and from 1 have one record through the map.
+6. **Tied to what it rests on.** Not found.
+
+## 4. LearningRuns.lean
+
+1. **What registers what.** The prefix of a run of any process read through `reg` (`Parting.course`).
+2. **Change.** The map does not change. The extrapolation is through the run's prefix (`byElimination_through_prefix`, l.200).
+3. **A law of coming to be registered.** None found beyond Learning's laws restated on runs. `held_byElimination_bounded` (l.343) has premises `(r : Run (Law.process next)) (held : ∀ n, r.state n ∈ l) (reg)` and `[DecidableEq R]`. `transfer_right_iff` (l.92): under a determined process, an outcome observed at `s₀` transfers to `s` exactly where the two go alike under `π` by the move.
+4. **Cost.** Not found.
+5. **Lost.** `free_prefix_fixes_nothing` (l.264), with premises `(late : t ≤ x) (two : y ≠ z)`: where runs branch freely, the prefix fixes no later value. `merged_unrested` (l.321): along its diagonal run.
+6. **Tied to what it rests on.** Not found.
+
+## 5. LearnedGrouping.lean
+
+1. **What registers what.** A state holds a formed apparatus and a `log` of observation slots (l.66). The grouping is `bond s.log`, the majority of the transitions logged (Segmentation). An utterance is parsed through it: `parse s raw = (readAll decodeChunk (chunks (bond s.log) raw)).bind assembleMessage` (l.153).
+2. **Change.** The log changes by reception. `receive event s` (l.159) draws one unit and appends the slot; without stock it does nothing. The slots received are handed in: `context`, `additional` and `reordered` are fixed lists (l.213-217, 281). So are the majority threshold and the decoder; the module account says "The sounds, the slots, the majority threshold, the decoder, the encounters and the prepared formation are supplied". `broadenAfterFailure raw more s = bif (parse s raw).isNone then expose more s else s` (l.176), docstring "A supplied policy: where the utterance does not parse, receive further slots."
+3. **A law of coming to be registered.** Yes, in built examples only:
+   - `reception_changes_parse` (l.386): every trace of reception from `ready 28` along `context.map some` ends where the utterance, unparsed and unanswered before, parses to `intended` and is answered. Handed in: the context, the stock (28), the threshold, the decoder.
+   - `broadening_after_failure` (l.436): after the narrow course the utterance fails; `broadenAfterFailure utterance (additional.map some)` brings the log to the context, the parse and the response. The trigger is the going-on's own failure to parse. The policy and the further slots are handed in.
+   - `parsed_not_broadened` (l.451): a parsed message does not broaden.
+
+   No general law of coming to register was found in this module. The general laws are about stock: `total_kept` (l.351), `still_without_support` (l.357) and `broadening_trace` (l.366).
+4. **Cost, who bears it, what keeps it.** Each slot received draws one unit of the receiver's stock: `receive_stock` (l.180), `total_kept` (l.351), a general law over every trace, "keeps stock plus drawn". `support_used` (l.409), a built example: stock falls from 14 to 4. With too little stock, broadening keeps only a prefix and still fails: `broadening_keeps_prefix` (l.457, 19 units). With one unit less the utterance parses but is not answered: `parse_without_support` (l.417). What keeps the grouping is the log itself; `response_keeps_history` (l.400) says the response keeps it. No later loss of the log is modelled (not found).
+5. **Lost.** Three built examples:
+   - `order_not_frequency` (l.423): the same counts in another order form a different bond and leave the utterance unparsed;
+   - `repetition_joins_words` (l.321): repetition can join across the intended words;
+   - `gap_breaks_edge` (l.275): a gap breaks a transition.
+6. **Tied to what it rests on.** Only as a precondition. `still_without_support` (l.357) says that without stock, reception leaves the configuration as it is along every trace. Nothing was found in which running down causes a registering.
+
+## 6. ResponseLearning.lean
+
+1. **What registers what.** The receiver's `samples` are pairs of query and the sender's actual response. The installed program is developed from them (`learn`, l.101).
+2. **Change.** `send e x` (l.88): "the sender's actual response is delivered". The lessons are fixed lists handed in (`basic`, `extended`, l.96-98). So are the teacher (`source p stock`, "a supplied starting condition", l.71) and each fresh formation's stock and parts (25, 8). `reconsider` (RouteFormation l.400) retests the installed wiring against the first three samples; "where it no longer fits, discard it and develop again".
+3. **A law of coming to be registered.**
+   - `send_delivers` (l.156), a general law over every `Teaching`. Premises: `(ready : x.receiver.blocked = false) (stock : 1 ≤ x.receiver.stock) (actual : respond x.sender e = some (out, remaining))`. Conclusion: `(send e x).receiver.samples = x.receiver.samples ++ [(e, out)] ∧ (send e x).sender.stock = remaining`.
+   - `reconstructs_program` (l.246), a general law over programs. Premises: `(p) (n) (routes : p.route ∈ generatedRoutes 2) (distinct : p.first ≠ p.second) (enough : 7 ≤ n)`. Conclusion: `(learn (source p n) 25 8).installed = some p ∧ 7 ≤ (learn (source p n) 25 8).stock`. Handed in: the teacher's program, the basic lesson, the stock of 25, the 8 parts.
+   - `peer_repairs` (l.338) and `peer_repair` (l.599) are built examples: a peer's demonstration of `novel`, then `reconsider`, replaces the duplicating program by the collapsed code's. The trigger is a record that no longer fits, and the demonstration is handed in.
+   - `extended_course_separates` (l.441), a built example: a longer course separates the programs.
+4. **Cost, who bears it, what keeps it.** Both sides bear it:
+   - The sender's responses draw on its stock: `response_within_stock` (l.111).
+   - The receiver draws one unit a sample. `send_stock` and `lesson_stock` (l.146-150) are general laws: the pair's stock plus drawn is kept.
+   - A received disagreement is not repaired without stock: `short_receiver_not_repaired` (l.348, built) and `learned_blocked_short` (l.508, built).
+   - A teacher with stock only for executing interrupts teaching: `execution_stock_interrupts` (l.306, built).
+   - What keeps it across generations: `successor_keeps` (l.261), with premises `(installed : t.installed = some p) (routes) (distinct) (enough : 7 ≤ t.stock)`. It is kept only while each teacher has at least 7 units and each fresh formation is supplied 25 (`successor`, l.257).
+5. **Lost.** Built examples:
+   - `faithful_loses_distinction` (l.316): a faithfully reconstructed program can lose a distinction the task makes;
+   - `distinction_lost_every_cohort` (l.352) and `succession_keeps_lost_distinction` (l.550): the lost distinction recurs in every generation;
+   - `limited_changes_then_stays` (l.379): the initial limitation changes the program once and then it stays;
+   - `peer_keeps_error` (l.614).
+
+   Undone only by a demonstration handed in (`peer_repairs`).
+6. **Tied to what it rests on.** Only stock as a precondition, as above. Nothing was found in which the loss of a distinction reaches what is learned.
+
+## 7. CodeAcquisition.lean
+
+1. **What registers what.** A learner holds an optional code, a stock and records (l.162). Three probes show a code (`observe`, l.100). `acquire` reads a code off them (l.103).
+2. **Change.** `train c s` (l.208): the move is the code `c` itself. It is handed in as the process's action (`trainProcess : Process Learner Code`, l.345).
+3. **A law of coming to be registered.**
+   - `step_installs` (l.356), a general law. Premises: `(step : trainProcess.step s c t) (enough : 7 ≤ s.stock) (distinct : c.first ≠ c.second)`. Conclusion: `t.code = some c`.
+   - `acquired_exact` (l.110): `∀ c, c.first ≠ c.second → acquire (observe c) = c`.
+   - `acquired_every_expression` (l.120), "with no bound on depth".
+
+   What is handed in: the code is the move; the docstring says "The grammar, the probes, the training schedule and the draw of each operation are supplied, not derived."
+4. **Cost.** `step_stock` (l.361): `t.stock + 7 = s.stock`. `step_rests_when_short` (l.366): short stock leaves the learner as it was. `installed_without_execution` (l.398, built): installed, with no stock left to execute.
+5. **Lost / not acquired.**
+   - `primitives_no_exact` (l.275): no reading of the primitives alone is exact for the order.
+   - `equal_primitives_unresolved` (l.317): where the primitives are equal the order is not registered.
+   - `nonuniform_fails_transfer` (l.332): the probes do not exclude a nonuniform law.
+6. **Tied to what it rests on.** Stock as a precondition only.
+
+## 8. SharedCodes.lean (with `agrees_every_start_iff`, `impose_loses_iff`, `held_stays`)
+
+1. **What registers what.** Each formation holds a code `I → M → F`, forms for senses. A formation reads another's form as a sense exactly where their codes agree there, given that its own code tells the senses apart (`reads_iff`, l.714). `TellsApart` (l.700) is what a code registers.
+2. **Change.** Codes change only by hearing: `hearBy adopt e X` (l.201). The rule `adopt`, which reads the two codes and the sense, is handed in. So is the hearing `e` (an order, or a run's acts). `changes_iff` (l.256), a general law: a form changes exactly at the hearer, at the sense heard, where `adopt ... = true` and the speaker's form differs. `follow p` (l.662): a pointer is handed in.
+3. **A law of coming to be registered.**
+   - **Hearing makes no form.** `hearBy_held` (l.244), `runBy_held` (l.336) and `run_held` (l.550) are general laws: every form held after an order of hearings was held at the start, at the same sense, by some formation. `shared_iff_in_use` (l.450), premise `(every : ∀ i, i ∈ all)`: the forms an order can make shared are exactly the forms in use.
+   - `agrees_every_start_iff` (l.388), a general law. Premises: `(apart : a ≠ b) (es : List (Hearing I M)) (m : M)`, with decided equality on `I` and `M` from the section. Conclusion: `(∀ X i j, runBy always es X i m = runBy always es X j m) ↔ ∀ i j, origin m es i = origin m es j`. This is agreement coming to be, not a distinction. The order is handed in.
+   - **The one step that makes a form is `coin`** (l.1344). "A formation *coins* the form `x` for the sense `m` ... Hearing makes no form (`hearBy_held`); coining does." It is a definition, supplied, with no cause stated.
+   - `coined_returns` (l.1368), a general law. Premises: `{all} (every : ∀ i, i ∈ all) {c : M → F} {m m'} (ne : m' ≠ m) (o : I) {x} (fresh : x ≠ c m') (X) (j)`. Conclusion: `runBy always (broadcast o m all) (coin o m x (impose c X)) j m ≠ runBy always (broadcast o m all) (coin o m x (impose c X)) j m'`. "A coined form, heard by all, brings back a merged distinction." Handed in: the coining, the broadcast order, the rule `always`.
+   - `outside_returns` (l.1088): "From any form kept outside, the distinction comes back at once." Its premises were cut and not read in full. The docstring: `h` holds the imposed form at `m'` and hears, at `m`, a formation whose form at `m` is not the imposed one.
+4. **Cost.** No stock or draw occurs (not found in what was read). What keeps a shared form is only that every formation holds it: `held_stays` and `all_agree_rest` (l.529).
+5. **Lost.**
+   - `impose_loses_iff` (l.1052), a general law and, by the module account, "By definition": `Loses X (impose c X) i m m' ↔ X i m ≠ X i m' ∧ c m = c m'`. `source_loses_nothing` (l.1056).
+   - `held_stays` (l.1063), a general law. Premises: `(adopt) {X} {m} {x} (held : ∀ j, X j m = x) (es) (i)`. Conclusion: `runBy adopt es X i m = x`, "under every rule". `run_imposed_stays` (l.1069): along every run from an imposition, "the imposed code stays, and with it every merge."
+   - `outside_needed` (l.1078), a general law. Premises: `(r : Run (process adopt)) {n} {G : I → Bool} {c} {m} (imposed : ∀ i, G i = true → r.state n i m = c m) (kept : ∀ j, G j = false → r.state n j m = c m) (k) (i)`. Conclusion: `r.state (n + k) i m = c m`. "A merged distinction comes back only from a form kept outside the imposition."
+   - `keeps_apart_iff` (l.823): a hearing keeps the hearer's code telling senses apart exactly where the form it takes is not one the hearer gives another sense. `homonym` (l.1518), built: agreement formed sense by sense can merge senses.
+   - In the records section: `resolved_alike_merged` (l.1202), `no_reading_recovers` (l.1210) "No reading of later records recovers the earlier ones", `added_never_replaced` (l.1271) "a resolution can be lost but never replaced", and `uptake_loses` (l.1666, built).
+
+   Undone only by `coin` or by a form kept outside.
+6. **Tied to what it rests on.** Not found. "What is not derived" (l.146-149) names "whether actual conventions form this way" and "No ethical predicate or ranking occurs"; the readings: "None of these is a value."
+
+## 9. CountedCodes.lean
+
+1. **What registers what.** Counts `I → M → F → V` for each agent. The word registered as most likely is the `UniqueGreatest` (l.137).
+2. **Change.** `hear p rule X` (l.272): the speaker map `p` and the rule are handed in. `addHeard say` (l.308) and `addSpeaker` (l.325) are rules handed in. `gatedHear` (l.364): a gate read off the hearer's whole model, handed in.
+3. **A law of coming to be registered.** A general law of not coming to be: `never_shared` (l.216). Premises: an irreflexive and transitive `<`, `(keeps : Law.KeepsRelation T (Renamed π σ)) (symmetric : Renamed π σ X X) (onto) (moves : ∀ y, σ m y ≠ y)`. Two agents the exchange relates never share a uniquely greatest word. Coming to be occurs only in built examples: `sayFirst_shared` (l.518, a preferred word) and `asymmetric_shared` (l.538, an asymmetric start).
+4. **Cost.** Not found.
+5. **Lost.** `added_tie` (l.488), built: from opposite counts, one step of adding the speaker's counts gives one model with no uniquely greatest word.
+6. **Tied to what it rests on.** Not found.
+
+## 10. JoiningCodes.lean
+
+1. **What registers what.** A `Presentation` gives each fragment a code read off its possible contexts or branching tests. The presentation is handed in.
+2. **Change.** None along a course (static).
+3. **A law of coming to be registered.** Not found. The laws say when codes carry the joining: `image_domain_iff` (l.58), premise `(exact : Exact (possibleAnswers J) p)`; `FiniteOutcomes.lifts_of_exact` (l.165), premises `em`, `finite`, `exact` and `reduced`.
+4. **Cost.** Not found.
+5. **Lost.** `codes_apart_of_possible` (l.52) is the contrapositive of a merge.
+6. **Tied to what it rests on.** Not found.
+
+## 11. Inquiry.lean
+
+1. **What registers what.** A belief `B : S → Prop` and an observation map `sense` are handed in (l.34). The scope is what actual executions of the policy reach.
+2. **Change.** Belief narrows (`After` in InquirySufficiency, not read). `Scope.antitone` (l.61), premise `(narrower : ∀ s, B' s → B s)`.
+3. **A law of coming to be registered.** Not found. Narrowing is handed in as `B'`.
+4. **Cost.** Not found.
+5. **Lost.** Not found.
+6. **Tied to what it rests on.** `Scope.secures` (l.41): a sound policy secures its goal on its scope. Nothing about what the inquirer rests on.
+
+## 12. FallibleInquiry.lean
+
+1. **What registers what.** A reader `read : (Nat → C → Nat) → Option Bool` of levels is handed in. So are the couplings `obs` and the varying part.
+2. **Change.** None of the reader. The module says the "complete reading interface and actual interpretation of the finite weights are supplied".
+3. **A law of coming to be registered.** Not found. Two bounds:
+   - `coverage_le_errors_add_reach` (l.205): commitment is at most the two error weights plus the weight within responsive reach.
+   - `ignored_signal` (l.317), built: "Reach alone cannot force evidence to be used: a constant answering rule passes through the same couplings but errs."
+4. **Cost.** Not found.
+5. **Lost.** `omitted_exchange_no_reach` (l.339), built: in the reduced description, the reader is beyond reach, "even though the level histories (and the readout) still distinguish it".
+6. **Tied to what it rests on.** `counted_residual_reaches` (l.404), built: "If the residual is counted among the differences, it reaches the reader. The new accounting relocates the relevant relation; it does not explain it away." The accounting is a move of the model, handed in.
+
+## 13. Feedback.lean
+
+1. **What registers what.** Not a reader but what reaches a formation's support. `Flow.AffectedBy` (l.171) holds where another exchanges with a condition the formation depends on. The influence closure (l.175) is "what a formation's own feedback can carry" (the AI reading, l.114).
+2. **Change.** Not along a course. The closures are of a fixed flow and web.
+3. **A law of coming to be registered.** Not found.
+4. **Cost.** Not applicable (not found).
+5. **Lost.** Two laws:
+   - `Flow.Balances.uncoupled_beyond_influence` (l.460), a general law. Premises: `(balances : L.Balances W) (without : L.WithheldLevels part W l) (beyond : ∀ h, part h = true → ¬ L.WithinInfluence W f h)`. Conclusion: `∀ t g, L.WithinInfluence W f g → (W.Supported t g ↔ W.Admits (l t) t g)`. "Feedback carries nothing from beyond the influence closure."
+   - `Late.affected_without_effect` (l.1439), built: an exchange after the dependence affects it without effect.
+6. **Tied to what it rests on.** This is the place in the group that states the gap, but statically.
+   - `Flow.Balances.support_agrees` (l.295), a general law. Premises: two balanced flows, webs agreeing on what `g` requires and needs, and alike starts and alike exchanges on every condition `g` depends on. Conclusion: `g` is supported alike at every step. "A formation's support follows only the exchanges with what it depends on."
+   - `Clearing.uncoupled` (l.1232), built: the clearer's support is the same whether or not it clears the habitat, while the dweller ends from the third step.
+   - `Clearing.system_counts_dweller` (l.1259), built.
+
+   The account's "What is not derived" (l.141): "that a formation knows its reach closure, or wants anything". Nothing was found in which what a formation registers changes because of what it reaches.
+
+## 14. Sensitivity.lean and 15. SensitivityWebs.lean
+
+1. **What registers what.** What a law of exchange reads: `ReadsWithin` (l.122) and `ReadsFinitely` (l.127). Its least coupling is what it is sensitive to: `ExchangeLaw.ReadsFinitely.least_coupling` (l.197), premise `(fin : law.ReadsFinitely)`, conclusion up to `¬¬`.
+2. **Change.** The law is fixed. Nothing along a course changes what it reads (not found).
+3. **A law of coming to be registered.** Not found.
+4. **Cost.** Not found.
+5. **Lost.** `tailLaw_insensitive` (l.325) and `tailLaw_differs` (l.334): a law sensitive to no condition still differs between histories. The decision `decides` is a premise, and it gives LPO (`lpo_of_vanish_decided`, l.555).
+6. **Tied to what it rests on.** SensitivityWebs `exchange_alike_of_insensitive` (l.58). Premises: `fin`, `follows`, `follows'`, `(out : part h = false)` and `(nothing : ∀ c, ¬ law.Sensitive h c)`. Conclusion: flows exchange alike at every step, whatever the webs. This is static.
+
+## 16. Readout.lean and 17. PartialReadout.lean
+
+1. **What registers what.** A reduction `π : S → K` and an observable `f`, both handed in.
+2. **Change.** None along a course. A finer map is handed in: `LumpedWithin.finer` (PartialReadout l.149), premise `(lumped : LumpedWithin D π f) (π')`. So is a retention: `ExactWithin.retained` (l.155), premise `(faithful : ∀ s, D s → read (retain (π s)) = π s)`.
+3. **A law of coming to be registered.** Not found. The exact conditions:
+   - Readout `reading_single_iff` (l.63): `SingleValued (Reading π f) ↔ Lumped π f`.
+   - PartialReadout `exact_exists_iff` (l.126), premise `(sec : SectionWithin D π pick)`. The section is handed in: "the section is the datum that finds a configuration behind a value".
+   - `exact_iff_predictsFrom` (l.292).
+4. **Cost.** Not found.
+5. **Lost.** Readout `no_restore` (l.92), premises `(merged : π s = π s') (different : s ≠ s')`: no inverse on what is merged. `no_judge_of_merged` (l.283). `SoundWithin.silent` (PartialReadout l.133).
+6. **Tied to what it rests on.** Not found.
+
+---
+
+## The guesses, from this group
+
+- **G1** (stated of the modules on readings and the lock, not this group). Every change found in this group has the shape G1 names: an update handed in, received slots handed in, a teacher, or a candidate enumeration fixed once.
+  - The examples: `hearBy` with `adopt`, `hear p rule`, `train c`, `send` from a supplied teacher, `receive` of supplied slots, and `byElimination` over a supplied `H`.
+  - Against, if anything: in `Learning.index_missed` (l.364) the change of the held candidate is caused by the miss, a difference the course makes to the proposal. But only candidates already in the supplied enumeration can be held.
+- **G2.** For:
+  - Exact conditions are stated: `Learnable.learnable_iff` (l.242), `LearnableRuns.learnable_iff_tracks` (l.280), `CodeAcquisition.acquired_exact` (l.110), `PartialReadout.exact_exists_iff` (l.126).
+  - In each the map, the teacher, the probes or the samples are handed in: `ResponseLearning.reconstructs_program` (teacher, lesson, stock 25); `LearnedGrouping.reception_changes_parse` (the context).
+  - Learning's elimination is "given nothing" beyond the course read through a supplied map and enumeration. Its rest is only unrefuted, with "The step at which it rests is not stated here" (Learning l.45).
+  - No statement ties what is learned to what the learner rests on.
+
+  Against, or a qualification: the stock is tied, but only as a precondition, not as content. Learning is blocked or cut short without stock (`ResponseLearning.short_receiver_not_repaired` l.348, `CodeAcquisition.step_rests_when_short` l.366, `LearnedGrouping.still_without_support` l.357, `broadening_keeps_prefix` l.457), and keeping a program across generations needs 7 units in each teacher (`successor_keeps` l.261).
+- **G3.** For:
+  - Loss is general and exact. `SharedCodes.impose_loses_iff` (l.1052) holds by definition. `held_stays` (l.1063) and `run_imposed_stays` (l.1069) hold under every rule. So do `resolved_alike_merged` (l.1202), `no_reading_recovers` (l.1210), `added_never_replaced` (l.1271) and `Readout.no_restore` (l.92).
+  - Acquiring within hearing is bounded by what is already in use. `hearBy_held` (l.244) and `shared_iff_in_use` (l.450) are general laws: hearing makes no form.
+  - A merged distinction returns only from something supplied: a form kept outside (`outside_needed` l.1078, `outside_returns` l.1088) or a `coin` (l.1344, a supplied step with no cause stated) heard by all (`coined_returns` l.1368).
+
+  Against, or a qualification:
+  - `coined_returns` is itself a general law; what is conditional is the coining.
+  - In ResponseLearning both losing and repairing are built examples, and repair needs a supplied demonstration (`peer_repairs` l.338).
+  - "A reader removed is not brought back" was not found in this group.
+- **G4.** Not for this group, which is inside the package. The nearest in the package, outside this group, is `Contacts.answers_iff` (Contacts.lean l.152). Statement: `(∀ D i, Learning.Training.Through (AgreeOn (ρ D (some i))) (fun x => x i = true)) ↔ Answers ρ`, with `Answers ρ := ∀ D i, i ∈ ρ D (some i)`. "A revision rule answers every failure exactly where its output contains the failed address". Its pair is `blind_misses` (l.171), premises `(blind : Blind ρ) (unlisted : Unlisted I)`: a rule not reading its consequences leaves some failure unanswered at every plan. In both the rule `ρ` is handed in.
+- **G5.** For:
+  - Every law found has a supplied rule or move behind the change: `adopt`, `rule m`, the code moved by `train`, the teacher, the slots, `broadenAfterFailure` ("A supplied policy"), the enumeration `H`, `coin`.
+  - `Learning.merged_unrested` (l.816) is read in its docstring as "no top level: learning at the next level up is again learning, and again incomplete".
+
+  Against, or a qualification: not every supplied thing is a slower reading one level up. `coin` is a bare step with no reading behind it. The elimination's enumeration is fixed once and does not read anything. The miss that moves the elimination is the course's own doing. So "other than by an update handed in" was not met in this group, but not every case has the shape "a slower reading". Two built examples come nearest to "because of what it did", with the response handed in: `LearnedGrouping.broadening_after_failure` (l.436), where a failed parse triggers receiving more, and `ResponseLearning.peer_repair` (l.599), with `reconsider`, where a record that no longer fits triggers discard and redevelopment.
+
+## Other places met, on no list
+
+- `Revision.lean`: `keeps_through_iff` (l.41) and `lost_choice` (l.56), cited by chapter 3 §8 as "Selection revises its lumping": every selection through an old lumping stays expressible through a new one exactly where new indistinguishability implies old, and a merged old pair supplies a lost choice. Not read beyond the location.
+- `Contacts.lean`: `answers_iff` (l.152) and `blind_misses` (l.171), as under G4.
+- `RouteFormation.lean`: `encounter` (l.390) and `reconsider` (l.400), the repair by retest against samples.
+- Cited by chapter 3 and not read: `CrossSituational.candidates_append` ("Records only narrow the candidates"); `OpenedCorrection.*` (a revision of a reading that opens a correction); `NormativeActivity.adaptive_closed_cannot_resolve`, where "a reference changes without entering what is retained"; the pre-spine `ReconfigurableSupportLogic.new_probe_separates` ("Access yet to form", where states alike under every old observation are told apart by a newly admitted probe); `Midway.no_prefix_reading` (prefix loss); `Identification` (the rest step of elimination); `InquirySufficiency` (`After`, the narrowing of belief); `Segmentation.bond`.
+- Chapter 3 "What this chapter does not show" (l.567-572) says it does not show "Which map or class an actual formation holds". Its "Open" (l.581) names "an institution revising its rule of reading".

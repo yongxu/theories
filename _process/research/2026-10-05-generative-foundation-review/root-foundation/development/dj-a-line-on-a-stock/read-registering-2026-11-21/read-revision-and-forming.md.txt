@@ -1,0 +1,263 @@
+# Read: revision and the forming of moves, routes and predictions
+
+*AI-written (Claude, reader "revision-and-forming"), 21 November 2026, for the frozen questions in `FROZEN-THE-REGISTERING.md`. This is a read. It proposes no statement, model, wording or next step. It wrote no Lean, built nothing and ran no tests. Path prefix for the Lean: `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/`. "A built example" means a result about one constructed course or about supplied numbers. "A general law" means it holds of every model that meets the premises written out. Every negative means "not found in what was read".*
+
+## What was read
+
+- `Revision.lean`: lines 1-275 and 340-444 (all of it except the proofs at 276-339; the statements of `step_iff` l288, `trace_iff` l325, `feasible_iff` l337 were taken from the module's account and the declaration list).
+- `RevisionPlans.lean`: lines 1-~75 (module account) and the declaration list. No statement bodies read.
+- `RevisionRoutes.lean`: lines 1-~75 (account) and the declaration list.
+- `ContinuingRevision.lean`: lines 1-110, 125-232, 300-384, 450-587 (proof bodies partly filtered out).
+- `OpenedCorrection.lean`: all of it (1-202).
+- `MoveFormation.lean`: the module account (top `/-! … -/`), the declaration list, lines 200-222 and 655-680.
+- `RouteFormation.lean`: the module account, the declaration list, lines 386-404, 494-552 and 720-768.
+- `ReflexivePrediction.lean`: the account, the declaration list, lines 60-100 and 150-160.
+- `HeldPossible.lean`: the account (the full top block), and the statements at l150, 322, 454-468, 543-547, 581-585 and 622-626.
+- `GrammarReadings.lean`, `TimedResponse.lean`, `Handoff.lean`: their accounts and declaration lists. Also TimedResponse l40-52, 86-100, 150-196 and 284-310, and Handoff l48-60, 230-242 and 260-275.
+- `LineOnAStock.lean`: lines 1-40 and 520-560 (`ways_alike`), as asked.
+- `TurningInTime.lean`: lines 135-274 of the account; the statements of `locked_turns_in_time_on_window_iff` (l1633, docstring from l1619), `locked_turns_in_time_share_iff` (l1817, docstring from l1803) and `share_corrected_on_course` (l1896, docstring from l1882).
+- Met but not on my list: `ReferencePlan.lean` l1-45 and the statements at l263-270 and l443-462. `Runaway.lean` l103-116. Chapter 3 §10 (`03-KNOWING.md` l487-504).
+- **Not read:** the proofs, except where noted. The statements of `RevisionPlans` and `RevisionRoutes` beyond their declaration lines. `RouteFormation` l1-385 apart from its account (so the statements of `inspect_installed` l609 and `inspection_transfers` l631 come from the account). `MoveFormation` l223-650 and l680-952. `HeldPossible`'s witnesses (l640-1171). `GrammarReadings` bodies. `Contacts.lean`, `Mechanism.lean` (where `adaptive` is defined) and `Learning.lean`.
+
+---
+
+## 1. Revision.lean (`Registration`, `Revising`, `RevisionRuns`)
+
+**Q1. What registers what.** What is registered is a lumping at each configuration, `alike : S → X → X → Prop` (`Registration.Keeps`, l72). The module account says "its index is not an outside selector". A selection reaches through it as `Learning.Training.Through`. In the built process `Revising.P` (l153), the reading is a coordinate of the state: `read s b = if s.2.1 then b else false` (l159), and `alike s b c := read s b = read s c` (l161). The link bit `s.2.1` decides whether the represented alternative is told apart.
+
+**Q2. Does it change, and by what.** It changes by a move of the one process: `.rebuild b` sets the link to `b` and draws one unit of stock: `∃ n, s.1 = n + 1 ∧ t = (n, b, s.2.2)` (l155). The local laws are supplied: "These local laws are supplied" (docstring l150-152). Which move is taken is handed in as the controller `choose` (l234). Its docstring (l231-233): "It reads no hidden target bit. Its preference for forming the link is supplied, not derived from the old reading."
+
+**Q3. A law where a difference not registered comes to be registered.**
+- *Built example:* `Revising.controlled_revision` (l256). On the run `controlled` (the orbit of `next` from `(0,false,false)`): `controlled.act 1 = .rebuild true`, `controlled.state 2 = (0,true,false)`. Selection of `b = true` is not through `alike (state 0)` and is through `alike (state 2)`. Correction is not enabled at state 2. Then `act 2 = .replenish`, `act 3 = .correct`, and the response goes from `false` to `true`. **What is handed in:** the process `P`, the controller `choose`, the start. **The cause is the supplied controller, which reads the stock and the link status.** It is not the difference that was unregistered. `Revising.old_cannot_select_rebuild` (l199) states that it could not be: for every `n` and every `select : Bool → Prop` with `Through (alike (n,false,false)) select`, `select true ↔ select false`. "The old lumping cannot distinguish the two reconstruction choices, although one forms and the other removes the link."
+- *General law:* `RevisionRuns.history_gains` (l412). Premises: any process `P`, any run `r`, any `obs : S → X → V`, `same : obs (r.state 0) x = obs (r.state 0) y`, `different : obs (r.state 1) x ≠ obs (r.state 1) y`, `1 ≤ t`. Conclusion: some `select` is through `AlikeUpTo r (fun s a b => obs s a = obs s b) t` and not through the reading at the start. **What is handed in:** the reading `obs` at every configuration, and the premise `different`, that the reading at step 1 already tells `x, y` apart. The law says that keeping the history keeps a gain. It does not say where the gain comes from. The `AlikeUpTo` docstring (l105-106): "Reading it as a usable present record requires an actual retention mechanism; this definition does not provide one."
+- *General law:* `Learning.Training.keeps_through_iff` (l41). Premises: `old` reflexive, symmetric and transitive. Conclusion: `(∀ select, Through old select → Through new select) ↔ (∀ x y, new x y → old x y)`. Also `Registration.retained_gains` (l127): if `old x = old y` and `fresh x ≠ fresh y`, then some selection is through the pair `(old, fresh)` and not through `old` alone.
+
+**Q4. Cost, who bears it, what keeps it.** Rebuilding draws one unit (`rebuild_enabled_iff` l178: enabled iff `∃ n, s.1 = n + 1`). Correction draws one unit and needs the link (`correction_enabled_iff` l183).
+- `opens_without_correction` (l210, built): "Forming a distinction can consume the last support for using it". From `(1,false,false)`, rebuilding reaches `(0,true,false)`, where the distinction is through and correction is not enabled.
+- `opens_with_correction` (l218, built): with a unit left, correction is enabled.
+- The account and the statements `covered_not_enacted` (l344) and `linked_not_enacted` (l350) say that a course is feasible exactly where the link process admits it and the stock covers it (`feasible_iff` l337, statement not read). Stock alone does not enact, and the link alone does not.
+- What keeps the registering: the link stays under `.replenish` and `.correct`, and only `.rebuild false` removes it (`P`, l153-156). Keeping the link costs nothing. Using it costs stock.
+
+**Q5. Lost.**
+- `Learning.Training.lost_choice` (l56, general). Premises: `old` reflexive, symmetric and transitive, with `new x y` and `¬ old x y`. Conclusion: `∃ select, Through old select ∧ ¬ Through new select`. "constructively, without deciding all selections or all histories."
+- `Revising.closes_choice` (l224, built): "Actual closing destroys a formerly available distinction, even with support left." `(2,true,false) --rebuild false--> (1,false,false)`, after which correction is not enabled.
+- Can it be undone? In this model, yes: `rebuild_then_close` (l204, built) is one trace that replenishes, rebuilds true, corrects, replenishes and rebuilds false. Forming and closing are both moves, each drawing stock. The account: "Both opening and closing are executable; neither is selected inevitably."
+
+**Q6. Tied to what it rests on.** Through cost only. Forming the link draws on the stock, and `controlled_revision` shows the formed distinction unusable until replenishment. The controller `choose` reads the stock ("replenish when empty"), but it is supplied. No statement makes the stock's level, or its running down, the cause of a change in what is registered.
+
+## 2. RevisionPlans.lean
+
+**Q1.** A reading that tells each candidate apart is defined from supplied numbers: `reading : C → Bool := fun c => decide (gain c < offGain c)` (l168). A plan `held r a` (l163) holds the act for a supplied reading `r`.
+**Q2.** Nothing changes along a course. Plans are compared on one order (`order` l143). No dynamics was found in what was read.
+**Q3.** None found. `gainOf_reading` (l213) and `excess_reading` (l223) say that holding for the reading has no excess. Premises: `Splits listed weight p`. This is an equality of gains, not a registering coming to be.
+**Q4.** Holding for the reading forgoes an amount `a`. From the account: holding stands at least as high as a splitting plan exactly where `a` is at most that plan's loss with its excess (`reading_not_below_iff` l253, `reading_above_iff` l262; premise `Splits listed weight p`). The statements were not read in full.
+**Q5.** None found. **Q6.** None found: `gain`, `offGain`, `weight` and `loss` are supplied.
+
+## 3. RevisionRoutes.lean
+
+**Q1.** A revision of a formation's law "reaches it through a reading coupled into its course" (account). The reading is not modelled. Only the weights `k₀`, `k ρ`, the losses `c₀`, `c ρ`, the value `V` and the total `T` are (`Prospects`, l126).
+**Q2.** None. It is a static order on plans `Option ι` (`order` l159).
+**Q3.** None found. `route_above_iff` (l190): a route stands above the revision exactly where `k₀ V + c ρ T < k ρ V + c₀ T`. `revised_maximal_iff` (l197). `above_needs` (l214). All are about supplied numbers.
+**Q4.** Not applicable.
+**Q5.** The routes include "evading or disabling the reading" (account), each a route `ρ` with supplied weight and loss. Losing a reader is priced here, not modelled as a course.
+**Q6.** None found.
+
+## 4. ContinuingRevision.lean (and ReferencePlan.lean, met)
+
+**Q1.** What is registered is the installed reference list: `ReferencePlan.alikeOnInstalled s.work` (used at l317). Inputs alike on the installed samples are read alike. The method is a list of addressed contacts (ReferencePlan account: "The method is a finite list of addressed contacts").
+
+**Q2.** It changes by moves of one process `P yield` (l70), along the policy `selected` (l136): "Policy restriction of the SAME process; the policy is a disclosed premise." The cycle at carrier `n`:
+- `fail_step_at` (l190): performing at `n+1` with the key absent (`absent_key` l176: `keyAt [sample n] (n+1) = false`) records `mismatch := some (n+1)` and `response := false`.
+- `plan_step_at` (l200): `.revise` puts `n+1` into the method.
+- `first_contact_at` and `second_contact_at` (l203, l206): `.probe` acquires the samples.
+- `install_step_at` (l209), `use_step_at` (l212): success.
+- `renew_step_at` (l224): renewal retires the old contact (`retained_sample` l184).
+
+What is handed in: the production relation, "succession/retirement rule, stable Boolean contacts, faithful return and controller are supplied local laws" (account). From ReferencePlan's account: "The local primitives, faithful return, two-reference binding, Boolean channel family and revision policy are supplied." Docstring of `execute` (l46-47): "The retained sample is filtered from the installed device, never supplied as a correct key."
+
+**Q3. A law where a difference not registered comes to be registered.**
+- *Built family (every `n`):* `new_available_choice` (l317). `Through (alikeOnInstalled (installed n).work) (fun x => x (n+1) = true) ∧ ¬ Through (alikeOnInstalled (ready n).work) (fun x => x (n+1) = true)`. The cause along the cycle is a **failure of the going-on's own act** at the address it did not register (`fail_step_at`: mismatch at `n+1`). What carries the failure into the registering is the supplied revision rule, the supplied policy and the supplied probe channel.
+- *General law (in ReferencePlan, met):* `ReferencePlan.revise_registers_failure` (ReferencePlan l446). For every `m : List Nat` and every `i`: `Through (AgreeOn (propose m (some i))) (fun x => x i = true)`. "The revision rule reads the mismatch and answers every failure" (l443). It is an instance of `Contacts.answers_iff` (not read). The rule `propose` is handed in.
+- *Against it:* `ReferencePlan.frozen_misses` (l460), an instance of `Contacts.blind_misses`. For every `m`, `∃ i, ¬ Through (AgreeOn (frozenRule m (some i))) (fun x => x i = true)`, where `frozenRule m _ = m` ("re-runs the retained method whatever the mismatch").
+- *Also general (in ReferencePlan):* `new_contact_choice` (l267). Premise `i ∉ m`. Conclusion: `Through (AgreeOn (i :: m)) (x i = true) ∧ ¬ Through (AgreeOn m) (x i = true)`.
+
+**Q4. Cost and keeping.** The fuel is a stock (`balanced` l452). A cycle uses nine (`word_use` l561), and renewal returns `yield` (`word_return` l563).
+- `repeats_iff` (l576): `(∃ s, ∀ k, Feasible (P yield) s (history k)) ↔ 9 ≤ yield`. It holds of this one constructed process at every yield.
+- `renew_needs_enabled` (l488): a renewal step has `s.enabled = true`.
+- `enabled_by_success` (l502): a step leaving `enabled = true` is `perform i true` with `response = true`.
+- `success_recurs` (l545): "Successful activity recurs along every run of every yield".
+- `no_run_without_return` (l476): `Run (P 0) → False`. Docstring: "With the return cut, no unending run exists at all, whatever the controller".
+- `cut_stops_next` (l331) and `reserve_consumed` (l367: one extra `.erase` and the cycle cannot run) are built examples.
+- So the next registering is kept only while the return (`yield ≥ 9`) is kept up, and renewal is enabled only by a success. These laws cover every run of this process. They are not laws of every model.
+
+**Q5. Lost.** `retired_choice` (l374, built family): the choice `x n = true` is through `alikeOnInstalled (installed n)` and not through `alikeOnInstalled (ready (n+1))`. The account: "Obsolete contact records are retired: no monotonic growth of all distinctions is assumed." Also `frozen_plan_no_return` (l370, built). No statement was found that brings back a retired contact.
+
+**Q6. Tied to what it rests on.** Yes, as cost and continuation. The registering is renewed only through the stock: `no_run_without_return` and `repeats_iff`. The account: "Cutting this return closes the next inquiry despite a successful preceding repair." What triggers a new registering is a failure of the act, not the state of the stock. The return is "declared" and supplied ("faithful return").
+
+## 5. OpenedCorrection.lean (`Linked.opens` and the general laws)
+
+**Q1.** A reading in force at each configuration, `reading : X → S → O`. `Correctable reading acceptable executable x` (l74) holds where a uniform policy exists through `reading x` whose act at each reading is acceptable at every situation giving that reading and executable at `x`.
+
+**Q2.** Along a course of one process (`OpensAlong`, l89): `(∃ w, Trace P x w x') ∧ ¬ Correctable … x ∧ Correctable … x'`. "The gain may come from the reading, from executability, or both."
+
+**Q3.**
+- *Built family:* `Linked.opens` (l168). For all `n, v`: `OpensAlong P read acceptable executable (n+2,false,v) (n+1,true,v)`, witnessed by the trace `[.rebuild true]`. **What is handed in:** `Revising.P`, `read`, the acceptability `acceptable` (l128: correct where needed, replenish where not, "held fixed"), and executability as `Enabled P`. The law states that a trace exists. It says nothing about what takes it. The account: "Uniform-policy existence is not what a formation chooses: a supplied controller and its run are another statement (Revising's `controlled_revision`)."
+- *General law:* `finer_keeps` (l95). Premises: `forget : O → O`, `∀ s, forget (reading x' s) = reading x s`, `∀ a, executable x a → executable x' a`, `Correctable … x`. Conclusion: `Correctable … x'`.
+- *General law:* `coarser_opens_nothing` (l107). Premises: `forget`, `∀ s, forget (reading x s) = reading x' s`, `∀ a, executable x' a → executable x a`. Conclusion: `¬ OpensAlong P reading acceptable executable x x'`. So a new reading that is read off the old one through a supplied map, gaining no executability, opens nothing. The account: "Replacing a reading by one read off it through a supplied map, as by a summary measure … opens no correction."
+- `widened_correctable` (l115): with every act acceptable, an executable act already makes the configuration correctable, "so an opening counts only with the acceptability fixed".
+
+**Q4.** `rebuilt_starved` (l175): from one unit, rebuilding consumes it, and `(0,true,v)` is not correctable. `opens_after_replenishing` (l182): the trace `[.rebuild true, .replenish]` opens it. `opens_by_support` (l189): "the reading unchanged, the gain is in what can be executed".
+**Q5.** `unlinked_uncorrectable` (l138): with the link off, no configuration is correctable. `starved_uncorrectable` (l157): with the link on and no stock, none is.
+**Q6.** Through stock only, as executability: the reading opens a correction only with a unit of stock (`linked_correctable` l146 needs `n + 1`). No statement makes the stock's fall the cause of the revision.
+
+## 6. MoveFormation.lean
+
+**Q1.** A move is formed through a reading `π` of the configuration where `Learning.Lumped π form` holds. The part's reading is `PartForms` (l231, `Lumped Prod.fst`) and the rest's is `RestForms` (l234).
+**Q2.** No statement was found in which the reading changes along a course. `Run.keepHistory_formed` (l662, general over runs of `keepHistory P`): `∃ policy, Readout.Decodes r.state r.act policy`. "The length of the history kept tells the step." The configuration grows with its history. Nothing new from the world is registered.
+**Q3.** None found. `lumped_of_finer` (l210, general): premises `Lumped π form` and `∀ x x', π' x = π' x' → π x = π x'`. Conclusion: `Lumped π' form`. "Reading more, more is formed through what is read."
+**Q4.** From the account: `Run.whole_unheld_of_never_cycles` (l453) and its part and rest forms. Moves that never settle into a cycle need a whole, or a former, that no list holds. The reading in the account: "Novelty in what is done needs openness or growth."
+**Q5.** `lumped_const_iff` (l217): through the reading that tells nothing apart, only a constant move is formed. No course of losing a reading was found.
+**Q6.** None found.
+
+## 7. RouteFormation.lean
+
+**Q1.** The apparatus registers its samples (records) and an installed program. `fits p samples` (l142). From the account, an inspection installs a program exactly where it fits (`inspect_installed` l609; statement not read).
+**Q2.** It changes by moves of `formationProcess` (l570). `encounter c e` (l390): "A further demonstration: a supplied code's value on an expression, added to the samples at the draw of one unit and one for each value". `reconsider` (l400) retests and develops again where the program no longer fits. `develop` searches routes "in a supplied order". The account: "The grammar, the connectors, the order of proposals, the samples and the draws are supplied."
+**Q3.**
+- *Built examples (by `decide`):* `fresh_record_rebuilds` (l521) and `repair_course_rebuilds` (l741). After `[.develop, .encounter collapsed novel, .reconsider]` from `prepared 27 6 collapsed`, the samples gain `(novel, eval collapsed novel)`, and the installed program changes from `duplicated` to `programFor collapsed`.
+- `novel_record_separates` (l508): the novel record separates the duplicating program from the code's own.
+- `repaired_answers_further` (l528): the repaired program answers an expression no sample holds.
+- **What is handed in:** the record, a supplied code's value (a teacher or sample). The difference that was not registered (the duplicate's failure on `novel`) does not register itself. `unobserved_keeps_wrong` (l545): "An unobserved failure keeps the wrong program."
+- General laws, from the account: `accepted_transfers` (l176), `inspection_transfers` (l631) and `extended_transfers` (l216) transfer an accepted program to every expression where the samples are a code's probe records and the primitives differ. Statement bodies not read.
+**Q4.** `repair_account` (l534, built): drawn 16, stock 4, parts 0. `discrepancy_no_parts` (l539): "A discrepancy alone does not supply the parts of a repair". With 2 parts the repair blocks, the record kept and no program installed.
+**Q5.** `verdict_not_program` (l488) and `develop_course_removed` (l695): removing the installed program keeps the verdicts and loses the answer.
+**Q6.** Only as cost (stock and parts). What is learned is not tied to what the apparatus rests on.
+
+## 8. ReflexivePrediction.lean (`Right`, `none_right_of_moves`, `bottom_rests`, `ThresholdResponse`)
+
+**Q1.** A published prediction `p` is read by a response `r : V → V`. `Right r p := r p = p` (l65). "The response a function of the prediction alone" (modelling choices).
+**Q2.** Under repeated publication the prediction moves along `Law.orbit r p` (`rests_iff_right` l90). The response `r` is fixed and handed in.
+**Q3.** None found of the asked kind: nothing in the response's reading changes.
+- `none_right_of_moves` (l68, general): premise `∀ v, r v ≠ v`. Conclusion `¬ Right r p`.
+- `bottom_rests` (l154, general): premises `within : ∀ v, v ≤ n → r v ≤ n` and `keeps : ∀ v w, v ≤ w → w ≤ n → r v ≤ r w`. Conclusion: `Right r (orbit r 0 n) ∧ ∀ f ≤ n, Right r f → orbit r 0 n ≤ f`.
+- `ThresholdResponse` (l175-200, built): `threshold v = if 1 ≤ v then 2 else 0` has two fixed points, and the start decides which is reached (`reached_by_start`).
+**Q4.** Not applicable. **Q5.** None found. `right_rests` (l95): a right prediction stays published.
+**Q6.** None found.
+
+## 9. HeldPossible.lean
+
+**Q1.** No reading as such. The possible is read relative to a held part `Same`. For a rule changing its own rule (`adaptive F G`, from `Becoming.Mechanism`, not read), the rule is `s.2` and its change is `G s.2 s.1`, where `G : R → Z → R` is handed in.
+**Q2.** `adaptive_keeps_rule_iff` (l454): for a step of `adaptive F G`, `t.2 = s.2 ↔ G s.2 s.1 = s.2`. `RuleTower.process base up` (l543): move `0` changes the state as rule `0` allows, and move `k+1` changes rule `k` as rule `k+1` allows (`up k (s.2 (k+1)) (s.2 k) (t.2 k)`). The account: "Every rule changes only as the one above it allows, and none is the last; the scheme (`base`, `up`) is fixed, as the law of any stated process is."
+**Q3.** None found of the asked kind. These laws hold of every model meeting their premises:
+- `Reaching.not_step_of_grows` (l150): premise `Possible Q adm t x ∧ ¬ Possible Q adm s x`. Conclusion `¬ Q.step s a t`. Along a fixed process the whole possible never grows.
+- `Run.changes_of_heldGrows` (l322): premise that the possible with `Same` held grows from step `n` to `n+1`. Conclusion `¬ Same (r.state n) (r.state (n+1))`.
+- `Run.adaptive_rule_changes_of_keepsWidening` (l462): where the possible with the rule held keeps widening, then from every `N` some bounded stretch has `G` changing the rule.
+- `RuleTower.possible_iff_held` (l581): every possibility of the tower is possible with the rules from some height up held.
+- `Run.ruleTower_move_above_recurs_of_keepsWidening` (l622).
+**Q4.** None found.
+**Q5.** From the account: `Run.possibleHeld_of_stays`. A top, the rules from some height up, fixed for good, stops the growth relative to it.
+**Q6.** None found. The account: "A change with no fixed scheme, and a space of rules not given with the carrier, are not stated."
+
+## 10. GrammarReadings.lean
+
+**Q1.** Relations, not readings of a going-on. `«化» R E F x y := «续» R E x y ∧ ¬ F x y` (l50): "continuing under the class of the thing while the class of its marks tells the two apart". `«成坏» L F x y := L x y ∧ ¬ F x y` (l59).
+**Q2-Q6.** None found. The classes `E` and `F` are fixed arguments. `«因灭而续»` (l172) was not read past its signature.
+
+## 11. TimedResponse.lean
+
+**Q1.** A reader `g` registers through its couplings: `W.AlikeThroughUpTo obs g`, with `CoupledIntoAt` at l26. An answer `read : (Nat → C → Nat) → A` is premised to factor through the couplings (`through`). "Factoring through the complete couplings is supplied" (l169).
+**Q2.** `obs` is fixed. What changes is whether a declared source's difference has spread through exchanges to what couples into the reader (`Spread` l35, `ReachedBy` l45). The source `source : Nat → F → Prop` is handed in.
+**Q3.**
+- *General law (a necessity):* `different_answers_require_reached` (l185). Premises:
+  - `balanced`: `∀ t < D, ∀ c, W.level (t+1) c + L.taken t c = W.level t c + L.given t c`;
+  - `balanced'`: the same for `W'` and `L'`;
+  - `present`: `∀ t < D, L.present t = L'.present t`;
+  - `start`: `∀ c, W.level 0 c = W'.level 0 c`;
+  - `responds`: at `t < D`, a formation `h` that is not a source at `t` and is alike through its couplings up to `t` takes and gives alike;
+  - `[Decidable (ReachedBy … g D)]`;
+  - `through`, and `different : read W.level ≠ read W'.level`.
+  Conclusion: `ReachedBy L L' W obs source g D`. A difference reaches the reader's answer only after a route from the declared source has reached it.
+- *Built example:* `answers_before_and_after` (l295): alike at step 1, different at step 2. "Static reach overestimates what can distinguish at step one; step two can distinguish."
+**Q4.** None found.
+**Q5.** `constant_read_ignores` (l301): "A reached signal may be ignored: passing through the couplings does not ensure use."
+**Q6.** None found. The levels balance like a stock, but no statement ties the reader's registering to what the reader rests on.
+
+## 12. Handoff.lean
+
+**Q1.** A remaining-step certificate `rank n : S → Nat` per rule. In the built arrangement, rules are revised by `restartChoice` (l233), which is supplied.
+**Q2.** The rules change along the revising run `revisingRun` (l239), by the supplied `restartChoice`.
+**Q3.** None found. `handed_off_progress` (l52, general). Premises: `localStep : ∀ n, ¬ completed n → rank n (states (n+1)) < rank n (states n)` and `handoff : ∀ n, ¬ completed n → rank (n+1) (states (n+1)) ≤ rank n (states (n+1))`. Conclusion: the handed certificate falls at every unfinished step.
+**Q4/Q5.** `revised_rules_can_fail_forever` (l263, built): each rule progresses locally, yet nothing is ever completed. `revision_resets_remaining` (l273): each revision resets the count from 1 to 2.
+**Q6.** None found.
+
+## 13. LineOnAStock.lean (`ways_alike`, and its account of a difference not yet made)
+
+**Q1.** What makes a difference to a way is which of its units' needs the level meets. The account (l33): "What makes a difference to a way is its own response: two levels are `Alike` to `w` where the way after a step at each is the same."
+**Q2.** `need` and `kids` are fixed. The way's units change: at each step, the units whose needs are met leave their kids. So the set of needs present, and with it which level differences make a difference next, changes by which carriers are born. The account cites `need_in_after` and `needs_after_iff`: with kids needing what their parent needs and every unit leaving a kid, the needs in the next way are those of `w` met at the level. Those statements were not read. This is a selection among carriers, each with a fixed need.
+**Q3. General law:** `ways_alike` (l547). Premises: one `need` and one `kids`; any givings `g, g'`, uses `use, use'`, start levels `x, x'`, way `w`, and `n`; and `alike`: `∀ j < n, ∀ u ∈ (course need kids g use (w,x) j).1, (need u ≤ level j ↔ need u ≤ level' j)`. Conclusion: `∀ j ≤ n`, the two ways are equal. Docstring: "So a difference in the ways, new kinds included, arrives only after a step at which the levels met different needs of the way. Nothing is asked of the givings, the uses or the stock." This is a law of where a new difference **cannot** come from. It is not a law of a registering coming to be.
+**Q4-Q5.** Not read beyond this.
+**Q6.** The level is the stock. The way registers the stock only through which needs it meets, so a running down of the level that crosses no need makes no difference to the way (`ways_alike`). This states the gap the idea names, as an absence of registering.
+
+## 14. TurningInTime.lean (the three laws where a reading sets the rule or the share)
+
+**Q1.** A window on the level, `[N, K)`, with a reading `hL : A × Nat → R → R`, and in the share form `sA : A × Nat → R → A`. These set the rule, or the rule and the share, at levels the window reads (`windowAfter`, `windowAfterShare`). The account (l235-236): "`AloneOutside` and the marks are given, not derived: which levels make a difference to the way is a premise of every law that uses them."
+
+**Q2.** The rule (and the share) change when the stock's level enters the window. The window, its reading `hL` or `sA`, and `reads` are handed in.
+
+**Q3.**
+- `locked_turns_in_time_on_window_iff` (l1633, general). Premises:
+  - `raises : Raises P favours fA`, `monotone : ReadsShare P M hA`, `upper` (favouring kept upward);
+  - `every : ∀ n, reads n = true`;
+  - `corrects : ∀ p g, N ≤ p.2 → p.2 < K → kept (hL p g)`;
+  - `uses : ∀ v, kept v.2.1 → use v = H₂`, `least : ∀ v, H₂ ≤ use v`;
+  - the regime premises `nothing`, `short` (H₂, y₂), `meets`, `keeps`;
+  - `needs : 0 < need`, `within : need ≤ H₂ + y₂`, `pos : 0 < c`, `low : N ≤ H₂ + y₂`, `covers : c ≤ K`;
+  - `safe` (every way's step keeps `[c, hi]` within `[c, hi]`), `short₁` (H₁, y₁);
+  - `locked : Locked M favours hA (w.1, w.2.1)`, `draws : ∀ v, P.le w.1 v.1 → M.le w.2.1 v.2.1 → H₁ ≤ use v`, `below : x < H₁ + y₁`;
+  - `high`: one step after a step the window reads, the level of the lock's own course is at most `hi`.
+
+  Conclusion: the net of `windowAfter` from `(w, x)` never ends (`«不穷» … «一»`) iff there is a `T` such that, on the course as it was (`asItWas (windowAlone fA hA reads)`), the need is met and the level is outside `[N,K)` at every `j < T`, the need is met at `T`, the level at `T` is in `[N,K)`, and the level at `T+1` is at least `H₂ + y₂`. **What is handed in:** the window `[N,K)`, its reading `hL` with `corrects`, and `every`. The docstring: "What stays given: `corrects`, `every`, `low` and `covers`".
+- `locked_turns_in_time_share_iff` (l1817, general). The same shape with `windowAfterShare`. Its premises are `sets : ∀ p g, N ≤ p.2 → p.2 < K → Low (sA p g) ∧ kept (hL p g)`, `lowRule : ∀ a g, Low a → kept (hA a g)` and `lowStays : ∀ a g, Low a → kept g → Low (fA a g)`; `uses` (Low and kept → `use = H₂`); the regime premises; `needs`, `within`, `short₁`, `locked`, `draws`, `below`, and `high : x ≤ hi`; with "no premise on where the window lies". Only the "if" side has a worked case (`Three.share_read_goes_on`).
+- `share_corrected_on_course` (l1896, general). Premises: `sets`, `lowRule`, `lowStays`, any `left`, any `s`, a `T` with `before` (no step before `T` reads) and `read` (step `T` reads). Conclusion: `∀ k`, the pair's course at `T+1+k` has a `Low` share and a `kept` rule. Nothing about the regime is asked.
+
+  What each hands in, from the account (l267-269): "the correction reaches the share because that reading sets it (`sets`, given); a share that falls under the rule the window reads, so that the rule read off it changes, is not tried."
+
+**Q4.** The cost is the use `H₂` of the kept kind against the regime's giving. "The overdraw of the course as it was stays given" (docstring of l1817). What keeps the correction: `lowStays` (Low under a kept rule stays Low) and `lowRule`, both premises.
+**Q5.** Not in these three laws. The lock, a lost reader, belongs to the readings group.
+**Q6.** Yes. This is the one place in my group where what the going-on rests on (the stock's level) is what sets the change of the rule or the share. The level falling into `[N,K)` triggers the reading, and whether the line goes on is decided by where that first read falls relative to `H₂ + y₂`. Which levels are read is handed in, not formed.
+
+---
+
+## The guesses
+
+**G1** (every change of what is registered is an update handed in, a window on a level handed in, or a selection among carriers with fixed readings; nothing comes to be registered because of what it did).
+- *For:* TurningInTime's three laws are a window on a level handed in (`corrects`, `sets` and `every` given; "AloneOutside and the marks are given, not derived"). LineOnAStock is a selection among carriers with a fixed `need` (`ways_alike`). Revision and OpenedCorrection change the reading by a move (`rebuild`) chosen by a supplied controller (`choose`: "Its preference for forming the link is supplied"). RouteFormation's new record is supplied (`encounter`).
+- *Against, in letter:* in ContinuingRevision/ReferencePlan a new distinction comes to be registered after **the going-on's own act failed** at the unregistered address. See `fail_step_at` (l190, mismatch at `n+1`), then `new_available_choice` (l317), with the general `ReferencePlan.revise_registers_failure` (RP l446). The failure is what the going-on did. But it reaches the registering only through a supplied revision rule (`propose`), a supplied policy (`selected`) and a supplied probe channel, and `frozen_misses` (RP l460) shows a blind rule does not register it. So it is a fourth form: "a failure read by a rule handed in". The reading is a coordinate of the configuration changed by a move of the same process. It is not an update function handed in.
+
+**G2** (learning, codes and inquiry: the feedback, teacher or sample is handed in; none ties what is learned to what the learner rests on). Only RouteFormation is in my group.
+- *For:* `encounter` adds "a supplied code's value" (l389), and `unobserved_keeps_wrong` (l545) keeps the wrong program without it.
+- *Partly against, as cost only:* `discrepancy_no_parts` (l539) and `repair_account` (l534) tie the repair to parts and stock. ContinuingRevision ties the next registering's renewal to the stock (`no_run_without_return` l476, `repeats_iff` l576). Neither ties what is learned to the stock.
+
+**G3** (losing is general and exact; acquiring is conditional on something supplied; the same asymmetry as closing and opening).
+- *For:* the general laws of loss are `lost_choice` (Revision l56: any merge of a pair the old relation told apart loses a selection) and `coarser_opens_nothing` (OpenedCorrection l107: nothing read off the old reading through a map opens a correction). The general laws of gain are conditional on a supplied difference: `history_gains` (l412) needs `different` at step 1, and `retained_gains` (l127) needs `fresh x ≠ fresh y`. `old_cannot_select_rebuild` (l199) says the old lumping cannot itself select forming the new one.
+- *Against "what is merged stays merged":* in `Revising.P` closing is undone by `rebuild true` given stock (`rebuild_then_close` l204). In ContinuingRevision, retirement (`retired_choice` l374) is part of every cycle. No statement found brings a retired contact back.
+
+**G4** (outside the package). Not in my group; not read. The nearest inside the package is ReferencePlan's account ("Acquired mismatch puts an address into the next executable plan"). Its mechanism is supplied ("revision policy … supplied").
+
+**G5** (whatever changes a reading is a slower reading handed in one level up).
+- *For:* HeldPossible's `RuleTower.process` (l543): "Every rule changes only as the one above it allows, and none is the last; the scheme (`base`, `up`) is fixed." `adaptive F G` changes the rule by a `G` handed in (`adaptive_keeps_rule_iff` l454). `Reaching.not_step_of_grows` (l150): along a stated process the whole possible never grows, so any change of registering lies within the possible of a fixed law. The account: "A change with no fixed scheme … not stated." TurningInTime's window is a reading of the level handed in.
+- *Against the exact shape "one level up":* in Revision, OpenedCorrection and ContinuingRevision the change of reading is not a slower reading one level up. It is a move of the same process, with the reading a coordinate of its configuration (Revision account: "its index is not an outside selector"). What is handed in is the process's law and a controller or policy at the same level. That is still "handed in", so the item's wording "other than by an update handed in" is not met by any place in my group.
+
+**Already there / not sayable.** In what was read, no general law has a difference come to be registered *because of what it does to the going-on* without a supplied rule or reading. The nearest are:
+- ReferencePlan's `revise_registers_failure`, with the rule `propose` handed in;
+- `new_available_choice`, a built family;
+- TurningInTime's window laws, with which levels are read handed in.
+
+## Places met, on no list, that bear on the questions
+
+- `ReferencePlan.lean` (l1-45, l263-270, l443-462): `revise_registers_failure`, `frozen_misses` and `new_contact_choice`, instances of `Contacts.answers_iff`, `Contacts.blind_misses` and `Contacts.retired_loses`. `Contacts.lean` was not read. It probably holds the general law of a rule answering failures.
+- `Runaway.lean` l107, `policy_uses_after_failure`. "A larger stock is used only after a failure." For every policy through the couplings, with the rest fixed: wherever a difference on a condition coupled into `g` has changed by a step, the first web did not support `g` at every earlier step. Premises: `balanced`, `balanced'`, `present`, `policy`, `others`, `higher`, `observedAlike`, `registers` and `changed`. It bears on Q3 and Q6: a difference coupled in by threshold registers only through a failure. It may sit in the readings group.
+- Chapter 3 §10 cites `Web.break_not_bounded`, `SlowingDown.need_not_read` and `SlowingDown.need_margin_read` (periphery) for the break seen coming. Not read.
+- `Mechanism.lean` (`adaptive`) and `Learning.lean` (`Lumped`, `Through`) are used by my places but were not read.
+
+Tool calls: 28.

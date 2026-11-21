@@ -1,0 +1,53 @@
+# What the Lean already states of how a going-on comes to register what it did not: the questions, fixed before any reader ran
+
+*AI-written (Claude Fable, board row DJ), 21 November 2026, 15:18 WIB, before any reader ran. Frozen: nothing above the line "After" is changed later. This is a read. No statement is proposed by it and no Lean is written. Register, reading, loop, update are working words; the Lean's own names are given where a reader finds them.*
+
+## What we are doing
+
+One map of how things come to be, go on, change and end, on which two ways of going on are placed with respect to each other ([the direction page](../../../../../_process/DIRECTION.md), "Where we are heading"). Ren, 21 November: "i am drawing the map not saying the map, so i don't have certainty of my words … but direction seems right … please keep advancing" ([his words](../../../../../sources/15-codex-theory-conversations/2026-11-21-drawing-the-map-not-saying-it.md)). So no wording is being settled here; the next thing is drawn.
+
+The next thing in the order is an item the direction page has carried since 16 November: "How a loop comes to register what it did not register, other than by an update handed in." The idea on that page says: what a going-on rests on and what makes a difference to it need not be the same, and the gap between the two is where things run down unseen, or turn in time. The session's understanding, which Ren called good and which no proof states: the two ways differ in what makes a difference to each. In the one, what it rests on does not reach how it selects until something is lost. In the other it does, early enough, and keeping that so is the way's own doing.
+
+Three reads of 20 and 21 November each found the pieces of the map apart, and each found that October's modules, which no session had opened for the direction, already stated part of what was sought. So before anything is proposed, this read asks what the Lean already states of a registering coming to be, changing, and being lost.
+
+## What the writer holds from earlier records, not from a fresh read
+
+- The record of 16 November, of what was not found in any model then read: "a signal or distinction that comes to be other than by an update handed in"; and that every held-to is handed in, with two reported exceptions (a goal formed from feedback on a supplied construction; one valuation kept as state whose update is handed in). Those negatives rested on about seventy of some four hundred modules, all in the package.
+- The plan's item 6: in the line on a stock "no new difference arrives from a difference not yet made (`ways_alike`)"; a correction that reaches what the rule is set from was proved with the reading handed in.
+- Chapter 2 §9 to §11 and the modules on readings: a reading revised by what its carrier sensed, the update handed in (`RevisesBy`); a lock left with no reader; a loss read in time.
+- The October study of the meta-attractor names as its "present wall" how locally pursued ends form and keep the authority, evidence, transfers and commitments that change what local success selects.
+
+## The questions, the same for every place
+
+For each place, from statements and docstrings (a proof only where a statement leaves a question open), with the declaration's name and line for every answer and every premise of every law written out:
+
+1. **What registers what?** Which differences reach the going-on's next step, and where that is in the model: a function handed in, a state, a code, a route, a selection among carriers.
+2. **Does what is registered change along a course, and by what?** An update handed in as a premise or a function; a move of the model; a selection among carriers each with a fixed reading; feedback; something else. Say exactly what is handed in.
+3. **Is there a law in which a difference not registered at one step comes to be registered at a later one, and which says from what?** In full, with premises. In particular: is the cause the thing that was not registered (a loss, a fall, an ending), or a schedule, a teacher, a sample handed in?
+4. **What does the new registering cost, who bears it, and what keeps it?** Is it kept only while something else is kept up?
+5. **The other way: a registering lost.** Distinctions merged, readers removed, something unread; and whether the loss can be undone.
+6. **Does any statement tie a change in what is registered to what the going-on rests on?** That is the gap the idea names, closing or opening.
+
+## The guesses (each may be false)
+
+- **G1.** In the package's modules on readings and the lock, every change of what is registered is an update handed in, a window on a level handed in, or a selection among carriers each with its reading fixed. Nothing there comes to be registered because of what it did.
+- **G2.** The modules on learning, codes and inquiry state exactly when a reading can be acquired from feedback or samples, and in each the feedback, the teacher or the sample is handed in. None ties what is learned to what the learner rests on.
+- **G3.** Losing a distinction is general and exact (what is merged stays merged; a reader removed is not brought back), and acquiring one is conditional on something supplied. If so it is the same asymmetry as the read of a future found between closing and opening.
+- **G4.** Outside the package, October's files on correction, observation and goals state at least one exact condition under which a system acquires a correction or an observation it lacked, by a move of the model, with the mechanism supplied.
+- **G5 (against the item as worded).** Whatever changes a reading is itself a slower reading, handed in one level up; the direction page already says "We do not expect a top". If every law found has that shape, "other than by an update handed in" cannot be met as worded, and what can be drawn is which loop sets which, and what each costs.
+
+## What would count as the read having found that the step is not needed, or not possible
+
+- **Already there.** A general law in which a difference comes to be registered because of what it does to the going-on, with an exact condition or an exact time. Then the work is to tell it and join it.
+- **Not sayable as worded.** G5 holds of every place read.
+- Between the two, the read says what is nearest and what each hands in.
+
+Whatever is found is told as what a course does and not as what makes a course better.
+
+## How it is read, and what it costs
+
+Four AI readers, each capped at 45 tool calls, each with one group of places and these questions, who propose nothing: readings and the lock; learning, codes and inquiry; revision and the forming of moves, routes and predictions; and October's files outside the package on correction, observation and goals, with the meta-attractor's files on inquiry. Then one checker of the note. The ceiling is 1.0 million tokens.
+
+---
+
+## After

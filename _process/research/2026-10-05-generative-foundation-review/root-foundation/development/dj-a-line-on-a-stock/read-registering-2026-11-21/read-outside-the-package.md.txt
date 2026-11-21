@@ -1,0 +1,358 @@
+# Read: outside the package (October's correction, observation and goal files; the meta-attractor's inquiry files)
+
+*AI-written (Claude, a reader for board row DJ), 21 November 2026. A read only: it proposes no statement, model, wording or next step. No Lean was written or built, no test was run, no git command was run. Questions: [FROZEN-THE-REGISTERING.md](FROZEN-THE-REGISTERING.md). 30 tool calls.*
+
+Abbreviations: GC = `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/`; MA = `experiments/market-generativity/meta-attractor/`.
+
+"A built example" means a result about one constructed course or one set of supplied numbers. "A law of one supplied model" means it holds for every state or event list of one fixed model with fixed laws. "A general law" means it holds of every model meeting stated premises (type variables and functions as hypotheses).
+
+## What was read, and what was not
+
+- GC/AcquiredCorrection.lean: every declaration statement (extracted by script) plus lines 1-8 and 380-399. AcquiredCorrectionCases.lean: declarations (an IO enumeration only). ACQUIRED-CORRECTION.md: not opened. I didn't need it, because the declarations were found directly.
+- GC/ObservationRepair.lean: lines 1-58 and every declaration statement.
+- GC/ObservationChange.lean: lines 1-25, 84-101 and every declaration statement.
+- GC/GoalFormationRevision.lean: lines 1-10, 58-67, 171-290, 355-377 and every declaration statement. Not read: the bodies of `operate` (l.322-333) and `cycle` (l.289-296), beyond their docstrings.
+- GC/GoalRevision.lean: lines 1-9, 172-320 and every declaration statement.
+- GC/FormedGrounds.lean: lines 1-103, 228-276 and every declaration statement.
+- GC/FormativeCapacity.lean: lines 1-30, 108-152, 208-260 and the declaration names. Statements after l.260 were seen by name only.
+- GC/CorrectionReconfiguration.lean: lines 1-14 and the declaration names. Most statements were not read.
+- GC/CorrectionInquiry.lean, AlignmentInquiry.lean, OpenFutureRevision.lean: every declaration statement, with docstrings.
+- GC/EvaluatorGrounding.lean: lines 1-52, the declarations to l.74, and the names after that.
+- MA/ExpandingInquiry.lean: lines 1-80, 292-326 and every declaration statement.
+- MA/CommonCauseDiscovery.lean: lines 1-92, 118-137, 339-345, 409-443 and the declaration names.
+- MA/TestingReorganization.lean: lines 1-100, 357-372 and the declaration names.
+- theories/meta-attractor/COLLECTIVE-DESTRUCTIVE-ATTRACTORS.md: §"The present wall" (l.209-217) and §"Complexity and the capacity for effective response" (l.219-232 in full, and l.282-299). I scanned the rest of that section, through l.410, for statements of limits.
+- Imports: I computed the closure of each file over GC, MA and `lean/becoming/`. Modules that live elsewhere (GenerativeCore, KnowledgeCorrespondence, ContinuationRenewal, JointContinuationClassification, InquirySufficiency, RelationalRenewal) were not followed.
+- No proof was opened except where a definition stood in for one: `step`, `experience`, `reform`, `observed`, `changed`, `inspected` and `process`. These were read because the statements alone don't say what changes what is registered.
+
+## Imports of the package `lean/becoming/Becoming/`
+
+Only **CorrectionInquiry** imports the package (`import Becoming`, l.1). Its closure includes Becoming.SignificanceStatements, GrammarScope, Weightings, GroupEnding, Continuation and others. In the closure computed, no other file in this group reaches the package. EvaluatorGrounding's docstring names `Becoming.Metaethics` as where a further bridge is stated, but the file does not import it.
+
+---
+
+## GC/AcquiredCorrection.lean (+ Cases)
+
+Mechanism supplied: the tree, the faithful atomic inspection and the fixed topology during a scan are premises. The header comment (l.3-6) says: "The search is not given a successful address or tree size. Faithful atomic inspection and fixed topology during a scan are premises." No package import (closure: EffectiveCommand → AlignmentInquiry → Std).
+
+1. **What registers what.** A frontier of `(address, subtree)` entries. A subtree's contents are read only when it is popped by `scan` (l.48). What reaches the next step is the `Verdict` (`found ticket | exhausted | pending`) and the `spent` count. Dispatch then re-reads the proposed path in the *current* tree (`dispatch`, l.206-229).
+2. **Change along a course.** The frontier grows by expanding forks. This is the model's own search move, with fuel handed in. A route not given beforehand becomes known. Nothing else changes what can be read: the tree, the fuel and the authority are inputs.
+3. **Coming to register.**
+   - `reachable_route_is_found` (l.165), a law of one supplied model, over every tree. Premises: `enough : nodes root ≤ fuel`, `existsRoute : inhabited root = true`. Conclusion: `∃ ticket, (discover fuel root).verdict = .found ticket ∧ locate root ticket.1 = some ticket.2`.
+   - `discovered_route_is_real` (l.112): found ⇒ real.
+   - `sufficient_budget_finishes` (l.138), premise `burden frontier ≤ fuel`.
+   - `exhausted_is_scoped_absence` (l.121): exhausted ⇒ `live frontier = false`.
+   - Built: `interrupted_is_not_absent` (l.182), `positive_witness_needs_no_complete_map` (l.179).
+   - Handed in: the fuel, and the order of search (left first). The cause is a search the model runs. It is not something the route did to the going-on.
+4. **Cost, bearer, keeping.**
+   - `acquired_accounting` (l.194). Premises: `funded : fuel ≤ s.reserve`, `timely : s.time + fuel ≤ s.deadline`. Then reserve + spent = old reserve, and time advances by spent.
+   - `dispatch_completes` (l.230): premises route present, signed, `credential = authority`, `funded : len+1+3 ≤ reserve`, timely.
+   - `acquired_execution` (l.293) and `complete_finite_discovery_and_execution` (l.343): `inhabited root`, signed, auth, `2*nodes root+3 ≤ reserve`, timely.
+   - The reserve bears the cost. The ticket is kept only while the current route and authority hold: `successful_dispatch_is_current` (l.277).
+5. **Lost.**
+   - `absent_current_route_rejects` (l.272), a law of the model: `locate current ticket.1 = none ⇒ ¬succeeded`.
+   - `current_revocation_rejects` (l.264): `credential ≠ authority ⇒ ¬succeeded`.
+   - Built: `changed_route_rejects_stale_ticket` (l.382). Undone in a built case: `renewed_authority_and_new_observation_recover` (l.386), where authority is handed in anew (`authority := 8, credential := 8`) and a new scan is run.
+   - Built: `captured_current_authority_passes_technical_gate` (l.395).
+6. **Tie to what it rests on.** The reserve and deadline gate both search and dispatch. No statement ties *what* is found to the reserve. Not found in what was read.
+
+## GC/ObservationRepair.lean
+
+Mechanism supplied: a finite game with weights 16, 8, 6, 5, 1 and a prior of 15/16. The header says it is "a mathematical countermodel to a specified weighted objective". Imports Mathlib only.
+
+1. **What registers what.** `observation (_ : Physical) : Unit := ()` (l.16). The agent registers nothing of the hidden proposition.
+2. **Change.** None. The observation is fixed.
+3. **Coming to register.** None. Against it:
+   - `no_localized_observation_repair` (l.185) and `oracle_repair_not_observation_based` (l.194), built: no repair `Unit → Message` can track the hidden state.
+   - `oracle_repair_gains_value` (l.177): only a repair that is not observation-based would help.
+4. **Cost.** `feasible_repair_loses_value` (l.173), built: a truthful repair costs 1/4.
+   - General law `executable_repair_bound` (l.255). Premises: `nonnegative : ∀ w, 0 ≤ prior w`; `gain : ∀ w, margin * failure w ≤ payoff w (repair (obs w) (policy (obs w))) - payoff w (policy (obs w)))`; `nearoptimal : E[payoff∘repair] ≤ E[payoff∘policy] + eps`. Conclusion: `margin * E[failure] ≤ eps`.
+   - `exact_executable_repair_zero` (l.276) adds `0 < margin` and `0 ≤ failure`, with eps = 0, and concludes E[failure] = 0.
+   - `learned_executable_repair_bound` (l.294) adds model errors and concludes `≤ eps + 2*modelError`.
+   - In each of these, `obs` is a function handed in and fixed.
+5. **Lost.** `off_absorbing` (l.60), law of the model: once off, it stays off.
+6. **Tie.** Not found in what was read.
+
+## GC/ObservationChange.lean
+
+Header (l.3-6): "A chosen observation process changes later available distinctions in the same interaction. The finite sensing menu and costs are supplied." No package import.
+
+1. **What registers what.** A `Plan := Fin 3 × Choice × Choice` (l.86). The first coordinate picks a sensor from a supplied menu: 0 is no query; 1 is a favourable/unfavourable signal costing 1/16; 2 is a fact-revealing query costing 1. The later choice is contingent on what that sensor shows (`planValue`, l.88).
+2. **Change.** What is registered changes by the agent's own choice of sensor among supplied ones. The distributions (`jointMass`, l.24) and the costs are handed in.
+3. **Coming to register.**
+   - Built: `query_strictly_preferred` (l.144), `selected_value` (l.102), `all_plan_bound` (l.106), `randomized_plan_bound` (l.119). The optimum chooses to sense.
+   - `query_cost_threshold` (l.186), built numbers: sensing beats no sensing iff `c < 1/8`.
+   - The cause is value under supplied numbers. It is not a loss the agent met.
+4. **Cost.**
+   - Cost is the sensor price in `planValue`. `selected_risk` (l.136): the chosen plan carries risk 1/32, while no query carries 0 (`no_query_safe`, l.139). Sensing buys value at a cost in risk.
+   - General law `reachable_observation_floor` (l.170). Premises: `0 < alpha`; `∀ o a, 0 ≤ risk o a`; `∀ o a, -bound ≤ reward o a ≤ bound`; `∀ o, reachable o → risk o (safe o) = 0`; `∀ o, reachable o → ∀ a, 0 < risk o a → floor ≤ risk o a`; `2*alpha*floor > 2*bound`; optimality of `policy` against `safe` at each reachable o. Conclusion: `∀ o, reachable o → risk o (policy o) = 0`.
+5. **Lost.**
+   - `fine_floor_certificate_fails` (l.162) and `same_assertion_risk_floor_falls` (l.149), built: a finer observation removes the risk-floor certificate that held on the coarse one (`coarse_floor_certificate`, l.154). A gained distinction loses a guarantee.
+   - `perfect_information_cannot_replace_delivery` (l.243), built: with the relay off, no policy delivers.
+   - General law `refinement_preserves_safe_choice` (l.209). Premise `refines : ∀ w, forget (fine w) = coarse w` and `SafeOn coarse good (forget n) a`. Conclusion `SafeOn fine good n a`.
+   - General law `transport_executable_correction` (l.220). Premises `record : ∀ w, decode (newObs (change w)) = oldObs w`, `oldCertificate`, `realization`. Conclusion: a new policy exists. The change `change : W → Z` and the new observation are handed in.
+6. **Tie.** Not found in what was read.
+
+## GC/GoalFormationRevision.lean
+
+Header (l.3-6): "The two practices, feedback law, calibrated reference, protected claims, authority, costs and deliberative response law are explicit local premises." Docstrings:
+
+- `experience` (l.241): "The selected trial schedule is supplied; it is not autonomous experiment design."
+- `reviseGoal` (l.271): "Receptivity is an explicit implementation parameter. Truth does not force motivation."
+- `reform` (l.277): "Authority is supplied. Inference alone does not create permission."
+
+No package import in the closure computed (KnowledgeCorrespondence lives elsewhere and was not followed).
+
+1. **What registers what.**
+   - `State` (l.224): `evidence`, `ground`, `goal`, `selector`. `experience c p s` (l.243-260) charges 1 work. It records the outcome `perform c p`, the feedback `feedback s.selector p` and a signal `encode c.reversed (!o.access)` (or `!o.maintenance`), and it sets `goal := learnedGoal a b` from the accumulated feedback.
+   - `assess` (l.266) runs `interpret` (l.185): it infers the formation rule from two feedbacks and decodes loss signals against the calibrated reference.
+2. **Change.** The goal is learned from feedback the agent's own `selector` gives (handed in as `Selection`). The ground is acquired by `experience` → `calibrate` → `assess` (`acquire`, l.360, a supplied schedule). The goal is revised by `reviseGoal responsive` when `callsForRevision g = g.accessLoss && !g.transitionLoss` (l.194). The selector itself changes by `reform authorized` (l.278-284): authorized, goal = learning, callsForRevision, cost 2.
+3. **Coming to register.** Here what is registered includes the **harm the agent's own practice did**. The signal is `!o.access`, where `o = perform c p` (l.248-251). That harm is the cause of the revision, through supplied laws.
+   - `acquired_history_identifies_origin` (l.378), a law of the model for every `c : Conditions` and every `r : Selection`: `(acquire c r).map State.ground = some (some ⟨r, c.accessLoss, c.transitionLoss⟩)`.
+   - `acquired_grounds_warrant_comparison` (l.208): premise `callsForRevision ⟨r, c.accessLoss, c.transitionLoss⟩ = true`; conclusion `Better (protects c) (gains c) .learning .attendance`.
+   - `formation_identified` (l.125), for all r.
+   - `formation_model_predicts_intervention` (l.200): premise `g.formation = r`.
+   - Built (`harmful := ⟨true,false,false⟩`): `revised_goal_with_old_metric_still_successful` (l.389), `reform_changes_the_formative_relation` (l.409), `acquired_intervention_prediction_realized` (l.414), `joined_revision_has_warrant_and_actual_continuation` (l.480), `reform_changes_later_goal_acquisition` (l.474).
+   - Handed in: the trial schedule (both practices tried), the calibration step, `responsive`, `authorized`, the feedback law, the `encode`/`decode` convention and the conditions.
+4. **Cost, bearer, keeping.**
+   - Every step charges `Account.work`. `charge_conserves` (l.159) holds under `charge n a = some b`. `insufficient_work_blocks` (l.168) holds under `a.work < n`.
+   - Built: `complete_history_account` (l.423), total 18.
+   - `revision_loses_real_output` (l.77), law over c: counted output 2 is given up.
+   - Keeping, built: `unchanged_selection_exhausts_revised_practice` (l.435), `(revised harmful >>= operateMany harmful 3) = none`. A revised goal without the reformed selector exhausts. `reform_does_not_make_support_infinite` (l.438).
+   - Law over n: `supported_finite_continuation` (l.342), premises `2 ≤ w`, `2*n ≤ q`.
+   - The revised registering is kept only while the reformed feedback relation and the reserve last.
+5. **Lost.** All built:
+   - `missing_reference_prevents_assessment` (l.444).
+   - `false_reference_can_hide_real_loss` (l.447).
+   - `erased_formation_evidence_blocks_deliberation` (l.452).
+   - `wrong_formation_model_prevents_needed_reform` (l.456).
+   - `stale_grounds_can_leave_new_loss_unaddressed` (l.460): grounds acquired under `safe` and then operated under `harmful` leave a loss unaddressed. The ground does not re-register by itself when conditions change. (`operate`'s body was not read.)
+   - Undone, built: `corrected_reference_restores_revision` (l.468), with the reference handed in correct.
+6. **Tie.** Yes, in built form. The reformed `selector` is what feeds and supports the goal: `reform_changes_the_formative_relation` (l.409) and `unchanged_selection_exhausts_revised_practice` (l.435). The loss registered is the access loss the practice imposes. `cycle`'s docstring (l.289) says "Support is transferred from an actual finite reserve after work is performed."
+
+## GC/GoalRevision.lean
+
+Header (l.3-6): "The meaning/calibration of protection, G0/J adoption, native laws, permissions, initial funding and available reform are explicit correspondence premises." No package import.
+
+1. **What registers what.**
+   - `State.acquired : List Packet` (l.172ff). `.read mode` sets `acquired := metered mode archive` (l.282), and the `Meter` (faithful | missing | reversed | creditInflated) is handed in as an event parameter.
+   - `learned` (l.196) forms the goal from reward signals. `judgment` (l.213) compares impacts, and only if `adopts` holds and the contexts match.
+2. **Change.** By supplied events: `probe`, `read mode`, `learn`, `assess`, `enact write`, `reform demand` and `shift context`. The last clears `acquired` (l.299).
+3. **Coming to register.**
+   - Built: `acquired_not_initialized` (l.331), `acquisition_controls_initial_end` (l.335) (missing meter: no goal; faithful: capacity), `faithful_revision_warrant` (l.359), `revision_changes_ordering_not_only_action_label` (l.352).
+   - General over the comparison: `revised_end_has_comparative_ground` (l.68), premise `recommend a b = some .capacity`, conclusion `Better protects gains b a`.
+   - Handed in: the event list, the meter and the demand.
+4. **Cost, keeping.**
+   - Every step is `paid` from a `Budget`. `settlement_conserves` (l.114).
+   - `funded_continuation` (l.130): premises `2 ≤ cash`, `2*n ≤ fund`.
+   - `unreformed_depletion` (l.143): premises `n+1 ≤ cash`, `n ≤ fund`.
+   - `one_more_unreformed_fails` (l.159): premise `n ≤ fund`.
+   - Built: `correct_end_can_be_selected_out` (l.379). The right goal and judgment, without reform, halt with cash 1.
+5. **Lost.**
+   - Built: `changed_context_invalidates_use` (l.396), where `shift` clears what was acquired.
+   - `missing_is_not_a_zero_consequence` (l.391).
+   - `misleading_acquisition_can_misguide` (l.411).
+   - `acquired_selection_evidence_matters` (l.437), creditInflated.
+6. **Tie.** `reform` (l.251-264) installs the new rule only if `(repeatBudget p.credit demand s.budget).isNone && (repeatBudget offered demand installed).isSome`. That is: only if the old credit would not carry the demand from the fund, and the new one would. This is a forecast of running out, made from acquired packets, that gates a change of the rule. The demand is handed in (`reform 8`). Built: `joined_history_completes` (l.373), `unnecessary_reform_is_not_forced` (l.425), `unfunded_reform_is_not_performed` (l.431).
+
+## GC/FormedGrounds.lean
+
+Header (l.4-12): "The binary signal convention is not preloaded into the answer procedure: actual paired contacts constrain it. The physical comparison law, retention/review architecture, question scope and availability of direct comparison are local inputs." Comment at l.38: "No actual target, convention bit or reward is an input to interpretation." No package import in the closure computed.
+
+1. **What registers what.** `State.examples` (paired contacts), `signal`, `judgment` and `review`. `interpret` (l.39) answers with the rules learned from `observations s`, where `StandardsBridge.learn` runs over a supplied `repertoire`.
+2. **Change.**
+   - `.calibrate` appends `contact reversed s` if `enabled s` (open and budget > 0).
+   - `.review` re-inspects and replaces the judgment with the receipt's report (l.73-78).
+   - Events are a supplied list (`run`, l.85).
+3. **Coming to register.**
+   - Laws of the model over every event list: `retained_evidence_origin` (l.141) (premise `r ∈ (run reversed es s).examples`; conclusion `r ∈ s.examples ∨ AcquiredAlong reversed es s r`), `from_initial_evidence_is_acquired` (l.153), `all_reachable_evidence_fits` (l.177), `every_reachable_faithful_interpretation_is_correct` (l.184).
+   - `interpretation_depends_on_acquired_view` (l.119): premises same observations and same signal; conclusion same judgment.
+   - Laws over `reversed`: `before_calibration_no_definite_interpretation` (l.194), `one_contact_leaves_unseen_signal_unsettled` (l.197), `training_forms_decoder` (l.201).
+   - Built: `acquired_review_refutes_and_corrects` (l.235).
+   - Handed in: the schedule (`training`), the repertoire and the comparison law.
+4. **Cost.** Each inspection spends `native.budget`. `training_uses_real_contrasts` (l.205) gives budget 2. `exhausted_review_does_not_acquire_a_ground` (l.256), built.
+5. **Lost.**
+   - Built: `same_formed_interpretation_can_be_false` (l.224), `new_record_without_review_does_not_correct` (l.230), `closed_review_cannot_claim_confirmation` (l.252), `reward_alone_cannot_repair_interpretation` (l.260, over n).
+   - Built: `later_change_retains_review_but_defeats_current_accuracy` (l.271). After `setReference 1`, the old review stays and the judgment is false of the new target. The change in the world is not registered without another review.
+6. **Tie.** Not found in what was read.
+
+## GC/FormativeCapacity.lean
+
+Header (l.3-17): "A supplied local assembly law... Input can enter only through that socket... Closing converts the socket into an atom, so all subsequent construction uses a finite accumulated stock." `Feed` docstring: "a supplied relation of this model". No package import (GenerativeCore lives elsewhere and was not followed).
+
+1. **What registers what.** Not distinctions. What it models is *input access*: `capture` is enabled only if `live s.tree ∧ feed s.cursor` (`Enabled`, l.142).
+2. **Change.** By the model's own `build`: `build_reconstructs_next_interface` (l.208). Premises `Step feed s .build t`, `socketAddress s.tree = some address`. Conclusion `socketAddress t.tree = some (address+1)`, with 2 parts and 1 work consumed. The interface is re-formed at a deeper address by the going-on's own growth.
+3. **Coming to register.** Not of a new distinction. Not found in what was read.
+4. **Cost.** Each build spends 2 raw parts and 1 work (l.208). The interface is kept only while the tree stays open and building continues (`continuing_formation_run`, l.430, built with `constantFeed`).
+5. **Lost.**
+   - `close_has_no_socket` (l.70), general over trees.
+   - `no_socket_no_capture` (l.217): premise `live s.tree = false`.
+   - `closed_step_spends` (l.223): premises `Step feed s e t`, `live s.tree = false`; conclusion `live t.tree = false ∧ t.work+1 = s.work ∧ ...`.
+   - `closed_no_infinite` (l.244): premise `live start.tree = false`; conclusion that no infinite run exists.
+   - These are laws of the model, and the loss is not undone within it.
+6. **Tie.** Input access is what construction rests on. Closing it leaves a finite stock (l.244). Whether this is a registering is a reading.
+
+## GC/CorrectionReconfiguration.lean
+
+Header (l.3-7): "Formulas are supplied engineering upper bounds, not discovered causal laws. The protected monitor, authority to reorganize, and correspondence remain premises." No package import.
+
+1. **What registers what.** An `Arrangement` (roster, fault formulas, root faults). `Covered` and `ready` (l.52, 84) say which faults a reviewer set can see.
+2. **Change.** `reconfigure authorized cost depth candidate` (l.166). The candidate arrangement is handed in.
+3. **Coming to register.** By a candidate handed in: `admitted_configuration` (l.184), `admitted_reform_completes` (l.230). Statements not read in full. Built: `repaired_reform_installs` (l.295).
+4. **Cost.** `responseCost` (l.162) and `admitted_budget_for_shorter_route` (l.219), not read in full. Built: `exact_combined_budget_suffices` (l.315).
+5. **Lost.** Built: `stale_envelope_accepts_captured_support` (l.282), `old_approvals_fail_after_reform` (l.307), `omitted_shared_cause_still_breaks_model` (l.319).
+6. **Tie.** Not found in what was read.
+
+## GC/CorrectionInquiry.lean (imports the package)
+
+Docstring (l.5-20): "Refining observation narrows every such belief, so the refinement theorems of both modules are cases of the core's `commonResponse_antitone`."
+
+1. **What registers what.** `cell admitted observe o` (l.29): the admitted histories that show o.
+2. **Change.** Only by a refinement handed in (`fine`, `forget`).
+3. **Coming to register.**
+   - General law `cell_refines` (l.34): premise `∀ h, coarse h = forget (fine h)`.
+   - `implements_refine` (l.70): premises `observe h = forget (fine h)` and `Implements ... policy`.
+   - `safeOn_refine` (l.93).
+   - The fine observation is handed in. There is no course along which it comes to be.
+4. **Cost.** Not found.
+5. **Lost.** Not found.
+6. **Tie.** Not found in what was read.
+
+## GC/AlignmentInquiry.lean
+
+1. **What registers what.** `Interface.probe : S → Q → Option (Bool × S)` (l.18), handed in. A `Plan` picks a query and two branches.
+2. **Change.** A choice among supplied plans (`choose`, l.33; `repertoire`, l.36).
+3. **Coming to register.**
+   - General law `chosen_sound` (l.51): premise `choose m states plans = some p`.
+   - `actual_covered_execution` (l.79): premises `choose ... = some p` and `s ∈ states`.
+   - `empty_uncertainty_never_certifies` (l.75).
+4. **Cost.** Not found.
+5. **Lost.** General law `observational_obstruction` (l.94): premise `∀ a, required₁ a → ¬ required₂ a`. One answer cannot meet incompatible requirements.
+6. **Tie.** Not found in what was read.
+
+## GC/OpenFutureRevision.lean
+
+Docstring (l.4-10): "Actual step occurrence, correspondence, permissible means and continuing historical requirements remain supplied."
+
+1. **What registers what.** Not about registering. It concerns ranks handed between revised response rules.
+2. **Change.** General law `handed_off_progress` (l.14): premises `localStep` and `handoff`.
+3. **Coming to register.** Not found.
+4. **Cost.** Not found.
+5. **Lost.** Not found.
+6. **Tie.** Not found.
+
+Built: `revised_rules_can_fail_forever` (l.120). Its docstring: each rule finishes if retained, "Yet no outcome ever forms."
+
+## GC/EvaluatorGrounding.lean
+
+What reaches significance is the standpoint's `sig` over formed relations `prof` (`Standpoint`, l.53). Its reach spreads by tolerant chains (`tolerant_chain_reaches`, l.110), with S0, `Tolerant`, `Monotone` and `Supervenes` supplied (l.14-41: "No theorem here proves S0, `Tolerant`, BI or the correspondence premises").
+
+- Q2 to Q6: no course along which what is registered changes was found in what was read.
+- Built: `closed_self_blocks_reach` (l.245).
+- No package import.
+
+## MA/ExpandingInquiry.lean
+
+Header (l.3-5): "The parent-following connection law, pulse delivery and effect recording are explicit local inputs. Finite expansion yields bounded coverage, never an inferred last causal level." No package import in the closure computed. It uses `Generative.Process` (GenerativeCore, elsewhere).
+
+1. **What registers what.** `rows : Fin 3 → Option (Fin 3 → Bool)`: recorded outage patterns at depth `reach` of a `Tower` (base, and `parent`, handed in).
+2. **Change.**
+   - By the going-on's own events (`process`, l.71-79): `work`, `fabricate` (an adapter, cost 2), `extend` (needs an adapter, cost 1, `reach+1`, clears rows), `pulse i`, `observe` and `restore`.
+   - `observed` records `!(online (view s) j)`, which is the effect of the held pulse.
+4. **Cost and keeping.**
+   - `construction_accounting` (l.274), law over s: material −3 per extension.
+   - `extension_requires_constructed_adapter` (l.148): premise `s.adapters = 0`.
+   - `step_retains_restoration_reserve` (l.514) and `trace_retains_restoration_reserve` (l.547): premise `RecoveryReserve s`.
+   - `interrupted_history_can_restore` (l.553): premises `Invariant s`, `RecoveryReserve s`, a trace, `t.held = some i`.
+   - Built: `unreserved_pulse_would_strand_restoration` (l.564).
+   - `step_preserves` and `trace_preserves` (l.122, 136): premise `Invariant s`. The work that pays for inquiry is the plant's own (`work_finances`, l.154).
+3. **Coming to register.**
+   - Law of the model, for every s, n and i, with no premise: `acquired_at_reach` (l.264). `(rounds s (n+1)).rows i = some (CommonCauseDiscovery.coupling (roots s.tower (s.reach+(n+1))) i)`. After n+1 rounds, the coupling at depth reach+n+1 is registered.
+   - `expansion_continues` (l.244): premises `Invariant s`, `s.held = none`. Each round is a real trace.
+   - `expansion_reach` (l.251): reach = s.reach+n.
+   - `bounded_gate_sound` (l.300). Premises `Invariant s`; `covered : d ≤ s.reach`; `honest : ∀ i, roots s.tower d i ≠ bad → reports i = some v → v = actual`; `accept : gate s reports v`. Conclusion `v = actual`.
+   - Built: `continued_expansion_exposes_each_hidden_level` (l.449), `broader_test_changes_admission` (l.469), `actual_corrective_effect` (l.492).
+   - Handed in: the round schedule (`roundEvents`), the tower and parent law, and that observation records the effect faithfully. The cause of the new registering is a supplied schedule of expansion and probing. It is not a fall of the plant.
+5. **Lost.**
+   - `extension_invalidates` (l.110) and `expansion_clears_certification` (l.297), law over s: each deepening clears all rows, so the certification is lost until resurveyed.
+   - Built for each n: `every_finite_record_has_hidden_extension` (l.426), `hidden_extension_changes_failure` (l.432).
+   - `no_finite_certificate_of_unrestricted_separation` (l.438), over any `certify`: no finite record certifies separation at all depths.
+6. **Tie.** Partly. Inquiry is paid from and kept within the plant's support (`Supported`, `RecoveryReserve`), and the gate decides the plant's response (`response`, l.323; `actual_corrective_effect`). But no statement says that a loss of support causes deeper inquiry. Not found in what was read.
+
+## MA/CommonCauseDiscovery.lean
+
+Header (l.3-6): "Intervention effects acquire a dependency partition without reading root identities. Selective delivered pulses, faithful outage observation and stable coupling during a trial are local laws. Upstream causes outside that intervention class remain a separate coverage question."
+
+1. **What registers what.** `rows`. `observed` (l.39) puts `!(online s j)` into the row.
+2. **Change.** By `pulse`, `observe`, `restore`, `work` and `change roots` (l.46-59). In `change`, the new roots are handed in, and `changed` (l.43) clears the rows.
+3. **Coming to register.**
+   - `observation_is_effect` (l.70): premise `s.held = some i`; conclusion `(fun j => !(online s j)) = coupling s.roots i`. What is recorded is what the shared dependency does to the readers under a pulse.
+   - `complete_records_identify_coupling` (l.118): premises `SoundRows s`, `Complete s.rows`; conclusion `decode s.rows = coupling s.roots`.
+   - `separate_effects_imply_distinct_roots` (l.126): adds `Separating s.rows`; conclusion `Diverse s.roots`.
+   - `retesting_after_reorganization` (l.339): premises `Invariant s`, `s.held = none`, `13 ≤ material`; conclusion that a trace through `change roots :: surveyEvents` exists and its rows are complete.
+   - Built: `effect_probe_discovers_shared_dependency` (l.271).
+   - Handed in: the survey schedule.
+4. **Cost.** Each event charges material. `work_finances_probe` (l.196) and `survey_preserves_response_capacity` (l.249) were read by name only.
+5. **Lost.**
+   - `change_invalidates_records` (l.84), law over s: rows are sound but not complete.
+   - `no_gate_after_change` (l.157).
+   - Against reaching upstream: built `all_local_probe_effects_identical` (l.418) and `local_probe_coverage_misses_upstream_failure` (l.420).
+   - `no_classifier_of_local_effects_can_identify_parent` (l.426), over any `classify`.
+   - `simultaneous_local_probes_still_miss_parent` (l.436), over any pulse list.
+6. **Tie.** Built: `discovered_coupling_changes_actual_response` (l.324) and `unaccounted_majority_would_lose_support` (l.332), by name only. What is learned decides whether the plant keeps support. No statement says a loss causes the probe.
+
+## MA/TestingReorganization.lean
+
+Header (l.3-6): "A completed physical inspection is assumed to disclose its actual root... This is not a discovery theorem for all common causes."
+
+1. **What registers what.** `seen`. `inspected` (l.75) writes `s.roots i` itself, so the reading is faithful by definition.
+2. **Change.** By `inspect`, `build root`, `test`, `switch i` and `work`. Roots are handed in through `build`.
+3. **Coming to register.**
+   - `complete_decodes_actual` (l.105): premises `Knowledge s`, `Complete s`.
+   - `trace_preserves` (l.186) and `complete_through_trace` (l.215), not read in full.
+4. **Cost.** Material per event. `two_work_cycles_finance_migration` (l.278), by name only.
+5. **Lost.** Built: `present_agreement_can_hide_lost_resilience` (l.357). A merger to a shared root gives reports identical to the diverse case. The lost diversity is not registered by agreement.
+   - Built: `separate_labels_do_not_establish_causal_separation` (l.368), `unrepresented_common_cause_defeats_response` (l.515).
+6. **Tie.** `common_dependency_merge_refused` (l.330), built: a merge onto a shared root is refused by testing. Statements past the names were not read.
+
+## COLLECTIVE-DESTRUCTIVE-ATTRACTORS.md, the two sections
+
+- **"The present wall" (l.209-217).** What it could not derive: "how locally pursued ends form and preserve the authority, evidence, transfers and commitments that change what local success selects" (l.211). It says "Local objective fidelity and growing revision capacity do not determine those relations". It also says a further result "needs a specified governance/commitment mechanism or an actual setting with evidence", and that "specifying one more favourable institutional law cannot be taken as having crossed the wall" (l.217).
+- **"Complexity and the capacity for effective response" (l.219ff).**
+  - It names a route in which losses "damage the relations enabling later observation, learning, trust, coordination and repair" (l.229).
+  - It reports a checked construction (l.282-299) in which unmet demand impairs later response: `c' = [c+2i−m]₊`. "If initial response is below constant demand, every affordable policy that exactly maximizes this immediate objective eventually loses all operative support."
+  - That is a capacity to respond being lost by the activity's own operation. Its law is supplied, and the page says "It does not derive c from the semantic distinctions". The Lean file was not located in this read.
+  - Its later "new wall" (l.403ff, outside the assigned sections) names "forming and preserving the justified constraints and truthful correspondence when the activities being corrected can change those very conditions."
+
+---
+
+## The guesses
+
+- **G1** (the package's reading modules). This group is outside the package, so it gives no direct evidence. CorrectionInquiry, the one file here that imports the package, reads observation refinement as a case of `commonResponse_antitone`, and the refinement is handed in (`implements_refine`, l.70). That is consistent with G1.
+- **G2** (learning and feedback handed in; none tie learning to what the learner rests on).
+  - For: FormedGrounds (repertoire and schedule supplied), ObservationChange (menu supplied), AlignmentInquiry (probe interface supplied). None of these ties to support.
+  - Against, in this group: GoalFormationRevision and GoalRevision tie the change of what selects (selector, rule) to the finite reserve, in built examples (`unchanged_selection_exhausts_revised_practice` l.435; `reform`'s `repeatBudget` gate l.251-264). In GoalFormationRevision the signal registered is the access loss of the agent's own practice (`experience`, l.248-251). The feedback is still the agent's own selector's, and the schedule is supplied.
+- **G3** (loss general and exact, acquisition conditional).
+  - For: `closed_no_infinite` and `closed_step_spends` (FormativeCapacity) are general within their model and permanent. `extension_invalidates` and `change_invalidates_records` hold for every state, with no premise. `no_finite_certificate_of_unrestricted_separation` holds over any certifier. `absent_current_route_rejects` (AcquiredCorrection) is unconditional.
+  - Against or qualifying: some losses are undone in built cases when something is handed in again (`renewed_authority_and_new_observation_recover`, `corrected_reference_restores_revision`, `retesting_after_reorganization`). Acquisition is always conditional: fuel ≥ nodes, `Invariant`, a schedule, `responsive`, `authorized`, budget.
+  - Not checked here: whether this is the same asymmetry as the future-reading's closing/opening.
+- **G4** (an exact condition under which a system acquires a correction or observation it lacked, by a model move, with the mechanism supplied). **Supported.**
+  - `reachable_route_is_found` (fuel ≥ nodes, inhabited).
+  - `acquired_at_reach` (every s, n: depth-reach+n+1 coupling registered after n+1 rounds).
+  - `complete_records_identify_coupling` (SoundRows, Complete).
+  - `training_forms_decoder` and `every_reachable_faithful_interpretation_is_correct`.
+  - `acquired_history_identifies_origin` (every c, r).
+  - `query_cost_threshold` (c < 1/8, built numbers).
+  - Each of these is a law of one supplied model, or built, with the mechanism supplied, as their own headers say. None is a general law over models.
+- **G5** (whatever changes a reading is a slower reading handed in one level up).
+  - For: every place hands in what drives the change: a schedule (`roundEvents`, `surveyEvents`, `training`, `acquire`), a candidate (`reconfigure`), a menu (`Plan`), a meter mode, authority or responsiveness. ExpandingInquiry states that there is no last level (`no_finite_certificate_of_unrestricted_separation`; header "never an inferred last causal level").
+  - Nearest to against: in GoalFormationRevision, CommonCauseDiscovery and ExpandingInquiry, *what* gets registered is the effect of the thing itself on the going-on: the access loss of its practice, or the outage pattern a shared dependency causes. It is not a value handed in. Only *when* it is read is handed in.
+  - No law was found in which the loss or fall itself triggers the reading. GoalRevision's reform gate, a forecast of running out, is the nearest, and it is built, with the demand handed in.
+  - On the frozen file's criteria, this group found nothing "already there". It found what is nearest, and what each place hands in.
+
+## Other places met, on no list, that bear on the questions
+
+- GC/EffectiveCommand.lean (imported by AcquiredCorrection; state with reserve, deadline, authority). Not read.
+- GC/FaultTolerantCorrection.lean, EvidenceQualifiedCorrection.lean, CorrectionReconfigurationCases.lean, ReformEvidence.lean, ReformInquiry.lean, ObservableContinuation.lean, WisdomGoalGrounds.lean, MachineInstances.lean, CorrespondenceSamples.lean. These import files of this group. Not read.
+- MA/AdmissionRevision.lean (imported by TestingReorganization). Not read.
+- The response-capacity construction reported at COLLECTIVE-DESTRUCTIVE-ATTRACTORS.md l.282-299 (unmet demand impairs later response, under every exactly-maximizing affordable policy). It bears on Q5 and Q6: a capacity lost by the activity's own operation, as a general law over policies within one supplied law. Its Lean file was not located.

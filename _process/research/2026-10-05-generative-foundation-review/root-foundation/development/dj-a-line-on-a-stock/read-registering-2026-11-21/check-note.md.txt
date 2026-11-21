@@ -1,0 +1,183 @@
+# Check of the note on how a registering comes to be
+
+*AI-written (Claude Opus, a checker who took no part, capped at 20 tool calls), 21 November 2026; its findings as returned, set down by the session that ran it with nothing changed.*
+
+1. MUST. Note, in the "What it shows" section: "Contacts.answers_iff, which two readers named and neither read". The section says: "The second and third readers name `Contacts.answers_iff` … neither read that module."
+   - Source, read-learning-codes-inquiry.md: "Definitions: … Contacts.lean 135-184 (outside the group; cited by chapter 3 §8)". Its header also says "`Contacts.Answers` (Contacts.lean 147-148)" was "read in full". Under G4 it writes out the statement of `answers_iff` (l.152) and `blind_misses` (l.171), and says "In both the rule `ρ` is handed in."
+   - Fault: false for the second reader. Only the third reader says "`Contacts.lean` was not read."
+   - In its place: "The second reader read Contacts.lean 135-184, including the statement of `answers_iff`, from its statement and docstring, with no proof. The third reader names it without reading it ('It probably holds the general law')."
+
+2. MUST. Note: "with exact conditions: … by the failure of its own act read by a rule that is not blind".
+   - Source, read-learning-codes-inquiry.md: "'A revision rule answers every failure exactly where its output contains the failed address'". `blind_misses` has premises `(blind : Blind ρ) (unlisted : Unlisted I)`. The reader adds: "In both the rule `ρ` is handed in."
+   - Fault: the exact condition is `Answers ρ` (the rule's output contains the failed address), not "not blind". `blind_misses` only gives that a blind rule, with `Unlisted I`, misses. Not blind does not imply Answers. The rule being handed in is also dropped, and that bears against the next paragraph's plan to set this condition "where the second hands something in".
+   - In its place: "by a failure of its own act, where a rule handed in has an output that contains the failed address (`Contacts.answers_iff`; `ReferencePlan.revise_registers_failure` is an instance of it, with the rule `propose` handed in)".
+
+3. MUST. Note: "none has a fall in what a going-on rests on cause a new registering". The note also gives this as the second reader's words: "No statement was found in which running down, or a loss of what the going-on rests on, causes a new registering."
+   - Source, read-revision-and-forming.md (TurningInTime): "The level falling into `[N,K)` triggers the reading … Which levels are read is handed in, not formed". It calls this "the one place in my group where what the going-on rests on (the stock's level) is what sets the change of the rule or the share."
+   - Source, read-readings-and-the-lock.md (ReadInTime): "The cause of the change is the loss itself (it accrues and passes `N`); that the others read it at all, from `N`, with `lo'`, is the premise."
+   - Source, read-learning-codes-inquiry.md: the nearest sentence is "Nothing was found in which running down causes a registering." It is said of LearnedGrouping only.
+   - Fault: wider than the reports. The sentence quoted from the second reader does not exist in its report.
+   - In its place: "none has a fall in what a going-on rests on cause a new registering without the reading of it handed in. In TurningInTime the level entering a window handed in triggers the reading, and in ReadInTime the loss passing a bound handed in switches a reading handed in." For the second reader's quotation, put: "Nothing was found in which running down causes a registering" (of LearnedGrouping).
+
+4. MUST. Note: "**'Already there'** … not found as worded by any of the four."
+   - Source, read-readings-and-the-lock.md: "Whether these meet 'other than by an update handed in' depends on … this read does not decide that." Under G3 it says "acquiring is general and exact in `ReadOffInTime` (`FirstApart`, `readableInTime_iff`) once the group is chosen". Under ReadOffInTime Q3 it says "**Yes, a general law, from the loss itself.**"
+   - Fault: the first reader did not find "already there" absent; it left the matter undecided. Only the third and fourth readers say outright that it was not met. The second says "'other than by an update handed in' was not met in this group".
+   - In its place: "The second, third and fourth readers did not find it met in their groups. The first found in `ReadOffInTime` a general law with an exact time, in which a loss reaches a fixed reading through couplings once the group is chosen, and left undecided whether that meets the item."
+
+5. MUST. Note: "The fourth reader: 'No law was found in which a loss or fall itself triggers the registering.'"
+   - Source, read-outside-the-package.md: "No law was found in which the loss or fall itself triggers the reading."
+   - Fault: not word for word ("a loss", "registering").
+   - In its place: the source sentence as it stands.
+
+6. MUST. Note: "(27, 22, 28 and 31 by their own counts)".
+   - Source: read-readings-and-the-lock.md says "*Tool calls: 26.*". read-learning-codes-inquiry.md gives no count. read-revision-and-forming.md says "Tool calls: 28." read-outside-the-package.md says "30 tool calls."
+   - Fault: three of the four counts are wrong or have no source.
+   - In its place: "(26, not stated, 28 and 30 by their own counts)".
+
+7. MUST. Note: "a dozen on revision and the forming of moves, routes and predictions".
+   - Source, read-revision-and-forming.md: fourteen numbered places, 1 Revision to 14 TurningInTime. ReferencePlan and Runaway were met besides.
+   - In its place: "fourteen".
+   - LESSER, same sentence: "fifteen files outside the package". The fourth report lists sixteen Lean files (AcquiredCorrection and its Cases counted apart) plus sections of the study page, and states no count. Either say "sixteen Lean files and two sections of October's study page", or give no count.
+
+8. MUST. Note: "no proof was opened by three of them".
+   - Sources:
+     - first reader: "no proof body was opened except where a statement's own text was printed with its first lines by the extraction";
+     - second: "No proof was opened.";
+     - third: "Not read: the proofs, except where noted", with ContinuingRevision "(proof bodies partly filtered out)";
+     - fourth: "No proof was opened except where a definition stood in for one".
+   - Fault: only the second opened none without exception. Which "three" is meant is not given, and each candidate has a caveat.
+   - In its place: "the second opened no proof. The first and fourth opened none except where an extracted statement or a definition stood in for one. The third skipped proofs except where it says otherwise."
+
+9. MUST. Note, on the fourth reader: "every file supplies its mechanism and its header says so", and the quotation "Each … a law of one supplied model, or a built example. None is a general law over models."
+   - Source, read-outside-the-package.md, said of the six G4 results only: "Each of these is a law of one supplied model, or built, with the mechanism supplied, as their own headers say. None is a general law over models."
+   - Fault: the quotation is not word for word ("or a built example"). The claim is also widened from six results to every file.
+   - In its place: "Of the six exact conditions it lists: 'Each of these is a law of one supplied model, or built, with the mechanism supplied, as their own headers say. None is a general law over models.'"
+
+10. MUST. Note: 'When a thing is read "is always handed in: a schedule, a menu, a meter, responsiveness, authority".'
+    - Source, read-outside-the-package.md: "every place hands in what drives the change: a schedule (…), a candidate (`reconfigure`), a menu (`Plan`), a meter mode, authority or responsiveness." Separately: "Only *when* it is read is handed in."
+    - Fault: a quotation that is not in the source. "When … read" mixes two sentences, and the candidate is dropped.
+    - In its place: 'every place "hands in what drives the change": a schedule, a candidate, a menu, a meter mode, authority or responsiveness.'
+
+11. MUST. Note, item 2: 'The first reader: "This is the one statement found that ties what can come to be registered to what the formation keeps."'
+    - Source, read-readings-and-the-lock.md: "This is the one statement in the group found that ties what can come to be registered to what the formation keeps."
+    - Fault: "in the group" is dropped, so the claim reads wider than the source.
+    - In its place: the source sentence as it stands.
+    - LESSER, same item: "where every answer that would tell the worlds apart breaks a kept task". The source has "breaks a task `K` in the second, and `K` is kept at every step in the second". Put "breaks a task in the second world, kept there at every step".
+
+12. MUST. Note: "And it has, as one general law, that what a going-on keeps can keep a difference from ever reaching it." The note then calls these "pieces of the gap the idea names".
+    - Source, read-revision-and-forming.md (LineOnAStock): `ways_alike` is a general law; "a running down of the level that crosses no need makes no difference to the way … This states the gap the idea names, as an absence of registering."
+    - Source, read-learning-codes-inquiry.md (Feedback): "This is the place in the group that states the gap, but statically" (`support_agrees`, `uncoupled_beyond_influence`, general laws).
+    - Source, read-revision-and-forming.md: `Runaway.policy_uses_after_failure`, "a difference coupled in by threshold registers only through a failure".
+    - Fault: the note never mentions these general laws, which two readers say state the gap the idea names. "One general law" reads as though it were the only one.
+    - In its place: add these in the body. In this sentence, put: "as a general law in the readings group, `alike_of_kept`: where every answer telling two worlds apart breaks a task kept in the second, keeping it keeps them sensed alike. `LineOnAStock.ways_alike` and `Feedback.support_agrees` state the gap as an absence of registering."
+
+13. MUST. Note, item 4: "`PoolFromCourse.Borne`: it enters the counts the selection already reads and leaves the lock with no reader of it."
+    - Source, read-readings-and-the-lock.md: "`Borne.shapers_left` (753), a built example: … the lock is left at the end of the third". It also says that, borne by the others, "a loss entering the share on the disfavoured side does not leave the lock". The general laws are `bear_shaped_shapers` and `borne_falls`.
+    - Fault: a built example told as general, and the opposite case dropped.
+    - In its place: "a loss borne by the shapers enters the counts the selection already reads (`bear_shaped_shapers`, `borne_falls`, general); in a built example (`shapers_left`) it leaves the lock with no reader of it. Borne by the others it does not leave the lock."
+
+14. MUST. Note: "a cycle of revising repeats without end exactly where its yield is at least a stated number; with the return cut no unending run exists (the third reader)."
+    - Source, read-revision-and-forming.md: "It holds of this one constructed process at every yield … These laws cover every run of this process. They are not laws of every model."
+    - Fault: the reader's caveat is dropped. Also `opens_without_correction` in the same bullet is "(l210, built)", and the note does not mark it.
+    - In its place: "in one constructed process (ContinuingRevision), every run repeats exactly where the yield is at least nine, and with the return cut no unending run exists. In a built example, forming a distinction can use up the last support for using it."
+
+15. MUST. Note: "any merge of a pair the old relation told apart loses a selection (`Revision.lost_choice`)".
+    - Source, read-revision-and-forming.md: "Premises: `old` reflexive, symmetric and transitive, with `new x y` and `¬ old x y`." The name given is `Learning.Training.lost_choice` (l56).
+    - Fault: the premise that the old relation is an equivalence is dropped.
+    - In its place: "where the old relation is an equivalence, any pair the new one joins and the old told apart gives a selection through the old that is not through the new (`Learning.Training.lost_choice`, Revision.lean l56)".
+
+16. MUST. Note: "a reading read off the old one through a map opens nothing".
+    - Source, read-revision-and-forming.md: `coarser_opens_nothing` has the premises `forget`, `∀ s, forget (reading x s) = reading x' s` and `∀ a, executable x' a → executable x a`. It reads: "a new reading that is read off the old one through a supplied map, gaining no executability, opens nothing."
+    - Fault: a premise is dropped.
+    - In its place: "a reading read off the old one through a supplied map, with nothing more executable, opens no correction (`coarser_opens_nothing`)".
+
+17. MUST. Note: 'The first reader qualifies it for the lock: that readers are not brought back "is a premise in the general laws … not derived".'
+    - Source, read-readings-and-the-lock.md: "in the general laws not being brought back is a premise (`NotReadmitted` in `closed_stays_closed`; `Accrues` in `stands_not_readmitted`; …), not derived."
+    - Fault: not word for word.
+    - In its place: 'that "in the general laws not being brought back is a premise … not derived".'
+
+18. MUST. Note, item 6: '"the course's own doing, but only within a supplied enumeration".'
+    - Source, read-learning-codes-inquiry.md: "The miss that moves the elimination is the course's own doing." Also: "But only candidates already in the supplied enumeration can be held."
+    - Fault: a quotation that is not in the source.
+    - In its place, unquoted: "the miss is the course's own doing, but only candidates already in the supplied enumeration can be held."
+
+19. MUST. Note: 'The third reader calls this "a fourth form, a failure read by a rule handed in".'
+    - Source, read-revision-and-forming.md: 'So it is a fourth form: "a failure read by a rule handed in".'
+    - Fault: the punctuation is changed and the words outside the reader's quotation marks are pulled in. "Fourth" counts against G1's three shapes, not the note's six.
+    - In its place: 'The third reader calls it, beside G1's three shapes, a fourth form: "a failure read by a rule handed in".'
+    - LESSER, same item: "The rule that proposes is handed in". The reader adds "a supplied policy (`selected`) and a supplied probe channel". `new_available_choice` is "a built family". Add both.
+
+20. MUST. Note: "Outside the package `ExpandingInquiry` proves there is no finite last level (the fourth)."
+    - Source, read-outside-the-package.md: "ExpandingInquiry states that there is no last level (`no_finite_certificate_of_unrestricted_separation`; header 'never an inferred last causal level')". That theorem says "no finite record certifies separation at all depths".
+    - Fault: the theorem is told as wider than it is.
+    - In its place: "ExpandingInquiry proves that no finite record certifies separation at every depth, and its header says finite expansion yields 'never an inferred last causal level' (the fourth)."
+
+21. MUST (LESSER if the paraphrase is taken as loose). Note: "and that one more favourable institutional law would not cross it."
+    - Source, read-outside-the-package.md: "specifying one more favourable institutional law cannot be taken as having crossed the wall".
+    - Fault: the note states a fact the study does not; the study only says such a law cannot be counted as having crossed.
+    - In its place: "and that specifying one more favourable institutional law 'cannot be taken as having crossed the wall'".
+
+22. LESSER. Note: "The second and third readers name `Contacts.answers_iff` as the exact condition for a revision rule to answer every failure".
+    - Source, read-revision-and-forming.md: "It is an instance of `Contacts.answers_iff` (not read)". Also: "It probably holds the general law of a rule answering failures."
+    - Fault: the third reader names it only as probable.
+    - In its place: "the second gives it as the exact condition; the third names it, unread, as probably holding the general law".
+
+23. LESSER. Note: "Stock is a precondition of learning and never what is learned … a program is kept across generations only while each teacher holds enough."
+    - Source, read-learning-codes-inquiry.md: "tied, but only as a precondition, not as content". Under `successor_keeps`: "kept only while each teacher has at least 7 units and each fresh formation is supplied 25".
+    - In its place: "In what was read, stock enters as a precondition, not as content … in ResponseLearning, a program is kept only while each teacher has at least seven units and each fresh formation is supplied twenty-five."
+
+24. LESSER. Note: "in each the teacher, the probes or the samples are handed in".
+    - Source: "In each the map, the teacher, the probes or the samples are handed in".
+    - In its place: restore "the map".
+
+25. LESSER. Note: "a form every holder holds stays under every rule; no reading recovers what a readout merged."
+    - Source, read-learning-codes-inquiry.md: `held_stays` is in SharedCodes: where every formation holds `x` at `m`, every order of hearings under every `adopt` keeps it. `no_reading_recovers` is about records ("No reading of later records recovers the earlier ones"). `Readout.no_restore` is "no inverse on what is merged".
+    - In its place: "in SharedCodes, a form every formation holds at a sense stays through every order of hearings under every rule (`held_stays`); no inverse restores what a readout merged (`Readout.no_restore`)".
+    - Same section, also LESSER: add the second reader's caveats, "In ResponseLearning both losing and repairing are built examples" and "'A reader removed is not brought back' was not found in this group".
+
+26. LESSER. Note: `merged_unrested` read as "no top level: learning at the next level up is again learning".
+    - Source: "…is again learning, and again incomplete."
+    - In its place: quote it whole.
+
+27. LESSER. Note: "in `Revision` and `ContinuingRevision` the reading changes by a move of the same process, at the same level".
+    - Source: the reader also names OpenedCorrection, and adds: "What is handed in is the process's law and a controller or policy at the same level. That is still 'handed in'".
+    - In its place: add the second sentence.
+
+28. LESSER. Note, on GoalRevision: "a rule that changes only if the old credit would not carry the demand from the fund".
+    - Source, read-outside-the-package.md: "…and the new one would."
+    - In its place: add "and the new one would".
+    - Also LESSER: "only one of its fifteen files imports the package". The source says "In the closure computed". Modules elsewhere were not followed. Add "in the import closure the reader computed".
+
+29. LESSER. Note: "the windows a schedule can keep are bounded together (`density`)".
+    - Source, read-readings-and-the-lock.md: `density` is about the windows `Within` which a schedule *reads* distinct conditions: "the windows' reciprocals sum to at most one".
+    - In its place: "the windows within which one schedule reads distinct conditions are bounded together".
+
+30. LESSER. Note: "`too_late_of_own`: read off the continuations of what is lost, the loss is read only after its point of no return."
+    - Source: the premises are that every kept level, and `l'`, admit every member of the group at every step.
+    - In its place: name the premises, or mark the sentence as the docstring's.
+
+31. LESSER. Note, "What it shows": "and the lock's law on a level, whose reading of the level is handed in".
+    - Source: this is TurningInTime's `locked_turns_in_time_on_window_iff` (read-revision-and-forming.md). The note's body never tells it, so a reader cannot trace it.
+    - In its place: name it, and tell it in the body.
+
+32. LESSER (omission). The fourth reader reports a construction on the study page (l.282-299): "every affordable policy that exactly maximizes this immediate objective eventually loses all operative support". It reads this as "a capacity to respond being lost by the activity's own operation", and its Lean file was not located. This bears on "a registering lost" and on the direction, and the note leaves it out.
+
+33. LESSER. Note: "Four AI readers (run as Claude Opus)".
+    - Source: only the second report names its model ("Claude Opus 5.5"). The others say "Claude".
+    - In its place: drop the model, or say it comes from the run record.
+
+**Checked and sound:**
+- `sensed_alike_iff` as told (premises kept).
+- The `keeps_iff_within` telling, which points to the report's premises.
+- `loses_of_unread` in outline.
+- The `ReadingsPersist` quotation "carried and filtered, never varied or learned".
+- The quotation from the HeldPossible account.
+- The frozen time 15:18, the cap of 45, and the counts of sixteen and seventeen modules.
+- The four first-section bullets on what is handed in, apart from items 9, 10 and 24 above.
+- The quotation "form and preserve the authority, evidence, transfers and commitments that change what local success selects".
+- The `observation_is_effect` and GoalFormationRevision tellings.
+- "Readable in time exactly where `T < N`".
+
+**Not checked:** 0.91 million tokens, 7 minutes and the 1.0 million ceiling (in no source but the frozen ceiling); the links and file names in "Where it is"; any Lean itself.
+
+**Tool calls:** 7.

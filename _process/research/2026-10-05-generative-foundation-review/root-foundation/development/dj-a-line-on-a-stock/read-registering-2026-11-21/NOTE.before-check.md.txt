@@ -1,0 +1,72 @@
+# What the Lean already states of how a going-on comes to register what it did not: a read of 21 November
+
+*AI-written (Claude Fable, board row DJ), 21 November 2026. A read: nothing was proposed by the readers, no Lean was written and nothing was built. Four AI readers (run as Claude Opus), one group of places each and each alone, capped at 45 tool calls (27, 22, 28 and 31 by their own counts), answered six questions fixed beforehand, from statements, docstrings and opening accounts; no proof was opened by three of them, and each report says what was read only by name. The writer read no Lean for this note. No person has read any of it. Negatives are "not found in what was read". Register, reading, loop are working words; the Lean's names are given.*
+
+## What was asked
+
+The direction page has carried since 16 November the item "How a loop comes to register what it did not register, other than by an update handed in." After Ren's word of 21 November that he is drawing the map and not saying it, and to keep advancing ([his words](../../../../../../../sources/15-codex-theory-conversations/2026-11-21-drawing-the-map-not-saying-it.md)), this read asked what the Lean already states of a registering coming to be, changing and being lost. Six questions, five guesses (G1 to G5) and what would count as the step being not needed or not possible were frozen at 15:18, before any reader ran ([the frozen file](FROZEN-THE-REGISTERING.md.txt)). The places: sixteen modules on readings and the lock; seventeen on learning, codes and inquiry; a dozen on revision and the forming of moves, routes and predictions; and fifteen files outside the package on correction, observation and goals.
+
+## How the frozen file's two ends came out
+
+- **"Already there"** (a general law in which a difference comes to be registered because of what it does to the going-on, with an exact condition or time): not found as worded by any of the four. The fourth reader: "No law was found in which a loss or fall itself triggers the registering." The second: "No statement was found in which running down, or a loss of what the going-on rests on, causes a new registering."
+- **"Not sayable as worded"** (the fifth guess of every place): each reader found the guess's shape in most of what it read, and each named places against it. So the read comes out between the two.
+
+## A reading itself changes only by something handed in
+
+By all four readers, each of its own group: wherever what is registered changes, a rule, an update, a schedule, a window, a teacher, a sample, a menu or a controller is handed in.
+
+- **Readings and the lock** (the first reader): the update and what is sensed (`RevisesBy`), the listed candidates, the schedule, the window on a level with what it sets, each kind's reading in the pool. `ReadingsPersist` says in its own words that readings are "carried and filtered, never varied or learned".
+- **Learning, codes and inquiry** (the second): exact conditions for what can be acquired are general laws (`Learnable.learnable_iff`, `LearnableRuns.learnable_iff_tracks`, `CodeAcquisition.acquired_exact`, `PartialReadout.exact_exists_iff`), and in each the teacher, the probes or the samples are handed in.
+- **Revision and forming** (the third): the reading changes by a move of one process, chosen by a supplied controller or fed by a supplied record.
+- **Outside the package** (the fourth): only one of its fifteen files imports the package; every file supplies its mechanism and its header says so. Exact conditions for acquiring a route, an observation, a decoder or a ground that was lacked are stated, "Each … a law of one supplied model, or a built example. None is a general law over models." When a thing is read "is always handed in: a schedule, a menu, a meter, responsiveness, authority".
+
+## Where something comes to be registered without the reading being handed a change
+
+Six shapes, each told with what its reader says is handed in:
+
+1. **By the going-on's own act** (`ReadingLoop.sensed_alike_iff`, a general law, the first reader): for every blanketed law, from starts with equal internal, sensory and active parts, the values sensed agree through a step exactly where, at each earlier step, the two worlds answer alike the act taken at the value sensed. So two worlds come to be told apart at the first step their answers to the formation's own act differ. Nothing is handed in beyond the law and the starts. A built explorer shows a cost: trying costs the floor once.
+2. **What is kept can keep it from ever being registered** (`ReadingLoop.alike_of_kept`, general, with `floor_forgoes` on two built worlds): where every answer that would tell the worlds apart breaks a kept task, keeping the task keeps them untold apart. The first reader: "This is the one statement found that ties what can come to be registered to what the formation keeps."
+3. **A loss that reaches a fixed reading through couplings** (`ReadOffInTime`: `FirstApart`, `admits_iff_gap_within_margin`, `readableInTime_iff`; general, on a group handed in): the loss travels through couplings and crosses a margin, and so reaches a selection whose reading did not change. Read off the continuations of what is lost, the loss is read only after its point of no return (`too_late_of_own`).
+4. **A loss borne by those who shape the rule** (`PoolFromCourse.Borne`): it enters the counts the selection already reads and leaves the lock with no reader of it. Who bears it and at what rate is handed in.
+5. **A failure of the going-on's own act, read by a rule** (`ContinuingRevision`, with `ReferencePlan.revise_registers_failure` as the general law, the third reader): the act fails at an address not registered; after revising, probing and installing, that address is registered. The rule that proposes is handed in, and a blind rule leaves some failure unregistered (`frozen_misses`). The second and third readers name `Contacts.answers_iff` as the exact condition for a revision rule to answer every failure; neither read that module. The third reader calls this "a fourth form, a failure read by a rule handed in".
+6. **A miss that moves the candidate held** (`Learning.index_missed`, the second reader): the held candidate changes because of a miss, "the course's own doing, but only within a supplied enumeration".
+
+One more, from this row's own record and not from these readers (the coordinating session's reminder): in the course of 19 November, found by program in a model that is not in the Lean, the level reached the rule through the need of the unit the rule counts, which left nothing; the rule then no longer favoured. It is a built course in which something the rule did not read came to make a difference to it, and by an ending.
+
+Outside the package the fourth reader found what is registered to be sometimes the effect of the thing itself: the access loss the agent's own practice causes (`GoalFormationRevision`), the outage pattern a shared dependency causes (`CommonCauseDiscovery.observation_is_effect`); and, built with the demand handed in, a rule that changes only if the old credit would not carry the demand from the fund (`GoalRevision`).
+
+The first reader's remark on its three shapes, which I take as the limit of this section: they "change what reaches a fixed reading, not the reading … Whether they meet 'other than by an update handed in' depends on whether the item asks for a change in what is registered or in what reaches it; this read does not decide that."
+
+## What reading costs, and what bounds it
+
+- **A reader that reads one condition a step cannot keep everything** (`ReadingSchedule`, general laws, the first reader): a schedule keeps a condition within a margin against every balanced flow's draws exactly where it reads that condition within every so many steps (`keeps_iff_within`, under the premises the report lists); the windows a schedule can keep are bounded together (`density`); and a stretch left unread lets a part's draw take enough that a formation admitted without the part is lost (`Balances.loses_of_unread`).
+- **Stock is a precondition of learning and never what is learned** (the second reader): it is drawn per sample, per slot and per training step; a program is kept across generations only while each teacher holds enough.
+- **Forming a distinction can use up the last support for using it** (`opens_without_correction`); a cycle of revising repeats without end exactly where its yield is at least a stated number; with the return cut no unending run exists (the third reader).
+
+## A registering lost
+
+Losing is general and exact, by the second and third readers: any merge of a pair the old relation told apart loses a selection (`Revision.lost_choice`); a reading read off the old one through a map opens nothing; a form every holder holds stays under every rule; no reading recovers what a readout merged. A merged distinction comes back only from a form kept outside or from a coining, which is a bare supplied step. In built cases closing is undone by rebuilding, given stock. The first reader qualifies it for the lock: that readers are not brought back "is a premise in the general laws … not derived".
+
+## No top
+
+`HeldPossible`'s tower of rules: every rule changes only as the one above it allows, and the scheme is fixed (the third reader). `Learning.merged_unrested` is read in its docstring as "no top level: learning at the next level up is again learning" (the second). Outside the package `ExpandingInquiry` proves there is no finite last level (the fourth). Against the fifth guess's "a slower reading one level up": in `Revision` and `ContinuingRevision` the reading changes by a move of the same process, at the same level; the enumeration in `Learning` is fixed once and reads nothing; a coining has no reading behind it.
+
+## The other study's wall
+
+The fourth reader read the section of October's study of the meta-attractor that names its wall: how ends "form and preserve the authority, evidence, transfers and commitments that change what local success selects", and that one more favourable institutional law would not cross it.
+
+## What it shows, set against the direction
+
+This is my reading, held loosely; no report states it.
+
+The item as the page words it was not found met: no law has a reading change itself with nothing handed in, and none has a fall in what a going-on rests on cause a new registering. What the Lean does have, drawn already and in several places, is how a difference comes to *reach* a going-on, with exact conditions: by its own act, by the failure of its own act read by a rule that is not blind, by a loss travelling through couplings before the point of no return, and within what a reader can read in time. And it has, as one general law, that what a going-on keeps can keep a difference from ever reaching it.
+
+Those are pieces of the gap the idea names, between what a going-on rests on and what makes a difference to it. They are stated on different carriers and no reader was asked whether they join. Two would have to be read against each other before anything is proposed: the exact condition for a rule to answer every failure of its own acts, and the lock's law on a level, whose reading of the level is handed in. Whether the first can stand where the second hands something in is not known, and is the next thing I would look at, on paper, with what would count against it written first.
+
+## What it cost
+
+Four AI readers, 0.91 million tokens and 7 minutes by the run's own count; the ceiling was 1.0 million with the checker.
+
+## Where it is
+
+Beside this note, as text: the frozen file with its hash, and the four reports (`read-readings-and-the-lock.md.txt`, `read-learning-codes-inquiry.md.txt`, `read-revision-and-forming.md.txt`, `read-outside-the-package.md.txt`).
