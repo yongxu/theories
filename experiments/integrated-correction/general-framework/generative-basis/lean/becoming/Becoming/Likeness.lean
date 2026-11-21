@@ -57,17 +57,21 @@ No premise is added; every declaration has an empty axiom report.
   claims are listed, some list holds the configurations of each frame, and whether a move takes
   one configuration to another and whether a configuration realizes a claim are decided
   (`FiniteDecided`), configurations passing the same branching tests are alike
-  (`alike_iff_sameBranchingTests`). Each step is built from the decisions: likeness to depth `k`
-  (`AlikeTo`) is decided (`AlikeTo.decided`); where it fails, a branching test holding at one
-  configuration and failing at the other is built (`apart_of_not_alikeTo`); likeness to depth
-  stops refining at a depth no greater than the number of pairs of configurations
-  (`AlikeTo.steady_within`, by `stops_decreasing`), and there it is a bisimulation
-  (`AlikeTo.bisimulation`). So likeness of finite decided frames is decided (`Alike.decided`), is
-  likeness to every depth (`alike_iff_alikeTo`) and is likeness to the depth of the number of
-  pairs (`alike_iff_alikeTo_pairs`). This answers, for
-  frames with finitely many configurations, the question `Becoming.Histories` left open: the
+  (`alike_iff_sameBranchingTests`). Under these hypotheses likeness to depth `k` (`AlikeTo`)
+  is decided (`AlikeTo.decided`), failure has a separating branching test (`apart_of_not_alikeTo`),
+  and likeness is decided (`Alike.decided`). This answers, for frames with finitely many
+  configurations, the question `Becoming.Histories` left open: the
   periphery's `ExplanatoryBranching.same_iff_bisimilar` reasons classically, for frames with
   finitely many outcomes of each move.
+* **Likeness at the number of pairs.** From agreement on claims, applying `alikeStep` k times
+  gives likeness to depth k (`iter_iff_alikeTo`). If a list covers every pair agreeing on claims,
+  likeness at its length persists one step (`alike_at_cover`) and is equivalent to likeness
+  (`alike_iff_at_cover`). Lists covering the two configuration spaces give the product of their
+  lengths as a depth of persistence (`alike_at_pairs`, `AlikeTo.steady_within`). Likeness to a
+  depth at which it persists is a bisimulation (`AlikeTo.bisimulation`). Likeness at the product
+  depth is equivalent to likeness (`alike_iff_alikeTo_pairs`). Where lists hold the configurations
+  of both frames, configurations are alike exactly when they are alike to every depth
+  (`alike_iff_alikeTo`).
 * **Within the classes** (Moore, 1956). Within one frame, likeness to depth is a chain of
   equivalences, each finer than the one before (`AlikeTo.refining`). Where a list of `N`
   configurations holds a finite decided frame, it stops refining at a depth `k` with `k + c ≤ N`,
@@ -1067,28 +1071,67 @@ theorem SameBranchingTests.alikeTo (moves : ∃ l : List A, ∀ a, a ∈ l)
     match apart_of_not_alikeTo moves claims finite finite' k fails with
     | ⟨φ, holds, fails'⟩ => fails' ((same φ).mp holds)
 
-/-- **Likeness to depth stops refining within the number of pairs**: where lists hold the
-configurations of each frame, at some depth no greater than the number of pairs of their members,
-configurations alike to it are alike to the next. -/
-theorem AlikeTo.steady_within (moves : ∃ l : List A, ∀ a, a ∈ l)
-    (claims : ∃ l : List C, ∀ c, c ∈ l) (finite : FiniteDecided F) (finite' : FiniteDecided G)
-    {l : List S} {l' : List S'} (all : ∀ s, s ∈ l) (all' : ∀ s', s' ∈ l') :
-    ∃ N, N ≤ l'.length * l.length ∧ ∀ s s', AlikeTo F G N s s' → AlikeTo F G (N + 1) s s' :=
-  match stops_decreasing (pairsOf l l') (fun k x => AlikeTo F G k x.1 x.2)
-      (fun _ _ alike => AlikeTo.of_succ alike)
-      (fun k x => AlikeTo.decided moves claims finite finite' k x.1 x.2) with
-  | ⟨N, within, steady⟩ =>
-    ⟨N, Eq.subst (motive := fun n => N ≤ n) (length_pairsOf l' l) within,
-     fun s s' => steady (s, s') (mem_pairsOf (all s) (all' s'))⟩
+section Matching
 
-/-- **Likeness to depth stops refining**: at some depth, configurations alike to it are alike to
-the next. -/
-theorem AlikeTo.steady (moves : ∃ l : List A, ∀ a, a ∈ l) (claims : ∃ l : List C, ∀ c, c ∈ l)
-    (finite : FiniteDecided F) (finite' : FiniteDecided G) :
+open Iteration
+
+/-- The pair agrees on claims and each step on either side has a same-move match
+whose pair of outcomes lies in the given class. -/
+def alikeStep (F : Frame S A C) (G : Frame S' A C) (X : S × S' → Prop) (p : S × S') : Prop :=
+  AlikeTo F G 0 p.1 p.2 ∧
+    (∀ a t, F.P.step p.1 a t → ∃ t', G.P.step p.2 a t' ∧ X (t, t')) ∧
+    (∀ a t', G.P.step p.2 a t' → ∃ t, F.P.step p.1 a t ∧ X (t, t'))
+
+/-- Enlarging the class of outcome pairs preserves each match in both directions. -/
+theorem alike_mono : MonotoneStep (alikeStep F G) :=
+  fun sub _ ⟨agree, forth, back⟩ => ⟨agree,
+    fun a t st => match forth a t st with | ⟨t', st', h⟩ => ⟨t', st', sub _ h⟩,
+    fun a t' st' => match back a t' st' with | ⟨t, st, h⟩ => ⟨t, st, sub _ h⟩⟩
+
+local notation "agree" => (fun p : S × S' => AlikeTo F G 0 (Prod.fst p) (Prod.snd p))
+
+/-- Applying `alikeStep` n times from agreement on claims gives likeness to depth n. -/
+theorem iter_iff_alikeTo : ∀ n (p : S × S'),
+    iter (alikeStep F G) agree n p ↔ AlikeTo F G n p.1 p.2 :=
+  iter_iff_stages (stage := fun n p => AlikeTo F G n p.1 p.2) alike_mono
+    (fun _ => Iff.rfl) (fun _ _ => Iff.rfl)
+
+variable {pairs : List (S × S')}
+
+/-- If a list holds every pair agreeing on claims, likeness to the depth of the list's length
+persists one step. -/
+theorem alike_at_cover (within : ∀ p, agree p → p ∈ pairs) (s : S) (s' : S') :
+    AlikeTo F G pairs.length s s' → AlikeTo F G (pairs.length + 1) s s' :=
+  fun h => (iter_iff_alikeTo _ (s, s')).mp (iter_persists alike_mono (fun _ m => m.1) within
+    ((iter_iff_alikeTo _ (s, s')).mpr h))
+
+variable {l : List S} {l' : List S'} (all : ∀ s, s ∈ l) (all' : ∀ s', s' ∈ l')
+local notation "N" => l'.length * l.length
+
+include all all' in
+/-- With both configuration spaces listed, likeness persists at the product of the lengths. -/
+theorem alike_at_pairs (s : S) (s' : S') : AlikeTo F G N s s' → AlikeTo F G (N + 1) s s' :=
+  length_pairsOf l' l ▸ alike_at_cover (F := F) (G := G)
+    (fun p _ => mem_pairsOf (all p.1) (all' p.2)) s s'
+
+end Matching
+
+/-- **Likeness to depth persists within the number of pairs.** If lists cover both configuration
+spaces, there is a depth at most the product of their lengths at which likeness persists one step.
+The product itself is such a depth (`alike_at_pairs`). -/
+theorem AlikeTo.steady_within {l : List S} {l' : List S'}
+    (all : ∀ s, s ∈ l) (all' : ∀ s', s' ∈ l') :
+    ∃ N, N ≤ l'.length * l.length ∧ ∀ s s', AlikeTo F G N s s' → AlikeTo F G (N + 1) s s' :=
+  ⟨_, Nat.le_refl _, alike_at_pairs all all'⟩
+
+/-- **Likeness to depth stops refining where lists hold the configurations of both frames**: at
+some depth, configurations alike to it are alike to the next. -/
+theorem AlikeTo.steady (listed : ∃ l : List S, ∀ s, s ∈ l)
+    (listed' : ∃ l' : List S', ∀ s', s' ∈ l') :
     ∃ N, ∀ s s', AlikeTo F G N s s' → AlikeTo F G (N + 1) s s' :=
-  match finite.listed, finite'.listed with
+  match listed, listed' with
   | ⟨_, all⟩, ⟨_, all'⟩ =>
-    match AlikeTo.steady_within moves claims finite finite' all all' with
+    match AlikeTo.steady_within (F := F) (G := G) all all' with
     | ⟨N, _, steady⟩ => ⟨N, steady⟩
 
 /-- Where likeness to depth `N` does not refine, it is a bisimulation. -/
@@ -1104,7 +1147,7 @@ theorem alike_iff_sameBranchingTests (moves : ∃ l : List A, ∀ a, a ∈ l)
     (claims : ∃ l : List C, ∀ c, c ∈ l) (finite : FiniteDecided F) (finite' : FiniteDecided G)
     {s : S} {s' : S'} : Alike F G s s' ↔ SameBranchingTests F G s s' :=
   ⟨Alike.sameBranchingTests, fun same =>
-    match AlikeTo.steady moves claims finite finite' with
+    match AlikeTo.steady (F := F) (G := G) finite.listed finite'.listed with
     | ⟨N, steady⟩ =>
       ⟨AlikeTo F G N, AlikeTo.bisimulation steady,
        same.alikeTo moves claims finite finite' N⟩⟩
@@ -1114,31 +1157,41 @@ at which likeness to depth stops refining. -/
 theorem Alike.decided (moves : ∃ l : List A, ∀ a, a ∈ l) (claims : ∃ l : List C, ∀ c, c ∈ l)
     (finite : FiniteDecided F) (finite' : FiniteDecided G) (s : S) (s' : S') :
     Decided (Alike F G s s') :=
-  match AlikeTo.steady moves claims finite finite' with
+  match AlikeTo.steady (F := F) (G := G) finite.listed finite'.listed with
   | ⟨N, steady⟩ => match AlikeTo.decided moves claims finite finite' N s s' with
     | .inl alike => .inl ⟨AlikeTo F G N, AlikeTo.bisimulation steady, alike⟩
     | .inr fails => .inr fun alike => fails (alike.alikeTo N)
 
-/-- **Where both frames are finite and decided, configurations are alike exactly where they are
-alike to every depth.** -/
-theorem alike_iff_alikeTo (moves : ∃ l : List A, ∀ a, a ∈ l)
-    (claims : ∃ l : List C, ∀ c, c ∈ l) (finite : FiniteDecided F) (finite' : FiniteDecided G)
-    {s : S} {s' : S'} : Alike F G s s' ↔ ∀ k, AlikeTo F G k s s' :=
+/-- **Where lists hold the configurations of both frames, configurations are alike exactly where
+they are alike to every depth.** -/
+theorem alike_iff_alikeTo (listed : ∃ l : List S, ∀ s, s ∈ l)
+    (listed' : ∃ l' : List S', ∀ s', s' ∈ l') {s : S} {s' : S'} :
+    Alike F G s s' ↔ ∀ k, AlikeTo F G k s s' :=
   ⟨fun alike k => alike.alikeTo k, fun alike =>
-    match AlikeTo.steady moves claims finite finite' with
+    match AlikeTo.steady (F := F) (G := G) listed listed' with
     | ⟨N, steady⟩ => ⟨AlikeTo F G N, AlikeTo.bisimulation steady, alike N⟩⟩
 
-/-- **Likeness is likeness to the depth of the number of pairs.** Where lists hold the
-configurations of each frame, configurations are alike exactly where they are alike to the depth
-given by the number of pairs of their members. -/
-theorem alike_iff_alikeTo_pairs (moves : ∃ l : List A, ∀ a, a ∈ l)
-    (claims : ∃ l : List C, ∀ c, c ∈ l) (finite : FiniteDecided F) (finite' : FiniteDecided G)
-    {l : List S} {l' : List S'} (all : ∀ s, s ∈ l) (all' : ∀ s', s' ∈ l') {s : S} {s' : S'} :
+section MatchingCriterion
+
+variable {pairs : List (S × S')}
+local notation "agree" => (fun p : S × S' => AlikeTo F G 0 (Prod.fst p) (Prod.snd p))
+
+/-- If a list holds every pair agreeing on claims, configurations are alike exactly when they are
+alike to the depth of the list's length. -/
+theorem alike_iff_at_cover (within : ∀ p, agree p → p ∈ pairs) {s : S} {s' : S'} :
+    Alike F G s s' ↔ AlikeTo F G pairs.length s s' :=
+  ⟨fun h => h.alikeTo _, fun h => ⟨_, AlikeTo.bisimulation (alike_at_cover within), h⟩⟩
+
+end MatchingCriterion
+
+/-- **Likeness is likeness at the number of pairs.** If lists cover both configuration spaces,
+two configurations are alike exactly when they are alike to the depth given by the product of the
+list lengths. -/
+theorem alike_iff_alikeTo_pairs {l : List S} {l' : List S'}
+    (all : ∀ s, s ∈ l) (all' : ∀ s', s' ∈ l') {s : S} {s' : S'} :
     Alike F G s s' ↔ AlikeTo F G (l'.length * l.length) s s' :=
-  ⟨fun alike => alike.alikeTo _, fun alike =>
-    match AlikeTo.steady_within moves claims finite finite' all all' with
-    | ⟨N, within, steady⟩ =>
-      ⟨AlikeTo F G N, AlikeTo.bisimulation steady, AlikeTo.down_to within alike⟩⟩
+  length_pairsOf l' l ▸ alike_iff_at_cover (F := F) (G := G) (s := s) (s' := s')
+    (fun p _ => mem_pairsOf (all p.1) (all' p.2))
 
 end BranchingTests
 

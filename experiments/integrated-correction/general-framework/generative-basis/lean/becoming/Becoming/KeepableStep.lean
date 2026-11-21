@@ -1,5 +1,6 @@
 import Becoming.JointKeeping
 import Becoming.Horizon
+import Becoming.Onward
 
 /-!
 # KeepableStep: one step of keeping along some course
@@ -14,6 +15,10 @@ being keepable.
   step leads to a configuration it is keepable from (`keepable_step_iff`), for every process and
   guard, with no further premise. Its proof reads a run from step 1 on (`Run.onward`,
   `Becoming.Recurrence`) and puts one step before a run (`Run.cons`, `Becoming.Horizon`).
+* **Keeping for the list length.** If a list holds every configuration, some run from s stays
+  within the guard exactly when s belongs to the predicate obtained by applying `keepStep` to the
+  guard as many times as the list is long (`keepable_iff_count`). The run comes from
+  `Onward.KeepsMoving.run`, which requires a list of every configuration.
 * **Whether a step can gain keepability.** Every step keeps not being keepable exactly when no
   step from outside the guard leads to a configuration the guard is keepable from
   (`not_keepable_invariant_iff`). Where every step keeps the guard's complement this holds
@@ -57,6 +62,31 @@ theorem keepable_step_iff {P : Process S A} {g : S → Prop} {s : S} :
     ⟨Run.cons s a r (Eq.subst (motive := fun x => P.step s a x) start.symm step), rfl, fun
       | 0 => here
       | n + 1 => held n⟩⟩
+
+section Keepable
+
+open Iteration Parting
+
+variable {P : Process S A} {g : S → Prop}
+
+/-- The guard holds and some move has an outcome in the given class. -/
+def keepStep (P : Process S A) (g X : S → Prop) (s : S) : Prop := g s ∧ courseStep P X s
+
+/-- Enlarging the class of possible outcomes preserves the guarded course step. -/
+theorem keep_mono : MonotoneStep (keepStep P g) :=
+  fun sub s h => ⟨h.1, course_mono P sub s h.2⟩
+
+/-- **If a list holds every configuration, the guard is keepable from s exactly when s belongs
+to the guard after `keepStep` has been applied as many times as the list is long.** -/
+theorem keepable_iff_count {all : List S} (every : ∀ x, x ∈ all) {s : S} :
+    Keepable P g s ↔ iter (keepStep P g) g all.length s :=
+  match iter_largest (keep_mono (P := P) (g := g)) (fun _ h => h.1) (fun x _ => every x) with
+  | ⟨inside, post, largest⟩ =>
+    ⟨largest (Keepable P g) (fun _ => Keepable.start) (fun _ => keepable_step_iff.mp) s,
+     fun h => match Onward.KeepsMoving.run (P := P) every (fun t ht => (post t ht).2) h with
+       | ⟨r, start, held⟩ => ⟨r, start, fun n => inside _ (held n)⟩⟩
+
+end Keepable
 
 /-! ## Whether a step can gain keepability -/
 

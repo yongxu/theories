@@ -1,5 +1,6 @@
 import Becoming.Recurrence
 import Becoming.Witnesses
+import Becoming.PredicateIteration
 
 /-!
 # Attraction: what is drawn in never comes back, and every law draws exactly what does not return
@@ -33,6 +34,13 @@ or a process of the spine. Merging, returning and reachability are Recurrence's
   (`Law.reachable_absorbing`), and every possibility lost by step `n` is drawn into it,
   entering at step `n` (`Law.lost_drawn`, `Law.drawn_of_lost`). What returns is an absorbing
   region too (`Law.returning_absorbing`).
+* **Being had after exactly n steps.** Starting from all configurations, applying
+  `Branching.predStep` n times gives exactly the endpoints of traces of length n in any process
+  (`Branching.iter_iff_reachable`). If a list covers every configuration, being had at its length
+  is equivalent to being had at every length (`Branching.reachable_iff_all`). For a determined
+  law on that list, a configuration returns exactly when it can be had at the list length
+  (`Law.returns_iff_reachable_count`), and is drawn exactly when it cannot
+  (`Law.drawn_iff_not_reachable_count`).
 * **A merge draws one of the two.** Of two configurations a law merges, not both return
   (`Law.Merges.not_both_return`), with no finiteness; so not both escape being drawn
   (`Law.merge_draws`), and a law that merges draws something, in double-negation form
@@ -99,6 +107,48 @@ namespace Becoming
 open Generative
 
 universe u v
+
+/-! ## Endpoints of traces of a given length -/
+
+namespace Branching
+
+open Iteration
+
+variable {S : Type u} {A : Type v} {P : Process S A}
+
+/-- A state has a predecessor in the given class by some move of the process. -/
+def predStep (P : Process S A) (X : S → Prop) (s : S) : Prop := ∃ t, Steps P t s ∧ X t
+
+/-- Enlarging the predecessor class preserves a witnessed step from it. -/
+theorem pred_mono : MonotoneStep (predStep P) :=
+  fun sub _ ⟨t, st, h⟩ => ⟨t, st, sub t h⟩
+
+/-- Applying `predStep` n times from all configurations gives exactly the endpoints of traces of
+length n, with freely chosen starts. -/
+theorem iter_iff_reachable : ∀ n s, iter (predStep P) (fun _ => True) n s ↔ Reachable P n s :=
+  iter_iff_stages pred_mono (fun s => ⟨fun _ => ⟨s, [], rfl, .nil s⟩, fun _ => trivial⟩)
+    (fun _ s => ⟨fun ⟨t, ⟨a, st⟩, x, as, len, path⟩ => ⟨x, as ++ [a],
+       (ListTests.length_append as [a]).trans (congrArg Nat.succ len),
+       trace_append_iff.mpr ⟨t, path, .cons st (.nil s)⟩⟩,
+     fun
+       | ⟨_, [], len, _⟩ => Nat.noConfusion len
+       | ⟨x, a :: as, len, path⟩ =>
+         have split := List.dropLast_concat_getLast (List.cons_ne_nil a as)
+         match trace_append_iff.mp (split.symm ▸ path : Trace P x (_ ++ [_]) s) with
+         | ⟨t, earlier, final⟩ => ⟨t, ⟨_, trace_singleton_iff.mp final⟩, x, _, Nat.succ.inj
+             ((ListTests.length_append _ [_]).symm.trans ((congrArg List.length split).trans len)),
+             earlier⟩⟩)
+
+variable {all : List S} (every : ∀ x, x ∈ all) {s : S}
+
+include every in
+/-- With all states listed, an endpoint is reachable at the list length exactly when
+it is reachable at every exact length. -/
+theorem reachable_iff_all : Reachable P all.length s ↔ ∀ n, Reachable P n s :=
+  ⟨fun h n => (iter_iff_reachable n s).mp ((iter_iff_all pred_mono (fun _ _ => trivial)
+      (fun x _ => every x)).mp ((iter_iff_reachable _ s).mpr h) n), fun h => h all.length⟩
+
+end Branching
 
 namespace Law
 
@@ -317,6 +367,25 @@ theorem drawn_iff_lost {next : S → S} {all : List S} (every : ∀ x, x ∈ all
     Drawn next s ↔ ¬ ∀ n, Reachable next n s :=
   ⟨fun drawn always => drawn.not_returns ((returns_iff_always_reachable every).mpr always),
     fun lost => drawn_iff_not_returns.mpr fun returns => lost returns.reachable⟩
+
+section ListedEndpoints
+
+variable {all : List S} (every : ∀ x, x ∈ all) {s : S} {next : S → S}
+
+include every in
+/-- With every state of a determined process listed, a state returns exactly when some trace of
+exactly the list length ends there. -/
+theorem returns_iff_reachable_count : Returns next s ↔ Reachable next all.length s :=
+  (returns_iff_always_reachable every).trans (Branching.reachable_iff_all every).symm
+
+include every in
+/-- With every state of a determined process listed, a state is drawn exactly when no trace of
+exactly the list length ends there. -/
+theorem drawn_iff_not_reachable_count : Drawn next s ↔ ¬ Reachable next all.length s :=
+  (drawn_iff_lost every).trans ⟨fun no h => no ((Branching.reachable_iff_all every).mp h),
+    fun no h => no (h all.length)⟩
+
+end ListedEndpoints
 
 /-- **Within finitely many configurations, every course enters what returns, before as many
 steps as there are configurations.** With `m` configurations listed, the course is at a returning

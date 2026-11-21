@@ -1,5 +1,6 @@
 import Becoming.GrammarReadings
 import Becoming.GrammarTesting
+import Becoming.PredicateIteration
 
 /-!
 # The corpus's candidate theorems of the grammar, tested (文法之候选定理，检验)
@@ -33,6 +34,10 @@ Four families of results carry most of the candidates.
 * **What no finite test separates (不可致詰).** The core is never separated at a finite stage
   (`«核则不可致诘»`); the converse fails in an infinitely branching net (`«致诘不尽»`) and holds
   where the relation of no separating stage is itself constant (`«不可致诘而有常则混而为一»`).
+  Applying `inquiryStep` n times from the pairs related by E gives the n-th stage of inquiry
+  (`iter_iff_inquiry`). If a list covers those pairs, passing inquiry at its length is equivalent
+  to passing every stage (`inquiry_iff_all`). If E is also symmetric, passing at that length is
+  equivalent to belonging to the core (`core_iff_inquiry`).
 
 Every declaration has an empty axiom report.
 -/
@@ -547,6 +552,50 @@ theorem «诘之对称» {R E : «际» α} (hE : «则» E («逆» E)) : ∀ k
     ⟨hE _ _ e,
      fun v' r' => match b v' r' with | ⟨v, r, s⟩ => ⟨v, r, «诘之对称» hE k v v' s⟩,
      fun v r => match f v r with | ⟨v', r', s⟩ => ⟨v', r', «诘之对称» hE k v v' s⟩⟩
+
+section ListedPairs
+
+open Iteration
+
+variable {S : Type u} {R E : «际» S}
+
+/-- The pair lies in E and each step on either side has a match whose pair of outcomes
+lies in the given class. -/
+def inquiryStep (R E : «际» S) (X : S × S → Prop) (p : S × S) : Prop :=
+  E p.1 p.2 ∧ (∀ v, R p.1 v → ∃ v', R p.2 v' ∧ X (v, v')) ∧
+    (∀ v', R p.2 v' → ∃ v, R p.1 v ∧ X (v, v'))
+
+/-- Enlarging the class of outcome pairs preserves both matches of the inquiry step. -/
+theorem inquiry_mono : MonotoneStep (inquiryStep R E) :=
+  fun sub _ ⟨e, forth, back⟩ => ⟨e,
+    fun v st => match forth v st with | ⟨v', st', h⟩ => ⟨v', st', sub _ h⟩,
+    fun v' st' => match back v' st' with | ⟨v, st, h⟩ => ⟨v, st, sub _ h⟩⟩
+
+/-- Applying `inquiryStep` n times from E gives exactly the pairs that pass stage n of inquiry. -/
+theorem iter_iff_inquiry : ∀ n (p : S × S),
+    iter (inquiryStep R E) (fun z => E z.1 z.2) n p ↔ «诘» R E n p.1 p.2 :=
+  iter_iff_stages (stage := fun n p => «诘» R E n p.1 p.2) inquiry_mono
+    (fun _ => Iff.rfl) (fun _ _ => Iff.rfl)
+
+variable {all : List (S × S)} (within : ∀ p : S × S, E p.1 p.2 → p ∈ all) {x y : S}
+
+include within in
+/-- If every E-related pair is listed, a pair passes inquiry at the list length exactly
+when it passes at every stage. -/
+theorem inquiry_iff_all : «诘» R E all.length x y ↔ ∀ k, «诘» R E k x y :=
+  ⟨fun h k => (iter_iff_inquiry k (x, y)).mp ((iter_iff_all inquiry_mono (fun _ m => m.1) within).mp
+      ((iter_iff_inquiry _ (x, y)).mpr h) k), fun h => h all.length⟩
+
+include within in
+/-- If E is symmetric and every E-related pair is listed, the core is inquiry at the list length. -/
+theorem core_iff_inquiry (sym : «则» E («逆» E)) : «核» R E x y ↔ «诘» R E all.length x y :=
+  let D := «诘» R E all.length
+  have levels (a b : S) (h : D a b) := (inquiry_iff_all within).mp h
+  ⟨fun h => «核则不可致诘» h _, fun h =>
+    ⟨D, fun a b ab => levels a b ab 0, «诘之对称» sym all.length,
+     («有常之逐点» R D).mpr (fun a b ab => (levels a b ab (all.length + 1)).2.1), h⟩⟩
+
+end ListedPairs
 
 /-- Each stage of inquiry lies within the one before. -/
 theorem «诘之降» {R E : «际» α} : ∀ k u u', «诘» R E (k + 1) u u' → «诘» R E k u u'
