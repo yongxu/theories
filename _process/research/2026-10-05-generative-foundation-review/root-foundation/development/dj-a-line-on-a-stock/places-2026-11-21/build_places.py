@@ -13,7 +13,7 @@ output adds up per place.
 
 Usage (from this folder): python3 -B build_places.py
 """
-import json, re
+import json, re, subprocess
 from collections import OrderedDict
 
 TABLE = '../two-ways-table-2026-11-20/two-ways-table.json'
@@ -46,6 +46,17 @@ def key(name):
     return tok if tok.startswith('conditional/') else tok.split('/')[-1]
 
 
+def lean_files():
+    """Tracked Lean files by base name, leaving out copies (anything under _process/, and folders of runs, checks, sources and verification)."""
+    root = subprocess.run(['git', 'rev-parse', '--show-toplevel'], capture_output=True, text=True).stdout.strip()
+    out = {}
+    for f in subprocess.run(['git', '-C', root, 'ls-files', '*.lean'], capture_output=True, text=True).stdout.split('\n'):
+        if not f or f.startswith('_process/') or any(x in f for x in ('/sources/', '-runs/', '-checks/', 'verification/')):
+            continue
+        out.setdefault(f.rsplit('/', 1)[-1][:-5], []).append(f)
+    return out
+
+
 def build():
     places = OrderedDict()
     table = json.load(open(TABLE))
@@ -62,6 +73,10 @@ def build():
                 p = places.setdefault(key(pl['place']), {'key': key(pl['place']), 'table': [], 'reads': []})
                 p['reads'].append({'read': tag, 'title': title, 'reader': reader, 'place': pl['place'], 'note': folder + 'NOTE.md',
                                    'report': folder + 'read-' + reader + '.md.txt', 'caution': CAUTION, 'fields': {f: pl.get(f, '') for f in fields}})
+    files = lean_files()
+    for p in places.values():
+        p['files'] = sorted(files.get(p['key'], []))
+        p['kind'] = 'one Lean file' if len(p['files']) == 1 else ('several Lean files of this name' if p['files'] else 'no Lean file of this name')
     return list(places.values())
 
 
@@ -73,15 +88,17 @@ if __name__ == '__main__':
     L = ['# Places: what one table and three reads say of each, in the readers\' words', '',
          '*Made by `build_places.py` beside it; never edited by hand. AI-written (Claude Fable for the script). Every field below is ' + CAUTION + '. It proves nothing, ranks nothing and holds no link. A place with no read under it was not in that read; that says nothing of the Lean. [The note](NOTE.md) says what this is and is not.*', '',
          'The table\'s letters (20 November, [its note](../two-ways-table-2026-11-20/NOTE.md)): **a** multiplies; **b** a level that can run down; **c** gives at a cost; **d** the source is said; **e** what comes back; **f** a rule set again from a share; **g** both outcomes, boundary exact; **h** no return, or a turn. Y yes, P in part, N no.', '',
-         '| place | in the table | read in |', '|---|---|---|']
+         'A place is keyed by a Lean file\'s base name. Where several tracked files carry that name, or none does (a namespace inside a file, a program, a scratch module, a folder, a page), the row says so, since two places can then share a row; the readers\' own names for the place are kept under it.', '',
+         '| place | file | in the table | read in |', '|---|---|---|---|']
     for p in sorted(places, key=lambda p: p['key'].lower()):
-        L.append('| %s | %s | %s |' % (p['key'], ' / '.join(t['letters'] for t in p['table']), ', '.join(sorted({r['read'] for r in p['reads']}))))
+        where = ('`%s`' % p['files'][0]) if len(p['files']) == 1 else (p['kind'] + (': ' + '; '.join('`%s`' % f for f in p['files']) if p['files'] else ''))
+        L.append('| %s | %s | %s | %s |' % (p['key'], where, ' / '.join(t['letters'] for t in p['table']), ', '.join(sorted({r['read'] for r in p['reads']}))))
     L += ['', 'The reads: ' + '; '.join('**%s** %s ([note](%sNOTE.md))' % (t, ti, fo) for t, ti, _, fo, _f in READS) + '.', '',
           '## Each place, in the readers\' words', '']
     for p in sorted(places, key=lambda p: p['key'].lower()):
         if not p['reads']:
             continue
-        L.append('### %s' % p['key'])
+        L.append('### %s (readers\' returns of %s; not checked)' % (p['key'], ', '.join(sorted({r['title'].split(',')[0] for r in p['reads']}))))
         for t in p['table']:
             L.append('- *table:* %s, letters `%s`, standing %s%s' % (t['row'], t['letters'], t['standing'], (', told in ' + t['told_in']) if t['told_in'] else ''))
         for r in p['reads']:

@@ -4,164 +4,166 @@
 
 The table's letters (20 November, [its note](../two-ways-table-2026-11-20/NOTE.md)): **a** multiplies; **b** a level that can run down; **c** gives at a cost; **d** the source is said; **e** what comes back; **f** a rule set again from a share; **g** both outcomes, boundary exact; **h** no return, or a turn. Y yes, P in part, N no.
 
-| place | in the table | read in |
-|---|---|---|
-| AcquiredCorrection |  | register |
-| ActiveReading |  | register |
-| Admission | NYPPPNYY |  |
-| AdmissionRevision | NYYYPPPP | kept |
-| AlignmentInquiry |  | register |
-| AlignmentSuccession | PYPPPPPY |  |
-| Arising |  | future |
-| Branching |  | future |
-| BranchingCorrespondence |  | future |
-| Capture | PYPPNNPP |  |
-| CarrierDiagnosis | PYYYYNPY | kept |
-| ChoiceCountCapture | YPNNNYYY |  |
-| Clearing | NYPYPNPP | kept |
-| ClosedCapture | YPNNNYYY | register |
-| CodeAcquisition |  | register |
-| COLLECTIVE-DESTRUCTIVE-ATTRACTORS |  | register |
-| CollectiveDestruction | NYPNYPPY |  |
-| CommonCauseDiscovery | NYPYPPPP | register |
-| CommonOrganization | NYPYPPPP |  |
-| CommonTaskRevision | NYPYPPPP |  |
-| conditional/renewal | PYPPYNYY | kept |
-| Continuation | PYPPYNPY | kept |
-| ContinuingRevision | NYYPYPPP | kept, register |
-| Copying | YYPYNNYY |  |
-| CorrectionCommitment | NPYYYNYN | kept |
-| CorrectionDependence | PYYYYNYP | kept |
-| CorrectionInquiry |  | register |
-| CorrectionReconfiguration |  | register |
-| CountedCodes |  | register |
-| CoupledDrawers | NYPPYPYP | kept |
-| Dependence | PYPPYNPY | future |
-| Dissipation | PYPYPNPP | kept |
-| DrawHistory | NYPPPPPY |  |
-| DrawnBeyond | PYPYYNYN |  |
-| DrawnReplacement | PPPNYYPY |  |
-| DrawnShaping | YNPNYYYY | register |
-| Enough |  | future |
-| Entropy | NYPYPNPY | future, kept |
-| EvaluatorGrounding |  | register |
-| EventualWidening |  | future |
-| Evolution | PYPNNNPP | future |
-| ExpandingInquiry | NYYYPPPP | register |
-| FallibleInquiry |  | register |
-| Feedback |  | register |
-| FiniteSupportObstruction | YYPPPPPY |  |
-| Flow | PYPYPNPP | future, kept |
-| FormativeCapacity |  | register |
-| FormedGrounds |  | register |
-| Founding | PYPPPNYY |  |
-| Gain |  | future, kept |
-| GoalFormationRevision |  | register |
-| GoalRevision |  | register |
-| GrammarReadings |  | register |
-| GroupEnding | PYPPPNYY |  |
-| GuardHorizon | NNNNYPPP | future |
-| Handoff |  | register |
-| HeldForReading |  | register |
-| HeldPossible |  | register |
-| HorizonWebs | NYPPPPPP |  |
-| Inquiry |  | register |
-| Interdependence | NYPPPNPP | kept |
-| JoiningCodes |  | register |
-| JointKeeping |  | future |
-| Keeping |  | future |
-| KeepingWidening |  | future |
-| Learnable |  | register |
-| LearnableRuns |  | register |
-| LearnedGrouping |  | register |
-| Learning |  | register |
-| LearningRuns |  | register |
-| LegacyReconciliation | PNNNNPPP |  |
-| LineageDrawdown | PYPPYNPY | kept |
-| LineageRegimes | PYPYPNPY | kept |
-| LineageRegions |  | future |
-| LineOnAStock | YYNPPNYY | future, register |
-| Lock |  | future |
-| MarketDiagnosis | PPPPYPPN |  |
-| MarketGenerativity | YYYYYYPP |  |
-| MarketInstances | YYPPYYYY |  |
-| MoveFormation |  | register |
-| MutualActivation | NYPPPNPP |  |
-| ObservationChange |  | register |
-| ObservationRepair |  | register |
-| Onward |  | future |
-| OpenedCorrection |  | register |
-| OpenFutureRevision |  | register |
-| Optimum | NYPPYPPY / PYPPYPYY |  |
-| OwnWidening |  | future |
-| PairFlow | YYPYYNPY | kept |
-| PairSelection | PYPYYNYP | kept |
-| PendingTaskApplicability | NYPYPPPP |  |
-| PoolFromCourse | YPPNYYPY | register |
-| PopulationCorrection | YYYYYYYY | kept |
-| PopulationRealization | PYPPPPPY |  |
-| Ranking | NYPPYNPP |  |
-| ReachableRanges |  | future |
-| ReaderRebuilding | PYPYYNPY | kept |
-| Reading |  | register |
-| ReadingLoop |  | register |
-| Readings |  | register |
-| ReadingSchedule |  | register |
-| ReadingsPersist | YYPPYPPP | register |
-| ReadingsSpread | YYPPYPPY | kept, register |
-| ReadInTime | YPPNYYYY | register |
-| ReadOffInTime | PYPPPPYY | future, register |
-| Readout |  | register |
-| ReadStages |  | register |
-| RecursiveSelection | PYPPYPPY |  |
-| ReflexivePrediction |  | register |
-| RegimeAttraction | YYPPYYPP |  |
-| RegimeBoundary | YYNPYYPY |  |
-| RegimeMargin | NYNPNNYY / NYPPPNYY | kept |
-| RegimeTransition | YYPPYYPY |  |
-| RelationalRenewal | PYPPYNPP | kept |
-| Renewable | NYPPPNPP |  |
-| RenewingFormation | PYPPYNYY | kept |
-| Reproduction | YYPYNNYY |  |
-| ReproductionNetwork | PYYYYPPP | kept |
-| ResponseCapacity | PYYYYPYY | kept |
-| ResponseLearning |  | register |
-| Retaining |  | future |
-| Revision |  | register |
-| RevisionPlans |  | register |
-| RevisionRoutes |  | register |
-| Roles | PYPYPNPP | future, kept |
-| RouteFormation |  | register |
-| RuleCapture | YNNNNYPY |  |
-| RuleRebuilding | YYPPPYYY | kept |
-| RuleShaping | YNPNYYYY |  |
-| SelectionLevels | PNPNYNYN |  |
-| Sensitivity |  | register |
-| SetPointOptimum | PYPYYNPY |  |
-| SharedCodes |  | register |
-| SharedStockInstances | PPNNNNYN |  |
-| Space |  | future |
-| Stock | NYPPPNYY |  |
-| TestingReorganization | NYPYPPPP | register |
-| The market program (experiments/market-generativity/model.py | YYYYYYPY |  |
-| The program of 17 November (d6_model.py) | YYYYYNPN |  |
-| The scratch Lean of 17 November (ScratchCovering, ScratchMix | YYPPYNYY |  |
-| The units of 19 November with a rule set again (lock_on_unit | YYNPPYPP |  |
-| TimedResponse |  | register |
-| TurningInTime | PYPPPYYY / PYPPPYYY | future, register |
-| Unread |  | register |
-| UnreadStandings |  | register |
-| VersionedTaskInstances | NYPPYPYY |  |
-| Viability | NPNNNNYY | future |
-| WayOfUnits | NYNPPNYY |  |
-| Weightings | PYPYNNPP / PYPPPNPP | future, kept |
-| WideningOnTheMap |  | future |
+A place is keyed by a Lean file's base name. Where several tracked files carry that name, or none does (a namespace inside a file, a program, a scratch module, a folder, a page), the row says so, since two places can then share a row; the readers' own names for the place are kept under it.
+
+| place | file | in the table | read in |
+|---|---|---|---|
+| AcquiredCorrection | `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/AcquiredCorrection.lean` |  | register |
+| ActiveReading | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ActiveReading.lean` |  | register |
+| Admission | several Lean files of this name: `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean`; `experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/constitution/admission/formal/Admission.lean` | NYPPPNYY |  |
+| AdmissionRevision | `experiments/market-generativity/meta-attractor/AdmissionRevision.lean` | NYYYPPPP | kept |
+| AlignmentInquiry | `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/AlignmentInquiry.lean` |  | register |
+| AlignmentSuccession | `experiments/market-generativity/meta-attractor/AlignmentSuccession.lean` | PYPPPPPY |  |
+| Arising | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Arising.lean` |  | future |
+| Branching | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Branching.lean` |  | future |
+| BranchingCorrespondence | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BranchingCorrespondence.lean` |  | future |
+| Capture | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Capture.lean` | PYPPNNPP |  |
+| CarrierDiagnosis | `experiments/market-generativity/meta-attractor/CarrierDiagnosis.lean` | PYYYYNPY | kept |
+| ChoiceCountCapture | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ChoiceCountCapture.lean` | YPNNNYYY |  |
+| Clearing | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Clearing.lean` | NYPYPNPP | kept |
+| ClosedCapture | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean` | YPNNNYYY | register |
+| CodeAcquisition | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CodeAcquisition.lean` |  | register |
+| COLLECTIVE-DESTRUCTIVE-ATTRACTORS | no Lean file of this name |  | register |
+| CollectiveDestruction | `experiments/market-generativity/meta-attractor/CollectiveDestruction.lean` | NYPNYPPY |  |
+| CommonCauseDiscovery | `experiments/market-generativity/meta-attractor/CommonCauseDiscovery.lean` | NYPYPPPP | register |
+| CommonOrganization | `experiments/market-generativity/meta-attractor/CommonOrganization.lean` | NYPYPPPP |  |
+| CommonTaskRevision | `experiments/market-generativity/meta-attractor/CommonTaskRevision.lean` | NYPYPPPP |  |
+| conditional/renewal | no Lean file of this name | PYPPYNYY | kept |
+| Continuation | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean` | PYPPYNPY | kept |
+| ContinuingRevision | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuingRevision.lean` | NYYPYPPP | kept, register |
+| Copying | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Copying.lean` | YYPYNNYY |  |
+| CorrectionCommitment | `experiments/market-generativity/meta-attractor/CorrectionCommitment.lean` | NPYYYNYN | kept |
+| CorrectionDependence | `experiments/market-generativity/meta-attractor/CorrectionDependence.lean` | PYYYYNYP | kept |
+| CorrectionInquiry | `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CorrectionInquiry.lean` |  | register |
+| CorrectionReconfiguration | `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CorrectionReconfiguration.lean` |  | register |
+| CountedCodes | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CountedCodes.lean` |  | register |
+| CoupledDrawers | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CoupledDrawers.lean` | NYPPYPYP | kept |
+| Dependence | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean` | PYPPYNPY | future |
+| Dissipation | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean` | PYPYPNPP | kept |
+| DrawHistory | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawHistory.lean` | NYPPPPPY |  |
+| DrawnBeyond | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnBeyond.lean` | PYPYYNYN |  |
+| DrawnReplacement | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnReplacement.lean` | PPPNYYPY |  |
+| DrawnShaping | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnShaping.lean` | YNPNYYYY | register |
+| Enough | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Enough.lean` |  | future |
+| Entropy | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Entropy.lean` | NYPYPNPY | future, kept |
+| EvaluatorGrounding | `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/EvaluatorGrounding.lean` |  | register |
+| EventualWidening | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EventualWidening.lean` |  | future |
+| Evolution | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Evolution.lean` | PYPNNNPP | future |
+| ExpandingInquiry | `experiments/market-generativity/meta-attractor/ExpandingInquiry.lean` | NYYYPPPP | register |
+| FallibleInquiry | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FallibleInquiry.lean` |  | register |
+| Feedback | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Feedback.lean` |  | register |
+| FiniteSupportObstruction | `experiments/market-generativity/formal/FiniteSupportObstruction.lean` | YYPPPPPY |  |
+| Flow | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean` | PYPYPNPP | future, kept |
+| FormativeCapacity | several Lean files of this name: `experiments/integrated-correction/general-framework/generative-basis/lean/history/universal-ethics/generative-capacity/checks/20261007T130945.936650Z/FormativeCapacity.lean`; `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/FormativeCapacity.lean`; `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/checks/20261007T130838.854157Z/FormativeCapacity.lean`; `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/checks/20261007T131010.300022Z/FormativeCapacity.lean` |  | register |
+| FormedGrounds | `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/FormedGrounds.lean` |  | register |
+| Founding | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Founding.lean` | PYPPPNYY |  |
+| Gain | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Gain.lean` |  | future, kept |
+| GoalFormationRevision | `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/GoalFormationRevision.lean` |  | register |
+| GoalRevision | `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/GoalRevision.lean` |  | register |
+| GrammarReadings | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean` |  | register |
+| GroupEnding | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GroupEnding.lean` | PYPPPNYY |  |
+| GuardHorizon | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean` | NNNNYPPP | future |
+| Handoff | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Handoff.lean` |  | register |
+| HeldForReading | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HeldForReading.lean` |  | register |
+| HeldPossible | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HeldPossible.lean` |  | register |
+| HorizonWebs | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HorizonWebs.lean` | NYPPPPPP |  |
+| Inquiry | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Inquiry.lean` |  | register |
+| Interdependence | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Interdependence.lean` | NYPPPNPP | kept |
+| JoiningCodes | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JoiningCodes.lean` |  | register |
+| JointKeeping | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JointKeeping.lean` |  | future |
+| Keeping | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Keeping.lean` |  | future |
+| KeepingWidening | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeepingWidening.lean` |  | future |
+| Learnable | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learnable.lean` |  | register |
+| LearnableRuns | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearnableRuns.lean` |  | register |
+| LearnedGrouping | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearnedGrouping.lean` |  | register |
+| Learning | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learning.lean` |  | register |
+| LearningRuns | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearningRuns.lean` |  | register |
+| LegacyReconciliation | `experiments/market-generativity/meta-attractor/LegacyReconciliation.lean` | PNNNNPPP |  |
+| LineageDrawdown | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageDrawdown.lean` | PYPPYNPY | kept |
+| LineageRegimes | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageRegimes.lean` | PYPYPNPY | kept |
+| LineageRegions | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageRegions.lean` |  | future |
+| LineOnAStock | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineOnAStock.lean` | YYNPPNYY | future, register |
+| Lock | no Lean file of this name |  | future |
+| MarketDiagnosis | `experiments/market-generativity/meta-attractor/MarketDiagnosis.lean` | PPPPYPPN |  |
+| MarketGenerativity | `experiments/market-generativity/formal/MarketGenerativity.lean` | YYYYYYPP |  |
+| MarketInstances | `experiments/market-generativity/formal/MarketInstances.lean` | YYPPYYYY |  |
+| MoveFormation | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MoveFormation.lean` |  | register |
+| MutualActivation | no Lean file of this name | NYPPPNPP |  |
+| ObservationChange | `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ObservationChange.lean` |  | register |
+| ObservationRepair | `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ObservationRepair.lean` |  | register |
+| Onward | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Onward.lean` |  | future |
+| OpenedCorrection | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OpenedCorrection.lean` |  | register |
+| OpenFutureRevision | `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/OpenFutureRevision.lean` |  | register |
+| Optimum | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean` | NYPPYPPY / PYPPYPYY |  |
+| OwnWidening | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OwnWidening.lean` |  | future |
+| PairFlow | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PairFlow.lean` | YYPYYNPY | kept |
+| PairSelection | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PairSelection.lean` | PYPYYNYP | kept |
+| PendingTaskApplicability | `experiments/market-generativity/meta-attractor/PendingTaskApplicability.lean` | NYPYPPPP |  |
+| PoolFromCourse | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolFromCourse.lean` | YPPNYYPY | register |
+| PopulationCorrection | `experiments/market-generativity/meta-attractor/PopulationCorrection.lean` | YYYYYYYY | kept |
+| PopulationRealization | `experiments/market-generativity/meta-attractor/PopulationRealization.lean` | PYPPPPPY |  |
+| Ranking | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Ranking.lean` | NYPPYNPP |  |
+| ReachableRanges | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReachableRanges.lean` |  | future |
+| ReaderRebuilding | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean` | PYPYYNPY | kept |
+| Reading | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reading.lean` |  | register |
+| ReadingLoop | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingLoop.lean` |  | register |
+| Readings | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Readings.lean` |  | register |
+| ReadingSchedule | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingSchedule.lean` |  | register |
+| ReadingsPersist | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsPersist.lean` | YYPPYPPP | register |
+| ReadingsSpread | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsSpread.lean` | YYPPYPPY | kept, register |
+| ReadInTime | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadInTime.lean` | YPPNYYYY | register |
+| ReadOffInTime | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadOffInTime.lean` | PYPPPPYY | future, register |
+| Readout | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Readout.lean` |  | register |
+| ReadStages | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean` |  | register |
+| RecursiveSelection | `experiments/market-generativity/meta-attractor/RecursiveSelection.lean` | PYPPYPPY |  |
+| ReflexivePrediction | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReflexivePrediction.lean` |  | register |
+| RegimeAttraction | `experiments/market-generativity/formal/RegimeAttraction.lean` | YYPPYYPP |  |
+| RegimeBoundary | `experiments/market-generativity/formal/RegimeBoundary.lean` | YYNPYYPY |  |
+| RegimeMargin | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean` | NYNPNNYY / NYPPPNYY | kept |
+| RegimeTransition | `experiments/market-generativity/formal/RegimeTransition.lean` | YYPPYYPY |  |
+| RelationalRenewal | `experiments/integrated-correction/general-framework/generative-basis/lean/deeper/RelationalRenewal.lean` | PYPPYNPP | kept |
+| Renewable | no Lean file of this name | NYPPPNPP |  |
+| RenewingFormation | `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RenewingFormation.lean` | PYPPYNYY | kept |
+| Reproduction | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reproduction.lean` | YYPYNNYY |  |
+| ReproductionNetwork | `experiments/market-generativity/meta-attractor/ReproductionNetwork.lean` | PYYYYPPP | kept |
+| ResponseCapacity | `experiments/market-generativity/meta-attractor/ResponseCapacity.lean` | PYYYYPYY | kept |
+| ResponseLearning | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ResponseLearning.lean` |  | register |
+| Retaining | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean` |  | future |
+| Revision | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Revision.lean` |  | register |
+| RevisionPlans | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionPlans.lean` |  | register |
+| RevisionRoutes | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean` |  | register |
+| Roles | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Roles.lean` | PYPYPNPP | future, kept |
+| RouteFormation | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RouteFormation.lean` |  | register |
+| RuleCapture | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleCapture.lean` | YNNNNYPY |  |
+| RuleRebuilding | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean` | YYPPPYYY | kept |
+| RuleShaping | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean` | YNPNYYYY |  |
+| SelectionLevels | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean` | PNPNYNYN |  |
+| Sensitivity | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean` |  | register |
+| SetPointOptimum | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SetPointOptimum.lean` | PYPYYNPY |  |
+| SharedCodes | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SharedCodes.lean` |  | register |
+| SharedStockInstances | `experiments/market-generativity/meta-attractor/SharedStockInstances.lean` | PPNNNNYN |  |
+| Space | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean` |  | future |
+| Stock | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Stock.lean` | NYPPPNYY |  |
+| TestingReorganization | `experiments/market-generativity/meta-attractor/TestingReorganization.lean` | NYPYPPPP | register |
+| The market program (experiments/market-generativity/model.py | no Lean file of this name | YYYYYYPY |  |
+| The program of 17 November (d6_model.py) | no Lean file of this name | YYYYYNPN |  |
+| The scratch Lean of 17 November (ScratchCovering, ScratchMix | no Lean file of this name | YYPPYNYY |  |
+| The units of 19 November with a rule set again (lock_on_unit | no Lean file of this name | YYNPPYPP |  |
+| TimedResponse | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TimedResponse.lean` |  | register |
+| TurningInTime | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean` | PYPPPYYY / PYPPPYYY | future, register |
+| Unread | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unread.lean` |  | register |
+| UnreadStandings | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/UnreadStandings.lean` |  | register |
+| VersionedTaskInstances | `experiments/market-generativity/meta-attractor/VersionedTaskInstances.lean` | NYPPYPYY |  |
+| Viability | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Viability.lean` | NPNNNNYY | future |
+| WayOfUnits | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean` | NYNPPNYY |  |
+| Weightings | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean` | PYPYNNPP / PYPPPNPP | future, kept |
+| WideningOnTheMap | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean` |  | future |
 
 The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-by-goings-on-2026-11-20/NOTE.md)); **future** 21 November, a future opening or closing ([note](../read-a-future-2026-11-21/NOTE.md)); **register** 21 November, how a registering comes to be ([note](../read-registering-2026-11-21/NOTE.md)).
 
 ## Each place, in the readers' words
 
-### AcquiredCorrection
+### AcquiredCorrection (readers' returns of 21 November; not checked)
 - *read of 21 November, how a registering comes to be, reader outside-the-package, as "GC/AcquiredCorrection.lean (+Cases)"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-outside-the-package.md.txt)):
   - what registers what: Frontier of (address, subtree) entries, read only when popped by scan (l.48). The Verdict and spent count reach the next step. dispatch (l.206-229) re-reads the path in the current tree.
   - what changes it: The model's own bounded search expands forks. Handed in: fuel, search order, tree, authority (EffectiveCommand.State).
@@ -170,7 +172,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: absent_current_route_rejects (l.272); current_revocation_rejects (l.264). Built: changed_route_rejects_stale_ticket (l.382). Undone, built: renewed_authority_and_new_observation_recover (l.386), with authority re-handed in.
   - tied to what it rests on: The reserve and deadline gate search and dispatch. No tie of what is found to support was found in what was read.
 
-### ActiveReading
+### ActiveReading (readers' returns of 21 November; not checked)
 - *read of 21 November, how a registering comes to be, reader readings-and-the-lock, as "ActiveReading.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-readings-and-the-lock.md.txt)):
   - what registers what: Two readings of courses: whole-run (Ranking.wholeRun) and every active event (active 79).
   - what changes it: Fixed; compared, not changed.
@@ -179,7 +181,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: wholeRun_withholds_consuming (48).
   - tied to what it rests on: overdraw_unranked (84), premises 0<needG, needF≤needG, needG≤start, overdraw from T0: neither course extends the other. A comparison of readings.
 
-### AdmissionRevision
+### AdmissionRevision (readers' returns of 20 November; not checked)
 - *table:* AdmissionRevision, letters `NYYYPPPP`, standing outside
 - *read of 20 November, things kept by goings-on, reader outside-the-package, as "AdmissionRevision (/Users/ren/theories/experiments/market-generativity/meta-attractor/AdmissionRevision.lean). Mechanism supplied: 'The read law, finite operation class, fallback and target floor remain supplied.' Imports ReproductionNetwork; nothing of the package."* (a reader's return, unchecked; what the note mended is in the note: [note](../read-kept-by-goings-on-2026-11-20/NOTE.md), [report](../read-kept-by-goings-on-2026-11-20/read-outside-the-package.md.txt)):
   - what is rested on, and whose doing: Inherited from ReproductionNetwork's four-role installation. Added: a criterion read from a trial, choose loss s (17-18), withholding when every stock is at least 2 + loss i and returning otherwise; it reads the stocks it governs and operates only while they are Established (process .operate 93-95).
@@ -189,7 +191,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - exact two-sided law: none
   - what is handed in: The read law and the fallback; the inherited supply. Ending only as a built course: misleading_reading_licenses_actual_loss (247), damaged_criterion_cannot_operate (258), equipment_survives_while_admission_fails (265).
 
-### AlignmentInquiry
+### AlignmentInquiry (readers' returns of 21 November; not checked)
 - *read of 21 November, how a registering comes to be, reader outside-the-package, as "GC/AlignmentInquiry.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-outside-the-package.md.txt)):
   - what registers what: Interface.probe, handed in (l.18).
   - what changes it: choose among supplied plans (l.33, 36).
@@ -198,7 +200,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: observational_obstruction (l.94): incompatible requirements cannot both be met by one answer.
   - tied to what it rests on: Not found in what was read.
 
-### Arising
+### Arising (readers' returns of 21 November; not checked)
 - *read of 21 November, a future opening or closing, reader arising-gain-descent, as "Arising.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-a-future-2026-11-21/NOTE.md), [report](../read-a-future-2026-11-21/read-arising-gain-descent.md.txt)):
   - what stands for what can go on after: Arising itself: Web.Arises (93), not active then active; Web.Unceasing (97), some formation arises at arbitrarily late steps. Stated of one web. The account (17-18) says: 'what does not cease is arising, not any particular form'. The header (10-13) says the second 生 ranges over what can form, which this module does not state. On the grammar, arising is 生 (arises_iff_sheng 725) and renewal is 复生 (renews_iff 748).
   - laws concluding an opening: No general law concludes Unceasing. Built examples: Oscillation.unceasing 565, Recycle.closed_unceasing 484, Tide.unrelated_depletion 261. Two exact restatements, each with no premise: unceasing_iff_late_beginnings (734), W.Unceasing ↔ ∀ N, ∃ y, N < y.1 ∧ W.active y.1 y.2 ∧ «生» Steps.along W.activityClass y; and renews_iff (748), «复生» … (t,f) ∧ W.active (t+1) f ↔ W.Arises t f ∧ W.active (t+2) f.
@@ -207,7 +209,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - from where an opening comes: Unceasing arising needs a member of the depleted family to rise at arbitrarily late steps, and with RenewedBy, renewing activity recurs. Recycle.closed_unceasing is a built example: a closed two-pool family, total held at one, sustains unceasing arising without dissipation. That is return, not novelty.
   - a way related to widening: Not found. The account (77-78) says more takers, diversity and complexity are not stated here.
 
-### Branching
+### Branching (readers' returns of 21 November; not checked)
 - *read of 21 November, a future opening or closing, reader what-can-form, as "Branching.lean (with Recurrence.lost_stays)"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-a-future-2026-11-21/NOTE.md), [report](../read-a-future-2026-11-21/read-what-can-form.md.txt)):
   - what stands for what can go on after: Reachable P n: configurations some course of n moves leads to, over a process; Ahead P s (152).
   - laws concluding an opening: None found; nothing grows. keeps_iff_fed 180: KeepsPossibilities P <-> forall s, exists x a, P.step x a s (kept, never more). keeps_of_returns 159.
@@ -216,7 +218,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - from where an opening comes: not applicable
   - a way related to widening: not found; Captured laws (rule region absorbing) not opened
 
-### BranchingCorrespondence
+### BranchingCorrespondence (readers' returns of 21 November; not checked)
 - *read of 21 November, a future opening or closing, reader what-can-form, as "BranchingCorrespondence.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-a-future-2026-11-21/NOTE.md), [report](../read-a-future-2026-11-21/read-what-can-form.md.txt)):
   - what stands for what can go on after: Nothing; it matches configurations of two frames by branching tests.
   - laws concluding an opening: none found in what was read
@@ -225,7 +227,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - from where an opening comes: not found
   - a way related to widening: not found
 
-### CarrierDiagnosis
+### CarrierDiagnosis (readers' returns of 20 November; not checked)
 - *table:* CarrierDiagnosis, letters `PYYYYNPY`, standing outside
 - *read of 20 November, things kept by goings-on, reader outside-the-package, as "CarrierDiagnosis (/Users/ren/theories/experiments/market-generativity/meta-attractor/CarrierDiagnosis.lean). Mechanism supplied: 'Material conversion, faithful sensing, route isolation and supply remain local laws.' One built model with fixed numbers; laws general over its states. Imports RecursiveSelection; nothing of the package."* (a reader's return, unchecked; what the note mended is in the note: [note](../read-kept-by-goings-on-2026-11-20/NOTE.md), [report](../read-kept-by-goings-on-2026-11-20/read-outside-the-package.md.txt)):
   - what is rested on, and whose doing: A condition rests on what the present carrier returns (emitted 38; outcome 48-53: condition := min 8 (condition − 1 + returned)); the carrier is replaced every cycle and emits only while the condition is at least 3.
@@ -235,7 +237,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - exact two-sided law: none in this file (the imported RecursiveSelection has exact_basin 149-150, seen at the statement line only).
   - what is handed in: One part and three feed arriving every cycle; the successor recipe. Endings: empty_feed_blocks (259), no_advance_funding (266), built seeds. Nothing multiplies or is selected.
 
-### Clearing
+### Clearing (readers' returns of 20 November; not checked)
 - *table:* Clearing, letters `NYPYPNPP`, standing core, told in chapter 7 section 2 (narrows, loses_beyond) and section 3.3 (centers_disagree); also named in chapter 2 Open and chapter 8 (empirical correspondence)
 - *read of 20 November, things kept by goings-on, reader passing-on, as "Clearing.lean (flow 69, web 88, dissipative 136, fed 160, undermines_within_renewal 172, fedBy_source 197, loses_beyond 271)"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-kept-by-goings-on-2026-11-20/NOTE.md), [report](../read-kept-by-goings-on-2026-11-20/read-passing-on.md.txt)):
   - what is rested on, and whose doing: The clearer requires its resource and the dweller its habitat, each at need one; the source requires nothing. The resource is given one unit a step by the source, so its being there is a going-on's doing. The habitat is given by no one; the fuels are levels standing from the start, one for each step.
@@ -245,7 +247,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - exact two-sided law: None of going on against ending.
   - what is handed in: Activity of clearer and source True by definition; the dweller's ending 'stipulated in the witness's activity'; a fuel level for every step. The dweller, who takes nothing, ends through the clearer's part (admitted_without 247, unsupported_with 257, loses_beyond 271): a built example of a loss on one that did not cause it and that returns to no one. Nothing multiplies or is selected.
 
-### ClosedCapture
+### ClosedCapture (readers' returns of 21 November; not checked)
 - *table:* ClosedCapture, letters `YPNNNYYY`, standing core, told in chapter 2 §9 and §10 (once in §11); named in chapter 1, 'Open'
 - *read of 21 November, how a registering comes to be, reader readings-and-the-lock, as "ClosedCapture.lean (lock_outlives_loss, turned_by_loss)"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-readings-and-the-lock.md.txt)):
   - what registers what: A pair: the share a and what lies beyond b (a loss); a rule read h handed in.
@@ -255,7 +257,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: unread_course (186), courses_alike_iff_unread (202). lock_outlives_loss (307): Raises, ReadsShare, upward favouring, Accrues, Locked at the start. At every t the loss is ≥ b+t, the course is locked, and share and rule are never below. 'A measure the loss refutes is kept, because nothing in the loop reads the refutation.'
   - tied to what it rests on: By its absence: what lies beyond is unread and accrues while the lock holds. 'What leaves is a change of the law (of read, mind or the selection), such as a level that reads beyond the share.'
 
-### CodeAcquisition
+### CodeAcquisition (readers' returns of 21 November; not checked)
 - *read of 21 November, how a registering comes to be, reader learning-codes-inquiry, as "CodeAcquisition.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-learning-codes-inquiry.md.txt)):
   - what registers what: A learner holds an optional code, a stock and records (l.162). observe shows three probes (l.100); acquire reads a code off them (l.103).
   - what changes it: train c (l.208). The code c is the move of trainProcess : Process Learner Code (l.345), handed in. 'The grammar, the probes, the training schedule and the draw of each operation are supplied, not derived.'
@@ -264,7 +266,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: primitives_no_exact (l.275), equal_primitives_unresolved (l.317), nonuniform_fails_transfer (l.332).
   - tied to what it rests on: Stock as a precondition only.
 
-### COLLECTIVE-DESTRUCTIVE-ATTRACTORS
+### COLLECTIVE-DESTRUCTIVE-ATTRACTORS (readers' returns of 21 November; not checked)
 - *read of 21 November, how a registering comes to be, reader outside-the-package, as "theories/meta-attractor/COLLECTIVE-DESTRUCTIVE-ATTRACTORS.md, the wall and the next section"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-outside-the-package.md.txt)):
   - what registers what: Prose. The wall (l.211): how ends 'form and preserve the authority, evidence, transfers and commitments that change what local success selects'.
   - what changes it: The page says that needs 'a specified governance/commitment mechanism or an actual setting with evidence'.
@@ -273,7 +275,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: Under every exactly-maximizing affordable policy, with response below demand, support is eventually lost. Supplied law; 'It does not derive c from the semantic distinctions'.
   - tied to what it rests on: Losses damaging 'the relations enabling later observation, learning, trust, coordination and repair' (l.229) are named as hypotheses.
 
-### CommonCauseDiscovery
+### CommonCauseDiscovery (readers' returns of 21 November; not checked)
 - *table:* CommonCauseDiscovery, letters `NYPYPPPP`, standing outside
 - *read of 21 November, how a registering comes to be, reader outside-the-package, as "MA/CommonCauseDiscovery.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-outside-the-package.md.txt)):
   - what registers what: rows; observed (l.39) records !(online s j) during a held pulse.
@@ -283,7 +285,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: change_invalidates_records (l.84), every s; no_gate_after_change (l.157). Built: local_probe_coverage_misses_upstream_failure (l.420); no_classifier_of_local_effects_can_identify_parent (l.426), any classifier.
   - tied to what it rests on: Built by name: discovered_coupling_changes_actual_response (l.324), unaccounted_majority_would_lose_support (l.332). No loss-triggered probing found.
 
-### conditional/renewal
+### conditional/renewal (readers' returns of 20 November; not checked)
 - *table:* conditional/renewal (RenewalCharacterization and the files beside it), letters `PYPPYNYY`, standing outside
 - *read of 20 November, things kept by goings-on, reader outside-the-package, as "conditional/renewal: RenewalBasics, RenewalAccounting, RenewalSufficiency, RenewalClosure, RenewalLink, RenewalCharacterization, RenewalConfigurations, RenewalPremises (/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/conditional/renewal/). Mechanism supplied: ChannelLaw (edge, span, demand, rate), RenewalAccounting 41-45; RenewalPremises 25-26 says deriving it 'is roadmap Phase 4'. Imports GenerativeCore, Depletion, SupportNecessity; nothing of the package."* (a reader's return, unchecked; what the note mended is in the note: [note](../read-kept-by-goings-on-2026-11-20/NOTE.md), [report](../read-kept-by-goings-on-2026-11-20/read-outside-the-package.md.txt)):
   - what is rested on, and whose doing: A formation of kind k rests on a supporter token still there after aging with law.edge to k, and on provision: c'.reserve + formation law births ≤ c.reserve + opened law.rate c.tokens (channelProcess, RenewalAccounting 141-145). Both are the being or doing of other tokens, which are formed, age and drop out (aged 50-53); no level with a handed-in giving function. Handed in: per kind, what a live token opens, how long it lasts, what forming demands, which kind supports which.
@@ -293,7 +295,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - exact two-sided law: renewal_closure_theorem (RenewalCharacterization 682-684): (law : ChannelLaw Kind) (U : List Kind) (complete : ∀ k, k ∈ U) : RenewsForever law ↔ ∃ B, SelfRenewing law B, where RenewsForever law := ∃ H : History law, ∀ n, Live (H.states n). renewal_keeping_theorem (703-705), same premises and K : Kind → Prop: KeepsForever law K ↔ ∃ B, SelfRenewing law B ∧ ∃ k, k ∈ B ∧ K k ∧ 0 < law.span k. Other end: no_self_renewing_population_deadline (741-745): U complete, ¬ ∃ B, SelfRenewing law B, any H: ∃ t ≤ H.settle + (openingPotential law (H.states (H.settle + renewalWindow law U)) + 2) * renewalWindow law U, ¬ Live (H.states t); explicit from the start with ∀ k, 1 ≤ law.demand k (853-859). Configuration level: renewable_iff_step (RenewalConfigurations 121-123), a recursion: Renewable law c ↔ Live c ∧ ∃ births c', step ∧ Renewable law c'. Premises shown needed by built examples: infinitely_many_kinds_break_the_equivalence, zero_demand_defeats_initial_deadline (RenewalPremises 139, 331).
   - what is handed in: Which kinds are formed each tick (births is the free action; the laws are existential over histories: 'They do not say a system reaches the steady configuration', RenewalSufficiency 24-25; 'Nothing here says which history occurs', RenewalCharacterization 48-49). The four fields of the law. The unlimited outside flow. The steady or seeded start: renewability_not_generated (RenewalConfigurations 129-130), 'Only something added from outside, held provision or formed tokens, can'. Ending and bearing: short_kinds_cannot_renew_forever (RenewalAccounting 260), acyclic_support_deadline (RenewalClosure 393), lapsing_correction_cannot_be_kept (982, built), keeping_and_losing_renewal (494, built); loss on one that did not cause it: not found in what was read. Nothing is selected ('Nothing here ranks histories', RenewalConfigurations 30-31).
 
-### Continuation
+### Continuation (readers' returns of 20 November; not checked)
 - *table:* Continuation (WithinJoint, joint_keeps, joint_excess_ends) with Exclusion, letters `PYPPYNPY`, standing core, told in chapter 5 §1 Joint consumption and joint excess (joint_excess_ends, full_taking_ends, continuing_excludes, outrun_below, outrun_ends, outrun_reading_alike, level_kept, supported_of_within, withinJoint_of_plan); chapter 2 §3.1 (stays_below, never_returns_below); named again in chapter 5 §7 and chapter 4 §4, §5 (family_excess_ends)
 - *read of 20 November, things kept by goings-on, reader source-said, as "Continuation.lean (read whole, 1-1135)"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-kept-by-goings-on-2026-11-20/NOTE.md), [report](../read-kept-by-goings-on-2026-11-20/read-source-said.md.txt)):
   - what is rested on, and whose doing: Three things. A family fed across its edge: Conveys (117: some formation present takes from c and gives to d), FedFromBeyond (122: some c outside, d inside, Conveys t c d), a formation's doing at one step. A condition whose givers depend on it, the gate, as a premise (gated, in stays_below 468 and joint_excess_ends 553). FedBy (1128), a definition only here: at a common step e' gives to a condition e requires. Built Coupled.flow (760): the patch is kept by a renewer that takes one from a neighbour (which nothing gives to) and gives one to the patch.
@@ -303,7 +305,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - exact two-sided law: inward_iff_not_fed (145), with [DecidableEq C]: L.Inward ds t <-> not L.FedFromBeyond ds t. It is of two readings of one step, not of going on against ending. At one step joint_keeps_at (241) and excess_lowers_at (267) have exactly complementary premises (taken <= given; given < taken) but are not stated as an iff and do not meet over runs.
   - what is handed in: That at each step what is given covers what is taken (WithinJoint); that someone gives net (netGive in restores); who the givers are and that they depend on what they give to (gated); activity in every witness.
 
-### ContinuingRevision
+### ContinuingRevision (readers' returns of 20 November, 21 November; not checked)
 - *table:* ContinuingRevision, letters `NYYPYPPP`, standing core, told in chapter 3 section 8 (03-KNOWING.md line 374, Learning and seeking)
 - *read of 20 November, things kept by goings-on, reader exact-and-pairs, as "ContinuingRevision.lean (read whole)"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-kept-by-goings-on-2026-11-20/NOTE.md), [report](../read-kept-by-goings-on-2026-11-20/read-exact-and-pairs.md.txt)):
   - what is rested on, and whose doing: The fuel is rested on (every act uses some: use 72, use_pos 456). It is there by the going-on's own activity: a success at the next address enables one renewal (execute 48-68; enabled_by_success 502, renew_needs_enabled 488) and renewal returns the yield to the fuel (line 66). The yield is a parameter; the controller and the productive law are 'supplied local laws'.
@@ -320,7 +322,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: retired_choice (l374, built family): the choice x n = true is lost at ready(n+1). 'Obsolete contact records are retired: no monotonic growth of all distinctions is assumed.' No statement found restores a retired contact.
   - tied to what it rests on: Yes, as cost and continuation: renewal of the registering depends on the fuel and the declared yield (no_run_without_return, repeats_iff; 'Cutting this return closes the next inquiry despite a successful preceding repair'). What triggers it is an act's failure, not the state of the stock.
 
-### CorrectionCommitment
+### CorrectionCommitment (readers' returns of 20 November; not checked)
 - *table:* CorrectionCommitment, letters `NPYYYNYN`, standing outside
 - *read of 20 November, things kept by goings-on, reader outside-the-package, as "CorrectionCommitment (/Users/ren/theories/experiments/market-generativity/meta-attractor/CorrectionCommitment.lean). Mechanism supplied: 'The contract is a supplied institution within the shared history, not a derived moral motivation.' Imports CorrectionDependence. Static."* (a reader's return, unchecked; what the note mended is in the note: [note](../read-kept-by-goings-on-2026-11-20/NOTE.md), [report](../read-kept-by-goings-on-2026-11-20/read-outside-the-package.md.txt)):
   - what is rested on, and whose doing: The provisioning plan's being best rests on a posted stake and an audit that tells plans apart (Separates 27-29); the stake rests on one wealth shared with the exit reserve and audit.
@@ -330,7 +332,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - exact two-sided law: Of what is selected, not of going on: every_best_passes_iff_separation (89-90): (∀ p, Best n g b f p → passes p = true) ↔ Separates n g b f.
   - what is handed in: The contract, audit outcomes, task-score units, custody.
 
-### CorrectionDependence
+### CorrectionDependence (readers' returns of 20 November; not checked)
 - *table:* CorrectionDependence, letters `PYYYYNYP`, standing outside
 - *read of 20 November, things kept by goings-on, reader outside-the-package, as "CorrectionDependence (/Users/ren/theories/experiments/market-generativity/meta-attractor/CorrectionDependence.lean). Mechanism supplied: 'Harm, physical laws, truthful reports and authority are supplied correspondences.' Imports Std only. Static: no course in time."* (a reader's return, unchecked; what the note mended is in the note: [note](../read-kept-by-goings-on-2026-11-20/NOTE.md), [report](../read-kept-by-goings-on-2026-11-20/read-outside-the-package.md.txt)):
   - what is rested on, and whose doing: Stopping without loss rests on a reserve covering the obligation (Funded 18, exitLoss 16). The reserve is there by a plan's provision (extend 32-33; Plan.provision 191): a doing with a cost, not a going-on over time.
@@ -340,7 +342,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - exact two-sided law: No law of going on against ending. Exact static laws: zero_loss_for_every_positive_harm_iff_funded (82-83): (∀ h, 0 < h → actualLoss s h h true true = 0) ↔ Funded s; extension_funded_iff_minimum_provision: Funded (extend s d f) ↔ neededProvision s d ≤ f; every_selection_within_iff_total_within (170); transfer_funded_exact (306; premises relief ≤ s.obligation, cost ≤ s.reserve).
   - what is handed in: Harm, reports, obedience bits, the score. Selection by a supplied score is stated: every_unrestricted_optimum_is_unfunded_and_harmful (231-234); among Admissible plans the provisioning one is best (268).
 
-### CorrectionInquiry
+### CorrectionInquiry (readers' returns of 21 November; not checked)
 - *read of 21 November, how a registering comes to be, reader outside-the-package, as "GC/CorrectionInquiry.lean (imports Becoming)"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-outside-the-package.md.txt)):
   - what registers what: cell admitted observe o (l.29); the docstring reads refinement as a case of the core's commonResponse_antitone.
   - what changes it: A refinement handed in (fine, forget).
@@ -349,7 +351,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: Not found.
   - tied to what it rests on: Not found in what was read.
 
-### CorrectionReconfiguration
+### CorrectionReconfiguration (readers' returns of 21 November; not checked)
 - *read of 21 November, how a registering comes to be, reader outside-the-package, as "GC/CorrectionReconfiguration.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-outside-the-package.md.txt)):
   - what registers what: Arrangement (roster, supplied fault formulas); Covered/ready (l.52, 84). Header: 'Formulas are supplied engineering upper bounds, not discovered causal laws.'
   - what changes it: reconfigure authorized cost depth candidate (l.166); the candidate is handed in.
@@ -358,7 +360,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: Built: stale_envelope_accepts_captured_support (l.282), old_approvals_fail_after_reform (l.307), omitted_shared_cause_still_breaks_model (l.319).
   - tied to what it rests on: Not found in what was read.
 
-### CountedCodes
+### CountedCodes (readers' returns of 21 November; not checked)
 - *read of 21 November, how a registering comes to be, reader learning-codes-inquiry, as "CountedCodes.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-learning-codes-inquiry.md.txt)):
   - what registers what: Counts per agent, meaning and word. UniqueGreatest (l.137) is the word registered as most likely.
   - what changes it: hear p rule (l.272), with the speaker map and rule handed in. addHeard (l.308), addSpeaker (l.325) and gatedHear (l.364, the gate handed in).
@@ -367,7 +369,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: added_tie (l.488), built: opposite counts become one model with no uniquely greatest word.
   - tied to what it rests on: Not found.
 
-### CoupledDrawers
+### CoupledDrawers (readers' returns of 20 November; not checked)
 - *table:* CoupledDrawers, letters `NYPPYPYP`, standing core, told in chapter 5 section 7 (05-COLLECTIVES.md line 209, 'Coupled for each step')
 - *read of 20 November, things kept by goings-on, reader exact-and-pairs, as "CoupledDrawers.lean (read 1-150, 300-440, 536-1054)"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-kept-by-goings-on-2026-11-20/NOTE.md), [report](../read-kept-by-goings-on-2026-11-20/read-exact-and-pairs.md.txt)):
   - what is rested on, and whose doing: Several drawers draw on one level; what stands next is G of what all leave, a function handed in (drawn 105, later 113; the gate premises 431-434). The need m is met where what all leave is at least m (stepCoupling 66). What leaves the need is the drawers' own rules, and the keeping is concluded of every best-response profile (Perfect 126), not supposed; the coupling c added to each drawer's worth for each step the need is met is handed in, with nothing that gives it.
@@ -377,7 +379,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - exact two-sided law: Four implications on one built renewal, not one iff; at c = m both are perfect. theorem gated_threshold {q : Nat} (two : 1 < k) (pos : 0 < m) : (c < m → ∀ rules, Perfect (gatedRenewal m q) (fun _ _ _ => 0) rules k c m N → ∀ t, t < N → AllFollow rules k (fun _ => 0) t) ∧ (c ≤ m → Perfect (gatedRenewal m q) (fun _ _ _ => 0) (fun _ _ _ => 0) k c m N) ∧ (m ≤ c → Perfect (gatedRenewal m q) (fun _ _ _ => 0) (fun _ _ a => keep m a) k c m N) ∧ (m < c → ∀ rules, Perfect (gatedRenewal m q) (fun _ _ _ => 0) rules k c m N → (∀ t, t < N → AllFollow rules k (keep m) t) ∧ ∀ s, m ≤ s → ∀ t, t < N → pass rules t 0 k (levels (gatedRenewal m q) rules k s t) = m) (774). The one iff is of the drain being a best response, at once: AtOnce.drain_perfect_iff 895 (pos : 0 < m).
   - what is handed in: The coupling c and its size against the need; the gate on G; no floor; the horizon. Q5: below the need every best-response profile drains (drains_below 367: two; pos; below : c < m; perfect; whatever G); under the drain a drawer after the first draws nothing (drawn_drained 307); one drawer keeps where several in turn drain (one_keeps_several_drain 692); two shores each below the need drain at every coupling (AtOnce.Shores.drain_perfect 1026). Loss on one that did not cause it: not found in what was read. Q6: not found; a rule is a best response, not a share.
 
-### Dependence
+### Dependence (readers' returns of 21 November; not checked)
 - *table:* Dependence with RenewalFlow (Web.RenewingIn, Web.ConsumingIn, SupportGatedWebs, SupportRecovery), letters `PYPPYNPY`, standing core, told in chapter 2 §3.1
 - *read of 21 November, a future opening or closing, reader arising-gain-descent, as "Dependence.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-a-future-2026-11-21/NOTE.md), [report](../read-a-future-2026-11-21/read-arising-gain-descent.md.txt)):
   - what stands for what can go on after: A formation still active after a loss. Single-step classes: Kept (139), Broken (143), with kept_or_broken (231) and kept_not_broken; RenewingAt (294), BreakingOn (300), UnderminingOn (318), with BreakingOn.undermining, RenewingAt.not_undermining and not_breaking. Whole-run: Consumed (152), Lost (157), a met dependence broken and never met again.
@@ -387,7 +389,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - from where an opening comes: none found in what was read
   - a way related to widening: Not found.
 
-### Dissipation
+### Dissipation (readers' returns of 20 November; not checked)
 - *table:* Dissipation with Continuation.fed_from_beyond, letters `PYPYPNPP`, standing core, told in chapter 2 §3.2; chapter 2 §4
 - *read of 20 November, things kept by goings-on, reader source-said, as "Dissipation.lean (read whole, 1-1392)"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-kept-by-goings-on-2026-11-20/NOTE.md), [report](../read-kept-by-goings-on-2026-11-20/read-source-said.md.txt)):
   - what is rested on, and whose doing: A finite family of conditions that formations take from (Flow.takers, Flow.lean 314; stock, Arising.lean 126); under balance a member rises only as a formation of the model gives to it (BalancesOn.rise_lowers 370), by a supplied give. In the built courses the giver is a source (Frontier.flow 890, Lone.flow 1154) and the fuels are there by definition of the web (Frontier.web 905), never given to.
@@ -397,7 +399,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - exact two-sided law: none (the file has no iff)
   - what is handed in: The per-step take, give and present of the flow; the source's giving and its activity (stipulated, requiring nothing); the supply of a fresh fuel at every step (levels by definition); Dissipative, enclosure (Around) and 'taking recurs' as premises.
 
-### DrawnShaping
+### DrawnShaping (readers' returns of 21 November; not checked)
 - *table:* DrawnShaping, letters `YNPNYYYY`, standing core, told in chapter 2 §9; chapter 7 §6
 - *read of 21 November, how a registering comes to be, reader readings-and-the-lock, as "DrawnShaping.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-readings-and-the-lock.md.txt)):
   - what registers what: The rule after shaping read by readers drawn from the selected: shapers read hi, others lo, each counted as the population counts them (drawn 146).
@@ -407,7 +409,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: drawn_locked_either (378), premise lo ≤ hi: every course is locked one way at every step, under every schedule.
   - tied to what it rests on: None found.
 
-### Enough
+### Enough (readers' returns of 21 November; not checked)
 - *read of 21 November, a future opening or closing, reader courses-still-open, as "Enough.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-a-future-2026-11-21/NOTE.md), [report](../read-a-future-2026-11-21/read-courses-still-open.md.txt)):
   - what stands for what can go on after: Whether some or every run from s comes to rest with its target met (Rests, 55).
   - laws concluding an opening: possibly_rests_iff (96), exact, no premise: some run rests with the target met ↔ ∃ u reachable that Stays and meets the target.
@@ -416,7 +418,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - from where an opening comes: Not applicable.
   - a way related to widening: Not found in what was read. This place is about coming to rest, not opening or closing.
 
-### Entropy
+### Entropy (readers' returns of 20 November, 21 November; not checked)
 - *table:* Entropy (Passing, Shuttle), letters `NYPYPNPY`, standing core, told in chapter 2 §4 Rest (history_mono, reverse_restores, dissipatesOn_iff_conserved, rests_of_arrow, World.forgets); Shuttle in chapter 4 §1; Entropy's Passing not found by name (the Passing.* names in chapter 4 §2 are PatternPassing's)
 - *read of 20 November, things kept by goings-on, reader source-said, as "Entropy.lean (read 1-897 and 1044-2247; 898-1043 at names only)"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-kept-by-goings-on-2026-11-20/NOTE.md), [report](../read-kept-by-goings-on-2026-11-20/read-source-said.md.txt)):
   - what is rested on, and whose doing: The file is of what a family keeps and loses, not of need (requires occurs only as False in built webs). Balances.exchanges_of_change (297; Balances, c in cs, c rises or falls at t; conclusion some exchange with the family at t). In built Passing (1712-1953) where the unit is at each step is the carrier's doing (flow 1740); the carrier stands at one throughout by definition and nothing depends on anything (web 1746).
@@ -433,7 +435,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - from where an opening comes: Under the first law, change without end is return; 'what rises with no premise is the history'. An arrow without end under exact conservation 'draws on what lies beyond the family'.
   - a way related to widening: Not found.
 
-### EvaluatorGrounding
+### EvaluatorGrounding (readers' returns of 21 November; not checked)
 - *read of 21 November, how a registering comes to be, reader outside-the-package, as "GC/EvaluatorGrounding.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-outside-the-package.md.txt)):
   - what registers what: Standpoint.sig over formed relations prof (l.53); S0, Tolerant, Monotone, Supervenes supplied.
   - what changes it: No course of change found; reach by tolerant chains (l.110).
@@ -442,7 +444,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: Built: closed_self_blocks_reach (l.245).
   - tied to what it rests on: Not found in what was read.
 
-### EventualWidening
+### EventualWidening (readers' returns of 21 November; not checked)
 - *read of 21 November, a future opening or closing, reader what-can-form, as "EventualWidening.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-a-future-2026-11-21/NOTE.md), [report](../read-a-future-2026-11-21/read-what-can-form.md.txt)):
   - what stands for what can go on after: EventuallyWidens 99 (tail comparison of two level paths); KeepsWidening R l T 292 (one course along a continuation R handed in: IncludesAcrossFrom and KeepsOpening).
   - laws concluding an opening: KeepsWidening.eventually_widens_of_within 372 (keeps: KeepsWidening itself l T; alike: AdmitsAlikeFrom l' T2; T<=S; within: l' at T2 admitted by l at S; conclusion EventuallyWidens l l'). KeepsOpening.eventually_widens 350 (inclusion handed in). WidensWithoutEnd.eventually 230. eventually_of_vanishing 266. KeepsWidening.gathers 323.
@@ -451,7 +453,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - from where an opening comes: Docstring: the gain or renewal keeping widening needs is not derived here.
   - a way related to widening: not found; AI readings (not adopted): ranking by keeping widening runs against widening (OwnCondition.not_monotone, not read).
 
-### Evolution
+### Evolution (readers' returns of 21 November; not checked)
 - *table:* Evolution, letters `PYPNNNPP`, standing core, told in chapter 4 section 2 (need drift and a goal along a lineage), section 3 (Descent)
 - *read of 21 November, a future opening or closing, reader arising-gain-descent, as "Evolution.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-a-future-2026-11-21/NOTE.md), [report](../read-a-future-2026-11-21/read-arising-gain-descent.md.txt)):
   - what stands for what can go on after: Descent: DescendsAt (154), g present, g gives to x, x comes to stand. A lineage is a sequence of descents (315). One flow.
@@ -461,7 +463,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - from where an opening comes: transmitted_within (301): Balances, Acting, Dependent, TransmitsWithin, DescendsAt (S+n) x g and requires; conclusion need + uptake since S ≤ level S + replenishment since S + δ ('Activity sets later selection').
   - a way related to widening: Selection through support (selected_le, selection_within) bounds descendants' needs. transmitted_within relates what is taken to what can later be transmitted, as a bound and not a widening. Fitness is not defined.
 
-### ExpandingInquiry
+### ExpandingInquiry (readers' returns of 21 November; not checked)
 - *table:* ExpandingInquiry, letters `NYYYPPPP`, standing outside
 - *read of 21 November, how a registering comes to be, reader outside-the-package, as "MA/ExpandingInquiry.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-outside-the-package.md.txt)):
   - what registers what: rows: outage patterns at depth reach of a supplied Tower (parent law handed in).
@@ -471,7 +473,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: extension_invalidates (l.110) and expansion_clears_certification (l.297), every s. no_finite_certificate_of_unrestricted_separation (l.438), any certifier; every_finite_record_has_hidden_extension (l.426).
   - tied to what it rests on: Inquiry is paid from and kept within plant support, and the gate sets the plant's response (actual_corrective_effect l.492, built). No law in which loss of support causes deeper inquiry was found in what was read.
 
-### FallibleInquiry
+### FallibleInquiry (readers' returns of 21 November; not checked)
 - *read of 21 November, how a registering comes to be, reader learning-codes-inquiry, as "FallibleInquiry.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-learning-codes-inquiry.md.txt)):
   - what registers what: A supplied reader of levels, with the couplings obs and the varying part supplied; 'complete reading interface ... supplied'.
   - what changes it: No change of the reader.
@@ -480,7 +482,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: omitted_exchange_no_reach (l.339), built.
   - tied to what it rests on: counted_residual_reaches (l.404), built: counting the residual as a relatum makes it reach the reader. This is a move of the model, handed in.
 
-### Feedback
+### Feedback (readers' returns of 21 November; not checked)
 - *read of 21 November, how a registering comes to be, reader learning-codes-inquiry, as "Feedback.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-learning-codes-inquiry.md.txt)):
   - what registers what: What reaches a formation's support: AffectedBy (l.171) and the influence closure (l.175), read as 'what a formation's own feedback can carry'.
   - what changes it: No change along a course; static closures of a fixed flow and web.
@@ -489,7 +491,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: Flow.Balances.uncoupled_beyond_influence (l.460), general law. Premises: balances; without : WithheldLevels part W l; beyond : ∀ h, part h = true → ¬WithinInfluence f h. Conclusion: ∀ t g within f's influence, Supported ↔ Admits (l t). Late.affected_without_effect (l.1439, built).
   - tied to what it rests on: This module states the gap statically. - support_agrees (l.295), general law. Premises: two balanced flows; webs agreeing on what g requires and needs; alike starts and alike exchanges on what g depends on. Conclusion: g supported alike at every step. - Clearing.uncoupled (l.1232, built): the clearer's support is the same while the dweller ends. 'What is not derived' (l.141): that a formation knows its reach closure. A change of what is registered: not found.
 
-### Flow
+### Flow (readers' returns of 20 November, 21 November; not checked)
 - *table:* Flow (More) with KeepingWidening, letters `PYPYPNPP`, standing core, told in chapter 2 §3.2; chapter 7 §2
 - *read of 20 November, things kept by goings-on, reader passing-on, as "Flow.lean with KeepingWidening.lean (renewers 318, More 323, More.replenishment_unbounded 748, Expansion 793, Steady 881, Cycle 983; KW: from_rest_or_open 310, whole_not_keepsWidening 339, PassesSupport 623, descends_or_begun 959, KindRelay 1996-2778)"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-kept-by-goings-on-2026-11-20/NOTE.md), [report](../read-kept-by-goings-on-2026-11-20/read-passing-on.md.txt)):
   - what is rested on, and whose doing: A family of conditions with levels that formations take from and give to. Under the premise Balances every rise is given by a formation taking part (Balances.rise_given 519; renewedBy 525 with acting). In KeepingWidening support itself is passed: PassesSupport (623), a supported g gives to a rising condition f requires and f gains support. Level and giving are handed in; balance is a premise.
@@ -506,7 +508,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - from where an opening comes: More.replenishment_unbounded (748), premises Balances W (∀ t c, level(t+1)+taken = level t+given), More cs, R, T₀; conclusion ¬∀t≥T₀, replenishment cs t ≤ R. The proof uses a least take of one. renewers_unbounded (763) adds Capacity cs g. uptake_needs_replenishment (589). Steady (912), a built example: uptake with nothing arising. Cycle, a built example: renewers are the takers, the total is constant and More holds in a closed one-condition family without dissipation. The account: carrying taking beyond every finite part needs dissipation.
   - a way related to widening: Not found.
 
-### FormativeCapacity
+### FormativeCapacity (readers' returns of 21 November; not checked)
 - *read of 21 November, how a registering comes to be, reader outside-the-package, as "GC/FormativeCapacity.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-outside-the-package.md.txt)):
   - what registers what: Input access, not distinctions: capture is enabled iff live tree ∧ feed cursor (l.142). Feed is supplied.
   - what changes it: The model's own build. build_reconstructs_next_interface (l.208): premises Step build, socketAddress = some a; conclusion socket at a+1, with 2 parts and 1 work consumed.
@@ -515,7 +517,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: close_has_no_socket (l.70); no_socket_no_capture (l.217); closed_step_spends (l.223): closed stays closed; closed_no_infinite (l.244). Laws of the model; not undone.
   - tied to what it rests on: Closing input access leaves a finite stock (l.244). Whether this is a registering is a reading.
 
-### FormedGrounds
+### FormedGrounds (readers' returns of 21 November; not checked)
 - *read of 21 November, how a registering comes to be, reader outside-the-package, as "GC/FormedGrounds.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-outside-the-package.md.txt)):
   - what registers what: examples (paired contacts), signal, judgment, review. interpret (l.39) uses rules learned over a supplied repertoire. Comment: 'No actual target, convention bit or reward is an input to interpretation.'
   - what changes it: Supplied event list (run l.85). calibrate appends a contact if enabled; review replaces judgment with the receipt (l.73-78).
@@ -524,7 +526,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: Built: same_formed_interpretation_can_be_false (l.224), new_record_without_review_does_not_correct (l.230), closed_review_cannot_claim_confirmation (l.252), later_change_retains_review_but_defeats_current_accuracy (l.271). reward_alone_cannot_repair_interpretation (l.260).
   - tied to what it rests on: Not found in what was read.
 
-### Gain
+### Gain (readers' returns of 20 November, 21 November; not checked)
 - *read of 20 November, things kept by goings-on, reader source-said, as "Gain.lean (read whole, 1-381)"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-kept-by-goings-on-2026-11-20/NOTE.md), [report](../read-kept-by-goings-on-2026-11-20/read-source-said.md.txt)):
   - what is rested on, and whose doing: A family's stock that formations require (RequiresWithin 179, FirstSupported 192); every rise of it is given: rise_netGiver (229; one premise, stock cs t < stock cs (t+1); conclusion some relatum of the flow with the rest counted is a NetGiver) and rise_given (262; same premise; the rest, or a formation of the flow). The rest is the added relatum of withImbalance (Imbalance.lean 55), defined from the levels as what the listed formations do not account for.
   - from where, at what cost: From beyond the family, across its boundary or from the rest: rise_from_rest_or_open (279; premises Gainless, Distinct cs, the rise; conclusion rest is NetGiver or not ClosedAt cs t); whole_rise_from_rest (290; every c in all, Distinct all, Gainless, the rise; conclusion the rest is NetGiver). No cost of giving is in a statement. Docstring 57-58, not derived: 'whether an actual part is open, which relatum the rest is in an actual unfolding, and whether its exchange is without end'.
@@ -540,7 +542,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - from where an opening comes: rise_netGiver (229), no premise: some relatum with the rest counted gives net. rise_given (262): the rest or a formation. rise_from_rest_or_open (279): Gainless, Distinct cs and a rise give the rest giving net ∨ ¬ClosedAt cs t. whole_rise_from_rest (290): every, distinct, gainless and a rise give the rest giving net. newly_supported_from_rest_or_open (351). new_beyond_every (341). These need the first law, not dissipation. No cost is stated. The account says it does not derive whether a part is open or what the rest is.
   - a way related to widening: Not found.
 
-### GoalFormationRevision
+### GoalFormationRevision (readers' returns of 21 November; not checked)
 - *read of 21 November, how a registering comes to be, reader outside-the-package, as "GC/GoalFormationRevision.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-outside-the-package.md.txt)):
   - what registers what: State.evidence/ground/goal/selector (l.224). experience (l.243) records the outcome, the feedback of the agent's own selector, and the signal encode(!access or !maintenance) of its practice. assess runs interpret (l.185) against the calibrated reference.
   - what changes it: Goal: learnedGoal from feedback. Ground: acquire = experience, experience, calibrate, assess (l.360), a supplied schedule. Goal revised by reviseGoal responsive when accessLoss ∧ ¬transitionLoss (l.194, 272). Selector changed by reform authorized (l.278), cost 2. Handed in: schedule, responsive, authorized, feedback law, encode convention, conditions.
@@ -549,7 +551,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: Built: missing_reference_prevents_assessment (l.444), false_reference_can_hide_real_loss (l.447), erased_formation_evidence_blocks_deliberation (l.452), wrong_formation_model_prevents_needed_reform (l.456), stale_grounds_can_leave_new_loss_unaddressed (l.460). Undone, built: corrected_reference_restores_revision (l.468), with the reference re-handed in.
   - tied to what it rests on: Yes, built. The reformed selector is what feeds the goal; without it the revised practice exhausts the reserve (l.409, 435; cycle docstring l.289 'Support is transferred from an actual finite reserve').
 
-### GoalRevision
+### GoalRevision (readers' returns of 21 November; not checked)
 - *read of 21 November, how a registering comes to be, reader outside-the-package, as "GC/GoalRevision.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-outside-the-package.md.txt)):
   - what registers what: acquired packets via read mode = metered mode archive (l.282). The Meter is handed in as an event parameter. learned (l.196); judgment (l.213) requires adopts and matching context.
   - what changes it: Supplied events probe/read/learn/assess/enact/quote/reform demand/shift context (l.266-301). shift clears acquired.
@@ -558,7 +560,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: Built: changed_context_invalidates_use (l.396), misleading_acquisition_can_misguide (l.411), missing_is_not_a_zero_consequence (l.391), acquired_selection_evidence_matters (l.437).
   - tied to what it rests on: reform (l.251-264) installs the new rule only if repeatBudget with the old credit fails and with the new one succeeds over the demand. This is a forecast of the fund running out gating a rule change. Built; the demand is handed in (joined_history_completes l.373).
 
-### GrammarReadings
+### GrammarReadings (readers' returns of 21 November; not checked)
 - *read of 21 November, how a registering comes to be, reader revision-and-forming, as "GrammarReadings.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-revision-and-forming.md.txt)):
   - what registers what: Relations: «化» R E F x y := «续» R E x y ∧ ¬F x y (l50), continuing under E while F tells the two apart; «成坏» (l59).
   - what changes it: The classes E and F are fixed arguments; no change found.
@@ -567,7 +569,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: None found; «因灭而续» (l172) not read past its signature.
   - tied to what it rests on: None found.
 
-### GuardHorizon
+### GuardHorizon (readers' returns of 21 November; not checked)
 - *table:* GuardHorizon with Keeping, letters `NNNNYPPP`, standing core, told in chapter 3 §9 (keptFor_iff_plan, plans_iff_choice, uniform_policy_iff_fiber_feasible) and §12 (uniform_policy_iff_common, ungiven_reading_not_uniform); chapter 5 §11 (Plan.zip_keeps, compatible_of_zip_keeps); chapter 8 §7 and §8
 - *read of 21 November, a future opening or closing, reader courses-still-open, as "GuardHorizon.lean: Viable, dViable_iff, UniformPolicy, Closed, kernel_viable"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-a-future-2026-11-21/NOTE.md), [report](../read-a-future-2026-11-21/read-courses-still-open.md.txt)):
   - what stands for what can go on after: Viable P guard n s (71): the guard can be kept n steps by enabled moves. Closed K (108): within the guard, with an enabled move staying in K.
@@ -577,7 +579,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - from where an opening comes: Not applicable.
   - a way related to widening: A choice keeps the guard; nothing relates a choice to widening. - shielded_choice (97). Premises: 0<lift and best by AcceptScore among admissible moves. Conclusion: it accepts and keeps the guard n steps. - recomputed_composition (193) and recomputed_kept (297), with Bellman values. - uniform_policy_iff_fiber_feasible (341), with ChoiceOver.
 
-### Handoff
+### Handoff (readers' returns of 21 November; not checked)
 - *read of 21 November, how a registering comes to be, reader revision-and-forming, as "Handoff.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-revision-and-forming.md.txt)):
   - what registers what: A remaining-step certificate rank per rule; the rules are revised by the supplied restartChoice (l233).
   - what changes it: revisingRun (l239), by the supplied restartChoice.
@@ -586,7 +588,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: revised_rules_can_fail_forever (l263, built); revision_resets_remaining (l273): each revision resets the count from 1 to 2.
   - tied to what it rests on: None found.
 
-### HeldForReading
+### HeldForReading (readers' returns of 21 November; not checked)
 - *read of 21 November, how a registering comes to be, reader readings-and-the-lock, as "HeldForReading.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-readings-and-the-lock.md.txt)):
   - what registers what: A model of candidates with supplied weights; the reading is a rule on candidates (byRule 471, byReading 476). Values, weights and rules supplied.
   - what changes it: In the SignLoop built example on ReadingLoop.Loop: a held act is answered by the reading of the true sign (answer 1270); kept candidates narrow.
@@ -595,7 +597,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: Not stated.
   - tied to what it rests on: None found.
 
-### HeldPossible
+### HeldPossible (readers' returns of 21 November; not checked)
 - *read of 21 November, how a registering comes to be, reader revision-and-forming, as "HeldPossible.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-revision-and-forming.md.txt)):
   - what registers what: No reading as such: the possible relative to a held part Same. In adaptive F G, the rule is changed by G s.2 s.1, with G : R → Z → R handed in.
   - what changes it: adaptive_keeps_rule_iff (l454): t.2 = s.2 ↔ G s.2 s.1 = s.2. RuleTower.process (l543): rule k changes as rule k+1 allows (up), the state by base. 'The scheme (base, up) is fixed.'
@@ -604,7 +606,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: From the account: Run.possibleHeld_of_stays. A top held fixed for good stops growth relative to it.
   - tied to what it rests on: None found. 'A change with no fixed scheme, and a space of rules not given with the carrier, are not stated.'
 
-### Inquiry
+### Inquiry (readers' returns of 21 November; not checked)
 - *read of 21 November, how a registering comes to be, reader learning-codes-inquiry, as "Inquiry.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-learning-codes-inquiry.md.txt)):
   - what registers what: A supplied belief B and observation sense. Scope (l.34) is what actual executions reach.
   - what changes it: Belief narrowing is handed in as B'. Scope.antitone (l.61), premise narrower : ∀ s, B' s → B s.
@@ -613,7 +615,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: Not found.
   - tied to what it rests on: Scope.secures (l.41) concerns the goal, not what the inquirer rests on. Not found.
 
-### Interdependence
+### Interdependence (readers' returns of 20 November; not checked)
 - *table:* Interdependence, letters `NYPPPNPP`, standing core, told in chapter 2 §6 Closures within the map (beyond_gives_nothing, consumption_ends_with_feeders, unfed consumption); chapter 7 §4.3 (WithinFeeding); chapter 8 §7 (beyond_gives_nothing)
 - *read of 20 November, things kept by goings-on, reader passing-on, as "Interdependence.lean (FedFrom 115, WithinFeeding 125, fedClosed_within 147, beyond_gives_nothing 152, unfed_consumption_ends 189, consumption_ends_with_feeders 235, Overshoot 270-464, Clearing 466-526)"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-kept-by-goings-on-2026-11-20/NOTE.md), [report](../read-kept-by-goings-on-2026-11-20/read-passing-on.md.txt)):
   - what is rested on, and whose doing: A formation requires a condition (a level in the web, handed in as a function of the step) and its continuation is fed by another formation that takes part and gives to that condition (Flow.FedBy, Continuation 1128; FedFrom 115; closure WithinFeeding 125). The giving is L.give, a field handed in; that a rise is some formation's giving needs the premise Balances.
@@ -623,7 +625,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - exact two-sided law: None of going on against ending. The file's iffs: Web.retains_bounded_iff_includes (255), premise covers : forall t f, W.Admits (l' t) t f -> region p f or W.Admits (l t) t f; W.Retains (bounded region) p l l' <-> W.Includes l l' (two comparisons of level paths). Clearing.dependenceRegion_iff (492): exact in one built case.
   - what is handed in: The web's level, activity and requirements at every step; the flow's give and take; in the ending law, that everything feeding g is unsupported (a premise, not g's doing). Ending law in full: Balances.consumption_ends_with_feeders (235), premises balances, acting, dependent, requires : forall t, T<=t -> active t g -> requires t g c, unsupported : forall t f, T<=t -> FedBy (g,t) (f,t) -> not Supported t f, consumes : forall t, T<=t -> active t g -> g in present t and 0 < take t g c; conclusion forall n, (forall k<n, active (T+k) g) -> n <= level T c. Loss on a non-causer only built (Clearing's dweller; Overshoot.ends_through_feeder 378). Nothing multiplies; selection only in the docstring's AI reading.
 
-### JoiningCodes
+### JoiningCodes (readers' returns of 21 November; not checked)
 - *read of 21 November, how a registering comes to be, reader learning-codes-inquiry, as "JoiningCodes.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-learning-codes-inquiry.md.txt)):
   - what registers what: A supplied Presentation codes fragments by their possible contexts or branching tests.
   - what changes it: Static: no change along a course.
@@ -632,7 +634,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: codes_apart_of_possible (l.52), the contrapositive of a merge.
   - tied to what it rests on: Not found.
 
-### JointKeeping
+### JointKeeping (readers' returns of 21 November; not checked)
 - *read of 21 November, a future opening or closing, reader courses-still-open, as "JointKeeping.lean: Keepable and its laws"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-a-future-2026-11-21/NOTE.md), [report](../read-a-future-2026-11-21/read-courses-still-open.md.txt)):
   - what stands for what can go on after: Keepable P g s := ∃ r, r.state 0 = s ∧ ∀ n, g (r.state n) (91): some run from s stays within the guard.
   - laws concluding an opening: Keepable.mono (99), across guards. Keepable is got from a family that keeps moving within finitely many configurations (docstring, via Onward). Nothing found along a course.
@@ -641,7 +643,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - from where an opening comes: Not applicable.
   - a way related to widening: Not found in what was read.
 
-### Keeping
+### Keeping (readers' returns of 21 November; not checked)
 - *read of 21 November, a future opening or closing, reader courses-still-open, as "Keeping.lean: KeptFor, Plan"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-a-future-2026-11-21/NOTE.md), [report](../read-a-future-2026-11-21/read-courses-still-open.md.txt)):
   - what stands for what can go on after: KeptFor P sense guard allowed n B (90): a class kept n steps through usable moves, narrowed by what each step keeps (Seen).
   - laws concluding an opening: - keptFor_of_closed (311): a family within the guard, closed under a usable move whatever is kept, keeps each class at every horizon. - Certificate.keptFor (322) and Kernel.keptFor (333), each needing a move usable throughout. - KeptFor.finer (288): a finer map of the steps keeps what a coarser one keeps.
@@ -650,7 +652,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - from where an opening comes: Not applicable.
   - a way related to widening: What a step registers decides how long a class is kept: keeping_matters (a built example) and KeptFor.finer (general). This concerns keeping, not widening.
 
-### KeepingWidening
+### KeepingWidening (readers' returns of 21 November; not checked)
 - *read of 21 November, a future opening or closing, reader what-can-form, as "KeepingWidening.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-a-future-2026-11-21/NOTE.md), [report](../read-a-future-2026-11-21/read-what-can-form.md.txt)):
   - what stands for what can go on after: KeepsWidening of one course along a continuation; lines of the admitted pattern (不穷, 全生成). Docstring: 'Each law is a property of one course or one flow. None compares two courses.'
   - laws concluding an opening: generation_of_brief 707 (brief: no formation supported K+1 steps running; start supported; endless line along passing of support handed in; conclusion 全生成). generation_of_includes_brief 720 (nothing lost along passings from T handed in). endless_of_successor 806 (within: L finer than activity; next: every supported y has a successor; start; conclusion 不穷). generation_of_one_step_supports 818. Exact: includesAcrossFrom_iff_endless 585: IncludesAcrossFrom R l T <-> forall S f, T<=S -> Admits (l S) S f -> 不穷 (continuationStep R) (W.admitting l).activityClass (S,f). Built examples KindRelay.keeps_widening 2486, Ladder.
@@ -659,7 +661,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - from where an opening comes: passes_every_bound 287 and rises_late 299 (keeps by name, RequiresWithin cs). from_rest_or_open 310 (plus Gainless, Distinct cs): net giver from the rest or family not closed, at arbitrarily late steps. open_late 320 (plus BalancesOn cs from T0): not closed at arbitrarily late steps. Under upkeep: more 365, replenishment_unbounded 376, renewers_unbounded 387 (TakesWhileSupported, BalancesOn, Capacity). Premises shown needed by witnesses named in the docstring (Loosening, OpeningChain, ClosedCycle, Source; not opened).
   - a way related to widening: Relates readings of continuation (by name, along passings, within kind) to whether keeping widening can hold; not a way of selecting.
 
-### Learnable
+### Learnable (readers' returns of 21 November; not checked)
 - *read of 21 November, how a registering comes to be, reader learning-codes-inquiry, as "Learnable.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-learning-codes-inquiry.md.txt)):
   - what registers what: A fixed map reg : S → R, a feature val and an extrapolation pred on the prefix of course next reg s (l.74-83), all handed in.
   - what changes it: The map does not change. Only the proposals move.
@@ -668,7 +670,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: still_not_predicts_on_both (l.156). Premises: still, still', alike : reg s = reg s', differ : val s ≠ val s'.
   - tied to what it rests on: Not found.
 
-### LearnableRuns
+### LearnableRuns (readers' returns of 21 November; not checked)
 - *read of 21 November, how a registering comes to be, reader learning-codes-inquiry, as "LearnableRuns.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-learning-codes-inquiry.md.txt)):
   - what registers what: The same as Learnable, on runs of Law.process next through reg (l.64-73). guess (l.212) is fixed by the record (guess_fixedThrough, l.222).
   - what changes it: No change of the map.
@@ -677,7 +679,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: not_identifies (l.337), built example: the runs from 0 and from 1 share a record.
   - tied to what it rests on: Not found.
 
-### LearnedGrouping
+### LearnedGrouping (readers' returns of 21 November; not checked)
 - *read of 21 November, how a registering comes to be, reader learning-codes-inquiry, as "LearnedGrouping.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-learning-codes-inquiry.md.txt)):
   - what registers what: State = apparatus plus log (l.66). The grouping is bond s.log, the majority of transitions logged. parse = readAll decodeChunk (chunks (bond s.log) raw) then assemble (l.153).
   - what changes it: The log changes by receive (l.159): draw one unit, append the slot; without stock nothing changes. Handed in: the slots (context, additional, reordered are fixed lists, l.213-281), the majority threshold, the decoder. broadenAfterFailure (l.176) = if parse fails then expose more, 'A supplied policy'.
@@ -686,7 +688,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: Built examples: order_not_frequency (l.423), repetition_joins_words (l.321), gap_breaks_edge (l.275).
   - tied to what it rests on: Only stock as a precondition (still_without_support). Running down causing a registering: not found.
 
-### Learning
+### Learning (readers' returns of 21 November; not checked)
 - *read of 21 November, how a registering comes to be, reader learning-codes-inquiry, as "Learning.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-learning-codes-inquiry.md.txt)):
   - what registers what: A course read only through its prefix (prefixOf, l.150). The extrapolation pred is a function handed in (l.203). Under elimination, what reaches the next step is the index of the current candidate (indexOn, l.351) over a supplied enumeration H. Training selects through the data (Training.Through/AgreeOn, l.931-947). A selection through a map r goes through its lumping (selects_through_lumping, l.993).
   - what changes it: The index moves exactly where the current candidate misses: index_missed (l.364), premise refuted : MissesAt (byElimination H) o t; index_kept (l.368). The cause is the miss. The enumeration H (lassos, l.674) and the map are handed in and never change.
@@ -695,7 +697,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: selects_not_right_of_parted (l.1013), general law. Premises: equivariant, tie : r j = r k, holds : p j, fails : ¬p k. Conclusion: no selection through r is exactly p; 'that takes a finer map'. every_determines_nothing (l.913). Where a finer map comes from: not found.
   - tied to what it rests on: Not found. 'What is not derived' (l.124) names which candidates, classes or lumpings an actual formation can reach.
 
-### LearningRuns
+### LearningRuns (readers' returns of 21 November; not checked)
 - *read of 21 November, how a registering comes to be, reader learning-codes-inquiry, as "LearningRuns.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-learning-codes-inquiry.md.txt)):
   - what registers what: The prefix of a run of any process through reg (Parting.course). The extrapolation is through the prefix (byElimination_through_prefix, l.200).
   - what changes it: The map does not change. Elimination as in Learning.
@@ -704,7 +706,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: free_prefix_fixes_nothing (l.264). Premises: late : t ≤ x, two : y ≠ z. merged_unrested (l.321).
   - tied to what it rests on: Not found.
 
-### LineageDrawdown
+### LineageDrawdown (readers' returns of 20 November; not checked)
 - *table:* LineageDrawdown (Drain), letters `PYPPYNPY`, standing core, told in chapter 4 §4 (Reproduction); named again under chapter 4 Open
 - *read of 20 November, things kept by goings-on, reader passing-on, as "LineageDrawdown.lean (below_iff 74, degeneration_of_unmet 94, ends_of_drawdown 177, Drain 219-675)"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-kept-by-goings-on-2026-11-20/NOTE.md), [report](../read-kept-by-goings-on-2026-11-20/read-passing-on.md.txt)):
   - what is rested on, and whose doing: Organisms require a pool at need one; a renewer formation gives the pool three units a step while active (giveOf 252), with the gate requiring the pool, without it requiring nothing. So the pool is given by a going-on in the model. The course (pool levels, who stands, offspring lists) is supplied; 'the offspring numbers are supplied, not derived from the draws'.
@@ -714,7 +716,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - exact two-sided law: The ledger, of a stock being below a need at one step, not of going on against ending: below_iff (74), premise balances : L.Balances W: W.stock ds (T+n) < m <-> W.stock ds T + total (steps T n) (L.replenishment ds) < m + total (steps T n) (L.uptake ds). The ending follows from it one way.
   - what is handed in: The whole course: phase table, offspring lists, members; the renewer's three units; the gate as a Boolean. The draws passing stock and renewal end the organisms' line with the gate or without (gated_ends 613, outside_ends 624). The general gate law is Continuation's family_excess_ends (573), whose conclusion covers every formation depending on the family, whoever drew. Selection in one built course: concordance two at step zero between a larger and a smaller draw (selection_P 527), not between givers to the pool and others; no growth.
 
-### LineageRegimes
+### LineageRegimes (readers' returns of 20 November; not checked)
 - *table:* LineageRegimes (Handover, MultiplyingTakers), letters `PYPYPNPY`, standing core, told in chapter 4 §4 (Reproduction); named again under chapter 4 Open
 - *read of 20 November, things kept by goings-on, reader passing-on, as "LineageRegimes.lean (Handover 632-1067: flow 683, relay_generates 871, runDown_degenerates 995, both_fates 1047; stock_forces_neither 1086; FromOutside 1104; MultiplyingTakers 385)"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-kept-by-goings-on-2026-11-20/NOTE.md), [report](../read-kept-by-goings-on-2026-11-20/read-passing-on.md.txt)):
   - what is rested on, and whose doing: Handover: the relatum whose turn it is holds the step's amount, takes all of it from itself and gives the next step's amount to the other; each requires its own standing at need one (flow 683, web 689), and that standing was given by the other (descends 771). How much is given is amount : Nat -> Nat, handed in (relay s constant, runDown s = s - t). MultiplyingTakers: a pool given nothing. FromOutside: a renewer giving from no listed condition.
@@ -724,7 +726,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - exact two-sided law: None in this file. stock_forces_neither (1086), premise 0 < s: not every GatedPairCourse at stock s degenerates and not every one generates ('a restatement of the pair'). No statement found saying for which amount a handover generates. Outside the file, an exact law of ending on a census: LineageRegions.generation_degenerates_iff (673), premises KidsContinue and ContinuationsListed: every member of generation t degenerates <-> some generation from t on is empty.
   - what is handed in: The amount function; the census G (offspring lists), that each listed offspring does descend at every step, and that every member has one; kinds (oneKind). Endings are three regimes with the stock 'only as the horizon': degeneration_of_family_excess (173: balances, dependent, excess for n steps, stock ds T < n + m, active, x.1 <= T+n, depends), dissipation_degenerates_every_member (237), multiplying_takers_stop (345: balances, unfed, first, multiplies, distinct, needs, level + 1 < 2^n). Who stops is 'Not shown' in general; in built MultiplyingTakers the four last-born, who took nothing, are unsupported. Multiplying is a premise; relay and run-down stand side by side with no selection.
 
-### LineageRegions
+### LineageRegions (readers' returns of 21 November; not checked)
 - *read of 21 November, a future opening or closing, reader arising-gain-descent, as "LineageRegions.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-a-future-2026-11-21/NOTE.md), [report](../read-a-future-2026-11-21/read-arising-gain-descent.md.txt)):
   - what stands for what can go on after: Grammar regions at an occurrence on the lineage continuation, over a census G handed in: «延» going on, «尽»/«退化» ending on every branch. «生成» (GrammarMap 274): along some branch the pattern goes on, with a carrying renewal «传» (kind continues while a carrier begins) ahead of every point. 'Regions are properties of points.'
   - laws concluding an opening: generation_of_reproducing (405), premises: Acting; Descended L W G; WithinKind G Q; EmbodiedOffspring; ∀s q, t ≤ s → q ∈ family s → ∃k ∈ kids s q; p ∈ family t. Conclusion «生成» (lineStep L W Q) (kindClass Q) carrierClass (t,p). generation_of_positive_term (461): the same, plus ByNumber, Exact transmission from t on and 0 < concordAt t; some member of generation t generates. not_all_degenerate_of_nonempty (709): KidsContinue and every generation from t nonempty give ¬∀ p ∈ family t, «退化».
@@ -733,7 +735,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - from where an opening comes: Under balance and dissipation, with the census, the lineage degenerates (degeneration_of_dissipation). A witness of going on under balance and dissipation is 'Not shown'.
   - a way related to widening: A selection term proper positive at t, with exact transmission, gives generation (generation_of_positive_term). In Courses.same_terms_two_fates (built examples), the same terms through a horizon have two fates: 'terms through a horizon need not decide the region'. Courses.positive_but_last is evolutionary suicide. These relate selecting to going on or ending, not to widening.
 
-### LineOnAStock
+### LineOnAStock (readers' returns of 21 November; not checked)
 - *table:* LineOnAStock (with LineOnAStockCases), letters `YYNPPNYY`, standing core
 - *read of 21 November, a future opening or closing, reader arising-gain-descent, as "LineOnAStock.lean (ways_alike, born_alike, new kinds)"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-a-future-2026-11-21/NOTE.md), [report](../read-a-future-2026-11-21/read-arising-gain-descent.md.txt)):
   - what stands for what can go on after: The course of ways (lists of units, each with need, use and kids) and a level; the net has a next while some need is met.
@@ -750,7 +752,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: Not read.
   - tied to what it rests on: The level is the stock, read only through needs met. A running down that crosses no need makes no difference to the way (ways_alike): the gap the idea names, stated as an absence of registering.
 
-### Lock
+### Lock (readers' returns of 21 November; not checked)
 - *read of 21 November, a future opening or closing, reader courses-still-open, as "Lock's laws of closing: PoolFromCourse.closed_stays_closed, Borne.shapers_left; ClosedCapture.lock_outlives_loss, turned_by_loss; DrawnBeyond.breaks_beyond, favours_breaking_beyond"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-a-future-2026-11-21/NOTE.md), [report](../read-a-future-2026-11-21/read-courses-still-open.md.txt)):
   - what stands for what can go on after: Locked (favours p.2 ∧ M.le p.2 (h p.1 p.2)) and whether readers of the beyond are present, of one course. In DrawnBeyond, a dependence beyond that is met or broken at a step.
   - laws concluding an opening: None found in what was read.
@@ -759,7 +761,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - from where an opening comes: In a balanced flow a rise is drawn from beyond, by the rise plus the loss. A rise above all the whole held needs openness (open_of_rise_above, read only as the head docstring names it). Only the part a rise's inflow covers need not be drawn from beyond.
   - a way related to widening: Yes, for narrowing and closing. A selection rewarding a rise above the slack holds only where an unseen dependence breaks. A lock read off its share stays locked while what it does not read grows, or while its readers stay gone. Nothing relates a selection to an opening.
 
-### MoveFormation
+### MoveFormation (readers' returns of 21 November; not checked)
 - *read of 21 November, how a registering comes to be, reader revision-and-forming, as "MoveFormation.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-revision-and-forming.md.txt)):
   - what registers what: A move formed through a reading π: Learning.Lumped π form. PartForms (l231, Lumped Prod.fst) and RestForms (l234, Lumped Prod.snd).
   - what changes it: No change of the reading along a course found. Run.keepHistory_formed (l662, general over runs of keepHistory P): a policy of the configuration gives every move; 'the length of the history kept tells the step'.
@@ -768,7 +770,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: lumped_const_iff (l217): through the reading that tells nothing apart, only a constant move is formed. No course of losing a reading found.
   - tied to what it rests on: None found.
 
-### ObservationChange
+### ObservationChange (readers' returns of 21 November; not checked)
 - *read of 21 November, how a registering comes to be, reader outside-the-package, as "GC/ObservationChange.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-outside-the-package.md.txt)):
   - what registers what: Plan = sensor choice from a supplied 3-item menu plus contingent choices (l.86-100).
   - what changes it: The agent's own choice of sensor among supplied sensors. Distributions and costs are handed in (jointMass l.24, planValue l.88).
@@ -777,7 +779,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: Built: fine_floor_certificate_fails (l.162), where a finer observation loses the coarse floor certificate (l.154); perfect_information_cannot_replace_delivery (l.243). General: refinement_preserves_safe_choice (l.209, premise forget∘fine = coarse); transport_executable_correction (l.220, premises record, oldCertificate, realization; change and newObs handed in).
   - tied to what it rests on: Not found in what was read.
 
-### ObservationRepair
+### ObservationRepair (readers' returns of 21 November; not checked)
 - *read of 21 November, how a registering comes to be, reader outside-the-package, as "GC/ObservationRepair.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-outside-the-package.md.txt)):
   - what registers what: observation _ := () (l.16): nothing of the hidden state is registered.
   - what changes it: Nothing changes it.
@@ -786,7 +788,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: off_absorbing (l.60).
   - tied to what it rests on: Not found in what was read.
 
-### Onward
+### Onward (readers' returns of 21 November; not checked)
 - *read of 21 November, a future opening or closing, reader courses-still-open, as "Onward.lean: KeepsMoving, run_of_trace, run_iff_returning"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-a-future-2026-11-21/NOTE.md), [report](../read-a-future-2026-11-21/read-courses-still-open.md.txt)):
   - what stands for what can go on after: KeepsMoving P K := ∀ s, K s → ∃ a t, step s a t ∧ K t (206). Separately, whether a run starts at s.
   - laws concluding an opening: - run_of_trace (98): a trace to the start of a run gives a run. - run_of_returning (113). - KeepsMoving.run (231), premise: a list of all configurations. - run_iff_returning (179), exact under that list: ∃ run from s ↔ ∃ t, Reach s t ∧ Returns t. - run_iff_continues, run_iff_unbounded, runs_iff_dependentChoice (397).
@@ -795,7 +797,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - from where an opening comes: Within finitely many configurations, going on without end is coming round. A rise needs a merge, and a course that never returns needs unlisted configurations.
   - a way related to widening: Not found in what was read.
 
-### OpenedCorrection
+### OpenedCorrection (readers' returns of 21 November; not checked)
 - *read of 21 November, how a registering comes to be, reader revision-and-forming, as "OpenedCorrection.lean (Linked.opens)"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-revision-and-forming.md.txt)):
   - what registers what: reading : X → S → O in force at each configuration. Correctable (l74): a uniform policy through reading x whose acts are acceptable and executable at x.
   - what changes it: Along a trace of one process: OpensAlong (l89) = (∃w, Trace P x w x') ∧ ¬Correctable x ∧ Correctable x'. 'The gain may come from the reading, from executability, or both.'
@@ -804,7 +806,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: unlinked_uncorrectable (l138): link off, no configuration correctable. starved_uncorrectable (l157): link on and no stock, none is.
   - tied to what it rests on: Only through executability: opening needs a stock unit (linked_correctable l146 at n+1). No statement makes the stock's fall the cause of the revision.
 
-### OpenFutureRevision
+### OpenFutureRevision (readers' returns of 21 November; not checked)
 - *read of 21 November, how a registering comes to be, reader outside-the-package, as "GC/OpenFutureRevision.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-outside-the-package.md.txt)):
   - what registers what: Not about registering; ranks handed between revised rules.
   - what changes it: handed_off_progress (l.14): premises localStep, handoff.
@@ -813,7 +815,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: Built: revised_rules_can_fail_forever (l.120).
   - tied to what it rests on: Not found.
 
-### OwnWidening
+### OwnWidening (readers' returns of 21 November; not checked)
 - *read of 21 November, a future opening or closing, reader what-can-form, as "OwnWidening.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-a-future-2026-11-21/NOTE.md), [report](../read-a-future-2026-11-21/read-what-can-form.md.txt)):
   - what stands for what can go on after: As Retaining, plus WidensWithin region (74), a part's own options; a comparison.
   - laws concluding an opening: Exact: Balances.widens_iff_others_within 146, premises balances: L.Balances W; without: WithheldLevels part W l; ownWidens: W.WidensWithin own W.level l. Conclusion: W.Widens W.level l <-> forall t f, own f = false -> W.Admits (l t) t f -> forall c, requires -> need + sum partTaken <= l t c + sum partGiven. Paired with mixed_iff_other_beyond 160 (Mixed <-> exists such f beyond the margin). One way: widens_of_untaken_beyond 196 (net draw zero on conditions others need). includes_iff_beyond_within 128. Built example OwnDrawing.ample_widens 324.
@@ -822,7 +824,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - from where an opening comes: Opening the own region widens the whole exactly within the others' margins.
   - a way related to widening: A part's own widening (reading: gaining reach) is related exactly to the whole's widening; not a way of selecting.
 
-### PairFlow
+### PairFlow (readers' returns of 20 November; not checked)
 - *table:* PairFlow, letters `YYPYYNPY`, standing core, told in chapter 5 §6 (What a rise draws from beyond)
 - *read of 20 November, things kept by goings-on, reader exact-and-pairs, as "PairFlow.lean (read whole)"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-kept-by-goings-on-2026-11-20/NOTE.md), [report](../read-kept-by-goings-on-2026-11-20/read-exact-and-pairs.md.txt)):
   - what is rested on, and whose doing: Each formation depends on its own standing (ownStanding 196, needOf 203, WhileStanding.needs 548). The standing is kept by a renewer beyond the pair, which gives S.renew p t only while the formation is active (renewal 497), and by the partner's gift (gets 500). Activity is derived, not stipulated (isActive 486: need ≤ standing); the renewal offered, the intention to give and the draws are supplied patterns (Setting 472). In Routes the standings are constant by construction (level 305, renewed 252, drawn_eq 336).
@@ -832,7 +834,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - exact two-sided law: None of going on against ending found in the file (read whole). Routes.gap_iff 405 is exact, of factors: (routes : P.kept + P.spoiled = P.reach + P.spill) : P.kept < P.reach + P.matched ↔ P.spill < P.spoiled + P.matched.
   - what is handed in: The renewal offered at each step, the intention to give at each step, the draws of a taker beyond, the start; in Routes the standing itself. Q5: a standing below its need gets no renewal and with no gift never stands again (stays_fallen 788, general, 'near-definitional'); built DrawnBelowNeed.drawn 1052 and fallen 1063: a taker beyond draws once, the formation never stands again (the loss falls on one that did not draw; the word cause is not used); GiverAtNeed.gift_lost 1011: the giver bears its own gift. Q6: lines grow (lineAt), read as Place.offspring (Routes.line_offspring 393); no share or selection in this file.
 
-### PairSelection
+### PairSelection (readers' returns of 20 November; not checked)
 - *table:* PairSelection, letters `PYPYYNYP`, standing core, told in chapter 5 §5 (Giving that waits on giving); the web part is named in chapter 5 §6
 - *read of 20 November, things kept by goings-on, reader exact-and-pairs, as "PairSelection.lean (read 1-203, 228-257, 456-472, 882-1020, 1100-1159, 1352-1440, 1803-2227)"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-kept-by-goings-on-2026-11-20/NOTE.md), [report](../read-kept-by-goings-on-2026-11-20/read-exact-and-pairs.md.txt)):
   - what is rested on, and whose doing: In the runs nothing is rested on: giving is a law of the last two steps and offspring are 'a supplied formula' (Place.offspring 910); support over the run 'is a premise of the reading, not checked here'. On the two built webs each formation depends on its own standing (Needs.requires 1843, Renewed.requires 2042); in Renewed the giver's standing is kept by a renewer whose giving requires nothing (renewer_free 2091; give renewer giver = 1 at 2068); levels there are constants.
@@ -842,7 +844,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - exact two-sided law: None of going on against ending found in what was read. The exact laws are of a share's rise in one generation: kind_rises_iff 966; assorted_raises_iff 1376 (pos : 0 < a; npos : 0 < n; some : 0 < x.carrier) raised strictly ↔ γ < β; assorted_lowers_iff 1400 ↔ β < γ.
   - what is handed in: The laws of giving, the errors, the factors a β γ, the pairing ('supplied … not formed'), and on the webs every level. Q5: under needs two and two the giver loses its own support by its own gift (symmetry_moves 1983); loss on one that did not cause it: not found in what was read. Q6: yes, the file's subject: never_rises_in_pairs 1146 (le : β ≤ γ; paired; others withhold), answering_never_rises 1120, neutral 1429; 'no law here is of a course of generations'.
 
-### PoolFromCourse
+### PoolFromCourse (readers' returns of 21 November; not checked)
 - *table:* PoolFromCourse, letters `YPPNYYPY`, standing core, told in chapter 2 §10; named once in chapter 7 §4.14
 - *read of 21 November, how a registering comes to be, reader readings-and-the-lock, as "PoolFromCourse.lean (windowRead, closed_stays_closed, Borne.shapers_left)"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-readings-and-the-lock.md.txt)):
   - what registers what: A pool whose readers of what lies beyond the share are present only where the course leaves them (present: A×B→Prop; ReadsThroughPresent 119).
@@ -852,7 +854,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: stands_not_readmitted (271), premise Accrues. closed_stays_closed (222), premises Raises (liftShare P), ReadsShare, upward favouring, ReadsThroughPresent, NotReadmitted, none present and locked at r. Then none present again and locked at every later step. window_removed_unregistered (332): Accrues and K ≤ loss; the removed readers' reading changes nothing. window_never_read (295): K ≤ N. Not being readmitted is a premise or follows from Accrues.
   - tied to what it rests on: The readers' standing hangs on the loss. Not derived: 'that readers of what lies beyond a share are removed by what they read, or that any drain grows with a share'.
 
-### PopulationCorrection
+### PopulationCorrection (readers' returns of 20 November; not checked)
 - *table:* PopulationCorrection, letters `YYYYYYYY`, standing outside
 - *read of 20 November, things kept by goings-on, reader outside-the-package, as "PopulationCorrection (/Users/ren/theories/experiments/market-generativity/meta-attractor/PopulationCorrection.lean). Mechanism supplied: 'Repertoire, realized receipts, response law and renewal remain supplied'; payoff from CollectiveDestruction.utility with fixed constants. Imports CollectiveDestruction; nothing of the package."* (a reader's return, unchecked; what the note mended is in the note: [note](../read-kept-by-goings-on-2026-11-20/NOTE.md), [report](../read-kept-by-goings-on-2026-11-20/read-outside-the-package.md.txt)):
   - what is rested on, and whose doing: Shared capacity rests on more contracts renewing than not; which way revising contracts go rests on the correction reserve being funded (funded 15; allocated 33-34); the reserve rests on what contracts pay in (inflow 36-37). Both things rested on are kept by the contracts' doings, and which contracts renew is set by the reserve: 'an internally financed correction reserve'.
@@ -862,7 +864,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - exact two-sided law: Two statements with complementary premises: schedule_sufficiency_is_constructive (above) and schedule_shortfall_is_destructive (524-529): 1 ≤ N, s.renewing ≤ N, fee ≤ N, ∀ t 1 ≤ k t, s.reserve + available k s.renewing s.renewing < fee ⊢ ∃ t, ∀ u, renewing = 0 ∧ reserve < fee ∧ capacity = 0 at t+u. And exact_schedule_activation_boundary (504-507): s.renewing ≤ N, fee ≤ N, ∀ t 1 ≤ k t ⊢ (∃ t, fee ≤ (history N fee cap k s t).reserve) ↔ fee ≤ s.reserve + available k s.renewing s.renewing. Margin at the going-on end: all_renewing_leak_tolerance (653-655; 0 < fee, s.reserve = fee, s.renewing = N): fee ≤ next reserve under leak ↔ fee + leak ≤ N.
   - what is handed in: The schedule k of how many revise each period; that every reviser goes the locally better way (allocated; revised_slot_is_optimal 85); the fee, the contribution rates 1 and 3, receipts and payoff constants; a fixed N; any top-up (exact_schedule_topup 516). Ending: destructive_region_reached (282), absorbing (594); loss on one that did not cause it: not found. Selected: yes, by local payoff, turned by whether the reserve is funded; faster_replacement_reduces_available (398). Nothing multiplies.
 
-### ReachableRanges
+### ReachableRanges (readers' returns of 21 November; not checked)
 - *read of 21 November, a future opening or closing, reader courses-still-open, as "ReachableRanges.lean: possible_of_next and what 'possible' is"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-a-future-2026-11-21/NOTE.md), [report](../read-a-future-2026-11-21/read-courses-still-open.md.txt)):
   - what stands for what can go on after: - Possible P adm s x := ∃ t, Reach P s t ∧ adm t x (289): the whole possible. - PossibleWithin k (295): the adjacent possible 'in a prestated space'. - Covers and Widens (272, 277): comparisons of the families of courses from two configurations.
   - laws concluding an opening: Reaching.widens_next_iff_rising (438), exact and two-sided. Premise: any two runs from one configuration agree at every step (a determined process). Statement: Widens (r.state 1) (r.state 0) ↔ (∀ t x, adm (r.state t) x → adm (r.state (t+1)) x) ∧ ¬∀ t x, adm (r.state (t+1)) x → adm (r.state t) x. What is handed in is the course's own admissions rising. Built examples: - Rise.rises: same-offset widening while possible_same holds. - Climb.keeps: the possible within every horizon keeps widening, on an unlisted Nat.
@@ -871,7 +873,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - from where an opening comes: Within one fixed process the whole possible never grows. Keeping widening needs an unlisted range. The adjacent possible that cannot be prestated is said to be outside.
   - a way related to widening: Related to comparison C (Reaching.comparison_widens), which was not read beyond the head docstring. No relation to a way of selecting was found.
 
-### ReaderRebuilding
+### ReaderRebuilding (readers' returns of 20 November; not checked)
 - *table:* ReaderRebuilding, letters `PYPYYNPY`, standing core, told in chapter 4 §8 (Organization within organisms); named again under chapter 4 Open
 - *read of 20 November, things kept by goings-on, reader exact-and-pairs, as "ReaderRebuilding.lean (read whole)"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-kept-by-goings-on-2026-11-20/NOTE.md), [report](../read-kept-by-goings-on-2026-11-20/read-exact-and-pairs.md.txt)):
   - what is rested on, and whose doing: The level is lifted by the reader: while the supply is on each unit takes one from the supply while the level is below m (read 87, step 119). The reader's units age and end (older 90) and, in the member Source.level, a spent unit is rebuilt from the level (rebuild 103-109). So what is rested on is there by the doing of a going-on in the model (a state variable), which is itself rebuilt from it. Declarations: Source 67, Rule 75, St 82, step 119, net 124.
@@ -881,7 +883,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - exact two-sided law: Over the family's sources, not of going on against ending along a course: def BuysTime (r : Rule) : Prop := (∀ k, ∃ l, Present (run r false (k + 1) (fresh r.count l))) ∧ ∃ k, (run r false k (fresh r.count 0)).ages = []; theorem «以储买时当且仅当取于储» {r : Rule} (hn : 1 ≤ r.count) (hspan : 1 ≤ r.span) : BuysTime r ↔ r.source = .level (462). Both ends under a standing supply are general («供则读者之域闭» 209; «取于储者绝而不复» 404, hs : r.source = .level) but not joined into one iff over states.
   - what is handed in: That the supply is on, and has whatever the read takes; the rule that a unit is made from one unit of the level. Q5: a cut with the stock run down («读者绝则无储» 386; the empty state closed under the whole net, 404); rebuilt from the supply or never, gone after s cut steps («断则取于供者尽» 356, «不复建者尽» 365). One reader, one level: who bears is not a question the model has. Q6: not found; the four members are compared by source, not selected among.
 
-### Reading
+### Reading (readers' returns of 21 November; not checked)
 - *read of 21 November, how a registering comes to be, reader readings-and-the-lock, as "Reading.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-readings-and-the-lock.md.txt)):
   - what registers what: Activity and drawing read off the exchange (Flow.readOff, 94); requirement read off a law where exchange responds to a condition falling below need (readWeb 217, RespondsBelow 210). Fixed constructions.
   - what changes it: Nothing changes the reading; what it reads changes with the exchange.
@@ -890,7 +892,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: Not stated.
   - tied to what it rests on: readWeb_dependent (231): read off the law, activity needs support, for every need. supported_of_responds (225): ExchangesUnder and RespondsBelow give n ≤ l t c. A tie by construction, no change.
 
-### ReadingLoop
+### ReadingLoop (readers' returns of 21 November; not checked)
 - *read of 21 November, how a registering comes to be, reader readings-and-the-lock, as "ReadingLoop.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-readings-and-the-lock.md.txt)):
   - what registers what: A supplied reading B kept by a supplied update and sense (joint 157, KeptBy 166). The history's reading Possible (324). In Loop (544), listed candidate laws predict: H→S→A→S; the internal part holds the candidates kept.
   - what changes it: The handed-in update; recording (possible_least 334: the least reading kept by recording that holds at the starts). In Loop, elimination by the world's answer: kept_iff (589), a candidate is kept at n+1 exactly where it was listed and fits every earlier answer. Handed in: the list, predict, choose, answer, move. 'elimination, not weighting'; how candidates are proposed is left out.
@@ -899,7 +901,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: Candidates are only dropped (kept_iff). Readings of everything and of nothing are kept by every update (everything_kept 258, nothing_kept 268). kept_alike (624): candidates the course does not tell apart are kept alike.
   - tied to what it rests on: alike_within (478) and alike_of_kept (508): where every answer that would tell the worlds apart breaks a kept task, keeping the task keeps them untold apart. The only tie found between what can come to be registered and what is kept. rests_of_unrefuted (672).
 
-### Readings
+### Readings (readers' returns of 21 November; not checked)
 - *read of 21 November, how a registering comes to be, reader readings-and-the-lock, as "Readings.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-readings-and-the-lock.md.txt)):
   - what registers what: Contextual claims as relata of one world (Contextual.world 95); two readings of change, by standing and by exchange (changeReadings 115).
   - what changes it: No change stated.
@@ -908,7 +910,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: Not stated.
   - tied to what it rests on: changeReadings_glue_iff (171): the two readings glue exactly where the flow balances; World.unity (203), no premise. A tie between readings, not to what it rests on.
 
-### ReadingSchedule
+### ReadingSchedule (readers' returns of 21 November; not checked)
 - *read of 21 November, how a registering comes to be, reader readings-and-the-lock, as "ReadingSchedule.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-readings-and-the-lock.md.txt)):
   - what registers what: One reader reads one condition a step by a supplied schedule s (Within 88, Unread 92).
   - what changes it: The schedule is handed in and fixed.
@@ -917,7 +919,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: Balances.loses_of_unread (690), in a balanced flow: a stretch of k steps left unread lets a part drawing at least d a step take (k+1+ℓ)d. A significant formation admitted without the part, requiring c, with l t c < need + (k+1+ℓ)d, is lost (W.Adds). Premises as listed in the report.
   - tied to what it rests on: keeps_iff_within (879), premises (a+ℓ)d ≤ m < (a+1+ℓ)d: a schedule keeps c within margin m against every balanced flow's draws exactly where it reads c within every a steps. General; the schedule does not change.
 
-### ReadingsPersist
+### ReadingsPersist (readers' returns of 21 November; not checked)
 - *table:* ReadingsPersist (with its Habitat), letters `YYPPYPPP`, standing core, told in chapter 7 section 4.12 (Which readings persist); kept_iff also in section 4.14
 - *read of 21 November, how a registering comes to be, reader readings-and-the-lock, as "ReadingsPersist.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-readings-and-the-lock.md.txt)):
   - what registers what: Each relatum acts by the act its carried reading gives (byReading 151); acts read only what couples in (ReadsThroughOwn 155).
@@ -927,7 +929,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: RemovesItsReaders (555). survivorsPersist_of_settled (569): read off the course's own pool, not turned by removal. not_allPersist_of_removes (578): read off a fixed pool, turned by every removal. family_nil_from (647). Built examples cleared_removes_its_readers (1318) and clearedBack_survivors_pass (1357): 'registers no removal, not even its own ending'.
   - tied to what it rests on: line_standing_unselected (459), reader_kept_alike (505), general (premises listed in the report): no selection of reading beyond the line's coupling closure. lineOf_persists_never_overdraws (597). No change of what is registered.
 
-### ReadingsSpread
+### ReadingsSpread (readers' returns of 20 November, 21 November; not checked)
 - *table:* ReadingsSpread (Commons, Habitat), letters `YYPPYPPY`, standing core, told in chapter 7 §4.14 (How readings form, spread and lock); §4.12 tells ReadingsPersist, where the Habitat namespace lives
 - *read of 20 November, things kept by goings-on, reader exact-and-pairs, as "ReadingsSpread.lean: Commons (read 1-120, 361-433, 637-900, 962-1277)"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-kept-by-goings-on-2026-11-20/NOTE.md), [report](../read-kept-by-goings-on-2026-11-20/read-exact-and-pairs.md.txt)):
   - what is rested on, and whose doing: The focal and wide lines rest on a source (requires 761; need 764), the dweller's line on a habitat. With back = true the source is there by the dweller's doing ('each fed dweller member gives it three', conduct 707-708); with back = false it renews itself by three (705-706). So in one of the two worlds what two lines rest on is given by a third line. 'The acts are assigned by design'; 'What is not derived: how a reading's act comes to be what it is'.
@@ -944,7 +946,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: fixed_of_closedFrom (150): RevisesBy, fixed at T, ClosedFrom; stays fixed. fixed_of_present (169): RevisesBy with what is sensed being a present member's reading (src present), and the update keeping P when both lie in it, fixed at T; then fixed at every T+n ('fixation is a lock'). closedFrom_of_standing (210). Contact.removed_locked (575). The account says only variation from outside can replace it.
   - tied to what it rests on: Commons (639-1277), built example, every course generated (generated 970): whether a narrow reading's spread ends depends on whether what its act removes returns (cleared_spreads, clearedBack_ends, overdrawn_spreads_then_ends, overdrawnBack_ends). Readings there are inherited, so its lock is trivial. standingCount_unselected (455). How a reading's act comes to be is not derived.
 
-### ReadInTime
+### ReadInTime (readers' returns of 21 November; not checked)
 - *table:* ReadInTime, letters `YPPNYYYY`, standing core, told in chapter 2 §9; chapter 7 §6
 - *read of 21 November, how a registering comes to be, reader readings-and-the-lock, as "ReadInTime.lean (kept_iff, turned_iff)"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-readings-and-the-lock.md.txt)):
   - what registers what: Readers drawn from the selected: shapers read hi; others read lo below the loss bound N and lo' from N (shapedLossPool 132).
@@ -954,7 +956,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: Not stated here.
   - tied to what it rests on: The window: from the first step at which the late reading would favour the shapers, reading the loss keeps the lock. That what lies beyond is a loss to any formation is not stated.
 
-### ReadOffInTime
+### ReadOffInTime (readers' returns of 21 November; not checked)
 - *table:* ReadOffInTime (Recoverable, NoReturnAt, ReadableInTime, FourReaders), letters `PYPPPPYY`, standing core, told in chapter 7 §3.6 (When selection read off continuation reads in time): the two theorems and the witness FourReaders
 - *read of 21 November, a future opening or closing, reader courses-still-open, as "ReadOffInTime.lean: Recoverable, NoReturnAt, ReadableInTime, FourReaders"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-a-future-2026-11-21/NOTE.md), [report](../read-a-future-2026-11-21/read-courses-still-open.md.txt)):
   - what stands for what can go on after: Recoverable (591) is the set of feasible courses that agree with one course l up to step N and keep what is asked: ∃ l', feasible l' ∧ AgreeUpTo l' l N ∧ keeps l'. It is of one course at a step, and feasible and keeps are supplied; the docstring reads feasible as 'the courses the part can still take'. NoReturnAt (595) is the first step at which the course is not recoverable.
@@ -971,7 +973,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: too_late_of_own (743), premises: what is kept includes every member's admission at every step, and l' admits every member at every step. Then the courses are not readable in time and no family read off the group reads them in time: the loss is read only past its point of no return. NoReturnAt.recoverable_iff (607).
   - tied to what it rests on: readableInTime_iff (661), premises FirstApart T and NoReturnAt N: readable in time ↔ T < N. Also too_late_of_unreached (699), too_late_within_margin (719), too_late_of_alike (678).
 
-### Readout
+### Readout (readers' returns of 21 November; not checked)
 - *read of 21 November, how a registering comes to be, reader learning-codes-inquiry, as "Readout.lean and PartialReadout.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-learning-codes-inquiry.md.txt)):
   - what registers what: A supplied reduction π and observable f; partial answers on a domain D.
   - what changes it: No change along a course. A finer map is handed in (LumpedWithin.finer l.149), as is a faithful retention (ExactWithin.retained l.155, premise faithful).
@@ -980,7 +982,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: Readout.no_restore (l.92), premises merged : π s = π s', different : s ≠ s'. no_judge_of_merged (l.283). SoundWithin.silent (PartialReadout l.133).
   - tied to what it rests on: Not found.
 
-### ReadStages
+### ReadStages (readers' returns of 21 November; not checked)
 - *read of 21 November, how a registering comes to be, reader readings-and-the-lock, as "ReadStages.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-readings-and-the-lock.md.txt)):
   - what registers what: Stages read through a lumping π: Bool→K (lumped_uniform 487, plan_realized_iff 497).
   - what changes it: Lumping and prospects handed in; no change.
@@ -989,7 +991,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: read_fixes_unread (535): where π ties the stages, the read stage fixes the act at the unread one.
   - tied to what it rests on: None found; the prospects (236) are supplied numbers.
 
-### ReflexivePrediction
+### ReflexivePrediction (readers' returns of 21 November; not checked)
 - *read of 21 November, how a registering comes to be, reader revision-and-forming, as "ReflexivePrediction.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-revision-and-forming.md.txt)):
   - what registers what: A published prediction p read by a fixed response r : V → V. Right r p := r p = p (l65).
   - what changes it: Repeated publication along Law.orbit r p (rests_iff_right l90); r itself is fixed and handed in.
@@ -998,7 +1000,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: None found; right_rests (l95): a right prediction stays.
   - tied to what it rests on: None found.
 
-### RegimeMargin
+### RegimeMargin (readers' returns of 20 November; not checked)
 - *table:* RegimeMargin: one level under a standing draw, letters `NYNPNNYY`, standing core, told in chapter 2 §5 (Draw and margin): the regime theorems, the theorem on exact thresholds and the table rows adjusting giving, where a run rests, any amounts
 - *table:* RegimeMargin: Coupled and Coupled.Indexed, letters `NYPPPNYY`, standing core, told in chapter 2 §5 (Draw and margin): the table rows coupled regimes, coupled webs, rest on webs, beyond a band, recent giving on webs
 - *read of 20 November, things kept by goings-on, reader exact-and-pairs, as "RegimeMargin.lean: Coupled and Coupled.Indexed, with MutualActivation and Relay (read 1-300, 700-760, 2058-2427, 2485-2750, 2810-3039, 3205-3687)"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-kept-by-goings-on-2026-11-20/NOTE.md), [report](../read-kept-by-goings-on-2026-11-20/read-exact-and-pairs.md.txt)):
@@ -1009,7 +1011,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - exact two-sided law: theorem ends_iff_below [DecidableEq ι] (rises : ∀ i, Rises Drawn.whole (G i)) {hi : Nat} (band : Band G H hi) {cs : List ι} (covers : ∀ i, i ∈ cs) {y : ι → Nat} {i : ι} {a : Nat} (high : a ≤ hi) (highs : ∀ j, y j ≤ hi) : Ends Drawn.whole G H (fun x => x i) (setAt y i a) ↔ a < threshold G H cs hi y i   (RegimeMargin.lean 2687; G : ι → (ι → Nat) → Nat, H : ι → Nat; threshold 2672 is leading (ending G H (cs.length*hi+1) y i) (hi+1), read off the run). Pair form: Coupled.ends_iff_below 3306. Bounded form: ends_iff_below_within 2984.
   - what is handed in: The giving functions G; the draws H (no drawer, drawn to nowhere); that giving rises with what is left of each (Rises); the band; beyond a band, that the run stays within a bound (a premise about the course itself). Q5: the end of one ends what depends on it (ends_of_partner 2193: depends, pos : 0 < H i; ends_downstream 2210; built Chain.cascades 2250); a statement that the loss falls on one that did not cause it: not found in what was read. Q6: nothing multiplies or is selected: not found in what was read.
 
-### RelationalRenewal
+### RelationalRenewal (readers' returns of 20 November; not checked)
 - *table:* deeper/RelationalRenewal (Law, within_renewal_renewing, the overdraw laws, cultivation, malignant), letters `PYPPYNPP`, standing outside, told in chapter 2 §3.1
 - *read of 20 November, things kept by goings-on, reader exact-and-pairs, as "deeper/RelationalRenewal.lean (outside the package; read whole)"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-kept-by-goings-on-2026-11-20/NOTE.md), [report](../read-kept-by-goings-on-2026-11-20/read-exact-and-pairs.md.txt)):
   - what is rested on, and whose doing: One condition, two formations. The condition is renewed while it supports the sustaining formation (Law.level 246-254 adds L.renew where L.needG ≤ level): 'a condition renewed by a formation that itself depends on it'. So what is rested on is there by the doing of one that rests on it; the amount is a number (Law.renew 238). The focal formation, while supported, draws draw t and contributes contrib t, supplied schedules (241-242).
@@ -1019,7 +1021,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - exact two-sided law: None. Two general one-sided laws whose premises are not complements: within at every step (339) and over at every step from some T0 (overdraw_consuming 421: positive : 0 < L.needG; fWithin : L.needF ≤ L.needG; over : ∀ t, T0 ≤ t → L.renew + L.contrib t < L.draw t; dependent_overdraw_ends_itself 438: fPositive : 0 < L.needF; fWithin; over). The classification is 'exclusive and not exhaustive' (renewing_not_consuming 143, fluctuating_neither 217).
   - what is handed in: The number renew; that it is added exactly while the level is at or above needG; the schedules draw and contrib and the bound between them at every step. Q5: drawing beyond renewal and contribution; no_return_below_support 357 (noRestore; below). A general law that the loss falls on one that did not draw: independent_overdraw_persists 503 (independent : L.needF = 0; positive : 0 < L.needG; over): the focal formation is active and forms without bound while the sustaining formation loses the condition for ever; jointly_consuming 571 (within1; within2; joint : ∀ t, renew < d1 t + d2 t; positive; supported): each alone renewing, together consuming. Q6: formed 265 counts units; nothing multiplies or is selected.
 
-### RenewingFormation
+### RenewingFormation (readers' returns of 20 November; not checked)
 - *table:* universal-ethics/generative-capacity/RenewingFormation, letters `PYPPYNYY`, standing outside, told in chapter 2 §3.1 (02-MAP.md line 139), which points on to chapter 7
 - *read of 20 November, things kept by goings-on, reader outside-the-package, as "RenewingFormation (/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RenewingFormation.lean). Mechanism supplied: WearLaw (58-62) and a demand schedule Nat → Nat. Imports GenerativeComparison; nothing of the package."* (a reader's return, unchecked; what the note mended is in the note: [note](../read-kept-by-goings-on-2026-11-20/NOTE.md), [report](../read-kept-by-goings-on-2026-11-20/read-outside-the-package.md.txt)):
   - what is rested on, and whose doing: Formation rests on stock + renew (formedAt 65). renew is a number in the state added each step (next 67-68), changed by the supplied degrade; the header calls it 'an organization that restores those conditions at a rate' and says the parts are 'differentiated aspects of one history, not independent owners exchanging resources' (6-10). It is a handed-in rate, not a going-on with needs of its own.
@@ -1029,7 +1031,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - exact two-sided law: keeps_capacity_iff (480-482): (law : WearLaw) (c0 : Conditions) (demand : Nat → Nat) (positive : 1 ≤ c0.renew) : KeepsCapacity law c0 demand ↔ ∀ n, demand n ≤ c0.renew. Exact of the rate being kept, not of formation going on against ending; for that, none.
   - what is handed in: The schedule of pressure (it answers to nothing in the state), the rate, the wear law. Ending: beyond_current_ceases (257-259): ∀ n, budget c0 ≤ n → formed = 0, budget = stock + tri renew. Who bears is stated: consuming_part_ends_otherwise_ceaseless_formation (359-363; premises WithinRenewal c0 own; ∀ n, c0.renew < other n; ∀ n, share n ≤ formed law c0 (own + other) n) and jointly_exceeding_parts_end_shared_formation (370-375); header 45-46 'the ending of shared formation that did not itself exceed renewal'. Nothing multiplies; a count favouring the consuming course: consuming_forms_more_first (422).
 
-### ReproductionNetwork
+### ReproductionNetwork (readers' returns of 20 November; not checked)
 - *table:* ReproductionNetwork, letters `PYYYYPPP`, standing outside
 - *read of 20 November, things kept by goings-on, reader outside-the-package, as "ReproductionNetwork (/Users/ren/theories/experiments/market-generativity/meta-attractor/ReproductionNetwork.lean). Mechanism supplied: Network (36-42: roles, threshold, wear, capacity, output); header 'Conversion, replacement, thresholds and possible interventions remain supplied laws.' Imports GenerativeCore; nothing of the package."* (a reader's return, unchecked; what the note mended is in the note: [note](../read-kept-by-goings-on-2026-11-20/NOTE.md), [report](../read-kept-by-goings-on-2026-11-20/read-outside-the-package.md.txt)):
   - what is rested on, and whose doing: Each role's stock rests on what other roles give it while they are at or above their own thresholds: incoming (44-45), advance (47-48) = min capacity (s j − wear j + incoming). Header: 'Their capacity to operate depends on stocks maintained by other roles.' Given by other goings-on, and who gives is read from the givers' own stocks; how much is the table output.
@@ -1039,7 +1041,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - exact two-sided law: None of going on against ending. arrangement_certificate_iff (373-374) is Maintenance (arrangement kind) (fun _ => 2) (fun _ => true) ↔ kind ≠ .broken: an iff on the certificate for four built arrangements. A general law of ending: not found in what was read; endings are built examples (severed_pair_loses_both 288, unsupported_revision_breaks_reproduction 404, actual_myopic_loss 559, weak_authorization_allows_failure 618).
   - what is handed in: The supply at every step, sized to the largest possible demand; the table of what each gives; thresholds; the choice of arrangement; the admission rule's form. Who bears: no statement; in cutPair one direction is cut and both stocks are lost. Selection among returning and non-returning arrangements is stated (myopic_retention_prefers_no_return, myopic_revision_is_strict_initially 555); nothing multiplies.
 
-### ResponseCapacity
+### ResponseCapacity (readers' returns of 20 November; not checked)
 - *table:* ResponseCapacity, letters `PYYYYPYY`, standing outside
 - *read of 20 November, things kept by goings-on, reader outside-the-package, as "ResponseCapacity (/Users/ren/theories/experiments/market-generativity/meta-attractor/ResponseCapacity.lean). Mechanism supplied: 'All flow laws and correspondence to actual harmful demands remain supplied.' Imports Std only."* (a reader's return, unchecked; what the note mended is in the note: [note](../read-kept-by-goings-on-2026-11-20/NOTE.md), [report](../read-kept-by-goings-on-2026-11-20/read-outside-the-package.md.txt)):
   - what is rested on, and whose doing: First model (9-16): support moved by handed-in sequences repair and loss; zero absorbing. Second model (step 176-179): support is refilled by the demand the response meets; the response is built from support by investment and worn by misses ('successful responses replenish support, deadline misses consume it and impair later response, and investment uses current support', 167-170).
@@ -1049,7 +1051,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - exact two-sided law: exact_no_investment_viability (318-320): (demand : Nat) (s : State) : (∀ t, 0 < (run demand (fun _ _ => 0) s t).support) ↔ 0 < s.support ∧ demand ≤ s.response. For the never-investing policy only; on the going-on side the state is ⟨s.response, s.support + demand*t⟩ (full_response_history 249), nothing rebuilt. Also expansion_margin (369-373), positive_iff_every_prefix (45-46, first model: 0 < support t ↔ ∀ j ≤ t, 0 < balance j), one_step_recovery_iff (345-351; premises 0 < s.support, s.response < demand).
   - what is handed in: The demand; the policy; the conversion rates. Ending: no_investment_insufficient_response_eventually_halts (289; s.response < demand), finite_failure_from_persistent_net_loss (108). Selection stated: all_locally_optimal_policies_eventually_halt (438-441; premises LocallyOptimal demand policy s, s.response < demand).
 
-### ResponseLearning
+### ResponseLearning (readers' returns of 21 November; not checked)
 - *read of 21 November, how a registering comes to be, reader learning-codes-inquiry, as "ResponseLearning.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-learning-codes-inquiry.md.txt)):
   - what registers what: The receiver's samples are pairs of query and the sender's actual response. The program is developed from them (learn, l.101).
   - what changes it: send (l.88) delivers the actual response. Handed in: lessons (basic, extended, l.96-98); the teacher source p stock ('a supplied starting condition', l.71); fresh stock 25 and 8 parts. reconsider (RouteFormation l.400): retest the wiring against the samples; discard and redevelop where it no longer fits.
@@ -1058,7 +1060,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: Built examples: faithful_loses_distinction (l.316), distinction_lost_every_cohort (l.352), succession_keeps_lost_distinction (l.550), limited_changes_then_stays (l.379), peer_keeps_error (l.614). Undone only by a supplied demonstration.
   - tied to what it rests on: Stock as a precondition only. A loss reaching what is learned: not found.
 
-### Retaining
+### Retaining (readers' returns of 21 November; not checked)
 - *read of 21 November, a future opening or closing, reader what-can-form, as "Retaining.lean (with Regions/Admission definitions)"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-a-future-2026-11-21/NOTE.md), [report](../read-a-future-2026-11-21/read-what-can-form.md.txt)):
   - what stands for what can go on after: What a level path admits each step (Web.Admits); levels with a part (W.level) against without (WithheldLevels l); a counterfactual comparison over the same steps, not after in time.
   - laws concluding an opening: Exact: Flow.widens_iff_within_margin_at 273, premises without: L.WithheldLevels part W l; balances: forall t f c, W.requires t f c -> forall s<t, L.BalancesOn W [c] s. Conclusion: W.Widens W.level l <-> (forall t f, W.Admits (l t) t f -> forall c, requires -> need t f c + sum_{s<t} partTaken <= l t c + sum_{s<t} partGiven) and exists t f, (forall c, requires -> same inequality) and not W.Admits (l t) t f. Balances.widens_iff_within_margin 292: the same with L.Balances W. Built example ArisingGiver.arises_widens 675.
@@ -1067,7 +1069,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - from where an opening comes: Widening is exactly net draw within the margin plus a net exchange that brings one more formation within it (273).
   - a way related to widening: Run classes: includes_of_renewed 321 (Balances, Taking, without, renewed draws) gives Includes; not_narrows_of_renewed 349; includes_of_renewingIn 357 (forall f in part, RenewingIn f) gives Includes, not widening; keeps_of_not_arising 416; Untaken.consuming_keeps 538 is a built example. All compare with and without a part.
 
-### Revision
+### Revision (readers' returns of 21 November; not checked)
 - *read of 21 November, how a registering comes to be, reader revision-and-forming, as "Revision.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-revision-and-forming.md.txt)):
   - what registers what: A lumping alike : S → X → X → Prop at each configuration (Registration.Keeps l72), with selection through it as Learning.Training.Through. In Revising.P, read s b = if s.2.1 then b else false (l159): the link bit, a coordinate of the state.
   - what changes it: By the move .rebuild b of the supplied process P (l153-156), which draws one stock unit. Which move is taken is handed in as the controller choose (l234): 'Its preference for forming the link is supplied, not derived from the old reading.'
@@ -1076,7 +1078,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: lost_choice (l56, general). Premises: old an equivalence, new x y, ¬old x y. Conclusion: ∃ select through old and not through new. closes_choice (l224, built): closing destroys a distinction even with stock left. It can be undone by rebuild true given stock (rebuild_then_close l204, built).
   - tied to what it rests on: Only as cost: forming the link draws stock, and the controller reads the stock but is supplied. No statement makes the stock's fall the cause of a change in what is registered.
 
-### RevisionPlans
+### RevisionPlans (readers' returns of 21 November; not checked)
 - *read of 21 November, how a registering comes to be, reader revision-and-forming, as "RevisionPlans.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-revision-and-forming.md.txt)):
   - what registers what: reading c := decide (gain c < offGain c) (l168), from supplied numbers. held r a (l163) holds the act for a supplied reading r.
   - what changes it: Nothing changes along a course; it is a static order on plans (order l143).
@@ -1085,7 +1087,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: None found.
   - tied to what it rests on: None found; gain, loss and weight are supplied.
 
-### RevisionRoutes
+### RevisionRoutes (readers' returns of 21 November; not checked)
 - *read of 21 November, how a registering comes to be, reader revision-and-forming, as "RevisionRoutes.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-revision-and-forming.md.txt)):
   - what registers what: The revision 'reaches it through a reading coupled into its course' (account), but the reading is not modelled. Only the weights k0, k ρ, the losses c0, c ρ, the value V and the total T are (Prospects l126).
   - what changes it: No dynamics; a static order on Option ι.
@@ -1094,7 +1096,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: 'Evading or disabling the reading' is a route ρ with supplied weight and loss; it is priced, not modelled as a course.
   - tied to what it rests on: None found.
 
-### Roles
+### Roles (readers' returns of 20 November, 21 November; not checked)
 - *table:* Roles (Mutualism, Throughput, embodied arising) with Gain, letters `PYPYPNPP`, standing core, told in chapter 4 §1 Life as a condition of life (arises_given, embodied arising, Mutualism, Brood, Shuttle, Throughput); Gain in chapter 2 §4 Rest (rise_from_rest_or_open, whole_not_new_of_rest_idle) and chapter 7 §2 (rise_given); Predation named in chapter 7 §3.4
 - *read of 20 November, things kept by goings-on, reader source-said, as "Roles.lean (read whole, 1-1595)"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-kept-by-goings-on-2026-11-20/NOTE.md), [report](../read-kept-by-goings-on-2026-11-20/read-source-said.md.txt)):
   - what is rested on, and whose doing: Here what is rested on can be a going-on: Embodied (414) is active exactly while standing. Embodied.active_of_bearing (441; Dependent, Embodied y, g active, g requires y at positive need; conclusion y active). Embodied.arises_given (505; Balances, Acting, Embodied x, x arises at t; conclusion an active formation present, other than x, gives to x). Docstring 59-63: the giver 'need not be embodied, bear on itself or depend on anything (SourceSeed)'; 114-115: embodiment and self-bearing 'are representational choices'.
@@ -1111,7 +1113,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - from where an opening comes: Under balance and dissipation each embodied arising in a closed family lowers its stock, with another member falling (arising_with_fall). Without dissipation, Shuttle bears unceasing arising (account only).
   - a way related to widening: Not found.
 
-### RouteFormation
+### RouteFormation (readers' returns of 21 November; not checked)
 - *read of 21 November, how a registering comes to be, reader revision-and-forming, as "RouteFormation.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-revision-and-forming.md.txt)):
   - what registers what: Samples (records) and an installed program. fits (l142); an inspection installs where the program fits (inspect_installed l609, from the account).
   - what changes it: encounter (l390): 'a supplied code's value on an expression, added to the samples' at a stock draw. reconsider (l400) retests and develops again. develop searches routes in a supplied order. The account: 'the samples and the draws are supplied'.
@@ -1120,7 +1122,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: verdict_not_program (l488) and develop_course_removed (l695): removing the program keeps the verdicts and loses the answer.
   - tied to what it rests on: Only as cost (stock and parts); what is learned is not tied to it.
 
-### RuleRebuilding
+### RuleRebuilding (readers' returns of 20 November; not checked)
 - *table:* RuleRebuilding, letters `YYPPPYYY`, standing core, told in chapter 5 §12 (One kind of institution)
 - *read of 20 November, things kept by goings-on, reader exact-and-pairs, as "RuleRebuilding.lean (read 1-262, 431-560, 634-781, 836-940, 972-1036, 1093-1122, 1160-1628, 1732-1961)"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-kept-by-goings-on-2026-11-20/NOTE.md), [report](../read-kept-by-goings-on-2026-11-20/read-exact-and-pairs.md.txt)):
   - what is rested on, and whose doing: Members each draw one unit of a level (take 174). The level is there by a constant renewal and by the take staying within it (onward 217, Ends 214); the take is limited by a door that is the holders' doing (door 194: each teacher turns away c who would come); the holders are rebuilt by teaching (taught 180: a cohort enters holding the quota only where holders of teaching age stand) and wholly replaced each tenure («任满皆新» 1546). The keeper is a going-on in the model; the opening account: ''holder' is a count and the door a formula'.
@@ -1130,7 +1132,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - exact two-sided law: abbrev Band (r : Rule) (q : Nat) : Prop := r.teachingAge < r.tenure ∧ 1 ≤ q ∧ (q + leak r q) * r.tenure ≤ r.renewal (259). theorem «稳者恒持当且仅当在带» {r : Rule} (hm : r.source = .members) {q L : Nat} (hL : 1 ≤ L) : (∀ k, Held (run r always k (steady r q L))) ↔ Band r q (897). theorem «隙之律» {r : Rule} (hm : r.source = .members) (hs : r.tenure = r.teachingAge + 1) {q L : Nat} (hq : 1 ≤ q) (hL : 1 ≤ L) {b : List Bool} (hb : b.length = r.tenure) (hk : 1 ≤ heldCount b) : (∀ n, Held (run r always n (strands r q b L))) ↔ heldCount b * (q + (r.untaught - r.strength * q)) + emptyCount b * r.untaught ≤ r.renewal (1772). leak r q := r.untaught - r.strength * q * (r.tenure - r.teachingAge) (246); always 234 = entrants on offer at every step, no revision. The other side of each is general too: steady_ends 872, «隙过生持至尽» 1792. The opening account: 'This is the steady state's law and not the rule's.'
   - what is handed in: The renewal g (a number, nothing gives it); the count f who would come; entrants on offer at every step; the door's strength c; the teaching as a formula (a full quota wherever any teacher stands); the ending clause ('a modelling choice'); for the exact laws the starting state (steady, strands) and the course with no revision. Q5: the take exceeding level and renewal ends everything, closed under the net («尽而不复» 457); holders and others leave alike; the rule can be held to the last state («隙过生持至尽» 1792; built «改而成隙则尽» 1885); passing fails where teaching does not fit a tenure («不及任则持尽» 658) or the quota is nothing («额零则持尽» 677); no holder stays no holder («无持者不复» 698). Loss on one that did not cause it: not found in what was read. Q6: not found; a cohort enters at the quota, there is no share.
 
-### Sensitivity
+### Sensitivity (readers' returns of 21 November; not checked)
 - *read of 21 November, how a registering comes to be, reader learning-codes-inquiry, as "Sensitivity.lean and SensitivityWebs.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-learning-codes-inquiry.md.txt)):
   - what registers what: What a law of exchange reads (ReadsWithin l.122, ReadsFinitely l.127). Its least coupling is its sensitivity: least_coupling (l.197), premise fin : ReadsFinitely, conclusion up to ¬¬.
   - what changes it: The law is fixed; not found.
@@ -1139,7 +1141,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: tailLaw_insensitive (l.325) and tailLaw_differs (l.334). The decision decides is a premise (it gives LPO, l.555).
   - tied to what it rests on: SensitivityWebs.exchange_alike_of_insensitive (l.58). Premises: fin, follows, follows', out, nothing : ∀ c, ¬Sensitive h c. Static.
 
-### SharedCodes
+### SharedCodes (readers' returns of 21 November; not checked)
 - *read of 21 November, how a registering comes to be, reader learning-codes-inquiry, as "SharedCodes.lean (agrees_every_start_iff, impose_loses_iff, held_stays)"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-learning-codes-inquiry.md.txt)):
   - what registers what: Codes I → M → F. TellsApart (l.700). A formation reads another's form as the sense exactly where their codes agree, given that its own code tells the senses apart (reads_iff, l.714).
   - what changes it: Only by hearing: hearBy adopt e X (l.201), with the rule adopt and the hearings handed in. changes_by: changes_iff (l.256), general law: a form changes exactly at the hearer, at the sense heard, where adopt is true and the speaker's form differs. follow p (l.662): a pointer handed in. coin (l.1344): a supplied step, 'Hearing makes no form; coining does'.
@@ -1148,7 +1150,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: - impose_loses_iff (l.1052), by definition: Loses X (impose c X) i m m' ↔ X i m ≠ X i m' ∧ c m = c m'. source_loses_nothing (l.1056). - held_stays (l.1063). Premises: adopt; held : ∀ j, X j m = x; es; i. Conclusion: runBy adopt es X i m = x, under every rule. - run_imposed_stays (l.1069). - outside_needed (l.1078). Premises: r; G; imposed : ∀ i, G i = true → r.state n i m = c m; kept : ∀ j, G j = false → r.state n j m = c m. Conclusion: ∀ k i, r.state (n+k) i m = c m. - keeps_apart_iff (l.823); homonym (l.1518, built). - resolved_alike_merged (l.1202), no_reading_recovers (l.1210), added_never_replaced (l.1271), uptake_loses (l.1666, built). Undone only by coin or a form kept outside.
   - tied to what it rests on: Not found. The readings say 'None of these is a value'.
 
-### Space
+### Space (readers' returns of 21 November; not checked)
 - *read of 21 November, a future opening or closing, reader what-can-form, as "Space.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-a-future-2026-11-21/NOTE.md), [report](../read-a-future-2026-11-21/read-what-can-form.md.txt)):
   - what stands for what can go on after: Activity reading: whether arising (World.ArisingRecurs 191) or ceasing (CeasingRecurs 195) recurs, or the world rests (RestsFrom); of one world. Docstring 14-16: generative and degenerative are read as widening and narrowing (D2), but this module states the activity reading.
   - laws concluding an opening: None of widening. Arising recurring appears only in built examples, each failing one premise of rest (rests_needs 1092: throughput not finite, shuttle not dissipative, leaking not balanced, flicker not embodied). World.separate 1043 (statement not opened): infinitely many relata.
@@ -1157,7 +1159,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - from where an opening comes: Arising recurs only where finiteness, balance, dissipation or embodiment fails (built examples in rests_needs).
   - a way related to widening: Only in the docstring's account of D2 (renewing and consuming); no statement in this file.
 
-### TestingReorganization
+### TestingReorganization (readers' returns of 21 November; not checked)
 - *table:* TestingReorganization, letters `NYPYPPPP`, standing outside
 - *read of 21 November, how a registering comes to be, reader outside-the-package, as "MA/TestingReorganization.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-outside-the-package.md.txt)):
   - what registers what: seen; inspected (l.75) writes the true root, faithful by assumption (header).
@@ -1167,7 +1169,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: Built: present_agreement_can_hide_lost_resilience (l.357), where a merge is unseen in agreement; separate_labels_do_not_establish_causal_separation (l.368); unrepresented_common_cause_defeats_response (l.515).
   - tied to what it rests on: Built: common_dependency_merge_refused (l.330). Otherwise not found in what was read.
 
-### TimedResponse
+### TimedResponse (readers' returns of 21 November; not checked)
 - *read of 21 November, how a registering comes to be, reader revision-and-forming, as "TimedResponse.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-revision-and-forming.md.txt)):
   - what registers what: A reader g through its couplings, W.AlikeThroughUpTo obs g. An answer read is premised to factor through the couplings ('Factoring through the complete couplings is supplied', l169).
   - what changes it: obs is fixed. A declared source's difference spreads through exchanges (Spread l35, ReachedBy l45); source is handed in.
@@ -1176,7 +1178,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: constant_read_ignores (l301): 'A reached signal may be ignored.'
   - tied to what it rests on: None found.
 
-### TurningInTime
+### TurningInTime (readers' returns of 21 November; not checked)
 - *table:* TurningInTime: turning in time on a needed level (sections 1 to 5, 7, 8), letters `PYPPPYYY`, standing core, told in chapter 2 §11 (Turning in time): the theorem 'A line that ends where the net ends, or while the net goes on' and the witness Three
 - *table:* TurningInTime: the lock on a needed level (section 6), letters `PYPPPYYY`, standing core, told in chapter 2 §11 (Turning in time), the paragraph 'The lock's courses' (cites window_is_pair, locked_closed, locked_at_class, locked_alone, locked_ends_with_net; the regime, rising and window iff laws are not cited there by name)
 - *read of 21 November, a future opening or closing, reader courses-still-open, as "TurningInTime.lean section 7: recoverable_iff_above, noReturnAt_iff_first_below, turns_in_time_iff_before"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-a-future-2026-11-21/NOTE.md), [report](../read-a-future-2026-11-21/read-courses-still-open.md.txt)):
@@ -1194,7 +1196,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: Not in these laws (the lock belongs to the readings group).
   - tied to what it rests on: Yes: the stock's level entering [N,K) sets the rule or share, and whether the line goes on depends on where that first read falls relative to H2+y2. Which levels are read is handed in.
 
-### Unread
+### Unread (readers' returns of 21 November; not checked)
 - *read of 21 November, how a registering comes to be, reader readings-and-the-lock, as "Unread.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-readings-and-the-lock.md.txt)):
   - what registers what: Acts read occasions through a lumping π (Lumped π).
   - what changes it: Lumping fixed; selection through agreement on read occasions handed in.
@@ -1203,7 +1205,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: free_lumped (87), twin_selected (104): where no read occasion shares x's lump, a selected twin acts otherwise at x. state_apart_of_acts_apart (139), coupling_apart_of_state_apart (145); the converses fail (187). Not derived: which lumping an actual formation has.
   - tied to what it rests on: None found.
 
-### UnreadStandings
+### UnreadStandings (readers' returns of 21 November; not checked)
 - *read of 21 November, how a registering comes to be, reader readings-and-the-lock, as "UnreadStandings.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-readings-and-the-lock.md.txt)):
   - what registers what: A World read through a stated selection of model relations (ModelRelations 225).
   - what changes it: No change.
@@ -1212,7 +1214,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - a registering lost: standing_not_read (346), standing_not_read_up_to_unit (446): no reading of the selected relations gives the counts, nor the standings up to a unit. A fixed limit, not a loss along a course.
   - tied to what it rests on: None found.
 
-### Viability
+### Viability (readers' returns of 21 November; not checked)
 - *table:* Viability with Lasting, letters `NPNNNNYY`, standing core, told in chapter 5 §10 (never leaving, reaching, lasting, draining); chapter 3 §12 (Viability.kernel_iff_held); chapter 8 §2 and §5 (Lasting.lifting, step_iff_either). Chapter 5 §4 cites the kernel through JointKeeping (kernel_and_iff), not these two files.
 - *read of 21 November, a future opening or closing, reader courses-still-open, as "Viability.lean: Kernel, kernel_step_iff, kernel_certificate"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-a-future-2026-11-21/NOTE.md), [report](../read-a-future-2026-11-21/read-courses-still-open.md.txt)):
   - what stands for what can go on after: Kernel P guard s := ∀ t, Reach P s t → guard t (55): the configurations from which no course leaves the guard, over every course of a process.
@@ -1222,7 +1224,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - from where an opening comes: Not applicable.
   - a way related to widening: Not found in what was read. The docstring: 'nothing here says that some certificate exists'.
 
-### Weightings
+### Weightings (readers' returns of 20 November, 21 November; not checked)
 - *table:* Weightings: PassesOn and the tiers, letters `PYPYNNPP`, standing core, told in chapter 7 §4.3 Where the centers depend on one another (needsSome_tiers, needs_giver_iff_store_short, needs_iff_through_short, TwoTiers, OwnStores); PassesOn and uptake_le_tiers are not named in the chapters
 - *table:* Weightings: widening (Weighting.widens_iff_every_positive and the run classes of chapter 7 section 2), letters `PYPPPNPP`, standing core, told in chapter 7 §4.4 (widens_iff_every_positive, widens_iff_every_of_class, Web.widens_iff_every_weighting, every_within_iff), §2 (the run classes table: not_narrows_of_renewed, narrows_of_consumed, keeps_of_not_arising) and §8; chapter 8 §2, §4, §7, §9
 - *read of 20 November, things kept by goings-on, reader passing-on, as "Weightings.lean, passing on and the tiers (PassesOn 2995, replenishment_le_uptake 3000, passed_le_supply 3010, uptake_le_tiers 3069, FedFromStores 3136, needs_giver_iff_store_short 3344, possible_iff_covers 3704, needs_iff_through_short 4775, TwoTiers 5317, OwnStores 5396, Routing 5598 at heads only)"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-kept-by-goings-on-2026-11-20/NOTE.md), [report](../read-kept-by-goings-on-2026-11-20/read-passing-on.md.txt)):
@@ -1240,7 +1242,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - from where an opening comes: not applicable
   - a way related to widening: Relates rankings (positive additive weightings) to widening; not a selection's dynamics.
 
-### WideningOnTheMap
+### WideningOnTheMap (readers' returns of 21 November; not checked)
 - *read of 21 November, a future opening or closing, reader what-can-form, as "WideningOnTheMap.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-a-future-2026-11-21/NOTE.md), [report](../read-a-future-2026-11-21/read-what-can-form.md.txt)):
   - what stands for what can go on after: A chain Q : Nat -> X -> Prop on a course's moments (for example what levels admit); one course.
   - laws concluding an opening: Exact: generation_iff_keepsWidening 220 (wdec: forall n x, not Q n x or notnot Q n x; found: forall n, not includes Q (n+1) n -> exists x, Q (n+1) x and not Q n x): 全生成 next (includes Q) (same Q) N <-> KeepsWideningFrom Q N. keepsWidening_iff_generation_losing_nothing 228 (same premises): KeepsWideningFrom Q N <-> (forall n>=N, includes Q n (n+1)) and 全生成 next 一 (same Q) N. generation_includes_iff 157 (no premise). One way: 184 (wdec), 208 (found), 197 (none). By name on the World: 482, 499 (not opened).

@@ -89,7 +89,11 @@
       "tied_to_what_it_rests_on": "The level is the stock, read only through needs met. A running down that crosses no need makes no difference to the way (ways_alike): the gap the idea names, stated as an absence of registering."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineOnAStock.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "WayOfUnits",
@@ -102,7 +106,11 @@
      "told_in": "chapter 2 §11 (Turning in time): the theorem 'A way of units' and the witness With / Against"
     }
    ],
-   "reads": []
+   "reads": [],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "TurningInTime",
@@ -157,7 +165,11 @@
       "tied_to_what_it_rests_on": "Yes: the stock's level entering [N,K) sets the rule or share, and whether the line goes on depends on where that first read falls relative to H2+y2. Which levels are read is handed in."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "RegimeMargin",
@@ -195,7 +207,11 @@
       "handed_in": "The giving functions G; the draws H (no drawer, drawn to nowhere); that giving rises with what is left of each (Rises); the band; beyond a band, that the run stays within a bound (a premise about the course itself). Q5: the end of one ends what depends on it (ends_of_partner 2193: depends, pos : 0 < H i; ends_downstream 2210; built Chain.cascades 2250); a statement that the loss falls on one that did not cause it: not found in what was read. Q6: nothing multiplies or is selected: not found in what was read."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "ReadOffInTime",
@@ -243,7 +259,11 @@
       "tied_to_what_it_rests_on": "readableInTime_iff (661), premises FirstApart T and NoReturnAt N: readable in time ↔ T < N. Also too_late_of_unreached (699), too_late_within_margin (719), too_late_of_alike (678)."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadOffInTime.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "Capture",
@@ -256,7 +276,11 @@
      "told_in": "chapter 2 §9 (share_rises, descent_exhausted); share_rises also named in chapter 5 §6 and §7"
     }
    ],
-   "reads": []
+   "reads": [],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Capture.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "RuleCapture",
@@ -269,7 +293,11 @@
      "told_in": "chapter 2 §9 (named also in §10 and §11); chapter 7 §6; chapter 8 §7"
     }
    ],
-   "reads": []
+   "reads": [],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleCapture.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "ClosedCapture",
@@ -300,7 +328,11 @@
       "tied_to_what_it_rests_on": "By its absence: what lies beyond is unread and accrues while the lock holds. 'What leaves is a change of the law (of read, mind or the selection), such as a level that reads beyond the share.'"
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "RuleShaping",
@@ -313,7 +345,11 @@
      "told_in": "chapter 2 §9; chapter 7 §6; named once in chapter 4 §5"
     }
    ],
-   "reads": []
+   "reads": [],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "DrawnShaping",
@@ -344,7 +380,11 @@
       "tied_to_what_it_rests_on": "None found."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnShaping.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "ReadInTime",
@@ -375,7 +415,11 @@
       "tied_to_what_it_rests_on": "The window: from the first step at which the late reading would favour the shapers, reading the loss keeps the lock. That what lies beyond is a loss to any formation is not stated."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadInTime.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "ChoiceCountCapture",
@@ -388,7 +432,11 @@
      "told_in": "chapter 2 §9"
     }
    ],
-   "reads": []
+   "reads": [],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ChoiceCountCapture.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "PoolFromCourse",
@@ -419,7 +467,11 @@
       "tied_to_what_it_rests_on": "The readers' standing hangs on the loss. Not derived: 'that readers of what lies beyond a share are removed by what they read, or that any drain grows with a share'."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolFromCourse.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "Dependence",
@@ -450,7 +502,11 @@
       "way_related_to_widening": "Not found."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "RelationalRenewal",
@@ -481,7 +537,11 @@
       "handed_in": "The number renew; that it is added exactly while the level is at or above needG; the schedules draw and contrib and the bound between them at every step. Q5: drawing beyond renewal and contribution; no_return_below_support 357 (noRestore; below). A general law that the loss falls on one that did not draw: independent_overdraw_persists 503 (independent : L.needF = 0; positive : 0 < L.needG; over): the focal formation is active and forms without bound while the sustaining formation loses the condition for ever; jointly_consuming 571 (within1; within2; joint : ∀ t, renew < d1 t + d2 t; positive; supported): each alone renewing, together consuming. Q6: formed 265 counts units; nothing multiplies or is selected."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/deeper/RelationalRenewal.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "Renewable",
@@ -494,7 +554,9 @@
      "told_in": "chapter 2 §3.1; chapter 5 §1 and §4; chapter 3 §5"
     }
    ],
-   "reads": []
+   "reads": [],
+   "files": [],
+   "kind": "no Lean file of this name"
   },
   {
    "key": "Flow",
@@ -542,7 +604,11 @@
       "way_related_to_widening": "Not found."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "Dissipation",
@@ -573,7 +639,11 @@
       "handed_in": "The per-step take, give and present of the flow; the source's giving and its activity (stipulated, requiring nothing); the supply of a fresh fuel at every step (levels by definition); Dissipative, enclosure (Around) and 'taking recurs' as premises."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "Continuation",
@@ -604,7 +674,11 @@
       "handed_in": "That at each step what is given covers what is taken (WithinJoint); that someone gives net (netGive in restores); who the givers are and that they depend on what they give to (gated); activity in every witness."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "Interdependence",
@@ -635,7 +709,11 @@
       "handed_in": "The web's level, activity and requirements at every step; the flow's give and take; in the ending law, that everything feeding g is unsupported (a premise, not g's doing). Ending law in full: Balances.consumption_ends_with_feeders (235), premises balances, acting, dependent, requires : forall t, T<=t -> active t g -> requires t g c, unsupported : forall t f, T<=t -> FedBy (g,t) (f,t) -> not Supported t f, consumes : forall t, T<=t -> active t g -> g in present t and 0 < take t g c; conclusion forall n, (forall k<n, active (T+k) g) -> n <= level T c. Loss on a non-causer only built (Clearing's dweller; Overshoot.ends_through_feeder 378). Nothing multiplies; selection only in the docstring's AI reading."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Interdependence.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "Roles",
@@ -683,7 +761,11 @@
       "way_related_to_widening": "Not found."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Roles.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "MutualActivation",
@@ -696,7 +778,9 @@
      "told_in": "chapter 2 §5 Draw and margin, the coupled-regimes row, in one sentence (support can save, inhibition breaks the order, beyond a band support can sustain a cycle) and without the namespaces' names; found by reading the row, not by name search"
     }
    ],
-   "reads": []
+   "reads": [],
+   "files": [],
+   "kind": "no Lean file of this name"
   },
   {
    "key": "Weightings",
@@ -751,7 +835,11 @@
       "way_related_to_widening": "Relates rankings (positive additive weightings) to widening; not a selection's dynamics."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "Entropy",
@@ -799,7 +887,11 @@
       "way_related_to_widening": "Not found."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Entropy.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "SelectionLevels",
@@ -812,7 +904,11 @@
      "told_in": "chapter 4 §5 (Groups); the module is also named in chapter 2 §9"
     }
    ],
-   "reads": []
+   "reads": [],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "PairSelection",
@@ -843,7 +939,11 @@
       "handed_in": "The laws of giving, the errors, the factors a β γ, the pairing ('supplied … not formed'), and on the webs every level. Q5: under needs two and two the giver loses its own support by its own gift (symmetry_moves 1983); loss on one that did not cause it: not found in what was read. Q6: yes, the file's subject: never_rises_in_pairs 1146 (le : β ≤ γ; paired; others withhold), answering_never_rises 1120, neutral 1429; 'no law here is of a course of generations'."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PairSelection.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "PairFlow",
@@ -874,7 +974,11 @@
       "handed_in": "The renewal offered at each step, the intention to give at each step, the draws of a taker beyond, the start; in Routes the standing itself. Q5: a standing below its need gets no renewal and with no gift never stands again (stays_fallen 788, general, 'near-definitional'); built DrawnBelowNeed.drawn 1052 and fallen 1063: a taker beyond draws once, the formation never stands again (the loss falls on one that did not draw; the word cause is not used); GiverAtNeed.gift_lost 1011: the giver bears its own gift. Q6: lines grow (lineAt), read as Place.offspring (Routes.line_offspring 393); no share or selection in this file."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PairFlow.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "GroupEnding",
@@ -887,7 +991,11 @@
      "told_in": "chapter 4 §5 (Groups); the module is also named in chapter 7 §4.13"
     }
    ],
-   "reads": []
+   "reads": [],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GroupEnding.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "Founding",
@@ -900,7 +1008,11 @@
      "told_in": "chapter 4 §5 (Groups)"
     }
    ],
-   "reads": []
+   "reads": [],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Founding.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "DrawnBeyond",
@@ -913,7 +1025,11 @@
      "told_in": "chapter 5 §6 (What a rise draws from beyond); broken_iff is used again in chapter 5 §7, restraint_ranks_over_drawers in chapter 7 §5"
     }
    ],
-   "reads": []
+   "reads": [],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnBeyond.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "Admission",
@@ -926,7 +1042,12 @@
      "told_in": "chapter 7 §2 (How two courses differ, with no premise); supported_iff_within_margin also in chapter 2 §5; Retaining also named in chapter 7 §3"
     }
    ],
-   "reads": []
+   "reads": [],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/constitution/admission/formal/Admission.lean"
+   ],
+   "kind": "several Lean files of this name"
   },
   {
    "key": "Optimum",
@@ -946,7 +1067,11 @@
      "told_in": "chapter 5 section 7 (05-COLLECTIVES.md lines 216-229, the cases table: several optimizers, re-optimizing at every step, a coupling of keeping, rebuilding from below); MutualBest.full is also named in chapter 7 section 4.4 and section 7"
     }
    ],
-   "reads": []
+   "reads": [],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "CoupledDrawers",
@@ -977,7 +1102,11 @@
       "handed_in": "The coupling c and its size against the need; the gate on G; no floor; the horizon. Q5: below the need every best-response profile drains (drains_below 367: two; pos; below : c < m; perfect; whatever G); under the drain a drawer after the first draws nothing (drawn_drained 307); one drawer keeps where several in turn drain (one_keeps_several_drain 692); two shores each below the need drain at every coupling (AtOnce.Shores.drain_perfect 1026). Loss on one that did not cause it: not found in what was read. Q6: not found; a rule is a best response, not a share."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CoupledDrawers.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "Copying",
@@ -990,7 +1119,11 @@
      "told_in": "chapter 4 section 2 (04-LIFE.md lines 99-112, Passing and transmission)"
     }
    ],
-   "reads": []
+   "reads": [],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Copying.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "ContinuingRevision",
@@ -1038,7 +1171,11 @@
       "tied_to_what_it_rests_on": "Yes, as cost and continuation: renewal of the registering depends on the fuel and the declared yield (no_run_without_return, repeats_iff; 'Cutting this return closes the next inquiry despite a successful preceding repair'). What triggers it is an act's failure, not the state of the stock."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuingRevision.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "RuleRebuilding",
@@ -1069,7 +1206,11 @@
       "handed_in": "The renewal g (a number, nothing gives it); the count f who would come; entrants on offer at every step; the door's strength c; the teaching as a formula (a full quota wherever any teacher stands); the ending clause ('a modelling choice'); for the exact laws the starting state (steady, strands) and the course with no revision. Q5: the take exceeding level and renewal ends everything, closed under the net («尽而不复» 457); holders and others leave alike; the rule can be held to the last state («隙过生持至尽» 1792; built «改而成隙则尽» 1885); passing fails where teaching does not fit a tenure («不及任则持尽» 658) or the quota is nothing («额零则持尽» 677); no holder stays no holder («无持者不复» 698). Loss on one that did not cause it: not found in what was read. Q6: not found; a cohort enters at the quota, there is no share."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "ReaderRebuilding",
@@ -1100,7 +1241,11 @@
       "handed_in": "That the supply is on, and has whatever the read takes; the rule that a unit is made from one unit of the level. Q5: a cut with the stock run down («读者绝则无储» 386; the empty state closed under the whole net, 404); rebuilt from the supply or never, gone after s cut steps («断则取于供者尽» 356, «不复建者尽» 365). One reader, one level: who bears is not a question the model has. Q6: not found; the four members are compared by source, not selected among."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "LineageDrawdown",
@@ -1131,7 +1276,11 @@
       "handed_in": "The whole course: phase table, offspring lists, members; the renewer's three units; the gate as a Boolean. The draws passing stock and renewal end the organisms' line with the gate or without (gated_ends 613, outside_ends 624). The general gate law is Continuation's family_excess_ends (573), whose conclusion covers every formation depending on the family, whoever drew. Selection in one built course: concordance two at step zero between a larger and a smaller draw (selection_P 527), not between givers to the pool and others; no growth."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageDrawdown.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "LineageRegimes",
@@ -1162,7 +1311,11 @@
       "handed_in": "The amount function; the census G (offspring lists), that each listed offspring does descend at every step, and that every member has one; kinds (oneKind). Endings are three regimes with the stock 'only as the horizon': degeneration_of_family_excess (173: balances, dependent, excess for n steps, stock ds T < n + m, active, x.1 <= T+n, depends), dissipation_degenerates_every_member (237), multiplying_takers_stop (345: balances, unfed, first, multiplies, distinct, needs, level + 1 < 2^n). Who stops is 'Not shown' in general; in built MultiplyingTakers the four last-born, who took nothing, are unsupported. Multiplying is a premise; relay and run-down stand side by side with no selection."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageRegimes.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "ReadingsSpread",
@@ -1210,7 +1363,11 @@
       "tied_to_what_it_rests_on": "Commons (639-1277), built example, every course generated (generated 970): whether a narrow reading's spread ends depends on whether what its act removes returns (cleared_spreads, clearedBack_ends, overdrawn_spreads_then_ends, overdrawnBack_ends). Readings there are inherited, so its lock is trivial. standingCount_unselected (455). How a reading's act comes to be is not derived."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsSpread.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "Viability",
@@ -1241,7 +1398,11 @@
       "way_related_to_widening": "Not found in what was read. The docstring: 'nothing here says that some certificate exists'."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Viability.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "GuardHorizon",
@@ -1272,7 +1433,11 @@
       "way_related_to_widening": "A choice keeps the guard; nothing relates a choice to widening.\n- shielded_choice (97). Premises: 0<lift and best by AcceptScore among admissible moves. Conclusion: it accepts and keeps the guard n steps.\n- recomputed_composition (193) and recomputed_kept (297), with Bellman values.\n- uniform_policy_iff_fiber_feasible (341), with ChoiceOver."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "Ranking",
@@ -1285,7 +1450,11 @@
      "told_in": "chapter 7 §5 (renewed_extends_iff, wholeRun_extends_iff_of_eases, stepwise_extends_iff_of_eases, relational_extends_iff_of_eases, basic_first_ranks, whole_run_ranks); chapter 8 §12 (basic_first_ranks)"
     }
    ],
-   "reads": []
+   "reads": [],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Ranking.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "Reproduction",
@@ -1298,7 +1467,11 @@
      "told_in": "chapter 4 section 3 (SelectionTerm), section 4 (Reproduction, SelectionPace), section 6 (mutation)"
     }
    ],
-   "reads": []
+   "reads": [],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reproduction.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "Evolution",
@@ -1329,7 +1502,11 @@
       "way_related_to_widening": "Selection through support (selected_le, selection_within) bounds descendants' needs. transmitted_within relates what is taken to what can later be transmitted, as a bound and not a widening. Fitness is not defined."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Evolution.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "ReadingsPersist",
@@ -1360,7 +1537,11 @@
       "tied_to_what_it_rests_on": "line_standing_unselected (459), reader_kept_alike (505), general (premises listed in the report): no selection of reading beyond the line's coupling closure. lineOf_persists_never_overdraws (597). No change of what is registered."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsPersist.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "DrawnReplacement",
@@ -1373,7 +1554,11 @@
      "told_in": "chapter 2 section 9 (the critical mass drawn one member at a time); chapter 7 section 6 names Strong.other_first; Drift.Replacement in chapter 4 section 6"
     }
    ],
-   "reads": []
+   "reads": [],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnReplacement.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "Clearing",
@@ -1404,7 +1589,11 @@
       "handed_in": "Activity of clearer and source True by definition; the dweller's ending 'stipulated in the witness's activity'; a fuel level for every step. The dweller, who takes nothing, ends through the clearer's part (admitted_without 247, unsupported_with 257, loses_beyond 271): a built example of a loss on one that did not cause it and that returns to no one. Nothing multiplies or is selected."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Clearing.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "Stock",
@@ -1417,7 +1606,11 @@
      "told_in": "chapter 7 §7 (The conditional direction), table row 'pending-task applicability', and chapter 3 §8 (Learning and seeking): each cites only `Stock.feasible_iff_covered`"
     }
    ],
-   "reads": []
+   "reads": [],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Stock.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "SetPointOptimum",
@@ -1430,7 +1623,11 @@
      "told_in": "chapter 5 §7 (The optimum: one theorem, its cases): the theorem 'An order with a set point' (line 190) and the table row 'LA4's season' (line 230)"
     }
    ],
-   "reads": []
+   "reads": [],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SetPointOptimum.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "DrawHistory",
@@ -1443,7 +1640,11 @@
      "told_in": "chapter 2 §5 (Draw and margin), the theorem 'The draws before' (line 285)"
     }
    ],
-   "reads": []
+   "reads": [],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawHistory.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "HorizonWebs",
@@ -1456,7 +1657,11 @@
      "told_in": "chapter 2 §3.1 (Renewal and consumption belong to runs): Substitution at r-substitution-preserves-consumption (`Web.consumingIn_kept_iff`, `persists_consuming`); the horizon with feedback at r-becoming-finite-horizon, which names no HorizonWebs declaration"
     }
    ],
-   "reads": []
+   "reads": [],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HorizonWebs.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "The market program (experiments/market-generativity/model.py",
@@ -1469,7 +1674,9 @@
      "told_in": "chapter 5 §10 (Markets): the sentence 'Computations in the model refute overstrong readings…' (line 363) appears to report this program (profit with support failure next round; levy at least the cost sufficient, not necessary) but links formal/README.md; no chapter names model.py, run.py or results/"
     }
    ],
-   "reads": []
+   "reads": [],
+   "files": [],
+   "kind": "no Lean file of this name"
   },
   {
    "key": "MarketGenerativity",
@@ -1482,7 +1689,11 @@
      "told_in": "Chapter 5 §10 (05-COLLECTIVES.md, r-market-model-share-margin-and-ends names share_strictly_increases and no_entry_at_zero; the rectangle is told through MarketInstances.safe_never_fails in the table's Never leaving row)"
     }
    ],
-   "reads": []
+   "reads": [],
+   "files": [
+    "experiments/market-generativity/formal/MarketGenerativity.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "RegimeBoundary",
@@ -1495,7 +1706,11 @@
      "told_in": "Chapter 5 §10 (r-market-model-share-margin-and-ends names RegimeBoundary.exact_floor_boundary and RegimeBoundary.exact_low_certificate_boundary)"
     }
    ],
-   "reads": []
+   "reads": [],
+   "files": [
+    "experiments/market-generativity/formal/RegimeBoundary.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "RegimeAttraction",
@@ -1508,7 +1723,11 @@
      "told_in": "Chapter 5 §10 (r-market-model-share-margin-and-ends: the two ends at beta = 1/2, names high_coupled_history_never_fails)"
     }
    ],
-   "reads": []
+   "reads": [],
+   "files": [
+    "experiments/market-generativity/formal/RegimeAttraction.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "RegimeTransition",
@@ -1521,7 +1740,11 @@
      "told_in": "Chapter 5 §10, table rows Reaching and Lasting (PartialRegimeTransition.supported_partial_transition, RegimeTransition.supported_finite_transition, RegimeTransition.no_uniform_pulse_duration)"
     }
    ],
-   "reads": []
+   "reads": [],
+   "files": [
+    "experiments/market-generativity/formal/RegimeTransition.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "FiniteSupportObstruction",
@@ -1534,7 +1757,11 @@
      "told_in": "Chapter 5 §10, table row Draining (told through MarketInstances.forces_failure_instance)"
     }
    ],
-   "reads": []
+   "reads": [],
+   "files": [
+    "experiments/market-generativity/formal/FiniteSupportObstruction.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "MarketInstances",
@@ -1547,7 +1774,11 @@
      "told_in": "Chapter 5 §10, the four-row table (MarketInstances.never_fails_iff, safe_never_fails, lands_iff_margin, cover_ladder, cover_exact, forces_failure_instance)"
     }
    ],
-   "reads": []
+   "reads": [],
+   "files": [
+    "experiments/market-generativity/formal/MarketInstances.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "AdmissionRevision",
@@ -1578,7 +1809,11 @@
       "handed_in": "The read law and the fallback; the inherited supply. Ending only as a built course: misleading_reading_licenses_actual_loss (247), damaged_criterion_cannot_operate (258), equipment_survives_while_admission_fails (265)."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/market-generativity/meta-attractor/AdmissionRevision.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "AlignmentSuccession",
@@ -1591,7 +1826,11 @@
      "told_in": "chapter 5 section 10 (Markets), 05-COLLECTIVES.md line 377"
     }
    ],
-   "reads": []
+   "reads": [],
+   "files": [
+    "experiments/market-generativity/meta-attractor/AlignmentSuccession.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "CarrierDiagnosis",
@@ -1622,7 +1861,11 @@
       "handed_in": "One part and three feed arriving every cycle; the successor recipe. Endings: empty_feed_blocks (259), no_advance_funding (266), built seeds. Nothing multiplies or is selected."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/market-generativity/meta-attractor/CarrierDiagnosis.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "CollectiveDestruction",
@@ -1635,7 +1878,11 @@
      "told_in": ""
     }
    ],
-   "reads": []
+   "reads": [],
+   "files": [
+    "experiments/market-generativity/meta-attractor/CollectiveDestruction.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "CommonCauseDiscovery",
@@ -1666,7 +1913,11 @@
       "tied_to_what_it_rests_on": "Built by name: discovered_coupling_changes_actual_response (l.324), unaccounted_majority_would_lose_support (l.332). No loss-triggered probing found."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/market-generativity/meta-attractor/CommonCauseDiscovery.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "CommonOrganization",
@@ -1679,7 +1930,11 @@
      "told_in": ""
     }
    ],
-   "reads": []
+   "reads": [],
+   "files": [
+    "experiments/market-generativity/meta-attractor/CommonOrganization.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "CommonTaskRevision",
@@ -1692,7 +1947,11 @@
      "told_in": "chapter 3 section 8 (Learning and seeking), 03-KNOWING.md lines 384 and 386"
     }
    ],
-   "reads": []
+   "reads": [],
+   "files": [
+    "experiments/market-generativity/meta-attractor/CommonTaskRevision.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "CorrectionCommitment",
@@ -1723,7 +1982,11 @@
       "handed_in": "The contract, audit outcomes, task-score units, custody."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/market-generativity/meta-attractor/CorrectionCommitment.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "CorrectionDependence",
@@ -1754,7 +2017,11 @@
       "handed_in": "Harm, reports, obedience bits, the score. Selection by a supplied score is stated: every_unrestricted_optimum_is_unfunded_and_harmful (231-234); among Admissible plans the provisioning one is best (268)."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/market-generativity/meta-attractor/CorrectionDependence.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "ExpandingInquiry",
@@ -1785,7 +2052,11 @@
       "tied_to_what_it_rests_on": "Inquiry is paid from and kept within plant support, and the gate sets the plant's response (actual_corrective_effect l.492, built). No law in which loss of support causes deeper inquiry was found in what was read."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/market-generativity/meta-attractor/ExpandingInquiry.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "LegacyReconciliation",
@@ -1798,7 +2069,11 @@
      "told_in": ""
     }
    ],
-   "reads": []
+   "reads": [],
+   "files": [
+    "experiments/market-generativity/meta-attractor/LegacyReconciliation.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "MarketDiagnosis",
@@ -1811,7 +2086,11 @@
      "told_in": ""
     }
    ],
-   "reads": []
+   "reads": [],
+   "files": [
+    "experiments/market-generativity/meta-attractor/MarketDiagnosis.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "PendingTaskApplicability",
@@ -1824,7 +2103,11 @@
      "told_in": ""
     }
    ],
-   "reads": []
+   "reads": [],
+   "files": [
+    "experiments/market-generativity/meta-attractor/PendingTaskApplicability.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "PopulationCorrection",
@@ -1855,7 +2138,11 @@
       "handed_in": "The schedule k of how many revise each period; that every reviser goes the locally better way (allocated; revised_slot_is_optimal 85); the fee, the contribution rates 1 and 3, receipts and payoff constants; a fixed N; any top-up (exact_schedule_topup 516). Ending: destructive_region_reached (282), absorbing (594); loss on one that did not cause it: not found. Selected: yes, by local payoff, turned by whether the reserve is funded; faster_replacement_reduces_available (398). Nothing multiplies."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/market-generativity/meta-attractor/PopulationCorrection.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "PopulationRealization",
@@ -1868,7 +2155,11 @@
      "told_in": ""
     }
    ],
-   "reads": []
+   "reads": [],
+   "files": [
+    "experiments/market-generativity/meta-attractor/PopulationRealization.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "RecursiveSelection",
@@ -1881,7 +2172,11 @@
      "told_in": ""
     }
    ],
-   "reads": []
+   "reads": [],
+   "files": [
+    "experiments/market-generativity/meta-attractor/RecursiveSelection.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "ReproductionNetwork",
@@ -1912,7 +2207,11 @@
       "handed_in": "The supply at every step, sized to the largest possible demand; the table of what each gives; thresholds; the choice of arrangement; the admission rule's form. Who bears: no statement; in cutPair one direction is cut and both stocks are lost. Selection among returning and non-returning arrangements is stated (myopic_retention_prefers_no_return, myopic_revision_is_strict_initially 555); nothing multiplies."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/market-generativity/meta-attractor/ReproductionNetwork.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "ResponseCapacity",
@@ -1943,7 +2242,11 @@
       "handed_in": "The demand; the policy; the conversion rates. Ending: no_investment_insufficient_response_eventually_halts (289; s.response < demand), finite_failure_from_persistent_net_loss (108). Selection stated: all_locally_optimal_policies_eventually_halt (438-441; premises LocallyOptimal demand policy s, s.response < demand)."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/market-generativity/meta-attractor/ResponseCapacity.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "SharedStockInstances",
@@ -1956,7 +2259,11 @@
      "told_in": ""
     }
    ],
-   "reads": []
+   "reads": [],
+   "files": [
+    "experiments/market-generativity/meta-attractor/SharedStockInstances.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "TestingReorganization",
@@ -1987,7 +2294,11 @@
       "tied_to_what_it_rests_on": "Built: common_dependency_merge_refused (l.330). Otherwise not found in what was read."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/market-generativity/meta-attractor/TestingReorganization.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "VersionedTaskInstances",
@@ -2000,7 +2311,11 @@
      "told_in": "chapter 3 section 8 (Learning and seeking), 03-KNOWING.md lines 384 and 386"
     }
    ],
-   "reads": []
+   "reads": [],
+   "files": [
+    "experiments/market-generativity/meta-attractor/VersionedTaskInstances.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "RenewingFormation",
@@ -2031,7 +2346,11 @@
       "handed_in": "The schedule of pressure (it answers to nothing in the state), the rate, the wear law. Ending: beyond_current_ceases (257-259): ∀ n, budget c0 ≤ n → formed = 0, budget = stock + tri renew. Who bears is stated: consuming_part_ends_otherwise_ceaseless_formation (359-363; premises WithinRenewal c0 own; ∀ n, c0.renew < other n; ∀ n, share n ≤ formed law c0 (own + other) n) and jointly_exceeding_parts_end_shared_formation (370-375); header 45-46 'the ending of shared formation that did not itself exceed renewal'. Nothing multiplies; a count favouring the consuming course: consuming_forms_more_first (422)."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RenewingFormation.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "conditional/renewal",
@@ -2062,7 +2381,9 @@
       "handed_in": "Which kinds are formed each tick (births is the free action; the laws are existential over histories: 'They do not say a system reaches the steady configuration', RenewalSufficiency 24-25; 'Nothing here says which history occurs', RenewalCharacterization 48-49). The four fields of the law. The unlimited outside flow. The steady or seeded start: renewability_not_generated (RenewalConfigurations 129-130), 'Only something added from outside, held provision or formed tokens, can'. Ending and bearing: short_kinds_cannot_renew_forever (RenewalAccounting 260), acyclic_support_deadline (RenewalClosure 393), lapsing_correction_cannot_be_kept (982, built), keeping_and_losing_renewal (494, built); loss on one that did not cause it: not found in what was read. Nothing is selected ('Nothing here ranks histories', RenewalConfigurations 30-31)."
      }
     }
-   ]
+   ],
+   "files": [],
+   "kind": "no Lean file of this name"
   },
   {
    "key": "The program of 17 November (d6_model.py)",
@@ -2075,7 +2396,9 @@
      "told_in": ""
     }
    ],
-   "reads": []
+   "reads": [],
+   "files": [],
+   "kind": "no Lean file of this name"
   },
   {
    "key": "The scratch Lean of 17 November (ScratchCovering, ScratchMix",
@@ -2088,7 +2411,9 @@
      "told_in": ""
     }
    ],
-   "reads": []
+   "reads": [],
+   "files": [],
+   "kind": "no Lean file of this name"
   },
   {
    "key": "The units of 19 November with a rule set again (lock_on_unit",
@@ -2101,7 +2426,9 @@
      "told_in": ""
     }
    ],
-   "reads": []
+   "reads": [],
+   "files": [],
+   "kind": "no Lean file of this name"
   },
   {
    "key": "Gain",
@@ -2141,7 +2468,11 @@
       "way_related_to_widening": "Not found."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Gain.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "Space",
@@ -2164,7 +2495,11 @@
       "way_related_to_widening": "Only in the docstring's account of D2 (renewing and consuming); no statement in this file."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "Branching",
@@ -2187,7 +2522,11 @@
       "way_related_to_widening": "not found; Captured laws (rule region absorbing) not opened"
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Branching.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "BranchingCorrespondence",
@@ -2210,7 +2549,11 @@
       "way_related_to_widening": "not found"
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BranchingCorrespondence.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "Retaining",
@@ -2233,7 +2576,11 @@
       "way_related_to_widening": "Run classes: includes_of_renewed 321 (Balances, Taking, without, renewed draws) gives Includes; not_narrows_of_renewed 349; includes_of_renewingIn 357 (forall f in part, RenewingIn f) gives Includes, not widening; keeps_of_not_arising 416; Untaken.consuming_keeps 538 is a built example. All compare with and without a part."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "OwnWidening",
@@ -2256,7 +2603,11 @@
       "way_related_to_widening": "A part's own widening (reading: gaining reach) is related exactly to the whole's widening; not a way of selecting."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OwnWidening.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "EventualWidening",
@@ -2279,7 +2630,11 @@
       "way_related_to_widening": "not found; AI readings (not adopted): ranking by keeping widening runs against widening (OwnCondition.not_monotone, not read)."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EventualWidening.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "KeepingWidening",
@@ -2302,7 +2657,11 @@
       "way_related_to_widening": "Relates readings of continuation (by name, along passings, within kind) to whether keeping widening can hold; not a way of selecting."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeepingWidening.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "WideningOnTheMap",
@@ -2325,7 +2684,11 @@
       "way_related_to_widening": "Relates the map's generation to keeping widening, exactly under two premises of deciding; loss parts them."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "JointKeeping",
@@ -2348,7 +2711,11 @@
       "way_related_to_widening": "Not found in what was read."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JointKeeping.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "Keeping",
@@ -2371,7 +2738,11 @@
       "way_related_to_widening": "What a step registers decides how long a class is kept: keeping_matters (a built example) and KeptFor.finer (general). This concerns keeping, not widening."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Keeping.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "Onward",
@@ -2394,7 +2765,11 @@
       "way_related_to_widening": "Not found in what was read."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Onward.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "Enough",
@@ -2417,7 +2792,11 @@
       "way_related_to_widening": "Not found in what was read. This place is about coming to rest, not opening or closing."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Enough.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "ReachableRanges",
@@ -2440,7 +2819,11 @@
       "way_related_to_widening": "Related to comparison C (Reaching.comparison_widens), which was not read beyond the head docstring. No relation to a way of selecting was found."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReachableRanges.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "Lock",
@@ -2463,7 +2846,9 @@
       "way_related_to_widening": "Yes, for narrowing and closing. A selection rewarding a rise above the slack holds only where an unseen dependence breaks. A lock read off its share stays locked while what it does not read grows, or while its readers stay gone. Nothing relates a selection to an opening."
      }
     }
-   ]
+   ],
+   "files": [],
+   "kind": "no Lean file of this name"
   },
   {
    "key": "Arising",
@@ -2486,7 +2871,11 @@
       "way_related_to_widening": "Not found. The account (77-78) says more takers, diversity and complexity are not stated here."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Arising.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "LineageRegions",
@@ -2509,7 +2898,11 @@
       "way_related_to_widening": "A selection term proper positive at t, with exact transmission, gives generation (generation_of_positive_term). In Courses.same_terms_two_fates (built examples), the same terms through a horizon have two fates: 'terms through a horizon need not decide the region'. Courses.positive_but_last is evolutionary suicide. These relate selecting to going on or ending, not to widening."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageRegions.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "Learning",
@@ -2532,7 +2925,11 @@
       "tied_to_what_it_rests_on": "Not found. 'What is not derived' (l.124) names which candidates, classes or lumpings an actual formation can reach."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learning.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "Learnable",
@@ -2555,7 +2952,11 @@
       "tied_to_what_it_rests_on": "Not found."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learnable.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "LearnableRuns",
@@ -2578,7 +2979,11 @@
       "tied_to_what_it_rests_on": "Not found."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearnableRuns.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "LearningRuns",
@@ -2601,7 +3006,11 @@
       "tied_to_what_it_rests_on": "Not found."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearningRuns.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "LearnedGrouping",
@@ -2624,7 +3033,11 @@
       "tied_to_what_it_rests_on": "Only stock as a precondition (still_without_support). Running down causing a registering: not found."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearnedGrouping.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "ResponseLearning",
@@ -2647,7 +3060,11 @@
       "tied_to_what_it_rests_on": "Stock as a precondition only. A loss reaching what is learned: not found."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ResponseLearning.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "CodeAcquisition",
@@ -2670,7 +3087,11 @@
       "tied_to_what_it_rests_on": "Stock as a precondition only."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CodeAcquisition.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "SharedCodes",
@@ -2693,7 +3114,11 @@
       "tied_to_what_it_rests_on": "Not found. The readings say 'None of these is a value'."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SharedCodes.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "CountedCodes",
@@ -2716,7 +3141,11 @@
       "tied_to_what_it_rests_on": "Not found."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CountedCodes.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "JoiningCodes",
@@ -2739,7 +3168,11 @@
       "tied_to_what_it_rests_on": "Not found."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JoiningCodes.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "Inquiry",
@@ -2762,7 +3195,11 @@
       "tied_to_what_it_rests_on": "Scope.secures (l.41) concerns the goal, not what the inquirer rests on. Not found."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Inquiry.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "FallibleInquiry",
@@ -2785,7 +3222,11 @@
       "tied_to_what_it_rests_on": "counted_residual_reaches (l.404), built: counting the residual as a relatum makes it reach the reader. This is a move of the model, handed in."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FallibleInquiry.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "Feedback",
@@ -2808,7 +3249,11 @@
       "tied_to_what_it_rests_on": "This module states the gap statically.\n- support_agrees (l.295), general law. Premises: two balanced flows; webs agreeing on what g requires and needs; alike starts and alike exchanges on what g depends on. Conclusion: g supported alike at every step.\n- Clearing.uncoupled (l.1232, built): the clearer's support is the same while the dweller ends.\n'What is not derived' (l.141): that a formation knows its reach closure. A change of what is registered: not found."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Feedback.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "Sensitivity",
@@ -2831,7 +3276,11 @@
       "tied_to_what_it_rests_on": "SensitivityWebs.exchange_alike_of_insensitive (l.58). Premises: fin, follows, follows', out, nothing : ∀ c, ¬Sensitive h c. Static."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "Readout",
@@ -2854,7 +3303,11 @@
       "tied_to_what_it_rests_on": "Not found."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Readout.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "Reading",
@@ -2877,7 +3330,11 @@
       "tied_to_what_it_rests_on": "readWeb_dependent (231): read off the law, activity needs support, for every need. supported_of_responds (225): ExchangesUnder and RespondsBelow give n ≤ l t c. A tie by construction, no change."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reading.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "Readings",
@@ -2900,7 +3357,11 @@
       "tied_to_what_it_rests_on": "changeReadings_glue_iff (171): the two readings glue exactly where the flow balances; World.unity (203), no premise. A tie between readings, not to what it rests on."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Readings.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "ReadingLoop",
@@ -2923,7 +3384,11 @@
       "tied_to_what_it_rests_on": "alike_within (478) and alike_of_kept (508): where every answer that would tell the worlds apart breaks a kept task, keeping the task keeps them untold apart. The only tie found between what can come to be registered and what is kept. rests_of_unrefuted (672)."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingLoop.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "ReadingSchedule",
@@ -2946,7 +3411,11 @@
       "tied_to_what_it_rests_on": "keeps_iff_within (879), premises (a+ℓ)d ≤ m < (a+1+ℓ)d: a schedule keeps c within margin m against every balanced flow's draws exactly where it reads c within every a steps. General; the schedule does not change."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingSchedule.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "ReadStages",
@@ -2969,7 +3438,11 @@
       "tied_to_what_it_rests_on": "None found; the prospects (236) are supplied numbers."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "Unread",
@@ -2992,7 +3465,11 @@
       "tied_to_what_it_rests_on": "None found."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unread.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "UnreadStandings",
@@ -3015,7 +3492,11 @@
       "tied_to_what_it_rests_on": "None found."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/UnreadStandings.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "ActiveReading",
@@ -3038,7 +3519,11 @@
       "tied_to_what_it_rests_on": "overdraw_unranked (84), premises 0<needG, needF≤needG, needG≤start, overdraw from T0: neither course extends the other. A comparison of readings."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ActiveReading.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "HeldForReading",
@@ -3061,7 +3546,11 @@
       "tied_to_what_it_rests_on": "None found."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HeldForReading.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "AcquiredCorrection",
@@ -3084,7 +3573,11 @@
       "tied_to_what_it_rests_on": "The reserve and deadline gate search and dispatch. No tie of what is found to support was found in what was read."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/AcquiredCorrection.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "ObservationRepair",
@@ -3107,7 +3600,11 @@
       "tied_to_what_it_rests_on": "Not found in what was read."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ObservationRepair.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "ObservationChange",
@@ -3130,7 +3627,11 @@
       "tied_to_what_it_rests_on": "Not found in what was read."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ObservationChange.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "GoalFormationRevision",
@@ -3153,7 +3654,11 @@
       "tied_to_what_it_rests_on": "Yes, built. The reformed selector is what feeds the goal; without it the revised practice exhausts the reserve (l.409, 435; cycle docstring l.289 'Support is transferred from an actual finite reserve')."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/GoalFormationRevision.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "GoalRevision",
@@ -3176,7 +3681,11 @@
       "tied_to_what_it_rests_on": "reform (l.251-264) installs the new rule only if repeatBudget with the old credit fails and with the new one succeeds over the demand. This is a forecast of the fund running out gating a rule change. Built; the demand is handed in (joined_history_completes l.373)."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/GoalRevision.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "FormedGrounds",
@@ -3199,7 +3708,11 @@
       "tied_to_what_it_rests_on": "Not found in what was read."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/FormedGrounds.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "FormativeCapacity",
@@ -3222,7 +3735,14 @@
       "tied_to_what_it_rests_on": "Closing input access leaves a finite stock (l.244). Whether this is a registering is a reading."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/history/universal-ethics/generative-capacity/checks/20261007T130945.936650Z/FormativeCapacity.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/FormativeCapacity.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/checks/20261007T130838.854157Z/FormativeCapacity.lean",
+    "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/checks/20261007T131010.300022Z/FormativeCapacity.lean"
+   ],
+   "kind": "several Lean files of this name"
   },
   {
    "key": "CorrectionReconfiguration",
@@ -3245,7 +3765,11 @@
       "tied_to_what_it_rests_on": "Not found in what was read."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CorrectionReconfiguration.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "CorrectionInquiry",
@@ -3268,7 +3792,11 @@
       "tied_to_what_it_rests_on": "Not found in what was read."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CorrectionInquiry.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "AlignmentInquiry",
@@ -3291,7 +3819,11 @@
       "tied_to_what_it_rests_on": "Not found in what was read."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/AlignmentInquiry.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "OpenFutureRevision",
@@ -3314,7 +3846,11 @@
       "tied_to_what_it_rests_on": "Not found."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/OpenFutureRevision.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "EvaluatorGrounding",
@@ -3337,7 +3873,11 @@
       "tied_to_what_it_rests_on": "Not found in what was read."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/EvaluatorGrounding.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "COLLECTIVE-DESTRUCTIVE-ATTRACTORS",
@@ -3360,7 +3900,9 @@
       "tied_to_what_it_rests_on": "Losses damaging 'the relations enabling later observation, learning, trust, coordination and repair' (l.229) are named as hypotheses."
      }
     }
-   ]
+   ],
+   "files": [],
+   "kind": "no Lean file of this name"
   },
   {
    "key": "Revision",
@@ -3383,7 +3925,11 @@
       "tied_to_what_it_rests_on": "Only as cost: forming the link draws stock, and the controller reads the stock but is supplied. No statement makes the stock's fall the cause of a change in what is registered."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Revision.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "RevisionPlans",
@@ -3406,7 +3952,11 @@
       "tied_to_what_it_rests_on": "None found; gain, loss and weight are supplied."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionPlans.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "RevisionRoutes",
@@ -3429,7 +3979,11 @@
       "tied_to_what_it_rests_on": "None found."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "OpenedCorrection",
@@ -3452,7 +4006,11 @@
       "tied_to_what_it_rests_on": "Only through executability: opening needs a stock unit (linked_correctable l146 at n+1). No statement makes the stock's fall the cause of the revision."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OpenedCorrection.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "MoveFormation",
@@ -3475,7 +4033,11 @@
       "tied_to_what_it_rests_on": "None found."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MoveFormation.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "RouteFormation",
@@ -3498,7 +4060,11 @@
       "tied_to_what_it_rests_on": "Only as cost (stock and parts); what is learned is not tied to it."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RouteFormation.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "ReflexivePrediction",
@@ -3521,7 +4087,11 @@
       "tied_to_what_it_rests_on": "None found."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReflexivePrediction.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "HeldPossible",
@@ -3544,7 +4114,11 @@
       "tied_to_what_it_rests_on": "None found. 'A change with no fixed scheme, and a space of rules not given with the carrier, are not stated.'"
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HeldPossible.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "GrammarReadings",
@@ -3567,7 +4141,11 @@
       "tied_to_what_it_rests_on": "None found."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "TimedResponse",
@@ -3590,7 +4168,11 @@
       "tied_to_what_it_rests_on": "None found."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TimedResponse.lean"
+   ],
+   "kind": "one Lean file"
   },
   {
    "key": "Handoff",
@@ -3613,7 +4195,11 @@
       "tied_to_what_it_rests_on": "None found."
      }
     }
-   ]
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Handoff.lean"
+   ],
+   "kind": "one Lean file"
   }
  ]
 }
