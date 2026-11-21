@@ -1,0 +1,37 @@
+@Becoming.Viability.keepable_step_iff : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {g : S → Prop}
+  {s : S}, Becoming.Viability.Keepable P g s ↔ g s ∧ ∃ a t, P.step s a t ∧ Becoming.Viability.Keepable P g t
+@Becoming.Viability.not_keepable_invariant_iff : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A}
+  {g : S → Prop},
+  (Becoming.Invariant P fun s => ¬Becoming.Viability.Keepable P g s) ↔
+    ∀ (s : S) (a : A) (t : S), P.step s a t → ¬g s → ¬Becoming.Viability.Keepable P g t
+@Becoming.Viability.not_keepable_step : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {g : S → Prop},
+  (∀ (s : S) (a : A) (t : S), P.step s a t → ¬g s → ¬g t) →
+    ∀ {s : S} {a : A} {t : S}, ¬Becoming.Viability.Keepable P g s → P.step s a t → ¬Becoming.Viability.Keepable P g t
+@Becoming.Viability.not_keepable_run : ∀ {S : Type u_1} {A : Type u_2} {P : Generative.Process S A} {g : S → Prop},
+  (∀ (s : S) (a : A) (t : S), P.step s a t → ¬g s → ¬g t) →
+    ∀ (r : Becoming.Run P),
+      ¬Becoming.Viability.Keepable P g (r.state 0) → ∀ (n : Nat), ¬Becoming.Viability.Keepable P g (r.state n)
+Becoming.Viability.ChoicePoint.keepable_gained : ¬Becoming.Viability.Keepable Becoming.Viability.ChoicePoint.process
+      Becoming.Viability.ChoicePoint.afterSplit Becoming.Viability.ChoicePoint.Config.split ∧
+  Becoming.Viability.ChoicePoint.process.step Becoming.Viability.ChoicePoint.Config.split true
+      Becoming.Viability.ChoicePoint.Config.left ∧
+    Becoming.Viability.Keepable Becoming.Viability.ChoicePoint.process Becoming.Viability.ChoicePoint.afterSplit
+        Becoming.Viability.ChoicePoint.Config.left ∧
+      ¬∀ (s : Becoming.Viability.ChoicePoint.Config) (a : Bool) (t : Becoming.Viability.ChoicePoint.Config),
+          Becoming.Viability.ChoicePoint.process.step s a t →
+            ¬Becoming.Viability.ChoicePoint.afterSplit s → ¬Becoming.Viability.ChoicePoint.afterSplit t
+Becoming.Viability.ChoicePoint.keepable_gained_along_run : ¬Becoming.Viability.Keepable
+      Becoming.Viability.ChoicePoint.process Becoming.Viability.ChoicePoint.afterSplit
+      (Becoming.Viability.ChoicePoint.leftRun.state 0) ∧
+  Becoming.Viability.Keepable Becoming.Viability.ChoicePoint.process Becoming.Viability.ChoicePoint.afterSplit
+    (Becoming.Viability.ChoicePoint.leftRun.state 1)
+Becoming.Viability.Successor.nowhere_keepable : ∀ (n : Nat),
+  ¬Becoming.Viability.Keepable Becoming.Viability.Successor.process Becoming.Viability.Successor.atOne n
+Becoming.Viability.Successor.not_keepable_kept_complement_not : (∀ (n : Nat), ∃ r, r.state 0 = n) ∧
+  (∀ (s : Nat) (a : Unit) (t : Nat),
+      Becoming.Viability.Successor.process.step s a t →
+        ¬Becoming.Viability.Keepable Becoming.Viability.Successor.process Becoming.Viability.Successor.atOne s →
+          ¬Becoming.Viability.Keepable Becoming.Viability.Successor.process Becoming.Viability.Successor.atOne t) ∧
+    ¬∀ (s : Nat) (a : Unit) (t : Nat),
+        Becoming.Viability.Successor.process.step s a t →
+          ¬Becoming.Viability.Successor.atOne s → ¬Becoming.Viability.Successor.atOne t
