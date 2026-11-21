@@ -1,0 +1,25 @@
+*An AI agent's return (run as Claude Opus), word for word from the run's journal (wf_ecd6b096-fde). The harness refused the agent's write of a longer report file, so this return is all there is of its report.*
+
+The report was not written: the harness refused the write to `/Users/ren/theories/tmp/r7/one-model/check/noreturn21/REPORT-refuter.md` ("Subagents should return findings as text"). `REPORT-worker.md` does not exist either, so I checked the summary in my brief and the module's header (l.4-55) and docstrings against the Lean.
+
+The build log does match the module as it stands. It ends `exit 0 build 5`, with `"unclean": []`, empty `with_axioms`, and 37 theorems plus 10 defs (47 declarations, as the module has). The module was last written at 17:03:31 and the build started at 17:03:34. There is no sorry, axiom, `native_decide` or `unsafe` in it, and both `rfl` checks are against the package's own statements at TurningInTime 2087 and 2100.
+
+**Verdict.**
+- By the letter of After point 4 it is not a dictionary: test (a) holds on the package's own `Recoverable`, with two premises. (b) holds only on a prophecy carrier, and (c) only for an abstract `Rec`.
+- In substance it is a dictionary with one bridge. The only new argument is the splice (`extend`, `keepable_of_run`) behind J1, which was already sketched on paper on 20 November. Every other new theorem is an old law (`Recoverable.earlier`, `NoReturnAt.recoverable_iff`, R1, R2, R3) carried through J1, or through `prophecy_keepable_iff`, where keepable is just the guard along one run.
+- No sentence should say an old law "became a case". R2' and R3' put keepable in and take it out again, and they rest on R1.
+
+**MUSTs**
+1. **The header contradicts the body (l.53-54).** It says "No older theorem of ReadOffInTime or TurningInTime is called". But `first_of_decided` is called at l.229, and R1's two halves at l.599, 602, 607, 656 and 662.
+2. **(b) as frozen is not reached.** `lock_edge_iff` (l.647) uses keepable on `Prophecy Nat` from `(N, N)`, not on a process whose state is the level. By `prophecy_keepable_iff` it is R1 (`turned_meets_iff`) at T = N.
+3. **"Test (c) holds" says more than the module.** No step law in the module mentions `Recoverable`. `rec_succ_iff` (l.249) is about any `Rec` with premise `j1`, and given `j1` it follows by rewriting. It is never stated on the package's `Recoverable`.
+4. **"No use found is neither" says more than was checked.** The general laws (ReadOffInTime 595-760, `noReturnAt_of_past`, `met_of_recoverable`) take any `feasible` and any `keeps`. `DwellerKept` (ReadOffInTime 971) is a guard on the level and the step together, not on the level alone.
+5. **"J5's premise is false there" holds only by an encoding.** `family_iff_runLevels` works only through a reading π and a state that carries the whole course, and there a state has one run, so keepable says nothing new. On the frozen carrier, `runCourse_tail` (l.188) shows J5's premise holds.
+
+**Lesser**
+- **J1:** premise-free only on `RecoverableBy Eq`; on the package's `Recoverable` it needs `guardResp` and `stepResp`.
+- **Keepable at step 0** (l.174) is likewise on `RecoverableBy Eq`, not on the package's `Recoverable`.
+- **(a):** proved by `kept_before`, which is `Recoverable.earlier` carried through J1.
+- **The worker's "not reached" list leaves out:** J4's `readableInTime_iff` on the runs of any process, (c) and J2's existence on the package's `NoReturnAt`, and `DwellerKept`.
+
+Tool calls: 12.

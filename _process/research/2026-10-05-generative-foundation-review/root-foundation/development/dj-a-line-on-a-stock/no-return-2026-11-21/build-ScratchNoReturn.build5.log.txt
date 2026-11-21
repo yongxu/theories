@@ -1,0 +1,24 @@
+start 17:03:34
+{
+  "tree": "/Users/ren/tmp/dj/batch24",
+  "modules": 153,
+  "ran": [
+    "Becoming.ScratchNoReturn",
+    "BecomingScratchNoReturnAxiomAudit"
+  ],
+  "reused": 152,
+  "unclean": [],
+  "audits": {
+    "Becoming.ScratchNoReturn": {
+      "theorems": 37,
+      "declarations": 47,
+      "with_axioms": {}
+    }
+  },
+  "seconds": {
+    "Becoming.ScratchNoReturn": 3.405,
+    "BecomingScratchNoReturnAxiomAudit": 0.432
+  }
+}
+exit 0 build 5
+end 17:03:42

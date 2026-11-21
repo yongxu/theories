@@ -1,0 +1,21 @@
+*An AI agent's return (run as Claude Opus), word for word from the run's journal (wf_ecd6b096-fde). The harness refused the agent's write of a longer report file, so this return is all there is of its report.*
+
+/Users/ren/tmp/dj/batch24/Becoming/ScratchNoReturn.lean
+
+Last build's exit line: `exit 0 build 5` (`"unclean": []`, `"with_axioms": {}`, 37 theorems). The log is copied to /Users/ren/theories/tmp/r7/one-model/check/noreturn21/build-ScratchNoReturn.log.txt.
+
+**The report file was not written.** The harness refused the write to /Users/ren/theories/tmp/r7/one-model/check/noreturn21/REPORT-worker.md ("Subagents should return findings as text"). I did not get around that; the parent session can write the file from the findings below.
+
+Summary (AI-written):
+- **J1 holds.** On the states themselves (`RecoverableBy Eq`, `recoverableBy_run_iff`, l.159) it needs no premise. On the package's own `Recoverable`, unchanged and with a reading `π` (`recoverable_runLevels_iff`, l.308), it needs one premise: the guard does not tell pointwise-equal level vectors apart. In the frozen form on level vectors (`recoverable_levels_run_iff`, l.352) it needs two premises: the guard and the step's starting vector both respect pointwise agreement. Function extensionality would give both, but it rests on an axiom. The package's `Recoverable` and `NoReturnAt` are instances of `RecoverableBy` by `rfl` (l.133, l.139).
+- **Keepable is recoverable at step 0** with no premise (l.174).
+- **J2 holds** (l.205). Existence needs the premise `decided` (l.224, calls `first_of_decided`).
+- **Test (a) holds** (l.238, l.388), without calling `NoReturnAt.recoverable_iff`. Its form without the past fails, shown by a counterexample on the successor law (`keepable_alone_not`, l.278).
+- **Test (c) holds:** recoverable at N+1 exactly where recoverable at N and keepable at N+1 (`rec_succ_iff`, l.249). It applies only where a course's own states are the states.
+- **Point 3:** both uses' feasible families are indexed families by `rfl` (l.463, l.467). By `indexed_iff_runLevels` (l.442) they are the runs of a process that fixes the index at the start (`Prophecy`, l.404). What is asked is a guard at every step (`meetsNeed_same`, l.472; `DwellerKept` I read in its definition but did not check in Lean). No use found is neither. Every family that respects pointwise agreement is a process's runs on such a carrier (l.454), so J5's premise is false there. On level states, run courses are closed under dropping a first step (l.188).
+- **Test (b) holds.** `recoverable_iff_above'` (l.573) and the R3 twin (l.622) have the old statements, checked by `rfl` (l.615, l.638). They do not call old R2, R3 or R2's halves; they do call R1's public halves and copies of three private lemmas. `lock_edge_iff` (l.647): the lock's level `H + y` is where the need, met so far, is keepable from the state "turned now".
+- **J3 on the level-and-turn-flag carrier was not proved.** I expect it to fail: the run that never turns gives `X` itself. This is argued, not proved.
+- **Not reached:** J4's renewal clause, J6.
+- **Verdict:** by point 4's letter it is not a dictionary. In substance it is a join of carriers, not of laws: on the prophecy carrier keepable carries no choice (`prophecy_keepable_iff`, l.425), so R1 does the lock's work.
+
+Not read: the four older files, most of `TurningInTime` outside lines 1936 to 2140, and the `RegimeMargin` bodies. 27 tool calls, 5 builds (the first had two warnings, fixed). Only single-module scratch builds with the axiom audit ran; the checker, gate and tests were not run.

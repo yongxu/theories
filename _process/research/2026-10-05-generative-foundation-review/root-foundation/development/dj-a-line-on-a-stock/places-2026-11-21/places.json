@@ -44,6 +44,110 @@
  ],
  "same_statements": [
   {
+   "check": "recoverable_iff_above_same",
+   "check_file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/no-return-2026-11-21/ScratchNoReturn.lean.txt",
+   "check_line": 621,
+   "statement": {
+    "written": "recoverable_iff_above'",
+    "resolved": true,
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/no-return-2026-11-21/ScratchNoReturn.lean.txt",
+    "line": 579,
+    "full": "Becoming.ScratchNoReturn.recoverable_iff_above'",
+    "fits": [
+     {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/no-return-2026-11-21/ScratchNoReturn.lean.txt",
+      "line": 579,
+      "full": "Becoming.ScratchNoReturn.recoverable_iff_above'"
+     }
+    ]
+   },
+   "same_statement_as": {
+    "written": "TurningInTime.recoverable_iff_above",
+    "resolved": true,
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean",
+    "line": 2087,
+    "full": "Becoming.TurningInTime.recoverable_iff_above",
+    "fits": [
+     {
+      "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean",
+      "line": 2087,
+      "full": "Becoming.TurningInTime.recoverable_iff_above"
+     }
+    ]
+   },
+   "up_to": "unfolding of definitions and the other reductions of Lean (definitional equality as the elaborator decides it), binder names and which arguments are implicit ignored",
+   "universes_written": {
+    "left": null,
+    "right": null
+   },
+   "log": {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/no-return-2026-11-21/build-ScratchNoReturn.log.txt",
+    "exit": 0,
+    "axioms": {},
+    "theorems": 37,
+    "unclean": []
+   },
+   "log_says": "exit 0; axiom report empty (37 theorems audited)",
+   "in_package": {
+    "searched": "tracked Lean files under experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/, copies left out, for a theorem named recoverable_iff_above'",
+    "found": []
+   },
+   "record": "../no-return-2026-11-21/NOTE.md",
+   "what": "a check filed as scratch text, outside the package, written to close by rfl: where Lean accepted it (see the filed log on this line), the two statements are the same up to unfolding, that is, definitionally equal. The script read the text and the filed log and ran no Lean; nothing here checks that the text filed, or the file named for the other side, is the text that was built"
+  },
+  {
+   "check": "noReturnAt_iff_first_below_same",
+   "check_file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/no-return-2026-11-21/ScratchNoReturn.lean.txt",
+   "check_line": 644,
+   "statement": {
+    "written": "noReturnAt_iff_first_below'",
+    "resolved": true,
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/no-return-2026-11-21/ScratchNoReturn.lean.txt",
+    "line": 628,
+    "full": "Becoming.ScratchNoReturn.noReturnAt_iff_first_below'",
+    "fits": [
+     {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/no-return-2026-11-21/ScratchNoReturn.lean.txt",
+      "line": 628,
+      "full": "Becoming.ScratchNoReturn.noReturnAt_iff_first_below'"
+     }
+    ]
+   },
+   "same_statement_as": {
+    "written": "TurningInTime.noReturnAt_iff_first_below",
+    "resolved": true,
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean",
+    "line": 2100,
+    "full": "Becoming.TurningInTime.noReturnAt_iff_first_below",
+    "fits": [
+     {
+      "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean",
+      "line": 2100,
+      "full": "Becoming.TurningInTime.noReturnAt_iff_first_below"
+     }
+    ]
+   },
+   "up_to": "unfolding of definitions and the other reductions of Lean (definitional equality as the elaborator decides it), binder names and which arguments are implicit ignored",
+   "universes_written": {
+    "left": null,
+    "right": null
+   },
+   "log": {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/no-return-2026-11-21/build-ScratchNoReturn.log.txt",
+    "exit": 0,
+    "axioms": {},
+    "theorems": 37,
+    "unclean": []
+   },
+   "log_says": "exit 0; axiom report empty (37 theorems audited)",
+   "in_package": {
+    "searched": "tracked Lean files under experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/, copies left out, for a theorem named noReturnAt_iff_first_below'",
+    "found": []
+   },
+   "record": "../no-return-2026-11-21/NOTE.md",
+   "what": "a check filed as scratch text, outside the package, written to close by rfl: where Lean accepted it (see the filed log on this line), the two statements are the same up to unfolding, that is, definitionally equal. The script read the text and the filed log and ran no Lean; nothing here checks that the text filed, or the file named for the other side, is the text that was built"
+  },
+  {
    "check": "renewable_iff_step_same",
    "check_file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchRenewalBridge.lean.txt",
    "check_line": 117,
@@ -769,6 +873,110 @@
     }
    ],
    "same_statement": [
+    {
+     "check": "recoverable_iff_above_same",
+     "check_file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/no-return-2026-11-21/ScratchNoReturn.lean.txt",
+     "check_line": 621,
+     "statement": {
+      "written": "recoverable_iff_above'",
+      "resolved": true,
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/no-return-2026-11-21/ScratchNoReturn.lean.txt",
+      "line": 579,
+      "full": "Becoming.ScratchNoReturn.recoverable_iff_above'",
+      "fits": [
+       {
+        "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/no-return-2026-11-21/ScratchNoReturn.lean.txt",
+        "line": 579,
+        "full": "Becoming.ScratchNoReturn.recoverable_iff_above'"
+       }
+      ]
+     },
+     "same_statement_as": {
+      "written": "TurningInTime.recoverable_iff_above",
+      "resolved": true,
+      "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean",
+      "line": 2087,
+      "full": "Becoming.TurningInTime.recoverable_iff_above",
+      "fits": [
+       {
+        "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean",
+        "line": 2087,
+        "full": "Becoming.TurningInTime.recoverable_iff_above"
+       }
+      ]
+     },
+     "up_to": "unfolding of definitions and the other reductions of Lean (definitional equality as the elaborator decides it), binder names and which arguments are implicit ignored",
+     "universes_written": {
+      "left": null,
+      "right": null
+     },
+     "log": {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/no-return-2026-11-21/build-ScratchNoReturn.log.txt",
+      "exit": 0,
+      "axioms": {},
+      "theorems": 37,
+      "unclean": []
+     },
+     "log_says": "exit 0; axiom report empty (37 theorems audited)",
+     "in_package": {
+      "searched": "tracked Lean files under experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/, copies left out, for a theorem named recoverable_iff_above'",
+      "found": []
+     },
+     "record": "../no-return-2026-11-21/NOTE.md",
+     "what": "a check filed as scratch text, outside the package, written to close by rfl: where Lean accepted it (see the filed log on this line), the two statements are the same up to unfolding, that is, definitionally equal. The script read the text and the filed log and ran no Lean; nothing here checks that the text filed, or the file named for the other side, is the text that was built"
+    },
+    {
+     "check": "noReturnAt_iff_first_below_same",
+     "check_file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/no-return-2026-11-21/ScratchNoReturn.lean.txt",
+     "check_line": 644,
+     "statement": {
+      "written": "noReturnAt_iff_first_below'",
+      "resolved": true,
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/no-return-2026-11-21/ScratchNoReturn.lean.txt",
+      "line": 628,
+      "full": "Becoming.ScratchNoReturn.noReturnAt_iff_first_below'",
+      "fits": [
+       {
+        "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/no-return-2026-11-21/ScratchNoReturn.lean.txt",
+        "line": 628,
+        "full": "Becoming.ScratchNoReturn.noReturnAt_iff_first_below'"
+       }
+      ]
+     },
+     "same_statement_as": {
+      "written": "TurningInTime.noReturnAt_iff_first_below",
+      "resolved": true,
+      "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean",
+      "line": 2100,
+      "full": "Becoming.TurningInTime.noReturnAt_iff_first_below",
+      "fits": [
+       {
+        "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean",
+        "line": 2100,
+        "full": "Becoming.TurningInTime.noReturnAt_iff_first_below"
+       }
+      ]
+     },
+     "up_to": "unfolding of definitions and the other reductions of Lean (definitional equality as the elaborator decides it), binder names and which arguments are implicit ignored",
+     "universes_written": {
+      "left": null,
+      "right": null
+     },
+     "log": {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/no-return-2026-11-21/build-ScratchNoReturn.log.txt",
+      "exit": 0,
+      "axioms": {},
+      "theorems": 37,
+      "unclean": []
+     },
+     "log_says": "exit 0; axiom report empty (37 theorems audited)",
+     "in_package": {
+      "searched": "tracked Lean files under experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/, copies left out, for a theorem named noReturnAt_iff_first_below'",
+      "found": []
+     },
+     "record": "../no-return-2026-11-21/NOTE.md",
+     "what": "a check filed as scratch text, outside the package, written to close by rfl: where Lean accepted it (see the filed log on this line), the two statements are the same up to unfolding, that is, definitionally equal. The script read the text and the filed log and ran no Lean; nothing here checks that the text filed, or the file named for the other side, is the text that was built"
+    },
     {
      "check": "first_marked_same",
      "check_file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchUnitsTurn.lean.txt",

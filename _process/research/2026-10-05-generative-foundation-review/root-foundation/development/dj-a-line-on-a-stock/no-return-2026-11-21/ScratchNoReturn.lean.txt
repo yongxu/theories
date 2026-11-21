@@ -1,0 +1,680 @@
+import Becoming.ScratchKeepableStep
+import Becoming.TurningInTime
+
+/-!
+# ScratchNoReturn: recoverable and keepable, set against each other
+
+Scratch, outside the package (AI-written, Claude, 21 November 2026, board row DJ). Not landed.
+It tries the guesses J1 to J6 of `tmp/r7/one-model/check/noreturn21/FROZEN-TWO-NO-RETURNS.md`:
+whether `ReadOffInTime`'s `Recoverable` (some feasible course agreeing with a course up to `N`
+keeps what is asked) and `JointKeeping`'s `Keepable` (some run from a state stays within a guard)
+are one notion.
+
+* **The package's definitions as instances.** `RecoverableBy same` is `Recoverable` over courses
+  `Nat → X` of any type, with the agreement at each step a relation `same`; the package's
+  `Recoverable` and `NoReturnAt` are its instances at pointwise agreement of level vectors, by
+  `rfl` (`recoverable_same`, `noReturnAt_same`).
+* **J1 on the states themselves** (`recoverableBy_run_iff`): with equality as agreement, the
+  courses of the runs of any process as the feasible courses and a guard at every step as what is
+  asked, a run's course is recoverable at `N` exactly where the guard held along it up to `N` and
+  is keepable from its state at `N`. No premise. On the package's own `Recoverable` with states
+  `C → Nat` the same holds with two premises (`recoverable_levels_run_iff`): the guard and the
+  steps do not tell pointwise-equal level vectors apart. Function extensionality would give both;
+  it rests on an axiom the package does not admit.
+* **J1 with a reading** (`recoverable_runLevels_iff`): on the package's `Recoverable`, for any
+  process, start set and reading of a level vector off each state, recoverable at `N` is: some run
+  from a start agrees with the course in what is read up to `N`, the guard held on it up to `N`,
+  and is keepable from its state at `N`. One premise: the guard does not tell pointwise-equal
+  vectors apart.
+* **Keepable is recoverable at step 0** (`keepable_iff_recoverable_zero`).
+* **J2** (`first_not_keepable_iff`, `exists_first_iff`): the point of no return of a run is the first
+  step whose state is not keepable; it exists exactly where some state of the run is not keepable,
+  where keepability along the run is decided at each step.
+* **(a)** (`recoverable_iff_of_first`): before the first state that is not keepable, and only
+  before it, the guard held so far and the state is keepable. With the past left out the statement
+  fails (`keepable_alone_not`, on the successor law).
+* **(c)** (`rec_succ_iff`): a step law for any family of statements of J1's form, carried from
+  `keepable_step_iff`. It is not stated on the package's `Recoverable`.
+* **Point 3** (`indexed_iff_runLevels`, `family_iff_runLevels`, `feasible_indexed`,
+  `turned_indexed`, `meetsNeed_same`, `lock_recoverable_iff_runs`, `prophecy_keepable_iff`): the
+  feasible courses of both of the package's uses (`FourReaders.Feasible`, `TurningInTime.Turned`)
+  are an indexed family of courses, and every indexed family, and every family that does not tell
+  pointwise-equal courses apart, is the courses read off the runs from a start set of a process
+  whose state carries the index from the start. On that process a state has one run, and keepable
+  from it is that the guard holds along that one run. On states that are the courses' values
+  themselves the courses of runs are closed under dropping a first step (`runCourse_tail`).
+* **(b)** (`recoverable_iff_above'`, `noReturnAt_iff_first_below'`, `lock_edge_iff`): the lock's
+  R2 and R3 proved again through `lock_recoverable_iff_runs` and `prophecy_keepable_iff`, with the
+  old statements checked by `rfl` (`recoverable_iff_above_same`,
+  `noReturnAt_iff_first_below_same`); the old R2, R3 and R2's two halves are not called, R1's two
+  public halves are. The level `H + y` is where the need, met so far, is keepable from the state
+  "turned now" (`lock_edge_iff`). The keepable step carries no choice here: on `Prophecy` a state
+  has one run, so these twins put keepable in and take it out again, and R1 does the work. The
+  process is `Prophecy`, not one whose state is the level; on a carrier of the level and whether
+  the way has turned, nothing is proved here.
+
+No premise is added beyond what each statement names. Older theorems called: `first_of_decided`
+(`ReadOffInTime`) in `exists_first_iff`, and R1's two public halves, `turned_meets_of_above` and
+`above_of_turned_meets` (`TurningInTime`), in the lock's section; each docstring names what it
+calls. (The three sentences of this header on (c), on (b) and on what is called were mended on
+21 November after a reader who took no part read the module; no statement or proof was changed.)
+-/
+
+namespace Becoming
+namespace ScratchNoReturn
+
+open Generative Viability
+
+universe u v w
+
+/-! ## Runs: dropping steps, splicing -/
+
+section Runs
+
+variable {S : Type u} {A : Type v} {P : Process S A}
+
+/-- A run read from its step 1 on: its configurations and actions shifted by one. -/
+def tail (r : Run P) : Run P :=
+  ⟨fun t => r.state (t + 1), fun t => r.act (t + 1), fun t => r.step (t + 1)⟩
+
+/-- **A guard that holds along a run is keepable from each of its configurations.** For every
+process `P`, guard `g`, step `N` and run `r` of `P` with `g` at every configuration of `r`: `g` is
+keepable from the configuration of `r` at `N`. No other premise; no older theorem called. -/
+theorem keepable_of_run {g : S → Prop} :
+    ∀ (N : Nat) (r : Run P), (∀ t, g (r.state t)) → Keepable P g (r.state N)
+  | 0, r, held => ⟨r, rfl, held⟩
+  | N + 1, r, held => keepable_of_run N (tail r) (fun t => held (t + 1))
+
+/-- **A run's prefix within the guard, followed by a keeping run.** For every process `P`, guard
+`g`, step `N` and run `r` of `P`: where `g` holds at the configurations of `r` up to `N` and is
+keepable from the configuration of `r` at `N`, some run of `P` has the configurations of `r` up to
+`N` and stays within `g` at every step. No other premise; it calls `Run.cons` (`Horizon`). -/
+theorem extend {g : S → Prop} :
+    ∀ (N : Nat) (r : Run P), (∀ n, n ≤ N → g (r.state n)) → Keepable P g (r.state N) →
+      ∃ r' : Run P, (∀ t, t ≤ N → r'.state t = r.state t) ∧ ∀ t, g (r'.state t)
+  | 0, _, _, ⟨r', start, held⟩ =>
+    ⟨r', fun t le => match t, le with
+      | 0, _ => start
+      | _ + 1, le => absurd le (Nat.not_succ_le_zero _), held⟩
+  | N + 1, r, before, kept =>
+    match extend N (tail r) (fun n le => before (n + 1) (Nat.succ_le_succ le)) kept with
+    | ⟨r₁, agree, held⟩ =>
+      ⟨Run.cons (r.state 0) (r.act 0) r₁
+          (Eq.subst (motive := fun x => P.step (r.state 0) (r.act 0) x)
+            (agree 0 (Nat.zero_le N)).symm (r.step 0)),
+       fun t le => match t, le with
+        | 0, _ => rfl
+        | t + 1, le => agree t (Nat.le_of_succ_le_succ le),
+       fun t => match t with
+        | 0 => before 0 (Nat.zero_le _)
+        | t + 1 => held t⟩
+
+/-- **Keepable at a later state of a run, with the guard held before, is keepable at each earlier
+one.** For every process `P`, guard `g`, run `r` and step `N`: where `g` holds at the
+configurations of `r` up to `N` and is keepable from its configuration at `N`, `g` is keepable from
+its configuration at every `m ≤ N`. No other premise; no older theorem called. -/
+theorem kept_before {g : S → Prop} (r : Run P) {N : Nat} (before : ∀ m, m ≤ N → g (r.state m))
+    (kept : Keepable P g (r.state N)) : ∀ m, m ≤ N → Keepable P g (r.state m) :=
+  match extend N r before kept with
+  | ⟨r', same, held⟩ => fun m le =>
+    Eq.subst (motive := Keepable P g) (same m le) (keepable_of_run m r' held)
+
+end Runs
+
+/-! ## Recoverable over courses of any type -/
+
+/-- **Recoverable at a step, with agreement a relation**: some feasible course `l'`, related by
+`same` to `l` at every step up to `N`, keeps what `keeps` asks. -/
+def RecoverableBy {X : Type w} (same : X → X → Prop) (feasible keeps : (Nat → X) → Prop)
+    (l : Nat → X) (N : Nat) : Prop :=
+  ∃ l', feasible l' ∧ (∀ s, s ≤ N → same (l' s) (l s)) ∧ keeps l'
+
+/-- The first step at which `l` is not `RecoverableBy same`. -/
+def NoReturnBy {X : Type w} (same : X → X → Prop) (feasible keeps : (Nat → X) → Prop)
+    (l : Nat → X) (N : Nat) : Prop :=
+  ¬ RecoverableBy same feasible keeps l N ∧ ∀ n, n < N → RecoverableBy same feasible keeps l n
+
+/-- **The package's `Recoverable` is `RecoverableBy` at pointwise agreement**, by definition
+(`rfl`): for every `C`, feasible and asked-of courses `feasible`, `keeps`, course `l` and step `N`. -/
+theorem recoverable_same {C : Type} (feasible keeps : (Nat → C → Nat) → Prop)
+    (l : Nat → C → Nat) (N : Nat) :
+    Recoverable feasible keeps l N =
+      RecoverableBy (fun x y : C → Nat => ∀ c, x c = y c) feasible keeps l N := rfl
+
+/-- **The package's `NoReturnAt` is `NoReturnBy` at pointwise agreement**, by definition (`rfl`). -/
+theorem noReturnAt_same {C : Type} (feasible keeps : (Nat → C → Nat) → Prop)
+    (l : Nat → C → Nat) (N : Nat) :
+    NoReturnAt feasible keeps l N =
+      NoReturnBy (fun x y : C → Nat => ∀ c, x c = y c) feasible keeps l N := rfl
+
+section States
+
+variable {S : Type u} {A : Type v} {P : Process S A}
+
+/-- The courses of configurations of the runs of `P` (equal at each step). -/
+def RunCourse (P : Process S A) (l : Nat → S) : Prop := ∃ r : Run P, ∀ t, r.state t = l t
+
+/-- What is asked of a course: the guard `g` at every step. -/
+def Always (g : S → Prop) (l : Nat → S) : Prop := ∀ t, g (l t)
+
+/-- **J1, on the states themselves.** For every process `P`, guard `g`, run `r` of `P` and step `N`,
+with no other premise: with the courses of the runs of `P` as the feasible courses, `g` at every
+step as what is asked and equality at each step as agreement, the course of `r` is recoverable at
+`N` exactly where `g` holds at the configurations of `r` up to `N` and `g` is keepable from the
+configuration of `r` at `N`. Proved from `keepable_of_run` and `extend`; no older theorem called. -/
+theorem recoverableBy_run_iff {g : S → Prop} (r : Run P) (N : Nat) :
+    RecoverableBy Eq (RunCourse P) (Always g) r.state N ↔
+      (∀ n, n ≤ N → g (r.state n)) ∧ Keepable P g (r.state N) :=
+  ⟨fun ⟨_, ⟨r', e⟩, agree, keeps⟩ =>
+    have on : ∀ t, g (r'.state t) := fun t => Eq.subst (motive := g) (e t).symm (keeps t)
+    ⟨fun n le => Eq.subst (motive := g) ((e n).trans (agree n le)) (on n),
+     Eq.subst (motive := Keepable P g) ((e N).trans (agree N (Nat.le_refl N)))
+       (keepable_of_run N r' on)⟩,
+   fun ⟨before, kept⟩ => match extend N r before kept with
+    | ⟨r', agree, held⟩ => ⟨r'.state, ⟨r', fun _ => rfl⟩, agree, held⟩⟩
+
+/-- **Keepable is recoverable at step 0.** For every process `P`, guard `g` and course `l` (not
+assumed a run), with no other premise: `l` is recoverable at `0`, with the courses of the runs of
+`P` as feasible, `g` at every step as asked and equality as agreement, exactly where `g` is
+keepable from `l 0`. No older theorem called. -/
+theorem keepable_iff_recoverable_zero {g : S → Prop} (l : Nat → S) :
+    RecoverableBy Eq (RunCourse P) (Always g) l 0 ↔ Keepable P g (l 0) :=
+  ⟨fun ⟨_, ⟨r', e⟩, agree, keeps⟩ =>
+    ⟨r', (e 0).trans (agree 0 (Nat.le_refl 0)),
+     fun t => Eq.subst (motive := g) (e t).symm (keeps t)⟩,
+   fun ⟨r', start, held⟩ =>
+    ⟨r'.state, ⟨r', fun _ => rfl⟩, fun s le => match s, le with
+      | 0, _ => start
+      | _ + 1, le => absurd le (Nat.not_succ_le_zero _), held⟩⟩
+
+/-- **On states that are the courses' values, the courses of runs are closed under dropping a first
+step.** For every process `P` and course `l` of a run of `P`, `l` read from step 1 on is the course
+of a run of `P`. No premise. A family of courses not closed so is the course family of no process
+on these states. -/
+theorem runCourse_tail {l : Nat → S} : RunCourse P l → RunCourse P (fun t => l (t + 1))
+  | ⟨r, e⟩ => ⟨tail r, fun t => e (t + 1)⟩
+
+end States
+
+/-! ## Laws that follow from J1, for any notion that meets it -/
+
+section FromJ1
+
+variable {S : Type u} {A : Type v} {P : Process S A}
+
+/-- **J2. The point of no return is the first state that is not keepable.** For every process `P`,
+guard `g`, run `r`, step `N` and family `Rec` of statements, one for each step, with the premise
+`j1` that `Rec n` holds exactly where `g` holds at the configurations of `r` up to `n` and is
+keepable from its configuration at `n` (J1's form): `Rec` fails at `N` and holds before it exactly
+where `g` is not keepable from the configuration of `r` at `N` and is keepable from each before.
+No older theorem called. -/
+theorem first_not_keepable_iff {g : S → Prop} (r : Run P) {Rec : Nat → Prop}
+    (j1 : ∀ n, Rec n ↔ (∀ m, m ≤ n → g (r.state m)) ∧ Keepable P g (r.state n)) {N : Nat} :
+    (¬ Rec N ∧ ∀ n, n < N → Rec n) ↔
+      (¬ Keepable P g (r.state N) ∧ ∀ n, n < N → Keepable P g (r.state n)) :=
+  ⟨fun ⟨fails, before⟩ =>
+    ⟨fun kN => fails ((j1 N).mpr
+      ⟨fun m le => (Nat.lt_or_eq_of_le le).elim
+          (fun lt => ((j1 m).mp (before m lt)).2.start)
+          (fun e => Eq.subst (motive := fun i => g (r.state i)) e.symm kN.start), kN⟩),
+     fun n lt => ((j1 n).mp (before n lt)).2⟩,
+   fun ⟨notN, before⟩ =>
+    ⟨fun rec => notN ((j1 N).mp rec).2,
+     fun n lt => (j1 n).mpr
+      ⟨fun m le => (before m (Nat.lt_of_le_of_lt le lt)).start, before n lt⟩⟩⟩
+
+/-- **J2, existence.** Under `first_not_keepable_iff`'s premises (`P`, `g`, `r`, `Rec` with `j1`),
+and with keepability of `g` decided at each configuration of `r` (`decided`): some step is the
+first at which `Rec` fails exactly where `g` is not keepable from some configuration of `r`. The
+only-if direction uses no decision. Calls `first_of_decided` (`ReadOffInTime`). -/
+theorem exists_first_iff {g : S → Prop} (r : Run P) {Rec : Nat → Prop}
+    (j1 : ∀ n, Rec n ↔ (∀ m, m ≤ n → g (r.state m)) ∧ Keepable P g (r.state n))
+    (decided : ∀ n, Keepable P g (r.state n) ∨ ¬ Keepable P g (r.state n)) :
+    (∃ N, ¬ Rec N ∧ ∀ n, n < N → Rec n) ↔ ∃ n, ¬ Keepable P g (r.state n) :=
+  ⟨fun ⟨N, point⟩ => ⟨N, ((first_not_keepable_iff r j1).mp point).1⟩,
+   fun ⟨n, notn⟩ => match first_of_decided decided n with
+    | .inl all => absurd (all n (Nat.le_refl n)) notn
+    | .inr ⟨m, _, fails, before⟩ => ⟨m, (first_not_keepable_iff r j1).mpr ⟨fails, before⟩⟩⟩
+
+/-- **(a). Before the first state that is not keepable, and only before it, the guard has held and
+the state is keepable.** For every process `P`, guard `g`, run `r` and step `N` where `g` is not
+keepable from the configuration of `r` at `N` and is keepable from each before (`point`): for every
+`n`, `g` holds at the configurations of `r` up to `n` and is keepable from its configuration at `n`
+exactly where `n < N`. No other premise. Calls `kept_before`; not `NoReturnAt.recoverable_iff`. -/
+theorem recoverable_iff_of_first {g : S → Prop} (r : Run P) {N : Nat}
+    (point : ¬ Keepable P g (r.state N) ∧ ∀ n, n < N → Keepable P g (r.state n)) {n : Nat} :
+    ((∀ m, m ≤ n → g (r.state m)) ∧ Keepable P g (r.state n)) ↔ n < N :=
+  ⟨fun ⟨before, kept⟩ => (Nat.lt_or_ge n N).elim id
+    (fun ge => absurd (kept_before r before kept N ge) point.1),
+   fun lt => ⟨fun m le => (point.2 m (Nat.lt_of_le_of_lt le lt)).start, point.2 n lt⟩⟩
+
+/-- **(c). A step law for recoverable.** For every process `P`, guard `g`, run `r` and family `Rec`
+with J1's form (`j1`, as in `first_not_keepable_iff`), and every step `N`: `Rec` holds at `N + 1`
+exactly where it holds at `N` and `g` is keepable from the configuration of `r` at `N + 1`. No
+other premise. Calls `keepable_step_iff` (scratch `ScratchKeepableStep`). -/
+theorem rec_succ_iff {g : S → Prop} (r : Run P) {Rec : Nat → Prop}
+    (j1 : ∀ n, Rec n ↔ (∀ m, m ≤ n → g (r.state m)) ∧ Keepable P g (r.state n)) (N : Nat) :
+    Rec (N + 1) ↔ Rec N ∧ Keepable P g (r.state (N + 1)) :=
+  ⟨fun rec => match (j1 (N + 1)).mp rec with
+    | ⟨before, kept⟩ =>
+      ⟨(j1 N).mpr ⟨fun m le => before m (Nat.le_succ_of_le le),
+          keepable_step_iff.mpr
+            ⟨before N (Nat.le_succ N), r.act N, r.state (N + 1), r.step N, kept⟩⟩, kept⟩,
+   fun ⟨rec, kept⟩ => match (j1 N).mp rec with
+    | ⟨before, _⟩ => (j1 (N + 1)).mpr
+      ⟨fun m le => (Nat.lt_or_eq_of_le le).elim
+          (fun lt => before m (Nat.le_of_lt_succ lt))
+          (fun e => Eq.subst (motive := fun i => g (r.state i)) e.symm kept.start), kept⟩⟩
+
+end FromJ1
+
+/-! ## (a) with the past left out fails -/
+
+/-- A guard on the numbers: not `1`. -/
+def NotOne (n : Nat) : Prop := n = 1 → False
+
+/-- The run of the successor law from `0`: at step `t` the number `t`. -/
+def countRun : Run Viability.Successor.process := ⟨fun t => t, fun _ => (), fun _ => rfl⟩
+
+/-- **Without the past, the keepable set alone does not give the point.** On the successor law
+(`Viability.Successor.process`, scratch) with the guard `NotOne` and the run `countRun` from `0`:
+the guard is not keepable from step 0's number (so step 0 is the first state not keepable), it is
+keepable from step 2's number, and so "keepable at `n` exactly where `n < 0`" fails at `n = 2`. No
+premise. -/
+theorem keepable_alone_not :
+    ¬ Keepable Viability.Successor.process NotOne (countRun.state 0) ∧
+      Keepable Viability.Successor.process NotOne (countRun.state 2) ∧
+      ¬ ∀ n, Keepable Viability.Successor.process NotOne (countRun.state n) ↔ n < 0 :=
+  have two : Keepable Viability.Successor.process NotOne (countRun.state 2) :=
+    ⟨⟨fun t => t + 2, fun _ => (), fun _ => rfl⟩, rfl,
+     fun _ h => Nat.noConfusion (Nat.succ.inj h)⟩
+  ⟨fun ⟨r, start, held⟩ => held 1 ((r.step 0).trans (congrArg Nat.succ start)),
+   two, fun all => Nat.not_lt_zero 2 ((all 2).mp two)⟩
+
+/-! ## On the package's own `Recoverable`: J1 with a reading -/
+
+section Levels
+
+variable {S : Type u} {A : Type v} {P : Process S A}
+
+/-- The level courses read off the runs of `P` from a start: some run of `P` starting where `start`
+holds has, read through `π`, the level of `l` at every step and condition. -/
+def RunLevels {C : Type} (P : Process S A) (start : S → Prop) (π : S → C → Nat)
+    (l : Nat → C → Nat) : Prop :=
+  ∃ r : Run P, start (r.state 0) ∧ ∀ t c, π (r.state t) c = l t c
+
+/-- **J1 with a reading, on the package's `Recoverable`.** For every process `P`, start set
+`start`, reading `π` of a level vector off each configuration, guard `gl` on level vectors, what
+is asked `keeps` with `keeps l` exactly `gl` at every step of `l` (`keeps_iff`), and the premise
+that `gl` does not tell pointwise-equal level vectors apart (`respects`): `l` is recoverable at `N`
+with the level courses of the runs of `P` from a start as feasible exactly where some run `r` of
+`P` from a start agrees with `l` up to `N` through `π`, `gl` held on `r` up to `N` through `π`,
+and `gl` through `π` is keepable from `r`'s configuration at `N`. Proved from `keepable_of_run`
+and `extend`; no older theorem called. -/
+theorem recoverable_runLevels_iff {C : Type} {start : S → Prop} {π : S → C → Nat}
+    {gl : (C → Nat) → Prop} {keeps : (Nat → C → Nat) → Prop}
+    (keeps_iff : ∀ l, keeps l ↔ ∀ t, gl (l t))
+    (respects : ∀ v w : C → Nat, (∀ c, v c = w c) → gl v → gl w)
+    (l : Nat → C → Nat) (N : Nat) :
+    Recoverable (RunLevels P start π) keeps l N ↔
+      ∃ r : Run P, start (r.state 0) ∧ AgreeUpTo (fun t => π (r.state t)) l N ∧
+        (∀ n, n ≤ N → gl (π (r.state n))) ∧ Keepable P (fun s => gl (π s)) (r.state N) :=
+  ⟨fun ⟨l', ⟨r, st, e⟩, agree, kp⟩ =>
+    have on : ∀ t, gl (π (r.state t)) := fun t =>
+      respects _ _ (fun c => (e t c).symm) ((keeps_iff l').mp kp t)
+    ⟨r, st, fun s le c => (e s c).trans (agree s le c), fun n _ => on n,
+     keepable_of_run (g := fun s => gl (π s)) N r on⟩,
+   fun ⟨r, st, agree, before, kept⟩ =>
+    match extend (g := fun s => gl (π s)) N r before kept with
+    | ⟨r', same, held⟩ =>
+      ⟨fun t => π (r'.state t),
+       ⟨r', Eq.subst (motive := start) (same 0 (Nat.zero_le N)).symm st, fun _ _ => rfl⟩,
+       fun s le c => (congrArg (fun x => π x c) (same s le)).trans (agree s le c),
+       (keeps_iff _).mpr held⟩⟩
+
+/-- **Keepable carried across pointwise-equal level vectors.** For every process `P` on level
+vectors and guard `gl`, with the premises that `gl` (`guardResp`) and the steps' starting vector
+(`stepResp`) do not tell pointwise-equal vectors apart: where `gl` is keepable from `v` and `v`,
+`w` agree at every condition, `gl` is keepable from `w`. Calls `Run.cons` (`Horizon`). -/
+theorem keepable_transfer {C : Type} {A : Type v} {P : Process (C → Nat) A}
+    {gl : (C → Nat) → Prop}
+    (guardResp : ∀ v w : C → Nat, (∀ c, v c = w c) → gl v → gl w)
+    (stepResp : ∀ (v w : C → Nat) (a : A) (t : C → Nat), (∀ c, v c = w c) →
+      P.step v a t → P.step w a t)
+    {v w : C → Nat} (e : ∀ c, v c = w c) : Keepable P gl v → Keepable P gl w
+  | ⟨r, start, held⟩ =>
+    have at0 : ∀ c, r.state 0 c = w c := fun c => (congrFun start c).trans (e c)
+    ⟨Run.cons w (r.act 0) (tail r) (stepResp _ _ _ _ at0 (r.step 0)), rfl, fun t => match t with
+      | 0 => guardResp _ _ at0 (held 0)
+      | t + 1 => held (t + 1)⟩
+
+/-- **J1 as frozen, on the package's `Recoverable` with states the level vectors.** For every
+process `P` on level vectors `C → Nat`, guard `gl`, run `r` and step `N`, with the premises that
+`gl` (`guardResp`) and the steps' starting vector (`stepResp`) do not tell pointwise-equal vectors
+apart: with the level courses of all runs of `P` as feasible and `gl` at every step as asked, the
+course of `r` is recoverable at `N` exactly where `gl` held on `r` up to `N` and is keepable from
+`r`'s state at `N`. Proved from `recoverable_runLevels_iff` and `keepable_transfer`; no older
+theorem called. -/
+theorem recoverable_levels_run_iff {C : Type} {A : Type v} {P : Process (C → Nat) A}
+    {gl : (C → Nat) → Prop}
+    (guardResp : ∀ v w : C → Nat, (∀ c, v c = w c) → gl v → gl w)
+    (stepResp : ∀ (v w : C → Nat) (a : A) (t : C → Nat), (∀ c, v c = w c) →
+      P.step v a t → P.step w a t)
+    (r : Run P) (N : Nat) :
+    Recoverable (RunLevels P (fun _ => True) (fun s => s)) (fun l => ∀ t, gl (l t)) r.state N ↔
+      (∀ n, n ≤ N → gl (r.state n)) ∧ Keepable P gl (r.state N) :=
+  ⟨fun rec => match (recoverable_runLevels_iff (P := P) (start := fun _ => True)
+      (π := fun s => s) (gl := gl) (fun _ => Iff.rfl) guardResp r.state N).mp rec with
+    | ⟨_, _, agree, before, kept⟩ =>
+      ⟨fun n le => guardResp _ _ (agree n le) (before n le),
+       keepable_transfer guardResp stepResp (agree N (Nat.le_refl N)) kept⟩,
+   fun ⟨before, kept⟩ => (recoverable_runLevels_iff (P := P) (start := fun _ => True)
+      (π := fun s => s) (gl := gl) (fun _ => Iff.rfl) guardResp r.state N).mpr
+      ⟨r, trivial, fun _ _ _ => rfl, before, kept⟩⟩
+
+/-- **(a) on the package's own `NoReturnAt`.** Under `recoverable_levels_run_iff`'s premises
+(`guardResp`, `stepResp`), for every run `r` of `P` and step `N`: the course of `r` has its point of
+no return at `N` exactly where `N` is the first step whose state `gl` is not keepable from.
+`first_not_keepable_iff` at `recoverable_levels_run_iff`; no older theorem called. -/
+theorem noReturnAt_levels_iff {C : Type} {A : Type v} {P : Process (C → Nat) A}
+    {gl : (C → Nat) → Prop}
+    (guardResp : ∀ v w : C → Nat, (∀ c, v c = w c) → gl v → gl w)
+    (stepResp : ∀ (v w : C → Nat) (a : A) (t : C → Nat), (∀ c, v c = w c) →
+      P.step v a t → P.step w a t)
+    (r : Run P) (N : Nat) :
+    NoReturnAt (RunLevels P (fun _ => True) (fun s => s)) (fun l => ∀ t, gl (l t)) r.state N ↔
+      (¬ Keepable P gl (r.state N) ∧ ∀ n, n < N → Keepable P gl (r.state n)) :=
+  first_not_keepable_iff r (recoverable_levels_run_iff guardResp stepResp r)
+
+/-- **(a), `NoReturnAt.recoverable_iff` through the keepable set, on the package's
+`Recoverable`.** Under `recoverable_levels_run_iff`'s premises, for every run `r` of `P` whose first
+state that `gl` is not keepable from is at `N` (`point`): the course of `r` is recoverable at `n`
+exactly where `n < N`. Proved from `recoverable_levels_run_iff` and `recoverable_iff_of_first`;
+`NoReturnAt.recoverable_iff` is not called. -/
+theorem levels_recoverable_iff_of_first {C : Type} {A : Type v} {P : Process (C → Nat) A}
+    {gl : (C → Nat) → Prop}
+    (guardResp : ∀ v w : C → Nat, (∀ c, v c = w c) → gl v → gl w)
+    (stepResp : ∀ (v w : C → Nat) (a : A) (t : C → Nat), (∀ c, v c = w c) →
+      P.step v a t → P.step w a t)
+    (r : Run P) {N : Nat}
+    (point : ¬ Keepable P gl (r.state N) ∧ ∀ n, n < N → Keepable P gl (r.state n)) {n : Nat} :
+    Recoverable (RunLevels P (fun _ => True) (fun s => s)) (fun l => ∀ t, gl (l t)) r.state n ↔
+      n < N :=
+  (recoverable_levels_run_iff guardResp stepResp r n).trans (recoverable_iff_of_first r point)
+
+end Levels
+
+/-! ## Point 3: the package's feasible courses as the runs of a process -/
+
+/-- The process that keeps an index fixed from the start and counts the steps. -/
+def Prophecy (K : Type u) : Process (K × Nat) Unit := ⟨fun s _ t => t.1 = s.1 ∧ t.2 = s.2 + 1⟩
+
+/-- Along a run of `Prophecy K` the index stays and the count goes up by one each step. No premise. -/
+theorem prophecy_state {K : Type u} (r : Run (Prophecy K)) :
+    ∀ t, (r.state t).1 = (r.state 0).1 ∧ (r.state t).2 = (r.state 0).2 + t
+  | 0 => ⟨rfl, rfl⟩
+  | t + 1 =>
+    have h : (r.state (t + 1)).1 = (r.state t).1 ∧ (r.state (t + 1)).2 = (r.state t).2 + 1 :=
+      r.step t
+    ⟨h.1.trans (prophecy_state r t).1,
+     h.2.trans (congrArg (· + 1) (prophecy_state r t).2)⟩
+
+/-- A pair is its two parts. No premise. -/
+theorem pair_eq {α : Type u} {β : Type v} {p : α × β} {a : α} {b : β} (h1 : p.1 = a)
+    (h2 : p.2 = b) : p = (a, b) :=
+  Eq.subst (motive := fun x => p = (x, b)) h1
+    (Eq.subst (motive := fun y => p = (p.1, y)) h2 rfl)
+
+/-- **On `Prophecy K` keepable is the guard along the one run.** For every `K`, guard `g`, index
+`k` and count `n`: `g` is keepable from `(k, n)` exactly where `g` holds at `(k, n + t)` for every
+`t`. No premise. -/
+theorem prophecy_keepable_iff {K : Type u} {g : K × Nat → Prop} {k : K} {n : Nat} :
+    Keepable (Prophecy K) g (k, n) ↔ ∀ t, g (k, n + t) :=
+  ⟨fun ⟨r, st, held⟩ t =>
+    have h := prophecy_state r t
+    Eq.subst (motive := g)
+      (pair_eq (a := k) (b := n + t) (h.1.trans (congrArg Prod.fst st))
+        (h.2.trans (congrArg (fun p : K × Nat => p.2 + t) st))) (held t),
+   fun all => ⟨⟨fun t => (k, n + t), fun _ => (), fun _ => ⟨rfl, rfl⟩⟩, rfl, all⟩⟩
+
+/-- A family of level courses given by an index: `l` is, at every step and condition, the course of
+some index. -/
+def Indexed {K : Type u} {C : Type} (course : K → Nat → C → Nat) (l : Nat → C → Nat) : Prop :=
+  ∃ k, ∀ t c, l t c = course k t c
+
+/-- **Every indexed family is the level courses of the runs of a process from a start.** For every
+`K`, `C`, family `course` and course `l`: `l` is in the family exactly where it is read off a run of
+`Prophecy K` starting at count `0`, reading `course` at the run's index and count. No premise. -/
+theorem indexed_iff_runLevels {K : Type u} {C : Type} (course : K → Nat → C → Nat)
+    (l : Nat → C → Nat) :
+    Indexed course l ↔ RunLevels (Prophecy K) (fun s => s.2 = 0) (fun s => course s.1 s.2) l :=
+  ⟨fun ⟨k, e⟩ => ⟨⟨fun t => (k, t), fun _ => (), fun _ => ⟨rfl, rfl⟩⟩, rfl, fun t c => (e t c).symm⟩,
+   fun ⟨r, st, e⟩ => ⟨(r.state 0).1, fun t c =>
+    (e t c).symm.trans (congrFun (congr (congrArg course (prophecy_state r t).1)
+      ((prophecy_state r t).2.trans ((congrArg (· + t) st).trans (Nat.zero_add t)))) c)⟩⟩
+
+/-- **Every family that does not tell pointwise-equal courses apart is the level courses of the
+runs of a process from a start.** For every `C`, family `F` with the premise `resp` and course
+`l`: `F l` exactly where `l` is read off a run from count `0` of the process that keeps a member
+of `F` fixed. Calls `indexed_iff_runLevels`. -/
+theorem family_iff_runLevels {C : Type} (F : (Nat → C → Nat) → Prop)
+    (resp : ∀ l l', (∀ t c, l t c = l' t c) → F l → F l') (l : Nat → C → Nat) :
+    F l ↔ RunLevels (Prophecy {l // F l}) (fun s => s.2 = 0) (fun s => s.1.1 s.2) l :=
+  ⟨fun h => (indexed_iff_runLevels (fun k : {l // F l} => k.1) l).mp ⟨⟨l, h⟩, fun _ _ => rfl⟩,
+   fun h => match (indexed_iff_runLevels (fun k : {l // F l} => k.1) l).mpr h with
+    | ⟨k, e⟩ => resp k.1 l (fun t c => (e t c).symm) k.2⟩
+
+/-- **`ReadOffInTime`'s four readers' feasible courses are an indexed family**, by definition
+(`rfl`): `FourReaders.Feasible` is `Indexed FourReaders.levels`. -/
+theorem feasible_indexed : @FourReaders.Feasible = Indexed FourReaders.levels := rfl
+
+/-- **The lock's feasible courses are an indexed family**, by definition (`rfl`): for every `X`,
+`giving`, `H`, `TurningInTime.Turned X giving H` is indexed by the step of the turn. -/
+theorem turned_indexed (X giving : Nat → Nat) (H : Nat) :
+    TurningInTime.Turned X giving H =
+      Indexed (fun T t (_ : Unit) => TurningInTime.turned X giving H T t) := rfl
+
+/-- **The lock's `MeetsNeed` is a guard at every step**, by definition (`rfl`). -/
+theorem meetsNeed_same (need : Nat) :
+    TurningInTime.MeetsNeed need = fun l => ∀ t, (fun v : Unit → Nat => ∀ c, need ≤ v c) (l t) :=
+  rfl
+
+/-- Recoverable does not tell feasible families with the same members apart. No premise. -/
+theorem recoverable_congr {C : Type} {F F' keeps : (Nat → C → Nat) → Prop}
+    (h : ∀ l, F l ↔ F' l) (l : Nat → C → Nat) (N : Nat) :
+    Recoverable F keeps l N ↔ Recoverable F' keeps l N :=
+  ⟨fun ⟨l', f, a, k⟩ => ⟨l', (h l').mp f, a, k⟩, fun ⟨l', f, a, k⟩ => ⟨l', (h l').mpr f, a, k⟩⟩
+
+/-- **The lock's recoverability, through runs and keepable.** For every `X`, `giving`, `H`, `need`
+and `N`, with no premise: `X` is recoverable at `N` with `Turned X giving H` as feasible and
+`MeetsNeed need` as asked exactly where some run of `Prophecy Nat` from count `0` (its index the
+step of the turn) has the level of `X` up to `N`, met the need up to `N`, and the need is keepable
+from its state at `N`. Calls `recoverable_congr`, `indexed_iff_runLevels`,
+`recoverable_runLevels_iff`; no theorem of `TurningInTime` called. -/
+theorem lock_recoverable_iff_runs (X giving : Nat → Nat) (H need N : Nat) :
+    Recoverable (TurningInTime.Turned X giving H) (TurningInTime.MeetsNeed need)
+        (fun t _ => X t) N ↔
+      ∃ r : Run (Prophecy Nat), (r.state 0).2 = 0 ∧
+        AgreeUpTo (fun t (_ : Unit) => TurningInTime.turned X giving H (r.state t).1 (r.state t).2)
+          (fun t _ => X t) N ∧
+        (∀ n, n ≤ N → ∀ _ : Unit,
+          need ≤ TurningInTime.turned X giving H (r.state n).1 (r.state n).2) ∧
+        Keepable (Prophecy Nat)
+          (fun s => ∀ _ : Unit, need ≤ TurningInTime.turned X giving H s.1 s.2) (r.state N) :=
+  (recoverable_congr
+      (fun l => indexed_iff_runLevels (fun T t (_ : Unit) => TurningInTime.turned X giving H T t) l)
+      (fun t _ => X t) N).trans
+    (recoverable_runLevels_iff (P := Prophecy Nat) (start := fun s => s.2 = 0)
+      (π := fun s (_ : Unit) => TurningInTime.turned X giving H s.1 s.2)
+      (gl := fun v => ∀ c, need ≤ v c) (fun _ => Iff.rfl)
+      (fun _ _ e h c => Eq.subst (motive := fun z => need ≤ z) (e c) (h c)) (fun t _ => X t) N)
+
+/-! ## (b): the lock's point of no return, proved through runs and keepable -/
+
+section Lock
+
+open TurningInTime
+
+/-- `k` steps after `T` the course turned at `T` is the course under `H` from `X T`, `k` steps on.
+No premise. A copy of `TurningInTime`'s private `turned_after`, with its proof. -/
+theorem turned_after' (X giving : Nat → Nat) (H T : Nat) :
+    ∀ k, turned X giving H T (T + k) = Law.orbit (RegimeMargin.step giving H) (X T) k
+  | 0 => if_pos (Nat.le_refl T)
+  | k + 1 =>
+    (if_neg (Nat.not_le_of_gt (Nat.lt_succ_of_le (Nat.le_add_right T k)))).trans
+      (congrArg (Law.orbit (RegimeMargin.step giving H) (X T))
+        (Naturals.add_sub_cancel_left T (k + 1)))
+
+/-- A course that never rises (`fall`) is, `k` steps after `j`, at most where it was at `j`. A
+copy of `TurningInTime`'s private `fall_by`. -/
+theorem fall_by' {X : Nat → Nat} (fall : ∀ t, X (t + 1) ≤ X t) (j : Nat) :
+    ∀ k, X (j + k) ≤ X j
+  | 0 => Nat.le_refl _
+  | k + 1 => Nat.le_trans (fall (j + k)) (fall_by' fall j k)
+
+/-- A course that never rises (`fall`) is not higher at a later step. A copy of `TurningInTime`'s
+private `later_le`; calls `le_dest` (`Prelude`). -/
+theorem later_le' {X : Nat → Nat} (fall : ∀ t, X (t + 1) ≤ X t) {j T : Nat} (le : j ≤ T) :
+    X T ≤ X j :=
+  match le_dest le with
+  | ⟨k, e⟩ => Eq.subst (motive := fun i => X i ≤ X j) e.symm (fall_by' fall j k)
+
+/-- **A course turned at `T`, turned again at a later `N`, is itself.** For every `X`, `giving`,
+`H` and `T ≤ N`: at every step, the course turned at `T`, turned at `N` to the same `H`, is the
+course turned at `T`. No other premise. Calls `turned_after'`, `Law.orbit_add`, `le_dest`. -/
+theorem turned_again {X giving : Nat → Nat} {H T N : Nat} (le : T ≤ N) :
+    ∀ t, turned (fun t => turned X giving H T t) giving H N t = turned X giving H T t :=
+  fun t => (Nat.lt_or_ge N t).elim
+    (fun lt => match le_dest (Nat.le_of_lt lt), le_dest le with
+      | ⟨k, et⟩, ⟨j, eN⟩ =>
+        have h2 : turned X giving H T N = Law.orbit (RegimeMargin.step giving H) (X T) j :=
+          Eq.subst (motive := fun i =>
+              turned X giving H T i = Law.orbit (RegimeMargin.step giving H) (X T) j)
+            eN.symm (turned_after' X giving H T j)
+        have eT : t = T + (j + k) :=
+          et.trans ((congrArg (· + k) eN).trans (Nat.add_assoc T j k))
+        have left : turned (fun t => turned X giving H T t) giving H N t =
+            Law.orbit (RegimeMargin.step giving H) (X T) (j + k) :=
+          Eq.subst (motive := fun i => turned (fun t => turned X giving H T t) giving H N i =
+              Law.orbit (RegimeMargin.step giving H) (X T) (j + k)) et.symm
+            ((turned_after' (fun t => turned X giving H T t) giving H N k).trans
+              ((congrArg (fun z => Law.orbit (RegimeMargin.step giving H) z k) h2).trans
+                (Law.orbit_add (RegimeMargin.step giving H) (X T) j k).symm))
+        have right : turned X giving H T t =
+            Law.orbit (RegimeMargin.step giving H) (X T) (j + k) :=
+          Eq.subst (motive := fun i => turned X giving H T i =
+              Law.orbit (RegimeMargin.step giving H) (X T) (j + k)) eT.symm
+            (turned_after' X giving H T (j + k))
+        left.trans right.symm)
+    (fun ge => if_pos ge)
+
+/-- **(b). R2 twin: `X` is recoverable at `N` exactly where `H + y ≤ X N`, proved through runs of
+`Prophecy Nat` and keepable.** The statement of `TurningInTime.recoverable_iff_above`, with its
+premises: `X` never rising (`fall`) and starting at most `hi` (`top`), nothing given from nothing,
+giving short of `H` below `y`, meeting it from `y` up to `hi`, the step under `H` keeping the level
+within `hi`, and a positive need at most `H + y`. Proved from `lock_recoverable_iff_runs`,
+`prophecy_state`, `prophecy_keepable_iff`, `turned_again`, `later_le'`, and the two public halves
+of R1, `TurningInTime.turned_meets_of_above` and `TurningInTime.above_of_turned_meets`.
+`recoverable_iff_above`, `recoverable_of_above` and `above_of_recoverable` are not called. -/
+theorem recoverable_iff_above' {X : Nat → Nat} {giving : Nat → Nat} {H y hi need N : Nat}
+    (fall : ∀ t, X (t + 1) ≤ X t) (top : X 0 ≤ hi)
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H y)
+    (meets : RegimeMargin.Meets giving H y hi) (keeps : RegimeMargin.Keeps giving H hi)
+    (needs : 0 < need) (within : need ≤ H + y) :
+    Recoverable (Turned X giving H) (MeetsNeed need) (fun t _ => X t) N ↔ H + y ≤ X N :=
+  ⟨fun rec => match (lock_recoverable_iff_runs X giving H need N).mp rec with
+    | ⟨r, st, agree, before, kept⟩ =>
+      have at' : ∀ t, r.state t = ((r.state 0).1, t) := fun t =>
+        pair_eq (prophecy_state r t).1
+          ((prophecy_state r t).2.trans ((congrArg (· + t) st).trans (Nat.zero_add t)))
+      have kept' : ∀ k, ∀ _ : Unit, need ≤ turned X giving H (r.state 0).1 (N + k) :=
+        (prophecy_keepable_iff (k := (r.state 0).1) (n := N)).mp
+          (Eq.subst (motive := Keepable (Prophecy Nat)
+              (fun s => ∀ _ : Unit, need ≤ turned X giving H s.1 s.2)) (at' N) kept)
+      have meet : ∀ t, need ≤ turned X giving H (r.state 0).1 t := fun t =>
+        (Nat.lt_or_ge t N).elim
+          (fun lt => Eq.subst (motive := fun p : Nat × Nat => need ≤ turned X giving H p.1 p.2)
+            (at' t) (before t (Nat.le_of_lt lt) ()))
+          (fun ge => match le_dest ge with
+            | ⟨k, e⟩ => Eq.subst (motive := fun i => need ≤ turned X giving H (r.state 0).1 i)
+                e.symm (kept' k ()))
+      have atN : turned X giving H (r.state 0).1 N = X N :=
+        Eq.subst (motive := fun p : Nat × Nat => turned X giving H p.1 p.2 = X N) (at' N)
+          (agree N (Nat.le_refl N) ())
+      (Nat.lt_or_ge N (r.state 0).1).elim
+        (fun lt => Nat.le_trans (above_of_turned_meets nothing short needs meet)
+          (later_le' fall (Nat.le_of_lt lt)))
+        (fun ge => Eq.subst (motive := fun z => H + y ≤ z) atN
+          (above_of_turned_meets (X := fun t => turned X giving H (r.state 0).1 t) (T := N)
+            nothing short needs
+            (fun t => Eq.subst (motive := fun z => need ≤ z) (turned_again ge t).symm (meet t)))),
+   fun low =>
+    have meetAll : ∀ t, need ≤ turned X giving H N t :=
+      turned_meets_of_above fall top meets keeps within low
+    (lock_recoverable_iff_runs X giving H need N).mpr
+      ⟨⟨fun t => (N, t), fun _ => (), fun _ => ⟨rfl, rfl⟩⟩, rfl, fun _ le _ => if_pos le,
+       fun n _ _ => meetAll n,
+       (prophecy_keepable_iff (k := N) (n := N)).mpr (fun t _ => meetAll (N + t))⟩⟩
+
+/-- **The twin has the old statement**: `recoverable_iff_above'` and
+`TurningInTime.recoverable_iff_above` are proofs of one proposition, by `rfl`. -/
+theorem recoverable_iff_above_same :
+    @recoverable_iff_above' = @TurningInTime.recoverable_iff_above := rfl
+
+/-- **R3 twin: the point of no return of `X` is the first step at which its level is below
+`H + y`.** The statement of `TurningInTime.noReturnAt_iff_first_below`, with
+`recoverable_iff_above`'s premises; the old proof's body with `recoverable_iff_above'` in place of
+`recoverable_iff_above`. Neither old theorem is called. -/
+theorem noReturnAt_iff_first_below' {X : Nat → Nat} {giving : Nat → Nat} {H y hi need N : Nat}
+    (fall : ∀ t, X (t + 1) ≤ X t) (top : X 0 ≤ hi)
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H y)
+    (meets : RegimeMargin.Meets giving H y hi) (keeps : RegimeMargin.Keeps giving H hi)
+    (needs : 0 < need) (within : need ≤ H + y) :
+    NoReturnAt (Turned X giving H) (MeetsNeed need) (fun t _ => X t) N ↔
+      X N < H + y ∧ ∀ n, n < N → H + y ≤ X n :=
+  have iff := fun n => recoverable_iff_above' (X := X) (N := n) fall top nothing short meets keeps
+    needs within
+  ⟨fun ⟨fails, before⟩ =>
+    ⟨(Nat.lt_or_ge (X N) (H + y)).elim id (fun ge => absurd ((iff N).mpr ge) fails),
+     fun n lt => (iff n).mp (before n lt)⟩,
+   fun ⟨below, before⟩ =>
+    ⟨fun rec => Nat.not_le_of_gt below ((iff N).mp rec), fun n lt => (iff n).mpr (before n lt)⟩⟩
+
+/-- **The R3 twin has the old statement**, by `rfl`. -/
+theorem noReturnAt_iff_first_below_same :
+    @noReturnAt_iff_first_below' = @TurningInTime.noReturnAt_iff_first_below := rfl
+
+/-- **The lock's level of no return as the edge of keeping with the turn now.** Under
+`recoverable_iff_above`'s premises (the same eight): `H + y ≤ X N` exactly where `X` met the need
+at every step up to `N` and the need is keepable, on `Prophecy Nat`, from the state `(N, N)`: the
+way turned at `N`, at step `N`. The if direction uses `nothing`, `short`, `needs`
+(`above_of_turned_meets`); the only-if direction `fall`, `top`, `meets`, `keeps`, `within`
+(`turned_meets_of_above`). Calls `prophecy_keepable_iff`, `le_dest`; no recoverability theorem. -/
+theorem lock_edge_iff {X : Nat → Nat} {giving : Nat → Nat} {H y hi need N : Nat}
+    (fall : ∀ t, X (t + 1) ≤ X t) (top : X 0 ≤ hi)
+    (nothing : RegimeMargin.FromNothing giving) (short : RegimeMargin.Short giving H y)
+    (meets : RegimeMargin.Meets giving H y hi) (keeps : RegimeMargin.Keeps giving H hi)
+    (needs : 0 < need) (within : need ≤ H + y) :
+    H + y ≤ X N ↔ (∀ n, n ≤ N → need ≤ X n) ∧
+      Keepable (Prophecy Nat) (fun s => ∀ _ : Unit, need ≤ turned X giving H s.1 s.2) (N, N) :=
+  ⟨fun low =>
+    have meetAll : ∀ t, need ≤ turned X giving H N t :=
+      turned_meets_of_above (T := N) fall top meets keeps within low
+    ⟨fun n le => Eq.subst (motive := fun z => need ≤ z)
+        (show turned X giving H N n = X n from if_pos le) (meetAll n),
+     (prophecy_keepable_iff (k := N) (n := N)).mpr (fun t _ => meetAll (N + t))⟩,
+   fun ⟨before, kept⟩ =>
+    have k' := (prophecy_keepable_iff (k := N) (n := N)).mp kept
+    above_of_turned_meets (X := X) (T := N) nothing short needs (fun t =>
+      (Nat.lt_or_ge t N).elim
+        (fun lt => Eq.subst (motive := fun z => need ≤ z)
+          (show turned X giving H N t = X t from if_pos (Nat.le_of_lt lt)).symm
+          (before t (Nat.le_of_lt lt)))
+        (fun ge => match le_dest ge with
+          | ⟨k, e⟩ => Eq.subst (motive := fun i => need ≤ turned X giving H N i) e.symm
+              (k' k ())))⟩
+
+end Lock
+
+end ScratchNoReturn
+end Becoming

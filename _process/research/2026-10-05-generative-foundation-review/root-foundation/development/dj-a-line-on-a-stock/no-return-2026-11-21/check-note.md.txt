@@ -1,0 +1,148 @@
+*An AI checker's findings (run as Claude Opus; 15 tool calls, 135,759 tokens by the run's count), word for word from the run's journal (wf_95ade227-d60), on the note as it was before the check (NOTE.before-check.md.txt).*
+
+The note has 6 MUST faults and 12 LESSER ones. The most serious: its verdict "a dictionary with one bridge" is not what the frozen tests give by their letter, and three sentences say more than the module proves.
+
+## Findings
+
+**MUST**
+
+1. **The verdict.**
+   - The note says: "The frozen file's own line for this outcome reads 'a dictionary. It is filed as that … and no module is proposed for the package', though J3 did not hold as it was worded. I file it as a dictionary with one bridge" (NOTE.md 43).
+   - The quoted line is word for word, and the ellipsis marks the cut of ", in one paragraph,". But that line's condition is "J1 to J3 hold and J5 holds" (FROZEN 38), and that condition is not met.
+   - The test that does apply is After point 4: "If none of the three comes out, it is a dictionary" (FROZEN 63). Both returns say that by this letter it is not a dictionary, because (a) holds on the package's `Recoverable`:
+     - RETURN-refuter 8: "By the letter of After point 4 it is not a dictionary".
+     - RETURN-worker 19.
+   - The J5 line (NOTE 40) gives the worker's "by the letter … not a dictionary" but tells the second reader only as "in substance a dictionary with one bridge". It leaves out that the second reader said the same about the letter.
+   - Exact: "By the letter of the frozen tests (After point 4: (a) came out) it is not a dictionary; both returns say so. In substance the second reader calls it a dictionary with one bridge, the worker a join of carriers and not of laws. I file it, against the letter, as a dictionary with one bridge, because …"
+
+2. **The frozen "What would count as a join" is left out.**
+   - FROZEN 41: "What would count as a join: J4, with the old theorem's statement checked the same by `rfl` and the scratch proof not calling the old theorem."
+   - The R2 twin meets both clauses by the letter. `recoverable_iff_above_same` is `rfl` (Scratch 621–622), and `recoverable_iff_above'` does not call `recoverable_iff_above`, `recoverable_of_above` or `above_of_recoverable` (Scratch 578–617).
+   - It misses only J4's "and the scratch step law" (FROZEN 31): `rec_succ_iff` is not used. The second reader adds that it "rest[s] on R1" (refuter 10).
+   - The note says only "J4's other two clauses … were not reached" (NOTE 39). It never says how J4's first clause and FROZEN 41 came out. A reader needs this, because it bears directly on the verdict.
+
+3. **"So what follows is new only as Lean"** (NOTE 12).
+   - The first reader says this of J1 only: "not count J1 as new in idea, only in Lean" (read-older 99; FROZEN 71: "So J1 is new only as Lean").
+   - The sketch in read-placing 176–194 covers three things:
+     - J1's dictionary for one family, October's renewal;
+     - the splice;
+     - the decided premise.
+   - It does not have:
+     - the `Prophecy` encoding of indexed families (7);
+     - the lock twins (9);
+     - `keepable_alone_not`;
+     - `runCourse_tail`.
+   - The note also drops "for one family" and "unchecked" (read-older 99).
+   - Exact: "So J1, and the splice behind it, are new only as Lean; that sketch was of one family (October's renewal) and unchecked."
+
+4. **"On the frozen carrier, where states are the courses' values, 8 shows the premise of J5 holds: a set of courses need not be the runs of a process there"** (NOTE 40, in the note's own voice).
+   - `runCourse_tail` (Scratch 194) proves only closure under dropping a first step. No family that is not closed is built in the module. The note's own item 8 says: "That the lock's `Turned`, or the four readers' family, is not closed so is not proved in the module."
+   - `runCourse_tail` is also on `RunCourse` with equality, not on the package's `Recoverable` over `RunLevels`.
+   - The sentence is the second reader's (refuter 17), and the note tells it as its own finding.
+   - Exact: "The second reader: on the frozen carrier `runCourse_tail` shows J5's premise holds. The module proves the closure; it builds no family that is not closed so."
+
+5. **"J3 is not proved on the carrier it named. It is proved on `Prophecy` only."** (NOTE 38)
+   - No theorem on `Prophecy` has J3's form (FROZEN 30): "the need met up to `N`, and the need keepable from the level at `N` with the way not yet turned".
+   - `lock_recoverable_iff_runs` (Scratch 494–503) has some run of `Prophecy`, that is, a choice of the turn's step.
+   - `lock_edge_iff` (Scratch 653–659) is about `H + y ≤ X N`, not about recoverability, and keepable is from (N, N), "turned now", under eight premises.
+   - Only `recoverable_iff_above'` and `lock_edge_iff` taken together give a J3-like statement, under eight premises, and that combination is not stated as one theorem.
+   - Exact: "J3 is not proved. On `Prophecy`, under the lock's eight premises, `recoverable_iff_above'` and `lock_edge_iff` together give: recoverable at `N` exactly where the need was met up to `N` and is keepable from the state 'turned at `N`, at step `N`'; no single theorem states this."
+
+6. **"(which reader; the step of the turn)"** (NOTE 50).
+   - `FourReaders.Feasible` is indexed by `Stop`, "The clearer's four courses: it stops before step 0, 1 or 2, or never" (ReadOffInTime 781–786; `Feasible` 967: "The courses the clearer can take").
+   - The index is when the clearer stops, not which reader.
+   - Exact: "(when the clearer stops; the step of the turn)".
+
+**LESSER**
+
+7. **"J1 holds"** (NOTE 36).
+   - Frozen J1 is on `P : Process (C → Nat) A`, on the package's `Recoverable`, with "No other premise" (FROZEN 28). The note's line lists the premises, but its head "holds" drops the frozen "No other premise".
+   - The module itself calls `recoverable_levels_run_iff` "J1 as frozen" (Scratch 351) and needs `guardResp` and `stepResp` for it.
+   - The first "nothing changed" line (FROZEN 37) asks whether the premise is one "the lock's carrier does not meet". The note does not answer it.
+   - Exact: "J1 as frozen (no other premise) is not proved; it holds with no premise on `RecoverableBy Eq`, with two on the package's `Recoverable` over level-vector states, …"
+
+8. **"J2 holds; that a point exists needs keepability decided along the run"** (NOTE 37).
+   - Frozen J2's existence clause has no "decided" premise (FROZEN 29).
+   - `exists_first_iff` (Scratch 230–233) is stated for a family `Rec` with `j1`, not on the package's `NoReturnAt`. The refuter lists "J2's existence on the package's `NoReturnAt`" as not reached (refuter 23).
+   - Exact: "J2's first clause holds; its existence clause holds with an added premise (`decided`), for a family of J1's form; it is not stated on the package's `NoReturnAt`."
+
+9. **Item 1, "it holds under one premise, that the guard does not tell such vectors apart"** (NOTE 19).
+   - `recoverable_runLevels_iff` (Scratch 314–321) also takes `keeps_iff` (`keeps l ↔ ∀ t, gl (l t)`) and a start set.
+   - Its right side is about any course `l`, not a run's course.
+   - Exact: "under `keeps_iff` (what is asked is the guard at every step) and one premise, …"
+
+10. **"Along a run, keepable can be had again after it was lost, where the guard was broken in between"** (NOTE 22), and "it can come back where the guard was broken in between" (NOTE 51).
+    - This is shown in one built case only: `keepable_alone_not` (Scratch 284–292), where the guard fails at 1.
+    - That keepable comes back only where the guard was broken is not stated. `kept_before` needs the guard from step 0.
+    - Exact: "in a built case, keepable is lost at 0 and had again at 2, the guard broken at 1".
+
+11. **"The two notions are one on the part where …"** (NOTE 49, marked as the writer's reading).
+    - J1 is stated for the course of a run (`r.state`, Scratch 165–167). On the package's notion it needs two premises (Scratch 358–365).
+    - Exact: "For the course of a run, with the runs as feasible and a guard at every step as asked, recoverable is the guard held so far and keepable from here (no premise on `RecoverableBy Eq`; two on the package's `Recoverable`)."
+
+12. **"made runs of a process in the module only by a state that carries one choice from the start"** (NOTE 50).
+    - This is true of the module's one construction. But "only" can be read as an impossibility, and the next sentence ("not proved either way") covers the lock and not the four readers' family.
+    - Exact: "The module makes them runs of a process in one way: …; whether another process, one that chooses along the way, has either family as its runs is not proved."
+
+13. **(b), "was not reached"** (NOTE 39).
+    - This is the second reader's verdict (refuter 14). The worker said "Test (b) holds" (worker 16).
+    - Exact: "The worker: (b) holds; the second reader: (b) as frozen is not reached, …"
+
+14. **J6, "The first reader: it holds in what it read; the four older files state recovery of other things"** (NOTE 41).
+    - This leaves out the clause the first reader added (read-older 98; FROZEN 72):
+      - `RecoverableControl` and `ReservedShutdown` keep an invariant along every admissible course, which is the certificate shape of `Viability`;
+      - `ExplanatoryRecovery` has a law of loss for good of its own (`merge_ambiguity_persists`).
+    - Both bear on the map's join with keeping.
+
+15. **"Under its line 'After', before any Lean was written: … and what the first reader found"** (NOTE 12).
+    - Only the 16:42 entry says "before any Lean was written" (FROZEN 54). The 16:47 entry (FROZEN 69) does not.
+    - It is likely true from the times (the module was written about 17:03), but the source does not say so.
+
+16. **"mended three sentences of its header comment that the second reader had shown false"** (NOTE 3).
+    - The second reader named one header sentence false: header lines 53–54, on what is called (refuter 13).
+    - Its findings on (b) and (c) were about the worker's telling (refuter 14–15). The old (b) header sentence (as-built 46–51) was incomplete rather than false.
+    - Exact: "mended three sentences of its header comment after the second reader's findings (one of them shown false by it)".
+
+17. **"the worker and the second reader 322,266 together"** (NOTE 60).
+    - This figure is in no file beside the note. It is in the run journal `/Users/ren/.claude/projects/-Users-ren-theories/a5a43704-f723-406f-926c-7c46463ba40a/workflows/wf_ecd6b096-fde.json`: "totalTokens":322266 (194,718 + 127,548).
+    - It is correct, but its source is not filed. Name the journal, or file the counts.
+
+18. **"What is not done"** (NOTE 56) leaves out three things:
+    - J2's existence on the package's `NoReturnAt` (refuter 23);
+    - the refuter's MUST 4: the package's general laws (ReadOffInTime 595–760) take any feasible and any keeps, so "No use found is neither" was not checked;
+    - that `DwellerKept`, a guard on the level and the step together (ReadOffInTime 971–972), is a candidate for After point 3's "A use that is neither is a result" (FROZEN 62).
+
+## Confirmed
+- The hash in FROZEN.sha256.txt (d3d4b139…ff10) matches the as-frozen file. The frozen file as it stands differs from it only by lines added after "After" (diff 52a53,74).
+- The as-built module and the module as it stands differ only in the header comment (diff: lines 36–37, 52–54, 56–60). No statement or proof changed.
+- Build 6: exit 0, `with_axioms` {}, 37 theorems, 47 declarations. Build 5: the same counts.
+- The other figures match their sources:
+  - 16:40;
+  - 30 tool calls (read-older 115);
+  - 27 tool calls and 5 builds (worker 21);
+  - 12 tool calls (refuter 25);
+  - 173,325 tokens (FROZEN 69);
+  - the 1.0 million ceiling;
+  - lines 1936 to 2140 (worker 21);
+  - lines 176 to 194 hold the sketch.
+- Items 1 to 9 state their theorems with these checked: the quantifiers, the carriers, the direction of each "exactly where", and the `rfl` and call claims:
+  - `recoverable_same`, `noReturnAt_same`, `feasible_indexed`, `turned_indexed`, `meetsNeed_same`, and both `_same` twins are `rfl`;
+  - `exists_first_iff` calls `first_of_decided`;
+  - `levels_recoverable_iff_of_first` does not call `NoReturnAt.recoverable_iff`;
+  - `rec_succ_iff` calls `keepable_step_iff`;
+  - the twins do not call R2, R3 or R2's halves; they call `turned_meets_of_above` and `above_of_turned_meets`, plus copies of three private lemmas (`turned_after`, `fall_by`, `later_le` are private, TurningInTime 1958–1978);
+  - there are eight premises.
+- `Recoverable` (591), `NoReturnAt` (595), `Recoverable.earlier` (601), `NoReturnAt.recoverable_iff` (607) and `Keepable` (JointKeeping 91) are as the note describes. `DwellerKept` is on the level and the step, as the refuter says.
+- Every link target exists.
+- Nothing in the note ranks ways of going on or says what makes a course better.
+
+## Not read, and tool count
+Not read:
+- `ScratchKeepableStep` (`keepable_step_iff`) and `Viability.Successor.process`;
+- `Horizon`'s `Run.cons`;
+- the four older files;
+- most of the first reader's report (read by grep only);
+- TurningInTime after 2130;
+- `RegimeMargin`.
+
+I did not run Lean, so the build logs are taken as filed. Tool calls: 18.

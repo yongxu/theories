@@ -1,0 +1,74 @@
+# Two notions of no return in the Lean: are they one? The guesses, fixed before anything is written or read
+
+*AI-written (Claude Fable, board row DJ), 21 November 2026, 16:40 WIB, before any agent ran and before any Lean was written. Frozen: nothing above the line "After" is changed later. Recoverable, keepable, kernel, point of no return are the Lean's own names. "In time" and "still open" are working words.*
+
+## What we are doing
+
+One map of how things come to be, go on, change and end, on which two ways of going on are placed with respect to each other ([the direction page](../../../../../_process/DIRECTION.md), "Where we are heading"). Ren, 21 November: "i am drawing the map not saying the map … direction seems right … please keep advancing". So the next thing is drawn, not said.
+
+Five reads of 20 and 21 November found the pieces of the map on different carriers, joined only in part. The read of a future (21 November) guessed that "what can go on after" is several things in the Lean with no join (its F4), and the note said it held in part.
+
+## The choice, set against the direction
+
+The order's next item is "a law of the second way stated of itself". The reads say that every law found of the second way has something handed in, so a new statement of it now would be one more island. What the direction asks first is that the pieces meet. The idea on the direction page turns on one phrase: what a going-on rests on makes a difference to it "early enough". In the Lean "early enough" is said on one carrier only (a course of levels, with a set of feasible courses handed in), and the laws of what can be kept, of keeping together, and October's renewal are on another (the states of a process). If the two are one, "early enough" can be said of any process, and the lock, the turn in time, joint keeping and renewal stand on one carrier. If they are not one, the map has a seam there that should be drawn as a seam. Either outcome is a part of the map. This is the writer's reading of the direction, not Ren's word.
+
+It does not place the two ways. It is a join of carriers.
+
+## What the writer holds, and from where
+
+- `ReadOffInTime.lean` 591: `Recoverable feasible keeps l N := ∃ l', feasible l' ∧ AgreeUpTo l' l N ∧ keeps l'`, of courses `Nat → C → Nat`, with `feasible` and `keeps` handed in. `AgreeUpTo l l' t := ∀ s, s ≤ t → ∀ c, l s c = l' s c` (`Counterfactual.lean` 132). `NoReturnAt` is the first step not recoverable. On it: `Recoverable.earlier`, `NoReturnAt.recoverable_iff`, `readableInTime_iff` (a selection read off continuation reads in time exactly where the first step apart precedes the point of no return), the laws of too late.
+- `TurningInTime.lean`, section `PointOfNoReturn` (1936 to 2343): the lock's point of no return is stated on `Recoverable`, with `Turned X giving H` (the courses that are `X` turned to `H` at some step) as the feasible courses: `recoverable_iff_above`, `noReturnAt_iff_first_below`, `turns_in_time_iff_before`.
+- `JointKeeping.lean` 91: `Keepable P g s := ∃ r : Run P, r.state 0 = s ∧ ∀ n, g (r.state n)`. `Viability.lean` 55: `Kernel P guard s := ∀ t, Reach P s t → guard t`.
+- Scratch of 21 November, outside the package: `keepable_step_iff`, `not_keepable_run`, and `renewable_iff_keepable` (October's `Renewable` is `Keepable` of a process built from the law).
+- A search of 21 November (the writer's, by name, in the package's tracked modules): `Recoverable` or `NoReturnAt` occur in `ReadOffInTime` and `TurningInTime` only; `Keepable` or `Kernel` in seven other modules; no module has both. No result record names both. The chapters tell the point of no return in 02, 07 and 08; no line was found that tells it with the kernel or with keepable.
+- Outside the package there are older files with "recoverable" in their names or text that the writer has not opened: `universal-ethics/generative-capacity/RecoverableControl.lean` (377 lines) and `ReservedShutdown.lean` (343), `deeper/ExplanatoryRecovery.lean` (137), `inquiry-root/sufficiency/RecoveryQuantum.lean` (372). None is in the listing of places.
+
+## The guesses (each may be false)
+
+- **J1. For a process whose states are the levels themselves, the two are one.** For `P : Process (C → Nat) A`, a guard `g` and a run `r`, with the feasible courses the state courses of the runs of `P` and what is asked `∀ t, g (l t)`: the course of `r` is recoverable at `N` exactly where `g` holds on `r` up to `N` and `g` is keepable from `r.state N`. No other premise.
+- **J2. With that, the point of no return of a run is the first step at which its state is not keepable**, where `g` held before; and it exists exactly where the run reaches a state from which `g` is not keepable.
+- **J3. The lock is a case, though its states carry more than the level.** There is a process (a level and whether the way has turned) whose runs' level courses are `Turned X giving H` where `X` is the course of the way left as it was, and for it `Recoverable (Turned X giving H) (MeetsNeed need) X N` is: the need met up to `N`, and the need keepable from the level at `N` with the way not yet turned. If so, `recoverable_iff_above` has the same statement as a statement proved through keepable.
+- **J4. Something old becomes a case, or something new follows.** At least one of: a theorem of `PointOfNoReturn` gets a scratch twin with the same statement up to unfolding, proved through `Keepable` and the scratch step law; October's renewable configurations get a point of no return by the two bridges together; `readableInTime_iff` can be stated of the runs of any process.
+- **J5 (against the step).** `Recoverable`'s general laws hold of any set of feasible courses, and a set of courses need not be the runs of a process. So the join holds only on the part where the feasible courses come from a process, and there it is a dictionary: nothing old becomes a case and nothing new follows. The read of 21 November that set October's renewal against keeping ended that way ("a re-packing").
+- **J6 (the older files).** The four older files outside the package state recoverability of something else (control, shutdown, explanation), on carriers of their own, and none is the same notion as either of the two above.
+
+## What would count as nothing having changed
+
+- J1 fails, or holds only with a premise the lock's carrier does not meet, and J3 fails: the two notions are not one, and the seam is drawn as a seam.
+- J1 to J3 hold and J5 holds: a dictionary. It is filed as that, in one paragraph, and no module is proposed for the package.
+- A reader finds the join already stated somewhere the writer's search did not reach. Then the work is to point to it.
+
+What would count as a join: J4, with the old theorem's statement checked the same by `rfl` and the scratch proof not calling the old theorem.
+
+Whatever is found is told as what the Lean states, with every premise, and not as what makes a course better.
+
+## How it is done, and what it costs
+
+One AI reader first (capped at 40 tool calls) reads the four older files and the two modules' sections against J6 and against "already stated", and proposes nothing. Then one AI worker (capped at 60 tool calls) writes one scratch module outside the package, in a scratch tree, built with the scratch build tool one module at a time, with no axioms, and stops at the first guess that fails, saying where. Then one AI reader who took no part reads the scratch statements against these guesses and tries to refute the telling. Then one checker of the note. Nothing enters the package. The ceiling is 1.0 million tokens in all. The claim is on the board's row DJ before the worker starts, and both other sessions are told first.
+
+---
+
+## After
+
+
+### 16:42 WIB, 21 November. Added from the coordinating session's reply, before any report was read and before any Lean was written
+
+*The file as frozen at 16:40 is kept beside this one as `FROZEN-TWO-NO-RETURNS.as-frozen-1640.md`; `FROZEN.sha256` is its hash. The first reader was launched with the text above and does not see this. The worker will.*
+
+The coordinating session knows no place where the join is stated (its search by name: no tracked Lean file and no filed scratch text has both; six atlas pages have both words, never near each other). Four things it added, taken in as tests:
+
+1. **Which differences the try keeps fixed.** The two notions differ in three ways at once: feasible is any set of whole courses, where a process's runs are generated step by step; `keeps` is asked of a whole course, where a guard is asked at every state; and recoverable is relative to a course's past up to `N`, where keepable is from a state and has no past. J1 fixes the first two (feasible is the runs of a process; what is asked is a guard at every step) and states what becomes of the third (the past enters as "the guard held up to `N`"). The worker says, for each of the three, what its statement fixes.
+2. **The direction of "is a case of".** Keepable from `s` should be recoverable at `N = 0` with feasible the runs of `P`. So keepable sits under recoverable, and recoverable is the wider notion. And it is the keepable set, not the kernel, whose edge is the point of no return: the kernel is where every course stays; the point of no return is where some course still can.
+3. **Where it should fail, to be found and kept.** A family of feasible courses that is not the runs of any process, or a `keeps` that is not a guard at every step (something that need only hold in the end). The worker looks at every use of `Recoverable` in the package (`ReadOffInTime`, `TurningInTime`) and says of each whether its feasible courses are the runs of a process and whether its `keeps` is a guard at every step. A use that is neither is a result.
+4. **What would make it more than a dictionary**, replacing J4's list with three named tests: (a) `NoReturnAt.recoverable_iff` stated through the keepable set; (b) the lock's point of no return on one level (the number in `RegimeMargin`) as the edge of where the guard is keepable for that level's process; (c) the scratch step law of 21 November carried over to `Recoverable`, which has no step law that was found. If none of the three comes out, it is a dictionary, and saying so is the result.
+
+### 16:42 WIB, 21 November. The survey session's reply, before any report was read
+
+It holds no place where the two are told together. Its search, by command and not by reading: of 1,422 tracked Lean files with copies left out, 4 name `Recoverable` or `NoReturnAt` and 20 name `Kernel`, `Keepable` or `KeptFor`, none both; no chapter line, result record or dynamic has both. Of the four older files, from their opening accounts and declaration names only: `RecoverableControl` is recovery of a program of writes after a crash; `ReservedShutdown` is a supervisor that keeps a reserve so that a stop stays possible (the nearest in what it is about, with no point of no return, kernel or keepable set seen in its names); `ExplanatoryRecovery` is whether a predicate of the past can be read off a reached configuration; `RecoveryQuantum` is a rate. So "recover" has at least four senses in the Lean. This bears on J6 and is the survey session's reading; the reader's report is set against it.
+
+### 16:47 WIB, 21 November. What the first reader found (its report: `read-older-and-already-stated.md`; one AI reader run as Claude Opus, 30 tool calls, 173,325 tokens by the run's count)
+
+- **Already stated: not in the Lean, in what it read.** But the join was already sketched on paper, in this row's own study, and the writer of this file had not looked there: the reader's report of 20 November on October's renewal (`renewal-against-keeping-2026-11-20/read-placing.md.txt`, lines 176 to 194) says that `NoReturnAt` does not apply to a history as it stands because a history's states are not courses of levels; that it would take the two definitions restated over courses `Nat → X` for any `X`, or an encoding; that recoverable at `N` would then be renewable at the state at `N`, by a splice of the first `N` ticks in front of a renewing history; and that a point exists only where recoverability is decided at each step (`noReturnAt_of_past`, 632). That note's verdict stands beside it: "the possibility is of the kind the package calls keepable, but not recoverable as it stands, and nothing is placed by the relation". So J1 is new only as Lean, not as an idea, and the worker is told so.
+- **J6 holds in what it read**, with one clause to add: `RecoverableControl` and `ReservedShutdown` each keep an invariant along every admissible course (the certificate shape, without `Kernel`, `Reach` or `Keepable`), and `ExplanatoryRecovery` has a law of loss for good of its own (`merge_ambiguity_persists`, 51).
+- **J2** needs the premise that recoverability is decided at each step for a point to exist. **J3**: `recoverable_iff_above` already has the lock's recoverability as a condition on the state at `N` alone, through the regime's threshold and eight premises; a twin proved through keepable has to meet those eight. **J5**: nothing it read refutes it.
+- It did not read proof bodies outside the four older files, or most of `TurningInTime` 1936 to 2343.

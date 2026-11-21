@@ -1,0 +1,12 @@
+#!/bin/bash
+# Wait until no other Lean build or gate process is alive, then build the scratch module once.
+n="$1"
+log=/Users/ren/tmp/dj/batch24/build-ScratchNoReturn.log
+busy() { ps -axo pid=,args= | grep -E '^ *[0-9]+ [^ ]*[Pp]ython[^ ]* .*(scratch_build|gate\.py|check_becoming)' > /dev/null; }
+while busy; do sleep 15; done
+cd /Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming || exit 9
+date '+start %H:%M:%S' > "$log"
+python3 -B scratch_build.py /Users/ren/tmp/dj/batch24 Becoming.ScratchNoReturn >> "$log" 2>&1
+echo "exit $? build $n" >> "$log"
+date '+end %H:%M:%S' >> "$log"
+cp "$log" "/Users/ren/tmp/dj/batch24/build-ScratchNoReturn.build$n.log"
