@@ -4,7 +4,7 @@
 
 ## Why
 
-Ren, 21 November 2026, about 19:50 WIB: "I think our goal should be a full map with formal link proof done elegantly with its center" ([his words](../../../../../sources/15-codex-theory-conversations/2026-11-21-a-full-map-with-its-centre.md)). The links below were the ones of that week in which an older result comes out as a case of a more general statement with the general statement doing the work. They stood outside the package, as text.
+Ren, 21 November 2026, about 19:50 WIB: "I think our goal should be a full map with formal link proof done elegantly with its center" ([his words](../../../../../../sources/15-codex-theory-conversations/2026-11-21-a-full-map-with-its-centre.md)). The links below were the ones of that week in which an older result comes out as a case of a more general statement with the general statement doing the work. They stood outside the package, as text.
 
 ## What entered the package
 
@@ -33,4 +33,4 @@ Before the core run one AI reader (run as Claude Opus; 19 tool calls) set every 
 
 ## Where it is recorded
 
-The step law is a sixth law of the record [conditions-kept-together](../../../../../theories/becoming/results/records/conditions-kept-together.md), which already stated `Keepable`; the wide split is in one law of [turning-in-time](../../../../../theories/becoming/results/records/turning-in-time.md). Each has a history note. Ten other records that cite the live receipt file were re-pointed, hash only.
+The step law is a sixth law of the record [conditions-kept-together](../../../../../../theories/becoming/results/records/conditions-kept-together.md), which already stated `Keepable`; the wide split is in one law of [turning-in-time](../../../../../../theories/becoming/results/records/turning-in-time.md). Each has a history note. Ten other records that cite the live receipt file were re-pointed, hash only.
