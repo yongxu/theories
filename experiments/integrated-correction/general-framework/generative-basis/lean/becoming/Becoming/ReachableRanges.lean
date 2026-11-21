@@ -528,9 +528,8 @@ variable {all : List S} (every : ∀ x, x ∈ all)
 
 include every in
 /-- **If a list of length n + 1 holds every state, each reachable target has a trace to it of at
-most n moves.** `Branching.reach_within_listed` in `Junctures` bounds the trace by the list length
-with two further premises, `decides` for single steps and `returns` for the target, while this
-bound is one move fewer and needs neither premise. -/
+most n moves.** `Branching.reach_within_listed` in `Junctures` states the bound at the list's
+length, one move more, from the same list. -/
 theorem trace_within_pred_length {n : Nat} (len : all.length = n + 1) {s y : S}
     (reach : Reach P y s) : ∃ as, as.length ≤ n ∧ Trace P y as s :=
   match (iter_reach_iff_trace (B := fun t => t = s) n y).mp

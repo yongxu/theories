@@ -1,4 +1,5 @@
 import Becoming.Branching
+import Becoming.ReachableRanges
 import Becoming.TimedResponse
 import Becoming.Undecided
 import Becoming.Prelude
@@ -60,11 +61,12 @@ happens, with no premise beyond what each law names.
 What is not derived: junctures for sets of configurations or for profiles of several
 possibilities; a measure of how many steps a juncture loses; which junctures actual unfoldings
 pass. No ethical predicate, ranking or axiom occurs.
-* **Within the count, and before a juncture.** With every configuration listed and steps decided,
-  what can be had again is had within as many steps as there are configurations
-  (`reach_within_listed`, `leadsWithin_trace`), so a keeping step at a juncture reaches `s` within
-  that count; at a configuration that is not a juncture, no step can be refuted to keep `s`
-  (`keeps_before_juncture`): choosing is needed only at a juncture.
+* **Within the count, and before a juncture.** With every configuration listed, what can be had
+  is had within as many steps as there are configurations (`reach_within_listed`;
+  `Reaching.trace_within_pred_length` in `Becoming.ReachableRanges` gives one step fewer), so a
+  keeping step at a juncture reaches `s` within that count; at a configuration with a step keeping
+  `s` that is not a juncture, no step can be refuted to keep `s` (`keeps_before_juncture`):
+  choosing is needed only at a juncture.
 * **A source arriving before a juncture.** With `Becoming.TimedResponse`: where a source has not
   reached a reader by `D`, a reader whose step at `x` is chosen from its answer read through its
   couplings up to `D` takes the same step in both courses, so a losing step in one is losing in the
@@ -306,30 +308,13 @@ theorem loss_passes_juncture_listed (every : ∀ x, x ∈ all)
   loss_passes_juncture_decided returns
     (fun y _ => reach_decided_listed every decides returns y) path lost
 
-/-- A configuration leading into `s` within `k` steps has a step and a course of fewer than `k`
-steps after it into `s`. -/
-theorem leadsWithin_trace (decides : ∀ x y, edge x y = true ↔ ∃ a, P.step x a y) :
-    ∀ {k : Nat} {z : S}, leadsWithin all edge s k z = true →
-      ∃ a y as, P.step z a y ∧ Trace P y as s ∧ as.length < k
-  | 0, _, h => Bool.noConfusion h
-  | k + 1, z, h => match ListTests.or_true_iff.mp h with
-    | .inl into => match (decides z s).mp into with
-      | ⟨a, step⟩ => ⟨a, s, [], step, .nil s, Nat.succ_pos k⟩
-    | .inr via => match ListTests.any_true_iff.mp via with
-      | ⟨y, _, both⟩ => match ListTests.and_true_iff.mp both with
-        | ⟨edge_on, leads⟩ => match (decides z y).mp edge_on, leadsWithin_trace decides leads with
-          | ⟨a, step⟩, ⟨b, _, as, step', path, short⟩ =>
-            ⟨a, y, b :: as, step, .cons step' path, Nat.succ_lt_succ short⟩
-
-/-- **What can be had is had within the count.** With every configuration listed, steps decided and
-`s` returning, a configuration that can have `s` again has it along a course of at most as many
-steps as there are configurations: after a keeping step at a juncture, `s` is had within that many
-steps, and no keeping needs more. -/
-theorem reach_within_listed (every : ∀ x, x ∈ all)
-    (decides : ∀ x y, edge x y = true ↔ ∃ a, P.step x a y) (returns : Returns P s) {y : S}
+/-- **What can be had is had within the count.** With every configuration listed, a configuration
+that can have `s` has it along a course of at most as many steps as there are configurations:
+after a keeping step at a juncture, `s` is had within that many steps, and no keeping needs more.
+`Reaching.trace_within_pred_length` gives one step fewer. -/
+theorem reach_within_listed (every : ∀ x, x ∈ all) {y : S}
     (reach : Reach P y s) : ∃ as, as.length ≤ all.length ∧ Trace P y as s :=
-  match leadsWithin_trace decides ((reach_iff_leads every decides returns).mp reach) with
-  | ⟨a, _, as, step, path, short⟩ => ⟨a :: as, Nat.succ_le_of_lt short, .cons step path⟩
+  Reaching.reach_within_of_pred_le every (Nat.pred_le _) reach
 
 end Listed
 
