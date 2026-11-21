@@ -4,7 +4,7 @@
 
 Every record in the directive groups `15-*`, `16-*` of [sources](../sources/README.md): 412 files, newest first. The [directive register](RESEARCH-DIRECTIVES.md) curates the authorizations among them and is incomplete; read the record itself when an authorization matters. The records keep Ren's words verbatim; an AI-authored section is labelled, its earlier text in git history.
 
-**Kind** is a heuristic read from the register entry's wording where the register lists the record, else from the file name and title: record 155, direction 130, decision 56, correction 23, question 20, clarification 11, assessment 6, attachment 6, conversation 5. It is a finding aid, not a reading of the record; who said what is settled only by the record.
+**Kind** is a heuristic read from the register entry's wording where the register lists the record, else from the file name and title: record 156, direction 129, decision 56, correction 23, question 20, clarification 11, assessment 6, attachment 6, conversation 5. It is a finding aid, not a reading of the record; who said what is settled only by the record.
 
 | Date | Record | Kind | Title | In register |
 |---|---|---|---|---|
@@ -12,7 +12,7 @@ Every record in the directive groups `15-*`, `16-*` of [sources](../sources/READ
 | 2026-11-21 | [2026-11-21-the-current-path-keep-moving.md](../sources/15-codex-theory-conversations/2026-11-21-the-current-path-keep-moving.md) | direction | Ren: "we want the "full picture", we want unified "map" - i think the current path is worth to keep moving" | yes |
 | 2026-11-21 | [2026-11-21-good-understanding-keeps-moving.md](../sources/15-codex-theory-conversations/2026-11-21-good-understanding-keeps-moving.md) | clarification | Ren: "All right, good understanding, keeps moving." | yes |
 | 2026-11-21 | [2026-11-21-drawing-the-map-not-saying-it.md](../sources/15-codex-theory-conversations/2026-11-21-drawing-the-map-not-saying-it.md) | record | Ren: "i am drawing the map not saying the map, so i don't have certainty of my words" | yes |
-| 2026-11-21 | [2026-11-21-a-full-map-with-its-centre.md](../sources/15-codex-theory-conversations/2026-11-21-a-full-map-with-its-centre.md) | direction | Ren: "our goal should be a full map with formal link proof done elegantly with its center" |  |
+| 2026-11-21 | [2026-11-21-a-full-map-with-its-centre.md](../sources/15-codex-theory-conversations/2026-11-21-a-full-map-with-its-centre.md) | record | Ren: "our goal should be a full map with formal link proof done elegantly with its center" | yes |
 | 2026-11-20 | [2026-11-20-the-lead-keep-moving-the-roadmap.md](../sources/15-codex-theory-conversations/2026-11-20-the-lead-keep-moving-the-roadmap.md) | record | Ren: "you'll be the lead … let's keep moving the roadmap, when choices are important, reflect on the direction" | yes |
 | 2026-11-20 | [2026-11-20-the-aim-toward-the-direction.md](../sources/15-codex-theory-conversations/2026-11-20-the-aim-toward-the-direction.md) | direction | Ren: October's aim adjusted toward the new direction and the new map; align to the session that has the latest direction | yes |
 | 2026-11-20 | [2026-11-20-read-first-a-part-of-the-map.md](../sources/15-codex-theory-conversations/2026-11-20-read-first-a-part-of-the-map.md) | record | Ren: "read it - but it is just a part of the map"; and what he pressed and wrote before it, 18 to 20 November | yes |
