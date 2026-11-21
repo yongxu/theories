@@ -8312,12 +8312,11 @@
   },
   "kind": "hypothesis of a law",
   "lean": [
-   "Becoming.Branching.loss_passes_juncture_listed",
-   "Becoming.Branching.reach_within_listed"
+   "Becoming.Branching.loss_passes_juncture_listed"
   ],
   "holds_in": [],
   "fails_in": [],
-  "home": "theories/becoming/results/records/reaching-before-and-after-a-juncture.md#conditions--条件",
+  "home": "theories/becoming/results/records/every-loss-passes-a-juncture.md#conditions--条件",
   "seeded_from": [
    "Lean"
   ]

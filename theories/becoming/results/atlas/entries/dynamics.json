@@ -457,7 +457,7 @@
   },
   "family": "A",
   "mechanism": {
-   "en": "A juncture for s is a configuration with one step after which s can still be had and one after which it cannot. Where s returns, every course from s to where s cannot be had again passes, up to double negation, a juncture at which it takes its losing step. Keeping only the steps after which s can still be had keeps s, holds every sub-process keeping s on its course, and removes exactly the losing steps; a process keeping s has no juncture for s on its course, however many options it has (witness Many). At a configuration with a step keeping s that is no juncture, no step can be refuted to keep it: a choice matters only at a juncture. Where a list holds the configurations and steps are decided, the juncture is found by search and, s returning, what can have s has it within the count of configurations; finding the juncture of every loss of every process gives LPO. World, with a process, under the premises its transition states: to turn a reader at a juncture, a source must, not not, have reached it before. Reading [AI reading, D25, D32, D43, D52]: keeping and losing at a juncture are one operation with no valuation."
+   "en": "A juncture for s is a configuration with one step after which s can still be had and one after which it cannot. Where s returns, every course from s to where s cannot be had again passes, up to double negation, a juncture at which it takes its losing step. Keeping only the steps after which s can still be had keeps s, holds every sub-process keeping s on its course, and removes exactly the losing steps; a process keeping s has no juncture for s on its course, however many options it has (witness Many). At a configuration with a step keeping s that is no juncture, no step can be refuted to keep it: a choice matters only at a juncture. Where a list holds the configurations, steps are decided and s returns, the juncture is found by search; with the list alone, what can have s has it within the count of configurations; finding the juncture of every loss of every process gives LPO. World, with a process, under the premises its transition states: to turn a reader at a juncture, a source must, not not, have reached it before. Reading [AI reading, D25, D32, D43, D52]: keeping and losing at a juncture are one operation with no valuation."
   },
   "records": [
    "every-loss-passes-a-juncture",
@@ -665,8 +665,6 @@
     "law": "Becoming.Branching.reach_within_listed",
     "takes": [
      "branching-every",
-     "branching-decides",
-     "branching-returns",
      "reach"
     ]
    },

@@ -596,7 +596,7 @@
   "source": "lister",
   "binders": [
    {
-    "position": 7,
+    "position": 6,
     "name": "every",
     "type": "∀ (x : S), x ∈ all",
     "premises": [
@@ -605,22 +605,6 @@
    },
    {
     "position": 8,
-    "name": "decides",
-    "type": "∀ (x y : S), edge x y = true ↔ ∃ a, P.step x a y",
-    "premises": [
-     "branching-decides"
-    ]
-   },
-   {
-    "position": 9,
-    "name": "returns",
-    "type": "Becoming.Branching.Returns P s",
-    "premises": [
-     "branching-returns"
-    ]
-   },
-   {
-    "position": 11,
     "name": "reach",
     "type": "Becoming.Reach P y s",
     "premises": [
