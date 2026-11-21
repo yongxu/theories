@@ -5,20 +5,20 @@
 
 `reaching-before-and-after-a-juncture` · **recorded-checked** · theorem · F01 · [record](reaching-before-and-after-a-juncture.json) · [register](../../../../RESULTS.md)
 
-> With every configuration listed and steps decided, what can be had again is had within as many steps as there are configurations; at a configuration that is not a juncture, no step can be refuted to keep it.
+> With every configuration listed, what can be had is had within as many steps as there are configurations; at a configuration with a step keeping it that is not a juncture, no step can be refuted to keep it.
 
 <a id="laws--规律"></a>
 ## Laws
 
-1. A configuration leading into s within k steps has a step and a course of fewer than k steps into s; with every configuration listed, steps decided and s returning, a configuration from which s can be had has it within the count of configurations. (`Becoming.Branching.leadsWithin_trace`, `Becoming.Branching.reach_within_listed`)
-   - *Shared laws, by Lean dependency:* finite runs; its declarations do not reach the grammar.
+1. With every configuration listed, a configuration from which s can be had has it within the count of configurations. (`Becoming.Branching.reach_within_listed`)
+   - *Shared laws, by Lean dependency:* closure; its declarations reach the grammar.
 2. At a configuration with a step keeping s and which is not a juncture for s, no step can be refuted to keep s: choosing is needed only at a juncture. (`Becoming.Branching.keeps_before_juncture`)
    - *Shared laws, by Lean dependency:* no shared law's anchor among the constants its declarations use.
 
 <a id="conditions--条件"></a>
 ## Conditions
 
-- No axiom; a finite list of every configuration and decided steps for the bound; none for the juncture law.
+- No axiom; a finite list of every configuration for the bound; none for the juncture law.
 
 <a id="does-not-show--未表明"></a>
 ## Does not show
@@ -30,7 +30,7 @@
 <a id="evidence--证据"></a>
 ## Evidence
 
-Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261022T060905.150236Z): the 3 declarations cited here that the modules gained have empty axiom reports; the checker verifies core purity. Built and reviewed in one session; author review in study section 342; not independently reviewed by a person.
+Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261121T223556.393134Z): the 2 declarations cited here have empty axiom reports; the checker verifies core purity. First built and reviewed in one session (study section 342; receipt 20261022T060905.150236Z, the bound then under two further premises); the bound from the list alone was read before landing by readers who took no part; not independently reviewed by a person.
 
 Canonical source: [Junctures.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Junctures.lean)
 
@@ -52,13 +52,14 @@ Reachability within the number of states (the pigeonhole bound on shortest paths
 - **formal-reuse**: [every-loss-passes-a-juncture](every-loss-passes-a-juncture.md). Its juncture; before one no step needs choosing.
 - **formal-reuse**: [basins-of-a-determined-law](basins-of-a-determined-law.md). Entering what returns within the count is the same bound on a determined law.
 - related, not a proved adapter: [civilization-thought-on-the-spine](civilization-thought-on-the-spine.md). States a gap its map found (entries xici-zhi-ji-qi-shen, sunzi-bing-shi, hanfei-yulao-bian-que).
+- related, not a proved adapter: [kept-at-the-length-of-a-list](kept-at-the-length-of-a-list.md). Its bound on reach where a list holds every configuration has one move fewer; the bound here follows from it.
 
 <a id="sources--来源"></a>
 ### Sources
 
 | Role | Source | Declarations |
 |---|---|---|
-| proof | [Junctures.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Junctures.lean) | `Becoming.Branching.keeps_before_juncture`, `Becoming.Branching.leadsWithin_trace`, `Becoming.Branching.reach_within_listed` |
+| proof | [Junctures.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Junctures.lean) | `Becoming.Branching.keeps_before_juncture`, `Becoming.Branching.reach_within_listed` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T060905.150236Z/verification.json) | — |
 | integration | [BECOMING-RENEWAL-READING.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/README.md) (generated mirror); its history names section [342](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/mirror/BECOMING-RENEWAL-READING/342.md) | — |
 | integration | [BECOMING-SIGNIFICANCE-REVIEW.md](../../../../_process/research/2026-10-05-generative-foundation-review/root-foundation/BECOMING-SIGNIFICANCE-REVIEW.md) | — |
@@ -67,14 +68,16 @@ Reachability within the number of states (the pigeonhole bound on shortest paths
 | statement | [THE-THEORY-OF-BECOMING.md](../../history/THE-THEORY-OF-BECOMING.md) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261022T064310.304329Z/verification.json) | — |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261028T061626.538602Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T223556.393134Z/verification.json) | — |
 
-Aliases: `Reaching before and after a juncture`, `机前与机后之可得`, `Becoming.Branching.leadsWithin_trace`
+Aliases: `Reaching before and after a juncture`, `机前与机后之可得`, `Becoming.Branching.reach_within_listed`
 
 <a id="history--沿革"></a>
 ### History
 
 - 22 October 2026: added (ZG), for the gap the ZH reading raised; study section 342.
+- 22 November 2026, board row FM (the landing owed after the law of what a list holds): the first law re-told. Branching.reach_within_listed keeps its name and conclusion and loses two premises (steps decided, s returning); it asks only a list holding every configuration, and follows from Reaching.reach_within_of_pred_le (record kept-at-the-length-of-a-list). Branching.leadsWithin_trace, used by no other proof, is deleted and leaves the law, the references and the aliases. Statement and hypotheses no longer name decided steps; the statement no longer says "again" of what can be had, since s need not return, and now says that the configuration of its second clause has a step keeping it, as the second law does; the second law is unchanged. AI-written. Former first law: "A configuration leading into s within k steps has a step and a course of fewer than k steps into s; with every configuration listed, steps decided and s returning, a configuration from which s can be had has it within the count of configurations." Bound to core run 20261121T223556.393134Z.
 
 </details>
 
-Documentary review UTC: `2026-10-22T06:14:34+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-21T22:37:13+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

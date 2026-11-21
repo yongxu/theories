@@ -65,7 +65,7 @@ Canonical source: [PredicateIteration.lean](../../../../experiments/integrated-c
 <a id="next--下一步"></a>
 ## Next
 
-Branching.reach_within_listed to lose in place the two premises it does not need; a case with a level that runs down and a reading in one statement; the run from a family that keeps moving as a call.
+A case with a level that runs down and a reading in one statement; the run from a family that keeps moving as a call.
 
 <details><summary>Correspondence, dependencies, sources and history</summary>
 
@@ -101,6 +101,7 @@ A law of the formal model. Reading it onto an actual situation asks two recognit
 | proof | [KeepableStep.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeepableStep.lean) | `Becoming.Viability.keepStep`, `Becoming.Viability.keepable_iff_count` |
 | proof | [ReachableRanges.lean](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReachableRanges.lean) | `Becoming.Reaching.guarded_not_keepsWidening`, `Becoming.Reaching.iter_reach_iff_trace`, `Becoming.Reaching.possible_iff_within_of_pred_le`, `Becoming.Reaching.trace_within_pred_length` |
 | receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T212524.793950Z/verification.json) | — |
+| receipt | [verification.json](../../../../experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T223556.393134Z/verification.json) | — |
 
 Aliases: `kept at the length of a list`, `what a list holds`, `列表所容`, `Becoming.Iteration.iter_persists`, `Becoming.Iteration.iter_largest`, `Becoming.Iteration.iter_gives_persists`
 
@@ -108,7 +109,8 @@ Aliases: `kept at the length of a list`, `what a list holds`, `列表所容`, `B
 ### History
 
 - 22 November 2026: added, on board row FM (one law of what a list holds, and its cases), in the direction Ren gave on 21 November 2026 (sources/15-codex-theory-conversations/2026-11-21-a-full-map-with-its-centre.md: a full map with formal link proof, done elegantly, with its centre). AI-written (Claude Fable, board row FM). The law began as an exact bound for a choice against every outcome, was said once for a monotone step after a reader saw that only monotonicity was used, and the ending side was said once after three inductions on places had been written and each was found by a reader to be the law's own. Parting.continues_persists, continues_any, GuardHorizon.closed_viable and Tolerance.kept_set keep their statements and became calls; AlikeTo.steady_within and alike_iff_alikeTo_pairs lost four premises (record tests-fix-likeness-where-determined). Briefs, builds, readers' returns and what was expected before each run: study folder fm-the-law-of-what-a-list-holds-2026-11-22. Bound to core run 20261121T212524.793950Z.
+- 22 November 2026, board row FM: the next step no longer names Branching.reach_within_listed, which lost its two unneeded premises in place in the landing that followed this one (record reaching-before-and-after-a-juncture). No law changed. Bound to core run 20261121T223556.393134Z for ReachableRanges.lean, where one docstring sentence about that theorem changed.
 
 </details>
 
-Documentary review UTC: `2026-11-21T21:27:36+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.
+Documentary review UTC: `2026-11-21T22:37:13+00:00`. Hashes in the record bind the reviewed sources; the checker does not audit transitive Lean imports or establish premise warrant, and this page is not a proof receipt.

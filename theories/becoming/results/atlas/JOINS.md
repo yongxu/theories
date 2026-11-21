@@ -490,7 +490,7 @@ The theory graph has 3,303 nodes (1,724 text, 568 result, 559 section, 408 modul
 
 ## Declarations
 
-The core run lists 28,009 declarations. The atlas's dynamics name 2,648, of which 2,464 are in the core run's list and the rest in the periphery (the atlas render checks that each is declared in a live Lean file). Of the 2,757 times a dynamic names a declaration, 8 name one that none of the dynamic's own records lists, so the declaration joins the dynamic to no record; 376 of the declarations named are listed by more than one record. The records list 25,613 declarations, 23,360 of them by the core run's name. The Lean catalogue (`lean-index.json`) is loaded in the index the command writes and not read here: the same render writes it later, so a page reading it would lag a render.
+The core run lists 28,008 declarations. The atlas's dynamics name 2,648, of which 2,464 are in the core run's list and the rest in the periphery (the atlas render checks that each is declared in a live Lean file). Of the 2,757 times a dynamic names a declaration, 8 name one that none of the dynamic's own records lists, so the declaration joins the dynamic to no record; 376 of the declarations named are listed by more than one record. The records list 25,612 declarations, 23,359 of them by the core run's name. The Lean catalogue (`lean-index.json`) is loaded in the index the command writes and not read here: the same render writes it later, so a page reading it would lag a render.
 
 ## Ambiguous joins
 
@@ -563,7 +563,7 @@ Where two rows share a folder (LA4's two stages, IN1's two rounds), only an id c
 
 ## Pilot: premise ids
 
-K3's 17 premises (`COVERAGE.json`) were the one place premises were data until step 2 of the next phase made premises entries of their own ([the premise ledger](PREMISES.md)), seeded from them and from 08's card; this pilot is still measured, at each render, on K3's patterns. For each, a proposed id, the live record hypotheses that name it in words and those its Lean pattern matches, the dynamics that quote such a hypothesis, and how many of its witnesses the core run lists. A hypothesis is text, so a match is a candidate join, not a reading of it. 435 of the 1,325 live hypotheses match some premise, and 99 match more than one.
+K3's 17 premises (`COVERAGE.json`) were the one place premises were data until step 2 of the next phase made premises entries of their own ([the premise ledger](PREMISES.md)), seeded from them and from 08's card; this pilot is still measured, at each render, on K3's patterns. For each, a proposed id, the live record hypotheses that name it in words and those its Lean pattern matches, the dynamics that quote such a hypothesis, and how many of its witnesses the core run lists. A hypothesis is text, so a match is a candidate join, not a reading of it. 435 of the 1,325 live hypotheses match some premise, and 98 match more than one.
 
 | Premise | Proposed id | Hypotheses naming it (records) | Matching its pattern (records) | Dynamics quoting one | Witnesses in the core |
 |---|---|---:|---:|---:|---:|
@@ -578,7 +578,7 @@ K3's 17 premises (`COVERAGE.json`) were the one place premises were data until s
 | a reserve | `k3-a-reserve` | 0 (0) | 1 (1) | 1 | 1 of 1 |
 | finite | `k3-finite` | 120 (106) | 0 (0) | 27 | 2 of 2 |
 | enclosed | `k3-enclosed` | 10 (8) | 2 (2) | 5 | 2 of 2 |
-| decided | `k3-decided` | 141 (124) | 13 (13) | 46 | 3 of 3 (logical: what meets it, that it is unrefuted, its calibration) |
+| decided | `k3-decided` | 140 (123) | 13 (13) | 46 | 3 of 3 (logical: what meets it, that it is unrefuted, its calibration) |
 | a supplied law of exchange | `k3-a-supplied-law-of-exchange` | 0 (0) | 14 (7) | 1 | 1 of 1 |
 | the continuation condition | `k3-the-continuation-condition` | 20 (19) | 12 (12) | 2 | 2 of 2 |
 | living significance | `k3-living-significance` | 21 (19) | 4 (4) | 2 | 2 of 2 |

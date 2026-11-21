@@ -9200,7 +9200,7 @@
    "type": "module",
    "name": "Becoming.Junctures",
    "level": "L1",
-   "theorems": 51,
+   "theorems": 50,
    "region": "map",
    "base": "frame",
    "on_grammar": true,
@@ -34389,6 +34389,11 @@
   },
   {
    "from": "module:Becoming.Junctures",
+   "to": "module:Becoming.ReachableRanges",
+   "type": "imports"
+  },
+  {
+   "from": "module:Becoming.Junctures",
    "to": "module:Becoming.TimedResponse",
    "type": "imports"
   },
@@ -52596,6 +52601,11 @@
    "from": "record:reaching-before-and-after-a-juncture",
    "to": "record:every-loss-passes-a-juncture",
    "type": "formal-reuse"
+  },
+  {
+   "from": "record:reaching-before-and-after-a-juncture",
+   "to": "record:kept-at-the-length-of-a-list",
+   "type": "related"
   },
   {
    "from": "record:readers-drawn-from-the-selected",

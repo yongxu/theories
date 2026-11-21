@@ -17,7 +17,7 @@ This group's 394 modules are listed on 7 parts of about equal size, the largest 
 |---|---|---:|
 | [Part 1 of 7](../lean-declarations/becoming-core-part-1.md) | 67, from GenerativeCore.lean to Counting.lean | 2,701 |
 | [Part 2 of 7](../lean-declarations/becoming-core-part-2.md) | 60, from CoupledDrawers.lean to GrammarLaws.lean | 2,880 |
-| [Part 3 of 7](../lean-declarations/becoming-core-part-3.md) | 62, from GrammarMap.lean to LearningRuns.lean | 2,750 |
+| [Part 3 of 7](../lean-declarations/becoming-core-part-3.md) | 62, from GrammarMap.lean to LearningRuns.lean | 2,749 |
 | [Part 4 of 7](../lean-declarations/becoming-core-part-4.md) | 41, from LeastLoss.lean to OrderNormal.lean | 2,921 |
 | [Part 5 of 7](../lean-declarations/becoming-core-part-5.md) | 51, from OverExchange.lean to ReflexivePrediction.lean | 2,613 |
 | [Part 6 of 7](../lean-declarations/becoming-core-part-6.md) | 55, from RegimeMargin.lean to SetPointOptimum.lean | 2,832 |
@@ -196,7 +196,7 @@ This group's 394 modules are listed on 7 parts of about equal size, the largest 
 | <a id="module-923266ce0995"></a>[JointKeeping.lean](../lean-declarations/becoming-core-part-3.md#module-923266ce0995) | part 3 | 22 |
 | <a id="module-5cfc0c3cee2e"></a>[JointPhase.lean](../lean-declarations/becoming-core-part-3.md#module-5cfc0c3cee2e) | part 3 | 23 |
 | <a id="module-2a662f22e34b"></a>[JointPlans.lean](../lean-declarations/becoming-core-part-3.md#module-2a662f22e34b) | part 3 | 4 |
-| <a id="module-cbfedf3df46d"></a>[Junctures.lean](../lean-declarations/becoming-core-part-3.md#module-cbfedf3df46d) | part 3 | 51 |
+| <a id="module-cbfedf3df46d"></a>[Junctures.lean](../lean-declarations/becoming-core-part-3.md#module-cbfedf3df46d) | part 3 | 50 |
 | <a id="module-5903ce8e2fd7"></a>[KeepableStep.lean](../lean-declarations/becoming-core-part-3.md#module-5903ce8e2fd7) | part 3 | 10 |
 | <a id="module-67adbe44fe92"></a>[Keeping.lean](../lean-declarations/becoming-core-part-3.md#module-67adbe44fe92) | part 3 | 33 |
 | <a id="module-64282aee44b2"></a>[KeepingWidening.lean](../lean-declarations/becoming-core-part-3.md#module-64282aee44b2) | part 3 | 250 |
