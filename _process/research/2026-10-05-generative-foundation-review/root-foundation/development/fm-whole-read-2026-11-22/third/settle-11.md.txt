@@ -1,0 +1,795 @@
+# Task file: SETTLE, reader whole-c-settle-11
+
+Your 13 modules and the fields on which the two passes differ. Pass a is one kind of model, pass b another.
+
+## Interleavings.lean  (2577 lines)
+
+### field `both_outcomes`
+- pass a: S: traced_iff (l. 936) characterizes feasibility of completing the prescribed finite courses from any start by success of the bounded scheduler, given a covering list and decidable exchange equality.
+- pass b: N: no exactly-when between going on and ending, or keeping and losing. S: the exactly-whens are about other things: `schedule_iff` (l. 929, an interleaving exists iff the scheduler completes), `unique_iff` (l. 503, the own courses fix the list iff `Connected`), `touch_contains_iff` (l. 2353).
+
+### field `closed_region`
+- pass a: S: run_idle (l. 298) fixes every start pointwise for exchange lists whose courses are empty at every relatum. runUpTo_untouched (l. 2169) preserves an untouched relatum's standing across the step.
+- pass b: N: no invariant region, kernel or largest closed set of configurations. `LocalLaw.keeps` (l. 165) is a field saying untouched relata keep their state; `renumber_beyond` (l. 2102) fixes steps past the length.
+
+### field `forms_change`
+- pass a: B: Pair.touch_not_contains (l. 2532), with Pair.touches (l. 2473) and world_active_iff (l. 2234), has the two-step list [0,1] touching first false and then true, changing the active participant during a finite course.
+- pass b: N: no relay or kinds coming and going. `world_swap_between` (l. 1605) says only that at the step between two swapped apart exchanges a relatum stands one step earlier or later.
+
+### declarations of Interleavings.lean (by script)
+  l.122 theorem cons_ne_nil
+  l.125 theorem cons_heads
+  l.128 theorem cons_tails
+  l.131 theorem bool_absurd
+  l.135 theorem split_first
+  l.153 theorem length_tail_le
+  l.162 structure LocalLaw
+  l.176 def run
+  l.181 def ownCourse
+  l.188 def Apart
+  l.193 def process
+  l.197 def Interleaves
+  l.201 def shares
+  l.206 def Connected
+  l.214 theorem ownCourse_true
+  l.221 theorem ownCourse_false
+  l.228 theorem ownCourse_append
+  l.240 theorem ownCourse_untouched
+  l.250 theorem act_agree
+  l.257 theorem run_agree
+  l.262 theorem Apart.symm
+  l.269 theorem act_comm
+  l.289 theorem run_move
+  l.298 theorem run_idle
+  l.315 theorem shares_of_mem
+  l.327 theorem exists_of_shares
+  l.343 theorem apart_of_shares
+  l.350 theorem untouched_of_shares
+  l.359 theorem split_heads
+  l.394 theorem run_of_courses
+  l.425 theorem trace_run
+  l.433 theorem run_trace
+  l.440 theorem trace_of_courses
+  l.447 theorem trace_of_interleavings
+  l.455 theorem swap_courses
+  l.468 theorem trace_swap
+  l.475 theorem eq_of_courses
+  l.503 theorem unique_iff
+  l.523 theorem traced_unique_iff
+  l.538 def ready
+  l.549 def pop
+  l.557 def pick
+  l.566 def done
+  l.573 def total
+  l.579 def schedule
+  l.589 theorem heads_eq
+  l.593 theorem heads_cons
+  l.596 theorem ready_heads
+  l.611 theorem ready_of_heads
+  l.623 theorem pop_true
+  l.631 theorem pop_false
+  l.639 theorem done_nil
+  l.653 theorem not_done
+  l.665 theorem pick_cons
+  l.672 theorem pick_nil_head
+  l.676 theorem pick_cons_head
+  l.683 theorem pick_spec
+  l.712 theorem pick_some
+  l.736 theorem schedule_zero
+  l.741 theorem schedule_succ
+  l.749 theorem schedule_interleaves
+  l.807 theorem pop_interleaves
+  l.824 theorem total_le
+  l.830 theorem total_lt
+  l.845 theorem total_pos
+  l.856 theorem total_pop
+  l.867 theorem schedule_some
+  l.929 theorem schedule_iff
+  l.936 theorem traced_iff
+  l.949 def standings
+  l.955 theorem standings_true
+  l.962 theorem standings_false
+  l.971 theorem standings_agree
+  l.985 theorem standings_move
+  l.1014 theorem standings_idle
+  l.1029 theorem standings_of_courses
+  l.1065 theorem standings_of_interleavings
+  l.1073 def exchangeAt
+  l.1080 def runUpTo
+  l.1086 theorem runUpTo_succ
+  l.1096 theorem runUpTo_whole
+  l.1103 theorem runUpTo_append_le
+  l.1112 theorem runUpTo_append
+  l.1119 theorem runUpTo_agree
+  l.1138 def ownCount
+  l.1147 def afterOwn
+  l.1154 def standingAfter
+  l.1157 theorem ownCount_true
+  l.1164 theorem ownCount_false
+  l.1171 theorem ownCount_zero
+  l.1175 theorem afterOwn_zero
+  l.1181 theorem runUpTo_own
+  l.1202 theorem standingAfter_of_interleavings
+  l.1210 theorem runUpTo_of_own
+  l.1219 theorem ownCount_le
+  l.1234 def firstAt
+  l.1241 theorem firstAt_true
+  l.1248 theorem firstAt_false
+  l.1256 theorem ownCount_firstAt
+  l.1271 theorem firstAt_least
+  l.1290 def indexMap
+  l.1294 theorem length_of_interleavings
+  l.1301 theorem ownCount_index
+  l.1309 theorem runUpTo_index
+  l.1315 theorem exchangeAt_lt
+  l.1322 theorem exchangeAt_own
+  l.1345 theorem firstAt_succ_step
+  l.1368 theorem index_matches
+  l.1387 def touchAt
+  l.1394 def touchedIn
+  l.1403 def fall
+  l.1406 def rise
+  l.1414 def world
+  l.1428 theorem world_level
+  l.1433 theorem total_zero_of
+  l.1441 theorem total_single
+  l.1455 theorem total_absent
+  l.1463 theorem touchedIn_mem
+  l.1480 theorem touchedIn_not_mem
+  l.1498 theorem touchedIn_mem_of
+  l.1514 theorem touchedIn_pairwise
+  l.1527 theorem world_balances
+  l.1571 theorem world_final
+  l.1581 theorem world_swap
+  l.1605 theorem world_swap_between
+  l.1660 theorem world_own
+  l.1667 theorem world_index
+  l.1673 theorem world_of_own
+  l.1682 theorem world_reads_alike
+  l.1717 theorem exchangeAt_mem
+  l.1726 theorem exchangeAt_append_lt
+  l.1733 theorem exchangeAt_append
+  l.1740 theorem exchangeAt_beyond
+  l.1746 theorem exchangeAt_none
+  l.1752 theorem exchangeAt_some
+  l.1758 theorem length_insert
+  l.1763 theorem ownCount_append_le
+  l.1780 theorem ownCount_append
+  l.1797 theorem ownCount_untouched
+  l.1803 theorem ownCount_mono
+  l.1819 theorem step_of_ownCount
+  l.1836 theorem firstAt_after
+  l.1852 theorem occurrence_matches
+  l.1928 def Touching
+  l.1931 theorem Touching.tail
+  l.1934 theorem Touching.remove
+  l.1944 theorem length_of_courses
+  l.1967 theorem touches_of_touchedIn
+  l.1988 def renumber
+  l.1995 theorem renumber_none
+  l.2004 theorem renumber_lead
+  l.2022 theorem renumber_spec
+  l.2054 theorem renumber_exchange
+  l.2068 theorem renumber_count
+  l.2077 theorem renumber_index
+  l.2084 theorem renumber_renumber
+  l.2102 theorem renumber_beyond
+  l.2107 theorem renumber_lt
+  l.2116 theorem renumber_reindexes
+  l.2133 theorem touchAt_some
+  l.2140 theorem touchAt_none
+  l.2148 theorem touchAt_iff
+  l.2157 theorem touchAt_renumber
+  l.2169 theorem runUpTo_untouched
+  l.2184 theorem runUpTo_renumber
+  l.2198 theorem reads_renumber
+  l.2211 theorem change_renumber
+  l.2234 theorem world_active_iff
+  l.2240 theorem world_renumber_active
+  l.2249 theorem world_renumber_level
+  l.2262 theorem world_renumber_reads
+  l.2272 theorem fall_of_change
+  l.2277 theorem rise_of_change
+  l.2284 theorem world_renumber_flow
+  l.2309 def footprinted
+  l.2315 def touchAround
+  l.2319 theorem bool_or_false_left
+  l.2324 theorem bool_or_false_right
+  l.2331 theorem untouched_unmoved
+  l.2353 theorem touch_contains_iff
+  l.2362 theorem around_contains
+  l.2368 theorem around_joined
+  l.2380 theorem keeps_consecutive
+  l.2412 theorem around_keeps_identity
+  l.2421 theorem renumber_keeps
+  l.2451 theorem world_renumber_correspondence
+  l.2473 def touches
+  l.2480 def act
+  l.2485 theorem keeps
+  l.2492 theorem reads
+  l.2503 def law
+  l.2506 def start
+  l.2512 theorem apart_differs
+  l.2532 theorem touch_not_contains
+  l.2539 theorem idle_unmatched
+  l.2555 def law
+  l.2568 theorem order_matters
+
+## Irreversibility.lean  (61 lines)
+
+### field `moves`
+- pass a: B: same_change_different_return (l. 41) fixes the same single Unit action in both processes and proves opposite return possibilities.
+- pass b: N: no choice among steps; `flip` (l. 31) is `Law.process not` over `Unit` actions and DeadEnd.law is used with one step. B: the two built processes compared in `same_change_different_return` (l. 41).
+
+### field `closed_region`
+- pass a: N: Not found in the statements read.
+- pass b: B: in the proof of `deadEnd_no_return` (l. 36), y = true is used as an invariant of DeadEnd.law; no invariant is stated as a declaration here.
+
+### declarations of Irreversibility.lean (by script)
+  l.31 def flip
+  l.34 theorem deadEnd_no_return
+  l.41 theorem same_change_different_return
+  l.50 theorem constant_reading_hides_loss
+
+## Joining.lean  (1028 lines)
+
+### field `no_return`
+- pass a: S: retained_extends (l. 864) concludes an append-only history on every retained trace, excluding return to a shorter list.
+- pass b: N: no irreversibility law. B: `Once` (l. 963-1020) is docstringed as a process that can make one passage and no more; its statement `passage_alone` (l. 999) says only that the passage cannot join with itself.
+
+### declarations of Joining.lean (by script)
+  l.66 abbrev Joining
+  l.69 theorem Bisimulation.of_iff
+  l.87 def Used
+  l.90 def Aligned
+  l.94 theorem Aligned.functional
+  l.100 theorem aligned_one_to_one
+  l.120 def OpenMap
+  l.125 theorem openMap_iff
+  l.139 theorem OpenMap.alike
+  l.144 theorem OpenMap.alike_iff
+  l.150 theorem OpenMap.comp
+  l.171 inductive Move
+  l.176 def Move.Joins
+  l.181 def Move.map
+  l.187 def frame
+  l.192 def Compatible
+  l.198 theorem bisimulation_iff_compatible
+  l.217 theorem substitute
+  l.226 theorem alike_substitute
+  l.237 def image
+  l.241 theorem image_of
+  l.247 def Lifts
+  l.252 theorem lifts_iff
+  l.272 theorem image_iff
+  l.277 theorem lifts_of_identifiesAlike
+  l.283 theorem lifts_iff_sameBranchingTests
+  l.291 theorem aligned_image_iff
+  l.309 theorem common_structure
+  l.324 theorem common_structure_of_identifiesAlike
+  l.337 def FiniteOutcomes
+  l.341 theorem FiniteOutcomes.outcomes
+  l.349 theorem FiniteOutcomes.alike_iff_sameBranchingTests
+  l.356 theorem FiniteOutcomes.identifiesAlike
+  l.366 theorem FiniteOutcomes.common_structure
+  l.382 def Functional
+  l.385 theorem Functional.determined
+  l.391 theorem Lifts.functional
+  l.404 theorem common_operation
+  l.424 def mapPartners
+  l.434 theorem holds_image_iff
+  l.463 inductive Tree
+  l.468 def Tree.map
+  l.473 def Tree.Realizes
+  l.480 theorem tree_lifts
+  l.497 inductive Role
+  l.503 structure Occurrence
+  l.510 def Occurrence.at
+  l.516 theorem Occurrence.ext_at
+  l.529 inductive RoleMove
+  l.535 def Incident
+  l.545 def roleFrame
+  l.549 theorem fragment_not_alike_occurrence
+  l.556 theorem slots_alike
+  l.566 theorem match_incident
+  l.578 def Keeps
+  l.584 def OpenMap
+  l.589 def Occurrence.map
+  l.593 theorem Occurrence.map_at
+  l.600 def placeMap
+  l.607 theorem openMap_iff
+  l.640 theorem OpenMap.alike
+  l.647 theorem OpenMap.sameBranchingTests
+  l.652 theorem openMap_id
+  l.658 abbrev Matched
+  l.662 def span
+  l.666 def pairOccurrence
+  l.672 theorem pairOccurrence_at
+  l.680 theorem span_first_open
+  l.688 theorem span_second_open
+  l.696 def ConnectedFrom
+  l.701 theorem covers
+  l.712 theorem common_refinement
+  l.724 def factor
+  l.731 theorem universal_factor
+  l.743 def RoleTotal
+  l.746 def coarse
+  l.750 theorem RoleTotal.openMap
+  l.756 theorem RoleTotal.alike
+  l.762 def PairLifting
+  l.766 def SelfJoinable
+  l.770 theorem not_pairLifting_coarse
+  l.778 theorem RoleTotal.open_not_pairLifting
+  l.789 theorem RoleTotal.collapse
+  l.796 theorem exists_of_mem_map
+  l.810 def LocallyFinite
+  l.815 theorem LocallyFinite.outcomes
+  l.838 theorem LocallyFinite.alike_iff
+  l.846 theorem common_refinement_of_em
+  l.858 def retainedFrame
+  l.864 theorem retained_extends
+  l.877 theorem retained_history_matches
+  l.895 theorem retained_self_iff
+  l.905 theorem retained_apart
+  l.913 theorem retained_codes_apart
+  l.920 theorem FiniteOutcomes.retained_outcomes
+  l.939 theorem FiniteOutcomes.retained_alike_iff
+  l.948 theorem retained_history_matches_of_em
+  l.967 inductive Piece
+  l.974 inductive Joins
+  l.981 def joining
+  l.984 theorem roleTotal
+  l.996 theorem start_self
+  l.999 theorem passage_alone
+  l.1003 theorem roles_alike
+  l.1008 theorem open_not_pairLifting
+  l.1016 theorem retained_apart
+
+## JoiningCodes.lean  (173 lines)
+
+### field `both_outcomes`
+- pass a: S: image_domain_iff (l. 58) characterizes whether a particular pair can take a joining step by existence of a join of its codes under context exactness.
+- pass b: N: no exactly-when of going on and ending; the exactly-whens are about codes joining (`image_domain_iff` l. 58, `image_realized_iff` l. 69).
+
+### field `closed_region`
+- pass a: N: Not found in the statements read.
+- pass b: S: `FiniteOutcomes.joined_sameBranchingTests_of_em` (l. 154): under the named em with finite outcomes, passing the same branching tests is carried through joining (a congruence). No region of configurations closed under steps.
+
+### declarations of JoiningCodes.lean (by script)
+  l.49 def possibleAnswers
+  l.52 theorem codes_apart_of_possible
+  l.58 theorem image_domain_iff
+  l.69 theorem image_realized_iff
+  l.78 theorem image_functional
+  l.89 theorem image_transport
+  l.102 theorem image_iff_of_matches
+  l.115 def Context.ask
+  l.122 theorem Context.holds_ask
+  l.142 theorem ContextSame.of_sameBranchingTests
+  l.154 theorem FiniteOutcomes.joined_sameBranchingTests_of_em
+  l.165 theorem FiniteOutcomes.lifts_of_exact
+
+## JoiningContexts.lean  (261 lines)
+
+### field `both_outcomes`
+- pass a: S: Context.possible_splice (l. 105) gives feasibility of continuing a specified inner context with a specified outer context iff some inner outcome admits the outer.
+- pass b: N: no exactly-when of going on and ending; the exactly-whens are about contexts (`Context.possible_right` l. 137, `Context.possible_left` l. 144, `ContextSame.iff_sameTests` l. 247).
+
+### declarations of JoiningContexts.lean (by script)
+  l.43 inductive Context
+  l.49 def Context.course
+  l.55 def Context.Realizes
+  l.58 def Context.Possible
+  l.61 def ContextSame
+  l.64 def Context.splice
+  l.70 theorem Context.realizes_hole
+  l.74 theorem Context.realizes_left
+  l.81 theorem Context.realizes_right
+  l.88 theorem Context.course_splice
+  l.98 theorem Context.realizes_splice
+  l.105 theorem Context.possible_splice
+  l.112 theorem Context.realizes_functional
+  l.118 theorem Context.possible_splice_of_realizes
+  l.127 theorem ContextSame.refl
+  l.129 theorem ContextSame.symm
+  l.132 theorem ContextSame.trans
+  l.137 theorem Context.possible_right
+  l.144 theorem Context.possible_left
+  l.151 theorem ContextSame.composable_iff
+  l.159 theorem ContextSame.realized
+  l.167 theorem ContextSame.joined
+  l.180 theorem Compatible.realizes
+  l.190 theorem Compatible.contextSame
+  l.198 theorem ContextSame.compatible
+  l.211 theorem contextSame_iff_compatible
+  l.217 def Context.extend
+  l.224 theorem Context.realizes_extend
+  l.247 theorem ContextSame.iff_sameTests
+
+## JoiningRoles.lean  (273 lines)
+
+### field `no_return`
+- pass a: S: retained_step_extends (l. 173) concludes every actual step increases list length by one. B: Fragment.passageTrace_alone (l. 215) excludes joining the once-passage with itself.
+- pass b: N. (B: `passageTrace_alone` (l. 215), that the traced passage cannot join itself, is not an irreversibility.)
+
+### field `closed_region`
+- pass a: S: retained_step_extends (l. 173) preserves all prior slots and hence membership in any fixed-prefix region.
+- pass b: N.
+
+### field `forms_change`
+- pass a: S: retained_step_extends (l. 173) gives one more retained fragment after every actual move.
+- pass b: N.
+
+### declarations of JoiningRoles.lean (by script)
+  l.57 theorem roleFrame_leave_holds
+  l.69 theorem slots_sameBranchingTests
+  l.76 theorem fragment_not_sameBranchingTests_occurrence
+  l.86 theorem match_incident_of_em
+  l.98 theorem covers_of_em
+  l.109 def Occurrence.ofTuple
+  l.113 theorem Occurrence.ofTuple_at
+  l.120 theorem placeMap_step
+  l.131 theorem factor_unique_of_ext
+  l.141 theorem HasUnits.roleTotal
+  l.151 theorem HasUnits.collapse
+  l.157 def collapsed
+  l.161 theorem collapsed_exact
+  l.166 theorem collapsed_reduced
+  l.173 theorem retained_step_extends
+  l.182 theorem retained_pair_matches_of_em
+  l.207 theorem traces_collapse
+  l.212 def passageTrace
+  l.215 theorem passageTrace_alone
+  l.220 theorem once_roles_hide_failure
+  l.227 theorem once_open_not_pairLifting
+  l.234 theorem once_roles_hide_ends
+  l.242 theorem once_self_apart
+  l.248 theorem idle_self_retained
+  l.254 theorem once_retained_apart
+  l.264 theorem once_codes_apart
+
+## Joint.lean  (748 lines)
+
+### field `closed_region`
+- pass a: B: Renewable.drains (l. 692) keeps zero stock zero throughout any tail with draw ≥ 2.
+- pass b: N.
+
+### declarations of Joint.lean (by script)
+  l.86 def withholdAll
+  l.95 def Keeps
+  l.99 def Breaks
+  l.103 def BreaksBy
+  l.109 def MakesDifference
+  l.115 def Overdetermined
+  l.121 theorem keeps_not_breaks
+  l.125 theorem along_kept
+  l.129 theorem along_broken
+  l.134 theorem Overdetermined.no_difference
+  l.144 theorem determined_dichotomy
+  l.162 def MakesDifferenceTogether
+  l.168 def DifferenceOnlyTogether
+  l.176 theorem makesDifference_iff_together
+  l.183 theorem keeps_iff_not_breaks
+  l.195 theorem makesDifference_iff
+  l.205 theorem breaksBy_iff_level
+  l.215 theorem DifferenceOnlyTogether.of_breaks
+  l.226 theorem Overdetermined.only_together
+  l.236 theorem differenceOnlyTogether_iff
+  l.254 theorem DifferenceOnlyTogether.two_le_length
+  l.267 inductive Formation
+  l.272 structure State
+  l.276 inductive Move
+  l.282 def process
+  l.287 def withhold
+  l.292 def dependence
+  l.306 def start
+  l.308 theorem determined
+  l.314 theorem move_decides
+  l.336 def process
+  l.343 theorem shock_in_the_step
+  l.363 inductive Formation
+  l.370 structure Draw
+  l.375 def Draw.total
+  l.378 def Draw.part
+  l.384 def Draw.without
+  l.391 structure State
+  l.397 def process
+  l.400 theorem determined
+  l.404 def withhold
+  l.408 def Formation.requires
+  l.415 def Formation.active
+  l.421 def dependence
+  l.429 def pair
+  l.432 def all
+  l.435 def steady
+  l.439 def pairRun
+  l.442 def allRun
+  l.447 theorem breaks_from_one
+  l.453 theorem steady_consumed
+  l.458 theorem all_overdetermined
+  l.472 theorem difference_only_together
+  l.504 theorem first_two_only_together
+  l.513 def mixed
+  l.515 def mixedRun
+  l.522 theorem within_share_undermines
+  l.543 def process
+  l.546 def start
+  l.552 theorem move_unavailable
+  l.595 def process
+  l.598 theorem determined
+  l.604 theorem only_together_unbroken
+  l.634 def dependence
+  l.644 theorem only_together_unmet
+  l.669 theorem sub_self_add
+  l.676 def levels
+  l.681 def drawing
+  l.685 theorem overdraw_lowers
+  l.692 theorem drains
+  l.699 theorem overdraw_consumes
+  l.712 def depleting
+  l.715 def withheld
+  l.721 theorem depletion_is_joint
+  l.734 theorem no_finite_segment_makes_difference
+  l.740 theorem breaking_event_makes_step_difference
+
+## JointDraw.lean  (400 lines)
+
+### field `moves`
+- pass a: B: TwoDrawers.Draw (l. 297) indexes joint and restrained courses. TwoDrawers.broken and restrained_kept (ll. 348, 367) show the effect of withholding the second take at the first step.
+- pass b: N: the flows of the two courses are supplied. There is no choice among moves and no plan.
+
+### field `share`
+- pass a: N: Not found in the statements read.
+- pass b: S: `Balances.broken_shared` (l. 139): where each formation's take is within the slack and the dependence breaks, each formation takes strictly less than all that is taken. N: no rule set again from a share.
+
+### field `cost`
+- pass a: B: TwoDrawers.take and restrained_kept (ll. 302, 367) have the second drawer forgo its one unit of taking in the course that keeps the dependence.
+- pass b: N.
+
+### field `closed_region`
+- pass a: S: Balances.level_succ_le (l. 164) keeps the region of ordered level pairs across each pair of balanced steps with no more take and no less giving on the higher side.
+- pass b: N.
+
+### field `forms_change`
+- pass a: B: TwoDrawers.restrained_kept and restraint_ranks (ll. 367, 389) exhibit a restraint that keeps the held formation's dependence and ranks higher under every comparison satisfying the whole-run comparison premise.
+- pass b: N.
+
+### declarations of JointDraw.lean (by script)
+  l.86 theorem Broken.of_need_le
+  l.92 theorem kept_of_need_le
+  l.104 theorem Balances.broken_iff
+  l.114 theorem Balances.kept_iff
+  l.121 theorem Balances.broken_drawn
+  l.128 theorem Balances.breaks_beyond_drawn
+  l.139 theorem Balances.broken_shared
+  l.150 theorem Balances.kept_of_restrained
+  l.164 theorem Balances.level_succ_le
+  l.171 theorem Balances.level_le_of_restrained
+  l.182 theorem Balances.eases_of_restrained
+  l.202 theorem restraint_extends_iff
+  l.216 theorem restraint_ranks_over_drawers
+  l.233 theorem restraint_extends_iff_stepwise
+  l.250 theorem restraint_ranks_stepwise
+  l.268 theorem restraint_extends_iff_relational
+  l.291 inductive Formation
+  l.297 inductive Draw
+  l.302 def take
+  l.309 def flow
+  l.315 def level
+  l.322 def web
+  l.341 theorem balances
+  l.348 theorem broken
+  l.352 theorem shared
+  l.367 theorem restrained_kept
+  l.370 theorem dependent
+  l.374 theorem gated
+  l.380 theorem start
+  l.383 theorem restrained_less
+  l.389 theorem restraint_ranks
+
+## JointKeeping.lean  (412 lines)
+
+### field `rank`
+- pass a: B: ChoicePoint.keptFor_each_not_joint (l. 366) gives a one-step deadline for loss of the conjunction from split.
+- pass b: N.
+
+### field `forms_change`
+- pass a: B: Renewable.kept_part_not_renewal (l. 396) keeps focal activity under every course from the common start while the sustaining formation loses activity on the consuming run.
+- pass b: N.
+
+### declarations of JointKeeping.lean (by script)
+  l.64 theorem kernel_and_iff
+  l.70 def AllOf
+  l.75 theorem kernel_allOf_iff
+  l.91 def Keepable
+  l.95 theorem Keepable.start
+  l.99 theorem Keepable.mono
+  l.104 theorem Keepable.left
+  l.109 theorem Keepable.right
+  l.115 theorem Keepable.each
+  l.121 theorem keepable_and_iff_of_kernel_left
+  l.127 theorem keepable_and_iff_of_kernel_right
+  l.136 theorem KeptFor.guard_mono
+  l.146 theorem KeptFor.each
+  l.158 inductive Config
+  l.166 def next
+  l.174 def process
+  l.177 def first
+  l.184 def second
+  l.191 def both
+  l.194 def leftState
+  l.199 def rightState
+  l.204 def leftRun
+  l.207 def rightRun
+  l.210 def jointRun
+  l.213 theorem split_leaves
+  l.218 theorem each_not_joint
+  l.226 theorem joint_keepable
+  l.231 theorem joint_differs
+  l.239 def restRun
+  l.243 def decideFirst
+  l.250 def decideSecond
+  l.257 def decideBoth
+  l.264 theorem decisions_exist
+  l.291 theorem no_rule_decides_joint
+  l.314 theorem no_respecting_rule_decides_joint
+  l.327 theorem first_closed
+  l.346 theorem second_closed
+  l.366 theorem keptFor_each_not_joint
+  l.396 theorem kept_part_not_renewal
+
+## JointPhase.lean  (246 lines)
+
+### field `closed_region`
+- pass a: B: summary_update_exact (l. 149) gives a commuting summary, so the graph of summarize is preserved by synchronized full and reduced steps.
+- pass b: N.
+
+### declarations of JointPhase.lean (by script)
+  l.24 instance of
+  l.42 def exchangeCoordinates
+  l.46 def registerDensity
+  l.49 def localStates
+  l.52 def phase
+  l.54 def joined
+  l.55 def changed
+  l.58 def basisMasses
+  l.63 def coupledCross
+  l.66 structure Summary
+  l.73 def summarize
+  l.75 def decodeControl
+  l.78 inductive Event
+  l.84 def next
+  l.89 def reducedNext
+  l.94 abbrev process
+  l.98 theorem formation_from_blank
+  l.100 theorem actual_phase_preserves_both_local_states
+  l.104 theorem actual_phase_preserves_basis_masses
+  l.107 theorem same_interaction_distinguishes_relation
+  l.113 theorem no_local_pair_update
+  l.124 theorem local_pair_carries_no_law
+  l.131 theorem retained_cross_distinguishes_change
+  l.135 theorem summary_omits_other_relations
+  l.142 theorem summary_recovers_control
+  l.149 theorem summary_update_exact
+  l.162 theorem every_finite_word_exact
+  l.167 theorem every_finite_control_response_exact
+  l.175 theorem step_iff
+  l.178 theorem trace_end
+  l.183 theorem evolve_trace
+  l.186 theorem interaction_forms_joined
+  l.189 theorem phase_keeps_local_states
+  l.194 theorem phase_keeps_masses
+  l.201 theorem phase_changes_cross
+  l.209 theorem interaction_tells_apart
+  l.219 theorem no_local_update
+  l.226 theorem summary_response
+  l.233 theorem summary_omits_register
+
+## JointPlans.lean  (119 lines)
+
+### field `moves`
+- pass a: S: JointPlan.Realizes (l. 44) admits different witnesses for each binary decomposition. JointPlan.supports_of_realizes (l. 110) holds for every realized plan under containment, disjointness and supported leaves; the plan is a finite tree.
+- pass b: N: a JointPlan is a nesting of decompositions, not a choice of moves.
+
+### field `comparison`
+- pass a: S: JointPlan.within_of_realizes (l. 85) carries footprint membership from supported leaves to the whole under PartsWithin.
+- pass b: N.
+
+### declarations of JointPlans.lean (by script)
+  l.34 inductive JointPlan
+  l.44 def JointPlan.Realizes
+  l.56 theorem nodup_append_of_apart
+  l.66 def PartsWithin
+  l.70 def PartsApart
+  l.75 def Supports
+  l.79 def JointPlan.draws
+  l.85 theorem JointPlan.within_of_realizes
+  l.96 theorem JointPlan.nodup_of_realizes
+  l.110 theorem JointPlan.supports_of_realizes
+
+## KeepableStep.lean  (168 lines)
+
+### field `comparison`
+- pass a: S: not_keepable_step (l. 83) propagates nonkeepability from the source to the target of any step under closure of the guard complement.
+- pass b: N.
+
+### field `forms_change`
+- pass a: B: ChoicePoint.keepable_gained_along_run (l. 125) exhibits a guard which becomes keepable at the first successor along leftRun.
+- pass b: N.
+
+### declarations of KeepableStep.lean (by script)
+  l.50 theorem keepable_step_iff
+  l.68 theorem not_keepable_invariant_iff
+  l.83 theorem not_keepable_step
+  l.94 theorem not_keepable_run
+  l.105 def afterSplit
+  l.115 theorem keepable_gained
+  l.125 theorem keepable_gained_along_run
+  l.137 def process
+  l.140 def atOne
+  l.144 theorem nowhere_keepable
+  l.156 theorem not_keepable_kept_complement_not
+
+## Keeping.lean  (509 lines)
+
+### field `rank`
+- pass a: B: Matching.keepsNothing_not_kept (l. 425) rules out keeping all starts safe for two steps with the constant reading, even with all moves allowed.
+- pass b: N.
+
+### declarations of Keeping.lean (by script)
+  l.73 def Seen
+  l.78 theorem seen_eq_after
+  l.84 def Usable
+  l.89 class kept
+  l.90 def KeptFor
+  l.100 inductive Plan
+  l.106 def Plan.Split
+  l.111 def Plan.split
+  l.115 def Plan.first
+  l.118 def Plan.rest
+  l.123 def Plan.Keeps
+  l.132 theorem Plan.Keeps.within
+  l.138 theorem Plan.Keeps.usable_first
+  l.143 theorem Plan.Keeps.rest
+  l.149 theorem Plan.Keeps.keptFor
+  l.156 def ChoiceOver
+  l.160 theorem choiceOver_fin
+  l.164 theorem KeptFor.plan_of_choice
+  l.176 theorem keptFor_iff_plan_of_choice
+  l.182 theorem keptFor_iff_plan
+  l.189 theorem get_of_eq_some
+  l.200 def process
+  l.203 def keeps
+  l.207 def admits
+  l.211 def start
+  l.214 theorem kept
+  l.228 theorem related
+  l.236 theorem answered
+  l.247 theorem plans_iff_choice
+  l.266 theorem Seen.mono
+  l.271 theorem KeptFor.mono
+  l.280 theorem KeptFor.shorter
+  l.288 theorem KeptFor.finer
+  l.301 theorem keptFor_empty
+  l.311 theorem keptFor_of_closed
+  l.322 theorem Certificate.keptFor
+  l.333 theorem Kernel.keptFor
+  l.342 inductive Stage
+  l.350 def step
+  l.361 def process
+  l.364 def safe
+  l.371 def starts
+  l.378 def bit
+  l.385 def keepsBit
+  l.388 def keepsNothing
+  l.390 theorem step_matched
+  l.394 theorem step_unmatched
+  l.399 theorem seen_start
+  l.408 theorem keepsBit_kept
+  l.425 theorem keepsNothing_not_kept
+  l.435 theorem keeping_matters
+  l.450 def Plan.zip
+  l.455 def jointSense
+  l.461 def Plan.Compatible
+  l.471 theorem Plan.zip_keeps
+  l.497 theorem Plan.compatible_of_zip_keeps

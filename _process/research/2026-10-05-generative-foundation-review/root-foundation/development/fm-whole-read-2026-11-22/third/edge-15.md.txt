@@ -1,0 +1,424 @@
+# Task file: EDGE, reader whole-c-edge-15
+
+Your 3 modules. For orientation only, what the two passes said of the four marks, of moves and of a reading (where to look, not evidence).
+
+## LineageRegimes.lean  (1168 lines)
+
+### `both_outcomes`
+- pass a: B: `Handover.both_fates` (l. 1047) exhibits generation and degeneration on two handover courses at each positive initial stock. S: `stock_forces_neither` (l. 1086) rules out both proposed universal classifications of `GatedPairCourse` by stock alone.
+- pass b: B: `Handover.both_fates` (l.1047): for every s ≥ 1, two built handovers start from the same stock s. The relay keeps stock s, has no excess and no dissipation, and generates (`«生成»`). The run-down is in excess for s steps, dissipated on, and degenerates. `stock_forces_neither` (l.1086) restates this, using `«生成退化不并»`. N: no exactly-when for one model was found.
+
+### `no_return`
+- pass a: S: `degeneration_at_stock_horizon` (l. 213) concludes degeneration from an active start by the horizon if activity needs support, flows balance, uptake exceeds replenishment for as many steps as initial stock, and every reachable horizon member requires a stock-family condition at need at least one. This concerns the line from that start.
+- pass b: S: Concluded, not a premise. `degeneration_of_family_excess` (l.173) and `degeneration_at_stock_horizon` (l.213) conclude `«退化»` (the line ends on every branch) at a low level: the stock is below need at T+n, with a premise on the line's reach. `dissipation_degenerates_every_member` (l.237) concludes it for every member; after stock+1 generations there are none. `multiplying_takers_stop` (l.345) concludes that not every member of the first n generations stays active. In the general laws the loss is not of what gives. B: in the run-down the giver itself runs down (`runDown_degenerates` l.995).
+
+### `rank`
+- pass a: S: `family_excess_within_stock` (l. 147) bounds a stretch of strict excess by its initial stock under balance. `multiplying_takers_stop` (l. 345) rules out all members remaining active when 2^n exceeds initial level plus one, with balance, no gifts, initially positive and doubling censuses without duplicates, and each active member present and taking positively.
+- pass b: S: `family_excess_within_stock` (l.147) and `family_excess_not_past_stock` (l.153): at most stock-many steps of excess. `degeneration_at_stock_horizon` (l.213): at need one the horizon is the stock. `multiplying_takers_need` (l.331): at most log2(level+1) generations. `dissipation_degenerates_every_member` (l.237): no members after stock+1 generations.
+
+### `closed_region`
+- pass a: B: `FromOutside.from_outside` (l. 1145) has level two, all formations supported and active, replenishment meeting joint draw and no dissipation at every step.
+- pass b: S: The census closed under continuation (`ContinuationsListed`, from LineageRegions) is a premise in `degeneration_of_family_excess_listed` (l.194) and `dissipation_degenerates_every_member` (l.237). B: `Handover.runDown_listed` (l.963) meets it. `FromOutside.from_outside` (l.1145) is a standing region: the level stays at two and every member is active and supported at every step.
+
+### `moves`
+- pass a: N: Not found in the statements read.
+- pass b: N: No Process S A, policy, plan or allowed set. Flows are given triples (present, take, give). `stock_forces_neither` (l.1086) quantifies over all courses (L, W, G) meeting `GatedPairCourse` (l.1074). That is a class of courses, not a choice within one.
+
+### `reading`
+- pass a: S: `degeneration_of_family_excess_listed` (l. 194) uses a census covering every continuation and a need of at least m in the stock family for each horizon member to conclude degeneration from an active listed start no later than the horizon, under balance, dependence and the n-step excess and initial-stock bound.
+- pass b: S: The regions are stated at grains. `«退化»` is stated at `W.kindClass Q`; `«生成»` is stated at (kindClass, carrierClass) (e.g. `relay_generates` l.871). `stock_forces_neither` (l.1086): for every s ≥ 1, not every `GatedPairCourse` with start stock s degenerates, and not every one generates. So the stock at the start decides neither region. No rule made from what is registered appears.
+
+### declarations of LineageRegimes.lean (by script)
+  l.140 theorem excess_within_level
+  l.147 theorem family_excess_within_stock
+  l.153 theorem family_excess_not_past_stock
+  l.173 theorem degeneration_of_family_excess
+  l.194 theorem degeneration_of_family_excess_listed
+  l.213 theorem degeneration_at_stock_horizon
+  l.237 theorem dissipation_degenerates_every_member
+  l.261 theorem pow_le_drawnBefore_of_ge
+  l.272 theorem exceeds_doubles
+  l.284 theorem draw_doubling_needs
+  l.293 theorem doubling_needs_of_draw
+  l.309 theorem sizes_double
+  l.320 theorem size_le_taken
+  l.331 theorem multiplying_takers_need
+  l.345 theorem multiplying_takers_stop
+  l.365 theorem multiplying_takers_stop_of_need
+  l.392 def present
+  l.398 def take
+  l.403 def give
+  l.412 def flow
+  l.415 def level
+  l.432 def needsPool
+  l.438 def web
+  l.445 def kids
+  l.451 def generations
+  l.456 theorem balances
+  l.467 theorem unfed
+  l.472 theorem acting
+  l.474 theorem pool_of_needs
+  l.480 theorem dependent
+  l.487 theorem descended
+  l.524 theorem family_two
+  l.526 theorem family_three
+  l.528 theorem distinct_first
+  l.530 theorem distinct_second
+  l.532 theorem distinct_third
+  l.534 theorem distinct
+  l.540 theorem multiplies
+  l.546 theorem draws
+  l.551 theorem needs
+  l.556 theorem pool_required
+  l.566 theorem takesNeed
+  l.572 theorem unsupported
+  l.582 theorem inactive
+  l.585 theorem degenerates
+  l.601 theorem multiplying
+  l.623 theorem stops_of_need
+  l.636 abbrev holder
+  l.639 def pick
+  l.645 theorem pick_self
+  l.649 theorem pick_other
+  l.653 theorem pick_zero
+  l.659 theorem pick_le
+  l.665 theorem pick_back
+  l.669 theorem pick_pos
+  l.675 theorem pick_pos_mono
+  l.683 def flow
+  l.689 def web
+  l.697 abbrev family
+  l.699 theorem exchange
+  l.707 theorem balances
+  l.710 theorem total_pick
+  l.715 theorem stock_eq
+  l.718 theorem uptake_pick
+  l.723 theorem replenish_pick
+  l.729 theorem uptake_eq
+  l.733 theorem replenishment_eq
+  l.737 theorem take_total
+  l.742 theorem give_total
+  l.747 theorem mem_family
+  l.752 theorem acting
+  l.757 theorem dependent
+  l.761 theorem embodied
+  l.765 theorem gated
+  l.771 theorem descends
+  l.782 theorem taken_eq
+  l.789 theorem draw_not_doubling
+  l.802 theorem not_draw_regime
+  l.808 theorem none_active
+  l.816 abbrev relay
+  l.822 theorem relay_one_flow
+  l.833 theorem relay_descended
+  l.846 theorem relay_no_excess
+  l.852 theorem one_le_sign
+  l.857 theorem relay_not_dissipates
+  l.871 theorem relay_generates
+  l.881 abbrev runDown
+  l.884 def runKids
+  l.886 def runGenerations
+  l.891 theorem run_kid
+  l.900 theorem run_turn
+  l.907 theorem runDown_falls
+  l.910 theorem runDown_descended
+  l.923 theorem runDown_excess
+  l.931 theorem pred_sign
+  l.936 theorem runDown_dissipates
+  l.950 theorem run_member_before
+  l.956 theorem run_empty
+  l.963 theorem runDown_listed
+  l.995 theorem runDown_degenerates
+  l.1013 theorem runDown_every_regime
+  l.1047 theorem both_fates
+  l.1074 def GatedPairCourse
+  l.1086 theorem stock_forces_neither
+  l.1109 def flow
+  l.1113 def web
+  l.1126 theorem balances
+  l.1128 theorem acting
+  l.1130 theorem supported
+  l.1133 theorem dependent
+  l.1137 theorem not_gated
+  l.1145 theorem from_outside
+
+## LineageRegions.lean  (1699 lines)
+
+### `both_outcomes`
+- pass a: S: `generation_degenerates_iff` (l. 673) characterizes whole-generation degeneration by eventual census emptiness under `KidsContinue` and `ContinuationsListed`. `degenerates_iff_line_ends` (l. 691) gives the individual iff under `KidsContinue` and `ContinuationsAreKids`.
+- pass b: S: General. `generation_degenerates_iff` (l.673): under `KidsContinue` and `ContinuationsListed`, every member of generation t degenerates iff some generation N ≥ t is empty. `degenerates_iff_line_ends` (l.691): under `KidsContinue` and `ContinuationsAreKids`, a member degenerates iff at some depth D it has no listed descendant. B: `Chain.chain` (l.1022): in one model member 1 generates and the childless 0 degenerates. `Courses.same_terms_two_fates` (l.1626) is two courses.
+
+### `no_return`
+- pass a: S: `line_ends` (l. 643) concludes that beyond some depth no listed descendant remains, given branch ending at the member and `KidsContinue`. `degeneration_of_empty` (l. 496) concludes degeneration from an earlier listed member when the census covers continuations and becomes empty.
+- pass b: S: Concluded. `degeneration_of_empty` (l.496): under `ContinuationsListed`, a generation empty at N ≥ the member's step makes the line `«退化»`. `empty_of_degenerates` (l.659): under `KidsContinue`, if every member of generation t degenerates, some later generation is empty. `line_ends` (l.643): from some depth there is no listed descendant. These are losses of the units that give, the generations. `degeneration_of_dissipation` (l.557) is at a low level. B: `Lasting.lasting` (l.1326): without the census the line goes on although the generation after the stock is empty.
+
+### `rank`
+- pass a: S: `line_ends` (l. 643) bounds all listed descendant depths of a member whose branches end when listed children continue parents. B: `Courses.upTo_empty` (l. 1570) gives permanent emptiness by H+2 for the built cutoff H.
+- pass b: S: `line_ends` (l.643), by induction on `«尽»` with `common_bound` (l.624): finitely many offspring give a depth D beyond which no listed descendant exists. `degeneration_of_dissipation` (l.557): every member degenerates within stock+1 generations. B: `Courses.upTo_empty` (l.1570): from H+2 on there is no member.
+
+### `closed_region`
+- pass a: S: `generation_of_carrying` (l. 193) makes a family with a carrying successor inside it at every member a certificate of generation. `reached_listed` (l. 486) propagates census membership along reach when the census covers every continuation.
+- pass b: S: `ContinuationsListed` (l.476) is a census closed under continuation. `reached_listed` (l.486): what the line from a member reaches is listed. `generation_of_carrying` (l.193): a family S each of whose members carries a renewal into S makes every member generate. B: `StandingRelay.grain_decides_region` (l.854) has a `«守»` witnessed by the relay's family; `Lasting.goes_on` (l.1308) is a `«延»` witnessed by a set closed under continuation.
+
+### `moves`
+- pass a: S: `generation_of_carrying` (l. 193) concludes generation for each member of a family if from each member some carrying renewal leads to a family member, for any relation and classes. This is a choice of successor in a relation.
+- pass b: N: No Process S A, policy or allowed set. The kinds Q are supplied, and `Courses` takes a reproduction schedule `on : Nat → Bool` as a parameter of built courses, not a choice within one process.
+
+### `reading`
+- pass a: S: `supported_carries_iff` (l. 351) characterizes a renewal from a supported parent by within-kind continuation and the child's support becoming true across the step. B: `StandingRelay.grain_decides_region` (l. 854) classifies the same line as generating by activity and keeping by support.
+- pass b: S: `carries_iff` (l.230) reads a carrying renewal with activity read on any web V. `supported_carries_iff` (l.351) is the grain `W.admitting W.level`. `active_along_kind` (l.507): what the line reaches under the kind class is active. B: `StandingRelay.grain_decides_region` (l.854): the same course generates at the grain of activity, and keeps (`«守»`) without generating at the grain of support (its docstring calls that grain vacuous). `Courses.same_terms_two_fates` (l.1626): the same families and selection terms through H, yet one course generates and one degenerates, so the terms through a horizon do not decide the region. `Courses.positive_and_degenerate_at_own_kind` (l.1602) is a kind grain at which the law fails.
+
+### declarations of LineageRegions.lean (by script)
+  l.193 theorem generation_of_carrying
+  l.204 def descent
+  l.210 def continuation
+  l.214 abbrev lineStep
+  l.218 def oneKind
+  l.230 theorem carries_iff
+  l.247 theorem carrying_descends
+  l.261 theorem carries_iff_via_base
+  l.276 theorem descent_continues
+  l.285 theorem descent_carries
+  l.295 def WithinKind
+  l.299 def EmbodiedOffspring
+  l.305 def UnsupportedBefore
+  l.310 def SupportedAfter
+  l.314 theorem supportedAfter_of_unsupportedBefore
+  l.320 def FirstSupportedOffspring
+  l.325 theorem firstSupported_iff_step
+  l.333 theorem unsupportedBefore_of_first
+  l.339 theorem descended_carries
+  l.351 theorem supported_carries_iff
+  l.362 theorem descent_continues_supported
+  l.372 theorem descent_carries_supported
+  l.383 theorem descended_carries_supported
+  l.394 theorem nothing_carries_of_always_supported
+  l.405 theorem generation_of_reproducing
+  l.420 theorem generation_of_reproducing_supported
+  l.441 theorem generation_of_exact
+  l.461 theorem generation_of_positive_term
+  l.476 def ContinuationsListed
+  l.479 theorem line_listed
+  l.486 theorem reached_listed
+  l.496 theorem degeneration_of_empty
+  l.507 theorem active_along_kind
+  l.518 def ContinuationsAreKids
+  l.521 theorem listed_of_kids
+  l.531 theorem kids_of_census
+  l.545 theorem listed_of_census
+  l.557 theorem degeneration_of_dissipation
+  l.572 def KidsContinue
+  l.578 theorem kids_continue
+  l.588 theorem kids_continue_supported
+  l.596 inductive ListedDescendant
+  l.602 theorem ListedDescendant.snoc
+  l.609 theorem ListedDescendant.of_succ
+  l.616 theorem family_descendant
+  l.624 theorem common_bound
+  l.634 theorem length_zero_of_no_mem
+  l.643 theorem line_ends
+  l.659 theorem empty_of_degenerates
+  l.673 theorem generation_degenerates_iff
+  l.680 theorem ends_of_line_ends
+  l.691 theorem degenerates_iff_line_ends
+  l.700 theorem reproducing_of_term
+  l.709 theorem not_all_degenerate_of_nonempty
+  l.718 theorem nonempty_of_positive
+  l.731 theorem nonempty_while
+  l.746 theorem not_all_degenerate_while
+  l.762 theorem not_all_degenerate_of_positive
+  l.773 theorem acting
+  l.776 theorem supported
+  l.779 theorem dependent
+  l.785 theorem descent_not_birth
+  l.826 def web
+  l.833 theorem embodied
+  l.835 theorem acting
+  l.838 theorem supported
+  l.840 theorem dependent
+  l.842 theorem descended
+  l.854 theorem grain_decides_region
+  l.884 def level
+  l.888 def web
+  l.896 def give
+  l.898 def flow
+  l.903 def children
+  l.906 def generations
+  l.911 theorem children_self
+  l.913 theorem children_other
+  l.915 theorem level_self
+  l.917 theorem level_next
+  l.920 theorem give_self
+  l.922 theorem give_other
+  l.924 theorem family_succ
+  l.933 theorem kid_eq
+  l.941 theorem one_le_self
+  l.943 theorem acting
+  l.948 theorem embodied
+  l.950 theorem dependent
+  l.953 theorem descends
+  l.958 theorem descended
+  l.963 theorem number
+  l.965 theorem exact
+  l.975 theorem first_supported_from_zero
+  l.988 theorem first_supported
+  l.993 theorem reproduces_from_one
+  l.1006 theorem childless_degenerates
+  l.1022 theorem chain
+  l.1056 theorem stands_once
+  l.1077 theorem kinds_apart
+  l.1102 def level
+  l.1109 def web
+  l.1116 def present
+  l.1122 def take
+  l.1131 def give
+  l.1137 def flow
+  l.1139 def family
+  l.1141 def kids
+  l.1146 def generations
+  l.1151 theorem family_two
+  l.1158 theorem descends
+  l.1162 theorem listed_birth
+  l.1173 theorem descended
+  l.1177 theorem acting
+  l.1182 theorem embodied
+  l.1184 theorem balances
+  l.1189 theorem dissipates
+  l.1200 theorem stock
+  l.1202 theorem listed
+  l.1230 theorem one_birth
+  l.1250 theorem dormant_goes_on_at_support
+  l.1266 def level
+  l.1272 def web
+  l.1279 def present
+  l.1283 def flow
+  l.1285 theorem acting
+  l.1290 theorem descended
+  l.1294 theorem balances
+  l.1298 theorem dissipates
+  l.1308 theorem goes_on
+  l.1326 theorem lasting
+  l.1353 abbrev Formation
+  l.1357 def kids
+  l.1362 def give
+  l.1367 def born
+  l.1372 def level
+  l.1376 def web
+  l.1383 def flow
+  l.1389 def mark
+  l.1391 def generations
+  l.1397 def always
+  l.1400 def upTo
+  l.1402 theorem mem_cond
+  l.1407 theorem fst_of_mem
+  l.1414 theorem mem_of_fst
+  l.1420 theorem kids_marked
+  l.1426 theorem kids_off
+  l.1433 theorem give_pos
+  l.1442 theorem level_own
+  l.1445 theorem level_other
+  l.1448 theorem born_on
+  l.1453 theorem born_off
+  l.1460 theorem family_of
+  l.1471 theorem member_of
+  l.1479 theorem descends
+  l.1489 def DownClosed
+  l.1491 theorem acting
+  l.1499 theorem embodied
+  l.1501 theorem descended
+  l.1512 theorem only_kids
+  l.1527 theorem terms_on
+  l.1542 theorem terms_off
+  l.1547 theorem always_down
+  l.1549 theorem upTo_down
+  l.1552 theorem upTo_on
+  l.1554 theorem upTo_off
+  l.1558 theorem marked_generates
+  l.1570 theorem upTo_empty
+  l.1578 theorem upTo_degenerates
+  l.1587 theorem positive_throughout
+  l.1602 theorem positive_and_degenerate_at_own_kind
+  l.1626 theorem same_terms_two_fates
+  l.1663 theorem positive_but_last
+
+## Locality.lean  (706 lines)
+
+### `both_outcomes`
+- pass a: S: `Flow.BalancesOn.comesToStand_iff` (l. 178) and `ceasesToStand_iff` (l. 189) give exact one-step conditions for gaining and losing standing under balance. `recurs_iff_unmet` (l. 137) gives the independent recurrence iff for an event decreasing a natural rank under Q, with rank nonincreasing under Q and every rise an event.
+- pass b: S: `Flow.change_recurs_iff` (l. 320): under a standing census, change recurs at arbitrarily late steps exactly when it recurs at steps that do not run down. `Flow.exchange_recurs_iff` (l. 332) is the same for exchange. `cohort_closes_iff` (l. 542): for any list, end count plus ceasings equals start count exactly when none comes to be. `Flow.RunsDownOn.changes_iff` (l. 223), `BalancesOn.comesToStand_iff` (l. 178) and `ceasesToStand_iff` (l. 189) are exact laws of one step. All general.
+
+### `no_return`
+- pass a: S: `stays_failing_within` (l. 475) concludes failure throughout a finite stretch from initial failure and the premise of no coming-to-be across the stretch. Zero level alone does not supply that premise (`Flow.BalancesOn.comesToStand_iff`, l. 178).
+- pass b: S: `stays_failing_within` (l. 475): what fails at S and comes to be at none of the n steps from S fails up to S + n. `Covers.ceasing_not_recurring` (l. 698) and `Covers.ceasing_stops_unrefuted` (l. 690): with a list covering N and nothing coming to be from N on, ceasing does not recur. Here no-return is a premise (nothing comes to be), and the bound on ceasing is concluded. It is at the level of relata holding, not at the loss of a giver.
+
+### `rank`
+- pass a: S: `Flow.runsDown_bounds_change` (l. 395) bounds the final number standing plus the number of steps of total-stock fall by initial stock when a standing census holds and running down is doubly negated at each step. `Covers.ceasing_steps_within` (l. 629) bounds distinct ceasing steps by the initial cover length without decidability.
+- pass b: S: `recurs_iff_unmet` (l. 137) and `unmet_from` (l. 120): for any amount r and event E, if under Q the event lowers r, r never rises under Q and every rise of r is an E, then from r N ≤ k the event occurs outside Q at some later step; so E recurs iff it recurs outside Q. `Flow.runsDown_bounds_change` (l. 395): over a stretch whose steps run down (not refuted), the count standing at the end plus the steps at which the total fell is at most the total standing at T. `Flow.runsDown_change_bound` (l. 408). `Covers.ceasing_steps_within` (l. 629): distinct ceasing steps number at most the covering list's length. All general.
+
+### `closed_region`
+- pass a: S: `Steps.along_back` (l. 503) proves backward closure of the region where p holds under continuation along a relatum's steps within the class `Steps.alikeAt p`.
+- pass b: S: `Covers.within` (l. 532): a list covering what holds at N covers every later step of a stretch across which nothing comes to be. `ceasing_needs_arising` (l. 561): under a census at N and nothing coming to be, every holder and every ceaser in the stretch is on the list. `Steps.along_back` (l. 503): what holds of an occurrence is a region closed («闭») under the reverse of continuing along the steps.
+
+### `moves`
+- pass a: N: Not found in the statements read.
+- pass b: N: flows with formations present that take and give appear, but there is no choice among steps and no policy, and no law of what a choice keeps.
+
+### `reading`
+- pass a: S: `Flow.RunsDownOn.changes_iff` (l. 223) lets the before-and-after stock totals decide whether any member's standing changed when the family covers all positive levels at both ends without repetition and balances and dissipates across the step.
+- pass b: N
+
+### declarations of Locality.lean (by script)
+  l.69 theorem pos_iff_lt
+  l.76 theorem exists_lt_of_total_lt
+  l.87 theorem rises_or_le
+  l.102 theorem unmet_or_lower
+  l.120 theorem unmet_from
+  l.137 theorem recurs_iff_unmet
+  l.150 def Web.StandingCensus
+  l.155 theorem Web.StandingCensus.stock_eq
+  l.163 theorem Web.StandingCensus.length_le_stock
+  l.178 theorem BalancesOn.comesToStand_iff
+  l.189 theorem BalancesOn.ceasesToStand_iff
+  l.203 def RunsDownOn
+  l.211 def RunsDown
+  l.216 def RunsDownClosed
+  l.223 theorem RunsDownOn.changes_iff
+  l.237 theorem RunsDownOn.exchanges_iff
+  l.260 theorem RunsDownOn.stock_eq
+  l.268 theorem RunsDown.standing_le
+  l.278 theorem RunsDown.changes_iff
+  l.290 theorem RunsDownClosed.exchanges_iff
+  l.302 theorem rise_of_standing
+  l.310 theorem RunsDownClosed.runsDown
+  l.320 theorem change_recurs_iff
+  l.332 theorem exchange_recurs_iff
+  l.349 theorem RunsDown.rise_zero
+  l.355 theorem RunsDown.fall_pos_iff
+  l.360 theorem RunsDownOn.takers_le_fall
+  l.375 theorem standing_bounds_change
+  l.383 theorem RunsDown.lowers_mark
+  l.395 theorem runsDown_bounds_change
+  l.408 theorem runsDown_change_bound
+  l.428 theorem BalancesOn.arises_iff
+  l.440 theorem BalancesOn.arises_given
+  l.462 def Covers
+  l.466 def ListsAt
+  l.470 def NoneComes
+  l.475 theorem stays_failing_within
+  l.497 theorem Steps.along_stage
+  l.503 theorem Steps.along_back
+  l.508 theorem Steps.along_noSplit
+  l.514 theorem Covers.occurrences
+  l.519 theorem Steps.along_ending
+  l.532 theorem Covers.within
+  l.542 theorem cohort_closes_iff
+  l.561 theorem ceasing_needs_arising
+  l.579 theorem Steps.along_decided
+  l.591 theorem Covers.coming_from_of_ceasing
+  l.603 theorem coming_of_ceasing_covered
+  l.612 theorem Listed.covered
+  l.629 theorem Covers.ceasing_steps_within
+  l.651 theorem ceasing_steps_found
+  l.674 theorem Covers.not_not_coming_from
+  l.690 theorem Covers.ceasing_stops_unrefuted
+  l.698 theorem Covers.ceasing_not_recurring

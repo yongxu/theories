@@ -1,0 +1,203 @@
+*AI-written (Claude Opus 5.5, refuter, WORK lens), 22 November 2026. Python only, nothing in git changed, no Lean run. I could not save REPORT.md: the harness refused to write it from a subagent, so the report exists only as this text.*
+
+## 1. Verdict in five lines
+
+1. The design survives as **a built case worth keeping**. It is not a centre, and it is not a law that joins.
+2. Its one general law ("an infinite live course exists exactly when a chain of `M_A + 1` paid returns does") is `Onward.run_iff_continues` (pigeonhole, `revisits_within`) applied to the first-return process, plus one ranking lemma: the stock falls by one at every step that does not invest.
+3. The law does no work on anything the direction wants. It holds with the cost removed, with the vote removed, and on arbitrary finite graphs in which every cycle contains a marked edge. It fails only when the running down is removed.
+4. The witness checks out in my rebuild: 6 live states, both outcomes from one start, and `T2T` past return at full stock. But its "lock" is the hold act at a tie, and no old law comes out as a case of it (T5 fails, as the design itself says).
+5. The strongest reason: in `law_fast.py`, the `free` and `novote` variants disagree on 0 of 1,125,696 checks each, and the `nodraw` variant disagrees on 112,368 of 157,440 checks at C = 2.
+
+## 2. Statement by statement
+
+- **Main equivalence** (§3): for every machine, start and stationary allowance, an infinite live course exists exactly when `W_A(s)`. **HOLDS IN WHAT I CHECKED.**
+  - Checked: q ∈ {1,2}, C ≤ 3, every table, need, investment condition and g, with U and every map from level to act (this includes every threshold selector).
+  - 0 disagreements in 11,808 + 157,440 + 956,448 checks.
+  - It is a theorem of finite graphs. Its novelty is REFUTED: see MUST 1.
+- **Bound `M_A ≤ 4(C − g + 1)`.** **HOLDS IN WHAT I CHECKED.** The largest M found was 3, 7 and 11 at C = 1, 2, 3, against bounds 4, 8 and 12 at g = 1.
+  - The bound uses the forgone child. The equivalence does not.
+- **First-exit clause.** **HOLDS**, by the definition of the largest closed set: the complement of the kernel is closed under every step. It is `Onward.run_of_reach` read backwards, with `Onward.run_decided` giving the least index.
+- **Exact decision in the witness** ("lasts exactly when the first act reverses and the second holds"). **HOLDS.** Of the 4,096 act sequences of length 12, the 1,024 that stay live are exactly those beginning with (reverse, hold). Source: `witness_more.out`.
+- **`T2T` lies outside the U-kernel at full stock; the course under reverse-always ends at generation 4, the course under hold-always at 2.** **HOLDS** (`witness_check.out`).
+  - U-kernel: `G1G G1T G2G G2T GG1G GG1T GG2G GG2T T2G TG1G TG2G TG2T TT2G`.
+- **R1 to R5 hold in the witness.**
+  - R1, R2, R3 and R5: **HOLD IN WHAT I CHECKED.** No reachable transition raises the stock without an investing G, and every giving step drops a G child.
+  - R4 ("a taker lock arises"): **REFUTED as stated.** See MUST 4.
+- **T3 rows I rebuilt** (free giving: Lasts/Lasts; no draw: Lasts/Lasts; vote replaced by the act, a tie at every step: Lasts/Lasts). **HOLD.** The other rows were **NOT CHECKED.**
+- **T6 instance** (`TG1G` lasts and `TG2G` ends under the actual sensor). **HOLDS.** Both are in the U-kernel (`t6_check.out`), so this is a fact about the fixed selector, not about what can be kept.
+- **"The stock signal is necessary among the four stationary ways of acting on the bit."** **HOLDS.** Of the four level-only maps, only (hold at 1, reverse at 2) lasts.
+- **T5, choice side** (`GuardHorizon.closed_viable` with K = W_U). **HOLDS.** The instantiation goes through and concludes less than the machine already has.
+- **T5, lock side** (`RuleCapture.turn_locked`). **REFUTED.** See MUST 5.
+- **T1 claim that the bound is not in the Lean.** **REFUTED.** See MUST 1.
+- **R7 partial** (`GG` appears only on the lasting course; period 2). **HOLDS.**
+- **Size search, minimality and the 12 hits.** **NOT CHECKED** (this is the BREAK lens).
+- **Audit totals** (395,831,808 and so on). **NOT CHECKED** as counts. I re-derived the law on a smaller range with my own code.
+
+## 3. MUST
+
+1. **T1: "Cycle detection alone gives a bound on whole configurations and does not give either result." This is false for the bound.**
+   - `Onward.run_iff_continues` (`Onward.lean`, about line 164) states: within a list `all` holding every configuration, `(∃ r : Run P, r.state 0 = s) ↔ Lasting.Continues P all.length s`.
+   - The instantiation:
+     - Take the first-return process `R_A` (`R_A.step s () t` := ReturnEdge_A s t) on the subtype of landings `L_A`, whose list has length `M_A`.
+     - `W_A(s)` ⟺ ∃ l, ReturnEdge s l ∧ Continues R_A M_A l ⟺ ∃ l, ReturnEdge s l ∧ Run R_A from l, by run_iff_continues. This is ⟺ Run R_A from s, using `Onward.run_of_trace`.
+     - Then Run R_A ⟺ Run (`Onward.within P_A Live`). This is the only machine-specific lemma. Every step that does not invest spends one token and needs ≥ 1, so a course invests within x ≤ C steps, and an investment leaving no child kills it.
+   - Even without the return refinement, `run_iff_continues` on `within P_A Live` already gives "infinite live course ⟺ a live course of |S| steps".
+   - That ranking lemma in this exact form was not found in what I read. It is the standard termination-by-a-falling-measure argument.
+   - The "two contrary tie decisions" are a fact of one built machine, not a law.
+2. **T1 and §1 line 9: "The bound uses expenditure between returns and the reduction in brood size at a return." The equivalence does not use the reduction in brood size, nor the vote, the reading or the multiplying.**
+   - `law_fast.py` results:
+     - Giving made free (no child forgone): 0 disagreements in 1,125,696 checks (C ≤ 3).
+     - Next incumbent set by the act alone: 0 disagreements in 1,125,696.
+     - Draw removed: 7,664 of 11,808 disagree at C = 1, and 112,368 of 157,440 at C = 2.
+     - First instance: q = 1, C = 1, every table T, G invests when favoured, g = 1, both needs 1, allowance U. `M = 0`. `T1T` lasts for ever and is not in W.
+   - `generic.py`, with the machine taken out (random graphs on up to 7 nodes, edges marked at random):
+     - 24,102 graphs in which every cycle has a marked edge: K = W in all of them.
+     - 35,898 graphs with an unmarked cycle: 18,221 disagree.
+   - So the law is exactly pigeonhole on a set of landings that meets every cycle. The forgone child enters only the numeric bound on M.
+   - The design's T3 table tests the witness's split, not the law. Measured by T3, the law has one part that works (the draw) and every other part idle, and the design does not say so.
+3. **The main statement does not say "which of the two, by the way of selecting, by what it registers, and by what keeping costs".**
+   - `W_A` is the graph of A unrolled `M_A + 1` times.
+   - Neither side of the equivalence mentions the selector, the reading or the cost except through the graph. It is a decision procedure, not a relation between a way of selecting and an outcome.
+   - Line 9 of §1 presents it as "the law read off the machine".
+4. **R4: "A taker lock also arises from the same start under the constant hold act. T produces the tied brood that re-elects it." The lock is the act, not a share set again from what it favours.**
+   - In the hold course the incumbent's share is 0 (a tie) at every vote. T is re-elected only by "hold".
+   - In the witness's tables no favoured kind ever raises its own share: favoured T leaves TG (+0), favoured G after giving leaves T (−1 for G) (`witness_check.out`, last four lines).
+   - In the reverse-always course, T is installed at `TG1G` by the reverse act at a tie. A lone T, left by G's sacrifice, then keeps it by majority for the two steps that exhaust C = 2.
+   - The machine's vote is not a reading of the share alone. Under hold, `h(TG, T) = T` and `h(TG, G) = G` (`witness_more.out`). This is exactly what `RuleCapture.ReadsShare` (`∀ x y g g', P.le x y → M.le (h x g) (h y g')`) excludes for any nontrivial order on rules.
+5. **T5 lock side: "the mixed taker brood under hold instantiates the identity share and rule dynamics … `RuleCapture.turn_locked` preserves that lock". Not as an instance with a nontrivial order.**
+   - With share = brood and rule = incumbent, `ReadsShare` at x = y = TG requires `M.le g g'` for all g and g'. So M is trivial.
+   - `upper` (`M.le g g' → favours g → favours g'`) then forces `favours` to be constant, and `Locked` is trivially true.
+   - The old theorem is then used on a one-point model and says nothing. The design does admit that T5 fails overall.
+
+## LESSER
+
+- The audit's 0 disagreements test the code, not the law, because the law is a finite-graph theorem. The counts also multiply labelled tables by every state, including states that are not live.
+- The "nearest miss" (M in place of M + 1) is the tightness of pigeonhole (`generic.py` checks the case with two nodes and one return). No instance can come near the statement as stated.
+- T4: the reading matters only as one way of telling apart the two states where the acts must differ (reverse at `TG2T`, hold at `TG1G`).
+  - 4 of the 16 maps on (incumbent, level) last.
+  - An incumbent-only selector also lasts: (T reverse, G hold). The design says this in §7.
+- In the witness g = C, so every giving refills the stock to full whatever is left. "What comes back depends on what is left" only through the cap.
+- G gives at every birth, by the table. No G ever leaves a G in the witness. Every G on the lasting course is born of an unfavoured T.
+- On the lasting course the incumbent is absent from the brood at every step, and the breeder is always unfavoured (`witness_check.out`: incumbent present [False, False]; breeder favoured [False, False]).
+  - There, priority never chooses who breeds; it only picks which row of the table the sole kind uses.
+  - The course rests on the one-step lag (the vote reads the pre-birth brood), which §7 lists only as a weakness.
+- On the T5 choice side, "the return argument supplies closure" is not quite right: W_U is closed because it is the kernel, not because of the return argument.
+- T6 is answered with a fixed-selector case, while the U-kernel of the witness is upward closed in the level for every (brood, incumbent).
+  - The family does contain U-kernels that are not upward closed: 320 forms at C = 2, and 1,408 + 1,632 at C = 3, all with the taker's need above 1. The design did not report these.
+  - Example: C = 2, T leaves T, G leaves GT, G always invests, g = 1, needs T 2, G 1. `TG1T` is kept: T is not eligible, so G breeds and gives for ever. `TG2T` ends under every act: T is eligible, favoured, breeds, and `T1` has no eligible parent.
+- The lasting course alternates T and GG with period 2. In kind this is a return, not more able to go on (the design says so under R7).
+
+## 4. The question
+
+**Does a general law of the design do work that the old laws do not? No.**
+
+The design has one general law. Its proof is `Onward.run_iff_continues`, which is pigeonhole through `revisits_within`, applied to the first-return process, together with the standard lemma that the stock falls by one at every step that does not invest. That lemma is the only part of the machine the law uses.
+
+Taking the design's new notions out leaves the statement exactly as true. On 1,125,696 checks each, the law holds with the forgone child removed and with the share's feedback removed. With the machine removed altogether it holds on 24,102 random graphs, given only that every cycle has a marked edge. It becomes false only when the running down is removed.
+
+The notions the design adds (the paid return, the forgone child, the tie act read from the stock) are put in at the definitions and are not needed by the proof. What does real work is the witness: a smallest machine in which a unit's giving costs it a child, and a tie act decides, from one start, between a period-2 course and a step into a form that no level keeps. That is a built case, and no old law is a case of it.
+
+## 5. The specific questions
+
+**(a) Is the law anything but pigeonhole on a finite graph, and what in it is about paying?**
+
+No, it is not more than pigeonhole. It is pigeonhole on the landing set of a first-return map, whose landings meet every cycle because every step that does not invest spends a token.
+
+The only thing in it about paying is that the steps which do not pay run the stock down. The cost of paying (the forgone child) is used only to bound M. The equivalence holds with that cost removed (0 of 1,125,696), and it fails once the draw is removed (112,368 of 157,440 at C = 2).
+
+Under other names:
+- an infinite run of a finite automaton is a lasso;
+- "infinitely many visits to F iff some cycle through F is reachable" is Büchi acceptance;
+- the return edges are the induced (first-return) map on a cross-section;
+- the stock is a Floyd ranking function;
+- W_U is the winning region of a one-player safety game, and its complement is a trap.
+
+The Lean statement it calls for is `Onward.run_iff_continues` at the induced process, plus a lemma saying that runs of the machine and runs of the induced process correspond.
+
+**(b) R1 to R5 against §2.**
+- Stock back only through a living giver: yes. No reachable transition raises it otherwise, and the giver is the breeding G. But the rate g is handed in, and the giving is a fixed table entry (G invests at every birth). In the witness every giving refills to full.
+- Giving costs the giver: yes, its G child, at every giving step. That this child is the G and not the T is fixed by the word order of the table: the design's "keep last" row lasts on both sides. And no G ever leaves a G.
+- The taker lock: it does not come about. It is built into the vote at a tie.
+  - Under hold, the incumbent's share is a tie at every vote, and "hold" re-elects it.
+  - Under reverse, the reverse act installs T at a tie, and a lone T, the giver's leftover, keeps it for the two steps that exhaust C = 2.
+  - No favoured kind can raise its own share in the witness.
+  - The vote depends on the rule in force at a tie, so it falls outside `RuleCapture.ReadsShare`, and the package's lock laws do not apply to it.
+
+**(c) The nearest thing in the Lean.**
+
+For the law: `Onward.run_iff_continues`, `Onward.returning_of_continues` and `Onward.KeepsMoving.run`, with `Recurrence.revisits_within` under them.
+
+For the model: `PopulationCorrection.lean` (outside the package; I read it in full at the statement level) is the nearest in kind.
+- It has a reserve refilled by the slots' own contributions (`next`, `inflow`).
+- It has a threshold bit on the reserve that sets the direction of revision (`funded = decide (fee ≤ reserve)`; `allocated`), which is the same shape as the machine's `[x > h]`.
+- It has a cost to the one that keeps (`strict_revision_advantage`).
+- It has an absorbing doomed region (`doom_step`, `destructive_region_absorbing`).
+- It has both outcomes from one start, differing in the revision schedule (`speed_one_eventually_constructive` against `growth_eventually_destructive`, from `exampleStart`).
+- It has an exact boundary over all starts and schedules (`exact_schedule_activation_boundary`: activation ⟺ `fee ≤ reserve + available k r r`), which is real work: a potential, the contributions available before activation.
+
+The machine is not that model in small.
+- It lacks the exact potential law, and its law is only pigeonhole.
+- It lacks a correction that draws on the stock: in PopulationCorrection enforcement spends the fee, while the machine's act is free.
+- Its reading points the other way: the lasting selector favours the giver when low and the taker when full, where PopulationCorrection enforces renewal when funded.
+- It adds what PopulationCorrection lacks: kinds that leave offspring, a choice among acts with a kernel under U, and a point past return that is a form, not a low potential.
+
+In the package, the nearest are:
+- `LineOnAStock`: units with needs and kids on a level, where giving is handed in.
+- `TurningInTime.locked_ends_rising`: a `Locked` start at any level ≤ hi ends within hi + 1 steps.
+- The choice-side `GuardHorizon.Closed` / `closed_viable`.
+
+**(d) Is there a law in the package whose point of no return is not a low level?**
+
+The stated point-of-no-return law is at a low level: `TurningInTime.noReturnAt_iff_first_below` (`NoReturnAt … N ↔ X N < H + y ∧ ∀ n < N, H + y ≤ X n`; definitions in `ReadOffInTime.lean` 591 and 595). The same holds for `Coupled.Indexed.ends_iff_below` (from the listing, not opened) and for PopulationCorrection's `Doomed` (`reserve + triangle renewing < fee`, outside the package).
+
+Yes, in kind, there are laws where the doom is not a low level:
+- `TurningInTime.locked_ends_rising` (line 1499): a Locked start with any `x ≤ hi`, the cap included, ends within hi + 1 steps. Its docstring says no point of no return is stated there.
+- Level-free no-return laws: `Labelled.not_returns_iff_loses` (913), `Recurrence.lost_stays` (577), `RuleCapture.locked_stays`, and `PoolFromCourse.closed_stays_closed` (222: absent readers and Locked stay so).
+- Built: `LineOnAStock.HigherStartEnds.from_seven` passes through the top level 12 at steps 2 and 3 on a course that ends at step 5.
+
+The witness's step past return at full stock is a step into the form (lone T, T favoured), which is kept at no level. In the witness the U-kernel is upward closed in the level for every form. So it is the lock's "ends from any level" with a choice around it, not a new kind of no return. A genuinely high-level no return under choice does occur in the design's family when the taker's need exceeds 1 (the C = 2 example in LESSER). There the cause is eligibility, as in `LineOnAStock`'s needs.
+
+## 6. What I ran, and what I did not read or check
+
+**Ran** (all in `/Users/ren/theories/tmp/fm/centre21/refute/E-work-opus/`, Python only, each run under 25 s):
+- `machine.py`: my rebuild of §2.
+- `witness_check.py` → `witness_check.out`: the courses, the kernel, who breeds, the selectors on (incumbent, level), kernel order, the law on the witness.
+- `witness_more.py` → `witness_more.out`: all 4,096 act sequences, three T3 rows, the vote as h(share, rule).
+- `t6_check.out`.
+- `law_variants.py` → `law_C1.out`.
+- `law_fast.py` → `law_fast_C1.out`, `law_fast_C2.out`, `law_fast_C2_full_1.out`, `law_fast_C3_full_1.out`, `law_fast_C3_rest.out`: four variants, C ≤ 3 (nodraw at C ≤ 2).
+- `generic.py` → `generic.out`: 60,000 random graphs.
+
+**Read:**
+- the brief, the designers' brief, DESIGN.md, PROMPT.txt, WITNESS.txt and PILOTS.txt;
+- the designer's `investment.py`, `audit.py`, `witness.py` and `run_audit.py`. I read `investment.py` before writing `machine.py`, so my rebuild follows §2's text but is not blind to the designer's code;
+- PLACES.md entries for GuardHorizon, Keeping, Viability, PopulationCorrection, LineOnAStock, Lock, RuleCapture, RuleShaping and TurningInTime;
+- from the Lean:
+  - `Onward.lean`: header, lines 86–240;
+  - `Recurrence.lean`: header;
+  - `GuardHorizon.lean`: 60–140;
+  - `RuleCapture.lean`: 140–195;
+  - `TurningInTime.lean`: 2140–2215 and 1487–1515;
+  - `ReadOffInTime.lean`: 585–600;
+  - `LineOnAStock.lean`: 90–125, 1055–1069 and 1780–1856;
+  - `PoolFromCourse.lean`: 222–236;
+  - `Labelled.lean`: 913;
+  - `PopulationCorrection.lean`: lines 1–410 and 496–600, with the declaration list for the rest;
+- `COLLECTIVE-DESTRUCTIVE-ATTRACTORS.md`, by grep only.
+
+**Not read:**
+- the designer's `smallest.py`, `discover.py`, `brood.py`, `two_broods.py` and `variable_needs.py`;
+- the size_* and audit_* JSON beyond one;
+- `AFTER-DESIGNS.md` and `READING-OF-THE-EIGHT.md`;
+- the direction page, the chapters, `WHAT-A-MODEL-MUST-HAVE.md` and the earlier failed notes;
+- `Viability.lean` and `Keeping.lean` themselves (only the listing's account of them);
+- the Coupled, ClosedCapture and KindRelay statements;
+- `Lasting.lean` beyond `Continues`.
+
+**Not checked:**
+- the design's minimality and its 12 hits;
+- its audit totals;
+- the T3 rows other than three;
+- the law for C ≥ 4, for history-dependent selectors, or for `nodraw` at C = 3.
+
+The full test suite and every Lean build were deliberately not run.

@@ -1,0 +1,11 @@
+Reader whole-b-51. All three modules read whole: every declaration's statement and docstring and the opening account of PremiseWitnesses.lean (705 lines), Premises.lean (1209 lines) and PremisesTogether.lean (474 lines). I also opened InAmounts.lean, Amounts.lean, MutualDependence.lean and Optimum.lean only to look up the meaning of Counted, ArisingEmbodied, rests_unrefuted, MutuallyFed and ReturnsLess. I ran no Lean.
+
+Some questions could not be answered beyond N. None of the three states a share set again from itself (question 4) or a law of number for units that leave units (question 8). None states a general dichotomy of going on and ending (question 10). Their "met and failed" pairs are about premises, not about a course going on or ending.
+
+Three things bear on the centre that the fourteen questions do not catch.
+
+1. Premises.lean, in its built world hatch (l. 984, with hatch_binds at l. 1035), has a relay with a cost to the giver. The parent takes food and its own unit, gives the child one unit and ceases. The child comes to depend on the food as the parent did. The general law premised_rests_unrefuted (l. 806) then says that a finite world meeting the eight premises rests, unrefuted, through balance, dissipation and embodiment. So in that frame a relay of this kind cannot go on forever in a finite world. hatch reaches its census only through infinitely many idle ground relata (hatch_idle, l. 1188).
+
+2. PremiseWitnesses.lean shows that listing confines the link from self-concern to C to level paths whose admissions end (Web.admits_nothing_from_of_listed, l. 438). Once there is a formation, no list holds what every level path admits (Web.not_listsAdmitted_every, l. 446). So the comparison law does not reach a course that admits something at every step. That bears on any centre whose going on does not end.
+
+3. PremiseWitnesses.lean also proves that the condition on the root (续无外) depends on the direction in which the net is read. Along 缘, the endless line of descent meets it from its first birth. Along the converse, it fails from every centre (逆缘续无外随网, l. 647).

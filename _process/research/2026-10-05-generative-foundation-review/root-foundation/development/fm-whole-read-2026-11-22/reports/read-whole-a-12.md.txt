@@ -1,0 +1,5 @@
+I read all six modules in full at the level requested: each opening account, every declaration’s statement, and its docstring where present. No module was partial and no field was unreached. I did not check proofs by running Lean.
+
+OverExchange distinguishes losing a giver from running low on stock. In `World.ReadOffExchange.outrun_below` (l. 573), excess taking is required for only a finite stretch. The dependence of every giver on the depleted condition is what keeps the level below need afterward. The laws count the rest of the world as a possible giver. Original-world balance suffices to make that rest idle (`World.withRest_rest_idle`, l. 111).
+
+Optimum distinguishes losing a dependence from losing the draw that selection rewards. `Web.course_drawn_unbounded` (l. 2791) allows both permanent loss and unbounded cumulative draw when positive giving continues. In the built season, `unshared_optima` (l. 552) shows that ranking ground catch alone permits both keeping and emptying the bay. Neither result supplies a rule that updates selection from the population share of the kind it already favours.

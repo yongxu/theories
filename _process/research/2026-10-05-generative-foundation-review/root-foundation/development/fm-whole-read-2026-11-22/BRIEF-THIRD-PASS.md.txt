@@ -1,0 +1,47 @@
+# Brief: the third pass of the whole read
+
+*AI-written (Claude Fable, board row FM), 22 November 2026, frozen before any third reader ran (hash in `FROZEN-THIRD-PASS.sha256.txt`). You are a third reader. Two kinds of model each read every module of the package by fifteen questions and neither saw the other's returns. You are a third kind. You settle, at the statements, what they left open.*
+
+## What we are doing
+
+`/Users/ren/theories` draws a map of how anything forms, persists, changes and ends, with its core proved in Lean 4 with no axioms. Read `AGENTS.md` at the repository root (one page), then the brief the two passes had: `tmp/fm/whole/BRIEF-WHOLE-READ.md` (the fourteen questions, and the one letter that begins every answer: `S` from a statement read, `D` from a docstring or the opening account only, `B` only in a built case, `N` not found, `U` not reached).
+
+The package is `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/`. Your task file gives your modules and, for each, the list of its declarations with their lines (made by a script from the source), so that you can open any of them.
+
+**What went wrong before, and is yours to prevent:** a "not found" said of a module in which a declaration existed that nobody had opened; an `S` read off a docstring; a premise missed because it comes from a section's `variable`s and `include`s and is not in the signature. Read statements. Where a statement stands in a section, read that section's `variable` and `include` lines with it.
+
+You have one of two parts.
+
+## Part SETTLE
+
+The two passes differ on some fields of your modules: one says the module has the thing (`S`, `B` or `D`, with a declaration), the other says `N`. Your task file gives both answers word for word. For each difference:
+
+1. Open the module at the declaration the "yes" side cites and read the statement (with its section's variables). Does it say what the field asks? The question is the field's question in the whole-read brief, read strictly.
+2. If the cited declaration does not carry it, look through the module's declaration list for one that does, and open the likeliest. Say which you opened.
+3. Give the settled answer in the same form as the passes: one letter first, then the declaration, its line, and one sentence saying what the statement states, with its premises. If the answer is `N`, name the declarations you opened to rule it out.
+4. Say which pass was right: `a`, `b`, `both in part` (the thing is there in a weaker or different form than the yes side said), or `neither`.
+
+Do not settle by which pass sounds more careful. Settle by the statement.
+
+## Part EDGE
+
+Both passes marked your modules as having all four of: a statement with both outcomes, a point of no return, a law of ending within a bound, and a law of a closed region. That says nothing yet of whether they stand **together**. Where the package states both outcomes with an exact edge, it has so far been, each time, **a closed region on one side of the edge and a rank on the other, on one process**: at or beyond the edge something is kept by the step for ever; short of it the course ends within a bound. And each time on a law with no moves and no reading, or with the choice made once at the start. Whether that is so throughout, and whether any module has it with moves and a reading in the statement, is what you are asked. For each module:
+
+- `edge` — Is there **one statement** (an "exactly when", or two theorems that are plainly its two halves) that gives both outcomes of one process with an exact condition? Name it with its line and say what it states, with every premise, those from the section's variables included. `S`, `B` (only of a built case) or `N`.
+- `region_side` — On the side where it goes on: is that a region closed under the step, a kernel, a fixed point, a certificate, a standing state? Name the declaration that says so, or say the statement only asserts going on.
+- `rank_side` — On the side where it ends: within a bound? What falls? Name the declaration.
+- `moves_in_it` — Does that statement quantify over a choice (some move, every move, a plan, a policy, an allowed set)? Or is the process one course with no choice, or the choice made once at the start (a parameter)? `S`, `B` or `N`, with what the choice is.
+- `reading_in_it` — Does what is registered appear in that statement, so that the condition is on what can be told apart and not on the configuration itself? `S`, `B` or `N`.
+- `carrier` — What the statement is about, in the module's own type names (a `Process S A`; a `Web`; a level under `RegimeMargin.step`; a relation of the grammar; a list of units; other).
+- `handed_in` — Of the level's fall, the giving, the share's rise, who is favoured, the reading and the turn: which are premises of that statement and which are concluded by it? One line.
+- `links` — Which theorems of the module name a declaration of **another module** in their statement, and what they say of it (a case of it, an instance, an equivalence with it, a bridge). Up to five, the strongest first, with lines.
+- `standing` — Does the module's opening account or any statement admit an axiom or a classical principle? If you see none, say "none seen".
+- `note` — One or two sentences: anything in the module that bears on a statement with both outcomes, moves and a reading, which these fields miss.
+
+If a module has no such statement, `edge` is `N`, the other fields say what there is instead (the four things in separate statements, on different carriers, or in built cases), and `note` says so plainly. An honest `N` is the most useful answer you can give.
+
+## Rules
+
+- Read only. Write no file. Change nothing in the repository or in git. **Run no Lean, no build, no test, no gate.** No further agents.
+- Answer from the module's statements. You may open another module to understand a name. Do not use the two passes' answers as evidence of anything but where to look.
+- Use the Lean's own names. Do not interpret. Keep each answer to a few sentences.

@@ -1,0 +1,7 @@
+AI-written reader report, whole-a-10.
+
+I read the opening account, every declaration’s statement, and its docstring where present in all 14 modules: Likeness, LimitVerification, LineOnAStock, LineOnAStockCases, LineageDrawdown, LineageRegimes, LineageRegions, ListFootprints, ListedWebs, Listing, ListingRefutations, ListingValuation, LocalUnits, and Locality. None was partial. In ListedWebs, the quantitative stretch balance and the persistence claim appear in the opening account. I found no local declarations stating those laws. No question was left unreached.
+
+Two distinctions bear on the centre. In LineageDrawdown, outside renewal restores the pool after step nine, yet the family stays empty from step ten. In LineOnAStock, removing a zero-use member preserves the entire stock history and can change whether the net ends. The drawer share changes in both modules’ examples, but I found no rule in this batch that resets favouring from that share.
+
+What a record leaves out also matters for recognizing the outcome. For every finite horizon, LineageRegions gives two courses with the same selection terms through that horizon and the same families one step further, yet the marked line generates in one and degenerates in the other. In ListingValuation, two routes from different starts have the same answers and final reader state even though only one revised the valuation. Adding the starting state distinguishes those routes.

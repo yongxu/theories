@@ -1,0 +1,197 @@
+## 1. Verdict in five lines
+
+1. The design survives as **a built case worth keeping**, not as a centre and not as a law that joins.
+2. Its nursery law holds in everything I checked (2.5 million adjacent comparisons to N = 7, no break), and its general comparison is true and constructive (3.4 million random cases, no break).
+3. Strongest reason against: under its premise the nursery is a law that keeps the order of states. For a fixed allowance its "exact fate" is then, in form, a law the Lean already has for any such law: `RegimeMargin.Coupled.Indexed.ends_iff_below_within` (RegimeMargin.lean 2984), with `endsUnder_of_below` (2837) and `threshold_falls_within` (2997). What is new is one arithmetic lemma about a new step function.
+4. The general comparison does no work in either old law. `closed_viable` is its own induction with a one-point process put in and taken out. `locked_ends_rising` comes out through a different lemma (endpoints, not keeping) plus glue, with every old lemma's content re-proved inside the local condition.
+5. The three uses of "the comparison" (a point, a clock, one deterministic process under a preorder) meet nowhere but a six-line induction; the design says as much in its last sentence of T5.
+
+## 2. Statement by statement
+
+| Statement | Result |
+|---|---|
+| Nursery comparison under q + ⌈H/q⌉ ≥ N (ordered starts, ordered allowances, ordered endpoints) | HOLDS IN WHAT I CHECKED. My own rebuild from §2. One-step order on the full grid (f, w, a), endpoints not restricted to those that can feed. N ≤ 4, q ≤ 5, c ≤ 2: 495 parameter choices, 272,838 adjacent comparisons. N in 5..7: 660 choices, 2,242,050 comparisons. 0 violations. I read and followed the next-feeding step of the proof (f′ + z ≤ N, so the bill ≤ N − k ≤ q ≤ the grain advantage). Many steps follow by iterating; not enumerated separately. |
+| Exact fate for a fixed allowance (a keeps s iff W(s) ≥ Bᵃ(f)) | HOLDS IN WHAT I CHECKED. N ≤ 4, q ≤ 4, c ≤ 2: 61,116 starts and 5,400 thresholds against my own table, 0 differences. |
+| Some course keeps s iff W(s) ≥ Bᴺ(f) | HOLDS IN WHAT I CHECKED. N ≤ 5, q ≤ 4: 465 choices, 9,052 states kept by some course, all kept by the constant largest allowance. T4 table (2,5,6,6) reproduced. |
+| The blind way ends from every positive fast count | HOLDS, 15,134 courses, with or without the bound. It is two lines from the definitions (MUST 4). |
+| First-exit clause | NOT CHECKED separately. T4's instance reproduced: (2,3) has W = 0, one more step, and is outside the any-course kernel. |
+| T4, T6, the opening in (2,4,5,1), the N = 9 counterexample to the stronger claim | Reproduced exactly. |
+| T3 table (eight alterations) | NOT CHECKED, except one. Letting a diverted parent keep its fast offspring breaks the one-step order under the same bound (3,049 of 239,912 adjacent comparisons). First: (N,q,H,c) = (3,2,5,0), (f,w,a) = (2,2,3) against w = 3 gives (3,4) and (3,6), balances 1 and 0. So the forgone offspring does work in the law. |
+| General comparison (T5) | HOLDS IN WHAT I CHECKED. 603,054 random pairs of small processes, 1,335,584 related pairs, 3,391,759 cases with the left viable, 0 violations. Proof term written (5a), not compiled. |
+| `closed_viable` from it | HOLDS on paper; see 5b. |
+| `locked_ends_rising` from it | HOLDS on paper in what I checked by hand, with two further lemmas and glue the design does not count. Numeric clauses of the relation: 300,000 instances, 0 breaks. Not compiled. See 5c. |
+
+## 3. MUST, then LESSER
+
+**MUST 1. T5 says more than is shown.** The design says: "Two unchanged old statements have paper derivations from the finite-horizon comparison used in §3." The comparison used in §3 is on one deterministic process with ordered endpoints. The "general form for guarded processes" (each right successor matched back to a left one) first appears in T5 and is used by neither §3 nor the lock derivation. Details are in 5b, 5c and 5e. T5's own test, "the general law doing the work", is met by the letter only.
+
+**MUST 2. T1: the law's form is already in the Lean.** The design says the "resulting inclusion of future courses" was not found. For constant allowances it is there in general form:
+- `Lasting.orbit_mono` (Lasting.lean 376): a map keeping a relation keeps it along orbits.
+- `RegimeMargin.Coupled.Indexed.KeepsBelow` (2817) and `run_below_of`.
+- `endsUnder_of_below` (2837): "a condition ending from a state ends from every state below it".
+- `ends_iff_below_within` (2984): "the point of no return is exact", by a finite check.
+- `threshold_falls_within` (2997): the threshold does not rise as any other level rises.
+
+I wrote the nursery as a law on three conditions (allowance, N − f, grain left clamped at 0):
+- Under the bound it keeps the order: 597 parameter choices to N = 6, 1,294,929 adjacent pairs, 0 breaks.
+- "The grain-left condition is nothing from some step on" is "the course ends": 61,116 starts, 0 differences.
+- Its threshold is the design's Bᵃ(f): 5,400 compared, 0 differences. Monotone in f and in a is `threshold_falls_within`.
+
+The instantiation is on paper, not compiled. Not found in what I read: the one-step order lemma itself (new arithmetic of a new model), allowances that vary by season, the first-exit clause.
+
+**MUST 3. T6 is met for the raw level only.** The main statement is a threshold: "a keeps s exactly when W(s) ≥ Bᵃ(f)". In my scan 0 of 2,088 rows (parameters, f) fail to be a threshold in W; 86 fail in the raw level. The successor depends on (f, W) alone. So the fact that more level can end a line sits in two places: the change of coordinate ℓ ↦ W at the first reading (T6's instance: W(2,3) = 1, W(2,4) = 0), and the parameter region the premise excludes. Inside the premise the system is of the threshold family. The title's "order, not threshold" is an order whose sections are thresholds.
+
+**MUST 4. T2: the lock is a definition.** The design says "No premise assumes a fall, lock…". Under allowance 0 the next fast count is min(N, 2f) whatever the crop (2,456 (f,w) pairs, 0 exceptions). Then ordinary planters N − m reach 0, nothing is planted, and the crop is empty. The lock is the booking rule and the fall is one line from it. The giving is a fixed yield with the soil restored every season (the design says so). The turn is the allowance, handed in; the crop never makes a difference to it.
+
+**MUST 5. R5 and R6 are named more than had.** Under the premise the choice among moves is idle: the largest allowance keeps wherever anything does (0 of 9,052; the design's own assert `goals == keep[N]`). "What is registered" is the size of the move. There is no reading map and no two configurations the rule cannot tell apart. T3's instance for the reading (allowance 0) is T4's instance again. The general comparison is stated on `Viable`, the side with no reading.
+
+**LESSER.**
+- The premise is sufficient, not the dividing line. In the designer's box it excludes 15 parameter choices, and their output lists no fate reversal among them. In my 105 choices outside the bound (N ≤ 6) the clamped order was never broken (312,126 pairs). Only the targeted N = 9 instance shows the premise working. The design says necessity is not shown.
+- The relation to the clock omits i ≤ hi + 1 (implicit in the clock's states).
+- T8 counts one "local simulation condition"; T5 draws two different conclusions from it (keeping; related endpoints).
+- R7: T4's surviving course is the fixed point (0,9) → (0,9), holding the same. The one law-like reading of "opening" is the comparison read forward: a larger allowance leaves a state higher in the order, so no possible course is lost. The design gives one instance instead.
+- The Lean already has the orbit-keeps-a-relation lemma three times: `Lasting.orbit_mono` (376), `Law.KeepsRelation.run` (IdentificationRuns 313), `GrammarCourse.kept_along` (120). A new comparison lemma that does not make these cases would be a fourth.
+
+## 4. The question
+
+Does a general law of the design do work that the old laws do not? No, in what I read. The design has two candidates.
+
+The comparison between guarded processes is true, needs no premise beyond itself, and is not in the package in that generality. But each use the design makes of it is degenerate in a different way:
+- Left a point: it unfolds to `Closed` and repeats `closed_viable`'s induction.
+- Right a clock: it is an invariant indexed by the step count, and the form needed is the endpoint one.
+- One deterministic process under a preorder: it is iterating a step that keeps an order.
+
+In each, the work is in the local condition, which is the old content.
+
+The nursery law is real mathematics about a new step function. Its general part (a step keeping the order gives ordered runs, endings closed downward, an exact threshold by a finite check) is what `RegimeMargin` already states for any law keeping the order. What the old laws do not have is one arithmetic fact, that this nursery keeps the order when q + ⌈H/q⌉ ≥ N, and the built instance with moves in which a step that still feeds is past return.
+
+## 5. The specific questions
+
+**(a) The comparison over `GuardHorizon.Viable`.** Written, not compiled:
+
+```lean
+def Carries (P : Process S A) (g : S → Prop) (Q : Process T B) (h : T → Prop)
+    (R : S → T → Prop) : Prop :=
+  ∀ s t, R s t → (g s → h t) ∧
+    ∀ a, Enabled P s a → ∃ b, Enabled Q t b ∧
+      ∀ t', Q.step t b t' → ∃ s', P.step s a s' ∧ R s' t'
+
+theorem Carries.viable (c : Carries P g Q h R) :
+    ∀ n s t, R s t → Viable P g n s → Viable Q h n t
+  | 0, s, t, r, kept => (c s t r).1 kept
+  | n + 1, s, t, r, ⟨within, a, enabled, all⟩ =>
+    match (c s t r).2 a enabled with
+    | ⟨b, enabled', back⟩ => ⟨(c s t r).1 within, b, enabled', fun t' st' =>
+        match back t' st' with
+        | ⟨s', st, r'⟩ => Carries.viable c n s' t' r' (all s' st)⟩
+```
+
+The induction goes through with no premise beyond the comparison. Nothing has to be decided. `Viable` on the right hands over a successor that occurs (`Q.step t b t'`), and the comparison answers with a left successor that occurs. The premise of decided steps arose because `KeptFor` quantifies over every value a reading could keep; `Viable` quantifies only over outcomes that occur.
+
+The direction of the matching is essential. With the ordinary forward simulation (each left successor matched on the right) the transfer fails in 559,711 of 10,252,445 checks. Smallest found: left a point with a loop, right a move from 0 to {0, 1} with the guard false at 1.
+
+**(b) `closed_viable`.** Take P := the one-point process, g := True, R () t := K t. Then `Carries` is `Closed P guard K` up to trivial terms (29,606 sets K on random processes: all agree, 7,354 of them closed). The derivation needs the point, its own induction that the point is viable at every horizon, the unfolding, and the call. The old proof is a four-line induction with the same three moves: guard from `closed`, move from `closed`, successors by the hypothesis. So it is `closed_viable`'s induction said again with a point put in and taken out.
+
+The comparison is a strict generalisation: between a 2-step chain and a 4-step chain, keeping carries at horizons 0 to 2 where the right has no closed set at all. That generality is not used here.
+
+**(c) `locked_ends_rising`** (TurningInTime.lean 1499–1520).
+
+Premises:
+- `raises : Raises P favours fA`
+- `monotone : ReadsShare P M hA`
+- `upper` (favouring kept by a rule not lower)
+- `outside : AloneOutside marked (windowAlone fA hA reads) after`
+- `needs : 0 < need`
+- `un : ∀ x, need ≤ x → ¬ marked x`
+- `nothing : FromNothing giving`
+- `keeps : Keeps giving 0 hi`
+- `high : x ≤ hi`
+- `locked : Locked M favours hA (w.1, w.2.1)`
+- `more : ∀ v, P.le w.1 v.1 → M.le w.2.1 v.2.1 → use v < use (windowAlone fA hA reads v)`
+
+Conclusion: `∃ n t, n ≤ hi + 1 ∧ «迭» (net need after (fun w x => RegimeMargin.step giving (use w) x)) n (w, x) t ∧ (∀ v, ¬ net … t v) ∧ t.1 = Law.orbit (windowAlone fA hA reads) w n ∧ Locked M favours hA (t.1.1, t.1.2.1)`.
+
+The relation in full, (v, l) to clock time i:
+- v is the orbit of `windowAlone` from w at i;
+- `Locked` at v; `P.le w.1 v.1`; `M.le w.2.1 v.2.1`;
+- i ≤ use v; l ≤ hi; i ≤ hi + 1;
+- i = hi + 1 → l = 0.
+
+Start: `locked`, reflexivity, `high`. A step enabled at (v, l) has need ≤ l, so l > 0 (`needs`), so i ≤ hi. Then:
+- `un` and `outside` give the next way `windowAlone v`.
+- `turn_locked` (from `raises`, `monotone`, `upper`) gives the lock and both order bounds.
+- `more` gives i + 1 ≤ use v′.
+- `keeps` gives l′ ≤ hi.
+- At i = hi, hi ≤ use v and l ≤ hi leave nothing, and `nothing` gives l′ = 0.
+
+Every old premise is used. By program: 300,000 instances, relation never broken, no run longer than hi + 1, bound attained in 1,859. Dropping `more`, `keeps`, `nothing`, `high` or `needs` breaks the relation in 9,785, 12,950, 17,150, 60,000 and 60,000 of 60,000 instances.
+
+Which way: keeping (with both guards true, merely being able to step) is carried from the lock to the clock and read backwards. The clock cannot take hi + 2 steps, so the lock cannot. Every enabled move of the lock must be matched (it has one), which is the one-sided condition itself. The other half would fail: in 298,141 of 300,000 runs the net stops while the clock can still step.
+
+Is the old conclusion obtained? On paper yes, but not from the keeping-transfer alone. That gives only "no hi + 2 steps". The witness needs three more things:
+1. A bridge from `Viable` on a wrapped process to `«迭»` of the relation `net`.
+2. A bounded search for the first disabled step (`first_of_decided`, as the old `ends_of_below` does).
+3. The orbit equality and the lock at the end, which need a second lemma: deterministic steps keep related endpoints.
+
+Lemma 3 alone already gives the bound: the endpoint is related to clock time n ≤ hi + 1, and at hi + 1 the level is 0. So the keeping-transfer is idle in this derivation.
+
+Shorter? No, by my count. About 31 lines are specific to this law today (`locked_ends_rising`, `ends_with_net_rising`, `rising_takes_all`, `takes_at_hi`, `rises_from`, `kept_within`). The rest (`ends_of_below`, `agrees_until_marked`, `locked_alone`, `locked_alone_not_below`) serve sibling laws and would stay. The new route needs the two lemmas, the wrapper and bridge, the clock and its bound, the relation and its local condition (which redoes `turn_locked`, `kept_within`, `more`, `nothing` step by step), the search and the assembly. My estimate is about 90 lines; it is an estimate, not measured.
+
+**(d) Already in the Lean under another name?** In parts.
+- **One move, two processes:** `MoveOutcomeProcesses.Covers` (61), `Covers.ensures` (86), `covers_iff` (95), `covers_trans`, `covers_along`. Different labels, same configurations, right outcomes among the left's. This is the design's matching clause with the relation on successors the identity. The name search in AFTER-DESIGNS did not list it.
+- **One relation, one step:** the grammar's `«有常»` (Grammar.lean 340), pointwise `∀ u u', E u u' → ∀ v, R u v → ∃ v', R u' v' ∧ E v v'` (343), for any relation E. It is a one-sided forward simulation. `«有常则可续»` (GrammarLaws 2592) carries having a successor.
+- **Many steps, one total law:** `Lasting.orbit_mono`, `Law.KeepsRelation.run`, `GrammarCourse.kept_along`.
+- **Many steps, two frames, same labels, two-sided:** `Bisimulation.trace` (Labelled 364). Its proof uses the forward half only.
+- **A built case:** `ReachableRanges` 1804 `Simulation`, `late_simulates_early`.
+- **Order laws on one process:** `KeptFor.finer`, `KeptFor.mono` (Keeping 288, 271), `KeptFor.guard_mono` (JointKeeping 136), as AFTER-DESIGNS says.
+- **The design's form** (two processes, different labels and configurations, guards, right successors matched back, conclusion on `Viable` for n steps): not found in what I read. A text scan of 27,171 declarations in 407 files found no statement naming `Viable` outside `GuardHorizon` and `Reserve`. The six `MoveOutcomeProcesses` laws were the only statements with two `Process` variables and a keeping word.
+
+**(e) Does the nursery's law use the general comparison?** Only an order argument of its own.
+- The comparison half is: one step keeps the preorder (the new arithmetic), then iterate. That is `orbit_mono`'s shape with the allowance varying by season.
+- The nursery has one successor per move, the two processes are the same, and the guards are true. Nothing of the general form (two processes, successors matched back) is exercised.
+- The exact-fate half uses the finite table and one comparison with the constant largest allowance. The `Viable`-form applied to the nursery would give only that the any-course kernel is closed upward, not that the largest allowance is the witness.
+- The two old laws use a point and a clock and never touch the nursery or its order.
+
+The three do not meet. What the nursery law does meet is `RegimeMargin`'s family for laws keeping the order (MUST 2), which the design does not name.
+
+Known under other names:
+- The comparison is an alternating simulation carrying a safety objective for the mover (Alur, Henzinger, Kupferman and Vardi 1998; in control, Tabuada's alternating simulation relations), in its finite-horizon form.
+- The nursery law is the comparison principle for an order-preserving system, with the viability kernel an upper set found by backward iteration on a finite lattice.
+- The clock is a ranking function.
+
+## 6. What I ran, and what I did not read or check
+
+**REPORT.md was not saved.** The Write tool refused a report file in this session, and I did not work around it. This message is the whole report.
+
+All programs and outputs are in `/Users/ren/theories/tmp/fm/centre21/refute/C-work-fable/`. Python only, each run under 30 seconds; no Lean, no build, no test, no git change.
+- `comparison.py` → `comparison-output.txt` (25 s): the counts in 5a and 5b.
+- `clock.py` → `clock-output.txt` (17 s): the counts in 5c.
+- `nursery.py` → `nursery-output.txt` (3 s): my rebuild; the named instances; the lock as the booking rule; the order scan for N in 5..7; the alteration; idle choice and thresholds.
+- `nursery_endpoints.py` → `nursery_endpoints-output.txt` (2 s): the order scan without restriction.
+- `nursery_as_web.py` → `nursery_as_web-output.txt` (3 s): the nursery as a law of three conditions.
+- `scan_lean.py` → `scan_lean-output.txt`: Lean files read as text.
+
+Lean read (statements and proofs at the lines named):
+- GuardHorizon 56–145
+- TurningInTime 336–760 and 1274–1543
+- RuleCapture 145–183
+- RegimeMargin 236–270, 1108–1135, 2134–2170, 2676–2692, 2738–2752, 2812–2857, 2913–3004
+- Keeping 60–160 and 264–336; JointKeeping 120–150
+- MoveOutcomeProcesses 1–240
+- Labelled 280–380
+- ReachableRanges 262–300 and 1790–1885
+- Grammar 330–445; GrammarLaws 2578–2683 in part; GrammarCourse 106–126
+- IdentificationRuns 300–345; Lasting 368–384; Viability in outline
+
+PLACES.md was searched, not read whole.
+
+Not read: `_process/DIRECTION.md`, `WHAT-A-MODEL-MUST-HAVE.md`, the chapters, the other designs, the designer's `challenge.py` and `explore.py` (outputs only), the rest of the 406 modules.
+
+Not checked:
+- That any Lean written here compiles.
+- That the nursery instantiates `ends_iff_below_within` in Lean (types, `setAt`, `StaysWithin`).
+- Seven of the eight T3 rows.
+- The comparison beyond N = 7, q = 5, c = 2.
+- Many-step prefixes with varying allowances by direct enumeration.
+
+*AI-written (Claude Fable), 22 November 2026, as a refuter under the WORK lens.*

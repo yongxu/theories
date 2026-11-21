@@ -1,0 +1,171 @@
+## 1. Verdict in five lines
+
+1. The design does not survive as a centre or as a law that joins. It survives as **a built case worth keeping (L\*) with two small lemmas** (B3's min over a tail; B6's two corners), correct in what I checked.
+2. Strongest reason: **the second way (case iii) is carried by the choice of D, not by the law.** In all 97 case-(iii) laws found, the designated kinds leave out a kind they rest on, and that kind's class stands by itself. With every kind designated, case (iii) does not occur; I give an argument that it cannot (M1), with 0 failures on 48,384 laws.
+3. The first way is not in it. "Closing" can be deleted from every statement (B3(2) says all of it). In every case-(iii) law some closing course ends D with what it rested on still there and standing; nothing is used up.
+4. B5(b) as a step of no return is refuted by a runnable instance. In a case-(iii) law a closing course passes its "step after which no course keeps D", and an open course from that step brings D back and keeps it for ever.
+5. No old law comes out as a case (the designer says so). The Lean and October's files already hold more of B3 to B5's shapes than the design's T1 says.
+
+## 2. Statement by statement
+
+- **B1 (lattice of moves).** HOLDS IN WHAT I CHECKED: proof read, each closure is one line of inequalities. Not rerun.
+- **B2 (the fold).** HOLDS IN WHAT I CHECKED: proof read. For a cycle `DownClosed` is not needed; for + with `s T ≤ s (T+p)` it is. The + case within caps p·C was rerun as X4 (97 laws in case iii, 0 failures).
+- **B3 (holding).** HOLDS IN WHAT I CHECKED: proof read. (2⇒1) is correct and is the one step in the design that is not unfolding. (1)⇔(3) rerun as X8: the closing kernel is non-empty exactly where a standing population exists, 0 failures in 21,952 + 164,000 + 50,625 laws.
+- **B4.** HOLDS IN WHAT I CHECKED, and holds with "closing" taken out (X7). The starts with a keeping course that holds one kind of D from some step on are exactly the starts that reach, through live configurations, a configuration at or above a standing population: 0 failures in family A (10,796 laws for D = {1,2}, 12,120 for D = K) and in every other family run. Starts outside the box 0..C not checked.
+- **B5(a), B5(c).** HOLD: both are B3(2⇒1) contraposed, and (a) gives (c) directly.
+- **B5(b).** By the letter it is the definition of `Keeps` unfolded: a course that ends D has a first configuration outside V_D, at the latest the one where D is absent. **REFUTED as a step of no return**, which is how section 1 line 9 ("passes a step after which no course keeps D"), R5 ("the first step after which no course keeps") and the sketch ("the complement of V_D is closed under moves") word it.
+  - Instance in case (iii) (`noreturn.py`): R_0 = {0:1}, R_1 = {2:1}, R_2 = {0:1, 3:1}, R_3 = {0:1, 2:1}; c = (2,2,3,1); C = (1,1,1,1); D = {1,2}. V_D = {(1,0,1,0), (1,0,1,1), (1,1,0,1), (1,1,1,0), (1,1,1,1)}, and no standing population has a kind of D.
+  - The closing course (1,0,1,1) → (1,0,0,1) is a move, is closing, has D absent and is outside V_D.
+  - The open course from there, (1,0,0,1) → (1,0,1,0) → (1,1,0,1) → (1,0,1,0) → …, has D present at every later step.
+  - The same in case (ii) with three kinds: R_0 = {2:1}, R_1 = {2:1}, R_2 = {0:1}, c = (1,1,2), C = (1,1,1): (1,0,0) is outside V_D and moves to (0,0,1) in V_D.
+- **B5(d).** HOLDS IN WHAT I CHECKED (X4).
+- **B6.** HOLDS IN WHAT I CHECKED: proof read (Dickson, then B2 with +; a repeated configuration in the box, then B2 with max). Not rerun for the free corner. True and incomplete: see M3.
+- **"Exactly one of (i), (ii), (iii)".** HOLDS, by the definitions (a standing population keeps).
+- **The counts.** Family A reproduced by my own program from section 2 alone: D = {1,2}: 11,156 / 10,780 / 16; D = K: 9,832 / 12,120 / 0. L\* reproduced.
+- **T3's table, T6's 14,260 pairs, the share rule's counts, family B, R4.** NOT CHECKED.
+
+## 3. MUST, then LESSER
+
+**M1. Case (iii) exists only where D leaves out what it rests on, and that part stands by itself.** The design does not say this, and it changes what case (iii) is.
+
+Claim (mine, on paper, not in Lean): from any cycle of non-empty configurations of `Move W`, caps and cost both on, a standing population can be built.
+- Let S be the kinds present somewhere on the cycle, and B ⊆ S a class of kinds that need each other and nothing outside B. One exists, since S is closed under needs.
+- For k, j in B with R k j > 0, k present at t+1 forces j present at t. Going round a cycle of needs in B, the sets of steps at which each kind is present are exact shifts of one another.
+- Put y_k = the least count of k over the steps where k is present, for k in B, and 0 elsewhere.
+- For j in B take a step t where j has count y_j. Every k in B that needs j is present at t+1 with count at least y_k, so Σ_k y_k R k j ≤ Σ_k s(t+1)_k R k j ≤ c_j y_j.
+- So `Move W y y`, y ≤ C, y ≠ 0.
+
+Consequences:
+- With every kind designated there is no case (iii): a course that never empties gives a standing population, with caps and cost.
+- In case (iii) for D, every such class B on a keeping cycle is disjoint from D, and y is a standing population of kinds outside D.
+
+Checked:
+- The built y is a standing population on every cycle tried (`base.py`), cycles up to length 13, 0 failures:
+  - 12,120 laws of family A;
+  - 16,653 of 40,000 random four-kind laws (caps 1 to 2);
+  - 19,611 of 60,000 random three-kind laws (entries 0 to 2, empty recipes allowed, caps 1 to 3).
+- Case (iii) with D = K: 0 in 448,258 laws (`search.py`, `dk.py`), up to five kinds.
+- In all 97 case-(iii) laws found for D = {1,2} (16 + 4 + 48 + 6 + 21 + 2; the two random samples may share a law), a kind outside D is present in every configuration of V_D, and with it added to D the law is in case (ii) (X5).
+- In L\*: D = K gives standing (1,0,0), and every keeping course holds the ground at count 1 at every step.
+
+So "the formation can be kept only with its forms changing" is said of a formation defined as "kind 1 or kind 2". It stands on a ground that is left out of the formation and holds exactly the same form throughout.
+
+**M2. B5(b) is not a step of no return** (instance above). `Keeps` requires D present at the start, so "not kept" is not preserved by steps wherever a kind of D can be formed from kinds outside D.
+- The Lean has the exact condition: `Viability.not_keepable_invariant_iff` (`Becoming/KeepableStep.lean:68`). Every step keeps "not keepable" exactly when no step from outside the guard leads to a configuration it is keepable from.
+- The design's R5 claim rests on the false sentence in the sketch.
+- X1, laws with a step from outside V_D into V_D: 496 of family A; 799 of 150,000 (A2); among 50,625 four-kind laws, 845 in case (ii) and 2 in case (iii).
+
+**M3. T3 leaves out two parts that do the work in case (iii).**
+- *The formation as "some kind of D", with the base outside D* (M1). With "every kind of D present" the kernel of L\* is empty; with D = {1} or {2} L\* is in case (i); with D = K it is in case (ii) (`lstar.out.txt`).
+- *The whole-number grain.* In all 97 case-(iii) laws the mean of a cycle of V_D is a standing population within the caps C in fractions (L\*: (1, 1/2, 1/2)); that is B5(d) divided by p. Case (iii) is where a fractional standing population fits under the caps and no whole one does, and a course realises the fraction by taking turns. "Needs a finite source" is true only relative to the size of one token.
+
+B6's "needs both the caps and the cost" is correct and reads as the whole account; it is two of four.
+
+**M4. "Uses up what it rests on" is not what ends the closing course.** In all 97 case-(iii) laws some closing course from V_D ends D at a configuration that is not empty and is a move of itself (X6).
+- At T4's own start in L\*: (1,1,0) → (1,0,0), the ground intact and standing for ever.
+- By M1 this is general: in case (iii) the base can always stand.
+- The closing course ends because the class forbids forming the absent partner, not because anything ran down. The designer's weak point 6 says part of this; T4 and section 1 line 10 still present it as the first way.
+
+**M5. R2 "had, in the better form" is more than the model has.** The cap C is a ceiling on births per step, not a stock. Nothing is drawn down by use, and C tokens can be formed at every step for ever. What "runs out" is a kind not re-formed, by one move. There is no level, so R2's "what comes back depends on what is left" is had only as c·n for one step.
+
+**M6. T1's negative was a narrow word search.** "Dickson, well-quasi, wqo, self-covering found nothing" is true, and missed:
+- `Becoming/PlaceTransitionNets.lean` (in the package, imported at `Becoming.lean:256`; not in the places listing).
+  - It has nets with step semantics (`Net.Enabled`, `Net.fire`, `Net.Fires`).
+  - `Net.siphon_empty` (line 536): an empty place every producer of which consumes it stays empty.
+  - `Net.cycle` with `cycle_fires`, `cycle_never_rests`: one token moved back and forth, firing for ever, the marking changing at every step.
+  - `Move W n b` is `Net.Enabled` of the step b at the marking c∘n, for the net with `pre k j = R k j`, `post k k = c k`. The design differs from `Net.fire` only in that unspent acts expire.
+- `Becoming/KeepableStep.lean`: `keepable_step_iff` (50), `not_keepable_invariant_iff` (68), `not_keepable_step` (83), `not_keepable_run` (94). The design names `Keepable` and does not cite these.
+- October's `renewal_keeping_theorem` (`RenewalCharacterization.lean:703`), which is B3's shape with designated kinds.
+- All of October's `RenewalConfigurations.lean`: `renewable_iff_step` (121), `renewability_not_generated` (129), `renewable_of_more` (196), `seeded_renewable` (355), `keeping_and_losing_renewal` (494). In October's model these are V_D's one-step law, no return, the up-set, B4's ⇐, and T4.
+- Built cases of "no form held, the going on continues": the `KeepingWidening` kind relay (`renews_without_end` at 2269, 2503, 2743; "no formation is supported at two steps running") and `LineageRegimes.both_fates` (1047). Statements read, bodies not.
+
+What stays "not found in what I read": a general law that concludes a standing population from a course in a model with cost and caps (B3 2⇒1), and B6.
+
+**LESSER.**
+- L1. Where the lock comes about in the model, case (iii) cannot be. A kind with R k k ≥ 1 cannot come back once absent (the siphon law). If every kind needs its own act, every course is closing, so by B3 a kept formation has a standing population. In case (iii) the alternating kinds cannot need themselves, and the lock is put on from outside as a class.
+- L2. "Every selection that allots by share is closing" (section 1 line 5) is asserted, not shown.
+- L3. "October's corner (support free, source unlimited)" is loose. October has one pooled reserve that can fall short (`closedOpenShort`), tokens with spans, and no caps; it is not `MoveFree` without caps.
+- L4. T8 counts seven definitions; with the two variants of `Move` it is nine.
+- L5. B4's second up-set was not checked by the designer's program (the design says so), nor by mine.
+- L6. The families exclude empty recipes (21,952 = 28³); the design does not say so.
+
+## 4. The question
+
+Does a general law of the design do work that the old laws do not? **A little, and not for the centre.** B3 (2⇒1) and B6 each conclude a fixed point of the step from an endless course, by a closure property of the moves. That is not unfolding, and I did not find it in the Lean for a model with cost and caps. But no old law comes out as a case, and for the question the centre asks, the general law is idle. "Closing" is put in and can be taken out: B3(2), B4 without closing (X7) and B5(a) say everything, and B3(3), B5(b), B5(c) are their restrictions through one line (kinds present never grow). The no-return of B5(b) is the definition of V_D, and fails as no return. The second way is carried by which kinds are designated (M1) and by the grain of a token (M3). With every kind designated, October's equivalence holds in this model unchanged. What remains is a lemma about fixed points of step relations closed under min, + or max, and one built case.
+
+## 5. The specific questions
+
+**(a) Closing as a premise.** The lock is handed in: `Closing` is a condition on the class, and "kinds present never grow" is its restatement.
+- What is concluded that is not in it: only B3(3⇒1). That conclusion does not need closing, since "a kind of D present from some step on" (B3(2)) gives the same standing population, and closing is one sufficient condition for (2).
+- What closing does not give: any rise of use, any level that falls, any using up (M4).
+- Where the model itself gives the lock (a kind that needs its own act, `Net.siphon_empty`'s case), case (iii) is excluded (L1).
+
+**(b) Is B6 known mathematics.** Yes. All names below are from memory; no source was opened and no network used.
+- *Uncapped half.* An endless course in ℕ^K has a stretch whose end is at or above its start (Dickson's lemma, 1913). This is the self-covering sequence of Karp and Miller (1969) for vector addition systems, whose length Rackoff (1978) bounds. Since the moves add, the sum over the stretch is a whole-number x ≠ 0 with x(R − diag c) ≤ 0.
+  - In Petri-net structure theory that is the criterion for a partially repetitive net (Memmi and Roucairol 1980; Murata's 1989 survey).
+  - In matrix terms it is a sub-invariant vector: on a class of kinds that need each other, the spectral radius of R·diag(c)⁻¹ is at most 1 (Perron and Frobenius; Collatz and Wielandt).
+  - In economics it is the productive Leontief system (Hawkins and Simon) and von Neumann's growth factor of at least 1.
+  - Chemical organisation theory (Dittrich and Speroni di Fenizio 2007) calls such an x a self-maintaining flux, and "closed" there is the design's closing.
+- *Free half.* The births allowed are a monotone function of the configuration, a standing population is a post-fixed point, and the max over a cycle is one (Knaster and Tarski). For sets of kinds it is the union-closure of autocatalytic sets (Hordijk and Steel 2004).
+- *B1's min.* Constraints with one positive coefficient each (c_j n_j − Σ_k b_k R k j ≥ 0) cut out a set closed under pointwise min (Cottle and Veinott 1972). B3's min over a tail is the same closure for an infinite family in ℕ.
+- *M1's argument* is the cyclic structure of an irreducible non-negative matrix (Frobenius).
+- *What I do not know under a name:* that with caps and cost together a designated set can be kept with no whole standing population (case iii), and that this needs both. By M3 it is a gap between fractional and whole solutions, closed by taking turns.
+
+**(c) Old laws missed.**
+- *B3 (1 ⇒ kept) as `GuardHorizon.closed_viable` on a one-point set.* Yes.
+  - Instantiation: `P_W : Process (Config K) (Config K) := ⟨fun n b t => Move W n b ∧ t = b⟩`, `guard := Live D`, `K := fun s => s = x`.
+  - `Closed P_W (Live D) K` asks, for s = x, for `Live D x` (from `Standing`) and a move a with `Enabled P_W x a` and every outcome in K. Take a := x; `Enabled` is `⟨x, move, rfl⟩`; an outcome t of `step x x t` has t = x.
+  - `closed_viable` (`GuardHorizon.lean:112`) then gives `∀ n, Viable P_W (Live D) n x`, statement unchanged. That is the horizon form; the endless course of B3 is `Viability.Keepable P_W (Live D) x` by the constant run.
+  - The design is a case of the old law here; the design's general law (B1, B2) is not used. The designer's "used, not cases" is right.
+- *"The kept set is an up-set" as a comparison of two starts.* It is `Viability.keepable_step_iff` (`KeepableStep.lean:50`) used in both directions.
+  - From `Keepable P_W (Live D) n` it gives `Live D n`, and b, t with `Move W n b ∧ t = b` and `Keepable … t`.
+  - For n ≤ n': `Live D n'` (a count not less) and `Move W n' b` (c_j n_j ≤ c_j n'_j). The other direction then gives `Keepable P_W (Live D) n'`.
+  - So it is two one-line facts about `Move` and an old law. In October's model the statement is there as `renewable_of_more`.
+  - A general law carrying `Keepable` along a relation between two starts: not found. I searched the package for theorems naming `Keepable`, `Viable`, `Kernel`, `KeptFor` outside `Viability`, `GuardHorizon`, `Keeping`, `JointKeeping`, `KeepableStep` and found none; `ReachableRanges.Simulation` is of one built process.
+- *Also missed:* `not_keepable_invariant_iff` for B5(b) (M2), and `Net.siphon_empty` for the face lemma, which is nearer than `RuleCapture.turn_locked`.
+
+**(d) Against October's law.** The statement is `renewal_closure_theorem (law : ChannelLaw Kind) (U : List Kind) (complete : ∀ k, k ∈ U) : RenewsForever law ↔ ∃ B, SelfRenewing law B` (`RenewalCharacterization.lean:682`).
+- `RenewsForever`: some history from some start has a live token at every time, of any kind.
+- `SelfRenewing law B`: B is non-empty, each kind of B has a supporter in B of span at least 2, and `formation law B ≤ spanOpening law B`.
+- *Case (ii) and the theorem itself.* Read with every kind designated (D = K), the design's counterpart is "some course never empties ⇔ a standing population exists". That holds in the design's model with caps and cost both on (M1). So against `renewal_closure_theorem` itself there is no case (iii): case (ii) is its right side, case (i) its failure, and the theorem's shape carries over whole.
+- *Case (iii).* It stands against `renewal_keeping_theorem` (line 703: `KeepsForever law K ↔ ∃ B, SelfRenewing law B ∧ ∃ k, k ∈ B ∧ K k ∧ 0 < law.span k`), which the design does not cite. Case (ii) is its right side with D for K. Case (iii) is its left side true and its right side false: the direction "kept ⇒ a population containing a designated kind" fails in the design's model, and only where the designated kinds sit wholly above a base that stands. B6 is that direction proved again at two corners of another model.
+- *Neither is a case.* October's carrier is a reserve and tokens with remaining spans, support is a witness that is not spent, and there are no caps.
+- October's nearest to the split of base and designated kinds is `lapsing_correction_cannot_be_kept` (line 982: `¬ KeepsForever lapsingCorrection (fun k => k = true)`). There the closure renews for ever (per the README) and the designated kind cannot be kept at all.
+
+**(e) B5 against Ren's sentence** ("not holding exactly the same, dynamics, forms changes over time, but the continuation may continue, and creates more and more future").
+- *States:* in a law with no standing population containing a kind of D, any course that keeps D has every kind of D absent again and again, and forms an absent kind again and again. That is "not holding exactly the same" as a necessity, in one corner.
+- *Assumes, does not state:* "the continuation may continue". That some course keeps D is half of the definition of case (iii).
+- *Does not state that dynamics change.* The law W is fixed, the same finitely many kinds come round, and the mean of the cycle is a standing population in fractions.
+- *Does not state that forms change in the whole.* The base under D can hold the same form at every step (M1), and in L\* it does.
+- *Does not state "more and more future".* V_D does not grow, no kind arises, and nothing measures what can go on after; the design says this.
+- In case (ii), 10,780 laws against 16 in family A, holding the same is enough and change is never needed, so the design's general picture is the opposite of the sentence's.
+
+## 6. What I ran, and what I did not read or check
+
+**`REPORT.md` was not saved:** the harness refused the write of a report file from a subagent. This message is the whole report; the programs and outputs are saved.
+
+**Ran**, 15 runs, each under 60 s, all in `/Users/ren/theories/tmp/fm/centre21/refute/B-work-fable/`:
+- `model.py`: the model rebuilt from section 2 of the design.
+- `lstar.py` → `lstar.out.txt`: L\* under five choices of D, the cycle mean, the "all of D" formation, where closing courses end.
+- `search.py`: checks X1 to X8, each for D = {1,2} and D = K.
+  - `out-A.txt`: 21,952 laws, 6.3 s.
+  - `out-A2.txt`: 14,000 random laws.
+  - `out-A2-150k.txt`: 150,000 random laws, 36.8 s.
+  - `out-F4a.txt`, `out-F4b.txt`, `out-F4c.txt`: 50,625 four-kind laws, caps 1, one c drawn per recipe set.
+- `dk.py` → `out-dk.txt`: D = K on 171,681 five-kind laws (stopped by its own clock at 50 s) and 40,000 four-kind laws with entries and caps up to 2.
+- `base.py` → `out-base.txt`, `out-base-rand.txt`: M1's construction on 21,952 + 40,000 + 60,000 laws, with first-successor and random cycles.
+- `noreturn.py` → `noreturn.out.txt`: the two instances against B5(b).
+
+**Read:**
+- Both briefs, `DESIGN.md`, the designer's `cases.out.txt`.
+- In the package: `GuardHorizon.lean` 55–140; `Keeping.lean` 300–335 and its declaration list; `JointKeeping.lean` 1–200; `KeepableStep.lean` 1–104; the declaration list of `Viability.lean`; `PlaceTransitionNets.lean` head, 84–126, 530–545, 714–760; `Onward.lean` 204–235; `GenerativeCore.lean` 20–32; `Frame.lean` (`Run`, `Invariant`); the statements of `LineageRegimes.both_fates` and `KeepingWidening`'s `renews_without_end`.
+- October's `README.md`; `RenewalAccounting.lean` 25–75 and 136–165; `RenewalCharacterization.lean` 58–72, 379–398, 600–720; `RenewalConfigurations.lean` 1–45, 60–70, 96–131, 190–216, 350–362, 486–500.
+- The places listing, by search only.
+
+**Not read or checked:**
+- `DIRECTION.md`, `WHAT-A-MODEL-MUST-HAVE.md`, `AFTER.md`.
+- The designer's programs (`web.py`, `main_search.py`, `cases.py`, `lattice_check.py`) and their outputs other than `cases.out.txt`.
+- `RuleCapture`, `TurningInTime`, `RuleShaping`, `LineOnAStock`, `CommonResponse`, `Dependence`, `RelationalRenewal`. So the designer's T5 notes on the lock side and on `unending_iff_holds` are not checked.
+- Any proof body in October's files.
+- M1 is argued on paper and searched, not proved in Lean.
+- Starts outside the box 0..C, laws with more than five kinds, and caps above 3 were not searched.

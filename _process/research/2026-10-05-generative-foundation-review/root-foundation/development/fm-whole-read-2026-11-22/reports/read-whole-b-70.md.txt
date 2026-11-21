@@ -1,0 +1,13 @@
+All four modules were read whole: the opening account and every declaration's statement and docstring (SelectionShift l. 1-1149, SelectionTerm l. 1-801, Sensitivity l. 1-644, SensitivityWebs l. 1-93). I opened proof bodies only where a statement needed one. To understand names a statement uses, I looked them up in Counterfactual (Feasible, GivesAlike, Through, Sensitive, InsensitiveAt, comparison_of_courses), Retaining (Retains, Adds), Admission (Includes, Exceeds), Tail (ChangedByNoCondition, wholeLaw), and Dependence and Evolution (Supported, Dependent, DescendsAt, unsupported_childless). No question was left U.
+
+What the fourteen questions miss that bears on the centre:
+
+1. SelectionShift states the claim that a selection reads only differences and not how much is left, as general theorems. Concordance and discordance are unchanged by a common shift of offspring numbers, while the next generation's size moves (`Generations.shift_step`). Within any horizon, one course of selection terms is shared by a course that goes on and one that ends (`Horizon.same_terms_two_fates`, `eventually_zero_two_fates`). Terms positive at unboundedly many steps decide going on (`terms_boundary`). This is the nearest statement in this batch to "two courses alike in what the selection registers are selected alike, and what sustains it can make no difference to it". Its limits:
+   - Its "Generations" have offspring handed in at each step, with no state or level that the step draws from.
+   - There is no choice among moves, and no cost to a giver.
+   - Change of kind and newness are explicitly not represented.
+   - `terms_boundary` names its two cases but does not decide which one a course is in.
+
+2. Sensitivity calibrates what a formation registers: it reads through exactly the coupling it is sensitive to, wherever it reads finitely many conditions. A law of "the whole and no part" (a tail) cannot be given without WLPO, and given a decision of vanishing (which gives LPO) one is built. This is a law about what can be registered at all, which the `reading` question touches only partly.
+
+3. In SelectionTerm, the support laws (`Flow.support_not_against`, `support_not_lower`) take support and activity as premises (`Acting`, `Dependent`). No law there makes support run down.

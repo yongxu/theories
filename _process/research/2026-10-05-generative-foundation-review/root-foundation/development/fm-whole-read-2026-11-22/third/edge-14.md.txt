@@ -1,0 +1,306 @@
+# Task file: EDGE, reader whole-c-edge-14
+
+Your 2 modules. For orientation only, what the two passes said of the four marks, of moves and of a reading (where to look, not evidence).
+
+## LineOnAStock.lean  (2143 lines)
+
+### `both_outcomes`
+- pass a: S: `unending_iff_holds` (l. 1239) equates unendingness with reaching `Holds` while `Goes` held at each earlier step. It assumes nonempty offspring preserving total draw, offspring needs no greater than the parent's, positive descendant needs, zero giving at zero, a capped start, and `Regime` on every living prefix.
+- pass b: S, general: `unending_iff_holds` (l. 1239). With `even`, `some`, `down`, `needs`, `nothing`, `high` and `along` (Regime at each reached way), the net from (w, x) never ends exactly where, some need met at every step before, the course reaches a configuration that `Holds` (l. 188). B: `HigherStartEnds.higher_ends` (l. 1840): from ([A], 6) the net never ends; from ([A], 7) it ends, with the ways equal at steps 0 to 2. `NothingTakenEnds.ending_differs` (l. 2109). The account says there is no exact condition when kids take more or less.
+
+### `no_return`
+- pass a: S: `gone_after` (l. 685) concludes permanent absence from the next generation if no member of the line is met and only a parent in the line can leave a member of it. `gone_from` (l. 674) concludes persistence of an already absent line under the same descent premise.
+- pass b: S, concluded: `never_in` (l. 664) and `gone_from` (l. 674): under the premise `closed` (no unit outside the line leaves a unit of it), and under any giving and use, a line with no unit at step k has none at any later step. `gone_after` (l. 685): where no unit of the line is met at k, none is present after k. The loss is of a line of units that take from the level; no giver is lost. The net's ending is `Law.stepWhile` having no next (`way_ends`, l. 928).
+
+### `rank`
+- pass a: S: `one_need_ends` (l. 1094) reaches a terminal state within hi+1 steps if all units have one positive need, offspring take strictly more, giving is zero at zero, no-draw steps respect hi, and the start is within hi. Under differing needs `need_unmet` (l. 1011) bounds the first unmet need from a nonempty, initially met way with positive descendant needs.
+- pass b: S: `need_unmet` (l. 1011): with `FromNothing`, `Keeps giving 0 hi`, `grows` for every unit, `Needing`, x ≤ hi, a non-empty way and every need met at the start, some need is unmet at a step n with 0 < n ≤ hi + 1, and the way up to n is `generation kids j w`. `falls_to_unmet` (l. 1057) adds `down`: the level at n is below a need the start met, and below x. `one_need_ends` (l. 1094): with one need, the net ends within hi + 1 steps. `line_ends` (l. 904), `way_ends` (l. 928) and `fall` (l. 773) end with no bound stated; `ends_high` (l. 847) and `ends_all` (l. 886) use strong induction on a need bound with fuel.
+
+### `closed_region`
+- pass a: S: `below_keeps` (l. 806) preserves an upper bound on needs in a line under any level when outsiders cannot parent line members and children of line members need no more than their parents. `course_fixed` (l. 1345) propagates a fixed configuration to every index.
+- pass b: S: `course_fixed` (l. 1345): a configuration the step leaves as it is stays so. `unending_of_fixed` (l. 1352): a course that reaches such a configuration, with some need met there and before, never ends. `Holds` (l. 188) is the certificate in `unending_iff_holds`. `never_in` (l. 664): under `closed`, units not of the line form a region closed under the step. B: `KidsNeedMore.fixed` (l. 1496), `HigherStartEnds.from_six` (l. 1810), `TakesNothing.lost` (l. 2041).
+
+### `moves`
+- pass a: N: Not found in the statements read.
+- pass b: N: the step `step` (l. 153) and the net `net` (l. 158, `Law.stepWhile`) are deterministic. There is no choice among steps and no law of what every choice keeps.
+
+### `reading`
+- pass a: S: `alike_iff` (l. 493) says that when every present unit has offspring, two levels produce the same next way exactly when they meet the same needs of those present.
+- pass b: S: `after_alike` (l. 328): where two levels meet the same needs in `w`, the way after a step at each is the same. `left_of_taken` (l. 349): the level after a step depends on the way only through what it takes. `alike_iff` (l. 493): where every unit leaves a kid, two levels are `Alike` (l. 418) exactly where they meet the same needs. `ways_alike` (l. 547): for two givings, two uses and two start levels whose levels meet the same needs of the way step by step, the ways are the same at every step up to n. `born_alike` (l. 587): the same number is born. B: `AlikeFiner.alike_not_met` (l. 1997): alike levels that meet different needs.
+
+### declarations of LineOnAStock.lean (by script)
+  l.138 def after
+  l.143 def taken
+  l.146 def left
+  l.150 def Goes
+  l.153 abbrev step
+  l.158 def net
+  l.163 abbrev course
+  l.168 def allKids
+  l.173 def generation
+  l.178 def lineTake
+  l.182 def lineCount
+  l.188 def Holds
+  l.193 def Regime
+  l.199 def Needing
+  l.204 theorem mem_cond
+  l.208 theorem mem_cond_of
+  l.212 theorem decide_le_congr
+  l.219 theorem ite_le
+  l.226 theorem lineTake_le_taken
+  l.230 theorem lineTake_append
+  l.235 theorem lineCount_pos
+  l.242 theorem line_or_none
+  l.254 theorem met_or_unmet
+  l.266 def anyMet
+  l.270 theorem anyMet_iff
+  l.287 instance goesDecidable
+  l.291 theorem mem_of_ne_nil
+  l.296 theorem strong_below
+  l.309 theorem after_flatMap
+  l.317 theorem mem_after_iff
+  l.328 theorem after_alike
+  l.340 theorem after_append
+  l.349 theorem left_of_taken
+  l.354 theorem after_of_met
+  l.363 theorem allKids_flatMap
+  l.368 theorem mem_allKids_iff
+  l.373 theorem generation_orbit
+  l.378 theorem generation_mem
+  l.387 theorem generation_below
+  l.395 theorem generation_ancestor
+  l.404 theorem mem_generation
+  l.418 def Alike
+  l.426 theorem alike_of_met
+  l.431 theorem block_le
+  l.442 theorem block_lt
+  l.453 theorem after_length_le
+  l.464 theorem after_length_lt
+  l.480 theorem met_of_alike_le
+  l.493 theorem alike_iff
+  l.502 theorem need_in_after
+  l.513 theorem needs_after_iff
+  l.525 theorem needs_kept
+  l.547 theorem ways_alike
+  l.560 def generations
+  l.568 theorem family_eq
+  l.577 theorem born_eq_length
+  l.587 theorem born_alike
+  l.609 theorem draw_rises
+  l.635 theorem rise
+  l.642 theorem draw_holds
+  l.650 theorem line_from_line
+  l.657 theorem none_after
+  l.664 theorem never_in
+  l.674 theorem gone_from
+  l.685 theorem gone_after
+  l.697 theorem step_zero
+  l.705 theorem step_overdrawn
+  l.720 theorem step_lowers
+  l.737 theorem fall_low
+  l.742 theorem fall_from
+  l.773 theorem fall
+  l.790 def Below
+  l.794 def NoneMet
+  l.799 theorem below_after
+  l.806 theorem below_keeps
+  l.814 def Ends
+  l.821 theorem none_shift
+  l.826 theorem ends_low
+  l.847 theorem ends_high
+  l.886 theorem ends_all
+  l.904 theorem line_ends
+  l.920 theorem lineTake_true
+  l.928 theorem way_ends
+  l.944 theorem kids_of_grows
+  l.951 theorem course_asItWas
+  l.965 theorem way_while_met
+  l.975 theorem allKids_rises
+  l.985 theorem generations_rise
+  l.1011 theorem need_unmet
+  l.1057 theorem falls_to_unmet
+  l.1094 theorem one_need_ends
+  l.1126 theorem taken_allKids
+  l.1132 theorem taken_generation
+  l.1140 theorem course_generation
+  l.1156 theorem within_along
+  l.1173 theorem reaches_from
+  l.1213 theorem reaches_holds
+  l.1239 theorem unending_iff_holds
+  l.1281 theorem taken_below
+  l.1293 theorem unending_taken_below
+  l.1305 theorem account
+  l.1334 theorem account_unending
+  l.1345 theorem course_fixed
+  l.1352 theorem unending_of_fixed
+  l.1369 def strip
+  l.1378 theorem strip_pos
+  l.1380 theorem strip_neg
+  l.1382 theorem strip_append
+  l.1392 theorem strip_all
+  l.1396 theorem strip_strip
+  l.1404 theorem taken_strip
+  l.1414 theorem strip_after
+  l.1431 theorem strip_course
+  l.1453 theorem takes_nothing
+  l.1466 def hump10
+  l.1469 def nothingGiven
+  l.1474 inductive Kind
+  l.1481 def need
+  l.1486 def use
+  l.1491 def kids
+  l.1496 theorem fixed
+  l.1505 theorem all_but_down
+  l.1525 inductive Kind
+  l.1532 def need
+  l.1537 def use
+  l.1540 def kids
+  l.1551 theorem all_but_down
+  l.1572 def need
+  l.1575 def use
+  l.1578 def kids
+  l.1585 theorem all_but_grows
+  l.1600 theorem holds_by_law
+  l.1618 inductive Kind
+  l.1625 def need
+  l.1628 def use
+  l.1633 def kids
+  l.1645 theorem holds_by_law
+  l.1680 inductive Kind
+  l.1687 def need
+  l.1690 def use
+  l.1693 def kids
+  l.1698 def isC
+  l.1705 theorem course_values
+  l.1713 theorem goes_on
+  l.1725 def need
+  l.1728 def use
+  l.1731 def kids
+  l.1736 theorem course_values
+  l.1755 theorem ends_by_law
+  l.1765 theorem unmet_by_law
+  l.1783 inductive Kind
+  l.1791 def need
+  l.1797 def use
+  l.1803 def kids
+  l.1810 theorem from_six
+  l.1825 theorem from_seven
+  l.1840 theorem higher_ends
+  l.1860 def need
+  l.1863 def use
+  l.1866 def kids
+  l.1870 theorem ends_met
+  l.1882 def need
+  l.1885 def use
+  l.1888 def kids
+  l.1891 theorem short
+  l.1904 theorem gone
+  l.1921 inductive Kind
+  l.1928 def need
+  l.1931 def use
+  l.1934 def kids
+  l.1939 def isD
+  l.1948 theorem gone
+  l.1978 inductive Kind
+  l.1985 def need
+  l.1990 def kids
+  l.1997 theorem alike_not_met
+  l.2006 inductive Kind
+  l.2014 def need
+  l.2020 def use
+  l.2026 def kids
+  l.2029 def isC
+  l.2041 theorem lost
+  l.2078 inductive Kind
+  l.2085 def need
+  l.2090 def use
+  l.2095 def kids
+  l.2098 def isC
+  l.2109 theorem ending_differs
+
+## LineageDrawdown.lean  (679 lines)
+
+### `both_outcomes`
+- pass a: B: `Drain.outside_ends` (l. 624) and `renewer_goes_on_outside` (l. 433) give degeneration from the drawer and continuation from the renewer in the same ungated example. The ledger iff (l. 74) characterizes the threshold, without an iff for lineage survival.
+- pass b: S: `below_iff` (l. 74) is an exactly-when for the stock being below the need, general under balance. B: without the gate, the organisms' line degenerates (`Drain.outside_ends`, l. 624) while the renewer's line goes on (`Drain.renewer_goes_on_outside`, l. 433). These are two lines of one model, not a dichotomy for one line.
+
+### `no_return`
+- pass a: S: `ends_of_unmet` (l. 160) concludes permanent zero size after one horizon of unmet need for every member, under acting, dependence and descent. No gate or continuing stock deficit is a premise.
+- pass b: S, concluded: `ends_of_unmet` (l. 160): every generation after N is empty and the selection term is zero from N on, from `acting`, `dependent`, `descended`, `below` and `members`. The loss follows the stock of a depended-on family falling below the need. `degeneration_of_unmet` (l. 94): ends on every branch. D: the opening account says the gate makes the end last, and that without it a formation can be active again (`Restored.returns`, `Flow.family_excess_ends`, not stated here). B: with the gate, the giver (the renewer) stays inactive at a pool of nothing (`phaseP`, l. 304).
+
+### `rank`
+- pass a: S: `ends_of_drawdown` (l. 177) gives zero size by T+n+1 and thereafter if initial stock plus gifts is below m plus cumulative uptake, the flow balances, only active formations give, activity needs support, generations descend, and every horizon member requires a family condition at need at least m.
+- pass b: S: `ends_of_drawdown` (l. 177): where the draws outrun stock plus replenishment over the n steps from T, generations after T + n are empty. This gives a deadline T + n from the ledger. `no_term_of_drawdown` (l. 190). D: `Flow.below_of_excess` (n steps of excess from a stock below n + m) is named in the account, not stated here. B: `excess_P` (l. 577) has eight steps of excess; `draws_past_P` (l. 603).
+
+### `closed_region`
+- pass a: B: `Drain.reach_org` (l. 414) concludes that everything reachable in the kind line from an organism is an organism, for either gate setting and any course of this model.
+- pass b: S: `ends_of_unmet` (l. 160): the empty generation is kept from N + 1 on. B: `Drain.renewer_goes_on_outside` (l. 433): `«延»`, witnessed by the family z.2 = 1, each member continued by a member.
+
+### `moves`
+- pass a: N: Not found in the statements read.
+- pass b: S: `degeneration_of_unmet` (l. 94) concludes `«退化»` (ends on every branch) for the relation `lineStep L W Q` at grain `W.kindClass Q`, from `W.Dependent`, a stock below m at N, an active start not after N, and every reached y at N requiring a member of `ds` at need ≥ m. This is a law about every continuation, on a relation, not a `Process S A`.
+
+### `reading`
+- pass a: S: `degeneration_of_unmet_listed` (l. 109) allows the horizon census to establish branch loss when it lists every continuation, activity requires support, stock is below m and every listed member requires a listed condition at need at least m, for an active listed start no later than the horizon.
+- pass b: S: the verdicts are stated at the grain `W.kindClass Q`, for any Q (`degeneration_of_unmet`, l. 94; `degeneration_of_drawdown`, l. 124). `degeneration_of_unmet_listed` (l. 109) adds `ContinuationsListed` (the census holds every continuation). No law makes what is registered at a grain decide something beyond the verdict at that grain.
+
+### declarations of LineageDrawdown.lean (by script)
+  l.74 theorem below_iff
+  l.94 theorem degeneration_of_unmet
+  l.109 theorem degeneration_of_unmet_listed
+  l.124 theorem degeneration_of_drawdown
+  l.146 theorem next_empty_of_unmet
+  l.160 theorem ends_of_unmet
+  l.177 theorem ends_of_drawdown
+  l.190 theorem no_term_of_drawdown
+  l.222 structure Phase
+  l.227 def draw
+  l.234 def levelOf
+  l.239 def activeOf
+  l.244 def takeOf
+  l.250 def giveOf
+  l.261 structure Course
+  l.266 def flow
+  l.272 def requires
+  l.277 def web
+  l.284 def generations
+  l.293 def phaseP
+  l.306 def kidsP
+  l.314 def familyP
+  l.327 def courseP
+  l.334 theorem right_of_gate
+  l.341 theorem active_of_give
+  l.351 theorem acting
+  l.356 theorem dependent
+  l.366 theorem gated
+  l.380 theorem from_outside
+  l.386 theorem not_gated
+  l.392 theorem org_of_give
+  l.401 theorem step_org
+  l.408 theorem line_org
+  l.414 theorem reach_org
+  l.422 theorem depends_pool
+  l.433 theorem renewer_goes_on_outside
+  l.444 theorem familyP_step
+  l.457 theorem familyP_eq
+  l.467 theorem stepP
+  l.485 theorem balances_P
+  l.488 theorem descendsP
+  l.503 theorem descends_atP
+  l.518 theorem descended_P
+  l.527 theorem selection_P
+  l.532 theorem length_two_P
+  l.546 theorem sizes_P
+  l.549 theorem kids_one_P
+  l.560 theorem uniform_P
+  l.570 theorem share_P
+  l.577 theorem excess_P
+  l.591 theorem no_excess_first_P
+  l.597 theorem start_P
+  l.603 theorem draws_past_P
+  l.613 theorem gated_ends
+  l.624 theorem outside_ends
+  l.632 theorem every_active_degenerates_P
+  l.640 theorem members_need_P
+  l.652 theorem ends_P
+  l.660 theorem selection_after_P

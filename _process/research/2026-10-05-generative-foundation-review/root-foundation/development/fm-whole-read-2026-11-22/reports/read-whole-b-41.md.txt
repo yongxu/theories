@@ -1,0 +1,15 @@
+Reader whole-b-41. All seven modules were read whole: every declaration's statement and docstring, and the opening accounts. That covers ModelStatements (1288 lines), MoveFormation (952 lines, including its MoveRuns section), MoveOutcomeProcesses (288), MutualDependence (493), Narrowing (574), NarrowingRuns (155) and Novelty (379). I read a proof body only where the statement needed it (none was essential). No field is U. I opened no other module, so names used from elsewhere (Learning.Lumped, Web.Revisits, carried, WithinInfluence and others) are taken as each statement uses them.
+
+Things the fourteen questions miss that bear on the centre:
+
+(1) ModelStatements.optimum_broken_reading (l. 1270) is the one general statement in the batch where a selection by an order on a family ds uses up what lies beyond it. Its premises: an order containing exceeding on ds, room beyond, the levels after the step unbeaten among the eligible, and each condition beyond required and met. Under them, a dependence beyond is broken exactly where some eligible outcome stands below its need. It is a reading of a row proved elsewhere (Web.optimum_broken_iff).
+
+(2) Novelty.changes_le_stock and rests_of_loses (l. 249, l. 284) are a general law of running down by a count. If a part loses stock at each change of its configuration, its changes number at most its stock at T, and change stops. Novelty.unbounded_of_new (l. 186) is the converse side: going on with something new at every step needs stock without bound, from beyond the part.
+
+(3) MutualDependence.Balances.half_stands and doubling_needs (l. 417, l. 431) state that a draw exceeding everything drawn before leaves more than half the stock standing at every step, while lasting at most about log2 of the stock. The account (l. 73-76) reads this as no warning, as a reading, not a statement. Web.break_not_bounded is named there but not declared in the module.
+
+(4) MoveOutcomeProcesses.summary_hides_loss (l. 279, built) and Narrowing.narrow_class_settles_wrongly (l. 566, built) are cases where what is registered decides wrongly or hides a loss. Neither is a general law.
+
+(5) MoveFormation.TwoClocks.one_course_two_laws (l. 720, built) shows that one course does not fix whose move it is. no_policy_upto_iff (l. 622, general) says a record excludes a policy exactly where a configuration recurs with the move varied.
+
+No module in the batch has a share that sets a rule again, a giver that is itself a going-on that can be lost, or a cost to the one that keeps or gives.

@@ -1,0 +1,187 @@
+## 1. Verdict in five lines
+
+1. It is not a centre. No law of it states both outcomes of one course, and none says which of the two comes, from the way of selecting, from what is registered, or from what keeping costs.
+2. It is not a law that joins. No old law comes out as a case with the design's general law used. The one case the design claims (`keepable_and_iff_of_kernel_left`) uses part 3 as a detour, put in and taken out.
+3. What it has: RS, a built case with both ends from one start. My own rebuild from DESIGN.md §2 gives the same T4 courses, and the I2, I3 and smallest-cost instances behave as reported. Part 4 is a correct simulation lemma, and it shows what the Lean statement should be.
+4. Strongest reason: part 2 holds of any sequence of sets, with Held the running infimum, so keepability, the process and the way of selecting do no work in it. Its "negative for the direction" is the first half of `Steps.KeepsWideningFrom` at the chain `Kept`, and the Lean already states that unchanged.
+5. Change the chain to `Held` and the negative is gone: a course that forgoes a kept guard at every step keeps widening. Change it to `Poss` and nothing keeps widening.
+
+## 2. Statement by statement
+
+- **Part 1 (`Held ⊆ Kept ⊆ Holds`, `Kept ⊆ Poss`, `Held` up, `Poss` down, last sentence): HOLDS IN WHAT I CHECKED.**
+  - On paper: each is an instance of an old lemma. `Viability.Keepable.start` (JointKeeping.lean l.95) gives `Kept ⊆ Holds`. `Run.possible_of_next` (ReachableRanges.lean l.590) at `adm := fun t y => Keepable P (G y) t` gives Poss down. The last sentence is the contrapositive of `Viability.keepable_step_iff`.mpr (KeepableStep.lean l.50) at the run's step. `Held ⊆ Kept` is scratch `ScratchNoReturn.keepable_of_run` (/Users/ren/tmp/dj/batch24/Becoming/ScratchNoReturn.lean l.83), and the iterated last sentence is scratch `kept_before` (l.116).
+  - By program: 0 violations on 28,200 lasso runs of 1,500 random finite processes (`check_general.py`).
+- **Part 2 (losing nothing of `Kept` from N ⟺ `Kept = Held` from N): HOLDS IN WHAT I CHECKED, and keepability is idle.**
+  - The proof uses only the two bounds `Held ⊆ Kept ⊆ Holds`.
+  - The program gives 0 violations for Q = `Kept`, Q = `Holds`, and Q = a random chain read off the state between `Held` and `Holds`. It gives 198,872 violations for Q = `Poss`, which is not below `Holds`. So the bound by `Holds` is what works, not keepability.
+  - Part 2 needs no process at all. For any sets `A_n`, the sequence `Held_n := ⋂_{k≥n} A_k` is the greatest nondecreasing sequence below `A`. So a nondecreasing `Q` with `Held ⊆ Q ⊆ A` equals `Held`.
+- **Part 2, corollary (`KeepsWideningFrom (Kept r) N ↔ …`): HOLDS on paper.** It is `Steps.includesFrom_iff` (WideningOnTheMap.lean l.144) followed by part 2. The second half carries over because `Kept = Held` there.
+- **Part 3, first form (`Together (r.state N) {x | ∀ n ≥ N, Kept n x}`): HOLDS, and it is the same statement with `Holds`.**
+  - A guard kept at every step from N holds at every step from N (`Keepable.start`). Conversely, one that holds at every step from N is kept at each (the tail of the run). So the set R is `Held N` whether it is read with `Kept` or with `Holds`.
+  - The program found R_Kept ≠ R_Holds in 0 of all (run, N) pairs, and R nonempty in 190,063 of them. The witness is `r.onward N` itself.
+- **Part 3, equivalent form (`Keepable P (fun t => ∀ x, R x → Keepable P (G x) t) s ↔ Together s R`): HOLDS on paper. It is an unfolding.** Left to right is `Keepable.mono` with `Keepable.start`. Right to left is `keepable_of_run` (scratch) at each guard of the joint run. With one guard it says that `Keepable` is idempotent: the notion put in and taken out.
+- **Part 3, "hence" (some run never loses a guard kept at s ⟺ `Together s (Kept at s)`): HOLDS IN WHAT I CHECKED.** The program gives 0 violations with `Kept`, and 0 with `Holds` in its place.
+- **Part 4 (`Dominates` ⇒ along the top course `Kept = Held`, joint keeping, and `Poss 0 x → ∃ n, Held n x`): HOLDS IN WHAT I CHECKED.**
+  - The paper proof sketch goes through. The last clause needs `Run.tail_of_reach` (ReachableRanges.lean l.637).
+  - On RS with `w ≥ 0`, `c = 0`, two classes, life 1, cap 4, all 16 shapes (1,296 instances): `dom` was violated 0 times and the conclusion 0 times (`check_rs.py`). Not checked at life 2 or with three classes.
+- **RS instances: HOLDS IN WHAT I CHECKED.** I rebuilt RS from DESIGN.md §2 before reading `fk.py`, and the two readings agree.
+  - The T4 table reproduces line for line, for both ways.
+  - Smallest cost instance: at (1, (1,1)) the two classes are not kept together in all 16 shapes.
+  - I2, shape both base: both classes can be held for good from the start, and the best of the 256 rules from what holds holds 1.
+  - The T3 "support" claim reproduces: every class base, way 1 keeps {0,1,2} possible at every step.
+- **T3, "With forming free there is no such configuration": REFUTED.** With `c ≡ 0` and draws allowed, 424 of 3,600 two-class instances have a configuration whose kept guards are not kept together, at life 1 and again at life 2.
+  - First instance: `w = [−2, 0]`, `n = [0, 1]`, both base, cap 4, life 1, at (1, (1,1)).
+  - The design's "free" (run1.py l.75) means no draws and `c = 0`.
+  - Run: `python3 check_rs.py`, the `draws_alone` section.
+- **T3, "Keepability works in part 3 (with Holds it is vacuous)": REFUTED.** With `Holds`, part 3's first form is the identical statement, not a vacuous one (see above).
+- **§7 "the candidate here (`Held` grows …) has no law": REFUTED as worded.** The Lean's chain laws apply unchanged at `Q := Held r`: `Steps.KeepsWideningFrom`, `Steps.keepsWidening_iff_generation_losing_nothing` and `Reaching.KeepsWidening.not_listed`. The design's own criterion for refuting part 2's reading is met (part 5 (d)).
+- **Not checked:** the design's counts (3,603,768 courses; 11,591 starts; 1,424 put-off losses; 438 three-guard configurations; the fine-reading 3,096 courses; T6's pair counts), and part 4 beyond life 1 with two classes.
+
+## 3. MUST, then LESSER
+
+**MUST**
+
+1. **Part 2 is presented as the main statement, but it is an order fact about sequences of sets.** No process, run, guard, keepability or way of selecting is used beyond `Held ⊆ Q ⊆ Holds`. The design says part 2 "holds of any chain between `Held` and `Holds`" (T3, §7), yet it still draws from part 2 a reading of the direction (§1 line 10, §3 "What part 2 says").
+2. **The negative for the direction is definitional, already stated in the Lean, and an artefact of the chain chosen.**
+   - "Forgoes something at step n" is literally `¬ Steps.includes (Kept r) n (n+1)`, the failing of the first half of `Steps.KeepsWideningFrom` (WideningOnTheMap.lean l.100). The design itself says so: "loses it, by definition of the chain".
+   - `Steps.keepsWidening_iff_generation_losing_nothing` (l.228) at `Q := Kept r` states the negative unchanged, and part 2 is not needed for it.
+   - With `Q := Held r`, a course that forgoes a kept guard at every step keeps widening (instance in 5 (d)). So "a way of selecting that forgoes anything does not keep widening in the Lean's sense" is false unless "the Lean's sense" is fixed to the chain `Kept`.
+3. **T3's claim that keepability works in part 3 is false.** Part 3's first form is the same statement with `Holds`. The equivalent form is idempotence: keepability put in and taken out. So keepability passes T3 in no part, 1 to 3. It changes only which runs meet the hypotheses: "never loses a kept guard" and "never loses a holding guard" differ in 29,324 (run, N) pairs of my sample.
+4. **T3's "With forming free there is no such configuration" is false as worded** (instance above). It needs "no class draws" as well. "Forced loss needs keeping to cost" (§1 line 8) holds only if a unit's draw on the shared level counts as a cost. In the instance, class 0's presence makes class 1 lapse: the cost falls on another class, not on the keeper (R3).
+5. **`Dominates` is marked *structural*, but it is the conclusion in one-step form.** It says no move from below is better, under `le`, than the top move from above, which is the absence of forced loss said step by step. The conclusion is one induction away, as `Kernel` is from `kernel_step_iff`. T2 should mark it *the thing itself, at one step*.
+6. **T5: "Part 3 does the work" in `keepable_and_iff_of_kernel_left` is false.** The work is `Kernel.run`, which already gives the `g₂`-run staying in `g₁ ∧ g₂`. Part 3 adds "kept at each step" and `Keepable.start` takes it out again. The design concedes "the proof is not shorter".
+7. **R6 and R7 are claimed for laws that do not contain them.**
+   - No statement of parts 1 to 4 mentions what a rule registers, and part 4's way registers nothing. R6 lives only in the instance I2.
+   - R7's "forms changing" is absent: one fixed guard family, and the course is compared with what it holds for good.
+   - R1, R2 and R3 are in RS only.
+   - R5 is the package's `Keepable` with `Run.not_possible_returns` (ReachableRanges.lean l.617), unchanged: it is had, but not by the design.
+8. **T4 is met by the letter only.**
+   - Part 2's two sides are "loses a kept guard / does not". They are not the brief's "goes on / uses up what it rests on and passes a step of no return". In I3 a course loses a kept guard and then holds both classes for good.
+   - The closing of way 1 (level 0, `Poss` empty) is in RS. No law states it.
+9. **T1's "They do not follow by unfolding" says more than the evidence.**
+   - Part 3's first form is `r.onward N` with `Keepable.start`.
+   - Its equivalent form is `Keepable.mono`/`start` with scratch `keepable_of_run`.
+   - Part 2 is two inclusions and an induction on a sequence.
+   - "Older lemmas in a row" is the right filing, and the design half-concedes it.
+
+**LESSER**
+
+- **Lean names.**
+  - `JointKeeping.Keepable` is `Becoming.Viability.Keepable` (module JointKeeping).
+  - `KeepableStep.keepable_step_iff` is `Viability.keepable_step_iff`.
+  - `WideningOnTheMap.includes` is `Steps.includes`.
+  - `KeepsWideningFrom` is `Steps.KeepsWideningFrom`.
+- **`Dominates.only` is not needed** if `r̂` is defined as the run iterating `nextTop` from `s`.
+- **"`Keepable.each` is part 3's other direction":** it is the step-0 corollary of that direction, by `Keepable.start`.
+- **`Together s R` is `Reaching.reachableRanges P (fun t x => G x t) s (fun _ x => R x)`** (ReachableRanges.lean l.891), up to argument order, by definition.
+- **§3's "Equivalently" in part 3 is right as schemata.** I checked both directions on paper.
+
+## 4. The question
+
+**No general law of the design does work that the old laws do not.**
+
+- Part 1 is a row of package and scratch lemmas at `adm := Keepable`.
+- Part 2 is the fact that `⋂_{k≥n} Holds_k` is the greatest nondecreasing sequence below `Holds`. It is true of any sequence of sets, and my program confirms that keepability can be replaced by `Holds` or by any chain between the two without changing the truth.
+- Part 3 is the same statement with `Holds`, and its equivalent form is idempotence of `Keepable`.
+- Part 4 is the one law whose premise does work, through an induction. That law is the standard simulation lemma: a forward simulation into a deterministic process gives a greatest course, the premise `greatest` of `Reaching.widens_iff_of_greatest` (ReachableRanges.lean l.387). From it, "the greatest course forgoes nothing" is immediate.
+- It is sufficient only. It says nothing of levels, the lock or the turn, and it makes no old law a case.
+- Its reading of the direction adds nothing: the Lean already has it at the chain `Kept`, and it does not hold at the chain `Held`.
+
+What is worth keeping is RS as a built case: forced loss from a shared level, and two ways from one start, one closing and one taking all. Also worth keeping is the suggestion, from part 4, of a general lemma "a simulation carries `Keepable`", of which `DeferredBranching.Simulation` would be a case.
+
+## 5. The specific questions
+
+**(a) Is anything left of part 2 that is about keepability?**
+
+No.
+- The proof uses `Kept` only through `Held ⊆ Kept` (the run's tail) and `Kept ⊆ Holds` (`Keepable.start`).
+- With either bound replaced, the statement stays true for `Holds` and for random state-read chains between the two: 0 violations in `check_general.py`. It fails only for a chain above `Holds` (`Poss`: 198,872 violations).
+- Part 2 does not need runs: it holds for any sequence of sets `A_n`, with `Held_n := ⋂_{k≥n} A_k`.
+
+Keepability changes which courses meet the left side, so it changes what "forgoes" means. It does not change the law: the two left sides differ in truth in 29,324 (run, N) pairs, while the equivalence holds in all of them.
+
+**(b) Part 3 against `Keepable.each`, `keepable_and_iff_of_kernel_left` and KeepableStep.lean: new, or an unfolding?**
+
+An unfolding.
+- **First form.** The set R is `Held N` (shown above), and the run's own tail witnesses `Together`.
+- **Equivalent form.** It is `Keepable.mono` with `Keepable.start`, together with the scratch `keepable_of_run`. For one guard it is idempotence of the existential viability kernel: Aubin's `Viab_F(Viab_F K) = Viab_F K`, where `Keepable` is Aubin's viability kernel and `Viability.Kernel` the invariance kernel.
+- **`Keepable.each`** (JointKeeping l.115) follows from part 3's right-to-left direction at step 0 by `Keepable.start`. Its converse, each to together, fails (`ChoicePoint.each_not_joint`), and part 3 does not touch that.
+- **`keepable_and_iff_of_kernel_left` (l.121), instantiated:**
+  - `X := Bool`, `G true := g₁`, `G false := g₂`.
+  - From a `g₂`-run `r` from `s`, `Kernel.run` gives `g₁` at each step, and the tails give each guard keepable at each step.
+  - Part 3 then gives `Together s (fun _ => True)`, and `Keepable.mono` converts that to `Keepable P (g₁ ∧ g₂) s`.
+  - It goes through with the statement unchanged, but `Kernel.run` already gave the run in `g₁ ∧ g₂`. Part 3 is used and then cancelled.
+- **KeepableStep.lean.** `keepable_step_iff` is the one-step form of the same tail and cons argument. Part 1's last sentence is its `.mpr` contraposed. The idempotence is not stated there, nor anywhere in what I read, but it is the all-steps form of that file's tail argument.
+
+**(c) Is `Dominates` a one-sided comparison of processes, and is it in the Lean already?**
+
+Yes, it is a one-sided comparison. `le` is a forward simulation of `P` by the deterministic process `Law.process nextTop`:
+- every move from the lower configuration is matched by the top move from the upper (`dom`);
+- the guards are carried upward (`up`, inclusion, not equality);
+- the identity is inside `le` (`refl`).
+
+In the Lean:
+- **`DeferredBranching.Simulation`** (ReachableRanges.lean l.1804) has exactly this one-sided shape: "related configurations admit alike or more on the right, every step on the left matched on the right into related configurations". It is defined for that one witness process (`Config`, moves `Unit`) and used only for `late_simulates_early` and `early_not_simulating_late`.
+- **`Labelled.Bisimulation`** (Labelled.lean l.293) is two-sided, matches each move by the same move, and asks equal claims. `Dominates` is not a case of it. `Bisimulation.trace` (l.364) is the same induction, on finite traces.
+- **A general one-sided simulation on `Process`** was not found in what I read. A grep of the package for `Simulation` and `Dominat` found only these two.
+- **What part 4 uses of it** (the top course includes every course from below, at `adm := fun s x => G x s`) is the premise `greatest` of `Reaching.widens_iff_of_greatest` (l.387). The package obtains greatest courses only from uniqueness (`greatest_of_unique`, l.410) and from one witness (`KeptAlternative.greatest_not_unique`, l.1298).
+
+Known name: simulation preserves existential path properties (here EG of a guard closed upward) from the simulated system to the simulating one (Clarke, Grumberg and Long, model checking and abstraction, 1994). It is also the comparison principle for monotone control systems with a greatest input (Angeli and Sontag, 2003).
+
+The Lean statement it suggests: "if `R` is a forward simulation from `P` to `Q` carrying `g`, and `R s s'`, then `Keepable P g s → Keepable Q g s'`". Part 4 is then that lemma at `Q := Law.process nextTop`.
+
+**(d) Is the negative for the direction forced, or an artefact of choosing "kept" as the chain?**
+
+An artefact, and definitional.
+
+1. Chapter 07 §2, the theorem at `r-keeping-widening-is-generation-losing-nothing` with its Reading, says the following. Keeping widening is generation that loses nothing, parted from generation "exactly by loss". `Steps.Moving` is generation under the one at every moment and keeps widening from none. And widening "is not its measure" for 生生.
+2. `Steps.keepsWidening_iff_generation_losing_nothing` at `Q := Kept r` states that `KeepsWideningFrom (Kept r) N` holds exactly when `(∀ n ≥ N, includes (Kept r) n (n+1))` holds together with 全生成 under the one. Its first conjunct is "forgoes nothing from N". So the negative is that law's first conjunct, and part 2 only rewrites it as `Kept = Held`.
+3. The chain decides everything:
+   - **At `Q := Poss r`, no course keeps widening.** `Poss` never gains (`Run.possible_of_next`; `Run.not_keepsWidening_of_within`, HeldPossible.lean l.184, with the process itself). So the negative would hold of every way, forgoing or not.
+   - **At `Q := Held r`, the first half is automatic, and forgoing does not prevent widening.** Instance (`check_forgo_widen.py`):
+     - `S = Sum Nat Nat`, moves `Bool`.
+     - `inl n` steps by `true` to `inr n` (absorbing) and by `false` to `inl (n+1)`.
+     - The guards are "settle k" (`s = inl k ∨ s = inr k`) and "past k" (`k < index s`).
+     - The course always takes `false`.
+     - It forgoes "settle n" at every step n: kept at n, not at n+1. Over 34 judged steps it loses a kept guard at all 34, `Held` gains at all 34, and `Held` loses at none.
+     - So `KeepsWideningFrom (Held r) N` holds for every N, and the Lean's chain laws apply unchanged.
+   - **At `Q := Reaching.PossibleHeld` (HeldPossible.lean l.217), the Lean already has the law of more future while forms change.** It keeps widening only where the held part changes without end (`Run.changes_of_heldKeepsWidening`, l.341).
+
+The design's own test (§7: "an order under which a course that forgoes something still widens and the Lean's law applies to it unchanged") is met.
+
+## 6. What I ran, and what I did not read or check
+
+**Ran.** Python only, each run under 11 seconds, in `/Users/ren/theories/tmp/fm/centre21/refute/D-work-opus/`. No Lean was run, and no build, test or gate. The full test suite was deliberately not run.
+
+- `check_general.py` → `out-check_general.txt`, 5.8 s. Parts 1 to 3 on 1,500 random finite processes (2 to 5 states, 1 to 3 guards) and 28,200 lasso runs.
+- `check_rs.py` → `out-check_rs.txt`, 10.4 s. RS rebuilt from DESIGN.md §2: the T4 courses, the smallest cost instance in 16 shapes, I2 in 16 shapes with 256 rules each, draws without forming cost (2 × 3,600 instances), and `Dominates` on 1,296 free instances at life 1.
+- `check_support.py` → `out-check_support.txt`: the T3 "support" claim.
+- `check_forgo_widen.py` → `out-check_forgo_widen.txt`: the instance of 5 (d), truncated at H = 40.
+
+**Read.**
+
+- Briefs and design: BRIEF-REFUTE.md, BRIEF-DESIGNS.md and DESIGN.md, all whole.
+- Read whole: JointKeeping.lean, KeepableStep.lean and WideningOnTheMap.lean.
+- ReachableRanges.lean: the head, l.183–450, 580–700, 862–935, 1296–1312 and 1640–1885.
+- HeldPossible.lean: the head, and l.140–222 and 318–357.
+- Labelled.lean: l.270–395.
+- Onward.lean: l.220–240 and 390–402.
+- Junctures.lean: l.380–405.
+- Scratch `ScratchNoReturn.lean`: l.60–272.
+- noreturn21 `RETURN-refuter.md`.
+- Chapter 07 §2: the theorem and Reading at `r-keeping-widening-is-generation-losing-nothing`, plus the lines that matched widening and generation.
+- PLACES.md: the scratch-check table and the entries HeldPossible, JointKeeping, KeepingWidening, ReachableRanges, Viability and WideningOnTheMap.
+- From the designer's programs: the head of `fk.py`, and the definition of "free" in `run1.py` and `run2.py`. This was after my rebuild.
+
+**Not read.**
+
+- Lean: Viability.lean, Keeping.lean, GuardHorizon.lean, TurningInTime, LineOnAStock, RuleCapture, RuleShaping, CommonResponse, KeepingWidening.lean, EventualWidening, `conditional/renewal` and PopulationCorrection.
+- Chapters 02, 03, 05 and 08.
+- The designer's `run1.py` to `run3.py` beyond a grep, and their output files.
+- The notes of 16, 17, 20 and 21 November.
+
+**Not checked.** The design's counts listed in part 2, part 4 at life 2 and with three classes, and the guard-family (fine reading) claim.
+
+**REPORT.md was not written.** The harness refused the write with "Subagents should return findings as text". This message is the whole report. The programs and their outputs are saved in the folder above.
+
+*This report is AI-written (Claude Opus, refuter D-work-opus), 22 November 2026. No person has read it.*

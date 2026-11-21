@@ -1,0 +1,861 @@
+# Task file: SETTLE, reader whole-c-settle-08
+
+Your 10 modules and the fields on which the two passes differ. Pass a is one kind of model, pass b another.
+
+## GrammarConditionals.lean  (691 lines)
+
+### field `moves`
+- pass a: B: The relation in `«相须之例»` (l. 671) allows successors when the first two bits agree, keeping those two bits and allowing either third bit.
+- pass b: N
+
+### declarations of GrammarConditionals.lean (by script)
+  l.43 theorem «亡者异当且仅当有后»
+  l.49 theorem «亡而息之例»
+  l.57 theorem «两向有常而无前不通之例»
+  l.67 theorem «不有常而通之例»
+  l.108 theorem «亡而通则异»
+  l.115 theorem «有后而两向有常则通»
+  l.127 theorem «异而两向有常则通»
+  l.138 theorem «亡而两向有常则异当且仅当通»
+  l.146 theorem «异而未亡之例»
+  l.154 theorem «异而不通之例»
+  l.165 theorem «通而不异之例»
+  l.174 theorem «步皆分则皆亡»
+  l.181 theorem «不有常而异且通之例»
+  l.226 theorem «皆有后而步皆分则全生成»
+  l.233 theorem «昼夜全生成»
+  l.240 theorem «有亡而不全生成之例»
+  l.245 theorem «步不分而不全生成之例»
+  l.264 theorem «线不返则短于所列»
+  l.287 theorem «不返而有限则非不穷»
+  l.301 theorem counting_reach_lt
+  l.308 theorem «无环而不穷之例»
+  l.315 theorem «返而不穷之例»
+  l.325 theorem «有限遍后而不返之例»
+  l.342 theorem «遍后定前而无环之例»
+  l.361 theorem «无异当且仅当不分续»
+  l.367 theorem «静分续而有异之例»
+  l.373 theorem «非有常之类不含于核之例»
+  l.394 theorem «皆不生当且仅当皆非无缘»
+  l.401 def «依»
+  l.407 theorem «所依无则依者无»
+  l.414 theorem «依之传»
+  l.422 theorem «不依之例»
+  l.430 theorem «无环则无俱有»
+  l.444 theorem «生亡并之例»
+  l.451 theorem «亡于静而住于一之例»
+  l.461 theorem «无缘不住而他有后之例»
+  l.470 theorem «自缘而不生之例»
+  l.476 theorem «有前不有常而亡之例»
+  l.484 theorem «不有常而不穷之例»
+  l.511 theorem «无相而非亦无相之例»
+  l.516 theorem «无能无所之例»
+  l.521 theorem «像不保之例»
+  l.539 theorem «类内有常则线相随»
+  l.560 theorem «核同则同不穷»
+  l.577 theorem «生于核下可变之例»
+  l.595 theorem «不穷与亡不同核之例»
+  l.619 theorem «逆核不含于核之例»
+  l.636 theorem «无始而有终之例»
+  l.645 theorem «依于无始而有始之例»
+  l.671 theorem «相须之例»
+
+## GrammarCourse.lean  (399 lines)
+
+### field `no_return`
+- pass a: N: Not found in the statements read.
+- pass b: S: Law.stays_of_constant (l. 241): where the value class is constant under the step, a course that keeps its value for one step keeps it at every later step (concluded from constancy); this is a lock-in of keeping, not a loss.
+
+### field `forms_change`
+- pass a: S: `SameAhead.no_continuation` (l. 319) excludes all continuation under the value core along the successor course if equal observed values imply equal moments. The time course itself has a next moment everywhere.
+- pass b: N: the law's step always has a successor while lines under the value class end where the value changes; the only statement on a changing course is the contrary case, SameAhead.no_continuation (l. 319): a course with a new value at every moment has no continuation under its core.
+
+### declarations of GrammarCourse.lean (by script)
+  l.71 def sameValue
+  l.73 theorem sameValue_class
+  l.83 theorem core_within_core_iff
+  l.90 theorem contains_core_iff
+  l.103 def step
+  l.107 theorem step_hasSucc_iff
+  l.112 theorem constant_iff_keeps
+  l.120 theorem kept_along
+  l.128 theorem core_is_sameFuture
+  l.140 theorem alike_iff_core
+  l.146 theorem keepsAndCarries_iff
+  l.155 theorem coarsest_iff_core
+  l.164 theorem ends_iff_changes
+  l.169 theorem line_on_orbit
+  l.181 theorem reached_while_same
+  l.200 theorem unending_iff
+  l.217 theorem continues_in_core_iff
+  l.233 theorem constant_iff_core
+  l.241 theorem stays_of_constant
+  l.247 theorem core_iff_below
+  l.261 theorem learnable_iff_core
+  l.275 theorem learnable_of_core_within
+  l.292 theorem Steps.next_is_step
+  l.296 theorem SameAhead.is_core
+  l.305 theorem SameAhead.next_by_root
+  l.312 theorem course_core_iff
+  l.319 theorem SameAhead.no_continuation
+  l.326 theorem core_iff_below
+  l.331 theorem statesBelow_iff_core
+  l.347 def next
+  l.352 def value
+  l.356 theorem orbit_inl
+  l.360 theorem orbit_inr
+  l.366 theorem core_iff
+  l.376 theorem core_iff_bounded
+  l.387 theorem core_exact
+
+## GrammarCrossing.lean  (169 lines)
+
+### field `reading`
+- pass a: S: `«定则内至外之线有出步»` (l. 159) uses decided region membership to exhibit an exit step on a continuation line with an inside start and outside end.
+- pass b: N: the region P is any proposition. No observation, class read alike, or rule made from what is registered appears.
+
+### field `no_return`
+- pass a: B: `«闭而有入之例»` (l. 120) exhibits a closed Boolean region with an incoming edge from outside. Once inside, every step stays inside by the exhibited closure.
+- pass b: N: no irreversibility or loss is stated. S, the nearest: `«内至外之线则非不出»` (l. 139): a line under E from a member of P to something outside means P is not «不出» along R. That is a crossing, not a point of no return.
+
+### field `forms_change`
+- pass a: S: `«内至外之线有出步»` (l. 150) exhibits an E-continuation step changing P from true to false, given an E-line with that endpoint change and the stepwise split premise.
+- pass b: N
+
+### declarations of GrammarCrossing.lean (by script)
+  l.57 theorem «不出当且仅当不外者闭»
+  l.65 theorem «不外者内则不出当且仅当闭»
+  l.75 theorem «不出皆闭当且仅当排中»
+  l.102 theorem «逆之不出当且仅当外者不出»
+  l.109 theorem «对称则不出当且仅当逆不出»
+  l.120 theorem «闭而有入之例»
+  l.139 theorem «内至外之线则非不出»
+  l.150 theorem «内至外之线有出步»
+  l.159 theorem «定则内至外之线有出步»
+
+## GrammarLaws.lean  (2823 lines)
+
+### field `moves`
+- pass a: S: `«同行之历»` (l. 2669) preserves the relation E between endpoints of executions of the same word of moves from E-related starts if every letter goes alike under E.
+- pass b: N for a Process with actions or a policy. S, the nearest: R need not have a fixed successor, and `«尽则不或屡»` (l. 1773) quantifies over every course: where the line's steps from T are Q steps (as far as can be refuted) and every course of Q steps then an F step ends from g T («尽» («而» («所闭» Q) F) «一» (g T)), it is not the case that F steps recur, as far as can be refuted.
+
+### declarations of GrammarLaws.lean (by script)
+  l.86 class does
+  l.199 class inside
+  l.235 def «闭»
+  l.238 def «所闭»
+  l.241 theorem «所闭之自反»
+  l.244 theorem «所闭之传递»
+  l.249 theorem «缘在所闭»
+  l.253 theorem «所闭之闭»
+  l.257 theorem «所闭之单调»
+  l.261 theorem «所闭之对称»
+  l.267 theorem «所闭之逆»
+  l.276 theorem «所闭之界»
+  l.282 def «不出»
+  l.285 theorem «闭则不出»
+  l.290 theorem «所闭不出»
+  l.294 theorem «闭含所闭»
+  l.300 theorem «所闭之证»
+  l.308 theorem «闭而外则不所闭»
+  l.313 theorem «闭之及»
+  l.320 theorem «及之所闭»
+  l.325 theorem «所闭当且仅当同一或及»
+  l.336 theorem «及当且仅当一步而所闭»
+  l.347 theorem «借步之所闭在二所闭»
+  l.362 theorem «二所闭在借步之所闭»
+  l.384 theorem length_insert
+  l.389 theorem length_replicate
+  l.394 theorem split_append
+  l.410 def prepend
+  l.415 theorem replicate_add_append
+  l.421 theorem replicate_succ_append
+  l.426 theorem reverseAux_append
+  l.432 theorem reverse_cons_append
+  l.436 theorem reverse_replicate
+  l.442 def keep
+  l.446 theorem keep_append
+  l.455 theorem keep_congr
+  l.463 theorem keep_all
+  l.471 theorem mem_keep
+  l.498 theorem any_false_mem
+  l.509 theorem any_split
+  l.519 theorem any_remove
+  l.526 theorem any_true_of_mem
+  l.536 theorem any_false_of
+  l.544 theorem mem_middle
+  l.548 theorem mem_of_removed
+  l.556 theorem distinct_removed
+  l.578 inductive «对»
+  l.583 theorem «对之长»
+  l.589 theorem GrammarLaws.paired_single
+  l.603 theorem «等长则一对»
+  l.610 theorem «一之对»
+  l.614 theorem «对之单调»
+  l.620 theorem «对之自反»
+  l.625 theorem «对之左插»
+  l.632 theorem «对之逆»
+  l.639 theorem «对则守数»
+  l.647 theorem «守数当且仅当可对»
+  l.665 theorem «等长而不对之例»
+  l.674 theorem «对之取»
+  l.717 theorem «对之接»
+  l.731 theorem «对之传»
+  l.737 theorem «对之并»
+  l.750 theorem «对之换»
+  l.755 def «聚»
+  l.761 def unitsOn
+  l.765 theorem «对之族»
+  l.775 theorem «对之程»
+  l.810 theorem «聚之长»
+  l.820 theorem «程守数当且仅当可对»
+  l.853 def «计»
+  l.858 theorem GrammarLaws.count_append
+  l.865 theorem GrammarLaws.count_replicate_true
+  l.872 theorem GrammarLaws.count_replicate_false
+  l.878 theorem GrammarLaws.count_insert
+  l.886 theorem GrammarLaws.split_of_count_pos
+  l.901 theorem GrammarLaws.count_go
+  l.916 theorem GrammarLaws.count_eq_countP
+  l.922 theorem GrammarLaws.uncrossed_of_closed
+  l.934 theorem GrammarLaws.uncrossed_iff_notGoingOut
+  l.949 theorem GrammarLaws.uncrossed_iff_closed
+  l.961 theorem «对则不越域守数»
+  l.973 theorem «对则双闭域守数»
+  l.981 theorem «对而单闭域不守数之例»
+  l.992 theorem GrammarLaws.class_test_congr
+  l.1001 theorem GrammarLaws.pair_of_class_counts
+  l.1031 theorem «类之对当且仅当类类等数»
+  l.1041 theorem «续之对则类类等数»
+  l.1047 class does
+  l.1050 theorem «一对而静不对之例»
+  l.1063 def «定后»
+  l.1066 def «定前»
+  l.1068 theorem «定后之逐点»
+  l.1071 theorem «定前之逐点»
+  l.1075 theorem «定前即逆之定后»
+  l.1082 def «历»
+  l.1087 theorem «历之接»
+  l.1096 theorem «历之末步»
+  l.1104 theorem «历之逆»
+  l.1115 theorem «历之定前»
+  l.1124 def «迭»
+  l.1130 theorem «迭即历»
+  l.1136 theorem «迭则及»
+  l.1141 theorem «及即迭»
+  l.1151 theorem «迭之接»
+  l.1160 theorem «迭之周»
+  l.1167 theorem «迭之末步»
+  l.1176 def «迭内»
+  l.1179 theorem «迭内之接»
+  l.1185 def «静或缘»
+  l.1188 theorem «迭内即静或缘之迭»
+  l.1205 def «承»
+  l.1211 theorem «承之迭»
+  l.1224 theorem «存承之迭»
+  l.1238 theorem «迭之分»
+  l.1248 theorem «迭之逆»
+  l.1258 theorem «或有后则或迭»
+  l.1268 theorem «迭则同一或及»
+  l.1274 theorem «不穷则迭»
+  l.1284 def «定后于»
+  l.1287 theorem «定后则定后于»
+  l.1291 theorem «定后于之后»
+  l.1301 theorem «所闭当且仅当有迭»
+  l.1311 theorem «分处定后则迭之定于»
+  l.1323 theorem GrammarLaws.reorder
+  l.1329 theorem «亡者不在长迭»
+  l.1354 theorem «定后则线至多一亡»
+  l.1374 theorem «线终不过所列»
+  l.1394 theorem GrammarLaws.line_ends_unrefuted
+  l.1408 theorem «线亡不过所列»
+  l.1418 theorem «线亡不过所列之未否»
+  l.1428 theorem «线生不过所列»
+  l.1442 theorem «线生不过所列之未否»
+  l.1456 theorem «迭之定于»
+  l.1462 theorem «迭之定»
+  l.1468 theorem «迭之定前»
+  l.1475 def «入»
+  l.1478 theorem «入当且仅当有不返»
+  l.1492 theorem «定后于环则所及皆返»
+  l.1507 theorem «定后环则所及皆返»
+  l.1512 theorem «定后于则返者不入»
+  l.1518 theorem «定后则返者不入»
+  l.1522 theorem «有后不返则入»
+  l.1527 theorem «定后于有后则入当且仅当不返»
+  l.1534 theorem «定后有后则入当且仅当不返»
+  l.1540 theorem «无后者不入亦不返»
+  l.1549 theorem «入而返之例»
+  l.1560 theorem «非定后返而不入之例»
+  l.1577 theorem «遍后则有线»
+  l.1588 def «线不并»
+  l.1592 theorem «定前则线不并»
+  l.1597 theorem «线不并则可退»
+  l.1611 theorem «定前则线可退»
+  l.1616 theorem «线则及»
+  l.1623 theorem «线则所闭»
+  l.1633 theorem kept_onward
+  l.1647 theorem «线有限不并则回»
+  l.1659 theorem «线有限不并则返»
+  l.1670 theorem «线有限定前则返»
+  l.1680 theorem «定后于线有限则末返»
+  l.1703 theorem «有限遍后定前则皆返»
+  l.1712 theorem «定后于二返则不并»
+  l.1730 theorem «皆返定后则定前»
+  l.1736 theorem «有限遍后定后则定前当且仅当皆返»
+  l.1749 def «屡»
+  l.1753 def «或屡»
+  l.1757 theorem «屡则或屡»
+  l.1762 theorem «线或在所闭»
+  l.1773 theorem «尽则不或屡»
+  l.1792 theorem «尽则不屡»
+  l.1800 theorem «止而不入之例»
+  l.1823 theorem «入而屡之例»
+  l.1850 def GrammarLaws.ceasing
+  l.1855 def GrammarLaws.arising
+  l.1862 theorem GrammarLaws.census_pairs
+  l.1942 theorem «定后定前则前并生对后并亡»
+  l.1957 theorem «前者在前则所列生者生»
+  l.1978 theorem «后者在后则所列亡者亡»
+  l.1997 theorem GrammarLaws.length_keep
+  l.2008 theorem GrammarLaws.count_add_not
+  l.2022 theorem GrammarLaws.distinct_keep
+  l.2032 theorem GrammarLaws.count_pos_of_mem
+  l.2040 theorem GrammarLaws.eq_true_of_not_false
+  l.2051 theorem GrammarLaws.census_le
+  l.2085 theorem «定后则后并亡不过前并生»
+  l.2098 theorem GrammarLaws.census_le_converse
+  l.2111 theorem «定前则前并生不过后并亡»
+  l.2124 theorem GrammarLaws.census_count
+  l.2152 theorem «定后定前则前并生与后并亡同数»
+  l.2176 theorem GrammarLaws.stage_steps
+  l.2185 theorem GrammarLaws.fixed_of_noSplit
+  l.2196 theorem GrammarLaws.found_cons
+  l.2210 theorem GrammarLaws.found
+  l.2220 theorem GrammarLaws.found_unrefuted
+  l.2229 theorem GrammarLaws.found_or_all
+  l.2242 theorem GrammarLaws.trace
+  l.2262 theorem GrammarLaws.trace_unrefuted
+  l.2282 theorem «间无生则间亡不过所覆»
+  l.2299 theorem «所覆后亡屡则有生»
+  l.2320 theorem «有覆而亡屡则生屡»
+  l.2338 theorem «所覆后亡屡则生未否»
+  l.2352 theorem «有覆而亡屡则生不止»
+  l.2365 theorem GrammarLaws.onward_within
+  l.2381 theorem «间无亡则间生不过所覆»
+  l.2402 theorem «有界覆而生屡则亡不止»
+  l.2419 theorem GrammarLaws.trace_on
+  l.2436 theorem «有界覆而生屡则亡屡»
+  l.2468 theorem GrammarLaws.pair_eq
+  l.2473 theorem GrammarLaws.stage_search
+  l.2497 theorem GrammarLaws.census_run
+  l.2549 theorem «定后前者在前则亡屡者生屡»
+  l.2568 def «同行»
+  l.2571 theorem «同行之逐点»
+  l.2578 theorem «有常局定后则同行»
+  l.2588 theorem «有常定后则同行»
+  l.2592 theorem «有常则可续»
+  l.2600 theorem «同行可续则有常»
+  l.2607 theorem «同行遍后则有常»
+  l.2612 theorem «局定后则有常当且仅当同行可续»
+  l.2619 theorem «同行当且仅当有常»
+  l.2625 theorem «类同行遍后则含于核»
+  l.2631 theorem «定后则类之核同行»
+  l.2637 theorem «遍后则其内同行之类含于核»
+  l.2643 theorem «定后遍后则核为其内最粗同行之类»
+  l.2652 theorem «后不定则核可不同行»
+  l.2669 theorem «同行之历»
+  l.2677 theorem «同行之迭»
+  l.2684 theorem «同行于迭»
+  l.2691 def «像»
+  l.2696 theorem «保之像»
+  l.2705 theorem «像定后当且仅当同行»
+  l.2721 def «逾»
+  l.2724 def «广»
+  l.2727 def «齐»
+  l.2730 def «杂»
+  l.2733 theorem «逾则不则»
+  l.2738 theorem «广则不则»
+  l.2742 theorem «广非自»
+  l.2746 theorem «广不可逆»
+  l.2750 theorem «广之传递»
+  l.2755 theorem «齐即谓»
+  l.2758 theorem «齐之对称»
+  l.2760 theorem «杂之对称»
+  l.2763 theorem «广则非齐»
+  l.2767 theorem «广则非杂»
+  l.2771 theorem «齐则非杂»
+  l.2776 theorem «四比之周»
+  l.2788 theorem strictJoin_trans
+  l.2800 theorem strictJoin_irrefl
+  l.2807 theorem «则逾之定当且仅当排中»
+
+## GrammarMap.lean  (589 lines)
+
+### field `rank`
+- pass a: B: `Map.StepWhere.relation` (l. 510) permits only a single false-to-true step when P holds, and `Map.StepWhere.ends` (l. 514) proves all branches end for any P.
+- pass b: N for a bound, rank or variant. The inductive `«尽»` (l. 229) is ending on every branch with no bound. `«尽而续可定则有终»` (l. 261): «尽», with going on decided at the points of its line, gives «有终».
+
+### declarations of GrammarMap.lean (by script)
+  l.62 def «传»
+  l.65 theorem «传则异»
+  l.69 def «所及»
+  l.71 theorem «所及之传递»
+  l.80 def «全生成»
+  l.85 def «全守»
+  l.90 def «有终»
+  l.93 def «新而有终»
+  l.97 theorem «全生成有终不并»
+  l.101 theorem «全生成全守不并»
+  l.107 theorem «全守有终不并»
+  l.111 theorem «有常则无终»
+  l.118 theorem «有终则粗不有常»
+  l.125 theorem «不穷有终之定当且仅当排中»
+  l.144 theorem «全生成之所及亦全生成»
+  l.149 theorem «有终之所前亦有终»
+  l.157 theorem «全三域之周»
+  l.177 theorem «全三域之定当且仅当排中»
+  l.195 def «阶全生成»
+  l.199 theorem «阶全生成则上无终»
+  l.220 theorem «相续之续»
+  l.225 def «延»
+  l.229 inductive «尽»
+  l.233 theorem «延尽不并»
+  l.241 theorem «不穷则延»
+  l.248 theorem «尽则非不穷»
+  l.252 theorem «尽则非无终»
+  l.261 theorem «尽而续可定则有终»
+  l.274 def «生成»
+  l.279 def «守»
+  l.283 def «退化»
+  l.286 def «新而尽»
+  l.289 theorem «生成则延»
+  l.292 theorem «守则延»
+  l.296 theorem «生成退化不并»
+  l.300 theorem «守退化不并»
+  l.305 theorem «单行则族含所及»
+  l.317 theorem «单行则生守不并»
+  l.330 theorem «延尽之定当且仅当排中»
+  l.351 def «阶生成»
+  l.355 theorem «阶生成则上不退化»
+  l.360 theorem «生生即延»
+  l.367 theorem «息即尽»
+  l.384 def step
+  l.386 theorem step_irrefl
+  l.395 theorem step_reached_le
+  l.408 theorem step_reaches
+  l.413 theorem step_reaches_of_le
+  l.421 theorem Endless.generation
+  l.428 def half
+  l.434 def pairs
+  l.437 theorem half_rises_beyond
+  l.445 theorem Endless.generation_in_pairs
+  l.457 def still
+  l.460 theorem Still.keeping
+  l.464 def short
+  l.466 theorem short_end
+  l.471 theorem Short.reaches_end
+  l.476 theorem Short.renews_and_ends
+  l.483 theorem Endless.generates
+  l.489 theorem Still.keeps
+  l.494 theorem Short.ends
+  l.500 theorem Short.renews_and_ends_everywhere
+  l.510 def relation
+  l.514 theorem ends
+  l.518 theorem has_next_iff
+  l.522 theorem end_decides
+  l.533 inductive Branch
+  l.537 def fork
+  l.548 theorem fork_chain_begins
+  l.553 theorem «生守相杂»
+  l.584 theorem «尽则有终当且仅当排中»
+
+## GrammarPath.lean  (1554 lines)
+
+### field `moves`
+- pass a: S: `«内外皆缘则二分本类常»` (l. 663) derives local constancy up to the end if each class mate has both an in-block and an out-of-block successor or has no successor. The alternatives are relation edges.
+- pass b: N: there is no Process with moves, policy or allowed set; only relations R and classes E. Branching appears (in «后不定则至终有常可不同行», l. 296, 0 conditions both 1 and 2), but no law about a choice.
+
+### field `rank`
+- pass a: B: `FiniteFamilies.step` (l. 806) and `FiniteSharedCondition.step` (l. 924) increment stage and require stage<3, bounding steps from a first birth by three.
+- pass b: N: no bound, variant or deadline. B: FiniteFamilies.one_not_constant (l. 820) is a finite net in which every line ends, with no rank stated.
+
+### declarations of GrammarPath.lean (by script)
+  l.26 class holds
+  l.50 class leads
+  l.113 class hold
+  l.140 theorem «所经必同»
+  l.162 theorem «所经不同则不及»
+  l.172 def «所缘同于»
+  l.176 class from
+  l.177 theorem «后皆同类则后皆续»
+  l.188 theorem «后皆续当且仅当后皆同类»
+  l.197 theorem «后皆续则所缘同于»
+  l.205 theorem «后皆续当且仅当自与线皆闭»
+  l.227 theorem «亡而网续则后不皆续»
+  l.235 def «至终有常»
+  l.239 theorem «有常则至终有常»
+  l.244 theorem «至终有常局定后则同行»
+  l.256 theorem «同行可决则至终有常»
+  l.263 theorem «至终有常则可决»
+  l.271 theorem «局定后则至终有常当且仅当同行可决»
+  l.279 theorem «至终有常可续则有常»
+  l.288 theorem «有常当且仅当至终有常可续»
+  l.296 theorem «后不定则至终有常可不同行»
+  l.308 def «本类至终有常»
+  l.312 theorem «至终有常则本类至终有常»
+  l.319 theorem «至终有常之逐类»
+  l.326 theorem «亡而网续则不至终有常»
+  l.337 theorem «亡而网续则本类不至终有常»
+  l.345 class holds
+  l.346 theorem «本类常闭则所缘同类»
+  l.355 theorem «至终常闭则所缘同类»
+  l.364 theorem «本类常闭则后皆续»
+  l.378 theorem «至终常闭则后皆续»
+  l.385 theorem «常闭则所缘同类»
+  l.393 theorem «常闭则后皆续»
+  l.404 theorem «本类常闭则所及皆及»
+  l.411 theorem «至终常闭则所及皆及»
+  l.419 theorem «常闭则所及皆及»
+  l.425 class constant
+  l.428 theorem «本类出类随行»
+  l.440 theorem «出类随行»
+  l.449 theorem «本类出类随线»
+  l.460 theorem «出类随线»
+  l.469 theorem «出类不随则本类不至终有常»
+  l.479 theorem «出类不随则不至终有常»
+  l.487 theorem «本类常则闭当且仅当后皆同类»
+  l.499 theorem «至终常类之闭当且仅当后皆同类»
+  l.505 theorem «常类之闭当且仅当后皆同类»
+  l.513 theorem «外合不失本类之常»
+  l.523 theorem «外分唯系出类之同»
+  l.546 theorem «本类常当且仅当与己相随»
+  l.562 class only
+  l.567 theorem «外分唯系己出之同»
+  l.596 theorem «闭则外分无关»
+  l.604 def «二分»
+  l.607 theorem «二分为类»
+  l.610 theorem «异三则同»
+  l.621 theorem «本类之常至二分»
+  l.636 theorem «二分本类常当且仅当内外皆随»
+  l.663 theorem «内外皆缘则二分本类常»
+  l.683 inductive Occ
+  l.685 def step
+  l.704 def upper
+  l.710 def same
+  l.712 theorem same_class
+  l.714 theorem constant
+  l.733 theorem not_taken_in
+  l.750 inductive Occ
+  l.752 def step
+  l.763 def upper
+  l.768 def same
+  l.770 theorem same_class
+  l.775 theorem not_constant_at
+  l.782 theorem not_all_follow
+  l.803 abbrev Occ
+  l.806 def step
+  l.809 def family
+  l.812 def member
+  l.814 theorem family_class
+  l.817 theorem family_narrower
+  l.820 theorem one_not_constant
+  l.827 theorem family_constant_to_end
+  l.834 theorem member_class
+  l.839 theorem member_not_constant_at
+  l.849 theorem member_not_constant_to_end
+  l.855 theorem member_no_reach
+  l.865 theorem first_birth_held
+  l.869 theorem family_takes_in_all
+  l.875 theorem other_family_outside
+  l.900 inductive Kind
+  l.902 abbrev Occ
+  l.905 def link
+  l.924 def step
+  l.927 def joined
+  l.934 def held
+  l.937 def member
+  l.939 theorem held_class
+  l.941 theorem link_joined
+  l.959 theorem link_self
+  l.966 theorem held_narrower
+  l.969 theorem one_not_constant
+  l.975 theorem held_constant_to_end
+  l.986 theorem first_birth_held
+  l.989 theorem member_class
+  l.994 theorem member_not_constant_at
+  l.1004 theorem member_not_constant_to_end
+  l.1010 theorem reaches_other_past_end
+  l.1017 theorem fourth_outside
+  l.1032 inductive Occ
+  l.1034 def step
+  l.1053 def intended
+  l.1059 def own
+  l.1061 theorem own_class
+  l.1065 theorem not_constant_at
+  l.1071 class fail
+  l.1072 theorem not_constant_to_end
+  l.1078 theorem ends_where_net_ends
+  l.1096 inductive Occ
+  l.1098 def step
+  l.1125 def line
+  l.1132 def own
+  l.1134 theorem own_class
+  l.1137 theorem constant_to_end
+  l.1150 theorem not_constant
+  l.1155 theorem not_held
+  l.1158 theorem wake_follows
+  l.1172 inductive Occ
+  l.1174 def step
+  l.1193 def inClass
+  l.1200 def kind
+  l.1206 def finer
+  l.1208 theorem finer_class
+  l.1211 theorem same_class
+  l.1218 theorem split_constant_at
+  l.1230 theorem not_held
+  l.1234 theorem finer_not_constant_at
+  l.1247 class is
+  l.1252 inductive Occ
+  l.1254 def step
+  l.1293 def inClass
+  l.1302 def kind
+  l.1310 def finer
+  l.1313 theorem finer_class
+  l.1316 theorem same_class
+  l.1326 theorem both
+  l.1337 theorem split_constant_at
+  l.1341 theorem finer_not_constant_at
+  l.1353 class is
+  l.1358 inductive Occ
+  l.1360 def step
+  l.1388 def inClass
+  l.1396 def kind
+  l.1403 def finer
+  l.1405 theorem finer_class
+  l.1408 theorem same_class
+  l.1416 theorem split_constant_at
+  l.1427 theorem held
+  l.1432 theorem split_not_constant_to_end
+  l.1439 theorem finer_constant_to_end
+  l.1464 inductive Occ
+  l.1466 def step
+  l.1494 def inClass
+  l.1502 def reached
+  l.1510 theorem reached_step
+  l.1514 theorem reached_after
+  l.1520 theorem all_alike
+  l.1530 theorem not_constant_at
+  l.1537 theorem other_not_held
+  l.1541 theorem other_off_line
+  l.1545 theorem reach_without_condition
+
+## GrammarReadings.lean  (178 lines)
+
+### field `giving`
+- pass a: S: `«因灭而续»` (l. 172) makes the conditioning occurrence itself end under identity while what it conditions begins and continues it under E, for an irreflexive R and an edge related by E. No quantity is transferred.
+- pass b: N.
+
+### field `no_return`
+- pass a: N: Not found in the statements read.
+- pass b: S: `因灭而续` (l. 172): with no self-conditioning, for a condition x→y alike under E, x ends under identity (亡 R 静 x) and y begins under identity, while x→y continues under E. The ending is concluded, relative to identity. B: `有常而不通` (l. 138): counting up from zero, the line coming back ends at zero. No irreversibility or point of no return.
+
+### field `both_outcomes`
+- pass a: N: Not found in the statements read.
+- pass b: S: `因灭而续` (l. 172) states at once, for one step, ending under identity and continuing under a coarser class E, each relative to its class. This is a both-at-once, not an exactly-when. General.
+
+### field `comparison`
+- pass a: S: `«化为有缘之成坏»` (l. 63) gives a pointwise translation from alteration to a two-criterion comparison along R. B: `«有常而不通»` (l. 138) witnesses forward endlessness with forward constancy and failure of two-way passage.
+- pass b: N: no carrying between two processes or starts. `化为有缘之成坏` (l. 63) is an identity of two relations.
+
+### field `closed_region`
+- pass a: N: Not found in the statements read.
+- pass b: S: `有常则往不穷` (l. 117): under a constant class, a line with a past never ends going. `两向有常有前则通` (l. 125): constant both ways under R and its converse, with a predecessor, gives 通. `复者住` (l. 106): what returns abides.
+
+### declarations of GrammarReadings.lean (by script)
+  l.50 def «化»
+  l.53 theorem «化之二说同形»
+  l.59 def «成坏»
+  l.63 theorem «化为有缘之成坏»
+  l.68 def «同于»
+  l.71 theorem «同于为类»
+  l.81 theorem «同于不必传递»
+  l.97 def «复»
+  l.100 theorem «相续之末有前»
+  l.106 theorem «复者住»
+  l.114 def «通»
+  l.117 theorem «有常则往不穷»
+  l.125 theorem «两向有常有前则通»
+  l.132 theorem «两向有常则通»
+  l.137 class is
+  l.138 theorem «有常而不通»
+  l.152 theorem «昼夜往来不穷»
+  l.160 theorem «非一非异»
+  l.169 class alike
+  l.172 theorem «因灭而续»
+
+## GrammarScope.lean  (481 lines)
+
+### field `multiplying`
+- pass a: B: `LineOfDescent.Endless.step` (l. 318) gives one next member per old member. `LineOfDescent.Last.step` (l. 403) gives one child to the first member and none to the second. The identifiers index members without an abundance update.
+- pass b: N: no law of number. B: Endless.step (l. 318): each old member conditions exactly one next birth.
+
+### field `rank`
+- pass a: B: `LineOfDescent.Last.step` (l. 403) gives a maximum of three steps from the first birth, and `never_unending` (l. 417) rules out endlessness from every start under every criterion.
+- pass b: N in general. B: `Last.never_unending` (l. 417); its docstring says every line ends within three steps, but the statement says only ¬不穷.
+
+### declarations of GrammarScope.lean (by script)
+  l.77 class whose
+  l.94 def «续无外»
+  l.98 def «族无外»
+  l.101 theorem «相续则同族»
+  l.107 theorem «所及则同族»
+  l.113 theorem «续无外则族无外»
+  l.118 theorem «同族之粗化»
+  l.127 theorem «续无外之粗化»
+  l.134 theorem «族无外之粗化»
+  l.139 theorem «缘在族中»
+  l.144 theorem «族之续即缘»
+  l.150 theorem «族之所及即一之所及»
+  l.159 class has
+  l.161 theorem «续即缘当且仅当含族»
+  l.174 theorem «遍有后则族有常»
+  l.182 theorem «遍有后则缘在族核»
+  l.187 theorem «遍有后则核之所及即一之所及»
+  l.200 theorem «过亡而续»
+  l.210 theorem «核有续当且仅当有不穷»
+  l.217 theorem «无不穷则核无续»
+  l.225 theorem «各续无外则同一中心»
+  l.239 theorem «续无外则同一中心»
+  l.245 theorem «续无外则中心无缘»
+  l.259 theorem withinClosure_of_line
+  l.264 theorem eq_or_reach_iff_reached
+  l.275 theorem withinClosure_iff_reached
+  l.283 theorem ownClosure_unrestricted_iff_noOutside
+  l.297 theorem premises_of_noOutside
+  l.315 abbrev Occ
+  l.318 def step
+  l.322 def member
+  l.324 theorem member_class
+  l.327 theorem total
+  l.333 theorem member_ends
+  l.341 theorem descent_constant
+  l.347 theorem core_through_birth
+  l.354 theorem descent_unending
+  l.358 theorem descent_reaches_both
+  l.371 theorem descent_reaches
+  l.377 theorem descent_no_outside
+  l.381 theorem member_line
+  l.385 theorem member_outside
+  l.399 abbrev Occ
+  l.403 def step
+  l.408 theorem last_ends
+  l.417 theorem never_unending
+  l.461 theorem core_no_continuation
+  l.467 theorem descent_past_end
+
+## GrammarTesting.lean  (141 lines)
+
+### field `moves`
+- pass a: B: `Room.opened` (l. 79) permits the balanced room to stay put or cool, and the held room to stay put or reach kept. `Room.warm` (l. 86) assigns warmth to both outcomes of the held room.
+- pass b: N: only relations. Room.opened (l. 79) gives branches, but there is no choice and no law about a choice.
+
+### field `giving`
+- pass a: N: Not found in the statements read.
+- pass b: B: Room.opened (l. 79): the held room may be kept warm (kept) by its thermostat. It is a stipulated branch, not a going-on of the model that can be lost.
+
+### field `no_return`
+- pass a: B: `Room.opened` (l. 79) gives cold no successors, so the room entering cold cannot return. This is supplied in the built relation.
+- pass b: N.
+
+### field `forms_change`
+- pass a: B: `Room.opened` (l. 79) allows held to become kept, both warm by `Room.warm` (l. 86). The opened net also adds cooling as a possibility from balanced.
+- pass b: N.
+
+### declarations of GrammarTesting.lean (by script)
+  l.38 def «层»
+  l.45 theorem «核在每层之内»
+  l.56 theorem «可分则不在核»
+  l.66 inductive Room
+  l.71 def closed
+  l.79 def opened
+  l.86 def warm
+  l.93 def alike
+  l.96 def same
+  l.102 theorem same_alike
+  l.107 theorem same_symm
+  l.112 theorem same_constant
+  l.128 theorem «恒温与平衡»
+
+## GrammarTransport.lean  (571 lines)
+
+### field `reading`
+- pass a: S: `«核之对应»` (l. 422) preserves and reflects core membership of two occurrences under a bijection carrying both the step and the criterion. This transports a supplied reading.
+- pass b: N.
+
+### field `level`
+- pass a: N: Not found in the statements read.
+- pass b: D: the account (l. 48) says the World reads the amounts' law of falls ending through 尽之拉回; no statement here.
+
+### field `no_return`
+- pass a: S: `«无环之对应»` (l. 410) transfers absence of positive self-return across a bijection carrying the relation. `«尽之拉回»` (l. 104) reflects all-branch ending under its closure and preservation premises.
+- pass b: N: «亡之对应» (l. 341) and «尽之对应» (l. 387) keep ending under correspondence; no irreversibility is stated.
+
+### declarations of GrammarTransport.lean (by script)
+  l.63 structure «一一对应»
+  l.74 def symm
+  l.78 def trans
+  l.84 theorem to_eq_iff
+  l.89 def prod
+  l.104 theorem «尽之拉回»
+  l.122 theorem «延之拉回»
+  l.131 theorem «谓之自反»
+  l.138 theorem map_replicate
+  l.152 theorem «对应之像»
+  l.172 theorem «对应之逐点»
+  l.177 theorem «对应之回»
+  l.185 theorem «回之像»
+  l.189 theorem «静之像»
+  l.193 theorem «一之像»
+  l.198 theorem «部分恒等之像»
+  l.205 theorem «反对应之像»
+  l.210 theorem «合成之像»
+  l.218 theorem «合之像»
+  l.224 theorem «逆之像»
+  l.228 theorem «而之像»
+  l.239 theorem «及之对应»
+  l.253 theorem «及之像»
+  l.258 theorem «则之对应»
+  l.268 theorem «续之对应»
+  l.273 theorem «相续之对应»
+  l.278 theorem «所及之对应»
+  l.288 theorem «所闭之对应»
+  l.300 theorem «同族之对应»
+  l.321 theorem «有前之对应»
+  l.328 theorem «有后之对应»
+  l.335 theorem «生之对应»
+  l.341 theorem «亡之对应»
+  l.347 theorem «住之对应»
+  l.353 theorem «异之对应»
+  l.360 theorem «复生之对应»
+  l.375 theorem «不穷之对应»
+  l.387 theorem «尽之对应»
+  l.400 theorem «类之对应»
+  l.410 theorem «无环之对应»
+  l.417 theorem «有常之对应»
+  l.422 theorem «核之对应»
+  l.436 theorem «传之对应»
+  l.443 theorem «所及有传之对应»
+  l.458 theorem «全生成之对应»
+  l.470 theorem «全守之对应»
+  l.490 theorem «有终之对应»
+  l.503 theorem «历之像»
+  l.509 theorem «历之对应»
+  l.516 theorem «迭之像»
+  l.524 theorem «迭之对应»
+  l.529 theorem «迭内之对应»
+  l.535 theorem «闭之对应»
+  l.544 theorem «定后之对应»
+  l.548 theorem «定前之对应»
+  l.552 theorem «同行之对应»
+  l.558 theorem «延之对应»

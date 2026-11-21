@@ -1,0 +1,159 @@
+*AI-written (refuter, Claude Opus, lenses WORK and BREAK), 21 to 22 November 2026, on design G2-free-astra. Scratch, outside git. The write of REPORT.md into my folder was refused by the harness ("Subagents should return findings as text"), so this text is the report.*
+
+## 1. Verdict in five lines
+
+1. The mathematics holds. The stationary criterion and the boxed criterion are correct. I checked the proof step by step, and my own rebuild found 0 disagreements in 939,056 comparisons at the level of single generations (d = 1 to 6).
+2. It survives as **one built case worth keeping**, inside a new model next to the others. It is not a centre, and it is not a law that joins.
+3. The strongest reason is that its general law is the known nilpotency criterion for a finitely generated matrix semigroup: the chain of images stabilises within d steps. The criterion is applied twice. The design's own notion of choice is put in and then taken out by monotonicity, since choosing every affordable reading dominates every course. As a result no choice, cost, share or lock does work in any proof.
+4. No old law comes out as a case of it, as the design itself says. Two of its six "new" definitions are already in the Lean: `Viability.Keepable`, and `NoReturnAt` in form.
+5. The case worth keeping is the N3/N5 pair: equal cohort sizes 2,4,0 and different points of no return (2 and 1). That difference holds only relative to the hand-picked catalogue, and the linear algebra does no work in it.
+
+## 2. Statement by statement
+
+- **S1. A stationary way continues forever iff L_Q^d(V) ≠ 0.** HOLDS IN WHAT I CHECKED.
+  - My proof read finds every step valid (part 5a).
+  - 353,374 stationary courses gave 0 disagreements:
+    - d=1 and d=2, the designer's box: 60,623 courses. I reproduced their counts exactly: 51,904 continue and 8,719 end.
+    - d=3, every start of one parent with every one-reading catalogue: 261,632.
+    - d=3, sampled two-reading catalogues: 27,729.
+    - Random instances, d=3 to 6: 3,390.
+- **S2, the boxed criterion. Generation t is keepable iff (L_C ∘ L_Q^{2^t−1})^d(V) ≠ 0.** HOLDS IN WHAT I CHECKED.
+  - Keepability was computed independently, as the greatest fixed point on the reachable graph with **every** nonempty Q ⊆ C as a move. This uses no domination argument.
+  - 939,056 comparisons at the level of single generations gave 0 disagreements:
+    - d≤2 box: 128,706.
+    - d=3 one-parent box: 578,592.
+    - d=3 sample: 208,327.
+    - Random d=3 to 6: 23,431. These continue up to t=9 even after the cohort sequence repeats, so they exercise the boxed expression where L_Q^k(W) cycles on subspaces W ≠ V.
+- **S3. The way is empty by h = ⌈log2(d+1)⌉.** HOLDS IN WHAT I CHECKED. There were 0 violations, and the bound is attained at d=2, 3, 4, 5 and 6.
+- **The least t at which the boxed expression vanishes is the step of no return, and the cohort may still be active then.** HOLDS IN WHAT I CHECKED.
+  - Crossings strictly before emptiness: 1,530 in the d=2 box (the designer's count, reproduced), 1,438 in the d=3 sample, and 92 in the random runs.
+  - Beyond the designer's box I found a crossing at generation 2 with emptiness at 3 (d=5 and d=6). The designer's latest crossing was at 2 with emptiness at 2.
+- **Words lemma: X_t is exactly the set of nonzero words of 2^t parents with 2^t−1 readings from Q.** HOLDS IN WHAT I CHECKED: 1,467 checks by direct enumeration, 0 failures.
+- **Substitution: L_{X_t,C} = L_C ∘ L_Q^{2^t−1} on every subspace.** HOLDS IN WHAT I CHECKED: 3,272 checks over every subspace for d≤4, 0 failures.
+- **Parental loss formula.** Holds by rank–nullity (rank ApB = rank B − dim(im B ∩ ker Ap)). I did not rerun it. It is used in no statement.
+- **T4.** HOLDS IN WHAT I CHECKED, rebuilt with the full graph search at d=6 to 11 and the boxed expression alone at d=12.
+  - Under I the sizes are min(d, 2^t+1).
+  - Under N3 and under N5 the sizes are 2,4,0. The first unkeepable generations are 2 and 1.
+  - Reopening every reading after generation 1 gives 4 next forms for N3 and 0 for N5.
+  - Under N3, {E11} alone continues under I.
+- **T3 and T6 instances.** HOLD, all rebuilt (`extra-output.txt`).
+- **T5 failure claims.** HOLD.
+  - `RuleShaping.favours_iff` (RuleShaping.lean 160): with a=1 and p=0, (s,c) = (1,0) gives counts (2,1) and favours; (s,c) = (0,1) gives (1,2) and does not. Both kinds are present in both, so a cohort that is a set forgets exactly what decides.
+  - `Viability.Kernel` (Viability.lean 55) is ∀ t, Reach P s t → guard t: every course, as the design says.
+
+## 3. MUST, then LESSER
+
+**MUST**
+
+1. **The decisive calculation is not cancellation (part 1, line 2).** The proof never uses cancellation. The law is a descending iteration of a join-preserving map on a lattice of finite height. It holds over any field, and over the Boolean semiring of relations, where it is the path-and-loop law of `Remainder.no_chain_of_no_loop` (Remainder.lean 620). In T4 no cancellation can occur: every map reached is a partial function on the basis (checked, `extra-output.txt` item 4). Cancellation (J²=0) only makes the F_2 verdicts differ from path verdicts.
+2. **"All [premises] are structural" (part 3) is false under T2.** "The selected repertoire is fixed up to the generation under examination" is the lock itself, handed in. The way stays the same because it is held, not because it is set again from its own share. There is no share in the model. The design half-admits this ("the repertoire itself is supplied", R4; "choice of repertoire … handed in", T2), which contradicts part 3. The free turn ("without a switching cost") is also handed in.
+3. **R5 "Yes" is more than shown.**
+   - Keepable(Y) iff the single stationary course under C keeps Y (proof step 6). My search over all 2^|C|−1 moves agreed with that single course everywhere.
+   - So the "choice among moves" does no work. What remains is the step of no return of one fixed counterfactual course. The design's section 7 concedes the mechanism.
+4. **R7 "Yes in a bounded sense" is more than shown.**
+   - No statement relates a way of selecting to more going on after it. There is one built instance (T4 under I).
+   - That instance saturates at the cyclic group of order d and is then a fixed point (d=6: sizes 2,3,5,6,6). After that, forms stop changing.
+   - "An earlier form disappears during the increase" is true for one generation only: T is back at generation 2 when d=6 (`t4-output.txt`).
+5. **The budget does no work (T3 "Budget", and R3 "Partial").**
+   - The theorem is about C alone. It holds for any nonempty set C of maps, and every C is the affordable catalogue of C0 = C at b = d.
+   - T4 uses b = d. The T3 instance for the budget is just a change of catalogue.
+   - Nothing is spent by any keeper: choosing every reading is free and dominant. R3 is absent, not partial.
+6. **T8, "six new definitions", is overstated.**
+   - "Keepable" is `Becoming.Viability.Keepable P g s := ∃ r : Run P, r.state 0 = s ∧ ∀ n, g (r.state n)` (JointKeeping.lean 91). Take P.step Y Q Y' := Q ≠ ∅ ∧ Q ⊆ C ∧ Y' = F_Q(Y) and g := nonempty, and the two match by unfolding.
+   - "Step of no return" is `ReadOffInTime.NoReturnAt` / `Recoverable` (ReadOffInTime.lean 595/591) in form. There, courses are Nat → C → Nat, and here they are sequences of repertoires.
+   - "Once unkeepable, no keepable successor" is `Recoverable.earlier` (599) in form.
+   - The subspace map and its stabilisation are known mathematics (part 5b).
+
+**LESSER**
+
+- **T4 depends on the catalogue.** Add the rank-1 reading E31 (affordable at every b) to C = {I, N3, N5}. Then N5's generation 1 becomes keepable ({E13} → {E13}), and both ending ways have equal sizes **and** equal last turns 2 (`extra-output.txt` item 1). The design fixes C, so this is not false, but the "two last turns" belong to the pair (reading, catalogue).
+- **T5: the design did not try the existential notions.** On the choice side it tried only the universal kernel. The notions that fit are `Viability.Keepable` and `GuardHorizon.Viable`. With them, the "if" half of S2 is `GuardHorizon.closed_viable` (GuardHorizon.lean 110) applied: K Y := (L_{Y,C})^d(V) ≠ 0, the move a := C, and `Enabled` holds since F_C(Y) exists. Closedness follows from L_{F_C Y, C} = L_{Y,C}² (substitution at t=1) and (L²)^d(V) = L^d(V). This is an old law used inside the new model, the opposite direction to T5. It does not mend T5.
+- **T6: the model is monotone in the cohort and in the catalogue.** I checked 675 pairs with 0 violations. Keepability is an up-set under inclusion, so none of the T6 phenomena (more ends what less keeps; something made first) can occur for cohorts. "No threshold" holds only for the output span or rank as the level.
+- **R2 "Partial" is generous.** The span of images is non-increasing along every course by construction, since there is no inflow. The fall is automatic, not derived from a draw on a stock.
+- **T7's box (d≤2) tests the stabilisation depth only up to 2.** My extension to d=3 to 6 closes this, with a bias: instances whose cohorts exceed 40 maps were skipped (803 stationary courses and 434 graph searches).
+
+## 4. The question
+
+Does a general law of the design do work that the old laws do not?
+
+Inside its own model, yes. The boxed criterion is a closed-form decision of keepability, and of the step of no return, from the starting data. `Viability.Keepable`, `GuardHorizon.closed_viable` and `ReadOffInTime.NoReturnAt` are notions and sufficient conditions, and none of them computes it.
+
+But the work is done by three things none of which is a notion of the map:
+- monotonicity of set products, which removes the choice;
+- the identity that the image of a product is the image of the composed maps;
+- stabilisation of a descending chain in a lattice of finite height, which is the textbook nilpotency criterion for a finitely generated matrix semigroup.
+
+The design's own notions do no work in the proof beyond being matrix factors in a product: the choice over repertoires is put in and taken out in step 6, the budget is a filter on C, and the reading is a factor. No old law, from either side, comes out as a case with its statement unchanged. The law could not do that, because it is about one concrete model. So, for the map's join: **no**. It is a known law at two grains in a new toy model.
+
+## 5. The specific questions
+
+**(a) The proof, step by step, and the T4 rebuild.**
+
+1. X_t is the set of nonzero words of length m = 2^t. Valid by induction: a factor of a nonzero product is nonzero, so both halves are nonzero and lie in X_{t−1}. Checked: 1,467 cases.
+2. The span of the images of X_t is Σ_A A L_Q^{m−1}(V). Valid, because L_Q preserves sums. The sketch states this for V, but step 7 needs it for every W. The computation is the same; this is a gap in the telling, not in the proof.
+3. V ⊇ L(V) ⊇ … descends and is fixed after d steps. Valid: once two terms are equal, the chain stays fixed, and a strict chain has length at most d.
+4. If W ≠ 0, then some B ∈ X has BW ≠ 0, since otherwise L(W) = 0. Valid.
+5. If W = 0, every word with m−1 ≥ d is zero, which gives h. Valid.
+6. Choosing all of C contains every course. Valid, but it needs F to be monotone in **both** Q and the cohort. Monotonicity in the cohort is used without being said.
+7. L_{X_t,C} = L_C ∘ L_Q^{m−1}. Valid. Checked on every subspace: 3,272 cases.
+8. Apply S1 to the start X_t and the way C. Valid.
+9. Unkeepability passes to every successor. Valid.
+
+No step is missing, circular or false.
+
+T4, rebuilt from the definitions in `t4.py` and `rebuild.py` before I opened `search.py`:
+- d=6, 7 and 8: under I the sizes are 2,3,5,6,6 / 2,3,5,7 / 2,3,5,8.
+- Under N3 and N5 the sizes are 2,4,0. Keepable by generation: N3 1,1,0 and N5 1,0,0.
+- Generation 1 under N3 is {E11,E12,E21,E22}, and under N5 it is {E13,E14,E23,E24}.
+- Reopening every reading gives 4 forms for N3 (the same four: F_I(X_1) = X_1) and 0 for N5.
+- This matches the design and its `output.txt`.
+
+**(b) Known mathematics.**
+- X_t = X·(QX)^{2^t−1} with the zero product removed. The stationary way continues iff the semigroup generated by the finite set QX is not nilpotent, iff (QX)^d ≠ {0}.
+- The boxed criterion is the same test applied to the generating set C·X_t = C X (QX)^{2^t−1}.
+- The theorem is that a finite set Σ of d×d matrices over a field generates a nilpotent semigroup iff all its products of length d vanish. Its known forms:
+  - for one matrix, the image chain of Fitting's lemma;
+  - for semigroups, Levitzki's theorem (a semigroup of nilpotent matrices can be triangularised at once);
+  - in the joint spectral radius literature, ρ(Σ)=0 iff Σ^d={0}, decidable in polynomial time (Gurvits 1995; Jungers 2009).
+- In order terms, it is Kleene iteration from the top of a lattice of finite height, which reaches the greatest fixed point within the height.
+- It is **not** mortality. Mortality asks whether 0 is some product (Paterson 1970: undecidable over Z for 3×3). The design asks the dual question, whether nonzero words of every length exist.
+- Keepability is Aubin's viability kernel for the set-valued map Y ↦ {F_Q(Y)}. It collapses to a single course because that map has a largest selection, F_C.
+- What the Lean statement should be: the lattice form, "a join-preserving map L on a lattice of finite height d: L^n(⊤) ≠ ⊥ for all n iff L^d(⊤) ≠ ⊥", plus domination by monotone set products. Its Boolean case touches `Remainder.no_chain_of_no_loop` and `bounded_iff_no_loop`. That join was not made, and I did not check it against Remainder's exact statement beyond lines 575–640.
+
+**(c) What the map should keep.**
+- **The equal-count pair: keep it, as a built case.**
+  - Two courses are identical under any reading of counts (2,4,0), and one is still recoverable at generation 1 while the other has passed its point of no return. That is a concrete instance for ReadOffInTime's too-late laws: a selection that reads sizes is blind to the turn. I did not find such a built case in what I read, but I read ReadOffInTime 585–625 only.
+  - Keep it in its smallest honest form: partial maps on 5 points (0 to 4; at d=6 the sixth plays no part), the catalogue named, three readings. Say that adding E31 to the catalogue erases the difference.
+- **The last turn before extinction as a phenomenon: no.** The Lean already has it in notion: the guard held without being kept (`Viability.within_not_kernel` in universal form, JointKeeping's keepable-not-kernel), and `NoReturnAt`. Here it gets a decision procedure only.
+- **The reading as a rank budget: no, as it stands.** It does work in no statement. Its only content is rank(ApB) ≤ rank p, which is one line. It would earn a place only if the budget were shared across pairings. The design's section 7 says that would break domination, and that is exactly where a real choice and a real cost would enter. That is the one direction from this design worth a further try.
+
+## 6. What I ran, and what I did not read or check
+
+**What I ran.** All files are in `/Users/ren/theories/tmp/fm/centre21/refute/G2-both-opus/`. Python only, each run under 60 s. No Lean, no build, no test, no gate. Nothing in git was touched.
+- `rebuild.py` is the model, written from DESIGN.md alone.
+- `t4.py` → `t4-output.txt`: T4 at d=6 to 11 with the full graph search. d=12 was cut by the time limit.
+- `box.py` → `box-d1.txt`, `box-d2-designer.txt` (the designer's box, counts reproduced), `box-d3-1-1.txt`.
+- `box_sample.py` → `sample-d3-k2.txt` (13 catalogues; 81 skipped as too large).
+- `rand.py` (seeds 1 and 2) → `rand-1.txt`, `rand-2.txt`.
+- `extra.py` → `extra-output.txt`: the E31 variant, d=12 by the boxed expression, the T3 and T6 instances, monotonicity, partial functions.
+- I read `search.py` and `output.txt` after my rebuild.
+- The full suite was not run, deliberately.
+
+**What I read.** BRIEF-REFUTE, BRIEF-DESIGNS, DESIGN.md, PROMPT.txt, and grep hits in PLACES.md. In the Lean:
+
+| File | Lines |
+|---|---|
+| JointKeeping.lean | 1–135 |
+| Viability.lean | 50–120 |
+| GuardHorizon.lean | 40–135 |
+| ReadOffInTime.lean | 585–625 |
+| RuleShaping.lean | 120–175 |
+| Remainder.lean | 575–640 |
+| GenerativeCore.lean | 15–32 |
+| Frame.lean | 55–75 |
+
+I also grepped the package for matrix, nilpotency and subspace content. The only hits were Dephasing/JointPhase's 2×2 numerator structure and Remainder's time-ordered couplings. The boxed statement was not found in what I read.
+
+**What I did not read.** `cx-output.txt`, Keeping.lean (only PLACES' notes on it), TurningInTime, LineOnAStock, RuleCapture, CommonResponse, Loops.lean, the October renewal files, PopulationCorrection, the chapters, DIRECTION.md, WHAT-A-MODEL-MUST-HAVE.md, and the earlier notes and AFTER.md.
+
+**What I did not check.** The parental loss formula by program. Mathlib names. Whether any built case in the Lean already has two courses equal under a count reading with different points of no return.

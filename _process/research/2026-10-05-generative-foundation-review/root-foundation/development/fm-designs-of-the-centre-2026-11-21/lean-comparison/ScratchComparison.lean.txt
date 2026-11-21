@@ -1,0 +1,256 @@
+import Becoming.GuardHorizon
+import Becoming.TurningInTime
+
+/-! AI-written by Codex. Scratch comparison of finite guarded horizons. -/
+
+namespace Becoming.ScratchComparison
+
+open Generative GuardHorizon
+
+universe u v w z
+
+section Comparison
+
+variable {S : Type u} {A : Type v} {T : Type w} {B : Type z}
+
+/-- The package's two horizon clauses at arbitrary state and move universes. -/
+def Horizon (P : Process S A) (guard : S → Prop) : Nat → S → Prop
+  | 0, s => guard s
+  | n + 1, s => guard s ∧ ∃ a, Enabled P s a ∧ ∀ t, P.step s a t → Horizon P guard n t
+
+/-- At related states inside the left guard, a right move can cover its successors
+by left successors of the given move. Each match is local to the successor. -/
+def Carries (P : Process S A) (g : S → Prop) (Q : Process T B) (h : T → Prop)
+    (R : S → T → Prop) : Prop :=
+  ∀ s t, R s t → g s → h t ∧ ∀ a, Enabled P s a →
+    ∃ b, Enabled Q t b ∧ ∀ t', Q.step t b t' → ∃ s', P.step s a s' ∧ R s' t'
+
+variable {P : Process S A} {g : S → Prop} {Q : Process T B} {h : T → Prop}
+  {R : S → T → Prop}
+
+theorem Horizon.carried (carry : Carries P g Q h R) :
+    ∀ {n s t}, R s t → Horizon P g n s → Horizon Q h n t
+  | 0, s, t, rel, within => (carry s t rel within).1
+  | n + 1, s, t, rel, ⟨within, a, enabled, rest⟩ => by
+    obtain ⟨guarded, matchMove⟩ := carry s t rel within
+    obtain ⟨b, live, covers⟩ := matchMove a enabled
+    refine ⟨guarded, b, live, fun t' st => ?_⟩
+    obtain ⟨s', step, rel'⟩ := covers t' st
+    exact Horizon.carried carry (n := n) rel' (rest s' step)
+
+end Comparison
+
+variable {S A : Type} {P : Process S A} {g : S → Prop}
+
+theorem horizon_iff_viable : ∀ n s, Horizon P g n s ↔ Viable P g n s
+  | 0, _ => Iff.rfl
+  | n + 1, _ =>
+    ⟨fun ⟨ok, a, live, all⟩ => ⟨ok, a, live, fun t st => (horizon_iff_viable n t).mp (all t st)⟩,
+     fun ⟨ok, a, live, all⟩ => ⟨ok, a, live, fun t st => (horizon_iff_viable n t).mpr (all t st)⟩⟩
+
+theorem viable_carried {T B : Type} {Q : Process T B} {h : T → Prop} {R : S → T → Prop}
+    (carry : Carries P g Q h R) {n s t} (rel : R s t) (kept : Viable P g n s) : Viable Q h n t :=
+  (horizon_iff_viable n t).mp (Horizon.carried carry rel ((horizon_iff_viable n s).mpr kept))
+
+def point : Process Unit Unit := ⟨fun _ _ _ => True⟩
+
+theorem point_viable : ∀ n, Viable point (fun _ => True) n ()
+  | 0 => trivial
+  | n + 1 => ⟨trivial, (), ⟨(), trivial⟩, fun () _ => point_viable n⟩
+
+section ClosedCase
+
+variable (P : Process S A) (guard : S → Prop)
+
+theorem closed_viable_case {K : S → Prop} (closed : Closed P guard K) :
+    ∀ n s, K s → Viable P guard n s := by
+  have carry : Carries point (fun _ => True) P guard (fun _ t => K t) := by
+    intro _ t held _
+    obtain ⟨within, a, enabled, stays⟩ := closed t held
+    exact ⟨within, fun _ _ => ⟨a, enabled, fun t' st => ⟨(), trivial, stays t' st⟩⟩⟩
+  exact fun n _ held => viable_carried carry held (point_viable n)
+
+end ClosedCase
+
+theorem closed_same : @closed_viable_case = @GuardHorizon.closed_viable := rfl
+
+theorem viable_of_le {le : S → S → Prop} (carry : Carries P g P g le)
+    {n s t} (ordered : le s t) (kept : Viable P g n s) : Viable P g n t :=
+  viable_carried carry ordered kept
+
+section Classes
+
+open Viability
+
+variable {S : Type u} {A : Type v} {O : Type w} {P : Process S A}
+  {sense : S → A → S → O} {guard : S → Prop} {allowed : S → A → Prop}
+
+/-- Include the empty class as a successor of every usable move, even with no observations. -/
+def classes (P : Process S A) (sense : S → A → S → O) (allowed : S → A → Prop) :
+    Process (S → Prop) A :=
+  ⟨fun C a D => Usable P allowed C a ∧
+    (D = (fun _ => False) ∨ ∃ o, D = Seen P sense C a o)⟩
+
+theorem keptFor_iff_horizon : ∀ n C, KeptFor P sense guard allowed n C ↔
+    Horizon (classes P sense allowed) (fun D => ∀ s, D s → guard s) n C
+  | 0, _ => Iff.rfl
+  | n + 1, C => by
+    constructor
+    · rintro ⟨within, a, usable, later⟩
+      refine ⟨within, a, ⟨_, usable, Or.inl rfl⟩, ?_⟩
+      rintro _ ⟨_, rfl | ⟨o, rfl⟩⟩
+      · exact (keptFor_iff_horizon n _).mp (keptFor_empty a n)
+      · exact (keptFor_iff_horizon n _).mp (later o)
+    · rintro ⟨within, a, ⟨_, usable, _⟩, later⟩
+      exact ⟨within, a, usable, fun o =>
+        (keptFor_iff_horizon n _).mpr (later _ ⟨usable, Or.inr ⟨o, rfl⟩⟩)⟩
+
+theorem keptFor_of_closed_case (family : (S → Prop) → Prop)
+    (within : ∀ B, family B → ∀ s, B s → guard s)
+    (closed : ∀ B, family B → ∃ a, Usable P allowed B a ∧ ∀ o, family (Seen P sense B a o)) :
+    ∀ n {B : S → Prop}, family B → KeptFor P sense guard allowed n B := by
+  let rel (_ : Unit) (C : S → Prop) := ∃ D, family D ∧ ∀ s, C s → D s
+  have carry : Carries point (fun _ => True) (classes P sense allowed)
+      (fun C => ∀ s, C s → guard s) rel := by
+    rintro _ C ⟨D, held, sub⟩ _
+    obtain ⟨a, usable, later⟩ := closed D held
+    have live : Usable P allowed C a := fun s hs => usable s (sub s hs)
+    refine ⟨fun s hs => within D held s (sub s hs), fun _ _ =>
+      ⟨a, ⟨_, live, Or.inl rfl⟩, ?_⟩⟩
+    rintro _ ⟨_, rfl | ⟨o, rfl⟩⟩
+    · exact ⟨(), trivial, D, held, fun _ h => h.elim⟩
+    · exact ⟨(), trivial, _, later o, fun _ => Seen.mono sub⟩
+  intro n B held
+  exact (keptFor_iff_horizon n B).mpr
+    (Horizon.carried carry (s := ()) ⟨B, held, fun _ h => h⟩
+      ((horizon_iff_viable n ()).mpr (point_viable n)))
+
+end Classes
+
+theorem keptFor_iff_viable {O : Type w} {sense : S → A → S → O} {allowed : S → A → Prop}
+    (n : Nat) (C : S → Prop) : Viability.KeptFor P sense g allowed n C ↔
+      Viable (classes P sense allowed) (fun D => ∀ s, D s → g s) n C :=
+  (keptFor_iff_horizon n C).trans (horizon_iff_viable n C)
+
+theorem kept_same : @keptFor_of_closed_case.{u,v,w} = @Viability.keptFor_of_closed.{u,v,w} := rfl
+
+section Clock
+
+variable {X : Type u}
+
+def whileProcess (can : X → Prop) (next : X → X) : Process X Unit :=
+  ⟨fun s _ => Law.stepWhile can next s⟩
+
+def clock (N : Nat) : Process Nat Unit := whileProcess (· < N) Nat.succ
+
+theorem clock_budget {N : Nat} : ∀ {n i}, i ≤ N → Viable (clock N) (fun _ => True) n i → i + n ≤ N
+  | 0, _, within, _ => within
+  | n + 1, i, _, ⟨_, _, ⟨_, lt, _⟩, rest⟩ =>
+    Eq.subst (motive := fun k => k ≤ N) (Nat.succ_add i n)
+      (clock_budget (n := n) (i := i + 1) lt (rest _ ⟨lt, rfl⟩))
+
+theorem Horizon.clock_bound {U : Type v} {P : Process X U} {g : X → Prop} {R : X → Nat → Prop} {N s}
+    (carry : Carries P g (clock N) (fun _ => True) R) (start : R s 0) :
+    ¬ Horizon P g (N + 1) s := fun kept =>
+  have over := clock_budget (Nat.zero_le N)
+    ((horizon_iff_viable _ _).mp (Horizon.carried carry start kept))
+  Nat.not_succ_le_self N (Eq.subst (motive := fun k => k ≤ N) (Nat.zero_add (N + 1)) over)
+
+theorem Horizon.stepWhile_end {can : X → Prop} {next : X → X} (split : ∀ s, can s ∨ ¬ can s) :
+    ∀ {n s}, (¬ Horizon (whileProcess can next) (fun _ => True) n s) →
+      ∃ k t, k < n ∧ «迭» (Law.stepWhile can next) k s t ∧ ∀ v, ¬ Law.stepWhile can next t v
+  | 0, _, fails => False.elim (fails trivial)
+  | n + 1, s, fails => by
+    cases split s with
+    | inr stop => exact ⟨0, s, Nat.succ_pos n, rfl, Law.stepWhile_none_iff.mpr stop⟩
+    | inl go =>
+      have tail : ¬ Horizon (whileProcess can next) (fun _ => True) n (next s) :=
+        fun kept => fails ⟨trivial, (), ⟨next s, go, rfl⟩, fun _ st => st.2.symm ▸ kept⟩
+      obtain ⟨k, t, lt, path, stop⟩ := Horizon.stepWhile_end split (n := n) (s := next s) tail
+      exact ⟨k + 1, t, Nat.succ_lt_succ lt, ⟨_, ⟨go, rfl⟩, path⟩, stop⟩
+
+/-- Along an actual deterministic path the clock match recovers the related endpoint. -/
+theorem clock_endpoint {can : X → Prop} {next : X → X} {R : X → Nat → Prop} {N s}
+    (carry : Carries (whileProcess can next) (fun _ => True) (clock N) (fun _ => True) R)
+    (start : R s 0) : ∀ n {t}, «迭» (Law.stepWhile can next) n s t → R t n
+  | 0, _, rfl => start
+  | n + 1, _, path => by
+    obtain ⟨p, past, go, rfl⟩ := («迭之末步» n).mp path
+    obtain ⟨b, ⟨_, lt, _⟩, cover⟩ :=
+      (carry p n (clock_endpoint carry start n past) trivial).2 () ⟨next p, go, rfl⟩
+    obtain ⟨_, ⟨_, rfl⟩, related⟩ := cover (n + 1) ⟨lt, rfl⟩
+    exact related
+
+theorem clock_bound {R : S → Nat → Prop} {N s}
+    (carry : Carries P g (clock N) (fun _ => True) R) (start : R s 0) :
+    ¬ Viable P g (N + 1) s :=
+  fun kept => Horizon.clock_bound carry start ((horizon_iff_viable _ _).mpr kept)
+
+theorem stepWhile_end {can : S → Prop} {next : S → S} (split : ∀ s, can s ∨ ¬ can s) {n s}
+    (fails : ¬ Viable (whileProcess can next) (fun _ => True) n s) :
+    ∃ k t, k < n ∧ «迭» (Law.stepWhile can next) k s t ∧ ∀ v, ¬ Law.stepWhile can next t v :=
+  Horizon.stepWhile_end split (fun kept => fails ((horizon_iff_viable _ _).mp kept))
+
+end Clock
+
+section Lock
+
+open TurningInTime Pace RuleCapture ClosedCapture PoolFromCourse
+
+variable {A : Type u} {R : Type w}
+
+theorem locked_ends_rising_case {P : Ideals.Preorder A} {M : Ideals.Preorder R}
+    {favours : R → Prop} {fA : A → R → A} {hA : A → R → R} {reads : Nat → Bool}
+    (raises : Raises P favours fA) (monotone : ReadsShare P M hA)
+    (upper : ∀ {g g'}, M.le g g' → favours g → favours g') {marked : Nat → Prop}
+    {after : A × R × Nat → Nat → A × R × Nat}
+    (outside : AloneOutside marked (windowAlone fA hA reads) after) {need : Nat} (needs : 0 < need)
+    (un : ∀ x, need ≤ x → ¬ marked x) {giving : Nat → Nat} {use : A × R × Nat → Nat} {hi : Nat}
+    (nothing : RegimeMargin.FromNothing giving) (keeps : RegimeMargin.Keeps giving 0 hi)
+    {w : A × R × Nat} {x : Nat} (high : x ≤ hi) (locked : Locked M favours hA (w.1, w.2.1))
+    (more : ∀ v : A × R × Nat, P.le w.1 v.1 → M.le w.2.1 v.2.1 →
+      use v < use (windowAlone fA hA reads v)) :
+    ∃ n t, n ≤ hi + 1 ∧
+      «迭» (net need after (fun w x => RegimeMargin.step giving (use w) x)) n (w, x) t ∧
+      (∀ v, ¬ net need after (fun w x => RegimeMargin.step giving (use w) x) t v) ∧
+      t.1 = Law.orbit (windowAlone fA hA reads) w n ∧ Locked M favours hA (t.1.1, t.1.2.1) := by
+  let alone := windowAlone fA hA reads
+  let left v l := RegimeMargin.step giving (use v) l
+  let can (p : (A × R × Nat) × Nat) := need ≤ p.2
+  let next := pair after left
+  let rel (p : (A × R × Nat) × Nat) (i : Nat) :=
+    p.1 = Law.orbit alone w i ∧ i ≤ use p.1 ∧ p.2 ≤ hi ∧ (hi < i → p.2 = 0)
+  have held := locked_alone_not_below raises monotone upper (reads := reads) locked
+  have carry : Carries (whileProcess can next) (fun _ => True) (clock (hi + 1)) (fun _ => True) rel := by
+    rintro p i ⟨way, draw, cap, exhausted⟩ _
+    refine ⟨trivial, ?_⟩
+    rintro _ ⟨_, met, _⟩
+    have time : i ≤ hi := (Nat.lt_or_ge hi i).elim
+      (fun late => False.elim (Nat.not_le_of_gt needs
+        (Eq.subst (motive := (need ≤ ·)) (exhausted late) met))) id
+    have nextWay : (next p).1 = Law.orbit alone w (i + 1) :=
+      (outside p.1 p.2 (un _ met)).trans (congrArg alone way)
+    have rising := more (Law.orbit alone w i) (held i).1 (held i).2
+    have nextDraw : i + 1 ≤ use (next p).1 := by
+      rw [nextWay]
+      exact Nat.lt_of_le_of_lt (Eq.subst (motive := fun v => i ≤ use v) way draw) rising
+    refine ⟨(), ⟨i + 1, Nat.succ_le_succ time, rfl⟩, ?_⟩
+    rintro _ ⟨_, rfl⟩
+    refine ⟨next p, ⟨met, rfl⟩, nextWay, nextDraw, kept_within keeps _ cap, fun late => ?_⟩
+    have takes := Nat.le_trans cap (Nat.le_trans (Nat.le_of_lt_succ late) draw)
+    exact (congrArg (fun z => z + giving z) (sub_eq_zero_of_le takes)).trans
+      ((Nat.zero_add _).trans nothing)
+  have start : rel (w, x) 0 := ⟨rfl, Nat.zero_le _, high, fun late => (Nat.not_lt_zero hi late).elim⟩
+  obtain ⟨n, t, lt, path, stop⟩ := Horizon.stepWhile_end (can := can) (next := next)
+    (fun p => (Nat.lt_or_ge p.2 need).elim (fun low => Or.inr (Nat.not_le_of_gt low)) Or.inl)
+    (Horizon.clock_bound carry start)
+  have way := (clock_endpoint carry start n path).1
+  exact ⟨n, t, Nat.le_of_lt_succ lt, path, stop, way,
+    Eq.subst (motive := fun z : A × R × Nat => Locked M favours hA (z.1, z.2.1)) way.symm
+      (locked_alone raises monotone upper (reads := reads) locked n)⟩
+
+end Lock
+
+theorem locked_same : @locked_ends_rising_case.{u,w} = @TurningInTime.locked_ends_rising.{u,w} := rfl
+
+end Becoming.ScratchComparison

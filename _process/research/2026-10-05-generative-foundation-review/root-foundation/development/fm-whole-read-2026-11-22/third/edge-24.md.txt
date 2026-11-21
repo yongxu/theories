@@ -1,0 +1,355 @@
+# Task file: EDGE, reader whole-c-edge-24
+
+Your 2 modules. For orientation only, what the two passes said of the four marks, of moves and of a reading (where to look, not evidence).
+
+## RuleRebuilding.lean  (1961 lines)
+
+### `both_outcomes`
+- pass a: S: `«稳开二试»` (l. 1368) gives separate iff tests for positive level forever and eventual Gone on excess take from steady and holderless starts, for member teaching, teaching age below tenure and positive quota and level. `«隙过生持至尽»` (l. 1792) keeps the rule held up to the last pre-Gone state on an over-budget rotation.
+- pass b: S: `«稳者恒持当且仅当在带»` (l. 897): source members, always on, no revision, level ≥ 1. From steady q L the rule is held at every step ↔ Band (l < s, 1 ≤ q, (q + leak q)·s ≤ g), and otherwise `steady_ends` (l. 872) reaches Gone. `«外授之稳同带»` (l. 922) is the same from outside. `«稳开二试»` (l. 1368): Goes ↔ the take test, and otherwise EndsUp, for the steady state and for `nobody`. `«存尽相斥»` (l. 1351): they exclude each other. `«隙之律»` (l. 1772): held at every step ↔ k·(q+e) + z·f ≤ g; and `«隙过生持至尽»` (l. 1792): over it, held to the last state before Gone. All of this built family, general over parameters.
+
+### `no_return`
+- pass a: S: `«无持者不复»` (l. 698) concludes closure of NoHolder under all moves for member or absent teaching. `«尽而不复»` (l. 457) concludes closure of Gone for every source from the specified empty-level ending rule.
+- pass b: S: `«尽而不复»` (l. 457): Gone is closed under the net. This is a premise built into the step (Ends sends to ⟨q,0,[],[]⟩), as the account says (l. 71). `«无持者不复»` (l. 698), concluded from the step: with no holder, no holder at every later step under source members or none. `«无持者改不行»` (l. 737): a revision without a holder does not change the quota. `«改额为零则持尽»` (l. 1457): a revision to 0 with no later nonzero revision leaves no holder s steps on. These are at the loss of the teachers, who are what keeps the rule held. B: `«及任之前持尽之例»` (l. 1955).
+
+### `rank`
+- pass a: S: `«恒取逾生则减»` (l. 509) gives exact per-step loss d on a closed nonending family of take renewal+d, d ≥ 1. `drain_of` (l. 634) empties holders within one tenure when an invariant bounds cohort length and prevents holder entry.
+- pass b: S: `«恒取逾生则减»` (l. 509): the level falls by d each step from r₀ + k·d. `«恒取逾生则尽»` (l. 539): Gone at step k+1. `drain_of` (l. 634): where no holder enters, holders are 0 after tenure s steps, a deadline. `«不及任则持尽»` (l. 658), `«额零则持尽»` (l. 677) and `«无持而门开逾生则尽»` (l. 1292): with no holder and g < f·s, Gone at some step.
+
+### `closed_region`
+- pass a: S: `«域闭»` (l. 1197) closes Within under all onIn steps given Fits: member teaching before tenure, 1 ≤ P ≤ Q and (Q + leak at P) times tenure within renewal.
+- pass b: S: `«域闭»` (l. 1197): Within P Q is closed under onIn (on, revision in [P, Q]) given Fits r P Q. `«域中储不减»` (l. 1203): the level does not fall in it. `«稳为域之例»` (l. 1216): the steady state is a case of it. `«尽而不复»` (l. 457) and `«无持者不复»` (l. 698): closed under the whole net. `Closed` (l. 487), `steady_closed` (l. 841) and `strands_closed` (l. 1740) are families closed under non-ending steps. B: `«域可得»` (l. 1225) at rB, 3 to 5.
+
+### `moves`
+- pass a: S: `within_step` (l. 1165) preserves Within and never lowers the level for every move offering entrants with any revision inside the fitted interval.
+- pass b: S: `Move` (l. 152) is a choice at each step: whether entrants are on offer, and an optional revision. `net r x y := ∃ m, y = step r m x` (l. 226) is 'the net of the possible'. Laws over every choice: `«尽而不复»` (l. 457) says Gone is closed under the whole net. `«无持者不复»` (l. 698) says NoHolder is closed under the whole net for source members or none. `«不及任则持尽»` (l. 658) drains for every course c. `«域闭»` (l. 1197) says Within P Q is closed under every step with entrants on offer and a revision in [P, Q].
+
+### `reading`
+- pass a: S: `teachers` (l. 177), `entrant` (l. 187) and `door` (l. 194) read the pre-ageing count of eligible holders to set entries. `«无持者额不与»` (l. 773) shows quota differences invisible in later levels and memberships when holders are absent and the source is internal or absent.
+- pass b: S: the door and the entry read only the teachers' count: `teachers` (l. 177), `taught` (l. 180), `door` (l. 194). `«无持者额不与»` (l. 773): two no-holder states differing only in quota have the same later level and members along every course, so the quota is read by nothing. `«同规随类»` (l. 1896): at rB, a step with a revision inside the region continues (`«续»` on net rB) under the class 'held or not' and not under the class 'same quota'. Whether it continues is decided by the class read.
+
+### declarations of RuleRebuilding.lean (by script)
+  l.129 inductive Source
+  l.136 structure Rule
+  l.145 structure St
+  l.152 structure Move
+  l.157 def sumL
+  l.162 def keep
+  l.168 def after
+  l.174 def take
+  l.177 def teachers
+  l.180 def taught
+  l.187 def entrant
+  l.194 def door
+  l.200 def reviseHeld
+  l.206 def revised
+  l.214 abbrev Ends
+  l.217 def onward
+  l.222 def step
+  l.226 def net
+  l.229 def run
+  l.234 def always
+  l.237 def Held
+  l.240 def NoHolder
+  l.243 def Gone
+  l.246 def leak
+  l.251 def steady
+  l.255 def nobody
+  l.259 abbrev Band
+  l.264 theorem le_add_sub
+  l.270 theorem le_add_sub_of_le
+  l.281 theorem exists_div
+  l.298 theorem sumL_replicate
+  l.305 theorem length_replicate'
+  l.310 theorem keep_cons_replicate
+  l.318 theorem after_replicate
+  l.331 theorem after_le_sum
+  l.337 theorem after_zero_of_sum
+  l.340 theorem after_short
+  l.346 theorem sum_keep_le
+  l.351 theorem length_keep_le
+  l.356 theorem length_keep_eq
+  l.361 theorem keep_of_length_le
+  l.369 theorem keep_keep
+  l.377 theorem keep_cons_keep
+  l.384 theorem keep_append_length
+  l.391 def Each
+  l.395 theorem each_keep
+  l.400 theorem sum_le_of_each
+  l.409 theorem sum_ge_of_each
+  l.419 theorem after_ge_of_each
+  l.433 theorem step_ends
+  l.436 theorem step_onward
+  l.439 theorem not_ends
+  l.446 theorem gone_ended
+  l.448 theorem step_gone
+  l.452 theorem level_onward_kept
+  l.457 theorem «尽而不复»
+  l.462 theorem run_gone
+  l.468 theorem not_held_of_gone
+  l.476 theorem run_add
+  l.487 def Closed
+  l.493 theorem «恒取不逾生则存»
+  l.509 theorem «恒取逾生则减»
+  l.539 theorem «恒取逾生则尽»
+  l.558 def ZeroUpTo
+  l.563 theorem zeroUpTo_nil
+  l.567 theorem zeroUpTo_keep
+  l.573 theorem zeroUpTo_step
+  l.579 theorem sum_zero_of_zeroUpTo
+  l.587 theorem entrant_of_teachers_zero
+  l.596 theorem entrant_of_quota_zero
+  l.605 theorem entrant_no_holder
+  l.617 theorem length_holders_step
+  l.625 theorem length_others_step
+  l.634 theorem drain_of
+  l.658 theorem «不及任则持尽»
+  l.665 theorem reviseHeld_zero
+  l.677 theorem «额零则持尽»
+  l.698 theorem «无持者不复»
+  l.715 theorem run_no_holder
+  l.720 theorem revised_no_holder
+  l.737 theorem «无持者改不行»
+  l.745 theorem step_same_fields
+  l.773 theorem «无持者额不与»
+  l.784 theorem taught_members_pos
+  l.789 theorem revised_none
+  l.800 theorem take_steady
+  l.806 theorem teachers_mul
+  l.809 theorem onward_steady
+  l.839 def Steady
+  l.841 theorem steady_closed
+  l.847 theorem steady_take
+  l.853 theorem held_steady
+  l.859 theorem excess
+  l.866 theorem steady_kept
+  l.872 theorem steady_ends
+  l.885 theorem one_le_of_held_steady
+  l.897 theorem «稳者恒持当且仅当在带»
+  l.922 theorem «外授之稳同带»
+  l.940 theorem band_closed
+  l.975 theorem leak_eq
+  l.984 theorem «带之二式»
+  l.992 theorem add_sub_mono
+  l.1022 theorem «额小而不足者门必过一»
+  l.1037 def rA
+  l.1040 def rB
+  l.1043 def rC
+  l.1046 def rF
+  l.1048 theorem band_bound
+  l.1053 theorem «带唯二»
+  l.1069 theorem «带一至五»
+  l.1083 theorem «带无»
+  l.1097 def Within
+  l.1103 def RevIn
+  l.1106 abbrev Fits
+  l.1111 def onIn
+  l.1114 theorem each_weaken
+  l.1119 theorem each_replicate
+  l.1123 theorem within_take
+  l.1131 theorem within_teachers
+  l.1138 theorem within_not_ends
+  l.1143 theorem within_entrant
+  l.1150 theorem within_door
+  l.1157 theorem reviseHeld_in
+  l.1165 theorem within_step
+  l.1197 theorem «域闭»
+  l.1203 theorem «域中储不减»
+  l.1208 theorem within_held
+  l.1216 theorem «稳为域之例»
+  l.1225 theorem «域可得»
+  l.1229 theorem door_no_holder
+  l.1233 theorem sum_keep_cons_pos
+  l.1241 theorem open_not_ends
+  l.1255 theorem «无持而门开不逾生则存»
+  l.1276 theorem «无持而门开众在»
+  l.1292 theorem «无持而门开逾生则尽»
+  l.1345 def Goes
+  l.1348 def EndsUp
+  l.1351 theorem «存尽相斥»
+  l.1358 theorem nobody_no_holder
+  l.1368 theorem «稳开二试»
+  l.1390 theorem «稳存而开不存则门过一»
+  l.1405 theorem «入过来者之式»
+  l.1440 theorem «开存而稳不存之式»
+  l.1448 theorem reviseHeld_some
+  l.1457 theorem «改额为零则持尽»
+  l.1473 def onceAt
+  l.1482 theorem «带不定改后»
+  l.1493 theorem not_held_of_no_holder
+  l.1502 theorem «外授者即入»
+  l.1519 theorem «三源之表»
+  l.1536 def entered
+  l.1540 theorem length_entered
+  l.1546 theorem «任满皆新»
+  l.1569 def quotas
+  l.1573 theorem within_run
+  l.1582 theorem «域中任满皆新»
+  l.1602 def strandH
+  l.1608 def strandO
+  l.1613 def strands
+  l.1617 def countW
+  l.1622 def isHeld
+  l.1627 def isEmpty
+  l.1632 def heldCount
+  l.1635 def emptyCount
+  l.1638 def lastOf
+  l.1643 theorem keep_map
+  l.1651 theorem after_map_last
+  l.1659 theorem countW_rot
+  l.1671 theorem take_strands
+  l.1693 theorem sum_strandH
+  l.1702 theorem onward_strands
+  l.1736 def Strands
+  l.1740 theorem strands_closed
+  l.1751 theorem strands_take
+  l.1757 theorem strands_held
+  l.1772 theorem «隙之律»
+  l.1792 theorem «隙过生持至尽»
+  l.1806 theorem count_total
+  l.1815 theorem mul_lt_mul_of_pos'
+  l.1827 theorem «隙存而稳不存之式»
+  l.1841 theorem «稳存而隙不存之式»
+  l.1858 def rD
+  l.1861 def rE
+  l.1864 theorem «隙存而稳不存»
+  l.1870 theorem «稳存而隙不存»
+  l.1876 def outAndBack
+  l.1885 theorem «改而成隙则尽»
+  l.1896 theorem «同规随类»
+  l.1921 theorem «弃而储增»
+  l.1931 def rG
+  l.1934 def rH
+  l.1937 def rI
+  l.1942 theorem «四境皆有»
+  l.1955 theorem «及任之前持尽之例»
+
+## SelectionShift.lean  (1149 lines)
+
+### `both_outcomes`
+- pass a: S: `Generations.goes_on_iff` (l. 364) gives a single-course equivalence under exact offspring-number inheritance thereafter. `Horizon.eventually_zero_two_fates` (l. 911) constructs two courses with opposite fates sharing every term of an initially nonempty, eventually zero-term course.
+- pass b: S, general: `Generations.goes_on_iff` (l. 364): with `ByNumber G` and exact transmission at every step from t, every later generation is nonempty iff generation t+1 is. S, general construction: `Horizon.same_terms_two_fates` (l. 664), `two_fates_of_nonempty` (l. 811), `zero_after_two_fates` (l. 873), `eventually_zero_two_fates` (l. 911): one course of terms shared by a going and an ending course. `terms_boundary` (l. 941) states two cases, not a decision between them. B: `Shrinking.positive_then_empty` (l. 1123): positive concordance at every step before N, then empty.
+
+### `no_return`
+- pass a: S: `Generations.nonempty_before` (l. 327) concludes that later positive size requires positive size at every earlier time. Emptiness is therefore irreversible for these generations.
+- pass b: S, concluded: `Generations.nonempty_before` (l. 327): an empty family stays empty (from `Reproduction.Generations.empty_from`); this is at the loss of every member, i.e. of all that gives. S: `Generations.last_term_zero` (l. 305): where the next generation is empty, both terms are zero at the step. No statement of a point from which no course keeps it. B: `ExactOnce.exact_once_ends` (l. 509), `Horizon.ending_empty` (l. 648), `Shrinking.positive_then_empty` (l. 1123).
+
+### `rank`
+- pass a: B: `Shrinking.line_step` (l. 1084) reduces the line index by one; `Shrinking.positive_then_empty` (l. 1123) concludes permanent emptiness from N+1 despite positive concordance at all times before N.
+- pass b: B: `Shrinking.positive_then_empty` (l. 1123): for every N, a built course whose family shrinks by one each step is empty from N+1 on (an end within N+1 steps). S only as a proof device: `Horizon.eventually_zero_two_fates` (l. 911) recurses down on H to the last nonempty generation. No general law of a falling rank or variant.
+
+### `closed_region`
+- pass a: S: `Generations.never_empties_while` (l. 321) keeps every generation nonempty given positive initial size and positive concordance or discordance whenever the family is nonempty.
+- pass b: S: `Generations.line_kept` (l. 346): with `ByNumber G` and exact transmission from t, for a member p at t with positive offspring number, at every n some member of generation t+n has p's offspring number (an invariant carried along). S: `Horizon.going_family` (l. 637): from H+1 on, `going G H`'s family equals G's family at H+1 (a fixed family). B: `Horizon.steady_family` (l. 721), `Alternating.course_family` (l. 980): the family is [true, false] at every step.
+
+### `moves`
+- pass a: N: Not found in the statements read.
+- pass b: N: no process with a choice among steps, policy or allowed set; each `Generations` has one given offspring function `kids t` per step. The `Horizon` constructions (`keep` l. 578, `going` l. 585, `ending` l. 589, `goingShifted` l. 765) build alternative courses from G, but no law is about what some or every choice keeps.
+
+### `reading`
+- pass a: S: `Generations.shift_step` (l. 263) preserves both selection terms under a common shift of offspring numbers for equal families and equal member amounts, while next size changes by the shift times current size.
+- pass b: S: `SameTerms` (l. 570) and `Horizon.same_terms_two_fates` (l. 664): for every G and H, `going G H` and `ending G H` have G's families through H+1 and G's concordance and discordance through H, the same terms as each other at every step, and the first is as large as G at H+1 from H+1 on while the second is empty from H+2 on; so what the selection term registers does not decide the fate within a horizon. S: `Horizon.terms_boundary` (l. 941): for G nonempty at its first generation, terms positive at unboundedly many steps are shared only by courses nonempty at every generation; terms zero after some H are shared by a course nonempty everywhere and one empty from some generation on. S: `Generations.goes_on` (l. 381): read by offspring number (`Reproduction.Generations.ByNumber`) with exact transmission from t on, positive concordance at t forces every later generation nonempty.
+
+### declarations of SelectionShift.lean (by script)
+  l.142 theorem mem_flatMap_of
+  l.148 theorem flatMap_singleton
+  l.153 theorem flatMap_empty
+  l.159 theorem mul_excess_congr
+  l.165 theorem concord_shifted
+  l.175 theorem discord_shifted
+  l.186 theorem concord_shift
+  l.190 theorem discord_shift
+  l.195 theorem concord_shift_amount
+  l.200 theorem discord_shift_amount
+  l.207 theorem total_shifted
+  l.214 theorem weighted_shift
+  l.225 theorem weight_varies_of_concord
+  l.234 theorem weight_varies_of_discord
+  l.243 theorem pos_weight_of_varies
+  l.247 theorem pos_weight_of_concord
+  l.251 theorem pos_weight_of_discord
+  l.263 theorem shift_step
+  l.279 theorem varies_of_selection
+  l.287 theorem reproducing_of_selection
+  l.292 theorem next_of_reproducing
+  l.298 theorem next_of_selection
+  l.305 theorem last_term_zero
+  l.314 theorem never_empties
+  l.321 theorem never_empties_while
+  l.327 theorem nonempty_before
+  l.337 theorem never_empties_of_unbounded
+  l.346 theorem line_kept
+  l.364 theorem goes_on_iff
+  l.381 theorem goes_on
+  l.401 def keepsOne
+  l.407 def course
+  l.414 theorem goes_on_premises
+  l.435 def shifted
+  l.443 theorem shift_step_premises
+  l.466 def kids
+  l.472 def course
+  l.478 theorem exact_first
+  l.490 theorem not_exact_second
+  l.499 theorem concord_first
+  l.502 theorem size_three
+  l.509 theorem exact_once_ends
+  l.526 def oneEach
+  l.532 def noneEach
+  l.537 theorem oneEach_family
+  l.547 theorem decides_nothing
+  l.570 def SameTerms
+  l.578 def keep
+  l.585 def going
+  l.589 def ending
+  l.594 theorem keep_kids
+  l.597 theorem keep_kids_after
+  l.601 theorem keep_family
+  l.612 theorem keep_terms
+  l.624 theorem keep_terms_after
+  l.632 theorem not_le_after
+  l.637 theorem going_family
+  l.648 theorem ending_empty
+  l.664 theorem same_terms_two_fates
+  l.696 theorem going_goes_on
+  l.700 theorem going_goes_on_of_selection
+  l.705 def markedPair
+  l.710 def carried
+  l.716 def steady
+  l.721 theorem steady_family
+  l.727 theorem steady_terms
+  l.738 theorem steady_two_fates
+  l.759 def shiftAt
+  l.765 def goingShifted
+  l.768 theorem shiftAt_family
+  l.780 theorem shiftAt_step
+  l.790 theorem shiftAt_terms
+  l.811 theorem two_fates_of_nonempty
+  l.855 theorem same_terms_everywhere_of_zero_after
+  l.873 theorem zero_after_two_fates
+  l.884 theorem zero_after_two_fates_shifted
+  l.897 theorem zero_after_premises
+  l.911 theorem eventually_zero_two_fates
+  l.941 theorem terms_boundary
+  l.962 def even
+  l.969 def course
+  l.974 theorem step_family
+  l.980 theorem course_family
+  l.987 theorem step_terms
+  l.996 theorem course_terms
+  l.1004 theorem even_double
+  l.1008 theorem odd_double
+  l.1012 theorem le_double
+  l.1020 theorem unbounded_not_every
+  l.1050 def line
+  l.1056 def kids
+  l.1061 def mark
+  l.1066 def course
+  l.1071 theorem unmarked_flatMap
+  l.1075 theorem unmarked_mark
+  l.1079 theorem replicate_length
+  l.1084 theorem line_step
+  l.1089 theorem course_family
+  l.1097 theorem course_size
+  l.1101 theorem course_sum
+  l.1107 theorem course_concord
+  l.1123 theorem positive_then_empty

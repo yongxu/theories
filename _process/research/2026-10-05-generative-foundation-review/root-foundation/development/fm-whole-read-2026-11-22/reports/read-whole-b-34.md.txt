@@ -1,0 +1,34 @@
+Reader whole-b-34. All five modules were read whole: the opening account and every declaration's statement and docstring, with proof bodies only where a statement needed one. Nothing was left unread.
+- LearnedGrouping.lean: 485 lines.
+- Learning.lean: 1161 lines, in two parts.
+- LearningRuns.lean: 459 lines.
+- LeastLoss.lean: 715 lines.
+- LevelCoupling.lean: 1072 lines, in parts. Some proof bodies were not read: ll. 540-550 and 838-850. Their statements were read.
+
+One name a statement uses was looked up in another module: `WorldsRest`, `EndlessFall` and `FallsAtLeast` in InAmounts.lean (ll. 122-128, 1238). No Lean was run and no file was written.
+
+Not answered:
+- No `U` answers.
+- Many `N` answers, because these modules have no shares, no units leaving units, no replenishing going-on and no cost to a giver, except the built stock of LearnedGrouping.
+- For Learning, LearningRuns and LevelCoupling, `both_outcomes` is `N` in the sense the question asks. Their exactly-when statements are about learning, fit or carrying, not about going on and ending.
+- LeastLoss reads a dichotomy in a docstring only (`Branching.rests_along_run`, l. 527). No single statement states it.
+
+What the fourteen questions miss that bears on the centre:
+1. LevelCoupling.lean states exactly what a reader coupled by threshold alone can carry of a level.
+   - `carried_iff_rising` (l. 904): only a response that rises with the level.
+   - `supply_not_carried` (l. 1046): it cannot carry a response that supplies what a level lacks, a response that grows as the level falls.
+   - Such a response needs coupling by level (`supplyLaw_through`, l. 1033) or a complement at a fixed total (`supply_carried_by_complement`, l. 1060).
+   - This is a general statement of when a running-down level can make a difference to what responds. It bears directly on the question of a draining that makes a difference early enough.
+2. Learning.lean states that a selection through a map cannot separate what the map lumps.
+   - `selects_not_right_of_parted` (l. 1013) and `selects_right_iff` (l. 1058).
+   - `Training.unselected_beyond_data` (l. 958): training through the data leaves untried values as free as the class leaves them.
+   - These are general forms of the claim that courses alike to a selection are selected alike.
+3. LearnedGrouping.lean is a built case in which learning draws on the same stock that acting needs.
+   - `parsed_short` (l. 270) and `broaden_one_form` (l. 311): the utterance parses, but the response is no longer possible.
+   - This is a built cost to the one who learns. No general law of it was found in this module.
+4. LeastLoss.lean says when a loss means anything is lost.
+   - A positive loss along a run held by a list needs a process that merges (`Branching.loss_needs_merge`, l. 522; `Law.loss_needs_merge`, l. 577).
+   - A lossless law over finitely many configurations regains every loss (`Law.Lossless.regains`, l. 547).
+   - Rest needs only a finite reading (`Branching.rests_along_run`, l. 532).
+   - `Law.Lossless.reset_unlisted` (l. 641) and `Reset.kept_by_rest` (l. 682): a part that is reset at every step inside a whole that merges nothing passes what it loses into a rest that grows without bound.
+   - So irreversibility is located in merging, which bears on where a point of no return can be stated.

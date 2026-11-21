@@ -1,0 +1,507 @@
+# Task file: EDGE, second batch, reader whole-c-edge2-09
+
+Your 5 modules. In each, BOTH earlier passes found a statement with both outcomes and NEITHER found a law of ending within a bound. For orientation only, what they said (where to look, not evidence).
+
+## RouteFormation.lean  (768 lines)
+
+### `both_outcomes`
+- pass a: S: `inspect_installed` (l. 609) gives both installation outcomes on one ready funded inspection, according to whether its candidate fits.
+- pass b: B: `inspect_installed` (l. 609): installed exactly where the program fits, otherwise none. This is not a dichotomy of going on and ending.
+
+### `no_return`
+- pass a: S: `place` (l. 261), `inspect` (l. 278), `discard` (l. 290), `search` (l. 302), `encounter` (l. 390) and `reconsider` (l. 400) preserve an already blocked apparatus, including when a failed evidence read sets blocked to true again.
+- pass b: B, as a premise in the definitions: `place` (l. 261), `inspect` (l. 278), `discard` (l. 290) and `encounter` (l. 390) leave a blocked apparatus unchanged, and no theorem concludes that being blocked is permanent. `verdict_not_program` (l. 488): kept verdicts do not replace a removed program. `discrepancy_no_parts` (l. 539): with two parts, the repair records the discrepancy and blocks.
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N
+
+### `closed_region`
+- pass a: S: `step_stock` (l. 584) preserves each fixed total of stock plus drawn under every formation move.
+- pass b: B: conserved quantities. `step_stock` (l. 584) and `course_stock` (l. 594): stock plus drawn is invariant along every course. `place_parts` (l. 332) and `place_step_parts` (l. 602): parts plus used parts.
+
+### `moves`
+- pass a: S: `course_stock` (l. 594) conserves stock plus drawn across every course of the six formation moves.
+- pass b: B: `formationProcess` (l. 570) is a `Process Apparatus FormationMove` with six moves. `trace_iff` (l. 579): courses end where the moves take the start. `course_stock` (l. 594): every course keeps stock plus drawn. `inspection_transfers` (l. 631): an inspection step against a code's probe records, from an unblocked configuration with stock, with a two-socket route and distinct primitives, installs only a program agreeing with the code on every expression.
+
+### `reading`
+- pass a: S: `inspect_installed` (l. 609) decides installation from the sample fit when ready and funded. B: `old_records_admit_duplicate` (l. 497) exhibits agreement on probes and disagreement on novel.
+- pass b: B: `fits` (l. 142), and `inspect_installed` (l. 609): inspection installs a program exactly where it fits the samples, so the records decide the program. `probe_identifies_route` (l. 167): the composite probe identifies the route where the primitives differ. `reversal_unseen` (l. 211): where the primitives are equal, the order changes no value. `old_records_admit_duplicate` (l. 497): the probe records admit a duplicating program that fails the novel expression. `develop_course_unobserved` (l. 727): unobserved, the wrong program stays and answers. `novel_record_separates` (l. 508).
+
+### declarations of RouteFormation.lean (by script)
+  l.65 theorem replicate_append
+  l.72 theorem not_mem_of_all
+  l.81 abbrev Route
+  l.84 def dispatch
+  l.88 structure Program
+  l.95 def operate
+  l.102 def routeFor
+  l.105 def programFor
+  l.108 theorem programFor_operates
+  l.123 def generatedRoutes
+  l.128 theorem two_socket_routes
+  l.131 theorem mem_two_socket
+  l.142 def fits
+  l.146 theorem own_program_fits
+  l.158 theorem fits_agrees
+  l.167 theorem probe_identifies_route
+  l.176 theorem accepted_transfers
+  l.186 def extent
+  l.192 theorem equal_primitives_repeat
+  l.211 theorem reversal_unseen
+  l.216 theorem extended_transfers
+  l.244 structure Apparatus
+  l.257 def fromLearner
+  l.261 def place
+  l.272 def assemble
+  l.278 def inspect
+  l.290 def discard
+  l.297 def attempt
+  l.302 def search
+  l.309 def develop
+  l.315 def respond
+  l.324 theorem place_stock
+  l.332 theorem place_parts
+  l.340 theorem assemble_stock
+  l.346 theorem inspect_stock
+  l.353 theorem discard_stock
+  l.360 theorem attempt_stock
+  l.369 theorem search_stock
+  l.379 theorem develop_stock
+  l.390 def encounter
+  l.400 def reconsider
+  l.405 theorem sub_add_add
+  l.409 theorem encounter_stock
+  l.423 theorem reconsider_stock
+  l.438 def prepared
+  l.441 def developed
+  l.444 theorem interpretation_no_route
+  l.448 theorem wrong_route_replaced
+  l.453 theorem develop_keeps_records
+  l.456 theorem formed_answers_novel
+  l.459 theorem example_account
+  l.464 theorem no_parts_blocks
+  l.469 theorem partial_assembly
+  l.474 theorem formed_short
+  l.479 theorem switched_third_route
+  l.485 def damaged
+  l.488 theorem verdict_not_program
+  l.492 def collapsed
+  l.494 def duplicated
+  l.497 theorem old_records_admit_duplicate
+  l.502 theorem repertoire_forms_failing_route
+  l.508 theorem novel_record_separates
+  l.514 def corrected
+  l.518 def further
+  l.521 theorem fresh_record_rebuilds
+  l.528 theorem repaired_answers_further
+  l.534 theorem repair_account
+  l.539 theorem discrepancy_no_parts
+  l.545 theorem unobserved_keeps_wrong
+  l.552 inductive FormationMove
+  l.561 def formationStep
+  l.570 def formationProcess
+  l.573 theorem course_of_moves
+  l.579 theorem trace_iff
+  l.584 theorem step_stock
+  l.594 theorem course_stock
+  l.602 theorem place_step_parts
+  l.609 theorem inspect_installed
+  l.623 theorem installed_of_test
+  l.631 theorem inspection_transfers
+  l.641 theorem extended_inspection_transfers
+  l.652 theorem inspection_installs_own
+  l.664 theorem training_no_route
+  l.673 theorem develop_course_replaces
+  l.679 theorem develop_course_records
+  l.684 theorem develop_course_executes
+  l.689 theorem develop_course_account
+  l.695 theorem develop_course_removed
+  l.701 theorem develop_course_no_parts
+  l.706 theorem develop_course_partial
+  l.711 theorem develop_course_short
+  l.716 theorem develop_course_switched
+  l.722 theorem develop_course_collapsed
+  l.727 theorem develop_course_unobserved
+  l.738 def repair
+  l.741 theorem repair_course_rebuilds
+  l.749 theorem repair_course_further
+  l.754 theorem repair_course_account
+  l.759 theorem repair_course_no_parts
+
+## RuleHandoff.lean  (561 lines)
+
+### `both_outcomes`
+- pass a: S: `integrate_enabled_iff` (l. 466) characterizes exactly which ballot enables integration at a protocol state.
+- pass b: S: `integrate_enabled_iff` (l. 466) is an exactly-when, of the enabling of one move, not of going on and ending. `changed_rule_requires_adoption` (l. 234) and `rule_change_located` (l. 264): every change of rule along a trace sits at an adoption step that uses the recorded proposal and passes governance. N: no dichotomy of going on and ending.
+
+### `no_return`
+- pass a: S: `handoff_step_present` (l. 522) concludes that a handoff cannot restore an absent participant; `step` (l. 101) changes presence only by handoff.
+- pass b: S, for one step and for repeated handoffs: `handoff_does_not_invent_participation` (l. 277), `repeated_handoff_inherits` (l. 290) and `handoffs_trace_keeps` (l. 449) keep rule, roster and adoptions. No event in `step` adds to present, but no theorem was found saying presence is never regained along an arbitrary trace. B: `handoff_without_participation` (l. 497): after a handoff to nobody, integration is not enabled. `low_support_infeasible` (l. 417).
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N: no bound on ending, no variant and no deadline.
+
+### `closed_region`
+- pass a: S: `handoffs_trace_keeps` (l. 449) preserves each fixed rule, roster and adoption history across any all-handoff trace.
+- pass b: S: `rule_kept` (l. 204, Gated.KeptBy) makes the rule an invariant of every non-adopting step. `nonadopting_trace_keeps_rule` (l. 247) and `rule_inherited` (l. 259) carry it along traces. `repeated_handoff_inherits` (l. 290): rule, roster and adoptions are invariant under any list of handoffs. `trace_iff_run` (l. 165): the traces are exactly the completed runs.
+
+### `moves`
+- pass a: S: `nonadopting_trace_keeps_rule` (l. 247) preserves the rule along any trace whose events are all nonadopting.
+- pass b: S: `process : Process State Event := ofPartial step` (l. 124), with events review, enroll, propose, adopt, integrate and handoff as moves. `rule_kept` (l. 204): Gated.KeptBy process adopts State.rule, i.e. every non-adopting step keeps the rule. `rule_inherited` (l. 259): every trace whose moves all have adopts = false keeps the rule. `integrate_enabled_iff` (l. 466): integrating a ballot is enabled exactly where `technical s b = true`. All are of this one built model.
+
+### `reading`
+- pass a: S: `same_relations_same_integration` (l. 533) makes equal roster, presence and rule sufficient for identical integration enablement on a ballot. B: `counts_no_integration_reading` (l. 551) rules out the three counts as a decision on two actual histories.
+- pass b: S: `same_enacted_relations_same_decision` (l. 298): two states with the same roster, presence and rule give the same technical decision for every ballot. `same_relations_same_integration` (l. 533) says the same of Enabled. `no_count_only_decision` (l. 385): no f : Nat×Nat×Nat → Bool on the summary (roster, present and review lengths) gives technical on both formed and revised, which have equal summaries and different decisions. `counts_no_integration_reading` (l. 551) says the same of Enabled. So a coarse count cannot decide what the enacted relations decide.
+
+### declarations of RuleHandoff.lean (by script)
+  l.49 inductive Rule
+  l.54 structure Ballot
+  l.60 structure State
+  l.70 def voters
+  l.73 def consistent
+  l.76 def governance
+  l.80 def technical
+  l.86 inductive Event
+  l.95 def handoff
+  l.98 def fork
+  l.101 def step
+  l.122 def run
+  l.124 def process
+  l.126 def initial
+  l.127 def allVote
+  l.128 def twoVote
+  l.129 def fourVote
+  l.130 def formation
+  l.134 def formed
+  l.137 def revised
+  l.138 def revision
+  l.142 theorem some_of_ite
+  l.148 theorem cond_of_ite
+  l.154 theorem mem_of_contains
+  l.165 theorem trace_iff_run
+  l.168 theorem admitted_requires_review
+  l.175 theorem adoption_uses_recorded_proposal
+  l.187 def adopts
+  l.195 def nonAdopting
+  l.204 theorem rule_kept
+  l.222 theorem adopts_of_nonAdopting
+  l.230 theorem nonadopting_step_preserves
+  l.234 theorem changed_rule_requires_adoption
+  l.247 theorem nonadopting_trace_keeps_rule
+  l.254 theorem nonadopting_history_inherits
+  l.259 theorem rule_inherited
+  l.264 theorem rule_change_located
+  l.272 theorem handoff_preserves_record
+  l.277 theorem handoff_does_not_invent_participation
+  l.282 theorem fork_retains_source
+  l.286 def handoffs
+  l.290 theorem repeated_handoff_inherits
+  l.298 theorem same_enacted_relations_same_decision
+  l.304 theorem filter_absent
+  l.309 theorem voters_absent
+  l.314 theorem no_participation_no_integration
+  l.320 theorem extend_case
+  l.326 theorem majority_acceptance_survives_extension
+  l.337 theorem relations_form_through_work
+  l.338 theorem review_alone_does_not_confer_office
+  l.340 theorem office_without_review_fails
+  l.341 theorem proposal_alone_does_not_change_rule
+  l.343 theorem authorized_revision_is_actual
+  l.344 theorem low_support_cannot_revise
+  l.346 theorem duplicate_votes_do_not_create_mandates
+  l.349 theorem inherited_rules_change_access
+  l.353 theorem wait_and_objection_matter
+  l.358 theorem inherited_revision_continues
+  l.363 theorem copied_rule_without_participation_fails
+  l.367 theorem enabling_one_operation_need_not_enable_revision
+  l.372 theorem successor_can_revise_inherited_rule
+  l.376 theorem boundary_is_not_exclusive_membership
+  l.382 def summary
+  l.385 theorem no_count_only_decision
+  l.393 theorem common_history_can_branch_with_different_rules
+  l.399 theorem formation_trace
+  l.402 theorem revision_trace
+  l.405 theorem inherited_course_trace
+  l.412 theorem successor_revision_trace
+  l.417 theorem low_support_infeasible
+  l.420 theorem review_step_keeps_roster
+  l.425 theorem entry_without_review_disabled
+  l.428 theorem proposal_step_keeps_rule
+  l.433 theorem handoff_step_eq
+  l.437 theorem handoff_step_keeps
+  l.442 theorem handoffs_trace_eq
+  l.449 theorem handoffs_trace_keeps
+  l.455 theorem fork_step
+  l.459 theorem branch_revises
+  l.466 theorem integrate_enabled_iff
+  l.474 theorem repeated_votes_disabled
+  l.478 theorem wait_and_objection
+  l.488 theorem handoff_access
+  l.497 theorem handoff_without_participation
+  l.504 theorem integration_without_revision
+  l.517 theorem entry_step_requires
+  l.522 theorem handoff_step_present
+  l.527 theorem fork_shares_position
+  l.533 theorem same_relations_same_integration
+  l.540 theorem no_presence_no_integration
+  l.545 theorem majority_integration_extends
+  l.551 theorem counts_no_integration_reading
+
+## RuleShaping.lean  (917 lines)
+
+### `both_outcomes`
+- pass a: S: `stretch_iff` (l. 373) decides whether initially present shapers keep at least their starting share after m waiting steps and n return steps by comparing the two cumulative offspring multipliers.
+- pass b: S: `threshold_rises` (l. 570) and `threshold_falls` (l. 603): with lo < c < hi, from above the threshold the share rises strictly at every step, and from below it falls strictly at every step (shapers present). `favours_iff`/`disfavours_iff` (l. 160, 167) and `stretch_iff`/`stretch_lt_iff` (l. 373, 383) are exactly-whens. All are general over the parameters of this model and concern rising or falling of a share, not going on or ending. B: `Assorting.either_verdict` (l. 853) and `Sized.either_verdict` (l. 902).
+
+### `no_return`
+- pass a: S: `threshold_from_below` (l. 501) concludes share never rises above its start when initially below threshold under the low rule, with lo ≤ hi and lo ≤ cost. `threshold_present_below` (l. 588) retains initially present shapers under those same premises.
+- pass b: S (concluded, at the share, not at the loss of a giver): `threshold_from_below` (l. 501): with lo ≤ hi and lo ≤ c, from a start where shapers are fewer, the share is never again above its start, under every schedule of reading. `threshold_rule_below` (l. 544): the rule stays shaped a lo p c. No extinction of a kind is stated.
+
+### `rank`
+- pass a: N: `nothing_back_falls` (l. 287) gives a strictly falling share; `present_along` (l. 271) keeps initially present shapers present under a fixed positive offspring factor. I found no deadline for their extinction.
+- pass b: N: no law of ending within a bound and no falling variant toward an end. The share falls strictly at every step (`nothing_back_falls`, l. 287; `threshold_falls`, l. 603), with no bound on reaching anything. The Timing witnesses (`seven_falls`, `eight_rises`, l. 795, 801) give step counts at which the verdict turns.
+
+### `closed_region`
+- pass a: S: `threshold_rule_below` (l. 544) and `threshold_from_below` (l. 501) keep the low rule and low-side population under any schedule from the consistent low start with lo ≤ hi and lo ≤ c.
+- pass b: S: `threshold_from_above` (l. 482): shares not below the start form a region the course never leaves. `threshold_rule_above`/`threshold_rule_below` (l. 520, 544): the rule in force is fixed at every step. `covering_locks` (l. 443): Locked holds from the step after the first reading. `neutral_steady` (l. 303): with s = 0 and c = 0, selection leaves the share where it is (a fixed point).
+
+### `moves`
+- pass a: S: `threshold_rule_above` (l. 520) keeps the high rule for every read-or-hold schedule from a high-side population under that rule when lo ≤ hi and cost ≤ hi.
+- pass b: S: the only choice quantified is the schedule of reading `reads : Nat → Bool`. `threshold_from_above` (l. 482), `threshold_from_below` (l. 501), `threshold_rule_above` (l. 520), `threshold_rises` (l. 570) and `threshold_falls` (l. 603) hold under every schedule of reading. No `Process S A` and no policy over steps occurs.
+
+### `reading`
+- pass a: S: `byBack_reads_iff` (l. 431) equates ReadsShare for the rebuilt rule with monotonicity of the exclusive return in population share.
+- pass b: S: `byBack` (l. 426): at a reading step the rule read gives each shaper a + σ x + p, where σ x is what comes back at the share x. `byBack_reads_iff` (l. 431): this rule reads the share (RuleCapture.ReadsShare) exactly where σ is monotone in the share order. `thresholdBack` (l. 458): what comes back is hi where shapers are at least as many as others, else lo.
+
+### declarations of RuleShaping.lean (by script)
+  l.150 def shaped
+  l.155 theorem eq_of_counts
+  l.160 theorem favours_iff
+  l.167 theorem disfavours_iff
+  l.175 theorem favours_alike
+  l.182 theorem shared_lowers
+  l.200 theorem shared_lowers_strictly
+  l.222 theorem shared_raises
+  l.240 theorem lower_c_raises
+  l.246 theorem lower_c_raises_strictly
+  l.254 theorem shaped_shift
+  l.262 theorem falls_strictly
+  l.271 theorem present_along
+  l.277 theorem present_of_le
+  l.287 theorem nothing_back_falls
+  l.298 theorem c_zero_favours
+  l.303 theorem neutral_steady
+  l.313 def thenBy
+  l.317 theorem select_thenBy
+  l.322 theorem pow_pos_of_pos
+  l.327 def held
+  l.331 theorem orbit_held
+  l.338 theorem le_select_iff
+  l.350 theorem lt_select_iff
+  l.362 theorem stretch_eq
+  l.373 theorem stretch_iff
+  l.383 theorem stretch_lt_iff
+  l.396 theorem wait_not_more
+  l.411 theorem back_longer_not_less
+  l.426 def byBack
+  l.431 theorem byBack_reads_iff
+  l.443 theorem covering_locks
+  l.458 def thresholdBack
+  l.460 theorem thresholdBack_above
+  l.464 theorem thresholdBack_below
+  l.469 theorem thresholdBack_mono
+  l.482 theorem threshold_from_above
+  l.501 theorem threshold_from_below
+  l.520 theorem threshold_rule_above
+  l.544 theorem threshold_rule_below
+  l.570 theorem threshold_rises
+  l.588 theorem threshold_present_below
+  l.603 theorem threshold_falls
+  l.636 def Grouped
+  l.644 theorem grouped_returns
+  l.663 theorem grouped_rises_iff
+  l.679 theorem grouped_rises_iff_sized
+  l.692 theorem grouped_alike_iff
+  l.704 theorem grouped_kept_rises
+  l.714 theorem grouped_uniform_iff
+  l.731 def even
+  l.735 theorem favours
+  l.739 theorem shared_disfavours
+  l.743 theorem rises
+  l.747 theorem falls
+  l.756 theorem without_falls
+  l.762 theorem with_rises
+  l.775 theorem soon_rises
+  l.783 theorem late_falls
+  l.789 theorem shorter_falls
+  l.795 theorem seven_falls
+  l.801 theorem eight_rises
+  l.817 def assortedOffspring
+  l.824 def mixedOffspring
+  l.830 theorem assorted_grouped
+  l.839 theorem mixed_grouped
+  l.853 theorem either_verdict
+  l.873 theorem together_grouped
+  l.886 theorem apart_grouped
+  l.902 theorem either_verdict
+
+## SeekingRuns.lean  (137 lines)
+
+### `both_outcomes`
+- pass a: S: `rests_iff` (l. 74) gives an exact condition for resting with the target met on the run of a determined law.
+- pass b: S: `rests_iff` (l. 74), general for determined laws: rests-from-some-step-with-target holds exactly when a fixed configuration meeting the target is reached. B: `captured_state_returns` (l. 119) and `captured_rule_changes` (l. 125) give, for one built model, a perturbation that returns and one that never returns. Neither is of going on against ending.
+
+### `no_return`
+- pass a: B: `captured_rule_changes` (l. 125) concludes that flipping the Boolean rule gives a different state at every positive time from the unperturbed run.
+- pass b: S: `captured_rule_changes` (l. 125), built in Captured: from a configuration whose rule is flipped, the run differs at every step n+1 from the unperturbed run, so the perturbation never comes back (concluded). S: `rests_iff` (l. 74), general: resting with the target from some T on is equivalent to reaching a fixed configuration meeting it, an absorbing configuration (concluded). Neither concerns the loss of something that gives.
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N
+
+### `closed_region`
+- pass a: S: `rests_iff` (l. 74) makes a reached target-meeting fixed state sufficient for permanent rest with the target met.
+- pass b: S: `rests_iff` (l. 74) and `aboveAll_never_rests` (l. 102): the fixed configurations of next (next s = s). A run rests exactly on reaching one, and no fixed configuration of a run has every seeker above all others. There is no invariant or largest closed region beyond fixed points.
+
+### `moves`
+- pass a: S: `aboveAll_not_two` (l. 108) rules out two distinct seekers each standing above all others at every position on any run of any process.
+- pass b: S: `aboveAll_not_two` (l. 108): for any Process P with moves and any run r of it, at no step do two distinct seekers both stand above all others. It holds of every run, but pointwise of each state. The other laws (`rests_iff` l. 74, `more_never_rests` l. 92, `aboveAll_never_rests` l. 102) are of runs of a determined law (Law.process next), where there is no choice.
+
+### `reading`
+- pass a: S: `Law.perturbation_reabsorbed` (l. 49) gives identical positive-time orbits from equal rule coordinates when that coordinate determines the next configuration.
+- pass b: S: `Law.perturbation_reabsorbed` (l. 49): where next(x,g) depends only on the rule g (premise byRule), two configurations with the same rule have the same orbit from step n+1. What the law reads (the rule) decides the course. No observation or learned rule otherwise.
+
+### declarations of SeekingRuns.lean (by script)
+  l.49 theorem perturbation_reabsorbed
+  l.74 theorem rests_iff
+  l.92 theorem more_never_rests
+  l.102 theorem aboveAll_never_rests
+  l.108 theorem aboveAll_not_two
+  l.119 theorem captured_state_returns
+  l.125 theorem captured_rule_changes
+
+## Selection.lean  (989 lines)
+
+### `both_outcomes`
+- pass a: B: `Diversion.blind_to_source` (l. 965) puts continued support and permanent loss side by side for supplying and diverting flows selected alike. It compares specified histories.
+- pass b: S: `Web.selects_alike_iff` (l. 191), `selects_alike_all_iff` (l. 292) and `Relabel.selected_alike_iff` (l. 543) are general exactly-when laws of selecting alike, not of going on and ending. B: `Clearing.unselected` (l. 689): the dweller ended in the cleared world and not in the spared one, while every selection through the clearer selects both alike. B: `Diversion.favours` (l. 934): dweller unsupported from step 1 on in one flow, supported throughout in the other.
+
+### `no_return`
+- pass a: B: `Diversion.favours` (l. 934) concludes that the dweller lacks support at every positive time in the specified diverting flow.
+- pass b: B: `Diversion.favours` (l. 934): ∀ n, ¬ Supported (n+1) .dweller in the diverting flow, concluded for the built world, at the loss of a dependent formation's support. B: `Clearing.unselected` (l. 689): DwellerEnded in the cleared world (an ending, from Witnesses). N for a general point of no return.
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N
+
+### `closed_region`
+- pass a: B: `Diversion.takerAlone_closed` (l. 911) gives closure of the taker alone under the coupling relation in the diverting flow.
+- pass b: S: `Flow.beyond_pool_coupling` (l. 327): nothing beyond a pool's coupling closure (WithinPoolCoupling, l. 319) exchanges with a condition coupled into a formation within it; the closure is closed under being affected through what couples in. B: `Diversion.takerAlone_closed` (l. 911) and `supplied_closed` (l. 920): the taker alone is closed under CoupledFrom and under Affects.
+
+### `moves`
+- pass a: S: `Relabel.EquivariantChoice.withholds_of_full_tie` (l. 667) requires an equivariant optional choice to withhold when all entries tie and two alternatives differ. This is choice among alternatives at one map.
+- pass b: N for a Process with moves. S: `Relabel.EquivariantChoice.untied` (l. 662) and `withholds_of_full_tie` (l. 667): any choice rule of at most one alternative that commutes with exchanging alternatives chooses no tied alternative, and returns none at a full tie of two or more. B: the flows diverting, undiverted and supplying in Diversion (ll. 807-828) are alternative ways compared, not choices within one process.
+
+### `reading`
+- pass a: S: `Web.selects_alike_iff` (l. 191) gives the exact distinction available to selections respecting a formation’s couplings; `Web.selects_alike_all_iff` (l. 292) gives the pooled version.
+- pass b: S: `Web.SelectsThrough` (l. 137) is a selection that respects likeness through f's couplings (AlikeThroughUpTo, what couples in). `Web.selects_alike_iff` (l. 191): selected alike by every such selection ↔ alike through the couplings. `Web.separates` (l. 200): where they differ, some selection separates them. `Flow.unselected_beyond_coupling` (l. 345): under WithheldLevels, balance on coupled conditions and the part beyond the closure, the selection is the same with and without the part. `Relabel.selected_alike_iff` (l. 543): selected alike by every Equivariant selection ↔ the map ties them. B: `Clearing.unselected` (l. 689): DwellerEnded is a selection through the clearer's couplings at no step.
+
+### declarations of Selection.lean (by script)
+  l.137 def SelectsThrough
+  l.143 def ScoresThrough
+  l.149 def SelectsThroughAll
+  l.158 theorem AlikeThrough.trans
+  l.164 theorem AlikeThroughUpTo.trans
+  l.169 theorem AlikeThroughAll.refl
+  l.173 theorem AlikeThroughAll.symm
+  l.178 theorem AlikeThroughAll.trans
+  l.184 theorem class_selects
+  l.190 class alike
+  l.191 theorem selects_alike_iff
+  l.200 theorem separates
+  l.206 theorem SelectsThrough.excludes_iff
+  l.211 theorem admits_through
+  l.217 theorem observed_scores
+  l.222 theorem ScoresThrough.atLeast
+  l.229 theorem SelectsThrough.later
+  l.234 theorem SelectsThrough.widen
+  l.239 theorem SelectsThrough.not
+  l.246 theorem SelectsThrough.and
+  l.257 theorem scores_alike_iff
+  l.277 theorem SelectsThrough.all
+  l.282 theorem SelectsThroughAll.and
+  l.292 theorem selects_alike_all_iff
+  l.302 theorem separates_all
+  l.319 def WithinPoolCoupling
+  l.327 theorem beyond_pool_coupling
+  l.345 theorem unselected_beyond_coupling
+  l.356 theorem unscored_beyond_coupling
+  l.369 theorem uncoupled_beyond_pool
+  l.386 theorem unselected_beyond_pool
+  l.399 theorem unselected_beyond_coupling_all
+  l.414 theorem unselected_beyond_coupling_responsive
+  l.446 theorem share_rises_through
+  l.477 def swap
+  l.479 theorem swap_left
+  l.481 theorem swap_right
+  l.488 theorem swap_other
+  l.492 theorem swap_swap
+  l.504 theorem swap_inj
+  l.509 def Equivariant
+  l.514 def EquivariantValue
+  l.519 def EquivariantChoice
+  l.525 theorem fixed_of_tied
+  l.537 theorem Equivariant.tied
+  l.543 theorem selected_alike_iff
+  l.552 theorem Equivariant.untied
+  l.559 theorem Equivariant.none_of_full_tie
+  l.568 def Alone
+  l.571 theorem alone_equivariant
+  l.581 theorem alone_single
+  l.589 theorem singled_iff_untied
+  l.604 theorem EquivariantValue.tied
+  l.609 theorem EquivariantValue.full_tie
+  l.614 theorem EquivariantValue.level
+  l.620 theorem EquivariantValue.const
+  l.626 theorem entry_equivariant
+  l.631 theorem valued_alike_iff
+  l.641 theorem map_swap_eq_some
+  l.649 theorem EquivariantChoice.selects
+  l.657 theorem EquivariantChoice.single
+  l.662 theorem EquivariantChoice.untied
+  l.667 theorem EquivariantChoice.withholds_of_full_tie
+  l.689 theorem unselected
+  l.700 theorem dweller_within_reach
+  l.711 theorem dweller_spared
+  l.718 theorem clearer_spared
+  l.727 theorem selected_by_dweller
+  l.737 theorem dweller_alike_gone
+  l.749 def BothAdmitted
+  l.757 theorem selected_pooled
+  l.788 inductive Formation
+  l.793 inductive Place
+  l.798 def first
+  l.801 def drawn
+  l.804 def raised
+  l.807 def diverting
+  l.819 def undiverted
+  l.825 def supplying
+  l.831 def divertedLevel
+  l.836 def undivertedLevel
+  l.841 def suppliedLevel
+  l.847 def web
+  l.863 def gauge
+  l.869 def StoreAtLeast
+  l.873 def takerAlone
+  l.877 theorem diverting_balances
+  l.883 theorem undiverted_balances
+  l.887 theorem supplying_balances
+  l.893 theorem dependent
+  l.899 theorem diverting_acting
+  l.904 theorem diverting_taking
+  l.911 theorem takerAlone_closed
+  l.920 theorem supplied_closed
+  l.934 theorem favours
+  l.965 theorem blind_to_source

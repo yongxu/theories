@@ -1,0 +1,14 @@
+Reader whole-b-36. All four modules were read whole: every statement and docstring, and the opening account of each. LimitVerification.lean has 744 lines, LineOnAStock.lean 2143, LineOnAStockCases.lean 274 and LineageDrawdown.lean 679. Proof bodies were read only where a statement needed one, for example to see that RegimeMargin.step giving H x is x - H + giving (x - H). Four definitions were looked up in other modules to understand names: «退化», «延», FromNothing and Dependent. No Lean, build or test was run.
+
+Named in an opening account but not stated in its module (so D):
+- LimitVerification: LearnableRuns.learnable_iff_tracks, learnable_iff_identifies and Merge.not_identifies.
+- LineageDrawdown: Flow.below_of_excess, Flow.family_excess_ends and Restored.returns. The claim that the gate makes the end last is also D.
+- LineOnAStock: TurningInTime.locked_ends_rising and count_rises.
+
+Things the fourteen questions miss that bear on the centre:
+1. In LineOnAStock the giving is always a function handed in, and kids is fixed: no rule is set again from a share. The account says this.
+2. ways_alike, falls_to_unmet and way_while_met prove that up to the first unmet need the way is the generation, in which no giving, use or level appears. The docstring calls this the model's form of a going-on drawing down what it rests on while nothing in it yet differs, and marks that as a reading.
+3. HigherStartEnds shows that, from one way, whether the net ends is not monotone in the start level. NothingTakenEnds shows that a unit taking nothing can keep the net going.
+4. The account states there is no exact condition for never ending when kids take more or less. The only exact dichotomy is unending_iff_holds, the even case.
+5. LineageDrawdown calls itself a restatement, not a further result. The gate and no-gate pair in Drain ends the same way both times.
+6. LineOnAStockCases says that reading a law's conclusion back through its equalities gives nothing the built examples' own Lean did not already give.

@@ -1,0 +1,400 @@
+# Task file: EDGE, reader whole-c-edge-10
+
+Your 3 modules. For orientation only, what the two passes said of the four marks, of moves and of a reading (where to look, not evidence).
+
+## GrammarLaws.lean  (2823 lines)
+
+### `both_outcomes`
+- pass a: S: `GrammarLaws.trace_on` (l. 2419) gives a later regional ending or a k-step continuation from x, for each k, with unit stage advance, forward closure, and decisions of ending or successor after N. Its alternatives need not be exclusive.
+- pass b: S, general, for return vs being drawn in: `«定后于有后则入当且仅当不返»` (l. 1527): with the successor fixed within x's closure and some successor, «入» R x ↔ ¬ «及» R x x. `«有限遍后定后则定前当且仅当皆返»` (l. 1736). `«四比之周»` (l. 2776) gives four cases for two relations. N for a dichotomy of going on and ending.
+
+### `no_return`
+- pass a: S: `«入当且仅当有不返»` (l. 1478) proves that reaching a closed region excluding the start is equivalent to reaching a point from which the start is unreachable. `«定后于有后则入当且仅当不返»` (l. 1527) equates this with no self-return if x has a successor and successors are unique throughout its closure.
+- pass b: S, concluded, general: `«入当且仅当有不返»` (l. 1478): x is drawn in (some closed region it lies outside holds something it reaches) exactly where it reaches some y that does not reach back. `«有后不返则入»` (l. 1522). `«定后于则返者不入»` (l. 1512): with the successor fixed within x's closure, an x that reaches itself is not drawn. This is about reach, at no particular level and not at the loss of something that gives.
+
+### `rank`
+- pass a: S: `«亡者不在长迭»` (l. 1329) excludes a longer path from m once a k-step path ends, given uniqueness of the successor wherever paths to those endpoints may diverge. `«尽则不屡»` (l. 1792) excludes recurring F-steps on an eventually Q-line assuming inductive ending of Q-closure followed by F.
+- pass b: S: `«尽则不屡»` (l. 1792): falls that end (the inductive «尽» of Q-courses then F) do not recur along a line of Q steps, with no decision; no converse is established (account). S: `«线有限不并则回»` (l. 1647): a line held by a list, merging nothing at its places, comes back to its start within the list's length. Count bounds: `«线终不过所列»` (l. 1374), `«间无生则间亡不过所覆»` (l. 2282). No numeric variant.
+
+### `closed_region`
+- pass a: S: `«所闭之证»` (l. 300) certifies exact closure by membership of the start, step closure, and inclusion in the start's closure. `«闭含所闭»` (l. 294) places this closure in every closed region holding the start.
+- pass b: S: `«闭»` (l. 235), `«所闭之闭»` (l. 253), `«所闭不出»` (l. 290), `«所闭之证»` (l. 300): a region is x's closure exactly where it holds x, is closed and lies within the closure. `kept_onward` (l. 1633): a region of Nat that every step keeps holds from where it holds on. S: `«定后遍后则核为其内最粗同行之类»` (l. 2643): with a fixed, total successor, the core of a class is the coarsest class inside it that R goes alike across.
+
+### `moves`
+- pass a: S: `«同行之历»` (l. 2669) preserves the relation E between endpoints of executions of the same word of moves from E-related starts if every letter goes alike under E.
+- pass b: N for a Process with actions or a policy. S, the nearest: R need not have a fixed successor, and `«尽则不或屡»` (l. 1773) quantifies over every course: where the line's steps from T are Q steps (as far as can be refuted) and every course of Q steps then an F step ends from g T («尽» («而» («所闭» Q) F) «一» (g T)), it is not the case that F steps recur, as far as can be refuted.
+
+### `reading`
+- pass a: S: `«像定后当且仅当同行»` (l. 2705) says the image has a fixed successor exactly when equal readings at starts imply equal readings at every pair of successors. It requires no existence of successors.
+- pass b: S: `«像定后当且仅当同行»` (l. 2705): the image of R along a map π has a fixed successor exactly where sameness under π goes alike under R, so the read part carries a law exactly where what π leaves out makes no difference to where it goes. S: `«类之对当且仅当类类等数»` (l. 1031): under a class E decided by a test e, lists are paired under E exactly where every class has equal counts. S: `«定后遍后则核为其内最粗同行之类»` (l. 2643). The test in «计» (l. 853) is a region read as a Bool test.
+
+### declarations of GrammarLaws.lean (by script)
+  l.86 class does
+  l.199 class inside
+  l.235 def «闭»
+  l.238 def «所闭»
+  l.241 theorem «所闭之自反»
+  l.244 theorem «所闭之传递»
+  l.249 theorem «缘在所闭»
+  l.253 theorem «所闭之闭»
+  l.257 theorem «所闭之单调»
+  l.261 theorem «所闭之对称»
+  l.267 theorem «所闭之逆»
+  l.276 theorem «所闭之界»
+  l.282 def «不出»
+  l.285 theorem «闭则不出»
+  l.290 theorem «所闭不出»
+  l.294 theorem «闭含所闭»
+  l.300 theorem «所闭之证»
+  l.308 theorem «闭而外则不所闭»
+  l.313 theorem «闭之及»
+  l.320 theorem «及之所闭»
+  l.325 theorem «所闭当且仅当同一或及»
+  l.336 theorem «及当且仅当一步而所闭»
+  l.347 theorem «借步之所闭在二所闭»
+  l.362 theorem «二所闭在借步之所闭»
+  l.384 theorem length_insert
+  l.389 theorem length_replicate
+  l.394 theorem split_append
+  l.410 def prepend
+  l.415 theorem replicate_add_append
+  l.421 theorem replicate_succ_append
+  l.426 theorem reverseAux_append
+  l.432 theorem reverse_cons_append
+  l.436 theorem reverse_replicate
+  l.442 def keep
+  l.446 theorem keep_append
+  l.455 theorem keep_congr
+  l.463 theorem keep_all
+  l.471 theorem mem_keep
+  l.498 theorem any_false_mem
+  l.509 theorem any_split
+  l.519 theorem any_remove
+  l.526 theorem any_true_of_mem
+  l.536 theorem any_false_of
+  l.544 theorem mem_middle
+  l.548 theorem mem_of_removed
+  l.556 theorem distinct_removed
+  l.578 inductive «对»
+  l.583 theorem «对之长»
+  l.589 theorem GrammarLaws.paired_single
+  l.603 theorem «等长则一对»
+  l.610 theorem «一之对»
+  l.614 theorem «对之单调»
+  l.620 theorem «对之自反»
+  l.625 theorem «对之左插»
+  l.632 theorem «对之逆»
+  l.639 theorem «对则守数»
+  l.647 theorem «守数当且仅当可对»
+  l.665 theorem «等长而不对之例»
+  l.674 theorem «对之取»
+  l.717 theorem «对之接»
+  l.731 theorem «对之传»
+  l.737 theorem «对之并»
+  l.750 theorem «对之换»
+  l.755 def «聚»
+  l.761 def unitsOn
+  l.765 theorem «对之族»
+  l.775 theorem «对之程»
+  l.810 theorem «聚之长»
+  l.820 theorem «程守数当且仅当可对»
+  l.853 def «计»
+  l.858 theorem GrammarLaws.count_append
+  l.865 theorem GrammarLaws.count_replicate_true
+  l.872 theorem GrammarLaws.count_replicate_false
+  l.878 theorem GrammarLaws.count_insert
+  l.886 theorem GrammarLaws.split_of_count_pos
+  l.901 theorem GrammarLaws.count_go
+  l.916 theorem GrammarLaws.count_eq_countP
+  l.922 theorem GrammarLaws.uncrossed_of_closed
+  l.934 theorem GrammarLaws.uncrossed_iff_notGoingOut
+  l.949 theorem GrammarLaws.uncrossed_iff_closed
+  l.961 theorem «对则不越域守数»
+  l.973 theorem «对则双闭域守数»
+  l.981 theorem «对而单闭域不守数之例»
+  l.992 theorem GrammarLaws.class_test_congr
+  l.1001 theorem GrammarLaws.pair_of_class_counts
+  l.1031 theorem «类之对当且仅当类类等数»
+  l.1041 theorem «续之对则类类等数»
+  l.1047 class does
+  l.1050 theorem «一对而静不对之例»
+  l.1063 def «定后»
+  l.1066 def «定前»
+  l.1068 theorem «定后之逐点»
+  l.1071 theorem «定前之逐点»
+  l.1075 theorem «定前即逆之定后»
+  l.1082 def «历»
+  l.1087 theorem «历之接»
+  l.1096 theorem «历之末步»
+  l.1104 theorem «历之逆»
+  l.1115 theorem «历之定前»
+  l.1124 def «迭»
+  l.1130 theorem «迭即历»
+  l.1136 theorem «迭则及»
+  l.1141 theorem «及即迭»
+  l.1151 theorem «迭之接»
+  l.1160 theorem «迭之周»
+  l.1167 theorem «迭之末步»
+  l.1176 def «迭内»
+  l.1179 theorem «迭内之接»
+  l.1185 def «静或缘»
+  l.1188 theorem «迭内即静或缘之迭»
+  l.1205 def «承»
+  l.1211 theorem «承之迭»
+  l.1224 theorem «存承之迭»
+  l.1238 theorem «迭之分»
+  l.1248 theorem «迭之逆»
+  l.1258 theorem «或有后则或迭»
+  l.1268 theorem «迭则同一或及»
+  l.1274 theorem «不穷则迭»
+  l.1284 def «定后于»
+  l.1287 theorem «定后则定后于»
+  l.1291 theorem «定后于之后»
+  l.1301 theorem «所闭当且仅当有迭»
+  l.1311 theorem «分处定后则迭之定于»
+  l.1323 theorem GrammarLaws.reorder
+  l.1329 theorem «亡者不在长迭»
+  l.1354 theorem «定后则线至多一亡»
+  l.1374 theorem «线终不过所列»
+  l.1394 theorem GrammarLaws.line_ends_unrefuted
+  l.1408 theorem «线亡不过所列»
+  l.1418 theorem «线亡不过所列之未否»
+  l.1428 theorem «线生不过所列»
+  l.1442 theorem «线生不过所列之未否»
+  l.1456 theorem «迭之定于»
+  l.1462 theorem «迭之定»
+  l.1468 theorem «迭之定前»
+  l.1475 def «入»
+  l.1478 theorem «入当且仅当有不返»
+  l.1492 theorem «定后于环则所及皆返»
+  l.1507 theorem «定后环则所及皆返»
+  l.1512 theorem «定后于则返者不入»
+  l.1518 theorem «定后则返者不入»
+  l.1522 theorem «有后不返则入»
+  l.1527 theorem «定后于有后则入当且仅当不返»
+  l.1534 theorem «定后有后则入当且仅当不返»
+  l.1540 theorem «无后者不入亦不返»
+  l.1549 theorem «入而返之例»
+  l.1560 theorem «非定后返而不入之例»
+  l.1577 theorem «遍后则有线»
+  l.1588 def «线不并»
+  l.1592 theorem «定前则线不并»
+  l.1597 theorem «线不并则可退»
+  l.1611 theorem «定前则线可退»
+  l.1616 theorem «线则及»
+  l.1623 theorem «线则所闭»
+  l.1633 theorem kept_onward
+  l.1647 theorem «线有限不并则回»
+  l.1659 theorem «线有限不并则返»
+  l.1670 theorem «线有限定前则返»
+  l.1680 theorem «定后于线有限则末返»
+  l.1703 theorem «有限遍后定前则皆返»
+  l.1712 theorem «定后于二返则不并»
+  l.1730 theorem «皆返定后则定前»
+  l.1736 theorem «有限遍后定后则定前当且仅当皆返»
+  l.1749 def «屡»
+  l.1753 def «或屡»
+  l.1757 theorem «屡则或屡»
+  l.1762 theorem «线或在所闭»
+  l.1773 theorem «尽则不或屡»
+  l.1792 theorem «尽则不屡»
+  l.1800 theorem «止而不入之例»
+  l.1823 theorem «入而屡之例»
+  l.1850 def GrammarLaws.ceasing
+  l.1855 def GrammarLaws.arising
+  l.1862 theorem GrammarLaws.census_pairs
+  l.1942 theorem «定后定前则前并生对后并亡»
+  l.1957 theorem «前者在前则所列生者生»
+  l.1978 theorem «后者在后则所列亡者亡»
+  l.1997 theorem GrammarLaws.length_keep
+  l.2008 theorem GrammarLaws.count_add_not
+  l.2022 theorem GrammarLaws.distinct_keep
+  l.2032 theorem GrammarLaws.count_pos_of_mem
+  l.2040 theorem GrammarLaws.eq_true_of_not_false
+  l.2051 theorem GrammarLaws.census_le
+  l.2085 theorem «定后则后并亡不过前并生»
+  l.2098 theorem GrammarLaws.census_le_converse
+  l.2111 theorem «定前则前并生不过后并亡»
+  l.2124 theorem GrammarLaws.census_count
+  l.2152 theorem «定后定前则前并生与后并亡同数»
+  l.2176 theorem GrammarLaws.stage_steps
+  l.2185 theorem GrammarLaws.fixed_of_noSplit
+  l.2196 theorem GrammarLaws.found_cons
+  l.2210 theorem GrammarLaws.found
+  l.2220 theorem GrammarLaws.found_unrefuted
+  l.2229 theorem GrammarLaws.found_or_all
+  l.2242 theorem GrammarLaws.trace
+  l.2262 theorem GrammarLaws.trace_unrefuted
+  l.2282 theorem «间无生则间亡不过所覆»
+  l.2299 theorem «所覆后亡屡则有生»
+  l.2320 theorem «有覆而亡屡则生屡»
+  l.2338 theorem «所覆后亡屡则生未否»
+  l.2352 theorem «有覆而亡屡则生不止»
+  l.2365 theorem GrammarLaws.onward_within
+  l.2381 theorem «间无亡则间生不过所覆»
+  l.2402 theorem «有界覆而生屡则亡不止»
+  l.2419 theorem GrammarLaws.trace_on
+  l.2436 theorem «有界覆而生屡则亡屡»
+  l.2468 theorem GrammarLaws.pair_eq
+  l.2473 theorem GrammarLaws.stage_search
+  l.2497 theorem GrammarLaws.census_run
+  l.2549 theorem «定后前者在前则亡屡者生屡»
+  l.2568 def «同行»
+  l.2571 theorem «同行之逐点»
+  l.2578 theorem «有常局定后则同行»
+  l.2588 theorem «有常定后则同行»
+  l.2592 theorem «有常则可续»
+  l.2600 theorem «同行可续则有常»
+  l.2607 theorem «同行遍后则有常»
+  l.2612 theorem «局定后则有常当且仅当同行可续»
+  l.2619 theorem «同行当且仅当有常»
+  l.2625 theorem «类同行遍后则含于核»
+  l.2631 theorem «定后则类之核同行»
+  l.2637 theorem «遍后则其内同行之类含于核»
+  l.2643 theorem «定后遍后则核为其内最粗同行之类»
+  l.2652 theorem «后不定则核可不同行»
+  l.2669 theorem «同行之历»
+  l.2677 theorem «同行之迭»
+  l.2684 theorem «同行于迭»
+  l.2691 def «像»
+  l.2696 theorem «保之像»
+  l.2705 theorem «像定后当且仅当同行»
+  l.2721 def «逾»
+  l.2724 def «广»
+  l.2727 def «齐»
+  l.2730 def «杂»
+  l.2733 theorem «逾则不则»
+  l.2738 theorem «广则不则»
+  l.2742 theorem «广非自»
+  l.2746 theorem «广不可逆»
+  l.2750 theorem «广之传递»
+  l.2755 theorem «齐即谓»
+  l.2758 theorem «齐之对称»
+  l.2760 theorem «杂之对称»
+  l.2763 theorem «广则非齐»
+  l.2767 theorem «广则非杂»
+  l.2771 theorem «齐则非杂»
+  l.2776 theorem «四比之周»
+  l.2788 theorem strictJoin_trans
+  l.2800 theorem strictJoin_irrefl
+  l.2807 theorem «则逾之定当且仅当排中»
+
+## GrammarRegularity.lean  (399 lines)
+
+### `both_outcomes`
+- pass a: S: `Law.unending_iff_steps` (l. 146) characterizes endlessness by E holding at every orbit step. B: `ClosedCapture.Beyond.closed_line` (l. 371) and `open_line_ends` (l. 386) give enduring lock and a favouring line ending at orbit time 1 with the same initial coordinates and different update readings.
+- pass b: S: `Law.unending_iff_steps` (l. 146): along a determined law, a line never ends exactly where every orbit step is related by E (general). `constant_iff_unread` (l. 263) is an iff of constancy and Unread. The two outcomes for closed capture come in two theorems under two readings, lock_line (l. 324, unending) and loss_ends_line (l. 352, not unending), not one exactly-when. B: Beyond.closed_line (l. 371) and Beyond.open_line_ends (l. 386): one selection and loss step, the locked line never ending under the share reading and the favouring line ending at step 1 under the loss reading.
+
+### `no_return`
+- pass a: S: `ClosedCapture.lock_line` (l. 324) concludes persistence of lock under the specified closed update from a locked start. `loss_ends_line` (l. 352) concludes failure of endless favouring, without concluding permanent nonfavouring for arbitrary future updates.
+- pass b: S: `ClosedCapture.lock_line` (l. 324) concludes from its premises that from a locked start the course stays locked at every step (the line under lockedAlike is unending) while the loss rises each step: no turning back from lock under a share-only reading. It is concluded, and the loss is not of something that gives. `亡前核变` (l. 118) and `有亡之线末步离核` (l. 125) conclude that a line ends only by a step leaving the core. `有亡之线两端核异` (l. 132): its ends are apart in the core.
+
+### `rank`
+- pass a: S: `ClosedCapture.loss_ends_line` (l. 352) excludes endless favouring when loss accrues, updates at loss≥N cannot favour, the initial rule favours, and a read occurs at r with N≤b+r. Its conclusion is negated endlessness. B: `ClosedCapture.Beyond.open_line_ends` (l. 386) locates the end at time 1.
+- pass b: S: `loss_ends_line` (l. 352): with a loss bound N, a reading step r and N ≤ b + r, the favouring line is not unending (by turned_by_loss, the rule no longer favours at r + 1), an ending bounded by the reading step past the bound. No falling variant.
+
+### `closed_region`
+- pass a: S: `«守核则不穷»` (l. 86) gives an onward core successor everywhere along the core line after one core continuation. `ClosedCapture.lock_line` (l. 324) gives locked-status persistence under its share-only hypotheses.
+- pass b: S: `守核则不穷` (l. 86): from a step under the core, every occurrence its core line reaches has a successor under the core (the core is constant, «根»). `adaptive_core_iff` (l. 229): the state's class is contained in its own core. In `lock_line` (l. 324) the locked configurations are kept along the whole orbit.
+
+### `moves`
+- pass a: S: `goAlike_iff_constant` (l. 207) equates going alike by a map with constancy of its value class for every move when the process is total on moves and determined.
+- pass b: S: `moveRel` (l. 189) reads each move a of a `Process S A` as a relation. `constant_of_goAlike` (l. 194): where every move is possible everywhere and P goes alike by π, the class sameValue π is constant under every move. `goAlike_of_constant` (l. 201) gives the converse for a determined process, and `goAlike_iff_constant` (l. 207) the iff. `adaptive_constant_iff` (l. 221): the state's class is constant under every move exactly where the rule makes no difference to F. Schedules `reads : Nat → Bool` are quantified in constant_iff_unread (l. 263).
+
+### `reading`
+- pass a: S: `ClosedCapture.constant_iff_unread` (l. 263) equates constancy of the share/rule/count reading for every schedule with Unread f h. `adaptive_core_apart` (l. 239) separates rules in the state core when their effects on the same state and move differ.
+- pass b: S: `ClosedCapture.constant_iff_unread` (l. 263): the class of loopPart (share, rule, step count) is constant under the two-level step along every schedule exactly where `Unread f h` (nothing beyond the share is read). `loss_ends_line` (l. 352): a reading h that favours at no configuration whose loss is past N, with a reading step r where N ≤ b + r, from a favouring start, makes the line under favouredAlike not unending. `adaptive_core_apart` (l. 239): where two rules take one state to different states, the core of the state's class tells the configurations apart. B: Beyond.closed_line (l. 371) reads from the share alone (joinRead closedRead) and the locked line never ends; Beyond.open_line_ends (l. 386) reads from the loss (lossRead) and the favouring line ends at the first step.
+
+### declarations of GrammarRegularity.lean (by script)
+  l.31 class the
+  l.86 theorem «守核则不穷»
+  l.94 theorem «相续之始有后»
+  l.101 theorem «相续之末步»
+  l.111 theorem «守核之线不亡»
+  l.118 theorem «亡前核变»
+  l.125 theorem «有亡之线末步离核»
+  l.132 theorem «有亡之线两端核异»
+  l.146 theorem unending_iff_steps
+  l.175 theorem unending_alike
+  l.189 def moveRel
+  l.194 theorem constant_of_goAlike
+  l.201 theorem goAlike_of_constant
+  l.207 theorem goAlike_iff_constant
+  l.221 theorem adaptive_constant_iff
+  l.229 theorem adaptive_core_iff
+  l.239 theorem adaptive_core_apart
+  l.263 theorem constant_iff_unread
+  l.279 def favouredAlike
+  l.282 theorem favouredAlike_class
+  l.287 def lockedAlike
+  l.291 theorem lockedAlike_class
+  l.296 def loss
+  l.299 theorem turn_fast
+  l.305 theorem orbit_paced
+  l.312 theorem loss_alters
+  l.324 theorem lock_line
+  l.352 theorem loss_ends_line
+  l.371 theorem closed_line
+  l.386 theorem open_line_ends
+
+## Handoff.lean  (357 lines)
+
+### `both_outcomes`
+- pass a: B: `fails_forever` (l. 342) gives failure to complete under repeated revision together with two-step completion under each executed rule retained. `changed_form` (l. 322) gives two completing traces from the same start.
+- pass b: B: `changed_form` (l. 322): from `leftReady`, `[.left, .directRight]` ends at `formedRight` and `[.left, .left]` at `formedLeft`. S and B together: the general `Run.novel_by_handoff` (l. 156) gives completion within the bound under the handoff premise, while the built `revised_rules_can_fail_forever` (l. 263) never completes without it. N: no single exactly-when statement.
+
+### `no_return`
+- pass a: B: `advance` (l. 199) fixes each formed outcome under every rule, so reaching one precludes a later switch to the other. `fails_forever` (l. 342) concerns the chosen revising run; other rule choices from its ready states can finish.
+- pass b: B: `fails_forever` (l. 342): along the revising run no outcome ever forms, `∀ n, ¬ completed (revising.state n)`. In the built `advance` (l. 199), formed stages stay formed, by definition. N: no general point of no return.
+
+### `rank`
+- pass a: S: `Run.novel_by_handoff` (l. 156) concludes novel realization at state n+1 with n≤bound, assuming a bounded initial Nat rank, decidable completion, local strict descent, nonincreasing handoffs and correspondence. B: `revision_resets_remaining` (l. 273) exhibits why local descent alone fails.
+- pass b: S: `handed_off_progress` (l. 52): under `localStep` and `handoff`, `rank (n+1) (states (n+1)) < rank n (states n)` at every unfinished n. `newContent_by_bound` (l. 66) and `Run.novel_by_handoff` (l. 156): with initial rank at most `bound` and a decidable completion, some n ≤ bound completes, through `RenewalBound.renewal_within_rank_bound`. B: `revision_resets_remaining` (l. 273): each revision resets the remaining count from 1 to 2.
+
+### `closed_region`
+- pass a: B: `revising_run_stays_unfinished` (l. 243) keeps the revising course in the two ready states at every time. `advance` (l. 199) fixes each completed state under all rules.
+- pass b: B: `revising_run_stays_unfinished` (l. 243): for all n, the revising run is at `leftReady` or `rightReady`, an invariant of the built run. N: no general closed region.
+
+### `moves`
+- pass a: B: `process` (l. 309) uses rules as moves. `each_fixed_rule_finishes` (l. 220) gives completion in two steps for any retained rule; `fails_forever` (l. 342) supplies an actual sequence of these moves that never completes.
+- pass b: S: `handed_off_progress` (l. 52) is general over states and ranks indexed by step, with no process. `Run.novel_by_handoff` (l. 156) applies along a run of any frame. B: `process` (l. 309) is `Process Stage Rule`, with each rule as an action, and `revising` (l. 317) is the run choosing `restartChoice`. `revised_rules_can_fail_forever` (l. 263) and `fails_forever` (l. 342): every executed rule would finish if retained and lowers its own remaining count, yet no configuration of the run is completed.
+
+### `reading`
+- pass a: B: `restartChoice` (l. 233) selects a rule from the current stage. `resets_remaining` (l. 350) proves the selected new rule assigns 2 at the reached state where its predecessor assigns 1.
+- pass b: N: `living`, `before` and the relevance from `LivingSignificance` or `Unrestricted` are given predicates; no reading or rule made from what is registered decides anything here.
+
+### declarations of Handoff.lean (by script)
+  l.52 theorem handed_off_progress
+  l.61 def boundedFrame
+  l.66 theorem newContent_by_bound
+  l.88 theorem securesNewContent_by_bound
+  l.99 theorem securesNewContent_by_bound_of_unrestricted
+  l.112 theorem revised_newContent_by_bound_of_unrestricted
+  l.134 theorem newContent_by_bound_on_runs
+  l.156 theorem Run.novel_by_handoff
+  l.170 theorem Run.relevance_by_handoff_of_unrestricted
+  l.191 inductive Stage
+  l.194 inductive Rule
+  l.197 def completed
+  l.199 def advance
+  l.209 def remaining
+  l.220 theorem each_fixed_rule_finishes
+  l.225 theorem each_rule_local_progress
+  l.233 def restartChoice
+  l.239 def revisingRun
+  l.243 theorem revising_run_stays_unfinished
+  l.254 theorem revising_unfinished
+  l.263 theorem revised_rules_can_fail_forever
+  l.273 theorem revision_resets_remaining
+  l.287 theorem changed_form_with_valid_handoff
+  l.294 def realizes
+  l.298 theorem realized_form_need_not_be_fixed
+  l.309 def process
+  l.312 def frame
+  l.314 theorem step_iff
+  l.317 def revising
+  l.319 theorem revising_state
+  l.322 theorem changed_form
+  l.331 theorem outcome_not_fixed
+  l.342 theorem fails_forever
+  l.350 theorem resets_remaining

@@ -1,0 +1,416 @@
+# Task file: EDGE, second batch, reader whole-c-edge2-07
+
+Your 5 modules. In each, BOTH earlier passes found a statement with both outcomes and NEITHER found a law of ending within a bound. For orientation only, what they said (where to look, not evidence).
+
+## ModelStatements.lean  (1288 lines)
+
+### `both_outcomes`
+- pass a: S: `optimum_broken_reading` (l. 1270) characterizes breaking at each listed outside condition iff an eligible outcome falls below its need, with the after-levels unbeaten and eligible, rising order, room, and all outside needs required and met.
+- pass b: S: `optimum_broken_reading` (l. 1270), general: a dependence beyond the optimized family is broken across the step exactly where some eligible outcome stands below its need, which is keeping against losing that dependence. `differenceOnlyTogether_reading` (l. 918) is an exactly-when of difference-making only together, not of going on or ending.
+
+### `no_return`
+- pass a: N: Not found in the statements read.
+- pass b: N: no irreversibility or point of no return is stated. `undermined` (l. 182) is a definition of a dependence's need going unmet after the step, not a law of no return.
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N: `withinSteps_iff_le` (l. 744) and `before_iff_lt` (l. 753) read the order of the steps; no ending within a bound, variant or deadline.
+
+### `closed_region`
+- pass a: S: `kernel_iff` (l. 796) represents the kernel by containment of the whole reachable closure in the guard. `neutral_transmits_iff` (l. 498) identifies relational neutrality with each significance region being closed along relatedness into living content.
+- pass b: S: `kernel_iff` (l. 796) is a kernel as a closure of steps within a guard. `neutral_transmits_iff` (l. 498): N_rel is significance from each position closed («闭») under the formed relation into living content; it is read for sustenance and descent at `sustenance_neutral_iff` (l. 581) and `descent_neutral_iff` (l. 662). `renewing_not_closed` (l. 1089), built Renewable: the renewing runs are not closed under agreeing up to h.
+
+### `moves`
+- pass a: S: `kernel_iff` (l. 796) says membership in the process kernel is equivalent to the guard holding everywhere reachable by its moves.
+- pass b: S: `kernel_iff` (l. 796): Viability.Kernel P g s holds exactly where every configuration within the closure of the steps of P from s meets g, a law of what every course keeps. `kernel_and_reading` (l. 803) splits a kernel of a meet into kernels of each part. `makesDifference_iff`/`differenceAt` (l. 848/844) read but-for difference-making through moveRel P a. `not_fixes_reading` (l. 972): with each move's relation determined and two configurations apart, a move the run has not taken before t has its outcome fixed by no record.
+
+### `reading`
+- pass a: S: `through_iff_inclusion` (l. 1113) equates exchange through a coupling with exchange agreement whenever coupled histories agree for each outside formation. B: `renewing_not_closed` (l. 1089) disproves closure of renewal under finite-prefix agreement for Renewable.
+- pass b: S: `unselected_beyond_data_reading` (l. 1206): with a selection closed along agreeing on data D and a class C free at x beyond D, a selected member is related to every member by agreeing on D with a selected member that is then alike at x. `response_not_fixed_reading` (l. 1124): where g couples l, l' apart up to t and membership is decided, some exchange law reading only through couplings still separates them by what g takes, and some other such law treats every pair alike. `finite_reading_not_exact` (l. 1065): for the built Renewable.process, no region of runs closed under agreeing up to h is the region of runs along which the focal formation renews.
+
+### declarations of ModelStatements.lean (by script)
+  l.118 def requiring
+  l.121 def drawing
+  l.124 def needMet
+  l.127 def activeAt
+  l.130 def participating
+  l.133 def bearing
+  l.136 theorem supported_iff
+  l.144 theorem dependent_iff
+  l.154 def sameName
+  l.157 def atPair
+  l.169 def metAfter
+  l.172 def belowAfter
+  l.176 def keptAcross
+  l.182 def undermined
+  l.189 theorem kept_iff
+  l.194 theorem renewingAt_iff
+  l.216 theorem renewingOver_iff
+  l.240 theorem renewingIn_iff
+  l.270 theorem underminingAt_iff
+  l.285 theorem living_iff
+  l.292 def requiringOf
+  l.297 def needWithin
+  l.301 theorem inheritsAt_iff
+  l.321 theorem needsWithinAt_iff
+  l.336 theorem transmits_at_one_kind
+  l.351 def onConditions
+  l.356 theorem roles_renewingAt
+  l.371 theorem roles_renewingOver
+  l.387 theorem roles_supported_reading
+  l.393 theorem roles_dependent_reading
+  l.398 theorem roles_alive_reading
+  l.404 theorem renewingAt_reading
+  l.411 theorem renewingOver_reading
+  l.419 theorem renewingAt_iff_over_all_reading
+  l.431 theorem transmits_at_reading
+  l.446 theorem partialIdentity_le_iff
+  l.456 theorem significant_iff_reading
+  l.462 theorem selfSignificance_iff_reading
+  l.470 theorem shares_iff_reading
+  l.477 theorem held_iff_reading
+  l.482 theorem significant_iff_held_reading
+  l.498 theorem neutral_transmits_iff
+  l.517 def livesOn
+  l.521 def interacts
+  l.526 def sustenanceRel
+  l.530 def livingOcc
+  l.533 theorem livesOn_iff
+  l.545 theorem interacts_iff
+  l.569 theorem sustenance_related_iff
+  l.581 theorem sustenance_neutral_iff
+  l.594 theorem living_on_reaches_reading
+  l.606 def presentAt
+  l.609 def giving
+  l.612 def standing
+  l.615 def comesToStand
+  l.619 def descentStep
+  l.623 def descendsRel
+  l.626 def descentRel
+  l.628 theorem descends_iff
+  l.650 theorem descent_related_iff
+  l.662 theorem descent_neutral_iff
+  l.675 theorem descent_reaches_reading
+  l.690 def significantAt
+  l.694 theorem retains_iff
+  l.700 theorem adds_iff
+  l.708 def livingClaim
+  l.713 theorem significant_iff_livingClaim
+  l.725 theorem significance_undetermined_reading
+  l.744 theorem withinSteps_iff_le
+  l.753 theorem before_iff_lt
+  l.768 theorem tracks_iff
+  l.778 theorem identifies_iff_reading
+  l.785 theorem agreeUpTo_iff
+  l.796 theorem kernel_iff
+  l.803 theorem kernel_and_reading
+  l.815 def withholding
+  l.819 theorem withholdAll_iff_li
+  l.828 def requiresAt
+  l.831 def needMetAt
+  l.835 def breaking
+  l.840 def keeping
+  l.844 def differenceAt
+  l.848 theorem makesDifference_iff
+  l.861 theorem makesDifferenceTogether_iff
+  l.877 theorem differenceOnlyTogether_iff_model
+  l.889 theorem overdetermined_iff
+  l.904 theorem only_together_reading
+  l.918 theorem differenceOnlyTogether_reading
+  l.953 theorem fixes_iff
+  l.964 theorem takes_iff
+  l.972 theorem not_fixes_reading
+  l.987 def copies
+  l.991 theorem origin_iff_li
+  l.1000 theorem reached_iff
+  l.1011 theorem runs_agree_iff_reached
+  l.1031 theorem run_agrees_every_start_reading
+  l.1050 def renewingAlong
+  l.1058 theorem renewing_iff_along
+  l.1065 theorem finite_reading_not_exact
+  l.1076 theorem finite_reading_iff
+  l.1089 theorem renewing_not_closed
+  l.1103 def couplingAlike
+  l.1108 def exchangingAlike
+  l.1113 theorem through_iff_inclusion
+  l.1124 theorem response_not_fixed_reading
+  l.1146 def member
+  l.1152 def onPoints
+  l.1158 theorem interiorBy_iff
+  l.1169 theorem verifiableBy_reading
+  l.1183 def agreeingOn
+  l.1187 theorem through_of_closed
+  l.1194 theorem free_iff
+  l.1206 theorem unselected_beyond_data_reading
+  l.1224 def exceedsOn
+  l.1229 def lowerBeyond
+  l.1231 theorem rising_iff
+  l.1235 theorem room_iff
+  l.1248 theorem frontier_iff
+  l.1254 theorem metOn_iff
+  l.1260 theorem broken_iff
+  l.1270 theorem optimum_broken_reading
+
+## MoveOutcomeProcesses.lean  (288 lines)
+
+### `both_outcomes`
+- pass a: S: `ensures_true_iff` (l. 127) gives the one-step boundary for going on: the full goal can be guaranteed iff at least one move is enabled.
+- pass b: S: `covers_iff` (l. 95) and `not_covers_iff` (l. 158), general: a cover holds exactly where every goal is carried and fails exactly where not every goal is, which is keeping against losing goals between two processes. `lost_goal_of_not_covers_of_dne` (l. 165): with double-negation elimination as a hypothesis, a failed cover names a goal ensured by P and not by Q.
+
+### `no_return`
+- pass a: B: `toFalse_not_true` (l. 215) excludes every move reaching true from any state in the constant law. The exclusion is concluded from the built step.
+- pass b: N: no irreversibility over steps. B: `law_covers_free_and_loses` (l. 235): the constant law covers the free process while losing the possibility of going to true, a loss between two processes, not over time. `halted_ensures_nothing` (l. 270): where no move is enabled nothing is ensured.
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N: no bound on ending, no variant.
+
+### `closed_region`
+- pass a: N: Not found in the statements read.
+- pass b: N: no region closed under steps.
+
+### `moves`
+- pass a: S: `completes_one_iff` (l. 66) requires both enabledness and the goal at every successor of the chosen move.
+- pass b: S: `Ensures` (l. 56) and `ensures_iff` (l. 73): some move ensures a goal exactly where some enabled move has all its next configurations in the goal, a law of what some choice keeps. `completes_mono` (l. 115): a move completing a goal completes every weaker one. `not_ensures_false` (l. 122) and `ensures_true_iff` (l. 127): the full goal is ensured exactly where some move is enabled.
+
+### `reading`
+- pass a: S: `summary_ensures_iff` (l. 176) transports a goal on an outcome summary to its pullback. B: `summary_hides_loss` (l. 279) shows an ensured constant summary while the corresponding full-state value cannot be ensured.
+- pass b: S: `summary_ensures_iff` (l. 176): for any summary f of outcomes, a goal on the summaries is ensured exactly where its pullback along f is. B: `summary_hides_loss` (l. 279): through the summary sending every configuration to false, a move of `free` meets false; read whole, no move completes reaching false.
+
+### declarations of MoveOutcomeProcesses.lean (by script)
+  l.56 def Ensures
+  l.61 def Covers
+  l.66 theorem completes_one_iff
+  l.73 theorem ensures_iff
+  l.80 theorem covers_iff_moves
+  l.86 theorem Covers.ensures
+  l.95 theorem covers_iff
+  l.104 theorem covers_refl
+  l.108 theorem covers_trans
+  l.115 theorem completes_mono
+  l.122 theorem not_ensures_false
+  l.127 theorem ensures_true_iff
+  l.134 theorem common_goal
+  l.141 theorem no_strict_gain_everywhere
+  l.147 theorem covers_along
+  l.158 theorem not_covers_iff
+  l.165 theorem lost_goal_of_not_covers_of_dne
+  l.176 theorem summary_ensures_iff
+  l.184 theorem common_completes
+  l.195 abbrev toFalse
+  l.198 def free
+  l.201 def setting
+  l.204 def halted
+  l.207 theorem toFalse_ensures_false
+  l.211 theorem setting_ensures_each
+  l.215 theorem toFalse_not_true
+  l.220 theorem setting_covers_toFalse
+  l.226 theorem free_wider_not_covering
+  l.235 theorem law_covers_free_and_loses
+  l.241 theorem setting_covers_and_gains
+  l.251 theorem setting_covers_and_opens
+  l.259 theorem setting_separate_not_joint
+  l.270 theorem halted_ensures_nothing
+  l.279 theorem summary_hides_loss
+
+## Narrowing.lean  (574 lines)
+
+### `both_outcomes`
+- pass a: S: `mem_revise` (l. 183) characterizes keeping a candidate at one observation by initial membership and matching its value. `counterevidence_of_eliminated` (l. 261) finds a contradicted observation for every eliminated initial candidate.
+- pass b: S: `mem_learn` (l. 225), general: a candidate is kept exactly where it is in hs and fits every observation, and `counterevidence_of_eliminated` (l. 261) gives the other side, keeping against losing a candidate. `answer_iff` (l. 330) is an exactly-when of asserting.
+
+### `no_return`
+- pass a: S: `mem_learn` (l. 225) implies a candidate absent at the start of any further learning stays absent, for any subsequent evidence.
+- pass b: N: no statement of irreversibility. `counterevidence_of_dropped` (l. 267) says a dropped candidate contradicts some observation; it is not a law of no return.
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N: no ending within a bound.
+
+### `closed_region`
+- pass a: S: `revise_revise` (l. 272) makes the revised list a fixed point for repetition of the same observation.
+- pass b: S (a fixed point of revision): `revise_revise` (l. 272): revising twice by one observation is revising once. `repeated_observation_idle` (l. 277).
+
+### `moves`
+- pass a: S: `after_observe_iff` (l. 160) characterizes the belief after choosing question q and receiving outcome o in the pure observation process: the state remains in the old belief and reads o at q.
+- pass b: S: `observe` (l. 158) is a Process S A whose step keeps the configuration; its action is the question. `after_observe_iff` (l. 160) and `narrow_once_iff` (l. 197): after observing b at q, the belief holds exactly the believed rules giving b at q. `actual_retained` (l. 242): the actual rule, a candidate faithful to the observations, is kept whatever observations are made.
+
+### `reading`
+- pass a: S: `answer_iff` (l. 330) makes a definite answer equivalent to nonemptiness and unanimous candidate value. `actual_retained` (l. 242) requires the actual rule to be included and fit the evidence.
+- pass b: S: `mem_learn` (l. 225): learning keeps exactly the candidates in hs that fit e. `answer_iff` (l. 330): the answer asserts b at q exactly where some candidate remains and all give b. `answer_maximal` (l. 358) and `unique_maximal_safe` (l. 362): with hs nonempty it is the greatest safe answer, and any safe greatest answer equals it at every question. `acquired_answers_correct` (l. 401). B: `narrow_class_settles_wrongly` (l. 566): a class lacking the actual rule settles false at true, while the actual id gives false.
+
+### declarations of Narrowing.lean (by script)
+  l.50 abbrev Observation
+  l.53 abbrev Rule
+  l.58 def Fits
+  l.62 def revise
+  l.66 def learn
+  l.71 def answer
+  l.77 def Safe
+  l.81 def Maximal
+  l.86 theorem beq_true_iff
+  l.92 theorem mem_filter
+  l.113 theorem filter_cons_true
+  l.120 theorem filter_cons_false
+  l.128 theorem filter_filter_self
+  l.139 theorem filter_map_comm
+  l.150 theorem all_map
+  l.158 def observe
+  l.160 theorem after_observe_iff
+  l.168 def encode
+  l.172 theorem encode_inj
+  l.179 def sense
+  l.183 theorem mem_revise
+  l.189 theorem revise_is_after
+  l.197 theorem narrow_once_iff
+  l.203 def narrowed
+  l.207 theorem after_congr
+  l.212 theorem narrowed_congr
+  l.218 theorem mem_learn_iff
+  l.225 theorem mem_learn
+  l.237 theorem narrowed_iff_fits
+  l.242 theorem actual_retained
+  l.247 theorem counterevidence_of_not_fits
+  l.261 theorem counterevidence_of_eliminated
+  l.267 theorem counterevidence_of_dropped
+  l.272 theorem revise_revise
+  l.277 theorem repeated_observation_idle
+  l.286 def Settles
+  l.290 def onCons
+  l.294 theorem answer_some
+  l.308 theorem answer_none
+  l.318 theorem answer_of_settles
+  l.330 theorem answer_iff
+  l.340 theorem settles_learn_iff
+  l.348 theorem answer_safe
+  l.352 theorem safe_definite_requires_agreement
+  l.358 theorem answer_maximal
+  l.362 theorem unique_maximal_safe
+  l.370 theorem unique_maximal_safe_of_ext
+  l.377 theorem known_rule_makes_answer_correct
+  l.385 def acquire
+  l.391 theorem acquired_evidence_faithful
+  l.401 theorem acquired_answers_correct
+  l.408 def transport
+  l.411 theorem answer_transport
+  l.421 theorem learning_transport
+  l.442 theorem narrowing_transport
+  l.452 theorem wrong_reencoding_breaks_transfer
+  l.459 def repertoire
+  l.462 theorem repertoire_complete
+  l.478 theorem repertoire_complete_of_ext
+  l.484 theorem full_repertoire_correct
+  l.493 theorem full_repertoire_settles_actual
+  l.499 def oneSample
+  l.502 def twoSamples
+  l.504 theorem before_acquisition_abstains
+  l.506 theorem one_sample_leaves_other_case_unsettled
+  l.510 theorem contrasting_acquisition_settles_both
+  l.514 theorem learned_response_differs_from_last_report
+  l.518 theorem repeated_same_case_does_not_settle_other
+  l.521 theorem insufficient_support_retains_ambiguity
+  l.524 theorem wrong_model_class_can_be_confidently_wrong
+  l.528 theorem inconsistent_evidence_yields_no_answer
+  l.532 theorem one_sample_settles_one
+  l.541 theorem contrasting_settles_both
+  l.549 theorem settled_differs_from_last
+  l.556 theorem repeated_case_leaves_other
+  l.561 theorem contradiction_settles_nothing
+  l.566 theorem narrow_class_settles_wrongly
+
+## OpenedCorrection.lean  (203 lines)
+
+### `both_outcomes`
+- pass a: B: `Linked.unlinked_uncorrectable` (l. 138), `Linked.linked_correctable` (l. 146) and `Linked.starved_uncorrectable` (l. 157) cover every linked-process state: correctability holds exactly with the link on and positive stock.
+- pass b: S: `correctable_iff` (l. 80) is an exactly-when for correctability (not for going on and ending). B: on Revising's states, `Linked.unlinked_uncorrectable` (l. 138), `Linked.linked_correctable` (l. 146) and `Linked.starved_uncorrectable` (l. 157) together decide correctability at every configuration (link off: never; link on with a unit: always; link on with none: never). N for an exactly-when of going on and ending.
+
+### `no_return`
+- pass a: N: `Linked.starved_uncorrectable` (l. 157) is a present inability. `Linked.opens_by_support` (l. 189) concludes recovery from precisely that state; `coarser_opens_nothing` (l. 107) excludes gains only between endpoints satisfying its reading and executability premises.
+- pass b: N: no irreversibility is stated; the starved configuration `(0, true, v)` is left by replenishing, which opens the correction (`Linked.opens_by_support`, l. 189).
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N: no bound, variant, drain or deadline in any statement.
+
+### `closed_region`
+- pass a: N: Not found in the statements read.
+- pass b: N: no region closed under steps, invariant or fixed point is stated; correctability is not shown kept by steps of the process.
+
+### `moves`
+- pass a: S: `Correctable` (l. 74) requires one reading-based policy choosing an acceptable executable act for every situation. `OpensAlong` (l. 89) ties a gain in this ability to a trace between the two configurations.
+- pass b: S: `OpensAlong` (l. 89) is stated for any `Process X B` and needs `∃ w, Trace P x w x'`; `Correctable` (l. 74) is the existence of a `GuardHorizon.UniformPolicy` choosing one act per reading; `correctable_iff` (l. 80): given `Viability.ChoiceOver O A`, correctable at `x` iff for every reading `o` some act `a` is acceptable and executable at `x` for every situation `s` with `reading x s = o`. B: Revising's acts `replenish`, `rebuild b`, `correct` (Revision.lean l. 145-156) are the moves of the built case.
+
+### `reading`
+- pass a: S: `correctable_iff` (l. 80) requires, under ChoiceOver, one act per reading fitting every situation giving that reading. B: `Linked.unlinked_uncorrectable` (l. 138) rules this out at every unlinked state.
+- pass b: S: `reading : X → S → O` is the reading in force at a configuration; `correctable_iff` (l. 80) says whether a fitting policy exists is decided by the fibers of the reading; `finer_keeps` (l. 95): if `forget (reading x' s) = reading x s` for all `s` and every act executable at `x` is executable at `x'`, correctability at `x` gives it at `x'`; `coarser_opens_nothing` (l. 107): if `forget (reading x s) = reading x' s` and no executability is gained, `¬ OpensAlong`. B: `Linked.unlinked_uncorrectable` (l. 138): with the link off both situations are read alike and need different acts, so no configuration `(n, false, v)` is correctable.
+
+### declarations of OpenedCorrection.lean (by script)
+  l.74 def Correctable
+  l.80 theorem correctable_iff
+  l.89 def OpensAlong
+  l.95 theorem finer_keeps
+  l.107 theorem coarser_opens_nothing
+  l.115 theorem widened_correctable
+  l.128 abbrev acceptable
+  l.134 abbrev executable
+  l.138 theorem unlinked_uncorrectable
+  l.146 theorem linked_correctable
+  l.157 theorem starved_uncorrectable
+  l.168 theorem opens
+  l.175 theorem rebuilt_starved
+  l.182 theorem opens_after_replenishing
+  l.189 theorem opens_by_support
+  l.195 theorem widened_unlinked
+
+## OwnWidening.lean  (347 lines)
+
+### `both_outcomes`
+- pass a: S: `Balances.widens_iff_others_within` (l. 146) and `Balances.mixed_iff_other_beyond` (l. 160) characterize keeping every outside admission versus losing some, under balance, withheld levels and own widening.
+- pass b: S: `widens_iff_others_within` (l. 146) and `mixed_iff_other_beyond` (l. 160) together give, under own widening in a balanced flow, a dichotomy: either the whole is widened or the comparison is mixed, decided by the margin. This is general, of keeping versus closing what others can form, not of going on and ending. B: `OwnDrawing.ample_widens` (l. 324) versus `OwnDrawing.tight_mixed` (l. 339).
+
+### `no_return`
+- pass a: N: Not found in the statements read.
+- pass b: N: No point of no return or irreversibility stated.
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N: No ending within a bound, no falling rank, variant or deadline.
+
+### `closed_region`
+- pass a: N: Not found in the statements read.
+- pass b: N: No invariant, kernel or closed region stated.
+
+### `moves`
+- pass a: N: Not found in the statements read.
+- pass b: N: No process with a choice among steps. The comparison is between two given level paths, with the part's exchange and without it (`WithheldLevels`), not between moves.
+
+### `reading`
+- pass a: S: `Web.admits_reachWeb_iff` (l. 106) represents any Boolean reach family by a web whose admissions at t are exactly its true entries.
+- pass b: S: `Flow.Balances.widens_yet_own_changed` (l. 211): where own widening widens the whole within the margin, at some step the levels without the part do not admit within the own region what the levels with it admit there. So a comparison read only over the own region shows a change. `Web.admits_reachWeb_iff` (l. 106): any decided reachable set is what `reachWeb reach` admits. N: no class of things read alike and no rule made from what is registered.
+
+### declarations of OwnWidening.lean (by script)
+  l.74 def WidensWithin
+  l.81 theorem WidensWithin.exceeds
+  l.87 theorem WidensWithin.not_keeps
+  l.92 theorem WidensWithin.not_narrowed
+  l.98 def reachWeb
+  l.106 theorem admits_reachWeb_iff
+  l.128 theorem Balances.includes_iff_beyond_within
+  l.146 theorem Balances.widens_iff_others_within
+  l.160 theorem Balances.mixed_iff_other_beyond
+  l.179 theorem Balances.mixed_of_tight
+  l.196 theorem Balances.widens_of_untaken_beyond
+  l.211 theorem Balances.widens_yet_own_changed
+  l.229 inductive Formation
+  l.235 inductive Place
+  l.240 def firstStep
+  l.244 def flow
+  l.258 def drawerPart
+  l.264 def own
+  l.271 def web
+  l.293 def withheldLevel
+  l.297 theorem balances
+  l.303 theorem withheld
+  l.315 theorem own_widens
+  l.324 theorem ample_widens
+  l.339 theorem tight_mixed

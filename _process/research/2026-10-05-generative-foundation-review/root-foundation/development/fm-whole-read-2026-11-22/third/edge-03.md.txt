@@ -1,0 +1,60 @@
+# Task file: EDGE, reader whole-c-edge-03
+
+Your 1 modules. For orientation only, what the two passes said of the four marks, of moves and of a reading (where to look, not evidence).
+
+## Countdown.lean  (398 lines)
+
+### `both_outcomes`
+- pass a: S: `completes_plan_iff` (l. 209) gives both outcomes for the prescribed work+1 unit plan from a pending state of any CountedWork law, according to fuel coverage.
+- pass b: S: completes_iff (l. 164), general: from a pending configuration, work+1 ticks finish exactly when work+1 ≤ fuel. With stalls_beyond, the other outcome (fuel ≤ work) stalls. completes_plan_iff (l. 209) states the same as Assurance.Completes of the plan. invariant_iff_reach (l. 50) is an exactly-when of keeping.
+
+### `no_return`
+- pass a: S: `stalls_beyond` (l. 139) concludes failure for every horizon beyond remaining fuel when busy and fuel ≤ work, from the local zero-fuel stall premise. `stays_exit` (l. 267) concludes persistence of exit on admitted plans from a valid exit, using one-step exit closure as a premise.
+- pass b: S: stalls_beyond (l. 139), concluded from CountedWork: from busy s with fuel s ≤ work s, every run of more than fuel s ticks is none, so no longer run finishes. This is at a low level of fuel; the local stall at fuel 0 is the premise CountedWork.stall. stays_exit (l. 267), concluded from the premise Reserved.kept: from a valid configuration at the exit, every admitted course stays at the exit.
+
+### `rank`
+- pass a: S: `exits` (l. 283) uses a margin decreasing by one on every admitted valid move that misses the exit. `CountdownCourses.slow_misses` (l. 390) attains the margin without exiting in the built law.
+- pass b: S: exits (l. 283): every admitted course from a valid start longer than margin s ends valid at the exit. Slow.misses and CountdownCourses.slow_misses (l. 329, 390): a course of exactly n moves from some n ends at some 0, not the exit, so the bound is attained. completes_iff and Advances.completes (l. 236): unfuelled work finishes in exactly work+1 ticks. not_done_before (l. 201): no earlier tick finishes.
+
+### `closed_region`
+- pass a: S: `invariant_iff_reach` (l. 50) equates step invariance and preservation at all reachable endpoints for any process. `admitted_invariant_iff` (l. 61) specializes this to admitted successful partial steps.
+- pass b: S: invariant_iff_reach (l. 50): Invariant P I ↔ I is kept along every Reach. admitted_invariant_iff (l. 61) states the same for admitted steps. runs_valid (l. 252): valid is kept along admitted courses. stays_exit (l. 267): the exit is a region closed under admitted moves.
+
+### `moves`
+- pass a: S: `runs_valid` (l. 252) gives an executable valid endpoint for every plan of admitted moves from a valid state under Reserved.
+- pass b: S: admitted (l. 56) is the Process of a partial law f restricted to an allowed relation. admitted_invariant_iff (l. 61): every admitted course keeps I from every start where I holds exactly when every admitted step keeps I. Reserved, runs_valid and exits (l. 245, 252, 283): for every plan whose moves are all admitted, the run exists, stays valid, and ends at the exit when longer than the margin. That is a law about every choice.
+
+### `reading`
+- pass a: N: Not found in the statements read.
+- pass b: N
+
+### declarations of Countdown.lean (by script)
+  l.50 theorem invariant_iff_reach
+  l.56 def admitted
+  l.61 theorem admitted_invariant_iff
+  l.70 def ticks
+  l.75 theorem ticks_succ
+  l.89 theorem ticks_eq_runPartial
+  l.101 structure CountedWork
+  l.107 theorem eq_zero_of_add_eq
+  l.111 theorem pos_of_add_eq
+  l.118 theorem ticks_busy
+  l.139 theorem stalls_beyond
+  l.164 theorem completes_iff
+  l.187 theorem pending_before
+  l.201 theorem not_done_before
+  l.209 theorem completes_plan_iff
+  l.221 structure Advances
+  l.226 theorem Advances.countedWork
+  l.236 theorem Advances.completes
+  l.245 structure Reserved
+  l.252 theorem runs_valid
+  l.267 theorem stays_exit
+  l.283 theorem exits
+  l.309 def step
+  l.314 def margin
+  l.318 theorem reserved
+  l.329 theorem misses
+  l.372 theorem not_done_before_course
+  l.382 theorem slow_exits
+  l.390 theorem slow_misses

@@ -1,0 +1,26 @@
+# After the Lean brief was frozen (appended, never overwriting)
+
+*AI-written. `BRIEF-LEAN-COMPARISON.md` is as frozen at 23:58:21 WIB on 21 November 2026; the implementer started at about 23:59 and does not see this file. For the reader who judges the module afterwards.*
+
+## 21 November, 23:59 WIB (clock, read after writing; first written as 00:02 on the 22nd, a guess): from the coordinating session
+
+Its question for the reader, in its words: is each old law got by calling the comparison, with its own hypotheses doing what the comparison asks, or does the proof of the case carry the old proof inside it under another name?
+
+And: `locked_ends_rising` concludes an ending, not a keeping. How an ending comes out of a comparison that carries `Viable n`, said here so the reader can see the step and not only the final `rfl` (it is the brief's Part 3, in four moves):
+
+1. **The clock.** A process on the numbers that steps from `i` to `i + 1` only while `i < N`, with a guard that always holds. It is viable for at most `N` further steps from `0`.
+2. **The transfer runs from the lock to the clock.** `Carries P g (clock N) True R` with `R s 0`: every enabled step of the lock's line is matched by a tick. `viable_carried` then gives: if the line were viable for `N + 1` steps from `s`, the clock would be from `0`. It is not. So the line is not viable for `N + 1` steps. That is the comparison used once, by contraposition; nothing two-sided is asked, since only the lock's moves are matched.
+3. **The bridge.** For a step that is a function taken while a condition holds, "not viable for `N + 1` steps" is "an end is reached within `N + 1` steps": a configuration with no next, at some iterate `n ≤ N + 1`. This is about any such step and has nothing of the lock in it. It is where the reader should look hardest: if the bridge's proof is the old induction to the end, the comparison has been put in and taken out.
+4. **The relation.** What makes a configuration of the lock's line related to clock time `i` is the old law's own premises doing what the comparison asks: the way is the `i`-th iterate of the lock's step as it was, still locked with share and rule not below the start's, `i` at most the use (by `more`, the use rises at each step), the level at most `hi` (by `keeps`), and at the last tick the level is nothing (by `nothing`).
+
+What the reader should then say of each case: which old hypotheses discharge which clause of `Carries`; whether deleting the call and writing the induction directly would be as short; and the line counts, old chain against new.
+
+## For the record of round 1, at the same session's word
+
+One design at 7.53 million Astra tokens is most of the round. What it bought, as far as its own report shows (not yet refuted): an exhaustive search of about 1.9 million model-and-start entries at the smallest size and an audit of about 495 million start entries for its law, and from them the one machine in the round in which every part was tested by removal. A next brief should cap a designer, not only the round: for a search design, say the size of box beyond which it must stop and report.
+
+## 21 November, 23:59 WIB (clock, read after writing; first written as 00:05 on the 22nd, a guess): from the session holding row DJ
+
+One more question for the reader, from that session's own failure of the afternoon (a carrier in which a state had one run, so that keepable carried no choice): for the second keeping-side case through a process of classes, **is the process of classes built for the purpose, so that the comparison has only one move to match?** If each class has one usable move, or the matching never has to choose, the case shows nothing about a comparison between processes with choice.
+
+Main moved by its board-only commit `557a31d2d` on `63e22296f` (row DJ: a landing that changes a module the listing of places points into runs `build_places.py` and commits its two outputs). Rebase on it before the next landing on row FM; and that rule now binds landing 2 and any landing of the comparison.

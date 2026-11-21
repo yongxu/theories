@@ -1,0 +1,875 @@
+# Task file: SETTLE, reader whole-c-settle-15
+
+Your 13 modules and the fields on which the two passes differ. Pass a is one kind of model, pass b another.
+
+## Loops.lean  (1568 lines)
+
+### field `giving`
+- pass a: B: `Loops.Once.give_zero` (l. 1152) and `Loops.Once.give_succ` (l. 1159) give a single formation whose contribution is the current level at step zero and zero afterward. Its presence is constant and its strength schedule is supplied.
+- pass b: N: the strengths k (and K, stationary) are supplied. The account (l. 89–90) says 'The strengths are supplied'. Formations present give by premise.
+
+### field `rank`
+- pass a: N: Not found in the statements read.
+- pass b: S, of upper bounds on growth: `carried_le_geomBound` (l. 996): at most D(1+M)^t; `carriedWithin_le_withinBound` (l. 972); `carried_le_carriedWithin_add` (l. 1013): a cut at order j misses at most missBound; `carried_le_polynomial` (l. 1073). `carriedWithin_exact` (l. 312): order j is exact up to step j. `carriedWithin_exact_of_not_coupledInto` (l. 428). N for ending within a bound or a falling variant.
+
+### field `forms_change`
+- pass a: N: Not found in the statements read.
+- pass b: D: the account (l. 88–98) says loops form and dissolve within the unfolding (by Becoming.Closing and Becoming.Remainder); no statement here derives it, and the strengths are taken as given. B: `Loops.Once.not_always` (l. 1196): a condition on a loop coupled at the first step only, for which order one is exact from every start, so couplings that come and go change the law's conclusion.
+
+### declarations of Loops.lean (by script)
+  l.123 theorem zero_or_pos
+  l.128 theorem ble_succ_self
+  l.133 def extend
+  l.136 theorem extend_below
+  l.140 theorem extend_next
+  l.144 def accrue
+  l.149 theorem total_lt
+  l.160 theorem total_mul_const
+  l.166 theorem le_mul_of_pos
+  l.170 theorem mul_swap
+  l.174 theorem one_add_mul
+  l.189 def carriedFrom
+  l.196 def carriedWithin
+  l.203 theorem carriedGive_of_part
+  l.208 theorem carriedGive_of_rest
+  l.215 theorem carriedGive_mono
+  l.227 theorem carriedGive_congr
+  l.245 theorem carriedFrom_succ
+  l.252 theorem carriedFrom_carried
+  l.259 theorem carriedFrom_mono
+  l.266 theorem carriedFrom_congr
+  l.278 theorem carriedFrom_eq_carried
+  l.288 theorem carriedWithin_le_carried
+  l.297 theorem carriedWithin_le_succ
+  l.304 theorem carriedWithin_mono
+  l.312 theorem carriedWithin_exact
+  l.325 theorem carried_eq_carriedWithin
+  l.340 def Couples
+  l.346 def Coupled
+  l.351 def CoupledInto
+  l.356 def OnLoop
+  l.361 def Upstream
+  l.366 theorem Coupled.extend
+  l.381 theorem coupledInto_zero
+  l.385 theorem CoupledInto.succ
+  l.395 theorem CoupledInto.shorten
+  l.408 theorem loop_of_coupledInto
+  l.428 theorem carriedWithin_exact_of_not_coupledInto
+  l.442 theorem carriedWithin_exact_of_no_loop
+  l.461 def CouplesAlways
+  l.466 def CoupledAlways
+  l.471 def orderBelow
+  l.478 theorem carriedWithin_eq_carriedFrom
+  l.484 theorem orderBelow_le_carried
+  l.489 theorem orderBelow_mono
+  l.498 theorem carriedFrom_lt
+  l.533 theorem orderBelow_lt_succ
+  l.542 theorem orderBelow_lt_later
+  l.561 theorem orderBelow_lt_along
+  l.572 theorem orderBelow_lt_around
+  l.592 theorem carriedWithin_lt_of_loop
+  l.614 theorem finite_order_iff_no_loop
+  l.639 def CoupledWith
+  l.645 def Loops.product
+  l.650 theorem carried_le_add
+  l.656 theorem carried_mono_steps
+  l.665 theorem carried_step_ge
+  l.691 theorem carried_along
+  l.712 theorem carried_around
+  l.735 theorem carried_runaway
+  l.761 def withinBound
+  l.767 def geomBound
+  l.772 def missBound
+  l.778 theorem withinBound_zero
+  l.782 theorem withinBound_le_succ
+  l.786 theorem withinBound_mono
+  l.792 theorem geomBound_mono
+  l.798 theorem missBound_le_succ
+  l.802 theorem missBound_mono
+  l.809 theorem missBound_add_withinBound
+  l.824 theorem geomBound_eq
+  l.832 def binom
+  l.840 def orderSum
+  l.842 theorem binom_zero
+  l.846 theorem orderSum_zero
+  l.850 theorem pow_step
+  l.854 theorem orderSum_succ
+  l.859 theorem orderSum_start
+  l.865 theorem orderSum_step
+  l.879 theorem withinBound_eq
+  l.900 def inflow
+  l.907 theorem total_give_le_add
+  l.943 theorem total_give_le_inflow
+  l.957 theorem carriedWithin_zero_quiet
+  l.972 theorem carriedWithin_le_withinBound
+  l.996 theorem carried_le_geomBound
+  l.1013 theorem carried_le_carriedWithin_add
+  l.1073 theorem carried_le_polynomial
+  l.1089 def strengths
+  l.1093 theorem give
+  l.1106 theorem inflow_eq
+  l.1116 theorem carried_eq
+  l.1124 theorem carriedWithin_eq
+  l.1134 theorem attained
+  l.1148 def strengths
+  l.1152 theorem give_zero
+  l.1159 theorem give_succ
+  l.1167 theorem onLoop
+  l.1172 theorem exact
+  l.1196 theorem not_always
+  l.1213 def stationary
+  l.1217 theorem stationary_now
+  l.1222 theorem couplesAlways_of_stationary
+  l.1240 theorem finite_order_iff_no_loop_stationary
+  l.1249 theorem Loops.product_ones
+  l.1255 theorem carried_doubles_around
+  l.1273 theorem pow_mul_nat
+  l.1277 theorem pow_le_pow_base
+  l.1281 theorem pow_le_pow_exp
+  l.1288 theorem two_pow_succ
+  l.1291 theorem odd_lt_two_pow
+  l.1299 theorem sq_lt_two_pow
+  l.1314 theorem linear_lt_two_pow
+  l.1323 theorem poly_lt_two_pow
+  l.1339 theorem not_poly_of_doubling
+  l.1358 theorem binom_le_pow
+  l.1370 theorem orderSum_le_poly
+  l.1393 def inflowStationary
+  l.1398 theorem inflow_stationary
+  l.1412 theorem strength_of_couples
+  l.1421 theorem carried_along_stationary
+  l.1433 theorem carried_doubles_into
+  l.1455 theorem polynomial_iff_no_loop
+  l.1497 theorem most_difference_within
+  l.1520 theorem gap_le_polynomial
+  l.1542 theorem gap_polynomial_iff_no_loop
+
+## LossMatching.lean  (463 lines)
+
+### field `both_outcomes`
+- pass a: S: `ReadsAt` (l. 417) stipulates both outcomes along one run. At and after τ the claim is realized iff its support held at τ.
+- pass b: N: no exactly-when of going on and ending, or of keeping and losing, for one model. The iffs present are of matching (`strictLossMatch_iff_counts` l. 329, `strictLossMatch_iff_length_of_alike` l. 344) and of reading (`readsAt_iff_settled` l. 429).
+
+### field `forms_change`
+- pass a: S: `strictLossMatch_of_extension` (l. 106) turns a given generative extension into a strict loss match back to the original configuration under reflexive content. Existence of an extending course is not concluded.
+- pass b: N: the only widening is `Extension`, used as a premise in `strictLossMatch_of_extension` (l. 106), a relation between two configurations rather than a course that goes on.
+
+### declarations of LossMatching.lean (by script)
+  l.45 theorem total_middle
+  l.52 def decideDistinct
+  l.70 def StrictLossMatch
+  l.81 theorem StrictLossMatch.trans
+  l.93 theorem StrictLossMatch.mono
+  l.106 theorem strictLossMatch_of_extension
+  l.116 def SufficientMatching
+  l.123 theorem SufficientMatching.comparison
+  l.133 theorem SufficientMatching.not_mutual
+  l.139 theorem SufficientMatching.not_self
+  l.147 def LossesListed
+  l.152 theorem StrictLossMatch.length_lt
+  l.172 theorem StrictLossMatch.irrefl
+  l.178 theorem StrictLossMatch.asymm
+  l.186 theorem not_strictLossMatch_of_length_le
+  l.194 theorem StrictLossMatch.counterpart
+  l.200 theorem not_strictLossMatch_of_kept
+  l.209 theorem not_strictLossMatch_of_base_lost
+  l.224 def classCount
+  l.229 theorem StrictLossMatch.classCount_le
+  l.250 theorem matching_of_counts
+  l.301 theorem exists_fresh
+  l.312 theorem strictLossMatch_of_counts
+  l.329 theorem strictLossMatch_iff_counts
+  l.339 theorem classCount_unit
+  l.344 theorem strictLossMatch_iff_length_of_alike
+  l.363 def lostOf
+  l.368 theorem mem_lostOf
+  l.392 theorem distinct_lostOf
+  l.407 theorem lossesListed_lostOf
+  l.417 def ReadsAt
+  l.423 theorem ReadsAt.loss_retained
+  l.429 theorem readsAt_iff_settled
+  l.437 theorem not_readsAt_of_recovery
+  l.449 def frame
+  l.452 theorem self_match
+  l.457 theorem no_sufficient_matching
+
+## LumpedSeeking.lean  (366 lines)
+
+### field `share`
+- pass a: N: Posterior shares are compared, but no subsequent favouring rule is reset from their relative shares.
+- pass b: S: the posterior `share` of a hypothesis given a record. `posterior_le_iff_prior` (l. 90): for a tied pair, h₁'s share ≤ h₂'s iff prior h₁ ≤ prior h₂. `posterior_ratio_kept` (l. 127): the shares stand as the prior weights. N for a rule set again from the share: the choice `choose` reads the course, not the shares.
+
+### field `both_outcomes`
+- pass a: B: `Agree.turns_fair` (l. 275) and `Agree.keeps_tails` (l. 288) show one wrong prior order reversed and another retained on the same two-heads record.
+- pass b: N: no exactly-when of going on and ending. B (of keeping or turning a wrong order, in one model under one record): `Agree.turns_fair` (l. 275) with `Agree.keeps_tails` (l. 288), and `Agree.seeking_keeps_tails` (l. 305) with `Agree.seeking_turns_tails` (l. 349).
+
+### field `closed_region`
+- pass a: S: `seek_tied` (l. 175) shows equal likelihood weights under the two tied hypotheses for arbitrarily extended finite courses.
+- pass b: N: the tie kept over every course (`seek_tied` l. 175, by induction on the course) is the nearest thing, an equality kept at every course, not a region closed under steps.
+
+### declarations of LumpedSeeking.lean (by script)
+  l.48 structure learning
+  l.69 def Tied
+  l.72 theorem tied_mass
+  l.78 theorem single_le_evidence
+  l.90 theorem posterior_le_iff_prior
+  l.127 theorem posterior_ratio_kept
+  l.151 theorem order_kept
+  l.168 def seekWeight
+  l.175 theorem seek_tied
+  l.187 theorem seeking_keeps_order
+  l.206 inductive Bias
+  l.223 def hypotheses
+  l.225 theorem distinct
+  l.232 def prior
+  l.238 def outcomes
+  l.241 def twoHeads
+  l.247 def agreeing
+  l.261 theorem ties
+  l.268 theorem totals
+  l.275 theorem turns_fair
+  l.288 theorem keeps_tails
+  l.301 def agreeCourse
+  l.305 theorem seeking_keeps_tails
+  l.319 def readBoth
+  l.334 def experiment
+  l.339 def pickReading
+  l.344 def readCourse
+  l.349 theorem seeking_turns_tails
+
+## MapInstances.lean  (709 lines)
+
+### field `moves`
+- pass a: N: Not found in the statements read.
+- pass b: S: the continuation R : Nat → F → F → Prop may branch, and «退化» asks every branch to end. `every_branch_ends_of_gone` (l. 328): for a class E finer than activity, from an active x, if nothing the line reaches at step N ≥ x.1 is active, then every branch ends. There is no Process S A, policy or allowed set here; the 'choice' is a branch of the relation.
+
+### field `giving`
+- pass a: D: The opening account identifies the taker and renewer of Coupled as formations and locates the gated law for their lasting end in Flow.family_excess_ends. The local `Map.coupled_degenerates` (l. 598) concludes degeneration of the taker’s line.
+- pass b: N: in the excess regime, what renews the family is `L.replenishment`, a function of the handed-in Flow ("whatever gives it", l. 399). D: the account (l. 72-73) says a gate with only active formations giving (`Flow.family_excess_ends`, another module) is not used here. B: `coupled_degenerates` (l. 598) uses Coupled, where a renewer formation is part of the web; its giving is defined in Becoming.Continuation, not stated here.
+
+### field `multiplying`
+- pass a: N: Not found in the statements read.
+- pass b: S (partly): `passing_carries_iff` (l. 190): under the passing continuation, a carrying renewal from carrier b at t to a is exactly passes t b a ∧ V.Arises t a. A carrier gives rise to a carrier, but no law counts carriers. B: `shifted_pass` (l. 480): carrier n passes to n + 1.
+
+### field `both_outcomes`
+- pass a: S: `Web.ends_or_reaches` (l. 157) gives, for every finite offset, a reachable end or a reached occurrence at that offset, assuming next-step existence decided at every reached point.
+- pass b: N: no general exactly-when of going on and ending for one model. B: `renewal_undecided` (l. 536): in the relay every carrier renews and the line still ends (`relay_renews_and_ends` l. 515), while in the shifts every carrier renews and the line generates; these are two models. Also `Map.Depleted.continues` (l. 585) with `Map.Depleted.degenerates` (l. 590): the line takes a step and then degenerates.
+
+### declarations of MapInstances.lean (by script)
+  l.118 theorem outside_of_not_endless
+  l.133 theorem reached_later
+  l.140 theorem active_along_line
+  l.149 theorem reaches_onward
+  l.157 theorem ends_or_reaches
+  l.175 theorem carries_iff
+  l.190 theorem passing_carries_iff
+  l.208 theorem generation_renews_late
+  l.220 theorem generation_arises_late
+  l.236 theorem keeping_of_carried_on
+  l.251 theorem not_carries_of_within_itself
+  l.256 theorem not_generation_of_within_itself
+  l.263 theorem itself_carries_nothing
+  l.268 theorem itself_not_generation
+  l.273 theorem itself_keeps
+  l.279 theorem always_keeps
+  l.295 theorem ends_before
+  l.305 theorem ends_of_ends_at
+  l.314 theorem reached_coarser
+  l.321 theorem active_along_finer
+  l.328 theorem every_branch_ends_of_gone
+  l.335 theorem activity_every_branch_ends_of_gone
+  l.345 theorem not_endless_of_gone
+  l.353 theorem end_of_gone
+  l.366 theorem consumed_held_gone
+  l.376 theorem consumed_held_degenerates
+  l.389 theorem consumed_held_not_endless
+  l.400 theorem family_excess_gone
+  l.414 theorem family_excess_degenerates
+  l.428 theorem family_excess_not_endless
+  l.439 theorem stopped_gone
+  l.446 theorem stopped_degenerates
+  l.457 theorem stopped_not_endless
+  l.473 theorem shifted_carry
+  l.480 theorem shifted_pass
+  l.489 theorem shifted_generates
+  l.506 theorem relay_after_two
+  l.515 theorem relay_renews_and_ends
+  l.536 theorem renewal_undecided
+  l.558 def web
+  l.569 theorem dependent
+  l.576 theorem below
+  l.582 def every
+  l.585 theorem continues
+  l.590 theorem degenerates
+  l.598 theorem coupled_degenerates
+  l.609 theorem coupled_continues
+  l.616 theorem stopped_relay_degenerates
+  l.625 theorem stopped_relay_continues
+  l.635 def web
+  l.643 def continuation
+  l.646 theorem inactive_two
+  l.652 theorem last_ends
+  l.659 theorem first_continues
+  l.664 theorem first_has_next_iff
+  l.670 theorem degenerates
+  l.680 theorem end_decides
+  l.695 theorem end_of_gone_iff_excluded_middle
+
+## MapRegions.lean  (431 lines)
+
+### field `moves`
+- pass a: N: Not found in the statements read.
+- pass b: S: `«后守»` (l. 81) asks for some branch family S, holding x and closed under continuation, with a point reached from x after which no carrying renewal lies in S. `«单行则生成后守不并»` (l. 111): where each occurrence conditions at most one other (func), 生成 and 后守 exclude each other. The branches are of a relation, not moves of a Process S A, and there is no law about what a choice keeps.
+
+### field `no_return`
+- pass a: B: `Map.Once.stays_third` (l. 216) concludes that any continuation from the third occurrence stays there. `Map.Once.third_not_renews` (l. 201) excludes every carrying renewal from it.
+- pass b: N: no loss or irreversibility. 后守 is settling from a point on, not a loss. `«后守退化不并»` (l. 105) excludes degeneration.
+
+### field `comparison`
+- pass a: S: `«传则粗不生»` (l. 61) excludes a coarse beginning at the receiving end of a carrying renewal. `«粗有前则生为传»` (l. 65) recovers a carrying renewal from a fine beginning with a coarse predecessor; both compare readings of the same occurrence.
+- pass b: N: no law carries between two processes or starts. The module's implications are between region notions at one relation: `«守则后守»` (l. 86), `«全守则后守»` (l. 91), `«后守则延»` (l. 100), `«传则粗不生»` (l. 61).
+
+### declarations of MapRegions.lean (by script)
+  l.61 theorem «传则粗不生»
+  l.65 theorem «粗有前则生为传»
+  l.72 theorem «生则或粗生或传»
+  l.81 def «后守»
+  l.86 theorem «守则后守»
+  l.91 theorem «全守则后守»
+  l.100 theorem «后守则延»
+  l.105 theorem «后守退化不并»
+  l.111 theorem «单行则生成后守不并»
+  l.128 theorem «三域之周»
+  l.152 theorem «三域之定当且仅当排中»
+  l.176 inductive Stage
+  l.179 def once
+  l.191 theorem Once.func
+  l.197 theorem Once.renews
+  l.201 theorem Once.third_not_renews
+  l.209 theorem Once.third_next
+  l.216 theorem Once.stays_third
+  l.223 theorem Once.family
+  l.240 theorem Once.endless
+  l.248 theorem Once.not_generates
+  l.258 theorem Once.not_keeps
+  l.263 theorem Once.not_degenerates
+  l.268 theorem Once.keeping
+  l.278 theorem Once.keepsAfter
+  l.284 theorem step_func
+  l.288 theorem step_family
+  l.296 theorem generates_iff_changes
+  l.309 theorem keepsAfter_iff_settles
+  l.326 def seen
+  l.331 def turning
+  l.336 def sequence
+  l.338 theorem seen_succ
+  l.341 theorem seen_of_le
+  l.347 theorem seen_of
+  l.351 theorem seen_witness
+  l.357 theorem sequence_seen
+  l.360 theorem sequence_unseen
+  l.364 theorem turning_turns
+  l.376 theorem «后守之定则LPO»
+  l.399 theorem «生成之定则WLPO»
+  l.420 theorem «生成后守之定则LPO»
+
+## MatchedCourses.lean  (401 lines)
+
+### field `both_outcomes`
+- pass a: B: `realized_succ` (l. 361) characterizes realization at every positive time by the deadline having been reached, the base holding after installation, and the installed move covering the claim.
+- pass b: N: no dichotomy of going on and ending. `matches_iff` (l. 326) is an exactly-when of matching.
+
+### field `closed_region`
+- pass a: B: `states_succ` (l. 356) proves installation and the base flag stay fixed for all positive times on each course.
+- pass b: N
+
+### declarations of MatchedCourses.lean (by script)
+  l.55 inductive Move
+  l.60 inductive Position
+  l.65 inductive Claim
+  l.70 structure State
+  l.75 def start
+  l.78 def baseAfter
+  l.85 def advance
+  l.90 def process
+  l.92 def states
+  l.96 def run
+  l.102 def time
+  l.108 def positionOf
+  l.116 def covers
+  l.133 def frame
+  l.137 instance decidableRealized
+  l.142 def gapAt
+  l.146 def firstClaimOf
+  l.153 def supportedAt
+  l.157 def Supported
+  l.159 instance decidableSupported
+  l.162 def final
+  l.165 def BasicAlike
+  l.169 def BaseApart
+  l.173 theorem common_start
+  l.175 theorem generated_trace
+  l.179 theorem separated_same_position
+  l.182 theorem support_between
+  l.185 theorem support_restored
+  l.189 theorem claim_iff_support
+  l.194 theorem recovery_retains_loss
+  l.200 def matchB1
+  l.209 theorem a_matches_b1
+  l.221 def matchA
+  l.230 theorem b3_matches_a
+  l.242 def swapB2
+  l.250 theorem b2_loss_correspondence
+  l.255 theorem b2_correspondence_involutive
+  l.259 theorem conditional_lower_anchor
+  l.265 theorem conditional_upper_anchor
+  l.272 theorem conditional_outer_order
+  l.282 theorem fragile_b3_loses_base
+  l.284 theorem fragile_a_keeps_base
+  l.287 theorem fragile_b3_not_matching
+  l.295 def allClaims
+  l.297 theorem allClaims_distinct
+  l.300 theorem allClaims_every
+  l.308 theorem listed
+  l.312 def lostCount
+  l.314 theorem lost_not_base
+  l.319 theorem losses_alike
+  l.326 theorem matches_iff
+  l.330 theorem lost_counts
+  l.334 theorem b2_a_neither
+  l.341 theorem a_b1_not_extension
+  l.347 theorem fragile_b3_matches_nothing
+  l.356 theorem states_succ
+  l.361 theorem realized_succ
+  l.368 theorem time_le_four
+  l.370 theorem time_pos
+  l.379 theorem reads_at_time
+  l.393 theorem first_losses_retained
+
+## Mechanism.lean  (432 lines)
+
+### field `no_return`
+- pass a: S: `DependsOnlyOn.reabsorbed` (l. 191) concludes full equality from step one onward when the next state depends only on the projection, initial projections agree and the two move sequences agree.
+- pass b: N for a loss of a level or giver. S (of information only): `DependsOnlyOn.reabsorbed` (l. 191): whatever differed at the start apart from π is gone from step 1 on. This is concluded from DependsOnlyOn.
+
+### field `closed_region`
+- pass a: S: `GoAlike.runs_agree` (l. 166) makes equality under the projection invariant for synchronized moves under GoAlike.
+- pass b: N
+
+### declarations of Mechanism.lean (by script)
+  l.92 def Image
+  l.98 theorem factors_image
+  l.105 theorem Image.least
+  l.114 theorem image_step_iff
+  l.122 theorem image_determined_iff
+  l.134 theorem carries_law_iff
+  l.142 theorem goAlike_id_iff
+  l.149 theorem goAlike_const
+  l.154 theorem goAlike_image_iff
+  l.166 theorem GoAlike.runs_agree
+  l.180 def DependsOnlyOn
+  l.184 theorem DependsOnlyOn.goAlike
+  l.191 theorem DependsOnlyOn.reabsorbed
+  l.203 theorem dependsOnlyOn_iff
+  l.211 theorem reabsorbed
+  l.225 def adaptive
+  l.229 theorem adaptive_determined
+  l.234 theorem adaptive_state_law_iff
+  l.243 theorem adaptive_state_carries_iff
+  l.249 def ruleLaw
+  l.253 theorem ruleLaw_determined
+  l.258 theorem Run.steps_by_rule
+  l.273 def TakesThrough
+  l.278 theorem stepsThrough_retarget
+  l.289 theorem not_fixesThrough_of_untaken
+  l.303 theorem not_fixesThrough_of_goAlike
+  l.320 def inputs
+  l.324 theorem inputs_determined
+  l.328 def inputsRun
+  l.334 theorem inputs_intervention_unfixed
+  l.341 theorem inputs_model_fixes
+  l.347 def forget
+  l.351 def Run.forget
+  l.356 theorem forget_inputs_determined_iff
+  l.371 def process
+  l.374 theorem not_determined
+  l.379 theorem goAlike
+  l.385 theorem carries
+  l.399 def follow
+  l.402 def alternate
+  l.405 def process
+  l.408 def next
+  l.411 def run
+  l.414 theorem determined
+  l.417 theorem not_goAlike
+  l.424 theorem no_state_law
+
+## Metaethics.lean  (443 lines)
+
+### field `no_return`
+- pass a: B: `Mixed.web` (l. 329) prescribes zero level at the lost source and inactivity of the dependent at every positive time; this permanence is built into the example.
+- pass b: N. B: in `Mixed.web` (l. 329) the lost condition's level is 0 after step 0 and the dependent formation is inactive after 0. This is the model's definition, not a concluded law.
+
+### field `both_outcomes`
+- pass a: B: `Mixed.one_event_two_relations` (l. 356) concludes that one drawing event has a living relation to the kept source and a nonliving one to the lost source, while the event itself is nonliving.
+- pass b: N for going on and ending. B: `Mixed.one_event_two_relations` (l. 356): one event (drawer at 0) is not living while its relation to the kept condition is living and its relation to the lost condition is not.
+
+### field `comparison`
+- pass a: S: `Web.living_iff_relations` (l. 307) carries living status between event and relation descriptions with the explicit activity and participation premises.
+- pass b: N: `Neutral.within` (l. 126) only weakens a neutral rule to one within a boundary.
+
+### field `closed_region`
+- pass a: B: `Separate.stays` (l. 235) preserves the false formation label across any co-participation edge in the two-condition example.
+- pass b: N
+
+### field `forms_change`
+- pass a: D: The opening account describes chains of no-loss extensions in its discussion of Comparison.climbs and locates the frame comparison results in ValuationFrames.
+- pass b: N
+
+### declarations of Metaethics.lean (by script)
+  l.119 def Within
+  l.123 def Neutral
+  l.126 theorem Neutral.within
+  l.137 structure Valuation
+  l.148 def SelfSignificance
+  l.152 def Seed
+  l.157 def transmits
+  l.162 def shares
+  l.166 def Grounds
+  l.170 def Significant
+  l.175 theorem seed_of_selfSignificance
+  l.186 def SecuresNewContent
+  l.191 def PositionedArticulation
+  l.198 def articulates
+  l.205 theorem positioned_articulation_of_articulates
+  l.226 def same
+  l.232 def conditions
+  l.235 theorem stays
+  l.256 def Web.valuation
+  l.270 theorem breaking_relates
+  l.282 theorem valuing_breaking_reaches
+  l.296 def Web.relations
+  l.307 theorem Web.living_iff_relations
+  l.319 inductive Formation
+  l.323 inductive Source
+  l.329 def web
+  l.348 theorem dependent
+  l.356 theorem one_event_two_relations
+  l.376 inductive Who
+  l.379 inductive Life
+  l.383 def related
+  l.392 def own
+  l.399 def linked
+  l.404 def valuation
+  l.408 def ownRegion
+  l.414 def ownStandpoint
+  l.418 theorem no_relation_into_beyond
+  l.424 def endorses
+  l.431 theorem articulation_neutrality_is_needed
+
+## MoveFormation.lean  (952 lines)
+
+### field `rank`
+- pass a: S: `Run.moves_lasso_of_whole_held` (l. 439) bounds transient length plus positive period by the length of a list containing the whole run when both component steps follow functions. The bounded event is repetition of moves.
+- pass b: N: no ending within a bound. S (a bound of repetition, not of ending): `Run.moves_lasso_of_whole_held` (l. 439): where the laws are functions and the joint configurations are held by a list l, the moves repeat from some i with period q+1, with i+q+1 ≤ l.length. Likewise `Run.moves_lasso_of_rest_held` (l. 407) and `Run.moves_lasso_of_part_held` (l. 422).
+
+### declarations of MoveFormation.lean (by script)
+  l.138 def coupled
+  l.145 def Run.part
+  l.149 def Run.rest
+  l.154 theorem Run.part_act_eq_rest_act
+  l.160 def Run.toClosedBy
+  l.165 theorem closedBy_formed
+  l.173 def Run.ofClosedBy
+  l.180 theorem Run.ofClosedBy_toClosedBy
+  l.185 theorem coupled_determined
+  l.205 theorem lumped_id
+  l.210 theorem lumped_of_finer
+  l.217 theorem lumped_const_iff
+  l.231 def PartForms
+  l.234 def RestForms
+  l.240 theorem partForms_iff
+  l.246 theorem restForms_iff
+  l.253 theorem partForms_and_restForms_iff
+  l.269 theorem PartForms.goAlike
+  l.279 theorem PartForms.parts_agree
+  l.287 theorem Run.part_trajectory
+  l.299 theorem Run.rest_trajectory
+  l.312 theorem Run.part_orbit
+  l.323 theorem Run.rest_orbit
+  l.336 theorem Run.rest_driven_by_part
+  l.350 def wholeNext
+  l.355 theorem Run.whole_orbit
+  l.373 def clock
+  l.376 theorem clock_determined
+  l.382 def Run.withClock
+  l.386 theorem Run.withClock_part
+  l.391 theorem Run.withClock_restForms
+  l.407 theorem Run.moves_lasso_of_rest_held
+  l.422 theorem Run.moves_lasso_of_part_held
+  l.439 theorem Run.moves_lasso_of_whole_held
+  l.453 theorem Run.whole_unheld_of_never_cycles
+  l.462 theorem Run.rest_unheld_of_never_cycles
+  l.471 theorem Run.part_unheld_of_never_cycles
+  l.481 def lassoRest
+  l.487 def Run.withLasso
+  l.494 theorem Run.withLasso_held
+  l.499 theorem Run.withLasso_part
+  l.515 theorem lumped_of_new
+  l.520 theorem not_lumped_of_varied
+  l.529 theorem lumped_iff_singleValued
+  l.538 theorem reading_le
+  l.550 def policyUpto
+  l.554 theorem policyUpto_agrees
+  l.576 theorem lumped_upto_iff
+  l.587 theorem throughout_or_fails
+  l.604 theorem policyUpto_taken
+  l.622 theorem no_policy_upto_iff
+  l.644 theorem rest_differs_of_varied
+  l.662 theorem Run.keepHistory_formed
+  l.682 theorem ExchangeLaw.ofMoves_lumped_stage
+  l.693 def alt
+  l.697 theorem alt_ne
+  l.707 def byPart
+  l.710 def byRest
+  l.713 def together
+  l.720 theorem one_course_two_laws
+  l.735 theorem closed_not_own
+  l.750 theorem driven
+  l.760 def partCourse
+  l.768 def restCourse
+  l.776 def form
+  l.783 def move
+  l.788 theorem neither_alone
+  l.861 theorem coupled_formed
+  l.866 theorem part_policy
+  l.871 theorem rest_policy
+  l.877 theorem both_one_move
+  l.883 theorem rest_differs
+  l.897 theorem formed_of_finer
+  l.913 theorem ofMoves_formed_stage
+  l.926 def stillRun
+  l.931 theorem still_driven
+  l.937 def parityRun
+  l.942 theorem parity_neither_alone
+
+## MoveOutcomeProcesses.lean  (288 lines)
+
+### field `no_return`
+- pass a: B: `toFalse_not_true` (l. 215) excludes every move reaching true from any state in the constant law. The exclusion is concluded from the built step.
+- pass b: N: no irreversibility over steps. B: `law_covers_free_and_loses` (l. 235): the constant law covers the free process while losing the possibility of going to true, a loss between two processes, not over time. `halted_ensures_nothing` (l. 270): where no move is enabled nothing is ensured.
+
+### declarations of MoveOutcomeProcesses.lean (by script)
+  l.56 def Ensures
+  l.61 def Covers
+  l.66 theorem completes_one_iff
+  l.73 theorem ensures_iff
+  l.80 theorem covers_iff_moves
+  l.86 theorem Covers.ensures
+  l.95 theorem covers_iff
+  l.104 theorem covers_refl
+  l.108 theorem covers_trans
+  l.115 theorem completes_mono
+  l.122 theorem not_ensures_false
+  l.127 theorem ensures_true_iff
+  l.134 theorem common_goal
+  l.141 theorem no_strict_gain_everywhere
+  l.147 theorem covers_along
+  l.158 theorem not_covers_iff
+  l.165 theorem lost_goal_of_not_covers_of_dne
+  l.176 theorem summary_ensures_iff
+  l.184 theorem common_completes
+  l.195 abbrev toFalse
+  l.198 def free
+  l.201 def setting
+  l.204 def halted
+  l.207 theorem toFalse_ensures_false
+  l.211 theorem setting_ensures_each
+  l.215 theorem toFalse_not_true
+  l.220 theorem setting_covers_toFalse
+  l.226 theorem free_wider_not_covering
+  l.235 theorem law_covers_free_and_loses
+  l.241 theorem setting_covers_and_gains
+  l.251 theorem setting_covers_and_opens
+  l.259 theorem setting_separate_not_joint
+  l.270 theorem halted_ensures_nothing
+  l.279 theorem summary_hides_loss
+
+## MutualDependence.lean  (493 lines)
+
+### field `reading`
+- pass a: N: Not found in the statements read.
+- pass b: S: `SharesThroughout.unrestricted` (l. 132), `MutuallyDependent.unrestricted` (l. 139) and `MutuallyFed.unrestricted` (l. 147): significance bounded by each center's system, influence closure or feeding closure is Unrestricted under the matching premise. D: the account (l. 73-76) reads `half_stands` as what stands giving no warning; no statement says that.
+
+### field `giving`
+- pass a: S: `Flow.MutuallyFed` (l. 104) uses feeding closure between formations. D: The account identifies Overshoot as a mutually fed model; this module gives no loss law for those feeders.
+- pass b: N: giving is the flow's `give`/`given`, handed in; no giver that is itself a going-on that can be lost. B: in `Drawing` (l. 172) and `DoublingDraw` (l. 447) nothing gives.
+
+### field `no_return`
+- pass a: B: `Drawing.web` (l. 183) prescribes zero for both levels and inactivity after step zero. `DoublingDraw.web` (l. 457) specifies zero from step three onward.
+- pass b: N: no general irreversibility. B: `DoublingDraw.half_then_none` (l. 485) states the level is 0 at step 3 after more than half stood at step 2; the built web's level is 0 at every later step by its definition (l. 457).
+
+### field `closed_region`
+- pass a: S: `Flow.mutuallyDependent_iff_reach` (l. 111) equates universal influence closure with every reach closure containing every formation; these are relational closures.
+- pass b: N: no region closed under steps. S (closures under relations, not steps): `SharesThroughout`, `MutuallyDependent` and `MutuallyFed` (l. 94-105) take the system, influence or feeding closure as the whole; `CoupledThroughout` (l. 302).
+
+### declarations of MutualDependence.lean (by script)
+  l.94 def SharesThroughout
+  l.99 def MutuallyDependent
+  l.104 def MutuallyFed
+  l.111 theorem mutuallyDependent_iff_reach
+  l.116 theorem MutuallyFed.mutuallyDependent
+  l.120 theorem MutuallyDependent.sharesThroughout
+  l.126 theorem mutuallyDependent_of_common
+  l.132 theorem SharesThroughout.unrestricted
+  l.139 theorem MutuallyDependent.unrestricted
+  l.147 theorem MutuallyFed.unrestricted
+  l.159 theorem shares_not_mutual
+  l.172 def flow
+  l.183 def web
+  l.193 theorem balances
+  l.200 theorem affected
+  l.205 theorem mutuallyDependent
+  l.213 theorem mutual_not_fed
+  l.233 theorem CoupledAlways.chainInTime
+  l.245 theorem roundTrip_of_coupledAlways
+  l.253 theorem carried_pow_around
+  l.264 theorem carried_pow_downstream
+  l.279 theorem carried_le_pow_always
+  l.290 theorem exponential_around
+  l.302 def CoupledThroughout
+  l.310 theorem CoupledThroughout.exponential
+  l.329 theorem carriers_grow
+  l.342 theorem others_bounded
+  l.356 theorem share_ratio_pow
+  l.369 def drawnBefore
+  l.376 theorem pow_le_drawnBefore
+  l.394 theorem Balances.level_add_drawn
+  l.409 theorem Balances.drawn_within
+  l.417 theorem Balances.half_stands
+  l.431 theorem Balances.doubling_needs
+  l.447 def flow
+  l.457 def web
+  l.469 theorem balances
+  l.476 theorem exceeds
+  l.485 theorem half_then_none
+
+## Narrowing.lean  (574 lines)
+
+### field `no_return`
+- pass a: S: `mem_learn` (l. 225) implies a candidate absent at the start of any further learning stays absent, for any subsequent evidence.
+- pass b: N: no statement of irreversibility. `counterevidence_of_dropped` (l. 267) says a dropped candidate contradicts some observation; it is not a law of no return.
+
+### field `forms_change`
+- pass a: B: `one_sample_settles_one` (l. 532) and `contrasting_settles_both` (l. 541) witness widening of the questions settled by adding the other observation of the identity rule.
+- pass b: N: no statement of continuing while what is present changes.
+
+### declarations of Narrowing.lean (by script)
+  l.50 abbrev Observation
+  l.53 abbrev Rule
+  l.58 def Fits
+  l.62 def revise
+  l.66 def learn
+  l.71 def answer
+  l.77 def Safe
+  l.81 def Maximal
+  l.86 theorem beq_true_iff
+  l.92 theorem mem_filter
+  l.113 theorem filter_cons_true
+  l.120 theorem filter_cons_false
+  l.128 theorem filter_filter_self
+  l.139 theorem filter_map_comm
+  l.150 theorem all_map
+  l.158 def observe
+  l.160 theorem after_observe_iff
+  l.168 def encode
+  l.172 theorem encode_inj
+  l.179 def sense
+  l.183 theorem mem_revise
+  l.189 theorem revise_is_after
+  l.197 theorem narrow_once_iff
+  l.203 def narrowed
+  l.207 theorem after_congr
+  l.212 theorem narrowed_congr
+  l.218 theorem mem_learn_iff
+  l.225 theorem mem_learn
+  l.237 theorem narrowed_iff_fits
+  l.242 theorem actual_retained
+  l.247 theorem counterevidence_of_not_fits
+  l.261 theorem counterevidence_of_eliminated
+  l.267 theorem counterevidence_of_dropped
+  l.272 theorem revise_revise
+  l.277 theorem repeated_observation_idle
+  l.286 def Settles
+  l.290 def onCons
+  l.294 theorem answer_some
+  l.308 theorem answer_none
+  l.318 theorem answer_of_settles
+  l.330 theorem answer_iff
+  l.340 theorem settles_learn_iff
+  l.348 theorem answer_safe
+  l.352 theorem safe_definite_requires_agreement
+  l.358 theorem answer_maximal
+  l.362 theorem unique_maximal_safe
+  l.370 theorem unique_maximal_safe_of_ext
+  l.377 theorem known_rule_makes_answer_correct
+  l.385 def acquire
+  l.391 theorem acquired_evidence_faithful
+  l.401 theorem acquired_answers_correct
+  l.408 def transport
+  l.411 theorem answer_transport
+  l.421 theorem learning_transport
+  l.442 theorem narrowing_transport
+  l.452 theorem wrong_reencoding_breaks_transfer
+  l.459 def repertoire
+  l.462 theorem repertoire_complete
+  l.478 theorem repertoire_complete_of_ext
+  l.484 theorem full_repertoire_correct
+  l.493 theorem full_repertoire_settles_actual
+  l.499 def oneSample
+  l.502 def twoSamples
+  l.504 theorem before_acquisition_abstains
+  l.506 theorem one_sample_leaves_other_case_unsettled
+  l.510 theorem contrasting_acquisition_settles_both
+  l.514 theorem learned_response_differs_from_last_report
+  l.518 theorem repeated_same_case_does_not_settle_other
+  l.521 theorem insufficient_support_retains_ambiguity
+  l.524 theorem wrong_model_class_can_be_confidently_wrong
+  l.528 theorem inconsistent_evidence_yields_no_answer
+  l.532 theorem one_sample_settles_one
+  l.541 theorem contrasting_settles_both
+  l.549 theorem settled_differs_from_last
+  l.556 theorem repeated_case_leaves_other
+  l.561 theorem contradiction_settles_nothing
+  l.566 theorem narrow_class_settles_wrongly
+
+## Novelty.lean  (379 lines)
+
+### field `both_outcomes`
+- pass a: N: Not found in the statements read.
+- pass b: S, general: `returns_of_bounded` (l. 106): a bounded family changing without end does not never-revisit. With `unbounded_of_never_revisits` (l. 198) and the conjunct of `first_law_cases` (l. 363) (balanced and gainless: ¬Revisits → change stops), this is the dichotomy of returning or stopping. `upto_or_fails` (l. 67) is a logical dichotomy on finite stretches.
+
+### declarations of Novelty.lean (by script)
+  l.67 theorem upto_or_fails
+  l.90 theorem revisits_of_bounded
+  l.97 theorem revisits_of_nonrising
+  l.106 theorem returns_of_bounded
+  l.117 theorem exceeds_of_distinct_configs
+  l.133 theorem unbounded_of_distinct_configs
+  l.146 theorem distinct_configs_of_apart
+  l.163 theorem exceeds_of_new
+  l.186 theorem unbounded_of_new
+  l.198 theorem unbounded_of_never_revisits
+  l.208 theorem unread_of_new_record
+  l.216 theorem unread_of_unbounded
+  l.229 theorem never_revisits_of_loses
+  l.249 theorem changes_le_stock
+  l.284 theorem rests_of_loses
+  l.297 def counting
+  l.301 theorem counting_new
+  l.306 theorem counting_gains
+  l.319 theorem Balances.bounded
+  l.327 theorem bounded_counting_rest
+  l.335 theorem uncarried_of_bounded
+  l.350 theorem forgets_of_bounded
+  l.363 theorem first_law_cases

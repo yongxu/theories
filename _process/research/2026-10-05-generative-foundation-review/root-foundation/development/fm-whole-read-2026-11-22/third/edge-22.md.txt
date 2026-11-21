@@ -1,0 +1,346 @@
+# Task file: EDGE, reader whole-c-edge-22
+
+Your 3 modules. For orientation only, what the two passes said of the four marks, of moves and of a reading (where to look, not evidence).
+
+## Regulation.lean  (2016 lines)
+
+### `both_outcomes`
+- pass a: S: `relay_threshold` (l. 1989) characterizes eventual permanent band membership for every balanced relay run held initially below a by a+(ℓ+1)M ≤ b+1, assuming 0<a≤b, 0<M and (ℓ+1)M≤b+1. Above threshold `held_oscillates` (l. 1759) gives arbitrarily late excursions on both sides from the start just below a.
+- pass b: S: `relay_threshold` (l. 1989): for 0<a, a≤b, M>0, (ℓ+1)M ≤ b+1: every relaying flow from every start held below a settles in [a,b] iff a+(ℓ+1)M ≤ b+1. Past it, `held_oscillates` gives crossing without end. This is general over all flows L' W' c' and is a dichotomy of settling versus oscillating, not of going on and ending. `no_narrower_band` with `lateReturn_band` give the exact band.
+
+### `no_return`
+- pass a: S: `Flow.never_at_of_beyond` (l. 285) concludes that the target is missed at every later step given continuing balance and overcorrection at each step from T. This is conditional on future exchange.
+- pass b: S: `crossing_oscillates` (l. 1711): given RelaysLate, balance at every step, a ≤ b and one UpCrossing, for every N there are later steps with the level above b and below a. It never settles, and this is concluded. `held_oscillates` (l. 1759): a start held at a−1 with b+2 ≤ a+(ℓ+1)M. `never_at_of_beyond` (l. 286): beyond the gap at every step from T (premise), the level is never m after T. This is irreversibility at the level of one condition, not at the loss of something that gives.
+
+### `rank`
+- pass a: S: `Flow.regulates_at` (l. 308) bounds the gap after n steps by the starting gap minus n under balance, opposition and the gap bound on those steps.
+- pass b: S: `gap_falls` (l. 298): within the gap and opposing, the gap falls by at least one where the level is off m. `regulates_at` (l. 308): falls by n over n steps. `settles_at` (l. 333)/`settles` (l. 375): the level is m from T + gap(level T, m), a bound given by the gap as variant.
+
+### `closed_region`
+- pass a: S: `Flow.stays_between_at` (l. 356) keeps the level between its start and target over any balanced stretch respecting the gap bound.
+- pass b: S: `settles_at` (l. 333): from T+gap the level stays m (a fixed point kept by WithinGap). `stays_between_at` (l. 356): within the gap the level stays between m and its start. `stock_settles` (l. 469): a family's stock settles at the total of its local levels, with nothing reading the stock. `held_settles` (l. 1364) and `held_below_settles` (l. 1791): constant within [a,b] from some step on.
+
+### `moves`
+- pass a: S: `lateReturn_band` (l. 1152) gives a particular exchange rule keeping every bounded disturbance course within (ℓ+1)d of a sufficiently high start.
+- pass b: S: a Rule (l. 672) is any map from the rest's record to what the regulator gives and takes. `no_narrower_band` (l. 886): for every rule with ReadsLate ℓ, every start, and 0 < a, if every rest with NetWithin d keeps the course within [a,b] at every step, then a + (ℓ+1)(d+d) ≤ b. `lateReturn_band` (l. 1152): the rule lateReturn ℓ reads ℓ late and keeps every course within (ℓ+1)d of a start of at least (ℓ+1)d. N: no Process S A.
+
+### `reading`
+- pass a: S: `ReadsLate.alike` (l. 687) makes agreement of the two records before T sufficient for identical responses through T+ℓ under a rule reading ℓ late.
+- pass b: S: `ReadsLate` (l. 678): the rule's answer at t is the same for records agreeing at every s with s+ℓ < t. `late_spread` (l. 773): under one late rule, two balanced flows from one level whose rests agree before T reach levels at T+(ℓ+1) differing by exactly the difference of the rests' exchanges. `lateReturn_reads_levels` (l. 954): the late return needs only the levels ℓ late and its own exchanges. `Flow.RelaysLate` (l. 1185): exchange at t+ℓ is the relay's answer to the level at t. `opposes_of_each` (l. 440): each formation reads only the condition it exchanges with.
+
+### declarations of Regulation.lean (by script)
+  l.100 theorem gap_of_le
+  l.104 theorem gap_of_ge
+  l.109 def Between
+  l.113 theorem Between.at_level
+  l.118 theorem Between.stays
+  l.122 theorem Between.trans
+  l.132 theorem Between.refl
+  l.139 theorem within_iff_between
+  l.199 theorem Between.gap_le
+  l.210 theorem sub_succ_le_of_lt
+  l.219 theorem sub_succ_le_of_gt
+  l.231 theorem Between.gap_falls
+  l.256 def WithinGap
+  l.261 def Opposes
+  l.269 theorem withinGap_iff_between
+  l.276 theorem not_at_of_beyond
+  l.285 theorem never_at_of_beyond
+  l.292 theorem gap_le_of_within
+  l.298 theorem gap_falls
+  l.308 theorem regulates_at
+  l.333 theorem settles_at
+  l.347 theorem settles_from
+  l.356 theorem stays_between_at
+  l.368 theorem regulates
+  l.375 theorem settles
+  l.383 theorem restores_exactly
+  l.394 theorem withinGap_iff_of_above
+  l.405 theorem withinGap_iff_of_below
+  l.414 theorem withinGap_iff_of_at
+  l.423 theorem crosses_of_above
+  l.429 theorem crosses_of_below
+  l.440 theorem opposes_of_each
+  l.454 theorem withinGap_of_shares
+  l.469 theorem stock_settles
+  l.490 def high
+  l.495 def amount
+  l.500 def back
+  l.505 def flow
+  l.509 def web
+  l.513 theorem taken_eq
+  l.515 theorem given_eq
+  l.518 theorem balances
+  l.527 theorem opposes
+  l.534 theorem beyond
+  l.540 theorem high_even
+  l.546 theorem oscillates
+  l.552 theorem never_at
+  l.567 def flow
+  l.570 def web
+  l.573 theorem balances
+  l.576 theorem within
+  l.579 theorem opposes_below
+  l.583 theorem restores_premise
+  l.588 theorem not_opposes
+  l.592 theorem above
+  l.606 theorem total_steps_congr
+  l.618 theorem total_steps_le
+  l.631 theorem total_steps_const
+  l.637 theorem gap_le_of_add_eq
+  l.649 theorem sub_eq_of_add_eq
+  l.668 abbrev Record
+  l.672 abbrev Rule
+  l.678 def ReadsLate
+  l.682 def NetWithin
+  l.687 theorem ReadsLate.alike
+  l.699 def FollowsRule
+  l.707 theorem accumulates_at
+  l.722 theorem cross_cancel
+  l.742 theorem levels_alike
+  l.773 theorem late_spread
+  l.817 theorem late_band
+  l.845 def course
+  l.851 def courseFlow
+  l.855 def courseWeb
+  l.860 theorem courseFlow_follows
+  l.865 theorem course_balances
+  l.874 theorem course_balances_of_pos
+  l.886 theorem no_narrower_band
+  l.903 def reversal
+  l.906 theorem reversal_evens
+  l.915 def lateReturn
+  l.918 theorem lateReturn_early
+  l.921 theorem lateReturn_late
+  l.928 theorem lateReturn_readsLate
+  l.942 theorem reversal_of_levels
+  l.954 theorem lateReturn_reads_levels
+  l.966 theorem window_step
+  l.987 theorem lateReturn_early_sum
+  l.1010 theorem lateReturn_window
+  l.1037 theorem lateReturn_keeps
+  l.1059 theorem lateReturn_course_balances
+  l.1152 theorem lateReturn_band
+  l.1167 def relay
+  l.1169 theorem relay_below
+  l.1172 theorem relay_above
+  l.1175 theorem relay_inside
+  l.1185 def RelaysLate
+  l.1198 theorem relay_step
+  l.1206 theorem step_below
+  l.1214 theorem step_above
+  l.1223 theorem step_inside
+  l.1232 theorem push_ramp
+  l.1246 theorem pull_ramp
+  l.1263 theorem rest_ramp
+  l.1279 theorem overshoot
+  l.1286 theorem undershoot
+  l.1294 theorem first_or_nowhere
+  l.1305 theorem first_index
+  l.1318 theorem held_rise
+  l.1364 theorem held_settles
+  l.1423 theorem held_leaves
+  l.1431 theorem le_succ_mul
+  l.1440 theorem rise_run
+  l.1473 theorem fall_run
+  l.1511 structure UpCrossing
+  l.1520 structure DownCrossing
+  l.1538 theorem upCrossing_next
+  l.1624 theorem downCrossing_next
+  l.1696 theorem upCrossing_later
+  l.1711 theorem crossing_oscillates
+  l.1725 theorem held_crosses
+  l.1759 theorem held_oscillates
+  l.1791 theorem held_below_settles
+  l.1826 def relayWindow
+  l.1831 def relayLevel
+  l.1834 theorem relayWindow_shift
+  l.1847 theorem relayLevel_held
+  l.1854 theorem relayLevel_step
+  l.1866 theorem relay_take_le
+  l.1873 theorem relay_take_of_le
+  l.1877 theorem le_sub_add
+  l.1883 theorem relayLevel_drop
+  l.1897 theorem relayLevel_drops
+  l.1909 theorem relay_room
+  l.1928 def relayFlow
+  l.1934 def relayWeb
+  l.1938 theorem relayFlow_late
+  l.1952 theorem relay_balances
+  l.1977 theorem relay_runs
+  l.1989 theorem relay_threshold
+
+## RelativePosition.lean  (873 lines)
+
+### `both_outcomes`
+- pass a: B: `RaceWithin.same_positions_apart` (l. 679) places opposite outcomes in two built flows with equal racer positions: all active throughout versus all inactive from step two. S: `equal_share_iff` (l. 238) characterizes meeting every need by a common allocation q exactly when it meets a greatest member’s need.
+- pass b: B: `RaceWithin.same_positions_apart` (l. 679) set against Race: every part active at every step versus every part inactive from step 2, across two built models. `Restored.returns` (l. 774) against `Race.greatest_ends` (l. 580). N: no 'exactly when' for one model.
+
+### `no_return`
+- pass a: S: `Flow.greatest_end_for_good` (l. 450) concludes permanent inactivity of every greatest member after the excess stretch under the gated-renewal premises of l. 430 and continuing dependence of every member at need ≥m.
+- pass b: S: `race_ends_greatest` (l. 430) and `greatest_end_for_good` (l. 450): from T+n on, at every k, the level is below m and every part depending at need ≥ m is inactive, greatest parts included. This is concluded from gated renewal (a premise) and joint excess (a premise), and it is at the loss of what gives, since gated givers depend on c. B: `Restored.returns` (l. 774): without gating the ending does not last.
+
+### `rank`
+- pass a: S: `Flow.excess_leaves_below` (l. 402) puts the level below m after n balanced steps of strict joint excess if the start is below n+m.
+- pass b: S: `Flow.excess_leaves_below` (l. 402) and `ends_at_race_end` (l. 415): with balance across n steps of joint excess, a part requiring c at T+n at a need above the level at T less n, active only while supported, is not active at T+n. This is a deadline of n steps. `race_ends_greatest` (l. 430): the level falls by at least n.
+
+### `closed_region`
+- pass a: S: `Flow.race_ends_greatest` (l. 430) keeps every later level below m under balance, acting and dependence with giving gated at m after the specified drain.
+- pass b: S: `race_ends_greatest` (l. 430): ∀ k, level at T+n+k < m, and dependent parts are inactive, so below m is kept for good. `greatest_end_for_good` (l. 450): at every later step a greatest part exists and every greatest part is inactive.
+
+### `moves`
+- pass a: N: Not found in the statements read.
+- pass b: N: no Process, policy or allowed set. Positions are any reading pos : Nat → F → Nat.
+
+### `reading`
+- pass a: S: `Flow.excess_iff_spread` (l. 469) characterizes when every take profile with the observed positions exceeds giving: the spread above a least present taker must itself exceed giving. There always exists a profile with those positions exceeding giving.
+- pass b: S: positions are any reading of amounts. `keeps_iff_common` (l. 276): two profiles give every part the same position iff they differ by an amount common to all. `exceeds_iff_spread` (l. 349). `Flow.excess_iff_spread` (l. 469): read by each taker's take, every position-keeping profile takes more than the step gives iff the spread does, and some such profile always does. Positions never certify that a step takes within what it gives. B: `RaceWithin.same_positions_apart` (l. 679): the same positions at every step, every part active in one flow and inactive from step 2 in the Race. What is registered does not decide the fate.
+
+### declarations of RelativePosition.lean (by script)
+  l.94 theorem total_split
+  l.103 theorem positions_balance
+  l.109 def riseCount
+  l.116 def fallCount
+  l.121 theorem change_balances
+  l.132 theorem change_opposed
+  l.139 theorem rest_falls_of_rises
+  l.148 theorem not_all_rise
+  l.155 theorem below_somewhere_or_not
+  l.167 theorem rise_needs_fall
+  l.178 def Greatest
+  l.183 theorem greatest_not_behind
+  l.188 theorem greatest_exists
+  l.205 def Least
+  l.210 theorem least_not_ahead
+  l.215 theorem least_exists
+  l.232 theorem least_bound
+  l.238 theorem equal_share_iff
+  l.246 theorem equal_share_exceeds
+  l.252 theorem equal_share_even
+  l.259 theorem uneven_short
+  l.269 def Keeps
+  l.276 theorem keeps_iff_common
+  l.306 theorem keeps_add
+  l.316 theorem keeps_least
+  l.332 theorem spread_le
+  l.339 theorem keeps_exceeds
+  l.349 theorem exceeds_iff_spread
+  l.370 def drawn
+  l.379 theorem drawn_positions
+  l.402 theorem excess_leaves_below
+  l.415 theorem ends_at_race_end
+  l.430 theorem race_ends_greatest
+  l.450 theorem greatest_end_for_good
+  l.469 theorem excess_iff_spread
+  l.483 def flow
+  l.493 theorem grow_and_fall
+  l.510 abbrev Member
+  l.512 def level
+  l.514 def live
+  l.516 def present
+  l.519 def flow
+  l.522 def web
+  l.524 theorem balances
+  l.529 theorem live_of_present
+  l.534 theorem acting
+  l.537 theorem dependent
+  l.542 theorem gated
+  l.546 theorem drawn_renewer
+  l.550 theorem drawn_second_le
+  l.555 theorem first_greatest
+  l.562 theorem excess
+  l.568 def all
+  l.570 theorem first_rises
+  l.580 theorem greatest_ends
+  l.618 abbrev Member
+  l.622 def flow
+  l.626 def web
+  l.628 theorem balances
+  l.630 theorem acting
+  l.632 theorem dependent
+  l.635 def racers
+  l.638 theorem drawn_common
+  l.649 theorem keeps
+  l.656 theorem drawn_second
+  l.660 theorem drawn_renewer
+  l.664 theorem first_greatest
+  l.679 theorem same_positions_apart
+  l.714 inductive Member
+  l.718 def level
+  l.720 def takeAt
+  l.722 def giveAt
+  l.724 def live
+  l.727 def flow
+  l.737 def web
+  l.750 theorem balances
+  l.755 theorem acting
+  l.760 theorem dependent
+  l.766 theorem drawn_renewer
+  l.774 theorem returns
+  l.801 theorem acting
+  l.808 theorem habitat_ungiven
+  l.814 theorem drawn_source
+  l.818 theorem drawn_dweller
+  l.828 theorem greatest_continues
+  l.859 theorem loss_needs_significance
+
+## RenewalFlow.lean  (468 lines)
+
+### `both_outcomes`
+- pass a: B: `SupportRecovery.supported_pulse_recovers` (l. 426) and `unsupported_pulse_ends` (l. 435) exhibit both outcomes in the pulse family: first draw two permits recovery, three leaves level zero and all inactive. `recovered_web_neither` (l. 458) puts the recovered course outside both whole-time classes.
+- pass b: B: `supported_pulse_recovers` (l. 426) and `unsupported_pulse_ends` (l. 435): pulse 2 and pulse 3 differ only in the first draw (`same_later_inputs` l. 412); one returns to the sustaining need for good, the other stays at 0 with every formation inactive. `formation_does_not_decide` (l. 259): cultivation is renewing, malignant is consuming and ends. `fluctuating_neither` (l. 316) and `recovered_neither` (l. 446): neither class, so the classification is not a dichotomy. N: no general 'exactly when'.
+
+### `no_return`
+- pass a: S: `SupportRecovery.absorbs` (l. 366) concludes permanent equality to the present level when it is below both needs, with no future-input premise. `SupportGated.below_for_good` (l. 200) needs a continuing no-net-repair premise when only the sustaining threshold is crossed.
+- pass b: S: `below_for_good` (l. 200) and `ends_for_good` (l. 213): concluded from the premise contrib t <= draw t from T, with level T < bound <= needG; every formation needing at least bound is inactive from T on. `overdraw_ends` (l. 225): concluded, at the loss of what gives (the sustaining formation inactive for good). `SupportRecovery.absorbs` (l. 366): concluded with no premise on later draws or contributions; once the level is below both needs it stays. This is a point of no return at the loss of every giver. B: `unsupported_pulse_ends` (l. 435).
+
+### `rank`
+- pass a: S: `SupportGated.repair_restores` (l. 189) bounds time to restored sustaining support by the initial deficit if focal support holds initially and each of that many steps contributes more than it draws.
+- pass b: S: `repair_restores` (l. 189): if the focal formation is active at T and contrib > draw at each of the needG - level T steps from T, then needG <= level (T + (needG - level T)), so restoration comes within that bound. `SupportRecovery.window_progress` (l. 393): a window of N supported surplus steps raises the level by at least its length. `overdraw_ends` (l. 225): there exists T >= T0 (no bound given).
+
+### `closed_region`
+- pass a: S: `SupportRecovery.absorbs` (l. 366) keeps each level below both needs fixed under every subsequent step of the law.
+- pass b: S: `below_for_good` (l. 200): the region level < bound (bound <= needG) is closed under the steps from T, given contrib <= draw. `SupportRecovery.absorbs` (l. 366): below both needs the level is a fixed point. `balances` (l. 125): every law of the family is a balanced flow on its web. B: `supported_pulse_recovers` (l. 426): from step 2 the level stays >= 2.
+
+### `moves`
+- pass a: N: Not found in the statements read.
+- pass b: N: there is no choice among steps, and draw and contrib are schedules handed in. B: the course comparisons (sharing/winning, pulse 2/pulse 3) are fixed laws.
+
+### `reading`
+- pass a: B: `SupportGatedWebs.own_trajectory_does_not_decide` (l. 272) gives equal focal activity and formation counts at every time in sharing and winning, with renewing and consuming classifications respectively.
+- pass b: N
+
+### declarations of RenewalFlow.lean (by script)
+  l.52 theorem add_sub_le
+  l.59 theorem add_sub_assoc_of_le
+  l.71 def renewal
+  l.76 def netGive
+  l.82 def flow
+  l.92 def web
+  l.96 theorem level_succ_le
+  l.125 theorem balances
+  l.130 theorem renewal_supported
+  l.138 theorem netGive_active
+  l.149 theorem givers_supported
+  l.158 theorem netGive_step
+  l.189 theorem repair_restores
+  l.200 theorem below_for_good
+  l.213 theorem ends_for_good
+  l.225 theorem overdraw_ends
+  l.239 theorem jointly_ends
+  l.259 theorem formation_does_not_decide
+  l.272 theorem own_trajectory_does_not_decide
+  l.285 theorem jointly_consuming
+  l.300 theorem escalation_consumes
+  l.311 theorem fluctuating_dependent
+  l.316 theorem fluctuating_neither
+  l.366 theorem absorbs
+  l.378 theorem repair_step
+  l.393 theorem window_progress
+  l.408 def pulse
+  l.412 theorem same_later_inputs
+  l.419 theorem pulse_levels
+  l.426 theorem supported_pulse_recovers
+  l.435 theorem unsupported_pulse_ends
+  l.446 theorem recovered_neither
+  l.458 theorem recovered_web_neither

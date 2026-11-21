@@ -1,0 +1,7 @@
+AI-written reader report for whole-a-01
+
+I read all 27 assigned modules, Acceptance.lean through CausalGrowth.lean, in the supplied order. For each I read the opening account, every declaration statement and its docstring where present. No module was partial and no question was unreached. N records a question for which I found no matching statement in that module. This was a source read, without running Lean.
+
+I could not identify a statement in this batch that resets a favouring rule from the offspring share it produces. In Capture.lean, `share_rises` (l. 102) compares offspring counts under explicit bounds on the two parent groups. `Captured.next` (l. 152) copies the existing rule bit. In Admission.lean, `Flow.unsupported_stays` (l. 330) proves that once every member lacks support, the family stays unsupported under balance, acting, dependence, unloosened requirements and the premise that only members give to conditions members require. Its five Restoring cases show what can restore support when a premise fails.
+
+Two distinctions bear on the centre. BeyondCoupling contrasts two selections that can use the same newly visible difference. In Clearing, one selects for keeping the dweller and the other for ending it (ll. 505, 521). CausalGrowth distinguishes what can be born next from what continues. Between runs from the empty set those inclusions go in opposite directions (l. 982), and no strict order contains both widenings (l. 1051).

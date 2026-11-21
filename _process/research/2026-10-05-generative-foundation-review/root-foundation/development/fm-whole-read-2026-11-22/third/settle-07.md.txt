@@ -1,0 +1,1090 @@
+# Task file: SETTLE, reader whole-c-settle-07
+
+Your 13 modules and the fields on which the two passes differ. Pass a is one kind of model, pass b another.
+
+## Flow.lean  (1183 lines)
+
+### field `multiplying`
+- pass a: B: `Expansion.takers_eq` (l. 833) gives exactly t takers at step t and `Expansion.more` (l. 845) an arising renewer each step; the population is specified by `present` (l. 801), without parent-offspring transmission.
+- pass b: N for units that leave units by a law of the step. S, as a necessity only: `More.renewers_unbounded` (l. 763), the number of givers must grow without eventual bound under More and Capacity. B: `Expansion.more` (l. 845): a renewer and a grower arise at every step, takers = t. `Pulse.pulsed` (l. 1165): renewers are without bound yet absent at every odd step.
+
+### field `closed_region`
+- pass a: B: `Cycle.closed_more` (l. 1016) preserves stock exactly at every step despite unceasing arising and More.
+- pass b: N for a general law. B: `Cycle.closed_more` (l. 1016): the family's stock never changes, an invariant of the built case.
+
+### declarations of Flow.lean (by script)
+  l.43 theorem uses
+  l.95 def sign
+  l.98 theorem sign_eq_one
+  l.103 theorem sign_le_of_pos
+  l.109 def count
+  l.116 theorem sign_le
+  l.120 theorem eq_zero_of_not_pos
+  l.124 theorem sign_le_one
+  l.128 theorem le_mul_sign
+  l.132 theorem total_le
+  l.138 theorem total_lt_of_mem
+  l.145 theorem total_add
+  l.151 theorem total_zero
+  l.155 theorem total_mul
+  l.162 theorem total_swap
+  l.169 theorem total_map
+  l.175 theorem total_ones
+  l.179 theorem total_append
+  l.185 theorem total_replicate
+  l.191 theorem total_pos_of_mem
+  l.198 theorem le_total_of_mem
+  l.202 theorem count_le
+  l.206 theorem total_zero_of_count
+  l.216 theorem total_le_count
+  l.221 theorem steps_ge
+  l.228 theorem steps_le
+  l.242 def Web.ComesToStand
+  l.246 theorem Web.ComesToStand.rises
+  l.252 theorem Web.rising_of_coming
+  l.259 theorem lt_iff_pos
+  l.269 def taken
+  l.273 def given
+  l.278 def Balances
+  l.283 def BalancesBetween
+  l.287 theorem balances_iff_between
+  l.292 def Acting
+  l.296 def Taking
+  l.300 def GiversSupported
+  l.305 def uptake
+  l.310 def replenishment
+  l.314 def takers
+  l.318 def renewers
+  l.323 def More
+  l.327 def Capacity
+  l.332 def ArisesTaking
+  l.339 theorem Acting.giversSupported
+  l.348 theorem balances_iff_units
+  l.360 theorem balances_of_matched
+  l.374 theorem Balances.over
+  l.388 def BalancesOn
+  l.395 theorem balancesOn_iff_units
+  l.408 theorem over_iff_units
+  l.436 theorem BalancesOn.units_over
+  l.451 theorem Balances.on
+  l.455 theorem balances_iff_on
+  l.460 theorem BalancesOn.over
+  l.476 theorem BalancesOn.rise_given
+  l.483 theorem BalancesOn.fall_taken
+  l.491 theorem BalancesOn.rises_iff_gives
+  l.505 theorem accumulates_on
+  l.513 theorem Balances.accumulates
+  l.519 theorem Balances.rise_given
+  l.525 theorem Balances.renewedBy
+  l.531 theorem Balances.fall_taken
+  l.538 theorem Balances.takenBy
+  l.545 theorem takers_le_uptake
+  l.550 theorem uptake_pos
+  l.556 theorem replenishment_zero
+  l.563 theorem replenishment_le
+  l.571 theorem uptake_needs_replenishment_from
+  l.589 theorem uptake_needs_replenishment
+  l.598 theorem replenishment_recurs_from
+  l.607 theorem renewing_recurs_from
+  l.618 theorem replenishment_recurs
+  l.625 theorem renewing_recurs
+  l.632 theorem BalancesOn.standing_given
+  l.640 theorem Balances.standing_given
+  l.646 theorem BalancesOn.rise_replenishes
+  l.652 theorem Balances.rise_replenishes
+  l.657 theorem Balances.standing_replenishes
+  l.664 theorem rising_needs_replenishment_from
+  l.673 theorem standing_needs_replenishment_from
+  l.681 theorem rising_needs_replenishment
+  l.688 theorem standing_needs_replenishment
+  l.695 theorem replenished_over_on
+  l.705 theorem Balances.replenished_over
+  l.713 theorem renewers_over_on
+  l.724 theorem Balances.renewers_over
+  l.733 theorem More.replenishment_unbounded_from
+  l.748 theorem More.replenishment_unbounded
+  l.755 theorem More.renewers_unbounded_from
+  l.763 theorem More.renewers_unbounded
+  l.775 def web
+  l.778 def flow
+  l.780 theorem balances
+  l.784 theorem growing
+  l.795 inductive Kind
+  l.801 def present
+  l.806 def flow
+  l.817 def web
+  l.824 theorem taken_eq
+  l.828 theorem given_eq
+  l.833 theorem takers_eq
+  l.837 theorem present_active
+  l.845 theorem more
+  l.860 theorem growers_take
+  l.869 theorem undepleted
+  l.885 def web
+  l.893 def flow
+  l.906 theorem steady
+  l.926 def flow
+  l.935 theorem balances
+  l.940 theorem takes_when_active
+  l.945 theorem active_when_taking
+  l.952 theorem takes
+  l.960 theorem takers_le
+  l.966 theorem not_more
+  l.986 def present
+  l.991 def flow
+  l.995 def web
+  l.1003 theorem ones
+  l.1007 theorem present_lt
+  l.1016 theorem closed_more
+  l.1040 def kind
+  l.1044 theorem total_kind
+  l.1051 def half
+  l.1056 def even
+  l.1062 def onEven
+  l.1067 def pulse
+  l.1070 def stored
+  l.1074 def flow
+  l.1084 def web
+  l.1091 theorem half_even
+  l.1095 theorem half_odd
+  l.1099 theorem even_even
+  l.1103 theorem even_odd
+  l.1107 theorem half_ge
+  l.1114 theorem parity
+  l.1120 theorem taken_eq
+  l.1126 theorem given_eq
+  l.1131 theorem takers_eq
+  l.1137 theorem renewers_eq
+  l.1142 theorem balances
+  l.1165 theorem pulsed
+
+## FormedLoops.lean  (164 lines)
+
+### field `rank`
+- pass a: B: `FormedLoops.thresholdWorld_course` (l. 115) locates the first loop exactly across step θ.
+- pass b: N.
+
+### declarations of FormedLoops.lean (by script)
+  l.53 def formedCouplings
+  l.61 theorem formedWorld_before
+  l.75 def onsetWorld
+  l.80 theorem onsetWorld_level
+  l.87 theorem onsetWorld_course
+  l.98 def thresholdWorld
+  l.103 theorem thresholdWorld_level
+  l.108 def readOff
+  l.115 theorem thresholdWorld_course
+  l.130 def scheduleWorld
+  l.137 theorem scheduleWorld_course
+  l.150 theorem sparseWorld_course
+
+## Founding.lean  (924 lines)
+
+### field `reading`
+- pass a: N: Not found in the statements read.
+- pass b: S: the amount `G.amount` is any reading (D: account l. 70). `Nested.raises_iff_among` (l. 322): under `Founded` and `Sequestered`, the mean founding value rises at t iff `discordAt t < concordAt t`, so selection on the amount decides the rise. `Flow.Rise.selected` (l. 150) is a premise that the amount is positive exactly at the lineage's members and that concord exceeds discord.
+
+### field `share`
+- pass a: N: `Germline.sequestered_rises` (l. 902) gives founding sums and sizes from one of two to one of one, and `unsequestered_falls` (l. 912) ends at zero of two. The founding lists are specified; no rule resetting favour from these shares was found.
+- pass b: S: `Nested.raises_iff_carried` (l. 300) and `raises_iff_among` (l. 322) concern `Generations.Raises`, the mean founding value over the wholes. B: `Germline.sequestered_rises` (l. 902) and `unsequestered_falls` (l. 912) have the sum over size going from a half to one, or from a half to none. N: no rule or favouring is set again from that mean or share.
+
+### declarations of Founding.lean (by script)
+  l.86 theorem of_mem_single
+  l.91 theorem nil_of_none
+  l.106 theorem survivors_independent
+  l.124 theorem confined_ends
+  l.147 structure Rise
+  l.161 structure ConfinedRise
+  l.170 theorem ConfinedRise.ends
+  l.183 theorem uniform_until
+  l.193 theorem none_within_until
+  l.201 theorem exact_of_none
+  l.217 theorem changed_or_none
+  l.235 theorem varied_before
+  l.254 structure Nested
+  l.265 def Founded
+  l.274 def Sequestered
+  l.280 theorem raised_carried
+  l.289 theorem lowered_carried
+  l.300 theorem raises_iff_carried
+  l.313 theorem exact_of_sequestered
+  l.322 theorem raises_iff_among
+  l.328 theorem varied_within
+  l.345 inductive Relatum
+  l.358 def atBody
+  l.369 def ofBody
+  l.380 def beyond
+  l.391 def atOutside
+  l.403 def need
+  l.406 def founder
+  l.418 def kids₀
+  l.428 def kids₁
+  l.438 def kids
+  l.445 def toConfined₁
+  l.455 def toSpread₁
+  l.465 def toSpread₂
+  l.475 def give₀
+  l.485 def give₁
+  l.497 def present
+  l.502 def flow
+  l.514 def level
+  l.526 def web
+  l.543 def generationsBy
+  l.546 def ofConfined
+  l.557 def ofSpread
+  l.567 theorem balances
+  l.593 theorem acting
+  l.602 theorem dependent
+  l.649 theorem family_late
+  l.656 theorem descended
+  l.678 theorem give_body
+  l.698 theorem confined_late
+  l.708 theorem gated
+  l.715 theorem excess
+  l.720 theorem start
+  l.723 theorem confined_marks
+  l.731 theorem spread_marks
+  l.741 theorem confined_rise
+  l.761 theorem confined_ended
+  l.768 theorem spread_rise
+  l.779 theorem spread_unconfined
+  l.787 theorem body_ended
+  l.795 theorem spread_outlasts
+  l.803 inductive Part
+  l.815 def holds
+  l.826 def within
+  l.844 def soma
+  l.847 def foundings
+  l.859 def nested
+  l.862 def sequestered
+  l.864 def unsequestered
+  l.867 theorem family_two
+  l.869 theorem founded
+  l.876 theorem sequestered_founded
+  l.881 theorem unsequestered_founded
+  l.887 theorem sequestered_sequestered
+  l.896 theorem within_against
+  l.902 theorem sequestered_rises
+  l.912 theorem unsequestered_falls
+
+## Fragments.lean  (245 lines)
+
+### field `both_outcomes`
+- pass a: S: `Fragment.joint_iff_probes` (l. 167) characterizes when a given fragment can continue with another by a state satisfying the corresponding after and before probes.
+- pass b: N.
+
+### declarations of Fragments.lean (by script)
+  l.36 structure Fragment
+  l.46 def Traced
+  l.49 def idle
+  l.52 def merge
+  l.55 def Joint
+  l.59 def Joined
+  l.62 theorem idle_traced
+  l.65 theorem joint_iff_joined
+  l.70 theorem joined_functional
+  l.75 theorem merge_traced
+  l.81 theorem joined_traced
+  l.86 theorem merge_assoc
+  l.91 theorem joint_chain_left
+  l.96 theorem joint_chain_right
+  l.101 theorem joined_assoc
+  l.118 theorem idle_joint_left
+  l.124 theorem idle_joint_right
+  l.129 theorem joined_idle_left
+  l.134 theorem joined_idle_right
+  l.140 inductive Probe
+  l.145 def probes
+  l.151 theorem same_probes_iff_ends
+  l.167 theorem joint_iff_probes
+  l.175 theorem exact_codes_keep_ends
+  l.182 def readJoint
+  l.186 theorem readJoint_iff
+  l.195 theorem joint_iff_of_same_probes
+  l.207 def once
+  l.211 def passage
+  l.213 theorem passage_traced
+  l.217 theorem passage_not_self_joint
+  l.221 theorem idle_ends_apart
+  l.228 def loops
+  l.232 def loop
+  l.234 theorem loop_traced
+  l.238 theorem probes_miss_course
+
+## Frequency.lean  (1465 lines)
+
+### field `giving`
+- pass a: S: `Saturation.one_le_passingAt` (l. 1200) exhibits positive passage from a positive source level through a participating outside formation with positive current strength. `course_stops_by` (l. 1425) derives loss of the coupling; participation of a formation is supplied.
+- pass b: N: what gives is the strength function k (or sat) and the list `present` of formations, both handed in. The stopping of a coupling is concluded (`Saturation.stops`, l. 1212), but the coupling is a strength function, not a unit, kind or formation of the model that is lost.
+
+### declarations of Frequency.lean (by script)
+  l.139 def count
+  l.143 theorem count_succ_on
+  l.147 theorem count_succ_off
+  l.151 theorem count_le_succ
+  l.154 theorem count_mono
+  l.160 theorem count_le
+  l.165 theorem marked_between
+  l.178 theorem recurs_of_unbounded
+  l.186 theorem step_eq
+  l.200 theorem succ_le_two_pow
+  l.204 theorem pow_le_two_pow_pow
+  l.219 theorem inflow_congr_strength
+  l.227 theorem carriedGive_with_gaps
+  l.240 theorem one_le_pow_add
+  l.246 theorem count_step
+  l.260 theorem carried_le_disturbed
+  l.305 theorem carried_le_count
+  l.318 theorem carried_le_of_rare
+  l.332 def Frequency.coupling
+  l.338 theorem Frequency.quiet_coupling
+  l.348 theorem carried_le_coupling
+  l.362 def strengths
+  l.365 theorem strengths_on
+  l.369 theorem strengths_off
+  l.375 theorem give
+  l.389 theorem inflow_eq
+  l.400 theorem into
+  l.404 theorem quiet
+  l.410 theorem carried_eq
+  l.420 theorem polynomial_iff
+  l.443 theorem carried_step_ge_at
+  l.469 def ChainInTime
+  l.476 theorem ChainInTime.start_le
+  l.483 theorem carried_along_in_time
+  l.496 def RoundTrip
+  l.502 theorem RoundTrip.of_couplesAt
+  l.508 theorem carried_doubles_roundTrip
+  l.526 theorem carried_roundTrip
+  l.542 theorem runaway_of_roundTrip
+  l.560 theorem couplesAt
+  l.568 theorem recurs
+  l.575 theorem roundTrip
+  l.581 theorem couplesAt_iff
+  l.602 def marks
+  l.607 def on
+  l.609 theorem count_eq
+  l.614 theorem bounds
+  l.636 theorem double_eq
+  l.642 theorem rare
+  l.649 theorem unbounded
+  l.657 theorem often
+  l.662 theorem recurs
+  l.668 theorem inexact
+  l.680 theorem polynomial
+  l.696 def StopsBy
+  l.700 theorem StopsBy.mono
+  l.705 theorem StopsBy.not_recurs
+  l.711 theorem Frequency.bound_list
+  l.723 theorem settled_of_each
+  l.747 def Frequency.readsLate
+  l.752 theorem Frequency.readsLate_of_couplesAt
+  l.769 theorem Frequency.couplesAt_of_readsLate
+  l.792 def RecursOrStops
+  l.795 theorem RecursOrStops.lpo
+  l.803 theorem recurs_or_stops
+  l.814 theorem settled_of_recursOrStops
+  l.826 def strengths
+  l.829 theorem of_couplesAt
+  l.839 theorem couplesAt_first
+  l.846 theorem once
+  l.856 theorem not_recurs
+  l.867 theorem decides
+  l.885 theorem lpo_of_settled
+  l.894 def anyUpTo
+  l.899 def allUpTo
+  l.903 theorem anyUpTo_of
+  l.910 theorem anyUpTo_true
+  l.917 theorem allUpTo_true
+  l.924 theorem allUpTo_of
+  l.930 def found
+  l.934 def strengths
+  l.937 theorem found_of_couplesAt
+  l.946 theorem couplesAt_of_found
+  l.954 theorem witnessed
+  l.969 theorem couplesAt_of_rows
+  l.978 theorem recurs_iff
+  l.988 theorem decide_rows
+  l.1008 theorem settled_iff_recursOrStops
+  l.1024 theorem settled_every_iff
+  l.1037 theorem count_always
+  l.1042 theorem count_before
+  l.1048 theorem count_from
+  l.1054 theorem SelfLoop.always
+  l.1058 theorem SelfLoop.always_carried
+  l.1065 theorem SelfLoop.onset
+  l.1082 theorem gap_le_count
+  l.1106 def passingAt
+  l.1114 def passed
+  l.1122 def strengths
+  l.1127 def Antitone
+  l.1131 def ZeroFrom
+  l.1135 def scaled
+  l.1142 theorem Antitone.zeroFrom
+  l.1148 theorem passingAt_congr
+  l.1156 theorem passed_congr
+  l.1168 theorem readsBefore
+  l.1173 theorem passed_le_succ
+  l.1177 theorem passed_le_add
+  l.1182 theorem passed_mono
+  l.1190 theorem passingAt_zero
+  l.1200 theorem one_le_passingAt
+  l.1212 theorem stops
+  l.1221 theorem not_recurs
+  l.1229 theorem exact
+  l.1239 theorem passed_from
+  l.1250 theorem passed_lt
+  l.1266 theorem climbs
+  l.1283 theorem stops_by
+  l.1305 theorem stops_by_zero
+  l.1329 theorem stops_iff
+  l.1343 theorem floored
+  l.1363 theorem floored_inexact
+  l.1375 theorem carriedGive_split
+  l.1388 theorem total_carriedGive
+  l.1403 theorem course_succ
+  l.1414 theorem course_stands
+  l.1425 theorem course_stops_by
+  l.1443 theorem course_stops_iff
+  l.1454 theorem wearing_stops
+
+## FromTheDynamics.lean  (514 lines)
+
+### field `both_outcomes`
+- pass a: S: `Web.extension_met_keeps_above_ending` (l. 187) concludes the extending course keeps and its base ends for listed, jointly met paths with decided admissions, unrestricted marked closure and a stake premise explicitly assigning these outcomes.
+- pass b: N for going on and ending. The iffs here, `returning_downstream_iff_mutuallyDependent` (l. 113) and `selfConcerned_above_iff_reach` (l. 149), are of the per-center condition and of ranking. `Web.extension_met_keeps_above_ending` (l. 187) concludes one course not ending and one ending from the stake premise. It is not a dichotomy for one model.
+
+### declarations of FromTheDynamics.lean (by script)
+  l.113 theorem returning_downstream_iff_mutuallyDependent
+  l.130 theorem returning_beyond_coupling
+  l.149 theorem selfConcerned_above_iff_reach
+  l.170 theorem Web.extension_reached_of_met
+  l.187 theorem Web.extension_met_keeps_above_ending
+  l.208 def stands
+  l.213 def unit
+  l.219 theorem unit_self
+  l.223 theorem unit_other
+  l.229 def flow
+  l.235 def web
+  l.243 def generations
+  l.249 theorem family_eq
+  l.256 theorem balances_at
+  l.264 theorem balances
+  l.267 theorem acting
+  l.274 theorem dependent
+  l.282 theorem descends_at
+  l.288 theorem descended
+  l.298 theorem member_stands
+  l.305 theorem recurs
+  l.313 theorem persists
+  l.318 def both
+  l.320 theorem mem_both
+  l.325 theorem gated
+  l.334 theorem coupled
+  l.342 theorem dependsOn_self
+  l.348 theorem exchanges
+  l.355 theorem mutuallyDependent
+  l.359 theorem returns
+  l.362 def decided
+  l.368 def keep
+  l.369 def drain
+  l.371 def own
+  l.374 def choices
+  l.378 theorem drain_ne_keep
+  l.381 def order
+  l.384 theorem noCycle
+  l.393 theorem kept
+  l.398 theorem stake
+  l.410 theorem realized
+  l.424 theorem joined
+  l.453 theorem crossed_noCycle
+  l.473 theorem crossed_stake
+  l.497 theorem crossed_joined
+
+## Frontier.lean  (740 lines)
+
+### field `giving`
+- pass a: B: `Handover.served` (l. 566) proves demand is served while old service is absent at step two; old and successor service are specified time predicates.
+- pass b: N: in `Served` (l. 204) the old support and the successor are predicates `Nat → Prop` handed in. No giver is a going-on of a model.
+
+### declarations of Frontier.lean (by script)
+  l.72 def Frontier
+  l.76 def Required
+  l.81 theorem Frontier.excluded
+  l.86 theorem frontier_iff_undominated
+  l.95 theorem frontier_exists
+  l.106 theorem Required.performed
+  l.111 theorem Required.defeated
+  l.116 theorem Required.impossible
+  l.121 theorem Required.means
+  l.128 theorem Required.redescribed
+  l.141 theorem required_of_bettered
+  l.158 theorem _root_.Becoming.Lexical.BasicPriority.frontier_iff
+  l.167 theorem _root_.Becoming.Lexical.BasicPriority.required_iff
+  l.185 def Assigned
+  l.188 theorem Assigned.unique_required
+  l.196 theorem Assigned.capable
+  l.204 def Served
+  l.210 theorem Served.successor
+  l.218 theorem served_of_handover
+  l.225 theorem Served.not_of_gap
+  l.232 def Settled
+  l.236 def Residual
+  l.239 theorem Settled.no_residual
+  l.245 theorem residual_of_unfulfilled
+  l.250 theorem separate_not_joint
+  l.258 theorem decided_of_decidable
+  l.264 theorem decided_included_bool
+  l.284 theorem decided_included_unit
+  l.292 theorem decided_included_sum_of
+  l.304 theorem decided_included_sum
+  l.314 inductive Form
+  l.317 def drawn
+  l.323 def remaining
+  l.325 def linked
+  l.331 def basis
+  l.333 def renewed
+  l.337 def protect
+  l.342 def freeOccasion
+  l.344 def eligible
+  l.346 def formed
+  l.348 def menu
+  l.350 def usesLeft
+  l.352 def usesRight
+  l.354 theorem decided_linked
+  l.360 theorem decided_basis
+  l.362 theorem decided_protect
+  l.366 theorem decided_free
+  l.368 theorem decided_above
+  l.374 theorem basis_left
+  l.375 theorem basis_right
+  l.376 theorem not_basis_overbuild
+  l.378 theorem left_retains_basis
+  l.382 theorem formation_loses_occasion
+  l.385 theorem left_above_idle
+  l.391 theorem left_above_overbuild
+  l.397 theorem eligible_all
+  l.403 theorem exact_menu
+  l.409 theorem bettered_unformed
+  l.416 theorem decided_formed
+  l.419 theorem required
+  l.425 theorem unbeaten_of
+  l.435 theorem working_unbeaten
+  l.449 theorem frontier_iff
+  l.459 theorem no_route_required
+  l.466 theorem overbuilding
+  l.473 def report
+  l.479 theorem same_report_different_basis
+  l.484 theorem no_report_judge
+  l.489 def amountJudge
+  l.491 theorem amount_recovers_basis
+  l.499 theorem eq_zero_of_sub_eq
+  l.507 theorem sub_lt_sub_of_lt
+  l.525 def protection
+  l.529 def realization
+  l.532 def eligible
+  l.534 theorem keep_above_expansion
+  l.540 theorem expansion_has_real_gain
+  l.545 theorem transfer_above_keep
+  l.554 theorem transfer_above_expansion
+  l.558 theorem expansion_excluded
+  l.561 def demand
+  l.562 def oldService
+  l.563 def successorService
+  l.566 theorem served
+  l.571 theorem undelivered_fails
+  l.575 def crossed
+  l.582 theorem required
+  l.593 theorem no_common_plan
+  l.610 theorem required_under_every_classification
+  l.632 inductive Route
+  l.635 def basic
+  l.636 def gain
+  l.638 def fresh
+  l.643 def formed
+  l.646 theorem left_above_absent
+  l.668 theorem formed_of_frontier
+  l.672 theorem decided_fresh
+  l.679 theorem decided_basic
+  l.684 theorem decided_gain
+  l.689 theorem decided_classified
+  l.698 theorem required
+  l.712 theorem opposite_routes
+  l.728 theorem none_robust
+
+## FrontierFrames.lean  (618 lines)
+
+### field `both_outcomes`
+- pass a: S: `AcceptanceFrames.access_iff` (l. 587) characterizes universal retention of access across optimal choices under a positive acceptance lift. B: `Requirement.Formation.report_same_basis_differs` (l. 341) gives actual keeping and loss in one draw process.
+- pass b: N for going on and ending. The iffs `choice_exists_iff_weakly` (l. 477) and `Formation.rests_iff_free` (l. 314) are of choice existence and of resting.
+
+### declarations of FrontierFrames.lean (by script)
+  l.72 def Frame.Above
+  l.79 def tierFrame
+  l.86 theorem included_basicSide_iff
+  l.95 theorem included_gainSide_iff
+  l.106 theorem above_iff_frame
+  l.124 theorem Frame.above_of_extension
+  l.139 theorem Frame.not_not_above_of_extension
+  l.146 theorem Frame.comparison_of_decided
+  l.164 theorem Frame.classified_of_extension
+  l.173 theorem Frame.classified_extension_iff
+  l.186 def Frame.old
+  l.189 def Frame.fresh
+  l.192 theorem Frame.adjoin_iff
+  l.197 theorem Frame.included_adjoin_iff
+  l.207 theorem Frame.strictIncluded_adjoin_iff
+  l.218 theorem Frame.above_gain_iff
+  l.231 theorem Frame.above_basic_iff
+  l.246 theorem Frame.crossed_incomparable
+  l.257 theorem Frame.gain_transfer_iff
+  l.265 theorem Frame.fresh_gains_decide
+  l.276 theorem Frame.fresh_basic_reverses
+  l.302 def draw
+  l.306 theorem draw_step_iff
+  l.310 theorem basis_after
+  l.314 theorem rests_iff_free
+  l.321 theorem idle_rests_left_changes
+  l.328 theorem left_step_retains
+  l.332 theorem overbuild_step_loses
+  l.341 theorem report_same_basis_differs
+  l.349 theorem no_report_judge_of_step
+  l.355 abbrev frame
+  l.359 theorem priority_on_frame
+  l.364 theorem required_on_frame
+  l.369 theorem no_route_required_on_frame
+  l.376 theorem overbuild_off_frontier_on_frame
+  l.391 theorem Required.through_summary
+  l.418 def Priority
+  l.425 theorem Priority.anchor
+  l.433 theorem Priority.no_trade
+  l.438 theorem Priority.not_not_of_extension
+  l.445 theorem Priority.comparison
+  l.452 theorem basicPriority_iff_priority
+  l.461 def Options
+  l.465 theorem Priority.choice_exists
+  l.477 theorem choice_exists_iff_weakly
+  l.499 theorem nothing_required
+  l.507 theorem Priority.kept_unrefuted
+  l.517 theorem Priority.kept_required
+  l.537 def classifiedOn
+  l.587 theorem access_iff
+  l.593 theorem no_access
+  l.600 theorem restriction_loss
+  l.607 theorem estimate_bound
+
+## FrontierWorlds.lean  (143 lines)
+
+### field `both_outcomes`
+- pass a: S: `served_of_handover` (l. 69) gives service under before/after coverage, and `Served.not_of_gap` (l. 76) refutes service if both providers fail at even one required step.
+- pass b: N: no exactly-when. `served_of_handover` (l. 69) and `Served.not_of_gap` (l. 76) are stated separately.
+
+### declarations of FrontierWorlds.lean (by script)
+  l.55 def Served
+  l.63 theorem Served.successor
+  l.69 theorem served_of_handover
+  l.76 theorem Served.not_of_gap
+  l.85 def Gives
+  l.91 theorem sole_giver_required
+  l.102 theorem giver_active
+  l.109 theorem sole_giver_active
+  l.121 def Discharged
+  l.127 def Residual
+  l.132 theorem Discharged.no_residual
+  l.137 theorem residual_of_unfulfilled
+
+## Gated.lean  (213 lines)
+
+### field `reading`
+- pass a: S: `keptBy_iff_preserved` (l. 107) equates preservation of the reading q by ungated steps with preservation of each class q=c. `change_located` (l. 78) uses decidable equality of readings to locate a gated step changing q when endpoint readings differ.
+- pass b: N: no reading or class read alike is named. The quantity q : S → R of `KeptBy` (l. 40) is any function of configurations; the laws concern its being kept, not a decision made from it.
+
+### field `no_return`
+- pass a: S: `reflected_along` (l. 139) concludes that p at the end of an ungated trace implies p at its start, assuming single-step reflection. Thus a start lacking p cannot regain it along such a trace.
+- pass b: N: no point of no return. The nearest statement is `leaving_passes_gate` (l. 149): from the premise that ungated moves preserve p, leaving p needs a gated move.
+
+### field `both_outcomes`
+- pass a: S: `kept_along_iff` (l. 53) is an exact criterion for universal keeping on ungated courses, in terms of all ungated steps. It does not classify individual gated courses.
+- pass b: N for going on and ending. `origin` (l. 163) is a disjunction about origin (p held at the start, or a gated step brought it about). The iffs `kept_along_iff` (l. 53) and `preserved_along_iff` (l. 129) are of step and course.
+
+### declarations of Gated.lean (by script)
+  l.40 def KeptBy
+  l.44 theorem kept_along
+  l.53 theorem kept_along_iff
+  l.64 theorem change_passes_gate
+  l.78 theorem change_located
+  l.99 def PreservedBy
+  l.103 def ReflectedBy
+  l.107 theorem keptBy_iff_preserved
+  l.113 theorem keptBy_iff_reflected
+  l.119 theorem preserved_along
+  l.129 theorem preserved_along_iff
+  l.139 theorem reflected_along
+  l.149 theorem leaving_passes_gate
+  l.163 theorem origin
+  l.181 theorem origin_of_decides
+  l.197 theorem origin_of_propositions_iff
+
+## Gluing.lean  (822 lines)
+
+### field `both_outcomes`
+- pass a: N: `ParitySystem.global_or_contradicts` (l. 455) decides between a joint assignment and a contradictory selection under its listing and equality premises. This is compatibility of readings, with no temporal keeping or ending in the statement.
+- pass b: S: ParitySystem.global_or_contradicts (l. 455) is a dichotomy (a context-free assignment meeting every listed context, or a contradicting selection), general for every parity system with decidable equality and distinct claims; Gluing.Cycle.met_iff_even (l. 811): a cycle is met by some assignment exactly where its polarity is even. These are dichotomies of gluing vs contradiction, not of going on vs ending.
+
+### declarations of Gluing.lean (by script)
+  l.85 def addParity
+  l.90 def oddOver
+  l.94 theorem addParity_false
+  l.95 theorem addParity_self
+  l.96 theorem addParity_assoc
+  l.98 theorem addParity_swap
+  l.101 theorem addParity_and
+  l.102 theorem addParity_solve
+  l.103 theorem addParity_cancel
+  l.106 theorem true_of_ne_false
+  l.108 theorem and_congr_of
+  l.116 theorem oddOver_add
+  l.122 theorem oddOver_and
+  l.128 theorem oddOver_congr
+  l.135 theorem oddOver_false
+  l.143 theorem oddOver_swap
+  l.149 theorem oddOver_map
+  l.156 theorem count_le_length
+  l.161 theorem count_all
+  l.168 theorem met_step
+  l.176 theorem even_le_of_odd
+  l.187 structure ParityConstraint
+  l.197 def value
+  l.201 def add
+  l.204 theorem value_add
+  l.210 def Contradicts
+  l.215 theorem value_even
+  l.223 theorem unmet_odd
+  l.229 def eliminate
+  l.232 theorem counts_after
+  l.238 theorem eliminate_counts
+  l.243 theorem met_after
+  l.257 theorem pulled
+  l.279 theorem pull_back
+  l.298 theorem met_or_contradicts
+  l.343 structure ParitySystem
+  l.353 def constraint
+  l.356 def within
+  l.359 def value
+  l.363 def support
+  l.368 def met
+  l.372 def Contradicts
+  l.376 theorem local_
+  l.380 theorem contradicts_iff
+  l.390 theorem unmet_odd
+  l.396 theorem unmet_of_contradicts
+  l.406 theorem contradicts_noGlobal
+  l.412 theorem met_le
+  l.419 theorem mixture_le
+  l.430 theorem indexed_met
+  l.440 theorem lift_selection
+  l.455 theorem global_or_contradicts
+  l.466 theorem noGlobal_iff
+  l.476 theorem glues_iff
+  l.495 def paritySystem
+  l.498 theorem two_iff
+  l.499 theorem two_iff_swap
+  l.502 theorem support_iff
+  l.508 def openings
+  l.512 theorem openings_contradict
+  l.519 theorem mixture_le
+  l.526 theorem indexed_met
+  l.538 inductive Outcome
+  l.543 def outcomes
+  l.546 def same
+  l.550 def paritySystem
+  l.555 theorem two_iff
+  l.560 theorem support_iff
+  l.568 def pairs
+  l.572 theorem pairs_contradict
+  l.581 theorem mixture_le
+  l.588 def inPair
+  l.592 theorem inPair_support
+  l.599 theorem indexed_met
+  l.609 def cells
+  l.613 def counts
+  l.618 def paritySystem
+  l.621 def lines
+  l.623 theorem three_iff
+  l.626 theorem not_beyond
+  l.630 theorem support_iff
+  l.640 theorem cells_even
+  l.653 theorem lines_contradict
+  l.657 theorem mixture_le
+  l.664 def inLine
+  l.666 theorem inLine_support
+  l.673 theorem indexed_met
+  l.683 def down
+  l.690 def system
+  l.700 def edges
+  l.703 def polarity
+  l.706 theorem length_edges
+  l.710 theorem lt_of_mem_down
+  l.715 theorem shift
+  l.717 theorem cross
+  l.718 theorem returns
+  l.719 theorem eq_of_even
+  l.723 theorem telescope
+  l.732 theorem counts_even
+  l.741 theorem contradicts
+  l.748 theorem mixture_le
+  l.756 theorem miss
+  l.766 theorem pick
+  l.784 theorem value_pair
+  l.793 def walk
+  l.796 theorem walk_meets
+  l.811 theorem met_iff_even
+
+## Grammar.lean  (931 lines)
+
+### field `moves`
+- pass a: N: Not found in the statements read.
+- pass b: S: «有常之逐点» (l. 343): E is constant under R iff for every E-related u, u' and every step u → v there is a step u' → v' with E v v' (some matching successor exists for every step); R may relate one occurrence to several, read in the account as alternatives in a net of possibilities (D, l. 31-34). No Process S A, policy or allowed set occurs.
+
+### field `giving`
+- pass a: S: `«复生至»` (l. 646) has an occurrence condition a beginning whose line reaches w. `«自不复生则息»` (l. 671) concludes ceasing for an occurrence that does not itself renew. This is relational giving of a beginning.
+- pass b: N: in the flame, fuel is a function on the four moments handed in, not a going-on of the model that can be lost.
+
+### field `rank`
+- pass a: B: `Flame.step` (l. 745) and `Flame.fuel` (l. 806) give the finite f₀→f₁→f₂→ash chain with no step from ash. The last step has zero fuel at both ends.
+- pass b: N: no variant, bound or deadline law; Flame.fuel is defined (l. 806) but no statement says it falls along steps.
+
+### declarations of Grammar.lean (by script)
+  l.47 abbrev «际»
+  l.54 def «而»
+  l.57 def «逆»
+  l.60 def «则»
+  l.63 def «谓»
+  l.66 def «合»
+  l.69 def «一»
+  l.72 def «静»
+  l.75 def «非»
+  l.78 inductive «及»
+  l.84 structure «类»
+  l.89 theorem «则之自反»
+  l.91 theorem «则之传递»
+  l.94 theorem «及之传递»
+  l.101 theorem «及之首步»
+  l.106 theorem «及之单调»
+  l.112 theorem «一为类»
+  l.126 def «续»
+  l.129 def «相续»
+  l.132 def «有前»
+  l.135 def «有后»
+  l.138 def «生»
+  l.141 def «亡»
+  l.144 def «住»
+  l.147 def «异»
+  l.152 def «复生»
+  l.155 theorem «续含于缘»
+  l.158 theorem «相续含于及»
+  l.162 theorem «一之续»
+  l.166 theorem «粗化»
+  l.170 theorem «亡于粗则亡于细»
+  l.175 theorem «住于细则住于粗»
+  l.182 theorem «亡于细者不必亡于粗»
+  l.191 theorem «四相之定当且仅当排中»
+  l.205 theorem «分叉»
+  l.221 def «无环»
+  l.224 theorem «无环则及为序»
+  l.232 inductive «同族»
+  l.238 theorem «同族为类»
+  l.243 def «不穷»
+  l.247 theorem «一之生»
+  l.251 theorem «一之下无复生»
+  l.259 def «生生»
+  l.264 theorem «生生之展»
+  l.272 theorem «生生最大»
+  l.278 theorem «生生则复生»
+  l.284 theorem «一之下无生生»
+  l.289 theorem «生住不并»
+  l.293 theorem «住亡不并»
+  l.300 theorem «四相俱时»
+  l.311 theorem «四相无自立»
+  l.318 theorem «任一缘可为续»
+  l.326 theorem «蜡烛之合»
+  l.340 def «有常»
+  l.343 theorem «有常之逐点»
+  l.356 theorem «有常则续不尽»
+  l.363 theorem «有常则相续不尽»
+  l.370 theorem «有亡之续则不有常»
+  l.375 def «核»
+  l.380 theorem «根»
+  l.391 theorem «有常可复合»
+  l.401 theorem «静有常»
+  l.406 theorem «核为类»
+  l.436 theorem «闭合当且仅当有常»
+  l.455 class becomes
+  l.456 theorem «类内之缘成环»
+  l.463 def «粗»
+  l.466 theorem «粗只连异类»
+  l.474 def «粗复生»
+  l.478 theorem «复生则粗复生»
+  l.492 def «位核»
+  l.496 theorem «位根»
+  l.513 theorem «位核含于核»
+  l.518 theorem «位核含于逆核»
+  l.523 theorem «亡于核下不变»
+  l.534 theorem «生于逆核下不变»
+  l.544 theorem «生于位核下不变»
+  l.551 theorem «位同则生亡同»
+  l.558 theorem «位同则住同»
+  l.575 def «自持»
+  l.579 def «相须»
+  l.582 def «因于»
+  l.585 theorem «有常之同谓»
+  l.590 theorem «相须之对称»
+  l.594 theorem «无自相须»
+  l.598 theorem «核之单调»
+  l.602 theorem «类有常当且仅当含于核»
+  l.612 def «足以定核»
+  l.615 def «因于核»
+  l.618 def «相须核»
+  l.623 theorem «合有常则足以定核»
+  l.633 theorem «因于则因于核»
+  l.638 theorem «相须则相须核»
+  l.646 def «复生至»
+  l.654 inductive «息»
+  l.660 theorem «生生不息»
+  l.671 theorem «自不复生则息»
+  l.677 theorem «不复生则息»
+  l.682 theorem «一之下皆息»
+  l.697 theorem «两端分则中有标»
+  l.718 theorem «线内同类»
+  l.725 theorem «生于细而续于粗则异»
+  l.731 theorem «生于粗则生于细»
+  l.740 inductive Flame
+  l.745 def step
+  l.752 def burns
+  l.759 def alike
+  l.761 theorem alike_class
+  l.764 theorem not_core_f₁
+  l.775 theorem not_core_f₀
+  l.791 theorem «以核为判据则火无续»
+  l.806 def fuel
+  l.813 def sameFuel
+  l.817 theorem joint_eq
+  l.832 theorem «火薪相须»
+  l.849 theorem «火之见证不择类»
+  l.856 abbrev TwoFlames
+  l.861 def step
+  l.864 def alike
+  l.867 def sameFuel
+  l.870 def sameFlame
+  l.878 theorem «两火以薪定理»
+  l.892 theorem «两火同火不足以定理»
+  l.911 theorem «两火火薪相须»
+
+## GrammarCandidates.lean  (679 lines)
+
+### field `moves`
+- pass a: B: `«歧网之步»` (l. 612) offers either a finite chain or an endless successor from 乙, only finite chains from 甲. `«甲乙不可诘»` (l. 637) and `«甲乙不同核»` (l. 663) distinguish finite-depth matching from core matching for these starts.
+- pass b: N: no process with moves; the stages «诘» (l. 522) are a matching condition (every step of each matched by a step of the other), not a choice of moves.
+
+### field `cost`
+- pass a: D: The docstring of `«同根则不可偏举»` (l. 75) reads benefit as drawn from another. Its statement (l. 77) assumes harm is the converse of benefit and concludes existence of harm from existence of benefit. A giver paying a cost is only a reading here.
+- pass b: N
+
+### field `closed_region`
+- pass a: N: Not found in the statements read.
+- pass b: S: «每层不分而有常则核当且仅当每层不分» (l. 596): where 'alike at every stage' is constant and E symmetric, the core is exactly what no stage tells apart; «俱有为一念» (l. 340): co-presence (each reaches the other) is symmetric, transitive and reflexive on what it relates, one cluster; «自缘则常» (l. 275): what conditions itself abides under every class.
+
+### declarations of GrammarCandidates.lean (by script)
+  l.49 def «能»
+  l.52 def «所»
+  l.59 theorem «能所相待»
+  l.65 theorem «因果互即»
+  l.72 theorem «二际可偏举»
+  l.77 theorem «同根则不可偏举»
+  l.83 theorem «前后相随»
+  l.87 def «互»
+  l.90 theorem «互之对称»
+  l.95 theorem «生亡对偶»
+  l.100 theorem «有生不必有亡»
+  l.107 def «作者»
+  l.110 def «作业»
+  l.113 def «处所»
+  l.117 theorem «三法相因待»
+  l.124 def «非缘»
+  l.128 theorem «无果则缘非缘皆无»
+  l.134 theorem «无果则皆非能»
+  l.139 theorem «及之两端»
+  l.147 theorem «住因于续»
+  l.160 def «有相»
+  l.164 theorem «知相则有其非»
+  l.168 theorem «离非无相»
+  l.172 theorem «无色则无虚空之相»
+  l.176 theorem «有相则非亦有相»
+  l.181 theorem «非真则假»
+  l.187 theorem «非假则真»
+  l.194 theorem «二值之相待»
+  l.199 def «二点»
+  l.206 theorem «相待之还当且仅当双非可还»
+  l.217 theorem «遍而无相»
+  l.223 theorem «离方无迷»
+  l.228 theorem «离觉则皆不觉»
+  l.232 def «始觉»
+  l.235 theorem «始觉依不觉»
+  l.246 theorem «静之为类»
+  l.249 def «无定性»
+  l.256 theorem «定性之判»
+  l.269 theorem «缘生而不自生则无定性»
+  l.275 theorem «自缘则常»
+  l.281 theorem «念念灭当且仅当无自缘»
+  l.286 theorem «有成坏当且仅当不自缘»
+  l.295 theorem «无为无别相»
+  l.302 theorem «从缘生非文法之律»
+  l.307 theorem «断则无相续»
+  l.320 theorem «缘先果后当且仅当无环»
+  l.330 def «俱有»
+  l.334 theorem «相由则俱有»
+  l.340 theorem «俱有为一念»
+  l.356 theorem «自他随位»
+  l.362 theorem «他依于自»
+  l.367 theorem «有自不必有他»
+  l.378 theorem «同异交得»
+  l.383 theorem «至于无共然后止»
+  l.389 theorem «至于无别然后至»
+  l.396 theorem «状所可别»
+  l.403 theorem «门摄一切»
+  l.407 theorem «平等无异»
+  l.411 def «薪火»
+  l.415 theorem «薪尽火传»
+  l.426 def «攖»
+  l.429 def «遍于»
+  l.432 def «端»
+  l.435 def «有厚»
+  l.438 theorem «端与端俱尽»
+  l.447 theorem «尺与端或尽或不尽»
+  l.459 theorem «尺与尺可相尽»
+  l.470 def «相外»
+  l.473 def «不相外»
+  l.476 def «相尽»
+  l.479 theorem «相尽则不相外»
+  l.483 def «坚白之体»
+  l.487 theorem «不相外则相尽当且仅当双非可还»
+  l.505 theorem «是不俱当»
+  l.510 theorem «必或不当当且仅当弱排中»
+  l.522 def «诘»
+  l.528 theorem «对称有常则不可诘»
+  l.539 theorem «核则不可致诘»
+  l.544 theorem «诘之对称»
+  l.552 theorem «诘之降»
+  l.559 theorem «层在类内»
+  l.567 theorem «层即诘»
+  l.578 theorem «层之对称»
+  l.585 theorem «不可致诘而有常则混而为一»
+  l.596 theorem «每层不分而有常则核当且仅当每层不分»
+  l.605 inductive «歧网»
+  l.612 def «歧网之步»
+  l.619 theorem «歧网之自反»
+  l.624 theorem «链与无尽不可诘»
+  l.637 theorem «甲乙不可诘»
+  l.650 theorem «无尽与链不同核»
+  l.663 theorem «甲乙不同核»
+  l.673 theorem «致诘不尽»

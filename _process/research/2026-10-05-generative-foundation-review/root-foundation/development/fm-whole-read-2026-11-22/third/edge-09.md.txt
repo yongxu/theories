@@ -1,0 +1,180 @@
+# Task file: EDGE, reader whole-c-edge-09
+
+Your 2 modules. For orientation only, what the two passes said of the four marks, of moves and of a reading (where to look, not evidence).
+
+## GrammarCases.lean  (649 lines)
+
+### `both_outcomes`
+- pass a: B: `Decay.both_open` (l. 115) gives both preserving and losing intact status from the same intact state on the next step.
+- pass b: B: TwoLines.core_through_birth (l. 286): the step to the next generation's birth continues under the core of the family class while the member's line ends there (going on and ending at once, at two classes); Overlap.b_positions (l. 196): b ends under one identity and begins under the other. No 'exactly when' dichotomy.
+
+### `no_return`
+- pass a: B: `Decay.possible` (l. 98) requires every successor of a decayed state to be decayed. Absorption is imposed in the step. `Decay.possible_acyclic` (l. 112) concludes no occurrence reaches itself.
+- pass b: B: Decay.possible (l. 98) has as a premise of the net that a decayed nucleus stays decayed; Decay.reach_rises (l. 106) and possible_acyclic (l. 112): no occurrence reaches itself. A premise at a low level, not concluded.
+
+### `rank`
+- pass a: B: `Decay.history` (l. 137) fixes decay from time 2 onward. `Decay.both_open` (l. 115) leaves continued intactness possible at every intact time in the larger net.
+- pass b: B: Decay.reach_rises (l. 106): along the net the step index strictly rises; no ending within a bound.
+
+### `closed_region`
+- pass a: B: `SharedCondition.first_never_left` (l. 382) excludes a fed step out of the first family. `ThirdAffects.rest_to_rest` (l. 533) keeps every successor of a non-third occurrence non-third.
+- pass b: B: TwoLines.family_constant (l. 279), Decay.possible_constant (l. 124), ThirdAffects.third_constant (l. 557), ThirdThing.fixed_class_reaches (l. 486): the class of being joined is constant; ThirdFed.constant_takes_third (l. 617) for every constant class on that net.
+
+### `moves`
+- pass a: B: `Decay.both_open` (l. 115) supplies both intact and decayed successors at every intact time. `ThirdAffects.succ_of_kind` (l. 549) supplies a successor of any requested Boolean kind consistent with its premise.
+- pass b: B: Decay.possible (l. 98) and Decay.both_open (l. 115): from every intact moment both staying intact and decaying are possible steps; Decay.possible_constant (l. 124): 'intact or not' is constant there. Belief uses moveRel (adaptive spread grow) () (l. 639), a Process with a single move.
+
+### `reading`
+- pass a: B: `Belief.rate_read_in_regularity` (l. 643) separates states with equal holder counts and rates 0 and 1 in the same-count core.
+- pass b: B: Decay.time_not_in_core (l. 132): any two intact moments at any steps are alike in the core of 'intact or not' under possible; Decay.history_apart (l. 152): under the single history the two intact moments are apart in the core; Belief.rate_read_in_regularity (l. 643): the core of 'same number' tells apart one holder at rates 0 and 1; SharedCondition.affecting_member_outside (l. 376): under the class 'a member or not' the other family is not reached.
+
+### declarations of GrammarCases.lean (by script)
+  l.42 class of
+  l.72 class of
+  l.77 instance of
+  l.94 abbrev Occ
+  l.98 def possible
+  l.101 def intactAlike
+  l.103 theorem intactAlike_class
+  l.106 theorem reach_rises
+  l.112 theorem possible_acyclic
+  l.115 theorem both_open
+  l.120 theorem decay_alters
+  l.124 theorem possible_constant
+  l.132 theorem time_not_in_core
+  l.137 def history
+  l.141 theorem history_within
+  l.152 theorem history_apart
+  l.167 inductive Occ
+  l.170 def step
+  l.176 def first
+  l.182 def second
+  l.189 theorem continues_each
+  l.196 theorem b_positions
+  l.210 def either
+  l.214 theorem tolerance_line_apart
+  l.229 theorem generates
+  l.250 abbrev Occ
+  l.254 def step
+  l.258 def member
+  l.261 def family
+  l.263 theorem family_class
+  l.267 theorem between
+  l.272 theorem total
+  l.279 theorem family_constant
+  l.286 theorem core_through_birth
+  l.295 theorem line_in_family
+  l.300 theorem other_line_outside
+  l.312 inductive Occ
+  l.317 def affecting
+  l.330 def fed
+  l.343 def living
+  l.351 theorem affecting_reaches_other
+  l.357 def firstFamily
+  l.363 theorem first_left_into_condition
+  l.376 theorem affecting_member_outside
+  l.382 theorem first_never_left
+  l.396 theorem fed_outside
+  l.412 inductive Occ
+  l.416 def step
+  l.435 def third
+  l.442 theorem total
+  l.449 theorem step_keeps_third
+  l.470 theorem family_keeps_third
+  l.477 theorem fixed_class
+  l.486 theorem fixed_class_reaches
+  l.503 inductive Occ
+  l.505 def step
+  l.524 def third
+  l.530 theorem third_class
+  l.533 theorem rest_to_rest
+  l.549 theorem succ_of_kind
+  l.557 theorem third_constant
+  l.563 theorem condition_joined
+  l.568 theorem joined_to_start
+  l.578 theorem finer_class_reaches
+  l.594 inductive Occ
+  l.596 def step
+  l.617 theorem constant_takes_third
+  l.632 def spread
+  l.635 def grow
+  l.639 theorem rate_changes_on_step
+  l.643 theorem rate_read_in_regularity
+
+## GrammarConditionals.lean  (691 lines)
+
+### `both_outcomes`
+- pass a: B: `«不穷与亡不同核之例»` (l. 595) exhibits an endless start and an ending start in one net, outside one another's core. S: `«亡者异当且仅当有后»` (l. 43) gives the exact condition for alteration under F once ending under E is assumed.
+- pass b: S: «亡而两向有常则异当且仅当通» (l. 138): for what ends under E, with F a class constant under R and its converse, altering under F exactly where it passes through (never-ending going and coming); «亡者异当且仅当有后» (l. 43): what ends under E alters into a continuation under F iff it has a successor under F. General.
+
+### `no_return`
+- pass a: S: `«线不返则短于所列»` (l. 264) assumes each indexed place lacks a positive continuation back to itself. `«无环则无俱有»` (l. 430) concludes no mutual reach under acyclicity.
+- pass b: S: «不返而有限则非不穷» (l. 287): where no place on the line from x reaches itself and a list holds every place of that line, the line is not endless (concluded; constructively no end is exhibited); «断则无相续» is cited elsewhere. Not at the loss of something that gives. B: «亡而息之例» (l. 49): an end with nothing after it ceases and does not alter.
+
+### `rank`
+- pass a: S: `«线不返则短于所列»` (l. 264) proves n<l.length for an n-step line listed in l with no return at any place. `«不返而有限则非不穷»` (l. 287) gives negated endlessness under the corresponding reachable-set premises.
+- pass b: S: «线不返则短于所列» (l. 264): a line of n continuation steps none of whose places reaches itself, with all places in a list l, has n < l.length (pigeonhole bound on a non-returning line).
+
+### `closed_region`
+- pass a: B: The step relation in `«相须之例»` (l. 671) preserves the first two bits of every allowed successor. Each agreeing pair admits such successors.
+- pass b: S: «有后而两向有常则通» (l. 115): with a successor under F and F constant both ways, x passes through; B: «相须之例» (l. 671): a joint class constant while neither class alone is; «不穷与亡不同核之例» (l. 595).
+
+### `moves`
+- pass a: B: The relation in `«相须之例»` (l. 671) allows successors when the first two bits agree, keeping those two bits and allowing either third bit.
+- pass b: N
+
+### `reading`
+- pass a: S: `«核同则同不穷»` (l. 560) carries endlessness under a class E to any occurrence in the same forward core. B: `«生于核下可变之例»` (l. 577) puts a beginning and a nonbeginning in the same forward core.
+- pass b: S: «核同则同不穷» (l. 560): for a class E, what the core puts with an occurrence whose line under E never ends also has a never-ending line; «无异当且仅当不分续» (l. 361): nothing alters from E under F exactly where F parts no continuation (up to double negation). B: «生于核下可变之例» (l. 577): beginning is not kept along the forward core.
+
+### declarations of GrammarConditionals.lean (by script)
+  l.43 theorem «亡者异当且仅当有后»
+  l.49 theorem «亡而息之例»
+  l.57 theorem «两向有常而无前不通之例»
+  l.67 theorem «不有常而通之例»
+  l.108 theorem «亡而通则异»
+  l.115 theorem «有后而两向有常则通»
+  l.127 theorem «异而两向有常则通»
+  l.138 theorem «亡而两向有常则异当且仅当通»
+  l.146 theorem «异而未亡之例»
+  l.154 theorem «异而不通之例»
+  l.165 theorem «通而不异之例»
+  l.174 theorem «步皆分则皆亡»
+  l.181 theorem «不有常而异且通之例»
+  l.226 theorem «皆有后而步皆分则全生成»
+  l.233 theorem «昼夜全生成»
+  l.240 theorem «有亡而不全生成之例»
+  l.245 theorem «步不分而不全生成之例»
+  l.264 theorem «线不返则短于所列»
+  l.287 theorem «不返而有限则非不穷»
+  l.301 theorem counting_reach_lt
+  l.308 theorem «无环而不穷之例»
+  l.315 theorem «返而不穷之例»
+  l.325 theorem «有限遍后而不返之例»
+  l.342 theorem «遍后定前而无环之例»
+  l.361 theorem «无异当且仅当不分续»
+  l.367 theorem «静分续而有异之例»
+  l.373 theorem «非有常之类不含于核之例»
+  l.394 theorem «皆不生当且仅当皆非无缘»
+  l.401 def «依»
+  l.407 theorem «所依无则依者无»
+  l.414 theorem «依之传»
+  l.422 theorem «不依之例»
+  l.430 theorem «无环则无俱有»
+  l.444 theorem «生亡并之例»
+  l.451 theorem «亡于静而住于一之例»
+  l.461 theorem «无缘不住而他有后之例»
+  l.470 theorem «自缘而不生之例»
+  l.476 theorem «有前不有常而亡之例»
+  l.484 theorem «不有常而不穷之例»
+  l.511 theorem «无相而非亦无相之例»
+  l.516 theorem «无能无所之例»
+  l.521 theorem «像不保之例»
+  l.539 theorem «类内有常则线相随»
+  l.560 theorem «核同则同不穷»
+  l.577 theorem «生于核下可变之例»
+  l.595 theorem «不穷与亡不同核之例»
+  l.619 theorem «逆核不含于核之例»
+  l.636 theorem «无始而有终之例»
+  l.645 theorem «依于无始而有始之例»
+  l.671 theorem «相须之例»

@@ -1,0 +1,9 @@
+AI-written report by reader whole-a-18.
+
+I read all 21 assigned modules in full at the requested depth, from ScopedReach.lean through SharedCodes.lean. I read each opening account, declaration statement and docstring. No module was read only in part. The references to feedback and measurement in Seeking.lean and to an open-world run in SeekingRuns.lean are marked as account evidence where the corresponding laws are cited rather than stated locally.
+
+Three distinctions bear on the centre. In SelectionShift.lean, Horizon.terms_boundary (l. 941) distinguishes what a complete record of selection terms can establish about an initially nonempty course. Arbitrarily late positive concordance or discordance forces every course with those terms to remain nonempty. If both terms are eventually zero, a lasting course and an ending course can share the entire record. The theorem supplies the two implications without deciding which premise holds.
+
+In SetPointOptimum.lean, HeldPair.held_end (l. 1513) gives permanent loss of a renewer after two steps. Each holder keeps its own store level and draws no more than the pool receives. Together they draw twice what it receives. The renewer itself needs the pool. In SelectionPace.lean, Displacement.natural_fails (l. 1146) shows why the boundary around a stock matters: a carrier can go from half the population to all of it at constant size with zero inflow to the whole population’s lineage.
+
+In SharedCodes.lean, run_imposed_stays (l. 1069) keeps a merged code fixed under every subsequent hearing. coined_returns (l. 1368) restores a distinction by supplying a different form and broadcasting it. Thus a no-return claim needs its allowed moves stated. I found no single statement in the batch joining a rule reset from a kind’s share, the cost to a reproducing giver, permanent loss of renewal, and a continuing course with changing forms. The entries record the premises and outcomes each module actually supplies.

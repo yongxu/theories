@@ -1,0 +1,112 @@
+## 1. The design in ten lines
+
+1. This AI-written design is about **serial composition**. A form is an operation on a signal. Two active forms can produce a new operation by passing a signal between them.
+2. The decisive calculation is cancellation in a product. It needs neither authority set by a share nor a table of kinds supporting kinds. It uses no order on courses, ranking of futures, machine minimization, or closure law at a third relation.
+3. A configuration is a cohort of distinct operations on a finite-dimensional space of binary signals.
+4. A reading specifies which differences can pass from one parent to the other. Its rank is the number of independent channels it requires.
+5. A way selects a repertoire of affordable readings. Every pair of parents forms each distinct nonzero composite admitted by that repertoire.
+6. At generation \(t\), a form must transmit through \(2^t\) original parents. The choice of what passes between them can exhaust their ability to continue.
+7. One calculation on subspaces of the **starting** signal space decides whether a fixed way continues forever.
+8. The same calculation, with a wider choice between blocks of parents, decides the first generation from which changing the way cannot save it.
+9. From one start two readings give identical cohort sizes \(2,4,0\). After the four appear, one cohort can still be saved and the other has already passed its last turn.
+10. A third reading on that start produces successively more distinct forms that can each continue alone. The design achieves this separation and fails the frozen requirement to recover both old laws.
+
+## 2. Definitions
+
+Fix \(V=\mathbf F_2^d\), \(d\ge1\). A **cohort** \(X\) is a subset of the nonzero linear maps \(V\to V\). Two forms differ exactly when some input distinguishes their outputs. The empty cohort has ended.
+
+A raw catalogue \(C_0\) is a set of nonzero linear maps on \(V\). With \(1\le b\le d\) channels available at one transmission, the **affordable catalogue** is \(C=\{p\in C_0:\operatorname{rank}p\le b\}\). Require \(C\ne\varnothing\). A **repertoire** is a nonempty subset \(Q\subseteq C\). Reading \(p\) identifies signals \(v,w\) exactly when \(p(v)=p(w)\).
+
+The **offspring** of one generation are
+\[
+F_Q(X)=\{A p B:A,B\in X,\ p\in Q\}\setminus\{0\}.
+\]
+Products act from right to left. Every permitted pairing occurs, parents can be used repeatedly, and identical effects count once. The old cohort expires. In a particular child, the number of independent outputs lost by its right parent \(B\) is \(\dim(\operatorname{im}B\cap\ker(Ap))\), by rank–nullity on \(\operatorname{im}B\).
+
+Write \(X_t=F_Q^t(X)\) for a stationary way. **Keepable** at \(Y\) means that some sequence of repertoires from \(C\), starting at \(Y\), keeps every cohort nonempty, including \(Y\). To calculate this from the original parents, use the **subspace map**
+\[
+L_{X,Q}(W)=\sum_{p\in Q,\ B\in X}pB(W),\qquad W\le V.
+\]
+A sum over an empty index set is the zero subspace. Write \(L_Q,L_C\) with the initial \(X\) understood. Superscripts on these maps denote iteration, with exponent zero the identity.
+
+## 3. The main statement
+
+For every start and stationary repertoire as above, **the course continues forever iff \(L_Q^d(V)\ne0\)**. For every \(t\ge0\), its generation \(t\) **is still keepable iff**
+\[
+\boxed{\bigl(L_C\circ L_Q^{\,2^t-1}\bigr)^d(V)\ne0.}
+\]
+If initially keepable and the stationary way ends, the least \(t\) where the boxed expression vanishes is its step of no return. The cohort is empty by \(h=\lceil\log_2(d+1)\rceil\), and it may still be active at the earlier crossing. For a start already unkeepable the boundary is zero.
+
+**Premises.** All are structural. They are the finite binary signal space, the starting set of operations, the per-transmission rank budget and nonempty affordable catalogue, free reuse of parents, independent choice of a permitted reading at each pairing, realization of all such offspring, and replacement of the parents. The selected repertoire is fixed up to the generation under examination. Afterwards every affordable repertoire, including \(C\) itself, is available without a switching cost. Continuing means producing at least one nonzero operation at every generation. None of the premises asserts survival, exhaustion, a turn, a rising share, or an increase in the number of forms.
+
+**Proof sketch.** A generation-\(t\) form is precisely a nonzero word of \(m=2^t\) original parents separated by \(m-1\) readings from \(Q\). Split a word in half to construct its two parents. If the word is nonzero, both halves are nonzero. Conversely every birth joins two such halves. Consequently the span of the images of the cohort is \(\sum_{A\in X} A L_Q^{m-1}(V)\).
+
+The subspaces \(V,L_Q(V),L_Q^2(V),\ldots\) descend by monotonicity. After \(d\) steps the subspace \(W\) is fixed. If \(W\ne0\), some original parent acts nontrivially on \(W\), since otherwise \(L_Q(W)=0\). This supplies a nonzero image at every generation. If \(W=0\), a word with \(m-1\ge d\) cannot transmit, giving the stated bound.
+
+For rescue, choosing the full \(C\) from now on contains the offspring of every other possible course, generation by generation. Its subspace map calculated with the **actual** generation-\(t\) parents is exactly \(L_C\circ L_Q^{m-1}\) calculated with the **original** parents. The internal \(m-1\) readings have already been spent. Only the reading between two such blocks is newly selectable. Apply the fixed-subspace argument to that map. Once unkeepable, a cohort cannot have a keepable successor, since the move to it could have been taken.
+
+## 4. Which of R1 to R7 it has
+
+| Requirement | What the design supplies |
+|---|---|
+| R1 | Every form in a new cohort has two parental occurrences. Distinct operations can be born even when neither parent is transmitted unchanged. Multiplicities of individuals are discarded. |
+| R2 | Partial. Transmission rests on a finite space. The span of all outputs can shrink, and every fresh transmission comes through operations the previous cohort actually produced. This span can never regain a lost direction. There is no material stock with an inflow. |
+| R3 | Partial. A reading occupies rank-many channels per pairing. Lost parental distinctions can be charged exactly to a particular child. A parent can transmit through another child as well, so this gives no aggregate sacrifice borne by a keeper. |
+| R4 | Partial. Children become the filters on the next generation’s pairings. The repertoire itself is supplied. There is no rule reset from a numerical share and no theorem of share capture. |
+| R5 | Yes. The boxed criterion quantifies over all future changes of repertoire. It can detect irreversibility while offspring are still being formed. |
+| R6 | The registered differences are exact, through \(p\) and then through the inherited receiver \(A\). A failed pairing leaves no child. No learner revises its reading in response to that failure. |
+| R7 | Yes in a bounded sense. Part 5 constructs increasing numbers of simultaneously present, distinguishable operations, each able to found an unending cohort alone. An earlier form disappears during the increase. Any prescribed finite number of increases is possible by increasing \(d\). |
+
+This cut lets the same act of transmission explain a new form and a lost possibility of correction. Its price is strongest at R3 and R4, where a parent can be reused freely and a successful form gets no additional vote.
+
+## 5. T1 to T8
+
+**T1 — dictionary.** I did not find the boxed statement in the sources I read. It depends on the internal positions of irrevocably spent readings in a product, and on finite-dimensional stabilization. Unfolding keepability gives neither. Even the existence of a path through every wiring position is insufficient. In dimension two, with the all-ones matrix \(J\) as sole parent and identity reading, every input has two paths to every output. They cancel in pairs and \(J^2=0\). The Python check retains this instance.
+
+**T2 — handed in.** The structural premises are listed in part 3. Exhaustion and the last turn are derived. The budget, choice of repertoire and simultaneous realization of all pairings are handed in. So is the permission to reopen every affordable reading at a later generation. The theorem gives the last time when exercising that permission could work.
+
+**T3 — idle parts.** Write \(E_{ij}\) for the operation sending basis vector \(e_j\) to \(e_i\) and killing the others, with indices starting at zero.
+
+- **Reading.** From \(\{I\}\) in dimension two, selecting \(P=E_{00}\) forever keeps \(\{P\}\). Selecting \(N=E_{01}\) yields \(\{N\}\), then empty. Both readings cost one channel. With catalogue \(\{P,N\}\), already no allowed reading joins \(N\) to itself.
+- **Parental multiplication.** From \(\{N\}\) with identity reading, the child \(N^2\) vanishes. Removing the left parent from the reproduction rule would transmit \(IN=N\) forever.
+- **Budget.** From \(\{N\}\) with catalogue \(\{P,S\}\), where \(S\) swaps the two coordinates, budget one leaves only \(P\) and the cohort ends. At budget two, \(NSN=N\) keeps it.
+- **Finite support and timing.** \(P\) and \(N\) have exactly the same output subspace, yet under identity reading one keeps and one ends. Retaining only an amount, or even that entire subspace, loses the verdict. Removing the internal reading history loses the difference between the two last turns in T4. Time indexes a generation. There is no additional horizon parameter or share variable.
+
+**T4 — both outcomes from one start.** In dimension \(d\ge6\), let \(T e_i=e_{i+1\bmod d}\), start with \(X=\{T,T^2\}\), and set \(C=\{I,N_3,N_5\}\), where \(N_j=E_{0j}\) and \(b=d\). Change only the singleton repertoire.
+
+- Under \(I\), generation \(t\) consists of \(T^j\) for \(2^t\le j\le2^{t+1}\), exponents taken modulo \(d\). Its size is \(\min(d,2^t+1)\). Every member is invertible and continues on its own under \(I\). The first generation loses \(T\) and gains \(T^3,T^4\).
+- Under either \(N_3\) or \(N_5\), the sizes are \(2,4,0\). After one step the four maps are \(E_{a,j-b'}\) for \(a,b'\in\{1,2\}\). For \(j=3\) they include \(E_{11}\), which can continue alone under \(I\), and survives reopening within the full cohort. For \(j=5\) they all output into coordinates 1 and 2 and read only 3 and 4. None of the three affordable readings can join any pair. The first unkeepable times are **2 and 1** respectively.
+
+**T5 — old laws as cases. Failed on both sides.** On the lock side, try taking the two offspring kinds of *RuleShaping.favours_iff* as the cohort. With baseline one and shared gain zero, private gain and cost \((1,0)\) or \((0,1)\) give the same two kinds present but opposite favouring verdicts. The cohort forgets the counts needed for the unchanged statement. On the choice side, take cohort as state, repertoire as move and nonemptiness as guard in *Viability.kernel_iff_certificate*. Its kernel requires **every** course to stay within the guard. The start \(\{I\}\) in T3 has a surviving course and a course that leaves it. Restricting to a singleton repertoire makes that quantifier difference disappear only for a subclass of processes. Neither old theorem follows as an unchanged case using the subspace law.
+
+**T6 — no threshold.** With identity reading in dimension three, the shift \(e_2\mapsto e_1\mapsto e_0\mapsto0\) starts with two independent output directions and ends at generation two. \(E_{00}\) starts with just one of those directions and continues. T3 gives opposite fates at exactly the same output subspace as well. Adding parents to a cohort under a fixed repertoire is monotone in this model. The larger-image example compares two different operations.
+
+**T7 — tried by program.** The independent course search and the predictions agreed in all 60,623 small instances. Part 6 gives the bounds and the close cases.
+
+**T8 — one more model.** Six new definitions, counting cohort, affordable catalogue, repertoire, offspring, keepable, and the subspace map. The same stabilization law works on original parents and on whole blocks of their descendants, with an exact substitution between the two grains. Relative to the existing Lean this remains a new model beside the others. T5 prevents a stronger verdict.
+
+## 6. What the program found
+
+The exhaustive box was \(d=1,2\), every initial cohort of at most two nonzero binary matrices including the empty cohort, every raw catalogue of one or two distinct nonzero matrices, every budget \(1,\ldots,d\) leaving an affordable reading, and every nonempty stationary repertoire within that budget. Offspring cohorts had no size cutoff.
+
+The program multiplied matrices to build the reachable graph for every affordable catalogue. To check rescue it repeatedly removed cohorts with no remaining nonempty continuation. To check a fixed way it followed the actual cohorts to extinction or repetition. Separately it evaluated the two subspace predictions, checking every time up to repetition of the joint cohort and block-map state.
+
+| Result | Count |
+|---|---:|
+| Stationary ways continuing / ending, counting starts and catalogues | 51,904 / 8,719 |
+| Ending from an initially keepable start | 5,022 |
+| Of those, becoming unkeepable strictly before becoming empty | 1,530 |
+| Generation-level comparisons of the boxed criterion | 144,618 |
+| Disagreements | 0 |
+
+The latest crossing in the small box was generation two. From the swap \(S\) with affordable readings \(E_{00},E_{11}\), choosing \(E_{00}\) first produces \(E_{11}\). The next choice can still save it. Continuing with \(E_{00}\) ends it. The dimension bound was attained. Separately the program checked T4 in every dimension from 6 to 12. At dimension 12, the surviving cohort sizes were \(2,3,5,9,12,12\). For the two ending ways, reopening all readings after the four forms appeared gave respectively four and zero next forms. All 3,375 nonzero parent–reading–parent triples in dimension two also satisfied the parental loss formula. These are finite checks of the paper argument. [Python search](/Users/ren/theories/tmp/fm/centre21/designs/G2-free-astra/search.py) · [Recorded output](/Users/ren/theories/tmp/fm/centre21/designs/G2-free-astra/output.txt)
+
+## 7. Where it is weakest
+
+A full repertoire dominates every restricted one because all permitted pairings can occur. A single budget shared by all births would break that proof. So would a case where the same parent must be spent on one of two possible children. The design gets a last turn and the opening of more independently continuing forms, while leaving unexplained who can afford to keep the readings available.
+
+A mathematical refutation would be a nonzero stable subspace with an empty actual generation, or a zero boxed expression at a generation from which any affordable schedule keeps transmitting. A refutation of the proposed application would be two cohorts with identical sets of signal operations and affordable readings but different fates because their multiplicities matter. T5 identifies precisely such information in the older lock model. I would retain the last-turn calculation and the two equal-count courses as findings. I would not identify this model with the centre of the repository.
+
+## 8. What I did not read
+
+I read the brief, root instructions, the opening material of the one-page account and method, the requested direction passage, the model requirements, the withdrawal in *AFTER.md*, selected entries in *PLACES.md*, and relevant passages of *RuleShaping*, *RuleCapture*, *TurningInTime*, *CommonResponse*, *Keeping*, and *Viability*. I did not read all 406 modules, the October renewal proofs, *PopulationCorrection*, the full 89-place table, or all earlier attempts and readers’ reports. The novelty claim is confined to what I read. The argument has no Lean verification.

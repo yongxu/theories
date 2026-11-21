@@ -1,0 +1,529 @@
+# Task file: EDGE, reader whole-c-edge-11
+
+Your 5 modules. For orientation only, what the two passes said of the four marks, of moves and of a reading (where to look, not evidence).
+
+## HexagramLaws.lean  (1321 lines)
+
+### `both_outcomes`
+- pass a: B: `returns_iff_attractor` (l. 327) gives return exactly on the four-figure attractor for one law. `nuclear_rests_iff` (l. 296) gives perpetual retention of the starting figure exactly at all unbroken or all broken.
+- pass b: B: `returns_iff_attractor` (l. 327): a hexagram returns under the nuclear law exactly when it is in the attractor (others are drawn in); `nuclear_rests_iff` (l. 296); `MarkedLines.returns_iff` (l. 889): returns exactly where no line turns; `process_returns_iff_ends` (l. 340).
+
+### `no_return`
+- pass a: B: `outside_not_returns` (l. 322) concludes nonreturn under the nuclear law from every start outside `NuclearAttractor`. `MarkedLines.returns_iff` (l. 889) excludes return from a start with a turning line.
+- pass b: B: `nuclear_loses` (l. 167): `¬ Branching.KeepsPossibilities (Law.process nuclear)`, a possibility lost for good (by `Law.Merges.loses`); `outside_not_returns` (l. 322): a configuration outside the attractor never returns (by `Law.Drawn.not_returns`); `MarkedLines.returns_iff` (l. 889). Concluded, in the built model, at the level of configurations, not of a level or a giver.
+
+### `rank`
+- pass a: B: `run_in_attractor` (l. 365) gives entry by step two from every nuclear start, with 4 already inside, 12 first entering at step one and 48 still outside at one by `entry_counts` (l. 371). `MarkedLines.run_settled` (l. 873) gives settlement by step one.
+- pass b: B: `nuclear_two_attractor` (l. 259) and `run_in_attractor` (l. 365): within two steps every configuration is in the attractor; `MarkedLines.run_settled` (l. 873): settled from step 1; `addOne_first_return` (l. 1069) no return before step 64. No falling variant.
+
+### `closed_region`
+- pass a: B: `attractor_absorbing` (l. 302) gives closure for the four nuclear figures. `orbitIndex_invariant` (l. 1299) gives a separate invariant for each waxWane orbit index.
+- pass b: B: `attractor_absorbing` (l. 302): `Law.Absorbing nuclear NuclearAttractor`; `nuclear_fixed_iff` (l. 285): fixed points 乾, 坤 only; `changesAround_invariant` (l. 1172) and `orbitIndex_invariant` (l. 1299): invariants of waxWane; `qian_not_reach_jiJi` (l. 1199).
+
+### `moves`
+- pass a: N: Not found in the statements read.
+- pass b: N: every law here is a deterministic function Hexagram → Hexagram (or MarkedLines → MarkedLines) read as `Law.process`; no choice among steps and no law of what a choice keeps was found.
+
+### `reading`
+- pass a: B: `run_two_middle` (l. 187) gives identical nuclear runs from step two if the two middle lines agree. `nuclear_yang_not_lumped` (l. 217) says the unbroken-line count fails to determine its own next value.
+- pass b: B: lumpings a law goes alike across, a class read alike deciding the next class: `innerPair_lumped`/`innerPair_goAlike` (l. 208, l. 212), `classes_lumped`/`classes_goAlike` (l. 649, l. 655), `MarkedLines.onward_goAlike` (l. 919), `orbitIndex_goAlike` (l. 1296); and readings it does not go alike across: `nuclear_yang_not_goAlike` (l. 221), `classes_not_goAlike_waxWane` (l. 663), `MarkedLines.shown_not_goAlike` (l. 911).
+
+### declarations of HexagramLaws.lean (by script)
+  l.103 theorem not_mem_of_memb
+  l.109 def distinctb
+  l.113 theorem nodup_of_distinctb
+  l.122 theorem order_nodup
+  l.125 def allUnbroken
+  l.128 theorem orbit_still
+  l.137 def nuclear
+  l.141 def inner
+  l.144 theorem nuclear_inner
+  l.152 theorem run_inner
+  l.159 theorem nuclear_merges
+  l.163 theorem nuclear_process_merges
+  l.167 theorem nuclear_loses
+  l.172 def innerPair
+  l.175 def thrice
+  l.179 theorem nuclear_two
+  l.183 theorem nuclear_two_lumped
+  l.187 theorem run_two_middle
+  l.193 theorem thrice_inj
+  l.200 theorem innerPair_nuclear
+  l.203 theorem swap_eq
+  l.208 theorem innerPair_lumped
+  l.212 theorem innerPair_goAlike
+  l.217 theorem nuclear_yang_not_lumped
+  l.221 theorem nuclear_yang_not_goAlike
+  l.225 def NuclearAttractor
+  l.229 def attractorb
+  l.232 theorem attractor_of_attractorb
+  l.241 theorem not_attractor_of_attractorb
+  l.252 theorem thrice_attractor
+  l.259 theorem nuclear_two_attractor
+  l.262 theorem nuclear_allUnbroken
+  l.264 theorem nuclear_allBroken
+  l.266 theorem nuclear_jiJi
+  l.268 theorem nuclear_weiJi
+  l.273 theorem nuclear_two_fixed_one_cycle
+  l.285 theorem nuclear_fixed_iff
+  l.296 theorem nuclear_rests_iff
+  l.302 theorem attractor_absorbing
+  l.310 theorem attractor_returns
+  l.317 theorem outside_drawn
+  l.322 theorem outside_not_returns
+  l.327 theorem returns_iff_attractor
+  l.334 theorem nuclear_process_returns_iff
+  l.340 theorem process_returns_iff_ends
+  l.365 theorem run_in_attractor
+  l.371 theorem entry_counts
+  l.378 theorem thrice_back
+  l.383 theorem run_rests_at
+  l.390 theorem basin_iff
+  l.395 theorem and_of_both
+  l.400 theorem or_of_neither
+  l.406 theorem qian_basin
+  l.416 theorem kun_basin
+  l.426 theorem cycle_basin
+  l.440 theorem basin_counts
+  l.450 theorem nuclear_complement
+  l.454 theorem nuclear_reverse
+  l.457 theorem complement_reverse
+  l.460 theorem reverse_reverse
+  l.463 theorem reverse_complement_reverse
+  l.468 inductive Symmetry
+  l.477 def act
+  l.484 def comp
+  l.500 theorem act_comp
+  l.518 theorem comp_self
+  l.525 theorem comp_comm
+  l.529 theorem act_self
+  l.535 theorem nuclear_act
+  l.542 theorem nuclear_run_act
+  l.549 theorem run_complement_apart
+  l.554 def binaryValue
+  l.559 def leastOf
+  l.566 def classOf
+  l.570 theorem classOf_act
+  l.579 theorem classOf_member
+  l.590 theorem classOf_eq_iff
+  l.600 def pairClasses
+  l.611 def fourClasses
+  l.626 def classes
+  l.629 def classSize
+  l.631 theorem classOf_mem
+  l.640 theorem class_census
+  l.649 theorem classes_lumped
+  l.655 theorem classes_goAlike
+  l.660 theorem classes_not_lumped_waxWane
+  l.663 theorem classes_not_goAlike_waxWane
+  l.666 theorem any_sound
+  l.676 def pairedByChange
+  l.680 theorem pairedByChange_sound
+  l.692 theorem turn_fixed_iff
+  l.712 def pairedByBoth
+  l.716 theorem pairedByBoth_sound
+  l.729 theorem both_fixed_iff
+  l.751 inductive Marked
+  l.758 def value
+  l.764 def settle
+  l.769 def stays
+  l.773 theorem settle_settle
+  l.777 theorem stays_settle
+  l.781 theorem settle_of_stays
+  l.785 theorem turning_ne_staying
+  l.788 theorem stays_of_settle
+  l.795 structure MarkedLines
+  l.806 def shown
+  l.810 def settle
+  l.814 def onward
+  l.817 def staysAll
+  l.821 theorem settle_settle
+  l.829 theorem staysAll_settle
+  l.838 theorem settle_fixed_iff
+  l.863 theorem settle_merges
+  l.869 theorem settle_process_merges
+  l.873 theorem run_settled
+  l.878 theorem run_rests
+  l.883 theorem drawn
+  l.889 theorem returns_iff
+  l.897 theorem process_returns_iff
+  l.903 theorem shown_not_lumped
+  l.911 theorem shown_not_goAlike
+  l.915 theorem onward_lumped
+  l.919 theorem onward_goAlike
+  l.923 def allTurning
+  l.927 theorem all_nines
+  l.932 theorem all_sixes
+  l.941 def carry6
+  l.946 def carry5
+  l.951 def carry4
+  l.956 def carry3
+  l.961 def carry2
+  l.966 def carry1
+  l.972 def carryAt
+  l.981 def addOne
+  l.984 def borrow6
+  l.987 def borrow5
+  l.991 def borrow4
+  l.995 def borrow3
+  l.999 def borrow2
+  l.1003 def borrow1
+  l.1008 def subOne
+  l.1010 theorem subOne_addOne
+  l.1016 theorem addOne_lossless
+  l.1020 theorem from_allBroken
+  l.1026 theorem to_allBroken
+  l.1032 theorem addOne_reach
+  l.1037 theorem addOne_sixtyfour
+  l.1043 def backWithin
+  l.1047 theorem not_back
+  l.1059 theorem first_return_of
+  l.1063 theorem backWithin_addOne
+  l.1069 theorem addOne_first_return
+  l.1075 theorem addOne_one_orbit
+  l.1085 def exponent
+  l.1094 def period
+  l.1102 theorem period_pow
+  l.1111 def linesBelow
+  l.1120 theorem orbit_period
+  l.1126 theorem carryAt_turns
+  l.1132 theorem carryAt_below
+  l.1140 theorem line_turns
+  l.1157 def changesAround
+  l.1160 theorem changesAround_waxWane
+  l.1166 theorem changesAround_run
+  l.1172 theorem changesAround_invariant
+  l.1177 theorem changesAround_values
+  l.1192 theorem changesAround_counts
+  l.1199 theorem qian_not_reach_jiJi
+  l.1204 theorem waxWane_not_reach_every
+  l.1208 def zhun
+  l.1211 def meng
+  l.1215 def orbitStarts
+  l.1219 def visitsFrom
+  l.1223 theorem visits_sound
+  l.1232 def onOrbit
+  l.1236 theorem onOrbit_sound
+  l.1245 theorem onOrbit_all
+  l.1252 theorem on_an_orbit
+  l.1258 theorem starts_return
+  l.1276 def indexIn
+  l.1283 def orbitIndex
+  l.1286 theorem orbitIndex_waxWane
+  l.1292 theorem orbitIndex_lumped
+  l.1296 theorem orbitIndex_goAlike
+  l.1299 theorem orbitIndex_invariant
+  l.1304 theorem reach_keeps_orbit
+  l.1311 theorem orbit_census
+
+## Hexagrams.lean  (737 lines)
+
+### `both_outcomes`
+- pass a: S: `every_returns_iff` (l. 565) gives the criterion for universal return for all deterministic laws on this finite carrier. B: `allBroken_absorbing` (l. 533) and `wane_not_returns` (l. 549) distinguish the retained state from every other start of wane.
+- pass b: S: `every_returns_iff` (l. 565): for every law `next` on hexagrams, every configuration returns exactly when the law's process is lossless. It is general over laws but on this one built world. B: `waxWane_returns` (l. 405) against `wane_not_returns` (l. 549).
+
+### `no_return`
+- pass a: B: `wane_not_returns` (l. 549) concludes nonreturn for every start other than all broken, and `wane_loses` (l. 555) concludes failure to keep all possibilities under the same law.
+- pass b: B: `allBroken_absorbing` (l. 533): `wane` never leaves all broken. `wane_never_back` (l. 544): for every s other than all broken, the state at step 6 + k is never s. `wane_not_returns` (l. 549) and `wane_loses` (l. 555): a possibility is lost for good. These are concluded in the built law `wane`. The loss is of a configuration, not of something that gives.
+
+### `rank`
+- pass a: B: `wane_six` (l. 529) puts every start at all broken at time six. S: `revisits_within_order` (l. 726) bounds the first repeated state by index 64 for any run on hexagrams.
+- pass b: B: `wane_six` (l. 529): after six steps every configuration is all broken, a fixed deadline. `six_steps` (l. 413), `twelve_steps` (l. 422) and `first_return` (l. 495) are exact periods. No falling variant is stated.
+
+### `closed_region`
+- pass a: B: `allBroken_absorbing` (l. 533) says the singleton all broken is closed under wane.
+- pass b: B: `allBroken_absorbing` (l. 533): all broken is an absorbing region of `wane`. `wane_drawn` (l. 539): every other configuration is drawn into it.
+
+### `moves`
+- pass a: B: `changes` (l. 327) allows a flip at any chosen place, `flip_flip` (l. 312) restores the figure by repeating that choice, and `reach_every` (l. 363) gives reachability between every pair.
+- pass b: S: `changes` (l. 327) is a `Process Hexagram Place`, a choice of which place to flip. `changes_keeps` (l. 342): it keeps every possibility (`KeepsPossibilities`) and is not `Lossless`. `reach_every` (l. 363): every configuration reaches every other. `revisits_within_order` (l. 726): for every process on hexagrams, every run revisits a configuration within 64 steps. `changes_run_revisits` (l. 379): every run of `changes` revisits from every step on.
+
+### `reading`
+- pass a: B: `pairs_lumped` (l. 617) says the current complement pair determines the next pair under waxWane, while `yang_not_lumped` (l. 637) rules this out for the unbroken-line count.
+- pass b: S: `pairs_lumped` and `pairs_goAlike` (l. 617, l. 628): the lumping `pairOf`, a hexagram together with its complement, is one that `waxWane` goes alike across. `yang_not_lumped` and `yang_not_goAlike` (l. 637, l. 640): the count of unbroken lines is not such a lumping. `lines` (l. 647) is a Frame whose claim at a place is realized where that line is unbroken. These are of the built world.
+
+### declarations of Hexagrams.lean (by script)
+  l.74 structure Hexagram
+  l.85 inductive Place
+  l.94 def places
+  l.97 def line
+  l.108 def same
+  l.114 theorem same_eq
+  l.120 theorem same_self
+  l.125 def eqb
+  l.129 theorem eq_of_eqb
+  l.145 theorem eqb_self
+  l.151 theorem ne_of_eqb
+  l.157 def memb
+  l.161 theorem mem_of_memb
+  l.173 def order
+  l.240 theorem order_length
+  l.243 theorem mem_order
+  l.250 def complement
+  l.254 def reverse
+  l.257 theorem complement_complement
+  l.265 def Paired
+  l.269 def pairs
+  l.275 def pairedb
+  l.278 theorem paired_of_pairedb
+  l.286 def allPaired
+  l.290 theorem paired_of_allPaired
+  l.298 theorem order_paired
+  l.304 def flip
+  l.312 theorem flip_flip
+  l.327 def changes
+  l.330 theorem changes_returns
+  l.334 def allBroken
+  l.337 theorem changes_merges
+  l.342 theorem changes_keeps
+  l.345 theorem line_step
+  l.351 theorem lift
+  l.355 theorem toward
+  l.363 theorem reach_every
+  l.379 theorem changes_run_revisits
+  l.387 def waxWane
+  l.392 def unwaxWane
+  l.395 theorem unwax_wax
+  l.400 theorem waxWane_lossless
+  l.405 theorem waxWane_returns
+  l.409 theorem waxWane_process_returns
+  l.413 theorem six_steps
+  l.417 theorem run_six_steps
+  l.422 theorem twelve_steps
+  l.432 theorem order_paired_by_law
+  l.441 def rising
+  l.452 def falling
+  l.461 theorem not_le_six
+  l.466 theorem waxing
+  l.478 theorem waning
+  l.489 theorem seventh_step
+  l.491 theorem not_lt_twelve
+  l.495 theorem first_return
+  l.511 def sui
+  l.514 theorem fourth_step
+  l.521 def wane
+  l.525 theorem wane_merges
+  l.529 theorem wane_six
+  l.533 theorem allBroken_absorbing
+  l.539 theorem wane_drawn
+  l.544 theorem wane_never_back
+  l.549 theorem wane_not_returns
+  l.555 theorem wane_loses
+  l.560 theorem wane_process_merges
+  l.565 theorem every_returns_iff
+  l.575 theorem waxWane_complement
+  l.578 theorem reverse_wax
+  l.583 theorem reverse_waxWane
+  l.588 def pairOf
+  l.592 theorem pairOf_cases
+  l.596 theorem complement_inj
+  l.600 theorem pairOf_eq
+  l.609 theorem pairOf_complement
+  l.617 theorem pairs_lumped
+  l.628 theorem pairs_goAlike
+  l.632 def yang
+  l.637 theorem yang_not_lumped
+  l.640 theorem yang_not_goAlike
+  l.647 def lines
+  l.649 theorem complement_l1
+  l.653 theorem bottom_turns
+  l.660 theorem rises_between
+  l.674 theorem not_true_of_false
+  l.678 theorem arising_recurs
+  l.704 theorem ceasing_recurs
+  l.712 theorem world_arising_recurs
+  l.717 theorem world_ceasing_recurs
+  l.726 theorem revisits_within_order
+  l.731 theorem kept_history_unlisted
+
+## HorizonWebs.lean  (142 lines)
+
+### `both_outcomes`
+- pass a: B: `HorizonWebs.prefix_does_not_decide` (l. 128) states both outcomes in one conjunction for the two specified schedules, with the same observed levels through h. The model starts with h+1 for each h.
+- pass b: B: `Feedback.prefix_does_not_decide` (l. 102) and `HorizonWebs.prefix_does_not_decide` (l. 128): one start, two schedules that agree before h, one renewing and one consuming.
+
+### `no_return`
+- pass a: B: `Feedback.prefix_does_not_decide` (l. 102) concludes `ConsumingIn` for continuing overdraw. The conclusion concerns that schedule and gives no quantified threshold from which every possible schedule fails.
+- pass b: B: `Feedback.prefix_does_not_decide` (l. 102) concludes `ConsumingIn` for `continuing`, through the first conjunct of `overdraw_consuming`. The threshold below which renewal stops is a premise of the law (`needG`). The sustaining formation's loss for ever is not stated in this module.
+
+### `rank`
+- pass a: B: `Feedback.descending` (l. 64) proves level(k) + k = h+1 through k ≤ h when draw is two before h, reaching one at h.
+- pass b: B: `Feedback.descending` (l. 64): the level falls by one each step before h, to 1 at h (`at_horizon`, l. 79). Under `continuing` it goes on to consume.
+
+### `closed_region`
+- pass a: B: `Feedback.step_one` (l. 56) keeps level one on a draw of one, and `Feedback.after_horizon` (l. 83) gives that fixed level at h+j for every j under the stopping schedule.
+- pass b: B: `after_horizon` (l. 83): from h on, the level stays 1 under `stopping`, a standing level. `supported` (l. 87).
+
+### `moves`
+- pass a: B: `Feedback.stopping` (l. 42) and `Feedback.continuing` (l. 45) are supplied draw schedules, and `Feedback.supported` (l. 87) keeps the level at least one throughout the stopping schedule.
+- pass b: B: `stopping` and `continuing` (l. 42, l. 45) are two draw schedules, two courses from one start. No `Process` with a choice is stated.
+
+### `reading`
+- pass a: B: `HorizonWebs.prefix_does_not_decide` (l. 128) gives equality of the two web-level readings at every time through the chosen horizon alongside different whole-run classifications.
+- pass b: B: `HorizonWebs.prefix_does_not_decide` (l. 128): the levels are equal up to h, yet one web renews and the other consumes, so what is registered up to h (the level) does not decide. No reading object is defined.
+
+### declarations of HorizonWebs.lean (by script)
+  l.39 def law
+  l.42 def stopping
+  l.45 def continuing
+  l.47 theorem step_two
+  l.56 theorem step_one
+  l.64 theorem descending
+  l.79 theorem at_horizon
+  l.83 theorem after_horizon
+  l.87 theorem supported
+  l.102 theorem prefix_does_not_decide
+  l.128 theorem prefix_does_not_decide
+
+## Interdependence.lean  (528 lines)
+
+### `both_outcomes`
+- pass a: B: Overshoot.ends_through_feeder and steady_continues (ll. 378, 447) give ending and continuing in two specified flows with the same dependences. There is no shared choice-law iff here.
+- pass b: B: `Clearing.closure_supported` (l. 516): in one built model the clearer is active at every step and everything within its feeding closure supported, while the dweller beyond it is unsupported from step 2 on. B: `Overshoot.ends_through_feeder` (l. 378) against `Overshoot.steady_continues` (l. 447): with the same dependences (steadyWeb.requires := web.requires), the overshooting flow ends and the steady flow continues; two built statements, not one. N: no general exactly-when of going on and ending.
+
+### `no_return`
+- pass a: B: Overshoot.ends_through_feeder (l. 378) concludes the feeder is unsupported from step one and neither formation supported from step two. The general theorem at l. 199 concludes failure of uninterrupted activity given absent supply.
+- pass b: S: `Flow.Balances.unfed_consumption_not_continuing` (l. 199): under the premises of unfed consumption, g is not active at every step from T; concluded, at a level running down. B: `Overshoot.ends_through_feeder` (l. 378): for all t ≥ 2 and every f, f is not Supported, concluded in the built case, after the loss of the feeder false; `Clearing.closure_supported` (l. 516): the dweller is unsupported at every step n + 2.
+
+### `rank`
+- pass a: S: consumption_ends_with_feeders_at (l. 222) bounds n consecutive active steps by the stock at T under local balance and supported giving on those steps, positive required consumption while active and unsupported feeders from T.
+- pass b: S: `Flow.unfed_consumption_ends_at` (l. 165), `Flow.Balances.unfed_consumption_ends` (l. 189), `Flow.consumption_ends_with_feeders_at` (l. 222), `Flow.Balances.consumption_ends_with_feeders` (l. 235): consecutive active steps are bounded by W.level T c, a deadline set by the starting level. B: `Overshoot.ends_through_feeder` (l. 378): from step 1, n ≤ 1.
+
+### `closed_region`
+- pass a: S: fedClosed_within (l. 147) closes the feeding closure under feeding. beyond_gives_nothing (l. 152) makes a listed outside formation's gift zero on a condition then required by a member.
+- pass b: S: `Flow.FedClosed` (l. 120) and `Flow.fedClosed_within` (l. 147): a formation's feeding closure is closed under feeding; `Flow.beyond_gives_nothing` (l. 152): what lies beyond gives 0 at any step to a condition a member then requires. Closure here is under feeding, not under steps. B: `Clearing.fedClosed` (l. 469), `Clearing.dependenceRegion_closed` (l. 476), `Clearing.dependenceRegion_iff` (l. 492), `Clearing.closure_supported` (l. 516): everything within the clearer's closure is supported at every step.
+
+### `moves`
+- pass a: N: Not found in the statements read.
+- pass b: N: no choice among steps; each Flow and Web is given whole. Overshoot.flow and Overshoot.steadyFlow are two built flows, not choices within one process.
+
+### `reading`
+- pass a: N: Not found in the statements read.
+- pass b: S: `Web.retains_bounded_iff_includes` (l. 255): for significance bounded by `region p`, l retains what has significance along l' iff l includes l', where every formation l' admits lies in p's region or is admitted by l. D: the opening account (AI reading, D17) reads the feeding closure as what a center actually depends on, and says how a center comes to represent it is not modelled.
+
+### declarations of Interdependence.lean (by script)
+  l.115 def FedFrom
+  l.120 def FedClosed
+  l.125 def WithinFeeding
+  l.131 theorem WithinFeeding.refl
+  l.135 theorem WithinFeeding.trans
+  l.140 theorem WithinFeeding.of_fedBy
+  l.147 theorem fedClosed_within
+  l.152 theorem beyond_gives_nothing
+  l.165 theorem unfed_consumption_ends_at
+  l.189 theorem Balances.unfed_consumption_ends
+  l.199 theorem Balances.unfed_consumption_not_continuing
+  l.211 theorem unfed_of_feeders_unsupported
+  l.222 theorem consumption_ends_with_feeders_at
+  l.235 theorem Balances.consumption_ends_with_feeders
+  l.255 theorem retains_bounded_iff_includes
+  l.276 def flow
+  l.298 def web
+  l.328 theorem balances
+  l.336 theorem acting
+  l.341 theorem taking
+  l.352 theorem dependent
+  l.364 theorem closure_whole
+  l.378 theorem ends_through_feeder
+  l.418 def steadyFlow
+  l.433 def steadyWeb
+  l.447 theorem steady_continues
+  l.469 theorem fedClosed
+  l.476 theorem dependenceRegion_closed
+  l.484 theorem dependenceRegion_self
+  l.492 theorem dependenceRegion_iff
+  l.510 theorem dweller_beyond
+  l.516 theorem closure_supported
+
+## Junctures.lean  (641 lines)
+
+### `both_outcomes`
+- pass a: S: juncture_iff (l. 368) characterizes a single configuration with both a successor from which s is reachable and one from which it is unreachable. B: OneWay.juncture (l. 442) realizes both at false.
+- pass b: S, general: `Juncture` (l. 92) and `juncture_iff` (l. 368): a juncture is where keeping and losing both have a step. `reach_decided_listed` (l. 292): for listed configurations with decided steps and s returning, Reach y s or not, decided. B: `OneWay.juncture` (l. 442).
+
+### `no_return`
+- pass a: S: losing_loses (l. 412) concludes that every state reached by the losing subprocess from s is s or cannot reach s in the full process. loss_passes_juncture (l. 145) assumes endpoint loss and locates a losing edge up to double negation; no stock threshold is required.
+- pass b: S, concluded: `loss_passes_juncture` (l. 145): where s returns, every trace from s to t with not Reach t s passes, not not, a juncture y at which the course takes a step to z with not Reach z s. `loss_passes_juncture_decided` (l. 175) and `loss_passes_juncture_listed` (l. 302) find it. `losing_not_returns` (l. 407). `losing_loses` (l. 412). `lpo_of_junctures_found` (l. 575): finding every juncture implies LPO. This concerns reaching a configuration again, not the loss of a giver.
+
+### `rank`
+- pass a: S: reach_within_listed (l. 328) bounds a route back to returning s by the covering list's length when steps are decided and s is reachable. leads_settles (l. 256) bounds stabilization of the backward search.
+- pass b: S: `reach_within_listed` (l. 328): with every configuration listed, steps decided and s returning, a configuration that can have s has it along a trace of at most all.length steps. `leads_settles` (l. 256): the decided reading settles within all.length.
+
+### `closed_region`
+- pass a: S: keeping_keeps and keeping_greatest (ll. 383, 395) preserve reachability back to s along the keeping subprocess from s and give maximality on each competitor's reachable steps.
+- pass b: S: `keeping_keeps` (l. 383) (Keeps: from wherever its course from s leads, it can have s again), and `keeping_greatest` (l. 395) shows it is the greatest such sub-process. `no_juncture_of_keeps` (l. 419). B: `Many.no_juncture` (l. 435).
+
+### `moves`
+- pass a: S: keeping_greatest (l. 395) includes each reachable step of every subprocess that keeps s in keeping P s. Juncture.outcomes_differ (l. 101) requires different successors, without requiring different action labels.
+- pass b: S: `keeping` (l. 348) and `losing` (l. 351) select steps of P. `keeping_keeps` (l. 383): keeping keeps s. `keeping_greatest` (l. 395): every sub-process of P that keeps s takes, on its course from s, only keeping steps. `keeps_before_juncture` (l. 341): at a non-juncture with a keeping step, no step can be refuted to keep s. `no_juncture_of_keeps` (l. 419).
+
+### `reading`
+- pass a: S: TimedResponse.same_step_unreached (l. 597) gives equal chosen actions and transfers universal loss if the source has not reached the reader by D, under balance up to D, equal starts and participants, matching nonsource responses and a read through couplings.
+- pass b: S: `TimedResponse.same_step_unreached` (l. 597): where a reader's step at x is chosen from its answer read through couplings up to D, and the source has not reached it by D, it takes the same step in both courses, so a losing step in one loses in the other. `turned_at_juncture` (l. 618): where the chosen steps keep s in one course and lose it in the other, x is a juncture and the source has, not not, reached the reader by D.
+
+### declarations of Junctures.lean (by script)
+  l.92 def Juncture
+  l.96 theorem Juncture.reach
+  l.101 theorem Juncture.outcomes_differ
+  l.108 theorem Juncture.possiblyDrawn
+  l.114 theorem Juncture.returns
+  l.121 theorem step_back
+  l.132 theorem loss_passes_juncture_from
+  l.145 theorem loss_passes_juncture
+  l.151 theorem PossiblyDrawn.passes_juncture
+  l.159 theorem loss_passes_juncture_decided_from
+  l.175 theorem loss_passes_juncture_decided
+  l.188 def leadsWithin
+  l.194 theorem any_congr
+  l.200 theorem leadsWithin_sound
+  l.211 theorem leadsWithin_complete
+  l.220 theorem leadsWithin_up
+  l.231 def LeadsSteady
+  l.234 theorem LeadsSteady.next
+  l.239 theorem leads_steady_or_rises
+  l.256 theorem leads_settles
+  l.261 theorem leads_bound
+  l.278 theorem reach_iff_leads
+  l.292 theorem reach_decided_listed
+  l.302 theorem loss_passes_juncture_listed
+  l.311 theorem leadsWithin_trace
+  l.328 theorem reach_within_listed
+  l.341 theorem keeps_before_juncture
+  l.348 def keeping
+  l.351 def losing
+  l.354 def SubProcess
+  l.357 def Keeps
+  l.359 theorem SubProcess.reach
+  l.363 theorem keeping_sub
+  l.365 theorem losing_sub
+  l.368 theorem juncture_iff
+  l.373 theorem reach_keeping_of_trace
+  l.379 theorem reach_keeping_iff
+  l.383 theorem keeping_keeps
+  l.389 theorem keeping_returns_iff
+  l.395 theorem keeping_greatest
+  l.400 theorem keeping_removes_at_juncture
+  l.407 theorem losing_not_returns
+  l.412 theorem losing_loses
+  l.419 theorem no_juncture_of_keeps
+  l.430 def process
+  l.432 theorem options
+  l.435 theorem no_juncture
+  l.442 theorem OneWay.juncture
+  l.452 inductive Pos
+  l.459 def fromOrigin
+  l.466 def fromFork
+  l.473 def fromChain
+  l.481 def step
+  l.487 def process
+  l.492 theorem to_origin
+  l.508 theorem sink_stuck
+  l.510 theorem sink_lost
+  l.515 theorem chain_reach
+  l.520 theorem fork_back
+  l.524 theorem returns
+  l.526 theorem path
+  l.531 theorem juncture_decides
+  l.575 theorem lpo_of_junctures_found
+  l.597 theorem same_step_unreached
+  l.618 theorem turned_at_juncture

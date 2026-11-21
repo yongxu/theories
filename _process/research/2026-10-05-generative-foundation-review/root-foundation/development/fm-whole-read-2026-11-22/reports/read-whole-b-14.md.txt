@@ -1,0 +1,11 @@
+Reader whole-b-14. I read all seven modules whole, every statement and docstring: DrawHistory (272 lines), DrawnBeyond (715), DrawnReplacement (303), DrawnShaping (576) and Drift (1554, read in three parts to the end); EdgeClosure (67) and Enough (234) are short. I opened other modules only for names: RegimeMargin's step, Meets and Keeps (definitions at l. 249–265). I did not open Web.Broken, Web.Dependent or CoupledInto at their homes; I read their meaning from the statements and proofs here. No field is U. Many fields are N because the modules do not have that kind of object (a level, a giver, a cost) at all.
+
+Four things the fourteen questions miss that bear on the centre:
+
+1. DrawHistory has a draw that runs a level down and a return that depends on what is left. Its no-return (inflow_kept, leaving_needs_a_lower_draw) is about the inflow rest, not about the loss of a giver. The giving g is a function handed in.
+
+2. DrawnBeyond states a general law that selecting by a rise breaks an unseen dependence beyond (favours_breaking_beyond, breaks_beyond_ends). It also states that the share reaching beyond is never selected against (share_not_against, share_not_lower). But no statement has the loss coming back to the selection, and no step-to-step irreversibility is stated: breaks_beyond_ends is for one step only.
+
+3. DrawnShaping proves a general dichotomy in which every course is locked one way or the other (drawn_locked_either), under every schedule of reading. DrawnReplacement and Drift show that, with drift, either lock is left with positive weight (lost_ge, fixed_ge). So a noiseless lock and a drifting chain give different answers to whether something can no longer be turned.
+
+4. Drift's absorbing ends and conserved potential (potentialBy_harmonic, valueBy_potential), and Enough's split of possible from assured resting (assured_iff, with Free's alternating run), are general laws of the closed-region and both-outcome kind. None of the seven joins a level that runs down to a selection reading of it.

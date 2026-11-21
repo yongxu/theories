@@ -1,0 +1,120 @@
+*AI-written (Claude Fable, refuter `A-work-fable`), 21 to 22 November 2026. No Lean, build, test or gate was run. Python only, in my folder. Lean paths are under `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/`; records under `_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/`. `REPORT.md` was not saved: the harness refused the write of a report file, so this message is the whole report.*
+
+## 1. Verdict in five lines
+
+1. The design does not survive as a centre, nor as a law that joins. It survives as a small built case worth keeping.
+2. Strongest reason: the notion it is built around is put in and taken out. From every start, the side that set at the start sets until none of it is left; replacing "read off the share" by "is any of them present" changes Kept at 0 of 1,720,320 starts (`work1.py`, hi 4).
+3. What is left is a two-kind line on a stock with a first level below the multiplying kind's need. That was written on 19 November as L-a, L-b and L-d and judged a dictionary by its readers; its exact form is in the package for one unit each (`WayOfUnits.two_units_iff`).
+4. The one join it claims (part (iii) is a case of `turns_in_time_iff_before` with that law's premises derived) is false: the regime premises are not derived, and fail on the design's own flagship instance.
+5. Worth keeping: the 120 kept starts (of 488 at hi 4) where the passing of the setting does work, and the form of (iii) without regime premises.
+
+## 2. Statement by statement
+
+- **Law E.** HOLDS IN WHAT I CHECKED.
+  - Main clause (no exit while F's need is met): 33,750 steps, thresholds 1/3, 1/2, 2/3, 3/4 and 1, needs 1..5, counts 0..5, 0 failures (`work3.py`).
+  - The whole law and its mirror, indirectly: Kept is unchanged under "the incumbent sets while present" at 1,075,200 F-starts and 645,120 O-starts.
+  - The paper proof follows.
+- **Corollary L.** Paper only. "If" is Law E; the witness `(p, 1, nO)` was checked by hand (`p(p+1) ≤ qp` iff `p < q`). Not run by me.
+- **Theorem M (i).** NOT CHECKED by my program. Paper proof read; no missing step found. The designer's run 2 output was read (0 failures), not re-run.
+- **Theorem M (ii).** NOT CHECKED by my program. On paper it is `Keepable` unfolded, with (i) and Law E.
+- **Theorem M (iii).** HOLDS IN WHAT I CHECKED, in my own rebuild, with the others holding and monotone givings.
+  - 70,560 starts at hi 4, 400,680 at hi 5, 2,128,896 at hi 6, 0 failures (kept: 34, 757, 8,795).
+  - The others' kept levels under any rule equal those under hold: 7,560 cases at hi 5, 0 differ.
+- **Item 10 and T5: "(iii) is a case of `turns_in_time_iff_before`, the old law's premises derived."** REFUTED.
+  - Instance (the design's own T4 instance): `g = (0,1,0,0,0)`, `nF = 4`, `nO = 1`, uses 1, `m = (2,1)`, start `(1,1,3)`. It is kept.
+  - The kept kind's use is `H₂ = 1`. `Short g 1 y₂` forces `y₂ ≤ 1`; `Meets g 1 y₂ 4` then asks `1 ≤ g 2 = 0`. No `y₂` exists.
+  - `python3 -B work2.py 4` prints it as `kept_fail_P2`.
+- **Proposition R.** NOT CHECKED.
+
+## 3. MUST, then LESSER
+
+**MUST**
+
+1. **The share is idle (T3).** The design's T3 instance shows that a change of rule when F are gone does work. It does not show that the share does. From `work1.py`, hi 4, threshold 1/2, 21,504 instances:
+   - With "F set where `f > 0`" in place of the share, 0 of 1,075,200 F-starts differ; for the mirror, 0 of 645,120.
+   - Of the 488 kept starts, 368 are also kept if F's way stays in force after F are gone. This is the design's own count of 120, read the other way.
+   - Wherever `(2,1)` is in `A_F` (368 kept starts), 360 are kept by the one rule `(2,1)` at every step. That is a plain `LineOnAStock` course with fixed kids and no setting.
+   - The passing does work exactly where the setters' way has no rule under which the others hold.
+2. **The reverse join is false (item 10, T5).** See 5(c). The old law's premises `short`, `meets`, `within`, `short₁`, `below` are met at 878 of 8,795 kept starts at hi 6 (4 of 34 at hi 4; 90 of 757 at hi 5).
+3. **T1 says "not found" of what is there.**
+   - (iii) is L-d of `reads-2026-11-19/FROZEN-LOCK-ON-UNITS.md`, nearly word for word. That record found it false as frozen, true with the regime premise, and then "three known pieces in a row".
+   - `WayOfUnits.two_units_iff` (WayOfUnits.lean 580) is the case of one unit each, both holding. Its proof already takes `marked := (· < m)` and `Kept b := b = false`, and proves `AloneOutside`, `turns`, `kept`, `uses`. So "its handed-in marks, its turn and the kind it turns to are all derived" claims as new what that proof does. The designer lists `WayOfUnits` nowhere.
+   - In scratch (built 21 November, outside the package), `units_turn_iff_first` (`scratch-lean-2026-11-21/ScratchUnitsTurn.lean.txt` 900) is (iii) where the others leave only themselves, with the regime as a premise. I read its statement only.
+   - Law E's first half is 19 November's L-a contraposed, which three readers called the lock's own law on ways of units.
+4. **"The lock is derived, not a premise" (item 8, R4, T2).**
+   - Where needs are met, the closure of "F set" is `AF_fav` in one line. Without it: `nF = nO = 1`, start `(1,1,1)`, rule `(1,2)` gives counts `(1,2)`, and F no longer set (`work3.py`, check 2).
+   - Every configuration where F set is locked by construction, because the rule in force is always the present setter's. So `RuleCapture.Alternating.never_locked` (807) and `Reversed.not_absorbed` (855) are designed out.
+   - Nothing states a lock forming. By the mirror, F come to set only when the others are all gone.
+5. **T4 is thinner than stated.**
+   - The three outcomes of the flagship instance are three plain lines on a stock with the others' kids `[]`, `[O]`, `[O,O]`. Under `(2,1)` at every step it is kept; under `(2,0)` and `(2,2)` it ends. No setting is needed.
+   - At that start F's need is unmet at step 0. By the design's own count the exit is at step 0 for 10,238 of 11,074 kept starts at hi 6. F select nothing there; their way enters only as what their last rule leaves the others.
+   - "Differing only in what the setters register (`nF`)": `nF` is the units' need. Those 488 pairs differ in the units, not in a reading.
+6. **"Within this model, Theorem M is proved" (section 7), and "That part is proved" (Proposition R).** Nothing is proved; there is a sketch and searches.
+7. **R3 "in part".** No unit pays anything. Run 7 shows starts kept only by rules that `AF_fav` excludes, which is an exclusion by premise and not a cost. It should read "no".
+
+**LESSER**
+
+1. `CarrierCounts` asks `other_pos` of a population and of a rule (RuleCapture.lean 469 to 472). Law E's first half is literally `select` on well-formed counts at 7,425 of 33,750 steps. The rule `(2,0)` and any start with no others are not `CarrierCounts`, so the arithmetic has to be done again over ℕ.
+2. (i) is the arithmetic of `TurningInTime.rising_takes_all` (675), already argued a second time in `LineOnAStock.ends_high` (847; its docstring says so). Its premise `rises` fails under `(2,0)`: with `f = 1, o = 3, dF = 1, dO = 2` the use goes 7 then 2. So (i) would be a third copy. For one rule, "F are gone from some step" is `line_ends` (904) at the line F, premise for premise, without the bound.
+3. At threshold 2/3 (hi 4, three ways, `allO`) no start where F set is kept: 0 of 138,240. T4's two sides were shown at 1/2 only.
+4. Under givings that are not monotone, the others can be kept only by multiplying first: 28 of 21,600. Instance: `g = (0,0,2,0,0,0)`, `nO = 4`, `dO = 1`, `(o, x) = (1, 5)`. This is outside (iii)'s premises.
+5. `Exit` has a free `r`; `PNR` is undefined where no level is kept.
+6. T5's use of `RuleShaping.favours_iff` (160) only tests the necessary condition `AF_fav` of a shaped rule; no law of the design is used.
+
+## 4. The question
+
+**Does a general law of the design do work that the old laws do not? No.** The only general law is Law E. Its work is `CarrierCounts.raises` (the share is not lowered under a favouring rule) and `after`'s need test; the rest unfolds "F no longer set" at `f' = 0`. Theorem M (i) is the arithmetic of `rising_takes_all`. Part (ii) unfolds `Keepable`. Part (iii) is a split at a step (`TurningInTime.unending_from`, 744) with the fact that kept levels are upward closed under a monotone step. Taking the new notion out leaves every statement as easy, and the program shows the outcome unchanged. No old law comes out as a case (the design says so itself), and the reverse join it offers fails. Two things are not in the old laws: a set of rules per side with a choice among them on a model with a share (not found in what I read), and (iii) without regime premises. Neither is a law about the lock.
+
+## 5. The specific questions
+
+**(a) Is Law E more than `CarrierCounts.raises` with the need test of `LineOnAStock.after`?** No. Opened: RuleCapture.lean 469 to 506; LineOnAStock.lean 138 to 141 and 648 to 690.
+- "No exit while F's need is met" is `raises` (501), with "F set" an upper set of the share order. The call is literal only where others are present, the rule leaves them a kid and their need is met.
+- "`f' = 0`" is `after`'s `cond (decide (need u ≤ x)) (kids u) []`, as in `none_after` (657). "F never come back" is `gone_after` (685) and `never_in` (664), with `closed`.
+- `0 < f`, `nO ≤ x`, `0 < o`, `1 ≤ kO` unfold "not F set" at `(0, o')` with `p > 0`.
+
+**(b) With `AF_fav`, is the lock handed in?** Yes, as far as `RuleCapture` hands it in: `Raises` and a favouring reading give `locked_stays` (182). What Corollary L concludes that is not in the premises is the exception: the closure fails exactly through a step with `nO ≤ x < nF`, others present and left a kid. That is the need test, not the lock.
+
+**(c) The instantiation of `turns_in_time_iff_before` (TurningInTime.lean 2348).** It does not go through as the design says.
+- *Carrier of counts.* `W := ℕ × ℕ`, `need := nO`, `use (f,o) := dF·f + dO·o`, `marked x := x < nF`, `Kept (f,o) := f = 0`. `after` is the model's step under the rule in force (this needs one rule for the others, since the old law has no moves). `alone` is the same step with no need test.
+  - `outside` holds where `nO ≤ nF`; `turns` and `kept` hold.
+  - `uses : ∀ w, Kept w → use w = H₂` fails: `(0,1)` uses `dO`, `(0,2)` uses `2·dO`.
+  - With `Kept := f = 0 ∧ o = c`, `turns` fails (the count after depends on `w`) and `kept` fails at `x < nO`.
+- *Carrier built from the orbit.* `W := Option ℕ`, where `some t` is step `t` of the orbit under `m` and `none` is turned. `after (some t) x := if x < nF then none else some (t+1)`; `use none := dO·m.2·o_T =: H₂`.
+  - `outside`, `turns`, `kept`, `uses` then hold by construction. `keeps` follows from `Keeps g 0 hi`. `nothing`, `needs`, `high` are the design's.
+  - Not derived: `short` and `meets` (one crossing of the giving at `H₂`), `within`, and `short₁`, `uses₁`, `below` (the start already below the point of no return of the course as it was, so the level never rises).
+  - `work2.py`, hi 6: all are met at 435,898 of 2,128,896 starts and at 878 of 8,795 kept ones. Where they are met, the old right-hand side agrees with Kept (0 disagreements).
+  - Law E enters only to say the rule stays `m`, which is `raises`. The marks, the turn and the kind are written into `after`, not derived.
+- So it goes through on about a tenth of the kept starts, with the turn built into the carrier. `two_units_iff` is this same instantiation in the package, on the carrier `Bool`.
+
+**(d) Is who-may-set-read-off-the-share in the Lean already?** In part.
+- *Which rule is in force, read off the share by a threshold:* yes, with no moves.
+  - `RuleCapture.CarrierCounts.threshold` (585) is the design's "F set" at 1/2 with one rule a side.
+  - `ChoiceCountCapture.weighted` (261) with `counted_locks` (291) and `counted_locks_down` (343): a threshold at any ratio, and two regions the course never leaves.
+  - `DrawnShaping.critical_mass_iff` (310) and `drawn_locked_either` (378).
+  - `ClosedCapture.Drawn.pool` (558) and `pool_reads_iff` (612): the rule read by readers drawn from the selected, counted as the population counts them.
+- *Who may change the rule, read off who is present, with a chosen move:* `RuleRebuilding.reviseHeld` and `revised` (200 to 210), "A revision takes only where a holder stands"; `«无持者改不行»` (737); `«无持者不复»` (698). There is no share, and its account (113 to 115) says who decides a revision and capture are not modelled. Since the design's share comes down to presence, this is the nearest.
+- *PopulationCorrection* (outside the package; opened 1 to 60): `funded` (15) and `allocated` (33) set which way revisions go by a threshold on a reserve. No share of a kind. Not found.
+- *A set of rules per side, with a choice among allowed moves set from the share:* not found in what I read. By grep, no file of the package names both one of `KeptFor`, `Keepable`, `Viability.Kernel` and one of `Locked`, `CarrierCounts`, `ReadsShare`; and `allowed` occurs in none of eleven lock and line files.
+
+**Known under another name.**
+- Law E: a cone kept by a diagonal map that favours it (the share of a type with no lower fitness does not fall), and resource competition's R* rule (the kind with the lower need outlasts as the level is drawn down).
+- (ii): a viability kernel as a capture basin of the next mode's kernel; in temporal logic, "Goes until a kept exit".
+- (iii): the safe set of a monotone map is an upper set, so it has a least element.
+
+## 6. What I ran, and what I did not read or check
+
+**Ran** (all in `/Users/ren/theories/tmp/fm/centre21/refute/A-work-fable/`, each under 21 s):
+- `work1.py`: hi 3 and hi 4 at 1/2 (3,024 and 21,504 instances); hi 4 at 1/3 and 2/3 (4,608 each). Outputs `work1_*.out.txt`.
+- `work2.py`: hi 4, 5, 6 (2,688; 12,600; 57,024 instances). Outputs `work2_hi*.out.txt`. Its `hold_vs_any_diff` line is vacuous; check 3 of `work3.py` replaces it.
+- `work3.py`: hi 5. Output `work3_hi5.out.txt`.
+
+**Read:** both briefs; `DESIGN.md`; the designer's `model.py`, `run2_main.py` and three outputs; `AFTER-DESIGNS.md`; the Lean at the lines named above; the PLACES entries for ClosedCapture, Lock, PopulationCorrection, RuleCapture, RuleRebuilding; the 19 November frozen paper, programs' return and note; the 21 November scratch note.
+
+**Not read or checked:**
+- `DIRECTION.md`, `WHAT-A-MODEL-MUST-HAVE.md`, chapters 02, 03, 05, 07.
+- Runs 3 to 7 of the designer (scripts and most outputs). Nothing of the designer's was re-run.
+- Theorem M (i), (ii), Corollary L and Proposition R by my own program.
+- `Keeping`, `Viability`, `JointKeeping` beyond the definitions named; `GuardHorizon`, `CommonResponse`, the renewal files.
+- `PoolFromCourse`, `ReadInTime`, `ChoiceCountCapture`, `DrawnShaping` beyond their accounts and the statements named.
+- The proof of `units_turn_iff_first`; the other seven designs; `READING-OF-THE-EIGHT.md`.
+- The package was searched by grep for two co-occurrences, not read, so each negative above is "not found in what I read".

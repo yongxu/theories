@@ -1,0 +1,13 @@
+I read all four modules whole: every statement and docstring, and most proof bodies (all of them in Settling and ShownOrder). Every module was answered; no field is U. I did not open other modules to look up the names the statements import (`Frontier`, `Rising`, `Room`, `Flow.joint_excess_ends`, `Enough.Settles`, the grammar's `«及»`); I answered from how they appear in these statements.
+
+Four things here bear on the centre that the fourteen questions catch only in part:
+
+1. SetPointOptimum, `Flow.held_excess_ends` (l. 759) and `HeldPair.held_end` (l. 1513). Formations that each take within what a condition is given, and that hold their own levels, can still end every gated giver to that condition from step `T + n` on. The same law concludes that none of them couples into the condition. This is a general law in which ending a giver, not seeing it, and a deadline go together. It is not stated as an exactly-when, and it proves no recovery-or-not dichotomy.
+
+2. Settling, `OneWay.lpo_of_settles` (l. 377). Showing that no run keeps changing does not give a step from which runs are settled; that needs the limited principle of omniscience (LPO). Any claim of 'ends within a bound' therefore needs more than the absence of recurrence. `keeps_changing_iff` (l. 302) ties lasting change to a reachable step that can be undone.
+
+3. SharedCodes. Hearing makes no form. Under hearing alone, agreement of all and imposed merges are irreversible (`all_agree_rest`, `run_imposed_stays`, `outside_needed`); only a form kept outside or a coined form (`coined_returns`) brings a distinction back. A reading written back locks itself: later records cannot recover earlier ones, and an omitted sense is never a candidate again (`written_rests`, `no_reading_recovers`, `omitted_rest`). This is a general law of a reading confirming itself, near the direction's 'what they do comes to fit the account'. The count-and-rule `majority` is stated for one application only; no law iterates it.
+
+4. ShownOrder. Choices fix exactly the shown reach. Two orders that cannot be told apart on what was met choose apart on a later menu (`Untried.same_search_after`, a built case). This is a selection that reads only what was registered, with nothing about levels or cost.
+
+None of the four modules has units that multiply, a cost to the one that keeps or gives, or a share set again from itself over a run.

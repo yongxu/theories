@@ -1,0 +1,272 @@
+# Task file: EDGE, reader whole-c-edge-20
+
+Your 3 modules. For orientation only, what the two passes said of the four marks, of moves and of a reading (where to look, not evidence).
+
+## Reconfiguration.lean  (643 lines)
+
+### `both_outcomes`
+- pass a: S: `admits_true_iff` (l. 258) gives exact one-step admission conditions: opened, ready candidate, and reserve and deadline covering both the amount and the response. `enabled_iff` (l. 395) tests whether a successor exists.
+- pass b: S: `enabled_iff` (l. 395) with `admits_true_iff` (l. 258): a step exists exactly when opened ∧ ready ∧ reserve and deadline cover. `ready_iff_nonempty_separated` (l. 158). These are exactly-whens for a step being possible, not for going on and ending along a course.
+
+### `no_return`
+- pass a: S: `step_stales_old_epoch` (l. 444) concludes an old-epoch request is stale after the step. Every step advances the epoch by one (`step_renews`, l. 416).
+- pass b: S: `reconfigure_stales_epoch` (l. 307) and `step_stales_old_epoch` (l. 444): a request of the previous epoch is not fresh after a step, the epoch having risen by one (concluded). B: `old_approvals_fail` (l. 560), `repaired_step_rejects_old` (l. 619). This concerns an epoch count, not the loss of something that gives.
+
+### `rank`
+- pass a: S: `step_renews` (l. 416) guarantees time plus response load ≤ deadline after installation. It imposes no positive lower bound on the step amount.
+- pass b: S, partly: a deadline appears as an admission condition (`admits_true_iff`, l. 258) and after the step (`reconfigure_renews`: time + responseLoad ≤ deadline). N: no falling rank or variant, and no law of ending within a bound.
+
+### `closed_region`
+- pass a: S: `step_keeps_scope` (l. 438) preserves each command’s permission at every step. `step_separated` (l. 431) puts every successor in the region with nonempty bounds and a separated envelope.
+- pass b: S: `step_keeps_scope` (l. 438): what the scope permits is invariant under every step. `step_separated` (l. 431): every step's result has a nonempty separated envelope. `reconfigure_renews` keeps `scope` and `root`.
+
+### `moves`
+- pass a: S: `process` (l. 386) takes rearrangements as actions. Every successful move preserves the permissions of every command (`step_keeps_scope`, l. 438).
+- pass b: S: `process : Process Managed Rearrangement` (l. 386), with `step_iff` (l. 390) and `enabled_iff` (l. 395). `closed_no_step` (l. 403) and `unready_no_step` (l. 410): no step by an unopened or unready rearrangement. `step_keeps_scope` (l. 438): every step keeps what the scope permits. `step_separated` (l. 431): every step installs a nonempty separated envelope. `step_then_completes` (l. 462).
+
+### `reading`
+- pass a: S: `induced_certificate_sound` (l. 125) infers P from accepted supports under covered causes when each working supporter warrants P. `step_certificate_available` (l. 450) derives acceptance when all working roster members support after a step.
+- pass b: S: `induced_certificate_sound` (l. 125): an accepted certificate over the induced envelope gives P where some bound covers the actual causes and every working supporting member is faithful. `induced_certificate_available` (l. 170): ready, covered and responsive members give an accepted certificate. B: `stale_envelope_accepts_shared` (l. 518): the stale envelope of separate3 accepts support controlled by a shared cause; merged3's envelope does not. `omitted_cause_breaks` (l. 584): ready, yet the omitted cause 9 fails every member.
+
+### declarations of Reconfiguration.lean (by script)
+  l.57 inductive FaultFormula
+  l.64 def fails
+  l.70 def Subset
+  l.73 theorem fails_mono
+  l.82 theorem survives_of_included
+  l.87 structure Arrangement
+  l.93 def induced
+  l.97 def envelope
+  l.100 def Covered
+  l.103 theorem mem_induced_iff
+  l.108 theorem induced_mono
+  l.114 theorem outside_bound_survives
+  l.120 theorem induced_mem_envelope
+  l.125 theorem induced_certificate_sound
+  l.139 def ready
+  l.143 theorem not_induced
+  l.148 theorem ready_separates
+  l.158 theorem ready_iff_nonempty_separated
+  l.170 theorem induced_certificate_available
+  l.183 theorem induced_completes
+  l.219 structure Managed
+  l.224 def responseLoad
+  l.228 def admits
+  l.236 def renewedBy
+  l.252 def reconfigure
+  l.258 theorem admits_true_iff
+  l.270 theorem reconfigure_some
+  l.281 theorem reconfigure_renews
+  l.300 theorem reconfigure_keeps_scope
+  l.307 theorem reconfigure_stales_epoch
+  l.317 theorem responseLoad_mono
+  l.322 theorem reconfigure_covers_shorter
+  l.335 theorem reconfigure_then_completes
+  l.360 theorem and_false
+  l.363 theorem unready_rejected
+  l.371 theorem closed_rejected
+  l.378 structure Rearrangement
+  l.386 def process
+  l.390 theorem step_iff
+  l.395 theorem enabled_iff
+  l.403 theorem closed_no_step
+  l.410 theorem unready_no_step
+  l.416 theorem step_renews
+  l.431 theorem step_separated
+  l.438 theorem step_keeps_scope
+  l.444 theorem step_stales_old_epoch
+  l.450 theorem step_certificate_available
+  l.462 theorem step_then_completes
+  l.487 def separate3
+  l.489 def merged3
+  l.492 def repaired4
+  l.495 def duplicated4
+  l.498 def original
+  l.501 theorem envelopes_compute
+  l.507 theorem readiness_cases
+  l.512 theorem same_cause_not_redundant
+  l.518 theorem stale_envelope_accepts_shared
+  l.523 theorem shared_cause_rejected
+  l.526 def renewed
+  l.529 def renewedRequest
+  l.531 def survivingReads
+  l.534 def survivingApprovals
+  l.537 theorem repaired_installs
+  l.543 theorem repaired_completes
+  l.560 theorem old_approvals_fail
+  l.565 def lowReserve
+  l.567 def combinedReserve
+  l.571 theorem own_draw_short
+  l.576 theorem combined_draw_suffices
+  l.580 def omitted
+  l.584 theorem omitted_cause_breaks
+  l.587 def toMerged
+  l.589 def toRepaired
+  l.592 theorem shared_cause_no_step
+  l.595 theorem renewed_of_step
+  l.601 theorem separated_repair_steps
+  l.609 theorem own_draw_alone_no_step
+  l.615 theorem combined_draw_steps
+  l.619 theorem repaired_step_rejects_old
+  l.625 theorem repaired_step_completes
+
+## ReferencePlan.lean  (483 lines)
+
+### `both_outcomes`
+- pass a: S: `checked_pair_iff` (l. 470) gives exact success on both targets for every Boolean channel iff its two sampled values differ. B: `first_policy_repair` (l. 290) succeeds and `support_too_small_to_build` (l. 383) blocks the same repair with insufficient fuel.
+- pass b: S: `checked_pair_iff` (l. 470) is an exactly-when of a contact meeting every target against its references being equal. N: no exactly-when of going on and ending.
+
+### `no_return`
+- pass a: B: `draws_held` (l. 416) and the positive charges in `use` (l. 77) rule out any next action at zero fuel. `no_action_after_exhaustion` (l. 390) gives a particular blocked performance.
+- pass b: S: `draws_held` (l. 416) with `trace_conserves` (l. 426): fuel is never restored along a course (fuel + used constant; used only grows). B: `no_action_after_exhaustion` (l. 390): with fuel 0 a perform has no step. `erased_mismatch_cannot_activate` (l. 380): after erase, no repair. `support_too_small_to_build` (l. 383). This is a low-level exhaustion, not the loss of a giver.
+
+### `rank`
+- pass a: B: `covered` (l. 439) bounds every executed course by its starting fuel with zero replenishment. Every move has positive use (`use`, l. 77).
+- pass b: S: `covered` (l. 439): every trace from s is `Stock.Covered use (fun _ => 0) s.fuel as`, so the course's total use is bounded by the starting fuel. `trace_conserves` (l. 426). No falling rank named beyond fuel.
+
+### `closed_region`
+- pass a: B: `trace_conserves` (l. 426) keeps the value of fuel plus used constant on every trace.
+- pass b: S: `trace_conserves` (l. 426): fuel + used is invariant along every course.
+
+### `moves`
+- pass a: B: `P` (l. 150) has performance, revision, probe, installation, freezing, erasure and drift actions. `trace_conserves` (l. 426) preserves the sum of fuel and use along every trace of this process.
+- pass b: S: `P : Process State Act` (l. 150), determined (`determined`, l. 152). The policy `choose` (l. 172). `frozen_misses` (l. 460): at every retained method m there is an i such that the frozen rule's plan does not register i (instance of `Contacts.blind_misses`). `propose_answers` (l. 444): the revision rule answers every failure. B: `frozen_method_still_fails` (l. 367), `first_policy_repair` (l. 290).
+
+### `reading`
+- pass a: S: `revision_binds_plan` (l. 121) makes an acquired mismatch i the head of both the method and the pending plan on revision, preserving the installed contacts until commit. `frozen_misses` (l. 460) finds a missed address for every retained method.
+- pass b: S: `AgreeOn plan` (l. 240): signals alike where they agree at planned addresses. `new_contact_choice` (l. 267): with i ∉ m, the selection `x i = true` goes through `AgreeOn (i :: m)` and not through `AgreeOn m`. `revise_registers_failure` (l. 446). `checked_pair_iff` (l. 470): ∀ target, c (flip (c false) target) = target ↔ c false ≠ c true.
+
+### declarations of ReferencePlan.lean (by script)
+  l.35 def flip
+  l.37 theorem flip_twice
+  l.40 structure Sample
+  l.46 def valid
+  l.50 def keyAt
+  l.55 structure State
+  l.67 inductive Act
+  l.77 def use
+  l.87 def propose
+  l.94 def operate
+  l.121 theorem revision_binds_plan
+  l.128 theorem probe_binds_both_references
+  l.136 theorem install_binds_fresh
+  l.143 def execute
+  l.150 def P
+  l.152 theorem determined
+  l.156 theorem step_conserves
+  l.172 def choose
+  l.179 def repair
+  l.186 def run
+  l.190 theorem run_trace
+  l.201 theorem repair_trace
+  l.216 theorem propose_from_mismatch
+  l.219 theorem propose_without_mismatch
+  l.223 theorem checked_pair_correct
+  l.240 def AgreeOn
+  l.244 theorem agreeOn_iff
+  l.249 theorem added_keeps
+  l.255 theorem old_selections_remain
+  l.262 theorem choice_at_contact
+  l.267 theorem new_contact_choice
+  l.275 def initial
+  l.278 def failedFirst
+  l.280 def repairedFirst
+  l.282 def failedSecond
+  l.284 def repairedSecond
+  l.286 def finished
+  l.288 theorem first_mismatch_acquired
+  l.290 theorem first_policy_repair
+  l.292 theorem first_repair_used_then_second_mismatch
+  l.295 theorem second_policy_repair
+  l.297 theorem both_revised_contacts_used
+  l.302 theorem drift_has_actual_history
+  l.306 def actualWord
+  l.311 theorem complete_history
+  l.313 theorem fuel_used_without_reset
+  l.315 theorem methods_change_twice
+  l.319 theorem first_candidate_unavailable_before
+  l.324 theorem second_candidate_unavailable_before
+  l.332 theorem first_new_selection
+  l.337 theorem second_new_selection
+  l.343 def alikeOnInstalled
+  l.346 theorem second_installed_choice
+  l.351 theorem installed_response_correct
+  l.357 theorem first_use_succeeds
+  l.360 theorem second_use_succeeds
+  l.365 def frozenEnd
+  l.367 theorem frozen_method_still_fails
+  l.371 def frozenSecondEnd
+  l.375 theorem frozen_second_method_still_fails
+  l.380 theorem erased_mismatch_cannot_activate
+  l.383 theorem support_too_small_to_build
+  l.386 theorem references_use_fuel_before_exhaustion
+  l.390 theorem no_action_after_exhaustion
+  l.393 theorem constant_channel_rejected
+  l.396 theorem constant_channel_contacts_use_fuel
+  l.401 theorem drift_after_check_can_fail
+  l.408 theorem balanced
+  l.412 theorem used_balanced
+  l.416 theorem draws_held
+  l.426 theorem trace_conserves
+  l.439 theorem covered
+  l.444 theorem propose_answers
+  l.446 theorem revise_registers_failure
+  l.451 def frozenRule
+  l.453 theorem frozen_reads_method
+  l.456 theorem frozen_blind
+  l.460 theorem frozen_misses
+  l.464 theorem flip_is_pick
+  l.470 theorem checked_pair_iff
+  l.479 theorem drift_fails
+
+## ReflexivePrediction.lean  (233 lines)
+
+### `both_outcomes`
+- pass a: S: `rests_iff_right` (l. 90) equates repeating the current publication at the next step with its correctness on the same orbit.
+- pass b: S: `predictor_iff` (l. 80): exactly-when for a predictor right on every admitted response (general, given choice); `rests_iff_right` (l. 90): exactly-when for a step publishing again. B: `ThresholdResponse.reached_by_start` (l. 193): from 0 the orbit stays 0, from 1 it is 2 from step 1 on, two right predictions reached by start; `Negating.alternates` (l. 210): no step publishes again. None is of going on and ending.
+
+### `no_return`
+- pass a: S: `reached_rests` (l. 100) concludes that if a first response is q and q is right, all later publications are q. Irreversibility here is entry into a fixed point.
+- pass b: S: `right_rests` (l. 95): a right prediction p is published at every later step of the orbit from p; `reached_rests` (l. 100): if r p = q and q is right, the orbit is q from step 1 on; `stays_from` (l. 131): once a step publishes again, every later step does. These are concluded from Right; they are absorption at a fixed value, not a loss of a level or of something that gives.
+
+### `rank`
+- pass a: S: `again_or_risen` (l. 138) says the chain-preserving monotone response from zero either already repeated or rose to at least k by k. `bottom_rests` (l. 154) bounds time to a fixed point by n.
+- pass b: S: `bottom_rests` (l. 154): on values 0..n with a response keeping the chain (`within`) and its order (`keeps`), the orbit from 0 is right by step n and at or below every right prediction on the chain; via `again_or_risen` (l. 138): before step k either some step published again or the prediction has risen at least k.
+
+### `closed_region`
+- pass a: S: `right_rests` (l. 95) keeps each fixed point forever. `on_chain` (l. 112) keeps the orbit from zero within the chain under the stated closure premise.
+- pass b: S: `on_chain` (l. 112): under `within` (r keeps every v <= n at most n), the orbit from 0 stays at most n; `Right` (l. 65) is a fixed point and `right_rests` (l. 95) says the orbit from it stays there.
+
+### `moves`
+- pass a: N: Not found among this module’s statements.
+- pass b: S: `no_predictor_right` (l. 73) and `predictor_iff` (l. 80): over a predicate `admitted` on responses, the chosen thing is a predictor (a function from admitted responses to values), and the laws say when some predictor is right on every admitted response: never if one admitted response moves every value; exactly when each admitted response has a fixed value, given `Viability.ChoiceOver`. No process with a choice among steps.
+
+### `reading`
+- pass a: S: `Right` (l. 65) equates the actual response to the published prediction with the prediction itself. `no_predictor_right` (l. 73) excludes any globally correct predictor when an admitted response moves every value.
+- pass b: S: `Right` (l. 65): the outcome is the response r to the published prediction p, so what is published decides the outcome; `no_predictor_right` (l. 73): this holds even of a predictor that reads the response itself. `rests_iff_right` (l. 90): publishing the last outcome is `Law.orbit r p`, and a step's prediction is right exactly where the next step publishes it again.
+
+### declarations of ReflexivePrediction.lean (by script)
+  l.65 def Right
+  l.68 theorem none_right_of_moves
+  l.73 theorem no_predictor_right
+  l.80 theorem predictor_iff
+  l.90 theorem rests_iff_right
+  l.95 theorem right_rests
+  l.100 theorem reached_rests
+  l.112 theorem on_chain
+  l.118 theorem rises
+  l.125 theorem below_right
+  l.131 theorem stays_from
+  l.138 theorem again_or_risen
+  l.154 theorem bottom_rests
+  l.175 def threshold
+  l.178 theorem within
+  l.183 theorem keeps
+  l.189 theorem both_right
+  l.193 theorem reached_by_start
+  l.203 def negate
+  l.206 theorem none_right
+  l.210 theorem alternates
+  l.220 def reflect
+  l.223 theorem reverses
+  l.227 theorem middle_right

@@ -1,0 +1,48 @@
+import json, re, glob, os, collections
+B='/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/'
+decl=re.compile(r'^\s*(?:private\s+|protected\s+|noncomputable\s+)*(theorem|lemma|def|abbrev|structure|inductive|class|instance)\s+((?:«[^»]+»|[A-Za-z_][\w\'!?]*)(?:\.(?:«[^»]+»|[A-Za-z_][\w\'!?]*))*)')
+mods={}
+for p in sorted(glob.glob(B+'*.lean')):
+    m=os.path.basename(p)[:-5]; names={}
+    for i,l in enumerate(open(p),1):
+        g=decl.match(l)
+        if g: names.setdefault(g.group(2),[]).append((g.group(1),i))
+    mods[m]=names
+allnames=collections.Counter(n.split('.')[-1] for m in mods.values() for n in m)
+json.dump({m:{n:v for n,v in d.items()} for m,d in mods.items()}, open('declarations.json','w'), ensure_ascii=False)
+print('modules',len(mods),'declarations',sum(len(v) for v in mods.values()),'theorems',sum(1 for m in mods.values() for n,v in m.items() if v[0][0] in('theorem','lemma')))
+F=['states','moves','reading','share','level','giving','cost','multiplying','no_return','both_outcomes','comparison','rank','closed_region','forms_change']
+tick=re.compile(r'`([^`]+)`')
+def last(n): return n.strip().split('.')[-1]
+def run(tag):
+    d=json.load(open('returns/whole-%s.json'%tag)); c=collections.Counter(); cited=collections.defaultdict(set); badex=[]
+    for r in d['returns']:
+        for pl in r['return']['places']:
+            k=re.match(r'\s*`?([A-Za-z0-9_]+)\.lean', pl['place']).group(1)
+            own=set(last(n) for n in mods[k]) | set(mods[k])
+            for f in F:
+                v=pl[f]
+                if f!='states' and v[:1] not in 'SB': continue
+                for t in tick.findall(v):
+                    t=t.strip()
+                    if not re.match(r'^(«[^»]+»|[A-Za-z_][\w\'!?]*)(\.(«[^»]+»|[A-Za-z_][\w\'!?]*))*$', t): continue
+                    c['names']+=1
+                    if t in own or last(t) in own: c['in module']+=1; cited[k].add(last(t))
+                    elif last(t) in allnames: c['in another module']+=1
+                    else:
+                        c['nowhere']+=1
+                        if len(badex)<12: badex.append((k,f,t))
+    return c,cited,badex
+res={}
+for tag in ('a','b'):
+    c,cited,bad=run(tag); res[tag]=cited
+    print(tag, dict(c), 'share in module %.3f'%(c['in module']/max(1,c['names'])), 'nowhere %.4f'%(c['nowhere']/max(1,c['names'])))
+    print('   examples of names found nowhere:', bad[:8])
+tot=sum(len(set(last(n) for n in v)) for v in mods.values())
+for tag in ('a','b'):
+    print(tag,'declarations of its module named:', sum(len(v) for v in res[tag].values()), 'of', tot)
+both=sum(len(res['a'].get(k,set())|res['b'].get(k,set())) for k in mods)
+print('named by either pass:', both, 'of', tot)
+un=[k for k in mods if not (res['a'].get(k) or res['b'].get(k))]
+print('modules with no declaration named by either pass:', len(un), un[:10])
+json.dump({k:sorted(set(last(n) for n in mods[k]) - (res['a'].get(k,set())|res['b'].get(k,set()))) for k in mods}, open('not-named.json','w'), ensure_ascii=False)

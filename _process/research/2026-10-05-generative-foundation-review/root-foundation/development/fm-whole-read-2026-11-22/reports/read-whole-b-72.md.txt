@@ -1,0 +1,15 @@
+All seven modules were read whole: the opening account and every declaration's statement and docstring. Space.lean (1129 lines) and Standing.lean (940 lines) were read in three parts each, to their ends. Proof bodies were glanced at only where a statement leans on a name defined elsewhere, for example `rise_lowers`/`runs_down` in Space and `ChangeBound`, which is defined in Counting and was read here only through its docstring at Standing l. 297. No other module was opened, so names defined elsewhere (Web.Retains, Includes, WithheldLevels, RestsFrom, Enclosed, ChangeBound, TypicalRuns.Listing, fed_from_beyond) were read only through how these statements use them and through their docstrings here.
+
+Questions that could not be answered from these modules:
+- The margin laws that the Significance account names (Flow.Balances.retains_iff_within_margin, loses_iff_beyond_margin, includes_of_renewed, narrows_of_consumed) are stated in Becoming.Retaining, not here.
+- `counting_transfer_iff`, named in the Situations account, is not stated in Situations.lean.
+- `Web.Dependent.ceases_below`/`inactive_below` and `fed_from_beyond` are used in Space and Standpoints but stated elsewhere.
+
+Things the fourteen questions miss that bear on the centre:
+1. Space.lean states rest and stopping only in the double-negation form: "cannot be refuted", with no decision procedure (`falls_stop_unrefuted`, `rests_unrefuted_covering`, `stop_unrefuted_iff`). It also proves that the finite-world law "arising recurs iff ceasing recurs" is equivalent to excluded middle (`law_iff_em`). So any centre built on "ends from some step on" inherits a constructive caveat.
+2. Space's `seedbank_world` and `grazing_browser_ends` separate undermining from ending: undermining co-occurs with an ending only where the dependent was active.
+3. Standing.lean shows that the premises bind what stands only under balance, dissipation and enclosure (`enclosed_standing_bound_iff`, `finite_standing_bound_iff`). It also shows that they add nothing to counts of dependences (`dependence_counting`). Dependence alone carries no count law.
+4. Significance.lean proves that no statement reading only the dynamics entails the continuation condition (`ReadsOnlyDynamics.not_entails`). Excluding every rival gives the condition exactly under double-negation elimination (`not_rival_unrestricted_iff_stable`). Which significance counts is therefore a supplied premise, not derived.
+5. Standpoints' `Clearing.center_not_derived` shows that a significance closed along feeding (dependence) does not reach the dweller.
+
+None of the seven modules has a process with a choice among moves on which a keeping law is stated, except Situations' `finerLaw`, which is determined. None has a share from which a rule is set again.

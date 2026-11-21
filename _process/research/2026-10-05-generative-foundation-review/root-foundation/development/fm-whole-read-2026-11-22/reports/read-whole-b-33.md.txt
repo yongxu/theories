@@ -1,0 +1,13 @@
+Reader whole-b-33. All nine modules were read whole: the opening account and every declaration's statement and docstring, and in places the proof bodies as well. That covers Labels (370 lines), LastChange (388), Lasting (1164, read in two parts to its end), LastingRuns (299), Latency (217), LawAlongRun (778), Laws (132), Learnable (328) and LearnableRuns (361). No field is U.
+
+Across the batch nothing was found, at the statements, for share, giving or multiplying. Cost was not found either, with one possible exception: in LastChange.still_within, each change of a law's run uses up at least one unit of the room a bound leaves above a mark. That room is a quantity of the run, not something a doer spends of itself.
+
+Four things the fourteen questions do not quite catch, and which may bear on the centre:
+(1) Lasting.lean holds general laws of exhaustion and reaching for a law of change under every admissible disturbance: Drains.leaves, exhausts, Variant.reaches, orbit_reaches_iff_variant, reaches_iff_not_lasts, kernel_iff_lasts and avoids_iff_closed. Its levels are families indexed by a horizon, not stocks, and the disturbance is quantified as every admissible one, not chosen by the going-on. Lasting also has the some-course side: Continues, Unbounded, lifting, and step_iff_either, which is EitherThroughout exactly, for finitely branching processes.
+(2) LastChange.lpo_iff_settles: that every run with no undoable reachable change settles is exactly the limited principle of omniscience. still_within avoids the principle where a bounded mark counts the changes.
+(3) LawAlongRun: once no law along a run is consistent under a relation, none is at any later step (no_law_under_later, no_law_later). The built Unseen shows a level the formation does not couple into deciding what it couples into next, and its level runs down to (0,0). The built Changing shows dependences forming and dissolving along one run, with the coupling fixed at the start finding or missing a law the changing coupling does not.
+(4) Latency gives a deadline for a difference to reach a reader: one coupling link a step (Spread.linked, answer_alike_far). In Latency the levels' balance is a premise, and the formations present are given as data.
+
+Learnable, LearnableRuns and Labels concern reading (learnability through a map, iff features agree on configurations with the same future through the map) and have no level or loss. Laws.lean holds only the definitions Determined, GoAlikeUnder and GoAlike, with their grammar bridges.
+
+These returns are unchecked readings. No Lean, build or test was run.

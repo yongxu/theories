@@ -1,0 +1,17 @@
+Reader whole-c-settle-02, part SETTLE, 34 differences in 13 modules. Read only; no Lean, build, test or gate run; no file written; no agents started.
+
+What was opened. Read whole (account and every statement): CensusBinding, CensusCounts, Centers, ChanceFloors, Clearing. Read in part, at the cited declarations and their sections' variable lines: CensusTable (ll. 1-170), Change (ll. 150-630), ChoiceCountCapture (ll. 60-556), ClosedCapture (ll. 262-345, 552-566, 770-930), Closing (ll. 195-250, 405-470, 545-667), CodeAcquisition (ll. 1-60, 145-260, 280-404), ComparingCourses (ll. 100-130, 320-331, 520-560, 1575-1700), ConditionInTime (account, ll. 140-165, 250-350, 455-530, 610-748). Definitions opened in other modules to read a name: Tally (Population l. 676), BindsCounting (Counting l. 743), active_of_coming_jointly (Counting l. 357), CarrierCounts.select (RuleCapture l. 497), RenewingOver (Regions l. 236), Renewed (Dependence l. 150).
+
+Outcome: a right 10, b right 9, both in part 15, neither 0. Settled letters: N 12, S 9, B 12, D 1.
+
+Patterns in the differences.
+1. Census modules, no_return against closed_region. The statements say 'nothing arises across a step at which nothing is active' (0 < a t -> 0 < n t). That is an irreversibility at a step, so no_return is settled S in a weak form. That zero activity is a region closed under the step follows only by combining with Tally (n t = k + c t, n (t+1) = k + a t); no statement says it, so closed_region is N.
+2. both_outcomes in CensusBinding, CensusCounts and Centers. The 'exactly when' statements exist, but they say which selections make a property a law over a class of worlds, or when a formation's acts return. None is of going on and ending, or keeping and losing, for one model. Pass b said so itself in each answer. Settled N for the field read strictly.
+3. giving in Centers and ConditionInTime. A formation gives to the condition another requires, but in each witness active is True at every step by definition, so what gives cannot be lost. Settled B, both in part.
+4. closed_region in Closing and ConditionInTime. The statements are of membership in a WithinClosure (the least set closed under a relation: Couples, StepInTime), not of an invariant or kernel of a process. Settled S in that weaker form.
+
+What could not be settled fully, and why.
+- Closing closed_region and Change rank turn on how wide the field is read (closure under a relation as a 'region closed under steps'; a bound on total fall as 'a drain'). The statements are given so the reading can be redone.
+- ComparingCourses (1790 lines) and Change ll. 630-966 were not read whole, so my N answers there (Change multiplying) rest on the declaration list plus the sections opened, not on every statement.
+- ConditionInTime rank is D: the account places the finite overdraw law (Flow.member_after_never_overdrew) in Becoming.PersistingChoices. I did not open that module to confirm the statement.
+- CodeAcquisition forms_change: no theorem compares before and after; that the initial learner cannot execute is by the definitions of initial and execute only.

@@ -1,0 +1,453 @@
+# Task file: EDGE, second batch, reader whole-c-edge2-08
+
+Your 5 modules. In each, BOTH earlier passes found a statement with both outcomes and NEITHER found a law of ending within a bound. For orientation only, what they said (where to look, not evidence).
+
+## ReadingLoop.lean  (1001 lines)
+
+### `both_outcomes`
+- pass a: S: `keeps_continues_iff` (l. 231) gives an iff for safety and enabled continuation from sound configurations, assuming `KeptBy`. `Loop.kept_iff` (l. 589) gives a separate iff for keeping a candidate.
+- pass b: S: `keeps_continues_iff` (l. 231), `history_keeps_iff` (l. 394) and `history_continues_iff` (l. 410), general: exactly when a policy keeps a task and goes on. This is an exact condition, not a stated dichotomy between going on and ending. B: `Untested.explorer_low_once` (l. 873) is an iff (low exactly at n = 1). B: `Untested.rests` (l. 815) against `explorer_up` and `explorer_down` (l. 858, 865) give two courses on one pair of worlds: one rests untested, one separates the worlds.
+
+### `no_return`
+- pass a: S: `Loop.kept_iff` (l. 589) concludes that a listed candidate survives at n+1 iff it predicts every answer to steps before n. A single failed prediction therefore excludes it thereafter.
+- pass b: S: `Loop.kept_iff` (l. 589): a candidate is kept at n+1 only if it fits every answer before n. So once refuted it is not kept at any later step; this is concluded, and it concerns candidates, not a level or a giver. S: `Loop.rests_of_unrefuted` (l. 672): where the world answers the chosen act with the value sensed and stays, and every listed candidate predicts that answer, the configuration is the same at every step from 1 on (a fixed point, concluded). B: `Untested.never_high` (l. 842) and `floor_never_high` (l. 919): the course never senses the high value.
+
+### `rank`
+- pass a: N: Not found among this module’s statements.
+- pass b: N: there is no general variant that falls, no drain and no deadline. B: `Untested.explorer_up` (l. 858), `explorer_down` (l. 865) and `informed_turns` (l. 992): the formation settles at a fixed configuration from step 4, step 3 and step 3 on.
+
+### `closed_region`
+- pass a: S: `Loop.fitting_closed` (l. 644) assumes the world stays in Q under all moves and the candidate predicts each answer there. Configurations in Q with that candidate kept and fitting the pending answer form a closed region.
+- pass b: S: `kept_iff_closed` (l. 143): a region kept along every finite reach is a closed region «闭», and conversely. `closed_of_keptBy` (l. 171): a reading kept by the update is closed under every policy's joint loop. `generated_closed` (l. 349): the generated histories with their possible worlds form a closed region. `Loop.fitting_closed` (l. 644): the region where h is kept, agrees with the pending answer and the world lies in a region its moves keep is closed. `Loop.rests_of_unrefuted` (l. 672) gives a fixed point. Of the trivial readings, `everything_kept` (l. 258) and `nothing_kept` (l. 268) are kept by every update, and `nothing_sound` (l. 276) says no configuration is sound for the reading of nothing.
+
+### `moves`
+- pass a: S: `keeping_policy_iff` (l. 247) assumes choice over states and an update that keeps the reading under every act. A keeping, continuing policy exists iff every state admits an act enabled and safe at every world it reads as possible.
+- pass b: S: `keeps_continues_iff` (l. 231): where the reading B is KeptBy the update, a policy act : M → A Keeps K and Continues exactly where every state's act is LeadsIntoEnabled. `keeping_policy_iff` (l. 247): given ChoiceOver M A and the reading kept, some policy keeps and continues exactly where each state has some act LeadsIntoEnabled. `history_keeps_iff` (l. 394) and `history_continues_iff` (l. 410) state the same for a policy acting from its history, at every Generated history and every Possible world. B: `PairwiseShared.two_share` (l. 295) and `none_for_all` (l. 308): every two worlds share an act leading into the task, but no act serves all three. B: `Untested.floor_forgoes` (l. 889): every blanketed law sensing and moving as the witness, never sensing low in world down, takes the known act at every step.
+
+### `reading`
+- pass a: S: `history_keeps_iff` (l. 394) says a history policy keeps the task after every reach from a start iff its act at every generated history leads only into the task from all compatible worlds.
+- pass b: S: `Possible` (l. 324) is the worlds compatible with a history. `possible_kept` (l. 329) and `possible_least` (l. 334): it is the least reading kept by recording that holds at the starts. `sensed_alike_iff` (l. 442): from one internal, sensory and active start, two worlds give the same values sensed through step n exactly where they answer alike the act taken at each step before n. `alike_within` (l. 478) and `alike_of_kept` (l. 508): where every differing answer of the second world breaks K, keeping K there makes the values sensed agree at every step. `observed_alike` (l. 524): a relation kept by the steps of two blanketed laws, under which the values sensed and the acts are one, gives the same values sensed and acts at every step. `Loop.kept_iff` (l. 589): the candidates kept at n+1 are exactly the listed ones fitting every answer before n. `Loop.kept_alike` (l. 624): candidates predicting alike along the course are kept alike. B: `Untested.model_or_order` (l. 974): a formation keeping both candidates under rank and one keeping the true candidate under rank' sense and act alike at every step.
+
+### declarations of ReadingLoop.lean (by script)
+  l.143 theorem kept_iff_closed
+  l.157 def joint
+  l.162 def Sound
+  l.166 def KeptBy
+  l.171 theorem closed_of_keptBy
+  l.179 def LeadsInto
+  l.184 def LeadsIntoEnabled
+  l.190 def Keeps
+  l.195 def Continues
+  l.202 theorem keeps_of_leadsInto
+  l.214 theorem leadsInto_of_keeps
+  l.223 theorem keeps_iff_leadsInto
+  l.231 theorem keeps_continues_iff
+  l.247 theorem keeping_policy_iff
+  l.258 theorem everything_kept
+  l.262 theorem everything_leadsInto_iff
+  l.268 theorem nothing_kept
+  l.272 theorem nothing_leadsInto
+  l.276 theorem nothing_sound
+  l.286 inductive Point
+  l.292 abbrev leads
+  l.295 theorem two_share
+  l.308 theorem none_for_all
+  l.320 def record
+  l.324 def Possible
+  l.329 theorem possible_kept
+  l.334 theorem possible_least
+  l.343 def Generated
+  l.349 theorem generated_closed
+  l.358 theorem possible_of_reached
+  l.365 theorem reached_of_possible
+  l.394 theorem history_keeps_iff
+  l.410 theorem history_continues_iff
+  l.442 theorem sensed_alike_iff
+  l.478 theorem alike_within
+  l.508 theorem alike_of_kept
+  l.524 theorem observed_alike
+  l.544 structure Loop
+  l.555 theorem filter_all
+  l.567 def keep
+  l.575 def law
+  l.582 def start
+  l.589 theorem kept_iff
+  l.612 theorem faithful_kept
+  l.624 theorem kept_alike
+  l.638 def Fitting
+  l.644 theorem fitting_closed
+  l.672 theorem rests_of_unrefuted
+  l.699 inductive Value
+  l.716 inductive Act
+  l.721 inductive World
+  l.726 def reply
+  l.734 def rank
+  l.740 def lower
+  l.742 theorem lower_le_left
+  l.748 theorem lower_le_right
+  l.753 theorem lower_cases
+  l.760 def worst
+  l.766 theorem worst_le
+  l.778 theorem worst_attained
+  l.789 def byWorst
+  l.793 theorem byWorst_iff
+  l.802 def loop
+  l.809 def rest
+  l.815 theorem rests
+  l.820 theorem true_kept
+  l.828 theorem alike_in_both
+  l.842 theorem never_high
+  l.849 def upRest
+  l.853 def downRest
+  l.858 theorem explorer_up
+  l.865 theorem explorer_down
+  l.873 theorem explorer_low_once
+  l.889 theorem floor_forgoes
+  l.919 theorem floor_never_high
+  l.936 def rank'
+  l.942 def training
+  l.947 def above
+  l.950 theorem both_accord
+  l.959 theorem apart_beyond
+  l.963 def orderRest
+  l.967 theorem order_rests
+  l.974 theorem model_or_order
+  l.992 theorem informed_turns
+
+## Response.lean  (637 lines)
+
+### `both_outcomes`
+- pass a: B: `Loop.returns` (l. 607) exhibits first’s support at step two without the act and loss of that support with the act and response, from equal starting levels and with identical own exchange at its own condition.
+- pass b: B: `Loop.returns` (l. 607): for one built model, with the act the first loses support at step 2 and without it keeps support (¬ web.Supported 2 .first ∧ quietWeb.Supported 2 .first). S: `Flow.Balances.comparison_within_response` (l. 286) gives iffs (Retains ↔ Includes, ¬ Adds ↔ ¬ Exceeds), but these are not of going on and ending.
+
+### `no_return`
+- pass a: B: `Loop.firstLive` (l. 544) and `Loop.web` (l. 547) specify first’s permanent inactivity after the first two steps. `Loop.returns` (l. 607) concludes the support difference at step two; finality is part of the built profile.
+- pass b: N: no irreversibility or point of no return is stated. Loop's profile drops the first's condition to 0 from step 2 on, but the theorem states only that the first is unsupported at step 2.
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N: no bound on ending, falling variant or deadline.
+
+### `closed_region`
+- pass a: S: `Flow.beyond_response_closed` (l. 187) proves that the complement of responsive reach is closed under each flow’s `CoupledFrom` relation. This is closure under a relation on formations.
+- pass b: S: `Flow.beyond_response_closed` (l. 187): the formations beyond the part's responsive reach form a region closed, in each flow, under being affected through what couples in. `Flow.outside_part_of_beyond_response` (l. 124): it holds no member. B: `Trophic.responsiveReach_closed` (l. 403): wolves, deer and forest are closed under affecting through what couples in.
+
+### `moves`
+- pass a: N: Not found in the statements read.
+- pass b: N: no Process with a choice of moves. The module compares two given flows; in Loop these are the flow with the act (escalation) and without it (quiet), a counterfactual pair, not a choice among steps.
+
+### `reading`
+- pass a: S: `Flow.RespondsThroughCoupling` (l. 110) assumes equal coupled histories through t give identical taking and giving at t outside the acting part. `exchange_alike_beyond_response` (l. 216) derives equality at all steps beyond responsive reach under local balance, equal starts there and common presence.
+- pass b: S: `Flow.RespondsThroughCoupling` (def l. 110), a supplied premise: each formation outside the part takes and gives alike in the two flows across the step from t wherever the flows are alike through its couplings (W.AlikeThroughUpTo obs) up to t. So what couples into a formation through obs decides its exchange. `Flow.alike_beyond_response` (l. 200): under balance on coupled conditions, the same formations present, an alike start and that premise, the flows are alike through the couplings of every formation beyond the responsive reach at every step. `Flow.respondsThroughCoupling_withhold` (l. 177): with the part withheld, the premise holds whatever couples in.
+
+### declarations of Response.lean (by script)
+  l.92 theorem WithinClosure.converse
+  l.103 def WithinResponse
+  l.110 def RespondsThroughCoupling
+  l.119 theorem member_within_response
+  l.124 theorem outside_part_of_beyond_response
+  l.133 theorem withinResponse_iff_coupling
+  l.143 theorem withinResponse_self_iff
+  l.153 theorem withinResponse_of_reaches
+  l.159 theorem withinResponse_of_withinReach
+  l.166 theorem withinResponse_thresholdOnly_iff
+  l.177 theorem respondsThroughCoupling_withhold
+  l.187 theorem beyond_response_closed
+  l.200 theorem alike_beyond_response
+  l.216 theorem exchange_alike_beyond_response
+  l.233 theorem totals_alike_beyond_response
+  l.258 theorem not_differs_beyond_response
+  l.286 theorem Balances.comparison_within_response
+  l.303 theorem Balances.comparison_within_response_of_decidable
+  l.332 theorem forest_within_response
+  l.348 theorem responds_through_coupling
+  l.366 def responsiveReach
+  l.374 theorem den_untouched
+  l.383 theorem far_unaffected
+  l.403 theorem responsiveReach_closed
+  l.418 theorem within_response_iff
+  l.442 theorem responsive_comparison
+  l.488 inductive Formation
+  l.493 inductive Place
+  l.498 def members
+  l.501 def firstPart
+  l.507 def paired
+  l.514 def act
+  l.517 def reply
+  l.522 def escalation
+  l.532 def quiet
+  l.538 def ofFirstLevel
+  l.541 def ofSecondLevel
+  l.544 def firstLive
+  l.547 def web
+  l.559 def quietWeb
+  l.566 theorem balances
+  l.573 theorem quiet_balances
+  l.576 theorem dependent
+  l.585 theorem quiet_dependent
+  l.590 theorem responds
+  l.607 theorem returns
+
+## ResponseLearning.lean  (631 lines)
+
+### `both_outcomes`
+- pass a: S: `sendWith` (l. 77) decides whether an unblocked receiver gains a record: it enters the successful branch exactly on positive stock and a present response. B: `peer_repairs` (l. 338) and `peer_keeps_error_example` (l. 343) show different senders’ demonstrations repairing or retaining the same peer’s error.
+- pass b: B: `peer_repairs` (l. 338) against `peer_keeps_error_example` (l. 343): a demonstration repairs or keeps the error, depending on the demonstrating peer. `formed_teacher_teaches` (l. 301) against `execution_stock_interrupts` (l. 306): teaching goes on or is interrupted, depending on stock. `lessons_change_program` (l. 326): different lessons, different programs. No exactly-when, general or built.
+
+### `no_return`
+- pass a: S: `sendWith` (l. 77) returns the identical pair for an already blocked receiver, for any query response.
+- pass b: B, concluded on built cohorts: `limited_changes_then_stays` (l. 379): from the collapsed code's teacher, every generation after the first holds the duplicated program, with at least 7 units. `distinction_lost_every_cohort` (l. 352) and `succession_keeps_lost_distinction` (l. 550): from source selective 7, every generation and every date of every run keep the lost distinction. This is a loss in what is transmitted, the thing that gives. It is not irreversible in general: `peer_repairs` (l. 338) shows a peer's demonstration can repair it without a new generation.
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N: no bound on ending, falling variant or deadline. Lessons are finite lists, and the stock is only conserved (lesson_stock).
+
+### `closed_region`
+- pass a: S: `succession_step_keeps` (l. 519) preserves installation of p and stock ≥ 7 on any succession run under the route and distinct-primitive hypotheses.
+- pass b: S: `every_cohort_holds` (l. 274), with `successor_keeps` (l. 261) as its step: the set where installed = some p and 7 ≤ stock is closed under succession, for p with route in generatedRoutes 2 and distinct primitives. `succession_step_keeps` (l. 519) says the same of runs of Law.process successor. B: `limited_changes_then_stays` (l. 379): duplicated is kept from generation one on.
+
+### `moves`
+- pass a: S: `course_stock` (l. 459) keeps joint stock plus drawn on every trace of query choices.
+- pass b: S: `queryProcess` (def l. 396) is a Process Teaching Expr whose moves are queries. `trace_iff` (l. 409): its courses are exactly the lessons. `course_stock` (l. 459): every course of queries keeps joint (both stocks plus drawn). `lesson_interface` (l. 220): every lesson keeps two pairs SameInterface. B: `course_without_composite` (l. 464): a course omitting the composite query gives no code; `extended_course_separates` (l. 441): a longer course separates the programs.
+
+### `reading`
+- pass a: S: `learn_through_interface` (l. 226) equates learning from any teacher with p installed to learning from the canonical source of p with the same stock, for the same lesson and learner resources.
+- pass b: S: `SameInterface` (def l. 185): alike receiver, alike sender's installed program, alike sender's stock. `send_interface` (l. 212) and `lesson_interface` (l. 220): pairs alike in that stay alike along every lesson. `learn_through_interface` (l. 226): learning from teacher t with t.installed = some p equals learning from source p t.stock, so what the receiver registers decides what it forms. B: `faithful_loses_distinction` (l. 316): the reconstructed selective program gives joint00 and orderProbe alike while the task's code distinguishes them; `course_record_fits_departing` (l. 427): the delivered record fits a departing program.
+
+### declarations of ResponseLearning.lean (by script)
+  l.62 structure Teaching
+  l.68 def blank
+  l.71 def source
+  l.77 def sendWith
+  l.88 def send
+  l.91 def lesson
+  l.96 def basic
+  l.98 def extended
+  l.101 def learn
+  l.105 def programRecords
+  l.111 theorem response_within_stock
+  l.127 def joint
+  l.129 theorem sender_kept
+  l.132 theorem regroup
+  l.135 theorem sendWith_stock
+  l.146 theorem send_stock
+  l.150 theorem lesson_stock
+  l.156 theorem send_delivers
+  l.170 theorem send_no_response
+  l.185 def SameInterface
+  l.188 theorem respond_congr
+  l.193 theorem sendWith_interface
+  l.212 theorem send_interface
+  l.220 theorem lesson_interface
+  l.226 theorem learn_through_interface
+  l.236 theorem basic_lesson_records
+  l.246 theorem reconstructs_program
+  l.257 def successor
+  l.261 theorem successor_keeps
+  l.269 def cohort
+  l.274 theorem every_cohort_holds
+  l.280 theorem routeFor_generated
+  l.286 theorem every_cohort_corresponds
+  l.293 def selective
+  l.295 def joint00
+  l.298 def firstLearner
+  l.301 theorem formed_teacher_teaches
+  l.306 theorem execution_stock_interrupts
+  l.311 theorem teacher_changes_evidence
+  l.316 theorem faithful_loses_distinction
+  l.322 theorem stock_keeps_content
+  l.326 theorem lessons_change_program
+  l.332 def misleadingPeer
+  l.334 def revisedPeer
+  l.338 theorem peer_repairs
+  l.343 theorem peer_keeps_error_example
+  l.348 theorem short_receiver_not_repaired
+  l.352 theorem distinction_lost_every_cohort
+  l.359 theorem reconstruction_teaches_later
+  l.363 theorem duplicate_reconstructed
+  l.374 def limitedCohort
+  l.379 theorem limited_changes_then_stays
+  l.386 theorem limited_fails_task
+  l.393 def deliver
+  l.396 def queryProcess
+  l.399 theorem lesson_foldl
+  l.404 theorem lesson_trace
+  l.409 theorem trace_iff
+  l.414 theorem course_records_follow_sender
+  l.420 theorem basic_course_records
+  l.427 theorem course_record_fits_departing
+  l.433 theorem extended_course_records
+  l.441 theorem extended_course_separates
+  l.447 theorem step_delivers
+  l.454 theorem step_no_response
+  l.459 theorem course_stock
+  l.464 theorem course_without_composite
+  l.472 theorem course_reversed_composite
+  l.485 theorem learned_selective_stock
+  l.490 theorem learned_selective_loses_distinction
+  l.498 theorem learned_depends_on_course
+  l.508 theorem learned_blocked_short
+  l.519 theorem succession_step_keeps
+  l.527 theorem orbit_cohort
+  l.532 theorem orbit_limited
+  l.537 theorem run_cohort
+  l.544 theorem succession_keeps_correspondence
+  l.550 theorem succession_keeps_lost_distinction
+  l.557 theorem succession_stabilizes_change
+  l.566 theorem formed_succession_teaches
+  l.576 theorem formed_succession_second
+  l.586 theorem execution_stock_succession_blocked
+  l.599 theorem peer_repair
+  l.614 theorem peer_keeps_error
+
+## Retaining.lean  (701 lines)
+
+### `both_outcomes`
+- pass a: S: `Balances.retains_iff_within_margin` (l. 241) and `Balances.loses_iff_beyond_margin` (l. 251) give exact retention and loss criteria under balance and withheld levels.
+- pass b: S: general exact boundaries of keeping and losing. `Flow.retains_iff_within_margin_at` (l.188) and `loses_iff_beyond_margin_at` (l.205): the part keeps every significant continuation exactly when, and loses one exactly where, its net draw on a required condition goes beyond the margin, with balance at the conditions used. `widens_iff_within_margin_at` (l.273) gives the exact condition for widening. Each has a balanced-flow form (l.241, l.251, l.261, l.292).
+
+### `no_return`
+- pass a: S: `Balances.narrows_of_consumed` (l. 368) assumes every later level stays below the earlier need. B: `Preemption.renewingAt_consuming_narrows` (l. 494) concludes consumption for the built drawer.
+- pass b: S: `Web.inactive_of_not_arising` (l.171) concludes, from inactive at the start and never arising (premises), that the formation is inactive at every step. This is a region kept onward. `Flow.Balances.narrows_of_consumed` (l.368) takes as a premise a dependence met at no step after T, a low level that never comes back, and concludes narrowing. B: Preemption's unit, once taken, is never restored.
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N: not found.
+
+### `closed_region`
+- pass a: S: `inactive_of_not_arising` (l. 171) carries initial inactivity through all dates if the formation never arises across a step.
+- pass b: S: `Web.inactive_of_not_arising` (l.171): not being active is a region every step keeps (by kept_onward), given no arising. `Flow.Balances.includes_of_renewed` (l.321) uses Renewed conditions (every dependence kept at every step) as a premise, not a region proved closed.
+
+### `moves`
+- pass a: N: Not found in the statements read.
+- pass b: N: no Process, policy, plan or allowed set of steps in what was read. The nearest is a part (part : F → Bool) whose levels with and without it are compared (WithheldLevels); that is a comparison, not a choice among steps.
+
+### `reading`
+- pass a: S: `retains_bounded_iff` (l. 113) makes retention for bounded significance exactly admission inclusion within that standpoint’s region at every date.
+- pass b: S: `Web.Retains` (l.69) and `Web.Adds` (l.74) take a supplied significance sig : Pos → Nat → F → Prop from a standpoint p, and retaining counts only continuations with significance. `Retains.of_fewer` (l.106): where fewer continuations have significance, more is retained. `retains_bounded_iff` (l.113): significance bounded by a region retains exactly what is admitted within the region. The significance is handed in as a premise; it is not an observation built from the model.
+
+### declarations of Retaining.lean (by script)
+  l.58 def bounded
+  l.69 def Retains
+  l.74 def Adds
+  l.80 theorem Retains.refl
+  l.85 theorem Retains.trans
+  l.91 theorem Retains.not_added
+  l.96 theorem Includes.retains
+  l.101 theorem Adds.exceeds
+  l.106 theorem Retains.of_fewer
+  l.113 theorem retains_bounded_iff
+  l.128 theorem exceeded_of_below
+  l.135 theorem UnderminingOn.exceeded
+  l.148 theorem Includes.not_undermining
+  l.157 theorem UnderminingOn.not_retains
+  l.171 theorem inactive_of_not_arising
+  l.188 theorem retains_iff_within_margin_at
+  l.205 theorem loses_iff_beyond_margin_at
+  l.224 theorem adds_iff_within_margin_at
+  l.241 theorem Balances.retains_iff_within_margin
+  l.251 theorem Balances.loses_iff_beyond_margin
+  l.261 theorem Balances.adds_iff_within_margin
+  l.273 theorem widens_iff_within_margin_at
+  l.292 theorem Balances.widens_iff_within_margin
+  l.321 theorem Balances.includes_of_renewed
+  l.349 theorem Balances.not_narrows_of_renewed
+  l.357 theorem Balances.includes_of_renewingIn
+  l.368 theorem Balances.narrows_of_consumed
+  l.389 theorem Balances.keeps_of_inactive
+  l.416 theorem Balances.keeps_of_not_arising
+  l.432 def flow
+  l.444 def web
+  l.459 def drawerPart
+  l.464 theorem withheld
+  l.475 theorem within_renewal_yet_loses
+  l.492 class and
+  l.494 theorem renewingAt_consuming_narrows
+  l.518 def flow
+  l.524 def web
+  l.532 def part
+  l.538 theorem consuming_keeps
+  l.556 def flow
+  l.570 def web
+  l.589 def part
+  l.592 theorem withheld
+  l.602 theorem arises_narrows
+  l.633 def flow
+  l.647 def web
+  l.662 def part
+  l.665 theorem withheld
+  l.675 theorem arises_widens
+
+## Revision.lean  (444 lines)
+
+### `both_outcomes`
+- pass a: S: `keeps_through_iff` (l. 41) gives the exact condition for keeping all old selections; `lost_choice` (l. 56) constructs a lost one from a newly merged old distinction.
+- pass b: S: `Learning.Training.keeps_through_iff` (l.41) is a general exactly-when of keeping every old selection, and `lost_choice` (l.56) gives the losing side. B: `Revising.feasible_iff` (l.337), an instance of Stock.product_feasible_iff, says a course of Revising.P is executable exactly where the stock covers it and the link process admits it.
+
+### `no_return`
+- pass a: N: Not found in the statements read.
+- pass b: N: no irreversibility. In Revising.P replenish is enabled at every state, and `controlled_revision` (l.256) restores correction after the stock runs out. `lost_choice` (l.56) is a selection lost across a change of lumping, not an unreturnable state.
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N: not found.
+
+### `closed_region`
+- pass a: S: `through_alikeUpTo_later` (l. 115) preserves selection through historical lumpings as the history extends along any run.
+- pass b: N: no region closed under steps. B: `Revising.stock_balanced_held` (l.331): the built stock is Balanced and DrawsHeld.
+
+### `moves`
+- pass a: S: `trace_keeps` (l. 92) carries preservation of distinctions across any trace if each process step preserves them.
+- pass b: S: `Registration.trace_keeps` (l.92): for any Process P, if every step keeps the lumping (new alike implies old alike) then every Trace keeps it. `run_keeps` (l.100) is the same along a Run. B: `Revising.P` (l.153) has acts replenish, rebuild b and correct. `Revising.controlled` (l.250) is a closed-loop run of the supplied controller `choose`. `rebuild_then_close` (l.204) is one admissible continuation that opens and then closes the link.
+
+### `reading`
+- pass a: S: `history_gains` (l. 412) finds a selection available through the history at every specified date t ≥ 1 but unavailable at the start if the next reading separates a previously merged pair.
+- pass b: S: `Learning.Training.keeps_through_iff` (l.41): where old is an equivalence, every selection Through old is Through new exactly when ∀ x y, new x y → old x y. `lost_choice` (l.56): a pair merged by the new relation and apart under the old one gives a selection that is lost. `RevisionRuns.history_gains` (l.412): where the reading at step 1 tells apart two inputs the start merges, some selection is Through the run's lumping history at every later t and not through the start's reading. So what is registered decides which selections are possible. B: `Revising.old_cannot_select_rebuild` (l.199): the lumping with the link unformed cannot tell the two rebuild choices apart.
+
+### declarations of Revision.lean (by script)
+  l.41 theorem keeps_through_iff
+  l.56 theorem lost_choice
+  l.72 def Keeps
+  l.75 theorem Keeps.refl
+  l.78 theorem Keeps.trans
+  l.83 theorem web_keeps_iff
+  l.92 theorem trace_keeps
+  l.100 theorem run_keeps
+  l.107 def AlikeUpTo
+  l.110 theorem alikeUpTo_keeps
+  l.115 theorem through_alikeUpTo_later
+  l.122 theorem retained_keeps
+  l.127 theorem retained_gains
+  l.143 abbrev State
+  l.145 inductive Act
+  l.153 def P
+  l.159 def read
+  l.161 def alike
+  l.163 theorem determined
+  l.178 theorem rebuild_enabled_iff
+  l.183 theorem correction_enabled_iff
+  l.188 theorem opened_keeps
+  l.191 theorem opened_choice
+  l.194 theorem closed_loses
+  l.199 theorem old_cannot_select_rebuild
+  l.204 theorem rebuild_then_close
+  l.210 theorem opens_without_correction
+  l.218 theorem opens_with_correction
+  l.224 theorem closes_choice
+  l.234 def choose
+  l.239 def next
+  l.244 theorem chosen_step
+  l.250 def controlled
+  l.256 theorem controlled_revision
+  l.270 def linkProcess
+  l.276 def draw
+  l.282 def restore
+  l.288 theorem step_iff
+  l.325 theorem trace_iff
+  l.331 theorem stock_balanced_held
+  l.337 theorem feasible_iff
+  l.344 theorem covered_not_enacted
+  l.350 theorem linked_not_enacted
+  l.398 theorem history_retained_iff
+  l.412 theorem history_gains
+  l.429 theorem rebuild_opens_keeps

@@ -1,0 +1,300 @@
+# Task file: EDGE, reader whole-c-edge-05
+
+Your 3 modules. For orientation only, what the two passes said of the four marks, of moves and of a reading (where to look, not evidence).
+
+## Courses.lean  (1330 lines)
+
+### `both_outcomes`
+- pass a: S: `lasts_iff_courses` (l. 157) and `courses_iff_necessary` (l. 171) characterize keeping the guard on all courses up to n. `run_stays_iff` (l. 733) characterizes continued candidate membership by prior membership and every subsequent bearing move offering it.
+- pass b: S, general: `lasts_iff_courses` (l. 157): lasting n exactly when every course stays in the guard. `avoids_iff_closed_reach` (l. 250): a determined law never reaches the target from s exactly when a set holding s avoids it and is closed under the law. `course_reaches_iff_funnel` (l. 288) and `course_reaches_iff_variant` (l. 297). `runs_settle_iff` (l. 416).
+
+### `no_return`
+- pass a: S: `avoids_iff_closed_reach` (l. 250) characterizes permanent unreachability of a target by an avoiding closed set containing the start for any determined law. `run_narrows` (l. 725) concludes that an excluded candidate cannot return on a longer record.
+- pass b: S: `Drains.leaves_run` (l. 178) concludes leaving the guard within n from the premise `Drains` (at the level of the family). `fixed_avoids_reach` (l. 272): a fixed configuration outside the target reaches none of it. `forgetting_unrelates_courses` (l. 1036): after one move of a law sending the first part to one value, every course leads to an unrelated (rectangular) whole. `copy_grows` (l. 508): the copy's product only grows along every course. None is the loss of something that gives.
+
+### `rank`
+- pass a: S: `course_reaches_iff_variant` (l. 297) equates hitting a decidable target within n deterministic moves with existence of V starting at most n and decreasing off target wherever V≤n. `Drains.leaves_run` (l. 178) rules out keeping guard at all dates through n from below level n of a drained family.
+- pass b: S: `course_reaches_iff_variant` (l. 297): with a decided target, a course of at most n moves reaches it exactly when some V : S → Nat has V s ≤ n and, for every x with V x ≤ n, target x or V (next x) < V x. `Advances.completes_plan` (l. 333): unfuelled work completes in work + 1 moves. `exits_completes` (l. 324): every admitted plan longer than the margin completes at the exit. `Drains.leaves_run` (l. 178).
+
+### `closed_region`
+- pass a: S: `avoids_iff_closed_reach` (l. 250) equates avoiding a target at every reachable endpoint with existence of a forward-closed disjoint region holding the start. `fixed_avoids_reach` (l. 272) gives the fixed-point case.
+- pass b: S: `avoids_iff_closed_reach` (l. 250) and `some_avoids_iff_reach` (l. 261): a set closed under the law, holding the start and avoiding the target. `courses_iff_ladder` (l. 164): a ladder family. D: Feedback's `closure_iff_certified` and `not_within_of_closed` are named in the account (l. 96-97) but not declared in this module.
+
+### `moves`
+- pass a: S: `courses_iff_ladder` (l. 164) equates all admissible disturbance traces up to n keeping the guard with a ladder holding the start at n. `inspection_course_le` (l. 548) keeps defect count from rising on every inspection trace choosing faithful sites.
+- pass b: S: `lasts_iff_courses` (l. 157): a start lasts n steps exactly when every course of at most n admissible disturbances of `disturbed f adm` stays within the guard, which is what every choice keeps. `courses_iff_ladder` (l. 164) and `courses_iff_necessary` (l. 171). `inspection_le_iff` (l. 532): every inspection move at site i keeps defects from rising exactly when the reference is faithful at i. `inspection_course_le` (l. 548).
+
+### `reading`
+- pass a: S: `run_judges_iff` (l. 828) gives a judge on the reduced states for the first n dates exactly when the observable agrees on merged dates, with decidable equality of reduced states and a supplied default. `CandidateRuns.run_resolved_is_target` (l. 1236) needs target availability and coverage by every bearing move.
+- pass b: S: `run_judges_iff` (l. 828): a judge reading only the reduced run gives an observable at each of the first n dates exactly when the observable goes alike at every two dates the reduction merges. `runs_no_restore` (l. 801). `ReducedRuns.runs_decoder_iff_of_section` (l. 1294). `runs_reading_right_iff` (l. 365): reading an earlier packet right is the same as separating rival runs by a dated control. `run_resolves_iff` (l. 745). `run_reports_apart` (l. 869).
+
+### declarations of Courses.lean (by script)
+  l.134 theorem run_history
+  l.139 theorem run_admissible
+  l.142 def historyRun
+  l.147 theorem lasts_of_courses
+  l.157 theorem lasts_iff_courses
+  l.164 theorem courses_iff_ladder
+  l.171 theorem courses_iff_necessary
+  l.178 theorem Drains.leaves_run
+  l.186 theorem exhausts_run
+  l.203 theorem Reaches.runs
+  l.210 theorem Funnel.runs
+  l.217 theorem basin_runs
+  l.233 theorem trace_orbit
+  l.241 theorem orbit_trace
+  l.250 theorem avoids_iff_closed_reach
+  l.261 theorem some_avoids_iff_reach
+  l.272 theorem fixed_avoids_reach
+  l.279 theorem course_reaches_iff_orbit
+  l.288 theorem course_reaches_iff_funnel
+  l.297 theorem course_reaches_iff_variant
+  l.315 theorem runs_valid_completes
+  l.324 theorem exits_completes
+  l.333 theorem Advances.completes_plan
+  l.341 theorem pending_before_course
+  l.365 theorem runs_reading_right_iff
+  l.378 theorem runs_look_right_iff
+  l.388 def anyChange
+  l.391 theorem anyChange_eq_free
+  l.395 def anyRun
+  l.400 theorem run_settles
+  l.416 theorem runs_settle_iff
+  l.435 theorem foldl_units
+  l.442 theorem completes_units_iff
+  l.456 theorem steps_orbit
+  l.461 theorem readSteps_orbit
+  l.470 theorem copy_completes_iff
+  l.480 theorem copy_built_iff
+  l.490 theorem copy_empties_iff
+  l.499 theorem tick_extends
+  l.508 theorem copy_grows
+  l.516 theorem reading_completes_iff
+  l.526 def inspection
+  l.532 theorem inspection_le_iff
+  l.539 theorem inspection_trace_scan
+  l.548 theorem inspection_course_le
+  l.557 def release
+  l.563 theorem every_released_iff_course
+  l.609 theorem release_course_iff
+  l.618 theorem lineage_course_iff
+  l.636 theorem encode_course
+  l.644 theorem course_words_iff
+  l.657 theorem course_chunks_iff
+  l.665 theorem no_run_record_groups
+  l.680 theorem course_reads_iff
+  l.703 theorem window_append
+  l.715 theorem run_candidates_append
+  l.725 theorem run_narrows
+  l.733 theorem run_stays_iff
+  l.745 theorem run_resolves_iff
+  l.757 theorem run_resolves_explained_iff
+  l.771 theorem course_resolves_every_iff
+  l.796 def reducedRun
+  l.801 theorem runs_no_restore
+  l.809 def visited
+  l.813 theorem mem_visited
+  l.828 theorem run_judges_iff
+  l.848 theorem no_run_judge_of_merged
+  l.869 theorem run_reports_apart
+  l.878 theorem dates_no_common_report_iff
+  l.887 theorem dates_no_common_report_envelopes_iff
+  l.904 theorem claims_every_weighting_iff
+  l.917 theorem claims_floor
+  l.930 def twoDrawers
+  l.936 theorem supported_not_together
+  l.942 def loop
+  l.945 theorem loop_trace
+  l.949 theorem along_one
+  l.956 theorem loop_courses_double
+  l.975 def reachedFrom
+  l.978 theorem reachedFrom_iff
+  l.984 theorem reachedFrom_zero
+  l.989 theorem reachedFrom_succ
+  l.998 theorem rectangular_congr
+  l.1003 theorem courses_keep_unrelated
+  l.1011 theorem relation_persists_courses
+  l.1024 theorem copy_relates_course
+  l.1036 theorem forgetting_unrelates_courses
+  l.1043 theorem coupling_course
+  l.1072 theorem extension_frontier_exists
+  l.1127 theorem runs_fits_iff_same
+  l.1138 theorem runs_agreed_reading_actual
+  l.1151 theorem runs_change_unlocated
+  l.1212 theorem window_succ
+  l.1218 theorem run_step_bearing
+  l.1226 theorem run_step_other
+  l.1236 theorem run_resolved_is_target
+  l.1245 theorem run_omitted
+  l.1294 theorem runs_decoder_iff_of_section
+  l.1304 theorem trace_foldl
+  l.1313 theorem course_reduced
+  l.1320 theorem run_reduced
+
+## Dephasing.lean  (453 lines)
+
+### `both_outcomes`
+- pass a: B: `plus_kept_iff` (l. 340) equates keeping the starting plus response at any positive time with vanishing of the starting cross-term sum in every run of this law.
+- pass b: S (built): `dephase_keeps_response_iff` (l. 211): dephasing keeps the plus response exactly where m.zo + m.oz = 0. `plus_kept_iff` (l. 340) gives the same along every dephasing run. This is about keeping or losing a response, not about going on or ending.
+
+### `no_return`
+- pass a: B: `no_restore_along` (l. 372) concludes that no map from a positive-time state recovers both distinct starts of the merged dephasing runs. This is loss of information.
+- pass b: S (built, concluded): `no_uniform_dephase_inverse` (l. 200) and `no_restore_along` (l. 372): no map restores the prepared and the coherent control from their dephased or later states. `not_lossless` (l. 363). The loss is of the cross terms, not of a giver. Contrast `returns` (l. 416): recording returns every configuration after two steps.
+
+### `rank`
+- pass a: B: `settles` (l. 306) bounds time to rest by one dephasing step.
+- pass b: S (built): `settles` (l. 306): every run of the dephasing law is, from step 1 on, the dephased start; it rests within one step.
+
+### `closed_region`
+- pass a: B: `diagonal_invariant` (l. 310) and `mass_invariant` (l. 315) give invariant fibers for the dephasing process.
+- pass b: S (built): `diagonal_invariant` (l. 310), `mass_invariant` (l. 315), `x_norm_invariant` (l. 282), `z_norm_invariant` (l. 286): fixed diagonal, weight and norm are Invariant regions of these laws.
+
+### `moves`
+- pass a: S: `operations_trace_iff` (l. 249) identifies endpoints for any list of endomorphism moves with their ordered fold. B: X and Z each keep the norm (`x_preserves_norm`, l. 134; `z_preserves_norm`, l. 137).
+- pass b: S: `operations` (l. 246): for any S, a Process S (S → S) in which each step applies the chosen operation. `operations_trace_iff` (l. 249): a course reaches exactly the left fold of the operations. `orders_negate` (l. 258), built: X then Z and Z then X end at negatives of each other.
+
+### `reading`
+- pass a: B: `retained_response_exact` (l. 206) decodes plusMass using the diagonal and cross-term sum for every matrix. `no_diagonal_response_decoder` (l. 189) rules out even a decoder correct on both coherent and degraded from the diagonal alone.
+- pass b: S (built): `no_diagonal_response_decoder` (l. 189): no function of the diagonal gives the plus response of both the coherent and the degraded control (their diagonals are equal, their responses differ). `retained_response_exact` (l. 206): the diagonal with the cross-term sum decides the plus response.
+
+### declarations of Dephasing.lean (by script)
+  l.57 structure Vec
+  l.63 structure Joint
+  l.69 structure Matrix
+  l.76 def xGate
+  l.77 def zGate
+  l.78 def negVec
+  l.79 def norm
+  l.80 def inner
+  l.83 def prepare
+  l.86 def blankControl
+  l.89 def hControl
+  l.94 def switched
+  l.97 def controlDensity
+  l.101 def dephase
+  l.102 def diagonal
+  l.103 def mass
+  l.104 def plusMass
+  l.105 def minusMass
+  l.108 def response
+  l.110 def basisZero
+  l.111 def prepared
+  l.112 def coherent
+  l.113 def degraded
+  l.116 def retained
+  l.117 def decodePlus
+  l.120 def withBlank
+  l.123 def recordBranch
+  l.127 theorem preparation_from_blank
+  l.131 theorem xz_anticommute
+  l.134 theorem x_preserves_norm
+  l.137 theorem z_preserves_norm
+  l.140 theorem prepared_density
+  l.144 theorem switched_density
+  l.152 theorem dephase_preserves_diagonal
+  l.154 theorem dephase_preserves_mass
+  l.157 theorem response_mass_conserved
+  l.169 theorem dephase_response
+  l.174 theorem prepared_matrix
+  l.175 theorem coherent_matrix
+  l.176 theorem degraded_matrix
+  l.179 theorem branch_weights_unchanged
+  l.183 theorem prepared_response
+  l.184 theorem coherent_response
+  l.185 theorem degraded_response
+  l.189 theorem no_diagonal_response_decoder
+  l.196 theorem dephase_merges_preparations
+  l.200 theorem no_uniform_dephase_inverse
+  l.206 theorem retained_response_exact
+  l.211 theorem dephase_keeps_response_iff
+  l.222 theorem recordBranch_involution
+  l.226 theorem recording_reduces_to_dephase
+  l.235 theorem joint_reversal_restores_control
+  l.239 theorem prepared_control_embedding
+  l.241 theorem coherent_control_embedding
+  l.246 def operations
+  l.249 theorem operations_trace_iff
+  l.258 theorem orders_negate
+  l.265 theorem hadamard_prepares
+  l.273 theorem switched_course
+  l.282 theorem x_norm_invariant
+  l.286 theorem z_norm_invariant
+  l.289 theorem x_norm_along
+  l.292 theorem z_norm_along
+  l.297 theorem dephase_dephase
+  l.300 theorem run_settles
+  l.306 theorem settles
+  l.310 theorem diagonal_invariant
+  l.315 theorem mass_invariant
+  l.318 theorem diagonal_along
+  l.322 theorem mass_along
+  l.326 theorem prepared_run_diagonal
+  l.329 theorem coherent_run_diagonal
+  l.334 theorem response_settles
+  l.340 theorem plus_kept_iff
+  l.347 theorem plus_minus_along
+  l.353 theorem prepared_ne_coherent
+  l.356 theorem merges
+  l.359 theorem process_merges
+  l.363 theorem not_lossless
+  l.367 theorem runs_meet
+  l.372 theorem no_restore_along
+  l.379 theorem prepared_run
+  l.385 theorem coherent_run
+  l.390 theorem prepared_run_response
+  l.397 theorem coherent_run_response
+  l.404 theorem no_diagonal_decoder_along
+  l.416 theorem returns
+  l.422 theorem recording_dephases
+  l.431 theorem control_returns
+  l.438 theorem prepared_reading
+  l.444 theorem coherent_reading
+
+## DrawHistory.lean  (272 lines)
+
+### `both_outcomes`
+- pass a: S: `history_decides` (l. 149) maintains at least x under H when Meets, Keeps and H+y≤x≤hi hold, and reaches g 0 forever after T when H′ exceeds all giving up to hi for an initial T≥x−H′+1 steps then returns to H≥g 0. These are sufficient histories. B: `Loop.two_paths` (l. 247) gives the two outcomes from eight.
+- pass b: S: `history_decides` (l. 149) is a conjunction of two outcomes under the same later draw H for the same start x: under the raised-then-returned schedule the level is g 0 from T on, and under H all along it never falls below x. `histories_differ` (l. 162): with g 0 < x the first is strictly below the second at every step from T. `two_levels` (l. 129) gives a held level and an inflow rest under one draw. It is a dichotomy decided by history, not an exactly-when. B: `Loop.two_paths` (l. 247), `Loop.bounds` (l. 259).
+
+### `no_return`
+- pass a: S: `inflow_kept` (l. 74) concludes conditional trapping at the low level. `leaving_needs_a_lower_draw` (l. 85) produces an intervening draw below g 0 for every actual departure. This is a necessary condition for departure.
+- pass b: S: `inflow_kept` (l. 74): a level at g 0 at step T, with every draw from T on at least g 0, is g 0 at every later step. `leaving_needs_a_lower_draw` (l. 85): a level at the inflow at T that is not the inflow at T + k had a draw below g 0 at some step between. `history_decides` (l. 149): after draws above every giving for T ≥ x - H' + 1 steps and then H ≥ g 0, the level is g 0 forever. These are concluded, from the premise that later draws stay at least g 0. They are at a low level (the inflow rest), not at the loss of something that gives. The account says leaving is not shown to be recovery.
+
+### `rank`
+- pass a: S: `collapses` (l. 112) gives the deadline x−H+1 in natural subtraction assuming g z<H throughout z≤hi and x≤hi.
+- pass b: S: `collapses` (l. 112) is an explicit deadline: under a draw above every giving up to hi, the level from x ≤ hi is the inflow from step x - H + 1 on (through RegimeMargin.Adjusted.taken_whole). `inflow_from` (l. 101): once the run is at or below H at step m, it is the inflow from m + 1. B: `Loop.bounds` (l. 259): under draw 4, every level up to 8 is 1 from step 9.
+
+### `closed_region`
+- pass a: S: `inflow_rests` (l. 61) makes inflow a fixed point if H≥g 0. `two_levels` (l. 129) also keeps the orbit above its high start given Meets, Keeps and H+y≤x≤hi.
+- pass b: S: `inflow_stays` (l. 66): with g 0 ≤ H, g 0 is a fixed point of the step. `inflow_kept` (l. 74): {g 0} is kept under any schedule of draws at least g 0. `two_levels` (l. 129) / RegimeMargin.holds: the band at or above x is never left, with Keeps g H hi a premise.
+
+### `moves`
+- pass a: S: `underDraws` (l. 50) admits a draw schedule. `inflow_kept` (l. 74) covers every such schedule staying at or above inflow from a time at which the level equals inflow.
+- pass b: N: no Process with moves, policy or allowed set. The schedule of draws Hs is a function handed in. Read as choices: inflow_kept (l. 74) holds for every schedule whose draws from T on are at least g 0, and history_decides (l. 149) is about one schedule, raised for T steps and then brought back.
+
+### `reading`
+- pass a: N: Not found in the statements read.
+- pass b: N: nothing in the module is a reading, an observation or a rule made from what is registered.
+
+### declarations of DrawHistory.lean (by script)
+  l.50 def underDraws
+  l.55 theorem to_inflow
+  l.61 theorem inflow_rests
+  l.66 theorem inflow_stays
+  l.74 theorem inflow_kept
+  l.85 theorem leaving_needs_a_lower_draw
+  l.101 theorem inflow_from
+  l.112 theorem collapses
+  l.129 theorem two_levels
+  l.136 theorem underDraws_constant
+  l.149 theorem history_decides
+  l.162 theorem histories_differ
+  l.177 def giving
+  l.180 theorem below_four
+  l.193 theorem meets_two
+  l.205 theorem meets_three
+  l.216 theorem keeps_two
+  l.229 theorem keeps_three
+  l.242 def draws
+  l.247 theorem two_paths
+  l.259 theorem bounds

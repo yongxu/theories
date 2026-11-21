@@ -1,0 +1,364 @@
+# Task file: EDGE, second batch, reader whole-c-edge2-11
+
+Your 3 modules. In each, BOTH earlier passes found a statement with both outcomes and NEITHER found a law of ending within a bound. For orientation only, what they said (where to look, not evidence).
+
+## SharedCodes.lean  (1675 lines)
+
+### `both_outcomes`
+- pass a: S: `run_kept_iff` (l. 515) characterizes keeping group agreement in a step given prior agreement and a member distinct from the hearer: adoption at the sense by a group member must copy the already-agreed form.
+- pass b: S (general, of keeping against losing agreement or distinctions). `kept_iff` (l. 303) and `run_kept_iff` (l. 515): a group's agreement is kept by a hearing exactly unless a member hears the sense, the rule takes the form and the speaker's form differs. `keeps_apart_iff` (l. 823): a hearing keeps the hearer's code telling senses apart exactly where the form taken is not one the hearer gives another sense. `agrees_every_start_iff` (l. 388) and `follow_agrees_iff` (l. 674) are further exactly-when statements. No dichotomy of going on against ending.
+
+### `no_return`
+- pass a: S: `run_imposed_stays` (l. 1069) concludes that every hearing run retains an everywhere-imposed code; `omitted_rest` (l. 1240) permanently excludes a target different from the resolved sense under exact write-back and a distinct repertoire.
+- pass b: S, concluded and not at a level. `all_agree_rest` (l. 529): once all formations agree at `m`, no form at `m` changes on any run under any rule. `held_stays` (l. 1063) and `run_imposed_stays` (l. 1069): an imposed code stays at every later step and every merge stays. `outside_needed` (l. 1078): if every formation inside and outside the group holds the imposed form at `m`, every formation holds it at every later step. `resolved_alike_merged` (l. 1202) and `no_reading_recovers` (l. 1210): earlier records are never recovered. `omitted_rest` (l. 1240): the omitted target is never a candidate again. The return needs coining, a step hearing lacks (`coined_returns`, l. 1368).
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N: no bound, falling variant or deadline. D: the account says the time agreement takes is not derived (l. 146-147).
+
+### `closed_region`
+- pass a: S: `all_agree_rest` (l. 529) keeps unanimous forms at a sense under every later hearing; `written_rests` (l. 1183) fixes all positive-time records to the singleton written resolution under exact writing and a distinct repertoire.
+- pass b: S: `agreement_kept` (l. 296) and `run_agreement_kept` (l. 495): a group's agreement is closed under hearings closed for it. `all_agree_rest` (l. 529): agreement of all is a rest. `held_stays` (l. 1063): a form all hold stays under every order and rule. `written_rests` (l. 1183) and `kept_rests` (l. 1294): the resolution written back is a rest of `nextCohort` and of `keep`. `agrees_only_fixed` (l. 905): a symmetric start stays symmetric under a kept symmetry, via `Law.KeepsRelation.run` from `Becoming.IdentificationRuns`.
+
+### `moves`
+- pass a: S: `run_kept` (l. 485) keeps each agreeing member’s form on every hearing run whose later hearings of that sense by group members come from group members, under any adoption rule.
+- pass b: S: `process adopt : Process (I → M → F) (Hearing I M)` (l. 459); each step is a chosen hearing. Laws about every choice: `run_agreement_kept` (l. 495) keeps agreement along every run whose hearings are closed for the group; `all_agree_rest` (l. 529) holds on every run under every rule; `run_imposed_stays` (l. 1069) holds along every run from an imposition. About some choice: `run_shared_iff_in_use` (l. 637), where a list holds every formation: some run brings all to form `x` at `m` exactly where some formation holds `x` there at the start.
+
+### `reading`
+- pass a: S: `every_cohort_resolves` (l. 1193) keeps the initial resolution at every generation under exact writing, distinct repertoire and decidable sense equality. `covered_rest` (l. 1229) needs target availability and coverage by the original bearing records to identify that resolution with the target.
+- pass b: S: `TellsApart` (l. 700), `ReadsAs` (l. 704). `reads_iff` (l. 714): a reader whose code tells senses apart reads another's form for `m` as `m`, and only `m`, exactly where their codes agree at `m`; `reads_other` (l. 721): otherwise it reads another sense. Records read by `resolve` (l. 1141) decide what each next generation writes (`nextCohort`, l. 1147). `written_rests` (l. 1183): a resolution written back is the only record from the next generation on. `no_reading_recovers` (l. 1210): every reading of later records reads two histories that resolved alike as one. `omitted_rest` (l. 1240): where the records resolve to `e ≠ t`, `t` is no candidate at any later generation. `renamed_carries_iff` (l. 746): a renamed description carries a law exactly where the description does.
+
+### declarations of SharedCodes.lean (by script)
+  l.176 theorem Commutes.keepsRelation
+  l.187 structure Hearing
+  l.192 theorem bool_false_ne_true
+  l.201 def hearBy
+  l.210 def always
+  l.213 abbrev hear
+  l.218 theorem hearBy_other
+  l.228 theorem hearBy_taken
+  l.234 theorem hearBy_refused
+  l.244 theorem hearBy_held
+  l.256 theorem changes_iff
+  l.275 def AgreeAt
+  l.279 def Closed
+  l.284 theorem kept_at
+  l.296 theorem agreement_kept
+  l.303 theorem kept_iff
+  l.330 def runBy
+  l.336 theorem runBy_held
+  l.347 def back
+  l.352 def origin
+  l.356 theorem back_held
+  l.364 theorem hear_back
+  l.377 theorem run_origin
+  l.383 def marked
+  l.388 theorem agrees_every_start_iff
+  l.403 def broadcast
+  l.405 theorem back_to
+  l.407 theorem back_from
+  l.414 theorem broadcast_holds
+  l.443 theorem broadcast_reaches
+  l.450 theorem shared_iff_in_use
+  l.459 def process
+  l.462 theorem step_at
+  l.467 theorem step_from
+  l.474 theorem window_runBy
+  l.485 theorem run_kept
+  l.495 theorem run_agreement_kept
+  l.504 theorem run_changes_iff
+  l.515 theorem run_kept_iff
+  l.529 theorem all_agree_rest
+  l.535 theorem pair_kept
+  l.550 theorem run_held
+  l.557 theorem run_origin_window
+  l.562 def hearings
+  l.567 theorem hearings_congr
+  l.574 theorem hearings_shift
+  l.580 theorem window_hearings
+  l.588 theorem state_hearings
+  l.595 def heardFrom
+  l.601 def hearingRun
+  l.609 theorem run_agrees_every_start_iff
+  l.622 def listed
+  l.628 theorem hearings_listed
+  l.637 theorem run_shared_iff_in_use
+  l.662 def follow
+  l.666 theorem follow_state
+  l.674 theorem follow_agrees_iff
+  l.700 def TellsApart
+  l.704 def ReadsAs
+  l.708 theorem self_reads_iff
+  l.714 theorem reads_iff
+  l.721 theorem reads_other
+  l.727 theorem renamed_tells_apart_iff
+  l.735 theorem renamed_goAlike_iff
+  l.746 theorem renamed_carries_iff
+  l.761 theorem course_states_iff
+  l.781 theorem course_read
+  l.805 theorem code_read_every
+  l.823 theorem keeps_apart_iff
+  l.840 theorem run_keeps_apart_iff
+  l.853 theorem run_reads_kept
+  l.865 theorem run_reads_iff
+  l.882 def Relabels
+  l.886 def KeepsExchange
+  l.891 def KeepsRenaming
+  l.897 theorem keeps_both
+  l.905 theorem agrees_only_fixed
+  l.914 theorem never_agrees
+  l.921 theorem never_agrees_of_both
+  l.927 def exchange
+  l.932 theorem pair_agrees_only_fixed
+  l.940 theorem pair_never_agrees
+  l.951 theorem hearBy_keeps_renaming
+  l.975 theorem hear_keeps_renaming
+  l.980 theorem run_renamed
+  l.995 theorem reached_differ_iff
+  l.1007 theorem run_renamed_tells_apart_iff
+  l.1029 def impose
+  l.1033 def Loses
+  l.1036 theorem impose_agrees
+  l.1040 theorem impose_keeps_exchange
+  l.1046 theorem impose_privileges_forms
+  l.1052 theorem impose_loses_iff
+  l.1056 theorem source_loses_nothing
+  l.1063 theorem held_stays
+  l.1069 theorem run_imposed_stays
+  l.1078 theorem outside_needed
+  l.1088 theorem outside_returns
+  l.1106 theorem run_from_imposition
+  l.1141 def resolve
+  l.1147 def nextCohort
+  l.1154 def keep
+  l.1161 def WritesExactly
+  l.1166 theorem resolve_mem
+  l.1169 theorem nextCohort_of_resolved
+  l.1175 theorem resolve_written
+  l.1183 theorem written_rests
+  l.1193 theorem every_cohort_resolves
+  l.1202 theorem resolved_alike_merged
+  l.1210 theorem no_reading_recovers
+  l.1219 theorem nextCohort_merges
+  l.1229 theorem covered_rest
+  l.1240 theorem omitted_rest
+  l.1252 theorem kept_bars
+  l.1258 def adding
+  l.1261 theorem adding_prefix
+  l.1271 theorem added_never_replaced
+  l.1277 theorem keep_of_resolved
+  l.1283 theorem resolve_kept
+  l.1294 theorem kept_rests
+  l.1323 theorem synonyms_read_iff
+  l.1331 theorem one_form_reads_iff
+  l.1344 def coin
+  l.1347 theorem coin_at
+  l.1350 theorem coin_other_sense
+  l.1357 theorem runBy_other_sense
+  l.1368 theorem coined_returns
+  l.1383 def holders
+  l.1388 def majority
+  l.1394 theorem majority_held
+  l.1406 def three
+  l.1409 def two
+  l.1413 theorem odd_agrees
+  l.1420 theorem even_rests
+  l.1429 def start
+  l.1432 theorem start_symmetric
+  l.1437 theorem order_decides
+  l.1445 def crossing
+  l.1447 theorem crossing_keeps_exchange
+  l.1450 theorem crossing_keeps_renaming
+  l.1454 theorem crossing_never_agrees
+  l.1460 def centre
+  l.1462 theorem bor_comm
+  l.1469 def preferred
+  l.1472 def ordered
+  l.1474 theorem centre_keeps_renaming
+  l.1477 theorem preferred_keeps_exchange
+  l.1484 theorem ordered_keeps_renaming
+  l.1489 theorem three_agree
+  l.1496 theorem centre_breaks_exchange
+  l.1502 theorem preferred_breaks_renaming
+  l.1507 theorem ordered_breaks_exchange
+  l.1513 def crossed
+  l.1518 theorem homonym
+  l.1540 inductive Node
+  l.1545 def rank
+  l.1550 def couples
+  l.1562 theorem joined
+  l.1573 def least
+  l.1579 theorem least_coupled
+  l.1585 theorem least_least
+  l.1593 theorem stays_a
+  l.1597 theorem stays_b
+  l.1605 theorem never_agree
+  l.1621 def offersOne
+  l.1623 def rep
+  l.1625 theorem exact
+  l.1631 theorem zero_ne_one
+  l.1633 theorem distinct
+  l.1637 theorem earlier_rests
+  l.1644 theorem taken_up_locks
+  l.1652 def uptake
+  l.1666 theorem uptake_loses
+
+## Significance.lean  (516 lines)
+
+### `both_outcomes`
+- pass a: S: `Web.keeps_iff_retains` (l. 333) characterizes keeping by retaining both ways under unrestricted significance. B: `Clearing.time_bounded_permits` (l. 438) gives retention under the two-step rule and failed retention under unrestricted significance for the same withheld-level comparison.
+- pass b: S: `Web.retains_iff_includes` (l. 309) and `Web.keeps_iff_retains` (l. 333) are exactly-whens of retaining under `Unrestricted`. `unrestricted_iff_not_rival` (l. 260): where significance is decided, the condition holds iff no rival. These are not dichotomies of going on and ending. B: `Clearing.time_bounded_permits` (l. 438): in one model the clearer's part retains under `boundedInTime 1` and does not retain under `Unrestricted`.
+
+### `no_return`
+- pass a: B: `Preemption.not_undermining_yet_loses` (l. 483) concludes that false is unsupported at every successor step of the given web, though admitted at every step on the withheld levels, assuming withheld levels and unrestricted significance.
+- pass b: B: `Preemption.not_undermining_yet_loses` (l. 483), concluded: in the built web, `false` is admitted at every step without the drawer's part and supported at no step after the first with it, while the drawer's event is active and not undermining. Under `Unrestricted` the part does not retain. `Clearing.clearer_loses_dweller` (l. 411): with the clearer's part the dweller is unsupported (used through `unsupported_with`). No general point of no return.
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N.
+
+### `closed_region`
+- pass a: N: Not found in the statements read.
+- pass b: N: no invariant or region closed under steps. `rival_of_outside` (l. 189) and `bounded_rival` (l. 196) concern a region of standpoints, steps and formations within which a significance holds, not closure under steps.
+
+### `moves`
+- pass a: N: Not found in the statements read.
+- pass b: N: no `Process` with moves, no policy and no allowed set. Two level paths `l l' : Nat → C → Nat` are compared, and in the witnesses a part is present or withheld (`flow.WithheldLevels`), which is a premise, not a choice among steps.
+
+### `reading`
+- pass a: S: `Valuation.premises_of_unrestricted` (l. 372) derives living significance, self-significance, both neutralities and a seed given a living claim and standpoint, when unrestricted significance at each claim’s assigned formation and step implies its valuation.
+- pass b: S: `ReadsOnlyDynamics` (l. 277) is a statement whose truth does not change with the significance. `ReadsOnlyDynamics.admits_rival` (l. 288): such a statement, holding with one significance, holds with a bounded rival. `ReadsOnlyDynamics.not_entails` (l. 297): given a standpoint and a formation, if such a statement entails `Unrestricted`, it holds of no dynamics. `Web.retains_agree` (l. 319): under `Unrestricted`, retaining from any two standpoints agrees. The significance `sig` is a free predicate, not an observation.
+
+### declarations of Significance.lean (by script)
+  l.124 theorem here
+  l.182 def Unrestricted
+  l.189 theorem rival_of_outside
+  l.196 theorem bounded_rival
+  l.204 def boundedInTime
+  l.210 theorem bounded_in_time_rival
+  l.221 def Rival
+  l.228 theorem rival_iff_lacks
+  l.234 theorem bounded_is_rival
+  l.240 theorem Unrestricted.not_rival
+  l.246 theorem not_rival_iff
+  l.253 theorem excludes_rivals_iff
+  l.260 theorem unrestricted_iff_not_rival
+  l.270 theorem not_rival_unrestricted_iff_stable
+  l.277 def ReadsOnlyDynamics
+  l.281 theorem readsOnlyDynamics_of
+  l.288 theorem ReadsOnlyDynamics.admits_rival
+  l.297 theorem ReadsOnlyDynamics.not_entails
+  l.309 theorem retains_iff_includes
+  l.314 theorem adds_iff_exceeds
+  l.319 theorem retains_agree
+  l.325 theorem widens_iff_retains_adds
+  l.333 theorem keeps_iff_retains
+  l.342 theorem mixed_iff_adds
+  l.350 theorem Retains.within
+  l.356 theorem UnderminingOn.not_retains_unrestricted
+  l.372 theorem Valuation.premises_of_unrestricted
+  l.383 theorem Web.significant_of_unrestricted
+  l.394 theorem Web.significance_undetermined
+  l.411 theorem clearer_loses_dweller
+  l.423 theorem admits_early
+  l.438 theorem time_bounded_permits
+  l.449 theorem unordered
+  l.465 theorem retains_adds
+  l.483 theorem not_undermining_yet_loses
+
+## Tail.lean  (697 lines)
+
+### `both_outcomes`
+- pass a: S: `TailRuns.indicators_sum` (l. 687) says the eventual-vanishing and never-vanishing indicators of a run’s level sum to one, given FalseRule and VanishRule. The alternatives describe the level sequence and require those decisions.
+- pass b: S: `TailRuns.indicators_sum` (l. 687): given a FalseRule and a VanishRule, for every run of every process and every level map, neverIndicator + vanishIndicator = 1. Exactly one of vanishing and never vanishing is indicated; general, with the two rules as premises. `neverIndicator_add_vanishIndicator` (l. 350) for sequences.
+
+### `no_return`
+- pass a: N: Not found in the statements read.
+- pass b: N: VanishFrom (levels 0 from some point on) is something to decide, not concluded, and no irreversibility is stated.
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N
+
+### `closed_region`
+- pass a: N: Not found in the statements read.
+- pass b: N
+
+### `moves`
+- pass a: N: Not found in the statements read.
+- pass b: N: TailRuns rules quantify over every run of every Process (`FalseRule`, l. 557), but no choice among moves and no law of what a choice keeps.
+
+### `reading`
+- pass a: S: `wholeLaw_reads_from` (l. 152) gives equal exchanges from agreement through t on any tail of conditions if no single condition changes f. `wholeLaw_no_least_coupling` (l. 189) excludes a least sufficient coupling when f differs and the web requires nothing.
+- pass b: S: `wholeLaw_not_through_sensitive` (l. 173), `wholeLaw_not_readsFinitely` (l. 181), `wholeLaw_no_least_coupling` (l. 189): for f ChangedByNoCondition with f α ≠ f β, wholeLaw f does not read through what it is sensitive to, does not read finitely many conditions, and, in a web where nothing is required, the couplings it reads through have no least one. S: `TailRuns.FalseRule` (l. 557) / `falseRule_iff` (l. 589): deciding of every run whether a registered Boolean reg (r.state n) is false throughout is the same as deciding it of every Boolean sequence.
+
+### declarations of Tail.lean (by script)
+  l.94 theorem eq_zero_of_nonzero_false
+  l.99 def levelsFrom
+  l.102 theorem add_eq
+  l.110 def ChangedByNoCondition
+  l.115 theorem ChangedByNoCondition.eq_of_agree_from
+  l.131 theorem ChangedByNoCondition.of_agree_from
+  l.138 def wholeLaw
+  l.146 theorem wholeLaw_nonanticipating
+  l.152 theorem wholeLaw_reads_from
+  l.158 theorem wholeLaw_insensitive
+  l.163 theorem wholeLaw_not_sensitive
+  l.168 theorem wholeLaw_through_from
+  l.173 theorem wholeLaw_not_through_sensitive
+  l.181 theorem wholeLaw_not_readsFinitely
+  l.189 theorem wholeLaw_no_least_coupling
+  l.205 theorem vanishIndicator_changedByNoCondition
+  l.211 theorem tailLaw_eq_wholeLaw
+  l.221 def mixedDecision
+  l.240 def insensitiveDiffersDecision
+  l.254 def notThroughSensitiveDecision
+  l.268 theorem WLPO.of_rule
+  l.282 def vanishesFrom
+  l.285 theorem vanishesFrom_true
+  l.293 theorem vanishesFrom_of
+  l.299 theorem vanishesFrom_never_iff
+  l.306 def neverIndicator
+  l.309 theorem neverIndicator_eq_one
+  l.313 theorem neverIndicator_eq_zero
+  l.319 theorem neverIndicator_eq_of_agree
+  l.337 theorem neverIndicator_changedByNoCondition
+  l.341 theorem neverIndicator_zeros
+  l.345 theorem neverIndicator_ones
+  l.350 theorem neverIndicator_add_vanishIndicator
+  l.364 def neverLaw
+  l.368 theorem neverLaw_nonanticipating
+  l.372 theorem neverLaw_insensitive
+  l.376 theorem neverLaw_not_sensitive
+  l.380 theorem neverLaw_differs
+  l.391 theorem changedByNoCondition_iff_rule
+  l.404 theorem insensitive_differs_iff_rule
+  l.418 theorem not_through_sensitive_iff_rule
+  l.435 def lpoRuleOfVanishDecision
+  l.458 def raisedFrom
+  l.461 theorem raisedFrom_false
+  l.469 theorem raisedFrom_of
+  l.477 def vanishDecisionOfLPORule
+  l.487 def wlpoRuleOfLPORule
+  l.498 theorem LPO.of_rule
+  l.505 theorem vanishDecision_iff_lpoRule
+  l.557 def FalseRule
+  l.562 def TrueRule
+  l.568 def VanishRule
+  l.573 def FalseDecided
+  l.579 def TrueDecided
+  l.584 def FalseRule.sequences
+  l.589 theorem falseRule_iff
+  l.596 theorem trueRule_iff
+  l.602 def VanishRule.sequences
+  l.607 theorem vanishRule_iff
+  l.614 theorem wlpo_iff_runs
+  l.620 theorem lpo_iff_runs
+  l.628 theorem changedByNoCondition_iff_runs
+  l.634 theorem insensitive_differs_iff_runs
+  l.645 theorem not_through_sensitive_iff_runs
+  l.658 theorem insensitive_differs_decides
+  l.666 theorem not_through_sensitive_decides
+  l.678 theorem vanishRule_iff_trueRule
+  l.682 theorem vanish_decides
+  l.687 theorem indicators_sum

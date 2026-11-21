@@ -1,0 +1,10 @@
+I read both modules whole: every statement and docstring of Transmission.lean (1218 lines) and TreeSearch.lean (430 lines), along with many proof bodies. For names used in statements I opened other modules: `Forms`, `Supported` and `Dependent` in Dependence.lean, and `DescendsAt` and `TransmitsWithin` in Evolution.lean. I ran nothing. Every question got an answer; none is U.
+
+What the fourteen questions miss:
+
+1. Transmission.lean has a general principle stated as a theorem. In `World.vacuous_of_drop_invariant` (l. 854), a condition on worlds that does not see one dependence being dropped cannot derive a premise that this drop breaks. Read for the centre, a law that does not register something cannot be what makes that thing hold. The 'reading' question asks for an observation and only half fits this.
+2. Transmission.lean states in general where a new dependence forms by descent: from a giver's drawing on what it did not depend on (`Flow.formed_from_drawing`, l. 771), or from nothing drawn (`World.novel_formed_undrawn`, l. 1067, built).
+3. Transmission.lean shows that 'transmitted from some giver' is strictly weaker than transmission yet keeps the evolution bound (`TwoGivers.twofold`, l. 1186).
+4. Transmission.lean has no process with moves, no share and no irreversibility. Its 'level' laws are bounds that do not rise (`stock_le_start`, l. 863), not running down to an end.
+5. TreeSearch.lean is one built search model. Its 'every run' laws are over runs of a single determined law (`Law.process advance`), so they involve no real choice among steps.
+6. In TreeSearch.lean, 'exhausted is absence within the frontier, not absence' (`exhausted_dead`, l. 194) and 'a positive witness needs no complete map' (`found_without_complete_map`, l. 265) bear on what a reading can decide.

@@ -1,0 +1,432 @@
+# Task file: EDGE, reader whole-c-edge-07
+
+Your 3 modules. For orientation only, what the two passes said of the four marks, of moves and of a reading (where to look, not evidence).
+
+## Entropy.lean  (2247 lines)
+
+### `both_outcomes`
+- pass a: S: `Flow.Reverses.gainlessOn_iff` (l. 249) characterizes when an actual reverse keeps gainlessness given gainlessness of the forward exchange: exactly when the forward exchange conserves on that family. B: `Passing.passes` (l. 1878) and `Entropy.Settling.settles` (l. 2031) exhibit recurring and ceasing change in separate conserving flows.
+- pass b: S: `Flow.Reverses.gainlessOn_iff` (l. 249): under the first law, the reverse of an exchange is within the law exactly when the exchange conserves. `Flow.dissipatesOn_iff_recorded` (l. 491) and `Flow.dissipatesOn_iff_conserved` (l. 797) are exact characterisations of dissipation. For going on against ending, `Flow.Balances.rests_of_never_revisits` (l. 1225) and `Flow.Balances.unending_change_revisits` (l. 1235) are two implications (rest, or not-never-revisits under double negation), not one iff. B: `Passing.passes` (l. 1878), where change goes on and revisits, against `Entropy.Settling.settles` (l. 2031), where it rests: two built models, not one.
+
+### `no_return`
+- pass a: S: `Flow.Dissipative.irreversible` (l. 267) excludes a reverse for a positive exchange of a present formation on a step with a distinct closed family under dissipation. `Flow.Balances.never_revisits` (l. 1181) rules out returning to a previous configuration after an intervening change under balance and continued local dissipation.
+- pass b: S: `Flow.Dissipative.irreversible` (l. 267): under dissipation, across a step at which a family without repetition is closed, no exchange is reversed at any step (concluded from the premise Dissipative). `Flow.Balances.never_revisits` (l. 1181): dissipated on from T, the family never revisits a configuration. `World.rests_of_never_revisits` (l. 1659): in a finite, embodied, balanced, gainless world that never revisits, neither arising nor ceasing recurs. These are concluded from dissipation or never-revisiting, about exchanges and configurations; none is at a low level or at the loss of a giver.
+
+### `rank`
+- pass a: S: `Flow.Balances.history_within` (l. 734) bounds exchanges by takers, cumulative dissipation and initial stock under balance and tail dissipation. `Web.changes_within` (l. 1144) bounds changing steps by the length of any covering configuration list on a nonrevisiting tail.
+- pass b: S: `Web.changes_within` (l. 1144): never revisiting, with the configuration in a list E from T, the changing steps of any stretch number at most E's length. `Flow.Balances.changes_within` (l. 1202): under the first law that bound is the configurations within the stock at T. `Flow.Balances.changes_within_conserving` (l. 1212): under conservation it is the configurations totalling exactly that stock (`configurations_exact`, l. 1020). `Flow.Balances.exchanges_within_of_carries` (l. 1604) bounds the steps of exchange. `Web.Arrow` (l. 1246) is a non-falling quantity that rises at every change, and `Flow.Balances.arrow_stops` (l. 1468) says it stops change under the first law. The bound is a count of changes, not a falling variant to a deadline.
+
+### `closed_region`
+- pass a: S: `Flow.Balances.held` (l. 1443) keeps the configurations of a balanced family in the list with total at most its starting stock under gainlessness on the tail. `Flow.closedAt_withRecord` (l. 431) preserves and reflects exchange closure.
+- pass b: S: `Flow.Balances.held` (l. 1443): in a balanced flow gaining nothing from T, the configuration at every T + n lies in `configurationsWithin cs.length (W.stock cs T)`. `Flow.Balances.orbit_held` (l. 1451) states the same for the orbit of `next`. `Flow.Balances.recurs` (l. 1461): from every step on, the configurations take one value at two steps. `Flow.Balances.returns_of_conserving` (l. 1480): a determined law merging nothing returns to the start.
+
+### `moves`
+- pass a: N: Not found in the statements read.
+- pass b: N: Flows and webs are handed in, and change as a function of the configuration is one law `next` (`Web.Determined`, l. 1302). No choice among steps, policy or allowed set was found in any statement.
+
+### `reading`
+- pass a: S: `Flow.CarriesHistory` (l. 1551) requires a single configuration reading giving the exchange count at every time since T. `Flow.Balances.arrow_of_carries` (l. 1629) obtains a nondecreasing configuration reading strictly rising on changes from balance and that premise.
+- pass b: S: `Flow.CarriesHistory` (l. 1551) defines a reading `read : List Nat → Nat` of the configuration that gives the exchange count. `Flow.Balances.never_revisits_of_carries` (l. 1578): in a balanced flow, a family whose configuration carries its history never revisits a configuration. `Flow.Balances.exchange_stops_of_carries` (l. 1616): with gainlessness from T as well, exchange does not recur. `World.forgets` (l. 1690): in a finite, balanced, gainless world where exchange recurs, from no step does the configuration carry the history. `Web.config` (l. 863), the level of each member, is what the family registers. The reading is a function of the configuration, not an observation class.
+
+### declarations of Entropy.lean (by script)
+  l.146 def GainlessOn
+  l.151 def ConservingOn
+  l.156 def Gainless
+  l.160 def Conserving
+  l.165 def Reverses
+  l.172 def exchanges
+  l.178 theorem DissipatesOn.gainlessOn
+  l.181 theorem Dissipative.gainless
+  l.184 theorem ConservingOn.gainlessOn
+  l.187 theorem Conserving.gainless
+  l.191 theorem eq_zero_of_add_sign_le
+  l.197 theorem DissipatesOn.idle_of_conserving
+  l.205 theorem Reverses.mem
+  l.209 theorem Reverses.mem_back
+  l.213 theorem Reverses.take_total
+  l.217 theorem Reverses.give_total
+  l.222 theorem Reverses.taken
+  l.227 theorem Reverses.given
+  l.234 theorem Balances.reverse_restores
+  l.242 theorem Reverses.closedAt
+  l.249 theorem Reverses.gainlessOn_iff
+  l.259 theorem Reverses.idle_of_dissipates
+  l.267 theorem Dissipative.irreversible
+  l.286 theorem Reverses.exchanges_eq
+  l.297 theorem Balances.exchanges_of_change
+  l.315 theorem Balances.restores_levels_not_history
+  l.328 def withRecord
+  l.338 def recorded
+  l.342 def unitRecord
+  l.347 def RecordsOn
+  l.354 def Web.withRecord
+  l.370 theorem distinct_withRecord
+  l.375 theorem total_withRecord
+  l.380 theorem sign_le_of
+  l.387 theorem sign_exchange_iff
+  l.401 theorem recorded_succ
+  l.408 theorem balances_withRecord
+  l.418 theorem balancesOn_withRecord
+  l.431 theorem closedAt_withRecord
+  l.444 theorem gainlessOn_withRecord_iff
+  l.467 theorem dissipatesOn_iff_unitRecord
+  l.475 theorem unitRecord_records
+  l.480 theorem DissipatesOn.of_recorded
+  l.491 theorem dissipatesOn_iff_recorded
+  l.501 theorem Dissipative.of_recorded
+  l.510 theorem dissipative_iff_unitRecord
+  l.521 theorem Balances.lowered_by
+  l.539 theorem Balances.nonrising
+  l.547 theorem Balances.falls_by_record
+  l.554 theorem RecordsOn.exchanges_le
+  l.562 def lost
+  l.568 def dissipated
+  l.577 def inflow
+  l.581 theorem gainlessOn_iff_inflow
+  l.589 theorem replenishment_le_inflow
+  l.599 theorem gained_le_inflow
+  l.604 theorem GainlessOn.replenishment_le
+  l.612 theorem GainlessOn.replenishment_lost
+  l.621 theorem Balances.stock_gained
+  l.639 theorem Balances.stock_inflow
+  l.646 theorem Balances.stock_over_inflow
+  l.657 theorem Balances.stock_lost
+  l.664 theorem DissipatesOn.takers_le_lost
+  l.672 theorem DissipatesOn.exchanges_le_takers
+  l.682 theorem ConservingOn.lost_zero
+  l.688 theorem dissipated_succ
+  l.693 theorem dissipated_mono
+  l.699 theorem DissipatesOn.dissipated_rises
+  l.707 theorem Balances.stock_dissipated
+  l.721 theorem Balances.dissipated_le
+  l.726 theorem dissipated_zero
+  l.734 theorem Balances.history_within
+  l.744 theorem Balances.loss_ceases
+  l.758 def residue
+  l.764 theorem conservingOn_withRecord_iff
+  l.786 theorem GainlessOn.conserves_residue
+  l.797 theorem dissipatesOn_iff_conserved
+  l.810 theorem GainlessOn.residues_lost
+  l.832 theorem replenishment_lost_of_le
+  l.839 theorem DissipatesBy.uptake_le_lost
+  l.852 theorem uptake_within_dissipated
+  l.863 def Web.config
+  l.867 def Web.Changes
+  l.875 def Web.Revisits
+  l.879 def splits
+  l.884 def EntropyLists.joinMap
+  l.890 def configurations
+  l.896 def configurationsWithin
+  l.899 theorem EntropyLists.mem_joinMap
+  l.904 theorem head_splits
+  l.908 theorem mem_splits
+  l.914 theorem mem_configurations
+  l.919 theorem mem_configurationsWithin
+  l.923 theorem EntropyLists.mem_append_cases
+  l.931 theorem mem_joinMap_cases
+  l.938 theorem EntropyLists.distinct_append
+  l.949 theorem distinct_joinMap
+  l.961 theorem sum_of_mem_splits
+  l.969 theorem splits_apart
+  l.976 theorem distinct_splits
+  l.985 theorem total_of_mem_configurations
+  l.996 theorem length_of_mem_configurations
+  l.1007 theorem distinct_configurations
+  l.1020 theorem configurations_exact
+  l.1031 theorem configurations_examples
+  l.1035 theorem distinct_downFrom
+  l.1040 theorem distinct_configurationsWithin
+  l.1049 theorem config_total
+  l.1055 theorem config_within
+  l.1063 theorem config_exact
+  l.1071 theorem level_of_config
+  l.1077 theorem changes_of_member
+  l.1086 theorem changes_member
+  l.1103 theorem seen_changes
+  l.1144 theorem changes_within
+  l.1151 theorem rests_of_never_revisits
+  l.1163 theorem nonrising_from
+  l.1169 theorem nonrising_between
+  l.1181 theorem Balances.never_revisits
+  l.1202 theorem Balances.changes_within
+  l.1212 theorem Balances.changes_within_conserving
+  l.1225 theorem Balances.rests_of_never_revisits
+  l.1235 theorem Balances.unending_change_revisits
+  l.1246 def Web.Arrow
+  l.1252 theorem nonfalling_from
+  l.1258 theorem nonfalling_between
+  l.1265 theorem Web.never_revisits_of_arrow
+  l.1282 theorem Balances.rests_of_arrow
+  l.1291 theorem Balances.no_arrow
+  l.1302 def Web.Determined
+  l.1307 def Web.Merges
+  l.1318 theorem merges_of_settles
+  l.1334 theorem changes_persist
+  l.1349 theorem Balances.revisits_of_apart
+  l.1361 theorem Balances.merges_of_never_revisits
+  l.1370 theorem Balances.merges_of_arrow
+  l.1380 theorem Balances.merges_of_dissipates
+  l.1404 theorem Revisits.recurs
+  l.1416 theorem Arrow.marks
+  l.1421 theorem Merges.law
+  l.1428 theorem Determined.orbit
+  l.1443 theorem Balances.held
+  l.1451 theorem Balances.orbit_held
+  l.1461 theorem Balances.recurs
+  l.1468 theorem Balances.arrow_stops
+  l.1480 theorem Balances.returns_of_conserving
+  l.1495 theorem Balances.present_forgets
+  l.1509 theorem Balances.not_conserving_of_arrow
+  l.1517 theorem Balances.not_conserving_of_dissipates
+  l.1529 theorem mark_mono
+  l.1539 def exchangeCount
+  l.1543 theorem history_mono
+  l.1551 def CarriesHistory
+  l.1556 theorem exchanges_pos
+  l.1567 theorem CarriesHistory.changes
+  l.1578 theorem Balances.never_revisits_of_carries
+  l.1604 theorem Balances.exchanges_within_of_carries
+  l.1616 theorem Balances.exchange_stops_of_carries
+  l.1629 theorem Balances.arrow_of_carries
+  l.1659 theorem rests_of_never_revisits
+  l.1674 theorem arising_revisits
+  l.1681 theorem never_revisits
+  l.1690 theorem forgets
+  l.1701 theorem no_arrow
+  l.1715 def holds
+  l.1723 def side
+  l.1729 def level
+  l.1734 def at_
+  l.1740 def flow
+  l.1746 def web
+  l.1753 def world
+  l.1756 def all
+  l.1759 theorem one_ne_zero
+  l.1761 theorem holds_self
+  l.1765 theorem holds_not
+  l.1769 theorem holds_to_not
+  l.1773 theorem holds_pos
+  l.1779 theorem every
+  l.1784 theorem distinct
+  l.1791 theorem total_at_all
+  l.1796 theorem total_at
+  l.1806 theorem holds_side
+  l.1812 theorem balances
+  l.1818 theorem conserving
+  l.1822 theorem closed
+  l.1825 theorem reverses
+  l.1828 theorem embodied
+  l.1830 theorem mem_alive
+  l.1834 theorem counted
+  l.1846 theorem config_back
+  l.1851 theorem changes
+  l.1857 theorem exchanges_one
+  l.1864 theorem history_grows
+  l.1869 theorem revisits
+  l.1878 theorem passes
+  l.1901 theorem record_needs_both
+  l.1918 theorem no_arrow
+  l.1922 def swap
+  l.1928 theorem swap_side
+  l.1934 theorem determined
+  l.1938 theorem apart
+  l.1947 theorem history_without_arrow
+  l.1962 def settled
+  l.1965 def level
+  l.1970 def flow
+  l.1978 def web
+  l.1985 def world
+  l.1987 theorem balances
+  l.1992 theorem conserving
+  l.1997 theorem closed
+  l.2001 theorem changed
+  l.2005 def rest
+  l.2008 def third
+  l.2017 theorem merges
+  l.2031 theorem settles
+  l.2060 def unit
+  l.2064 def level
+  l.2070 def flow
+  l.2076 def web
+  l.2083 def world
+  l.2085 theorem unit_self
+  l.2087 theorem unit_off
+  l.2089 theorem succ_not_zero
+  l.2092 theorem total_unit
+  l.2100 theorem unit_mem
+  l.2106 theorem sums_eq
+  l.2111 theorem balances
+  l.2138 theorem conserving
+  l.2143 theorem enclosed
+  l.2160 theorem gathers
+  l.2214 theorem level_falls_not_recurring
+  l.2221 theorem level_still_unrefuted
+  l.2229 theorem Balances.level_over_stretch
+  l.2237 theorem config_mem_iff
+
+## Exclusion.lean  (511 lines)
+
+### `both_outcomes`
+- pass a: B: `Excluding.three_courses` (l. 497) exhibits all ending, one competitor ending alongside two continuing members, and all continuing under sharing, in three courses of the same members.
+- pass b: B: `Excluding.three_courses` (l. 497): the same members all end (Exceeding), one is excluded while renewer and first continue (Excluding), or all are supported and continue (Sharing). `Sharing.full_taking_needed` (l. 469). No general 'exactly when'.
+
+### `no_return`
+- pass a: S: `Flow.outrun_below` (l. 138) concludes irreversible low level under gated renewal. `Flow.continuing_ends_taker` (l. 272) separately assumes a competitor cannot resume after stopping.
+- pass b: S: `Flow.outrun_below` (l. 138) concludes that the level stays below m for every k from T+n ('for good'), from gated renewal and balance. `outrun_ends` (l. 156) concludes that every dependent, givers included, is inactive from then on: the loss of what gives. In `continuing_ends_taker` (l. 272) the non-resumption of the taker's activity (`lasting`) is a premise.
+
+### `rank`
+- pass a: S: `Flow.continuing_excludes` (l. 246) rules out a distinct competitor taking at every step of a window of initial level plus one alongside a continuing full taker requiring the gated condition, under balance, acting and dependence.
+- pass b: S: `Flow.outrun_below` (l. 138): ending within n steps from a level below n+m. `Flow.continuing_excludes` (l. 246): no other taker throughout `W.level T c + 1` steps from any T. `continuing_ends_taker` (l. 272): the taker is inactive from `T + W.level T c` on. `alongside_not_all` (l. 288).
+
+### `closed_region`
+- pass a: S: `Flow.level_kept` (l. 300) keeps level at least its initial value under balance and joint uptake within renewal at every step.
+- pass b: S: `Web.active_before` (l. 100): where activity does not resume once it stops, 'active only if active at T+j' is a region every step keeps (via `kept_onward`). `Flow.level_kept` (l. 300): the level at or above its start is kept at every step under joint taking within what is given. `supported_of_within` (l. 339): every formation is supported at every step.
+
+### `moves`
+- pass a: S: `Flow.level_kept_of_plans` (l. 327) preserves initial level under balance if each step realizes a plan with nested, disjoint sibling footprints, whose leaf draws account for taking and whose available units fit the giving.
+- pass b: S: `withinJoint_of_plan` (l. 315) and `level_kept_of_plans` (l. 327): where what formations take is what the leaves of a realized JointPlan draw, with parts' footprints within their whole's and apart and the root's within what is given, the joint draw is within what is given, and under balance the level never falls. B: `Excluding.three_courses` (l. 497): three courses of the same members (all end; one excluded; all share and continue). No `Process S A` with a choice among steps.
+
+### `reading`
+- pass a: S: `Flow.outrun_reading_alike` (l. 173) equates scores reading only the later condition level in two balanced, acting, dependent flows with need-one gated renewal, each starting at most n and its distinct participating rest outrunning renewal for n steps.
+- pass b: S: `Flow.outrun_reading_alike` (l. 173): two flows, each with gated renewal at need one and a part outrunning what is given for n steps from a level at most n. Every score of level histories that reads c only from T+n on scores the two alike, however a member's act or the rest's differs. B: `Excluding.admission_alike` (l. 485): the level paths of Excluding and Sharing include each other and admit every member, while the second ends in one and continues in the other.
+
+### declarations of Exclusion.lean (by script)
+  l.77 theorem mem_of_mem_cons_ne
+  l.82 theorem add_le_total_of_mem
+  l.100 theorem active_before
+  l.113 def TakesAll
+  l.120 theorem rest_le_taken
+  l.128 theorem outrun_excess
+  l.138 theorem outrun_below
+  l.156 theorem outrun_ends
+  l.173 theorem outrun_reading_alike
+  l.195 theorem excess_of_takesAll
+  l.214 theorem full_taking_ends_at
+  l.232 theorem full_taking_ends
+  l.246 theorem continuing_excludes
+  l.259 theorem continuing_excludes_active
+  l.272 theorem continuing_ends_taker
+  l.288 theorem alongside_not_all
+  l.300 theorem level_kept
+  l.306 theorem distinct_of_nodup
+  l.315 theorem withinJoint_of_plan
+  l.327 theorem level_kept_of_plans
+  l.339 theorem supported_of_within
+  l.353 def level
+  l.355 def present
+  l.361 def flow
+  l.365 def web
+  l.370 theorem balances
+  l.374 theorem acting
+  l.379 theorem level_two
+  l.383 theorem dependent
+  l.386 theorem gated
+  l.391 theorem takes_all
+  l.397 theorem continues
+  l.403 theorem first_step
+  l.408 theorem second_lives
+  l.413 theorem second_lasting
+  l.418 theorem ends_by_law
+  l.430 def flow
+  l.442 def web
+  l.452 theorem balances
+  l.454 theorem within
+  l.458 theorem dependent
+  l.463 theorem neither_all
+  l.469 theorem full_taking_needed
+  l.479 theorem admits_all
+  l.485 theorem admission_alike
+  l.497 theorem three_courses
+
+## Feeding.lean  (737 lines)
+
+### `both_outcomes`
+- pass a: S: `Flow.stays_met_iff_at` (l. 346) characterizes continuing to meet a threshold by coverage at every balanced step. B: `Redundant.either_suffices` (l. 667) and `neither_ends` (l. 679) distinguish ongoing consumer activity with either feeder from ending with neither.
+- pass b: S: `Flow.stays_met_iff_at` (l. 346), `Flow.meets_over_iff_at` (l. 356) and `Flow.unfed_meets_iff_at` (l. 381) are exactly-when statements of a requirement staying met or failing, general for balanced flows. B: in Redundant, `either_suffices` (l. 667: active and supported at every step) against `neither_ends` (l. 679: active at the first step only).
+
+### `no_return`
+- pass a: S: `Flow.depleted_keeps_nothing` (l. 171) concludes that a zero level after giving precludes any positive following of that gift at every later endpoint, even if stock is replenished.
+- pass b: S: `Flow.depleted_keeps_nothing` (l. 171): where the condition is depleted at a step after the giving and up to t, no following keeps any of the amount given standing at t. This is concluded, about a carried amount. B: `Redundant.neither_ends` (l. 679): with neither feeder the consumer is active at step 0 and at no later step, and its run of consecutive active steps is at most the store's starting level. `Provision.through_store` (l. 559): the parent is not active from step 1 on.
+
+### `rank`
+- pass a: S: `Flow.fed_beyond_level_at` (l. 401) exhibits a supported feeder within a stretch longer than initial stock if every step balances, givers are supported, and the consumer requires and takes throughout.
+- pass b: S: `Flow.fed_beyond_level_at` (l. 401): consuming at more steps than the starting level forces a supported feeder, so without one consumption lasts at most the level. B: `Redundant.neither_ends` (l. 679), through Flow.Balances.consumption_ends_with_feeders, which is stated in another module not opened here: n consecutive active steps implies n ≤ level 0.
+
+### `closed_region`
+- pass a: S: `Flow.closedAcross_within` (l. 292) proves a formation's delayed feeding closure closed under feeding across steps.
+- pass b: S: `Flow.closedAcross_within` (l. 292): the closure across steps is closed under feeding across steps. `Flow.beyond_gives_nothing_across` (l. 297): what lies beyond it gives nothing at any step to a condition carried to a step at which a member requires it. B: `Provision.young_alone` (l. 543): the young alone is closed under feeding.
+
+### `moves`
+- pass a: N: Not found in the statements read.
+- pass b: N: there is no choice among steps. Redundant.flow a b is parametrized by which feeders give, but that is a family of built configurations, not a process with moves.
+
+### `reading`
+- pass a: S: `Flow.carriedTo_iff_stands` (l. 179) equates carrying a positive gift under interval balance with existence of a positive following at the later step; the provenance of the actual units is unspecified.
+- pass b: S, in a narrow sense only. `Flow.FollowsGiven` (l. 129) is described as one way of reading what is given within what stands, since amounts carry no mark of origin. `Flow.can_stand_iff` (l. 154): some following keeps part of an amount given positive at a later step exactly where the amount is positive and the condition stands at every step between. No observation or registered rule decides a selection. N for that.
+
+### declarations of Feeding.lean (by script)
+  l.122 def CarriedTo
+  l.129 def FollowsGiven
+  l.136 theorem carriedTo_of_le
+  l.141 theorem FollowsGiven.antitone
+  l.154 theorem can_stand_iff
+  l.171 theorem depleted_keeps_nothing
+  l.179 theorem carriedTo_iff_stands
+  l.189 theorem carried_of_given_exceeds
+  l.232 def FedAcross
+  l.238 def FedFromAcross
+  l.244 def ClosedAcross
+  l.249 def WithinFeedingAcross
+  l.255 theorem fedBy_iff_fedAcross
+  l.263 theorem FedAcross.of_fedBy
+  l.267 theorem ClosedAcross.fedClosed
+  l.272 theorem WithinFeeding.across
+  l.277 theorem WithinFeedingAcross.refl
+  l.281 theorem WithinFeedingAcross.trans
+  l.287 theorem WithinFeedingAcross.of_fedAcross
+  l.292 theorem closedAcross_within
+  l.297 theorem beyond_gives_nothing_across
+  l.306 theorem fedBy_of_fedAcross_unheld
+  l.318 theorem withinFeedingAcross_iff_of_unheld
+  l.336 theorem meets_after_iff_at
+  l.346 theorem stays_met_iff_at
+  l.356 theorem meets_over_iff_at
+  l.369 theorem active_covered_at
+  l.381 theorem unfed_meets_iff_at
+  l.401 theorem fed_beyond_level_at
+  l.430 theorem meets_without_iff_at
+  l.454 inductive Formation
+  l.459 def gift
+  l.462 def use
+  l.465 def stored
+  l.468 def atFirst
+  l.471 def atThird
+  l.474 def fromThird
+  l.478 def flow
+  l.489 def web
+  l.502 theorem balances
+  l.508 theorem acting
+  l.513 theorem taking
+  l.520 theorem dependent
+  l.528 theorem carried
+  l.538 theorem fed_across
+  l.543 theorem young_alone
+  l.551 theorem parent_beyond
+  l.559 theorem through_store
+  l.579 inductive Formation
+  l.585 def unit
+  l.591 def draw
+  l.599 def stands
+  l.608 def flow
+  l.621 def web
+  l.637 theorem balances
+  l.644 theorem acting
+  l.651 theorem taking
+  l.656 theorem dependent
+  l.667 theorem either_suffices
+  l.679 theorem neither_ends
+  l.698 def firstPart
+  l.704 def secondPart
+  l.710 def bothParts
+  l.718 theorem withheld_either
+  l.728 theorem withheld_both

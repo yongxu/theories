@@ -1,0 +1,103 @@
+## 1. The design in ten lines
+
+1. Two kinds of parent, two stock tokens and six reachable live configurations suffice in the searched family.
+2. A configuration records the brood present, the number of usable tokens and the kind favoured for the next birth.
+3. One eligible parent breeds each generation. Its offspring replace all the adults.
+4. Breeding spends one usable token. A giving parent forgoes its last offspring to recover spent tokens.
+5. The incumbent kind keeps priority on a majority of the brood and loses it on a minority.
+6. On a tie the selector can hold or reverse priority. Its only input is a bit read from the stock.
+7. From one mixed brood, reversing at both ties leaves a living parent and a full stock from which every course ends.
+8. Reversing at the first tie and holding at the second keeps a cycle of one taker, then two givers, then one taker.
+9. In the whole family, if there are `M` possible configurations just after a paid return with offspring, an infinite live course exists exactly when some course can make `M + 1` such returns.
+10. In the smallest witness the decisive difference is which kind has priority *after the stock has been completely restored*.
+
+## 2. Definitions
+
+**Machine.** The kinds are taker T and giver G. Brood capacity `q` is 1 or 2. The stock contains `C ≥ 1` tokens, each usable or spent. Each kind has a need in `1,…,C`. For each pair (parent kind, incumbent kind), an ordered word of one to `q` children specifies the potential brood. A nonempty subset of {favoured, unfavoured} specifies when G invests. One foregone child buys work on up to `g` spent tokens, `1 ≤ g ≤ C`.
+
+**State and Live.** Write `(p, x, r)` for the multiset of at most `q` children now grown, the usable stock `0 ≤ x ≤ C`, and the incumbent `r`. A state is live when a kind present has need at most `x`.
+
+**Allowed and Step.** A threshold `0 ≤ h ≤ C` supplies the bit `[x > h]`. An allowance has one of two forms. A stationary selector assigns a single act, hold or reverse, to each bit. The unrestricted allowance permits both acts at every step. In a live state, an eligible incumbent breeds if present, otherwise the eligible other kind breeds. Exactly one parent gets the breeding place. Transfer one token to spent. If this parent invests, delete its last potential child and convert `min(g, C − (x − 1))` spent tokens back to usable. Admit the remaining brood. Independently, set the next priority from the incumbent’s share of the **present, pre-birth brood**, with the act deciding a tie. If no parent is eligible, the brood becomes empty and stays empty.
+
+**ReturnEdge, Land and W.** A return edge is a nonempty segment of allowed steps ending at its first investment, which must leave at least one child. Earlier steps must be live and have no investment. An investment leaving no child has no successor on this graph. For a fixed allowance `A`, let `L_A` be all targets of these edges, `M_A = |L_A|`, and `W_A(s)` mean that a chain of `M_A + 1` return edges starts at `s`. The first source may be any state. Write `U` for unrestricted choice.
+
+The witness has `q = C = g = 2`, both needs 1, `h = 1`, and G invests whenever it breeds. A favoured T has potential brood TG, an unfavoured T has GG, and G has TG under either priority. Thus giving costs this particular parent its G child. Both compared selectors reverse on a report of “full” and hold otherwise. One always receives the full report. The other receives the actual bit.
+
+## 3. The main statement
+
+**For every machine above, every start `s`, and every stationary allowance `A`, an infinite live course respecting `A` exists exactly when `W_A(s)`.** A singleton allowance decides the actual course. From a start satisfying `W_U`, every ending course has a first state outside `W_U`. At that state every continuation ends.
+
+**Premises.** The two kinds, finite brood and stock, positive needs and unit expenditure, one breeding place, brood tables, investment conditions, conversion rate, one-child cost, order of operations, vote, reading and time-independent allowance are structural. So is the initial state. The first-exit clause restricts its start to `W_U`, a finite condition on return edges. “This course ends” assumes the thing itself only for the first-exit clause, whose conclusion concerns every continuation. The equivalence assumes neither fate. The conversion rate and the ability to sense the level are supplied mechanisms.
+
+**Paper proof.** Starting with `x` usable tokens, survival requires the first investment within `x` generations because each intervening birth spends one and restores none. A course that misses this deadline ends. This also constructs the return edges by bounded exploration. After an investment that leaves offspring, at most one child survives, and the usable stock lies between `g` and `C`. Thus `M_A ≤ 4(C − g + 1)`, accounting for the child’s kind and the new priority. Every infinite course has infinitely many paid returns. Conversely, among the targets of `M_A + 1` returns two coincide. The segment between them can repeat with the same allowed acts because the brood, stock and priority all agree. Finally, a legal live step into `W_U` supplies a continuation from its source. Once a course leaves `W_U`, it cannot re-enter. A terminal state lies outside, giving the first exit.
+
+**Exact decision in the witness.** Start at `(TG, 2, T)`. For *any* sequence of acts, the course lasts exactly when the first act reverses and the second holds. Holding first leaves `(TG, 1, T)`, where T spends the last token whatever the second act. Reversing first leaves `(TG, 1, G)`. The giver now pays and restores the stock. Reversing again leaves `(T, 2, T)`, where the sole T produces TG, re-elects T, and leaves only one token for another taker birth. Holding instead leaves `(T, 2, G)`. The unfavoured T produces GG and the vote sets T. An unfavoured G then produces T, restores the two tokens and the vote sets G. Both votes in this cycle are unanimous. All later acts keep it.
+
+## 4. Which of R1 to R7 it has
+
+**R1–R5 hold in the witness.** Parentage determines every birth. The stock comes back only through a living giver, which loses a child of its own kind. Priority changes which parent breeds and what it can leave. A taker lock also arises from the same start under the constant hold act. T produces the tied brood that re-elects it until the stock runs out. Under constant reversal, the first state beyond recovery occurs at generation 2 with the stock full.
+
+**R6 is partial.** The level bit decides between the two required tie acts. Its sensor and its interpretation are fixed. The machine learns nothing from a failed act.
+
+**R7 is partial.** At generation 2 the lasting choice makes a live brood of two givers possible next generation and recurrently thereafter. From the other full-stock state no course ever produces that brood. The lasting course changes which kinds are present forever. Its repertoire eventually repeats, so it gives no continuing enlargement of the future.
+
+## 5. T1 to T8
+
+**T1.** The finite bound on *paid returns*, and the two contrary tie decisions that distinguish two outcomes at the same restored stock, were not found in what I read. The bound uses expenditure between returns and the reduction in brood size at a return. Cycle detection alone gives a bound on whole configurations and does not give either result. The older unit sweeps supplied a refill function and had no sacrificed offspring.
+
+**T2.** The premise ledger is in part 3. The conversion of spent stock can be traced token by token. What makes a parent capable of that conversion is given. The favourable reading is also given. Its success and its deadline follow from the steps.
+
+**T3.** Each row changes one mechanism at the same start. “Lasts” means an infinite live course under the named selector.
+
+| Change | Always reports full | Actual report |
+|---|---|---|
+| Original machine | Ends | Lasts |
+| At most one potential child before paying | Ends | Ends |
+| At most one actual child after paying, keep first | Ends | Ends |
+| At most one actual child after paying, keep last | Lasts | Lasts |
+| Giving is free, keep the sacrificed child | Lasts | Lasts |
+| Giver pays but returns no stock | Ends | Ends |
+| Remove the one-token expenditure | Lasts | Lasts |
+| Disconnect the brood vote, report a minority at every step | Lasts | Lasts |
+| Disconnect it, report a tie at every step | Lasts | Lasts |
+| Disconnect it, report a majority at every step | Ends | Ends |
+| Both receive the same constant reading, either value | Ends | Ends |
+
+With free giving, the formerly ending course returns to its original mixed brood and priority after two steps. Thinning the *actual* brood checks multiplication independently of making a one-child giver sterile. Part 6 gives a machine where `M` returns are possible and every course under the chosen selector ends. [Witness program](/Users/ren/theories/tmp/fm/centre21/designs/E-smallest-machine/witness.py) · [Output](/Users/ren/theories/tmp/fm/centre21/designs/E-smallest-machine/WITNESS.txt)
+
+**T4.** Both outcomes have the same initial brood, rule, stock and reproduction tables. The actual reading wins. Masking it to full ends at generation 4, masking it to low ends at 2, and inverting it ends at 2. At zero the offspring present cannot breed and the next brood is empty.
+
+**T5 fails.** On the choice side, take the machine’s live steps for `P`, liveness for the guard and `W_U` for `K`. The return argument supplies closure, so `GuardHorizon.closed_viable` gives viability at every horizon. That use runs from the old law to this machine. The old theorem allows arbitrary processes and enabled moves with multiple possible successors. On the lock side, the mixed taker brood under hold instantiates the identity share and rule dynamics while supported. `RuleCapture.turn_locked` preserves that lock. Its original statement quantifies over ordered share and rule types and has no finite stock or mandatory payment. Neither unchanged theorem follows as a case of the paid-return bound.
+
+**T6.** With the same mixed brood, incumbent G and actual sensor, level 1 lasts and level 2 ends. At level 1 the tie holds G, at level 2 it reverses to T. Both births restore the stock to 2 and leave a single T. Its new priority decides what it can leave.
+
+**T7.** The return bound agreed with the one-generation calculation on every entry counted in part 6. This is finite evidence. The proof in part 3 is a paper argument.
+
+**T8.** The eight definitions are Machine, State, Live, Allowed, Step, ReturnEdge, Land and W. Birth times and paid-return times give two descriptions of this machine’s courses. It remains a new model beside the existing ones. T5 prevents a stronger claim.
+
+## 6. What the program found
+
+**Size search.** The unit of comparison was kind count, maximum brood, stock capacity, then reachable live configurations. The search allowed every ordered one- or two-child brood in each of the four parent/priority cells, each positive need and return rate up to capacity, all three nonempty investment conditions, every gauge threshold, every nonempty positive-stock start and both nonconstant uses of the bit. Each was compared with its masked reading. With one kind, every nonempty brood has the same set of kinds. A brood bound of one excludes multiplication. At capacity one a lasting course must invest every generation, and every paid brood has at most one child. Thinning actual births there leaves survival unchanged.
+
+At brood bound two, capacities 1 and 2 covered **77,760 and 1,866,240 model–start entries**, respectively, with two orientations per entry. At capacity 2 there were 624 oriented comparisons with a changing, multiplying cycle and an ending course that passed through a still-live state beyond recovery. Only 52 lost the survival split under all the primary removals. Only 12 also defeated both constant tie acts. In all 12, thinning actual births from either end also erased the split. Six had six reachable live configurations and six had seven. The displayed machine is one of the six. Looking only at “reverse when low” initially produced a three-token witness and missed this smaller one. Minimality is within the specified architecture. [Size search](/Users/ren/theories/tmp/fm/centre21/designs/E-smallest-machine/smallest.py) · [Twelve minimum-size cases](/Users/ren/theories/tmp/fm/centre21/designs/E-smallest-machine/size_2_1_1_3.json)
+
+**Law check.** For `q ∈ {1,2}` and `C ∈ {1,2,3,4}`, the audit exhausted those parameter ranges, every stock and brood including zero and empty, both incumbents, all four Boolean selectors, and unrestricted moves. One calculation removed dead ends from the full generation graph. A second independently built the first-return relation by spending down the available stock, then checked the `M + 1` bound. Raw tables with identical paid broods and investment flags shared a calculation, with their multiplicities restored in the counts.
+
+| Allowance | Start entries | Lasting | Disagreements |
+|---|---:|---:|---:|
+| Fixed Boolean selector | 395,831,808 | 24,301,840 | 0 |
+| Unrestricted acts | 98,957,952 | 7,327,584 | 0 |
+
+These cover 1,786,944 parameter-and-gauge entries before choosing a start. They count labelled tables, including distinct tables with identical behaviour. [Audit program](/Users/ren/theories/tmp/fm/centre21/designs/E-smallest-machine/audit.py) · [Totals and traces](/Users/ren/theories/tmp/fm/centre21/designs/E-smallest-machine/WITNESS.txt)
+
+**Nearest miss to the law.** Take capacity, needs and return rate all 1. Both taker tables give T, both giver tables give TT, and only a favoured giver invests. Always hold ties. The sole possible paid landing is `(T, 1, G)`, so `M = 1`. From `(G, 1, G)` one paid return succeeds. The taker then spends the last token. Replacing `M + 1` by `M` gives a false positive in this instance.
+
+## 7. Where it is weakest
+
+The stock signal is necessary among the four stationary ways of acting on the stated bit. A controller that knows the incumbent can give every tie to G and keep this start without sensing stock. A controller with recall can reverse once and hold once. Both facts limit what the witness says about registering.
+
+The irreversible step depends on the timing. Breeding uses the current priority and the vote sets the next one. Counting the new brood would change the machine. The witness would be refuted by an infinite live continuation from `(T, 2, T)` in this machine. The general law would be refuted by a machine meeting the definitions with `M + 1` paid returns possible and no infinite live course.
+
+## 8. What I did not read
+
+I read the brief, the requested direction passage, the model requirements, both earlier sweep notes and the step definitions in their Python programs. I consulted the places listing, selected Lean statements, and parts of the future, registering and support reads. I did not read the 406 modules, the full chapters, the independent sweep reports, or the October renewal and PopulationCorrection proofs. This report and its programs are AI-written. I ran Python only and made no Lean or git change. [Saved report](/Users/ren/theories/tmp/fm/centre21/designs/E-smallest-machine/DESIGN.md)

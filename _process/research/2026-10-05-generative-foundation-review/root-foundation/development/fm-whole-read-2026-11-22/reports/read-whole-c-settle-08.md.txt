@@ -1,0 +1,11 @@
+Reader whole-c-settle-08, part SETTLE, 24 differences on 10 modules. Read only; no Lean, build, test or gate run; no file written; no agents.
+
+Opened and read at the statements (with section variable lines): GrammarConditionals l.640-691 («相须之例», «依于无始而有始之例») and `«相须»`, `«有常»`, `«不穷»`, `«核»` in Grammar.lean; GrammarCourse l.62-399 whole; GrammarCrossing whole; GrammarLaws l.1056-1135 («历»), l.1740-1800 («屡», «尽则不或屡»), l.2555-2712 (section Lumping whole); GrammarMap l.205-270 and l.376-530; GrammarPath l.286-300, 598-690, 786-1082; GrammarReadings l.30-178 whole; GrammarScope l.300-481; GrammarTesting whole; GrammarTransport l.1-130 and l.335-435 plus its section variable lines (l.147, 169, 265).
+
+Not opened: the rest of GrammarConditionals (only its declaration list and a grep for Process/policy were used for `moves`), GrammarPath l.1083-1554 (six further built cases; the `rank` answer rests on the two cited cases, CleanStep, and the general part), GrammarScope l.1-299, GrammarTransport l.131-334 and l.436-571, GrammarLaws outside the three stretches. So each N below is 'not found in what was opened', with the declarations named.
+
+One line of judgement applied throughout, so it can be overturned in one place: a relation with several successors, with no labelled letters and no law quantifying over a choice, was settled N for `moves` (GrammarConditionals, GrammarPath, GrammarTesting); a family of relations indexed by letters with a law over every word was settled S (GrammarLaws «同行之历»).
+
+Recurring pattern in the differences: (1) built cases whose docstring gives a bound ('within three steps') while the statement gives only ending or not-unending (GrammarMap, GrammarScope, GrammarPath `rank`): settled 'both in part', B for ending, no bound stated. (2) Pass b several times wrote S or B while its own sentence said the thing was not there (GrammarReadings no_return, GrammarTesting giving); settled by the statement. (3) GrammarTesting no_return and forms_change rest on the definition `Room.opened` alone; no theorem states them.
+
+Could not settle further: whether `φ` in «尽之拉回»/«延之拉回» is to be counted a reading is a recognition, not in the statement (it is a bare map α → κ); given as 'both in part'. GrammarTransport `level` is D by the account's sentence at l.48-49 only; no statement opened has an amount.

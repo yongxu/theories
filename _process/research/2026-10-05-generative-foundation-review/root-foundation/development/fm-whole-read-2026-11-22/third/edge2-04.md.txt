@@ -1,0 +1,469 @@
+# Task file: EDGE, second batch, reader whole-c-edge2-04
+
+Your 5 modules. In each, BOTH earlier passes found a statement with both outcomes and NEITHER found a law of ending within a bound. For orientation only, what they said (where to look, not evidence).
+
+## FlowCenters.lean  (475 lines)
+
+### `both_outcomes`
+- pass a: B: `Clearing.returning_loses_dweller` (l. 350) proves opposite retention verdicts at the two specified standpoints given withheld levels.
+- pass b: B: `Clearing.returning_loses_dweller` (l. 350): in one model, retains under one centre and loses the dweller under another. The general iff laws relate Unrestricted to MutuallyDependent, not going on to ending.
+
+### `no_return`
+- pass a: N: Not found in the statements read.
+- pass b: N
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N
+
+### `closed_region`
+- pass a: B: `Clearing.dweller_reach_closed` (l. 288) and `dweller_feeding_closed` (l. 363) establish closure of the singleton dweller under affecting and under being fed.
+- pass b: S: `ownClosure_standpointInvariant_atReturning_iff` (l. 128): at the returning elements the presupposition is standpoint-invariant exactly where any two lie within each other's closure. `Flow.returning_influence_unrestricted_iff` (l. 259): along being affected the condition holds exactly where the returning formations lie in one loop. `Flow.MutuallyDependent.reachReturns` (l. 218): under mutual dependence every formation's acts return. B: `Clearing.dweller_reach_closed` (l. 288), `Clearing.dweller_feeding_closed` (l. 363), `Clearing.reachReturns_iff` (l. 310): only the dweller returns.
+
+### `moves`
+- pass a: N: Not found in the statements read.
+- pass b: N
+
+### `reading`
+- pass a: B: `Clearing.returning_loses_dweller` (l. 350) gives retention from the clearer and failure of retention from the returning dweller under the same influence-closure reading of the same withheld comparison.
+- pass b: S: significance held de se as own closure (selfAscribed (ownClosure rel) center). `Flow.returning_unrestricted_iff_mutuallyDependent` (l. 202): given one returning formation, the condition at the returning formations along affecting holds exactly where the flow is mutually dependent. `Flow.mutuallyDependent_iff_unrestricted` (l. 158): with every formation a centre, along affecting or being affected, it is mutual dependence. B: `Clearing.returning_loses_dweller` (l. 350): with the clearer as the one centre the clearer's part retains; from the dweller, the returning formation, it does not. The verdict changes with the centre alone.
+
+### declarations of FlowCenters.lean (by script)
+  l.108 abbrev Returning
+  l.114 theorem ownClosure_unrestricted_atReturning_iff
+  l.122 theorem ownClosure_unrestricted_of_none
+  l.128 theorem ownClosure_standpointInvariant_atReturning_iff
+  l.147 theorem unrestricted_of_mutuallyDependent
+  l.158 theorem mutuallyDependent_iff_unrestricted
+  l.170 theorem mutuallyFed_iff_unrestricted
+  l.178 theorem covering_of_acting
+  l.183 abbrev Returning
+  l.186 theorem reachReturns_iff_returnsAlong
+  l.193 theorem mutuallyDependent_of_returning_unrestricted
+  l.202 theorem returning_unrestricted_iff_mutuallyDependent
+  l.211 theorem mutuallyDependent_of_returning_noOutside
+  l.218 theorem MutuallyDependent.reachReturns
+  l.224 theorem atReturning_unrestricted_iff
+  l.236 theorem covered_by_returning
+  l.247 theorem unrestricted_of_returning_standpointInvariant
+  l.259 theorem returning_influence_unrestricted_iff
+  l.273 theorem returning_influence_unrestricted_iff_invariant
+  l.288 theorem dweller_reach_closed
+  l.294 theorem dweller_returns
+  l.301 theorem clearer_not_returns
+  l.305 theorem source_not_returns
+  l.310 theorem reachReturns_iff
+  l.317 theorem dweller_influence_whole
+  l.328 theorem returning_apart
+  l.350 theorem returning_loses_dweller
+  l.363 theorem dweller_feeding_closed
+  l.376 theorem clearer_beyond_returning_feeding
+  l.387 theorem not_unrestricted_ownClosure
+  l.406 theorem returning_feeding_apart
+  l.428 def flow
+  l.434 def web
+  l.442 theorem not_affects
+  l.446 theorem reach_self
+  l.450 theorem every_returns
+  l.459 theorem apart
+
+## Frontier.lean  (740 lines)
+
+### `both_outcomes`
+- pass a: B: `Handover.served` (l. 566) and `undelivered_fails` (l. 571) give continued service with delivery and failure with the same demand and old support if the successor never serves.
+- pass b: B: `Handover.served` (l. 566): service holds over demand t < 4 with old service before 2 and the successor from 2, and old service stops at 2. `Handover.undelivered_fails` (l. 571): a successor that delivers nothing does not serve. These are two built outcomes, not one exactly-when. In general, `served_of_handover` (l. 218) and `Served.not_of_gap` (l. 225) are stated separately.
+
+### `no_return`
+- pass a: N: Not found in the statements read.
+- pass b: N.
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N.
+
+### `closed_region`
+- pass a: N: Not found in the statements read.
+- pass b: N.
+
+### `moves`
+- pass a: S: `Assigned.unique_required` (l. 188) requires a particular responder in every admissible joint plan if plans are inhabited, every plan assigns the task, and only that responder can be assigned.
+- pass b: S: `Required` (l. 76): some alternative is admissible and every admissible one performs the task. `required_of_bettered` (l. 141): on a nonempty exact listed menu with the comparison irreflexive, transitive and weakly decided, and the task decided, a task that every eligible alternative lacking it is bettered in is required of the frontier. `Assigned.unique_required` (l. 188): a unique responder in every admissible joint plan is required. The alternatives are not steps of a process here.
+
+### `reading`
+- pass a: B: `Formation.no_report_judge` (l. 484) rules out reading the continuing basis from the built-connection report, whereas `amount_recovers_basis` (l. 491) recovers it from remaining amount.
+- pass b: S: `Required.redescribed` (l. 128): a requirement carries through a map f where admissible alternatives map forward, each admissible image is covered, and the task keeps its meaning. B: `Formation.no_report_judge` (l. 484): no judge reading only `report` (whether a connection was built) is correct about `basis` for every form. `Formation.same_report_different_basis` (l. 479): left and overbuild report alike while only left keeps the basis. `amount_recovers_basis` (l. 491): the retained amount, read faithfully, recovers the basis.
+
+### declarations of Frontier.lean (by script)
+  l.72 def Frontier
+  l.76 def Required
+  l.81 theorem Frontier.excluded
+  l.86 theorem frontier_iff_undominated
+  l.95 theorem frontier_exists
+  l.106 theorem Required.performed
+  l.111 theorem Required.defeated
+  l.116 theorem Required.impossible
+  l.121 theorem Required.means
+  l.128 theorem Required.redescribed
+  l.141 theorem required_of_bettered
+  l.158 theorem _root_.Becoming.Lexical.BasicPriority.frontier_iff
+  l.167 theorem _root_.Becoming.Lexical.BasicPriority.required_iff
+  l.185 def Assigned
+  l.188 theorem Assigned.unique_required
+  l.196 theorem Assigned.capable
+  l.204 def Served
+  l.210 theorem Served.successor
+  l.218 theorem served_of_handover
+  l.225 theorem Served.not_of_gap
+  l.232 def Settled
+  l.236 def Residual
+  l.239 theorem Settled.no_residual
+  l.245 theorem residual_of_unfulfilled
+  l.250 theorem separate_not_joint
+  l.258 theorem decided_of_decidable
+  l.264 theorem decided_included_bool
+  l.284 theorem decided_included_unit
+  l.292 theorem decided_included_sum_of
+  l.304 theorem decided_included_sum
+  l.314 inductive Form
+  l.317 def drawn
+  l.323 def remaining
+  l.325 def linked
+  l.331 def basis
+  l.333 def renewed
+  l.337 def protect
+  l.342 def freeOccasion
+  l.344 def eligible
+  l.346 def formed
+  l.348 def menu
+  l.350 def usesLeft
+  l.352 def usesRight
+  l.354 theorem decided_linked
+  l.360 theorem decided_basis
+  l.362 theorem decided_protect
+  l.366 theorem decided_free
+  l.368 theorem decided_above
+  l.374 theorem basis_left
+  l.375 theorem basis_right
+  l.376 theorem not_basis_overbuild
+  l.378 theorem left_retains_basis
+  l.382 theorem formation_loses_occasion
+  l.385 theorem left_above_idle
+  l.391 theorem left_above_overbuild
+  l.397 theorem eligible_all
+  l.403 theorem exact_menu
+  l.409 theorem bettered_unformed
+  l.416 theorem decided_formed
+  l.419 theorem required
+  l.425 theorem unbeaten_of
+  l.435 theorem working_unbeaten
+  l.449 theorem frontier_iff
+  l.459 theorem no_route_required
+  l.466 theorem overbuilding
+  l.473 def report
+  l.479 theorem same_report_different_basis
+  l.484 theorem no_report_judge
+  l.489 def amountJudge
+  l.491 theorem amount_recovers_basis
+  l.499 theorem eq_zero_of_sub_eq
+  l.507 theorem sub_lt_sub_of_lt
+  l.525 def protection
+  l.529 def realization
+  l.532 def eligible
+  l.534 theorem keep_above_expansion
+  l.540 theorem expansion_has_real_gain
+  l.545 theorem transfer_above_keep
+  l.554 theorem transfer_above_expansion
+  l.558 theorem expansion_excluded
+  l.561 def demand
+  l.562 def oldService
+  l.563 def successorService
+  l.566 theorem served
+  l.571 theorem undelivered_fails
+  l.575 def crossed
+  l.582 theorem required
+  l.593 theorem no_common_plan
+  l.610 theorem required_under_every_classification
+  l.632 inductive Route
+  l.635 def basic
+  l.636 def gain
+  l.638 def fresh
+  l.643 def formed
+  l.646 theorem left_above_absent
+  l.668 theorem formed_of_frontier
+  l.672 theorem decided_fresh
+  l.679 theorem decided_basic
+  l.684 theorem decided_gain
+  l.689 theorem decided_classified
+  l.698 theorem required
+  l.712 theorem opposite_routes
+  l.728 theorem none_robust
+
+## GrammarTesting.lean  (141 lines)
+
+### `both_outcomes`
+- pass a: B: `Room.opened` (l. 79) with `Room.warm` (l. 86) gives both a warm and a cold successor of balanced; the held room's alternatives both remain warm.
+- pass b: B: `恒温与平衡` (l. 128): both in one core class under the closed net and not under the opened one. It is not going on against ending.
+
+### `no_return`
+- pass a: B: `Room.opened` (l. 79) gives cold no successors, so the room entering cold cannot return. This is supplied in the built relation.
+- pass b: N.
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N.
+
+### `closed_region`
+- pass a: B: `Room.same_constant` (l. 112), with `Room.same_symm` (l. 107) and `Room.same_alike` (l. 102), gives a symmetric step-matching relation inside equal warmth for closed windows.
+- pass b: S: `核在每层之内` (l. 45) uses the core (the greatest symmetric relation inside E constant under R, «根»). B: `Room.same_constant` (l. 112): the relation pairing the two warm rooms is constant under Room.closed.
+
+### `moves`
+- pass a: B: `Room.opened` (l. 79) permits the balanced room to stay put or cool, and the held room to stay put or reach kept. `Room.warm` (l. 86) assigns warmth to both outcomes of the held room.
+- pass b: N: only relations. Room.opened (l. 79) gives branches, but there is no choice and no law about a choice.
+
+### `reading`
+- pass a: S: `«层»` (l. 38) starts at E and at each depth demands matching successors in both directions plus agreement at the previous stage. `«可分则不在核»` (l. 56) uses a separating depth to exclude core membership.
+- pass b: S: `可分则不在核` (l. 56): where some finite stage tells x and y apart, they are not in the core. B: `恒温与平衡` (l. 128): under the class Room.alike (warm or not), the wider net Room.opened registers the window's opening, and the rooms are told apart; under Room.closed they are not.
+
+### declarations of GrammarTesting.lean (by script)
+  l.38 def «层»
+  l.45 theorem «核在每层之内»
+  l.56 theorem «可分则不在核»
+  l.66 inductive Room
+  l.71 def closed
+  l.79 def opened
+  l.86 def warm
+  l.93 def alike
+  l.96 def same
+  l.102 theorem same_alike
+  l.107 theorem same_symm
+  l.112 theorem same_constant
+  l.128 theorem «恒温与平衡»
+
+## Granularity.lean  (1443 lines)
+
+### `both_outcomes`
+- pass a: B: `Midway.Step` (l. 1005) allows begin at risky to reach ready, where finish succeeds, or blocked, from which no step exists by `blocked_stuck` (l. 1105). `Midway.completes` (l. 1046) shows completed traces from both risky and safe.
+- pass b: B: `Midway.internal_loss` (l. 1086) states, for one model, that the continuation can be lost from `risky` and cannot from `safe`. `Midway.remainder_changes_continuation` (l. 1298) gives two remainders at one configuration with different continuations. S, not of going on and ending: `Recipe.holds_after_iff_em` (l. 545) states that reading every recipe as one test is exact for every frame exactly under excluded middle. `Recipe.leads_branch_iff` (l. 719) is a dichotomy of branches.
+
+### `no_return`
+- pass a: B: `Midway.internal_loss` (l. 1086) distinguishes a possible loss of finish after begin at risky from its impossibility at safe. `Midway.blocked_stuck` (l. 1105) concludes no move is available from blocked.
+- pass b: B: `Midway.internal_loss` (l. 1086): from `risky`, `begin` can lead to `blocked`, where `finish` cannot be taken; from `safe` it cannot. `Midway.inserted_can_disable_resumption` (l. 1314): at `done`, the remaining `finish` cannot be taken. Both rest on steps given in the built `Midway.Step` (l. 1005), where `blocked` and `done` have no step. This is a premise of the model, at a low level, not concluded by a general law. N: no general point of no return.
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N: no falling rank, variant or bound on ending in what was read.
+
+### `closed_region`
+- pass a: S: `Joining.retained_blocks_extend` (l. 387) keeps the initial list as a prefix throughout block histories of the retained joining frame. `Frame.blocks_bisimulation` (l. 310) makes fine likeness a bisimulation for the blocks.
+- pass b: S, of relations, not of one region: `Frame.blocks_bisimulation` (l. 310) states that `Alike F G` is a bisimulation (a relation closed under matching steps) of the block frames. B: `Midway.completed_bisimulation` (l. 1056) and `Midway.prefix_bisimulation` (l. 1161). S: `Joining.retained_blocks_extend` (l. 387) states that a history of blocks of retained references always extends the starting configuration. N: no largest closed region, certificate or fixed point.
+
+### `moves`
+- pass a: S: `Recipe.branch_earlier_iff` (l. 735) permits branching before a prefix instead of after it when all prefix outcomes preserve the guard's truth. `Recipe.Leaves.resume` (l. 809) proves completion by executing the remainder from the reached configuration.
+- pass b: S: `Recipe` (l. 401) and `Recipe.Leads` (l. 413) define choices of moves, guards and either-of-two over a frame. `Recipe.Leads.trace` (l. 441) states that every course a recipe leads along is a course of the frame. `SameBranchingTests.leads_iff` (l. 613) states, with no premise, that configurations passing the same branching tests answer every recipe question alike. `Recipe.branch_earlier_iff` (l. 735) states that testing before a prefix is testing after it, where the prefix keeps the test at every configuration it leads to. B: `Midway.testing_before_formation_changes_results` (l. 1274): from `safe`, the recipe `adaptive` reaches `done` and `earlyCheck` does not.
+
+### `reading`
+- pass a: S: `SameBranchingTests.leads_iff` (l. 613) gives identical answers to every recipe/test question at test-equivalent starts. B: `Midway.resumption_recovers_loss` (l. 1234) distinguishes risky and safe by testing the suffix at the reached configuration.
+- pass b: S: `Frame.holds_blocks` (l. 174) states that every branching test of blocks holds exactly where its finer translation does. `Frame.blocks_sameBranchingTests_iff` (l. 366) states that where every finer move is a block of its own, sameness of block tests is sameness of finer tests. `Recipe.Resumes.codes_apart` (l. 976) states that a description exact for resumption keeps apart configurations that resume differently. B: `Midway.no_prefix_reading` (l. 1225): no branching test of the prefix blocks holds exactly where the continuation can be lost midway. `Midway.reduced_prefix_cannot_extend` (l. 1243): a description that agrees on whatever passes the same prefix tests cannot be read to answer every finer test exactly. `Midway.codes_apart` (l. 1093): every description exact for the finer tests keeps `risky` and `safe` apart.
+
+### declarations of Granularity.lean (by script)
+  l.78 theorem mem_joined_right
+  l.83 theorem mem_encode
+  l.100 theorem listed_through
+  l.126 def Frame.blocks
+  l.131 theorem Frame.blocks_trace_iff
+  l.145 def BranchingTest.along
+  l.150 theorem BranchingTest.holds_along
+  l.165 def BranchingTest.finer
+  l.174 theorem Frame.holds_blocks
+  l.196 def Translates
+  l.201 theorem Frame.blocks_translates
+  l.206 theorem Translates.sameBranchingTests_iff
+  l.218 theorem SameBranchingTests.step_of_em
+  l.234 theorem SameBranchingTests.trace_of_em
+  l.254 theorem Translates.history_matches_of_em
+  l.268 theorem outcomes_of_trace
+  l.285 theorem Frame.blocks_outcomes
+  l.296 theorem Frame.blocks_history_matches_of_em
+  l.310 theorem Frame.blocks_bisimulation
+  l.319 theorem Alike.blocks
+  l.325 theorem SameBranchingTests.blocks
+  l.332 def BranchingTest.rename
+  l.341 theorem Frame.holds_rename_blocks
+  l.366 theorem Frame.blocks_sameBranchingTests_iff
+  l.375 theorem Frame.blocks_kernel_iff
+  l.387 theorem Joining.retained_blocks_extend
+  l.401 inductive Recipe
+  l.413 def Recipe.Leads
+  l.421 def Recipe.word
+  l.426 theorem Recipe.leads_word_iff
+  l.435 theorem Frame.blocks_step_iff_word
+  l.441 theorem Recipe.Leads.trace
+  l.453 def BranchingTest.either
+  l.457 def Recipe.after
+  l.465 theorem Recipe.holds_after_of_leads
+  l.481 def TestsDecided
+  l.485 theorem TestsDecided.of_em
+  l.490 theorem OutcomesListed.holds_decided
+  l.504 theorem OutcomesListed.testsDecided
+  l.510 theorem Recipe.holds_after
+  l.537 def Recipe.claimFrame
+  l.545 theorem Recipe.holds_after_iff_em
+  l.559 def Recipe.afterAny
+  l.568 theorem Recipe.leads_iff_afterAny
+  l.613 theorem SameBranchingTests.leads_iff
+  l.624 def Frame.byRecipes
+  l.628 def BranchingTest.byRecipes
+  l.637 theorem Frame.holds_byRecipes
+  l.660 theorem Frame.byRecipes_translates
+  l.666 theorem Recipe.outcomes
+  l.701 theorem Frame.byRecipes_history_matches_of_em
+  l.715 def Recipe.branch
+  l.719 theorem Recipe.leads_branch_iff
+  l.735 theorem Recipe.branch_earlier_iff
+  l.762 inductive Recipe.Advance
+  l.774 def Recipe.unfolding
+  l.778 def Recipe.Leaves
+  l.782 theorem Recipe.Advance.leaves
+  l.788 theorem Recipe.Advance.resume
+  l.801 theorem Recipe.trace_resume
+  l.809 theorem Recipe.Leaves.resume
+  l.816 theorem Recipe.Advance.trace
+  l.827 theorem Recipe.trace_native
+  l.836 theorem Recipe.Leaves.trace
+  l.843 theorem Recipe.Leaves.seq
+  l.851 theorem Recipe.Leads.leaves
+  l.867 theorem Recipe.leads_iff_leaves
+  l.874 theorem Recipe.Leaves.inserted
+  l.886 theorem Recipe.Advance.alike
+  l.902 theorem Recipe.Advance.same_of_em
+  l.918 theorem Recipe.trace_alike
+  l.934 theorem Recipe.Leaves.alike
+  l.942 theorem Recipe.trace_same_of_em
+  l.961 theorem Recipe.Leaves.same_of_em
+  l.972 def Recipe.Resumes
+  l.976 theorem Recipe.Resumes.codes_apart
+  l.990 inductive Phase
+  l.999 inductive Event
+  l.1005 inductive Step
+  l.1014 def frame
+  l.1018 theorem shared_origin
+  l.1022 def completed
+  l.1025 def prefixes
+  l.1030 def resumable
+  l.1035 theorem completed_done
+  l.1046 theorem completes
+  l.1052 def CompletedRelated
+  l.1056 theorem completed_bisimulation
+  l.1074 theorem same_completed_tests
+  l.1082 def lost
+  l.1086 theorem internal_loss
+  l.1093 theorem codes_apart
+  l.1098 theorem prefixes_stuck
+  l.1104 theorem ready_no_begin
+  l.1105 theorem blocked_stuck
+  l.1108 theorem ready_stuck
+  l.1114 def PrefixRelated
+  l.1118 theorem risky_prefix_steps
+  l.1135 theorem safe_prefix_steps
+  l.1151 theorem safe_prefixes
+  l.1156 theorem risky_prefixes
+  l.1161 theorem prefix_bisimulation
+  l.1216 theorem same_prefix_tests
+  l.1225 theorem no_prefix_reading
+  l.1234 theorem resumption_recovers_loss
+  l.1243 theorem reduced_prefix_cannot_extend
+  l.1255 def canFinish
+  l.1259 theorem formation_changes_guard
+  l.1265 def adaptive
+  l.1269 def earlyCheck
+  l.1274 theorem testing_before_formation_changes_results
+  l.1283 def pending
+  l.1288 theorem same_start_distinct_remainders
+  l.1298 theorem remainder_changes_continuation
+  l.1307 theorem remainder_codes_apart
+  l.1314 theorem inserted_can_disable_resumption
+  l.1320 theorem inserted_changes_tests
+  l.1367 theorem BranchingTest.finer_rename
+  l.1386 theorem BranchingTest.holds_either
+  l.1399 theorem Frame.byRecipes_trace
+  l.1408 theorem Alike.of_stuck
+  l.1418 theorem SameBranchingTests.of_stuck
+  l.1424 theorem Midway.exists_phase
+
+## GuardHorizon.lean  (465 lines)
+
+### `both_outcomes`
+- pass a: S: `viable_succ_iff` (l. 82) is a general exact test of the possibility of keeping a guard, with enabledness and universal quantification over that move's outcomes. B: `endpoint_access_hides_gap` (l. 444) and `overlapping_handoff_keeps_access` (l. 452) show loss and uninterrupted access between the same endpoints.
+- pass b: S, of keeping only: `viable_succ_iff` (l. 82) states exactly when the guard is kept for n + 1 steps. `pathSafe_iff` (l. 276) states that a choice stays within the guard exactly when its course is a kept trace. B: `endpoint_access_hides_gap` (l. 444), where access is lost midway, set against `overlapping_handoff_keeps_access` (l. 452), where it is kept, are built Bool-pair courses. N: no general dichotomy of keeping and losing.
+
+### `no_return`
+- pass a: S: `viable_guard` (l. 86) requires the guard at the start of every viable horizon. Thus once it fails no policy keeps it over a horizon starting there. This does not imply the guard cannot be restored.
+- pass b: N: no point of no return is stated; `Viability.Kernel` (no course leaves the guard) enters only as a premise of `kernel_viable` (l. 134).
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N: horizons n bound keeping, not ending; no falling variant.
+
+### `closed_region`
+- pass a: S: `closed_viable` (l. 112) gives every finite horizon on a guard-contained set admitting an enabled move per state with all outcomes inside. `kernel_viable` (l. 134) obtains the same from the kernel and liveness at every reached state.
+- pass b: S: `Closed` (l. 108) is a set within the guard where some enabled move stays in the set. `closed_viable` (l. 112): every configuration of a closed set keeps the guard at every horizon. `certificate_viable` (l. 128). `kernel_viable` (l. 134): where no course from s leaves the guard and every configuration reached has an enabled move, the guard is kept at every horizon.
+
+### `moves`
+- pass a: S: `shielded_choice` (l. 97) shows that a best acceptance-scored admissible move with positive lift accepts, is enabled, keeps every outcome viable and maximizes the base score among admissible moves.
+- pass b: S: `Viable` (l. 71) and `Admissible` (l. 76): some enabled move leads only to configurations keeping the guard one step fewer. `viable_succ_iff` (l. 82). `not_enabled_not_admissible` (l. 91). `shielded_choice` (l. 97): a best choice by `AcceptScore` among admissible moves accepts, is enabled, keeps the guard and is best by base score. `recomputed_composition` (l. 193): under `Bellman`, a best choice among allowed moves stays within the guard (`PathSafe`) and returns exactly `V n s`. `bellman_bounds_safe` (l. 179): every guard-staying choice returns at most the value. `uniform_viable` (l. 406).
+
+### `reading`
+- pass a: S: `uniform_policy_iff_fiber_feasible` (l. 341) equates uniform policy existence with one good move shared by all states at each reading, under choice over readings. B: `statewise_not_uniform` (l. 382) realizes statewise feasibility without a uniform policy for a constant reading.
+- pass b: S: `UniformPolicy` (l. 326) is a choice from a reading `obs : S → O`. `uniform_policy_iff_fiber_feasible` (l. 341): given `Viability.ChoiceOver O A`, a choice from readings exists exactly where each reading has one move good at every configuration giving it. `uniform_policy_iff_common` (l. 351) adds, where every reading is given, exactly where a common response exists. `uniform_finer` (l. 395): a uniform choice survives every finer reading. B: `statewise_not_uniform` (l. 382): good moves exist configuration by configuration on Bool, but there is no choice from the one reading. `discriminating_reading_uniform` (l. 391). `ungiven_reading_not_uniform` (l. 369).
+
+### declarations of GuardHorizon.lean (by script)
+  l.71 def Viable
+  l.76 def Admissible
+  l.82 theorem viable_succ_iff
+  l.86 theorem viable_guard
+  l.91 theorem not_enabled_not_admissible
+  l.97 theorem shielded_choice
+  l.108 def Closed
+  l.112 theorem closed_viable
+  l.121 theorem certificate_closed
+  l.128 theorem certificate_viable
+  l.134 theorem kernel_viable
+  l.145 def DViable
+  l.150 def DAllowed
+  l.155 def Return
+  l.160 def PathSafe
+  l.166 def Bellman
+  l.172 theorem pathSafe_dViable
+  l.179 theorem bellman_bounds_safe
+  l.193 theorem recomputed_composition
+  l.220 theorem recomputed_choice_accepts
+  l.230 theorem dViable_iff
+  l.241 theorem safe_path_viable
+  l.247 inductive Kept
+  l.254 theorem Kept.trace
+  l.260 theorem Kept.start
+  l.265 def moves
+  l.270 def last
+  l.276 theorem pathSafe_iff
+  l.287 theorem kept_return_le
+  l.297 theorem recomputed_kept
+  l.313 theorem recomputed_accepts
+  l.326 def UniformPolicy
+  l.330 def FiberFeasible
+  l.334 theorem fiber_of_uniform
+  l.341 theorem uniform_policy_iff_fiber_feasible
+  l.351 theorem uniform_policy_iff_common
+  l.369 theorem ungiven_reading_not_uniform
+  l.382 theorem statewise_not_uniform
+  l.391 theorem discriminating_reading_uniform
+  l.395 theorem uniform_finer
+  l.406 theorem uniform_viable
+  l.414 theorem uniform_iff
+  l.422 def Covers
+  l.426 theorem empty_requirement_hides_loss
+  l.432 theorem coverage_transports
+  l.438 def RouteAccess
+  l.441 def PrefixAccess
+  l.444 theorem endpoint_access_hides_gap
+  l.452 theorem overlapping_handoff_keeps_access
+  l.460 theorem route_retirement_allowed

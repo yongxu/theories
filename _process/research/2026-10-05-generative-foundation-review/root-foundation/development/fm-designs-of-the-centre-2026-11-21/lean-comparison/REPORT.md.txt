@@ -1,0 +1,203 @@
+## 1. Verdict in five lines
+
+- All three parts built clean. The final audit covered 25 declarations, including 19 theorems. [ScratchComparison.lean](/Users/ren/tmp/fm/build2/Becoming/ScratchComparison.lean)
+- **L1 did not trigger.** `Carries` transfers every finite viable horizon without a successor decision or a choice principle.
+- **L2 did not trigger.** Both keeping theorems have their original statements, checked by `rfl`.
+- **L3 triggered.** The unchanged lock theorem built through the clock, but its new chain takes 85 lines against 58.
+- **L4 did not trigger. L5 triggered.** Every axiom report is empty. Both keeping cases have shorter direct inductions. I also judge a direct bounded search as economical for the lock.
+
+## 2. Theorems, statements, and calls
+
+All 19 statements below built clean. The headers retain the module’s section variables. `Viable` means `GuardHorizon.Viable`, whose states and moves live in `Type`. The old class and lock theorems quantify over arbitrary universes. `Horizon` gives the same two recursion clauses at those universes, and `horizon_iff_viable` proves their equivalence on the package’s types. The comparison induction shared by all three cases is `Horizon.carried`.
+
+**The comparison law.** The module defines the local obligation as follows.
+
+```lean
+def Carries (P : Process S A) (g : S → Prop) (Q : Process T B) (h : T → Prop)
+    (R : S → T → Prop) : Prop :=
+  ∀ s t, R s t → g s → h t ∧ ∀ a, Enabled P s a →
+    ∃ b, Enabled Q t b ∧ ∀ t', Q.step t b t' → ∃ s', P.step s a s' ∧ R s' t'
+```
+
+```lean
+-- Induction on n, applying carry to the guard, move, and individual successor.
+theorem Horizon.carried (carry : Carries P g Q h R) :
+    ∀ {n s t}, R s t → Horizon P g n s → Horizon Q h n t
+
+-- Induction on n in both directions.
+theorem horizon_iff_viable : ∀ n s, Horizon P g n s ↔ Viable P g n s
+
+-- Calls Horizon.carried and horizon_iff_viable.
+theorem viable_carried {T B : Type} {Q : Process T B} {h : T → Prop} {R : S → T → Prop}
+    (carry : Carries P g Q h R) {n s t} (rel : R s t) (kept : Viable P g n s) : Viable Q h n t
+```
+
+**The keeping cases.** `point` has one state and one move, with an always-true step. In `closed_viable_case`, `P` and `guard` are explicit section parameters. The class definitions and the old class theorem live in namespace `Viability` in `Keeping.lean`.
+
+```lean
+-- Induction on n using the point's one enabled move.
+theorem point_viable : ∀ n, Viable point (fun _ => True) n ()
+
+-- Calls the supplied closed, point_viable, and viable_carried.
+theorem closed_viable_case {K : S → Prop} (closed : Closed P guard K) :
+    ∀ n s, K s → Viable P guard n s
+
+-- The old theorem occurs only in the equality's type.
+theorem closed_same : @closed_viable_case = @GuardHorizon.closed_viable := rfl
+
+-- Calls viable_carried once.
+theorem viable_of_le {le : S → S → Prop} (carry : Carries P g P g le)
+    {n s t} (ordered : le s t) (kept : Viable P g n s) : Viable P g n t
+
+-- Induction on n, with Viability.keptFor_empty for the empty successor.
+theorem keptFor_iff_horizon : ∀ n C, KeptFor P sense guard allowed n C ↔
+    Horizon (classes P sense allowed) (fun D => ∀ s, D s → guard s) n C
+
+-- Calls closed, within, Seen.mono, point_viable, horizon_iff_viable,
+-- Horizon.carried, and keptFor_iff_horizon.
+theorem keptFor_of_closed_case (family : (S → Prop) → Prop)
+    (within : ∀ B, family B → ∀ s, B s → guard s)
+    (closed : ∀ B, family B → ∃ a, Usable P allowed B a ∧ ∀ o, family (Seen P sense B a o)) :
+    ∀ n {B : S → Prop}, family B → KeptFor P sense guard allowed n B
+
+-- Composes keptFor_iff_horizon and horizon_iff_viable.
+theorem keptFor_iff_viable {O : Type w} {sense : S → A → S → O} {allowed : S → A → Prop}
+    (n : Nat) (C : S → Prop) : Viability.KeptFor P sense g allowed n C ↔
+      Viable (classes P sense allowed) (fun D => ∀ s, D s → g s) n C
+
+-- Checks all three universes.
+theorem kept_same : @keptFor_of_closed_case.{u,v,w} = @Viability.keptFor_of_closed.{u,v,w} := rfl
+```
+
+**The clock and the ending bridge.** `whileProcess can next` uses `Law.stepWhile can next` as its unit-move step. The clock takes `i` to `i + 1` while `i < N`.
+
+```lean
+-- Induction on n using the enabled tick, the viable tail, Nat.succ_add, and Eq.subst.
+theorem clock_budget {N : Nat} : ∀ {n i}, i ≤ N → Viable (clock N) (fun _ => True) n i → i + n ≤ N
+
+-- Calls Horizon.carried, horizon_iff_viable, clock_budget, Nat.zero_le,
+-- Nat.zero_add, Eq.subst, and Nat.not_succ_le_self.
+theorem Horizon.clock_bound {U : Type v} {P : Process X U} {g : X → Prop} {R : X → Nat → Prop} {N s}
+    (carry : Carries P g (clock N) (fun _ => True) R) (start : R s 0) :
+    ¬ Horizon P g (N + 1) s
+
+-- Induction on n using split and Law.stepWhile_none_iff.
+theorem Horizon.stepWhile_end {can : X → Prop} {next : X → X} (split : ∀ s, can s ∨ ¬ can s) :
+    ∀ {n s}, (¬ Horizon (whileProcess can next) (fun _ => True) n s) →
+      ∃ k t, k < n ∧ «迭» (Law.stepWhile can next) k s t ∧ ∀ v, ¬ Law.stepWhile can next t v
+
+-- Induction on path length using «迭之末步» and the supplied carry.
+theorem clock_endpoint {can : X → Prop} {next : X → X} {R : X → Nat → Prop} {N s}
+    (carry : Carries (whileProcess can next) (fun _ => True) (clock N) (fun _ => True) R)
+    (start : R s 0) : ∀ n {t}, «迭» (Law.stepWhile can next) n s t → R t n
+
+-- Calls Horizon.clock_bound and horizon_iff_viable.
+theorem clock_bound {R : S → Nat → Prop} {N s}
+    (carry : Carries P g (clock N) (fun _ => True) R) (start : R s 0) :
+    ¬ Viable P g (N + 1) s
+
+-- Calls Horizon.stepWhile_end and horizon_iff_viable.
+theorem stepWhile_end {can : S → Prop} {next : S → S} (split : ∀ s, can s ∨ ¬ can s) {n s}
+    (fails : ¬ Viable (whileProcess can next) (fun _ => True) n s) :
+    ∃ k t, k < n ∧ «迭» (Law.stepWhile can next) k s t ∧ ∀ v, ¬ Law.stepWhile can next t v
+```
+
+**The lock case.** The comparison relates a pair `p` to time `i` when its way is the `i`-th lock iterate, `i ≤ use p.1`, its level is at most `hi`, and `hi < i` implies its level is zero.
+
+```lean
+-- Calls Horizon.clock_bound, Horizon.stepWhile_end, and clock_endpoint.
+-- Its lock and level dependencies are listed in section 3.
+theorem locked_ends_rising_case {P : Ideals.Preorder A} {M : Ideals.Preorder R}
+    {favours : R → Prop} {fA : A → R → A} {hA : A → R → R} {reads : Nat → Bool}
+    (raises : Raises P favours fA) (monotone : ReadsShare P M hA)
+    (upper : ∀ {g g'}, M.le g g' → favours g → favours g') {marked : Nat → Prop}
+    {after : A × R × Nat → Nat → A × R × Nat}
+    (outside : AloneOutside marked (windowAlone fA hA reads) after) {need : Nat} (needs : 0 < need)
+    (un : ∀ x, need ≤ x → ¬ marked x) {giving : Nat → Nat} {use : A × R × Nat → Nat} {hi : Nat}
+    (nothing : RegimeMargin.FromNothing giving) (keeps : RegimeMargin.Keeps giving 0 hi)
+    {w : A × R × Nat} {x : Nat} (high : x ≤ hi) (locked : Locked M favours hA (w.1, w.2.1))
+    (more : ∀ v : A × R × Nat, P.le w.1 v.1 → M.le w.2.1 v.2.1 →
+      use v < use (windowAlone fA hA reads v)) :
+    ∃ n t, n ≤ hi + 1 ∧
+      «迭» (net need after (fun w x => RegimeMargin.step giving (use w) x)) n (w, x) t ∧
+      (∀ v, ¬ net need after (fun w x => RegimeMargin.step giving (use w) x) t v) ∧
+      t.1 = Law.orbit (windowAlone fA hA reads) w n ∧ Locked M favours hA (t.1.1, t.1.2.1)
+
+-- Checks both universes.
+theorem locked_same : @locked_ends_rising_case.{u,w} = @TurningInTime.locked_ends_rising.{u,w} := rfl
+```
+
+## 3. Evidence against the frozen criteria
+
+**L1.** At a related pair the left guard supplies the right guard. Matching is needed only inside the left guard. There, for every enabled left move, the right move must be enabled and fixed before its successor is known. Given any particular right successor, the proof opens an existential for one related left successor and applies the induction hypothesis there. It needs neither a decision about which successor occurred, a function choosing witnesses across successors, coverage of every left successor, nor reverse simulation.
+
+**L2.** `closed_same` and `kept_same` both close by `rfl`. For the second case, a usable move from class `C` can step to every `Seen P sense C a o` and to the empty class. The latter gives an enabled successor even for an empty observation type. The move itself witnesses the premise of `keptFor_empty`, so adding that successor costs no horizon. With only observation-indexed successors, an empty observation type would disable every move, even a usable move on the empty class. The proved equivalence needs no inhabitance, decidability, or choice premise. To apply comparison, the point is related to each subclass of a family member. This includes the empty successor, and `Seen.mono` keeps real observation successors inside the corresponding family member.
+
+**L3.** `locked_same` closes by `rfl` with both universes explicit. Each enabled step meets the positive need, so the level is unmarked and the invariant gives `i ≤ hi`. The hypotheses `outside` and `more` advance the orbit equality and the lower bound on use. At `i = hi`, use covers the entire level. Natural subtraction leaves zero and `nothing` keeps it zero. Comparison therefore excludes `hi + 2` steps. The bridge uses the decision for natural-number order to find an end by `hi + 1`. The endpoint lemma uses the same move matching to recover the way there.
+
+The domain lemmas called directly by the lock proof are `TurningInTime.locked_alone_not_below`, `TurningInTime.kept_within`, `Becoming.sub_eq_zero_of_le`, and `TurningInTime.locked_alone`. The proof also applies its supplied hypotheses, natural-number order and addition lemmas, and equality transport. The bridge calls `Law.stepWhile_none_iff`, and endpoint tracking calls `«迭之末步»`. No old ending proof supplies the deadline.
+
+The counts include each named declaration’s statement and body. They exclude comments, blank lines, equality checks, and shared comparison infrastructure. The relation is local to the new case and is counted there. [Old chain](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean:514) · [New chain](/Users/ren/tmp/fm/build2/Becoming/ScratchComparison.lean:141)
+
+| Old declaration and lines | Count | New declaration and lines | Count |
+|---|---:|---|---:|
+| `ends_of_below` 514–536 | 23 | `whileProcess` 141–142 and `clock` 144 | 3 |
+| `ends_with_net_rising` 724–736 | 13 | `clock_budget` 146–150 | 5 |
+| `locked_ends_rising` 1499–1520 | 22 | `Horizon.clock_bound` 152–157 | 6 |
+| | | `Horizon.stepWhile_end` 159–170 | 12 |
+| | | `clock_endpoint` 173–182 | 10 |
+| | | `locked_ends_rising_case` 202–250, including the relation | 49 |
+| **Total** | **58** | **Total** | **85** |
+
+The two small-universe clock interfaces would add eight lines to the new total. Even the new lock case’s body alone takes 34 lines, against 27 proof-body lines for the three old declarations combined.
+
+**L4.** Build 10 reports `"unclean": []` and `"with_axioms": {}`. Its audit covers the six definitions as well as the 19 theorems.
+
+**L5.** My judgment for each application is as follows.
+
+| Application | What deleting comparison costs |
+|---|---|
+| `closed_viable_case` | L5 applies. The old four-line proof body uses the guard at zero and recurses on the closed successor. The new body takes five lines even with the point’s horizons already available. |
+| `keptFor_of_closed_case` | L5 applies. The old four-line body recurses straight on `closed`’s observation branches. The new body takes 15 lines, in addition to the class-process equivalence. |
+| `viable_of_le` | The one-line specialization genuinely uses transfer. Deleting it requires the matching induction again. This is the order form of the law itself. |
+| `locked_ends_rising_case` | The comparison supplies both the impossible horizon and the endpoint relation. I judge L5 applies on economy. A direct induction can carry the same invariant and search the remaining ticks once. A failed need returns the current state, a met need advances the invariant, and zero ticks left forces level zero. This last comparison is a proof sketch, without a measured Lean line count. |
+
+The formal join exists. Under the frozen criteria, its recovery of these old results yields no proof economy.
+
+## 4. What blocked
+
+Every requested theorem came out. Two proposed shortcuts failed. A bare clock bound for arbitrary `i` is false at horizon zero. Take `i = N + 1`. The true guard holds, while `i + 0 ≤ N` fails. The proved bound takes `i ≤ N`, available unconditionally at the requested start `0`.
+
+Builds 3 and 4 also rejected `rfl` between the two independently defined horizon functions at the small universe, including with full unfolding. Pointwise equivalence by induction resolved that issue. Build 1 hit a reserved identifier. Builds 6 and 7 exposed equality-transport elaboration errors in the clock and bridge. All were corrected before the final audit.
+
+## 5. Last build and build count
+
+Ten numbered builds ran through the prescribed wrapper. Builds 2, 5, 8, 9, and 10 were clean. Each has its requested checkpoint, and the final checkpoint matches the module byte for byte. Build 10 ended with `exit 0 build 10`. [Final checkpoint](/Users/ren/tmp/fm/build2/ScratchComparison.clean-10.lean.txt) · [Final build log](/Users/ren/tmp/fm/build2/build-10.log)
+
+```json
+{
+  "tree": "/Users/ren/tmp/fm/build2",
+  "modules": 154,
+  "ran": [
+    "Becoming.ScratchComparison",
+    "BecomingScratchComparisonAxiomAudit"
+  ],
+  "reused": 153,
+  "unclean": [],
+  "audits": {
+    "Becoming.ScratchComparison": {
+      "theorems": 19,
+      "declarations": 25,
+      "with_axioms": {}
+    }
+  },
+  "seconds": {
+    "Becoming.ScratchComparison": 2.615,
+    "BecomingScratchComparisonAxiomAudit": 0.336
+  }
+}
+```
+
+## 6. What I did not do
+
+I ran no other Lean command, Lake, checker, gate, or tests, and started no agents. I changed no package, board, or Git state. The successful lock case made the fallback to `ends_with_net_rising` unnecessary. I did not formalize the crop model or the alternative direct lock search. This report and the scratch module are AI-written by Codex. [Saved report](/Users/ren/theories/tmp/fm/centre21/lean-comparison/REPORT.md)

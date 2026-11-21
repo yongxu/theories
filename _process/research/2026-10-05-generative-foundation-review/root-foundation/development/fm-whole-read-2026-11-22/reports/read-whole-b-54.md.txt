@@ -1,0 +1,11 @@
+I read all three modules whole: ReachableRanges.lean (1885 lines), ReachedCascade.lean (139) and ReadInTime.lean (825). I read every statement and docstring, and proofs only where they were short or needed to read a name. For ReadInTime I opened RuleCapture, RuleShaping, DrawnShaping and ClosedCapture to read `Locked`, `CarrierCounts.select`, `favours`, `Accrues` and `shaped`. For ReachedCascade I opened Cascade and Learning to read `Turns`, `acts`, `AlikeBefore`, `ReadsOnlyActsFrom` and `Training.Through`. Nothing was left unread. I ran no Lean, build, test or gate, and wrote nothing.
+
+Four things bear on the centre that the fourteen questions do not catch:
+
+1. **ReachableRanges: a general no-return for possibilities.** For every process, the whole possible never grows along a course (`Run.possible_of_next`). A step that loses a possibility can never be undone by reaching back (`Run.not_possible_returns`). This is a point of no return about what can still be admitted, not about a level.
+
+2. **ReachableRanges: widening.** It gives a general order for a widening (`Reaching.Widens`, `WidensOrLater`, `KeepsWidening`, which needs a range no list holds). It shows that same-offset widening never ranks above a configuration that is wider now and starts a course (`not_above_wider_now`). Whether one ranks a range that keeps widening above one that is wider now is a premise beyond C (`WiderNow.comparison_undecided`).
+
+3. **ReadInTime: a selection locked by reading from its share, turned only by a reading beyond it.** The selection sets its rule from its own share, and the lock is broken only by a reading beyond the share (the loss read against a bound). The window is exact at every step but at most one, closes once the late reading would favour the shapers, and has a deadline that holds under every schedule. But the "loss" is only a count read against `N`. It is not something that sustains the selection, and nothing in the model runs down or gives out, so the level and giving fields are N there.
+
+4. **ReachedCascade: no level or loss at all.** What the first `k` couplings register decides every later act and every selection through the acts.

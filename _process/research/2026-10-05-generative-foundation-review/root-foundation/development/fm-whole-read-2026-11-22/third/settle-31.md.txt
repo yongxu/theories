@@ -1,0 +1,420 @@
+# Task file: SETTLE, reader whole-c-settle-31
+
+Your 6 modules and the fields on which the two passes differ. Pass a is one kind of model, pass b another.
+
+## WindowedWaiting.lean  (1525 lines)
+
+### field `moves`
+- pass a: N: The response tables specify deterministic laws. The choice among tables and the supplied error pattern are parameters of runs.
+- pass b: S: the laws are quantified over all choices of one-step rule, though no step-by-step choice is made inside a run. `keeps_split` (l. 454): every f keeping mutual giving and inclusion has NeverRestores f or NeverAnswers f. `restores_and_answers_iff` (l. 516): Restores f together with AnswersWithholder f exactly where f a b = (a == b). `pairKeepsInclusion_table_iff` (l. 410). `Pair.not_absorbs_and_answers_spaced` (l. 1417): quantified over every window w and every error pattern spaced at two.
+
+### declarations of WindowedWaiting.lean (by script)
+  l.199 theorem invariant
+  l.205 theorem course_congr
+  l.212 theorem course_rel
+  l.220 theorem or_congr_both
+  l.228 def table
+  l.235 theorem eq_table_of
+  l.245 def PairKeepsInclusion
+  l.251 def pairStep
+  l.256 def oneWithheldBool
+  l.259 def Restores
+  l.263 def NeverRestores
+  l.267 def againstWithholder
+  l.272 def AnswersWithholder
+  l.276 def NeverAnswers
+  l.283 theorem pairStep_congr
+  l.288 theorem restores_congr
+  l.292 theorem neverRestores_congr
+  l.299 theorem NeverRestores.not
+  l.304 theorem never_restores_of
+  l.314 theorem never_answers_of
+  l.320 theorem answersWithholder_iff
+  l.332 theorem answersWithholder_at_one
+  l.337 theorem NeverAnswers.not
+  l.343 theorem pairKeepsInclusion_iff
+  l.361 def bothGave
+  l.364 def partnerGave
+  l.367 def ownGave
+  l.370 def eitherGave
+  l.373 def alwaysGives
+  l.376 def agreement
+  l.379 theorem partnerGave_eq
+  l.386 theorem agreement_eq
+  l.392 theorem bothGave_keeps
+  l.395 theorem partnerGave_keeps
+  l.398 theorem ownGave_keeps
+  l.401 theorem eitherGave_keeps
+  l.404 theorem alwaysGives_keeps
+  l.410 theorem pairKeepsInclusion_table_iff
+  l.428 def apart
+  l.431 def notBoth
+  l.433 theorem bothGave_never_restores
+  l.437 theorem partnerGave_never_restores
+  l.441 theorem ownGave_never_restores
+  l.445 theorem ownGave_never_answers
+  l.447 theorem eitherGave_never_answers
+  l.449 theorem alwaysGives_never_answers
+  l.454 theorem keeps_split
+  l.473 theorem keeps_not_both
+  l.481 theorem agreement_restores_at_two
+  l.487 theorem agreement_restores
+  l.490 theorem agreement_answers_at_one
+  l.494 theorem agreement_answers
+  l.498 theorem agreement_against
+  l.510 theorem agreement_not_keeps
+  l.516 theorem restores_and_answers_iff
+  l.549 def windowTwo
+  l.552 def windowStep
+  l.556 def windowOneWithheld
+  l.560 def windowAgainst
+  l.564 def windowFacing
+  l.567 theorem windowTwo_keeps
+  l.577 theorem windowTwo_restored_stays
+  l.588 theorem windowTwo_restores
+  l.595 theorem windowTwo_answers
+  l.601 theorem windowTwo_answers_stays
+  l.619 def alternatorStep
+  l.623 def alternatorStart
+  l.626 theorem alternator_course
+  l.636 theorem alternator_never_answered
+  l.650 theorem alternator_gives_half
+  l.658 def even
+  l.662 theorem even_two_mul
+  l.675 theorem alternator_second
+  l.686 inductive Pair
+  l.693 inductive Waits
+  l.698 def oneWithheld
+  l.702 theorem answers_first
+  l.705 theorem answers_second
+  l.709 theorem loop
+  l.712 theorem swap_first
+  l.716 theorem swap_second
+  l.722 theorem echo
+  l.736 theorem exactly_one
+  l.746 theorem never_together
+  l.752 theorem echo_returns
+  l.758 def Matches
+  l.764 theorem partnerGave_course
+  l.776 theorem partnerGave_never_restores_of_echo
+  l.782 def partner
+  l.786 theorem waits_partner
+  l.791 def config
+  l.797 def induced
+  l.801 def Agrees
+  l.805 def InputsKeepInclusion
+  l.809 theorem induced_partner
+  l.814 theorem induced_keeps
+  l.820 theorem keeps_of_induced
+  l.830 theorem agrees_table
+  l.835 theorem agrees_never
+  l.837 theorem agrees_both
+  l.839 theorem agrees_partner
+  l.841 theorem agrees_own
+  l.843 theorem agrees_either
+  l.845 theorem agrees_always
+  l.851 theorem pairKeepsInclusion_iff_induced
+  l.876 def partnerGaveDnf
+  l.878 theorem agrees_dnf
+  l.892 theorem dnf_keeps_iff_em
+  l.906 theorem dnf_keeps_em
+  l.914 theorem all_agreeing_keeps_em
+  l.928 def answersWithin
+  l.933 theorem lag_below_one
+  l.940 theorem lag_below_two
+  l.951 theorem window_one
+  l.963 theorem answersWithin_into
+  l.972 theorem answersWithin_keeps
+  l.976 theorem window_mono
+  l.983 theorem window_worst_start
+  l.990 theorem window_restored_stays
+  l.997 theorem window_withheld_kept
+  l.1007 theorem lag_shift
+  l.1016 theorem withholder_answered
+  l.1040 theorem waited_on
+  l.1047 theorem withholder_answered_holds
+  l.1052 theorem within_first
+  l.1057 theorem within_second
+  l.1064 def oneWithheldHistory
+  l.1070 def WindowMatches
+  l.1077 theorem windowStep_course
+  l.1090 theorem window_restores
+  l.1101 inductive Line
+  l.1109 inductive Waits
+  l.1115 def sourceWithheld
+  l.1121 theorem source_out
+  l.1128 theorem relay_course
+  l.1139 theorem withholder_answered_reached
+  l.1156 def answersWithinErring
+  l.1161 theorem erring_keeps
+  l.1169 def clocked
+  l.1173 def erringStart
+  l.1178 def erringRun
+  l.1183 theorem clocked_state
+  l.1190 theorem erring_shift
+  l.1196 theorem erring_history
+  l.1201 theorem erringRun_no_error
+  l.1206 def Spaced
+  l.1210 theorem spaced_mono
+  l.1214 theorem window_turn
+  l.1221 theorem window_of_gap
+  l.1240 theorem gap_le
+  l.1244 theorem gives_unless_errs_le
+  l.1261 theorem gives_unless_errs
+  l.1268 theorem errs_answered
+  l.1284 theorem withholder_answered_clocked
+  l.1300 theorem window_holds_of_gaps
+  l.1313 theorem spaced_window_holds
+  l.1326 def firstErrsOnce
+  l.1328 theorem firstErrsOnce_spaced
+  l.1333 theorem window_absorbs_within
+  l.1341 theorem window_absorbs
+  l.1349 def secondErrsEven
+  l.1351 theorem secondErrsEven_spaced
+  l.1359 theorem alternator_received_within
+  l.1366 theorem alternator_gives_odd_within
+  l.1377 theorem alternator_received
+  l.1383 instance of
+  l.1384 theorem alternator_gives_odd
+  l.1391 theorem alternator_answered_one
+  l.1401 theorem absorbs_needs_two
+  l.1417 theorem not_absorbs_and_answers_spaced
+  l.1429 theorem not_absorbs_and_answers
+  l.1440 theorem alternator_bridge
+  l.1453 def firstAlwaysErrs
+  l.1457 theorem withholder_answered_tight
+  l.1469 theorem firstAlwaysErrs_second
+  l.1477 def AgainstMatches
+  l.1485 theorem windowAgainst_course
+  l.1501 theorem windowAgainst_withholds_of_clocked
+  l.1509 def ringTwoErrors
+  l.1515 theorem ringTwoErrors_answered
+
+## WitnessRefinement.lean  (676 lines)
+
+### field `rank`
+- pass a: S: `refined_completes` (l. 272) uses reserve ≥ load + 3 and time + load + 3 ≤ deadline as premises for successful guarded completion, with actual-model retention, covered roots, separation, freshness and faithful responsive readers and approvers. The deadline is supplied.
+- pass b: N: no rank or variant that falls and no law of ending within a bound. A deadline appears only as the premise `timely` of `refined_completes` (l. 294) and `step_then_completes` (l. 559).
+
+### declarations of WitnessRefinement.lean (by script)
+  l.57 abbrev Reports
+  l.60 def witnessed
+  l.64 def explains
+  l.68 def compatible
+  l.73 def refine
+  l.77 theorem witnessed_iff
+  l.94 theorem explains_iff
+  l.100 theorem compatible_iff
+  l.111 theorem refine_keeps_actual
+  l.122 theorem refine_subset
+  l.128 theorem silence_keeps_models
+  l.137 theorem common_survivor_same_answer
+  l.151 def CrossSeparated
+  l.155 theorem cross_separation_excludes
+  l.167 theorem responsive_survivors_exclude
+  l.182 def ambiguousReports
+  l.188 theorem covering_faults_same_transcript
+  l.205 theorem present_iff
+  l.214 theorem explains_complete_iff
+  l.224 theorem compatible_complete_iff
+  l.234 theorem complete_diagnosability_iff_cross_separation
+  l.254 theorem refined_pool_sound
+  l.272 theorem refined_completes
+  l.312 def auditRoster
+  l.318 def auditArrangement
+  l.325 def auditFaults
+  l.328 def splitReports
+  l.331 def posterior
+  l.335 theorem conflicting_models_self_certify
+  l.343 theorem four_witnesses_inseparable
+  l.348 theorem fifth_witness_resolves
+  l.353 theorem absent_fifth_keeps_uncertainty
+  l.358 def falseFifth
+  l.361 theorem fifth_witness_fallible
+  l.365 def dependentFaults
+  l.370 theorem duplicated_fifth_no_repair
+  l.376 def simulationReports
+  l.383 structure Audited
+  l.390 def inspect
+  l.402 def run
+  l.409 theorem inspection_keeps_actual
+  l.427 def outcome
+  l.431 theorem inspection_then_shutdown
+  l.440 theorem inadequate_witnesses_uncertified
+  l.447 theorem diagnosis_needs_response_reserve
+  l.455 theorem denied_no_run
+  l.461 theorem uncovered_correlation_deletes_actual
+  l.469 def audit
+  l.475 theorem inspect_some
+  l.489 theorem step_candidates
+  l.496 theorem step_narrows
+  l.504 theorem candidates_narrow
+  l.509 theorem step_keeps_actual
+  l.521 theorem step_pool_sound
+  l.538 theorem step_then_completes
+  l.579 theorem run_inspected
+  l.586 theorem run_uninspected
+  l.592 theorem denied_no_trace
+  l.600 theorem trace_iff_run
+  l.625 theorem outcome_of_trace
+  l.631 theorem trace_of_outcome_ne
+  l.640 theorem extended_trace_completes
+  l.652 theorem four_witness_trace_uncertified
+  l.663 theorem extended_trace_short_of_reserve
+
+## WitnessRefinementRuns.lean  (374 lines)
+
+### field `level`
+- pass a: S: `test_step_completes` (l. 327) requires remaining reserve ≥ load + 3 for a guarded response. Inspection states here are lists of models, and this theorem supplies reserve on a separate installation.
+- pass b: N: no level that runs down in this module's statements. The installation reserve appears only as the premise `stocked` of `test_step_completes` (l. 343).
+
+### field `rank`
+- pass a: S: `test_step_completes` (l. 327) assumes time + load + 3 ≤ deadline alongside sufficient reserve, a faithful test retaining the actual model, covered causes, a separated pool, freshness and faithful responsive members. It concludes successful in-scope completion, with no falling rank for inspection.
+- pass b: N: no rank, variant, drain or deadline law.
+
+### declarations of WitnessRefinementRuns.lean (by script)
+  l.65 def inspection
+  l.70 def testing
+  l.74 def Complete
+  l.78 def pool
+  l.84 theorem mem_step
+  l.90 theorem run_narrows
+  l.99 theorem silent_step
+  l.109 theorem step_admits
+  l.117 theorem step_pool_empty_iff
+  l.133 theorem step_certificate_candidate
+  l.145 theorem complete_step_agrees
+  l.158 theorem complete_run_agrees
+  l.167 theorem responsive_step_excludes
+  l.180 theorem covering_step_keeps_both
+  l.196 theorem diagnosable_iff
+  l.213 theorem all_append
+  l.218 theorem and_self'
+  l.220 theorem any_congr
+  l.227 theorem filter_congr
+  l.235 theorem any_congr_on
+  l.243 theorem and_absorbed
+  l.251 theorem witnessed_copy
+  l.265 theorem copied_witnesses_same
+  l.289 theorem doubled_roster_same
+  l.297 theorem total_fault_kept
+  l.305 theorem total_fault_blocks
+  l.317 theorem test_emptied
+  l.327 theorem test_step_completes
+  l.366 theorem inquiry_step_testing
+
+## Witnesses.lean  (105 lines)
+
+### field `no_return`
+- pass a: B: `halted` (l. 42) rules out a next step at every state by construction. `profile` (l. 50) takes the supplied rest value throughout the tail after its finite list. Neither derives loss from a prior course.
+- pass b: N: no point of no return.
+
+### field `closed_region`
+- pass a: B: `profile` (l. 50) specifies a constant tail after the supplied list. This is a feature of the constructed trajectory.
+- pass b: N: no statement.
+
+### field `forms_change`
+- pass a: N: Not found in the statements read.
+- pass b: D: the account names "a renewer and two takers", and `relay`'s `present : Nat → List Member` (l. 80) lets the members taking part differ by step. No statement or fixed instance here makes them change.
+
+### declarations of Witnesses.lean (by script)
+  l.42 def halted
+  l.45 def single
+  l.50 def profile
+  l.58 def emptyFlow
+  l.62 def giving
+  l.66 def unrequired
+  l.72 inductive Member
+  l.80 def relay
+  l.93 def relayWeb
+
+## World.lean  (137 lines)
+
+### field `reading`
+- pass a: S: `World.web` (l. 109) and `World.flow` (l. 115) project states and moves from the same history. `World.of_web` (l. 130) and `World.of_flow` (l. 134) identify their readings on the constructor. These are projection laws.
+- pass b: N: no reading or law of what is registered. `World.web` and `World.flow` (ll. 109, 115) are read-outs of the history by definition.
+
+### field `level`
+- pass a: S: `Dependence` (l. 48) records the natural amount of each condition at a state. `World.of` (l. 125) accepts an arbitrary web and flow, with no equation for next level or return from current stock.
+- pass b: N: the records hold `level` (l. 49 and l. 89) and take and give amounts (l. 63, l. 73), but no law of a level running down is stated. The account says balance is stated elsewhere (`World.balanced_iff_law`).
+
+### field `giving`
+- pass a: S: `Flow` (l. 61) records the list present at each time and each formation's giving. `Exchange.given` (l. 81) sums the contributions of the listed relata. No loss of a giver is derived.
+- pass b: N: no statement. `Flow.give` and `Exchange.given` (l. 81) are records of amounts.
+
+### field `comparison`
+- pass a: S: `World.of_web` (l. 130) and `World.of_flow` (l. 134) carry a supplied web and flow through construction and projection unchanged, for every pair on one relatum type. No step-order comparison between distinct histories is stated.
+- pass b: N: no law carrying between processes. `World.of_web` (l. 130) and `World.of_flow` (l. 134) say that building a world from L and W and reading it back gives W and L (rfl).
+
+### declarations of World.lean (by script)
+  l.48 structure Dependence
+  l.57 abbrev Web
+  l.61 structure Flow
+  l.71 structure Exchange
+  l.77 def Exchange.taken
+  l.81 def Exchange.given
+  l.88 structure WebAt
+  l.96 def everyStep
+  l.100 structure World
+  l.109 def web
+  l.115 def flow
+  l.119 def move
+  l.125 def World.of
+  l.130 theorem World.of_web
+  l.134 theorem World.of_flow
+
+## WorldRepresentation.lean  (565 lines)
+
+### field `both_outcomes`
+- pass a: N: No criterion for survival versus ending of one course was found. `World.conserves_form` (l. 357) tests whether a single pair conserves across a step.
+- pass b: S: `conservation_iff_decided` (l. 406): some one-relatum world has conservation Q at every step exactly where Q is decided. `arisingRecurs_iff` (l. 179) and `ceasingRecurs_iff` (l. 194) characterise recurring arising and recurring ceasing separately. N: no dichotomy of going on and ending, or of keeping and losing.
+
+### declarations of WorldRepresentation.lean (by script)
+  l.119 def Web.sameStep
+  l.121 theorem Web.sameStep_class
+  l.126 def Web.partialIdentity
+  l.130 theorem Steps.along_iff_itself
+  l.136 theorem Steps.later_iff
+  l.149 theorem Steps.sameOrLater_iff
+  l.167 def conservationStep
+  l.174 def withinStep
+  l.179 theorem arisingRecurs_iff
+  l.194 theorem ceasingRecurs_iff
+  l.213 def Reidentify.atStep
+  l.218 def Reidentify.onOccurrences
+  l.223 theorem Reidentify.sameStep_carried
+  l.228 theorem Reidentify.withinStep_carried
+  l.239 theorem Reidentify.partialIdentity_carried
+  l.251 theorem conserves_reidentify
+  l.261 theorem conservationStep_reidentify
+  l.270 theorem activityClass_reidentify
+  l.277 theorem reidentify_carries
+  l.308 theorem sheng_conservation_reidentify
+  l.321 def ofRelations
+  l.327 theorem ofRelations_relations
+  l.337 def ofModel
+  l.342 theorem ofModel_model
+  l.357 theorem conserves_form
+  l.363 def ofConservationForm
+  l.370 theorem ofConservationForm_conserves
+  l.381 theorem conserves_iff_same_level
+  l.388 theorem conserves_difunctional
+  l.394 theorem conserves_decided
+  l.398 theorem amounts_decided
+  l.406 theorem conservation_iff_decided
+  l.421 theorem decides_activity_iff_em
+  l.430 def standingAt
+  l.437 theorem standingAt_alike
+  l.456 structure ExchangeSigns
+  l.462 def exchangeSigns
+  l.467 def ExchangeSigns.Agree
+  l.472 def idleTwice
+  l.475 theorem idleTwice_unbalanced
+  l.482 theorem balance_needs_conservation
+  l.495 theorem conserves_identity_injective
+  l.508 theorem Diagonal.no_injection_of_predicates
+  l.517 theorem not_conserves_identity
+  l.526 theorem falls_exhaust
+  l.546 theorem falls_not_endless
+  l.551 theorem not_falls_everywhere
+  l.561 theorem Steps.along_endless

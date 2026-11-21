@@ -1,0 +1,463 @@
+# Task file: EDGE, second batch, reader whole-c-edge2-01
+
+Your 6 modules. In each, BOTH earlier passes found a statement with both outcomes and NEITHER found a law of ending within a bound. For orientation only, what they said (where to look, not evidence).
+
+## Acceptance.lean  (318 lines)
+
+### `both_outcomes`
+- pass a: B: `maintenance_weight_exact` (l. 163) characterizes maintenance at every optimum by strict inequality, including failure at a tie.
+- pass b: S (keeping or losing access, Bool model with general integers): `maintenance_weight_exact` (l.163): every best choice keeps access iff diversion < weight, the tie counted among the failures. `maintenance_separation` (l.114): with diversion > 0 and lift > 0, a choice is best iff it is (divert, accept).
+
+### `no_return`
+- pass a: N: Not found in the statements read.
+- pass b: N: `accepting_optimum_can_destroy_access` (l.136) shows a best choice that diverts (¬ Maintains true). It is a one-shot choice with no later steps and nothing about regaining.
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N
+
+### `closed_region`
+- pass a: N: Not found in the statements read.
+- pass b: N
+
+### `moves`
+- pass a: S: `every_optimum_has_access_iff` (l. 89) transfers universal access of best allowed moves in both directions for positive lift.
+- pass b: S: `Best` (l.49) is a choice among `allowed : A → Prop` by a score. `acceptance_factorization` (l.65): for any allowed set, base score q and lift > 0, a pair (move, accept bit) is Best under `AcceptScore` iff the bit is true and the move is Best under q. `every_optimum_has_access_iff` (l.89): every best choice keeps `access` iff every best base move does. `no_base_optimal_access` (l.97): where no best base move keeps access, no best move does. There is no `Process S A`; it is a one-shot choice.
+
+### `reading`
+- pass a: S: `approximate_score_bound` (l. 275) gives an actual score gap at most twice err against every allowed move when the chosen move is best by an estimate within err on all allowed moves.
+- pass b: S (only an estimate, no observation class): `approximate_score_bound` (l.275): where an `estimate` is within `err` of `actual` on allowed moves, a choice Best by the estimate is within 2*err of every allowed move; `approximate_score_bound_tight` (l.291) shows the bound attained. B: `stale_value_shield_suboptimal` (l.241): a value computed without the restriction (`UnrestrictedValue`) makes branch true best, though its allowed continuations score 1 and branch false scores 2; `recomputed_value_restores_branch` (l.258). No class of things read alike was found.
+
+### declarations of Acceptance.lean (by script)
+  l.49 def Best
+  l.53 def lifted
+  l.58 def AcceptScore
+  l.65 theorem acceptance_factorization
+  l.89 theorem every_optimum_has_access_iff
+  l.97 theorem no_base_optimal_access
+  l.106 def MaintenanceValue
+  l.111 def Maintains
+  l.114 theorem maintenance_separation
+  l.136 theorem accepting_optimum_can_destroy_access
+  l.144 theorem fixed_access_weight_boundary
+  l.151 theorem every_fixed_access_weight_has_counterexample
+  l.157 def retained
+  l.163 theorem maintenance_weight_exact
+  l.183 theorem unavoidable_score_loss
+  l.191 def TwoStepReward
+  l.198 def LastAllowed
+  l.201 def UnrestrictedValue
+  l.206 def RestrictedValue
+  l.211 theorem restricted_value_achievable
+  l.216 theorem restricted_value_bounds
+  l.225 theorem one_le_two
+  l.228 theorem unrestricted_value_optimal
+  l.241 theorem stale_value_shield_suboptimal
+  l.258 theorem recomputed_value_restores_branch
+  l.275 theorem approximate_score_bound
+  l.291 theorem approximate_score_bound_tight
+
+## Assurance.lean  (195 lines)
+
+### `both_outcomes`
+- pass a: S: `completes_iff_of_determined` (l. 88) characterizes completion by existence of a trace and safety and goal for every trace endpoint under determinacy.
+- pass b: S (securing a target, not going on and ending): `completes_iff_of_determined` (l.88) and `completes_iff_runs` (l.102) are exactly-whens of completion for determined processes.
+
+### `no_return`
+- pass a: B: `Branch.stuck` (l. 122) concludes there is no successor at state 2, reachable as a first outcome in `Branch.process` (l. 114).
+- pass b: N: `Branch.stuck` (l.122) only says no move is possible from 2.
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N
+
+### `closed_region`
+- pass a: N: Not found in the statements read.
+- pass b: N
+
+### `moves`
+- pass a: S: `runs_of_completes` (l. 46) gives existence of a run and safety and goal at every reachable endpoint for a completing plan.
+- pass b: S: `runs_of_completes` (l.46): for every Process P, Completes P safe goal s plan gives a trace, and every trace of the plan is safe and ends in the goal. `completes_iff_of_determined` (l.88): for Determined P, completes iff it runs and every trace is safe and ends in the goal. B: `Branch.runs_not_completes` (l.145): both moves run from 0 and every endpoint is 3, yet the plan does not complete.
+
+### `reading`
+- pass a: N: Not found in the statements read.
+- pass b: N
+
+### declarations of Assurance.lean (by script)
+  l.43 def free
+  l.46 theorem runs_of_completes
+  l.55 theorem safeTrace_head
+  l.62 theorem completes_of_runs
+  l.88 theorem completes_iff_of_determined
+  l.95 theorem safeTrace_free
+  l.102 theorem completes_iff_runs
+  l.114 def process
+  l.117 theorem two_ne_zero
+  l.118 theorem two_ne_one
+  l.119 theorem one_ne_zero
+  l.122 theorem stuck
+  l.127 theorem ends_three
+  l.145 theorem runs_not_completes
+  l.153 theorem not_determined
+  l.162 theorem completes_ofMap_iff
+  l.174 theorem completes_ofMap_single
+  l.181 theorem completes_ofPartial_iff
+
+## AssurancePlans.lean  (328 lines)
+
+### `both_outcomes`
+- pass a: B: `Regulation.opposite_moves` (l. 157) states which move keeps the band and which fails at each end.
+- pass b: B: `Routes.completes_iff` (l.247): one route from an unreached mode completes exactly when it differs from the mode. `Regulation.opposite_moves` (l.157): at 1, add completes and remove does not; at 2, the reverse. These are of completing a plan, not of going on and ending. N for going on and ending.
+
+### `no_return`
+- pass a: B: `Shut.no_trace` (l. 85) rules out even the singleton plan from false in the halted process.
+- pass b: N: no irreversibility. `Shut.no_trace` (l.85) says only that where no move is possible a one-move plan has no trace (B), and `Regulation.next_move_changes` (l.192) says only that [.add, .add] from 1 does not complete (B).
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N
+
+### `closed_region`
+- pass a: S: `completes_itinerary` (l. 121) assumes K is preserved by the response and extends this to every length. B: `Regulation.respond_keeps` (l. 179) proves the one-step premise for the band.
+- pass b: S: `completes_itinerary` (l.121): its premise is that K is closed under the response's step (∀ x, K x → K (f x (respond x))), and its conclusion is that K is kept along every itinerary. B: `Regulation.respond_keeps` (l.179): the band is closed under update n (respond n); `Regulation.kept_along` (l.187).
+
+### `moves`
+- pass a: S: `completes_itinerary` (l. 121) turns one-step preservation under a state-dependent choice into completion for every finite itinerary.
+- pass b: S: `completes_itinerary` (l.121): for a law of change f, a response respond : S → A and a set K, if ∀ x, K x → K (f x (respond x)), then for every k and every s in K the itinerary completes into K under ofMap f. `every_end_of_some_end` (l.58): for a Determined P, if some trace of the plan ends in the goal, every trace does. B: `Open.some_not_every` (l.72): without determinacy one move from false may end at true and may not. `Regulation.no_merged_move` (l.166): no choose : O → Move through a reading with reading 1 = reading 2 completes the band at both 1 and 2. `Regulation.respond_keeps` (l.179), `Regulation.kept_along` (l.187).
+
+### `reading`
+- pass a: B: `Regulation.no_merged_move` (l. 166) rules out choosing a band-keeping move at both endpoints through any reading merging 1 and 2; `Routes.adequate_merges_outcomes` (l. 265) exhibits an adequate reading merging modes with different outcomes under one route.
+- pass b: B: `Regulation.no_merged_move` (l.166): for every reading : Nat → O that merges 1 and 2 and every choose, the band cannot be kept at both ends, so what is registered decides whether a response can keep the band. `Routes.Adequate` (l.225): a reading is adequate for a response when the response to it arrives from every mode. `Routes.common_coarsening_inadequate` (l.305): a reading that both leftReading and rightReading refine is not adequate for any response. `Routes.no_coarsest_adequate` (l.314): no adequate reading is refined by every adequate Bool reading. These quantify over readings but are of the one built Routes or Regulation process.
+
+### declarations of AssurancePlans.lean (by script)
+  l.58 theorem every_end_of_some_end
+  l.68 def process
+  l.72 theorem some_not_every
+  l.82 def process
+  l.85 theorem no_trace
+  l.89 theorem every_end_vacuous
+  l.93 theorem no_end
+  l.101 theorem completes_congr
+  l.115 def itinerary
+  l.121 theorem completes_itinerary
+  l.135 inductive Move
+  l.141 def update
+  l.146 def process
+  l.149 def Band
+  l.151 instance decidableBand
+  l.154 def respond
+  l.157 theorem opposite_moves
+  l.166 theorem no_merged_move
+  l.179 theorem respond_keeps
+  l.187 theorem kept_along
+  l.192 theorem next_move_changes
+  l.207 abbrev Mode
+  l.210 def zero
+  l.211 def one
+  l.212 def two
+  l.215 def advance
+  l.218 def process
+  l.221 def Reached
+  l.225 def Adequate
+  l.229 def leftReading
+  l.231 def rightReading
+  l.233 def leftRespond
+  l.235 def rightRespond
+  l.238 theorem cases3
+  l.247 theorem completes_iff
+  l.252 theorem left_adequate
+  l.258 theorem right_adequate
+  l.265 theorem adequate_merges_outcomes
+  l.273 theorem pairwise_common
+  l.290 theorem no_common
+  l.294 theorem common_coarsening_constant
+  l.305 theorem common_coarsening_inadequate
+  l.314 theorem no_coarsest_adequate
+
+## BeyondCoupling.lean  (586 lines)
+
+### `both_outcomes`
+- pass a: B: `Clearing.counting_dweller_unselected` (l. 479) states DwellerEnded under clearing and DwellerKept under sparing for two conducts in the same model.
+- pass b: B: `Clearing.counting_dweller_unselected` (l.479): the dweller ends in the cleared world and is kept in the spared one, while every selection read off the clearer's side by threshold selects the two alike. `Clearing.read_not_direction` (l.521): DwellerEnded is read off the same continuations and holds in the cleared world only. S: the 'exactly when' laws (`Web.readOffCouplings_alike_iff`, l.200; `Web.readOffContinuations_alike_iff`, l.211) are of being selected alike, not of going on or ending.
+
+### `no_return`
+- pass a: B: `Diversion.counting_selected_against` (l. 574) concludes the dweller is unsupported at every successor time on the diverted course.
+- pass b: B: `Clearing.counting_dweller_unselected` (l.479): DwellerEnded (countingLevel false). `Diversion.counting_selected_against` (l.574): ∀ n, ¬ Supported (n+1) dweller in the diverted web. Both are concluded in built cases, at the loss of the dweller, not of something that gives to a level.
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N
+
+### `closed_region`
+- pass a: S: `Flow.returning_pool_covers` (l. 329) gives membership of every formation in the returning pool's coupling closure under finite coverage and decidable reach; closure here is under coupling.
+- pass b: S: `Flow.returning_pool_covers` (l.329): with formations listed and reach decided, every formation lies within the coupling closure of the group of formations whose acts return (ReachReturns), so nothing lies beyond. `Flow.returning_pool_covers_either` (l.337). `Flow.ownClosure_rival_of_within` (l.367). These are closures under coupling or under a relation, not regions closed under steps.
+
+### `moves`
+- pass a: B: `Clearing.counting_dweller_unselected` (l. 479) compares sparing and clearing: only the former keeps the dweller and every threshold-only clearer-side selection treats them alike.
+- pass b: S: `act_courses_unselected_throughout` (l.256): the part acts by act or by act' (ExchangeLaw, nonanticipating). The rest follows a law reading through coupling, both courses are feasible, and the two acts agree on take and give at every condition coupled into the pool's coupling closure drawn through the two courses. Then every selection read off what couples into a pool within that closure selects the two courses' levels alike. `significance_courses_unselected` (l.292) is the same for act sig and act sig' under `ActReadsWithin` (l.278), which the docstring calls a premise, not a law.
+
+### `reading`
+- pass a: S: `readOffContinuations_alike_iff` (l. 211) makes agreement of every continuation-based selection equivalent to equal admission of every group member at every step.
+- pass b: S: `Web.ReadOffContinuations` (l.143) and `Web.ReadOffCouplings` (l.148) are selections read off what is registered. `Web.readOffCouplings_alike_iff` (l.200): two histories are selected alike by every selection read off a group's couplings ⇔ they are alike through every member's couplings at every step. `Web.readOffContinuations_alike_iff` (l.211) is the same with admission. `Web.separates_continuations` (l.226): where a member's admission differs at a step, some selection read off continuations separates the two. `not_tracks_of_alike` (l.236). B: `Clearing.turned_by_dweller_read` (l.505), `Clearing.turned_by_habitat_gauge` (l.543).
+
+### declarations of BeyondCoupling.lean (by script)
+  l.143 def ReadOffContinuations
+  l.148 def ReadOffCouplings
+  l.153 def ContinuationClass
+  l.160 theorem ReadOffContinuations.couplings
+  l.165 theorem readOffCouplings_thresholdOnly_iff
+  l.173 theorem SelectsThroughAll.readOffCouplings
+  l.179 theorem SelectsThrough.readOffCouplings
+  l.184 theorem ReadOffCouplings.mono
+  l.191 theorem readOffCouplings_alike_of_steps
+  l.200 theorem readOffCouplings_alike_iff
+  l.211 theorem readOffContinuations_alike_iff
+  l.219 theorem continuationClass_reads
+  l.226 theorem separates_continuations
+  l.236 theorem not_tracks_of_alike
+  l.256 theorem act_courses_unselected_throughout
+  l.278 def ActReadsWithin
+  l.292 theorem significance_courses_unselected
+  l.329 theorem returning_pool_covers
+  l.337 theorem returning_pool_covers_either
+  l.357 theorem ownClosure_not_unrestricted_of_acyclic
+  l.367 theorem Flow.ownClosure_rival_of_within
+  l.383 theorem Flow.couplingIn_ownClosure_rival
+  l.396 theorem Flow.reachReturns_ownClosure_rival
+  l.409 theorem routeB_universal_closed
+  l.430 theorem dweller_beyond_every_coupling
+  l.445 theorem couplingIn_leaves_dweller
+  l.459 def counting
+  l.464 def countingLevel
+  l.469 def DwellerKept
+  l.479 theorem counting_dweller_unselected
+  l.496 def clearerOrDweller
+  l.505 theorem turned_by_dweller_read
+  l.521 theorem read_not_direction
+  l.531 def habitatGauge
+  l.543 theorem turned_by_habitat_gauge
+  l.559 def counting
+  l.564 def countingLevel
+  l.574 theorem counting_selected_against
+
+## BlanketWeights.lean  (804 lines)
+
+### `both_outcomes`
+- pass a: B: `SynchronousCopy.exact_independentGiven` (l. 735) and `SynchronousCopy.noisy_not_independentGiven` (l. 741) give keeping and losing statistical independence for two miss settings of the same kernel family. Both sets of weights are steady.
+- pass b: B: for one synchronous kernel, conditional independence is kept with an exact sensory copy (`SynchronousCopy.exact_independentGiven` l.735) and lost with a miss of 1 in 4 (`SynchronousCopy.noisy_not_independentGiven` l.741), both weightings steady (l.724, l.729). N: no general exactly-when of going on and ending. The iff between conditional independence and the cross form on listings without repeats (l.456, l.451) is about a property of the weighting.
+
+### `no_return`
+- pass a: N: Not found in the statements read.
+- pass b: N: no point of no return. B: in `Turning.rate` (l.564) the internal part turns forward only and never back, but it cycles through three phases, so nothing is lost for good.
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N
+
+### `closed_region`
+- pass a: B: `SynchronousCopy.exact_steady` (l. 724) and `noisy_steady` (l. 729) prove that each kernel carries its specified weights to 64 times themselves.
+- pass b: S: `cross_of_closure` (l.182): every internal state within the closure `«所闭»` of the moves from `i` is in cross form with `i`, under detailed balance, positive weights and ratios that read no external state. B: steady weights by global balance: `LagRelay.steady` (l.530), `Turning.steady` (l.600), `SynchronousCopy.exact_steady` (l.724), `SynchronousCopy.noisy_steady` (l.729).
+
+### `moves`
+- pass a: S: `cross_of_closure` (l. 182) propagates the cross-product identity along the closure of internal moves under positive weights, detail balance, common positive moves and external-independent rate ratios.
+- pass b: S: `DetailedBalance` (l.128) and `crossForm_of_detailedBalance` (l.203) take the rates of the internal part's moves (`rate : B → E → I → I → Nat`) and a move relation `adj`, and state what detailed balance of those moves gives the weighting. N: there is no `Process S A`, policy or choice among steps, and no law of what some or every choice keeps.
+
+### `reading`
+- pass a: S: `ratio_of_crossForm` (l. 222) derives external-independent internal rate ratios from positive weights, detailed balance and cross form.
+- pass b: S: `IndependentGiven` (l.329): at each blanket state, restricting the weighting to any record `r : E → Bool` of the external part leaves the share of every internal event unchanged. `independentGiven_of_detailedBalance` (l.465) gives this under detailed balance. B: in `Cycle` (l.750) the internal part reads only the sensory part (a `Blanket.Blanketed` law), yet its occupation weighting is not in cross form (`Cycle.not_crossForm` l.770).
+
+### declarations of BlanketWeights.lean (by script)
+  l.122 def CrossForm
+  l.128 def DetailedBalance
+  l.134 theorem cross_of_move
+  l.147 theorem ratio_of_cross
+  l.159 theorem cross_trans
+  l.171 theorem pos_of_mul_eq
+  l.182 theorem cross_of_closure
+  l.203 theorem crossForm_of_detailedBalance
+  l.212 theorem crossForm_of_detailedBalance_unread
+  l.222 theorem ratio_of_crossForm
+  l.236 def internalWeight
+  l.239 def externalWeight
+  l.242 def blanketWeight
+  l.247 def FactorsGiven
+  l.252 def CrossFormOn
+  l.257 theorem crossFormOn_of_crossForm
+  l.261 theorem crossForm_of_crossFormOn
+  l.265 theorem total_mul_total
+  l.272 theorem factorsGiven_of_crossFormOn
+  l.288 theorem whole_zero_entry
+  l.294 theorem crossFormOn_of_factorsGiven
+  l.323 def atBlanket
+  l.329 def IndependentGiven
+  l.335 theorem mass_whole
+  l.341 theorem mass_atBlanket
+  l.352 theorem scaled_of_factorsGiven
+  l.366 theorem independentGiven_of_factorsGiven
+  l.413 theorem factorsGiven_of_independentGiven
+  l.451 theorem independentGiven_of_crossFormOn
+  l.456 theorem crossFormOn_of_independentGiven
+  l.465 theorem independentGiven_of_detailedBalance
+  l.476 theorem crossForm_product
+  l.485 theorem restrict_independent_case
+  l.496 abbrev State
+  l.500 def rate
+  l.505 def fullRate
+  l.513 def weight
+  l.519 def w
+  l.522 def flips
+  l.526 def inflow
+  l.527 def outflow
+  l.530 theorem steady
+  l.535 theorem not_independentGiven
+  l.540 theorem circulates
+  l.557 inductive Phase
+  l.564 def rate
+  l.571 def same
+  l.577 abbrev State
+  l.581 def fullRate
+  l.589 def w
+  l.591 def states
+  l.596 def inflow
+  l.597 def outflow
+  l.600 theorem steady
+  l.604 theorem circulates
+  l.609 theorem independentGiven
+  l.618 def rate
+  l.621 def w
+  l.623 theorem balanced
+  l.626 theorem crossForm
+  l.628 theorem reads_external
+  l.639 def rate
+  l.651 def w
+  l.656 theorem balanced
+  l.661 theorem joined
+  l.672 theorem ratio
+  l.679 theorem not_crossForm
+  l.687 def externalStep
+  l.690 def sensoryStep
+  l.693 def internalStep
+  l.697 def kernel
+  l.701 def states
+  l.706 def exactWeight
+  l.713 def noisyWeight
+  l.719 def exactW
+  l.721 def noisyW
+  l.724 theorem exact_steady
+  l.729 theorem noisy_steady
+  l.735 theorem exact_independentGiven
+  l.741 theorem noisy_not_independentGiven
+  l.750 def law
+  l.757 def start
+  l.760 def run
+  l.764 def w
+  l.766 theorem periodic
+  l.770 theorem not_crossForm
+  l.781 def w
+  l.788 theorem crossFormOn
+  l.797 theorem not_crossForm
+
+## Boundaries.lean  (1080 lines)
+
+### `both_outcomes`
+- pass a: S: `Balances.presupposed_comparison` (l. 627) characterizes retaining in each direction by inclusion between actual and withheld levels, given balance, withheld levels, the relation containing affecting, sub-truth and members within closure.
+- pass b: S: `Flow.Balances.presupposed_comparison` (l.627), general under `L.Balances W`: for every part within the center's closure, the levels with and without it retain what has significance exactly when they include each other, and neither adds exactly when neither exceeds. This is keeping and losing what has significance, not going on and ending. Also stated: `presupposition_iff_all_of_invariant` (l.1039), `bounded_invariant_iff` (l.1049), `not_subTrue_of_invariant` (l.489).
+
+### `no_return`
+- pass a: N: Not found in the statements read.
+- pass b: N
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N
+
+### `closed_region`
+- pass a: S: `Boundary.closure` (l. 181) and `Boundary.holds` (l. 189) make the center's relational closure a boundary contained in every boundary around it.
+- pass b: S: `Boundary` (l.173) is a region closed under a relation (`ClosedUnder`) that holds f. `Boundary.closure` (l.181) is the least, `Boundary.whole` (l.185) the greatest, `Boundary.holds` (l.189) says every boundary holds the closure, and `Boundary.only_whole` (l.199) says that where everything is within the closure the whole is the only boundary. `BoundaryFlows.only_whole_of_common` (l.933): under a common condition, along sharing a condition.
+
+### `moves`
+- pass a: N: Not found in the statements read.
+- pass b: N
+
+### `reading`
+- pass a: S: `bounded_closure_iff` (l. 419) identifies significance read by a center's closure with membership under every admissible drawing along that relation.
+- pass b: D: the opening account (l.36-37) says the relation is read off the unfolding, and which one a center draws its region along is not derived. It also cites `Flow.Balances.uncoupled_beyond_influence` (another module) for what a center's feedback carries. N: no statement here in which what is observed or registered decides something. Significance `sig` is a supplied predicate, and the `Neutral … shares` premise of `Web.selfValuation_significant_iff` (l.248) is a neutrality of the valuation, not a count.
+
+### declarations of Boundaries.lean (by script)
+  l.173 def Boundary
+  l.181 theorem closure
+  l.185 theorem whole
+  l.189 theorem holds
+  l.194 theorem of_larger
+  l.199 theorem only_whole
+  l.224 def Web.selfValuation
+  l.232 theorem Web.selfValuation_own_least
+  l.241 theorem Web.selfValuation_held
+  l.248 theorem Web.selfValuation_significant_iff
+  l.255 theorem Web.selfValuation_empty_own
+  l.262 theorem Web.selfValuation_feeding_own
+  l.270 theorem Web.selfValuation_of_unrestricted
+  l.282 def SuperTrue
+  l.287 def SubTrue
+  l.292 def BoundaryInvariant
+  l.296 theorem superTrue_iff
+  l.306 theorem boundaryInvariant_iff_determinate
+  l.316 theorem superTrue_member_iff
+  l.322 theorem subTrue_member
+  l.328 theorem superTrue_all_iff
+  l.334 theorem subTrue_all_iff
+  l.344 def SignificantWithin
+  l.350 theorem superTrue_significantWithin_iff_union
+  l.359 theorem superTrue_significantWithin_iff
+  l.367 theorem subTrue_significantWithin_iff
+  l.375 theorem subTrue_of_larger
+  l.384 theorem subTrue_total_iff
+  l.393 theorem subTrue_empty_iff
+  l.401 theorem unrestricted_iff_superTrue
+  l.410 theorem superTrue_level_free
+  l.419 theorem bounded_closure_iff
+  l.426 theorem bounded_closure_least
+  l.439 theorem presupposition_scopes
+  l.455 theorem boundaryInvariant_iff_extends
+  l.468 theorem boundaryInvariant_iff_all
+  l.479 theorem boundaryInvariant_iff_conditional
+  l.489 theorem not_subTrue_of_invariant
+  l.499 theorem unrestricted_of_presupposed
+  l.510 theorem unrestricted_iff_presupposed
+  l.522 theorem unrestricted_iff_presupposed_along
+  l.531 theorem unrestricted_iff_presupposed_of_whole
+  l.539 theorem retains_agree_of_presupposed
+  l.549 theorem Valuation.significant_of_presupposed
+  l.563 def StandpointInvariant
+  l.569 theorem unrestricted_of_standpointInvariant
+  l.582 theorem boundaryInvariant_iff_standpointInvariant
+  l.604 theorem presupposition_order
+  l.627 theorem Balances.presupposed_comparison
+  l.645 theorem Balances.presupposed_reach_comparison
+  l.657 theorem unrestricted_iff_system_presupposed
+  l.665 theorem unrestricted_iff_presupposed_of_common
+  l.679 theorem without_presupposition
+  l.691 theorem without_invariance
+  l.707 theorem without_standpoint_invariance
+  l.719 theorem with_fixed_boundary
+  l.737 theorem levels_differ
+  l.751 theorem own_presupposition
+  l.773 theorem system_presupposition
+  l.785 def sig
+  l.792 theorem forms_apart
+  l.866 theorem superTrue_all_iff
+  l.872 theorem bounded_reach_iff
+  l.881 theorem reach_scopes
+  l.891 theorem unrestricted_iff_superTrue
+  l.897 theorem superTrue_level_free
+  l.906 theorem boundaryInvariant_iff_extends
+  l.922 theorem own_continuation
+  l.933 theorem only_whole_of_common
+  l.940 theorem shares_iff_total_of_common
+  l.952 theorem not_subTrue_of_invariant
+  l.962 theorem unrestricted_of_presupposed
+  l.973 theorem significant_of_presupposed
+  l.988 theorem retains_whole_iff_includes
+  l.1039 theorem presupposition_iff_all_of_invariant
+  l.1049 theorem bounded_invariant_iff
+  l.1068 theorem presupposition_iff_all

@@ -1,0 +1,235 @@
+# Task file: EDGE, reader whole-c-edge-27
+
+Your 2 modules. For orientation only, what the two passes said of the four marks, of moves and of a reading (where to look, not evidence).
+
+## Undecided.lean  (768 lines)
+
+### `both_outcomes`
+- pass a: S: `steady_or_rises` (l. 478) gives steadiness on the first N sentences or a newly decided sentence there. B: `liar_rests_iff` (l. 577) characterizes rest at a step from any initial reading exactly by undecidedness of the liar.
+- pass b: S: `steady_or_rises` (l. 478), general: at each step revision is steady on the first N sentences or decides one it had not. `liar_rests_iff` (l. 577), built on the liar: a run from any start rests at step n exactly where the liar is undecided at n. B: `chain_exact` (l. 549): the N+1-sentence chain is steady at step N+1 and not at N. `liar_both_sides` (l. 744): with two values the liar's revision never rests, with three it rests undecided at every stage.
+
+### `no_return`
+- pass a: S: `stage_mono` (l. 460) orders every later stage above the earlier one from blank, and `Le.decided` (l. 139) makes any value above a decided one identical to it. Losing undecidedness along this run is irreversible.
+- pass b: S: `Le.decided` (l. 139): above a decided value lies only itself. `stage_mono` (l. 460): what is decided at a stage stays decided, alike, at every later stage; and `settled_from` (l. 493): once settled at N, a closed system stays at its stage-N values. This is concluded, for every system, but it is an irreversibility of becoming decided, not of a loss at a level or of what gives.
+
+### `rank`
+- pass a: S: `settles_within` (l. 401) gives steadiness by list length if marks persist, steadiness persists and every step is steady or newly marks a member. B: `chain_exact` (l. 549) attains the finite revision bound.
+- pass b: S: `settles_within` (l. 401): the bound is the list's length, through the marked count, which rises at each unsteady step and is at most the length. `settles` (l. 486): a closed system of N sentences is steady at step N. `chain_exact` (l. 549) shows the bound is exact (built).
+
+### `closed_region`
+- pass a: S: `least_fixed` (l. 514) gives fixedness on the closed N sentences and leastness among fixed readings in information order. `stays_undecided` (l. 468) keeps all readings undecided from blank in a constant-free system.
+- pass b: S: `least_fixed` (l. 514): for a closed system (Closed, l. 446) the stage-N values are a fixed point of revision and below every fixed point. `stays_undecided` (l. 468): a system whose terms have no constant stays wholly undecided at every stage. `monotone_fixed` (l. 706): every map monotone in information has a value alike with its image.
+
+### `moves`
+- pass a: N: No such law found in the statements read.
+- pass b: N: revision is one map run by Law.run (stage, l. 443); there is no choice among steps, policy or allowed set in any statement.
+
+### `reading`
+- pass a: S: `eval_congr` (l. 277) makes agreement on the first N sentence readings sufficient for equal evaluation of an N-bounded term. `revise` (l. 436) sets each next reading to the current evaluation of its term.
+- pass b: S: `settles_within` (l. 401): readings c k of the members of a list at steps k, which only rise, with steadiness carried to the next step and each step steady or rising at some member, are steady at step l.length. `eval_congr` (l. 277): a term's value depends only on the sentences it speaks of. `incomplete` (l. 762): no family ψ : A → A → Value of three-valued readings says every map (Diagonal.Says), since it misses the rotation.
+
+### declarations of Undecided.lean (by script)
+  l.81 inductive Value
+  l.89 def neg
+  l.95 def conj
+  l.105 def disj
+  l.115 def decided
+  l.121 def embed
+  l.130 inductive Le
+  l.134 theorem Le.trans
+  l.139 theorem Le.decided
+  l.144 theorem Le.same_or_rises
+  l.151 theorem neg_mono
+  l.155 theorem conj_mono
+  l.177 theorem disj_mono
+  l.199 theorem embed_inj
+  l.209 inductive Term
+  l.217 def eval
+  l.225 def eval₂
+  l.233 def Bounded
+  l.241 def ConstantFree
+  l.250 theorem eval_undecided
+  l.260 theorem eval_mono
+  l.268 theorem eval_mono_below
+  l.277 theorem eval_congr
+  l.287 theorem neg_embed
+  l.291 theorem conj_embed
+  l.297 theorem disj_embed
+  l.304 theorem eval_embed
+  l.322 def marked
+  l.328 theorem marked_le
+  l.336 theorem marked_mono
+  l.354 theorem marked_rises
+  l.381 theorem each_or_some
+  l.392 theorem kept_from
+  l.401 theorem settles_within
+  l.430 theorem upto_length
+  l.436 def revise
+  l.439 def blank
+  l.443 def stage
+  l.446 def Closed
+  l.449 def Steady
+  l.454 theorem stage_up
+  l.460 theorem stage_mono
+  l.468 theorem stays_undecided
+  l.473 theorem Steady.next
+  l.478 theorem steady_or_rises
+  l.486 theorem settles
+  l.493 theorem settled_from
+  l.504 theorem stage_fixed
+  l.508 theorem stage_le_fixed
+  l.514 theorem least_fixed
+  l.522 def chain
+  l.526 theorem chain_closed
+  l.530 theorem neg_decided
+  l.536 theorem chain_undecided
+  l.542 theorem chain_decided
+  l.549 theorem chain_exact
+  l.557 def liar
+  l.560 def truthTeller
+  l.562 theorem liar_closed
+  l.565 theorem liar_rests
+  l.570 theorem neg_fixed_iff
+  l.577 theorem liar_rests_iff
+  l.584 theorem truthTeller_keeps
+  l.589 theorem truthTeller_rests
+  l.596 theorem some_undecided_or_none
+  l.616 def asBool
+  l.621 theorem embed_asBool
+  l.628 theorem undecided_of_moves
+  l.641 theorem least_undecided
+  l.648 theorem rest_undecided
+  l.656 theorem liar_two_valued_moves
+  l.660 def revise₂
+  l.663 theorem liar_two_valued_run
+  l.670 theorem liar_two_valued_never_rests
+  l.677 theorem liar_undecided
+  l.689 def Monotone
+  l.691 theorem neg_monotone
+  l.695 theorem monotone_settles
+  l.706 theorem monotone_fixed
+  l.711 theorem monotone_not_moves
+  l.717 theorem neg_not_moves
+  l.721 theorem monotone_run_rests
+  l.730 theorem never_rests_not_monotone
+  l.737 theorem moves_not_monotone
+  l.744 theorem liar_both_sides
+  l.750 def rotate
+  l.755 theorem rotate_moves
+  l.762 theorem incomplete
+
+## WayOfUnits.lean  (1126 lines)
+
+### `both_outcomes`
+- pass a: S: `unending_iff_holds` (l. 400) gives the exact criterion under its live-prefix regime premises. `Holds` (l. 190) means a nonempty way, every need met, and level at least total use plus its y margin. B: With.goes_on and Against.turns_and_ends (ll. 966, 1040) give opposite outcomes from level nine with needs nine and one and total initial use five.
+- pass b: S: unending_iff_holds (l. 400) is exact for any number of units under needs, FromNothing, x ≤ hi and Regime along the course. two_units_iff (l. 580) is exact for two units under the regime premises. takes_nothing_iff_alone (l. 928) is exact. All are general over the parameters of this one model. B: With.goes_on (l. 966) never ends while Against.turns_and_ends (l. 1040) ends, with the same needs, the same total use and the same start; only the split of use between the two units differs.
+
+### `no_return`
+- pass a: S: `first_kept` (l. 544) concludes absence of the first unit persists at every level in the carrier step. `mem_after_iff` (l. 335) excludes re-entry of any absent unit. `unending_above` (l. 691) also gives a necessary level H+y throughout a two-unit unending run given ordered needs, positive lower need, Short and FromNothing.
+- pass b: S: first_kept (l. 544): once the first unit has ended it stays ended; with mem_after_iff, no unit returns. unending_above (l. 691): with n ≤ m, FromNothing, Short giving H y and 0 < n, an unending two-unit line has every level at or above H + y. carrier_falls (l. 640): below U + y the level falls every step until it is 0. takes_nothing_ends (l. 942): from below H₂ + y₁ the line ends. These are concluded under the giving premises, at a low level, not at the loss of something that gives.
+
+### `rank`
+- pass a: S: `carrier_falls` (l. 640) proves that j steps after a level below U+y the level is zero or has dropped by at least j, assuming U ≤ second use, Short at U and FromNothing.
+- pass b: S: carrier_falls (l. 640): from a level below U + y, after j steps the level is 0 or at least j lower, a falling variant. carrier_above (l. 671) uses it: the level reaches 0 within as many steps as it stood. B: Against.turns_and_ends (l. 1040): it ends in four steps.
+
+### `closed_region`
+- pass a: S: `stays` (l. 381) keeps exactly the starting way and keeps level at least z if every need is met at z, taken S+yS ≤ z ≤ hi, and Meets and Keeps hold for this use.
+- pass b: S: stays (l. 381): from (S, z) with needs met, taken S + yS ≤ z ≤ hi, Meets and Keeps, the course stays S with level ≥ z. alone_holds (l. 734): the region where the first unit has ended, n is met and H₂ + y ≤ level ≤ hi is kept by one carrier step. course_fixed (l. 1057): a fixed configuration stays fixed. unending_of_fixed (l. 1066). Holds (l. 190).
+
+### `moves`
+- pass a: N: No such law found in the statements read.
+- pass b: N: The net (l. 181) is Law.stepWhile of a deterministic pair step, and course (l. 185) is its orbit. There is no choice among steps; the giving and the units are parameters.
+
+### `reading`
+- pass a: S: `mem_after_iff` (l. 335) makes current membership and the comparison need u ≤ x decide next membership for every unit. No separate learned reader is needed for this threshold.
+- pass b: S: ends_while_net_goes (l. 352): for units p and q of w with x < need p and need q ≤ x, the line under the class of configurations with the same way («亡» net (sameValue Prod.fst)) ends at (w, x), while the net has a next. No rule made from what is registered was found. D: the opening account says the marks of a way that conditions on a reading are not derived.
+
+### declarations of WayOfUnits.lean (by script)
+  l.155 def need
+  l.158 def use
+  l.161 def goes
+  l.165 def after
+  l.168 def taken
+  l.173 def left
+  l.177 def Goes
+  l.181 def net
+  l.185 abbrev course
+  l.190 def Holds
+  l.195 def Regime
+  l.203 theorem cond_single
+  l.209 theorem after_unit
+  l.216 theorem taken_unit
+  l.221 theorem step_unit
+  l.229 theorem orbit_congr
+  l.235 theorem course_unit
+  l.241 theorem net_unit
+  l.248 theorem unending_unit
+  l.258 theorem allKids_unit
+  l.263 theorem generation_unit
+  l.270 theorem needing_unit
+  l.275 theorem holds_unit
+  l.282 theorem regime_unit
+  l.290 theorem along_unit
+  l.304 theorem down_unit
+  l.310 theorem goes_of_le
+  l.314 theorem le_of_goes
+  l.320 theorem all_iff_while
+  l.335 theorem mem_after_iff
+  l.342 instance goesDecidable
+  l.352 theorem ends_while_net_goes
+  l.366 theorem fixed_while
+  l.381 theorem stays
+  l.400 theorem unending_iff_holds
+  l.423 theorem unending_taken_below
+  l.436 def firstAfter
+  l.439 def firstUse
+  l.443 def twoWay
+  l.446 abbrev carrierCourse
+  l.451 theorem taken_twoWay
+  l.457 theorem after_twoWay
+  l.470 theorem goes_twoWay
+  l.486 theorem course_twoWay
+  l.507 theorem goes_iff_carrier
+  l.517 theorem unending_iff_carrier
+  l.528 theorem first_outside
+  l.537 theorem first_turns
+  l.544 theorem first_kept
+  l.548 theorem first_uses
+  l.553 theorem orbit_id_true
+  l.558 theorem first_uses₁
+  l.562 theorem asItWas_first
+  l.580 theorem two_units_iff
+  l.618 abbrev carrierStep
+  l.625 theorem step_falls
+  l.632 theorem use_at_least
+  l.640 theorem carrier_falls
+  l.671 theorem carrier_above
+  l.691 theorem unending_above
+  l.704 theorem unending_needs_nothing
+  l.711 theorem keeps_use
+  l.722 theorem carrier_within
+  l.734 theorem alone_holds
+  l.748 theorem step_above_need
+  l.762 theorem greater_need_along
+  l.793 theorem greater_need
+  l.811 theorem step_same_sum
+  l.820 theorem there_or_ended
+  l.832 theorem more_use_along
+  l.867 theorem more_use_on_first
+  l.891 theorem firstUse_zero
+  l.897 theorem carrier_level_zero
+  l.908 theorem goes_iff_alone
+  l.928 theorem takes_nothing_iff_alone
+  l.942 theorem takes_nothing_ends
+  l.960 def way
+  l.966 theorem goes_on
+  l.976 theorem levels
+  l.989 theorem goes_on_holds
+  l.1034 def way
+  l.1040 theorem turns_and_ends
+  l.1057 theorem course_fixed
+  l.1066 theorem unending_of_fixed
+  l.1078 def giving
+  l.1086 theorem regime
+  l.1098 theorem greater_need_fails
+  l.1114 theorem more_use_fails

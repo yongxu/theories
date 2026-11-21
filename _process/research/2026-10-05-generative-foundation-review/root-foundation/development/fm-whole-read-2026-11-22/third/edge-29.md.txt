@@ -1,0 +1,449 @@
+# Task file: EDGE, reader whole-c-edge-29
+
+Your 3 modules. For orientation only, what the two passes said of the four marks, of moves and of a reading (where to look, not evidence).
+
+## Wholes.lean  (1352 lines)
+
+### `both_outcomes`
+- pass a: S: `AllWhole.persists_iff` (l. 401) characterizes continuous activity from T exactly by continuous activity of every part from T under `AllWhole`. B: `WholeExceeding.drawn` (l. 1095) and `WholeWithin.kept` (l. 1160) exhibit ending and persistence in separately specified flows and webs.
+- pass b: S: `AllWhole.persists_iff` (l. 401): a whole of every part is active at every step from T exactly where every part is. `Grade.diminished_iff` and `diminished_iff` (l. 609, 620): diminished exactly where the whole of some is active and the whole of every one is not. `Whole.same_iff_inStep` (l. 426). The general sufficient condition `Whole.persists_from` (l. 272: parts arising within every d steps and each lasting d carry the whole from T+d) and the necessary ones (needs_arising, ends_without_arising) are not joined into one 'exactly when' for a whole of some part. B: `WholeExceeding.drawn` (ends) against `WholeWithin.kept` (l. 1160, persists), two models that differ in the excess.
+
+### `no_return`
+- pass a: S: `Whole.family_excess_ends` (l. 323) concludes no part ever arises from T + n and the whole eventually stays inactive. It assumes listed individually ending parts, balance, acting, dependent activity, need ≥ m somewhere in the family for renewal and arising, n steps of strict joint excess and initial stock below n + m.
+- pass b: S, concluded. `Whole.ends_without_arising` (l. 301): with parts ending and listed and none arising from N, the whole Ends, meaning from some step it is never active. `Whole.family_excess_ends` (l. 323): from excess and the start below n+m, it is concluded that no part arises from T+n on and the whole Ends; the loss is of the arising through which the whole goes on. `AllWhole.ends_of_part` (l. 393): a whole of every part ends as soon as one part ends. B: `Rafters.taken` (l. 1336): the house ceases with the first rafter and the remains stand.
+
+### `rank`
+- pass a: S: `Whole.family_excess_ends` (l. 323) bounds the last possible arising by the end of the excess stretch under the stated gates and stock bound. Its time of whole inactivity is existential. `Whole.arises_within` (l. 249) excludes a d-step gap in arising under persistence and d-brevity of every part.
+- pass b: S: `Whole.family_excess_ends` (l. 323) bounds the ending: no part arises from T+n on, n being the length of the excess. `Covered.arises_within` and `Whole.arises_within` (l. 194, 249): with parts brief for d, a part arises within every d consecutive steps. `Ends.all` (l. 172): finitely many ending formations all end by one step M. B: `Shifts.shifts` (l. 744) attains the bound d = 2.
+
+### `closed_region`
+- pass a: S: `active_back` (l. 183) says that if no part arises during k steps from S, a part active at S + k cannot have been inactive at S. `Whole.persists_from` (l. 272) gives whole activity at every time from T + d if a part arises in every d-step window from T and each arising part lasts the following d steps.
+- pass b: S, as a lemma only: `active_back` (l. 183). Its docstring says it rests on a region every step keeps (kept_onward): with no part arising across k steps from S, a part active at S+k was not inactive at S. N for a headline law of a closed region, invariant or standing population.
+
+### `moves`
+- pass a: N: Not found in the statements read.
+- pass b: N: no choice among steps. The Web, and the Flow with its present, take and give, are handed in as one course.
+
+### `reading`
+- pass a: S: `Web.AtLeastWhole` (l. 481) requires a grade counting active listed parts at every step and makes whole activity equivalent to that count reaching j. `Grade.diminished_iff` (l. 609) identifies an intermediate count with activity of the some-part whole and inactivity of the every-part whole.
+- pass b: N: no reading in the sense of an observation, or a rule made from what is registered, was found. D: the account (l. 104-109) says that which formations are parts, and which whole a whole is read as, are representational choices.
+
+### declarations of Wholes.lean (by script)
+  l.126 def Whole
+  l.130 def Listed
+  l.134 def Ends
+  l.139 def Brief
+  l.144 def Covered
+  l.149 theorem whole_self
+  l.156 theorem Whole.arises_part
+  l.164 theorem Whole.parts_unceasing
+  l.172 theorem Ends.all
+  l.183 theorem active_back
+  l.194 theorem Covered.arises_within
+  l.204 theorem Listed.end_without_arising
+  l.222 theorem Covered.needs_arising
+  l.231 theorem Covered.needs_new
+  l.243 theorem Whole.covered
+  l.249 theorem Whole.arises_within
+  l.258 theorem Whole.persists_of_arising
+  l.272 theorem Whole.persists_from
+  l.284 theorem Whole.needs_arising
+  l.292 theorem Whole.needs_new
+  l.301 theorem Whole.ends_without_arising
+  l.323 theorem Whole.family_excess_ends
+  l.346 theorem Whole.joint_excess_ends
+  l.369 def AllWhole
+  l.373 def InStep
+  l.378 theorem allWhole_self
+  l.386 theorem AllWhole.inactive_of_part
+  l.393 theorem AllWhole.ends_of_part
+  l.401 theorem AllWhole.persists_iff
+  l.407 theorem AllWhole.brief_of_part
+  l.412 theorem Whole.ceases_part
+  l.419 theorem AllWhole.active_whole
+  l.426 theorem Whole.same_iff_inStep
+  l.437 theorem AllWhole.active_of_none
+  l.448 theorem _root_.Becoming.Counts.lt_length_of_fails
+  l.464 theorem _root_.Becoming.Counts.all_of_eq_length
+  l.476 def Grade
+  l.481 def AtLeastWhole
+  l.485 def Diminished
+  l.491 theorem Grade.pos_iff
+  l.496 theorem Grade.eq_length_iff
+  l.502 theorem Grade.lt_length_of_inactive
+  l.509 theorem Grade.across_step
+  l.514 theorem Grade.arises_of_lt
+  l.531 theorem Grade.ceases_of_lt
+  l.548 theorem AtLeastWhole.arises_part
+  l.556 theorem AtLeastWhole.ceases_part
+  l.564 theorem AtLeastWhole.whole
+  l.570 theorem Whole.atLeastWhole
+  l.577 theorem AtLeastWhole.allWhole
+  l.585 theorem AllWhole.atLeastWhole
+  l.594 theorem AllWhole.arises_part
+  l.601 theorem AllWhole.ceases_part
+  l.609 theorem Grade.diminished_iff
+  l.620 theorem diminished_iff
+  l.636 inductive Formation
+  l.641 def parts
+  l.646 def web
+  l.656 def alive
+  l.660 theorem whole
+  l.663 theorem listed
+  l.684 theorem ends
+  l.690 theorem brief
+  l.704 theorem generations
+  l.719 theorem odd_two
+  l.724 theorem half_even
+  l.731 def web
+  l.744 theorem shifts
+  l.760 def web
+  l.769 theorem immortal
+  l.780 theorem each_other
+  l.789 def parts
+  l.794 def web
+  l.803 theorem whole
+  l.806 theorem ends
+  l.810 theorem never
+  l.816 theorem countless
+  l.828 def alive
+  l.835 def web
+  l.844 theorem whole
+  l.849 theorem alive_odd
+  l.852 theorem alive_even
+  l.855 theorem listed
+  l.869 theorem ends
+  l.875 theorem gaps
+  l.894 theorem composed
+  l.901 theorem brief
+  l.909 theorem within
+  l.915 theorem arise_again
+  l.937 def alive
+  l.946 def web
+  l.963 def flow
+  l.975 theorem balances
+  l.980 theorem acting
+  l.986 theorem dependent
+  l.998 theorem gated
+  l.1006 theorem arising
+  l.1018 theorem whole
+  l.1028 theorem member_ne
+  l.1032 theorem lineage_ne
+  l.1036 theorem not_mem_pair
+  l.1041 theorem listed
+  l.1072 theorem ends
+  l.1086 theorem excess
+  l.1095 theorem drawn
+  l.1116 def web
+  l.1128 def flow
+  l.1137 theorem balances
+  l.1139 theorem acting
+  l.1143 theorem dependent
+  l.1145 theorem gated
+  l.1150 theorem arising
+  l.1160 theorem kept
+  l.1173 def web
+  l.1181 def flow
+  l.1186 theorem balances
+  l.1193 theorem persists
+  l.1220 def web
+  l.1230 def flow
+  l.1235 theorem balances
+  l.1243 theorem persists
+  l.1265 theorem allWhole_never
+  l.1276 inductive Formation
+  l.1282 def rafters
+  l.1286 def web
+  l.1297 theorem house
+  l.1308 theorem remains
+  l.1312 theorem decided
+  l.1326 theorem grade_two
+  l.1336 theorem taken
+
+## WindowedWaiting.lean  (1525 lines)
+
+### `both_outcomes`
+- pass a: S: `restores_and_answers_iff` (l. 516) proves that among all one-step Boolean pair laws preserving mutual giving, restoration from one withholding and response to a constant withholder hold together exactly for the agreement table. `answersWithholder_iff` (l. 320) characterizes the latter response alone by f true false = false.
+- pass b: S: `keeps_split` (l. 454): never restores or never answers. `restores_and_answers_iff` (l. 516). `answersWithholder_iff` (l. 320). `gives_unless_errs` (l. 1261): under Spaced e w, each formation gives at step n exactly where it does not err at n. `pairKeepsInclusion_iff` (l. 343). All general over laws or patterns. B: `Pair.exactly_one` (l. 736).
+
+### `no_return`
+- pass a: S: `window_withheld_kept` (l. 997) concludes permanent withholding from an entirely withholding history if every formation waits on someone. `never_restores_of` (l. 304) concludes failure to regain mutual giving from one withholding if a step-closed Boolean predicate contains the start and excludes mutual giving.
+- pass b: S, concluded. `window_withheld_kept` (l. 997): where every formation waits on some formation, total withholding is kept at every step and lag under every window, so no window restores from it. `withholder_answered` (l. 1016): from T+(w+1) on, every formation waiting on a constant withholder withholds; the loss is at what gives. B: `bothGave_never_restores`, `partnerGave_never_restores` and `ownGave_never_restores` (l. 433-443); `Pair.never_together` (l. 746).
+
+### `rank`
+- pass a: S: `withholder_answered` (l. 1016) bounds propagation time. Under a window of w + 1, withholding by c at every step from T forces each dependent to withhold from T + w + 1. B: `Line.withholder_answered_reached` (l. 1139) attains the bound at step 3.
+- pass b: S: `withholder_answered` (l. 1016) and `withholder_answered_clocked` (l. 1284): a deadline T+(w+1). `errs_answered` (l. 1268): w+1 consecutive errors from t make waiters withhold at t+w+1. B: the bound is reached in `Pair.withholder_answered_tight` (l. 1457) and `Line.withholder_answered_reached` (l. 1139).
+
+### `closed_region`
+- pass a: S: `invariant` (l. 199) carries an initial predicate along every iterate of a deterministic law if closed under that law. `window_restored_stays` (l. 990) carries giving at a coordinate from n to every later m if it holds there at n from every history.
+- pass b: S: `invariant` (l. 199): a set of states closed under a law holds along every course from it. `never_restores_of` (l. 304): an invariant set holding the start and leaving out (true, true) gives NeverRestores. `window_withheld_kept` (l. 997): total withholding is a kept region. B: `Pair.exactly_one` (l. 736); `alternator_never_answered` (l. 636).
+
+### `moves`
+- pass a: N: The response tables specify deterministic laws. The choice among tables and the supplied error pattern are parameters of runs.
+- pass b: S: the laws are quantified over all choices of one-step rule, though no step-by-step choice is made inside a run. `keeps_split` (l. 454): every f keeping mutual giving and inclusion has NeverRestores f or NeverAnswers f. `restores_and_answers_iff` (l. 516): Restores f together with AnswersWithholder f exactly where f a b = (a == b). `pairKeepsInclusion_table_iff` (l. 410). `Pair.not_absorbs_and_answers_spaced` (l. 1417): quantified over every window w and every error pattern spaced at two.
+
+### `reading`
+- pass a: S: `answersWithin` (l. 928) gives at the new lag zero iff each predecessor gave at some lag below w, shifting the remaining history. `window_one` (l. 951) identifies its lag-zero course for w = 1 with immediate answering from the initial lag zero.
+- pass b: S: `answersWithin` (l. 928): at lag 0 a formation gives where each formation it waits on gave at some lag below w. What is registered (the partner's giving within the window) decides its giving. `withholder_answered` (l. 1016). `window_one` (l. 951): a window of one is answers. `answersWithholder_iff` (l. 320): answering is exactly f true false = false.
+
+### declarations of WindowedWaiting.lean (by script)
+  l.199 theorem invariant
+  l.205 theorem course_congr
+  l.212 theorem course_rel
+  l.220 theorem or_congr_both
+  l.228 def table
+  l.235 theorem eq_table_of
+  l.245 def PairKeepsInclusion
+  l.251 def pairStep
+  l.256 def oneWithheldBool
+  l.259 def Restores
+  l.263 def NeverRestores
+  l.267 def againstWithholder
+  l.272 def AnswersWithholder
+  l.276 def NeverAnswers
+  l.283 theorem pairStep_congr
+  l.288 theorem restores_congr
+  l.292 theorem neverRestores_congr
+  l.299 theorem NeverRestores.not
+  l.304 theorem never_restores_of
+  l.314 theorem never_answers_of
+  l.320 theorem answersWithholder_iff
+  l.332 theorem answersWithholder_at_one
+  l.337 theorem NeverAnswers.not
+  l.343 theorem pairKeepsInclusion_iff
+  l.361 def bothGave
+  l.364 def partnerGave
+  l.367 def ownGave
+  l.370 def eitherGave
+  l.373 def alwaysGives
+  l.376 def agreement
+  l.379 theorem partnerGave_eq
+  l.386 theorem agreement_eq
+  l.392 theorem bothGave_keeps
+  l.395 theorem partnerGave_keeps
+  l.398 theorem ownGave_keeps
+  l.401 theorem eitherGave_keeps
+  l.404 theorem alwaysGives_keeps
+  l.410 theorem pairKeepsInclusion_table_iff
+  l.428 def apart
+  l.431 def notBoth
+  l.433 theorem bothGave_never_restores
+  l.437 theorem partnerGave_never_restores
+  l.441 theorem ownGave_never_restores
+  l.445 theorem ownGave_never_answers
+  l.447 theorem eitherGave_never_answers
+  l.449 theorem alwaysGives_never_answers
+  l.454 theorem keeps_split
+  l.473 theorem keeps_not_both
+  l.481 theorem agreement_restores_at_two
+  l.487 theorem agreement_restores
+  l.490 theorem agreement_answers_at_one
+  l.494 theorem agreement_answers
+  l.498 theorem agreement_against
+  l.510 theorem agreement_not_keeps
+  l.516 theorem restores_and_answers_iff
+  l.549 def windowTwo
+  l.552 def windowStep
+  l.556 def windowOneWithheld
+  l.560 def windowAgainst
+  l.564 def windowFacing
+  l.567 theorem windowTwo_keeps
+  l.577 theorem windowTwo_restored_stays
+  l.588 theorem windowTwo_restores
+  l.595 theorem windowTwo_answers
+  l.601 theorem windowTwo_answers_stays
+  l.619 def alternatorStep
+  l.623 def alternatorStart
+  l.626 theorem alternator_course
+  l.636 theorem alternator_never_answered
+  l.650 theorem alternator_gives_half
+  l.658 def even
+  l.662 theorem even_two_mul
+  l.675 theorem alternator_second
+  l.686 inductive Pair
+  l.693 inductive Waits
+  l.698 def oneWithheld
+  l.702 theorem answers_first
+  l.705 theorem answers_second
+  l.709 theorem loop
+  l.712 theorem swap_first
+  l.716 theorem swap_second
+  l.722 theorem echo
+  l.736 theorem exactly_one
+  l.746 theorem never_together
+  l.752 theorem echo_returns
+  l.758 def Matches
+  l.764 theorem partnerGave_course
+  l.776 theorem partnerGave_never_restores_of_echo
+  l.782 def partner
+  l.786 theorem waits_partner
+  l.791 def config
+  l.797 def induced
+  l.801 def Agrees
+  l.805 def InputsKeepInclusion
+  l.809 theorem induced_partner
+  l.814 theorem induced_keeps
+  l.820 theorem keeps_of_induced
+  l.830 theorem agrees_table
+  l.835 theorem agrees_never
+  l.837 theorem agrees_both
+  l.839 theorem agrees_partner
+  l.841 theorem agrees_own
+  l.843 theorem agrees_either
+  l.845 theorem agrees_always
+  l.851 theorem pairKeepsInclusion_iff_induced
+  l.876 def partnerGaveDnf
+  l.878 theorem agrees_dnf
+  l.892 theorem dnf_keeps_iff_em
+  l.906 theorem dnf_keeps_em
+  l.914 theorem all_agreeing_keeps_em
+  l.928 def answersWithin
+  l.933 theorem lag_below_one
+  l.940 theorem lag_below_two
+  l.951 theorem window_one
+  l.963 theorem answersWithin_into
+  l.972 theorem answersWithin_keeps
+  l.976 theorem window_mono
+  l.983 theorem window_worst_start
+  l.990 theorem window_restored_stays
+  l.997 theorem window_withheld_kept
+  l.1007 theorem lag_shift
+  l.1016 theorem withholder_answered
+  l.1040 theorem waited_on
+  l.1047 theorem withholder_answered_holds
+  l.1052 theorem within_first
+  l.1057 theorem within_second
+  l.1064 def oneWithheldHistory
+  l.1070 def WindowMatches
+  l.1077 theorem windowStep_course
+  l.1090 theorem window_restores
+  l.1101 inductive Line
+  l.1109 inductive Waits
+  l.1115 def sourceWithheld
+  l.1121 theorem source_out
+  l.1128 theorem relay_course
+  l.1139 theorem withholder_answered_reached
+  l.1156 def answersWithinErring
+  l.1161 theorem erring_keeps
+  l.1169 def clocked
+  l.1173 def erringStart
+  l.1178 def erringRun
+  l.1183 theorem clocked_state
+  l.1190 theorem erring_shift
+  l.1196 theorem erring_history
+  l.1201 theorem erringRun_no_error
+  l.1206 def Spaced
+  l.1210 theorem spaced_mono
+  l.1214 theorem window_turn
+  l.1221 theorem window_of_gap
+  l.1240 theorem gap_le
+  l.1244 theorem gives_unless_errs_le
+  l.1261 theorem gives_unless_errs
+  l.1268 theorem errs_answered
+  l.1284 theorem withholder_answered_clocked
+  l.1300 theorem window_holds_of_gaps
+  l.1313 theorem spaced_window_holds
+  l.1326 def firstErrsOnce
+  l.1328 theorem firstErrsOnce_spaced
+  l.1333 theorem window_absorbs_within
+  l.1341 theorem window_absorbs
+  l.1349 def secondErrsEven
+  l.1351 theorem secondErrsEven_spaced
+  l.1359 theorem alternator_received_within
+  l.1366 theorem alternator_gives_odd_within
+  l.1377 theorem alternator_received
+  l.1383 instance of
+  l.1384 theorem alternator_gives_odd
+  l.1391 theorem alternator_answered_one
+  l.1401 theorem absorbs_needs_two
+  l.1417 theorem not_absorbs_and_answers_spaced
+  l.1429 theorem not_absorbs_and_answers
+  l.1440 theorem alternator_bridge
+  l.1453 def firstAlwaysErrs
+  l.1457 theorem withholder_answered_tight
+  l.1469 theorem firstAlwaysErrs_second
+  l.1477 def AgainstMatches
+  l.1485 theorem windowAgainst_course
+  l.1501 theorem windowAgainst_withholds_of_clocked
+  l.1509 def ringTwoErrors
+  l.1515 theorem ringTwoErrors_answered
+
+## Withholding.lean  (492 lines)
+
+### `both_outcomes`
+- pass a: S: `waitsAll_closed` (l. 186) is an iff for a formation giving at time n for arbitrary n, start and wait relation, using all predecessors within n links. `answers_closed` (l. 251) gives the corresponding exact condition for the memoryless law, using chains of exactly n links.
+- pass b: S: `waitsAll_closed` (l. 186) and `answers_closed` (l. 251): giving at step n exactly where all formations within n waits, or with a chain of exactly n waits, gave at the start. Both are general exactly-when statements for giving or withholding at each step.
+
+### `no_return`
+- pass a: S: `waitsAll_withholding_stays` (l. 201) concludes that loss of a formation's giving at any n persists at every n + k under the memory law. Only the loss at n is assumed.
+- pass b: S, concluded. `waitsAll_withholding_stays` and `waitsAll_withholding_stays_le` (l. 201, 207): with memory, a formation withholding at n withholds at every later step. `withholding_absorbs` (l. 223): where every formation is within d waits of b and b withholds at the start, every formation withholds at every step from d. The loss is at something that gives. B: `Ring.givesFirst_restores` (l. 470): giving is regained only under another law, givesFirst.
+
+### `rank`
+- pass a: S: `withholding_absorbs` (l. 223) bounds the end of all giving by d under memory when one initially withholding formation reaches everyone within d waits. `gives_without_chain` (l. 269) bounds the end of withholding under immediate answering by L if no chain has length L.
+- pass b: S: `withholding_absorbs` (l. 223): all withhold from step d on. `gives_without_chain` (l. 269): where no chain of L waits exists, every formation gives at every step from L on, from any start. `withholding_spreads` (l. 216): from step k. B: `Line.passes_out_exact` (l. 340) and `Ring.waitsAll_absorbs_exact` (l. 404) attain the bounds 2 and 2. `Ring.givesFirst_restores_exact` (l. 482) attains 3.
+
+### `closed_region`
+- pass a: S: `waitsAll_withholding_stays_le` (l. 207) makes absence of any specified giver forward-invariant along every memory run.
+- pass b: S: `waitsAll_withholding_stays` (l. 201): withholding at a is kept by every step of waitsAll. `total_withholding_merges` (l. 230): total withholding is absorbing under waitsAll.
+
+### `moves`
+- pass a: N: Not found in the statements read.
+- pass b: N: no choice among steps. Each law (waitsAll, answers, givesFirst) is a determined Law.run, and the laws are compared rather than chosen.
+
+### `reading`
+- pass a: S: `answers` (l. 102) reads the previous giving of precisely the formations waited on, and `waitsAll` (l. 98) also requires the formation's own previous giving. `answers_closed` (l. 251) states what part of the initial configuration decides giving at any later step.
+- pass b: S: `answers` (l. 102): a formation gives at the next step exactly where every formation it waits on gave, so the registered giving of others decides. `answers_closed` (l. 251) and `waitsAll_closed` (l. 186): giving at n is decided by giving at the start along chains of waits.
+
+### declarations of Withholding.lean (by script)
+  l.98 def waitsAll
+  l.102 def answers
+  l.106 def givesFirst
+  l.110 inductive Chain
+  l.115 def Within
+  l.123 theorem Chain.zero_eq
+  l.127 theorem Chain.last_of_eq
+  l.133 theorem Chain.last
+  l.138 theorem Chain.prefix
+  l.145 theorem Chain.append
+  l.151 theorem Chain.iterate
+  l.156 theorem Within.mono
+  l.163 theorem chain_iff_steps
+  l.171 theorem within_iff_withinSteps
+  l.186 theorem waitsAll_closed
+  l.195 theorem waitsAll_gives_earlier
+  l.201 theorem waitsAll_withholding_stays
+  l.207 theorem waitsAll_withholding_stays_le
+  l.216 theorem withholding_spreads
+  l.223 theorem withholding_absorbs
+  l.230 theorem total_withholding_merges
+  l.251 theorem answers_closed
+  l.259 theorem no_longer_chain
+  l.269 theorem gives_without_chain
+  l.276 theorem withholding_returns
+  l.291 theorem waitsAll_more_waiting
+  l.300 theorem answers_more_waiting
+  l.314 inductive Line
+  l.321 inductive Waits
+  l.325 def firstWithheld
+  l.330 theorem no_chain_two
+  l.340 theorem passes_out_exact
+  l.354 inductive Ring
+  l.362 inductive Waits
+  l.368 def oneWithheld
+  l.374 def isFirst
+  l.379 theorem answers_first
+  l.382 theorem answers_second
+  l.385 theorem answers_third
+  l.389 theorem within_two
+  l.397 theorem loop
+  l.404 theorem waitsAll_absorbs_exact
+  l.411 theorem rotate_first
+  l.416 theorem rotate_second
+  l.421 theorem rotate_third
+  l.429 theorem answers_circulates
+  l.452 theorem answers_returns
+  l.456 theorem givesFirst_first
+  l.460 theorem givesFirst_second
+  l.464 theorem givesFirst_third
+  l.470 theorem givesFirst_restores
+  l.482 theorem givesFirst_restores_exact

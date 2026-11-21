@@ -1,0 +1,13 @@
+Reader whole-b-22. All six modules were read whole: the opening account and every declaration's statement and docstring. GrammarPath.lean is 1554 lines, GrammarReadings.lean 178, GrammarRegularity.lean 399, GrammarScope.lean 481, GrammarTesting.lean 141 and GrammarTransport.lean 571. I read proof bodies only where a built case needed them. To understand names a statement uses, I opened the definitions of 际, 一, 静, 及, 类, 续, 相续, 亡, 有常 (Grammar.lean), 同行 (GrammarLaws.lean) and 所及 (GrammarMap.lean). For GrammarRegularity I also read the statements of Unread, join, joinRead, Accrues, turned_by_loss and lock_outlives_loss in ClosedCapture.lean. I did not open Locked, Raises or ReadsShare, so I name them only as premises. No question was left U.
+
+Bearing on the centre, beyond the fourteen questions:
+
+(1) GrammarRegularity.lean comes closest. `ClosedCapture.lock_line` (l. 324) concludes that from a locked start the line under being locked never ends, while every step alters the loss: the course goes on the same while an unread amount grows. `loss_ends_line` (l. 352) concludes that where the reading turns against favouring past a loss bound, the favouring line ends. These are two outcomes under two different readings, not one exactly-when of one course. Their premises (Raises, ReadsShare, Accrues, a bound N) are handed in. The loss only grows: it is not a stock whose return depends on what is left, and nothing in the model gives to it.
+
+(2) GrammarScope.lean `核有续当且仅当有不穷` (l. 210) is a general exactly-when: the core carries a step exactly where some line under it never ends. Its two descent models, Endless and Last, are the two outcomes in built form.
+
+(3) In GrammarPath.lean, FiniteSharedCondition (l. 889) builds a line under a coarse class that reaches a second family past a member's end, through a shared condition that is itself a kind of the model. Nothing there states that condition's loss.
+
+(4) GrammarTransport.lean gives two pull-back laws along maps that need no inverse, `尽之拉回` (l. 104) and `延之拉回` (l. 122). These are the general comparison or simulation tools of this batch.
+
+No module in the batch has a cost to the one that gives, a law of numbers multiplying, a stock running down, or a statement that something once lost is not regained.

@@ -1,0 +1,48 @@
+# Brief: refute one design of the centre
+
+*AI-written (Claude Fable, board row FM), 21 November 2026, frozen before any refuter ran (hash in `FROZEN-REFUTE.sha256.txt`). You took no part in the design you are given, and you are a different kind of model from the one that wrote it. Your job is to break it, not to improve it.*
+
+## What we are doing
+
+`/Users/ren/theories` draws a map of how anything forms, persists, changes and ends, with its core proved in Lean 4 with no axioms. The map's centre is missing: one statement with both outcomes of one course, a way of selecting that uses up what it rests on and can no longer be turned, and a way in which forms change and the going on continues. Eight designers each returned one design on paper with a small program. Read the designers' brief first, `tmp/fm/centre21/BRIEF-DESIGNS.md` (what was asked, requirements R1 to R7, the frozen tests T1 to T8, what has already failed, where things are). Then the design you are given: `tmp/fm/centre21/designs/<key>/DESIGN.md`, with its programs and outputs beside it.
+
+Four tries at a join on 21 November each met their frozen tests by the letter while the notion they were built around did no work in the proofs. What caught each was a reader who took no part, asked one question. That question is yours too, in these words:
+
+> **Does a general law of the design do work that the old laws do not?**
+
+## Your lens
+
+You are given one of two lenses. Do that one thoroughly; note in passing anything you see for the other.
+
+**WORK (read against the Lean and against the tests).**
+1. For each main statement: what does the work in its proof? Take the design's new notion out: is the statement then as easy, or false? Is the notion put in and taken out?
+2. T1: set each statement the design calls new against the Lean. Look the places up in `_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/places-2026-11-21/PLACES.md` (search it; each return there is one reader's, unchecked), then open the Lean file and read the statement. Say "already there" only with the file and the declaration; say "not found in what I read" otherwise, and list what you read.
+3. T2: is anything the direction wants to come about (the level's fall, the lock, the turn, the giving) a premise under another name?
+4. T5: for every old law the design says would come out as a case, open the old theorem and write the instantiation out: which type is which, which premise is discharged by what. Does it go through? Is the old statement really unchanged? Is the general law used, or only named?
+5. Is the mathematics known under another name (say which theorem, in which field)? That is not a fault; it tells us what the Lean statement should be.
+6. Are the claims about R1 to R7 honest?
+
+**BREAK (rebuild and search).**
+1. Rebuild the model from the definitions in `DESIGN.md` alone, in your own program, before you open the designer's programs. Where the definitions leave something open, say so: that is a finding. Then compare on the instances the design reports (T3, T4, the nearest misses).
+2. Search beyond the designer's box: larger sizes, corners, a side condition dropped, a parameter the designer fixed. Look for a counterexample to each statement as stated.
+3. Read the proof sketch step by step. Name the first step that is missing, circular or false, with an instance if you can make one.
+4. Test the idle-part claims (T3) and the both-outcomes instance (T4) with your program.
+
+## Rules
+
+- Write only inside your own folder, `tmp/fm/centre21/refute/<your folder>/` (scratch, outside git). Touch nothing else. No git command that changes anything.
+- **Run no Lean, no build, no test, no gate.** The machine is shared and busy. Python only, each run under 60 seconds.
+- Do not start further agents.
+- A negative is "not found in what I read", with what you read. A claim you did not check is "not checked", never "holds".
+- Do not soften. A design that survives you is worth something only if you tried to kill it.
+
+## What to return
+
+Your whole report as the text of your final message, also saved as `REPORT.md` in your folder, in this order, with no preamble:
+
+1. **Verdict in five lines**: does the design survive, as what (a centre; a law that joins; a built case worth keeping; nothing), and the single strongest reason.
+2. **Statement by statement**: for each main statement and lemma of the design, one of REFUTED (the instance, runnable), HOLDS IN WHAT I CHECKED (what was checked, how far), NOT CHECKED.
+3. **MUST**: every place where the design says something false, or more than its evidence shows. **LESSER** after them.
+4. **The question**, answered in one paragraph: does a general law of the design do work that the old laws do not?
+5. **The specific questions** put to you for this design, each answered.
+6. **What you ran** (paths, counts) and **what you did not read or check**.

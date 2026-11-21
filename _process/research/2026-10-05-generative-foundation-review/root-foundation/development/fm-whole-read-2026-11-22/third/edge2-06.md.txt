@@ -1,0 +1,457 @@
+# Task file: EDGE, second batch, reader whole-c-edge2-06
+
+Your 5 modules. In each, BOTH earlier passes found a statement with both outcomes and NEITHER found a law of ending within a bound. For orientation only, what they said (where to look, not evidence).
+
+## Identity.lean  (2507 lines)
+
+### `both_outcomes`
+- pass a: S: Web.continuation_decided_end (l. 1138) concludes that each active occurrence at or after T ends or has a successor under the activity-restricted continuation, given decidable Continued.
+- pass b: S: `continuation_decided_end` (l. 1138): with continuation decided, an active occurrence from `T` on either ends («亡») or has a successor. `continuation_decided_begin` (l. 1124): it either begins or has a predecessor. `forced_iff_more` (l. 747): across one step, under every no-split continuation, arising is forced exactly when more formations are listed after than before. `unceasing_iff_of_keepsActive_both` (l. 516): unceasing is kept exactly when continuity is kept both ways. All general. B: `Tandem.kept` (l. 1823): one formation arises and one ceases at every step.
+
+### `no_return`
+- pass a: S: Web.reach_advances and reach_strict_order (ll. 2335, 2351) conclude that reach between occurrences cannot reverse because continuation advances time. B: Confluence.ended (l. 1748) gives permanent inactivity of a after step zero.
+- pass b: S: `continuationStep_acyclic` (l. 2347) and `reach_strict_order` (l. 2351): no occurrence reaches itself along continuation steps, so reach is a strict order. That is irreversibility of precedence, not a loss. `Consumed` and `Lost` are used as definitions from elsewhere and are kept under re-identification (l. 226, l. 232). B: in Turnover the pool is consumed, below the consumer's need at every later step (`Turnover.reidentified`, l. 1515, its `consumed` part). N: no point of no return is concluded as a general law here.
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N: no falling rank, drain or deadline was found. `steps_advance` (l. 925): k continuation steps advance the step index by k. `reach_advances` (l. 2335). `Census.ceasingFrom_of_arisingFrom` (l. 1347) assumes a bound `B` on active formations, which is a bound on size, not on ending.
+
+### `closed_region`
+- pass a: S: Web.continuation_back and continuation_on (ll. 1053, 1058) give closure of activity backward and forward under continuation restricted by activityOnward.
+- pass b: S: `continuation_back` (l. 1053) and `continuation_on` (l. 1058): activity is a region closed («闭») under the continuation within `activityOnward T`, nothing outside continuing into it and nothing in it continuing out. `line_lineage` (l. 2438) uses «闭之及»: a line from an active occurrence stays within the closure. A census (`W.Census alive`) is a standing listing used as a premise throughout.
+
+### `moves`
+- pass a: N: Not found in the statements read.
+- pass b: N: no `Process S A`, policy or choice among steps was found. The laws quantify over every re-identification `σ` (for example `Flow.More.unceasing_reidentified`, l. 405) and over every continuation `R` with `NoSplit` (`Flow.More.unceasingFrom`, l. 643). These are choices of how identity is read, not choices of moves.
+
+### `reading`
+- pass a: S: Web.positions_not_self_standing (l. 2328) assigns the middle occurrence of two successive continuation edges abiding under the universal class and both beginning and ending under identity.
+- pass b: S: A re-identification and a continuation are readings of which formation continues which. `reidentify_step` (l. 216): support, keeping and breaking at a step are unchanged under any `σ`. `forces_iff_noSplit` (l. 685): across one step, more formations after than before forces arising under a continuation exactly when no formation continues as two. `Web.alikeBy` (l. 2238) builds a class from a property, and `arisesFrom_iff_sheng` (l. 2269) reads arising under `R` as beginning under the activity class. B: `Turnover.reidentified` (l. 1515): with every step's relations unchanged, exchanging names at odd steps leaves no formation renewing and two consuming, so what the naming registers decides a formation's class.
+
+### declarations of Identity.lean (by script)
+  l.170 structure Reidentify
+  l.177 def Reidentify.rename
+  l.182 theorem Reidentify.every
+  l.187 theorem Reidentify.new_injective
+  l.192 theorem Reidentify.some
+  l.197 def Reidentify.back
+  l.204 def reidentify
+  l.216 theorem reidentify_step
+  l.222 theorem reidentify_renewed
+  l.226 theorem reidentify_consumed
+  l.232 theorem reidentify_lost
+  l.238 theorem reidentify_dependent
+  l.243 theorem reidentify_renewingAt
+  l.250 theorem reidentify_breakingOn
+  l.262 theorem rename_renewingIn
+  l.267 theorem rename_consumingIn
+  l.273 theorem rename_tenure
+  l.282 theorem rename_undermining
+  l.291 theorem rename_unceasing
+  l.307 theorem Reidentify.mem_map
+  l.315 theorem Web.Census.reidentify
+  l.321 theorem total_reidentify
+  l.329 def reidentify
+  l.337 theorem reidentify_amounts
+  l.342 theorem reidentify_balances
+  l.350 theorem reidentify_counts
+  l.357 theorem Taking.reidentify
+  l.361 theorem reidentify_more
+  l.373 theorem Flow.More.arising_never_stops_reidentified_covering
+  l.388 theorem Flow.More.unceasing_reidentified_covering
+  l.405 theorem Flow.More.unceasing_reidentified
+  l.421 def KeepsActive
+  l.426 def KeepsTenure
+  l.432 theorem steady
+  l.452 theorem arises_of_keepsActive
+  l.461 theorem unceasing_of_keepsActive
+  l.468 theorem metAbove_of_keepsTenure
+  l.478 theorem undermining_of_keepsTenure
+  l.496 theorem arises_of_back_keepsActive
+  l.509 theorem arises_iff_of_keepsActive_both
+  l.516 theorem unceasing_iff_of_keepsActive_both
+  l.526 theorem metAbove_of_back_keepsTenure
+  l.538 theorem undermining_of_back_keepsTenure
+  l.546 theorem no_join
+  l.559 theorem undermining_iff_of_keepsTenure_both
+  l.576 def Continues
+  l.581 def ArisesFrom
+  l.585 def UnceasingFrom
+  l.590 def NoSplit
+  l.596 theorem arisesFrom_self
+  l.602 theorem unceasingFrom_self
+  l.612 theorem arisesFrom_of_more
+  l.628 theorem unceasingFrom_of_growth
+  l.643 theorem Flow.More.unceasingFrom
+  l.651 def Web.Census.decideContinues
+  l.661 def Reidentify.continuation
+  l.666 theorem Web.continuation_reidentify
+  l.685 theorem forces_iff_noSplit
+  l.706 def paired
+  l.711 theorem paired_mem
+  l.719 theorem paired_noSplit
+  l.734 theorem paired_covers
+  l.747 theorem forced_iff_more
+  l.767 def Continued
+  l.772 def CeasesFrom
+  l.777 def NoMerge
+  l.782 theorem ceasesFrom_self
+  l.789 theorem self_one_to_one
+  l.810 theorem Census.balanceFrom_at
+  l.847 theorem Census.balanceFrom
+  l.857 theorem Census.balanceFrom_eq_at
+  l.870 theorem Census.balanceFrom_eq
+  l.884 def Lineage
+  l.909 def continuationStep
+  l.915 def activityOnward
+  l.921 theorem occurrence_eq
+  l.925 theorem steps_advance
+  l.934 theorem lineage_of_steps
+  l.951 theorem steps_iff_lineage
+  l.964 theorem steps_start_active
+  l.974 theorem Lineage.unique
+  l.990 theorem Lineage.split
+  l.1002 theorem Lineage.through
+  l.1014 theorem Lineage.back
+  l.1048 theorem continuation_stage
+  l.1053 theorem continuation_back
+  l.1058 theorem continuation_on
+  l.1063 theorem continuation_noSplit
+  l.1076 theorem continuation_noMerge
+  l.1090 theorem continuation_covers
+  l.1096 theorem continuation_ending
+  l.1105 theorem continuation_begins
+  l.1113 theorem continuation_arises
+  l.1118 theorem continuation_ceases
+  l.1124 theorem continuation_decided_begin
+  l.1138 theorem continuation_decided_end
+  l.1155 theorem not_not_arisingFrom_covered
+  l.1174 theorem arisingFrom_not_stopping_covered
+  l.1195 theorem Lineage.active
+  l.1203 theorem Lineage.origin
+  l.1222 theorem Lineage.onward
+  l.1240 theorem ceasingFrom_not_stopping_covered
+  l.1267 theorem arisingFrom_of_ceasingFrom_covered
+  l.1286 theorem ceasingFrom_of_arisingFrom_covered
+  l.1310 theorem Census.arisingFrom_of_ceasingFrom_from
+  l.1323 theorem Census.arisingFrom_of_ceasingFrom
+  l.1333 theorem Census.ceasingFrom_of_arisingFrom_from
+  l.1347 theorem Census.ceasingFrom_of_arisingFrom
+  l.1359 def Web.Census.decideContinued
+  l.1371 def odd
+  l.1376 def afterFirst
+  l.1379 def turn
+  l.1383 theorem turn_turn
+  l.1388 theorem turn_fixed
+  l.1393 def Reidentify.exchanging
+  l.1401 inductive Condition
+  l.1407 inductive Formation
+  l.1414 def pool
+  l.1419 def web
+  l.1441 def swap
+  l.1447 theorem swap_swap
+  l.1452 def exchange
+  l.1455 abbrev turned
+  l.1457 theorem pool_late
+  l.1461 theorem pool_not_renewed
+  l.1465 theorem needs_spring
+  l.1470 theorem needs_pool
+  l.1475 theorem not_both
+  l.1484 theorem identified
+  l.1515 theorem reidentified
+  l.1568 def swap
+  l.1572 theorem swap_swap
+  l.1576 def flip
+  l.1579 abbrev flipped
+  l.1582 def renews
+  l.1584 theorem tide_changes
+  l.1590 theorem arises
+  l.1600 theorem naming_meets_premises
+  l.1623 theorem Expansion.unceasing_reidentified
+  l.1633 def buds
+  l.1638 theorem growth_without_arising
+  l.1656 def forks
+  l.1662 theorem split_unceasing
+  l.1682 def merges
+  l.1685 instance decideMerges
+  l.1692 theorem noSplit
+  l.1698 theorem merging
+  l.1713 theorem idle
+  l.1726 inductive Formation
+  l.1733 def web
+  l.1744 def continues
+  l.1748 theorem ended
+  l.1750 theorem noSplit
+  l.1762 theorem confluence
+  l.1783 theorem Dormant.no_split_without_arising
+  l.1796 def web
+  l.1803 def alive
+  l.1805 theorem apart
+  l.1808 theorem census
+  l.1823 theorem kept
+  l.1833 def buds
+  l.1839 theorem budding
+  l.1854 def joins
+  l.1860 theorem joining
+  l.1875 inductive Member
+  l.1881 def web
+  l.1890 def swap
+  l.1894 theorem swap_swap
+  l.1898 def one
+  l.1900 theorem arises
+  l.1906 theorem readings
+  l.1929 theorem one_way
+  l.1938 inductive Level
+  l.1946 def web
+  l.1958 theorem both
+  l.1975 inductive Formation
+  l.1983 def web
+  l.2003 def swap
+  l.2008 theorem swap_swap
+  l.2013 def succeeds
+  l.2016 abbrev inherited
+  l.2018 theorem drawer_named
+  l.2027 theorem readings
+  l.2074 theorem one_way
+  l.2085 inductive Formation
+  l.2091 inductive Condition
+  l.2100 def web
+  l.2120 def swap
+  l.2125 theorem swap_swap
+  l.2130 def join
+  l.2133 abbrev joined
+  l.2136 theorem first_only
+  l.2140 theorem active_once
+  l.2145 theorem joined_once
+  l.2152 theorem dependent
+  l.2161 theorem keeps_both
+  l.2169 theorem consumed
+  l.2177 theorem classes
+  l.2238 def alikeBy
+  l.2240 theorem alikeBy_class
+  l.2247 theorem hasPred_iff_continues
+  l.2257 theorem hasSucc_iff_continued
+  l.2265 theorem begins_at_zero
+  l.2269 theorem arisesFrom_iff_sheng
+  l.2276 theorem ceasesFrom_iff_wang
+  l.2283 theorem abides_iff
+  l.2292 theorem arises_iff_sheng_itself
+  l.2299 theorem ceases_iff_wang_itself
+  l.2307 theorem ceasesFrom_of_unconditioned
+  l.2314 theorem continuationStep_irrefl
+  l.2320 theorem nothing_continues_under_identity
+  l.2328 theorem positions_not_self_standing
+  l.2335 theorem reach_advances
+  l.2342 theorem line_advances
+  l.2347 theorem continuationStep_acyclic
+  l.2351 theorem reach_strict_order
+  l.2360 theorem noSplit_iff
+  l.2376 theorem noMerge_iff
+  l.2395 theorem split_fission
+  l.2413 theorem merge_candles
+  l.2426 theorem Lineage.line
+  l.2438 theorem line_lineage
+  l.2459 theorem lineage_iff_line
+  l.2471 theorem Identity.Fork.fission
+  l.2484 theorem Tandem.budding_fission
+  l.2500 theorem Tandem.joining_candles
+
+## Irreversibility.lean  (61 lines)
+
+### `both_outcomes`
+- pass a: B: same_change_different_return (l. 41) exhibits return and nonreturn under two different laws after the same change.
+- pass b: B: `same_change_different_return` (l. 41) is a conjunction over two built laws: both trace false to true, flip reaches false from true, the dead end does not. It is a contrast, not an exactly-when.
+
+### `no_return`
+- pass a: B: deadEnd_no_return (l. 34) concludes that no course from true reaches false in DeadEnd.law, with no stock or feeder premise.
+- pass b: B: `deadEnd_no_return` (l. 34): `¬ Reach DeadEnd.law true false`, concluded (the proof uses `Invariant.reach` with the invariant y = true) for the built dead end, at the low level of a Bool configuration, not at the loss of something that gives. D: the account says the general laws of return are in Becoming.Recurrence (not read).
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N: not found.
+
+### `closed_region`
+- pass a: N: Not found in the statements read.
+- pass b: B: in the proof of `deadEnd_no_return` (l. 36), y = true is used as an invariant of DeadEnd.law; no invariant is stated as a declaration here.
+
+### `moves`
+- pass a: B: same_change_different_return (l. 41) fixes the same single Unit action in both processes and proves opposite return possibilities.
+- pass b: N: no choice among steps; `flip` (l. 31) is `Law.process not` over `Unit` actions and DeadEnd.law is used with one step. B: the two built processes compared in `same_change_different_return` (l. 41).
+
+### `reading`
+- pass a: B: constant_reading_hides_loss (l. 50) proves indistinguishability for every predicate on the constant observation of reachable states from false and true.
+- pass b: B: `constant_reading_hides_loss` (l. 50): for every question q on the constant reading `fun _ => ()`, some state reached from false satisfies it iff some state reached from true does, and yet `¬ Reach DeadEnd.law true false`. What is registered decides nothing about the loss.
+
+### declarations of Irreversibility.lean (by script)
+  l.31 def flip
+  l.34 theorem deadEnd_no_return
+  l.41 theorem same_change_different_return
+  l.50 theorem constant_reading_hides_loss
+
+## JointDraw.lean  (400 lines)
+
+### `both_outcomes`
+- pass a: S: Balances.broken_iff and kept_iff (ll. 104, 114) give complementary strict and weak inequalities on the same balanced step for a present, met dependence.
+- pass b: S, general: `Flow.Balances.broken_iff` (l. 104) and `kept_iff` (l. 114) state exactly when a met dependence is broken or kept across one step. B: `TwoDrawers.broken` (l. 348) against `TwoDrawers.restrained_kept` (l. 367).
+
+### `no_return`
+- pass a: B: TwoDrawers.level and web (ll. 315, 322) specify zero level after the joint draw and activity of held only when supported; broken (l. 348) concludes first-step loss. The permanent low level is specified by the course.
+- pass b: B: `TwoDrawers.broken` (l. 348): the joint draw breaks the held formation's dependence and it is not active at step 1; its level stays 0 by the built definition (`level`, l. 315). N in general.
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N.
+
+### `closed_region`
+- pass a: S: Balances.level_succ_le (l. 164) keeps the region of ordered level pairs across each pair of balanced steps with no more take and no less giving on the higher side.
+- pass b: N.
+
+### `moves`
+- pass a: B: TwoDrawers.Draw (l. 297) indexes joint and restrained courses. TwoDrawers.broken and restrained_kept (ll. 348, 367) show the effect of withholding the second take at the first step.
+- pass b: N: the flows of the two courses are supplied. There is no choice among moves and no plan.
+
+### `reading`
+- pass a: S: Ranking.restraint_extends_iff (l. 202) characterizes whole-run extension by an additional included event under balanced, ordered starts and flows, no greater demands or draws, dependence in the original and activity wherever supported in the alternative.
+- pass b: S: `Ranking.restraint_extends_iff` (l. 202): under the whole-run reading, with the restraint premises, the restrained course extends the other exactly when it includes an event the other withholds. `restraint_ranks_over_drawers` (l. 216): every comparison satisfying C under that reading ranks it higher. `restraint_extends_iff_stepwise` (l. 233) needs moreover taken <= given at every step. `restraint_extends_iff_relational` (l. 268) needs moreover participation wherever the other participates.
+
+### declarations of JointDraw.lean (by script)
+  l.86 theorem Broken.of_need_le
+  l.92 theorem kept_of_need_le
+  l.104 theorem Balances.broken_iff
+  l.114 theorem Balances.kept_iff
+  l.121 theorem Balances.broken_drawn
+  l.128 theorem Balances.breaks_beyond_drawn
+  l.139 theorem Balances.broken_shared
+  l.150 theorem Balances.kept_of_restrained
+  l.164 theorem Balances.level_succ_le
+  l.171 theorem Balances.level_le_of_restrained
+  l.182 theorem Balances.eases_of_restrained
+  l.202 theorem restraint_extends_iff
+  l.216 theorem restraint_ranks_over_drawers
+  l.233 theorem restraint_extends_iff_stepwise
+  l.250 theorem restraint_ranks_stepwise
+  l.268 theorem restraint_extends_iff_relational
+  l.291 inductive Formation
+  l.297 inductive Draw
+  l.302 def take
+  l.309 def flow
+  l.315 def level
+  l.322 def web
+  l.341 theorem balances
+  l.348 theorem broken
+  l.352 theorem shared
+  l.367 theorem restrained_kept
+  l.370 theorem dependent
+  l.374 theorem gated
+  l.380 theorem start
+  l.383 theorem restrained_less
+  l.389 theorem restraint_ranks
+
+## KeepableStep.lean  (168 lines)
+
+### `both_outcomes`
+- pass a: S: keepable_step_iff (l. 50) gives an exact criterion for the existence of an indefinitely keeping course in one arbitrary process.
+- pass b: S, general: `keepable_step_iff` (l. 50) states exactly when a guard is keepable. `not_keepable_invariant_iff` (l. 68).
+
+### `no_return`
+- pass a: S: not_keepable_run (l. 94) assumes initial nonkeepability and a step-closed guard complement and concludes nonkeepability at every later state. B: ChoicePoint.keepable_gained (l. 115) gains keepability in one move without this premise.
+- pass b: S: `not_keepable_invariant_iff` (l. 68): not-keepable is invariant iff every step from outside g leads to a non-keepable configuration. `not_keepable_step` (l. 83) and `not_keepable_run` (l. 94): where every step keeps not-g, along a run whose start is not keepable no configuration is keepable. This is concluded under the premise `closed`. B: `ChoicePoint.keepable_gained` (l. 115): without the premise, keepability is gained in one step.
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N.
+
+### `closed_region`
+- pass a: S: not_keepable_invariant_iff (l. 68) characterizes closure of the whole nonkeepable region. B: Successor.not_keepable_kept_complement_not (l. 156) separates that closure from closure of the guard complement.
+- pass b: S: `not_keepable_invariant_iff` (l. 68) and `not_keepable_run` (l. 94): the region where the guard is not keepable is invariant under the stated condition. B: `Successor.nowhere_keepable` (l. 144).
+
+### `moves`
+- pass a: S: keepable_step_iff (l. 50) quantifies over both action and successor for existence of a continuing guard-preserving run.
+- pass b: S: `keepable_step_iff` (l. 50): g is keepable from s iff g s and there is some step from s to a t from which g is keepable. This is a law of what some choice keeps.
+
+### `reading`
+- pass a: N: Not found in the statements read.
+- pass b: N.
+
+### declarations of KeepableStep.lean (by script)
+  l.50 theorem keepable_step_iff
+  l.68 theorem not_keepable_invariant_iff
+  l.83 theorem not_keepable_step
+  l.94 theorem not_keepable_run
+  l.105 def afterSplit
+  l.115 theorem keepable_gained
+  l.125 theorem keepable_gained_along_run
+  l.137 def process
+  l.140 def atOne
+  l.144 theorem nowhere_keepable
+  l.156 theorem not_keepable_kept_complement_not
+
+## MapRegions.lean  (431 lines)
+
+### `both_outcomes`
+- pass a: S: `«三域之周»` (l. 128) includes both ways of going on and all-branch ending under excluded middle. `«单行则生成后守不并»` (l. 111) excludes overlap of generation and eventual keeping for single-valued R.
+- pass b: S: `«三域之周»` (l. 128): given excluded middle, every point of every relation is 生成, 后守 or 退化. `«三域之定当且仅当排中»` (l. 152): that this holds at every point of every model is equivalent to excluded middle. `«后守退化不并»` (l. 105): 后守 and 退化 exclude each other. These are general. B: `Map.Once` is in none of 生成 (l. 248), 守 (l. 258) and 退化 (l. 263), yet in 后守 (l. 278).
+
+### `no_return`
+- pass a: B: `Map.Once.stays_third` (l. 216) concludes that any continuation from the third occurrence stays there. `Map.Once.third_not_renews` (l. 201) excludes every carrying renewal from it.
+- pass b: N: no loss or irreversibility. 后守 is settling from a point on, not a loss. `«后守退化不并»` (l. 105) excludes degeneration.
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N: `«后守之定则LPO»` (l. 376) and `«生成之定则WLPO»` (l. 399) are logical calibrations, not ending within a bound.
+
+### `closed_region`
+- pass a: S: `Map.step_family` (l. 288) proves a family containing zero and providing each member a successor in the family under the single step contains every natural step.
+- pass b: S: `«后守»` (l. 81) contains a family S closed under continuation (∀ z, S z → ∃ w, S w ∧ 续 z w) with a quiet part from a reached point. `«后守则延»` (l. 100): it goes on along that branch. B: `Map.Once.family` (l. 223).
+
+### `moves`
+- pass a: N: Not found in the statements read.
+- pass b: S: `«后守»` (l. 81) asks for some branch family S, holding x and closed under continuation, with a point reached from x after which no carrying renewal lies in S. `«单行则生成后守不并»` (l. 111): where each occurrence conditions at most one other (func), 生成 and 后守 exclude each other. The branches are of a relation, not moves of a Process S A, and there is no law about what a choice keeps.
+
+### `reading`
+- pass a: S: `Map.generates_iff_changes` (l. 296) uses equality of a Boolean reading as the fine class and characterizes generation by changes of that reading.
+- pass b: S: the classes L (pattern) and E (parts). `Map.generates_iff_changes` (l. 296): on the step line under «一», with the class of a sequence b (n ~ m iff b n = b m), 生成 at 0 iff for every y some n ≥ y has b n ≠ b (n + 1). `Map.keepsAfter_iff_settles` (l. 309): 后守 at 0 iff b is constant from some step on.
+
+### declarations of MapRegions.lean (by script)
+  l.61 theorem «传则粗不生»
+  l.65 theorem «粗有前则生为传»
+  l.72 theorem «生则或粗生或传»
+  l.81 def «后守»
+  l.86 theorem «守则后守»
+  l.91 theorem «全守则后守»
+  l.100 theorem «后守则延»
+  l.105 theorem «后守退化不并»
+  l.111 theorem «单行则生成后守不并»
+  l.128 theorem «三域之周»
+  l.152 theorem «三域之定当且仅当排中»
+  l.176 inductive Stage
+  l.179 def once
+  l.191 theorem Once.func
+  l.197 theorem Once.renews
+  l.201 theorem Once.third_not_renews
+  l.209 theorem Once.third_next
+  l.216 theorem Once.stays_third
+  l.223 theorem Once.family
+  l.240 theorem Once.endless
+  l.248 theorem Once.not_generates
+  l.258 theorem Once.not_keeps
+  l.263 theorem Once.not_degenerates
+  l.268 theorem Once.keeping
+  l.278 theorem Once.keepsAfter
+  l.284 theorem step_func
+  l.288 theorem step_family
+  l.296 theorem generates_iff_changes
+  l.309 theorem keepsAfter_iff_settles
+  l.326 def seen
+  l.331 def turning
+  l.336 def sequence
+  l.338 theorem seen_succ
+  l.341 theorem seen_of_le
+  l.347 theorem seen_of
+  l.351 theorem seen_witness
+  l.357 theorem sequence_seen
+  l.360 theorem sequence_unseen
+  l.364 theorem turning_turns
+  l.376 theorem «后守之定则LPO»
+  l.399 theorem «生成之定则WLPO»
+  l.420 theorem «生成后守之定则LPO»

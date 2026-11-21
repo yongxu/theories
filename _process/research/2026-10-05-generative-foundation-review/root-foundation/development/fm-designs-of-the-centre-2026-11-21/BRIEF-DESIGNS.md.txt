@@ -1,0 +1,84 @@
+# Brief: one design of the centre, on paper and by program
+
+*AI-written (Claude Fable, board row FM), 21 November 2026, frozen before any designer ran (hash in `FROZEN-DESIGNS.sha256.txt` beside this file). You are one of eight designers, of three kinds of model, each given one angle. You do not see the others. After you, readers of another kind of model will try to refute what you return.*
+
+## What we are doing
+
+`/Users/ren/theories` draws a map of how anything forms, persists, changes and ends, with its core proved in Lean 4 with no axioms, so that humans and AI can check the same thing. Read `AGENTS.md` at the repository root first (one page), then `_process/DIRECTION.md` from "Where we are heading" through "What is not there" (the head note can be skipped).
+
+Ren, 21 November 2026: "I think our goal should be a full map with formal link proof done elegantly with its center." And of the second way, the same day: ""remaking" feels weird to me - it is also not holding exactly the same, dynamics, forms changes over time, but the continuation may continue, and creates more and more future."
+
+**The centre is missing.** The map wants two ways of going on placed with respect to each other on one course: a way of selecting that uses up what it or others rest on and can no longer be turned; and a way in which forms change, the going on continues, and more can go on after. The Lean has the pieces in two kinds of model that do not meet: a choice made from what is registered is stated on processes with moves, with no level that runs down in any general law; a way set again from its own share (the lock) is stated on one way as it runs, with no moves and no choice. Five tries in two days to join the existing Lean came out as dictionaries (the same thing in other names). The session that keeps the direction page concluded the meeting needs a model and not a join.
+
+## What is asked of you
+
+**One design**: definitions and one main statement, exact enough to be written in Lean by someone else, with both outcomes of one course in it. Not a survey, not a plan, not a programme of work. Mathematics that can be wrong.
+
+The statement to aim at, in the words of the page that set the requirements: *from a configuration, under a way of selecting, the course either goes on, or uses up what it rests on and passes a step from which no course keeps it; and which of the two, by the way of selecting, by what it registers, and by what keeping costs.*
+
+What a model of the centre would have (from `tmp/r7/one-model/check/model20/WHAT-A-MODEL-MUST-HAVE.md`, which you should read; it is behind in two respects it names itself):
+
+- R1. Things whose being there is other things' doing: units that leave units, or kinds that support the forming of kinds.
+- R2. What they rest on is finite and can run down, and what comes back depends on what is left. Better: what gives it is itself a going-on in the model, not a function handed in.
+- R3. Keeping costs the keeper.
+- R4. A way of selecting which things are formed, set again from what it already favours. The lock should come about in the model, not be a premise.
+- R5. At a configuration, whether any course from here still keeps it: a choice among moves, and a step of no return.
+- R6. A reading: what the selection registers, and (harder) its revision by where its own act failed.
+- R7. Ren's word: a statement relating a way of selecting to more being able to go on after it, forms changing.
+
+You need not have all seven. Say which you have, which you leave out, and why that cut is the right first one. A design with three that work is worth more than one with seven that are named.
+
+## What counts as nothing gained (frozen)
+
+Your design will be judged against these, by readers set to refute it. Judge it yourself first, and say plainly where it fails.
+
+- **T1, a dictionary.** Every statement is an older law in other names, a definition unfolded, or older laws in a row. Name at least one statement of yours that is not in the Lean (look in the listing of places before saying so) and say why it does not follow by unfolding definitions.
+- **T2, handed in.** The level's fall, the lock, the turn, the giving, or the reading's update is a premise where the direction wants it to come about. List every premise of your main statement and mark each: *structural* (it says what the model is) or *the thing itself* (it assumes what should be concluded).
+- **T3, idle parts.** The horizon, the share, the level, the reading, the multiplying: each part you include must do work. For each, give a small instance where taking it out changes whether the statement holds. (Today's toy failed here: the share was idle because the selection's requirement was met by a rule that reads nothing; holding still always kept.)
+- **T4, both outcomes.** The main statement is an "exactly when" or a dichotomy, and both sides are inhabited by built instances of one model from one start, differing only in the way of selecting or in what it registers.
+- **T5, old laws as cases.** At least one existing law from each side would come out as a case with its statement unchanged and the general law doing the work. Say the instantiation concretely. Lock and level side: `TurningInTime.locked_ends_rising`, `TurningInTime.locked_turns_in_time_on_window_iff`, `LineOnAStock.unending_iff_holds`, `RuleCapture.turn_locked`, `RuleShaping.favours_iff`. Choice and keeping side: `Keeping.keptFor_of_closed`, `GuardHorizon.closed_viable`, the common response (`CommonResponse.lean`), `Viability.kernel_iff_certificate`; outside the package, `renewal_closure_theorem`. A check that two statements are the same by `rfl` with the old theorem not called can be met by putting the new notion in and taking it out: say which general law must be *used*.
+- **T6, no threshold.** More level can end a line that less level keeps (`LineOnAStock.HigherStartEnds`); in a sweep of small systems, 285 of 267,598 configurations were kept by some course and not by standing still (something had to be made first, or a unit lost sooner). A statement that sorts starts by a threshold on the level is already refuted. The statement may have to be of an order, of a first step, or of a region closed under something.
+- **T7, tried by program.** Write a small exhaustive search (Python, each run under 60 seconds) that checks your main statement on every small instance of your model, and report what it found, including the instances that came nearest to breaking it. A search shows where a statement fails, not that it holds. A statement that survived no search is a guess.
+- **T8, one more model beside the others.** Count your new definitions. Say whether your design is one law at several places or grains, or a new model next to the old ones.
+
+## What has already failed (do not repeat it in other words)
+
+- 16 November: one general model with levels cut into bands by needs and marks. No condition on the start, short of running the course, sorted the starts that go on from those that end (`…/dj-a-line-on-a-stock/tries-2026-11-16/ONE-SPACE-ON-PAPER.md`).
+- 17 November: the second way in the terms of the line on a stock; what a unit added came from nowhere (`second-way-2026-11-17/NOTE.md`, `dig-2026-11-17/NOTE.md`).
+- 20 November: the two ways on one level whose giving is handed in. Nothing is remade there; the level is only taken from less (`meeting-2026-11-20/NOTE.md`). October's renewal files set against the package: a re-packing (`renewal-against-keeping-2026-11-20/NOTE.md`).
+- 20 November: "can it still be turned" asked of built courses (`reads-2026-11-20/NOTE.md`): the regions were a dictionary on the Lean's own cases; it found that the question needs a class of starts and a choice made from a reading.
+- 21 November: two notions of no return; the lock as a process that stays or turns (`no-return-2026-11-21/NOTE.md`); kept-for against viable, and a built case (`read-a-choice-from-a-reading-2026-11-21/NOTE.md`, both sections); a share and a level on one built process (`two-requirements-2026-11-21/NOTE.md`): each a dictionary by a reader who took no part, each with a built case kept.
+- 21 November: `KeptFor` as `Viable` on a process of classes: holds by unfolding and moves no law across (`tmp/fm/centre21/AFTER.md`).
+
+All paths with `…` are under `_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/`.
+
+## Where things are
+
+- The Lean package: `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/` (406 modules). Its root file `Becoming.lean` tells every module in a paragraph. Beside the package: `…/lean/deeper/RelationalRenewal.lean`, `…/lean/conditional/renewal/` (October's renewal law).
+- **Before opening a Lean file, look it up** in `…/dj-a-line-on-a-stock/places-2026-11-21/PLACES.md` (158 places with what readers found in each; each return is one reader's and unchecked). It is large: search it, do not read it whole.
+- The chapters that tell the account: `theories/becoming/chapters/02-MAP.md` (the lock, the turn, the web), `03-KNOWING.md` (the common response), `05-COLLECTIVES.md`, `07-SIGNIFICANCE.md`.
+- What the Lean states of a future opening: `…/read-a-future-2026-11-21/NOTE.md`. Of registering: `…/read-registering-2026-11-21/NOTE.md`. Of things kept by goings-on: `…/read-kept-by-goings-on-2026-11-20/NOTE.md`. The table of 89 places by eight properties: `…/two-ways-table-2026-11-20/NOTE.md`.
+- The study of the meta-attractor with one place that has all eight properties, outside the package: `theories/meta-attractor/COLLECTIVE-DESTRUCTIVE-ATTRACTORS.md` and `PopulationCorrection.lean` (find it with `git ls-files | grep PopulationCorrection`).
+
+Read what your angle needs. You will not have time for all of it; say at the end what you did not read.
+
+## Rules
+
+- Write only inside your own folder, `tmp/fm/centre21/designs/<your key>/` (it is scratch, outside git). Put your programs and their output there, and your report as `DESIGN.md`. Touch nothing else in the repository. No git commands that change anything.
+- **Run no Lean, no build, no test, no gate.** This machine is shared and busy. Python only, small: each run under 60 seconds, a few runs.
+- Do not start further agents.
+- Words like unit, level, need, share, rule, way, reading are working names. Use the Lean's own names where you point at the Lean.
+- A negative is "not found in what was read", never "not in the Lean".
+
+## What to return
+
+Return your whole report as the text of your final message (also saved as `DESIGN.md`), in this order, without preamble:
+
+1. **The design in ten lines**: what the configurations are, what a step is, what the way of selecting is, what is registered, and the main statement.
+2. **Definitions**, each exact (types and conditions), in mathematical notation or Lean-like pseudocode.
+3. **The main statement**, with every premise, and a proof sketch that a careful reader can follow or break.
+4. **Which of R1 to R7** it has, and which it leaves out.
+5. **T1 to T8**, each answered, with the evidence (instances, program output, the old law's name and the instantiation).
+6. **What the program found**: the search space, counts, the nearest misses, and the path of the script.
+7. **Where it is weakest**, in your own judgment, and what would refute it.
+8. **What you did not read.**

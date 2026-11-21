@@ -1,0 +1,15 @@
+Reader whole-b-49. All five modules were read whole, by me: Persistence.lean (1368 lines), PersistingChoices.lean (867), PlaceTransitionNets.lean (858), PoolCourse.lean (265) and PoolFromCourse.lean (797). For each I read the opening account and every declaration's statement and docstring, and skimmed most proof bodies. To understand names used in statements I opened short stretches of three other modules: RuleCapture.lean (Raises, ReadsShare, Locked, CarrierCounts, select), SelectionTerm.lean (Generations, family, Descended) and GroupEnding.lean (coupled_generation_childless). No Lean, build or test was run, and nothing was written or changed.
+
+Nothing was left unreached. Most N answers mean the thing was looked for across all statements of the module and not found. Answers that begin with S but are qualified in their text say what the statement does and does not give.
+
+Points the fourteen questions miss that bear on the centre:
+
+(1) Persistence.lean makes whether a going-on continues across a step a matter of reading, the choice of h, and the class follows that choice. The spent seed never ends read through dependence and ends at step 3 read through its reserve (Seed.held_readings, Seed.held_classes). In a World, conservation fixes identity across a step only where standings after the step are apart (World.fixed_iff). So any law of a continuation going on while forms change has to say which reading of identity it uses.
+
+(2) PoolFromCourse.lean has a selection that removes its own readers of the loss. Once they are removed and the course is locked, it stays locked for good (window_locked_after_removal, closed_stays_closed with NotReadmitted). In the witness Drained.strong_undone, a drain that grows with the share takes the readers out after two readings. This comes near the centre's way of selecting that can no longer be turned. But presence of readers is one predicate on the configuration, not a unit with its own dynamics.
+
+(3) PersistingChoices.lean treats persisting as a filter. It gives keeping-above-ending as consistent with the choices, never as held. The only link from the choices to the flow is the premise realized, and the witness Forgoing meets it vacuously.
+
+(4) In PlaceTransitionNets.lean the siphon law (gated_ends, siphon_empty) gives a concluded point of no return at the loss of the producers of a place, because under gating those producers consume from the place they give to. Net.fed_refills shows the law failing without gating.
+
+(5) PoolCourse.lean says a pool recruiting through itself comes to couple into a loss only through an admission not made through it, or through members its course would hold anyway. Those exits are shown only by built cases.

@@ -1,0 +1,12 @@
+All three modules were read whole: the opening account and every statement and docstring. That covers TurningInTime.lean (3151 lines, to `Three.share_read_goes_on` at l. 3103), TypicalRuns.lean (258 lines) and Typicality.lean (692 lines). Proof bodies were only looked through, except where a definition (`stopStep`, `windowAfter`) was needed. Nothing was left unreached (no U). No Lean was run and no file was written.
+
+TurningInTime: three answers are N. Giving is always a function `giving : Nat → Nat` handed in. No statement charges keeping or turning to the way that does it. There is no multiplying.
+
+Bearing on the centre, from TurningInTime, beyond the fourteen questions:
+1. `turns_in_time_iff` (l. 1129) and `turns_in_time_iff_before` (l. 2348) are general both-outcomes laws. A change of way (form) at the first marked level, before the point of no return of the course as it was, is exactly what makes the line go on; otherwise it ends within a bound.
+2. What decides the change is a premise, not derived: the marks, `AloneOutside`, `turns`, `kept`/`keptBelow`, `uses` and `safe`. The account's own section (l. 237-330) says so.
+3. The lock laws (`locked_ends_with_net_regime`, l. 1459) say in their docstrings that the lock keeps an overdraw that stands; it does not bring one about. The start below H + y is given.
+4. `locked_turns_in_time_on_window_iff` (l. 1692) is a law in which what a reading registers (the window) decides going on. `Three.unlocked_goes_on` (l. 2965) is a built course outside it.
+5. The point of no return in section 7 is of a level, with feasible courses only the turns to one standing use. The account says other continuations are not considered.
+
+TypicalRuns and Typicality: both are counting results (spread, Chebyshev, Kolmogorov, Chernoff) over the courses of free branching on two values. They state no level, giving, ending or closed region. Their accounts say that the course which happens is typical is not derived, and that counting does not choose a course.

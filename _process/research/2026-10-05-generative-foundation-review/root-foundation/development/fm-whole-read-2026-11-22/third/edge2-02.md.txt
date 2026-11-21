@@ -1,0 +1,559 @@
+# Task file: EDGE, second batch, reader whole-c-edge2-02
+
+Your 8 modules. In each, BOTH earlier passes found a statement with both outcomes and NEITHER found a law of ending within a bound. For orientation only, what they said (where to look, not evidence).
+
+## BoundedSignificance.lean  (296 lines)
+
+### `both_outcomes`
+- pass a: S: `feedingFrom_parts` (l. 154) concludes bounded retention and failure of unrestricted retention for the same two paths, given the cessation, distinctness, coverage, admitted and lost premises.
+- pass b: S: `Flow.feedingFrom_parts` (l.154): one comparison is retained under feeding-from care and not retained under `Unrestricted` (two verdicts on one ending). B: `Clearing.within_closure_yet_loses` (l.255), `Trophic.mixed_part` (l.229). N: no exactly-when of going on and ending.
+
+### `no_return`
+- pass a: S: `WithinFeedingFrom.earlier` (l. 122) includes each later closure in the earlier one, so a missing feeding-closure member cannot reenter. Cessation of giving in `feedingFrom_parts` (l. 154) is a premise.
+- pass b: S: `Flow.WithinFeedingFrom.earlier` (l.122): what lies in the feeding closure from a later step lies in the closure from an earlier one, so the closure only shrinks; concluded. `Flow.feedingFrom_permits` (l.141): once h gives nothing from T on (a premise), care bounded by feeding from each step permits a path that drops h from T on. This is at the loss of something that gave.
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N
+
+### `closed_region`
+- pass a: S: `WithinFeedingFrom` (l. 110) defines the region by closure under feeding at some time from s onward; `WithinFeedingFrom.earlier` (l. 122) proves it shrinks as s advances.
+- pass b: S: `Flow.WithinFeedingFrom` (l.110) is a closure (`WithinClosure`) under feeding at some step from s on; `withinFeedingFrom_zero` (l.116) says it is the feeding closure from step 0. B: `Clearing.system_whole` (l.269): every formation lies within every other's system. N: no region closed under the flow's steps, and no fixed point.
+
+### `moves`
+- pass a: N: Not found in the statements read.
+- pass b: N
+
+### `reading`
+- pass a: S: `feedingFrom_permits` (l. 141) counts by the center's future feeding closure and concludes retention when the sole possible omitted admissions from T concern a distinct h that no longer gives to any requirement.
+- pass b: N
+
+### declarations of BoundedSignificance.lean (by script)
+  l.54 theorem bounded_whole
+  l.63 theorem retains_bounded_iff_retains
+  l.78 theorem within_closure_iff_retains
+  l.86 theorem feeding_unrestricted_of_common
+  l.92 theorem bounded_system_whole
+  l.104 def FedFromAfter
+  l.110 def WithinFeedingFrom
+  l.116 theorem withinFeedingFrom_zero
+  l.122 theorem WithinFeedingFrom.earlier
+  l.128 theorem not_withinFeedingFrom
+  l.141 theorem feedingFrom_permits
+  l.154 theorem feedingFrom_parts
+  l.173 theorem within_closure_iff_retains
+  l.188 theorem mediated_uncoupled
+  l.204 theorem responsive_mixed
+  l.229 theorem mixed_part
+  l.255 theorem within_closure_yet_loses
+  l.269 theorem system_whole
+  l.278 theorem reach_counts_dweller
+
+## Bundles.lean  (423 lines)
+
+### `both_outcomes`
+- pass a: B: `same_marginals_lose_bundle` (l. 209) proves joint feasibility under retention and its loss under release for the same activation model.
+- pass b: B: `Activation.same_marginals_lose_bundle` (l.209): from one initial configuration, retaining realizes the joint bundle and releasing does not, with the same marginals. `Regimes.marginals_agree` (l.367). N: no general exactly-when.
+
+### `no_return`
+- pass a: B: `PastRelease.no_joint` (l. 323) concludes no trace from a PastRelease state reaches jointly realized content.
+- pass b: B, concluded: `Activation.PastRelease.trace` (l.311) and `PastRelease.no_joint` (l.323): once past the release, every trace stays past the release and never reaches the configuration realizing both claims. This is at the loss of the coupling.
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N
+
+### `closed_region`
+- pass a: B: `PastRelease.step` (l. 289) proves the released and one-sided states form a step-closed region.
+- pass b: B: `Activation.PastRelease` (l.285) is a region of the built law closed under steps (`PastRelease.step` l.289, `PastRelease.trace` l.311).
+
+### `moves`
+- pass a: B: `retained_left_only` (l. 263) gives both a joint trace beginning with retain and a retain-then-left trace realizing only the left claim.
+- pass b: S: `Frame.map_preserves` (l.111): a map preserving steps and claims preserves the bundles of configurations reachable from a root. `Frame.lift_reflects` (l.118). B: `Activation.law` (l.157) is a process with moves retain, release and activate. `Activation.retained_left_only` (l.263): after retaining, one choice of second move realizes both claims and another only the left. `Activation.PastRelease.trace` (l.311): every trace keeps a configuration past the release.
+
+### `reading`
+- pass a: B: `Regimes.no_comparison_through_marginals` (l. 377) excludes any irreflexive comparison satisfying Comparison through a summary determined by marginal agreement.
+- pass b: S: `F.realized` claims, and `no_new_of_complement` (l.101): closed under exact complements, carrying a profile admits no newly realized claim. B: `Regimes.no_comparison_through_marginals` (l.377), for any summary of the two built regimes that identical marginals make identical: no irreflexive comparison of summaries satisfies C, so the marginals registered cannot decide it. `Regimes.joint_separates` (l.385).
+
+### declarations of Bundles.lean (by script)
+  l.61 def Jointly
+  l.65 def CarriesProfiles
+  l.70 def PreservesBundles
+  l.78 theorem carries_iff_preserves
+  l.84 theorem CarriesProfiles.trans
+  l.93 theorem preserves_of_transport
+  l.101 theorem no_new_of_complement
+  l.111 theorem Frame.map_preserves
+  l.118 theorem Frame.lift_reflects
+  l.129 theorem complement_closed_no_extension
+  l.140 inductive Configuration
+  l.143 inductive Event
+  l.147 inductive Step
+  l.157 def law
+  l.160 structure TwoSteps
+  l.166 def Admissible
+  l.169 inductive Claim
+  l.172 def realized
+  l.177 def frame
+  l.180 def retained
+  l.181 def released
+  l.183 def together
+  l.184 def leftOnly
+  l.185 def rightOnly
+  l.186 def retainedLeft
+  l.188 theorem together_retained
+  l.190 theorem together_all
+  l.195 theorem released_not_both
+  l.209 theorem same_marginals_lose_bundle
+  l.220 theorem retainedLeft_only
+  l.234 def realizedAt
+  l.239 def lawFrame
+  l.242 theorem twoSteps_meaning
+  l.247 theorem admissible_trace
+  l.253 theorem trace_admissible
+  l.263 theorem retained_left_only
+  l.277 theorem joint_content_both
+  l.285 def PastRelease
+  l.289 theorem PastRelease.step
+  l.311 theorem PastRelease.trace
+  l.317 theorem PastRelease.not_both
+  l.323 theorem PastRelease.no_joint
+  l.334 inductive Regime
+  l.337 def histories
+  l.342 def marginal
+  l.345 def allBundle
+  l.348 def living
+  l.352 def frame
+  l.356 theorem released_carried
+  l.362 theorem extension
+  l.367 theorem marginals_agree
+  l.377 theorem no_comparison_through_marginals
+  l.385 theorem joint_separates
+  l.391 theorem possibility_not_realization
+  l.397 def freshJoint
+  l.401 theorem joint_enrichment_strict
+  l.407 theorem no_fresh_released
+  l.414 theorem joint_enrichment_classified
+
+## ContactCourses.lean  (76 lines)
+
+### `both_outcomes`
+- pass a: S: `run_stays_iff` (l. 69) gives an exact test for retention of an initially correct encoding at each date.
+- pass b: S: `run_stays_iff` (l. 69): for any run r of a process on channels X → Bool and an encoding that works at date 0, it works at date n exactly where r.state n agrees with r.state 0 at the encoded inputs. This is a general exactly-when of keeping and losing the encoding, not of going on and ending.
+
+### `no_return`
+- pass a: N: Not found in the statements read.
+- pass b: N
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N
+
+### `closed_region`
+- pass a: B: `finite_blind_answers_steps` (l. 56) uses the constant next plan [false,true] for all moves and starts.
+- pass b: N
+
+### `moves`
+- pass a: S: `blind_answers_steps_iff` (l. 43) quantifies over all successors of an ofMap process with moves none or some failed address.
+- pass b: S: `blind_answers_steps_iff` (l. 43): for a Blind rule ρ, every step of the process ofMap ρ whose move is a failure report some i lands on a plan containing i, exactly where every step whose move is none lands on a plan containing every address. The moves are the reports of failure (Option I). This is a law about what every step keeps.
+
+### `reading`
+- pass a: S: `blind_answers_steps_iff` (l. 43) states exactly when a rule blind to the failure report covers every reported address.
+- pass b: S: `blind_answers_steps_iff` (l. 43): the premise Contacts.Blind says the rule does not read the reported failure (ρ D r = ρ D none). Then answering every failure depends only on what the no-failure step contacts. B: `finite_blind_answers_steps` (l. 56): with Bool addresses, the rule giving [false, true] lands every step where the no-failure step lands and answers every failure.
+
+### declarations of ContactCourses.lean (by script)
+  l.43 theorem blind_answers_steps_iff
+  l.56 theorem finite_blind_answers_steps
+  l.69 theorem run_stays_iff
+
+## Contacts.lean  (246 lines)
+
+### `both_outcomes`
+- pass a: S: `selections_survive_iff` (l. 123) characterizes retention of all old selections by plan inclusion; `retired_loses` (l. 129) gives the specific selection lost on removal.
+- pass b: S: `keeps_iff_retains` (l. 119) and `selections_survive_iff` (l. 123): a change of plan from s to t keeps every old selection exactly where every contact of plan s is in plan t, and otherwise some selection is lost (retired_loses). This is general and of keeping and losing, not of going on and ending. `References.stays_iff` (l. 232): an installed encoding stays right on a new channel exactly where the new channel agrees with the old at the encoded inputs.
+
+### `no_return`
+- pass a: N: Not found in the statements read.
+- pass b: N: no irreversibility. S, loss only: `retired_loses` (l. 129): a contact held in D and retired in D' has its selection through D and not through D'.
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N
+
+### `closed_region`
+- pass a: S: `trace_keeps_of_retains` (l. 135) propagates the property of supporting a fixed selection along all traces if each step retains every contact.
+- pass b: S: `trace_keeps_of_retains` (l. 135): where every step keeps contacts, being a selection through the current plan is kept along every trace. It is an invariant under steps, on that premise.
+
+### `moves`
+- pass a: S: `trace_keeps_of_retains` (l. 135) keeps every old selection along every action trace when every process step retains the old contacts.
+- pass b: S: `trace_keeps_of_retains` (l. 135): for any Process P and plan : S → List I, if every step keeps every contact of its source plan, then along every Trace from s to t every selection through agreement on plan s is a selection through plan t. Revision rules ρ : List I → Option I → List I (Answers l. 148, Blind l. 158) are maps, not processes, in this module.
+
+### `reading`
+- pass a: S: `through_data_iff` (l. 82) makes the Boolean signal at an address selectable through agreement on decided data exactly when the address belongs to the data.
+- pass b: S: `AgreeOn` (l. 50): two signals are read alike where they agree at every contacted address. `through_data_iff` (l. 82) and `through_at_iff` (l. 115): the selection x i = true goes through that agreement exactly where i is contacted. `blind_misses` (l. 171): where Unlisted I holds (no list holds every address; nat_unlisted l. 186), every Blind rule leaves, at every plan D, some i whose selection does not go through the next plan's agreement. `answers_iff` (l. 152): a rule answers every failure exactly where its output contains the failed address.
+
+### declarations of Contacts.lean (by script)
+  l.50 abbrev AgreeOn
+  l.54 theorem mem_or_not
+  l.67 def spot
+  l.69 theorem spot_self
+  l.71 theorem spot_other
+  l.76 theorem agree_spot
+  l.82 theorem through_data_iff
+  l.91 theorem keeps_data_iff
+  l.102 theorem survive_data_iff
+  l.113 theorem AgreeOn.refl
+  l.115 theorem through_at_iff
+  l.119 theorem keeps_iff_retains
+  l.123 theorem selections_survive_iff
+  l.129 theorem retired_loses
+  l.135 theorem trace_keeps_of_retains
+  l.148 def Answers
+  l.152 theorem answers_iff
+  l.158 def Blind
+  l.162 theorem blind_answers_iff
+  l.167 def Unlisted
+  l.171 theorem blind_misses
+  l.178 theorem nat_bound
+  l.186 theorem nat_unlisted
+  l.191 theorem finite_blind_answers
+  l.206 def pick
+  l.208 theorem bool_other
+  l.218 theorem drives_iff
+  l.232 theorem stays_iff
+  l.237 theorem inverted_fails
+
+## ContinuedClasses.lean  (955 lines)
+
+### `both_outcomes`
+- pass a: S: `renewingAlong_iff` and `consumingAlong_iff` (ll. 100, 118) characterize each class separately; `renewingAlong_not_consumingAlong` (l. 93) proves exclusion without an exhaustive dichotomy.
+- pass b: S: `renewingAlong_not_consumingAlong` (l.93): the two classes exclude each other. Nothing says one of them always holds. B: `MergeClass.readings` (l.318): one formation renews as named, consumes along the merge, and is not renewing along it. `Bud.readings` (l.625): it widens by name and not along the bud.
+
+### `no_return`
+- pass a: B: `MergeClass.active` and `level` (ll. 246, 278) stipulate that after the merge neither original formation is active by name and the spent place remains at zero.
+- pass b: S (premise): the irreversibility sits in the definition used by `ConsumingAlong` (l.87). `Consumed` (Dependence.lean l.155): once past T, the level never again meets the need. It is a premise or definition at a condition's level, not concluded here. B: `MergeClass.spent_consumed` (l.295) concludes it for the built spent condition. S: `ConsumingAlong.merged` (l.131): consuming passes back into every formation merged into a consuming one.
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N
+
+### `closed_region`
+- pass a: S: `RenewingAlong.branch` (l. 111) preserves renewing along every next continuation with active endpoints.
+- pass b: S: `RenewingAlong.branch` (l.111) and `renewingAlong_iff` (l.100): renewing along an event passes forward to every formation continuing it across the next step, so it is closed forward along the continuation. This is a property of events, not a region of states.
+
+### `moves`
+- pass a: N: Not found in the statements read.
+- pass b: N: no Process with moves, policy or allowed set. The continuation R is a relation saying which formation continues which, not a choice among steps. The laws over two continuations (mono) are answered under comparison.
+
+### `reading`
+- pass a: S: `held_iff_line` (l. 856) reads linked tenure of a current dependence as identity or a line under the dependence class. B: `MergeClass.readings` (l. 318) makes one formation renewing by name and consuming along its merge.
+- pass b: S: `World.continues_as_alike` (l.468): in a balanced world with decided equality, if d stands after the step from t at the level c does, some re-identification keeps the balance and continues c as d. Its docstring adds that no record of the world decides between the two. S: `held_iff_line` (l.856) and `metAboveAlong_iff_line` (l.870): links across which a dependence on c holds are lines under `dependenceClass c` (l.812), the class of occurrences read alike by "requires c or not". B: `MergeClass.readings` (l.318) and `Bud.readings` (l.625): the class (renewing or consuming) and whether a stretch widens are decided by the continuation read, not by the names.
+
+### declarations of ContinuedClasses.lean (by script)
+  l.73 inductive Continuing
+  l.82 def RenewingAlong
+  l.87 def ConsumingAlong
+  l.93 theorem renewingAlong_not_consumingAlong
+  l.100 theorem renewingAlong_iff
+  l.111 theorem RenewingAlong.branch
+  l.118 theorem consumingAlong_iff
+  l.131 theorem ConsumingAlong.merged
+  l.142 def Reidentify.carry
+  l.149 theorem Continuing.of_reidentify
+  l.156 theorem Continuing.to_reidentify
+  l.169 theorem continuing_reidentify
+  l.175 theorem renewingAlong_reidentify
+  l.186 theorem consumingAlong_reidentify
+  l.199 def itself
+  l.201 theorem Continuing.itself_same
+  l.207 theorem Continuing.itself_onward
+  l.214 theorem Continuing.itself_from_zero
+  l.219 theorem renewingAlong_itself_iff
+  l.226 theorem consumingAlong_itself_iff
+  l.240 inductive Formation
+  l.243 inductive Place
+  l.246 def active
+  l.255 def requires
+  l.265 def draws
+  l.278 def level
+  l.284 def web
+  l.287 def merge
+  l.289 theorem kept_renewed
+  l.295 theorem spent_consumed
+  l.301 theorem first_renews
+  l.311 theorem first_consumes_along
+  l.318 theorem readings
+  l.331 inductive Linked
+  l.338 def holdingOn
+  l.343 def MetAboveAlong
+  l.349 def UnderminingAlong
+  l.355 theorem Linked.mono
+  l.362 theorem underminingAlong_mono
+  l.371 theorem Linked.itself_held
+  l.385 theorem Linked.itself_onward
+  l.398 theorem metAboveAlong_itself_iff
+  l.408 theorem underminingAlong_itself_iff
+  l.417 theorem Linked.of_carry
+  l.423 theorem Linked.to_carry
+  l.434 theorem metAboveAlong_reidentify
+  l.445 theorem underminingAlong_reidentify
+  l.468 theorem continues_as_alike
+  l.484 def IncludesAcross
+  l.489 def ExceedsAcross
+  l.494 def WidensAcross
+  l.500 theorem IncludesAcross.mono
+  l.506 theorem ExceedsAcross.anti
+  l.511 theorem exceedsAcross_of_unlinked
+  l.517 theorem Linked.itself_same
+  l.523 theorem Linked.itself_steps
+  l.528 theorem Linked.itself_of_le
+  l.533 theorem includesAcross_itself_iff
+  l.540 theorem exceedsAcross_itself_iff
+  l.549 theorem includesAcross_reidentify
+  l.562 theorem exceedsAcross_reidentify
+  l.573 theorem widensAcross_reidentify
+  l.587 inductive Formation
+  l.590 def requires
+  l.595 def web
+  l.599 def bud
+  l.601 theorem old_admitted
+  l.603 theorem fresh_later
+  l.605 theorem fresh_not_first
+  l.610 theorem widens_by_name
+  l.618 theorem bud_adds_nothing
+  l.625 theorem readings
+  l.664 theorem line_continuing
+  l.682 theorem Continuing.line
+  l.696 theorem continuing_iff_line
+  l.706 theorem Continuing.mono
+  l.716 theorem consumingAlong_mono
+  l.721 theorem renewingAlong_mono
+  l.727 theorem renewingAlong_iff_line
+  l.736 theorem consumingAlong_iff_line
+  l.748 theorem RenewingAlong.branches
+  l.767 theorem ConsumingAlong.merged_candles
+  l.782 theorem Linked.line
+  l.793 theorem line_linked
+  l.804 theorem linked_iff_line
+  l.812 def dependenceClass
+  l.815 theorem dependenceClass_class
+  l.820 theorem Linked.held_line
+  l.835 theorem line_held
+  l.856 theorem held_iff_line
+  l.870 theorem metAboveAlong_iff_line
+  l.880 theorem line_image
+  l.890 theorem carry_step_iff
+  l.901 theorem line_reidentify
+  l.924 theorem MergeClass.candles
+  l.935 theorem MergeClass.both_consume_along
+  l.945 theorem Bud.fission
+
+## Correspondence.lean  (629 lines)
+
+### `both_outcomes`
+- pass a: B: `Shared.connection_by_living_use` (l. 495) gives two outcomes for connectedness in the same web construction: connected under the steady profile and disconnected under the falling one, with both initial dependents living there. The level profiles are supplied.
+- pass b: B: Shared.connection_by_living_use (l. 495): the two dependents are connected under interaction in the steady run and not in the falling run, though both are living at step 0; co-participation connects them in both runs. S: significant_iff_of_renewable (l. 214): under the renewable-condition premises, Significant ↔ Grounds. This is an exactly-when of significance, not of going on and ending.
+
+### `no_return`
+- pass a: B: `Shared.falling` (l. 437) prescribes zero after the first step. With `Shared.web` (l. 441) the two dependents then stay inactive by the supplied profile.
+- pass b: N: no irreversibility is concluded. B: Shared.falling (l. 437) is a supplied profile that is 0 at every step after 0; first and second are then inactive. Nothing about it is stated as a point of no return.
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N: connected_of_renewable (l. 196) bounds a path between living events by two interactions; that is not an ending within a bound.
+
+### `closed_region`
+- pass a: B: `Shared.first_isolated` (l. 486) gives an invariant for the falling web's interaction relations consisting of the first formation's events.
+- pass b: B: Shared.first_isolated (l. 486): in the falling run, `e.1 = .first` is an Invariant of the interaction relations. Mutualism.apart_not_connected and apart_not_interacting (l. 601, 610) are proved through an Invariant `e.1 = .bee`. No general closed-region law is stated.
+
+### `moves`
+- pass a: N: Not found in the statements read.
+- pass b: N: no Process, policy or choice among steps is stated. B: Pinned.drawing_interacts (l. 414) compares two given courses, `dependence.along taking` and `dependence.along resting`, and states that they have the same levels while the drawer's event still interacts with the old dependent. No law says what a choice keeps.
+
+### `reading`
+- pass a: S: `Web.interaction` (l. 139) reads living as active and non-undermining and related as interaction on some condition. `Web.interaction_narrows` (l. 183) keeps the living claims and entails the co-participation relation.
+- pass b: S: Web.interaction (l. 139) is a valuation: living events are active and not undermining, and events are related through Interacts. drawing_reaches (l. 241): under N_rel (Neutral transmits), a standpoint holding significant a drawing event at t holds significant every living event bearing on that condition at any t'. relabel_valuation_connected and relabel_interaction_connected (l. 565, 573): for a Web X X and an onto π, relabelling conditions leaves connection unchanged, so the valuation does not register which condition is which relatum. Mutualism.apart_embodied (l. 621): embodiment does not enter either valuation.
+
+### declarations of Correspondence.lean (by script)
+  l.87 theorem Valuation.Connected.transfer
+  l.97 theorem Valuation.connected_iff_of_map
+  l.122 def Bearing
+  l.128 def Interacts
+  l.133 def Idle
+  l.139 def interaction
+  l.147 theorem Interacts.symm
+  l.152 theorem Interacts.participates
+  l.157 theorem Idle.not_interacts
+  l.169 theorem UnderminingOn.interacts
+  l.175 theorem Idle.not_undermining
+  l.183 theorem interaction_narrows
+  l.188 theorem interacts_reach
+  l.196 theorem connected_of_renewable
+  l.214 theorem significant_iff_of_renewable
+  l.227 theorem valuing_undermining_reaches
+  l.241 theorem drawing_reaches
+  l.251 structure Condition
+  l.258 def adjoin
+  l.276 theorem adjoin_living
+  l.287 theorem adjoin_connected_iff
+  l.297 def Condition.inert
+  l.302 def Condition.universal
+  l.307 def Condition.single
+  l.315 theorem inert_connects
+  l.328 theorem universal_connects
+  l.343 theorem one_use_connects
+  l.362 inductive Formation
+  l.369 def web
+  l.388 theorem drawing_connects_earlier
+  l.414 theorem drawing_interacts
+  l.425 inductive Formation
+  l.431 def atStart
+  l.434 def steady
+  l.437 def falling
+  l.441 def web
+  l.457 theorem dependent
+  l.463 theorem participates
+  l.470 theorem user_undermines
+  l.476 theorem no_living_drawer
+  l.486 theorem first_isolated
+  l.495 theorem connection_by_living_use
+  l.536 theorem roles_valuation_connected
+  l.546 theorem roles_interaction_connected
+  l.558 theorem SelfBearing.interacts
+  l.565 theorem relabel_valuation_connected
+  l.573 theorem relabel_interaction_connected
+  l.587 theorem connected
+  l.592 theorem significant_iff
+  l.597 theorem apart_participates
+  l.601 theorem apart_not_connected
+  l.610 theorem apart_not_interacting
+  l.621 theorem apart_embodied
+
+## Counterfactual.lean  (791 lines)
+
+### `both_outcomes`
+- pass a: S: `ExchangeLaw.course_balances_iff` (l. 377) gives both outcomes for balance of one generated flow under nonanticipation, according as every draw is covered or coverage fails. Histories are generated in either case.
+- pass b: S: course_balances_iff (l. 377), general: the generated course balances exactly when Feasible, so a course exists or is no course. comparison_of_courses (l. 547): Retains ↔ Includes in each direction, and ¬Adds ↔ ¬Exceeds. Neither is a dichotomy of going on and ending.
+
+### `no_return`
+- pass a: N: Not found in the statements read.
+- pass b: N: Feasible is a hypothesis wherever it enters (comparison_with_act, counterfactual_is_course, course_unique). No irreversibility is stated.
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N
+
+### `closed_region`
+- pass a: S: `ExchangeLaw.history_stable` (l. 333) preserves each generated entry at time s ≤ n through any number of further history extensions.
+- pass b: N: history_orbit (l. 398) states the generated history as the orbit of one determined law `next`. withAct_nonanticipating (l. 588) is a closure of Nonanticipating under combining laws. Neither is a region closed under steps.
+
+### `moves`
+- pass a: S: `ExchangeLaw.course_trajectory` (l. 680) identifies the trajectory under every sequence of the part's moves with its generated history, and `ExchangeLaw.history_stable` (l. 333) keeps earlier entries on extension.
+- pass b: S: ExchangeLaw.withAct (l. 308) has the part act by another law. ExchangeLaw.stepBy (l. 673) has the part's move a : F → C → Nat × Nat as input; course_trajectory (l. 680): the history generated with moves u is the trajectory of that standard model. counterfactual_is_course (l. 629): a balanced flow in which the part acts as in the course of withAct, the rest follows the law, and the start and feasibility match, has that course's levels and exchange. comparison_with_act (l. 605) compares a flow with the course of an act not taken. ExchangeLaw.policy (l. 711) forms the move from the configuration.
+
+### `reading`
+- pass a: S: `alike_of_sensitive_agree` (l. 507) gives equal exchange from agreement up to t on sensitive conditions for a nonanticipating law with an exhaustive finite listing and decidable equality. `ExchangeLaw.Through.couples_of_sensitive` (l. 422) gives double-negated coupling for each sensitive condition outside the part.
+- pass b: S: ExchangeLaw.Through (l. 148): for each formation outside the part, the law gives alike under two histories alike through the coupling obs. Through.responds (l. 185): then the rest responds through its couplings in any two flows that follow the law. Through.couples_of_sensitive (l. 422): every condition a formation's exchange is Sensitive to couples into it (¬¬ CoupledInto). Nonanticipating.through_sensitive (l. 528): with finitely many conditions (every c ∈ cs, DecidableEq C), a nonanticipating law reads through law.Sensitive. alike_of_sensitive_agree (l. 507): it gives alike where histories agree on every sensitive condition.
+
+### declarations of Counterfactual.lean (by script)
+  l.127 structure ExchangeLaw
+  l.132 def AgreeUpTo
+  l.140 def GivesAlike
+  l.144 def Nonanticipating
+  l.148 def Through
+  l.153 def InsensitiveAt
+  l.157 def Sensitive
+  l.165 def Follows
+  l.170 def ActsAlike
+  l.185 theorem ExchangeLaw.Through.responds
+  l.194 theorem ExchangeLaw.Nonanticipating.through_all
+  l.207 theorem Flow.totals_alike_of_each
+  l.217 theorem exchange_alike_of_agree
+  l.232 theorem levels_fixed
+  l.255 theorem counterfactual_fixed
+  l.275 def takenUnder
+  l.279 def givenUnder
+  l.284 def extend
+  l.288 def history
+  l.293 def levels
+  l.298 def course
+  l.303 def Feasible
+  l.308 def withAct
+  l.313 def next
+  l.319 def Web.withLevel
+  l.328 theorem history_succ_of_le
+  l.333 theorem history_stable
+  l.340 theorem history_agree
+  l.347 theorem levels_zero
+  l.351 theorem levels_succ
+  l.358 theorem course_follows
+  l.363 theorem totals_under
+  l.371 theorem sub_add_back_iff
+  l.377 theorem course_balances_iff
+  l.398 theorem history_orbit
+  l.414 theorem nat_eq_of_not_not
+  l.422 theorem ExchangeLaw.Through.couples_of_sensitive
+  l.441 def mixIn
+  l.445 theorem mixIn_either
+  l.458 theorem mixIn_listed
+  l.472 theorem swap_alike
+  l.494 theorem mixIn_alike
+  l.507 theorem alike_of_sensitive_agree
+  l.517 theorem ExchangeLaw.Nonanticipating.through_of_observed
+  l.528 theorem ExchangeLaw.Nonanticipating.through_sensitive
+  l.547 theorem comparison_of_courses
+  l.563 theorem comparison_through_sensitivity
+  l.578 theorem ExchangeLaw.withAct_follows
+  l.588 theorem ExchangeLaw.withAct_nonanticipating
+  l.605 theorem comparison_with_act
+  l.629 theorem counterfactual_is_course
+  l.648 theorem ExchangeLaw.course_unique
+  l.668 def ExchangeLaw.ofMoves
+  l.673 def ExchangeLaw.stepBy
+  l.680 theorem ExchangeLaw.course_trajectory
+  l.698 def ExchangeLaw.courseWeb
+  l.705 def ExchangeLaw.world
+  l.711 def ExchangeLaw.policy
+  l.723 def replyLaw
+  l.732 theorem replyLaw_nonanticipating
+  l.743 theorem replyLaw_through
+  l.753 theorem escalation_follows
+  l.761 theorem quiet_follows
+  l.769 theorem courses_fixed
+
+## CounterfactualRuns.lean  (166 lines)
+
+### `both_outcomes`
+- pass a: S: `ExchangeLaw.world_exchange_iff` (l. 54) states exactly when every step of the generated levels follows the exchange relation for any nonanticipating one-kind exchange law. The criterion concerns following the exchange law, rather than cessation of the history generator.
+- pass b: S: world_exchange_iff (l. 54): the course runs by the law of exchange exactly when feasible. Run.beyond_shown_iff (l. 72) is an exactly-when. Neither is of going on and ending.
+
+### `no_return`
+- pass a: N: Not found in the statements read.
+- pass b: N
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N
+
+### `closed_region`
+- pass a: N: Not found in the statements read.
+- pass b: N
+
+### `moves`
+- pass a: S: `ExchangeLaw.closedBy_course` (l. 104) fixes the state projection at every time in a run closed by the act policy from the specified initial state. `course_runs` (l. 148) gives the history for arbitrary run inputs.
+- pass b: S: ExchangeLaw.act_not_taken (l. 38): for a run r of `inputs (law.stepBy present part)` that does not take move a at x before t, no outcome of that move is fixed by r up to t, while the model steps x by a. closedBy_course (l. 104): a run of `closedBy (inputs …) act.policy` starting at the starting levels is at every n the history of law.withAct part act. course_runs (l. 148): every run from stage 0 is the history generated with the moves the run takes.
+
+### `reading`
+- pass a: S: `ExchangeLaw.act_not_taken` (l. 38) gives no outcome fixed by the record before t for an untaken move there, while the standard model supplies its successor. `Run.beyond_shown_iff` (l. 72) concerns the whole observed history.
+- pass b: S: Run.beyond_shown_iff (l. 72): for a Determined P and a run r, P steps from s by a beyond `Shown r.state r.act` exactly when P steps there and r never takes a at s. counterfactual_beyond_shown (l. 88): a run's record is Consistent (shows a determined law), and a move has a step beyond what is shown exactly when the history never takes it. act_not_taken (l. 38): the record (Fixes) decides no outcome of an untaken move.
+
+### declarations of CounterfactualRuns.lean (by script)
+  l.38 theorem ExchangeLaw.act_not_taken
+  l.54 theorem ExchangeLaw.world_exchange_iff
+  l.63 def ExchangeLaw.worldRun
+  l.72 theorem Run.beyond_shown_iff
+  l.88 theorem ExchangeLaw.counterfactual_beyond_shown
+  l.104 theorem ExchangeLaw.closedBy_course
+  l.135 theorem inputs_run_state
+  l.148 theorem course_runs
+  l.159 theorem courseWorld_level_zero

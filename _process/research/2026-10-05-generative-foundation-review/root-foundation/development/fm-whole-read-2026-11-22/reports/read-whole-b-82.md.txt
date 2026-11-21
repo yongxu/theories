@@ -1,0 +1,13 @@
+Reader whole-b-82. All five modules were read whole: every declaration's statement and docstring, and a few proof bodies only where a statement needed one. WitnessRefinement.lean has 676 lines, WitnessRefinementRuns.lean 374, Witnesses.lean 105, World.lean 137 and WorldRepresentation.lean 565. I ran no Lean. I used no earlier read or listing. No answer is U.
+
+Witnesses.lean and World.lean state no law. Witnesses.lean holds definitions only. World.lean holds records plus the two rfl round trips of_web and of_flow. So most of their answers are N or B, B meaning a definition of a built shape.
+
+Three things bear on the centre and the fourteen questions miss them:
+
+(1) In WitnessRefinement, inspecting draws on the same reserve that the response needs. inspect (l. 390) draws one unit per witness, so more witnesses give more distinction but leave less to act with. With reserve 15, the five-witness diagnosis succeeds and the response then fails (diagnosis_needs_response_reserve, l. 447). With reserve 16 it completes. This is a built cost of reading, paid from the level that acting rests on.
+
+(2) WitnessRefinementRuns.total_fault_blocks (l. 305) is a general point of no return, and it is concluded. Once a candidate that admits the failure of the whole roster is in a run, it stays at every later state, and no certificate over the pool holds at any later state. Its companion copied_witnesses_same (l. 265) says that adding witnesses whose reports and failures copy existing ones changes no step and no certificate.
+
+(3) WorldRepresentation.standingAt_alike (F1, l. 437) and balance_needs_conservation (F1 prime, l. 482) are general statements about a reading. Two worlds can agree on every field the model's selection reads while their standings differ. No property of the web and the signs of exchange that respects the signs' agreement is balance. falls_exhaust (F3, l. 526) is a general law that a line of falls ends on every branch, resting on whole amounts with least loss one.
+
+None of the five has a share set again from itself, a unit that leaves units, or a giver that is itself a going-on of the model with a law about losing it. In Witnesses.relay and Witnesses.relayWeb the renewer is a member that gives and also needs the condition, but only as a definition.

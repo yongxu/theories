@@ -1,0 +1,177 @@
+# Task file: EDGE, reader whole-c-edge-06
+
+Your 1 modules. For orientation only, what the two passes said of the four marks, of moves and of a reading (where to look, not evidence).
+
+## Drift.lean  (1554 lines)
+
+### `both_outcomes`
+- pass a: S: `Replacement.valueBy_partition` (l. 992) gives an exact three-way division into fixed, lost and still mixed at every horizon given Steps. `lost_weight` (l. 285) and `whole_weight` (l. 395) give the two pure outcomes of one generation weights q^n and p^n.
+- pass b: S: `Replacement.valueBy_partition` (l. 992): with Steps, every history ends fixed, lost or varied, and their weights total T^k. `fixation` (l. 635) and `Replacement.fixationBy` (l. 1095) bound the weight of fixing on both sides, with the varied vanishing. `lostBy_bounds` (l. 1214) does the same for losing. These are general, as weights over histories, not an exactly-when for one course. B: `TwoMembers.one_generation` (l. 1531), `Favoured.two_members` (l. 1544).
+
+### `no_return`
+- pass a: S: `sampled_none` (l. 478) and `sampled_all` (l. 491) conclude that every weighted final-count reading from an endpoint stays concentrated there. `Replacement.valueBy` (l. 662) stipulates a self-step at nonmixed counts; `valueBy_stays` (l. 687) extends it to all horizons.
+- pass b: S: the ends are absorbing. `sampled_none` (l. 478): from 0, every history keeps none. `sampled_all` (l. 491): from N, every history keeps all. `Replacement.valueBy_stays` (l. 687): a population of one kind stays. Each is concluded from the definitions, at the loss or fixation of a kind; a lost kind leaves no offspring. The counterpart: `falls_back_ge` (l. 305) and `Replacement.lost_ge` (l. 1508) / `lost_geBy` (l. 1108): losing the favoured kind is never ruled out from a mixed count.
+
+### `rank`
+- pass a: S: `varied_vanishes` (l. 573) bounds still-varied history weight by r^k when r+2=N^N and h≤N. `Replacement.varied_vanishesBy` (l. 1073) gives the round bound with common total T, a lower bound c on mixed upward weights, c≤T, and r+c^(M+1)=T^(M+1).
+- pass b: S: `varied_vanishes` (l. 573): with r + 2 = N^N, the histories still varied after k generations weigh at most r^k. `Replacement.varied_vanishesBy` (l. 1073): at most r^m after m rounds of M + 1 steps, with r + c^(M+1) = T^(M+1). `climbsBy` (l. 1038): fixing within k steps weighs at least c^k. These are geometric bounds on the weight still undecided, not a variant falling along one course.
+
+### `closed_region`
+- pass a: S: `sampled_none` (l. 478), `sampled_all` (l. 491) and `Replacement.valueBy_stays` (l. 687) make the pure populations absorbing in their respective models.
+- pass b: S: the absorbing ends (`sampled_none` l. 478, `sampled_all` l. 491, `valueBy_stays` l. 687). Also a conserved quantity: `Replacement.potentialBy_harmonic` (l. 813) and `valueBy_potential` (l. 821): with Steps, the potential keeps its weighted value over any number of steps.
+
+### `moves`
+- pass a: S: `Replacement.valueBy_mixed` (l. 676) sums weighted up, down and unchanged successors at a mixed count. `Replacement.valueBy_stays` (l. 687) keeps a nonmixed start for all steps. These are weighted alternatives.
+- pass b: N: there is no Process with moves, policy or allowed set. Samplings and histories are all counted and weighed (Typicality.courses, sampled, valueBy); none is chosen.
+
+### `reading`
+- pass a: S: `Replacement.valueBy_potential` (l. 821) gives the weighted reading of final potential for any starting count and horizon from its initial value under Steps.
+- pass b: N: `sampled N f k h` (l. 434) and `valueBy … f` (l. 662) total a function f of the final count, which the docstrings call a reading. No law has what is registered deciding something.
+
+### declarations of Drift.lean (by script)
+  l.123 theorem step_ones
+  l.130 theorem step_zeros
+  l.139 theorem weighted_ones_step
+  l.148 theorem weighted_zeros_step
+  l.157 theorem step_expected
+  l.165 theorem expected_ones
+  l.175 theorem expected_zeros
+  l.188 def fallsBack
+  l.193 theorem gap_le
+  l.210 theorem far_back
+  l.233 theorem falls_back_le
+  l.251 theorem falls_back
+  l.269 def lost
+  l.272 theorem lost_true
+  l.275 theorem lost_false
+  l.285 theorem lost_weight
+  l.292 theorem lost_le
+  l.305 theorem falls_back_ge
+  l.316 theorem expected_sampled
+  l.327 theorem raised_falls_back
+  l.355 theorem ended_falls_back
+  l.380 def whole
+  l.383 theorem whole_true
+  l.391 theorem whole_false
+  l.395 theorem whole_weight
+  l.402 theorem ones_le
+  l.407 theorem from_none
+  l.419 theorem from_all
+  l.434 def sampled
+  l.438 theorem sampled_succ
+  l.444 theorem sampled_le
+  l.451 theorem sampled_add
+  l.459 theorem sampled_mul
+  l.468 theorem sampled_one
+  l.478 theorem sampled_none
+  l.486 theorem sub_self_zero
+  l.491 theorem sampled_all
+  l.497 theorem weighted_ones
+  l.512 theorem sampled_count
+  l.522 def varied
+  l.526 def fixed
+  l.529 theorem varied_zero
+  l.531 theorem varied_self
+  l.540 theorem varied_step
+  l.565 theorem one_le_pow
+  l.573 theorem varied_vanishes
+  l.608 theorem count_le
+  l.621 theorem fixed_le
+  l.635 theorem fixation
+  l.651 def Mixed
+  l.662 def valueBy
+  l.670 def Steps
+  l.676 theorem valueBy_mixed
+  l.682 theorem valueBy_one_kind
+  l.687 theorem valueBy_stays
+  l.693 theorem add_three_pairs
+  l.698 theorem valueBy_add
+  l.712 theorem valueBy_mul
+  l.723 theorem valueBy_le
+  l.735 theorem valueBy_congr
+  l.741 theorem valueBy_const
+  l.754 theorem valueBy_comp
+  l.769 def downs
+  l.774 def ups
+  l.780 def riseBy
+  l.784 def potentialBy
+  l.790 theorem riseBy_step
+  l.806 theorem harmonic_step
+  l.813 theorem potentialBy_harmonic
+  l.821 theorem valueBy_potential
+  l.834 theorem potentialBy_le_succ
+  l.837 theorem potentialBy_mono
+  l.842 theorem potentialBy_beyond
+  l.851 theorem potentialBy_le_top
+  l.865 def value
+  l.871 theorem steps_const
+  l.874 theorem value_mixed
+  l.879 theorem value_one_kind
+  l.884 theorem value_stays
+  l.888 theorem value_add
+  l.892 theorem value_mul
+  l.896 theorem value_le
+  l.901 theorem value_const
+  l.905 theorem value_comp
+  l.911 theorem downs_const
+  l.917 theorem ups_const
+  l.924 def rise
+  l.927 theorem rise_closed
+  l.932 def potential
+  l.936 theorem rise_step
+  l.941 theorem potential_harmonic
+  l.947 theorem value_potential
+  l.950 theorem potential_le_succ
+  l.953 theorem potential_mono
+  l.957 theorem potential_beyond
+  l.960 theorem potential_le_top
+  l.966 def fixed
+  l.969 def lost
+  l.972 def varied
+  l.974 theorem partition
+  l.992 theorem valueBy_partition
+  l.1000 theorem fixedBy_below
+  l.1008 theorem potentialBy_within
+  l.1024 theorem fixationBy_bounds
+  l.1038 theorem climbsBy
+  l.1056 theorem varied_stepBy
+  l.1073 theorem varied_vanishesBy
+  l.1095 theorem fixationBy
+  l.1108 theorem lost_geBy
+  l.1124 theorem le_of_le_eq
+  l.1126 theorem le_of_eq_le
+  l.1128 theorem turn_out
+  l.1132 theorem ups_le
+  l.1140 theorem ups_pos
+  l.1149 theorem riseBy_shift
+  l.1163 theorem riseBy_le_of_favoured
+  l.1171 theorem riseBy_le_of_disfavoured
+  l.1179 theorem potentialBy_tail
+  l.1189 theorem potentialBy_head
+  l.1200 theorem potentialBy_top_pos
+  l.1214 theorem lostBy_bounds
+  l.1240 theorem lostBy_favoured
+  l.1299 theorem fixedBy_disfavoured
+  l.1338 theorem riseBy_ends
+  l.1350 theorem value_congr
+  l.1355 theorem value_partition
+  l.1359 theorem fixed_below
+  l.1362 theorem potential_within
+  l.1369 theorem fixation_bounds
+  l.1378 theorem climbs
+  l.1383 theorem varied_step
+  l.1390 theorem varied_vanishes
+  l.1398 theorem fixation
+  l.1409 theorem rise_neutral
+  l.1415 theorem potential_neutral
+  l.1422 theorem rise_antitone
+  l.1431 theorem rise_antitone_le
+  l.1438 theorem potential_above
+  l.1443 theorem potential_from
+  l.1456 theorem favoured_share
+  l.1469 theorem neutral_share
+  l.1475 theorem favoured_share_above
+  l.1508 theorem lost_ge
+  l.1520 theorem falls_back
+  l.1531 theorem one_generation
+  l.1544 theorem two_members

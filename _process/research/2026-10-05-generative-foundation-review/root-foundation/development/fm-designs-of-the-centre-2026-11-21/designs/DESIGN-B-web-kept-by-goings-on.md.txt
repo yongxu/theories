@@ -1,0 +1,171 @@
+# Design B: a web kept by goings-on, with a finite source and a cost (holding, or changing)
+
+*AI-written (Claude Opus 5.5, designer B, angle "things kept by goings-on"), 21 November 2026, about 23:45 by the machine's clock. Python only, twelve runs, each under 60 s but one (section 6); no Lean, no build, no test, no gate; nothing in git touched. Unit, ground, act, formation, standing, closing are working names.*
+
+## 1. The design in ten lines
+
+1. A configuration is a count of tokens of finitely many kinds, n : K → ℕ, at most the caps C (the finite source).
+2. A law gives each kind k a recipe R k : K → ℕ (acts of each kind needed to form one token of k) and each kind j a capacity c j (acts a token of j gives in a step).
+3. A step: the tokens act once and are gone; the next configuration is the births, any b ≤ C with Σ_k b k · R k j ≤ c j · n j for every j. An act serves one forming, so what a token gives to forming another kind it does not give to its own (keeping costs the keeper).
+4. A formation D ⊆ K goes on while some kind of D has a token; V_D is the set of configurations from which some course keeps it for ever (a choice among moves).
+5. A way of selecting picks a move at each step. It is *closing* when it forms no kind absent from the configuration: what can be formed is set again from what it formed last (every selection that allots by share is closing).
+6. Registered: what is present, nothing more (no reading; R6 is left out).
+7. A *standing population* is x ≤ C with x → x a move and some kind of D in x.
+8. Main law: the moves are closed under pointwise min always, under + where no cap binds, under max where support is free; the fold of a cycle by such an operation (for +, of a stretch whose end is at or above its start) is a standing population.
+9. Hence exactly one of: (i) no course keeps D; (ii) a standing population exists, and a closing course keeps D from n exactly when a closing course from n reaches a configuration at or above one; (iii) some course keeps D but none holds any form: in every course that keeps D each kind of D is absent at infinitely many steps, and every closing course, from every start, passes a step after which no course keeps D.
+10. Case (iii) needs both a finite source and a cost: with no caps, or with support free, every law that keeps D at all has a standing population. Built: two partner kinds on a ground that can carry one of them a step; holding both gives the ground's own renewing act away, holding one loses the other for good, and the formation goes on only by the partners taking turns.
+
+## 2. Definitions
+
+```
+variable {K : Type} [Fintype K] [DecidableEq K]
+
+structure Law (K) where
+  R : K → K → ℕ      -- R k j : acts of kind j needed to form one token of kind k
+  c : K → ℕ          -- acts one token of kind j gives in a step
+  C : K → ℕ          -- most tokens of kind k one step forms (the finite source)
+
+abbrev Config (K) := K → ℕ
+
+-- costly support, with caps (the model)
+def Move (W : Law K) (n b : Config K) : Prop :=
+  (∀ k, b k ≤ W.C k) ∧ ∀ j, (∑ k, b k * W.R k j) ≤ W.c j * n j
+-- the two variants, each taking one part out
+def MoveUncapped (W) (n b) : Prop := ∀ j, (∑ k, b k * W.R k j) ≤ W.c j * n j
+def MoveFree (W) (n b) : Prop :=          -- a supporter's act serves any number of formings
+  (∀ k, b k ≤ W.C k) ∧ ∀ k, 0 < b k → ∀ j, W.R k j ≤ W.c j * n j
+
+def Live (D : K → Prop) (n : Config K) : Prop := ∃ k, D k ∧ 0 < n k
+def Course (Step : Config K → Config K → Prop) (s : ℕ → Config K) : Prop := ∀ t, Step (s t) (s (t+1))
+def Keeps (Step) (D) (n) : Prop := ∃ s, s 0 = n ∧ Course Step s ∧ ∀ t, Live D (s t)   -- n ∈ V_D
+def Standing (Step) (D) (x) : Prop := Step x x ∧ Live D x
+def Closing (n b : Config K) : Prop := ∀ k, 0 < b k → 0 < n k
+def ClosingCourse (W) (s) : Prop := Course (Move W) s ∧ ∀ t, Closing (s t) (s (t+1))
+def ClosedUnder (Step) (op : Config K → Config K → Config K) : Prop :=
+  ∀ n b n' b', Step n b → Step n' b' → Step (op n n') (op b b')
+def DownClosed (Step) : Prop := ∀ n b b', Step n b → b' ≤ b → Step n b'
+```
+
+The cases: (i) `¬ ∃ n, Keeps (Move W) D n`; (ii) `∃ x, Standing (Move W) D x`; (iii) `(∃ n, Keeps (Move W) D n) ∧ ¬ ∃ x, Standing (Move W) D x`. As a `Process` of the package: configurations `Config K`, moves the births `b`, step `Move W n b ∧ next = b`; `Keeps` would then be `Keepable … (Live D)` and V_D its kernel of choice. That bridge is named, not written.
+
+New definitions: `Law`, `Move` (with two variants), `Live`, `Keeps`, `Standing`, `Closing`, `ClosedUnder`; `Course` and `DownClosed` are generic.
+
+## 3. The main statement
+
+**Theorem B.** Premises, all of them: `K` finite with decidable equality; `W : Law K` with values in ℕ; `D : K → Prop`. (No premise on the level's fall, the giving, a rise of use, a lock, a turn or an end.)
+
+- **(B1) The lattice of moves.** `Move W` is `DownClosed` and `ClosedUnder` pointwise `min`. `MoveUncapped W` is `DownClosed` and `ClosedUnder` `min` and `+`. `MoveFree W` is `DownClosed` and `ClosedUnder` `min` and `max`. (`Move W` is in general closed under neither `+`, the caps, nor `max`, the cost.)
+- **(B2) The fold.** If `Step` is `DownClosed` and `ClosedUnder op`, op ∈ {min, max, +}, and `s` is a course with `s (T+p) = s T`, p ≥ 1, then `x := op_{T ≤ t < T+p} s t` has `Step x x`. For `+` it is enough that `s T ≤ s (T+p)`.
+- **(B3) Holding.** The following are equivalent: (1) `∃ x, Standing (Move W) D x`; (2) some course of `Move W` has a kind `k` with `D k` present at every step from some step on; (3) some `ClosingCourse W s` has `Live D (s t)` for all t.
+- **(B4) The configuration grain, exactly.** For every n: some closing course from n keeps D for ever ⇔ some closing course from n reaches a configuration n' with n' ≥ x for some standing x. V_D and the set of starts of a keeping closing course are both up-sets (the program checked the first only).
+- **(B5) Changing.** In case (iii): (a) in every course that keeps D, every kind of D is absent at infinitely many steps; (b) every closing course, from every start, has a first step t with `¬ Keeps (Move W) D (s t)`, and from there every course of every selection ends D; (c) every course that keeps D forms, at infinitely many steps, a kind absent at that step; (d) the sum of any cycle of V_D is a standing population of the same recipes and capacities with caps p · C.
+- **(B6) Where (iii) can be.** If some course keeps D under `MoveUncapped W`, then `∃ x, Standing (MoveUncapped W) D x`. If some course keeps D under `MoveFree W`, then `∃ x, Standing (MoveFree W) D x` (within C). So case (iii) needs both the caps and the cost.
+
+Read as the statement the brief aims at: from a configuration, under a closing way of selecting, the course either goes on (holding a form: it reaches a configuration at or above a standing population) or passes a step from which no course keeps the formation; which of the two is exact by (B4); and at the grain of the law, where the formation can be kept only with its forms changing, no closing selection keeps it from anywhere, and that can happen only where the source is finite and keeping costs (B5, B6). By the way of selecting: closing or not. By what keeping costs: free support excludes (iii). Not by what is registered.
+
+**Proof sketch.**
+
+- B1. min: Σ_k min(b_k, b'_k)·R_kj ≤ min(Σ_k b_k R_kj, Σ_k b'_k R_kj) ≤ min(c_j n_j, c_j n'_j) = c_j·min(n_j, n'_j), and min(b, b') ≤ C. +: the sums add; b + b' can pass C, so + needs no caps. max, support free: if max(b, b')_k > 0 then b_k > 0 or b'_k > 0, so R_kj ≤ c_j n_j or ≤ c_j n'_j, each ≤ c_j max(n, n')_j; max(b, b') ≤ C. With cost, max fails: n with one act, b = (1,0), b' = (0,1), max needs two. DownClosed: fewer births need fewer acts.
+- B2. Fold the p steps `s t → s (t+1)` by `op` (B1 applied p − 1 times): `op_t s t → op_t s (t+1)`; on a cycle both sides are x. For +: x → x − s T + s (T+p) ≥ x, and DownClosed gives x → x.
+- B3. (1⇒3): x, x, x, … is closing. (3⇒2): along a closing course the set of kinds present never grows, so it is constant from some T; `Live` gives a kind of D in it, present at every t ≥ T. (2⇒1): put m j := min_{t ≥ T} s t j (exists in ℕ). For each j take t ≥ T with s t j = m j: Σ_k m_k R_kj ≤ Σ_k s(t+1)_k R_kj ≤ c_j·s(t)_j = c_j m_j; m ≤ C; m_k ≥ 1. No periodicity is used, so this holds with caps or without.
+- B4. ⇐: if n' ≥ x, then x R ≤ c∘x ≤ c∘n' and the kinds of x are among those of n', so n' → x is a closing move; then x, x, …. ⇒: on a keeping closing course, the m of B3 over its tail is standing and the tail's first configuration is ≥ m. Up-sets: from n' ≥ n every move from n is a move (more acts), and every closing move from n is closing from n'.
+- B5. (a) a kind of D present from some step on gives a standing x by B3 (2⇒1). (b) a closing course that kept D for ever gives one by B3 (3⇒1); so it ends; a configuration that is not `Live` is not in V_D; the first t outside V_D is the step; the complement of V_D is closed under moves (a live configuration with a successor in V_D is in V_D). (c) if from some step on no absent kind is formed, the course is closing from there; B3. (d) B2 with + under `MoveUncapped`, and the sum is at most p · C.
+- B6. Uncapped: Dickson's lemma (ℕ^K is well-quasi-ordered) gives T < T' with s T ≤ s T' on the keeping course; B2 with +; the sum is `Live` since s T is. Free: with caps the course is in a finite box, so it is eventually periodic; B2 with max; the max is ≤ C and dominates a live configuration.
+
+## 4. Which of R1 to R7
+
+- **R1, had.** Tokens of a kind exist only as other tokens' acts formed them (recipes); the formation's kinds can rest on each other (in L* below each partner is formed from the other).
+- **R2, had, in the better form.** The ground is itself a kind, re-formed from its own acts; its cap is the finite source; what comes back is c · (what is left); it runs out when its acts are given to others, and a ground with no token gives nothing for ever. What is not had: a level that falls over many steps; in the built cases it is lost in one step.
+- **R3, had.** An act serves one forming (`Move`); taking it out is `MoveFree`, and B6 shows it does work.
+- **R4, partly.** The selecting of which kinds are formed is set again from what it formed last (closing). The "lock" that comes about is only that the kinds present never come back once gone, and it follows in one line from the class; what is concluded is that in case (iii) every such selection ends. The share as a ranking is idle in Theorem B.
+- **R5, had.** V_D is a kernel of choice among moves; B5(b) gives the first step after which no course keeps.
+- **R6, left out.** Nothing is read; there is no revision.
+- **R7, partly.** In case (iii) the formation goes on only with its forms coming and going (B5a), and no selection that only re-forms what is there can do it (B5b); the cycle is a population the source cannot carry at once, spread over time (B5d). "More and more future" is not had: no new kinds arise.
+
+Why this cut first: the angle's question was what a finite source and a cost do to October's renewal closure, and that has an exact answer at the grain of the law (B6: only in the corner where the moves are closed under min alone can going on need change). Adding a reading or a ranking before that is settled would make the statement hang on a rule chosen by hand, as the toys of 20 and 21 November did.
+
+## 5. T1 to T8
+
+**T1, a dictionary.** Statements not found in what was read: B1–B2 (the lattice law of moves and the fold), B3 (holding a form ⇔ a standing population, via the min over a tail), B5 (case iii and what it forces), B6 (case iii needs caps and cost). A word search of `…/generative-basis/lean/` for Dickson, well-quasi, wqo, self-covering found nothing; "componentwise" found only `ResourceContinuation.componentwise_execution_bound`, not read; the places listing's returns under "forms changing while it continues" are "not found" or built examples, the nearest general one `Dependence.consumed_continues_transformed` (a formation still active after a loss without return has weakened its dependence), which is of one formation's dependence, not of a population. Why not by unfolding: each direction that concludes a standing population builds a configuration from a course (the min over a tail; the sum over a stretch found by Dickson's lemma; the max over a cycle) and uses a closure property of the moves, which is a fact about the inequalities, not a definition; "standing" is a lattice point, "keeps" an infinite course. October's corner (support free, source unlimited) is where B6 says change is never needed; that change can be needed, and only where both the source binds and support costs, was not found.
+
+**T2, handed in.** Premises of Theorem B, each marked:
+
+| premise | mark |
+|---|---|
+| K finite, decidable equality | structural |
+| R, c, C with values in ℕ | structural (the law) |
+| the next configuration is the births (tokens last one step) | structural; a real restriction (section 7) |
+| Σ_k b_k R_kj ≤ c_j n_j | structural (what keeping costs) |
+| b ≤ C | structural (the finite source) |
+| D | structural |
+| closing (in B3–B5) | structural: it defines the class of selecting; it is where the lock is, and the face lemma follows in one line, so a reader may count it as the lock handed in |
+
+Not premises: the level's fall, the giving (the ground's re-forming is a recipe), the use-up, the change of forms, the end; there is no turn.
+
+**T3, idle parts.** Each part taken out of L* (law: R_0 = {0:1}, R_1 = {0:1, 2:1}, R_2 = {0:1, 1:1}; c = (2,1,1); C = (1,1,1); D = {1,2}; in L*, V_D = {(1,0,1), (1,1,0), (1,1,1)}, no standing population, closing kernel empty), from `cases.out.txt`:
+
+| taken out | result |
+|---|---|
+| the finite source (ground's cap 1 → 2) | case (ii): standing (2,1,1), closing kernel {(2,1,1)} |
+| the cost (support free) | case (ii): standing (1,1,1) |
+| the shared ground (R_1 = {2:1}, R_2 = {1:1}) | case (ii): standing (0,1,1), (1,1,1) |
+| the ground's multiplying (c_0 = 2 → 1) | case (i): V_D empty |
+| the partner (R_1 = {0:1}) | case (ii): standing (1,1,0) |
+| the selecting (closing → any move) | from (1,1,0): closing ends at (1,0,0); open goes (1,1,0), (1,0,1), (1,1,0), … for ever |
+| the share as a ranking | idle in Theorem B. In one built case it does work: law S (every kind formed from one act of kind 2; c = 1; caps 1), from (1,0,1) the closing rule that ranks by share (ties by index) forms kind 0 and ends at (1,0,0); the closing rule that ranks kind 2 first keeps |
+| horizon, reading | none in the design |
+
+**T4, both outcomes.** L*, one start (1,1,0): the closing selection ends at the next step; an open selection keeps the formation for ever, its kinds alternating. From (1,1,1) the three maximal closing moves all end: (0,1,1) → (0,0,0) (holding both partners gives the ground's renewing act away, and the ground is gone), (1,0,1) → (1,0,0) and (1,1,0) → (1,0,0) (a partner let go cannot be formed again by a closing selection). The two courses differ only in whether a kind absent at the step may be formed.
+
+**T5, old laws as cases. Fails on both sides with statements unchanged.**
+- `renewal_closure_theorem`: not a case. It sits at the corner (support free, source unlimited) where B6 says case (iii) cannot occur, and its steady configuration is a standing population; but October's `channelProcess` (tokens with spans, a reserve, a persisting supporter) is not an instance of `Move`. What would be needed: B1–B2 for `channelProcess` (argued, not checked: it is closed under + of configurations, since aging, forming and opening distribute over `++` (`aged_append`, `weighted_append` are in the files), the reserve inequality adds and support witnesses carry over; but its successors are not `DownClosed`, since aged tokens must stay) and a lemma from a self-covering configuration to `SelfRenewing`. Not done.
+- `LineOnAStock.unending_iff_holds` has B4's shape (a way goes on for ever iff it reaches a state that holds) for one way with no choice; its carrier and `Holds` are not mine; not a case.
+- `GuardHorizon.closed_viable`, `Keeping.keptFor_of_closed`, `Viability.kernel_iff_certificate`: used, not cases ({x} with x → x is `Closed`, so `closed_viable` gives B3's (1⇒keeps)).
+- Lock side: none. `RuleCapture.turn_locked` has the shape of the face lemma (one closing step keeps the kinds present from growing) with S = `Config K`, `P.le x y := supp y ⊆ supp x`, `favours := True`; that is my notion put in and taken out, a dictionary. Nothing here has a share that rises or a level that falls over many steps, so `locked_ends_rising`, `locked_turns_in_time_on_window_iff` and `RuleShaping.favours_iff` have no counterpart.
+
+**T6, no threshold.** V_D is an up-set (more of anything never ends what less keeps when the course can choose; proof in B4; 0 failures in every family searched). The statement sorts laws by whether a lattice point x ≤ C with x → x exists, and starts by whether a closing course reaches the up-set ↑{standing}; there is no threshold on a level. The T6 phenomenon appears for one fixed closing rule: the share rule keeps from n and ends from n plus one token in 14,260 pairs (family A, D = {1,2}), so there it is the selection's doing. Beside the sweep of 285 in 267,598: starts in V_D from which every closing course ends are 6,360 of 87,957 (family A, D = {1,2}); starts that reach no configuration at or above a standing population by any course, 5,784.
+
+**T7, tried by program.** Section 6. All nine checks found no instance against them in 81,536 laws searched exhaustively and 6,000 drawn at random.
+
+**T8, one more model.** Seven new definitions (`Law`, `Move` with two variants, `Live`, `Keeps`, `Standing`, `Closing`, `ClosedUnder`). Within the design it is one law (B1–B2, the fold) at three corners of cost × source; the fourth corner (free and unlimited) is October's. Relative to the Lean it is a new model beside the old ones, a generational web of acts, joined to the package only through a `Process` bridge that is named and not written.
+
+## 6. What the program found
+
+Scripts and outputs in `/Users/ren/theories/tmp/fm/centre21/designs/B-web-kept-by-goings-on/`: `web.py` (the model), `main_search.py` (checks K1, K2, K3, A1, M1, M2, C1 and counts C2, S1), `cases.py` (the built cases), `lattice_check.py` (B1), outputs `out-A.txt`, `out-B.txt`, `out-R4.txt`, `cases.out.txt`, `lattice.out.txt`; `explore1.py`–`explore3.py` were first looks (`main_search-v1.out.txt` is the first version's output).
+
+Checks (each 0 failures in every family): K1 V_D is an up-set; K2 the sum of a cycle of V_D (one cycle per law) is a move of itself without caps (B5d); K3 with support free a non-empty kernel has a standing population within C (B6); A1 a cycle of V_D holding one kind of D throughout ⇔ a standing population (B3); M1 the closing kernel is empty exactly in cases (i) and (iii) (B3); M2 in case (iii), the cycle sum is standing with caps p·C, and free support gives a standing population; C1 the closing kernel equals the closing reach of ↑{standing} (B4); "cost adds a course" (V_D ⊆ V_D under free support).
+
+| family | laws | D | (i) | (ii) | (iii) | starts in V_D | every closing course ends | kept only by changing | seconds |
+|---|---|---|---|---|---|---|---|---|---|
+| A: 3 kinds, recipes 0/1, c 1–2, caps 1–2 | 21,952 | {1,2} | 11,156 | 10,780 | 16 | 87,957 | 6,360 | 5,784 | 13.0 (all D) |
+| A | 21,952 | {1} | 13,536 | 8,416 | 0 | 53,322 | 0 | 0 | |
+| A | 21,952 | {0,1,2} | 9,832 | 12,120 | 0 | 112,494 | 11,550 | 11,550 | |
+| B: kind 2's recipe has an entry 2 | 59,584 | {1,2} | 44,164 | 15,384 | 36 | 127,943 | 5,396 | 3,968 | 17.4 |
+| R4: 4 kinds, random, seed 21 | 6,000 | {1,2,3} | 4,283 | 1,717 | 0 | 36,036 | 2,397 | 2,166 | 11.8 |
+
+The share rule (closing, greedy, more numerous first): of the closing kernel it ends from 23,940 of 81,597 starts (A, {1,2}), 28,722 of 122,547 (B), 8,917 of 33,639 (R4).
+
+Lattice check (`lattice.out.txt`, 1,500 random laws of A, 90,000 pairs of moves per corner, 12.5 s): combinations that are not moves: costly with caps, min 0, + 77,968, max 9,982; costly without caps, min 0, + 0, max 9,982; free with caps, min 0, max 0, + 82,054; free without caps, 0, 0, 0. An earlier run with 3,000 laws took 61.9 s, over the brief's 60 s, with the same pattern; it was cut to 1,500 and run again.
+
+**Nearest misses.**
+- All 16 laws of case (iii) in A have one recipe pattern, L*'s (partners formed from each other and the ground, the ground re-formed from itself with two acts and cap 1), in four capacity variants with four cap variants each; all close when the ground's cap rises by one. The 36 in B are that core with an entry 2; two of them close by no single cap rising by one and need caps ×2 (law R = ((1,0,0),(1,0,1),(2,2,0)), c = (2,1,2), C = (2,2,1): standing (4,2,1)). None in 6,000 random four-kind laws. Case (iii) is real and rare in what was searched, and of one mechanism.
+- At the configuration grain, change is forced without a binding source and without cost: 808 laws of A (D = {1,2}) have a standing population and also starts kept only by changing kinds, e.g. R_0 = {2:1}, R_1 = {2:1}, R_2 = {1:1}, c = 1, caps 1: standing (0,1,1), but from (0,0,1) the partners only alternate, since each must be formed from the other the step before; the same holds with support free and no caps (argued, not run). So B6 is of the law, and does not hold of starts.
+
+## 7. Where it is weakest
+
+1. **T5 fails.** No old law comes out with its statement unchanged; on the lock side nothing even has the right parts.
+2. **Generational tokens.** "Holding" here means re-forming the same kinds every step. With tokens that persist (October's spans) holding may need no re-forming, and whether B3's min argument and case (iii) survive is not checked. Part of the change found at the configuration grain is forced by the generational step itself.
+3. **Case (iii) is one mechanism**, rare in what was searched (52 of 81,536 laws on three kinds, none of 6,000 on four). That it needs a finite source and a cost is proved; that it is common, or that it is the second way Ren points at, is not.
+4. **The lock is near handed in.** Closing is a premise on the class, and the face lemma is one line. What is concluded is only that in case (iii) every closing selection ends.
+5. **The share as a ranking is idle** in Theorem B; it works only in built cases of one rule.
+6. **"Uses up what it rests on" is shown in instances, not stated**: B5(b) says the closing course ends, not that the ground goes first. In L* one ending is the ground's renewing act given away, the others a partner lost.
+7. **Nothing runs down over many steps, nothing is read** (R6), and no new kinds arise, so "more and more future" is not touched.
+8. **The mathematics may be known.** B6's uncapped half is the self-covering argument of vector addition systems (Rackoff) made into one step by additivity; min-closure of downward-closed linear constraints is standard. A reader may find B6 stated in Petri-net terms.
+
+What would refute it: a law in case (iii) with no caps or with free support (against B6); a closing course keeping D in a law with no standing population (against B3); in case (iii), a keeping course with one kind of D present from some step on (against B5a); C1 failing in a larger family; or a reader showing that "closing" is the package's lock and B5(b) older laws in a row.
+
+## 8. What I did not read
+
+Read: the brief; `AGENTS.md`; the direction page at lines 5–15, 42 and 120 only (not 16–41, the head note, or the rest); `WHAT-A-MODEL-MUST-HAVE.md`; `read-kept-by-goings-on-2026-11-20/NOTE.md`; `renewal-against-keeping-2026-11-20/NOTE.md`; chapter 02 §3.1; `AFTER.md` (first 2,500 characters); in `conditional/renewal/`, the definitions of `RenewalAccounting.lean`, `SupportClosed`, `SelfRenewing`, `RenewsForever` and the statement of `renewal_closure_theorem`, `History`, `spanOpening`, the README; in the package, statements only: `RuleCapture` (`Raises`, `ReadsShare`, `Locked`, `turn_locked`), `TurningInTime` (`locked_ends_rising`, `locked_ends_with_net_regime`, the head of `locked_turns_in_time_on_window_iff`, `recoverable_iff_above`), `RuleShaping.favours_iff`, `LineOnAStock.unending_iff_holds`, `Keeping.keptFor_of_closed`, `GuardHorizon` (`Viable`, `Admissible`, `Closed`, `closed_viable`), `Viability` (`Kernel`, `Certificate`, `kernel_iff_certificate`, `kernel_step_iff`), `RegimeMargin.step` and its predicates; the places listing at `RelationalRenewal`, `Dependence`, `GuardHorizon`, `Keeping`, `JointKeeping`, `LineOnAStock`, `RuleCapture`, `TurningInTime`.
+
+Not read: `deeper/RelationalRenewal.lean` and `Dependence.lean`/`RenewalFlow` themselves (only the readers' returns and chapter 02); `CommonResponse.lean`; `PopulationCorrection.lean` and the meta-attractor page; chapters 03, 05, 07 and the rest of 02; the one page; `FROZEN-THE-CENTRE.md`; every record under "What has already failed" except the two renewal notes; `read-a-future`, `read-registering`, `two-ways-table`; any proof body; `ResourceContinuation.componentwise_execution_bound`.

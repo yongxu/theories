@@ -1,0 +1,239 @@
+*AI-written (Claude Opus, refuter, lens WORK), 22 November 2026, on design G1-free-fable. Scratch, outside git. I ran no Lean, build, test or gate; Python only, each run under 60 s. Every Lean claim below names the file and declaration I opened; a negative means "not found in what I read". The full test suite was deliberately not run (no tests apply here). The harness refused to save REPORT.md, so this message is the only copy.*
+
+## 1. Verdict in five lines
+
+1. It survives as **a built case worth keeping** with two small new lemmas. It is not a centre, and not a law that joins.
+2. The strongest reason: every step of the main theorem's proof is an old pattern or plain arithmetic. The closure along descent is `never_in`/`kept_of_descent`, the fall with no giver is `RegimeMargin.ends_beyond_giving`, and the turn is `LineOnAStock.none_after`. The new arithmetic is doubling against the slots. The choice among moves, the reading and θ do no work in (a) or (b): every argument there works the same for any choice. The lock's three parts are premises: a fixed F-first priority (`FFirst`), F closed under kids (H1), and F unable to go on alone (H3).
+3. One clause is false as stated. (b)(II) says "no F unit is in w_{D+1}". It fails in 4,437 of 4,437 case-(II) courses where a unit outside F leaves an F kid, because the premise that `LineOnAStock.none_after` needs is missing.
+4. New work found: the fill bound t̂ (exclusion by doubling against the slots) and Lemma 1 (Viable is upward closed in the level under free choice). Neither is found in what I read. Neither is used to bring an old law in as a case, and Lemma 1 is used by no main statement.
+5. T5 fails within the model. `ways_alike` would need a handed-in giving the model does not have, no cap, and no slots. It would also need a `pick` that is not a `Selecting`. Even then, Lemma 3 is `ways_alike`'s own induction with one extra congruence (applying `pick` to equal candidates).
+
+## 2. Statement by statement
+
+- **(a) dichotomy, bound, ¬Keepable after E**: HOLDS IN WHAT I CHECKED. 844,904 courses on 2,500 random three-kind systems meeting H1 and H3, with the rest free to leave F kids. Four ways of selecting, two of which read the level. 0 failures of the iff, 0 of the bound `E+1+x_{E+1}`, 0 exits keepable (`refute.py lemma2a`).
+- **(b) one of D, E, R exists and is ≤ t̂**: HOLDS IN WHAT I CHECKED. 274,720 courses on 500 random systems: two F kinds with one need, a rest that may leave F kids, four selections (`refute.py b`).
+- **(b) (I)/(II) exactly one**: holds, since it follows from (a) and the bound.
+- **(b)(II) "no F unit is in w_{D+1}"**: **REFUTED.**
+  - The instance: T in F (need 5, use 1, give 0, kids T,T) and K (need 1, use 1, give 3, kids K,T); N=4, C=10; start with one T and one K at level 4; T formed first. Then D=0 and E is absent. The way w₁ = (1 T, 1 K) at 4 and the course never ends, with a T in every way. H1, H2, H3, H5 and n₀ ≥ 1 all hold.
+  - The exhaustive count over 6,912 two-kind systems: the clause fails in 4,437 of the 4,437 case-(II) courses where the rest leaves F kids, and in 0 of the 10,234 where it does not (`refute.py ii`).
+  - Ten-line item 7 ("`D < E`: `F` is no longer formed") is false for the same reason.
+- **(c) closed form**: HOLDS IN WHAT I CHECKED. I re-derived it from the text of part 3 alone and ran 2,168,316 starts (N 2–7, k 2–4, c 1–2, d 0–3, a ∈ {2(c+d)N, 2(c+d)N+2}, seven values of b, two caps): 0 disagreements (`refute.py family`).
+- **Lemma 1**: HOLDS IN WHAT I CHECKED.
+  - Kernel form: 1,500 random two-kind systems with no premise on the kinds; 57,810 pairs with x < x' ≤ C and 109,313 with x' up to C+3; 0 failures.
+  - The two-start form below (same moves from the higher start): 120,705 step checks, 0 failures.
+  - Its corollary "Keepable (w,x) ↔ θ w ≤ x, no θ counted as above every level" **fails for x > C**. I found 873 ways keepable above the cap and not at it. For example: need (1,4), use (2,0), give (1,3), kids ((1,1),(1,1)), N=2, C=5, w=(2 of kind 0) is keepable at 6, 7 and 8 only. The type `List U × Nat` allows such levels, so the corollary needs x ≤ C in the type.
+- **Lemma 2**: HOLDS IN WHAT I CHECKED. 7,620 ways whose closure under kids has no giver, with the rest free to leave F kids: none keepable.
+- **Lemma 3**: holds by inspection for a `pick` that does not read the level (it is `after_alike` plus `congrArg pick`, step by step). It is false once `pick` reads the level, as its premise implies: from (1,1)@5 and (1,1)@7, with every need met at both, the ways differ at step 1 (`out-lemma3.txt`, item 3). I ran no search beyond this.
+- **I1 (T4) and the first rows of I2 (T3)**: reproduced exactly on my model, including the fate string `eeeGGGGGGGGGGGGLLLL…` (`instances.py`).
+
+## 3. MUST, then LESSER
+
+**MUST**
+
+1. **(b)(II)'s first clause is false** (instance above). The premise it needs is `LineOnAStock.none_after`'s `closed : ∀ u v, v ∈ kids u → S v → S u` at `S := F`: no unit outside F leaves a unit of F. The design attaches that premise only to "none ever after". With the premise, (II) is `none_after`/`gone_after` on the process with moves.
+2. **"Tried on 3.9 million courses … no failure of the statements as stated"** is more than the search shows.
+   - The main families never let the rest leave F kids: `centre.py` `systems()` builds G's kids from G kinds only (`kG = kid_multisets(Gm, …)`).
+   - The clause in item 1 is tested by no counter in `centre.py`. "The rest not closed: nothing fails" is reported from the H1G-dropped run, which never checks it. Its `rounds` counter (18, F present after D) also takes n₀ = 0 starts.
+3. **T5: "`LineOnAStock.ways_alike` would come out as Lemma 3 at `pick c x = c`, by a call"** does not go through in the model of part 2.
+   - (i) `pick = id` is not a `Selecting`: `fits : ∀ c x, (pick c x).length ≤ slots` fails at any c of length slots+1, for every finite `slots`.
+   - (ii) `level'` has no handed-in giving. No `give` or cap reproduces `RegimeMargin.step g (taken use w) x` for `g = min z (10 - z)`: I searched one kind with uses 0–2, give 0–11 and caps 20 and 50 (`out-lemma3.txt`, item 2). The model can only reach `g = g' = 0`, with the cap at or above every level and the slots at or above every reachable length. That last condition cannot hold for a growing course.
+   - (iii) The corner of part 2 is a third model: a giving γ added, the cap and slots removed. "Every law of the line on a stock is a law of this model there with its statement unchanged" is true of that third model, not of this one. `out-corner.txt` runs the third model (`corner()` hands in `min z (12-z)`).
+4. **"(6) no closure law at a relation is used"** is false.
+   - (a)'s "every unit of w_s is in F for all s > E" is the closure law along descent. So is Lemma 2's "the menu only narrows".
+   - The package states that law as `SelectionTerm.Generations.kept_of_descent` and `kept_iff` (`ReadingsPersist.lean` 271–298, through «闭之及»). `LineOnAStock.never_in` (664) is its form on the line.
+5. **T1 lists "part (a)'s ¬Keepable at any level" as not in the Lean.** It is not found as one statement. But its two halves are old patterns, and the quantifier over moves is idle in its proof.
+   - Closure: `never_in` and `kept_of_descent`.
+   - The fall with no giver at any level: `RegimeMargin.ends_beyond_giving` ("A draw beyond all giving ends the condition from every level", `RegimeMargin.lean` 719–724). In the design the draw varies with the way and is at least one.
+   - The fall bounds every course, whatever the moves. That is why "no way of selecting goes on" costs nothing.
+6. **R6, "`R` puts any reading in (b) as a third first step"**, overstates. For a reading that is not F-first, (b) concludes nothing about it. R is simply the first step at which it stops being F-first.
+   - No law of the design relates what is registered to the outcome. T4 is met only by built instances (I1).
+   - The design calls (b)'s "which of the two" settled "by whether the level falls below F's need before F's candidates fill the slots". That is the definitions of D and E compared on the course. Only (c) decides it from the start, and only in a family.
+
+**LESSER**
+
+- R3 "half" overstates. In the model, giving costs the giver nothing: K's use and kids do not depend on `give`. The "cost" is a relation the instances' parameters are chosen to satisfy (K leaves one kid, T leaves k). R3 is not in the model.
+- Ten-line item 5 ("registers only yield … forms F first, where giving costs yield") is no stated lemma. It holds only where every F kind leaves more kids than every other kind and ties go to F. I2's "tie to K" row shows the tie decides.
+- "registers through ρ" is defined and used by no statement. Lemma 3 asks that `pick` not read the level and never mentions ρ. It is an idle definition counted among T8's twelve.
+- The θ corollary needs `x ≤ C`, and the ways need `length ≤ N`, written into the type (section 2).
+- The T2 table omits n₀ ≥ 1, and the rest-closed premise that (II) needs.
+- "Nothing bounds x_{E+1} below C" is a consequence of H3 (no income, so any finite level runs out). The selection plays no part in it.
+
+## 4. The question
+
+Does a general law of the design do work that the old laws do not? **A little, at one place, and not at the centre.**
+
+The one piece of new work in the main theorem is the fill lemma inside (b). Under a selection that forms F first, with F met, closed under kids, doubling and of one need, the count obeys `n_{t+1} ≥ min N (2·n_t)`, so F's candidates fill the slots by t̂ = ⌈log₂(N/n₀)⌉. No law in what I read has a capacity on the number of units:
+
+- `Exclusion.lean`'s competitive exclusion works through taking from a level.
+- `TurningInTime.locked_ends_rising` has a share that rises strictly without a cap.
+- `LineOnAStock` has no slots.
+
+Take the slots out and (b) is empty; take the doubling out and it fails, as the design's own H2 row shows.
+
+Everything around the fill lemma is old law in the design's names:
+
+- The ending after the exit: closure plus a fall with no giver.
+- The turn: `none_after`, with its premise missing.
+- Lemma 3: `ways_alike` with `pick` put in and taken out.
+
+Lemma 1 is new and true: Viable is upward closed in the level under free choice. It is the controlled counterpart of `ways_alike` (below), but no main statement uses it. The parts the brief asks to come about (the favouring, its permanence, the fall after the exit) are the premises FFirst, H1 and H3. The choice among moves and the reading do no work in any law, only in built instances.
+
+## 5. The specific questions
+
+**(a) Is anything left in (a), and is (b) more than an exclusion lemma followed by the old ending?**
+
+Nothing of substance is left in (a). Its two directions are:
+
+- "⇐": a unit in w_{t+1} is the kid of a unit met at t. That is `LineOnAStock.mem_after_iff` (317) plus `Sublist.subset`, with no premise.
+- "⇒": Lemma 2 at E+1.
+
+No selection, slot, reading or multiplying appears in its proof. With F = ∅, which meets H1 and H3, (a) reads "never ends ↔ something is formed at every step".
+
+(b) is exactly an exclusion lemma followed by old endings:
+
+- the fill bound gives E ≤ t̂, and then (a) ends the course;
+- or D comes first, and then `none_after`'s pattern applies (it needs `closed`; see MUST 1).
+
+The race is not sorted by any condition on the start; D and E are read off the course. The only new content of (b) is the bound t̂ and the fact that the race is settled by it.
+
+Known names: a cooperator–cheater (public-goods) model with a carrying capacity. A non-giving type with higher fecundity fixes and the population collapses (evolutionary suicide, the tragedy of the commons in evolutionary biology). If the resource falls first, the cheaters crash and the producers persist. The fill time is deterministic growth to capacity.
+
+**(b) Lemma 1 against the Lean, and as a comparison between two starts.**
+
+Not found in what I read:
+
+- `GuardHorizon.lean`: account and every statement; its only transport is `coverage_transports`, which is about `Covers`, not `Viable`. `Viable` is used only in `GuardHorizon` and `Reserve` (grep).
+- `Viability.Kernel.mono`, `JointKeeping.Keepable.mono` and `Keeping.KeptFor.mono` are monotone in the guard or the class, not in the state.
+- `RegimeMargin.step_mono` (1112), `Adjusted.step_mono` (1152) and `run_rises` (1182) order runs of a level that has no way and no moves.
+- `LineOnAStock.block_le` (431) and `after_length_le` (453) give only the length form.
+- `ReachableRanges.Simulation` (1804) is local to one built process.
+
+As a comparison between two starts:
+
+```
+-- lo 0 = (w, x),  hi 0 = (w, x'),  x ≤ x'
+-- lo (j+1) = (ms j, level' (lo j)),  hi (j+1) = (ms j, level' (hi j))
+-- Move s m := Goes s ∧ m.Sublist (cand s) ∧ m.length ≤ slots
+theorem same_moves_higher_start (le : x ≤ x') (ms : Nat → List U)
+    (legal : ∀ j, j < n → Move (lo j) (ms j)) :
+    ∀ j, j ≤ n → (hi j).1 = (lo j).1 ∧ (lo j).2 ≤ (hi j).2 ∧ (j < n → Move (hi j) (ms j))
+```
+
+It follows by induction from three facts:
+
+- `Goes` is monotone in the level.
+- `after need kids w x <+ after need kids w x'`: the case split of `block_le`, stated as a sublist. The sublist form is not found.
+- `level'` is monotone in x for a fixed way: the design's analogue of `RegimeMargin.step_mono`, where the draw `taken use w` is the same because the ways are the same.
+
+Viable then transports because the step is determined by the move.
+
+Set beside `ways_alike` (`LineOnAStock.lean` 547):
+
+- `ways_alike` gives the same ways when the levels meet the same needs, under a fixed "form all" pick. `HigherStartEnds` shows that a higher level can change the way and end the course.
+- The two-start form gives the same ways because the moves are the same: under free choice the higher start discards what its extra level offers.
+
+The general law the Lean should state is `Viable` transported along a simulation: R s s' gives guard s → guard s', and every enabled move at s is matched at s' into R-related successors. Lemma 1 is its case at "same way, level no lower". It is known as monotone control systems (Angeli–Sontag), or simulation preserving safety in games.
+
+**(c) Lemma 2 against `never_in` and `absent_step`.**
+
+`LineOnAStock.never_in` (664): `(closed : ∀ u v, v ∈ kids u → S v → S u) (none : ∀ u, u ∈ s.1 → ¬ S u) : ∀ j u, u ∈ (course need kids giving use s j).1 → ¬ S u`.
+
+- Instantiate `S := (· ∉ Z)`, where Z is the closure of w's kinds under kids.
+- `closed` is "Z is closed under kids", read contrapositively. `none` says every unit of w is in Z.
+- It is stated on the line's "form all" orbit, not on a process with moves, so it does not apply as is.
+- On the design's course the same law comes from `SelectionTerm.Generations.kept_of_descent` (`ReadingsPersist.lean` 293) with:
+  - `first := w`;
+  - `kids t u := if need u ≤ x_t then (kids u).filter (· ∈ m_t) else []`;
+  - `Q := (· ∈ Z)`, with `keeps` from Z being closed under kids.
+- The members agree with the course's; the counts do not, because `Generations.kids` reads a unit's value, not its position.
+
+`ReadingsSpread.absent_step` (330), on that G with `read := id` and `inR := (· ∉ Z)`:
+
+- Absent at t (every member in Z) gives carriers at t+1 equal to `revisedIn t`.
+- `revisedIn t = 0`, because a descent from a parent in Z to a kid outside Z would contradict closure.
+- So one step of narrowing is `absent_step` plus closure, and all steps together are `kept_of_descent`.
+
+Lemma 2's first sentence is `mem_after_iff` with `Sublist.subset`. Its ending half is `ends_beyond_giving`'s argument with a varying draw of at least one. Nothing in Lemma 2 uses the moves.
+
+**(d) Lemma 3 against `LineOnAStock.ways_alike`, the instantiation.**
+
+Lemma 3 at `pick c x = p c` reads: if ∀ j < n, ∀ u ∈ w_j, (need u ≤ x_j ↔ need u ≤ x'_j), then ∀ j ≤ n, w_j = w'_j. The proof is `w_{j+1} = p (after … w_j x_j) = p (after … w_j x'_j)` by `after_alike`.
+
+For `ways_alike {g g' use use' w x x' n}` to be its case, the design's course at `p = id` must be `LineOnAStock.course need kids g use`. That needs four things:
+
+- `level' s = RegimeMargin.step g (taken use s.1) s.2`. The model has no g, and `min cap (z + min z given)` is `z + g z` only for g = 0 with cap ≥ z. No `give` gives `min z (10-z)`.
+- `p = id` admitted as a `Selecting`. `fits` fails for every finite `slots`.
+- No cap.
+- Then `next σ = TurningInTime.pair (after need kids) (left g use)` pointwise, by `rfl`.
+
+So the instantiation goes through only at g = g' = 0, in a model with `fits` removed. The general `ways_alike` needs the third model of part 2. Even there, Lemma 3 is proved by the same induction as `ways_alike`: `ways_alike` cannot be called inside it, and it adds nothing at `p = id`. That is the "put in and taken out" T5 warns of.
+
+The registering ρ does not appear in Lemma 3. A pick that reads the level breaks it (section 2).
+
+**(e) "F is formed first" is the way of selecting: is the lock handed in? What is concluded that is not in H1 to H5?**
+
+Yes: the lock's three ingredients are handed in.
+
+- FFirst is a fixed priority at every step. At the step where F's candidates reach N, it literally says "form no unit outside F".
+- H1 makes the exit absorbing.
+- H3 makes the absorbed state end. The design marks this "close to handed in".
+
+Nothing is set again from a share: `RuleCapture.Locked` is not in the model.
+
+What is concluded beyond H1–H5 and FFirst:
+
+- (i) when the menu runs out: E ≤ t̂, from H2, H5 and the slots;
+- (ii) that by t̂ the race between D and E is settled;
+- (iii) that the exit can come at a level up to the cap, so that keepability is not a threshold along the course;
+- (iv) in the family, which side holds, read from the start (part (c)).
+
+So the timing and the exhaustiveness of the race come about; the favouring, its permanence and the ending do not.
+
+## 6. What I ran, and what I did not read or check
+
+**Ran** (my own model, written from DESIGN.md part 2 before running any check against the design's numbers). The scripts are `/Users/ren/theories/tmp/fm/centre21/refute/G1-work-opus/refute.py` and `/Users/ren/theories/tmp/fm/centre21/refute/G1-work-opus/instances.py`. Each output sits beside them:
+
+| run | output | what it covered |
+|---|---|---|
+| `ii` | `out-ii.txt` | 6,912 systems, 14,671 case-(II) courses |
+| `lemma1` | `out-lemma1.txt` | 1,500 systems; 167,123 level pairs; 120,705 two-start step checks; plus a search showing a fixed priority selection non-monotone in the level in 355 ways |
+| `lemma2a` | `out-lemma2a.txt` | 2,500 systems; 844,904 courses; 7,620 ways for Lemma 2 |
+| `b` | `out-b.txt` | 500 systems; 274,720 courses |
+| `family` | `out-family.txt` | 2,168,316 starts |
+| `lemma3` | `out-lemma3.txt` | the instantiation checks for MUST 3 and the level-reading pick |
+| `instances.py` | `out-instances.txt` | I1 and the first rows of I2 |
+
+Every run took under 25 s. Importing `refute.py` also left a `__pycache__` folder inside my folder.
+
+**Read:**
+
+- In full: `BRIEF-REFUTE.md`, `BRIEF-DESIGNS.md`, `DESIGN.md`.
+- `centre.py` lines 1–420 and `corner()`; `out-instances.txt`; `out-broken.txt` (H1F and H1G blocks); `out-corner.txt`.
+- Lean:
+  - `LineOnAStock.lean`: 1–200, 304–700, 1780–1840 and the declaration list.
+  - `GuardHorizon.lean`: 1–140, 420–465 and the declaration list.
+  - `Viability.lean`: 50–120.
+  - `RegimeMargin.lean`: 249–278, 700–730, 860–920, 1095–1200.
+  - `ReadingsSpread.lean`: 225–360.
+  - `ReadingsPersist.lean`: 250–320.
+  - `TurningInTime.lean`: 625–700, 1490–1560.
+  - `Exclusion.lean`: 1–80.
+  - `ReachableRanges.lean`: 1795–1840.
+  - Declaration lists of `Keeping`, `JointKeeping`, `KeepingWidening`.
+  - Greps for users of `Viable`, for simulation and for `mono`.
+- `PLACES.md` entries for GuardHorizon, LineOnAStock, ReadingsSpread, RegimeMargin, Continuation and PoolFromCourse, plus greps for slots, capacity, exclusion and monotone.
+
+**Not read:**
+
+- `AGENTS.md`'s linked direction page, `WHAT-A-MODEL-MUST-HAVE.md`, the notes of the failed tries, `READING-OF-THE-EIGHT.md`, `AFTER*.md`, and the chapters.
+- `RuleCapture`, `RuleShaping`, `CommonResponse`, the bodies of `Keeping`, the renewal files, `PopulationCorrection`.
+- The rest of `centre.py` (`pure()` and `alarm()` beyond their headers) and `out-general*`, `out-alarm`, `out-pure`, `out-plain`.
+
+**Not checked:**
+
+- The design's T6 counts (3,755 `eGL`, 21 `eGeGL`, and the non-monotone pairs).
+- The `alarm` counts (14,770 and the rest).
+- The 26 near misses of (c) outside its side condition.
+- `RuleShaping.favours_iff` discharging FFirst.
+- The `general3` runs.
+- Any Lean `rfl` value. I ran no Lean.

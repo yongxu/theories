@@ -1,0 +1,466 @@
+# Task file: EDGE, second batch, reader whole-c-edge2-03
+
+Your 6 modules. In each, BOTH earlier passes found a statement with both outcomes and NEITHER found a law of ending within a bound. For orientation only, what they said (where to look, not evidence).
+
+## CrossSituational.lean  (413 lines)
+
+### `both_outcomes`
+- pass a: S: `stays_iff` (l. 308) characterizes keeping a candidate exactly by earlier membership and every additional bearing record offering it. `stands_false_iff` (l. 202) witnesses failure by a bearing record omitting it.
+- pass b: S: `stays_iff` (l. 308): a candidate stays one after a further history exactly while every later bearing record offers it. General, and about keeping or losing candidacy, not about going on or ending.
+
+### `no_return`
+- pass a: S: `narrows` (l. 303) concludes that any later candidate was an earlier candidate under record append. Once excluded, no further records restore the meaning for the same repertoire and reading.
+- pass b: S: `narrows` (l. 303): a meaning that is a candidate after rs ++ more was a candidate after rs, so a meaning ruled out stays ruled out. This is concluded, and it concerns the candidate list, not a level or a giver.
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N: candidates only shrink (`candidates_append`), but no bound, variant or ending is stated.
+
+### `closed_region`
+- pass a: S: `narrows` (l. 303) preserves the region of histories excluding a specified meaning under every append for fixed reading and repertoire.
+- pass b: N
+
+### `moves`
+- pass a: N: Not found in the statements read.
+- pass b: N: no process, policy or allowed set of steps; records are a list, not moves.
+
+### `reading`
+- pass a: S: `candidates_snoc_bearing` (l. 291) filters by exactly what the new bearing record offers, and `candidates_snoc_other` (l. 297) leaves the list unchanged for a nonbearing record. `Omitted.wrong_unique` (l. 407) exhibits a wrong unique candidate when the target is uncovered.
+- pass b: S: `candidates_eq_iff` (l. 241): for a repertoire without repeats, the candidates are exactly [e] iff e is in it, every record bearing on the form offers e, and every other meaning fails to be offered by some bearing record. What is registered decides the resolution. `resolved_is_target` (l. 318): where the target is in the repertoire and every bearing record offers it, any unique candidate is the target. `reads_every_iff` (l. 365): where grouping recovers the words, reading every sequence gives the meanings exactly when each word's records separate its meaning. B: `Omitted.wrong_unique` (l. 407): one record omitting the target 0 leaves 1 as the only candidate.
+
+### declarations of CrossSituational.lean (by script)
+  l.53 def unique
+  l.58 theorem unique_eq_some_iff
+  l.64 theorem filter_true
+  l.71 theorem filter_false
+  l.78 theorem false_ne_true
+  l.80 theorem filter_nil_of
+  l.90 theorem filter_singleton_of
+  l.112 theorem filter_eq_singleton_iff
+  l.120 theorem filter_congr
+  l.130 theorem filter_filter
+  l.150 theorem filter_all_true
+  l.163 theorem implies_eq_true
+  l.168 theorem and_assoc
+  l.173 def stands
+  l.177 def candidates
+  l.182 theorem stands_cons
+  l.187 theorem stands_iff
+  l.202 theorem stands_false_iff
+  l.233 theorem mem_candidates
+  l.241 theorem candidates_eq_iff
+  l.261 theorem resolves_iff
+  l.270 theorem stands_append
+  l.281 theorem candidates_append
+  l.286 theorem stands_single
+  l.291 theorem candidates_snoc_bearing
+  l.297 theorem candidates_snoc_other
+  l.303 theorem narrows
+  l.308 theorem stays_iff
+  l.318 theorem resolved_is_target
+  l.328 theorem resolves_explained_iff
+  l.365 theorem reads_every_iff
+  l.384 def rep
+  l.386 theorem only_zero
+  l.391 theorem separated
+  l.397 theorem not_resolved
+  l.405 def offers
+  l.407 theorem wrong_unique
+  l.409 theorem target_uncovered
+
+## Cuts.lean  (797 lines)
+
+### `both_outcomes`
+- pass a: S: `Flow.GrownBy.cut_unchanged_iff` (l. 769) decides preservation of every system after cutting one listed condition, given decidable condition equality and a grown world with one extra two-taker condition: its takers must reach opposite ends through the other conditions.
+- pass b: S: `link_cut_unchanged_iff` (l. 117): cutting one link changes no closure exactly where each end stays within the other's closure under the rest. `Flow.GrownBy.cut_unchanged_iff` (l. 769): in a grown world plus one condition j with exactly two takers a and b, every system is unchanged without cond n exactly where a and b lie on the two sides of the p-n link. General, and about keeping or losing connectedness, not about going on or ending.
+
+### `no_return`
+- pass a: N: Not found in the statements read.
+- pass b: N: no step in time and no irreversibility.
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N
+
+### `closed_region`
+- pass a: S: `within_of_unlinked` (l. 183) and `not_within_unlinked` (l. 189) isolate an unlinked formation in its singleton closure and exclude it from every other formation’s closure.
+- pass b: S: every statement concerns WithinClosure, which Frame.lean l. 91 defines as holding where every region closed under the relation that holds f also holds g. `within_of_unlinked` (l. 183): an unlinked formation's closure holds only itself. `Flow.withinSystem_of_no_part` (l. 441): a formation taking part in no condition has only itself in its system.
+
+### `moves`
+- pass a: S: `within_of_steps` (l. 94) treats the supplied relation as allowed links: if each is reachable in a second relation, every closure-reachable target is reachable there too. `within_attached_iff` (l. 195) preserves exactly the old reachability among formations other than a newly attached unlinked formation.
+- pass b: N: no process with moves; cuts and joins are relations compared, not steps.
+
+### `reading`
+- pass a: N: Not found in the statements read.
+- pass b: N
+
+### declarations of Cuts.lean (by script)
+  l.78 def Joined
+  l.81 def Link
+  l.84 theorem link_symm
+  l.88 theorem within_congr
+  l.94 theorem within_of_steps
+  l.102 theorem closure_unchanged_iff_bypassed
+  l.117 theorem link_cut_unchanged_iff
+  l.128 theorem link_cut_unchanged_iff_of_symm
+  l.137 theorem within_link_iff
+  l.180 def Unlinked
+  l.183 theorem within_of_unlinked
+  l.189 theorem not_within_unlinked
+  l.195 theorem within_attached_iff
+  l.207 def Links
+  l.212 theorem links_symm
+  l.217 theorem links_split
+  l.230 inductive Attaches
+  l.236 theorem links_of_mem
+  l.241 theorem Attaches.suffix
+  l.248 theorem Attaches.listed_once
+  l.266 theorem attached_link_separates
+  l.287 theorem joined_bypass_iff
+  l.297 theorem joined_cut_unchanged_iff
+  l.326 theorem mem_split
+  l.334 theorem mem_widen
+  l.341 theorem mem_set_apart
+  l.346 theorem mem_append_cases
+  l.354 theorem mem_append_right
+  l.360 theorem exists_split
+  l.367 theorem append_cons_assoc
+  l.373 theorem links_mem
+  l.380 theorem links_of_link
+  l.386 theorem Attaches.distinct
+  l.399 def SharesBeside
+  l.403 def BothTakePart
+  l.409 theorem shares_iff_beside
+  l.418 theorem system_unchanged_without_iff
+  l.431 theorem system_unchanged_of_single
+  l.441 theorem withinSystem_of_no_part
+  l.452 theorem withinSystem_two_takers_iff
+  l.480 theorem alone_beside_of_only
+  l.495 def SharesOutside
+  l.503 structure GrownBy
+  l.513 theorem within_of_two_takers
+  l.530 theorem takes_part_of_link
+  l.541 theorem link_of_takers
+  l.556 theorem cond_ne
+  l.577 theorem attached_only
+  l.598 theorem outside_step
+  l.617 theorem outside_of_link
+  l.629 theorem within_outside_iff
+  l.638 theorem within_outside_added_iff
+  l.655 theorem condition_needed
+  l.670 theorem every_condition_needed
+  l.683 theorem latest_alone
+  l.693 theorem suffix
+  l.713 theorem beside_iff
+  l.733 theorem system_iff
+  l.753 theorem bypass_iff
+  l.769 theorem cut_unchanged_iff
+
+## Dependence.lean  (888 lines)
+
+### `both_outcomes`
+- pass a: S: `Web.kept_or_broken` (l. 234) covers every met requirement for its next step, exclusively by `Web.kept_not_broken` (l. 240). This is a general step dichotomy.
+- pass b: S: `kept_or_broken` (l. 234) with `kept_not_broken` (l. 240): every met dependence is kept or broken across each step, not both (general). `consumed_ends_when_fixed` (l. 284) and `consumed_continues_transformed` (l. 269) give ending if the dependence is fixed, continuing only transformed if active; these are contrapositives, not an exactly-when. B: the Crossing states (l. 763-774) give ending, transformation and restoration from one start, as data here.
+
+### `no_return`
+- pass a: S: `Web.consumed_ends_when_fixed` (l. 284) concludes permanent inactivity after T under Dependent, continuing dependence at least as strong, and permanent shortfall. The last is a premise. `Web.Lost` (l. 159) includes nonreturn in its definition.
+- pass b: S (premise): `Consumed` (l. 155) and `Lost` (l. 159) premise that the level stays below an earlier need at every later step. Concluded from that premise: `consumed_ends_when_fixed` (l. 284): under Dependent, with the dependence unchanged after T, the formation is inactive at every later step. `consumed_continues_transformed` (l. 269): under Dependent, a formation still active at a later step does not keep the dependence at the old strength. The loss is of the condition (the level); the ending of the formation is concluded.
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N
+
+### `closed_region`
+- pass a: N: Not found in the statements read.
+- pass b: S (partial): `renewing_keeps_support` (l. 226): a formation renewing in the run is supported at every step. `Renewed` (l. 150) holds where every dependence on c is kept at every step. Neither is stated as a region closed under steps.
+
+### `moves`
+- pass a: D: The opening account says the move making a break selects ending, transformation or restoration in Crossing. The move type and three state histories occur here, while the labelled run laws are assigned to another module.
+- pass b: B (data only): `Crossing.Move` (l. 728) is rest, fall (with a mode) or renew; `Crossing.endingState`, `transformingState` and `restoringState` (l. 763-774) are state sequences from one start. No law about choices is stated in this module. D: the account (l. 46-50, 85-88) says the process and its readings are in Becoming.Labelled.
+
+### `reading`
+- pass a: B: `Gap.lapse_starts_afresh` (l. 688) gives different undermining judgments with the same levels when a dependence lapses at step 3 or holds through it.
+- pass b: N: dependence is an observable of the configuration (Kept, Broken, MetAbove), but no law here has what is registered deciding something.
+
+### declarations of Dependence.lean (by script)
+  l.100 theorem ceases_at_a_step
+  l.110 theorem arises_at_a_step
+  l.126 def Conditions.dependence
+  l.134 def Supported
+  l.138 def Dependent
+  l.142 def Kept
+  l.146 def Broken
+  l.150 def Renewed
+  l.155 def Consumed
+  l.159 def Lost
+  l.163 def Participates
+  l.166 def RenewingIn
+  l.169 def ConsumingIn
+  l.173 def Forms
+  l.177 def Dissolves
+  l.183 def static
+  l.188 theorem static_supported
+  l.192 theorem static_dependent
+  l.196 theorem static_renewed
+  l.201 theorem static_consumed
+  l.206 theorem static_renewingIn
+  l.211 theorem static_consumingIn
+  l.218 theorem renewed_not_consumed
+  l.222 theorem renewing_not_consuming
+  l.226 theorem renewing_keeps_support
+  l.230 theorem lost_consumed
+  l.234 theorem kept_or_broken
+  l.240 theorem kept_not_broken
+  l.247 theorem continuing_restores_at
+  l.254 theorem continuing_restores
+  l.261 theorem consumed_continues_transformed_at
+  l.269 theorem consumed_continues_transformed
+  l.276 theorem consumed_ends_when_fixed_at
+  l.284 theorem consumed_ends_when_fixed
+  l.294 def RenewingAt
+  l.300 def BreakingOn
+  l.304 def BreakingAt
+  l.310 def MetAbove
+  l.318 def UnderminingOn
+  l.323 def UnderminingAt
+  l.328 theorem MetAbove.now
+  l.333 theorem BreakingOn.undermining
+  l.338 theorem RenewingAt.not_undermining
+  l.343 theorem RenewingAt.not_breaking
+  l.348 theorem renewing_at_active
+  l.354 theorem not_renewing_at_of_broken
+  l.364 inductive Formation
+  l.370 def web
+  l.386 theorem consumed_without_loss
+  l.409 inductive Formation
+  l.415 def web
+  l.430 theorem level_late
+  l.438 theorem never_met_not_undermining
+  l.465 inductive Formation
+  l.472 def web
+  l.489 theorem need_late
+  l.492 theorem need_pos
+  l.498 theorem unmet
+  l.505 theorem never_met_not_undermining
+  l.521 inductive Formation
+  l.528 def web
+  l.545 theorem need_early
+  l.547 theorem need_grown
+  l.550 theorem level_pos
+  l.554 theorem level_late
+  l.561 theorem grown_need_not_met
+  l.590 inductive Formation
+  l.598 def web
+  l.618 theorem level_le_one
+  l.626 theorem stunting_undermines
+  l.651 inductive Formation
+  l.656 def levels
+  l.660 def away
+  l.676 def held
+  l.681 theorem levels_high
+  l.683 theorem levels_low
+  l.688 theorem lapse_starts_afresh
+  l.712 inductive Mode
+  l.718 inductive Source
+  l.724 structure State
+  l.728 inductive Move
+  l.736 def Mode.active
+  l.743 def Mode.requires
+  l.752 def dependence
+  l.761 def start
+  l.763 def endingState
+  l.767 def transformingState
+  l.771 def restoringState
+  l.782 def escalatingState
+  l.784 def dippingState
+  l.786 def pausingState
+  l.797 inductive Formation
+  l.802 structure State
+  l.808 def dependence
+  l.821 def takingState
+  l.825 def restingState
+  l.833 inductive Formation
+  l.838 def levels
+  l.841 def dependentActive
+  l.844 def drawerActive
+  l.847 def web
+  l.865 theorem renewing_at_each_step_not_in_run
+
+## Diagonal.lean  (469 lines)
+
+### `both_outcomes`
+- pass a: S: `DiagonalRuns.complete_iff_alike` (l. 415) gives an exact attainment criterion in one completion run: assuming decidable equality and an index a₀, some stage represents every reading exactly when all values are equal. This concerns completing the readings.
+- pass b: S: `complete_iff_alike` (l. 133) and `DiagonalRuns.complete_iff_alike` (l. 415): a run of completion by equality reaches a family that says every reading exactly when the values have nothing to tell apart. This is an exactly-when of completeness, not of going on and ending.
+
+### `no_return`
+- pass a: S: `DiagonalRuns.never_returns` (l. 401) concludes that the readings said at any strictly later step cannot all have been said at the earlier step, assuming Moves. This irreversibility is from cumulative addition.
+- pass b: S: `Unfolds.never_returns` (l. 173) and `DiagonalRuns.never_returns` (l. 401), concluded from Unfolds (or a run of Completion) and Moves: no later step's sayings are all said by an earlier step, so the family never returns to an earlier one. This is a never-return of what is said, not a loss of a level or of something that gives.
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N: no law of ending within a bound. `stock_unheld` (l. 188) states the opposite kind of fact: pairwise different readings are not all alike with members of any finite stock.
+
+### `closed_region`
+- pass a: S: `DiagonalRuns.Completion` (l. 369) makes saying a specified reading closed under each permitted successor. `fixed_of_complete` (l. 82) gives a value alike to its image for every map if the family says every reading.
+- pass b: S: `fixed_of_complete` (l. 82): where every reading is said, every map has a value alike with its image (a fixed point). `Unfolds.keeps_on` (l. 149): the set of readings said is kept at every later step.
+
+### `moves`
+- pass a: S: `DiagonalRuns.Completion` (l. 369) allows any successor that keeps every represented reading and represents the previous gap. The move label is Unit, so the alternatives are successors.
+- pass b: S: `DiagonalRuns.Completion` (l. 369): `Process (A → A → B) Unit`, whose step allows any family that keeps every reading said and says the gap of the one before (several successors, one action). `DiagonalRuns.unfolds_iff` (l. 379): the unfoldings are exactly the runs. `DiagonalRuns.incomplete` (l. 387), `never_returns` (l. 401) and `unheld` (l. 406) hold of every run.
+
+### `reading`
+- pass a: S: `gap_unsaid` (l. 76) constructs a specific reading that the family cannot say under Moves. `DiagonalRuns.complete_iff_alike` (l. 415) equates reaching a complete family on an equality-completion run with all values being equal, given decidable equality and a member.
+- pass b: S: `Diagonal.Says` (l. 66): some member's values are alike with g's at every point. `gap_unsaid` (l. 76): if f moves every value (Moves same f), no member says `gap f ψ`. `claims_incomplete` (l. 103): no family of claims realizes every pattern. `complete_iff_alike` (l. 133): with decidable equality on B, some ψ says every reading iff all values of B are equal. `Frame.self_incomplete` (l. 344): a frame whose claims are its own configurations cannot realize every pattern.
+
+### declarations of Diagonal.lean (by script)
+  l.66 def Says
+  l.70 def gap
+  l.73 def Moves
+  l.76 theorem gap_unsaid
+  l.82 theorem fixed_of_complete
+  l.88 theorem Says.congr
+  l.97 theorem moves_not
+  l.103 theorem claims_incomplete
+  l.108 theorem claims_gap
+  l.115 theorem alike_of_complete
+  l.127 theorem complete_of_alike
+  l.133 theorem complete_iff_alike
+  l.141 structure Unfolds
+  l.149 theorem Unfolds.keeps_on
+  l.157 theorem Unfolds.incomplete
+  l.162 theorem Unfolds.gap_new
+  l.167 theorem Unfolds.gaps_differ
+  l.173 theorem Unfolds.never_returns
+  l.179 theorem two_ne_odd
+  l.188 theorem stock_unheld
+  l.221 theorem Unfolds.unheld
+  l.236 def unfolding
+  l.240 theorem unfolding_fresh
+  l.247 theorem unfolding_zero
+  l.253 theorem flip_moves
+  l.257 theorem unfolding_unfolds
+  l.270 theorem unfolding_open
+  l.280 theorem revision_never_rests
+  l.285 theorem negation_never_rests
+  l.290 theorem negation_returns
+  l.344 theorem Frame.self_incomplete
+  l.369 def Completion
+  l.375 theorem run_unfolds
+  l.379 theorem unfolds_iff
+  l.387 theorem incomplete
+  l.391 theorem gap_new
+  l.395 theorem gaps_differ
+  l.401 theorem never_returns
+  l.406 theorem unheld
+  l.415 theorem complete_iff_alike
+  l.422 def unfoldingRun
+  l.427 theorem unfoldingRun_open
+  l.438 theorem revision_never_rests
+  l.445 theorem negation_never_rests
+  l.454 theorem negation_returns
+  l.461 theorem frame_gap
+
+## DrawnShaping.lean  (576 lines)
+
+### `both_outcomes`
+- pass a: S: `drawn_locked_either` (l. 378) gives the all-time upward or all-time downward lock in the same parameterized model for lo≤hi and any reading schedule. Weak favouring permits a tie. B: `CriticalMass.at_mass_stays` (l. 531) keeps the 1:2 share.
+- pass b: S: `drawn_locked_either` (l. 378): with lo ≤ hi, for every schedule and start, the course is locked in the shapers' favour at every step or locked the other way at every step. This is a dichotomy, general for the model family. `critical_mass_iff` (l. 310): some share favours and another strictly disfavours ↔ lo < c < hi. B: `CriticalMass.even_locks` (l. 497), `few_locks` (l. 514), `at_mass_stays` (l. 531).
+
+### `no_return`
+- pass a: S: `drawn_locks` (l. 333) and `drawn_from_below` (l. 356) conclude persistence of the starting direction under all schedules given lo≤hi and a start under its own read rule. Neither concludes extinction or fixation.
+- pass b: S: `drawn_locks` (l. 333) and `drawn_from_below` (l. 356): once the start's rule read favours one side, the course is Locked that way at every step, and the share never returns past its start, under every schedule. This is concluded from lo ≤ hi and the start condition. It is at the level of a share and a rule, not the loss of something that gives. `Against.not_locked` (l. 549) shows that the premise lo ≤ hi is needed.
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N: no ending within a bound and no variant. drawn_rises and drawn_falls give strict monotone motion at every step without a bound on reaching an end. The account says convergence to either boundary state is not proved.
+
+### `closed_region`
+- pass a: S: `drawn_locks` (l. 333) keeps every reached configuration Locked under the stated starting and monotonicity hypotheses. `drawn_from_below` (l. 356) proves the reversed invariant.
+- pass b: S: `drawn_locks` (l. 333) and `drawn_from_below` (l. 356): the Locked region, together with the share at least or at most its start, is kept at every step under every schedule. B: `CriticalMass.at_mass_stays` (l. 531): at one to two the share stays.
+
+### `moves`
+- pass a: S: `drawn_locks` (l. 333) covers every Boolean reading schedule, keeping both share and rule at least their starting values under lo≤hi and initially favourable read rule. `drawn_from_below` (l. 356) gives the reverse bounds for an initially disfavouring read.
+- pass b: S: the schedule of reading `reads : Nat → Bool` is quantified over every schedule. `drawn_locks` (l. 333): if lo ≤ hi and the start's rule read favours the shapers, then under every schedule every configuration of drawnCourse is Locked, and neither the share nor the rule in force is ever below the start. `drawn_from_below` (l. 356) is the mirror. What every choice of schedule keeps is stated.
+
+### `reading`
+- pass a: S: `drawn` (l. 146) pools the two shaped readings by population counts, and `drawn_reads_iff` (l. 172) characterizes exactly when the pooled reading is monotone in share.
+- pass b: S: `drawn_reads_iff` (l. 172): ReadsShare order order (drawnRead …) ↔ lo ≤ hi. `drawn_against` (l. 180): if hi ≤ lo, the rule read reads against the share. The rule in force is made from the population read (drawnRead l. 150, drawnCourse l. 154), and the readers' readings hi and lo decide whether the loop locks.
+
+### declarations of DrawnShaping.lean (by script)
+  l.146 def drawn
+  l.150 def drawnRead
+  l.154 def drawnCourse
+  l.162 theorem shaped_le_iff
+  l.172 theorem drawn_reads_iff
+  l.180 theorem drawn_against
+  l.188 theorem mul_split
+  l.192 theorem drawn_split
+  l.200 theorem drawn_favours_iff
+  l.211 theorem drawn_lt_iff
+  l.220 theorem drawn_favours_alike
+  l.227 theorem critical_iff
+  l.244 theorem alike_favours_iff
+  l.252 def noShapers
+  l.257 theorem favours_everywhere_iff
+  l.284 theorem disfavours_strictly_everywhere_iff
+  l.310 theorem critical_mass_iff
+  l.333 theorem drawn_locks
+  l.356 theorem drawn_from_below
+  l.378 theorem drawn_locked_either
+  l.390 theorem upper_strictly
+  l.404 theorem drawn_rises
+  l.414 theorem drawn_carrier_pos
+  l.424 theorem present_along_course
+  l.451 theorem drawn_falls
+  l.471 def even
+  l.474 def oneToTwo
+  l.477 def oneToThree
+  l.482 theorem even_favours
+  l.487 theorem few_disfavours
+  l.492 theorem at_mass
+  l.497 theorem even_locks
+  l.505 theorem even_rises
+  l.514 theorem few_locks
+  l.522 theorem few_falls
+  l.531 theorem at_mass_stays
+  l.549 theorem not_locked
+
+## FinerTraces.lean  (196 lines)
+
+### `both_outcomes`
+- pass a: S: `finer_exists_iff` (l. 173) equates a nonzero enumeration with existence of a positive-weight trace of the specified length from the same start, given exhaustive move and state lists.
+- pass b: S, of existence of courses, not of going on and ending. `finer_exists_iff` (l. 173): with every move and configuration listed, the finer courses of n steps from s are non-empty exactly where supportLaw has a trace of n moves from s.
+
+### `no_return`
+- pass a: N: Not found in the statements read.
+- pass b: N
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N
+
+### `closed_region`
+- pass a: N: Not found in the statements read.
+- pass b: N
+
+### `moves`
+- pass a: S: `mem_finer_iff` (l. 98) requires every chosen move and destination of the finer trace to be listed for membership in the length-n enumeration.
+- pass b: S, in part. `supportLaw` (l. 141) is a Process S A whose steps are those of positive weight, and the finer law is a process whose moves are situations. `trace_forget` (l. 144) and `trace_lift` (l. 157) relate their traces. No law says what some choice or every choice keeps.
+
+### `reading`
+- pass a: S: `trace_forget` (l. 144) projects each finer move to its first component, preserving tracehood with the same endpoints in the support law.
+- pass b: S: `trace_forget` (l. 144) and `trace_lift` (l. 157): forgetting the situation (h.map Prod.fst) sends each trace of the finer law to a trace of supportLaw, and every supportLaw trace is such a forgetting. So traces are read alike once the situation is forgotten. Nothing registered decides a selection.
+
+### declarations of FinerTraces.lean (by script)
+  l.50 theorem of_mem_joinMap
+  l.60 theorem lt_of_mem_upto
+  l.70 theorem of_mem_openSteps
+  l.79 theorem of_mem_finerSteps
+  l.89 theorem mem_finerSteps
+  l.98 theorem mem_finer_iff
+  l.141 def supportLaw
+  l.144 theorem trace_forget
+  l.157 theorem trace_lift
+  l.166 theorem nonzero_iff
+  l.173 theorem finer_exists_iff
+  l.187 theorem two_values_mem_iff

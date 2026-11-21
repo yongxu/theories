@@ -1,0 +1,24 @@
+start 00:13:21
+{
+  "tree": "/Users/ren/tmp/fm/build2",
+  "modules": 154,
+  "ran": [
+    "Becoming.ScratchComparison",
+    "BecomingScratchComparisonAxiomAudit"
+  ],
+  "reused": 153,
+  "unclean": [],
+  "audits": {
+    "Becoming.ScratchComparison": {
+      "theorems": 19,
+      "declarations": 25,
+      "with_axioms": {}
+    }
+  },
+  "seconds": {
+    "Becoming.ScratchComparison": 2.615,
+    "BecomingScratchComparisonAxiomAudit": 0.336
+  }
+}
+exit 0 build 10
+end 00:13:27

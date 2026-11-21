@@ -1,0 +1,32 @@
+# The centre, on paper: what is guessed and what would count as nothing gained
+
+*AI-written (Claude Fable; the session Ren told on 21 November 2026, about 19:50 WIB, that the goal should be "a full map with formal link proof done elegantly with its center"). Frozen at the time in the hash file beside it, before any Lean, program or reader. Nothing here is proved. It is scratch, in no git object. Read before it: `reads-2026-11-20/NOTE.md` and `read-a-choice-from-a-reading-2026-11-21/NOTE.md` (whole), the statements of `Keeping.lean` and `GuardHorizon.lean` (signatures, few proofs). Not yet read, and owed before anything runs: `tries-2026-11-16/NOTE.md` (why one model that contains the rest failed), `no-return-2026-11-21/NOTE.md`, `scratch-lean-2026-11-21/NOTE.md`, and what the session holding row DJ is building now (one case with a share and a level on one process).*
+
+## What I take the centre to be
+
+One course on which both ways come about, with the passage between them a step that a law names. From the reads: a choice made from what is registered is stated on processes with moves and no level that runs down; the lock is stated on one way as it runs, with no moves. And one law of the grammar (what holds throughout a relation's closure is the largest closed region inside what is asked) already stands under the kernel, at the steps, and under the common response, at the reading. My guess is that the centre is that same law at a third relation: the steps of classes, where a class is what the reading leaves alike and a step of a class is a usable move and a value kept.
+
+## J: the join underneath (small; to be tried first)
+
+For a process `P`, a reading of steps `sense`, and `allowed`: the process of classes `CP`, whose configurations are classes `B : S → Prop`, with `CP.step B a T` where `a` is usable from `B` and `T = Seen P sense B a o` for some value `o`; its guard is that `guard` holds throughout the class.
+
+- J1. `KeptFor P sense guard allowed n B ↔ GuardHorizon.Viable CP guard' n B`, for every `n` and `B`, with at most the premise that some value of `O` exists.
+- J2. `Keeping.keptFor_of_closed` is `GuardHorizon.closed_viable` at `CP`: proved by calling it, shorter than it stands.
+- J3. With today's scratch dictionary (`Viable n s` against `KeptFor n {s}` under the reading that keeps where a step ended), each of the two notions is the other's case; state which direction needs no premise.
+- J4. Something the join gives that neither side had: whichever of `GuardHorizon`'s laws has no twin in `Keeping` (or the reverse), moved across by J1 in a line. Candidates to look for: an exact law for every horizon.
+
+*Counts as nothing gained:* J1 needs a premise beyond a value of `O`; or J2's proof is not shorter, or does not call `closed_viable`; or J4 finds nothing to move. Then it is a fourth dictionary and is filed as one.
+
+## C: the centre (not to be started before the owed reading, and not beside DJ's case)
+
+A process whose configurations hold a level, who is there (units with needs, draws and offspring), and the rule in force; whose moves set the rule; where `allowed` is set from the share (who may set the rule is who the share favours); with a reading that is what the selection registers.
+
+- C1, the first way as a case. Where the reading does not tell apart configurations that differ only in a level meeting the same needs, and every move allowed from a class draws more than comes back, the class is kept for at most a bound plus one steps. `TurningInTime.locked_ends_rising` and the line on a stock's item 5 come out as cases, each by a call.
+- C2, the second way. A class is kept at every horizon where it lies in a family closed under an allowed move (this is `keptFor_of_closed`); the content to find is the exact condition on draws, giving and reading under which such a family exists in this process, with the going on of what gives the level inside the model and not handed in.
+- C3, the passage. Where each move has one outcome, a class that has left every closed family does not come back to one; so a course has one step of no return, and it turns in time exactly where the reading tells the classes apart before that step. `turns_in_time_iff_before`, `noReturnAt_iff_first_below` and `readableInTime_iff` come out as cases.
+
+*Counts as one more model beside the others:* no old theorem is called in a proof of C1 or C3; or the level's fall, or the lock, is a premise and not derived from `allowed` set from the share with the draws; or every statement holds unchanged under the reading that keeps everything (the reading does no work); or the share does not come from offspring; or what is shown is built cases only; or the laws that come out as cases are not shorter by it.
+
+## What I do not know
+
+Whether `Enabled` on `CP` matches `Usable` without a premise. Whether C is the model that failed on 16 November in other words. Whether "allowed set from the share" is what the lock's three premises say. Whether C2 has any exact answer.

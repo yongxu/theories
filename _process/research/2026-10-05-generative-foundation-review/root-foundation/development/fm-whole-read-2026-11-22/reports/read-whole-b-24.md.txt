@@ -1,0 +1,16 @@
+I read all four modules whole: every statement and docstring in HeldForReading.lean (1504 lines), HeldPossible.lean (1171), HexagramCommuting.lean (74) and HexagramLaws.lean (1321). I read proof bodies only where I needed them; for wane_breaks I read the proof to see what it uses. I ran no Lean and changed nothing. Every question was answered from the statements. Where I wrote N, that means not found in what I read.
+
+Things the questions miss that bear on the centre:
+
+(1) HeldForReading's SignLoop is a built case of a reading formed only from what the course selects.
+- With only [gains] listed and going on from the start, the formation senses plainly at every step. Its misspecified model is never refuted, and it never senses the stop, whatever the true sign (rests_unread, never_senses_stop).
+- This is the shape of "what makes no difference to the selection", but it is one decision with no stock. No level runs down in it.
+- The general laws are one-shot decision laws (Good's lemma and the off-switch inequality in counts). The amount forgone is a supplied number.
+
+(2) HeldPossible states a general necessary condition: the possible with a part held keeps widening only where the part changes without end (Run.changes_of_heldKeepsWidening). Then every moment is 全生成.
+- The condition is not sufficient (Oscillating.converse_fails).
+- RaisedEveryOther.both is a built course where three things hold together: growth relative to what is held, «生生» at moment 0, and a fixed whole possible. That bears on the second outcome (forms change, the going on continues).
+- Along any fixed process the whole possible never grows (Run.possible_of_stretch). That is a general irreversibility of the possible, not of a level.
+- RuleTower reads a tower of rules with no top as one process.
+
+(3) The two hexagram modules hold only built finite instances: merging and losing possibilities, drawing into an absorbing region, commuting symmetries, invariants that keep orbits apart. None of the four modules has a share set again from itself, a level that runs down, a giver that is itself a going-on, units that multiply, or a falling rank.

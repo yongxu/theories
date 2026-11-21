@@ -1,0 +1,83 @@
+# Task file: EDGE, second batch, reader whole-c-edge2-13
+
+Your 1 modules. In each, BOTH earlier passes found a statement with both outcomes and NEITHER found a law of ending within a bound. For orientation only, what they said (where to look, not evidence).
+
+## WideningOnTheMap.lean  (527 lines)
+
+### `both_outcomes`
+- pass a: S: `Steps.buqiong_includes_iff` (l. 137) characterizes endless continuation of the inclusion line from N exactly by every successor step from N retaining all held points.
+- pass b: S: `Steps.buqiong_includes_iff` (l. 137): the line of nothing lost goes on from N exactly while nothing is lost at each step from N. `Steps.generation_iff_keepsWidening` (l. 220) and `Steps.keepsWidening_iff_generation_losing_nothing` (l. 228): exactly-when statements under the premises wdec and found. `Web.keepsWidening_byName_iff_generation` (l. 499).
+
+### `no_return`
+- pass a: B: `Steps.moving` (l. 308) holds x exactly at moment x, so a point once left never returns along this specified course. `Moving.not_keepsWidening` (l. 321) concludes that there is no starting moment of keeping widening.
+- pass b: N: no irreversibility was found. B: `Steps.Moving.not_keepsWidening` (l. 321): the moving possible loses each point at the next step and keeps widening from no moment. That is loss, not a stated point of no return.
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N: no ending within a bound and no falling variant was found.
+
+### `closed_region`
+- pass a: S: `Steps.includesFrom_iff` (l. 144) proves that every held point carries across all later stretches from N iff each successor step from N carries every held point.
+- pass b: S: `Steps.includesFrom_iff` (l. 144): nothing lost across any stretch from N exactly where nothing is lost at each step; inclusion is kept step by step. `Web.kept_by_name_and_generation_on_moments` (l. 513): each formation admitted from T on is 全守 under continuationStep itself, and none is 全生成, given keeping widening by name.
+
+### `moves`
+- pass a: N: Not found in the statements read.
+- pass b: N: no choice among steps. The course is the line of moments with Steps.next.
+
+### `reading`
+- pass a: S: `Steps.same` (l. 96) reads two moments alike exactly when they hold the same points. `Steps.begins_iff` (l. 120) makes a beginning at t + 1 equivalent to failure of the chosen relation between t and t + 1, including this reading.
+- pass b: S: `Steps.includes` and `Steps.same` (l. 93, 96) are relations on moments made from what is held. `Steps.begins_iff` (l. 120): a line under a class E begins at step t+1 exactly where E does not relate t and t+1. So whether generation begins is decided by what the class tells apart. `Steps.same_class` (l. 106) and `Steps.same_includes` (l. 110).
+
+### declarations of WideningOnTheMap.lean (by script)
+  l.93 def includes
+  l.96 def same
+  l.100 def KeepsWideningFrom
+  l.106 theorem same_class
+  l.110 theorem same_includes
+  l.113 theorem includes_refl
+  l.115 theorem includes_trans
+  l.120 theorem begins_iff
+  l.125 theorem reached_le
+  l.129 theorem reaches_of_buqiong
+  l.137 theorem buqiong_includes_iff
+  l.144 theorem includesFrom_iff
+  l.157 theorem generation_includes_iff
+  l.173 theorem change_located
+  l.184 theorem generation_of_keepsWidening
+  l.197 theorem includes_not_back_of_generation
+  l.208 theorem keepsWidening_of_generation
+  l.220 theorem generation_iff_keepsWidening
+  l.228 theorem keepsWidening_iff_generation_losing_nothing
+  l.237 theorem new_in_list_or_none
+  l.255 theorem found_of_listed
+  l.263 theorem keepsWidening_iff_from_zero
+  l.276 theorem keepsWideningFrom_iff_shift
+  l.301 theorem generation_of_reachingKeepsWidening
+  l.308 def moving
+  l.311 theorem Moving.generation
+  l.316 theorem Moving.not_generation_includes
+  l.321 theorem Moving.not_keepsWidening
+  l.325 def growing
+  l.328 theorem Growing.keepsWidening
+  l.333 theorem Growing.generation
+  l.344 theorem found_of_em
+  l.353 def twice
+  l.357 theorem le_twice
+  l.363 def arriving
+  l.370 theorem Arriving.includes
+  l.377 theorem Arriving.early
+  l.384 theorem Arriving.late
+  l.389 theorem Arriving.keepsWidening
+  l.394 theorem Arriving.tells
+  l.407 theorem wem_of_generation_of_keepsWidening
+  l.416 theorem forward_iff_wem
+  l.423 def dawning
+  l.427 theorem Dawning.generation
+  l.435 theorem dne_of_keepsWidening_of_generation
+  l.443 theorem back_iff_em
+  l.451 def marked
+  l.456 theorem markov_of_keepsWidening_of_generation
+  l.482 theorem keepsWidening_itself_iff
+  l.489 theorem generation_of_keepsWidening_byName
+  l.499 theorem keepsWidening_byName_iff_generation
+  l.513 theorem kept_by_name_and_generation_on_moments

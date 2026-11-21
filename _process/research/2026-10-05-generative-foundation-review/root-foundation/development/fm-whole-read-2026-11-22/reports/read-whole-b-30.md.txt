@@ -1,0 +1,18 @@
+Reader whole-b-30. Batch: Interleavings, Irreversibility, Joining, JoiningCodes, JoiningContexts. I ran no Lean and changed no file.
+
+How far each module was read:
+- Irreversibility.lean (61 lines), JoiningContexts.lean (261) and JoiningCodes.lean (173) were read whole, proofs included.
+- Interleavings.lean (2577 lines): lines 1-700 were read in full, proofs included. From 700 to the end I read every statement and docstring, pulled out up to `:=`, but not the proof bodies. I opened lines 1385-1444 whole.
+- Joining.lean (1028 lines): lines 1-260 and 960-990 were read whole. For the rest I read every statement and docstring up to `:=`, without proofs.
+- Names a statement uses from other modules (DeadEnd.law, Reach, Presentation/Exact/Reduced/Matches, Footprinted/Keeps/Reindexes, Alike, SameBranchingTests, Composable) were taken as they are used. I did not open their home modules, so their own definitions are not checked here.
+
+Not answered or held back:
+- None of the five modules has a share, a level that runs down with a return that depends on what is left, a giver that can be lost, a cost, or multiplying units. Those fields are N.
+- Irreversibility's general laws of return, `keeps_reach_iff_returns` and `not_returns_iff_loses`, are only named in its account. They live in Becoming.Recurrence, which I did not read.
+
+What the fourteen questions miss that bears on the centre:
+1. Irreversibility, `constant_reading_hides_loss` (l. 50): a reading under which every question has the same answer from two configurations, while one of them cannot return to the other. This is the shape of a loss that makes no difference to what is registered, but here only as a built case on Bool.
+2. Joining, `RoleTotal.collapse` (l. 789) and `retained_codes_apart` (l. 913): a description exact for its own tests (roles) hides a failure to join, and a reading that keeps references keeps the difference. A general law (with built witness Once) that which reading is taken decides what loss is visible.
+3. Interleavings, `world_renumber_reads` (l. 2262) against `Pair.apart_differs` (l. 2512): what a reading at one step says of relata that the step's exchange does not connect is an artifact of the chosen shared index, not of the relations.
+4. Interleavings, `schedule_some` / `total_pop` (l. 867, l. 856): a falling total that bounds a scheduler. It is a rank of ending, but it is not tied to any running down.
+5. None of the five has a course whose going on or ending turns on a level, or on a selection set again from a share.

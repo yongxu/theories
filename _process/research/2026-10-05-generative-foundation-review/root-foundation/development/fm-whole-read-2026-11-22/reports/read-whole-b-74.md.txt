@@ -1,0 +1,13 @@
+I read all three modules whole: the opening account and every declaration's statement and docstring, plus some proof bodies (Tasks.lean l. 1–1801, Testing.lean l. 1–1548, Thresholds.lean l. 1–670). I ran no Lean and wrote no file. No answer is U.
+
+Gaps and cautions:
+- Testing.lean's opening account names declarations that are not in the module. The Renewable statements, `Web.class_judge_iff`/`class_judge_later`/`class_judge_widen` and `Flow.class_judge_beyond` are stated by the account itself to live in `Becoming.LabelledRoles`, so I answered them as D only.
+- The `Clearing` web, flow and `unsupported_with` that Testing.lean uses are defined in another module, which I did not open. Only their use in this module was read.
+- Thresholds.lean's account cites `Web.observed_raise_couples`, which is not declared there.
+- Testing.lean and Thresholds.lean have no `Process S A`. They work on `Web`, `Flow` and `ExchangeLaw` with flows and laws handed in. So "moves" there is at most a law or policy, and no giver is a losable going-on.
+
+What the fourteen questions miss that bears on the centre:
+1. Tasks.lean, `Delivers.adds_nothing` (l. 849): along any delivery the whole possible never grows. This is a general one-way narrowing, made strict on the catalytic cycle (`Catalysis.narrows`).
+2. Tasks.lean, the PossibleWithPartHeld laws (l. 802–832): what can be done with the performing part held widens only across steps that change the part, and stops for good once the part stays. This is a general link between more coming after and form changing.
+3. Tasks.lean, `Resetting.composition_fails` and `ResettingInterleaved.composition_fails_within`: delivering one task can silently reset the performer of another task the first does not list. The loss of what gives then forecloses the composite under every reading.
+4. Testing.lean, `Flow.subthreshold_alike` and `difference_changes_after_divergence`, and Thresholds.lean, `break_carried_nowhere` for every law reading a stock only below a threshold: general laws by which a stock's running down makes no difference to what reads it until the break. They are closely related to the centre's unseen using-up, though their premises (balance, exchange following what couples in, the part acting alike) are supplied.

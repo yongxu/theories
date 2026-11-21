@@ -1,0 +1,208 @@
+# Design G1 (free, Fable): two runnings-down on one course, the level and the menu
+
+*AI-written (Claude Fable), 21 November 2026, as one of eight designers under `tmp/fm/centre21/BRIEF-DESIGNS.md`. Scratch, outside git. Nothing here is proved in Lean; no Lean, build, test or gate was run. The statements were tried by a Python search (`centre.py` beside this file), which shows where a statement fails and not that it holds. Read by no one.*
+
+## 1. The design in ten lines
+
+**Kind of design.** A race, on one course, between two things that the same multiplying runs down: the level, and the menu (who is still there to be formed). The lock is not a rule in this design. It is the menu having run out: what the selection stopped forming is no longer there to be formed. None of the six other angles is this: (1) nobody sets a rule and there is no permission to set one, the favouring is fixed and what changes is who is there; (2) no kind supports the forming of another kind, kinds meet only through one level; (3) the statement orders two first steps of one course, not courses with each other; (4) keepable is used only to say what the menu's running out costs, the future is not the carrier; (5) the law was written first, from the alignment paragraph of `AGENTS.md`, and then searched, not read off a search; (6) no closure law at a relation is used, the proofs are an induction on doubling and arithmetic of the level.
+
+1. A configuration is a way `w` (a list of units, each of a kind, at most `N` of them) and a level `x ≤ C`.
+2. Each kind has a need, a use, a giving and kids. The line on a stock's step is kept: units whose need the level meets leave their kids as candidates, and every unit takes its use.
+3. Nothing is given but by units: the level after a step is what is left plus what the met units give, at most what is left, capped at `C`.
+4. A step is a choice of which candidates are formed, at most `N` (the slots). A way of selecting is a rule for that choice from what it registers of the candidates and the level.
+5. `F` is a set of kinds closed under kids that give nothing. A selection that registers only what a candidate leaves (its yield) forms `F` first, where giving costs yield.
+6. Main statement, any way of selecting: the course never ends exactly where a unit outside `F` is formed at every step. At the first step `E` where none is, the configuration is kept by no way of selecting, whatever the level (it can be `C`).
+7. Which of the two, where `F` is formed first, multiplies and has one need: by step `t̂ = ⌈log₂(N/n₀)⌉` at the latest, either the level has fallen below `F`'s need (step `D`) or `F`'s candidates have filled the slots (`E`). `E ≤ D`: ends. `D < E`: `F` is no longer formed and the course is the rest's own.
+8. In a two-kind family the race has a closed form: the level drawn is `c·(n_t − n₀)/(k − 1)`, a fixed price for each favoured unit made, so the slots are filled exactly where the level above `F`'s need pays for the share. More level ends what less level keeps, as the law's content.
+9. Under free selection more level closes nothing (keepable is upward closed in the level, way by way). It is forming whatever the level admits that makes a higher start end.
+10. Tried on 3.9 million courses of small systems and 339,088 starts of the family: no failure of the statements as stated; failures when a premise is dropped.
+
+## 2. Definitions
+
+Names in code font with a namespace are the Lean's. The rest are new.
+
+```
+structure System (U : Type) where        -- U finite, decidable equality
+  need use give : U → Nat
+  kids  : U → List U
+  slots : Nat                            -- N
+  cap   : Nat                            -- C
+
+-- configuration s = (w, x) : List U × Nat          (as LineOnAStock)
+met   (w, x) := w.filter (fun u => need u ≤ x)
+cand  (w, x) := LineOnAStock.after need kids w x          -- kids of the met units
+left  (w, x) := x - LineOnAStock.taken use w              -- truncated; every unit of w takes
+given (w, x) := total (met (w, x)) give
+level' (w, x) := min cap (left + min left given)
+Goes  := LineOnAStock.Goes need                           -- some unit's need is met
+
+-- the process with moves (a Process (List U × Nat) (List U) of the package)
+step s m t := Goes s ∧ m.Sublist (cand s) ∧ m.length ≤ slots ∧ t = (m, level' s)
+Keepable s := ∀ n, GuardHorizon.Viable P Goes n s
+
+structure Selecting where                                  -- a way of selecting
+  pick : List U → Nat → List U                             -- from the candidates and the level
+  sub  : ∀ c x, (pick c x).Sublist c
+  fits : ∀ c x, (pick c x).length ≤ slots
+next σ s := (σ.pick (cand s) s.2, level' s)
+course σ s t := next σ iterated t times from s             -- write (w_t, x_t)
+NeverEnds σ s := ∀ t, Goes (course σ s t)
+```
+
+- **Registering.** `σ` registers through `ρ : List U → Nat → O` when `ρ c x = ρ c' x'` gives `pick c x` and `pick c' x'` the same positions. Yield only: `ρ c x = c.map (fun u => (kids u).length)`. Others used in instances: what a candidate gives; yield and whether the level is below `L`; yield and whether forming by yield would leave no giver.
+- **`F : U → Prop`** (decidable), with premises
+  - H1 (closed): `u ∈ F → ∀ v ∈ kids u, v ∈ F`.
+  - H2 (multiplies): `u ∈ F → 2 ≤ (kids u).length`.
+  - H3 (gives nothing, lives on the level): `u ∈ F → give u = 0 ∧ 1 ≤ use u ∧ 1 ≤ need u`.
+  - H5 (one need): `u, v ∈ F → need u = need v`.
+- **`FFirst σ c x`**: with `cF := c.filter F`, if `N ≤ cF.length` then `pick c x` has `N` units, all in `F`; otherwise `cF.Sublist (pick c x)`.
+- **First steps of a course.** `D` := least `t` with no `F` unit of `w_t` met at `x_t`. `E` := least `t` with no unit outside `F` in `w_{t+1}`. `R` := least `t` with `¬ FFirst σ (cand (w_t, x_t)) x_t`. Each may not exist. `n₀` := the number of `F` units in `w₀`; `t̂` := least `t` with `N ≤ 2^(t+1)·n₀`.
+- **`θ w`** := the least `x ≤ C` with `Keepable (w, x)`, if any (well defined as a threshold by Lemma 1).
+- **Corner.** With a handed-in giving `γ` added (`level' = left + γ left + …`), `give = 0`, no cap, no slots and `pick c x = c`, `next` is `LineOnAStock.step need kids γ use`. The statements below are at `γ = 0`.
+
+The program keeps ways as multisets; need, use, giving and kids depend on the kind only.
+
+## 3. The main statement
+
+**Theorem.** Let `F` satisfy H1 and H3. For every way of selecting `σ` and every start `(w₀, x₀)`:
+
+(a) *Dichotomy.* `NeverEnds σ (w₀, x₀)` exactly where `E` does not exist (a unit outside `F` is formed at every step). If `E` exists: every unit of `w_s` is in `F` for all `s > E`; `¬ Goes (course σ s₀ t)` for some `t ≤ E + 1 + x_{E+1}`; and `¬ Keepable (w_{E+1}, x_{E+1})`, so no way of selecting goes on from there. Nothing bounds `x_{E+1}` below `C`.
+
+(b) *Which.* Add H2, H5 and `1 ≤ n₀`. Then one of `D`, `E`, `R` exists and is at most `t̂`. So for a `σ` that forms `F` first at every step (`R` absent), exactly one holds:
+  - (I) `E ≤ D` (or `D` absent): the course ends as in (a);
+  - (II) `D < E` (or `E` absent): no `F` unit is in `w_{D+1}` (and none ever after, if the kinds outside `F` are closed under kids too); the course never ends exactly where `E` is absent;
+
+  and which of the two is settled by step `t̂`: by whether the level falls below `F`'s need before `F`'s candidates fill the slots.
+
+(c) *Closed form in a family.* Kinds `T` (need `a`, use `c ≥ 1`, gives 0, kids `k ≥ 2` copies of `T`) and `K` (need `b`, `1 ≤ b ≤ a`, use `d`, gives `d`, kids `[K]`), with `a ≥ 2(c + d)N`; `σ` forms `T` first and then every `K` that fits; start `n₀ ≥ 1` of `T`, `g₀ ≥ 1` of `K`, level `x₀ ≤ C`. Let `S t = c·n₀·(k^t − 1)/(k − 1)` and `t*` the least `t` with `N ≤ n₀·k^(t+1)`. While `T` is met and the slots are not filled, `x_t + c·n_t/(k − 1)` is constant. Then:
+  - if `a ≤ x₀ − S t*`: `E = t*` and the course ends;
+  - otherwise let `D` be the least `t` with `x₀ − S t < a`, `x_D = x₀ − S D`, `n_D = n₀·k^D`, `g_D = g₀` if `D = 0` and `min g₀ (N − n_D)` otherwise, `ℓ = x_D − (c·n_D + d·g_D)` (truncated), `x' = min C (ℓ + min ℓ (d·g_D))`. The course never ends exactly where `b ≤ x_D` and `max b (2·d·g_D) ≤ x'`.
+
+**Lemma 1 (more level closes nothing, under free selection).** `Viable P Goes n (w, x)` and `x ≤ x'` give `Viable P Goes n (w, x')`. So `Keepable (w, x) ↔ θ w ≤ x`, and a course's step of no return is the first `t` with `x_t < θ w_t` (no `θ` counted as above every level).
+
+**Lemma 2 (the menu only narrows).** The kinds of `w_{t+1}` are among the kids of the kinds of `w_t`. If no kind in the closure of `w`'s kinds under kids gives, and each uses and needs at least one, then `¬ Viable P Goes x (w, x)`: no selection goes on, at any level.
+
+**Lemma 3 (registered alike, selected alike).** If `pick` does not depend on the level, and for every `j < n` the levels of two courses from `(w, x)` and `(w, x')` (also under two uses, givings or caps) meet the same needs among the units of the first course's way, the two ways are the same at every `j ≤ n`.
+
+**Proof sketches.**
+
+- *Lemma 2 and (a), second half.* A way all in `F` stays in `F` (H1; `pick` is a sublist of the candidates). If `Goes (w, x)` then some need `≥ 1` is met, so `x ≥ 1`; `w` is not empty and each unit uses at least one, so `left ≤ x − 1`; `given = 0`; so `level' ≤ x − 1`. The level falls strictly while the course goes, and at nothing no need is met: `¬ Goes` within `x` steps, for every choice of moves.
+- *(a), first half.* If a unit is in `w_{t+1}`, the candidates at `t` are not empty, so a unit of `w_t` was met: `Goes` at `t`. So forming something at every step is going on. Conversely if `E` exists the way at `E + 1` is all in `F`, and the paragraph above ends it.
+- *(b).* Suppose `D > t̂` and `R > t̂`. For `t ≤ t̂` some `F` unit of `w_t` is met, so by H5 all are, and by H1 and H2 the `F` candidates at `t` number at least `2·n_t`. `FFirst` gives `n_{t+1} ≥ min N (2·n_t)`, so `n_t ≥ min N (2^t·n₀)`, and at `t̂` the `F` candidates number at least `N`: `pick` is all in `F` and `E ≤ t̂`. The two cases then follow from (a) and the definition of `D`.
+- *(c).* While `x_t ≥ a`: every unit is met (`b ≤ a`), `left ≥ a − (c + d)N ≥ (c + d)N ≥ d·g_t`, so the level after is `x_t − c·n_t`, and `n_{t+1} = k·n_t` while `k·n_t < N`: the geometric sum gives `S`. At `D` the `T`s are unmet and leave nothing, all units still take, and the `K`s alone hold a level exactly from `max b (2·d·g)` up (below `2dg` what is left is less than what they take and the level halves its margin each step).
+- *Lemma 1.* Induction on `n`. `Goes` is monotone in the level. `cand (w, x)` is a sublist of `cand (w, x')`, so the same move is open. `left`, `given` and so `level'` are monotone in the level. The induction hypothesis applies at the same way and the higher level. With a handed-in `γ` it needs `z + γ z` monotone.
+- *Lemma 3.* Induction on `n` as in `LineOnAStock.ways_alike` (`after_alike`), with `pick` applied to equal candidates.
+
+## 4. R1 to R7
+
+- **R1, has.** Units leave units (`kids`), and the level's coming back is the doing of units that can be lost.
+- **R2, has, with a chosen form.** The level is capped, runs down, comes back by at most what is left, and only by met units of the model. The form `min left given` and the numbers `give u` are handed in.
+- **R3, half.** Keeping costs only as a relation between parameters: a giver leaves fewer kids than a taker, which is what makes a yield-only selection form `F` first. There is no budget inside a unit.
+- **R4, half.** There is a selecting among candidates, and the candidates are the kids of what was formed, so who can be favoured next is set from who was. The exclusion of the rest comes about (part (b)) and is not a premise. But the favouring itself is fixed: no rule is re-read from a share, as `RuleCapture`'s `h` is.
+- **R5, has.** Moves, `Keepable`, a step of no return (`E + 1` in (a); `θ` in Lemma 1).
+- **R6, first half.** What is registered decides the outcome in built instances, and `R` puts any reading in (b) as a third first step. Revision of the reading by where its act failed: left out. The only response to the fall is that unmet units leave nothing.
+- **R7, left out.** Lemma 1 says more level closes nothing under free selection; nothing here says more can go on after.
+
+The cut: the lock and the turn as two first steps of one course, with the giver inside the model. I judged R4's "comes about" and R2's giver to be what every earlier try lacked, and left the reading's revision and R7 for a model that has those two first.
+
+## 5. T1 to T8
+
+**T1, a dictionary.** Not found in what I read or searched (`PLACES.md` for slot, exclusion, crowd, capacity, monotone in the start or level, `absent_step`; the opening account and four statements of `LineOnAStock`): Lemma 1; part (b) (exclusion by doubling against slots, with the bound `t̂`); part (a)'s `¬ Keepable` at any level; part (c). Lemma 1 does not unfold: it transports a move across levels by induction on the horizon, and it is false for the selection that forms everything (`HigherStartEnds`). Part (c) needs the geometric sum and the side condition. Near things that exist: built courses where the line that renews is removed and then every line ends (`ReadingsSpread`'s Commons, by the listing); permanence of an absent region on another carrier (`ReadingsSpread.absent_step`, by the listing, not opened). Part (a) by itself is two short arguments once H3 is granted; see part 7.
+
+**T2, handed in.** Premises of the theorem:
+
+| premise | mark |
+|---|---|
+| the system; the step; slots; cap | structural |
+| H1, `F` closed under kids | structural, and it carries the permanence of the exit. That the rest stops being formed is derived |
+| H2, `F` multiplies | structural |
+| H3, `F` gives nothing, uses and needs at least one | structural for who `F` is; with it "a way all in `F` ends" is immediate, so the ending after `E` is close to handed in. That the course gets there is not |
+| `FFirst` at every step | the way of selecting; fixed, not re-set from a share |
+| H5, one need in `F` | structural, a simplification that (b) needs (instance I3) |
+| (c): `a ≥ 2(c+d)N`, `b ≤ a`, `K` gives what it uses | structural, restrictive |
+
+Not premises: the level's fall, the exclusion, the step of the turn.
+
+**T3, idle parts** (`out-instances.txt`, I2; `T`: need 14, use 1, kids `T,T`; `K`: need 2, use 1, gives 1, kids `K`; `N=4`, `C=40`; one `T` and one `K` at level 15; yield only):
+
+```
+nothing taken out                          ends at step 2   D=2 E=1  (1,1)@15 (2,1)@14 (4,0)@12
+slots taken out (N=1000)                   never ends       D=2      (1,1)@15 (2,1)@14 (4,1)@12 (0,1)@8 ...
+multiplying taken out (T leaves T)         never ends       D=2      (1,1)@15 (1,1)@14 (1,1)@13 (0,1)@12 ...
+level taken out (needs 0, uses 0)          never ends       E=1      (1,1)@15 (2,1)@16 (4,0)@17 ...
+reading changed (registers what is given)  never ends       D=2      (1,1)@15 (2,1)@14 (3,1)@12 (0,1)@9 ...
+cost taken out (K leaves K,K), tie to K    never ends       D=2      (1,1)@15 (2,2)@14 (0,4)@12 ...
+giving taken out                           no configuration keepable by any selection
+```
+
+There is no horizon parameter; `t̂` is derived.
+
+**T4, both outcomes.** One system, one start (I1; `T`: need 4, use 1, kids `T,T`; `K`: need 2, use 1, gives 5, kids `K`; `N=4`, `C=20`; one `T`, two `K` at level 20):
+
+```
+registers yield only                  ends at step 7   E=1  (1,2)@20 (2,2)@20 (4,0)@20 (4,0)@16 ... (4,0)@0
+   keepable along it: True, True, False, ...   level at the step of no return: 20 of cap 20
+registers what is given               never ends            (1,2)@20 (2,2)@20 ...
+registers yield and level < L         ends at step 7        for L = 5, 10, 15, 20: the same course
+registers yield, and the last giver   never ends            (1,2)@20 (2,2)@20 ...
+```
+
+Both sides of (b) under one way of selecting, by the start level alone: I2's row below (T6).
+
+**T5, old laws as cases. Met in part on the lock and level side, not met on the choice side.**
+- `LineOnAStock.ways_alike` would come out as Lemma 3 at `pick c x = c`, by a call; Lemma 3 must be used. Its proof is the old induction with one more congruence, so nothing gets shorter.
+- At the corner (part 2) the step is `LineOnAStock.step`, so every law of the line on a stock is a law of this model there with its statement unchanged; but neither the theorem nor a lemma here proves `unending_iff_holds`. `out-corner.txt` reproduces `HigherStartEnds` at the corner (from six `CBCB@8` for ever; from seven nothing left at step 5), and shows a selection keeping the higher start: `A@7 B@8 CB@12 CB@12 …`.
+- `RuleShaping.favours_iff` would discharge `FFirst` for a yield-only selection between kinds leaving `a+s+p` and `a+c+p` (strictly, or with ties to the shapers). A premise met by an old law, not a case.
+- `TurningInTime.locked_ends_rising` is not a case: its share rises strictly, and here the share stops at `N`.
+- Choice side: `GuardHorizon.closed_viable` is called for the going-on side of (c), and `Keepable` is the package's `Viable`. Uses, not cases. `Keeping`, the common response and `renewal_closure_theorem` are not touched.
+
+**T6, no threshold.** The statement is of two first steps. Fate against the start level, I2's system, one `T` and one `K`, yield only, levels 0 to 40 (`e` ends, `G` goes on, `L` ends with the slots filled), and keepable by some selection:
+
+```
+fate under yield only:        eeeGGGGGGGGGGGGLLLLLLLLLLLLLLLLLLLLLLLLLL
+keepable by some selection:   ...kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+```
+
+In the family of (c): 3,755 rows of shape `eGL`, 2,520 `eL`, 21 `eGeGL` (first: `N=5 k=2 c=1 d=0 a=10 b=5`, one of each: level 11 ends, 12 goes on, 13 and above end locked; one more level buys one more doubling and a deeper fall). Under `F`-first selection the fate is not monotone in the level in 602 of 11,744, 12,960 of 132,192 and 9,512 of 101,120 pairs. Lemma 1 does give a threshold, but one for each way and only under free selection; it failed in none of 258,000 pairs. Kept by some course and not by forming the same way again: 10,980 of 33,408 keepable configurations, 107,586 of 231,174, 72,397 of 134,946.
+
+**T7.** Part 6.
+
+**T8.** About twelve new definitions (the system, `given`, `level'`, the process, a way of selecting and its course, `FFirst`, `D`, `E`, `R`, the closure of kinds under kids, `θ`, registering). It is a new model next to the old ones, built on the line on a stock's `after` and `taken` and equal to it at a corner. It is not one law at several grains.
+
+## 6. What the program found
+
+Script: `/Users/ren/theories/tmp/fm/centre21/designs/G1-free-fable/centre.py`; outputs `out-*.txt` beside it. Every run under 40 seconds.
+
+| run | space | result |
+|---|---|---|
+| `general2` | 2,592 systems of one `F` and one `G` kind (needs 1 to 3, uses to 2, givings to 3, `(N,C)` in (2,4), (3,6), (4,6), (4,9)), every start: 211,248 courses | (a), its bound, `¬Keepable` after `E`, (b), Lemmas 1, 2: 0 failures |
+| `general3 2F` | 11,664 systems, two `F` kinds, `N=3, C=5`: 2,659,392 courses | 0 failures |
+| `general3 2G` | 4,608 systems, two `G` kinds: 1,050,624 courses | 0 failures |
+| `alarm` | 1,944 systems; selections reading level `< L` for every `L`, giving, the last giver: 580,060 courses | (a) 0 failures; `min(D,E,R) ≤ t̂` 0 failures of 396,084 |
+| `pure` | the family of (c), `N` 2 to 6: 339,088 starts | closed form against the course: 0 disagreements |
+| `plain` | `general2` with what comes back not capped by what is left | 0 failures |
+| `broken` | one premise dropped at a time | see below |
+
+- How the courses end under `F`-first (`general2`): 101,384 with the slots filled; 74,504 with the rest unmet first; 20,906 after the fall reached `F`, the rest then ending; 14,454 go on. Of 18,954 courses from a keepable start that end, the step of no return is the menu's in 11,497 and comes earlier, by the level, in 7,457. The level at the menu's exit is at the cap in 3,906 courses and at or above the start's in 7,413.
+- What registering more buys (`alarm`): of 52,136 starts where yield only ends with the slots filled, 14,770 were keepable by some selection; some level threshold goes on in 3,529, forming givers first in 6,076, reading the last giver in 4,922. None of the three keeps all that can be kept.
+- Premises dropped: H3 (`F` may give): (a) fails in 5,247 courses and the configuration after `E` is keepable in 18,246. H2: (b) fails in 12,494 of 145,152. `F` not closed: (b) fails in 64,026 of 217,728; (a) did not fail in that family, though its proof uses H1. The rest not closed: nothing fails. H5: instance I3 (`a`: need 1, kids `a,b`; `b`: need 9; `K` gives 3; `N=3`, `C=8`, level 4) goes on for ever with neither `D` nor `E`.
+- Nearest misses: (c) with `a` below `2(c+d)N` disagrees with the course in 26 of 185,340 starts (first: `N=3 k=2 c=1 d=2 a=7 b=1`, one `T`, two `K`, level 7: the formula says goes on, the course ends; a take from a level too low to bear it). The 21 `eGeGL` rows. A first run of the instance for slots (need 9) ended with slots taken out too, by overdraw to nothing; the instance kept has need 14.
+
+## 7. Where it is weakest
+
+1. **Part (a) is thin.** Once `F` is assumed unable to go on alone (H3), "never ends exactly where something outside `F` is formed at every step" is immediate. The content is the model, the bound in (b), the closed form, and Lemma 1. A reader may fairly call (b) "an exclusion lemma, then the old ending", new lemmas in a row.
+2. **No rule is set again.** If the lock means a rule re-read from its share, R4 is not had; what stays is a fixed favouring that empties the menu.
+3. **The turn in (b) is by loss.** The favoured whose need is unmet leave nothing and the rest go on. On 19 November that was read as a matter of grain. A turn by reading enters only as `R`, and what the course does after `R` is not characterised; three simple readings each keep under half of what can be kept.
+4. **T5 fails on the choice side**, and on the lock side gives one small case.
+5. **The line on a stock's convention** that every unit takes whether or not the level bears it makes (c) need its side condition.
+6. **The form of what comes back and the cost are chosen**, not derived. (a), (b) and Lemma 1 survived the other form tried; (c) would change.
+7. **Lemma 1 is a threshold**, one for each way. If the brief's T6 is read as forbidding that too, it is refuted by nothing I found, but it would fail with a handed-in giving for which `z + γ z` falls.
+
+What would refute it: a system meeting H1 and H3 where a course goes on past a step that forms nothing outside `F`; one meeting H1 to H5 with none of `D`, `E`, `R` by `t̂`; a disagreement with (c) inside its side condition; a law already in the Lean of exclusion by slots, or of keepable being upward closed in the level under choice; or a reading of (b) as `LineOnAStock.need_unmet` with Price's `share_step` in other names.
+
+## 8. What I did not read
+
+- Read whole: the brief, `AFTER.md`, `FROZEN-THE-CENTRE.md`, `WHAT-A-MODEL-MUST-HAVE.md`, `AGENTS.md`, `DIRECTION.md` from "Where we are heading" to the first item of "What we do not know".
+- Lean, statements and definitions only, no proofs: `LineOnAStock` (opening account, section 1, `Holds`, `ways_alike`, `need_unmet`, `unending_iff_holds`, `HigherStartEnds`); `TurningInTime` (`locked_ends_rising`, `count_rises`, `locked_ends_with_net_regime`, the head of `locked_turns_in_time_on_window_iff`); `RegimeMargin` (`step` and four definitions); `RuleCapture` (`Raises`, `ReadsShare`, `Locked`, `turn_locked`); `RuleShaping.favours_iff`; `GuardHorizon.Viable`, `closed_viable`; `Keeping.KeptFor`, `keptFor_of_closed`; `Viability.kernel_iff_certificate`.
+- `PLACES.md`: searched, and the entries for `ReadingsSpread` and `RuleRebuilding` read; not the rest.
+- Not read: the chapters; `CommonResponse.lean`; the renewal files and `renewal_closure_theorem`; `PopulationCorrection.lean` and its theory page; every record under "What has already failed" (I relied on the brief and the direction page for them); the reads of a future, of registering and of things kept by goings-on; the table of 20 November; `Becoming.lean`'s module accounts.

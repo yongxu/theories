@@ -1,0 +1,66 @@
+# Brief: one scratch Lean module, to settle whether a comparison law joins the keeping side and the lock's side
+
+*AI-written (Claude Fable, board row FM), 21 November 2026, frozen before the implementer ran (hash in `FROZEN-LEAN-COMPARISON.sha256.txt`). Scratch only: outside the package, in no git object. You are the implementer. A reader who took no part will afterwards judge whether the general law does work in each case, so do not dress anything up: a clean failure, told with what blocked it, is a result.*
+
+## What we are doing
+
+`/Users/ren/theories` draws a map of how anything forms, persists, changes and ends, with its core proved in Lean 4 with **no axioms** (every declaration has an empty axiom report: no `propext`, no `Classical.choice`, no `Quot.sound`). Read `AGENTS.md` at the repository root (one page).
+
+The Lean has two sides that have not met. A **keeping** side: processes with moves, a guard kept for `n` steps by some choice (`GuardHorizon.Viable`, `Keeping.KeptFor`, `Viability.Kernel`), whose laws are of regions closed under steps. A **lock-and-level** side: one way as it runs, with laws that a line ends within a bound (`TurningInTime`). Five tries on 21 November to join them by re-packing definitions came out as dictionaries: the same thing in other names, with the new notion doing no work in any proof.
+
+A designer has now claimed, on paper, that one law does join them: **keeping for `n` steps is carried along a one-sided comparison of two guarded processes**, and that an old law from each side comes out of it: `GuardHorizon.closed_viable` (compare with a process that loops at one point) and `TurningInTime.locked_ends_rising` (compare with a clock that can take only so many steps). The claim is in `tmp/fm/centre21/designs/C-order-not-threshold/DESIGN.md`, its part "T5". It can only be settled in Lean. That is your task.
+
+## The module
+
+Write `/Users/ren/tmp/fm/build2/Becoming/ScratchComparison.lean`, module `Becoming.ScratchComparison`, importing what it needs from the package (`Becoming.GuardHorizon`, `Becoming.TurningInTime`, and others as needed). The package is at `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/`.
+
+**Build only with** `/Users/ren/tmp/fm/run-build2.sh <n>` (n = 1, 2, 3, … one per build). It waits until no other Lean run is alive on this shared machine, builds your module through the checker's own scratch builder (seconds, cached), audits the axioms of every declaration, and prints the end of the log. A build is clean when the log says `exit 0`, `"unclean": []` and `"with_axioms": {}`. Run nothing else of Lean: no `lake`, no `check_becoming.py` (never with `--help`: it is a real run), no gate, no tests. Up to about 30 builds.
+
+### Part 1. The law
+
+State and prove, for two processes `P : Process S A`, `Q : Process T B`, guards `g : S → Prop`, `h : T → Prop` and a relation `R : S → T → Prop`:
+
+- a definition `Carries` saying: related configurations have the left guard give the right guard, and every enabled left move has an enabled right move all of whose successors are related to some successor of the left move (open `GuardHorizon.lean` for `Viable` and the package's `Enabled` and `Process`, and choose the **weakest** form the induction supports; say what you chose and what stronger forms you rejected);
+- `viable_carried : Carries … → R s t → Viable P g n s → Viable Q h n t`, for every `n`.
+
+Report: does it go through with no premise beyond `Carries`? In particular, does matching need to *decide* which successor occurred? (A join earlier today needed "every step is decided" exactly there, and without it implied a principle the package's logic does not have.)
+
+### Part 2. The keeping side
+
+- `closed_viable_case`: a theorem whose statement is `GuardHorizon.closed_viable`'s, letter for letter, proved by calling `viable_carried` (with a process that loops at one point, or however it is cleanest), and **not** calling `closed_viable`, `certificate_viable`, `kernel_viable` or `certificate_closed`. Then `theorem closed_same : @closed_viable_case = @GuardHorizon.closed_viable := rfl` (two proofs of one proposition are equal; the equation type-checks only where the statements are the same up to unfolding).
+- The order form: if a relation `le` on one process's configurations satisfies `Carries P g P g le`, then what is viable for `n` steps at `s` is viable for `n` at every `t` with `le s t` (one line from `viable_carried`).
+- **A second old theorem from another module**, by a call. This is the test of whether the law is more than `closed_viable`'s own induction said again. Candidates, in the order I would try them: `Keeping.keptFor_of_closed` (through a process whose configurations are classes `S → Prop`, a step being a usable move and a value kept; first show `KeptFor P sense guard allowed n B ↔ Viable (that process) (guard throughout the class) n B`, and say what premise, if any, that equivalence needs); something of `JointKeeping` or `KeepableStep`; `Viability.kernel_iff_certificate`'s half. Statement unchanged, `rfl` check, the old theorem not called.
+
+### Part 3. The lock's side
+
+- A clock: a process on `Nat` that can step from `i` to `i + 1` only while `i < N`. Prove it is viable for at most `N` further steps from `0` (exactly: `Viable (clock N) (fun _ => True) n i → i + n ≤ N`, or the form that fits).
+- The bound: if `Carries P g (clock N) (fun _ => True) R` and `R s 0`, then `¬ Viable P g (N + 1) s`.
+- The bridge from "not viable for `N + 1` steps" to the form the lock's laws conclude: for a step that is a function taken while a condition holds (`TurningInTime.net`, `Law.stepWhile` in `GuardedStep.lean`), an end reached within the bound: `∃ n t, n ≤ … ∧ «迭» (net …) n s t ∧ ∀ v, ¬ net … t v`. Find the cleanest general statement of this bridge (it is about any `stepWhile`, not about the lock).
+- `locked_ends_rising_case`: a theorem whose statement is `TurningInTime.locked_ends_rising`'s, letter for letter, with every one of its premises, proved through the bound and the bridge, **not** calling `locked_ends_rising`, `ends_with_net_rising`, `ends_with_net`, `ends_of_below`, `locked_ends_with_net`, `locked_ends_with_net_regime`. You may call the lemmas that are about the level and the lock at one step (`kept_within`, `rises_from`, `rising_takes_all`, `rising_meets_level`, `locked_alone`, `locked_alone_not_below`, `agrees_until_marked`, `RuleCapture`'s), and you must say which you called. Then `theorem locked_same : @locked_ends_rising_case = @TurningInTime.locked_ends_rising := rfl`.
+
+If `locked_ends_rising` does not come out, try the lemma under it, `ends_with_net_rising`, with the same rules; if that does not either, say exactly what blocks it (the designer's sketch relates a configuration to clock time `i` by: the way is the `i`-th iterate, `i ≤ use`, the level at most `hi`, and at `i = hi + 1` the level is nothing).
+
+## What counts as nothing gained (frozen)
+
+- **L1.** `viable_carried` needs a premise beyond `Carries` (name it).
+- **L2.** No second old theorem from another module comes out on the keeping side by a call with its statement unchanged. Then the law is `closed_viable` generalised and nothing more.
+- **L3.** The lock's side does not come out with its statement unchanged; or it does, but the new chain (the clock, the bound, the bridge, the relation, the case) is longer than the old chain it replaces (the proofs of `ends_of_below`, `ends_with_net_rising` and `locked_ends_rising`, lines 514 to 543, 724 to about 760, and 1499 to 1520 of `TurningInTime.lean`; count them yourself).
+- **L4.** Any declaration with an axiom.
+- **L5.** A case whose proof puts the comparison in and takes it out: where deleting the call and writing the induction directly would be as short. Say for each case which it is, honestly; the reader after you will check.
+
+## Traps
+
+- A core lemma can bring in `propext` (`Nat.succ_ne_zero` did, twice today): prove such facts by `Nat.noConfusion`, by cases, or with the package's own lemmas in `Becoming/Prelude.lean`. `simp`, `omega` and `decide` on propositions with free variables often bring axioms; the package's proofs are mostly terms. Look at how `GuardHorizon.lean` and `TurningInTime.lean` prove things and write in that style.
+- The package's names are partly Chinese with guillemets (`«迭»`, `«不穷»`, `«一»`): copy them from the source.
+- Write only under `/Users/ren/tmp/fm/build2/` and `/Users/ren/theories/tmp/fm/centre21/lean-comparison/` (your report). Change nothing in the repository or in git. Start no further agents.
+
+## What to return
+
+Your whole report as your final answer, also saved as `/Users/ren/theories/tmp/fm/centre21/lean-comparison/REPORT.md`:
+
+1. **In five lines**: what built clean, what did not, and your own verdict on L1 to L5.
+2. **Each theorem**: its statement as it stands in the module, whether it built clean, what it calls.
+3. **L1 to L5**, each answered with the evidence (the `rfl` checks, the line counts old and new, the list of lemmas called).
+4. **What blocked** anything that did not come out, exactly.
+5. **The last build's log** (its JSON), and the number of builds.
+6. **What you did not do.**

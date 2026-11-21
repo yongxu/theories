@@ -1,0 +1,140 @@
+## 1. The design in ten lines
+
+1. There are N occupied nests, f fast parents, and ℓ grains in the crop.
+2. Every parent needs one grain. Each fast parent eats one more when the crop reaches H.
+3. Each fast parent books its own nursery and recruits one other nursery while any remain.
+4. Every fed parent leaves a basal offspring. A booked nursery can also raise a fast offspring with priority for a nest.
+5. A parent that tends a seed gives up that extra offspring. Diverting a booked nursery also costs c grains.
+6. The rule reads the fast share and registers up to a fully funded diversions. The blind way registers none.
+7. Each tended seed grows q grains from finite soil. A season without planted seed produces an empty crop.
+8. Compare starts by fast parents and grain left after feeding. Fewer fast parents and more grain left favour continuation.
+9. If q + ⌈H/q⌉ ≥ N, increasing the diversion allowance at any or every season preserves every previously successful prefix.
+10. A finite table decides survival for each fixed allowance and detects the first exit from the region any course can keep.
+
+## 2. Definitions
+
+Take integers N, q, H ≥ 1 and c ≥ 0. A state is s = (f, ℓ), with 0 ≤ f ≤ N and 0 ≤ ℓ ≤ qN. The fast share is f/N. The **signed grain balance** is W(s) = ℓ − N − f·1[ℓ ≥ H]. When W(s) < 0, the cohort cannot feed and there is no successor. Otherwise write w = W(s) and choose an integer allowance a between 0 and N. Its successor Fₐ(s) is calculated by
+
+```
+m = min(N, 2f)                       booked nurseries
+b = N − m                            ordinary planters
+j = min(a, m, ⌊max(0, w−b)/(c+1)⌋)   funded diversions
+z = min(w, b) + j                    seeds planted
+Fₐ(s) = (m−j, qz)
+```
+
+Ordinary planters get seed first. Each diversion then pays one seed and c grains for switching. Each parent leaves one basal, nonfast offspring. Each undiverted booked parent leaves an additional fast offspring, displacing one basal offspring from the N nests. A planter spends its second nursery opportunity tending a seed. Thus m−j counts fast offspring in the **new generation**. A fixed way sets the same allowance each season. Its realised diversions depend on the current bookings and the funded bundles it registers. Allowance zero still reads the share to set bookings.
+
+The cycling mineral totals qN. Before ripening, the z planted grains hold one unit each. The other qN−z units are in the soil, including the season’s recycled grain. Each plant mobilises q−1 soil units. There is enough because z ≤ N. Soil after harvest is qN−qz. Fixed yield and seasonal recycling are model assumptions.
+
+Write **s ≼ t** when fₛ ≥ fₜ and W(s) ≤ W(t). This is a preorder, and an order on the pairs (f, W) after equal pairs are identified. Let L(s) contain the infinite allowance sequences whose every finite prefix can be taken from s. A fixed allowance a keeps s when its constant sequence belongs to L(s). A state is past return when L(s) is empty.
+
+## 3. The main statement
+
+**Comparison and exact fate.** Assume q + k ≥ N, where k = ⌈H/q⌉. If s ≼ t and uᵢ ≤ vᵢ at every season, each successful prefix of u from s has a successful prefix of v from t of the same length, with ordered endpoints. Hence u ∈ L(s) implies v ∈ L(t).
+
+For fixed a, initialise a table B₀(f) = 0. In the update, calculate m, j and z from §2 at the candidate input w, including balances that no physical start realises. Set U = N(c+1) and take the minimum of an empty set to be ∞.
+
+```
+Bₙ₊₁(f) = min { w ∈ {0,…,U} | W(m−j, qz) ≥ Bₙ(m−j) }
+Bᵃ       = the stationary table for allowance a
+```
+
+Then **a keeps s exactly when W(s) ≥ Bᵃ(f). Some course keeps s exactly when W(s) ≥ Bᴺ(f).** The blind way is least in the allowance order and ends from every positive fast count. From a physically viable start, any fixed way that ends has a first successor with W < Bᴺ(f). Every possible continuation from there ends, even if another brood can still be born. An initially unrecoverable start is already outside at season zero.
+
+**Premises.** The integer ranges, finite nests and soil, feeding bill, recruitment, offspring priority, nursery cost, funding order, yield, available moves, and q+k ≥ N are structural. The initial preorder and pointwise allowance order are structural comparison hypotheses. Initial physical viability restricts the first-exit clause and is independently decided by its table. No premise assumes a fall, lock, rescue, surviving course, or monotone crop step. The rule for reading funded bundles is supplied.
+
+**Proof of comparison.** The total planter count is
+
+```
+p = b+j = min(N, b+a, b+⌊max(0,w−b)/(c+1)⌋).
+```
+
+It increases weakly in a, w and b. Increasing b by one can lower the floor by at most one. Thus the favourable side has weakly more planters, weakly fewer new fast parents f′ = N−p, and weakly more planted seeds z = min(w,p).
+
+The difficult step is the **next feeding**. On the same side of H, crop and fast counts give the required order of balances immediately. If the larger crop alone triggers extra feeding, it has at least k plants and at least one more plant than the smaller crop. Its grain advantage is at least q. Its extra bill is at most its fast count, which is at most N−z ≤ N−k. Each planted seed occupied a nursery that could have raised a fast sibling. Thus the grain advantage pays the bill, including at equality. Induction gives the prefix comparison.
+
+**Proof of exact fate.** Row zero gives the balance needed to take one step. If row n gives the requirement for n+1 steps, the update asks whether the new brood can take those steps. Successor comparison makes the acceptable balances an upper interval for each f, with minimum weakly increasing in f. The same algebra applies to any formal w ≥ 0. All opportunities saturate by U. The rows increase with the horizon in the finite chain 0,…,U,∞, so they stabilise. Each fixed way is deterministic. Comparing any successful sequence with the constant maximal allowance gives the any-course equivalence. A failing fixed way reaches a terminal balance in finite time, so it must have a first exit if it began inside. Under allowance zero each successful harvest sets f′ = min(N,2f). A positive fast count either encounters a shortfall or fills the bookings, leaving zero plants and an empty next crop.
+
+## 4. Which of R1 to R7 it has
+
+| Requirement | What the construction gives |
+|---|---|
+| R1 | Parents leave competing offspring. Both next season’s fast share and its crop depend on what this generation forms. Nest capacity is fixed. |
+| R2 | The finite crop comes back through living planted seeds. Seed, crop and soil balance. Yield and seasonal recycling are supplied. |
+| R3 | Tending forgoes the parent’s own extra offspring. The common reserve bears the separate c-grain switching charge. |
+| R4 | Bookings are rebuilt from offspring share. Blind recruitment locks from any positive fast count that keeps feeding long enough. |
+| R5 | Bᴺ decides whether any course keeps a state, including states where another feeding is still possible. |
+| R6 | The rule registers share and funded diversions up to its allowance. It does not revise its reading after a failed act. |
+| R7 | The law compares whole sets of future allowance sequences. §5 gives a strict opening along a surviving course. Indefinitely many new forms or successive strict openings are outside the result. |
+
+The reason for this cut is that the offspring forgone by a keeper bounds what the next generation can consume. That connection is where the comparison can fail.
+
+## 5. T1 to T8
+
+**T1.** The bound q ≥ N−k against the *realised* next feeding bill and the resulting inclusion of future courses were not found in what I read. Unfolding the budget leaves an adverse jump at H. The separate nursery inequality f′+z ≤ N controls that jump. The counterexample in §6 shows what happens when the control falls one grain short.
+
+**T2.** §3 lists the premises. Harvesting anything, affording a diversion and crossing the point of no return are calculated. Which signal parents read, who gets seed first, and how much a tended seed yields remain stipulated.
+
+**T3.** Each alteration below keeps the initial state and allowance and changes the indicated mechanism. Parameters are (N,q,H,c). The seed-multiplication alteration retains the original initial endowment.
+
+| Alteration | Parameters | Start | Allowance | Original → altered |
+|---|---|---|---:|---|
+| Set bookings to N regardless of share | (3,3,1,1) | (1,9) | 2 | goes on → ends |
+| Let a fast parent book itself alone | (2,3,1,1) | (1,6) | 1 | ends → goes on |
+| Register no funded diversions | (1,3,4,1) | (1,3) | 1 | goes on → ends |
+| Suppress extra fast offspring after nursery allocation | (2,3,1,1) | (1,5) | 1 | ends → goes on |
+| Let a diverted parent also keep its fast offspring | (2,5,1,1) | (1,5) | 1 | goes on → ends |
+| Waive the switching charge | (1,2,3,1) | (1,2) | 1 | ends → goes on |
+| Suppress extra feeding at abundance | (1,3,1,1) | (1,3) | 1 | ends → goes on |
+| Let each tended seed return just its own grain | (1,3,4,1) | (1,3) | 1 | goes on → ends |
+
+The horizon matters too. In (3,3,4,1), state (2,3) can produce a brood and no course can keep it. A one-season check accepts it. Constant maximal *permission* suffices wherever any course can keep, but the realised action still counts bookings and funded seeds. The result establishes no need to learn which permission to set.
+
+**T4.** In (3,3,4,1), start at **(1,9)**. Allowance 0 gives (2,3), then (3,0), then stops. Allowance 1 takes one season longer to stop. Allowances 2 and 3 go directly to (0,9), which reproduces itself. Bᴺ, in order of fast count, is **(2,5,6,6)**. At (2,3) the balance is zero and the requirement is six. The first blind step closes every infinite future, one successful generation before feeding fails.
+
+There is also a strict opening with **both successors viable**. In (2,4,5,1), allowances 1 and 2 from (1,7) give (1,4) and (0,8). The former keeps itself under 1, the latter under every allowance. The constant-zero future becomes possible at (0,8). It was impossible both at the other successor and at the common start. Both are below (0,8) in the preorder, so the gain loses no previously possible allowance sequence.
+
+**T5.** Two unchanged old statements have paper derivations from the **finite-horizon comparison used in §3**. For guarded processes its general form is this. For each related pair, the left guard implies the right guard. Each enabled left move has an enabled right match such that every right successor is related to some left successor of that left move. Induction on the horizon transfers viability from left to right by matching the witnessing move and applying the induction hypothesis to each successor. For deterministic steps the same induction retains related endpoints. In the crop, match a successful allowance with any larger one. The next-feeding calculation establishes the local condition.
+
+- For `GuardHorizon.closed_viable`, take the left process to be one guarded point with a self-loop, and relate it to the right states in K. The old premise `Closed P guard K` supplies the guard and the enabled matching move whose every successor stays related. Transferring the point’s arbitrary horizon gives the old conclusion for its original, possibly nondeterministic P. [GuardHorizon.lean](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean)
+- For `TurningInTime.locked_ends_rising`, keep its original premises and partial deterministic `net` on the left. On the right use the unit-move clock 0 → 1 → … → hi+1, with both guards true. Relate (v,l) to time i when v is the i-th `windowAlone` iterate, is locked with share and rule at least their starting values, i ≤ use(v), l ≤ hi, and i = hi+1 implies l = 0. Initially the relation holds. An enabled left step meets the positive need, hence is unmarked and i ≤ hi. The old `turn_locked` supplies the next lock and order bounds, and `more` gives i+1 ≤ use(v′). Apply `Keeps giving 0 hi` to l−use(v), using natural subtraction, for the next level bound. At i = hi the leftover is zero and `FromNothing` gives the last relation clause. The clock therefore matches every enabled step. Horizon transfer rules out hi+2 steps. The first disabled step yields the old `«迭»` witness with length at most hi+1. Endpoint matching supplies the orbit equality and lock. This derivation uses neither the old ending theorem nor its earlier ending lemma. [TurningInTime.lean](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean) · [RuleCapture.lean](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleCapture.lean) · [RegimeMargin.lean](/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean)
+
+These recoveries use comparison to obtain the arbitrary horizon or the deadline. Neither old model instantiates the nursery equations. If T5 requires the new **crop law itself** to specialise to both old statements, the design falls short.
+
+**T6.** In (2,3,4,0), start with both parents fast and use maximal allowance. Three grains give (1,3), which repeats. Four grains trigger extra feeding, give (2,0), and end the line. Both initial levels fit the six-grain capacity.
+
+**T7.** The complete bounded enumeration and the stronger claim it broke are in §6. All checks used Python. No Lean, build or repository test was run.
+
+**T8.** Eight named definitions suffice on paper: state, signed balance, seasonal successor, preorder, local simulation condition, horizon table, stationary table, and future language. Bookings, diversions and plants are local counts. One horizon comparison applies at several places. The nursery and its numerical survival law constitute a new model beside the old ones.
+
+## 6. What the program found
+
+The exhaustive box was 1 ≤ N ≤ 4, 1 ≤ q ≤ 5, 1 ≤ H ≤ Nq+1, 0 ≤ c ≤ 2, all physical states, and every allowance. H = Nq+1 includes a gate that never fires. The course oracle allocates nurseries and grains one at a time and follows each fixed way to failure or repetition. The any-way oracle independently deletes states having no successor in the surviving set. [Enumeration program](/Users/ren/theories/tmp/fm/centre21/designs/C-order-not-threshold/enumerate.py) · [Enumeration output](/Users/ren/theories/tmp/fm/centre21/designs/C-order-not-threshold/enumeration.txt)
+
+| Under q + ⌈H/q⌉ ≥ N | Result |
+|---|---:|
+| Parameter choices | 495 |
+| Starts checked against the any-way oracle | 24,792 |
+| Starts kept by some course | 11,265 |
+| Fixed-way fate comparisons | 110,178 |
+| Fixed-way courses that go on | 38,796 |
+| Ordered input pairs checked at equal allowance | 2,803,503 |
+| Adjacent allowance pairs checked at the same input | 85,386 |
+| Adjacent increases of raw level defeating even the maximal way | 75 |
+| Largest number of strict table updates before stationarity | 3 |
+| Disagreements with the stated law | 0 |
+
+Transitivity combines the equal-allowance and adjacent-allowance checks to cover every ordered pair of moves. Across the 15 parameter choices outside the bound in this box, the search counted eight one-step balance reversals from one start. The exploratory scan also printed an apparent raw-level reversal whose higher start exceeded capacity. It is excluded from the 75 and replaced by the in-range T6 instance. [Exploratory program](/Users/ren/theories/tmp/fm/centre21/designs/C-order-not-threshold/explore.py) · [Original exploratory output](/Users/ren/theories/tmp/fm/centre21/designs/C-order-not-threshold/explore-output.txt)
+
+**The stronger claim fails by one grain.** A targeted search found N=9, q=4, H=16, c=0, so q+k=8=N−1. From **(5,13)**, allowance 3 gives (6,12) and stays there. Allowance 4 gives (5,16), then (7,8), then stops. The fourth plant yields four extra grains and triggers extra feeding by five fast offspring. This reverses infinite fate from one start, even though tending still costs the parent an offspring. The search also found a reversal with identical later allowances. From (3,13), take 0 versus 1 once, then 3 forever. The successors are the same (6,12) and (5,16). The three searches took about 1.08, 2.15 and 0.18 seconds. [Challenge program](/Users/ren/theories/tmp/fm/centre21/designs/C-order-not-threshold/challenge.py) · [Courses and output](/Users/ren/theories/tmp/fm/centre21/designs/C-order-not-threshold/challenge-output.txt)
+
+## 7. Where it is weakest
+
+The nursery must enforce f′+z ≤ N. Letting a nursery send out a fast offspring and tend a plant in the same season removes the reason comparison works. The T3 alteration allowing both already reverses a survival verdict. Overlapping recruitment, asynchronous harvest, and grain carried between seasons also fall outside the statement. The spacing bound is sharp to one grain as a uniform guarantee in the exhibited family. Necessity for each individual ecology has not been shown.
+
+An in-bound pair with ordered fast counts, signed balances and allowances, but a successful lower prefix the upper course cannot match, would refute the comparison. A physical-state oracle disagreeing with either stationary-table equivalence would refute the classification. A real application would first have to establish the brood-versus-tending opportunity cost and the induced feeding bill. The evidence here is mathematical and computational.
+
+## 8. What I did not read
+
+I read the brief, repository instructions, required direction passage and model-requirements note. I consulted the one-page account and method, searched the places listing, and read the relevant definitions or statements in the Lean files named above, along with portions of `Keeping`, `Viability`, and `RuleShaping`. I did not read the full 406-module package, the other designers’ work, the October renewal development, `PopulationCorrection`, the full chapter survey, or the earlier failed-design notebooks in full. This report and its programs are AI-written by Codex, 21 November 2026. [Saved report](/Users/ren/theories/tmp/fm/centre21/designs/C-order-not-threshold/DESIGN.md)

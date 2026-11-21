@@ -1,0 +1,385 @@
+# Task file: EDGE, reader whole-c-edge-13
+
+Your 4 modules. For orientation only, what the two passes said of the four marks, of moves and of a reading (where to look, not evidence).
+
+## Labelled.lean  (988 lines)
+
+### `both_outcomes`
+- pass a: S: `same_reach_iff_returns` (l. 906) equates equality of reachable possibilities after a path with a return path, and `not_returns_iff_loses` (l. 913) witnesses loss exactly when there is no return.
+- pass b: S: general. `keeps_reach_iff_returns` (l. 900): every configuration reachable from s is reachable from t exactly when t leads back to s. `same_reach_iff_returns` (l. 906) and `not_returns_iff_loses` (l. 913) are exactly-whens of keeping and losing possibilities. B: `Crossing.loss_does_not_decide` (l. 664): one configuration, the same break, and three runs (ends, transforms with the formation staying active, restores). `Renewable.class_belongs_to_the_run` (l. 564): same start, renewing in one run and consuming in the other.
+
+### `no_return`
+- pass a: S: `Reach.lost_stays` (l. 894) concludes that a target already unreachable stays unreachable from every reachable successor. B: `Crossing.loss_does_not_decide` (l. 664) concludes permanent loss on two specified runs, with restoration on the third.
+- pass b: S: concluded and general for any Process. `Reach.lost_stays` (l. 894): a configuration not reachable from t stays unreachable from anything reached from t. `not_returns_iff_loses` (l. 913): t does not lead back to s exactly when some configuration reachable from s is not reachable from t. `lost_together_not_returns` (l. 981): a bundle of claims realizable together from s and not from t marks that t has no way back to s. B: `Crossing.loss_does_not_decide` (l. 664): in the ending and transforming runs the loss of the first condition has no return (Lost), while the restoring run keeps the dependence again. `Renewable.escalation_undermines_for_every_cycle` (l. 832): after escalation the sustaining condition never returns, a loss of a low level that what depends on it needs.
+
+### `rank`
+- pass a: S: `Run.not_of_depletion` (l. 515) excludes an infinite run if every admissible step lowers a natural reserve. `Run.renewal_recurs` (l. 530) excludes a renewal-free tail if each nonrenewal lowers the rank.
+- pass b: S: `Run.not_of_depletion` (l. 515): a reserve lowered by every step admits no infinite run. `Run.renewal_recurs` (l. 530): if every step that is not a renewal lowers a rank, no tail of a run is free of renewal. `Conditions.drawdown_not_recurring` (l. 541). `WithinMoves` (l. 924) and `WithinMoves.after_course` (l. 960): bounds on moves to realize a bundle together add along a course.
+
+### `closed_region`
+- pass a: S: `Reach.lost_stays` (l. 894) makes the states unable to reach a fixed target closed under every continuation.
+- pass b: S: `Bisimulation` (l. 293) is a relation closed under matched steps in both directions, and `Alike` is relation by some bisimulation, an equivalence (`Alike.refl`, `.symm`, `.trans`, l. 334-345). `Shown.runs_of_new` (l. 207): where a history never revisits, every run of its shown law is the history. N: no invariant set, kernel or largest closed region law beyond these.
+
+### `moves`
+- pass a: S: `closedBy` (l. 93) requires the next move to equal the policy at the successor, and `closedBy_withMove` (l. 97) embeds all such steps in the open law. B: `Renewable.class_belongs_to_the_run` (l. 564) gives renewing and consuming draws from one start.
+- pass b: S: `Generative.Process S A` throughout. `closedBy` (l. 93): the next move is what a policy makes of the next configuration. `Run.not_of_depletion` (l. 515): if every admissible step lowers a reserve, no run exists, a law over every choice. `Reach.lost_stays` (l. 894): a possibility lost along an admissible path stays lost along every continuation. `Bisimulation.trace` (l. 364) matches every course of moves. B: `Crossing.loss_does_not_decide` (l. 664): from one configuration the move at the break selects which of three outcomes follows.
+
+### `reading`
+- pass a: S: `shown_le_iff` (l. 165) takes exactly the observed state/move/successor triples. `Frame.world_fixes_run` (l. 277) recovers the state sequence when activity agrees on every configuration claim.
+- pass b: S: `Bisimulation` (l. 293) and `Alike` (l. 302): configurations realizing the same claims with matching steps. `Alike.tests` (l. 387): alike configurations pass the same tests (a course of moves followed by a claim). `identifiesAlike_iff` (l. 426): a description makes sense exactly when its kernel is a bisimulation and it identifies whatever is alike. `Frame.world_fixes_run` (l. 277): with configurations as claims, the world fixes the run. `exchange_alike_iff` (l. 491). B: `Labelled.Circulation.standings_leave_exchange` (l. 136): standings do not fix the exchange. `Renewable.stepwise_includes_before_escalation` (l. 699) and `Pinned.undermining_without_effect` (l. 788): whole-run and stepwise readings differ.
+
+### declarations of Labelled.lean (by script)
+  l.63 def withMove
+  l.69 def Run.toWithMove
+  l.73 def Run.ofWithMove
+  l.77 theorem Run.ofWithMove_toWithMove
+  l.82 theorem Run.toWithMove_ofWithMove
+  l.87 theorem withMove_open
+  l.93 def closedBy
+  l.97 theorem closedBy_withMove
+  l.102 def unlabelled
+  l.106 theorem unlabelled_product_le
+  l.120 def exchange
+  l.126 def one
+  l.129 def round
+  l.132 def idle
+  l.136 theorem standings_leave_exchange
+  l.143 theorem start_needed
+  l.157 def Shown
+  l.161 def Shown.run
+  l.165 theorem shown_le_iff
+  l.173 theorem same_steps_iff_traces
+  l.182 def Consistent
+  l.186 theorem Run.shown_le
+  l.197 theorem eq_of_new
+  l.207 theorem Shown.runs_of_new
+  l.218 def history
+  l.221 def loop
+  l.227 theorem loop_step
+  l.233 theorem spliced
+  l.244 def law
+  l.247 theorem no_history
+  l.260 def Frame.world
+  l.267 theorem Frame.world_active
+  l.272 def Frame.configurations
+  l.277 theorem Frame.world_fixes_run
+  l.293 def Bisimulation
+  l.302 def Alike
+  l.306 theorem Bisimulation.eq
+  l.312 theorem Bisimulation.converse
+  l.318 theorem Bisimulation.comp
+  l.334 theorem Alike.refl
+  l.338 theorem Alike.symm
+  l.343 theorem Alike.trans
+  l.348 theorem Alike.realized
+  l.355 theorem Alike.step
+  l.364 theorem Bisimulation.trace
+  l.379 theorem Alike.trace
+  l.387 theorem Alike.tests
+  l.397 def DeterminedAt
+  l.401 theorem DeterminedAt.transfer
+  l.410 theorem DeterminedAt.goAlike
+  l.421 def IdentifiesAlike
+  l.426 theorem identifiesAlike_iff
+  l.441 theorem IdentifiesAlike.unique
+  l.446 theorem identifiesAlike_id_iff
+  l.457 def one
+  l.469 def exchangeFrame
+  l.473 theorem exchange_pointwise_bisimulation
+  l.481 theorem exchange_alike_of_pointwise
+  l.486 theorem exchange_pointwise_of_alike
+  l.491 theorem exchange_alike_iff
+  l.510 def Conditions.along
+  l.515 theorem Run.not_of_depletion
+  l.522 theorem no_execution_of_depletion
+  l.530 theorem Run.renewal_recurs
+  l.541 theorem Conditions.drawdown_not_recurring
+  l.552 def process
+  l.555 def withinRenewal
+  l.558 def beyondRenewal
+  l.564 theorem class_belongs_to_the_run
+  l.596 def Dependence.along
+  l.607 theorem conditions_along
+  l.615 def process
+  l.622 def ending
+  l.628 def transforming
+  l.633 def restoring
+  l.637 theorem ending_dependent
+  l.642 theorem transforming_dependent
+  l.648 theorem restoring_dependent
+  l.664 theorem loss_does_not_decide
+  l.694 def escalating
+  l.699 theorem stepwise_includes_before_escalation
+  l.711 def dipping
+  l.717 theorem dip_breaks_without_consuming
+  l.730 theorem broken_formation
+  l.742 def pausing
+  l.752 theorem drawing_after_loss
+  l.773 def process
+  l.777 def taking
+  l.781 def resting
+  l.788 theorem undermining_without_effect
+  l.816 theorem dip_within_two
+  l.832 theorem escalation_undermines_for_every_cycle
+  l.857 theorem renewal_without_arising
+  l.883 theorem Run.revisits_from
+  l.889 theorem Run.change_not_recurring
+  l.894 theorem Reach.lost_stays
+  l.900 theorem keeps_reach_iff_returns
+  l.906 theorem same_reach_iff_returns
+  l.913 theorem not_returns_iff_loses
+  l.924 def WithinMoves
+  l.931 theorem WithinMoves.before
+  l.936 theorem trace_steps
+  l.941 theorem trace_iff_steps
+  l.951 theorem withinMoves_iff_withinSteps
+  l.960 theorem WithinMoves.after_course
+  l.969 theorem withinMoves_iff_reach
+  l.975 theorem together_after_reach
+  l.981 theorem lost_together_not_returns
+
+## LastChange.lean  (388 lines)
+
+### `both_outcomes`
+- pass a: S: `LastChange.assured_iff_of_lpo` (l. 266) equates universal rest on target with every reachable state admitting a staying step meeting the target and absence of any undoable reachable change, under the stated finite-world and LPO premises.
+- pass b: S: `settles_iff_decided` (l. 178): settles iff at every step it is decided whether it changes again, for a run a list holds with no loop change. `settles_or_changes` (l. 138): given decision, for every m it has settled or made m+1 changes. `lpo_iff_settles` (l. 302) and `assured_iff_of_lpo` (l. 266). All general; they concern settling against changing, not going on against ending.
+
+### `no_return`
+- pass a: S: `LastChange.noLoop_of_no_undoable` (l. 231) assumes no reachable changed step has a return path and concludes no change occurs inside a loop of any run from the start.
+- pass b: S: `still_stays` (l. 286): a run still from T stays at its configuration at T; `still_same` (l. 291): a run has at most one rest. The irreversibility 'no reachable change can be undone' is a premise of `settles_of_no_undoable` (l. 240) and one side of the iff in `assured_iff_of_lpo` (l. 266), whose first direction concludes it from assurance with no LPO. It is at the level of configurations, not the loss of something that gives.
+
+### `rank`
+- pass a: S: `LastChange.still_within` (l. 366) supplies a stopping time ≤ d for a decidable deterministic orbit when q marks changes, is bounded by B and B ≤ d + q s. `changes_lt` (l. 107) bounds the number of changes on a general run without bounding their times.
+- pass b: S: `changes_lt` (l. 107): m+1 changes along a run a list holds with no loop change give m+1 < l.length, i.e. at most N−1 changes. `still_within` (l. 366): the mark rises at each change within room d, so the run is still from some step N ≤ d, decided with no omniscience.
+
+### `closed_region`
+- pass a: S: `LastChange.still_of_fixed_at` (l. 348) concludes the orbit stays still once it reaches a fixed point.
+- pass b: S: `still_of_fixed` (l. 327) and `still_of_fixed_at` (l. 348): where the law leaves the configuration reached at step N as it is, the run is still from N, a fixed point.
+
+### `moves`
+- pass a: S: `LastChange.assured_iff_of_lpo` (l. 266) characterizes rest on target for every run from s, allowing every process move, under LPO, decidable equality and a list covering the world.
+- pass b: S: `assured_iff_of_lpo` (l. 266): given LPO, a world a list holds and decidable configurations, every run of P from s comes to rest with target met iff every reachable configuration with a staying step meets the target and no reachable configuration has a step to another from which it can be reached again. This is a law over every run, i.e. every choice of moves. `not_not_rests` (l. 278) is the same with ¬¬ and no LPO.
+
+### `reading`
+- pass a: N: Not found in the statements read.
+- pass b: N: not found in what was read.
+
+### declarations of LastChange.lean (by script)
+  l.63 def Changes
+  l.67 def ChangesAgain
+  l.70 def StillFrom
+  l.72 theorem settles_of_still
+  l.77 theorem Changes.add
+  l.95 def atChanges
+  l.98 theorem atChanges_le
+  l.101 theorem atChanges_gt
+  l.107 theorem changes_lt
+  l.138 theorem settles_or_changes
+  l.153 theorem settles_of_decided
+  l.162 theorem decided_within
+  l.178 theorem settles_iff_decided
+  l.189 theorem not_not_decided
+  l.195 theorem not_not_settles_or_changes
+  l.209 theorem not_not_settles
+  l.218 theorem decided_of_lpo
+  l.225 theorem settles_of_lpo
+  l.231 theorem noLoop_of_no_undoable
+  l.240 theorem settles_of_no_undoable
+  l.247 theorem rests_of_settles
+  l.266 theorem assured_iff_of_lpo
+  l.278 theorem not_not_rests
+  l.286 theorem still_stays
+  l.291 theorem still_same
+  l.302 theorem lpo_iff_settles
+  l.327 theorem still_of_fixed
+  l.334 theorem still_succ
+  l.341 theorem room_balance
+  l.348 theorem still_of_fixed_at
+  l.366 theorem still_within
+
+## Lasting.lean  (1164 lines)
+
+### `both_outcomes`
+- pass a: S: `reaches_iff_not_lasts` (l. 831) equates reaching by n with failure to last outside through n for a determined law and a decidable target.
+- pass b: S: `reaches_iff_not_lasts` (l. 831): for a determined law and decided target, reaching within n iff not lasting outside the target n steps; `dual_needs_decision` (l. 842) shows the decision is needed. `kernel_iff_lasts` (l. 236), `avoids_iff_closed` (l. 458), `none_avoid_iff` (l. 504). All general.
+
+### `no_return`
+- pass a: S: `Drains.leaves` (l. 333) concludes no admissible history from outside drained level n keeps the guard through n. `guarded_none_iff` (l. 303) makes stopping irreversible for the guarded history from an initially met decidable guard, even if the underlying state returns.
+- pass b: S: `Drains.leaves` (l. 333) and `exhausts` (l. 422) conclude that from a start below level n every admissible history leaves the guard within n steps, at the level of the guard; regaining is not addressed. `Reaches.not_lasts` (l. 676): reaching excludes lasting outside the target. B: `Collapse.level_not_lasting` (l. 352): being at a level does not suffice.
+
+### `rank`
+- pass a: S: `orbit_reaches_iff_variant` (l. 808) equates hitting a decidable target by n on a deterministic orbit with a natural variant initially ≤ n that decreases outside target throughout the sublevel. `Variant.reaches` (l. 704) suffices under every admissible disturbance.
+- pass b: S: `Variant` (l. 687) and `Variant.reaches` (l. 704): a Nat level at most n at the start, lowered by every admissible step outside the target, reaches within n. `orbit_reaches_iff_variant` (l. 808): with a decided target, the orbit meets it within n iff such a variant exists. `numeric_needs_decision` (l. 860), `hitTime` (l. 753), `Drains.leaves` (l. 333).
+
+### `closed_region`
+- pass a: S: `avoids_iff_closed` (l. 458) equates perpetual target avoidance with a target-disjoint closed set containing the start. `kernel_iff_lasts` (l. 236) equates the disturbed guard kernel with lasting every finite horizon.
+- pass b: S: `lasts_ladder` (l. 148), Lasts being the largest ladder; `kernel_iff_lasts` (l. 236), the viability kernel equalling lasting every horizon; `avoids_iff_closed` (l. 458), a closed set containing the start and avoiding the target; `avoids_iff_kernel` (l. 476); `fixed_avoids` (l. 523), a fixed configuration as a closed set; `Funnel` (l. 545) and `Basin` (l. 552).
+
+### `moves`
+- pass a: S: `Lasts.trace` (l. 218) keeps the guard at the end of every admissible plan of length ≤ n from a start lasting n. `runOf_within` (l. 1039) keeps a family at all times for a supplied selection of a step remaining inside.
+- pass b: S: `Lasts` (l. 107) and `Reaches` (l. 539) quantify over every admissible disturbance; `lasts_iff_histories` (l. 212) says lasting n is staying in the guard for n steps of every admissible history, given one admissible disturbance; `kernel_iff_lasts` (l. 236). For a Process P with some course: `Continues` (l. 934), `Unbounded` (l. 939), `Unbounded.step_of_either` (l. 1002), and `lifting` (l. 1047), where finite branching, EitherThroughout and a choice of unbounded successor give a run along unbounded configurations.
+
+### `reading`
+- pass a: N: Not found in the statements read.
+- pass b: N: not found in what was read.
+
+### declarations of Lasting.lean (by script)
+  l.82 lemma is
+  l.107 def Lasts
+  l.113 structure Ladder
+  l.120 structure Necessary
+  l.128 structure Drains
+  l.136 theorem Lasts.within
+  l.141 theorem Ladder.lasts
+  l.148 theorem lasts_ladder
+  l.152 theorem lasts_iff_ladder
+  l.158 theorem Necessary.of_lasts
+  l.165 theorem lasts_necessary
+  l.169 theorem lasts_iff_necessary
+  l.175 theorem lasts_iff_of_exact
+  l.181 theorem prepend_admissible
+  l.188 theorem Lasts.histories
+  l.200 theorem lasts_of_histories
+  l.212 theorem lasts_iff_histories
+  l.218 theorem Lasts.trace
+  l.227 theorem lasts_of_kernel
+  l.236 theorem kernel_iff_lasts
+  l.244 theorem guarded_agrees
+  l.254 theorem guarded_within
+  l.290 theorem guarded_upto_iff
+  l.303 theorem guarded_none_iff
+  l.321 theorem Drains.along
+  l.333 theorem Drains.leaves
+  l.339 theorem Drains.necessary
+  l.348 def step
+  l.352 theorem level_not_lasting
+  l.368 theorem orbit_pair
+  l.376 theorem orbit_mono
+  l.388 theorem below_orbit
+  l.396 theorem stays_below_iff
+  l.408 theorem small_descends
+  l.422 theorem exhausts
+  l.451 theorem closed_orbit
+  l.458 theorem avoids_iff_closed
+  l.467 def determined
+  l.469 theorem orbit_eq_history
+  l.476 theorem avoids_iff_kernel
+  l.492 theorem some_avoids_iff
+  l.504 theorem none_avoid_iff
+  l.514 theorem reaches_excludes
+  l.523 theorem fixed_avoids
+  l.539 def Reaches
+  l.545 structure Funnel
+  l.552 structure Basin
+  l.559 theorem Funnel.reaches
+  l.567 theorem reaches_funnel
+  l.572 theorem reaches_iff_funnel
+  l.578 theorem Reaches.of_target
+  l.583 theorem Basin.of_reaches
+  l.591 theorem reaches_basin
+  l.596 theorem reaches_iff_basin
+  l.602 theorem reaches_iff_of_exact
+  l.607 theorem Reaches.succ
+  l.614 theorem Reaches.add
+  l.620 theorem Reaches.mono
+  l.629 theorem Reaches.trans
+  l.639 theorem Reaches.histories
+  l.651 theorem reaches_of_histories
+  l.669 theorem reaches_iff_histories
+  l.676 theorem Reaches.not_lasts
+  l.687 def Variant
+  l.692 theorem Variant.funnel
+  l.704 theorem Variant.reaches
+  l.716 theorem reaches_iff_orbit
+  l.737 theorem orbit_reaches_iff_funnel
+  l.753 def hitTime
+  l.757 theorem hitTime_succ
+  l.762 theorem hitTime_stable
+  l.779 theorem hitTime_of_reaches
+  l.793 theorem hitTime_lowers
+  l.808 theorem orbit_reaches_iff_variant
+  l.821 theorem reaches_of_not_lasts
+  l.831 theorem reaches_iff_not_lasts
+  l.842 theorem dual_needs_decision
+  l.851 theorem variant_decides
+  l.860 theorem numeric_needs_decision
+  l.874 def step
+  l.878 def found
+  l.883 theorem every_history
+  l.891 theorem reaches_iff_lpo
+  l.902 theorem histories_need_decision
+  l.934 def Continues
+  l.939 def Unbounded
+  l.943 def FinitelyBranching
+  l.947 theorem Continues.down
+  l.952 theorem Continues.decided
+  l.966 theorem list_throughout_not_not
+  l.984 theorem Unbounded.successors
+  l.991 theorem Unbounded.step_not_not
+  l.1002 theorem Unbounded.step_of_either
+  l.1014 theorem unbounded_start_of_either
+  l.1021 def along
+  l.1028 def runOf
+  l.1034 theorem runOf_start
+  l.1039 theorem runOf_within
+  l.1047 theorem lifting
+  l.1063 def process
+  l.1066 theorem branching
+  l.1072 theorem chain_continues
+  l.1082 theorem chain_holds
+  l.1089 theorem two_unbounded
+  l.1097 theorem side_of_unbounded
+  l.1107 theorem step_iff_either
+  l.1122 inductive Pos
+  l.1127 inductive Step
+  l.1131 def process
+  l.1134 theorem arm_continues
+  l.1140 theorem arm_bounded
+  l.1146 theorem root_unbounded
+  l.1153 theorem no_unbounded_step
+
+## LastingRuns.lean  (299 lines)
+
+### `both_outcomes`
+- pass a: S: `guarded_upto_iff` (l. 83) and `guarded_none_iff` (l. 97) give both outcomes of the guarded run at n. `reaches_iff_not_lasts_courses` (l. 234) gives the bounded course duality for a determined law and decidable target.
+- pass b: S: `reaches_iff_not_lasts_courses` (l. 234): for a determined law and decided target, some course of at most n moves ends in the target iff not every such course ends outside it. `dual_needs_decision_courses` (l. 246): without the decision this would eliminate double negation. General.
+
+### `no_return`
+- pass a: S: `guarded_none_iff` (l. 97) concludes that the guarded history has stopped by n exactly if the run failed to stay within its initially met decidable guard through n. Any later horizon still includes that failure.
+- pass b: B: `collapse_leaves` (l. 126): from a start at level 1 of a drained family some course of at most one disturbance leaves the guard. S: `reaches_excludes_courses` (l. 272): reaching the target from every seed rules out a closed avoiding set holding a seed. Leaving is concluded at the guard's level.
+
+### `rank`
+- pass a: S: `reaches_trans_runs` (l. 185) gives a hit by k+m from a start reaching a region by m if every member reaches target by k. `drained_of_courses` (l. 115) makes level n necessary for safety of every plan up to n, given an admissible disturbance.
+- pass b: S: `reaches_iff_runs` (l. 165), meeting within n; `runs_iff_of_exact` (l. 176); `numeric_needs_decision_courses` (l. 261): a numeric variant for every course into a target would decide equality.
+
+### `closed_region`
+- pass a: S: `reaches_excludes_courses` (l. 272) excludes a target-disjoint closed set containing a seed when every seed has a course of the determined law reaching target.
+- pass b: S: `reaches_excludes_courses` (l. 272), closed sets avoiding the target; `courses_iff_of_exact` (l. 108), a ladder-and-necessary family being exactly what every course keeps in the guard. B: `needs_admissible_runs` (l. 288): with no admissible disturbance there is no run, while the configuration is not in the kernel of the empty guard.
+
+### `moves`
+- pass a: S: `courses_iff_of_exact` (l. 108) identifies guard preservation by every admissible plan of length ≤ n with membership of the start at level n of a family that is both a ladder and necessary.
+- pass b: S: `lasts_iff_runs` (l. 71): given one admissible disturbance, a start lasts n iff every run of disturbed f adm from it stays within the guard for its first n steps. `reaches_iff_runs` (l. 165): given one admissible disturbance and a decided target, reaching within n iff every run meets the target within n.
+
+### `reading`
+- pass a: N: Not found in the statements read.
+- pass b: N: not found in what was read.
+
+### declarations of LastingRuns.lean (by script)
+  l.65 theorem run_history_from
+  l.71 theorem lasts_iff_runs
+  l.83 theorem guarded_upto_iff
+  l.97 theorem guarded_none_iff
+  l.108 theorem courses_iff_of_exact
+  l.115 theorem drained_of_courses
+  l.126 theorem collapse_leaves
+  l.142 theorem stays_below_iff
+  l.165 theorem reaches_iff_runs
+  l.176 theorem runs_iff_of_exact
+  l.185 theorem reaches_trans_runs
+  l.196 theorem search_runs_need_decision
+  l.218 theorem determined_lasts_iff_courses
+  l.234 theorem reaches_iff_not_lasts_courses
+  l.246 theorem dual_needs_decision_courses
+  l.261 theorem numeric_needs_decision_courses
+  l.272 theorem reaches_excludes_courses
+  l.288 theorem needs_admissible_runs

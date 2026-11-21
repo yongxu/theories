@@ -1,0 +1,17 @@
+Reader whole-b-52. All five modules read whole: every declaration's statement and docstring, and the opening account of each. Proof bodies were open in the files I read but I did not rely on them except where noted. No Lean was run and nothing was written.
+
+What could not be answered, and why:
+- Presence.lean is about one model, causal-set growth, though its laws hold for every finite causal set. Questions 4 to 9 and 12 have nothing to meet in it.
+- Presentations.lean is about codes and readings only. It has no step dynamics.
+- ProfileReach.lean has no moves, no level and no rank.
+- In ProjectedLaws.lean, the level, cost, irreversibility and formation answers come only from its built Device model (`organization`).
+
+Things the fourteen questions miss that bear on the centre:
+1. ProjectedLaws.lean comes closest of the five to the centre's ingredients, but only as a built case.
+   - A formation (assembly) draws on a fuel that never rises and on a spare. It keeps the cell values and opens a move (exchange) that was not possible before.
+   - No process on the cell values alone keeps the possible futures (`parts_only_cannot_preserve_futures`). So a reading that registers only the parts misses what formation changed.
+   - Once fuel is 0 no assembly is enabled (`no_fuel_blocks_formation`), and fuel never rises (`fuel_does_not_increase`). Putting the two together gives "once out, never again", but no single theorem states that.
+   - The general laws `reduced_law_exists_iff` and `fibre_iff_goAlike` state exactly when a reading carries a law of its own.
+2. Presence.lean has a general negative result about decisions. Laws on every course settle a relation only up to double negation: their decided forms are each exactly excluded middle. Laws on some course are each exactly weak excluded middle. This bears on any claim that what every course keeps can be asserted.
+3. A mismatch between account and statements. The opening account of the second section of Presentations.lean (`PresentationFrames`, l. 375-407) names `correspondence`, `canonical_factor` and `canonical_factor_answers` as laws read on frames. That namespace declares only `canonical_exact`, `canonical_kernel` and `everyPredicate`, plus empty sections. No declaration named `correspondence` was found anywhere in the file. `canonical_factor` and `canonical_factor_answers` exist only in the first namespace, `Presentations`.
+4. ProfileReach.lean reads "own" as a region of formed relations. Its `closed_self_blocks_reach` (built) is the one place in this batch where a region closed to small steps stops something from carrying outward.

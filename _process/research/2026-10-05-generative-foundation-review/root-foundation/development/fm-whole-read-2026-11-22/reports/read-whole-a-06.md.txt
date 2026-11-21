@@ -1,0 +1,7 @@
+AI-written reader report, whole-a-06.
+
+I read all 22 assigned modules, from Gated.lean through Handoff.lean in the supplied order. For each I read the opening account, every declaration statement and its docstring. None was partial, and no question was left unreached. Each N is limited to that module.
+
+I found no statement in the batch joining the share-only rule update to the loss of the formations that replenish its support. In GrammarRegularity.lean, ClosedCapture.lock_line (l. 324) keeps the lock while a loss count rises. In GroupEnding.lean, Flow.family_childless (l. 207) derives persistent childlessness for members that still need an overdrawn family of conditions. Its premises say which givers depend on that family and when uptake exceeds replenishment. The reproductive cost of holding back is assigned in the offspring examples.
+
+Two distinctions matter for the centre. In GrammarMap.lean, Map.Short.renews_and_ends_everywhere (l. 500) exhibits renewal even though every branch ends. In Granularity.lean, Midway.no_prefix_reading (l. 1225) shows that even all nonempty prefixes of a completed block can hide a lost continuation. Midway.resumption_recovers_loss (l. 1234) distinguishes the starts by asking whether finish is still available after begin.

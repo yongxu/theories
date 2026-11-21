@@ -1,0 +1,260 @@
+# Task file: EDGE, reader whole-c-edge-16
+
+Your 2 modules. For orientation only, what the two passes said of the four marks, of moves and of a reading (where to look, not evidence).
+
+## LoopReturn.lean  (1040 lines)
+
+### `both_outcomes`
+- pass a: S: `whole_factors` (l. 520) distinguishes loss of the gap after one turn, preservation forever, and growth beyond every bound from positive d, for multiplying links with product zero, one, or at least two respectively.
+- pass b: S: `whole_factors` (l. 520): for multiplying links with product P, P = 0 closes at the first turn, P = 1 keeps d at every turn, and P ≥ 2 from positive d exceeds every bound. `nothing_between` (l. 537): at every turn, 0 or no less than before. `around_course_iff` (l. 733): a turn around a cycle of exact links equals the return map's course exactly when the loop gained nothing over its first m steps and the last link carries on nothing. `responds_iff` (l. 973). All general.
+
+### `no_return`
+- pass a: S: `closing_merges` (l. 333) concludes a merge if zero is fixed and a positive start reaches zero. `stays_from_fixed` (l. 163) makes reaching that fixed value permanent.
+- pass b: S: `closing_merges` (l. 333): where f 0 = 0 and the course from a positive d reaches 0, f merges two differences (Law.Merges). `closing_not_lossless` (l. 339): f is not lossless. The account cites Law.merged_stays and Law.Merges.loses (other modules) for 'loses a possibility for good'. `stays_from_fixed` (l. 163): once the course meets a value f keeps, it stays there. These are concluded from the premises named, at the level of the difference.
+
+### `rank`
+- pass a: S: `difference_variant` (l. 257) uses the difference itself as a variant for reaching zero when each positive value decreases. `closes_within_exact` (l. 304) exhibits predecessor attaining the bound.
+- pass b: S: `closes_within` (l. 268) through `difference_variant` (l. 257): the difference is a Lasting.Variant for reaching 0 within d turns. `settles_within` (l. 415): a monotone f with f d ≤ d meets a fixed value by turn d and stays. `sub_const_closes` (l. 292) and `sub_const_open` (l. 298): the closing turn is the least n with n·c ≥ d. `cut_closes` (l. 365). B: `closes_within_exact` (l. 304) and `settles_within_exact` (l. 429): the bound d is exact under Nat.pred.
+
+### `closed_region`
+- pass a: S: `settles_within` (l. 415) concludes that an order-preserving map with f d ≤ d reaches a fixed point by d and stays there.
+- pass b: S: `orbit_of_fixed` (l. 158): a course at a value f keeps stays there at every turn. `stays_from_fixed` (l. 163). `settles_within` (l. 415): a fixed value reached and kept.
+
+### `moves`
+- pass a: N: Not found in the statements read.
+- pass b: N: return maps and links are deterministic functions handed in, with no choice among steps.
+
+### `reading`
+- pass a: S: `responds_iff` (l. 973) equates an exchange response depending only on the gap with the next gap being f of the current gap, under balance on the condition at every step.
+- pass b: N
+
+### declarations of LoopReturn.lean (by script)
+  l.41 instance of
+  l.145 def returnMap
+  l.150 def scaling
+  l.153 def factor
+  l.158 theorem orbit_of_fixed
+  l.163 theorem stays_from_fixed
+  l.170 theorem eq_zero_of_add_le
+  l.175 theorem one_pow
+  l.182 theorem kept_of_identity
+  l.187 theorem returnMap_of_identity
+  l.195 theorem loop_kept
+  l.203 theorem returnMap_ge
+  l.212 theorem orbit_ge_of_ge
+  l.219 theorem never_closes_of_no_less
+  l.225 theorem below_of_falls
+  l.235 theorem link_below_of_below
+  l.248 theorem closing_needs_less
+  l.257 theorem difference_variant
+  l.265 instance of
+  l.268 theorem closes_within
+  l.284 theorem orbit_sub_const
+  l.292 theorem sub_const_closes
+  l.298 theorem sub_const_open
+  l.304 theorem closes_within_exact
+  l.320 theorem last_positive
+  l.333 theorem closing_merges
+  l.339 theorem closing_not_lossless
+  l.347 theorem returnMap_zero
+  l.356 theorem returnMap_cut
+  l.365 theorem cut_closes
+  l.373 theorem cut_reopened
+  l.382 theorem never_rises
+  l.389 theorem never_falls
+  l.396 theorem settled_or_fallen
+  l.415 theorem settles_within
+  l.429 theorem settles_within_exact
+  l.440 theorem returnMap_doubles
+  l.447 theorem two_pow_succ_mul
+  l.454 theorem runs_away
+  l.464 theorem lt_two_pow_mul
+  l.469 theorem runs_away_unbounded
+  l.476 theorem orbit_doubling
+  l.484 theorem doubling_exact
+  l.493 theorem empty_loop_kept
+  l.499 theorem returnMap_scaling
+  l.508 theorem orbit_scaling
+  l.520 theorem whole_factors
+  l.537 theorem nothing_between
+  l.550 theorem gradual_needs_another_link
+  l.570 theorem factor_single
+  l.575 theorem geomBound_eq_course
+  l.587 theorem selfLoop_carried
+  l.597 theorem selfLoop_gap
+  l.611 theorem carried_around_course
+  l.636 def GivesExactly
+  l.645 def heldAlong
+  l.650 theorem link_rearranged
+  l.659 theorem carried_along_exact
+  l.680 theorem carried_around_exact
+  l.701 theorem carried_around_excess
+  l.733 theorem around_course_iff
+  l.760 def RingGives
+  l.769 theorem ring_even
+  l.783 theorem product_const
+  l.789 theorem one_add_pow_lt
+  l.804 def pred
+  l.809 def conditions
+  l.812 def strengths
+  l.817 def amount
+  l.822 def cycle
+  l.824 theorem cycle_start
+  l.826 theorem cycle_back
+  l.829 theorem pred_cycle
+  l.839 theorem pred_mem
+  l.844 theorem cycle_mem
+  l.852 theorem total_at
+  l.865 theorem gives
+  l.882 theorem coupled
+  l.889 theorem givesExactly
+  l.897 theorem amount_eq
+  l.904 theorem exceeds_course
+  l.919 theorem bound_strict
+  l.940 theorem gap_add_right
+  l.948 def RespondsByReturn
+  l.956 theorem gap_succ
+  l.973 theorem responds_iff
+  l.984 theorem gap_course
+  l.997 theorem gap_scaling
+  l.1006 theorem replenishing_responds
+  l.1014 theorem replenishing_course
+  l.1024 theorem replenishing_no_return
+
+## Openness.lean  (1261 lines)
+
+### `both_outcomes`
+- pass a: S: World.CountedBy.arising_iff_ceasing (l. 373) gives an equivalence of recurrences under decidable activity and the returning census bound. World.comes_to_rest_unrefuted (l. 599) gives a sufficient condition for eventual rest under double negation.
+- pass b: S: `World.CountedWithin.arising_iff_ceasing` (l. 366): with decided activity and at most `B` relata active at each step, arising recurs iff ceasing recurs; `World.CountedBy.arising_iff_ceasing` (l. 373) where the bound returns to at most `K` at arbitrarily late steps; `Web.StandingCensus.coming_iff_ceasing` (l. 157). These pair two kinds of change, not going on and ending. S: `World.arising_opens` (l. 676) one direction only. B: `World.openness_contingent` (l. 1054): `exposed` meets the eight premises, never enclosed, and keeps arising, while `mutualism` meets them, enclosed at every step, and does not; `census_one_way` (l. 432). N for an exactly-when of going on and ending for one model.
+
+### `no_return`
+- pass a: S: Flow.standing_never_rises (l. 257) bounds each next stock by the present one under balance, dissipation, census and enclosure. Thus a stock lost across a change stays lost while these premises continue. It gives no threshold for loss of a giver.
+- pass b: S: `Flow.standing_never_rises` (l. 257): across every enclosed step the total standing does not rise, concluded from balance, dissipation and the standing census, at the level of total standing, not at the loss of a giver. S: `World.comes_to_rest_unrefuted` (l. 599): rest from some step on, `¬¬ ∃ N, RestsFrom N`, concluded under census, embodiment, balance, dissipation and enclosure from `T`. S: `Listed.lpo_of_few` (l. 824): strengthening `few_of_quiet` to a list of every member ever holding gives LPO. D: naming the step of rest needs omniscience (account, `World.lpo_of_finite_ends`, not in this module).
+
+### `rank`
+- pass a: S: Flow.standing_runs_down (l. 246) bounds next stock plus the taker count for some family by current stock under balance, dissipation, census and enclosure. Flow.exchange_lowers (l. 314) makes any positive exchange by a present formation strictly lower the stock under those premises.
+- pass b: S: `Flow.change_stops_unrefuted` (l. 288): under a standing census, where from `T` on each step is not refuted to run down, it is not the case that after every `M ≥ T` a later change stays unrefuted; its proof uses `Amounts.rests_unrefuted` with the total standing as a whole-number quantity falling by at least 1 at each change from the bound `stock + 1`. `Flow.standing_runs_down` (l. 246): it falls by at least the number of takers. No explicit bound on the step of ending is given; the conclusion is only unrefuted.
+
+### `closed_region`
+- pass a: B: Holding.census (l. 997) lists the same single active side at every time. Flow.AroundStanding (l. 195) defines closure of exchange across one step.
+- pass b: S: `Flow.AroundStanding` (l. 195): a family without repetition, holding whatever stands before and after the step, closed across the step (`L.ClosedAt es t`); the laws assume it at every step from some step on. This is a family closed against exchange beyond it at one step, not a set of states closed under steps. S: `World.comes_to_rest_unrefuted` (l. 599) concludes a rest from some step on (unrefuted), `RestsFrom` defined elsewhere.
+
+### `moves`
+- pass a: N: No choice of next move.
+- pass b: N: the flows are given per step (`present`, `take`, `give` as functions of the step); no choice among steps, policy or allowed set appears in any statement.
+
+### `reading`
+- pass a: N: The censuses list activity or standing, with no selection from an observation.
+- pass b: N: no observation or class read alike; the censuses (`Web.Census`, `Web.StandingCensus`, `Listed`) are lists of what is active or stands, and the laws use them as listings, not as a rule made from what is registered.
+
+### declarations of Openness.lean (by script)
+  l.150 theorem Web.StandingCensus.coming_of_ceasing
+  l.157 theorem Web.StandingCensus.coming_iff_ceasing
+  l.163 instance Web.decideComesToStand
+  l.167 instance Web.decideCeasesToStand
+  l.174 theorem Web.StandingCensus.over_stretch_on
+  l.185 theorem Web.StandingCensus.over_stretch
+  l.195 def Flow.AroundStanding
+  l.201 def Flow.ExchangeRecurs
+  l.210 theorem Enclosed.aroundStanding
+  l.219 theorem Enclosed.aroundStanding_not_not
+  l.228 theorem fall_lowers_on
+  l.236 theorem AroundStanding.runsDownClosed
+  l.246 theorem standing_runs_down
+  l.257 theorem standing_never_rises
+  l.264 theorem change_lowers
+  l.275 theorem change_not_recurring_from
+  l.288 theorem change_stops_unrefuted
+  l.304 theorem change_stops_unrefuted_around
+  l.314 theorem exchange_lowers
+  l.325 theorem exchange_not_recurring_from
+  l.334 theorem exchange_not_recurring_around
+  l.347 def CountedBy
+  l.351 def CountedWithin
+  l.359 theorem arising_of_ceasing
+  l.366 theorem CountedWithin.arising_iff_ceasing
+  l.373 theorem CountedBy.arising_iff_ceasing
+  l.384 theorem Finite.census_bounded
+  l.392 theorem Finite.countedWithin
+  l.402 def alive
+  l.406 theorem mem_alive
+  l.418 theorem alive_distinct
+  l.423 theorem census
+  l.432 theorem census_one_way
+  l.441 theorem accretion_unbounded
+  l.449 def web
+  l.457 theorem census
+  l.469 def procession
+  l.472 instance procession_decided
+  l.477 theorem procession_world
+  l.490 def web
+  l.497 theorem length
+  l.502 theorem census
+  l.505 theorem grows_between
+  l.515 def slow
+  l.518 instance slow_decided
+  l.524 theorem slow_world
+  l.544 theorem arising_not_recurring_from
+  l.554 theorem arising_stops_unrefuted_from
+  l.566 theorem arising_stops_unrefuted
+  l.581 theorem comes_to_rest_unrefuted_from
+  l.599 theorem comes_to_rest_unrefuted
+  l.613 theorem Finite.standing
+  l.626 theorem rest_needs_census
+  l.645 theorem standingCensus
+  l.650 theorem rises_of_arises
+  l.656 theorem falls_of_ceases
+  l.665 theorem rests_unrefuted_around
+  l.676 theorem arising_opens
+  l.687 def gather
+  l.691 theorem gather_self
+  l.695 theorem mem_gather
+  l.702 theorem comes_after
+  l.709 theorem comes_after_unrefuted
+  l.718 theorem Listed.few_of_quiet
+  l.734 theorem Listed.few_of_stop_unrefuted
+  l.750 def pick
+  l.757 def found
+  l.762 abbrev passed
+  l.765 theorem distinct_pick
+  l.770 theorem distinct_found
+  l.774 theorem mem_pick
+  l.793 theorem mem_found
+  l.798 theorem listed
+  l.802 theorem comes_at
+  l.809 theorem coming_not_recurring
+  l.824 theorem Listed.lpo_of_few
+  l.848 theorem rest_few
+  l.868 theorem exchange_not_recurring
+  l.880 inductive Relatum
+  l.885 def level
+  l.891 def flow
+  l.906 def web
+  l.914 def sideOf
+  l.919 def index
+  l.924 theorem outside
+  l.928 theorem open_at
+  l.933 theorem stands_iff
+  l.942 theorem census
+  l.955 theorem holder_one
+  l.965 def level
+  l.972 def flow
+  l.986 def web
+  l.993 theorem open_at
+  l.997 theorem census
+  l.1012 def exposed
+  l.1017 theorem exposed_world
+  l.1039 theorem exposed_standing
+  l.1054 theorem openness_contingent
+  l.1061 def holding
+  l.1070 theorem holding_world
+  l.1103 theorem hatch_rests_unrefuted
+  l.1116 def sideOf
+  l.1121 def index
+  l.1126 theorem fuel_stands
+  l.1131 theorem census
+  l.1143 theorem unlisted
+  l.1153 def web
+  l.1166 def embodiedThroughput
+  l.1175 theorem rest_needs_standing
+  l.1208 theorem exchange_needs

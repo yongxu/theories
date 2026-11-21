@@ -1,0 +1,474 @@
+# Task file: EDGE, reader whole-c-edge-02
+
+Your 3 modules. For orientation only, what the two passes said of the four marks, of moves and of a reading (where to look, not evidence).
+
+## CausalGrowth.lean  (1781 lines)
+
+### `both_outcomes`
+- pass a: B: `chainLimit_renews` (l. 1494) gives endless renewal at 1 under Halves.pairs on the chain limit, while `antichainLimit_not_renews` (l. 1451) rules it out under every class on the antichain limit. These are separate limits of the growth.
+- pass b: S: ordered_not_renews (l. 1435): no configuration of the growth renews without end («生生»), in any class. B: chainLimit_renews (l. 1494): in the chain's limit, 1 renews without end under Halves.pairs; antichainLimit_not_renews (l. 1451): nothing renews in the antichain's limit. These are two built limits, not one model's dichotomy.
+
+### `no_return`
+- pass a: S: `birth_holds` (l. 398) concludes precedence below an old element cannot be changed by a birth; `size_of_run` (l. 567) fixes size to the offset on every empty-start course, precluding a return to an earlier size.
+- pass b: S: birth_holds (l. 398) and step_holdsPast (l. 418): precedence below existing elements never changes, so the past is concluded to be held. stem_possible_from_start (l. 471): every stem a course ever admits is possible from its start. ordered_ceases (l. 1428): on every causal set every element ceases («息») in every class. Not at the loss of a giver.
+
+### `rank`
+- pass a: S: `ceases_of_bounded` (l. 1415) derives cessation under any class where every relation edge raises the natural label and its target stays below n; `ordered_ceases` (l. 1428) applies this within a finite configuration to precedence and links.
+- pass b: S: ceases_of_bounded (l. 1415): where a relation raises the label and relates only below n, every element ceases («息») under every class. labelled_of_reach (l. 364): reach raises the label, which serves as a variant. Causet.Ordered.acyclic (l. 372).
+
+### `closed_region`
+- pass a: S: `birth_ordered` (l. 383) keeps ordered configurations ordered under every stem birth; `Stem.after` (l. 431) preserves each old stem.
+- pass b: S: Stem (l. 342) is a downward-closed set. Stem.after (l. 431): a stem stays a stem across a birth. ordered_of_run (l. 447): every configuration on a course from a causal set is a causal set. birth_ordered (l. 383).
+
+### `moves`
+- pass a: S: `process` (l. 351) lets a move choose any downward-closed stem and add a birth with that past; `step_holdsPast` (l. 418) proves every such move preserves old precedence.
+- pass b: S: process (l. 351): Process Causet (Nat → Prop), whose move is a choice of stem D followed by birth c D. step_holdsPast (l. 418): every move holds the past. keepsWidening (l. 454): on every course (Run process) from a causal set, every stem stays a stem, and after each birth the stem of all elements is new. possibleHeld_iff (l. 424): the possible with the past held is the whole possible.
+
+### `reading`
+- pass a: S: `not_rangeWidens_formsOrContinues` (l. 1088) excludes strict widening between empty-start courses when both stems and single-class continuations are read. B: `Kinds.wide_swapped_mixed` (l. 1768) exhibits mutual exceeding by labelled stems despite isomorphic configurations at every offset from two (l. 1751).
+- pass b: S: classes E : «际» Nat read on precedence and continuation «相续» c.prec E. continuation_of_rangeIncludes (l. 664): including the other course's stems never adds continuation of any class. continuing (l. 978) and formsOrContinues (l. 1082) are two readings of what a configuration admits. no_order_contains_both (l. 1051): no strict order ranks above by both readings. Kinds.Isomorphic (l. 1599) reads configurations up to relabelling.
+
+### declarations of CausalGrowth.lean (by script)
+  l.133 def links
+  l.136 theorem links_le
+  l.139 theorem link_of_reach
+  l.145 theorem reach_links_le
+  l.154 theorem links_least
+  l.160 theorem links_of_iff
+  l.168 def searchBelow
+  l.182 theorem reach_links_within
+  l.202 theorem reach_links
+  l.208 theorem reach_links_iff
+  l.215 theorem nat_reach_links
+  l.219 def path
+  l.225 theorem path_not_reach_of_links
+  l.239 theorem searchBelow_or
+  l.252 theorem reach_links_within_of_decided
+  l.273 theorem reach_links_of_decided
+  l.283 def prec
+  l.288 theorem prec_irrefl
+  l.292 theorem prec_trans
+  l.301 theorem between
+  l.305 theorem no_link_into_top
+  l.310 theorem link_lands
+  l.315 theorem reach_lands
+  l.322 theorem not_reach_top
+  l.330 structure Causet
+  l.336 structure Causet.Ordered
+  l.342 structure Stem
+  l.347 def birth
+  l.351 def process
+  l.354 def empty
+  l.360 theorem Causet.Ordered.irrefl
+  l.364 theorem labelled_of_reach
+  l.372 theorem Causet.Ordered.acyclic
+  l.376 theorem ordered_reach_links_iff
+  l.380 theorem empty_ordered
+  l.383 theorem birth_ordered
+  l.398 theorem birth_holds
+  l.405 theorem birth_maximal
+  l.414 def HoldsPast
+  l.418 theorem step_holdsPast
+  l.424 theorem possibleHeld_iff
+  l.431 theorem Stem.after
+  l.437 def all
+  l.439 theorem stem_all
+  l.443 theorem not_stem_all_birth
+  l.447 theorem ordered_of_run
+  l.454 theorem keepsWidening
+  l.471 theorem stem_possible_from_start
+  l.482 def third
+  l.485 theorem third_ordered
+  l.505 theorem third_not_from_two
+  l.511 theorem third_no_reach_from_two
+  l.517 theorem em_of_reach_third
+  l.531 theorem reach_links_all_iff_em
+  l.543 def principal
+  l.545 theorem stem_principal
+  l.557 theorem stems_included_iff
+  l.567 theorem size_of_run
+  l.572 theorem ordered_of_empty
+  l.580 theorem rangeIncludes_iff
+  l.589 theorem rangeIncludes_strict_iff
+  l.600 theorem rangeExceeds_of_pair
+  l.611 theorem not_included_of_rangeExceeds
+  l.622 theorem rangeWidens_of
+  l.629 theorem rangeWidens_strict
+  l.637 theorem pair_of_not_included
+  l.654 theorem rangeExceeds_iff_pair
+  l.664 theorem continuation_of_rangeIncludes
+  l.670 theorem continuation_one_iff
+  l.681 theorem continuation_links_one_iff
+  l.692 theorem continuation_links_one_of_rangeIncludes
+  l.704 theorem prec_iff_of_both
+  l.715 theorem not_widens_and_continues
+  l.728 def grown
+  l.732 theorem grown_size
+  l.738 theorem grown_prec_iff
+  l.754 def course
+  l.757 theorem course_start
+  l.761 def antichain
+  l.765 def chain
+  l.770 theorem antichain_prec
+  l.773 theorem chain_prec_iff
+  l.780 theorem antichain_rangeIncludes
+  l.784 theorem antichain_rangeWidens
+  l.791 theorem antichain_begins_ends
+  l.799 theorem rangeIncludes_chain
+  l.806 theorem rangeWidens_chain
+  l.812 theorem continuation_le_chain
+  l.817 theorem chain_link
+  l.824 theorem chain_abides
+  l.831 theorem chain_last_ends
+  l.839 theorem stems_of_two
+  l.859 def thirdPast
+  l.861 theorem thirdPast_stems
+  l.875 def thirdCourse
+  l.878 theorem thirdCourse_prec_iff
+  l.891 def onlyIfPast
+  l.893 theorem onlyIf_two
+  l.897 def onlyIf
+  l.900 theorem onlyIf_prec
+  l.905 theorem antichain_exceeds_onlyIf
+  l.914 theorem notNot_em
+  l.920 theorem reach_links_courses_iff_em
+  l.932 theorem em_of_pair_converse
+  l.941 theorem em_of_widening_pair_converse
+  l.950 theorem pair_converse_of_em
+  l.965 theorem pair_converse_iff_em
+  l.978 def continuing
+  l.982 theorem rangeIncludes_continuing_iff
+  l.993 theorem rangeWidens_continuing_iff
+  l.1007 theorem rangeWidens_stems_of_continuing
+  l.1014 theorem chain_rangeWidens_continuing
+  l.1023 theorem em_of_stems_converse
+  l.1034 theorem stems_converse_of_em
+  l.1044 theorem stems_converse_iff_em
+  l.1051 theorem no_order_contains_both
+  l.1068 theorem not_above_antichain
+  l.1075 theorem chain_not_above
+  l.1082 def formsOrContinues
+  l.1088 theorem not_rangeWidens_formsOrContinues
+  l.1103 theorem mixed_of_pair
+  l.1122 def one
+  l.1125 def twoChain
+  l.1128 def grownFrom
+  l.1132 theorem grownFrom_size
+  l.1138 theorem grownFrom_prec_iff
+  l.1159 theorem grownFrom_empty_prec
+  l.1168 def fromEmptyPasts
+  l.1172 def fromOne
+  l.1174 theorem fromOne_prec
+  l.1177 theorem fromOne_size
+  l.1179 theorem fromOne_stem_of_antichain
+  l.1186 theorem fromOne_stem_zero
+  l.1189 theorem not_stem_antichain_zero
+  l.1193 theorem fromOne_widens
+  l.1198 theorem antichain_not_continuing
+  l.1204 theorem fromOne_widens_formsOrContinues
+  l.1211 theorem not_rangeWidens_formsOrContinues_needs_starts
+  l.1217 theorem rangeIncludes_continuing_iff_needs_starts
+  l.1224 theorem not_widens_and_continues_needs_starts
+  l.1230 def fromTwo
+  l.1232 theorem fromTwo_prec_iff
+  l.1236 def onePast
+  l.1238 theorem onePast_stems
+  l.1242 def oneAbove
+  l.1244 theorem oneAbove_prec
+  l.1251 theorem mixed_of_pair_needs_starts
+  l.1270 theorem fromTwo_stem_all
+  l.1274 theorem not_stem_antichain_all
+  l.1279 theorem not_above_antichain_needs_start
+  l.1290 def chainFromOnePast
+  l.1292 theorem chainFromOne_prec_iff
+  l.1300 theorem chainFromOne_labelled
+  l.1305 def chainFromOne
+  l.1310 theorem not_continuing_chain_one
+  l.1318 theorem rangeWidens_stems_of_continuing_needs_starts
+  l.1337 theorem prec_iff_of_both_needs_starts
+  l.1361 theorem strict_needs_starts
+  l.1374 theorem rangeWidens_of_needs_starts
+  l.1385 theorem continuation_of_rangeIncludes_needs_starts
+  l.1393 def full
+  l.1395 theorem full_stem_empty
+  l.1402 theorem keepsWidening_needs_start
+  l.1415 theorem ceases_of_bounded
+  l.1428 theorem ordered_ceases
+  l.1435 theorem ordered_not_renews
+  l.1441 def chainLimit
+  l.1443 theorem chainLimit_iff
+  l.1448 def antichainLimit
+  l.1451 theorem antichainLimit_not_renews
+  l.1457 def half
+  l.1463 def pairs
+  l.1465 theorem pairs_class
+  l.1467 theorem double_succ
+  l.1470 theorem half_double
+  l.1474 theorem half_double_succ
+  l.1478 theorem half_lt
+  l.1487 def odd
+  l.1494 theorem chainLimit_renews
+  l.1513 def widePast
+  l.1517 def narrowPast
+  l.1520 def classOf
+  l.1522 theorem classOf_class
+  l.1525 theorem wide_stems
+  l.1529 theorem narrow_stems
+  l.1539 def wide
+  l.1541 def narrow
+  l.1544 theorem widens
+  l.1552 theorem continues
+  l.1560 theorem not_continues
+  l.1575 theorem loses
+  l.1593 def Relabels
+  l.1599 def Isomorphic
+  l.1603 def Included
+  l.1610 theorem stems_carried_iff
+  l.1630 theorem stems_carried_unequal
+  l.1640 def swap
+  l.1643 theorem swap_fixed
+  l.1646 theorem swap_swap
+  l.1652 theorem swap_below
+  l.1657 theorem swap_eq_two_iff
+  l.1662 theorem swap_eq_one_iff
+  l.1669 theorem antichain_two_stems_one_kind
+  l.1689 theorem not_included_antichain_chain
+  l.1703 theorem not_included_chain_antichain
+  l.1719 theorem included_at_zero
+  l.1728 def swappedPast
+  l.1730 theorem swapped_two
+  l.1733 def swapped
+  l.1736 theorem wide_prec_iff_swapped
+  l.1751 theorem wide_swapped_isomorphic
+  l.1768 theorem wide_swapped_mixed
+
+## ClosedCapture.lean  (995 lines)
+
+### `both_outcomes`
+- pass a: S: `Thinned.kept_iff` and `turned_iff` (ll. 900, 918) give separate iff statements for the two directions. Each requires Accrues, mirrored late readings, strict carrier preference, a post-threshold reading step and the matching favour of the rule in force. Ties count in both weak majorities.
+- pass b: S: Thinned.kept_iff (l.900): with the late reading the mirror of the carriers' and the rule in force favouring, the course is locked at every later step exactly when carriers ≥ others at the reading step. Thinned.turned_iff (l.918): with the rule in force disfavouring, the course is turned for good exactly when carriers ≤ others. Both are general in fB, counts and step, on CarrierCounts. courses_alike_iff_unread (l.202) is general. B: Thinned.inTime_turned (l.960) against Thinned.late_kept (l.977), the same loss read in time or late. Beyond.closed_locked (l.365) against Beyond.open_turned (l.385).
+
+### `no_return`
+- pass a: S: `Thinned.read_late_kept` (l. 830) concludes perpetual lock after a post-threshold reading when loss accrues, the late reading is ordered below the carriers’ and both rule and pool favour carriers.
+- pass b: S: Concluded from Raises, ReadsShare, upper and a Locked start. lock_outlives_loss (l.307): locked at every step while the loss passes every bound. agreeing_stays (l.765): from a reading step where the rule in force and the rule read both favour, the course is locked for good. Thinned.read_late_kept (l.830): kept for good. Thinned.read_in_time_turns (l.861): locked the other way for good. The irreversibility is of the lock, not at a low level and not at the loss of a giver.
+
+### `rank`
+- pass a: S: `turned_by_loss` (l. 291) gives loss of favour at r+1 if r is a reading step with N ≤ b+r, Accrues holds and the read never favours at loss ≥ N.
+- pass b: S: Bounds on when locking or turning occurs, not ending. turned_by_loss (l.291): not favouring at the step after any reading step r with N ≤ b + r. readers_uniform_locks (l.470) and Drawn.through_locks (l.646): locked from the step after the second reading step. N: no falling variant or drain.
+
+### `closed_region`
+- pass a: S: `agreeing_stays` (l. 765) preserves lock and lower bounds on share and rule after an agreeing reading, under Raises, ReadsShare and upward-closed favour.
+- pass b: S: lock_outlives_loss (l.307), readers_not_below (l.438) and agreeing_stays (l.765): the Locked region is closed under every step and neither share, rule nor reading falls below where it was. reading_absorbed (l.455): a change of reading with a rule that still favours is absorbed at the next reading step.
+
+### `moves`
+- pass a: S: `turn_unread` (l. 135) preserves equality of share and rule under either Boolean reading move when both updates ignore the other coordinate.
+- pass b: S: The only choice is the reading schedule reads : Nat → Bool, and laws hold along every schedule. identifiesAlike_iff_unread (l.166) and courses_alike_iff_unread (l.202) hold for all schedules exactly when Unread holds. goAlike_of_unread (l.147) uses Law.process (Pace.step f h reads). There is no choice among moves in a Process S A.
+
+### `reading`
+- pass a: S: `courses_alike_iff_unread` (l. 202) equates agreement of all share-and-rule courses from matching starts, for every schedule, with Unread.
+- pass b: S: Unread (l.131). identifiesAlike_iff_unread (l.166): share, rule and step count (loopPart) identify alike along every schedule exactly when Unread holds. turned_by_loss (l.291): where the rule read favours at no configuration whose loss is at least N and the loss accrues, the rule in force does not favour at the step after every reading step r with N ≤ b + r. Drawn.pool_reads_iff (l.612): the pool reads the share monotonically exactly when the others' reading is at most the carriers' reading.
+
+### declarations of ClosedCapture.lean (by script)
+  l.131 def Unread
+  l.135 theorem turn_unread
+  l.143 def loopPart
+  l.147 theorem goAlike_of_unread
+  l.166 theorem identifiesAlike_iff_unread
+  l.186 theorem unread_course
+  l.202 theorem courses_alike_iff_unread
+  l.212 theorem reads_beyond_of_apart
+  l.220 def join
+  l.223 def joinRead
+  l.225 theorem join_unread
+  l.231 theorem join_alike
+  l.240 theorem turn_join
+  l.248 theorem join_course
+  l.273 def Accrues
+  l.277 theorem loss_grows
+  l.291 theorem turned_by_loss
+  l.307 theorem lock_outlives_loss
+  l.344 def lossStep
+  l.347 def closedRead
+  l.350 def lossRead
+  l.356 def closed
+  l.360 def opened
+  l.365 theorem closed_locked
+  l.375 theorem open_falls
+  l.379 theorem lossRead_turns
+  l.385 theorem open_turned
+  l.391 theorem open_reads
+  l.405 def both
+  l.412 def readers
+  l.416 def byRule
+  l.425 theorem both_reads
+  l.429 theorem byRule_raises
+  l.433 theorem both_upper
+  l.438 theorem readers_not_below
+  l.455 theorem reading_absorbed
+  l.470 theorem readers_uniform_locks
+  l.491 def mind
+  l.494 def read
+  l.496 theorem readMono
+  l.500 theorem formed
+  l.503 theorem start_locked
+  l.510 theorem reform_absorbed
+  l.532 theorem rearrange_eq
+  l.539 theorem rearrange
+  l.547 theorem rearrange_lt
+  l.558 def pool
+  l.564 theorem cross
+  l.578 theorem pool_mono
+  l.589 theorem pool_mono_against
+  l.601 def poolRead
+  l.605 theorem pool_against
+  l.612 theorem pool_reads_iff
+  l.627 theorem pool_reads
+  l.633 theorem pool_through
+  l.639 theorem pool_favours
+  l.646 theorem through_locks
+  l.657 theorem pool_not_rising
+  l.664 theorem le_of_disfavours
+  l.674 theorem mirror_favours_iff
+  l.694 theorem mirror_disfavours_iff
+  l.714 theorem mirror_le
+  l.726 theorem turn_agree
+  l.735 theorem course_past
+  l.755 theorem agreeing_locks
+  l.765 theorem agreeing_stays
+  l.785 def lossPool
+  l.793 theorem lossPool_past
+  l.803 def course
+  l.811 theorem past_course
+  l.830 theorem read_late_kept
+  l.861 theorem read_in_time_turns
+  l.886 theorem rule_read
+  l.900 theorem kept_iff
+  l.918 theorem turned_iff
+  l.938 def fewCarriers
+  l.941 def inTime
+  l.945 def late
+  l.948 theorem lossStep_accrues
+  l.952 theorem inTime_majority
+  l.960 theorem inTime_turned
+  l.970 theorem late_majority
+  l.977 theorem late_kept
+  l.987 theorem late_reads_loss
+
+## ContinuingRevision.lean  (587 lines)
+
+### `both_outcomes`
+- pass a: S: `repeats_iff` (l. 576) gives an exact yield threshold of nine for arbitrarily many feasible specified cycles from one state; this statement quantifies over finite histories.
+- pass b: S: `repeats_iff` (l.576): for this built process at every yield, the cycle repeats for every number of cycles from some configuration exactly when 9 <= yield. `cycles_need_yield` (l.569) is one direction.
+
+### `no_return`
+- pass a: S: `no_run_without_return` (l. 476) rules out every infinite run at zero yield. B: `cut_stops_next` (l. 331) blocks the next prescribed action after a successful tight-reserve renewal with its return cut.
+- pass b: S (concluded): `no_run_without_return` (l.476): with the return cut (yield 0), no unending run exists under any controller, as an instance of `Run.not_of_depletion` with fuel as the falling measure (proof body). It concerns the loss of what gives, the return. B (concluded by computation): `no_return_without_success` (l.325), `cut_return` (l.327: fuel 0, nothing enabled), `cut_stops_next` (l.331: the next undertaking is no step), `reserve_consumed` (l.367), `frozen_plan_no_return` (l.370). Each is one finite course, not every course.
+
+### `rank`
+- pass a: S: `balanced`, `use_pos` and `no_return` (ll. 452, 456, 470) give a positive fuel drain on each zero-yield action; `no_run_without_return` (l. 476) concludes impossibility of an infinite run.
+- pass b: S: `no_run_without_return` (l.476): with the return cut, fuel strictly falls at every step (proof body via `use_pos`), so there is no run (`Run.not_of_depletion`). No explicit bound or deadline is stated.
+
+### `closed_region`
+- pass a: S: `one_cycle_at` (l. 239) maps the readyAt family back into itself at the next carrier under the entire selected cycle, for all yields e+9.
+- pass b: S: `trace_conserves` (l.111): along every trace, fuel + used + received is balanced, an invariant of the course. B: `one_cycle_at` (l.239) and `cycles_at` (l.250): the family `readyAt m u g n` is reached again after every cycle at yield e + 9. `continuing` (l.425) and `run_at_cycle` (l.436): the run is at `ready n` at date 7n.
+
+### `moves`
+- pass a: S: `one_cycle_at` (l. 239) executes the seven selected actions from any readyAt state at yield e+9, taking the next carrier to readiness with e more reserve.
+- pass b: S: `P yield : Process State Act` (l.70); `selected yield` (l.136) restricts it to the policy `choose`; `forget_policy` (l.139): every trace of the selected process is a trace of P. `no_run_without_return` (l.476): no Run of `P 0` exists, whatever the moves. `renew_recurs` (l.482) and `success_recurs` (l.545) hold along every Run of `P yield`. `repeats_iff` (l.576): (exists s, for all k, Feasible (P yield) s (history k)) iff 9 <= yield.
+
+### `reading`
+- pass a: B: `new_available_choice` (l. 317) makes selection at address n+1 available through installed samples, and `retired_choice` (l. 374) loses the old address’s selection at the next ready state.
+- pass b: S: `new_available_choice` (l.317): at `installed n`, the selection x (n+1) = true is Through `alikeOnInstalled` (agreement on the installed contacts' addresses), and at `ready n` it is not. `retired_choice` (l.374): at `ready (n+1)` the selection at n is no longer Through it. What is installed (registered) decides which selections are available. S: `enabled_by_success` (l.502): renewal is enabled only after a perform act whose response is true.
+
+### declarations of ContinuingRevision.lean (by script)
+  l.36 structure State
+  l.42 inductive Act
+  l.48 def execute
+  l.70 def P
+  l.72 def use
+  l.76 def returned
+  l.80 theorem step_conserves
+  l.111 theorem trace_conserves
+  l.129 def choose
+  l.136 def selected
+  l.139 theorem forget_policy
+  l.145 def sample
+  l.154 def readyAt
+  l.158 def failedAt
+  l.161 def plannedAt
+  l.164 def contactedAt
+  l.167 def acquiredAt
+  l.170 def installedAt
+  l.173 def successfulAt
+  l.176 theorem absent_key
+  l.180 theorem acquired_key
+  l.184 theorem retained_sample
+  l.190 theorem fail_step_at
+  l.200 theorem plan_step_at
+  l.203 theorem first_contact_at
+  l.206 theorem second_contact_at
+  l.209 theorem install_step_at
+  l.212 theorem use_step_at
+  l.224 theorem renew_step_at
+  l.233 def word
+  l.239 theorem one_cycle_at
+  l.245 def history
+  l.250 theorem cycles_at
+  l.260 def ready
+  l.262 def failed
+  l.264 def planned
+  l.266 def contacted
+  l.268 def acquired
+  l.270 def installed
+  l.272 def successful
+  l.274 theorem fail_step
+  l.278 theorem plan_step
+  l.280 theorem first_contact
+  l.282 theorem second_contact
+  l.284 theorem install_step
+  l.286 theorem use_step
+  l.290 theorem renew_step
+  l.294 theorem one_cycle
+  l.298 theorem all_cycles
+  l.302 theorem all_cycles_amounts
+  l.306 theorem method_changed
+  l.309 theorem singleton_member
+  l.314 theorem next_absent
+  l.317 theorem new_available_choice
+  l.325 theorem no_return_without_success
+  l.327 theorem cut_return
+  l.331 theorem cut_stops_next
+  l.337 def seed
+  l.340 def run
+  l.344 theorem run_trace
+  l.356 def formation
+  l.360 theorem formation_enters
+  l.362 theorem formed_and_continues
+  l.367 theorem reserve_consumed
+  l.370 theorem frozen_plan_no_return
+  l.374 theorem retired_choice
+  l.384 inductive Phase
+  l.387 def clockNext
+  l.396 def expose
+  l.405 def action
+  l.414 theorem clock_step
+  l.425 def continuing
+  l.430 theorem clock_cycles
+  l.436 theorem run_at_cycle
+  l.439 theorem run_installs
+  l.444 theorem unbounded_succession
+  l.447 theorem formation_to_run
+  l.452 theorem balanced
+  l.456 theorem use_pos
+  l.466 theorem renew_of_returned
+  l.470 theorem no_return
+  l.476 theorem no_run_without_return
+  l.482 theorem renew_recurs
+  l.488 theorem renew_needs_enabled
+  l.502 theorem enabled_by_success
+  l.545 theorem success_recurs
+  l.557 theorem history_cycles
+  l.561 theorem word_use
+  l.563 theorem word_return
+  l.569 theorem cycles_need_yield
+  l.576 theorem repeats_iff

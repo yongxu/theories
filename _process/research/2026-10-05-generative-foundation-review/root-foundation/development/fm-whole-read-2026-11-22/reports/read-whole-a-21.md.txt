@@ -1,0 +1,7 @@
+AI-written by reader whole-a-21.
+
+I read the opening account, every declaration statement and its docstring in all 11 modules, from Weightings.lean through WorldRepresentation.lean in the assigned order. No module was read in part, and no question was left unreached. I found no rule in this batch that resets favouring from the current share of a kind.
+
+Weightings separates needing a giver from being able to continue at all. If no admissible flow lets the consumer draw past stock, every giver is needed vacuously (`needsPart_of_none`, l. 3613). `Flow.possible_iff_covers` (l. 3704) tests existence separately. In Wholes, `Whole.family_excess_ends` (l. 323) dates the loss of new arising, while the last already-active part can end later.
+
+WitnessRefinement separates a correct diagnosis from the ability to act on it. Its five-witness traces reach the same two candidates from reserve and deadline 16 or 15. Only the former completes the shutdown (ll. 640, 663). WorldRepresentation proves that even the full web and the signs of exchange cannot determine balance (`World.balance_needs_conservation`, l. 482).

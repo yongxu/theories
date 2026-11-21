@@ -1,0 +1,465 @@
+# Task file: EDGE, reader whole-c-edge-25
+
+Your 4 modules. For orientation only, what the two passes said of the four marks, of moves and of a reading (where to look, not evidence).
+
+## Space.lean  (1129 lines)
+
+### `both_outcomes`
+- pass a: S: `World.arising_iff_ceasing` (l. 255) equates the two recurrence properties under finiteness and decidable activity. B: `World.living_crosses` (l. 1064) realizes all four combinations of living and recurrent arising across four worlds.
+- pass b: S: `World.arising_iff_ceasing` (l. 255), general: in a finite world with decided activity, arising recurs exactly when ceasing recurs. `arising_iff_ceasing_covering` (l. 247) is the covering form; `law_iff_em` (l. 1018) shows the law without decidedness is excluded middle. B: `living_crosses` (l. 1064), `separate` (l. 1043) and `rests_needs` (l. 1092) give dichotomies across built worlds, not both outcomes of one model.
+
+### `no_return`
+- pass a: B: `drawdown_quiet` (l. 420) concludes that after time one every successor has no active relatum in Drawdown.
+- pass b: S: `World.not_recurring_of_rests_unrefuted` (l. 263) and `rests_unrefuted_covering` (l. 276): rest is concluded only as not refutable, and then neither arising nor ceasing recurs. B: `grazing_browser_ends` (l. 792), concluded: the browser is not active at step 1 because its dependence persists at the same need with the pool drawn below it, a loss at the loss of what it draws on. `restless_world` (l. 494): no reserve carries activity beyond support at every step. `seedbank_world` (l. 849): undermining with no ending.
+
+### `rank`
+- pass a: S: `falls_stop_unrefuted` (l. 154) excludes unrefuted arbitrarily late strict falls of an eventually nonrising natural amount. `rests_unrefuted_covering` (l. 276) gives unrefuted rest under its coverage, balance, dissipation and embodiment hypotheses, without a time bound.
+- pass b: S: `falls_stop_unrefuted` (l. 154): for q : Nat → Nat not rising from T, it is not the case that after every step from T a later fall stays unrefuted. `unrefuted_falls_exceed` (l. 128): if falls stayed unrefuted, q would exceed every bound. `amount_still_unrefuted` (l. 161): that q stays constant from some step cannot be refuted. This is a falling natural number, with no explicit time bound and no decision procedure.
+
+### `closed_region`
+- pass a: B: `World.leaking_world` (l. 904) states closure of the two-side family at every step in the sense of flow exchange, with positive taking and failed balance.
+- pass b: B: `leaking_world` (l. 904): the family [true, false] is `ClosedAt` every step and taken from at every step. `rests_unrefuted_covering` (l. 276) takes as a premise a list covering the active relata from T. No general invariant or kernel law here.
+
+### `moves`
+- pass a: N: Not found in the statements read.
+- pass b: N: a World has a fixed flow and web; there is no choice among steps.
+
+### `reading`
+- pass a: N: Not found in the statements read.
+- pass b: N: no observation or class read alike. `World.Living` (l. 200), every active relatum not undermining, is a predicate on the world; `living_crosses` (l. 1064, built) shows that arising and ceasing do not decide it.
+
+### declarations of Space.lean (by script)
+  l.92 def Flow.still
+  l.96 theorem Flow.still_dissipative
+  l.103 theorem quiet_of_once
+  l.120 theorem still_le
+  l.128 theorem unrefuted_falls_exceed
+  l.144 theorem stop_unrefuted_iff
+  l.154 theorem falls_stop_unrefuted
+  l.161 theorem amount_still_unrefuted
+  l.172 theorem Web.embodiedArising_stops_unrefuted
+  l.191 def ArisingRecurs
+  l.195 def CeasingRecurs
+  l.200 def Living
+  l.204 def Dependent
+  l.209 def Acting
+  l.213 def Taking
+  l.220 def Carried
+  l.227 def ofRoles
+  l.232 def ofKind
+  l.235 theorem ceasingRecurs_ofRoles
+  l.247 theorem arising_iff_ceasing_covering
+  l.255 theorem arising_iff_ceasing
+  l.263 theorem not_recurring_of_rests_unrefuted
+  l.276 theorem rests_unrefuted_covering
+  l.293 def shuttle
+  l.296 instance shuttle_decided
+  l.299 theorem shuttle_finite
+  l.302 theorem shuttle_arising
+  l.310 theorem shuttle_world
+  l.323 def web
+  l.331 theorem self_taken
+  l.337 theorem taking
+  l.345 theorem undermines
+  l.352 def selfDrawing
+  l.355 instance selfDrawing_decided
+  l.358 theorem selfDrawing_finite
+  l.366 theorem selfDrawing_world
+  l.378 def mutualism
+  l.381 theorem mutualism_finite
+  l.389 theorem mutualism_world
+  l.399 def drawdown
+  l.402 instance drawdown_decided
+  l.408 theorem drawdown_finite
+  l.420 theorem drawdown_quiet
+  l.430 theorem drawdown_world
+  l.444 def unchecked
+  l.449 def unbalanced
+  l.452 theorem unbalanced_world
+  l.462 def flow
+  l.465 def web
+  l.470 def idle
+  l.473 theorem idle_world
+  l.480 def web
+  l.490 def restless
+  l.494 theorem restless_world
+  l.501 def throughput
+  l.504 instance throughput_decided
+  l.508 theorem throughput_arising
+  l.514 theorem throughput_world
+  l.525 def flicker
+  l.528 theorem flicker_world
+  l.537 def accretion
+  l.542 def attrition
+  l.545 instance accretion_decided
+  l.549 instance attrition_decided
+  l.556 inductive Relatum
+  l.562 def level
+  l.569 def active
+  l.576 def isPool
+  l.582 def requires
+  l.588 def need
+  l.595 def sideDraws
+  l.602 def grazes
+  l.608 def draws
+  l.617 def web
+  l.620 def present
+  l.624 def sideTake
+  l.630 def sideGive
+  l.637 def poolUnit
+  l.643 def take
+  l.649 def give
+  l.656 def flow
+  l.660 def sideOf
+  l.666 theorem sides_distinct
+  l.671 theorem side_mem
+  l.676 theorem side_taking
+  l.688 def grazing
+  l.691 theorem grazing_finite
+  l.704 instance grazing_decided
+  l.710 theorem grazing_arising
+  l.714 theorem grazing_balanced
+  l.726 theorem grazing_acting
+  l.733 theorem grazing_taking
+  l.745 theorem grazing_dependent
+  l.761 theorem grazing_not_self
+  l.777 theorem grazing_world
+  l.792 theorem grazing_browser_ends
+  l.798 inductive Relatum
+  l.804 def soil
+  l.807 def level
+  l.813 def flow
+  l.827 def web
+  l.834 theorem distinct
+  l.841 def seedbank
+  l.849 theorem seedbank_world
+  l.886 def flow
+  l.889 theorem takes
+  l.898 def leaking
+  l.904 theorem leaking_world
+  l.919 def act
+  l.927 def four
+  l.931 theorem le_four
+  l.935 theorem arises_at
+  l.940 def web
+  l.948 theorem decides
+  l.959 def undecided
+  l.964 theorem undecided_world
+  l.973 theorem law_decides
+  l.984 theorem law_of_em
+  l.1018 theorem law_iff_em
+  l.1025 theorem contingent
+  l.1043 theorem separate
+  l.1064 theorem living_crosses
+  l.1076 theorem living_crosses_ceasing
+  l.1092 theorem rests_needs
+  l.1114 theorem World.law_iff_positions
+  l.1124 theorem World.law_iff_grammar_positions
+
+## Tolerance.lean  (843 lines)
+
+### `both_outcomes`
+- pass a: S: `restores_iff` (l. 434) gives the exact all-start restoration criterion for givesFirst with decided sources. B: `Triad.absorbed` (l. 823) and `total_kept` (l. 836) give persistent all-giving versus all-withholding under tolerance one from two starts.
+- pass b: S, general. `restores_iff` (l. 434): with sources decided, a formation gives at step n from every start exactly when no clear chain of n waits leads into it. `answers_restores_iff` (l. 451): the same without memory, with any chain. `worst_start` (l. 249) is an iff. `certified_available_iff` (l. 546). B: `Triad.spreads` (l. 813) and `Triad.absorbed` (l. 823): from the same one withholding, tolerance 0 loses all giving and tolerance 1 keeps all of it.
+
+### `no_return`
+- pass a: S: `total_stays` (l. 344) concludes that after total withholding no later giver returns under the tolerating law if nobody spares its entire roster. This is loss of the giving set.
+- pass b: S, concluded. `withheld_kept` (l. 281): under a law keeping inclusion, where no formation gives at the step after total withholding, none gives at any step. `total_stays` (l. 344): under the tolerating law, where no formation spares all it waits on, total withholding at step m stays at every later step. `clear_loop_withholds` (l. 473): a clear loop of waits withholds forever from total withholding under givesFirst. `waitsAll_never_restores` (l. 466). In each, the loss is of what gives, the giving formations themselves. B: `Triad.total_kept` (l. 836); `Triad.spreads` (l. 813), where with tolerance 0 one withholding becomes total from step 2 on.
+
+### `rank`
+- pass a: S: `restores_from` (l. 443) gives restoration everywhere from L onward when sources are decided and no clear chain of length L exists. B: `Triad.spreads` (l. 813) gives the exact step of collective extinction from one withholding at zero tolerance.
+- pass b: S, a bound to restoration rather than to ending. `restores_from` (l. 443): with sources decided and no clear chain of length L, every formation gives at every step from L on, from every start. `sparing_gives` (l. 338) and `thin_absorbed` (l. 364): from step 1. B: `Ring.restores_from_three` (l. 506). No falling variant.
+
+### `closed_region`
+- pass a: S: `kept_set` (l. 355) keeps every member of an initially giving set giving whenever each member’s roster satisfies AllBut for the set at its tolerance.
+- pass b: S. `kept_set` (l. 355): a set G giving at the start, each member waiting on at most tol a outside G, gives at every step whatever the others do. `certified_kept` (l. 529) is the certificate-law form. `rises_from_withheld` (l. 256) and `restored_stays` (l. 269): giving from total withholding only grows.
+
+### `moves`
+- pass a: N: Not found in the statements read.
+- pass b: N: each law `next` is deterministic and is run as `Law.run next s`. There is no choice among steps. The laws compare starts and laws, not choices.
+
+### `reading`
+- pass a: S: `certified_available_iff` (l. 546) characterizes step-one giving from all starts withholding exactly an admitted fault set by separation of the domain’s envelope.
+- pass b: S, in part: `certified` (l. 520) has a domain give at the next step where the certificate over its roster, under its fault envelope, accepts the previous giving. `certified_available_iff` (l. 546): a domain gives at step 1 from every start withholding exactly within an admitted fault set iff its envelope is separated. `certified_blocked` (l. 555) is a built case. No other reading.
+
+### declarations of Tolerance.lean (by script)
+  l.129 inductive AllBut
+  l.139 theorem mono_set
+  l.146 theorem mono_count
+  l.153 theorem of_length
+  l.159 theorem of_length_le
+  l.163 theorem zero_all
+  l.168 theorem zero_iff
+  l.174 theorem found
+  l.183 theorem withheld_iff
+  l.196 def tolerating
+  l.200 def Listed
+  l.205 theorem tolerating_zero
+  l.216 def allWithheld
+  l.220 def KeepsInclusion
+  l.230 def KeepsInclusionInto
+  l.235 theorem KeepsInclusionInto.course
+  l.243 theorem KeepsInclusion.course
+  l.249 theorem worst_start
+  l.256 theorem rises_from_withheld
+  l.261 theorem rises_le
+  l.269 theorem restored_stays
+  l.281 theorem withheld_kept
+  l.290 theorem waitsAll_keeps
+  l.294 theorem answers_keeps
+  l.298 theorem givesFirst_keeps
+  l.303 theorem tolerating_into
+  l.308 theorem tolerating_keeps
+  l.315 theorem tolerating_mono
+  l.329 theorem gives_needs_sparing
+  l.338 theorem sparing_gives
+  l.344 theorem total_stays
+  l.355 theorem kept_set
+  l.364 theorem thin_absorbed
+  l.376 inductive Clear
+  l.386 theorem Clear.last_of_eq
+  l.392 theorem Clear.last
+  l.397 theorem Clear.chain
+  l.402 theorem Clear.append
+  l.408 theorem Clear.iterate
+  l.415 theorem clear_withholds
+  l.423 theorem gives_of_no_clear
+  l.434 theorem restores_iff
+  l.443 theorem restores_from
+  l.451 theorem answers_restores_iff
+  l.459 theorem givesFirst_restores_of_answers
+  l.466 theorem waitsAll_never_restores
+  l.473 theorem clear_loop_withholds
+  l.490 theorem no_clear_three
+  l.499 theorem isFirst_decided
+  l.506 theorem restores_from_three
+  l.520 def certified
+  l.529 theorem certified_kept
+  l.546 theorem certified_available_iff
+  l.555 theorem certified_blocked
+  l.574 def countTrue
+  l.579 theorem countTrue_add_not
+  l.596 theorem allBut_iff_count
+  l.626 theorem allBut_sub_iff
+  l.637 theorem KeepsInclusion.course_iff
+  l.651 theorem web_tolerating
+  l.684 theorem web_activity_tolerating
+  l.697 theorem web_answers
+  l.723 def giftLevels
+  l.730 def giftWeb
+  l.736 theorem giftWeb_tolerating
+  l.751 inductive Triad
+  l.759 def ups
+  l.765 def oneWithheld
+  l.771 def firstOnly
+  l.777 def tol0
+  l.780 def tol1
+  l.782 theorem step_first
+  l.786 theorem step_second
+  l.790 theorem step_third
+  l.795 theorem tol1_spares_none
+  l.800 theorem tol0_spares_none
+  l.806 theorem total_at_two
+  l.813 theorem spreads
+  l.823 theorem absorbed
+  l.836 theorem total_kept
+
+## Training.lean  (996 lines)
+
+### `both_outcomes`
+- pass a: B: `Commons.renewed_restraint_settles_iff` (l. 929) settles restraint exactly for weights at least one under rest draw one. At rest draw two, `outrun_restraint_unsettled` (l. 943) and `outrun_drawing_settles` (l. 948) decide the two candidates oppositely at every weight.
+- pass b: B, of keeping versus losing restraint in selection. `Commons.renewed_restraint_settles_iff` (l. 929): where the rest takes no more than the renewal, restraint is settled iff 1 ≤ w. `Commons.outrun_restraint_unsettled` (l. 943) and `outrun_drawing_settles` (l. 948): where the rest outruns, restraint is settled at no weight and drawing at every weight. S, general but not of going on and ending: `trained_alike_iff` (l. 561), `LocalSearch.rests_iff` (l. 674).
+
+### `no_return`
+- pass a: S: `settled_stays` (l. 653) concludes that every improving search starting at a settled candidate stays there at all times. B: `Commons.others` (l. 823), `drawing` (l. 837) and `restraint` (l. 850) give zero further stock exchange at empty stock for these candidates.
+- pass b: S, in part: `outrun_reading_same` (l. 754) concludes that after T+n no score reading c tells the candidates apart. That is where the outrun condition is spent, a loss of what gives (gated renewal). That it stays at nought rests on Flow.outrun_reading_alike, not read. `settled_stays` (l. 653): an improving search at a settled candidate never leaves it, concluded. B: Commons outrun, with stock 0 at step 4 for both candidates.
+
+### `rank`
+- pass a: S: `comes_to_rest` (l. 705) locates a fixed point at step B+1 from every start when every search step stays or strictly improves a natural reward bounded by B.
+- pass b: S. `comes_to_rest` (l. 705): under a reward ≤ B, an improving search rests at step B+1 from every start. `rested_or_risen` (l. 692): until it rests, the reward at step n is ≥ n. `outrun_reading_same` (l. 754) has an n-step horizon from a level ≤ n.
+
+### `closed_region`
+- pass a: S: `settled_rests` (l. 644) makes each global optimum a fixed point of every improving search. `LocalSearch.rests_iff_settles` (l. 684) gives the converse when every candidate is a neighbour.
+- pass b: S. `settled_rests` (l. 644): a settled candidate is a fixed point of every improving search, and `settled_stays` (l. 653) keeps it there at every step. `LocalSearch.rests_iff` (l. 674) characterises the fixed points. B: `Commons.renewed_both_settle` (l. 956), where two fixed points are both settled.
+
+### `moves`
+- pass a: S: `LocalSearch.rests_iff` (l. 674) characterizes a fixed candidate of a local search by absence of a better-rewarded neighbour. B: `Commons.outrun_neighbourhood_decides` (l. 983) contrasts empty and full neighbourhoods at restraint.
+- pass b: S. `Improving` (l. 640) is a search step next : Θ → Θ that stays or moves to a candidate rewarded more, and `LocalSearch` (l. 662) is one restricted to a neighbourhood. `settled_stays` (l. 653): every improving search started at a settled candidate stays at every step. `LocalSearch.rests_iff` (l. 674): rests exactly where no neighbour is rewarded more. The candidates `cand θ` are choices of act law, and `explore` (l. 243) runs a law on a schedule. B: `Commons.start_decides` (l. 976); `Commons.outrun_neighbourhood_decides` (l. 983).
+
+### `reading`
+- pass a: S: `installed_where_lumped` (l. 349) gives identical exchanges on histories lumped with a course for two laws reading the lumping and having the same courses. `free_where_unlumped` (l. 458) allows arbitrary takes in a decidable class off all member courses given nonanticipation and ReadsThrough.
+- pass b: S. `trained_alike_iff` (l. 561): every training through r's couplings up to T selects θ and θ' alike iff their levels are alike through r's couplings in every situation. `installed_where_lumped` (l. 349): two laws that read through a lumping ρ and have the same courses exchange alike at every history ρ lumps with a course. `response_free_where_unlumped` (l. 474): at a history lumped with no course, some law with the same courses responds to a difference and some does not. `settles_apart` (l. 607). `trained_alike_beyond_closure` (l. 718): candidates agreeing on every condition coupled into r's coupling closure are trained alike.
+
+### declarations of Training.lean (by script)
+  l.108 def AlongAlike
+  l.116 theorem exchange_along
+  l.130 theorem levels_agree_of_along
+  l.172 def levels
+  l.176 def course
+  l.181 def SameCourses
+  l.189 def Reads
+  l.198 theorem same_courses_of_along
+  l.227 theorem trained_alike_of_along
+  l.243 def explore
+  l.248 theorem explore_nonanticipating
+  l.265 theorem explored_same_courses
+  l.290 structure Lumping
+  l.298 theorem agree_symm
+  l.303 theorem alike_of_agree
+  l.313 def Lumping.coupling
+  l.318 def Lumping.agreement
+  l.324 def ReadsThrough
+  l.328 theorem ReadsThrough.of_through
+  l.333 theorem ReadsThrough.through
+  l.341 theorem ReadsThrough.of_nonanticipating
+  l.349 theorem installed_where_lumped
+  l.369 theorem installed_where_alike
+  l.380 def setOn
+  l.389 theorem setOn_take_off
+  l.397 theorem setOn_take_at
+  l.406 theorem setOn_respects
+  l.430 theorem setOn_lumped
+  l.458 theorem free_where_unlumped
+  l.474 theorem response_free_where_unlumped
+  l.500 theorem response_free_where_apart
+  l.523 theorem response_free_off_courses
+  l.546 def TrainsThrough
+  l.552 theorem TrainsThrough.reads
+  l.561 theorem trained_alike_iff
+  l.576 def RewardsThrough
+  l.582 def Settles
+  l.586 theorem settles_through
+  l.597 theorem score_rewards
+  l.607 theorem settles_apart
+  l.640 def Improving
+  l.644 theorem settled_rests
+  l.653 theorem settled_stays
+  l.662 def LocalSearch
+  l.667 theorem LocalSearch.improving
+  l.674 theorem LocalSearch.rests_iff
+  l.684 theorem LocalSearch.rests_iff_settles
+  l.692 theorem rested_or_risen
+  l.705 theorem comes_to_rest
+  l.718 theorem trained_alike_beyond_closure
+  l.741 theorem settles_weighted_iff
+  l.754 theorem outrun_reading_same
+  l.780 theorem outrun_settles_iff
+  l.809 inductive Member
+  l.815 abbrev Stock
+  l.818 def present
+  l.823 def others
+  l.837 def drawing
+  l.850 def restraint
+  l.853 def cand
+  l.856 def part
+  l.862 def start
+  l.865 def lev
+  l.869 def reward
+  l.872 def obs
+  l.878 def web
+  l.882 theorem reward_through
+  l.890 theorem couples_into_stock
+  l.893 theorem renewed_drawing_store
+  l.894 theorem renewed_drawing_stock
+  l.895 theorem renewed_restraint_store
+  l.896 theorem renewed_restraint_stock
+  l.897 theorem outrun_drawing_store
+  l.898 theorem outrun_drawing_stock
+  l.899 theorem outrun_restraint_store
+  l.900 theorem outrun_restraint_stock
+  l.902 theorem renewed_restraint_reward
+  l.907 theorem renewed_drawing_reward
+  l.912 theorem outrun_restraint_reward
+  l.917 theorem outrun_drawing_reward
+  l.923 theorem one_le_of_le
+  l.929 theorem renewed_restraint_settles_iff
+  l.943 theorem outrun_restraint_unsettled
+  l.948 theorem outrun_drawing_settles
+  l.956 theorem renewed_both_settle
+  l.967 theorem drawing_responds
+  l.976 theorem start_decides
+  l.983 theorem outrun_neighbourhood_decides
+
+## TreeSearch.lean  (430 lines)
+
+### `both_outcomes`
+- pass a: S: `scan` (l. 106) distinguishes pending from terminal outcomes by fuel, frontier and the next inspected entry. `scan_settles` (l. 219) excludes pending given enough fuel, `exhausted_dead` (l. 194) rules out live entries after exhaustion, and `inhabited_discovered` (l. 236) guarantees a find from an inhabited root with sufficient fuel.
+- pass b: S, in this model: the `Verdict` (l. 92) is found, exhausted or pending. Together, `inhabited_discovered` (l. 236), which says that if `nodes root ≤ fuel` and root is inhabited a real ticket is found, `exhausted_dead` (l. 194) and `scan_settles` (l. 219) give both outcomes for every tree once fuel reaches its node count, though no single 'exactly when' is stated. `interrupted_pending` (l. 269, built) shows pending with too little fuel and found with more. N for going on versus ending of a going-on in the map's sense.
+
+### `no_return`
+- pass a: S: advance_empty and orbit_fixed (ll. 317, 320) conclude that once the frontier is empty with no ticket, every later iterate stays there.
+- pass b: S, concluded: `advance_found` (l. 313) says a configuration with a ticket found is left unchanged, `advance_empty` (l. 317) says one with nothing left and none found is left unchanged, and `orbit_fixed` (l. 320) says a configuration fixed by `advance` is its whole orbit. These are absorbing states at the end of the search, not at the loss of something that gives.
+
+### `rank`
+- pass a: S: `fork_burden` (l. 206) gives an exact decrement of one on expanding a fork. `steps_settle` (l. 413) excludes pending once steps reach the initial frontier burden.
+- pass b: S: `scan_settles` (l. 219) says the search ends, not pending, within fuel equal to the frontier's burden (node count), with burden falling by one at each fork opened (`fork_burden`, l. 206). `steps_settle` (l. 413) says that on every run, if `burden f ≤ n` the verdict at step n is not pending. `inhabited_found` (l. 419) says an inhabited tree is found within `nodes root` steps. `located_depth_le` (l. 246) says a located address has length + 1 ≤ nodes root.
+
+### `closed_region`
+- pass a: S: advance_found and advance_empty (ll. 313, 317) exhibit fixed configurations. `orbit_fixed` (l. 320) keeps each fixed configuration throughout its orbit.
+- pass b: S: `coherent_fork` (l. 152) and `coherent_tail` (l. 148) say coherence of the frontier with the tree is kept by opening a fork and by passing an entry (an invariant). `orbit_fixed` (l. 320) with `advance_found` and `advance_empty` gives fixed points of the step law.
+
+### `moves`
+- pass a: N: No such law found in the statements read.
+- pass b: S: `run_reads_scan` (l. 357) and `run_reads_discover` (l. 363) say that for every run r of `Law.process advance` starting at ⟨f, none, 0⟩ (or `start root`), `read (r.state n) = scan n f` (or `discover n root`). The run laws `inspected_le_step` (l. 392), `found_located` (l. 397), `exhausted_dead_run` (l. 408), `steps_settle` (l. 413) and `inhabited_found` (l. 419) hold for every run. The process is that of one determined law (`advance`), so the statements cover every run but no real choice among steps. N for a law about what one choice keeps against another.
+
+### `reading`
+- pass a: S: `found_located` (l. 397) makes a found verdict on a run from a coherent frontier evidence for the key at that address. `exhausted_dead_run` (l. 408) makes an exhausted verdict evidence that the initial frontier had no inhabited entry.
+- pass b: S: `exhausted_dead` (l. 194) says that if the scan's verdict is `exhausted` then `live frontier = false`, so the verdict decides only absence within the frontier. `scan_sound` (l. 165) says that from a frontier coherent with root, a ticket found satisfies `locate root ticket.1 = some ticket.2`. `found_without_complete_map` (l. 265) says that for every key and every `unread` subtree, `discover 2 (.fork (.endpoint key) unread) = ⟨.found ([false], key), 2⟩`: the verdict does not depend on the unread subtree. `read` (l. 307) is the verdict a configuration shows.
+
+### declarations of TreeSearch.lean (by script)
+  l.49 inductive Tree
+  l.54 abbrev Address
+  l.56 abbrev Ticket
+  l.58 abbrev Entry
+  l.61 def locate
+  l.70 def nodes
+  l.76 def inhabited
+  l.82 def burden
+  l.87 def live
+  l.92 inductive Verdict
+  l.97 structure Scan
+  l.103 def bump
+  l.106 def scan
+  l.116 def discover
+  l.120 def coherent
+  l.125 theorem append_assoc
+  l.130 theorem child_locate
+  l.139 theorem scan_fuel
+  l.148 theorem coherent_tail
+  l.152 theorem coherent_fork
+  l.165 theorem scan_sound
+  l.180 theorem discover_sound
+  l.187 theorem or_false_iff
+  l.194 theorem exhausted_dead
+  l.206 theorem fork_burden
+  l.213 theorem nodes_pos
+  l.219 theorem scan_settles
+  l.233 theorem live_single
+  l.236 theorem inhabited_discovered
+  l.246 theorem located_depth_le
+  l.265 theorem found_without_complete_map
+  l.269 theorem interrupted_pending
+  l.274 def exampleTree
+  l.276 def exampleTicket
+  l.279 theorem example_discovered
+  l.285 structure Search
+  l.291 def advance
+  l.300 def verdict
+  l.307 def read
+  l.310 def start
+  l.313 theorem advance_found
+  l.317 theorem advance_empty
+  l.320 theorem orbit_fixed
+  l.326 theorem orbit_reads_scan_from
+  l.351 theorem orbit_reads_scan
+  l.357 theorem run_reads_scan
+  l.363 theorem run_reads_discover
+  l.368 theorem found_without_reading_rest
+  l.374 theorem pending_then_found
+  l.381 theorem example_found
+  l.392 theorem inspected_le_step
+  l.397 theorem found_located
+  l.403 theorem found_real
+  l.408 theorem exhausted_dead_run
+  l.413 theorem steps_settle
+  l.419 theorem inhabited_found

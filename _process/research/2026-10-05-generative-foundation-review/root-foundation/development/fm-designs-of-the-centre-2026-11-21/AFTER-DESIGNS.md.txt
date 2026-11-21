@@ -1,0 +1,24 @@
+# After the brief for designs was frozen (appended, never overwriting)
+
+*AI-written. The brief `BRIEF-DESIGNS.md` is as frozen at 23:03:57 WIB on 21 November 2026; the designers started at about 23:06 and do not see this file.*
+
+## 21 November, 23:06 WIB (clock, read after writing; first written as 23:12, a guess): four points of the coordinating session, received after the designers started
+
+1. The second way is not to be judged by whether a design keeps a base the same; "remaking" and "favoured" are working names (his words of 03:43 and 15:17). What to aim at, in two halves: a law relating a way of selecting to more being able to go on after it; and what a selection rests on coming to make a difference to it without that handed in. *The brief has his sentence of 03:43 and R7 for the first half; the second half is in R2, R4 and T2, not said as one sentence. It uses "favours" as a working name.*
+2. The question that caught four dictionaries today, to be put to every refuter in these words: does a general law of the design do work that the old laws do not, by the judgement of a reader who took no part? *Goes into every refuter's brief.*
+3. The last outside reader's words for a next case: a level that something gives to, and a rule set again from its own share. A design with moves, a reading, a share and a level that is given to, on one process, is where no existing model stands. *The brief quotes that reader's sentence under T3 and has it as R2 and R4.*
+4. Before anyone says something is not in the Lean: the listing of places. The same whole material to every model. *In the brief.*
+
+Also asked: say in the record what each design and each refutation cost.
+
+## 21 November, 23:30 WIB (clock, read after writing; first written as 23:36, a guess): from the session holding row DJ, on design C's comparison law; for its refuters
+
+Not found by name search (not by a read): a one-sided comparison that carries keeping from one process to another. What the search found, to start from:
+
+1. A one-sided simulation only as a built case: `ReachableRanges.lean` 1804, `def Simulation` in namespace `DeferredBranching`, with `late_simulates_early` (1858) and `early_not_simulating_late`; about what is admitted, on one named process.
+2. Bisimulation is general, on frames: `Labelled.lean` 293, with `Bisimulation.trace` (364), `converse`, `comp`, used in Branching, Granularity, Joining, Histories, Composition, `IdentificationRuns.kernel_bisimulation` (a presentation's kernel, not the viability kernel). None of those looked at names `Kernel`, `Keepable` or `Viable`.
+3. `Viable` is named in `GuardHorizon` and `Reserve` only (`Reserve.Viable` is its own). GuardHorizon's laws of it: `closed_viable`, `certificate_viable`, `kernel_viable`, `dViable_iff`, `uniform_viable`; none carries viability between processes. Nearest: `KeptFor.finer` (Keeping 288), `KeptFor.guard_mono` (JointKeeping 136), `KeptFor.mono`: order laws on one process.
+
+Two tests to put to the refuters of C:
+- Tonight's scratch found that `Viable` quantifies over outcomes that occur and `KeptFor` over every value a reading could keep, and that this one difference cost a premise (decided steps). Does matching "each enabled move on the left with related successors on the right" need to decide which successor occurred?
+- `locked_ends_rising` concludes an ending within a bound; a comparison transfers keeping. Which way does the transfer run in that derivation (the clock keeps for at most its count, so what is matched against it cannot keep longer), and does it need every move of the lock matched, which would be the two-sided half?

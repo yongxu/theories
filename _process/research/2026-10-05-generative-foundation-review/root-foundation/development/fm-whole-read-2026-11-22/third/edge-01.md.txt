@@ -1,0 +1,346 @@
+# Task file: EDGE, reader whole-c-edge-01
+
+Your 3 modules. For orientation only, what the two passes said of the four marks, of moves and of a reading (where to look, not evidence).
+
+## Attraction.lean  (559 lines)
+
+### `both_outcomes`
+- pass a: S: `Law.drawn_iff_not_returns` (l. 190) identifies being drawn exactly with nonreturn for any total next function.
+- pass b: S: `Law.drawn_iff_not_returns` (l.190): for every determined law, Drawn next s ⇔ ¬ Returns next s. `Law.returns_iff_always_reachable` (l.309) and `Law.drawn_iff_lost` (l.316) hold within a listed finite set: drawn ⇔ not reachable at every step. `Law.lossless_iff_none_drawn` (l.304) holds with a finite list and decidable equality. These are dichotomies of returning against being drawn or lost, not of going on against ending.
+
+### `no_return`
+- pass a: S: `Law.DrawnInto.never_back` (l. 167) derives permanent nonreturn to the outside start from entry and absorption, independently of a stock threshold.
+- pass b: S: `Law.DrawnInto.never_back` (l.167): where R is absorbing, s lies outside R and the course of s is in R at step n, then for every k, orbit at n+k ≠ s. This is concluded from the premise that R is absorbing. `Law.Drawn.not_returns` (l.174): a drawn configuration never returns. `Invariant.locks_out` (l.437): for every Process, from inside an invariant R no Reach to an s outside R. `Run.locked_in` (l.443). `Law.lost_drawn` (l.208): a configuration not reachable at step n is drawn into Reachable n. These concern configurations in general, not a level or the loss of something that gives. B: `Ratchet.false_never_returns` (l.484), `Ratchet.false_lost` (l.495).
+
+### `rank`
+- pass a: S: `Law.enters_returning_within` (l. 324) bounds entry into returning states strictly below the length of any list covering all states.
+- pass b: S: `Law.enters_returning_within` (l.324): with m configurations listed, every course is at a returning configuration at some step n < m. This is a bound, not a falling variant.
+
+### `closed_region`
+- pass a: S: `reachable_absorbing` (l. 198) and `returning_absorbing` (l. 218) prove closure for states reachable at a fixed time and for returning states. `invariant_iff_every_move` (l. 432) characterizes process invariance by absorption under all moves.
+- pass b: S: `Law.Absorbing` (l.110); `Law.absorbing_ahead` (l.126): what lies ahead is absorbing; `Law.Absorbing.orbit` (l.131): once in, always in; `Law.reachable_absorbing` (l.198); `Law.returning_absorbing` (l.218); `Law.absorbing_iff_closed` (l.148): absorbing ⇔ the grammar's closed «闭». `Law.drawnInto_returning` (l.339): finite case, everything that does not return is drawn into Returns. `Law.basin_one_cycle` (l.384): within finitely many configurations every basin holds one cycle.
+
+### `moves`
+- pass a: S: `Run.stays` (l. 448) keeps the run inside from an inside step if each subsequent action absorbs the region; `Run.leaving_needs` (l. 455) derives failure of absorption for the action on an exit.
+- pass b: S: `invariant_iff_every_move` (l.432): for every Process P, Invariant P R ⇔ ∀ a, AbsorbingUnder P R a (every step by a from inside R stays inside). `Run.stays` (l.448): a run whose every move from step n keeps R stays in R at every n+k. `Run.leaving_needs` (l.455): if a run is in R at n and out at n+1, its move at n does not keep R. B: `Exit.not_invariant` (l.527), `Exit.locked_in` (l.534), `Exit.leaving_takes` (l.551).
+
+### `reading`
+- pass a: N: Not found in the statements read.
+- pass b: N
+
+### declarations of Attraction.lean (by script)
+  l.110 def Absorbing
+  l.114 def DrawnInto
+  l.119 def Drawn
+  l.123 def Ahead
+  l.126 theorem absorbing_ahead
+  l.131 theorem Absorbing.orbit
+  l.137 theorem returns_iff_ahead
+  l.148 theorem absorbing_iff_closed
+  l.154 theorem drawn_iff_drawnIn
+  l.167 theorem DrawnInto.never_back
+  l.174 theorem Drawn.not_returns
+  l.182 theorem drawnInto_ahead
+  l.190 theorem drawn_iff_not_returns
+  l.198 theorem reachable_absorbing
+  l.203 theorem reachable_orbit
+  l.208 theorem lost_drawn
+  l.213 theorem drawn_of_lost
+  l.218 theorem returning_absorbing
+  l.225 theorem periods_meet
+  l.236 theorem Merges.not_both_return
+  l.257 theorem merge_draws
+  l.265 theorem Merges.draws
+  l.272 theorem none_drawn_merges_nothing
+  l.278 theorem none_drawn_lossless
+  l.287 theorem Drawn.not_lossless
+  l.292 theorem Lossless.not_drawn
+  l.297 theorem Drawn.not_keeps
+  l.304 theorem lossless_iff_none_drawn
+  l.309 theorem returns_iff_always_reachable
+  l.316 theorem drawn_iff_lost
+  l.324 theorem enters_returning_within
+  l.332 theorem enters_returning
+  l.339 theorem drawnInto_returning
+  l.346 def Meet
+  l.349 theorem Meet.refl
+  l.351 theorem Meet.symm
+  l.355 theorem Meet.later
+  l.362 theorem Meet.trans
+  l.373 theorem Meet.reaches_returning
+  l.384 theorem basin_one_cycle
+  l.395 theorem succ_drawn_lossless
+  l.399 theorem pred_orbit_zero
+  l.405 theorem pred_drawn_keeps
+  l.421 theorem Law.absorbing_iff_invariant
+  l.427 def AbsorbingUnder
+  l.432 theorem invariant_iff_every_move
+  l.437 theorem Invariant.locks_out
+  l.443 theorem Run.locked_in
+  l.448 theorem Run.stays
+  l.455 theorem Run.leaving_needs
+  l.468 def next
+  l.471 def atTrue
+  l.474 theorem merges
+  l.477 theorem absorbing
+  l.480 theorem false_drawn
+  l.484 theorem false_never_returns
+  l.488 theorem true_returns
+  l.491 theorem true_not_drawn
+  l.495 theorem false_lost
+  l.508 def move
+  l.513 def process
+  l.516 def atTrue
+  l.519 theorem keeps
+  l.523 theorem leaves
+  l.527 theorem not_invariant
+  l.531 def staying
+  l.534 theorem locked_in
+  l.538 def path
+  l.541 def moves
+  l.544 def leaving
+  l.551 theorem leaving_takes
+
+## Blanket.lean  (523 lines)
+
+### `both_outcomes`
+- pass a: B: `ThresholdDrain.any_model` (l. 371) gives ended and continuing outcomes at the same time five for the two starts, for any policy and update.
+- pass b: B: `ThresholdDrain.any_model` (l.371): from supply 3 the system has ended at step 5, and from every supply of 4 or more it goes on, for every model and policy. `ThresholdDrain.sensed_at_break` (l.260) is the same with supplies 3 and 100. These are two outcomes in one built model; there is no general 'exactly when'.
+
+### `no_return`
+- pass a: B: `ThresholdDrain.short_rests` (l. 282) concludes the short course is ended for every time from five on.
+- pass b: B: `ThresholdDrain.short_rests` (l.282): for every n, the course from supply 3 is at the ended configuration ⟨false, false, (), 0⟩ from step 5 on, and `ThresholdDrain.ended_rests` (l.278) makes that configuration a fixed point. This is concluded by computation, at the supply's exhaustion, a low level, not at the loss of something that gives.
+
+### `rank`
+- pass a: B: `ThresholdDrain.external_course` (l. 298) gives the exact truncated linear drain; `short_rests` (l. 282) bounds arrival at the ended state.
+- pass b: B: `ThresholdDrain.short_rests` (l.282): from supply 3, ended by step 5, a deadline in the built case. N for a general rank or variant.
+
+### `closed_region`
+- pass a: B: `ThresholdDrain.ended_rests` (l. 278) proves the ended configuration is fixed.
+- pass b: B: `ThresholdDrain.ended_rests` (l.278): the ended configuration is a fixed point of the law; `ThresholdDrain.short_rests` (l.282). N for a general invariant.
+
+### `moves`
+- pass a: B: `ThresholdDrain.any_model` (l. 371) quantifies over every policy and model update of the fixed supply-drain law and proves the split in continuation at step five.
+- pass b: S: `Blanketed.agent_through_sensory` (l.129): two courses from one internal and one active state, alike on the sensory part before n, have one internal and one active state at n. The active part's next state (a policy) is thus a selection through the sensory course. B: `ThresholdDrain.any_model` (l.371): for every update rule and every policy, every reading of the internal course up to step 4 is alike from supply 3 and from every supply d+4, while at step 5 the first has ended and the second goes on.
+
+### `reading`
+- pass a: S: `reads_through_blanket` (l. 181) equates any internal reading depending only on times through n for equal internal starts and blanket agreement before n.
+- pass b: S: `Blanketed.reads_through_blanket` (l.181): a reading of the internal course up to n is equal on two courses from one internal state alike on the blanket before n. `Blanketed.through_reading` (l.192): where the sensory part reads the external part only through π (Learning.Lumped), courses with externals alike through π before n agree on the internal, sensory and active parts at n. B: `Deaf.lumps` (l.225); `ThresholdDrain.sensed_at_break` (l.260); `ThresholdDrain.sensory_apart_at_four` (l.385).
+
+### declarations of Blanket.lean (by script)
+  l.82 theorem congr3
+  l.92 structure Blanketed
+  l.103 structure Parts
+  l.118 def step
+  l.123 def course
+  l.129 theorem agent_through_sensory
+  l.143 theorem world_through_active
+  l.156 def BlanketAlike
+  l.163 theorem internal_through_blanket
+  l.171 theorem external_through_blanket
+  l.181 theorem reads_through_blanket
+  l.192 theorem through_reading
+  l.217 def law
+  l.225 theorem lumps
+  l.241 def law
+  l.248 def short
+  l.251 def long
+  l.254 theorem reads_threshold
+  l.260 theorem sensed_at_break
+  l.267 theorem alike_before_four
+  l.276 def ended
+  l.278 theorem ended_rests
+  l.282 theorem short_rests
+  l.289 def web
+  l.293 theorem sensory_is_admission
+  l.298 theorem external_course
+  l.303 theorem sensory_succ
+  l.310 theorem blanket_iff_through
+  l.342 def modelLaw
+  l.349 def start
+  l.352 theorem sensed_alike
+  l.361 theorem blanket_alike
+  l.371 theorem any_model
+  l.385 theorem sensory_apart_at_four
+  l.399 theorem le_mass_of_mem
+  l.409 def point
+  l.412 def isAt
+  l.416 theorem point_is_restrict
+  l.426 theorem point_whole
+  l.437 theorem least_surprisal
+  l.450 theorem point_forbids_rest
+  l.468 def visits
+  l.473 theorem visits_le_succ
+  l.477 theorem visits_pos
+  l.486 theorem visits_zero
+  l.494 theorem read_off_admits
+  l.500 theorem unweighted_share
+  l.512 theorem forbids_iff
+
+## Branching.lean  (1327 lines)
+
+### `both_outcomes`
+- pass a: S: `necessarilyDrawn_iff_not_returns` (l. 432) holds for every process. `NecessarilyDrawnInto` (l. 365) quantifies over runs from the start, including the vacuous case.
+- pass b: S, general: `necessarilyDrawn_iff_not_returns` (l.432): for every process and configuration, it is necessarily drawn exactly when it does not return, and if it returns some run never loses it (`Returns.run` l.327). `returns_iff_keepsWithin` (l.238), `keeps_iff_fed` (l.180). `RecurrenceRuns.lossless_iff_returns` (l.1265): for determined laws within finitely many configurations. B: `OneWay.possibly_not_necessarily` (l.618).
+
+### `no_return`
+- pass a: S: `possiblyDrawn_iff` (l. 408) characterizes reach of a point of no return to the start; `NecessarilyDrawnInto.not_returns` (l. 424) concludes nonreturn from invariance and necessary attraction.
+- pass b: S, concluded, at the level of configurations, not at the loss of something that gives. `NecessarilyDrawnInto.not_returns` (l.424): what is necessarily drawn into an invariant region never returns. `possiblyDrawn_iff` (l.408): some course leads to t with ¬Reach t s, locked out by `Invariant.locks_out`. `lost_necessarily_drawn` (l.475). `RecurrenceRuns.merges_loses` (l.1274): within finitely many configurations, a merge of a determined law's process loses a possibility for good. `RecurrenceRuns.kept_never_returns` (l.1287), `kept_loses_beginning` (l.1293). B: `Captured.state_perturbation_drawn` (l.1205), `Transit.between_never` (l.693).
+
+### `rank`
+- pass a: S: `RecurrenceRuns.merges_loses` (l. 1274) rules out reachability of every state at the covering list's length for a merging total successor-law process.
+- pass b: S, a deadline only, no falling rank. `lost_necessarily_drawn` (l.475): every run enters `Reachable P n` at step n. `necessarilyDrawnInto_ahead` (l.417): every run enters what lies ahead at its first step. `Run.enters_returning` (l.256): within finitely many configurations every run enters what returns at some n, with no bound. D: the account (l.131) says it is not derived that every run is drawn in within a bound.
+
+### `closed_region`
+- pass a: S: `reachable_invariant` (l. 448) closes the region reachable at length n under every process step; `Law.rule_absorbing` (l. 1167) closes each rule fiber if every step preserves its rule component.
+- pass b: S: `Invariant` regions: `invariant_ahead` (l.187), `reachable_invariant` (l.448), `FedWithin` and `KeepsWithin` (l.155, l.213) with `keepsWithin_iff_fedWithin` (l.227). `Law.rule_absorbing` (l.1167): where the rule keeps itself, a rule's configurations are absorbing. `Law.held_absorbing` (l.1173): the configuration a rule holds is fixed. B: `Transit.returning_not_invariant` (l.716): what returns is not an invariant region. `Captured.rule_region_absorbing` (l.1196).
+
+### `moves`
+- pass a: S: `Returns.run` (l. 327) constructs a run from any returning state all of whose states can reach the start; `Determined.moves_decide` (l. 497) rules out equal move sequences for same-start runs differing on ever entering a region under determinacy.
+- pass b: S: `Determined.moves_decide` (l.497): under a determined process, of two runs from one configuration, one entering R and one never, the two differ in some move. `Returns.run` (l.327): a configuration that returns has a run beginning at it from which every configuration reaches back to it. `NecessarilyDrawnInto` (l.365) quantifies over every run and `PossiblyDrawnInto` (l.361) over some course. `reachable_invariant` (l.448) and `invariant_ahead` (l.187): regions every step keeps. B: `OneWay.moves_decide` (l.639), `Coarse.meet_and_part` (l.1129).
+
+### `reading`
+- pass a: S: `Run.not_fixesAlike_of_untaken` (l. 949) rules out a record fixing an outcome up to likeness when the move was never taken in that class, the frame is determined up to likeness and two states differ on a claim.
+- pass b: S: in the Likeness section, what is claimed decides what a record fixes or excludes. `Run.not_fixesAlike_of_untaken` (l.949): where the frame is determined up to likeness and b was not taken at any configuration alike to s before t, the record fixes no outcome of b at s, for any two configurations that differ in a claim. `carries_unregistered` (l.1053): with nothing claimed, every description carries a law up to likeness. `keepFrame_alike_iff` (l.988): where no claim tells the past apart, kept histories are alike exactly where their presents are. `determined_iff_named` (l.799). B: `Confound.refutes_registered` (l.1146): excluding a model needs the outcome claimed.
+
+### declarations of Branching.lean (by script)
+  l.152 def Ahead
+  l.155 def FedWithin
+  l.159 theorem keeps_of_returns
+  l.164 theorem fed_keeps
+  l.172 theorem Reachable.one
+  l.180 theorem keeps_iff_fed
+  l.184 theorem returns_iff_ahead
+  l.187 theorem invariant_ahead
+  l.191 theorem returns_iff_fed_ahead
+  l.203 theorem returns_iff_fedWithin
+  l.213 def KeepsWithin
+  l.218 theorem FedWithin.keeps
+  l.227 theorem keepsWithin_iff_fedWithin
+  l.238 theorem returns_iff_keepsWithin
+  l.256 theorem enters_returning
+  l.275 theorem trace_positions
+  l.295 theorem positions_reach
+  l.306 def lap
+  l.310 theorem lap_succ
+  l.319 theorem lap_le
+  l.327 theorem Returns.run
+  l.361 def PossiblyDrawnInto
+  l.365 def NecessarilyDrawnInto
+  l.369 def PossiblyDrawn
+  l.373 def NecessarilyDrawn
+  l.386 theorem possiblyDrawnInto
+  l.399 theorem NecessarilyDrawnInto.possibly
+  l.408 theorem possiblyDrawn_iff
+  l.417 theorem necessarilyDrawnInto_ahead
+  l.424 theorem NecessarilyDrawnInto.not_returns
+  l.432 theorem necessarilyDrawn_iff_not_returns
+  l.437 theorem possiblyDrawnInto_ahead
+  l.443 theorem length_append_one
+  l.448 theorem reachable_invariant
+  l.462 theorem window_length
+  l.475 theorem lost_necessarily_drawn
+  l.482 theorem necessarilyDrawn_of_lost
+  l.488 theorem NecessarilyDrawn.not_lossless
+  l.497 theorem Determined.moves_decide
+  l.507 theorem Determined.stays_merged
+  l.524 theorem law_reachable_iff
+  l.528 theorem law_keeps_iff
+  l.533 theorem law_returns_iff
+  l.538 theorem law_lossless_iff
+  l.541 theorem law_merges_iff
+  l.545 theorem law_run_state
+  l.551 theorem law_possibly_iff
+  l.558 theorem law_necessarily_iff
+  l.566 theorem law_drawn_iff
+  l.583 def process
+  l.585 theorem determined
+  l.588 theorem returns
+  l.593 theorem merges
+  l.597 def atTrue
+  l.599 theorem atTrue_invariant
+  l.604 def staying
+  l.607 def passed
+  l.610 def passing
+  l.618 theorem possibly_not_necessarily
+  l.630 theorem merge_keeps
+  l.639 theorem moves_decide
+  l.653 inductive Stage
+  l.659 def move
+  l.666 def process
+  l.668 theorem determined
+  l.671 theorem every
+  l.677 theorem total
+  l.680 theorem fed
+  l.686 def atAfter
+  l.688 theorem atAfter_invariant
+  l.693 theorem between_never
+  l.698 theorem before_returns
+  l.706 theorem keeps_not_returns
+  l.716 theorem returning_not_invariant
+  l.728 theorem of_dead_end
+  l.739 theorem fork_source
+  l.745 theorem fork_target
+  l.751 theorem fork_lossless
+  l.757 theorem fork_origin_never
+  l.763 theorem fork_left_invariant
+  l.771 theorem fork_lossless_not_returns
+  l.792 theorem alike_configurations
+  l.799 theorem determined_iff_named
+  l.806 def GoesAlike
+  l.811 theorem goesAlike_iff
+  l.819 theorem DeterminedAt.stays_alike
+  l.832 def DependsOnlyOnAlike
+  l.836 theorem DependsOnlyOnAlike.determinedAt
+  l.841 theorem DependsOnlyOn.alike
+  l.848 theorem DependsOnlyOnAlike.reabsorbed
+  l.862 theorem forget_inputs_determinedAt_iff
+  l.883 def FixesAlike
+  l.888 theorem fixesAlike_of_takes
+  l.893 def TakesAlike
+  l.900 def retargetAlike
+  l.907 theorem retargetAlike_bisimulation
+  l.930 theorem retargetAlike_determinedAt
+  l.941 theorem retargetAlike_step
+  l.949 theorem Run.not_fixesAlike_of_untaken
+  l.965 def keepFrame
+  l.969 theorem keepFrame_bisimulation
+  l.978 theorem keepFrame_present
+  l.988 theorem keepFrame_alike_iff
+  l.997 theorem keepHistory_returns_alike
+  l.1004 theorem keepHistory_new_named
+  l.1013 def anything
+  l.1018 theorem anything_alike
+  l.1029 def Run.FixesThroughAlike
+  l.1039 theorem Run.generalizesAlike
+  l.1053 theorem carries_unregistered
+  l.1065 theorem determinedAt
+  l.1071 def retargeted
+  l.1078 theorem retarget_breaks
+  l.1098 def flips
+  l.1103 def still
+  l.1106 def turnedPart
+  l.1109 def turned
+  l.1112 def firstFrame
+  l.1114 theorem first_bisimulation
+  l.1121 theorem first_determinedAt
+  l.1129 theorem meet_and_part
+  l.1146 theorem refutes_registered
+  l.1167 theorem rule_absorbing
+  l.1173 theorem held_absorbing
+  l.1181 theorem perturbation_drawnInto
+  l.1192 theorem keeps
+  l.1196 theorem rule_region_absorbing
+  l.1200 theorem held_absorbing
+  l.1204 instance of
+  l.1205 theorem state_perturbation_drawn
+  l.1213 theorem rule_perturbation_drawn
+  l.1265 theorem lossless_iff_returns
+  l.1274 theorem merges_loses
+  l.1282 theorem kept_lossless
+  l.1287 theorem kept_never_returns
+  l.1293 theorem kept_loses_beginning
+  l.1299 theorem kept_unlisted
+  l.1306 def keptRun
+  l.1311 theorem keptRun_present
+  l.1318 theorem return_keeps_history

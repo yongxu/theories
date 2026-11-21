@@ -1,0 +1,13 @@
+Reader whole-b-79. All six modules were read whole: the opening account and every declaration's statement and docstring of Verification.lean (844 lines), Viability.lean (325), WayOfUnits.lean (1126, read in two parts to the end), Weighted.lean (651), WeightedCommuting.lean (245) and WeightedTraces.lean (195). I opened proof bodies only where a statement needed one, for example keeps_use in WayOfUnits, which shows that RegimeMargin.step is z - U + giving (z - U). No question was left U. Every N below means "not found in the statements read". I did not open the imported modules (RegimeMargin, LineOnAStock, TurningInTime, Horizon/Ideals) beyond the names the statements use.
+
+Five things the fourteen questions miss that bear on the centre:
+
+(1) Verification.insulates_iff_dense (l. 695). A practice whose verdicts are fixed by the record so far, and which keeps every verdict inside a favoured reading F and met through the record, exists exactly when F is dense. Insulates.refutable_not_not (l. 704) adds that such an F, if refutable, excludes nothing up to double negation. This is a general law about a rule set from what is registered keeping itself unrefuted.
+
+(2) WayOfUnits: With.goes_on and Against.turns_and_ends. They have the same needs, the same total use and the same levels up to the first unit's end. Only which unit carries the larger use differs, and one line never ends while the other ends. The module also says units only end and nothing builds a unit. Its giving is a function handed in, so it has no unit that gives and no multiplying; those appear only through the LineOnAStock bridge at kids u = [u].
+
+(3) Viability states the general largest region closed under steps: the kernel as the largest certificate, with never_leaves_iff_certificate as an exact dichotomy. It concludes no point of no return. Outside the kernel some course leaves, not every course.
+
+(4) WeightedCommuting.Reinforcing draws a value in proportion to its count and adds one to the value drawn, which is a favouring set again from its own share. Its expectations stay equal from equal counts, yet runs that draw one side every time, for any number of steps, have positive weight. Pooling wears away a start's asymmetry. Both are built cases only, and no rate is stated.
+
+(5) Weighted and WeightedTraces have no level, no cost and no ending. Their bearing is on reading: lumpability is exact at every horizon exactly when it is exact at one step; possibility cannot see a cancellation; memory must be kept in the configuration.

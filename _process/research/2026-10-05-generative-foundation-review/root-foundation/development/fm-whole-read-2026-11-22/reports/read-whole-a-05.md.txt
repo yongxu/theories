@@ -1,0 +1,7 @@
+AI-written reader report, whole-a-05.
+
+I read all 25 assigned modules, from Evolution.lean through Gain.lean, in the supplied order. For each I read the opening account, every declaration statement and its docstring where present. No module was read only in part, and no question was left unreached.
+
+I found no statement in this batch that resets a selection rule from the population share it already favours and derives both exhaustion and continuing change from that rule. Founding.lean shows why the distinction matters. Its confined-lineage theorem uses the renewal gate, excess and confinement to derive extinction. Selection for the lineage is part of the definition of a rise, but the extinction proof does not need that selection. The spreading lineage in the same flow survives the confined one by a generation.
+
+Two details bear on how to recognize the centre. In Feeding.lean a former giver can still support a later formation through a store. The carrying theorem establishes that some of the earlier gift could remain, because the amounts carry no mark of origin. In FromTheDynamics.lean the alternating lineage really does persist as its members change. Its chooser is supplied separately and always chooses keeping, so the premise connecting an ending choice to overdraw holds vacuously. The alternation and the choice have different evidential roles in that witness.

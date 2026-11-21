@@ -1,0 +1,903 @@
+# Task file: SETTLE, reader whole-c-settle-26
+
+Your 9 modules and the fields on which the two passes differ. Pass a is one kind of model, pass b another.
+
+## Segmentation.lean  (360 lines)
+
+### field `both_outcomes`
+- pass a: N: Not found in the statements read.
+- pass b: S: `chunks_eq_iff` (l. 141) and `encode_iff` (l. 182) are exactly-when laws for grouping recovering a partition or words, general. They are not of going on against ending (N for that).
+
+### declarations of Segmentation.lean (by script)
+  l.38 def glue
+  l.44 def chunks
+  l.49 def LinkedFrom
+  l.54 def lastOf
+  l.59 def Opens
+  l.65 def Grouped
+  l.71 def join
+  l.75 theorem join_glue
+  l.86 theorem join_chunks
+  l.90 theorem grouped_glue
+  l.101 theorem grouped_chunks
+  l.107 theorem chunks_group
+  l.132 theorem chunks_of_grouped
+  l.141 theorem chunks_eq_iff
+  l.146 theorem chunks_unique
+  l.155 def encode
+  l.158 def Spelled
+  l.161 theorem grouped_words
+  l.182 theorem encode_iff
+  l.202 def countIf
+  l.207 def edges
+  l.222 def departures
+  l.226 def transitions
+  l.230 def bond
+  l.233 theorem countIf_disjoint
+  l.264 theorem transitions_le
+  l.273 theorem lt_of_twice
+  l.278 theorem bond_unique
+  l.291 theorem no_record_groups
+  l.309 def readAll
+  l.313 theorem readAll_map_iff
+  l.350 theorem reads_every_iff
+
+## Selection.lean  (989 lines)
+
+### field `moves`
+- pass a: S: `Relabel.EquivariantChoice.withholds_of_full_tie` (l. 667) requires an equivariant optional choice to withhold when all entries tie and two alternatives differ. This is choice among alternatives at one map.
+- pass b: N for a Process with moves. S: `Relabel.EquivariantChoice.untied` (l. 662) and `withholds_of_full_tie` (l. 667): any choice rule of at most one alternative that commutes with exchanging alternatives chooses no tied alternative, and returns none at a full tie of two or more. B: the flows diverting, undiverted and supplying in Diversion (ll. 807-828) are alternative ways compared, not choices within one process.
+
+### declarations of Selection.lean (by script)
+  l.137 def SelectsThrough
+  l.143 def ScoresThrough
+  l.149 def SelectsThroughAll
+  l.158 theorem AlikeThrough.trans
+  l.164 theorem AlikeThroughUpTo.trans
+  l.169 theorem AlikeThroughAll.refl
+  l.173 theorem AlikeThroughAll.symm
+  l.178 theorem AlikeThroughAll.trans
+  l.184 theorem class_selects
+  l.190 class alike
+  l.191 theorem selects_alike_iff
+  l.200 theorem separates
+  l.206 theorem SelectsThrough.excludes_iff
+  l.211 theorem admits_through
+  l.217 theorem observed_scores
+  l.222 theorem ScoresThrough.atLeast
+  l.229 theorem SelectsThrough.later
+  l.234 theorem SelectsThrough.widen
+  l.239 theorem SelectsThrough.not
+  l.246 theorem SelectsThrough.and
+  l.257 theorem scores_alike_iff
+  l.277 theorem SelectsThrough.all
+  l.282 theorem SelectsThroughAll.and
+  l.292 theorem selects_alike_all_iff
+  l.302 theorem separates_all
+  l.319 def WithinPoolCoupling
+  l.327 theorem beyond_pool_coupling
+  l.345 theorem unselected_beyond_coupling
+  l.356 theorem unscored_beyond_coupling
+  l.369 theorem uncoupled_beyond_pool
+  l.386 theorem unselected_beyond_pool
+  l.399 theorem unselected_beyond_coupling_all
+  l.414 theorem unselected_beyond_coupling_responsive
+  l.446 theorem share_rises_through
+  l.477 def swap
+  l.479 theorem swap_left
+  l.481 theorem swap_right
+  l.488 theorem swap_other
+  l.492 theorem swap_swap
+  l.504 theorem swap_inj
+  l.509 def Equivariant
+  l.514 def EquivariantValue
+  l.519 def EquivariantChoice
+  l.525 theorem fixed_of_tied
+  l.537 theorem Equivariant.tied
+  l.543 theorem selected_alike_iff
+  l.552 theorem Equivariant.untied
+  l.559 theorem Equivariant.none_of_full_tie
+  l.568 def Alone
+  l.571 theorem alone_equivariant
+  l.581 theorem alone_single
+  l.589 theorem singled_iff_untied
+  l.604 theorem EquivariantValue.tied
+  l.609 theorem EquivariantValue.full_tie
+  l.614 theorem EquivariantValue.level
+  l.620 theorem EquivariantValue.const
+  l.626 theorem entry_equivariant
+  l.631 theorem valued_alike_iff
+  l.641 theorem map_swap_eq_some
+  l.649 theorem EquivariantChoice.selects
+  l.657 theorem EquivariantChoice.single
+  l.662 theorem EquivariantChoice.untied
+  l.667 theorem EquivariantChoice.withholds_of_full_tie
+  l.689 theorem unselected
+  l.700 theorem dweller_within_reach
+  l.711 theorem dweller_spared
+  l.718 theorem clearer_spared
+  l.727 theorem selected_by_dweller
+  l.737 theorem dweller_alike_gone
+  l.749 def BothAdmitted
+  l.757 theorem selected_pooled
+  l.788 inductive Formation
+  l.793 inductive Place
+  l.798 def first
+  l.801 def drawn
+  l.804 def raised
+  l.807 def diverting
+  l.819 def undiverted
+  l.825 def supplying
+  l.831 def divertedLevel
+  l.836 def undivertedLevel
+  l.841 def suppliedLevel
+  l.847 def web
+  l.863 def gauge
+  l.869 def StoreAtLeast
+  l.873 def takerAlone
+  l.877 theorem diverting_balances
+  l.883 theorem undiverted_balances
+  l.887 theorem supplying_balances
+  l.893 theorem dependent
+  l.899 theorem diverting_acting
+  l.904 theorem diverting_taking
+  l.911 theorem takerAlone_closed
+  l.920 theorem supplied_closed
+  l.934 theorem favours
+  l.965 theorem blind_to_source
+
+## SelectionLevels.lean  (1596 lines)
+
+### field `giving`
+- pass a: B: `Founding.mixedOffspring` (l. 1387) gives both keepers zero offspring when apart and each other member three; `Founding.mixed_returns` (l. 1403) identifies each keeper’s contribution to group return.
+- pass b: N: the returns to groupmates enter as a premise (the returns hypothesis). D: `rises_iff_lineages` (l. 768) docstring notes that a lineage that has ended has no members and no factor; no statement of loss of the giving.
+
+### field `no_return`
+- pass a: S: `lineage` (l. 667) defines the next lineage by flat-mapping offspring over its members, so an empty lineage has empty successor by the defining equation.
+- pass b: N. S (related only): `lineage_keeps` (l. 715): under exact transmission a lineage founded uniform at v keeps v at every generation. This is a kept value, not a point of no return.
+
+### declarations of SelectionLevels.lean (by script)
+  l.181 def whole
+  l.184 theorem whole_total
+  l.191 theorem whole_weighted
+  l.196 theorem whole_length
+  l.201 theorem whole_length_of_equal
+  l.206 def concordWithin
+  l.209 def discordWithin
+  l.212 def concordAmong
+  l.216 def discordAmong
+  l.223 def context
+  l.226 theorem context_total
+  l.234 theorem context_length
+  l.240 theorem mem_of_mem_context
+  l.247 def concordWithinBy
+  l.251 def discordWithinBy
+  l.256 def concordMeans
+  l.260 def discordMeans
+  l.263 theorem shuffle_left
+  l.269 theorem shuffle_right
+  l.277 theorem meet
+  l.283 theorem square_split
+  l.295 theorem levels_sized
+  l.371 theorem pairs_context
+  l.382 theorem within_by_one
+  l.389 theorem among_by_one
+  l.404 theorem whole_nil
+  l.415 theorem levels
+  l.454 theorem rises_iff
+  l.462 theorem none_iff
+  l.472 theorem square_lt_iff
+  l.476 theorem square_eq_iff
+  l.482 theorem rises_iff_sized
+  l.490 theorem none_iff_sized
+  l.498 theorem means_none_of_alike
+  l.507 theorem rises_iff_within_of_alike
+  l.519 theorem among_for_of_rises
+  l.530 theorem within_for_of_rises
+  l.539 theorem within_none_of_uniform
+  l.548 theorem levels_of_uniform
+  l.557 theorem among_none_of_alike
+  l.563 theorem levels_of_alike
+  l.577 theorem rises_exact_iff_levels
+  l.595 theorem rises_exact_iff_sized
+  l.613 theorem rises_exact_iff_within_of_alike
+  l.628 theorem among_for_of_raises
+  l.644 theorem within_by_none_of_uniform
+  l.655 theorem rises_iff_means_of_uniform
+  l.667 def lineage
+  l.672 def lineages
+  l.676 theorem whole_map
+  l.682 theorem flatMap_flatMap
+  l.695 theorem lineages_family
+  l.702 theorem lineages_whole
+  l.707 theorem lineage_within
+  l.715 theorem lineage_keeps
+  l.726 theorem lineage_total
+  l.736 theorem lineage_value
+  l.745 theorem lineages_uniform
+  l.755 theorem lineages_within_none
+  l.768 theorem rises_iff_lineages
+  l.784 theorem balance_add
+  l.790 theorem balance_mul
+  l.796 theorem returns_total
+  l.805 theorem returns_weighted
+  l.825 theorem returns_balance
+  l.859 theorem rises_iff_reading
+  l.867 theorem spread_levels
+  l.883 theorem within_kept
+  l.899 theorem among_kept
+  l.920 theorem within_returns
+  l.929 theorem within_against
+  l.940 theorem among_returns
+  l.952 theorem among_for_iff
+  l.966 theorem rises_iff_kept
+  l.990 theorem rises_iff_returns
+  l.1002 theorem rises_iff_returns_of_uniform
+  l.1014 theorem not_rises_of_alike
+  l.1028 theorem rises_exact_iff_returns
+  l.1044 theorem cancel_two
+  l.1053 theorem combination_balance
+  l.1087 theorem kept_balance
+  l.1099 theorem within_shared_by
+  l.1118 theorem means_shared
+  l.1148 theorem rises_iff_shared_sized
+  l.1212 theorem rises_iff_kept_sized
+  l.1229 theorem rises_iff_divided_sized
+  l.1244 inductive Member
+  l.1253 def holds
+  l.1260 def groups
+  l.1262 theorem equal
+  l.1271 def offspring
+  l.1280 theorem among_wins
+  l.1293 def offspring
+  l.1302 theorem within_wins
+  l.1314 def unequal
+  l.1317 def holding
+  l.1324 def offspring
+  l.1331 def factor
+  l.1333 theorem common
+  l.1342 theorem by_means
+  l.1356 def keeps
+  l.1363 def assorted
+  l.1366 def mixed
+  l.1368 theorem assorted_equal
+  l.1373 theorem mixed_equal
+  l.1380 def assortedOffspring
+  l.1387 def mixedOffspring
+  l.1393 theorem assorted_returns
+  l.1403 theorem mixed_returns
+  l.1417 theorem either_verdict
+  l.1434 def groups
+  l.1436 def keeps
+  l.1442 theorem equal
+  l.1450 def offspring
+  l.1457 theorem returns
+  l.1473 theorem below_one
+  l.1488 def together
+  l.1491 def apart
+  l.1494 def factor
+  l.1496 theorem together_common
+  l.1502 theorem apart_common
+  l.1511 def togetherOffspring
+  l.1518 def apartOffspring
+  l.1524 theorem together_returns
+  l.1536 theorem apart_returns
+  l.1553 theorem either_verdict
+  l.1573 theorem divided_one_verdict
+
+## SelectionPace.lean  (2518 lines)
+
+### field `reading`
+- pass a: S: `numbered_family` (l. 881) preserves every family on rereading amounts as offspring counts; `number_unfed_uniform` (l. 854) forces those counts equal under exact count inheritance, next-step balance, birth and standing bounds, nonshrinking size, positive m and zero next-lineage inflow.
+- pass b: N: no observation, class read alike, or rule made from what is registered. The amount `G.amount t p` is a supplied quantity per member, not a reading.
+
+### field `no_return`
+- pass a: S: `total_within_power` (l. 733) bounds the final transmitted total by k^T times its initial value under the balance, birth, exact transmission, positive standing and per-parent cap hypotheses. A zero initial total therefore stays zero over the stretch.
+- pass b: N: no point of no return or irreversibility is stated in the module. D: the account cites `Reproduction.Flow.closed_lineage_lowered` (closed lineage ended) from another module, not stated here.
+
+### field `comparison`
+- pass a: S: `joint_within_carried` (l. 553) bounds inflow of the carriers’ joint lineage by the amount-weighted sum of individual lineage inflows. B: `Displacement.natural_fails` (l. 1146) refutes replacing that sum by whole-population inflow in the response law.
+- pass b: N: no law carries something between two processes, starts or ways. Nearest: `inflow_lineage_le` (l. 501) and `joint_within_carried` (l. 553) compare inflow into a joint lineage with the sum over single lineages; `Displacement.least` (l. 1210) and `Fed.least` (l. 1605) state, for any world meeting the premises with given counts, a least inflow.
+
+### field `closed_region`
+- pass a: B: `Inherited.same_step_fails` (l. 2009) establishes closed exchange and dissipation on the listed whole at both steps, with zero whole inflow. These are step-specific closure claims.
+- pass b: N: no law of a region closed under steps. B: `Displacement.closed` (l. 1056) and `Inherited.closedFirst`/`closedSecond` (l. 1872): the built family is closed at the step (a premise of the witness, used to show the inflow is nothing).
+
+### declarations of SelectionPace.lean (by script)
+  l.201 def lineage
+  l.204 theorem lineage_mono
+  l.212 theorem lineage_sub
+  l.219 theorem fresh_total
+  l.226 theorem standing_total
+  l.246 theorem born_within_inflow
+  l.274 theorem parent_within_inflow
+  l.291 theorem generation_within_inflow
+  l.308 theorem standing_pinned
+  l.319 theorem stands_of_need
+  l.329 def carriedInflow
+  l.334 theorem sum_exact
+  l.347 theorem mean_step_exact
+  l.359 theorem offspring_within_carried
+  l.381 theorem total_within_carried
+  l.397 theorem response_within_carried
+  l.418 theorem selection_within_carried
+  l.441 theorem unfed_rise_shrinks
+  l.464 def carriers
+  l.468 theorem mem_carriers
+  l.473 theorem total_lineage_one
+  l.478 theorem total_lineage
+  l.486 theorem excess_add_le
+  l.492 theorem excess_total_le
+  l.501 theorem inflow_lineage_le
+  l.512 theorem total_carriers_le
+  l.529 theorem total_carriers_unit
+  l.553 theorem joint_within_carried
+  l.565 theorem share_within_rest
+  l.600 theorem share_within_joint
+  l.623 theorem stretch_within_carried
+  l.650 theorem moved_within_carried
+  l.673 theorem steps_to_move
+  l.696 theorem parent_within_factor
+  l.715 theorem total_within_factor
+  l.733 theorem total_within_power
+  l.762 theorem share_within_power
+  l.781 theorem whole_within_power
+  l.801 theorem number_step_within_inflow
+  l.826 theorem number_spread_within_inflow
+  l.854 theorem number_unfed_uniform
+  l.876 def numbered
+  l.881 theorem numbered_family
+  l.887 theorem numbered_number
+  l.899 theorem response_sq_within_inflow
+  l.964 inductive Relatum
+  l.973 def level
+  l.985 def web
+  l.994 def takeFirst
+  l.1006 def giveFirst
+  l.1017 def take
+  l.1021 def give
+  l.1025 def present
+  l.1029 def flow
+  l.1035 def family
+  l.1037 theorem every
+  l.1044 theorem balances
+  l.1056 theorem closed
+  l.1058 theorem dissipates
+  l.1062 def firstKids
+  l.1069 def kids
+  l.1074 def marks
+  l.1083 def generations
+  l.1088 theorem arise
+  l.1096 theorem stands
+  l.1104 theorem exact
+  l.1112 theorem capped
+  l.1118 theorem unit
+  l.1130 theorem displacement
+  l.1146 theorem natural_fails
+  l.1158 theorem premises
+  l.1174 theorem rest_falls
+  l.1190 theorem fedEach
+  l.1199 theorem factor
+  l.1210 theorem least
+  l.1228 theorem capped_later
+  l.1241 theorem spread_needs_inheritance
+  l.1270 inductive Relatum
+  l.1284 def levelFirst
+  l.1297 def levelSecond
+  l.1309 def levelLater
+  l.1320 def level
+  l.1325 def web
+  l.1333 def fromParent
+  l.1345 def fromFirst
+  l.1357 def fromSecond
+  l.1369 def toPair
+  l.1381 def toFirstPair
+  l.1393 def toSecondPair
+  l.1404 def takeFirst
+  l.1415 def takeSecond
+  l.1426 def giveFirst
+  l.1437 def giveSecond
+  l.1451 def take
+  l.1456 def give
+  l.1461 def present
+  l.1466 def flow
+  l.1471 theorem balances
+  l.1500 def kidsFirst
+  l.1511 def kidsSecond
+  l.1522 def kids
+  l.1528 def generations
+  l.1533 theorem number
+  l.1535 theorem exact
+  l.1543 theorem arise
+  l.1553 theorem stands
+  l.1563 theorem capped
+  l.1574 theorem fed
+  l.1587 theorem premises
+  l.1605 theorem least
+  l.1627 inductive Relatum
+  l.1641 def levelFirst
+  l.1653 def levelSecond
+  l.1665 def levelLater
+  l.1676 def level
+  l.1681 def web
+  l.1689 def fromCarrier
+  l.1701 def fromLeft
+  l.1713 def fromRight
+  l.1725 def toPair
+  l.1737 def toLeftPair
+  l.1749 def toRightPair
+  l.1760 def takeFirst
+  l.1771 def takeSecond
+  l.1782 def giveFirst
+  l.1793 def giveSecond
+  l.1807 def take
+  l.1812 def give
+  l.1817 def present
+  l.1822 def flow
+  l.1828 def family
+  l.1831 theorem every
+  l.1843 theorem balances
+  l.1872 theorem closedFirst
+  l.1874 theorem closedSecond
+  l.1876 theorem dissipatesFirst
+  l.1880 theorem dissipatesSecond
+  l.1885 def kidsFirst
+  l.1896 def kidsSecond
+  l.1907 def kids
+  l.1913 def marks
+  l.1926 def generations
+  l.1931 theorem ariseFirst
+  l.1939 theorem standsFirst
+  l.1947 theorem exactFirst
+  l.1955 theorem cappedFirst
+  l.1961 theorem inherited
+  l.1969 theorem ariseSecond
+  l.1979 theorem standsSecond
+  l.1989 theorem exactSecond
+  l.1999 theorem cappedSecond
+  l.2009 theorem same_step_fails
+  l.2026 theorem next_step_attained
+  l.2043 theorem ariseBoth
+  l.2049 theorem standsBoth
+  l.2055 theorem exactBoth
+  l.2062 theorem cappedBoth
+  l.2071 theorem stretch_attained
+  l.2088 inductive Relatum
+  l.2096 def levelFirst
+  l.2102 def levelLater
+  l.2108 def level
+  l.2112 def web
+  l.2120 def fromLeft
+  l.2127 def fromRight
+  l.2134 def toRightKid
+  l.2141 def toLeftKid
+  l.2147 def takeFirst
+  l.2153 def giveFirst
+  l.2159 def take
+  l.2163 def give
+  l.2167 def present
+  l.2171 def flow
+  l.2176 theorem balances
+  l.2186 def kidsFirst
+  l.2192 def kids
+  l.2197 def generations
+  l.2205 theorem swap
+  l.2217 inductive Relatum
+  l.2225 def levelFirst
+  l.2231 def levelLater
+  l.2237 def level
+  l.2241 def web
+  l.2249 def fromCarrier
+  l.2256 def fromOther
+  l.2263 def toPair
+  l.2269 def takeFirst
+  l.2275 def giveFirst
+  l.2281 def take
+  l.2285 def give
+  l.2289 def present
+  l.2293 def flow
+  l.2298 theorem balances
+  l.2308 def kidsFirst
+  l.2314 def kids
+  l.2319 def marks
+  l.2325 def generations
+  l.2330 theorem arise
+  l.2338 theorem stands
+  l.2346 theorem exact
+  l.2358 theorem uncapped
+  l.2379 inductive Relatum
+  l.2386 def levelFirst
+  l.2391 def levelLater
+  l.2396 def level
+  l.2400 def web
+  l.2408 def fromCarrier
+  l.2414 def toKid
+  l.2419 def takeFirst
+  l.2424 def giveFirst
+  l.2429 def take
+  l.2433 def give
+  l.2437 def present
+  l.2441 def flow
+  l.2446 theorem balances
+  l.2454 def kidsFirst
+  l.2459 def kids
+  l.2464 def marks
+  l.2469 def generations
+  l.2474 theorem arise
+  l.2481 theorem stands
+  l.2488 theorem exact
+  l.2495 theorem capped
+  l.2505 theorem shrink
+
+## SelectionPool.lean  (827 lines)
+
+### field `giving`
+- pass a: N: Not found in the statements read.
+- pass b: B: `Clearing.source_within` (l. 705): the source, a formation, gives to the resource the clearer depends on, so it lies within the clearer's coupling closure. N: no statement here of a giver being lost; the flows are supplied.
+
+### field `forms_change`
+- pass a: S: `Web.pool_adds` (l. 200) gives a strict widening of selectable predicates where the individual reads two histories alike and the pooled couplings distinguish them. Joining the pool is not a dynamical conclusion.
+- pass b: N: no statement of the going on continuing while what is present changes, nor of a widening.
+
+### declarations of SelectionPool.lean (by script)
+  l.16 theorem names
+  l.139 theorem pooledClass_selects
+  l.146 theorem separates_all_iff
+  l.155 theorem member_separates_all
+  l.165 theorem separates_all_iff_member
+  l.180 theorem admission_separates_all
+  l.189 theorem pooled_iff_member
+  l.200 theorem pool_adds
+  l.209 def holdsCount
+  l.213 theorem toNat_le_of_imp
+  l.218 theorem holdsCount_le_of_imp
+  l.224 theorem holdsCount_congr
+  l.231 theorem toNat_add_not
+  l.236 theorem holdsCount_add_not
+  l.246 def MajorityHolds
+  l.252 theorem majority_through_all
+  l.268 theorem majority_outvoted
+  l.305 def ActsAlikeOnPoolCoupled
+  l.312 theorem ActsAlikeOnPoolCoupled.within
+  l.331 theorem Flow.act_alike_pool
+  l.346 theorem Flow.act_unselected_pool
+  l.360 theorem Flow.consequence_unselected_pool
+  l.374 theorem Flow.apart_beyond_pool
+  l.389 theorem Flow.separating_member_beyond
+  l.410 theorem Flow.act_selected_by_pool
+  l.438 theorem act_courses_unselected_pool
+  l.473 def ReadsCouplings
+  l.482 theorem AlikeThrough.of_reads
+  l.496 theorem SelectsThroughAll.reads
+  l.508 theorem anticipates_iff
+  l.518 theorem anticipation_misses
+  l.525 theorem SelectsThrough.read
+  l.533 theorem ExchangeLaw.Through.widen
+  l.542 theorem ExchangeLaw.Through.anticipated
+  l.553 theorem WithinClosure.of_reads
+  l.562 theorem WithinClosureOf.to_reads
+  l.575 theorem CoupledFrom.of_reads
+  l.584 theorem withinCoupling_reads
+  l.592 theorem withinCoupling_reads_iff
+  l.605 theorem unselected_beyond_reads
+  l.634 theorem Flow.act_unselected_reads
+  l.663 def restLaw
+  l.667 theorem restLaw_through
+  l.671 theorem rest_follows
+  l.675 theorem rest_follows_spared
+  l.681 theorem start_alike
+  l.688 theorem clearerSide_closed_either
+  l.696 theorem acts_alike
+  l.705 theorem source_within
+  l.720 theorem pool_closes_gap
+  l.753 theorem withheld_alike_for_clearer
+  l.770 theorem within_closure_unseparated
+  l.791 theorem reading_clearer_unselected
+  l.816 theorem reading_dweller_selects
+
+## SelectionRuns.lean  (110 lines)
+
+### field `moves`
+- pass a: S: `choice_withholds_of_constant` (l. 54) forces any equivariant optional choice of a moment to withhold along any process run whose registered value is constant. The rule chooses among moments of the run.
+- pass b: N: `P : Process S A` and `Run P` appear, but the run is used only as a sequence of states; no law concerns a choice among steps or what a choice keeps.
+
+### field `comparison`
+- pass a: S: `values_right_of_reads` (l. 99) transfers equality of a feature with a function of the map on configurations to pointwise equality of their readings on any run.
+- pass b: N: no law carrying something between two processes or two starts. The laws compare moments of one run (`value_level_alike` l. 70).
+
+### declarations of SelectionRuns.lean (by script)
+  l.54 theorem choice_withholds_of_constant
+  l.62 theorem values_alike_of_constant
+  l.70 theorem value_level_alike
+  l.77 theorem selects_through_coupling
+  l.85 theorem values_lumped
+  l.91 theorem selects_right_of_reads
+  l.99 theorem values_right_of_reads
+
+## SelectionShift.lean  (1149 lines)
+
+### field `share`
+- pass a: B: `Shrinking.positive_then_empty` (l. 1123) and `Shrinking.course_size` (l. 1097) keep one marked member while size falls by one to the last member. Offspring are set by the member label in `Shrinking.kids` (l. 1056).
+- pass b: N: concordance and discordance are counts over ordered pairs, not a share of one kind among several, and no rule or favouring is set again from them; the offspring function is given per step. (B: `Shrinking.positive_then_empty` l. 1123 states a mark total of one at every step through N, not a share driving the step.)
+
+### field `level`
+- pass a: N: Not found in the statements read.
+- pass b: S: the only amount that runs down is the family size: `Generations.nonempty_before` (l. 327): a generation nonempty at s means every earlier one is nonempty (an empty family stays empty), and `shift_step` (l. 263) gives size (t+1) = G.size (t+1) + G.size t * k for the shifted course, so the next size depends on the present members. No stock or reserve with a return depending on what is left. B: `Shrinking.positive_then_empty` (l. 1123): the family shrinks by one at each step and is empty from N+1 on.
+
+### field `forms_change`
+- pass a: B: `OneLine.keepsOne` (l. 401) lets the unmarked founder disappear while the marked founder leaves a marked offspring; `OneLine.goes_on_premises` (l. 414) gives positive size at all later generations. The offspring can have the parent’s label.
+- pass b: N: no statement in which the going on continues while what is present changes; in the constructions each member leaves itself after H (`going`), and `OneLine`, `steady`, `Alternating` keep the same family. D: the opening account (modelling choices, l. 118-125) says a line whose descendants change kind, or a revival, is not distinguished here, and newness is not represented. B: in `Shrinking` (l. 1050-1123) the members change label (some m to some (m-1)) but the course ends.
+
+### declarations of SelectionShift.lean (by script)
+  l.142 theorem mem_flatMap_of
+  l.148 theorem flatMap_singleton
+  l.153 theorem flatMap_empty
+  l.159 theorem mul_excess_congr
+  l.165 theorem concord_shifted
+  l.175 theorem discord_shifted
+  l.186 theorem concord_shift
+  l.190 theorem discord_shift
+  l.195 theorem concord_shift_amount
+  l.200 theorem discord_shift_amount
+  l.207 theorem total_shifted
+  l.214 theorem weighted_shift
+  l.225 theorem weight_varies_of_concord
+  l.234 theorem weight_varies_of_discord
+  l.243 theorem pos_weight_of_varies
+  l.247 theorem pos_weight_of_concord
+  l.251 theorem pos_weight_of_discord
+  l.263 theorem shift_step
+  l.279 theorem varies_of_selection
+  l.287 theorem reproducing_of_selection
+  l.292 theorem next_of_reproducing
+  l.298 theorem next_of_selection
+  l.305 theorem last_term_zero
+  l.314 theorem never_empties
+  l.321 theorem never_empties_while
+  l.327 theorem nonempty_before
+  l.337 theorem never_empties_of_unbounded
+  l.346 theorem line_kept
+  l.364 theorem goes_on_iff
+  l.381 theorem goes_on
+  l.401 def keepsOne
+  l.407 def course
+  l.414 theorem goes_on_premises
+  l.435 def shifted
+  l.443 theorem shift_step_premises
+  l.466 def kids
+  l.472 def course
+  l.478 theorem exact_first
+  l.490 theorem not_exact_second
+  l.499 theorem concord_first
+  l.502 theorem size_three
+  l.509 theorem exact_once_ends
+  l.526 def oneEach
+  l.532 def noneEach
+  l.537 theorem oneEach_family
+  l.547 theorem decides_nothing
+  l.570 def SameTerms
+  l.578 def keep
+  l.585 def going
+  l.589 def ending
+  l.594 theorem keep_kids
+  l.597 theorem keep_kids_after
+  l.601 theorem keep_family
+  l.612 theorem keep_terms
+  l.624 theorem keep_terms_after
+  l.632 theorem not_le_after
+  l.637 theorem going_family
+  l.648 theorem ending_empty
+  l.664 theorem same_terms_two_fates
+  l.696 theorem going_goes_on
+  l.700 theorem going_goes_on_of_selection
+  l.705 def markedPair
+  l.710 def carried
+  l.716 def steady
+  l.721 theorem steady_family
+  l.727 theorem steady_terms
+  l.738 theorem steady_two_fates
+  l.759 def shiftAt
+  l.765 def goingShifted
+  l.768 theorem shiftAt_family
+  l.780 theorem shiftAt_step
+  l.790 theorem shiftAt_terms
+  l.811 theorem two_fates_of_nonempty
+  l.855 theorem same_terms_everywhere_of_zero_after
+  l.873 theorem zero_after_two_fates
+  l.884 theorem zero_after_two_fates_shifted
+  l.897 theorem zero_after_premises
+  l.911 theorem eventually_zero_two_fates
+  l.941 theorem terms_boundary
+  l.962 def even
+  l.969 def course
+  l.974 theorem step_family
+  l.980 theorem course_family
+  l.987 theorem step_terms
+  l.996 theorem course_terms
+  l.1004 theorem even_double
+  l.1008 theorem odd_double
+  l.1012 theorem le_double
+  l.1020 theorem unbounded_not_every
+  l.1050 def line
+  l.1056 def kids
+  l.1061 def mark
+  l.1066 def course
+  l.1071 theorem unmarked_flatMap
+  l.1075 theorem unmarked_mark
+  l.1079 theorem replicate_length
+  l.1084 theorem line_step
+  l.1089 theorem course_family
+  l.1097 theorem course_size
+  l.1101 theorem course_sum
+  l.1107 theorem course_concord
+  l.1123 theorem positive_then_empty
+
+## SelectionTerm.lean  (801 lines)
+
+### field `level`
+- pass a: S: `Flow.support_not_against` (l. 389) imposes active giving, activity conditional on support and actual descent, then constrains offspring weighting. B: `SupportedDescent.top` (l. 768) instantiates the support premise. No stock-update equation is stated here.
+- pass b: N: no stock or reserve that runs down with a return depending on what is left is stated here; the mean amount is shown not to fall (`not_lower` l. 559, `support_not_lower` l. 648). Support enters only as the premise `W.Supported t p` (defined in Dependence) through `support_not_against` (l. 389). Family size reaches zero only as `empty_after` (l. 493).
+
+### field `both_outcomes`
+- pass a: S: `Generations.kept_step_iff` (l. 483) characterizes exact keeping of the cross-multiplied mean by balance of selection and transmission. This concerns a mean, not persistence of a family.
+- pass b: N for going on and ending. S for keeping and moving a mean, general: `Generations.kept_step_iff` (l. 483): mean kept across a step iff `Balanced t`; `rises_step_iff` (l. 488): rises iff `Raises t`; `balanced_exact_iff` (l. 593), `raises_exact_iff` (l. 601).
+
+### field `rank`
+- pass a: B: `SupportedDescent.family_late` (l. 754) gives an empty family at every n+2 in the Drawdown generations.
+- pass b: N: no bound on ending, falling rank or deadline; `not_lower` (l. 559) is a monotone mean, not a rank to an end.
+
+### field `forms_change`
+- pass a: B: `SupportedDescent.generations` (l. 740) replaces the parent by two different descendants; `SupportedDescent.supported_descent` (l. 786) gives a rising mean by transmission at that step.
+- pass b: N: no statement in which the going on continues while what is present changes. B: `SupportedDescent.supported_descent` (l. 786): Drawdown's parent, then two descendants, then none, the mean rising by transmission; it ends.
+
+### declarations of SelectionTerm.lean (by script)
+  l.93 theorem excess_add_left
+  l.99 theorem excess_self_add
+  l.104 theorem half
+  l.115 theorem lt_iff_of_balance
+  l.122 theorem eq_iff_of_balance
+  l.127 theorem le_of_mul_le_mul
+  l.132 theorem pos_of_mul_pos
+  l.138 theorem swap_both
+  l.145 def concordPair
+  l.149 def discordPair
+  l.151 theorem pair_ordered
+  l.167 theorem pair_balance
+  l.190 def weighted
+  l.193 def concord
+  l.197 def discord
+  l.201 theorem pairs_add
+  l.206 theorem pairs_own
+  l.210 theorem pairs_other
+  l.215 theorem pairs_cross
+  l.221 theorem pairs_cross'
+  l.226 theorem discord_swap
+  l.231 theorem concord_swap
+  l.240 theorem covariation
+  l.278 theorem exceeds_iff
+  l.282 theorem none_iff
+  l.286 theorem pairs_zero
+  l.291 theorem concord_uniform
+  l.296 theorem discord_uniform
+  l.302 theorem concord_alike
+  l.307 theorem discord_alike
+  l.315 def born
+  l.320 theorem selection_covariation
+  l.327 theorem selection_exceeds_iff
+  l.332 theorem selection_none_iff
+  l.341 theorem offspring_covariation
+  l.352 def Exact
+  l.355 theorem raised_exact
+  l.360 theorem lowered_exact
+  l.366 theorem discord_zero_of_below
+  l.374 theorem share_le_of_below
+  l.389 theorem support_not_against
+  l.411 structure Generations
+  l.421 def family
+  l.425 def size
+  l.428 def sum
+  l.431 def offspringNumber
+  l.433 def concordAt
+  l.435 def discordAt
+  l.437 def raisedAt
+  l.439 def loweredAt
+  l.441 theorem total_flatMap
+  l.448 theorem born_eq
+  l.454 theorem offspring_eq
+  l.461 theorem mean_step
+  l.469 def Balanced
+  l.474 def Raises
+  l.477 instance balancedDecidable
+  l.479 instance raisesDecidable
+  l.483 theorem kept_step_iff
+  l.488 theorem rises_step_iff
+  l.493 theorem empty_after
+  l.501 theorem empty_sum
+  l.505 theorem kept_extend
+  l.521 theorem kept
+  l.528 theorem rises
+  l.549 theorem not_lower_step
+  l.559 theorem not_lower
+  l.581 theorem moved_unbalanced
+  l.593 theorem balanced_exact_iff
+  l.601 theorem raises_exact_iff
+  l.608 theorem moved_by_selection
+  l.618 theorem balanced_uniform_iff
+  l.625 theorem moved_by_transmission
+  l.642 def Descended
+  l.648 theorem support_not_lower
+  l.660 theorem support_moved_rises
+  l.683 def generations
+  l.692 theorem exact
+  l.701 theorem rising
+  l.715 def generations
+  l.724 theorem doubling
+  l.740 def generations
+  l.754 theorem family_late
+  l.761 theorem descended
+  l.768 theorem top
+  l.786 theorem supported_descent
+
+## Sensitivity.lean  (644 lines)
+
+### field `no_return`
+- pass a: S: `seenBy_true` (l. 423) keeps the prefix indicator true at every position after a true bit. This is irreversible prefix evidence, not a stock or formation loss.
+- pass b: N: no irreversibility or point of no return.
+
+### declarations of Sensitivity.lean (by script)
+  l.122 def ReadsWithin
+  l.127 def ReadsFinitely
+  l.137 theorem ExchangeLaw.ReadsFinitely.nonanticipating
+  l.144 theorem ExchangeLaw.Nonanticipating.readsWithin_of_every
+  l.150 theorem ExchangeLaw.Nonanticipating.readsFinitely_of_every
+  l.166 theorem alike_of_sensitive_agree_within
+  l.176 theorem ExchangeLaw.ReadsFinitely.through_of_observed
+  l.189 theorem ExchangeLaw.ReadsFinitely.through_sensitive
+  l.197 theorem ExchangeLaw.ReadsFinitely.least_coupling
+  l.208 theorem comparison_through_sensitivity_of_readsFinitely
+  l.224 theorem mixIn_alike_of_insensitiveAt
+  l.237 theorem alike_of_insensitiveAt_within
+  l.247 theorem ExchangeLaw.ReadsFinitely.alike_of_insensitive
+  l.260 def VanishFrom
+  l.264 theorem VanishFrom.of_agree
+  l.272 def vanishIndicator
+  l.279 theorem vanishIndicator_eq_one
+  l.283 theorem vanishIndicator_eq_zero
+  l.289 theorem vanishIndicator_eq_of_agree
+  l.301 theorem vanishIndicator_zeros
+  l.305 theorem vanishIndicator_ones
+  l.310 def tailLaw
+  l.314 theorem tailLaw_nonanticipating
+  l.320 theorem tailLaw_reads_from
+  l.325 theorem tailLaw_insensitive
+  l.330 theorem tailLaw_not_sensitive
+  l.334 theorem tailLaw_differs
+  l.340 theorem tailLaw_not_through_sensitive
+  l.350 theorem tailLaw_not_through
+  l.359 theorem tailLaw_through_from
+  l.367 theorem tailLaw_no_least_coupling
+  l.380 theorem tailLaw_not_readsFinitely
+  l.391 def WLPO
+  l.395 theorem WLPO.of_lpo
+  l.402 def seenBy
+  l.407 theorem seenBy_false
+  l.412 theorem seenBy_at
+  l.417 theorem seenBy_from
+  l.423 theorem seenBy_true
+  l.430 theorem alike_of_agree_from
+  l.454 theorem mixed_decides
+  l.475 theorem wlpo_of_insensitive_differs
+  l.487 theorem cond_either
+  l.499 theorem alike_of_agree_from_sensitive
+  l.530 theorem wlpo_of_not_through_sensitive
+  l.544 theorem seenBy_exists
+  l.555 theorem lpo_of_vanish_decided
+  l.580 def law
+  l.584 theorem readsWithin
+  l.591 theorem readsFinitely
+  l.595 def beyond
+  l.599 theorem lt_beyond
+  l.607 theorem beyond_ne_zero
+  l.612 def naming
+  l.616 def namingOne
+  l.620 theorem no_list

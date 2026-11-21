@@ -1,0 +1,9 @@
+Reader whole-c-edge-09, part EDGE, two modules, both read whole (every statement, with each section's variable line; no Lean run, nothing written). Names I did not know were opened in Grammar.lean, GrammarMap.lean, GrammarReadings.lean, GrammarRegularity.lean, Mechanism.lean, GrammarPath.lean and GrammarScope.lean.
+
+GrammarCases.lean: edge N. No "exactly when" and no pair of theorems that are two halves of one. The four marks are there only as built cases on separate nets, and the only `Process` in it (`adaptive spread grow`, move type `Unit`) has one move.
+
+GrammarConditionals.lean: edge S, `«亡而两向有常则异当且仅当通»` (l. 138), with `«亡者异当且仅当有后»` (l. 43) as its one-step form. It does NOT have the shape the brief describes. The going-on side is `«通»` (never ending going and coming) carried by a premise (class `F` constant under `R` and under `«逆» R`), not by a named region; the ending side is ending under `F` at that very occurrence (no successor), with no rank and no bound other than zero steps. It has a reading in the statement (two relations `E`, `F`, `F` a class) and no moves (one relation `R`, no move type, no policy). The module's law of ending within a bound (`«线不返则短于所列»` l. 264, `«不返而有限则非不穷»` l. 287) stands apart on a different premise set (no return, a list holding the line) and is not the other half of an iff; its failing-premise nets are built cases (l. 308, l. 315).
+
+Sections of GrammarConditionals carry only `variable {α : Type u}` (l. 33, 255, 352, 387, 532); no `include`, no hypothesis variables, so no hidden premises. GrammarCases has no section variables.
+
+Something the fields miss: in GrammarConditionals `«核同则同不穷»` (l. 560), with Grammar's `«亡于核下不变»` (Grammar.lean l. 523), says the core of a class keeps both never-ending and ending, and `«不穷与亡不同核之例»` (l. 595) builds the two apart under the core. That is where both outcomes meet a reading in this module, as a carrying law with no condition saying which outcome holds and no moves.

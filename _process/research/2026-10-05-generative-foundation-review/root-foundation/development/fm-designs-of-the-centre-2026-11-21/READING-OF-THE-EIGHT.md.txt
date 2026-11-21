@@ -1,0 +1,39 @@
+# The eight designs read together, before any refutation
+
+*AI-written (Claude Fable, board row FM), 21 November 2026, about 23:51 WIB (between two clock readings, 23:50:13 and 23:51:33; first written as 23:52). One reader, the session that wrote the brief. Nothing here is proved or checked: every sentence about a design is that designer's claim as I read it, and the refuters have not run. This page is NOT given to the refuters, so that they do not return it confirmed. The designs are in `designs/<key>/DESIGN.md`.*
+
+## What each returned, in one line, with its own verdict
+
+| key | model | what it is | its own verdict |
+|---|---|---|---|
+| A | Opus | who may set the rule is read off the share; "Law E": the setting passes only at a step where the setters' need is unmet and the others' met | the lock comes about; mostly arithmetic; T5 fails; a new model beside |
+| B | Opus | a web of kinds with recipes, capacities and caps; a *closing* selection forms no kind absent; three cases, the third: the formation can be kept only with its kinds coming and going, and every closing selection ends; needs a finite source AND a cost | T5 fails; case (iii) rare (52 of 81,536 laws), one mechanism; no reading |
+| C | Astra | a nursery: crop comes back only through tended seeds, tending forgoes an offspring, bookings rebuilt from the fast share; an order (fewer fast, more grain left) under which keeping is monotone when q+ceil(H/q) >= N; under it a one-sided comparison of guarded processes that transfers keeping, with `closed_viable` and `locked_ends_rising` derived on paper | old laws come from the comparison, not from the nursery; the model is beside the others |
+| D | Fable | the future as what is still keepable; losing nothing of it is forgoing nothing; what stays kept is kept together; a dominating move forgoes nothing | part 2 holds of any chain between held and holds; not the centre; a negative for "keeps widening" |
+| E | Astra | the smallest machine: taker and giver, two tokens, six configurations; from one start, registering the stock keeps a cycle and being told "full" ends, past return at FULL stock; every part tested by removal | the law read off is a counting bound; T5 fails; a controller with recall needs no reading |
+| F | Fable | the grammar's largest-closed-region law at reading-and-step together; three links; the guess that the two ways are inside and outside one region is FALSE (0 of 1,298 ways) | links, not a centre; "the law gives closure, never the running down": the fall is a rank, a least region |
+| G1 | Fable | a race between the level and the menu (who is still there to be formed); the lock is the menu having run out; no return at any level, cap included; under free selection more level closes nothing | part (a) thin; no rule is set again; T5 one small case |
+| G2 | Astra | forms as linear operations composed in series; a last turn before extinction with equal cohort sizes | not the centre by its own account; T5 fails both sides |
+
+## What I see across them (my reading, to be attacked)
+
+1. **Every design that got anywhere used a comparison.** C: a preorder with a one-sided simulation. D: `Dominates` (every move from below is matched by the top move from above). G1: Lemma 1 (keepable is upward closed in the level under free choice). B: the kept set is an up-set, and moves are closed under min, sum or max. G2: the full repertoire dominates every restricted one. A: kept levels of the others alone are upward closed. None of them saw the others. The package has bisimulation on frames and no law that carries keeping from one process to another (the DJ session's search, by name).
+
+2. **F's block 1 names why five joins were dictionaries.** The largest-closed-region law gives what is kept. The running down is a rank that falls: a least region. The package's keeping side is all the first, its lock-and-level side all the second, and one cannot be unfolded into the other. What they share is comparison: a course that goes on is one a loop is carried into; a course that ends is one carried into a clock. C's two derivations are exactly these two: `closed_viable` by the one-point loop, `locked_ends_rising` by a clock.
+
+3. **The step of no return is not a low level.** E: past return at full stock. G1: the level at the menu's exit is at the cap in 3,906 courses. B: holding both partners gives the ground's renewing act away. A: the setters' extinction. What is lost is *who gives*, and it is lost by a selecting that forms only from what is there. This is the meta-attractor's content (a selection removing what it rests on) inside a model, and it answers T6 better than any order on levels.
+
+4. **"Closing" is the lock, said without a share.** B's `Closing` (forms no kind absent), G1's `F`-first (the menu only narrows), E's incumbent priority, A's allowed-from-share: in each, what can be selected next is set from what was selected. A share is one way of doing that. B and G1 derive the irreversibility from it in one line; A derives it from the share by `CarrierCounts.raises`.
+
+5. **B's third case is the nearest thing to his sentence.** "It is also not holding exactly the same, dynamics, forms changes over time, but the continuation may continue": in case (iii) no population can stand, every course that keeps the formation has each of its kinds absent infinitely often and forms an absent kind infinitely often, and every selection that only re-forms what is there ends. And it needs both a finite source and a cost: free support, or no cap, and holding still is always possible. The second way there is not remaking; it is forming what is not there. What it lacks: it is rare and of one mechanism in what was searched; it may be an artefact of tokens lasting one step; "more and more future" (new kinds) is not in it.
+
+## A candidate for the centre, in two layers (mine, untested)
+
+- **Layer 1, the law that joins.** Keeping for n steps is carried along a one-sided comparison of guarded processes. Its two simplest instances are the loop and the clock. Cases to come out by a call: `GuardHorizon.closed_viable`, `Keeping.keptFor_of_closed` (through `KeptFor` as `Viable` on classes, which I withdrew as a dictionary on its own), `TurningInTime.locked_ends_rising`, the upward closure of what is kept (G1's Lemma 1, B's K1). If this holds in Lean with old statements unchanged, it is a law between two processes with a case on each side.
+- **Layer 2, the statement with both outcomes.** On a web with a finite source and a cost: a selecting that forms only what is present (closing) keeps a formation exactly where it reaches a configuration above one that stands; where none stands and the formation can still be kept, it is kept only by forming what is absent, and every closing selection passes a step of no return, which can be at a full level. E's machine is the smallest built case with a reading in it.
+
+What would make this one more model beside the others: layer 1 turning out to be `closed_viable` generalised with nothing crossing; layer 2's third case being an artefact of the one-step tokens; or the two layers having nothing to do with each other (layer 1 used nowhere in layer 2's proofs).
+
+## Cost of round 1
+
+Claude side, one workflow (`wf_506d5943-aa1`): five designs, 1,578,872 tokens, 222 tool calls, 37 minutes. Astra 6.2 (`cx -e xhigh`): C 1,544.8k tokens in 1,147 s; E 7,527.9k in 1,737 s; G2 1,058.3k in 1,066 s.

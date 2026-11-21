@@ -1,0 +1,60 @@
+# Brief: a read of every module of the package, by fourteen questions
+
+*AI-written (Claude Fable, board row FM), 22 November 2026, frozen before any reader ran (hash in `FROZEN-WHOLE-READ.sha256.txt`). You are one reader of many. Each reader has a batch of modules; two kinds of model each read the whole package, and neither sees the other's returns. Where they differ, a third settles it from the statements.*
+
+## What we are doing, and why this read
+
+`/Users/ren/theories` draws a map of how anything forms, persists, changes and ends, with its core proved in Lean 4 with no axioms. Read `AGENTS.md` at the repository root (one page).
+
+On the night of 21 November eight designers each proposed a model of the map's missing centre (a way of selecting that uses up what it rests on and can no longer be turned, and a way in which forms change and the going on continues, as two outcomes of one course). Fifteen refuters found that none was the centre, and that seven of the eight had proposed as new what the package already states in general, in modules no earlier read had opened: a general law of running down by a falling rank, an exact point of no return for any law that keeps an order, a comparison of two processes, nets with a siphon law, built cases of a going-on that continues while no form is held. The existing listing of places covers 158 of the package's 407 modules, by the questions of four earlier reads.
+
+So before anything more is designed, every module is read once by the questions that night raised. **Your return is a reader's return: unchecked, kept word for word, shown beside the other reader's.** Nothing is added up and nothing is ranked. A wrong "not found" costs more than a missing answer: three "not found" claims of 21 November came from a module's opening account and were wrong at the statements.
+
+## How to read a module
+
+The package is `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/`. For each module in your batch:
+
+1. Read its opening account (the `/-! … -/` block at the head).
+2. Read **every declaration's statement** (the signature of each `theorem`, `def`, `structure`, `inductive`, `abbrev`, up to `:=`) and its docstring. You need not read proof bodies; read one only where a statement cannot be understood without it.
+3. Answer the fourteen questions below for that module.
+
+Each answer begins with **one letter** saying how you know:
+
+- `S` — from a **statement** you read. Name the declaration and its line: ``S: `Lasting.orbit_reaches_iff_variant` (l. 412): one sentence saying what it states, with its premises.``
+- `D` — from a docstring or the opening account **only**; you did not find or read a statement that says it. Say where.
+- `B` — only in a **built case** (a named instance, a witness, an example), not in a general law. Name it and its line.
+- `N` — **Not found in what was read**, having read every statement of the module.
+- `U` — **Not reached**: you did not read enough of the module to say.
+
+An answer may have two parts (`S: … B: …`). Keep each to a few sentences. Use the Lean's own names. Do not interpret: say what the statement says, with its premises. "General" means stated for every process, law, relation or the like; "built" means of one particular model.
+
+## The fourteen questions (the fields of your return, in this order)
+
+1. `states` — What the module states, in two sentences: its headline law or laws, and whether they are general or of one built model.
+2. `moves` — Is there a process with **moves** (a choice among steps: `Process S A`, a policy, a plan, an allowed set), and a law about what some choice or every choice keeps?
+3. `reading` — Is there a **reading** (an observation, a class of things read alike, a rule made from what is registered), and a law in which what is registered decides something?
+4. `share` — Is there a **share** (a count or fraction of one kind among several) and a rule or favouring **set again from it**?
+5. `level` — Is there a **level** (a stock, a reserve, a condition with an amount) that can **run down**, with what comes back depending on what is left?
+6. `giving` — Is what gives to that level, or what keeps a condition met, **itself a going-on of the model that can be lost** (a unit, a kind, a formation), as against a function or premise handed in?
+7. `cost` — Does keeping or giving **cost the one that does it** (an offspring forgone, an act spent, its own standing drawn on)?
+8. `multiplying` — Are there **units that leave units**, or kinds that form kinds, whose number changes by a law of the step?
+9. `no_return` — Is there a **point of no return** or an irreversibility (once lost not regained; from here no course keeps it)? Is it **concluded or a premise**? Is it at a low level, or at the loss of something that gives?
+10. `both_outcomes` — Is there a statement with **both outcomes** (an "exactly when", a dichotomy) of going on and ending, or of keeping and losing, for one model? General or built?
+11. `comparison` — Is there a law that **carries** something between two processes, two starts or two ways (a simulation, an order kept by the step, "what this keeps that keeps", a covering, a dominating move, a set closed upward)?
+12. `rank` — Is there a law of **ending within a bound**, a rank or variant that falls, a drain, a deadline?
+13. `closed_region` — Is there a law of a **region closed under steps** (an invariant, a kernel, a certificate, a largest closed region, a fixed point, a standing population)?
+14. `forms_change` — Is there a statement or built case in which **the going on continues while what is present changes** (a relay, an alternation, kinds coming and going), or in which **more can go on after** (a widening)?
+
+Then one more field:
+
+15. `how_read` — In one line: which of the fourteen you answered from statements, which from docstrings or the account only, which you did not reach; and how much of the module you read (all statements; statements to line N; the account only).
+
+## Rules
+
+- Read only. Change nothing in the repository; no git command that changes anything. **Run no Lean, no build, no test, no gate.** No further agents.
+- Do not use the listing of places or any earlier read to answer: answer from the module. (You may open another module to understand a name a statement uses.)
+- Do not guess from a module's name. If you did not read it, the answer is `U`.
+
+## What to return
+
+For each module one object, with `place` beginning with the file's base name and `.lean`, then a colon and the declarations you name most (for example ``"Lasting.lean: orbit_reaches_iff_variant, reaches_iff_not_lasts, Drains"``), and the fifteen fields above by these exact names. And one short report for your whole batch: which modules you read whole, which in part, what you could not answer and why, and anything in a module that the fourteen questions miss and that bears on the centre.

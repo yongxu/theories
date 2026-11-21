@@ -1,0 +1,171 @@
+*AI-written (Claude Opus, refuter C-break-opus, lens BREAK), 22 November 2026. Design refuted: C-order-not-threshold. All instances can be rerun with the scripts in `/Users/ren/theories/tmp/fm/centre21/refute/C-break-opus/` (Python 3, no numpy). Each run took under 60 seconds.*
+
+## 1. Verdict in five lines
+
+1. As mathematics the design survives BREAK. Every main statement holds in everything I checked inside its bound (one step up to N = 10; fates up to N = 9), and every count, instance and table row it reports reproduces exactly from §2 alone.
+2. It survives as **a built case worth keeping**: a monotone nursery whose any-course kernel is decided exactly by a finite table, with both outcomes from one start and a strict opening. It is not a centre, and not a law that joins.
+3. The strongest reason: the whole law is the monotonicity of one built step, and that rests on one inequality at the feeding jump (slack = q + k − N, exactly). The rest is standard monotone-system / viability-kernel reasoning.
+4. By T3's own test (does removing a part change whether *the statement* holds), 6 of the 8 parts are idle. The lock is the recruitment premise iterated. Inside the bound the maximal allowance dominates every course, so the choice is degenerate.
+5. T5 is met only by a generic simulation lemma, not by the crop law. The design concedes this.
+
+## 2. Statement by statement
+
+All "inside" results are for q + ⌈H/q⌉ ≥ N, over every H in 1..Nq+1 and every physical state.
+
+| # | Statement | Status | What was checked |
+|---|---|---|---|
+| 1 | Comparison: s ≼ t, uᵢ ≤ vᵢ ⇒ each successful prefix of u from s is matched by v from t, with ordered endpoints | **HOLDS IN WHAT I CHECKED** | (i) One step, by adjacency in (f, w, a) over the formal box w ∈ 0..max(U, qN−N). Adjacency suffices because the box is a product of intervals and ≼ is transitive. Checked for N ≤ 7, q ≤ 6, c ≤ 3 (2,240 parameter choices inside the bound) and N = 8..10, q ≤ 6, c ≤ 3 (1,416). 0 failures. (ii) 60 random non-constant pairs u ≤ v of length 10 per parameter choice, N ≤ 7: 0 failures. (iii) Each algebraic lemma of the proof checked on every physical input, N ≤ 9, q ≤ 7, c ≤ 3: p = min(N, b+a, b+⌊max(0,w−b)/(c+1)⌋), z = min(w,p), f′+z ≤ N, and z moving by at most 1 per grain. 0 failures. |
+| 2 | Hence u ∈ L(s) ⇒ v ∈ L(t) | **HOLDS IN WHAT I CHECKED** | Each constant-allowance kept set is an upper set; kept[a] ⊆ kept[a′] for a ≤ a′; the kernel is an upper set. Checked directly on physical states, N ≤ 7, q ≤ 6, c ≤ 3. 0 failures. |
+| 3 | a keeps s ⇔ W(s) ≥ Bᵃ(f), with the table built exactly as §3 writes it | **HOLDS IN WHAT I CHECKED** | Checked against direct orbit simulation for every a, N ≤ 7 (q ≤ 6, c ≤ 3), N = 8 (q ≤ 7), N = 9 (q ≤ 6). 0 failures. Maximum number of strict updates: 3 in the designer's box, 5 at N = 6, 7. |
+| 4 | Some course keeps s ⇔ W(s) ≥ Bᴺ(f) | **HOLDS IN WHAT I CHECKED** | Against an independent greatest-fixed-point kernel on physical (f, ℓ) states, over the same range. 0 failures. |
+| 5 | Bᵃ is weakly increasing in f | **HOLDS IN WHAT I CHECKED** | N ≤ 7. 0 failures. |
+| 6 | The blind way is least and ends from every f > 0 | **HOLDS IN WHAT I CHECKED** | N ≤ 7. 0 failures. It also follows in two lines from f′ = min(N, 2f) and z ≤ b (see MUST 2). |
+| 7 | First-exit clause | **HOLDS, but by definition** | "Physically viable" is not defined (see LESSER 1). Either reading makes the clause follow from the definition of the kernel. |
+| 8 | The constant maximal allowance suffices wherever any course keeps | **HOLDS inside the bound. REFUTED as worded in T3 (no qualifier) and outside the bound** | Inside the bound: 0 of 2,240 + 700 + 472 parameter choices have a kernel state that constant N does not keep. Outside the bound: see 5(e). |
+| 9 | T4: (3,3,4,1) from (1,9); Bᴺ = (2,5,6,6) | **HOLDS** | Reproduced orbit by orbit. |
+| 10 | Strict opening (2,4,5,1) from (1,7) | **HOLDS** | Reproduced. The prefix languages were checked for inclusion, L((1,4)) ⊆ L((0,8)) and L((1,7)) ⊆ L((0,8)), on all 3^n sequences, n ≤ 8. |
+| 11 | T6: (2,3,4,0), (2,3) kept and (2,4) ends | **HOLDS** | Reproduced. |
+| 12 | T3 table, eight rows | **HOLDS as fate changes (all 8 reproduced). FAILS as an answer to T3** | See MUST 1. |
+| 13 | The bound fails by one grain | **HOLDS** | Reproduced (9,4,16,0): from (5,13), a = 3 → (6,12) repeats; a = 4 → (5,16) → (7,8) ends. Also the common-tail pair from (3,13). |
+| 14 | The §6 counts | **HOLDS, exactly** | 495 / 24,792 / 11,265 / 110,178 / 38,796 / 75 / 3 / 0; 15 outside; 8 reversals. |
+| 15 | T5 paper derivations of `GuardHorizon.closed_viable` and `TurningInTime.locked_ends_rising` | **NOT CHECKED** | WORK lens. See MUST 4. |
+| 16 | The soil balance (§2, R2) | **HOLDS, and idle** | See LESSER 2. |
+
+## 3. MUST
+
+**MUST 1. T3 is answered against a different question.** The frozen T3 asks for each part "an instance where taking it out changes whether *the statement* holds". The design's table instead shows that one start's fate changes, which any parameter of any model does. I took each part out and re-ran the whole statement: comparison, prefix comparison, both table equivalences, monotone tables and blind ending. Box: N ≤ 5, q ≤ 5, c ≤ 2, every H, 705 parameter choices inside the bound (`out-t3-statement-1.txt`, `out-t3-statement-2.txt`).
+
+- *Bookings set to N regardless of share*: statement holds, 0 failures.
+- *A fast parent books itself alone* (recruitment factor 1): only the blind-way clause fails (522 parameter choices); comparison and tables hold. A recruitment factor of 3: everything holds.
+- *Register no funded diversions*: statement holds. This row is not a part taken out at all. With j = 0 it is the allowance-0 member of the same model, and the designer's own `enumerate.py` tags it `'blind'`.
+- *Suppress extra fast offspring*: only the blind-way clause fails (420); the rest holds.
+- *Waive the switching charge*: c = 0 is inside the parametric statement, and it holds there.
+- *Suppress extra feeding at abundance*: the statement holds everywhere, **including all 45 parameter choices outside the bound**. The feeding jump is the only reason a bound is needed.
+- *Each seed returns its own grain*: nothing is kept anywhere (kernel empty in all 750 parameter choices), so the fate statements become vacuous. As the parameter q = 1, it lies inside the statement and holds.
+- *A diverted parent also keeps its fast offspring* (f′ = m): the **only** alteration that breaks the statement inside the bound. One-step comparison fails at 210 parameter choices and the fate laws at 6. Example: (4,3,7,0) with q+k−N = 2. Start (1,8) is in the kernel and kept by constant 2, but constant 4 runs (1,8) → (2,9) → (4,9) → (4,3) and ends (`out-keepfast.txt`).
+
+So the share reading for bookings, the registering of funded diversions, the switching charge, the multiplying and the abundance feeding are all idle **for the main statement**. The load-bearing part is the nursery exclusion f′ + z ≤ N. The jump at H matters only because it creates the need for the bound.
+
+**MUST 2. The lock and the fall are written into the step (T2).** §3 says "No premise assumes a fall, lock …". But the blind way's ending is the recruitment clause f′ = min(N, 2f) iterated, plus planters = N − m: once f = N, z = 0 and the crop is empty. The alterations that remove recruitment or the fast offspring remove exactly that clause and nothing else of the statement (MUST 1). The lock does not come about in the model; it is the step's definition under a = 0. The way of selecting proper, the allowance a, is constant and is not set again from anything (R4 is met only by the population's booking rule).
+
+**MUST 3. Inside the bound the choice is degenerate, and the bound excludes the half of T6 that is about choice.**
+
+- The comparison with u ≤ (N, N, …) makes the constant maximal allowance dominate every course. So "which of the two, by the way of selecting" reduces to running one orbit. The design half-concedes this ("no need to learn which permission to set").
+- The frozen T6 cites 285 configurations "kept by some course and not by standing still (something had to be made first, or a unit lost sooner)". Inside the bound that phenomenon never occurs: kernel = kept by constant N in every parameter choice I checked.
+- It appears just outside the bound. In (9,4,13,0), q+k−N = −1, start (3,16) with W = 4 is in the kernel but kept by **no** constant allowance. The only keeping first step is the blind one, a = 0 → (6,12); then 9 forever repeats. Every a ≥ 1 goes to (5,16) → (7,8) and ends (`out-e-course.txt`).
+- The design answers T6's level half by a change of coordinate. Its statement is, at each f, a threshold on W = ℓ − N − f·[ℓ ≥ H], the level net of this season's bill. That works because the model's only non-monotonicity in the level is that bill's jump: W absorbs this season's jump, and the bound removes next season's.
+
+**MUST 4. T5 is not met, and the design should say so plainly rather than conditionally.** T5 asks for an old law "as a case with its statement unchanged and the general law doing the work". The design's paper derivations use a generic finite-horizon simulation lemma, not the crop law. §5 itself says: "Neither old model instantiates the nursery equations." In `GuardHorizon.lean` (lines 60–130, which I read), `closed_viable` is already the one-point case of such a lemma. In what I read, the generic lemma adds no consequence in the old models. I did not check the `locked_ends_rising` derivation step by step.
+
+**LESSER**
+
+1. *Definitions left open in §2/§3.*
+   - "Physically viable start" is never defined: W ≥ 0, or W ≥ Bᴺ(f)?
+   - In "a first successor with W < Bᴺ(f)", f must be the successor's.
+   - "Successful prefix" does not say whether the endpoint must still be able to feed.
+   - The T3 alterations are given only in words. My readings reproduced all eight rows and match the designer's code tags ('fixed quota', 'no recruiting', 'blind', 'no extra offspring', 'keep private bud', 'free conversion', 'no feast', 'no seed brood').
+2. *The soil is idle.* z ≤ N holds by nest count, so the requirement z(q−1) ≤ qN − z always holds. "From finite soil" (ten lines, item 7) and "seed, crop and soil balance" (R2) do no work. No grain carries over between seasons, so nothing like a stock runs down: the crop is remade each season from the planters. What runs down is the number of planters, as fast offspring displace them.
+3. *The program evidence does not test the bound's role at the level of fates.*
+   - In the designer's box, the 8 "one-step balance reversals outside the bound" are all between two successors that can no longer feed (W = −4 against −5; `out-outside-reversals.txt`).
+   - In everything I checked with N ≤ 8 (q ≤ 7, c ≤ 3), no fate statement fails outside the bound.
+   - At N = 9..10, q ≤ 8, the failures are 13 of 816 parameter choices, all at q+k−N = −1 and all at c = 0. None occur at q+k−N ≤ −2.
+   - "0 disagreements" is evidence for the fate laws, but not that they need their premise. Only the targeted N = 9 search shows the premise matters.
+4. *The bound is tied to a parameter the design fixed:* one extra grain per fast parent, e = 1.
+   - With e = 2, the stated bound q + k ≥ N admits fate failures at 23 parameter choices with N ≤ 7. Example: (6,3,10,0), start (2,14), is kept only by 1 then 6 forever, and by no constant allowance (`out-e2.txt`).
+   - The natural bound q ≥ e(N − k) gave 0 failures in 1,632 parameter choices (`out-e2-bound.txt`).
+   - This is not a counterexample to the statement as written. It shows the "law" is one numerical inequality of one built step.
+5. *R3 is a constraint, not a cost anyone weighs.* The forgone fast offspring does carry the comparison (MUST 1). But the allowance is set exogenously, and nothing in the model registers or prefers fast offspring, so "keeping costs the keeper" is not borne in any choice.
+6. *Known mathematics* (a WORK-lens note in passing).
+   - Order-preserving deterministic control on a finite poset; upper-set viability kernel; the pointwise-maximal control dominates. This is the setting of monotone control systems (Angeli–Sontag), and the table is backward value iteration for a safety game (the viability-kernel algorithm).
+   - The Lean statement this suggests: a generic simulation/monotone transfer for `GuardHorizon.Viable`, plus one monotonicity lemma for the crop step.
+
+## 4. The question
+
+Does a general law of the design do work that the old laws do not? **No.** The design has two kinds of law.
+
+The first is general: the finite-horizon simulation lemma used in T5. It does work in the paper derivations of `closed_viable` and `locked_ends_rising`, but only to re-derive statements those modules already prove. In the part of `GuardHorizon.lean` I read, `closed_viable` is its one-point case, and it adds no consequence in either old model.
+
+The second does new work: the crop comparison, with its table and maximal-allowance dominance. It is a law of one built model, and it holds there because one inequality, q(z_t − z_s) ≥ f′_t at the feeding jump, is met. Its slack is exactly q + k − N.
+
+Taking the design's notion out (the order on (f, W)) makes the statement false (T6), so the order is not put in and taken out. But what it does is a change of coordinate that absorbs one bill. By T3's own criterion, most named mechanisms are idle for the statement, and none of the old laws becomes a case of the crop law. What is kept is a well-made built case. Not a join.
+
+## 5. The specific questions
+
+**(a) Rebuild from §2 alone; comparison and both equivalences beyond the box.**
+
+- I rebuilt the model (`model.py`) before opening the designer's code.
+- On the designer's box it gives exactly their counts: 495 / 24,792 / 11,265 / 110,178 / 38,796 / 75 / 3 / 0.
+- Beyond the box, inside the bound, with every H and all physical states:
+
+| Range | Parameter choices | Checks | Failures |
+|---|---|---|---|
+| N ≤ 7, q ≤ 6, c ≤ 3 | 2,240 | full check: 328,536 states, 2,233,368 fixed-way fates, kernel 174,142, max table updates 5 | 0 |
+| N = 8, q ≤ 7, c ≤ 3 | 700 | fates | 0 |
+| N = 9, q ≤ 6, c ≤ 3 | 472 | fates | 0 |
+| N = 8..10, q ≤ 6, c ≤ 3 | 1,416 | one-step comparison | 0 |
+
+- Outside the bound (N ≤ 7), the one-step comparison fails in all 280 parameter choices (C1), and the random prefix comparison fails in 125 (C2). The fate equivalences do not fail there.
+
+**(b) The "next feeding" inequality, at equality and one below.**
+
+- Over every ordered pair of physical inputs whose successors straddle H, the minimum slack W(t′) − W(s′) equals q + k − N **exactly** at every d from −6 to 7 (N ≤ 9, q ≤ 7, c ≤ 3). Brute force over all pairs agrees for N ≤ 4.
+- At equality the slack 0 is attained, including on live successors. Example (6,2,7,0): input (1,3,0) → (2,6) with W = 0, and input (1,4,0) → (2,8) with W = 0.
+- One below, the slack is −1 in 284 of 308 straddling parameter choices. Live example (8,2,9,0): input (2,4,1) → (4,8) with W = 0, while the better input (2,5,1) → (3,10) with W = −1.
+- Every lemma the step uses holds on every input: f′ + z ≤ N; p as the stated minimum; z = min(w, p).
+- The step is correct, and tight to the grain.
+
+**(c) The one-grain family, and a failure inside the bound.**
+
+- Reproduced (9,4,16,0): from (5,13), a = 3 gives (6,12) forever; a = 4 or 9 gives (5,16) → (7,8), which ends. From (3,13), a = 0 versus a = 1 gives (6,12) versus (5,16), and constant 3 keeps the first and loses the second.
+- The family, in N ≤ 10, q ≤ 8, c ≤ 3, is 13 parameter choices: (9,4,13..16,0), (10,3,16..18,0) and (10,6,13..18,0). All have q+k−N = −1 and c = 0.
+- **No failure inside the bound** was found in any range of (a).
+
+**(d) T3 rows, the T4 start, the strict opening, T6** (`reproduce.py`, `out-reproduce.txt`).
+
+- All eight T3 rows reproduce as stated ("goes on → ends" or the reverse). But see MUST 1: as an answer to T3 they fail.
+- T4: a = 0 gives (1,9) → (2,3) → (3,0), which stops. a = 1 takes one season longer. a = 2 and a = 3 give (0,9), which repeats. Bᴺ = (2,5,6,6). W(2,3) = 0 against Bᴺ(2) = 6. Every allowance at (2,3) gives (3,0).
+- Strict opening: (1,7) → (1,4) under a = 1, kept by 1 and 2. (1,7) → (0,8) under a = 2, kept by 0, 1 and 2. Constant 0 keeps neither (1,4) nor (1,7). Both are ≼ (0,8), and language inclusion holds to length 8.
+- T6: (2,3) → (1,3), which repeats; (2,4) → (2,0), which ends; qN = 6.
+
+**(e) A start kept by some course and not by the maximal allowance?**
+
+- *Inside the bound*: none, in 3,412 parameter choices. This is a corollary of statement 1.
+- *Outside the bound*: yes.
+  - (9,4,16,0), start (5,13): kept by constant 3 only, not by 9.
+  - (9,4,13,0), start (3,16): kept by **no** constant allowance, only by the course 0, then 9 forever. The blind first step is necessary.
+  - Kernel ≠ kept-by-N occurs at all 13 parameter choices of the family.
+- *With the fixed extra feed changed to 2, inside the stated bound*: yes. (6,3,10,0), start (2,14), is kept only by 1, then 6 forever.
+- The T3 sentence "constant maximal permission suffices wherever any course can keep" holds only with the bound. It should carry the bound.
+
+## 6. What I ran, and what I did not read or check
+
+**Ran.** All scripts are in `/Users/ren/theories/tmp/fm/centre21/refute/C-break-opus/`, all Python, each under 60 s, about 25 runs. No Lean, build, test or gate was run.
+
+- `model.py`: the rebuild.
+- `check_box.py`: statements 1–6 over a box.
+  - Outputs: `out-box-designer.txt`, `out-box-N1-5.txt`, `out-box-N6.txt`, `out-box-N7.txt`.
+  - With alteration flags: `out-t3-statement-1.txt`, `out-t3-statement-2.txt`.
+- `c1_large.py`: `out-c1-large.txt`.
+- `fate_outside.py`: `out-fate-outside-N8.txt`, `out-fate-outside-N9-10.txt`, `out-fate-inside-N8.txt`, `out-fate-inside-N8q7.txt`, `out-fate-inside-N9.txt`.
+- `fate_scan.py`: `out-fate-scan-outside-N9-10.txt`, `out-fate-scan-e2.txt`.
+- `next_feeding.py` and `next_feeding_fast.py`: `out-next-feeding-small.txt`, `out-next-feeding-fast-small.txt`, `out-next-feeding-fast.txt`.
+- `next_feeding_alive.py`: `out-next-feeding-alive.txt`.
+- `reproduce.py`: `out-reproduce.txt`.
+- `e_course.py`: `out-e-course.txt`.
+- `e2_check.py`: `out-e2.txt`.
+- `e2_bound.py`: `out-e2-bound.txt`.
+- `outside_reversals.py`: `out-outside-reversals.txt`.
+- `keepfast_instance.py`: `out-keepfast.txt`.
+
+`REPORT.md` was not saved: the harness refused writing a report file from a subagent. This text is the report.
+
+**Read.** BRIEF-REFUTE.md; BRIEF-DESIGNS.md; the design's DESIGN.md, `enumerate.py`, `enumeration.txt`, `challenge-output.txt`, `explore-output.txt` and PROMPT.txt (opened after the rebuild); `GuardHorizon.lean` lines 60–130; `Viability.lean` lines 80–125; and a search of PLACES.md for simulation, monotone and comparison.
+
+**Not read or not checked.**
+
+- `challenge.py` and `explore.py` source, beyond their outputs.
+- The T5 derivation of `TurningInTime.locked_ends_rising`, and the files `TurningInTime.lean`, `RuleCapture.lean`, `RegimeMargin.lean`, `Keeping.lean` and `RuleShaping.lean`.
+- `WHAT-A-MODEL-MUST-HAVE.md`, `_process/DIRECTION.md`, the other designs and their refutations, `READING-OF-THE-EIGHT.md`, `AFTER-DESIGNS.md`.
+- Whether a generic simulation lemma for `Viable` already exists elsewhere in the 406 modules: not found in what I read.
+- Fates for N ≥ 10 inside the bound, and q > 7.
+- Non-constant sequences beyond random samples of length 10. The one-step check covers them by induction.

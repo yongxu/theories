@@ -1,0 +1,185 @@
+## 1. Verdict in five lines
+
+1. It is neither a centre nor a law that joins the two ways. What survives is two small grammar lemmas (Link 1, and Link 2's third statement) and one refuted guess, documented with instances.
+2. Every main statement, (A) and (B), and every T5 case the design offers is the package's own `«所闭之承最大»` (CommonResponse.lean:142) or `«闭含所闭»` (GrammarLaws.lean:294), used at a new relation. The new notion (`X`, `Λ`, `«兼»`, `«双»`) is put in by definition and taken out in the proof.
+3. **Strongest reason:** no general law of the design is used in any of its main statements, or in any T5 case on the brief's list. Where a case goes through (`RuleCapture.locked_stays`, `«同行之迭»`), the law used is old, and `locked_stays` is already proved in the package by that same law (`Pace.stays` → `Invariant.reach`, which is `reach_iff_withinClosure.mp reached I closed`).
+4. Block 1, "a rank exists exactly where nothing locked goes on", is the standard duality between invariants and variants. The package already states it in general (`Lasting.orbit_reaches_iff_variant`, `Lasting.reaches_iff_not_lasts`, `Lasting.Drains`, `«尽»`, `«息»`). My search shows it holds for every region closed under `N` and fails for regions that are not, so it says nothing about the lock.
+5. Keep Link 1 and Link 2's third statement as candidate links, with their premises (Link 2's third needs a symmetric `E`). They had 0 failures in what I checked, and neither is used by anything yet.
+
+## 2. Statement by statement
+
+| statement | status | what was checked |
+|---|---|---|
+| Link 1, the pullback `K (E ∪ N) P s ↔ K (像 read N) P∀ (read s)` | HOLDS IN WHAT I CHECKED | All relations `N` on 2 and 3 points, 400 random on 4; every reading and every `P`: 116,608 triples, 0 failures (`out-link1-buqiong.txt`). The proof sketch reads correctly: two calls of the old law, at `E ∪ N` and at `像 read N`. |
+| Link 1's side remark: `K (E;N) P = K (E ∪ N) P` for `P` closed under `E` | HOLDS IN WHAT I CHECKED | For functions `N` on up to 4 points: 24,682 cases, 0 differences (`out-rank.txt`). |
+| Link 2, first: `«同行» R E ↔ «闭» («双» R) («域» E)` | HOLDS, by unfolding | It is `«同行之逐点»` (GrammarLaws.lean:2571) uncurried onto pairs. |
+| Link 2, second: `K («双» R) («域» E)` is the largest relation inside `E` that goes alike | HOLDS, by reading | An instance of `«所闭之承最大»` at `«双» R`, together with the first statement. |
+| Link 2, third: the core as `K («双» R) («域» (E ∧ both-or-neither-has-a-next))` | HOLDS IN WHAT I CHECKED | Fixed successor, symmetric `E`: all of them on 2 and 3 points, 400 cases on 4, 0 failures. Laws (total functions): core = `K₂(E)` in all 1,914 cases. The `symm` premise is needed: on 2 points with no successors and `E = {(0,1)}`, the core is empty and `K₂ = {(0,1)}`; 10,576 of 28,672 non-symmetric cases differ at n=3. Off a fixed successor, with `R` total, `K₂ ⊆ core` always, strictly in 5,366 of 21,952 at n=3 (`out-link2.txt`). |
+| `«不穷» R E = K («续» R E) («有后» R E)` | HOLDS, by one rewrite | 7,744 triples, 0 disagreements. It is the definition with `«所闭当且仅当同一或及»` rewritten in (see M2). |
+| (A)(I)/(II) exclude each other | HOLDS | `Kept` is closed under `N`. |
+| (A) is exhaustive | NOT CHECKED in Lean terms | Classical; needs a decision of `Kept` (see M5). |
+| (A)(a): kept twins are read apart by `n_T` | HOLDS IN WHAT I CHECKED | All frames on up to 4 points: 59,040 ending courses at n=4, 5,280 (course, kept twin) pairs, 0 violations; tight (`n_sep = n_T`) in 840. With `E` taken out (`X := K N ¬Kept`), it is false in 3,360 of 5,280. But `E` enters only because `X` is defined closed under `E`. |
+| (A)(b) | HOLDS | By `«所闭之承闭»` at `T`. |
+| (A)(c): `n_T ≤ n_end` under p3 and p4 | HOLDS IN WHAT I CHECKED | 0 violations at n ≤ 4. It fails with p4 dropped (1,416 courses at n=4) and with p3 dropped (2,136 at n=4, p4 kept). Under p3 and p4 at n=4: `n_T = 0` on 4,596 of 5,100 ending courses and `n_T = n_end` on 480, both as the design says. |
+| (B), the inside/outside equivalence under p5 and p6 | HOLDS IN WHAT I CHECKED | 385,024 frames at n=4: p6 holds in 301,440, with 0 disagreements there; `Kept = KeptAtGrain = G \ Λ` wherever it holds; every failure is of kind d1, d2 or d3. Kinds and counts are identical to the design's. Without p6, the left side holds and the right fails in 8,360 frames. |
+| Block 1: rank on `Λ ∩ G` ⟺ `Λ ∩ Kept = ∅` | HOLDS, but not about `Λ` | It holds for every `N`-closed region `C` (25,344 at n=4, 0 disagreements) and fails for regions not closed under `N` (6,688 disagreements; first: `N = (0,0)`, `G = {0,1}`, `C = {1}`) (`out-rank.txt`). |
+| (C), with rules: largest at the grain, none below | HOLDS IN WHAT I CHECKED | All pairs of moves on 2 and 3 points: 29,288 (moves, reading, `G`). A largest at the grain always; none below the grain in 108 at n=3; first: `step₀ = (0,0,1)`, `step₁ = (1,0,2)`, all alike, `G = {0,2}`, as the design reports (`out-ruleC.txt`). Its Lean premises are incomplete (M6). |
+| T3, T4 and T6 claims on the built family (toy.py) | NOT CHECKED | BREAK lens; I did not run or rebuild `toy.py`. |
+| T3 hand instance: `N = (0,1,1)`, all alike, `G = {0,2}`, start 2 | HOLDS, by hand | p3 holds, p4 fails; 0 is kept and everything is alike with 0, so `X = ∅`; the course ends at step 1. The program's printed instance `(0,0,1)` violates p3. The design's hand-corrected `(0,1,1)` is the right one. |
+
+## 3. MUST, then LESSER
+
+**MUST**
+
+- **M1. T5 is not met as the brief defines it.**
+  - None of the five lock-side laws the brief names comes out as a case through a general law of the design. The design itself says `turn_locked`, `locked_ends_rising`, the right side of `locked_turns_in_time_on_window_iff` and `favours_iff` cannot, and its claim for `unending_iff_holds` is argued from the docstring only.
+  - The cases it offers instead (`locked_stays`, `«同行之迭»`, `«定后遍后则核为其内最粗同行之类»`) are the old `«闭含所闭»` and `«所闭之承最大»` at new relations (part 5c).
+  - `locked_stays` is already proved by that law in the package: `Pace.stays` calls `Invariant.reach` (Frame.lean:282), whose body is `reach_iff_withinClosure.mp reached I closed`, the body of `«闭含所闭»`.
+  - On the choice side the design concedes that the old laws "are already the law", and no old law becomes a case of Link 1.
+  - The design's sentences are accurate ("the same law proved again"), but the T5 section does not say plainly that T5 fails.
+- **M2. One T1 claim is false.** T1 lists `«不穷» R E = K («续» R E) («有后» R E)` among the statements "not found in what I read, and not by unfolding". It is by unfolding:
+  - `«不穷»` (Grammar.lean:243) is `∀ y, (x = y ∨ «相续» R E x y) → «有后» R E y`;
+  - `«相续» R E := «及» («续» R E)` (Grammar.lean:129);
+  - `K`'s body is `∀ b, «所闭» («续» R E) x b → P b`;
+  - so the equivalence is one rewrite by the existing `«所闭当且仅当同一或及»` (GrammarLaws.lean:325), which the design itself says.
+  - That is "a definition unfolded, or older laws in a row", which is the brief's T1 dictionary. Link 2's first statement is also pure unfolding, and its second is an instance.
+- **M3. Block 1 says more than its evidence.**
+  - (i) "The law gives closure, never the running down" is true of `«所闭之承最大»` alone. The package has the least, rank-carrying side as general laws: `Lasting.Reaches` ("the largest funnel and the least basin", `reaches_iff_funnel`, `reaches_iff_basin`), `Lasting.Variant` and `Variant.reaches`, `Lasting.orbit_reaches_iff_variant` (Lasting.lean:808), `Lasting.reaches_iff_not_lasts` (Lasting.lean:831), `Lasting.Drains` and `Drains.leaves` (exhaustion by a falling level), `RenewalBound` (`WellFounded`/`Acc`), and in the grammar `«息»` (Grammar.lean:654) and `«尽»` (GrammarMap.lean).
+  - (ii) "0 disagreements in 389,872 frames" is a finite instance of the variant law, and it holds for every `N`-closed region, so it carries no information about `Λ` (my run: 0 disagreements over 25,344 closed regions, 6,688 over unclosed ones).
+  - (iii) "So premise p6 is the level's fall" is a reading. p6 is the termination of every course from `Λ`, and the rank is a hitting time. That rank exists for any course that ends, whether or not anything it rests on runs down.
+- **M4. p4 is marked "structural", but it is the registering of the end.**
+  - p4 says `G` is a union of reading classes. That is exactly the gap the direction says is where things run down unseen, assumed closed.
+  - Under p4, (c) is one call of `«闭在内则在所闭之承»`, since `¬G` is closed under `T` and lies inside `¬Kept`.
+  - The premises of (B) are not stated. If p3 and p4 are premises of (B), its failure kind d2 ("what it rests on is not registered") cannot occur: under p3 and p4 at n=4, 24,072 frames fail, by d3 in 17,272, d1d3 in 6,272, d1 in 528, and d2 in none. The design's counts and kinds are those without p3 and p4.
+- **M5. T4 is met only by the letter.**
+  - The dichotomy of (A) is `Kept s ∨ ¬ Kept s`, "classical" by the design's own sketch. Nothing in (A) or (B) says which of the two happens by the way of selecting, by what is registered, or by what keeping costs, which is the brief's target sentence.
+  - The T4 instance shows that in the toy the reading changes the fate. It does not show that a statement of the design predicts which fate.
+  - In the axiom-free package, the exhaustive form needs a decision of `Kept` as a hypothesis. `Lasting.dual_needs_decision` and `Lasting.numeric_needs_decision` show that the neighbouring duality needs one.
+- **M6. (C) is not exact enough for this package's Lean.**
+  - The proof picks, for each class lying in some `K (E ∪ N_ρ) G`, one such `ρ`. That needs choice over the classes and a decision of which classes lie in some region (and an inhabited move type for the rest).
+  - In the axiom-free package these must be hypotheses, as `GuardHorizon.uniform_policy_iff_fiber_feasible` names `Viability.ChoiceOver`. The premise list of (C) has none.
+  - Whether (C) is `GuardHorizon.uniform_iff` or a neighbour in another form is not checked: I read GuardHorizon's header only.
+
+**LESSER**
+
+- **L1. R5 "in part" is generous.** (A) has one function and no moves, so with one course `¬Kept` is already "no course keeps it" from step 0. `X` is "past keeping as far as the reading can ever tell", not a step of no return among moves. (C) has moves and no step of no return.
+- **L2. The T8 count is understated.** Written in Lean, the statement needs `K`, `X`, `Λ`, `KeptAtGrain`, `n_T`, `n_sep`, `n_end`, twin and `N_ρ` besides `«兼»`, `«双»` and `«域»`. The T5 re-proofs add `Turn` and a lemma "an iterate of the paired step is a pair of iterates".
+- **L3. (A)(a) has the shape of `ReadOffInTime.TellsApartAt.not_before`** ("no family read off the continuations tells the courses apart before the first step apart"), on a general frame instead of the Web's level courses. It is the same shape and not an instance as stated. In epistemic terms, `X` is "always known not kept" (`νZ. K_E ¬Kept ∧ □Z`), and (a) is "not known where an indistinguishable twin is kept".
+- **L4. The Link 2 witness is not the package's.** The design calls its two-point witness (`0 → {0,1}`, `1 → {0}`) "the package's `«后不定则核可不同行»`". That witness is a different instance (`0 → 1`, `0 → 2`; the core does not go alike), with the same point.
+- **L5. One conjunct of `«定后遍后则核为其内最粗同行之类»` stays outside the kernel law.** Through Link 2's third statement, three of its four conjuncts come from `«所闭之承最大»` at `«双» R`. `«类» («核» R E)` still needs `«核为类»`. The present proof is two lines from `«根»`, so the new route is longer and the old law is still used.
+- **L6. `unending_iff_holds` is not a case either way.** The design says its right-to-left half "would be `«闭在内则在所闭之承»`". I read the proof (LineOnAStock.lean, after `Law.stepWhile_unending_iff`): it computes the course by generations (`course_generation`, `generation_below`, `RegimeMargin.holds`). A closed region can be named, but its closure is that arithmetic. Left to right is a rank (`reaches_holds` by `strong_below` on the total need). Neither half is a case with the general law doing the work.
+
+## 4. The question
+
+**Does a general law of the design do work that the old laws do not?** No.
+
+- **The law that does the work is old.** In (A), (B) and every T5 case offered, the law that works is the package's own: `«所闭之承最大»` (with `«所闭之承在内»`, `«所闭之承闭»`, `«闭在内则在所闭之承»`) or `«闭含所闭»`, at a new relation.
+- **In (A), the notion is defined in and read back out.** (a) is `X`'s closure under `E` read along two courses, and `E` is in `X` by definition. (b) is `«所闭之承闭»`. (c) is one call of the largest clause, under p4, which assumes the end is registered.
+- **(B) is a few lines** from the three clauses at `T`, with `«所闭之单调»`.
+- **The design's new lemmas are used nowhere.** Link 1 and Link 2's third are new (not found in what I read) and hold in every frame checked, but no main statement uses either. The one T5 case that would use Link 2's third, the coarsest-class theorem, is proved today in two lines from `«根»`.
+- **Taking the new notion out changes nothing, or breaks only what it put in.** Take `E` out of `X` and (a) becomes false, but only because (a) is the property put into `X`. Take `«兼»` and `«双»` out of the T5 cases and the old proofs stand as they are. The lock and the running down are not reached: the running down is the dual, least side, which the package already has in `Lasting`, and which the design did not read.
+
+## 5. The specific questions
+
+**(a) Link 1, Link 2, and never-ending as the law at continuation: already in the Lean?**
+
+- **Link 1 (pullback along a reading).**
+  - Not found in what I read.
+  - Read: Grammar.lean whole; GrammarLaws.lean's declaration list and lines 230–340, 1060–1310, 1616–1632, 2560–2720; GrammarTransport.lean's header, declaration list, `«尽之拉回»`, `«延之拉回»` and `«所闭之对应»`; CommonResponse.lean whole; GuardedStep.lean whole; Viability.lean 1–110; Mechanism.lean's header, `Image` and `image_step_iff`.
+  - Grep across the package: every `«像»` (9 files); every user of `«所闭之承最大»` and `«闭在内则在所闭之承»` (only Viability and CommonResponse); `Kernel (Image` and `Viable (Image` (none).
+  - The nearest are `«尽之拉回»` (the least side: ending on every branch, reflected along a map carrying continuation from a closed region), `«延之拉回»`, `Mechanism.Image` (the image process, with no kernel stated of it), `Readout` and `SummaryFutures` (feasibility of the image), and `Joining.holds_image_iff` (branching tests along a lifting description). None of them is `«承»∘«所闭»` pulled back along `«像»` with the reading added to the step.
+  - It is not a definition unfolded: the kernel law is called twice. At `N := Steps P` it gives `K (E ∪ Steps P) guard s ↔ Viability.Kernel (Image P read) (fun k => ∀ x, read x = k → guard x) (read s)`. This goes through with one small lemma, `«像» read (Steps P)` pointwise `Steps (Image P read)` (move `∃ a` inside; `image_step_iff` is `Iff.rfl`), together with `kernel_iff_held` and `«所闭之单调»` both ways. It is a new statement; no old law becomes a case of it.
+- **Link 2.**
+  - "Going alike is closure under the paired step" is in the Lean up to currying. `«同行之逐点»` is `∀ x x', E x x' → ∀ y y', R x y → R x' y' → E y y'`, which is `«闭» («双» R) («域» E)` on `α × α`. No relation on a product carrier was found in Grammar*.lean, so the pair form itself is not there.
+  - "The core as the law at the paired step for a fixed successor" is not found in what I read. There is no statement joining `«核»` to `«所闭»`, `«承»`, `«闭»` or `Kernel` (grep). The nearest are `«定后则类之核同行»`, `«定后遍后则核为其内最粗同行之类»` and `«有常定后则同行»` (GrammarLaws.lean:2588–2650), and `«至终有常»` (GrammarPath; its clause "or `u'` conditions nothing" is the one-sided form of the design's "both or neither has a next").
+  - It needs symmetric `E` (instance in part 2).
+- **Never-ending as the law at `«续»`.** Not found as a theorem. As argued in M2, it is the definition with one existing lemma rewritten in, so it is a dictionary entry. At a cut step the package already states the orbit form: `Law.stepWhile_unending_iff` (GuardedStep.lean), `«不穷» (stepWhile can next) «一» s ↔ ∀ n, can (orbit next s n)`. `LineOnAStock.unending_iff_holds` starts from it.
+
+**(b) Is Block 1 the standard duality? Does the package have the rank side as a general law?**
+
+- **It is the standard duality.** On one side is the largest closed region, the invariance kernel or safety set `νZ. G ∧ □Z`, certified by an invariant (Park induction; Aubin's invariance kernel). On the other is the least region, the attractor or reachability set `μZ. ¬G ∨ □Z`, certified by a ranking function or variant (Floyd's well-founded method for termination; the attractor with ranks in games). For a deterministic system and a decided target the two are complements. In a finite deterministic frame, "every course from an `N`-closed `C` ends" is equivalent to "a rank falls along `N` inside `C ∩ G`", the rank being the hitting time of `¬G`.
+- **The lock is not used.** My search shows that nothing of `Λ` is used beyond its closure under `N` (part 2).
+- **The package has the rank side as general laws.** `Lasting.lean` gives:
+  - `Reaches` as the largest funnel and the least basin (`reaches_iff_funnel`, `reaches_iff_basin`);
+  - `Variant` and `Variant.reaches` (a numeric level lowered by every step outside the target);
+  - `orbit_reaches_iff_variant` (a determined law and a decided target: the orbit meets the target within `n` exactly when a variant is at most `n` at the start);
+  - `reaches_iff_not_lasts` (reaching and lasting outside the target are complements; `dual_needs_decision` shows the decision is needed);
+  - `avoids_iff_kernel` (never reaching is the invariance kernel of the complement);
+  - `Drains`, `Drains.along`, `Drains.leaves` and `exhausts` (a level falling by one per step within the guard: exhaustion).
+- **Further places of the rank side.**
+  - Also: `RenewalBound.lean` (`WellFounded unrenewed`, `Acc`, `no_renewal_free_tail`), `Onward.lean` (`Acc (Later p)`), and in the grammar `«息»` (inductive, "the least property so closed, the dual of renewal without end"), `«尽»` (inductive, ending on every branch), `«生生不息»`, `«延尽不并»`, `«尽则非不穷»`, `«尽之拉回»`.
+  - Instances with a bound: `TurningInTime.ends_with_net_rising` and `locked_ends_rising` ("ends within `hi + 1` steps"), and `LineOnAStock`'s "a way that grows … ends within `hi + 1` steps".
+  - Searched and not opened: "Rank" (12 files) and "Descend" (28 files).
+- **What it tells the Lean statement.** The first way's "uses up" half should be stated with the least side (`Reaches`, `Drains` or `«尽»`) beside the largest side, not under `«所闭之承最大»` at another relation. For a determined law that pairing is already `reaches_iff_not_lasts`.
+
+**(c) Write the T5 instantiations.** (On paper; not compiled.)
+
+`RuleCapture.locked_stays` (RuleCapture.lean:182), statement unchanged:
+```
+-- α := S × R;  Turn : «际» (S × R) := fun p q => ∃ b, q = turn f h b p   (new local name)
+-- P := Locked M favours h
+«闭含所闭» (R := Turn) (P := Locked M favours h)
+  (fun p q lock ⟨b, e⟩ => e ▸ (turn_locked raises monotone upper b p lock).1)   -- closure: turn_locked
+  locked                                                                          -- Locked at paced c t
+  («线则所闭» (g := fun i => paced f h reads c (t + i)) (N := k)
+     (fun i _ => ⟨reads (t + i), paced_succ c (t + i)⟩) k (Nat.le_refl k))       -- the course is a line of Turn
+-- : Locked M favours h (paced f h reads c (t + k))
+```
+It goes through: `t + 0` and `t + (i+1)` reduce by definition. The general law used is `«闭含所闭»` (GrammarLaws.lean:294), which is old. The package already proves `locked_stays` by the same law, through `Pace.stays_turned` → `Pace.stays` → `Invariant.reach` (whose body is the closure applied to the closed region). Nothing of the design is used: not `«兼»`, `«双»`, `X`, `Λ`, Link 1, Link 2, (A), (B) or (C). It is the same law at `S × R` in place of `S × R × Nat`.
+
+`«同行之迭»` (GrammarLaws.lean:2677), by which `TurningInTime.alike_along` (TurningInTime.lean:496) is proved, statement unchanged:
+```
+-- carrier α × α;  relation «双» R;  region «域» E
+lemma «迭之双» : ∀ n {x x' y y'}, «迭» R n x y → «迭» R n x' y' → «迭» («双» R) n (x, x') (y, y')
+  | 0,     e,            e'              => by cases e; cases e'; rfl
+  | n + 1, ⟨w, r, rest⟩, ⟨w', r', rest'⟩ => ⟨(w, w'), ⟨r, r'⟩, «迭之双» n rest rest'⟩
+-- «同行之迭» alike n e l l' :=
+«闭含所闭» (R := «双» R) (P := «域» E)
+  (fun p q ep ⟨r, r'⟩ => «同行之逐点».mp alike p.1 p.2 ep q.1 q.2 r r')   -- Link 2, first (an unfolding)
+  e («所闭当且仅当有迭».mpr ⟨n, «迭之双» n l l'⟩)
+```
+It goes through with one new lemma, because both lines have the same length `n`. `alike_along` is then unchanged. The general law used is again `«闭含所闭»`, which is old. The present proof (through `«同行之历»`, an induction over words) is no longer, so this is a re-proof, not work done by a new law.
+
+`«定后遍后则核为其内最粗同行之类»` (GrammarLaws.lean:2643):
+- With `total`, the has-next clause is trivial, and Link 2's third gives `核 R E ≡ K («双» R) («域» E)`.
+- From `«所闭之承最大»` at `«双» R`: "inside `E`" from `«所闭之承在内»`; "goes alike" from `«所闭之承闭»` plus Link 2's first statement and a pointwise congruence for `«闭»`; every class inside `E` that goes alike lies inside the core, from `«闭在内则在所闭之承»`.
+- `«类» («核» R E)` still needs `«核为类»`.
+- It goes through. The old law `«所闭之承最大»` is used, and the route is longer than the present two lines from `«根»`.
+
+## 6. What I ran, and what I did not read or check
+
+**REPORT.md was not saved:** the harness refused the write ("Subagents should return findings as text"). This message is the whole report.
+
+**Ran** (all Python, each run under 2 s, all in `/Users/ren/theories/tmp/fm/centre21/refute/F-work-opus/`):
+- `check_work.py`, written from DESIGN.md's definitions before I opened `abstract.py` (I read only the designer's output files): Link 1 (116,608 triples), Link 2's third (fixed successor: 4,568 symmetric and 58,344 non-symmetric `(R, E)`; total `R` off a fixed successor: 22,024), `«不穷»` = `K` (7,744), (A) on all frames n ≤ 4 (59,678 ending courses), (B) and the rank (389,872 frames), (C) (29,288). Outputs: `out-link1-buqiong.txt`, `out-link2.txt`, `out-frames-3.txt`, `out-frames-4.txt` (n=4 only), `out-ruleC.txt`.
+- `check_rank.py`: the rank against `C ∩ Kept = ∅` for every region `C`, closed and not (n ≤ 4: 26,328 closed, 41,000 not); `K(E;N)` against `K(E∪N)` (24,682); (A) under p3 and p4 (5,196 ending courses). Output: `out-rank.txt`.
+- Where they overlap, my counts match the designer's printed ones: the frames, the p6 count, every failure kind of (B), the 8,360, the 108, the 4,596 and the 480.
+
+**Read:**
+- The brief, the designers' brief, DESIGN.md, `AFTER.md`, and the designer's `out-abstract-1.txt` and `out-abstract-2.txt`.
+- Lean, whole: Grammar.lean, CommonResponse.lean, GuardedStep.lean.
+- Lean, in part:
+  - GrammarLaws.lean: declaration list; lines 230–340, 1060–1310, 1616–1632, 2560–2720.
+  - GrammarTransport.lean: header, declaration list, 95–135, 280–300.
+  - Viability.lean: 1–110.
+  - Lasting.lean: header, declaration list, 125–135, 318–338, 680–720, 804–842.
+  - RuleCapture.lean: 100–200.
+  - Pace.lean: `turn`, `step`, `paced`, `paced_succ`, `stays`, `stays_turned`.
+  - Frame.lean: `Steps`, `Invariant.reach`.
+  - TurningInTime.lean: `alike_along`, `net`, `locked_closed`, and the statements of `locked_ends_rising` and `locked_turns_in_time_on_window_iff`.
+  - LineOnAStock.lean: `unending_iff_holds` and its proof.
+  - ReadOffInTime.lean: `FirstApart`, `TellsApartAt`, `TellsApartAt.not_before`, `Recoverable`, `NoReturnAt`, `readableInTime_iff`, `too_late_of_alike`.
+  - Mechanism.lean: header and `Image`.
+  - GrammarMap.lean: header and `«延»`/`«尽»`.
+  - Headers only: GuardHorizon.lean, Joining.lean, RenewalBound.lean.
+- PLACES.md, searched: CommonResponse, Viability, RuleCapture, ReadOffInTime, the scratch table. It has no entry for Grammar, GrammarLaws, GrammarTransport, GuardedStep, Mechanism, Lasting or Pace, and no mention of a pullback or a paired step.
+- The heads of the notes `scratch-lean-2026-11-21/NOTE.md` and `fm-links-into-the-package/NOTE.md` (names only): neither contains Link 1 or Link 2.
+
+**Not read or not checked:**
+- `toy.py`, `toy_v1_rule_not_in_state.py` and `abstract.py`'s code. T3, T4 and T6 on the built family are not checked: that is BREAK's lens.
+- `READING-OF-THE-EIGHT.md`, `AFTER-DESIGNS.md`, the direction page, the one page, the chapters.
+- GuardHorizon's and Keeping's bodies, so whether (C) is already there is not checked.
+- JointKeeping, GrammarPath beyond `«至终有常»`, GrammarRegularity, GrammarConditionals.
+- The 12 "Rank" and 28 "Descend" files.
+- The Lean of the scratch links.
+- None of my Lean instantiations was compiled.

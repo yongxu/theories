@@ -1,0 +1,379 @@
+# Task file: EDGE, reader whole-c-edge-19
+
+Your 3 modules. For orientation only, what the two passes said of the four marks, of moves and of a reading (where to look, not evidence).
+
+## ReadOffInTime.lean  (1372 lines)
+
+### `both_outcomes`
+- pass a: S: `NoReturnAt.recoverable_iff` (l. 607) makes recoverability exactly n < N given the first point N. B: `FourReaders.regime_point` (l. 1034) gives both outcomes of the same stopped law by starting level x ≤ 4: eventual zero iff x < 2.
+- pass b: S: `NoReturnAt.recoverable_iff` (l. 607): recoverable at n exactly when n < N, in general. `Web.readableInTime_iff` (l. 661): readable in time exactly when the first step apart T is below N, in general. B: `FourReaders.regime_point` (l. 1034): the habitat ends exactly where x < 2. `FourReaders.recoverable_iff_regime` (l. 1097): kept exactly where the regime does not end. `FourReaders.recoverable_iff` (l. 977): recoverable exactly up to step 2.
+
+### `no_return`
+- pass a: S: `noReturnAt_of_past` (l. 632) concludes a first unrecoverable prefix from pointwise decided recoverability and one unrecoverable prefix. B: `FourReaders.recoverable_iff_regime` (l. 1097) connects that prefix criterion to the habitat regime avoiding zero, with `noReturn` (l. 1011) locating loss of recovery at 3.
+- pass b: S: `NoReturnAt` (l. 595) is the first non-recoverable step. `NoReturnAt.recoverable_iff` (l. 607): recoverable exactly before it. `NoReturnAt.unique` (l. 615): it is one step. `noReturnAt_of_past` (l. 632): it exists where recoverability is decided at each step and fails at some step. Its existence is concluded, but relative to the supplied feasible set and `keeps`. B: `FourReaders.noReturn` (l. 1011): the cleared course's point is step 3, while the dweller is still admitted at step 3 and not at step 4. `FourReaders.recoverable_iff_regime` (l. 1097): the course is recoverable exactly while the regime from the cleared level does not end, that is, while the habitat is at 2 or above, the level below which the renewer stops giving. The point is the level falling below what lets the giver give, one step before the dweller's loss.
+
+### `rank`
+- pass a: B: `FourReaders.orbit_one` (l. 1055) puts every successor at zero from one; `FourReaders.recoverable_iff` (l. 977) makes step two the last recoverable prefix on the course where the clearer never stops.
+- pass b: S: `Web.too_late_of_unreached` (l. 699) and `Web.selectsAlike_unreached` (l. 517) are laws up to a deadline step D, under the deadline premises. No rank or variant that falls was found in the statements. B: the habitat's ending in `FourReaders.regime_point` (l. 1034) comes from `RegimeMargin.ends_iff_below`, not from a law stated here.
+
+### `closed_region`
+- pass a: S: `Recoverable.earlier` (l. 601) implies that unrecoverability persists along later prefixes. `FourReaders.orbit_of_fixed` (l. 1050) keeps any fixed starting value on the entire orbit.
+- pass b: S: `Recoverable.earlier` (l. 601): recoverability is down-closed in the step index. That is closure in time, not a region closed under a step. `Flow.WithinTimeEither.later` (l. 298) and `TimedResponse.Spread.later` (l. 378): what is reached stays reached. B: `FourReaders.orbit_of_fixed` (l. 1050): a level the step leaves as it is stays for ever. `FourReaders.stopped_is_regime` (l. 1068): after the clearer stops, the habitat is the regime's run, fixed at 4, 3 or 2 on the courses that stop. N: no general invariant or largest closed region.
+
+### `moves`
+- pass a: S: `NoReturnAt.parts` (l. 625) gives some feasible keeping course with the previous prefix and excludes every keeping feasible course with the next prefix, given NoReturnAt at N+1. B: `FourReaders.Feasible` (l. 967) supplies four stopping courses.
+- pass b: S: `Recoverable` (l. 591): a course `l` is recoverable at step N where some course among the `feasible` ones agrees with `l` at every step up to N and satisfies `keeps`. The feasible courses are a premise (a set of allowed courses), not a `Process S A`. `NoReturnAt.parts` (l. 625): at the step before a point of no return N+1, some feasible course agreeing so far keeps, and no feasible course agreeing up to N+1 keeps. B: `FourReaders.Feasible` (l. 967) is the clearer's four stopping courses, supplied as flows.
+
+### `reading`
+- pass a: S: `Web.FirstApart.alike_before` and `separates` (ll. 159, 166) make the first group admission difference the earliest possible distinction for a selection read through group admissions. `Web.too_late_of_own` (l. 743) excludes timely reading if keeping implies every member always admitted and the comparison course always admits them.
+- pass b: S: `Web.FirstApart.alike_before` (l. 159): before the first step apart, every selection read off the group's continuations up to an earlier step (`SelectsThroughAll thresholdOnly`) selects the two courses alike. `Web.FirstApart.separates` (l. 166): at that step some such selection tells them apart. `Web.selectsAlike_unreached` (l. 517) assumes TimedResponse's deadline premises (balance, the same formations present, a common start, responders exchanging alike when alike through `obs`); where the closure in time of no source meets a member by D, every selection read off the continuations up to D selects alike. `Web.admits_iff_gap_within_margin` (l. 568): where `l` lowers every required condition below `l'` and `l'` admits g, `l` admits g exactly where each gap is within g's margin (level less need). `Web.too_late_of_own` (l. 743): where what is kept includes every member's admission at every step and `l'` admits every member throughout, the courses are not readable in time.
+
+### declarations of ReadOffInTime.lean (by script)
+  l.137 def FirstApart
+  l.143 def TellsApartAt
+  l.151 theorem alikeThroughAll_thresholdOnly_iff
+  l.159 theorem FirstApart.alike_before
+  l.166 theorem FirstApart.separates
+  l.173 theorem FirstApart.unique
+  l.184 theorem TellsApartAt.not_before
+  l.196 theorem first_of_decided
+  l.219 theorem firstApart_of_apart
+  l.237 def AffectsBeforeBy
+  l.242 def AffectsBeforeEither
+  l.248 def StepInTimeEither
+  l.253 def WithinTimeEither
+  l.259 def ReachedInTime
+  l.267 theorem affectsBeforeBy_thresholdOnly
+  l.274 theorem stepInTimeEither_self
+  l.285 theorem withinTimeEither_self
+  l.291 theorem withinTimeEither_onward
+  l.298 theorem WithinTimeEither.later
+  l.307 theorem AffectsBeforeEither.coupledFrom
+  l.318 theorem WithinTimeEither.coupled
+  l.328 theorem ReachedInTime.withinCoupling
+  l.337 theorem affectsBeforeEither_of_touches
+  l.351 theorem AffectsBeforeEither.touches
+  l.372 theorem Spread.onward
+  l.378 theorem Spread.later
+  l.387 theorem Spread.withinTime
+  l.413 theorem ReachedBy.reachedInTime
+  l.426 def SourceOrReached
+  l.432 theorem SourceOrReached.affects
+  l.445 theorem reachedBy_of_reachedInTime
+  l.480 theorem reachedBy_iff_reachedInTime
+  l.488 theorem reachedBy_self_iff
+  l.517 theorem selectsAlike_unreached
+  l.533 theorem FirstApart.not_unreached
+  l.557 theorem admits_of_gap_within_margin
+  l.568 theorem admits_iff_gap_within_margin
+  l.591 def Recoverable
+  l.595 def NoReturnAt
+  l.601 theorem Recoverable.earlier
+  l.607 theorem NoReturnAt.recoverable_iff
+  l.615 theorem NoReturnAt.unique
+  l.625 theorem NoReturnAt.parts
+  l.632 theorem noReturnAt_of_past
+  l.647 def ReadableInTime
+  l.653 def ReadsInTime
+  l.661 theorem readableInTime_iff
+  l.669 theorem ReadsInTime.readable
+  l.678 theorem too_late_of_alike
+  l.699 theorem too_late_of_unreached
+  l.719 theorem too_late_within_margin
+  l.732 theorem admits_congr
+  l.743 theorem too_late_of_own
+  l.765 inductive Formation
+  l.776 inductive Place
+  l.782 inductive Stop
+  l.789 def habitat
+  l.803 def newsFalls
+  l.809 def news'Falls
+  l.816 def news
+  l.823 def news'
+  l.830 def levels
+  l.838 def means
+  l.849 def flow
+  l.886 def requires
+  l.909 def need
+  l.926 def web
+  l.934 theorem balances
+  l.940 theorem admits_one
+  l.946 theorem only_habitat_near
+  l.951 theorem only_habitat_mid
+  l.956 theorem only_habitat_dweller
+  l.961 theorem only_news'_listener
+  l.967 def Feasible
+  l.971 def DwellerKept
+  l.977 theorem recoverable_iff
+  l.1011 theorem noReturn
+  l.1025 def giving
+  l.1027 theorem giving_le_one
+  l.1034 theorem regime_point
+  l.1050 theorem orbit_of_fixed
+  l.1055 theorem orbit_one
+  l.1060 def stopAt
+  l.1068 theorem stopped_is_regime
+  l.1077 theorem habitat_le_four
+  l.1085 theorem at_point_iff
+  l.1097 theorem recoverable_iff_regime
+  l.1110 theorem near_firstApart
+  l.1126 theorem mid_firstApart
+  l.1143 theorem dweller_firstApart
+  l.1162 theorem listener_firstApart
+  l.1180 theorem near_inTime
+  l.1188 theorem mid_atThePoint
+  l.1197 theorem dweller_late
+  l.1207 def source
+  l.1209 theorem mem_clearer
+  l.1210 theorem mem_relay
+  l.1212 theorem mem_relay'
+  l.1217 theorem near_reached
+  l.1226 theorem listener_reached
+  l.1240 theorem exchanges_news
+  l.1259 theorem exchanges_news'
+  l.1279 theorem coupled_relay'
+  l.1288 theorem coupled_listener
+  l.1300 def Early
+  l.1305 theorem affects_exchange
+  l.1316 theorem early_step
+  l.1347 theorem listener_not_reached
+  l.1362 theorem listener_late
+
+## ReaderRebuilding.lean  (509 lines)
+
+### `both_outcomes`
+- pass a: S: `«以储买时当且仅当取于储»` (l. 462) characterizes BuysTime by source among four variants; within the level variant `«断而有储则读者存»` (l. 244) gives survival at k+1 from stock ≥ 2(k+1) and `cut_empty_end` (l. 374) gives loss by one span from empty stock and fresh units under a cut.
+- pass b: S: `«以储买时当且仅当取于储»` (l. 462), with `BuysTime` (l. 453): BuysTime holds exactly where the source is the level, and BuysTime pairs present-after-any-number-of-cut-steps from enough stock with an end from an empty stock. The iff is over the four members, for any count and span ≥ 1, of this built family. B: `«一元二期之时»` (l. 497) and `«一元三期之时»` (l. 501), via `EndsAt`: decided horizons for levels below 15 or 16.
+
+### `no_return`
+- pass a: S: `«读者绝则无储»` (l. 386) concludes zero stock when a level-rebuilt reader with positive target is gone after a step; `«取于储者绝而不复»` (l. 404) makes the resulting joint loss absorbing even if supply returns. `«取于供者复»` (l. 423) restores an empty supply-rebuilt reader in one supplied step for positive count.
+- pass b: S: `«取于储者绝而不复»` (l. 404): for the member rebuilt from the level, the state with level 0 and no reader is closed under the net, supply on or off. This is concluded, not a premise. It is the loss of the reader (what gives to the level) together with the empty stock. `«读者绝则无储»` (l. 386): the reader ends only with the stock. In contrast, `«取于供者复»` (l. 423): a reader rebuilt from the supply is present again after one supplied step.
+
+### `rank`
+- pass a: S: `quiet_end` (l. 335) concludes empty ages after k+1 quiet steps from a full equal-age-j list if span ≤ j+k+1. B: `«一元二期之时»` and `«一元三期之时»` (ll. 497, 501) give exact one-unit horizons for stock below 15 and 16 respectively.
+- pass b: S: `«断则取于供者尽»` (l. 356): rebuilt from the supply, a reader of n new units is gone after `span` cut steps, from every level. `«不复建者尽»` (l. 365): never rebuilt, it ends at its span. `cut_empty_end` (l. 374): rebuilt from the level, from an empty stock, the same. B: `«一元二期之时»` (l. 497): ends at step 2(l/3+1) for l < 15. `«一元三期之时»` (l. 501): at step 3(l/4+1) for l < 16. `«取于供者之时»` (l. 505): at step 3. D: the opening account says it is not proved that the member rebuilt from the level ends under a cut from every stock, nor any rate for n ≥ 2.
+
+### `closed_region`
+- pass a: S: `«供则读者之域闭»` (l. 209) closes Present under supplied steps for level rebuilding with positive count and set level; `«取于储者绝而不复»` (l. 404) closes the empty state under the full net.
+- pass b: S: `«供则读者之域闭»` (l. 209): for the member rebuilt from the level, with n ≥ 1 and m ≥ 1, the region where the reader is present is closed under the supplied step (`«闭»`). `«取于储者绝而不复»` (l. 404): the empty state is closed under the net. `given_run` (l. 435): a given reader at its count keeps its units. `quiet_empty` (l. 325): a quiet reader that is gone stays gone.
+
+### `moves`
+- pass a: S: `net` (l. 124) permits either supply choice at every step; `«供则读者之域闭»` (l. 209) keeps Present under the supplied choice for level rebuilding and positive count and set level.
+- pass b: S: `net` (l. 124): at each step the supply is on or off, and every sequence of choices is a course. `«取于储者绝而不复»` (l. 404): for the member rebuilt from the level, the state ⟨0, []⟩ is closed under `net`, whichever choice is made. `«供则读者之域闭»` (l. 209): Present is closed under the supplied step. The choice is the supply's, not the reader's.
+
+### `reading`
+- pass a: S: `read` (l. 87) adds up to the current number of units while below the set level, capped there. `step` (l. 119) applies it after the draw only while supplied.
+- pass b: S: `read` (l. 87): k units, in turn, each take one unit from the supply while the level is below the set level m. `read_pos` (l. 147): a read by at least one unit leaves the level at least 1, where m ≥ 1. The level below m decides the intake. N: no observation, class of things read alike, or rule made from what is registered.
+
+### declarations of ReaderRebuilding.lean (by script)
+  l.67 inductive Source
+  l.75 structure Rule
+  l.82 structure St
+  l.87 def read
+  l.90 def older
+  l.95 def age
+  l.103 def rebuild
+  l.119 def step
+  l.124 def net
+  l.127 def supplied
+  l.130 def run
+  l.135 def Present
+  l.138 def fresh
+  l.142 theorem cons_present
+  l.144 theorem one_le_of_lt
+  l.147 theorem read_pos
+  l.158 theorem rebuild_present
+  l.174 theorem rebuild_level
+  l.184 theorem rebuild_zero
+  l.196 theorem «供则读者不绝»
+  l.209 theorem «供则读者之域闭»
+  l.215 theorem le_pred_succ
+  l.220 theorem cut_level
+  l.230 theorem cut_present
+  l.244 theorem «断而有储则读者存»
+  l.256 theorem older_replicate
+  l.271 theorem length_replicate
+  l.277 theorem rebuild_none
+  l.290 theorem rebuild_full
+  l.296 def Quiet
+  l.301 theorem quiet_step
+  l.325 theorem quiet_empty
+  l.335 theorem quiet_end
+  l.356 theorem «断则取于供者尽»
+  l.365 theorem «不复建者尽»
+  l.374 theorem cut_empty_end
+  l.386 theorem «读者绝则无储»
+  l.396 theorem read_zero
+  l.404 theorem «取于储者绝而不复»
+  l.423 theorem «取于供者复»
+  l.435 theorem given_run
+  l.447 theorem pred_succ
+  l.453 def BuysTime
+  l.462 theorem «以储买时当且仅当取于储»
+  l.490 abbrev EndsAt
+  l.497 theorem «一元二期之时»
+  l.501 theorem «一元三期之时»
+  l.505 theorem «取于供者之时»
+
+## ReadingsPersist.lean  (1415 lines)
+
+### `both_outcomes`
+- pass a: B: `Habitat.back_which_persist` (l. 1273) gives both lines ending under source and both persisting under whole in the same renewing-dweller model. `beyond_which_persist` (l. 1264) gives three fates with an independently renewing source.
+- pass b: S: `SelectionTerm.Generations.kept_iff` (l. 280): Q holds of every later member exactly where it is closed under descent from T. `line_standing_unselected` (l. 459) is an iff across two courses, not going on against ending in one. N: there is no general dichotomy of going on and ending. B: `Habitat.beyond_which_persist` (l. 1264): in one world, the line reading only itself ends, the line reading itself and its source persists while the dweller's line ends, and the line reading everything persists with the dweller's line. `back_which_persist` (l. 1273): where the dweller renews the source, the source reading ends both lines and the whole reading keeps both.
+
+### `no_return`
+- pass a: S: `SelectionTerm.Generations.family_nil_from` (l. 647) concludes that after an empty cohort every later cohort is empty. B: `Habitat.clearedBack_removes_both` (l. 1348) establishes permanent disappearance of both lines in the specified clearing course.
+- pass b: S: `SelectionTerm.Generations.family_nil_from` (l. 647) and `not_persists_of_nil` (l. 652): once a cohort is empty, every later one is empty and the line does not persist (concluded). `RemovesLine` (l. 549) is defined, not concluded: alive at the start and not alive from some step on. B: `Habitat.clearedBack_removes_both` (l. 1348): the loss of the dweller, which gives to the source, is followed by the line's own ending (concluded in the model; at the loss of something that gives). D: the account says a reading in time before a loss passes its point of no return is not derived.
+
+### `rank`
+- pass a: B: `Habitat.clearedBack_dweller_gone` (l. 1332) and `clearedBack_line_gone` (l. 1340) give extinction deadlines 2 and 3 on the clearing course.
+- pass b: S: `Flow.lineOf_persists_never_overdraws` (l. 597), a drain law: a line persisting under its premises never overdraws, that is, never has n steps of deficit from a stock below n + m. B: Habitat: the overdrawn line is gone from step 2 (`beyond_standing`, l. 1280), and in clearedBack the line is gone from step 3 (`clearedBack_line_gone`, l. 1340).
+
+### `closed_region`
+- pass a: S: `SelectionTerm.Generations.kept_iff` (l. 280) assumes every member at T satisfies Q. All later members satisfy Q iff dated descent from T is closed on Q.
+- pass b: S: `SelectionTerm.Generations.kept_iff` (l. 280): «闭» under dated descent from T. `kept_of_descent` (l. 293). The coupling closure WithinClosureOf is a premise in `line_standing_unselected` (l. 459). B: `Habitat.region_closed` (l. 1195) and `closure_in_region` (l. 1206): where nothing comes back, the line's slots and the source form a closed region, and the habitat and the dweller lie beyond the line's coupling closure.
+
+### `moves`
+- pass a: B: `Habitat.generated` (l. 1050) identifies four level histories as courses generated by the acts assigned to readings from a common start. `Habitat.back_which_persist` (l. 1273) compares line survival under the source and whole readings.
+- pass b: S: acts are exchange laws indexed by a reading (`ExchangeLaw.byReading`, l. 151). `byReading_withAct` (l. 163): the part carrying sig acts by act sig. `line_standing_unselected` (l. 459): for two readings sig and sig' whose acts agree on every condition coupled into the coupling closure of group, with both courses feasible and the slots inside the closure with their own standing coupled in, the slots StandsLate in one course exactly when in the other. `reader_kept_alike` (l. 505): the same for two acts and one reader at every step. B: Habitat's readings own, source and whole (l. 677) and their acts (l. 752).
+
+### `reading`
+- pass a: S: `survivorsPersist_of_settled` (l. 569) accepts a course once every line either stands arbitrarily late or is absent after a common time. `not_allPersist_of_removes` (l. 578) rejects a removal when the pool is fixed.
+- pass b: S: `Flow.InheritsReading` (l. 356) and `Flow.lineOf_carries` (l. 361): where readings are inherited along descent and the founders carry sig, every member of every cohort carries sig. `Web.standsLate_readOffCouplings` (l. 426): standing late is read off the group's couplings. `survivorsPersist_of_settled` (l. 569): selection by persistence read off the course's pool registers no removal on a settled course. `not_allPersist_of_removes` (l. 578): read off a fixed pool, every removal turns it. B: `Habitat.beyond_standing_unselected` (l. 1222): where nothing comes back, the line's standing late cannot tell the reading that clears the habitat (source) from the one that spares it (whole).
+
+### declarations of ReadingsPersist.lean (by script)
+  l.151 def byReading
+  l.155 def ReadsThroughOwn
+  l.163 theorem byReading_withAct
+  l.177 theorem byReading_nonanticipating
+  l.183 theorem byReading_through
+  l.188 theorem ReadsThroughOwn.through_act
+  l.203 theorem Flow.totals_of_follows
+  l.216 theorem ExchangeLaw.levels_of_follows
+  l.243 theorem ExchangeLaw.feasible_of_follows
+  l.262 def descentFrom
+  l.266 theorem reached_from
+  l.280 theorem kept_iff
+  l.293 theorem kept_of_descent
+  l.309 def descendsB
+  l.315 theorem descendsB_iff
+  l.332 def lineOf
+  l.338 theorem mem_lineOf_kids
+  l.344 theorem lineOf_descended
+  l.348 theorem lineOf_stands
+  l.356 def InheritsReading
+  l.361 theorem lineOf_carries
+  l.377 def LineAlive
+  l.384 def LineReachesBefore
+  l.390 def LinesReachBefore
+  l.395 theorem LineReachesBefore.reachesBefore
+  l.404 theorem LineReachesBefore.affects
+  l.411 theorem LinesReachBefore.alive
+  l.421 def StandsLate
+  l.426 theorem Web.standsLate_readOffCouplings
+  l.436 theorem Flow.lineOf_standsLate
+  l.459 theorem line_standing_unselected
+  l.480 theorem line_standing_unselected_of_reads
+  l.505 theorem reader_kept_alike
+  l.535 def AliveIn
+  l.540 def SurvivorsPersist
+  l.544 def AllPersist
+  l.549 def RemovesLine
+  l.555 def RemovesItsReaders
+  l.560 theorem RemovesLine.not_standsLate
+  l.569 theorem survivorsPersist_of_settled
+  l.578 theorem not_allPersist_of_removes
+  l.583 theorem AllPersist.survivors
+  l.592 def Flow.Overdraws
+  l.597 theorem Flow.lineOf_persists_never_overdraws
+  l.616 theorem Flow.carried_keeping_above_ending
+  l.647 theorem family_nil_from
+  l.652 theorem not_persists_of_nil
+  l.659 theorem persists_of_alive
+  l.671 inductive Rel
+  l.677 inductive Reading
+  l.681 def stands
+  l.685 def fed
+  l.692 def draw
+  l.698 def clears
+  l.704 def first
+  l.712 def conduct
+  l.752 def act
+  l.757 def isA
+  l.767 def readOf
+  l.770 def restLaw
+  l.773 def world
+  l.776 theorem world_byReading
+  l.781 def members
+  l.784 theorem listed
+  l.793 def requires
+  l.821 def need
+  l.830 def webOf
+  l.834 def flowOf
+  l.839 theorem flowOf_follows
+  l.845 theorem ble_congr
+  l.853 theorem fed_of_agree
+  l.861 theorem admits_iff
+  l.885 theorem fed_of_admits
+  l.916 theorem act_alike
+  l.927 theorem act_nonanticipating
+  l.933 theorem act_readsThroughOwn
+  l.938 theorem world_nonanticipating
+  l.945 def alt
+  l.951 def alt'
+  l.956 theorem alt_or
+  l.962 def second
+  l.966 def keep
+  l.976 def cleared
+  l.985 def overSource
+  l.991 def overdrawn
+  l.1001 def clearedBack
+  l.1010 def start
+  l.1012 def present
+  l.1014 theorem keep_balances
+  l.1024 theorem cleared_balances_late
+  l.1031 theorem cleared_balances
+  l.1036 theorem overdrawn_balances
+  l.1041 theorem clearedBack_balances
+  l.1050 theorem generated
+  l.1070 def lineA
+  l.1074 def lineD
+  l.1079 theorem inherits
+  l.1087 theorem lineA_carries
+  l.1093 theorem keep_lineA_shift
+  l.1100 theorem keep_lineD_shift
+  l.1107 theorem cleared_lineA_shift
+  l.1113 theorem keep_lineA_alive
+  l.1119 theorem keep_lineD_alive
+  l.1125 theorem cleared_lineA_alive
+  l.1134 theorem keep_persists
+  l.1140 theorem cleared_persists
+  l.1146 theorem overdrawn_ends
+  l.1152 theorem clearedBack_ends
+  l.1161 def inR
+  l.1171 theorem quiet
+  l.1179 theorem coupled_in_region
+  l.1187 theorem not_exchanges
+  l.1195 theorem region_closed
+  l.1206 theorem closure_in_region
+  l.1222 theorem beyond_standing_unselected
+  l.1243 theorem standsLate_of_alt
+  l.1249 theorem late_zero
+  l.1255 theorem not_standsLate_of_gone
+  l.1264 theorem beyond_which_persist
+  l.1273 theorem back_which_persist
+  l.1280 theorem beyond_standing
+  l.1292 inductive Line
+  l.1296 def slotsOf
+  l.1301 theorem cleared_dweller_gone
+  l.1310 theorem cleared_removes_dweller
+  l.1318 theorem cleared_removes_its_readers
+  l.1332 theorem clearedBack_dweller_gone
+  l.1340 theorem clearedBack_line_gone
+  l.1348 theorem clearedBack_removes_both
+  l.1357 theorem clearedBack_survivors_pass
+  l.1368 theorem cleared_reaches_dweller
+  l.1374 theorem lineD_slots
+  l.1388 theorem cleared_dweller_reaches_nothing
+  l.1402 theorem clearedBack_dweller_reaches_line
+  l.1409 theorem cleared_standpoints_late

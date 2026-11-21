@@ -1,0 +1,7 @@
+AI-written report by reader whole-a-03.
+
+I read all 17 assigned modules, from Continuity.lean through CrossSituational.lean, including each opening account, every declaration statement and its docstring. No module was partial and no question was unreached.
+
+I found no statement in this batch joining a rule reset from the favoured share, the loss of the units that renew its stock, and a choice between exhaustion and continued renewal through replacement. In CoupledDrawers.lean, `gated_threshold` (l. 774) gives both drain and keeping with a fixed number of drawers and a supplied renewal law. In Counting.lean, `World.binding_contingent` (l. 2638) gives recurring replacement at population one and a separate world where arising does not recur. Both worlds meet all eight premises and each premise has an instance.
+
+Two distinctions bear on the centre. In Correspondence.lean, `Pinned.drawing_interacts` (l. 414) exhibits an interaction even though taking and resting give identical level histories. In Counting.lean, `World.enclosure_bounds_change_counted` (l. 932) bounds how many steps carry change by the stock at enclosure. Even for finite worlds meeting all eight premises with decidable activity, extracting a date after which nothing arises in every such world would imply LPO (`World.lpo_of_finite_ends`, l. 1559).

@@ -1,0 +1,13 @@
+I read all three modules whole. That covers the opening account and every declaration's statement and docstring, and most proof bodies as well: KeepingWidening.lean (2797 lines, read in four parts to the end), Labelled.lean (988 lines) and LabelledRoles.lean (182 lines). I ran no Lean and changed nothing.
+
+Nothing was left unread. Some answers are N because I read every statement and found nothing: share in all three modules, and cost, multiplying, rank and forms_change in LabelledRoles. In LabelledRoles the renewing and consuming pair of runs, and hare_ends, come from other modules (prefix_does_not_decide, Predation). I saw them only as they are used in proof bodies and did not open those modules.
+
+Three things bear on the centre that the fourteen questions miss or only touch:
+
+(1) KeepingWidening `Flow.descends_along_passings` (l. 1063) and `Flow.descends_or_begun` (l. 959). Under the World premises (Balances, Acting, Dependent, Unloosened), whatever is supported at S+k descends, up to double negation, from something supported at S, or from a beginning in between. The module itself calls this the theory's form of "every cell from a cell". It is never stated as a separate theorem, but its contrapositive is a no-return at the loss of every supported giver: if nothing is supported at S, nothing is supported later.
+
+(2) KeepingWidening shows that whether a course "keeps widening" depends on the reading, meaning the continuation R and the class. The kind relay keeps widening within kinds and is 全生成 at two orders. Yet by name it keeps widening at no step and returns with period two. Along supported passings, and with dormant carrying on, it also keeps widening at no step. The account says none of its laws compares two courses. The second-order comparison and growth by kinds not given in advance are listed as not derived.
+
+(3) Labelled holds general laws of no-return as lost reachability for any `Process S A`: `Reach.lost_stays`, `keeps_reach_iff_returns`, `not_returns_iff_loses` and `lost_together_not_returns`. It also holds a general drain for runs, `Run.not_of_depletion`, and recurrence by a falling rank, `Run.renewal_recurs`. Earlier "not found" claims about points of no return and drains should be checked against these.
+
+`Crossing.loss_does_not_decide` (l. 664) is a built case: from one configuration, one break of a dependence leads to three outcomes (ending, transforming, restoring), and the move selects which. LabelledRoles `Renewable.no_exact_finite_reading` states that no reading decided by a finite prefix is the whole-run renewing/consuming classification. It is a reading-limit law, though only on the built Renewable process.

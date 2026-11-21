@@ -1,0 +1,5 @@
+I read the opening account, every declaration statement and the docstrings in all 20 assigned modules. None was read in part. Every question was reached.
+
+I found no statement in this batch that resets a favouring rule from the share it produces. In MutualDependence, `share_ratio_pow` (l. 356) bounds the carrier ratio from offspring and transmission premises. Its stock bound, `Balances.doubling_needs` (l. 431), assumes a sequence of draws; the share theorem supplies no such sequence. In OneStep, `run_runsDown_givers_iff` (l. 3269) characterizes whole runs of giver counts and stock passages. Those counts do not identify which giver survives to the next step.
+
+Two distinctions bear on the centre. In OpenedCorrection, rebuilding with one unit restores the reading and spends the stock needed to act. Replenishing afterward opens correction with acceptability held fixed (ll. 175–189). In MapInstances, a common horizon of inactivity suffices for every branch to end (l. 328). Extracting a reachable terminal occurrence from that horizon in every web is equivalent to excluded middle (l. 695).

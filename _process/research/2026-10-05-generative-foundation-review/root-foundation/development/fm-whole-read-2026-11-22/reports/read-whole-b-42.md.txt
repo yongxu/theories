@@ -1,0 +1,9 @@
+I read the one module of this batch, Observation.lean (566 lines), whole: its opening account, every declaration's statement and docstring, and some proof bodies, those of apart_only_downstream and Measure.couples_after in part. I opened Loops.lean, Remainder.lean, Propagation.lean, Closing.lean, Counterfactual.lean and Flow.lean only to find where the names the statements use (Upstream, CouplesAt, Conveyed, carried, strengthsBefore, ExchangeLaw, Follows, Balances) are defined; I did not read them further. No question was left unread.
+
+Most of the fourteen questions find nothing here, by the module's own scope: no moves or policy, no share, no cost, no multiplying, no rank, and no level whose return depends on what is left. The formations present are a fixed premise in every statement.
+
+Two things bear on the centre that the questions do not ask about:
+1. The module's main law is a noninterference law. It is general over every exchange law that reads into each condition a schedule: what is not downstream of a stock by the routes of reading formed by a step stands alike in two courses that start apart only at that stock. The account says plainly that the converse is not stated, that a downstream condition does make a difference.
+2. Reading is not taken as given. It forms in time: a route of reading forms at a step only through a coupling acting at that step (upstream_succ_iff), and once formed it stays formed (Upstream.before_mono). In the built measurement, the loop stock to record to draw forms at T, and the raise of the stock passes through the record with no threshold of the stock involved.
+
+So "what is registered decides" is stated generally here, as one direction: what is not registered by a formed route makes no difference. How the registering comes to form, or fails to form in time, is stated generally only as the closing of a route; which schedule a law reads, and when an instrument starts, are premises, as the account itself says.

@@ -1,0 +1,333 @@
+# Task file: EDGE, reader whole-c-edge-23
+
+Your 2 modules. For orientation only, what the two passes said of the four marks, of moves and of a reading (where to look, not evidence).
+
+## Reproduction.lean  (1517 lines)
+
+### `both_outcomes`
+- pass a: S: `Mutation.kept_iff` (l. 714) and `falls_iff` (l. 720) distinguish keeping and losing carrier share in one fixed-rate model with positive carrier count. B: `OnePool.one_pool` (l. 1322) and `Relay.relay` (l. 1404) exhibit ending and continuation in separate flows.
+- pass b: S: dichotomies of rising, kept and falling, not of going on and ending. `Mutation.rises_iff`/`kept_iff`/`falls_iff` (l. 708-723) are general in their parameters. `Generations.falls_step_iff` (l. 377). `ByNumber.rises_exact_iff`/`kept_exact_iff` (l. 469, 478). B: ending and going on appear only as two built cases: `OnePool.one_pool` (l. 1322, dissipated, the lineage ends) beside `Relay.relay` (l. 1404, not dissipated, goes on with size 1 at every step). No single exactly-when of going on and ending was found.
+
+### `no_return`
+- pass a: S: `Generations.empty_from` (l. 389) concludes that an empty generation leaves every later one empty. `Flow.lineage_ends` (l. 613) derives emptiness at initial stock plus one given descent within the family and balance and dissipation up to that time.
+- pass b: S: `Generations.empty_from` (l. 389): an empty generation leaves every later one empty, concluded from the definition. `Flow.lineage_ends` (l. 613): under Descended, offspring within ds, and BalancesOn and DissipatesOn at every step below W.stock ds 0 + 1, the generation at W.stock ds 0 + 1 is empty. This is concluded, and it is the loss of the units that give (the lineage). `Mutation.never_rises` (l. 727) with k ≤ w: the share never rises at any step. N: no point of no return for a level as such.
+
+### `rank`
+- pass a: S: `Flow.lineage_ends` (l. 613) gives generation size zero at initial stock + 1 if the descent stays inside a family balanced and dissipative on each preceding step.
+- pass b: S: `Flow.reproducing_within` (l. 599) is a drain: reproducing steps are at most the starting stock. `Flow.lineage_ends` (l. 613): ending within the bound W.stock ds 0 + 1. `Flow.closed_lineage_lowered` (l. 652): some t < W.stock ds 0 at which concordAt + size·raisedAt < size·loweredAt (with ByNumber and 0 < size 1). `Flow.closed_not_exact` (l. 675): transmission is not exact at every step up to the stock.
+
+### `closed_region`
+- pass a: S: `Mutation.below_always` (l. 771) and `above_always` (l. 785) keep each of the two weak inequalities defining the respective sides of mutation–selection balance throughout the fixed-rate run.
+- pass b: S: `Mutation.below_always`/`above_always` (l. 771, 785): the region at or below (at or above) the balance is closed under `run`. `Mutation.kept_share` (l. 741): the balance share is a fixed point. `Generations.empty_from` (l. 389): emptiness is closed. B: `Relay.relay` (l. 1404) is a standing population of size 1 with stock 1 at every step.
+
+### `moves`
+- pass a: N: Not found in the statements read.
+- pass b: N: no Process, policy, plan or allowed set of steps. Generations (kids : Nat → α → List α) and Flow (present/take/give) are handed-in functions, one course with no choice. `search` (l. 353) is a bounded decision lemma over numbers, not a choice of moves.
+
+### `reading`
+- pass a: S: `Generations.ByNumber` (l. 371) reads each member by its offspring number. With that reading `ByNumber.sum_eq` (l. 428) gives next generation size as the current total and `discord_none` (l. 432) gives zero discordance.
+- pass b: S: `Generations.ByNumber` (l. 371) reads each member by its offspring number (amount t p = offspringNumber t p). `Breeding.Combination` (l. 1010) and `Breeding.Normal` (l. 1015) make a breeding value from carried amounts, fitted by normal equations (a regression). The read amount decides how its mean moves: `Breeding.response_rises_iff` (l. 1151) says that with d > 0 and exact transmission the mean breeding value never falls and rises exactly where its self-concordance is positive. `Generations.ByNumber.rises_exact_iff` (l. 469) says the mean offspring number rises exactly where 0 < concordAt t. The reading does not decide who leaves offspring: kids are handed in.
+
+### declarations of Reproduction.lean (by script)
+  l.77 theorem leaves
+  l.158 theorem excess_cross
+  l.164 theorem le_of_excess_zero
+  l.171 theorem discord_self
+  l.176 theorem concord_self
+  l.183 theorem variation
+  l.189 theorem never_against
+  l.194 theorem concord_self_zero_iff
+  l.216 theorem none_iff_uniform
+  l.227 theorem number_variation
+  l.235 theorem number_never_against
+  l.240 theorem number_none_iff
+  l.247 theorem square_mul
+  l.250 theorem cross_mul
+  l.255 theorem twice_mul
+  l.260 theorem bound_sq
+  l.280 def pairsOf
+  l.282 theorem total_bind
+  l.288 theorem total_pairsOf
+  l.293 def dist
+  l.295 theorem dist_mul
+  l.300 theorem total_dist
+  l.316 theorem additive_le
+  l.331 theorem covariance_sq_le
+  l.345 theorem additive_self
+  l.353 theorem search
+  l.371 def ByNumber
+  l.377 theorem falls_step_iff
+  l.383 theorem fell_step
+  l.389 theorem empty_from
+  l.397 theorem response_sq_le
+  l.428 theorem sum_eq
+  l.432 theorem discord_none
+  l.440 theorem concord_eq
+  l.452 theorem step
+  l.461 theorem not_lower_step
+  l.469 theorem rises_exact_iff
+  l.478 theorem kept_exact_iff
+  l.493 theorem mem_flatMap_cases
+  l.501 theorem exists_mem_of_length_pos
+  l.506 theorem born_flatMap
+  l.516 theorem born_le_given
+  l.521 theorem born_le_given_family
+  l.529 theorem number_within_take
+  l.551 theorem born_within_stock
+  l.567 theorem takers_pos_of_born
+  l.587 theorem reproducing_le_takers
+  l.599 theorem reproducing_within
+  l.613 theorem lineage_ends
+  l.637 theorem last_reproducing
+  l.652 theorem closed_lineage_lowered
+  l.675 theorem closed_not_exact
+  l.698 theorem step_balance
+  l.708 theorem rises_iff
+  l.714 theorem kept_iff
+  l.720 theorem falls_iff
+  l.727 theorem never_rises
+  l.734 theorem falls_of_outrun
+  l.741 theorem kept_share
+  l.752 theorem below_stays
+  l.759 theorem above_stays
+  l.766 def run
+  l.771 theorem below_always
+  l.777 theorem not_falls_below
+  l.785 theorem above_always
+  l.793 def holds
+  l.798 def offspring
+  l.803 def generations
+  l.808 theorem total_kinds
+  l.814 theorem lowered_count
+  l.838 theorem size_first
+  l.842 theorem sum_first
+  l.845 theorem size_next
+  l.854 theorem sum_next
+  l.866 theorem balanced_iff
+  l.883 def covPair
+  l.886 def scale
+  l.889 theorem same_scale
+  l.895 theorem scale_plus
+  l.900 theorem scale_scale
+  l.905 theorem same_move
+  l.912 theorem same_zero_plus
+  l.917 theorem covPair_same
+  l.922 theorem covPair_congr
+  l.933 theorem covariance_add
+  l.952 theorem covPair_add
+  l.958 theorem excess_mul
+  l.966 theorem concord_mul
+  l.973 theorem discord_mul
+  l.979 theorem covPair_mul
+  l.986 theorem covPair_const
+  l.993 def combine
+  l.996 def combined
+  l.1000 theorem covPair_combine
+  l.1010 def Combination
+  l.1015 def Normal
+  l.1021 theorem covPair_combination
+  l.1036 theorem combined_normal
+  l.1053 theorem breeding_balance
+  l.1075 theorem additive_part_le
+  l.1094 theorem normal_append
+  l.1104 theorem one_amount
+  l.1124 theorem response
+  l.1151 theorem response_rises_iff
+  l.1174 def parents
+  l.1176 def kids
+  l.1180 theorem spread
+  l.1192 inductive Relatum
+  l.1200 def level
+  l.1209 def web
+  l.1217 def takeFirst
+  l.1227 def giveFirst
+  l.1236 def take
+  l.1240 def give
+  l.1244 def present
+  l.1250 def flow
+  l.1256 def family
+  l.1258 theorem balances
+  l.1268 theorem dissipates
+  l.1274 def firstKids
+  l.1280 def kids
+  l.1285 def generations
+  l.1290 theorem descended
+  l.1309 theorem within
+  l.1322 theorem one_pool
+  l.1338 def turn
+  l.1343 def on
+  l.1349 def web
+  l.1358 def flow
+  l.1363 def family
+  l.1365 theorem exchange
+  l.1368 theorem balances
+  l.1370 theorem not_dissipates
+  l.1378 def generations
+  l.1383 theorem family_eq
+  l.1390 theorem descends
+  l.1395 theorem descended
+  l.1404 theorem relay
+  l.1418 def amount
+  l.1422 theorem unrelated
+  l.1433 theorem at_threshold
+  l.1444 def kinds
+  l.1447 def first
+  l.1450 def second
+  l.1453 def number
+  l.1455 def amounts
+  l.1458 def value
+  l.1463 theorem normal
+  l.1470 theorem additive
+  l.1482 def number
+  l.1484 def amounts
+  l.1488 def value
+  l.1495 theorem normal
+  l.1504 theorem interaction
+
+## RoomNet.lean  (949 lines)
+
+### `both_outcomes`
+- pass a: S: `«温不穷当且仅当有给»` (l. 632) gives the equivalence for every room with margin at least two; `unended_at_one` (l. 661) gives the exceptional margin for any heater.
+- pass b: B (built family, for all m and c): `«温有常当且仅当有给»` (l. 606): for m ≥ 1, warmth is a constant class under `net m c` iff 1 ≤ c. `«温不穷当且仅当有给»` (l. 632): for m ≥ 2, no line of warmth from the set level ends iff 1 ≤ c. `unended_at_one` (l. 661): at m = 1 none ends either way, so the margin of two is needed.
+
+### `no_return`
+- pass a: S: `net_open` (l. 126) forces every open successor to remain open; `cold_step` (l. 202) concludes the open, zero-level unheated state has only itself as successor.
+- pass b: B, concluded from the rule: `cold_after` (l. 197): warmth ends at the unheated room's open occurrence at level 1 (its only successor is cold). `cold_step` (l. 202): the cold open occurrence steps only to itself. `cold_rests` (l. 587): it is 全守. `net_open` (l. 126): an open window stays open. The loss is at the low level (level 0), not the loss of something that gives.
+
+### `rank`
+- pass a: S: `cools` (l. 193) and `net_open` (l. 126) give a forced unit decrement at positive open unheated levels. `empties` (l. 769) separates the open level j from any warm heated occurrence at stage j under positive margin and heater.
+- pass b: B: `cools` (l. 193) loses one unit a step, and `cools_to` (l. 625) reaches level 1 from every open occurrence at j+1. `empties` (l. 769): an unheated room open at j is told from every warm heated occurrence at stage j, because the window empties it in j draws. `«开窗以温层如其余乃分»` (l. 781): at margin n+1, stage n holds and stage n+1 tells them apart. No general variant law.
+
+### `closed_region`
+- pass a: S: `Matched.closed` (l. 328) makes the open and shut set-level states closed under the matched thermostat for every positive margin.
+- pass b: B: `Unheated.closed` (l. 225), `Matched.closed` (l. 328: the set level, shut or open, is closed under the matched net), `Overshooting.closed` (l. 413), `Overshooting.closed_open` (l. 504). `shut_rests` (l. 570): with no window, every room at its set level is 全守. `cold_rests` (l. 587). `«给如所取则全守»` (l. 390): the matched thermostat is 全守 at every positive margin.
+
+### `moves`
+- pass a: B: `net_shut` (l. 132) allows the window to stay shut or open. `«平衡守而有终»` (l. 290) gives keeping and a reachable end from the same unheated start at three.
+- pass b: B: `net` (l. 81) is a relation of alternatives: a shut room may stay shut or open its window (`net_shut`, l. 132), and an open window stays open (`net_open`, l. 126). It is not a `Process S A` here. `heated_warm` (l. 171): with m ≥ 1 and c ≥ 1, every successor is warm (every branch keeps warmth). `Unheated.keeps` (l. 238) keeps along the shut branch, while warmth ends along the window's (`Unheated.ends`, l. 243).
+
+### `reading`
+- pass a: S: `heater` (l. 70) and `next` (l. 73) give c iff the post-exchange level is below m, otherwise zero. `before_at_one` (l. 851) leaves zero from one if the heater reads before exchange.
+- pass b: B: the classes `alike` (warm or not, l. 97) and `sameLevel` (l. 88), and the heater reading the level left (`heater`, l. 70). `«开窗则一层可分»` (l. 716): with the window in the net, the first stage of the level tells the unheated room from every heated one. `«有给之室以温不可分»` (l. 793): warm or not puts two heated rooms in one core class. `«不开窗则同核»` (l. 698): with no window, every room at its set level is one core class at the level class, whatever its heater.
+
+### declarations of RoomNet.lean (by script)
+  l.58 structure Occurrence
+  l.63 def surroundings
+  l.66 def exchange
+  l.70 def heater
+  l.73 def next
+  l.76 def shut
+  l.81 def net
+  l.85 def openNet
+  l.88 def sameLevel
+  l.91 def warm
+  l.97 def alike
+  l.100 def start
+  l.102 theorem alike_class
+  l.105 theorem next_rest
+  l.115 theorem warms_open
+  l.120 theorem rest_step
+  l.123 theorem opens
+  l.126 theorem net_open
+  l.132 theorem net_shut
+  l.138 theorem shut_start
+  l.143 theorem begins_open
+  l.147 theorem not_begins_start
+  l.150 theorem warm_of_pos
+  l.155 theorem warm_of_level
+  l.160 theorem next_pos
+  l.171 theorem heated_warm
+  l.176 theorem exchange_ge
+  l.186 theorem heater_zero
+  l.189 theorem next_zero
+  l.193 theorem cools
+  l.197 theorem cold_after
+  l.202 theorem cold_step
+  l.209 def b2
+  l.210 def b1
+  l.211 def b0
+  l.213 theorem s3_b2
+  l.214 theorem b2_b1
+  l.215 theorem b1_b0
+  l.217 theorem begins_b2
+  l.218 theorem begins_b1
+  l.221 theorem b1_ends
+  l.225 theorem closed
+  l.232 theorem reach
+  l.238 theorem keeps
+  l.243 theorem ends
+  l.248 theorem not_generates
+  l.264 theorem ends_b1
+  l.266 theorem ends_b2
+  l.272 theorem rows
+  l.290 theorem «平衡守而有终»
+  l.300 theorem «开窗则平衡新而尽»
+  l.310 def kept
+  l.313 theorem open_rest
+  l.318 theorem start_kept
+  l.321 theorem kept_kept
+  l.324 theorem not_begins_kept
+  l.328 theorem closed
+  l.334 theorem reach
+  l.340 theorem no_renewal
+  l.346 theorem keeping
+  l.353 theorem not_generates
+  l.358 theorem keeps_at
+  l.371 theorem rows
+  l.390 theorem «给如所取则全守»
+  l.399 def o4
+  l.400 def o3
+  l.402 theorem s3_o4
+  l.403 theorem o4_o3
+  l.404 theorem o3_o4
+  l.406 theorem begins_o4
+  l.407 theorem begins_o3
+  l.410 def Reached
+  l.413 theorem closed
+  l.420 theorem reach
+  l.426 theorem renews
+  l.432 theorem renewing_steps
+  l.448 theorem generation
+  l.452 theorem generates
+  l.457 theorem keeps
+  l.463 theorem generation_strong
+  l.469 theorem openNet_single
+  l.474 theorem begins_open_line
+  l.478 theorem generates_open
+  l.493 theorem single_line_tested
+  l.504 theorem closed_open
+  l.510 theorem not_keepsAfter_open
+  l.531 theorem rows
+  l.559 theorem «给过所取则生守相杂»
+  l.565 theorem shut_rest_step
+  l.570 theorem shut_rests
+  l.587 theorem cold_rests
+  l.606 theorem «温有常当且仅当有给»
+  l.619 theorem alike_in_core_iff
+  l.625 theorem cools_to
+  l.632 theorem «温不穷当且仅当有给»
+  l.652 theorem heated_unended
+  l.661 theorem unended_at_one
+  l.682 abbrev Tagged
+  l.685 def joint
+  l.688 def jointShut
+  l.691 def jointLevel
+  l.694 def jointAlike
+  l.698 theorem «不开窗则同核»
+  l.710 theorem shut_one_class_alike
+  l.716 theorem «开窗则一层可分»
+  l.732 theorem heaters_told_apart
+  l.740 theorem unheated_step
+  l.748 theorem lasts
+  l.769 theorem empties
+  l.781 theorem «开窗以温层如其余乃分»
+  l.793 theorem «有给之室以温不可分»
+  l.808 theorem joint_converse
+  l.825 def nextBefore
+  l.831 theorem before_window_moves
+  l.838 theorem before_pos
+  l.851 theorem before_at_one
+  l.854 theorem before_unheated
+  l.864 def toy
+  l.874 theorem toy_branches
+  l.927 theorem toy_verdict

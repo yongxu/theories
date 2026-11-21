@@ -1,0 +1,11 @@
+Reader whole-b-17. All five modules were read whole: every declaration's statement and docstring, and the opening accounts. Feedback.lean (1457 lines) and Flow.lean (1183 lines) were read in two parts each, to their ends. Proof bodies were looked at only where a built case's content depended on them. No Lean was run and nothing was written.
+
+What could not be answered from these modules, and why:
+- Several names in Feedback.lean's opening account are stated in Becoming.BoundedSignificance, not here, as the account itself says: Clearing.reach_counts_dweller, Trophic.mediated_uncoupled, Trophic.responsive_mixed, Trophic.mixed_part and Flow.feeding_unrestricted_of_common. They were not checked.
+- Some laws these modules use are stated elsewhere and were not opened: Flow.Balances.consumption_ends_with_feeders (used in Feeding's Redundant.neither_ends), falls_not_recurring and Amounts.replenishment_unbounded (used in Flow), and Flow.exists_reachReturns (used in FlowCenters).
+
+What the fourteen questions miss that bears on the centre:
+1. Flow.lean's More.replenishment_unbounded and More.renewers_unbounded are general necessity laws. Ever more takers need replenishment, and, at bounded capacity, a number of givers, without bound. This is a demand on what gives, not a law of what comes back from what is left.
+2. Feeding.lean gives exact two-way statements of when a requirement keeps being met: stays_met_iff_at, meets_over_iff_at and unfed_meets_iff_at. meets_without_iff_at says when the loss of feeders brings a dependence back: exactly where the margin above the need fails. The feeders' giving is supplied as a function of the flow, not a going-on that depends on the level.
+3. In Feedback.lean and FlowCenters.lean, which formations' changes show up in the comparison is decided by what a part reaches before each step, or by the standpoint's own closure. This is the nearest these modules come to a reading that decides a verdict. Clearing.returning_loses_dweller shows the verdict changing with the centre alone.
+4. None of the five modules has a choice among moves with a keeping law, a share set again from itself, a cost to the giver, or units that leave units.

@@ -1,0 +1,442 @@
+# Task file: EDGE, second batch, reader whole-c-edge2-12
+
+Your 5 modules. In each, BOTH earlier passes found a statement with both outcomes and NEITHER found a law of ending within a bound. For orientation only, what they said (where to look, not evidence).
+
+## Transmission.lean  (1218 lines)
+
+### `both_outcomes`
+- pass a: S: `Web.inheritsAt_iff_held` (l. 284) gives both outcomes for a dependence at one descent. Given the descendant requires c, inheritance is equivalent to the giver having required it, and forming anew to the giver having lacked it.
+- pass b: S: for keeping versus forming a dependence, not for going on versus ending. `Web.four_cases` (l. 294) says that where the giver's holding and drawing are decided, a descendant depending on c meets exactly one of four cases: held and drew, or held without drawing (inherited), or drew without holding, or neither (formed anew). `Web.inheritsAt_iff_not_formsAnew` (l. 250) says inheritance holds exactly when nothing forms anew, given stability. `World.transmitting_iff_inherits` (l. 892) says that in a finite, balanced, dissipative, embodied world where activity needs support, transmission holds exactly when inheritance does for every condition. `split_iff_em` (l. 413) says that forming and holding make inheritance at every descent exactly when excluded middle holds. All of these are general. N for going on versus ending.
+
+### `no_return`
+- pass a: N: No such law found in the statements read.
+- pass b: N: no irreversibility and no point of no return. `World.drop` is a neighbouring world, not a later state. `Flow.no_new_dependence` (l. 531) is about one step: under balance and inheritance, where nothing taking part depends on c, nothing coming to stand depends on c after it.
+
+### `rank`
+- pass a: N: No such law found in the statements read.
+- pass b: N: no ending within a bound, falling variant or deadline. `stock_le_start` (l. 863) is a bound that does not rise, not a law of ending.
+
+### `closed_region`
+- pass a: S: `World.stock_le_start` (l. 863) keeps total standing within its initial bound at every time for a distinct exhaustive list in a balanced dissipative world.
+- pass b: N: no region closed under steps, no kernel and no fixed point. The only invariances are under the drop operation on worlds (`drop_holds`, `DependsOnDrawn.drop`).
+
+### `moves`
+- pass a: N: No such law found in the statements read.
+- pass b: N: no process with a choice among steps (no `Process S A`, policy or allowed set) appears. The `Flow` has fixed `present`, `give` and `take`, and every law is about its descents (`DescendsAt`), not about a choice.
+
+### `reading`
+- pass a: S: `Flow.dependsOnDrawn_iff` (l. 698) equates the drawing reading with inheritance and drawing what is passed on, assuming drawing implies dependence. This reading constrains descents.
+- pass b: S: `World.vacuous_of_drop_invariant` (l. 854) says: for any condition R on worlds that is kept by dropping one dependence, if R implies `Transmitting` then in a world meeting R transmission does not bind. What R does not register (the dropped dependence) cannot decide transmission. `Flow.DependsOnDrawn.drop` (l. 678) and `DependsOnFed.drop` (l. 683) state that the 'readings of the exchange' do not see a dropped dependence, and `World.drawn_not_enough` (l. 994) concludes that the drawing reading with finiteness and the seven other premises does not give transmission. Note that here a 'reading' is a condition on worlds (dependence only on what givers drew on), not an observation or a class of things read alike. N for an observation in that sense.
+
+### declarations of Transmission.lean (by script)
+  l.150 def InheritsAt
+  l.155 def NeedsWithinAt
+  l.159 def DrawingDepends
+  l.163 def drop
+  l.169 theorem transmits_at_iff
+  l.181 theorem InheritsAt.split
+  l.189 theorem inheritsAt_iff_forming
+  l.195 theorem inheritsAt_of_split
+  l.203 theorem inheritsAt_not_not
+  l.211 theorem needsWithinAt_of_supported
+  l.222 theorem drop_supported
+  l.227 theorem drop_dependent
+  l.231 theorem drop_keeps_next
+  l.236 theorem drop_not_inherits
+  l.244 def FormsAnewAt
+  l.250 theorem inheritsAt_iff_not_formsAnew
+  l.259 theorem formsAnew_iff_undrawn
+  l.268 theorem drawn_necessary_iff
+  l.278 def DependsOnDrawnAt
+  l.284 theorem inheritsAt_iff_held
+  l.294 theorem four_cases
+  l.310 theorem formsAnew_iff_drawn_or_neither
+  l.324 theorem formsAnew_iff_drawn_unheld
+  l.332 theorem DependsOnDrawnAt.not_undrawn
+  l.340 theorem formsAnew_iff_neither
+  l.348 theorem DependsOnDrawnAt.not_formsAnew
+  l.356 theorem dependsOnDrawnAt_iff
+  l.367 theorem split_of_em
+  l.380 def web
+  l.394 def toDescendant
+  l.399 def flow
+  l.407 theorem descends
+  l.413 theorem split_iff_em
+  l.434 def Inherits
+  l.438 def NeedsWithin
+  l.443 def TransmitsFromSome
+  l.449 def DependsOnDrawn
+  l.454 def DependsOnFed
+  l.462 theorem transmitsWithin_iff
+  l.473 theorem transmitsWithin_iff_forming
+  l.486 theorem transmitsWithin_iff_split
+  l.501 theorem descends_of_comes
+  l.511 theorem inherited_from_giver
+  l.521 theorem forms_from_giver
+  l.531 theorem no_new_dependence
+  l.541 theorem Inherits.from_giver
+  l.547 theorem TransmitsWithin.fromSome
+  l.557 theorem inherited_supported_at
+  l.567 theorem inherited_within_at
+  l.580 theorem inherited_supported
+  l.589 theorem inherited_within
+  l.601 theorem fromSome_supported
+  l.611 theorem fromSome_within
+  l.625 theorem descendant_supported_at
+  l.634 theorem embodied_descendant
+  l.645 theorem needsWithin_of_embodied
+  l.655 theorem drop_untransmitted
+  l.662 theorem inherits_of_drawn
+  l.668 theorem dependsOnDrawn_of_fed
+  l.673 theorem inherits_of_fed
+  l.678 theorem DependsOnDrawn.drop
+  l.683 theorem DependsOnFed.drop
+  l.690 def PassesDrawn
+  l.698 theorem dependsOnDrawn_iff
+  l.708 theorem inherits_iff_none_undrawn
+  l.727 theorem dependsOnDrawn_iff_at
+  l.733 def FormsFromDrawn
+  l.739 theorem dependsOnDrawn_iff_split
+  l.747 theorem Inherits.formsFromDrawn
+  l.752 theorem DependsOnDrawn.formsAnew
+  l.759 theorem drawn_by_giver
+  l.771 theorem formed_from_drawing
+  l.782 theorem no_dependence_undrawn
+  l.793 theorem DependsOnDrawn.none_formsAnew
+  l.805 def drop
+  l.811 theorem drop_holds
+  l.823 theorem drop_finite
+  l.828 theorem drop_untransmitting
+  l.836 theorem drop_but
+  l.854 theorem vacuous_of_drop_invariant
+  l.863 theorem stock_le_start
+  l.874 theorem Finite.level_le
+  l.883 theorem transmitting_iff_inherits_bounded
+  l.892 theorem transmitting_iff_inherits
+  l.899 theorem transmitting_of_drawn
+  l.908 theorem transmitting_of_fed
+  l.918 def droppedHatch
+  l.923 theorem finiteHatch_descends
+  l.929 theorem finiteHatch_drawn
+  l.937 theorem finiteHatch_pair
+  l.954 theorem drawn_without_link
+  l.969 theorem link_without_drawn
+  l.981 theorem drawn_and_link_needed
+  l.994 theorem drawn_not_enough
+  l.1009 def bearingHatch
+  l.1017 theorem bearingHatch_derived
+  l.1051 theorem droppedHatch_formed
+  l.1067 theorem novel_formed_undrawn
+  l.1087 theorem carried
+  l.1100 inductive Relatum
+  l.1109 def web
+  l.1126 def toChild
+  l.1133 def flow
+  l.1145 theorem balances
+  l.1155 theorem acting
+  l.1162 theorem dependent
+  l.1166 theorem comes_child
+  l.1175 theorem descends_first
+  l.1178 theorem descends_second
+  l.1186 theorem twofold
+  l.1209 theorem passed_undrawn
+
+## Unfolding.lean  (507 lines)
+
+### `both_outcomes`
+- pass a: S: `Frame.claims_recur_iff` (l. 339) equates recurrence of coming to be realized with recurrence of ceasing to be realized in the same finite list of claims along a run, assuming decidability at every step. This concerns recurrent gain and loss.
+- pass b: S, general: `Frame.claims_recur_iff` (l. 339): for a finite family of claims decided at each step, coming to be realized recurs exactly where ceasing to be realized recurs. `shown_determined_iff` (l. 273) and `exists_law_iff` (l. 283): a determined law admits a history exactly where it is Consistent. `World.balances_iff_exchange` (l. 230): a world balances exactly where its standings run by the law of exchange. B: `Twins.alike_one` (l. 427).
+
+### `no_return`
+- pass a: D: The opening account on kept history says a kept history never returns. `Run.keepHistory_shown` (l. 309) states uniqueness of its shown continuation.
+- pass b: S: `Run.keepHistory_shown` (l. 309): along a run keeping its history, every run of the law that history shows, from one of its configurations, is the run from there on. D: the account says, citing Becoming.Recurrence and not stating it here, that a kept history never returns. No irreversibility of a loss.
+
+### `rank`
+- pass a: N: No such law found in the statements read.
+- pass b: N.
+
+### `closed_region`
+- pass a: N: No such law found in the statements read.
+- pass b: N: no invariant, kernel or fixed-point law is stated in this module.
+
+### `moves`
+- pass a: S: `closedBy_runs_agree` (l. 182) gives equal states at every step for runs from the same start of a determined process closed by the same state policy. B: `Fork.label_couples` (l. 211) excludes a mixed left/right outcome under a shared move and admits it with separate labels forgotten.
+- pass b: S: `withMove_determined_iff` (l. 155): Determined (withMove P) iff Determined P and, wherever P steps, any two moves are equal. `closedBy_determined` (l. 170): with the move formed by a policy S → A, a determined law stays determined. `closedBy_runs_agree` (l. 182): with P determined and the move formed by a policy, two runs from one configuration agree at every step. B: `Fork.label_couples` (l. 211): in the synchronized product two forking parts cannot go different ways at once; with the move forgotten in each part they can.
+
+### `reading`
+- pass a: S: `IdentifiesAlike.carries` (l. 365) gives a determined process through a description identifying exactly the alike states when the frame is everywhere determined up to likeness.
+- pass b: S: `Law.alike_iff_sameFuture` (l. 481): for a determined law read through o (Law.frameBy, l. 448), configurations are Alike exactly where o along their orbits agrees at every step. `IdentifiesAlike.carries` (l. 365): where a frame is determined up to likeness, a description π identifying exactly the alike configurations carries a determined law on K that P factors through. `Frame.novel_iff_arises` (l. 331): where the configuration records what was realized before, a read claim is new exactly where one arises across the step. B: `Twins.naming_not_identifiesAlike` (l. 436).
+
+### declarations of Unfolding.lean (by script)
+  l.155 theorem withMove_determined_iff
+  l.170 theorem closedBy_determined
+  l.182 theorem closedBy_runs_agree
+  l.191 inductive Pos
+  l.197 inductive Way
+  l.202 inductive Steps
+  l.207 def law
+  l.211 theorem label_couples
+  l.230 theorem World.balances_iff_exchange
+  l.237 theorem World.exchange_step_iff
+  l.243 def World.exchangeRun
+  l.248 theorem exchange_agrees
+  l.255 theorem exchange_runs_agree
+  l.273 theorem shown_determined_iff
+  l.283 theorem exists_law_iff
+  l.293 theorem Shown.agrees
+  l.309 theorem Run.keepHistory_shown
+  l.325 theorem Frame.arises_iff
+  l.331 theorem Frame.novel_iff_arises
+  l.339 theorem Frame.claims_recur_iff
+  l.353 theorem Determined.at
+  l.365 theorem IdentifiesAlike.carries
+  l.378 inductive Config
+  l.384 def frame
+  l.388 theorem not_determined
+  l.393 theorem one_determined
+  l.397 theorem bisimulation
+  l.404 theorem left_alike_right
+  l.408 theorem successor_not_start
+  l.414 theorem bisimulation_one
+  l.427 theorem alike_one
+  l.436 theorem naming_not_identifiesAlike
+  l.448 def Law.frameBy
+  l.452 theorem Law.frameBy_determined
+  l.457 theorem Law.alike_future
+  l.469 theorem Law.sameFuture_bisimulation
+  l.481 theorem Law.alike_iff_sameFuture
+  l.486 theorem Law.IdentifiesAlike.carries
+  l.502 theorem exchange_determinedAt
+
+## Unread.lean  (196 lines)
+
+### `both_outcomes`
+- pass a: B: Cue.seen_twin and Cue.unseen_fixed (ll. 168, 179) give freedom to act differently with the cue included, given a through-selection choosing contentAct, and determination at the same occasion for the content-only lumping. These are outcomes of identification.
+- pass b: B: `determines_iff_not_not` (l. 120): with one occasion, a constant lumping and Bool acts, the readings fix the act exactly where ¬¬P. D: the general exact form (fixed exactly where the lumping ties x to a read occasion) is Learning.determines_lumped_iff, cited in the account, not stated here. Not of going on and ending.
+
+### `no_return`
+- pass a: N: No such law found in the statements read.
+- pass b: N.
+
+### `rank`
+- pass a: N: No such law found in the statements read.
+- pass b: N.
+
+### `closed_region`
+- pass a: N: No such law found in the statements read.
+- pass b: N.
+
+### `moves`
+- pass a: N: No such law found in the statements read.
+- pass b: N: a selection select : (I → V) → Prop over act laws appears (twin_selected), but no process with moves.
+
+### `reading`
+- pass a: S: `Learning.free_lumped` (l. 87) gives freedom beyond the data when membership in x’s lump is decidable and no observation shares it. B: `determines_iff_not_not` (l. 120) makes determination equivalent to ¬¬P for a singleton occasion read when P holds.
+- pass b: S: `free_lumped` (l. 87): where membership in x's lump is decidable and no read occasion is lumped with x, the class Lumped π is Free at x beyond the read occasions. `twin_selected` (l. 104): as said under states, with Training.Through (Training.AgreeOn R) select as premise. B: `Cue.unseen_fixed` (l. 179): among act laws reading only the content, agreement on the read occasions determines the act at (false, true). `Cue.seen_twin` (l. 168).
+
+### declarations of Unread.lean (by script)
+  l.87 theorem free_lumped
+  l.104 theorem twin_selected
+  l.120 theorem determines_iff_not_not
+  l.139 theorem state_apart_of_acts_apart
+  l.145 theorem coupling_apart_of_state_apart
+  l.156 abbrev Occasion
+  l.159 def read
+  l.162 def contentAct
+  l.168 theorem seen_twin
+  l.179 theorem unseen_fixed
+  l.187 theorem apart_with_content_alike
+
+## Verification.lean  (844 lines)
+
+### `both_outcomes`
+- pass a: S: `decided_at_stretch` (l. 498) gives a horizon after which all agreeing runs satisfy K or all fail it, assuming verifiability, refutability and K r ∨ ¬ K r for this run.
+- pass b: S: decided_at_stretch (l. 498) is a dichotomy about inclusion in a reading, not about going on and ending: for a reading both verifiable and refutable, with K r or not K r given, some stretch of r is passed only by runs inside or only by runs outside. orNotAdheres_dense_iff_em (l. 620): asked of every process, the disjunctive remainder is dense exactly under excluded middle.
+
+### `no_return`
+- pass a: S: `refutes_iff_refutes_hull` (l. 641) characterizes a refuting prefix by impossibility of any agreeing run in the adherence hull, for arbitrary K. This is a statement about every continuation of a prefix.
+- pass b: N: No point of no return of a going-on was found. Verified (l. 443) and refutable_or (l. 788) fix a verdict for every run through a stretch, but that is a property of a reading, not an irreversibility of a process.
+
+### `rank`
+- pass a: N: No such law found in the statements read.
+- pass b: N
+
+### `closed_region`
+- pass a: S: `Ideals.principal_upper` (l. 316) gives upward closure of verifying principal stretches of an open class under extension. Ideals.interior_open and interior_largest (ll. 413, 417) identify the largest open subclass; this closure concerns history extension.
+- pass b: S: These regions are largest within a reading, not closed under the steps of a process. interiorBy_verifiable (l. 151) and interiorBy_largest (l. 155): the interior is verifiable and holds every verifiable part. interior_open (l. 413) and interior_largest (l. 417): the interior is the largest open subclass. remainderBy_largest (l. 204) and remainder_largest (l. 549): the remainder is the largest part splitting a reading with a closed part. No invariant under steps was found.
+
+### `moves`
+- pass a: S: `decided_at_stretch` (l. 498) quantifies over every run of an arbitrary Process extending the run’s record through h. B: `Sequences.recurs_dense` (l. 828) admits a recurring choice of continuation through each finite Boolean record.
+- pass b: S: The laws are over runs of any Process S A. Verified (l. 443) holds where there is a horizon h such that every run agreeing with r up to h lies in K, so it quantifies over every continuation through that stretch. decided_at_stretch (l. 498): given K r or not K r, a reading both verifiable and refutable has a stretch of r through which only runs inside pass, or only runs outside. No law about what one choice of moves keeps as against another was found.
+
+### `reading`
+- pass a: S: `ByRecord` (l. 685) identifies verdicts at equal prefixes. `insulates_iff_dense` (l. 695) gives an exact existence condition for record-based verdicts confined to a favoured reading and realized through each record.
+- pass b: S: VerifiableBy (l. 132) and Verified (l. 443): a reading is verifiable where each point inside has a finite stretch through which only points inside pass. ByRecord (l. 685): the verdict at each horizon depends only on the record up to that horizon. insulates_iff_dense (l. 695): a practice fixed by the record whose verdicts lie within F and are met through the record's stretch exists exactly where F is dense. refutes_iff_refutes_hull (l. 641): a stretch refutes a reading exactly where it refutes its hull. same_hull_same_refutations (l. 647): readings with one hull are refuted by the same stretches.
+
+### declarations of Verification.lean (by script)
+  l.132 def VerifiableBy
+  l.137 def InteriorBy
+  l.141 theorem InteriorBy.holds
+  l.146 theorem verifiableBy_iff_interior
+  l.151 theorem interiorBy_verifiable
+  l.155 theorem interiorBy_largest
+  l.161 theorem VerifiableBy.interior_iff
+  l.167 theorem refutableBy_iff_compl
+  l.175 theorem VerifiableBy.compl_refutable
+  l.181 theorem AdheresBy.not_interior_compl
+  l.187 theorem InteriorBy.not_adheres_compl
+  l.196 def RemainderBy
+  l.199 theorem splitBy
+  l.204 theorem remainderBy_largest
+  l.210 theorem remainderBy_iff_of_adheres
+  l.216 theorem remainderBy_not_refuted
+  l.223 theorem remainderBy_meets_not_not
+  l.229 theorem remainderBy_meets_of_decided
+  l.237 def OrNotAdheresBy
+  l.240 theorem splitBy_or
+  l.246 theorem OrNotAdheresBy.remainder
+  l.254 theorem orNotAdheresBy_meets_of_decided
+  l.270 def Upper
+  l.273 def Meets
+  l.277 structure Open
+  l.284 def Verifiable
+  l.287 def Interior
+  l.289 theorem Open.same
+  l.293 theorem open_of_iff
+  l.299 theorem meets_open
+  l.304 theorem Open.principal_of_mem
+  l.311 theorem open_iff_meets_principal
+  l.316 theorem principal_upper
+  l.321 theorem open_iff_upper
+  l.326 theorem meets_principal_iff
+  l.332 theorem upper_unique
+  l.337 theorem Open.verifiable
+  l.342 theorem verifiable_open
+  l.349 theorem open_iff_verifiable
+  l.353 theorem refutable_iff_compl_open
+  l.357 theorem avoids_iff_not_meets
+  l.361 theorem Open.compl_closed
+  l.371 theorem verifiable_compl_refutable_iff
+  l.385 theorem open_exists
+  l.392 theorem open_and
+  l.399 theorem open_true
+  l.402 theorem open_false
+  l.408 theorem interior_iff_meets
+  l.413 theorem interior_open
+  l.417 theorem interior_largest
+  l.422 theorem Open.interior_iff
+  l.435 theorem verifiable_iff_verifiableBy
+  l.443 def Verified
+  l.446 theorem verified_iff_interiorBy
+  l.452 theorem Verified.holds
+  l.456 theorem verifiable_iff_verified
+  l.462 theorem verified_verifiable
+  l.468 theorem verified_largest
+  l.474 theorem refutable_iff_compl_verifiable
+  l.479 theorem Verifiable.compl_refutable
+  l.485 theorem Adheres.not_verified_compl
+  l.491 theorem Verified.not_adheres_compl
+  l.498 theorem decided_at_stretch
+  l.511 theorem verifiable_compl_refutable_markov
+  l.533 def Remainder
+  l.536 theorem remainder_iff_remainderBy
+  l.542 theorem split
+  l.549 theorem remainder_largest
+  l.556 theorem remainder_iff_of_adheres
+  l.562 theorem remainder_not_refuted
+  l.569 theorem remainder_meets_not_not
+  l.576 def Dense
+  l.580 theorem remainder_dense_of_decided
+  l.596 def OrNotAdheres
+  l.599 theorem split_or
+  l.609 theorem OrNotAdheres.remainder
+  l.620 theorem orNotAdheres_dense_iff_em
+  l.641 theorem refutes_iff_refutes_hull
+  l.647 theorem same_hull_same_refutations
+  l.657 def NoStretchRefutes
+  l.661 theorem Dense.noStretchRefutes
+  l.666 theorem Refutable.noStretchRefutes_not_not
+  l.673 theorem Refutable.remainder_not_not
+  l.681 abbrev Practice
+  l.685 def ByRecord
+  l.690 def Insulates
+  l.695 theorem insulates_iff_dense
+  l.704 theorem Insulates.refutable_not_not
+  l.716 theorem open_runs
+  l.722 theorem open_iff_upper
+  l.730 theorem refutable_of_compl_open
+  l.735 theorem verifiable_of_class
+  l.742 theorem verifiable_iff_open
+  l.755 theorem open_compl_adheres
+  l.760 def verifyingClass
+  l.765 theorem verifiable_iff_class
+  l.772 theorem verifiable_and
+  l.779 theorem verifiable_exists
+  l.788 theorem refutable_or
+  l.800 theorem verifiable_true_false
+  l.808 theorem closed_iff_remainder
+  l.819 theorem eventually_verifiable
+  l.823 theorem eventually_dense
+  l.828 theorem recurs_dense
+  l.835 theorem recurs_not_verifiable
+
+## Viability.lean  (325 lines)
+
+### `both_outcomes`
+- pass a: S: `guarded_iff` (l. 299) says a guarded history agrees at every time with the underlying history exactly when the underlying history stays in the decidable guard throughout. `guarded_never_fails_iff` (l. 311) gives the all-admissible-histories version with an admissible disturbance and a certificate.
+- pass b: S: kernel_iff_certificate (l. 85), general: no course from s leaves the guard exactly when some certificate contains s. never_leaves_iff_certificate (l. 230) and guarded_never_fails_iff (l. 311), general for disturbed laws given one admissible disturbance: no guarded history ever stops exactly when some set containing the start lies within the guard and is closed under every admissible disturbance. B: needs_admissible (l. 249): without an admissible disturbance the equivalence fails.
+
+### `no_return`
+- pass a: S: `guardedStep_none` (l. 271) proves by definition that once the guarded state is none, every next disturbance keeps it none. This absorption is built into guardedStep.
+- pass b: S: guardedStep_none (l. 271): a stopped guarded history stays stopped (none goes to none). This holds by the definition of guardedStep, so it is built into the construction rather than concluded. Leaves.within_not_kernel (l. 127), built: the guard holds at true, yet a course from true leaves it. No statement that from outside the kernel every course leaves was found; outside it only some course does.
+
+### `rank`
+- pass a: N: No such law found in the statements read.
+- pass b: N
+
+### `closed_region`
+- pass a: S: `kernel_largest` (l. 91) makes the kernel a certificate and includes every certificate in it. `kernel_iff_certificate` (l. 85) expresses membership by existence of a certificate containing the start.
+- pass b: S: Certificate (l. 59) is a set within the guard that is an Invariant of P. kernel_certificate (l. 78): the kernel is one. kernel_largest (l. 91): it contains every other. kernel_iff_held (l. 65): the kernel is what holds throughout the closure of the steps. kernel_step_iff (l. 98): one-step characterisation. certificate_disturbed_iff (l. 172): the certificate condition for a disturbed law.
+
+### `moves`
+- pass a: S: `certificate_disturbed_iff` (l. 172) requires closure under every admissible disturbance and inclusion in the guard. `trace_disturbed_iff` (l. 147) characterizes executable finite plans by admissibility of all their moves and the folded endpoint.
+- pass b: S: Kernel (l. 55): every t reachable from s satisfies the guard, so every course keeps it. disturbed (l. 137): the process whose steps are the admissible disturbances adm a, going to f s a. never_leaves_iff_kernel (l. 215): given adm a₀, every admissible sequence d keeps the guard at every time exactly when s is in the kernel. certificate_never_leaves (l. 241): from a certificate, every admissible history stays within the guard.
+
+### `reading`
+- pass a: S: `guardedStep` (l. 259) tests the decidable guard at both ends and stops if either fails. ready_of_step and step_of_ready (ll. 275, 284) give necessity and sufficiency for continuing the guarded step.
+- pass b: N
+
+### declarations of Viability.lean (by script)
+  l.55 def Kernel
+  l.59 structure Certificate
+  l.65 theorem kernel_iff_held
+  l.72 theorem Certificate.kernel
+  l.78 theorem kernel_certificate
+  l.85 theorem kernel_iff_certificate
+  l.91 theorem kernel_largest
+  l.98 theorem kernel_step_iff
+  l.110 theorem Kernel.mono
+  l.115 theorem Kernel.run
+  l.124 def process
+  l.127 theorem within_not_kernel
+  l.137 def disturbed
+  l.141 def history
+  l.147 theorem trace_disturbed_iff
+  l.172 theorem certificate_disturbed_iff
+  l.181 theorem history_reach
+  l.187 def extend
+  l.192 theorem extend_admissible
+  l.199 theorem history_shift
+  l.206 theorem history_extend
+  l.215 theorem never_leaves_iff_kernel
+  l.230 theorem never_leaves_iff_certificate
+  l.241 theorem certificate_never_leaves
+  l.249 theorem needs_admissible
+  l.259 def guardedStep
+  l.265 def guardedHistory
+  l.271 theorem guardedStep_none
+  l.275 theorem ready_of_step
+  l.284 theorem step_of_ready
+  l.290 theorem agrees_of_within
+  l.299 theorem guarded_iff
+  l.311 theorem guarded_never_fails_iff

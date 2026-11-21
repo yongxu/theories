@@ -1,0 +1,221 @@
+# Task file: EDGE, second batch, reader whole-c-edge2-10
+
+Your 2 modules. In each, BOTH earlier passes found a statement with both outcomes and NEITHER found a law of ending within a bound. For orientation only, what they said (where to look, not evidence).
+
+## SelectionLevels.lean  (1596 lines)
+
+### `both_outcomes`
+- pass a: B: `Founding.either_verdict` (l. 1417) gives selection for keeping with keepers together and against with keepers apart under the illustrated returns. The outcomes are directions of selection at one step.
+- pass b: S: `rises_iff` (l. 454), `none_iff` (l. 462), `rises_iff_sized` (l. 482), `rises_iff_returns` (l. 990), `rises_iff_kept` (l. 966) and `rises_exact_iff_returns` (l. 1028) are general exactly-when laws for the whole selecting for or against an amount (keeping against not keeping it, at one step). B: `Founding.either_verdict` (l. 1417) and `Sized.either_verdict` (l. 1553): the same returns give selection for keeping in one listing and against in the other. Not of going on and ending.
+
+### `no_return`
+- pass a: S: `lineage` (l. 667) defines the next lineage by flat-mapping offspring over its members, so an empty lineage has empty successor by the defining equation.
+- pass b: N. S (related only): `lineage_keeps` (l. 715): under exact transmission a lineage founded uniform at v keeps v at every generation. This is a kept value, not a point of no return.
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N
+
+### `closed_region`
+- pass a: S: `lineage_keeps` (l. 715) preserves a uniform founding value at every descendant under exact transmission at every step and founder membership in the initial family.
+- pass b: S: `lineages_uniform` (l. 745): groups uniform in an amount at the first generation, with exact transmission at every step, have lineages uniform at every generation (an invariant). `lineages_within_none` (l. 755): nothing is selected within them at any generation.
+
+### `moves`
+- pass a: N: Not found in the statements read.
+- pass b: N
+
+### `reading`
+- pass a: S: `rises_iff_reading` (l. 859) gives the exact inequality involving a reading’s concordance, discordance and the amount’s spread when each weight plus cost is base plus benefit times the reading.
+- pass b: S: `returns_balance` (l. 825) and `rises_iff_reading` (l. 859): where each member's weight with k per unit of its amount is a base with b per unit of a reading o, the whole selects for the amount ↔ k*concord a a + b*discord o a < b*concord o a. `rises_iff_shared_sized` (l. 1148): the verdict through a reading R of the group. A reading as a modelling term decides the verdict; no observation or learned rule. B: `ByMeans.by_means` (l. 1342): the reading by totals sees nothing among groups where the reading by means does.
+
+### declarations of SelectionLevels.lean (by script)
+  l.181 def whole
+  l.184 theorem whole_total
+  l.191 theorem whole_weighted
+  l.196 theorem whole_length
+  l.201 theorem whole_length_of_equal
+  l.206 def concordWithin
+  l.209 def discordWithin
+  l.212 def concordAmong
+  l.216 def discordAmong
+  l.223 def context
+  l.226 theorem context_total
+  l.234 theorem context_length
+  l.240 theorem mem_of_mem_context
+  l.247 def concordWithinBy
+  l.251 def discordWithinBy
+  l.256 def concordMeans
+  l.260 def discordMeans
+  l.263 theorem shuffle_left
+  l.269 theorem shuffle_right
+  l.277 theorem meet
+  l.283 theorem square_split
+  l.295 theorem levels_sized
+  l.371 theorem pairs_context
+  l.382 theorem within_by_one
+  l.389 theorem among_by_one
+  l.404 theorem whole_nil
+  l.415 theorem levels
+  l.454 theorem rises_iff
+  l.462 theorem none_iff
+  l.472 theorem square_lt_iff
+  l.476 theorem square_eq_iff
+  l.482 theorem rises_iff_sized
+  l.490 theorem none_iff_sized
+  l.498 theorem means_none_of_alike
+  l.507 theorem rises_iff_within_of_alike
+  l.519 theorem among_for_of_rises
+  l.530 theorem within_for_of_rises
+  l.539 theorem within_none_of_uniform
+  l.548 theorem levels_of_uniform
+  l.557 theorem among_none_of_alike
+  l.563 theorem levels_of_alike
+  l.577 theorem rises_exact_iff_levels
+  l.595 theorem rises_exact_iff_sized
+  l.613 theorem rises_exact_iff_within_of_alike
+  l.628 theorem among_for_of_raises
+  l.644 theorem within_by_none_of_uniform
+  l.655 theorem rises_iff_means_of_uniform
+  l.667 def lineage
+  l.672 def lineages
+  l.676 theorem whole_map
+  l.682 theorem flatMap_flatMap
+  l.695 theorem lineages_family
+  l.702 theorem lineages_whole
+  l.707 theorem lineage_within
+  l.715 theorem lineage_keeps
+  l.726 theorem lineage_total
+  l.736 theorem lineage_value
+  l.745 theorem lineages_uniform
+  l.755 theorem lineages_within_none
+  l.768 theorem rises_iff_lineages
+  l.784 theorem balance_add
+  l.790 theorem balance_mul
+  l.796 theorem returns_total
+  l.805 theorem returns_weighted
+  l.825 theorem returns_balance
+  l.859 theorem rises_iff_reading
+  l.867 theorem spread_levels
+  l.883 theorem within_kept
+  l.899 theorem among_kept
+  l.920 theorem within_returns
+  l.929 theorem within_against
+  l.940 theorem among_returns
+  l.952 theorem among_for_iff
+  l.966 theorem rises_iff_kept
+  l.990 theorem rises_iff_returns
+  l.1002 theorem rises_iff_returns_of_uniform
+  l.1014 theorem not_rises_of_alike
+  l.1028 theorem rises_exact_iff_returns
+  l.1044 theorem cancel_two
+  l.1053 theorem combination_balance
+  l.1087 theorem kept_balance
+  l.1099 theorem within_shared_by
+  l.1118 theorem means_shared
+  l.1148 theorem rises_iff_shared_sized
+  l.1212 theorem rises_iff_kept_sized
+  l.1229 theorem rises_iff_divided_sized
+  l.1244 inductive Member
+  l.1253 def holds
+  l.1260 def groups
+  l.1262 theorem equal
+  l.1271 def offspring
+  l.1280 theorem among_wins
+  l.1293 def offspring
+  l.1302 theorem within_wins
+  l.1314 def unequal
+  l.1317 def holding
+  l.1324 def offspring
+  l.1331 def factor
+  l.1333 theorem common
+  l.1342 theorem by_means
+  l.1356 def keeps
+  l.1363 def assorted
+  l.1366 def mixed
+  l.1368 theorem assorted_equal
+  l.1373 theorem mixed_equal
+  l.1380 def assortedOffspring
+  l.1387 def mixedOffspring
+  l.1393 theorem assorted_returns
+  l.1403 theorem mixed_returns
+  l.1417 theorem either_verdict
+  l.1434 def groups
+  l.1436 def keeps
+  l.1442 theorem equal
+  l.1450 def offspring
+  l.1457 theorem returns
+  l.1473 theorem below_one
+  l.1488 def together
+  l.1491 def apart
+  l.1494 def factor
+  l.1496 theorem together_common
+  l.1502 theorem apart_common
+  l.1511 def togetherOffspring
+  l.1518 def apartOffspring
+  l.1524 theorem together_returns
+  l.1536 theorem apart_returns
+  l.1553 theorem either_verdict
+  l.1573 theorem divided_one_verdict
+
+## Settling.lean  (402 lines)
+
+### `both_outcomes`
+- pass a: S: `keeps_changing_iff` (l. 302) exactly characterizes existence of recurring change under a finite listing. B: `OneWay.lpo_of_settles` (l. 377) shows why exclusion of such a run does not supply a constructive settling time.
+- pass b: S: `keeps_changing_iff` (l. 302): in a world a list holds, keeping changing on some run holds exactly where some reachable change can be undone. This is general and of one process, but it is a dichotomy of keeping changing against not, not of going on against ending. B: `OneWay.lpo_of_settles` (l. 377) shows that no run keeping changing does not constructively give settling.
+
+### `no_return`
+- pass a: S: `settles_no_undoable` (l. 313) concludes that no reachable state-changing step has a return path if every run from the start settles.
+- pass b: S: `settles_no_undoable` (l. 313): where every run from `s` settles, no configuration reachable from `s` has a step to another configuration from which it can be reached again. Irreversibility is concluded from settling, and it concerns configurations, not a level or a giver. B: `OneWay.no_undoable` (l. 359): from `true` every step stays at `true`, so `false` cannot be reached again.
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N: no bound on settling, falling variant or deadline. The `OneWay` statements show that no step of settling can be given without LPO.
+
+### `closed_region`
+- pass a: B: `OneWay.process` (l. 334) defines every step out of true to stay at true; `OneWay.seen_stays` (l. 345) establishes persistence of true on the reading run.
+- pass b: N: no invariant or closed region is stated here. `Enough.Settles` and `Enough.Rests` come from `Becoming.Enough`; `Invariant.reach` is used only inside the proof of `OneWay.no_undoable`.
+
+### `moves`
+- pass a: S: `recurs_of_undoable` (l. 262) constructs a run with recurring change from a reachable enabled step to a different state with a return path.
+- pass b: S: `Process S A` with runs (`Run P`). `keeps_changing_iff` (l. 302): some run (some choice of steps) from `s` keeps changing exactly where a reachable undoable step exists. `settles_no_undoable` (l. 313) and `assured_no_undoable` (l. 322): where every run from `s` settles, or rests with its target met, no reachable step to another configuration can be undone.
+
+### `reading`
+- pass a: B: `OneWay.run` (l. 342) reads a Boolean sequence and changes on its first true; `OneWay.seen_witness` (l. 349) derives a true input from the recorded true value.
+- pass b: N: no reading, observation or registered class in any statement read.
+
+### declarations of Settling.lean (by script)
+  l.54 def ChangeRecurs
+  l.58 def ChangesInLoop
+  l.62 theorem not_settles_of_recurs
+  l.69 def roundIndex
+  l.73 theorem roundIndex_lt
+  l.77 theorem roundIndex_last
+  l.81 theorem roundIndex_le
+  l.90 theorem roundIndex_back
+  l.103 theorem roundIndex_from
+  l.113 theorem roundIndex_hits
+  l.121 def round
+  l.135 theorem round_recurs
+  l.157 theorem recurs_of_loop
+  l.166 def extend
+  l.168 theorem extend_le
+  l.170 theorem extend_gt
+  l.173 theorem rising
+  l.183 theorem changes_at
+  l.205 theorem loop_of_recurs
+  l.220 theorem undoable_of_loop
+  l.238 def consSeq
+  l.243 theorem path_then
+  l.262 theorem recurs_of_undoable
+  l.293 theorem keeps_changing_iff_loop
+  l.302 theorem keeps_changing_iff
+  l.313 theorem settles_no_undoable
+  l.322 theorem assured_no_undoable
+  l.334 def process
+  l.337 def seen
+  l.342 def run
+  l.345 theorem seen_stays
+  l.349 theorem seen_witness
+  l.359 theorem no_undoable
+  l.369 theorem never_keeps_changing
+  l.377 theorem lpo_of_settles

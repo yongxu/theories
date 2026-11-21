@@ -1,0 +1,29 @@
+import re, glob, os, json, collections
+B='/Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/'
+head=re.compile(r'^\s*(?:private\s+|protected\s+)*(theorem|lemma)\s+(\S+)')
+listed=re.compile(r'\(\s*\w+\s*:\s*∀\s*\(?\s*(\w+)\s*(?::[^,)]*)?\)?\s*,\s*\1\s*∈\s*(\w+)\s*\)')   # a hypothesis (h : ∀ x, x ∈ l)
+unl=re.compile(r'¬\s*\(?\s*∃\s*\(?\s*\w+\s*:\s*List[^,]*,\s*∀|not_listed|unlisted|needs_open|Unlisted|no list')
+out={'listed':collections.defaultdict(list),'unlisted':collections.defaultdict(list)}
+for p in sorted(glob.glob(B+'*.lean')):
+    m=os.path.basename(p)[:-5]; L=open(p).read().split('\n')
+    i=0
+    while i<len(L):
+        g=head.match(L[i])
+        if g:
+            j=i; st=[]
+            while j<len(L) and j<i+40:
+                st.append(L[j])
+                if ':=' in L[j] or L[j].rstrip().endswith(' by') : break
+                j+=1
+            s=' '.join(st)
+            sig=s.split(':=')[0]
+            if listed.search(sig): out['listed'][m].append((g.group(2), i+1))
+            if unl.search(sig) or unl.search(g.group(2)): out['unlisted'][m].append((g.group(2), i+1))
+            i=j
+        i+=1
+for k in out:
+    n=sum(len(v) for v in out[k].values())
+    print(k, 'theorems', n, 'in', len(out[k]), 'modules')
+    for m,v in sorted(out[k].items(), key=lambda x:-len(x[1]))[:60 if k=='unlisted' else 45]:
+        print('  %-26s %3d  %s'%(m, len(v), ', '.join('%s (l.%d)'%(a,b) for a,b in v[:4])+(' …' if len(v)>4 else '')))
+json.dump({k:{m:v for m,v in d.items()} for k,d in out.items()}, open('listed-world.json','w'), ensure_ascii=False, indent=0)

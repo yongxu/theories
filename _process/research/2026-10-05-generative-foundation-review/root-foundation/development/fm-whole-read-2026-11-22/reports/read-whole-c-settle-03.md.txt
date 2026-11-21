@@ -1,0 +1,36 @@
+Reader whole-c-settle-03, part SETTLE: 38 differences settled from statements, with section variable lines read. Nothing was run, written or changed.
+
+**Tally.** b right on 16, a right on 9, both in part on 13, neither on 0.
+
+**What was opened.**
+- Read whole (every statement): ContactCourses, ContextArrivalTraces (from l. 28), ContextualRuns (from l. 40), ContingentPlans (from l. 40), ContinuingRuns, ConveyanceBoundaries, CopyCourses.
+- Read in part:
+  - ConditionalWeights: account, ll. 680-1194.
+  - Continuation: ll. 100-1135.
+  - ContinuingRevision: ll. 1-180, 225-586.
+  - Continuity: ll. 1-215, 600-762.
+  - Correspondence: ll. 104-253, 350-629.
+  - Countdown: ll. 36-117, 160-397, plus the signatures of `ticks_busy` and `stalls_beyond`.
+  - CountedCodes: ll. 120-552.
+  - Copying: ll. 244-360, 1120-1221, plus the signatures of `defects_fix`, `exchange_le`, `inspect_le`, `inspect_le_iff`, `scan_le`, `inspect_matches_iff`.
+  - Context: ll. 388-423 only (`Advance`, `ChangingContext.relation`, `ends`).
+- One name looked up in another module: `Web.SelfBearing` (Roles.lean l. 419).
+
+**Not opened, so the N rests on less than the whole module.**
+- Context ll. 89-387: the declaration list shows contextual systems, gluing, Specker and the square there. My three N for Context rest on the three declarations after l. 388 and on that list.
+- Copying ll. 360-1120 beyond the six signatures above.
+- Continuity ll. 215-600 (the routing lemmas).
+- Correspondence ll. 253-350 (adjoining a condition).
+
+**What could not be settled by the statement alone.** In about a dozen fields the two passes describe the same statement and differ only on whether it meets the field. There I read the field strictly and gave "both in part" where the thing is present in a weaker form:
+- a reach within a stated number of moves, but no ending (ContingentPlans rank, CountedCodes rank);
+- a one-for-one succession with a counting index, but no multiplying (ContinuingRevision and ContinuingRuns multiplying);
+- an exactly-when of something other than going on and ending (I gave b for ContextArrivalTraces, ContextualRuns, ContingentPlans and Continuity both_outcomes);
+- a profile stipulated in a definition, not concluded (Correspondence no_return).
+These are judgements of fit, not of fact.
+
+**One thing neither pass named.** In Continuation, `Flow.joint_keeps` (l. 248) and `Flow.excess_lowers` (l. 272) are two halves of an exact condition at one step, general for every `Flow F C` balancing a `Web F C`: taken ≤ given keeps the level, given < taken lowers it by at least one. It is of a level at one step, with no moves and no reading in it, and it is not an exactly-when of a formation going on or ending.
+
+**One point where the passes looked at different declarations.** In CountedCodes no_return, pass b's N answers `never_shared` (l. 216), a kept relation. Pass a's `addSpeaker_tied` (l. 351) is a different statement: no uniquely greatest word at every step after the first, concluded, on a law with no moves.
+
+Package path: /Users/ren/theories/experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/

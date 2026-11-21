@@ -1,0 +1,175 @@
+# Task file: EDGE, reader whole-c-edge-26
+
+Your 1 modules. For orientation only, what the two passes said of the four marks, of moves and of a reading (where to look, not evidence).
+
+## TurningInTime.lean  (3151 lines)
+
+### `both_outcomes`
+- pass a: S: `turns_in_time_iff` (l. 1129) gives unending exactly when the first marked step T meets need through T and leaves at least H₂+y₂ at T+1. It assumes decided marks, AloneOutside, entry into and preservation of a kind using H₂, FromNothing, Short/Meets/Keeps for the second regime, 0 < need ≤ H₂+y₂, Short for the first regime, old uses ≥ H₁, x < H₁+y₁ and x ≤ hi. B: `Three.read_to_ten` (l. 2787) has the same window go on from nine and end from seven.
+- pass b: S, general: `unending_iff_first_marked` (l. 848) and `unending_iff_first_marked_wide` (l. 805) state that the line never ends exactly when there is a first marked step T, with the need met up to and at T, from whose next configuration the line never ends. `unending_iff_above` (l. 1017) and `unending_iff_above_kept_below` (l. 979) state that, from the kept kind, the line never ends exactly when H₂ + y₂ ≤ x. `turns_in_time_iff` (l. 1129) and `turns_in_time_iff_kept_below` (l. 1052) state that the line never ends exactly when, at the first marked step T, the level at T + 1 is at or above H₂ + y₂. `turns_in_time_iff_before` (l. 2348) states the same as exactly T + 1 < N for the point of no return N. `locked_turns_in_time_on_window_iff` (l. 1692) and `locked_turns_in_time_share_iff` (l. 1876) do the same on the lock. `kept_or_marked` (l. 1178) states a dichotomy: either every step keeps the kind, or every level of the band is marked. B: from one start, `Three.goes_on` (l. 2447) never ends, while `Three.turned_and_ends` (l. 2464) and `Three.ends_as_it_was` (l. 2500) end.
+
+### `no_return`
+- pass a: S: `noReturnAt_iff_first_below` (l. 2159) concludes the first unrecoverable step is the first X N < H+y for turns to H. It assumes a nonincreasing X starting within hi, FromNothing, Short, Meets and Keeps at H, and 0 < need ≤ H+y. B: `Three.noReturn` (l. 2516) finds step three.
+- pass b: S, concluded: section 7 does this for any level course X that never rises and starts at most hi, with the feasible courses being X turned to a standing use H (`turned`, `Turned`, l. 1999-2005) and with the need met at every step as what is asked (`MeetsNeed`). Under FromNothing, Short, Meets and Keeps and a positive need at most H + y: `recoverable_iff_above` (l. 2146) states that X is recoverable at N exactly when H + y ≤ X N; `noReturnAt_iff_first_below` (l. 2159) states that its point of no return is the first step whose level is below H + y; `noReturnAt_of_below` (l. 2207) and `noReturn_exists` (l. 2311) state that one exists, within x steps on the course as it was. These are concluded from `RegimeMargin.ends_below`. In `ends_with_net_regime` (l. 611), `locked_ends_with_net_regime` (l. 1459) and the turning laws, a start below H + y is a premise (`below`). The point is at a low level, not at the loss of something that gives. B: `Three.noReturn` (l. 2516) puts the point at step 3.
+
+### `rank`
+- pass a: S: `locked_ends_rising` (l. 1499) concludes a terminal locked state within hi+1 from a locked start within hi. It assumes Raises, ReadsShare, upward favouring, AloneOutside, positive need with no usable mark, FromNothing, the cap under zero use and strictly rising use on ways above the initial share and rule.
+- pass b: S: `ends_with_net` (l. 544) gives an ending within s.2 steps, from given at most r and taken more than r at every step, through `Optimum.ends_within`. `ends_with_net_regime` (l. 611) gives an ending within x steps. `rising_takes_all` (l. 675) states that the level is 0 at step hi + 1. `rising_meets_level` (l. 694) states that the first step at which the use is at least the level comes within hi steps. `ends_with_net_rising` (l. 724) gives an ending within hi + 1 steps. `rises_from` (l. 631) states that a use rising strictly is at least j after j steps. `locked_ends_with_net_regime` (l. 1459) and `locked_ends_rising` (l. 1499) do the same for the lock, and `noReturn_exists` (l. 2311) gives a point of no return N ≤ x.
+
+### `closed_region`
+- pass a: S: `locked_closed` (l. 1291) closes the locked share/rule region under the joined paced step given Raises, ReadsShare and upward preservation of favouring, for arbitrary beyond-share update and schedule.
+- pass b: S: `locked_closed` (l. 1291) states that the configurations whose share and rule are `Locked` form a region closed («闭») under the joined two-level step, with no `Accrues`. `locked_at_class` (l. 1309) states that at a locked member `«本类至终有常»` and `«所缘同于»` hold for `lockedAlike`. `locked_alone` (l. 1360) states that `Locked` is kept along `windowAlone`. `share_corrected_stays` (l. 1928) and `share_corrected_on_course` (l. 1955) state that a `Low` share and a `kept` rule hold at every step after a step the window reads. That the kept kind is kept is a premise (`kept`, `keptBelow`); the two-band invariant is the private `kept_below_run` (l. 943).
+
+### `moves`
+- pass a: S: `Turned` (l. 2004) allows a choice of the time of switching to fixed use H. `turned_meets_iff` (l. 2099) characterizes exactly which choices meet need forever under the nonincreasing-course and regime premises given under no_return.
+- pass b: S: `pair_adaptive` (l. 352) states that the pair's step is `Mechanism.adaptive`'s `moveRel` at the single move `()`, and `constant_adaptive` (l. 415) states that at need 0 the way's class is constant under the net exactly when it is constant under that `moveRel` for every `u : Unit`. N: no other process has a choice among steps. Every law is of one deterministic step (`Law.step` or `Law.stepWhile` of `pair after left`), with `after`, `alone`, `marked` and the reading schedule `reads` handed in. The laws hold for every such function that meets their premises; no run makes a choice.
+
+### `reading`
+- pass a: S: `window_corrected` (l. 1648) gives a kept rule after a level in [N,K) when every step reads and the window reader returns a kept rule there. `window_alone_outside` (l. 1604) identifies the update outside the window with the scheduled share reader.
+- pass b: S: `AloneOutside marked alone after` (def l. 368) says that at every unmarked level the way after a step is `alone` of the way; the marked levels are the ones that make a difference. `toEnd_iff` (l. 380) states that the way's class is constant up to the net's end exactly when no two levels that meet the need give one way two different ways. `turns_in_time_iff` (l. 1129) states that whether the line never ends is decided at the first marked level of the course as it was. On the lock, `windowAfter` (l. 1330) reads the rule off the level through `windowRead` at levels in [N, K), and off the share by `hA` elsewhere (`window_alone_outside`, l. 1604). `locked_turns_in_time_on_window_iff` (l. 1692) states that, under its premises, a `Locked` way below H₁ + y₁ never ends exactly when its first step at a level the window reads leaves the level at or above H₂ + y₂. `window_corrected` (l. 1648) states that where every step reads and `hL` gives a `kept` rule in [N, K), the rule after such a step is `kept`. B: `Three.unlocked_goes_on` (l. 2965) is a course that never ends while no step is at a level the window reads.
+
+### declarations of TurningInTime.lean (by script)
+  l.343 def pair
+  l.347 def asItWas
+  l.352 theorem pair_adaptive
+  l.358 def net
+  l.362 theorem net_zero
+  l.368 def AloneOutside
+  l.373 theorem need_decided
+  l.380 theorem toEnd_iff
+  l.391 theorem constant_iff
+  l.402 theorem constant_iff_needs_nothing
+  l.415 theorem constant_adaptive
+  l.429 theorem kind_toEnd_of_unmarked
+  l.442 theorem toEnd_of_unmarked
+  l.449 theorem unmarked_interval_iff
+  l.463 theorem core_apart_below_need
+  l.475 theorem agrees_until_marked
+  l.488 theorem asItWas_way
+  l.496 theorem alike_along
+  l.514 theorem ends_of_below
+  l.544 theorem ends_with_net
+  l.557 theorem regime_step_eq
+  l.576 theorem regime_levels
+  l.611 theorem ends_with_net_regime
+  l.631 theorem rises_from
+  l.642 theorem kept_within
+  l.649 theorem takes_at_hi
+  l.675 theorem rising_takes_all
+  l.694 theorem rising_meets_level
+  l.724 theorem ends_with_net_rising
+  l.744 theorem unending_from
+  l.768 theorem unending_iff_marked_at
+  l.805 theorem unending_iff_first_marked_wide
+  l.848 theorem unending_iff_first_marked
+  l.867 theorem kept_run
+  l.889 theorem held_above
+  l.914 theorem kept_below_step
+  l.943 theorem kept_below_run
+  l.979 theorem unending_iff_above_kept_below
+  l.1017 theorem unending_iff_above
+  l.1052 theorem turns_in_time_iff_kept_below
+  l.1129 theorem turns_in_time_iff
+  l.1178 theorem kept_or_marked
+  l.1200 theorem kind_ends_while_net_goes
+  l.1215 theorem kind_not_toEnd_of_turn
+  l.1291 theorem locked_closed
+  l.1309 theorem locked_at_class
+  l.1324 def windowRegroup
+  l.1330 def windowAfter
+  l.1335 def windowLeft
+  l.1338 def windowAlone
+  l.1344 theorem windowAlone_turn
+  l.1360 theorem locked_alone
+  l.1387 theorem locked_ends_with_net
+  l.1415 theorem locked_alone_not_below
+  l.1459 theorem locked_ends_with_net_regime
+  l.1499 theorem locked_ends_rising
+  l.1532 theorem count_rises
+  l.1546 theorem regroup_step
+  l.1564 theorem regroup_orbit
+  l.1577 theorem windowRegroup_inj
+  l.1585 theorem window_is_pair
+  l.1595 theorem join_is_asItWas
+  l.1604 theorem window_alone_outside
+  l.1621 theorem locked_ends_on_window
+  l.1648 theorem window_corrected
+  l.1692 theorem locked_turns_in_time_on_window_iff
+  l.1754 theorem window_agrees_until_marked
+  l.1773 theorem window_paced
+  l.1788 def windowAfterShare
+  l.1795 theorem window_share_alone_outside
+  l.1806 theorem windowAfter_every_is_share
+  l.1824 theorem share_turns
+  l.1839 theorem share_kept
+  l.1876 theorem locked_turns_in_time_share_iff
+  l.1928 theorem share_corrected_stays
+  l.1955 theorem share_corrected_on_course
+  l.1999 def turned
+  l.2004 def Turned
+  l.2008 def MeetsNeed
+  l.2011 theorem turned_before
+  l.2017 theorem turned_after
+  l.2027 theorem fall_by
+  l.2034 theorem later_le
+  l.2041 theorem above_of_run_meets
+  l.2052 theorem above_after
+  l.2070 theorem turned_meets_of_above
+  l.2087 theorem above_of_turned_meets
+  l.2099 theorem turned_meets_iff
+  l.2111 theorem recoverable_of_above
+  l.2123 theorem above_of_recoverable
+  l.2146 theorem recoverable_iff_above
+  l.2159 theorem noReturnAt_iff_first_below
+  l.2178 theorem recoverable_decided
+  l.2193 theorem met_of_recoverable
+  l.2207 theorem noReturnAt_of_below
+  l.2221 theorem asItWas_falls
+  l.2249 theorem course_turned
+  l.2311 theorem noReturn_exists
+  l.2348 theorem turns_in_time_iff_before
+  l.2409 def giving
+  l.2413 def use
+  l.2416 def left
+  l.2420 def after
+  l.2422 theorem outside
+  l.2426 theorem turns
+  l.2430 theorem kept
+  l.2434 theorem uses_kept
+  l.2437 theorem orbit_id
+  l.2441 theorem uses_true
+  l.2447 theorem goes_on
+  l.2464 theorem turned_and_ends
+  l.2480 class is
+  l.2485 theorem line_ends_while_net_goes
+  l.2500 theorem ends_as_it_was
+  l.2516 theorem noReturn
+  l.2527 def shareOrder
+  l.2533 def ruleOrder
+  l.2539 def lockShare
+  l.2542 def lockRead
+  l.2545 def lockUse
+  l.2548 def lockAfter
+  l.2560 theorem lock_ends
+  l.2587 def riseShare
+  l.2590 def riseAfter
+  l.2597 theorem lock_share_stays
+  l.2606 theorem rise_orbit
+  l.2620 theorem rise_above
+  l.2653 theorem rise_lock_ends
+  l.2680 def noRule
+  l.2697 theorem read_at_eight_ends
+  l.2743 theorem safe_ten
+  l.2752 theorem lock_orbit
+  l.2760 theorem lock_falls
+  l.2787 theorem read_to_ten
+  l.2859 theorem held_orbit
+  l.2883 theorem held_at_six
+  l.2929 theorem unlocked_orbit
+  l.2941 theorem unlocked_alone_orbit
+  l.2965 theorem unlocked_goes_on
+  l.2989 def drawerUse
+  l.3020 theorem rise_count_ends
+  l.3075 def zeroShare
+  l.3081 theorem share_held_orbit
+  l.3103 theorem share_read_goes_on

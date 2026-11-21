@@ -1,0 +1,121 @@
+## 1. Verdict in five lines
+
+**D-future-kept survives as a built case worth keeping.**  
+All four formal parts survived the independent RS checks under their written premises.  
+The strongest reason it falls short of the centre is that part 2 has the same proof after keepability is removed.  
+One extra level can destroy even the option of keeping a guard, with identical units and all moves available.  
+Both starts in that reversal can be reached from the same empty configuration.
+
+## 2. Statement by statement
+
+| Statement | Verdict and evidence |
+|---|---|
+| **1. Order, the two monotone chains, and a newly kept guard was absent** | **HOLDS IN WHAT I CHECKED.** I checked the state and edge clauses across 135,240 labelled transitions, and the clauses involving the actual tail at 490,669 positions on runs. The last clause follows by prefixing a keeping run with the observed edge whenever the guard holds at its source. |
+| **2. Lossless from `N` iff `Kept = Held` throughout that suffix** | **HOLDS IN WHAT I CHECKED.** Every suffix of 154,224 runs, including the edge returning to the cycle. Replacing `Kept` by `Holds` also gave zero violations. For any `Q` between `Held` and `Holds`, an element of a lossless `Q` belongs to every subsequent `Holds`, hence to `Held`. Conversely, `Held` is increasing. |
+| **2. The keeping-widening corollary** | **HOLDS IN WHAT I CHECKED.** On paper, adjacent inclusion implies inclusion across every finite stretch. Substituting the suffix equality into the strict-growth clause gives exactly the displayed corollary. The finite RS runs cannot witness strict growth forever. The further claim about selecting among futures is **REFUTED** below. |
+| **3. Guards remaining separately kept on a run are jointly keepable at its start** | **HOLDS IN WHAT I CHECKED.** At every checked suffix the run itself witnesses joint keeping. The bundle equivalence, including the empty bundle and singleton idempotence, agreed at every state for every guard subset in the 36 independent models. Taking the bundle of initially kept guards gives the stated existential and forced-loss consequences. The quantifier over *initially* kept guards matters. |
+| **4. Dominating move, joint keeping, and eventual holding of every possible guard** | **HOLDS IN WHAT I CHECKED.** All three conclusions held from every one of the 3,299 starts in the 19 independent models satisfying dominance. The induction comparing a rival run to the top run works. For a merely possible guard, concatenate the finite reaching path with its infinite keeping witness before applying that induction. The free-forming, nonnegative-contribution RS case also passes. |
+| **Bound of `life × cap` on positive-fee classes held at once** | **HOLDS IN WHAT I CHECKED** for classes continuously held together on a run. Each must be formed at least once in the next `life` steps, and at most `cap` can be paid per step. The separate-keepability reading is **REFUTED**. With life and cap 1, three base classes each costing and contributing 1, needs zero, all initially present at level 1, the output is `separately kept=3 jointly=False`. |
+
+I found no missing step in the four displayed proofs under existential `Keepable`. The first false inference is in the paragraph interpreting part 2. A choice can close a *possible* future without losing anything *kept*. The first failing proof step under adversarial outcomes is different and is identified in 5(b).
+
+## 3. MUST, then LESSER
+
+**MUST**
+
+- **Withdraw the inference that selecting among futures precludes keeping-widening.** From an empty root choose either an absorbing state carrying guard `b`, or state 0 on the line `0→1→2→⋯`. Line state `j` carries exactly the numbered guards `0,…,j`. On the line course, `b` ceases to be possible at the first choice. Yet `Kept = Held` is empty at the root and gains one numbered guard at every step forever. The prefix calculation gives sizes `[0,1,2,3,4,5,6,7,8]`. The formula at `j` gives the infinite result. Part 2 rules out losing a *currently kept* guard on the widening suffix.
+- **Withdraw “the adding unit must be kept at a cost” (§7), and qualify R1.** In I3, form both classes at `(1,(1,0))`. Output is `(1,(1,0)) -> (1,(1,0)); K=1`. Class 1 forms for free, adds 1, fails its need of 2, and is absent at every recorded configuration. Its contribution pays for class 0 forever. Also, a `base` class requires no parent or supporter. The first successful T4 move forms class 0 from an empty configuration.
+- **Qualify “with forming free there is no such configuration.”** The reported 1,080 models impose *both* zero fees and nonnegative contributions. A reachable counterexample with zero fees has life 1, cap 2, all classes base, weights `(-1,-1,1)` and needs `(1,1,0)`. Form all from empty level 2. Output is `(1,(1,1,1)); K=7, joint=False`. Either drawer can persist with the giver. Keeping both drawers drains the level. The design's narrower claim about its no-draw twin survives.
+- **Distinguish initial configurations from configurations a course can enter.** I3's only incompatible configuration has class 1 present at level 1 despite its need of 2. It has zero predecessors. More strikingly, I reproduced all **438** pairwise-but-not-triple configurations on the full three-class grid. **432** meet all current needs, and **zero** have even one predecessor. All 438 are legal starting states in §2. None provides evidence that an RS move creates that particular predicament on that grid.
+- **Keep the initial-guard qualifier in the short telling of part 3.** A course can preserve everything initially kept while every course must lose something it subsequently acquires. In the four-state process `s→u→p` or `s→u→q`, with `p,q` absorbing and respective guard masks `1,7,3,5`, the two possible kept sequences are `[1,7,3]` and `[1,7,5]`. Both retain the initial guard. Neither is lossless from the start in part 2's sense.
+- **Keep the T6 zero confined to the reported search.** It reproduces there. As a statement about RS keepability it is **REFUTED**, including for reachable starts with positive needs and free formation. See 5(d).
+
+**LESSER**
+
+- T4's losing course first has empty `Possible` at step **5**. Step **6** is the first with no units left. Its successful course is also the exact state sequence of the constant rule “form all.” The T4 contrast establishes dependence on the selected moves. I2 separately establishes dependence on what a *memoryless* rule can observe.
+- The 25,572 T4 courses count choices of action at encountered observations. I reproduced 25,572, including 8 lossless successes and 4,992 closures. Forgetting action labels gives **1,991** distinct state lassos. Also, a life counter records presence and refresh. It cannot by itself identify individual units across two configurations.
+- T1 says each proposed result needs induction. Part 3 uses the very run in its premise and its tails. T5's `Keepable.each` projects a jointly keeping run onto each guard at the **start**. Obtaining separate keepability at **every** step also uses the corresponding tail. In the Lean source the declaration is `Becoming.Viability.Keepable.each`. `JointKeeping` is the file name. Likewise `keepable_step_iff` lives in `Becoming.Viability`.
+- Section 2 determined the RS transition unambiguously with the vector index as priority. It leaves the starting level and lives free of any reachability requirement. Section 2 also unambiguously defines keeping by the existence of a run. Guaranteeing safety against all outcomes introduces another quantifier.
+
+## 4. Does a general law of the design do work that the old laws do not?
+
+**Part 4 does comparison work, but the design does not supply a general law joining selection to depletion and continuation.** Its domination premise lets one run witness the kept and eventually held guards of many rival runs. Part 2 needs only the two inclusions around its middle predicate. Part 3 uses one common witness throughout. Algebraically, for the monotone, contractive, idempotent operation `K` of keepability, `K(⋂_i K G_i)=K(⋂_i G_i)` already follows from those three properties. The old `keepable_and_iff_of_kernel_left` directly pairs the witness for one guard with the kernel guarantee for the other. Part 3 can be used there, but supplies no new reason that the witness keeps both. An older declaration stating the entire part 4 was **not found in what I read**. Neither side of T4 is predicted by parts 1–3, and the design gives no instance of a lock law derived by part 4.
+
+## 5. Specific questions
+
+**(a) Independent RS reconstruction, T3 and T4.** I implemented §2 before opening the designer's programs. I computed joint keeping by repeatedly removing states with no remaining successor, possibility by backward reachability from each singleton keeping set, and holding by intersection over the actual cycle and tail. Each row below contains six parameter sets. Every state and move was included. From each state I followed every constant rule, one presence rule and one state rule. Counts include runs whose state sequences coincide.
+
+| Classes | Life | States | Runs | Dominating models | Violations of parts 1–4 |
+|---:|---:|---:|---:|---:|---:|
+| 3 | 1 | 168 | 1,680 | 3 | 0 |
+| 3 | 2 | 567 | 5,670 | 4 | 0 |
+| 3 | 3 | 1,344 | 13,440 | 3 | 0 |
+| 4 | 1 | 336 | 6,048 | 3 | 0 |
+| 4 | 2 | 1,701 | 30,618 | 3 | 0 |
+| 4 | 3 | 5,376 | 96,768 | 3 | 0 |
+
+In the following output, bit `i` means class `i`, so mask 3 means classes 0 and 1. Both T4 rules start at `(4,(0,0,0))`. The last position in each of these traces repeats forever.
+
+```text
+T4 always {0,1}    level    4 4 3 2 1 0 0
+                   Kept     0 1 3 3 1 0 0
+                   Possible 7 7 7 7 1 0 0
+                   Held     0 0 0 0 0 0 0
+T4 presence rule   level    4 4 3 3
+                   Kept     0 1 3 7
+                   Possible 7 7 7 7
+                   Held     0 1 3 7
+```
+
+- **Support and observation.** With all T4 classes base, the losing rule's `Possible` is `7,7,7,7,7,7` even as its units disappear. In I2, of all 256 presence-only rules, 192 ultimately hold zero classes and 64 hold one. The level rule ultimately holds both. Changing I2's cap alone from 1 to 2 changes `Possible` at empty level 0 from mask 2 to mask 3.
+- **Horizon, cost and reading.** At life 1 I reproduced **80,820** states holding a guard that cannot be kept and **34,042** state–guard pairs that survive a possible next move but cannot last. I3's kept sequence is `3,2,2,3`, with `Possible=3` throughout. Its zero-fee twin has zero incompatible states. In the designer's fresh/old example the coarse kept sequence is `0,2,3,3`. The fine sequence is `0,4,1,4` and fine `Held` is always zero. The last two positions cycle.
+- **Nearest misses.** The two-class grids reproduce **1,424** incompatible configurations where loss can be deferred one step. On the reported extremal instances the numbers of incompatible starts surviving `k=0,1,…` further steps are `5,3,2,1,0` at life 1 and `17,15,14,12,10,8,6,4,2,0` at life 2. I4 also reproduces the fixed-rule reversal. Forming all ultimately holds mask 1 from level 1 and mask 0 from level 2, although the same guard is initially keepable at both. The 438 triple cases have the reachability limitation above.
+
+**(b) Several outcomes per move.** Under the definition in §2, **nothing in part 3 fails**. A `Run` already picks its outcomes. If a guard stays existentially keepable, it holds at every state on that very run. The tail witnesses joint keeping for all such guards simultaneously.
+
+For the guarantee reading, let `s` have moves `a→{s,p}` and `b→{s,q}`, with `p,q` absorbing. Guard `g` holds at `s,p`, guard `h` at `s,q`, and guard `j` only at `s`. Always choosing `a` guarantees `g`. Always choosing `b` guarantees `h`. No first move guarantees both. On the realized path `s,s,…`, both stay individually guaranteeable forever.
+
+```text
+                              g     h     j     jointly keep g,h
+some run from s               true  true  true  true
+one policy, every outcome     true  true  false false
+held on the realized s-loop   true  true  true
+```
+
+The first invalid step is offering the observed tail as a **policy** witnessing joint safety. It witnesses one outcome sequence. Guard `j` also disproves `Held ⊆ Kept` in the mixed reading, and this constant path disproves part 2 there. The **nested** part 3 equivalence survives if both keeping operators mean guaranteed safety. A strategy preserving the separate winning regions preserves the guards, and a jointly winning strategy has a winning continuation after every compatible history. All seven nonempty bundles agreed in the program. Thus the single-path formulation fails while the consistently quantified bundle equivalence survives.
+
+**(c) Weakest numerical condition for the dominance premise.** For §2's pointwise order and “form all,” the following finite arithmetic condition is **necessary and sufficient**. It handles saturation, priority, fees, negative contributions, needs, and unavailable classes. It requires no course search or comparison of all ordered pairs of starts.
+
+At each `(L,a)`, let `E` be the eligible classes, `D={i:a_i>1}` the units that would survive ageing, and `(T_L,T_a)` the result of greedily requesting all classes in priority order. For every `F⊆E` with total fee `c(F)≤L`, compute
+
+`z(F) = clamp(L − c(F) + Σ {wᵢ | i ∈ D ∪ F}, 0, C)`.
+
+1. Require `z(F) ≤ T_L`. For each `i∈F` with `nᵢ ≤ z(F)`, require `T_a[i] = ℓ`.
+2. Raise just the level or one life coordinate of the starting state by one, within its bounds. Require that no component of the greedy result decreases on any such increment.
+
+Every affordable eligible subset can be formed by requesting precisely it. Thus the first check is necessary. It also suffices at a common start because it covers every rival's level and every freshly formed survivor. Every other survivor only ages, and the higher greedy level meets its need. The second check is necessary by comparing top moves at adjacent starts, and sufficient across arbitrary ordered starts by chaining increments. Together the checks give exactly `Dominates.dom`. The remaining fields follow from deterministic RS and the presence guards. For a different proposed fixed move, use its greedy result in the same checks. Enumerating moves decides whether any dominates. The arithmetic criterion and direct enumeration of `dom` agreed in all 36 models.
+
+**One unit outside.** With life 1, cap 2, two base classes, weights `(1,1)`, needs `(0,0)` and fees `(0,1)`, form-all dominates despite the positive fee. Raise only the first fee to 1. At `(1,(1,1))` the two classes are individually kept. Form-all leaves `(1,(1,0))`, while requesting class 1 leaves `(1,(0,1))`. The program gives `dominates=False, K=3, joint=False`. On the top run `Held=1`. Priority spends the one available unit before class 1 can form.
+
+Dominance is stronger than the **conclusions** of part 4. A single base class of weight −1, fee and need zero, life and cap 1 gives `dominates=False, conclusions all starts=True`. For those conclusions to hold from every start in finite RS, the exact condition is that `Kept` never decreases on a top edge, `Possible` stays equal on every top edge, and `Kept = Possible` at one state of each top cycle. Part 2 gives the first conclusion and the common witness. On each cycle the two sets are constant, so the last two checks are exactly eventual holding of everything initially possible.
+
+**(d) More level can leave strictly less kept.** Keep all parameters within the designer's two-class grid except for **life 3**. Use cap 4, both classes base, weights `(0,−2)`, zero fees, needs `(1,2)`, and fresh lives `(3,3)` at both starts.
+
+```text
+start level   Kept mask   levels after any first move   levels after any two moves
+3             1           {1}                           {0,1}
+4             0           {2}                           {0}
+```
+
+From 3 the drawer misses its need on the first step. Refreshing class 0 then keeps it at level 1 forever. From 4 the drawer meets its need at level 2 and has at least two steps of life left. Even omitting it on both moves cannot prevent its second draw. At level 0 both guards fail. With life 2 the same comparison gives kept masks `[1,1]`. Across the four original shapes I counted **0** adjacent reversals at life 1, **0** at life 2, and **24** at life 3.
+
+For two starts **reachable from the same empty state**, take cap 6 and weights `(1,−3)`, leaving life, fees, needs and bases as above. Starting empty at level 0, request class 0 five times and then both classes to reach `(3,(3,3))`. Requesting class 0 six times and then both classes reaches `(4,(3,3))`. The output again gives `K=1` and `K=0`. At the higher start every two-move sequence reaches level 0. This refutes monotonicity of keepability itself, independently of which rule is later chosen.
+
+## 6. What I ran and what I did not check
+
+AI-written BREAK report. All programs and outputs are in the [assigned folder](/Users/ren/theories/tmp/fm/centre21/refute/D-break-astra/). The saved text is [REPORT.md](/Users/ren/theories/tmp/fm/centre21/refute/D-break-astra/REPORT.md).
+
+- [rs.py](/Users/ren/theories/tmp/fm/centre21/refute/D-break-astra/rs.py) is the independent model. [sweep.py](/Users/ren/theories/tmp/fm/centre21/refute/D-break-astra/sweep.py) ran once for each `m=3,4` and `life=1,2,3`, with outputs `sweep-m-life.txt`. Totals were 36 models, 9,492 states, 135,240 labelled transitions and 154,224 runs. For example, `python3 -B sweep.py 4 3` reproduces the largest cell.
+- [two_grid.py](/Users/ren/theories/tmp/fm/centre21/refute/D-break-astra/two_grid.py) ran separately for lives 1–3 and shapes 0–3, with outputs `two-life-shape.txt`. It examined 8,100, 3,600 and 3,600 parameter sets respectively, totalling 612,000 configurations.
+- [witnesses.py](/Users/ren/theories/tmp/fm/centre21/refute/D-break-astra/witnesses.py) produced the [traces and branching output](/Users/ren/theories/tmp/fm/centre21/refute/D-break-astra/witnesses.txt). [extra.py](/Users/ren/theories/tmp/fm/centre21/refute/D-break-astra/extra.py) produced the [additional cases](/Users/ren/theories/tmp/fm/centre21/refute/D-break-astra/extra-cases.txt) and the [5,488-model triple-grid count](/Users/ren/theories/tmp/fm/centre21/refute/D-break-astra/extra-grid.txt). All computations used sequential Python runs under 60 seconds.
+- I read the two briefs, the design, its saved outputs and the relevant program code after reconstruction. For the old-law comparison I consulted the places listing and portions of `JointKeeping.lean`, `KeepableStep.lean`, `ReachableRanges.lean` and `WideningOnTheMap.lean`. **NOT CHECKED** — package-wide novelty, lock-side instantiations, every other aggregate in the designer's output, every policy in the larger RS models, or an infinite numerical run. The infinite widening example and the general arithmetic criterion are paper arguments. I ran no Lean, build, test suite or gate, started no agents and used no git command.

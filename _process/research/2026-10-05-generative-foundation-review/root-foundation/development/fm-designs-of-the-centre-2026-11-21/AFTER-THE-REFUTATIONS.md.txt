@@ -1,0 +1,59 @@
+# After the refutations: what the two rounds established
+
+*AI-written (Claude Fable, board row FM), 22 November 2026, 00:17 WIB (clock, read after writing; first written as 00:30, a guess). One reader of fifteen refuters' returns (ten Claude, in `refute/<name>/RETURN.md`; five Astra 6.2, in `refute/<name>/REPORT.md`), each of another kind of model than wrote the design it was given. The scratch Lean module for the comparison had not returned when this was written. Nothing here is proved. No person has read any of it. Everything in this folder as of 00:16 is also kept at `refs/salvage/fm/centre21-1122`.*
+
+## The result
+
+**No design is the centre, and none is a law that joins.** Fifteen refuters, one verdict in different words: each design survives, if at all, as a built case worth keeping with one or two small lemmas. My own reading of the eight (`READING-OF-THE-EIGHT.md`, written before the refuters ran and not shown to them) proposed a centre in two layers. Both layers are refuted as that:
+
+- **Layer 1, the comparison law.** True, constructive, needs no premise beyond itself, and not in the package in that generality (two refuters, by text scan of the declarations). But in each use the design made of it the work is in the local condition, which is the old content: with a one-point process it unfolds to `Closed` and repeats `closed_viable`'s induction; with a clock it is a ranking function, the form needed is of endpoints and not of keeping, and the new chain would be about 90 lines against about 31 (an estimate); on one process under a preorder it is a step that keeps an order, iterated. "The three uses meet nowhere but a six-line induction."
+- **Layer 2, the web with a finite source and a cost.** Its third case (kept only with kinds coming and going) is real and survives tokens that last two or three steps, by more than one mechanism. But it is carried by which kinds are named as the formation: in all 97 such laws found, the named kinds leave out a kind they rest on, and that kind stands by itself, the same at every step. With every kind named the case does not occur (an argument on paper, 0 failures on 448,258 laws). "Closing" can be deleted from every statement. The step of no return is not one: an open course from that step brings the formation back. Nothing is used up.
+
+## What the designers and I did not know was already in the Lean
+
+The refuters found these by opening files the listing of places does not cover (it has 158 of 406 modules):
+
+- The rank side as a general law: `Lasting.orbit_reaches_iff_variant`, `Lasting.reaches_iff_not_lasts`, `Lasting.Drains`. So the duality one design called the block ("the law gives closure, never the running down") is stated in the package.
+- An exact point of no return for any law that keeps an order: `RegimeMargin.Coupled.Indexed.ends_iff_below_within` (2984), with `endsUnder_of_below` (2837) and `threshold_falls_within` (2997). The nursery's "exact fate" is that law's form.
+- A comparison between two processes on one set of configurations: `MoveOutcomeProcesses.Covers`, `Covers.ensures`, `covers_trans`, `covers_along`.
+- "A map that keeps a relation keeps it along orbits", three times: `Lasting.orbit_mono`, `Law.KeepsRelation.run`, `GrammarCourse.kept_along`. And a one-sided forward form in the grammar: `«有常»`, `«有常则可续»`.
+- Nets with step semantics and the siphon law (an empty place whose every producer consumes it stays empty): `PlaceTransitionNets.lean`, `Net.siphon_empty`.
+- An endless course exactly where a course of as many steps as there are configurations: `Onward.run_iff_continues`.
+- Built cases of "no form held, the going on continues": the kind relay of `KeepingWidening` (`renews_without_end`), `LineageRegimes.both_fates`.
+- A greatest course from a simulation: `Reaching.widens_iff_of_greatest`.
+- October's `renewal_keeping_theorem` and all of `RenewalConfigurations.lean`.
+
+## What is kept (each a built case or a small lemma, none read by a person)
+
+- **No return at a full level.** In three built cases the step past return is at full stock: what is lost is who gives. Confirmed by blind rebuild in two (the six-configuration machine; the race between level and menu). No law of the package was found whose point of no return is not a low level (one refuter's question; its answer is in `refute/E-work-opus/RETURN.md`).
+- **Compulsory change needs both a finite cap and a cost** (in the web model, at the grain of the law; argued, searched, not in Lean), and is a gap between a fractional standing population and a whole one, closed by taking turns.
+- **Where the lock comes about in a model (a kind that needs its own act), compulsory change cannot be**: the two exclude each other there.
+- **Selecting among futures does not preclude widening.** A course that gives up one possible future at its first choice and then gains one more kept guard at every step for ever (refuting a design's negative reading). With kinds without end, each formed from the one before, the only keeping course keeps moving to a fresh kind.
+- **Where one move dominates, no reading does work.** In four designs a rule that registers nothing keeps everything any course keeps (ties to the giver; the largest allowance; every affordable reading; a dominating move). The built cases where a reading does work are the ones with no dominating move.
+- Small lemmas not found in what was read: the pullback of the largest closed region along a reading; the core of a step as that law on pairs; the fill bound (doubling against slots); "under free choice, what is kept at a level is kept at every higher level"; a standing population from a course (the minimum over a tail).
+
+## What it teaches about how to go on (mine, held loosely)
+
+1. **Designing before the whole Lean is known repeats what is there.** Seven of eight designers, and I, proposed as new what the package states in general. The listing of places covers 158 modules, by the questions of four reads. A read of all 406 by the questions this round raised is owed before another design: which places have moves, a reading, a share, a level that runs down, a giving that is a going-on, a cost to the keeper, an irreversibility that comes about, both outcomes, a comparison, a rank.
+2. **Every test of "does the law do work" was passed by the built cases and failed by the general statements.** What survived every refuter is concrete: machines in which every part was tested by removal. That suggests going from the cases up: put the three or four surviving built cases side by side and ask what the least statement is that all of them are cases of, with the package's existing general laws (the rank, the order-keeping threshold, covering) as the tools, and not a new model.
+3. **The comparison is worth landing only as a removal.** If one law makes `closed_viable`, the three orbit lemmas, `Covers.ensures` and the forward half of `Bisimulation.trace` its cases, the package says one induction once and not six times. That is rule 4 (each thing said once), not the centre. The scratch module will show whether it comes out.
+
+## Cost of round 2
+
+Claude side, one workflow (`wf_c60780d6-885`): ten refuters, 2,580,600 tokens, 478 tool calls, 22 minutes. Astra 6.2 refuters: A 3,783.4k tokens (996 s), B 1,987.1k (1,083 s), D 2,221.1k (816 s), F 3,414.5k (801 s), G1 2,936.8k (1,004 s). Both rounds together: about 4.16 million on the Claude side and about 24.5 million Astra.
+
+## Added 22 November, 00:18 WIB (clock, read after writing; first written as 00:35, a guess): the scratch Lean module on the comparison returned
+
+*One Astra 6.2 implementer (`cx -e xhigh`, 1,143 s, 5,771.1k tokens, ten builds through the scratch builder, five clean). Its report is `lean-comparison/REPORT.md`; the module as text is `lean-comparison/ScratchComparison.lean.txt` (256 lines), with the last build's log beside it: exit 0, no module unclean, 25 declarations of which 19 theorems, no declaration with an axiom. I read the report, not the proofs. No reader who took no part has read the module: the implementer's own verdict already meets two of the frozen conditions for nothing gained, and a reader could only confirm it.*
+
+**The formal join exists, and by the tests frozen beforehand it gains nothing.**
+
+- **L1 did not trigger.** `Carries` and `viable_carried` hold with no premise beyond the comparison: no decision of which successor occurred, no choice. (The matching is: each enabled left move has an enabled right move, every successor of which is related to some successor of the left move.)
+- **L2 did not trigger.** Two keeping-side theorems from two modules come out with statements unchanged, each checked by `rfl`: `GuardHorizon.closed_viable` and `Keeping.keptFor_of_closed`. For the second the module proves `keptFor_iff_viable`: keeping by a choice from a reading for `n` steps is viability for `n` steps on a process of classes, **with no premise**, the empty class being counted as a successor. (The dictionary of the evening of the 21st went the other way, from one configuration, and needed every step decided.)
+- **L3 triggered.** `TurningInTime.locked_ends_rising` comes out through the clock with its statement unchanged (`rfl`, both universes), calling none of the old ending lemmas. But the new chain is 85 lines against 58 for the old.
+- **L4 did not trigger.** No axiom.
+- **L5 triggered.** In both keeping cases the direct induction is shorter than the call (four lines against five, and against fifteen). For the lock the implementer judges a direct bounded search as economical.
+
+So there is now, in scratch, one statement of which an old theorem of the side with moves, an old theorem of the side with readings and an old theorem of the lock's side are each a case, their statements unchanged. And it is the comparison put in and taken out: it shortens nothing, and each case's work is in its own local condition. This agrees with the two refuters who read design C against the Lean. By what was frozen it is not landed in the package. It is kept as text.
+
+What is new in it and small: `keptFor_iff_viable` without a premise; the bridge from "not viable for n steps" to an end of a guarded step within n (`stepWhile_end`).

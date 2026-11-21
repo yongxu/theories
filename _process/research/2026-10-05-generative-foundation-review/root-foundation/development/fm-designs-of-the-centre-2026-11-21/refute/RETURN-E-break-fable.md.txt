@@ -1,0 +1,148 @@
+## 1. Verdict in five lines
+
+1. The design survives as **a built case worth keeping**, not as a centre and not as a law that joins.
+2. Everything it says of the witness machine is true: I rebuilt the machine from sections 2 and 3 alone, and every trace, every T3 row, T4, T6 and the two-act decision came out as stated (my step agrees with the designer's on 4,105,728 steps, 0 differing).
+3. The main statement is true and is the pigeonhole principle on the configurations just after a paid return. Of the machine's parts it needs only the one-token expenditure.
+4. Strongest reason against: **the reading of the stock is idle.** In the witness one rule that reads nothing, "at a tie the giver gets priority", keeps all 13 starts that any course keeps. In the whole two-token family (31,104 machines, 51,344 kept starts) no start needs the stock read; the same holds at three and four tokens whenever the two needs are equal.
+5. This is the failure the brief names under T3 (a requirement met by a rule that reads nothing), moved from the share to the stock bit. The design admits it for its one start in part 7; parts 1, 4 and 5 say more than that.
+
+## 2. Statement by statement
+
+| Statement | Result |
+|---|---|
+| Main equivalence: an infinite live course respecting `A` exists exactly when `W_A(s)` | HOLDS IN WHAT I CHECKED. Every machine at `q=2`, `C=1` and `C=2` (3,888 and 31,104), every state, unrestricted acts and every function from the stock to an act: 466,560 and 10,077,696 state entries, 0 disagreements. Samples: `C=3` one machine in 8 (13,122 machines, 10,707,552 entries), `C=4` one in 157 (1,585; 3,138,300), `q=3, C=2` one in 293 (3,147; 1,699,380), `q=1`, `C≤3` all: 0 disagreements. |
+| First-exit clause | HOLDS, by the definition of the set of states with an infinite course; checked in the witness. No machine-specific step is used. |
+| `M_A ≤ 4(C − g + 1)` | HOLDS IN WHAT I CHECKED: 0 violations in the runs above; met with equality (864 machine-allowances at `C=2`). |
+| `M + 1` cannot be replaced by `M` (nearest miss, part 6) | HOLDS. Rebuilt from the words: `L = {(T,1,G)}`, `M = 1`, and from `(G,1,G)` the course is `(G,1,G) (T,1,G) (T,0,T)`. At `C=2` a chain of only `M ≥ 1` returns gives a false positive in 77,696 machine-allowances. |
+| Exact decision from `(TG,2,T)` | HOLDS. All 16,384 act sequences of length 14 are decided by their first two acts. |
+| After reversing twice: full stock, living parent, every course ends | HOLDS. State `(T,2,T)`; all 256 act sequences of length 8 are dead after 2 steps. |
+| Six reachable live configurations | HOLDS: `(TG,2,T) (TG,1,T) (TG,1,G) (T,2,T) (T,2,G) (GG,1,T)`. |
+| T3 table, 11 rows | HOLDS, every row, both columns (see 5c). |
+| T4 (actual lasts; masked to full ends at generation 4; masked to low and inverted end at 2) | HOLDS. |
+| T6 (brood TG, incumbent G, actual sensor: level 1 lasts, level 2 ends) | HOLDS as worded. But `(TG,2,G)` is kept by some course: see MUST 4. |
+| "The stock signal is necessary among the four stationary ways of acting on the stated bit" | HOLDS: of the 12 threshold selectors only `h=1`, hold on low, reverse on full lasts. |
+| "A controller that knows the incumbent can give every tie to G"; "a controller with recall can reverse once and hold once" | HOLDS. |
+| Size search: 624 oriented comparisons | HOLDS: re-implemented on my own step after my rebuild, 624 exactly. The 52 and the 12 are NOT CHECKED independently (I did not re-implement the removal filters); my count with both constant acts ending and no removal filter is 16. |
+| "Minimality is within the specified architecture" | HOLDS only with a filter the text does not state: see LESSER 1. |
+| Counts 77,760; 1,866,240; 1,786,944; 98,957,952; 395,831,808 | The arithmetic reproduces. Lasting counts: mine equal the designer's at `C=2` (154,032 unrestricted; 543,040 over the 12 threshold selectors) and at `C=3` unrestricted for all nine pairs of needs. The totals 7,327,584 and 24,301,840 (which include `C=4`) are NOT CHECKED. |
+| R4: "a taker lock also arises … under the constant hold act. T produces the tied brood that re-elects it" | Says more than the trace shows: see MUST 3. |
+| T5 fails (the design's own judgment); T1 against the Lean | NOT CHECKED (not my lens; I opened no Lean). |
+
+## 3. MUST, then LESSER
+
+**MUST 1. The reading of the stock does no work, in the witness and in the whole two-token family.**
+- **Witness** (`P10.txt`): the rule "every tie to G" keeps each of the 13 states of `W_U`. From the start it gives the same course as the actual sensor, `(TG,2,T) (TG,1,G) (T,2,G) (GG,1,T) (T,2,G)`. In hold/reverse words this looks like a function of the incumbent; in plain words it is a constant.
+- **Two tokens** (`P4.txt`, `P9.txt`): 784 oriented comparisons have the actual bit lasting and both constant acts ending; in 784 of 784 a rule by incumbent alone also lasts. Of 51,344 starts kept by some course, 0 are kept by no memoryless rule on (brood, incumbent).
+- **Three and four tokens** (`P9.txt`): at `C=3` the only such starts (224) have needs (T,G) = (2,1). At `C=4` with equal needs (62,208 machines, 273,728 kept starts) there are 0.
+- **What the design's evidence covers**: the T3 row "both receive the same constant reading: Ends, Ends" tests only constants in hold/reverse coordinates. Part 1 line 6, R6 ("the level bit decides between the two required tie acts") and the T3 claim for the reading hold only inside the four stationary selectors on that bit.
+- **The designer's own counter**: `smallest.py` counts `priority_only_fails`. That key is absent from all twelve `size_2_*.json` outputs, so it was zero for all 12 minimum-size cases; the design reports the fact for one start only.
+
+**MUST 2. The T3 table is a table of the witness's split, not of the main statement.** The brief asks, for each part, an instance where taking it out changes whether the statement holds. In `P2.txt`, last column, the equivalence holds in every changed machine of the table but one: one child before or after paying, free giving, no stock returned, vote fixed at minority, tie or majority. It fails only in "remove the one-token expenditure", actual selector, at `(T,1,T)`, `(TG,1,T)`, `(TT,1,T)`: `(T,1,T) (TG,1,T) (TG,1,T) …` lasts with no paid return (`P8.txt`). For the main statement the share, the reading, the multiplying and the cost of giving are idle.
+
+**MUST 3. Under constant hold the lock is the act, not the vote.** Trace: `(TG,2,T) → (TG,1,T) → (TG,0,T)`, vote = tie at both steps. The tied brood does not re-elect T; the hold act does. The one step where the vote itself keeps the taker is on the other course, at `(T,2,T)` (brood `T`, unanimous), one step before the end. R4 is claimed as held; under hold the lock is the selector handed in.
+
+**MUST 4. T6 is answered for a sensor, not for the statement.**
+- `(TG,2,G)` ends under the selector because the selector reverses on "full"; it is in `W_U` (hold keeps it).
+- In the witness `W_U` is upward closed in the stock for every brood and incumbent, so "kept by some course" is a threshold on the level for each.
+- With equal needs this is forced: the same acts from more stock give the same broods and incumbents and never less stock.
+- At `C=2`, 320 machines have a kept state whose richer twin is kept by no course, none with equal needs (also 0 with equal needs in the `C=3`, `C=4`, `q=3` samples).
+- The family does contain the real thing. One instance (`P6.txt`): tables `T/T/GT/GT`, needs (2,1), `g=1`, G always invests, `C=2`. `(TG,1,T) → (G,1,T) → (G,1,G) → …` is kept; `(TG,2,T) → (T,1,T)` is dead.
+
+**LESSER 1. "Six" is the minimum only with an unstated filter.** `smallest.py` requires the ending course to end with the stock at zero; DESIGN.md does not say so. Without it (`P8.txt`, row D), a split with both constant acts ending and a changing, multiplying cycle exists on 4 reachable live configurations (32 comparisons). An example is tables `T/GT/TT/TG`, needs (2,1), `g=2`, start `(TG,2,G)`: the ending courses stop with one token left that the taker cannot use. With the filter the minimum is 6 before any removal test (row E: 16 comparisons, 8 at six and 8 at seven). The filter "passes a still-live state beyond recovery" removes nothing (624 before and after).
+
+**LESSER 2. The lasting cycle never has its incumbent present.** In `(T,2,G) → (GG,1,T) → (T,2,G)` both steps are by an unfavoured parent and both votes are "minority". The favoured table cells are used only in the transient. The giver in the cycle leaves no giver; givers are born of the unfavoured taker.
+
+**LESSER 3. With `q ≤ 2` the share has three values** (absent, tie, alone). "Majority" is unanimity of a brood of one or two.
+
+**LESSER 4. T1's sentence "cycle detection alone … does not give either result".** The return bound is cycle detection on the landings: any infinite course meets them infinitely often, and two of `M+1` coincide. For the WORK reader, this is the lasso lemma on a recurrent set. I did not set it against the Lean.
+
+**LESSER 5.** R2 in the witness: `g = C`, so every return fills the stock and "what comes back depends on what is left" is only the cap.
+
+## 4. The question
+
+**Does a general law of the design do work that the old laws do not?** No. The one general law, `W_A(s)` exactly when an infinite live course exists, is the pigeonhole principle applied to the finitely many configurations just after a paid return. I found no counterexample in about 27 million state entries. I also found that it does not see the machine: it stays true when the vote, the cost of giving, the brood size or the return are taken out, and needs only that every step spends. The first-exit clause is the definition of the set of starts from which some course goes on. What carries the design is the built case: one start, two acts, one of four act pairs lasts, and a full stock with a living parent from which nothing lasts. That case is exact and I could not break it. But the way of selecting that lasts in it is "ties to the giver", which registers nothing. So the case shows a step of no return and a cost of giving, and does not show a reading doing work. Not checked against the Lean (BREAK lens).
+
+## 5. The specific questions
+
+**(a) Rebuild from sections 2 and 3 alone.** Done before opening any designer file (`core.py`, `p1_witness.py`). Afterwards I compared with the designer's `investment.step`: all machines at `C=1` and `C=2`, one in six at `C=3`, every state and both acts, 4,105,728 steps, 0 differing. The text determines the program. Points the text leaves open or easy to misread:
+- **When the bit is read.** The text defines the bit on the state (`[x > h]`), so I read it before the birth. Read from the stock after the birth, the stated selector (reverse on full) ends at 2 and the opposite orientation lasts. The result depends on it; the split survives with the orientation flipped.
+- **Which brood votes.** Stated (pre-birth). With the new brood counted, `(T,2,T)` is kept and the masked-to-full course lasts, so there is no split. The design says so in part 7.
+- **Order inside the giver's word.** Stated (TG, last child deleted). Written GT, both selectors last. Order inside the taker's word has no effect.
+- **"An eligible incumbent breeds if present, otherwise the eligible other kind."** Open when the incumbent is present and not eligible. I read it as: the other eligible kind breeds (the designer's program does the same). It is idle in the witness, where no live state has this.
+- **`L_A` over all sources or only those reachable from `s`.** Open; the equivalence holds either way.
+
+**(b) The exact decision.** Holds.
+- hold, hold → `(TG,0,T)`
+- hold, reverse → `(TG,0,G)`
+- reverse, reverse → `(T,2,T)`, not in `W_U`
+- reverse, hold → `(T,2,G)`, from which every course is infinite
+
+All 16,384 sequences of 14 acts agree with their first two acts.
+
+**(c) T3, T4, T6.** Every T3 row reproduced (`P2.txt`):
+
+| Change | Always full | Actual |
+|---|---|---|
+| Original | Ends | Lasts |
+| One potential child (first or last kept; the text does not say which) | Ends | Ends |
+| One actual child, keep first | Ends | Ends |
+| One actual child, keep last | Lasts | Lasts |
+| Free giving | Lasts | Lasts |
+| No return | Ends | Ends |
+| No expenditure | Lasts | Lasts |
+| Vote fixed at minority | Lasts | Lasts |
+| Vote fixed at tie | Lasts | Lasts |
+| Vote fixed at majority | Ends | Ends |
+| Same constant reading | Ends (4) | Ends (2) |
+
+With free giving the formerly ending course is `(TG,2,T) (TG,1,G) (TG,2,T)`, back at the start after two steps. T4 and T6 are as in part 2. What the table does not show is in MUST 1 and MUST 2.
+
+**(d) After reversing twice.** `(TG,2,T) → (TG,1,G) → (T,2,T)`: live, stock 2 of 2, not in `W_U`. Then `(T,2,T) → (TG,1,T)` by a unanimous vote, then `(TG,0,·)`. Holds.
+
+**(e) When must the stock be read?** Three answers, by what "controller" is allowed.
+- **One start, any controller with recall: none exists in any machine of this architecture.** The machine is deterministic. If some course from the start lasts, it is a finite run-in followed by a cycle, so a fixed sequence of acts reproduces it. Recall bounded by the number of live configurations suffices. Program check at `C=2` and `C=3`: every single start in `W_U` is kept by the stock-blind controller, 0 exceptions.
+- **One start, memoryless controller that sees brood and incumbent.** At `C=2`: none in 31,104 machines. At `C=3`: 224 starts, all with needs (2,1); 128 of them are kept by a threshold bit. With equal needs at `C=3` and `C=4`: none.
+- **A class of starts with the same brood and incumbent and different stock**, against a controller that sees everything except the stock and recalls everything. I solved this as a safety game on sets of configurations it cannot tell apart; if it loses, every controller of bounded recall loses.
+  - In the witness machine there is no such class: the only class with a tie, `(TG,1|2,G)`, is kept by hold.
+  - At `C=2`, of 15,152 classes with every start kept by some course, 0 are lost.
+  - At `C=3`, 240 are lost, all with the taker's need above the giver's (224 with needs (2,1), 16 with (3,1)). In 144 of them one threshold selector keeps the whole class.
+  - With equal needs none can exist: the acts that keep the poorest start keep every richer one (the argument of MUST 4).
+
+**The smallest change found** is four settings of the witness:
+- a third token (`C=3`, `g` stays 2);
+- the taker's need 2;
+- the favoured taker leaves `T` (or `TT`) instead of `TG`;
+- the giver invests only when unfavoured.
+
+The class is `{(TG,2,G), (TG,3,G)}` (`P6.txt`). `(TG,3,G)` is kept only by hold and `(TG,2,G)` only by reverse. Reversing at 3 gives `(TG,2,T)`, where the taker can still breed and leaves `(T,1,·)`, dead. Holding at 2 gives `(TG,1,G)`, from which every course ends. The selector "hold above 2, reverse otherwise" keeps both: `(TG,3,G) (TG,2,G) (TG,1,T) (T,2,G) (GG,1,T) (T,2,G)`. From the single start `(TG,3,G)` all four stock-blind memoryless rules end, and a clock (hold, reverse, reverse) lasts. This machine has eight reachable live configurations; the smallest such class in the family has seven. What makes the stock matter is that the level gates who can breed (unequal needs), which the witness, with both needs 1, cannot have.
+
+## 6. What I ran, and what I did not read or check
+
+**REPORT.md was not saved.** The harness refused the write (subagents may not write report files), so this message is the only copy of the report. Programs and their outputs are in `/Users/ren/theories/tmp/fm/centre21/refute/E-break-fable/`.
+
+Python only, longest run 15.5 seconds, no Lean, no git change, nothing written outside my folder (the designer's module was imported with `-B`).
+
+- `core.py`, `fast.py`: my machine, from DESIGN.md sections 2 and 3.
+- `p1_witness.py` → `P1.txt`: witness, kernel, 16,384 act sequences, T4, T6, order-of-operation alternatives, `W_A`.
+- `p2_t3.py` → `P2.txt`: T3 rows, the main statement in each changed machine, stock-blind rules.
+- `p3_law.py` → `P3a.txt`, `P3b.txt` (`q=2`, `C=1,2` full), `P3c.txt` (`C=3`, one in 8), `P3d.txt` (`q=3, C=2` one in 293; `C=4` one in 157). A first sample whose stride shared factors with the parameter block was discarded and rerun.
+- `p4_min.py` → `P4.txt`: splits and their sizes at `C=1,2,3`.
+- `p5_blind.py` → `P5_C2.txt`, `P5_C3.txt`: single starts and classes of starts against stock-blind controllers (104,976 machines at `C=3`, 224,688 classes).
+- `p6_trace.py` → `P6.txt`: the nearest stock-needing machine; a non-threshold instance.
+- `p7_compare.py` → `P7.txt`: step-by-step agreement with the designer's `investment.py`; lasting counts against the `audit_*.json` files.
+- `p8_more.py` → `P8.txt`: the size filters stage by stage (624 reproduced); the no-expenditure row; what the 240 classes share.
+- `p9_memoryless.py` → `P9.txt`: memoryless stock-blind rules at `C=2`, `C=3`, `C=4` (equal needs).
+- `P10.txt` (inline run): the nearest miss; the four blind rules over the witness's 13 kept states.
+
+Read: BRIEF-REFUTE.md, BRIEF-DESIGNS.md, DESIGN.md. After my rebuild: the designer's `witness.py`, `audit.py`, `investment.py`, `smallest.py`, `run_audit.py`, `WITNESS.txt`, `PILOTS.txt`, the `audit_*` and `size_2_*` outputs, and the heads of three `invest_C3` and two `wide` outputs.
+
+Not read or not checked:
+- any Lean file, `PLACES.md`, the direction page, `WHAT-A-MODEL-MUST-HAVE.md`;
+- the designer's `discover.py`, `brood.py`, `two_broods.py`, `variable_needs.py`, and `cx-output.txt` beyond a search;
+- T1 and T5 against the Lean;
+- the removal filters behind the counts 52 and 12;
+- the audit totals that include `C=4`;
+- `q=3` and `C≥3` beyond the samples named;
+- "none with equal needs" beyond `C=4` for memoryless rules (for classes of starts it is argued above; for single starts it is only searched).
+
+*AI-written (Claude Fable, refuter with the BREAK lens, board row FM), 22 November 2026. A search shows where a statement fails, not that it holds.*

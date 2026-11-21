@@ -1,0 +1,231 @@
+# Design A: who may set the rule, read off the share
+
+*AI-written (Claude Opus, designer A of eight, key `A-allowed-from-share`), 21 November 2026. Paper and Python only. No Lean was run or written, no build, no test, no gate. Every count below is from the programs in this folder, on small instances; a search shows where a statement fails, not that it holds. Unit, kind, setter, way, level, need, exit are working names.*
+
+## 1. The design in ten lines
+
+1. A configuration is `(f, o, x)`: how many units of the favoured kind F and of the others O, and the level they all rest on.
+2. A move is a rule `(kF, kO)`: each F unit whose need the level meets leaves `kF` F units, each met O unit leaves `kO` O units, the rest leave nothing (`LineOnAStock.after`, two kinds). The level steps by `RegimeMargin.step g (dF·f + dO·o) x` (`LineOnAStock.left`).
+3. **Who may set the rule is read off the share.** F set exactly where `q·f ≥ p·(f+o)` (threshold `p/q`), otherwise O set. This is Keeping's slot `allowed : S → A → Prop`, set from the share.
+4. **The way of selecting.** Each side may set only rules from its own way, `A_F` or `A_O`, and each way lies within the rules that do not lower that side's own share (`kF ≥ kO` for F: `CarrierCounts.favours`). So wherever F set, every allowed move favours F.
+5. The guard is `Goes`: some unit present has its need met. Kept means some allowed course keeps `Goes` for ever (`JointKeeping.Keepable` on the process with allowed moves). The lock is the largest region where F set that is closed under the allowed moves (`Viability.Kernel` of "F set").
+6. What the selection registers: the share. It registers the level only through which needs the level meets.
+7. **Law E.** A setting by F that does not lower F's share passes to O only across a step at which F's need is unmet and O's met: there the F units leave nothing, and F never come back. The same holds with F and O exchanged.
+8. **So the lock comes about.** Where F need no more than O, F set at every step of every allowed course. This is derived from the step and is not a premise.
+9. **Main statement (Theorem M).** Suppose every rule F may set multiplies them (`kF ≥ 2`). From a configuration where F set, the course is kept exactly where some allowed course reaches a first step at which the running down removes the setters (the level is below `nF` and at or above `nO`, and the rule leaves O a kid), and what is left there is kept by the others' choice. Every course that never reaches such a step ends, F still setting, within `hi + 1` steps. Where `nF ≤ nO` no such step exists.
+10. With one rule for F and a monotone giving, the statement reads as `turns_in_time_iff_before`. Its handed-in marks, its turn and the kind it turns to are all derived: the marks are the levels below the setters' need, the turn is the others taking the setting, the kind turned to is the others alone.
+
+## 2. Definitions
+
+All in natural numbers. Parameters:
+- `hi`;
+- `g : ℕ → ℕ` with `g 0 = 0` (`RegimeMargin.FromNothing g`) and `∀ x ≤ hi, RegimeMargin.step g 0 x ≤ hi` (`RegimeMargin.Keeps g 0 hi`);
+- needs `nF nO ≥ 1` and uses `dF dO ≥ 1`;
+- a threshold `0 < p ≤ q`.
+
+```
+abbrev Conf := ℕ × ℕ × ℕ            -- (f, o, x)
+abbrev Rule := ℕ × ℕ                -- (kF, kO)
+
+def FSets (s : Conf) : Prop := p * (s.f + s.o) ≤ q * s.f        -- F set; at p/q = 1/2 this is o ≤ f
+
+structure Ways where                 -- the way of selecting of each side
+  AF AO   : Rule → Prop
+  AF_fav  : ∀ r, AF r → r.2 ≤ r.1    -- F set only rules that do not lower F's share (CarrierCounts.favours)
+  AO_fav  : ∀ r, AO r → r.1 ≤ r.2
+  AF_some : ∃ r, AF r
+  AO_some : ∃ r, AO r
+
+def allowed (W : Ways) (s : Conf) (r : Rule) : Prop :=
+  (FSets s → W.AF r) ∧ (¬ FSets s → W.AO r)
+
+def next (s : Conf) (r : Rule) : Conf :=
+  ( cond (decide (nF ≤ s.x)) (r.1 * s.f) 0,                     -- LineOnAStock.after, kind F
+    cond (decide (nO ≤ s.x)) (r.2 * s.o) 0,                     -- kind O
+    RegimeMargin.step g (dF * s.f + dO * s.o) s.x )             -- LineOnAStock.left
+
+def P (W : Ways) : Process Conf Rule := ⟨fun s r t => allowed W s r ∧ t = next s r⟩
+def Goes (s : Conf) : Prop := (0 < s.f ∧ nF ≤ s.x) ∨ (0 < s.o ∧ nO ≤ s.x)     -- LineOnAStock.Goes, two kinds
+def Kept (W) := JointKeeping.Keepable (P W) Goes
+def Lock (W) := Viability.Kernel (P W) FSets          -- no allowed course leaves F's setting
+def Exit (W) (s t : Conf) : Prop := FSets s ∧ ¬ FSets t ∧ (P W).step s r t   -- for some r
+def PNR (o : ℕ) : ℕ := least x with Kept (0, o, x)      -- the others' point of no return (where it exists)
+```
+
+Wherever F set, every allowed move favours F (`AF_fav`), so `Lock` is exactly the region the angle asks about: closed under the allowed moves, with every allowed move favouring.
+
+## 3. The main statement, its premises, and a proof sketch
+
+**Law E (the setting passes only through the setters' need).** Premise: `0 < p ≤ q`.
+If `FSets s`, `allowed s r` and `¬ FSets (next s r)`, then all of the following hold:
+- `0 < f`;
+- `x < nF`, and so `(next s r).f = 0`;
+- `nO ≤ x`, `0 < o` and `1 ≤ kO`.
+
+Mirror: if `¬FSets s`, `allowed s r` and `FSets (next s r)`, then `(next s r).o = 0`.
+
+*Proof.* If `nF ≤ x`, then `f' = kF·f` and `o' ≤ kO·o`. Hence `q f' = q kF f ≥ p kF (f+o) ≥ p (kF f + kO o) ≥ p (f'+o')`, using `kF ≥ kO`. This is `CarrierCounts.raises`: selection by a favouring rule does not lower the share. So F still set, a contradiction. Hence `x < nF` and `f' = 0`. Then `¬FSets t` means `q·0 < p·o'`, so `o' > 0`, which needs `nO ≤ x`, `o > 0` and `kO ≥ 1`. If `f = 0` at an F setting, then `o = 0` (from `p > 0`), so `o' = 0`, a contradiction. The mirror goes the same way. After `f' = 0`, F never return, since O's kids are O (`LineOnAStock.never_in`).
+
+**Corollary L (the lock comes about, exactly by an order of needs).** The region where F set, on levels `≤ hi`, is closed under the allowed moves exactly where it is not the case that all of these hold: `nO < nF`, `nO ≤ hi`, `p < q`, and `A_F` has a rule with `kO ≥ 1`. In particular `Lock = FSets` where `nF ≤ nO`.
+
+*Proof.* "If" is Law E. "Only if": take `o = 1`, `f = p`, `x = nO`; then F set (`p(p+1) ≤ qp`), and a rule with `kO ≥ 1` exits.
+
+**Theorem M.** Premises:
+- `0 < p ≤ q`;
+- `1 ≤ nF`, `1 ≤ nO`;
+- `FromNothing g`;
+- `Keeps g 0 hi`;
+- `mult : ∀ r, A_F r → 2 ≤ r.1`;
+- the ways nonempty;
+- `FSets s`;
+- `s.x ≤ hi`.
+
+It has three parts.
+- **(i)** Every allowed course from `s` on which F set at every step has `¬Goes` at some step `≤ hi + 1`.
+- **(ii)** `Kept s` holds exactly where there are a `T` and an allowed course `s = s_0, …, s_{T+1}` with `FSets s_i` for `i ≤ T`, `¬FSets s_{T+1}`, and `Kept s_{T+1}`. Also `Kept s → nO < nF`.
+- **(iii)** The readable form, where `A_F = {m}` and `z ↦ z + g z` is nondecreasing. Let `T` be the first `t` with `x_t < nF` on the orbit of `next · m` from `s`. Then `Kept s` holds exactly where `nO ≤ x_T`, `0 < o_T`, `1 ≤ m.2`, and `PNR (m.2 · o_T) ≤ x_{T+1}`.
+
+*Proof sketch.*
+- **(i)** While F's need is met, `f_{t+1} = kF f_t ≥ 2 f_t`, so `f_t ≥ 2^t ≥ t+1`. The level stays `≤ hi` (`Keeps`). Once `dF f_t ≥ x_t`, `x_{t+1} = g 0 = 0`, and with needs `≥ 1` nothing goes. That happens by `t = hi − 1`. If instead F's need goes unmet at some step while F still set after it, then `f' = 0` by Law E's first case, so `o' = 0`, and the course is empty: it ends.
+- **(ii), ⇒** By (i), a kept course cannot keep F setting for ever, so it leaves at a first step. That step is an exit, and the rest of the course is kept.
+- **(ii), ⇐** Concatenate the two courses. `Goes` holds at every `i ≤ T`: at `T`, O's need is met (Law E), and a step without `Goes` empties the configuration, after which nothing exits. By Law E, an exit needs `nO ≤ x_T < nF`.
+- **(iii)** With one rule, the F phase is the orbit. The first unmet step either exits (when the clauses hold) or empties the configuration. After the exit, O are alone. Under a monotone step the kept levels of O alone are upward closed, because the course from a higher level stays at or above (induction on the monotone step). So `Kept (0, o, x)` holds exactly where `PNR o ≤ x`.
+
+**Proposition R (what a choice made from the reading is, inside the lock and before it).**
+- Inside the lock (`s ∈ Lock`, `mult`): for every sense, every nonempty class `B ⊆ Lock`, and `n ≥ hi + 2`, `Keeping.KeptFor (P W) sense Goes allowed n B` is false. Following any plan from a member gives an allowed course that keeps F setting, and (i) ends it. So no reading does any work there.
+- Before the lock: two configurations alike in the counts, under the same rules, stay alike in the counts up to and including the first step at which their levels meet different needs. This is `LineOnAStock.after_alike` and `ways_alike` read for two kinds. So a choice made from the share takes the same rules on both until the running down reaches a need of someone present, which in the setters' region is the exit. That part is proved. That the share then keeps what the whole configuration keeps was only observed, below.
+
+## 4. Which of R1 to R7
+
+| | | |
+|---|---|---|
+| R1 | yes | units leave units, two kinds |
+| R2 | in part | the level is finite (`Keeps`) and what comes back depends on what is left (`RegimeMargin.step`); the giving `g` is handed in, not a going-on |
+| R3 | in part | keeping can need a rule that lowers the setters' share, which their way excludes (run 7: 3,294 starts at `hi = 5`); so keeping would cost the keepers the share, and with it the setting; no unit pays to give |
+| R4 | yes | the setting is set from the share, and the setters choose within what does not lower it; the lock is derived (Law E, Corollary L), not a premise |
+| R5 | yes | `Kept` at every configuration; the exit step; the step after which no course keeps ("turned too late") |
+| R6 | in part | what the selection registers (its share) registers the level only at the exit (Proposition R); no revision by failure |
+| R7 | no | after the exit the form changes (who is there, who sets) and the going-on continues; nothing states that more can go on after |
+
+Why this cut first: the angle is the lock's side put on a process with moves. The lock and its turn are things that should come about. Here both come about from one structural choice: who may set is read off the share. A giving that is itself a going-on (R2 better, R3 whole) would need a third kind, and would break the two-phase shape the exact statement rests on. It is the next thing to add, and the first thing likely to break Law E's clean form.
+
+## 5. T1 to T8
+
+**T1, a dictionary.**
+- *Not found.* Not found in what was read:
+  - Law E;
+  - Corollary L;
+  - Theorem M;
+  - any statement using Keeping's `allowed` set from a share. Places, Keeping: "No lock module imports or names KeptFor". RuleCapture and TurningInTime: "Missing: a Process with moves …, allowed".
+- I searched `PLACES.md` for `allowed`, holder, vote, majority, extinct and who sets. The nearest places are:
+  - RuleRebuilding's holders ("a cohort enters at the quota, there is no share");
+  - ClosedCapture's `lock_outlives_loss`, whose `Unread` premise (the next share does not depend on the beyond) is exactly what fails at this model's exit.
+- *Not by unfolding.* Law E needs `CarrierCounts.raises`, together with the need test and the threshold arithmetic. Corollary L's converse needs a witness. (i) needs a counting argument with `Keeps` and `FromNothing`.
+- *My own verdict.* Law E is a few lines of arithmetic, the kind a reader called "arithmetic" in `line_two`. Theorem M (ii) is Law E and (i) put in a row, with `Keepable` unfolded. What is not a row is that the lock and the turn come about. The one statement doing that work is small.
+
+**T2, handed in.** The premises of Theorem M, each marked:
+
+| premise | mark |
+|---|---|
+| the model's step (`after`, `left`), `Goes`, needs `≥ 1`, uses `≥ 1` | structural |
+| `0 < p ≤ q` | structural |
+| `FromNothing g`, `Keeps g 0 hi`, `x ≤ hi` | structural (the package's own) |
+| `AF_fav`, `AO_fav`: each side sets only rules not lowering its own share | structural (what "set from the share" means); it is near the lock, since it makes "every allowed move favours" true by definition, but the region's closure is concluded (Corollary L) and fails where `nF > nO` |
+| `mult`: every rule F may set multiplies them | structural (a property of the rules); the rise of the draw and the level's fall are concluded; it is the direction's own premise ("each such step adds to what is drawn") |
+| the giving `g` | the thing itself, for R2: handed in |
+| (iii) only: a monotone giving, and one rule for F | structural restrictions |
+
+Not premises: the level's fall, the lock, the turn and the others' taking the setting.
+
+**T3, idle parts.** Each part, taken out on a small instance:
+- **The share** (who sets).
+  - (a) With F fixed as the setters (setting no longer read off the share), 120 starts at `hi = 4` change. Instance: `g(1) = 2`, `nF = 4`, `nO = 1`, uses 1, `A_F = {(2,2)}`, start `(1,1,3)`. With the share it is kept: the setters die at once, and the two O units set and hold at level 3. With F fixed it is not: F's rule doubles O, and the level falls to 0.
+  - (b) With every rule allowed to everyone, 16,716 of 21,504 instances change somewhere.
+- **The level** (needs). With no need that can go unmet, Law E has no exit and (i) fails: `Goes` holds for ever while `f ≥ 1`. This was argued, not run, since the counts are then unbounded.
+- **The multiplying.** With hold `(1,1)` added to the setters' way, 15,792 instances at `hi = 4` have a start in the lock that is kept, so (i) fails. Instance: `g(3) = 1`, `nF = nO = 1`, `A_F = {(2,0),(1,1)}`, start `(1,0,4)`, holding at 4.
+- **The reading.**
+  - It does no work in Theorem M, which is about some course from one known start, where a reading does no work.
+  - In Proposition R it does work before the lock. At `hi = 5`, 1,270 pairs are each kept. Kept together for 10 steps: by the share 1,266, by the whole configuration 1,266, by nothing 978. A choice that reads nothing must use a rule both sides may set.
+  - Inside the lock, no reading keeps any of 637,686 pairs for `hi + 2` steps.
+- **The horizon.** There is none in the main statement. `hi + 1` is a conclusion and was never reached: the longest course was 3 steps at `hi = 4`.
+
+**T4, both outcomes from one start.**
+- *Differing only in the setters' way.* 94 starts at `hi = 4`. Instance: `g(1) = 1`, `nF = 4`, `nO = 1`, uses 1, start `(1,1,3)`.
+  - With `{(2,1)}` it is kept. At the start F's need is unmet, the setters die, one O is left at level 2 and holds.
+  - With `{(2,0)}` it ends: the setters' last rule leaves the others no kid.
+  - With `{(2,2)}` it ends: two O units are left at level 2, the draw takes all of it, and the level falls to 0.
+- *Differing only in what the setters register (`nF`).* 488 starts at `hi = 4`. Same start with `A_F = {(2,1)}`: kept at `nF = 4`, ended at `nF ∈ {1, 2, 3}`.
+
+**T5, old laws as cases.** It fails as frozen. No named law comes out as a case with my law doing the work. What is used instead:
+- Lock side:
+  - `RuleCapture.CarrierCounts.raises` inside Law E (or `RuleShaping.le_select_iff`);
+  - `LineOnAStock.after`'s need test, and `never_in`;
+  - `LineOnAStock.after_alike` / `ways_alike` in Proposition R.
+- `TurningInTime.turns_in_time_iff_before` runs the other way: (iii) has its shape, with its handed-in marks (levels below `nF`), its turn and its kind turned to (O alone, use `dO·o`) derived by Law E. My statement is then a case of the old law, with the old law's premises derived. That is a join, but not the one T5 asks for.
+- Choice side: `JointKeeping.Keepable` and `Viability.Kernel` are used as definitions. `Keeping.keptFor_of_closed` gives O-alone keeping, via the family of classes within `{x ≥ PNR o}` closed under hold, which O may set.
+- `RuleShaping.favours_iff`: where the setters' rule is a shaped rule, it is exactly the test that the rule is one they may set. That is an instantiation, used.
+- `LineOnAStock.unending_iff_holds` answers the O phase under its regime premises. It is used, not a case.
+
+**T6, no threshold.**
+- Theorem M is a first-step statement.
+- At one count, under a monotone giving, the kept levels need not be an interval (run 5: 10 such sets at `hi = 5`, 28 at `hi = 6`). Instance: `g(1) = 1`, `nF = 5`, `nO = 1`, uses 1, `A_F = {(2,1)}`, counts `(1,1)`. It is kept at levels 3, 4 and 6, and not at 5.
+  - From 6: F's need is met, they double, the level is 4, the setters die drawing 3, and one O is left at 2 and holds.
+  - From 5: the setters double to a level of 3 and die drawing 3, leaving 0.
+- At `hi = 4`, every one of the 488 kept starts where F set is lost one level higher (224 of them under a monotone giving).
+
+**T7, tried by program.** See section 6.
+
+**T8, one more model.**
+- New definitions: `FSets`, `Ways`, `allowed`, `next`, `P`, `Exit` (6), and `PNR` (derived). `Kept` and `Lock` are the package's `Keepable` and `Kernel`.
+- It is a new model beside the old ones: a two-kind line on a stock with rules as moves. It is built from the package's pieces (`after`, `left`, `CarrierCounts.favours`, `Keeping.allowed`, `Keepable`, `Kernel`). It is not one law at several grains.
+
+## 6. What the program found
+
+Scripts and outputs are in `/Users/ren/theories/tmp/fm/centre21/designs/A-allowed-from-share/`: `model.py`; `run1_exit.py` … `run7_cost.py`; `*.out.txt`. Every run took under 50 s.
+
+- **Run 1, Law E and Corollary L.** 952,560 allowed steps: thresholds 1/3, 1/2, 2/3, 3/4 and 1; needs 1..7; counts 0..8; levels 0..7. 0 failures.
+  - Nearest miss: the first form of Corollary L failed 21 times, all at threshold 1, where F set only with no O present. The premise `p < q` was added after the run.
+- **Run 2, Theorem M (i) and (ii).** All givings with `g 0 = 0` and `Keeps`; needs 1..hi; uses 1..2; the 7 multiplying ways of the setters; 2 ways of the others; threshold 1/2.
+  - `hi = 3`: 3,024 instances; `hi = 4`: 21,504 instances. 0 failures.
+  - Starts where F set and something goes: 564,480. Kept: 488, all with `nF > nO`.
+- **Run 3.** 0 failures at `hi = 5` (18,000 instances, all givings) and at `hi = 6` (28,512 instances, monotone givings). At `hi = 6`, starts where F set:
+
+| outcome | starts |
+|---|---|
+| kept | 11,074 |
+| turned too late (an exit exists, none leaves a kept configuration) | 187,536 |
+| no exit | 865,838 |
+| of which with `nF > nO`: the band jumped, or the others left nothing | 217,190 |
+
+  - The first exit step of the kept starts is 0 for 10,238 and 1 for 836.
+- **Run 4, Proposition R.** As in T3. Inside the lock: 0 of 637,686 pairs kept for `hi + 2` steps under any sense.
+- **Run 5.** Kept levels that are not an interval: see T6.
+- **Run 6, (iii).** Under monotone givings: 300,224 starts at `hi = 5` and 1,593,225 at `hi = 6`, 0 failures; the upward closure of O's kept levels was checked 256,608 times, 0 failures.
+  - Nearest misses: 185,273 starts turned too late. The smallest: no giving, `nF = 2`, `nO = 1`, start `(1,1,1)`. The setters die at once, drawing all of the level.
+- **Run 7.** With the setters' way all of `FAV_F` (hold included): 3,294 of 286,200 starts at `hi = 5` are kept only by a rule lowering the setters' share.
+
+## 7. Where it is weakest, and what would refute it
+
+- **Mostly arithmetic.** Readers will most likely file it as one small lemma (Law E) and a row. If the setters' way is read as `ReadsShare` in other words, T2 is lost too.
+- **The turn costs the setters everything.** The setting passes only by their extinction, which is an artefact of one need per kind. With needs graded within F, the general form ("passes only at a step at which some setter's need is unmet") still follows from `raises`, but the passage no longer removes them all, and (ii)'s shape breaks.
+- **The first step is nearly always the start.** Only exits at steps 0 and 1 were found. Doubling drains a level of at most `hi` in about `log₂ hi` steps.
+- **The giving is handed in.**
+- **The reading's role is thin.** That the share keeps what the whole configuration keeps is likely an artefact of size. It would fail where two members alike in the counts need different setter rules at two steps or more before their exits.
+- **What would refute it.** Within this model, Theorem M is proved, so a counterexample would be a fault in Law E's arithmetic. As a centre it is refuted if:
+  - a model with graded needs or a giving by units has the setting pass at a step where every setter's need is met;
+  - or a reader shows that every statement here follows from `CarrierCounts.raises` and `Keepable`'s unfolding, with nothing about the lock that the 19 November course did not already show. That course was found by program: the rule read from the share, the favoured unit's need unmet, the rule no longer favouring.
+
+## 8. What I did not read
+
+- **Lean, read:**
+  - RuleCapture (account, `Raises` … `locked_rises`, `CarrierCounts` definitions);
+  - TurningInTime (lock section account, `locked_ends_rising`, `count_rises`);
+  - Keeping (`Seen` … `KeptFor`, `keptFor_of_closed`, `Certificate`, `Kernel`);
+  - Viability (to the kernel laws);
+  - LineOnAStock (account, §1 definitions);
+  - RegimeMargin's step definitions;
+  - RuleShaping (account, `shaped`, `favours_iff`, `le_select_iff`);
+  - JointKeeping's `Keepable`.
+- **Lean, only through the places entries:** `turns_in_time_iff_before` and `unending_iff_holds`.
+- **Not opened at all:** the rest of the package, chapters 02, 03, 05 and 07, `PopulationCorrection`, the renewal files, `CommonResponse`, `GuardHorizon`'s source, and every scratch Lean of 21 November.
+- **Of the records:** only the two-requirements note, the 20 November reads note and the head of the 19 November program. Not opened: the 16 November page, the meeting, the second-way and dig notes, and the no-return, read-a-future, read-registering and table records. Of these I know only what the direction page and `AFTER.md` say.

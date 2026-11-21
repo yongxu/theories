@@ -1,0 +1,17 @@
+Reader whole-b-25. All three modules read whole, by every declaration's statement and docstring and the opening account, to the end of each file: HexagramPlaces.lean (1450 lines), HexagramSequences.lean (1201 lines), HexagramSites.lean (1163 lines). I opened proof bodies only where they were short and next to the statement. I opened no other module, so names imported from Hexagrams, Context, Learning, Flow and Law (changes, Run, Contextual.Glues, Learning.Lumped, GoAlike, Law.Lossless, Invariant, Exchange, World) are read as each statement uses them.
+
+All three are of one built model: the 64 six-line configurations and the 8 trigrams. A few of their lemmas are general:
+- `atSites_glues_iff` holds for any relation on hexagrams.
+- `runsThrough_iff` and `Follows.back` hold for any type and law.
+- `kept_alike` holds for any reading the complement keeps.
+- Several `*_shown_along_run` statements hold for every run of any process on hexagrams.
+
+The fourteen questions about level, giving, cost, multiplying, rank and point of no return are mostly N here. One exception is HexagramSequences' exchange between trigrams. There `across_exchange`, `exchangesRun` and `exchangeWorld_rise_fall` state a conserved passing: what one trigram gives, it loses from its own count. That is the nearest thing to a cost or a level in the batch, but nothing runs down there and nothing depends on what is left.
+
+Bearing on the centre, beyond the fourteen questions:
+1. HexagramSites `ends_not_told` (l. 538), with `changes_run_ends` (l. 1082), is a built case of a reading that does not register a difference that makes a difference to other relations. Changing the bottom or top line keeps every phase between the ends (SameBetween), yet it turns the opposition at that line's height and the alternation at its end seam. `betweenPhases_not_lumped` (l. 608) shows that this reading is not a lumping the law goes alike across.
+2. HexagramSequences `runsOrder_reads` (l. 386) and `runsOrder_blind_not_lumped` (l. 392) say that no reading blind to one line fixes any line of the next configuration under a law running the received order.
+3. `runsOrder_lossless_iff` (l. 344) is an exactly-when between merging nothing and merging. Merging is a loss of distinctions, but it is stated as Law.Lossless, not as a point of no return.
+4. The readings-in-context results show that no frame of context-free claims fits under any process, while the indexed frame does: `halves_no_free_frame`, `phases_no_free_frame`, `oppositions_no_free_frame`, `seams_no_free_frame`, `between_no_free_frame`. They bear on "an account taken for the whole says more than can be known", but only for this built model.
+
+Ran no Lean, build or test, and changed nothing. The full suite was deliberately not run, as the brief asks.

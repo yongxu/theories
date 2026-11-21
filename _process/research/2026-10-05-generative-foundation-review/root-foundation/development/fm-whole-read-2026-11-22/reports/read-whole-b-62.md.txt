@@ -1,0 +1,9 @@
+Both modules were read whole: every statement and docstring. Reproduction.lean was read to l. 1517 and Reserve.lean to l. 1179. For Reproduction I also looked up DescendsAt (Evolution.lean), DissipatesOn (Dissipation.lean), BalancesOn and takers (Flow.lean), and Generations and Descended (SelectionTerm.lean) to understand the premises. No Lean was run, and no field is U.
+
+Four things bear on the centre that the fourteen questions do not catch.
+(1) Reproduction's Flow.closed_lineage_lowered and closed_not_exact join a selection law to running down: selection on offspring number never lowers the mean offspring number, yet within a closed, dissipated family the lineage ends within the stock, so transmission must have lowered offspring number at some step before the stock runs out. Running down is forced onto the transmission term, while the selection term stays non-negative.
+(2) Reproduction's Relay against OnePool shows dissipation as the premise separating ending from going on. These are two built cases, not one exactly-when statement.
+(3) Reserve's lpo_of_ending says that without decay no constructive ending step exists in general, so a bound on ending needs a decaying reserve.
+(4) Reserve's redirect and Famine.living_differs show that the choice of reading of one unfolding decides which events count as undermining, while levels and activity stay the same: a reading bearing on the valuation.
+
+In Reserve, irreversibility (ended_for_good, late_return_finds_none) is carried forward from the premise `final`, not derived. In Reproduction, empty_from and lineage_ends conclude it.

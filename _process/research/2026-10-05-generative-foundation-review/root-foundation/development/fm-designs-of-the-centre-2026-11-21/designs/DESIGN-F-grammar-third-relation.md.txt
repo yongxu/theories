@@ -1,0 +1,167 @@
+# Design F: the grammar's law of the largest closed region, at the relations a selection brings
+
+*AI-written (Claude Fable 5.2, one of eight designers, key F-grammar-third-relation), 21 November 2026. Paper and Python only: no Lean was run, nothing is proved, nothing outside this folder was written. Way, share, level, reading, twin are working names. Every negative about the Lean is "not found in what I read".*
+
+**The short answer to the angle.** A relation exists at which "locked" and "kept" are the same law, and it comes in three forms that are one by a small theorem. But the guess that the two ways are the inside and the outside of that law's largest closed region is false: in the built family it holds for 0 of 1,298 ways tried, and on all frames of four configurations it fails in 203,180 of 301,440. What blocks it is said exactly in part 3 (four blocks, each with an instance). What is gained is three links and one statement about first steps; by my own judgment that is links, not a centre.
+
+## 1. The design in ten lines
+
+1. **Configurations**: any carrier `S`. No level, share or unit is in the statement; they appear only in the built family used to test it.
+2. **A step**: a relation `N` on `S`, the course's step under the way of selecting (a function where one course is spoken of). The end is in the step: a region `G` (what it rests on is still there) whose outside is closed under `N`.
+3. **What is registered**: a map `read : S → O`; `E` is its sameness (a class in the grammar's sense).
+4. **The way of selecting** is `N` itself, where `N` is a rule from the reading: `N s = step s (ρ (read s))`.
+5. **The one law** (already in the package): `K R P := «承» («逆» («所闭» R)) P`, the largest region inside `P` closed under `R`.
+6. **Its relations here**: `N` (kept: `K N G`); `E` (the common response); `E ∪ N`, the reading and the step together (what holds of everything read alike with anything on the way); `N ⊗ N` on pairs, with `E` as the region asked for (never read apart).
+7. **Link 1 (pullback)**: `K (E ∪ N) P` is `K (像 read N) (classes wholly inside P)` read back along `read`: the law at the reading's own grain.
+8. **Link 2**: `«同行» R E` is `«闭» (R ⊗ R) E`; for a fixed successor the root's core `«核» R E` is the law at `R ⊗ R`.
+9. **Main statement**: a course either goes on, or enters `X := K (E ∪ N) (not kept)` at one first step `n_T` and never leaves it; every twin that goes on is read apart from it by a step `n_sep ≤ n_T`; and `n_T ≤ n_end` where the end is registered.
+10. **And exactly when the two ways are inside and outside**: where nothing locked goes on, `G ⊆ Λ ∪ K (E ∪ N) G` exactly where `G \ Λ` is closed under `E ∪ N`; otherwise a step enters the lock, or a twin is outside `G`, or a step leaves `G` outside the lock.
+
+## 2. Definitions
+
+Existing (`Grammar.lean`, `GrammarLaws.lean`, `CommonResponse.lean`): `«际»`, `«逆»`, `«闭»`, `«所闭»`, `«承»`, `«像»`, `«同行»`, `«核»`, `«续»`, `«有后»`, `«不穷»`, `«类»`.
+
+```
+-- existing, as an abbreviation only
+K (R : «际» α) (P : α → Prop) : α → Prop := «承» («逆» («所闭» R)) P      -- ∀ t, «所闭» R s t → P t
+
+-- new 1: two relations together
+«兼» (R S : «际» α) : «际» α := fun x y => R x y ∨ S x y
+
+-- new 2: a relation run on two occurrences at once
+«双» (R : «际» α) : «际» (α × α) := fun p q => R p.1 q.1 ∧ R p.2 q.2
+
+-- new 3: a relation read as a region of pairs
+«域» (E : «际» α) : α × α → Prop := fun p => E p.1 p.2
+```
+
+A **frame** is `(S, N, read, G)` with `N : S → S`, `read : S → O`, `G : S → Prop`; `E s s' := read s = read s'`; `T := «兼» E (Law.step N)`.
+
+- `Kept := K (Law.step N) G` (the course goes on).
+- `X := K T (fun s => ¬ Kept s)` (closed at the reading's grain: nothing read alike with anything on the way goes on).
+- `KeptAtGrain := K T G`.
+- For a region `F` closed under `E` (the selection goes on as before, or has ended): `Λ F := K T F`.
+- `n_end s`: the least `n` with `¬ G (orbit N s n)`. `n_T s`: the least `n` with `X (orbit N s n)`. `n_sep s s'`: the least `n` with `read (orbit N s n) ≠ read (orbit N s' n)`.
+- A **twin** of `s` is an `s'` with `read s' = read s`.
+
+With moves (`step : S → A → S`, a rule `ρ : O → A`): `N_ρ s := step s (ρ (read s))`.
+
+## 3. The main statement, premises, proof sketches, and what blocks the guess
+
+### Link 1 (pullback). No premise.
+
+```
+theorem «读之拉回» (read : α → κ) (N : «际» α) (P : α → Prop) (s : α) :
+  K («兼» (fun x y => read x = read y) N) P s ↔
+  K («像» read N) (fun k => ∀ x, read x = k → P x) (read s)
+```
+
+*Sketch.* (←) `Q s := K (像 read N) P∀ (read s)` lies inside `P` (`«所闭之承在内»`), is closed under `E` (same reading) and under `N` (a step of `N` is a step of the image, and the right side is closed by `«所闭之承闭»`); so it lies in the left side by `«闭在内则在所闭之承»`. (→) `R̄ k := ∃ s, read s = k ∧ K T P s` lies inside `P∀` (the left side is closed under `E` and inside `P`) and is closed under `像 read N` (from `read x = k`, `N x u`: `x` is in by closure under `E`, `u` by closure under `N`); so it lies in the right side by `«闭在内则在所闭之承»` again. The largest-region law is called twice, at two relations; nothing follows by unfolding. For `P` closed under `E` the composite "alike, then a step" gives the same region: `K (E;N) P = K (E ∪ N) P` (0 differences); for `P` not closed under `E` it need not (39,165 differences among the triples checked).
+
+### Link 2 (never read apart). 
+
+```
+theorem «同行即双之闭» : «同行» R E ↔ «闭» («双» R) («域» E)                      -- by «同行之逐点»
+theorem «双之承最大»   : K («双» R) («域» E) is the largest relation inside E that R goes alike across
+theorem «定后则核即双之承» (fixed : «定后» R) (symm : «则» E («逆» E)) :
+  «核» R E u u' ↔ K («双» R) («域» (fun x y => E x y ∧ ((∃ v, R x v) ↔ (∃ v, R y v)))) (u, u')
+```
+
+*Sketch of the third.* With a fixed successor, `«有常» R S` for symmetric `S` says: of two related occurrences both have a next or neither, and the nexts are related; that is closure of `S` under `«双» R` inside "both or neither has a next". The largest such inside `E` is the right side. For a law (every occurrence has a next) the extra clause is empty and `«核» R E = K («双» R) («域» E)`. Off a fixed successor the two differ: where every occurrence has a next, `K («双» R) («域» E)` lies inside the core and can be strictly inside (the core asks for some matching next, the paired step for all pairs of nexts), as kept-whatever lies inside kept-by-some-course.
+
+### Main statement (one course, and where the two ways lie)
+
+**Premises.** (p1) `N` is a function (*structural*). (p2) `E` is the sameness of a map (*structural*). (p3) the outside of `G` is closed under `N`: what has ended stays ended (*structural*). (p4) the outside of `G` is closed under `E`: nothing that has ended is read alike with something that has not (*structural, and it does work*: without it clause (c) fails). For part (B): (p5) `F` closed under `E` (*structural*: how it selects is a function of what it registers); (p6) `Λ F ∩ Kept = ∅`, nothing locked goes on (***the thing itself***: see block 1).
+
+**(A) Dichotomy with first steps.** For every `s` with `G s`, exactly one holds:
+
+- (I) `Kept s`: the course goes on, and no configuration of it is in `X`.
+- (II) the course ends, and:
+  - (a) *[no premise beyond p1, p2]* for every twin `s'` of `s` with `Kept s'`: `n_sep s s' ≤ n_T s` (if the two are never read apart, the course never enters `X`);
+  - (b) once in `X` the course stays in `X`, and so does everything read alike with anything on it;
+  - (c) *[p3, p4]* `n_T s ≤ n_end s`: it enters `X` no later than it ends; so with (a), every twin that goes on is read apart from it at some step `≤ n_T s ≤ n_end s`.
+
+**(B) Exactly when the two ways are the inside and the outside.** Under p5 and p6: `G ⊆ Λ F ∪ KeptAtGrain` ⟺ `G \ Λ F` is closed under `T`; and then `Kept = KeptAtGrain = G \ Λ F`. Where it fails there is `s` in `G \ Λ F` with (d1) `N s ∈ Λ F` (the lock comes about on a course), or (d2) a twin of `s` outside `G` (what it rests on is not registered), or (d3) `N s ∉ G`.
+
+**(C) A rule chosen from the reading.** For moves `step`, a reading and `G`: the family `{ K (E ∪ N_ρ) G : ρ }` has a largest member, reached by one rule; the family `{ K N_ρ G : ρ }` need not.
+
+*Sketch of (A).* `Kept` is closed under `N` and inside `G`; `X` is closed under `E` and `N` and inside the complement of `Kept` (the three clauses of `«所闭之承最大»` at `T`). (I) and (II) exclude each other since `Kept` is closed under `N`. (a): for `n < n_sep`, the two courses are read alike at `n`; the twin's configuration is kept; were `s`'s in `X`, closure of `X` under `E` would put a kept configuration in `X`. (c): the outside of `G` is closed under `T` by p3, p4 and is inside the complement of `Kept`, so it lies in `X` (largest); the course is outside `G` at `n_end`. That a least `n_T` exists needs the usual decision along the course (`first_of_decided` in the package). Exhaustiveness of (I)/(II) is classical.
+
+*Sketch of (B).* (⇐) `G \ Λ` closed under `T` and inside `G` lies in `KeptAtGrain` (largest). (⇒) by p6 and `KeptAtGrain ⊆ Kept`, `Λ` and `KeptAtGrain` are disjoint, so `G \ Λ = KeptAtGrain`, which is closed. The three kinds: a `T`-step out of `G \ Λ` is an `N`-step or an `E`-step, into `Λ` or out of `G`; an `E`-step into `Λ` is impossible since `Λ` is closed under `E`. Without p6 the left side can hold and the right fail (8,360 frames at four configurations; the smallest is in part 6).
+
+*Sketch of (C).* The union of `E`-saturated regions each kept by a rule is kept by the rule that takes, on each class, the rule of a region containing that class (a class lies wholly in or out of each). Below the grain a class can hold two configurations needing different moves.
+
+### What blocks the guess, exactly
+
+1. **The law gives closure, never the running down.** "Uses up what it rests on" is a least region (a rank falls), and the law is of largest ones. In a finite frame a rank falling along `N` inside `Λ ∩ G` exists exactly where `Λ ∩ Kept = ∅` (0 disagreements in 389,872 frames), so premise p6 *is* the level's fall. Instance: one configuration in `G`, `N` the identity, `F` everything: locked and going on. In the built family 81 configurations are locked and go on.
+2. **The outside of a largest closed region is not closed.** A course can enter the lock (d1): 890 such steps under the way that reads the share; the package's own `RuleCapture.favouring_locks` is a course that locks at its first reading step. So "outside the lock" is not a way of going on; it is where courses still enter one region or the other.
+3. **Kept is not closed under the reading.** Twins with different fates exist wherever the middle is not empty (8,498 configurations under the share-reading way, summed over the 120 parameter sets; 5,064 of the 23,760 (law, guard, reading) triples at four configurations). `Kept` is the law at `N`; only `KeptAtGrain ⊆ Kept` is the law at `T`.
+4. **With the end in the step, no class lies inside "favours".** `K T (rule favours)` is empty in all 120 parameter sets: every class of one share holds a level too low to go on. The region has to be "favours, or has ended", which is what `TurningInTime` already does for constancy (`«至终有常»`, up to the net's end). `RuleCapture.Locked` is closed at `T` only because its step has no end in it (as I read `turn_locked` and `TurningInTime.locked_closed`, whose steps are total).
+
+## 4. Which of R1 to R7
+
+- **R5, in part.** A step of no return, as the one entry into `X`, relative to what the reading leaves alike. With moves, "no course keeps it" is the package's viable region; the two closings are not ordered (part 6: `n_T` before, at, and after the step out of the viable region are all inhabited).
+- **R6, first half.** The reading does work in (A)(a), (c), (B)(d2) and (C). Its revision is not in the design.
+- **R4, not derived.** The lock is a region of the law, and whether it is non-empty is not concluded. In the built family it comes about from "the next rule is read from the share reached".
+- **R1, R2, R3, R7: left out.** They are in the built family only (units that multiply, a level that gives back by what is left, others that give back), and handed in there. No statement relates a way of selecting to more being able to go on after it.
+
+Why this cut: the angle asked whether one law of the grammar is already the centre at a third relation. It is not; what the cut keeps is exactly what that law can carry.
+
+## 5. T1 to T8
+
+- **T1 (dictionary).** Mostly yes. (A) and (B) are the largest-region law used at a new relation with a first step; a reader may fairly call them older laws in a row. Not found in what I read, and not by unfolding: **Link 1** (two calls of `«闭在内则在所闭之承»` at two relations; `GrammarTransport` has `«尽之拉回»` and `«延之拉回»` along maps and transport along one-to-one correspondences, and nothing for `«承»` along `«像»`); **Link 2's third statement** (the core as the law at the paired step; the package proves `«定后遍后则核为其内最粗同行之类»` from `«根»`, with no pairs in `Grammar*.lean`); and `«不穷» R E = K («续» R E) («有后» R E)` (one rewriting by `«所闭当且仅当同一或及»`; no statement joining `«不穷»` to `«承»` or `«所闭»` was found by search).
+- **T2 (handed in).** p1 to p5 structural; p6 is the thing itself (block 1). The lock is not a premise and not a conclusion. The reading's update is absent.
+- **T3 (idle parts).** *Reading*: at the finest reading `X` is everything that ends and `n_T = 0` on every ending course; the middle is empty in all 1,584 (law, guard) pairs with p3 at four configurations, and non-empty for 5,064 of the 23,760 triples with a reading. p4 dropped: (c) fails on 1,416 courses at four configurations (a smallest case, checked by hand: three configurations, `N = (0,1,1)`, all read alike, `G = {0,2}`, start 2: it ends at step 1 and never enters `X`, which is empty, since everything is read alike with 0, which goes on). p3 dropped: 7,512. *Share, level, multiplying*: not in the statement. In the built family the share is idle (the share-reading way keeps exactly what a way that reads nothing keeps) in 83 of 120 parameter sets, the level in 86, the multiplying in 12, a finer reading with the way unchanged in 30. So each does work somewhere and is idle in most of the family. *Horizon*: none.
+- **T4 (both outcomes).** One family, one start, differing in what is registered and the rule made from it: parameters `(Cmax, L, dc, do, r, κ) = (2, 9, 2, 1, 2, 1)`, start `(c, o, l, g) = (1, 2, 7, C)`. Reading the share: `1,2,7,C → 2,1,7,C → 2,0,5,C → 2,0,2,C → DEAD` (in `X` and in the lock from step 0, past keeping by any course from step 1). Reading the share and whether the level is below 8: `1,2,7,C → 2,1,7,O → 1,2,5,O → 0,2,4,O → 0,2,6,O → 0,2,8,O → 0,2,9,O → …` (goes on). 308 such (parameters, window, start) triples; 125 the other way round (the finer way ends a start the coarser keeps).
+- **T5 (old laws as cases).** *Choice side*: `Viability.kernel_iff_certificate` and the common response are already the law at `Steps P` and at `E`; Link 1 at `N := Steps P` adds `Viability.Kernel` of the image process as the law at `E ∪ Steps P`. *Lock side*: `RuleCapture.locked_stays` (statement unchanged) is `«闭含所闭»` at the relation `Turn p q := ∃ b, q = turn f h b p` on `S × R`, with `turn_locked` as the closure premise and the paced course a line of `Turn` (`«线则所闭»`); it is now proved by `Pace.stays_turned`, the same law proved again. `«同行之迭»`, by which `TurningInTime.alike_along` is proved (two levels under one way reach one way), is `«闭含所闭»` at `«双» R`: `E` is closed under the paired step and the two courses are one line of it (it needs one lemma, that an iterate of the paired step is a pair of iterates). `«定后遍后则核为其内最粗同行之类»` is `«所闭之承最大»` at `«双» R`, through Link 2's third statement. The left side of `LineOnAStock.unending_iff_holds`, and of every `«不穷» (net …) «一»` law, is the law at the net; its right-to-left half would be `«闭在内则在所闭之承»` with the holding configurations as the closed region (argued from the docstring, not checked). **Not cases, and I think they cannot be**: `turn_locked` itself (it is the closure premise), `TurningInTime.locked_ends_rising` and the right side of `locked_turns_in_time_on_window_iff` (their content is the level's arithmetic, a rank: block 1), `RuleShaping.favours_iff` (arithmetic of counts).
+- **T6 (no threshold).** The statement is of regions closed under relations and an order of first steps. In the built family more level ends a start that less keeps in 100 cases: parameters `(2, 9, 2, 1, 1, 1)`, window 8, share `(1, 2)`, rule `C`: level 8 goes on (`1,2,8,C → 2,1,7,O → 1,2,4,O → 0,2,2,O → …`), level 9 ends (`1,2,9,C → 2,1,8,C → 2,0,5,O → 1,0,2,O → 0,0,0,O → DEAD`): at 9 the level after one step is still at the window's edge, the rule stays, and the next configuration is past keeping. 519 of 4,581 keepable configurations are kept by neither constant rule.
+- **T7.** Part 6.
+- **T8.** Three small definitions on the grammar (`«兼»`, `«双»`, `«域»`); no new carrier, no new model. It is one law at several relations. The built family is a test bed and is not proposed.
+
+## 6. What the program found
+
+Scripts and outputs, all in `/Users/ren/theories/tmp/fm/centre21/designs/F-grammar-third-relation/`: `abstract.py` (outputs `out-abstract-1.txt`, `out-abstract-2.txt`; 4.6 s and 13.6 s), `toy.py` (`out-toy.txt`, 1.8 s; traces in `out-traces.txt`), and the first form of the built family, kept because its failure is a finding (`toy_v1_rule_not_in_state.py`, `out-toy_v1.txt`).
+
+**Abstract frames (exhaustive unless said).**
+
+| check | space | result |
+|---|---|---|
+| Link 1, pullback | all relations on 2 and 3 points, 1,500 random on 4; all readings; all `P`: 380,608 triples | 0 failures. `K (E∪N) P` strictly inside `K N P` in 82,249 |
+| Link 2 | all relations on 2, 3; 2,500 random on 4; all classes: 40,092 pairs | `K₂` always goes alike. Law: `K₂ = core` in all 428. Total: `K₂ ⊆ core` always, strictly inside in 22,089. Fixed successor, partial: `K₂ ≠ core` in 3,665; with "both or neither has a next": 0 |
+| `«不穷»` as the law at `«续»` | all relations, classes, points on 2, 3: 7,744 | 0 disagreements |
+| (A) | all laws, readings, guards on 2 to 4 points; 2,500 random (law, reading) on 5: 142,552 frames, 170,018 ending courses | (a) 0 violations; (c) 0 violations under p3, p4 |
+| (B) and the rank | all `(N, E, G, F)` on 2 to 4 points: 389,872 frames | equivalence: 0 disagreements where p6 holds (305,148); holds in 100,100, fails in 205,048; every failure has d1, d2 or d3; rank ⟺ p6: 0 disagreements |
+| (C) | all pairs of moves on 2, 3; 2,500 random on 4: 629,288 | a largest at the grain: always. None below the grain: 5,621 |
+| finer reading, same way | 96,444 cases | `X` and `KeptAtGrain` never shrink |
+
+**Nearest misses and smallest breaking instances.**
+
+- (a) is tight: under p3 and p4, with a kept twin, the last `n_sep` equals `n_T` in every case on up to four points (486), and falls short by at most 2 on five (13 of 486 cases in the sample).
+- (c) is an equality (the course looks like one that goes on until the step it ends) on 480 of 5,100 courses at four points; `n_T = 0` on 4,596. In the built family: `n_T = 0` on 21,502 of 26,114 ending courses. For most courses the first step is the start, and the statement says little.
+- (B) without p6: `N = (0,0)`, `E` the identity, `G = {0,1}`, `F = {0}`: `Λ = {0}` goes on, `G ⊆ Λ ∪ KeptAtGrain`, and `G \ Λ = {1}` steps into `Λ`.
+- (C) below the grain: three configurations all read alike, `step₀ = (0,0,1)`, `step₁ = (1,0,2)`, `G = {0,2}`: one rule keeps `{0}`, the other `{2}`, none both (the package's `statewise_not_uniform` in a process).
+- Link 2 off a fixed successor: two points, `0 → {0,1}`, `1 → {0}`, `E` the identity: the core is the identity, `K₂` is empty (the package's `«后不定则核可不同行»`).
+
+**The built family** (120 parameter sets, 1,200 with a window, 30,000 configurations; a configuration is carriers, others, level and the rule in force; the next rule is read from the configuration reached).
+
+- Inside/outside (B): holds for 0 of 1,298 ways with p6; fails by d1 and d3 together (286) or d3 alone (1,012). p6 itself fails for 22.
+- `K T (favours)` empty in all 120; with "or has ended" (share-reading way, summed over the 120): 12,000 configurations, 81 of them going on, 195 ending while something read alike on their way goes on.
+- The lock comes about on a course: 890 steps (share-reading way), e.g. parameters `(2,6,2,1,0,0)`, `(2,0,4,O) → (1,0,0,C)`.
+- Closed at the grain and still keepable by some course of rules: 630 configurations; past keeping and not yet closed at the grain: 4,547. On ending courses `n_T` comes before the step out of the keepable region 630 times, with it 20,872, after it 4,612. The two closings are not ordered.
+- First form of the family (rule not in the configuration): the lock never comes about on a course (0 steps) and `K T (favours)` is empty; that is why the rule in force was made part of the configuration, as `RuleCapture.turn` has it.
+
+## 7. Where it is weakest, and what would refute it
+
+- **It is not a centre.** No level, share or multiplying is in any statement; the first way's "uses up" is exactly what the law cannot give (block 1), and R7 is untouched. I would file it as three links and one refuted guess.
+- **(A) may be nothing more than the old law in a row.** A reader who shows that (a) and (c) follow from `ReadOffInTime`'s `NoReturnAt` laws by taking "feasible" to be "read alike so far" would make it a dictionary. I did not read that module.
+- **`X` is a strange region.** It is "ends, as far as the reading can ever tell", not "can no longer be turned by a move". A finer reading with the way unchanged makes `X` larger, so the course is "closed" sooner; and on most ending courses `n_T = 0`. The statement bites only in the middle region.
+- **The equal-time twin is too narrow.** (a) compares two courses step for step; a rule from a reading is tested against configurations met at different times, which is why `n_T` can come after the last `n_sep` (five points, gap 2).
+- **Link 2 is stated for a fixed successor only**, and its third statement was checked by program, not derived line by line for partial successors.
+- **The third factor of the hinted relation** ("who it thereby favours": the share's order composed in) was not tried; only `E;N` and `E ∪ N`.
+- **Refuted by**: a frame breaking Link 1, (A) or (B) (none in about 1.7 million checks, all on at most five configurations; a search shows where a statement fails, not that it holds); either link found already stated in the package; or a way of putting the level's fall under `«所闭之承最大»` at some relation, which would undo block 1.
+
+## 8. What I did not read
+
+Read whole: the brief, `AFTER.md`, `FROZEN-THE-CENTRE.md`, `WHAT-A-MODEL-MUST-HAVE.md`, `Grammar.lean`, `Viability.lean`, `CommonResponse.lean`. Read in part: the notes `two-requirements-2026-11-21` and `no-return-2026-11-21` (their first 60 and 50 lines, long lines cut), `GrammarLaws.lean` (the declaration list and about 150 lines), `DIRECTION.md` ("The idea" only, lines cut at 1,500 characters), `TurningInTime.lean` (its header to line 140 and three statements), `RuleCapture.lean` (header, `Locked`, `turn_locked`, `locked_stays`), `Keeping.lean` (header and declaration list), `GuardHorizon.lean` (declaration list only), `GuardedStep.lean`, `GrammarTransport.lean`, `RuleShaping.favours_iff`, `LineOnAStock.unending_iff_holds` (statements only). `PLACES.md` was searched for three names, not read.
+
+Not read: `ONE-PAGE.md`, the method chapter and chapters 02, 03, 05, 07; `ReadOffInTime`, `JointKeeping`, `GrammarPath`, `GrammarMap` (beyond two definitions), `Pace` (beyond three definitions), `ClosedCapture`, `PoolFromCourse`, `LineOnAStock` (beyond one statement), `RegimeMargin`, `Optimum`; the renewal files outside the package; `PopulationCorrection.lean` and the meta-attractor study; the notes of 16, 17 and 20 November, `read-a-choice-from-a-reading`, `read-a-future`, `read-registering`, `read-kept-by-goings-on`, the two-ways table, `scratch-lean-2026-11-21`. So whether the three old results already made cases in scratch overlap Link 1 or Link 2 is unknown to me.

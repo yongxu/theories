@@ -1,0 +1,11 @@
+Reader whole-b-55. All four modules were read whole: the opening account and every declaration's statement and docstring. That is ReadOffInTime.lean (1372 lines, read in three parts to the end), ReadStages.lean (889 lines, two parts), ReaderRebuilding.lean (509 lines) and Reading.lean (451 lines). I read proof bodies only where they showed how a built witness is set up. I ran no Lean, build or test. No answer is U.
+
+Three things bear on the centre that the fourteen questions do not quite catch.
+
+1. ReadOffInTime states a general point of no return on courses. `NoReturnAt` is relative to a supplied set of feasible courses and a supplied `keeps`, so the point is a premise-relative definition, not derived from a step law. It also has `Web.too_late_of_own`: a group that reads only the admissions that are themselves what is kept can never read the loss in time. That is a general law of "running down unseen". Its account states that the direction in which a reading turns a course is not stated (it cites `Clearing.read_not_direction`, which I did not open).
+
+2. ReaderRebuilding is a built family. In its member that is rebuilt from the level, the going-on that keeps the level (the reader) is itself lost, and its loss is absorbing (`«取于储者绝而不复»`). The account says it is not proved that this member ends under a cut from every stock, nor that its horizon is monotone in the stock.
+
+3. Reading's `ExchangeLaw.requirement_beyond_course` states that two laws giving the same course can differ in requirement: what is registered in a course does not fix what the course rests on. This bears on the gap between what a going-on rests on and what makes a difference to it.
+
+ReadStages is a static comparison of four two-stage plans, plus chance draws. It has no step dynamics, no level and no point of no return.

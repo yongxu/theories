@@ -1,0 +1,224 @@
+# Task file: EDGE, second batch, reader whole-c-edge2-05
+
+Your 2 modules. In each, BOTH earlier passes found a statement with both outcomes and NEITHER found a law of ending within a bound. For orientation only, what they said (where to look, not evidence).
+
+## HeldPossible.lean  (1171 lines)
+
+### `both_outcomes`
+- pass a: S: `adaptive_keeps_rule_iff` (l. 454) says for every step of `adaptive F G` that the rule stays exactly when G at the old rule and state returns that rule. B: `RaisedRule.ceases` (l. 712) and `RaisedEveryOther.both` (l. 817) exhibit cessation and noncessation under rule equality on different courses of `RaisedRule.process`.
+- pass b: S: `Steps.generation_iff_begins` (l. 403): on a course's moments, a moment is 全生成 at («一», E) exactly where after every later moment a line under E begins (general). No dichotomy of going on and ending for one model found. B: on different built models, `RaisedRule.ceases` (l. 712) every moment ceases while `RaisedEveryOther.both` (l. 817) has «生生» at moment 0 and ¬«息» there.
+
+### `no_return`
+- pass a: S: `Reaching.not_reach_of_grows` (l. 144) concludes that if x is possible under Q at t and impossible at s, no Q-course from s reaches t. The obstruction is loss of a reachable possibility.
+- pass b: S: `Run.possible_of_stretch` (l. 165) (from `Reaching.Possible.of_reach`, imported): along a stretch of Q-moves what is possible later was possible earlier, so what has ceased to be possible under Q is not regained within the stretch; `Reaching.not_reach_of_grows` (l. 144): if x is possible from t and not from s, Q does not reach t from s; `Run.possibleHeld_of_stays` (l. 332): from the step the part stays for good, nothing is added to the possible with it held. Concluded, general, of the possible, not of a level or a giver. B: `RaisedRule.ceases` (l. 712), `CopyDown.ceases` (l. 1111): every moment ceases («息») under what is held.
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N: `Run.departs_of_keepsWidening` (l. 176) states that from every step some bounded stretch is not all Q-moves, an existence of a departure, not ending within a bound; no falling variant found.
+
+### `closed_region`
+- pass a: S: `Reach.same_of_heldMoves` (l. 282) keeps every configuration reachable by class-holding moves in the starting class, assuming `«类» Same`.
+- pass b: S: `Reach.same_of_heldMoves` (l. 282): for a class Same, the region Same-as-start is closed under the held moves; `RuleTower.sameFrom_class` (l. 565), `RuleTower.SameFrom.mono` (l. 560); `RuleTower.reflected` (l. 589) and `RuleTower.held_origin` (l. 601, an instance of `Gated.origin`): moves at most n reflect the possible held from n up, so any trace ending where it holds started where it held or passes a move above n.
+
+### `moves`
+- pass a: S: `RuleTower.step_sameFrom` (l. 573) says that every move labelled a in `RuleTower.process base up` keeps every rule at height a or higher, for arbitrary base and upper rules.
+- pass b: S: `Reaching.heldMoves` (l. 212) is the allowed set of moves of P whose ends are related by Same; `Run.possible_of_stretch` (l. 165): where the d steps of a course from N are moves of Q, what is possible under Q at N + d is possible at N; `Run.not_keepsWidening_of_within` (l. 184); `RuleTower.step_sameFrom` (l. 573): the move a keeps the rules from height a up; `RuleTower.possible_iff_held` (l. 581).
+
+### `reading`
+- pass a: S: `Reaching.steps_heldMoves_iff` (l. 254) identifies steps allowed by a supplied sameness relation with continuations of the underlying step under that relation. `Reach.heldMoves_iff_sameAsStart` (l. 312) equates local holding with staying in the starting class when sameness is a class.
+- pass b: S (in the sense of a part read alike, not an observation by a formation): `Reaching.PossibleHeld` (l. 217) is relative to a relation Same read as a part held; `Run.changes_of_heldGrows` (l. 322): where something possible with the part held at n+1 is not so at n, the step changes the part; `Reach.same_of_heldMoves` (l. 282): for a class, what the held moves reach is Same as the start. No law found in which what a formation registers decides its choice.
+
+### declarations of HeldPossible.lean (by script)
+  l.144 theorem Reaching.not_reach_of_grows
+  l.150 theorem Reaching.not_step_of_grows
+  l.165 theorem Run.possible_of_stretch
+  l.176 theorem Run.departs_of_keepsWidening
+  l.184 theorem Run.not_keepsWidening_of_within
+  l.193 theorem Run.not_keepsWidening_of_returns
+  l.212 def Reaching.heldMoves
+  l.217 def Reaching.PossibleHeld
+  l.224 theorem Reach.of_heldMoves
+  l.230 theorem Reach.heldMoves_mono
+  l.237 theorem Reaching.PossibleHeld.possible
+  l.243 theorem Onward.within_eq_heldMoves
+  l.247 theorem Branching.keeping_eq_heldMoves
+  l.254 theorem Reaching.steps_heldMoves_iff
+  l.260 theorem Reaching.reach_heldMoves_iff
+  l.270 theorem Reaching.possibleHeld_iff_line
+  l.282 theorem Reach.same_of_heldMoves
+  l.290 theorem Trace.heldMoves_sameAsStart
+  l.300 theorem Trace.sameAsStart_heldMoves
+  l.312 theorem Reach.heldMoves_iff_sameAsStart
+  l.322 theorem Run.changes_of_heldGrows
+  l.332 theorem Run.possibleHeld_of_stays
+  l.341 theorem Run.changes_of_heldKeepsWidening
+  l.349 theorem Run.not_heldKeepsWidening_of_stays
+  l.358 theorem Run.held_change_located
+  l.371 theorem Run.held_change_recurs_of_keepsWidening
+  l.382 theorem Run.not_unending_of_heldKeepsWidening
+  l.391 theorem Run.begins_of_heldKeepsWidening
+  l.403 theorem Steps.generation_iff_begins
+  l.420 theorem Run.generation_of_heldKeepsWidening
+  l.428 theorem Run.generation_of_held_changes
+  l.436 theorem Run.not_heldKeepsWidening_of_listed
+  l.454 theorem adaptive_keeps_rule_iff
+  l.462 theorem Run.adaptive_rule_changes_of_keepsWidening
+  l.475 theorem Run.adaptive_rule_change_recurs_of_keepsWidening
+  l.495 theorem «及在渐粗列之相续»
+  l.510 theorem Reaching.reach_held_of_sequence
+  l.522 theorem Reaching.possible_iff_held_of_sequence
+  l.543 def process
+  l.552 def synchronous
+  l.557 def SameFrom
+  l.560 theorem SameFrom.mono
+  l.565 theorem sameFrom_class
+  l.573 theorem step_sameFrom
+  l.581 theorem possible_iff_held
+  l.589 theorem reflected
+  l.601 theorem held_origin
+  l.622 theorem Run.ruleTower_move_above_recurs_of_keepsWidening
+  l.647 def process
+  l.651 def adm
+  l.654 def Same
+  l.657 def course
+  l.660 theorem rule_changes
+  l.665 theorem held_trace
+  l.677 theorem held_iff
+  l.686 theorem held_keeps_widening
+  l.694 theorem reach_raise
+  l.700 theorem whole_every
+  l.706 theorem not_renews
+  l.712 theorem ceases
+  l.718 theorem generation
+  l.731 def odd
+  l.736 def rule
+  l.742 theorem step_cases
+  l.752 def course
+  l.758 theorem rule_le
+  l.766 theorem held_iff
+  l.772 theorem held_keeps_widening
+  l.779 theorem whole_every
+  l.785 theorem renews_without_end
+  l.799 theorem begins_after_even
+  l.806 theorem generation
+  l.817 theorem both
+  l.832 def process
+  l.836 def adm
+  l.839 def Same
+  l.842 def flip
+  l.847 def rule
+  l.850 def course
+  l.853 theorem cond_not_ne
+  l.858 theorem rule_changes
+  l.862 theorem every
+  l.868 theorem held_zero
+  l.880 theorem converse_fails
+  l.896 theorem returns
+  l.901 theorem generation
+  l.908 theorem generation_without_widening
+  l.915 theorem comes_back
+  l.922 theorem exceeds_now
+  l.928 theorem held_widens
+  l.942 theorem returning_has_both
+  l.960 def process
+  l.964 def adm
+  l.967 def start
+  l.970 theorem possible_two
+  l.975 theorem not_held
+  l.984 theorem tower_law_fails
+  l.997 def process
+  l.1002 def adm
+  l.1005 def rule
+  l.1008 theorem rule_below
+  l.1011 theorem rule_above
+  l.1014 def course
+  l.1027 theorem changes_iff
+  l.1037 theorem rule_next
+  l.1045 def copied
+  l.1050 theorem held_iff
+  l.1076 theorem held_keeps_widening
+  l.1093 theorem whole_every
+  l.1098 theorem not_renews
+  l.1111 theorem ceases
+  l.1122 def process
+  l.1125 def Same
+  l.1129 theorem differs
+  l.1140 def process
+  l.1143 theorem not_five_le_three
+  l.1148 theorem held_ends
+  l.1160 theorem differs
+
+## Horizon.lean  (469 lines)
+
+### `both_outcomes`
+- pass a: B: `Renewable.prefix_does_not_decide` (l. 108) asserts both whole-run outcomes for separate continuations in one process, for every horizon and with the same finite history. It gives witnesses, not a threshold equivalence.
+- pass b: B: `Renewable.prefix_does_not_decide` (l. 108): for every h, two runs of one built model agree up to h, and one is `RenewingIn` while the other is `ConsumingIn`. It is not an exactly-when. S: `refutable_passes_iff_markov` (l. 453) is an iff of a logical principle.
+
+### `no_return`
+- pass a: S: `Adheres.closed` (l. 319) concludes that if no K-run agrees with a prefix, every run agreeing with that prefix fails adherence. This is exclusion by a witnessed history.
+- pass b: N: no point of no return is stated. B: `ConsumingIn .focal` is concluded for the consuming run (l. 108). The law is that no finite prefix decides whether consumption has been reached.
+
+### `rank`
+- pass a: N: Not found in the statements read.
+- pass b: N
+
+### `closed_region`
+- pass a: S: `Adheres.adheres` (l. 274) gives idempotence in conjunction with `Adheres.of` (l. 265), and `Refutable.adheres_iff` (l. 297) identifies a refutable, double-negation-stable reading with its adherence class.
+- pass b: S: `Adheres.closed` (l. 319): what adheres to a reading is closed in the topology of runs. `adheres_passes` (l. 361): a reading of tests fixed by prefixes holds at every run adhering to it (safety). Neither is a region closed under steps.
+
+### `moves`
+- pass a: B: `Renewable.amount_reading` (l. 170) says the draw test act ≤ 1 is determined through the step, every `withinRenewal` action passes, and the two whole-run outcomes can both fail it before any given horizon.
+- pass b: B: `Renewable.process` is defined in Labelled, near l. 552; its action is the amount drawn. `prefix_does_not_decide` (l. 108): from one start, an action of 2 before h, then a choice of later actions, one renewing and one consuming. `Run.cons` (l. 93). No general law says what a choice keeps.
+
+### `reading`
+- pass a: B: `Renewable.finite_reading_includes_consumption` (l. 147) says any reading on this process fixed by agreement through h and including every focal-renewing run includes a focal-consuming run. S: `adheres_passes` (l. 361) gives passage of all tests for any run adhering to their passing runs if each test is prefix-determined.
+- pass b: S: `finite_reading_includes_consumption` (l. 147): a reading fixed by the first h steps (premise `decided`) that includes every renewing run includes a consuming run (built Renewable). `cycle_reading_not_finite` (l. 186). `amount_reading` (l. 170). General: `Refutable` (l. 236), `Adheres` (l. 246), `Refutable.not_not` (l. 282) and `adheres_passes` (l. 361): a run adhering to a reading of tests fixed by prefixes passes them. `refutable_passes_iff_markov` (l. 453).
+
+### declarations of Horizon.lean (by script)
+  l.93 def Run.cons
+  l.100 def Run.AgreeUpTo
+  l.108 theorem prefix_does_not_decide
+  l.147 theorem finite_reading_includes_consumption
+  l.158 theorem whole_run_includes_overdraw
+  l.170 theorem amount_reading
+  l.186 theorem cycle_reading_not_finite
+  l.201 theorem Run.AgreeUpTo.refl
+  l.204 theorem Run.AgreeUpTo.symm
+  l.208 theorem Run.AgreeUpTo.trans
+  l.213 theorem Run.AgreeUpTo.mono
+  l.220 def stretchOrder
+  l.226 def Run.stretches
+  l.236 def Refutable
+  l.241 def Verifiable
+  l.246 def Adheres
+  l.250 theorem refutable_iff_refutableBy
+  l.258 theorem adheres_iff_adheresBy
+  l.265 theorem Adheres.of
+  l.268 theorem Adheres.mono
+  l.274 theorem Adheres.adheres
+  l.282 theorem Refutable.not_not
+  l.290 theorem Refutable.adheres_least
+  l.297 theorem Refutable.adheres_iff
+  l.304 theorem not_refutable_of_adheres
+  l.310 theorem not_verifiable_of_adheres
+  l.319 theorem Adheres.closed
+  l.328 theorem refutable_adheres_iff
+  l.342 theorem refutable_adheres_of_em
+  l.353 def Passes
+  l.357 def ByPrefixes
+  l.361 theorem adheres_passes
+  l.367 def Markov
+  l.371 theorem refutable_passes
+  l.378 theorem false_below_or_true
+  l.394 def process
+  l.397 def run
+  l.400 theorem agree_iff
+  l.405 def splice
+  l.408 theorem splice_agree
+  l.412 theorem splice_after
+  l.419 def Recurs
+  l.422 def Eventually
+  l.425 theorem recurs_not_refutable
+  l.434 theorem eventually_not_refutable
+  l.442 theorem never_not_verifiable
+  l.453 theorem refutable_passes_iff_markov

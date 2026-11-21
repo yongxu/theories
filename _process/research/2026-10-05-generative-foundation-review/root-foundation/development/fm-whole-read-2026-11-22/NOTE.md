@@ -1,0 +1,46 @@
+# A read of every module of the package by fifteen questions: 22 November 2026
+
+*AI-written (Claude Fable, board row FM), 22 November 2026, 01:23:03 WIB (clock, read by the command that wrote this). A read: nothing was proposed by the readers, no Lean was written or built for it. Every return is one reader's, unchecked, kept word for word. No person has read any of it. The counts below are of marks and say nothing of the theory. Filed from scratch (`tmp/fm/whole/`) on 22 November at 01:25:38 WIB by the clock; the briefs, the notes written after them and the third readers' task files are filed as `.md.txt`, word for word, and each hash file names its brief by the name it had in scratch.*
+
+## Why
+
+On the night of 21 November eight designs of a model of the map's centre were each refuted, and the refuters found that seven had proposed as new what the package states in general, in modules the listing of places (158 of 407) does not cover. A design made before the whole Lean is known repeats what is there. So every module was read once, by the questions that night raised.
+
+## What was asked, and of whom
+
+- **The questions** were frozen before any reader ran ([BRIEF-WHOLE-READ.md.txt](BRIEF-WHOLE-READ.md.txt), with its hash): for each module, what it states, and whether it has moves, a reading, a share, a level that runs down, a giving that is itself a going-on, a cost to the one that keeps, multiplying, a point of no return (concluded or a premise), both outcomes, a comparison, a rank, a closed region, forms changing while the going on continues; and how it was read. **Every answer begins with one letter**: `S` from a statement read, with the declaration and its line; `D` from a docstring or the opening account only; `B` only in a built case; `N` not found, every statement of the module read; `U` not reached.
+- **Two whole passes on the same material**, neither seeing the other: pass a, Astra 6.2 at effort high, 21 readers; pass b, Opus, 82 readers. Each covered all 407 modules (300,755 lines), cut into batches by name. Readers answered from the module alone.
+- **A third pass**, Fable, each reader with a script's list of its modules' declarations in hand ([BRIEF-THIRD-PASS.md.txt](BRIEF-THIRD-PASS.md.txt)): SETTLE, 31 readers on every cell where the two passes differ; EDGE, 29 readers on the 71 modules where both passes found both outcomes, a point of no return, a rank and a closed region; then, after the coordinating session showed that this filter could only confirm what it tested, EDGE again, 13 readers on the 58 modules where both passes found both outcomes and neither a rank.
+
+What came in after each brief was frozen, from the two other sessions and the session that ran the survey of 18 to 20 November, is in [AFTER-WHOLE-READ.md.txt](AFTER-WHOLE-READ.md.txt), in order, with the clock.
+
+## What came back, by count
+
+- Both passes returned all 407 modules, every answer with a valid letter, none `U`; every `how_read` says all statements were read. (Recounted by the coordinating session's own script.)
+- On the thirteen yes-or-no fields the passes agree in 4,633 of 5,291 cells: 2,310 both yes, 2,323 both not found. They differ in 658 cells, in 330 modules: 503 where pass a has a declaration and pass b says not found, 155 the other way.
+- **By script** (`check_citations.py`): of the declaration names in answers marked `S` or `B`, pass a has 5,143, 99.4% declared in the module they are said of; pass b has 10,158, 88.5% in the module, 6.7% in another module and 4.8% found nowhere (the pattern does not know namespaces or local names, so that last figure is too high). Of 25,999 declared names in the 407 modules, 8,151 are named by one pass or the other; the rest are listed in `not-named.json`. So a "not found" here is of a module whose statements a reader says it read, and of a named set of declarations it named.
+- **SETTLE.** Of the 503 cells where pass b said not found and pass a did not, the third reader found the thing there in 312 and not there in 191. Of the 155 the other way, there in 85 and not in 70. Asked which pass was right, it said "both in part" 331 times (the thing is there in a weaker or other form than the yes side said), pass b 201 times, pass a 125 times, neither once. **Neither pass's "not found" stands by itself**: 312 of pass b's and 85 of pass a's were withdrawn at the statements.
+- **An `S` says where a statement is and what it concludes; it is not a premise list.** On fourteen theorems for which a complete hypothesis list exists (the survey's trial on twenty), pass a names 7 and pass b 9; no sentence was against a signature, and neither carried all the premises (the coordinating session's check).
+
+## What the EDGE readers found
+
+129 modules in all (71 and 58). By their returns: 75 have one statement with both outcomes and an exact condition, 14 only in a built case, 40 none.
+
+- **The thought they were set to test is refuted as a description of every exact edge.** It was: where the package states both outcomes with an exact edge, it is a closed region on one side and a rank on the other. Of the 58 modules of the second batch, 40 have an exact statement with nothing bounded and nothing falling on the losing side. Many are of no course at all (one choice, one step, one configuration).
+- **Kinds of exact edge found**, each as one reader's return: a region against a rank (one level; any law that keeps an order: `RegimeMargin`); a region on the keeping side and nothing said on the other (`Viability.kernel_iff_certificate`; `ReadingLoop.keeps_continues_iff`, with a policy and a reading in it); in built cases of the counts model, a region on both sides with a reading in the statement (`RuleShaping.threshold_rises` with its other half; `DrawnShaping.drawn_locks`); and `Settling.keeps_changing_iff`, with every configuration listed, of some run on which change recurs for ever.
+- **No module was returned with one exact statement of both outcomes of a course that has a choice among moves, a reading, and a bound on the losing side.** Eight have a choice and a reading in an exact statement (`Diagonal`, `DrawnShaping`, `MapRegions`, `OpenedCorrection`, `ReadingLoop`, `RouteFormation`, `RuleShaping`, `Verification`); none of the eight has a rank, two are built cases, and one (`Verification.decided_at_stretch`) is not of going on or ending. That is where a statement of the centre would have to stand, said now of a named set of modules.
+
+## What was not read
+
+- **Lean outside the package**: 1,422 tracked Lean files with copies left out, against the package's 407. October's `conditional/renewal`, `deeper/RelationalRenewal.lean`, the market model's `formal/`, `RecursiveSelection.lean`, `universal-ethics/generative-capacity/`, `PopulationCorrection.lean`. A batch for both kinds of model is owed.
+- **Proofs**, except where a reader says so.
+- **What the fifteen fields do not ask** (the survey session's list): premises brought in by a section's variables; concluded or handed in, for more than the point of no return; the carrier; theorems that name another module's declaration in their statement; an account that can be wrong of what it is about; standing. The EDGE readers were asked these of 129 modules; the two passes were not.
+- The agreed negatives (2,323 cells) were not tried.
+
+## What it cost
+
+Pass a: 97.7 million tokens (Astra, by its own footers), about 30 minutes. Pass b: 14,051,162 tokens (Opus), 25 minutes; I had named a ceiling of 10 million and did not cap the readers one by one. Third pass: 10,965,379 tokens for SETTLE and the first EDGE batch (25 minutes), 2,335,457 for the second EDGE batch (nine minutes); ceiling named 14 million.
+
+## Where it is
+
+`returns/whole-a.json`, `whole-b.json` (the two passes), `whole-c.json` (SETTLE, one place per module with the settled fields), `whole-edge.json` (both EDGE batches), each in the shape the listing of places reads; the same as returned in `whole-c-settle.json`, `whole-c-edge.json`, `whole-c-edge2.json`. `reports/read-<reader>.md.txt`: 176 readers' own reports. `batches.json`, `differences.json`, `not-named.json`, `check_citations.py.txt`, `listed_world.py.txt` with `listed-world.json` (`declarations.json`, the script's list of each module's declarations, is made again by `check_citations.py` and is not filed). The two briefs with their hashes; `third/`, the third readers' task files. The scratch Lean modules on the edge law that the last sections of the notes speak of are not filed here: their readers had not returned.

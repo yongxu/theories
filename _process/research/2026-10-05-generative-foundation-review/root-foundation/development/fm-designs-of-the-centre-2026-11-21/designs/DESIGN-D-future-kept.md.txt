@@ -1,0 +1,153 @@
+*AI-written (Claude Fable, designer D-future-kept, one of eight), 21 November 2026. Paper and Python only; no Lean was run, nothing is proved in Lean, no person has read it. Kept, held, possible, forgo, take, close are working names; the Lean's names are in code type.*
+
+## 1. The design in ten lines
+
+1. Configurations and steps are those of any `Process S A`; a course is a `Run P`. For instances there is one small model, RS: a level `L ≤ C` and, for each class, the life left to its unit; a move is a set of classes to form; a formed unit takes its forming cost from the level, a present unit adds or draws its amount, a unit whose need the level does not meet is lost, and a unit not formed again lapses.
+2. A family of guards `G : X → S → Prop` is the reading in which the future is told (in RS: "a unit of class x is present").
+3. The future at a configuration is what can still be kept from it: `Kept s x := Keepable P (G x) s` (`JointKeeping.Keepable`: some run from `s` stays within the guard). That is the Lean's `adm` of `Reaching` set to keepability.
+4. Along a course it lies between two chains the Lean already has laws for: `Held n` (what the course itself holds from step `n` on), which never loses, and `Possible n` (`Reaching.Possible` at that `adm`), which never gains. `Held ⊆ Kept ⊆ Holds`, `Kept ⊆ Possible`.
+5. A way of selecting is what picks the move: a rule from what it registers (nothing; which guards hold; the configuration). Its course is one run.
+6. **Main statement, part 2.** A course loses nothing of the kept future from step `N` on exactly where, from `N` on, the kept future is what the course itself holds for good. So the Lean's keeping widening, said of the kept future, holds exactly of a course that forgoes nothing and goes on beginning to hold.
+7. **Part 3.** The guards that stay kept along a course are kept together at its start. So from a configuration whose kept guards are not kept together, every course loses one; and where they are, some course loses none.
+8. **Part 4.** Where one move is at least as good as any other from any configuration below (in RS: no class draws and forming is free), the kept guards are always kept together and the way that registers nothing and always takes that move forgoes nothing and takes all that is possible. Forced loss needs keeping to cost.
+9. Both ends from one start of one RS instance: a way that registers nothing closes everything in six steps; a way that registers what holds takes all three classes with nothing lost. The two courses share their first three configurations.
+10. What it does not give: which way closes and which takes, short of running the course; a lock; a share. And part 2 reads as a negative for the direction: a way of selecting that forgoes anything does not keep widening in the Lean's sense.
+
+## 2. Definitions
+
+Existing, used as they stand: `Process`, `Run`, `Run.onward`, `Reach`, `JointKeeping.Keepable P g s := ∃ r : Run P, r.state 0 = s ∧ ∀ n, g (r.state n)`, `Keepable.start`, `Keepable.mono`, `KeepableStep.keepable_step_iff`, `Reaching.Possible P adm s x := ∃ t, Reach P s t ∧ adm t x`, `Run.possible_of_next`, `Run.not_possible_returns`, `WideningOnTheMap.includes`, `KeepsWideningFrom`.
+
+New (for `P : Process S A`, `G : X → S → Prop`, `r : Run P`):
+
+```
+def Holds  (r) (n : Nat) (x : X) : Prop := G x (r.state n)
+def Kept   (r) (n : Nat) (x : X) : Prop := Keepable P (G x) (r.state n)
+def Held   (r) (n : Nat) (x : X) : Prop := ∀ k, G x (r.state (n + k))
+def Poss   (r) (n : Nat) (x : X) : Prop :=
+  Reaching.Possible P (fun t y => Keepable P (G y) t) (r.state n) x      -- no new notion
+def Together (s : S) (R : X → Prop) : Prop :=
+  Keepable P (fun t => ∀ x, R x → G x t) s                               -- no new notion
+structure Dominates (le : S → S → Prop) (top : A) (nextTop : S → S) : Prop where
+  refl : ∀ s, le s s
+  step : ∀ s, P.step s top (nextTop s)
+  only : ∀ s t, P.step s top t → t = nextTop s
+  dom  : ∀ s ŝ a t, le s ŝ → P.step s a t → le t (nextTop ŝ)
+  up   : ∀ x s ŝ, le s ŝ → G x s → G x ŝ
+```
+
+The model RS (an instance): `m` classes, life `ℓ ≥ 1`, cap `C`; for each class `x`: `w x : Int` (what a present unit adds to the level each step; negative: draws), `c x : Nat` (forming cost), `n x : Nat` (need), `base x : Bool` (formable from nothing), `sup x` (classes whose presence lets `x` be formed). Configuration `(L, a)`, `0 ≤ L ≤ C`, `a x ∈ {0..ℓ}` the life left (0: absent). Move: `F ⊆ classes`. `next (L, a) F`: going through the classes in order, `x ∈ F` is formed if `a x > 0 ∨ base x ∨ ∃ y ∈ sup x, a y > 0` (read at the configuration the step starts from) and `c x ≤` what is left of `L`, which it then lowers; `a¹ x = ℓ` if formed, else `a x − 1` (not below 0); `L¹ = clamp(L − costs + Σ_{a¹ x > 0} w x, 0, C)`; `a' x = a¹ x` if `n x ≤ L¹`, else 0; `L' = L¹`. `P.step s F t := t = next s F`. Guards `G x (L, a) := a x > 0`. A way of selecting is `rule : O → Move` with `obs : S → O`; its course is the run of `s ↦ next s (rule (obs s))`. Three readings were run: `O = Unit` (registers nothing), `obs = ` which guards hold, `obs = id`.
+
+## 3. The main statement
+
+**Theorem (the kept future along a course).** For every process `P`, family `G`, run `r`, with no premise in parts 1 to 3:
+
+1. *Order.* `Held n ⊆ Kept n ⊆ Holds n`, `Kept n ⊆ Poss n`, `Held n ⊆ Held (n+1)`, `Poss (n+1) ⊆ Poss n`. A guard not kept at `n` and kept at `n+1` does not hold at `n`.
+2. *Losing nothing is forgoing nothing.* For every `N`:
+   `(∀ n, N ≤ n → ∀ x, Kept n x → Kept (n+1) x) ↔ (∀ n, N ≤ n → ∀ x, Kept n x ↔ Held n x)`.
+   Hence `KeepsWideningFrom (Kept r) N ↔ (∀ n ≥ N, ∀ x, Kept n x ↔ Held n x) ∧ ∀ n ≥ N, ∃ k x, Held (n+k) x ∧ ¬ Held n x`.
+3. *What stays kept is kept together.* For every `N`: `Together (r.state N) (fun x => ∀ n, N ≤ n → Kept n x)`. Equivalently, for every `s` and `R`: `Keepable P (fun t => ∀ x, R x → Keepable P (G x) t) s ↔ Together s R` (keeping what is each keepable is keeping all; with one guard, `Keepable` is idempotent). Hence: some run from `s` never loses a guard kept at `s` ↔ `Together s (Kept at s)`; and if not, for every run from `s`, not all guards kept at `s` are kept at every step.
+4. *Where one move forgoes nothing.* If `Dominates le top nextTop`, then for the run `r̂` from `s` that takes `top` at every step: `Kept n x ↔ Held n x` for every `n`, `Together s (Kept at s)`, and `Poss 0 x → ∃ n, Held n x`. In RS, `top` = "form every class" with `(L, a) ≤ (L̂, â)` pointwise dominates when `w x ≥ 0` and `c x = 0` for every `x`.
+
+**Proof sketch.**
+1. `Held ⊆ Kept`: `r.onward n` starts at `r.state n` and stays in `G x`. `Kept ⊆ Holds`: `Keepable.start`. `Kept ⊆ Poss`: `Reach` is reflexive. `Held` up: shift `k`. `Poss` down: `Run.possible_of_next`. Last sentence: `keepable_step_iff`, right to left.
+2. Right to left: `Kept n = Held n ⊆ Held (n+1) = Kept (n+1)`. Left to right: fix `n ≥ N` and `x` with `Kept n x`; by induction on `k`, `Kept (n+k) x`; by `Keepable.start`, `G x (r.state (n+k))`; so `Held n x`. The other inclusion is part 1. The corollary: the first half of `KeepsWideningFrom` is the left side (induction on the stretch); in the second half replace `Kept` by `Held`.
+3. Put `R x := ∀ n ≥ N, Kept n x`. On `r.onward N`, at each step `k` and each `x` with `R x`, `Kept (N+k) x`, so `G x` holds there (`Keepable.start`). The equivalent form: left to right by `Keepable.mono` with `Keepable.start`; right to left, each state of the keeping run is the start of its own tail.
+4. By induction `le (r.state n) (r̂.state n)` for every run `r` from `s` (`dom`). If `r` keeps `G x`, `up` gives `G x (r̂.state n)` for all `n`. The tail of `r̂` is the `top`-run from where it stands (`only`), so the same holds at every step. For the last clause, a configuration where `x` is keepable is reached at some step `k` of a run that then keeps it; `r̂` dominates that run. RS: with no draws and no costs, a larger configuration forms at least the same classes under a larger set, so lives, level and survivors are at least as large.
+
+**Premises, marked.** Parts 1 to 3: none. Part 4: `Dominates`, *structural* (it says the process has an order and a greatest move; it is checked from RS's numbers). In RS, handed in: `w`, `c`, `n`, `base`, `sup`, `ℓ`, `C`. The level's fall comes about from draws and costs. The giving is by units that must themselves be kept, but the amount `w` is handed in and comes from across the boundary. The lock, the share and the reading's revision are absent. The turn is a move chosen, not derived.
+
+**What part 2 says of the direction.** "Nothing held is lost" is the first half of the Lean's keeping widening. Said of what can still be kept, it holds exactly where the course has no kept future but its own. A way of selecting that passes over something it could have kept loses it, by definition of the chain. So the second way cannot be both a selecting among futures and a keeping widening of the kept future. In instance I3 below a course ends holding everything possible only by first losing a guard it kept.
+
+## 4. R1 to R7
+
+- **R1, partly.** A unit of a class is there only if formed from a unit of its class or of a supporting class. Support is asked for forming only.
+- **R2, half.** The level is finite and runs down by draws and costs. What adds to it is units in the model that lapse unless kept. The amount added is not taken from anything in the model.
+- **R3, partly.** Keeping a class costs the level (forming cost every `ℓ` steps at least). It is not a cost to the keeper's own standing.
+- **R4, left out.** No share, no rule set again from what it favours. Parts 1 to 3 hold of every course, locked or not, so the cut is before the lock, not instead of it.
+- **R5, yes.** `Keepable`, and the step of no return as the step at which a guard leaves `Poss`.
+- **R6, the first half.** A reading enters twice: the guard family, and what the rule registers. No revision.
+- **R7, yes, with a negative.** Part 2 relates a course, and so a way of selecting, to widening of what can be kept after it.
+
+This cut first because the angle's question is prior to the lock: what any way of selecting does to what can be kept.
+
+## 5. T1 to T8
+
+**T1.** Parts 2, 3 and 4 were not found in what was read: the two package files that name `Keepable` (`JointKeeping.lean`, `KeepableStep.lean`, by a search of the package), the scratch modules' declaration lists of 21 November, and nine entries of `PLACES.md`. In scratch, `keepable_of_run` appears to be `Held ⊆ Kept`. They do not follow by unfolding: each needs `Keepable.start`, a tail of a run and an induction. They are short. A strict reader can file each as "older lemmas in a row"; what is new is the place (keepability as `adm` along a course) and what part 2 then says.
+
+**T2.** Above, under "Premises, marked".
+
+**T3.**
+- *Keepability in part 2: idle.* Part 2 holds with `Holds` in place of `Kept` on all 3,603,768 courses of run 1 (`F_holds_viol 0`); on paper it holds of any chain between `Held` and `Holds`. Keepability works in part 3 (with `Holds` it is vacuous) and in the gap `Holds ∖ Kept`: 80,820 of 162,000 configurations (life 1) hold a guard no run keeps.
+- *The horizon.* 34,042 pairs (configuration, class) at life 1 hold now and after some move, and no run keeps them.
+- *Cost.* Smallest instance found: class 0 adds 0, costs 1; class 1 adds 1, free, needs level 2. At level 1 with both present each is kept and they are not kept together. With forming free there is no such configuration. Over the grids: 0 of 1,080 free instances have one; 3,268 of 16,108 costly instances do.
+- *Support.* In the T4 instance, with every class formable from nothing, way 1's course keeps all three classes possible at every step and closes nothing.
+- *What the way registers.* I2: class 0 draws 1 and needs level 2, class 1 adds 1. From level 0 with nothing present both can be held for good by forming `{1}` below level 2 and `{0,1}` from there. Over all 256 maps from what holds to a move, at most one class is held. Counts: 187 of 13,998 such starts (life 1), 1,032 of 11,657 (life 2).
+- *The guard family.* Life 2, guards "class x's unit is fresh" and "is old" beside "class x present": all 3,096 courses that lose nothing and take both classes in the coarse reading go on losing a kept guard for ever in the fine one (courses of the one rule from the configuration, which forms as few classes as it can; other rules were not run in the fine reading).
+- *Not shown to do work:* the cap, and lives (no run with units that never lapse).
+
+**T4.** Part 2 is an "exactly when"; both sides from one start of one instance (run 2 A, run 3 §1). Class 0 adds 1, costs 1, formable from nothing; class 1 draws 1, needs level 2, formed where 0 is present; class 2 adds 1, formed where 1 is present. Cap 4, life 1, start level 4, nothing present.
+
+```
+way 1 (registers nothing): always forms {0,1}
+ step 0  level 4 lives [0,0,0] | holds {}    kept {}    possible {0,1,2} held for good {}
+ step 1  level 4 lives [1,0,0] | holds {0}   kept {0}   possible {0,1,2} held for good {}
+ step 2  level 3 lives [1,1,0] | holds {0,1} kept {0,1} possible {0,1,2} held for good {}
+ step 3  level 2 lives [1,1,0] | holds {0,1} kept {0,1} possible {0,1,2} held for good {}
+ step 4  level 1 lives [1,0,0] | holds {0}   kept {0}   possible {0}     held for good {}
+ step 5  level 0 lives [1,0,0] | holds {0}   kept {}    possible {}      held for good {}
+ step 6* level 0 lives [0,0,0] | holds {}    kept {}    possible {}      held for good {}
+way 2 (registers what holds): forms the present classes and the next one
+ step 0  level 4 lives [0,0,0] | holds {}      kept {}      possible {0,1,2} held for good {}
+ step 1  level 4 lives [1,0,0] | holds {0}     kept {0}     possible {0,1,2} held for good {0}
+ step 2  level 3 lives [1,1,0] | holds {0,1}   kept {0,1}   possible {0,1,2} held for good {0,1}
+ step 3* level 3 lives [1,1,1] | holds {0,1,2} kept {0,1,2} possible {0,1,2} held for good {0,1,2}
+```
+
+The courses agree through step 2. At step 3 of way 1 what holds is as at step 2 and everything is still possible; its move there is the step of no return for classes 1 and 2. At step 5 class 0 holds and nothing is kept. Way 2 loses nothing, gains at three steps, and with life 1 no unit is present at two steps. With three classes the widening then stands; widening for ever needs infinitely many guards (`not_keepsWidening_of_listed`) and was not run. Over the grids, 11,591 starts have both a tested course that closes everything and one that loses nothing, gains and takes everything.
+
+**T5. Mostly not met.**
+- *Choice side, one small case.* `JointKeeping.keepable_and_iff_of_kernel_left` (and `_right`), statement unchanged: take the run that keeps `g₂` from `s`; `g₂` is kept at each of its steps (its tail), `g₁` too (the kernel is closed forward and the tail stays in it); part 3 gives both together. Part 3 does the work; the proof is not shorter than the one that stands. `Keepable.each` is part 3's other direction. `Run.possible_of_next` and `Run.not_possible_returns` are used at `adm := Keepable`, unchanged; they are not cases of anything here. `GuardHorizon.closed_viable`, `Keeping.keptFor_of_closed`, `Viability.kernel_iff_certificate`, the common response, `renewal_closure_theorem`: not cases.
+- *Lock side: none.* `LineOnAStock.unending_iff_holds` reads here as "held for good from the start exactly where, the guard held before, the course comes to a configuration it is kept from"; the general half is trivial for a process with one course and its content (`Holds` reached under the regime) is untouched. `locked_ends_rising` concludes `Poss` empty within a bound; nothing here does work in it.
+- *The angle's law.* `keepsWidening_iff_generation_losing_nothing` is used at `Q := Kept r`, unchanged; part 2 adds a third equivalent for that chain. It is not a case.
+
+**T6.** No statement sorts starts by the level. By program, for one fixed way more level at the start gives less held for good in 2,036 pairs (life 1), 689 (life 2), 43 (three classes); for instance forming everything from level 1 holds class 0 for good and from level 2 ends with nothing (run 3 §4). Said plainly: for the kept future itself (over all ways), with the units the same, more level never kept less in any instance searched (0 pairs), so RS shows the phenomenon for a way and not for keepability.
+
+**T7.** Part 6.
+
+**T8.** New definitions: `Kept`, `Held` (two chains), `Dominates` (one bundle of premises), RS (parameters, `next`, guards). Parts 1 to 3 are laws of existing notions at one new place; part 2 is one law at every guard family and every chain between `Held` and `Holds`. RS is a new model beside the others, used for instances and for part 4's case, and gives back none of the old models' laws.
+
+## 6. What the program found
+
+Scripts and outputs, all in `/Users/ren/theories/tmp/fm/centre21/designs/D-future-kept/`: `fk.py` (the model, the fixed points, the chains), `run1.py` (`out-run1-ell1.txt`, 30 s; `out-run1-ell2.txt`, 22 s), `run2.py` (`out-run2-A.txt`, 8 s; `out-run2-B.txt`, 1 s), `run3.py` (`out-run3.txt`, 3 s).
+
+| run | instances | configurations | courses | violations of parts 1 to 4 |
+|---|---|---|---|---|
+| 1, two classes, life 1, `w ∈ −2..2`, `c, n ∈ 0..2`, cap 4, four shapes | 8,100 | 162,000 | 2,237,379 | 0 |
+| 1, two classes, life 2, `c ∈ 0..1` | 3,600 | 162,000 | 1,366,389 | 0 |
+| 2 A, three classes, life 1, drawers need something | 5,488 | 219,520 | 493,920 | 0 |
+
+Every configuration of every instance was checked for part 3's equivalent form, for part 1's last sentence, and for part 4 where it applies (1,080 free instances, every start). Courses: every constant rule, every distinct course of a rule from what holds (two classes), one rule from the configuration; from starts with nothing or only class 0 present, and, with two classes, from every start whose kept guards are not kept together (2,968 starts, 192,156 courses, each lost one).
+
+Nearest misses and what failed:
+- **Part 2 does not need keepability** (above). This is the finding most against the design.
+- **A loss can be put off, not avoided.** At 1,424 configurations (two classes) the kept guards are not kept together and yet some move keeps each; for at most 3 more steps at life 1 and 8 at life 2, never for ever. "Not kept together, so one is lost now" is false.
+- **Pairs do not decide.** 438 configurations with three guards kept, every two kept together, the three not.
+- **Cost is needed, not enough.** 12,840 of 16,108 costly instances have no configuration with forced loss.
+- **Loss on the way to more.** I3 (run 3 §3): from level 1 with both classes, every course loses a kept guard; forming `{1}` until level 3 and then `{0,1}` loses class 0 at once and holds both for good from step 3, with both possible throughout. In the Lean's sense it does not widen.
+- **A way that registers only what holds** takes everything in the T4 instance (8 of 25,572 such courses lose nothing and take all; 4,992 close everything), so that instance differs in the way and not in what is registered; I2 is the instance that differs in what is registered.
+- One oddity of RS: a unit can be formed, add its amount and be lost in the same step, and a guard is kept that way in I3.
+
+## 7. Where it is weakest
+
+1. Parts 1 to 3 are a few lines each, and part 2 is true of any chain between what is held for good and what holds. Keepability earns its place only in part 3 and in the gap between holding and kept.
+2. It does not state the centre. It has both ends on one course and an exact law of one of them, but which way closes and which takes is found only by running; part 4 is sufficient, not exact.
+3. No lock and no share, and no old law of the lock's side as a case.
+4. RS adds to the level from nowhere in the model. The adding unit must be kept at a cost, which is less than 17 November's failure and the same kind.
+5. `Keepable` asks for some run. With moves of several outcomes and keeping against all of them, `Held ⊆ Kept` fails and part 2 would need each move to have one outcome.
+6. Keeping widening for ever was not run. On paper: with a finite cap, the classes with a positive forming cost held at once are at most `ℓ·C`.
+
+It is refuted as a contribution by a statement of part 2 or 3 already in the Lean, or by a reader showing that part 3 is `Keepable.each` with a definition unfolded. Part 2's reading is refuted if "more and more future" can be given an order under which a course that forgoes something still widens and the Lean's law applies to it unchanged; the candidate here (`Held` grows, `Poss` not narrowed, `Kept` free to lose, as in I3) has no law.
+
+## 8. What I did not read
+
+Chapters 02, 03, 05, 07 (§2 only through the note of the read and the theorem's statement), 08, the one page. The Lean beyond: the statements of `JointKeeping`, `KeepableStep`, `Viability` (to line 120), `GuardHorizon` (lines 55 to 140), `Keeping` (two stretches), `WideningOnTheMap` (definitions and two theorems), `ReachableRanges` (definitions and four theorems), one theorem of `LineOnAStock`; no proof was read through. Not opened: `TurningInTime`, `RuleCapture`, `RuleShaping`, `CommonResponse`, `HeldPossible`, `KeepingWidening`, `EventualWidening`, `conditional/renewal`, `PopulationCorrection` and its theory page. The notes of 16, 17 and 20 November, and of 21 November other than `read-a-future` (whole), are known to me only through the brief and the direction page. `PLACES.md`: nine entries of 158. `AFTER.md` and `FROZEN-THE-CENTRE.md` were read. The full test suite, the gate and Lean were not run, as the brief requires.

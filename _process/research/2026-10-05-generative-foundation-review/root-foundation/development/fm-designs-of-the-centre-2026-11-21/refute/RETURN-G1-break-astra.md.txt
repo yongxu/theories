@@ -1,0 +1,102 @@
+## 1. Verdict in five lines
+
+G1 survives as a built case worth keeping.  
+Part (b)(II) is false. An outside parent can form a favoured child on the very step when every favoured parent misses its need.  
+The doubling deadline survives that counterexample.  
+In T4, one choice destroys keepability at a full stock while another choice keeps going from the same start.  
+The deadline and the two-kind price law do work within G1. A law joining the two older sides was not found in what I read.
+
+## 2. Statement by statement
+
+Here `D` is the first step with no met favoured parent, `E` the first step whose selection forms no outsider, and `R` the first actual violation of `FFirst`. A step numbered `t` forms the way at `t+1`. In traces, `TK@2` means one unit of each kind at level 2.
+
+| Statement | Finding and evidence |
+|---|---|
+| Theorem (a) | **HOLDS IN WHAT I CHECKED.** In 135,072 courses there were zero failures of the equivalence, permanence after `E`, ending by `E+1+x[E+1]`, or loss of free keepability. I checked the exit way at the cap as well. H1 keeps every later child in `F`. While any need is met, H3 forces at least one unit of level to be spent and nothing to be given back. |
+| Theorem (b) | **REFUTED** as stated. Take `F={T}`, with kinds written as (need, use, give, kids). Let `T=(3,1,0,TT)`, `K=(1,0,1,TK)`, and `N=C=2`. Form `T` first and fill remaining slots. Output `TK@2 → TK@2; D=0, E=absent, R=absent`. All four hypotheses hold, yet `T∈w[D+1]`. The **deadline** had zero failures in 131,159 eligible courses. The ending in (I) follows from (a). With outside kinds also closed, there were zero reappearances at or after `D+1` in 7,388 eligible cases. |
+| Theorem (c) | **HOLDS IN WHAT I CHECKED** for the bounded starts specified in §1. There were zero discrepancies in 2,017,656 starts satisfying the printed inequality, including the boundary. I checked the predicted exit or the first unmet step with its counts and level, as well as eventual survival. The unbounded-list reading of §2 is refuted below. |
+| Lemma 1 | **HOLDS IN WHAT I CHECKED** for the stated level update. Across 18,378 adjacent-level pairs, the greatest viable horizon never fell, counting an infinite horizon as largest. This checks finite horizons as well as the threshold for keepability. |
+| Lemma 2 | **HOLDS IN WHAT I CHECKED.** Zero violations of child inclusion on the 135,072 courses. In 12,575 configurations satisfying the closure, use, need and giving hypotheses, none was viable at horizon `x`, including `x=0`. |
+| Lemma 3 | **HOLDS IN WHAT I CHECKED.** With a common level-independent selector, 9,197 eligible ordered-list prefix comparisons across different uses, givings, caps and starts had zero unequal ways. Equal need tests on equal ways produce the same ordered candidates, to which the same selector is applied. |
+
+## 3. MUST, then LESSER
+
+**MUST**
+
+- **The first false proof step is the last sentence of the sketch of (b).** The doubling induction is valid. The definition of `D` says which *parents* are unmet. It puts no restriction on children of met outsiders. This also fails after an actual level crossing. Change the counterexample above to `need T=10, N=6, C=10`. Output `TTK@10 → TTTTTK@9 → TK@5 → TK@5; D=1, E=absent, R=absent`. The design attaches outside closure only to “ever after”. It is needed for the general claim about the very next way as well. Of 11,349 eligible always-`FFirst` course cases in my sweep, 3,961 violated that claim. The designer’s `centre.py` lines 278–296 check a deadline and survival of a suffix. Neither predicate checks for a favoured child at `D+1`.
+- **Exclusion does not identify crowding.** Recounting the designer’s 211,248 `general2` courses reproduced the 101,384 labelled “with the slots filled”. Only 77,600 filled the slots at `E`. Only 29,520 both filled them and left an available outsider unformed. Of 74,504 labelled “the rest unmet first”, 17,304 actually had a met outsider at `E`. A met outsider can have no kids. Even an always-fill policy can reach `E` with space left. For example, with four slots, needs `(1,8)`, uses `(1,1)`, and kids `(TT,K)`, output from `TK@7` is `TT@5; E=0`. The last sentence of (b) and the §6 outcome labels give `E` a cause its definition cannot detect.
+- **The alarm sweep did not measure the stated `R`.** Line 361 uses the first level below the alarm. In T4 from level 19 with alarm 20, the alarm fires at step zero, all four candidates fit, and the implemented choice still satisfies `FFirst`. Output `D=7, E=1, R=absent, end=7`. Substituting the earlier alarm can make the deadline easier to pass.
+- **Kind priority and registered information are different claims.** In T4 the yield list already identifies every giver. Choosing the *lower* yield from that same observation gives `TKK@20 → TTKK@20 → TTKK@20`, the surviving course. In the wider alarm sweep some systems have equal yields for both kinds and zero giving for both. On candidate lists `TTTTKK` and `KKTTTT`, both observations agree position by position. To take four `T`s requires positions `[0,1,2,3]` and `[2,3,4,5]` respectively. The code can do that by reading kind. Its full rescue counts cannot be attributed to the named readings. T4 establishes the effect of a choice rule.
+- **The start bound matters to (c).** Section 1 supplies `length w₀ ≤ N`, but §2 uses the full product type and (c)’s premise list omits the bound. Read literally on that product, take `N=2, C=a=8, b=c=d=1, k=2`. From `TKKK@6` the printed formula says “ends”. Output `TKKK@6 → KK@4 → KK@4`. The proof at `D=0` charges the later pure-`K` way for three keepers although only two fit. This counterexample uses precisely the extra starts admitted by the product.
+- **T5’s stated corner changes the type.** Every §2 system has natural-number slots and cap, and a selector that fits on *every* input list. No finite slot count admits `pick c x = c` on every list. Arbitrary external giving is also outside the stated base update. The old stock step can be compared in the proposed extension. The claimed unchanged instantiation of `LineOnAStock.ways_alike` does not follow by choosing those parameters in §2. The displayed corner traces themselves reproduced. Forming all candidates repeats `CBCB@8` from 6 and ends at step 5 from 7. A sublist choice from 7 repeats `CB@12`.
+
+**LESSER**
+
+- Section 1’s ceiling logarithm and §2’s zero-based deadline differ. At `N=4, n₀=1`, they give 2 and 1 respectively. T4 attains the latter. Also, `E+1` is guaranteed to be unkeepable, but need not be the *first* unkeepable state. With `N=5, C=17, a=b=c=d=1, k=2`, output is `TK@3 → TTK@2 → TTTTK@0 → ∅@0`, free keepability `true,false,false,false`, and `E=2`.
+- The deadline decides the order of events for an always-`FFirst` course. Survival after `D` can still depend on a later choice. With `N=2, C=3, T=(3,1,0,TT), K=(1,0,0,K)`, two such selectors share `TK@2 → K@1` through the deadline. One repeats `K@1`. The other next chooses empty and ends.
+- “The menu only narrows” needs the reachability qualification in Lemma 2. Immediate kinds can increase when one kind leaves kids of two kinds. Also, a picked list alone does not specify picked *positions* when a candidate occurs twice. The reading claim needs an embedding or a convention for ties.
+- In (c), the pure-`K` deficit below `2dg` **doubles** before truncation. For `d=3,g=1,b=1`, output levels are `5,4,2,0`. Also the printed `x′` uses `d g_D` even if `x_D<b`. It represents the next level only when that giving is available or clipping masks the difference. At `N=3,C=a=12,b=6,c=d=1`, `TK@5` gives actual next level 3 and printed value 4. The separate `b≤x_D` conjunct keeps the survival verdict correct.
+
+## 4. Does a general law of the design do work that the old laws do not?
+
+**Yes, within this model.** While all favoured parents are met and priority is respected, the next favoured count is at least `min(N,2n)`. This forces a deadline from the initial count and the slots. At an actual exclusion, descent closure and stock expenditure then rule out *every* later choice, even at the cap. In the two-kind family the expenditure between doublings also gives a numerical prediction before running the course. The old statements I read do different work. `GuardHorizon.closed_viable` starts from an already closed region, `LineOnAStock.ways_alike` transports equal ways across equal need tests, and `RuleCapture.turn_locked` propagates an already locked rule under its share hypotheses. A derivation of old results on both sides using G1’s deadline or price law was not found in what I read. G1 also gives no law of a widening future.
+
+## 5. The specific questions
+
+**(a) Beyond the designer’s box.** I used three favoured kinds with respective kids `BA, CAB, CB`, all with one common need, and a fourth kind whose kids varied by system. The four larger systems had `(N,C)=(5,13),(5,15),(7,21),(7,24)`. Two allowed an outside parent to have a favoured child. I included zero-slot and zero-cap corners, all legal starting multiplicities and levels, and seven selectors, including one that may leave slots empty. Output was `courses 135072, (a) failures 0, deadline failures 0, (b)(II) failures 3961, L1 failures 0, L2 failures 0`. Part (c) fixes two kinds by definition. I enlarged its slots to 12, multiplier to 4, and cap to 188.
+
+**(b) Try to break Lemma 1.** At the same way, a higher level preserves each old candidate in order. One can replay the same sublist. The residual and the giving from met units both weakly increase, so the resulting level is also at least as high. This gives the horizon induction. With an added term `γ(z)` at residual `z`, nondecreasing `z+γ(z)` suffices. In a two-kind system I tried all 1,024 schedules with five values in `0..3`. Of 364 with nondecreasing total, zero lost a viable horizon. Of 660 with a falling total somewhere, 192 lost a finite-horizon comparison and 160 lost infinite keepability. A decrease in giving alone need not hurt. For `γ(z)=max(4−z,0)`, the total is nondecreasing.
+
+A permanent reversal needs just one kind that leaves itself, with need 4, use 2, one slot and cap 5. With zero internal giving and `γ(z)=2` for `z≤2`, zero otherwise, output is `A@4 → A@4` and `A@5 → A@3`, where the need fails. The only alternative move is empty. With no external term and the met unit instead giving 2 at levels at most 4 and zero above, the same two outputs result. The least kept level no longer defines an upper interval in either variant.
+
+**(c) The price and its true condition.** Write `p=cn` and `h=dg` at a mixed step where both kinds are met. The update is `l=max(0,x−p−h)`, `y=l+min(l,h)`. The cap cannot bind above this value because `y≤x`. For the **exact geometric price in ordinary arithmetic**, `y=x−p` precisely when **`x≥p+2h` or `x=p`**. The latter equality is a complete drawdown to zero. There were zero discrepancies in 25,920 direct comparisons, including 324 cases of that isolated equality with positive `h`.
+
+A sharp uniform lower bound on `a` for that price on every mixed step *used before saturation* is
+
+`B = max { cn + 2d(N−n) | 1 ≤ n ≤ floor((N−1)/k) }`, with empty maximum zero.
+
+Indeed, `kn<N` on those steps and at most `N−n` keepers fit. Conversely one can start with the maximizing counts. With a sufficiently high cap, a level one below that maximum breaks the ordinary-arithmetic price whenever the bound can be lowered to a legal positive need. This is a uniform bound for the price. Individual survival predictions can agree even after the price fails.
+
+| Region in the enlarged search | Starts | Wrong printed branch, state at D, or fate | Wrong fate alone |
+|---|---:|---:|---:|
+| `a ≥ 2(c+d)N` | 2,017,656 | 0 | 0 |
+| `B ≤ a < 2(c+d)N` | 1,414,249 | 0 | 0 |
+| `a < B` | 423,986 | 2,607 | 8 |
+
+One unit below the sharper bound already changes fate. At `N=5,k=3,c=d=b=1,a=8,B=9`, the formula predicts survival from `TKKKK@8`. Output `TKKKK@8 → TTTKK@6 → KK@2 → KK@0`. The designer’s nearest miss goes both ways. At `N=3,k=2,c=1,d=2,a=7,b=1`, from `TKK@7` the formula says survive and `K@0` ends. From `TKK@8` it says end and `K@4` repeats.
+
+There is an exact **survival** condition even when the price fails. For each putative first unmet step `i=0,…,t*`, take the pre-saturation counts `n_j=n₀k^j`, `g_j=min(g₀,N−n_j)`. A turn at `i` survives exactly if its actual level is in `[c n_i + max(b,2d g_i), a)` and all earlier favoured needs were met. To decide this from the start, pull each endpoint `q` back through `j=i−1,…,0`, replacing it by
+
+`max(a, c n_j + max(q, d g_j + ceil(q/2)))`.
+
+The start survives exactly when `x₀` belongs to at least one resulting half-open interval. This follows because for every positive target `q`, the mixed update reaches `y≥q` exactly when `x≥p+max(q,h+ceil(q/2))`. At the turn the remaining keepers require next level at least `max(b,2h)`. The inverse had zero mismatches in 414,720 one-step comparisons, and the interval criterion had zero fate mismatches across all 3,855,891 enlarged starts.
+
+**(d) Full cap and every removal on the same T4 start.** With `T=(4,1,0,TT), K=(2,1,5,K), N=4, C=20`, yield priority gives `TKK@20 → TTKK@20 → TTTT@20`. Free keepability along those states is `true,true,false`. Thus the pre-choice state at `E=1` is still keepable. The choice produces the unkeepable state at `E+1=2`. Giving priority repeats `TTKK@20`. The same cap construction works from a full cap of any size `C≥8`, since both mixed updates can replenish their entire spend.
+
+| One change from T4 | Higher yield first | Higher giving first |
+|---|---|---|
+| Original | ends at 7 | continues |
+| Remove slots, form all candidates | ends at 6 | ends at 6 |
+| Replace `T→TT` by `T→T` | continues | continues |
+| Remove yield cost, `K→KK`, rightmost equal scores first | continues | continues |
+| Same cost removal, leftmost equal scores first | ends at 7 | continues |
+| Set giving to zero | ends at 5 | ends at 5 |
+
+These are fixed positional tie conventions, each usable before and after removal. Thus **one fully specified T4 pair does depend on all four parts**, using rightmost ties. With leftmost ties the cost removal leaves the fate difference intact. Removing slots makes both choose the same growing population and overdraw it. Removing giving can leave the two population histories different even though both end.
+
+I also reproduced the separate T3 instance I2. Its yield course ends at 2. Removing slots leaves a repeating `K@8`, removing multiplication leaves `K@12`, and changing to giving priority leaves `K@9`. Removing the need and use lets `TTTT@17` repeat. With giving removed, zero configurations were freely keepable. With need 9 instead of 14 and the same level-15 start, removing slots ends at 4. I3, which drops H5, repeats its initial three-unit way at level 4 with all three events absent.
+
+**(e) Reset the favouring from candidate share.** Retain the current favoured group if it supplies at least two thirds of the candidates, otherwise switch. Start favouring `T`. Use five slots, cap 16, all needs 1, `T→TT` with use 1 and give 0, and outsiders `P→Q, Q→HHHH, H→H`, each with use 0 and give 6. Output from `TP@16` is `TTQ@16 → THHHH@16 → THHHH@16`. The incumbent shares are `2/3, 4/8, 4/6`, giving priorities `T, outside, outside`. Against the original fixed set `F={T}`, output is `D=absent, E=absent, R=1, t̂=2`. Fixed `T` priority on the identical start instead gives `E=2, end=7`. The three-event deadline survives even a history-dependent update because its proof only needs actual `FFirst` choices up to the first violation. The two-event conclusion cannot be carried over after a change in priority. The independent defect in (b)(II) remains.
+
+## 6. What I ran and what I did not check
+
+AI-written BREAK report. I wrote the ordered step, selectors, sublist moves and course iterator from the design before opening the designer’s program. Programs, outputs and the saved report are in the assigned folder. [Independent model](/Users/ren/theories/tmp/fm/centre21/refute/G1-break-astra/model.py) · [Report](/Users/ren/theories/tmp/fm/centre21/refute/G1-break-astra/REPORT.md) Run the scripts with `python3 -B`, one invocation per argument.
+
+| Program and arguments | Evidence saved |
+|---|---|
+| `general.py`, each index 0–5 | `general-*.txt`. Six finite systems, 19,296 configurations, 135,072 courses. Free viability by deletion to a fixed point, retaining the last viable horizon. Counts suffice for free moves because every allowable child-count vector has a sublist witness in every ordering. |
+| `family.py`, each of 3, 5, 7, 9, 12 | `family-*.txt`. 3,855,891 family starts. The specialized count simulator also agreed with the ordered simulator in 16,254 comparisons. |
+| `cases.py`, `edges.py`, `labels.py` | `cases.txt`, `edges.txt`, `labels.txt`. Individual traces, Lemma 3, the price and its inverse, event labels, and 1,080 direct ordered-graph horizon comparisons with zero disagreements against the counts. |
+| `audits.py`, each of `old, labels, gamma, extra` | `audit-*.txt`. The original family counts reproduced exactly, including 0/339,088 published-condition fate disagreements, 26/185,340 below it, and all 21 `eGeGL` rows in the former sweep. Also the 211,248-course recount, 1,024 external giving schedules and individual counterexamples. |
+
+I read the two briefs, the assigned design, its saved outputs, and the relevant portions of `centre.py`. After consulting `PLACES.md`, I read the relevant declarations in `GuardHorizon.lean`, `LineOnAStock.lean` and `RuleCapture.lean`. Package-wide novelty, all T5 instantiations, the other designs, and the full designer general-three-kind and alarm sweep totals were **not checked**. The larger sweeps cover the specified grids and selectors. No Lean, build, repository test or gate was run. No further agents or git commands were used.

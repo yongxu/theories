@@ -1,0 +1,7 @@
+AI-written reader report, whole-a-08.
+
+I read all 24 assigned modules in full at the level requested, from IdentificationRuns.lean through Keeping.lean. I read each opening account, every declaration statement and its docstring. No module was partial and no question was unreached.
+
+I found no statement in this batch that resets a rule of favouring from a kind’s share. Identity.lean counts arrivals and departures under a continuation. Interdependence.lean bounds consecutive activity after feeders lose support. Neither statement supplies that missing update.
+
+Three distinctions bear on the centre. In Identity.lean, the same census of two active formations per step has recurring ceasing under one continuation and recurring arising under another (Tandem.budding and Tandem.joining, lines 1839 and 1860). In Joint.lean, withholding the breaking event’s draw keeps the dependence at that step, yet withholding every draw before any chosen time still leaves eventual consumption (Renewable.breaking_event_makes_step_difference and Renewable.no_finite_segment_makes_difference, lines 740 and 734). In Junctures.lean, when a coupling-based choice can keep return possible in one course and loses it in every outcome of an available move in the other, the comparison establishes a juncture and double-negated source arrival by the decision time, under its balance and response premises (TimedResponse.turned_at_juncture, line 618).

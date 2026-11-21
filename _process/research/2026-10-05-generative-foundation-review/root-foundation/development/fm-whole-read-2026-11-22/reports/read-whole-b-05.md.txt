@@ -1,0 +1,13 @@
+Batch whole-b-05: all seven modules were read whole, every statement and docstring: Change, ChoiceCountCapture, ClassifiedBeliefProcesses, Clearing, ClosedCapture (in two parts, to line 995), Closing and CodeAcquisition. Proof bodies were not read. To be sure what the CarrierCounts-based statements say, I checked the definitions of Raises, ReadsShare, Locked, CarrierCounts, favours and select in RuleCapture.lean. I did not open the definitions behind InquirySufficiency (Sufficient, After), Remainder/Loops (CouplesAt, OnLoop, carried) or Flow/Web (WithheldLevels, Retains). Their answers rest on the statements as worded in the modules read.
+
+What could not be answered or needs care:
+- Change.lean's opening account names Web.lpo_of_ending and Listed.lpo_of_few. Neither is declared in Change.lean; a grep finds the names in Decidedness, Openness and Reserve, which this batch did not cover.
+- Clearing's ending of the dweller is stipulated in the witness's activity, as its account says. So the no_return answer there is a premise of a built case, not a conclusion.
+
+Bearing on the centre, beyond the fourteen questions:
+1. ClosedCapture has two general exactly-whens of keeping against turning a lock: Thinned.kept_iff and Thinned.turned_iff. They are on CarrierCounts with a mirrored late reading, and the counts at the step the loss is first read decide which outcome holds for good. With turned_by_loss and the witnesses Thinned.inTime_turned and Thinned.late_kept, this is a stated "early enough" for a loss that makes a difference to the selection. It is about reading timing, not about the loss of what sustains the selection.
+2. ClosedCapture.identifiesAlike_iff_unread and courses_alike_iff_unread say, for every two-level loop, that what the loop does not read makes no difference to it, exactly then. This is the "makes no difference to the selection" sentence stated generally.
+3. In ClosedCapture and ChoiceCountCapture the loss is an accruing coordinate handed in (Accrues), never a stock that gives to the selection and can run out. No module in this batch has the giver as a going-on that can be lost.
+4. Change.coming_recurs_iff and Web.unceasing_iff are general, premise-light laws: in any finite family, arising keeps going exactly when ceasing does. Accretion and Attrition show both directions fail without finiteness. This bears on "forms change and the going on continues".
+5. Closing's Onset.unforeseen and Threshold.unforeseen show, in built cases, that a loop's formation does not show in the amounts before it.
+6. CodeAcquisition is the one module here whose moves cost the mover its own stock (step_stock), and with stock below seven every move is idle. That is stated only per step.
