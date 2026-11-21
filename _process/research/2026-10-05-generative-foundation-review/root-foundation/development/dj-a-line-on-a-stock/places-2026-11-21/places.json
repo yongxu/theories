@@ -78,12 +78,12 @@
     "written": "TurningInTime.recoverable_iff_above",
     "resolved": true,
     "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean",
-    "line": 2087,
+    "line": 2146,
     "full": "Becoming.TurningInTime.recoverable_iff_above",
     "fits": [
      {
       "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean",
-      "line": 2087,
+      "line": 2146,
       "full": "Becoming.TurningInTime.recoverable_iff_above"
      }
     ]
@@ -130,12 +130,12 @@
     "written": "TurningInTime.noReturnAt_iff_first_below",
     "resolved": true,
     "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean",
-    "line": 2100,
+    "line": 2159,
     "full": "Becoming.TurningInTime.noReturnAt_iff_first_below",
     "fits": [
      {
       "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean",
-      "line": 2100,
+      "line": 2159,
       "full": "Becoming.TurningInTime.noReturnAt_iff_first_below"
      }
     ]
@@ -338,12 +338,12 @@
     "written": "TurningInTime.unending_iff_first_marked",
     "resolved": true,
     "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean",
-    "line": 739,
+    "line": 848,
     "full": "Becoming.TurningInTime.unending_iff_first_marked",
     "fits": [
      {
       "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean",
-      "line": 739,
+      "line": 848,
       "full": "Becoming.TurningInTime.unending_iff_first_marked"
      }
     ]
@@ -942,12 +942,12 @@
       "written": "TurningInTime.recoverable_iff_above",
       "resolved": true,
       "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean",
-      "line": 2087,
+      "line": 2146,
       "full": "Becoming.TurningInTime.recoverable_iff_above",
       "fits": [
        {
         "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean",
-        "line": 2087,
+        "line": 2146,
         "full": "Becoming.TurningInTime.recoverable_iff_above"
        }
       ]
@@ -994,12 +994,12 @@
       "written": "TurningInTime.noReturnAt_iff_first_below",
       "resolved": true,
       "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean",
-      "line": 2100,
+      "line": 2159,
       "full": "Becoming.TurningInTime.noReturnAt_iff_first_below",
       "fits": [
        {
         "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean",
-        "line": 2100,
+        "line": 2159,
         "full": "Becoming.TurningInTime.noReturnAt_iff_first_below"
        }
       ]
@@ -1046,12 +1046,12 @@
       "written": "TurningInTime.unending_iff_first_marked",
       "resolved": true,
       "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean",
-      "line": 739,
+      "line": 848,
       "full": "Becoming.TurningInTime.unending_iff_first_marked",
       "fits": [
        {
         "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean",
-        "line": 739,
+        "line": 848,
         "full": "Becoming.TurningInTime.unending_iff_first_marked"
        }
       ]
