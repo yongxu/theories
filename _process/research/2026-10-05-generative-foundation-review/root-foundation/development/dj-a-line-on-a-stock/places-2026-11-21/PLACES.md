@@ -1,163 +1,180 @@
 # Places: what one table and three reads say of each, in the readers' words
 
-*Made by `build_places.py` beside it; never edited by hand. AI-written (Claude Fable for the script). Every field below is a reader's return, unchecked; what the note mended is in the note. It proves nothing, ranks nothing and holds no link. A place with no read under it was not in that read; that says nothing of the Lean. [The note](NOTE.md) says what this is and is not.*
+*Made by `build_places.py` beside it; never edited by hand. AI-written (Claude Fable for the script). Each field under *read of …* is a reader's return, unchecked; what the note mended is in the note. The table's fields are from the table of 20 November; the file, the records, the dynamics and the *same statement* lines are computed by the script, as the note says. The page proves nothing, ranks nothing and holds no link. A place with no read under it was not in that read; that says nothing of the Lean. [The note](NOTE.md) says what this is and is not.*
 
 The table's letters (20 November, [its note](../two-ways-table-2026-11-20/NOTE.md)): **a** multiplies; **b** a level that can run down; **c** gives at a cost; **d** the source is said; **e** what comes back; **f** a rule set again from a share; **g** both outcomes, boundary exact; **h** no return, or a turn. Y yes, P in part, N no.
 
 A place is keyed by a Lean file's base name. Where several tracked files carry that name, or none does (a namespace inside a file, a program, a scratch module, a folder, a page), the row says so, since two places can then share a row; the readers' own names for the place are kept under it.
 
-| place | file | in the table | read in |
-|---|---|---|---|
-| AcquiredCorrection | `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/AcquiredCorrection.lean` |  | register |
-| ActiveReading | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ActiveReading.lean` |  | register |
-| Admission | several Lean files of this name: `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean`; `experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/constitution/admission/formal/Admission.lean` | NYPPPNYY |  |
-| AdmissionRevision | `experiments/market-generativity/meta-attractor/AdmissionRevision.lean` | NYYYPPPP | kept |
-| AlignmentInquiry | `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/AlignmentInquiry.lean` |  | register |
-| AlignmentSuccession | `experiments/market-generativity/meta-attractor/AlignmentSuccession.lean` | PYPPPPPY |  |
-| Arising | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Arising.lean` |  | future |
-| Branching | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Branching.lean` |  | future |
-| BranchingCorrespondence | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BranchingCorrespondence.lean` |  | future |
-| Capture | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Capture.lean` | PYPPNNPP |  |
-| CarrierDiagnosis | `experiments/market-generativity/meta-attractor/CarrierDiagnosis.lean` | PYYYYNPY | kept |
-| ChoiceCountCapture | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ChoiceCountCapture.lean` | YPNNNYYY |  |
-| Clearing | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Clearing.lean` | NYPYPNPP | kept |
-| ClosedCapture | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean` | YPNNNYYY | register |
-| CodeAcquisition | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CodeAcquisition.lean` |  | register |
-| COLLECTIVE-DESTRUCTIVE-ATTRACTORS | no Lean file of this name |  | register |
-| CollectiveDestruction | `experiments/market-generativity/meta-attractor/CollectiveDestruction.lean` | NYPNYPPY |  |
-| CommonCauseDiscovery | `experiments/market-generativity/meta-attractor/CommonCauseDiscovery.lean` | NYPYPPPP | register |
-| CommonOrganization | `experiments/market-generativity/meta-attractor/CommonOrganization.lean` | NYPYPPPP |  |
-| CommonTaskRevision | `experiments/market-generativity/meta-attractor/CommonTaskRevision.lean` | NYPYPPPP |  |
-| conditional/renewal | no Lean file of this name | PYPPYNYY | kept |
-| Continuation | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean` | PYPPYNPY | kept |
-| ContinuingRevision | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuingRevision.lean` | NYYPYPPP | kept, register |
-| Copying | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Copying.lean` | YYPYNNYY |  |
-| CorrectionCommitment | `experiments/market-generativity/meta-attractor/CorrectionCommitment.lean` | NPYYYNYN | kept |
-| CorrectionDependence | `experiments/market-generativity/meta-attractor/CorrectionDependence.lean` | PYYYYNYP | kept |
-| CorrectionInquiry | `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CorrectionInquiry.lean` |  | register |
-| CorrectionReconfiguration | `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CorrectionReconfiguration.lean` |  | register |
-| CountedCodes | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CountedCodes.lean` |  | register |
-| CoupledDrawers | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CoupledDrawers.lean` | NYPPYPYP | kept |
-| Dependence | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean` | PYPPYNPY | future |
-| Dissipation | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean` | PYPYPNPP | kept |
-| DrawHistory | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawHistory.lean` | NYPPPPPY |  |
-| DrawnBeyond | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnBeyond.lean` | PYPYYNYN |  |
-| DrawnReplacement | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnReplacement.lean` | PPPNYYPY |  |
-| DrawnShaping | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnShaping.lean` | YNPNYYYY | register |
-| Enough | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Enough.lean` |  | future |
-| Entropy | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Entropy.lean` | NYPYPNPY | future, kept |
-| EvaluatorGrounding | `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/EvaluatorGrounding.lean` |  | register |
-| EventualWidening | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EventualWidening.lean` |  | future |
-| Evolution | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Evolution.lean` | PYPNNNPP | future |
-| ExpandingInquiry | `experiments/market-generativity/meta-attractor/ExpandingInquiry.lean` | NYYYPPPP | register |
-| FallibleInquiry | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FallibleInquiry.lean` |  | register |
-| Feedback | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Feedback.lean` |  | register |
-| FiniteSupportObstruction | `experiments/market-generativity/formal/FiniteSupportObstruction.lean` | YYPPPPPY |  |
-| Flow | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean` | PYPYPNPP | future, kept |
-| FormativeCapacity | several Lean files of this name: `experiments/integrated-correction/general-framework/generative-basis/lean/history/universal-ethics/generative-capacity/checks/20261007T130945.936650Z/FormativeCapacity.lean`; `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/FormativeCapacity.lean`; `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/checks/20261007T130838.854157Z/FormativeCapacity.lean`; `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/checks/20261007T131010.300022Z/FormativeCapacity.lean` |  | register |
-| FormedGrounds | `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/FormedGrounds.lean` |  | register |
-| Founding | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Founding.lean` | PYPPPNYY |  |
-| Gain | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Gain.lean` |  | future, kept |
-| GoalFormationRevision | `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/GoalFormationRevision.lean` |  | register |
-| GoalRevision | `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/GoalRevision.lean` |  | register |
-| GrammarReadings | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean` |  | register |
-| GroupEnding | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GroupEnding.lean` | PYPPPNYY |  |
-| GuardHorizon | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean` | NNNNYPPP | future |
-| Handoff | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Handoff.lean` |  | register |
-| HeldForReading | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HeldForReading.lean` |  | register |
-| HeldPossible | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HeldPossible.lean` |  | register |
-| HorizonWebs | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HorizonWebs.lean` | NYPPPPPP |  |
-| Inquiry | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Inquiry.lean` |  | register |
-| Interdependence | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Interdependence.lean` | NYPPPNPP | kept |
-| JoiningCodes | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JoiningCodes.lean` |  | register |
-| JointKeeping | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JointKeeping.lean` |  | future |
-| Keeping | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Keeping.lean` |  | future |
-| KeepingWidening | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeepingWidening.lean` |  | future |
-| Learnable | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learnable.lean` |  | register |
-| LearnableRuns | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearnableRuns.lean` |  | register |
-| LearnedGrouping | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearnedGrouping.lean` |  | register |
-| Learning | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learning.lean` |  | register |
-| LearningRuns | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearningRuns.lean` |  | register |
-| LegacyReconciliation | `experiments/market-generativity/meta-attractor/LegacyReconciliation.lean` | PNNNNPPP |  |
-| LineageDrawdown | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageDrawdown.lean` | PYPPYNPY | kept |
-| LineageRegimes | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageRegimes.lean` | PYPYPNPY | kept |
-| LineageRegions | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageRegions.lean` |  | future |
-| LineOnAStock | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineOnAStock.lean` | YYNPPNYY | future, register |
-| Lock | no Lean file of this name |  | future |
-| MarketDiagnosis | `experiments/market-generativity/meta-attractor/MarketDiagnosis.lean` | PPPPYPPN |  |
-| MarketGenerativity | `experiments/market-generativity/formal/MarketGenerativity.lean` | YYYYYYPP |  |
-| MarketInstances | `experiments/market-generativity/formal/MarketInstances.lean` | YYPPYYYY |  |
-| MoveFormation | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MoveFormation.lean` |  | register |
-| MutualActivation | no Lean file of this name | NYPPPNPP |  |
-| ObservationChange | `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ObservationChange.lean` |  | register |
-| ObservationRepair | `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ObservationRepair.lean` |  | register |
-| Onward | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Onward.lean` |  | future |
-| OpenedCorrection | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OpenedCorrection.lean` |  | register |
-| OpenFutureRevision | `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/OpenFutureRevision.lean` |  | register |
-| Optimum | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean` | NYPPYPPY / PYPPYPYY |  |
-| OwnWidening | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OwnWidening.lean` |  | future |
-| PairFlow | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PairFlow.lean` | YYPYYNPY | kept |
-| PairSelection | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PairSelection.lean` | PYPYYNYP | kept |
-| PendingTaskApplicability | `experiments/market-generativity/meta-attractor/PendingTaskApplicability.lean` | NYPYPPPP |  |
-| PoolFromCourse | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolFromCourse.lean` | YPPNYYPY | register |
-| PopulationCorrection | `experiments/market-generativity/meta-attractor/PopulationCorrection.lean` | YYYYYYYY | kept |
-| PopulationRealization | `experiments/market-generativity/meta-attractor/PopulationRealization.lean` | PYPPPPPY |  |
-| Ranking | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Ranking.lean` | NYPPYNPP |  |
-| ReachableRanges | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReachableRanges.lean` |  | future |
-| ReaderRebuilding | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean` | PYPYYNPY | kept |
-| Reading | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reading.lean` |  | register |
-| ReadingLoop | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingLoop.lean` |  | register |
-| Readings | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Readings.lean` |  | register |
-| ReadingSchedule | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingSchedule.lean` |  | register |
-| ReadingsPersist | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsPersist.lean` | YYPPYPPP | register |
-| ReadingsSpread | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsSpread.lean` | YYPPYPPY | kept, register |
-| ReadInTime | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadInTime.lean` | YPPNYYYY | register |
-| ReadOffInTime | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadOffInTime.lean` | PYPPPPYY | future, register |
-| Readout | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Readout.lean` |  | register |
-| ReadStages | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean` |  | register |
-| RecursiveSelection | `experiments/market-generativity/meta-attractor/RecursiveSelection.lean` | PYPPYPPY |  |
-| ReflexivePrediction | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReflexivePrediction.lean` |  | register |
-| RegimeAttraction | `experiments/market-generativity/formal/RegimeAttraction.lean` | YYPPYYPP |  |
-| RegimeBoundary | `experiments/market-generativity/formal/RegimeBoundary.lean` | YYNPYYPY |  |
-| RegimeMargin | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean` | NYNPNNYY / NYPPPNYY | kept |
-| RegimeTransition | `experiments/market-generativity/formal/RegimeTransition.lean` | YYPPYYPY |  |
-| RelationalRenewal | `experiments/integrated-correction/general-framework/generative-basis/lean/deeper/RelationalRenewal.lean` | PYPPYNPP | kept |
-| Renewable | no Lean file of this name | NYPPPNPP |  |
-| RenewingFormation | `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RenewingFormation.lean` | PYPPYNYY | kept |
-| Reproduction | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reproduction.lean` | YYPYNNYY |  |
-| ReproductionNetwork | `experiments/market-generativity/meta-attractor/ReproductionNetwork.lean` | PYYYYPPP | kept |
-| ResponseCapacity | `experiments/market-generativity/meta-attractor/ResponseCapacity.lean` | PYYYYPYY | kept |
-| ResponseLearning | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ResponseLearning.lean` |  | register |
-| Retaining | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean` |  | future |
-| Revision | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Revision.lean` |  | register |
-| RevisionPlans | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionPlans.lean` |  | register |
-| RevisionRoutes | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean` |  | register |
-| Roles | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Roles.lean` | PYPYPNPP | future, kept |
-| RouteFormation | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RouteFormation.lean` |  | register |
-| RuleCapture | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleCapture.lean` | YNNNNYPY |  |
-| RuleRebuilding | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean` | YYPPPYYY | kept |
-| RuleShaping | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean` | YNPNYYYY |  |
-| SelectionLevels | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean` | PNPNYNYN |  |
-| Sensitivity | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean` |  | register |
-| SetPointOptimum | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SetPointOptimum.lean` | PYPYYNPY |  |
-| SharedCodes | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SharedCodes.lean` |  | register |
-| SharedStockInstances | `experiments/market-generativity/meta-attractor/SharedStockInstances.lean` | PPNNNNYN |  |
-| Space | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean` |  | future |
-| Stock | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Stock.lean` | NYPPPNYY |  |
-| TestingReorganization | `experiments/market-generativity/meta-attractor/TestingReorganization.lean` | NYPYPPPP | register |
-| The market program (experiments/market-generativity/model.py | no Lean file of this name | YYYYYYPY |  |
-| The program of 17 November (d6_model.py) | no Lean file of this name | YYYYYNPN |  |
-| The scratch Lean of 17 November (ScratchCovering, ScratchMix | no Lean file of this name | YYPPYNYY |  |
-| The units of 19 November with a rule set again (lock_on_unit | no Lean file of this name | YYNPPYPP |  |
-| TimedResponse | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TimedResponse.lean` |  | register |
-| TurningInTime | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean` | PYPPPYYY / PYPPPYYY | future, register |
-| Unread | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unread.lean` |  | register |
-| UnreadStandings | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/UnreadStandings.lean` |  | register |
-| VersionedTaskInstances | `experiments/market-generativity/meta-attractor/VersionedTaskInstances.lean` | NYPPYPYY |  |
-| Viability | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Viability.lean` | NPNNNNYY | future |
-| WayOfUnits | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean` | NYNPPNYY |  |
-| Weightings | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean` | PYPYNNPP / PYPPPNPP | future, kept |
-| WideningOnTheMap | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean` |  | future |
+| place | file | in the table | read in | check in scratch |
+|---|---|---|---|---|
+| AcquiredCorrection | `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/AcquiredCorrection.lean` |  | register |  |
+| ActiveReading | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ActiveReading.lean` |  | register |  |
+| Admission | several Lean files of this name: `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Admission.lean`; `experiments/integrated-correction/general-framework/generative-basis/mathematical-abstraction/constitution/admission/formal/Admission.lean` | NYPPPNYY |  |  |
+| AdmissionRevision | `experiments/market-generativity/meta-attractor/AdmissionRevision.lean` | NYYYPPPP | kept |  |
+| AlignmentInquiry | `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/AlignmentInquiry.lean` |  | register |  |
+| AlignmentSuccession | `experiments/market-generativity/meta-attractor/AlignmentSuccession.lean` | PYPPPPPY |  |  |
+| Arising | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Arising.lean` |  | future |  |
+| Branching | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Branching.lean` |  | future |  |
+| BranchingCorrespondence | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BranchingCorrespondence.lean` |  | future |  |
+| Capture | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Capture.lean` | PYPPNNPP |  |  |
+| CarrierDiagnosis | `experiments/market-generativity/meta-attractor/CarrierDiagnosis.lean` | PYYYYNPY | kept |  |
+| ChoiceCountCapture | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ChoiceCountCapture.lean` | YPNNNYYY |  |  |
+| Clearing | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Clearing.lean` | NYPYPNPP | kept |  |
+| ClosedCapture | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ClosedCapture.lean` | YPNNNYYY | register |  |
+| CodeAcquisition | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CodeAcquisition.lean` |  | register |  |
+| COLLECTIVE-DESTRUCTIVE-ATTRACTORS | no Lean file of this name |  | register |  |
+| CollectiveDestruction | `experiments/market-generativity/meta-attractor/CollectiveDestruction.lean` | NYPNYPPY |  |  |
+| CommonCauseDiscovery | `experiments/market-generativity/meta-attractor/CommonCauseDiscovery.lean` | NYPYPPPP | register |  |
+| CommonOrganization | `experiments/market-generativity/meta-attractor/CommonOrganization.lean` | NYPYPPPP |  |  |
+| CommonTaskRevision | `experiments/market-generativity/meta-attractor/CommonTaskRevision.lean` | NYPYPPPP |  |  |
+| conditional/renewal | no Lean file of this name | PYPPYNYY | kept |  |
+| Continuation | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Continuation.lean` | PYPPYNPY | kept |  |
+| ContinuingRevision | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ContinuingRevision.lean` | NYYPYPPP | kept, register |  |
+| Copying | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Copying.lean` | YYPYNNYY |  |  |
+| CorrectionCommitment | `experiments/market-generativity/meta-attractor/CorrectionCommitment.lean` | NPYYYNYN | kept |  |
+| CorrectionDependence | `experiments/market-generativity/meta-attractor/CorrectionDependence.lean` | PYYYYNYP | kept |  |
+| CorrectionInquiry | `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CorrectionInquiry.lean` |  | register |  |
+| CorrectionReconfiguration | `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/CorrectionReconfiguration.lean` |  | register |  |
+| CountedCodes | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CountedCodes.lean` |  | register |  |
+| CoupledDrawers | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/CoupledDrawers.lean` | NYPPYPYP | kept |  |
+| Dependence | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dependence.lean` | PYPPYNPY | future |  |
+| Dissipation | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Dissipation.lean` | PYPYPNPP | kept |  |
+| DrawHistory | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawHistory.lean` | NYPPPPPY |  |  |
+| DrawnBeyond | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnBeyond.lean` | PYPYYNYN |  |  |
+| DrawnReplacement | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnReplacement.lean` | PPPNYYPY |  |  |
+| DrawnShaping | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/DrawnShaping.lean` | YNPNYYYY | register |  |
+| Enough | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Enough.lean` |  | future |  |
+| Entropy | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Entropy.lean` | NYPYPNPY | future, kept |  |
+| EvaluatorGrounding | `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/EvaluatorGrounding.lean` |  | register |  |
+| EventualWidening | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/EventualWidening.lean` |  | future |  |
+| Evolution | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Evolution.lean` | PYPNNNPP | future |  |
+| ExpandingInquiry | `experiments/market-generativity/meta-attractor/ExpandingInquiry.lean` | NYYYPPPP | register |  |
+| FallibleInquiry | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/FallibleInquiry.lean` |  | register |  |
+| Feedback | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Feedback.lean` |  | register |  |
+| FiniteSupportObstruction | `experiments/market-generativity/formal/FiniteSupportObstruction.lean` | YYPPPPPY |  |  |
+| Flow | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Flow.lean` | PYPYPNPP | future, kept |  |
+| FormativeCapacity | several Lean files of this name: `experiments/integrated-correction/general-framework/generative-basis/lean/history/universal-ethics/generative-capacity/checks/20261007T130945.936650Z/FormativeCapacity.lean`; `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/FormativeCapacity.lean`; `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/checks/20261007T130838.854157Z/FormativeCapacity.lean`; `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/checks/20261007T131010.300022Z/FormativeCapacity.lean` |  | register |  |
+| FormedGrounds | `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/FormedGrounds.lean` |  | register |  |
+| Founding | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Founding.lean` | PYPPPNYY |  |  |
+| Gain | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Gain.lean` |  | future, kept |  |
+| GoalFormationRevision | `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/GoalFormationRevision.lean` |  | register |  |
+| GoalRevision | `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/GoalRevision.lean` |  | register |  |
+| GrammarReadings | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GrammarReadings.lean` |  | register |  |
+| GroupEnding | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GroupEnding.lean` | PYPPPNYY |  |  |
+| GuardHorizon | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/GuardHorizon.lean` | NNNNYPPP | future |  |
+| Handoff | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Handoff.lean` |  | register |  |
+| HeldForReading | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HeldForReading.lean` |  | register |  |
+| HeldPossible | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HeldPossible.lean` |  | register |  |
+| HorizonWebs | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/HorizonWebs.lean` | NYPPPPPP |  |  |
+| Inquiry | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Inquiry.lean` |  | register |  |
+| Interdependence | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Interdependence.lean` | NYPPPNPP | kept |  |
+| JoiningCodes | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JoiningCodes.lean` |  | register |  |
+| JointKeeping | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/JointKeeping.lean` |  | future |  |
+| Keeping | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Keeping.lean` |  | future |  |
+| KeepingWidening | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeepingWidening.lean` |  | future |  |
+| Learnable | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learnable.lean` |  | register |  |
+| LearnableRuns | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearnableRuns.lean` |  | register |  |
+| LearnedGrouping | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearnedGrouping.lean` |  | register |  |
+| Learning | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Learning.lean` |  | register |  |
+| LearningRuns | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LearningRuns.lean` |  | register |  |
+| LegacyReconciliation | `experiments/market-generativity/meta-attractor/LegacyReconciliation.lean` | PNNNNPPP |  |  |
+| LineageDrawdown | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageDrawdown.lean` | PYPPYNPY | kept |  |
+| LineageRegimes | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageRegimes.lean` | PYPYPNPY | kept |  |
+| LineageRegions | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineageRegions.lean` |  | future |  |
+| LineOnAStock | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/LineOnAStock.lean` | YYNPPNYY | future, register |  |
+| Lock | no Lean file of this name |  | future |  |
+| MarketDiagnosis | `experiments/market-generativity/meta-attractor/MarketDiagnosis.lean` | PPPPYPPN |  |  |
+| MarketGenerativity | `experiments/market-generativity/formal/MarketGenerativity.lean` | YYYYYYPP |  |  |
+| MarketInstances | `experiments/market-generativity/formal/MarketInstances.lean` | YYPPYYYY |  |  |
+| MoveFormation | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/MoveFormation.lean` |  | register |  |
+| MutualActivation | no Lean file of this name | NYPPPNPP |  |  |
+| ObservationChange | `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ObservationChange.lean` |  | register |  |
+| ObservationRepair | `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/ObservationRepair.lean` |  | register |  |
+| Onward | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Onward.lean` |  | future |  |
+| OpenedCorrection | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OpenedCorrection.lean` |  | register |  |
+| OpenFutureRevision | `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/OpenFutureRevision.lean` |  | register |  |
+| Optimum | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Optimum.lean` | NYPPYPPY / PYPPYPYY |  |  |
+| OwnWidening | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/OwnWidening.lean` |  | future |  |
+| PairFlow | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PairFlow.lean` | YYPYYNPY | kept |  |
+| PairSelection | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PairSelection.lean` | PYPYYNYP | kept |  |
+| PendingTaskApplicability | `experiments/market-generativity/meta-attractor/PendingTaskApplicability.lean` | NYPYPPPP |  |  |
+| PoolFromCourse | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolFromCourse.lean` | YPPNYYPY | register |  |
+| PopulationCorrection | `experiments/market-generativity/meta-attractor/PopulationCorrection.lean` | YYYYYYYY | kept |  |
+| PopulationRealization | `experiments/market-generativity/meta-attractor/PopulationRealization.lean` | PYPPPPPY |  |  |
+| Ranking | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Ranking.lean` | NYPPYNPP |  |  |
+| ReachableRanges | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReachableRanges.lean` |  | future |  |
+| ReaderRebuilding | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReaderRebuilding.lean` | PYPYYNPY | kept |  |
+| Reading | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reading.lean` |  | register |  |
+| ReadingLoop | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingLoop.lean` |  | register |  |
+| Readings | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Readings.lean` |  | register |  |
+| ReadingSchedule | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingSchedule.lean` |  | register |  |
+| ReadingsPersist | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsPersist.lean` | YYPPYPPP | register |  |
+| ReadingsSpread | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadingsSpread.lean` | YYPPYPPY | kept, register |  |
+| ReadInTime | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadInTime.lean` | YPPNYYYY | register |  |
+| ReadOffInTime | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadOffInTime.lean` | PYPPPPYY | future, register |  |
+| Readout | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Readout.lean` |  | register |  |
+| ReadStages | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReadStages.lean` |  | register |  |
+| RecursiveSelection | `experiments/market-generativity/meta-attractor/RecursiveSelection.lean` | PYPPYPPY |  |  |
+| ReflexivePrediction | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ReflexivePrediction.lean` |  | register |  |
+| RegimeAttraction | `experiments/market-generativity/formal/RegimeAttraction.lean` | YYPPYYPP |  |  |
+| RegimeBoundary | `experiments/market-generativity/formal/RegimeBoundary.lean` | YYNPYYPY |  |  |
+| RegimeMargin | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RegimeMargin.lean` | NYNPNNYY / NYPPPNYY | kept |  |
+| RegimeTransition | `experiments/market-generativity/formal/RegimeTransition.lean` | YYPPYYPY |  |  |
+| RelationalRenewal | `experiments/integrated-correction/general-framework/generative-basis/lean/deeper/RelationalRenewal.lean` | PYPPYNPP | kept |  |
+| Renewable | no Lean file of this name | NYPPPNPP |  |  |
+| RenewalConfigurations | `experiments/integrated-correction/general-framework/generative-basis/lean/conditional/renewal/RenewalConfigurations.lean` |  |  | `renewable_iff_step_same`, `renewability_not_generated_same` |
+| RenewingFormation | `experiments/integrated-correction/general-framework/generative-basis/lean/universal-ethics/generative-capacity/RenewingFormation.lean` | PYPPYNYY | kept |  |
+| Reproduction | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Reproduction.lean` | YYPYNNYY |  |  |
+| ReproductionNetwork | `experiments/market-generativity/meta-attractor/ReproductionNetwork.lean` | PYYYYPPP | kept |  |
+| ResponseCapacity | `experiments/market-generativity/meta-attractor/ResponseCapacity.lean` | PYYYYPYY | kept |  |
+| ResponseLearning | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/ResponseLearning.lean` |  | register |  |
+| Retaining | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Retaining.lean` |  | future |  |
+| Revision | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Revision.lean` |  | register |  |
+| RevisionPlans | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionPlans.lean` |  | register |  |
+| RevisionRoutes | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RevisionRoutes.lean` |  | register |  |
+| Roles | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Roles.lean` | PYPYPNPP | future, kept |  |
+| RouteFormation | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RouteFormation.lean` |  | register |  |
+| RuleCapture | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleCapture.lean` | YNNNNYPY |  |  |
+| RuleRebuilding | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleRebuilding.lean` | YYPPPYYY | kept |  |
+| RuleShaping | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/RuleShaping.lean` | YNPNYYYY |  |  |
+| ScratchMixedWay | no Lean file of this name |  |  | `mixed_same`, `grown_same` |
+| SelectionLevels | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SelectionLevels.lean` | PNPNYNYN |  |  |
+| Sensitivity | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Sensitivity.lean` |  | register |  |
+| SetPointOptimum | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SetPointOptimum.lean` | PYPYYNPY |  |  |
+| SharedCodes | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/SharedCodes.lean` |  | register |  |
+| SharedStockInstances | `experiments/market-generativity/meta-attractor/SharedStockInstances.lean` | PPNNNNYN |  |  |
+| Space | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Space.lean` |  | future |  |
+| Stock | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Stock.lean` | NYPPPNYY |  |  |
+| TestingReorganization | `experiments/market-generativity/meta-attractor/TestingReorganization.lean` | NYPYPPPP | register |  |
+| The market program (experiments/market-generativity/model.py | no Lean file of this name | YYYYYYPY |  |  |
+| The program of 17 November (d6_model.py) | no Lean file of this name | YYYYYNPN |  |  |
+| The scratch Lean of 17 November (ScratchCovering, ScratchMix | no Lean file of this name | YYPPYNYY |  |  |
+| The units of 19 November with a rule set again (lock_on_unit | no Lean file of this name | YYNPPYPP |  |  |
+| TimedResponse | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TimedResponse.lean` |  | register |  |
+| TurningInTime | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean` | PYPPPYYY / PYPPPYYY | future, register | `first_marked_same` |
+| Unread | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Unread.lean` |  | register |  |
+| UnreadStandings | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/UnreadStandings.lean` |  | register |  |
+| VersionedTaskInstances | `experiments/market-generativity/meta-attractor/VersionedTaskInstances.lean` | NYPPYPYY |  |  |
+| Viability | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Viability.lean` | NPNNNNYY | future |  |
+| WayOfUnits | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean` | NYNPPNYY |  | `carrier_same`, `two_units_same`, `same_statement` |
+| Weightings | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Weightings.lean` | PYPYNNPP / PYPPPNPP | future, kept |  |
+| WideningOnTheMap | `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WideningOnTheMap.lean` |  | future |  |
+
+## Same statement, up to unfolding: checks filed in scratch
+
+Read off the scratch modules filed as text in this row's study, by pattern. Each line is a check filed as scratch text, outside the package, written to close by rfl: where Lean accepted it (see the filed log on this line), the two statements are the same up to unfolding, that is, definitionally equal. The script read the text and the filed log and ran no Lean; nothing here checks that the text filed, or the file named for the other side, is the text that was built. The file of each side was found by search for a file that declares a theorem whose full name is the name written, or ends with it at a dot (the check's own file first, under the namespaces enclosing the check); the log is the one filed beside the module that holds the check; the package (`experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/`) was searched when this page was made. None of it is a link of the atlas. The note of each scratch folder says what each statement was proved from and who read it.
+
+| statement | same statement as, up to unfolding | check | filed build log of the check's module | in the package |
+|---|---|---|---|---|
+| `Becoming.Viability.RenewalBridge.renewable_iff_step`, line 85 of `_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchRenewalBridge.lean.txt` | `Generative.Conditional.Renewal.renewable_iff_step`, line 121 of `experiments/integrated-correction/general-framework/generative-basis/lean/conditional/renewal/RenewalConfigurations.lean` | `renewable_iff_step_same`, line 117 of [`ScratchRenewalBridge.lean.txt`](../scratch-lean-2026-11-21/ScratchRenewalBridge.lean.txt) ([note](../scratch-lean-2026-11-21/NOTE.md)) | [`build-ScratchRenewalBridge.log.txt`](../scratch-lean-2026-11-21/build-ScratchRenewalBridge.log.txt): exit 0; axiom report empty (7 theorems audited) | no theorem named `renewable_iff_step` found under the package at this run |
+| `Becoming.Viability.RenewalBridge.renewability_not_generated`, line 104 of `_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchRenewalBridge.lean.txt` | `Generative.Conditional.Renewal.renewability_not_generated`, line 129 of `experiments/integrated-correction/general-framework/generative-basis/lean/conditional/renewal/RenewalConfigurations.lean` | `renewability_not_generated_same`, line 124 of [`ScratchRenewalBridge.lean.txt`](../scratch-lean-2026-11-21/ScratchRenewalBridge.lean.txt) ([note](../scratch-lean-2026-11-21/NOTE.md)) | [`build-ScratchRenewalBridge.log.txt`](../scratch-lean-2026-11-21/build-ScratchRenewalBridge.log.txt): exit 0; axiom report empty (7 theorems audited) | no theorem named `renewability_not_generated` found under the package at this run |
+| `Becoming.ScratchUnitsCarrier.unending_iff_carrier_case`, line 144 of `_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchUnitsCarrier.lean.txt` | `Becoming.WayOfUnits.unending_iff_carrier`, line 517 of `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean` | `carrier_same`, line 163 of [`ScratchUnitsCarrier.lean.txt`](../scratch-lean-2026-11-21/ScratchUnitsCarrier.lean.txt) ([note](../scratch-lean-2026-11-21/NOTE.md)) | [`build-ScratchUnitsCarrier.log.txt`](../scratch-lean-2026-11-21/build-ScratchUnitsCarrier.log.txt): exit 0; axiom report empty (4 theorems audited) | no theorem named `unending_iff_carrier_case` found under the package at this run |
+| `Becoming.ScratchUnitsTurn.unending_iff_first_marked_case`, line 161 of `_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchUnitsTurn.lean.txt` | `Becoming.TurningInTime.unending_iff_first_marked`, line 739 of `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean` | `first_marked_same`, line 178 of [`ScratchUnitsTurn.lean.txt`](../scratch-lean-2026-11-21/ScratchUnitsTurn.lean.txt) ([note](../scratch-lean-2026-11-21/NOTE.md)) | [`build-ScratchUnitsTurn.log.txt`](../scratch-lean-2026-11-21/build-ScratchUnitsTurn.log.txt): exit 0; axiom report empty (75 theorems audited) | no theorem named `unending_iff_first_marked_case` found under the package at this run |
+| `Becoming.ScratchUnitsTurn.Two.two_units_iff_case`, line 1001 of `_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchUnitsTurn.lean.txt` | `Becoming.WayOfUnits.two_units_iff`, line 580 of `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean` | `two_units_same`, line 1070 of [`ScratchUnitsTurn.lean.txt`](../scratch-lean-2026-11-21/ScratchUnitsTurn.lean.txt) ([note](../scratch-lean-2026-11-21/NOTE.md)) | [`build-ScratchUnitsTurn.log.txt`](../scratch-lean-2026-11-21/build-ScratchUnitsTurn.log.txt): exit 0; axiom report empty (75 theorems audited) | no theorem named `two_units_iff_case` found under the package at this run |
+| `Becoming.ScratchUnitsTurn.mixed_turns_iff_case`, line 1174 of `_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchUnitsTurn.lean.txt` | `Becoming.ScratchMixedWay.mixed_turns_iff`, line 439 of `_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/second-way-2026-11-17/ScratchMixedWay.lean.txt` | `mixed_same`, line 19 of [`ScratchUnitsTurnCheck.lean.txt`](../scratch-lean-2026-11-21/ScratchUnitsTurnCheck.lean.txt) ([note](../scratch-lean-2026-11-21/NOTE.md)) | [`build-ScratchUnitsTurnCheck.log.txt`](../scratch-lean-2026-11-21/build-ScratchUnitsTurnCheck.log.txt): exit 0; axiom report empty (2 theorems audited) | no theorem named `mixed_turns_iff_case` found under the package at this run |
+| `Becoming.ScratchUnitsTurn.unending_grown_case`, line 450 of `_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchUnitsTurn.lean.txt` | `Becoming.ScratchMixedWay.unending_grown`, line 325 of `_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/second-way-2026-11-17/ScratchMixedWay.lean.txt` | `grown_same`, line 23 of [`ScratchUnitsTurnCheck.lean.txt`](../scratch-lean-2026-11-21/ScratchUnitsTurnCheck.lean.txt) ([note](../scratch-lean-2026-11-21/NOTE.md)) | [`build-ScratchUnitsTurnCheck.log.txt`](../scratch-lean-2026-11-21/build-ScratchUnitsTurnCheck.log.txt): exit 0; axiom report empty (2 theorems audited) | no theorem named `unending_grown_case` found under the package at this run |
+| `Becoming.ScratchMixedWay.Two.two_units_iff`, line 584 of `_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/second-way-2026-11-17/ScratchMixedWay.lean.txt` | `Becoming.WayOfUnits.two_units_iff`, line 580 of `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean` | `same_statement`, line 624 of [`ScratchMixedWay.lean.txt`](../second-way-2026-11-17/ScratchMixedWay.lean.txt) ([note](../second-way-2026-11-17/NOTE.md)) | [`ScratchMixedWay.build.log.txt`](../second-way-2026-11-17/ScratchMixedWay.build.log.txt): no exit line found; axiom report empty (40 theorems audited) | a theorem named `two_units_iff` is declared under the package at this run: `Becoming.WayOfUnits.two_units_iff`, line 580 of `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean` (this is the check's other side) |
 
 The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-by-goings-on-2026-11-20/NOTE.md)); **future** 21 November, a future opening or closing ([note](../read-a-future-2026-11-21/NOTE.md)); **register** 21 November, how a registering comes to be ([note](../read-registering-2026-11-21/NOTE.md)).
 
@@ -1144,6 +1161,10 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - exact two-sided law: None. Two general one-sided laws whose premises are not complements: within at every step (339) and over at every step from some T0 (overdraw_consuming 421: positive : 0 < L.needG; fWithin : L.needF ≤ L.needG; over : ∀ t, T0 ≤ t → L.renew + L.contrib t < L.draw t; dependent_overdraw_ends_itself 438: fPositive : 0 < L.needF; fWithin; over). The classification is 'exclusive and not exhaustive' (renewing_not_consuming 143, fluctuating_neither 217).
   - what is handed in: The number renew; that it is added exactly while the level is at or above needG; the schedules draw and contrib and the bound between them at every step. Q5: drawing beyond renewal and contribution; no_return_below_support 357 (noRestore; below). A general law that the loss falls on one that did not draw: independent_overdraw_persists 503 (independent : L.needF = 0; positive : 0 < L.needG; over): the focal formation is active and forms without bound while the sustaining formation loses the condition for ever; jointly_consuming 571 (within1; within2; joint : ∀ t, renew < d1 t + d2 t; positive; supported): each alone renewing, together consuming. Q6: formed 265 counts units; nothing multiplies or is selected.
 
+### RenewalConfigurations (no read; a check in scratch)
+- *same statement as, up to unfolding:* `Generative.Conditional.Renewal.renewable_iff_step`, line 121 of `experiments/integrated-correction/general-framework/generative-basis/lean/conditional/renewal/RenewalConfigurations.lean` has the same statement as `Becoming.Viability.RenewalBridge.renewable_iff_step`, line 85 of `_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchRenewalBridge.lean.txt`, by the check `renewable_iff_step_same` (line 117 of [`ScratchRenewalBridge.lean.txt`](../scratch-lean-2026-11-21/ScratchRenewalBridge.lean.txt); [note](../scratch-lean-2026-11-21/NOTE.md)). Filed build log of the check's module: [`build-ScratchRenewalBridge.log.txt`](../scratch-lean-2026-11-21/build-ScratchRenewalBridge.log.txt): exit 0; axiom report empty (7 theorems audited). In the package: no theorem named `renewable_iff_step` found under the package at this run. (a check filed as scratch text, outside the package, written to close by rfl: where Lean accepted it (see the filed log on this line), the two statements are the same up to unfolding, that is, definitionally equal. The script read the text and the filed log and ran no Lean; nothing here checks that the text filed, or the file named for the other side, is the text that was built.)
+- *same statement as, up to unfolding:* `Generative.Conditional.Renewal.renewability_not_generated`, line 129 of `experiments/integrated-correction/general-framework/generative-basis/lean/conditional/renewal/RenewalConfigurations.lean` has the same statement as `Becoming.Viability.RenewalBridge.renewability_not_generated`, line 104 of `_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchRenewalBridge.lean.txt`, by the check `renewability_not_generated_same` (line 124 of [`ScratchRenewalBridge.lean.txt`](../scratch-lean-2026-11-21/ScratchRenewalBridge.lean.txt); [note](../scratch-lean-2026-11-21/NOTE.md)). Filed build log of the check's module: [`build-ScratchRenewalBridge.log.txt`](../scratch-lean-2026-11-21/build-ScratchRenewalBridge.log.txt): exit 0; axiom report empty (7 theorems audited). In the package: no theorem named `renewability_not_generated` found under the package at this run. (a check filed as scratch text, outside the package, written to close by rfl: where Lean accepted it (see the filed log on this line), the two statements are the same up to unfolding, that is, definitionally equal. The script read the text and the filed log and ran no Lean; nothing here checks that the text filed, or the file named for the other side, is the text that was built.)
+
 ### RenewingFormation (readers' returns of 20 November; not checked)
 - *table:* universal-ethics/generative-capacity/RenewingFormation, letters `PYPPYNYY`, standing outside, told in chapter 2 §3.1 (02-MAP.md line 139), which points on to chapter 7
 - *result records that name this place's file as a source* (computed; not a link): `own-count-misses-joint-excess`, `renewing-consuming-formation`
@@ -1269,6 +1290,10 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - exact two-sided law: abbrev Band (r : Rule) (q : Nat) : Prop := r.teachingAge < r.tenure ∧ 1 ≤ q ∧ (q + leak r q) * r.tenure ≤ r.renewal (259). theorem «稳者恒持当且仅当在带» {r : Rule} (hm : r.source = .members) {q L : Nat} (hL : 1 ≤ L) : (∀ k, Held (run r always k (steady r q L))) ↔ Band r q (897). theorem «隙之律» {r : Rule} (hm : r.source = .members) (hs : r.tenure = r.teachingAge + 1) {q L : Nat} (hq : 1 ≤ q) (hL : 1 ≤ L) {b : List Bool} (hb : b.length = r.tenure) (hk : 1 ≤ heldCount b) : (∀ n, Held (run r always n (strands r q b L))) ↔ heldCount b * (q + (r.untaught - r.strength * q)) + emptyCount b * r.untaught ≤ r.renewal (1772). leak r q := r.untaught - r.strength * q * (r.tenure - r.teachingAge) (246); always 234 = entrants on offer at every step, no revision. The other side of each is general too: steady_ends 872, «隙过生持至尽» 1792. The opening account: 'This is the steady state's law and not the rule's.'
   - what is handed in: The renewal g (a number, nothing gives it); the count f who would come; entrants on offer at every step; the door's strength c; the teaching as a formula (a full quota wherever any teacher stands); the ending clause ('a modelling choice'); for the exact laws the starting state (steady, strands) and the course with no revision. Q5: the take exceeding level and renewal ends everything, closed under the net («尽而不复» 457); holders and others leave alike; the rule can be held to the last state («隙过生持至尽» 1792; built «改而成隙则尽» 1885); passing fails where teaching does not fit a tenure («不及任则持尽» 658) or the quota is nothing («额零则持尽» 677); no holder stays no holder («无持者不复» 698). Loss on one that did not cause it: not found in what was read. Q6: not found; a cohort enters at the quota, there is no share.
 
+### ScratchMixedWay (no read; a check in scratch)
+- *same statement as, up to unfolding:* `Becoming.ScratchMixedWay.mixed_turns_iff`, line 439 of `_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/second-way-2026-11-17/ScratchMixedWay.lean.txt` has the same statement as `Becoming.ScratchUnitsTurn.mixed_turns_iff_case`, line 1174 of `_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchUnitsTurn.lean.txt`, by the check `mixed_same` (line 19 of [`ScratchUnitsTurnCheck.lean.txt`](../scratch-lean-2026-11-21/ScratchUnitsTurnCheck.lean.txt); [note](../scratch-lean-2026-11-21/NOTE.md)). Filed build log of the check's module: [`build-ScratchUnitsTurnCheck.log.txt`](../scratch-lean-2026-11-21/build-ScratchUnitsTurnCheck.log.txt): exit 0; axiom report empty (2 theorems audited). In the package: no theorem named `mixed_turns_iff_case` found under the package at this run. (a check filed as scratch text, outside the package, written to close by rfl: where Lean accepted it (see the filed log on this line), the two statements are the same up to unfolding, that is, definitionally equal. The script read the text and the filed log and ran no Lean; nothing here checks that the text filed, or the file named for the other side, is the text that was built.)
+- *same statement as, up to unfolding:* `Becoming.ScratchMixedWay.unending_grown`, line 325 of `_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/second-way-2026-11-17/ScratchMixedWay.lean.txt` has the same statement as `Becoming.ScratchUnitsTurn.unending_grown_case`, line 450 of `_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchUnitsTurn.lean.txt`, by the check `grown_same` (line 23 of [`ScratchUnitsTurnCheck.lean.txt`](../scratch-lean-2026-11-21/ScratchUnitsTurnCheck.lean.txt); [note](../scratch-lean-2026-11-21/NOTE.md)). Filed build log of the check's module: [`build-ScratchUnitsTurnCheck.log.txt`](../scratch-lean-2026-11-21/build-ScratchUnitsTurnCheck.log.txt): exit 0; axiom report empty (2 theorems audited). In the package: no theorem named `unending_grown_case` found under the package at this run. (a check filed as scratch text, outside the package, written to close by rfl: where Lean accepted it (see the filed log on this line), the two statements are the same up to unfolding, that is, definitionally equal. The script read the text and the filed log and ran no Lean; nothing here checks that the text filed, or the file named for the other side, is the text that was built.)
+
 ### Sensitivity (readers' returns of 21 November; not checked)
 - *result records that name this place's file as a source* (computed; not a link): `sensitivity-is-the-least-coupling`, `what-a-law-of-the-whole-and-no-part-takes`
 - *read of 21 November, how a registering comes to be, reader learning-codes-inquiry, as "Sensitivity.lean and SensitivityWebs.lean"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-registering-2026-11-21/NOTE.md), [report](../read-registering-2026-11-21/read-learning-codes-inquiry.md.txt)):
@@ -1327,6 +1352,7 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
 - *table:* TurningInTime: the lock on a needed level (section 6), letters `PYPPPYYY`, standing core, told in chapter 2 §11 (Turning in time), the paragraph 'The lock's courses' (cites window_is_pair, locked_closed, locked_at_class, locked_alone, locked_ends_with_net; the regime, rising and window iff laws are not cited there by name)
 - *result records that name this place's file as a source* (computed; not a link): `turning-in-time`
 - *dynamics in the atlas that name one of those records* (computed; not a link): `turning-in-time`
+- *same statement as, up to unfolding:* `Becoming.TurningInTime.unending_iff_first_marked`, line 739 of `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean` has the same statement as `Becoming.ScratchUnitsTurn.unending_iff_first_marked_case`, line 161 of `_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchUnitsTurn.lean.txt`, by the check `first_marked_same` (line 178 of [`ScratchUnitsTurn.lean.txt`](../scratch-lean-2026-11-21/ScratchUnitsTurn.lean.txt); [note](../scratch-lean-2026-11-21/NOTE.md)). Filed build log of the check's module: [`build-ScratchUnitsTurn.log.txt`](../scratch-lean-2026-11-21/build-ScratchUnitsTurn.log.txt): exit 0; axiom report empty (75 theorems audited). In the package: no theorem named `unending_iff_first_marked_case` found under the package at this run. (a check filed as scratch text, outside the package, written to close by rfl: where Lean accepted it (see the filed log on this line), the two statements are the same up to unfolding, that is, definitionally equal. The script read the text and the filed log and ran no Lean; nothing here checks that the text filed, or the file named for the other side, is the text that was built.)
 - *read of 21 November, a future opening or closing, reader courses-still-open, as "TurningInTime.lean section 7: recoverable_iff_above, noReturnAt_iff_first_below, turns_in_time_iff_before"* (a reader's return, unchecked; what the note mended is in the note: [note](../read-a-future-2026-11-21/NOTE.md), [report](../read-a-future-2026-11-21/read-courses-still-open.md.txt)):
   - what stands for what can go on after: ReadOffInTime's Recoverable, where: - the feasible courses are Turned X giving H, X turned to the standing use H at some step (1945); - what is kept is MeetsNeed need (1949).
   - laws concluding an opening: None as widening. turns_in_time_iff_before (2289), exact, concludes the line never ends (不穷). Premises: AloneOutside with decided marks; turns; kept; uses (Kept implies use=H₂); nothing; short, meets and keeps at H₂,y₂,hi; 0<need≤H₂+y₂; short₁; uses₁ (H₁ ≤ use along alone's orbit); x<H₁+y₁; x≤hi. Conclusion: never ends ↔ there is a first marked step T, the need met at and before it, and a point of no return N with T+1<N.
@@ -1373,6 +1399,14 @@ The reads: **kept** 20 November, things kept by goings-on ([note](../read-kept-b
   - forms changing while it continues: Not found in what was read.
   - from where an opening comes: Not applicable.
   - a way related to widening: Not found in what was read. The docstring: 'nothing here says that some certificate exists'.
+
+### WayOfUnits (no read; in the table; a check in scratch)
+- *table:* WayOfUnits, letters `NYNPPNYY`, standing core, told in chapter 2 §11 (Turning in time): the theorem 'A way of units' and the witness With / Against
+- *result records that name this place's file as a source* (computed; not a link): `a-way-of-units`
+- *dynamics in the atlas that name one of those records* (computed; not a link): `turning-in-time`
+- *same statement as, up to unfolding:* `Becoming.WayOfUnits.unending_iff_carrier`, line 517 of `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean` has the same statement as `Becoming.ScratchUnitsCarrier.unending_iff_carrier_case`, line 144 of `_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchUnitsCarrier.lean.txt`, by the check `carrier_same` (line 163 of [`ScratchUnitsCarrier.lean.txt`](../scratch-lean-2026-11-21/ScratchUnitsCarrier.lean.txt); [note](../scratch-lean-2026-11-21/NOTE.md)). Filed build log of the check's module: [`build-ScratchUnitsCarrier.log.txt`](../scratch-lean-2026-11-21/build-ScratchUnitsCarrier.log.txt): exit 0; axiom report empty (4 theorems audited). In the package: no theorem named `unending_iff_carrier_case` found under the package at this run. (a check filed as scratch text, outside the package, written to close by rfl: where Lean accepted it (see the filed log on this line), the two statements are the same up to unfolding, that is, definitionally equal. The script read the text and the filed log and ran no Lean; nothing here checks that the text filed, or the file named for the other side, is the text that was built.)
+- *same statement as, up to unfolding:* `Becoming.WayOfUnits.two_units_iff`, line 580 of `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean` has the same statement as `Becoming.ScratchUnitsTurn.Two.two_units_iff_case`, line 1001 of `_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchUnitsTurn.lean.txt`, by the check `two_units_same` (line 1070 of [`ScratchUnitsTurn.lean.txt`](../scratch-lean-2026-11-21/ScratchUnitsTurn.lean.txt); [note](../scratch-lean-2026-11-21/NOTE.md)). Filed build log of the check's module: [`build-ScratchUnitsTurn.log.txt`](../scratch-lean-2026-11-21/build-ScratchUnitsTurn.log.txt): exit 0; axiom report empty (75 theorems audited). In the package: no theorem named `two_units_iff_case` found under the package at this run. (a check filed as scratch text, outside the package, written to close by rfl: where Lean accepted it (see the filed log on this line), the two statements are the same up to unfolding, that is, definitionally equal. The script read the text and the filed log and ran no Lean; nothing here checks that the text filed, or the file named for the other side, is the text that was built.)
+- *same statement as, up to unfolding:* `Becoming.WayOfUnits.two_units_iff`, line 580 of `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean` has the same statement as `Becoming.ScratchMixedWay.Two.two_units_iff`, line 584 of `_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/second-way-2026-11-17/ScratchMixedWay.lean.txt`, by the check `same_statement` (line 624 of [`ScratchMixedWay.lean.txt`](../second-way-2026-11-17/ScratchMixedWay.lean.txt); [note](../second-way-2026-11-17/NOTE.md)). Filed build log of the check's module: [`ScratchMixedWay.build.log.txt`](../second-way-2026-11-17/ScratchMixedWay.build.log.txt): no exit line found; axiom report empty (40 theorems audited). In the package: a theorem named `two_units_iff` is declared under the package at this run: `Becoming.WayOfUnits.two_units_iff`, line 580 of `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean` (this is the check's other side). (a check filed as scratch text, outside the package, written to close by rfl: where Lean accepted it (see the filed log on this line), the two statements are the same up to unfolding, that is, definitionally equal. The script read the text and the filed log and ran no Lean; nothing here checks that the text filed, or the file named for the other side, is the text that was built.)
 
 ### Weightings (readers' returns of 20 November, 21 November; not checked)
 - *table:* Weightings: PassesOn and the tiers, letters `PYPYNNPP`, standing core, told in chapter 7 §4.3 Where the centers depend on one another (needsSome_tiers, needs_giver_iff_store_short, needs_iff_through_short, TwoTiers, OwnStores); PassesOn and uptake_le_tiers are not named in the chapters

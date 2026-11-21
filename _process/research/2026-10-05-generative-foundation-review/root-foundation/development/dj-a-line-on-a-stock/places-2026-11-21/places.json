@@ -42,6 +42,431 @@
    ]
   }
  ],
+ "same_statements": [
+  {
+   "check": "renewable_iff_step_same",
+   "check_file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchRenewalBridge.lean.txt",
+   "check_line": 117,
+   "statement": {
+    "written": "Becoming.Viability.RenewalBridge.renewable_iff_step",
+    "resolved": true,
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchRenewalBridge.lean.txt",
+    "line": 85,
+    "full": "Becoming.Viability.RenewalBridge.renewable_iff_step",
+    "fits": [
+     {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchRenewalBridge.lean.txt",
+      "line": 85,
+      "full": "Becoming.Viability.RenewalBridge.renewable_iff_step"
+     }
+    ]
+   },
+   "same_statement_as": {
+    "written": "Generative.Conditional.Renewal.renewable_iff_step",
+    "resolved": true,
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/conditional/renewal/RenewalConfigurations.lean",
+    "line": 121,
+    "full": "Generative.Conditional.Renewal.renewable_iff_step",
+    "fits": [
+     {
+      "file": "experiments/integrated-correction/general-framework/generative-basis/lean/conditional/renewal/RenewalConfigurations.lean",
+      "line": 121,
+      "full": "Generative.Conditional.Renewal.renewable_iff_step"
+     }
+    ]
+   },
+   "up_to": "unfolding of definitions and the other reductions of Lean (definitional equality as the elaborator decides it), binder names and which arguments are implicit ignored",
+   "universes_written": {
+    "left": ".{u}",
+    "right": ".{u}"
+   },
+   "log": {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/build-ScratchRenewalBridge.log.txt",
+    "exit": 0,
+    "axioms": {},
+    "theorems": 7,
+    "unclean": []
+   },
+   "log_says": "exit 0; axiom report empty (7 theorems audited)",
+   "in_package": {
+    "searched": "tracked Lean files under experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/, copies left out, for a theorem named renewable_iff_step",
+    "found": []
+   },
+   "record": "../scratch-lean-2026-11-21/NOTE.md",
+   "what": "a check filed as scratch text, outside the package, written to close by rfl: where Lean accepted it (see the filed log on this line), the two statements are the same up to unfolding, that is, definitionally equal. The script read the text and the filed log and ran no Lean; nothing here checks that the text filed, or the file named for the other side, is the text that was built"
+  },
+  {
+   "check": "renewability_not_generated_same",
+   "check_file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchRenewalBridge.lean.txt",
+   "check_line": 124,
+   "statement": {
+    "written": "Becoming.Viability.RenewalBridge.renewability_not_generated",
+    "resolved": true,
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchRenewalBridge.lean.txt",
+    "line": 104,
+    "full": "Becoming.Viability.RenewalBridge.renewability_not_generated",
+    "fits": [
+     {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchRenewalBridge.lean.txt",
+      "line": 104,
+      "full": "Becoming.Viability.RenewalBridge.renewability_not_generated"
+     }
+    ]
+   },
+   "same_statement_as": {
+    "written": "Generative.Conditional.Renewal.renewability_not_generated",
+    "resolved": true,
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/conditional/renewal/RenewalConfigurations.lean",
+    "line": 129,
+    "full": "Generative.Conditional.Renewal.renewability_not_generated",
+    "fits": [
+     {
+      "file": "experiments/integrated-correction/general-framework/generative-basis/lean/conditional/renewal/RenewalConfigurations.lean",
+      "line": 129,
+      "full": "Generative.Conditional.Renewal.renewability_not_generated"
+     }
+    ]
+   },
+   "up_to": "unfolding of definitions and the other reductions of Lean (definitional equality as the elaborator decides it), binder names and which arguments are implicit ignored",
+   "universes_written": {
+    "left": ".{u}",
+    "right": ".{u}"
+   },
+   "log": {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/build-ScratchRenewalBridge.log.txt",
+    "exit": 0,
+    "axioms": {},
+    "theorems": 7,
+    "unclean": []
+   },
+   "log_says": "exit 0; axiom report empty (7 theorems audited)",
+   "in_package": {
+    "searched": "tracked Lean files under experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/, copies left out, for a theorem named renewability_not_generated",
+    "found": []
+   },
+   "record": "../scratch-lean-2026-11-21/NOTE.md",
+   "what": "a check filed as scratch text, outside the package, written to close by rfl: where Lean accepted it (see the filed log on this line), the two statements are the same up to unfolding, that is, definitionally equal. The script read the text and the filed log and ran no Lean; nothing here checks that the text filed, or the file named for the other side, is the text that was built"
+  },
+  {
+   "check": "carrier_same",
+   "check_file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchUnitsCarrier.lean.txt",
+   "check_line": 163,
+   "statement": {
+    "written": "unending_iff_carrier_case",
+    "resolved": true,
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchUnitsCarrier.lean.txt",
+    "line": 144,
+    "full": "Becoming.ScratchUnitsCarrier.unending_iff_carrier_case",
+    "fits": [
+     {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchUnitsCarrier.lean.txt",
+      "line": 144,
+      "full": "Becoming.ScratchUnitsCarrier.unending_iff_carrier_case"
+     }
+    ]
+   },
+   "same_statement_as": {
+    "written": "WayOfUnits.unending_iff_carrier",
+    "resolved": true,
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean",
+    "line": 517,
+    "full": "Becoming.WayOfUnits.unending_iff_carrier",
+    "fits": [
+     {
+      "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean",
+      "line": 517,
+      "full": "Becoming.WayOfUnits.unending_iff_carrier"
+     }
+    ]
+   },
+   "up_to": "unfolding of definitions and the other reductions of Lean (definitional equality as the elaborator decides it), binder names and which arguments are implicit ignored",
+   "universes_written": {
+    "left": null,
+    "right": null
+   },
+   "log": {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/build-ScratchUnitsCarrier.log.txt",
+    "exit": 0,
+    "axioms": {},
+    "theorems": 4,
+    "unclean": []
+   },
+   "log_says": "exit 0; axiom report empty (4 theorems audited)",
+   "in_package": {
+    "searched": "tracked Lean files under experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/, copies left out, for a theorem named unending_iff_carrier_case",
+    "found": []
+   },
+   "record": "../scratch-lean-2026-11-21/NOTE.md",
+   "what": "a check filed as scratch text, outside the package, written to close by rfl: where Lean accepted it (see the filed log on this line), the two statements are the same up to unfolding, that is, definitionally equal. The script read the text and the filed log and ran no Lean; nothing here checks that the text filed, or the file named for the other side, is the text that was built"
+  },
+  {
+   "check": "first_marked_same",
+   "check_file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchUnitsTurn.lean.txt",
+   "check_line": 178,
+   "statement": {
+    "written": "unending_iff_first_marked_case",
+    "resolved": true,
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchUnitsTurn.lean.txt",
+    "line": 161,
+    "full": "Becoming.ScratchUnitsTurn.unending_iff_first_marked_case",
+    "fits": [
+     {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchUnitsTurn.lean.txt",
+      "line": 161,
+      "full": "Becoming.ScratchUnitsTurn.unending_iff_first_marked_case"
+     }
+    ]
+   },
+   "same_statement_as": {
+    "written": "TurningInTime.unending_iff_first_marked",
+    "resolved": true,
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean",
+    "line": 739,
+    "full": "Becoming.TurningInTime.unending_iff_first_marked",
+    "fits": [
+     {
+      "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean",
+      "line": 739,
+      "full": "Becoming.TurningInTime.unending_iff_first_marked"
+     }
+    ]
+   },
+   "up_to": "unfolding of definitions and the other reductions of Lean (definitional equality as the elaborator decides it), binder names and which arguments are implicit ignored",
+   "universes_written": {
+    "left": null,
+    "right": null
+   },
+   "log": {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/build-ScratchUnitsTurn.log.txt",
+    "exit": 0,
+    "axioms": {},
+    "theorems": 75,
+    "unclean": []
+   },
+   "log_says": "exit 0; axiom report empty (75 theorems audited)",
+   "in_package": {
+    "searched": "tracked Lean files under experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/, copies left out, for a theorem named unending_iff_first_marked_case",
+    "found": []
+   },
+   "record": "../scratch-lean-2026-11-21/NOTE.md",
+   "what": "a check filed as scratch text, outside the package, written to close by rfl: where Lean accepted it (see the filed log on this line), the two statements are the same up to unfolding, that is, definitionally equal. The script read the text and the filed log and ran no Lean; nothing here checks that the text filed, or the file named for the other side, is the text that was built"
+  },
+  {
+   "check": "two_units_same",
+   "check_file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchUnitsTurn.lean.txt",
+   "check_line": 1070,
+   "statement": {
+    "written": "two_units_iff_case",
+    "resolved": true,
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchUnitsTurn.lean.txt",
+    "line": 1001,
+    "full": "Becoming.ScratchUnitsTurn.Two.two_units_iff_case",
+    "fits": [
+     {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchUnitsTurn.lean.txt",
+      "line": 1001,
+      "full": "Becoming.ScratchUnitsTurn.Two.two_units_iff_case"
+     }
+    ]
+   },
+   "same_statement_as": {
+    "written": "WayOfUnits.two_units_iff",
+    "resolved": true,
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean",
+    "line": 580,
+    "full": "Becoming.WayOfUnits.two_units_iff",
+    "fits": [
+     {
+      "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean",
+      "line": 580,
+      "full": "Becoming.WayOfUnits.two_units_iff"
+     }
+    ]
+   },
+   "up_to": "unfolding of definitions and the other reductions of Lean (definitional equality as the elaborator decides it), binder names and which arguments are implicit ignored",
+   "universes_written": {
+    "left": null,
+    "right": null
+   },
+   "log": {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/build-ScratchUnitsTurn.log.txt",
+    "exit": 0,
+    "axioms": {},
+    "theorems": 75,
+    "unclean": []
+   },
+   "log_says": "exit 0; axiom report empty (75 theorems audited)",
+   "in_package": {
+    "searched": "tracked Lean files under experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/, copies left out, for a theorem named two_units_iff_case",
+    "found": []
+   },
+   "record": "../scratch-lean-2026-11-21/NOTE.md",
+   "what": "a check filed as scratch text, outside the package, written to close by rfl: where Lean accepted it (see the filed log on this line), the two statements are the same up to unfolding, that is, definitionally equal. The script read the text and the filed log and ran no Lean; nothing here checks that the text filed, or the file named for the other side, is the text that was built"
+  },
+  {
+   "check": "mixed_same",
+   "check_file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchUnitsTurnCheck.lean.txt",
+   "check_line": 19,
+   "statement": {
+    "written": "ScratchUnitsTurn.mixed_turns_iff_case",
+    "resolved": true,
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchUnitsTurn.lean.txt",
+    "line": 1174,
+    "full": "Becoming.ScratchUnitsTurn.mixed_turns_iff_case",
+    "fits": [
+     {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchUnitsTurn.lean.txt",
+      "line": 1174,
+      "full": "Becoming.ScratchUnitsTurn.mixed_turns_iff_case"
+     }
+    ]
+   },
+   "same_statement_as": {
+    "written": "ScratchMixedWay.mixed_turns_iff",
+    "resolved": true,
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/second-way-2026-11-17/ScratchMixedWay.lean.txt",
+    "line": 439,
+    "full": "Becoming.ScratchMixedWay.mixed_turns_iff",
+    "fits": [
+     {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/second-way-2026-11-17/ScratchMixedWay.lean.txt",
+      "line": 439,
+      "full": "Becoming.ScratchMixedWay.mixed_turns_iff"
+     }
+    ]
+   },
+   "up_to": "unfolding of definitions and the other reductions of Lean (definitional equality as the elaborator decides it), binder names and which arguments are implicit ignored",
+   "universes_written": {
+    "left": null,
+    "right": null
+   },
+   "log": {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/build-ScratchUnitsTurnCheck.log.txt",
+    "exit": 0,
+    "axioms": {},
+    "theorems": 2,
+    "unclean": []
+   },
+   "log_says": "exit 0; axiom report empty (2 theorems audited)",
+   "in_package": {
+    "searched": "tracked Lean files under experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/, copies left out, for a theorem named mixed_turns_iff_case",
+    "found": []
+   },
+   "record": "../scratch-lean-2026-11-21/NOTE.md",
+   "what": "a check filed as scratch text, outside the package, written to close by rfl: where Lean accepted it (see the filed log on this line), the two statements are the same up to unfolding, that is, definitionally equal. The script read the text and the filed log and ran no Lean; nothing here checks that the text filed, or the file named for the other side, is the text that was built"
+  },
+  {
+   "check": "grown_same",
+   "check_file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchUnitsTurnCheck.lean.txt",
+   "check_line": 23,
+   "statement": {
+    "written": "ScratchUnitsTurn.unending_grown_case",
+    "resolved": true,
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchUnitsTurn.lean.txt",
+    "line": 450,
+    "full": "Becoming.ScratchUnitsTurn.unending_grown_case",
+    "fits": [
+     {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchUnitsTurn.lean.txt",
+      "line": 450,
+      "full": "Becoming.ScratchUnitsTurn.unending_grown_case"
+     }
+    ]
+   },
+   "same_statement_as": {
+    "written": "ScratchMixedWay.unending_grown",
+    "resolved": true,
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/second-way-2026-11-17/ScratchMixedWay.lean.txt",
+    "line": 325,
+    "full": "Becoming.ScratchMixedWay.unending_grown",
+    "fits": [
+     {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/second-way-2026-11-17/ScratchMixedWay.lean.txt",
+      "line": 325,
+      "full": "Becoming.ScratchMixedWay.unending_grown"
+     }
+    ]
+   },
+   "up_to": "unfolding of definitions and the other reductions of Lean (definitional equality as the elaborator decides it), binder names and which arguments are implicit ignored",
+   "universes_written": {
+    "left": null,
+    "right": null
+   },
+   "log": {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/build-ScratchUnitsTurnCheck.log.txt",
+    "exit": 0,
+    "axioms": {},
+    "theorems": 2,
+    "unclean": []
+   },
+   "log_says": "exit 0; axiom report empty (2 theorems audited)",
+   "in_package": {
+    "searched": "tracked Lean files under experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/, copies left out, for a theorem named unending_grown_case",
+    "found": []
+   },
+   "record": "../scratch-lean-2026-11-21/NOTE.md",
+   "what": "a check filed as scratch text, outside the package, written to close by rfl: where Lean accepted it (see the filed log on this line), the two statements are the same up to unfolding, that is, definitionally equal. The script read the text and the filed log and ran no Lean; nothing here checks that the text filed, or the file named for the other side, is the text that was built"
+  },
+  {
+   "check": "same_statement",
+   "check_file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/second-way-2026-11-17/ScratchMixedWay.lean.txt",
+   "check_line": 624,
+   "statement": {
+    "written": "two_units_iff",
+    "resolved": true,
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/second-way-2026-11-17/ScratchMixedWay.lean.txt",
+    "line": 584,
+    "full": "Becoming.ScratchMixedWay.Two.two_units_iff",
+    "fits": [
+     {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/second-way-2026-11-17/ScratchMixedWay.lean.txt",
+      "line": 584,
+      "full": "Becoming.ScratchMixedWay.Two.two_units_iff"
+     }
+    ]
+   },
+   "same_statement_as": {
+    "written": "WayOfUnits.two_units_iff",
+    "resolved": true,
+    "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean",
+    "line": 580,
+    "full": "Becoming.WayOfUnits.two_units_iff",
+    "fits": [
+     {
+      "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean",
+      "line": 580,
+      "full": "Becoming.WayOfUnits.two_units_iff"
+     }
+    ]
+   },
+   "up_to": "unfolding of definitions and the other reductions of Lean (definitional equality as the elaborator decides it), binder names and which arguments are implicit ignored",
+   "universes_written": {
+    "left": null,
+    "right": null
+   },
+   "log": {
+    "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/second-way-2026-11-17/ScratchMixedWay.build.log.txt",
+    "exit": null,
+    "axioms": {},
+    "theorems": 40,
+    "unclean": []
+   },
+   "log_says": "no exit line found; axiom report empty (40 theorems audited)",
+   "in_package": {
+    "searched": "tracked Lean files under experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/, copies left out, for a theorem named two_units_iff",
+    "found": [
+     {
+      "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean",
+      "full": "Becoming.WayOfUnits.two_units_iff",
+      "line": 580,
+      "is_the_other_side": true
+     }
+    ]
+   },
+   "record": "../second-way-2026-11-17/NOTE.md",
+   "what": "a check filed as scratch text, outside the package, written to close by rfl: where Lean accepted it (see the filed log on this line), the two statements are the same up to unfolding, that is, definitionally equal. The script read the text and the filed log and ran no Lean; nothing here checks that the text filed, or the file named for the other side, is the text that was built"
+  }
+ ],
  "places": [
   {
    "key": "LineOnAStock",
@@ -113,6 +538,171 @@
     }
    ],
    "reads": [],
+   "same_statement": [
+    {
+     "check": "carrier_same",
+     "check_file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchUnitsCarrier.lean.txt",
+     "check_line": 163,
+     "statement": {
+      "written": "unending_iff_carrier_case",
+      "resolved": true,
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchUnitsCarrier.lean.txt",
+      "line": 144,
+      "full": "Becoming.ScratchUnitsCarrier.unending_iff_carrier_case",
+      "fits": [
+       {
+        "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchUnitsCarrier.lean.txt",
+        "line": 144,
+        "full": "Becoming.ScratchUnitsCarrier.unending_iff_carrier_case"
+       }
+      ]
+     },
+     "same_statement_as": {
+      "written": "WayOfUnits.unending_iff_carrier",
+      "resolved": true,
+      "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean",
+      "line": 517,
+      "full": "Becoming.WayOfUnits.unending_iff_carrier",
+      "fits": [
+       {
+        "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean",
+        "line": 517,
+        "full": "Becoming.WayOfUnits.unending_iff_carrier"
+       }
+      ]
+     },
+     "up_to": "unfolding of definitions and the other reductions of Lean (definitional equality as the elaborator decides it), binder names and which arguments are implicit ignored",
+     "universes_written": {
+      "left": null,
+      "right": null
+     },
+     "log": {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/build-ScratchUnitsCarrier.log.txt",
+      "exit": 0,
+      "axioms": {},
+      "theorems": 4,
+      "unclean": []
+     },
+     "log_says": "exit 0; axiom report empty (4 theorems audited)",
+     "in_package": {
+      "searched": "tracked Lean files under experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/, copies left out, for a theorem named unending_iff_carrier_case",
+      "found": []
+     },
+     "record": "../scratch-lean-2026-11-21/NOTE.md",
+     "what": "a check filed as scratch text, outside the package, written to close by rfl: where Lean accepted it (see the filed log on this line), the two statements are the same up to unfolding, that is, definitionally equal. The script read the text and the filed log and ran no Lean; nothing here checks that the text filed, or the file named for the other side, is the text that was built"
+    },
+    {
+     "check": "two_units_same",
+     "check_file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchUnitsTurn.lean.txt",
+     "check_line": 1070,
+     "statement": {
+      "written": "two_units_iff_case",
+      "resolved": true,
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchUnitsTurn.lean.txt",
+      "line": 1001,
+      "full": "Becoming.ScratchUnitsTurn.Two.two_units_iff_case",
+      "fits": [
+       {
+        "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchUnitsTurn.lean.txt",
+        "line": 1001,
+        "full": "Becoming.ScratchUnitsTurn.Two.two_units_iff_case"
+       }
+      ]
+     },
+     "same_statement_as": {
+      "written": "WayOfUnits.two_units_iff",
+      "resolved": true,
+      "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean",
+      "line": 580,
+      "full": "Becoming.WayOfUnits.two_units_iff",
+      "fits": [
+       {
+        "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean",
+        "line": 580,
+        "full": "Becoming.WayOfUnits.two_units_iff"
+       }
+      ]
+     },
+     "up_to": "unfolding of definitions and the other reductions of Lean (definitional equality as the elaborator decides it), binder names and which arguments are implicit ignored",
+     "universes_written": {
+      "left": null,
+      "right": null
+     },
+     "log": {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/build-ScratchUnitsTurn.log.txt",
+      "exit": 0,
+      "axioms": {},
+      "theorems": 75,
+      "unclean": []
+     },
+     "log_says": "exit 0; axiom report empty (75 theorems audited)",
+     "in_package": {
+      "searched": "tracked Lean files under experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/, copies left out, for a theorem named two_units_iff_case",
+      "found": []
+     },
+     "record": "../scratch-lean-2026-11-21/NOTE.md",
+     "what": "a check filed as scratch text, outside the package, written to close by rfl: where Lean accepted it (see the filed log on this line), the two statements are the same up to unfolding, that is, definitionally equal. The script read the text and the filed log and ran no Lean; nothing here checks that the text filed, or the file named for the other side, is the text that was built"
+    },
+    {
+     "check": "same_statement",
+     "check_file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/second-way-2026-11-17/ScratchMixedWay.lean.txt",
+     "check_line": 624,
+     "statement": {
+      "written": "two_units_iff",
+      "resolved": true,
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/second-way-2026-11-17/ScratchMixedWay.lean.txt",
+      "line": 584,
+      "full": "Becoming.ScratchMixedWay.Two.two_units_iff",
+      "fits": [
+       {
+        "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/second-way-2026-11-17/ScratchMixedWay.lean.txt",
+        "line": 584,
+        "full": "Becoming.ScratchMixedWay.Two.two_units_iff"
+       }
+      ]
+     },
+     "same_statement_as": {
+      "written": "WayOfUnits.two_units_iff",
+      "resolved": true,
+      "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean",
+      "line": 580,
+      "full": "Becoming.WayOfUnits.two_units_iff",
+      "fits": [
+       {
+        "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean",
+        "line": 580,
+        "full": "Becoming.WayOfUnits.two_units_iff"
+       }
+      ]
+     },
+     "up_to": "unfolding of definitions and the other reductions of Lean (definitional equality as the elaborator decides it), binder names and which arguments are implicit ignored",
+     "universes_written": {
+      "left": null,
+      "right": null
+     },
+     "log": {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/second-way-2026-11-17/ScratchMixedWay.build.log.txt",
+      "exit": null,
+      "axioms": {},
+      "theorems": 40,
+      "unclean": []
+     },
+     "log_says": "no exit line found; axiom report empty (40 theorems audited)",
+     "in_package": {
+      "searched": "tracked Lean files under experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/, copies left out, for a theorem named two_units_iff",
+      "found": [
+       {
+        "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean",
+        "full": "Becoming.WayOfUnits.two_units_iff",
+        "line": 580,
+        "is_the_other_side": true
+       }
+      ]
+     },
+     "record": "../second-way-2026-11-17/NOTE.md",
+     "what": "a check filed as scratch text, outside the package, written to close by rfl: where Lean accepted it (see the filed log on this line), the two statements are the same up to unfolding, that is, definitionally equal. The script read the text and the filed log and ran no Lean; nothing here checks that the text filed, or the file named for the other side, is the text that was built"
+    }
+   ],
    "files": [
     "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/WayOfUnits.lean"
    ],
@@ -176,6 +766,60 @@
       "lost": "Not in these laws (the lock belongs to the readings group).",
       "tied_to_what_it_rests_on": "Yes: the stock's level entering [N,K) sets the rule or share, and whether the line goes on depends on where that first read falls relative to H2+y2. Which levels are read is handed in."
      }
+    }
+   ],
+   "same_statement": [
+    {
+     "check": "first_marked_same",
+     "check_file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchUnitsTurn.lean.txt",
+     "check_line": 178,
+     "statement": {
+      "written": "unending_iff_first_marked_case",
+      "resolved": true,
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchUnitsTurn.lean.txt",
+      "line": 161,
+      "full": "Becoming.ScratchUnitsTurn.unending_iff_first_marked_case",
+      "fits": [
+       {
+        "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchUnitsTurn.lean.txt",
+        "line": 161,
+        "full": "Becoming.ScratchUnitsTurn.unending_iff_first_marked_case"
+       }
+      ]
+     },
+     "same_statement_as": {
+      "written": "TurningInTime.unending_iff_first_marked",
+      "resolved": true,
+      "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean",
+      "line": 739,
+      "full": "Becoming.TurningInTime.unending_iff_first_marked",
+      "fits": [
+       {
+        "file": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean",
+        "line": 739,
+        "full": "Becoming.TurningInTime.unending_iff_first_marked"
+       }
+      ]
+     },
+     "up_to": "unfolding of definitions and the other reductions of Lean (definitional equality as the elaborator decides it), binder names and which arguments are implicit ignored",
+     "universes_written": {
+      "left": null,
+      "right": null
+     },
+     "log": {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/build-ScratchUnitsTurn.log.txt",
+      "exit": 0,
+      "axioms": {},
+      "theorems": 75,
+      "unclean": []
+     },
+     "log_says": "exit 0; axiom report empty (75 theorems audited)",
+     "in_package": {
+      "searched": "tracked Lean files under experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/, copies left out, for a theorem named unending_iff_first_marked_case",
+      "found": []
+     },
+     "record": "../scratch-lean-2026-11-21/NOTE.md",
+     "what": "a check filed as scratch text, outside the package, written to close by rfl: where Lean accepted it (see the filed log on this line), the two statements are the same up to unfolding, that is, definitionally equal. The script read the text and the filed log and ran no Lean; nothing here checks that the text filed, or the file named for the other side, is the text that was built"
     }
    ],
    "files": [
@@ -5781,6 +6425,238 @@
     "open-form-realization-under-revision",
     "wisdom-root"
    ],
+   "dynamics": []
+  },
+  {
+   "key": "RenewalConfigurations",
+   "table": [],
+   "reads": [],
+   "same_statement": [
+    {
+     "check": "renewable_iff_step_same",
+     "check_file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchRenewalBridge.lean.txt",
+     "check_line": 117,
+     "statement": {
+      "written": "Becoming.Viability.RenewalBridge.renewable_iff_step",
+      "resolved": true,
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchRenewalBridge.lean.txt",
+      "line": 85,
+      "full": "Becoming.Viability.RenewalBridge.renewable_iff_step",
+      "fits": [
+       {
+        "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchRenewalBridge.lean.txt",
+        "line": 85,
+        "full": "Becoming.Viability.RenewalBridge.renewable_iff_step"
+       }
+      ]
+     },
+     "same_statement_as": {
+      "written": "Generative.Conditional.Renewal.renewable_iff_step",
+      "resolved": true,
+      "file": "experiments/integrated-correction/general-framework/generative-basis/lean/conditional/renewal/RenewalConfigurations.lean",
+      "line": 121,
+      "full": "Generative.Conditional.Renewal.renewable_iff_step",
+      "fits": [
+       {
+        "file": "experiments/integrated-correction/general-framework/generative-basis/lean/conditional/renewal/RenewalConfigurations.lean",
+        "line": 121,
+        "full": "Generative.Conditional.Renewal.renewable_iff_step"
+       }
+      ]
+     },
+     "up_to": "unfolding of definitions and the other reductions of Lean (definitional equality as the elaborator decides it), binder names and which arguments are implicit ignored",
+     "universes_written": {
+      "left": ".{u}",
+      "right": ".{u}"
+     },
+     "log": {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/build-ScratchRenewalBridge.log.txt",
+      "exit": 0,
+      "axioms": {},
+      "theorems": 7,
+      "unclean": []
+     },
+     "log_says": "exit 0; axiom report empty (7 theorems audited)",
+     "in_package": {
+      "searched": "tracked Lean files under experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/, copies left out, for a theorem named renewable_iff_step",
+      "found": []
+     },
+     "record": "../scratch-lean-2026-11-21/NOTE.md",
+     "what": "a check filed as scratch text, outside the package, written to close by rfl: where Lean accepted it (see the filed log on this line), the two statements are the same up to unfolding, that is, definitionally equal. The script read the text and the filed log and ran no Lean; nothing here checks that the text filed, or the file named for the other side, is the text that was built"
+    },
+    {
+     "check": "renewability_not_generated_same",
+     "check_file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchRenewalBridge.lean.txt",
+     "check_line": 124,
+     "statement": {
+      "written": "Becoming.Viability.RenewalBridge.renewability_not_generated",
+      "resolved": true,
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchRenewalBridge.lean.txt",
+      "line": 104,
+      "full": "Becoming.Viability.RenewalBridge.renewability_not_generated",
+      "fits": [
+       {
+        "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchRenewalBridge.lean.txt",
+        "line": 104,
+        "full": "Becoming.Viability.RenewalBridge.renewability_not_generated"
+       }
+      ]
+     },
+     "same_statement_as": {
+      "written": "Generative.Conditional.Renewal.renewability_not_generated",
+      "resolved": true,
+      "file": "experiments/integrated-correction/general-framework/generative-basis/lean/conditional/renewal/RenewalConfigurations.lean",
+      "line": 129,
+      "full": "Generative.Conditional.Renewal.renewability_not_generated",
+      "fits": [
+       {
+        "file": "experiments/integrated-correction/general-framework/generative-basis/lean/conditional/renewal/RenewalConfigurations.lean",
+        "line": 129,
+        "full": "Generative.Conditional.Renewal.renewability_not_generated"
+       }
+      ]
+     },
+     "up_to": "unfolding of definitions and the other reductions of Lean (definitional equality as the elaborator decides it), binder names and which arguments are implicit ignored",
+     "universes_written": {
+      "left": ".{u}",
+      "right": ".{u}"
+     },
+     "log": {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/build-ScratchRenewalBridge.log.txt",
+      "exit": 0,
+      "axioms": {},
+      "theorems": 7,
+      "unclean": []
+     },
+     "log_says": "exit 0; axiom report empty (7 theorems audited)",
+     "in_package": {
+      "searched": "tracked Lean files under experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/, copies left out, for a theorem named renewability_not_generated",
+      "found": []
+     },
+     "record": "../scratch-lean-2026-11-21/NOTE.md",
+     "what": "a check filed as scratch text, outside the package, written to close by rfl: where Lean accepted it (see the filed log on this line), the two statements are the same up to unfolding, that is, definitionally equal. The script read the text and the filed log and ran no Lean; nothing here checks that the text filed, or the file named for the other side, is the text that was built"
+    }
+   ],
+   "files": [
+    "experiments/integrated-correction/general-framework/generative-basis/lean/conditional/renewal/RenewalConfigurations.lean"
+   ],
+   "kind": "one Lean file",
+   "records": [],
+   "dynamics": []
+  },
+  {
+   "key": "ScratchMixedWay",
+   "table": [],
+   "reads": [],
+   "same_statement": [
+    {
+     "check": "mixed_same",
+     "check_file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchUnitsTurnCheck.lean.txt",
+     "check_line": 19,
+     "statement": {
+      "written": "ScratchUnitsTurn.mixed_turns_iff_case",
+      "resolved": true,
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchUnitsTurn.lean.txt",
+      "line": 1174,
+      "full": "Becoming.ScratchUnitsTurn.mixed_turns_iff_case",
+      "fits": [
+       {
+        "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchUnitsTurn.lean.txt",
+        "line": 1174,
+        "full": "Becoming.ScratchUnitsTurn.mixed_turns_iff_case"
+       }
+      ]
+     },
+     "same_statement_as": {
+      "written": "ScratchMixedWay.mixed_turns_iff",
+      "resolved": true,
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/second-way-2026-11-17/ScratchMixedWay.lean.txt",
+      "line": 439,
+      "full": "Becoming.ScratchMixedWay.mixed_turns_iff",
+      "fits": [
+       {
+        "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/second-way-2026-11-17/ScratchMixedWay.lean.txt",
+        "line": 439,
+        "full": "Becoming.ScratchMixedWay.mixed_turns_iff"
+       }
+      ]
+     },
+     "up_to": "unfolding of definitions and the other reductions of Lean (definitional equality as the elaborator decides it), binder names and which arguments are implicit ignored",
+     "universes_written": {
+      "left": null,
+      "right": null
+     },
+     "log": {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/build-ScratchUnitsTurnCheck.log.txt",
+      "exit": 0,
+      "axioms": {},
+      "theorems": 2,
+      "unclean": []
+     },
+     "log_says": "exit 0; axiom report empty (2 theorems audited)",
+     "in_package": {
+      "searched": "tracked Lean files under experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/, copies left out, for a theorem named mixed_turns_iff_case",
+      "found": []
+     },
+     "record": "../scratch-lean-2026-11-21/NOTE.md",
+     "what": "a check filed as scratch text, outside the package, written to close by rfl: where Lean accepted it (see the filed log on this line), the two statements are the same up to unfolding, that is, definitionally equal. The script read the text and the filed log and ran no Lean; nothing here checks that the text filed, or the file named for the other side, is the text that was built"
+    },
+    {
+     "check": "grown_same",
+     "check_file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchUnitsTurnCheck.lean.txt",
+     "check_line": 23,
+     "statement": {
+      "written": "ScratchUnitsTurn.unending_grown_case",
+      "resolved": true,
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchUnitsTurn.lean.txt",
+      "line": 450,
+      "full": "Becoming.ScratchUnitsTurn.unending_grown_case",
+      "fits": [
+       {
+        "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/ScratchUnitsTurn.lean.txt",
+        "line": 450,
+        "full": "Becoming.ScratchUnitsTurn.unending_grown_case"
+       }
+      ]
+     },
+     "same_statement_as": {
+      "written": "ScratchMixedWay.unending_grown",
+      "resolved": true,
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/second-way-2026-11-17/ScratchMixedWay.lean.txt",
+      "line": 325,
+      "full": "Becoming.ScratchMixedWay.unending_grown",
+      "fits": [
+       {
+        "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/second-way-2026-11-17/ScratchMixedWay.lean.txt",
+        "line": 325,
+        "full": "Becoming.ScratchMixedWay.unending_grown"
+       }
+      ]
+     },
+     "up_to": "unfolding of definitions and the other reductions of Lean (definitional equality as the elaborator decides it), binder names and which arguments are implicit ignored",
+     "universes_written": {
+      "left": null,
+      "right": null
+     },
+     "log": {
+      "file": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/dj-a-line-on-a-stock/scratch-lean-2026-11-21/build-ScratchUnitsTurnCheck.log.txt",
+      "exit": 0,
+      "axioms": {},
+      "theorems": 2,
+      "unclean": []
+     },
+     "log_says": "exit 0; axiom report empty (2 theorems audited)",
+     "in_package": {
+      "searched": "tracked Lean files under experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/, copies left out, for a theorem named unending_grown_case",
+      "found": []
+     },
+     "record": "../scratch-lean-2026-11-21/NOTE.md",
+     "what": "a check filed as scratch text, outside the package, written to close by rfl: where Lean accepted it (see the filed log on this line), the two statements are the same up to unfolding, that is, definitionally equal. The script read the text and the filed log and ran no Lean; nothing here checks that the text filed, or the file named for the other side, is the text that was built"
+    }
+   ],
+   "files": [],
+   "kind": "no Lean file of this name",
+   "records": [],
    "dynamics": []
   }
  ]

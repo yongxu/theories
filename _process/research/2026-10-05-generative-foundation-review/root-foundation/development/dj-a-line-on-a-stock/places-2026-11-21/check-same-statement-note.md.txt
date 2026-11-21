@@ -1,0 +1,65 @@
+1. MUST. NOTE.md line 3: "No Lean was written or read for this". The new part does read Lean. Its index loop (build_places.py lines 159–164) opens every tracked `.lean` file outside the copies that contains one of the bare names, plus the twelve scratch texts, and parses their declarations. The added sentence, "for it the script reads filed Lean text by pattern", covers only the scratch text and leaves the first sentence false. Exact wording: "No Lean was written for this and none was built. For the section on checks from scratch, the script reads by pattern the scratch Lean filed as text in this study, and the declaration lines of the tracked Lean files that contain the names those checks use. It runs no Lean."
+
+2. MUST. NOTE.md line 28: "which statement is a case of which … One part of it that a script can read off a file is done in the next section". This presents the next section as doing part of the "case of which" relation, which line 32 denies ("not that one is a case of the other"). Quoting the coordinating session's thought on its own is acceptable. Tying the section to it is not. Exact wording: "That is the coordinating session's thought and is not done here. The next section lists something else that a script can read off a file: checks that two statements are the same up to unfolding."
+
+3. MUST. PLACES.md head line: "Every field below is a reader's return, unchecked … The lines marked *same statement* are not a reader's return". The head makes only this one exception. These fields are not readers' returns either:
+   - the `file` column and kind, computed from git ls-files;
+   - the table letters, standing and "told in", from the table of 20 November;
+   - the result records and dynamics lines, computed by `joins`.
+
+   So the head no longer says truly what every field is. Exact wording: "Each field under *read of …* is a reader's return, unchecked …; the table's fields are from the table of 20 November; the file, the records, the dynamics and the *same statement* lines are computed by the script, as the note says."
+
+4. MUST. PLACES.md heading "### WayOfUnits (no read; a check in scratch only)". WayOfUnits has a table row: letters `NYNPPNYY`, standing core. It also has records and a dynamic. "a check in scratch only" says it has nothing else, and it contradicts the note's "two of them made places by that alone", where WayOfUnits is not one of the two. The cause is build_places.py line 307, which gives this heading to every place without reads. Exact wording: "(no read)", or "(no read; in the table; a check in scratch)" when `p['table']` is non-empty.
+
+5. MUST. NOTE.md line 52: "whether the scratch statement is in the package is searched on each run". The script searches for a theorem of the left side's bare name (lines 216–217), not for the statement. For the check of 17 November, what it finds is `Becoming.WayOfUnits.two_units_iff`. That is a different full name and the other side of the check, not the scratch statement. Line 38 says this exactly; line 52 does not. Exact wording: "whether a theorem of the scratch statement's bare name is declared in the package is searched on each run".
+
+6. MUST. The constant SAME (build_places.py line 28), repeated on every same-statement line: "closed by rfl: the two statements are the same up to unfolding". It drops the condition that note line 32 keeps ("Where Lean accepts it"). For the check of 17 November, the filed log has no exit line. That log does show an audit of the module (40 theorems, empty axiom report, `unclean: []`), but the line still asserts sameness flatly. Exact wording: "closed by rfl: where Lean accepted it (see the filed log on this line), the two statements are definitionally equal".
+
+7. MUST, on (b). "Where Lean accepts it, the statements of A and B are the same up to unfolding of definitions. It shows nothing more" (NOTE.md line 32). What acceptance shows is this. `@A = @B` elaborates only if the type of A and the type of B are unified as definitionally equal at the elaborator's default transparency. Given that, `rfl` adds nothing, because by proof irrelevance any two proofs of one proposition are definitionally equal. Definitional equality is more than unfolding definitions:
+   - It includes β-, η- and let-reduction, recursor and literal reduction, structure η, and proof irrelevance inside the statements (two statements that differ only in a proof term count as the same).
+   - Binder names and binder kind (implicit or explicit) are ignored, so the "same statement" may differ in which arguments are implicit. Argument order must be the same.
+   - `@[irreducible]` definitions are not unfolded by the elaborator, so acceptance shows sameness at default transparency.
+   - Universes: only the two checks of ScratchRenewalBridge write `.{u}` on both sides, so they show sameness at a universe variable u. Elsewhere universe levels are left to unification, and the regex strips `.{…}` without recording whether it was written.
+
+   Exact wording I would stand behind: "Where Lean accepts it, the types of `A` and `B` (their statements) are definitionally equal: they reduce to the same term by unfolding definitions and Lean's other reductions, with binder names and implicitness ignored and proofs inside them identified. The `rfl` itself adds nothing, since two proofs of one proposition are equal. It shows nothing about how either was proved, and not that one is a case of the other." Whether `binrel%` elaboration could have inserted a coercion was not checked. That is remote for proofs of propositions, but the check as written does not exclude it.
+
+8. LESSER. NOTE.md line 15: "The scratch modules are in it only through the checks told in the section on them below." The table row "The scratch Lean of 17 November (ScratchCovering, ScratchMix…" is a place too, one of the 10 with no file, and line 48 names it. Exact wording: "Apart from the table's row for the scratch of 17 November, the scratch modules are in it only through the checks …"
+
+9. LESSER. build_places.py docstring of `same_statements`: "under the namespaces open at the check (as Lean would resolve it)". The script tries only the enclosing `namespace` prefixes, only within the check's own file, innermost first, and stops at the first hit. Lean also searches all such prefixes across imported modules, falls back to `open` declarations and aliases, and reports an ambiguity. For example, ScratchMixedWay has `open WayOfUnits` around the check of 17 November. NOTE.md line 36's "namespaces open" can also be misread as `open` commands. Exact wording: "under the enclosing namespaces (a reading of lines, not Lean's resolution)" and "the namespaces enclosing the check".
+
+10. LESSER. NOTE.md line 36: "every scratch module filed as text in this study". The script searches only tracked files matching `Scratch*.lean.txt` (lines 145–146, 159). Exact wording: "every tracked file named `Scratch*.lean.txt` in this study".
+
+11. LESSER. PLACES.md section intro: "found by search for a file that declares a theorem of that full name". The search also accepts a full name that ends with the name written at a dot (line 176). Exact wording: "whose full name is the name written, or ends with it at a dot".
+
+12. LESSER. NOTE.md line 40: "The line stands under the place of the file that declares the right-hand statement". This holds only for resolved sides (line 250). A check whose right side is not resolved would appear in the section table and under no place, and the note does not say so. At this run all sixteen sides are resolved.
+
+13. LESSER. NOTE.md line 50: "the note of its scratch folder, which every line links". The line links the note of the check's folder (line 223), not the statement's. At this run each statement and its check share a folder, so it holds now but is not guaranteed.
+
+14. LESSER. NOTE.md line 44: "nothing here checks that the text filed is the text that was built". The same is true of the right-hand files, which the line names as they stand today, and the sentence does not say so. The logs record trees `/Users/ren/tmp/dj/batch19/mixed`, `batch22` and `batch23`. `mixed_same` and `grown_same` were built against an untracked copy `Becoming/ScratchMixedWay.lean`, said in the check file's header to be unchanged. The git log shows WayOfUnits.lean and TurningInTime.lean unchanged since a54163054 (16 Nov) and RenewalConfigurations.lean since 7 Oct, so it is not stale now. Exact wording: "nothing here checks that the text filed, or the file named for the other side, is the text that was built".
+
+15. LESSER. NOTE.md line 7: "a table of 89 places". The table has 89 rows (confirmed), which key to 85 places (line 15). Exact wording: "a table of 89 rows".
+
+16. Figures, checked against places.json, git ls-files and the logs:
+    - twelve files swept, eight checks, seven and one: confirmed;
+    - sixteen sides, each with one file: confirmed;
+    - four modules of 21 November (RenewalBridge, UnitsCarrier, UnitsTurn, UnitsTurnCheck) with "exit 0" and `with_axioms: {}`: confirmed;
+    - the log of 17 November has no exit line and an empty audit: confirmed;
+    - 152 places, 140 / 2 / 10, 85, 108: confirmed;
+    - 4 places with a check (WayOfUnits, TurningInTime, RenewalConfigurations, ScratchMixedWay), and two made places by that alone (RenewalConfigurations, ScratchMixedWay): confirmed;
+    - none of the seven bare names found under becoming/Becoming, and `two_units_iff` found at WayOfUnits.lean line 580: confirmed.
+
+    Beyond these figures (item 15 aside), nothing found in what was read.
+
+17. Conditions (c):
+    - (1) is met in the data and the view. The key is `same_statement_as`, the field `up_to` is "unfolding (…)", and the column is "same statement as, up to unfolding". On the per-place lines the label is "same statement, up to unfolding:", without the word "as" (LESSER).
+    - "case" in places.json appears only in two readers' returns ("exact middle case", "a case of the core's commonResponse_antitone"), not of this relation, and in theorem names ending `_case`. That is acceptable.
+    - In NOTE.md, the denials on lines 32 and 52 are acceptable. The quotation on line 28 is acceptable alone, but not as linked in item 2.
+    - (2) is met.
+    - (3) is met: no hand table, and "place not resolved" with the files that fit is coded. It was not exercised at this run.
+    - (4) is met in code, but worded loosely on line 52 (item 5).
+
+18. (d): nothing adds up per place, ranks, or calls any of this a proof or part of the package in what was read. The only counts are "(N theorems audited)", copied from the logs. Beyond the head line (item 3), nothing found in what was read.
+
+19. (e): "Nothing here is a link", "the files hold no totals and nothing that adds up per place" and "Not complete" still hold. "No Lean was … read" does not (item 1). "The scratch modules are in it only through the checks" (item 8) is new text, not unchanged text.
+
+Not read: the scratch folders' NOTE.md files, including whether each says what each statement was proved from and who read it; the declaring lines of the eight left-hand statements beyond the check lines; the reader returns, `returns/` and the `joins` data; the body of PLACES.md beyond the sections named; whether a first form of the section with "a case" existed. I ran no Lean and did not run the script.

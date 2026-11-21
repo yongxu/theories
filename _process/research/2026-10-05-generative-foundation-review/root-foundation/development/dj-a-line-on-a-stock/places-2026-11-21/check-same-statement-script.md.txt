@@ -1,0 +1,45 @@
+1. LESSER. build_places.py, the docstring of same_statements: "first the check's own file, under the namespaces open at the check (as Lean would resolve it)". The code does less than Lean does. It does not model `open` lines, imports, declaration order (it would accept a theorem declared after the check in the same file), or the ordering of namespace-prefix matches across imported modules. The fallback rule is also not Lean's: `d['full'] == name or d['full'].endswith('.' + name)` matches the name in any namespace. Today this makes no difference. For all eight checks I read the namespaces and `open` lines at the check, and each resolves in Lean to the declaration listed:
+   - The RenewalBridge checks are fully qualified.
+   - carrier_same (ScratchUnitsCarrier 163, `open WayOfUnits`) resolves to Becoming.WayOfUnits.unending_iff_carrier, WayOfUnits.lean 517, namespace Becoming.WayOfUnits.
+   - first_marked_same (ScratchUnitsTurn 178, section Generic) resolves to Becoming.TurningInTime.unending_iff_first_marked, TurningInTime.lean 739, outside `Three`.
+   - two_units_same (1070, namespace Two, from 972 to 1072) resolves its left side to Becoming.ScratchUnitsTurn.Two.two_units_iff_case at 1001.
+   - The two checks in ScratchUnitsTurnCheck resolve through Becoming. to ScratchUnitsTurn 1174 and 450, and to ScratchMixedWay 439 and 325.
+   - same_statement (ScratchMixedWay 624, namespace Two, `open WayOfUnits`) has `@two_units_iff`. The namespace-prefix match Becoming.ScratchMixedWay.Two.two_units_iff at 584 is found before opened namespaces are consulted, so Becoming.WayOfUnits.two_units_iff does not make it ambiguous.
+
+   Exact words: "first the check's own file, trying the namespaces open at the check from the innermost out (`open` lines, imports and declaration order not read); then, for a theorem whose full name is the name written or ends with it at a dot".
+
+2. LESSER. The PLACES.md section header, generated at build_places.py line 293: "The file of each side was found by search for a file that declares a theorem of that full name". Most of the names written are not full names (`two_units_iff`, `WayOfUnits.two_units_iff`). The search is own file first, then a suffix match. NOTE.md describes this correctly; the page does not. Exact words: "...for a file that declares a theorem whose full name is the name written, or ends with it at a dot (the check's own file first, under the namespaces open at the check)".
+
+3. LESSER. The same header and the SAME string carry "Each line is a check ... closed by rfl: the two statements are the same up to unfolding" as a flat statement on every line. That includes the 17 November check, whose log has no exit line (second-way-2026-11-17/ScratchMixedWay.build.log.txt has an audit of 40 theorems and `with_axioms {}`, but no "exit"). The script's own field "no exit line found" is accurate. The general sentence says more than that one log shows. Exact words: "a check filed as scratch text ... written to close by rfl; where its filed log shows exit 0 and an empty axiom report, the two statements are the same up to unfolding".
+
+4. LESSER. In uncommented() in build_places.py, `"--"` or `"/-"` inside a string literal would be read as a comment. A string containing `/-` would blank everything up to the next `-/`, namespace and theorem lines included. I grepped the 16 files the index parsed today (4 tracked .lean files plus 12 Scratch*.lean.txt) for strings containing `--`, `/-` or `-/`. Nothing found.
+
+5. LESSER. In declared() and TH:
+   - `theorem _root_.X` would get the enclosing namespace prefixed (wrong full name).
+   - `end A.B` closing two scopes opened as `namespace A` / `namespace B` would not pop, because only the top stack entry is compared.
+   - `noncomputable section` and `public section` are not matched by NS. A bare `end` is popped only when the top entry is an unnamed scope, so this is harmless to names.
+   - Only theorem and lemma are indexed, so a check whose side is a def or abbrev would read as "no file found".
+
+   In the indexed files today I found no `_root_`, no `noncomputable` or `public section`, and no multi-part `end` except `end Generative.Conditional.Renewal`. That one matches its single `namespace Generative.Conditional.Renewal` line (RenewalConfigurations.lean 34 and 540), so it pops correctly.
+
+6. LESSER. CHECK uses `rfl\b`, which also matches `:= rfl.symm` or `rfl.trans`. The match is not proof-closing. No such text is in today's files.
+   - It misses `example`, `Iff.rfl`, `by rfl`, attributes or modifiers before `theorem`, dotted check names, and sides in parentheses.
+   - In same_statements, if the check's own declared() entry is not found, `ns` falls back to `''` without saying so.
+
+   No such input occurs in today's swept files (see 8).
+
+7. LESSER. The in_package entry for the 17 November check (`same_statement`): "a theorem named `two_units_iff` is declared under the package at this run: Becoming.WayOfUnits.two_units_iff". This is true by bare name. What is found is the other side of that same check, not the scratch statement Becoming.ScratchMixedWay.Two.two_units_iff. NOTE.md says this, but the line in PLACES.md and in places.json does not. Exact addition on that line: "(this is the check's other side)". Better still would be to compare full names as well. For the seven checks of 21 November, `found: []` is right: git grep finds no theorem of those bare names under becoming/Becoming/. renewable_iff_step and renewability_not_generated are declared only in conditional/renewal/RenewalConfigurations.lean. The other names occur only in becoming-checks copies, held copies and scratch.
+
+8. (b) Missed declarations of the same full names, and (d) missed checks: nothing found in what was read.
+   - Other declarations of these names are copies the script leaves out: becoming-checks/*, held/*.lean.txt, wu-a-way-of-units/held/WayOfUnits-v1/v2.lean.txt. There is also REPORT-units.md.txt.
+   - ScratchUnitsTurn.lean.txt 336 declares a second `unending_iff_carrier_case` (Becoming.ScratchUnitsTurn.unending_iff_carrier_case). It does not affect carrier_same, because own-file resolution finds ScratchUnitsCarrier 144 first and ScratchUnitsCarrier imports only Becoming.WayOfUnits. Had the own-file step failed, the suffix rule would have reported "place not resolved".
+   - git grep for `@... = @`, `Iff.rfl`, `example` and bare `rfl` lines in the study's *.txt found no rfl equation check beyond the eight. The other hits were prose in READ/REPORT/returns files, `rfl` lemmas at ScratchRenewalBridge 59 and 63, and ScratchTakesTheWhole 467, none of the `@A = @B` form. The only non-Scratch Lean texts in the study are the four held/ copies.
+
+9. (e) The logs: nothing false found in what was read.
+   - Each named log is of the module that holds the check: Becoming.ScratchRenewalBridge (7 theorems), ScratchUnitsCarrier (4), ScratchUnitsTurn (75), ScratchUnitsTurnCheck (2) and ScratchMixedWay (40). Each has `with_axioms {}` and `unclean []`.
+   - The "exit 0 build N" lines are written by the batch22/23 run-*.sh scripts as `echo "exit $? build $n"` directly after `python3 scratch_build.py ...`, so the 0 is the build's own status.
+   - Beyond the task: I compared the built copies in /Users/ren/tmp/dj/batch19/mixed, batch22 and batch23 (Becoming/*.lean) with the filed texts. All six are byte-identical today (`cmp`). This does not show they were unchanged at build time.
+
+10. (f) in_package: right for all eight. See 7 for the wording on the 17 November line.
+
+Not read: the parts of build_places.py outside lean_files, uncommented, declared, same_statements and the rendering lines near 281 to 296. I did not read most of NOTE.md or PLACES.md beyond this section, the whole of each Lean file (only the namespace and section lines, `open` lines, and the check and declaration lines), RenewalConfigurations' universe declarations, scratch_build.py, or whether `.{u}` is declared in ScratchRenewalBridge. I ran no Lean, and did not run the script.
