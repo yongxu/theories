@@ -1,0 +1,67 @@
+start 19:37:33
+{
+  "tree": "/Users/ren/tmp/dj/batch24",
+  "modules": 17,
+  "ran": [
+    "Becoming.ScratchKeptForViable",
+    "BecomingScratchKeptForViableAxiomAudit"
+  ],
+  "reused": 16,
+  "unclean": [],
+  "audits": {
+    "Becoming.ScratchKeptForViable": {
+      "theorems": 32,
+      "declarations": 47,
+      "with_axioms": {
+        "Becoming.ScratchKeptForViable.Independence.step": [
+          "propext"
+        ],
+        "Becoming.ScratchKeptForViable.Independence.process": [
+          "propext"
+        ],
+        "Becoming.ScratchKeptForViable.Independence.viable": [
+          "propext"
+        ],
+        "Becoming.ScratchKeptForViable.independence_of_v1": [
+          "propext"
+        ],
+        "Becoming.ScratchKeptForViable.keptFor_none_of_list": [
+          "propext"
+        ],
+        "Becoming.ScratchKeptForViable.keptFor_none_iff_list": [
+          "propext"
+        ],
+        "Becoming.ScratchKeptForViable.Drain.alone_kept_none": [
+          "propext"
+        ],
+        "Becoming.ScratchKeptForViable.Drain.start_viable": [
+          "propext"
+        ],
+        "Becoming.ScratchKeptForViable.Drain.starts_within": [
+          "propext"
+        ],
+        "Becoming.ScratchKeptForViable.Drain.level_lane": [
+          "propext"
+        ],
+        "Becoming.ScratchKeptForViable.Drain.end_lane": [
+          "propext"
+        ],
+        "Becoming.ScratchKeptForViable.Drain.together_kept_level": [
+          "propext"
+        ],
+        "Becoming.ScratchKeptForViable.Drain.together_kept_end": [
+          "propext"
+        ],
+        "Becoming.ScratchKeptForViable.Drain.reading_matters": [
+          "propext"
+        ]
+      }
+    }
+  },
+  "seconds": {
+    "Becoming.ScratchKeptForViable": 0.69,
+    "BecomingScratchKeptForViableAxiomAudit": 0.426
+  }
+}
+exit 0 build 2
+end 19:37:38

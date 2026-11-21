@@ -1,0 +1,66 @@
+*An AI checker's findings (run as Claude Opus; 8 tool calls and 114,109 tokens by the run's count), word for word from the run's journal (wf_d6605d6a-b2b), on the added section as it was before the check (NOTE.before-check-of-the-section.md.txt).*
+
+1. **MUST.** NOTE.md line 102: "The two ways of keeping over steps meet where it is decided whether a step is taken." The module has two sufficient premises, not one. One is `decided` (ScratchKeptForViable.lean.txt 55, 95). The other is `determinate` (76, 467), which decides nothing about whether a step is taken. The lower bound (`independence_of_v1`, 143–146) shows only that having no premise costs at least independence of premise. Nothing shows that decided steps are needed, so "meet where" says more than the Lean. Exact: "In the module the two meet where every step is decided, or where each move has at most one outcome; with no premise, the meeting would give at least independence of premise."
+
+2. **MUST.** Line 102: "which cannot be kept together unless the level is registered." The module proves three things here: the pair is not kept for 3 steps under `noneRead` (347), it is kept for every n under `keepsLevel` (406), and it is kept for every n under `endRead` (413). It proves nothing about any other reading. The claim is also false in substance. Take a reading that keeps only the lane, `fun _ _ t => t.1`. After the move `true`, each value's class is one lane above zero: (true,2) and (false,1). `lane_kept` (299–312, which holds under every reading) then keeps it. So the level need not be registered. It tells the lane here only because one lane has dropped to 1. Exact: "which are not kept together for 3 steps under the reading that keeps nothing, and are kept together for every n under the reading that keeps the level reached and under the one that keeps where the step ended."
+
+3. **MUST.** Line 102: "the built case is the smallest thing found so far". No source compares sizes or reports a search, so the figure has no source. Exact: drop "the smallest thing found so far"; say "a built case".
+
+4. **MUST.** Head note, line 84: "he then mended two docstrings the reader had found inexact".
+   - The diff of as-built-3 against the module as it stands changes only two docstrings, at lines 263–264 and 288–289. Statements and proofs are unchanged.
+   - The reader named only one of these two: the docstring at "line 287" (RETURN-refuter line 44). The one at 263 (`Drain.next`) has the same fault but the reader did not name it.
+   - The reader found other docstrings inexact, and they stay unmended:
+     - line 33, which states as a fact about core what is the worker's inference (refuter line 67);
+     - the docstrings of `keptFor_none_of_list`, `level_lane` and `end_lane`, which do not name `succ_not_zero` although the header promises they would (refuter line 35).
+   - The mend also adds "It runs down only under the move that does not match the lane", which is the reader's point.
+   - Exact: "he then mended the docstring the reader found inexact (`next_other`, 'lowers it by one'), and the same words in `Drain.next`'s, adding the reader's 'runs down only under the move that does not match'; the reader's other two docstring points (line 33 on `propext` in core, and three docstrings that do not name `succ_not_zero`) were left."
+
+5. **LESSER.** Head note: "One AI worker … wrote one module ([its build log](build-ScratchKeptForViable.log.txt): exit 0, an empty axiom report, 33 theorems)". The linked file is now build 4's log ("start 19:42:15 … exit 0 build 4"), the writer's build, not the worker's. The worker's build 3 is in build-ScratchKeptForViable.build3.log.txt and is not linked. Build 2's log is not linked either. The reader's line "build-ScratchKeptForViable.log is identical to build3.log" (refuter 63) is no longer true of the filed file: cmp shows they differ. Exact: link build3.log.txt in the worker's sentence and build-ScratchKeptForViable.log.txt at "build 4".
+
+6. **LESSER.** Item 3, line 92: "That is the coordinating session's empty class." The reader ties this quotation to "the coordinating session's point 2 in the frozen file" (refuter line 23): `KeptFor` asks of every value. The empty class is point 3 (FROZEN line 52). The two are related, but the section puts its own attribution right after the reader's quotation. Exact: "The reader: this is the coordinating session's point 2; it bears on the empty class of point 3."
+
+7. **LESSER.** Item 3: "That this principle cannot be derived without excluded middle is a known fact of logic". The worker's words are "cannot be derived intuitionistically" (worker line 74). Independence of premise is strictly weaker than excluded middle, so "without excluded middle" suggests excluded middle is what it needs. Exact: "cannot be derived in intuitionistic logic".
+
+8. **LESSER.** Item 3 puts formulas in quotation marks: "from "`p` gives some `x` with `q x`" there would be an `x` with "`p` gives `q x`"". These words are in no source. Exact: write the statement itself, `∀ p (α : Type) q, α → (p → ∃ x, q x) → ∃ x, p → q x`. Item 5's quoted "keeps along every outcome" is also not word for word in any source. The module says "keeps the guard from every configuration it can lead to" (210–212). Exact: drop the quotation marks.
+
+9. **LESSER.** How the test came out, line 98: "The worker's own view is close to that." The worker says "V1 to V3 are close to a dictionary, with one non-trivial seam (independence of premise, or decided steps) plus one built case" (worker line 216). It also says "What is more than a side-by-side reading is the boundary" (line 214), and it calls part (2) "partly" (line 208). That differs from the reader's "the reading does no work in the join itself". Exact: "The worker calls V1 to V3 close to a dictionary, with one non-trivial seam (independence of premise, or decided steps), and declined to answer part (3) itself."
+
+10. **LESSER.** How the test came out: "Its second part is met only with a premise." Part (2) of the frozen test also allows "or the built case uses the join" (FROZEN line 33). The reader says that clause is met only by `start_viable`, a theorem attached to the case, not by the case itself, and that `start_viable` could be had straight from `closed_viable` (refuter lines 51–53). The section leaves this out. Exact: add "and the built case uses the join only in `start_viable`, which could be had from `closed_viable` directly."
+
+11. **LESSER.** Item 7 leaves out three things:
+    - `certificate_keptFor_end_of_decided` (487–491). It is a new statement, not `Certificate.keptFor`; it needs `decided` and `live` and covers only classes of one (refuter 58).
+    - The reader's point that the frozen V6's "or it is shown why not" is argued, not proved (refuter 59).
+    - That the worker did not write `kernel_viable` versions (worker 197), although the frozen V6 names `kernel_viable`.
+
+12. **LESSER.** "What the module states" omits V4's first part, `finer_none_end` (250), which is `KeptFor.finer` at the two ends; the reader calls it "the trivial instance". It also omits that for `keepsLevel` `KeptFor.finer` is never stated (refuter 38–39), and it omits `keptFor_none_viable`.
+
+13. **LESSER.** No premise about the universe is stated except "on `Type`" in item 3. Everything is at `S A : Type` (module line 20; worker line 16; refuter line 70). Items 1, 2, 4, 5 and 7 say "for every process" and should say "on `Type`". Item 6's built process also takes every move as allowed (`everyMove`). That is said once in "What was tried", which is enough.
+
+14. **LESSER.** Build 2's finding is missing: `propext` came into 14 declarations, from the wildcard case and from `Nat.succ_ne_zero` (build2 log; worker lines 8–12). So is the reader's note that the claim about core is the worker's inference, still stated as fact in the docstring at line 33 (refuter 67).
+
+15. **LESSER.** The empty-class test under "After" (FROZEN line 52) asked whether a premise for the empty class is the join's or the definition's. The section never says how this came out:
+    - The reader handled the empty class at V1 (`keptFor_empty` "only to fill that empty class") and at V2 ("handled correctly: the right-hand side carries `∃ a`").
+    - The reader called the only content "an intuitionistic artefact of quantifying over values that do not occur" (refuter 24, 29, 84).
+    - Whether the worker saw the "After" points is open. It says "I read the frozen file whole" (worker 227), but the frozen file says its brief did not carry them.
+    
+    Exact: add one sentence giving the reader's answer and that the worker's sight of "After" is not known.
+
+16. **LESSER.** Item 7: "re-does the old law's own step". The reader says it "re-does `Closed`'s own content: guard, the enabled move, stays in K" (refuter 57). Exact: "re-does what `Closed` gives at each step".
+
+17. **LESSER.** "What it draws": "while a level runs down" and "two starts that nothing registered tells apart". In the courses that keep the pair, the level of one lane drops once, to 1, and then holds. The level runs down only under the move that does not match. "Nothing registered" reads as "no registered thing"; under `keepsLevel` the starts are told apart after the first move. Exact: "two starts that the reading which keeps nothing does not tell apart".
+
+18. **LESSER.** "What is kept from it (the reader's list)": the five items match the reader's list (refuter 95–99) in a changed order, with nothing added. It drops the reader's qualifier on the built case: "with a level that runs down only under the move that does not match". Item 6 does have that qualifier.
+
+**Confirmed:**
+- **Hash and links.** The hash file matches the as-frozen file (d1518269…) and records the name `FROZEN-KEPT-FOR-AND-VIABLE.as-frozen.md`, which fits "by its name in scratch". Every link target exists.
+- **Frozen file and its "After".** Frozen at 19:28, per its own header. Four points were added under "After" at 19:29, the third being the empty class; the diff of the two frozen files is only that "After" block.
+- **Counts and builds.** Worker: 15 tool calls, 3 builds. Reader: 10 tool calls, one MUST in the worker's report and 10 lesser findings. Build 4: exit 0, `with_axioms` {}, 33 theorems, 48 declarations. The module has 33 `theorem` lines.
+- **Items 1, 2 and 4.** The statements and premises are exact, including `decided`, `determinate` and `reachDecided`. Decided equality is not used.
+- **Item 3.** `independence_of_v1`'s statement is: `v1 : ∀ (S A : Type) (P : Process S A) (guard) (n) (s), Viable P guard n s → KeptFor P endRead guard everyMove n (· = s)` ⟹ `∀ (p : Prop) (α : Type) (q : α → Prop), α → (p → ∃ x, q x) → ∃ x, p → q x`. The order (p, inhabited α, q), "every process on `Type`" and "three configurations" are right. Both quotations are word for word (refuter lines 12 and 23).
+- **Item 5.** `KeepsFrom` (213) is a definition of the module, and the item reports the reader rightly.
+- **Item 6.** The built process (`next`, `process`, `above`, `starts`, `keepsLevel`) and the four parts of `reading_matters` (421–426) are right. So is everything attributed to the reader.
+- **Item 7.** `closed_viable_of_decided` and `closed_viable_of_determinate` have `closed_viable`'s conclusion (GuardHorizon 112–113), add their premise, and call `keptFor_of_closed` and `keptFor_end_viable`, not `closed_viable`.
+- **Test.** The long quotation is word for word (refuter 88). "Third dictionary" is the reader's word. The frozen line on "nothing having changed" (FROZEN 28) supports what the section says.
+- **No ranking.** Nothing is told as what makes a course better, and no ways of going on are ranked.
+
+**Not read or checked:** what the writer says he read. The token figure 258,127, because the journal `wf_3bc75c5d-e38` is not filed. The package's `Matching`, Frame.lean and Viability.lean. The sections of NOTE.md above this one. Whether the worker saw the frozen file's "After". Tool calls: 9.

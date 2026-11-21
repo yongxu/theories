@@ -1,0 +1,229 @@
+*An AI worker's return (run as Claude Opus), word for word from the run's journal (wf_3bc75c5d-e38); agents could not write report files, so this return is its report.*
+
+Module: /Users/ren/tmp/dj/batch24/Becoming/ScratchKeptForViable.lean (module Becoming.ScratchKeptForViable)
+Last build: `exit 0 build 3`, with `"unclean": []` and `"with_axioms": {}` (33 theorems, 48 declarations). Log: /Users/ren/tmp/dj/batch24/build-ScratchKeptForViable.log, with copies build-ScratchKeptForViable.build{1,2,3}.log.
+
+Build history:
+- **Build 1** failed. A definition named `guard` inside `Drain` clashed with the section variable `guard`, and there were unused-variable warnings. I renamed it `Drain.above` and replaced the unused names with `_`.
+- **Build 2** compiled, but propext appeared in 14 declarations, from two sources:
+  - the overlapping wildcard case `| _, _, _ => False` in `Independence.step`;
+  - core's `Nat.succ_ne_zero`. I checked this one: `alone_kept_none` had propext while `lane_kept` was clean, and the only other new thing in it was `Nat.succ_ne_zero`.
+  
+  I wrote all nine cases of `step` out, and added `succ_not_zero` (line 34, proved by `Nat.noConfusion`) in place of `Nat.succ_ne_zero`.
+- **Build 3** is clean.
+
+Setting:
+- Everything is on `S A : Type`. Universe 0 is GuardHorizon's own universe, so `KeptFor` is used at universe 0.
+- `endRead := fun _ _ t => t` (line 23), `noneRead := fun _ _ _ => ()` into `Unit` (line 26), `everyMove := fun _ _ => True` (line 29).
+- "The class holding only s" is `(· = s)`. This needs no decided equality. Decidability was needed elsewhere: whether a step happens, as V1 below shows.
+- `P` and `guard` are implicit section variables.
+
+---
+
+## V1: holds one way with no premise; the other way only with a premise, and without one it gives independence of premise
+
+**Kept to viable, no premise: holds.** `keptFor_end_viable` (line 41):
+```
+theorem keptFor_end_viable :
+    ∀ n s, KeptFor P endRead guard everyMove n (· = s) → GuardHorizon.Viable P guard n s
+```
+- Proved by recursion on n.
+- Calls `KeptFor.mono`: the class `(· = t)` lies inside `Seen P endRead (· = s) a t` whenever `P.step s a t`.
+
+**Viable to kept, with a premise: holds.** Two forms.
+
+`viable_keptFor_end_of_decided` (line 55). Premise: every step is decided.
+```
+theorem viable_keptFor_end_of_decided (decided : ∀ s a t, P.step s a t ∨ ¬ P.step s a t) :
+    ∀ n s, GuardHorizon.Viable P guard n s → KeptFor P endRead guard everyMove n (· = s)
+```
+- Calls `KeptFor.mono` and `keptFor_empty`.
+- For each value o, it decides `P.step s a o`. If the step happens, the class seen lies inside `(· = o)`, which is kept by recursion. If not, the class seen is empty, and `keptFor_empty a n` keeps it.
+
+`viable_keptFor_end_of_determinate` (line 76). Premise: each move has at most one outcome.
+```
+theorem viable_keptFor_end_of_determinate
+    (determinate : ∀ s a t t', P.step s a t → P.step s a t' → t = t') :
+    ∀ n s, GuardHorizon.Viable P guard n s → KeptFor P endRead guard everyMove n (· = s)
+```
+- Calls `KeptFor.mono`.
+- Every class seen lies inside `(· = t0)`, where t0 is the outcome that `Viable`'s enabled move gives.
+
+`viable_iff_keptFor_end` (line 95) is the equivalence, with the decided premise:
+```
+theorem viable_iff_keptFor_end (decided : ∀ s a t, P.step s a t ∨ ¬ P.step s a t) (n : Nat)
+    (s : S) :
+    GuardHorizon.Viable P guard n s ↔ KeptFor P endRead guard everyMove n (· = s)
+```
+
+**Viable to kept with no premise: not proved, and its exact cost is proved.** `independence_of_v1` (line 143):
+```
+theorem independence_of_v1
+    (v1 : ∀ (S A : Type) (P : Process S A) (guard : S → Prop) (n : Nat) (s : S),
+      GuardHorizon.Viable P guard n s → KeptFor P endRead guard everyMove n (· = s)) :
+    ∀ (p : Prop) (α : Type) (q : α → Prop), α → (p → ∃ x, q x) → ∃ x, p → q x
+```
+- The process is `Independence.process` (lines 105 to 124), with three configurations:
+  - from zero, every move goes to two; it also goes to one where p holds;
+  - from one, move x goes to two where q x holds;
+  - two stays.
+- `Independence.viable` (line 128) shows zero is Viable for 2 steps, given a move `x0` and `p → ∃ x, q x`.
+- Kept under endRead at 2 then forces one move that is enabled at "one" whenever "one" was reached. That is `∃ x, p → q x`.
+- So V1 as worded, with no premise, implies independence of premise.
+
+That independence of premise cannot be derived intuitionistically is a known fact of logic. It is **not** proved here.
+
+Where V1 fails as worded: in `viable_keptFor_end_of_decided`, in the branch for the move's value o. With no premise, the class seen `{t | P.step s a t ∧ t = o}` may or may not be empty. The next move must be chosen without knowing which.
+
+## V2: holds one way with no premise; the other way with two premises
+
+`keptFor_end_succ_viable` (line 163). No premise. Calls `keptFor_end_viable` and `KeptFor.mono`.
+```
+theorem keptFor_end_succ_viable {B : S → Prop} {n : Nat}
+    (kept : KeptFor P endRead guard everyMove (n + 1) B) :
+    (∀ s, B s → guard s) ∧ ∃ a, (∀ s, B s → Enabled P s a) ∧
+      ∀ t, (∃ s, B s ∧ P.step s a t) → GuardHorizon.Viable P guard n t
+```
+
+`keptFor_end_succ_of_viable` (line 181). Calls `viable_keptFor_end_of_decided`, `KeptFor.mono` and `keptFor_empty`. Premises:
+- `decided : ∀ s a t, P.step s a t ∨ ¬ P.step s a t`;
+- `reachDecided : ∀ a t, (∃ s, B s ∧ P.step s a t) ∨ ¬ (∃ s, B s ∧ P.step s a t)`.
+
+Conclusion: from `within`, `enabled : ∀ s, B s → Enabled P s a` and `viable : ∀ t, (∃ s, B s ∧ P.step s a t) → Viable n t`, it gives `KeptFor P endRead guard everyMove (n + 1) B`.
+
+`keptFor_end_succ_iff` (line 199) is the equivalence, under both premises.
+
+V2 "with no premise" fails at the same place as V1: V1 is V2 at a class of one configuration.
+
+## V3: holds, no premise
+
+"One list of n moves keeps the guard from every configuration of the class, along every outcome" is defined pointwise. `KeepsFrom` (line 213):
+```
+def KeepsFrom (P : Process S A) (guard : S → Prop) : List A → S → Prop
+  | [], s => guard s
+  | a :: as, s => guard s ∧ Enabled P s a ∧ ∀ t, P.step s a t → KeepsFrom P guard as t
+```
+
+`keptFor_none_iff_list` (line 240) states the equivalence:
+```
+theorem keptFor_none_iff_list (n : Nat) (B : S → Prop) :
+    KeptFor P noneRead guard everyMove n B ↔
+      ∃ as : List A, as.length = n ∧ ∀ s, B s → KeepsFrom P guard as s
+```
+- It is built from `keptFor_none_list` (line 219) and `keptFor_none_of_list` (line 229).
+- Both are by recursion. They use only unfolding, and `succ_not_zero` for the length cases.
+
+## V4: holds, all three parts stated and proved
+
+**`KeptFor.finer` as a case.** `finer_none_end` (line 250), for any allowed:
+```
+theorem finer_none_end {allowed : S → A → Prop} {n : Nat} {B : S → Prop}
+    (kept : KeptFor P noneRead guard allowed n B) : KeptFor P endRead guard allowed n B
+```
+This is `KeptFor.finer (fun _ => ()) (fun _ _ _ => rfl) kept`.
+
+Also `keptFor_none_viable` (line 256). No premise. Calls `finer_none_end`, `KeptFor.mono` and `keptFor_end_viable`.
+```
+theorem keptFor_none_viable {n : Nat} {B : S → Prop}
+    (kept : KeptFor P noneRead guard everyMove n B) : ∀ s, B s → GuardHorizon.Viable P guard n s
+```
+
+**The built case: `Drain`, lines 261 to 426.**
+
+In plain words:
+- A configuration is a lane (a Bool) and a level (a Nat).
+- The move matching the lane keeps the level. The other move lowers it by one (`next_other`, line 288: `next s (!s.1) = (s.1, s.2 - 1)`).
+- The guard `above` says the level is not 0.
+- The starts are (true, 2) and (false, 2).
+- `keepsLevel := fun _ _ t => t.2` is the reading that keeps the level.
+
+Its theorems:
+- `lane_kept` (line 297) is the general step. A class all in one lane b, with level not 0, is kept for every n under every reading.
+  ```
+  theorem lane_kept {O : Type} (sense : Bool × Nat → Bool → Bool × Nat → O) :
+      ∀ n {C : Bool × Nat → Prop} (b : Bool), Lane b C → KeptFor process sense above everyMove n C
+  ```
+  It is proved by the package's `keptFor_of_closed` (family `∃ b, Lane b C`) and `next_own`.
+- **Each alone kept.** `alone_kept_none` (line 313) calls `lane_kept`.
+  ```
+  theorem alone_kept_none (b : Bool) (n : Nat) :
+      KeptFor process noneRead above everyMove n (· = (b, 2))
+  ```
+- **Together not kept under none.** `together_not_kept_none` (line 345) is proved by case analysis on the three moves (`losing`, line 328, eight cases) with `seen_next` and `start_of`. In three moves one lane meets the other move at least twice and ends at level 0.
+  ```
+  theorem together_not_kept_none : ¬ KeptFor process noneRead above everyMove 3 starts
+  ```
+- **Together kept under the level reading.** `together_kept_level` (line 404). After the move true, level 2 means lane true and level 1 means lane false (`level_lane`, line 367, with `laneOf`). Then `lane_kept` applies.
+  ```
+  theorem together_kept_level : ∀ n, KeptFor process keepsLevel above everyMove n starts
+  ```
+- **Together kept under end.** `together_kept_end` (line 411), through `end_lane` (line 385).
+  ```
+  theorem together_kept_end : ∀ n, KeptFor process endRead above everyMove n starts
+  ```
+- `reading_matters` (line 419) is the four parts joined.
+- `start_viable` (line 320) shows each start is `GuardHorizon.Viable` for every n. It goes through the join: `keptFor_end_viable` on `finer_none_end (alone_kept_none b n)`.
+
+## V5
+
+This is answered in the test below. In short:
+- V3, V1 from kept to viable, and V2 from kept to viable are unfolding plus `KeptFor.mono`: V5 holds for them.
+- V1 from viable to kept and V2 from viable to kept are not plain unfolding. They need a premise, and `independence_of_v1` shows the premise cannot simply be dropped.
+
+## V6: holds only with a premise, so no old statement comes back unchanged and no `rfl` check was possible
+
+**From Keeping to GuardHorizon.** `closed_viable_of_decided` (line 438) gets `closed_viable`'s conclusion from `keptFor_of_closed` through V1. It calls `keptFor_of_closed` (family `SingleIn A K`, line 431: at most one configuration of K, or empty with a move in hand) and `keptFor_end_viable`. It does not call `GuardHorizon.closed_viable`.
+```
+theorem closed_viable_of_decided (decided : ∀ s a t, P.step s a t ∨ ¬ P.step s a t)
+    {K : S → Prop} (closed : GuardHorizon.Closed P guard K) :
+    ∀ n s, K s → GuardHorizon.Viable P guard n s
+```
+`closed_viable_of_determinate` (line 465) does the same with the premise `∀ s a t t', P.step s a t → P.step s a t' → t = t'`. Its family is `fun C => ∃ s0, K s0 ∧ ∀ x, C x → x = s0`.
+
+**From GuardHorizon to Keeping.** `certificate_keptFor_end_of_decided` (line 485). Calls `GuardHorizon.certificate_viable` and `viable_keptFor_end_of_decided`.
+```
+theorem certificate_keptFor_end_of_decided (decided : ∀ s a t, P.step s a t ∨ ¬ P.step s a t)
+    {K : S → Prop} (cert : Certificate P guard K) (live : ∀ s, K s → ∃ a, Enabled P s a) :
+    ∀ n s, K s → KeptFor P endRead guard everyMove n (· = s)
+```
+This is a new statement. It is not `Certificate.keptFor`: that one needs one move usable throughout K, and gives every class within K under every reading.
+
+**Which premise stands in the way.** `keptFor_of_closed`, `Certificate.keptFor` and `Kernel.keptFor` need one move usable throughout each class. `closed_viable`, `certificate_viable` and `kernel_viable` give an enabled move per configuration.
+
+A law for classes that are single configurations closes the gap only partly. Under endRead, the classes seen from one configuration are within a single configuration, but they may be empty. Choosing the next move without knowing whether the class is empty is again independence of premise.
+
+So a single-configuration law closes the gap with decided steps or at-most-one-outcome steps, as above. It does not close it without one.
+
+I did not write `kernel_viable` versions. `kernel_viable` goes through `closed_viable` in the package, so `closed_viable_of_decided` would serve it, but I have not checked that by building it.
+
+---
+
+## The three-part test
+
+1. **An old definition or law as a case, statement unchanged: no.**
+   - `Viable` equals `KeptFor` under endRead at `(· = s)` only as an equivalence with a premise (decided steps, or at most one outcome per move).
+   - Without a premise, the step from viable to kept implies independence of premise.
+   - The only old law that appears as a case is `KeptFor.finer`, as `finer_none_end`. That is a specialisation, not the old statement unchanged.
+   - No `@new = @old := rfl` check was possible.
+2. **An old law proved again from the other side through the join: partly, and only with a premise.**
+   - `closed_viable_of_decided` and `closed_viable_of_determinate` get `closed_viable`'s conclusion from Keeping's `keptFor_of_closed` through V1, not from GuardHorizon's own lemmas, but with an added premise.
+   - `certificate_keptFor_end_of_decided` goes the other way to a new statement.
+   - In the built case, `start_viable` uses the join. The three main parts (alone kept, together not kept, together kept) do not; they use `keptFor_of_closed` and case analysis.
+3. **Does the reading do work?**
+   - In V1 to V3, the reading only shapes the class seen: a subset of `{o}` under end, the set of outcomes under none. The proofs are unfolding plus `mono` and `keptFor_empty`.
+   - What is more than a side-by-side reading is the boundary: KeptFor-at-end and Viable part exactly where a move must be chosen for a class that may be empty. That is independence of premise, and it is closed by deciding the step.
+   - In `Drain`, the reading does real work. After the first move, the level kept tells the lane (`level_lane`), and that is what lets one move per value keep both starts. Under none, no single list of moves does it for three steps, because the level runs down on the lane that meets the other move.
+   - Whether a reader who took no part judges this more than a dictionary is not mine to answer. My own view: V1 to V3 are close to a dictionary, with one non-trivial seam (independence of premise, or decided steps) plus one built case.
+
+## What I did not read, and counts
+
+Not read:
+- the two NOTE.md files (`read-a-choice-from-a-reading-2026-11-21` and `no-return-2026-11-21`);
+- Frame.lean, apart from `Reach` and `Invariant`;
+- Viability.lean beyond lines 40 to 80;
+- Keeping.lean beyond line 460;
+- GuardHorizon.lean beyond line 145.
+
+I read the frozen file whole.
+
+Tool calls: 15. Builds: 3.

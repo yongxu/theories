@@ -1,0 +1,24 @@
+start 19:37:48
+{
+  "tree": "/Users/ren/tmp/dj/batch24",
+  "modules": 17,
+  "ran": [
+    "Becoming.ScratchKeptForViable",
+    "BecomingScratchKeptForViableAxiomAudit"
+  ],
+  "reused": 16,
+  "unclean": [],
+  "audits": {
+    "Becoming.ScratchKeptForViable": {
+      "theorems": 33,
+      "declarations": 48,
+      "with_axioms": {}
+    }
+  },
+  "seconds": {
+    "Becoming.ScratchKeptForViable": 1.045,
+    "BecomingScratchKeptForViableAxiomAudit": 0.404
+  }
+}
+exit 0 build 3
+end 19:37:54

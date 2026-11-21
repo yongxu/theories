@@ -1,0 +1,495 @@
+import Becoming.GuardHorizon
+
+/-!
+# ScratchKeptForViable: `Keeping.KeptFor` set against `GuardHorizon.Viable`
+
+Scratch, outside the package (AI-written, Claude, 21 November 2026, board row DJ). Not landed.
+It tries the guesses V1 to V6 of `tmp/r7/one-model/check/keptviable21/FROZEN-KEPT-FOR-AND-VIABLE.md`
+on the package's own `Viability.KeptFor` and `GuardHorizon.Viable`, unchanged, with every move
+allowed (`everyMove`), the reading that keeps where a step ended (`endRead`) and the reading that
+keeps nothing (`noneRead`, into `Unit`). Each declaration's docstring says what it states, with
+its premises, and which older theorems it calls.
+-/
+
+namespace Becoming
+
+namespace ScratchKeptForViable
+
+open Generative Viability
+
+variable {S A : Type}
+
+/-- The reading that keeps the configuration a step ended in. -/
+def endRead : S → A → S → S := fun _ _ t => t
+
+/-- The reading that keeps nothing. -/
+def noneRead : S → A → S → Unit := fun _ _ _ => ()
+
+/-- Every move is allowed. -/
+def everyMove : S → A → Prop := fun _ _ => True
+
+variable {P : Process S A} {guard : S → Prop}
+
+/-- A successor is not zero, by `Nat.noConfusion` (core's `Nat.succ_ne_zero` brings `propext`). -/
+theorem succ_not_zero (n : Nat) : Nat.succ n ≠ 0 := fun h => Nat.noConfusion h
+
+/-! ## V1 -/
+
+/-- **V1, from kept to viable.** For every process, guard, `n` and configuration `s`: if the class
+holding only `s` (`fun x => x = s`) is kept for `n` steps under `endRead` with every move allowed,
+then `s` is `GuardHorizon.Viable` for `n`. No premise. Calls `KeptFor.mono`. -/
+theorem keptFor_end_viable :
+    ∀ n s, KeptFor P endRead guard everyMove n (· = s) → GuardHorizon.Viable P guard n s
+  | 0, s, kept => kept s rfl
+  | n + 1, s, kept => match kept.2 with
+    | ⟨a, usable, next⟩ => ⟨kept.1 s rfl, a, (usable s rfl).2, fun t step =>
+        keptFor_end_viable n t (KeptFor.mono (C := Seen P endRead (· = s) a t)
+          (fun _ same => ⟨s, rfl, Eq.subst (motive := fun z => P.step s a z) (Eq.symm same) step,
+            same⟩)
+          (next t))⟩
+
+/-- **V1, from viable to kept, where the steps are decided.** Premise: for every `s a t`,
+`P.step s a t ∨ ¬ P.step s a t`. Then for every guard, `n` and `s`, `Viable` for `n` at `s` gives
+the class holding only `s` kept for `n` steps under `endRead`, every move allowed. Calls
+`KeptFor.mono` and `keptFor_empty`. -/
+theorem viable_keptFor_end_of_decided (decided : ∀ s a t, P.step s a t ∨ ¬ P.step s a t) :
+    ∀ n s, GuardHorizon.Viable P guard n s → KeptFor P endRead guard everyMove n (· = s)
+  | 0, _, held => fun _ same => Eq.subst (motive := guard) (Eq.symm same) held
+  | n + 1, s, held => match held.2 with
+    | ⟨a, enabled, next⟩ =>
+      ⟨fun _ same => Eq.subst (motive := guard) (Eq.symm same) held.1, a,
+       fun _ same => ⟨trivial, Eq.subst (motive := fun z => Enabled P z a) (Eq.symm same) enabled⟩,
+       fun o => match decided s a o with
+        | .inl step => KeptFor.mono (C := fun x => x = o)
+            (fun _ seen => match seen with | ⟨_, _, _, reached⟩ => reached)
+            (viable_keptFor_end_of_decided decided n o (next o step))
+        | .inr absent => KeptFor.mono (C := fun _ => False)
+            (fun x seen => match seen with
+              | ⟨_, same, step, reached⟩ => absent
+                  (Eq.subst (motive := fun z => P.step s a z) reached
+                    (Eq.subst (motive := fun z => P.step z a x) same step)))
+            (keptFor_empty a n)⟩
+
+/-- **V1, from viable to kept, where each move has at most one outcome.** Premise: for every
+`s a t t'`, `P.step s a t → P.step s a t' → t = t'`. Then `Viable` for `n` at `s` gives the class
+holding only `s` kept for `n` steps under `endRead`, every move allowed. Calls `KeptFor.mono`. -/
+theorem viable_keptFor_end_of_determinate
+    (determinate : ∀ s a t t', P.step s a t → P.step s a t' → t = t') :
+    ∀ n s, GuardHorizon.Viable P guard n s → KeptFor P endRead guard everyMove n (· = s)
+  | 0, _, held => fun _ same => Eq.subst (motive := guard) (Eq.symm same) held
+  | n + 1, s, held => match held.2 with
+    | ⟨a, ⟨t0, step0⟩, next⟩ =>
+      ⟨fun _ same => Eq.subst (motive := guard) (Eq.symm same) held.1, a,
+       fun _ same => ⟨trivial, Eq.subst (motive := fun z => Enabled P z a) (Eq.symm same)
+         ⟨t0, step0⟩⟩,
+       fun _ => KeptFor.mono (C := fun x => x = t0)
+         (fun x seen => match seen with
+           | ⟨_, same, step, _⟩ =>
+             determinate s a x t0 (Eq.subst (motive := fun z => P.step z a x) same step) step0)
+         (viable_keptFor_end_of_determinate determinate n t0 (next t0 step0))⟩
+
+/-- **V1 as an equivalence, where the steps are decided.** Premise: every `P.step s a t` is
+decided. Then `Viable` for `n` at `s` holds exactly where the class holding only `s` is kept for
+`n` steps under `endRead`, every move allowed. Calls `viable_keptFor_end_of_decided` and
+`keptFor_end_viable`. -/
+theorem viable_iff_keptFor_end (decided : ∀ s a t, P.step s a t ∨ ¬ P.step s a t) (n : Nat)
+    (s : S) :
+    GuardHorizon.Viable P guard n s ↔ KeptFor P endRead guard everyMove n (· = s) :=
+  ⟨viable_keptFor_end_of_decided decided n s, keptFor_end_viable n s⟩
+
+/-! ## V1 without a premise gives independence of premise -/
+
+namespace Independence
+
+/-- Three configurations. -/
+inductive Pt where
+  | zero
+  | one
+  | two
+
+/-- From `zero` every move leads to `two`, and to `one` where `p` holds; from `one` the move `x`
+leads to `two` where `q x` holds; `two` stays. -/
+def step (p : Prop) {α : Type} (q : α → Prop) : Pt → α → Pt → Prop
+  | .zero, _, .zero => False
+  | .zero, _, .one => p
+  | .zero, _, .two => True
+  | .one, _, .zero => False
+  | .one, _, .one => False
+  | .one, x, .two => q x
+  | .two, _, .zero => False
+  | .two, _, .one => False
+  | .two, _, .two => True
+
+/-- The process of `step`. -/
+def process (p : Prop) {α : Type} (q : α → Prop) : Process Pt α := ⟨step p q⟩
+
+/-- Given a move `x0` and `p → ∃ x, q x`, `zero` is `Viable` for two steps, the guard being
+`True` everywhere. -/
+theorem viable (p : Prop) {α : Type} (q : α → Prop) (x0 : α) (each : p → ∃ x, q x) :
+    GuardHorizon.Viable (process p q) (fun _ => True) 2 .zero :=
+  ⟨trivial, x0, ⟨.two, trivial⟩, fun t st => match t, st with
+    | .one, hp => match each hp with
+      | ⟨x, hx⟩ => ⟨trivial, x, ⟨.two, hx⟩, fun _ _ => trivial⟩
+    | .two, _ => ⟨trivial, x0, ⟨.two, trivial⟩, fun _ _ => trivial⟩
+    | .zero, st => False.elim st⟩
+
+end Independence
+
+/-- **V1 with no premise is at least independence of premise.** If, for every process on `Type`,
+guard, `n` and `s`, `Viable` gives the class holding only `s` kept under `endRead` (every move
+allowed), then for every proposition `p`, type `α` with an element and `q : α → Prop`,
+`(p → ∃ x, q x) → ∃ x, p → q x`. Proved by the process `Independence.process` at `n = 2`. Calls
+`Independence.viable`. -/
+theorem independence_of_v1
+    (v1 : ∀ (S A : Type) (P : Process S A) (guard : S → Prop) (n : Nat) (s : S),
+      GuardHorizon.Viable P guard n s → KeptFor P endRead guard everyMove n (· = s)) :
+    ∀ (p : Prop) (α : Type) (q : α → Prop), α → (p → ∃ x, q x) → ∃ x, p → q x :=
+  fun p α q x0 each =>
+    match (v1 Independence.Pt α (Independence.process p q) (fun _ => True) 2 .zero
+        (Independence.viable p q x0 each)).2 with
+    | ⟨_, _, next⟩ => match (next .one).2 with
+      | ⟨x, usable, _⟩ => ⟨x, fun hp => match (usable .one ⟨.zero, rfl, hp, rfl⟩).2 with
+        | ⟨t, st⟩ => match t, st with
+          | .two, hx => hx
+          | .zero, st => False.elim st
+          | .one, st => False.elim st⟩
+
+/-! ## V2 -/
+
+/-- **V2, from kept to viable.** For every class `B` and `n`: if `B` is kept for `n + 1` steps
+under `endRead`, every move allowed, then the guard holds throughout `B` and some move `a` is
+enabled at each configuration of `B` with every configuration it can lead to from `B` `Viable` for
+`n`. No premise. Calls `keptFor_end_viable` and `KeptFor.mono`. -/
+theorem keptFor_end_succ_viable {B : S → Prop} {n : Nat}
+    (kept : KeptFor P endRead guard everyMove (n + 1) B) :
+    (∀ s, B s → guard s) ∧ ∃ a, (∀ s, B s → Enabled P s a) ∧
+      ∀ t, (∃ s, B s ∧ P.step s a t) → GuardHorizon.Viable P guard n t :=
+  match kept.2 with
+  | ⟨a, usable, next⟩ => ⟨kept.1, a, fun s held => (usable s held).2,
+      fun t reached => match reached with
+        | ⟨s, held, step⟩ => keptFor_end_viable n t (KeptFor.mono (C := Seen P endRead B a t)
+            (fun _ same => ⟨s, held,
+              Eq.subst (motive := fun z => P.step s a z) (Eq.symm same) step, same⟩)
+            (next t))⟩
+
+/-- **V2, from viable to kept, with two premises**: every `P.step s a t` is decided, and for every
+move `a` and `t` it is decided whether `a` leads to `t` from some configuration of `B`. Then, where
+the guard holds throughout `B`, the move `a` is enabled at each configuration of `B` and every
+configuration it leads to from `B` is `Viable` for `n`, `B` is kept for `n + 1` steps under
+`endRead`, every move allowed. Calls `viable_keptFor_end_of_decided`, `KeptFor.mono`,
+`keptFor_empty`. -/
+theorem keptFor_end_succ_of_viable (decided : ∀ s a t, P.step s a t ∨ ¬ P.step s a t)
+    {B : S → Prop} {n : Nat}
+    (reachDecided : ∀ a t, (∃ s, B s ∧ P.step s a t) ∨ ¬ (∃ s, B s ∧ P.step s a t))
+    (within : ∀ s, B s → guard s) {a : A} (enabled : ∀ s, B s → Enabled P s a)
+    (viable : ∀ t, (∃ s, B s ∧ P.step s a t) → GuardHorizon.Viable P guard n t) :
+    KeptFor P endRead guard everyMove (n + 1) B :=
+  ⟨within, a, fun s held => ⟨trivial, enabled s held⟩, fun o => match reachDecided a o with
+    | .inl reached => KeptFor.mono (C := fun x => x = o)
+        (fun _ seen => match seen with | ⟨_, _, _, same⟩ => same)
+        (viable_keptFor_end_of_decided decided n o (viable o reached))
+    | .inr absent => KeptFor.mono (C := fun _ => False)
+        (fun _ seen => match seen with
+          | ⟨s, held, step, same⟩ =>
+            absent ⟨s, held, Eq.subst (motive := fun z => P.step s a z) same step⟩)
+        (keptFor_empty a n)⟩
+
+/-- **V2 as an equivalence, with the two premises of `keptFor_end_succ_of_viable`.** Calls
+`keptFor_end_succ_viable` and `keptFor_end_succ_of_viable`. -/
+theorem keptFor_end_succ_iff (decided : ∀ s a t, P.step s a t ∨ ¬ P.step s a t)
+    {B : S → Prop} {n : Nat}
+    (reachDecided : ∀ a t, (∃ s, B s ∧ P.step s a t) ∨ ¬ (∃ s, B s ∧ P.step s a t)) :
+    KeptFor P endRead guard everyMove (n + 1) B ↔
+      (∀ s, B s → guard s) ∧ ∃ a, (∀ s, B s → Enabled P s a) ∧
+        ∀ t, (∃ s, B s ∧ P.step s a t) → GuardHorizon.Viable P guard n t :=
+  ⟨keptFor_end_succ_viable, fun ⟨within, _, enabled, viable⟩ =>
+    keptFor_end_succ_of_viable decided reachDecided within enabled viable⟩
+
+/-! ## V3 -/
+
+/-- One list of moves keeps the guard from a configuration: the guard holds there and, with moves
+to go, the first move is enabled there and the rest of the list keeps the guard from every
+configuration it can lead to. -/
+def KeepsFrom (P : Process S A) (guard : S → Prop) : List A → S → Prop
+  | [], s => guard s
+  | a :: as, s => guard s ∧ Enabled P s a ∧ ∀ t, P.step s a t → KeepsFrom P guard as t
+
+/-- **V3, from kept to a list.** If `B` is kept for `n` steps under `noneRead`, every move allowed,
+some list of `n` moves keeps the guard (`KeepsFrom`) from every configuration of `B`. No premise. -/
+theorem keptFor_none_list : ∀ n {B : S → Prop}, KeptFor P noneRead guard everyMove n B →
+    ∃ as : List A, as.length = n ∧ ∀ s, B s → KeepsFrom P guard as s
+  | 0, _, kept => ⟨[], rfl, kept⟩
+  | n + 1, _, kept => match kept.2 with
+    | ⟨a, usable, next⟩ => match keptFor_none_list n (next ()) with
+      | ⟨as, length, keeps⟩ => ⟨a :: as, congrArg Nat.succ length, fun s held =>
+          ⟨kept.1 s held, (usable s held).2, fun t step => keeps t ⟨s, held, step, rfl⟩⟩⟩
+
+/-- **V3, from a list to kept.** If a list of `n` moves keeps the guard from every configuration of
+`B`, `B` is kept for `n` steps under `noneRead`, every move allowed. No premise. -/
+theorem keptFor_none_of_list : ∀ n {B : S → Prop} (as : List A), as.length = n →
+    (∀ s, B s → KeepsFrom P guard as s) → KeptFor P noneRead guard everyMove n B
+  | 0, _, [], _, keeps => keeps
+  | 0, _, _ :: _, length, _ => absurd length (succ_not_zero _)
+  | _ + 1, _, [], length, _ => absurd (Eq.symm length) (succ_not_zero _)
+  | n + 1, _, a :: as, length, keeps =>
+    ⟨fun s held => (keeps s held).1, a, fun s held => ⟨trivial, (keeps s held).2.1⟩,
+     fun _ => keptFor_none_of_list n as (congrArg Nat.pred length)
+       (fun t seen => match seen with | ⟨s, held, step, _⟩ => (keeps s held).2.2 t step)⟩
+
+/-- **V3 as an equivalence.** No premise. Calls `keptFor_none_list`, `keptFor_none_of_list`. -/
+theorem keptFor_none_iff_list (n : Nat) (B : S → Prop) :
+    KeptFor P noneRead guard everyMove n B ↔
+      ∃ as : List A, as.length = n ∧ ∀ s, B s → KeepsFrom P guard as s :=
+  ⟨keptFor_none_list n, fun ⟨as, length, keeps⟩ => keptFor_none_of_list n as length keeps⟩
+
+/-! ## V4 -/
+
+/-- **V4, `KeptFor.finer` at the two ends.** For every condition on moves: a class kept for `n`
+steps under `noneRead` is kept under `endRead`. `KeptFor.finer` with `noneRead` read off
+`endRead` by the map to `Unit`. -/
+theorem finer_none_end {allowed : S → A → Prop} {n : Nat} {B : S → Prop}
+    (kept : KeptFor P noneRead guard allowed n B) : KeptFor P endRead guard allowed n B :=
+  KeptFor.finer (fun _ => ()) (fun _ _ _ => rfl) kept
+
+/-- **A class kept under `noneRead` is `Viable` at each of its configurations.** No premise.
+Calls `finer_none_end`, `KeptFor.mono`, `keptFor_end_viable`. -/
+theorem keptFor_none_viable {n : Nat} {B : S → Prop}
+    (kept : KeptFor P noneRead guard everyMove n B) : ∀ s, B s → GuardHorizon.Viable P guard n s :=
+  fun s held => keptFor_end_viable n s (KeptFor.mono (C := B)
+    (fun _ same => Eq.subst (motive := B) (Eq.symm same) held) (finer_none_end kept))
+
+namespace Drain
+
+/-- A lane and a level. The move matching the lane keeps the level; the other lowers it by one,
+stopping at zero. -/
+def next : Bool × Nat → Bool → Bool × Nat
+  | (true, k), true => (true, k)
+  | (false, k), false => (false, k)
+  | (true, k), false => (true, k - 1)
+  | (false, k), true => (false, k - 1)
+
+/-- Each move leads to `next`. -/
+def process : Process (Bool × Nat) Bool := ⟨fun s a t => t = next s a⟩
+
+/-- The level is not zero. -/
+def above : Bool × Nat → Prop := fun s => s.2 ≠ 0
+
+/-- The two starts: each lane at level 2. -/
+def starts : Bool × Nat → Prop := fun s => s = (true, 2) ∨ s = (false, 2)
+
+/-- The reading that keeps the level reached. -/
+def keepsLevel : Bool × Nat → Bool → Bool × Nat → Nat := fun _ _ t => t.2
+
+/-- The move matching the lane keeps the configuration. -/
+theorem next_own : ∀ s : Bool × Nat, next s s.1 = s
+  | (true, _) => rfl
+  | (false, _) => rfl
+
+/-- **The level runs down**: the other move lowers the level by one, stopping at zero. It runs
+down only under the move that does not match the lane. -/
+theorem next_other : ∀ s : Bool × Nat, next s (!s.1) = (s.1, s.2 - 1)
+  | (true, _) => rfl
+  | (false, _) => rfl
+
+/-- A class in lane `b` with the level not zero throughout. -/
+def Lane (b : Bool) (C : Bool × Nat → Prop) : Prop := ∀ x, C x → x.1 = b ∧ x.2 ≠ 0
+
+/-- **A class in one lane above zero is kept for every horizon, under every reading.** Calls
+`keptFor_of_closed` (the family of classes in some lane above zero) and `next_own`. -/
+theorem lane_kept {O : Type} (sense : Bool × Nat → Bool → Bool × Nat → O) :
+    ∀ n {C : Bool × Nat → Prop} (b : Bool), Lane b C → KeptFor process sense above everyMove n C :=
+  fun n _ b lane => keptFor_of_closed (P := process) (sense := sense) (guard := above)
+    (allowed := everyMove) (fun C => ∃ b, Lane b C)
+    (fun _ ⟨_, lane⟩ s held => (lane s held).2)
+    (fun _ ⟨b, lane⟩ => ⟨b, fun s _ => ⟨trivial, ⟨next s b, rfl⟩⟩, fun _ => ⟨b, fun t seen =>
+      match seen with
+      | ⟨s, held, step, _⟩ =>
+        have stays : next s b = s :=
+          Eq.subst (motive := fun z => next s z = s) (lane s held).1 (next_own s)
+        have same : t = s := Eq.trans step stays
+        ⟨Eq.subst (motive := fun z => z.1 = b) (Eq.symm same) (lane s held).1,
+         Eq.subst (motive := fun z => z.2 ≠ 0) (Eq.symm same) (lane s held).2⟩⟩⟩)
+    n ⟨b, lane⟩
+
+/-- **Each start alone is kept for every horizon under `noneRead`.** Calls `lane_kept`. -/
+theorem alone_kept_none (b : Bool) (n : Nat) :
+    KeptFor process noneRead above everyMove n (· = (b, 2)) :=
+  lane_kept noneRead n b (fun _ same => ⟨congrArg Prod.fst same, fun zero =>
+    absurd (Eq.trans (Eq.symm (congrArg Prod.snd same)) zero) (succ_not_zero 1)⟩)
+
+/-- **Each start is `Viable` for every horizon.** Calls `alone_kept_none`, `finer_none_end`,
+`keptFor_end_viable`. -/
+theorem start_viable (b : Bool) (n : Nat) : GuardHorizon.Viable process above n (b, 2) :=
+  keptFor_end_viable n (b, 2) (finer_none_end (alone_kept_none b n))
+
+/-- What can stand after the move `a` from `s` under `noneRead`. -/
+theorem seen_next {B : Bool × Nat → Prop} {a : Bool} {s : Bool × Nat} (held : B s) :
+    Seen process noneRead B a () (next s a) := ⟨s, held, rfl, rfl⟩
+
+/-- Whatever three moves, some start ends at level zero. -/
+theorem losing : ∀ a1 a2 a3 : Bool, ∃ b, (next (next (next (b, 2) a1) a2) a3).2 = 0
+  | true, true, true => ⟨false, rfl⟩
+  | true, true, false => ⟨false, rfl⟩
+  | true, false, true => ⟨false, rfl⟩
+  | false, true, true => ⟨false, rfl⟩
+  | true, false, false => ⟨true, rfl⟩
+  | false, true, false => ⟨true, rfl⟩
+  | false, false, true => ⟨true, rfl⟩
+  | false, false, false => ⟨true, rfl⟩
+
+/-- Each lane at level 2 is a start. -/
+theorem start_of : ∀ b : Bool, starts (b, 2)
+  | true => Or.inl rfl
+  | false => Or.inr rfl
+
+/-- **The two starts together are not kept for three steps under `noneRead`.** Calls `losing`,
+`seen_next`, `start_of`. -/
+theorem together_not_kept_none : ¬ KeptFor process noneRead above everyMove 3 starts :=
+  fun kept => match kept.2 with
+  | ⟨a1, _, k1⟩ => match (k1 ()).2 with
+    | ⟨a2, _, k2⟩ => match (k2 ()).2 with
+      | ⟨a3, _, k3⟩ => match losing a1 a2 a3 with
+        | ⟨b, zero⟩ => k3 () _ (seen_next (seen_next (seen_next (start_of b)))) zero
+
+/-- The guard holds at the starts. -/
+theorem starts_within : ∀ s, starts s → above s := fun s held =>
+  match (held : s = (true, 2) ∨ s = (false, 2)) with
+  | .inl same => fun zero =>
+      absurd (Eq.trans (Eq.symm (congrArg Prod.snd same)) zero) (succ_not_zero 1)
+  | .inr same => fun zero =>
+      absurd (Eq.trans (Eq.symm (congrArg Prod.snd same)) zero) (succ_not_zero 1)
+
+/-- The lane read off a level after the first move `true` from the starts. -/
+def laneOf : Nat → Bool
+  | 0 => false
+  | 1 => false
+  | _ + 2 => true
+
+/-- After the move `true` from the starts, the level kept tells the lane. -/
+theorem level_lane (o : Nat) : Lane (laneOf o) (Seen process keepsLevel starts true o) := by
+  intro x seen
+  obtain ⟨s, held, step, level⟩ := seen
+  have reached : x = next s true := step
+  have held' : s = (true, 2) ∨ s = (false, 2) := held
+  cases held' with
+  | inl same =>
+    subst same
+    subst reached
+    subst level
+    exact ⟨rfl, fun zero => absurd zero (succ_not_zero _)⟩
+  | inr same =>
+    subst same
+    subst reached
+    subst level
+    exact ⟨rfl, fun zero => absurd zero (succ_not_zero _)⟩
+
+/-- After the move `true` from the starts, the configuration kept tells the lane. -/
+theorem end_lane (o : Bool × Nat) : Lane o.1 (Seen process endRead starts true o) := by
+  intro x seen
+  obtain ⟨s, held, step, same⟩ := seen
+  have reached : x = next s true := step
+  have at_o : x = o := same
+  refine ⟨congrArg Prod.fst at_o, ?_⟩
+  have held' : s = (true, 2) ∨ s = (false, 2) := held
+  cases held' with
+  | inl e =>
+    subst e
+    subst reached
+    exact fun zero => absurd zero (succ_not_zero _)
+  | inr e =>
+    subst e
+    subst reached
+    exact fun zero => absurd zero (succ_not_zero _)
+
+/-- **The two starts together are kept for every horizon under the reading that keeps the
+level.** Calls `starts_within`, `lane_kept`, `level_lane`. -/
+theorem together_kept_level : ∀ n, KeptFor process keepsLevel above everyMove n starts
+  | 0 => starts_within
+  | n + 1 => ⟨starts_within, true, fun s _ => ⟨trivial, ⟨next s true, rfl⟩⟩,
+      fun o => lane_kept keepsLevel n (laneOf o) (level_lane o)⟩
+
+/-- **The two starts together are kept for every horizon under `endRead`.** Calls
+`starts_within`, `lane_kept`, `end_lane`. -/
+theorem together_kept_end : ∀ n, KeptFor process endRead above everyMove n starts
+  | 0 => starts_within
+  | n + 1 => ⟨starts_within, true, fun s _ => ⟨trivial, ⟨next s true, rfl⟩⟩,
+      fun o => lane_kept endRead n o.1 (end_lane o)⟩
+
+/-- **V4's built case.** Each start alone is kept for every `n` under `noneRead`; the two
+together are not kept for 3 steps under `noneRead`; the two together are kept for every `n` under
+`keepsLevel` and under `endRead`. -/
+theorem reading_matters :
+    (∀ b n, KeptFor process noneRead above everyMove n (· = (b, 2))) ∧
+      ¬ KeptFor process noneRead above everyMove 3 starts ∧
+      (∀ n, KeptFor process keepsLevel above everyMove n starts) ∧
+      (∀ n, KeptFor process endRead above everyMove n starts) :=
+  ⟨alone_kept_none, together_not_kept_none, together_kept_level, together_kept_end⟩
+
+end Drain
+
+/-! ## V6 -/
+
+/-- Classes holding at most one configuration, of `K`; or empty, with a move in hand. -/
+def SingleIn (A : Type) (K : S → Prop) (C : S → Prop) : Prop :=
+  (∃ s0, K s0 ∧ ∀ x, C x → x = s0) ∨ ((∀ x, C x → False) ∧ Nonempty A)
+
+/-- **`closed_viable` again, from `keptFor_of_closed` through V1, where the steps are decided.**
+Premise: every `P.step s a t` is decided. Then every configuration of a set `K` closed in the sense
+of `GuardHorizon.Closed` is `Viable` for every `n`. Calls `keptFor_of_closed` (the family
+`SingleIn A K`), `keptFor_end_viable`; not `GuardHorizon.closed_viable`. -/
+theorem closed_viable_of_decided (decided : ∀ s a t, P.step s a t ∨ ¬ P.step s a t)
+    {K : S → Prop} (closed : GuardHorizon.Closed P guard K) :
+    ∀ n s, K s → GuardHorizon.Viable P guard n s :=
+  fun n s held => keptFor_end_viable n s (keptFor_of_closed (P := P) (sense := endRead)
+    (guard := guard) (allowed := everyMove) (SingleIn A K)
+    (fun _ single x held => match single with
+      | .inl ⟨_, k0, sub⟩ => Eq.subst (motive := guard) (Eq.symm (sub x held)) (closed _ k0).1
+      | .inr ⟨empty, _⟩ => False.elim (empty x held))
+    (fun _ single => match single with
+      | .inl ⟨s0, k0, sub⟩ => match closed s0 k0 with
+        | ⟨_, a, enabled, stays⟩ => ⟨a, fun x held => ⟨trivial,
+            Eq.subst (motive := fun z => Enabled P z a) (Eq.symm (sub x held)) enabled⟩,
+          fun o => match decided s0 a o with
+            | .inl step => .inl ⟨o, stays o step, fun _ seen => match seen with
+                | ⟨_, _, _, same⟩ => same⟩
+            | .inr absent => .inr ⟨fun _ seen => match seen with
+                | ⟨s, held, step, same⟩ => absent
+                    (Eq.subst (motive := fun z => P.step z a o) (sub s held)
+                      (Eq.subst (motive := fun z => P.step s a z) same step)), ⟨a⟩⟩⟩
+      | .inr ⟨empty, ⟨a⟩⟩ => ⟨a, fun x held => False.elim (empty x held),
+          fun _ => .inr ⟨fun _ seen => match seen with | ⟨s, held, _, _⟩ => empty s held, ⟨a⟩⟩⟩)
+    n (.inl ⟨s, held, fun _ same => same⟩))
+
+/-- **`closed_viable` again, from `keptFor_of_closed` through V1, where each move has at most one
+outcome.** Premise: `P.step s a t → P.step s a t' → t = t'`. Calls `keptFor_of_closed` (the family
+of classes within one configuration of `K`), `keptFor_end_viable`; not
+`GuardHorizon.closed_viable`. -/
+theorem closed_viable_of_determinate
+    (determinate : ∀ s a t t', P.step s a t → P.step s a t' → t = t')
+    {K : S → Prop} (closed : GuardHorizon.Closed P guard K) :
+    ∀ n s, K s → GuardHorizon.Viable P guard n s :=
+  fun n s held => keptFor_end_viable n s (keptFor_of_closed (P := P) (sense := endRead)
+    (guard := guard) (allowed := everyMove) (fun C => ∃ s0, K s0 ∧ ∀ x, C x → x = s0)
+    (fun _ ⟨_, k0, sub⟩ x held =>
+      Eq.subst (motive := guard) (Eq.symm (sub x held)) (closed _ k0).1)
+    (fun _ ⟨s0, k0, sub⟩ => match closed s0 k0 with
+      | ⟨_, a, ⟨t0, step0⟩, stays⟩ => ⟨a, fun x held => ⟨trivial,
+          Eq.subst (motive := fun z => Enabled P z a) (Eq.symm (sub x held)) ⟨t0, step0⟩⟩,
+        fun _ => ⟨t0, stays t0 step0, fun x seen => match seen with
+          | ⟨s, held, step, _⟩ => determinate s0 a x t0
+              (Eq.subst (motive := fun z => P.step z a x) (sub s held) step) step0⟩⟩)
+    n ⟨s, held, fun _ same => same⟩)
+
+/-- **The other way: a certificate with an enabled move at each configuration keeps each of its
+configurations, as a class of one, under `endRead`, where the steps are decided.** Premises: every
+`P.step s a t` is decided; `K` is a `Viability.Certificate`; each configuration of `K` has an
+enabled move. Calls `GuardHorizon.certificate_viable` and `viable_keptFor_end_of_decided`. -/
+theorem certificate_keptFor_end_of_decided (decided : ∀ s a t, P.step s a t ∨ ¬ P.step s a t)
+    {K : S → Prop} (cert : Certificate P guard K) (live : ∀ s, K s → ∃ a, Enabled P s a) :
+    ∀ n s, K s → KeptFor P endRead guard everyMove n (· = s) :=
+  fun n s held => viable_keptFor_end_of_decided decided n s
+    (GuardHorizon.certificate_viable P guard cert live n s held)
+
+end ScratchKeptForViable
+
+end Becoming

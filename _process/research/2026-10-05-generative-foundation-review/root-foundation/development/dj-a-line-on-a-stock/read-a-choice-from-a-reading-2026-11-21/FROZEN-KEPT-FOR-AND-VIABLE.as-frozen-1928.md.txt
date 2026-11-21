@@ -1,0 +1,44 @@
+# Two ways the Lean keeps a guard over steps, and what a reading adds between them: the guesses, fixed before any Lean is written
+
+*AI-written (Claude Fable, board row DJ), 21 November 2026, 19:28 WIB, before any agent ran and before any Lean was written for it. Frozen: nothing above the line "After" is changed later. Kept for, viable, seen, usable are the Lean's names; "the reading that keeps where a step ended" and "the reading that keeps nothing" are working words.*
+
+## What we are doing
+
+One map of how things come to be, go on, change and end, on which two ways of going on are placed with respect to each other. The session's understanding, which no proof states: the two ways differ in what makes a difference to each. A read of this evening (`read-a-choice-from-a-reading-2026-11-21`) found that the Lean states exactly when a choice made from what is registered keeps a guard, for plans with recall over each number of steps (`Keeping.KeptFor`: a process with moves, a reading of each step, a class of starts), and that it has a second notion of keeping over steps with no reading in it (`GuardHorizon.Viable`: from one known configuration, some enabled move leading only to configurations viable for one step fewer). The second reader: no theorem joins the two. A search by the writer found no tracked Lean file with both names. The read also found that what a finer reading keeps more than a coarser one is shown only in built cases, that in the built case `Matching` it is not stated that each start alone is kept, and that no law of this side was found with a level that runs down.
+
+## The choice, set against the direction
+
+If the two ways differ in what makes a difference to each, then the place in the Lean where that difference is a parameter is the reading in `KeptFor`. Its two ends are the reading that keeps nothing and the reading that keeps where each step ended. If the Lean's other notion of keeping over steps is `KeptFor` at one of those ends, the seam the read found closes with an old definition becoming a case, and what a reading adds can be stated exactly at the ends, not only shown in a built case. That would be a small part of the map, on a general carrier, and a place where the lock's models could later be set (they are not set there by this). This is the writer's reading of the direction, not Ren's word.
+
+It does not place the two ways. It says, on any process, what registering everything of a step adds to registering nothing.
+
+## The guesses (each may be false)
+
+Write `end` for the reading of a step that keeps the configuration it ended in, and `none` for the reading that keeps nothing; take every move as allowed.
+
+- **V1.** For every process, guard, number of steps `n` and configuration `s`: `Viable` for `n` at `s` is `KeptFor` for `n`, under `end`, of the class holding only `s`. No premise.
+- **V2.** Under `end`, a class is kept for `n + 1` steps exactly where the guard holds throughout it, some one move is enabled at each of its configurations, and every configuration that move can lead to from the class is viable for `n`. No premise.
+- **V3.** Under `none`, a class is kept for `n` steps exactly where one list of `n` moves keeps the guard from every configuration of the class, along every outcome of those moves. No premise.
+- **V4.** So what `end` keeps that `none` does not is stated: a class kept under `none` is kept under `end` (the package's `KeptFor.finer`, as a case), and there is a built case, with a level that runs down, in which each of two starts alone is kept for every `n` under `none`, the two together are not kept for some `n` under `none`, and the two together are kept for every `n` under a reading that keeps the level.
+- **V5 (against the step).** V1 to V3 are definitions unfolded: `KeptFor` was written so that these hold at sight, and nothing in the proofs uses a law of either side. Then it is a third dictionary, with one built case.
+- **V6.** With V1, at least one law of `GuardHorizon` about `Viable` (`closed_viable`, `certificate_viable` or `kernel_viable`) is, with its statement unchanged, a case of a law of `Keeping` about `KeptFor` (`keptFor_of_closed`, `Certificate.keptFor` or `Kernel.keptFor`), or the other way; or it is shown why not (their premises differ: one move usable throughout, against an enabled move at each configuration).
+
+## What would count as nothing having changed
+
+- V1 fails, or holds only with a premise (decided equality of configurations, a choice): then the two notions are not one at that end, and that is said with the premise.
+- V5 holds and V6 gives no case either way: a third dictionary, said as one, with the built case kept if it stands.
+
+## What would count as a join (the stricter test of this afternoon, kept)
+
+All three: (1) an old definition or law of the package becomes a case, with its statement unchanged and checked the same by `rfl` or stated as an equivalence with no premise; (2) at least one old law of one side is proved again from a law of the other side through the join, not from its own lemmas, or the built case uses the join; (3) a reader who took no part, asked "does the reading do any work in these statements, and is anything here more than the two definitions set side by side?", answers that it does. If (3) fails it is a dictionary whatever the letter says.
+
+Whatever is found is told as what the Lean states, with every premise, and not as what makes a course better.
+
+## How it is done, and what it costs
+
+One AI worker (capped at 45 tool calls) writes one scratch module outside the package, built one module at a time with no axioms. One AI reader who took no part (capped at 25) tries to refute the telling and answers the question in (3). The writer writes a note, and one checker (capped at 30) sets it against the module. The ceiling is 0.5 million tokens. The claim is on the board's row DJ before the worker starts. Nothing enters the package.
+
+---
+
+## After
+

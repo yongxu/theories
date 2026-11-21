@@ -1,0 +1,110 @@
+*An AI reader who took no part's return (run as Claude Opus), word for word from the run's journal (wf_3bc75c5d-e38); agents could not write report files, so this return is its report.*
+
+**Reader's report on `/Users/ren/tmp/dj/batch24/Becoming/ScratchKeptForViable.lean` (read only: nothing built, edited or touched in git)**
+
+The module proves what its docstrings say. It is not a join: by the frozen file's own words it counts as nothing having changed, with some results worth keeping (listed under 7). The one sentence that says more than the Lean is in the worker's report, not in the module (finding 1).
+
+## Numbered findings
+
+**1. MUST, in the worker's report (not the module).** The report says that going from viable to kept with no premise is "not proved, and its exact cost is proved."
+- `independence_of_v1` (lines 143–155) proves one direction only: V1 with no premise, at `Type`, implies `∀ p α q, α → (p → ∃ x, q x) → ∃ x, p → q x`.
+- That is a lower bound. It is not shown that this principle is enough to give V1. The module's own docstring, line 138 ("V1 with no premise is at least independence of premise"), is exact.
+- Exact words: "V1 with no premise, for every process on `Type`, implies independence of premise for an inhabited `α`. That this is its whole cost is not shown."
+- The meta-fact that independence of premise cannot be derived intuitionistically is not proved, and the worker says so correctly.
+
+**2. LESSER, V1 forward: `keptFor_end_viable`, line 41.** Statement: `∀ n s, KeptFor P endRead guard everyMove n (· = s) → GuardHorizon.Viable P guard n s`.
+- Plain words: for any process on `Type`, any guard, n and s, with no premise, if the class holding only s is kept for n steps under `endRead` with every move allowed, then s is viable for n.
+- Proof: recursion on n, plus `KeptFor.mono`, to narrow from `Seen endRead (·=s) a t` to `(·=t)`. Nothing else.
+- The worker's sentence is exact. It is unfolding plus one order law used only to narrow a class.
+
+**3. LESSER, V1 backward: `viable_keptFor_end_of_decided` (line 55), `viable_keptFor_end_of_determinate` (line 76), `viable_iff_keptFor_end` (line 95).** Each statement is exact as the worker gives it.
+- The premise that does the work is that every `P.step s a t` is decided, or else that each step has at most one outcome.
+- This is not the premise the frozen file guessed ("decided equality of configurations, a choice"). The report is right that decided equality is not used.
+- Where the premise comes from: `KeptFor` quantifies over every value `o : S` the reading could keep, so the class seen may be empty, while `Viable` quantifies only over outcomes that occur. This is the coordinating session's point 2 in the frozen file.
+- `keptFor_empty` is a package law, and here it is used only to fill that empty class.
+
+**4. LESSER, V2: `keptFor_end_succ_viable` (line 163), `keptFor_end_succ_of_viable` (line 181), `keptFor_end_succ_iff` (line 199).** The statements are exactly as reported.
+- Forward has no premise. Backward needs `decided` and `reachDecided`, the second of which is about the class B.
+- The frozen V2 ("No premise") therefore holds one way only.
+- The empty class is handled correctly: the right-hand side carries `∃ a`, so a move is in hand.
+
+**5. LESSER, V3: `KeepsFrom` (line 213) and `keptFor_none_iff_list` (line 240).** The equivalence has no premise, and the worker's sentence is exact.
+- `KeepsFrom` is a new definition, written as `KeptFor` at `noneRead`. With `noneRead` the class seen is `{t | ∃ s, B s ∧ P.step s a t ∧ () = ()}`, so V3 is a restatement by unfolding.
+- No package law is used. `succ_not_zero` is a new lemma.
+- It does not reuse the package's `Plan` and `keptFor_iff_plan_of_choice` at `O = Unit`, where choice over `Unit` is trivial. By rule 4 (each thing said once) that would have been the joined form.
+- The docstrings of `keptFor_none_of_list`, `level_lane` and `end_lane` do not name `succ_not_zero`, although the header (lines 10–11) promises each docstring says which theorems it calls.
+
+**6. LESSER, V4 finer: `finer_none_end`, line 250.** It is `KeptFor.finer (fun _ => ()) (fun _ _ _ => rfl) kept`, which uses `forget` and `consistent` correctly and is exact.
+- Every reading is finer than `noneRead` in this sense, so this is the trivial instance.
+- For `keepsLevel` the module never states `KeptFor.finer`, neither against `noneRead` (forget to `Unit`) nor as coarser than `endRead` (forget `Prod.snd`). Both hold at sight, but neither is a theorem here.
+
+**7. LESSER, the built case `Drain`, lines 261–426.**
+- The process is deterministic: `t = next s a`.
+- The level is never raised. It is lowered only by the move that does not match the lane, and the matching move keeps it forever. So it "runs down" only under the mismatched move.
+- The docstring at line 287 ("lowers the level by one") is not exact at level 0, where `0 - 1 = 0`. Exact words: "lowers it by one, truncated at zero."
+- "Each alone kept for every n" is a theorem: `alone_kept_none : ∀ b n, ...`, through `lane_kept` and the package's `keptFor_of_closed`. It is not only argued.
+- "Not kept together" is for the stated n = 3: `together_not_kept_none`. I checked `losing` by hand: in all eight cases one lane meets the other move twice.
+- The module does not state that the pair is kept for 2 under `none`. I checked by hand that it is, with moves true then false, so 3 is the least n, but this is not proved here.
+- `level_lane` and `together_kept_level` are correct. After the move `true`, level 2 means lane true and level 1 means lane false; `laneOf 0 = false` covers a class that is empty.
+- The two starts are alike under `none` trivially: every value is `()`.
+
+**8. LESSER, built case and the join.** None of the four parts of `reading_matters` uses the join.
+- The only use is `start_viable` (line 320). That theorem could be had directly from `GuardHorizon.closed_viable`, with K the lane class at a level other than 0.
+- So the frozen clause "the built case uses the join" is met only by a theorem attached to the case, not by the case itself.
+
+**9. LESSER, V6: `closed_viable_of_decided` (line 438) and `closed_viable_of_determinate` (line 465).** Each concludes `closed_viable`'s conclusion, but adds the premise `decided` (or `determinate`). The statement is therefore not unchanged.
+- The recursion is genuinely borrowed from `keptFor_of_closed`, and `GuardHorizon.closed_viable` is not called; the docstrings at lines 437 and 464 are true.
+- But the closure step re-does `Closed`'s own content: guard, the enabled move, stays in K. To that it adds a case split on whether the class seen is empty. That case split is what the premise pays for.
+- `certificate_keptFor_end_of_decided` (line 485) is a new statement. It is not `Certificate.keptFor` re-proved: it covers only classes of one, needs `decided` and `live`, and holds only under `endRead`.
+- The frozen V6 also allows "or it is shown why not". That this route cannot avoid the premise is argued, not proved: `independence_of_v1` is about V1, not about `closed_viable`.
+
+**10. LESSER, the build.**
+- The log shows `start 19:37:48`, `"unclean": []`, `"with_axioms": {}` for `Becoming.ScratchKeptForViable`, 33 theorems and 48 declarations, and `exit 0 build 3`.
+- `build-ScratchKeptForViable.log` is identical to `build3.log`.
+- The file's modification time is 19:37:48, the same second as the start line. That is consistent with the log being of the file as it stands, but not proved, because the log carries no hash.
+- Counted in the file: 33 lines starting `theorem`, and 48 starting `theorem`, `def` or `inductive`. Both match the audit.
+- No `sorry`, `axiom`, `native_decide`, `unsafe`, `Classical`, `propext` or `funext` appears in the code. The only hit is the word propext in the docstring at line 33.
+- Build 2's log does list `propext` in 14 declarations, as the report says. Whether `Nat.succ_ne_zero` was the source is the worker's inference from that log. The docstring at line 33 states it as a fact about core, and nothing in this module bears it.
+
+**11. LESSER, use of the package's definitions.** `KeptFor`, `Seen` and `Usable` (Keeping.lean lines 73–95) and `Viable` (GuardHorizon.lean line 71) are used unchanged.
+- They are used at universe 0, `S A : Type`, with outputs into S or `Unit`.
+- The readings are the ones the frozen file names: `endRead` is "keeps where a step ended", `noneRead` is "keeps nothing", and `everyMove` is every move allowed.
+- The scratch tree has no copies of the package files: 16 modules were reused through `scratch_build.py`, run from the package directory. So the package's own definitions are what was checked.
+
+## Answer to 4: does the reading do any work?
+
+**Strongest case that it does:**
+- At V1 backward, the reading's set of values does work. `KeptFor` asks about every value `endRead` could keep, `Viable` only about outcomes that occur.
+- `independence_of_v1` proves that closing that gap with no premise costs at least independence of premise, which is a non-trivial logical cost.
+- In `Drain`, the reading really decides keeping. Under `none` the pair is lost at 3 steps; under `keepsLevel` one step tells the lane.
+
+**Strongest case that it does not:**
+- V1 forward, V2 forward and V3 are unfolding plus `KeptFor.mono`. V5 holds for them.
+- V1 backward and V2 backward are unfolding plus a case split on decided steps. Classically all of V1 to V3 would hold at sight.
+- So the only content beyond unfolding is an intuitionistic artefact of quantifying over values that do not occur. It is not information registered or lost.
+- Where the reading does matter (`Drain`), the join is not used, except in `start_viable`, which could be had directly from `closed_viable`.
+- V6 reuses `keptFor_of_closed`'s recursion, but repeats `Closed`'s step and adds a premise.
+
+**My answer:** the reading does no work in the join itself. What is there is the two definitions set side by side, plus a proof that, constructively, they meet only with a premise. The reading does work only in the built case, and the built case stands apart from the join.
+
+## Answer to 7: join, third dictionary, or failure?
+
+V1 holds only with a premise: decided steps, or at most one outcome per step. The frozen file names this outcome as "nothing having changed". Part (1) of the test fails: no old definition or law becomes a case unchanged, by `rfl` or by an equivalence with no premise. Part (2) is met only with a premise. Part (3) fails, by my answer to 4. So it is not a join: it is a third dictionary, and since V1 only holds with a premise it is not a failure of the work.
+
+Kept whatever the verdict:
+- `independence_of_v1`, a lower bound on what V1 costs with no premise;
+- V1 forward with no premise;
+- the two equivalences with a premise;
+- V3, which is a restatement;
+- the `Drain` built case. It states, as a theorem, that each start alone is kept for every n, which the read found missing in `Matching`. It does this with a level that runs down only under the move that does not match.
+
+## Not read
+
+- Frame.lean, GenerativeCore and Viability.lean. `Enabled` and `Certificate` were taken from how they are used: `Enabled` as `∃ t, P.step s a t`.
+- The two notes, `read-a-choice-from-a-reading-2026-11-21/NOTE.md` and `no-return-2026-11-21/NOTE.md`.
+- Keeping.lean beyond line 349, so `Matching` itself.
+- `scratch_build.py`.
+- `FROZEN-KEPT-FOR-AND-VIABLE.as-frozen.md`, so its hash was not checked against the file I read.
+- The worker's report past its V6 entry, which was cut off in the brief.
+
+Tool calls: 10.
