@@ -1,0 +1,59 @@
+# BlanketCouplings
+
+*Made by `build_places.py`; never edited by hand. One place of [the listing of places](../PLACES.md). Each field under a read is a reader's return, unchecked; what the note mended is in the note. Line breaks in a return are shown as spaces. Where an answer begins with a letter: **S** from a statement read; **D** from a docstring or the opening account only; **B** only in a built case; **N** one reader's "not found in what was read"; **U** not reached; a `+` after a letter: the answer goes on with another lettered part, which is on the place's page (an `N+` is not an absence); two letters in brackets, as `[D/S]`: the reader gave both; `·` the read has no answer for that field at this place; `?` the answer does not begin with one of the five. The third pass tried only the cells where the two passes differed; a cell that both passes left as not found was tried by nobody else. An S says where a statement is and what it concludes; it is not a list of its premises. The page proves nothing, ranks nothing and holds no link of the atlas. [The note](../NOTE.md) says what the listing is and is not.*
+
+- *file:* `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/BlanketCouplings.lean`
+- *result records that name this place's file as a source* (computed; not a link): `a-formations-couplings-as-its-blanket`
+
+## 22 November, every module by fifteen questions
+
+*pass a: reader whole-a-01, as "BlanketCouplings.lean: admitted_iff, blanket_iff_through, levelParts_admitted_iff, PhasedDrain.not_admitted, Alternating.admitted" ([report](../../../fm-whole-read-2026-11-22/reports/read-whole-a-01.md.txt)); pass b: reader whole-b-02, as "BlanketCouplings.lean: PartDependsOnlyOn, shownBy_partDependsOnlyOn_iff, BlanketDetermined, admitted_iff, couplingLaw, blanket_iff_through, internal_selectsThrough, clocked_course, future_course, const_consistent, injective_consistent, whole_iff, ReadsExternal.not_blanketed, stepExternal_admitted_iff, next_level_alike_iff, levelParts_admitted_iff, PhasedDrain.not_admitted, Alternating.admitted" ([report](../../../fm-whole-read-2026-11-22/reports/read-whole-b-02.md.txt)); the third pass, where the two differed: reader whole-c-settle-01, as "BlanketCouplings.lean: settled fields cost, both_outcomes, rank" ([report](../../../fm-whole-read-2026-11-22/reports/read-whole-c-settle-01.md.txt)). Each is a reader's return, unchecked; what the note mended is in the note: [note](../../../fm-whole-read-2026-11-22/NOTE.md). Under each question the third pass's settled answer stands first where there is one, then pass a, then pass b.*
+
+- **what the module states**
+  - *pass a:* A family is admitted by a process determined part by part exactly when it is consistent part by part (`admitted_iff`, l. 247). Along a balanced run with the step external and values satisfying ValuesAcross, `levelParts_admitted_iff` (l. 971) characterizes admission by equality of net exchanges and next acts at steps alike on own level, admission, observed levels and current act.
+  - *pass b:* In general: a family of histories is admitted by some law determined part by part exactly where it is consistent part by part (admitted_iff). A formation's couplings form its blanket by construction (couplingLaw, blanket_iff_through, internal_selectsThrough). Readings of the course (clocked_course, future_course), and constant or whole readings of the configuration, make every family, or every determined one, blanketed. Along one balanced run with the step external, a formation's level is the internal part of such a law exactly where a pairwise exchange condition on the World's records holds (levelParts_admitted_iff). Built cases are ThresholdCase, clocked_witness, clock_only_fails, ReadsExternal (a sparse partition refuted on one run), PhasedDrain (fails) and Alternating (meets).
+- **moves**
+  - *pass a:* S: `BlanketDetermined.determined` (l. 255) implies that under any single move a process determined part by part has at most one successor.
+  - *pass b:* S: `PartDependsOnlyOn` (l.167) is over a Process S M with moves, and `BlanketDetermined` (l.220) keeps the moves. `admitted_iff` (l.247): (∃ Q, BlanketDetermined Q ∧ Q admits every history of H) ⇔ BlanketConsistentFamily H. `internal_selectsThrough` (l.427): in the open loop, whatever the model update and the policy, every claim reading the internal course up to n+2 is a selection through g's couplings up to n (W.SelectsThrough).
+- **a reading**
+  - *pass a:* S: `internal_selectsThrough` (l. 427) gives selection through a formation's couplings up to n for every open-loop internal reading depending only on times through n+2, given ValuesThrough.
+  - *pass b:* S: `blanket_iff_through` (l.357): with W.ValuesThrough obs g value, two courses of couplingLaw from one agent start are blanket-alike before n+2 ⇔ their own level histories are alike through g's couplings up to n. `internal_through_couplings` (l.388). `ValuesAcross` (l.934) and `listed_valuesAcross` (l.946). `readFamily` (l.647) with `const_consistent` (l.652), `injective_consistent` (l.659) and `whole_iff` (l.679): which reading map is chosen decides whether a family is consistent part by part.
+- **a share**
+  - *pass a:* N: Not found in the statements read.
+  - *pass b:* N
+- **a level that runs down**
+  - *pass a:* B: `Alternating.balance_g` (l. 1185) balances phase-dependent withdrawal and giving at g; `Alternating.gLevel_inj` (l. 1218) shows its level determines phase. `PhasedDrain.not_admitted` (l. 1116) rules out such a partwise law for the three-phase example with the specified reading.
+  - *pass b:* S: `next_level_alike_iff` (l.866): in a balanced history, at two steps j and k alike on a condition's level, the next levels agree ⇔ given j + taken k = given k + taken j. `levelParts` (l.893) takes a formation's own level as the internal part. B: `PhasedDrain` (l.1003): g's level runs 1, 0, 1 by phase. `Alternating` (l.1127): g's level runs 1, 0, 1, 0. No law of return depending on what is left.
+- **a giving that is itself a going-on**
+  - *pass a:* N: Not found in the statements read.
+  - *pass b:* N: in PhasedDrain and Alternating, h's gives and takes are supplied tables by phase. No statement makes the giver a going-on that can be lost.
+- **a cost to the one that keeps or gives**
+  - *settled by the third pass:* B (in definitions): `Alternating.take` (l.1161) and `Alternating.give` (l.1168) with `hTakesH false = 1`, `hGivesG false = 1`, `hLevel false = 1`, `hLevel true = 0`: in the off phase h takes one from its own level and gives one to g; `Alternating.balance_h` (l.1189) states `hLevel (!p) + (hTakesH p + 0) = hLevel p + (hGivesH p + 0)`. The giving drawing on the giver's own level is in the built flow's definitions and its balance; no theorem names it as a cost. [which pass was right: a; opened: Alternating.phase l.1130, gLevel l.1135, hLevel l.1140, hTakesG l.1144, hGivesG l.1148, hTakesH l.1152, hGivesH l.1156, take l.1161, give l.1168, balance_g l.1185, balance_h l.1189, balances l.1194; PhasedDrain l.1008-1083]
+  - *pass a:* B: `Alternating.take` (l. 1161) and `Alternating.give` (l. 1168) make h draw one from its own level in the off phase when it gives one to g; `Alternating.balance_h` (l. 1189) balances its level.
+  - *pass b:* N
+- **multiplying**
+  - *pass a:* N: Not found in the statements read.
+  - *pass b:* N
+- **a point of no return**
+  - *pass a:* N: Not found in the statements read.
+  - *pass b:* N
+- **both outcomes**
+  - *settled by the third pass:* N: opened `admitted_iff` (l.247), `stepExternal_admitted_iff` (l.823), `levelParts_admitted_iff` (l.971), `PhasedDrain.not_admitted` (l.1116), `Alternating.admitted` (l.1235), `ThresholdCase.threshold_case` (l.509). The iffs are exact conditions for some `BlanketDetermined` law to admit a recorded course (consistency part by part, `AgentConsistent`); the two built runs differ in being admitted or not. None is of going on and ending or of keeping and losing; pass b's own text says N for that. [which pass was right: a; opened: admitted_iff l.247, stepExternal_consistent_iff l.799, stepExternal_admitted_iff l.823, levelParts_admitted_iff l.971, PhasedDrain.not_admitted l.1116, Alternating.agentConsistent l.1229, Alternating.admitted l.1235, ThresholdCase.threshold_case l.509, AgentConsistent l.792]
+  - *pass a:* N: `admitted_iff` (l. 247) characterizes whether some partwise determined law admits a recorded family. This concerns consistency of a description, not survival or loss on a course.
+  - *pass b:* S: `levelParts_admitted_iff` (l.971) and `stepExternal_admitted_iff` (l.823) are 'exactly where' laws, of being admitted by a law determined part by part, not of going on or ending. B: `PhasedDrain.not_admitted` (l.1116) against `Alternating.admitted` (l.1235): in two built runs where what drains the level does not couple in, one fails and one meets the condition. N for going on against ending.
+- **a comparison between two**
+  - *pass a:* S: `PartDependsOnlyOn.of_le` (l. 199) transfers a part-dependence law to any subrelation of steps; `blanket_iff_through` (l. 357) equates blanket agreement and coupling agreement at the stated time offset from identical agent starts.
+  - *pass b:* S: `PartDependsOnlyOn.of_le` (l.199) and `BlanketDetermined.of_le` (l.236): a law below one determined part by part is determined part by part, carried downward. `PartConsistentFamily.mono` (l.205) and `BlanketConsistentFamily.mono` (l.241). `BlanketDetermined.determined` (l.255). B: `ThresholdCase.corr` (l.484): couplingLaw's course and ThresholdDrain.law's correspond part by part. `ThresholdCase.threshold_case` (l.509).
+- **a rank (an ending within a bound)**
+  - *settled by the third pass:* B: `ThresholdCase.own_eq` (l.503): for every e and s, `ownLevels update policy value lev env true true () e s = fun _ => e - s`: in the threshold case the formation's own level history is the supply draining by one each step (`env` l.458 is `x - 1`). A drain in a built case, stated as an equation; no statement here says the course ends by step e, and no general rank law is in the module. [which pass was right: a; opened: ThresholdCase.value l.452, lev l.455, env l.458, update l.461, corr l.484, own_eq l.503, threshold_case l.509]
+  - *pass a:* B: `ThresholdCase.own_eq` (l. 503) gives the draining supply at step s exactly as e − s.
+  - *pass b:* N
+- **a closed region**
+  - *pass a:* N: Not found in the statements read.
+  - *pass b:* N: no region closed under steps. The closures stated are of laws taken downward (of_le) and of families taken to subfamilies (mono).
+- **forms change while the going on continues, or more can go on after**
+  - *pass a:* B: `Alternating.phase` (l. 1130), `Alternating.balance_g` (l. 1185) and `Alternating.balances` (l. 1194) exhibit repeated alternating drain and feed along a balanced history; h stays the sole participant.
+  - *pass b:* B: `Alternating` (l.1127-1238): g's level alternates between 1 and 0 by a drain and feed from h in two phases; the flow balances at every step (`Alternating.balances`, l.1194), the level recurs (`Alternating.recurs`, l.1225), and some law determined part by part admits the run (`Alternating.admitted`, l.1235). `PhasedDrain.balances` (l.1081) is a three-phase cycle that goes on and balances. Both are alternations of a level within one run, not kinds coming and going.
+- **how it was read**
+  - *pass a:* Read the opening account, all docstrings and all declaration statements. Statements support states and moves, reading, comparison. Built statements supply level, cost, rank, forms_change. The remaining fields are N. None were unreached.
+  - *pass b:* All statements and docstrings (1244 lines, read in three parts to the end). All fields were answered from statements (general or built); none from the account alone, and none was left unreached.

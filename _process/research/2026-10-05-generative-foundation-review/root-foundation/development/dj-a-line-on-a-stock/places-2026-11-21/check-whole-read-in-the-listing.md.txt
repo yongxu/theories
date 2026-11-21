@@ -1,0 +1,74 @@
+*An AI checker's findings (run as Claude Opus; 20 tool calls and 134,547 tokens by the run's count), word for word from the run's journal (wf_a7af078a-202), on the script and its outputs as they were before the check.*
+
+1. MUST: NOTE.md line 36 (Not complete) says "the listing held only the places some read had named, 158 of the package's modules". In places.json, 158 is the number of places that existed before 22 November (a table row, an earlier read or a scratch check). Of those 158, only 104 are package modules. The other 54 are outside the package: the market-generativity formal/ and meta-attractor files, universal-ethics/generative-capacity, deeper/RelationalRenewal, inquiry-root, and pages and programs with no Lean file. Row FM's NOTE.md line 7 has the same error ("158 of 407"), so the source is wrong too. Exact: "Until 22 November the listing held 158 places, 104 of them modules of the package".
+
+2. MUST: the same bullet, line 36, says "every module of the package has a page, read by the whole read's fixed questions and by no others". 104 modules also carry earlier reads or table rows (for example Keeping, TurningInTime, LineOnAStock). Exact: "…every module of the package has a page; the modules no earlier read named are read only by the whole read's fixed questions."
+
+3. MUST: NOTE.md line 19 says "Every answer of those reads begins with a letter the reader chose". This holds only for the thirteen letter fields and the edge read's edge, moves_in_it and reading_in_it.
+   - `states`: 41 answers in pass a and 349 in pass b do not begin with a letter followed by a non-letter.
+   - `how_read`: 62 in pass a and 402 in pass b do not.
+   - Edge read: none of the 129 answers to carrier, handed_in, links, standing or note does; 113 of region_side and 54 of rank_side do not.
+   - FM's line 19 ("every answer with a valid letter") says the same and is false the same way.
+   - Exact: "Every answer to the thirteen questions, and to three of the edge read's, begins with a letter the reader chose".
+
+4. MUST: the index head (PLACES.md line 3) and the legend (line 7, script lines 395 and 397) do not say that an answer can have two parts. FM's brief allows "S: … B: …". 1,568 of the 11,627 letter answers carry a second letter after the first. Examples: 624 "S…B:" in pass b, 103 "N…B:" in pass b, 49 "N…D:", 14 "N…S:". The index shows only the first letter, so an N whose answer goes on "B: `pred_drawn_keeps` (l.405)…" reads in the index as "not found". Add to the head note: "An answer may have two parts (`S: … B: …`); only the first letter is shown, and the rest is on the place page."
+
+5. MUST: 8 answers in pass b begin with two letters joined by a slash. letter() shows only the first:
+   - Amounts multiplying "D/S:" shows D
+   - DrawnReplacement cost "D/S:" shows D
+   - Openness giving "S/D:" shows S
+   - CouplingTraces forms_change "S/B" shows S
+   - LearnedGrouping reading and cost "S/B" show S
+   - LeastLoss forms_change "S/B" shows S
+   - Quantum reading "S/B" shows S
+
+   D for "D/S" is not the reader's letter. Exact code: `return v[0] if v[:1] in LETTERS and not v[1:2].isalpha() and v[1:2] != '/' else '?'`. You could also show the slash pair whole.
+
+6. LESSER: build_places.py lines 69 and 78. HEAD defines 'forms_change' twice, and the second wins. The future read's field `forms_change` is therefore now labelled "forms change while the going on continues" where it was "forms changing while it continues". 'handed_in' is also duplicated, but with the same text. Use a separate key or label for each read.
+
+7. LESSER: script line 78. The whole read's `forms_change` label leaves out half of the brief's question: "…or in which **more can go on after** (a widening)". An S there may be a widening. Exact: "forms change while the going on continues, or more can go on after".
+
+8. LESSER: letter() at line 86 strips leading backticks and asterisks, so "the first characters" in the head note is not exact. Inputs where it goes wrong: "`D_x`…" gives D, "`S1`…" gives S, "N/A" gives N. "Not found…" and "See…" give "?" as they should, because the next character is a letter. A leading newline gives "?". None of these occur in the present returns: 0 answers give "?". Exact head note: "the first letter of each answer (after any leading backtick or asterisk), where the next character is not a letter".
+
+9. LESSER: page writing (line 365) turns newlines into spaces. 19 returns of the older reads have newlines (9 future, 10 register), so those fields match the returns in their words but not their line breaks. The whole reads have no newlines. "Word for word" holds; the layout does not.
+
+10. LESSER: slug() and the main block (lines 90–91, 374–380).
+    - The `seen` counter is case-sensitive, but the disk is APFS, which is case-insensitive. Two keys that differ only in case would write the same file, and the first page would be lost silently. None at present: 461 pages, 461 distinct in lower case.
+    - A "-2" suffix can collide with a real key whose slug ends in "-2".
+    - Suffixes depend on sort order, so adding a key can rename an existing page.
+    - The removal deletes every place/*.md and rewrites all pages, including any file not made by the script. At present the 461 files on disk are exactly the 461 pages.
+    - A key with a slash slugs correctly: conditional/renewal becomes conditional-renewal.md.
+
+11. LESSER: Admission and HistoryIdeals are package modules that share a base name with files outside the package (mathematical-abstraction/constitution/admission/formal/Admission.lean and completion/formal/HistoryIdeals.lean). Each page joins both files: its records and dynamics are the union over both, and Admission's table row stands beside the whole read of the package module. The row says "several Lean files of this name", so the join is disclosed, but the page does not say which file each record names.
+
+12. LESSER: NOTE.md line 19 calls the edge read "a fourth reading". FM's note (line 13) and the script's own title for whole-edge call it part of the third pass (EDGE, two batches). The task's own description also says fourth, so align the note with FM's wording.
+
+13. LESSER: places.json still carries each reader's `place` string. In some older reads these include sentences: 12 in kept and 8 in choice. One example is conditional/renewal: "…Mechanism supplied: ChannelLaw… says deriving it 'is roadmap Phase 4'. Imports…". So "no longer repeats the readers' sentences" (line 25) is true of the fields but not wholly of the names.
+
+14. LESSER: 25 pages carry "No read covers this place.", a sentence of the script's own. It is true of all 25, but the docstring says the script writes no sentence of its own about a place. The page head's "holds no link" sits beside real hyperlinks; it means "no link of the atlas".
+
+**Confirmed**
+
+- **Letters:** I recomputed every letter string for all four whole reads from the returns, using the script's rule: 1,273 read-place entries (407 a, 407 b, 330 c, 129 edge). All of them match places.json and the PLACES.md cells, with 0 mismatches.
+  - Lengths are 13 for a, b and c, and 3 for edge. For c, fields that were not settled show as `·`.
+  - No answer gives "?". The only non-letter starts are the 845 bare "N" answers.
+  - In a sample of 40 answers, every one is a letter followed by ":", a space, "," or nothing (S: 13, N: 12, B: 7, bare N 6, "S," 1, "N " 1). The convention "colon or space" does not hold across all answers: there are 596 "N.", 280 "S,", 6 "S/" and 2 "D/" starts. The script accepts any non-letter after the letter.
+- **Keys:** every whole-read place string names exactly one Name.lean, and it comes first. There are no duplicate keys within any pass and no keys that are not package modules. The package has 407 modules, all directly under Becoming/, with no duplicate base names. All 407 have a page, and all 407 have both passes on it. No module is split across two keys.
+- **Pages:** I checked all 1,412 read sections on the pages against the returns:
+  - 14,992 fields, each equal to "- **HEAD**: value" in the read's field order, under the right read title and reader
+  - the caution line is on every return, and the "As" line is the reader's own name for the place
+  - table rows, records, dynamics and the count of same-statement lines match places.json for all 461 places
+  - every relative link on every page exists on disk
+  
+  By eye I read Settling, Keeping, TurningInTime, LineOnAStock (with an edge read), Acceptance (whole read only), conditional/renewal (an old place with no Lean file) and Admission.
+- **Data:** no read entry in places.json has a "fields" key. Each read entry keeps the reader, the place, the note, the report, the returns file and the letters. All note, report and returns paths exist.
+- **Index:** 461 rows, each with 10 pipes. The thirteen fields are named in W13 order and the edge read's three in E3 order. The labels for cost and rank fit the brief. Nothing in the index adds up, counts or ranks; rows are in alphabetical order.
+- **Note figures:** 461 places, 447 with one file, 3 with several, 11 with none, 85 with a table row, 436 in at least one read, and every module has a page: all true against places.json.
+  - 312 of 503 and 85 of 155 are as in FM's NOTE.md line 22.
+  - The three trust sentences are in FM's note: "neither pass's not found stands by itself" (line 22), the agreed negatives were not tried (line 38), and an S is not a premise list (line 23).
+  - "Two kinds of model that did not see each other" matches FM line 12.
+  - The script reads the four returns files through WHOLE = '../../fm-whole-read-2026-11-22/', and they are not copied anywhere in the listing.
+- **Judging:** nothing in the script decides on a reader's answer beyond taking its first character and checking the next one.
+- **Better or ranks:** nothing in the outputs or the note's new paragraphs says one course is better or ranks anything.
+
+**Not checked:** the same_statements section and the scratch checks; whether "kept nowhere else" holds outside this folder (the whole repository); the index's "read in", file and table columns row by row (pages were checked instead); records and dynamics against the record and atlas files themselves; the readers' reports' contents; whether the table row of Admission refers to the package module. Tool calls: 20.

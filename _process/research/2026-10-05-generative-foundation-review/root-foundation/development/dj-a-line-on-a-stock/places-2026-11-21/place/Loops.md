@@ -1,0 +1,60 @@
+# Loops
+
+*Made by `build_places.py`; never edited by hand. One place of [the listing of places](../PLACES.md). Each field under a read is a reader's return, unchecked; what the note mended is in the note. Line breaks in a return are shown as spaces. Where an answer begins with a letter: **S** from a statement read; **D** from a docstring or the opening account only; **B** only in a built case; **N** one reader's "not found in what was read"; **U** not reached; a `+` after a letter: the answer goes on with another lettered part, which is on the place's page (an `N+` is not an absence); two letters in brackets, as `[D/S]`: the reader gave both; `·` the read has no answer for that field at this place; `?` the answer does not begin with one of the five. The third pass tried only the cells where the two passes differed; a cell that both passes left as not found was tried by nobody else. An S says where a statement is and what it concludes; it is not a list of its premises. The page proves nothing, ranks nothing and holds no link of the atlas. [The note](../NOTE.md) says what the listing is and is not.*
+
+- *file:* `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/Loops.lean`
+- *result records that name this place's file as a source* (computed; not a link): `how-a-carried-difference-grows`, `how-loops-form`, `how-often-couplings-act`, `loops-within-what-a-law-reads`, `observation-is-a-route`, `orders-as-a-sum-over-histories`, `sums-over-histories-by-support-horizon-and-order`, `two-act-worlds-carry-the-difference`, `what-a-cut-loses`, `where-a-level-couples`, `whether-a-loop-closes-a-difference`
+- *dynamics in the atlas that name one of those records* (computed; not a link): `how-loops-form`, `whether-a-loop-closes-a-difference`
+
+## 22 November, every module by fifteen questions
+
+*pass a: reader whole-a-11, as "Loops.lean: finite_order_iff_no_loop, polynomial_iff_no_loop, carriedGive_congr" ([report](../../../fm-whole-read-2026-11-22/reports/read-whole-a-11.md.txt)); pass b: reader whole-b-39, as "Loops.lean: carriedWithin, carriedWithin_exact_of_no_loop, finite_order_iff_no_loop, carried_around, carried_runaway, carried_le_geomBound, carried_le_polynomial, polynomial_iff_no_loop, most_difference_within, gap_polynomial_iff_no_loop, Loops.SelfLoop.attained, Loops.Once.not_always" ([report](../../../fm-whole-read-2026-11-22/reports/read-whole-b-39.md.txt)); the third pass, where the two differed: reader whole-c-settle-15, as "Loops.lean: settled fields giving, rank, forms_change" ([report](../../../fm-whole-read-2026-11-22/reports/read-whole-c-settle-15.md.txt)). Each is a reader's return, unchecked; what the note mended is in the note: [note](../../../fm-whole-read-2026-11-22/NOTE.md). Under each question the third pass's settled answer stands first where there is one, then pass a, then pass b.*
+
+- **what the module states**
+  - *pass a:* S: `finite_order_iff_no_loop` (l. 614) says that, with all conditions listed and each coupling active at every step, every initial gap admits an exact finite order at c iff c has no upstream loop. With fixed formations, stationary strengths, all conditions listed and zero input gap from the part, `polynomial_iff_no_loop` (l. 1455) gives the same criterion for a polynomial bound from every start.
+  - *pass b:* The module states general laws of the carried amount, the course that the coupling strengths k generate from starting gaps δ. Its orders (carriedWithin) rise to it and are exact up to their step. A finite order is exact from every start exactly where no loop lies upstream, with couplings at every step (finite_order_iff_no_loop). Around a loop the amount is multiplied each time by at least 1 + the product of the strengths (carried_around, carried_runaway). It is bounded by D(1+M)^t and, with no loop, by a polynomial, and with stationary strengths it is polynomially bounded exactly where no loop lies upstream (polynomial_iff_no_loop). Through most_difference_arrives the same holds for every law and two balanced flows (most_difference_within, gap_polynomial_iff_no_loop). The built SelfLoop attains the bounds, and the built Once shows a loop coupled at one step leaves order one exact.
+- **moves**
+  - *pass a:* N: Not found in the statements read.
+  - *pass b:* N: no choice among steps. `most_difference_within` (l. 1497) and `gap_polynomial_iff_no_loop` (l. 1542) quantify over every ExchangeLaw and every two balanced flows following it with the strengths; that is all laws, not choices within a process.
+- **a reading**
+  - *pass a:* S: `carriedGive_congr` (l. 227) gives equal contributions when the histories agree on every listed level up to the step at which the outside formation has positive strength.
+  - *pass b:* S: `carriedGive_congr` (l. 227): levels that agree wherever a positive strength reads them (s ≤ t, d ∈ cs, outside the part) give alike, so what a positive strength registers decides what is given. `carriedFrom_congr` (l. 266): what is carried to step t reads the levels only before t. These are general.
+- **a share**
+  - *pass a:* N: Not found in the statements read.
+  - *pass b:* N
+- **a level that runs down**
+  - *pass a:* N: Not found in the statements read.
+  - *pass b:* N for a level that runs down: the carried amount never falls (`carried_le_add`, l. 650; `carried_mono_steps`, l. 656), and the gaps between levels W.level are bounded, not drained.
+- **a giving that is itself a going-on**
+  - *settled by the third pass:* N: opened `Loops.Once.strengths` (l. 1148), `give_zero` (l. 1152), `give_succ` (l. 1159), `carriedFrom` (l. 189). The givers are formations `h : F` summed over `present t`, but `present : Nat → List F` and the strengths `k` are section variables (handed in); in `Once` the one formation is present at every step (`fun _ => [()]`) and only its supplied strength is 1 at step 0 and 0 after, so no giver is lost by a law of the model. [which pass was right: b; opened: Section variables l. 182-183; carriedFrom l. 189; Once.strengths l. 1148; give_zero l. 1152; give_succ l. 1159; stationary l. 1213.]
+  - *pass a:* B: `Loops.Once.give_zero` (l. 1152) and `Loops.Once.give_succ` (l. 1159) give a single formation whose contribution is the current level at step zero and zero afterward. Its presence is constant and its strength schedule is supplied.
+  - *pass b:* N: the strengths k (and K, stationary) are supplied. The account (l. 89–90) says 'The strengths are supplied'. Formations present give by premise.
+- **a cost to the one that keeps or gives**
+  - *pass a:* N: Not found in the statements read.
+  - *pass b:* N
+- **multiplying**
+  - *pass a:* N: Not found in the statements read.
+  - *pass b:* N: amounts multiply around loops, but no units leave units.
+- **a point of no return**
+  - *pass a:* S: `orderBelow_lt_later` (l. 542) concludes that a strict shortfall of a fixed approximation order at one condition persists across the next step.
+  - *pass b:* S, at the level of the calculation only: `orderBelow_lt_later` (l. 542): what the orders below j miss at c at t stays missed at t + 1. N for a going-on lost and not regained.
+- **both outcomes**
+  - *pass a:* S: `finite_order_iff_no_loop` (l. 614) characterizes keeping all the carried amount in finite order from each start, assuming all conditions listed and every coupling always active. This concerns loss in an approximation.
+  - *pass b:* S: `finite_order_iff_no_loop` (l. 614): with every condition listed and every coupling holding at every step, some finite order is exact from every δ exactly where no loop lies upstream of c. `polynomial_iff_no_loop` (l. 1455): with stationary strengths, the carried amount at c is polynomially bounded from every δ exactly where no loop lies upstream. `gap_polynomial_iff_no_loop` (l. 1542) is the same over every law and two balanced flows. These are general dichotomies of polynomial growth and running away, not of going on and ending.
+- **a comparison between two**
+  - *pass a:* S: `carriedFrom_mono` (l. 259) carries pointwise order of histories on listed conditions to pointwise order of the amounts calculated from them.
+  - *pass b:* S: `most_difference_within` (l. 1497): for two balanced flows of any nonanticipating law with strengths k, with no loop upstream, the gap at c at T is at most a for all such laws exactly where carriedWithin n T c ≤ a. `gap_le_polynomial` (l. 1520): the gap between two such courses is at most D·orderSum. `carried_along` (l. 691): along a chain coupled with strengths ≥ w, product · carried at the start ≤ carried at the end after p steps. `carriedFrom_mono` (l. 259) and `carriedGive_mono` (l. 215): higher levels carry at least as much.
+- **a rank (an ending within a bound)**
+  - *settled by the third pass:* N: no ending within a bound, falling variant, drain or deadline. Opened `carried_le_geomBound` (l. 996), `carriedWithin_le_withinBound` (l. 972), `carried_le_carriedWithin_add` (l. 1013), `carried_le_polynomial` (l. 1073), `carriedWithin_exact` (l. 312), `carried_runaway` (l. 735): all are upper or lower bounds on the growth of `carried` (premises `δ c ≤ D`, `inflow … ≤ M`, part giving no gap), or exactness of order j up to step j; pass b's description of them is accurate and its own text says N for ending. [which pass was right: a; opened: l. 312, 614, 735, 957, 972, 996, 1013, 1073.]
+  - *pass a:* N: Not found in the statements read.
+  - *pass b:* S, of upper bounds on growth: `carried_le_geomBound` (l. 996): at most D(1+M)^t; `carriedWithin_le_withinBound` (l. 972); `carried_le_carriedWithin_add` (l. 1013): a cut at order j misses at most missBound; `carried_le_polynomial` (l. 1073). `carriedWithin_exact` (l. 312): order j is exact up to step j. `carriedWithin_exact_of_not_coupledInto` (l. 428). N for ending within a bound or a falling variant.
+- **a closed region**
+  - *pass a:* S: `carriedFrom_carried` (l. 252) says the carried history is a fixed point of the operation that recomputes carrying from a history.
+  - *pass b:* S: `carriedFrom_carried` (l. 252): read from its own levels, the carrying law gives back the carried amount, so the carried amount is a fixed point of carriedFrom. N for an invariant region of states.
+- **forms change while the going on continues, or more can go on after**
+  - *settled by the third pass:* B (weak): `Loops.Once.not_always` (l. 1196) states, of the built strengths coupled at step 0 only (`give_succ` l. 1159: nothing given after), `OnLoop … ()` together with order 1 exact at every step for every δ; a coupling that holds then stops while the carried amount stands, with `present` constant. D: the account (l. 88-98) says loops form and dissolve by `Becoming.Closing` and `Becoming.Remainder`; no statement here derives it. [which pass was right: both in part; opened: Account l. 86-103; Once.strengths l. 1148; give_zero l. 1152; give_succ l. 1159; onLoop l. 1167; exact l. 1172; not_always l. 1196; finite_order_iff_no_loop l. 614.]
+  - *pass a:* N: Not found in the statements read.
+  - *pass b:* D: the account (l. 88–98) says loops form and dissolve within the unfolding (by Becoming.Closing and Becoming.Remainder); no statement here derives it, and the strengths are taken as given. B: `Loops.Once.not_always` (l. 1196): a condition on a loop coupled at the first step only, for which order one is exact from every start, so couplings that come and go change the law's conclusion.
+- **how it was read**
+  - *pass a:* S: I read the opening account, every declaration statement and the docstrings. General statements — states, reading, no_return, both_outcomes, comparison, closed_region. Built cases — giving. Not found — moves, share, level, cost, multiplying, rank, forms_change. No commentary-only answers. All questions were reached.
+  - *pass b:* All statements and docstrings were read (l. 1–1568). reading, no_return, both_outcomes, comparison, rank and closed_region are answered from statements. forms_change is from the account and a built case. moves, share, level, giving, cost and multiplying are N.

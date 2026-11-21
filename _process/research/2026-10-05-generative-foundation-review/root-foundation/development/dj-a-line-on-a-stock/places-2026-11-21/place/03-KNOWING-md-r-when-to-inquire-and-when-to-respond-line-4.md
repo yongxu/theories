@@ -1,0 +1,16 @@
+# 03-KNOWING.md: r-when-to-inquire-and-when-to-respond (line 4
+
+*Made by `build_places.py`; never edited by hand. One place of [the listing of places](../PLACES.md). Each field under a read is a reader's return, unchecked; what the note mended is in the note. Line breaks in a return are shown as spaces. Where an answer begins with a letter: **S** from a statement read; **D** from a docstring or the opening account only; **B** only in a built case; **N** one reader's "not found in what was read"; **U** not reached; a `+` after a letter: the answer goes on with another lettered part, which is on the place's page (an `N+` is not an absence); two letters in brackets, as `[D/S]`: the reader gave both; `·` the read has no answer for that field at this place; `?` the answer does not begin with one of the five. The third pass tried only the cells where the two passes differed; a cell that both passes left as not found was tried by nobody else. An S says where a statement is and what it concludes; it is not a list of its premises. The page proves nothing, ranks nothing and holds no link of the atlas. [The note](../NOTE.md) says what the listing is and is not.*
+
+- *file:* no Lean file of this name
+
+## 21 November, a choice made from a reading: reader response-common-over-a-reading
+
+*As "03-KNOWING.md: r-when-to-inquire-and-when-to-respond (line 426), r-a-response-common-over-a-reading (line 560); records when-to-inquire-and-when-to-respond.json, a-response-common-over-a-reading.json". A reader's return, unchecked; what the note mended is in the note: [note](../../read-a-choice-from-a-reading-2026-11-21/NOTE.md), [report](../../read-a-choice-from-a-reading-2026-11-21/read-response-common-over-a-reading.md.txt).*
+
+- **what is read, and what chooses from it**: Line 426 tells a policy that reads an observation class, citing the periphery's InquiryChoice.observed_class_policy_iff (InquiryChoice.lean 65, Classical.choice) and the core's GuardHorizon.uniform_policy_iff_fiber_feasible, given choice. Line 560 tells «共应» as in the module.
+- **the exact law**: Both tellings match the Lean as stated. The record when-to-inquire-and-when-to-respond.json gives laws 0-6 with ChoiceOver named in hypotheses[0]. The record a-response-common-over-a-reading.json gives laws 0-6, the seventh being GuardHorizon.uniform_policy_iff_common. Line 560's "judgment is viability indexed by acts" is a reading: the Lean states one grammar law at two relations.
+- **within one reading**: Line 426 and record law 4 tell a built dosing case on the reals: no immediate dose is admissible for both losses (two_losses_have_no_common_immediate_dose, InquiryChoice 142).
+- **two readings of one process**: Line 562 (an AI reading) says "a finer reading keeps every common response". That matches «共应之细» as one direction.
+- **when a reading tells apart, and what can still be kept**: Line 426 and record law 4 tell a built case, inquiry_can_cross_floor_before_response (InquiryChoice 186): the reading step takes the level from 2 to −1 before any response. It is not stated as a law.
+- **the lock as a case**: Neither anchor nor either record names the lock. The "judgment through the couplings" that line 560 cites to §3 rests in the Lean on the ASCII CommonResponse (LabelledRoles 111), not on «共应»; no theorem joining the two was found in what was read.

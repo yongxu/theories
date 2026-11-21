@@ -1,0 +1,60 @@
+# PremisesTogether
+
+*Made by `build_places.py`; never edited by hand. One place of [the listing of places](../PLACES.md). Each field under a read is a reader's return, unchecked; what the note mended is in the note. Line breaks in a return are shown as spaces. Where an answer begins with a letter: **S** from a statement read; **D** from a docstring or the opening account only; **B** only in a built case; **N** one reader's "not found in what was read"; **U** not reached; a `+` after a letter: the answer goes on with another lettered part, which is on the place's page (an `N+` is not an absence); two letters in brackets, as `[D/S]`: the reader gave both; `·` the read has no answer for that field at this place; `?` the answer does not begin with one of the five. The third pass tried only the cells where the two passes differed; a cell that both passes left as not found was tried by nobody else. An S says where a statement is and what it concludes; it is not a list of its premises. The page proves nothing, ranks nothing and holds no link of the atlas. [The note](../NOTE.md) says what the listing is and is not.*
+
+- *file:* `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PremisesTogether.lean`
+- *result records that name this place's file as a source* (computed; not a link): `premises-met-and-failed`
+
+## 22 November, every module by fifteen questions
+
+*pass a: reader whole-a-14, as "PremisesTogether.lean: ListedPaths.premises_hold, GreaterOfTwo.premises_hold, TwoFeeding.mutuallyFed, returnsLess_fails" ([report](../../../fm-whole-read-2026-11-22/reports/read-whole-a-14.md.txt)); pass b: reader whole-b-51, as "PremisesTogether.lean: ListedPaths.premises_hold, ListedPaths.premises_hold_de_se, ListedPaths.condition_reads_no_order, Relabel.GreaterOfTwo.premises_hold, IdleStep.premises_hold, TwoFeeding.mutuallyFed, OneFeeding.not_mutuallyFed, Joining.Once.connectedFrom, Optimum.AtOnce.returnsLess_met, Optimum.AtOnce.returnsLess_fails" ([report](../../../fm-whole-read-2026-11-22/reports/read-whole-b-51.md.txt)); the third pass, where the two differed: reader whole-c-settle-20, as "PremisesTogether.lean: settled fields giving, no_return, rank, closed_region" ([report](../../../fm-whole-read-2026-11-22/reports/read-whole-c-settle-20.md.txt)). Each is a reader's return, unchecked; what the note mended is in the note: [note](../../../fm-whole-read-2026-11-22/NOTE.md). Under each question the third pass's settled answer stands first where there is one, then pass a, then pass b.*
+
+- **what the module states**
+  - *pass a:* B: `ListedPaths.premises_hold` (l. 102) exhibits two listed paths, decided admission, a strict extension and an increasing counting order that ranks it. The other results exhibit joint premises in particular models, including `TwoFeeding.mutuallyFed` (l. 288) and `Joining.Once.finiteOutcomes` (l. 352).
+  - *pass b:* B: Small built models showing that the premises of existing conditional laws can hold together, for example the link to C between listed level paths, an equivariant choice, removal of idle steps, mutual feeding, joining and ReturnsLess. Where cheap, each is paired with a model failing it. No new general law is stated; all statements are of particular built models, except returnsLess_met, which holds for a fixed G = 0 and every portion.
+- **moves**
+  - *pass a:* B: `Relabel.GreaterOfTwo.premises_hold` (l. 213) gives an equivariant choice selecting true at (1,0) and withholding at (0,0); no preservation of a succession of states is asserted.
+  - *pass b:* B: `Relabel.GreaterOfTwo.premises_hold` (l. 213): the rule picking the greater of two entries, and nothing at a tie, is an EquivariantChoice. A rule fixing its choice whatever the entries is not. `ListedPaths.premises_hold` (l. 102): two level paths, `once` and `never`, on a one-formation web. `IdleStep.premises_hold` (l. 260): a stuttering reading with its moving steps.
+- **a reading**
+  - *pass a:* B: `Relabel.GreaterOfTwo.pick` (l. 154) and `rule` (l. 158) choose from the two entries by strict comparison, withholding at a tie.
+  - *pass b:* B: `Relabel.GreaterOfTwo.premises_hold` (l. 213): what is registered (the entries r : Bool → Nat) decides the choice. `MatchedCourses.readings_hold_together` (l. 448): one content relation `lossesAlike` meets both BasicAlike and BaseApart. `ListedPaths.condition_reads_no_order` (l. 138): the de se condition reads no order, holds, and does not entail C on this web. `IdleStep.not_idle_later` (l. 266): read as idle at step 2, the world fails IdleAt.
+- **a share**
+  - *pass a:* N: Not found in the statements read.
+  - *pass b:* N: `ListedPaths.counted` (l. 95) counts admitted items with weight one, but no share is set again from it.
+- **a level that runs down**
+  - *pass a:* B: `Optimum.AtOnce.returnsLess_met` (l. 462) verifies ReturnsLess for zero next standing with arbitrary portions; `returnsLess_fails` (l. 468) refutes it for identity return and whole portion when k>0 and N>1.
+  - *pass b:* S, of a particular G: `Optimum.AtOnce.returnsLess_met` (l. 462): with G = 0 (nothing left stands next), every portion satisfies ReturnsLess for every k, N. `returnsLess_fails` (l. 468): with G the identity (the whole stands as left) and portion z, ReturnsLess fails when 0 \< k and 1 \< N. ReturnsLess is about what a portion returns, as a function of what is left. B: in `ListedPaths.web` a formation needs one unit, and the path `once` holds 1 at step 0 and 0 after.
+- **a giving that is itself a going-on**
+  - *settled by the third pass:* B: `TwoFeeding.mutuallyFed` (l. 288) states `flow.MutuallyFed web` for the built two-formation model, where each formation (a Bool of the model, present in `flow.present` at every step) gives one unit to the condition the other requires; the givers are formations of the model and not a function handed in, but `web.active` is constantly True and `present` is constant, so no statement has a giver that can be lost. `OneFeeding.not_mutuallyFed` (l. 307) fails it where one formation requires nothing. [which pass was right: both in part; opened: TwoFeeding.web l.276; TwoFeeding.flow l.280; TwoFeeding.present l.283; TwoFeeding.mutuallyFed l.288; OneFeeding.not_mutuallyFed l.307; MutualDependence.MutuallyFed (def, other module)]
+  - *pass a:* N: `TwoFeeding.flow` (l. 280) and `mutuallyFed` (l. 288) exhibit identifiable formations giving to each other's conditions, but both are always present and their giving persists.
+  - *pass b:* B: `TwoFeeding.mutuallyFed` (l. 288): two formations, each giving to the condition the other requires, are mutually fed. `OneFeeding.not_mutuallyFed` (l. 307): where only one requires anything, the flow is not mutually fed. The givers are formations of the model; whether they can be lost is not stated.
+- **a cost to the one that keeps or gives**
+  - *pass a:* N: Not found in the statements read.
+  - *pass b:* N.
+- **multiplying**
+  - *pass a:* N: Not found in the statements read.
+  - *pass b:* N.
+- **a point of no return**
+  - *settled by the third pass:* B: `ListedPaths.once_listed` (l. 83) states `web.ListsAdmitted items once` with `items = [(0, ())]`, i.e. everything the level path `once` admits is the one formation at step 0, so nothing is admitted at any later step; this is by the definition of the path `once` (l. 70, a def: 1 at step 0, 0 after), a premise of the built case and not concluded from a step law, and nothing states that no course regains it. Pass a cited the defs `once` and `admitted`, not this statement. [which pass was right: both in part; opened: ListedPaths.once l.70; admitted l.75; items l.78; decides l.80; once_listed l.83; never_listed l.87; extension l.90; Weightings.ListsAdmitted (def, other module)]
+  - *pass a:* B: `ListedPaths.once` (l. 70) and `admitted` (l. 75) specify no later readmission after the first step.
+  - *pass b:* N.
+- **both outcomes**
+  - *pass a:* N: Not found in the statements read.
+  - *pass b:* N: the pairs met and failed are for premises (for example ReturnsLess, MutuallyFed, EquivariantChoice), not for going on and ending.
+- **a comparison between two**
+  - *pass a:* B: `ListedPaths.premises_hold_de_se` (l. 117) ranks once above never for every order increasing in the indicated own continuation on the listed items.
+  - *pass b:* B: `ListedPaths.premises_hold` (l. 102): `once` extends `never`, both listed, admission decided, and the counting order is increasing and ranks admitted once above admitted never, as an instance of `Web.extension_ranked_of_increasing`. `premises_hold_de_se` (l. 117) gives the same for any self-concerned order. `Relabel.GreaterOfTwo.equivariant` (l. 200): exchanging the two alternatives' entries exchanges the choice.
+- **a rank (an ending within a bound)**
+  - *settled by the third pass:* B: `ListedPaths.once_listed` (l. 83): everything `once` admits lies in `items = [(0, ())]`, so in this one built path admission has ended by step 1; no variant, drain or bound on ending is stated as a law, and the fall is the definition of `once` (l. 70). `Optimum.AtOnce.returnsLess_met` (l. 462) and `returnsLess_fails` (l. 468) meet and fail a premise `ReturnsLess` and state no ending. [which pass was right: both in part; opened: ListedPaths.once l.70; once_listed l.83; not_listed l.127; returnsLess_met l.462; returnsLess_fails l.468]
+  - *pass a:* B: `ListedPaths.once` (l. 70) falls below the unit admission threshold at time one and stays there.
+  - *pass b:* N.
+- **a closed region**
+  - *settled by the third pass:* N: `IdleStep.web` (l. 248) is a definition with constant level and activity; no theorem states a region closed under steps, an invariant, a kernel or a fixed point. Opened to rule it out: IdleStep.web (248), IdleStep.idle (254: `world.IdleAt reading`, nothing present and levels unmoved at the one idle step), IdleStep.premises_hold (260), ListedPaths.premises_hold_de_se (117: `Unrestricted (selfAscribed (ownClosure ...))` and the order ranks the extension; a closure of a relation between formations, not of steps), TwoFeeding.mutuallyFed (288: every pair within feeding closure), Joining.Once.connectedFrom (402: every piece reached from `.start`, reach not closure). [which pass was right: b; opened: IdleStep.web l.248; IdleStep.idle l.254; IdleStep.premises_hold l.260; not_idle_later l.266; ListedPaths.premises_hold_de_se l.117; TwoFeeding.mutuallyFed l.288; Joining.Once.connectedFrom l.402]
+  - *pass a:* B: `IdleStep.web` (l. 248) holds standing and activity constant at every time in the single-relatum world.
+  - *pass b:* N: no invariant region. B: `ListedPaths.premises_hold_de_se` (l. 117): `Unrestricted (selfAscribed (ownClosure ...))` holds on the one-formation web. `Joining.Once.connectedFrom` (l. 402): every piece is reached from the idle start through roles.
+- **forms change while the going on continues, or more can go on after**
+  - *pass a:* B: `ListedPaths.extension` (l. 90) exhibits a strict extension of never by once, admitting the one formation at time zero.
+  - *pass b:* B, marginal: `Joining.Once.connectedFrom` (l. 402) and `finiteOutcomes` (l. 352): start, passage and finish are joined, with the passage entering and leaving and everything reached from start. `IdleStep.premises_hold` (l. 260): a world idle at the first step with something taking part at the next. Neither states a going-on continuing while forms change.
+- **how it was read**
+  - *pass a:* S: I read the opening account, every declaration's statement and its docstring where present. Built statements answer states, moves, reading, level, no_return, comparison, rank, closed_region, forms_change. The remaining fields are N. No question was unreached.
+  - *pass b:* I read all statements and docstrings to l. 474 (the whole module) and the opening account. Level is answered from statements of a fixed G. Moves, reading, giving, comparison, closed_region and forms_change are from built cases. Share, cost, multiplying, no_return, both_outcomes and rank are N. No question is U.

@@ -1,0 +1,60 @@
+# PoolResponse
+
+*Made by `build_places.py`; never edited by hand. One place of [the listing of places](../PLACES.md). Each field under a read is a reader's return, unchecked; what the note mended is in the note. Line breaks in a return are shown as spaces. Where an answer begins with a letter: **S** from a statement read; **D** from a docstring or the opening account only; **B** only in a built case; **N** one reader's "not found in what was read"; **U** not reached; a `+` after a letter: the answer goes on with another lettered part, which is on the place's page (an `N+` is not an absence); two letters in brackets, as `[D/S]`: the reader gave both; `·` the read has no answer for that field at this place; `?` the answer does not begin with one of the five. The third pass tried only the cells where the two passes differed; a cell that both passes left as not found was tried by nobody else. An S says where a statement is and what it concludes; it is not a list of its premises. The page proves nothing, ranks nothing and holds no link of the atlas. [The note](../NOTE.md) says what the listing is and is not.*
+
+- *file:* `experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/PoolResponse.lean`
+- *result records that name this place's file as a source* (computed; not a link): `what-a-pools-acts-respond-to`, `where-two-courses-rejoin`
+- *dynamics in the atlas that name one of those records* (computed; not a link): `unselected-beyond-the-coupling-closure`
+
+## 22 November, every module by fifteen questions
+
+*pass a: reader whole-a-13, as "PoolResponse.lean: acts_alike_all_iff, response_not_fixed_by_coupling, pool_alike_before, response_returns" ([report](../../../fm-whole-read-2026-11-22/reports/read-whole-a-13.md.txt)); pass b: reader whole-b-50, as "PoolResponse.lean: ExchangeLaw.acts_alike_all_iff, ExchangeLaw.Through.selectsThroughAll, ExchangeLaw.response_not_fixed_by_coupling, Flow.response_alike_pool, act_courses_response_alike_pool, Flow.pool_within_response_iff, TimedResponse.pool_alike_before, Loop.response_returns" ([report](../../../fm-whole-read-2026-11-22/reports/read-whole-b-50.md.txt)); the third pass, where the two differed: reader whole-c-settle-19, as "PoolResponse.lean: settled fields moves, cost, rank" ([report](../../../fm-whole-read-2026-11-22/reports/read-whole-c-settle-19.md.txt)). Each is a reader's return, unchecked; what the note mended is in the note: [note](../../../fm-whole-read-2026-11-22/NOTE.md). Under each question the third pass's settled answer stands first where there is one, then pass a, then pass b.*
+
+- **what the module states**
+  - *pass a:* S: With decidable observation classes, a condition and members outside the acting part, all coupling-respecting laws prescribe equal exchanges exactly when all members read the histories alike (l. 205). A distinguishable difference admits a responding law and a uniformly unresponsive law under the stated decidability premise (l. 226).
+  - *pass b:* General laws for any web, observation, exchange law and pool: a selection through a group's acts under a law reading through coupling is a selection through its pooled coupling, and across a step the members exchange alike under two histories by every such law exactly when they all couple the two alike (the bound is exact but does not fix the response). Two built witnesses (Clearing, Loop) show a pool separating without responding and a response returning through the actor's coupling closure to end its support.
+- **moves**
+  - *settled by the third pass:* S: `act_courses_response_alike_pool` (l. 278): for any two act laws `act`, `act'` of the acting `part` (courses `(law.withAct part act).course present start` and the same with `act'`), given `law`, `act`, `act'` nonanticipating, `law.Through W obs part`, `act.Through W obs (!part)`, both feasible, and the two acts agreeing on every condition the pool's closure couples into, every member of the part within the closure gives alike under both courses' levels and every formation in the closure outside the part takes and gives alike. A law of what any two choices of act keep; the choice is a whole act law, with no `Process S A` or allowed set. [which pass was right: b; opened: `act_courses_response_alike_pool` l.278, `acts_alike_all_iff` l.205, `Flow.response_alike_pool` l.249, `Flow.act_unselected_by_acts_pool` l.262, `SelectsThroughActs` l.116.]
+  - *pass a:* N: `acts_alike_all_iff` (l. 205) quantifies over whole exchange laws respecting coupling. No move choice with a preservation law was found.
+  - *pass b:* S: `act_courses_response_alike_pool` (l. 278): for two act laws `act`, `act'` of an acting part (with `law.withAct part act`), nonanticipating, feasible, agreeing on what the closure couples into, every member of the part within the pool's coupling closure gives alike under the two courses' levels and every formation in the closure outside the part exchanges alike; a law about what a choice between two acts keeps. S: `acts_alike_all_iff` (l. 205) quantifies over every exchange law reading through coupling. No `Process S A` or policy set appears.
+- **a reading**
+  - *pass a:* S: `ExchangeLaw.Through.selectsThroughAll` (l. 133) derives selection through pooled observations from selection through acts when the group lies outside the acting part and the law reads through coupling.
+  - *pass b:* S: `ExchangeLaw.acts_alike_all_iff` (l. 205): where coupling classes are decided and a condition `c` given, members outside the part exchange alike under `l`, `l'` across step `t` by every law reading through coupling exactly when they all couple `l`, `l'` alike up to `t` (`W.AlikeThroughAll obs group`). S: `Through.selectsThroughAll` (l. 133): a selection through the group's acts (`SelectsThroughActs`, l. 116) is a selection through its pooled coupling. S: `Through.acts_separate_member` (l. 160): what the acts separate, some listed member couples apart. S: `response_not_fixed_by_coupling` (l. 226): coupling apart admits a law that responds and one (`zero`) that responds to nothing.
+- **a share**
+  - *pass a:* N: Not found in the statements read.
+  - *pass b:* N
+- **a level that runs down**
+  - *pass a:* B: `Loop.response_returns` (l. 434) exhibits a difference in what the second takes at step one and loss of the first’s support at step two under escalation, with support retained in the quiet run. No renewal function is identified.
+  - *pass b:* B: `Loop.response_returns` (l. 434): in the built Loop, the second takes two units from the first's condition across step 1, and the first is unsupported at step 2 with the act and supported without. General statements carry levels `W.level` and balance premises (`L.Balances W`, `TimedResponse.pool_alike_before` l. 376) but state no running down with return depending on what is left.
+- **a giving that is itself a going-on**
+  - *pass a:* N: Not found in the statements read.
+  - *pass b:* N in general (givers are formations of a flow whose `give` is supplied; the exchange law is handed in). B: `Loop.response_returns` (l. 434): the first's support is lost through the second's taking, but the giver is not itself shown as a going-on that is lost.
+- **a cost to the one that keeps or gives**
+  - *settled by the third pass:* B: `Loop.response_returns` (l. 434): in the built `Loop`, `escalation.take 1 .second .ofFirst ≠ quiet.take 1 .second .ofFirst`, `¬ web.Supported 2 .first` and `quietWeb.Supported 2 .first`: with its act the first is unsupported at step 2, without it supported. The act draws on the actor's own support in one built model; the statement does not call the act a giving or a keeping. No general law. [which pass was right: b; opened: `Loop.response_returns` l.434, `Clearing.separated_unresponded` l.409, `pool_within_response_iff` l.329.]
+  - *pass a:* N: Not found in the statements read.
+  - *pass b:* B: `Loop.response_returns` (l. 434): the first's act leads the second to take two units from the first's condition, and with the act the first is unsupported at step 2 while without it it is supported; the act costs the actor its support, in one built model. N in general.
+- **multiplying**
+  - *pass a:* N: Not found in the statements read.
+  - *pass b:* N
+- **a point of no return**
+  - *pass a:* N: Not found in the statements read.
+  - *pass b:* N (Loop shows support lost at step 2 but no statement that it is not regained).
+- **both outcomes**
+  - *pass a:* B: `Loop.response_returns` (l. 434) places loss and retention of the first’s support at step two in the escalation and quiet flows respectively.
+  - *pass b:* B: `Loop.response_returns` (l. 434): with the act the first is unsupported at step 2 and without it supported (two flows compared, built). S iff statements (`acts_alike_all_iff` l. 205, `pool_within_response_iff` l. 329) concern response and coupling, not going on and ending.
+- **a comparison between two**
+  - *pass a:* S: `Flow.response_alike_pool` (l. 249) transfers equal exchange to every outside-part member of the joint coupling closure, given balance, equal starts and presence, a common followed law through coupling and acts alike within the closure.
+  - *pass b:* S: `Flow.response_alike_pool` (l. 249): under the conditions of `Flow.act_alike_pool` (one law reading through coupling, both flows following it and balancing, same present and start, group acting alike), every formation within the pool's coupling closure drawn through both flows and outside the part takes and gives alike in the two flows at every step. S: `Flow.pool_alike_beyond_response` (l. 342): a group none of whose members lies within the part's responsive reach couples the two flows alike at every step and each member exchanges alike. S: `TimedResponse.pool_alike_before` (l. 376): no member couples apart or responds before step `D` where no route from the source has entered what it couples into by `D`.
+- **a rank (an ending within a bound)**
+  - *settled by the third pass:* N. `TimedResponse.pool_alike_before` (l. 376): given balance and same presence before `D`, equal starts, response through coupling of non-sources, and no member `ReachedBy ... D`, the members couple the two courses alike up to `D` and exchange alike before `D`. A step before which nothing responds, not an ending within a bound, a falling rank or a drain. [which pass was right: b; opened: `pool_alike_before` l.376, `pool_alike_beyond_response` l.342, `response_returns` l.434, `separated_unresponded` l.409.]
+  - *pass a:* S: `TimedResponse.pool_alike_before` (l. 376) excludes a distinguishing response before D if no member is reached by D, given balance, matching presence, equal starts and coupled response of nonsources. This bounds earliest response.
+  - *pass b:* N (`TimedResponse.pool_alike_before` l. 376 has a step `D` up to which the two courses stay alike, not a bound on ending).
+- **a closed region**
+  - *pass a:* N: Not found in the statements read.
+  - *pass b:* N for a region closed under steps. S of a closure under coupling: `Flow.pool_within_response_iff` (l. 329): some pool member lies within the part's responsive reach exactly when some member of the part lies within the pool's coupling closure (`WithinClosureOf (L.CoupledFromEither W L' obs) group`) drawn through both flows.
+- **forms change while the going on continues, or more can go on after**
+  - *pass a:* N: Not found in the statements read.
+  - *pass b:* N
+- **how it was read**
+  - *pass a:* S: Read the opening account, every declaration statement and its docstring. Statements — states, reading, comparison, rank. Built cases — level, both_outcomes. Not found — moves, share, giving, cost, multiplying, no_return, closed_region, forms_change. No answer rests on commentary alone or was left unreached.
+  - *pass b:* All statements and docstrings read (whole module, 454 lines); moves, reading, comparison, closed_region (as coupling closure) from statements; level, giving, cost, both_outcomes only from the built Loop witness; the rest N.
