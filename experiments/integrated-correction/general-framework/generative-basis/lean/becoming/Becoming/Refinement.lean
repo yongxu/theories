@@ -1,4 +1,5 @@
 import Becoming.Decidedness
+import Becoming.PredicateIteration
 
 /-!
 # Refinement: a chain of equivalences stops within its classes
@@ -58,22 +59,6 @@ theorem DistinctUnder.unique {R : X → X → Prop} (symm : ∀ {x y}, R x y →
     | .inr later, .inl here' =>
       absurd (Eq.subst (motive := fun w => R w x) here' (symm related)) (head x later)
     | .inr later, .inr later' => DistinctUnder.unique symm tail later later' related
-
-/-- Taking one occurrence of a member from a list leaves a list one shorter holding the rest. -/
-theorem remove_mem : ∀ {l : List X} {x : X}, x ∈ l →
-    ∃ l' : List X, l'.length + 1 = l.length ∧ ∀ y, y ∈ l → y = x ∨ y ∈ l'
-  | [], _, mem => nomatch mem
-  | a :: t, _, mem => match mem_cons_cases mem with
-    | .inl same => ⟨t, rfl, fun _ mem' => match mem_cons_cases mem' with
-      | .inl here => .inl (here.trans same.symm)
-      | .inr later => .inr later⟩
-    | .inr later => match remove_mem later with
-      | ⟨t', shorter, rest⟩ => ⟨a :: t', congrArg (· + 1) shorter, fun y mem' =>
-        match mem_cons_cases mem' with
-        | .inl here => .inr (Eq.subst (motive := fun w => w ∈ a :: t') here.symm (.head t'))
-        | .inr later' => match rest y later' with
-          | .inl same => .inl same
-          | .inr kept => .inr (.tail a kept)⟩
 
 /-- **Members pairwise apart are no more than the list holding them**, wherever the relation
 joins each member to itself. -/
