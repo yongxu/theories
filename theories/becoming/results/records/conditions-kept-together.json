@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-09T04:32:28+00:00",
+  "reviewed_at_utc": "2026-11-21T15:22:57+00:00",
   "statement": {
     "en": "Under every course, guards decompose exactly; along some course they do not, and no rule on the separate keepabilities decides the joint one. No course leaving a part's guard decides neither renewal nor what the run does to others.",
     "zh": "在每条进程下，守卫恰好分解；沿某条进程则不，且没有作用于各自可保持性的规则决定联合的可保持性。没有进程离开一个部分的守卫，既不决定更新，也不决定运行对他者做了什么。"
@@ -71,6 +71,18 @@
           "review": "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/u2-rows-on-the-root/RECHECK-U2.md"
         }
       ]
+    },
+    {
+      "en": "A guard is keepable from a configuration exactly when it holds there and some step leads to a configuration it is keepable from. Every step keeps not being keepable exactly when no step from outside the guard leads to a configuration it is keepable from, as where every step keeps the guard's complement; in ChoicePoint a step gains keepability, and on the successor law the complement is not kept.",
+      "zh": "守卫自一构形可保持，当且仅当它在该处成立，且有一步通向它可保持的构形。每一步都保持“不可保持”，当且仅当没有自守卫之外出发的一步通向它可保持的构形；每一步都保持守卫之补时即如此。在 ChoicePoint 中一步之后变为可保持；在后继律上守卫之补不被保持。",
+      "declarations": [
+        "Becoming.Viability.keepable_step_iff",
+        "Becoming.Viability.not_keepable_invariant_iff",
+        "Becoming.Viability.not_keepable_step",
+        "Becoming.Viability.not_keepable_run",
+        "Becoming.Viability.ChoicePoint.keepable_gained",
+        "Becoming.Viability.Successor.not_keepable_kept_complement_not"
+      ]
     }
   ],
   "hypotheses": [
@@ -89,6 +101,11 @@
       "en": "That a kept collective is better than another, or that renewing is better than consuming.",
       "zh": "一个被保持的集体优于另一个，或更新优于消耗。",
       "kind": "non-implication"
+    },
+    {
+      "en": "That one way of selecting is placed against another: the step law is of some run keeping a guard. No law here relates the kernel to keepability, and the link to the renewal laws outside the package is not in this record.",
+      "zh": "它不把一种选择方式与另一种相互安放：一步律只说某次运行保持守卫。此处无律把核与可保持性相连，它与包外更新诸律的联系不在本条。",
+      "kind": "scope"
     }
   ],
   "counterexamples": [],
@@ -101,8 +118,8 @@
     "omission-not-refutation"
   ],
   "validation_scope": {
-    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261019T064004.300228Z): the 40 declarations of Becoming.JointKeeping, 23 of them theorems, have empty axiom reports; the checker verifies core purity. Built in scratch by an Opus prover, reviewed by a separate Opus reviewer against the brief, fixed; author review in study section 193; not independently reviewed by a person.",
-    "zh": "Lean 4.29.1 合并检查器实查（回执 20261019T064004.300228Z）：Becoming.JointKeeping 的 40 项声明（23 项定理）公理报告为空；检查器并核对核心纯净。由一个 Opus 证明者在草稿中构建，由另一个 Opus 审查者依简报审查并修正；作者审查见研究第 193 节；未经人的独立审查。"
+    "en": "Machine-checked by the consolidated Lean 4.29.1 checker (receipt 20261019T064004.300228Z): the 40 declarations of Becoming.JointKeeping, 23 of them theorems, have empty axiom reports; the checker verifies core purity. Built in scratch by an Opus prover, reviewed by a separate Opus reviewer against the brief, fixed; author review in study section 193; not independently reviewed by a person. Becoming.KeepableStep's 11 declarations, 8 of them theorems, have empty axiom reports by receipt 20261121T133506.986317Z; written by an AI worker, read by AI readers who took no part.",
+    "zh": "Lean 4.29.1 合并检查器实查（回执 20261019T064004.300228Z）：Becoming.JointKeeping 的 40 项声明（23 项定理）公理报告为空；检查器并核对核心纯净。由一个 Opus 证明者在草稿中构建，由另一个 Opus 审查者依简报审查并修正；作者审查见研究第 193 节；未经人的独立审查。Becoming.KeepableStep 的 11 项声明（8 项定理）公理报告亦空，回执 20261121T133506.986317Z；AI 撰写，经未参与的 AI 读者审读。"
   },
   "next_delta": {
     "en": "Joint keeping over a horizon with the choices given by a law of exchange; fault tolerance joined to Becoming.FaultEnvelopes; an independent review.",
@@ -324,6 +341,30 @@
       "role": "receipt",
       "sha256": "8f1d2bed589ebd558ab122d2b21ff3e27c19916c91a47d94b4b0829f76d45192",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeepableStep.lean",
+      "role": "proof",
+      "declarations": [
+        "Becoming.Viability.ChoicePoint.afterSplit",
+        "Becoming.Viability.ChoicePoint.keepable_gained",
+        "Becoming.Viability.ChoicePoint.keepable_gained_along_run",
+        "Becoming.Viability.Successor.atOne",
+        "Becoming.Viability.Successor.not_keepable_kept_complement_not",
+        "Becoming.Viability.Successor.nowhere_keepable",
+        "Becoming.Viability.Successor.process",
+        "Becoming.Viability.keepable_step_iff",
+        "Becoming.Viability.not_keepable_invariant_iff",
+        "Becoming.Viability.not_keepable_run",
+        "Becoming.Viability.not_keepable_step"
+      ],
+      "sha256": "6a82967972a32f84b5656777091176d791912788bee5ffc704b4f8a767e5fe0c"
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T133506.986317Z/verification.json",
+      "role": "receipt",
+      "declarations": [],
+      "sha256": "50d10e324f666ae1d2af11aaf3bf1ec048150581d39711a57563811df353d11c"
     }
   ],
   "proof_bindings": [
@@ -361,6 +402,13 @@
       "sha256_pointer": "/source_sha256/Becoming.Viability",
       "success_pointer": "/status",
       "success_value": "passed"
+    },
+    {
+      "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/KeepableStep.lean",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T133506.986317Z/verification.json",
+      "sha256_pointer": "/source_sha256/Becoming.KeepableStep",
+      "success_pointer": "/status",
+      "success_value": "passed"
     }
   ],
   "history": [
@@ -395,6 +443,10 @@
     {
       "en": "9 November 2026, board item AG (the review after the map, on Ren's words of that day, sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md): the tag set after Ren's quoted words in the correspondence dropped, his words verbatim and the AI's labels kept; the claim and its Lean unchanged.",
       "zh": "2026年11月9日，工作板条目 AG（地图之后的审读，据 Ren 当日之言，sources/15-codex-theory-conversations/2026-11-09-agents-the-map.md）：对应中 Ren 所引之言后所附的标注删去，其言原样保留，AI 的标注保留；主张与 Lean 皆不变。"
+    },
+    {
+      "en": "21 November 2026, board row FM (Ren's words of that day, sources/15-codex-theory-conversations/2026-11-21-a-full-map-with-its-centre.md): one law added, the step of keeping along some course with what a step does to not being keepable and its two built cases, from the new module Becoming.KeepableStep (a scratch module of that day by an AI worker under the session holding row DJ, read there by a reader who took no part; its tellings read again before the core run by another, eleven lesser places mended), bound to core run 20261121T133506.986317Z. One item added to what it does not show. The five earlier laws, the statement and their Lean are unchanged. The step law has the same form as the kernel's step; no theorem relates the two.",
+      "zh": "2026年11月21日，工作板条目 FM（Ren 当日之言，sources/15-codex-theory-conversations/2026-11-21-a-full-map-with-its-centre.md）：增一律，即沿某条进程保持的一步，及一步对“不可保持”所做的，并其两个构造之例，出自新模块 Becoming.KeepableStep（当日由持条目 DJ 的会话之下的 AI 在草稿中撰写，经未参与的读者阅读；核心运行之前其表述又经另一读者阅读，十一处小疵已改），绑定于核心运行 20261121T133506.986317Z。“未示”增一项。此前五律、陈述及其 Lean 皆不改。一步律与核之一步同形；无定理把二者相连。"
     }
   ],
   "text_versions": [

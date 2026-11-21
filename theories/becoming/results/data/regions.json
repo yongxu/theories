@@ -3678,6 +3678,11 @@
    "base": "frame",
    "note": "conditions kept together; ChoicePoint counterexample"
   },
+  "Becoming.KeepableStep": {
+   "region": "map",
+   "base": "frame",
+   "note": "one step of keeping along some course; whether a step can gain keepability"
+  },
   "Becoming.JointPhase": {
    "region": "root",
    "base": "general",

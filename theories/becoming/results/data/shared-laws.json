@@ -1,7 +1,7 @@
 {
  "about": "MV: the shared laws each law of a record rests on, by the Lean dependencies of its declarations, computed by tools/research/shared_laws.py from the measure (measure_grammar.py) and the checker cache. A measurement of Lean dependency only. Generated: edit nothing here; rerun the generator after a core landing or a change to a record's laws, COVERAGE.json, the measure, the dump or this generator.",
- "core_receipt": "20261116T014928.328589Z",
- "core_sources_sha256": "71f3c662fd64a2b000d1c886ebcea12215f0380d6a4e7e0e0171c3cba14dc50a",
+ "core_receipt": "20261121T133506.986317Z",
+ "core_sources_sha256": "53a531fc5f575197645cbaed7f7e2c6149f3d2af83ba2fceb4655f3373b6c819",
  "from_dump": false,
  "inputs_sha256": {
   "_process/research/2026-10-05-generative-foundation-review/root-foundation/development/ou3b-master-laws-on-the-grammar/measure_grammar.py": "438b65fe8bc281ab9796cfbff00af7db8441123a5aba8f3779f7c08586b443c7",
@@ -58,13 +58,13 @@
   ]
  },
  "counts": {
-  "laws": 4396,
+  "laws": 4397,
   "no_declarations": 9,
   "outside": 391,
   "grammar": 1057,
   "balance, represented": 636,
   "anchor, not reached": 137,
-  "no shared law": 2166,
+  "no shared law": 2167,
   "vocabulary_only": 105,
   "closure": 583,
   "balance": 895,
@@ -11646,6 +11646,20 @@
       "row_dependence": "no shared law"
      }
     ]
+   },
+   {
+    "law": 6,
+    "declarations": [
+     "Becoming.Viability.keepable_step_iff",
+     "Becoming.Viability.not_keepable_invariant_iff",
+     "Becoming.Viability.not_keepable_step",
+     "Becoming.Viability.not_keepable_run",
+     "Becoming.Viability.ChoicePoint.keepable_gained",
+     "Becoming.Viability.Successor.not_keepable_kept_complement_not"
+    ],
+    "shared_laws": [],
+    "grammar": false,
+    "dependence": "no shared law"
    }
   ],
   "configurations-alike-by-relation": [
@@ -55184,7 +55198,10 @@
    {
     "law": 8,
     "declarations": [
-     "Becoming.TurningInTime.unending_iff_first_marked"
+     "Becoming.TurningInTime.unending_iff_first_marked",
+     "Becoming.TurningInTime.unending_iff_first_marked_wide",
+     "Becoming.TurningInTime.unending_iff_marked_at",
+     "Becoming.TurningInTime.unending_from"
     ],
     "shared_laws": [],
     "grammar": true,
@@ -67516,7 +67533,7 @@
   ],
   "lean_check": {
    "toolchain": "leanprover/lean4:v4.29.1",
-   "modules_sha256": "ea7c41453fa07559834ef4824446020e279676c59c67b9745c347b0a1d55e1cb",
+   "modules_sha256": "6c4ee585c1549bb19e86358954ebd190a02e5ad9e8354b0f652ba53436521188",
    "check_sha256": "e5ef1c274e3e3f81aa13dbe78732d1f6883a207a5685f736102ee4a2d5b1fc34",
    "ran": true
   },

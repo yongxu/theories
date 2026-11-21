@@ -8,7 +8,7 @@
   "kind": "theorem",
   "status": "recorded-checked",
   "family": "F01",
-  "reviewed_at_utc": "2026-11-15T23:01:16+00:00",
+  "reviewed_at_utc": "2026-11-21T15:22:57+00:00",
   "statement": {
     "en": "On a way and a level cut by a need, under the regime's premises the line never ends exactly where the course as it was, the need met, is first marked and its level one step later is at or above the kept kind's point of no return. Unmarked and losing more than it is given, it ends where the net ends.",
     "zh": "一种延续的方式连同一个水位，水位不足所需即无后继。在体制的前提下，线不穷，当且仅当照旧的进程在所需一直满足之下第一次落在标记水位，而一步之后的水位不低于所保持之类的不可返回点。无标记而所失多于所得，则线终于网尽之处。"
@@ -77,11 +77,14 @@
       "zh": "无中不生有时，RegimeMargin 的步即此形式；给还在 y 以下不足 H、alone 轨道上每一方式取用不少于 H、起始低于 H + y 时，体制满足上述前提。"
     },
     {
-      "en": "With AloneOutside, decided marks and the course as it was coming below the need, the line never ends exactly where there is a step T of the course as it was, the need met and no level marked before it, the need met and the level marked at it, from whose next configuration the line never ends.",
+      "en": "With AloneOutside, decided marks and the course as it was coming below the need, the line never ends exactly where there is a step T of the course as it was, the need met and no level marked before it, the need met and the level marked at it, from whose next configuration the line never ends. The same holds where, in place of the course coming below the need, at some step the need is unmet or the level is marked.",
       "declarations": [
-        "Becoming.TurningInTime.unending_iff_first_marked"
+        "Becoming.TurningInTime.unending_iff_first_marked",
+        "Becoming.TurningInTime.unending_iff_first_marked_wide",
+        "Becoming.TurningInTime.unending_iff_marked_at",
+        "Becoming.TurningInTime.unending_from"
       ],
-      "zh": "有 AloneOutside、标记可判定且照旧进程会落到所需之下时，线不穷，当且仅当照旧进程有一步 T：此前所需皆满足且水位皆未标记，此步所需满足且水位被标记，而自其下一构形起线不穷。"
+      "zh": "有 AloneOutside、标记可判定且照旧进程会落到所需之下时，线不穷，当且仅当照旧进程有一步 T：此前所需皆满足且水位皆未标记，此步所需满足且水位被标记，而自其下一构形起线不穷。把“落到所需之下”换成“照旧进程某一步所需未满足或水位被标记”，同样成立。"
     },
     {
       "en": "From a way of a kind every step keeps and that uses H₂, with nothing given from nothing, giving short of H₂ below y₂ and meeting it from y₂ up to hi, the step under H₂ keeping the level within hi, a positive need at most H₂ + y₂ and the level at most hi, the line never ends exactly where the level is at or above H₂ + y₂.",
@@ -483,7 +486,7 @@
     "conditional-not-universal"
   ],
   "validation_scope": {
-    "en": "Pure core, axiom reports empty (scratch build of 16 November: 105 public declarations, 78 of them theorems, and 35 private lemmas); imported by Becoming.LineOnAStock and Becoming.WayOfUnits, in the Lean's second layer only through two theorems it imports. Compositions of landed theorems (Optimum's, RegimeMargin's, the root's, the joined two-level step, RuleCapture's lock) with one split at the first marked level; the witnesses computed. Written by AI agents and read by AI agents set to refute it, the laws of 16 November among them; no person's review of it is recorded yet."
+    "en": "Pure core, axiom reports empty (core run of 21 November: 108 public declarations, 81 of them theorems, and 35 private lemmas); imported by Becoming.LineOnAStock and Becoming.WayOfUnits, in the Lean's second layer only through two theorems it imports. Compositions of landed theorems (Optimum's, RegimeMargin's, the root's, the joined two-level step, RuleCapture's lock) with one split at the first marked level; the witnesses computed. Written by AI agents and read by AI agents set to refute it, the laws of 16 November among them; no person's review of it is recorded yet."
   },
   "next_delta": {
     "en": "Prove ClosedCapture's and PoolFromCourse's courses instances of the pair, so that their own-loop theorems are derived below from agrees_until_marked; move «类闭则本类常闭» and first_of_decided down, putting the module in the first layer; give the step T in closed form by Optimum.reread_deadline_iff; a test on a trained system, held."
@@ -952,9 +955,12 @@
         "Becoming.TurningInTime.Three.drawerUse",
         "Becoming.TurningInTime.Three.rise_count_ends",
         "Becoming.TurningInTime.Three.zeroShare",
-        "Becoming.TurningInTime.Three.share_read_goes_on"
+        "Becoming.TurningInTime.Three.share_read_goes_on",
+        "Becoming.TurningInTime.unending_from",
+        "Becoming.TurningInTime.unending_iff_marked_at",
+        "Becoming.TurningInTime.unending_iff_first_marked_wide"
       ],
-      "sha256": "e29dd04d555f0b243231408a6c30956dacc04a3d6f45aab1c99fbdde5c8c835f"
+      "sha256": "d411822eee8ad3c5c1539b0a776da13b40e80685aff5dadf4fc007908871edf1"
     },
     {
       "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261113T133009.897615Z/verification.json",
@@ -1025,12 +1031,18 @@
       "role": "receipt",
       "sha256": "b1b1d38130a11a9651761a7ae7569916c8dcbcb4d1bda8e5206aaeeaa8637f0f",
       "declarations": []
+    },
+    {
+      "path": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T133506.986317Z/verification.json",
+      "role": "receipt",
+      "declarations": [],
+      "sha256": "50d10e324f666ae1d2af11aaf3bf1ec048150581d39711a57563811df353d11c"
     }
   ],
   "proof_bindings": [
     {
       "source": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/Becoming/TurningInTime.lean",
-      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261116T014928.328589Z/verification.json",
+      "receipt": "experiments/integrated-correction/general-framework/generative-basis/lean/becoming/becoming-checks/20261121T133506.986317Z/verification.json",
       "sha256_pointer": "/source_sha256/Becoming.TurningInTime",
       "success_pointer": "/status",
       "success_value": "passed"
@@ -1051,6 +1063,9 @@
     },
     {
       "en": "16 November 2026, board row DJ, with the new record a-line-on-a-stock: kept_within, rises_from, rising_takes_all, rising_meets_level, ends_with_net_rising, locked_ends_rising and count_rises; windowAfterShare with window_share_alone_outside and windowAfter_every_is_share, locked_turns_in_time_share_iff, share_corrected_stays and share_corrected_on_course; Three's drawerUse, rise_count_ends, zeroShare and share_read_goes_on. ends_with_net's proof became a case of a private lemma it shares with ends_with_net_rising; its statement is unchanged. Laws and hypotheses appended for these and for stages 1 and 2; nothing earlier renumbered. A first telling of the lock's new law as an overdraw that comes about was refuted by readers: it concludes an ending. Before the core run, after a reading against the Lean: two laws of 15 November say where hi and the bound on the steps fall, the hypothesis on the window names the overdraw and the bound it takes, and the count of declarations says public."
+    },
+    {
+      "en": "21 November 2026, board row FM (Ren's words of that day, sources/15-codex-theory-conversations/2026-11-21-a-full-map-with-its-centre.md): unending_from, unending_iff_marked_at and unending_iff_first_marked_wide added above unending_iff_first_marked, from a scratch module of that day by an AI worker under the session holding row DJ. unending_iff_first_marked's statement is unchanged; its proof, 53 lines, is now a call of the wide law, 3 lines, the premise that the course as it was comes below the need giving the wide law's weaker one. The wide law's proof is the old proof generalised and split in two lemmas, within this module: it is not a case of a result proved elsewhere before. The module goes from 3,092 to 3,151 lines. One law's text and declarations extended; nothing renumbered. The tellings were read before the core run by an AI reader who took no part, eleven lesser places mended. Bound to core run 20261121T133506.986317Z."
     }
   ]
 }
