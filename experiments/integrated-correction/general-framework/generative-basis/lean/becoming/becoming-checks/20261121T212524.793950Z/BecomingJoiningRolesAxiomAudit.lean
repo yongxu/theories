@@ -1,0 +1,27 @@
+import Becoming.JoiningRoles
+#print axioms Becoming.Joining.roleFrame_leave_holds
+#print axioms Becoming.Joining.slots_sameBranchingTests
+#print axioms Becoming.Joining.fragment_not_sameBranchingTests_occurrence
+#print axioms Becoming.Joining.match_incident_of_em
+#print axioms Becoming.Joining.covers_of_em
+#print axioms Becoming.Joining.Occurrence.ofTuple
+#print axioms Becoming.Joining.Occurrence.ofTuple_at
+#print axioms Becoming.Joining.placeMap_step
+#print axioms Becoming.Joining.factor_unique_of_ext
+#print axioms Becoming.Joining.HasUnits.roleTotal
+#print axioms Becoming.Joining.HasUnits.collapse
+#print axioms Becoming.Joining.collapsed
+#print axioms Becoming.Joining.collapsed_exact
+#print axioms Becoming.Joining.collapsed_reduced
+#print axioms Becoming.Joining.retained_step_extends
+#print axioms Becoming.Joining.retained_pair_matches_of_em
+#print axioms Becoming.Fragment.traces_collapse
+#print axioms Becoming.Fragment.passageTrace
+#print axioms Becoming.Fragment.passageTrace_alone
+#print axioms Becoming.Fragment.once_roles_hide_failure
+#print axioms Becoming.Fragment.once_open_not_pairLifting
+#print axioms Becoming.Fragment.once_roles_hide_ends
+#print axioms Becoming.Fragment.once_self_apart
+#print axioms Becoming.Fragment.idle_self_retained
+#print axioms Becoming.Fragment.once_retained_apart
+#print axioms Becoming.Fragment.once_codes_apart

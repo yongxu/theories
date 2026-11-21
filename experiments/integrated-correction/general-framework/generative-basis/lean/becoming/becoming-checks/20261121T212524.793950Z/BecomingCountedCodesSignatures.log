@@ -1,0 +1,225 @@
+@Becoming.CountedCodes.unique_greatest_not_two : ∀ {F : Type u_1} {V : Type u_2} [inst : LT V],
+  (∀ (a : V), ¬a < a) →
+    (∀ (a b d : V), a < b → b < d → a < d) →
+      ∀ {c : F → V} {w w' : F},
+        Becoming.CountedCodes.UniqueGreatest c w → Becoming.CountedCodes.UniqueGreatest c w' → ¬w ≠ w'
+@Becoming.CountedCodes.unique_greatest_eq : ∀ {F : Type u_1} {V : Type u_2} [inst : LT V] [DecidableEq F],
+  (∀ (a : V), ¬a < a) →
+    (∀ (a b d : V), a < b → b < d → a < d) →
+      ∀ {c : F → V} {w w' : F},
+        Becoming.CountedCodes.UniqueGreatest c w → Becoming.CountedCodes.UniqueGreatest c w' → w = w'
+@Becoming.CountedCodes.unique_greatest_rename : ∀ {M : Type u_1} {F : Type u_2} {V : Type u_3} [inst : LT V]
+  {σ : M → F → F} {m : M},
+  (∀ (u : F), ∃ v, σ m v = u) →
+    ∀ {c : F → V} {v : F},
+      Becoming.CountedCodes.UniqueGreatest (Becoming.CountedCodes.rename σ m c) v →
+        Becoming.CountedCodes.UniqueGreatest c (σ m v)
+@Becoming.CountedCodes.fixed_no_unique_greatest : ∀ {M : Type u_1} {F : Type u_2} {V : Type u_3} [inst : LT V],
+  (∀ (a : V), ¬a < a) →
+    ∀ {σ : M → F → F} {m : M},
+      (∀ (y : F), σ m y ≠ y) →
+        ∀ {c : F → V}, (∀ (y : F), c (σ m y) = c y) → ∀ (w : F), ¬Becoming.CountedCodes.UniqueGreatest c w
+@Becoming.CountedCodes.keeps_both : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} {V : Type u_4} {π : I → I}
+  {σ : M → F → F} {T : (I → M → F → V) → I → M → F → V},
+  Becoming.Law.KeepsRelation T (Becoming.CountedCodes.Renamed π fun x y => y) →
+    Becoming.Law.KeepsRelation T (Becoming.CountedCodes.Renamed (fun i => i) σ) →
+      Becoming.Law.KeepsRelation T (Becoming.CountedCodes.Renamed π σ)
+@Becoming.CountedCodes.unique_greatest_exchanged : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} {V : Type u_4}
+  {π : I → I} {σ : M → F → F} [inst : LT V] {X : I → M → F → V},
+  Becoming.CountedCodes.Renamed π σ X X →
+    ∀ {m : M},
+      (∀ (u : F), ∃ v, σ m v = u) →
+        ∀ {i : I} {v : F},
+          Becoming.CountedCodes.UniqueGreatest (X i m) v → Becoming.CountedCodes.UniqueGreatest (X (π i) m) (σ m v)
+@Becoming.CountedCodes.unique_greatest_exchanged_run : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} {V : Type u_4}
+  {π : I → I} {σ : M → F → F} {T : (I → M → F → V) → I → M → F → V} [inst : LT V],
+  Becoming.Law.KeepsRelation T (Becoming.CountedCodes.Renamed π σ) →
+    ∀ {X : I → M → F → V},
+      Becoming.CountedCodes.Renamed π σ X X →
+        ∀ {m : M},
+          (∀ (u : F), ∃ v, σ m v = u) →
+            ∀ (n : Nat) {i : I} {v : F},
+              Becoming.CountedCodes.UniqueGreatest ((Becoming.Law.run T X).state n i m) v →
+                Becoming.CountedCodes.UniqueGreatest ((Becoming.Law.run T X).state n (π i) m) (σ m v)
+@Becoming.CountedCodes.never_shared : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} {V : Type u_4} {π : I → I}
+  {σ : M → F → F} {T : (I → M → F → V) → I → M → F → V} [inst : LT V],
+  (∀ (a : V), ¬a < a) →
+    (∀ (a b d : V), a < b → b < d → a < d) →
+      Becoming.Law.KeepsRelation T (Becoming.CountedCodes.Renamed π σ) →
+        ∀ {X : I → M → F → V},
+          Becoming.CountedCodes.Renamed π σ X X →
+            ∀ {m : M},
+              (∀ (u : F), ∃ v, σ m v = u) →
+                (∀ (y : F), σ m y ≠ y) →
+                  ∀ (n : Nat) (i : I) {v v' : F},
+                    Becoming.CountedCodes.UniqueGreatest ((Becoming.Law.run T X).state n i m) v →
+                      Becoming.CountedCodes.UniqueGreatest ((Becoming.Law.run T X).state n (π i) m) v' → v ≠ v'
+@Becoming.CountedCodes.never_shared_of_involution : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} {V : Type u_4}
+  {π : I → I} {σ : M → F → F} {T : (I → M → F → V) → I → M → F → V} [inst : LT V],
+  (∀ (a : V), ¬a < a) →
+    (∀ (a b d : V), a < b → b < d → a < d) →
+      Becoming.Law.KeepsRelation T (Becoming.CountedCodes.Renamed π σ) →
+        ∀ {X : I → M → F → V},
+          Becoming.CountedCodes.Renamed π σ X X →
+            (∀ (i : I), π (π i) = i) →
+              ∀ {m : M},
+                (∀ (y : F), σ m y ≠ y) →
+                  ∀ (n : Nat) (i : I) {v : F},
+                    Becoming.CountedCodes.UniqueGreatest ((Becoming.Law.run T X).state n i m) v →
+                      Becoming.CountedCodes.UniqueGreatest ((Becoming.Law.run T X).state n (π i) m) v → False
+@Becoming.CountedCodes.shared_no_unique_greatest : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} {V : Type u_4}
+  {π : I → I} {σ : M → F → F} {T : (I → M → F → V) → I → M → F → V} [inst : LT V],
+  (∀ (a : V), ¬a < a) →
+    Becoming.Law.KeepsRelation T (Becoming.CountedCodes.Renamed π σ) →
+      ∀ {X : I → M → F → V},
+        Becoming.CountedCodes.Renamed π σ X X →
+          ∀ {m : M},
+            (∀ (y : F), σ m y ≠ y) →
+              ∀ (n : Nat) (i : I),
+                (∀ (w : F), (Becoming.Law.run T X).state n i m w = (Becoming.Law.run T X).state n (π i) m w) →
+                  ∀ (w : F), ¬Becoming.CountedCodes.UniqueGreatest ((Becoming.Law.run T X).state n i m) w
+@Becoming.CountedCodes.read_relabels : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} {V : Type u_4} {π : I → I}
+  {σ : M → F → F} [inst : LT V] [DecidableEq F],
+  (∀ (a : V), ¬a < a) →
+    (∀ (a b d : V), a < b → b < d → a < d) →
+      ∀ {X : I → M → F → V},
+        Becoming.CountedCodes.Renamed π σ X X →
+          (∀ (i : I), π (π i) = i) →
+            (∀ (m : M) (u : F), ∃ v, σ m v = u) →
+              ∀ {C : I → M → F},
+                (∀ (i : I) (m : M), Becoming.CountedCodes.UniqueGreatest (X i m) (C i m)) →
+                  Becoming.SharedCodes.Relabels π σ C C
+@Becoming.CountedCodes.hear_keeps : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} {V : Type u_4} {π p : I → I}
+  {σ : M → F → F} {rule : M → (F → V) → (F → V) → F → V},
+  (∀ (i : I), p (π i) = π (p i)) →
+    Becoming.CountedCodes.ReadsCountByCount rule →
+      Becoming.CountedCodes.CommutesWithRenaming σ rule →
+        Becoming.Law.KeepsRelation (Becoming.CountedCodes.hear p rule) (Becoming.CountedCodes.Renamed π σ)
+@Becoming.CountedCodes.tied_hears_tied : ∀ {M : Type u_1} {F : Type u_2} {V : Type u_3} {σ : M → F → F}
+  {rule : M → (F → V) → (F → V) → F → V},
+  Becoming.CountedCodes.ReadsCountByCount rule →
+    Becoming.CountedCodes.CommutesWithRenaming σ rule →
+      ∀ {m : M} {c d : F → V},
+        (∀ (y : F), c (σ m y) = c y) → (∀ (y : F), d (σ m y) = d y) → ∀ (w : F), rule m c d (σ m w) = rule m c d w
+@Becoming.CountedCodes.addHeard_keeps : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} {π p : I → I} {σ : M → F → F}
+  {say : M → (F → Nat) → F → Nat},
+  (∀ (i : I), p (π i) = π (p i)) →
+    (∀ (m : M) (d d' : F → Nat), (∀ (w : F), d w = d' w) → ∀ (w : F), say m d w = say m d' w) →
+      (∀ (m : M) (d : F → Nat) (w : F), say m (Becoming.CountedCodes.rename σ m d) w = say m d (σ m w)) →
+        Becoming.Law.KeepsRelation (Becoming.CountedCodes.hear p (Becoming.CountedCodes.addHeard say))
+          (Becoming.CountedCodes.Renamed π σ)
+@Becoming.CountedCodes.addSpeaker_keeps : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} {π p : I → I} {σ : M → F → F},
+  (∀ (i : I), p (π i) = π (p i)) →
+    Becoming.Law.KeepsRelation (Becoming.CountedCodes.hear p Becoming.CountedCodes.addSpeaker)
+      (Becoming.CountedCodes.Renamed π σ)
+@Becoming.CountedCodes.addSpeaker_shares : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} {p : I → I},
+  (∀ (i : I), p (p i) = i) →
+    ∀ (X : I → M → F → Nat) (i : I) (m : M) (w : F),
+      Becoming.CountedCodes.hear p Becoming.CountedCodes.addSpeaker X i m w =
+        Becoming.CountedCodes.hear p Becoming.CountedCodes.addSpeaker X (p i) m w
+@Becoming.CountedCodes.addSpeaker_shares_run : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} {p : I → I},
+  (∀ (i : I), p (p i) = i) →
+    ∀ (X : I → M → F → Nat) (n : Nat) (i : I) (m : M) (w : F),
+      (Becoming.Law.run (Becoming.CountedCodes.hear p Becoming.CountedCodes.addSpeaker) X).state (n + 1) i m w =
+        (Becoming.Law.run (Becoming.CountedCodes.hear p Becoming.CountedCodes.addSpeaker) X).state (n + 1) (p i) m w
+@Becoming.CountedCodes.addSpeaker_tied : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} {π : I → I} {σ : M → F → F},
+  (∀ (i : I), π (π i) = i) →
+    ∀ {X : I → M → F → Nat},
+      Becoming.CountedCodes.Renamed π σ X X →
+        ∀ {m : M},
+          (∀ (y : F), σ m y ≠ y) →
+            ∀ (n : Nat) (i : I),
+              (∀ (w : F),
+                  (Becoming.Law.run (Becoming.CountedCodes.hear π Becoming.CountedCodes.addSpeaker) X).state (n + 1) i m
+                      w =
+                    (Becoming.Law.run (Becoming.CountedCodes.hear π Becoming.CountedCodes.addSpeaker) X).state (n + 1)
+                      (π i) m w) ∧
+                ∀ (w : F),
+                  ¬Becoming.CountedCodes.UniqueGreatest
+                      ((Becoming.Law.run (Becoming.CountedCodes.hear π Becoming.CountedCodes.addSpeaker) X).state
+                        (n + 1) i m)
+                      w
+@Becoming.CountedCodes.gatedHear_keeps : ∀ {I : Type u_1} {M : Type u_2} {F : Type u_3} {π p : I → I} {σ : M → F → F}
+  {gate : (M → F → Nat) → Nat} {say : M → (F → Nat) → F → Nat},
+  (∀ (i : I), p (π i) = π (p i)) →
+    (∀ (m : M) (d d' : F → Nat), (∀ (w : F), d w = d' w) → ∀ (w : F), say m d w = say m d' w) →
+      (∀ (m : M) (d : F → Nat) (w : F), say m (Becoming.CountedCodes.rename σ m d) w = say m d (σ m w)) →
+        (∀ (c d : M → F → Nat), (∀ (m : M) (w : F), d m w = c m (σ m w)) → gate d = gate c) →
+          Becoming.Law.KeepsRelation (Becoming.CountedCodes.gatedHear p gate say) (Becoming.CountedCodes.Renamed π σ)
+@Becoming.CountedCodes.powerProduct_map : ∀ {α β : Type} (σ : α → β) (a n : β → Nat) (hs : List α),
+  Becoming.FreeEnergyCounting.powerProduct a n (List.map σ hs) =
+    Becoming.FreeEnergyCounting.powerProduct (fun h => a (σ h)) (fun h => n (σ h)) hs
+@Becoming.CountedCodes.total_perm : ∀ {α : Type} (f : α → Nat) {l l' : List α},
+  l.Perm l' → Becoming.total l f = Becoming.total l' f
+@Becoming.CountedCodes.powerProduct_perm : ∀ {α : Type} (a n : α → Nat) {l l' : List α},
+  l.Perm l' → Becoming.FreeEnergyCounting.powerProduct a n l = Becoming.FreeEnergyCounting.powerProduct a n l'
+@Becoming.CountedCodes.bound_invariant : ∀ {α : Type} (σ : α → α) (n a : α → Nat) (hs : List α),
+  (List.map σ hs).Perm hs →
+    (Becoming.total hs n ^ Becoming.total hs n * Becoming.FreeEnergyCounting.powerProduct a n hs =
+        Becoming.total hs a ^ Becoming.total hs n * Becoming.FreeEnergyCounting.powerProduct n n hs ↔
+      ((Becoming.total hs fun h => n (σ h)) ^ Becoming.total hs fun h => n (σ h)) *
+          Becoming.FreeEnergyCounting.powerProduct (fun h => a (σ h)) (fun h => n (σ h)) hs =
+        ((Becoming.total hs fun h => a (σ h)) ^ Becoming.total hs fun h => n (σ h)) *
+          Becoming.FreeEnergyCounting.powerProduct (fun h => n (σ h)) (fun h => n (σ h)) hs)
+@Becoming.CountedCodes.minimizer_no_unique_greatest : ∀ {α : Type} {σ : α → α},
+  (∀ (y : α), σ y ≠ y) →
+    ∀ {n a : α → Nat} {hs : List α},
+      (∀ (h : α), h ∈ hs) →
+        (∀ (h : α), a (σ h) = a h) →
+          0 < Becoming.total hs a →
+            Becoming.total hs n ^ Becoming.total hs n * Becoming.FreeEnergyCounting.powerProduct a n hs =
+                Becoming.total hs a ^ Becoming.total hs n * Becoming.FreeEnergyCounting.powerProduct n n hs →
+              ∀ (w : α), ¬Becoming.CountedCodes.UniqueGreatest n w
+@Becoming.CountedCodes.shared_minimizer_no_unique_greatest : ∀ {α : Type} {I : Type u_1} {M : Type u_2} {π : I → I}
+  {σ : M → α → α} {T : (I → M → α → Nat) → I → M → α → Nat},
+  Becoming.Law.KeepsRelation T (Becoming.CountedCodes.Renamed π σ) →
+    ∀ {X : I → M → α → Nat},
+      Becoming.CountedCodes.Renamed π σ X X →
+        ∀ {m : M},
+          (∀ (y : α), σ m y ≠ y) →
+            ∀ (n : Nat) (i : I),
+              (∀ (w : α), (Becoming.Law.run T X).state n i m w = (Becoming.Law.run T X).state n (π i) m w) →
+                ∀ {b : α → Nat} {hs : List α},
+                  (∀ (h : α), h ∈ hs) →
+                    0 < Becoming.total hs ((Becoming.Law.run T X).state n i m) →
+                      Becoming.total hs b ^ Becoming.total hs b *
+                            Becoming.FreeEnergyCounting.powerProduct ((Becoming.Law.run T X).state n i m) b hs =
+                          Becoming.total hs ((Becoming.Law.run T X).state n i m) ^ Becoming.total hs b *
+                            Becoming.FreeEnergyCounting.powerProduct b b hs →
+                        ∀ (w : α), ¬Becoming.CountedCodes.UniqueGreatest b w
+Becoming.CountedCodes.Witness.opposite_symmetric : Becoming.CountedCodes.Renamed (fun i => !i) (fun x y => !y)
+  Becoming.CountedCodes.Witness.opposite Becoming.CountedCodes.Witness.opposite
+Becoming.CountedCodes.Witness.added_tie : Becoming.CountedCodes.UniqueGreatest
+    (Becoming.CountedCodes.Witness.opposite false ()) false ∧
+  Becoming.CountedCodes.UniqueGreatest (Becoming.CountedCodes.Witness.opposite true ()) true ∧
+    (∀ (i w : Bool),
+        (Becoming.Law.run (Becoming.CountedCodes.hear (fun i => !i) Becoming.CountedCodes.addSpeaker)
+                Becoming.CountedCodes.Witness.opposite).state
+            1 i () w =
+          3) ∧
+      ∀ (i w : Bool),
+        ¬Becoming.CountedCodes.UniqueGreatest
+            ((Becoming.Law.run (Becoming.CountedCodes.hear (fun i => !i) Becoming.CountedCodes.addSpeaker)
+                  Becoming.CountedCodes.Witness.opposite).state
+              1 i ())
+            w
+Becoming.CountedCodes.Witness.zero_symmetric : Becoming.CountedCodes.Renamed (fun i => !i) (fun x y => !y)
+  Becoming.CountedCodes.Witness.zero Becoming.CountedCodes.Witness.zero
+Becoming.CountedCodes.Witness.sayFirst_shared : ∀ (i : Bool),
+  Becoming.CountedCodes.UniqueGreatest
+    ((Becoming.Law.run
+          (Becoming.CountedCodes.hear (fun i => !i)
+            (Becoming.CountedCodes.addHeard Becoming.CountedCodes.Witness.sayFirst))
+          Becoming.CountedCodes.Witness.zero).state
+      1 i ())
+    false
+Becoming.CountedCodes.Witness.sayFirst_not_alike : ¬Becoming.CountedCodes.CommutesWithRenaming (fun x y => !y)
+    (Becoming.CountedCodes.addHeard Becoming.CountedCodes.Witness.sayFirst)
+Becoming.CountedCodes.Witness.lead_not_symmetric : ¬Becoming.CountedCodes.Renamed (fun i => !i) (fun x y => !y)
+    Becoming.CountedCodes.Witness.lead Becoming.CountedCodes.Witness.lead
+Becoming.CountedCodes.Witness.asymmetric_shared : ∀ (i : Bool),
+  Becoming.CountedCodes.UniqueGreatest
+    ((Becoming.Law.run (Becoming.CountedCodes.hear (fun i => !i) Becoming.CountedCodes.addSpeaker)
+          Becoming.CountedCodes.Witness.lead).state
+      1 i ())
+    false

@@ -1,0 +1,104 @@
+@Becoming.LastingRuns.run_history_from : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop}
+  (r : Becoming.Run (Becoming.Viability.disturbed f adm)) {s : S},
+  r.state 0 = s → ∀ (k : Nat), r.state k = Becoming.Viability.history f s r.act k
+@Becoming.LastingRuns.lasts_iff_runs : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop}
+  {guard : S → Prop} {a₀ : A},
+  adm a₀ →
+    ∀ {n : Nat} {s : S},
+      Becoming.Lasting.Lasts f adm guard n s ↔
+        ∀ (r : Becoming.Run (Becoming.Viability.disturbed f adm)),
+          r.state 0 = s → ∀ (k : Nat), k ≤ n → guard (r.state k)
+@Becoming.LastingRuns.guarded_upto_iff : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop}
+  {guard : S → Prop} [inst : DecidablePred guard] (r : Becoming.Run (Becoming.Viability.disturbed f adm)),
+  guard (r.state 0) →
+    ∀ {n : Nat},
+      Becoming.Viability.guardedHistory f guard (r.state 0) r.act n = some (r.state n) ↔
+        ∀ (k : Nat), k ≤ n → guard (r.state k)
+@Becoming.LastingRuns.guarded_none_iff : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop}
+  {guard : S → Prop} [inst : DecidablePred guard] (r : Becoming.Run (Becoming.Viability.disturbed f adm)),
+  guard (r.state 0) →
+    ∀ {n : Nat},
+      Becoming.Viability.guardedHistory f guard (r.state 0) r.act n = none ↔ ¬∀ (k : Nat), k ≤ n → guard (r.state k)
+@Becoming.LastingRuns.courses_iff_of_exact : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop}
+  {guard : S → Prop} {C : Nat → S → Prop},
+  Becoming.Lasting.Ladder f adm guard C →
+    Becoming.Lasting.Necessary f adm guard C →
+      ∀ (n : Nat) (s : S),
+        (∀ (plan : List A) (t : S),
+            Generative.Trace (Becoming.Viability.disturbed f adm) s plan t → plan.length ≤ n → guard t) ↔
+          C n s
+@Becoming.LastingRuns.drained_of_courses : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop}
+  {guard : S → Prop} {L : Nat → S → Prop},
+  Becoming.Lasting.Drains f adm guard L →
+    ∀ {a₀ : A},
+      adm a₀ →
+        ∀ {n : Nat} {s : S},
+          (∀ (plan : List A) (t : S),
+              Generative.Trace (Becoming.Viability.disturbed f adm) s plan t → plan.length ≤ n → guard t) →
+            L n s
+Becoming.LastingRuns.collapse_leaves : (Becoming.Lasting.Drains Becoming.Lasting.Collapse.step (fun x => True)
+    (fun b => b = true) fun x b => b = true) ∧
+  ¬∀ (plan : List Unit) (t : Bool),
+      Generative.Trace (Becoming.Viability.disturbed Becoming.Lasting.Collapse.step fun x => True) true plan t →
+        plan.length ≤ 1 → t = true
+@Becoming.LastingRuns.stays_below_iff : ∀ {V : Type u_1} {rel : V → V → Prop} {g : V → V},
+  (∀ (a : V), rel a a) →
+    (∀ (a b c : V), rel a b → rel b c → rel a c) →
+      (∀ (a b : V), rel a b → rel (g a) (g b)) →
+        ∀ {v θ : V} {n : Nat},
+          (∀ (r : Becoming.Run (Becoming.Courses.anyChange V)),
+              rel (r.state 0) v →
+                (∀ (k : Nat), rel (r.state (k + 1)) (g (r.state k))) → ∀ (k : Nat), k ≤ n → rel (r.state k) θ) ↔
+            ∀ (r : Becoming.Run (Becoming.Law.process g)), r.state 0 = v → ∀ (k : Nat), k ≤ n → rel (r.state k) θ
+@Becoming.LastingRuns.reaches_iff_runs : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop}
+  {target : S → Prop} [DecidablePred target] {a₀ : A},
+  adm a₀ →
+    ∀ {n : Nat} {s : S},
+      Becoming.Lasting.Reaches f adm target n s ↔
+        ∀ (r : Becoming.Run (Becoming.Viability.disturbed f adm)), r.state 0 = s → ∃ k, k ≤ n ∧ target (r.state k)
+@Becoming.LastingRuns.runs_iff_of_exact : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop}
+  {target : S → Prop} [DecidablePred target] {a₀ : A},
+  adm a₀ →
+    ∀ {C : Nat → S → Prop},
+      Becoming.Lasting.Funnel f adm target C →
+        Becoming.Lasting.Basin f adm target C →
+          ∀ (n : Nat) (s : S),
+            (∀ (r : Becoming.Run (Becoming.Viability.disturbed f adm)),
+                r.state 0 = s → ∃ k, k ≤ n ∧ target (r.state k)) ↔
+              C n s
+@Becoming.LastingRuns.reaches_trans_runs : ∀ {S : Type u_1} {A : Type u_2} {f : S → A → S} {adm : A → Prop}
+  {target B : S → Prop} {k m : Nat},
+  (∀ (x : S), B x → Becoming.Lasting.Reaches f adm target k x) →
+    ∀ (r : Becoming.Run (Becoming.Viability.disturbed f adm)),
+      Becoming.Lasting.Reaches f adm B m (r.state 0) → ∃ j, j ≤ k + m ∧ target (r.state j)
+Becoming.LastingRuns.search_runs_need_decision : (∀ (g : Nat → Bool),
+    (∀ (r : Becoming.Run (Becoming.Viability.disturbed Becoming.Lasting.Search.step fun x => True)),
+        r.state 0 = none → ∃ k, k ≤ 1 ∧ Becoming.Lasting.Search.found g (r.state k)) →
+      Becoming.Lasting.Reaches Becoming.Lasting.Search.step (fun x => True) (Becoming.Lasting.Search.found g) 1 none) →
+  ∀ (g : Nat → Bool), (∃ b, g b = true) ∨ ∀ (a : Nat), g a = false
+@Becoming.LastingRuns.determined_lasts_iff_courses : ∀ {S : Type u_1} {next : S → S} {guard : S → Prop} {n : Nat}
+  {s : S},
+  Becoming.Lasting.Lasts (Becoming.Lasting.determined next) (fun x => True) guard n s ↔
+    ∀ (plan : List Unit) (t : S), Generative.Trace (Becoming.Law.process next) s plan t → plan.length ≤ n → guard t
+@Becoming.LastingRuns.reaches_iff_not_lasts_courses : ∀ {S : Type u_1} {next : S → S} {target : S → Prop}
+  [DecidablePred target] {n : Nat} {s : S},
+  (∃ plan t, Generative.Trace (Becoming.Law.process next) s plan t ∧ plan.length ≤ n ∧ target t) ↔
+    ¬∀ (plan : List Unit) (t : S), Generative.Trace (Becoming.Law.process next) s plan t → plan.length ≤ n → ¬target t
+@Becoming.LastingRuns.dual_needs_decision_courses : ∀ {S : Type u_1} {next : S → S} {s : S},
+  (∀ (target : S → Prop),
+      (¬∀ (plan : List Unit) (t : S),
+            Generative.Trace (Becoming.Law.process next) s plan t → plan.length ≤ 0 → ¬target t) →
+        ∃ plan t, Generative.Trace (Becoming.Law.process next) s plan t ∧ plan.length ≤ 0 ∧ target t) →
+    ∀ (p : Prop), ¬¬p → p
+@Becoming.LastingRuns.numeric_needs_decision_courses : ∀ {S : Type u_1},
+  (∀ (next : S → S) (target : S → Prop) (n : Nat) (s : S),
+      (∃ plan t, Generative.Trace (Becoming.Law.process next) s plan t ∧ plan.length ≤ n ∧ target t) →
+        ∃ V, V s ≤ n ∧ ∀ (x : S), V x ≤ n → target x ∨ V (next x) < V x) →
+    ∀ (x y : S), x = y ∨ ¬x = y
+@Becoming.LastingRuns.reaches_excludes_courses : ∀ {S : Type u_1} {next : S → S} {target seed : S → Prop},
+  (∀ (s : S), seed s → ∃ t, Becoming.Reach (Becoming.Law.process next) s t ∧ target t) →
+    ¬∃ K, (∃ s, seed s ∧ K s) ∧ (∀ (x : S), K x → ¬target x) ∧ ∀ (x : S), K x → K (next x)
+Becoming.LastingRuns.needs_admissible_runs : (∀
+    (r : Becoming.Run (Becoming.Viability.disturbed (fun s x => s) fun x => False)) (n : Nat),
+    (fun x => False) (r.state n)) ∧
+  ¬Becoming.Viability.Kernel (Becoming.Viability.disturbed (fun s x => s) fun x => False) (fun x => False) ()

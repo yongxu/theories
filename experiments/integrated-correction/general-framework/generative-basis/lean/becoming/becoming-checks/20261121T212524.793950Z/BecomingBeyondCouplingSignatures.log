@@ -1,0 +1,198 @@
+@Becoming.Web.ReadOffContinuations.couplings : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop}
+  {group : F → Prop} {select : (Nat → C → Nat) → Prop},
+  W.ReadOffContinuations group select → W.ReadOffCouplings obs group select
+@Becoming.Web.readOffCouplings_thresholdOnly_iff : ∀ {F C : Type} {W : Becoming.Web F C} {group : F → Prop}
+  {select : (Nat → C → Nat) → Prop},
+  W.ReadOffCouplings Becoming.thresholdOnly group select ↔ W.ReadOffContinuations group select
+@Becoming.Web.SelectsThroughAll.readOffCouplings : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop}
+  {group : F → Prop} {select : (Nat → C → Nat) → Prop} {t : Nat},
+  W.SelectsThroughAll obs group t select → W.ReadOffCouplings obs group select
+@Becoming.Web.SelectsThrough.readOffCouplings : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop}
+  {select : (Nat → C → Nat) → Prop} {g : F} {t : Nat},
+  W.SelectsThrough obs g t select → W.ReadOffCouplings obs (fun x => x = g) select
+@Becoming.Web.ReadOffCouplings.mono : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {group : F → Prop}
+  {select : (Nat → C → Nat) → Prop} {group' : F → Prop},
+  (∀ (g : F), group g → group' g) → W.ReadOffCouplings obs group select → W.ReadOffCouplings obs group' select
+@Becoming.Web.readOffCouplings_alike_of_steps : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop}
+  {group : F → Prop} {select : (Nat → C → Nat) → Prop} {l l' : Nat → C → Nat},
+  (∀ (t : Nat) (select : (Nat → C → Nat) → Prop), W.SelectsThroughAll obs group t select → (select l ↔ select l')) →
+    W.ReadOffCouplings obs group select → (select l ↔ select l')
+@Becoming.Web.readOffCouplings_alike_iff : ∀ {F C : Type} {W : Becoming.Web F C} {obs : F → C → Prop} {group : F → Prop}
+  {l l' : Nat → C → Nat},
+  (∀ (select : (Nat → C → Nat) → Prop), W.ReadOffCouplings obs group select → (select l ↔ select l')) ↔
+    ∀ (g : F), group g → ∀ (t : Nat), W.AlikeThrough obs g l l' t
+@Becoming.Web.readOffContinuations_alike_iff : ∀ {F C : Type} {W : Becoming.Web F C} {group : F → Prop}
+  {l l' : Nat → C → Nat},
+  (∀ (select : (Nat → C → Nat) → Prop), W.ReadOffContinuations group select → (select l ↔ select l')) ↔
+    ∀ (g : F), group g → ∀ (t : Nat), W.Admits (l t) t g ↔ W.Admits (l' t) t g
+@Becoming.Web.continuationClass_reads : ∀ {F C : Type} {W : Becoming.Web F C} {group : F → Prop} (l : Nat → C → Nat),
+  W.ReadOffContinuations group (W.ContinuationClass group l)
+@Becoming.Web.separates_continuations : ∀ {F C : Type} {W : Becoming.Web F C} {group : F → Prop} {l l' : Nat → C → Nat}
+  {g : F},
+  group g →
+    ∀ {t : Nat},
+      ¬(W.Admits (l t) t g ↔ W.Admits (l' t) t g) →
+        ∃ select, W.ReadOffContinuations group select ∧ select l ∧ ¬select l'
+@Becoming.not_tracks_of_alike : ∀ {S X : Type} {level : S → X} {select : X → Prop} {s s' : S},
+  (select (level s) ↔ select (level s')) → ∀ {P : S → Prop}, P s → ¬P s' → ¬∀ (σ : S), select (level σ) ↔ P σ
+@Becoming.act_courses_unselected_throughout : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {part : F → Bool} {group : F → Prop} {present : Nat → List F} {start : C → Nat}
+  {act act' : Becoming.ExchangeLaw F C},
+  law.Nonanticipating →
+    act.Nonanticipating →
+      act'.Nonanticipating →
+        law.Through W obs part →
+          (act.Through W obs fun h => !part h) →
+            (law.withAct part act).Feasible present start →
+              (law.withAct part act').Feasible present start →
+                (∀ (t : Nat) (h : F) (l : Nat → C → Nat) (c : C),
+                    part h = true →
+                      (∃ g,
+                          Becoming.WithinClosureOf
+                              (((law.withAct part act).course present start).CoupledFromEither W
+                                ((law.withAct part act').course present start) obs)
+                              group g ∧
+                            W.CoupledInto obs g c) →
+                        act.take t h l c = act'.take t h l c ∧ act.give t h l c = act'.give t h l c) →
+                  ∀ {pool : F → Prop},
+                    (∀ (g : F),
+                        pool g →
+                          Becoming.WithinClosureOf
+                            (((law.withAct part act).course present start).CoupledFromEither W
+                              ((law.withAct part act').course present start) obs)
+                            group g) →
+                      ∀ {select : (Nat → C → Nat) → Prop},
+                        W.ReadOffCouplings obs pool select →
+                          (select ((law.withAct part act).levels present start) ↔
+                            select ((law.withAct part act').levels present start))
+@Becoming.significance_courses_unselected : ∀ {F C : Type} {law : Becoming.ExchangeLaw F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {part : F → Bool} {group : F → Prop} {present : Nat → List F} {start : C → Nat} {Pos : Type}
+  {act : (Pos → Nat → F → Prop) → Becoming.ExchangeLaw F C} {sig sig' : Pos → Nat → F → Prop},
+  law.Nonanticipating →
+    (∀ (σ : Pos → Nat → F → Prop), (act σ).Nonanticipating) →
+      law.Through W obs part →
+        ((act sig).Through W obs fun h => !part h) →
+          (∀ (σ : Pos → Nat → F → Prop), (law.withAct part (act σ)).Feasible present start) →
+            Becoming.ActReadsWithin act part W obs
+                (Becoming.WithinClosureOf
+                  (((law.withAct part (act sig)).course present start).CoupledFromEither W
+                    ((law.withAct part (act sig')).course present start) obs)
+                  group) →
+              (∀ (p : Pos) (t : Nat) (g : F),
+                  Becoming.WithinClosureOf
+                      (((law.withAct part (act sig)).course present start).CoupledFromEither W
+                        ((law.withAct part (act sig')).course present start) obs)
+                      group g →
+                    (sig p t g ↔ sig' p t g)) →
+                ∀ {pool : F → Prop},
+                  (∀ (g : F),
+                      pool g →
+                        Becoming.WithinClosureOf
+                          (((law.withAct part (act sig)).course present start).CoupledFromEither W
+                            ((law.withAct part (act sig')).course present start) obs)
+                          group g) →
+                    ∀ {select : (Nat → C → Nat) → Prop},
+                      W.ReadOffCouplings obs pool select →
+                        (select ((law.withAct part (act sig)).levels present start) ↔
+                          select ((law.withAct part (act sig')).levels present start))
+@Becoming.Flow.returning_pool_covers : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C} (members : List F),
+  (∀ (g : F), g ∈ members) →
+    ∀ (decided : (a b : F) → Decidable (L.WithinReach W a b)) (obs : F → C → Prop) (g : F),
+      Becoming.WithinClosureOf (L.CoupledFrom W obs) (L.ReachReturns W) g
+@Becoming.Flow.returning_pool_covers_either : ∀ {F C : Type} {L L' : Becoming.Flow F C} {W : Becoming.Web F C}
+  (members : List F),
+  (∀ (g : F), g ∈ members) →
+    ∀ (decided : (a b : F) → Decidable (L.WithinReach W a b)) (obs : F → C → Prop) (g : F),
+      Becoming.WithinClosureOf (L.CoupledFromEither W L' obs) (L.ReachReturns W) g
+@Becoming.ownClosure_not_unrestricted_of_acyclic : ∀ {F Pos : Type} {rel : F → F → Prop} {center : Pos → F},
+  Becoming.«无环» rel →
+    ∀ {p q : Pos}, center p ≠ center q → ¬Becoming.Unrestricted (Becoming.selfAscribed (Becoming.ownClosure rel) center)
+@Becoming.Flow.ownClosure_rival_of_within : ∀ {F C Pos : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {rel : F → F → Prop} {center : Pos → F} {p : Pos},
+  (∀ (g : F), Becoming.WithinClosure rel (center p) g → L.WithinCoupling W obs (center p) g) →
+    ∀ {h : F},
+      ¬L.WithinCoupling W obs (center p) h →
+        (∀ (t : Nat), ¬Becoming.selfAscribed (Becoming.ownClosure rel) center p t h) ∧
+          ¬Becoming.Unrestricted (Becoming.selfAscribed (Becoming.ownClosure rel) center) ∧
+            Becoming.Rival (Becoming.selfAscribed (Becoming.ownClosure rel) center)
+@Becoming.Flow.couplingIn_ownClosure_rival : ∀ {F C Pos : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {rel : F → F → Prop},
+  (∀ (g h : F), rel g h → L.CoupledFrom W obs g h) →
+    ∀ {center : Pos → F} {p : Pos} {h : F},
+      ¬L.WithinCoupling W obs (center p) h →
+        (∀ (t : Nat), ¬Becoming.selfAscribed (Becoming.ownClosure rel) center p t h) ∧
+          ¬Becoming.Unrestricted (Becoming.selfAscribed (Becoming.ownClosure rel) center) ∧
+            Becoming.Rival (Becoming.selfAscribed (Becoming.ownClosure rel) center)
+@Becoming.Flow.reachReturns_ownClosure_rival : ∀ {F C Pos : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C}
+  {obs : F → C → Prop} {center : Pos → F} {p : Pos},
+  L.ReachReturns W (center p) →
+    ∀ {h : F},
+      ¬L.WithinCoupling W obs (center p) h →
+        (∀ (t : Nat), ¬Becoming.selfAscribed (Becoming.ownClosure (L.Affects W)) center p t h) ∧
+          ¬Becoming.Unrestricted (Becoming.selfAscribed (Becoming.ownClosure (L.Affects W)) center) ∧
+            Becoming.Rival (Becoming.selfAscribed (Becoming.ownClosure (L.Affects W)) center)
+@Becoming.routeB_universal_closed : ∀ {F C Pos : Type},
+  (∀ (rel : F → F → Prop) (center : Pos → F),
+      Becoming.Unrestricted (Becoming.selfAscribed (Becoming.ownClosure rel) center) ↔
+        ∀ (p : Pos) (g : F), Becoming.WithinClosure rel (center p) g) ∧
+    (∀ (rel : F → F → Prop) (center : Pos → F),
+        Becoming.«无环» rel →
+          ∀ (p q : Pos),
+            center p ≠ center q → ¬Becoming.Unrestricted (Becoming.selfAscribed (Becoming.ownClosure rel) center)) ∧
+      ∀ (L : Becoming.Flow F C) (W : Becoming.Web F C) (obs : F → C → Prop) (rel : F → F → Prop) (center : Pos → F)
+        (p : Pos),
+        (∀ (g : F), Becoming.WithinClosure rel (center p) g → L.WithinCoupling W obs (center p) g) →
+          ∀ (h : F),
+            ¬L.WithinCoupling W obs (center p) h →
+              ¬Becoming.Unrestricted (Becoming.selfAscribed (Becoming.ownClosure rel) center)
+Becoming.Clearing.dweller_beyond_every_coupling : ∀
+  (obs : Becoming.Clearing.Formation → Becoming.Clearing.Place → Prop),
+  ¬Becoming.Clearing.flow.WithinCoupling Becoming.Clearing.web obs Becoming.Clearing.Formation.clearer
+      Becoming.Clearing.Formation.dweller
+@Becoming.Clearing.couplingIn_leaves_dweller : ∀ {Pos : Type} {center : Pos → Becoming.Clearing.Formation} {p : Pos},
+  center p = Becoming.Clearing.Formation.clearer →
+    ∀ (obs : Becoming.Clearing.Formation → Becoming.Clearing.Place → Prop)
+      {rel : Becoming.Clearing.Formation → Becoming.Clearing.Formation → Prop},
+      (∀ (g h : Becoming.Clearing.Formation),
+          rel g h → Becoming.Clearing.flow.CoupledFrom Becoming.Clearing.web obs g h) →
+        (∀ (t : Nat), ¬Becoming.selfAscribed (Becoming.ownClosure rel) center p t Becoming.Clearing.Formation.dweller) ∧
+          ¬Becoming.Unrestricted (Becoming.selfAscribed (Becoming.ownClosure rel) center) ∧
+            Becoming.selfAscribed (Becoming.ownClosure (Becoming.Clearing.flow.Affects Becoming.Clearing.web)) center p
+              0 Becoming.Clearing.Formation.dweller
+Becoming.Clearing.counting_dweller_unselected : (∀ (select : (Nat → Becoming.Clearing.Place → Nat) → Prop),
+    Becoming.Clearing.web.ReadOffCouplings Becoming.thresholdOnly Becoming.Clearing.clearerSide select →
+      (select (Becoming.Clearing.countingLevel true) ↔ select (Becoming.Clearing.countingLevel false))) ∧
+  Becoming.Clearing.DwellerEnded (Becoming.Clearing.countingLevel false) ∧
+    Becoming.Clearing.DwellerKept (Becoming.Clearing.countingLevel true) ∧
+      ∀ (select : (Nat → Becoming.Clearing.Place → Nat) → Prop),
+        Becoming.Clearing.web.ReadOffCouplings Becoming.thresholdOnly Becoming.Clearing.clearerSide select →
+          ¬∀ (b : Bool), select (Becoming.Clearing.countingLevel b) ↔ b = true
+Becoming.Clearing.turned_by_dweller_read : Becoming.Clearing.web.ReadOffContinuations Becoming.Clearing.clearerOrDweller
+    Becoming.Clearing.DwellerKept ∧
+  Becoming.Clearing.DwellerKept (Becoming.Clearing.countingLevel true) ∧
+    ¬Becoming.Clearing.DwellerKept (Becoming.Clearing.countingLevel false) ∧
+      ∀ (select : (Nat → Becoming.Clearing.Place → Nat) → Prop),
+        Becoming.Clearing.web.ReadOffContinuations (fun g => g = Becoming.Clearing.Formation.clearer) select →
+          (select (Becoming.Clearing.countingLevel true) ↔ select (Becoming.Clearing.countingLevel false))
+Becoming.Clearing.read_not_direction : Becoming.Clearing.web.ReadOffContinuations Becoming.Clearing.clearerOrDweller
+    Becoming.Clearing.DwellerEnded ∧
+  Becoming.Clearing.DwellerEnded (Becoming.Clearing.countingLevel false) ∧
+    ¬Becoming.Clearing.DwellerEnded (Becoming.Clearing.countingLevel true)
+Becoming.Clearing.turned_by_habitat_gauge : (Becoming.Clearing.web.ReadOffCouplings Becoming.Clearing.habitatGauge
+    (fun g => g = Becoming.Clearing.Formation.clearer) fun l => 1 ≤ l 2 Becoming.Clearing.Place.habitat) ∧
+  1 ≤ Becoming.Clearing.countingLevel true 2 Becoming.Clearing.Place.habitat ∧
+    ¬1 ≤ Becoming.Clearing.countingLevel false 2 Becoming.Clearing.Place.habitat ∧
+      ¬Becoming.Clearing.flow.WithinCoupling Becoming.Clearing.web Becoming.Clearing.habitatGauge
+          Becoming.Clearing.Formation.clearer Becoming.Clearing.Formation.dweller
+Becoming.Diversion.counting_selected_against : (Becoming.Diversion.web
+        Becoming.Diversion.divertedLevel).ReadOffCouplings
+    Becoming.Diversion.gauge (fun g => g = Becoming.Diversion.Formation.taker) (Becoming.Diversion.StoreAtLeast 1 1) ∧
+  Becoming.Diversion.StoreAtLeast 1 1 (Becoming.Diversion.countingLevel false) ∧
+    ¬Becoming.Diversion.StoreAtLeast 1 1 (Becoming.Diversion.countingLevel true) ∧
+      ¬Becoming.Diversion.diverting.WithinCoupling (Becoming.Diversion.web Becoming.Diversion.divertedLevel)
+            Becoming.Diversion.gauge Becoming.Diversion.Formation.taker Becoming.Diversion.Formation.dweller ∧
+        (∀ (n : Nat),
+            ¬(Becoming.Diversion.web Becoming.Diversion.divertedLevel).Supported (n + 1)
+                Becoming.Diversion.Formation.dweller) ∧
+          ∀ (t : Nat),
+            (Becoming.Diversion.web Becoming.Diversion.undivertedLevel).Supported t Becoming.Diversion.Formation.dweller

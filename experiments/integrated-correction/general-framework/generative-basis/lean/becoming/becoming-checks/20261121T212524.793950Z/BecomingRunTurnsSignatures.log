@@ -1,0 +1,56 @@
+@Becoming.RunTurns.turns_where_order_breaks : ∀ {V : Type u_1} {rel : V → V → Prop} {g : V → V}
+  (dec : (a b : V) → Decidable (rel a b)) {x : V},
+  rel x (g x) →
+    ∀ {n : Nat},
+      ¬rel (Becoming.Law.orbit g x n) (Becoming.Law.orbit g x (n + 1)) →
+        ∃ k,
+          k < n ∧
+            rel (Becoming.Law.orbit g x k) (Becoming.Law.orbit g x (k + 1)) ∧
+              ¬rel (g (Becoming.Law.orbit g x k)) (g (Becoming.Law.orbit g x (k + 1)))
+@Becoming.RunTurns.turns_names_levels : ∀ {g : Nat → Nat} {x n : Nat},
+  x ≤ g x →
+    Becoming.Law.orbit g x (n + 1) < Becoming.Law.orbit g x n →
+      ∃ k,
+        k < n ∧
+          Becoming.Law.orbit g x k < Becoming.Law.orbit g x (k + 1) ∧
+            g (Becoming.Law.orbit g x (k + 1)) < g (Becoming.Law.orbit g x k)
+@Becoming.RunTurns.regime_turn_overcompensates : ∀ {g : Nat → Nat} {H x n : Nat},
+  x ≤ Becoming.RegimeMargin.step g H x →
+    Becoming.Law.orbit (Becoming.RegimeMargin.step g H) x (n + 1) <
+        Becoming.Law.orbit (Becoming.RegimeMargin.step g H) x n →
+      ∃ k,
+        k < n ∧
+          Becoming.Law.orbit (Becoming.RegimeMargin.step g H) x k <
+              Becoming.Law.orbit (Becoming.RegimeMargin.step g H) x (k + 1) ∧
+            Becoming.Law.orbit (Becoming.RegimeMargin.step g H) x k - H <
+                Becoming.Law.orbit (Becoming.RegimeMargin.step g H) x (k + 1) - H ∧
+              g (Becoming.Law.orbit (Becoming.RegimeMargin.step g H) x (k + 1) - H) <
+                g (Becoming.Law.orbit (Becoming.RegimeMargin.step g H) x k - H)
+Becoming.RunTurns.orbit_twice : ∀ (g : Nat → Nat) (x m : Nat),
+  Becoming.Law.orbit g x (m + m) = Becoming.Law.orbit (fun y => g (g y)) x m
+Becoming.RunTurns.step_after_twice : ∀ (g : Nat → Nat) (x m : Nat),
+  g (Becoming.Law.orbit (fun y => g (g y)) x m) = Becoming.Law.orbit (fun y => g (g y)) (g x) m
+@Becoming.RunTurns.reversing_period_two : ∀ {g : Nat → Nat} {hi : Nat},
+  (∀ (a b : Nat), a ≤ b → b ≤ hi → g b ≤ g a) →
+    (∀ (y : Nat), y ≤ hi → g y ≤ hi) →
+      ∀ {x : Nat}, x ≤ hi → ∀ (n : Nat), hi + hi ≤ n → Becoming.Law.orbit g x (n + 1 + 1) = Becoming.Law.orbit g x n
+Becoming.RunTurns.ThreeCycle.keeps : Becoming.RegimeMargin.Keeps Becoming.RunTurns.ThreeCycle.giving 1 3
+Becoming.RunTurns.ThreeCycle.cycle : Becoming.Law.orbit
+      (Becoming.RegimeMargin.step Becoming.RunTurns.ThreeCycle.giving 1) 1 1 =
+    3 ∧
+  Becoming.Law.orbit (Becoming.RegimeMargin.step Becoming.RunTurns.ThreeCycle.giving 1) 1 2 = 2 ∧
+    Becoming.Law.orbit (Becoming.RegimeMargin.step Becoming.RunTurns.ThreeCycle.giving 1) 1 3 = 1
+Becoming.RunTurns.ThreeCycle.returns : (∀ (k : Nat),
+    Becoming.Law.orbit (Becoming.RegimeMargin.step Becoming.RunTurns.ThreeCycle.giving 1) 1 (3 * k) = 1) ∧
+  Becoming.Law.orbit (Becoming.RegimeMargin.step Becoming.RunTurns.ThreeCycle.giving 1) 1 1 ≠ 1 ∧
+    Becoming.Law.orbit (Becoming.RegimeMargin.step Becoming.RunTurns.ThreeCycle.giving 1) 1 2 ≠ 1
+Becoming.RunTurns.ThreeCycle.neither : (¬∀ (a b : Nat),
+      a ≤ b →
+        b ≤ 3 →
+          Becoming.RegimeMargin.step Becoming.RunTurns.ThreeCycle.giving 1 a ≤
+            Becoming.RegimeMargin.step Becoming.RunTurns.ThreeCycle.giving 1 b) ∧
+  ¬∀ (a b : Nat),
+      a ≤ b →
+        b ≤ 3 →
+          Becoming.RegimeMargin.step Becoming.RunTurns.ThreeCycle.giving 1 b ≤
+            Becoming.RegimeMargin.step Becoming.RunTurns.ThreeCycle.giving 1 a

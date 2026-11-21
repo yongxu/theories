@@ -1,0 +1,457 @@
+@Becoming.FreeEnergyGuarantees.le_of_blt_false : ∀ {a b : Nat}, a.blt b = false → b ≤ a
+@Becoming.FreeEnergyGuarantees.firstMin_le : ∀ {A : Type} (score : A → Nat) (best : A) (l : List A),
+  score (Becoming.FreeEnergyGuarantees.firstMin score best l) ≤ score best ∧
+    ∀ (a : A), a ∈ l → score (Becoming.FreeEnergyGuarantees.firstMin score best l) ≤ score a
+@Becoming.FreeEnergyGuarantees.firstMin_mem : ∀ {A : Type} (score : A → Nat) (best : A) (l : List A),
+  Becoming.FreeEnergyGuarantees.firstMin score best l = best ∨ Becoming.FreeEnergyGuarantees.firstMin score best l ∈ l
+@Becoming.FreeEnergyGuarantees.IdenticalCells.total_exchangeAt : ∀ {α : Type} (q : α → Nat) (k : Nat) (l : List α),
+  Becoming.total (Becoming.FreeEnergyGuarantees.IdenticalCells.exchangeAt k l) q = Becoming.total l q
+@Becoming.FreeEnergyGuarantees.IdenticalCells.map_exchangeAt : ∀ {α β : Type} (f : α → β) (k : Nat) (l : List α),
+  List.map f (Becoming.FreeEnergyGuarantees.IdenticalCells.exchangeAt k l) =
+    Becoming.FreeEnergyGuarantees.IdenticalCells.exchangeAt k (List.map f l)
+@Becoming.FreeEnergyGuarantees.IdenticalCells.length_exchangeAt : ∀ {α : Type} (k : Nat) (l : List α),
+  (Becoming.FreeEnergyGuarantees.IdenticalCells.exchangeAt k l).length = l.length
+@Becoming.FreeEnergyGuarantees.IdenticalCells.othersField_exchangeable : ∀ {α : Type} (give : α → α → Nat),
+  Becoming.FreeEnergyGuarantees.IdenticalCells.Exchangeable
+    (Becoming.FreeEnergyGuarantees.IdenticalCells.othersField give)
+@Becoming.FreeEnergyGuarantees.IdenticalCells.descent_commutes : ∀ {α γ : Type} {update : α → γ → α}
+  {field : α → List α → γ},
+  Becoming.FreeEnergyGuarantees.IdenticalCells.Exchangeable field →
+    ∀ (k : Nat),
+      Becoming.Law.Commutes (Becoming.FreeEnergyGuarantees.IdenticalCells.descent update field)
+        (Becoming.FreeEnergyGuarantees.IdenticalCells.exchangeAt k)
+@Becoming.FreeEnergyGuarantees.IdenticalCells.keeps_exchange_fixed : ∀ {α : Type} {T : List α → List α} {k : Nat},
+  Becoming.Law.Commutes T (Becoming.FreeEnergyGuarantees.IdenticalCells.exchangeAt k) →
+    ∀ {l : List α},
+      Becoming.FreeEnergyGuarantees.IdenticalCells.exchangeAt k l = l →
+        ∀ (n : Nat),
+          Becoming.FreeEnergyGuarantees.IdenticalCells.exchangeAt k ((Becoming.Law.run T l).state n) =
+            (Becoming.Law.run T l).state n
+@Becoming.FreeEnergyGuarantees.IdenticalCells.exchanged_run : ∀ {α : Type} {T : List α → List α} {k : Nat},
+  Becoming.Law.Commutes T (Becoming.FreeEnergyGuarantees.IdenticalCells.exchangeAt k) →
+    ∀ (l : List α) (n : Nat),
+      (Becoming.Law.run T (Becoming.FreeEnergyGuarantees.IdenticalCells.exchangeAt k l)).state n =
+        Becoming.FreeEnergyGuarantees.IdenticalCells.exchangeAt k ((Becoming.Law.run T l).state n)
+@Becoming.FreeEnergyGuarantees.IdenticalCells.rests_exchanged : ∀ {α : Type} {T : List α → List α} {k : Nat},
+  Becoming.Law.Commutes T (Becoming.FreeEnergyGuarantees.IdenticalCells.exchangeAt k) →
+    ∀ {l : List α},
+      (∀ (n : Nat), (Becoming.Law.run T l).state n = l) →
+        ∀ (n : Nat),
+          (Becoming.Law.run T (Becoming.FreeEnergyGuarantees.IdenticalCells.exchangeAt k l)).state n =
+            Becoming.FreeEnergyGuarantees.IdenticalCells.exchangeAt k l
+@Becoming.FreeEnergyGuarantees.IdenticalCells.nth_map : ∀ {α β : Type} (f : α → β) (l : List α) (k : Nat),
+  Becoming.Copying.nth (List.map f l) k = Option.map f (Becoming.Copying.nth l k)
+@Becoming.FreeEnergyGuarantees.IdenticalCells.alike_of_fixed : ∀ {α : Type} (k : Nat) (l : List α),
+  Becoming.FreeEnergyGuarantees.IdenticalCells.exchangeAt k l = l →
+    ∀ (a b : α), Becoming.Copying.nth l k = some a → Becoming.Copying.nth l (k + 1) = some b → a = b
+@Becoming.FreeEnergyGuarantees.IdenticalCells.fixed_of_alike : ∀ {α : Type} (k : Nat) (l : List α) (a : α),
+  Becoming.Copying.nth l k = some a →
+    Becoming.Copying.nth l (k + 1) = some a → Becoming.FreeEnergyGuarantees.IdenticalCells.exchangeAt k l = l
+@Becoming.FreeEnergyGuarantees.IdenticalCells.run_length : ∀ {α γ : Type} {update : α → γ → α} {field : α → List α → γ}
+  (l : List α) (n : Nat),
+  ((Becoming.Law.run (Becoming.FreeEnergyGuarantees.IdenticalCells.descent update field) l).state n).length = l.length
+@Becoming.FreeEnergyGuarantees.IdenticalCells.nth_replicate : ∀ {α : Type} (a : α) (N k : Nat),
+  k < N → Becoming.Copying.nth (List.replicate N a) k = some a
+@Becoming.FreeEnergyGuarantees.IdenticalCells.two_alike_stay_alike : ∀ {α γ : Type} (update : α → γ → α)
+  (field : α → List α → γ) {l : List α} {k : Nat} {a : α},
+  Becoming.Copying.nth l k = some a →
+    Becoming.Copying.nth l (k + 1) = some a →
+      ∀ (n : Nat),
+        ∃ b,
+          Becoming.Copying.nth
+                ((Becoming.Law.run (Becoming.FreeEnergyGuarantees.IdenticalCells.descent update field) l).state n) k =
+              some b ∧
+            Becoming.Copying.nth
+                ((Becoming.Law.run (Becoming.FreeEnergyGuarantees.IdenticalCells.descent update field) l).state n)
+                (k + 1) =
+              some b
+@Becoming.FreeEnergyGuarantees.IdenticalCells.all_alike_stay_alike : ∀ {α γ : Type} (update : α → γ → α)
+  (field : α → List α → γ) (N : Nat) (a : α) {k : Nat},
+  k + 1 < N →
+    ∀ (n : Nat),
+      ∃ b,
+        Becoming.Copying.nth
+              ((Becoming.Law.run (Becoming.FreeEnergyGuarantees.IdenticalCells.descent update field)
+                    (List.replicate N a)).state
+                n)
+              k =
+            some b ∧
+          Becoming.Copying.nth
+              ((Becoming.Law.run (Becoming.FreeEnergyGuarantees.IdenticalCells.descent update field)
+                    (List.replicate N a)).state
+                n)
+              (k + 1) =
+            some b
+@Becoming.FreeEnergyGuarantees.IdenticalCells.freeEnergy_symmetric : ∀ {α γ : Type} {energy : α → γ → Nat}
+  {field : α → List α → γ},
+  Becoming.FreeEnergyGuarantees.IdenticalCells.Exchangeable field →
+    Becoming.FreeEnergyGuarantees.IdenticalCells.Symmetric
+      (Becoming.FreeEnergyGuarantees.IdenticalCells.freeEnergy energy field)
+@Becoming.FreeEnergyGuarantees.IdenticalCells.minimum_exchanged : ∀ {α : Type} {F : List α → Nat},
+  Becoming.FreeEnergyGuarantees.IdenticalCells.Symmetric F →
+    ∀ {l : List α},
+      (∀ (l' : List α), l'.length = l.length → F l ≤ F l') →
+        ∀ (k : Nat) (l' : List α),
+          l'.length = (Becoming.FreeEnergyGuarantees.IdenticalCells.exchangeAt k l).length →
+            F (Becoming.FreeEnergyGuarantees.IdenticalCells.exchangeAt k l) ≤ F l'
+@Becoming.FreeEnergyGuarantees.IdenticalCells.unique_minimum_alike : ∀ {α : Type} {F : List α → Nat},
+  Becoming.FreeEnergyGuarantees.IdenticalCells.Symmetric F →
+    ∀ {l : List α},
+      (∀ (l' : List α), l'.length = l.length → F l' ≤ F l → l' = l) →
+        ∀ (k : Nat), Becoming.FreeEnergyGuarantees.IdenticalCells.exchangeAt k l = l
+@Becoming.FreeEnergyGuarantees.IdenticalCells.apart_not_unique : ∀ {α : Type} {F : List α → Nat},
+  Becoming.FreeEnergyGuarantees.IdenticalCells.Symmetric F →
+    ∀ {l : List α} {k : Nat},
+      Becoming.FreeEnergyGuarantees.IdenticalCells.exchangeAt k l ≠ l →
+        ¬∀ (l' : List α), l'.length = l.length → F l' ≤ F l → l' = l
+@Becoming.FreeEnergyGuarantees.IdenticalCells.unique_across_sizes_empty : ∀ {α γ : Type} {energy : α → γ → Nat}
+  {field : α → List α → γ} {l : List α},
+  (∀ (l' : List α),
+      Becoming.FreeEnergyGuarantees.IdenticalCells.freeEnergy energy field l' ≤
+          Becoming.FreeEnergyGuarantees.IdenticalCells.freeEnergy energy field l →
+        l' = l) →
+    l = []
+Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.step_commutes : ∀ (k : Nat),
+  Becoming.Law.Commutes Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.step
+    (Becoming.FreeEnergyGuarantees.IdenticalCells.exchangeAt k)
+Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.alike_rests : ∀ (n : Nat),
+  (Becoming.Law.run Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.step [1, 1]).state n = [1, 1]
+Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.alike_energy : ∀ (a : Nat),
+  Becoming.FreeEnergyGuarantees.IdenticalCells.freeEnergy Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.energy
+      Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.field [a, a] =
+    6
+@Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.pair_of_alike : ∀ {l : List Nat} {b : Nat},
+  l.length = 2 → Becoming.Copying.nth l 0 = some b → Becoming.Copying.nth l 1 = some b → l = [b, b]
+Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.alike_never_least : ∀ (a n : Nat),
+  Becoming.FreeEnergyGuarantees.IdenticalCells.freeEnergy Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.energy
+        Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.field
+        ((Becoming.Law.run Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.step [a, a]).state n) =
+      6 ∧
+    Becoming.FreeEnergyGuarantees.IdenticalCells.freeEnergy Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.energy
+        Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.field [0, 3] <
+      6
+Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.parts : ∀ (n : Nat),
+  (Becoming.Law.run Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.step [1, 2]).state (n + 1) = [0, 3]
+Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.exchanged_parts : ∀ (n : Nat),
+  (Becoming.Law.run Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.step [2, 1]).state (n + 1) = [3, 0]
+Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.minima : Becoming.FreeEnergyGuarantees.IdenticalCells.freeEnergy
+      Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.energy
+      Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.field [0, 3] =
+    0 ∧
+  Becoming.FreeEnergyGuarantees.IdenticalCells.freeEnergy Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.energy
+        Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.field [3, 0] =
+      0 ∧
+    ∀ (l : List Nat),
+      l.length = 2 →
+        ¬∀ (l' : List Nat),
+            l'.length = l.length →
+              Becoming.FreeEnergyGuarantees.IdenticalCells.freeEnergy
+                    Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.energy
+                    Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.field l' ≤
+                  Becoming.FreeEnergyGuarantees.IdenticalCells.freeEnergy
+                    Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.energy
+                    Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.field l →
+                l' = l
+Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.other_minima : Becoming.FreeEnergyGuarantees.IdenticalCells.freeEnergy
+      Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.energy
+      Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.field [] =
+    0 ∧
+  Becoming.FreeEnergyGuarantees.IdenticalCells.freeEnergy Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.energy
+        Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.field [3] =
+      0 ∧
+    Becoming.FreeEnergyGuarantees.IdenticalCells.freeEnergy Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.energy
+        Becoming.FreeEnergyGuarantees.IdenticalCells.TwoCells.field [0, 4] =
+      0
+@Becoming.FreeEnergyGuarantees.RiskAndNeeds.Chooser.chosen_minimizes : ∀ {R : Type}
+  (ch : Becoming.FreeEnergyGuarantees.RiskAndNeeds.Chooser R) (r : R),
+  ch.risk r (ch.chosen r) ≤ ch.risk r ch.first ∧ ∀ (a : Nat), a ∈ ch.others → ch.risk r (ch.chosen r) ≤ ch.risk r a
+@Becoming.FreeEnergyGuarantees.RiskAndNeeds.Chooser.chosen_mem : ∀ {R : Type}
+  (ch : Becoming.FreeEnergyGuarantees.RiskAndNeeds.Chooser R) (r : R), ch.chosen r = ch.first ∨ ch.chosen r ∈ ch.others
+@Becoming.FreeEnergyGuarantees.RiskAndNeeds.Chooser.restraint_chosen : ∀ {R : Type} (r : R),
+  (Becoming.FreeEnergyGuarantees.RiskAndNeeds.Chooser.restraint R).chosen r = 0
+Becoming.FreeEnergyGuarantees.RiskAndNeeds.forager_choice : Becoming.FreeEnergyGuarantees.RiskAndNeeds.forager.chosen
+      3 =
+    2 ∧
+  Becoming.FreeEnergyGuarantees.RiskAndNeeds.forager.risk 3
+      (Becoming.FreeEnergyGuarantees.RiskAndNeeds.forager.chosen 3) =
+    0
+@Becoming.FreeEnergyGuarantees.RiskAndNeeds.need_ends : ∀ {F C : Type} {L : Becoming.Flow F C} {W : Becoming.Web F C},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        ∀ {c : C} {m : Nat},
+          (∀ (t : Nat) (e : F), e ∈ L.present t → 0 < L.give t e c → W.requires t e c ∧ m ≤ W.need t e c) →
+            ∀ {T n : Nat} {rest : List F},
+              Becoming.Distinct rest →
+                (∀ (j : Nat) (f : F), j < n → f ∈ rest → 0 < L.take (T + j) f c → f ∈ L.present (T + j)) →
+                  (∀ (j : Nat), j < n → L.given (T + j) c < Becoming.total rest fun f => L.take (T + j) f c) →
+                    W.level T c < n + m →
+                      ∀ (g : F) (R : Type) (ch : Becoming.FreeEnergyGuarantees.RiskAndNeeds.Chooser R)
+                        (reading : Nat → R),
+                        ¬g ∈ rest →
+                          (∀ (t : Nat), g ∈ L.present t → L.take t g c = ch.chosen (reading t)) →
+                            ∀ (k : Nat),
+                              W.level (T + n + k) c < m ∧
+                                (W.requires (T + n + k) g c → m ≤ W.need (T + n + k) g c → ¬W.active (T + n + k) g)
+@Becoming.FreeEnergyGuarantees.RiskAndNeeds.restraint_unread : ∀ {F C : Type} {L : Becoming.Flow F C}
+  {W : Becoming.Web F C} {L' : Becoming.Flow F C} {W' : Becoming.Web F C},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        L'.Balances W' →
+          L'.Acting W' →
+            W'.Dependent →
+              ∀ {c : C},
+                (∀ (t : Nat) (e : F), e ∈ L.present t → 0 < L.give t e c → W.requires t e c ∧ 1 ≤ W.need t e c) →
+                  (∀ (t : Nat) (e : F), e ∈ L'.present t → 0 < L'.give t e c → W'.requires t e c ∧ 1 ≤ W'.need t e c) →
+                    ∀ {T n : Nat} {rest rest' : List F},
+                      Becoming.Distinct rest →
+                        Becoming.Distinct rest' →
+                          (∀ (j : Nat) (f : F), j < n → f ∈ rest → 0 < L.take (T + j) f c → f ∈ L.present (T + j)) →
+                            (∀ (j : Nat) (f : F),
+                                j < n → f ∈ rest' → 0 < L'.take (T + j) f c → f ∈ L'.present (T + j)) →
+                              (∀ (j : Nat),
+                                  j < n → L.given (T + j) c < Becoming.total rest fun f => L.take (T + j) f c) →
+                                (∀ (j : Nat),
+                                    j < n → L'.given (T + j) c < Becoming.total rest' fun f => L'.take (T + j) f c) →
+                                  W.level T c < n + 1 →
+                                    W'.level T c < n + 1 →
+                                      ∀ {score : (Nat → C → Nat) → Nat},
+                                        (∀ (l l' : Nat → C → Nat),
+                                            (∀ (k : Nat), l (T + n + k) c = l' (T + n + k) c) → score l = score l') →
+                                          ∀ (g : F) (R : Type)
+                                            (ch : Becoming.FreeEnergyGuarantees.RiskAndNeeds.Chooser R)
+                                            (reading : Nat → R),
+                                            ¬g ∈ rest →
+                                              ¬g ∈ rest' →
+                                                (∀ (t : Nat), g ∈ L.present t → L.take t g c = ch.chosen (reading t)) →
+                                                  (∀ (t : Nat),
+                                                      g ∈ L'.present t →
+                                                        L'.take t g c =
+                                                          (Becoming.FreeEnergyGuarantees.RiskAndNeeds.Chooser.restraint
+                                                                R).chosen
+                                                            (reading t)) →
+                                                    score W.level = score W'.level
+@Becoming.FreeEnergyGuarantees.RiskAndNeeds.outside_takes_nothing : ∀ {F C : Type} {L : Becoming.Flow F C}
+  {W : Becoming.Web F C},
+  L.Balances W →
+    ∀ {c : C} {T : Nat} {rest : List F} {g : F},
+      Becoming.Distinct rest →
+        ¬g ∈ rest →
+          g ∈ L.present T →
+            (∀ (f : F), f ∈ rest → 0 < L.take T f c → f ∈ L.present T) →
+              (L.given T c < Becoming.total rest fun f => L.take T f c) → W.level T c ≤ 1 → L.take T g c = 0
+@Becoming.FreeEnergyGuarantees.RiskAndNeeds.expectation_not_course : ∀ {F C : Type} {L : Becoming.Flow F C}
+  {W : Becoming.Web F C},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        ∀ {c : C} {m : Nat},
+          (∀ (t : Nat) (e : F), e ∈ L.present t → 0 < L.give t e c → W.requires t e c ∧ m ≤ W.need t e c) →
+            ∀ {T n : Nat} {rest : List F},
+              Becoming.Distinct rest →
+                (∀ (j : Nat) (f : F), j < n → f ∈ rest → 0 < L.take (T + j) f c → f ∈ L.present (T + j)) →
+                  (∀ (j : Nat), j < n → L.given (T + j) c < Becoming.total rest fun f => L.take (T + j) f c) →
+                    W.level T c < n + m →
+                      ∀ (ch : Becoming.FreeEnergyGuarantees.RiskAndNeeds.Chooser Nat),
+                        m ≤ ch.preferred →
+                          ∀ (k : Nat),
+                            ch.risk (W.level (T + n + k) c) (ch.chosen (W.level (T + n + k) c)) = 0 →
+                              W.level (T + n + (k + 1)) c <
+                                ch.predict (W.level (T + n + k) c) (ch.chosen (W.level (T + n + k) c))
+Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.balances : Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.flow.Balances
+  (Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.web 0)
+Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.restrained_balances : Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.restrained.Balances
+  (Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.web 2)
+Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.acting : ∀ (after : Nat),
+  Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.flow.Acting
+    (Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.web after)
+Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.restrained_acting : ∀ (after : Nat),
+  Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.restrained.Acting
+    (Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.web after)
+Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.dependent : ∀ (after : Nat),
+  (Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.web after).Dependent
+Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.gated : ∀ (after : Nat)
+  (L : Becoming.Flow Becoming.Witnesses.Member Unit) (t : Nat) (f : Becoming.Witnesses.Member),
+  f ∈ L.present t →
+    0 < L.give t f () →
+      (Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.web after).requires t f () ∧
+        3 ≤ (Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.web after).need t f ()
+Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.distinct : Becoming.Distinct [Becoming.Witnesses.Member.second]
+@Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.rest_present : ∀ {L : Becoming.Flow Becoming.Witnesses.Member Unit},
+  L.present 0 = Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.present 0 →
+    ∀ (j : Nat) (f : Becoming.Witnesses.Member),
+      j < 1 → f ∈ [Becoming.Witnesses.Member.second] → 0 < L.take (0 + j) f () → f ∈ L.present (0 + j)
+Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.outside : ¬Becoming.Witnesses.Member.first ∈
+    [Becoming.Witnesses.Member.second]
+Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.ends_either_way : (Becoming.FreeEnergyGuarantees.RiskAndNeeds.forager.chosen
+        3 =
+      2 ∧
+    Becoming.FreeEnergyGuarantees.RiskAndNeeds.forager.risk 3
+        (Becoming.FreeEnergyGuarantees.RiskAndNeeds.forager.chosen 3) =
+      0) ∧
+  (Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.web 0).active 0 Becoming.Witnesses.Member.first ∧
+    (Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.web 0).Supported 0 Becoming.Witnesses.Member.first ∧
+      (∀ (k : Nat),
+          (Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.web 0).level (0 + 1 + k) () < 3 ∧
+            ¬(Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.web 0).active (0 + 1 + k)
+                Becoming.Witnesses.Member.first) ∧
+        ∀ (k : Nat),
+          (Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.web 2).level (0 + 1 + k) () < 3 ∧
+            ¬(Becoming.FreeEnergyGuarantees.RiskAndNeeds.Outrun.web 2).active (0 + 1 + k)
+                Becoming.Witnesses.Member.first
+Becoming.FreeEnergyGuarantees.SharedModels.heldPair_choices : ∀ (t : Nat),
+  t < 2 →
+    Becoming.Optimum.HeldPair.flow.take t Becoming.Witnesses.Member.first Becoming.Optimum.HeldPair.Spot.pool =
+        Becoming.FreeEnergyGuarantees.SharedModels.holder.chosen
+          (Becoming.Optimum.HeldPair.web.level t Becoming.Optimum.HeldPair.Spot.firstStore) ∧
+      Becoming.Optimum.HeldPair.flow.take t Becoming.Witnesses.Member.second Becoming.Optimum.HeldPair.Spot.pool =
+          Becoming.FreeEnergyGuarantees.SharedModels.holder.chosen
+            (Becoming.Optimum.HeldPair.web.level t Becoming.Optimum.HeldPair.Spot.secondStore) ∧
+        Becoming.FreeEnergyGuarantees.SharedModels.holder.risk 1
+              (Becoming.FreeEnergyGuarantees.SharedModels.holder.chosen 1) =
+            0 ∧
+          Becoming.FreeEnergyGuarantees.SharedModels.holder.predict
+                (Becoming.Optimum.HeldPair.web.level t Becoming.Optimum.HeldPair.Spot.firstStore)
+                (Becoming.Optimum.HeldPair.flow.take t Becoming.Witnesses.Member.first
+                  Becoming.Optimum.HeldPair.Spot.pool) =
+              Becoming.Optimum.HeldPair.web.level (t + 1) Becoming.Optimum.HeldPair.Spot.firstStore ∧
+            Becoming.FreeEnergyGuarantees.SharedModels.holder.predict
+                (Becoming.Optimum.HeldPair.web.level t Becoming.Optimum.HeldPair.Spot.secondStore)
+                (Becoming.Optimum.HeldPair.flow.take t Becoming.Witnesses.Member.second
+                  Becoming.Optimum.HeldPair.Spot.pool) =
+              Becoming.Optimum.HeldPair.web.level (t + 1) Becoming.Optimum.HeldPair.Spot.secondStore
+Becoming.FreeEnergyGuarantees.SharedModels.held_not_one : (∀ (t : Nat),
+    t < 2 →
+      Becoming.Optimum.HeldPair.flow.take t Becoming.Witnesses.Member.first Becoming.Optimum.HeldPair.Spot.pool =
+          Becoming.FreeEnergyGuarantees.SharedModels.holder.chosen
+            (Becoming.Optimum.HeldPair.web.level t Becoming.Optimum.HeldPair.Spot.firstStore) ∧
+        Becoming.Optimum.HeldPair.flow.take t Becoming.Witnesses.Member.second Becoming.Optimum.HeldPair.Spot.pool =
+            Becoming.FreeEnergyGuarantees.SharedModels.holder.chosen
+              (Becoming.Optimum.HeldPair.web.level t Becoming.Optimum.HeldPair.Spot.secondStore) ∧
+          Becoming.FreeEnergyGuarantees.SharedModels.holder.predict
+                (Becoming.Optimum.HeldPair.web.level t Becoming.Optimum.HeldPair.Spot.firstStore)
+                (Becoming.Optimum.HeldPair.flow.take t Becoming.Witnesses.Member.first
+                  Becoming.Optimum.HeldPair.Spot.pool) =
+              Becoming.Optimum.HeldPair.web.level (t + 1) Becoming.Optimum.HeldPair.Spot.firstStore ∧
+            Becoming.FreeEnergyGuarantees.SharedModels.holder.predict
+                (Becoming.Optimum.HeldPair.web.level t Becoming.Optimum.HeldPair.Spot.secondStore)
+                (Becoming.Optimum.HeldPair.flow.take t Becoming.Witnesses.Member.second
+                  Becoming.Optimum.HeldPair.Spot.pool) =
+              Becoming.Optimum.HeldPair.web.level (t + 1) Becoming.Optimum.HeldPair.Spot.secondStore) ∧
+  Becoming.FreeEnergyGuarantees.SharedModels.holder.risk 1
+        (Becoming.FreeEnergyGuarantees.SharedModels.holder.chosen 1) =
+      0 ∧
+    (∀ (t : Nat) (h : Becoming.Optimum.HeldPair.Member),
+        Becoming.Optimum.AtSetPoint (Becoming.Optimum.HeldPair.store h) Becoming.Optimum.HeldPair.one
+          (Becoming.Optimum.HeldPair.web.level t)) ∧
+      (∀ (t : Nat),
+          t < 2 →
+            Becoming.Optimum.HeldPair.flow.WithinOwn t Becoming.Optimum.HeldPair.Spot.pool ∧
+              ¬Becoming.Optimum.HeldPair.flow.WithinJoint t Becoming.Optimum.HeldPair.Spot.pool) ∧
+        (∀ (k : Nat) (g : Becoming.Optimum.HeldPair.Member),
+            Becoming.Optimum.HeldPair.web.requires (0 + 2 + k) g Becoming.Optimum.HeldPair.Spot.pool →
+              1 ≤ Becoming.Optimum.HeldPair.web.need (0 + 2 + k) g Becoming.Optimum.HeldPair.Spot.pool →
+                ¬Becoming.Optimum.HeldPair.web.active (0 + 2 + k) g) ∧
+          ∀ (h : Becoming.Optimum.HeldPair.Member),
+            Becoming.Optimum.HeldPair.holders h = true →
+              ¬Becoming.Optimum.HeldPair.web.CoupledInto Becoming.Optimum.HeldPair.observes h
+                  Becoming.Optimum.HeldPair.Spot.pool
+Becoming.FreeEnergyGuarantees.SharedModels.exceeding_choices : ∀ (t : Nat),
+  t < 2 →
+    Becoming.Exceeding.flow.take t Becoming.Witnesses.Member.first () =
+        Becoming.FreeEnergyGuarantees.RiskAndNeeds.forager.chosen
+          (Becoming.FreeEnergyGuarantees.SharedModels.store Becoming.Witnesses.Member.first t) ∧
+      Becoming.Exceeding.flow.take t Becoming.Witnesses.Member.second () =
+        Becoming.FreeEnergyGuarantees.RiskAndNeeds.forager.chosen
+          (Becoming.FreeEnergyGuarantees.SharedModels.store Becoming.Witnesses.Member.second t)
+Becoming.FreeEnergyGuarantees.SharedModels.store_kept : ∀ (t : Nat),
+  t < 2 →
+    Becoming.FreeEnergyGuarantees.RiskAndNeeds.forager.predict
+          (Becoming.FreeEnergyGuarantees.SharedModels.store Becoming.Witnesses.Member.first t)
+          (Becoming.Exceeding.flow.take t Becoming.Witnesses.Member.first ()) =
+        Becoming.FreeEnergyGuarantees.SharedModels.store Becoming.Witnesses.Member.first (t + 1) ∧
+      Becoming.FreeEnergyGuarantees.RiskAndNeeds.forager.predict
+          (Becoming.FreeEnergyGuarantees.SharedModels.store Becoming.Witnesses.Member.second t)
+          (Becoming.Exceeding.flow.take t Becoming.Witnesses.Member.second ()) =
+        Becoming.FreeEnergyGuarantees.SharedModels.store Becoming.Witnesses.Member.second (t + 1)
+Becoming.FreeEnergyGuarantees.SharedModels.alike_not_one : (∀ (t : Nat),
+    t < 2 →
+      Becoming.Exceeding.flow.take t Becoming.Witnesses.Member.first () =
+          Becoming.FreeEnergyGuarantees.RiskAndNeeds.forager.chosen
+            (Becoming.FreeEnergyGuarantees.SharedModels.store Becoming.Witnesses.Member.first t) ∧
+        Becoming.Exceeding.flow.take t Becoming.Witnesses.Member.second () =
+          Becoming.FreeEnergyGuarantees.RiskAndNeeds.forager.chosen
+            (Becoming.FreeEnergyGuarantees.SharedModels.store Becoming.Witnesses.Member.second t)) ∧
+  (∀ (t : Nat),
+      Becoming.Alone.flow.take t Becoming.Witnesses.Member.first () =
+        Becoming.FreeEnergyGuarantees.RiskAndNeeds.forager.chosen
+          (Becoming.FreeEnergyGuarantees.SharedModels.store Becoming.Witnesses.Member.first t)) ∧
+    (Becoming.FreeEnergyGuarantees.RiskAndNeeds.forager.chosen 3 = 2 ∧
+        Becoming.FreeEnergyGuarantees.RiskAndNeeds.forager.risk 3
+            (Becoming.FreeEnergyGuarantees.RiskAndNeeds.forager.chosen 3) =
+          0) ∧
+      (∀ (t : Nat), t < 2 → Becoming.Exceeding.flow.WithinOwn t () ∧ ¬Becoming.Exceeding.flow.WithinJoint t ()) ∧
+        (∀ (n : Nat) (f : Becoming.Exceeding.Member), ¬Becoming.Exceeding.web.active (2 + n) f) ∧
+          ∀ (t : Nat),
+            Becoming.Alone.flow.WithinJoint t () ∧
+              Becoming.Alone.web.active t Becoming.Witnesses.Member.renewer ∧
+                Becoming.Alone.web.active t Becoming.Witnesses.Member.first
+Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.regulator_choice : Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.regulator.chosen
+      4 =
+    2 ∧
+  Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.regulator.chosen 2 = 0
+Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.balances : Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.flow.Balances
+  Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.web
+Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.level_two : ∀ (t : Nat),
+  2 ≤ Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.level t
+Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.dependent : Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.web.Dependent
+Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.acting : Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.flow.Acting
+  Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.web
+Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.gated : ∀ (t : Nat) (f : Becoming.Exceeding.Member),
+  f ∈ Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.flow.present t →
+    0 < Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.flow.give t f () →
+      Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.web.requires t f () ∧
+        1 ≤ Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.web.need t f ()
+Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.continues : Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.flow.Balances
+    Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.web ∧
+  Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.flow.Acting
+      Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.web ∧
+    Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.web.Dependent ∧
+      (∀ (t : Nat) (f : Becoming.Exceeding.Member),
+          f ∈ Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.flow.present t →
+            0 < Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.flow.give t f () →
+              Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.web.requires t f () ∧
+                1 ≤ Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.web.need t f ()) ∧
+        (∀ (t : Nat),
+            Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.flow.take t Becoming.Witnesses.Member.first () =
+                Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.regulator.chosen
+                  (Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.web.level t ()) ∧
+              Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.flow.take t Becoming.Witnesses.Member.second () =
+                Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.regulator.chosen
+                  (Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.web.level t ())) ∧
+          (Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.flow.WithinOwn 0 () ∧
+              ¬Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.flow.WithinJoint 0 () ∧
+                Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.flow.WithinJoint 1 ()) ∧
+            ∀ (t : Nat) (f : Becoming.Exceeding.Member),
+              Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.web.active t f ∧
+                Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.web.Supported t f
+Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeBalances : Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeFlow.Balances
+  Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeWeb
+Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeActing : Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeFlow.Acting
+  Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeWeb
+Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeDependent : Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeWeb.Dependent
+Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeGated : ∀ (t : Nat)
+  (f : Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.Three),
+  f ∈ Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeFlow.present t →
+    0 < Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeFlow.give t f () →
+      Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeWeb.requires t f () ∧
+        1 ≤ Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeWeb.need t f ()
+Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.three_end : (Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.regulator.chosen
+        4 =
+      2 ∧
+    Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.regulator.risk 4 2 = 0) ∧
+  (Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeFlow.WithinOwn 0 () ∧
+      ¬Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeFlow.WithinJoint 0 ()) ∧
+    ∀ (n : Nat) (f : Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.Three),
+      ¬Becoming.FreeEnergyGuarantees.SharedModels.OneGoal.threeWeb.active (1 + n) f

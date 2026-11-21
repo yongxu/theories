@@ -1,0 +1,335 @@
+@Becoming.RouteFormation.replicate_append : ∀ {α : Type} (x : α) (n m : Nat),
+  List.replicate m x ++ List.replicate n x = List.replicate (m + n) x
+@Becoming.RouteFormation.not_mem_of_all : ∀ {α : Type} [inst : DecidableEq α] {x : α} {l : List α},
+  (l.all fun y => decide (x ≠ y)) = true → ¬x ∈ l
+Becoming.RouteFormation.programFor_operates : ∀ (c : Becoming.CodeAcquisition.Code) (e : Becoming.CodeAcquisition.Expr),
+  Becoming.RouteFormation.operate (Becoming.RouteFormation.programFor c) e = Becoming.CodeAcquisition.eval c e
+Becoming.RouteFormation.two_socket_routes : Becoming.RouteFormation.generatedRoutes 2 =
+  [[false, false], [false, true], [true, false], [true, true]]
+@Becoming.RouteFormation.mem_two_socket : ∀ {route : Becoming.RouteFormation.Route},
+  route ∈ Becoming.RouteFormation.generatedRoutes 2 →
+    route = [false, false] ∨ route = [false, true] ∨ route = [true, false] ∨ route = [true, true]
+Becoming.RouteFormation.own_program_fits : ∀ (c : Becoming.CodeAcquisition.Code),
+  Becoming.RouteFormation.fits (Becoming.RouteFormation.programFor c) (Becoming.CodeAcquisition.trialRecords c) = true
+Becoming.RouteFormation.fits_agrees : ∀ (p : Becoming.RouteFormation.Program)
+  (samples : List (Becoming.CodeAcquisition.Expr × List Bool)),
+  Becoming.RouteFormation.fits p samples = true →
+    ∀ (e : Becoming.CodeAcquisition.Expr) (answer : List Bool),
+      (e, answer) ∈ samples → Becoming.RouteFormation.operate p e = answer
+Becoming.RouteFormation.probe_identifies_route : ∀ (c : Becoming.CodeAcquisition.Code)
+  (route : Becoming.RouteFormation.Route),
+  c.first ≠ c.second →
+    route ∈ Becoming.RouteFormation.generatedRoutes 2 →
+      Becoming.RouteFormation.dispatch route [c.first] [c.second] =
+          Becoming.CodeAcquisition.eval c Becoming.CodeAcquisition.orderProbe →
+        route = Becoming.RouteFormation.routeFor c
+Becoming.RouteFormation.accepted_transfers : ∀ (c : Becoming.CodeAcquisition.Code)
+  (route : Becoming.RouteFormation.Route),
+  c.first ≠ c.second →
+    route ∈ Becoming.RouteFormation.generatedRoutes 2 →
+      Becoming.RouteFormation.fits { first := c.first, second := c.second, route := route }
+            (Becoming.CodeAcquisition.trialRecords c) =
+          true →
+        ∀ (e : Becoming.CodeAcquisition.Expr),
+          Becoming.RouteFormation.operate { first := c.first, second := c.second, route := route } e =
+            Becoming.CodeAcquisition.eval c e
+Becoming.RouteFormation.equal_primitives_repeat : ∀ (c : Becoming.CodeAcquisition.Code),
+  c.second = c.first →
+    ∀ (e : Becoming.CodeAcquisition.Expr),
+      Becoming.CodeAcquisition.eval c e = List.replicate (Becoming.RouteFormation.extent e) c.first
+Becoming.RouteFormation.reversal_unseen : ∀ (b r : Bool) (e : Becoming.CodeAcquisition.Expr),
+  Becoming.CodeAcquisition.eval { first := b, second := b, reversed := r } e =
+    Becoming.CodeAcquisition.eval { first := b, second := b, reversed := !r } e
+Becoming.RouteFormation.extended_transfers : ∀ (c : Becoming.CodeAcquisition.Code)
+  (route : Becoming.RouteFormation.Route),
+  route ∈ Becoming.RouteFormation.generatedRoutes 2 →
+    Becoming.RouteFormation.fits { first := c.first, second := c.second, route := route }
+          (Becoming.CodeAcquisition.trialRecords c ++
+            [(Becoming.CodeAcquisition.novel, Becoming.CodeAcquisition.eval c Becoming.CodeAcquisition.novel)]) =
+        true →
+      ∀ (e : Becoming.CodeAcquisition.Expr),
+        Becoming.RouteFormation.operate { first := c.first, second := c.second, route := route } e =
+          Becoming.CodeAcquisition.eval c e
+Becoming.RouteFormation.place_stock : ∀ (socket : Bool) (s : Becoming.RouteFormation.Apparatus),
+  (Becoming.RouteFormation.place socket s).stock + (Becoming.RouteFormation.place socket s).drawn = s.stock + s.drawn
+Becoming.RouteFormation.place_parts : ∀ (socket : Bool) (s : Becoming.RouteFormation.Apparatus),
+  (Becoming.RouteFormation.place socket s).parts + (Becoming.RouteFormation.place socket s).usedParts =
+    s.parts + s.usedParts
+Becoming.RouteFormation.assemble_stock : ∀ (route : Becoming.RouteFormation.Route)
+  (s : Becoming.RouteFormation.Apparatus),
+  (Becoming.RouteFormation.assemble route s).stock + (Becoming.RouteFormation.assemble route s).drawn =
+    s.stock + s.drawn
+Becoming.RouteFormation.inspect_stock : ∀ (e : Becoming.CodeAcquisition.Evidence)
+  (s : Becoming.RouteFormation.Apparatus),
+  (Becoming.RouteFormation.inspect e s).stock + (Becoming.RouteFormation.inspect e s).drawn = s.stock + s.drawn
+Becoming.RouteFormation.discard_stock : ∀ (s : Becoming.RouteFormation.Apparatus),
+  (Becoming.RouteFormation.discard s).stock + (Becoming.RouteFormation.discard s).drawn = s.stock + s.drawn
+Becoming.RouteFormation.attempt_stock : ∀ (e : Becoming.CodeAcquisition.Evidence) (r : Becoming.RouteFormation.Route)
+  (s : Becoming.RouteFormation.Apparatus),
+  (Becoming.RouteFormation.attempt e r s).stock + (Becoming.RouteFormation.attempt e r s).drawn = s.stock + s.drawn
+Becoming.RouteFormation.search_stock : ∀ (e : Becoming.CodeAcquisition.Evidence)
+  (rs : List Becoming.RouteFormation.Route) (s : Becoming.RouteFormation.Apparatus),
+  (Becoming.RouteFormation.search e rs s).stock + (Becoming.RouteFormation.search e rs s).drawn = s.stock + s.drawn
+Becoming.RouteFormation.develop_stock : ∀ (s : Becoming.RouteFormation.Apparatus),
+  (Becoming.RouteFormation.develop s).stock + (Becoming.RouteFormation.develop s).drawn = s.stock + s.drawn
+@Becoming.RouteFormation.sub_add_add : ∀ {k n : Nat}, k ≤ n → ∀ (d : Nat), n - k + (d + k) = n + d
+Becoming.RouteFormation.encounter_stock : ∀ (c : Becoming.CodeAcquisition.Code) (e : Becoming.CodeAcquisition.Expr)
+  (s : Becoming.RouteFormation.Apparatus),
+  (Becoming.RouteFormation.encounter c e s).stock + (Becoming.RouteFormation.encounter c e s).drawn = s.stock + s.drawn
+Becoming.RouteFormation.reconsider_stock : ∀ (s : Becoming.RouteFormation.Apparatus),
+  (Becoming.RouteFormation.reconsider s).stock + (Becoming.RouteFormation.reconsider s).drawn = s.stock + s.drawn
+Becoming.RouteFormation.interpretation_no_route : (Becoming.CodeAcquisition.train Becoming.CodeAcquisition.usual
+        (Becoming.CodeAcquisition.initial 18)).code =
+    some Becoming.CodeAcquisition.usual ∧
+  Becoming.RouteFormation.respond (Becoming.RouteFormation.prepared 18 4) Becoming.CodeAcquisition.novel = none
+Becoming.RouteFormation.wrong_route_replaced : Becoming.RouteFormation.developed.attempts =
+    [([false, false], false), ([false, true], true)] ∧
+  Becoming.RouteFormation.developed.installed = some (Becoming.RouteFormation.programFor Becoming.CodeAcquisition.usual)
+Becoming.RouteFormation.develop_keeps_records : Becoming.RouteFormation.developed.samples =
+  (Becoming.CodeAcquisition.train Becoming.CodeAcquisition.usual (Becoming.CodeAcquisition.initial 18)).records
+Becoming.RouteFormation.formed_answers_novel : Becoming.RouteFormation.respond Becoming.RouteFormation.developed
+    Becoming.CodeAcquisition.novel =
+  some ([false, false, true], 0)
+Becoming.RouteFormation.example_account : Becoming.RouteFormation.developed.drawn = 7 ∧
+  Becoming.RouteFormation.developed.stock = 4 ∧
+    Becoming.RouteFormation.developed.usedParts = 4 ∧
+      Becoming.RouteFormation.developed.parts = 0 ∧
+        7 + Becoming.RouteFormation.developed.drawn + Becoming.RouteFormation.developed.stock = 18
+Becoming.RouteFormation.no_parts_blocks : (Becoming.RouteFormation.develop
+        (Becoming.RouteFormation.prepared 18 0)).samples =
+    Becoming.CodeAcquisition.trialRecords Becoming.CodeAcquisition.usual ∧
+  (Becoming.RouteFormation.develop (Becoming.RouteFormation.prepared 18 0)).blocked = true ∧
+    Becoming.RouteFormation.respond (Becoming.RouteFormation.develop (Becoming.RouteFormation.prepared 18 0))
+        Becoming.CodeAcquisition.novel =
+      none
+Becoming.RouteFormation.partial_assembly : (Becoming.RouteFormation.develop
+        (Becoming.RouteFormation.prepared 18 1)).wires =
+    [false] ∧
+  (Becoming.RouteFormation.develop (Becoming.RouteFormation.prepared 18 1)).drawn = 1 ∧
+    (Becoming.RouteFormation.develop (Becoming.RouteFormation.prepared 18 1)).parts = 0 ∧
+      Becoming.RouteFormation.respond (Becoming.RouteFormation.develop (Becoming.RouteFormation.prepared 18 1))
+          Becoming.CodeAcquisition.novel =
+        none
+Becoming.RouteFormation.formed_short : (Becoming.RouteFormation.develop
+        (Becoming.RouteFormation.prepared 14 4)).installed =
+    some (Becoming.RouteFormation.programFor Becoming.CodeAcquisition.usual) ∧
+  Becoming.RouteFormation.respond (Becoming.RouteFormation.develop (Becoming.RouteFormation.prepared 14 4))
+      Becoming.CodeAcquisition.novel =
+    none
+Becoming.RouteFormation.switched_third_route : (Becoming.RouteFormation.develop
+        (Becoming.RouteFormation.prepared 22 6 Becoming.CodeAcquisition.switched)).attempts =
+    [([false, false], false), ([false, true], false), ([true, false], true)] ∧
+  Becoming.RouteFormation.respond
+      (Becoming.RouteFormation.develop (Becoming.RouteFormation.prepared 22 6 Becoming.CodeAcquisition.switched))
+      Becoming.CodeAcquisition.novel =
+    some ([true, false, false], 0)
+Becoming.RouteFormation.verdict_not_program : Becoming.RouteFormation.damaged.attempts =
+    Becoming.RouteFormation.developed.attempts ∧
+  Becoming.RouteFormation.respond Becoming.RouteFormation.damaged Becoming.CodeAcquisition.novel = none
+Becoming.RouteFormation.old_records_admit_duplicate : Becoming.RouteFormation.fits Becoming.RouteFormation.duplicated
+      (Becoming.CodeAcquisition.trialRecords Becoming.RouteFormation.collapsed) =
+    true ∧
+  Becoming.RouteFormation.operate Becoming.RouteFormation.duplicated Becoming.CodeAcquisition.novel ≠
+    Becoming.CodeAcquisition.eval Becoming.RouteFormation.collapsed Becoming.CodeAcquisition.novel
+Becoming.RouteFormation.repertoire_forms_failing_route : (Becoming.RouteFormation.develop
+        (Becoming.RouteFormation.prepared 15 2 Becoming.RouteFormation.collapsed)).installed =
+    some Becoming.RouteFormation.duplicated ∧
+  Becoming.RouteFormation.respond
+      (Becoming.RouteFormation.develop (Becoming.RouteFormation.prepared 15 2 Becoming.RouteFormation.collapsed))
+      Becoming.CodeAcquisition.novel =
+    some ([false, false, false, false], 0)
+Becoming.RouteFormation.novel_record_separates : Becoming.RouteFormation.fits Becoming.RouteFormation.duplicated
+      (Becoming.CodeAcquisition.trialRecords Becoming.RouteFormation.collapsed ++
+        [(Becoming.CodeAcquisition.novel,
+            Becoming.CodeAcquisition.eval Becoming.RouteFormation.collapsed Becoming.CodeAcquisition.novel)]) =
+    false ∧
+  Becoming.RouteFormation.fits (Becoming.RouteFormation.programFor Becoming.RouteFormation.collapsed)
+      (Becoming.CodeAcquisition.trialRecords Becoming.RouteFormation.collapsed ++
+        [(Becoming.CodeAcquisition.novel,
+            Becoming.CodeAcquisition.eval Becoming.RouteFormation.collapsed Becoming.CodeAcquisition.novel)]) =
+    true
+Becoming.RouteFormation.fresh_record_rebuilds : (Becoming.RouteFormation.corrected 27 6).samples =
+    Becoming.CodeAcquisition.trialRecords Becoming.RouteFormation.collapsed ++
+      [(Becoming.CodeAcquisition.novel,
+          Becoming.CodeAcquisition.eval Becoming.RouteFormation.collapsed Becoming.CodeAcquisition.novel)] ∧
+  (Becoming.RouteFormation.corrected 27 6).attempts =
+      [([false, false], true), ([false, false], false), ([false, false], false), ([false, true], true)] ∧
+    (Becoming.RouteFormation.corrected 27 6).installed =
+      some (Becoming.RouteFormation.programFor Becoming.RouteFormation.collapsed)
+Becoming.RouteFormation.repaired_answers_further : ¬Becoming.RouteFormation.further ∈
+      List.map Prod.fst (Becoming.RouteFormation.corrected 27 6).samples ∧
+  Becoming.RouteFormation.respond (Becoming.RouteFormation.corrected 27 6) Becoming.RouteFormation.further =
+    some ([false, false, false], 0)
+Becoming.RouteFormation.repair_account : (Becoming.RouteFormation.corrected 27 6).drawn = 16 ∧
+  (Becoming.RouteFormation.corrected 27 6).stock = 4 ∧
+    (Becoming.RouteFormation.corrected 27 6).usedParts = 6 ∧
+      (Becoming.RouteFormation.corrected 27 6).parts = 0 ∧
+        7 + (Becoming.RouteFormation.corrected 27 6).drawn + (Becoming.RouteFormation.corrected 27 6).stock = 27
+Becoming.RouteFormation.discrepancy_no_parts : (Becoming.RouteFormation.corrected 27 2).blocked = true ∧
+  (Becoming.RouteFormation.corrected 27 2).samples =
+      Becoming.CodeAcquisition.trialRecords Becoming.RouteFormation.collapsed ++
+        [(Becoming.CodeAcquisition.novel,
+            Becoming.CodeAcquisition.eval Becoming.RouteFormation.collapsed Becoming.CodeAcquisition.novel)] ∧
+    (Becoming.RouteFormation.corrected 27 2).installed = none ∧
+      Becoming.RouteFormation.respond (Becoming.RouteFormation.corrected 27 2) Becoming.RouteFormation.further = none
+Becoming.RouteFormation.unobserved_keeps_wrong : (Becoming.RouteFormation.develop
+        (Becoming.RouteFormation.prepared 27 6 Becoming.RouteFormation.collapsed)).installed =
+    some Becoming.RouteFormation.duplicated ∧
+  Becoming.RouteFormation.respond
+      (Becoming.RouteFormation.develop (Becoming.RouteFormation.prepared 27 6 Becoming.RouteFormation.collapsed))
+      Becoming.RouteFormation.further =
+    some ([false, false], 14)
+Becoming.RouteFormation.course_of_moves : ∀ (ms : List Becoming.RouteFormation.FormationMove)
+  (s : Becoming.RouteFormation.Apparatus),
+  Generative.Trace Becoming.RouteFormation.formationProcess s ms (List.foldl Becoming.RouteFormation.formationStep s ms)
+@Becoming.RouteFormation.trace_iff : ∀ {s t : Becoming.RouteFormation.Apparatus}
+  {ms : List Becoming.RouteFormation.FormationMove},
+  Generative.Trace Becoming.RouteFormation.formationProcess s ms t ↔
+    t = List.foldl Becoming.RouteFormation.formationStep s ms
+Becoming.RouteFormation.step_stock : ∀ (s : Becoming.RouteFormation.Apparatus)
+  (m : Becoming.RouteFormation.FormationMove),
+  (Becoming.RouteFormation.formationStep s m).stock + (Becoming.RouteFormation.formationStep s m).drawn =
+    s.stock + s.drawn
+@Becoming.RouteFormation.course_stock : ∀ {s t : Becoming.RouteFormation.Apparatus}
+  {ms : List Becoming.RouteFormation.FormationMove},
+  Generative.Trace Becoming.RouteFormation.formationProcess s ms t → t.stock + t.drawn = s.stock + s.drawn
+@Becoming.RouteFormation.place_step_parts : ∀ {s t : Becoming.RouteFormation.Apparatus} {socket : Bool},
+  Becoming.RouteFormation.formationProcess.step s (Becoming.RouteFormation.FormationMove.place socket) t →
+    t.parts + t.usedParts = s.parts + s.usedParts
+@Becoming.RouteFormation.inspect_installed : ∀ {s t : Becoming.RouteFormation.Apparatus}
+  {e : Becoming.CodeAcquisition.Evidence},
+  Becoming.RouteFormation.formationProcess.step s (Becoming.RouteFormation.FormationMove.inspect e) t →
+    s.blocked = false →
+      1 ≤ s.stock →
+        t.installed =
+          bif Becoming.RouteFormation.fits { first := e.first, second := e.second, route := s.wires } s.samples then
+            some { first := e.first, second := e.second, route := s.wires }
+          else none
+@Becoming.RouteFormation.installed_of_test : ∀ {b : Bool} {p q : Becoming.RouteFormation.Program},
+  (bif b then some p else none) = some q → b = true ∧ q = p
+@Becoming.RouteFormation.inspection_transfers : ∀ {s t : Becoming.RouteFormation.Apparatus}
+  {c : Becoming.CodeAcquisition.Code} {o : List Bool} {q : Becoming.RouteFormation.Program},
+  Becoming.RouteFormation.formationProcess.step s
+      (Becoming.RouteFormation.FormationMove.inspect { first := c.first, second := c.second, ordered := o }) t →
+    s.blocked = false →
+      1 ≤ s.stock →
+        s.samples = Becoming.CodeAcquisition.trialRecords c →
+          s.wires ∈ Becoming.RouteFormation.generatedRoutes 2 →
+            c.first ≠ c.second →
+              t.installed = some q →
+                ∀ (x : Becoming.CodeAcquisition.Expr),
+                  Becoming.RouteFormation.operate q x = Becoming.CodeAcquisition.eval c x
+@Becoming.RouteFormation.extended_inspection_transfers : ∀ {s t : Becoming.RouteFormation.Apparatus}
+  {c : Becoming.CodeAcquisition.Code} {o : List Bool} {q : Becoming.RouteFormation.Program},
+  Becoming.RouteFormation.formationProcess.step s
+      (Becoming.RouteFormation.FormationMove.inspect { first := c.first, second := c.second, ordered := o }) t →
+    s.blocked = false →
+      1 ≤ s.stock →
+        s.samples =
+            Becoming.CodeAcquisition.trialRecords c ++
+              [(Becoming.CodeAcquisition.novel, Becoming.CodeAcquisition.eval c Becoming.CodeAcquisition.novel)] →
+          s.wires ∈ Becoming.RouteFormation.generatedRoutes 2 →
+            t.installed = some q →
+              ∀ (x : Becoming.CodeAcquisition.Expr),
+                Becoming.RouteFormation.operate q x = Becoming.CodeAcquisition.eval c x
+@Becoming.RouteFormation.inspection_installs_own : ∀ {s t : Becoming.RouteFormation.Apparatus}
+  {c : Becoming.CodeAcquisition.Code} {o : List Bool},
+  Becoming.RouteFormation.formationProcess.step s
+      (Becoming.RouteFormation.FormationMove.inspect { first := c.first, second := c.second, ordered := o }) t →
+    s.blocked = false →
+      1 ≤ s.stock →
+        s.samples = Becoming.CodeAcquisition.trialRecords c →
+          s.wires = Becoming.RouteFormation.routeFor c → t.installed = some (Becoming.RouteFormation.programFor c)
+@Becoming.RouteFormation.training_no_route : ∀ {l : Becoming.CodeAcquisition.Learner},
+  Becoming.CodeAcquisition.trainProcess.step (Becoming.CodeAcquisition.initial 18) Becoming.CodeAcquisition.usual l →
+    l.code = some Becoming.CodeAcquisition.usual ∧
+      Becoming.RouteFormation.respond (Becoming.RouteFormation.fromLearner l 4) Becoming.CodeAcquisition.novel = none
+@Becoming.RouteFormation.develop_course_replaces : ∀ {y : Becoming.RouteFormation.Apparatus},
+  Generative.Trace Becoming.RouteFormation.formationProcess (Becoming.RouteFormation.prepared 18 4)
+      [Becoming.RouteFormation.FormationMove.develop] y →
+    y.attempts = [([false, false], false), ([false, true], true)] ∧
+      y.installed = some (Becoming.RouteFormation.programFor Becoming.CodeAcquisition.usual)
+@Becoming.RouteFormation.develop_course_records : ∀ {y : Becoming.RouteFormation.Apparatus},
+  Generative.Trace Becoming.RouteFormation.formationProcess (Becoming.RouteFormation.prepared 18 4)
+      [Becoming.RouteFormation.FormationMove.develop] y →
+    y.samples =
+      (Becoming.CodeAcquisition.train Becoming.CodeAcquisition.usual (Becoming.CodeAcquisition.initial 18)).records
+@Becoming.RouteFormation.develop_course_executes : ∀ {y : Becoming.RouteFormation.Apparatus},
+  Generative.Trace Becoming.RouteFormation.formationProcess (Becoming.RouteFormation.prepared 18 4)
+      [Becoming.RouteFormation.FormationMove.develop] y →
+    Becoming.RouteFormation.respond y Becoming.CodeAcquisition.novel = some ([false, false, true], 0)
+@Becoming.RouteFormation.develop_course_account : ∀ {y : Becoming.RouteFormation.Apparatus},
+  Generative.Trace Becoming.RouteFormation.formationProcess (Becoming.RouteFormation.prepared 18 4)
+      [Becoming.RouteFormation.FormationMove.develop] y →
+    y.drawn = 7 ∧ y.stock = 4 ∧ y.usedParts = 4 ∧ y.parts = 0 ∧ 7 + y.drawn + y.stock = 18
+@Becoming.RouteFormation.develop_course_removed : ∀ {y : Becoming.RouteFormation.Apparatus},
+  Generative.Trace Becoming.RouteFormation.formationProcess (Becoming.RouteFormation.prepared 18 4)
+      [Becoming.RouteFormation.FormationMove.develop] y →
+    { wires := y.wires, installed := none, stock := y.stock, drawn := y.drawn, parts := y.parts,
+            usedParts := y.usedParts, blocked := y.blocked, samples := y.samples, attempts := y.attempts }.attempts =
+        y.attempts ∧
+      Becoming.RouteFormation.respond
+          { wires := y.wires, installed := none, stock := y.stock, drawn := y.drawn, parts := y.parts,
+            usedParts := y.usedParts, blocked := y.blocked, samples := y.samples, attempts := y.attempts }
+          Becoming.CodeAcquisition.novel =
+        none
+@Becoming.RouteFormation.develop_course_no_parts : ∀ {y : Becoming.RouteFormation.Apparatus},
+  Generative.Trace Becoming.RouteFormation.formationProcess (Becoming.RouteFormation.prepared 18 0)
+      [Becoming.RouteFormation.FormationMove.develop] y →
+    y.samples = Becoming.CodeAcquisition.trialRecords Becoming.CodeAcquisition.usual ∧
+      y.blocked = true ∧ Becoming.RouteFormation.respond y Becoming.CodeAcquisition.novel = none
+@Becoming.RouteFormation.develop_course_partial : ∀ {y : Becoming.RouteFormation.Apparatus},
+  Generative.Trace Becoming.RouteFormation.formationProcess (Becoming.RouteFormation.prepared 18 1)
+      [Becoming.RouteFormation.FormationMove.develop] y →
+    y.wires = [false] ∧
+      y.drawn = 1 ∧ y.parts = 0 ∧ Becoming.RouteFormation.respond y Becoming.CodeAcquisition.novel = none
+@Becoming.RouteFormation.develop_course_short : ∀ {y : Becoming.RouteFormation.Apparatus},
+  Generative.Trace Becoming.RouteFormation.formationProcess (Becoming.RouteFormation.prepared 14 4)
+      [Becoming.RouteFormation.FormationMove.develop] y →
+    y.installed = some (Becoming.RouteFormation.programFor Becoming.CodeAcquisition.usual) ∧
+      Becoming.RouteFormation.respond y Becoming.CodeAcquisition.novel = none
+@Becoming.RouteFormation.develop_course_switched : ∀ {y : Becoming.RouteFormation.Apparatus},
+  Generative.Trace Becoming.RouteFormation.formationProcess
+      (Becoming.RouteFormation.prepared 22 6 Becoming.CodeAcquisition.switched)
+      [Becoming.RouteFormation.FormationMove.develop] y →
+    y.attempts = [([false, false], false), ([false, true], false), ([true, false], true)] ∧
+      Becoming.RouteFormation.respond y Becoming.CodeAcquisition.novel = some ([true, false, false], 0)
+@Becoming.RouteFormation.develop_course_collapsed : ∀ {y : Becoming.RouteFormation.Apparatus},
+  Generative.Trace Becoming.RouteFormation.formationProcess
+      (Becoming.RouteFormation.prepared 15 2 Becoming.RouteFormation.collapsed)
+      [Becoming.RouteFormation.FormationMove.develop] y →
+    y.installed = some Becoming.RouteFormation.duplicated ∧
+      Becoming.RouteFormation.respond y Becoming.CodeAcquisition.novel = some ([false, false, false, false], 0)
+@Becoming.RouteFormation.develop_course_unobserved : ∀ {y : Becoming.RouteFormation.Apparatus},
+  Generative.Trace Becoming.RouteFormation.formationProcess
+      (Becoming.RouteFormation.prepared 27 6 Becoming.RouteFormation.collapsed)
+      [Becoming.RouteFormation.FormationMove.develop] y →
+    y.installed = some Becoming.RouteFormation.duplicated ∧
+      Becoming.RouteFormation.respond y Becoming.RouteFormation.further = some ([false, false], 14)
+@Becoming.RouteFormation.repair_course_rebuilds : ∀ {y : Becoming.RouteFormation.Apparatus},
+  Generative.Trace Becoming.RouteFormation.formationProcess
+      (Becoming.RouteFormation.prepared 27 6 Becoming.RouteFormation.collapsed) Becoming.RouteFormation.repair y →
+    y.samples =
+        Becoming.CodeAcquisition.trialRecords Becoming.RouteFormation.collapsed ++
+          [(Becoming.CodeAcquisition.novel,
+              Becoming.CodeAcquisition.eval Becoming.RouteFormation.collapsed Becoming.CodeAcquisition.novel)] ∧
+      y.attempts = [([false, false], true), ([false, false], false), ([false, false], false), ([false, true], true)] ∧
+        y.installed = some (Becoming.RouteFormation.programFor Becoming.RouteFormation.collapsed)
+@Becoming.RouteFormation.repair_course_further : ∀ {y : Becoming.RouteFormation.Apparatus},
+  Generative.Trace Becoming.RouteFormation.formationProcess
+      (Becoming.RouteFormation.prepared 27 6 Becoming.RouteFormation.collapsed) Becoming.RouteFormation.repair y →
+    ¬Becoming.RouteFormation.further ∈ List.map Prod.fst y.samples ∧
+      Becoming.RouteFormation.respond y Becoming.RouteFormation.further = some ([false, false, false], 0)
+@Becoming.RouteFormation.repair_course_account : ∀ {y : Becoming.RouteFormation.Apparatus},
+  Generative.Trace Becoming.RouteFormation.formationProcess
+      (Becoming.RouteFormation.prepared 27 6 Becoming.RouteFormation.collapsed) Becoming.RouteFormation.repair y →
+    y.drawn = 16 ∧ y.stock = 4 ∧ y.usedParts = 6 ∧ y.parts = 0 ∧ 7 + y.drawn + y.stock = 27
+@Becoming.RouteFormation.repair_course_no_parts : ∀ {y : Becoming.RouteFormation.Apparatus},
+  Generative.Trace Becoming.RouteFormation.formationProcess
+      (Becoming.RouteFormation.prepared 27 2 Becoming.RouteFormation.collapsed) Becoming.RouteFormation.repair y →
+    y.blocked = true ∧
+      y.samples =
+          Becoming.CodeAcquisition.trialRecords Becoming.RouteFormation.collapsed ++
+            [(Becoming.CodeAcquisition.novel,
+                Becoming.CodeAcquisition.eval Becoming.RouteFormation.collapsed Becoming.CodeAcquisition.novel)] ∧
+        y.installed = none ∧ Becoming.RouteFormation.respond y Becoming.RouteFormation.further = none

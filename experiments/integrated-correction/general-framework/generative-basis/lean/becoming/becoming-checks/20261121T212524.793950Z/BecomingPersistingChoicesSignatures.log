@@ -1,0 +1,296 @@
+@Becoming.ChoiceOccasions.shown_withPairs_iff : ∀ {α : Type u_1} {O : Type u_2} {ch : Becoming.ChoiceOccasions α O}
+  {Q : Becoming.«际» α} {x y : α}, (ch.withPairs Q).Shown x y ↔ ch.Shown x y ∨ Q x y ∧ y ≠ x
+@Becoming.ChoiceOccasions.accords_withPairs_iff : ∀ {α : Type u_1} {O : Type u_2} {ch : Becoming.ChoiceOccasions α O}
+  {Q P : Becoming.«际» α}, (ch.withPairs Q).Accords P ↔ ch.Accords P ∧ ∀ (x y : α), Q x y → y ≠ x → P x y
+@Becoming.ChoiceOccasions.accorded_containing_iff : ∀ {α : Type u_1} {O : Type u_2} {ch : Becoming.ChoiceOccasions α O}
+  {Q : Becoming.«际» α},
+  (∃ P,
+      (∀ (x : α), ¬P x x) ∧
+        (∀ (x y z : α), P x y → P y z → P x z) ∧ ch.Accords P ∧ ∀ (x y : α), Q x y → y ≠ x → P x y) ↔
+    Becoming.«无环» (ch.withPairs Q).Shown
+@Becoming.ChoiceOccasions.above_in_every_containing_iff_reach : ∀ {α : Type u_1} {O : Type u_2}
+  {ch : Becoming.ChoiceOccasions α O} {Q : Becoming.«际» α},
+  Becoming.«无环» (ch.withPairs Q).Shown →
+    ∀ {x y : α},
+      (∀ (P : Becoming.«际» α),
+          (∀ (a : α), ¬P a a) →
+            (∀ (a b c : α), P a b → P b c → P a c) → ch.Accords P → (∀ (a b : α), Q a b → b ≠ a → P a b) → P x y) ↔
+        Becoming.«及» (ch.withPairs Q).Shown x y
+@Becoming.ChoiceOccasions.above_in_some_containing_of_unreached : ∀ {α : Type u_1} {O : Type u_2}
+  {ch : Becoming.ChoiceOccasions α O} {Q : Becoming.«际» α},
+  Becoming.«无环» (ch.withPairs Q).Shown →
+    ∀ {x y : α},
+      x ≠ y →
+        ¬Becoming.«及» (ch.withPairs Q).Shown y x →
+          ∃ P,
+            (∀ (a : α), ¬P a a) ∧
+              (∀ (a b c : α), P a b → P b c → P a c) ∧ ch.Accords P ∧ (∀ (a b : α), Q a b → b ≠ a → P a b) ∧ P x y
+@Becoming.ChoiceOccasions.not_reach_of_unmet : ∀ {α : Type u_1} {O : Type u_2} {ch : Becoming.ChoiceOccasions α O}
+  {Q : Becoming.«际» α} {a b : α},
+  ch.Unmet a → (∀ (y : α), Q a y → ∃ o, ch.menu o a) → ¬Becoming.«及» (ch.withPairs Q).Shown a b
+@Becoming.ChoiceOccasions.reach_withPairs_of_kept : ∀ {α : Type u_1} {O : Type u_2} {ch : Becoming.ChoiceOccasions α O}
+  {Q : Becoming.«际» α} {ends : α → Prop},
+  (∀ (o : O), ¬ends (ch.pick o)) →
+    (∀ (x y : α), Q x y → ¬ends x ∧ ends y) →
+      ∀ {a c : α}, Becoming.«及» (ch.withPairs Q).Shown a c → Becoming.«及» ch.Shown a c ∨ ends c
+@Becoming.ChoiceOccasions.noCycle_withPairs_of_kept : ∀ {α : Type u_1} {O : Type u_2}
+  {ch : Becoming.ChoiceOccasions α O} {Q : Becoming.«际» α} {ends : α → Prop},
+  Becoming.«无环» ch.Shown →
+    (∀ (o : O), ¬ends (ch.pick o)) → (∀ (x y : α), Q x y → ¬ends x ∧ ends y) → Becoming.«无环» (ch.withPairs Q).Shown
+@Becoming.ChoiceOccasions.keeping_above_ending : ∀ {α : Type u_1} {O : Type u_2} {ch : Becoming.ChoiceOccasions α O}
+  {ends : α → Prop},
+  Becoming.«无环» ch.Shown →
+    (∀ (o : O), ¬ends (ch.pick o)) →
+      ∃ P,
+        (∀ (x : α), ¬P x x) ∧
+          (∀ (x y z : α), P x y → P y z → P x z) ∧ ch.Accords P ∧ ∀ (x y : α), ch.Met x y → ¬ends x → ends y → P x y
+@Becoming.Weighting.WidensOn.ne : ∀ {X : Type} {items : List X} {a b : X → Bool},
+  Becoming.Weighting.WidensOn items a b → b ≠ a
+@Becoming.Weighting.adds_ends_of_allOrNone : ∀ {X : Type} {items : List X} {own a b : X → Bool},
+  Becoming.Weighting.AllOrNone items own b →
+    Becoming.Weighting.AddsOwn items own a b →
+      ¬Becoming.Weighting.EndsOwn items own a ∧ Becoming.Weighting.EndsOwn items own b
+@Becoming.ChoiceOccasions.contains_iff_increasingInOwnOn : ∀ {X O : Type} {ch : Becoming.ChoiceOccasions (X → Bool) O}
+  {items : List X} {own : X → Bool} {P : Becoming.«际» (X → Bool)},
+  (∀ (a b : X → Bool), ch.OwnWidensMet items own a b → b ≠ a → P a b) ↔
+    Becoming.Weighting.IncreasingInOwnOn ch.Met items own fun b a => P a b
+@Becoming.ChoiceOccasions.selfConcerned_consistent_iff : ∀ {X O : Type} {ch : Becoming.ChoiceOccasions (X → Bool) O}
+  {items : List X} {own : X → Bool},
+  (∃ P,
+      (∀ (a : X → Bool), ¬P a a) ∧
+        (∀ (a b c : X → Bool), P a b → P b c → P a c) ∧
+          ch.Accords P ∧ Becoming.Weighting.IncreasingInOwnOn ch.Met items own fun b a => P a b) ↔
+    Becoming.«无环» (ch.withPairs (ch.OwnWidensMet items own)).Shown
+@Becoming.ChoiceOccasions.increasingInOwnOn_of_keeping : ∀ {X O : Type} {ch : Becoming.ChoiceOccasions (X → Bool) O}
+  {items : List X} {own : X → Bool} {ends : (X → Bool) → Prop},
+  (∀ (a b : X → Bool),
+      ch.Met a b →
+        Becoming.Weighting.WidensOn items a b → Becoming.Weighting.AddsOwn items own a b → ¬ends a ∧ ends b) →
+    ∀ {P : Becoming.«际» (X → Bool)},
+      (∀ (x y : X → Bool), ch.Met x y → ¬ends x → ends y → P x y) →
+        Becoming.Weighting.IncreasingInOwnOn ch.Met items own fun b a => P a b
+@Becoming.ChoiceOccasions.selfConcerned_consistent_of_kept : ∀ {X O : Type} {ch : Becoming.ChoiceOccasions (X → Bool) O}
+  {items : List X} {own : X → Bool} {ends : (X → Bool) → Prop},
+  Becoming.«无环» ch.Shown →
+    (∀ (o : O), ¬ends (ch.pick o)) →
+      (∀ (a b : X → Bool),
+          ch.Met a b →
+            Becoming.Weighting.WidensOn items a b → Becoming.Weighting.AddsOwn items own a b → ¬ends a ∧ ends b) →
+        ∃ P,
+          (∀ (a : X → Bool), ¬P a a) ∧
+            (∀ (a b c : X → Bool), P a b → P b c → P a c) ∧
+              ch.Accords P ∧ Becoming.Weighting.IncreasingInOwnOn ch.Met items own fun b a => P a b
+@Becoming.ChoiceOccasions.selfConcerned_consistent_of_allOrNone : ∀ {X O : Type}
+  {ch : Becoming.ChoiceOccasions (X → Bool) O} {items : List X} {own : X → Bool},
+  Becoming.«无环» ch.Shown →
+    (∀ (o : O), ¬Becoming.Weighting.EndsOwn items own (ch.pick o)) →
+      (∀ (o : O) (a : X → Bool), ch.menu o a → Becoming.Weighting.AllOrNone items own a) →
+        ∃ P,
+          (∀ (a : X → Bool), ¬P a a) ∧
+            (∀ (a b c : X → Bool), P a b → P b c → P a c) ∧
+              ch.Accords P ∧ Becoming.Weighting.IncreasingInOwnOn ch.Met items own fun b a => P a b
+@Becoming.ChoiceOccasions.reversed_off_met : ∀ {X O : Type} {ch : Becoming.ChoiceOccasions (X → Bool) O}
+  {items : List X} {own : X → Bool},
+  Becoming.«无环» (ch.withPairs (ch.OwnWidensMet items own)).Shown →
+    ∀ {a b : X → Bool},
+      ch.Unmet a →
+        Becoming.Weighting.WidensOn items a b →
+          Becoming.Weighting.AddsOwn items own a b →
+            ∃ P,
+              (∀ (x : X → Bool), ¬P x x) ∧
+                (∀ (x y z : X → Bool), P x y → P y z → P x z) ∧
+                  ch.Accords P ∧
+                    (Becoming.Weighting.IncreasingInOwnOn ch.Met items own fun y x => P x y) ∧
+                      P b a ∧ ¬Becoming.Weighting.IncreasingInOwn items own fun y x => P x y
+@Becoming.Flow.member_after_never_overdrew : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        ∀ {G : Becoming.SelectionTerm.Generations X},
+          Becoming.SelectionTerm.Flow.Descended L W G →
+            ∀ {ds : List X} {m : Nat},
+              (∀ (t : Nat) (f : X),
+                  f ∈ L.present t →
+                    ∀ (d : X), d ∈ ds → 0 < L.give t f d → ∃ e, e ∈ ds ∧ W.requires t f e ∧ m ≤ W.need t f e) →
+                (∀ (s : Nat) (p : X), p ∈ G.family s → ∃ e, e ∈ ds ∧ W.requires s p e ∧ m ≤ W.need s p e) →
+                  ∀ {T n s : Nat} {y : X},
+                    T + n < s →
+                      y ∈ G.family s →
+                        ¬((∀ (k : Nat), k < n → L.replenishment ds (T + k) < L.uptake ds (T + k)) ∧
+                            W.stock ds T < n + m)
+@Becoming.Flow.persists_never_overdraws : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        ∀ {G : Becoming.SelectionTerm.Generations X},
+          Becoming.SelectionTerm.Flow.Descended L W G →
+            ∀ {ds : List X} {m : Nat},
+              (∀ (t : Nat) (f : X),
+                  f ∈ L.present t →
+                    ∀ (d : X), d ∈ ds → 0 < L.give t f d → ∃ e, e ∈ ds ∧ W.requires t f e ∧ m ≤ W.need t f e) →
+                (∀ (s : Nat) (p : X), p ∈ G.family s → ∃ e, e ∈ ds ∧ W.requires s p e ∧ m ≤ W.need s p e) →
+                  G.Persists →
+                    ∀ (T n : Nat),
+                      ¬((∀ (k : Nat), k < n → L.replenishment ds (T + k) < L.uptake ds (T + k)) ∧ W.stock ds T < n + m)
+@Becoming.Flow.persisting_keeping_above_ending : ∀ {X α O : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        ∀ {G : Becoming.SelectionTerm.Generations X},
+          Becoming.SelectionTerm.Flow.Descended L W G →
+            ∀ {ds : List X} {m : Nat},
+              (∀ (t : Nat) (f : X),
+                  f ∈ L.present t →
+                    ∀ (d : X), d ∈ ds → 0 < L.give t f d → ∃ e, e ∈ ds ∧ W.requires t f e ∧ m ≤ W.need t f e) →
+                (∀ (s : Nat) (p : X), p ∈ G.family s → ∃ e, e ∈ ds ∧ W.requires s p e ∧ m ≤ W.need s p e) →
+                  G.Persists →
+                    ∀ {ch : Becoming.ChoiceOccasions α O} {ends : α → Prop},
+                      (∀ (o : O),
+                          ends (ch.pick o) →
+                            ∃ T n,
+                              (∀ (k : Nat), k < n → L.replenishment ds (T + k) < L.uptake ds (T + k)) ∧
+                                W.stock ds T < n + m) →
+                        Becoming.«无环» ch.Shown →
+                          ∃ P,
+                            (∀ (x : α), ¬P x x) ∧
+                              (∀ (x y z : α), P x y → P y z → P x z) ∧
+                                ch.Accords P ∧ ∀ (x y : α), ch.Met x y → ¬ends x → ends y → P x y
+@Becoming.Flow.persisting_consistent_with_selfConcern : ∀ {X Y O : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  L.Balances W →
+    L.Acting W →
+      W.Dependent →
+        ∀ {G : Becoming.SelectionTerm.Generations X},
+          Becoming.SelectionTerm.Flow.Descended L W G →
+            ∀ {ds : List X} {m : Nat},
+              (∀ (t : Nat) (f : X),
+                  f ∈ L.present t →
+                    ∀ (d : X), d ∈ ds → 0 < L.give t f d → ∃ e, e ∈ ds ∧ W.requires t f e ∧ m ≤ W.need t f e) →
+                (∀ (s : Nat) (p : X), p ∈ G.family s → ∃ e, e ∈ ds ∧ W.requires s p e ∧ m ≤ W.need s p e) →
+                  G.Persists →
+                    ∀ {ch : Becoming.ChoiceOccasions (Y → Bool) O} {items : List Y} {own : Y → Bool}
+                      {ends : (Y → Bool) → Prop},
+                      (∀ (o : O),
+                          ends (ch.pick o) →
+                            ∃ T n,
+                              (∀ (k : Nat), k < n → L.replenishment ds (T + k) < L.uptake ds (T + k)) ∧
+                                W.stock ds T < n + m) →
+                        Becoming.«无环» ch.Shown →
+                          (∀ (a b : Y → Bool),
+                              ch.Met a b →
+                                Becoming.Weighting.WidensOn items a b →
+                                  Becoming.Weighting.AddsOwn items own a b → ¬ends a ∧ ends b) →
+                            ∃ P,
+                              (∀ (a : Y → Bool), ¬P a a) ∧
+                                (∀ (a b c : Y → Bool), P a b → P b c → P a c) ∧
+                                  ch.Accords P ∧ Becoming.Weighting.IncreasingInOwnOn ch.Met items own fun b a => P a b
+Becoming.PersistingChoices.Forgoing.beq_self : ∀ (t : Nat), t.beq t = true
+Becoming.PersistingChoices.Forgoing.beq_succ : ∀ (t : Nat), (t + 1).beq t = false
+Becoming.PersistingChoices.Forgoing.family_eq : ∀ (t : Nat),
+  Becoming.PersistingChoices.Forgoing.generations.family t = [some t]
+Becoming.PersistingChoices.Forgoing.balances : Becoming.PersistingChoices.Forgoing.flow.Balances
+  Becoming.PersistingChoices.Forgoing.web
+Becoming.PersistingChoices.Forgoing.acting : Becoming.PersistingChoices.Forgoing.flow.Acting
+  Becoming.PersistingChoices.Forgoing.web
+Becoming.PersistingChoices.Forgoing.dependent : Becoming.PersistingChoices.Forgoing.web.Dependent
+Becoming.PersistingChoices.Forgoing.descended : Becoming.SelectionTerm.Flow.Descended
+  Becoming.PersistingChoices.Forgoing.flow Becoming.PersistingChoices.Forgoing.web
+  Becoming.PersistingChoices.Forgoing.generations
+Becoming.PersistingChoices.Forgoing.persists : Becoming.PersistingChoices.Forgoing.generations.Persists
+Becoming.PersistingChoices.Forgoing.gated : ∀ (t : Nat) (f : Option Nat),
+  f ∈ Becoming.PersistingChoices.Forgoing.flow.present t →
+    ∀ (d : Option Nat),
+      d ∈ [none] →
+        0 < Becoming.PersistingChoices.Forgoing.flow.give t f d →
+          ∃ e,
+            e ∈ [none] ∧
+              Becoming.PersistingChoices.Forgoing.web.requires t f e ∧
+                1 ≤ Becoming.PersistingChoices.Forgoing.web.need t f e
+Becoming.PersistingChoices.Forgoing.coupled : ∀ (s : Nat) (p : Option Nat),
+  p ∈ Becoming.PersistingChoices.Forgoing.generations.family s →
+    ∃ e,
+      e ∈ [none] ∧
+        Becoming.PersistingChoices.Forgoing.web.requires s p e ∧ 1 ≤ Becoming.PersistingChoices.Forgoing.web.need s p e
+Becoming.PersistingChoices.Forgoing.never_overdraws : ∀ (T n : Nat),
+  ¬((∀ (k : Nat),
+        k < n →
+          Becoming.PersistingChoices.Forgoing.flow.replenishment [none] (T + k) <
+            Becoming.PersistingChoices.Forgoing.flow.uptake [none] (T + k)) ∧
+      Becoming.PersistingChoices.Forgoing.web.stock [none] T < n + 1)
+Becoming.PersistingChoices.Forgoing.order_strict : (∀ (a : Becoming.PersistingChoices.Forgoing.Item → Bool),
+    ¬Becoming.PersistingChoices.Forgoing.order a a) ∧
+  ∀ (a b c : Becoming.PersistingChoices.Forgoing.Item → Bool),
+    Becoming.PersistingChoices.Forgoing.order a b →
+      Becoming.PersistingChoices.Forgoing.order b c → Becoming.PersistingChoices.Forgoing.order a c
+Becoming.PersistingChoices.Forgoing.order_accords : Becoming.PersistingChoices.Forgoing.choices.Accords
+  Becoming.PersistingChoices.Forgoing.order
+Becoming.PersistingChoices.Forgoing.noCycle : Becoming.«无环» Becoming.PersistingChoices.Forgoing.choices.Shown
+Becoming.PersistingChoices.Forgoing.kept : ∀ (o : Unit),
+  ¬Becoming.Weighting.EndsOwn Becoming.PersistingChoices.Forgoing.items Becoming.PersistingChoices.Forgoing.own
+      (Becoming.PersistingChoices.Forgoing.choices.pick o)
+Becoming.PersistingChoices.Forgoing.more_ne_fewer : Becoming.PersistingChoices.Forgoing.more ≠
+  Becoming.PersistingChoices.Forgoing.fewer
+Becoming.PersistingChoices.Forgoing.met : Becoming.PersistingChoices.Forgoing.choices.Met
+  Becoming.PersistingChoices.Forgoing.more Becoming.PersistingChoices.Forgoing.fewer
+Becoming.PersistingChoices.Forgoing.widens : Becoming.Weighting.WidensOn Becoming.PersistingChoices.Forgoing.items
+  Becoming.PersistingChoices.Forgoing.more Becoming.PersistingChoices.Forgoing.fewer
+Becoming.PersistingChoices.Forgoing.adds : Becoming.Weighting.AddsOwn Becoming.PersistingChoices.Forgoing.items
+  Becoming.PersistingChoices.Forgoing.own Becoming.PersistingChoices.Forgoing.more
+  Becoming.PersistingChoices.Forgoing.fewer
+Becoming.PersistingChoices.Forgoing.keeping_above_drain : ∃ P,
+  (∀ (x : Becoming.PersistingChoices.Forgoing.Item → Bool), ¬P x x) ∧
+    (∀ (x y z : Becoming.PersistingChoices.Forgoing.Item → Bool), P x y → P y z → P x z) ∧
+      Becoming.PersistingChoices.Forgoing.choices.Accords P ∧
+        P Becoming.PersistingChoices.Forgoing.more Becoming.PersistingChoices.Forgoing.drain ∧
+          P Becoming.PersistingChoices.Forgoing.fewer Becoming.PersistingChoices.Forgoing.drain
+Becoming.PersistingChoices.Forgoing.not_selfConcerned : ¬∃ P,
+    (∀ (a : Becoming.PersistingChoices.Forgoing.Item → Bool), ¬P a a) ∧
+      (∀ (a b c : Becoming.PersistingChoices.Forgoing.Item → Bool), P a b → P b c → P a c) ∧
+        Becoming.PersistingChoices.Forgoing.choices.Accords P ∧
+          Becoming.Weighting.IncreasingInOwnOn Becoming.PersistingChoices.Forgoing.choices.Met
+            Becoming.PersistingChoices.Forgoing.items Becoming.PersistingChoices.Forgoing.own fun b a => P a b
+Becoming.PersistingChoices.Forgoing.persists_not_selfConcerned : Becoming.PersistingChoices.Forgoing.flow.Balances
+    Becoming.PersistingChoices.Forgoing.web ∧
+  Becoming.PersistingChoices.Forgoing.flow.Acting Becoming.PersistingChoices.Forgoing.web ∧
+    Becoming.PersistingChoices.Forgoing.web.Dependent ∧
+      Becoming.SelectionTerm.Flow.Descended Becoming.PersistingChoices.Forgoing.flow
+          Becoming.PersistingChoices.Forgoing.web Becoming.PersistingChoices.Forgoing.generations ∧
+        Becoming.PersistingChoices.Forgoing.generations.Persists ∧
+          Becoming.PersistingChoices.Forgoing.choices.Accords Becoming.PersistingChoices.Forgoing.order ∧
+            (∀ (o : Unit),
+                ¬Becoming.Weighting.EndsOwn Becoming.PersistingChoices.Forgoing.items
+                    Becoming.PersistingChoices.Forgoing.own (Becoming.PersistingChoices.Forgoing.choices.pick o)) ∧
+              ¬∃ P,
+                  (∀ (a : Becoming.PersistingChoices.Forgoing.Item → Bool), ¬P a a) ∧
+                    (∀ (a b c : Becoming.PersistingChoices.Forgoing.Item → Bool), P a b → P b c → P a c) ∧
+                      Becoming.PersistingChoices.Forgoing.choices.Accords P ∧
+                        Becoming.Weighting.IncreasingInOwnOn Becoming.PersistingChoices.Forgoing.choices.Met
+                          Becoming.PersistingChoices.Forgoing.items Becoming.PersistingChoices.Forgoing.own fun b a =>
+                          P a b
+Becoming.PersistingChoices.Crossed.b₁_ne_a₁ : Becoming.PersistingChoices.Crossed.b₁ ≠
+  Becoming.PersistingChoices.Crossed.a₁
+Becoming.PersistingChoices.Crossed.b₂_ne_a₂ : Becoming.PersistingChoices.Crossed.b₂ ≠
+  Becoming.PersistingChoices.Crossed.a₂
+Becoming.PersistingChoices.Crossed.widens₁ : Becoming.Weighting.WidensOn Becoming.PersistingChoices.Crossed.items
+  Becoming.PersistingChoices.Crossed.b₁ Becoming.PersistingChoices.Crossed.a₂
+Becoming.PersistingChoices.Crossed.widens₂ : Becoming.Weighting.WidensOn Becoming.PersistingChoices.Crossed.items
+  Becoming.PersistingChoices.Crossed.b₂ Becoming.PersistingChoices.Crossed.a₁
+Becoming.PersistingChoices.Crossed.not_selfConcerned : (∀ (c : Becoming.PersistingChoices.Crossed.Item → Bool),
+    c = Becoming.PersistingChoices.Crossed.a₁ ∨
+        c = Becoming.PersistingChoices.Crossed.b₁ ∨
+          c = Becoming.PersistingChoices.Crossed.a₂ ∨ c = Becoming.PersistingChoices.Crossed.b₂ →
+      ∃ o, Becoming.PersistingChoices.Crossed.choices.menu o c) ∧
+  (∀ (o : Bool),
+      ¬Becoming.Weighting.EndsOwn Becoming.PersistingChoices.Crossed.items Becoming.PersistingChoices.Crossed.own
+          (Becoming.PersistingChoices.Crossed.choices.pick o)) ∧
+    ¬∃ P,
+        (∀ (a : Becoming.PersistingChoices.Crossed.Item → Bool), ¬P a a) ∧
+          (∀ (a b c : Becoming.PersistingChoices.Crossed.Item → Bool), P a b → P b c → P a c) ∧
+            Becoming.PersistingChoices.Crossed.choices.Accords P ∧
+              Becoming.Weighting.IncreasingInOwn Becoming.PersistingChoices.Crossed.items
+                Becoming.PersistingChoices.Crossed.own fun b a => P a b
+@Becoming.Flow.persists_not_listsAdmitted : ∀ {X : Type} {L : Becoming.Flow X X} {W : Becoming.Web X X},
+  L.Acting W →
+    W.Dependent →
+      ∀ {G : Becoming.SelectionTerm.Generations X},
+        Becoming.SelectionTerm.Flow.Descended L W G →
+          G.Persists → ∀ (items : List (Nat × X)), ¬W.ListsAdmitted items W.level

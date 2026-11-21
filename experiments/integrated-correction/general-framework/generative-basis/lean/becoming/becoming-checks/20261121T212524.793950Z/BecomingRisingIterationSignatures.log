@@ -1,0 +1,21 @@
+Becoming.Iteration.singleton_rise_needs_em : (∀ (Ψ : (Unit → Prop) → Unit → Prop),
+    Becoming.Iteration.MonotoneStep Ψ →
+      Becoming.Iteration.iter Ψ (fun x => False) 2 () → Becoming.Iteration.iter Ψ (fun x => False) 1 ()) →
+  ∀ (p : Prop), Becoming.Decided p
+@Becoming.Iteration.commutes_false : ∀ {S : Type u_1} {Ψ : (S → Prop) → S → Prop},
+  Becoming.Iteration.MonotoneStep Ψ →
+    ∀ {all : List S}, (∀ (x : S), x ∈ all) → Becoming.Iteration.CommutesWithImplication Ψ False
+@Becoming.Iteration.rise_not_not : ∀ {S : Type u_1} {Ψ : (S → Prop) → S → Prop} {W₀ : S → Prop},
+  Becoming.Iteration.MonotoneStep Ψ →
+    (∀ (y : S), W₀ y → Ψ W₀ y) →
+      ∀ {all : List S},
+        (∀ (x : S), x ∈ all) →
+          ∀ {y : S}, Becoming.Iteration.iter Ψ W₀ (all.length + 1) y → ¬¬Becoming.Iteration.iter Ψ W₀ all.length y
+@Becoming.Iteration.rise_of_stable : ∀ {S : Type u_1} {Ψ : (S → Prop) → S → Prop} {W₀ : S → Prop},
+  Becoming.Iteration.MonotoneStep Ψ →
+    (∀ (y : S), W₀ y → Ψ W₀ y) →
+      ∀ {all : List S},
+        (∀ (x : S), x ∈ all) →
+          ∀ {y : S},
+            (¬¬Becoming.Iteration.iter Ψ W₀ all.length y → Becoming.Iteration.iter Ψ W₀ all.length y) →
+              Becoming.Iteration.iter Ψ W₀ (all.length + 1) y → Becoming.Iteration.iter Ψ W₀ all.length y

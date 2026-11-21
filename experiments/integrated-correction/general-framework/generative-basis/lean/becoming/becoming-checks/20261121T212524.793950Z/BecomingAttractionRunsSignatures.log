@@ -1,0 +1,43 @@
+@Becoming.AttractionRuns.returning_invariant : ∀ {S : Type u_1} (next : S → S),
+  Becoming.Invariant (Becoming.Law.process next) (Becoming.Branching.Returns (Becoming.Law.process next))
+@Becoming.AttractionRuns.drawnInto_returning : ∀ {S : Type u_1} {next : S → S} {all : List S},
+  (∀ (x : S), x ∈ all) →
+    ∀ {s : S},
+      ¬Becoming.Branching.Returns (Becoming.Law.process next) s →
+        Becoming.Branching.NecessarilyDrawnInto (Becoming.Law.process next)
+          (Becoming.Branching.Returns (Becoming.Law.process next)) s
+@Becoming.AttractionRuns.drawn_iff_lost : ∀ {S : Type u_1} {next : S → S} {all : List S},
+  (∀ (x : S), x ∈ all) →
+    ∀ {s : S},
+      Becoming.Branching.NecessarilyDrawn (Becoming.Law.process next) s ↔
+        ¬∀ (n : Nat), Becoming.Branching.Reachable (Becoming.Law.process next) n s
+@Becoming.AttractionRuns.drawn_not_keeps : ∀ {S : Type u_1} {next : S → S} {s : S},
+  Becoming.Branching.NecessarilyDrawn (Becoming.Law.process next) s →
+    ∀ {all : List S}, (∀ (x : S), x ∈ all) → ¬Becoming.Branching.KeepsPossibilities (Becoming.Law.process next)
+@Becoming.AttractionRuns.lossless_iff_none_drawn : ∀ {S : Type u_1} {next : S → S} [DecidableEq S] {all : List S},
+  (∀ (x : S), x ∈ all) →
+    (Becoming.Branching.Lossless (Becoming.Law.process next) ↔
+      ∀ (s : S), ¬Becoming.Branching.NecessarilyDrawn (Becoming.Law.process next) s)
+@Becoming.AttractionRuns.merges_draws : ∀ {S : Type u_1} {next : S → S},
+  Becoming.Branching.Merges (Becoming.Law.process next) →
+    ¬¬∃ s, Becoming.Branching.NecessarilyDrawn (Becoming.Law.process next) s
+Becoming.AttractionRuns.succ_drawn_lossless : Becoming.Branching.NecessarilyDrawn (Becoming.Law.process Nat.succ) 0 ∧
+  Becoming.Branching.Lossless (Becoming.Law.process Nat.succ)
+Becoming.AttractionRuns.pred_drawn_keeps : Becoming.Branching.NecessarilyDrawn (Becoming.Law.process Nat.pred) 1 ∧
+  Becoming.Branching.KeepsPossibilities (Becoming.Law.process Nat.pred)
+Becoming.AttractionRuns.ratchet_merges : Becoming.Branching.Merges (Becoming.Law.process Becoming.Ratchet.next)
+Becoming.AttractionRuns.ratchet_false_never_returns : ¬Becoming.Branching.Returns
+    (Becoming.Law.process Becoming.Ratchet.next) false
+Becoming.AttractionRuns.ratchet_false_lost : ¬Becoming.Branching.Reachable (Becoming.Law.process Becoming.Ratchet.next)
+    1 false
+Becoming.AttractionRuns.ratchet_true_not_drawn : ¬Becoming.Branching.NecessarilyDrawn
+    (Becoming.Law.process Becoming.Ratchet.next) true
+Becoming.AttractionRuns.captured_rule_invariant : ∀ (g : Bool),
+  Becoming.Invariant (Becoming.Law.process Becoming.Captured.next) fun s => s.snd = g
+Becoming.AttractionRuns.captured_state_drawn : ∀ (g : Bool),
+  Becoming.Branching.NecessarilyDrawnInto (Becoming.Law.process Becoming.Captured.next) (fun s => s = (g, g)) (!g, g) ∧
+    ¬Becoming.Branching.Returns (Becoming.Law.process Becoming.Captured.next) (!g, g)
+Becoming.AttractionRuns.captured_rule_drawn : ∀ (g : Bool),
+  Becoming.Branching.NecessarilyDrawnInto (Becoming.Law.process Becoming.Captured.next) (fun s => s = (!g, !g))
+      (g, !g) ∧
+    ¬Becoming.Branching.Returns (Becoming.Law.process Becoming.Captured.next) (g, !g)
