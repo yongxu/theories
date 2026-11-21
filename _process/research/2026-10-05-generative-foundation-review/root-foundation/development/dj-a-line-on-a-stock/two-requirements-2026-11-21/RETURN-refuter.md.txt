@@ -1,0 +1,123 @@
+*An AI reader who took no part's return (run as Claude Opus), word for word from the run's journal (wf_0c5559fa-ec2); agents could not write report files, so this return is its report.*
+
+**Reader's report on `Becoming.ScratchTwoRequirements` (board row DJ). AI-written (Claude), read-only, no part taken in the work.**
+
+## Findings
+
+**F1. MUST. Worker's report, "the case for", on `t2`.** The report says that `t2` is "running down unseen" stated as a run, because "nothing in what the rule reads differs while the level falls". That is false of `t2`. What the rule reads is `shareRead (orbit k) = s0.1 + k` (`t2`'s first conjunct, line 235), and it differs at every step.
+
+What `t2` does bear: at every step the rule's move is to favour, and the requirement is met (by `valid` alone). The level falls by one each step and first fails at step `s0.2`. The level is not among what the rule reads.
+
+Exact words: "the move does not change and the selection's requirement is met at every step while the level falls to zero at step `s0.2`; the level is not read."
+
+**F2. MUST, at the level of telling. Worker's report, the case for, on `line_two` (line 316).** The report calls it "turn in time as a theorem". What `line_two` states, for every reading `obs` and all `c` and `n`: if some rule made from `obs` meets `yieldReq c m n`, then `2 ≤ m`.
+
+The proof is one configuration, `(c, 1)`. There the yielding clause forces favouring when `m ≤ 1`, and `favour_at_one` forbids it. The theorem says that a requirement demanding a favour at level 1 has no rule, which is one step's draw above the floor. The frozen file's own "After", point 3, says this too, and adds that the 2 is not a threshold of the map.
+
+Exact words: "a yielding line of 0 or 1 cannot be met by any rule; for this process, 'early enough' means at least one step's draw above zero."
+
+**F3. LESSER. The horizon `n` does no work anywhere.** `closed_above` together with `viable_above` gives `Viable proc above n s` for every `n` wherever `above s` holds. So for every `n`, `Admissible proc above n s a` comes to "the next configuration has level ≠ 0".
+
+Every theorem holds uniformly in `n`, and keeping for `n` steps is keeping for one step. This is no bent definition: the frozen process has no giving, and holding always keeps. But it should be said wherever "time" is claimed (see 3 below).
+
+**F4. LESSER. The share in `bothRead` is idle for T5.** `eagerRule` (line 387) reads only the level, and it meets `yieldReq c 3 n` (`t6_other_rule`). The same proof would give, for every `c`, every `n` and every `m ≥ 2`, a rule from the level alone (`fun s => s.2`). This is not stated as a theorem; I read it off the proof of `t6_other_rule` and `adm_of`.
+
+The frozen T5 phrase "exactly where the reading registers the level" is proved only for the two named readings, `shareRead` and `bothRead`. "Registers the level" has no definition in the module, and the docstring of `t5` (line 322) rightly claims no more.
+
+Exact words for the note: "proved for the two readings named; the share does no work in the reading that succeeds".
+
+**F5. LESSER. The worker's verdict on T6 (report): "it fails in its 'then stays' part".** What `t6_other_rule` refutes for "any rule" is where the run stops (one below the line), not that it stays.
+
+Hand check, line `m = 3`, start `(c, 3)`, `eagerRule`:
+- Step 1 is `(c+1, 2)`.
+- Step 2 is `(c+2, 1)`.
+- At level 1 favouring is inadmissible, so every valid rule holds from then on.
+
+From `t6_guard`, and from the fact that the level falls only when the share rises, every valid rule's run plausibly ends at rest at some level between 1 and `m−1`. That is not proved.
+
+Exact words: "for any rule, the 'one below the line' part fails (`t6_other_rule`): the run can go down to level 1."
+
+**F6. LESSER. `t6_guard` (336) and `t6_descent` (348): "needs no premise on m".** This is true, but for `m ≤ 1` the premise `valid` cannot be met. By `t5_low_none` and `line_two` no rule meets `yieldReq` there, so both theorems are empty for those lines. Say so.
+
+**F7. LESSER. The reading does no work in `t2`.** `t2` is stated for `shareRead`. Any rule under any reading that meets `selReq c` must favour wherever the share is at least `c`, so the same run follows. Restricting to the share reading says less than holds, and it hides that the reading is idle in T2. `t1_no_reading` already shows the reading is idle for `selReq`.
+
+**F8. LESSER. Module header, line 11: "Each declaration's docstring says ... which older theorems it calls."** The lists are partial:
+- `t2` (232) also calls `Nat.le_trans` and `Nat.le_add_right` (line 246).
+- `t6_descent` (347) also calls `Nat.le_trans`, `Nat.le_add_right`, `Nat.le_of_succ_le_succ` and `Nat.le_of_succ_le`.
+- `t6_other_rule` (393) also calls `Nat.le_trans` and `Nat.le_succ`.
+- `t4_conflict` and `t5_share_none` also call `succ_not_zero`.
+
+Exact words: "names the package theorems and the module's own lemmas it calls".
+
+**F9. LESSER. Report: "the conflict holds under every reading into any type".** `t4` and `t5_low_none` take `{O : Type}`, which is universe 0 only. Exact words: "every reading into a type of `Type`".
+
+**F10. LESSER. Report: "Build 1 failed on two implicit arguments ... in `geq_complete` and `geq_sound`".** `build-ScratchTwoRequirements.build1.log` shows one error, at line 36 (`geq_complete`), and the one unused-variable warning, at line 310. Lean may have stopped before `geq_sound`, or the worker fixed it ahead of time. Either way the log does not show a second failure.
+
+**F11. LESSER. Report, on `keepReq`: "Without that restriction no rule could exist at all".** I checked this by hand and it is correct. At level 0 both moves lead to level 0, and `Viable n` needs the guard there. But no theorem states it. The restriction matches the frozen words "where the guard holds", so the requirement is not bent.
+
+## Answers to the questions
+
+**1. Definitions.**
+- `next`/`proc` (121, 126) is the frozen process. Favouring gives `(s.1+1, s.2-1)`, and `Nat` subtraction stops at zero. Holding gives `s`. The guard is `s.2 ≠ 0`.
+- `selReq`, `keepReq` and `yieldReq` match the three frozen requirements word for word. None is restricted, weakened or strengthened beyond the frozen text.
+- `UniformPolicy`, `Admissible`, `Viable` and `Closed` are the package's, referred to by name. The scratch tree holds no copy of `GuardHorizon.lean`, and `scratch_build.py` takes every other module from the checkout.
+- Nothing is made true by a definition chosen for it. The orbit is `next` iterated, and it agrees with `proc.step` by `rfl` (used in `t6_guard`).
+
+**2. Theorems, checked by hand.**
+- **T1.** `t1`: `UniformPolicy shareRead (selReq c)`. `t1_no_reading`: the same under the reading into `Unit`. Both are exact.
+- **T2**, start `(3, 2)` with `c = 3`: the run is `(3,2)`, `(4,1)`, `(5,0)`. That matches `(3+k, 2−k)`. The guard fails at step 2 = `s0.2` and holds at steps 0 and 1. The statement is exact as the report copies it; see F1 and F7 for how it is told.
+- **T3.** `t3` is exact.
+- **T4.** At `(c, 1)`, `selReq` forces `true`, and `favour_at_one` holds because `next (x,1) true = (x+1, 0)` fails the guard at horizon 0. So `t4` holds for every reading in `Type`. Exact, up to F9.
+- **T5.** `t5_share_none`: `(c, m)` must favour and `(c, 1)` cannot, and both read share `c`. This holds for every `m`, `m = 0` and `m = 1` included. Example: `c = 3`, `m = 2` gives `(3,2)` and `(3,1)`. `t5_low_none` with `m ≤ 1`: at `(c, 1)` both `c ≤ c` and `m ≤ 1` hold, so favouring is forced and impossible. In `t5`, the forward direction is `line_two` at `bothRead` and the backward direction is `t5_both` (`yieldRule_valid`: favouring only where `geq m s.2`, so `2 ≤ m ≤ s.2`, `favour_admissible`). With the line at one, `t5_low_none` covers it under every reading. Both directions of "exactly where" hold, for `bothRead`.
+- **T6**, start `(3, 3)` with `c = 3`, `m = 2`, `d = 1`: the run is `(4, 2)`, then `(5, 1)`, then it holds, because `geq 2 1 = false`. That matches `t6_descent` for `k ≤ 2` and `t6_stays` at `(x0+d+1, m−1) = (5, 1)`, with the guard holding throughout. `t6_other_rule` from `(c, 3)` gives `(c+1, 2)`, then `(c+2, 1)`, by `rfl`. Its validity checks out: `2 ≤ 3 ≤ s.2` covers the yielding clause, and favouring only where `2 ≤ level` covers keeping.
+
+**3. The frozen question: the direction's sentence, or the package's built cases said again with numbers?** Each of the four, in turn:
+
+- **The selection's requirement.** Without it, `yieldReq` becomes `keepReq`, and "always hold" meets it under every reading. `t4` and `t5_share_none` then fail, so it does work. But all it does is force a favour at one configuration, `(c, m)`, whose share-fibre also contains a level-1 configuration. The threshold structure (all shares at least `c`) is never used. Any requirement forcing favour at some `(x, m)` would give the same results.
+- **What it rests on (the level and the guard).** It is essential to `t4`, `t5` and `t6`.
+- **The reading.** It does work only in `t5`. `t4`, `t5_low_none`, `line_two`, `t6_guard` and `t6_descent` hold under every reading, and `t2` would too (F7). Inside `t5`, what does work is whether the reading registers the level, not the share (F4). That is exactly the shape of `statewise_not_uniform` and `discriminating_reading_uniform`: two configurations in one fibre needing different moves, and a reading that tells them apart restores a rule.
+- **The time.** The horizon `n` can be removed with everything unchanged (F3). The line being at least two is one step's arithmetic (F2). The step at which the level is lost (`t2`: step `s0.2`) and the rest point (`t6_stays`) are subtraction, but they are statements about runs, which the package's two built cases do not have.
+
+What the built case has that `statewise_not_uniform` and `discriminating_reading_uniform` lack:
+- a process with moves and a guard kept through `Viable` and `Admissible`;
+- runs, with a step count;
+- one requirement that joins a selection clause and keeping;
+- a split, inside one table, between a conflict no reading can resolve (`t4`, at a configuration) and a failure that depends on the reading (`t5`);
+- a refuted part of a guess (`t6_other_rule`).
+
+What it lacks to be about the lock:
+- The lock (`RuleCapture.Locked`, `turn_locked`, `locked_stays`) has the rule in force as part of the configuration, re-read from the share by `h` at reading steps, under `Raises` and `ReadsShare` on preorders. Here the rule is a fixed function and `c` is handed in. There is no rule component in the state, no reading schedule, and no `Ideals.Preorder`.
+- The lock's model has no level or guard at all.
+- No `RuleShaping` threshold is formed: `favours_iff`'s `c ≤ s` comes from shaping counts, while here `c` is a parameter.
+- Nothing forms the yielding requirement from the selection's own.
+
+A tie that looks possible, but was neither written nor checked: take `S = Nat×Nat`, `R = Bool`, and `h` the share's `geq c`. Then T2's "the share stays at least `c` and rises" might be had as a case of `locked_rises`.
+
+The strongest case for "the direction's sentence": `t2` places a selection met at every step against a level lost at a stated step. `t4` against `t5` separates a conflict that is no one's reading from one that is. The yielding requirement has a rule only under a reading that registers what it rests on.
+
+The strongest case for "said again": the reading-dependent content is the two-configurations-one-fibre argument of `statewise_not_uniform`. The share is idle in both the dynamics and the succeeding reading. The horizon is idle. The selection's rule is not set from its own share in any way that matters, since `t1_no_reading` holds. The package's laws do only bookkeeping (`closed_viable`, `viable_guard`).
+
+**My answer:** it is the package's built cases of a uniform policy said again with numbers, placed on a process with runs. Of the four parts, only what it rests on does work that the old cases lack. The selection's requirement works only as "force a favour at one point". The reading is the old fibre argument. The time is subtraction and an idle horizon.
+
+**4. Is a built case told as a law?** The module does not do this: every docstring is about `proc`, `above` and the named readings. The worker's report does it twice (F1, F2). Its closing "the yield must come early enough", said under every reading, is right for this process only.
+
+**5. The build log.** It shows `exit 0 build 2`, `"unclean": []`, and `"with_axioms": {}` for `Becoming.ScratchTwoRequirements`, with 39 theorems and 52 declarations. My own count of the file is 39 theorems and 13 definitions, which makes 52. The file was modified at 20:02:51 and the log starts at 20:02:54, so the log is of the module as it now stands. A search found no `sorry`, `axiom`, `native_decide`, `unsafe`, `omega`, `simp`, `decide`, `propext`, `Classical` or `funext` in the file. Note that `scratch_build.py` calls itself "a working build, not a receipt": the checker's controls have not run.
+
+**6. Header and docstrings.** Only F8 (the call lists) and F6 ("no premise on `m`", true but empty for `m ≤ 1`). Everything else is borne by the proofs. The docstring of `t6_other_rule` says the built rule "stays at 2"; that rests on `t6_stays` with `d = 0`, not on this theorem itself.
+
+**7. Did anything change, by the frozen file's own words?** T2, T4 and T5 hold as worded, the last for the two readings named, so the first criterion does not apply. On the second, T7 holds in substance in my judgement: it is the package's built cases of a uniform policy with numbers. Strictly, T7's clause that "no law of the package does work" is false only in small part, since `closed_viable` and `viable_guard` are called. So by the file's own test, nothing has changed. What is kept whatever the verdict:
+- the table: `t4`, a conflict at a configuration under every reading, against `t5`, a failure that depends on the reading;
+- the refuted part of T6 (`t6_other_rule`);
+- two facts that say what a next built case would need: the horizon is idle with no giving to the level, and the share is idle in the reading that succeeds. A next case would need a level with a giving, so that `n` and the line matter, and a rule re-read from its own share, as the lock's `turn` does, so that the selection's side is the lock's and not a parameter.
+
+## What I did not read
+
+- `GenerativeCore`'s definitions of `Process` and `Enabled`, and `Frame.lean`. I relied on the proofs type-checking with `⟨s, rfl⟩`.
+- The `Drain` namespace of `ScratchKeptForViable.lean`.
+- `RuleCapture`'s `turn` and `paced`, and `Ideals.Preorder`.
+- The `as-frozen` copy of the frozen file.
+- `DIRECTION.md` beyond its lines 118–120.
+- The rest of `scratch_build.py`.
+- Whether a proof was cut between build 1 and build 2.
+
+Tool calls: 11.

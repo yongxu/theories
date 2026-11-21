@@ -1,0 +1,24 @@
+start 20:02:54
+{
+  "tree": "/Users/ren/tmp/dj/batch24",
+  "modules": 17,
+  "ran": [
+    "Becoming.ScratchTwoRequirements",
+    "BecomingScratchTwoRequirementsAxiomAudit"
+  ],
+  "reused": 16,
+  "unclean": [],
+  "audits": {
+    "Becoming.ScratchTwoRequirements": {
+      "theorems": 39,
+      "declarations": 52,
+      "with_axioms": {}
+    }
+  },
+  "seconds": {
+    "Becoming.ScratchTwoRequirements": 2.889,
+    "BecomingScratchTwoRequirementsAxiomAudit": 0.448
+  }
+}
+exit 0 build 2
+end 20:03:02

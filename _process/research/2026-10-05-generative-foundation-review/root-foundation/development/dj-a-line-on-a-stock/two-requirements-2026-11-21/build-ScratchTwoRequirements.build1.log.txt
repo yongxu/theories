@@ -1,0 +1,29 @@
+start 20:02:24
+Becoming/ScratchTwoRequirements.lean:36:60: error: Application type mismatch: The argument
+  h
+has type
+  n✝¹ + 1 ≤ n✝ + 1
+but is expected to have type
+  (n✝¹ + 1).succ ≤ (n✝ + 1).succ
+in the application
+  Nat.le_of_succ_le_succ h
+Becoming/ScratchTwoRequirements.lean:310:7: warning: unused variable `policy`
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+
+{
+  "tree": "/Users/ren/tmp/dj/batch24",
+  "modules": 17,
+  "ran": [
+    "Becoming.ScratchTwoRequirements"
+  ],
+  "reused": 16,
+  "unclean": [],
+  "audits": {},
+  "seconds": {
+    "Becoming.ScratchTwoRequirements": 3.225
+  },
+  "failed": "Becoming.ScratchTwoRequirements"
+}
+exit 1 build 1
+end 20:02:31

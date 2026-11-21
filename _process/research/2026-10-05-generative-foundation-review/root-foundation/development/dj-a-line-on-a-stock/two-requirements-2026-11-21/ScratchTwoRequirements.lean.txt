@@ -1,0 +1,403 @@
+import Becoming.GuardHorizon
+
+/-!
+# ScratchTwoRequirements: three requirements and two readings on one built process
+
+Scratch, outside the package (AI-written, Claude, 21 November 2026, board row DJ). Not landed.
+It tries the guesses T1 to T6 of `tmp/r7/one-model/check/tworeq21/FROZEN-TWO-REQUIREMENTS.md`
+on the package's own `GuardHorizon.UniformPolicy`, `GuardHorizon.Admissible` and
+`GuardHorizon.Viable`, unchanged. A configuration is a share and a level (`Nat × Nat`); the move
+`true` favours (share up by one, level down by one, stopping at zero), the move `false` holds. The
+guard is that the level is not zero. Each declaration's docstring says what it states, with its
+premises, and which older theorems it calls.
+-/
+
+namespace Becoming
+
+namespace ScratchTwoRequirements
+
+open Generative
+
+/-! ## Small arithmetic, written out -/
+
+/-- A successor is not zero. -/
+theorem succ_not_zero (n : Nat) : Nat.succ n ≠ 0 := fun h => Nat.noConfusion h
+
+/-- `geq c x` is `true` exactly where `c ≤ x` (see `geq_complete`, `geq_sound`). -/
+def geq : Nat → Nat → Bool
+  | 0, _ => true
+  | _ + 1, 0 => false
+  | c + 1, x + 1 => geq c x
+
+/-- Where `c ≤ x`, `geq c x = true`. -/
+theorem geq_complete : ∀ {c x : Nat}, c ≤ x → geq c x = true
+  | 0, _, _ => rfl
+  | c + 1, 0, h => absurd h (Nat.not_succ_le_zero c)
+  | c + 1, x + 1, h => (geq_complete (c := c) (x := x) (Nat.le_of_succ_le_succ h) : geq c x = true)
+
+/-- Where `geq c x = true`, `c ≤ x`. -/
+theorem geq_sound : ∀ {c x : Nat}, geq c x = true → c ≤ x
+  | 0, x, _ => Nat.zero_le x
+  | _ + 1, 0, h => Bool.noConfusion h
+  | c + 1, x + 1, h => Nat.succ_le_succ (geq_sound (c := c) (x := x) h)
+
+/-- `geq (k + 1) k = false`. -/
+theorem geq_succ_self : ∀ k : Nat, geq (k + 1) k = false
+  | 0 => rfl
+  | k + 1 => geq_succ_self k
+
+/-- Where `2 ≤ m`, `geq m (m - 1) = false`. -/
+theorem geq_below : ∀ {m : Nat}, 2 ≤ m → geq m (m - 1) = false
+  | 0, h => absurd h (Nat.not_succ_le_zero 1)
+  | k + 1, _ => geq_succ_self k
+
+/-- Both are `true`. -/
+def both : Bool → Bool → Bool
+  | true, true => true
+  | true, false => false
+  | false, true => false
+  | false, false => false
+
+theorem both_intro : ∀ {a b : Bool}, a = true → b = true → both a b = true
+  | true, true, _, _ => rfl
+  | false, _, h, _ => Bool.noConfusion h
+  | true, false, _, h => Bool.noConfusion h
+
+theorem both_snd : ∀ {a b : Bool}, both a b = true → b = true
+  | true, true, _ => rfl
+  | true, false, h => Bool.noConfusion h
+  | false, true, h => Bool.noConfusion h
+  | false, false, h => Bool.noConfusion h
+
+theorem both_false_right : ∀ a : Bool, both a false = false
+  | true => rfl
+  | false => rfl
+
+/-- `(a + 1) - (b + 1) = a - b`. -/
+theorem succ_sub_succ' : ∀ a b : Nat, (a + 1) - (b + 1) = a - b
+  | _, 0 => rfl
+  | a, b + 1 => congrArg Nat.pred (succ_sub_succ' a b)
+
+/-- `n - n = 0`. -/
+theorem sub_self' : ∀ n : Nat, n - n = 0
+  | 0 => rfl
+  | n + 1 => (succ_sub_succ' n n).trans (sub_self' n)
+
+/-- `(m + d) - d = m`. -/
+theorem add_sub_cancel' (m : Nat) : ∀ d : Nat, (m + d) - d = m
+  | 0 => rfl
+  | d + 1 => (succ_sub_succ' (m + d) d).trans (add_sub_cancel' m d)
+
+/-- Where `k < l`, `l - k ≠ 0`. -/
+theorem sub_ne_zero' : ∀ {k l : Nat}, k < l → l - k ≠ 0
+  | 0, 0, h => absurd h (Nat.not_succ_le_zero 0)
+  | 0, l + 1, _ => succ_not_zero l
+  | _ + 1, 0, h => absurd h (Nat.not_succ_le_zero _)
+  | k + 1, l + 1, h => fun z =>
+      sub_ne_zero' (Nat.le_of_succ_le_succ h) ((succ_sub_succ' l k).symm.trans z)
+
+/-- Where `m + k ≤ l`, `m ≤ l - k`. -/
+theorem le_sub_of_add_le' {m : Nat} : ∀ {k l : Nat}, m + k ≤ l → m ≤ l - k
+  | 0, _, h => h
+  | _ + 1, 0, h => absurd h (Nat.not_succ_le_zero _)
+  | k + 1, l + 1, h =>
+      Eq.subst (motive := fun z => m ≤ z) (succ_sub_succ' l k).symm
+        (le_sub_of_add_le' (Nat.le_of_succ_le_succ h))
+
+/-- Where `2 ≤ l`, `l - 1 ≠ 0`. -/
+theorem pred_ne_zero' : ∀ {l : Nat}, 2 ≤ l → l - 1 ≠ 0
+  | 0, h => absurd h (Nat.not_succ_le_zero 1)
+  | 1, h => absurd (Nat.le_of_succ_le_succ h) (Nat.not_succ_le_zero 0)
+  | k + 2, _ => succ_not_zero k
+
+/-- Where `2 ≤ l`, `l ≠ 0`. -/
+theorem ne_zero_of_two_le {l : Nat} (h : 2 ≤ l) : l ≠ 0 :=
+  fun z => Nat.not_succ_le_zero 1 (Eq.subst (motive := fun w => 2 ≤ w) z h)
+
+/-! ## The built process, the guard, the readings -/
+
+/-- The move `true` favours: the share rises by one, the level falls by one, stopping at zero.
+The move `false` holds: both stay. -/
+def next : Nat × Nat → Bool → Nat × Nat
+  | s, true => (s.1 + 1, s.2 - 1)
+  | s, false => s
+
+/-- Each move leads to `next`, and only there. -/
+def proc : Process (Nat × Nat) Bool := ⟨fun s a t => t = next s a⟩
+
+/-- The guard: the level is not zero. -/
+def above : Nat × Nat → Prop := fun s => s.2 ≠ 0
+
+/-- The reading of the share alone. -/
+def shareRead : Nat × Nat → Nat := fun s => s.1
+
+/-- The reading of the share and the level. -/
+def bothRead : Nat × Nat → Nat × Nat := fun s => s
+
+/-! ## The three requirements -/
+
+/-- **The selection's own requirement**, threshold `c`: where the share is at least `c`, the move
+is to favour. -/
+def selReq (c : Nat) (s : Nat × Nat) (a : Bool) : Prop := c ≤ s.1 → a = true
+
+/-- **Keeping**, `n` steps: where the guard holds, the move is admissible for keeping it `n` steps
+more (`GuardHorizon.Admissible`, unchanged). Where the guard fails it asks nothing. -/
+def keepReq (n : Nat) (s : Nat × Nat) (a : Bool) : Prop :=
+  above s → GuardHorizon.Admissible proc above n s a
+
+/-- **The selection yielding to the level**, threshold `c`, line `m`, `n` steps: where the share
+is at least `c` and the level at least `m`, the move is to favour; and keeping. -/
+def yieldReq (c m n : Nat) (s : Nat × Nat) (a : Bool) : Prop :=
+  (c ≤ s.1 → m ≤ s.2 → a = true) ∧ keepReq n s a
+
+/-- The run of a rule made from a reading: the orbit of `s` under the move the rule gives at what
+it reads. -/
+def orbit {O : Type} (obs : Nat × Nat → O) (policy : O → Bool) (s : Nat × Nat) :
+    Nat → Nat × Nat
+  | 0 => s
+  | k + 1 => next (orbit obs policy s k) (policy (obs (orbit obs policy s k)))
+
+/-! ## Which moves keep the guard -/
+
+/-- **Where the guard holds, holding is closed**: the set `above` lies within the guard and the
+move `false` is enabled there and stays in it. No premise. -/
+theorem closed_above : GuardHorizon.Closed proc above above :=
+  fun s h => ⟨h, false, ⟨s, rfl⟩, fun _ st =>
+    Eq.subst (motive := fun z => above z) (Eq.symm st) h⟩
+
+/-- **Every configuration with the level not zero keeps the guard for every horizon.** Calls
+`GuardHorizon.closed_viable` with `closed_above`. -/
+theorem viable_above (n : Nat) (s : Nat × Nat) (h : above s) :
+    GuardHorizon.Viable proc above n s :=
+  GuardHorizon.closed_viable proc above closed_above n s h
+
+/-- **Holding is admissible for `n` steps wherever the level is not zero.** Calls
+`viable_above`. -/
+theorem hold_admissible {n : Nat} {s : Nat × Nat} (h : above s) :
+    GuardHorizon.Admissible proc above n s false :=
+  ⟨⟨s, rfl⟩, fun _ st => Eq.subst (motive := fun z => GuardHorizon.Viable proc above n z)
+    (Eq.symm st) (viable_above n s h)⟩
+
+/-- **Favouring is admissible for `n` steps wherever the level is at least two.** Calls
+`viable_above`, `pred_ne_zero'`. -/
+theorem favour_admissible {n : Nat} {s : Nat × Nat} (h : 2 ≤ s.2) :
+    GuardHorizon.Admissible proc above n s true :=
+  ⟨⟨next s true, rfl⟩, fun _ st => Eq.subst (motive := fun z => GuardHorizon.Viable proc above n z)
+    (Eq.symm st) (viable_above n (next s true) (pred_ne_zero' h))⟩
+
+/-- **At level one, favouring is admissible for no number of steps**, whatever the share.
+Calls `GuardHorizon.viable_guard`. -/
+theorem favour_at_one {n x : Nat} : ¬ GuardHorizon.Admissible proc above n (x, 1) true :=
+  fun adm => GuardHorizon.viable_guard proc above (adm.2 (next (x, 1) true) rfl) rfl
+
+/-- **A move is admissible for `n` steps where the level is not zero, if it favours only where
+the level is at least two.** Calls `favour_admissible`, `hold_admissible`. -/
+theorem adm_of {n : Nat} {s : Nat × Nat} :
+    ∀ b : Bool, (b = true → 2 ≤ s.2) → above s → GuardHorizon.Admissible proc above n s b
+  | true, h, _ => favour_admissible (h rfl)
+  | false, _, g => hold_admissible g
+
+/-! ## T1 -/
+
+/-- **T1.** For every threshold `c`, the selection's own requirement is met by a rule made from
+the share alone: favour exactly where `c ≤` share (`geq c`). No premise. Calls `geq_complete`. -/
+theorem t1 (c : Nat) : GuardHorizon.UniformPolicy shareRead (selReq c) :=
+  ⟨geq c, fun _ h => geq_complete h⟩
+
+/-- **T1, more than guessed.** For every threshold `c`, the selection's own requirement is met
+by a rule that reads nothing: always favour. No premise, no older theorem. -/
+theorem t1_no_reading (c : Nat) :
+    GuardHorizon.UniformPolicy (fun _ : Nat × Nat => ()) (selReq c) :=
+  ⟨fun _ => true, fun _ _ => rfl⟩
+
+/-! ## T2 -/
+
+/-- **T2, the run.** For a threshold `c`, a rule `policy` on shares that meets the selection's own
+requirement at every configuration (`valid`), and a start `s0` whose share is at least `c`: at
+every step `k` the run is at share `s0.1 + k` and level `s0.2 - k`. Calls itself, `Nat.le_trans`,
+`Nat.le_add_right`. -/
+theorem t2_orbit {c : Nat} {policy : Nat → Bool}
+    (valid : ∀ s, selReq c s (policy (shareRead s))) {s0 : Nat × Nat} (start : c ≤ s0.1) :
+    ∀ k, orbit shareRead policy s0 k = (s0.1 + k, s0.2 - k)
+  | 0 => rfl
+  | k + 1 =>
+    have fav : policy (s0.1 + k) = true :=
+      valid (s0.1 + k, s0.2 - k) (Nat.le_trans start (Nat.le_add_right s0.1 k))
+    (congrArg (fun z => next z (policy (shareRead z))) (t2_orbit valid start k)).trans
+      (congrArg (next (s0.1 + k, s0.2 - k)) fav)
+
+/-- **T2.** Under the premises of `t2_orbit`: at every step the share is `s0.1 + k`, at least `c`,
+and one more at the next step; the level is `s0.2 - k`; the guard fails at step `s0.2`; it holds
+at every step before `s0.2`; and the requirement is met at every step (this last by `valid`
+alone). Calls `t2_orbit`, `sub_self'`, `sub_ne_zero'`. -/
+theorem t2 {c : Nat} {policy : Nat → Bool}
+    (valid : ∀ s, selReq c s (policy (shareRead s))) {s0 : Nat × Nat} (start : c ≤ s0.1) :
+    (∀ k, (orbit shareRead policy s0 k).1 = s0.1 + k ∧ c ≤ (orbit shareRead policy s0 k).1 ∧
+        (orbit shareRead policy s0 (k + 1)).1 = (orbit shareRead policy s0 k).1 + 1 ∧
+        (orbit shareRead policy s0 k).2 = s0.2 - k ∧
+        selReq c (orbit shareRead policy s0 k)
+          (policy (shareRead (orbit shareRead policy s0 k)))) ∧
+      ¬ above (orbit shareRead policy s0 s0.2) ∧
+      (∀ k, k < s0.2 → above (orbit shareRead policy s0 k)) :=
+  ⟨fun k =>
+    have sh : (orbit shareRead policy s0 k).1 = s0.1 + k :=
+      congrArg Prod.fst (t2_orbit valid start k)
+    ⟨sh,
+     Eq.subst (motive := fun z => c ≤ z) sh.symm (Nat.le_trans start (Nat.le_add_right s0.1 k)),
+     (congrArg Prod.fst (t2_orbit valid start (k + 1))).trans (congrArg (· + 1) sh.symm),
+     congrArg Prod.snd (t2_orbit valid start k),
+     valid _⟩,
+   fun h => h ((congrArg Prod.snd (t2_orbit valid start s0.2)).trans (sub_self' s0.2)),
+   fun _ lt z => sub_ne_zero' lt ((congrArg Prod.snd (t2_orbit valid start _)).symm.trans z)⟩
+
+/-! ## T3 -/
+
+/-- **T3.** For every `n`, keeping is met by a rule that reads nothing: always hold. No premise.
+Calls `hold_admissible`. -/
+theorem t3 (n : Nat) : GuardHorizon.UniformPolicy (fun _ : Nat × Nat => ()) (keepReq n) :=
+  ⟨fun _ => false, fun _ g => hold_admissible g⟩
+
+/-! ## T4 -/
+
+/-- **T4, at one configuration.** For every threshold `c` and every `n`: at share `c` and level
+one, no move meets both the selection's own requirement and keeping. Calls `favour_at_one`. -/
+theorem t4_conflict (c n : Nat) : ∀ a, ¬ (selReq c (c, 1) a ∧ keepReq n (c, 1) a) :=
+  fun _ ⟨sel, kp⟩ => favour_at_one (Eq.subst
+    (motive := fun b => GuardHorizon.Admissible proc above n (c, 1) b)
+    (sel (Nat.le_refl c)) (kp (succ_not_zero 0)))
+
+/-- **T4.** For every threshold `c`, every `n` and every reading `obs` into any type: no rule
+made from `obs` meets the selection's own requirement and keeping together. Calls
+`t4_conflict`. -/
+theorem t4 {O : Type} (obs : Nat × Nat → O) (c n : Nat) :
+    ¬ GuardHorizon.UniformPolicy obs (fun s a => selReq c s a ∧ keepReq n s a) :=
+  fun ⟨policy, valid⟩ => t4_conflict c n (policy (obs (c, 1))) (valid (c, 1))
+
+/-! ## T5 -/
+
+/-- The rule made from the share and the level: favour exactly where the share is at least `c`
+and the level at least `m`. -/
+def yieldRule (c m : Nat) (s : Nat × Nat) : Bool := both (geq c s.1) (geq m s.2)
+
+/-- **`yieldRule` meets the yielding requirement** for threshold `c`, line `m` and any `n`, given
+`2 ≤ m`. Calls `geq_complete`, `geq_sound`, `both_intro`, `both_snd`, `adm_of`. -/
+theorem yieldRule_valid {c m : Nat} (n : Nat) (two : 2 ≤ m) :
+    ∀ s, yieldReq c m n s (yieldRule c m (bothRead s)) :=
+  fun s => ⟨fun hc hm => both_intro (geq_complete hc) (geq_complete hm),
+    fun g => adm_of (yieldRule c m s) (fun ht => Nat.le_trans two (geq_sound (both_snd ht))) g⟩
+
+/-- **T5, the share and the level, line at least two.** For every `c`, `n` and `m` with `2 ≤ m`,
+a rule made from the share and the level meets the yielding requirement. Calls
+`yieldRule_valid`. -/
+theorem t5_both (c m n : Nat) (two : 2 ≤ m) :
+    GuardHorizon.UniformPolicy bothRead (yieldReq c m n) :=
+  ⟨yieldRule c m, yieldRule_valid n two⟩
+
+/-- **T5, the share alone, at every line.** For every `c`, `m` and `n`, no rule made from the share
+alone meets the yielding requirement: at `(c, m)` it must favour, at `(c, 1)` favouring keeps
+nothing, and both read share `c`. No premise on `c`, `m` or `n`. Calls `favour_at_one`. -/
+theorem t5_share_none (c m n : Nat) : ¬ GuardHorizon.UniformPolicy shareRead (yieldReq c m n) :=
+  fun ⟨policy, valid⟩ =>
+    have fav : policy c = true := (valid (c, m)).1 (Nat.le_refl c) (Nat.le_refl m)
+    favour_at_one (Eq.subst (motive := fun b => GuardHorizon.Admissible proc above n (c, 1) b)
+      fav ((valid (c, 1)).2 (succ_not_zero 0)))
+
+/-- **T5, line at most one.** For every `c`, `n`, every `m ≤ 1` and every reading `obs` into any
+type: no rule made from `obs` meets the yielding requirement; at `(c, 1)` no move does. Calls
+`favour_at_one`. -/
+theorem t5_low_none {O : Type} (obs : Nat × Nat → O) (c m n : Nat) (low : m ≤ 1) :
+    ¬ GuardHorizon.UniformPolicy obs (yieldReq c m n) :=
+  fun ⟨_, valid⟩ => favour_at_one (Eq.subst
+    (motive := fun b => GuardHorizon.Admissible proc above n (c, 1) b)
+    ((valid (c, 1)).1 (Nat.le_refl c) low) ((valid (c, 1)).2 (succ_not_zero 0)))
+
+/-- **Under any reading, a rule meeting the yielding requirement needs the line at least two.**
+For every reading `obs`, `c`, `n`, `m`. Calls `t5_low_none`. -/
+theorem line_two {O : Type} (obs : Nat × Nat → O) (c n : Nat) :
+    ∀ m, GuardHorizon.UniformPolicy obs (yieldReq c m n) → 2 ≤ m
+  | 0, u => absurd u (t5_low_none obs c 0 n (Nat.zero_le 1))
+  | 1, u => absurd u (t5_low_none obs c 1 n (Nat.le_refl 1))
+  | k + 2, _ => Nat.le_add_left 2 k
+
+/-- **T5 as an equivalence.** For every `c`, `m`, `n`: a rule made from the share and the level
+meets the yielding requirement exactly where `2 ≤ m`; and a rule made from the share alone never
+does. Calls `line_two`, `t5_both`, `t5_share_none`. -/
+theorem t5 (c m n : Nat) :
+    (GuardHorizon.UniformPolicy bothRead (yieldReq c m n) ↔ 2 ≤ m) ∧
+      ¬ GuardHorizon.UniformPolicy shareRead (yieldReq c m n) :=
+  ⟨⟨line_two bothRead c n m, t5_both c m n⟩, t5_share_none c m n⟩
+
+/-! ## T6 -/
+
+/-- **T6, the guard, for every rule.** For every reading `obs`, every rule `policy` meeting the
+yielding requirement (threshold `c`, line `m`, `n` steps) at every configuration, and every start
+where the guard holds: the guard holds at every step of the run. No premise on `m`. Calls
+`GuardHorizon.viable_guard`. -/
+theorem t6_guard {O : Type} {obs : Nat × Nat → O} {policy : O → Bool} {c m n : Nat}
+    (valid : ∀ s, yieldReq c m n s (policy (obs s))) {s0 : Nat × Nat} (g0 : above s0) :
+    ∀ k, above (orbit obs policy s0 k)
+  | 0 => g0
+  | k + 1 => GuardHorizon.viable_guard proc above
+      (((valid (orbit obs policy s0 k)).2 (t6_guard valid g0 k)).2
+        (next (orbit obs policy s0 k) (policy (obs (orbit obs policy s0 k)))) rfl)
+
+/-- **T6, the rise down to the line, for every rule.** For every reading `obs`, every rule meeting
+the yielding requirement (threshold `c`, line `m`, `n` steps) at every configuration, and a start
+at share `x0 ≥ c` and level `m + d`: for every `k ≤ d + 1` the run is at share `x0 + k` and level
+`(m + d) - k`. Calls itself, `le_sub_of_add_le'`, `Nat.add_le_add_left`. -/
+theorem t6_descent {O : Type} {obs : Nat × Nat → O} {policy : O → Bool} {c m n : Nat}
+    (valid : ∀ s, yieldReq c m n s (policy (obs s))) {x0 d : Nat} (start : c ≤ x0) :
+    ∀ k, k ≤ d + 1 → orbit obs policy (x0, m + d) k = (x0 + k, (m + d) - k)
+  | 0, _ => rfl
+  | k + 1, le =>
+    have fav : policy (obs (x0 + k, (m + d) - k)) = true :=
+      (valid (x0 + k, (m + d) - k)).1 (Nat.le_trans start (Nat.le_add_right x0 k))
+        (le_sub_of_add_le' (Nat.add_le_add_left (Nat.le_of_succ_le_succ le) m))
+    (congrArg (fun z => next z (policy (obs z))) (t6_descent valid start k (Nat.le_of_succ_le le))).trans
+      (congrArg (next (x0 + k, (m + d) - k)) fav)
+
+/-- **T6, then it stays, for the built rule.** For every `c`, `n`, `x0 ≥ c`, `d` and `m ≥ 2`:
+the run of `yieldRule c m` under the reading of share and level, from `(x0, m + d)`, is at
+`(x0 + (d + 1), m - 1)` at step `d + 1` and every later step. Calls `t6_descent`,
+`yieldRule_valid`, `add_sub_cancel'`, `geq_below`, `both_false_right`. -/
+theorem t6_stays {c m : Nat} (n : Nat) (two : 2 ≤ m) {x0 d : Nat} (start : c ≤ x0) :
+    ∀ j, orbit bothRead (yieldRule c m) (x0, m + d) (d + 1 + j) = (x0 + (d + 1), m - 1)
+  | 0 => (t6_descent (yieldRule_valid n two) start (d + 1) (Nat.le_refl _)).trans
+      (congrArg (Prod.mk (x0 + (d + 1)))
+        (show (m + d) - (d + 1) = m - 1 from congrArg Nat.pred (add_sub_cancel' m d)))
+  | j + 1 =>
+    have hold : yieldRule c m (x0 + (d + 1), m - 1) = false :=
+      (congrArg (both (geq c (x0 + (d + 1)))) (geq_below two)).trans (both_false_right _)
+    (congrArg (fun z => next z (yieldRule c m (bothRead z))) (t6_stays n two start j)).trans
+      (congrArg (next (x0 + (d + 1), m - 1)) hold)
+
+/-- **T6 for the built rule.** For every `c`, `n`, `m ≥ 2`, `x0 ≥ c` and `d`: the run of
+`yieldRule c m` from `(x0, m + d)` has share `x0 + k` and level `(m + d) - k` for `k ≤ d + 1`, is
+at `(x0 + (d + 1), m - 1)` from step `d + 1` on, and keeps the guard at every step. Calls
+`t6_descent`, `t6_stays`, `t6_guard`, `yieldRule_valid`, `ne_zero_of_two_le`. -/
+theorem t6 {c m : Nat} (n : Nat) (two : 2 ≤ m) {x0 d : Nat} (start : c ≤ x0) :
+    (∀ k, k ≤ d + 1 → orbit bothRead (yieldRule c m) (x0, m + d) k = (x0 + k, (m + d) - k)) ∧
+      (∀ j, orbit bothRead (yieldRule c m) (x0, m + d) (d + 1 + j) = (x0 + (d + 1), m - 1)) ∧
+      (∀ k, above (orbit bothRead (yieldRule c m) (x0, m + d) k)) :=
+  ⟨t6_descent (yieldRule_valid n two) start, t6_stays n two start,
+   t6_guard (yieldRule_valid n two)
+     (ne_zero_of_two_le (Nat.le_trans two (Nat.le_add_right m d)))⟩
+
+/-- A rule that favours wherever the level is at least two, whatever the share. -/
+def eagerRule (s : Nat × Nat) : Bool := geq 2 s.2
+
+/-- **T6 fails for "any rule": another rule meets the same yielding requirement and goes below
+the line minus one.** For every `c` and `n`, with line `3`: `eagerRule` meets the yielding
+requirement under the reading of share and level, and its run from `(c, 3)` is at level `1` at
+step `2`, while the built rule's stays at `3 - 1 = 2` (`t6_stays`). Calls `geq_complete`,
+`geq_sound`, `adm_of`. -/
+theorem t6_other_rule (c n : Nat) :
+    GuardHorizon.UniformPolicy bothRead (yieldReq c 3 n) ∧
+      orbit bothRead (fun s => eagerRule s) (c, 3) 2 = (c + 2, 1) :=
+  ⟨⟨fun s => eagerRule s, fun s =>
+    ⟨fun _ hm => geq_complete (Nat.le_trans (Nat.le_succ 2) hm),
+     fun g => adm_of (eagerRule s) (fun h => geq_sound h) g⟩⟩, rfl⟩
+
+end ScratchTwoRequirements
+
+end Becoming

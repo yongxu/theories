@@ -1,0 +1,122 @@
+*An AI worker's return (run as Claude Opus), word for word from the run's journal (wf_0c5559fa-ec2); agents could not write report files, so this return is its report.*
+
+**Report: the scratch module on two requirements and two readings (board row DJ)**
+
+**Module.** `/Users/ren/tmp/dj/batch24/Becoming/ScratchTwoRequirements.lean`, module `Becoming.ScratchTwoRequirements`, which imports `Becoming.GuardHorizon`.
+
+**Last build.** `exit 0 build 2`, log `/Users/ren/tmp/dj/batch24/build-ScratchTwoRequirements.log`. The log shows `"unclean": []`, an audit of 39 theorems and 52 declarations, and `"with_axioms": {}`. Build 1 failed on two implicit arguments that Lean inferred wrongly in `geq_complete` and `geq_sound`, and it warned once that a variable was unused. Both were fixed by naming the arguments. No proof was cut.
+
+Only this one module was built. I ran no checker, no gate and no test, and nothing else under `/Users/ren/theories` or in the batch directory was touched.
+
+## Definitions and what I chose
+
+- **`next` (line 121) and `proc` (line 126).** A configuration is `Nat × Nat`, a share and a level. The move `true` favours: it leads to `(s.1 + 1, s.2 - 1)`, and since subtraction on `Nat` stops at zero, so does the level. The move `false` holds and leaves `s`. The process is `⟨fun s a t => t = next s a⟩`, the direct form, as in `Drain`.
+- **`above` (line 129).** The guard is `s.2 ≠ 0`.
+- **Readings.**
+  - `shareRead s := s.1` (line 132): the share alone.
+  - `bothRead s := s` (line 135): the share and the level.
+  - For T1 and T3 I also used the reading into `Unit`, which keeps nothing.
+- **`selReq c s a` (line 141).** Defined as `c ≤ s.1 → a = true`. It says nothing below the threshold.
+- **`keepReq n s a` (line 145).** Defined as `above s → GuardHorizon.Admissible proc above n s a`.
+  - I chose to restrict it to configurations where the guard holds. Without that restriction no rule could exist at all: at level 0 the guard fails for every horizon, both moves lead to level 0, and `UniformPolicy` asks the requirement at every configuration of `Nat × Nat`. The frozen wording "where the guard holds" says the same thing.
+  - `Admissible` and `Viable` are used unchanged.
+- **`yieldReq c m n s a` (line 150).** Defined as `(c ≤ s.1 → m ≤ s.2 → a = true) ∧ keepReq n s a`.
+- **`orbit obs policy s k` (line 155).** The run of a rule: step 0 is `s`, and step `k+1` is `next (orbit k) (policy (obs (orbit k)))`.
+- **Helpers.** `geq` (line 27) is `true` exactly where `c ≤ x` (`geq_complete`, `geq_sound`). `both` (line 55) is "and" with its four cases written out. The arithmetic facts are proved by direct recursion, with no `omega` or `simp`.
+- **Moves that keep the guard.**
+  - `closed_above` (line 164): the set `above` is `GuardHorizon.Closed` under holding.
+  - `viable_above` (line 170): every configuration with the level not zero is `Viable` for every `n`. Calls `GuardHorizon.closed_viable`.
+  - `hold_admissible` (line 176): holding is admissible wherever the level is not zero.
+  - `favour_admissible` (line 183): favouring is admissible wherever the level is at least 2.
+  - `favour_at_one` (line 190): at level 1, favouring is admissible for no `n`, whatever the share. Calls `GuardHorizon.viable_guard`.
+  - `adm_of` (line 195): a move is admissible where the level is not zero if it favours only where the level is at least 2.
+
+## T1 to T7
+
+**T1: holds, and more than was guessed.**
+- `t1` (line 204): `theorem t1 (c : Nat) : GuardHorizon.UniformPolicy shareRead (selReq c)`. No premise. The rule is `geq c` ("favour where c ≤ share"). Proved from `geq_complete`.
+- `t1_no_reading` (line 209): `GuardHorizon.UniformPolicy (fun _ : Nat × Nat => ()) (selReq c)`. No premise, no older theorem. The rule "always favour" meets the requirement while reading nothing. So the selection's own requirement needs no reading at all here.
+
+**T2: holds, for every rule on shares that meets `selReq c`.**
+- `t2_orbit` (line 219): `(valid : ∀ s, selReq c s (policy (shareRead s))) (start : c ≤ s0.1) : ∀ k, orbit shareRead policy s0 k = (s0.1 + k, s0.2 - k)`.
+- `t2` (line 233), same premises, states:
+  - `(∀ k, (orbit … k).1 = s0.1 + k ∧ c ≤ (orbit … k).1 ∧ (orbit … (k+1)).1 = (orbit … k).1 + 1 ∧ (orbit … k).2 = s0.2 - k ∧ selReq c (orbit … k) (policy (shareRead (orbit … k))))`
+  - `∧ ¬ above (orbit shareRead policy s0 s0.2)`
+  - `∧ (∀ k, k < s0.2 → above (orbit … k))`
+- In words: the share is `s0.1 + k`, so it rises at every step and stays at least the threshold. The level is `s0.2 - k`. The guard first fails at step `s0.2` and holds at every step before.
+- Premises: a rule on shares meeting the requirement at every configuration, and a start whose share is at least `c`.
+- Proved from `t2_orbit`, `sub_self'`, `sub_ne_zero'`, `Nat.le_trans` and `Nat.le_add_right`.
+- "The requirement is met at every step" follows from the premise `valid` alone, with no work done.
+- The run goes on after the guard fails: the level stays at 0 and the share keeps rising.
+
+**T3: holds.** `t3` (line 257): `GuardHorizon.UniformPolicy (fun _ : Nat × Nat => ()) (keepReq n)`. No premise. The rule is "always hold". Proved from `hold_admissible`, hence from `GuardHorizon.closed_viable`.
+
+**T4: holds.**
+- `t4_conflict` (line 264): `∀ a, ¬ (selReq c (c, 1) a ∧ keepReq n (c, 1) a)`, for every `c` and `n`. This is the one configuration: share `c`, level 1. The selection's requirement forces favouring there, and `favour_at_one` excludes it.
+- `t4` (line 272): `{O : Type} (obs : Nat × Nat → O) (c n : Nat) : ¬ GuardHorizon.UniformPolicy obs (fun s a => selReq c s a ∧ keepReq n s a)`. It holds under every reading into any type, the two named readings included. Proved from `t4_conflict`.
+- So the conflict is between the requirements at one configuration, not inside a reading.
+
+**T5: holds, and its "share alone" half is stronger than worded.**
+- `t5_both` (line 292): `(two : 2 ≤ m) : GuardHorizon.UniformPolicy bothRead (yieldReq c m n)`. The rule is `yieldRule c m` (line 280): favour exactly where `c ≤ share` and `m ≤ level`. Its validity is `yieldRule_valid` (line 284), from `geq_complete`, `geq_sound`, `both_intro`, `both_snd` and `adm_of`.
+- `t5_share_none` (line 299): `¬ GuardHorizon.UniformPolicy shareRead (yieldReq c m n)` for every `c`, `m` and `n`, with no premise on any of them.
+  - The two configurations that need different moves are `(c, m)`, which must favour, and `(c, 1)`, where favouring keeps nothing. Both read share `c`.
+  - So this holds for every line, not only lines at least two. The premise "some share at least c exists" is met by `c` itself.
+- `t5_low_none` (line 308): `(obs : Nat × Nat → O) (c m n : Nat) (low : m ≤ 1) : ¬ GuardHorizon.UniformPolicy obs (yieldReq c m n)`. At `(c, 1)` no move meets the requirement, under any reading. This covers line 0 as well as line 1.
+- `line_two` (line 316): for every reading `obs`, `UniformPolicy obs (yieldReq c m n) → 2 ≤ m`.
+- `t5` (line 325): `(GuardHorizon.UniformPolicy bothRead (yieldReq c m n) ↔ 2 ≤ m) ∧ ¬ GuardHorizon.UniformPolicy shareRead (yieldReq c m n)`. No premise. Proved from `line_two`, `t5_both` and `t5_share_none`.
+
+**T6: holds for the built rule. As worded for any rule meeting the requirement, it fails in its "then stays" part.**
+- `t6_guard` (line 336) holds for every rule and every reading: `(valid : ∀ s, yieldReq c m n s (policy (obs s))) (g0 : above s0) : ∀ k, above (orbit obs policy s0 k)`. It needs no premise on `m`. Proved from `GuardHorizon.viable_guard`.
+- `t6_descent` (line 348) holds for every rule and every reading: with `valid`, `start : c ≤ x0`, it states `∀ k, k ≤ d + 1 → orbit obs policy (x0, m + d) k = (x0 + k, (m + d) - k)`.
+  - Writing the start's level as `m + d` is how I wrote "the level is at least the line".
+  - Proved from `le_sub_of_add_le'` and `Nat.add_le_add_left`.
+- `t6_stays` (line 363), for the built rule only: `(two : 2 ≤ m) (start : c ≤ x0) : ∀ j, orbit bothRead (yieldRule c m) (x0, m + d) (d + 1 + j) = (x0 + (d + 1), m - 1)`.
+- `t6` (line 378) combines the three for `yieldRule`, with `2 ≤ m`. The share rises until the level is `m - 1`, one below the line, and then everything stays; the guard holds at every step.
+- Where it fails, `t6_other_rule` (line 394): `GuardHorizon.UniformPolicy bothRead (yieldReq c 3 n) ∧ orbit bothRead (fun s => eagerRule s) (c, 3) 2 = (c + 2, 1)`.
+  - `eagerRule` (line 387) favours wherever the level is at least 2. It meets the same yielding requirement, yet goes down to level 1, not `m - 1 = 2`.
+  - What holds for every such rule is the guard at every step and the rise down to the line. Where it stops below the line is the rule's own choice.
+
+**T7: not a theorem; my reading follows.** The package laws used in proofs are `GuardHorizon.closed_viable` (through `viable_above`) and `GuardHorizon.viable_guard`. They do real but small work; everything else is arithmetic. `statewise_not_uniform` and `discriminating_reading_uniform` are not called. No law of `RuleCapture` or `RuleShaping` is used.
+
+## The reader's question
+
+My answer: it is mostly the package's built cases of a uniform policy said again with numbers. It has one feature those cases lack.
+
+**For "the direction's sentence, with every part doing work":**
+- The two readings come apart only under the yielding requirement. `t5` puts the share alone at no rule for every line, and share with level at a rule exactly where the line is at least 2.
+- Time does work: `t2` places the failure at the exact step equal to the start's level, while the selection's requirement is met at every step and the share keeps rising. That is "running down unseen" stated as a run: nothing in what the rule reads differs while the level falls.
+- `line_two` shows the yield must come early enough, which is "turn in time" as a theorem, and it holds under every reading.
+
+**For "restated built cases":**
+- `t5_share_none` is the same argument as `statewise_not_uniform`: two configurations with one reading that need different moves. `t5_both` is `discriminating_reading_uniform` with numbers.
+- `t4` holds under every reading, so the selection-and-keeping conflict involves no reading at all.
+- `t1_no_reading` shows the selection's own requirement needs no reading either. A rule "set from the share" is forced by nothing in the built case.
+- The time results in `t2` are subtraction.
+
+The strongest part is the pairing of `t2` with `line_two`. The strongest point against is that the share does nothing in the dynamics: it never constrains a move except through the threshold handed in.
+
+## What the built case lacks
+
+- The level has no giving; it only runs down.
+- The threshold `c` and the line `m` are handed in from outside.
+- Nothing forms the yielding requirement from the selection's own.
+- It is one process of two numbers, with the reading fixed.
+- It is not the package's lock, and no lock law is used.
+- **No tie to the lock was written.**
+  - `RuleCapture.ReadsShare` needs an `Ideals.Preorder` on the share and on the rule. I did not read `Ideals.Preorder`.
+  - The threshold rule `geq c` is monotone in the share in the sense that `x ≤ y` and `geq c x = true` give `geq c y = true`, but this is not stated.
+  - In `RuleCapture` the rule itself is a moving component that the reading updates. Here the rule is fixed, so `Locked`/`turn_locked` has no counterpart.
+  - `RuleShaping.favours_iff` (`favours ↔ c ≤ s`) has the same threshold form as `selReq`, but that is a likeness of wording, not a theorem between them.
+
+## What I did not read
+
+I did not read:
+- the direction page's paragraphs (`_process/DIRECTION.md`);
+- `Frame.lean` beyond a grep;
+- `Viability.disturbed` and `dViable_iff`;
+- `Ideals.Preorder`;
+- the rest of `RuleCapture` and `RuleShaping` beyond the lines named.
+
+From `ScratchKeptForViable.lean` I read lines 1–30 and 250–330 and grepped for `succ_not_zero`. I read `FROZEN-TWO-REQUIREMENTS.md` whole, `GuardHorizon.lean` lines 1–130 and 320–429, and `GenerativeCore.lean` lines 15–39.
+
+**Count:** 17 tool calls, 2 builds.

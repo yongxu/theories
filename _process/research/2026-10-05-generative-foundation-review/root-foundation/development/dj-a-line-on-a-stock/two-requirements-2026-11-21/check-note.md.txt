@@ -1,0 +1,143 @@
+*An AI checker's findings (run as Claude Opus; 9 tool calls and 120,538 tokens by the run's count), word for word from the run's journal (wf_166132c4-6ef), on the note as it was before the check (NOTE.before-check.md.txt).*
+
+1. **MUST. "What it draws": the package's one-model claim drops a limit and goes against the page it cites.**
+   - The note says: "The package has each, in the regime and in the lock, and has them in one model only with the level's fall handed in beside the lock or the lock needing nothing (the direction page, under "Where we are heading")."
+   - DIRECTION.md line 40 limits this to the chapters: "stand in one model, in the chapters as far as they were read, in two ways only: with the level's fall handed in beside the lock, or with the lock needing nothing". The next sentence says: "In the Lean, not yet in a chapter, there is more". It then names `locked_ends_with_net_regime`, `locked_turns_in_time_on_window_iff`, and `locked_ends_rising` (a locked way on a level its going on needs).
+   - Exact: "In the chapters as far as they were read, a lock and a level it needs stand in one model only with the level's fall handed in beside the lock, or with the lock needing nothing; in the Lean there is more (`locked_ends_with_net_regime`, `locked_turns_in_time_on_window_iff`, `locked_ends_rising`), each with what it takes as given (DIRECTION.md, line 40)."
+
+2. **MUST. "What it draws": "each time" is borne by no source.**
+   - The note says: "What the five tries of the afternoon and evening now say together: the pieces that had to be handed in each time are the same two, a level that something gives to and a rule set again from its own share."
+   - None of the files read says this of the four earlier tries. DIRECTION.md line 120 says what had content each time was "a built case, or a seam said exactly". It names three different seams.
+   - For this try, the reader does not say these two pieces were handed in. It says a next case "would need" them (RETURN-refuter line 111). What was handed in here was the threshold and the line (FROZEN line 42; RETURN-worker line 101).
+   - Exact: "For this try, the reader names two things a next built case would need: a level with a giving, and a rule re-read from its own share. Whether the four earlier tries lacked the same two was not checked."
+
+3. **MUST. "What it draws": the clause on the direction page is narrowed to a last step.**
+   - The note says: "by its own clause the paragraph on the direction page is turned back in its last step".
+   - DIRECTION.md line 120 has "This is the session's reading; … It is turned back if the built case comes out, by a reader who took no part, as the package's own small cases said again".
+   - "It" is the session's reading as a whole: the lock as two requirements and a reading, and the call for a built case. The clause does not limit the turning back to the last step.
+   - The reader's answer meets that clause (RETURN-refuter line 100).
+   - Exact: "by its own clause, the session's reading on the direction page is turned back: the reader judged the case the package's built cases said again with numbers."
+
+4. **MUST. The runs: a premise of `t6` is dropped.**
+   - The note says: "For the built rule … with `m` at least two, from a level at least `m`: the share rises until the level is one below the line and then both stay (`t6`)."
+   - `t6` (module line 378) also needs `start : c ≤ x0`, a start whose share is at least `c`. The start is written as `(x0, m + d)`.
+   - Exact: "from a start whose share is at least `c` and whose level is at least `m`".
+
+5. **MUST. "How it came out", the share: a premise is dropped and the reader's limit is left out.**
+   - The note says: "a rule from the level alone would meet the yielding requirement (the reader, read off a proof; not a theorem of the module)".
+   - The reader (RETURN-refuter line 23) says this holds "for every `c`, every `n` and every `m ≥ 2`". It also says `eagerRule`, which reads only the level, meets `yieldReq c 3 n` (`t6_other_rule`), and that is a theorem under `bothRead`.
+   - The reader also gave a limit the note leaves out (line 27): "proved for the two readings named; the share does no work in the reading that succeeds".
+   - Exact: "with the line at least two, a rule from the level alone would meet the yielding requirement (the reader, read off the proofs of `t6_other_rule` and `adm_of`; not a theorem). For line three, `t6_other_rule` proves it for `eagerRule`, which reads only the level, under the reading of share and level. T5 is proved for the two named readings only."
+
+6. **MUST. "How it came out": the worker's sentence is told as the reader's.**
+   - The item comes under "What the reader found idle". Its first sentence is: "It constrains no move except through the threshold handed in."
+   - These are the worker's words (RETURN-worker line 96): "it never constrains a move except through the threshold handed in". The reader's own words are "The share is idle in both the dynamics and the succeeding reading" (RETURN-refuter line 98).
+   - Exact: either attribute the sentence to the worker, or use the reader's words.
+
+7. **MUST, at the level of telling. "What the reader found idle" covers items the reader did not call idle.**
+   - The reader calls the horizon idle (F3, line 79) and the share idle (line 98).
+   - Of the line being at least two it says "one step's arithmetic" (line 79). Of the package's laws it says "do only bookkeeping" (line 98). Neither is called idle.
+   - The note's grouping into these four also is not the reader's. The reader's four parts are the selection's requirement, what it rests on, the reading, and the time (lines 76–79).
+   - Exact: "What the reader found idle or arithmetic: …". Or give the reader's four parts.
+
+8. **LESSER. The table: cells with no theorem behind them.**
+   - The module states none of these:
+     - every "by configuration" cell;
+     - "the selection's own / from the share and the level: yes";
+     - "keeping / from the share: yes";
+     - "keeping / from the share and the level: yes".
+   - `t3` is a rule from `Unit`. That a rule from the share, or from both, follows by composing is true, but it is not stated. The package's `uniform_finer` (GuardHorizon line 391 region) would give it, and is not called. `t1` gives a rule from the share, not one from both.
+   - The "by configuration" yes cells follow by an argument: `bothRead` is the identity (module line 135), so a rule from `bothRead` is a choice made configuration by configuration.
+     - "yielding, the line at least two / by configuration: yes" follows from `t5_both` this way.
+     - The yes in the first two rows follows from `t1` and `t3`.
+   - Neither return makes this argument. The reader checks T5's both directions "for `bothRead`" (line 71) only.
+   - "by configuration: no" in the fifth row is in `t5_low_none`'s docstring and its proof ("at `(c, 1)` no move does"), but not in its statement.
+   - The fifth row's "from the share: no" is borne by `t5_low_none` or `t5_share_none`, neither named in that cell. The third row's "from the share: no" is borne by `t4` at `shareRead`.
+   - The note should also say that, because `bothRead` is the identity, the columns "by configuration" and "from the share and the level" are the same question in this process.
+   - Exact: name `t5_both`, `t4`, `t5_low_none` and `t5_share_none` in the cells they bear. Mark the others "(not stated; follows by composing, `uniform_finer`)" or "(not stated; `bothRead` is the identity)".
+
+9. **LESSER. Fifth row: "no: under every reading (`t5_low_none`)".**
+   - `t5_low_none` takes `{O : Type}` (module line 308), like `t4`. The third row's wording is right; this row's leaves out the limit.
+   - Exact: "under every reading into a type of `Type`".
+
+10. **LESSER. The runs: `t2`'s level and the reader's F7.**
+    - The note says: "the level is the start's less `k`". This is truncated subtraction (module line 221).
+    - Exact: "the start's less `k`, stopping at zero".
+    - The note leaves out the reader's F7 (RETURN-refuter line 42): the same run follows for any reading, so restricting to the share says less than holds. It also leaves out the worker's line 50: the run goes on after the guard fails, with the share still rising.
+
+11. **LESSER. The runs: `t6_guard` is empty for low lines.**
+    - The note says: "the guard holds at every step of its run from a start where it holds, under every reading (`t6_guard`)".
+    - The note leaves out the reader's F6 (line 40): for `m ≤ 1` the premise cannot be met, so the theorem is empty there.
+    - Exact: add "(empty for lines at most one, where no rule meets the requirement)".
+
+12. **LESSER. The runs: "another rule that meets the same requirement with the line at three".**
+    - `t6_other_rule` is stated for line 3 and start `(c, 3)` only (module line 394).
+    - The reader adds (line 106) that the built rule's "stays at 2" rests on `t6_stays` with `d = 0`, not on this theorem.
+    - Exact: "another rule, `eagerRule`, meets the yielding requirement at line three, and from `(c, 3)` it is at level 1 at step 2".
+
+13. **LESSER. Sentence after the table: "In the third and fifth the two requirements cannot both be met".**
+    - In the fifth row there is one requirement, `yieldReq`. Its two clauses, the yield clause and keeping, conflict at `(c, 1)` (module line 150).
+    - Exact: "in the fifth, the yielding requirement's two clauses cannot both be met at `(c, 1)`".
+    - "A reading does work in one row only, the fourth" is right for the readings tried: unit, share, and share with level.
+
+14. **LESSER. "How it came out": the second test.**
+    - "was not reached" is borne by both returns: the worker wrote no tie (RETURN-worker line 105), and the reader wrote none (line 94).
+    - The note leaves out the reader's untried tie (line 94): with `h` the share's `geq c`, T2 "might be had as a case of `locked_rises`".
+    - It also leaves out that the choice side of point 2 is partly met. Point 2 (FROZEN line 62) lists "a law of `Viable`" as a choice-side law, and `closed_viable` is called on the same process (module line 172).
+    - Exact: "Only the lock's side was not reached. The reader names an untried tie through `locked_rises`. On the choice side, `closed_viable`, a law of `Viable`, is called on the process, as bookkeeping."
+
+15. **LESSER. "How it came out": the verdict's qualifiers are left out.**
+    - The reader says "T2, T4 and T5 hold as worded, the last for the two readings named". It also says T7's clause "no law of the package does work" is "false only in small part" (line 108).
+    - The note's "nothing has changed" is borne, but neither qualifier is given.
+    - The worker's quotation (line 83) is word for word. It is cut before "It has one feature those cases lack", and the note does not say that cut sentence is what the reader's F1 and F2 answer.
+
+16. **LESSER. Head note: "17 tool calls, 2 of them builds".**
+    - The worker wrote "17 tool calls, 2 builds" (RETURN-worker line 122). That the builds are among the 17 is the note's inference.
+    - Exact: "17 tool calls and 2 builds, by its own count".
+
+17. **LESSER. Head note: "none in the module".**
+    - This is right for the two MUST findings. But two of the nine lesser are in the module: F6 on its docstrings and F8 on its header (RETURN-refuter lines 40, 44).
+    - Exact: "marked two places in the worker's report as saying more than the Lean, none in the module, and nine lesser, two of them on the module's docstrings".
+
+18. **LESSER. Leftouts a reader needs.**
+    - The reader (line 104) says `scratch_build.py` calls itself "a working build, not a receipt", and that the checker's controls have not run. The note gives "exit 0, an empty axiom report" without this.
+    - The worker did not read the direction page's paragraphs (RETURN-worker line 114), and the reader read DIRECTION.md only at lines 118–120 (line 119).
+    - The worker's return does not show whether the worker read the "After" points. FROZEN line 57 asks that this be taken from its report; the note does not say.
+    - The reader did not read the as-frozen copy (line 118).
+
+19. **LESSER. "Why it was tried": an alternative is dropped.**
+    - The note says: "each came back as a dictionary". DIRECTION.md line 120 and FROZEN line 9 say "as a dictionary or as two sides with no theorem between them".
+    - Exact: keep the alternative.
+
+20. **LESSER. "The built process": what rests on the package's terms.**
+    - The note says: "Three requirements … on the package's own `UniformPolicy`, `Admissible` and `Viable`".
+    - `selReq` uses none of them (module line 141). `UniformPolicy` is how rules are judged, not part of a requirement.
+    - Exact: "keeping and the yielding requirement are on `Admissible`, hence on `Viable`; rules meeting a requirement are judged by `UniformPolicy`".
+
+21. **LESSER. "What it draws": the page for Ren is unlinked.**
+    - The note says: "the page for Ren on what a model must have".
+    - DIRECTION.md line 114 says the session "writes first, by itself, what such a model must have … for Ren to read". A search of `_process` for "must have" wording found no such page beyond DIRECTION.md and two notes. It is not found in what was searched.
+    - Exact: "what DIRECTION.md (the paragraph on setting the renewal files against the package) says the session is to write for Ren", or link the page if it exists.
+
+22. **LESSER. "How it came out", the horizon: an equivalence told as from the module.**
+    - The note says: "admissible for `n` steps more is, for every `n`, that the next level is not zero".
+    - This equivalence is the reader's (F3), worked from `closed_above` and `viable_above`. The module states only one direction: `hold_admissible`, `favour_admissible`, `favour_at_one`.
+    - Exact: add "(the reader, from `closed_above` and `viable_above`; not stated as one theorem)".
+
+**Confirmed:**
+- The hash in FROZEN.sha256.txt (edd851a7…) matches `shasum -a 256` of the as-frozen copy. It records the name `FROZEN-TWO-REQUIREMENTS.as-frozen.md`, the copy's name in scratch.
+- The current frozen file differs from the as-frozen copy only by the "After" section added at 19:57, after the line "After".
+- The direction-page link resolves to /Users/ren/tmp/dj/wt/_process/DIRECTION.md, and all other links exist.
+- The build log shows exit 0 on build 2, `"unclean": []`, `"with_axioms": {}`, and 39 theorems. The first build failed once at line 36 (`geq_complete`).
+- The reader's 11 tool calls; nine lesser findings (F3–F11); F1 and F2 marked MUST in the worker's report.
+- The built process and the definitions agree with the module and the frozen wording (`next`, `proc`, `above`, `shareRead`, `bothRead`, `selReq`, `keepReq`, `yieldReq`).
+- `t1`, `t1_no_reading`, `t3`, `t4_conflict`, `t4` ("into a type of `Type`" is right), `t5_both`, `t5_share_none` (no premise on the line), `t5`, `line_two`, `t6_guard`, and `t6_other_rule`'s statement.
+- `t2` as told in the note: every rule on shares meeting `selReq`, a start whose share is at least `c`, and the guard first failing at step `s0.2`.
+- These quotations are word for word: the reader on `t2` (line 11), the long verdict (line 100, with inner quotation marks changed from double to single), the worker's answer (line 83), and the reader's third kept item (line 111).
+- The kept list matches the reader's line 109–111.
+- The "not a threshold of the map" point is rightly given to the coordinating session's third point.
+- Nothing in the note ranks courses or tells what makes one better.
+
+**Not read:** the run's journal `wf_0c5559fa-ec2`, so the token figure 233,295 and whether the returns are word for word were not checked. Also `scratch_build.py`, `RuleCapture`/`TurningInTime` (`locked_rises` and the other named laws), GuardHorizon lines 1–59 and 126–319, and DIRECTION.md beyond lines 30–50, 72, 99, 114 and 120.
+
+Tool calls: 9.

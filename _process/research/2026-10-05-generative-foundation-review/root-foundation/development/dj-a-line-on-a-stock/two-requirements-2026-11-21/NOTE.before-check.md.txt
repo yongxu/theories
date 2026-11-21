@@ -1,0 +1,59 @@
+# The lock and the turn as two requirements and two readings on one built process: tried in scratch, 21 November
+
+*AI-written (Claude Fable, board row DJ), 21 November 2026. Scratch Lean, outside the package; nothing has entered it. A built case, not a law, not a join, and not a model proposed for the package. Guesses T1 to T7 and what would count as nothing having changed were frozen at 19:48 WIB, before any Lean was written for it ([the frozen file](FROZEN-TWO-REQUIREMENTS.md.txt); [as frozen](FROZEN-TWO-REQUIREMENTS.as-frozen-1948.md.txt), [its hash](FROZEN.sha256.txt), which records the copy by its name in scratch); three points of the coordinating session were added under "After" once the worker had started. One AI worker (run as Claude Opus; 17 tool calls, 2 of them builds, by its own count) wrote one module ([the module](ScratchTwoRequirements.lean.txt); [its build log](build-ScratchTwoRequirements.log.txt): exit 0, an empty axiom report, 39 theorems). One AI reader who took no part (Opus; 11 tool calls by its own count) read its definitions, statements and proofs, checked the runs and the exhibited configurations by hand, and marked two places in the worker's report, none in the module, as saying more than the Lean, and nine lesser. Their returns are filed word for word and are all there is of their reports ([worker](RETURN-worker.md.txt), [reader](RETURN-refuter.md.txt)). The writer read the module's definitions and main statements, not its proofs; what is said of what a proof uses is from the docstrings and the two returns. No person has read it.*
+
+## Why it was tried
+
+Four tries of this day looked for a bridge between two notions the Lean already has, and each came back as a dictionary. The session's reading from them was that the lock is a way whose selecting is set from one thing, its share, while it rests on another, a level: two requirements and a reading, not one guard kept by a plan ([the direction page](../../../../../../DIRECTION.md), "What four tries in one day say about how to go on"). This is the built case that reading called for. That paragraph says what would turn it back: the case coming out, by a reader who took no part, as the package's own small cases said again.
+
+## The built process
+
+A configuration is a share and a level. To favour raises the share by one and lowers the level by one, stopping at zero. To hold leaves both. The guard is that the level is not zero. Nothing gives to the level. Two readings: the share alone; the share and the level. Three requirements on a move at a configuration, on the package's own `UniformPolicy`, `Admissible` and `Viable`, unchanged: the selection's own (where the share is at least a threshold `c`, favour); keeping (where the guard holds, the move is admissible for `n` steps more); and the selection yielding to the level from a line `m` (where the share is at least `c` and the level at least `m`, favour; and keeping). The reader: the definitions are the frozen file's, none bent.
+
+## The table
+
+For each requirement: whether some move meets it at each configuration, whether a rule made from the share alone meets it, and whether a rule made from the share and the level does.
+
+| requirement | by configuration | from the share | from the share and the level |
+|---|---|---|---|
+| the selection's own | yes | yes (`t1`); also by a rule that reads nothing, always favour (`t1_no_reading`) | yes |
+| keeping | yes | yes: by a rule that reads nothing, always hold (`t3`) | yes |
+| the selection's own and keeping together | no: at share `c` and level 1 no move meets both (`t4_conflict`) | no | no: under every reading into a type of `Type` (`t4`) |
+| yielding, the line at least two | yes | no (`t5_share_none`, which holds for every line) | yes (`t5_both`) |
+| yielding, the line at zero or one | no: at share `c` and level 1 | no | no: under every reading (`t5_low_none`) |
+
+So a reading does work in one row only, the fourth: a choice knowing the configuration exists and a choice from the share does not. In the third and fifth the two requirements cannot both be met at a configuration, and no reading is at work (the coordinating session's first point). `t5` joins it: a rule made from the share and the level meets the yielding requirement exactly where the line is at least two, and no rule made from the share alone meets it.
+
+## The runs
+
+- **The selection's own rule** (`t2`): for every rule made from the share that meets the selection's own requirement, from a start whose share is at least the threshold, at step `k` the share is the start's plus `k` and the level is the start's less `k`; the guard first fails at the step equal to the start's level and holds at every step before. The reader's words for what it bears: "the move does not change and the selection's requirement is met at every step while the level falls to zero at step `s0.2`; the level is not read." What the rule reads, the share, does change at every step; the worker's sentence that nothing in what the rule reads differs is false of it (the reader's first finding).
+- **A rule that meets the yielding requirement**: the guard holds at every step of its run from a start where it holds, under every reading (`t6_guard`). For the built rule that favours exactly where the share is at least `c` and the level at least `m`, with `m` at least two, from a level at least `m`: the share rises until the level is one below the line and then both stay (`t6`). The guess that every such rule stops one below the line fails: another rule that meets the same requirement with the line at three goes down to level 1 (`t6_other_rule`).
+
+## How it came out
+
+By the frozen file's own test, nothing has changed. The reader who took no part: "it is the package's built cases of a uniform policy said again with numbers, placed on a process with runs. Of the four parts, only what it rests on does work that the old cases lack. The selection's requirement works only as 'force a favour at one point'. The reading is the old fibre argument. The time is subtraction and an idle horizon." The worker's own answer is nearly the same ("mostly the package's built cases of a uniform policy said again with numbers").
+
+What the reader found idle, each from the module:
+
+- **The horizon.** Holding always keeps, so admissible for `n` steps more is, for every `n`, that the next level is not zero. Every theorem holds alike for every `n`.
+- **The line being at least two.** It is one step's draw above zero: a requirement that asks for a favour at level 1 has no rule (`line_two`). It is not a threshold of the map (the coordinating session's third point).
+- **The share.** It constrains no move except through the threshold handed in. The selection's own requirement is met by a rule that reads nothing, and in the row where a reading does work what does it is registering the level: a rule from the level alone would meet the yielding requirement (the reader, read off a proof; not a theorem of the module).
+- **The package's laws.** Two are called (`closed_viable`, `viable_guard`), and do bookkeeping. No law of the lock's modules is used, and no tie to the lock was written.
+
+The second test, added under "After" (one course under laws of both kinds: a law of the lock's side and a law of the choice side called on the same course) was not reached.
+
+## What is kept from it
+
+The reader's list:
+
+- the table's split between a conflict at a configuration under every reading (the third row) and a failure that depends on the reading (the fourth);
+- the refuted part of the sixth guess;
+- "two facts that say what a next built case would need: the horizon is idle with no giving to the level, and the share is idle in the reading that succeeds. A next case would need a level with a giving, so that `n` and the line matter, and a rule re-read from its own share, as the lock's `turn` does, so that the selection's side is the lock's and not a parameter."
+
+## What it draws
+
+My reading, held loosely. The built case I called for was too small to say the idea's sentence, and by its own clause the paragraph on the direction page is turned back in its last step. What the five tries of the afternoon and evening now say together: the pieces that had to be handed in each time are the same two, a level that something gives to and a rule set again from its own share. The package has each, in the regime and in the lock, and has them in one model only with the level's fall handed in beside the lock or the lock needing nothing (the direction page, under "Where we are heading"). So what is still not there is the one case that has both with moves and a reading, which is what the page for Ren on what a model must have is about. Nothing here starts it.
+
+## What it cost
+
+By the run's own count, in its journal (`wf_0c5559fa-ec2`, not filed here): 233,295 tokens for the worker and the reader. The ceiling for this step was 0.5 million.
