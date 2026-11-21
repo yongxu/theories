@@ -1,0 +1,602 @@
+{
+ "run": "wf_aaaad3ec-9c6",
+ "returns": [
+  {
+   "reader": "read:learning-codes-inquiry",
+   "return": {
+    "report_path": "/Users/ren/theories/tmp/r7/one-model/check/register21/read-learning-codes-inquiry.md",
+    "summary": "Read of the 17 learning, code and inquiry modules against the six frozen questions. Answers come from statements, docstrings and opening accounts. No proof was opened; four definitions were read in full (receive, broadenAfterFailure, reconsider, Answers).\n\nIn every module, what is registered is fixed, or changes only through something handed in:\n- a map or reduction (Learnable, Readout, PartialReadout, Sensitivity);\n- an adoption rule and an order of hearings (SharedCodes, CountedCodes);\n- a code as the move of training (CodeAcquisition);\n- a teacher and its lessons (ResponseLearning);\n- slots received (LearnedGrouping);\n- an enumeration of candidates (Learning).\n\nExact conditions for what can be acquired are stated as general laws: Learnable.learnable_iff, LearnableRuns.learnable_iff_tracks, CodeAcquisition.acquired_exact and step_installs, ResponseLearning.send_delivers and reconstructs_program, PartialReadout.exact_exists_iff. In each, the teacher, probes or samples are handed in.\n\nNearest to coming to register what was not registered:\n- Learning.index_missed: the held candidate changes because of a miss, the course's own doing, but only within a supplied enumeration. Rest is only unrefuted and its step is not stated.\n- Two built examples where a failure triggers more registering, with the response handed in: LearnedGrouping.broadening_after_failure (a supplied policy and supplied slots) and ResponseLearning.peer_repair (a supplied demonstration, then reconsider).\n- SharedCodes.coin, the one step that makes a form, which is supplied with no cause. coined_returns brings a merged distinction back when the coined form is heard by all.\n\nLoss is general and exact: SharedCodes.impose_loses_iff (by definition), held_stays and run_imposed_stays under every rule, resolved_alike_merged, no_reading_recovers, added_never_replaced, Readout.no_restore. A merged distinction comes back only from a form kept outside (outside_needed, outside_returns) or a coin.\n\nCost: stock is drawn per sample, per slot and per training step. Learning without stock is blocked or cut short, and a program is kept across generations only while each teacher holds at least 7 units. Stock is a precondition, never what is learned.\n\nFeedback.lean states the gap without any change in what is registered: support follows only exchanges with what a formation depends on, and feedback carries nothing from beyond the influence closure (Clearing.uncoupled). No statement was found in which running down, or a loss of what the going-on rests on, causes a new registering.",
+    "places": [
+     {
+      "place": "Learning.lean",
+      "what_registers_what": "A course read only through its prefix (prefixOf, l.150). The extrapolation pred is a function handed in (l.203). Under elimination, what reaches the next step is the index of the current candidate (indexOn, l.351) over a supplied enumeration H. Training selects through the data (Training.Through/AgreeOn, l.931-947). A selection through a map r goes through its lumping (selects_through_lumping, l.993).",
+      "changes_by": "The index moves exactly where the current candidate misses: index_missed (l.364), premise refuted : MissesAt (byElimination H) o t; index_kept (l.368). The cause is the miss. The enumeration H (lassos, l.674) and the map are handed in and never change.",
+      "comes_to_register": "Laws of coming to be right, not of a new distinction registered:\n- index_le_of_accords (l.393), general law. Premises: H, o, [DecidableEq O], holds : Accords (H j) o. Conclusion: ∀ t, index H o t ≤ j.\n- held_byElimination_bounded (l.759), general law. Premises: held : ∀ n, Law.orbit next s n ∈ l; reg : S → O; values decided. Fewer than tri l.length misses; proposes at every step from l.length on. Given neither the configurations nor their number.\n- held_rest_unrefuted (l.778): rest only as ¬¬∃T; the step is not stated.\nHanded in: the enumeration, the map, a listed world. The cause is the miss.\n- diagonal_misses (l.298) and merged_unrested (l.816): no top; 'learning at the next level up is again learning'.",
+      "cost_and_keeping": "No stock occurs (not found). The rest is kept only while the course is a lasso (lasso_of_rest, l.730).",
+      "lost": "selects_not_right_of_parted (l.1013), general law. Premises: equivariant, tie : r j = r k, holds : p j, fails : ¬p k. Conclusion: no selection through r is exactly p; 'that takes a finer map'. every_determines_nothing (l.913). Where a finer map comes from: not found.",
+      "tied_to_what_it_rests_on": "Not found. 'What is not derived' (l.124) names which candidates, classes or lumpings an actual formation can reach."
+     },
+     {
+      "place": "Learnable.lean",
+      "what_registers_what": "A fixed map reg : S → R, a feature val and an extrapolation pred on the prefix of course next reg s (l.74-83), all handed in.",
+      "changes_by": "The map does not change. Only the proposals move.",
+      "comes_to_register": "None found. The exact law through a fixed map:\n- learnable_iff (l.242). Premises: world : ∀ s, s ∈ l; decided values. Learnable ↔ ∀ s s', SameFuture next reg s s' → features agree from some T. The predictor is built from the law, the map, the feature and the list (fromLaw).\n- predicts_through (l.193). Premises: held, factors : ∀ s, val s = g (reg s).",
+      "cost_and_keeping": "Not found.",
+      "lost": "still_not_predicts_on_both (l.156). Premises: still, still', alike : reg s = reg s', differ : val s ≠ val s'.",
+      "tied_to_what_it_rests_on": "Not found."
+     },
+     {
+      "place": "LearnableRuns.lean",
+      "what_registers_what": "The same as Learnable, on runs of Law.process next through reg (l.64-73). guess (l.212) is fixed by the record (guess_fixedThrough, l.222).",
+      "changes_by": "No change of the map.",
+      "comes_to_register": "None found.\n- learnable_iff (l.170): premise world.\n- learnable_iff_tracks (l.280): premise world.\n- learnable_iff_identifies (l.292): premises world, invariant : ∀ s, val (next s) = val s.\n- learnable_not_identifies (l.350): a built example.",
+      "cost_and_keeping": "Not found.",
+      "lost": "not_identifies (l.337), built example: the runs from 0 and from 1 share a record.",
+      "tied_to_what_it_rests_on": "Not found."
+     },
+     {
+      "place": "LearningRuns.lean",
+      "what_registers_what": "The prefix of a run of any process through reg (Parting.course). The extrapolation is through the prefix (byElimination_through_prefix, l.200).",
+      "changes_by": "The map does not change. Elimination as in Learning.",
+      "comes_to_register": "None beyond Learning's laws on runs.\n- held_byElimination_bounded (l.343). Premises: r : Run (Law.process next); held : ∀ n, r.state n ∈ l; reg; [DecidableEq R].\n- transfer_right_iff (l.92). Premises: a determined process; observed : P.step s₀ a u₀. An outcome observed at s₀ transfers to s exactly where s₀ and s go alike under π by a.",
+      "cost_and_keeping": "Not found.",
+      "lost": "free_prefix_fixes_nothing (l.264). Premises: late : t ≤ x, two : y ≠ z. merged_unrested (l.321).",
+      "tied_to_what_it_rests_on": "Not found."
+     },
+     {
+      "place": "LearnedGrouping.lean",
+      "what_registers_what": "State = apparatus plus log (l.66). The grouping is bond s.log, the majority of transitions logged. parse = readAll decodeChunk (chunks (bond s.log) raw) then assemble (l.153).",
+      "changes_by": "The log changes by receive (l.159): draw one unit, append the slot; without stock nothing changes. Handed in: the slots (context, additional, reordered are fixed lists, l.213-281), the majority threshold, the decoder. broadenAfterFailure (l.176) = if parse fails then expose more, 'A supplied policy'.",
+      "comes_to_register": "Built examples only.\n- reception_changes_parse (l.386): every trace of reception from ready 28 along the context turns 'unparsed and unanswered' into parsed and answered. Handed in: the context, stock 28, threshold, decoder.\n- broadening_after_failure (l.436): a failed parse triggers receiving the supplied 'additional' slots, reaching the parse. The trigger is the going-on's own failure; the policy and slots are handed in.\n- parsed_not_broadened (l.451).\nNo general law of coming to register found.",
+      "cost_and_keeping": "One unit of the receiver's stock per slot: receive_stock (l.180); total_kept (l.351), a general law over every trace.\n- support_used (l.409): 14 → 4.\n- broadening_keeps_prefix (l.457): with 19 units, still fails.\n- parse_without_support (l.417): with 27 units, parsed, unanswered.\n- still_without_support (l.357): without stock nothing changes.\nKept by the log: response_keeps_history (l.400).",
+      "lost": "Built examples: order_not_frequency (l.423), repetition_joins_words (l.321), gap_breaks_edge (l.275).",
+      "tied_to_what_it_rests_on": "Only stock as a precondition (still_without_support). Running down causing a registering: not found."
+     },
+     {
+      "place": "ResponseLearning.lean",
+      "what_registers_what": "The receiver's samples are pairs of query and the sender's actual response. The program is developed from them (learn, l.101).",
+      "changes_by": "send (l.88) delivers the actual response. Handed in: lessons (basic, extended, l.96-98); the teacher source p stock ('a supplied starting condition', l.71); fresh stock 25 and 8 parts. reconsider (RouteFormation l.400): retest the wiring against the samples; discard and redevelop where it no longer fits.",
+      "comes_to_register": "- send_delivers (l.156), general law. Premises: ready : receiver.blocked = false; stock : 1 ≤ receiver.stock; actual : respond sender e = some (out, remaining). Conclusion: samples ++ [(e, out)] and sender.stock = remaining.\n- reconstructs_program (l.246), general law over p. Premises: routes : p.route ∈ generatedRoutes 2; distinct : p.first ≠ p.second; enough : 7 ≤ n. Conclusion: (learn (source p n) 25 8).installed = some p ∧ 7 ≤ stock.\n- peer_repairs (l.338) and peer_repair (l.599), built examples: a supplied demonstration of novel plus reconsider repairs the program.\n- extended_course_separates (l.441), built example.",
+      "cost_and_keeping": "Both sides pay. Sender: response_within_stock (l.111). Pair: send_stock and lesson_stock (l.146-150), stock plus drawn kept.\n- short_receiver_not_repaired (l.348, built): no repair without stock.\n- execution_stock_interrupts (l.306, built).\n- successor_keeps (l.261). Premises: installed; routes; distinct; enough : 7 ≤ t.stock. The program is kept only while each teacher has 7 units and each fresh formation is supplied 25.",
+      "lost": "Built examples: faithful_loses_distinction (l.316), distinction_lost_every_cohort (l.352), succession_keeps_lost_distinction (l.550), limited_changes_then_stays (l.379), peer_keeps_error (l.614). Undone only by a supplied demonstration.",
+      "tied_to_what_it_rests_on": "Stock as a precondition only. A loss reaching what is learned: not found."
+     },
+     {
+      "place": "CodeAcquisition.lean",
+      "what_registers_what": "A learner holds an optional code, a stock and records (l.162). observe shows three probes (l.100); acquire reads a code off them (l.103).",
+      "changes_by": "train c (l.208). The code c is the move of trainProcess : Process Learner Code (l.345), handed in. 'The grammar, the probes, the training schedule and the draw of each operation are supplied, not derived.'",
+      "comes_to_register": "- step_installs (l.356), general law. Premises: step : trainProcess.step s c t; enough : 7 ≤ s.stock; distinct : c.first ≠ c.second. Conclusion: t.code = some c.\n- acquired_exact (l.110): c.first ≠ c.second → acquire (observe c) = c.\n- acquired_every_expression (l.120).\nHanded in: the code as the move.",
+      "cost_and_keeping": "step_stock (l.361): t.stock + 7 = s.stock. step_rests_when_short (l.366). installed_without_execution (l.398, built).",
+      "lost": "primitives_no_exact (l.275), equal_primitives_unresolved (l.317), nonuniform_fails_transfer (l.332).",
+      "tied_to_what_it_rests_on": "Stock as a precondition only."
+     },
+     {
+      "place": "SharedCodes.lean (agrees_every_start_iff, impose_loses_iff, held_stays)",
+      "what_registers_what": "Codes I → M → F. TellsApart (l.700). A formation reads another's form as the sense exactly where their codes agree, given that its own code tells the senses apart (reads_iff, l.714).",
+      "changes_by": "Only by hearing: hearBy adopt e X (l.201), with the rule adopt and the hearings handed in. changes_by: changes_iff (l.256), general law: a form changes exactly at the hearer, at the sense heard, where adopt is true and the speaker's form differs. follow p (l.662): a pointer handed in. coin (l.1344): a supplied step, 'Hearing makes no form; coining does'.",
+      "comes_to_register": "- hearBy_held (l.244), runBy_held (l.336), run_held (l.550): every form held afterwards was held at the start (general laws).\n- shared_iff_in_use (l.450). Premise: every : ∀ i, i ∈ all.\n- agrees_every_start_iff (l.388). Premises: apart : a ≠ b; es; m; decided equality. Conclusion: (∀ X i j, runBy always es X i m = runBy always es X j m) ↔ ∀ i j, origin m es i = origin m es j. Agreement, not a distinction; the order is handed in.\n- coined_returns (l.1368), general law. Premises: every : ∀ i, i ∈ all; ne : m' ≠ m; o; fresh : x ≠ c m'; X; j. Conclusion: after broadcast o m all applied to coin o m x (impose c X), every j tells m from m'. Handed in: the coin, the broadcast, the rule always.\n- outside_returns (l.1088): premises cut; the docstring says the distinction comes back at once from a form kept outside.",
+      "cost_and_keeping": "No stock occurs (not found). A shared form is kept by all holding it (held_stays, all_agree_rest l.529).",
+      "lost": "- impose_loses_iff (l.1052), by definition: Loses X (impose c X) i m m' ↔ X i m ≠ X i m' ∧ c m = c m'. source_loses_nothing (l.1056).\n- held_stays (l.1063). Premises: adopt; held : ∀ j, X j m = x; es; i. Conclusion: runBy adopt es X i m = x, under every rule.\n- run_imposed_stays (l.1069).\n- outside_needed (l.1078). Premises: r; G; imposed : ∀ i, G i = true → r.state n i m = c m; kept : ∀ j, G j = false → r.state n j m = c m. Conclusion: ∀ k i, r.state (n+k) i m = c m.\n- keeps_apart_iff (l.823); homonym (l.1518, built).\n- resolved_alike_merged (l.1202), no_reading_recovers (l.1210), added_never_replaced (l.1271), uptake_loses (l.1666, built).\nUndone only by coin or a form kept outside.",
+      "tied_to_what_it_rests_on": "Not found. The readings say 'None of these is a value'."
+     },
+     {
+      "place": "CountedCodes.lean",
+      "what_registers_what": "Counts per agent, meaning and word. UniqueGreatest (l.137) is the word registered as most likely.",
+      "changes_by": "hear p rule (l.272), with the speaker map and rule handed in. addHeard (l.308), addSpeaker (l.325) and gatedHear (l.364, the gate handed in).",
+      "comes_to_register": "never_shared (l.216), a general law of not coming to be. Premises: < irreflexive and transitive; keeps : KeepsRelation T (Renamed π σ); symmetric start; onto; moves : ∀ y, σ m y ≠ y. Coming to be only in built examples: sayFirst_shared (l.518, a preferred word) and asymmetric_shared (l.538, an asymmetric start).",
+      "cost_and_keeping": "Not found.",
+      "lost": "added_tie (l.488), built: opposite counts become one model with no uniquely greatest word.",
+      "tied_to_what_it_rests_on": "Not found."
+     },
+     {
+      "place": "JoiningCodes.lean",
+      "what_registers_what": "A supplied Presentation codes fragments by their possible contexts or branching tests.",
+      "changes_by": "Static: no change along a course.",
+      "comes_to_register": "Not found. image_domain_iff (l.58), premise exact. FiniteOutcomes.lifts_of_exact (l.165), premises em, finite, exact, reduced.",
+      "cost_and_keeping": "Not found.",
+      "lost": "codes_apart_of_possible (l.52), the contrapositive of a merge.",
+      "tied_to_what_it_rests_on": "Not found."
+     },
+     {
+      "place": "Inquiry.lean",
+      "what_registers_what": "A supplied belief B and observation sense. Scope (l.34) is what actual executions reach.",
+      "changes_by": "Belief narrowing is handed in as B'. Scope.antitone (l.61), premise narrower : ∀ s, B' s → B s.",
+      "comes_to_register": "Not found.",
+      "cost_and_keeping": "Not found.",
+      "lost": "Not found.",
+      "tied_to_what_it_rests_on": "Scope.secures (l.41) concerns the goal, not what the inquirer rests on. Not found."
+     },
+     {
+      "place": "FallibleInquiry.lean",
+      "what_registers_what": "A supplied reader of levels, with the couplings obs and the varying part supplied; 'complete reading interface ... supplied'.",
+      "changes_by": "No change of the reader.",
+      "comes_to_register": "Not found. coverage_le_errors_add_reach (l.205) is a bound. ignored_signal (l.317), built: 'Reach alone cannot force evidence to be used.'",
+      "cost_and_keeping": "Not found.",
+      "lost": "omitted_exchange_no_reach (l.339), built.",
+      "tied_to_what_it_rests_on": "counted_residual_reaches (l.404), built: counting the residual as a relatum makes it reach the reader. This is a move of the model, handed in."
+     },
+     {
+      "place": "Feedback.lean",
+      "what_registers_what": "What reaches a formation's support: AffectedBy (l.171) and the influence closure (l.175), read as 'what a formation's own feedback can carry'.",
+      "changes_by": "No change along a course; static closures of a fixed flow and web.",
+      "comes_to_register": "Not found.",
+      "cost_and_keeping": "Not applicable (not found).",
+      "lost": "Flow.Balances.uncoupled_beyond_influence (l.460), general law. Premises: balances; without : WithheldLevels part W l; beyond : ∀ h, part h = true → ¬WithinInfluence f h. Conclusion: ∀ t g within f's influence, Supported ↔ Admits (l t). Late.affected_without_effect (l.1439, built).",
+      "tied_to_what_it_rests_on": "This module states the gap statically.\n- support_agrees (l.295), general law. Premises: two balanced flows; webs agreeing on what g requires and needs; alike starts and alike exchanges on what g depends on. Conclusion: g supported alike at every step.\n- Clearing.uncoupled (l.1232, built): the clearer's support is the same while the dweller ends.\n'What is not derived' (l.141): that a formation knows its reach closure. A change of what is registered: not found."
+     },
+     {
+      "place": "Sensitivity.lean and SensitivityWebs.lean",
+      "what_registers_what": "What a law of exchange reads (ReadsWithin l.122, ReadsFinitely l.127). Its least coupling is its sensitivity: least_coupling (l.197), premise fin : ReadsFinitely, conclusion up to ¬¬.",
+      "changes_by": "The law is fixed; not found.",
+      "comes_to_register": "Not found.",
+      "cost_and_keeping": "Not found.",
+      "lost": "tailLaw_insensitive (l.325) and tailLaw_differs (l.334). The decision decides is a premise (it gives LPO, l.555).",
+      "tied_to_what_it_rests_on": "SensitivityWebs.exchange_alike_of_insensitive (l.58). Premises: fin, follows, follows', out, nothing : ∀ c, ¬Sensitive h c. Static."
+     },
+     {
+      "place": "Readout.lean and PartialReadout.lean",
+      "what_registers_what": "A supplied reduction π and observable f; partial answers on a domain D.",
+      "changes_by": "No change along a course. A finer map is handed in (LumpedWithin.finer l.149), as is a faithful retention (ExactWithin.retained l.155, premise faithful).",
+      "comes_to_register": "Not found. Exact conditions:\n- reading_single_iff (Readout l.63).\n- exact_exists_iff (PartialReadout l.126), premise sec : SectionWithin D π pick, the section handed in.\n- exact_iff_predictsFrom (l.292).",
+      "cost_and_keeping": "Not found.",
+      "lost": "Readout.no_restore (l.92), premises merged : π s = π s', different : s ≠ s'. no_judge_of_merged (l.283). SoundWithin.silent (PartialReadout l.133).",
+      "tied_to_what_it_rests_on": "Not found."
+     }
+    ],
+    "guesses": "G1 (stated of the reading modules, not this group). Every change found here has G1's shape: a rule handed in (adopt, rule m), a code as the move (train c), a supplied teacher (send), supplied slots (receive), or a fixed enumeration (H). Partly against: Learning.index_missed (l.364), where the held candidate moves because of a miss, the course's own doing, but only within the supplied enumeration.\n\nG2. For: exact conditions with the sample, teacher or map handed in. Learnable.learnable_iff l.242, LearnableRuns.learnable_iff_tracks l.280, CodeAcquisition.acquired_exact l.110, PartialReadout.exact_exists_iff l.126, ResponseLearning.reconstructs_program l.246, LearnedGrouping.reception_changes_parse l.386. Learning's rest is only unrefuted, with its step not stated (l.45). Nothing ties the content learned to what the learner rests on. Qualification: stock is tied as a precondition. See short_receiver_not_repaired l.348, step_rests_when_short l.366, still_without_support l.357, broadening_keeps_prefix l.457, successor_keeps l.261 (7 units).\n\nG3. For: loss is general and exact. SharedCodes.impose_loses_iff l.1052 (by definition); held_stays l.1063 and run_imposed_stays l.1069 under every rule; resolved_alike_merged l.1202; no_reading_recovers l.1210; added_never_replaced l.1271; Readout.no_restore l.92. Hearing makes no form (hearBy_held l.244), and only forms in use can be shared (shared_iff_in_use l.450). Regaining needs something supplied: a form kept outside (outside_needed l.1078, outside_returns l.1088) or a coin heard by all (coined_returns l.1368). Qualifications: coined_returns is itself a general law, and only the coining is supplied. ResponseLearning's losses and repairs are built examples, and the repair needs a supplied demonstration. 'A reader removed is not brought back' was not found in this group.\n\nG4. Outside this group. The nearest in the package is Contacts.answers_iff (Contacts.lean l.152): a revision rule ρ answers every failure exactly where Answers ρ := ∀ D i, i ∈ ρ D (some i). Its pair is blind_misses (l.171), premises blind and unlisted. In both, ρ is handed in.\n\nG5. For: every change found has a supplied rule or move behind it, including broadenAfterFailure ('A supplied policy') and coin. Learning.merged_unrested (l.816) is read in its docstring as 'no top level: learning at the next level up is again learning'. Against the shape 'a slower reading one level up': coin is a bare supplied step with no reading behind it, the enumeration is fixed once and reads nothing, and the miss that moves elimination is the course's own doing. Nearest to 'because of what it did', both built examples with the response supplied: broadening_after_failure (l.436) and peer_repair (l.599) with RouteFormation.reconsider.",
+    "other_places": "Outside the group, met and not read in full:\n- Revision.lean: keeps_through_iff (l.41) and lost_choice (l.56). Chapter 3 §8 cites them as 'Selection revises its lumping'.\n- Contacts.lean: answers_iff (l.152) and blind_misses (l.171), read: an exact condition for a revision rule to answer every failure, the rule supplied.\n- RouteFormation.lean: encounter (l.390) and reconsider (l.400), read as definitions: retest against samples, discard, redevelop.\n\nCited by chapter 3 and not read:\n- CrossSituational.candidates_append: records only narrow.\n- OpenedCorrection.*: a revision of a reading that opens a correction.\n- NormativeActivity.adaptive_closed_cannot_resolve: a reference changes without entering what is retained.\n- The pre-spine ReconfigurableSupportLogic.new_probe_separates ('access yet to form'): a newly admitted probe tells apart states alike under every old observation.\n- Midway.no_prefix_reading: prefix loss.\n- Identification: the rest step of elimination.\n- InquirySufficiency: After, the narrowing of belief.\n- Segmentation.bond.\n\nNot read in this group: every proof; the module accounts past 2200 characters of Learnable, LearnableRuns, LearningRuns, ResponseLearning, CodeAcquisition, CountedCodes, Sensitivity, Readout and PartialReadout; the full premises of long statements the script cut (SharedCodes.outside_returns l.1088, run_from_imposition l.1106, homonym l.1518); chapter 3 §6 and §7.",
+    "tool_calls": 22
+   }
+  },
+  {
+   "reader": "read:readings-and-the-lock",
+   "return": {
+    "report_path": "/Users/ren/theories/tmp/r7/one-model/check/register21/read-readings-and-the-lock.md",
+    "summary": "I read the docstrings and declaration heads of all 16 modules, plus the full opening accounts of 7 of them. I opened no proof bodies and did not read the chapters. In these modules every change of a reading itself is handed in: the update and what is sensed (RevisesBy), the listed candidates (Loop), the schedule, the bound N with the late reading lo' (Thinned.lossPool, shapedLossPool), the window [N,K) with hL (windowRead), and each kind's reading in the pool (DrawnShaping). ReadingsPersist says so in its own words: readings are 'carried and filtered, never varied or learned'. ReadInTime lists 'readers who learn' among what it does not state. Three shapes register a difference that was not registered before without the reading changing. (1) ReadOffInTime, general laws: FirstApart, admits_iff_gap_within_margin, selectsAlike_unreached and readableInTime_iff. The loss itself travels through couplings and crosses a margin, so it reaches a fixed selection read off a supplied group. too_late_of_own: read off the continuations of what is lost, the loss is read only after its point of no return. (2) PoolFromCourse.Borne: bear_shaped_shapers and borne_falls are general; shapers_left is a built example. A loss borne by the shapers enters the counts the selection already reads and leaves the lock with no reader of it. Who bears it and at what rate is handed in. (3) ReadingLoop.sensed_alike_iff, general: two worlds come to be told apart at the first step their answers to the formation's own act differ. The Untested witnesses show the cost (explorer_low_once). floor_forgoes and alike_of_kept show that keeping a task can keep the worlds untold apart. This is the one statement found that ties what can come to be registered to what the formation keeps. Losing is stated: readers are not readmitted (stands_not_readmitted, closed_stays_closed); removed readers change nothing (window_removed_unregistered); fixation under copying is a lock (fixed_of_present); a lock outlives a loss it does not read (lock_outlives_loss). But that nothing comes back is a premise in the general laws (NotReadmitted, Accrues, an update that keeps the region), not derived. Not read: the opening accounts past line 30 of 9 modules, signatures past 600 characters, declarations with no docstring, and chapters 02 and 03.",
+    "places": [
+     {
+      "place": "Reading.lean",
+      "what_registers_what": "Activity and drawing read off the exchange (Flow.readOff, 94); requirement read off a law where exchange responds to a condition falling below need (readWeb 217, RespondsBelow 210). Fixed constructions.",
+      "changes_by": "Nothing changes the reading; what it reads changes with the exchange.",
+      "comes_to_register": "None found in what was read. requirement_beyond_course (312), a built example: one course, requirement under one law and not the other.",
+      "cost_and_keeping": "Not stated.",
+      "lost": "Not stated.",
+      "tied_to_what_it_rests_on": "readWeb_dependent (231): read off the law, activity needs support, for every need. supported_of_responds (225): ExchangesUnder and RespondsBelow give n ≤ l t c. A tie by construction, no change."
+     },
+     {
+      "place": "Readings.lean",
+      "what_registers_what": "Contextual claims as relata of one world (Contextual.world 95); two readings of change, by standing and by exchange (changeReadings 115).",
+      "changes_by": "No change stated.",
+      "comes_to_register": "None found in what was read.",
+      "cost_and_keeping": "Not stated.",
+      "lost": "Not stated.",
+      "tied_to_what_it_rests_on": "changeReadings_glue_iff (171): the two readings glue exactly where the flow balances; World.unity (203), no premise. A tie between readings, not to what it rests on."
+     },
+     {
+      "place": "ReadingLoop.lean",
+      "what_registers_what": "A supplied reading B kept by a supplied update and sense (joint 157, KeptBy 166). The history's reading Possible (324). In Loop (544), listed candidate laws predict: H→S→A→S; the internal part holds the candidates kept.",
+      "changes_by": "The handed-in update; recording (possible_least 334: the least reading kept by recording that holds at the starts). In Loop, elimination by the world's answer: kept_iff (589), a candidate is kept at n+1 exactly where it was listed and fits every earlier answer. Handed in: the list, predict, choose, answer, move. 'elimination, not weighting'; how candidates are proposed is left out.",
+      "comes_to_register": "sensed_alike_iff (442), general, for every blanketed law from starts with equal internal, sensory and active parts: values sensed agree through n exactly where at each k<n the two worlds answer alike the act taken at the value sensed. A difference of worlds is sensed at the first step their answers to the formation's own act differ. Cause: the world's answer to what the formation did; nothing handed in beyond the law and the starts. Built example Untested: explorer_up/explorer_down separate the worlds; rests/alike_in_both never separate them.",
+      "cost_and_keeping": "Built example: trying costs the floor once (explorer_low_once 873). floor_forgoes (889), for every formation on the two built worlds: premises nextSensory = reply, nextExternal stays, and the value in world down is never low. Then the formation senses alike in both worlds and takes the known act in down at every step. alike_of_kept (508) is its general form. A dropped candidate stays dropped.",
+      "lost": "Candidates are only dropped (kept_iff). Readings of everything and of nothing are kept by every update (everything_kept 258, nothing_kept 268). kept_alike (624): candidates the course does not tell apart are kept alike.",
+      "tied_to_what_it_rests_on": "alike_within (478) and alike_of_kept (508): where every answer that would tell the worlds apart breaks a kept task, keeping the task keeps them untold apart. The only tie found between what can come to be registered and what is kept. rests_of_unrefuted (672)."
+     },
+     {
+      "place": "ReadingSchedule.lean",
+      "what_registers_what": "One reader reads one condition a step by a supplied schedule s (Within 88, Unread 92).",
+      "changes_by": "The schedule is handed in and fixed.",
+      "comes_to_register": "None found in what was read.",
+      "cost_and_keeping": "density (265): distinct names and windows a c with q c * a c ≤ P give total q ≤ P (reciprocals sum ≤ 1). no_two_three (278), spare_not_enough (898). half_suffices (616), keeps_of_half (912).",
+      "lost": "Balances.loses_of_unread (690), in a balanced flow: a stretch of k steps left unread lets a part drawing at least d a step take (k+1+ℓ)d. A significant formation admitted without the part, requiring c, with l t c < need + (k+1+ℓ)d, is lost (W.Adds). Premises as listed in the report.",
+      "tied_to_what_it_rests_on": "keeps_iff_within (879), premises (a+ℓ)d ≤ m < (a+1+ℓ)d: a schedule keeps c within margin m against every balanced flow's draws exactly where it reads c within every a steps. General; the schedule does not change."
+     },
+     {
+      "place": "ReadingsSpread.lean (RevisesBy, share_step, fixed_of_present, Contact, Commons)",
+      "what_registers_what": "Each member carries a reading read: α→Sig; a region inR is counted (carrying 237).",
+      "changes_by": "Revision at descent, update handed in: RevisesBy (135), each kid carries its parent's reading updated by what the parent sensed; handed in sense and upd. Inheritance is the update that keeps the reading (inheritsReading_iff 195). share_step (278): Price's equation, selection proper plus revision. Revision while a member goes on standing is not modelled.",
+      "comes_to_register": "absent_step (330): an absent region re-enters only by revision in (premise: no member carries it). Contact.met_replaced (631), a built example: a narrow carrier sensing a wide one puts a wide kid in the next cohort, via revised_out (158), with copy handed in. Nothing comes to be registered because of what the reading's act did.",
+      "cost_and_keeping": "Not stated as a cost. carriers_drawn_down (421) and carriers_inactive_step (399): drawn down, or with no carrier active, a region moves by revision alone.",
+      "lost": "fixed_of_closedFrom (150): RevisesBy, fixed at T, ClosedFrom; stays fixed. fixed_of_present (169): RevisesBy with what is sensed being a present member's reading (src present), and the update keeping P when both lie in it, fixed at T; then fixed at every T+n ('fixation is a lock'). closedFrom_of_standing (210). Contact.removed_locked (575). The account says only variation from outside can replace it.",
+      "tied_to_what_it_rests_on": "Commons (639-1277), built example, every course generated (generated 970): whether a narrow reading's spread ends depends on whether what its act removes returns (cleared_spreads, clearedBack_ends, overdrawn_spreads_then_ends, overdrawnBack_ends). Readings there are inherited, so its lock is trivial. standingCount_unselected (455). How a reading's act comes to be is not derived."
+     },
+     {
+      "place": "ReadingsPersist.lean",
+      "what_registers_what": "Each relatum acts by the act its carried reading gives (byReading 151); acts read only what couples in (ReadsThroughOwn 155).",
+      "changes_by": "Inherited (InheritsReading 356, lineOf_carries 361). Account: 'how a reading arises or changes (readings here are carried and filtered, never varied or learned)' is not derived.",
+      "comes_to_register": "None found in what was read.",
+      "cost_and_keeping": "Not stated.",
+      "lost": "RemovesItsReaders (555). survivorsPersist_of_settled (569): read off the course's own pool, not turned by removal. not_allPersist_of_removes (578): read off a fixed pool, turned by every removal. family_nil_from (647). Built examples cleared_removes_its_readers (1318) and clearedBack_survivors_pass (1357): 'registers no removal, not even its own ending'.",
+      "tied_to_what_it_rests_on": "line_standing_unselected (459), reader_kept_alike (505), general (premises listed in the report): no selection of reading beyond the line's coupling closure. lineOf_persists_never_overdraws (597). No change of what is registered."
+     },
+     {
+      "place": "ReadInTime.lean (kept_iff, turned_iff)",
+      "what_registers_what": "Readers drawn from the selected: shapers read hi; others read lo below the loss bound N and lo' from N (shapedLossPool 132).",
+      "changes_by": "The loss crossing a bound handed in. Handed in: N, lo, lo', hi, a, p, c, the schedule reads, and the loss step fB.",
+      "comes_to_register": "kept_iff (155): Accrues fB, lo' ≤ hi, reads r, loss ≥ N at r, rule in force favours the shapers. Then locked in their favour from r+1 exactly where x.carrier*c + x.other*c ≤ x.carrier*hi + x.other*lo'. turned_iff (185): Accrues fB, lo' ≤ hi, reads r and r+1, loss ≥ N at r, late reading disfavours at r. Then locked the other way from r+2 exactly where the late reading disfavours at r+1. Cause: the loss accruing past N; that the others read it from N with lo' is the premise. Not derived: 'that the others read the loss at all'; readers who learn are not stated.",
+      "cost_and_keeping": "Cost: the counted inequality. Timing: kept_once_favoured (483), kept_past_least (527), deadline (631, premises in the report), in_time_earlier (354), at_most_one_between (397).",
+      "lost": "Not stated here.",
+      "tied_to_what_it_rests_on": "The window: from the first step at which the late reading would favour the shapers, reading the loss keeps the lock. That what lies beyond is a loss to any formation is not stated."
+     },
+     {
+      "place": "ReadStages.lean",
+      "what_registers_what": "Stages read through a lumping π: Bool→K (lumped_uniform 487, plan_realized_iff 497).",
+      "changes_by": "Lumping and prospects handed in; no change.",
+      "comes_to_register": "None found in what was read.",
+      "cost_and_keeping": "Not stated.",
+      "lost": "read_fixes_unread (535): where π ties the stages, the read stage fixes the act at the unread one.",
+      "tied_to_what_it_rests_on": "None found; the prospects (236) are supplied numbers."
+     },
+     {
+      "place": "ReadOffInTime.lean (ReadableInTime, readableInTime_iff, FourReaders)",
+      "what_registers_what": "A selection read off a supplied group's continuations through couplings by threshold only up to a step (SelectsThroughAll thresholdOnly; alikeThroughAll_thresholdOnly_iff 151).",
+      "changes_by": "The reading does not change; what reaches it changes along the course, by the relation in time (reachedBy_iff_reachedInTime 480: same formations present before T, a source that goes on).",
+      "comes_to_register": "General laws. FirstApart (137); alike_before (159) and separates (166): no selection tells the courses apart before the first step apart, one does at it. firstApart_of_apart (219): it exists where admission alike is decided at each step and fails at some n. admits_iff_gap_within_margin (568), premises: l lowers every required condition from l', and l' admits g; then l admits g exactly where every gap is within the margin. selectsAlike_unreached (517) and FirstApart.not_unreached (533) have TimedResponse's deadline premises (balance before D, same formations present, common start, non-sources responding alike when alike through obs). Cause: the loss itself travelling and crossing a margin. Handed in: which group is read.",
+      "cost_and_keeping": "Not stated as a cost. Built example FourReaders: near_inTime (1180), mid_atThePoint (1188), dweller_late (1197), listener_late (1362).",
+      "lost": "too_late_of_own (743), premises: what is kept includes every member's admission at every step, and l' admits every member at every step. Then the courses are not readable in time and no family read off the group reads them in time: the loss is read only past its point of no return. NoReturnAt.recoverable_iff (607).",
+      "tied_to_what_it_rests_on": "readableInTime_iff (661), premises FirstApart T and NoReturnAt N: readable in time ↔ T < N. Also too_late_of_unreached (699), too_late_within_margin (719), too_late_of_alike (678)."
+     },
+     {
+      "place": "Unread.lean",
+      "what_registers_what": "Acts read occasions through a lumping π (Lumped π).",
+      "changes_by": "Lumping fixed; selection through agreement on read occasions handed in.",
+      "comes_to_register": "None found in what was read.",
+      "cost_and_keeping": "Not stated.",
+      "lost": "free_lumped (87), twin_selected (104): where no read occasion shares x's lump, a selected twin acts otherwise at x. state_apart_of_acts_apart (139), coupling_apart_of_state_apart (145); the converses fail (187). Not derived: which lumping an actual formation has.",
+      "tied_to_what_it_rests_on": "None found."
+     },
+     {
+      "place": "UnreadStandings.lean",
+      "what_registers_what": "A World read through a stated selection of model relations (ModelRelations 225).",
+      "changes_by": "No change.",
+      "comes_to_register": "None found in what was read.",
+      "cost_and_keeping": "Not stated.",
+      "lost": "standing_not_read (346), standing_not_read_up_to_unit (446): no reading of the selected relations gives the counts, nor the standings up to a unit. A fixed limit, not a loss along a course.",
+      "tied_to_what_it_rests_on": "None found."
+     },
+     {
+      "place": "PoolFromCourse.lean (windowRead, closed_stays_closed, Borne.shapers_left)",
+      "what_registers_what": "A pool whose readers of what lies beyond the share are present only where the course leaves them (present: A×B→Prop; ReadsThroughPresent 119).",
+      "changes_by": "Who reads changes with the course; what each reads is handed in. windowRead (252): readers read the loss as hL while it lies in [N,K), elsewhere off the share as hA. Stands K: loss < K (256). Handed in: hA, hL, N, K, fB.",
+      "comes_to_register": "Readers register the loss from a supplied N and are lost from K by the loss itself. Borne: bear (498) and borneStep (504), with on whom the loss falls handed in (onShapers, onOthers). bear_shaped_shapers (509): the loss adds to the cost c, no premise. borne_by_shapers_favours_iff (524): favours ↔ c+l ≤ s. borne_falls (543): carriers present and the borne rule giving each carrier less than each other; the share falls strictly. Built example shapers_left (753): the lock is left with no reader of the loss. Cause: the loss, falling on what the selection already counts.",
+      "cost_and_keeping": "borne_by_others_raises (536): borne by the others, the lock is not left (others_locked 782). window_order_kept (465, monotonicity premises in the report): a share not lower draws no less on what lies beyond, and its readers are gone no later. Built example Drained.strong_undone (660).",
+      "lost": "stands_not_readmitted (271), premise Accrues. closed_stays_closed (222), premises Raises (liftShare P), ReadsShare, upward favouring, ReadsThroughPresent, NotReadmitted, none present and locked at r. Then none present again and locked at every later step. window_removed_unregistered (332): Accrues and K ≤ loss; the removed readers' reading changes nothing. window_never_read (295): K ≤ N. Not being readmitted is a premise or follows from Accrues.",
+      "tied_to_what_it_rests_on": "The readers' standing hangs on the loss. Not derived: 'that readers of what lies beyond a share are removed by what they read, or that any drain grows with a share'."
+     },
+     {
+      "place": "DrawnShaping.lean",
+      "what_registers_what": "The rule after shaping read by readers drawn from the selected: shapers read hi, others lo, each counted as the population counts them (drawn 146).",
+      "changes_by": "Who reads moves with the share (the selection); each kind's reading is fixed and handed in.",
+      "comes_to_register": "None found in what was read.",
+      "cost_and_keeping": "drawn_favours_iff (200); critical_iff (227), premises lo ≤ c ≤ hi.",
+      "lost": "drawn_locked_either (378), premise lo ≤ hi: every course is locked one way at every step, under every schedule.",
+      "tied_to_what_it_rests_on": "None found."
+     },
+     {
+      "place": "ClosedCapture.lean (lock_outlives_loss, turned_by_loss)",
+      "what_registers_what": "A pair: the share a and what lies beyond b (a loss); a rule read h handed in.",
+      "changes_by": "h is handed in. A reading formed from the share is 'one rule read from the share' (both_reads 425); reading_absorbed (455).",
+      "comes_to_register": "turned_by_loss (291): Accrues fB, ∀ p g with N ≤ p.2 h does not favour, reads r, N ≤ b+r. Then the rule in force at r+1 does not favour. The reading reads the loss from the start; the loss crossing a supplied N changes the outcome. Thinned.lossPool (785): v below N, w from N, handed in. read_in_time_turns (861), read_late_kept (830). Thinned.kept_iff (900) and turned_iff (918), with the mirror premises.",
+      "cost_and_keeping": "Not stated as a cost of the reading.",
+      "lost": "unread_course (186), courses_alike_iff_unread (202). lock_outlives_loss (307): Raises, ReadsShare, upward favouring, Accrues, Locked at the start. At every t the loss is ≥ b+t, the course is locked, and share and rule are never below. 'A measure the loss refutes is kept, because nothing in the loop reads the refutation.'",
+      "tied_to_what_it_rests_on": "By its absence: what lies beyond is unread and accrues while the lock holds. 'What leaves is a change of the law (of read, mind or the selection), such as a level that reads beyond the share.'"
+     },
+     {
+      "place": "ActiveReading.lean",
+      "what_registers_what": "Two readings of courses: whole-run (Ranking.wholeRun) and every active event (active 79).",
+      "changes_by": "Fixed; compared, not changed.",
+      "comes_to_register": "None found in what was read.",
+      "cost_and_keeping": "Not stated.",
+      "lost": "wholeRun_withholds_consuming (48).",
+      "tied_to_what_it_rests_on": "overdraw_unranked (84), premises 0<needG, needF≤needG, needG≤start, overdraw from T0: neither course extends the other. A comparison of readings."
+     },
+     {
+      "place": "HeldForReading.lean",
+      "what_registers_what": "A model of candidates with supplied weights; the reading is a rule on candidates (byRule 471, byReading 476). Values, weights and rules supplied.",
+      "changes_by": "In the SignLoop built example on ReadingLoop.Loop: a held act is answered by the reading of the true sign (answer 1270); kept candidates narrow.",
+      "comes_to_register": "Built example only: holding brings the answer that tells candidates apart (refuted_drops 1324, both_released 1349). Going on with only gain-predicting candidates never senses the stop (never_senses_stop 1309). The answering reader's state is not represented.",
+      "cost_and_keeping": "An amount forgone: threshold_go_iff (840), forgone_within_excess_iff (883). held_gains_iff (541).",
+      "lost": "Not stated.",
+      "tied_to_what_it_rests_on": "None found."
+     }
+    ],
+    "guesses": "G1. For: RevisesBy (upd and sense handed in); Loop.kept_iff (listed candidates, elimination only); a fixed schedule; Thinned.lossPool, shapedLossPool and windowRead (a window on the loss with N, K and lo'/hL handed in); DrawnShaping (who reads moves with the share, each kind's reading fixed); ReadingsPersist: 'carried and filtered, never varied or learned'. Against, or not one of the three shapes: (i) ReadOffInTime (FirstApart, admits_iff_gap_within_margin, selectsAlike_unreached; general): the loss itself travels through couplings and crosses a margin, so it reaches a fixed reading because of what the source did. (ii) PoolFromCourse.Borne (bear_shaped_shapers and borne_falls general, shapers_left a built example): a loss borne by the shapers enters the counts already read and leaves the lock with no reader. (iii) ReadingLoop.sensed_alike_iff (general) and the Untested explorer (built example): worlds are told apart by the world's answer to the formation's own act. In none is the reading itself changed by what it did. G2 (not this group's): Unread and ReadStages take the lumping as fixed. Against 'none ties learned to rests on': alike_of_kept and floor_forgoes tie what can be told apart to the task kept. G3. For: stands_not_readmitted, window_removed_unregistered, fixed_of_present, absent_step, dropped candidates never return (kept_iff), too_late_of_own; acquiring needs N, lo', hL, upd, the chosen group, or the listed candidates. Against 'general and exact' losing: not being brought back is a premise in the general laws (NotReadmitted in closed_stays_closed, Accrues, the update keeping the region in fixed_of_present). Acquiring is general and exact in ReadOffInTime once the group is chosen. G4: nothing in this group. G5. For: ClosedCapture.both_reads and reading_absorbed, and its account: 'What leaves is a change of the law (of read, mind or the selection), such as a level that reads beyond the share'. Every change of a reading in the group is handed in. Against: shapes (i) to (iii) change what reaches a fixed reading, not the reading, and are not a reading one level up. Whether they meet 'other than by an update handed in' depends on whether the item asks for a change in what is registered or in what reaches it; this read does not decide that.",
+    "other_places": "Named in what was read and not opened: Learning (determines_lumped_iff, goAlike_iff_lumped, Training.Through, Training.LocalSearch.rests_iff); RuleCapture (turn_locked, locked_stays, uniform_locks, order_kept); RuleShaping (shaped, covering_locks, byBack_reads_iff); Pace.paced; Blanket (agent_through_sensory); Narrowing; TimedResponse and Latency (deadline law, CoupledIntoAt, TouchesAt); ConditionInTime (Flow.AffectsBefore, WithinTime); BeyondCoupling (Web.ReadOffContinuations); Clearing.turned_by_dweller_read ('the way Bound's blindness lifts'); RegimeMargin.ends_iff_below; ChoiceOccasions.above_in_every_iff_reach; RevisionRoutes and RevisionPlans; LineageDrawdown; SelectionTerm (Generations, mean_step, price); IdentificationRuns (Law.part_identifiesAlike_iff_step); WorldRepresentation; GuardHorizon; Viability.ChoiceOver. Not reached in the group: the opening accounts past line 30 of Reading, Readings, ReadingSchedule, ReadingsPersist (33-99), ReadOffInTime, ReadStages, UnreadStandings, DrawnShaping and HeldForReading; signatures past 600 characters; declarations with no docstring; proof bodies; chapter 03 section 12 and chapter 02 sections 9 to 11.",
+    "tool_calls": 27
+   }
+  },
+  {
+   "reader": "read:outside-the-package",
+   "return": {
+    "report_path": "/Users/ren/theories/tmp/r7/one-model/check/register21/read-outside-the-package.md",
+    "summary": "I read the declarations, with their docstrings, of all 15 assigned files, plus the opening accounts and key definitions (step, experience, reform, observed, changed, inspected, process). I also read the wall section of the meta-attractor study and the section after it. Proofs were not opened. Some statements in CorrectionReconfiguration, TestingReorganization, FormativeCapacity (after l.260) and EvaluatorGrounding (after l.74) were seen by name only. ACQUIRED-CORRECTION.md was not opened.\n\nOnly CorrectionInquiry imports the Becoming package. Every file supplies its mechanism, and its own header says so.\n\nG4 is supported. Several files state exact conditions under which a lacked route, observation, decoder or ground is acquired by the model's own moves:\n- reachable_route_is_found: fuel ≥ nodes, and the tree is inhabited.\n- acquired_at_reach: holds for every state s and every n, with no premise.\n- complete_records_identify_coupling: SoundRows and Complete.\n- training_forms_decoder, and every_reachable_faithful_interpretation_is_correct.\n- acquired_history_identifies_origin: holds for every condition c and selection r.\n- query_cost_threshold: c < 1/8, with built numbers.\n\nEach of these is a law of one supplied model, or a built example. None is a general law over models.\n\nWhat is registered is sometimes the effect of the thing itself on the going-on:\n- the access loss the agent's own practice causes (GoalFormationRevision.experience);\n- the outage pattern a shared dependency causes (CommonCauseDiscovery.observation_is_effect).\n\nWhen it is read is always handed in: a schedule, a menu, a meter, responsiveness, authority. No law was found in which a loss or fall itself triggers the registering. The nearest is GoalRevision's reform gate: the rule changes only if the old credit would not carry the demand from the fund. That is built, and the demand is handed in.\n\nLosses are mostly unconditional within each model, and acquisition is always conditional:\n- closed_no_infinite: a closed socket means no infinite run.\n- extension_invalidates and change_invalidates_records: every state, no premise.\n- no_finite_certificate_of_unrestricted_separation: holds over any certifier.\n- absent_current_route_rejects: unconditional.\n\nSome losses are undone in built cases by re-handing in authority or a reference.\n\nThe meta-attractor study names as its wall how ends \"form and preserve the authority, evidence, transfers and commitments that change what local success selects\". It says one more favourable institutional law would not cross it. On the frozen file's criteria, nothing is \"already there\" in this group. G5's shape holds of every law found, with the nearest exceptions noted above.",
+    "places": [
+     {
+      "place": "GC/AcquiredCorrection.lean (+Cases)",
+      "what_registers_what": "Frontier of (address, subtree) entries, read only when popped by scan (l.48). The Verdict and spent count reach the next step. dispatch (l.206-229) re-reads the path in the current tree.",
+      "changes_by": "The model's own bounded search expands forks. Handed in: fuel, search order, tree, authority (EffectiveCommand.State).",
+      "comes_to_register": "reachable_route_is_found (l.165), a law of the model over every tree. Premises: nodes root ≤ fuel, inhabited root = true. Conclusion: ∃ ticket, discover found ∧ locate root ticket.1 = some ticket.2. Also discovered_route_is_real (l.112); sufficient_budget_finishes (l.138, burden ≤ fuel); exhausted_is_scoped_absence (l.121). The cause is the model's search, not a loss.",
+      "cost_and_keeping": "acquired_accounting (l.194). Premises: fuel ≤ reserve; time+fuel ≤ deadline. Cost is drawn from the reserve. dispatch_completes (l.230): route present, signed, credential = authority, funded, timely. The ticket is kept only while the current route and authority hold (successful_dispatch_is_current, l.277).",
+      "lost": "absent_current_route_rejects (l.272); current_revocation_rejects (l.264). Built: changed_route_rejects_stale_ticket (l.382). Undone, built: renewed_authority_and_new_observation_recover (l.386), with authority re-handed in.",
+      "tied_to_what_it_rests_on": "The reserve and deadline gate search and dispatch. No tie of what is found to support was found in what was read."
+     },
+     {
+      "place": "GC/ObservationRepair.lean",
+      "what_registers_what": "observation _ := () (l.16): nothing of the hidden state is registered.",
+      "changes_by": "Nothing changes it.",
+      "comes_to_register": "None found. Against: no_localized_observation_repair (l.185) and oracle_repair_not_observation_based (l.194), both built.",
+      "cost_and_keeping": "General law executable_repair_bound (l.255). Premises: nonneg prior; gain: margin*failure ≤ payoff gain of repair; nearoptimal within eps. Conclusion: margin*E[failure] ≤ eps. Also exact_ (l.276) and learned_ (l.294) variants. obs is fixed and handed in. Built: feasible_repair_loses_value (l.173).",
+      "lost": "off_absorbing (l.60).",
+      "tied_to_what_it_rests_on": "Not found in what was read."
+     },
+     {
+      "place": "GC/ObservationChange.lean",
+      "what_registers_what": "Plan = sensor choice from a supplied 3-item menu plus contingent choices (l.86-100).",
+      "changes_by": "The agent's own choice of sensor among supplied sensors. Distributions and costs are handed in (jointMass l.24, planValue l.88).",
+      "comes_to_register": "Built: query_strictly_preferred (l.144), all_plan_bound (l.106), randomized_plan_bound (l.119). query_cost_threshold (l.186), built numbers: sensing preferred iff c < 1/8. The cause is value under supplied numbers.",
+      "cost_and_keeping": "Sensor price inside planValue. selected_risk 1/32 vs no_query_safe 0 (l.136, 139). General law reachable_observation_floor (l.170). Premises: alpha > 0; risk ≥ 0; reward bounded; safe has risk 0 and a positive-risk floor on reachable o; 2*alpha*floor > 2*bound; policy optimal against safe. Conclusion: risk(policy o) = 0 on reachable o.",
+      "lost": "Built: fine_floor_certificate_fails (l.162), where a finer observation loses the coarse floor certificate (l.154); perfect_information_cannot_replace_delivery (l.243). General: refinement_preserves_safe_choice (l.209, premise forget∘fine = coarse); transport_executable_correction (l.220, premises record, oldCertificate, realization; change and newObs handed in).",
+      "tied_to_what_it_rests_on": "Not found in what was read."
+     },
+     {
+      "place": "GC/GoalFormationRevision.lean",
+      "what_registers_what": "State.evidence/ground/goal/selector (l.224). experience (l.243) records the outcome, the feedback of the agent's own selector, and the signal encode(!access or !maintenance) of its practice. assess runs interpret (l.185) against the calibrated reference.",
+      "changes_by": "Goal: learnedGoal from feedback. Ground: acquire = experience, experience, calibrate, assess (l.360), a supplied schedule. Goal revised by reviseGoal responsive when accessLoss ∧ ¬transitionLoss (l.194, 272). Selector changed by reform authorized (l.278), cost 2. Handed in: schedule, responsive, authorized, feedback law, encode convention, conditions.",
+      "comes_to_register": "The harm the agent's own practice did is registered (l.248-251). acquired_history_identifies_origin (l.378), for every c and r: (acquire c r).map ground = some (some ⟨r, accessLoss, transitionLoss⟩). acquired_grounds_warrant_comparison (l.208): premise callsForRevision = true; conclusion Better learning attendance. formation_identified (l.125). Built (harmful): reform_changes_the_formative_relation (l.409), joined_revision_has_warrant_and_actual_continuation (l.480), reform_changes_later_goal_acquisition (l.474).",
+      "cost_and_keeping": "Each step charges work. charge_conserves (l.159); insufficient_work_blocks (l.168, work < n). revision_loses_real_output (l.77). Built: unchanged_selection_exhausts_revised_practice (l.435), where the revised goal without the reformed selector runs out; reform_does_not_make_support_infinite (l.438). supported_finite_continuation (l.342): 2 ≤ w, 2n ≤ q.",
+      "lost": "Built: missing_reference_prevents_assessment (l.444), false_reference_can_hide_real_loss (l.447), erased_formation_evidence_blocks_deliberation (l.452), wrong_formation_model_prevents_needed_reform (l.456), stale_grounds_can_leave_new_loss_unaddressed (l.460). Undone, built: corrected_reference_restores_revision (l.468), with the reference re-handed in.",
+      "tied_to_what_it_rests_on": "Yes, built. The reformed selector is what feeds the goal; without it the revised practice exhausts the reserve (l.409, 435; cycle docstring l.289 'Support is transferred from an actual finite reserve')."
+     },
+     {
+      "place": "GC/GoalRevision.lean",
+      "what_registers_what": "acquired packets via read mode = metered mode archive (l.282). The Meter is handed in as an event parameter. learned (l.196); judgment (l.213) requires adopts and matching context.",
+      "changes_by": "Supplied events probe/read/learn/assess/enact/quote/reform demand/shift context (l.266-301). shift clears acquired.",
+      "comes_to_register": "Built: acquisition_controls_initial_end (l.335), faithful_revision_warrant (l.359). revised_end_has_comparative_ground (l.68): premise recommend a b = some capacity; conclusion Better b a.",
+      "cost_and_keeping": "Budget paid per step. settlement_conserves (l.114). funded_continuation (l.130): 2 ≤ cash, 2n ≤ fund. unreformed_depletion (l.143): n+1 ≤ cash, n ≤ fund. one_more_unreformed_fails (l.159). Built: correct_end_can_be_selected_out (l.379).",
+      "lost": "Built: changed_context_invalidates_use (l.396), misleading_acquisition_can_misguide (l.411), missing_is_not_a_zero_consequence (l.391), acquired_selection_evidence_matters (l.437).",
+      "tied_to_what_it_rests_on": "reform (l.251-264) installs the new rule only if repeatBudget with the old credit fails and with the new one succeeds over the demand. This is a forecast of the fund running out gating a rule change. Built; the demand is handed in (joined_history_completes l.373)."
+     },
+     {
+      "place": "GC/FormedGrounds.lean",
+      "what_registers_what": "examples (paired contacts), signal, judgment, review. interpret (l.39) uses rules learned over a supplied repertoire. Comment: 'No actual target, convention bit or reward is an input to interpretation.'",
+      "changes_by": "Supplied event list (run l.85). calibrate appends a contact if enabled; review replaces judgment with the receipt (l.73-78).",
+      "comes_to_register": "Laws of the model over every event list: retained_evidence_origin (l.141), from_initial_evidence_is_acquired (l.153), all_reachable_evidence_fits (l.177), every_reachable_faithful_interpretation_is_correct (l.184). Over reversed: before_calibration_no_definite_interpretation (l.194), training_forms_decoder (l.201). Built: acquired_review_refutes_and_corrects (l.235).",
+      "cost_and_keeping": "Inspection spends native.budget (training_uses_real_contrasts l.205). Built: exhausted_review_does_not_acquire_a_ground (l.256).",
+      "lost": "Built: same_formed_interpretation_can_be_false (l.224), new_record_without_review_does_not_correct (l.230), closed_review_cannot_claim_confirmation (l.252), later_change_retains_review_but_defeats_current_accuracy (l.271). reward_alone_cannot_repair_interpretation (l.260).",
+      "tied_to_what_it_rests_on": "Not found in what was read."
+     },
+     {
+      "place": "GC/FormativeCapacity.lean",
+      "what_registers_what": "Input access, not distinctions: capture is enabled iff live tree ∧ feed cursor (l.142). Feed is supplied.",
+      "changes_by": "The model's own build. build_reconstructs_next_interface (l.208): premises Step build, socketAddress = some a; conclusion socket at a+1, with 2 parts and 1 work consumed.",
+      "comes_to_register": "None of a new distinction found in what was read.",
+      "cost_and_keeping": "2 raw and 1 work per build. Kept only while open and building (built: continuing_formation_run l.430).",
+      "lost": "close_has_no_socket (l.70); no_socket_no_capture (l.217); closed_step_spends (l.223): closed stays closed; closed_no_infinite (l.244). Laws of the model; not undone.",
+      "tied_to_what_it_rests_on": "Closing input access leaves a finite stock (l.244). Whether this is a registering is a reading."
+     },
+     {
+      "place": "GC/CorrectionReconfiguration.lean",
+      "what_registers_what": "Arrangement (roster, supplied fault formulas); Covered/ready (l.52, 84). Header: 'Formulas are supplied engineering upper bounds, not discovered causal laws.'",
+      "changes_by": "reconfigure authorized cost depth candidate (l.166); the candidate is handed in.",
+      "comes_to_register": "Only by a candidate handed in: admitted_configuration (l.184), admitted_reform_completes (l.230), not read in full. Built: repaired_reform_installs (l.295).",
+      "cost_and_keeping": "responseCost (l.162); built exact_combined_budget_suffices (l.315).",
+      "lost": "Built: stale_envelope_accepts_captured_support (l.282), old_approvals_fail_after_reform (l.307), omitted_shared_cause_still_breaks_model (l.319).",
+      "tied_to_what_it_rests_on": "Not found in what was read."
+     },
+     {
+      "place": "GC/CorrectionInquiry.lean (imports Becoming)",
+      "what_registers_what": "cell admitted observe o (l.29); the docstring reads refinement as a case of the core's commonResponse_antitone.",
+      "changes_by": "A refinement handed in (fine, forget).",
+      "comes_to_register": "cell_refines (l.34), implements_refine (l.70), safeOn_refine (l.93). General laws with the refinement as premise; no course.",
+      "cost_and_keeping": "Not found.",
+      "lost": "Not found.",
+      "tied_to_what_it_rests_on": "Not found in what was read."
+     },
+     {
+      "place": "GC/AlignmentInquiry.lean",
+      "what_registers_what": "Interface.probe, handed in (l.18).",
+      "changes_by": "choose among supplied plans (l.33, 36).",
+      "comes_to_register": "chosen_sound (l.51); actual_covered_execution (l.79): premises choose = some p, s ∈ states.",
+      "cost_and_keeping": "Not found.",
+      "lost": "observational_obstruction (l.94): incompatible requirements cannot both be met by one answer.",
+      "tied_to_what_it_rests_on": "Not found in what was read."
+     },
+     {
+      "place": "GC/OpenFutureRevision.lean",
+      "what_registers_what": "Not about registering; ranks handed between revised rules.",
+      "changes_by": "handed_off_progress (l.14): premises localStep, handoff.",
+      "comes_to_register": "None found.",
+      "cost_and_keeping": "Not found.",
+      "lost": "Built: revised_rules_can_fail_forever (l.120).",
+      "tied_to_what_it_rests_on": "Not found."
+     },
+     {
+      "place": "GC/EvaluatorGrounding.lean",
+      "what_registers_what": "Standpoint.sig over formed relations prof (l.53); S0, Tolerant, Monotone, Supervenes supplied.",
+      "changes_by": "No course of change found; reach by tolerant chains (l.110).",
+      "comes_to_register": "None found.",
+      "cost_and_keeping": "Not found.",
+      "lost": "Built: closed_self_blocks_reach (l.245).",
+      "tied_to_what_it_rests_on": "Not found in what was read."
+     },
+     {
+      "place": "MA/ExpandingInquiry.lean",
+      "what_registers_what": "rows: outage patterns at depth reach of a supplied Tower (parent law handed in).",
+      "changes_by": "Own events (l.71-79): work, fabricate adapter, extend (reach+1, rows cleared), pulse, observe (records the pulse's effect), restore. Schedule roundEvents is supplied.",
+      "comes_to_register": "acquired_at_reach (l.264), every s, n, i, no premise: (rounds s (n+1)).rows i = some (coupling (roots tower (reach+n+1)) i). expansion_continues (l.244): Invariant s, idle. bounded_gate_sound (l.300): Invariant; d ≤ reach; honest; accept; conclusion v = actual. Built: continued_expansion_exposes_each_hidden_level (l.449), broader_test_changes_admission (l.469). The cause is a supplied schedule, not a fall.",
+      "cost_and_keeping": "construction_accounting (l.274): material −3 per extension. extension_requires_constructed_adapter (l.148). Restoration reserve kept along traces (l.514, 547, 553: premises RecoveryReserve, Invariant). Financed by the plant's own work (l.154).",
+      "lost": "extension_invalidates (l.110) and expansion_clears_certification (l.297), every s. no_finite_certificate_of_unrestricted_separation (l.438), any certifier; every_finite_record_has_hidden_extension (l.426).",
+      "tied_to_what_it_rests_on": "Inquiry is paid from and kept within plant support, and the gate sets the plant's response (actual_corrective_effect l.492, built). No law in which loss of support causes deeper inquiry was found in what was read."
+     },
+     {
+      "place": "MA/CommonCauseDiscovery.lean",
+      "what_registers_what": "rows; observed (l.39) records !(online s j) during a held pulse.",
+      "changes_by": "pulse/observe/restore/work/change roots (l.46-59); new roots handed in; changed clears the rows.",
+      "comes_to_register": "observation_is_effect (l.70): held = some i implies the record equals coupling roots i. complete_records_identify_coupling (l.118): SoundRows, Complete. separate_effects_imply_distinct_roots (l.126): adds Separating. retesting_after_reorganization (l.339): Invariant, idle, 13 ≤ material. Survey schedule supplied.",
+      "cost_and_keeping": "Material per event; work_finances_probe (l.196) and survey_preserves_response_capacity (l.249) seen by name only.",
+      "lost": "change_invalidates_records (l.84), every s; no_gate_after_change (l.157). Built: local_probe_coverage_misses_upstream_failure (l.420); no_classifier_of_local_effects_can_identify_parent (l.426), any classifier.",
+      "tied_to_what_it_rests_on": "Built by name: discovered_coupling_changes_actual_response (l.324), unaccounted_majority_would_lose_support (l.332). No loss-triggered probing found."
+     },
+     {
+      "place": "MA/TestingReorganization.lean",
+      "what_registers_what": "seen; inspected (l.75) writes the true root, faithful by assumption (header).",
+      "changes_by": "inspect/build root/test/switch/work; roots handed in through build.",
+      "comes_to_register": "complete_decodes_actual (l.105): Knowledge, Complete. Trace preservation (l.186, 215) not read in full.",
+      "cost_and_keeping": "Material per event; finance lemmas seen by name.",
+      "lost": "Built: present_agreement_can_hide_lost_resilience (l.357), where a merge is unseen in agreement; separate_labels_do_not_establish_causal_separation (l.368); unrepresented_common_cause_defeats_response (l.515).",
+      "tied_to_what_it_rests_on": "Built: common_dependency_merge_refused (l.330). Otherwise not found in what was read."
+     },
+     {
+      "place": "theories/meta-attractor/COLLECTIVE-DESTRUCTIVE-ATTRACTORS.md, the wall and the next section",
+      "what_registers_what": "Prose. The wall (l.211): how ends 'form and preserve the authority, evidence, transfers and commitments that change what local success selects'.",
+      "changes_by": "The page says that needs 'a specified governance/commitment mechanism or an actual setting with evidence'.",
+      "comes_to_register": "Not derived, by the page's own account. 'Specifying one more favourable institutional law cannot be taken as having crossed the wall' (l.217).",
+      "cost_and_keeping": "Next section: a checked construction where unmet demand impairs later response (l.282-299).",
+      "lost": "Under every exactly-maximizing affordable policy, with response below demand, support is eventually lost. Supplied law; 'It does not derive c from the semantic distinctions'.",
+      "tied_to_what_it_rests_on": "Losses damaging 'the relations enabling later observation, learning, trust, coordination and repair' (l.229) are named as hypotheses."
+     }
+    ],
+    "guesses": "G1: this group gives no direct evidence, being outside the package. CorrectionInquiry, the one importer, reads refinement as handed in and as a case of commonResponse_antitone, which is consistent with G1.\n\nG2: for it, FormedGrounds, ObservationChange and AlignmentInquiry supply the repertoire, the menu or the probe, with no tie to support. Against it, GoalFormationRevision registers the access loss of the agent's own practice (experience l.248-251). There, and in GoalRevision, the change of selector or rule is tied to the finite reserve, in built examples: unchanged_selection_exhausts_revised_practice l.435, and the reform gate on repeatBudget at l.251-264.\n\nG3: for it, losses are unconditional within their models: closed_no_infinite, closed_step_spends, extension_invalidates, change_invalidates_records, no_finite_certificate_of_unrestricted_separation, absent_current_route_rejects. Acquisition is always conditional on fuel, Invariant, a schedule, responsiveness, authority or budget. Qualifying it, some losses are undone in built cases by re-handing in authority, a reference or a retest. The comparison with the future-reading asymmetry was not checked.\n\nG4: supported. Exact acquisition conditions, by the model's own moves with the mechanism supplied:\n- reachable_route_is_found (nodes ≤ fuel, inhabited);\n- acquired_at_reach (every s, n);\n- complete_records_identify_coupling (SoundRows, Complete);\n- training_forms_decoder and every_reachable_faithful_interpretation_is_correct;\n- acquired_history_identifies_origin (every c, r);\n- query_cost_threshold (c < 1/8, built).\nEach is a law of one supplied model or built; none is a general law over models.\n\nG5: for it, every place hands in what drives the change: a schedule, a candidate, a menu, a meter, authority or responsiveness. ExpandingInquiry proves there is no finite last level. Nearest to against: what is registered is sometimes the effect of the thing itself (the practice's harm; a shared dependency's outage pattern). Only the timing is handed in. GoalRevision's reform gate on a forecast of the fund running out is built, with the demand handed in. No law was found in which the loss itself triggers the registering. So nothing is 'already there' in this group, and the read reports what is nearest.",
+    "other_places": "- GC/EffectiveCommand.lean: the State with reserve, deadline and authority that AcquiredCorrection uses. Not read.\n- GC files importing this group: FaultTolerantCorrection, EvidenceQualifiedCorrection, CorrectionReconfigurationCases, ReformEvidence, ReformInquiry, ObservableContinuation, WisdomGoalGrounds, MachineInstances, CorrespondenceSamples. Not read.\n- MA/AdmissionRevision.lean, imported by TestingReorganization. Not read.\n- The response-capacity construction at COLLECTIVE-DESTRUCTIVE-ATTRACTORS.md l.282-299: unmet demand impairs later response, and every exactly-maximizing affordable policy with response below demand loses all support. It bears on Q5 and Q6, as a capacity lost by the activity's own operation. Its Lean file was not located in this read.\n- The same page's 'new wall' (l.403ff, outside the assigned sections): forming and preserving constraints 'when the activities being corrected can change those very conditions'.\n- Not reached in full: the statements of CorrectionReconfiguration and TestingReorganization beyond their names; FormativeCapacity after l.260; EvaluatorGrounding after l.74; the bodies of GoalFormationRevision.operate and cycle.\n- ACQUIRED-CORRECTION.md was not opened.",
+    "tool_calls": 31
+   }
+  },
+  {
+   "reader": "read:revision-and-forming",
+   "return": {
+    "report_path": "/Users/ren/theories/tmp/r7/one-model/check/register21/read-revision-and-forming.md",
+    "summary": "In the group read (revision, and the forming of moves, routes and predictions), no general law has a difference come to be registered because of what it does to the going-on without a rule, reading or record handed in.\n\nWhat is registered is one of three things:\n- a lumping that is a coordinate of the configuration (Revision, OpenedCorrection);\n- an installed reference list (ContinuingRevision, ReferencePlan);\n- a set of samples and an installed program (RouteFormation).\n\nIt changes by a move of one process. The move is chosen by a supplied controller or policy (`Revising.choose`: \"Its preference for forming the link is supplied\") or fed by a supplied record (`RouteFormation.encounter`: \"a supplied code's value\").\n\nThe nearest case to registering from what was not registered is in ContinuingRevision. There the going-on's own act fails at the unregistered address (`fail_step_at`, l190). After revise, probe and install, that address becomes registered (`new_available_choice`, l317, a built family for every n). The general law behind it is `ReferencePlan.revise_registers_failure` (l446), with the rule `propose` handed in. A blind rule leaves some failure unregistered (`frozen_misses`, l460).\n\nThe stock ties in as cost and continuation:\n- `opens_without_correction`: forming a distinction can use up the last support for using it.\n- `repeats_iff`: the cycle repeats without end exactly where the yield is at least nine.\n- `no_run_without_return`: with the return cut, no unending run exists.\n\nTurningInTime's three window laws are the one place where the stock's level sets the rule or the share. Which levels are read is handed in (`corrects`, `sets`, `every`).\n\nLosing is general and exact:\n- `lost_choice`: any merge of a pair the old relation told apart loses a selection.\n- `coarser_opens_nothing`: a reading read off the old one through a map opens nothing.\n\nGaining is conditional on a supplied difference (`history_gains` and `retained_gains` both need it as a premise). In the Revising model, closing can be undone by rebuilding, given stock.\n\nHeldPossible's rule tower supports G5's \"the scheme is fixed\": every rule changes only as the one above allows, and along a fixed process the whole possible never grows. But in Revision and ContinuingRevision the reading changes at the same level, by a move of one process, not by a slower reading one level up.\n\nOutside my list, ReferencePlan, Contacts and `Runaway.policy_uses_after_failure` bear on Q3 and Q6.",
+    "places": [
+     {
+      "place": "Revision.lean",
+      "what_registers_what": "A lumping alike : S → X → X → Prop at each configuration (Registration.Keeps l72), with selection through it as Learning.Training.Through. In Revising.P, read s b = if s.2.1 then b else false (l159): the link bit, a coordinate of the state.",
+      "changes_by": "By the move .rebuild b of the supplied process P (l153-156), which draws one stock unit. Which move is taken is handed in as the controller choose (l234): 'Its preference for forming the link is supplied, not derived from the old reading.'",
+      "comes_to_register": "Built example: controlled_revision (l256). Selection of b = true is not through alike(state 0) and is through alike(state 2); the cause is the supplied controller. old_cannot_select_rebuild (l199) shows the old lumping cannot select the rebuild: for any select through alike(n,false,false), select true ↔ select false. General law: RevisionRuns.history_gains (l412). Premises: any run r, any obs, obs(state 0) x = obs(state 0) y, obs(state 1) x ≠ obs(state 1) y, 1 ≤ t. Conclusion: some select is through AlikeUpTo r t and not through the reading at the start. Handed in: obs and the difference at step 1. General law: keeps_through_iff (l41). Premise: old is an equivalence. Conclusion: every selection through old stays through new iff new ⊆ old.",
+      "cost_and_keeping": "Rebuild draws one unit (rebuild_enabled_iff l178); correction needs the link and one unit (l183). opens_without_correction (l210, built): forming can use up the last support for using it. feasible_iff (l337): a course is feasible exactly where the link admits it and the stock covers it. covered_not_enacted (l344), linked_not_enacted (l350). The link stays under replenish and correct, so keeping it costs nothing and using it costs stock.",
+      "lost": "lost_choice (l56, general). Premises: old an equivalence, new x y, ¬old x y. Conclusion: ∃ select through old and not through new. closes_choice (l224, built): closing destroys a distinction even with stock left. It can be undone by rebuild true given stock (rebuild_then_close l204, built).",
+      "tied_to_what_it_rests_on": "Only as cost: forming the link draws stock, and the controller reads the stock but is supplied. No statement makes the stock's fall the cause of a change in what is registered."
+     },
+     {
+      "place": "RevisionPlans.lean",
+      "what_registers_what": "reading c := decide (gain c < offGain c) (l168), from supplied numbers. held r a (l163) holds the act for a supplied reading r.",
+      "changes_by": "Nothing changes along a course; it is a static order on plans (order l143).",
+      "comes_to_register": "None found in what was read. gainOf_reading (l213) and excess_reading (l223), premise Splits listed weight p, are equalities of gains.",
+      "cost_and_keeping": "Holding forgoes an amount a. From the account: reading_not_below_iff (l253) and reading_above_iff (l262), premise Splits; statements not read in full.",
+      "lost": "None found.",
+      "tied_to_what_it_rests_on": "None found; gain, loss and weight are supplied."
+     },
+     {
+      "place": "RevisionRoutes.lean",
+      "what_registers_what": "The revision 'reaches it through a reading coupled into its course' (account), but the reading is not modelled. Only the weights k0, k ρ, the losses c0, c ρ, the value V and the total T are (Prospects l126).",
+      "changes_by": "No dynamics; a static order on Option ι.",
+      "comes_to_register": "None found. route_above_iff (l190): a route stands above the revision iff k0 V + c ρ T < k ρ V + c0 T. revised_maximal_iff (l197), above_needs (l214). All are about supplied numbers.",
+      "cost_and_keeping": "Not applicable.",
+      "lost": "'Evading or disabling the reading' is a route ρ with supplied weight and loss; it is priced, not modelled as a course.",
+      "tied_to_what_it_rests_on": "None found."
+     },
+     {
+      "place": "ContinuingRevision.lean (with ReferencePlan.lean, met)",
+      "what_registers_what": "The installed reference list, read through ReferencePlan.alikeOnInstalled (used at l317).",
+      "changes_by": "Moves of P yield under the policy selected (l136: 'the policy is a disclosed premise'). The cycle: fail_step_at (l190) records mismatch at n+1; revise (l200); probe twice (l203, l206); install (l209); success (l212); renew_step_at (l224) retires the old contact (retained_sample l184). Supplied: production relation, retirement rule, contacts, faithful return, controller (account), and in ReferencePlan the revision policy.",
+      "comes_to_register": "Built family for every n: new_available_choice (l317), Through alikeOnInstalled(installed n)(x(n+1)=true) ∧ ¬Through alikeOnInstalled(ready n)(x(n+1)=true). The cause is a failure of the going-on's own act at the unregistered address (absent_key l176, fail_step_at l190), carried into the registering by a supplied rule, policy and probe channel. General: ReferencePlan.revise_registers_failure (RP l446), for all m and i, Through (AgreeOn (propose m (some i))) (x i = true), with propose handed in. Against it: frozen_misses (RP l460), for every m there is an unanswered i. new_contact_choice (RP l267), premise i ∉ m.",
+      "cost_and_keeping": "The fuel is a stock (balanced l452); a cycle uses 9 (l561). repeats_iff (l576): ∃s ∀k Feasible (P yield) s (history k) ↔ 9 ≤ yield. renew_needs_enabled (l488); enabled_by_success (l502); success_recurs (l545) along every run of every yield; no_run_without_return (l476): Run (P 0) → False. These are laws of every run of this constructed process, not of every model. reserve_consumed (l367) and cut_stops_next (l331) are built.",
+      "lost": "retired_choice (l374, built family): the choice x n = true is lost at ready(n+1). 'Obsolete contact records are retired: no monotonic growth of all distinctions is assumed.' No statement found restores a retired contact.",
+      "tied_to_what_it_rests_on": "Yes, as cost and continuation: renewal of the registering depends on the fuel and the declared yield (no_run_without_return, repeats_iff; 'Cutting this return closes the next inquiry despite a successful preceding repair'). What triggers it is an act's failure, not the state of the stock."
+     },
+     {
+      "place": "OpenedCorrection.lean (Linked.opens)",
+      "what_registers_what": "reading : X → S → O in force at each configuration. Correctable (l74): a uniform policy through reading x whose acts are acceptable and executable at x.",
+      "changes_by": "Along a trace of one process: OpensAlong (l89) = (∃w, Trace P x w x') ∧ ¬Correctable x ∧ Correctable x'. 'The gain may come from the reading, from executability, or both.'",
+      "comes_to_register": "Linked.opens (l168, built for all n, v): OpensAlong P read acceptable executable (n+2,false,v) (n+1,true,v) via [.rebuild true]. Handed in: Revising.P, read, acceptable (l128, held fixed), executable = Enabled P. It states only that a trace exists; 'Uniform-policy existence is not what a formation chooses.' General: finer_keeps (l95), with premises forget (reading x' s) = reading x s for all s and executable x ⊆ executable x', takes Correctable x to Correctable x'. coarser_opens_nothing (l107), with premises forget (reading x s) = reading x' s and executable x' ⊆ executable x, gives ¬OpensAlong. widened_correctable (l115).",
+      "cost_and_keeping": "rebuilt_starved (l175): from one unit, rebuilding leaves (0,true,v) uncorrectable. opens_after_replenishing (l182). opens_by_support (l189): the reading unchanged, the gain is in executability.",
+      "lost": "unlinked_uncorrectable (l138): link off, no configuration correctable. starved_uncorrectable (l157): link on and no stock, none is.",
+      "tied_to_what_it_rests_on": "Only through executability: opening needs a stock unit (linked_correctable l146 at n+1). No statement makes the stock's fall the cause of the revision."
+     },
+     {
+      "place": "MoveFormation.lean",
+      "what_registers_what": "A move formed through a reading π: Learning.Lumped π form. PartForms (l231, Lumped Prod.fst) and RestForms (l234, Lumped Prod.snd).",
+      "changes_by": "No change of the reading along a course found. Run.keepHistory_formed (l662, general over runs of keepHistory P): a policy of the configuration gives every move; 'the length of the history kept tells the step'.",
+      "comes_to_register": "None found. lumped_of_finer (l210, general): from Lumped π form and π' finer than π, Lumped π' form.",
+      "cost_and_keeping": "From the account: Run.whole_unheld_of_never_cycles (l453). Moves that never cycle need a whole no list holds; 'Novelty in what is done needs openness or growth.'",
+      "lost": "lumped_const_iff (l217): through the reading that tells nothing apart, only a constant move is formed. No course of losing a reading found.",
+      "tied_to_what_it_rests_on": "None found."
+     },
+     {
+      "place": "RouteFormation.lean",
+      "what_registers_what": "Samples (records) and an installed program. fits (l142); an inspection installs where the program fits (inspect_installed l609, from the account).",
+      "changes_by": "encounter (l390): 'a supplied code's value on an expression, added to the samples' at a stock draw. reconsider (l400) retests and develops again. develop searches routes in a supplied order. The account: 'the samples and the draws are supplied'.",
+      "comes_to_register": "Built, by decide: fresh_record_rebuilds (l521) and repair_course_rebuilds (l741). After develop, encounter collapsed novel and reconsider, the program changes from duplicated to programFor collapsed. novel_record_separates (l508). Handed in: the record of a supplied code (a teacher or sample). unobserved_keeps_wrong (l545): 'An unobserved failure keeps the wrong program.' Transfer laws (accepted_transfers l176, inspection_transfers l631) taken from the account, bodies not read.",
+      "cost_and_keeping": "repair_account (l534, built): drawn 16, stock 4, parts 0. discrepancy_no_parts (l539): 'A discrepancy alone does not supply the parts of a repair'; with 2 parts it blocks.",
+      "lost": "verdict_not_program (l488) and develop_course_removed (l695): removing the program keeps the verdicts and loses the answer.",
+      "tied_to_what_it_rests_on": "Only as cost (stock and parts); what is learned is not tied to it."
+     },
+     {
+      "place": "ReflexivePrediction.lean",
+      "what_registers_what": "A published prediction p read by a fixed response r : V → V. Right r p := r p = p (l65).",
+      "changes_by": "Repeated publication along Law.orbit r p (rests_iff_right l90); r itself is fixed and handed in.",
+      "comes_to_register": "None of the asked kind. none_right_of_moves (l68): premise ∀v, r v ≠ v, conclusion ¬Right r p. bottom_rests (l154): premises within (∀v ≤ n, r v ≤ n) and keeps (r monotone on 0..n); conclusion Right r (orbit r 0 n) and it is the least right prediction. ThresholdResponse (l175-200), built: two fixed points, the start decides which is reached.",
+      "cost_and_keeping": "Not applicable.",
+      "lost": "None found; right_rests (l95): a right prediction stays.",
+      "tied_to_what_it_rests_on": "None found."
+     },
+     {
+      "place": "HeldPossible.lean",
+      "what_registers_what": "No reading as such: the possible relative to a held part Same. In adaptive F G, the rule is changed by G s.2 s.1, with G : R → Z → R handed in.",
+      "changes_by": "adaptive_keeps_rule_iff (l454): t.2 = s.2 ↔ G s.2 s.1 = s.2. RuleTower.process (l543): rule k changes as rule k+1 allows (up), the state by base. 'The scheme (base, up) is fixed.'",
+      "comes_to_register": "None of the asked kind. General laws: Reaching.not_step_of_grows (l150), where the possible under Q grows from s to t, ¬Q.step s a t; Run.changes_of_heldGrows (l322), held possible growing at n to n+1 implies ¬Same(state n)(state n+1); Run.adaptive_rule_changes_of_keepsWidening (l462); RuleTower.possible_iff_held (l581); Run.ruleTower_move_above_recurs_of_keepsWidening (l622).",
+      "cost_and_keeping": "None found.",
+      "lost": "From the account: Run.possibleHeld_of_stays. A top held fixed for good stops growth relative to it.",
+      "tied_to_what_it_rests_on": "None found. 'A change with no fixed scheme, and a space of rules not given with the carrier, are not stated.'"
+     },
+     {
+      "place": "GrammarReadings.lean",
+      "what_registers_what": "Relations: «化» R E F x y := «续» R E x y ∧ ¬F x y (l50), continuing under E while F tells the two apart; «成坏» (l59).",
+      "changes_by": "The classes E and F are fixed arguments; no change found.",
+      "comes_to_register": "None found.",
+      "cost_and_keeping": "None found.",
+      "lost": "None found; «因灭而续» (l172) not read past its signature.",
+      "tied_to_what_it_rests_on": "None found."
+     },
+     {
+      "place": "TimedResponse.lean",
+      "what_registers_what": "A reader g through its couplings, W.AlikeThroughUpTo obs g. An answer read is premised to factor through the couplings ('Factoring through the complete couplings is supplied', l169).",
+      "changes_by": "obs is fixed. A declared source's difference spreads through exchanges (Spread l35, ReachedBy l45); source is handed in.",
+      "comes_to_register": "General necessity law: different_answers_require_reached (l185). Premises: balanced and balanced' (level balances for t < D), present, start (initial levels equal), responds (non-source formations alike through couplings act alike), Decidable ReachedBy, through, and read W.level ≠ read W'.level. Conclusion: ReachedBy ... g D. Built: answers_before_and_after (l295), alike at step 1 and different at step 2.",
+      "cost_and_keeping": "None found.",
+      "lost": "constant_read_ignores (l301): 'A reached signal may be ignored.'",
+      "tied_to_what_it_rests_on": "None found."
+     },
+     {
+      "place": "Handoff.lean",
+      "what_registers_what": "A remaining-step certificate rank per rule; the rules are revised by the supplied restartChoice (l233).",
+      "changes_by": "revisingRun (l239), by the supplied restartChoice.",
+      "comes_to_register": "None found. handed_off_progress (l52, general): premises localStep (the rank falls at each unfinished step) and handoff (the next rank is no higher); conclusion: the handed rank falls at every unfinished step.",
+      "cost_and_keeping": "Not applicable.",
+      "lost": "revised_rules_can_fail_forever (l263, built); revision_resets_remaining (l273): each revision resets the count from 1 to 2.",
+      "tied_to_what_it_rests_on": "None found."
+     },
+     {
+      "place": "LineOnAStock.lean (ways_alike and its account)",
+      "what_registers_what": "Which needs of the way's units the level meets. 'What makes a difference to a way is its own response' (l33).",
+      "changes_by": "need and kids are fixed; the units change by which kids are born where needs are met. This is a selection among carriers with fixed needs (needs_after_iff, need_in_after, from the account; not read).",
+      "comes_to_register": "General law, ways_alike (l547). Premises: one need and one kids; any g, g', use, use', x, x', w, n; and ∀ j < n, ∀ u in the first way at j, (need u ≤ level j ↔ need u ≤ level' j). Conclusion: ∀ j ≤ n, the ways are equal. 'A difference in the ways, new kinds included, arrives only after a step at which the levels met different needs of the way. Nothing is asked of the givings, the uses or the stock.' This says where a new difference cannot come from.",
+      "cost_and_keeping": "Not read beyond this.",
+      "lost": "Not read.",
+      "tied_to_what_it_rests_on": "The level is the stock, read only through needs met. A running down that crosses no need makes no difference to the way (ways_alike): the gap the idea names, stated as an absence of registering."
+     },
+     {
+      "place": "TurningInTime.lean (three window and share laws)",
+      "what_registers_what": "A window [N,K) on the level, with a reading hL (and sA for the share) setting the rule, or the rule and the share, at levels the window reads. 'AloneOutside and the marks are given, not derived: which levels make a difference to the way is a premise' (l235).",
+      "changes_by": "The rule or share is reset when the stock's level enters the window. The window, hL or sA, and reads are handed in.",
+      "comes_to_register": "locked_turns_in_time_on_window_iff (l1633). Premises: raises, monotone, upper, every, corrects, uses, least, the regime premises (nothing, short, meets, keeps), needs, within, pos, low (N ≤ H2+y2), covers (c ≤ K), safe, short1, locked, draws, below (x < H1+y1), high. Conclusion: the net of windowAfter never ends iff there is a first step T read on the course as it was, the need met up to T and the level at T+1 at least H2+y2. locked_turns_in_time_share_iff (l1817): the same shape with sets, lowRule, lowStays, uses, the regime premises, needs, within, short1, locked, draws, below, high (x ≤ hi); no premise on where the window lies. share_corrected_on_course (l1896): under sets, lowRule, lowStays, for any left and s, with before and read at T, the share is Low and the rule kept at every T+1+k. 'The correction reaches the share because that reading sets it (sets, given); a share that falls under the rule the window reads … is not tried.'",
+      "cost_and_keeping": "The use H2 of the kept kind against the regime's giving; 'the overdraw of the course as it was stays given'. The correction is kept by the premises lowStays and lowRule.",
+      "lost": "Not in these laws (the lock belongs to the readings group).",
+      "tied_to_what_it_rests_on": "Yes: the stock's level entering [N,K) sets the rule or share, and whether the line goes on depends on where that first read falls relative to H2+y2. Which levels are read is handed in."
+     }
+    ],
+    "guesses": "G1. For: TurningInTime's windows are handed in (corrects, sets, every). LineOnAStock is a selection among carriers with fixed needs (ways_alike). Revision and OpenedCorrection change the reading by a move chosen by a supplied controller (choose). RouteFormation's record is supplied (encounter). Against, in letter: ContinuingRevision registers an address after the going-on's own act failed there (fail_step_at l190, then new_available_choice l317; general form ReferencePlan.revise_registers_failure l446). The failure is the going-on's own, but it is carried by a supplied rule, policy and probe channel, and a blind rule misses it (frozen_misses l460). So it is a fourth form, a failure read by a rule handed in.\n\nG2. Only RouteFormation is in my group. For: encounter supplies the code's value (l389), and unobserved_keeps_wrong (l545) keeps the wrong program without it. Partly against, as cost only: discrepancy_no_parts (l539) and ContinuingRevision's no_run_without_return (l476) and repeats_iff (l576) tie renewal to stock, not the content learned.\n\nG3. For: loss is general (lost_choice, Revision l56; coarser_opens_nothing, OpenedCorrection l107). Gain is conditional on a supplied difference (history_gains l412 and retained_gains l127 take it as a premise), and old_cannot_select_rebuild (l199) says the old lumping cannot itself select the forming. Against 'merged stays merged': in Revising.P closing is undone by rebuild true given stock (rebuild_then_close l204). Retirement in ContinuingRevision (retired_choice l374) has no restoring statement found.\n\nG4. Not in my group, not read. The nearest in the package is ReferencePlan ('Acquired mismatch puts an address into the next executable plan'), with the revision policy supplied.\n\nG5. For: RuleTower.process (HeldPossible l543): 'Every rule changes only as the one above it allows … the scheme (base, up) is fixed'. adaptive F G with G handed in (l454). not_step_of_grows (l150): along a stated process the possible never grows. 'A change with no fixed scheme … not stated.' Against the shape 'one level up': in Revision, OpenedCorrection and ContinuingRevision the reading changes by a move of the same process, at the same level ('its index is not an outside selector'). What is handed in is the process law and a controller or policy. In no place read is the wording 'other than by an update handed in' met.",
+    "other_places": "ReferencePlan.lean (l1-45, l263-270, l443-462): revise_registers_failure, frozen_misses and new_contact_choice, instances of Contacts.answers_iff, Contacts.blind_misses and Contacts.retired_loses. Contacts.lean was not read; it likely holds the general law of a rule answering failures. Runaway.lean l107, policy_uses_after_failure: 'A larger stock is used only after a failure.' For every policy through the couplings, with the rest fixed, wherever a coupled-in difference has changed by step t, the first web did not support g at every earlier step. Premises: balanced, balanced', present, policy, others, higher, observedAlike, registers, changed. It bears on Q3 and Q6. Chapter 3 §10 cites Web.break_not_bounded, SlowingDown.need_not_read and SlowingDown.need_margin_read (periphery); not read. Mechanism.lean (adaptive) and Learning.lean (Lumped, Through) are used by my places but were not read.",
+    "tool_calls": 28
+   }
+  }
+ ]
+}

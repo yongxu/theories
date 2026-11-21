@@ -78,3 +78,7 @@ Four AI readers, 0.91 million tokens and 7 minutes by the run's own count; the c
 ## Where it is
 
 Beside this note, as text: the frozen file with its hash, the four reports (`read-readings-and-the-lock.md.txt`, `read-learning-codes-inquiry.md.txt`, `read-revision-and-forming.md.txt`, `read-outside-the-package.md.txt`), the checker's findings, and the note as it was before the check.
+
+## Added the same afternoon: the pair named above, looked at and dropped
+
+*AI-written. The writer opened `Contacts.lean` at its statements himself (no proof), to save the next session the same look.* A window on a level that is fixed in advance is, in that module's terms, a rule that does not read its failures (`Blind`): it answers every failure exactly where its plan contacts every address (`blind_answers_iff`), which with finitely many addresses it can (`finite_blind_answers`) and where no list holds every address it cannot (`blind_misses`). Set beside the lock's window law that is a dictionary: the window law's premises that the window covers the levels that matter say the same of levels. What neither has is a window revised by where the going-on failed. That would be a model, and none is started. No agent was spent on this.
